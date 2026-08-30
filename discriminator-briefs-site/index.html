@@ -3687,6 +3687,36 @@ function briefEntities(brief){
   return out;
 }
 function titleCaseKeep(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
+/* Option labels must not betray the answer by LENGTH. Keyed answers often
+   carry a trailing explanatory clause ("— the 50,000 threshold does not
+   apply") that distractors never have, which made the longest option the
+   answer 51% of the time against 33% by chance. Trim to the core claim;
+   the full text still shows in the chain and the explanation. */
+function shortLabel(s){
+  s = norm(s);
+  var cut = s;
+  [' — ',' – ','; ',': '].forEach(function(d){
+    var i = cut.indexOf(d);
+    if(i > 2) cut = cut.slice(0,i);
+  });
+  // a parenthetical is an aside only when it opens well into the phrase;
+  // "crusted (Norwegian) scabies" must survive intact
+  var p = cut.indexOf(' (');
+  if(p >= 20) cut = cut.slice(0,p);
+  // a trailing comma clause on a long phrase is qualification, not answer
+  if(cut.length > 38){
+    var c = cut.lastIndexOf(', ');
+    if(c >= 18) cut = cut.slice(0,c);
+  }
+  cut = cut.replace(/[,;:—–\s]+$/,'');
+  if(cut.length < 3) cut = s;
+  if(cut.length > 48){
+    var t = cut.slice(0,48);
+    var sp = t.lastIndexOf(' ');
+    cut = (sp > 26 ? t.slice(0,sp) : t) + '…';
+  }
+  return cut;
+}
 function mcq(){
   var made=0, kept=0;
   document.querySelectorAll('ol.bank').forEach(function(ol){
@@ -3734,11 +3764,17 @@ function mcq(){
       var rv=document.createElement('span'); rv.className='rv'; rv.textContent='REVEAL';
       top.appendChild(p); top.appendChild(rv); box.appendChild(top);
       var o=document.createElement('div'); o.className='opts';
+      /* Option labels render as PLAIN TEXT. The keyed answer carries <b>
+         from the source chain while distractors do not, so preserving its
+         markup made the bold option the answer every time. Emphasis is
+         kept in the stem, the chain and the explanation, where the answer
+         is already revealed. */
       order.forEach(function(oi,i){
         var b=document.createElement('button');
         b.innerHTML='<span class="k">'+'ABC'[i]+'</span>';
-        if(oi===0) b.appendChild(ansF.cloneNode(true));
-        else b.appendChild(document.createTextNode(titleCaseKeep(cands[oi-1])));
+        var label = (oi===0) ? titleCaseKeep(shortLabel(ansF.textContent))
+                             : titleCaseKeep(shortLabel(cands[oi-1]));
+        b.appendChild(document.createTextNode(label));
         o.appendChild(b);
       });
       box.appendChild(o);
