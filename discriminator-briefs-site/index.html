@@ -244,12 +244,17 @@ body.study dd .mask,body.study td .mask,body.study li .mask{display:inline-block
   #nav{display:none}
   main{margin-left:0;padding-bottom:96px}
 
+  /* iOS Safari overlays a toolbar at the bottom and reports vh against the
+     TALLEST viewport (chrome hidden), so vh-sized panels run underneath it.
+     dvh tracks the visible viewport; vh stays as the fallback. The bar also
+     needs real clearance above that toolbar, not just the safe-area inset,
+     which reads 0 while the toolbar is shown. */
   #mbar{
     display:flex;position:fixed;left:50%;transform:translateX(-50%);
-    bottom:calc(14px + env(safe-area-inset-bottom,0px));
-    z-index:120;gap:4px;padding:6px;border-radius:99px;
+    bottom:calc(22px + env(safe-area-inset-bottom,0px));
+    z-index:140;gap:4px;padding:6px;border-radius:99px;
     background:linear-gradient(145deg,#F4F5F5 0%,#EEF0F0 55%,#E9EBEB 100%);
-    box-shadow:var(--e1);
+    box-shadow:var(--e1),0 6px 22px -6px rgba(20,24,26,.28);
   }
   #mbar button{
     all:unset;cursor:pointer;padding:11px 22px;border-radius:99px;
@@ -258,53 +263,85 @@ body.study dd .mask,body.study td .mask,body.study li .mask{display:inline-block
   }
   #mbar button:active{box-shadow:var(--inner-2)}
   body.study #mbar button[data-act="study"]{background:var(--accent);color:#fff;box-shadow:var(--e2)}
+  /* the bar sits under the sheet, so the sheet carries its own close control */
   body.sheetopen{overflow:hidden}
+  body.sheetopen #mbar{opacity:0;pointer-events:none;transition:opacity .15s}
 
   #sheet{
-    display:block;position:fixed;inset:0;z-index:130;
-    background:rgba(20,24,26,.34);
+    display:block;position:fixed;left:0;right:0;top:0;z-index:130;
+    height:100vh;height:100dvh;
+    background:rgba(20,24,26,.38);
     opacity:0;pointer-events:none;transition:opacity .2s;
   }
   #sheet.open{opacity:1;pointer-events:auto}
   .sheetin{
-    position:absolute;left:0;right:0;bottom:0;max-height:86vh;
+    position:absolute;left:0;right:0;bottom:0;
+    max-height:76vh;max-height:76dvh;
     display:flex;flex-direction:column;
     background:linear-gradient(180deg,#F3F4F4,#EAECEC);
-    border-radius:26px 26px 0 0;padding:10px 16px calc(20px + env(safe-area-inset-bottom,0px));
-    transform:translateY(100%);transition:transform .26s cubic-bezier(.32,.72,0,1);
+    border-radius:26px 26px 0 0;
+    padding:10px 16px calc(26px + env(safe-area-inset-bottom,0px));
+    transform:translateY(101%);transition:transform .26s cubic-bezier(.32,.72,0,1);
     box-shadow:0 -12px 40px -10px rgba(20,24,26,.35);
   }
   #sheet.open .sheetin{transform:translateY(0)}
-  .grab{width:38px;height:4px;border-radius:99px;background:#C4C9C9;margin:0 auto 12px;flex:none}
+  .sheethead{display:flex;align-items:center;justify-content:space-between;flex:none;margin:0 0 10px}
+  .sheethead b{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--ink)}
+  .sheetclose{
+    all:unset;cursor:pointer;width:34px;height:34px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:17px;line-height:1;color:var(--muted);
+    background:linear-gradient(145deg,#F2F3F3,#E7E9E9);box-shadow:var(--ec);
+  }
+  .sheetclose:active{box-shadow:var(--inner-2)}
+  .grab{width:38px;height:4px;border-radius:99px;background:#C4C9C9;margin:0 auto 10px;flex:none}
   #msearch{
     flex:none;width:100%;padding:12px 14px;margin:0 0 12px;border:none;border-radius:12px;
     font-size:16px;font-family:var(--sans);color:var(--ink);
     background:linear-gradient(145deg,#E2E5E5,#EDEFEF);box-shadow:var(--inner-2);
   }
   #msearch:focus{outline:none;box-shadow:var(--inner-2),0 0 0 2px var(--accent)}
-  .sheetlist{overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
-  .sheetlist details{margin:0 0 7px;border-radius:13px;overflow:hidden;background:rgba(255,255,255,.5)}
+  .sheetlist{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:2px 2px 6px}
+  /* each system is a raised porcelain tile, same material as the brief cards */
+  .sheetlist details{
+    margin:0 0 9px;border-radius:15px;overflow:hidden;
+    background:linear-gradient(145deg,#F4F5F5 0%,#EEF0F0 55%,#E9EBEB 100%);
+    box-shadow:var(--e2);
+  }
   .sheetlist summary{
-    list-style:none;cursor:pointer;padding:13px 15px;display:flex;align-items:center;
-    justify-content:space-between;font-size:15.5px;font-weight:600;color:var(--ink);
+    list-style:none;cursor:pointer;padding:14px 15px;
+    display:flex;align-items:center;gap:10px;
+    font-size:15.5px;font-weight:600;color:var(--ink);
   }
   .sheetlist summary::-webkit-details-marker{display:none}
-  .sheetlist summary i{font-style:normal;font-size:11px;font-weight:700;color:var(--faint)}
+  .sheetlist summary .t{flex:1;min-width:0}
+  /* the count is a recessed chip pinned beside the chevron, not floating mid-row */
+  .sheetlist summary i{
+    flex:none;font-style:normal;font-size:11px;font-weight:800;
+    color:var(--muted);min-width:26px;text-align:center;
+    padding:3px 8px;border-radius:99px;
+    background:linear-gradient(145deg,#E3E6E6,#EFF1F1);box-shadow:var(--inner-2);
+  }
   .sheetlist summary::after{
-    content:"›";margin-left:10px;font-size:19px;color:var(--faint);
-    transition:transform .18s;display:inline-block;
+    content:"›";flex:none;font-size:20px;line-height:1;color:var(--faint);
+    transition:transform .18s;display:inline-block;width:12px;text-align:center;
   }
-  .sheetlist details[open] summary::after{transform:rotate(90deg)}
-  .sheetlist details[open] summary{background:rgba(84,74,196,.09);color:var(--accent)}
+  .sheetlist details[open] summary::after{transform:rotate(90deg);color:var(--accent)}
+  .sheetlist details[open] summary{color:var(--accent)}
+  .sheetlist details[open] summary i{color:var(--accent)}
+  .sheetlist details[open]{box-shadow:var(--e2),inset 0 0 0 1.5px rgba(84,74,196,.28)}
   .sheetlist a{
-    display:block;padding:11px 15px 11px 26px;text-decoration:none;
-    color:var(--ink-2);font-size:14.6px;border-top:1px solid rgba(24,28,30,.06);
+    display:block;padding:12px 16px 12px 26px;text-decoration:none;
+    color:var(--ink-2);font-size:14.6px;
+    border-top:1px solid rgba(24,28,30,.07);
+    background:rgba(255,255,255,.42);
   }
-  .sheetlist a.bs{padding-left:36px;color:var(--board)}
-  .sheetlist a:active{background:rgba(84,74,196,.12)}
+  .sheetlist a.bs{padding-left:34px;color:var(--board)}
+  .sheetlist a:active{background:rgba(84,74,196,.14)}
   .sheetlist .msub{
-    padding:9px 15px 3px 26px;font-size:9px;letter-spacing:1.3px;text-transform:uppercase;
-    font-weight:800;color:var(--board);border-top:1px solid rgba(24,28,30,.06);
+    padding:10px 16px 4px 26px;font-size:9px;letter-spacing:1.3px;text-transform:uppercase;
+    font-weight:800;color:var(--board);
+    border-top:1px solid rgba(24,28,30,.07);background:rgba(255,255,255,.42);
   }
 }
 @media print{ #mbar,#sheet{display:none!important} }
@@ -3636,6 +3673,7 @@ function mobileNav(){
   var sheet=document.createElement('div'); sheet.id='sheet';
   var inner=document.createElement('div'); inner.className='sheetin';
   inner.innerHTML='<div class="grab"></div>'+
+    '<div class="sheethead"><b>Index</b><button class="sheetclose" aria-label="Close">✕</button></div>'+
     '<input id="msearch" type="search" placeholder="Search all 88 briefs…" autocomplete="off">'+
     '<div class="sheetlist"></div>';
   sheet.appendChild(inner);
@@ -3659,7 +3697,7 @@ function mobileNav(){
   groups.forEach(function(g){
     var d=document.createElement('details');
     var s=document.createElement('summary');
-    s.innerHTML='<span>'+g.title+'</span><i>'+g.items.filter(function(x){return x.href;}).length+'</i>';
+    s.innerHTML='<span class="t">'+g.title+'</span><i>'+g.items.filter(function(x){return x.href;}).length+'</i>';
     d.appendChild(s);
     g.items.forEach(function(it){
       if(it.sub){ var h=document.createElement('div'); h.className='msub'; h.textContent=it.sub; d.appendChild(h); return; }
@@ -3687,9 +3725,11 @@ function mobileNav(){
     if(a==='top'){ close(); window.scrollTo({top:0,behavior:'smooth'}); }
   });
   sheet.addEventListener('click',function(e){
-    if(e.target===sheet) return close();
+    if(e.target===sheet) return close();            // tap the dimmed strip
+    if(e.target.closest('.sheetclose')) return close();
     if(e.target.tagName==='A') close();
   });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
 
   /* search filters the index itself and auto-expands matching systems */
   inner.querySelector('#msearch').addEventListener('input',function(){
