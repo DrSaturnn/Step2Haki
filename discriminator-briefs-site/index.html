@@ -234,6 +234,125 @@ body.study dd .mask,body.study td .mask,body.study li .mask{display:inline-block
   .chain{flex-direction:column;gap:5px} .chain .arw{transform:rotate(90deg)}
 }
 
+/* ---------- PHONE NAVIGATION: floating bar + collapsible sheet ----------
+   Desktop keeps the fixed sidebar. Below 980px the sidebar is replaced by
+   a bottom bar and a sheet, because a static 100-link index above the
+   content forces a scroll to the top and then a scroll through the index.
+   Systems are collapsed, so all 12 fit one screen.                    */
+#mbar,#sheet{display:none}
+@media (max-width:980px){
+  #nav{display:none}
+  main{margin-left:0;padding-bottom:96px}
+
+  #mbar{
+    display:flex;position:fixed;left:50%;transform:translateX(-50%);
+    bottom:calc(14px + env(safe-area-inset-bottom,0px));
+    z-index:120;gap:4px;padding:6px;border-radius:99px;
+    background:linear-gradient(145deg,#F4F5F5 0%,#EEF0F0 55%,#E9EBEB 100%);
+    box-shadow:var(--e1);
+  }
+  #mbar button{
+    all:unset;cursor:pointer;padding:11px 22px;border-radius:99px;
+    font-size:11.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+    color:var(--ink-2);
+  }
+  #mbar button:active{box-shadow:var(--inner-2)}
+  body.study #mbar button[data-act="study"]{background:var(--accent);color:#fff;box-shadow:var(--e2)}
+  body.sheetopen{overflow:hidden}
+
+  #sheet{
+    display:block;position:fixed;inset:0;z-index:130;
+    background:rgba(20,24,26,.34);
+    opacity:0;pointer-events:none;transition:opacity .2s;
+  }
+  #sheet.open{opacity:1;pointer-events:auto}
+  .sheetin{
+    position:absolute;left:0;right:0;bottom:0;max-height:86vh;
+    display:flex;flex-direction:column;
+    background:linear-gradient(180deg,#F3F4F4,#EAECEC);
+    border-radius:26px 26px 0 0;padding:10px 16px calc(20px + env(safe-area-inset-bottom,0px));
+    transform:translateY(100%);transition:transform .26s cubic-bezier(.32,.72,0,1);
+    box-shadow:0 -12px 40px -10px rgba(20,24,26,.35);
+  }
+  #sheet.open .sheetin{transform:translateY(0)}
+  .grab{width:38px;height:4px;border-radius:99px;background:#C4C9C9;margin:0 auto 12px;flex:none}
+  #msearch{
+    flex:none;width:100%;padding:12px 14px;margin:0 0 12px;border:none;border-radius:12px;
+    font-size:16px;font-family:var(--sans);color:var(--ink);
+    background:linear-gradient(145deg,#E2E5E5,#EDEFEF);box-shadow:var(--inner-2);
+  }
+  #msearch:focus{outline:none;box-shadow:var(--inner-2),0 0 0 2px var(--accent)}
+  .sheetlist{overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+  .sheetlist details{margin:0 0 7px;border-radius:13px;overflow:hidden;background:rgba(255,255,255,.5)}
+  .sheetlist summary{
+    list-style:none;cursor:pointer;padding:13px 15px;display:flex;align-items:center;
+    justify-content:space-between;font-size:15.5px;font-weight:600;color:var(--ink);
+  }
+  .sheetlist summary::-webkit-details-marker{display:none}
+  .sheetlist summary i{font-style:normal;font-size:11px;font-weight:700;color:var(--faint)}
+  .sheetlist summary::after{
+    content:"›";margin-left:10px;font-size:19px;color:var(--faint);
+    transition:transform .18s;display:inline-block;
+  }
+  .sheetlist details[open] summary::after{transform:rotate(90deg)}
+  .sheetlist details[open] summary{background:rgba(84,74,196,.09);color:var(--accent)}
+  .sheetlist a{
+    display:block;padding:11px 15px 11px 26px;text-decoration:none;
+    color:var(--ink-2);font-size:14.6px;border-top:1px solid rgba(24,28,30,.06);
+  }
+  .sheetlist a.bs{padding-left:36px;color:var(--board)}
+  .sheetlist a:active{background:rgba(84,74,196,.12)}
+  .sheetlist .msub{
+    padding:9px 15px 3px 26px;font-size:9px;letter-spacing:1.3px;text-transform:uppercase;
+    font-weight:800;color:var(--board);border-top:1px solid rgba(24,28,30,.06);
+  }
+}
+@media print{ #mbar,#sheet{display:none!important} }
+
+/* ---------- PHONE: tables restack as one card per row ----------
+   A 5-column mimics table cannot fit 390px. Scrolling it sideways pushes
+   the first column — the diagnosis — off screen, so the reader loses the
+   row label exactly when they need it. Each row becomes its own card:
+   first cell is the title, every other cell is labelled with its column
+   header (carried over as data-label by the transform).            */
+@media (max-width:640px){
+  html,body{overflow-x:hidden}
+  .page,.wrap{padding-left:14px;padding-right:14px}
+  .brief{padding:20px 15px;border-radius:18px}
+
+  .tw{background:none;box-shadow:none;padding:0;overflow:visible;margin:0 0 18px}
+  .tw table,.tw tbody,.tw tr,.tw td{display:block;width:100%;max-width:100%}
+  .tw thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .tw tbody tr{
+    background:linear-gradient(145deg,#F4F5F5 0%,#EEF0F0 55%,#E9EBEB 100%);
+    border-radius:14px;box-shadow:var(--e2);
+    padding:13px 15px;margin:0 0 11px;
+  }
+  .tw tbody td{border:none;padding:7px 0;font-size:14.4px;line-height:1.5}
+  .tw tbody td:first-child{
+    font-family:var(--serif);font-size:17.5px;font-weight:600;color:var(--ink);
+    padding:0 0 9px;margin-bottom:5px;border-bottom:1px solid rgba(24,28,30,.10);
+  }
+  .tw tbody td:first-child::before{content:none}
+  .tw tbody td:not(:first-child)::before{
+    content:attr(data-label);display:block;
+    font-size:8.5px;letter-spacing:1.4px;text-transform:uppercase;
+    font-weight:800;color:var(--faint);margin-bottom:3px;
+  }
+  /* a cell with no content shouldn't leave an orphan label */
+  .tw tbody td:empty{display:none}
+  .tierT td:first-child{width:auto;font-size:15px;color:var(--accent)}
+
+  /* label/value strip and MCQ options also go full width */
+  .strip{grid-auto-flow:row}
+  .mcq{padding:16px 15px}
+  .mcq .top{flex-direction:column;gap:9px}
+  .mcq .rv{align-self:flex-start}
+  .chain .node{max-width:100%}
+  .masthead h2{font-size:31px}
+  .sectcard{padding:20px 17px}
+}
+
 </style>
 </head>
 <body>
@@ -3499,6 +3618,95 @@ function switches(){
   });
 }
 
+/* ---------- 0b. phone navigation ------------------------------------
+   On a phone the sidebar becomes a static block of ~100 links sitting
+   above the content: reaching the index means scrolling to the very top,
+   then scrolling through the whole index again. Instead: a floating
+   bottom bar and a sheet whose systems are collapsed by default, so all
+   12 fit one screen and you drill in rather than scroll past.        */
+function mobileNav(){
+  var nav=document.getElementById('nav'); if(!nav) return;
+
+  var bar=document.createElement('nav'); bar.id='mbar';
+  bar.innerHTML =
+    '<button data-act="index"><span>Index</span></button>'+
+    '<button data-act="study"><span>Study</span></button>'+
+    '<button data-act="top"><span>Top</span></button>';
+
+  var sheet=document.createElement('div'); sheet.id='sheet';
+  var inner=document.createElement('div'); inner.className='sheetin';
+  inner.innerHTML='<div class="grab"></div>'+
+    '<input id="msearch" type="search" placeholder="Search all 88 briefs…" autocomplete="off">'+
+    '<div class="sheetlist"></div>';
+  sheet.appendChild(inner);
+  var list=inner.querySelector('.sheetlist');
+
+  /* rebuild the sidebar's flat list as one collapsible group per system.
+     The links live in #navlinks, not directly under #nav. */
+  var host=document.getElementById('navlinks')||nav;
+  var groups=[], cur=null;
+  Array.prototype.slice.call(host.children).forEach(function(el){
+    if(el.classList.contains('sect')){
+      var c=el.querySelector('.count');            // drop the trailing count
+      var title=norm(el.textContent.replace(c?c.textContent:'',''));
+      cur={title:title, items:[]}; groups.push(cur);
+    } else if(cur && el.tagName==='A'){
+      cur.items.push({href:el.getAttribute('href'), text:norm(el.textContent), bs:el.classList.contains('bs')});
+    } else if(cur && el.classList.contains('navsub')){
+      cur.items.push({sub:norm(el.textContent)});
+    }
+  });
+  groups.forEach(function(g){
+    var d=document.createElement('details');
+    var s=document.createElement('summary');
+    s.innerHTML='<span>'+g.title+'</span><i>'+g.items.filter(function(x){return x.href;}).length+'</i>';
+    d.appendChild(s);
+    g.items.forEach(function(it){
+      if(it.sub){ var h=document.createElement('div'); h.className='msub'; h.textContent=it.sub; d.appendChild(h); return; }
+      var a=document.createElement('a'); a.href=it.href; a.textContent=it.text;
+      if(it.bs) a.className='bs';
+      d.appendChild(a);
+    });
+    list.appendChild(d);
+  });
+
+  document.body.appendChild(sheet);
+  document.body.appendChild(bar);
+
+  function close(){ sheet.classList.remove('open'); document.body.classList.remove('sheetopen'); }
+  function open(){ sheet.classList.add('open'); document.body.classList.add('sheetopen'); }
+
+  bar.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    var a=b.dataset.act;
+    if(a==='index'){ sheet.classList.contains('open')?close():open(); }
+    if(a==='study'){
+      document.body.classList.toggle('study');
+      localStorage.setItem('ax-study',document.body.classList.contains('study')?'1':'0');
+    }
+    if(a==='top'){ close(); window.scrollTo({top:0,behavior:'smooth'}); }
+  });
+  sheet.addEventListener('click',function(e){
+    if(e.target===sheet) return close();
+    if(e.target.tagName==='A') close();
+  });
+
+  /* search filters the index itself and auto-expands matching systems */
+  inner.querySelector('#msearch').addEventListener('input',function(){
+    var q=this.value.trim().toLowerCase();
+    list.querySelectorAll('details').forEach(function(d){
+      var hit=0;
+      d.querySelectorAll('a').forEach(function(a){
+        var m=!q||a.textContent.toLowerCase().indexOf(q)>-1;
+        a.style.display=m?'':'none'; if(m) hit++;
+      });
+      d.querySelectorAll('.msub').forEach(function(x){ x.style.display=q?'none':''; });
+      d.style.display=hit?'':'none';
+      if(q) d.open=true; else d.open=false;
+    });
+  });
+}
+
 /* ---------- 1. section headers get a protruding numbered tab ---------- */
 var SHORT={msk:'MSK',peds:'PEDS',cv:'CV',pulm:'PULM',gi:'GI',renal:'RENAL',endo:'ENDO',
            id:'ID',neuro:'NEURO',derm:'DERM',obgyn:'OBGYN',prev:'PREV',strategy:'START'};
@@ -3521,8 +3729,18 @@ function sections(){
 function tables(){
   document.querySelectorAll('table').forEach(function(t){
     if(t.parentNode.classList && t.parentNode.classList.contains('tw')) return;
-    var th=t.querySelectorAll('thead th');
+    var th=Array.prototype.slice.call(t.querySelectorAll('thead th'));
     if(th.length && /^tier/i.test(th[0].textContent.trim())) t.classList.add('tierT');
+    /* Carry each column's header onto its cells. On phones the table
+       restacks into one card per row and these become the micro-labels,
+       so the row keeps its meaning without horizontal scrolling — which
+       otherwise pushes the first column (the diagnosis) off screen. */
+    var heads=th.map(function(x){ return norm(x.textContent); });
+    t.querySelectorAll('tbody tr').forEach(function(tr){
+      Array.prototype.slice.call(tr.children).forEach(function(td,i){
+        if(heads[i]) td.setAttribute('data-label',heads[i]);
+      });
+    });
     var w=document.createElement('div'); w.className='tw';
     t.parentNode.insertBefore(w,t); w.appendChild(t);
   });
@@ -3844,7 +4062,7 @@ function wire(){
 
 /* ---------- run ---------- */
 function run(){
-  switches(); sections(); columnize(); mnemonics(); tables(); masks(); mcq(); wire();
+  switches(); mobileNav(); sections(); columnize(); mnemonics(); tables(); masks(); mcq(); wire();
   var AFTER=norm(document.body.innerText);
   var addedUI=/STUDY MODE|FLAT THEME|REVEAL|From this brief|Distractors are entities/;
   var a=BEFORE.split(' ').filter(Boolean).length;
