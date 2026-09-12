@@ -516,6 +516,16 @@ tbody tr.em td{background:rgba(142,61,44,.05)}
   .shelfpick .seg{flex:1}
   .shelfpick button{flex:1;text-align:center;padding:10px 6px;font-size:11px}
 }
+
+/* shelves not yet written: visible so the set reads as a whole, plainly inert */
+.shelfpick button.soon{opacity:.4;cursor:default;pointer-events:none}
+.shelfpick button.soon i{
+  font-style:normal;font-size:8px;font-weight:800;letter-spacing:.9px;
+  text-transform:uppercase;opacity:.7;margin-left:6px;vertical-align:1px;
+}
+#nav .shelfpick button.soon{color:rgba(255,255,255,.3)}
+@media (max-width:900px){ .shelfpick button.soon i{display:none} }
+@media print{ .shelfpick button.soon{display:none} }
 @media print{ .shelfpick{display:none} }
 
 
@@ -6929,7 +6939,15 @@ function switches(){
    hides the rest and rebuilds the index, masthead counts and section
    headers to match, so a shelf never advertises content it isn't showing.
    Step 2 is the pooled default. ?shelf=peds deep-links a shelf.       */
-var SHELVES=[['step2','Step 2'],['fm','Family Med'],['peds','Pediatrics']];
+/* [id, label, pending] — pending shelves render greyed and unclickable.
+   Remove the trailing 1 when a shelf is written; nothing else changes. */
+var SHELVES=[['step2','Step 2'],['fm','Family Med'],['peds','Pediatrics'],
+             ['im','Medicine',1],['surg','Surgery',1],['obgyn','OB/GYN',1],
+             ['psych','Psychiatry',1],['neurology','Neurology',1]];
+function shelfPending(s){
+  for(var i=0;i<SHELVES.length;i++) if(SHELVES[i][0]===s) return !!SHELVES[i][2];
+  return false;
+}
 var shelf='step2';
 var reviewSet=null;   /* when set, the only briefs the page shows */
 
@@ -6939,7 +6957,13 @@ function shelfPicker(){
   w.appendChild(lbl);
   var g=document.createElement('div'); g.className='seg';
   SHELVES.forEach(function(s){
-    var b=document.createElement('button'); b.dataset.shelf=s[0]; b.textContent=s[1];
+    var b=document.createElement('button'); b.dataset.shelf=s[0];
+    b.textContent=s[1];
+    if(s[2]){
+      b.disabled=true; b.className='soon';
+      b.title=s[1]+' — not written yet';
+      var i=document.createElement('i'); i.textContent='soon'; b.appendChild(i);
+    }
     g.appendChild(b);
   });
   w.appendChild(g);
@@ -7052,7 +7076,7 @@ function shelfInit(){
 
   document.addEventListener('click',function(e){
     var b=e.target.closest && e.target.closest('.shelfpick button');
-    if(!b) return;
+    if(!b || b.disabled || shelfPending(b.dataset.shelf)) return;
     applyShelf(b.dataset.shelf);
     syncShelfUrl(b.dataset.shelf);
   });
@@ -7068,7 +7092,9 @@ function shelfInit(){
     }catch(e){}
   }
 
-  function valid(s){ return s && SHELVES.some(function(x){ return x[0]===s; }); }
+  function valid(s){
+    return !!s && !shelfPending(s) && SHELVES.some(function(x){ return x[0]===s; });
+  }
 
   /* Precedence: an explicit ?shelf= in the link, then the reader's own last
      choice, then Step 2. The link wins so a shared URL is predictable for
