@@ -355,6 +355,16 @@ tbody tr.em td{background:rgba(142,61,44,.05)}
     color:var(--muted);
   }
   #mbar button:active{background:rgba(24,28,30,.06)}
+  /* the same due count the sidebar tile carries, on the phone's Review tab */
+  #mbar button[data-act="review"] span{position:relative;display:inline-block}
+  #mbar button[data-act="review"] .bdg{
+    position:absolute;top:-7px;left:calc(100% + 3px);
+    min-width:15px;padding:1px 4px;border-radius:99px;
+    background:var(--accent);color:#fff;
+    font-size:9px;font-weight:800;letter-spacing:0;line-height:1.45;
+    font-variant-numeric:tabular-nums;font-style:normal;
+  }
+  #mbar button[data-act="review"] .bdg[data-n="0"]{display:none}
   #mbar button+button{box-shadow:inset 1px 0 0 rgba(24,28,30,.08)}
   /* active Study state uses the same ink as the section tabs, not an accent */
   body.study #mbar button[data-act="study"]{
@@ -504,17 +514,31 @@ tbody tr.em td{background:rgba(142,61,44,.05)}
   color:#fff;background:linear-gradient(160deg,#26262F 0%,#141419 60%,#0D0D12 100%);
   box-shadow:var(--e2);
 }
-/* sidebar copy sits on the dark panel */
+/* The segment row wraps rather than running off the page — the set of shelves
+   only grows, and a row that overflows hides the ones furthest along. */
+.shelfpick .seg{flex-wrap:wrap;justify-content:center;border-radius:var(--r-sub)}
+.shelfpick button{padding:9px 15px}
+
+/* sidebar copy sits on the dark panel, as a dropdown */
 #nav .shelfpick{margin:0 18px 14px;flex-direction:column;align-items:stretch;gap:8px}
 #nav .shelfpick .lbl{color:rgba(255,255,255,.5)}
-#nav .shelfpick .seg{background:#101015;box-shadow:inset 3px 3px 7px rgba(0,0,0,.5);gap:2px}
-#nav .shelfpick button{color:rgba(255,255,255,.6);padding:8px 10px;text-align:center;flex:1}
-#nav .shelfpick button.on{background:linear-gradient(160deg,#3A3A46,#1E1E26);color:#fff;box-shadow:none}
+#nav .shelfsel{
+  width:100%;appearance:none;-webkit-appearance:none;
+  font-family:var(--sans);font-size:12.5px;font-weight:700;letter-spacing:.4px;
+  color:#fff;background:#101015;border:none;border-radius:10px;
+  padding:10px 34px 10px 13px;cursor:pointer;
+  box-shadow:inset 3px 3px 7px rgba(0,0,0,.5),inset -1px -1px 2px rgba(255,255,255,.05);
+  background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23ffffff' stroke-opacity='.55' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 13px center;background-size:11px;
+}
+#nav .shelfsel:focus-visible{outline:2px solid #9A93E8;outline-offset:2px}
+#nav .shelfsel option{background:#17171C;color:#fff}
+#nav .shelfsel option:disabled{color:rgba(255,255,255,.34)}
 @media (max-width:980px){
   .masthead .shelfpick{margin:18px 0 2px}
   .sheetin .shelfpick{margin:0 0 12px}
   .shelfpick .seg{flex:1}
-  .shelfpick button{flex:1;text-align:center;padding:10px 6px;font-size:11px}
+  .shelfpick button{text-align:center;padding:9px 11px;font-size:10.5px}
 }
 
 /* shelves not yet written: visible so the set reads as a whole, plainly inert */
@@ -536,30 +560,50 @@ tbody tr.em td{background:rgba(142,61,44,.05)}
    keeping separate tracks. The export code is the only bridge between
    devices, because there is no server. */
 
-/* --- launcher: sidebar (desktop) --- */
-#rvlaunch{margin:0 18px 14px;display:flex;flex-direction:column;gap:8px}
+/* --- launcher: the sidebar's primary action, under the shelf selector ---
+       A tile rather than a chip: the due count is the one number that should
+       pull you back, so it is set at heading size and nothing competes. --- */
+#rvlaunch{margin:0 18px 16px;display:flex;flex-direction:column;gap:8px}
 #rvlaunch .lbl{font-size:9.5px;letter-spacing:1.75px;text-transform:uppercase;font-weight:800;color:rgba(255,255,255,.5)}
 #rvbtn{
-  all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;
-  padding:10px 13px;border-radius:12px;background:#101015;
-  box-shadow:inset 3px 3px 7px rgba(0,0,0,.5);
-  font-size:13px;font-weight:600;color:rgba(255,255,255,.82);
+  all:unset;cursor:pointer;display:block;padding:13px 15px 11px;border-radius:14px;
+  background:linear-gradient(152deg,#2C2656 0%,#1B1830 58%,#151521 100%);
+  box-shadow:inset 0 0 0 1px rgba(154,147,232,.30),0 7px 18px -6px rgba(0,0,0,.6);
+  transition:box-shadow .18s;
 }
-#rvbtn:hover{color:#fff}
+#rvbtn:hover{box-shadow:inset 0 0 0 1px rgba(154,147,232,.58),0 9px 22px -6px rgba(0,0,0,.68)}
+#rvbtn:active{box-shadow:inset 0 0 0 1px rgba(154,147,232,.42),inset 2px 2px 8px rgba(0,0,0,.5)}
+#rvbtn:focus-visible{outline:2px solid #9A93E8;outline-offset:2px}
+#rvbtn .hd{display:flex;align-items:center;gap:8px;margin:0 0 9px}
 #rvbtn .av{
   flex:none;display:inline-flex;align-items:center;justify-content:center;
-  width:24px;height:24px;border-radius:99px;
+  width:23px;height:23px;border-radius:99px;
   background:linear-gradient(145deg,#6A60D8,#453CA8);
-  font-size:10.5px;font-weight:800;color:#fff;letter-spacing:.3px;
+  font-size:10px;font-weight:800;color:#fff;letter-spacing:.3px;
 }
-#rvbtn .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#rvbtn .nm{
+  flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  font-size:11.5px;font-weight:700;color:rgba(255,255,255,.74);
+}
+#rvbtn .bd{display:flex;align-items:baseline;gap:8px}
 #rvbtn .due{
-  flex:none;min-width:20px;text-align:center;padding:2px 7px;border-radius:99px;
-  background:var(--accent);color:#fff;font-size:10px;font-weight:800;
+  font-family:var(--serif);font-size:27px;line-height:1;font-weight:600;color:#fff;
   font-variant-numeric:tabular-nums;
 }
-#rvbtn .due[data-n="0"]{background:rgba(255,255,255,.13);color:rgba(255,255,255,.5)}
-#rvbtn:focus-visible{outline:2px solid #9A93E8;outline-offset:2px}
+#rvbtn .cap{font-size:10.5px;font-weight:600;line-height:1.3;color:rgba(255,255,255,.56)}
+#rvbtn .cta{
+  display:block;margin:11px 0 0;padding:8px 0 0;
+  border-top:1px solid rgba(255,255,255,.13);
+  font-size:9.5px;letter-spacing:1.4px;text-transform:uppercase;font-weight:800;color:#B8B1F4;
+}
+#rvbtn:hover .cta{color:#D9D5FF}
+/* nothing due: the tile steps back rather than shouting a zero */
+#rvbtn[data-due="0"]{
+  background:#101015;box-shadow:inset 3px 3px 7px rgba(0,0,0,.5);
+}
+#rvbtn[data-due="0"]:hover{box-shadow:inset 3px 3px 7px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.14)}
+#rvbtn[data-due="0"] .due{color:rgba(255,255,255,.55)}
+#rvbtn[data-due="0"] .cta{color:rgba(255,255,255,.45);border-top-color:rgba(255,255,255,.09)}
 
 /* --- the panel: a popover, never a wall.
        Click away, press Escape, or hit the chip again to close it. --- */
@@ -623,6 +667,29 @@ body.flat #rvpanel{background:#FBFBFB}
   padding:9px 11px;background:var(--recess);box-shadow:var(--inner-2);color:var(--ink-2);
   resize:vertical;min-height:64px;
 }
+/* quick sign-in: one button per person who studies on this machine */
+#rvpanel .who{display:flex;flex-direction:column;gap:6px;margin:0 0 4px}
+#rvpanel .whob{
+  all:unset;cursor:pointer;display:flex;align-items:center;gap:9px;
+  padding:9px 11px;border-radius:11px;background:var(--raised);box-shadow:var(--ec);
+  font-size:12.5px;font-weight:600;color:var(--ink);
+}
+#rvpanel .whob:hover{color:var(--accent)}
+#rvpanel .whob:active{box-shadow:var(--inner-2)}
+#rvpanel .whob:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#rvpanel .whob .av{
+  flex:none;display:inline-flex;align-items:center;justify-content:center;
+  width:24px;height:24px;border-radius:99px;
+  background:linear-gradient(145deg,#6A60D8,#453CA8);
+  font-size:10px;font-weight:800;color:#fff;letter-spacing:.3px;
+}
+#rvpanel .whob .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#rvpanel .whob .due{
+  flex:none;min-width:20px;text-align:center;padding:2px 7px;border-radius:99px;
+  background:var(--accent);color:#fff;font-size:10px;font-weight:800;
+  font-variant-numeric:tabular-nums;
+}
+#rvpanel .whob .due[data-n="0"]{background:var(--recess);color:var(--faint)}
 #rvpanel .msg{margin:9px 0 0;font-size:11.5px;font-weight:600;color:var(--confirm)}
 #rvpanel .msg.bad{color:var(--caution)}
 
@@ -6951,10 +7018,28 @@ function shelfPending(s){
 var shelf='step2';
 var reviewSet=null;   /* when set, the only briefs the page shows */
 
-function shelfPicker(){
+function shelfPicker(kind){
   var w=document.createElement('div'); w.className='shelfpick';
   var lbl=document.createElement('span'); lbl.className='lbl'; lbl.textContent='Shelf';
   w.appendChild(lbl);
+
+  /* The sidebar is 286px wide and the list only grows, so it gets a real
+     <select>: it scales to any number of shelves and renders the pending ones
+     as disabled options without any styling of our own. */
+  if(kind==='select'){
+    w.className='shelfpick assel';
+    var sel=document.createElement('select');
+    sel.className='shelfsel'; sel.setAttribute('aria-label','Shelf');
+    SHELVES.forEach(function(s){
+      var o=document.createElement('option');
+      o.value=s[0]; o.textContent=s[1]+(s[2]?'  \u2014  soon':'');
+      if(s[2]) o.disabled=true;
+      sel.appendChild(o);
+    });
+    w.appendChild(sel);
+    return w;
+  }
+
   var g=document.createElement('div'); g.className='seg';
   SHELVES.forEach(function(s){
     var b=document.createElement('button'); b.dataset.shelf=s[0];
@@ -7064,13 +7149,16 @@ function applyShelf(s){
   document.querySelectorAll('.shelfpick button').forEach(function(b){
     b.classList.toggle('on', b.dataset.shelf===s);
   });
+  document.querySelectorAll('.shelfsel').forEach(function(sel){
+    if(sel.value!==s) sel.value=s;
+  });
 }
 
 function shelfInit(){
   var m=document.querySelector('.masthead .wrap')||document.querySelector('.masthead');
   if(m) m.appendChild(shelfPicker());
   var nav=document.getElementById('modes');
-  if(nav) nav.parentNode.insertBefore(shelfPicker(), nav);
+  if(nav) nav.parentNode.insertBefore(shelfPicker('select'), nav);
   var sheetIn=document.querySelector('.sheetin .sheethead');
   if(sheetIn) sheetIn.after(shelfPicker());
 
@@ -7079,6 +7167,13 @@ function shelfInit(){
     if(!b || b.disabled || shelfPending(b.dataset.shelf)) return;
     applyShelf(b.dataset.shelf);
     syncShelfUrl(b.dataset.shelf);
+  });
+  document.addEventListener('change',function(e){
+    var sel=e.target;
+    if(!sel.classList || !sel.classList.contains('shelfsel')) return;
+    if(shelfPending(sel.value)){ sel.value=shelf; return; }
+    applyShelf(sel.value);
+    syncShelfUrl(sel.value);
   });
 
   /* The address bar should always describe what is on screen, so a copied
@@ -7755,7 +7850,25 @@ function esc(s){ return String(s).replace(/[&<>"]/g,function(c){
 function profiles(){ var p=get(NS+'-profiles',[]); return Array.isArray(p)?p:[]; }
 function putProfiles(p){ return set(NS+'-profiles',p); }
 function activeId(){ return get(NS+'-active',null); }
-function setActive(id){ set(NS+'-active',id); }
+/* Who this machine has actually been used by, most recent first. The roster
+   may carry fifty names; this is the two or three that belong here. */
+function recents(){ var r=get(NS+'-recent',[]); return Array.isArray(r)?r:[]; }
+function touchRecent(id){
+  if(!id) return;
+  var r=recents().filter(function(x){ return x!==id; });
+  r.unshift(id); set(NS+'-recent', r.slice(0,6));
+}
+/* A roster suggestion becomes ours the moment someone here picks it. */
+function claim(id){
+  var p=profiles(), hit=0;
+  p.forEach(function(x){ if(x.id===id && x.remote){ delete x.remote; hit=1; } });
+  if(hit) putProfiles(p);
+}
+function mineOnly(){ return profiles().filter(function(p){ return !p.remote; }); }
+function setActive(id){ set(NS+'-active',id); if(id){ claim(id); touchRecent(id); } }
+/* '' is the sentinel for "stepped aside on purpose"; a missing key means
+   nobody has chosen yet and current() may adopt this machine's last user. */
+function signOut(){ set(NS+'-active',''); }
 function addProfile(name){
   name=String(name||'').trim().replace(/\s+/g,' ').slice(0,28) || 'Guest';
   var p=profiles(), id='p'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
@@ -7770,7 +7883,13 @@ function renameProfile(id,name){
 function current(){
   var id=activeId(), p=profiles();
   if(id && p.some(function(x){ return x.id===id; })) return id;
-  if(p.length){ setActive(p[0].id); return p[0].id; }
+  if(id==='') return null;          /* signed out deliberately — do not re-adopt */
+  /* Deliberately will NOT fall back onto a name that only arrived from the
+     shared roster: a fresh device must ask who you are, not guess. */
+  var mine=mineOnly(), r=recents(), i;
+  for(i=0;i<r.length;i++)
+    if(mine.some(function(x){ return x.id===r[i]; })){ set(NS+'-active',r[i]); return r[i]; }
+  if(mine.length){ set(NS+'-active',mine[0].id); return mine[0].id; }
   return null;
 }
 function nameOf(id){ var f=profiles().filter(function(x){ return x.id===id; })[0];
@@ -8021,7 +8140,10 @@ function delProfile(id){
   var l=profiles().filter(function(x){ return x.id!==id; });
   putProfiles(l);
   drop(NS+'-d-'+id);
-  if(activeId()===id) setActive(l.length?l[0].id:null);
+  set(NS+'-recent', recents().filter(function(x){ return x!==id; }));
+  /* Let current() decide who is next — it knows which names are ours. Drop
+     the key rather than blanking it, or removal would read as a sign-out. */
+  if(activeId()===id) drop(NS+'-active');
 }
 function syncRemove(id, then){
   var nm=nameOf(id), pin=pinOf(id);
@@ -8047,18 +8169,27 @@ function syncLine(){
 /* ---------- the launcher + panel ---------- */
 var launch, chip, panel, lastFocus=null;
 
+function dueFor(id){ var s=split(id); return s.due.length+s.fresh.length; }
 function dueCount(){
   var id=current(); if(!id) return pool().length;
-  var s=split(id); return s.due.length+s.fresh.length;
+  return dueFor(id);
 }
 function paintChip(){
-  if(!chip) return;
-  var id=current(), n=id?nameOf(id):'Choose a name', d=dueCount();
-  chip.querySelector('.av').textContent = id?initials(n):'+';
-  chip.querySelector('.nm').textContent = n;
-  var due=chip.querySelector('.due');
-  due.textContent=d; due.setAttribute('data-n',d===0?'0':'1');
-  chip.setAttribute('aria-label','Review — '+n+', '+d+' due');
+  var id=current(), d=dueCount(), nm=id?nameOf(id):'Not signed in';
+  if(chip){
+    chip.querySelector('.av').textContent = id?initials(nm):'+';
+    chip.querySelector('.nm').textContent = nm;
+    chip.querySelector('.due').textContent = d;
+    chip.querySelector('.cap').textContent = !id ? 'briefs waiting'
+      : d===0 ? 'nothing due today' : (d===1?'brief due today':'briefs due today');
+    chip.querySelector('.cta').textContent = !id ? 'Pick your name'
+      : d===0 ? 'Read ahead' : 'Start review';
+    chip.setAttribute('data-due', (id&&d===0)?'0':'1');
+    chip.setAttribute('aria-label', id ? ('Review — '+nm+', '+d+' due')
+                                       : 'Review — pick your name');
+  }
+  var bdg=document.querySelector('#mbar [data-act="review"] .bdg');
+  if(bdg){ bdg.textContent=d; bdg.setAttribute('data-n', (id&&d)?'1':'0'); }
 }
 function buildLauncher(){
   launch=el('div'); launch.id='rvlaunch';
@@ -8068,7 +8199,9 @@ function buildLauncher(){
   chip.setAttribute('aria-haspopup','dialog');
   chip.setAttribute('aria-expanded','false');
   chip.setAttribute('aria-controls','rvpanel');
-  chip.innerHTML='<span class="av"></span><span class="nm"></span><span class="due">0</span>';
+  chip.innerHTML='<span class="hd"><span class="av"></span><span class="nm"></span></span>'+
+                 '<span class="bd"><b class="due">0</b><span class="cap"></span></span>'+
+                 '<span class="cta"></span>';
   chip.addEventListener('click',function(){ panelOpen()?closePanel():openPanel(chip); });
   launch.appendChild(chip);
   return launch;
@@ -8126,18 +8259,72 @@ function buildPanel(){
   window.addEventListener('resize',function(){ if(panelOpen()) place(chip); });
 }
 
+/* The new-name form, also reachable behind "Someone else". */
+function newNameHTML(){
+  var h='', rem=profiles().filter(function(p){ return p.remote; });
+  if(rem.length){
+    h+='<div class="row"><select id="rvpick" aria-label="Existing name">'+
+       '<option value="">A name already in use…</option>';
+    rem.forEach(function(p){ h+='<option value="'+esc(p.id)+'">'+esc(p.name)+'</option>'; });
+    h+='</select><button class="mini" data-act="usepick" type="button">Use</button></div>';
+  }
+  h+='<div class="row"><input type="text" id="rvnew" placeholder="'+
+     (rem.length?'Or a new name or alias':'Your name or alias')+
+     '" maxlength="28" autocomplete="off"></div>'+
+     '<div class="row"><input type="text" id="rvnewpin" placeholder="PIN (optional)" maxlength="12" inputmode="numeric" autocomplete="off">'+
+     '<button class="mini" data-act="add" type="button">Add</button></div>';
+  return h;
+}
+/* Signed out: lead with the people who actually study on this machine. */
+function signedOutHTML(){
+  var mine=mineOnly(), r=recents(), q=[];
+  r.forEach(function(rid){
+    var f=mine.filter(function(x){ return x.id===rid; })[0];
+    if(f && q.length<4) q.push(f);
+  });
+  mine.forEach(function(p){
+    if(q.length<4 && !q.some(function(x){ return x.id===p.id; })) q.push(p);
+  });
+  if(!q.length){
+    return '<p class="note">Progress is saved under the name you pick, so your schedule '+
+           'stays separate from anyone else studying here.</p>'+newNameHTML()+
+           '<div class="foot"><button class="mini" data-act="showimp" type="button">Import a code</button></div>';
+  }
+  var h='<p class="note">Pick up where you left off.</p><div class="who">';
+  q.forEach(function(p){
+    var d=dueFor(p.id);
+    h+='<button class="whob" type="button" data-act="use" data-id="'+esc(p.id)+'">'+
+       '<span class="av">'+esc(initials(p.name))+'</span>'+
+       '<span class="nm">'+esc(p.name)+'</span>'+
+       '<span class="due" data-n="'+(d?'1':'0')+'">'+d+'</span></button>';
+  });
+  h+='</div><div class="foot quiet">'+
+     '<button class="mini" data-act="other" type="button">Someone else</button>'+
+     '<button class="mini" data-act="showimp" type="button">Import a code</button>'+
+     '</div>';
+  return h;
+}
+/* A PIN is not a password, but a name that carries one cannot be written back
+   to without it. Ask at claim time rather than letting the first save fail. */
+function askPinIfNeeded(id){
+  var p=profiles().filter(function(x){ return x.id===id; })[0];
+  if(!p || !p.hasPin || p.pin) return;
+  var io=panel && panel.querySelector('#rvio'); if(!io) return;
+  io.innerHTML='<p class="note" style="margin-top:10px">This name has a PIN. Enter it so '+
+    'this device can save back to it.</p>'+
+    '<div class="row"><input type="text" id="rvpin" maxlength="12" inputmode="numeric" '+
+    'autocomplete="off" placeholder="PIN">'+
+    '<button class="mini" data-act="dopin" type="button">Save</button></div>';
+  var f=io.querySelector('#rvpin'); if(f) f.focus();
+  place(chip);
+}
+
 function renderPanel(){
   var id=current(), list=profiles();
   var h='<div class="ph"><b>Review</b><button class="x" type="button" aria-label="Close">✕</button></div>';
 
-  if(!list.length){
-    h+='<p class="note">Progress is saved in this browser. Add a name so your schedule '+
-       'is kept separate from anyone else who studies on this computer.</p>'+
-       '<div class="row"><input type="text" id="rvnew" placeholder="Your name or alias" maxlength="28" autocomplete="off"></div>'+
-       '<div class="row"><input type="text" id="rvnewpin" placeholder="PIN (optional)" maxlength="12" inputmode="numeric" autocomplete="off">'+
-       '<button class="mini" data-act="add" type="button">Add</button></div>'+
-       '<button class="go" data-act="start" type="button" disabled>Start review</button>'+
-       '<div class="foot"><button class="mini" data-act="showimp" type="button">Import a code</button></div>'+
+  if(!id){
+    h+=signedOutHTML()+
        syncLine();   /* a first-time user must be told if sync is not working */
   } else {
     var s=split(id), t=today();
@@ -8175,6 +8362,7 @@ function renderPanel(){
        stays because it is the only copy that exists outside the store, so it
        reads as insurance now rather than as transport. */
     h+='<div class="foot quiet">'+
+       '<button class="mini" data-act="signout" type="button">Not you?</button>'+
        '<button class="mini" data-act="showexp" type="button">Backup code</button>'+
        '<button class="mini" data-act="showimp" type="button">Restore from a code</button>'+
        '</div>';
@@ -8187,6 +8375,25 @@ function renderPanel(){
     var b=e.target.closest('button'); if(!b) return;
     var a=b.dataset.act;
     if(b.classList.contains('x')) return closePanel();
+    if(a==='use'||a==='usepick'){
+      var pid = (a==='use') ? b.dataset.id
+              : ((panel.querySelector('#rvpick')||{}).value||'');
+      if(!pid) return;
+      setActive(pid);
+      renderPanel(); place(chip);
+      syncPull(pid,function(){
+        if(!panelOpen()) return;
+        renderPanel(); place(chip);
+        askPinIfNeeded(pid);
+      });
+      return;
+    }
+    if(a==='other'){
+      panel.querySelector('#rvio').innerHTML='<div style="margin-top:10px">'+newNameHTML()+'</div>';
+      var f0=panel.querySelector('#rvnew'); if(f0) f0.focus();
+      place(chip); return;
+    }
+    if(a==='signout'){ signOut(); renderPanel(); place(chip); return; }
     if(a==='add'){
       var v=panel.querySelector('#rvnew'), vp=panel.querySelector('#rvnewpin');
       var nid2=addProfile(v?v.value:'');
@@ -8670,13 +8877,18 @@ function boot(){
   buildPanel();
   var nav=document.getElementById('nav');
   var search=document.getElementById('search');
-  if(nav && search) nav.insertBefore(buildLauncher(), search.nextSibling);
+  /* Directly beneath the shelf selector: the two things you choose before
+     you read anything sit together, and Review is the larger of the two. */
+  var sp=document.querySelector('#nav .shelfpick');
+  var lau=buildLauncher();
+  if(sp && sp.parentNode) sp.parentNode.insertBefore(lau, sp.nextSibling);
+  else if(nav && search) nav.insertBefore(lau, search.nextSibling);
 
   /* phone: a fourth bar button opens the same panel */
   var bar=document.getElementById('mbar');
   if(bar){
     var b=el('button'); b.type='button'; b.dataset.act='review';
-    b.innerHTML='<span>Review</span>';
+    b.innerHTML='<span>Review<i class="bdg" data-n="0">0</i></span>';
     var top=bar.querySelector('[data-act="top"]');
     bar.insertBefore(b, top||null);
     b.addEventListener('click',function(){ panelOpen()?closePanel():openPanel(b); });
@@ -8702,6 +8914,7 @@ function boot(){
                  SYNC:SYNC,setPin:setPin,pinOf:pinOf,
                  decodeCode:decodeCode,dataOf:dataOf,putData:putData,
                  openPanel:function(){ openPanel(chip); },closePanel:closePanel,
+                 recents:recents,signOut:signOut,mineOnly:mineOnly,setActive:setActive,
                  BOXES:BOXES};
 }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot);
