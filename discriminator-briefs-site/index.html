@@ -702,8 +702,11 @@ body.flat #rvpanel{background:#FBFBFB}
   box-shadow:var(--inner-2);position:relative;overflow:hidden;
 }
 #rvpanel .boxes i b{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:99px}
-#rvpanel .foot{margin:12px 0 0;padding:11px 0 0;border-top:1px solid var(--hair);display:flex;gap:8px}
-#rvpanel .foot button{flex:1}
+#rvpanel .foot{margin:12px 0 0;padding:11px 0 0;border-top:1px solid var(--hair);display:flex;gap:8px;flex-wrap:wrap}
+/* four actions no longer fit one 330px row — let them wrap two-up rather than squeezing the labels */
+#rvpanel .foot button{min-width:0}
+#rvpanel .foot:not(.quiet) button{flex:1 1 44%;text-align:center;padding:9px 8px;font-size:10px;letter-spacing:.4px}
+#rvpanel .foot.quiet button{flex:1 1 auto}
 #rvpanel .code{
   width:100%;margin:10px 0 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
   font-size:10.5px;line-height:1.45;word-break:break-all;border:none;border-radius:10px;
@@ -8287,9 +8290,27 @@ function place(anchor){
   if(!anchor || !panel) return;
   if(window.matchMedia('(max-width:900px)').matches){ panel.style.top=''; panel.style.left=''; return; }
   var r=anchor.getBoundingClientRect();
-  var top=Math.max(12,Math.min(r.top, window.innerHeight-panel.offsetHeight-12));
-  panel.style.top=top+'px';
-  panel.style.left=(r.right+14)+'px';
+  var pw=panel.offsetWidth||330, ph=panel.offsetHeight||420;
+  var vw=document.documentElement.clientWidth||window.innerWidth;
+  var vh=window.innerHeight, M=12, left, top;
+  if(r.width>420){
+    /* a wide anchor — the masthead bar — reads as a header: the panel belongs
+       under its left edge, not off the end of it. */
+    left=r.left; top=r.bottom+10;
+    if(top+ph+M>vh){
+      /* no room beneath: flip above the bar rather than clamping down over the
+         control that was just clicked. */
+      var above=r.top-10-ph;
+      top = above>=M ? above : Math.max(M, vh-ph-M);
+    }
+  } else {
+    /* a narrow anchor — the sidebar tile — takes the panel alongside, flipping
+       to its other side when the window runs out. */
+    left=r.right+14; top=r.top;
+    if(left+pw+M>vw && r.left-pw-14>=M) left=r.left-pw-14;
+  }
+  panel.style.left=Math.max(M, Math.min(left, vw-pw-M))+'px';
+  panel.style.top =Math.max(M, Math.min(top,  vh-ph-M))+'px';
 }
 
 function buildPanel(){
@@ -8410,6 +8431,7 @@ function renderPanel(){
     h+='<div class="foot">'+
        '<button class="mini" data-act="rename" type="button">Rename</button>'+
        '<button class="mini" data-act="pin" type="button">'+(pinOf(id)?'PIN set':'Set PIN')+'</button>'+
+       '<button class="mini" data-act="reset" type="button">Start over</button>'+
        '<button class="mini" data-act="remove" type="button">Remove</button>'+
        '</div>';
     /* Backup is no longer how progress travels between devices — sync is. It
@@ -8503,6 +8525,46 @@ function renderPanel(){
         if(s5) s5.innerHTML = (r&&r.ok)
           ? '<p class="msg">Restored from this device.</p>'
           : '<p class="msg bad">Could not reach sync. Your copy here is untouched.</p>';
+      });
+      return;
+    }
+    if(a==='reset'){
+      var rid=current(); if(!rid) return;
+      var seen=Object.keys(dataOf(rid).box||{}).length;
+      panel.querySelector('#rvio').innerHTML=
+        '<p class="note" style="margin-top:10px">Clear the schedule for <b>'+esc(nameOf(rid))+
+        '</b>? '+(seen? seen+' brief'+(seen===1?'':'s')+' would go back to unseen and everything '
+        : 'Everything ')+'becomes due again. The name, the PIN and any other profile stay. '+
+        'Copy the code first if you might want this back &mdash; there is no undo.</p>'+
+        '<textarea class="code" readonly>'+esc(exportCode(rid))+'</textarea>'+
+        '<div class="row" style="margin-top:8px">'+
+        '<button class="mini" data-act="doreset" type="button">Start over</button>'+
+        '</div><p class="msg" id="rvmsg" hidden></p>';
+      place(); return;
+    }
+    if(a==='doreset'){
+      var zid=current(); if(!zid) return;
+      putData(zid,{v:1,box:{},runs:0,last:null});
+      paintChip();
+      /* The store merges on write and never truncates, so an empty push would
+         leave the old schedule sitting there. Drop the record, then re-create
+         it empty — which also keeps the name on the roster. */
+      syncRemove(zid,function(r1){
+        if(r1&&r1.needPin){
+          renderPanel(); place();
+          var m1=panel.querySelector('#rvio');
+          if(m1) m1.innerHTML='<p class="msg bad">Cleared on this device. The store '+
+            'kept its copy because this name has a PIN &mdash; set the matching PIN, then start over again.</p>';
+          return;
+        }
+        syncPush(zid,function(){
+          renderPanel(); place();
+          var m2=panel.querySelector('#rvio');
+          if(m2) m2.innerHTML='<p class="msg">Cleared. Everything is due again.</p>'+
+            '<p class="note" style="margin-top:6px">If another device still holds the old '+
+            'schedule, it will sync back the next time that device opens the page &mdash; '+
+            'start over there too.</p>';
+        });
       });
       return;
     }
