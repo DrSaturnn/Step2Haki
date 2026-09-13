@@ -565,45 +565,88 @@ tbody tr.em td{background:rgba(142,61,44,.05)}
        pull you back, so it is set at heading size and nothing competes. --- */
 #rvlaunch{margin:0 18px 16px;display:flex;flex-direction:column;gap:8px}
 #rvlaunch .lbl{font-size:9.5px;letter-spacing:1.75px;text-transform:uppercase;font-weight:800;color:rgba(255,255,255,.5)}
-#rvbtn{
+.rvbtn{
   all:unset;cursor:pointer;display:block;padding:13px 15px 11px;border-radius:14px;
   background:linear-gradient(152deg,#2C2656 0%,#1B1830 58%,#151521 100%);
   box-shadow:inset 0 0 0 1px rgba(154,147,232,.30),0 7px 18px -6px rgba(0,0,0,.6);
   transition:box-shadow .18s;
 }
-#rvbtn:hover{box-shadow:inset 0 0 0 1px rgba(154,147,232,.58),0 9px 22px -6px rgba(0,0,0,.68)}
-#rvbtn:active{box-shadow:inset 0 0 0 1px rgba(154,147,232,.42),inset 2px 2px 8px rgba(0,0,0,.5)}
-#rvbtn:focus-visible{outline:2px solid #9A93E8;outline-offset:2px}
-#rvbtn .hd{display:flex;align-items:center;gap:8px;margin:0 0 9px}
-#rvbtn .av{
+.rvbtn:hover{box-shadow:inset 0 0 0 1px rgba(154,147,232,.58),0 9px 22px -6px rgba(0,0,0,.68)}
+.rvbtn:active{box-shadow:inset 0 0 0 1px rgba(154,147,232,.42),inset 2px 2px 8px rgba(0,0,0,.5)}
+.rvbtn:focus-visible{outline:2px solid #9A93E8;outline-offset:2px}
+.rvbtn .hd{display:flex;align-items:center;gap:8px;margin:0 0 9px}
+.rvbtn .av{
   flex:none;display:inline-flex;align-items:center;justify-content:center;
   width:23px;height:23px;border-radius:99px;
   background:linear-gradient(145deg,#6A60D8,#453CA8);
   font-size:10px;font-weight:800;color:#fff;letter-spacing:.3px;
 }
-#rvbtn .nm{
+.rvbtn .nm{
   flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
   font-size:11.5px;font-weight:700;color:rgba(255,255,255,.74);
 }
-#rvbtn .bd{display:flex;align-items:baseline;gap:8px}
-#rvbtn .due{
+.rvbtn .bd{display:flex;align-items:baseline;gap:8px}
+.rvbtn .due{
   font-family:var(--serif);font-size:27px;line-height:1;font-weight:600;color:#fff;
   font-variant-numeric:tabular-nums;
 }
-#rvbtn .cap{font-size:10.5px;font-weight:600;line-height:1.3;color:rgba(255,255,255,.56)}
-#rvbtn .cta{
+.rvbtn .cap{font-size:10.5px;font-weight:600;line-height:1.3;color:rgba(255,255,255,.56)}
+.rvbtn .cta{
   display:block;margin:11px 0 0;padding:8px 0 0;
   border-top:1px solid rgba(255,255,255,.13);
   font-size:9.5px;letter-spacing:1.4px;text-transform:uppercase;font-weight:800;color:#B8B1F4;
 }
-#rvbtn:hover .cta{color:#D9D5FF}
+.rvbtn:hover .cta{color:#D9D5FF}
 /* nothing due: the tile steps back rather than shouting a zero */
-#rvbtn[data-due="0"]{
+.rvbtn[data-due="0"]{
   background:#101015;box-shadow:inset 3px 3px 7px rgba(0,0,0,.5);
 }
-#rvbtn[data-due="0"]:hover{box-shadow:inset 3px 3px 7px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.14)}
-#rvbtn[data-due="0"] .due{color:rgba(255,255,255,.55)}
-#rvbtn[data-due="0"] .cta{color:rgba(255,255,255,.45);border-top-color:rgba(255,255,255,.09)}
+.rvbtn[data-due="0"]:hover{box-shadow:inset 3px 3px 7px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.14)}
+.rvbtn[data-due="0"] .due{color:rgba(255,255,255,.55)}
+.rvbtn[data-due="0"] .cta{color:rgba(255,255,255,.45);border-top-color:rgba(255,255,255,.09)}
+
+/* --- the same tile in the masthead: one row, number first, verb last ---
+       Dark on a light page on purpose — it matches the active shelf pill and
+       the numbered section markers, the page's other two primary surfaces. --- */
+.rvmast{margin:16px 0 4px;display:flex;flex-direction:column;gap:9px}
+.rvmast .lbl{font-size:9.5px;letter-spacing:1.75px;text-transform:uppercase;font-weight:800;color:var(--muted)}
+.rvmast .rvbtn{
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+  padding:16px 20px;border-radius:var(--r-sub);
+  box-shadow:inset 0 0 0 1px rgba(154,147,232,.26),0 10px 26px -12px rgba(20,24,26,.55);
+}
+.rvmast .rvbtn:hover{box-shadow:inset 0 0 0 1px rgba(154,147,232,.55),0 12px 30px -12px rgba(20,24,26,.7)}
+.rvmast .rvbtn .bd{order:1;align-items:baseline;gap:10px}
+.rvmast .rvbtn .due{font-size:34px}
+.rvmast .rvbtn .cap{font-size:12px;color:rgba(255,255,255,.62)}
+.rvmast .rvbtn .hd{
+  order:2;margin:0;padding:0 0 0 18px;
+  box-shadow:inset 1px 0 0 rgba(255,255,255,.15);
+}
+.rvmast .rvbtn .nm{flex:0 1 auto;font-size:12.5px}
+.rvmast .rvbtn .cta{
+  order:3;margin:0 0 0 auto;padding:9px 16px;border-top:none;
+  border-radius:99px;background:rgba(255,255,255,.11);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);
+  font-size:10px;letter-spacing:1.3px;color:#DDD9FF;white-space:nowrap;
+}
+.rvmast .rvbtn:hover .cta{background:rgba(255,255,255,.17);color:#fff}
+.rvmast .rvbtn[data-due="0"]{
+  background:linear-gradient(150deg,#26262F 0%,#16161C 60%,#101015 100%);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.10),0 10px 26px -14px rgba(20,24,26,.5);
+}
+.rvmast .rvbtn[data-due="0"] .cta{border-top:none;background:rgba(255,255,255,.08);color:rgba(255,255,255,.7)}
+body.flat .rvmast .rvbtn{box-shadow:inset 0 0 0 1px rgba(154,147,232,.3)}
+
+/* phone: the row becomes a stack and the verb spans the full width */
+@media (max-width:640px){
+  .rvmast .rvbtn{gap:12px;padding:15px 16px}
+  .rvmast .rvbtn .bd{flex:1 1 100%}
+  .rvmast .rvbtn .due{font-size:30px}
+  .rvmast .rvbtn .hd{flex:1 1 100%;padding:0;box-shadow:none}
+  .rvmast .rvbtn .cta{flex:1 1 100%;margin:2px 0 0;text-align:center}
+}
+@media print{ .rvmast{display:none!important} }
 
 /* --- the panel: a popover, never a wall.
        Click away, press Escape, or hit the chip again to close it. --- */
@@ -8167,7 +8210,7 @@ function syncLine(){
 }
 
 /* ---------- the launcher + panel ---------- */
-var launch, chip, panel, lastFocus=null;
+var chip, chips=[], anchorEl=null, panel, lastFocus=null;
 
 function dueFor(id){ var s=split(id); return s.due.length+s.fresh.length; }
 function dueCount(){
@@ -8176,34 +8219,42 @@ function dueCount(){
 }
 function paintChip(){
   var id=current(), d=dueCount(), nm=id?nameOf(id):'Not signed in';
-  if(chip){
-    chip.querySelector('.av').textContent = id?initials(nm):'+';
-    chip.querySelector('.nm').textContent = nm;
-    chip.querySelector('.due').textContent = d;
-    chip.querySelector('.cap').textContent = !id ? 'briefs waiting'
+  chips.forEach(function(c){
+    c.querySelector('.av').textContent = id?initials(nm):'+';
+    c.querySelector('.nm').textContent = nm;
+    c.querySelector('.due').textContent = d;
+    c.querySelector('.cap').textContent = !id ? 'briefs waiting'
       : d===0 ? 'nothing due today' : (d===1?'brief due today':'briefs due today');
-    chip.querySelector('.cta').textContent = !id ? 'Pick your name'
+    c.querySelector('.cta').textContent = !id ? 'Pick your name'
       : d===0 ? 'Read ahead' : 'Start review';
-    chip.setAttribute('data-due', (id&&d===0)?'0':'1');
-    chip.setAttribute('aria-label', id ? ('Review — '+nm+', '+d+' due')
-                                       : 'Review — pick your name');
-  }
+    c.setAttribute('data-due', (id&&d===0)?'0':'1');
+    c.setAttribute('aria-label', id ? ('Review — '+nm+', '+d+' due')
+                                    : 'Review — pick your name');
+  });
   var bdg=document.querySelector('#mbar [data-act="review"] .bdg');
   if(bdg){ bdg.textContent=d; bdg.setAttribute('data-n', (id&&d)?'1':'0'); }
 }
-function buildLauncher(){
-  launch=el('div'); launch.id='rvlaunch';
+function buildLauncher(kind){
+  var launch=el('div');
+  launch.className = kind==='mast' ? 'rvmast' : 'rvside';
+  if(kind!=='mast') launch.id='rvlaunch';
   launch.appendChild(el('span','lbl','Review'));
-  chip=el('button');
-  chip.id='rvbtn'; chip.type='button';
+  var chip=el('button');
+  chip.className='rvbtn';
+  if(kind!=='mast') chip.id='rvbtn';      /* the sidebar tile keeps the id */
+  chip.type='button';
   chip.setAttribute('aria-haspopup','dialog');
   chip.setAttribute('aria-expanded','false');
   chip.setAttribute('aria-controls','rvpanel');
   chip.innerHTML='<span class="hd"><span class="av"></span><span class="nm"></span></span>'+
                  '<span class="bd"><b class="due">0</b><span class="cap"></span></span>'+
                  '<span class="cta"></span>';
-  chip.addEventListener('click',function(){ panelOpen()?closePanel():openPanel(chip); });
+  chip.addEventListener('click',function(){
+    if(panelOpen() && anchorEl===chip) return closePanel();
+    openPanel(chip);                      /* re-anchor if the other tile opened it */
+  });
   launch.appendChild(chip);
+  chips.push(chip);
   return launch;
 }
 
@@ -8211,6 +8262,7 @@ function panelOpen(){ return panel && !panel.hidden; }
 function openPanel(anchor){
   if(!panel) buildPanel();
   lastFocus=anchor||document.activeElement;
+  anchorEl=anchor||chips[0]||null;
   renderPanel();
   /* Refresh in the background — the panel is usable immediately and
      re-renders only if the server actually had something newer. */
@@ -8218,7 +8270,7 @@ function openPanel(anchor){
     syncPull(current(), function(){ if(panelOpen()) renderPanel(); });
   });
   panel.hidden=false;
-  if(chip) chip.setAttribute('aria-expanded','true');
+  chips.forEach(function(c){ c.setAttribute('aria-expanded', c===anchorEl?'true':'false'); });
   place(anchor);
   var f=panel.querySelector('select,input,button.go,button.mini');
   if(f) try{ f.focus({preventScroll:true}); }catch(e){ f.focus(); }
@@ -8226,13 +8278,15 @@ function openPanel(anchor){
 function closePanel(){
   if(!panel||panel.hidden) return;
   panel.hidden=true;
-  if(chip) chip.setAttribute('aria-expanded','false');
+  chips.forEach(function(c){ c.setAttribute('aria-expanded','false'); });
   if(lastFocus) try{ lastFocus.focus({preventScroll:true}); }catch(e){}
   lastFocus=null;
 }
 function place(anchor){
+  anchor = anchor || anchorEl || chips[0];
+  if(!anchor || !panel) return;
   if(window.matchMedia('(max-width:900px)').matches){ panel.style.top=''; panel.style.left=''; return; }
-  var r=(anchor||chip).getBoundingClientRect();
+  var r=anchor.getBoundingClientRect();
   var top=Math.max(12,Math.min(r.top, window.innerHeight-panel.offsetHeight-12));
   panel.style.top=top+'px';
   panel.style.left=(r.right+14)+'px';
@@ -8249,14 +8303,14 @@ function buildPanel(){
   document.addEventListener('mousedown',function(e){
     if(!panelOpen()) return;
     if(panel.contains(e.target)) return;
-    if(chip && chip.contains(e.target)) return;
+    for(var ci=0; ci<chips.length; ci++) if(chips[ci].contains(e.target)) return;
     if(e.target.closest && e.target.closest('#mbar')) return;
     closePanel();
   });
   document.addEventListener('keydown',function(e){
     if(e.key==='Escape' && panelOpen()){ e.stopPropagation(); closePanel(); }
   });
-  window.addEventListener('resize',function(){ if(panelOpen()) place(chip); });
+  window.addEventListener('resize',function(){ if(panelOpen()) place(); });
 }
 
 /* The new-name form, also reachable behind "Someone else". */
@@ -8316,7 +8370,7 @@ function askPinIfNeeded(id){
     'autocomplete="off" placeholder="PIN">'+
     '<button class="mini" data-act="dopin" type="button">Save</button></div>';
   var f=io.querySelector('#rvpin'); if(f) f.focus();
-  place(chip);
+  place();
 }
 
 function renderPanel(){
@@ -8380,10 +8434,10 @@ function renderPanel(){
               : ((panel.querySelector('#rvpick')||{}).value||'');
       if(!pid) return;
       setActive(pid);
-      renderPanel(); place(chip);
+      renderPanel(); place();
       syncPull(pid,function(){
         if(!panelOpen()) return;
-        renderPanel(); place(chip);
+        renderPanel(); place();
         askPinIfNeeded(pid);
       });
       return;
@@ -8391,15 +8445,15 @@ function renderPanel(){
     if(a==='other'){
       panel.querySelector('#rvio').innerHTML='<div style="margin-top:10px">'+newNameHTML()+'</div>';
       var f0=panel.querySelector('#rvnew'); if(f0) f0.focus();
-      place(chip); return;
+      place(); return;
     }
-    if(a==='signout'){ signOut(); renderPanel(); place(chip); return; }
+    if(a==='signout'){ signOut(); renderPanel(); place(); return; }
     if(a==='add'){
       var v=panel.querySelector('#rvnew'), vp=panel.querySelector('#rvnewpin');
       var nid2=addProfile(v?v.value:'');
       if(vp && vp.value.trim()) setPin(nid2, vp.value);
-      renderPanel(); place(chip);
-      syncPull(nid2,function(){ if(panelOpen()){ renderPanel(); place(chip); } });
+      renderPanel(); place();
+      syncPull(nid2,function(){ if(panelOpen()){ renderPanel(); place(); } });
       return;
     }
     if(a==='new'||a==='rename'){
@@ -8412,13 +8466,13 @@ function renderPanel(){
         (ren?esc(nameOf(cur0)):'')+'">'+
         '<button class="mini" data-act="'+(ren?'dorename':'doadd')+'" type="button">'+(ren?'Save':'Add')+'</button>'+
         '</div>';
-      var f=panel.querySelector('#rvname'); f.focus(); f.select(); place(chip); return;
+      var f=panel.querySelector('#rvname'); f.focus(); f.select(); place(); return;
     }
     if(a==='doadd'){
-      addProfile(panel.querySelector('#rvname').value); renderPanel(); place(chip); return;
+      addProfile(panel.querySelector('#rvname').value); renderPanel(); place(); return;
     }
     if(a==='dorename'){
-      renameProfile(current(), panel.querySelector('#rvname').value); renderPanel(); place(chip); return;
+      renameProfile(current(), panel.querySelector('#rvname').value); renderPanel(); place(); return;
     }
     if(a==='pin'){
       panel.querySelector('#rvio').innerHTML=
@@ -8429,12 +8483,12 @@ function renderPanel(){
         '<p class="note" style="margin-top:8px">Not a password. It only stops someone '+
         'typing your name on another device and overwriting your schedule by accident. '+
         'Leave it empty for none.</p>';
-      panel.querySelector('#rvpin').focus(); place(chip); return;
+      panel.querySelector('#rvpin').focus(); place(); return;
     }
     if(a==='dopin'){
       setPin(current(), panel.querySelector('#rvpin').value);
       syncPush(current(), function(r){
-        renderPanel(); place(chip);
+        renderPanel(); place();
         var s=panel.querySelector('#rvio');
         if(s) s.innerHTML = (r&&r.needPin)
           ? '<p class="msg bad">That PIN does not match the one already on this name.</p>'
@@ -8444,7 +8498,7 @@ function renderPanel(){
     }
     if(a==='dorestore'){
       syncPush(current(), function(r){
-        renderPanel(); place(chip);
+        renderPanel(); place();
         var s5=panel.querySelector('#rvio');
         if(s5) s5.innerHTML = (r&&r.ok)
           ? '<p class="msg">Restored from this device.</p>'
@@ -8465,10 +8519,10 @@ function renderPanel(){
         '<button class="mini" data-act="dorm" type="button">Remove here</button>'+
         '<button class="mini" data-act="dormall" type="button">Remove everywhere</button>'+
         '</div><p class="msg" id="rvmsg" hidden></p>';
-      place(chip); return;
+      place(); return;
     }
     if(a==='dorm'){
-      delProfile(current()); renderPanel(); place(chip);
+      delProfile(current()); renderPanel(); place();
       var s3=panel.querySelector('#rvio');
       if(s3) s3.innerHTML='<p class="msg">Removed from this device.</p>';
       return;
@@ -8482,7 +8536,7 @@ function renderPanel(){
                    mm2.textContent='That name has a PIN. Set the matching PIN first, then remove.'; }
           return;
         }
-        delProfile(gone); renderPanel(); place(chip);
+        delProfile(gone); renderPanel(); place();
         var s4=panel.querySelector('#rvio');
         if(s4) s4.innerHTML='<p class="msg">'+(r&&r.ok
           ? 'Removed from this device and from the shared list.'
@@ -8497,7 +8551,7 @@ function renderPanel(){
         '<p class="msg">Keep this somewhere. Your devices sync on their own, so this '+
         'is not how progress travels &mdash; it is the only copy that exists outside the '+
         'sync store, and the only way back if that store is ever lost.</p>';
-      var ta=panel.querySelector('.code'); ta.focus(); ta.select(); place(chip); return;
+      var ta=panel.querySelector('.code'); ta.focus(); ta.select(); place(); return;
     }
     if(a==='showimp'){
       var list2=profiles(), mg='';
@@ -8513,14 +8567,14 @@ function renderPanel(){
         mg+
         '<div class="row" style="margin-top:8px"><button class="mini" data-act="doimp" type="button">Or import as a new profile</button></div>'+
         '<p class="msg" id="rvmsg" hidden></p>';
-      panel.querySelector('#rvcode').focus(); place(chip); return;
+      panel.querySelector('#rvcode').focus(); place(); return;
     }
     if(a==='domerge'){
       var mm=panel.querySelector('#rvmsg');
       try{
         var tgt=panel.querySelector('#rvmto').value;
         var r=mergeCode(tgt, panel.querySelector('#rvcode').value);
-        setActive(tgt); renderPanel(); place(chip);
+        setActive(tgt); renderPanel(); place();
         var slot2=panel.querySelector('#rvio');
         if(slot2) slot2.innerHTML='<p class="msg">Merged into “'+esc(nameOf(tgt))+'”. '+
           r.added+' new, '+r.taken+' updated from the other device, '+r.kept+' already newer here.</p>';
@@ -8533,7 +8587,7 @@ function renderPanel(){
       var m=panel.querySelector('#rvmsg');
       try{
         var nid=importCode(panel.querySelector('#rvcode').value);
-        setActive(nid); renderPanel(); place(chip);
+        setActive(nid); renderPanel(); place();
         var m2=panel.querySelector('#rvio');
         if(m2) m2.innerHTML='<p class="msg">Imported as “'+esc(nameOf(nid))+'”.</p>';
       }catch(err){
@@ -8554,14 +8608,14 @@ function renderPanel(){
   };
   panel.onchange=function(e){
     if(e.target.id==='rvsel'){
-      setActive(e.target.value); renderPanel(); place(chip);
-      syncPull(current(), function(){ if(panelOpen()){ renderPanel(); place(chip); } });
+      setActive(e.target.value); renderPanel(); place();
+      syncPull(current(), function(){ if(panelOpen()){ renderPanel(); place(); } });
     }
   };
   panel.onkeydown=function(e){
     if(e.key!=='Enter') return;
     if(e.target.id==='rvnew'){
-      e.preventDefault(); addProfile(e.target.value); renderPanel(); place(chip);
+      e.preventDefault(); addProfile(e.target.value); renderPanel(); place();
     } else if(e.target.id==='rvname'){
       e.preventDefault();
       var btn=panel.querySelector('[data-act="doadd"],[data-act="dorename"]');
@@ -8880,9 +8934,15 @@ function boot(){
   /* Directly beneath the shelf selector: the two things you choose before
      you read anything sit together, and Review is the larger of the two. */
   var sp=document.querySelector('#nav .shelfpick');
-  var lau=buildLauncher();
+  var lau=buildLauncher('side');
   if(sp && sp.parentNode) sp.parentNode.insertBefore(lau, sp.nextSibling);
   else if(nav && search) nav.insertBefore(lau, search.nextSibling);
+  chip=chips[0];
+
+  /* And again in the masthead, under its shelf row — the sidebar does not
+     exist on a phone, and even on a desktop this is what gets read first. */
+  var msp=document.querySelector('.masthead .shelfpick');
+  if(msp && msp.parentNode) msp.parentNode.insertBefore(buildLauncher('mast'), msp.nextSibling);
 
   /* phone: a fourth bar button opens the same panel */
   var bar=document.getElementById('mbar');
