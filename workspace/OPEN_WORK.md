@@ -32,7 +32,8 @@ Before authoring any of these: check existing coverage first (board-brief 7.9). 
 
 ## Structural work (no source needed)
 - **Never-keyed diagnoses:** `nk.py --input index.html` reports 16 at ≥4× after s02. Advisory. Known alias gap: "hip osteoarthritis" is keyed as "Hip OA" in `gtps`, so it is a false positive. "Iron deficiency anemia" never keyed: fold into the `microcytic-anemia` tuple pass.
-- **12 figures** not redrawn (list in `RESIDUALS.md`).
+- **12 figures** not redrawn (list in `RESIDUALS.md`). Six now have a reference image in `~/pics/IMAGE_CATALOG.md`: tet episode (132, 1), cyanotic circuits (136), Potter cascade (93), FAS face (191), Friedreich cord (186), shunt circulation (17, partial).
+- **Image catalogue** (`~/pics/IMAGE_CATALOG.md` + `.csv`): 228 unique AMBOSS images; 54 high and 51 med matched to 62 briefs. Reference only: never embed, recreate as SVG, table or spine. Next step (user's call): choose which to redraw first.
 - **⚠︎ census after s04 (entity-decoded):** 179 total; 0 in bank items. Remaining flags are in tables, pearls, danger, crit and one dp. Count by decoding entities, never by grepping digits: option ids like `o_…9888…` false-match a raw "9888" search.
 
 ## Closed
