@@ -31,8 +31,7 @@ Corpus check 2026-09-22: these are the only four items opening with "Same…".
 Before authoring any of these: check existing coverage first (board-brief 7.9). A fast miss on covered content is a review problem, not a new brief.
 
 ## Structural work (no source needed)
-- **7 self-keying briefs:** herpangina, cgd, gtps, eczemaherp, lymphadenitis, cyanotic-chd/ToF, bs-shunt-timing/VSD. Retitle `<h4>` only; ids never change. Six of these are also on the never-keyed list.
-- **Never-keyed diagnoses:** `nk.py --input index.html` reports 22 at ≥4× (handoff said 21; one alias grouping unreconciled). Advisory.
+- **Never-keyed diagnoses:** `nk.py --input index.html` reports 16 at ≥4× after s02. Advisory. Known alias gap: "hip osteoarthritis" is keyed as "Hip OA" in `gtps`, so it is a false positive. "Iron deficiency anemia" never keyed: fold into the `microcytic-anemia` tuple pass.
 - **All-`dx` briefs:** secondary-htn, cough, pneumoconiosis, liver-preg, thyroid, psoriasis, neonatal-rash.
 - **Tuple sets unapplied:** PUV, ped-murmur, bs-leukemia, vur, microcytic-anemia (RDW/RBC), bs-torch (no action).
 - **12 figures** not redrawn (list in `RESIDUALS.md`).
@@ -41,4 +40,6 @@ Before authoring any of these: check existing coverage first (board-brief 7.9). 
 
 ## Closed
 - 2026-09-22 s01: `bs-adolescent-confid` rowspan restructure. Exceptions moved to a `.crit` tile (grids and masks); table reduced to the protected-services column. No item changes.
+- 2026-09-22 s02: self-keying pass. The 7 briefs never keyed their own diagnosis (only a distractor). Retitled `cgd` → Recurrent Abscesses and Granulomas, `gtps` → Pain Around the Hip and Thigh, `eczemaherp` → Atopic Dermatitis Complications; nav for those three plus `lymphadenitis`. `cyanotic-chd` and `bs-shunt-timing` titles kept (6 inbound Pairs-with links, titles don't name the missing key). One new `dx` item per brief keying its diagnosis; 1,556 → 1,563 items. Cue review: key longest on 4/7 (TOF +1, VSD +1, lymphadenitis +4, GTPS +13 as a full disease name); no shape cues.
+- Mirror `ax/w20.html`: retired by user decision; `index.html` is the only working copy.
 - Thalassemia miss selection: user says not needed. Dropped.
