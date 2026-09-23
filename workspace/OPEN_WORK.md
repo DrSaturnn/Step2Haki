@@ -12,7 +12,7 @@ Updated 2026-09-22. Replaces the stale lists in `RESIDUALS.md` where they disagr
 - `tools/gate.py index.html --base <rev>`: item, option and brief id canaries (count vs set, Counter only on failure); every item answerable (3 distinct option ids and 3 distinct option texts); permanence (no id lost since base); nid reuse (info); near-duplicate stems with the same key via an inverted index (info, hand-check before quoting). About 1 s.
 - `repair/apply_ledger.py` refuses to write if any new item or brief id is already on the page, then runs the gate after writing.
 - New ids from `tools/idgen.py` (brief, type, full key, full stem). Earlier passes seeded on stem[:60] without the brief; those ids stay as they are.
-- Open finding: the PDA item "Preterm infant with a continuous murmur below the left clavicle..." exists word for word in both `bs-murmur-map` and `bs-shunt-timing` (q_3f503b9a2dee51438e7c, q_9696867d34855f3c8457). User's call: keep, or rewrite one as a distinct variant.
+- Remaining near-duplicate after s07: q_163add7fdad553c2a5e2 / q_a0a18460905c5eb98320 (Jaccard 0.7, same key). Hand-check before acting.
 
 ## Waiting on source material (fill as questions are posted)
 
@@ -33,7 +33,7 @@ Corpus check 2026-09-22: these are the only four items opening with "Same…".
 ### New briefs (user decision: author when/if the question is posted)
 - **Infant of a Diabetic Mother.** Never saved; must be re-authored. Salvage: three IDM items already in `bs-nrd` (surfactant `next`, PGE1 `next`, hyperinsulinism-delays-surfactant `mech`) and the IDM row in `del22q11`. Needs a source question for the `.vignette`.
 - **Hodgkin lymphoma, supraclavicular node.** Zero coverage anywhere on the page.
-- **Salt-wasting CAH.**
+- **Salt-wasting CAH.** (Now a discriminator line in the `bs-nrd` polycythemia block; still no owning brief.)
 - **IgA vasculitis (HSP).**
 - **Pellagra / nutritional-deficiency hub.**
 - **Beckwith-Wiedemann.** Partial spine exists in `malform-syndromes` and `tumor-syndromes`; likely scope is "the overgrowth syndromes".
@@ -57,3 +57,4 @@ Before authoring any of these: check existing coverage first (board-brief 7.9). 
 - 2026-09-22 s05: backfill. `meningitis` + early meningococcal disease block, source item (nid 1481771577462), 1 dx item, 4 traplines. `febrile-seizure` + counselling/test-indication block from explanation and library, source item (nid 1513200856433), 3 items; one ⚠︎ cleared (complex seizure recurrence verified in library entry). nids added to earlier source items in airway, malform-syndromes, polyuria, occult-gi-bleed. 1,598 → 1,604 items; ⚠︎ 179 → 178.
 - 2026-09-22 s06: backfill, 3 questions, no nid previously on items (IVH nid 1483930621644 was a shared alternate on `cerebral-palsy`, a different question). `bs-preterm-followup` + symptomatic IVH block, source dx item, cranial ultrasound item. `lymphadenitis` + infected branchial cleft cyst row, congenital neck masses by location block, source item, thyroglossal and laryngocele items. `cgd` + hyper-IgE row, reading-the-CBC block, source item, Chediak-Higashi and cold-abscess mechanism items. 1,604 → 1,612.
 - Thalassemia miss selection: user says not needed. Dropped.
+- 2026-09-22 s07: PDA twin resolved. `bs-murmur-map` copy (q_3f503b9a2dee51438e7c) rewritten as a murmur-reading `dx` variant (2 yo, key Patent ductus arteriosus vs aortic regurgitation and VSD), version 2, all ids kept; `bs-shunt-timing` keeps the preterm treatment item. Not merged: the briefs teach different skills. Neonatal polycythemia backfilled into `bs-nrd` (table row, polycythemia block with each distractor's discriminator, source item nids 1516823438451 +4, hypoglycemia mechanism, partial exchange transfusion). New Part II brief `bs-peds-stroke` "Stroke in a Child or Adolescent" in Neurology (source nids 1471806144718 +4; Takayasu; category crit tile; 8-row masked table; 8 items incl. endocarditis, dissection, FMD, moyamoya, subclavian steal, angiography, steroids); Pairs with pmr, secondary-htn, bs-sickle-trait, reverse links added to the latter two. The Takayasu source stem was paraphrased from the retained explanation summary (verbatim question text was lost to a context compaction); re-paste if exact stem details matter. Cue review: two uniquely longest keys fixed by lengthening distractors with real alternatives. 1,612 → 1,623 items; 181 → 182 briefs; near-duplicates 2 → 1.
