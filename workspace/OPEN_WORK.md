@@ -8,6 +8,12 @@ Updated 2026-09-22. Replaces the stale lists in `RESIDUALS.md` where they disagr
 3. Library entries pasted alongside: mine them for facts missing from the brief (or elsewhere on the page).
 4. New brief only when no brief owns the objective.
 
+## Gate (every pass)
+- `tools/gate.py index.html --base <rev>`: item, option and brief id canaries (count vs set, Counter only on failure); every item answerable (3 distinct option ids and 3 distinct option texts); permanence (no id lost since base); nid reuse (info); near-duplicate stems with the same key via an inverted index (info, hand-check before quoting). About 1 s.
+- `repair/apply_ledger.py` refuses to write if any new item or brief id is already on the page, then runs the gate after writing.
+- New ids from `tools/idgen.py` (brief, type, full key, full stem). Earlier passes seeded on stem[:60] without the brief; those ids stay as they are.
+- Open finding: the PDA item "Preterm infant with a continuous murmur below the left clavicle..." exists word for word in both `bs-murmur-map` and `bs-shunt-timing` (q_3f503b9a2dee51438e7c, q_9696867d34855f3c8457). User's call: keep, or rewrite one as a distinct variant.
+
 ## Waiting on source material (fill as questions are posted)
 
 Standing workflow: paste the question **and the full vendor explanation** together. Numbers traced to the pasted explanation ship clean; anything else gets ⚠︎.
