@@ -307,6 +307,15 @@ body.flat .bktools .bkmode.on{background:#26262F;color:#fff}
 tbody tr.em td{background:rgba(142,61,44,.05)}
 .traps .trapline{display:flex;align-items:baseline;gap:9px;margin:0 0 7px}
 .traps .trapwhy{font-size:13.2px;color:var(--ink-2);line-height:1.5}
+.traps:has(> .trapline){display:grid;grid-template-columns:max-content minmax(0,1fr);column-gap:12px;row-gap:9px;align-items:baseline}
+.traps:has(> .trapline) > .trapline{display:contents}
+.traps .trapline .pill{margin:0;justify-self:start}
+@media (max-width:640px){
+  .traps:has(> .trapline){display:block}
+  .traps:has(> .trapline) > .trapline{display:block;margin:0 0 12px;padding-left:11px;border-left:2px solid var(--hair)}
+  .traps .trapline .pill{margin:0 0 5px}
+  .traps .trapline .trapwhy{display:block}
+}
 @media (max-width:640px){
   .tw tbody tr.em{box-shadow:var(--e2),inset 0 0 0 1.5px rgba(142,61,44,.25)}
   .tw tbody tr.em td{background:none}
@@ -470,6 +479,45 @@ tbody tr.em td{background:rgba(142,61,44,.05)}
   }
 }
 @media print{ #mbar,#sheet{display:none!important} }
+
+/* Index sheet, pass 2. The list is the point of the sheet, so the chrome
+   above it is cut to one row each, the systems become one grouped card
+   instead of twelve floating tiles, and the sheet opens on where you are. */
+@media (max-width:980px){
+  .sheetin{max-height:88vh;max-height:88dvh}
+  .sheethead{margin:0 0 8px}
+  .sheethead b{font-size:19px}
+  .sheetin .shelfpick{margin:0 0 10px;display:block}
+  .sheetin .shelfpick .lbl{display:none}
+  .sheetin .shelfpick .seg{display:flex;flex-wrap:nowrap;gap:0;padding:3px;border-radius:12px}
+  .sheetin .shelfpick button{flex:1;padding:8px 4px;font-size:10px;letter-spacing:.9px;white-space:nowrap}
+  .sheetin .shelfpick button.soon{display:none}
+  #msearch{padding:10px 14px;margin:0 0 10px;border-radius:11px}
+  .sheetlist{
+    padding:0 0 4px;
+    -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 8px);
+            mask-image:linear-gradient(180deg,transparent 0,#000 8px);
+  }
+  .sheetgroup{
+    border-radius:15px;overflow:hidden;margin:4px 0 0;
+    background:linear-gradient(145deg,#F4F5F5 0%,#EEF0F0 55%,#E9EBEB 100%);
+    box-shadow:var(--e2);
+  }
+  .sheetlist details{margin:0;border-radius:0;background:none;box-shadow:none}
+  .sheetlist details+details{border-top:1px solid rgba(24,28,30,.08)}
+  .sheetlist details[open]{box-shadow:none;background:rgba(255,255,255,.35)}
+  .sheetlist summary{padding:13px 14px 13px 16px;font-size:15px}
+  .sheetlist summary i{padding:2px 7px;font-size:10.5px}
+  .sheetlist a{padding:11px 16px 11px 26px;font-size:14.2px;background:none}
+  .sheetlist a.bs{padding-left:26px}
+  .sheetlist .msub{background:none}
+  /* where you are: the system you were reading, and the brief itself */
+  .sheetlist details.here summary .t::after{
+    content:"Reading";margin-left:8px;vertical-align:2px;
+    font-size:8.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--accent);
+  }
+  .sheetlist a.here{color:var(--ink);font-weight:600;box-shadow:inset 3px 0 0 var(--accent)}
+}
 
 /* ---------- PHONE: tables restack as one card per row ----------
    A 5-column mimics table cannot fit 390px. Scrolling it sideways pushes
@@ -8973,6 +9021,8 @@ function mobileNav(){
       cur.items.push({sub:norm(el.textContent)});
     }
   });
+  var groupCard=document.createElement('div'); groupCard.className='sheetgroup';
+  list.appendChild(groupCard);
   groups.forEach(function(g){
     var d=document.createElement('details');
     var s=document.createElement('summary');
@@ -8984,7 +9034,7 @@ function mobileNav(){
       if(it.bs) a.className='bs';
       d.appendChild(a);
     });
-    list.appendChild(d);
+    groupCard.appendChild(d);
   });
 
   document.body.appendChild(sheet);
@@ -9003,7 +9053,32 @@ function mobileNav(){
   function open(){
     sheetInvoker=document.activeElement; sheet.hidden=false; sheet.classList.add('open'); document.body.classList.add('sheetopen');
     var ib=bar.querySelector('[data-act="index"]'); if(ib) ib.setAttribute('aria-expanded','true');
-    var ms=inner.querySelector('#msearch'); if(ms) ms.focus({preventScroll:true});
+    markHere();
+    /* on touch, focusing the field raises the keyboard over half the list */
+    var coarse=window.matchMedia && window.matchMedia('(pointer:coarse)').matches;
+    var ms=inner.querySelector('#msearch'); if(ms && !coarse) ms.focus({preventScroll:true});
+  }
+  /* Open on the system being read, with the brief marked. The current brief
+     is the last visible one whose top has passed the upper third of the screen. */
+  function markHere(){
+    list.querySelectorAll('.here').forEach(function(x){ x.classList.remove('here'); });
+    if(mobileIndexQuery) return;
+    var cur=null, line=window.innerHeight*0.33;
+    document.querySelectorAll('.brief').forEach(function(b){
+      if(!b.id) return;
+      var r=b.getBoundingClientRect();
+      if(!r.height) return;                       // hidden by the shelf or review filter
+      if(r.top<=line && r.bottom>0) cur=b;
+    });
+    if(!cur) return;
+    var a=list.querySelector('a[href="#'+cur.id+'"]'); if(!a || a.style.display==='none') return;
+    var d=a.closest('details');
+    a.classList.add('here'); d.classList.add('here');
+    list.querySelectorAll('details').forEach(function(x){ x.open=(x===d); });
+    requestAnimationFrame(function(){
+      var lt=list.getBoundingClientRect().top, st=d.getBoundingClientRect().top-lt+list.scrollTop;
+      list.scrollTop=Math.max(0, st-8);
+    });
   }
 
   bar.addEventListener('click',function(e){
