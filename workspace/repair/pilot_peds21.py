@@ -401,9 +401,9 @@ briefB3=f'''<div class="brief aq" id="{B3}" data-shelf="peds" data-src="aquifer"
 <p>Bruising is a finding, not a diagnosis. Ask what failed: the <b>vessel wall</b> (IgA vasculitis), the <b>platelets</b> (ITP, leukemia, von Willebrand disease), the <b>clotting factors</b> (hemophilia), or the <b>story</b> (accidental or nonaccidental trauma). Each leaves a different bruise, a different history and a different first test. Check first whether the child needs intervention now; then let the history, the examination and the platelet count remove whole branches at a time. The confirmatory test comes last, once one branch is left.</p></div>
 {t('Red flags: act before the full history',['Finding','What it points to'],[
  ['Altered mental status, labored breathing, slow capillary refill','Unstable: <b>circulation, airway, breathing</b> first'],
- [f'Fever with fast-spreading purpura, ill child {W}','<b>Sepsis</b> or meningococcemia: antibiotics before the workup'],
+ [f'Fever with fast-spreading purpura, ill child','<b>Sepsis</b> or meningococcemia: antibiotics before the workup'],
  ['Pallor, fatigue, bone pain, big spleen or nodes','<b>Marrow</b> disease: CBC and smear today'],
- [f'Headache or confusion with low platelets {W}','<b>Intracranial</b> bleeding'],
+ [f'Headache or confusion with low platelets','<b>Intracranial</b> bleeding'],
  ['Sudden severe belly pain, vomiting, bloody stool','<b>Intussusception</b>'],
 ],mask='none')}{t('The differential',['Diagnosis','What failed','What the bleeding looks like','First clue'],[
  ['IgA vasculitis','Vessel wall','<b>Raised</b> purpura, symmetric, on both legs and buttocks','Normal platelets; sore joints, belly pain, blood in the urine'],
@@ -411,7 +411,7 @@ briefB3=f'''<div class="brief aq" id="{B3}" data-shelf="peds" data-src="aquifer"
  ['Leukemia','Platelets: crowded out of the marrow','Petechiae and bruises with <b>pallor</b>','An ill child: fever, bone pain, big spleen or nodes'],
  ['Von Willebrand disease','Platelets: normal count, poor sticking','<b>Mucosal</b> bleeding: nose, gums, heavy periods','Normal count; bleeding relatives of either sex'],
  ['Hemophilia A and B','Clotting factors','<b>Deep</b> bleeding into joints and muscle','Boys; bleeding after circumcision, shots or surgery'],
- [f'Meningococcemia or sepsis {W}','Infection','Purpura that <b>spreads</b> within hours','Fever in an ill-looking child'],
+ [f'Meningococcemia or sepsis','Infection','Purpura that <b>spreads</b> within hours','Fever in an ill-looking child'],
  ['Accidental trauma','Trauma','Flat bruises over <b>shins, elbows, forehead</b>','The story fits the injury and the child’s age'],
  ['Nonaccidental trauma','Trauma','Flat bruises on the <b>back, buttocks, face or ears</b>; patterned; different ages','The story does not fit, or the child cannot yet crawl'],
 ],mask=3)}{t('History: what each answer points to',['Clue','What it points to'],[
@@ -437,12 +437,12 @@ briefB3=f'''<div class="brief aq" id="{B3}" data-shelf="peds" data-src="aquifer"
   ['','','<b>Low</b> platelets with anemia or an abnormal white count','Marrow or consumption: smear next'],
  ]),
  (None,[
-  [f'Peripheral smear {W}','By branch','<b>Blasts</b> or schistocytes','Leukemia, or hemolytic uremic syndrome'],
+  [f'Peripheral smear','By branch','<b>Blasts</b> or schistocytes','Leukemia, or hemolytic uremic syndrome'],
   ['Urinalysis and blood pressure','By branch','<b>Blood or protein</b>, or high blood pressure','Kidney involved: BUN and creatinine'],
-  [f'PT and aPTT {W}','By branch','<b>aPTT long</b>, PT normal','Hemophilia or von Willebrand disease'],
+  [f'PT and aPTT','By branch','<b>aPTT long</b>, PT normal','Hemophilia or von Willebrand disease'],
   ['Abdominal ultrasound','By branch','<b>Intussusception</b>','A negative study does not exclude an intermittent one'],
   ['Bone marrow biopsy with flow cytometry','Confirms','<b>20% or more</b> blasts','Leukemia'],
-  [f'Factor VIII, IX and von Willebrand studies {W}','Confirms','<b>Low</b> level','Names the bleeding disorder'],
+  [f'Factor VIII, IX and von Willebrand studies','Confirms','<b>Low</b> level','Names the bleeding disorder'],
   ['Skin biopsy, only if atypical','Confirms','<b>IgA</b> in the vessel walls','IgA vasculitis; rarely needed'],
   ['Serum IgA','Skip','High in only <b>about half</b>','Cannot confirm or exclude IgA vasculitis'],
  ]),
