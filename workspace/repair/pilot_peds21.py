@@ -201,3 +201,108 @@ assert s.count(anchor)==1
 s=s.replace(anchor,briefA+'\n'+briefB+'\n'+anchor)
 open('/tmp/claude-0/scratch.html','w').write(s)
 print('ok', bankA.count('<li'), bankB.count('<li'))
+
+# ======================================================================
+# B2. AQUIFER SYMPTOM WORKUP, revised after the adversarial audit
+# ======================================================================
+B2='aq-bruising'
+bankB2=''.join([
+ li(B2,'dx',"6 yo boy, a week after a cold, with raised, nonblanching red-purple spots on the backs of both legs and the buttocks, swollen tender ankles and crampy periumbilical pain; platelets 280,000",
+    "IgA vasculitis","urinalysis next","Immune thrombocytopenia","Acute lymphoblastic leukemia",src="aquifer"),
+ li(B2,'next',"6 yo with 3 days of new bruises and pinpoint red spots on the legs and trunk; afebrile, alert, normal vital signs, no history of trauma",
+    "Complete blood count with smear","the platelet count makes the first cut","PT and aPTT","Skeletal survey"),
+ li(B2,'dx',"4 yo, well-appearing, flat petechiae everywhere and a nosebleed two weeks after a viral illness; platelets 12,000, hemoglobin and white count normal, no organomegaly",
+    "Immune thrombocytopenia","low platelets, nothing else","IgA vasculitis","Acute lymphoblastic leukemia"),
+ li(B2,'next',"5 yo with petechiae and platelets of 20,000 who otherwise looks like ITP, except that the spleen is palpable 3 cm below the costal margin",
+    "Bone marrow examination","splenomegaly is not part of ITP","Observe as ITP","Intravenous immunoglobulin"),
+ li(B2,'dx',"8 yo girl with frequent nosebleeds, easy bruising and bleeding for a day after a tooth extraction; platelet count normal; her mother has heavy periods",
+    "Von Willebrand disease","a platelet-plug defect with a normal count","Hemophilia A","Immune thrombocytopenia"),
+ li(B2,'dx',"7 yo boy with a hot, swollen knee after a minor fall, a deep thigh hematoma last year, and an uncle who bled after surgery; platelet count normal",
+    "Hemophilia A","deep bleeding is a clotting-factor defect","Von Willebrand disease","IgA vasculitis"),
+ li(B2,'next',"9-month-old who is not yet crawling, with a bruise on the ear and another on the upper back; the parent says he bruises easily; CBC and coagulation studies are normal",
+    "Skeletal survey","bruises a non-mobile infant cannot get by accident","Reassurance","Bone marrow examination"),
+ li(B2,'dx',"5 yo with purpura on the legs, abdominal pain and hematuria a week after bloody diarrhea; hemoglobin 7, platelets 40,000, schistocytes on the smear",
+    "Hemolytic uremic syndrome","low platelets and hemolysis; IgA vasculitis keeps both normal","IgA vasculitis","Immune thrombocytopenia"),
+ li(B2,'test',"6 yo diagnosed with IgA vasculitis on examination, with a normal platelet count",
+    "Urinalysis","the only test the diagnosis itself requires","Serum IgA level","Skin biopsy"),
+ li(B2,'test',"6 yo with IgA vasculitis whose urinalysis shows hematuria and proteinuria",
+    "BUN and creatinine","measures the extent of renal disease","Serum IgA level","Renal ultrasound"),
+ li(B2,'test',"5 yo with IgA vasculitis who develops sudden severe colicky abdominal pain with vomiting",
+    "Abdominal ultrasound","looking for intussusception","Air contrast enema","Upper endoscopy"),
+ li(B2,'next',"Intussusception in a 5 yo with IgA vasculitis; it is ileoileal and has not reduced on its own",
+    "Surgical reduction","an enema cannot reach the small bowel","Air contrast enema","Observation with serial ultrasound"),
+ li(B2,'next',"6 yo with IgA vasculitis whose purpura has faded; urinalysis and blood pressure were normal at diagnosis",
+    "Urinalysis and blood pressure every 1 to 2 weeks","renal disease can follow the rash","No further follow-up needed","Repeat CBC and serum IgA every month"),
+ li(B2,'next',"4 yo with ITP, platelets 15,000, skin petechiae only, no mucosal or other bleeding",
+    "Observation with activity limits","count alone does not trigger treatment","Intravenous immunoglobulin","Platelet transfusion"),
+ li(B2,'avoid',"4 yo with ITP and a painful sprained ankle",
+    "Ibuprofen","impairs platelet function","Acetaminophen","Ice and elevation"),
+])
+briefB2=f'''<div class="brief aq" id="{B2}" data-shelf="peds" data-src="aquifer" data-case="Pediatrics 21">
+<h4>Bruising and Purpura in a Child</h4>
+<p class="sub">Aquifer Pediatrics 21 &middot; symptom workup &middot; name what failed before you name a disease</p>
+{VIG}<div class="dp"><span class="lbl">The approach</span>
+<p>A bruise is blood outside a vessel, so ask <b>what let it out</b>. Either the <b>vessel wall</b> is inflamed, the <b>platelet plug</b> is missing or faulty, the <b>clotting factors</b> are short, or something <b>hit the child</b>. Each failure leaves its own kind of bleed, and one blood count separates most of them. <i>Read the bleed, cut with the platelet count, and let the spleen overrule a reassuring story.</i></p></div>
+{table('What failed: read it off the bleed',['','Vessel wall','Platelet plug','Clotting factors'],[
+ ['<b>Looks like</b>','<b>Raised</b> purpura you can feel, on dependent skin','<b>Flat</b> petechiae and bruises; nose and gum bleeding','<b>Deep</b> bleeding into joints and muscle'],
+ ['<b>After a cut</b>','Not a bleeding problem',f'Bleeds <b>at once</b> {W}',f'Stops, then bleeds again <b>later</b> {W}'],
+ ['<b>Platelet count</b>','<b>Normal</b>','<b>Low</b> (ITP, leukemia), or normal with a faulty plug (von Willebrand)','<b>Normal</b>; the aPTT or PT is long'],
+ ['<b>Children</b>','IgA vasculitis','ITP, leukemia, von Willebrand disease','Hemophilia A and B'],
+],mask='none')}<div class="pearls"><span class="lbl">And the story</span> <b>Accidental</b> bruises sit on <b>shins, elbows and forehead</b>. Bruises on the <b>back, buttocks, face or ears</b>, bruises shaped like a hand, fingers, a bite or a buckle, or <b>any bruise in a child who cannot yet move about</b> are nonaccidental until proven otherwise.</div>
+{grid('danger','Act before you finish the history',[
+ ('Altered mental status, respiratory distress, delayed capillary refill','circulation, airway, breathing first'),
+ (f'Fever with spreading purpura in an ill child {W}','sepsis, meningococcemia: antibiotics before the workup'),
+ ('Pallor, fatigue, bone pain, a big spleen or nodes','marrow infiltration: CBC and smear today'),
+ (f'Headache or confusion with low platelets {W}','intracranial bleeding'),
+ ('Sudden severe abdominal pain, vomiting, bloody stool','intussusception'),
+])}{grid('pearls','History: each answer moves a branch',[
+ ('A cold 1 to 3 weeks ago','vessel or platelet; it precedes about half of IgA vasculitis and more than half of ITP, so it splits neither'),
+ ('Bleeding after circumcision, shots, dental work or surgery; a family history','a <b>factor</b> or <b>plug</b> disorder'),
+ ('Knee and ankle pain, crampy belly pain','<b>vessel</b>: IgA vasculitis'),
+ ('Fever, malaise, weight loss, bone pain','<b>marrow</b>: leukemia'),
+ ('Nose and gum bleeding','<b>platelet plug</b>; about 40% of ITP'),
+ ('A story that does not fit the injury or the child’s age','<b>nonaccidental</b> trauma'),
+])}{grid('pearls','Examination: three moves',[
+ ('Feel the lesion','<b>raised</b> means the vessel wall; <b>flat</b> means blood leaking past a normal vessel'),
+ ('Map it','<b>dependent</b> (legs, buttocks) is vasculitis; <b>bony prominences</b> is play; <b>protected</b> skin is abuse'),
+ ('Feel the spleen and nodes','<b>neither ITP nor IgA vasculitis enlarges the spleen</b>, so a spleen more than 2 cm below the costal margin, or nodes over 2 cm, supraclavicular, hard or matted, send you to leukemia'),
+])}{table('First tests, and what each result does',['Test','Result','What it changes'],[
+ ['<b>CBC with platelet count</b>','<b>Normal</b> platelets','Vessel wall: <b>IgA vasculitis</b>'],
+ ['','<b>Low</b> platelets, everything else normal','Isolated thrombocytopenia: <b>ITP</b>'],
+ ['','<b>Low</b> platelets with anemia or an abnormal white count','Marrow or consumption: <b>smear next</b>'],
+ [f'<b>Peripheral smear</b> {W}','<b>Blasts</b>','Leukemia: bone marrow examination'],
+ ['','<b>Schistocytes</b>','Hemolytic uremic syndrome'],
+ ['<b>Urinalysis</b>','<b>Blood or protein</b>','Kidney involved: add BUN and creatinine'],
+ ['<b>Stool occult blood</b>','<b>Positive</b>','Gut involved; watch for intussusception'],
+ [f'<b>PT and aPTT</b> {W}','<b>Long</b>','Factor disorder: pursue when the history points there'],
+ ['<b>Abdominal ultrasound</b>','<b>Target sign</b>','Intussusception; a negative study does not exclude an intermittent one'],
+ ['<b>Serum IgA</b>','High in about half','Changes nothing; rarely ordered'],
+])}{table('The finalists, one decider per row',['','IgA vasculitis','Immune thrombocytopenia','Leukemia'],[
+ ['<b>Platelets</b>','<b>Normal</b>','<b>Low</b>, usually under 20,000; nothing else abnormal','<b>Low</b>, with anemia or an abnormal white count'],
+ ['<b>Skin</b>','<b>Raised</b> purpura, legs and buttocks','<b>Flat</b> petechiae; nose and gum bleeding','Petechiae and bruising, pallor'],
+ ['<b>The child</b>','Well','Well','<b>Ill</b>: fever, malaise, weight loss, bone pain'],
+ ['<b>Beyond the skin</b>','Joints, belly, <b>kidneys</b>','Nothing','<b>Spleen, liver, nodes</b>'],
+ ['<b>Next</b>','<b>Urinalysis</b>','Nothing more if typical','<b>Smear, then marrow</b>'],
+ ['<b>Treatment</b>','Supportive; NSAID unless GI bleeding or nephritis','Watch; IVIG or IV steroids only for serious bleeding','Oncology'],
+ ['<b>Typical age</b>','4 to 6; boys twice as often','2 to 5','2 to 5'],
+],mask='none')}{grid('danger','The answer here: IgA vasculitis',[
+ ('Mechanism','<i>IgA-rich immune complexes inflame small vessels</i> in skin, gut, joints and kidney; biopsy shows leukocytoclastic vasculitis with IgA'),
+ ('Kidney','about a third, usually hematuria, and it can appear after the rash; about 5% reach chronic kidney disease'),
+ ('Gut','colicky pain, sometimes before the rash; about half have occult blood; intussusception is usually <b>ileoileal</b>, so an enema cannot reduce it'),
+ ('Treatment','acetaminophen or an NSAID unless there is GI bleeding or nephritis; steroids for severe abdominal pain, with no proven kidney benefit'),
+ ('Follow-up','<b>urinalysis and blood pressure every 1 to 2 weeks for 1 to 2 months</b>, then monthly to every other month for a year; about 30% recur'),
+ ('Send them back for','severe belly pain, blood in the stool, vomiting that stops fluids, puffiness, severe headache, blurred vision or confusion'),
+])}<h5 class="authored-hdr">Scenario bank</h5>
+<ol class="bank authored">
+{bankB2}</ol>
+<div class="pearls"><span class="lbl">Pairs with</span> Part I <b>Anemia with Thrombocytopenia</b> picks up once two cell lines are down. Part II <b>Pediatric Acute Lymphoblastic Leukemia</b> owns the marrow branch. Part I <b>Hematuria</b> owns the glomerular workup that renal IgA vasculitis enters.</div>
+<div class="rule"><span class="lbl">Transferable rule</span> For any bleeding complaint, name what failed (vessel, plug, factor, or force) before you name a disease; the feel of the lesion, the platelet count and the spleen each remove a whole branch.</div>
+{traps([('p-salient','Salient decoy','The preceding cold is shared by ITP and IgA vasculitis and cannot separate them.'),
+        ('p-attr','Unchecked attribute','Purpura read as a platelet problem without checking whether it is raised.'),
+        ('p-mirror','Mirror twin','A child who looks like ITP but has a palpable spleen is not ITP.')])}</div>
+'''
+open('/tmp/claude-0/briefB2.html','w').write(briefB2)
+s2=open('index.html').read()
+s2=s2.replace('<div class="brief bs" id="bs-sickle-trait"',briefB2+'\n<div class="brief bs" id="bs-sickle-trait"')
+open('/tmp/claude-0/scratch2.html','w').write(s2)
+print('B2 items', bankB2.count('<li'))
