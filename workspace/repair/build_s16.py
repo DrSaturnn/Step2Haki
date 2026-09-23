@@ -11,7 +11,7 @@ def tbl(cap,rows):
 edits=[]
 def ins(bid,html,why): edits.append({"scope":"brief:"+bid,"op":"insert_before","anchor":A,"text":html,"why":why})
 
-ins('septic-hip',tbl('Workup, in the order you would order it',[
+ins('septic-hip',tbl('Workup',[
  ('CBC, ESR and CRP','First','Count the <b>Kocher</b> predictors: fever, refusal to bear weight, ESR over 40, WBC over 12,000, CRP over 2','3 or more: aspirate'),
  ('Hip ultrasound','First','<b>Effusion</b> present or absent','No effusion argues against septic arthritis; an effusion alone cannot separate septic from transient synovitis'),
  ('Hip radiographs','By branch','Usually <b>normal</b> early','Excludes the mimics: SCFE, Perthes disease, fracture'),
@@ -20,7 +20,7 @@ ins('septic-hip',tbl('Workup, in the order you would order it',[
  ('MRI','By branch','<b>Adjacent osteomyelitis</b> or pyomyositis','Child stays ill after a negative or equivocal aspirate'),
 ]),"workup pilot: screen/first/confirm order per NBME lead-in logic")
 
-ins('congenital-hypothyroid',tbl('Workup, from the screen to the cause',[
+ins('congenital-hypothyroid',tbl('Workup',[
  ('Newborn screen (heel prick at 24 to 48 hours)','Screen','<b>High TSH</b> (some programs measure T4 first)','Recall the infant for serum tests the same day'),
  ('Serum TSH and free T4','Confirms','<b>High TSH</b>, low free T4; or <b>low or normal TSH</b> with low free T4','Primary: start levothyroxine now. Central: cortisol before levothyroxine, then pituitary MRI'),
  ('Thyroid ultrasound or radionuclide scan','Cause, optional','<b>Absent or ectopic</b> gland; or an enlarged gland in place','Dysgenesis; or dyshormonogenesis. Never delays treatment'),
@@ -28,7 +28,7 @@ ins('congenital-hypothyroid',tbl('Workup, from the screen to the cause',[
  ('Serum thyroglobulin alone','Skip','Cannot stand in for imaging','Does not name the cause by itself'),
 ]),"workup pilot: screen then confirm then cause")
 
-ins('bs-spherocytosis',tbl('Workup, in the order you would order it',[
+ins('bs-spherocytosis',tbl('Workup',[
  ('CBC with reticulocytes and indices','First','Anemia, <b>high reticulocytes</b>, MCHC over 36%','Hemolysis from a membrane that has lost surface'),
  ('Peripheral smear','First','<b>Spherocytes</b>','Hereditary spherocytosis or warm autoimmune hemolysis; in a newborn, ABO disease too'),
  ('Direct antiglobulin (Coombs) test','Next','<b>Negative</b>','A membrane defect, not antibody; positive means warm autoimmune hemolysis'),
@@ -39,7 +39,7 @@ ins('bs-spherocytosis',tbl('Workup, in the order you would order it',[
 ]),"workup pilot: first, next, confirm, skip")
 
 old_head='<table><caption>Secondary hypertension — clue → diagnosis → first test</caption>\n<thead><tr><th>Clue in the stem</th><th>Diagnosis</th><th>First test</th></tr></thead>'
-new_head='<table><caption>Secondary hypertension — clue → diagnosis → first test → confirms</caption>\n<thead><tr><th>Clue in the stem</th><th>Diagnosis</th><th>First test</th><th>Confirms, then</th></tr></thead>'
+new_head='<table><caption>Secondary hypertension workup</caption>\n<thead><tr><th>Clue in the stem</th><th>Diagnosis</th><th>First test</th><th>Confirms, then</th></tr></thead>'
 edits.append({"scope":"brief:secondary-htn","op":"replace","old":old_head,"new":new_head,"why":"add confirm column"})
 rows=[('<td><b>Aldosterone-to-renin ratio</b></td></tr>','<td><b>Aldosterone-to-renin ratio</b></td><td>Aldosterone <b>fails to suppress</b> with salt loading; then adrenal CT and adrenal venous sampling to lateralize</td></tr>'),
  ('<td>Duplex / CTA renal arteries</td></tr>','<td>Duplex / CTA renal arteries</td><td>CT or MR angiography; <b>catheter angiography</b> is the reference standard</td></tr>'),
