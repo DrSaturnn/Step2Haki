@@ -9,6 +9,8 @@ for ed in L['edits']:
     body=src[s:e]
     if ed['op']=='replace':
         assert body.count(ed['old'])==1,(sc,ed['old'][:60],body.count(ed['old']));body=body.replace(ed['old'],ed['new'])
+    elif ed['op']=='insert_before_end':
+        assert body.endswith('</div>'),sc;body=body[:-6]+ed['text']+'</div>'
     elif ed['op'] in('insert_after','insert_before'):
         assert body.count(ed['anchor'])==1,(sc,ed['anchor'],body.count(ed['anchor']))
         i=body.index(ed['anchor'])+(len(ed['anchor']) if ed['op']=='insert_after' else 0);body=body[:i]+ed['text']+body[i:]

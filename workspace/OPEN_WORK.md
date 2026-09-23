@@ -2,6 +2,12 @@
 
 Updated 2026-09-22. Replaces the stale lists in `RESIDUALS.md` where they disagree.
 
+## Intake rule for pasted questions (user, 2026-09-22)
+1. Every pasted question ends with its nid(s). Grep the page for each nid first: a match means a duplicate, skip it.
+2. No nid match but the topic has a brief: backfill it there, with the new stem as a `data-src="uworld"` item carrying `data-nid`, plus any explanation facts the brief lacks.
+3. Library entries pasted alongside: mine them for facts missing from the brief (or elsewhere on the page).
+4. New brief only when no brief owns the objective.
+
 ## Waiting on source material (fill as questions are posted)
 
 Standing workflow: paste the question **and the full vendor explanation** together. Numbers traced to the pasted explanation ship clean; anything else gets ⚠︎.
@@ -42,4 +48,5 @@ Before authoring any of these: check existing coverage first (board-brief 7.9). 
 - 2026-09-22 s03: all-`dx` pass. 27 `next`/`test`/`avoid`/`screen`/`mech` items added across secondary-htn (4), cough (4), pneumoconiosis (4), liver-preg (3), thyroid (4), psoriasis (4), neonatal-rash (4), each built only from that brief's table, decision point or pearls; no new numbers; 4 carry `data-lead-in`. 1,563 → 1,590 items. Cue review: key uniquely longest 10/27 after relabelling three (PPI trial d2, psoriasis first rung, miliaria key).
 - 2026-09-22 s04: residuals. Tuple-set line in `RESIDUALS.md` was stale: RDW/RBC items already live in `microcytic-anemia`; `vur` and `bs-torch` already mixed. Filled real gaps (+8 items): microcytic-anemia keys IDA and anemia of chronic disease; ped-murmur +2 `next`; bs-puv +2 `mech`; bs-leukemia +1 `next`, +1 `stage`. 1,590 → 1,598 items. Both bank-item flags resolved by targeted verification: `del22q11` v3 (IDSA 2013 live-vaccine gate stated; key unchanged); `bs-galactosemia` v2 (CSF culture added per AAP 2021 febrile infant guideline; ⚠ removed from inside the key, where it rendered on the correct option button only; distractors rewritten as parallel workups).
 - File naming (corrected by prior session): `ax/w20.html` was that toolchain's working file and `index.html` the deploy copy; `w` + counter is a generation series (w16 = 152 briefs, w20.bak = 167, w20 = 181). This session does not use the `ax/` scripts and hands back `index.html`; if the `ax/` tooling is resumed, copy the result to `ax/w20.html` too.
+- 2026-09-22 s05: backfill. `meningitis` + early meningococcal disease block, source item (nid 1481771577462), 1 dx item, 4 traplines. `febrile-seizure` + counselling/test-indication block from explanation and library, source item (nid 1513200856433), 3 items; one ⚠︎ cleared (complex seizure recurrence verified in library entry). nids added to earlier source items in airway, malform-syndromes, polyuria, occult-gi-bleed. 1,598 → 1,604 items; ⚠︎ 179 → 178.
 - Thalassemia miss selection: user says not needed. Dropped.
