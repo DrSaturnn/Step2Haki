@@ -322,6 +322,27 @@ table.cluet tbody td:first-child{font-weight:400;color:var(--ink-2);width:46%}
   .tw table.cluet tbody td:not(:first-child)::before{content:"\\2192  ";display:inline;font-size:14px;letter-spacing:0;text-transform:none;font-weight:400;color:var(--faint)}
   .tw table.cluet tbody td{padding:2px 0}
   .tw table.cluet tbody td:first-child{width:100%}
+  .tw table.cluet tbody{background:linear-gradient(145deg,#F4F5F5 0%,#EEF0F0 55%,#E9EBEB 100%);border-radius:14px;box-shadow:var(--e2);overflow:hidden;margin:0 0 4px}
+  .tw table.cluet tbody tr{background:none!important;box-shadow:none;border-radius:0;margin:0;padding:11px 15px}
+  .tw table.cluet tbody tr+tr{border-top:1px solid rgba(24,28,30,.08)}
+}
+/* the CBC is the first branch point: one test, three outcomes, read as one unit */
+.tw tbody.grp td{background:rgba(84,74,196,.045)}
+.tw tbody.grp tr:nth-child(even){background:none}
+.tw tbody.grp tr td:first-child{box-shadow:inset 3px 0 0 rgba(84,74,196,.5)}
+.tw tbody.grp tr:last-child td{border-bottom:1px solid rgba(84,74,196,.22)}
+@media (max-width:640px){
+  .tw tbody.grp{background:linear-gradient(145deg,#F2F1FA 0%,#EDECF7 60%,#E9E8F4 100%);border-radius:14px;box-shadow:var(--e2),inset 0 0 0 1.5px rgba(84,74,196,.22);overflow:hidden;margin:0 0 11px}
+  .tw tbody.grp tr{background:none!important;box-shadow:none;border-radius:0;margin:0;padding:10px 15px}
+  .tw tbody.grp tr+tr{border-top:1px solid rgba(84,74,196,.14)}
+  .tw tbody.grp td{background:none;border:none}
+  .tw tbody.grp tr td:first-child{box-shadow:none}
+  .tw tbody.grp td:nth-child(3)::before{content:none}
+  .tw tbody.grp td:nth-child(4)::before{content:"\\2192  ";display:inline;font-size:14px;letter-spacing:0;text-transform:none;font-weight:400;color:var(--faint)}
+  .tw tbody.grp td:nth-child(3),.tw tbody.grp td:nth-child(4){padding:2px 0}
+  .tw tbody.grp tr:first-child td:nth-child(3){padding-top:8px}
+  .tw tbody.grp tr:last-child td{border-bottom:none}
+  .tw tbody.grp tr:first-child td:first-child{border-bottom:1px solid rgba(84,74,196,.16)}
 }
 </style>'''
 L_STUDY="Which of the following is the most appropriate diagnostic study to obtain at this time?"
@@ -363,6 +384,14 @@ bankB3=''.join([
  li(B3,'avoid',"4 yo with ITP and a painful sprained ankle",
     "Ibuprofen","impairs platelet function","Acetaminophen","Ice and elevation"),
 ])
+def table2(caption,heads,groups,mask=None):
+    m=f' data-mask="{mask}"' if mask else ''
+    h=''.join(f'<th>{e(x)}</th>' for x in heads)
+    body=''
+    for cls,rows in groups:
+        c=f' class="{cls}"' if cls else ''
+        body+=f'<tbody{c}>\n'+''.join('<tr>'+''.join(f'<td>{x}</td>' for x in row)+'</tr>\n' for row in rows)+'</tbody>\n'
+    return f'<div class="tw">\n<table{m}><caption>{e(caption)}</caption>\n<thead><tr>{h}</tr></thead>\n{body}</table>\n</div>\n'
 def t(caption,heads,rows,mask=None):   # plain first column (CSS already bolds it)
     return table(caption,heads,rows,mask)
 briefB3=f'''<div class="brief aq" id="{B3}" data-shelf="peds" data-src="aquifer" data-case="Pediatrics 21">
@@ -376,13 +405,15 @@ briefB3=f'''<div class="brief aq" id="{B3}" data-shelf="peds" data-src="aquifer"
  ['Pallor, fatigue, bone pain, big spleen or nodes','<b>Marrow</b> disease: CBC and smear today'],
  [f'Headache or confusion with low platelets {W}','<b>Intracranial</b> bleeding'],
  ['Sudden severe belly pain, vomiting, bloody stool','<b>Intussusception</b>'],
-],mask='none')}{t('The differential, by what failed',['What failed','Diagnoses','What the bleeding looks like','First clue'],[
- ['Vessel wall','IgA vasculitis','<b>Raised</b> purpura, symmetric, on both legs and buttocks','Normal platelets; sore joints, belly pain, blood in the urine'],
- ['Platelets','ITP, leukemia, von Willebrand disease','<b>Flat</b> petechiae and bruises; nose and gum bleeding','Low count (ITP, leukemia), or a normal count with a family history (von Willebrand)'],
- ['Clotting factors','Hemophilia A and B','<b>Deep</b> bleeding into joints and muscle','Bleeding after circumcision, shots or surgery; bleeding relatives'],
- ['Accidental trauma','Play, falls','Flat bruises over <b>shins, elbows, forehead</b>','The story fits the injury and the child’s age'],
- ['Nonaccidental trauma','Abuse','Flat bruises on the <b>back, buttocks, face or ears</b>; patterned; different ages','The story does not fit, or the child cannot yet crawl'],
- [f'Infection {W}','Meningococcemia, sepsis','Purpura that <b>spreads</b> within hours','Fever in an ill-looking child'],
+],mask='none')}{t('The differential',['Diagnosis','What failed','What the bleeding looks like','First clue'],[
+ ['IgA vasculitis','Vessel wall','<b>Raised</b> purpura, symmetric, on both legs and buttocks','Normal platelets; sore joints, belly pain, blood in the urine'],
+ ['Immune thrombocytopenia','Platelets: too few','<b>Flat</b> petechiae and bruises; nose and gum bleeding','A well child; low platelets and nothing else'],
+ ['Leukemia','Platelets: crowded out of the marrow','Petechiae and bruises with <b>pallor</b>','An ill child: fever, bone pain, big spleen or nodes'],
+ ['Von Willebrand disease','Platelets: normal count, poor sticking','<b>Mucosal</b> bleeding: nose, gums, heavy periods','Normal count; bleeding relatives of either sex'],
+ ['Hemophilia A and B','Clotting factors','<b>Deep</b> bleeding into joints and muscle','Boys; bleeding after circumcision, shots or surgery'],
+ [f'Meningococcemia or sepsis {W}','Infection','Purpura that <b>spreads</b> within hours','Fever in an ill-looking child'],
+ ['Accidental trauma','Trauma','Flat bruises over <b>shins, elbows, forehead</b>','The story fits the injury and the child’s age'],
+ ['Nonaccidental trauma','Trauma','Flat bruises on the <b>back, buttocks, face or ears</b>; patterned; different ages','The story does not fit, or the child cannot yet crawl'],
 ],mask=3)}{t('History: what each answer points to',['Clue','What it points to'],[
  ['A recent cold','Vessel or platelets: it comes before about half of IgA vasculitis and more than half of ITP, so it <b>separates neither</b>'],
  ['Bleeding after circumcision, shots or dental work; bleeding relatives','<b>Clotting factors</b> or von Willebrand disease'],
@@ -399,18 +430,22 @@ briefB3=f'''<div class="brief aq" id="{B3}" data-shelf="peds" data-src="aquifer"
  ['Swollen joint after little or no injury','Joint bleed: <b>clotting factors</b>'],
  ['Spleen more than 2 cm below the ribs','Not ITP or IgA vasculitis: <b>leukemia or infection</b> (EBV is the commonest cause); a tip alone is normal in about 10%'],
  ['Nodes over 2 cm, supraclavicular, or hard and matted','<b>Malignancy</b>'],
-],mask='none')}{t('First tests, in the order you would order them',['Test','Order','Result','What it points to'],[
- ['CBC with platelet count','First','<b>Normal</b> platelets','Vessel wall: IgA vasculitis'],
- ['CBC','First','<b>Low</b> platelets, nothing else abnormal','ITP'],
- ['CBC','First','<b>Low</b> platelets with anemia or an abnormal white count','Marrow or consumption: smear next'],
- [f'Peripheral smear {W}','By branch','<b>Blasts</b> or schistocytes','Leukemia, or hemolytic uremic syndrome'],
- ['Urinalysis and blood pressure','By branch','<b>Blood or protein</b>, or high blood pressure','Kidney involved: BUN and creatinine'],
- [f'PT and aPTT {W}','By branch','<b>aPTT long</b>, PT normal','Hemophilia or von Willebrand disease'],
- ['Abdominal ultrasound','By branch','<b>Intussusception</b>','A negative study does not exclude an intermittent one'],
- ['Bone marrow biopsy with flow cytometry','Confirms','<b>20% or more</b> blasts','Leukemia'],
- [f'Factor VIII, IX and von Willebrand studies {W}','Confirms','<b>Low</b> level','Names the bleeding disorder'],
- ['Skin biopsy, only if atypical','Confirms','<b>IgA</b> in the vessel walls','IgA vasculitis; rarely needed'],
- ['Serum IgA','Skip','High in only <b>about half</b>','Cannot confirm or exclude IgA vasculitis'],
+],mask='none')}{table2('First tests, in the order you would order them',['Test','Order','Result','What it points to'],[
+ ('grp',[
+  ['CBC with platelet count','First','<b>Normal</b> platelets','Vessel wall: IgA vasculitis'],
+  ['','','<b>Low</b> platelets, nothing else abnormal','ITP'],
+  ['','','<b>Low</b> platelets with anemia or an abnormal white count','Marrow or consumption: smear next'],
+ ]),
+ (None,[
+  [f'Peripheral smear {W}','By branch','<b>Blasts</b> or schistocytes','Leukemia, or hemolytic uremic syndrome'],
+  ['Urinalysis and blood pressure','By branch','<b>Blood or protein</b>, or high blood pressure','Kidney involved: BUN and creatinine'],
+  [f'PT and aPTT {W}','By branch','<b>aPTT long</b>, PT normal','Hemophilia or von Willebrand disease'],
+  ['Abdominal ultrasound','By branch','<b>Intussusception</b>','A negative study does not exclude an intermittent one'],
+  ['Bone marrow biopsy with flow cytometry','Confirms','<b>20% or more</b> blasts','Leukemia'],
+  [f'Factor VIII, IX and von Willebrand studies {W}','Confirms','<b>Low</b> level','Names the bleeding disorder'],
+  ['Skin biopsy, only if atypical','Confirms','<b>IgA</b> in the vessel walls','IgA vasculitis; rarely needed'],
+  ['Serum IgA','Skip','High in only <b>about half</b>','Cannot confirm or exclude IgA vasculitis'],
+ ]),
 ],mask=4)}{t('The finalists, in the order of the workup',['','On arrival','CBC','Next','Confirms','Treatment and follow-up'],[
  ['IgA vasculitis','Well; raised purpura on the legs, sore ankles, belly pain','Platelets <b>normal</b>','Urinalysis and blood pressure','Clinical; biopsy only if atypical','Supportive; NSAID unless GI bleeding or nephritis; urine and BP checks for a year'],
  ['Immune thrombocytopenia','Well; flat petechiae, nose or gum bleeding','Platelets <b>low</b>, nothing else','Smear','Low platelets alone, in a typical story','Observe; IVIG or steroids for serious bleeding; no NSAIDs, limit contact sports'],
@@ -425,12 +460,12 @@ briefB3=f'''<div class="brief aq" id="{B3}" data-shelf="peds" data-src="aquifer"
  ('Complications','kidney disease in about a third (about 5% chronic renal failure, under 1% end-stage); GI bleeding, with occult blood in about half; intussusception, usually <b>ileoileal</b>, so an enema cannot reduce it'),
  ('Follow-up','urinalysis and blood pressure every 1 to 2 weeks for 1 to 2 months, then monthly to every other month for a year; about 30% recur, weeks to months later'),
  ('Return for','severe belly pain, blood in the stool, vomiting that stops fluids, puffy face, hands or feet, severe headache, blurred vision or confusion'),
-])}{grid('pearls','What sets it apart',[
- ('Versus ITP','platelets <b>normal</b>, and the purpura is raised'),
- ('Versus leukemia','a well child with normal counts and <b>no big spleen</b>'),
- ('Versus hemolytic uremic syndrome','<b>no anemia</b> or schistocytes, platelets normal'),
- ('Versus abuse','raised, <b>symmetric</b>, dependent lesions with joint, belly or kidney findings'),
-])}<h5 class="authored-hdr">Scenario bank</h5>
+])}{t('What sets it apart',['Versus','What separates it'],[
+ ['ITP','Platelets <b>normal</b>, and the purpura is raised'],
+ ['Leukemia','A well child with normal counts and <b>no big spleen</b>'],
+ ['Hemolytic uremic syndrome','<b>No anemia</b> or schistocytes; platelets normal'],
+ ['Abuse','Raised, <b>symmetric</b>, dependent lesions with joint, belly or kidney findings'],
+],mask='none')}<h5 class="authored-hdr">Scenario bank</h5>
 <ol class="bank authored">
 {bankB3}</ol>
 <div class="pearls"><span class="lbl">Pairs with</span> Part I <b>Anemia with Thrombocytopenia</b> picks up once two cell lines are down. Part II <b>Pediatric Acute Lymphoblastic Leukemia</b> owns the marrow branch and its confirmatory biopsy. Part I <b>Hematuria</b> owns the glomerular workup that renal IgA vasculitis enters.</div>
@@ -440,7 +475,7 @@ briefB3=f'''<div class="brief aq" id="{B3}" data-shelf="peds" data-src="aquifer"
         ('p-mirror','Mirror twin','A child who looks like ITP but has a spleen more than 2 cm down is not ITP.'),
         ('p-test','Test-overrides-findings','A normal serum IgA offered as exclusion, when it is high in only about half.')])}</div>
 '''
-for cap in ('Red flags','History','Examination'):
+for cap in ('Red flags','History','Examination','What sets it apart'):
     briefB3=briefB3.replace('<table data-mask="none"><caption>'+cap,'<table class="cluet" data-mask="none"><caption>'+cap)
 open('/tmp/claude-0/briefB3.html','w').write(briefB3)
 s3=open('index.html').read()
