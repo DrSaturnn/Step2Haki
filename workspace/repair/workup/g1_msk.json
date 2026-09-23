@@ -1,0 +1,720 @@
+[
+ {
+  "brief": "pmr",
+  "action": "new",
+  "rows": [
+   [
+    "ESR and CRP",
+    "First",
+    "ESR <b>elevated</b>, typically 50 or higher",
+    "Supports PMR in the right clinical picture; normal values point toward fibromyalgia or another cause"
+   ],
+   [
+    "CK",
+    "First",
+    "<b>Normal</b> CK",
+    "Pain without muscle injury; excludes polymyositis and statin myopathy"
+   ],
+   [
+    "TSH",
+    "First",
+    "<b>Normal</b> TSH",
+    "Excludes hypothyroid myopathy, which can mimic proximal aching"
+   ],
+   [
+    "RF and anti-CCP",
+    "By branch",
+    "<b>Negative</b> in PMR",
+    "Swollen MCPs or PIPs: consider elderly-onset RA"
+   ],
+   [
+    "Temporal artery biopsy",
+    "By branch",
+    "<b>Granulomatous</b> arteritis",
+    "Headache, jaw claudication or vision change: GCA; start high-dose prednisone before biopsy"
+   ],
+   [
+    "Response to prednisone about 15 mg (clinical diagnosis)",
+    "Confirms",
+    "<b>Dramatic</b> improvement within days",
+    "PMR; no response after a week means reconsider the diagnosis"
+   ],
+   [
+    "EMG and muscle biopsy",
+    "Skip",
+    "Normal in PMR; strength is <b>5/5</b>",
+    "Reserved for true weakness with high CK (polymyositis)"
+   ]
+  ],
+  "note": "PMR has no confirmatory test; steroid response row framed as the clinical confirmation per the brief's 'nearly diagnostic' wording."
+ },
+ {
+  "brief": "cts",
+  "action": "new",
+  "rows": [
+   [
+    "Phalen and Tinel maneuvers",
+    "Supports",
+    "Positive in only <b>about half</b>",
+    "Negative maneuvers do not overturn a classic nocturnal history"
+   ],
+   [
+    "Sensory exam of the thenar eminence",
+    "First",
+    "Thenar sensation <b>spared</b>",
+    "Lesion at the wrist; thenar numbness points to pronator teres syndrome"
+   ],
+   [
+    "Nerve conduction studies",
+    "Confirms",
+    "<b>Slowed median</b> conduction across the wrist",
+    "Carpal tunnel syndrome; also grades severity before surgical release"
+   ],
+   [
+    "TSH",
+    "Cause",
+    "<b>Elevated</b> TSH",
+    "Bilateral CTS with fatigue and weight gain: hypothyroidism"
+   ],
+   [
+    "IGF-1",
+    "Cause",
+    "<b>Elevated</b> IGF-1",
+    "Bilateral CTS with enlarging ring size and coarse features: acromegaly"
+   ],
+   [
+    "Cervical spine MRI",
+    "By branch",
+    "<b>Root compression</b> at C6 or C7",
+    "Neck pain or a diminished reflex: cervical radiculopathy, not CTS"
+   ],
+   [
+    "Nerve conduction studies before a splint trial",
+    "Skip",
+    "Not needed to <b>start</b> treatment",
+    "'Next step in management' with a classic history: nocturnal neutral wrist splint"
+   ]
+  ],
+  "note": "Brief does not name a tempting wrong test; Skip row reflects its own verb rule (confirm vs manage)."
+ },
+ {
+  "brief": "scaphoid",
+  "action": "new",
+  "rows": [
+   [
+    "Wrist radiographs with scaphoid view",
+    "First",
+    "Fracture line, or <b>negative</b> film",
+    "Negative film with snuffbox tenderness still means presumed fracture: thumb spica cast"
+   ],
+   [
+    "Repeat radiographs in 2 to 3 weeks",
+    "Next",
+    "Fracture line <b>visible</b> after bone resorption",
+    "Confirms the occult fracture seen late; continue immobilization"
+   ],
+   [
+    "MRI of the wrist",
+    "Confirms",
+    "<b>Occult fracture</b> shown immediately",
+    "Definitive answer when a 2-week wait is not acceptable"
+   ],
+   [
+    "CT of the wrist",
+    "By branch",
+    "<b>Displacement</b> or nonunion",
+    "Displaced waist or proximal pole fracture: surgical fixation"
+   ],
+   [
+    "Negative initial radiograph as reassurance",
+    "Skip",
+    "Up to 20 to 25% are <b>occult</b> in week one",
+    "Do not discharge without immobilization; cast and re-image or MRI now"
+   ]
+  ],
+  "note": ""
+ },
+ {
+  "brief": "backpain",
+  "action": "new",
+  "rows": [
+   [
+    "History and exam for red flags",
+    "Screen",
+    "<b>No red flag</b> and pain under 4 weeks",
+    "No imaging; NSAIDs and stay active"
+   ],
+   [
+    "Lumbar radiograph",
+    "By branch",
+    "Vertebral <b>compression fracture</b>",
+    "Age over 70, osteoporosis, chronic steroids or trauma"
+   ],
+   [
+    "MRI with contrast, plus blood cultures if febrile",
+    "Confirms",
+    "<b>Vertebral body</b> metastasis or discitis-osteomyelitis",
+    "Prior cancer, night pain, fever or injection drug use; a normal neuro exam does not remove the concern"
+   ],
+   [
+    "Emergent whole-spine MRI",
+    "By branch",
+    "<b>Cord or cauda equina</b> compression",
+    "Urinary retention, saddle anesthesia or UMN signs; dexamethasone first when cord compression causes deficits"
+   ],
+   [
+    "Abdominal ultrasound or CTA",
+    "By branch",
+    "<b>Aortic aneurysm</b>",
+    "Age over 60, pulsatile mass; unstable with hypotension goes straight to surgery"
+   ],
+   [
+    "Plain radiograph for suspected metastasis",
+    "Skip",
+    "Often <b>normal</b>; misses 30 to 50% of bone loss",
+    "Prior cancer with back pain goes to MRI with contrast"
+   ]
+  ],
+  "note": "Brief's red-flag table allows 'X-ray + ESR/CRP if suspicion moderate' for malignancy while its pearl says plain films miss 30-50% of bone loss; Skip row limited to high suspicion (prior cancer)."
+ },
+ {
+  "brief": "inflam-back",
+  "action": "new",
+  "rows": [
+   [
+    "History: onset, duration, response to activity",
+    "Screen",
+    "Age under 40, over 3 months, <b>better with movement</b>",
+    "Inflammatory back pain; night pain unrelieved by moving, with prior cancer, goes to MRI for metastasis"
+   ],
+   [
+    "Sacroiliac joint radiographs",
+    "First",
+    "<b>Sacroiliitis</b>",
+    "Earliest radiographic finding of ankylosing spondylitis"
+   ],
+   [
+    "MRI of the sacroiliac joints",
+    "Confirms",
+    "<b>Active sacroiliitis</b> with bone marrow edema",
+    "Axial spondyloarthritis when radiographs are normal and suspicion stays high"
+   ],
+   [
+    "HLA-B27",
+    "Supports",
+    "<b>Positive</b> in about 90% of AS",
+    "Supportive only; common in the general population, so it cannot make the diagnosis"
+   ],
+   [
+    "CT of the spine",
+    "By branch",
+    "<b>Fracture</b> through a fused spine",
+    "AS with new neck or back pain after minor trauma"
+   ],
+   [
+    "RF and anti-CCP",
+    "Skip",
+    "<b>Negative</b> by definition",
+    "Spondyloarthritis is seronegative; a negative RF adds nothing"
+   ]
+  ],
+  "note": ""
+ },
+ {
+  "brief": "septic-bursitis",
+  "action": "new",
+  "rows": [
+   [
+    "Passive range of motion of the joint",
+    "Screen",
+    "Motion <b>preserved</b>, swelling localized over the bursa",
+    "Extraarticular process: the bursa gets the needle"
+   ],
+   [
+    "Bursal aspiration: cell count, Gram stain, culture, crystals",
+    "Confirms",
+    "<b>Positive Gram stain or culture</b>",
+    "Septic bursitis, usually S aureus; crystals point to crystal bursitis instead"
+   ],
+   [
+    "Image-guided bursal aspiration",
+    "By branch",
+    "Infected fluid in a <b>deep</b> bursa",
+    "Subacromial pain worsening days after a steroid injection"
+   ],
+   [
+    "Joint aspiration",
+    "By branch",
+    "<b>Septic</b> synovial fluid",
+    "Pain with any passive motion and diffuse effusion: septic arthritis"
+   ],
+   [
+    "Radiograph",
+    "By branch",
+    "<b>Fracture or foreign body</b>",
+    "Only when trauma or a penetrating wound suggests one"
+   ],
+   [
+    "Serum uric acid",
+    "Skip",
+    "High or normal, <b>neither</b> excludes infection",
+    "Does not replace aspiration; no empiric colchicine or steroid before the fluid"
+   ]
+  ],
+  "note": ""
+ },
+ {
+  "brief": "synovitis",
+  "action": "new",
+  "rows": [
+   [
+    "Temperature, weight bearing, CBC, ESR and CRP",
+    "First",
+    "Kocher <b>0 to 1</b> of 4",
+    "Transient synovitis likely; 3 or more predictors: aspirate"
+   ],
+   [
+    "Ultrasound of both hips",
+    "Next",
+    "Effusion <b>bilateral</b> or absent on the painful side",
+    "Presence of an effusion discriminates nothing; bilateral effusions favor transient synovitis"
+   ],
+   [
+    "Hip radiographs",
+    "By branch",
+    "<b>Flattened or fragmented</b> femoral head",
+    "Insidious limp over months: Legg-Calvé-Perthes"
+   ],
+   [
+    "CBC with smear",
+    "By branch",
+    "<b>Cytopenias</b> or blasts",
+    "Night pain and easy bruising: leukemia"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "Symptoms <b>resolve</b> with NSAIDs and re-examination",
+    "Transient synovitis; still limping at 4 weeks: re-image"
+   ],
+   [
+    "Arthrocentesis with Kocher 0 of 4",
+    "Skip",
+    "Well, afebrile, <b>normal</b> WBC and CRP",
+    "Conservative management; the needle is for 3 or more predictors"
+   ]
+  ],
+  "note": "Brief states septic arthritis 'produces a unilateral effusion'; broadly true but bilateral septic hips occur rarely, so the table says bilateral effusions favor, not prove, synovitis."
+ },
+ {
+  "brief": "limp",
+  "action": "new",
+  "rows": [
+   [
+    "Temperature, weight bearing, CBC, ESR and CRP",
+    "First",
+    "Kocher <b>3 or more</b> of 4",
+    "Septic arthritis: aspirate before antibiotics; 0 to 1 favors transient synovitis"
+   ],
+   [
+    "Hip arthrocentesis",
+    "Confirms",
+    "<b>Purulent</b> fluid, positive Gram stain or culture",
+    "Septic arthritis: washout and IV antibiotics"
+   ],
+   [
+    "CBC with smear",
+    "By branch",
+    "<b>Cytopenias</b> or blasts",
+    "Night pain, weight loss or bruising: leukemia, before calling anything benign"
+   ],
+   [
+    "AP and frog-leg radiographs of both hips",
+    "By branch",
+    "Slipped epiphysis or <b>flattened</b> femoral head",
+    "Adolescent with lost internal rotation: SCFE; age 3 to 12, chronic: Perthes"
+   ],
+   [
+    "Tibia radiographs",
+    "By branch",
+    "<b>Spiral</b> tibial fracture",
+    "Toddler with a new limp after a minor twist; corner fractures suggest abuse"
+   ],
+   [
+    "MRI",
+    "By branch",
+    "<b>Metaphyseal</b> osteomyelitis or early Perthes",
+    "Fever with point bone tenderness, or chronic limp with a normal film"
+   ],
+   [
+    "Knee radiograph alone for knee pain",
+    "Skip",
+    "<b>Normal</b> knee film",
+    "Hip disease refers to the knee; examine and image the hip"
+   ]
+  ],
+  "note": ""
+ },
+ {
+  "brief": "sjia",
+  "action": "new",
+  "rows": [
+   [
+    "Fever curve charted over days",
+    "Screen",
+    "<b>Quotidian</b> spikes, normal or subnormal between",
+    "Systemic JIA pattern; infection keeps the patient febrile"
+   ],
+   [
+    "CBC, ESR and CRP",
+    "First",
+    "<b>Leukocytosis and thrombocytosis</b>, high ESR, anemia",
+    "Inflammatory picture; cytopenias point to leukemia or dengue instead"
+   ],
+   [
+    "Ferritin",
+    "Supports",
+    "<b>Very high</b> ferritin",
+    "Supports systemic JIA"
+   ],
+   [
+    "ANA and RF",
+    "Supports",
+    "Typically <b>negative</b>",
+    "Inflammation without autoantibodies; a positive ANA does not exclude sJIA"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "Daily fever 2 weeks, arthritis <b>6 weeks</b>, evanescent rash",
+    "Systemic JIA once infection and malignancy are excluded"
+   ],
+   [
+    "Ferritin, triglycerides and fibrinogen when a patient deteriorates",
+    "By branch",
+    "Cytopenias with a <b>falling</b> ESR",
+    "Macrophage activation syndrome: high-dose steroids with or without anakinra"
+   ],
+   [
+    "Temperature at a single clinic visit",
+    "Skip",
+    "<b>Afebrile</b> between spikes",
+    "A normal clinic temperature excludes nothing; continue the evaluation"
+   ]
+  ],
+  "note": ""
+ },
+ {
+  "brief": "scfe",
+  "action": "new",
+  "rows": [
+   [
+    "Hip examination",
+    "Screen",
+    "Loss of <b>internal rotation</b>; obligate external rotation on flexion",
+    "SCFE at the growth spurt, whatever the body habitus"
+   ],
+   [
+    "AP and frog-leg lateral radiographs of both hips",
+    "Confirms",
+    "Klein line <b>fails to intersect</b> the epiphysis",
+    "SCFE; image the other hip, since 20 to 40% are bilateral"
+   ],
+   [
+    "Ability to bear weight",
+    "Staging",
+    "<b>Cannot</b> bear weight",
+    "Unstable slip, highest AVN risk: non-weight-bearing and urgent pinning, no reduction"
+   ],
+   [
+    "TSH, growth hormone axis and renal function",
+    "Cause",
+    "<b>Endocrine or renal</b> abnormality",
+    "Atypical patient, age under 10 or short and thin"
+   ],
+   [
+    "MRI of the hip",
+    "By branch",
+    "Femoral neck <b>stress fracture</b>",
+    "Athlete with groin pain, pain on hopping, normal radiographs"
+   ],
+   [
+    "Knee radiograph for knee pain",
+    "Skip",
+    "<b>Normal</b> knee film",
+    "Knee pain with a normal knee exam: examine and image the hip"
+   ]
+  ],
+  "note": "Brief says 'SCFE produces no joint effusion, so an effusion on ultrasound excludes it'; effusions are reported in SCFE, especially unstable or acute slips, so this claim may be overstated and was not used."
+ },
+ {
+  "brief": "myositis-ossificans",
+  "action": "new",
+  "rows": [
+   [
+    "Plain radiograph of the thigh",
+    "First",
+    "Often <b>normal</b> in the first weeks",
+    "A normal early film does not exclude myositis ossificans"
+   ],
+   [
+    "Alkaline phosphatase, ESR and CRP",
+    "Supports",
+    "Often <b>elevated</b>",
+    "Do not separate it from infection; the skin and the tempo do"
+   ],
+   [
+    "Repeat radiograph in 2 to 4 weeks",
+    "Confirms",
+    "<b>Peripheral</b> calcification around a radiolucent center",
+    "Myositis ossificans: range of motion and NSAIDs"
+   ],
+   [
+    "Femur radiograph",
+    "By branch",
+    "<b>Sunburst</b> periosteal reaction",
+    "Night pain, no trauma, weight loss, fixed mass: osteosarcoma"
+   ],
+   [
+    "Venous duplex ultrasound",
+    "By branch",
+    "<b>Noncompressible</b> femoral vein",
+    "Diffuse thigh and calf swelling: venous thrombosis"
+   ],
+   [
+    "Biopsy of an early lesion",
+    "Skip",
+    "Immature tissue can <b>mimic</b> osteosarcoma",
+    "Biphasic course after a contusion: image serially instead"
+   ]
+  ],
+  "note": "Skip row (early biopsy mimics sarcoma) is standard teaching but not named in the brief."
+ },
+ {
+  "brief": "bone-tumors",
+  "action": "new",
+  "rows": [
+   [
+    "Plain radiograph",
+    "First",
+    "<b>Location</b> in the bone and periosteal reaction",
+    "Epiphysis, metaphysis or diaphysis narrows the list; sunburst or onion-skin is ominous"
+   ],
+   [
+    "Same radiograph, painless metaphyseal spur",
+    "Confirms",
+    "Cortex and medulla <b>continuous</b> with the parent bone",
+    "Osteochondroma: observation"
+   ],
+   [
+    "NSAID response",
+    "Supports",
+    "<b>Dramatic</b> relief of night pain",
+    "Small lucent nidus in the diaphysis: osteoid osteoma"
+   ],
+   [
+    "MRI of the lesion and chest CT",
+    "Staging",
+    "Local extent and <b>lung</b> metastases",
+    "Aggressive film: osteosarcoma or Ewing sarcoma"
+   ],
+   [
+    "Biopsy",
+    "Confirms",
+    "Osteoid-producing cells or <b>small round blue cells</b> with t(11;22)",
+    "Osteosarcoma versus Ewing sarcoma"
+   ],
+   [
+    "Biopsy of a painless spur with cortical continuity",
+    "Skip",
+    "Film is <b>already diagnostic</b>",
+    "Osteochondroma needs observation, not biopsy"
+   ]
+  ],
+  "note": ""
+ },
+ {
+  "brief": "scheuermann",
+  "action": "new",
+  "rows": [
+   [
+    "Correction test: prone or hyperextension",
+    "Screen",
+    "Curve <b>does not correct</b>",
+    "Structural kyphosis; a curve that corrects is postural roundback"
+   ],
+   [
+    "Standing lateral thoracic spine radiograph",
+    "Confirms",
+    "Anterior wedging of 5 degrees or more in <b>3 consecutive</b> vertebrae",
+    "Scheuermann disease"
+   ],
+   [
+    "Same film: endplates",
+    "Supports",
+    "<b>Schmorl nodes</b>",
+    "Supportive of Scheuermann but not required"
+   ],
+   [
+    "Cobb angle with growth remaining",
+    "Staging",
+    "<b>Cobb angle</b> under 50, 50 to 75, or over 75",
+    "Observe; brace if skeletally immature; surgery for severe curves or refractory pain"
+   ],
+   [
+    "Sacroiliac joint imaging",
+    "By branch",
+    "<b>Sacroiliitis</b>",
+    "Young adult with SI pain and morning stiffness: ankylosing spondylitis"
+   ],
+   [
+    "MRI of the spine",
+    "By branch",
+    "<b>Focal</b> destructive lesion",
+    "Night pain, weight loss or neurologic findings: vertebral tumor"
+   ]
+  ],
+  "note": "No classic tempting wrong test named in the brief, so no Skip row."
+ },
+ {
+  "brief": "bs-septic-adult",
+  "action": "new",
+  "rows": [
+   [
+    "Arthrocentesis: cell count and differential",
+    "First",
+    "WBC <b>over 50,000</b>, over 75% PMN",
+    "Septic arthritis: IV antibiotics after cultures, then drainage"
+   ],
+   [
+    "Gram stain and culture of synovial fluid",
+    "Confirms",
+    "<b>Organism</b> identified",
+    "Septic arthritis; narrows empiric vancomycin with or without ceftriaxone"
+   ],
+   [
+    "Polarized microscopy for crystals",
+    "Supports",
+    "Negatively birefringent <b>needles</b> or positive rhomboids",
+    "Gout or pseudogout; crystals with WBC over 50,000 still get treated as septic"
+   ],
+   [
+    "Radiograph",
+    "By branch",
+    "<b>Chondrocalcinosis</b> or joint space narrowing",
+    "Pseudogout, or preexisting joint disease that raises septic risk"
+   ],
+   [
+    "Prosthetic joint aspirate",
+    "By branch",
+    "WBC about <b>3,000</b> with over 70% PMN",
+    "Prosthetic joint infection; the 50,000 threshold does not apply"
+   ],
+   [
+    "NAAT and cultures of cervix, urethra, pharynx and rectum",
+    "By branch",
+    "<b>Positive</b> gonococcal NAAT",
+    "Migratory polyarthralgia, tenosynovitis, pustules: disseminated gonococcal infection"
+   ],
+   [
+    "Serum uric acid",
+    "Skip",
+    "Often <b>normal</b> during a flare",
+    "Neither rules gout in nor infection out; aspirate instead"
+   ]
+  ],
+  "note": "NAAT site list is standard practice but the brief says only 'NAAT + cultures'."
+ },
+ {
+  "brief": "bs-torticollis",
+  "action": "new",
+  "rows": [
+   [
+    "Neck examination",
+    "First",
+    "Firm, <b>non-transilluminating</b> sternocleidomastoid mass",
+    "Congenital muscular torticollis; fluctuant, transilluminating posterior-triangle mass is cystic hygroma"
+   ],
+   [
+    "Skull shape and ear position",
+    "First",
+    "Ipsilateral ear pushed <b>forward</b>",
+    "Positional plagiocephaly; ear pushed back with a ridge suggests craniosynostosis"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "Head tilts toward the mass, chin turns <b>away</b>",
+    "Congenital muscular torticollis: repositioning, tummy time, physical therapy"
+   ],
+   [
+    "Hip ultrasound",
+    "Next",
+    "<b>Dysplastic</b> hip",
+    "Developmental dysplasia of the hip, the crowding association: Pavlik harness"
+   ],
+   [
+    "Head CT",
+    "By branch",
+    "<b>Fused</b> lambdoid suture",
+    "Ear displaced posteriorly with a palpable ridge: craniosynostosis, craniofacial referral"
+   ],
+   [
+    "MRI of the brain",
+    "By branch",
+    "<b>Posterior fossa</b> mass",
+    "Older child with acquired tilt, vomiting, papilledema or cranial nerve palsy"
+   ],
+   [
+    "Skull imaging for a flat occiput with the ear forward",
+    "Skip",
+    "<b>Parallelogram</b> skull on exam is enough",
+    "Positional plagiocephaly needs repositioning, not imaging"
+   ]
+  ],
+  "note": "Skip row (no imaging for positional plagiocephaly) is standard but not named in the brief."
+ },
+ {
+  "brief": "shoulder-rom",
+  "action": "new",
+  "rows": [
+   [
+    "Active and passive range of motion",
+    "Screen",
+    "Active lost, <b>passive preserved</b>",
+    "Muscle or tendon problem; both lost points to the joint (capsulitis, OA, septic)"
+   ],
+   [
+    "Provocative maneuvers: empty can, Neer, Hawkins, drop arm",
+    "Next",
+    "<b>Drop arm</b> positive",
+    "Full-thickness cuff tear: MRI; positive empty can or Neer alone: tendinopathy"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "Painful arc with <b>positive</b> impingement signs",
+    "Rotator cuff tendinopathy: relative rest and physical therapy"
+   ],
+   [
+    "Arthrocentesis",
+    "By branch",
+    "<b>Septic</b> synovial fluid",
+    "Fever, effusion, refuses all movement: aspirate before antibiotics"
+   ],
+   [
+    "ECG",
+    "By branch",
+    "<b>Ischemic</b> changes",
+    "Exertional shoulder pain with a normal shoulder exam: referred cardiac pain"
+   ],
+   [
+    "MRI for suspected tendinopathy",
+    "Skip",
+    "Cuff tears <b>common</b> without symptoms in older adults",
+    "Physical therapy first; MRI only for suspected full-thickness tear or failed therapy"
+   ]
+  ],
+  "note": ""
+ }
+]

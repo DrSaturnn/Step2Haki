@@ -1,0 +1,849 @@
+[
+ {
+  "brief": "anemia-thrombocytopenia",
+  "action": "new",
+  "rows": [
+   [
+    "CBC with platelets and reticulocytes",
+    "First",
+    "Anemia with <b>low platelets</b>, reticulocytes high",
+    "Two cell lines down with hemolysis: consumption, not marrow failure"
+   ],
+   [
+    "Peripheral smear",
+    "Next",
+    "<b>Schistocytes</b>",
+    "Mechanical shearing; spherocytes would point to an antibody"
+   ],
+   [
+    "Direct Coombs test",
+    "Next",
+    "<b>Negative</b>",
+    "Mechanical destruction; positive means autoimmune hemolysis"
+   ],
+   [
+    "PT, aPTT and fibrinogen",
+    "Next",
+    "<b>Normal</b>",
+    "HUS or TTP; prolonged times with low fibrinogen mean DIC"
+   ],
+   [
+    "Bilirubin, LDH and haptoglobin",
+    "Supports",
+    "Indirect bilirubin and LDH up, <b>haptoglobin low</b>",
+    "Hemolysis; haptoglobin is consumed binding free hemoglobin"
+   ],
+   [
+    "BUN, creatinine and urinalysis",
+    "Confirms",
+    "<b>Rising creatinine</b>, little or no urine",
+    "Completes the HUS triad after bloody diarrhea; stool Shiga toxin testing names the cause"
+   ],
+   [
+    "Bone marrow biopsy",
+    "Skip",
+    "Not needed once the <b>smear shows schistocytes</b>",
+    "The platelets are consumed, not underproduced"
+   ]
+  ],
+  "note": "Brief uses em dashes in its own prose; no conflicts with the bank (smear over marrow biopsy; decreased platelets; haptoglobin falls)."
+ },
+ {
+  "brief": "drug-hemolysis",
+  "action": "new",
+  "rows": [
+   [
+    "CBC with platelets and reticulocytes",
+    "First",
+    "Anemia with a <b>normal platelet count</b>",
+    "Excludes DIC and the other consumptive microangiopathies"
+   ],
+   [
+    "Liver enzymes and fractionated bilirubin",
+    "First",
+    "<b>Unconjugated</b> bilirubin up, ALP and transaminases normal",
+    "Hemolysis, not biliary obstruction"
+   ],
+   [
+    "Haptoglobin, LDH and peripheral smear",
+    "Supports",
+    "Haptoglobin low, <b>spherocytes</b>",
+    "Antibody-mediated, mainly extravascular hemolysis"
+   ],
+   [
+    "Direct antiglobulin (Coombs) test",
+    "Confirms",
+    "Positive for <b>IgG</b>",
+    "Hapten-type drug hemolysis (penicillin, cephalosporin); C3 alone suggests cold agglutinins"
+   ],
+   [
+    "G6PD activity, measured after recovery",
+    "By branch",
+    "<b>Low</b>, with bite cells and a negative Coombs",
+    "Oxidative hemolysis 2 to 4 days after an oxidant drug"
+   ],
+   [
+    "Abdominal ultrasound or CT",
+    "Skip",
+    "Normal enzymes leave <b>no obstruction</b> to find",
+    "The pain comes from hemolysis, not the biliary tree"
+   ]
+  ],
+  "note": "Brief's own G6PD bank item says to measure after recovery, consistent with the By branch row. No conflicts found."
+ },
+ {
+  "brief": "dipstick-mismatch",
+  "action": "new",
+  "rows": [
+   [
+    "Urine dipstick",
+    "Screen",
+    "<b>Heme-positive</b>",
+    "Blood, hemoglobin or myoglobin; the strip cannot tell them apart"
+   ],
+   [
+    "Urine microscopy",
+    "First",
+    "<b>0 to 2</b> RBCs per high-power field",
+    "Free pigment, not bleeding; many RBCs or casts mean true hematuria"
+   ],
+   [
+    "Serum creatine kinase",
+    "Next",
+    "<b>Markedly high</b>, often over 10,000",
+    "Myoglobin from rhabdomyolysis; normal CK points to hemoglobin"
+   ],
+   [
+    "LDH, haptoglobin and indirect bilirubin",
+    "By branch",
+    "LDH up, <b>haptoglobin low</b>",
+    "Intravascular hemolysis releasing hemoglobin into the urine"
+   ],
+   [
+    "Peripheral smear",
+    "Confirms",
+    "<b>Schistocytes</b>",
+    "Mechanical fragmentation, here from the prosthetic valve"
+   ],
+   [
+    "Echocardiogram, if hemolysis worsens",
+    "By branch",
+    "<b>Paravalvular leak</b>",
+    "Valve repair or replacement"
+   ],
+   [
+    "Renal ultrasound or urine culture",
+    "Skip",
+    "No RBCs means <b>no bleeding source</b> to find",
+    "Pigment in the urine is not a urinary tract problem"
+   ]
+  ],
+  "note": "CK threshold (over 10,000) is taken from the brief's own criteria; the brief uses &le; and &gt; symbols in its text."
+ },
+ {
+  "brief": "factor-inhibitor",
+  "action": "new",
+  "rows": [
+   [
+    "PT, aPTT and platelet count",
+    "First",
+    "<b>aPTT prolonged</b>; PT and platelets normal",
+    "Intrinsic pathway defect, not platelets or the common pathway"
+   ],
+   [
+    "Mixing study, incubated at 37 C",
+    "Next",
+    "aPTT <b>does not correct</b>",
+    "An inhibitor; correction means a simple factor deficiency"
+   ],
+   [
+    "Factor VIII and IX activity",
+    "Confirms",
+    "<b>Low</b> factor VIII or IX, when the mix corrects",
+    "New diagnosis: hemophilia A or B"
+   ],
+   [
+    "Bethesda assay",
+    "Confirms",
+    "Inhibitor titer, <b>5 BU or more</b> is high",
+    "High titer: bypassing agents; low titer: high-dose factor VIII"
+   ],
+   [
+    "MRI of the knee",
+    "By branch",
+    "<b>Synovial</b> thickening and cartilage damage",
+    "Early hemophilic arthropathy when radiographs are still normal"
+   ],
+   [
+    "Platelet function assay (PFA-100)",
+    "Skip",
+    "<b>Normal</b> in hemophilia",
+    "Joint bleeding with a long aPTT is a factor problem, not a platelet problem"
+   ]
+  ],
+  "note": "Brief text says the mixing study is incubated 1 to 2 hours at 37 C; Bethesda cutoff 5 BU is from the brief. Brief mixes British (haemarthrosis) and American spelling in bank items."
+ },
+ {
+  "brief": "transfusion",
+  "action": "new",
+  "rows": [
+   [
+    "Vital signs, lung and airway exam",
+    "First",
+    "<b>Normal</b> vitals, clear lungs, hives only",
+    "The dangerous reactions are excluded"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "Hives <b>improve</b> with an antihistamine, vitals stay stable",
+    "Urticarial reaction; resume the transfusion, no tests"
+   ],
+   [
+    "Direct Coombs test, smear, PT and PTT",
+    "By branch",
+    "Fever, flank pain, dark urine: Coombs <b>positive</b>",
+    "Acute hemolytic reaction from ABO incompatibility"
+   ],
+   [
+    "Blood cultures of the recipient and the product",
+    "By branch",
+    "Fever, rigors, hypotension: <b>growth</b> in both",
+    "Bacterial contamination, most often a platelet unit"
+   ],
+   [
+    "Serum IgA level",
+    "By branch",
+    "After anaphylaxis: IgA <b>absent</b>",
+    "Anti-IgA anaphylaxis; wash future products"
+   ],
+   [
+    "Coombs test or product culture for hives alone",
+    "Skip",
+    "Afebrile and stable: <b>no indication</b>",
+    "Nothing to find; pre-existing petechiae come from the low platelets"
+   ]
+  ],
+  "note": "The brief uses British spelling throughout (haemolytic, anaemia); the table uses American spelling per spec. IgA level after transfusion anaphylaxis is standard but not stated in the brief."
+ },
+ {
+  "brief": "bs-leukemia",
+  "action": "new",
+  "rows": [
+   [
+    "CBC with differential and peripheral smear",
+    "First",
+    "<b>Two or more</b> cell lines low, with or without blasts",
+    "Marrow replacement; a normal white count does not exclude ALL"
+   ],
+   [
+    "Uric acid, potassium, phosphate, calcium, creatinine",
+    "Next",
+    "<b>High</b> uric acid, potassium and phosphate",
+    "Tumor lysis risk; hydrate before and during induction"
+   ],
+   [
+    "Bone marrow aspirate and biopsy with flow cytometry",
+    "Confirms",
+    "<b>20% or more</b> lymphoblasts",
+    "ALL and its lineage; obtain before any corticosteroid"
+   ],
+   [
+    "Chest radiograph",
+    "Staging",
+    "<b>Anterior mediastinal</b> mass",
+    "T-cell ALL"
+   ],
+   [
+    "Lumbar puncture",
+    "Staging",
+    "<b>Blasts</b> in the CSF",
+    "CNS disease"
+   ],
+   [
+    "C-reactive protein or PTT",
+    "Skip",
+    "CRP <b>nonspecific</b>; PTT normal with petechiae",
+    "Neither selects or excludes leukemia"
+   ]
+  ],
+  "note": "Brief's Defining criteria give M1/M2/M3 cutoffs separately from the 20% diagnostic gate; the table uses the 20% gate. No conflicts."
+ },
+ {
+  "brief": "cervicitis",
+  "action": "new",
+  "rows": [
+   [
+    "Speculum exam",
+    "First",
+    "Mucopurulent discharge, <b>friable</b> cervix",
+    "Cervicitis; a clinical diagnosis, so treat at the visit"
+   ],
+   [
+    "Bimanual exam",
+    "Next",
+    "<b>Cervical motion</b>, uterine or adnexal tenderness",
+    "Ascent to PID; its absence does not exclude cervicitis"
+   ],
+   [
+    "Urine pregnancy test",
+    "Next",
+    "<b>Positive</b>",
+    "Azithromycin replaces doxycycline"
+   ],
+   [
+    "Urinalysis, if dysuria",
+    "By branch",
+    "Leukocyte esterase positive, <b>nitrite negative</b>",
+    "Chlamydial urethritis rather than cystitis"
+   ],
+   [
+    "NAAT for chlamydia and gonorrhea",
+    "Confirms",
+    "<b>Positive</b> for either organism",
+    "Names the organism; empiric treatment does not wait for it"
+   ],
+   [
+    "HIV and syphilis testing",
+    "Screen",
+    "<b>Positive</b> screen",
+    "A coexisting STI; offered with any STI diagnosis"
+   ],
+   [
+    "Urine culture",
+    "Skip",
+    "Often <b>no growth</b> in chlamydial urethritis",
+    "Does not detect chlamydia or gonorrhea"
+   ]
+  ],
+  "note": "HIV and syphilis screening and the urine pregnancy test are standard additions not stated in the brief. Brief uses an em dash style throughout."
+ },
+ {
+  "brief": "ig-panel",
+  "action": "new",
+  "rows": [
+   [
+    "CBC with differential and smear",
+    "First",
+    "Platelets <b>small and low</b>, or neutropenia",
+    "Small platelets: Wiskott-Aldrich; neutropenia fits CD40 ligand deficiency"
+   ],
+   [
+    "Serum IgG, IgA, IgM and IgE",
+    "First",
+    "<b>IgM high</b>, IgG and IgA low",
+    "Class-switch failure; all low: XLA or CVID; IgA alone: selective IgA deficiency"
+   ],
+   [
+    "Flow cytometry for CD19+ B cells",
+    "Confirms",
+    "B cells <b>absent</b>",
+    "XLA; normal B cells with all isotypes low is CVID"
+   ],
+   [
+    "Vaccine antibody titers (tetanus, diphtheria)",
+    "Next",
+    "<b>Protective</b> titers",
+    "Antibody function intact: transient hypogammaglobulinemia, not CVID or XLA"
+   ],
+   [
+    "Flow cytometry for CD40 ligand on activated T cells",
+    "Confirms",
+    "CD40 ligand <b>absent</b>",
+    "Hyper-IgM syndrome"
+   ],
+   [
+    "T-cell subsets and HIV testing",
+    "By branch",
+    "<b>Absent</b> CD3+ T cells, or inverted CD4/CD8",
+    "SCID; or HIV, confirmed in an infant by HIV DNA PCR"
+   ],
+   [
+    "Dihydrorhodamine 123 assay",
+    "Skip",
+    "<b>Normal</b> in antibody defects",
+    "Tests neutrophil oxidative burst, which is CGD"
+   ]
+  ],
+  "note": "CD40 ligand flow cytometry is standard but not named in the brief; brief notes replacement IgG makes later serology uninterpretable, so titers should precede IVIG."
+ },
+ {
+  "brief": "rmsf",
+  "action": "new",
+  "rows": [
+   [
+    "CBC",
+    "First",
+    "Platelets <b>low</b>, white count normal or low",
+    "Endothelial injury; fits RMSF, not a surgical abdomen"
+   ],
+   [
+    "Basic metabolic panel and liver enzymes",
+    "First",
+    "<b>Hyponatremia</b> with raised AST and ALT",
+    "Completes the rickettsial triad; start doxycycline now"
+   ],
+   [
+    "Peripheral smear",
+    "By branch",
+    "<b>Morulae</b> in leukocytes, usually no rash",
+    "Ehrlichiosis or anaplasmosis; doxycycline treats it too"
+   ],
+   [
+    "Rickettsia rickettsii serology, acute and convalescent",
+    "Confirms",
+    "<b>Fourfold rise</b> in IgG titer",
+    "RMSF, in retrospect; never delay treatment for it"
+   ],
+   [
+    "Abdominal CT",
+    "Skip",
+    "<b>Normal</b>",
+    "Severe abdominal pain is part of RMSF in children"
+   ]
+  ],
+  "note": "Fourfold rise in paired titers is the standard serologic criterion but is not stated in the brief (brief says only 'serology is retrospective'). Brief uses British spelling in places (generalised, paediatric)."
+ },
+ {
+  "brief": "lymphadenitis",
+  "action": "new",
+  "rows": [
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "Acute, unilateral, <b>tender</b>, warm node in a child under 5",
+    "Bacterial lymphadenitis; treat empirically; tests are for mimics and abscess"
+   ],
+   [
+    "Neck ultrasound",
+    "By branch",
+    "Fluctuance or no response by 48 hours: <b>abscess</b>",
+    "Incision and drainage with continued antibiotics"
+   ],
+   [
+    "Gram stain and culture of drained pus",
+    "Cause",
+    "<b>Gram-positive cocci</b> in clusters",
+    "S. aureus; identifies MRSA and narrows therapy"
+   ],
+   [
+    "Bartonella henselae serology",
+    "By branch",
+    "Weeks-long node after a kitten scratch: <b>positive</b>",
+    "Cat-scratch disease"
+   ],
+   [
+    "Excisional biopsy",
+    "By branch",
+    "Chronic violaceous nontender node: <b>granulomas</b>, acid-fast bacilli",
+    "Nontuberculous mycobacteria; excision is also the treatment"
+   ],
+   [
+    "Histoplasma testing",
+    "Skip",
+    "A single hot node is <b>not</b> histoplasmosis",
+    "The Arkansas geography is a decoy"
+   ]
+  ],
+  "note": "Neck ultrasound for suspected suppuration is standard practice but not named in the brief; the brief's bank implies reassessment at 48 hours."
+ },
+ {
+  "brief": "cgd",
+  "action": "new",
+  "rows": [
+   [
+    "CBC with differential",
+    "First",
+    "Neutrophils <b>present</b>, count normal or high",
+    "The defect is killing, not number; marked leukocytosis without pus suggests LAD"
+   ],
+   [
+    "Biopsy and culture of abscess or node",
+    "Next",
+    "<b>Granulomas</b> with a catalase-positive organism",
+    "CGD pattern; B. cepacia alone also fits cystic fibrosis"
+   ],
+   [
+    "Dihydrorhodamine 123 flow cytometry",
+    "Confirms",
+    "<b>Absent or reduced</b> oxidative burst",
+    "Chronic granulomatous disease"
+   ],
+   [
+    "Nitroblue tetrazolium test",
+    "Confirms",
+    "Neutrophils <b>fail</b> to turn the dye blue",
+    "CGD; the older equivalent of the DHR test"
+   ],
+   [
+    "Sweat chloride, if no granulomas",
+    "By branch",
+    "<b>60 mmol/L or more</b>",
+    "Cystic fibrosis, which also grows B. cepacia"
+   ],
+   [
+    "Genetic testing of NADPH oxidase genes",
+    "Cause",
+    "<b>X-linked</b> or autosomal recessive variant",
+    "Inheritance and family counseling"
+   ],
+   [
+    "Quantitative serum immunoglobulins",
+    "Skip",
+    "<b>Normal</b> or high in CGD",
+    "Antibody production is intact"
+   ]
+  ],
+  "note": "Brief uses British spelling (haematopoietic, agammaglobulinaemia, opsonisation). Genetic testing and sweat chloride cutoff are standard but not stated in the brief."
+ },
+ {
+  "brief": "bs-pta",
+  "action": "new",
+  "rows": [
+   [
+    "Oropharyngeal exam",
+    "First",
+    "Trismus, muffled voice, <b>uvula deviated</b> away from the swelling",
+    "Peritonsillar abscess; a clinical diagnosis, no imaging needed"
+   ],
+   [
+    "Needle aspiration",
+    "Confirms",
+    "<b>Pus</b> aspirated",
+    "Abscess, drained in the same step; send for culture"
+   ],
+   [
+    "Intraoral ultrasound",
+    "By branch",
+    "Phlegmon versus abscess unclear: <b>fluid collection</b>",
+    "Abscess to drain"
+   ],
+   [
+    "Heterophile antibody test",
+    "By branch",
+    "Bilateral exudates and splenomegaly: <b>positive</b>",
+    "Mononucleosis; avoid amoxicillin and contact sports"
+   ],
+   [
+    "CT neck with contrast",
+    "By branch",
+    "New neck swelling or torticollis: <b>deeper collection</b>",
+    "Parapharyngeal or retropharyngeal spread"
+   ],
+   [
+    "Lateral neck radiograph",
+    "Skip",
+    "Does <b>not show</b> a peritonsillar collection",
+    "Delays drainage; it is a retropharyngeal or epiglottitis study"
+   ]
+  ],
+  "note": "No conflicts; the brief itself says no imaging for a typical PTA and names intraoral ultrasound only for uncertain cases."
+ },
+ {
+  "brief": "bs-torch",
+  "action": "new",
+  "rows": [
+   [
+    "Head ultrasound or CT",
+    "First",
+    "<b>Periventricular</b> calcifications",
+    "CMV; diffuse parenchymal: toxoplasmosis; subcortical with arthrogryposis: Zika"
+   ],
+   [
+    "Saliva CMV PCR, first 3 weeks",
+    "Screen",
+    "<b>Positive</b>",
+    "Needs urine PCR to confirm; saliva gives false positives"
+   ],
+   [
+    "Urine CMV PCR, first 3 weeks",
+    "Confirms",
+    "<b>Positive</b>",
+    "Congenital CMV; after 3 weeks, perinatal acquisition cannot be excluded"
+   ],
+   [
+    "Dilated eye exam",
+    "By branch",
+    "<b>Chorioretinitis</b>, or cataracts",
+    "Chorioretinitis with diffuse calcifications: toxoplasmosis; cataracts: rubella"
+   ],
+   [
+    "Infant rubella IgM",
+    "By branch",
+    "<b>Positive</b>",
+    "Congenital rubella syndrome; serology, not PCR"
+   ],
+   [
+    "Serial audiology through childhood",
+    "Staging",
+    "<b>Sensorineural</b> hearing loss, often late-onset",
+    "CMV's main sequela; a passed newborn screen does not end follow-up"
+   ],
+   [
+    "Infant CMV IgG",
+    "Skip",
+    "<b>Maternal IgG</b> crosses the placenta",
+    "Cannot separate infant from maternal antibody"
+   ]
+  ],
+  "note": "Conflict: the source vignette infant is 2 months old, past the 3-week PCR window the brief names as diagnostic; the brief never says how to confirm at that age (standard answer is PCR on the stored newborn dried blood spot, not added here)."
+ },
+ {
+  "brief": "bs-neonatal-sepsis",
+  "action": "new",
+  "rows": [
+   [
+    "CBC with differential",
+    "First",
+    "<b>Leukopenia</b>, or leukocytosis with left shift",
+    "Sepsis over the behavioral mimics; a low count is more ominous"
+   ],
+   [
+    "Point-of-care glucose",
+    "First",
+    "<b>Normal</b>",
+    "Excludes hypoglycemia"
+   ],
+   [
+    "Blood culture",
+    "Confirms",
+    "<b>Growth</b> of GBS, E. coli or Listeria",
+    "Sepsis and its organism; draw it, but do not delay antibiotics"
+   ],
+   [
+    "Lumbar puncture",
+    "Next",
+    "CSF <b>pleocytosis</b>",
+    "Meningitis; changes the length of treatment"
+   ],
+   [
+    "Catheterized urine culture, after 72 hours of life",
+    "By branch",
+    "<b>Growth</b>",
+    "Urinary source in late-onset sepsis"
+   ],
+   [
+    "Ammonia and blood gas",
+    "By branch",
+    "<b>Hyperammonemia</b> with metabolic acidosis",
+    "Inborn error of metabolism"
+   ],
+   [
+    "Free T4 and TSH",
+    "By branch",
+    "Maternal Graves disease: <b>high</b> free T4, low TSH",
+    "Neonatal thyrotoxicosis"
+   ]
+  ],
+  "note": "No Skip row: the brief names no tempting wrong test. Urine culture limited to late-onset sepsis is standard practice but not stated in the brief."
+ },
+ {
+  "brief": "bs-febrile-infant",
+  "action": "new",
+  "rows": [
+   [
+    "Catheterized urinalysis",
+    "First",
+    "Leukocyte esterase and nitrite <b>negative</b> in concentrated urine",
+    "Urinary source unlikely; positive: urine culture and antibiotics"
+   ],
+   [
+    "CBC and blood culture",
+    "First",
+    "<b>Leukocytosis</b> with neutrophil predominance",
+    "Bacterial infection likely; does not locate the source"
+   ],
+   [
+    "Head CT",
+    "By branch",
+    "Focal deficit or papilledema: <b>image first</b>, after antibiotics",
+    "An open fontanelle usually permits a tap without imaging"
+   ],
+   [
+    "Lumbar puncture: cell count, glucose, Gram stain, culture",
+    "Confirms",
+    "Neutrophilic pleocytosis, low glucose, <b>positive culture</b>",
+    "Bacterial meningitis; give antibiotics first if the tap is delayed"
+   ],
+   [
+    "Abdominal ultrasound",
+    "By branch",
+    "Paroxysmal crying with a sausage mass: <b>target sign</b>",
+    "Intussusception"
+   ],
+   [
+    "Stool PCR for enteric pathogens",
+    "Skip",
+    "Loose stools are <b>nonspecific</b> in a septic infant",
+    "Not a localizing source"
+   ]
+  ],
+  "note": "Brief uses British spelling (localising). No conflicts with the bank."
+ },
+ {
+  "brief": "microcytic-anemia",
+  "action": "extend",
+  "edits": [
+   {
+    "old": "<th>First test</th></tr>",
+    "new": "<th>First test</th><th>Confirms, then</th></tr>"
+   },
+   {
+    "old": "low transferrin sat</b></td><td>Iron studies</td></tr>",
+    "new": "low transferrin sat</b></td><td>Iron studies</td><td>Low ferritin; oral iron, then electrophoresis if the MCV stays low</td></tr>"
+   },
+   {
+    "old": "(only when iron-replete)</td><td>Iron studies first</td></tr>",
+    "new": "(only when iron-replete)</td><td>Iron studies first</td><td>HbA2 over 3.5% once iron-replete; genetic counseling</td></tr>"
+   },
+   {
+    "old": "<td>Iron studies &rarr; electrophoresis &rarr; gene analysis</td></tr>",
+    "new": "<td>Iron studies &rarr; electrophoresis &rarr; gene analysis</td><td>Alpha-globin gene deletion analysis</td></tr>"
+   },
+   {
+    "old": "<td>Lead level</td></tr>",
+    "new": "<td>Lead level</td><td>Elevated venous lead level; chelation if high</td></tr>"
+   },
+   {
+    "old": "ferritin normal/high</td><td>Iron studies</td></tr>",
+    "new": "ferritin normal/high</td><td>Iron studies</td><td>Low iron and TIBC with normal or high ferritin; treat the underlying disease</td></tr>"
+   }
+  ],
+  "note": "Extended the existing differential table, whose First test column already carries the sequence. Brief's Mentzer pearl uses &lt;13/&gt;13 symbols; no conflicts."
+ },
+ {
+  "brief": "bs-sickle-trait",
+  "action": "new",
+  "rows": [
+   [
+    "Newborn screen",
+    "Screen",
+    "<b>FAS</b> pattern",
+    "Trait; FS means disease; F leads because fetal hemoglobin predominates"
+   ],
+   [
+    "CBC with MCV and reticulocytes",
+    "First",
+    "<b>Completely normal</b>",
+    "Trait; anemia with high reticulocytes means disease; low MCV suggests a beta-thalassemia combination"
+   ],
+   [
+    "Hemoglobin electrophoresis after infancy",
+    "Confirms",
+    "<b>HbA exceeds HbS</b>",
+    "Sickle cell trait; no HbA means SS, SC or sickle-beta-zero"
+   ],
+   [
+    "Urinalysis, then renal imaging",
+    "By branch",
+    "Painless <b>hematuria</b> in a carrier",
+    "Medullary sickling; imaging excludes renal medullary carcinoma"
+   ],
+   [
+    "Sickle solubility test",
+    "Skip",
+    "<b>Positive</b> in both trait and disease",
+    "Cannot separate trait from disease; electrophoresis does"
+   ]
+  ],
+  "note": "The existing table reads electrophoresis patterns; this table adds the order and the confirmatory step. Solubility test and renal imaging for hematuria are standard but not named in the brief."
+ },
+ {
+  "brief": "tb",
+  "action": "new",
+  "rows": [
+   [
+    "PPD or IGRA (IGRA if BCG-vaccinated)",
+    "Screen",
+    "<b>Positive</b> at the risk-group threshold",
+    "Infection, latent or active; the test cannot tell which"
+   ],
+   [
+    "Symptom review and chest radiograph",
+    "Next",
+    "<b>Normal</b> radiograph, no symptoms",
+    "Latent TB: single-drug regimen; abnormal: airborne isolation, then sputum"
+   ],
+   [
+    "HIV test",
+    "Screen",
+    "<b>Positive</b>",
+    "Changes the PPD threshold, drug interactions and ART timing"
+   ],
+   [
+    "Sputum AFB smear, three samples",
+    "By branch",
+    "<b>Acid-fast bacilli</b>",
+    "Active, infectious pulmonary TB"
+   ],
+   [
+    "Sputum nucleic acid amplification test",
+    "Supports",
+    "<b>M. tuberculosis</b> DNA, with rifampin resistance result",
+    "Rapid diagnosis and first resistance check"
+   ],
+   [
+    "Sputum mycobacterial culture",
+    "Confirms",
+    "<b>Growth</b> of M. tuberculosis",
+    "Active TB, with drug susceptibility"
+   ],
+   [
+    "Repeat PPD or IGRA to judge activity",
+    "Skip",
+    "<b>Cannot</b> separate latent from active",
+    "The radiograph and symptoms decide"
+   ]
+  ],
+  "note": "Brief has no confirmatory step for active TB; sputum smear, NAAT and culture are standard additions. Three sputum samples is standard practice. The brief's thresholds use the symbol form (≥5 mm)."
+ },
+ {
+  "brief": "meningitis",
+  "action": "new",
+  "rows": [
+   [
+    "Blood cultures",
+    "First",
+    "<b>Growth</b> of the organism",
+    "Names the organism if the tap is delayed; never delay antibiotics"
+   ],
+   [
+    "Head CT",
+    "By branch",
+    "Only with a <b>red flag</b>: papilledema, focal deficit, seizure, obtundation",
+    "Give antibiotics before the scan; an open fontanelle usually removes the need"
+   ],
+   [
+    "Lumbar puncture: cell count, glucose, protein",
+    "Next",
+    "Neutrophils with <b>low glucose</b>",
+    "Bacterial; lymphocytes with normal glucose: viral"
+   ],
+   [
+    "CSF Gram stain and culture",
+    "Confirms",
+    "<b>Organism</b> seen or grown",
+    "Bacterial meningitis and the organism to target"
+   ],
+   [
+    "CSF PCR for enterovirus and HSV",
+    "By branch",
+    "Lymphocytic CSF, normal glucose: <b>positive</b> PCR",
+    "Enterovirus: supportive care; HSV: acyclovir"
+   ],
+   [
+    "CSF cryptococcal antigen and AFB culture",
+    "By branch",
+    "Lymphocytes with <b>low glucose</b>, HIV or basilar signs",
+    "Cryptococcal or tuberculous meningitis"
+   ],
+   [
+    "Complement levels during the acute illness",
+    "Skip",
+    "<b>Not</b> an acute study",
+    "Check CH50 after recovery, for recurrent or unusual Neisseria infection"
+   ]
+  ],
+  "note": "The brief's CSF 2x2 and Sequencing notes stay as they are; this table adds the ordered sequence and the confirmatory step. The brief lists age over 60 as a CT indication in its prose; the table's red-flag list is abbreviated."
+ }
+]

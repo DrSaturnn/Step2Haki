@@ -1,0 +1,89 @@
+[
+ {"brief":"thyroid","action":"new",
+  "rows":[
+   ["Serum TSH","First","<b>Low</b> TSH","Thyrotoxicosis; a high TSH points to primary hypothyroidism"],
+   ["Free T4","Next","<b>Low</b> free T4 with a low or normal TSH","Central hypothyroidism: check cortisol and the other pituitary axes"],
+   ["Radioactive iodine uptake","By branch","<b>High</b> uptake, diffuse, patchy or one hot nodule","Gland making hormone: Graves, toxic multinodular goiter or toxic adenoma"],
+   ["Radioactive iodine uptake","By branch","<b>Low</b> uptake","Leaking or exogenous hormone: thyroiditis or factitious; antithyroid drugs useless"],
+   ["Serum thyroglobulin","By branch","<b>Low</b> thyroglobulin with low uptake","Factitious thyrotoxicosis; high when an inflamed gland leaks"],
+   ["TSH-receptor antibodies (TSI)","Confirms","<b>Positive</b>","Graves disease; proptosis or pretibial myxedema already makes the diagnosis"],
+   ["Thyroid ultrasound or fine-needle aspiration","Skip","Shows structure, <b>not function</b>","Cannot split making from leaking; FNA is for a cold nodule"]
+  ],
+  "note":"Hashimoto (anti-TPO) and subacute thyroiditis (ESR) left to the differential table to stay at 7 rows; thyroid storm stays a clinical diagnosis per the brief."},
+ {"brief":"gynecomastia","action":"new",
+  "rows":[
+   ["Diagnostic mammography, with or without ultrasound","First","<b>Eccentric</b> mass, spiculated or with calcifications","Suspicious for cancer: core biopsy; concentric subareolar tissue is gynecomastia"],
+   ["Core needle biopsy","Confirms","<b>Invasive ductal</b> carcinoma, usually ER-positive","Male breast cancer, even with known Klinefelter syndrome"],
+   ["Genetic testing","Cause","<b>BRCA2</b> variant","Offered to every man with breast cancer"],
+   ["Testicular exam and scrotal ultrasound","By branch","<b>Testicular mass</b> in a man with gynecomastia","Germ cell or Leydig cell tumor"],
+   ["Serum hCG and AFP","By branch","<b>High hCG</b>","hCG-secreting germ cell tumor"],
+   ["Hormone levels before imaging a unilateral hard mass","Skip","Klinefelter labs <b>do not</b> explain the mass","Image and biopsy first; Klinefelter is the risk factor"]
+  ],
+  "note":"Bilateral tender pubertal or drug-related gynecomastia needs no testing per the brief (reassurance or change the drug), so the table follows the suspicious-mass path and the testicular-tumor branch."},
+ {"brief":"prolactin","action":"new",
+  "rows":[
+   ["Serum prolactin","First","<b>Over 200</b>, or 25 to 100","Over 200 suggests prolactinoma; 25 to 100 fits drugs or other causes"],
+   ["Pregnancy test","Next","<b>Positive</b>","Physiologic hyperprolactinemia"],
+   ["TSH","Next","<b>High</b> TSH","Primary hypothyroidism: TRH drives prolactin; treat with levothyroxine"],
+   ["Medication review and renal function","Next","<b>Antipsychotic</b>, metoclopramide or other culprit; or CKD","Drug-induced or reduced clearance; no imaging needed"],
+   ["Pituitary MRI","Confirms","<b>Adenoma</b> once the cheap causes are excluded","Prolactinoma if level over 200; large mass with level under 100 is stalk effect"],
+   ["Prolactin repeated on a diluted sample","By branch","Level <b>much higher</b> after dilution","Hook effect in a giant prolactinoma"],
+   ["Serum FSH and LH","Skip","Low from suppression, <b>does not</b> name the cause","Prolactin, pregnancy test and TSH come first"]
+  ],
+  "note":"Brief's '>200' and '25-100' cutoffs used as written. Minor inconsistency: stalk effect is 'modest elevation (<100)' in the table but the bank uses a level of 45; consistent, no conflict."},
+ {"brief":"tumor-syndromes","action":"new",
+  "rows":[
+   ["Dilated retinal examination","First","<b>Retinal hemangioblastoma</b>","Von Hippel-Lindau suspected, with or without a family history"],
+   ["VHL gene testing","Confirms","<b>Pathogenic VHL</b> variant","VHL disease; offer testing to first-degree relatives now"],
+   ["Plasma or urine metanephrines","Staging","<b>Elevated</b> metanephrines","Pheochromocytoma: alpha blockade before beta blockade, then resection"],
+   ["MRI of brain and spine","Staging","<b>Cerebellar or spinal</b> hemangioblastoma","CNS tumors of VHL"],
+   ["MRI of abdomen","Staging","<b>Enhancing renal mass</b>","Clear cell carcinoma: nephron-sparing partial nephrectomy"],
+   ["Whole-body PET imaging","Skip","Adds <b>nothing</b> to gene testing and targeted MRI","VHL testing follows the lesion; surveillance covers the four organs"]
+  ],
+  "note":"Table follows the VHL path (the source question); MEN2B, NF1 and Sturge-Weber workups are only in the bank and were not tabled."},
+ {"brief":"precocious-puberty","action":"new",
+  "rows":[
+   ["Bone age radiograph","First","<b>Advanced</b> bone age","True progressive puberty; bone age matching age suggests premature thelarche or adrenarche"],
+   ["Basal LH","Next","<b>Pubertal</b> LH level","Central, GnRH-dependent; if not diagnostic, stimulation test"],
+   ["GnRH stimulation test","Confirms","LH <b>rises</b>","Central precocious puberty; a flat LH points to a peripheral source"],
+   ["Brain MRI","Cause","<b>Hypothalamic or pituitary</b> lesion","For confirmed central puberty, especially young girls and most boys"],
+   ["17-hydroxyprogesterone","By branch","<b>High</b> in a virilized child","Adrenal source such as congenital adrenal hyperplasia"],
+   ["None: McCune-Albright is a clinical diagnosis","Confirms","Peripheral precocity, irregular macules, <b>fibrous dysplasia</b>","Tests look for other autonomous glands, such as TSH for thyrotoxicosis"],
+   ["Serum estradiol alone","Skip","Cannot tell <b>which axis</b> is driving it","LH response decides central versus peripheral"]
+  ],
+  "note":"Brief tags 'LH rises on GnRH stimulation' and 'MRI in young children and most boys' with ⚠︎; kept as standard. McCune-Albright stated as clinical; GNAS testing not mentioned in the brief so omitted."},
+ {"brief":"homocystinuria","action":"new",
+  "rows":[
+   ["Slit-lamp eye examination","First","Lens dislocated <b>downward</b>","Homocystinuria; upward and temporal points to Marfan"],
+   ["Plasma total homocysteine and methionine","Next","Both <b>markedly high</b>","Cystathionine beta-synthase deficiency"],
+   ["CBS gene testing","Confirms","<b>Biallelic CBS</b> variants","Confirms classic homocystinuria"],
+   ["Trial of pyridoxine","By branch","Homocysteine <b>falls</b> on B6","B6-responsive: pyridoxine, folate, B12; nonresponsive: methionine restriction and betaine"],
+   ["Brain MRI with vascular imaging","Staging","<b>Infarct</b> or thrombosis","Thromboembolism from homocysteine; avoid nitrous oxide anesthesia"],
+   ["Echocardiogram or FBN1 testing first","Skip","Looks for <b>Marfan</b>, not the metabolic cause","Homocysteine first when lens dislocation comes with ID or clotting"]
+  ],
+  "note":"Brief's bank already keys serum homocysteine over echo and FBN1. The brief does not name a confirmatory test beyond homocysteine and methionine; CBS gene testing added as the standard confirmation."},
+ {"brief":"osteoporosis","action":"new",
+  "rows":[
+   ["Risk-factor review, FRAX if under 65","Screen","One or more risk factors, or FRAX <b>at or above</b> a 65-year-old's risk","DXA now instead of at 65"],
+   ["DXA of hip and lumbar spine","Confirms","T-score <b>-2.5 or lower</b>","Osteoporosis: treat"],
+   ["Hip or vertebral fragility fracture","Confirms","Osteoporosis <b>regardless</b> of T-score","Treat; no DXA needed to start"],
+   ["FRAX after an osteopenic DXA","By branch","<b>20% or more</b> major, or 3% or more hip","Treat osteopenia"],
+   ["Calcium, 25-hydroxyvitamin D and creatinine","Next","<b>Low</b> vitamin D","Correct before a bisphosphonate; a low Z-score also prompts a secondary-cause workup"],
+   ["Bone turnover markers","Skip","<b>Do not</b> diagnose osteoporosis","DXA and FRAX decide screening and treatment"]
+  ],
+  "note":"Does not repeat the T-score vs Z-score table. Brief uses a real minus sign in its cutoffs; drafted with a hyphen, swap to the page's minus if preferred. Brief's DP states the exam ledger (DXA earlier with any risk factor) and USPSTF FRAX side by side; the Screen row keeps both."},
+ {"brief":"bs-dexa-highrisk","action":"extend",
+  "edits":[{"old":"<tr><td><b>3</b></td><td><b>Bisphosphonate</b></td>",
+            "new":"<tr><td>Before 3</td><td>Calcium, 25-hydroxyvitamin D and creatinine</td><td>Before any bisphosphonate: <b>correct low vitamin D</b> first; FRAX first if the DEXA shows osteopenia</td></tr>\n<tr><td><b>3</b></td><td><b>Bisphosphonate</b></td>"}],
+  "note":"The ladder already shows screen (DEXA timing) and treatment thresholds; the added row supplies the pre-treatment labs from bank item 7 and the FRAX step for osteopenia. Old string is unique in index.html."},
+ {"brief":"bs-dm-bundle","action":"new",
+  "rows":[
+   ["Dilated eye examination","Screen","<b>Retinopathy</b>","Ophthalmology; start at diagnosis in type 2, 5 years after in type 1"],
+   ["Urine albumin-to-creatinine ratio with serum creatinine","Screen","UACR <b>30 mg/g or more</b>","Repeat before labeling albuminuria"],
+   ["Repeat UACR over 3 to 6 months","Confirms","<b>2 of 3</b> samples elevated","Albuminuria: ACE inhibitor or ARB plus SGLT2 inhibitor"],
+   ["Monofilament foot examination","Screen","<b>Loss</b> of protective sensation","Neuropathy: foot care education, podiatry, inspect feet each visit"],
+   ["A1c","Next","<b>At goal</b> and stable","Every 6 months; every 3 months if not at goal or therapy changed"],
+   ["Monthly A1c","Skip","Measures <b>overlapping</b> 3-month windows","Adds no information and does not prevent complications"]
+  ],
+  "note":"Existing table is about outcome words, not tests, so a new table was drafted rather than an extension. UACR 30 mg/g and 2-of-3 within 3 to 6 months are ADA standard; not stated in the brief itself."}
+]

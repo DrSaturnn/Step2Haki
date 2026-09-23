@@ -1,0 +1,637 @@
+[
+ {
+  "brief": "liver-preg",
+  "action": "new",
+  "rows": [
+   [
+    "AST, ALT, bilirubin and alkaline phosphatase",
+    "First",
+    "Alkaline phosphatase raised <b>alone</b>, all else normal",
+    "Placental isoenzyme: physiologic, reassure"
+   ],
+   [
+    "Right upper quadrant ultrasound or bile acids",
+    "Skip",
+    "Adds nothing when AST, ALT and bilirubin are <b>normal</b>",
+    "Isolated alkaline phosphatase in late pregnancy needs no workup"
+   ],
+   [
+    "Serum bile acids",
+    "Confirms",
+    "<b>Raised</b> bile acids with itching of palms and soles",
+    "Intrahepatic cholestasis: ursodeoxycholic acid, deliver at 36 to 37 weeks"
+   ],
+   [
+    "Blood pressure, urine protein, CBC with smear",
+    "Confirms",
+    "<b>Schistocytes</b>, low platelets, raised LFTs, hypertension",
+    "HELLP syndrome: delivery"
+   ],
+   [
+    "Glucose, PT/INR, ammonia and creatinine",
+    "By branch",
+    "<b>Hypoglycemia</b> with coagulopathy and a rising creatinine",
+    "Acute fatty liver of pregnancy: emergent delivery"
+   ],
+   [
+    "Hepatitis serologies and liver ultrasound",
+    "By branch",
+    "Raised ALT before 20 weeks, <b>echogenic</b> liver",
+    "Not pregnancy-specific: MASLD or viral hepatitis"
+   ]
+  ],
+  "note": "Third-trimester diseases gated by timing; Skip row draws on the bank item where ultrasound and bile acids are the distractors for isolated alkaline phosphatase."
+ },
+ {
+  "brief": "masld",
+  "action": "new",
+  "rows": [
+   [
+    "AST and ALT",
+    "First",
+    "ALT higher, AST:ALT <b>under 1</b>",
+    "Metabolic; a ratio of 2 or more points to alcohol"
+   ],
+   [
+    "Liver ultrasound",
+    "First",
+    "<b>Hyperechoic</b> liver",
+    "Steatosis"
+   ],
+   [
+    "Hepatitis B and C serology, iron studies, ceruloplasmin",
+    "Confirms",
+    "All <b>normal</b>, alcohol under the threshold",
+    "MASLD is a diagnosis of exclusion; also exclude autoimmune hepatitis, alpha-1 antitrypsin deficiency, drugs"
+   ],
+   [
+    "FIB-4 score",
+    "Staging",
+    "<b>High</b> score",
+    "Possible advanced fibrosis: elastography next"
+   ],
+   [
+    "Transient elastography",
+    "Staging",
+    "<b>Stiff</b> liver",
+    "Advanced fibrosis or cirrhosis: hepatology, HCC surveillance if cirrhotic"
+   ],
+   [
+    "Liver biopsy in every patient",
+    "Skip",
+    "Invasive; <b>noninvasive</b> staging comes first",
+    "Reserved for an uncertain diagnosis or discordant staging"
+   ]
+  ],
+  "note": "Skip row matches bank distractor 'Liver biopsy in every patient'. Brief pearl on gallstones in pregnancy is off-topic for MASLD (content drift, not a conflict)."
+ },
+ {
+  "brief": "zenker",
+  "action": "new",
+  "rows": [
+   [
+    "Barium esophagram",
+    "First",
+    "Posterior <b>pouch</b> above the cricopharyngeus",
+    "Zenker diverticulum, confirmed; cricopharyngeal myotomy next"
+   ],
+   [
+    "",
+    "",
+    "Dilated esophagus tapering to a <b>bird's beak</b>",
+    "Achalasia: manometry next"
+   ],
+   [
+    "Upper endoscopy or blind nasogastric tube",
+    "Skip",
+    "Can enter the pouch and <b>perforate</b> it",
+    "Image before instrumenting"
+   ],
+   [
+    "Esophageal manometry",
+    "Confirms",
+    "<b>Absent peristalsis</b>, LES fails to relax",
+    "Achalasia"
+   ],
+   [
+    "Upper endoscopy with biopsy",
+    "Confirms",
+    "<b>Malignant</b> tissue",
+    "Esophageal cancer; goes first only with alarm features and no neck finding"
+   ],
+   [
+    "Videofluoroscopic swallow study",
+    "By branch",
+    "Trouble <b>initiating</b> the swallow, aspiration",
+    "Oropharyngeal neurologic dysphagia: speech therapy"
+   ]
+  ],
+  "note": "Esophagram is both first and confirmatory for Zenker; Confirms rows name the branches (achalasia, cancer). Row 2 is a continuation row (blank Test/Order) in the aq-bruising style."
+ },
+ {
+  "brief": "fap",
+  "action": "new",
+  "rows": [
+   [
+    "APC testing, child of an affected parent",
+    "Screen",
+    "<b>Positive</b> for the family mutation",
+    "Carrier: annual sigmoidoscopy or colonoscopy from age 10 to 12"
+   ],
+   [
+    "",
+    "",
+    "<b>Negative</b> for the known family mutation",
+    "Not a carrier: average-risk screening"
+   ],
+   [
+    "Annual sigmoidoscopy or colonoscopy",
+    "Confirms",
+    "<b>Hundreds</b> of adenomas",
+    "Polyposis: proctocolectomy planned for the teens to early 20s"
+   ],
+   [
+    "",
+    "",
+    "Bleeding, polyps <b>over 1 cm</b>, innumerable polyps or high-grade dysplasia",
+    "Proctocolectomy now, at any age"
+   ],
+   [
+    "Upper endoscopy",
+    "Next",
+    "<b>Duodenal or ampullary</b> adenomas",
+    "Upper-tract surveillance continues after colectomy"
+   ],
+   [
+    "Colonoscopy at 40 or annual FIT",
+    "Skip",
+    "Sporadic family-history <b>timing</b>",
+    "Wrong pathway for an APC carrier"
+   ]
+  ],
+  "note": "Genetic testing and surveillance sequence; two continuation rows (blank Test/Order). Negative-child row assumes the family mutation is known."
+ },
+ {
+  "brief": "peutz-jeghers",
+  "action": "new",
+  "rows": [
+   [
+    "CBC with MCV",
+    "First",
+    "Hemoglobin 8.4 with MCV <b>70</b>, other lines normal",
+    "Iron deficiency from blood loss, not marrow failure"
+   ],
+   [
+    "ACTH stimulation test or lead level",
+    "Skip",
+    "Pigment is <b>discrete</b> macules on lips and buccal mucosa",
+    "Wrong distribution for Addison disease (diffuse) or lead (gingival line)"
+   ],
+   [
+    "Upper and lower endoscopy with polyp biopsy",
+    "Confirms",
+    "Two or more <b>hamartomatous</b> polyps",
+    "Peutz-Jeghers with the mucocutaneous macules; the polyps are the bleeding source"
+   ],
+   [
+    "STK11 genetic testing",
+    "Confirms",
+    "<b>STK11</b> mutation",
+    "Autosomal dominant: test first-degree relatives"
+   ],
+   [
+    "Annual hemoglobin with periodic upper and lower endoscopy",
+    "Screen",
+    "New <b>anemia</b> or polyps",
+    "Lifelong surveillance, plus breast and genital tract cancer screening"
+   ]
+  ],
+  "note": "Brief says only 'tumour-suppressor mutation'; STK11 is the standard gene name. Brief uses British spelling (anaemia, haemoglobin); table uses American per spec."
+ },
+ {
+  "brief": "feeding-refusal",
+  "action": "new",
+  "rows": [
+   [
+    "Weight and height on the growth chart",
+    "First",
+    "Weight falls to the <b>5th</b> percentile, height holds",
+    "Caloric deficit: a real problem, not picky eating"
+   ],
+   [
+    "Video swallow study",
+    "First",
+    "<b>Normal</b>",
+    "Lesion is below the pharynx; abnormal with choking points to oropharyngeal dysphagia"
+   ],
+   [
+    "Tissue transglutaminase IgA with total IgA",
+    "By branch",
+    "<b>Positive</b>",
+    "Celiac disease, when diarrhea, distension or gluten-food avoidance is present"
+   ],
+   [
+    "Allergy skin testing",
+    "Skip",
+    "Shows IgE <b>sensitization</b> only",
+    "Cannot diagnose eosinophilic esophagitis; guides the elimination diet afterward"
+   ],
+   [
+    "Endoscopy with esophageal biopsy",
+    "Confirms",
+    "<b>15 or more</b> eosinophils per high-power field",
+    "Eosinophilic esophagitis; normal biopsies point to a behavioral feeding disorder"
+   ]
+  ],
+  "note": "Agrees with brief and bank."
+ },
+ {
+  "brief": "rlq-pain",
+  "action": "new",
+  "rows": [
+   [
+    "CBC",
+    "First",
+    "Neutrophil-predominant <b>leukocytosis</b>",
+    "Shared by appendicitis and ileocecitis; decides nothing"
+   ],
+   [
+    "Ultrasound or CT of the abdomen",
+    "By branch",
+    "Ileocecal inflammation with a <b>spared appendix</b>",
+    "Infectious ileocecitis: supportive care, no surgery"
+   ],
+   [
+    "",
+    "",
+    "<b>Inflamed</b> appendix",
+    "Acute appendicitis: surgical consultation"
+   ],
+   [
+    "Diagnostic laparoscopy",
+    "Skip",
+    "Invasive when <b>imaging</b> can decide",
+    "Image first when the examination leaves the diagnosis unclear"
+   ],
+   [
+    "Stool culture or PCR",
+    "Confirms",
+    "<b>Campylobacter</b> or Yersinia",
+    "Names the organism; a susceptibility panel alone is not a reason to treat"
+   ],
+   [
+    "Colonoscopy with ileal intubation",
+    "By branch",
+    "<b>Chronic</b> ileal inflammation on biopsy",
+    "Crohn ileitis: months of pain, weight loss, perianal disease"
+   ]
+  ],
+  "note": "Appendicitis is confirmed at surgery/pathology; table stops at imaging. Row 3 is a continuation row. Brief's rlq differential marks Crohn ileitis row with a stray warning sign."
+ },
+ {
+  "brief": "peds-constipation",
+  "action": "new",
+  "rows": [
+   [
+    "History, growth chart and perineal examination",
+    "First",
+    "<b>No</b> alarm sign: normal growth, meconium and perineum",
+    "Functional constipation: treat without testing"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "<b>No test</b> needed with a benign screen",
+    "Tests are only for alarm signs, to exclude the mimics"
+   ],
+   [
+    "Abdominal radiograph",
+    "Skip",
+    "Stool on film does <b>not</b> change treatment",
+    "Only for severe impaction with pain and vomiting that mimics obstruction"
+   ],
+   [
+    "TSH and tissue transglutaminase IgA",
+    "By branch",
+    "<b>Abnormal</b>, with poor growth",
+    "Hypothyroidism or celiac disease"
+   ],
+   [
+    "MRI of the spine",
+    "By branch",
+    "<b>Tethered cord</b> or dysraphism",
+    "Sacral tuft, dimple or displaced anus, urinary symptoms"
+   ],
+   [
+    "Anorectal manometry or contrast enema",
+    "By branch",
+    "<b>Absent</b> rectoanal inhibitory reflex, or a transition zone",
+    "Hirschsprung features or failure of standard therapy: rectal biopsy next"
+   ],
+   [
+    "Suction rectal biopsy",
+    "Confirms",
+    "<b>Absent</b> ganglion cells",
+    "Hirschsprung disease"
+   ]
+  ],
+  "note": "Bank item uses contrast enema for Hirschsprung while the ladder says manometry then biopsy; both are accepted, so row 6 names both. Brief marks suction rectal biopsy as confirmatory with a warning sign, though it is standard."
+ },
+ {
+  "brief": "cyclic-vomiting",
+  "action": "new",
+  "rows": [
+   [
+    "Electrolytes, glucose and BUN during an episode",
+    "First",
+    "Dehydration changes <b>only</b>",
+    "Rehydrate; tests are drawn during the episode to exclude urgent causes"
+   ],
+   [
+    "Lipase, liver enzymes and urinalysis",
+    "By branch",
+    "<b>Normal</b>",
+    "Excludes pancreatitis, hepatobiliary and urinary causes"
+   ],
+   [
+    "Upper GI contrast series",
+    "By branch",
+    "<b>Malrotation</b> excluded",
+    "Required when vomiting is bilious or the pattern is atypical"
+   ],
+   [
+    "Brain MRI",
+    "By branch",
+    "<b>Mass</b> or hydrocephalus",
+    "Only with an abnormal neurologic examination"
+   ],
+   [
+    "Upper endoscopy",
+    "Skip",
+    "Adds <b>nothing</b> with normal growth and no alarm features",
+    "Reserve for weight loss, diarrhea or bleeding"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "Stereotyped episodes, <b>well between</b>, normal growth",
+    "Cyclic vomiting syndrome; the tests only exclude mimics"
+   ]
+  ],
+  "note": "Upper GI series and brain MRI are standard exclusion studies but are not named in the brief; brief says only 'laboratory work and imaging during an episode'. Skip row matches bank distractor 'Upper endoscopy during the episode'."
+ },
+ {
+  "brief": "neonatal-jaundice",
+  "action": "new",
+  "rows": [
+   [
+    "Total and direct bilirubin",
+    "First",
+    "<b>Indirect</b>, after 24 hours, well infant",
+    "Physiologic or intake-related; plot on an hour-specific chart for phototherapy"
+   ],
+   [
+    "",
+    "",
+    "<b>Direct</b> fraction raised",
+    "Never physiologic: cholestasis workup"
+   ],
+   [
+    "Blood type and direct Coombs test",
+    "By branch",
+    "<b>Coombs positive</b>, mother group O or Rh-negative",
+    "Isoimmune hemolysis: phototherapy, exchange above threshold"
+   ],
+   [
+    "CBC, smear, reticulocyte count and G6PD",
+    "By branch",
+    "<b>Anemia</b> with Coombs-negative hemolysis",
+    "G6PD deficiency or spherocytosis"
+   ],
+   [
+    "Hepatic ultrasound or serum albumin",
+    "Skip",
+    "Cannot show <b>hemolysis</b> or immature conjugation",
+    "Jaundice under 24 hours needs bilirubin fractions and a Coombs"
+   ],
+   [
+    "Intraoperative cholangiogram, after ultrasound and HIDA",
+    "Confirms",
+    "<b>No</b> contrast reaches the bowel",
+    "Biliary atresia: Kasai before about 60 days"
+   ]
+  ],
+  "note": "Physiologic jaundice is a clinical diagnosis (well infant, indirect, after 24 hours); the Confirms row covers the can't-miss direct branch. Brief uses British spelling; table American."
+ },
+ {
+  "brief": "neonatal-bowel",
+  "action": "new",
+  "rows": [
+   [
+    "Abdominal radiograph",
+    "First",
+    "<b>Pneumatosis intestinalis</b>, distal gas present",
+    "NEC: NPO, decompression, broad-spectrum antibiotics"
+   ],
+   [
+    "",
+    "",
+    "Proximal gas, <b>gasless</b> distal abdomen",
+    "Volvulus: upper GI series if stable, laparotomy if not"
+   ],
+   [
+    "",
+    "",
+    "<b>Double bubble</b> from the first feeds",
+    "Duodenal atresia"
+   ],
+   [
+    "",
+    "",
+    "<b>Free air</b> under the diaphragm",
+    "Perforation: laparotomy"
+   ],
+   [
+    "Upper GI contrast series",
+    "Confirms",
+    "Abnormal duodenojejunal junction, <b>corkscrew</b>",
+    "Malrotation with midgut volvulus"
+   ],
+   [
+    "Abdominal ultrasound",
+    "By branch",
+    "<b>Target</b> sign",
+    "Intussusception at 6 months to 3 years: air-contrast enema"
+   ],
+   [
+    "C difficile toxin testing",
+    "Skip",
+    "Neonates <b>lack</b> the toxin receptors",
+    "Not a neonatal diagnosis"
+   ]
+  ],
+  "note": "Rows 2 to 4 are continuation rows of the radiograph (blank Test/Order). Pneumatosis is effectively the confirmatory finding for NEC."
+ },
+ {
+  "brief": "occult-gi-bleed",
+  "action": "new",
+  "rows": [
+   [
+    "CBC and stool occult blood",
+    "First",
+    "Microcytic anemia, occult blood <b>positive</b>",
+    "Occult GI bleeding"
+   ],
+   [
+    "Upper endoscopy and colonoscopy",
+    "Next",
+    "<b>Unremarkable</b>, biopsies clean",
+    "Source is in the small bowel"
+   ],
+   [
+    "CT angiography",
+    "Skip",
+    "Needs <b>brisk</b> active bleeding",
+    "Occult bleeding is too slow to show"
+   ],
+   [
+    "Technetium 99m pertechnetate scan",
+    "Confirms",
+    "<b>Ectopic gastric mucosa</b>",
+    "Meckel diverticulum, the child's small-bowel branch"
+   ],
+   [
+    "Capsule endoscopy",
+    "By branch",
+    "<b>Angiodysplasia</b>, neoplasia or ulcer",
+    "Adult branch; then CT or MR enterography"
+   ],
+   [
+    "Tissue transglutaminase IgA",
+    "By branch",
+    "<b>Positive</b>, with occult blood negative",
+    "Celiac disease: iron deficiency from malabsorption, not bleeding"
+   ]
+  ],
+  "note": "Agrees with brief; brief uses British spelling."
+ },
+ {
+  "brief": "bs-tef",
+  "action": "new",
+  "rows": [
+   [
+    "Nasogastric tube passage",
+    "First",
+    "Meets <b>resistance</b> at the pouch",
+    "Esophageal atresia likely: film with the tube in place"
+   ],
+   [
+    "Chest and abdominal x-ray with the tube",
+    "Confirms",
+    "Tube <b>coiled</b> in the upper chest",
+    "Esophageal atresia"
+   ],
+   [
+    "",
+    "",
+    "<b>Gas</b> below the diaphragm",
+    "Distal fistula present (type C)"
+   ],
+   [
+    "",
+    "",
+    "<b>Gasless</b> abdomen",
+    "Pure atresia, no distal fistula"
+   ],
+   [
+    "Barium esophagram or endoscopy",
+    "Skip",
+    "Contrast can <b>aspirate</b> from the blind pouch",
+    "The coiled tube on film already confirms atresia"
+   ],
+   [
+    "Echocardiogram and renal ultrasound",
+    "Next",
+    "<b>VACTERL</b> anomalies",
+    "Screen after the diagnosis, before repair"
+   ],
+   [
+    "Bronchoscopy or prone contrast esophagram",
+    "By branch",
+    "<b>H-type</b> fistula",
+    "Tube passes; months of cough with feeds and recurrent pneumonia"
+   ]
+  ],
+  "note": "Rows 3 and 4 are continuation rows of the film. Skip row matches bank distractors (barium esophagram, flexible endoscopy)."
+ },
+ {
+  "brief": "cholestasis",
+  "action": "extend",
+  "edits": [
+   {
+    "old": "<th>Targeted tests</th></tr>",
+    "new": "<th>Targeted tests</th><th>Confirms, then</th></tr>"
+   },
+   {
+    "old": "<td><b>ASMA / anti-LKM1</b>, iron studies, ceruloplasmin</td></tr>",
+    "new": "<td><b>ASMA / anti-LKM1</b>, iron studies, ceruloplasmin</td><td>Viral serologies first; <b>liver biopsy</b> when the cause stays unclear</td></tr>"
+   },
+   {
+    "old": "<td><b>Ultrasound first</b>, then AMA or MRCP/CT</td></tr>",
+    "new": "<td><b>Ultrasound first</b>, then AMA or MRCP/CT</td><td>Normal ducts: AMA for PBC, biopsy if negative; dilated ducts: MRCP or CT, <b>ERCP</b> only to intervene</td></tr>"
+   },
+   {
+    "old": "<td>Fractionate, smear, reticulocytes</td></tr>",
+    "new": "<td>Fractionate, smear, reticulocytes</td><td>Indirect, normal smear and reticulocytes, rises with fasting: <b>Gilbert</b>, no further testing</td></tr>"
+   },
+   {
+    "old": "<td>Bone-specific workup</td></tr>",
+    "new": "<td>Bone-specific workup</td><td><b>GGT</b> normal confirms a non-hepatic source; then calcium, phosphate, vitamin D and bone imaging</td></tr>"
+   }
+  ],
+  "note": "Extends the 'LFT patterns' table (data-mask=\"4\" currently masks the Targeted tests column; the new fifth column is unmasked unless the mask is updated). MRCP beads on a string for PSC and the ERCP wrong-rung trap are already in the brief text."
+ },
+ {
+  "brief": "bs-galactosemia",
+  "action": "new",
+  "rows": [
+   [
+    "Total and direct bilirubin",
+    "First",
+    "<b>Conjugated</b> fraction raised",
+    "Never physiologic: galactosemia, sepsis or biliary atresia"
+   ],
+   [
+    "Urine reducing substances with dipstick glucose",
+    "Next",
+    "Reducing substance <b>positive</b>, glucose negative",
+    "Galactose or fructose: stop lactose now; falsely negative once feeds stop"
+   ],
+   [
+    "Blood, urine and CSF cultures",
+    "By branch",
+    "<b>E. coli</b> growth",
+    "Febrile neonate: antibiotics in parallel, not after"
+   ],
+   [
+    "Serum galactose level or liver biopsy",
+    "Skip",
+    "Does <b>not</b> name the enzyme defect",
+    "Red cell GALT activity is the confirmatory test"
+   ],
+   [
+    "Red cell GALT enzyme activity",
+    "Confirms",
+    "<b>Absent</b> or near-absent activity",
+    "Classic galactosemia; falsely normal after transfusion"
+   ],
+   [
+    "Abdominal ultrasound and HIDA scan",
+    "By branch",
+    "<b>No</b> excretion into the bowel",
+    "Well infant, acholic stools, reducing substances negative: biliary atresia"
+   ]
+  ],
+  "note": "Chose new over extend: existing differential table has no test column, and the sequence lives only in the crit/danger prose; the table adds order without repeating the differential. Brief marks GALT confirmation with a warning sign though it is standard. Skip row uses bank distractors (serum galactose, liver biopsy)."
+ }
+]

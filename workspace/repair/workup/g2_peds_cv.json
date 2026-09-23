@@ -1,0 +1,745 @@
+[
+ {
+  "brief": "aneuploidy",
+  "action": "new",
+  "rows": [
+   [
+    "Combined first-trimester screen",
+    "Screen",
+    "<b>Low PAPP-A and low hCG</b> with enlarged nuchal translucency",
+    "Raised risk of trisomy 18: offer a diagnostic test"
+   ],
+   [
+    "Chorionic villus sampling or amniocentesis, karyotype",
+    "Confirms",
+    "<b>Three copies</b> of chromosome 18 in fetal cells",
+    "Prenatal diagnosis; a positive screen always needs this step"
+   ],
+   [
+    "Rapid FISH in the newborn",
+    "First",
+    "<b>Three signals</b> for chromosome 18",
+    "Fast answer while the karyotype is pending; misses mosaicism"
+   ],
+   [
+    "Full karyotype",
+    "Confirms",
+    "<b>47,+18</b> across multiple cells",
+    "Trisomy 18; also finds mosaicism and translocations"
+   ],
+   [
+    "Echocardiogram and abdominal ultrasound",
+    "Staging",
+    "<b>VSD or PDA</b> in over half; omphalocele, malrotation",
+    "Defines the burden that shapes supportive or palliative care"
+   ],
+   [
+    "Cell-free fetal DNA as the final answer",
+    "Skip",
+    "High-risk result is still <b>a screen</b>",
+    "Confirm with CVS or amniocentesis; needs 10 weeks of gestation"
+   ]
+  ],
+  "note": "Brief uses some British spellings (fertilisation, anaemia) elsewhere; not changed. Row order runs prenatal then newborn."
+ },
+ {
+  "brief": "malform-syndromes",
+  "action": "new",
+  "rows": [
+   [
+    "5-French catheter through each naris",
+    "First",
+    "Catheter <b>will not pass</b> on either side",
+    "Bilateral choanal atresia: oral airway now; among these options, CHARGE"
+   ],
+   [
+    "Eye examination",
+    "Next",
+    "<b>Coloboma</b>",
+    "With choanal atresia, only CHARGE fits; trisomy 13 also has coloboma"
+   ],
+   [
+    "Head circumference and karyotype",
+    "By branch",
+    "<b>Microcephaly</b> with polydactyly, scalp defects",
+    "Trisomy 13 rather than CHARGE"
+   ],
+   [
+    "Echocardiogram",
+    "Staging",
+    "<b>Tetralogy</b> or VSD, most often",
+    "Every CHARGE infant; the heart defect cannot choose the syndrome"
+   ],
+   [
+    "Renal ultrasound and audiology",
+    "Staging",
+    "<b>Renal anomaly</b> or hearing loss",
+    "Letters of the acronym the examination cannot see"
+   ],
+   [
+    "CHD7 gene testing",
+    "Confirms",
+    "Pathogenic <b>CHD7</b> variant",
+    "Confirms CHARGE, usually already diagnosed clinically"
+   ]
+  ],
+  "note": "Brief mixes British spellings (hypocalcaemia, oesophageal, anaemia); table uses American. Karyotype row is standard practice though the brief itself separates trisomy 13 clinically."
+ },
+ {
+  "brief": "bs-learning",
+  "action": "new",
+  "rows": [
+   [
+    "Private interview with the child",
+    "First",
+    "Child <b>names the deficit</b>: slow reading, counting on fingers",
+    "Behavior is downstream of an academic problem"
+   ],
+   [
+    "Hearing and vision screening",
+    "Next",
+    "<b>Abnormal</b> screen",
+    "Sensory barrier, not a learning disorder: audiology or eye referral"
+   ],
+   [
+    "Parent and teacher ADHD rating scales",
+    "By branch",
+    "Symptoms in <b>two or more</b> settings",
+    "ADHD; behavior confined to school argues against it"
+   ],
+   [
+    "EEG",
+    "By branch",
+    "<b>3 Hz spike-and-wave</b> provoked by hyperventilation",
+    "Absence seizures behind staring spells and falling grades"
+   ],
+   [
+    "Psychoeducational testing (cognitive and achievement)",
+    "Confirms",
+    "Achievement <b>below</b> age and intellect for 6 months despite support",
+    "Specific learning disorder: school-based support"
+   ]
+  ],
+  "note": "No classic tempting wrong test in the brief or bank, so no Skip row."
+ },
+ {
+  "brief": "bs-ftt",
+  "action": "new",
+  "rows": [
+   [
+    "Plot weight, length and head circumference",
+    "First",
+    "<b>Weight alone</b> low, length and head preserved",
+    "Inadequate intake, malabsorption or increased demand"
+   ],
+   [
+    "Diet history and observed feeding",
+    "Next",
+    "<b>Too few calories</b> offered or taken",
+    "Psychosocial inadequate intake, up to 80% of cases"
+   ],
+   [
+    "Sweat chloride",
+    "By branch",
+    "<b>Elevated</b>, with steatorrhea and recurrent pneumonia",
+    "Cystic fibrosis"
+   ],
+   [
+    "Echocardiography",
+    "By branch",
+    "<b>Structural defect</b>, with sweating and tachypnea during feeds",
+    "Congenital heart disease raising caloric demand"
+   ],
+   [
+    "Electrolytes with a venous blood gas",
+    "By branch",
+    "<b>Normal anion gap</b> metabolic acidosis, length also low",
+    "Renal tubular acidosis"
+   ],
+   [
+    "Caloric supplementation with serial weights",
+    "Confirms",
+    "<b>Catch-up growth</b>",
+    "Confirms inadequate intake and is the treatment"
+   ],
+   [
+    "Broad laboratory or genetic panel",
+    "Skip",
+    "Very <b>low yield</b> with a normal history and exam",
+    "Test only what a symptom or sign points to"
+   ]
+  ],
+  "note": ""
+ },
+ {
+  "brief": "bs-preterm-followup",
+  "action": "new",
+  "rows": [
+   [
+    "Growth plotted at corrected age",
+    "First",
+    "All three parameters <b>together</b>, above the 2nd percentile",
+    "Normal growth; weight alone low points to inadequate calories"
+   ],
+   [
+    "Developmental screen at corrected age",
+    "Next",
+    "Milestones <b>met</b> for corrected age",
+    "Normal; delay in two or more domains needs early intervention referral"
+   ],
+   [
+    "Retinopathy of prematurity exam and hearing screen",
+    "Screen",
+    "<b>Retinopathy</b> or failed hearing screen",
+    "Required by gestational age and birth weight, however well the infant looks"
+   ],
+   [
+    "Cranial ultrasound, all born under 32 weeks",
+    "Confirms",
+    "<b>Germinal matrix</b> or intraventricular blood",
+    "IVH; screen at 1 to 2 weeks, repeat to follow progression"
+   ],
+   [
+    "CBC with reticulocyte count",
+    "By branch",
+    "Normocytic anemia with <b>no reticulocytosis</b> for its degree",
+    "Anemia of prematurity; microcytosis or brisk reticulocytes point elsewhere"
+   ],
+   [
+    "Failure-to-thrive laboratory workup",
+    "Skip",
+    "The 15th percentile is <b>normal</b>",
+    "Proportionate, steady growth needs routine surveillance only"
+   ]
+  ],
+  "note": "The brief spans three topics (corrected age, IVH, anemia of prematurity); the table covers the screening and testing sequence for all three. Brief spells 'haemorrhage' once."
+ },
+ {
+  "brief": "angina",
+  "action": "new",
+  "rows": [
+   [
+    "Resting 12-lead ECG",
+    "First",
+    "<b>Interpretable</b> or not: LVH with strain, digoxin, LBBB, paced rhythm",
+    "Decides between exercise ECG and stress imaging"
+   ],
+   [
+    "Exercise ECG",
+    "By branch",
+    "<b>ST depression</b> with exertion",
+    "Ischemia; for patients who can exercise with an interpretable ECG"
+   ],
+   [
+    "Stress echo or nuclear imaging",
+    "By branch",
+    "New <b>wall motion</b> or perfusion defect",
+    "Uninterpretable ECG or unable to exercise; dobutamine if severe asthma"
+   ],
+   [
+    "Vasodilator nuclear stress",
+    "By branch",
+    "<b>Perfusion defect</b>",
+    "Choice with LBBB or a paced rhythm"
+   ],
+   [
+    "Coronary angiography",
+    "Confirms",
+    "<b>Obstructive</b> coronary stenosis",
+    "High pretest probability or high-risk stress findings; guides revascularization"
+   ],
+   [
+    "Dobutamine stress with LBBB",
+    "Skip",
+    "False-positive <b>septal</b> defects",
+    "Use vasodilator nuclear imaging instead"
+   ]
+  ],
+  "note": "Overlaps the brief's stress test selection table by design; this table adds order and the confirmatory step. The brief ends with a 'True-fact-wrong-slot' trap pill that has no explanatory text."
+ },
+ {
+  "brief": "ped-murmur",
+  "action": "new",
+  "rows": [
+   [
+    "Auscultation lying and standing",
+    "First",
+    "<b>Full benign profile</b>: grade 1 to 2, early systolic, softer standing",
+    "Innocent murmur: reassurance, no testing"
+   ],
+   [
+    "",
+    "",
+    "Murmur <b>louder</b> on standing or Valsalva",
+    "Hypertrophic cardiomyopathy until excluded: hold sports, ECG and echo"
+   ],
+   [
+    "Femoral pulses and four-extremity blood pressures",
+    "By branch",
+    "<b>Weak femoral</b> pulses with arm hypertension",
+    "Coarctation"
+   ],
+   [
+    "ECG",
+    "Next",
+    "<b>Hypertrophy</b> or conduction abnormality",
+    "Paired with echo whenever any pathologic feature is present"
+   ],
+   [
+    "Echocardiography",
+    "Confirms",
+    "<b>Structural</b> lesion named",
+    "Any single pathologic feature, or a benign murmur outliving its window"
+   ],
+   [
+    "Echocardiography for the full benign profile",
+    "Skip",
+    "<b>Normal</b> heart",
+    "Reassurance alone once every benign feature is named"
+   ]
+  ],
+  "note": ""
+ },
+ {
+  "brief": "cyanotic-chd",
+  "action": "new",
+  "rows": [
+   [
+    "Pulse oximetry, right hand and a foot",
+    "Screen",
+    "<b>Low</b> saturation or a hand-foot difference",
+    "Possible critical heart disease: echocardiography"
+   ],
+   [
+    "Chest radiograph",
+    "Supports",
+    "<b>Boot-shaped</b> heart with dark lung fields",
+    "Tetralogy of Fallot"
+   ],
+   [
+    "",
+    "",
+    "<b>Massive cardiomegaly</b>, box-shaped heart",
+    "Ebstein anomaly"
+   ],
+   [
+    "ECG",
+    "Supports",
+    "<b>Left axis</b> deviation with small right ventricular forces",
+    "Tricuspid atresia"
+   ],
+   [
+    "Echocardiography",
+    "Confirms",
+    "Names the <b>anatomy</b>, e.g. pulmonary veins to the right atrium",
+    "Defines the lesion; start PGE1 first if ductal-dependent"
+   ],
+   [
+    "22q11.2 deletion testing",
+    "Cause",
+    "<b>Deletion</b> present",
+    "Truncus arteriosus or tetralogy; screen calcium and T cells"
+   ]
+  ],
+  "note": "Brief does not give radiograph or ECG signs; rows use standard textbook associations. No test-based trap in the brief, so no Skip row."
+ },
+ {
+  "brief": "right-murmurs",
+  "action": "new",
+  "rows": [
+   [
+    "Auscultation during inspiration or leg raise",
+    "First",
+    "Murmur <b>louder</b> with inspiration",
+    "Right-sided lesion: pulmonic stenosis or tricuspid regurgitation"
+   ],
+   [
+    "Listen for a click and to S2",
+    "Next",
+    "<b>Ejection click</b> with a wide S2 split that varies",
+    "Pulmonic stenosis"
+   ],
+   [
+    "",
+    "",
+    "Wide, <b>fixed</b> S2 split, no click",
+    "Atrial septal defect"
+   ],
+   [
+    "Transthoracic echocardiography",
+    "Confirms",
+    "Doming pulmonic valve with a <b>gradient</b>",
+    "Pulmonic stenosis; balloon valvulotomy if severe and symptomatic"
+   ],
+   [
+    "",
+    "",
+    "Tricuspid jet with a <b>dilated right ventricle</b>",
+    "Tricuspid regurgitation, usually functional: find the cause"
+   ],
+   [
+    "CBC",
+    "By branch",
+    "<b>Low hemoglobin</b> with no click and a normal S2",
+    "Functional flow murmur: treat the anemia"
+   ],
+   [
+    "Urine 5-HIAA",
+    "Cause",
+    "<b>Elevated</b>",
+    "Carcinoid heart disease, the rare acquired cause of right-sided valve lesions"
+   ]
+  ],
+  "note": "No test-based trap in the brief, so no Skip row."
+ },
+ {
+  "brief": "newborn-cyanosis",
+  "action": "new",
+  "rows": [
+   [
+    "Pulse oximetry, right hand and a foot",
+    "First",
+    "<b>Preductal higher</b> than postductal",
+    "Right-to-left ductal shunt: PPHN, or coarctation after about 12 hours"
+   ],
+   [
+    "Trial of 100% oxygen",
+    "Next",
+    "Saturation <b>rises</b> substantially",
+    "Lung disease; no rise means a fixed shunt such as transposition"
+   ],
+   [
+    "Chest radiograph",
+    "Next",
+    "<b>Ground-glass</b> with air bronchograms and low volumes",
+    "RDS in a preterm; streaking with fissure fluid is TTN"
+   ],
+   [
+    "Catheter through each naris",
+    "By branch",
+    "Catheter <b>will not pass</b>",
+    "Choanal atresia when cyanosis worsens with feeding and clears with crying"
+   ],
+   [
+    "CT or nasal endoscopy",
+    "Confirms",
+    "<b>Posterior nasal</b> obstruction",
+    "Choanal atresia; look for the rest of CHARGE"
+   ],
+   [
+    "Echocardiography",
+    "Confirms",
+    "<b>Structural</b> lesion or high pulmonary pressures",
+    "Hypoxemia that oxygen does not correct; PGE1 added only if unstable"
+   ],
+   [
+    "Any testing for acrocyanosis",
+    "Skip",
+    "<b>Pink</b> mucous membranes",
+    "Normal in the first 24 to 48 hours: reassurance"
+   ]
+  ],
+  "note": "Conflicts in the brief: the 'Management, in one line' block contains two merged management sentences (RDS and choanal atresia). Bank item '1-day-old, 99% right hand, 91% right foot, well appearing, no cyanosis' is keyed PPHN; a well infant failing the CCHD screen would usually get echocardiography first, so that key may deserve review."
+ },
+ {
+  "brief": "kawasaki",
+  "action": "new",
+  "rows": [
+   [
+    "CRP and ESR",
+    "First",
+    "<b>Elevated</b>",
+    "Supports Kawasaki; in incomplete disease, triggers supplemental labs and echo"
+   ],
+   [
+    "CBC, albumin, ALT and urinalysis",
+    "Supports",
+    "Anemia, low albumin, high ALT, <b>sterile pyuria</b>; platelets high after day 7",
+    "Supportive labs for incomplete Kawasaki"
+   ],
+   [
+    "Rapid strep test",
+    "By branch",
+    "<b>Positive</b>, with sandpaper rash and no conjunctivitis",
+    "Scarlet fever: penicillin"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "Fever <b>5 days or more</b> plus 4 of 5 criteria",
+    "Tests support and stage it; IVIG within 10 days is not delayed for them"
+   ],
+   [
+    "Echocardiogram",
+    "Staging",
+    "<b>Coronary</b> dilation or aneurysm",
+    "At diagnosis, 2 weeks and 6 to 8 weeks; coronary changes alone justify IVIG"
+   ],
+   [
+    "Urine culture for the pyuria",
+    "Skip",
+    "<b>Sterile</b> pyuria is part of Kawasaki",
+    "Urethritis from the disease; do not hold IVIG for a UTI workup"
+   ]
+  ],
+  "note": "Supplemental lab list follows the AHA incomplete-Kawasaki criteria without their cutoffs."
+ },
+ {
+  "brief": "arf",
+  "action": "new",
+  "rows": [
+   [
+    "Throat culture or rapid strep test",
+    "First",
+    "<b>Often negative</b> by the time ARF appears",
+    "A negative swab does not exclude it; serology next"
+   ],
+   [
+    "ASO and anti-DNase B titers",
+    "Next",
+    "<b>Elevated</b> or rising titer",
+    "Evidence of recent group A strep, required by the Jones criteria"
+   ],
+   [
+    "ESR and CRP",
+    "Supports",
+    "<b>Elevated</b>",
+    "Minor criterion"
+   ],
+   [
+    "ECG",
+    "Supports",
+    "<b>Prolonged PR</b> interval",
+    "Minor criterion"
+   ],
+   [
+    "Echocardiography",
+    "Staging",
+    "<b>Mitral regurgitation</b>",
+    "Carditis, a major criterion, even when no murmur is heard"
+   ],
+   [
+    "None: Jones criteria",
+    "Confirms",
+    "<b>2 major</b>, or 1 major and 2 minor, with strep evidence",
+    "Acute rheumatic fever; no single test confirms it"
+   ],
+   [
+    "Lyme serology after a camping trip",
+    "Skip",
+    "<b>No</b> erythema migrans or tick bite",
+    "Lyme gives late monoarthritis and AV block, not a new valve murmur"
+   ]
+  ],
+  "note": "The brief ends with a 'Salient decoy' trap pill that has no explanatory text. Echo-detected (subclinical) carditis counting as major follows the 2015 AHA Jones revision; the brief does not mention it."
+ },
+ {
+  "brief": "myocarditis",
+  "action": "new",
+  "rows": [
+   [
+    "ECG",
+    "First",
+    "Sinus <b>tachycardia</b> with nonspecific ST changes",
+    "Supports myocarditis; watch for arrhythmia, the cause of sudden death"
+   ],
+   [
+    "Troponin",
+    "First",
+    "<b>Elevated</b>",
+    "Myocyte injury"
+   ],
+   [
+    "Chest radiograph",
+    "Supports",
+    "<b>Cardiomegaly</b> with pulmonary edema",
+    "Rales are edema, not bronchiolitis or pneumonia"
+   ],
+   [
+    "Echocardiography",
+    "Confirms",
+    "Diffuse <b>hypokinesis</b> with a reduced ejection fraction",
+    "Myocarditis with heart failure; excludes a structural lesion"
+   ],
+   [
+    "Cardiac MRI or endomyocardial biopsy",
+    "By branch",
+    "Myocardial <b>inflammation</b> or lymphocytic infiltrate",
+    "Tissue-level confirmation when the diagnosis remains uncertain"
+   ],
+   [
+    "ASO titer",
+    "Skip",
+    "<b>No</b> pharyngitis 2 to 4 weeks earlier, no Jones criteria",
+    "Concurrent coryza is the wrong illness at the wrong interval for rheumatic fever"
+   ]
+  ],
+  "note": "The brief names echocardiography with troponin, ECG and chest film as what confirms it; cardiac MRI and biopsy are added as standard next-level tests (the bank mentions 'biopsy-proven myocarditis'). Brief uses British 'subcentimetre' and 'titre'."
+ },
+ {
+  "brief": "del22q11",
+  "action": "new",
+  "rows": [
+   [
+    "Pulse oximetry on 100% oxygen",
+    "First",
+    "Saturation <b>unchanged</b>, equal in hand and leg",
+    "Fixed intracardiac shunt: cyanotic heart disease"
+   ],
+   [
+    "Echocardiography",
+    "Next",
+    "<b>Conotruncal</b> defect: truncus, tetralogy or interrupted arch",
+    "Raises suspicion for 22q11.2 deletion"
+   ],
+   [
+    "Chest radiograph",
+    "Supports",
+    "<b>Absent thymic</b> shadow",
+    "Thymic hypoplasia or aplasia"
+   ],
+   [
+    "Ionized calcium",
+    "Next",
+    "<b>Low</b>",
+    "Parathyroid hypoplasia; IV calcium if tremulous or seizing"
+   ],
+   [
+    "Chromosomal microarray or FISH for 22q11.2",
+    "Confirms",
+    "<b>Microdeletion</b> at 22q11.2",
+    "22q11.2 deletion syndrome"
+   ],
+   [
+    "T-cell subsets",
+    "Staging",
+    "CD3 count <b>under 500</b>/mm3",
+    "DiGeorge immune phenotype: irradiated blood, no live vaccines"
+   ],
+   [
+    "Standard karyotype",
+    "Skip",
+    "<b>Normal</b>; the deletion is too small to see",
+    "Use microarray or FISH instead"
+   ]
+  ],
+  "note": "Brief uses British 'generalised' and 'immunisations'. Rows agree with the bank (microarray key, CD3 under 500 threshold)."
+ },
+ {
+  "brief": "bs-shunt-timing",
+  "action": "new",
+  "rows": [
+   [
+    "Pulse oximetry screen at 24 hours",
+    "Screen",
+    "<b>Fails</b> the screen",
+    "Possible critical congenital heart disease: echocardiography"
+   ],
+   [
+    "Four-extremity blood pressures and femoral pulses",
+    "By branch",
+    "Arm pressure <b>higher</b> than leg, weak femorals",
+    "Coarctation declaring as the duct closes: PGE1"
+   ],
+   [
+    "Trial of 100% oxygen",
+    "By branch",
+    "Saturation <b>unchanged</b>",
+    "Fixed shunt; PGE1 first if the infant is unstable"
+   ],
+   [
+    "Chest radiograph",
+    "Supports",
+    "<b>Increased</b> pulmonary vascular markings with cardiomegaly",
+    "Pulmonary overcirculation from a left-to-right shunt"
+   ],
+   [
+    "Echocardiography",
+    "Confirms",
+    "Defect <b>size</b>, location and shunt direction",
+    "Names the VSD, ASD or PDA; right-to-left flow means Eisenmenger physiology"
+   ],
+   [
+    "Waiting for echocardiography before PGE1",
+    "Skip",
+    "Duct <b>closing</b> while the study is arranged",
+    "Instability licenses PGE1 before the picture"
+   ]
+  ],
+  "note": "Brief is mainly about timing physiology; the table follows its bank (failed oximetry screen to echo, coarctation to PGE1, unstable cyanosis to PGE1 then echo)."
+ },
+ {
+  "brief": "htn-drugs",
+  "action": "new",
+  "rows": [
+   [
+    "Repeated office or home blood pressures",
+    "Confirms",
+    "Elevated on <b>separate</b> visits or out of office",
+    "Confirms hypertension before any label or drug"
+   ],
+   [
+    "Electrolytes and creatinine",
+    "Staging",
+    "<b>Hypokalemia</b> or raised creatinine",
+    "Low potassium opens a secondary workup; CKD favors ACE inhibitor or ARB"
+   ],
+   [
+    "Urinalysis and urine albumin",
+    "Staging",
+    "<b>Albuminuria</b>",
+    "Kidney injury: ACE inhibitor or ARB"
+   ],
+   [
+    "Glucose or A1c, lipids and TSH",
+    "Staging",
+    "<b>Diabetes</b>, dyslipidemia or thyroid disease",
+    "Risk and comorbidity that help pick the drug"
+   ],
+   [
+    "ECG",
+    "Staging",
+    "<b>LVH</b>",
+    "End-organ injury: start an antihypertensive at this visit"
+   ],
+   [
+    "Echo or stress testing before the first drug",
+    "Skip",
+    "Only <b>characterizes</b> injury already found",
+    "Never delays treatment; matches the bank's sequencing trap"
+   ]
+  ],
+  "note": "Chose 'new' over 'extend': the existing table is drug choice by comorbidity and lists no tests, so a new column would not fit. Table draws on the brief's 'Initial workup' criteria."
+ },
+ {
+  "brief": "dvt",
+  "action": "extend",
+  "edits": [
+   {
+    "old": "<thead><tr><th>Situation</th><th>Next step</th></tr></thead>",
+    "new": "<thead><tr><th>Situation</th><th>Next step</th><th>Confirms, then</th></tr></thead>"
+   },
+   {
+    "old": "<td>D-dimer; negative excludes. Low + <b>PERC negative</b> → no testing at all</td></tr>",
+    "new": "<td>D-dimer; negative excludes. Low + <b>PERC negative</b> → no testing at all</td><td>A positive D-dimer confirms nothing; go to <b>CT pulmonary angiography</b></td></tr>"
+   },
+   {
+    "old": "<td><b>CT pulmonary angiography</b></td></tr>",
+    "new": "<td><b>CT pulmonary angiography</b></td><td>A <b>filling defect</b> confirms PE; anticoagulate</td></tr>"
+   },
+   {
+    "old": "<td><b>V/Q scan</b></td></tr>",
+    "new": "<td><b>V/Q scan</b></td><td>A <b>high-probability</b> scan confirms and a normal scan excludes; a nondiagnostic scan needs leg duplex</td></tr>"
+   },
+   {
+    "old": "<td>Bedside echo (RV strain) ± empiric anticoagulation — <b>treat first</b></td></tr>",
+    "new": "<td>Bedside echo (RV strain) ± empiric anticoagulation — <b>treat first</b></td><td>RV strain with hypotension: <b>thrombolysis</b>; CT angiography once stable</td></tr>"
+   },
+   {
+    "old": "<tr><td>Unilateral leg swelling, moderate/high probability</td><td><b>Duplex ultrasound</b></td></tr>",
+    "new": "<tr><td>Unilateral leg swelling, moderate/high probability</td><td><b>Duplex ultrasound</b></td><td><b>Noncompressible</b> vein confirms DVT; low probability starts with D-dimer instead</td></tr>"
+   }
+  ],
+  "note": "Brief says unprovoked DVT is treated 3 to 6 months or more; current CHEST guidance favors extended anticoagulation for unprovoked VTE with low bleeding risk, worth a review. The brief ends with a Test-overrides-findings trap pill that has no explanatory text. The Duplex old string is anchored on its row label because the bare cell also appears elsewhere in index.html."
+ }
+]

@@ -1,0 +1,652 @@
+[
+ {
+  "brief": "hearing",
+  "action": "new",
+  "rows": [
+   [
+    "Otoscopy",
+    "First",
+    "Drum <b>normal</b>, or effusion, perforation or retraction pocket",
+    "Normal drum with conductive loss suggests otosclerosis; an abnormal drum names the middle-ear cause"
+   ],
+   [
+    "Weber and Rinne tuning forks",
+    "First",
+    "Weber <b>toward</b> the affected ear, bone conduction over air",
+    "Conductive loss; Weber away with air over bone is sensorineural"
+   ],
+   [
+    "Pure-tone audiometry",
+    "Confirms",
+    "<b>Air-bone gap</b>, often with a Carhart notch at 2000 Hz",
+    "Conductive loss and its degree; otosclerosis when the drum is normal"
+   ],
+   [
+    "MRI with gadolinium, internal auditory canals",
+    "By branch",
+    "<b>Enhancing mass</b> in the internal auditory canal",
+    "Vestibular schwannoma; ordered for unilateral sensorineural loss with tinnitus"
+   ],
+   [
+    "Temporal bone CT",
+    "By branch",
+    "<b>Bone erosion</b> by a middle-ear mass",
+    "Cholesteatoma extent before surgery"
+   ],
+   [
+    "Head CT for unilateral sensorineural loss",
+    "Skip",
+    "Can <b>miss</b> a small schwannoma",
+    "MRI with gadolinium is the study"
+   ]
+  ],
+  "note": "No conflicts; the brief is otosclerosis-focused, so the table follows the tuning-fork branch and names MRI for the schwannoma line of the bank."
+ },
+ {
+  "brief": "cluster",
+  "action": "new",
+  "rows": [
+   [
+    "History and neurologic exam, including pupils",
+    "First",
+    "Attacks of <b>15 to 180 minutes</b> with ipsilateral autonomic signs",
+    "Cluster headache; attacks lasting seconds point to trigeminal neuralgia"
+   ],
+   [
+    "Visual acuity and intraocular pressure",
+    "By branch",
+    "<b>Raised</b> pressure, fixed mid-dilated pupil, halos",
+    "Acute angle-closure glaucoma, an eye emergency"
+   ],
+   [
+    "CT or MR angiography of the neck",
+    "By branch",
+    "Carotid <b>dissection</b>",
+    "Horner syndrome that persists between attacks, or neck pain"
+   ],
+   [
+    "MRI of the brain",
+    "By branch",
+    "A <b>structural lesion</b>, such as a pituitary mass",
+    "Excludes a secondary cause when the exam is abnormal or attacks are atypical"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "<b>No test</b> confirms cluster headache",
+    "Tests only exclude mimics; relief with 100% oxygen supports it"
+   ],
+   [
+    "Sinus CT",
+    "Skip",
+    "Rhinorrhea here is <b>autonomic</b>, not infective",
+    "Episodic attacks without fever or congestion are not sinusitis"
+   ]
+  ],
+  "note": "Brain MRI for a new trigeminal autonomic cephalalgia is recommended by many guidelines; framed here as by branch for atypical features."
+ },
+ {
+  "brief": "sellar-mass",
+  "action": "new",
+  "rows": [
+   [
+    "Growth chart: height and weight percentiles",
+    "First",
+    "Height <b>falling</b> while weight holds",
+    "Endocrine growth failure, not nutritional"
+   ],
+   [
+    "MRI of the brain with contrast, sellar views",
+    "Next",
+    "<b>Cystic and calcified</b> suprasellar mass",
+    "Craniopharyngioma; intrasellar and non-calcified suggests an adenoma"
+   ],
+   [
+    "Morning cortisol, free T4 and TSH, IGF-1",
+    "Next",
+    "<b>Low</b> in more than one axis",
+    "Stalk compression; replace cortisol before thyroxine, before surgery"
+   ],
+   [
+    "Serum sodium and urine osmolality",
+    "By branch",
+    "<b>Dilute</b> urine with a high sodium",
+    "Central diabetes insipidus; if it came first, think germinoma or histiocytosis"
+   ],
+   [
+    "Serum and CSF beta-hCG and AFP",
+    "By branch",
+    "<b>Elevated</b> markers",
+    "Germinoma, especially non-calcified with diabetes insipidus"
+   ],
+   [
+    "Resection with histology",
+    "Confirms",
+    "<b>Adamantinomatous</b> epithelium with calcification",
+    "Craniopharyngioma"
+   ],
+   [
+    "Hand radiograph for bone age",
+    "Skip",
+    "Delayed bone age is <b>nonspecific</b>",
+    "Delays the MRI when papilledema is present"
+   ]
+  ],
+  "note": "Brief conflict: the vignette says 12 yo, height 75th to 10th, weight 60th, while the decision point and criteria say Tanner 1 at 13, height 50th to 5th, weight 75th."
+ },
+ {
+  "brief": "peds-headache-imaging",
+  "action": "new",
+  "rows": [
+   [
+    "Neurologic exam, fundi and growth chart",
+    "First",
+    "<b>Normal</b> exam, no papilledema, growth on track",
+    "Primary headache, usually migraine: no testing"
+   ],
+   [
+    "None: clinical diagnosis of migraine",
+    "Confirms",
+    "<b>No test</b> confirms migraine",
+    "Diagnosis rests on the history and a normal exam"
+   ],
+   [
+    "MRI of the brain, for a red flag",
+    "By branch",
+    "<b>Mass</b> or hydrocephalus",
+    "Red flags: focal deficit, papilledema, waking from sleep, change in character"
+   ],
+   [
+    "Noncontrast head CT",
+    "By branch",
+    "<b>Blood</b> in a thunderclap headache",
+    "Subarachnoid hemorrhage; LP if the CT is negative"
+   ],
+   [
+    "Lumbar puncture with opening pressure",
+    "By branch",
+    "<b>High</b> opening pressure after a normal MRI",
+    "Idiopathic intracranial hypertension; with fever and meningismus, LP for meningitis"
+   ],
+   [
+    "Carboxyhemoglobin",
+    "By branch",
+    "<b>Elevated</b>, with the household affected",
+    "Carbon monoxide exposure"
+   ],
+   [
+    "Head CT for recurrent headache, normal exam",
+    "Skip",
+    "Stable character, <b>normal</b> exam",
+    "No imaging needed; chronic headache that earns imaging gets MRI"
+   ]
+  ],
+  "note": "Brief conflict: the source vignette is a 10 yo boy with a normal exam, but the decision point, criteria and classify-first table describe an adolescent girl with menarche at 12."
+ },
+ {
+  "brief": "cholesteatoma",
+  "action": "new",
+  "rows": [
+   [
+    "Otoscopy with pneumatic insufflation",
+    "First",
+    "Intact, immobile drum with a <b>pearly white mass</b> in a retraction pocket",
+    "Cholesteatoma; a bulging or perforated drum points to otitis media"
+   ],
+   [
+    "Tuning forks and audiometry",
+    "Next",
+    "<b>Conductive</b> loss",
+    "Ossicular erosion; a sensorineural loss points to the nerve"
+   ],
+   [
+    "Temporal bone CT",
+    "Staging",
+    "<b>Bone erosion</b> of the ossicles or attic wall",
+    "Extent of disease before surgery"
+   ],
+   [
+    "MRI of the brain and temporal bone",
+    "By branch",
+    "Intracranial <b>extension</b> or abscess",
+    "Facial palsy, vertigo on canal pressure, or neurologic signs: urgent surgery"
+   ],
+   [
+    "Excision with histology",
+    "Confirms",
+    "<b>Keratinizing squamous epithelium</b> in the middle ear",
+    "Cholesteatoma; excision is also the treatment"
+   ],
+   [
+    "Culture of the drainage",
+    "Skip",
+    "Grows only the <b>superinfecting</b> organisms",
+    "Antibiotics quiet the drainage but leave the lesion"
+   ]
+  ],
+  "note": "The criteria place the classic congenital mass in the anterosuperior quadrant while the vignette describes a superior retraction pocket with prior tubes (acquired); the brief already reconciles this. The Skip row (culture) is not named in the bank; the bank's own trap is another antibiotic course."
+ },
+ {
+  "brief": "febrile-seizure",
+  "action": "new",
+  "rows": [
+   [
+    "Age, exam and time to return to baseline",
+    "First",
+    "Age 6 months to 5 years, <b>back to baseline</b> within 10 minutes",
+    "Simple febrile seizure: no tests needed"
+   ],
+   [
+    "Lumbar puncture",
+    "By branch",
+    "CSF <b>pleocytosis</b>; lymphocytes with red cells in HSV",
+    "Meningitis or encephalitis; tap for age under 6 months, full fontanelle or prolonged drowsiness"
+   ],
+   [
+    "Serum electrolytes and glucose",
+    "By branch",
+    "<b>Low</b> sodium or glucose",
+    "Provoked seizure; order with vomiting or diarrhea"
+   ],
+   [
+    "Head CT or MRI",
+    "By branch",
+    "<b>Subdural</b> blood, a mass or edema",
+    "Focal signs, or papilledema with a closed fontanelle; afebrile infant with retinal hemorrhages"
+   ],
+   [
+    "EEG",
+    "By branch",
+    "<b>Focal</b> or epileptiform discharges",
+    "Complex febrile seizure: focal, over 15 minutes, or recurrent within 24 hours"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "<b>No test</b> confirms a simple febrile seizure",
+    "Tests are for red flags, to exclude infection and other causes"
+   ],
+   [
+    "Head CT before LP, open fontanelle",
+    "Skip",
+    "The open fontanelle <b>decompresses</b> the pressure",
+    "Tap without a CT first"
+   ]
+  ],
+  "note": "No conflicts found."
+ },
+ {
+  "brief": "cerebral-palsy",
+  "action": "new",
+  "rows": [
+   [
+    "Developmental exam at corrected age",
+    "First",
+    "<b>Asymmetric</b> tone, early hand preference, motor delay",
+    "Suspected cerebral palsy: brain MRI and early intervention"
+   ],
+   [
+    "Brain MRI",
+    "Cause",
+    "The lesion <b>pattern</b> names the insult",
+    "Periventricular white matter: prematurity; a territory: stroke; calcifications: infection"
+   ],
+   [
+    "Thrombophilia and stroke risk evaluation",
+    "By branch",
+    "<b>Arterial infarct</b> on MRI",
+    "Perinatal stroke"
+   ],
+   [
+    "Spinal MRI",
+    "By branch",
+    "<b>Low</b> leg tone and absent reflexes, sacral dimple",
+    "Closed spinal dysraphism, not cerebral palsy"
+   ],
+   [
+    "Metabolic and genetic evaluation",
+    "By branch",
+    "<b>Loss</b> of milestones, or a normal MRI",
+    "Progressive or genetic disorder; reopen the workup"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "<b>Nonprogressive</b> motor deficit on serial exams",
+    "Cerebral palsy; MRI supports it and finds the cause"
+   ],
+   [
+    "TORCH titers for an exposure story",
+    "Skip",
+    "MRI shows <b>no calcifications</b>",
+    "The imaging pattern, not the exposure, names the cause"
+   ]
+  ],
+  "note": "The MRI row is compressed to one line so it does not repeat the brief's pattern-to-cause table. Metabolic/genetic testing for a normal MRI follows AAN practice, not the brief."
+ },
+ {
+  "brief": "abrs-complications",
+  "action": "new",
+  "rows": [
+   [
+    "Clinical course and neurologic history",
+    "First",
+    "<b>Double worsening</b> with no red flags",
+    "Uncomplicated sinusitis: oral antibiotics, no imaging"
+   ],
+   [
+    "Eye exam: movements, acuity, proptosis",
+    "By branch",
+    "<b>Pain</b> with eye movement or proptosis",
+    "Orbital cellulitis: CT of the orbits with contrast"
+   ],
+   [
+    "CT or MRI of the head with contrast",
+    "Next",
+    "<b>Ring-enhancing</b> lesion",
+    "Brain abscess; order for morning vomiting or drowsiness, even with a nonfocal exam"
+   ],
+   [
+    "MRI with diffusion-weighted imaging",
+    "Supports",
+    "<b>Restricted diffusion</b> in the lesion",
+    "Abscess rather than tumor"
+   ],
+   [
+    "MRI with MR venography",
+    "By branch",
+    "Cavernous sinus <b>thrombosis</b>",
+    "Cranial nerve palsies with proptosis, becoming bilateral"
+   ],
+   [
+    "Drainage with Gram stain and culture",
+    "Confirms",
+    "<b>Streptococcus anginosus</b> group or anaerobes",
+    "Names the organism; drainage is also treatment"
+   ],
+   [
+    "Lumbar puncture before imaging",
+    "Skip",
+    "Risk of <b>herniation</b> with raised pressure",
+    "Image first; LP without CT only when no pressure signs"
+   ]
+  ],
+  "note": "Chose new over extend: the existing table maps complication to next step; this adds order and confirmation. The vignette is marked partial reconstruction."
+ },
+ {
+  "brief": "vpshunt",
+  "action": "new",
+  "rows": [
+   [
+    "Head CT, compared with baseline",
+    "First",
+    "Ventricles <b>larger</b> than on prior imaging",
+    "Shunt malfunction"
+   ],
+   [
+    "Shunt series: skull, chest and abdomen films",
+    "Next",
+    "Catheter <b>discontinuity</b>, kinking or migration",
+    "Mechanical failure: urgent neurosurgical revision"
+   ],
+   [
+    "Shunt tap with opening pressure",
+    "By branch",
+    "<b>High</b> opening pressure",
+    "Proximal or distal obstruction"
+   ],
+   [
+    "Shunt tap CSF: cell count, Gram stain, culture",
+    "Confirms",
+    "<b>Positive</b> culture with neutrophils",
+    "Shunt infection, often S. epidermidis; tap if febrile even with stable ventricles"
+   ],
+   [
+    "Head CT showing small ventricles",
+    "By branch",
+    "Slit ventricles <b>unchanged</b> from prior",
+    "Slit ventricle syndrome or another cause of headache"
+   ],
+   [
+    "Lumbar puncture",
+    "Skip",
+    "Herniation risk in <b>obstructive</b> hydrocephalus",
+    "CSF comes from the shunt reservoir"
+   ]
+  ],
+  "note": "Chose new over extend: the existing management ladder lists the same three tests as tiers; this table adds results and meaning. Some overlap with the ladder is unavoidable."
+ },
+ {
+  "brief": "retinitis-pigmentosa",
+  "action": "new",
+  "rows": [
+   [
+    "Visual acuity and red reflex",
+    "First",
+    "20/20 with a <b>normal</b> red reflex",
+    "Excludes cataract; cones are spared early"
+   ],
+   [
+    "Slit-lamp exam of cornea and conjunctivae",
+    "First",
+    "<b>No xerosis</b> or Bitot spots",
+    "Excludes vitamin A deficiency"
+   ],
+   [
+    "Dilated fundus exam",
+    "Next",
+    "Disc <b>pallor</b>, attenuated vessels, bone-spicule pigment",
+    "Retinitis pigmentosa; a cupped disc is glaucoma"
+   ],
+   [
+    "Formal visual fields",
+    "Supports",
+    "<b>Midperipheral</b> field loss",
+    "Rod loss"
+   ],
+   [
+    "Electroretinography",
+    "Confirms",
+    "Reduced or <b>absent</b> rod responses",
+    "Retinitis pigmentosa"
+   ],
+   [
+    "Genetic testing, exam of relatives",
+    "Cause",
+    "Pathogenic <b>variant</b> identified",
+    "Inheritance pattern; screen first-degree relatives"
+   ],
+   [
+    "Serum vitamin A for a vegan diet",
+    "Skip",
+    "Not needed with a <b>normal</b> cornea and conjunctivae",
+    "The fundus, not the diet, names the cause"
+   ]
+  ],
+  "note": "No conflicts. The serum vitamin A Skip row is not named in the bank; the bank's trap is starting vitamin A supplementation."
+ },
+ {
+  "brief": "bs-tethered",
+  "action": "new",
+  "rows": [
+   [
+    "Reflex grading and neurologic exam",
+    "First",
+    "<b>1+</b> reflexes with bladder dysfunction",
+    "Lower motor neuron signs plus bladder: spinal cord"
+   ],
+   [
+    "Inspection of the lower back",
+    "First",
+    "Hair tuft, lipoma or dimple <b>above</b> the gluteal cleft",
+    "Closed dysraphism; a normal back does not exclude it"
+   ],
+   [
+    "Spinal ultrasound, infant under about 3 months",
+    "By branch",
+    "<b>Low-lying</b> conus or thick filum",
+    "Closed dysraphism; MRI after the posterior elements ossify"
+   ],
+   [
+    "MRI of the lumbosacral spine",
+    "Confirms",
+    "Conus <b>below mid-L2</b>, filum over 2 mm",
+    "Tethered cord: surgical detethering; also shows a cord tumor"
+   ],
+   [
+    "Creatine kinase",
+    "By branch",
+    "<b>Very high</b> CK",
+    "Duchenne: proximal weakness, Gower sign, bladder spared"
+   ],
+   [
+    "Brain MRI for suspected spastic diplegia",
+    "Skip",
+    "Reflexes are <b>decreased</b>, not brisk",
+    "Hyporeflexia localizes below the brain"
+   ]
+  ],
+  "note": "No conflicts. Thresholds (conus below mid-L2, filum over 2 mm) are taken from the brief's own criteria."
+ },
+ {
+  "brief": "bs-reye",
+  "action": "new",
+  "rows": [
+   [
+    "Serum ammonia and liver enzymes",
+    "First",
+    "<b>High</b> ammonia with raised AST and ALT",
+    "Reye syndrome; a neonate with normal liver tests points to a urea cycle defect"
+   ],
+   [
+    "Serum glucose",
+    "First",
+    "<b>Low</b> glucose",
+    "Failing gluconeogenesis; does not cause the edema"
+   ],
+   [
+    "PT and INR",
+    "Supports",
+    "<b>Prolonged</b> PT",
+    "Hepatic dysfunction"
+   ],
+   [
+    "Head CT",
+    "Next",
+    "Diffuse <b>cerebral edema</b>",
+    "Manage intracranial pressure; image before any lumbar puncture"
+   ],
+   [
+    "Lumbar puncture, when safe",
+    "By branch",
+    "<b>Normal</b> CSF apart from raised pressure",
+    "Excludes meningitis and encephalitis"
+   ],
+   [
+    "Liver biopsy",
+    "Confirms",
+    "<b>Microvesicular</b> steatosis",
+    "Reye syndrome; supportive, rarely needed"
+   ],
+   [
+    "Salicylate level",
+    "Skip",
+    "Often <b>undetectable</b> by the time of encephalopathy",
+    "A negative level does not exclude Reye; the history does"
+   ]
+  ],
+  "note": "The brief calls the biopsy supportive but not required; marked Confirms with 'rarely needed'. Normal CSF and an often undetectable salicylate level are standard teaching but not stated in the brief."
+ },
+ {
+  "brief": "bs-peds-stroke",
+  "action": "new",
+  "rows": [
+   [
+    "Brain MRI with diffusion, or head CT",
+    "First",
+    "<b>Acute infarct</b>, no hemorrhage",
+    "Arterial stroke; now find what made the artery fail"
+   ],
+   [
+    "Pulses and blood pressure in both arms",
+    "First",
+    "<b>Unequal</b> arm pressures or pulses",
+    "Several large arteries narrowed: large-vessel vasculitis"
+   ],
+   [
+    "ESR and CRP",
+    "Supports",
+    "<b>Elevated</b>",
+    "Inflammatory arteriopathy; normal in fibromuscular dysplasia"
+   ],
+   [
+    "CT or MR angiography of the aorta and branches",
+    "Confirms",
+    "Long smooth <b>stenoses</b> of the aorta and its branches",
+    "Takayasu arteritis"
+   ],
+   [
+    "Blood cultures and echocardiography",
+    "By branch",
+    "<b>Vegetation</b> with positive cultures",
+    "Endocarditis: fever with a murmur, pulses equal"
+   ],
+   [
+    "Angiography of the head and neck",
+    "By branch",
+    "A single <b>tapered</b> vessel, beading, or puff-of-smoke collaterals",
+    "Dissection, fibromuscular dysplasia or moyamoya"
+   ],
+   [
+    "Temporal artery biopsy",
+    "Skip",
+    "Giant cell arteritis occurs <b>over 50</b>",
+    "Takayasu is diagnosed by angiography"
+   ]
+  ],
+  "note": "No conflicts. The last By-branch row compresses three angiographic tells already in the brief's cause table."
+ },
+ {
+  "brief": "bs-posterior-fossa",
+  "action": "new",
+  "rows": [
+   [
+    "Neurologic exam and fundoscopy",
+    "First",
+    "<b>Ipsilateral</b> limb ataxia with papilledema",
+    "Cerebellar hemisphere mass with raised pressure"
+   ],
+   [
+    "MRI of the brain with contrast",
+    "Next",
+    "Posterior fossa <b>mass</b> with hydrocephalus",
+    "Cystic with a mural nodule: pilocytic astrocytoma; midline: medulloblastoma"
+   ],
+   [
+    "Serum and CSF AFP and beta-hCG",
+    "By branch",
+    "<b>Elevated</b> markers with Parinaud syndrome",
+    "Pineal germinoma"
+   ],
+   [
+    "Resection with histology",
+    "Confirms",
+    "Names the <b>tumor type</b>",
+    "Pilocytic astrocytoma, medulloblastoma or ependymoma"
+   ],
+   [
+    "MRI of the entire neuraxis with CSF cytology",
+    "Staging",
+    "<b>Drop metastases</b> or tumor cells in the CSF",
+    "Medulloblastoma staging"
+   ],
+   [
+    "Lumbar puncture with papilledema",
+    "Skip",
+    "Risk of <b>herniation</b>",
+    "Image first"
+   ]
+  ],
+  "note": "No conflicts."
+ }
+]

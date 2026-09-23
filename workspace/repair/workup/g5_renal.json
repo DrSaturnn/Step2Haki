@@ -1,0 +1,572 @@
+[
+ {
+  "brief": "hematuria",
+  "action": "new",
+  "rows": [
+   [
+    "Urinalysis with microscopy",
+    "First",
+    "Dipstick blood with <b>red cells</b> on microscopy",
+    "True hematuria; no red cells suggests myoglobin or hemoglobin"
+   ],
+   [
+    "Urine culture",
+    "By branch",
+    "Dysuria, LE and pyuria with <b>growth</b>",
+    "Cystitis: treat, then repeat the UA after antibiotics"
+   ],
+   [
+    "Urine sediment for casts and red cell shape",
+    "By branch",
+    "<b>RBC casts</b>, dysmorphic red cells, proteinuria",
+    "Glomerular: C3, ASO, creatinine and blood pressure next"
+   ],
+   [
+    "Urine calcium/creatinine ratio",
+    "By branch",
+    "<b>High</b> in a well child with isolated microscopic hematuria",
+    "Hypercalciuria, the most common cause in that child"
+   ],
+   [
+    "CT urography and cystoscopy",
+    "Confirms",
+    "<b>Mass</b> or stone",
+    "Painless gross hematuria in an older adult or smoker"
+   ],
+   [
+    "Renal biopsy",
+    "Confirms",
+    "Names the <b>glomerular lesion</b>",
+    "IgA nephropathy, Alport or lupus, when history and complement do not settle it"
+   ],
+   [
+    "Imaging during an obvious cystitis",
+    "Skip",
+    "Blood usually <b>clears</b> once the infection is treated",
+    "Image only if hematuria persists on the repeat UA"
+   ]
+  ],
+  "note": "Renal biopsy row is general knowledge; the brief itself does not mention biopsy."
+ },
+ {
+  "brief": "scrotum",
+  "action": "new",
+  "rows": [
+   [
+    "Exam with cremasteric reflex",
+    "First",
+    "<b>Absent</b> reflex, high-riding transverse testis, sudden pain",
+    "Torsion: emergent urology; do not wait for imaging"
+   ],
+   [
+    "Scrotal Doppler ultrasound",
+    "By branch",
+    "<b>Absent</b> blood flow to the testis",
+    "Torsion, used only when the exam is equivocal"
+   ],
+   [
+    "Urinalysis and NAAT for chlamydia and gonorrhea",
+    "Supports",
+    "<b>Pyuria</b> or a positive NAAT",
+    "Epididymitis, a clinical diagnosis: treat without waiting on results"
+   ],
+   [
+    "Transillumination of a painless mass",
+    "First",
+    "Mass <b>glows</b>, testis palpable within or separate",
+    "Hydrocele or spermatocele; a solid, dark mass needs ultrasound"
+   ],
+   [
+    "Scrotal ultrasound with AFP, beta-hCG and LDH",
+    "By branch",
+    "<b>Solid</b> intratesticular mass",
+    "Testicular tumor; an elevated AFP excludes pure seminoma"
+   ],
+   [
+    "Radical inguinal orchiectomy",
+    "Confirms",
+    "Histology names the <b>tumor</b>",
+    "Diagnostic and therapeutic; never transscrotal biopsy"
+   ],
+   [
+    "Ultrasound in gradual, febrile, posterior pain",
+    "Skip",
+    "Would add <b>delay</b>, not a decision",
+    "Epididymitis is clinical; imaging is a torsion answer"
+   ]
+  ],
+  "note": "Two separate trees (painful and painless) share one table; right-sided varicocele leading to abdominal imaging left to the existing mass table."
+ },
+ {
+  "brief": "vur",
+  "action": "new",
+  "rows": [
+   [
+    "Catheter urinalysis and urine culture",
+    "First",
+    "Fever with pyuria and <b>growth</b>",
+    "Febrile UTI: the event that starts imaging"
+   ],
+   [
+    "Renal and bladder ultrasound",
+    "Next",
+    "<b>Hydronephrosis</b>",
+    "Detects dilation; cannot grade reflux"
+   ],
+   [
+    "Voiding cystourethrogram",
+    "Confirms",
+    "Reflux into the kidney with <b>blunted calices</b>",
+    "Severe reflux; reflux into the ureter only is mild"
+   ],
+   [
+    "VCUG urethral views in a boy with weak stream",
+    "By branch",
+    "<b>Dilated posterior urethra</b>",
+    "Secondary reflux behind posterior urethral valves"
+   ],
+   [
+    "Blood pressure, urine protein and growth",
+    "Staging",
+    "<b>Hypertension</b> or proteinuria",
+    "Reflux nephropathy progressing to chronic kidney disease"
+   ],
+   [
+    "Ultrasound to grade the reflux",
+    "Skip",
+    "<b>Mild</b> describes the dilation, not the reflux",
+    "Only the VCUG assigns the grade"
+   ]
+  ],
+  "note": "Brief says severe is grade III-IV; the standard international scale runs I to V, so grade V is omitted from the brief. British spelling not present here."
+ },
+ {
+  "brief": "peds-uti-recurrent",
+  "action": "new",
+  "rows": [
+   [
+    "Urinalysis and urine culture",
+    "First",
+    "<b>Growth</b> of a uropathogen, usually E. coli",
+    "Confirms each episode is a true UTI"
+   ],
+   [
+    "Temperature and flank exam",
+    "Next",
+    "<b>Afebrile</b>, suprapubic tenderness, no back pain",
+    "Lower tract: look at emptying, not anatomy"
+   ],
+   [
+    "Stool history and rectal exam",
+    "By branch",
+    "<b>Hard stool</b> in the rectal vault",
+    "Constipation causing urinary stasis: long-term laxatives"
+   ],
+   [
+    "Renal and bladder ultrasound",
+    "By branch",
+    "Febrile UTI with <b>hydronephrosis</b>",
+    "Upper tract: VCUG next"
+   ],
+   [
+    "Voiding cystourethrogram",
+    "Confirms",
+    "<b>Reflux</b>, or a dilated posterior urethra in a boy",
+    "Vesicoureteral reflux or posterior urethral valves"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "Stasis from constipation is <b>clinical</b>",
+    "Tests exclude upper-tract and obstructive causes"
+   ],
+   [
+    "Ultrasound or VCUG for afebrile cystitis",
+    "Skip",
+    "Belongs to the <b>febrile</b> pathway",
+    "Treat the constipation instead"
+   ]
+  ],
+  "note": "Brief uses British spelling (paediatric, colonised, behavioural) in its own text; management line already carries a warning mark on the imaging claim."
+ },
+ {
+  "brief": "enuresis",
+  "action": "new",
+  "rows": [
+   [
+    "Urinalysis",
+    "First",
+    "Any <b>abnormal</b> finding, in primary or secondary enuresis",
+    "Branch by finding; a normal UA ends the organic search"
+   ],
+   [
+    "Serum glucose and HbA1c",
+    "By branch",
+    "Glucosuria with <b>high</b> serum glucose",
+    "New-onset type 1 diabetes"
+   ],
+   [
+    "Urine culture",
+    "By branch",
+    "LE and nitrites with <b>growth</b>",
+    "UTI: treat"
+   ],
+   [
+    "Water deprivation test",
+    "By branch",
+    "Low specific gravity; urine stays <b>dilute</b>",
+    "Diabetes insipidus: desmopressin response next"
+   ],
+   [
+    "Metabolic panel and renal ultrasound",
+    "By branch",
+    "Hematuria or proteinuria with <b>high</b> creatinine",
+    "Chronic kidney disease"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "Enuresis is <b>clinical</b> once the UA is normal",
+    "Tests only exclude organic causes; then behavioral care, alarm, desmopressin"
+   ]
+  ],
+  "note": "Conflict: bank item calls a 5 yo 'below the diagnostic age gate', but DSM-5 sets the minimum age at 5 years; the age-gate wording should be checked. No Skip row: the trap here is skipping the UA itself, not a wrong test."
+ },
+ {
+  "brief": "peds-aki",
+  "action": "new",
+  "rows": [
+   [
+    "BUN and creatinine",
+    "First",
+    "BUN/Cr ratio <b>over 20:1</b>",
+    "Prerenal pattern"
+   ],
+   [
+    "Urinalysis with specific gravity",
+    "Next",
+    "Specific gravity <b>over 1.020</b>, bland sediment",
+    "Intact tubules still concentrating: prerenal"
+   ],
+   [
+    "Urine microscopy",
+    "By branch",
+    "<b>Muddy brown</b> casts, specific gravity about 1.010",
+    "Acute tubular necrosis"
+   ],
+   [
+    "Urine sediment and CBC with differential",
+    "By branch",
+    "<b>WBC casts</b>, with eosinophilia or rash",
+    "Acute interstitial nephritis: stop the drug"
+   ],
+   [
+    "CBC and peripheral smear",
+    "By branch",
+    "<b>Schistocytes</b> with low platelets",
+    "Hemolytic uremic syndrome after bloody diarrhea"
+   ],
+   [
+    "Isotonic fluids and stopping the NSAID",
+    "Confirms",
+    "Creatinine <b>falls</b> with volume",
+    "Prerenal AKI, confirmed by the response"
+   ],
+   [
+    "Renal ultrasonography",
+    "Skip",
+    "Usually <b>normal</b> in prerenal AKI",
+    "Adds nothing once the labs assign the compartment"
+   ]
+  ],
+  "note": "FENa under 1% left out for length; it is in the brief's pearls."
+ },
+ {
+  "brief": "nephrotic-child",
+  "action": "new",
+  "rows": [
+   [
+    "Urinalysis",
+    "First",
+    "<b>4+ protein</b>, no red cells or casts",
+    "Nephrotic, not nephritic"
+   ],
+   [
+    "Serum albumin, lipids and creatinine",
+    "Next",
+    "Albumin <b>low</b>, creatinine normal",
+    "Nephrotic syndrome with preserved GFR"
+   ],
+   [
+    "Spot urine protein/creatinine ratio",
+    "Supports",
+    "<b>Nephrotic-range</b> proteinuria",
+    "Quantifies the protein loss"
+   ],
+   [
+    "Empiric steroids, no biopsy, in a typical young child",
+    "By branch",
+    "<b>Remission</b> on steroids",
+    "Minimal change disease; biopsy not needed"
+   ],
+   [
+    "Renal biopsy",
+    "Confirms",
+    "<b>Subepithelial</b> deposits, granular IgG and C3",
+    "Membranous nephropathy; biopsy for an older child or atypical features"
+   ],
+   [
+    "Hepatitis B serologies",
+    "Cause",
+    "<b>Positive</b> HBsAg",
+    "Secondary membranous; in a child, search for the cause"
+   ],
+   [
+    "Antistreptolysin O titer",
+    "Skip",
+    "Chases PSGN, which needs <b>hematuria</b> and hypertension",
+    "Strep is not associated with membranous nephropathy"
+   ]
+  ],
+  "note": "Brief uses British spelling throughout (haematuria, oedema, tumours, aetiologic)."
+ },
+ {
+  "brief": "bs-puv",
+  "action": "new",
+  "rows": [
+   [
+    "Prenatal ultrasound",
+    "Screen",
+    "<b>Oligohydramnios</b> with a distended bladder and hydronephrosis",
+    "Outlet obstruction in a male fetus"
+   ],
+   [
+    "Renal and bladder ultrasound",
+    "First",
+    "<b>Thick-walled</b> distended bladder, bilateral hydroureteronephrosis",
+    "Outlet obstruction; ultrasound cannot confirm valves"
+   ],
+   [
+    "BUN, creatinine and electrolytes",
+    "Staging",
+    "Creatinine <b>rising</b>",
+    "Renal function; correct electrolytes while the bladder drains"
+   ],
+   [
+    "Chest radiograph",
+    "Supports",
+    "<b>Low</b> lung volumes",
+    "Pulmonary hypoplasia, the usual cause of death"
+   ],
+   [
+    "Voiding cystourethrogram",
+    "Confirms",
+    "<b>Dilated posterior urethra</b>, trabeculated bladder",
+    "Posterior urethral valves, often with secondary reflux"
+   ],
+   [
+    "Cystoscopy",
+    "Confirms",
+    "Valve leaflets <b>seen</b> and ablated",
+    "Confirms and treats in one step"
+   ]
+  ],
+  "note": "Conflict inside the brief: the danger box and bank item 2 put catheterization first and call the VCUG confirmatory, while the imaging-sequence pearl says ultrasound first and cystoscopy confirms; table shows both as Confirms. The danger box's 'VACTERL-style screening' wording is odd for PUV. No classic Skip test."
+ },
+ {
+  "brief": "bs-incontinence",
+  "action": "new",
+  "rows": [
+   [
+    "Urinalysis",
+    "First",
+    "<b>Pyuria</b> and nitrites",
+    "UTI: treat; not chronic incontinence"
+   ],
+   [
+    "Postvoid residual",
+    "Confirms",
+    "<b>High</b> residual volume",
+    "Overflow: detrusor underactivity or outlet obstruction"
+   ],
+   [
+    "Cough stress test",
+    "By branch",
+    "Leakage <b>with cough</b>, low residual",
+    "Stress incontinence"
+   ],
+   [
+    "Urodynamics",
+    "By branch",
+    "Mixed <b>retention and urgency</b>",
+    "Neurogenic bladder, such as multiple sclerosis"
+   ],
+   [
+    "Dye test and cystoscopy",
+    "By branch",
+    "Dye <b>in the vagina</b>",
+    "Vesicovaginal fistula after surgery, delivery or radiation"
+   ],
+   [
+    "Autonomic neuropathy screen",
+    "Cause",
+    "<b>Orthostatic</b> hypotension, gastroparesis, resting tachycardia",
+    "Diabetic autonomic neuropathy behind detrusor underactivity"
+   ],
+   [
+    "Cough stress test with a high residual",
+    "Skip",
+    "<b>Positive</b> from overdistension alone",
+    "Does not establish stress incontinence"
+   ]
+  ],
+  "note": "No PVR thresholds used, since the brief itself flags its numbers as memory-sourced."
+ },
+ {
+  "brief": "polyuria",
+  "action": "new",
+  "rows": [
+   [
+    "Urine osmolality",
+    "First",
+    "<b>Dilute</b>, under 300 mOsm/kg",
+    "Water diuresis; 600 or above means solute, such as glucose"
+   ],
+   [
+    "Serum sodium and osmolality",
+    "Next",
+    "Sodium <b>normal</b>",
+    "Diagnosis open: deprivation test; high sodium or low sodium has already answered it"
+   ],
+   [
+    "Water deprivation test, inpatient",
+    "By branch",
+    "Urine concentrates <b>over 600</b>",
+    "Primary polydipsia; still under 300 means an AVP disorder"
+   ],
+   [
+    "Desmopressin challenge",
+    "Confirms",
+    "Urine osmolality <b>rises</b>",
+    "AVP deficiency; unchanged means AVP resistance"
+   ],
+   [
+    "MRI of the brain",
+    "Cause",
+    "<b>Sellar or hypothalamic</b> lesion",
+    "Cause of AVP deficiency"
+   ],
+   [
+    "Calcium, potassium and drug list",
+    "Cause",
+    "<b>High calcium</b>, low potassium or lithium",
+    "Reversible AVP resistance"
+   ],
+   [
+    "Serum vasopressin level",
+    "Skip",
+    "Too <b>unstable</b> to measure routinely",
+    "The desmopressin response is the assay"
+   ]
+  ],
+  "note": "Chose new over extend: the existing differential and figure carry branch logic but no ordered test list. Brief uses British spelling (hypernatraemia, localises, manoeuvre)."
+ },
+ {
+  "brief": "hypercalcemia",
+  "action": "new",
+  "rows": [
+   [
+    "Serum calcium with albumin and phosphorus",
+    "Screen",
+    "Calcium high, albumin <b>normal</b>",
+    "True hypercalcemia; no correction needed"
+   ],
+   [
+    "PTH",
+    "First",
+    "PTH <b>high or inappropriately normal</b>",
+    "PTH-dependent: primary hyperparathyroidism or FHH"
+   ],
+   [
+    "",
+    "",
+    "PTH <b>suppressed</b>",
+    "PTH-independent: PTHrP and vitamin D levels next"
+   ],
+   [
+    "24-hour urine calcium",
+    "Confirms",
+    "Calcium/creatinine clearance ratio <b>under 0.01</b>",
+    "FHH, no surgery; a higher ratio fits primary hyperparathyroidism"
+   ],
+   [
+    "PTHrP",
+    "By branch",
+    "PTHrP <b>high</b>",
+    "Malignancy: imaging next"
+   ],
+   [
+    "25-OH and 1,25-OH vitamin D",
+    "By branch",
+    "<b>1,25-OH</b> vitamin D high",
+    "Granulomatous disease or lymphoma; high 25-OH means vitamin D excess"
+   ],
+   [
+    "Sestamibi scan to make the diagnosis",
+    "Skip",
+    "A <b>negative</b> scan does not exclude it",
+    "Diagnosis is biochemical; imaging only localizes before surgery"
+   ]
+  ],
+  "note": "Chose new: the brief has a branch list, no table to extend. Brief's own text has 'hypercalcaemia' in Pairs with and '1,25-OH' spelling; lymphoma added from general knowledge."
+ },
+ {
+  "brief": "nephropathy",
+  "action": "new",
+  "rows": [
+   [
+    "Spot urine albumin-to-creatinine ratio",
+    "Screen",
+    "<b>30 to 300</b> mg/g",
+    "Moderately increased albuminuria, the reversible stage"
+   ],
+   [
+    "Repeat UACR over 3 to 6 months",
+    "Confirms",
+    "<b>2 of 3</b> abnormal",
+    "Persistent albuminuria; excludes exercise, fever, infection, hyperglycemia"
+   ],
+   [
+    "Serum creatinine with eGFR",
+    "Staging",
+    "GFR <b>category</b> plus albuminuria category",
+    "CKD stage; creatinine may be normal early from hyperfiltration"
+   ],
+   [
+    "Dilated eye exam",
+    "Supports",
+    "<b>Retinopathy</b> present",
+    "Supports a diabetic cause; its absence is a biopsy trigger"
+   ],
+   [
+    "Urinalysis with microscopy",
+    "By branch",
+    "<b>RBC casts</b> or dysmorphic red cells",
+    "Not ordinary diabetic nephropathy: consider biopsy"
+   ],
+   [
+    "Renal biopsy",
+    "Cause",
+    "<b>Nodular</b> glomerulosclerosis",
+    "Kimmelstiel-Wilson; only when features are atypical"
+   ],
+   [
+    "Urine dipstick for protein",
+    "Skip",
+    "Negative until about <b>300 mg/day</b>",
+    "Misses the reversible stage"
+   ]
+  ],
+  "note": "Chose new over extend: the verb table is answer-by-question, not ordered; this table adds the screen, confirm, stage order. Screening schedule table left as is."
+ }
+]

@@ -1,0 +1,460 @@
+[
+ {
+  "brief": "asthma-copd",
+  "action": "new",
+  "rows": [
+   [
+    "Spirometry before and after a bronchodilator",
+    "First",
+    "FEV1 rises <b>12% and 200 mL</b>; ratio normalizes",
+    "Reversible obstruction: asthma"
+   ],
+   [
+    "Post-bronchodilator FEV1/FVC",
+    "Confirms",
+    "Ratio stays <b>below 0.70</b>",
+    "COPD: obstruction persists despite some improvement"
+   ],
+   [
+    "Methacholine challenge, if spirometry is normal",
+    "By branch",
+    "<b>Negative</b> challenge",
+    "Rules out asthma; a positive test supports it"
+   ],
+   [
+    "DLCO",
+    "By branch",
+    "<b>Low</b> diffusing capacity",
+    "Emphysema; normal or high in asthma and chronic bronchitis"
+   ],
+   [
+    "Alpha-1 antitrypsin level",
+    "Cause",
+    "<b>Low</b> level",
+    "COPD under about 45, little smoking, lower-lobe panacinar emphysema"
+   ],
+   [
+    "Symptom response to a trial of albuterol",
+    "Skip",
+    "Relief <b>does not track</b> the spirometric response",
+    "An impression, not a measurement of reversibility"
+   ]
+  ],
+  "note": "Consistent with the brief; no conflicts."
+ },
+ {
+  "brief": "pneumoconiosis",
+  "action": "new",
+  "rows": [
+   [
+    "Chest X-ray",
+    "First",
+    "<b>Upper</b> versus lower zones; pleural plaques; eggshell hilar nodes",
+    "Upper: silica or coal; lower with plaques: asbestos"
+   ],
+   [
+    "High-resolution CT of the chest",
+    "Supports",
+    "Fibrosis pattern with or without <b>pleural plaques</b>",
+    "Defines distribution; plaques alone mark exposure and are benign"
+   ],
+   [
+    "Pulmonary function tests",
+    "Staging",
+    "<b>Restrictive</b> pattern with a low DLCO",
+    "Severity of fibrosis; byssinosis is obstructive instead"
+   ],
+   [
+    "None: exposure history plus imaging",
+    "Confirms",
+    "Named dust, <b>typical distribution</b>, latency of decades",
+    "Biopsy only when the picture is atypical"
+   ],
+   [
+    "Beryllium lymphocyte proliferation test",
+    "By branch",
+    "<b>Positive</b> in a granulomatous picture",
+    "Berylliosis rather than sarcoidosis"
+   ],
+   [
+    "Tuberculin skin test, yearly",
+    "By branch",
+    "<b>Positive</b> in a patient with silicosis",
+    "Latent TB, which silicosis makes more likely"
+   ],
+   [
+    "CT and pleural biopsy",
+    "By branch",
+    "<b>Pleural mass</b> with an effusion",
+    "Mesothelioma after asbestos exposure"
+   ]
+  ],
+  "note": "Beryllium lymphocyte proliferation test is standard but not named in the brief; brief is a lookup topic, so the table stays short on sequence."
+ },
+ {
+  "brief": "sinopulm-structural",
+  "action": "new",
+  "rows": [
+   [
+    "Chest X-ray, with the exam for heart position",
+    "First",
+    "Heart on the <b>right</b>, right-sided stomach bubble",
+    "Situs inversus: primary ciliary dyskinesia axis"
+   ],
+   [
+    "Nasal nitric oxide",
+    "By branch",
+    "<b>Low</b> nasal nitric oxide",
+    "Supports PCD, including PCD with normal situs"
+   ],
+   [
+    "Ciliary biopsy with electron microscopy, genetic testing",
+    "Confirms",
+    "<b>Dynein-arm</b> defect or pathogenic variants",
+    "Primary ciliary dyskinesia; no single gold standard"
+   ],
+   [
+    "Sweat chloride",
+    "By branch",
+    "<b>60 mmol/L or more</b>",
+    "Cystic fibrosis; order first when growth or stools are abnormal"
+   ],
+   [
+    "Rigid bronchoscopy",
+    "By branch",
+    "<b>Foreign body</b> seen and removed",
+    "Focal, abrupt-onset disease after a choking episode"
+   ],
+   [
+    "Quantitative immunoglobulins with B-cell flow cytometry",
+    "By branch",
+    "All immunoglobulins low, B cells <b>absent</b>",
+    "X-linked agammaglobulinemia; normal anatomy, no tonsils"
+   ],
+   [
+    "Immune workup for frequent self-limited colds",
+    "Skip",
+    "Viral, no antibiotics, <b>normal growth</b>",
+    "Normal childhood infection frequency; reassure"
+   ]
+  ],
+  "note": "Sweat chloride cutoff (60 mmol/L) is standard but not stated in the brief. Brief's PCD situs inversus 'about half' and neonatal distress claims already carry warning marks."
+ },
+ {
+  "brief": "hypoxemia-mech",
+  "action": "new",
+  "rows": [
+   [
+    "Arterial blood gas with pulse oximetry",
+    "First",
+    "Saturation low but PaO2 <b>normal</b>",
+    "Hemoglobin problem, not the lungs"
+   ],
+   [
+    "Co-oximetry",
+    "Confirms",
+    "<b>Methemoglobin</b> or carboxyhemoglobin raised",
+    "Methemoglobinemia or carbon monoxide poisoning"
+   ],
+   [
+    "A-a gradient from the blood gas",
+    "Next",
+    "<b>Normal</b> gradient",
+    "Hypoventilation if PaCO2 high; low inspired PO2 if PaCO2 low"
+   ],
+   [
+    "Response to supplemental oxygen",
+    "By branch",
+    "Widened gradient that <b>corrects</b> on modest oxygen",
+    "V/Q mismatch; little change means shunt"
+   ],
+   [
+    "Chest X-ray",
+    "By branch",
+    "<b>Clear</b> lungs with oxygen-refractory hypoxemia",
+    "Intracardiac shunt or embolism: echocardiogram or CT angiography"
+   ],
+   [
+    "DLCO with a walk test",
+    "By branch",
+    "<b>Low</b> DLCO, desaturation only on exertion",
+    "Diffusion limitation: interstitial disease or emphysema"
+   ],
+   [
+    "Pulse oximetry alone in suspected CO poisoning",
+    "Skip",
+    "Reads <b>falsely normal</b>",
+    "Carboxyhemoglobin is counted as oxygenated; get co-oximetry"
+   ]
+  ],
+  "note": "No conflicts; the brief's own caveat on RDS 'responding to oxygen' (recruitment, not FiO2) is left to the brief."
+ },
+ {
+  "brief": "abpa",
+  "action": "new",
+  "rows": [
+   [
+    "CBC with differential",
+    "First",
+    "Peripheral <b>eosinophilia</b>",
+    "Supports ABPA; argues against vasculitis, pneumonitis and mycobacteria"
+   ],
+   [
+    "Total serum IgE",
+    "Next",
+    "<b>Above 1,000</b> IU/mL",
+    "Allergic sensitization; also the yearly screen in cystic fibrosis"
+   ],
+   [
+    "Aspergillus-specific IgE or skin test",
+    "Confirms",
+    "<b>Positive</b>",
+    "Confirms Aspergillus sensitization"
+   ],
+   [
+    "Chest CT",
+    "Supports",
+    "Bronchiectasis with <b>mucoid impaction</b>",
+    "Finger-in-glove opacities support ABPA"
+   ],
+   [
+    "Sputum culture with sensitivities",
+    "By branch",
+    "<b>Resistant</b> organism, normal eosinophils and IgE",
+    "Bacterial exacerbation: adjust antibiotics to sensitivities"
+   ],
+   [
+    "Strongyloides serology",
+    "By branch",
+    "<b>Positive</b>, with travel, urticaria or gut symptoms",
+    "Strongyloidiasis: treat it before any glucocorticoid"
+   ],
+   [
+    "Aspergillus IgG as the diagnostic test",
+    "Skip",
+    "<b>Supportive</b> only",
+    "Does not establish the diagnosis; specific IgE or skin test does"
+   ]
+  ],
+  "note": "Brief uses 'voriconazole' in management and 'itraconazole' appears in asthma-copd; not a diagnostic conflict. Strongyloides serology is my addition (brief says exclude or treat empirically)."
+ },
+ {
+  "brief": "scd-dyspnea",
+  "action": "new",
+  "rows": [
+   [
+    "Chest X-ray",
+    "First",
+    "<b>Normal</b> film",
+    "Expected in asthma; excludes acute chest syndrome, fibrosis and sarcoid"
+   ],
+   [
+    "Spirometry before and after a bronchodilator",
+    "Confirms",
+    "Obstruction that <b>reverses</b> after bronchodilator",
+    "Asthma, treated as in anyone else"
+   ],
+   [
+    "Echocardiography",
+    "By branch",
+    "Tricuspid regurgitation with <b>raised</b> estimated pulmonary pressure",
+    "Pulmonary hypertension: exertional dyspnea, edema; catheterization confirms"
+   ],
+   [
+    "CT of the chest",
+    "By branch",
+    "<b>Honeycombing</b>",
+    "Fibrosis: progressive exertional dyspnea, restrictive PFTs"
+   ],
+   [
+    "CT pulmonary angiography",
+    "By branch",
+    "<b>Filling defect</b>",
+    "Pulmonary embolism: acute, with tachycardia and hypoxia"
+   ],
+   [
+    "Serum ACE activity",
+    "Skip",
+    "Poor <b>sensitivity and specificity</b>",
+    "Sarcoid is not linked to sickle cell disease; the film leads"
+   ]
+  ],
+  "note": "No conflicts."
+ },
+ {
+  "brief": "airway",
+  "action": "new",
+  "rows": [
+   [
+    "None: croup and bronchiolitis are clinical",
+    "Confirms",
+    "<b>No</b> routine film or viral panel",
+    "Imaging only if the course is atypical"
+   ],
+   [
+    "Lateral neck X-ray in a toxic, drooling child",
+    "Skip",
+    "Delays <b>securing the airway</b>",
+    "Epiglottitis: go to the operating room first"
+   ],
+   [
+    "Laryngoscopy in the operating room",
+    "Confirms",
+    "Swollen <b>cherry-red</b> epiglottis",
+    "Epiglottitis; intubate at the same sitting"
+   ],
+   [
+    "Inspiratory and expiratory chest films",
+    "By branch",
+    "<b>Unilateral</b> hyperinflation on expiration",
+    "Foreign body: the trapped lung stays inflated"
+   ],
+   [
+    "Rigid bronchoscopy",
+    "Confirms",
+    "Foreign body <b>seen</b> and removed",
+    "Foreign body aspiration; diagnostic and therapeutic"
+   ],
+   [
+    "Laryngoscopy during a symptomatic episode",
+    "Confirms",
+    "Cords <b>adduct</b> on inspiration",
+    "Vocal cord dysfunction"
+   ],
+   [
+    "Barium swallow or CT angiography",
+    "By branch",
+    "<b>Posterior indentation</b> of the esophagus",
+    "Vascular ring: biphasic stridor with dysphagia"
+   ]
+  ],
+  "note": "Brief lists the steeple sign as croup's tell, which implies a film; the table states croup is clinical, which is the standard teaching and not a true conflict. Retropharyngeal abscess and pertussis left out to keep 7 rows."
+ },
+ {
+  "brief": "mycoplasma",
+  "action": "new",
+  "rows": [
+   [
+    "Chest X-ray",
+    "First",
+    "<b>Bilateral</b> diffuse interstitial pattern",
+    "Atypical pneumonia; focal lobar consolidation points to pneumococcus"
+   ],
+   [
+    "CBC",
+    "Supports",
+    "<b>Normal</b> white count",
+    "Fits Mycoplasma"
+   ],
+   [
+    "Mycoplasma PCR, throat or nasopharyngeal swab",
+    "Confirms",
+    "<b>Positive</b> PCR",
+    "Mycoplasma; often treated empirically without it"
+   ],
+   [
+    "Legionella urine antigen",
+    "By branch",
+    "<b>Positive</b>",
+    "Older smoker with diarrhea, confusion, hyponatremia"
+   ],
+   [
+    "Direct antiglobulin test",
+    "By branch",
+    "<b>C3</b>-positive with cold agglutinins",
+    "Cold agglutinin hemolytic anemia"
+   ],
+   [
+    "Cold agglutinin titer to diagnose the pneumonia",
+    "Skip",
+    "<b>Nonspecific</b> and insensitive",
+    "Marks the hemolysis complication; use PCR if a test is needed"
+   ]
+  ],
+  "note": "Brief lists cold agglutinins among Mycoplasma's distinguishing features; the Skip row frames them as a poor diagnostic test for the pneumonia itself, which is standard but slightly reframes the brief."
+ },
+ {
+  "brief": "bs-nrd",
+  "action": "new",
+  "rows": [
+   [
+    "Pulse oximetry on room air, then oxygen",
+    "First",
+    "Saturation <b>corrects</b> on modest oxygen",
+    "Alveolar lung disease; little change suggests shunt or heart"
+   ],
+   [
+    "Pre- and postductal saturations",
+    "Next",
+    "Gap <b>above 10%</b>",
+    "Right-to-left ductal shunt: persistent pulmonary hypertension"
+   ],
+   [
+    "Chest X-ray",
+    "Next",
+    "<b>Fluid in the fissures</b>, perihilar streaking",
+    "Transient tachypnea; ground glass with air bronchograms is RDS"
+   ],
+   [
+    "Blood culture and CBC",
+    "By branch",
+    "<b>Neutropenia</b> with temperature instability",
+    "GBS pneumonia, whose film mimics RDS; start ampicillin and gentamicin"
+   ],
+   [
+    "Echocardiogram",
+    "By branch",
+    "High pulmonary pressure, <b>structurally normal</b> heart",
+    "Persistent pulmonary hypertension rather than cyanotic heart disease"
+   ],
+   [
+    "Venous hematocrit and glucose",
+    "By branch",
+    "Hematocrit <b>above 65%</b>",
+    "Polycythemia: plethora, hypoglycemia, clear film"
+   ],
+   [
+    "Resolution over time",
+    "Confirms",
+    "<b>Resolved</b> by 72 hours",
+    "Transient tachypnea; persistence means another diagnosis"
+   ]
+  ],
+  "note": "No Skip row: the brief calls the hyperoxia test exam-keyed but clinically abandoned, which is not a clean trap. No conflicts."
+ },
+ {
+  "brief": "cough",
+  "action": "extend",
+  "edits": [
+   {
+    "old": "<th>Diagnostic move</th></tr>",
+    "new": "<th>Diagnostic move</th><th>Confirms, then</th></tr>"
+   },
+   {
+    "old": "<td>Empiric antihistamine/decongestant — response <i>is</i> the diagnosis</td></tr>",
+    "new": "<td>Empiric antihistamine/decongestant — response <i>is</i> the diagnosis</td><td><b>Response</b> to the trial confirms; no response effectively excludes it</td></tr>"
+   },
+   {
+    "old": "<td>Spirometry → methacholine challenge; empiric ICS</td></tr>",
+    "new": "<td>Spirometry → methacholine challenge; empiric ICS</td><td><b>Positive</b> methacholine challenge when spirometry is normal; cough resolves on ICS</td></tr>"
+   },
+   {
+    "old": "<td>Empiric PPI × 8 weeks; pH monitoring if refractory</td></tr>",
+    "new": "<td>Empiric PPI × 8 weeks; pH monitoring if refractory</td><td>Cough <b>resolves</b> on the PPI; if all three trials fail, refer for further testing</td></tr>"
+   },
+   {
+    "old": "<td>Stop the drug (resolves in 1–4 weeks)</td></tr>",
+    "new": "<td>Stop the drug (resolves in 1–4 weeks)</td><td>Cough <b>resolves</b> off the drug; switch to an ARB if needed</td></tr>"
+   },
+   {
+    "old": "<td>&lt;8 weeks by definition</td></tr>",
+    "new": "<td>&lt;8 weeks by definition</td><td><b>Resolves</b> by 8 weeks; if not, work up as chronic cough</td></tr>"
+   },
+   {
+    "old": "<td><b>CXR first in all chronic cough</b></td></tr>",
+    "new": "<td><b>CXR first in all chronic cough</b></td><td>Abnormal film or red flags: <b>chest CT</b>, then biopsy; sputum for acid-fast bacilli if TB</td></tr>"
+   }
+  ],
+  "note": "Adds a 'Confirms, then' column. The existing table uses em dashes and arrows in its own cells (left untouched); new cells avoid them."
+ }
+]

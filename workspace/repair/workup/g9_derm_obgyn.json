@@ -1,0 +1,651 @@
+[
+ {
+  "brief": "psoriasis",
+  "action": "new",
+  "rows": [
+   [
+    "KOH preparation of the scale",
+    "First",
+    "<b>Hyphae</b> in an annular plaque with central clearing",
+    "Tinea corporis; a steroid would cause tinea incognito"
+   ],
+   [
+    "RPR",
+    "By branch",
+    "<b>Reactive</b> with a truncal or palm and sole eruption",
+    "Secondary syphilis, the mimic of pityriasis rosea"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "Extensor silvery plaques with <b>nail pitting</b>",
+    "Psoriasis; the tests only exclude tinea and syphilis"
+   ],
+   [
+    "Skin biopsy, only if atypical",
+    "Supports",
+    "<b>Parakeratosis</b> with Munro microabscesses",
+    "Psoriasis when the exam is not typical"
+   ],
+   [
+    "X-ray of the hands",
+    "By branch",
+    "<b>Pencil-in-cup</b> erosions at the DIP joints",
+    "Psoriatic arthritis in a patient with dactylitis"
+   ],
+   [
+    "Interferon-gamma release assay or PPD",
+    "Next",
+    "Latent tuberculosis <b>excluded</b>",
+    "Required before the first dose of a TNF-alpha inhibitor"
+   ],
+   [
+    "Wood lamp examination",
+    "Skip",
+    "Does <b>not</b> diagnose tinea corporis",
+    "KOH answers the question at the bedside"
+   ]
+  ],
+  "note": "Psoriasis is clinical; table follows the brief's KOH-first rule for annular lesions and its TB-screen pearl. RPR row draws on the bank's secondary syphilis distractor."
+ },
+ {
+  "brief": "cellulitis",
+  "action": "new",
+  "rows": [
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "Unilateral warm erythema with a <b>flat</b>, indistinct border",
+    "Cellulitis; tests exclude abscess, DVT and deeper infection"
+   ],
+   [
+    "Bedside ultrasound",
+    "By branch",
+    "<b>Fluid collection</b> under the erythema",
+    "Abscess: incision and drainage plus MRSA coverage"
+   ],
+   [
+    "Culture of drained pus",
+    "By branch",
+    "<b>S. aureus</b>, with susceptibilities",
+    "Guides antibiotic choice in purulent infection"
+   ],
+   [
+    "Duplex ultrasound of the leg",
+    "By branch",
+    "<b>Noncompressible</b> vein",
+    "DVT, the swollen-leg mimic"
+   ],
+   [
+    "Blood cultures",
+    "By branch",
+    "Usually <b>negative</b> in uncomplicated cellulitis",
+    "Draw only with systemic toxicity, immunosuppression, or bite or water exposure"
+   ],
+   [
+    "Emergent surgical exploration",
+    "Confirms",
+    "<b>Necrotic fascia</b>, dishwater fluid, little bleeding",
+    "Necrotizing fasciitis; debride in the same operation"
+   ],
+   [
+    "CT or MRI before surgery",
+    "Skip",
+    "May show gas but <b>delays</b> the operation",
+    "Pain out of proportion or crepitus goes straight to the OR"
+   ]
+  ],
+  "note": "Brief says necrotizing fasciitis needs surgery without waiting for imaging; blood-culture indications are the IDSA standard wording, not in the brief."
+ },
+ {
+  "brief": "footulcer",
+  "action": "new",
+  "rows": [
+   [
+    "Pulse exam and ankle-brachial index",
+    "First",
+    "<b>Normal</b> pulses, ABI 1.0 to 1.4",
+    "Perfused foot: neuropathic ulcer; a low ABI points to arterial disease"
+   ],
+   [
+    "Toe-brachial index",
+    "By branch",
+    "<b>Under 0.7</b> when the ABI is over 1.4",
+    "Arterial disease hidden by calcified, noncompressible vessels"
+   ],
+   [
+    "10-g monofilament",
+    "Supports",
+    "<b>Loss</b> of protective sensation",
+    "Large-fiber neuropathy lets injury go unnoticed"
+   ],
+   [
+    "Hemoglobin A1c",
+    "Cause",
+    "<b>6.5% or higher</b>",
+    "Diabetes, the underlying cause of the neuropathic ulcer"
+   ],
+   [
+    "Probe-to-bone test, ESR and plain films",
+    "By branch",
+    "Probe <b>touches bone</b>; ESR over 70",
+    "Osteomyelitis likely; plain films are insensitive early"
+   ],
+   [
+    "MRI, then bone biopsy",
+    "Confirms",
+    "<b>Marrow edema</b>; bone culture positive",
+    "Osteomyelitis; the biopsy names the organism"
+   ],
+   [
+    "Superficial wound swab",
+    "Skip",
+    "Grows <b>colonizers</b>",
+    "Culture only a clinically infected ulcer, using deep tissue or bone"
+   ]
+  ],
+  "note": "Venous duplex and biopsy for pyoderma gangrenosum or Marjolin ulcer are left to the existing ulcer-type table's Test column."
+ },
+ {
+  "brief": "eczemaherp",
+  "action": "new",
+  "rows": [
+   [
+    "Exam of the eyes and mouth",
+    "First",
+    "Conjunctiva and oropharynx <b>clear</b>",
+    "Not SJS or TEN, which needs mucosa at 2 or more sites"
+   ],
+   [
+    "HSV PCR of vesicle fluid",
+    "Confirms",
+    "<b>HSV-1</b> detected",
+    "Eczema herpeticum; start acyclovir before the result returns"
+   ],
+   [
+    "Tzanck smear",
+    "Supports",
+    "<b>Multinucleated giant</b> cells",
+    "HSV or VZV; less sensitive than PCR and does not separate them"
+   ],
+   [
+    "Ophthalmology slit-lamp exam",
+    "By branch",
+    "<b>Dendritic</b> corneal lesions with periocular vesicles",
+    "HSV keratoconjunctivitis, which threatens vision"
+   ],
+   [
+    "Culture of nares, conjunctiva or throat",
+    "By branch",
+    "<b>S. aureus</b> at a distant focus",
+    "Staphylococcal scalded skin syndrome; the bullae themselves are sterile"
+   ],
+   [
+    "Skin swab for bacterial culture",
+    "Skip",
+    "S. aureus <b>colonizes</b> eczematous skin",
+    "A positive swab does not explain failure on TMP-SMX"
+   ]
+  ],
+  "note": "No conflicts; PCR as confirmatory and Tzanck as less sensitive match the brief's workup pearl."
+ },
+ {
+  "brief": "peds-alopecia",
+  "action": "new",
+  "rows": [
+   [
+    "Scalp exam with a check of the draining nodes",
+    "First",
+    "<b>Scale</b> plus tender occipital and postauricular nodes",
+    "Infection: tinea capitis; a smooth patch without nodes is not"
+   ],
+   [
+    "Close look at the remaining hairs",
+    "By branch",
+    "Broken hairs of <b>varying lengths</b>, no scale",
+    "Trichotillomania; exclamation-point hairs point to alopecia areata"
+   ],
+   [
+    "KOH of plucked proximal hair shafts",
+    "Confirms",
+    "<b>Spores</b> within or around the hair shaft",
+    "Tinea capitis: start oral griseofulvin or terbinafine"
+   ],
+   [
+    "Fungal culture of hairs or scale",
+    "Confirms",
+    "<b>Trichophyton</b> or Microsporum grows",
+    "Tinea capitis; results take weeks, so do not wait to treat"
+   ],
+   [
+    "Wood lamp",
+    "Supports",
+    "Green fluorescence only with <b>Microsporum</b>",
+    "Negative with Trichophyton tonsurans, the common US cause"
+   ],
+   [
+    "Serum fungal antibody titers",
+    "Skip",
+    "<b>No role</b> in dermatophyte infection",
+    "KOH or culture of the hair confirms it"
+   ]
+  ],
+  "note": "Brief calls the diagnosis clinical with KOH or culture confirming; Skip row taken from the bank's distractor (scalp biopsy is the other distractor)."
+ },
+ {
+  "brief": "bs-scabies",
+  "action": "new",
+  "rows": [
+   [
+    "History of contacts and a map of the lesions",
+    "First",
+    "Close contact with the <b>same</b> itchy rash",
+    "Transmissible: scabies, with web spaces, wrists and belt line involved"
+   ],
+   [
+    "Skin scraping of a burrow in mineral oil",
+    "Confirms",
+    "<b>Mites</b>, eggs or feces",
+    "Scabies; a typical story is enough to treat without it"
+   ],
+   [
+    "Dermoscopy of a burrow",
+    "Supports",
+    "<b>Delta-wing</b> sign at the end of the burrow",
+    "The mite in place"
+   ],
+   [
+    "Scraping of thick hyperkeratotic crusts",
+    "By branch",
+    "<b>Numerous</b> mites",
+    "Crusted scabies: oral ivermectin plus topical therapy, contact isolation"
+   ],
+   [
+    "Culture of crusted, red lesions",
+    "By branch",
+    "<b>S. aureus</b> or streptococci",
+    "Impetiginized scabies: permethrin plus cephalexin"
+   ],
+   [
+    "Repeat workup for itch after treatment",
+    "Skip",
+    "Itch for 2 to 4 weeks with <b>no new burrows</b>",
+    "Post-scabetic pruritus: topical steroid, not re-treatment"
+   ]
+  ],
+  "note": "Brief is management-focused and treats scabies as clinical; scraping and dermoscopy rows are standard additions not stated in the brief."
+ },
+ {
+  "brief": "ectopic",
+  "action": "new",
+  "rows": [
+   [
+    "Urine or serum hCG",
+    "First",
+    "<b>Positive</b>",
+    "Pregnant: the question becomes where the pregnancy is"
+   ],
+   [
+    "Transvaginal ultrasound",
+    "Next",
+    "<b>Intrauterine</b> gestational sac with a yolk sac",
+    "Intrauterine pregnancy: stop; heterotopic pregnancy is rare outside IVF"
+   ],
+   [
+    "Transvaginal ultrasound",
+    "Confirms",
+    "Extrauterine sac, or <b>adnexal mass</b> with free fluid",
+    "Ectopic pregnancy: methotrexate if eligible, otherwise surgery"
+   ],
+   [
+    "Quantitative serum β-hCG",
+    "By branch",
+    "<b>Above</b> 1,500 to 2,000 with an empty uterus",
+    "Indeterminate scan: presumed ectopic"
+   ],
+   [
+    "Serial β-hCG every 48 hours",
+    "By branch",
+    "Rise of <b>less than</b> 35 to 50%",
+    "Abnormal pregnancy, likely ectopic; a normal one doubles, a miscarriage falls"
+   ],
+   [
+    "Emergent laparoscopy",
+    "Confirms",
+    "<b>Tubal</b> pregnancy or hemoperitoneum",
+    "Unstable patient: operate without waiting for imaging"
+   ],
+   [
+    "Single serum β-hCG before ultrasound",
+    "Skip",
+    "A number <b>cannot localize</b> the pregnancy",
+    "Transvaginal ultrasound answers the location question"
+   ]
+  ],
+  "note": "Blood type and Rh (anti-D for Rh-negative bleeding) left to the brief's pearls to stay at 7 rows."
+ },
+ {
+  "brief": "adolescent-aub",
+  "action": "extend",
+  "edits": [
+   {
+    "old": "<th>Workup</th></tr>",
+    "new": "<th>Workup</th><th>Confirms, then</th></tr>"
+   },
+   {
+    "old": "<td>Clinical</td></tr>",
+    "new": "<td>Clinical</td><td>A diagnosis of exclusion: negative pregnancy test, CBC and ferritin; <b>treat</b> if anemic, otherwise reassure</td></tr>"
+   },
+   {
+    "old": "do not exclude it</td></tr>",
+    "new": "do not exclude it</td><td>Low <b>vWF activity</b>, repeated if borderline because levels vary; then hematology referral</td></tr>"
+   },
+   {
+    "old": "<td>Androgens, glucose</td></tr>",
+    "new": "<td>Androgens, glucose</td><td>In adolescents, <b>both</b> hyperandrogenism and ovulatory dysfunction; ultrasound is not used; then combined OCP</td></tr>"
+   },
+   {
+    "old": "<td>Prolactin → MRI</td></tr>",
+    "new": "<td>Prolactin → MRI</td><td>High prolactin with pregnancy and hypothyroidism excluded; <b>pituitary MRI</b> shows the adenoma; then cabergoline</td></tr>"
+   },
+   {
+    "old": "<td>Female athlete triad</td></tr>",
+    "new": "<td>Female athlete triad</td><td><b>Low</b> LH, FSH and estradiol once pregnancy, TSH and prolactin are excluded; then restore energy balance and check bone density</td></tr>"
+   },
+   {
+    "old": "<td><b>Pregnancy test before anything else</b></td></tr>",
+    "new": "<td><b>Pregnancy test before anything else</b></td><td>Quantitative hCG and <b>ultrasound</b> to locate the pregnancy; then pregnancy-directed care</td></tr>"
+   }
+  ],
+  "note": "Extends the existing clue-diagnosis-workup table; each old string verified unique within the brief. Adolescent PCOS criteria (both features, no ultrasound) follow the 2018 international guideline."
+ },
+ {
+  "brief": "fibroids",
+  "action": "new",
+  "rows": [
+   [
+    "Urine or serum hCG",
+    "First",
+    "<b>Negative</b>",
+    "Pregnancy excluded as the cause of an enlarged uterus"
+   ],
+   [
+    "CBC",
+    "First",
+    "<b>Low</b> hemoglobin with heavy menses",
+    "Anemia: a consequence that makes the fibroid worth treating"
+   ],
+   [
+    "Transvaginal pelvic ultrasound",
+    "Confirms",
+    "Well-defined <b>hypoechoic</b> myometrial masses",
+    "Leiomyoma; location predicts the symptom"
+   ],
+   [
+    "Saline infusion sonohysterography or hysteroscopy",
+    "By branch",
+    "<b>Submucosal</b> fibroid distorting the cavity",
+    "Heavy bleeding or pregnancy loss: hysteroscopic myomectomy"
+   ],
+   [
+    "Pelvic MRI",
+    "By branch",
+    "Thickened <b>junctional zone</b>",
+    "Adenomyosis; MRI also maps fibroids before myomectomy or embolization"
+   ],
+   [
+    "Endometrial biopsy",
+    "By branch",
+    "<b>Hyperplasia</b> or carcinoma",
+    "Age 45 or older with abnormal bleeding, or any postmenopausal bleeding; fibroids do not explain it"
+   ]
+  ],
+  "note": "Brief is management-focused (treat symptoms, not size); no Skip row because the brief names no tempting wrong test. Rapid growth after menopause raises leiomyosarcoma, which has no reliable preoperative test; left out."
+ },
+ {
+  "brief": "bs-pid",
+  "action": "new",
+  "rows": [
+   [
+    "Urine or serum hCG",
+    "First",
+    "<b>Negative</b>",
+    "Ectopic excluded; positive means ultrasound, and admission if PID"
+   ],
+   [
+    "None: clinical diagnosis",
+    "Confirms",
+    "Pelvic pain plus <b>cervical motion</b>, uterine or adnexal tenderness",
+    "PID: start antibiotics now; the tests support it and never delay treatment"
+   ],
+   [
+    "Saline wet prep of cervical discharge",
+    "Supports",
+    "Abundant <b>WBCs</b>",
+    "Supports PID; no WBCs makes PID unlikely"
+   ],
+   [
+    "NAAT for gonorrhea and chlamydia",
+    "Cause",
+    "<b>Positive</b> in only about half",
+    "Names the organism; a negative test does not exclude PID"
+   ],
+   [
+    "HIV and syphilis testing",
+    "Screen",
+    "<b>Reactive</b> result",
+    "Co-infection; retest gonorrhea and chlamydia at 3 months"
+   ],
+   [
+    "Transvaginal ultrasound",
+    "By branch",
+    "Complex <b>adnexal mass</b>",
+    "Tubo-ovarian abscess: admit for IV antibiotics, drain if no response"
+   ],
+   [
+    "Pelvic ultrasound before antibiotics",
+    "Skip",
+    "<b>Normal</b> in uncomplicated PID",
+    "Delays the treatment that prevents infertility and ectopic pregnancy"
+   ]
+  ],
+  "note": "Matches the brief's presumptive-diagnosis rule and its sequencing-trap line on ultrasound. Diagnostic laparoscopy (no response at 72 hours) is left to the management ladder."
+ },
+ {
+  "brief": "primary-amenorrhea",
+  "action": "extend",
+  "edits": [
+   {
+    "old": "<th>Conclusion</th></tr>",
+    "new": "<th>Conclusion</th><th>Confirms, then</th></tr>"
+   },
+   {
+    "old": "<tr class=\"em\"><td><b>1. Pelvic ultrasound</b></td><td><b>Uterus present</b></td>",
+    "new": "<tr><td>Before step 1: urine hCG</td><td><b>Negative</b></td><td>Pregnancy excluded</td><td>Then the ultrasound</td></tr>\n<tr class=\"em\"><td><b>1. Pelvic ultrasound</b></td><td><b>Uterus present</b></td>"
+   },
+   {
+    "old": "<td>Go to the FSH</td></tr>",
+    "new": "<td>Go to the FSH</td><td>Anatomy only; the <b>FSH</b> picks the branch</td></tr>"
+   },
+   {
+    "old": "<td>Go to the testosterone and the pubic hair</td></tr>",
+    "new": "<td>Go to the testosterone and the pubic hair</td><td>Anatomy only; the <b>karyotype</b> settles the branch</td></tr>"
+   },
+   {
+    "old": "Turner if 45,X</td></tr>",
+    "new": "Turner if 45,X</td><td><b>45,X</b> karyotype, FISH if mosaicism is suspected; then echocardiogram and renal ultrasound</td></tr>"
+   },
+   {
+    "old": "Kallmann or Cushing</td></tr>",
+    "new": "Kallmann or Cushing</td><td>MRI shows a <b>sellar lesion</b>, or is normal with anosmia in Kallmann; check TSH and prolactin</td></tr>"
+   },
+   {
+    "old": "evaluate the renal tract</td></tr>",
+    "new": "evaluate the renal tract</td><td><b>46,XX</b> karyotype; then renal ultrasound</td></tr>"
+   },
+   {
+    "old": "<td><b>Complete androgen insensitivity</b> (46,XY)</td></tr>",
+    "new": "<td><b>Complete androgen insensitivity</b> (46,XY)</td><td><b>46,XY</b> karyotype; then gonadectomy, usually after puberty, for tumor risk</td></tr>"
+   }
+  ],
+  "note": "Extends the two-step algorithm; adds the hCG step the vignette and pertinent-negatives already require. Old strings verified unique within the brief. Turner echo and renal ultrasound and CAIS gonadectomy timing are standard but not stated in the brief."
+ },
+ {
+  "brief": "pmb",
+  "action": "extend",
+  "edits": [
+   {
+    "old": "<td><b>Hysteroscopy with D&amp;C</b></td></tr>",
+    "new": "<td><b>Hysteroscopy with D&amp;C</b></td></tr>\n<tr><td>Confirms: biopsy histology</td><td><b>Carcinoma</b> or atypical hyperplasia</td><td>Hysterectomy; surgical staging with nodal assessment for carcinoma</td></tr>\n<tr><td>Skip: Pap test, or reassurance for atrophy</td><td>Does <b>not</b> sample the endometrium</td><td>Atrophy is a diagnosis of exclusion; evaluate the endometrium first</td></tr>"
+   }
+  ],
+  "note": "Existing workup table already carries first test and branches; adds the confirming histology row and the Pap/atrophy trap as rows in its Step/Finding/Action shape."
+ },
+ {
+  "brief": "cervical",
+  "action": "new",
+  "rows": [
+   [
+    "Cytology or primary HPV test",
+    "Screen",
+    "<b>Abnormal</b> cytology or HPV positive",
+    "Triage by result and age, as in the table above"
+   ],
+   [
+    "Reflex HPV on ASC-US, age 25 or older",
+    "Next",
+    "HPV <b>positive</b>",
+    "Colposcopy; HPV negative resumes routine screening"
+   ],
+   [
+    "HPV genotyping on a positive HPV test",
+    "By branch",
+    "<b>HPV 16 or 18</b>",
+    "Colposcopy now, even with negative cytology"
+   ],
+   [
+    "Colposcopy with directed biopsy",
+    "Confirms",
+    "<b>CIN grade</b> on histology",
+    "CIN1 observe; CIN2 or CIN3 treat with excision"
+   ],
+   [
+    "Endocervical curettage",
+    "By branch",
+    "Squamocolumnar junction <b>not fully seen</b>",
+    "Samples the canal; contraindicated in pregnancy"
+   ],
+   [
+    "Cold knife conization",
+    "By branch",
+    "<b>Adenocarcinoma in situ</b> on biopsy",
+    "Removes it with intact margins; LEEP fragments them"
+   ],
+   [
+    "Colposcopy for ASC-US or LSIL at 21 to 24",
+    "Skip",
+    "Most lesions <b>clear</b> on their own",
+    "Repeat cytology in 1 year"
+   ]
+  ],
+  "note": "New table adds only the abnormal-screen-to-histology path; screening intervals and result triage stay in the existing tables. Conflict: this brief keys ASC-US at 21 to 24 as repeat cytology in 1 year, while bs-cervical-gate keys a 24 yo with ASC-US as reflex HPV; ASCCP 2019 prefers repeat cytology and accepts reflex HPV."
+ },
+ {
+  "brief": "bs-cervical-gate",
+  "action": "new",
+  "rows": [
+   [
+    "Age and HIV status",
+    "First",
+    "Age <b>under 21</b> and HIV negative",
+    "No screening, whatever the sexual history"
+   ],
+   [
+    "Cytology, age 21 to 24",
+    "Screen",
+    "<b>ASC-US</b>",
+    "Repeat cytology in 1 year, or reflex HPV; HPV negative resumes routine"
+   ],
+   [
+    "Co-test, age 30 or older",
+    "Screen",
+    "Cytology negative, HPV positive <b>not 16 or 18</b>",
+    "Repeat co-test in 1 year"
+   ],
+   [
+    "HPV genotyping",
+    "By branch",
+    "<b>HPV 16 or 18</b>",
+    "Colposcopy now"
+   ],
+   [
+    "Colposcopy with directed biopsy",
+    "Confirms",
+    "<b>CIN grade</b> on histology",
+    "Confirms the abnormal screen; CIN2 or worse is treated"
+   ],
+   [
+    "Biopsy of a visible lesion",
+    "Confirms",
+    "<b>Dysplasia</b> or invasive carcinoma",
+    "Diagnostic at any age, including under 21"
+   ],
+   [
+    "Cytology or HPV test before 21",
+    "Skip",
+    "HPV <b>clears</b> in about 90% within 2 years",
+    "Finds transient infection and leads to excisions that raise preterm-birth risk"
+   ]
+  ],
+  "note": "Topic is mainly an eligibility gate; table adds the abnormal-result-to-histology steps from the bank. Conflict with the cervical brief on ASC-US at 21 to 24 (bank here keys reflex HPV, cervical keys repeat cytology); the row lists both, repeat cytology first per ASCCP 2019."
+ },
+ {
+  "brief": "lipid-screen",
+  "action": "new",
+  "rows": [
+   [
+    "Lipid panel, fasting or nonfasting",
+    "Screen",
+    "Measured as part of <b>risk assessment</b>, ages 40 to 75",
+    "Feeds the 10-year ASCVD risk estimate"
+   ],
+   [
+    "Pooled cohort equations",
+    "Next",
+    "10-year risk <b>10% or higher</b> with a risk factor",
+    "USPSTF: start a statin"
+   ],
+   [
+    "Repeat fasting lipid panel",
+    "By branch",
+    "Triglycerides <b>over 400</b> on a nonfasting sample",
+    "Calculated LDL is unreliable; repeat fasting"
+   ],
+   [
+    "TSH, glucose or A1c, liver tests, creatinine, urine protein",
+    "Cause",
+    "<b>Hypothyroidism</b>, diabetes, nephrotic syndrome or cholestasis",
+    "Secondary dyslipidemia: treat the cause"
+   ],
+   [
+    "Repeat lipid panel",
+    "Confirms",
+    "LDL <b>190 or higher</b> on repeat",
+    "Severe hypercholesterolemia, often familial: high-intensity statin without a risk calculation; test relatives"
+   ],
+   [
+    "Coronary artery calcium score",
+    "By branch",
+    "Score of <b>zero</b> at borderline or intermediate risk",
+    "Statin may be deferred; an ACC/AHA option, not USPSTF"
+   ],
+   [
+    "Lipid panel under 40 with no risk factors",
+    "Skip",
+    "USPSTF evidence <b>insufficient</b>",
+    "Legacy banks still screen men from 35 and women from 45 with risk"
+   ]
+  ],
+  "note": "Brief covers only when to screen (plus a vaccine table); rows add the abnormal-screen path. The Skip row's last cell notes the brief's legacy-number pearl, which banks may still key."
+ }
+]
