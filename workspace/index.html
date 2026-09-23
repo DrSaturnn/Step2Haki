@@ -307,6 +307,15 @@ body.flat .bktools .bkmode.on{background:#26262F;color:#fff}
 tbody tr.em td{background:rgba(142,61,44,.05)}
 .traps .trapline{display:flex;align-items:baseline;gap:9px;margin:0 0 7px}
 .traps .trapwhy{font-size:13.2px;color:var(--ink-2);line-height:1.5}
+.traps:has(> .trapline){display:grid;grid-template-columns:max-content minmax(0,1fr);column-gap:12px;row-gap:9px;align-items:baseline}
+.traps:has(> .trapline) > .trapline{display:contents}
+.traps .trapline .pill{margin:0;justify-self:start}
+@media (max-width:640px){
+  .traps:has(> .trapline){display:block}
+  .traps:has(> .trapline) > .trapline{display:block;margin:0 0 12px;padding-left:11px;border-left:2px solid var(--hair)}
+  .traps .trapline .pill{margin:0 0 5px}
+  .traps .trapline .trapwhy{display:block}
+}
 @media (max-width:640px){
   .tw tbody tr.em{box-shadow:var(--e2),inset 0 0 0 1.5px rgba(142,61,44,.25)}
   .tw tbody tr.em td{background:none}
