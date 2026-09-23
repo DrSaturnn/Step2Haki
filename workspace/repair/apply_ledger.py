@@ -5,11 +5,13 @@ import re as _re
 # pre-write guards: every new item/brief id must be absent before anything is written
 _new=[x for ed in L['edits'] for x in _re.findall(r'<li [^>]*data-item-id="([^"]+)"',ed.get('text','')+ed.get('new',''))]
 _have=set(_re.findall(r'<li [^>]*data-item-id="([^"]+)"',src))
-_repl={_re.search(r'data-item-id="([^"]+)"',ed['old']).group(1) for ed in L['edits'] if ed['op']=='replace' and 'data-item-id="' in ed.get('old','')}
+# ids leaving the page in this ledger (replaced or moved) may reappear once in the new text
+_repl={x for ed in L['edits'] if ed['op']=='replace' for x in _re.findall(r'<li [^>]*data-item-id="([^"]+)"',ed.get('old',''))}
+_moved_briefs={x for ed in L['edits'] if ed['op']=='replace' for x in _re.findall(r'<div class="brief[^"]*" id="([^"]+)"',ed.get('old',''))}
 assert len(_new)==len(set(_new)),'duplicate id inside this ledger'
 _clash=[x for x in _new if x in _have and x not in _repl];assert not _clash,('id already on page',_clash)
 for bid in _re.findall(r'<div class="brief[^"]*" id="([^"]+)"',''.join(ed.get('text','') for ed in L['edits'])):
-    assert f'id="{bid}"' not in src,('brief id exists',bid)
+    assert bid in _moved_briefs or f'id="{bid}"' not in src,('brief id exists',bid)
 def span(s,bid):
     b=[x for x in axlib.parse_html(s).briefs if x.id==bid];assert len(b)==1,bid;return b[0].raw_start,b[0].raw_end
 for ed in L['edits']:

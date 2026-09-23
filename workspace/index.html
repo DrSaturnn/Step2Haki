@@ -997,6 +997,48 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
 #rvpanel .go.alt{margin-top:8px;background:var(--raised);color:var(--muted);box-shadow:var(--ec)}
 #rvpanel .go.alt:hover{color:var(--ink)}
 
+
+/* ---------- AQUIFER: source-driven badge, band, nav ---------- */
+:root{--aquifer:#1F6A7E;--aquifer-bg:#E2EDF0}
+.brief[data-src="aquifer"] > h4::after{content:"Aquifer";display:inline-block;vertical-align:5px;margin-left:10px;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:1px;color:var(--aquifer);background:linear-gradient(145deg,#E7F0F2 0%,#DDE9EC 52%,#D3E2E6 100%);padding:5px 9px;border-radius:var(--r-chip);box-shadow:var(--ec)}
+.brief[data-src="aquifer"] h5{color:var(--aquifer)}
+.aqband{background:linear-gradient(145deg,#DCE8EB 0%,var(--aquifer-bg) 48%,#EEF5F6 100%)}
+.aqband .lbl,.aqband .n{color:var(--aquifer)}
+body.flat .aqband{background:var(--aquifer-bg);background-image:none}
+#nav .navsub.aq{color:#86BFCD}
+#nav a.aq{padding-left:30px;font-size:12.6px}
+@media (max-width:980px){
+  .sheetlist a.aq{padding-left:26px;color:var(--aquifer)}
+  .sheetlist .msub.aq{color:var(--aquifer)}
+}
+/* clue tables: plain clue, emphasized pointer */
+table.cluet tbody td:first-child{font-weight:400;color:var(--ink-2);width:46%}
+@media (max-width:640px){
+  .tw table.cluet tbody td:first-child{font-family:var(--sans);font-size:14px;font-weight:400;color:var(--ink-2);border-bottom:none;padding:0 0 2px;margin:0;width:100%}
+  .tw table.cluet tbody td:not(:first-child)::before{content:"\2192  ";display:inline;font-size:14px;letter-spacing:0;text-transform:none;font-weight:400;color:var(--faint)}
+  .tw table.cluet tbody td{padding:2px 0}
+  .tw table.cluet tbody{background:linear-gradient(145deg,#F4F5F5 0%,#EEF0F0 55%,#E9EBEB 100%);border-radius:14px;box-shadow:var(--e2);overflow:hidden;margin:0 0 4px}
+  .tw table.cluet tbody tr{background:none!important;box-shadow:none;border-radius:0;margin:0;padding:11px 15px}
+  .tw table.cluet tbody tr+tr{border-top:1px solid rgba(24,28,30,.08)}
+}
+/* the first test's outcomes: one branch point, read as one unit */
+.tw tbody.grp td{background:rgba(84,74,196,.045)}
+.tw tbody.grp tr:nth-child(even){background:none}
+.tw tbody.grp tr td:first-child{box-shadow:inset 3px 0 0 rgba(84,74,196,.5)}
+.tw tbody.grp tr:last-child td{border-bottom:1px solid rgba(84,74,196,.22)}
+@media (max-width:640px){
+  .tw tbody.grp{background:linear-gradient(145deg,#F2F1FA 0%,#EDECF7 60%,#E9E8F4 100%);border-radius:14px;box-shadow:var(--e2),inset 0 0 0 1.5px rgba(84,74,196,.22);overflow:hidden;margin:0 0 11px}
+  .tw tbody.grp tr{background:none!important;box-shadow:none;border-radius:0;margin:0;padding:10px 15px}
+  .tw tbody.grp tr+tr{border-top:1px solid rgba(84,74,196,.14)}
+  .tw tbody.grp td{background:none;border:none}
+  .tw tbody.grp tr td:first-child{box-shadow:none}
+  .tw tbody.grp td:nth-child(3)::before{content:none}
+  .tw tbody.grp td:nth-child(4)::before{content:"\2192  ";display:inline;font-size:14px;letter-spacing:0;text-transform:none;font-weight:400;color:var(--faint)}
+  .tw tbody.grp td:nth-child(3),.tw tbody.grp td:nth-child(4){padding:2px 0}
+  .tw tbody.grp tr:first-child td:nth-child(3){padding-top:8px}
+  .tw tbody.grp tr:last-child td{border-bottom:none}
+  .tw tbody.grp tr:first-child td:first-child{border-bottom:1px solid rgba(84,74,196,.16)}
+}
 </style>
 </head>
 <body>
@@ -1010,9 +1052,8 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
   <input id="search" type="search" placeholder="Search topics, findings, drugs…" autocomplete="off">
   <div id="navlinks">
 
-    <div class="sect">Musculoskeletal <span class="count">23</span></div>
+    <div class="sect">Musculoskeletal <span class="count">22</span></div>
     <a href="#pmr">Polymyalgia Rheumatica</a>
-    <a href="#shoulder-rom">Shoulder Pain: the ROM Rule</a>
     <a href="#biceps">Biceps Tendinitis</a>
     <a href="#cts">Carpal Tunnel Syndrome</a>
     <a href="#dequervain">De Quervain Tendinopathy</a>
@@ -1039,6 +1080,8 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
     <a class="bs" href="#bs-lbp-acute">Acute LBP, No Red Flags</a>
     <a class="bs" href="#bs-synovitis-mgmt">Transient Synovitis: Management</a>
     <a class="bs" href="#bs-torticollis">Torticollis &amp; Plagiocephaly</a>
+    <div class="navsub aq">Aquifer</div>
+    <a class="aq" href="#shoulder-rom">Shoulder Pain: the ROM Rule</a>
     
     <div class="sect">Pediatrics <span class="count">5</span></div>
     <a href="#growth">Growth &amp; Milestones</a>
@@ -1047,12 +1090,13 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
     <a href="#aneuploidy">Aneuploidy: Reading the Newborn</a>
     <a href="#malform-syndromes">Multiple Anomalies in a Newborn</a>
 <div class="navsub">Board-style</div>
-    <a class="bs" href="#bs-shock">Shock in Children</a>
     <a class="bs" href="#bs-learning">Specific Learning Disorder</a>
-    <a class="bs" href="#bs-infant-feeding">Infant Feeding at 6 Months</a>
-    <a class="bs" href="#bs-tanner">Sexual Maturity Rating</a>
-    <a class="bs" href="#bs-ftt">Faltering Weight</a>
-    <a class="bs" href="#bs-preterm-followup">Prematurity Follow-Up</a>
+    <div class="navsub aq">Aquifer</div>
+    <a class="aq" href="#bs-shock">Shock in Children</a>
+    <a class="aq" href="#bs-infant-feeding">Infant Feeding at 6 Months</a>
+    <a class="aq" href="#bs-tanner">Sexual Maturity Rating</a>
+    <a class="aq" href="#bs-ftt">Faltering Weight</a>
+    <a class="aq" href="#bs-preterm-followup">Prematurity Follow-Up</a>
     
     <div class="sect">Cardiovascular <span class="count">15</span></div>
     <a href="#chf">CHF: Reducing Hospitalization</a>
@@ -1072,7 +1116,8 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
     <a href="#del22q11">22q11.2 Deletion (DiGeorge)</a>
 <div class="navsub">Board-style</div>
     <a class="bs" href="#bs-murmur-map">Murmur Man</a>
-    <a class="bs" href="#bs-shunt-timing">Congenital Shunts &amp; Timing</a>
+    <div class="navsub aq">Aquifer</div>
+    <a class="aq" href="#bs-shunt-timing">Congenital Shunts &amp; Timing</a>
     
     <div class="sect">Pulmonary <span class="count">14</span></div>
     <a href="#copd">COPD: Survival Interventions</a>
@@ -1089,8 +1134,8 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
     <a href="#uri">Pediatric URI</a>
     <a href="#asthma">Asthma Classification</a>
     <a href="#bpd">Bronchopulmonary Dysplasia</a>
-    <div class="navsub">Board-style</div>
-    <a class="bs" href="#bs-nrd">Neonatal Respiratory Distress</a>
+    <div class="navsub aq">Aquifer</div>
+    <a class="aq" href="#bs-nrd">Neonatal Respiratory Distress</a>
     
     <div class="sect">GI &amp; Hepatology <span class="count">14</span></div>
     <a href="#liver-preg">Liver Disease in Pregnancy</a>
@@ -1171,9 +1216,10 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
     <a href="#cgd">Abscesses &amp; Granulomas</a>
 <div class="navsub">Board-style</div>
     <a class="bs" href="#bs-pta">Peritonsillar Abscess</a>
-    <a class="bs" href="#bs-febrile-infant">The Febrile Infant</a>
     <a class="bs" href="#bs-torch">Congenital CMV / TORCH</a>
     <a class="bs" href="#bs-neonatal-sepsis">Neonatal Sepsis</a>
+    <div class="navsub aq">Aquifer</div>
+    <a class="aq" href="#bs-febrile-infant">The Febrile Infant</a>
 
     <div class="sect">Neuro &amp; HEENT <span class="count">12</span></div>
     <a href="#hearing">Hearing Loss / Otosclerosis</a>
@@ -1190,9 +1236,10 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
     <a href="#tics">Tics &amp; Tourette Syndrome</a>
 <div class="navsub">Board-style</div>
     <a class="bs" href="#bs-tethered">Tethered Cord</a>
-    <a class="bs" href="#bs-posterior-fossa">Posterior Fossa Localization</a>
     <a class="bs" href="#bs-reye">Cerebral Edema: Reye</a>
     <a class="bs" href="#bs-peds-stroke">Stroke in a Child: the Arteriopathy</a>
+    <div class="navsub aq">Aquifer</div>
+    <a class="aq" href="#bs-posterior-fossa">Posterior Fossa Localization</a>
     
     <div class="sect">Dermatology &amp; Wounds <span class="count">7</span></div>
     <a href="#psoriasis">Scaly Rash / Psoriasis</a>
@@ -1217,9 +1264,10 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
     <a href="#teratogens">Teratogenic Exposures</a>
     <a href="#primary-amenorrhea">Primary Amenorrhea</a>
     <div class="navsub">Board-style</div>
-    <a class="bs" href="#bs-pid">Pelvic Inflammatory Disease</a>
     <a class="bs" href="#bs-cervical-gate">Cervical Screening: the Age Gate</a>
     <a class="bs" href="#bs-tdap-preg">Tdap at 10 Weeks</a>
+    <div class="navsub aq">Aquifer</div>
+    <a class="aq" href="#bs-pid">Pelvic Inflammatory Disease</a>
     
     <div class="sect">Preventive &amp; Ethics <span class="count">5</span></div>
     <a href="#smoking">Ranking Preventive Interventions</a>
@@ -1228,8 +1276,9 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
     <a href="#elder">Elder Abuse Reporting</a>
     <a href="#vegan">The Vegan Diet</a>
     <div class="navsub">Board-style</div>
-    <a class="bs" href="#bs-adolescent-vax">Adolescent Immunization</a>
     <a class="bs" href="#bs-adolescent-confid">Adolescent Confidentiality</a>
+    <div class="navsub aq">Aquifer</div>
+    <a class="aq" href="#bs-adolescent-vax">Adolescent Immunization</a>
   </div>
 </aside>
 
@@ -1305,7 +1354,7 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
 <!-- =================== MSK =================== -->
 
 <!-- =================== MSK =================== -->
-<h3 class="system" id="msk">Musculoskeletal &amp; Rheumatology <span class="n">23 topics <span style="color:#9A5B0E">+ 4 board-style</span></span></h3>
+<h3 class="system" id="msk">Musculoskeletal &amp; Rheumatology <span class="n">22 topics <span style="color:#9A5B0E">+ 4 board-style</span> <span style="color:#1F6A7E">+ 1 Aquifer</span></span></h3>
 <p class="system-note">The shelf's densest system. Nearly every stem is decided by a maneuver, a time course, or a red flag hiding in the past medical history.</p>
 
 <div class="brief" id="pmr" data-shelf="fm">
@@ -1338,48 +1387,6 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
 </ol>
 <div class="pearls"><span class="lbl">Pearls</span> PMR = pain with normal CK; polymyositis = weakness with high CK · PMR responds to <b>low</b>-dose steroids, GCA needs <b>high</b> dose · every PMR diagnosis gets a GCA symptom screen, and ~50% of GCA patients have PMR · NSAIDs fail in PMR — that's the "close but inadequate therapy" distractor.</div>
 <div class="traps"><span class="pill p-seq">Sequencing trap</span><span class="pill p-number">Treat-the-number</span></div>
-</div>
-
-<div class="brief" id="shoulder-rom" data-shelf="fm">
-<h4>Shoulder Pain: the Range-of-Motion Rule</h4>
-<p class="sub">Aquifer FM 25 · rotator cuff · impingement</p>
-<div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 58 yo M, painful arc of motion, active abduction limited with passive abduction full &middot; <b>Q</b> &mdash; the most likely diagnosis; options spanned rotator cuff tendinopathy, adhesive capsulitis and glenohumeral osteoarthritis</div>
-<div class="dp"><span class="lbl">The decision point</span>
-<p>One rule sorts every shoulder stem: <b>active ROM lost with passive preserved = muscle/tendon</b> (rotator cuff tendinopathy or tear, biceps tendinitis, impingement). <b>Both active and passive lost = joint</b> (adhesive capsulitis, glenohumeral OA, septic joint). Then the maneuvers map one-to-one onto muscles.</p></div>
-<table><caption>Shoulder pain — the differential<span class='cap-sub'>sorted by the range-of-motion rule</span></caption>
-<thead><tr><th>Diagnosis</th><th>What is driving it</th><th>The NBME tell</th></tr></thead>
-<tbody>
-<tr><td>Cuff tendinopathy / impingement</td><td>Overhead use; painful arc; active ROM ↓ only</td><td><b>Empty can (Jobe) +</b>, Neer / Hawkins +</td></tr>
-<tr><td>Full-thickness cuff tear</td><td>Weakness &gt; pain; can't raise arm overhead</td><td><b>Drop arm +</b>; traumatic in young, degenerative in old</td></tr>
-<tr><td>Biceps tendinitis</td><td>Anterior pain, bicipital groove tenderness</td><td>Pain on <b>resisted flexion–supination</b></td></tr>
-<tr><td>Adhesive capsulitis</td><td>Active <b>and</b> passive ROM ↓; DM, hypothyroid</td><td><b>Follows immobilization</b> — the sling trap</td></tr>
-<tr><td>Glenohumeral OA</td><td>Active + passive ↓ + crepitus, older</td><td>Prior dislocation is the risk factor</td></tr>
-<tr><td>Septic arthritis / bursitis <span class="tag t-em">Emergency</span></td><td>Fever, red, swollen; IVDU, DM, RA</td><td><b>Aspirate first</b> — never blind antibiotics</td></tr>
-<tr><td>C5–C6 radiculopathy</td><td>Neck → shoulder pain, numbness</td><td><b>Shoulder exam NORMAL</b>; Spurling +</td></tr>
-<tr><td>Referred cardiac / diaphragmatic</td><td>Exertional or visceral pattern</td><td>Normal shoulder exam → get the ECG</td></tr>
-</tbody>
-</table>
-<h5>Maneuver → muscle</h5>
-<ul class="plain">
-<li><b>Empty can (Jobe)</b> → supraspinatus (abduction)</li>
-<li><b>Resisted external rotation</b> → infraspinatus / teres minor</li>
-<li><b>Resisted internal rotation</b> → subscapularis</li>
-<li><b>Drop arm</b> → full-thickness tear</li>
-</ul>
-<h5 class="authored-hdr">Scenario bank</h5>
-<ol class="bank authored">
-<li data-src="aquifer" data-type="dx" data-d1="Adhesive capsulitis" data-d2="Glenohumeral osteoarthritis" data-item-id="q_fb1d66628e9e5dbe8804" data-item-version="1" data-item-status="ready" data-key-id="o_9f45d5684f1f573b8894" data-d1-id="o_14723d11c389523287f4" data-d2-id="o_768e7511ad775ff0b1a9">58 yo M, painful arc, active abduction limited, passive abduction full → <b>Rotator cuff tendinopathy</b> → relative rest and physical therapy</li>
-<li data-src="authored" data-type="dx" data-d1="Rotator cuff tear" data-d2="Cuff tendinopathy" data-item-id="q_d437d76a43fe5cc195f2" data-item-version="1" data-item-status="ready" data-key-id="o_23bcceb6d8925c8388d1" data-d1-id="o_f4468ba5c0b05e319bcc" data-d2-id="o_51885d38dac95397a991">62 yo F with diabetes, both active and passive ROM lost in every plane → <b>Adhesive capsulitis</b></li>
-<li data-src="authored" data-type="dx" data-d1="Cuff tendinopathy" data-d2="Adhesive capsulitis" data-item-id="q_cf889d01eb9d5589b7ac" data-item-version="1" data-item-status="ready" data-key-id="o_455c5119258854478d78" data-d1-id="o_fe7f1330a69352b8b0e4" data-d2-id="o_1f2405a3aedf5fabb245">70 yo M cannot initiate abduction, positive drop-arm test → <b>Full-thickness rotator cuff tear</b> → MRI</li>
-<li data-src="authored" data-type="dx" data-d1="Adhesive capsulitis" data-d2="Rotator cuff tear" data-item-id="q_16ab9d19515c50b2bad3" data-item-version="1" data-item-status="ready" data-key-id="o_3c93522832bb5359925a" data-d1-id="o_7409f6a6a81d5a1da890" data-d2-id="o_a3cf22f1799b52ff8343">55 yo M, shoulder pain with fever, refuses all movement, effusion → <b>Septic arthritis</b> → aspirate before antibiotics</li>
-<li data-src="authored" data-type="dx" data-d1="Cuff tendinopathy" data-d2="Biceps tendinitis" data-item-id="q_485f9115660152fa90df" data-item-version="1" data-item-status="ready" data-key-id="o_f50eae64807650368974" data-d1-id="o_6f1da6ac3e8753eabba9" data-d2-id="o_58038f7f6a8f5cfbaa13">48 yo M, shoulder pain radiating below the elbow with thumb numbness → <b>C5–C6 radiculopathy</b></li>
-<li data-src="authored" data-type="dx" data-d1="Cuff tendinopathy" data-d2="Adhesive capsulitis" data-item-id="q_8ea463fa57525f9a88aa" data-item-version="1" data-item-status="ready" data-key-id="o_0a557668883a562d8622" data-d1-id="o_27b924082ca454e8b784" data-d2-id="o_71f4f1426d53571f9826">60 yo M, shoulder pain on exertion relieved by rest, with diaphoresis → <b>Referred cardiac pain</b> → ECG</li>
-<li data-src="authored" data-type="avoid" data-d1="Pendulum and active range-of-motion exercises" data-d2="A subacromial corticosteroid injection" data-item-id="q_b24432b9e91650af8cf0" data-item-version="1" data-item-status="ready" data-key-id="o_319a17b378ee5be1a619" data-d1-id="o_1a2b79c712665f9596bd" data-d2-id="o_acce1e320b155273981c">58 yo M given a sling for cuff tendinopathy, still wearing it at 3 weeks → <b>Continued sling immobilization</b> → this is how adhesive capsulitis follows a cuff problem</li>
-</ol>
-<div class="danger"><span class="lbl">Management ladder &amp; the sling trap</span>
-First-line is <b>relative rest + physical therapy</b> — strengthen the cuff and scapular stabilizers to open the subacromial space. "Rest" must never be communicated as <b>immobilize</b>: a sling causes atrophy and <b>adhesive capsulitis</b>, and slings are for dislocation and fracture only. No reflex MRI — X-ray only for trauma or failed therapy, and older adults have asymptomatic cuff tears on MRI. Subacromial steroid injection gives short-term relief only, and never through suspected infection.</div>
-<div class="pearls"><span class="lbl">Nerve one-liners</span> Anterior dislocation → <b>axillary nerve</b> (lateral deltoid numbness, weak abduction) · scapular winging → <b>long thoracic</b> · supraspinatus + infraspinatus atrophy → <b>suprascapular</b>.</div>
-<div class="rule"><span class="lbl">Transferable rule</span> The exam answer is usually the boring next rung: activity modification beats PT beats injection beats MRI beats surgery.</div>
 </div>
 
 <div class="brief" id="biceps" data-shelf="fm">
@@ -2238,8 +2245,52 @@ Fever → septic pathway · refuses to bear weight → Kocher climbs · <b>point
 </div>
 
 
+<div class="bsband aqband"><span class="n">1 brief</span><span class="lbl">Aquifer &middot; Case-Based Briefs</span><p class="t">Musculoskeletal &amp; Rheumatology</p></div>
+
+<div class="brief" id="shoulder-rom" data-shelf="fm" data-src="aquifer" data-case="FM 25">
+<h4>Shoulder Pain: the Range-of-Motion Rule</h4>
+<p class="sub">Aquifer FM 25 · rotator cuff · impingement</p>
+<div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 58 yo M, painful arc of motion, active abduction limited with passive abduction full &middot; <b>Q</b> &mdash; the most likely diagnosis; options spanned rotator cuff tendinopathy, adhesive capsulitis and glenohumeral osteoarthritis</div>
+<div class="dp"><span class="lbl">The decision point</span>
+<p>One rule sorts every shoulder stem: <b>active ROM lost with passive preserved = muscle/tendon</b> (rotator cuff tendinopathy or tear, biceps tendinitis, impingement). <b>Both active and passive lost = joint</b> (adhesive capsulitis, glenohumeral OA, septic joint). Then the maneuvers map one-to-one onto muscles.</p></div>
+<table><caption>Shoulder pain — the differential<span class='cap-sub'>sorted by the range-of-motion rule</span></caption>
+<thead><tr><th>Diagnosis</th><th>What is driving it</th><th>The NBME tell</th></tr></thead>
+<tbody>
+<tr><td>Cuff tendinopathy / impingement</td><td>Overhead use; painful arc; active ROM ↓ only</td><td><b>Empty can (Jobe) +</b>, Neer / Hawkins +</td></tr>
+<tr><td>Full-thickness cuff tear</td><td>Weakness &gt; pain; can't raise arm overhead</td><td><b>Drop arm +</b>; traumatic in young, degenerative in old</td></tr>
+<tr><td>Biceps tendinitis</td><td>Anterior pain, bicipital groove tenderness</td><td>Pain on <b>resisted flexion–supination</b></td></tr>
+<tr><td>Adhesive capsulitis</td><td>Active <b>and</b> passive ROM ↓; DM, hypothyroid</td><td><b>Follows immobilization</b> — the sling trap</td></tr>
+<tr><td>Glenohumeral OA</td><td>Active + passive ↓ + crepitus, older</td><td>Prior dislocation is the risk factor</td></tr>
+<tr><td>Septic arthritis / bursitis <span class="tag t-em">Emergency</span></td><td>Fever, red, swollen; IVDU, DM, RA</td><td><b>Aspirate first</b> — never blind antibiotics</td></tr>
+<tr><td>C5–C6 radiculopathy</td><td>Neck → shoulder pain, numbness</td><td><b>Shoulder exam NORMAL</b>; Spurling +</td></tr>
+<tr><td>Referred cardiac / diaphragmatic</td><td>Exertional or visceral pattern</td><td>Normal shoulder exam → get the ECG</td></tr>
+</tbody>
+</table>
+<h5>Maneuver → muscle</h5>
+<ul class="plain">
+<li><b>Empty can (Jobe)</b> → supraspinatus (abduction)</li>
+<li><b>Resisted external rotation</b> → infraspinatus / teres minor</li>
+<li><b>Resisted internal rotation</b> → subscapularis</li>
+<li><b>Drop arm</b> → full-thickness tear</li>
+</ul>
+<h5 class="authored-hdr">Scenario bank</h5>
+<ol class="bank authored">
+<li data-src="aquifer" data-type="dx" data-d1="Adhesive capsulitis" data-d2="Glenohumeral osteoarthritis" data-item-id="q_fb1d66628e9e5dbe8804" data-item-version="1" data-item-status="ready" data-key-id="o_9f45d5684f1f573b8894" data-d1-id="o_14723d11c389523287f4" data-d2-id="o_768e7511ad775ff0b1a9">58 yo M, painful arc, active abduction limited, passive abduction full → <b>Rotator cuff tendinopathy</b> → relative rest and physical therapy</li>
+<li data-src="authored" data-type="dx" data-d1="Rotator cuff tear" data-d2="Cuff tendinopathy" data-item-id="q_d437d76a43fe5cc195f2" data-item-version="1" data-item-status="ready" data-key-id="o_23bcceb6d8925c8388d1" data-d1-id="o_f4468ba5c0b05e319bcc" data-d2-id="o_51885d38dac95397a991">62 yo F with diabetes, both active and passive ROM lost in every plane → <b>Adhesive capsulitis</b></li>
+<li data-src="authored" data-type="dx" data-d1="Cuff tendinopathy" data-d2="Adhesive capsulitis" data-item-id="q_cf889d01eb9d5589b7ac" data-item-version="1" data-item-status="ready" data-key-id="o_455c5119258854478d78" data-d1-id="o_fe7f1330a69352b8b0e4" data-d2-id="o_1f2405a3aedf5fabb245">70 yo M cannot initiate abduction, positive drop-arm test → <b>Full-thickness rotator cuff tear</b> → MRI</li>
+<li data-src="authored" data-type="dx" data-d1="Adhesive capsulitis" data-d2="Rotator cuff tear" data-item-id="q_16ab9d19515c50b2bad3" data-item-version="1" data-item-status="ready" data-key-id="o_3c93522832bb5359925a" data-d1-id="o_7409f6a6a81d5a1da890" data-d2-id="o_a3cf22f1799b52ff8343">55 yo M, shoulder pain with fever, refuses all movement, effusion → <b>Septic arthritis</b> → aspirate before antibiotics</li>
+<li data-src="authored" data-type="dx" data-d1="Cuff tendinopathy" data-d2="Biceps tendinitis" data-item-id="q_485f9115660152fa90df" data-item-version="1" data-item-status="ready" data-key-id="o_f50eae64807650368974" data-d1-id="o_6f1da6ac3e8753eabba9" data-d2-id="o_58038f7f6a8f5cfbaa13">48 yo M, shoulder pain radiating below the elbow with thumb numbness → <b>C5–C6 radiculopathy</b></li>
+<li data-src="authored" data-type="dx" data-d1="Cuff tendinopathy" data-d2="Adhesive capsulitis" data-item-id="q_8ea463fa57525f9a88aa" data-item-version="1" data-item-status="ready" data-key-id="o_0a557668883a562d8622" data-d1-id="o_27b924082ca454e8b784" data-d2-id="o_71f4f1426d53571f9826">60 yo M, shoulder pain on exertion relieved by rest, with diaphoresis → <b>Referred cardiac pain</b> → ECG</li>
+<li data-src="authored" data-type="avoid" data-d1="Pendulum and active range-of-motion exercises" data-d2="A subacromial corticosteroid injection" data-item-id="q_b24432b9e91650af8cf0" data-item-version="1" data-item-status="ready" data-key-id="o_319a17b378ee5be1a619" data-d1-id="o_1a2b79c712665f9596bd" data-d2-id="o_acce1e320b155273981c">58 yo M given a sling for cuff tendinopathy, still wearing it at 3 weeks → <b>Continued sling immobilization</b> → this is how adhesive capsulitis follows a cuff problem</li>
+</ol>
+<div class="danger"><span class="lbl">Management ladder &amp; the sling trap</span>
+First-line is <b>relative rest + physical therapy</b> — strengthen the cuff and scapular stabilizers to open the subacromial space. "Rest" must never be communicated as <b>immobilize</b>: a sling causes atrophy and <b>adhesive capsulitis</b>, and slings are for dislocation and fracture only. No reflex MRI — X-ray only for trauma or failed therapy, and older adults have asymptomatic cuff tears on MRI. Subacromial steroid injection gives short-term relief only, and never through suspected infection.</div>
+<div class="pearls"><span class="lbl">Nerve one-liners</span> Anterior dislocation → <b>axillary nerve</b> (lateral deltoid numbness, weak abduction) · scapular winging → <b>long thoracic</b> · supraspinatus + infraspinatus atrophy → <b>suprascapular</b>.</div>
+<div class="rule"><span class="lbl">Transferable rule</span> The exam answer is usually the boring next rung: activity modification beats PT beats injection beats MRI beats surgery.</div>
+</div>
+
 <!-- =================== PEDS =================== -->
-<h3 class="system" id="peds">Pediatrics <span class="n">5 topics <span style="color:#9A5B0E">+ 6 board-style</span></span></h3>
+<h3 class="system" id="peds">Pediatrics <span class="n">5 topics <span style="color:#9A5B0E">+ 1 board-style</span> <span style="color:#1F6A7E">+ 5 Aquifer</span></span></h3>
 <p class="system-note">Growth, development and the general-paediatric board questions that belong to no single organ. Everything else paediatric is filed under its organ system and reachable from the <b>Pediatrics</b> shelf — age is a filter here, not a category.</p>
 
 <div class="brief" id="growth" data-shelf="fm peds" data-nid="1489890945884">
@@ -2461,7 +2512,51 @@ No social smile by <b>3 mo</b> · no babbling by <b>9 mo</b> · no words by <b>1
 
 <div class="bsband"><span class="n">6 briefs</span><span class="lbl">Board-Style &middot; Next-Step Questions</span><p class="t">Pediatrics</p></div>
 
-<div class="brief bs" id="bs-shock" data-shelf="peds" data-nid="1516475439058">
+<div class="brief bs" id="bs-learning" data-shelf="peds">
+<h4>Specific Learning Disorder</h4>
+<p class="sub">Behavior confined to school · UWorld · read the child's private interview</p>
+<div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 9 yo M, irritable and fighting at school since third grade began, with school refusal; privately reports classmates call him a baby because he counts on his fingers and reads slowly; behavior normal at home &middot; <b>Q</b> &mdash; the most likely diagnosis; options spanned specific learning disorder, attention deficit hyperactivity disorder, social anxiety disorder and oppositional defiant disorder</div>
+<div class="dp"><span class="lbl">The decision point</span>
+<p>The mother's history is the chief complaint; <b>the child's private disclosure is the diagnosis</b>. She describes irritability, a fight and school refusal; he says his classmates call him a baby because he counts on his fingers and reads slowly. Every behavioral option explains the noise, and only one explains the noise <b>and</b> the failing grades.</p>
+<p>Two structural signals seal it. Onset is anchored to an <b>academic transition</b> — third grade, where learning to read becomes reading to learn — and the symptoms are <b>confined to school</b>, with normal behavior at home.</p>
+</div>
+<div class="crit"><span class="lbl">Defining criteria</span> <b>Specific learning disorder</b> — achievement below intellectual potential in reading, writing or math for at least 6 months despite support &middot; <b>ADHD</b> — symptoms in at least 2 settings with onset before age 12, so school-only behavior excludes it &middot; <b>Disruptive mood dysregulation disorder</b> — severe outbursts at least 3 times weekly for at least 12 months with persistently irritable mood between them &middot; <b>Oppositional defiant disorder</b> — a pattern of defiance, argumentativeness and vindictiveness toward authority for at least 6 months &middot; <b>Social anxiety disorder</b> — fear of scrutiny across situations, and not diagnosed when better explained by another disorder</div>
+<table>
+<caption>The school-age child with behavior change — the differential</caption>
+<thead><tr><th>Diagnosis</th><th>Illness script</th><th>The NBME tell</th></tr></thead>
+<tbody>
+<tr><td><b>Specific learning disorder</b></td><td>Behavior downstream of an academic skill deficit</td><td>The child <b>names the deficit himself</b> when interviewed privately</td></tr>
+<tr><td>ADHD</td><td>Inattention and hyperactivity carried everywhere</td><td><b>School and home</b> both complain</td></tr>
+<tr><td>Disruptive mood dysregulation</td><td>Chronic angry mood between frequent outbursts</td><td><b>Outbursts three times weekly for a year</b>; explains no academic decline</td></tr>
+<tr><td>Oppositional defiant disorder</td><td>Defiance toward authority</td><td><b>Argumentative and vindictive</b>, not avoidant</td></tr>
+<tr><td>Social anxiety disorder</td><td>Fear of scrutiny generally</td><td>Fear of <b>eating, speaking or performing anywhere</b>, not only where a weakness shows</td></tr>
+<tr><td>Absence seizures</td><td>Brief lapses many times daily</td><td><b>Staring spells</b> provoked by hyperventilation</td></tr>
+<tr><td>Hearing or vision impairment</td><td>Sensory barrier misread as inattention</td><td><b>Sits close, turns the head, mishears</b></td></tr>
+</tbody>
+</table>
+<h5 class="authored-hdr">Scenario bank</h5>
+<ol class="bank authored">
+<li data-type="dx" data-src="uworld" data-d1="Attention deficit hyperactivity disorder" data-d2="Social anxiety disorder" data-item-id="q_f8be47793aab50ee9a2f" data-item-version="1" data-item-status="ready" data-key-id="o_fb8ff0dece2553d18069" data-d1-id="o_ce1bb2ec2d4c515e80a4" data-d2-id="o_5a38f606e402507fa6fe">9 yo M, irritable and fighting only at school since third grade began, reads slowly and counts on fingers, normal behavior at home &rarr; <b>Specific learning disorder</b> &rarr; educational testing</li>
+<li data-type="next" data-src="authored" data-d1="Start a stimulant trial" data-d2="Refer for cognitive behavioral therapy" data-item-id="q_332bfce4d26f50f38937" data-item-version="1" data-item-status="ready" data-key-id="o_c926deff5d9553c88832" data-d1-id="o_9abfa7a2e48a5824a4b8" data-d2-id="o_9153f4e36594510e8c1e">9 yo M with suspected specific learning disorder, initial evaluation &rarr; <b>Educational testing plus hearing and vision screening</b> &rarr; rule out psychiatric and medical causes</li>
+<li data-type="dx" data-src="authored" data-d1="Specific learning disorder" data-d2="Oppositional defiant disorder" data-item-id="q_a56f635d2ffd59fd9d73" data-item-version="1" data-item-status="ready" data-key-id="o_1e65a95c74755f3fb04e" data-d1-id="o_977ecd516c78570bad6a" data-d2-id="o_ce20d784d2735a9498bf">8 yo M, inattentive and disruptive at school and at home, loses things, since age 5 &rarr; <b>Attention deficit hyperactivity disorder</b></li>
+<li data-type="dx" data-src="authored" data-d1="Disruptive mood dysregulation disorder" data-d2="Conduct disorder" data-item-id="q_1d16f5c8e5e45c909c71" data-item-version="1" data-item-status="ready" data-key-id="o_20da6615ddbf54f99486" data-d1-id="o_f6e883379ba6529ca6f2" data-d2-id="o_33f45a3365a85e58828a">10 yo M, argumentative and vindictive with all adults for a year, grades normal &rarr; <b>Oppositional defiant disorder</b></li>
+<li data-type="dx" data-src="authored" data-d1="Oppositional defiant disorder" data-d2="Pediatric bipolar disorder" data-item-id="q_561337b4d8d754aa9ede" data-item-version="1" data-item-status="ready" data-key-id="o_69432e744c4f5ef49cbf" data-d1-id="o_4991c63b6b6a5f7dae75" data-d2-id="o_30707abdaf155b3a9391">9 yo F, severe temper outbursts 4 times weekly for 18 months, persistently angry between outbursts &rarr; <b>Disruptive mood dysregulation disorder</b></li>
+<li data-type="dx" data-src="authored" data-d1="Selective mutism" data-d2="Panic disorder" data-item-id="q_ad04c5ea9aff5ce2a367" data-item-version="1" data-item-status="ready" data-key-id="o_6ec165194eca540e9afa" data-d1-id="o_a482b8deca5456f389e8" data-d2-id="o_ae9e1f9bfce7594db7c2">12 yo F, fear of speaking or eating in front of others in every setting, blushing and trembling &rarr; <b>Social anxiety disorder</b></li>
+<li data-type="dx" data-src="authored" data-d1="Attention deficit hyperactivity disorder" data-d2="Specific learning disorder" data-item-id="q_9761c2286e8e554e8e6c" data-item-version="1" data-item-status="ready" data-key-id="o_fb2ebc9a82e05aa8a688" data-d1-id="o_52639832d5bd5f4c98c3" data-d2-id="o_8d18d3beb39e5dbfadac">7 yo F, brief staring spells many times daily, declining grades, provoked by hyperventilation &rarr; <b>Absence seizures</b> &rarr; electroencephalogram</li>
+<li data-type="dx" data-src="authored" data-d1="Attention deficit hyperactivity disorder" data-d2="Specific learning disorder" data-item-id="q_cab063e423b3513ea2f4" data-item-version="1" data-item-status="ready" data-key-id="o_400e117e596457798099" data-d1-id="o_53fa60aac71757fdbfac" data-d2-id="o_e6ebf637402d530da376">8 yo M, declining grades, turns his head to listen, frequently says what &rarr; <b>Hearing impairment</b> &rarr; audiology evaluation</li>
+<li data-type="dx" data-src="authored" data-d1="Truancy" data-d2="Social anxiety disorder" data-item-id="q_6973b7f5edde538f905b" data-item-version="1" data-item-status="ready" data-key-id="o_95316a095e5a51c9b5e3" data-d1-id="o_70c50e50024b58128a69" data-d2-id="o_97ad5532715e57659cc9">13 yo M refuses to attend school, stomachaches on school mornings that resolve on weekends &rarr; <b>School refusal</b></li>
+</ol>
+<div class="danger"><span class="lbl">Behavior is a symptom, not a diagnosis</span> Before naming a behavioral disorder in a school-age child, ask what the child is avoiding. <b>Learning disorder, hearing or vision loss, absence seizures, bullying and abuse</b> all present as acting out.</div>
+<div class="pearls"><span class="lbl">Pearls</span> Count the settings — behavior in one setting means something about that setting, in two or more it is a disorder the child carries &middot; Symptoms starting at a school transition point to an academic-demand mismatch rather than a primary mood disorder &middot; Early intervention improves self-esteem and social skills as well as grades &middot; Social anxiety is explicitly not diagnosed when the avoidance is better explained by another disorder</div>
+<div class="pearls"><span class="lbl">Pairs with</span> Candidate twin — confirm. This brief wants a partner on ADHD diagnosis and stimulant management, which the page does not yet carry.</div>
+<div class="rule"><span class="lbl">Transferable rule</span> In a pediatric behavior stem the parent's history is the chief complaint and the child's private disclosure is the diagnosis, so when a stem bothers to write that the child was interviewed privately, that sentence is the answer.</div>
+<div class="traps"><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Social anxiety is a real disorder whose own criterion excludes it when another disorder explains the avoidance.</span></div><div class="trapline"><span class="pill p-mirror">Mirror twin</span><span class="trapwhy">Oppositional defiant disorder is the defiant version of the same complaint; he is avoidant.</span></div></div>
+</div>
+
+
+<div class="bsband aqband"><span class="n">5 briefs</span><span class="lbl">Aquifer &middot; Case-Based Briefs</span><p class="t">Pediatrics</p></div>
+
+<div class="brief bs" id="bs-shock" data-shelf="peds" data-nid="1516475439058" data-src="aquifer">
 <h4>Shock in Children</h4>
 <p class="sub">The category is the mechanism, not the appearance · Aquifer · perfusion before pressure</p>
 <div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 4 yo F, fever to 40 C, petechial rash, obtundation, capillary refill 4 seconds, no response to three fluid boluses; no blood pressure reported &middot; <b>Q</b> &mdash; the category of shock; options spanned distributive, cardiogenic, hypovolemic and obstructive</div>
@@ -2511,48 +2606,7 @@ No social smile by <b>3 mo</b> · no babbling by <b>9 mo</b> · no words by <b>1
 <div class="traps"><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Fluid refractoriness in sepsis reflects leak and vasodilation, not pump failure.</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Anaphylaxis is the right class with the wrong member — no exposure, no urticaria.</span></div></div>
 </div>
 
-<div class="brief bs" id="bs-learning" data-shelf="peds">
-<h4>Specific Learning Disorder</h4>
-<p class="sub">Behavior confined to school · UWorld · read the child's private interview</p>
-<div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 9 yo M, irritable and fighting at school since third grade began, with school refusal; privately reports classmates call him a baby because he counts on his fingers and reads slowly; behavior normal at home &middot; <b>Q</b> &mdash; the most likely diagnosis; options spanned specific learning disorder, attention deficit hyperactivity disorder, social anxiety disorder and oppositional defiant disorder</div>
-<div class="dp"><span class="lbl">The decision point</span>
-<p>The mother's history is the chief complaint; <b>the child's private disclosure is the diagnosis</b>. She describes irritability, a fight and school refusal; he says his classmates call him a baby because he counts on his fingers and reads slowly. Every behavioral option explains the noise, and only one explains the noise <b>and</b> the failing grades.</p>
-<p>Two structural signals seal it. Onset is anchored to an <b>academic transition</b> — third grade, where learning to read becomes reading to learn — and the symptoms are <b>confined to school</b>, with normal behavior at home.</p>
-</div>
-<div class="crit"><span class="lbl">Defining criteria</span> <b>Specific learning disorder</b> — achievement below intellectual potential in reading, writing or math for at least 6 months despite support &middot; <b>ADHD</b> — symptoms in at least 2 settings with onset before age 12, so school-only behavior excludes it &middot; <b>Disruptive mood dysregulation disorder</b> — severe outbursts at least 3 times weekly for at least 12 months with persistently irritable mood between them &middot; <b>Oppositional defiant disorder</b> — a pattern of defiance, argumentativeness and vindictiveness toward authority for at least 6 months &middot; <b>Social anxiety disorder</b> — fear of scrutiny across situations, and not diagnosed when better explained by another disorder</div>
-<table>
-<caption>The school-age child with behavior change — the differential</caption>
-<thead><tr><th>Diagnosis</th><th>Illness script</th><th>The NBME tell</th></tr></thead>
-<tbody>
-<tr><td><b>Specific learning disorder</b></td><td>Behavior downstream of an academic skill deficit</td><td>The child <b>names the deficit himself</b> when interviewed privately</td></tr>
-<tr><td>ADHD</td><td>Inattention and hyperactivity carried everywhere</td><td><b>School and home</b> both complain</td></tr>
-<tr><td>Disruptive mood dysregulation</td><td>Chronic angry mood between frequent outbursts</td><td><b>Outbursts three times weekly for a year</b>; explains no academic decline</td></tr>
-<tr><td>Oppositional defiant disorder</td><td>Defiance toward authority</td><td><b>Argumentative and vindictive</b>, not avoidant</td></tr>
-<tr><td>Social anxiety disorder</td><td>Fear of scrutiny generally</td><td>Fear of <b>eating, speaking or performing anywhere</b>, not only where a weakness shows</td></tr>
-<tr><td>Absence seizures</td><td>Brief lapses many times daily</td><td><b>Staring spells</b> provoked by hyperventilation</td></tr>
-<tr><td>Hearing or vision impairment</td><td>Sensory barrier misread as inattention</td><td><b>Sits close, turns the head, mishears</b></td></tr>
-</tbody>
-</table>
-<h5 class="authored-hdr">Scenario bank</h5>
-<ol class="bank authored">
-<li data-type="dx" data-src="uworld" data-d1="Attention deficit hyperactivity disorder" data-d2="Social anxiety disorder" data-item-id="q_f8be47793aab50ee9a2f" data-item-version="1" data-item-status="ready" data-key-id="o_fb8ff0dece2553d18069" data-d1-id="o_ce1bb2ec2d4c515e80a4" data-d2-id="o_5a38f606e402507fa6fe">9 yo M, irritable and fighting only at school since third grade began, reads slowly and counts on fingers, normal behavior at home &rarr; <b>Specific learning disorder</b> &rarr; educational testing</li>
-<li data-type="next" data-src="authored" data-d1="Start a stimulant trial" data-d2="Refer for cognitive behavioral therapy" data-item-id="q_332bfce4d26f50f38937" data-item-version="1" data-item-status="ready" data-key-id="o_c926deff5d9553c88832" data-d1-id="o_9abfa7a2e48a5824a4b8" data-d2-id="o_9153f4e36594510e8c1e">9 yo M with suspected specific learning disorder, initial evaluation &rarr; <b>Educational testing plus hearing and vision screening</b> &rarr; rule out psychiatric and medical causes</li>
-<li data-type="dx" data-src="authored" data-d1="Specific learning disorder" data-d2="Oppositional defiant disorder" data-item-id="q_a56f635d2ffd59fd9d73" data-item-version="1" data-item-status="ready" data-key-id="o_1e65a95c74755f3fb04e" data-d1-id="o_977ecd516c78570bad6a" data-d2-id="o_ce20d784d2735a9498bf">8 yo M, inattentive and disruptive at school and at home, loses things, since age 5 &rarr; <b>Attention deficit hyperactivity disorder</b></li>
-<li data-type="dx" data-src="authored" data-d1="Disruptive mood dysregulation disorder" data-d2="Conduct disorder" data-item-id="q_1d16f5c8e5e45c909c71" data-item-version="1" data-item-status="ready" data-key-id="o_20da6615ddbf54f99486" data-d1-id="o_f6e883379ba6529ca6f2" data-d2-id="o_33f45a3365a85e58828a">10 yo M, argumentative and vindictive with all adults for a year, grades normal &rarr; <b>Oppositional defiant disorder</b></li>
-<li data-type="dx" data-src="authored" data-d1="Oppositional defiant disorder" data-d2="Pediatric bipolar disorder" data-item-id="q_561337b4d8d754aa9ede" data-item-version="1" data-item-status="ready" data-key-id="o_69432e744c4f5ef49cbf" data-d1-id="o_4991c63b6b6a5f7dae75" data-d2-id="o_30707abdaf155b3a9391">9 yo F, severe temper outbursts 4 times weekly for 18 months, persistently angry between outbursts &rarr; <b>Disruptive mood dysregulation disorder</b></li>
-<li data-type="dx" data-src="authored" data-d1="Selective mutism" data-d2="Panic disorder" data-item-id="q_ad04c5ea9aff5ce2a367" data-item-version="1" data-item-status="ready" data-key-id="o_6ec165194eca540e9afa" data-d1-id="o_a482b8deca5456f389e8" data-d2-id="o_ae9e1f9bfce7594db7c2">12 yo F, fear of speaking or eating in front of others in every setting, blushing and trembling &rarr; <b>Social anxiety disorder</b></li>
-<li data-type="dx" data-src="authored" data-d1="Attention deficit hyperactivity disorder" data-d2="Specific learning disorder" data-item-id="q_9761c2286e8e554e8e6c" data-item-version="1" data-item-status="ready" data-key-id="o_fb2ebc9a82e05aa8a688" data-d1-id="o_52639832d5bd5f4c98c3" data-d2-id="o_8d18d3beb39e5dbfadac">7 yo F, brief staring spells many times daily, declining grades, provoked by hyperventilation &rarr; <b>Absence seizures</b> &rarr; electroencephalogram</li>
-<li data-type="dx" data-src="authored" data-d1="Attention deficit hyperactivity disorder" data-d2="Specific learning disorder" data-item-id="q_cab063e423b3513ea2f4" data-item-version="1" data-item-status="ready" data-key-id="o_400e117e596457798099" data-d1-id="o_53fa60aac71757fdbfac" data-d2-id="o_e6ebf637402d530da376">8 yo M, declining grades, turns his head to listen, frequently says what &rarr; <b>Hearing impairment</b> &rarr; audiology evaluation</li>
-<li data-type="dx" data-src="authored" data-d1="Truancy" data-d2="Social anxiety disorder" data-item-id="q_6973b7f5edde538f905b" data-item-version="1" data-item-status="ready" data-key-id="o_95316a095e5a51c9b5e3" data-d1-id="o_70c50e50024b58128a69" data-d2-id="o_97ad5532715e57659cc9">13 yo M refuses to attend school, stomachaches on school mornings that resolve on weekends &rarr; <b>School refusal</b></li>
-</ol>
-<div class="danger"><span class="lbl">Behavior is a symptom, not a diagnosis</span> Before naming a behavioral disorder in a school-age child, ask what the child is avoiding. <b>Learning disorder, hearing or vision loss, absence seizures, bullying and abuse</b> all present as acting out.</div>
-<div class="pearls"><span class="lbl">Pearls</span> Count the settings — behavior in one setting means something about that setting, in two or more it is a disorder the child carries &middot; Symptoms starting at a school transition point to an academic-demand mismatch rather than a primary mood disorder &middot; Early intervention improves self-esteem and social skills as well as grades &middot; Social anxiety is explicitly not diagnosed when the avoidance is better explained by another disorder</div>
-<div class="pearls"><span class="lbl">Pairs with</span> Candidate twin — confirm. This brief wants a partner on ADHD diagnosis and stimulant management, which the page does not yet carry.</div>
-<div class="rule"><span class="lbl">Transferable rule</span> In a pediatric behavior stem the parent's history is the chief complaint and the child's private disclosure is the diagnosis, so when a stem bothers to write that the child was interviewed privately, that sentence is the answer.</div>
-<div class="traps"><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Social anxiety is a real disorder whose own criterion excludes it when another disorder explains the avoidance.</span></div><div class="trapline"><span class="pill p-mirror">Mirror twin</span><span class="trapwhy">Oppositional defiant disorder is the defiant version of the same complaint; he is avoidant.</span></div></div>
-</div>
-
-<div class="brief bs" id="bs-infant-feeding" data-shelf="fm peds">
+<div class="brief bs" id="bs-infant-feeding" data-shelf="fm peds" data-src="aquifer">
 <h4>Infant Feeding at Six Months</h4>
 <p class="sub">The answer is an age gate · Aquifer · iron first, then variety</p>
 <div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 6 mo F, term, taking breast milk, formula and iron-fortified cereal, weight 75th and length 60th percentile, normal examination &middot; <b>Q</b> &mdash; the most appropriate next feeding step; options spanned pureed vegetables and fruit, finger foods, whole milk and continued exclusive breastfeeding</div>
@@ -2591,7 +2645,7 @@ No social smile by <b>3 mo</b> · no babbling by <b>9 mo</b> · no words by <b>1
 <div class="traps"><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Finger foods and whole milk are right interventions at the wrong age.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Exclusive breastfeeding is recommended through 6 months and not beyond.</span></div></div>
 </div>
 
-<div class="brief bs" id="bs-tanner" data-shelf="fm peds">
+<div class="brief bs" id="bs-tanner" data-shelf="fm peds" data-src="aquifer">
 <h4>Sexual Maturity Rating</h4>
 <p class="sub">One contour or two · Aquifer · the phrase appears in exactly one stage</p>
 <div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 12 yo F, breast tissue extending beyond the areola without a separate contour, pubic hair curled and spread partially across the pubis &middot; <b>Q</b> &mdash; the sexual maturity rating; options spanned Tanner stages 2 through 5</div>
@@ -2630,7 +2684,7 @@ No social smile by <b>3 mo</b> · no babbling by <b>9 mo</b> · no words by <b>1
 <div class="traps"><div class="trapline"><span class="pill p-mirror">Mirror twin</span><span class="trapwhy">Stage 4 is the adjacent stage defined by the one feature the stem explicitly negates.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Enlarged areolas appear in the stage 2 description but stage 2 hair is straight.</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Stage 5 requires the areola to recede and hair to reach the thighs.</span></div></div>
 </div>
 
-<div class="brief bs" id="bs-ftt" data-shelf="fm peds">
+<div class="brief bs" id="bs-ftt" data-shelf="fm peds" data-src="aquifer">
 <h4>Faltering Weight</h4>
 <p class="sub">The parameter pattern names the cause · Aquifer · weight, then length, then head</p>
 <div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 15 mo M, weight 2nd percentile, length 30th, head circumference 40th, active and eating well, normal examination &middot; <b>Q</b> &mdash; the most likely cause; options spanned inadequate caloric intake, cystic fibrosis and congenital heart disease</div>
@@ -2670,7 +2724,7 @@ No social smile by <b>3 mo</b> · no babbling by <b>9 mo</b> · no words by <b>1
 <div class="traps"><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Congenital heart disease limits feeding-related activity; he keeps up with peers.</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Renal causes impair linear growth too, and his length is preserved.</span></div></div>
 </div>
 
-<div class="brief bs" id="bs-preterm-followup" data-shelf="fm peds" data-nid="1517063590444 1513203369207 1519263391528">
+<div class="brief bs" id="bs-preterm-followup" data-shelf="fm peds" data-nid="1517063590444 1513203369207 1519263391528" data-src="aquifer">
 <h4>Prematurity Follow-Up and Corrected Age</h4>
 <p class="sub">Correct the age, then read the chart · Aquifer · a percentile is a position, not a pathology</p>
 <div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 18 mo F, former 26-week preterm infant, just walking, 10 words, imitates and scribbles; height, weight and head circumference all at the 15th percentile &middot; <b>Q</b> &mdash; the most likely assessment; options spanned normal growth and development for corrected age, global developmental delay and failure to thrive</div>
@@ -2722,9 +2776,8 @@ No social smile by <b>3 mo</b> · no babbling by <b>9 mo</b> · no words by <b>1
 <div class="traps"><div class="trapline"><span class="pill p-uniform">Uniform-answer doubt</span><span class="trapwhy">Declining to assess is not caution; correction exists to make the assessment possible.</span></div><div class="trapline"><span class="pill p-number">Treat-the-number</span><span class="trapwhy">The 15th percentile sounds low only against an unexamined assumption that normal means the 50th.</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Global delay is the right framework judged against the wrong age.</span></div></div>
 </div>
 
-
 <!-- =================== CV =================== -->
-<h3 class="system" id="cv">Cardiovascular <span class="n">15 topics <span style="color:#9A5B0E">+ 2 board-style</span></span></h3>
+<h3 class="system" id="cv">Cardiovascular <span class="n">15 topics <span style="color:#9A5B0E">+ 1 board-style</span> <span style="color:#1F6A7E">+ 1 Aquifer</span></span></h3>
 <p class="system-note">This system is where "treat the number" lives. Almost every miss here comes from medicating an abnormal lab instead of the outcome named in the question.</p>
 
 <div class="brief" id="chf" data-shelf="fm">
@@ -3418,7 +3471,10 @@ The <b>2021 AHA/ACC Chest Pain Guideline discourages "typical / atypical / nonan
 <div class="traps"><div class="trapline"><span class="pill p-mirror">Mirror twin</span><span class="trapwhy">Aortic regurgitation is the other tenant of the same arm, right shape and wrong side.</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Tricuspid regurgitation is the right side with the wrong phase.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Atrial septal defect gives fixed splitting; the stem says single.</span></div></div>
 </div>
 
-<div class="brief bs" id="bs-shunt-timing" data-shelf="peds" data-nid="1471558927589 1476733477668">
+
+<div class="bsband aqband"><span class="n">1 brief</span><span class="lbl">Aquifer &middot; Case-Based Briefs</span><p class="t">Cardiovascular</p></div>
+
+<div class="brief bs" id="bs-shunt-timing" data-shelf="peds" data-nid="1471558927589 1476733477668" data-src="aquifer">
 <h4>Congenital Shunts and the Transitional Clock</h4>
 <p class="sub">Falling resistance opens the gradient · Aquifer · weeks for shunts, days for the ductus</p>
 <div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 5 wk old, acyanotic and tachypneic, holosystolic murmur at the left lower sternal border that was absent on the newborn examination &middot; <b>Q</b> &mdash; why the murmur appears now; options spanned falling pulmonary vascular resistance, ductal closure and rising pulmonary artery pressure</div>
@@ -3460,9 +3516,8 @@ The <b>2021 AHA/ACC Chest Pain Guideline discourages "typical / atypical / nonan
 <div class="traps"><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Ductal closure removes a continuous infraclavicular murmur; it cannot create a holosystolic one.</span></div><div class="trapline"><span class="pill p-trump">Trump-card inversion</span><span class="trapwhy">Rising pulmonary pressure is the opposite direction and would soften the murmur.</span></div></div>
 </div>
 
-
 <!-- =================== PULM =================== -->
-<h3 class="system" id="pulm">Pulmonary <span class="n">14 topics <span style="color:#9A5B0E">+ 1 board-style</span></span></h3>
+<h3 class="system" id="pulm">Pulmonary <span class="n">14 topics <span style="color:#1F6A7E">+ 1 Aquifer</span></span></h3>
 <p class="system-note">Occupational and exposure histories dominate here — and they are as often bait as they are the answer. Check the lobe and the pleura before trusting the resume.</p>
 
 <div class="brief" id="copd" data-shelf="fm">
@@ -3980,9 +4035,10 @@ A saturation of <b>89%</b> <i>fails</i> the standard threshold by one point — 
 </div>
 </div>
 
-<div class="bsband"><span class="n">1 brief</span><span class="lbl">Board-Style &middot; Next-Step Questions</span><p class="t">Pulmonary</p></div>
 
-<div class="brief bs" id="bs-nrd" data-shelf="peds" data-nid="1473707426029 1473707526525 1473707568629 1473707606392 1539182192967 1574143742891 1486831385390">
+<div class="bsband aqband"><span class="n">1 brief</span><span class="lbl">Aquifer &middot; Case-Based Briefs</span><p class="t">Pulmonary</p></div>
+
+<div class="brief bs" id="bs-nrd" data-shelf="peds" data-nid="1473707426029 1473707526525 1473707568629 1473707606392 1539182192967 1574143742891 1486831385390" data-src="aquifer">
 <h4>Neonatal Respiratory Distress</h4>
 <p class="sub">Fluid in the fissures · Aquifer · four stem facts settle it before pathophysiology</p>
 <div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 1 h old term M, cesarean delivery at 40 weeks without labor, birth weight 4200 g, RR 80, saturation 88% on room air correcting to 98% with supplemental oxygen &middot; <b>Imaging</b> &mdash; fluid in the interlobar fissures &middot; <b>Q</b> &mdash; the most likely diagnosis; options spanned transient tachypnea of the newborn, respiratory distress syndrome and group B streptococcal pneumonia</div>
@@ -4030,7 +4086,6 @@ A saturation of <b>89%</b> <i>fails</i> the standard threshold by one point — 
 <div class="rule"><span class="lbl">Transferable rule</span> Four stem facts decide neonatal respiratory distress before any pathophysiology — gestational age, whether labor occurred, when the distress began, and what the film shows — and then the oxygen response separates lung disease from shunt.</div>
 <div class="traps"><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Respiratory distress syndrome is the right category of neonatal lung disease but a preterm member.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Group B strep needs risk factors the stem never supplies.</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Prostaglandin is the right class of answer for a cyanotic newborn, but a diaphragmatic hernia's cyanosis comes from hypoplastic lungs and pulmonary hypertension, not from a closing duct.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Diaphragmatic hernia presents at delivery with a scaphoid abdomen, not at an hour with fissural fluid.</span></div></div>
 </div>
-
 
 <!-- =================== GI =================== -->
 <h3 class="system" id="gi">Gastroenterology &amp; Hepatology <span class="n">14 topics <span style="color:#9A5B0E">+ 3 board-style</span></span></h3>
@@ -6305,7 +6360,7 @@ The bank's list says "family history of hip fracture." <b>FRAX asks specifically
 
 
 <!-- =================== ID =================== -->
-<h3 class="system" id="id">Infectious Disease <span class="n">10 topics <span style="color:#9A5B0E">+ 4 board-style</span></span></h3>
+<h3 class="system" id="id">Infectious Disease <span class="n">10 topics <span style="color:#9A5B0E">+ 3 board-style</span> <span style="color:#1F6A7E">+ 1 Aquifer</span></span></h3>
 <p class="system-note">Screening thresholds, drug toxicities, and sequencing. Isolation precedes medication; aspiration precedes antibiotics.</p>
 
 <div class="brief" id="tb" data-shelf="fm">
@@ -6784,46 +6839,6 @@ The bank's list says "family history of hip fracture." <b>FRAX asks specifically
 <div class="traps"><div class="trapline"><span class="pill p-seq">Sequencing trap</span><span class="trapwhy">Imaging before drainage in a clinically obvious abscess.</span></div><div class="trapline"><span class="pill p-mirror">Mirror twin</span><span class="trapwhy">Retropharyngeal abscess is the younger child's version, separated by extension versus trismus.</span></div></div>
 </div>
 
-<div class="brief bs" id="bs-febrile-infant" data-shelf="peds">
-<h4>The Febrile Infant — Finding the Source</h4>
-<p class="sub">Paradoxical irritability · Aquifer · every stem negative is an eliminated source</p>
-<div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 7 mo M, fever 39.5 C, lies quietly when undisturbed and cries violently when picked up &middot; <b>Labs</b> &mdash; WBC 16,000 with 83% neutrophils; urine dipstick negative on a concentrated specimen &middot; <b>Q</b> &mdash; the most appropriate test; options spanned lumbar puncture, abdominal ultrasonography and stool PCR</div>
-<div class="dp"><span class="lbl">The decision point</span>
-<p>One sentence in the physical examination is the whole question: <b>he is calm when left alone and screams when picked up</b>. That is <b>paradoxical irritability</b> — handling stretches inflamed meninges, so being comforted makes an infant worse. It is the meningeal sign of infancy, and it exists because nuchal rigidity, Kernig and Brudzinski are unreliable under roughly 12 to 18 months.</p>
-<p>Everything else in the stem is a negative that closes an alternative source. No cough or rhinorrhea closes the respiratory branch. A negative leukocyte esterase and nitrite in urine <b>concentrated to a specific gravity of 1.030</b> closes the urinary branch — concentration is what makes the negative trustworthy. When the sources are eliminated one by one and a meningeal sign remains, the answer is the lumbar puncture.</p>
-</div>
-<div class="crit"><span class="lbl">Defining criteria</span> <b>Paradoxical irritability</b> — quiet when undisturbed, crying on being picked up or moved &middot; <b>Fever without a source</b> — documented fever with no localising findings after history and examination &middot; <b>Dipstick sensitivity</b> — leukocyte esterase about 83%, nitrite about 53%; both negative in concentrated urine is genuinely reassuring</div>
-<table>
-<caption>The toxic febrile infant — where is the source</caption>
-<thead><tr><th>Diagnosis</th><th>Illness script</th><th>The NBME tell</th></tr></thead>
-<tbody>
-<tr><td><b>Bacterial meningitis</b></td><td>Any age; infants show no neck signs</td><td><b>Paradoxical irritability</b>, bulging fontanelle, high-pitched cry</td></tr>
-<tr><td>Intussusception</td><td>6 to 36 months, ileocolic, often post-viral</td><td><b>Paroxysmal</b> crying with pain-free intervals, sausage mass, currant-jelly stool</td></tr>
-<tr><td>Urinary tract infection</td><td>The commonest serious bacterial infection in febrile infants</td><td><b>Positive leukocyte esterase or nitrite</b> with pyuria</td></tr>
-<tr><td>Bacterial gastroenteritis</td><td>High fever with cramping</td><td><b>Bloody or mucoid stools</b>, many per day, sick contacts</td></tr>
-<tr><td>Viral respiratory infection</td><td>Cough, congestion, coryza</td><td><b>Rhinorrhea and cough</b>, both explicitly absent here</td></tr>
-<tr><td>Occult bacteremia or pneumonia</td><td>Fever with leukocytosis, no localising sign</td><td><b>Tachypnea with hypoxia</b> or focal crackles, not fever-driven tachypnea alone</td></tr>
-</tbody>
-</table>
-<h5 class="authored-hdr">Scenario bank</h5>
-<ol class="bank authored">
-<li data-type="test" data-src="aquifer" data-d1="Abdominal ultrasound" data-d2="Stool PCR for enteric pathogens" data-item-id="q_150104cfe1a75c3ab396" data-item-version="1" data-item-status="ready" data-key-id="o_0e33cebe5df25159b943" data-d1-id="o_035154fbccc059ffae28" data-d2-id="o_84e75bff584855fcaef4">7 mo M, fever 39.5, lies quietly when undisturbed and cries violently when picked up, WBC 16,000 with 83% neutrophils, urine dipstick negative in concentrated urine &rarr; <b>Lumbar puncture for Gram stain and culture</b> &rarr; bacterial meningitis</li>
-<li data-type="test" data-src="authored" data-d1="Lumbar puncture" data-d2="Abdominal radiograph alone" data-item-id="q_88d9503b847d50119a93" data-item-version="1" data-item-status="ready" data-key-id="o_f30cae1469c658128109" data-d1-id="o_3008d0620885547cbc60" data-d2-id="o_febce09162b65ee3a0bd">9 mo M with paroxysmal crying and legs drawn up, calm between episodes, lethargic, sausage-shaped right upper quadrant mass &rarr; <b>Abdominal ultrasound</b> &rarr; intussusception</li>
-<li data-type="next" data-src="authored" data-d1="Lumbar puncture" data-d2="Observation and recheck in 24 hours" data-item-id="q_f6a06578aaa35a888053" data-item-version="1" data-item-status="ready" data-key-id="o_f1356e9c1bfa5eaeb7d1" data-d1-id="o_4cccb2cefce5593d91f4" data-d2-id="o_cd0ca5832dc3546fb120">8 mo F, fever 39.2, no localising findings, urine dipstick positive for leukocyte esterase &rarr; <b>Urine culture and empiric antibiotics</b> &rarr; urinary tract infection</li>
-<li data-type="test" data-src="authored" data-d1="Wait and perform the lumbar puncture first" data-d2="Defer antibiotics until culture results return" data-item-id="q_2a3f80a416795ff0b04b" data-item-version="1" data-item-status="ready" data-key-id="o_4fdad56fa9695c6bba9c" data-d1-id="o_6f2e22031093575b9f38" data-d2-id="o_1b40009a8e0b5279ade4">6 mo M with suspected meningitis in whom lumbar puncture will be delayed an hour &rarr; <b>Give empiric antibiotics now and perform the lumbar puncture after</b> &rarr; a sterilized Gram stain is an acceptable trade</li>
-<li data-type="next" data-src="authored" data-d1="Urinalysis and urine culture only" data-d2="Discharge with follow-up in 24 hours" data-item-id="q_9d17d54172e2593fa199" data-item-version="1" data-item-status="ready" data-key-id="o_c9d8a7915f6555fcaacc" data-d1-id="o_487b09c2b3a45052af9c" data-d2-id="o_c816f20e4ef257e48a11">3 wk old F with a temperature of 38.4 C, well-appearing, with no identified source &rarr; <b>Full evaluation including lumbar puncture, admission and empiric antibiotics</b> &rarr; under 28 days, well appearance does not reassure</li>
-<li data-type="dx" data-src="authored" data-d1="Intussusception" data-d2="Roseola infantum" data-item-id="q_ea14763c4b2b52bd86e1" data-item-version="1" data-item-status="ready" data-key-id="o_9b3ee2f09ec4568b83b7" data-d1-id="o_1e098670af925a3c8e79" data-d2-id="o_8f851bb95417513ca5d4">10 mo M with fever, irritability, a bulging anterior fontanelle and a high-pitched cry &rarr; <b>Bacterial meningitis</b> &rarr; neuroimaging only if focal signs are present</li>
-<li data-type="dx" data-src="authored" data-d1="Measles" data-d2="Bacterial meningitis" data-item-id="q_7041d6f50eba528cbeb4" data-item-version="1" data-item-status="ready" data-key-id="o_d1de615995ad55b2b23a" data-d1-id="o_f0d209c49641513a9fda" data-d2-id="o_d2cb877aa4c65969ab94">7 mo M with 3 days of fever to 39 C, then defervescence followed by a blanching rose-pink truncal rash &rarr; <b>Roseola infantum</b> &rarr; human herpesvirus 6, no testing needed</li>
-<li data-type="test" data-src="authored" data-d1="Immediate lumbar puncture" data-d2="MRI of the brain" data-item-id="q_64c870e848915d3ab7dc" data-item-version="1" data-item-status="ready" data-key-id="o_3629f2c8bbd95508aa61" data-d1-id="o_98947a4bf4f45ee8867e" data-d2-id="o_6ce4c685e4c156d8b498">12 mo F with suspected meningitis, papilledema and a new focal neurologic deficit &rarr; <b>Head CT before lumbar puncture</b> &rarr; antibiotics first, then CT, then LP</li>
-<li data-type="avoid" data-src="authored" data-d1="Obtaining blood cultures" data-d2="Giving intravenous fluids" data-item-id="q_271dda6abd5a56149a2e" data-item-version="1" data-item-status="ready" data-key-id="o_22cf1e98bed256feaff9" data-d1-id="o_36c3a50c4db653b293f0" data-d2-id="o_c0b13c897d5455469dc0">8 mo M with fever, petechiae and hypotension &rarr; <b>Delaying antibiotics to complete the lumbar puncture</b> &rarr; treat first, tap after</li>
-</ol>
-<div class="danger"><span class="lbl">Sequence and its exceptions</span> Head CT precedes lumbar puncture only for <b>focal deficits, papilledema, altered consciousness or immunocompromise</b> — and <b>antibiotics precede the CT</b>, not the other way round. In an <b>infant with an open fontanelle the requirement is generally suspended</b>: the fontanelle decompresses rising pressure, so tap without imaging first. Under 28 days a well appearance does not reassure: full evaluation, admission and empiric antibiotics regardless. Empiric coverage beyond the neonatal period is <b>ceftriaxone plus vancomycin</b>; neonates get ampicillin plus cefotaxime or gentamicin to cover Listeria.</div>
-<div class="pearls"><span class="lbl">Pearls</span> Nuchal rigidity, Kernig and Brudzinski are unreliable in infants; look for paradoxical irritability, a bulging fontanelle and a high-pitched cry &middot; A dipstick is a screen, not a rule-out — nitrite is insensitive because infant bladder transit is too short for nitrate reduction &middot; Loose stools and mild tachypnea are nonspecific systemic responses in a septic infant, not localising findings &middot; Dexamethasone with or before the first antibiotic dose reduces hearing loss in Haemophilus influenzae type b meningitis</div>
-<div class="pearls"><span class="lbl">Pairs with</span> Part I <b>Bacterial Meningitis</b> owns the CSF grid, so this brief stops at the decision to tap. Store the link as a question: am I deciding whether to tap, or reading the fluid? Part I <b>Seizure with Fever in a Child</b> owns what a seizure adds to the decision to tap. Part II <b>Neonatal Sepsis and Its Mimics</b> owns the afebrile neonate whose lab is the only sign; store the discriminator: <i>is the infant febrile, or is the WBC the decider?</i></div>
-<div class="rule"><span class="lbl">Transferable rule</span> When the options are tests, name the disease first and let the test follow, and in a febrile infant do it by elimination, because every negative the stem supplies is an eliminated source and the diagnosis is whatever survives.</div>
-<div class="traps"><div class="trapline"><span class="pill p-mirror">Mirror twin</span><span class="trapwhy">Intussusception is the other inconsolable-infant diagnosis, but its crying is paroxysmal with calm intervals.</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Urine culture is the right class of test on the wrong fluid.</span></div><div class="trapline"><span class="pill p-salient">Salient decoy</span><span class="trapwhy">Three loose stools cannot produce a fever of 39.5 with 83% neutrophils.</span></div></div>
-</div>
-
 <div class="brief bs" id="bs-torch" data-shelf="peds" data-nid="1509812407208 1509812483336 1509812536651 1556499105068 1516239955276 1517172175727">
 <h4>Congenital CMV and the TORCH Discriminations</h4>
 <p class="sub">Periventricular calcifications · UWorld · organism first, then its signature sequela</p>
@@ -6918,8 +6933,50 @@ The bank's list says "family history of hip fracture." <b>FRAX asks specifically
 </div>
 
 
+<div class="bsband aqband"><span class="n">1 brief</span><span class="lbl">Aquifer &middot; Case-Based Briefs</span><p class="t">Infectious Disease</p></div>
+
+<div class="brief bs" id="bs-febrile-infant" data-shelf="peds" data-src="aquifer">
+<h4>The Febrile Infant — Finding the Source</h4>
+<p class="sub">Paradoxical irritability · Aquifer · every stem negative is an eliminated source</p>
+<div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 7 mo M, fever 39.5 C, lies quietly when undisturbed and cries violently when picked up &middot; <b>Labs</b> &mdash; WBC 16,000 with 83% neutrophils; urine dipstick negative on a concentrated specimen &middot; <b>Q</b> &mdash; the most appropriate test; options spanned lumbar puncture, abdominal ultrasonography and stool PCR</div>
+<div class="dp"><span class="lbl">The decision point</span>
+<p>One sentence in the physical examination is the whole question: <b>he is calm when left alone and screams when picked up</b>. That is <b>paradoxical irritability</b> — handling stretches inflamed meninges, so being comforted makes an infant worse. It is the meningeal sign of infancy, and it exists because nuchal rigidity, Kernig and Brudzinski are unreliable under roughly 12 to 18 months.</p>
+<p>Everything else in the stem is a negative that closes an alternative source. No cough or rhinorrhea closes the respiratory branch. A negative leukocyte esterase and nitrite in urine <b>concentrated to a specific gravity of 1.030</b> closes the urinary branch — concentration is what makes the negative trustworthy. When the sources are eliminated one by one and a meningeal sign remains, the answer is the lumbar puncture.</p>
+</div>
+<div class="crit"><span class="lbl">Defining criteria</span> <b>Paradoxical irritability</b> — quiet when undisturbed, crying on being picked up or moved &middot; <b>Fever without a source</b> — documented fever with no localising findings after history and examination &middot; <b>Dipstick sensitivity</b> — leukocyte esterase about 83%, nitrite about 53%; both negative in concentrated urine is genuinely reassuring</div>
+<table>
+<caption>The toxic febrile infant — where is the source</caption>
+<thead><tr><th>Diagnosis</th><th>Illness script</th><th>The NBME tell</th></tr></thead>
+<tbody>
+<tr><td><b>Bacterial meningitis</b></td><td>Any age; infants show no neck signs</td><td><b>Paradoxical irritability</b>, bulging fontanelle, high-pitched cry</td></tr>
+<tr><td>Intussusception</td><td>6 to 36 months, ileocolic, often post-viral</td><td><b>Paroxysmal</b> crying with pain-free intervals, sausage mass, currant-jelly stool</td></tr>
+<tr><td>Urinary tract infection</td><td>The commonest serious bacterial infection in febrile infants</td><td><b>Positive leukocyte esterase or nitrite</b> with pyuria</td></tr>
+<tr><td>Bacterial gastroenteritis</td><td>High fever with cramping</td><td><b>Bloody or mucoid stools</b>, many per day, sick contacts</td></tr>
+<tr><td>Viral respiratory infection</td><td>Cough, congestion, coryza</td><td><b>Rhinorrhea and cough</b>, both explicitly absent here</td></tr>
+<tr><td>Occult bacteremia or pneumonia</td><td>Fever with leukocytosis, no localising sign</td><td><b>Tachypnea with hypoxia</b> or focal crackles, not fever-driven tachypnea alone</td></tr>
+</tbody>
+</table>
+<h5 class="authored-hdr">Scenario bank</h5>
+<ol class="bank authored">
+<li data-type="test" data-src="aquifer" data-d1="Abdominal ultrasound" data-d2="Stool PCR for enteric pathogens" data-item-id="q_150104cfe1a75c3ab396" data-item-version="1" data-item-status="ready" data-key-id="o_0e33cebe5df25159b943" data-d1-id="o_035154fbccc059ffae28" data-d2-id="o_84e75bff584855fcaef4">7 mo M, fever 39.5, lies quietly when undisturbed and cries violently when picked up, WBC 16,000 with 83% neutrophils, urine dipstick negative in concentrated urine &rarr; <b>Lumbar puncture for Gram stain and culture</b> &rarr; bacterial meningitis</li>
+<li data-type="test" data-src="authored" data-d1="Lumbar puncture" data-d2="Abdominal radiograph alone" data-item-id="q_88d9503b847d50119a93" data-item-version="1" data-item-status="ready" data-key-id="o_f30cae1469c658128109" data-d1-id="o_3008d0620885547cbc60" data-d2-id="o_febce09162b65ee3a0bd">9 mo M with paroxysmal crying and legs drawn up, calm between episodes, lethargic, sausage-shaped right upper quadrant mass &rarr; <b>Abdominal ultrasound</b> &rarr; intussusception</li>
+<li data-type="next" data-src="authored" data-d1="Lumbar puncture" data-d2="Observation and recheck in 24 hours" data-item-id="q_f6a06578aaa35a888053" data-item-version="1" data-item-status="ready" data-key-id="o_f1356e9c1bfa5eaeb7d1" data-d1-id="o_4cccb2cefce5593d91f4" data-d2-id="o_cd0ca5832dc3546fb120">8 mo F, fever 39.2, no localising findings, urine dipstick positive for leukocyte esterase &rarr; <b>Urine culture and empiric antibiotics</b> &rarr; urinary tract infection</li>
+<li data-type="test" data-src="authored" data-d1="Wait and perform the lumbar puncture first" data-d2="Defer antibiotics until culture results return" data-item-id="q_2a3f80a416795ff0b04b" data-item-version="1" data-item-status="ready" data-key-id="o_4fdad56fa9695c6bba9c" data-d1-id="o_6f2e22031093575b9f38" data-d2-id="o_1b40009a8e0b5279ade4">6 mo M with suspected meningitis in whom lumbar puncture will be delayed an hour &rarr; <b>Give empiric antibiotics now and perform the lumbar puncture after</b> &rarr; a sterilized Gram stain is an acceptable trade</li>
+<li data-type="next" data-src="authored" data-d1="Urinalysis and urine culture only" data-d2="Discharge with follow-up in 24 hours" data-item-id="q_9d17d54172e2593fa199" data-item-version="1" data-item-status="ready" data-key-id="o_c9d8a7915f6555fcaacc" data-d1-id="o_487b09c2b3a45052af9c" data-d2-id="o_c816f20e4ef257e48a11">3 wk old F with a temperature of 38.4 C, well-appearing, with no identified source &rarr; <b>Full evaluation including lumbar puncture, admission and empiric antibiotics</b> &rarr; under 28 days, well appearance does not reassure</li>
+<li data-type="dx" data-src="authored" data-d1="Intussusception" data-d2="Roseola infantum" data-item-id="q_ea14763c4b2b52bd86e1" data-item-version="1" data-item-status="ready" data-key-id="o_9b3ee2f09ec4568b83b7" data-d1-id="o_1e098670af925a3c8e79" data-d2-id="o_8f851bb95417513ca5d4">10 mo M with fever, irritability, a bulging anterior fontanelle and a high-pitched cry &rarr; <b>Bacterial meningitis</b> &rarr; neuroimaging only if focal signs are present</li>
+<li data-type="dx" data-src="authored" data-d1="Measles" data-d2="Bacterial meningitis" data-item-id="q_7041d6f50eba528cbeb4" data-item-version="1" data-item-status="ready" data-key-id="o_d1de615995ad55b2b23a" data-d1-id="o_f0d209c49641513a9fda" data-d2-id="o_d2cb877aa4c65969ab94">7 mo M with 3 days of fever to 39 C, then defervescence followed by a blanching rose-pink truncal rash &rarr; <b>Roseola infantum</b> &rarr; human herpesvirus 6, no testing needed</li>
+<li data-type="test" data-src="authored" data-d1="Immediate lumbar puncture" data-d2="MRI of the brain" data-item-id="q_64c870e848915d3ab7dc" data-item-version="1" data-item-status="ready" data-key-id="o_3629f2c8bbd95508aa61" data-d1-id="o_98947a4bf4f45ee8867e" data-d2-id="o_6ce4c685e4c156d8b498">12 mo F with suspected meningitis, papilledema and a new focal neurologic deficit &rarr; <b>Head CT before lumbar puncture</b> &rarr; antibiotics first, then CT, then LP</li>
+<li data-type="avoid" data-src="authored" data-d1="Obtaining blood cultures" data-d2="Giving intravenous fluids" data-item-id="q_271dda6abd5a56149a2e" data-item-version="1" data-item-status="ready" data-key-id="o_22cf1e98bed256feaff9" data-d1-id="o_36c3a50c4db653b293f0" data-d2-id="o_c0b13c897d5455469dc0">8 mo M with fever, petechiae and hypotension &rarr; <b>Delaying antibiotics to complete the lumbar puncture</b> &rarr; treat first, tap after</li>
+</ol>
+<div class="danger"><span class="lbl">Sequence and its exceptions</span> Head CT precedes lumbar puncture only for <b>focal deficits, papilledema, altered consciousness or immunocompromise</b> — and <b>antibiotics precede the CT</b>, not the other way round. In an <b>infant with an open fontanelle the requirement is generally suspended</b>: the fontanelle decompresses rising pressure, so tap without imaging first. Under 28 days a well appearance does not reassure: full evaluation, admission and empiric antibiotics regardless. Empiric coverage beyond the neonatal period is <b>ceftriaxone plus vancomycin</b>; neonates get ampicillin plus cefotaxime or gentamicin to cover Listeria.</div>
+<div class="pearls"><span class="lbl">Pearls</span> Nuchal rigidity, Kernig and Brudzinski are unreliable in infants; look for paradoxical irritability, a bulging fontanelle and a high-pitched cry &middot; A dipstick is a screen, not a rule-out — nitrite is insensitive because infant bladder transit is too short for nitrate reduction &middot; Loose stools and mild tachypnea are nonspecific systemic responses in a septic infant, not localising findings &middot; Dexamethasone with or before the first antibiotic dose reduces hearing loss in Haemophilus influenzae type b meningitis</div>
+<div class="pearls"><span class="lbl">Pairs with</span> Part I <b>Bacterial Meningitis</b> owns the CSF grid, so this brief stops at the decision to tap. Store the link as a question: am I deciding whether to tap, or reading the fluid? Part I <b>Seizure with Fever in a Child</b> owns what a seizure adds to the decision to tap. Part II <b>Neonatal Sepsis and Its Mimics</b> owns the afebrile neonate whose lab is the only sign; store the discriminator: <i>is the infant febrile, or is the WBC the decider?</i></div>
+<div class="rule"><span class="lbl">Transferable rule</span> When the options are tests, name the disease first and let the test follow, and in a febrile infant do it by elimination, because every negative the stem supplies is an eliminated source and the diagnosis is whatever survives.</div>
+<div class="traps"><div class="trapline"><span class="pill p-mirror">Mirror twin</span><span class="trapwhy">Intussusception is the other inconsolable-infant diagnosis, but its crying is paroxysmal with calm intervals.</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Urine culture is the right class of test on the wrong fluid.</span></div><div class="trapline"><span class="pill p-salient">Salient decoy</span><span class="trapwhy">Three loose stools cannot produce a fever of 39.5 with 83% neutrophils.</span></div></div>
+</div>
+
 <!-- =================== NEURO =================== -->
-<h3 class="system" id="neuro">Neurology &amp; HEENT <span class="n">12 topics <span style="color:#9A5B0E">+ 4 board-style</span></span></h3>
+<h3 class="system" id="neuro">Neurology &amp; HEENT <span class="n">12 topics <span style="color:#9A5B0E">+ 3 board-style</span> <span style="color:#1F6A7E">+ 1 Aquifer</span></span></h3>
 <p class="system-note">Three questions triage every red eye. Two tuning forks triage every hearing loss.</p>
 
 <div class="brief" id="hearing" data-shelf="fm" data-nid="1480908574956 1480908620841 1503860790725">
@@ -7451,47 +7508,6 @@ The bank's list says "family history of hip fracture." <b>FRAX asks specifically
 <div class="traps"><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Duchenne is the right age and sex with proximal weakness, flat feet and no bladder involvement.</span></div><div class="trapline"><span class="pill p-mirror">Mirror twin</span><span class="trapwhy">Spastic diplegia is the upper motor neuron version of the same complaint.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Transverse myelitis is a real cord syndrome on the wrong timeline.</span></div></div>
 </div>
 
-<div class="brief bs" id="bs-posterior-fossa" data-shelf="peds">
-<h4>Posterior Fossa Localization</h4>
-<p class="sub">Cerebellar signs are ipsilateral · Aquifer · side first, then structure</p>
-<div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 9 yo M, left-hand dysmetria and dysdiadochokinesia, listing to the left, bilateral papilledema, left facial numbness &middot; <b>Q</b> &mdash; the most likely localization; options spanned the left cerebellar hemisphere, the right middle cerebellar peduncle and the left frontal lobe</div>
-<div class="dp"><span class="lbl">The decision point</span>
-<p>Every abnormal finding is on the <b>left</b> and every one is cerebellar: dysmetria reaching with the left hand, slow rapid alternating movements on the left, and a gait that <b>lists to the left</b>. Cerebellar output decussates twice, so the crossings cancel and cerebellar signs are <b>ipsilateral</b> — which eliminates the right middle cerebellar peduncle in one step.</p>
-<p>The pattern also names the part. <b>Limb</b> dysmetria is hemispheric, while a midline vermian lesion gives truncal and gait ataxia with spared limbs. He has both, so the mass is hemispheric and large enough to disturb midline structures — which fits the <b>left facial numbness</b>, since the trigeminal system serves the face ipsilaterally, and the <b>papilledema</b> from fourth-ventricular compression.</p>
-</div>
-<div class="crit"><span class="lbl">Defining criteria</span> <b>Cerebellar signs are ipsilateral</b> — and the patient falls and lists toward the side of the lesion &middot; <b>Hemisphere</b> — limb ataxia, dysmetria, dysdiadochokinesia, intention tremor &middot; <b>Vermis or midline</b> — truncal and gait ataxia with a wide base and titubation &middot; <b>Central nystagmus</b> — direction-changing and gaze-evoked, versus peripheral which is unidirectional and suppresses with fixation &middot; <b>Raised-pressure headache</b> — daily or progressive, worse on waking or lying flat, poorly analgesia-responsive, with papilledema</div>
-<table>
-<caption>Where is the mass - localizing the pediatric brain tumor</caption>
-<thead><tr><th>Location</th><th>Illness script</th><th>The NBME tell</th></tr></thead>
-<tbody>
-<tr><td><b>Cerebellar hemisphere</b></td><td>Pilocytic astrocytoma most classically, cystic with a mural nodule</td><td><b>Ipsilateral limb dysmetria and dysdiadochokinesia</b>, falls toward the lesion</td></tr>
-<tr><td>Cerebellar vermis</td><td>Medulloblastoma, early fourth-ventricular obstruction</td><td><b>Truncal and gait ataxia with a wide base</b>, relatively spared limbs</td></tr>
-<tr><td>Middle cerebellar peduncle</td><td>Carries pontocerebellar input</td><td>Ataxia is <b>still ipsilateral</b>, so a right peduncle gives right-sided signs</td></tr>
-<tr><td>Brainstem, pons</td><td>Diffuse intrinsic pontine glioma</td><td><b>Crossed findings</b> — cranial nerve palsy one side, long-tract weakness the other</td></tr>
-<tr><td>Pineal region</td><td>Germinoma, adolescent boys</td><td><b>Parinaud syndrome</b> — upgaze palsy, convergence-retraction nystagmus, light-near dissociation</td></tr>
-<tr><td>Frontal lobe</td><td>Supratentorial glioma</td><td><b>Contralateral weakness</b>, personality change, expressive aphasia</td></tr>
-<tr><td>Occipital lobe</td><td>Supratentorial mass</td><td><b>Contralateral homonymous hemianopia</b></td></tr>
-</tbody>
-</table>
-<h5 class="authored-hdr">Scenario bank</h5>
-<ol class="bank authored">
-<li data-type="dx" data-src="aquifer" data-d1="A mass in the right middle cerebellar peduncle" data-d2="A mass in the left frontal lobe" data-item-id="q_62ecb39776b15161b561" data-item-version="1" data-item-status="ready" data-key-id="o_b9662ff7a48b5b2e9d50" data-d1-id="o_d01cd5d5794958aea829" data-d2-id="o_fcb7f6285cb55615a686">9 yo M with left-hand dysmetria and dysdiadochokinesia, listing to the left, bilateral papilledema and left facial numbness &rarr; <b>A mass in the left cerebellar hemisphere</b> &rarr; cerebellar signs are ipsilateral</li>
-<li data-type="mech" data-src="authored" data-d1="Cerebellar fibers do not decussate at all" data-d2="The cerebellum controls contralateral limbs directly" data-item-id="q_23701bb441e3596a9fcb" data-item-version="1" data-item-status="ready" data-key-id="o_d294924fa7045aeaaa82" data-d1-id="o_0fbda8dec10b54baa56e" data-d2-id="o_86abfb484dbd5e9388aa">Why a lesion in one cerebellar hemisphere produces signs on the same side of the body &rarr; <b>Cerebellar output decussates twice</b> &rarr; the two crossings cancel</li>
-<li data-type="dx" data-src="authored" data-d1="Pilocytic astrocytoma of the cerebellar hemisphere" data-d2="Ependymoma of the fourth ventricle" data-item-id="q_b060d840ee865c7797ea" data-item-version="1" data-item-status="ready" data-key-id="o_40cdc2298dd058eb923e" data-d1-id="o_b61692cc13f65f438883" data-d2-id="o_0dc159bf47cc5381a495">6 yo M with truncal and gait ataxia, a wide-based stance, minimal limb dysmetria and a midline fourth-ventricular mass &rarr; <b>Medulloblastoma of the vermis</b> &rarr; seeds drop metastases through the CSF</li>
-<li data-type="dx" data-src="authored" data-d1="Medulloblastoma" data-d2="Cerebellar pilocytic astrocytoma" data-item-id="q_d90f1801c20853cabc74" data-item-version="1" data-item-status="ready" data-key-id="o_6dd2ab51508f5a4eb9ef" data-d1-id="o_88910e719036521fa20d" data-d2-id="o_afe961ee235f509f8882">5 yo F with progressive left sixth and seventh nerve palsies, right hemiparesis and diffuse expansion of the pons &rarr; <b>Diffuse intrinsic pontine glioma</b> &rarr; crossed findings localise to the pons</li>
-<li data-type="next" data-src="authored" data-d1="Ophthalmology referral for strabismus" data-d2="CT of the head without contrast" data-item-id="q_a7188fd0d8b55f9992ab" data-item-version="1" data-item-status="ready" data-key-id="o_eb4747aa18fd5ad6a035" data-d1-id="o_c81a68a231ef578e9135" data-d2-id="o_bfd411cc106d55e0ae4d">12 yo M with an upgaze palsy, convergence-retraction nystagmus and light-near dissociation &rarr; <b>MRI of the brain with serum and CSF tumor markers</b> &rarr; pineal germinoma</li>
-<li data-type="test" data-src="authored" data-d1="Lumbar puncture with an opening pressure" data-d2="Non-contrast CT followed by lumbar puncture" data-item-id="q_d9c58986b9fd563d8ab3" data-item-version="1" data-item-status="ready" data-key-id="o_83b235e935c65550a4e8" data-d1-id="o_4646cd69ddfb5dcaaa5a" data-d2-id="o_f05c31da617e5a0183d3">9 yo M with papilledema and cerebellar signs in whom a lumbar puncture is proposed &rarr; <b>Obtain MRI of the brain instead</b> &rarr; lumbar puncture risks herniation</li>
-<li data-type="next" data-src="authored" data-d1="Acetazolamide and outpatient follow-up" data-d2="Observation with serial neurologic examinations" data-item-id="q_94b92169532e514da1fe" data-item-version="1" data-item-status="ready" data-key-id="o_fc5b4f8293d35f3494a5" data-d1-id="o_4aa3720b2d0155f1bd9a" data-d2-id="o_6762ce772b1257f7a74e">9 yo M whose MRI shows a posterior fossa mass with hydrocephalus and who has become drowsy &rarr; <b>Dexamethasone and urgent neurosurgical consultation</b> &rarr; CSF diversion then resection</li>
-<li data-type="test" data-src="authored" data-d1="Bone marrow aspirate and biopsy" data-d2="Whole-body PET-CT" data-item-id="q_30025d9b374f5ba795f8" data-item-version="1" data-item-status="ready" data-key-id="o_f70c22cd83c45d4db570" data-d1-id="o_54183bbd5c3959949204" data-d2-id="o_824af3f6bcc057f29fcd">7 yo F with newly confirmed medulloblastoma, staging evaluation &rarr; <b>MRI of the entire neuraxis with CSF cytology</b> &rarr; medulloblastoma seeds the cerebrospinal fluid</li>
-<li data-type="next" data-src="authored" data-d1="Reassurance and a headache diary" data-d2="Start migraine prophylaxis" data-item-id="q_b3adbf097f86511f92be" data-item-version="1" data-item-status="ready" data-key-id="o_07a2023fb27258139858" data-d1-id="o_77b77cb16e7b56c7a374" data-d2-id="o_720fe900e1315246a1de">4 yo M with 3 weeks of headache waking him from sleep and morning vomiting, with a normal neurologic examination &rarr; <b>MRI of the brain</b> &rarr; a normal examination does not exclude a posterior fossa tumor</li>
-</ol>
-<div class="danger"><span class="lbl">Papilledema forbids the tap</span> With a posterior fossa mass, lumbar puncture risks herniation. <b>Image first.</b> Posterior fossa tumours are 54 to 70% of childhood brain tumours against only 15 to 20% in adults, so in a child ataxia with raised pressure is infratentorial until imaged.</div>
-<div class="pearls"><span class="lbl">Pearls</span> <b>Cerebellum</b> — ipsilateral &middot; <b>Face</b> — ipsilateral &middot; <b>Body long tracts</b> — contralateral, so crossed findings mean brainstem &middot; Medulloblastoma seeds the CSF, so staging requires neuraxis MRI and CSF cytology &middot; Red-flag pediatric headache: wakes from sleep, worse on waking, morning vomiting, progressive over weeks, any focal sign, or a child under six &middot; Peripheral vertigo nystagmus is unidirectional and suppressed by fixation; central nystagmus is direction-changing and unsuppressed</div>
-<div class="pearls"><span class="lbl">Pairs with</span> Part II <b>Congenital Muscular Torticollis and Plagiocephaly</b> carries posterior fossa tumour as the can't-miss cause of acquired head tilt; this brief supplies the localization that identifies it. Part I <b>Sellar and Suprasellar Masses</b> is the anterior compartment of the same question: which region does the endocrine or visual sign name?</div>
-<div class="rule"><span class="lbl">Transferable rule</span> Localization is answered side first and structure second, and the cerebellum is the one place where signs stay on the same side as the lesion, so examiners build their distractors from anatomically respectable options on the wrong side.</div>
-<div class="traps"><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">The right middle cerebellar peduncle is the right region on the wrong side.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Pineal masses are common in children but produce Parinaud syndrome, which he does not have.</span></div></div>
-</div>
-
 <div class="brief bs" id="bs-reye" data-shelf="fm peds">
 <h4>Cerebral Edema in a Child — Reye Syndrome</h4>
 <p class="sub">The question asks what caused the <i>edema</i>, not what caused the illness</p>
@@ -7607,6 +7623,49 @@ The bank's list says "family history of hip fracture." <b>FRAX asks specifically
 </div>
 </div>
 
+
+<div class="bsband aqband"><span class="n">1 brief</span><span class="lbl">Aquifer &middot; Case-Based Briefs</span><p class="t">Neurology &amp; HEENT</p></div>
+
+<div class="brief bs" id="bs-posterior-fossa" data-shelf="peds" data-src="aquifer">
+<h4>Posterior Fossa Localization</h4>
+<p class="sub">Cerebellar signs are ipsilateral · Aquifer · side first, then structure</p>
+<div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 9 yo M, left-hand dysmetria and dysdiadochokinesia, listing to the left, bilateral papilledema, left facial numbness &middot; <b>Q</b> &mdash; the most likely localization; options spanned the left cerebellar hemisphere, the right middle cerebellar peduncle and the left frontal lobe</div>
+<div class="dp"><span class="lbl">The decision point</span>
+<p>Every abnormal finding is on the <b>left</b> and every one is cerebellar: dysmetria reaching with the left hand, slow rapid alternating movements on the left, and a gait that <b>lists to the left</b>. Cerebellar output decussates twice, so the crossings cancel and cerebellar signs are <b>ipsilateral</b> — which eliminates the right middle cerebellar peduncle in one step.</p>
+<p>The pattern also names the part. <b>Limb</b> dysmetria is hemispheric, while a midline vermian lesion gives truncal and gait ataxia with spared limbs. He has both, so the mass is hemispheric and large enough to disturb midline structures — which fits the <b>left facial numbness</b>, since the trigeminal system serves the face ipsilaterally, and the <b>papilledema</b> from fourth-ventricular compression.</p>
+</div>
+<div class="crit"><span class="lbl">Defining criteria</span> <b>Cerebellar signs are ipsilateral</b> — and the patient falls and lists toward the side of the lesion &middot; <b>Hemisphere</b> — limb ataxia, dysmetria, dysdiadochokinesia, intention tremor &middot; <b>Vermis or midline</b> — truncal and gait ataxia with a wide base and titubation &middot; <b>Central nystagmus</b> — direction-changing and gaze-evoked, versus peripheral which is unidirectional and suppresses with fixation &middot; <b>Raised-pressure headache</b> — daily or progressive, worse on waking or lying flat, poorly analgesia-responsive, with papilledema</div>
+<table>
+<caption>Where is the mass - localizing the pediatric brain tumor</caption>
+<thead><tr><th>Location</th><th>Illness script</th><th>The NBME tell</th></tr></thead>
+<tbody>
+<tr><td><b>Cerebellar hemisphere</b></td><td>Pilocytic astrocytoma most classically, cystic with a mural nodule</td><td><b>Ipsilateral limb dysmetria and dysdiadochokinesia</b>, falls toward the lesion</td></tr>
+<tr><td>Cerebellar vermis</td><td>Medulloblastoma, early fourth-ventricular obstruction</td><td><b>Truncal and gait ataxia with a wide base</b>, relatively spared limbs</td></tr>
+<tr><td>Middle cerebellar peduncle</td><td>Carries pontocerebellar input</td><td>Ataxia is <b>still ipsilateral</b>, so a right peduncle gives right-sided signs</td></tr>
+<tr><td>Brainstem, pons</td><td>Diffuse intrinsic pontine glioma</td><td><b>Crossed findings</b> — cranial nerve palsy one side, long-tract weakness the other</td></tr>
+<tr><td>Pineal region</td><td>Germinoma, adolescent boys</td><td><b>Parinaud syndrome</b> — upgaze palsy, convergence-retraction nystagmus, light-near dissociation</td></tr>
+<tr><td>Frontal lobe</td><td>Supratentorial glioma</td><td><b>Contralateral weakness</b>, personality change, expressive aphasia</td></tr>
+<tr><td>Occipital lobe</td><td>Supratentorial mass</td><td><b>Contralateral homonymous hemianopia</b></td></tr>
+</tbody>
+</table>
+<h5 class="authored-hdr">Scenario bank</h5>
+<ol class="bank authored">
+<li data-type="dx" data-src="aquifer" data-d1="A mass in the right middle cerebellar peduncle" data-d2="A mass in the left frontal lobe" data-item-id="q_62ecb39776b15161b561" data-item-version="1" data-item-status="ready" data-key-id="o_b9662ff7a48b5b2e9d50" data-d1-id="o_d01cd5d5794958aea829" data-d2-id="o_fcb7f6285cb55615a686">9 yo M with left-hand dysmetria and dysdiadochokinesia, listing to the left, bilateral papilledema and left facial numbness &rarr; <b>A mass in the left cerebellar hemisphere</b> &rarr; cerebellar signs are ipsilateral</li>
+<li data-type="mech" data-src="authored" data-d1="Cerebellar fibers do not decussate at all" data-d2="The cerebellum controls contralateral limbs directly" data-item-id="q_23701bb441e3596a9fcb" data-item-version="1" data-item-status="ready" data-key-id="o_d294924fa7045aeaaa82" data-d1-id="o_0fbda8dec10b54baa56e" data-d2-id="o_86abfb484dbd5e9388aa">Why a lesion in one cerebellar hemisphere produces signs on the same side of the body &rarr; <b>Cerebellar output decussates twice</b> &rarr; the two crossings cancel</li>
+<li data-type="dx" data-src="authored" data-d1="Pilocytic astrocytoma of the cerebellar hemisphere" data-d2="Ependymoma of the fourth ventricle" data-item-id="q_b060d840ee865c7797ea" data-item-version="1" data-item-status="ready" data-key-id="o_40cdc2298dd058eb923e" data-d1-id="o_b61692cc13f65f438883" data-d2-id="o_0dc159bf47cc5381a495">6 yo M with truncal and gait ataxia, a wide-based stance, minimal limb dysmetria and a midline fourth-ventricular mass &rarr; <b>Medulloblastoma of the vermis</b> &rarr; seeds drop metastases through the CSF</li>
+<li data-type="dx" data-src="authored" data-d1="Medulloblastoma" data-d2="Cerebellar pilocytic astrocytoma" data-item-id="q_d90f1801c20853cabc74" data-item-version="1" data-item-status="ready" data-key-id="o_6dd2ab51508f5a4eb9ef" data-d1-id="o_88910e719036521fa20d" data-d2-id="o_afe961ee235f509f8882">5 yo F with progressive left sixth and seventh nerve palsies, right hemiparesis and diffuse expansion of the pons &rarr; <b>Diffuse intrinsic pontine glioma</b> &rarr; crossed findings localise to the pons</li>
+<li data-type="next" data-src="authored" data-d1="Ophthalmology referral for strabismus" data-d2="CT of the head without contrast" data-item-id="q_a7188fd0d8b55f9992ab" data-item-version="1" data-item-status="ready" data-key-id="o_eb4747aa18fd5ad6a035" data-d1-id="o_c81a68a231ef578e9135" data-d2-id="o_bfd411cc106d55e0ae4d">12 yo M with an upgaze palsy, convergence-retraction nystagmus and light-near dissociation &rarr; <b>MRI of the brain with serum and CSF tumor markers</b> &rarr; pineal germinoma</li>
+<li data-type="test" data-src="authored" data-d1="Lumbar puncture with an opening pressure" data-d2="Non-contrast CT followed by lumbar puncture" data-item-id="q_d9c58986b9fd563d8ab3" data-item-version="1" data-item-status="ready" data-key-id="o_83b235e935c65550a4e8" data-d1-id="o_4646cd69ddfb5dcaaa5a" data-d2-id="o_f05c31da617e5a0183d3">9 yo M with papilledema and cerebellar signs in whom a lumbar puncture is proposed &rarr; <b>Obtain MRI of the brain instead</b> &rarr; lumbar puncture risks herniation</li>
+<li data-type="next" data-src="authored" data-d1="Acetazolamide and outpatient follow-up" data-d2="Observation with serial neurologic examinations" data-item-id="q_94b92169532e514da1fe" data-item-version="1" data-item-status="ready" data-key-id="o_fc5b4f8293d35f3494a5" data-d1-id="o_4aa3720b2d0155f1bd9a" data-d2-id="o_6762ce772b1257f7a74e">9 yo M whose MRI shows a posterior fossa mass with hydrocephalus and who has become drowsy &rarr; <b>Dexamethasone and urgent neurosurgical consultation</b> &rarr; CSF diversion then resection</li>
+<li data-type="test" data-src="authored" data-d1="Bone marrow aspirate and biopsy" data-d2="Whole-body PET-CT" data-item-id="q_30025d9b374f5ba795f8" data-item-version="1" data-item-status="ready" data-key-id="o_f70c22cd83c45d4db570" data-d1-id="o_54183bbd5c3959949204" data-d2-id="o_824af3f6bcc057f29fcd">7 yo F with newly confirmed medulloblastoma, staging evaluation &rarr; <b>MRI of the entire neuraxis with CSF cytology</b> &rarr; medulloblastoma seeds the cerebrospinal fluid</li>
+<li data-type="next" data-src="authored" data-d1="Reassurance and a headache diary" data-d2="Start migraine prophylaxis" data-item-id="q_b3adbf097f86511f92be" data-item-version="1" data-item-status="ready" data-key-id="o_07a2023fb27258139858" data-d1-id="o_77b77cb16e7b56c7a374" data-d2-id="o_720fe900e1315246a1de">4 yo M with 3 weeks of headache waking him from sleep and morning vomiting, with a normal neurologic examination &rarr; <b>MRI of the brain</b> &rarr; a normal examination does not exclude a posterior fossa tumor</li>
+</ol>
+<div class="danger"><span class="lbl">Papilledema forbids the tap</span> With a posterior fossa mass, lumbar puncture risks herniation. <b>Image first.</b> Posterior fossa tumours are 54 to 70% of childhood brain tumours against only 15 to 20% in adults, so in a child ataxia with raised pressure is infratentorial until imaged.</div>
+<div class="pearls"><span class="lbl">Pearls</span> <b>Cerebellum</b> — ipsilateral &middot; <b>Face</b> — ipsilateral &middot; <b>Body long tracts</b> — contralateral, so crossed findings mean brainstem &middot; Medulloblastoma seeds the CSF, so staging requires neuraxis MRI and CSF cytology &middot; Red-flag pediatric headache: wakes from sleep, worse on waking, morning vomiting, progressive over weeks, any focal sign, or a child under six &middot; Peripheral vertigo nystagmus is unidirectional and suppressed by fixation; central nystagmus is direction-changing and unsuppressed</div>
+<div class="pearls"><span class="lbl">Pairs with</span> Part II <b>Congenital Muscular Torticollis and Plagiocephaly</b> carries posterior fossa tumour as the can't-miss cause of acquired head tilt; this brief supplies the localization that identifies it. Part I <b>Sellar and Suprasellar Masses</b> is the anterior compartment of the same question: which region does the endocrine or visual sign name?</div>
+<div class="rule"><span class="lbl">Transferable rule</span> Localization is answered side first and structure second, and the cerebellum is the one place where signs stay on the same side as the lesion, so examiners build their distractors from anatomically respectable options on the wrong side.</div>
+<div class="traps"><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">The right middle cerebellar peduncle is the right region on the wrong side.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Pineal masses are common in children but produce Parinaud syndrome, which he does not have.</span></div></div>
+</div>
 
 <!-- =================== DERM =================== -->
 <h3 class="system" id="derm">Dermatology &amp; Wounds <span class="n">7 topics <span style="color:#9A5B0E">+ 1 board-style</span></span></h3>
@@ -7919,7 +7978,7 @@ The bank's list says "family history of hip fracture." <b>FRAX asks specifically
 
 
 <!-- =================== OBGYN =================== -->
-<h3 class="system" id="obgyn">Obstetrics &amp; Gynecology <span class="n">10 topics <span style="color:#9A5B0E">+ 3 board-style</span></span></h3>
+<h3 class="system" id="obgyn">Obstetrics &amp; Gynecology <span class="n">10 topics <span style="color:#9A5B0E">+ 2 board-style</span> <span style="color:#1F6A7E">+ 1 Aquifer</span></span></h3>
 <p class="system-note">Interval arithmetic and eligibility rules. The physiologic state of the patient decides which explanations are even permitted.</p>
 
 <div class="brief" id="preg-vax" data-shelf="fm">
@@ -8303,57 +8362,6 @@ A <b>same-sex relationship</b> appeared in the cervical cancer stem as a <b>deco
 
 <div class="bsband"><span class="n">3 briefs</span><span class="lbl">Board-Style &middot; Next-Step Questions</span><p class="t">Obstetrics &amp; Gynecology</p></div>
 
-<div class="brief bs" id="bs-pid" data-shelf="fm peds">
-<h4>Pelvic Inflammatory Disease</h4>
-<p class="sub">Treat on the exam finding, not the culture · Aquifer · the threshold is low by design</p>
-<div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 17 yo F, sudden pelvic pain, T 39 C, cervical motion tenderness, purulent cervical discharge, no adnexal mass &middot; <b>Q</b> &mdash; the most appropriate next step; options spanned starting empiric antibiotics now, obtaining pelvic ultrasonography first and awaiting nucleic acid amplification results</div>
-<div class="dp"><span class="lbl">The decision point</span>
-<p>The stem has already met the diagnostic threshold. PID is a <b>presumptive clinical diagnosis</b>, and the gate is deliberately low: a sexually active young woman with pelvic pain, no other identified cause, and <b>any one</b> of cervical motion tenderness, uterine tenderness, or adnexal tenderness. She has cervical motion tenderness, and the purulent discharge plus fever above 38.3 C are supporting criteria.</p>
-<p>The threshold sits there because treatment prevents the sequelae and delay causes them. Managing the alternatives — ectopic pregnancy, appendicitis, ovarian cyst, torsion — is <b>not impaired</b> by starting antimicrobials. There is no diagnostic penalty for treating early and a permanent one for treating late: infertility, ectopic pregnancy, chronic pelvic pain.</p>
-</div>
-<div class="crit"><span class="lbl">Defining criteria</span> <b>Minimum criteria</b> — pelvic or lower abdominal pain with no other identified cause plus at least one of cervical motion, uterine, or adnexal tenderness &middot; <b>Additional criteria</b> — temperature above 38.3 C, mucopurulent cervical discharge or friability, abundant WBCs on saline microscopy, raised ESR or CRP, documented gonococcal or chlamydial infection &middot; <b>Negative predictor</b> — normal cervical discharge with no WBCs on wet prep makes PID unlikely</div>
-<table>
-<caption>Acute pelvic pain in a young woman - the differential</caption>
-<thead><tr><th>Diagnosis</th><th>Illness script</th><th>The NBME tell</th></tr></thead>
-<tbody>
-<tr><td><b>Pelvic inflammatory disease</b></td><td>Ascending gonococcal, chlamydial or vaginal-flora infection</td><td><b>Cervical motion tenderness</b> with mucopurulent discharge</td></tr>
-<tr><td>Ectopic pregnancy <span class="tag t-em">Can't miss</span></td><td>Amenorrhea then unilateral pain</td><td><b>Positive hCG with an empty uterus</b>; a pregnancy test is always mandatory</td></tr>
-<tr><td>Tubo-ovarian abscess</td><td>A complication of PID rather than a separate disease</td><td><b>Palpable or sonographic adnexal mass</b>; admit</td></tr>
-<tr><td>Ovarian torsion</td><td>Sudden severe unilateral pain with an ovarian mass</td><td><b>Nausea and vomiting, usually afebrile</b>, absent Doppler flow</td></tr>
-<tr><td>Appendicitis</td><td>Periumbilical pain migrating</td><td><b>McBurney point tenderness</b>, no cervical findings</td></tr>
-<tr><td>Pyelonephritis</td><td>Ascending urinary infection</td><td><b>Costovertebral angle tenderness</b> with pyuria</td></tr>
-</tbody>
-</table>
-<table>
-<caption>Management ladder — pelvic inflammatory disease</caption>
-<thead><tr><th>Tier</th><th>Intervention</th><th>Escalate when</th></tr></thead>
-<tbody>
-<tr><td>Presumptive</td><td><b>Start empiric antibiotics as soon as the clinical diagnosis is made</b></td><td>Any hospitalisation criterion below</td></tr>
-<tr><td>Outpatient</td><td>Ceftriaxone 500 mg IM once, plus doxycycline 100 mg twice daily and metronidazole 500 mg twice daily for 14 days</td><td><b>No improvement within 72 hours</b> means admit and reconsider the diagnosis</td></tr>
-<tr><td>Inpatient</td><td>Ceftriaxone 1 g IV daily with doxycycline and metronidazole, or cefoxitin or cefotetan with doxycycline</td><td>Tubo-ovarian abscess failing medical therapy means drainage</td></tr>
-<tr><td>Transition</td><td>Oral doxycycline and metronidazole after 24 to 48 hours of improvement, completing 14 days</td><td>—</td></tr>
-<tr><td>Follow-up</td><td>Retest for gonorrhea and chlamydia at 3 months</td><td>—</td></tr>
-</tbody>
-</table>
-<h5 class="authored-hdr">Scenario bank</h5>
-<ol class="bank authored">
-<li data-type="next" data-src="aquifer" data-d1="Obtain a pelvic ultrasound first" data-d2="Await the cervical nucleic acid amplification test result" data-item-id="q_4701a4c891025e93bc06" data-item-version="1" data-item-status="ready" data-key-id="o_3815cdc5f2a9501098db" data-d1-id="o_cfd7d6fc0ff55c08a04a" data-d2-id="o_47aabbb949865866b7d3">17 yo F, sudden pelvic pain, T 39 C, cervical motion tenderness, purulent cervical discharge, no adnexal mass &rarr; <b>Start empiric antibiotics now</b> &rarr; PID is a presumptive clinical diagnosis</li>
-<li data-type="next" data-src="authored" data-d1="Outpatient ceftriaxone, doxycycline and metronidazole" data-d2="Immediate laparotomy" data-item-id="q_53a9556e629358618d64" data-item-version="1" data-item-status="ready" data-key-id="o_b76b99bc4dc25c0dab0a" data-d1-id="o_45019af44ec65a86bd62" data-d2-id="o_4885fbb1431e55208590">19 yo F meeting PID criteria with a 6 cm tubo-ovarian abscess on ultrasound &rarr; <b>Admit for intravenous antibiotics</b> &rarr; drainage if no response</li>
-<li data-type="next" data-src="authored" data-d1="Outpatient ceftriaxone, doxycycline and metronidazole" data-d2="Azithromycin alone as an outpatient" data-item-id="q_d2b07b04dea45186b28a" data-item-version="1" data-item-status="ready" data-key-id="o_6b734b4c63b953d9bec7" data-d1-id="o_ec55dfb8431c52a69cde" data-d2-id="o_c1ff5c0b7eeb594cb8da">22 yo F meeting PID criteria with a positive pregnancy test and an intrauterine gestation &rarr; <b>Hospitalize for intravenous antibiotics</b> &rarr; doxycycline is contraindicated in pregnancy</li>
-<li data-type="next" data-src="authored" data-d1="Remove the device before starting antibiotics" data-d2="Remove the device after completing 14 days" data-item-id="q_607090b879cb59b89132" data-item-version="1" data-item-status="ready" data-key-id="o_f6d0555554785456b3e4" data-d1-id="o_de3ae8726ece5eb4814a" data-d2-id="o_02eba507e64a552ca082">24 yo F meeting PID criteria with a copper intrauterine device in place &rarr; <b>Treat and leave the device in place</b> &rarr; reconsider removal only if no improvement at 48 to 72 hours</li>
-<li data-type="next" data-src="authored" data-d1="Extend the oral course to 21 days" data-d2="Add azithromycin and continue outpatient therapy" data-item-id="q_6192123f93cc5e2c9c71" data-item-version="1" data-item-status="ready" data-key-id="o_3a3010927232568eaf95" data-d1-id="o_4ceae67f229c5438b01e" data-d2-id="o_307fdee41edd52a5b927">18 yo F on outpatient PID therapy with no clinical improvement at 72 hours &rarr; <b>Admit for intravenous therapy and reassess the diagnosis</b> &rarr; consider diagnostic laparoscopy</li>
-<li data-type="next" data-src="authored" data-d1="Treat partners only if her testing returns positive" data-d2="No partner treatment is needed" data-item-id="q_d52bb4ef2c735c419bb8" data-item-version="1" data-item-status="ready" data-key-id="o_eb962f91b68455c6a924" data-d1-id="o_773f02f86ad35422be1c" data-d2-id="o_22f703ddb1055bc5a011">20 yo F diagnosed with PID whose last sexual intercourse was 3 weeks ago &rarr; <b>Evaluate and presumptively treat partners from the last 60 days</b> &rarr; for chlamydia and gonorrhea regardless of her results</li>
-<li data-type="dx" data-src="authored" data-d1="Acute cholecystitis" data-d2="Right lower lobe pneumonia" data-item-id="q_6248c309fb465ada940f" data-item-version="1" data-item-status="ready" data-key-id="o_1749ed1080a757af9dae" data-d1-id="o_28fd2489f4205f1c9f67" data-d2-id="o_4aa77f5129ce54d8ba0a">17 yo F with pelvic inflammatory disease and new right upper quadrant pleuritic pain &rarr; <b>Fitz-Hugh-Curtis syndrome</b> &rarr; perihepatitis with violin-string adhesions</li>
-<li data-type="dx" data-src="authored" data-d1="Pelvic inflammatory disease" data-d2="Ruptured ovarian cyst" data-item-id="q_4b3bff444fef514d995a" data-item-version="1" data-item-status="ready" data-key-id="o_dcd9d4acdd54561db608" data-d1-id="o_57562e5dd08959b9b3dc" data-d2-id="o_cb26aedb79fd5fce9072">16 yo F with sudden severe unilateral pelvic pain, vomiting, an adnexal mass and no fever &rarr; <b>Ovarian torsion</b> &rarr; Doppler ultrasound then laparoscopy</li>
-<li data-type="screen" data-src="authored" data-d1="Hepatitis C alone" data-d2="No additional testing is indicated" data-item-id="q_d3537b02c8165b43ac43" data-item-version="1" data-item-status="ready" data-key-id="o_f81f5dedecef5e39a1c6" data-d1-id="o_4d643a4b93cc5a078d8c" data-d2-id="o_900f590a5b06575289c4">17 yo F newly diagnosed with pelvic inflammatory disease, what else to test for &rarr; <b>HIV and syphilis</b> &rarr; plus gonorrhea and chlamydia, retesting at 3 months</li>
-</ol>
-<div class="danger"><span class="lbl">When to admit</span> <b>Surgical emergency cannot be excluded, tubo-ovarian abscess, pregnancy, severe illness or vomiting or temperature above 38.5 C, inability to tolerate oral therapy, or no response to oral therapy.</b> Adolescence is <b>not</b> itself a criterion — the same thresholds apply as for adults. All contraceptive methods can be continued during treatment, and an intrauterine device does not need removal.</div>
-<div class="pearls"><span class="lbl">Pearls</span> The low threshold is the guideline, not a shortcut — clinical diagnosis carries a positive predictive value of only 65 to 90% for salpingitis, and that is accepted deliberately &middot; Only about half of acute PID has a positive gonorrhea or chlamydia test, so a negative test never excludes it &middot; Metronidazole joined the routine regimen in 2021 for anaerobic coverage; older item banks may key ceftriaxone plus doxycycline alone &middot; Quinolones are no longer recommended because of gonococcal resistance &middot; Fitz-Hugh-Curtis is PID that reached the liver capsule, with right upper quadrant pleuritic pain</div>
-<div class="pearls"><span class="lbl">Pairs with</span> Part I <b>Ectopic Pregnancy</b> is the mandatory partner: both present as acute pelvic pain in a reproductive-age woman, and the fork is settled by one test. Store the discriminator as a question: what is the pregnancy test?</div>
-<div class="rule"><span class="lbl">Transferable rule</span> When a diagnosis is defined as presumptive and clinical, the arrival of its confirmatory test is documentation rather than management, so ask what the pending test could change today and treat if the answer is nothing.</div>
-<div class="traps"><div class="trapline"><span class="pill p-seq">Sequencing trap</span><span class="trapwhy">Ultrasound is normal in uncomplicated PID and delays the only intervention that prevents sequelae.</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Urine culture is the right class of test on the wrong compartment.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Contraception is appropriate care but is prevention, not treatment of an established infection.</span></div></div>
-</div>
-
 <div class="brief bs" id="bs-cervical-gate" data-shelf="fm">
 <h4>Cervical Screening: the Age-21 Floor</h4>
 <p class="sub">An eligibility gate, not a risk calculation</p>
@@ -8437,8 +8445,61 @@ The Part I pregnancy-vaccine brief listed Tdap's trap as "Timing — 27–36 wee
 </div>
 
 
+<div class="bsband aqband"><span class="n">1 brief</span><span class="lbl">Aquifer &middot; Case-Based Briefs</span><p class="t">Obstetrics &amp; Gynecology</p></div>
+
+<div class="brief bs" id="bs-pid" data-shelf="fm peds" data-src="aquifer">
+<h4>Pelvic Inflammatory Disease</h4>
+<p class="sub">Treat on the exam finding, not the culture · Aquifer · the threshold is low by design</p>
+<div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 17 yo F, sudden pelvic pain, T 39 C, cervical motion tenderness, purulent cervical discharge, no adnexal mass &middot; <b>Q</b> &mdash; the most appropriate next step; options spanned starting empiric antibiotics now, obtaining pelvic ultrasonography first and awaiting nucleic acid amplification results</div>
+<div class="dp"><span class="lbl">The decision point</span>
+<p>The stem has already met the diagnostic threshold. PID is a <b>presumptive clinical diagnosis</b>, and the gate is deliberately low: a sexually active young woman with pelvic pain, no other identified cause, and <b>any one</b> of cervical motion tenderness, uterine tenderness, or adnexal tenderness. She has cervical motion tenderness, and the purulent discharge plus fever above 38.3 C are supporting criteria.</p>
+<p>The threshold sits there because treatment prevents the sequelae and delay causes them. Managing the alternatives — ectopic pregnancy, appendicitis, ovarian cyst, torsion — is <b>not impaired</b> by starting antimicrobials. There is no diagnostic penalty for treating early and a permanent one for treating late: infertility, ectopic pregnancy, chronic pelvic pain.</p>
+</div>
+<div class="crit"><span class="lbl">Defining criteria</span> <b>Minimum criteria</b> — pelvic or lower abdominal pain with no other identified cause plus at least one of cervical motion, uterine, or adnexal tenderness &middot; <b>Additional criteria</b> — temperature above 38.3 C, mucopurulent cervical discharge or friability, abundant WBCs on saline microscopy, raised ESR or CRP, documented gonococcal or chlamydial infection &middot; <b>Negative predictor</b> — normal cervical discharge with no WBCs on wet prep makes PID unlikely</div>
+<table>
+<caption>Acute pelvic pain in a young woman - the differential</caption>
+<thead><tr><th>Diagnosis</th><th>Illness script</th><th>The NBME tell</th></tr></thead>
+<tbody>
+<tr><td><b>Pelvic inflammatory disease</b></td><td>Ascending gonococcal, chlamydial or vaginal-flora infection</td><td><b>Cervical motion tenderness</b> with mucopurulent discharge</td></tr>
+<tr><td>Ectopic pregnancy <span class="tag t-em">Can't miss</span></td><td>Amenorrhea then unilateral pain</td><td><b>Positive hCG with an empty uterus</b>; a pregnancy test is always mandatory</td></tr>
+<tr><td>Tubo-ovarian abscess</td><td>A complication of PID rather than a separate disease</td><td><b>Palpable or sonographic adnexal mass</b>; admit</td></tr>
+<tr><td>Ovarian torsion</td><td>Sudden severe unilateral pain with an ovarian mass</td><td><b>Nausea and vomiting, usually afebrile</b>, absent Doppler flow</td></tr>
+<tr><td>Appendicitis</td><td>Periumbilical pain migrating</td><td><b>McBurney point tenderness</b>, no cervical findings</td></tr>
+<tr><td>Pyelonephritis</td><td>Ascending urinary infection</td><td><b>Costovertebral angle tenderness</b> with pyuria</td></tr>
+</tbody>
+</table>
+<table>
+<caption>Management ladder — pelvic inflammatory disease</caption>
+<thead><tr><th>Tier</th><th>Intervention</th><th>Escalate when</th></tr></thead>
+<tbody>
+<tr><td>Presumptive</td><td><b>Start empiric antibiotics as soon as the clinical diagnosis is made</b></td><td>Any hospitalisation criterion below</td></tr>
+<tr><td>Outpatient</td><td>Ceftriaxone 500 mg IM once, plus doxycycline 100 mg twice daily and metronidazole 500 mg twice daily for 14 days</td><td><b>No improvement within 72 hours</b> means admit and reconsider the diagnosis</td></tr>
+<tr><td>Inpatient</td><td>Ceftriaxone 1 g IV daily with doxycycline and metronidazole, or cefoxitin or cefotetan with doxycycline</td><td>Tubo-ovarian abscess failing medical therapy means drainage</td></tr>
+<tr><td>Transition</td><td>Oral doxycycline and metronidazole after 24 to 48 hours of improvement, completing 14 days</td><td>—</td></tr>
+<tr><td>Follow-up</td><td>Retest for gonorrhea and chlamydia at 3 months</td><td>—</td></tr>
+</tbody>
+</table>
+<h5 class="authored-hdr">Scenario bank</h5>
+<ol class="bank authored">
+<li data-type="next" data-src="aquifer" data-d1="Obtain a pelvic ultrasound first" data-d2="Await the cervical nucleic acid amplification test result" data-item-id="q_4701a4c891025e93bc06" data-item-version="1" data-item-status="ready" data-key-id="o_3815cdc5f2a9501098db" data-d1-id="o_cfd7d6fc0ff55c08a04a" data-d2-id="o_47aabbb949865866b7d3">17 yo F, sudden pelvic pain, T 39 C, cervical motion tenderness, purulent cervical discharge, no adnexal mass &rarr; <b>Start empiric antibiotics now</b> &rarr; PID is a presumptive clinical diagnosis</li>
+<li data-type="next" data-src="authored" data-d1="Outpatient ceftriaxone, doxycycline and metronidazole" data-d2="Immediate laparotomy" data-item-id="q_53a9556e629358618d64" data-item-version="1" data-item-status="ready" data-key-id="o_b76b99bc4dc25c0dab0a" data-d1-id="o_45019af44ec65a86bd62" data-d2-id="o_4885fbb1431e55208590">19 yo F meeting PID criteria with a 6 cm tubo-ovarian abscess on ultrasound &rarr; <b>Admit for intravenous antibiotics</b> &rarr; drainage if no response</li>
+<li data-type="next" data-src="authored" data-d1="Outpatient ceftriaxone, doxycycline and metronidazole" data-d2="Azithromycin alone as an outpatient" data-item-id="q_d2b07b04dea45186b28a" data-item-version="1" data-item-status="ready" data-key-id="o_6b734b4c63b953d9bec7" data-d1-id="o_ec55dfb8431c52a69cde" data-d2-id="o_c1ff5c0b7eeb594cb8da">22 yo F meeting PID criteria with a positive pregnancy test and an intrauterine gestation &rarr; <b>Hospitalize for intravenous antibiotics</b> &rarr; doxycycline is contraindicated in pregnancy</li>
+<li data-type="next" data-src="authored" data-d1="Remove the device before starting antibiotics" data-d2="Remove the device after completing 14 days" data-item-id="q_607090b879cb59b89132" data-item-version="1" data-item-status="ready" data-key-id="o_f6d0555554785456b3e4" data-d1-id="o_de3ae8726ece5eb4814a" data-d2-id="o_02eba507e64a552ca082">24 yo F meeting PID criteria with a copper intrauterine device in place &rarr; <b>Treat and leave the device in place</b> &rarr; reconsider removal only if no improvement at 48 to 72 hours</li>
+<li data-type="next" data-src="authored" data-d1="Extend the oral course to 21 days" data-d2="Add azithromycin and continue outpatient therapy" data-item-id="q_6192123f93cc5e2c9c71" data-item-version="1" data-item-status="ready" data-key-id="o_3a3010927232568eaf95" data-d1-id="o_4ceae67f229c5438b01e" data-d2-id="o_307fdee41edd52a5b927">18 yo F on outpatient PID therapy with no clinical improvement at 72 hours &rarr; <b>Admit for intravenous therapy and reassess the diagnosis</b> &rarr; consider diagnostic laparoscopy</li>
+<li data-type="next" data-src="authored" data-d1="Treat partners only if her testing returns positive" data-d2="No partner treatment is needed" data-item-id="q_d52bb4ef2c735c419bb8" data-item-version="1" data-item-status="ready" data-key-id="o_eb962f91b68455c6a924" data-d1-id="o_773f02f86ad35422be1c" data-d2-id="o_22f703ddb1055bc5a011">20 yo F diagnosed with PID whose last sexual intercourse was 3 weeks ago &rarr; <b>Evaluate and presumptively treat partners from the last 60 days</b> &rarr; for chlamydia and gonorrhea regardless of her results</li>
+<li data-type="dx" data-src="authored" data-d1="Acute cholecystitis" data-d2="Right lower lobe pneumonia" data-item-id="q_6248c309fb465ada940f" data-item-version="1" data-item-status="ready" data-key-id="o_1749ed1080a757af9dae" data-d1-id="o_28fd2489f4205f1c9f67" data-d2-id="o_4aa77f5129ce54d8ba0a">17 yo F with pelvic inflammatory disease and new right upper quadrant pleuritic pain &rarr; <b>Fitz-Hugh-Curtis syndrome</b> &rarr; perihepatitis with violin-string adhesions</li>
+<li data-type="dx" data-src="authored" data-d1="Pelvic inflammatory disease" data-d2="Ruptured ovarian cyst" data-item-id="q_4b3bff444fef514d995a" data-item-version="1" data-item-status="ready" data-key-id="o_dcd9d4acdd54561db608" data-d1-id="o_57562e5dd08959b9b3dc" data-d2-id="o_cb26aedb79fd5fce9072">16 yo F with sudden severe unilateral pelvic pain, vomiting, an adnexal mass and no fever &rarr; <b>Ovarian torsion</b> &rarr; Doppler ultrasound then laparoscopy</li>
+<li data-type="screen" data-src="authored" data-d1="Hepatitis C alone" data-d2="No additional testing is indicated" data-item-id="q_d3537b02c8165b43ac43" data-item-version="1" data-item-status="ready" data-key-id="o_f81f5dedecef5e39a1c6" data-d1-id="o_4d643a4b93cc5a078d8c" data-d2-id="o_900f590a5b06575289c4">17 yo F newly diagnosed with pelvic inflammatory disease, what else to test for &rarr; <b>HIV and syphilis</b> &rarr; plus gonorrhea and chlamydia, retesting at 3 months</li>
+</ol>
+<div class="danger"><span class="lbl">When to admit</span> <b>Surgical emergency cannot be excluded, tubo-ovarian abscess, pregnancy, severe illness or vomiting or temperature above 38.5 C, inability to tolerate oral therapy, or no response to oral therapy.</b> Adolescence is <b>not</b> itself a criterion — the same thresholds apply as for adults. All contraceptive methods can be continued during treatment, and an intrauterine device does not need removal.</div>
+<div class="pearls"><span class="lbl">Pearls</span> The low threshold is the guideline, not a shortcut — clinical diagnosis carries a positive predictive value of only 65 to 90% for salpingitis, and that is accepted deliberately &middot; Only about half of acute PID has a positive gonorrhea or chlamydia test, so a negative test never excludes it &middot; Metronidazole joined the routine regimen in 2021 for anaerobic coverage; older item banks may key ceftriaxone plus doxycycline alone &middot; Quinolones are no longer recommended because of gonococcal resistance &middot; Fitz-Hugh-Curtis is PID that reached the liver capsule, with right upper quadrant pleuritic pain</div>
+<div class="pearls"><span class="lbl">Pairs with</span> Part I <b>Ectopic Pregnancy</b> is the mandatory partner: both present as acute pelvic pain in a reproductive-age woman, and the fork is settled by one test. Store the discriminator as a question: what is the pregnancy test?</div>
+<div class="rule"><span class="lbl">Transferable rule</span> When a diagnosis is defined as presumptive and clinical, the arrival of its confirmatory test is documentation rather than management, so ask what the pending test could change today and treat if the answer is nothing.</div>
+<div class="traps"><div class="trapline"><span class="pill p-seq">Sequencing trap</span><span class="trapwhy">Ultrasound is normal in uncomplicated PID and delays the only intervention that prevents sequelae.</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Urine culture is the right class of test on the wrong compartment.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Contraception is appropriate care but is prevention, not treatment of an established infection.</span></div></div>
+</div>
+
 <!-- =================== PREV =================== -->
-<h3 class="system" id="prev">Preventive Medicine &amp; Ethics <span class="n">5 topics <span style="color:#9A5B0E">+ 2 board-style</span></span></h3>
+<h3 class="system" id="prev">Preventive Medicine &amp; Ethics <span class="n">5 topics <span style="color:#9A5B0E">+ 1 board-style</span> <span style="color:#1F6A7E">+ 1 Aquifer</span></span></h3>
 <p class="system-note">Ranking questions and eligibility questions. Capacity determines the reporting path.</p>
 
 <div class="brief" id="smoking" data-shelf="fm">
@@ -8586,45 +8647,6 @@ The Part I pregnancy-vaccine brief listed Tdap's trap as "Timing — 27–36 wee
 
 <div class="bsband"><span class="n">2 briefs</span><span class="lbl">Board-Style &middot; Next-Step Questions</span><p class="t">Preventive Medicine &amp; Ethics</p></div>
 
-<div class="brief bs" id="bs-adolescent-vax" data-shelf="fm peds">
-<h4>Adolescent Immunization and the Age Platform</h4>
-<p class="sub">Platform, series complete, season · Aquifer · a date buried in line one is data</p>
-<div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 11 yo F, up to date on vaccines at age 9, seen in June for a pre-participation evaluation, healthy, no travel &middot; <b>Q</b> &mdash; the most appropriate vaccine today; options spanned Tdap, influenza and measles-mumps-rubella</div>
-<div class="dp"><span class="lbl">The decision point</span>
-<p>Age 11 is the <b>adolescent immunization platform</b>, and it is the only age gate any option here satisfies. She was up to date at 9, so every infant and early-childhood series is finished — hepatitis B, MMR and pneumococcal conjugate. <b>Tdap</b> is the one vaccine whose scheduled slot is now.</p>
-<p>Influenza is the trap, and it is a timing trap rather than an eligibility one. She is due for influenza vaccine every year, just not in <b>June</b>: the target window is September or October, and July and August are explicitly discouraged for single-dose recipients because immunity wanes before influenza peaks from December through February.</p>
-</div>
-<div class="crit"><span class="lbl">Defining criteria</span> <b>Adolescent platform at 11 to 12 years</b> — Tdap, HPV and MenACWY come due together &middot; <b>Influenza timing</b> — offer in September or October; avoid July and August for anyone needing a single dose &middot; <b>Catch-up principle</b> — every encounter is a vaccination opportunity, including a sports physical</div>
-<table data-mask="last">
-<caption>Each option and the gate it fails</caption>
-<thead><tr><th>Vaccine</th><th>When it is actually given</th><th>Why not at this visit</th></tr></thead>
-<tbody>
-<tr><td><b>Tdap</b></td><td><b>Single dose at 11 to 12 years</b></td><td>— it is the answer</td></tr>
-<tr><td>Influenza</td><td>Annually, ideally September to October</td><td>It is <b>June</b>, and July to August is discouraged</td></tr>
-<tr><td>MMR</td><td>12 to 15 months and 4 to 6 years</td><td><b>Series complete</b> before age 9</td></tr>
-<tr><td>Pneumococcal conjugate</td><td>Infant series at 2, 4, 6 and 12 to 15 months</td><td>Complete; no routine dose in a healthy 11-year-old</td></tr>
-<tr><td>Hepatitis B</td><td>Birth, 1 to 2 months, 6 to 18 months</td><td><b>Series complete</b> in infancy</td></tr>
-</tbody>
-</table>
-<h5 class="authored-hdr">Scenario bank</h5>
-<ol class="bank authored">
-<li data-type="screen" data-src="aquifer" data-d1="Influenza vaccine" data-d2="Measles-mumps-rubella" data-item-id="q_99716f748294537e8362" data-item-version="1" data-item-status="ready" data-key-id="o_a136e571a52c5450b68a" data-d1-id="o_0058c19eff895bc4b17e" data-d2-id="o_2e41ed53e7b95acaa938">11 yo F, up to date on vaccines at age 9, seen in June for a pre-participation evaluation, healthy, no travel &rarr; <b>Tdap</b> &rarr; adolescent platform at 11 to 12 years</li>
-<li data-type="screen" data-src="authored" data-d1="Pneumococcal conjugate and hepatitis B" data-d2="MMR and varicella" data-item-id="q_ac882558c52258429c39" data-item-version="1" data-item-status="ready" data-key-id="o_92ff1a51727458608b2a" data-d1-id="o_e005b40406d752a39224" data-d2-id="o_f127d484c4d75aa18c4d">11 yo F receiving Tdap today, what else is due at the same visit &rarr; <b>HPV and MenACWY</b> &rarr; the full 11 to 12 year platform</li>
-<li data-type="next" data-src="authored" data-d1="No further meningococcal vaccine is needed" data-d2="Repeat the full MenACWY primary series" data-item-id="q_af488338c472529ea6cd" data-item-version="1" data-item-status="ready" data-key-id="o_7deae9a9f69855cb87dc" data-d1-id="o_13ff7867cd4a5a57aa63" data-d2-id="o_1443ad29e3a75d7c9078">16 yo M who received MenACWY at age 11 &rarr; <b>MenACWY booster dose</b> &rarr; MenB by shared decision-making at 16 to 23</li>
-<li data-type="next" data-src="authored" data-d1="Give influenza vaccine only" data-d2="Defer influenza vaccine until December" data-item-id="q_b6cf4fa2dd07599eb91a" data-item-version="1" data-item-status="ready" data-key-id="o_cd99774c75685def8d41" data-d1-id="o_2427820119bc5ff99ba9" data-d2-id="o_2d9408acc0b152a5b82a">11 yo F, up to date, seen in early October for a pre-participation evaluation &rarr; <b>Give Tdap and influenza vaccine at this visit</b> &rarr; both are due now</li>
-<li data-type="next" data-src="authored" data-d1="She is past the age to start the series" data-d2="Vaccinate only if she is sexually active" data-item-id="q_fcc597ce1eed524a82b8" data-item-version="1" data-item-status="ready" data-key-id="o_70a84c0007205a8790f5" data-d1-id="o_c9b4e42b31ee557cb857" data-d2-id="o_8cd2d964fece570aa90c">15 yo F who has never received HPV vaccine &rarr; <b>Begin the HPV series today</b> &rarr; catch-up is recommended through age 26</li>
-<li data-type="next" data-src="authored" data-d1="A single MenACWY dose as for healthy peers" data-d2="Defer meningococcal vaccine until age 16" data-item-id="q_41f27a0332c25170bed7" data-item-version="1" data-item-status="ready" data-key-id="o_990cc0623673543f920d" data-d1-id="o_e03f2b555e485fbfa0c2" data-d2-id="o_a4103ca722f6512bbd10">11 yo M with functional asplenia from sickle cell disease, otherwise up to date &rarr; <b>MenACWY as a two-dose primary series, plus MenB</b> &rarr; asplenia changes the schedule</li>
-<li data-type="next" data-src="authored" data-d1="Accept the parents' verbal report as adequate" data-d2="Defer vaccination until records arrive from abroad" data-item-id="q_816abb5773d354059dc5" data-item-version="1" data-item-status="ready" data-key-id="o_0994b32a94d25aa2a529" data-d1-id="o_cfce8b20c9d0593985f5" data-d2-id="o_1be43dc92ef45256ab56">11 yo F newly arrived from abroad with no written immunization records &rarr; <b>Vaccinate as though unimmunized</b> &rarr; written records only</li>
-<li data-type="next" data-src="authored" data-d1="Defer all vaccines until she is afebrile" data-d2="Give inactivated vaccines only" data-item-id="q_f9dce5a31a3754a580ff" data-item-version="1" data-item-status="ready" data-key-id="o_ff355cf1e7bf5807ab74" data-d1-id="o_3b71c68d688b5f9f83a5" data-d2-id="o_149b3c6892e95a2a817d">11 yo F with rhinorrhea and a temperature of 37.8 C, otherwise well &rarr; <b>Vaccinate today</b> &rarr; mild illness is not a contraindication</li>
-<li data-type="mech" data-src="authored" data-d1="Live vaccines are contraindicated in summer months" data-d2="Influenza vaccine is only indicated under age 9" data-item-id="q_3aaf1834ff565e859285" data-item-version="1" data-item-status="ready" data-key-id="o_64c2a2067e4053ccab91" data-d1-id="o_748d7da47de95bb4b7ec" data-d2-id="o_50534f746d735a6d89b0">Why influenza vaccine is deferred in June for a child who needs only one dose &rarr; <b>Immunity wanes before influenza peaks in December to February</b> &rarr; target September or October</li>
-</ol>
-<div class="danger"><span class="lbl">A live divergence worth knowing</span> As of January 2026 the <b>CDC schedule specifies one HPV dose at 11 to 12 while the AAP recommends two doses at 9 to 12</b>. The classic keyed answer on retired exam items remains two doses if initiated before 15 and three if at 15 or older or immunocompromised, so expect the exam ledger to lag the clinic ledger here. Dose-count mechanics live in the HPV brief.</div>
-<div class="pearls"><span class="lbl">Pearls</span> The 11 to 12 platform is three vaccines: Tdap, HPV and MenACWY, and boards test it by offering one among decoys or asking what else is due &middot; MenACWY gets a booster at 16 when the risk period begins; MenB is separate at 16 to 23 by shared decision-making &middot; Asplenia, complement deficiency and eculizumab convert MenACWY into a two-dose primary series with lifelong boosters &middot; Mild illness, low-grade fever, antibiotics and breastfeeding are not contraindications &middot; Undocumented means unvaccinated — verbal report does not count</div>
-<div class="pearls"><span class="lbl">Pairs with</span> Part I <b>HPV Vaccination &amp; Series Rules</b> owns the series rules and Part I <b>DTaP: Contraindication vs. Precaution</b> owns pertussis contraindication versus precaution. Store the link as a question: is this an age-platform question or a series-mechanics question?</div>
-<div class="rule"><span class="lbl">Transferable rule</span> When every option is a real vaccine the question is an eligibility gate, and there are only three gates — age platform, series already complete, and season — so check them in that order.</div>
-<div class="traps"><div class="trapline"><span class="pill p-number">Treat-the-number</span><span class="trapwhy">Two years since the last visit baits an interval calculation for a series with no remaining doses.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Pneumococcal and hepatitis B recommendations feel unsettled enough that something seems owed.</span></div></div>
-</div>
-
 <div class="brief bs" id="bs-adolescent-confid" data-shelf="fm peds">
 <h4>Adolescent Confidentiality</h4>
 <p class="sub">Ask what would have to be true to break it</p>
@@ -8664,6 +8686,47 @@ The Part I pregnancy-vaccine brief listed Tdap's trap as "Timing — 27–36 wee
 <div class="pearls"><span class="lbl">Pairs with</span> <b>Elder Abuse &amp; Mandated Reporting</b> above — same axis, opposite direction. There, <b>impaired capacity</b> forces reporting over the patient's wishes. Here, <b>a minor with a confidential service</b> forces silence over the parent's wishes. Both turn on <b>who holds decisional authority for this specific decision</b>, not on who is older.</div>
 <div class="rule"><span class="lbl">Transferable rule</span> Confidentiality questions are <b>exception-list questions</b>. Don't weigh how serious the behavior sounds — ask whether it satisfies a <b>named exception</b> (harm to self, harm to others, abuse). If it doesn't, confidentiality holds no matter how alarming the disclosure.</div>
 <div class="traps"><span class="pill p-trump">Trump-card inversion</span><span class="pill p-seq">Sequencing trap</span></div>
+</div>
+
+<div class="bsband aqband"><span class="n">1 brief</span><span class="lbl">Aquifer &middot; Case-Based Briefs</span><p class="t">Preventive Medicine &amp; Ethics</p></div>
+
+<div class="brief bs" id="bs-adolescent-vax" data-shelf="fm peds" data-src="aquifer">
+<h4>Adolescent Immunization and the Age Platform</h4>
+<p class="sub">Platform, series complete, season · Aquifer · a date buried in line one is data</p>
+<div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 11 yo F, up to date on vaccines at age 9, seen in June for a pre-participation evaluation, healthy, no travel &middot; <b>Q</b> &mdash; the most appropriate vaccine today; options spanned Tdap, influenza and measles-mumps-rubella</div>
+<div class="dp"><span class="lbl">The decision point</span>
+<p>Age 11 is the <b>adolescent immunization platform</b>, and it is the only age gate any option here satisfies. She was up to date at 9, so every infant and early-childhood series is finished — hepatitis B, MMR and pneumococcal conjugate. <b>Tdap</b> is the one vaccine whose scheduled slot is now.</p>
+<p>Influenza is the trap, and it is a timing trap rather than an eligibility one. She is due for influenza vaccine every year, just not in <b>June</b>: the target window is September or October, and July and August are explicitly discouraged for single-dose recipients because immunity wanes before influenza peaks from December through February.</p>
+</div>
+<div class="crit"><span class="lbl">Defining criteria</span> <b>Adolescent platform at 11 to 12 years</b> — Tdap, HPV and MenACWY come due together &middot; <b>Influenza timing</b> — offer in September or October; avoid July and August for anyone needing a single dose &middot; <b>Catch-up principle</b> — every encounter is a vaccination opportunity, including a sports physical</div>
+<table data-mask="last">
+<caption>Each option and the gate it fails</caption>
+<thead><tr><th>Vaccine</th><th>When it is actually given</th><th>Why not at this visit</th></tr></thead>
+<tbody>
+<tr><td><b>Tdap</b></td><td><b>Single dose at 11 to 12 years</b></td><td>— it is the answer</td></tr>
+<tr><td>Influenza</td><td>Annually, ideally September to October</td><td>It is <b>June</b>, and July to August is discouraged</td></tr>
+<tr><td>MMR</td><td>12 to 15 months and 4 to 6 years</td><td><b>Series complete</b> before age 9</td></tr>
+<tr><td>Pneumococcal conjugate</td><td>Infant series at 2, 4, 6 and 12 to 15 months</td><td>Complete; no routine dose in a healthy 11-year-old</td></tr>
+<tr><td>Hepatitis B</td><td>Birth, 1 to 2 months, 6 to 18 months</td><td><b>Series complete</b> in infancy</td></tr>
+</tbody>
+</table>
+<h5 class="authored-hdr">Scenario bank</h5>
+<ol class="bank authored">
+<li data-type="screen" data-src="aquifer" data-d1="Influenza vaccine" data-d2="Measles-mumps-rubella" data-item-id="q_99716f748294537e8362" data-item-version="1" data-item-status="ready" data-key-id="o_a136e571a52c5450b68a" data-d1-id="o_0058c19eff895bc4b17e" data-d2-id="o_2e41ed53e7b95acaa938">11 yo F, up to date on vaccines at age 9, seen in June for a pre-participation evaluation, healthy, no travel &rarr; <b>Tdap</b> &rarr; adolescent platform at 11 to 12 years</li>
+<li data-type="screen" data-src="authored" data-d1="Pneumococcal conjugate and hepatitis B" data-d2="MMR and varicella" data-item-id="q_ac882558c52258429c39" data-item-version="1" data-item-status="ready" data-key-id="o_92ff1a51727458608b2a" data-d1-id="o_e005b40406d752a39224" data-d2-id="o_f127d484c4d75aa18c4d">11 yo F receiving Tdap today, what else is due at the same visit &rarr; <b>HPV and MenACWY</b> &rarr; the full 11 to 12 year platform</li>
+<li data-type="next" data-src="authored" data-d1="No further meningococcal vaccine is needed" data-d2="Repeat the full MenACWY primary series" data-item-id="q_af488338c472529ea6cd" data-item-version="1" data-item-status="ready" data-key-id="o_7deae9a9f69855cb87dc" data-d1-id="o_13ff7867cd4a5a57aa63" data-d2-id="o_1443ad29e3a75d7c9078">16 yo M who received MenACWY at age 11 &rarr; <b>MenACWY booster dose</b> &rarr; MenB by shared decision-making at 16 to 23</li>
+<li data-type="next" data-src="authored" data-d1="Give influenza vaccine only" data-d2="Defer influenza vaccine until December" data-item-id="q_b6cf4fa2dd07599eb91a" data-item-version="1" data-item-status="ready" data-key-id="o_cd99774c75685def8d41" data-d1-id="o_2427820119bc5ff99ba9" data-d2-id="o_2d9408acc0b152a5b82a">11 yo F, up to date, seen in early October for a pre-participation evaluation &rarr; <b>Give Tdap and influenza vaccine at this visit</b> &rarr; both are due now</li>
+<li data-type="next" data-src="authored" data-d1="She is past the age to start the series" data-d2="Vaccinate only if she is sexually active" data-item-id="q_fcc597ce1eed524a82b8" data-item-version="1" data-item-status="ready" data-key-id="o_70a84c0007205a8790f5" data-d1-id="o_c9b4e42b31ee557cb857" data-d2-id="o_8cd2d964fece570aa90c">15 yo F who has never received HPV vaccine &rarr; <b>Begin the HPV series today</b> &rarr; catch-up is recommended through age 26</li>
+<li data-type="next" data-src="authored" data-d1="A single MenACWY dose as for healthy peers" data-d2="Defer meningococcal vaccine until age 16" data-item-id="q_41f27a0332c25170bed7" data-item-version="1" data-item-status="ready" data-key-id="o_990cc0623673543f920d" data-d1-id="o_e03f2b555e485fbfa0c2" data-d2-id="o_a4103ca722f6512bbd10">11 yo M with functional asplenia from sickle cell disease, otherwise up to date &rarr; <b>MenACWY as a two-dose primary series, plus MenB</b> &rarr; asplenia changes the schedule</li>
+<li data-type="next" data-src="authored" data-d1="Accept the parents' verbal report as adequate" data-d2="Defer vaccination until records arrive from abroad" data-item-id="q_816abb5773d354059dc5" data-item-version="1" data-item-status="ready" data-key-id="o_0994b32a94d25aa2a529" data-d1-id="o_cfce8b20c9d0593985f5" data-d2-id="o_1be43dc92ef45256ab56">11 yo F newly arrived from abroad with no written immunization records &rarr; <b>Vaccinate as though unimmunized</b> &rarr; written records only</li>
+<li data-type="next" data-src="authored" data-d1="Defer all vaccines until she is afebrile" data-d2="Give inactivated vaccines only" data-item-id="q_f9dce5a31a3754a580ff" data-item-version="1" data-item-status="ready" data-key-id="o_ff355cf1e7bf5807ab74" data-d1-id="o_3b71c68d688b5f9f83a5" data-d2-id="o_149b3c6892e95a2a817d">11 yo F with rhinorrhea and a temperature of 37.8 C, otherwise well &rarr; <b>Vaccinate today</b> &rarr; mild illness is not a contraindication</li>
+<li data-type="mech" data-src="authored" data-d1="Live vaccines are contraindicated in summer months" data-d2="Influenza vaccine is only indicated under age 9" data-item-id="q_3aaf1834ff565e859285" data-item-version="1" data-item-status="ready" data-key-id="o_64c2a2067e4053ccab91" data-d1-id="o_748d7da47de95bb4b7ec" data-d2-id="o_50534f746d735a6d89b0">Why influenza vaccine is deferred in June for a child who needs only one dose &rarr; <b>Immunity wanes before influenza peaks in December to February</b> &rarr; target September or October</li>
+</ol>
+<div class="danger"><span class="lbl">A live divergence worth knowing</span> As of January 2026 the <b>CDC schedule specifies one HPV dose at 11 to 12 while the AAP recommends two doses at 9 to 12</b>. The classic keyed answer on retired exam items remains two doses if initiated before 15 and three if at 15 or older or immunocompromised, so expect the exam ledger to lag the clinic ledger here. Dose-count mechanics live in the HPV brief.</div>
+<div class="pearls"><span class="lbl">Pearls</span> The 11 to 12 platform is three vaccines: Tdap, HPV and MenACWY, and boards test it by offering one among decoys or asking what else is due &middot; MenACWY gets a booster at 16 when the risk period begins; MenB is separate at 16 to 23 by shared decision-making &middot; Asplenia, complement deficiency and eculizumab convert MenACWY into a two-dose primary series with lifelong boosters &middot; Mild illness, low-grade fever, antibiotics and breastfeeding are not contraindications &middot; Undocumented means unvaccinated — verbal report does not count</div>
+<div class="pearls"><span class="lbl">Pairs with</span> Part I <b>HPV Vaccination &amp; Series Rules</b> owns the series rules and Part I <b>DTaP: Contraindication vs. Precaution</b> owns pertussis contraindication versus precaution. Store the link as a question: is this an age-platform question or a series-mechanics question?</div>
+<div class="rule"><span class="lbl">Transferable rule</span> When every option is a real vaccine the question is an eligibility gate, and there are only three gates — age platform, series already complete, and season — so check them in that order.</div>
+<div class="traps"><div class="trapline"><span class="pill p-number">Treat-the-number</span><span class="trapwhy">Two years since the last visit baits an interval calculation for a series with no remaining doses.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Pneumococcal and hepatitis B recommendations feel unsettled enough that something seems owed.</span></div></div>
 </div>
 
 <div style="margin:70px 0 0;padding:22px 0 0;border-top:2px solid var(--rule);color:var(--muted);font-size:13.5px">
@@ -8783,7 +8846,12 @@ function applyMobileIndexFilter(){
       a.style.display=(eligible&&match)?'':'none';
       if(eligible&&match) hit++;
     });
-    d.querySelectorAll('.msub').forEach(function(x){ x.style.display=mobileIndexQuery?'none':''; });
+    d.querySelectorAll('.msub').forEach(function(x){
+      if(mobileIndexQuery){ x.style.display='none'; return; }
+      var n=0,el=x.nextElementSibling;
+      while(el&&!el.classList.contains('msub')){ if(el.tagName==='A'&&el.style.display!=='none')n++; el=el.nextElementSibling; }
+      x.style.display=n?'':'none';
+    });
     d.style.display=hit?'':'none'; d.open=!!mobileIndexQuery;
     var c=d.querySelector('summary i'); if(c) c.textContent=hit;
   });
@@ -8868,9 +8936,9 @@ function applyShelf(s){
     if(total>0&&n) liveSystems++;
   });
   document.querySelectorAll('.bsband').forEach(function(bb){
-    var n=0,el=bb.nextElementSibling;
+    var n=0,el=bb.nextElementSibling,aq=bb.classList.contains('aqband');
     while(el&&el.classList.contains('brief')){
-      if(el.classList.contains('bs')&&el.style.display!=='none')n++;
+      if((aq?el.dataset.src==='aquifer':el.classList.contains('bs'))&&el.style.display!=='none')n++;
       el=el.nextElementSibling;
     }
     bb.style.display=n?'':'none';
@@ -8886,22 +8954,28 @@ function applyShelf(s){
   applyMobileIndexFilter();
   var navHost=document.getElementById('navlinks');
   if(navHost){
-    var group=null,live=0;
+    var group=null,live=0,sub=null,subLive=0;
+    function closeSub(){ if(sub)sub.style.display=subLive?'':'none'; sub=null; subLive=0; }
     Array.prototype.slice.call(navHost.children).forEach(function(el){
       if(el.classList.contains('sect')){
+        closeSub();
         if(group)group.style.display=live?'':'none';
         group=el;live=0;
-      }else if(el.tagName==='A'&&el.style.display!=='none')live++;
-      else if(el.classList.contains('navsub'))el.style.display='';
+      }else if(el.tagName==='A'&&el.style.display!=='none'){live++;subLive++;}
+      else if(el.classList.contains('navsub')){ closeSub(); sub=el; }
     });
+    closeSub();
     if(group)group.style.display=live?'':'none';
   }
   var meta=document.querySelector('.masthead .meta');
   if(meta){
-    var bs=0;
-    document.querySelectorAll('.brief.bs').forEach(function(b){if(b.style.display!=='none')bs++;});
-    meta.innerHTML='<span><b>'+(visible-bs)+'</b> topics</span>'+
-      '<span><b>'+bs+'</b> board-style</span><span><b>'+liveSystems+'</b> systems</span>'+
+    var bs=0,aq=0;
+    document.querySelectorAll('.brief').forEach(function(b){
+      if(b.style.display==='none')return;
+      if(b.dataset.src==='aquifer')aq++; else if(b.classList.contains('bs'))bs++;
+    });
+    meta.innerHTML='<span><b>'+(visible-bs-aq)+'</b> topics</span>'+
+      '<span><b>'+bs+'</b> board-style</span>'+(aq?'<span><b>'+aq+'</b> Aquifer</span>':'')+'<span><b>'+liveSystems+'</b> systems</span>'+
       '<span><b>10</b> named trap species</span><span>Viewing <b>'+
       (SHELVES.filter(function(x){return x[0]===s;})[0]||['','Step 2'])[1]+'</b></span>';
   }
@@ -9016,9 +9090,9 @@ function mobileNav(){
       var title=norm(el.textContent.replace(c?c.textContent:'',''));
       cur={title:title, items:[]}; groups.push(cur);
     } else if(cur && el.tagName==='A'){
-      cur.items.push({href:el.getAttribute('href'), text:norm(el.textContent), bs:el.classList.contains('bs')});
+      cur.items.push({href:el.getAttribute('href'), text:norm(el.textContent), cls:el.classList.contains('aq')?'aq':(el.classList.contains('bs')?'bs':'')});
     } else if(cur && el.classList.contains('navsub')){
-      cur.items.push({sub:norm(el.textContent)});
+      cur.items.push({sub:norm(el.textContent), aq:el.classList.contains('aq')});
     }
   });
   var groupCard=document.createElement('div'); groupCard.className='sheetgroup';
@@ -9029,9 +9103,9 @@ function mobileNav(){
     s.innerHTML='<span class="t">'+g.title+'</span><i>'+g.items.filter(function(x){return x.href;}).length+'</i>';
     d.appendChild(s);
     g.items.forEach(function(it){
-      if(it.sub){ var h=document.createElement('div'); h.className='msub'; h.textContent=it.sub; d.appendChild(h); return; }
+      if(it.sub){ var h=document.createElement('div'); h.className='msub'+(it.aq?' aq':''); h.textContent=it.sub; d.appendChild(h); return; }
       var a=document.createElement('a'); a.href=it.href; a.textContent=it.text;
-      if(it.bs) a.className='bs';
+      if(it.cls) a.className=it.cls;
       d.appendChild(a);
     });
     groupCard.appendChild(d);
