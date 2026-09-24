@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-09-24 s32: Mobile sidebar replaces the bottom sheet; full-text search on phone and desktop; Board-style only toggle replaces NBME-tested
+
+```
+Page: 207 briefs, 2014 items -> 207 briefs, 2014 items
+Other page changes (nav, headers, scripts): +21852 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 207 briefs, 2014 items, 4 scripts, 31 checks, base HEAD | allowlisted 16 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 207 | bankwraps 207 | mcq 2014 (axCheck 2014, reveal-only 0) | malformed 0 | crit gridded 123/124 | vignette gridded 129/129 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (42269 source shingles; page 0.031%)
+```
+
 ## 2026-09-24 s31: NBME Peds batch: 27 questions linked; 6 new briefs, 12 backfills, NBME wording guide
 
 ```

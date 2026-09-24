@@ -54,7 +54,7 @@ body.flat .mcq .why{background:var(--confirm-bg);background-image:none}
 body.flat .mcq .rv{background:#FBFBFB;background-image:none}
 body.flat .mcq button.right{background:var(--confirm-bg)}
 body.flat .mcq button.wrong{background:var(--caution-bg)}
-body.flat .sheetlist details,body.flat .sheetin,body.flat #mbar{background:#FBFBFB;background-image:none}
+body.flat #mbar{background:#FBFBFB;background-image:none}
 body.flat .tw tbody tr{background-image:none}
 @media (max-width:640px){ body.flat .tw tbody tr{background:#FBFBFB} }
 .mcq button:focus-visible,.shelfpick button:focus-visible,#mbar button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -65,12 +65,12 @@ html{background:var(--canvas-b);scroll-behavior:smooth}
 body{margin:0;min-height:100vh;background:radial-gradient(130% 80% at 22% -10%,#F4F4F9 0%,var(--canvas-a) 38%,var(--canvas-b) 100%);background-attachment:fixed;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
 
 /* ---------- SIDEBAR ---------- */
-#nav{position:fixed;top:0;left:0;width:var(--sidebar);height:100vh;background:#17171C;color:#fff;overflow-y:auto;padding:22px 0 40px;z-index:50}
+#nav{position:fixed;top:0;left:0;width:var(--sidebar);height:100vh;background:#17171C;color:#fff;display:flex;flex-direction:column;overflow:hidden;padding:22px 0 0;z-index:50}
 #nav .brand{padding:0 22px 16px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:14px}
 #nav .brand .mark{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(145deg,#3A3A46,#1E1E26);font-weight:800;font-size:11px;letter-spacing:.5px;margin-bottom:11px;box-shadow:0 4px 10px -2px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.14)}
 #nav .brand h1{font-family:var(--serif);font-size:19px;line-height:1.25;margin:0 0 3px;font-weight:600}
 #nav .brand p{margin:0;font-size:10px;color:#9A93E8;letter-spacing:1.6px;text-transform:uppercase;font-weight:800}
-#search{width:calc(100% - 36px);margin:0 18px 14px;padding:10px 13px;border-radius:10px;border:none;background:#101015;color:#fff;font-size:13.5px;font-family:var(--sans);box-shadow:inset 3px 3px 7px rgba(0,0,0,.55),inset -1px -1px 2px rgba(255,255,255,.05)}
+#search{width:calc(100% - 36px);margin:0 18px 14px;display:block;padding:10px 13px;border-radius:10px;border:none;background:#101015;color:#fff;font-size:16px;font-family:var(--sans);box-shadow:inset 3px 3px 7px rgba(0,0,0,.55),inset -1px -1px 2px rgba(255,255,255,.05)}
 #search::placeholder{color:rgba(255,255,255,.36)}
 #search:focus{outline:none;box-shadow:inset 3px 3px 7px rgba(0,0,0,.55),0 0 0 1.5px var(--accent)}
 #nav .sect{padding:13px 22px 4px;font-size:9.5px;letter-spacing:1.6px;text-transform:uppercase;color:#8F88E0;font-weight:800}
@@ -338,7 +338,6 @@ tbody tr.em td{background:rgba(142,61,44,.05)}
 }
 @media (max-width:1240px){ .wrap{padding:0 40px} }
 @media (max-width:980px){
-  #nav{position:static;width:100%;height:auto}
   main{margin-left:0} .wrap{padding:0 22px}
   .tab{position:static;margin-bottom:12px} .sectcard{padding-left:26px}
   .brief{padding:22px 19px}
@@ -352,9 +351,8 @@ tbody tr.em td{background:rgba(142,61,44,.05)}
    a bottom bar and a sheet, because a static 100-link index above the
    content forces a scroll to the top and then a scroll through the index.
    Systems are collapsed, so all 12 fit one screen.                    */
-#mbar,#sheet{display:none}
+#mbar{display:none}
 @media (max-width:980px){
-  #nav{display:none}
   main{margin-left:0;padding-bottom:calc(78px + env(safe-area-inset-bottom,0px))}
 
   /* iOS Safari overlays a toolbar at the bottom and reports vh against the
@@ -396,128 +394,8 @@ tbody tr.em td{background:rgba(142,61,44,.05)}
   body.study #mbar button[data-act="study"]{
     color:#fff;background:linear-gradient(160deg,#26262F 0%,#141419 60%,#0D0D12 100%);
   }
-  /* the bar sits under the sheet, so the sheet carries its own close control */
-  body.sheetopen{overflow:hidden}
-  body.sheetopen #mbar{opacity:0;pointer-events:none;transition:opacity .15s}
-
-  #sheet[hidden]{display:none!important}
-  #sheet{
-    display:block;position:fixed;left:0;right:0;top:0;z-index:130;
-    height:100vh;height:100dvh;
-    background:rgba(20,24,26,.38);
-    opacity:0;pointer-events:none;transition:opacity .2s;
-  }
-  #sheet.open{opacity:1;pointer-events:auto}
-  .sheetin{
-    position:absolute;left:0;right:0;bottom:0;
-    max-height:76vh;max-height:76dvh;
-    display:flex;flex-direction:column;
-    background:linear-gradient(180deg,#F3F4F4,#EAECEC);
-    border-radius:26px 26px 0 0;
-    padding:10px 16px calc(26px + env(safe-area-inset-bottom,0px));
-    transform:translateY(101%);transition:transform .26s cubic-bezier(.32,.72,0,1);
-    box-shadow:0 -12px 40px -10px rgba(20,24,26,.35);
-  }
-  #sheet.open .sheetin{transform:translateY(0)}
-  .sheethead{display:flex;align-items:center;justify-content:space-between;flex:none;margin:0 0 10px}
-  .sheethead b{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--ink)}
-  .sheetclose{
-    all:unset;cursor:pointer;width:34px;height:34px;border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    font-size:17px;line-height:1;color:var(--muted);
-    background:linear-gradient(145deg,#F2F3F3,#E7E9E9);box-shadow:var(--ec);
-  }
-  .sheetclose:active{box-shadow:var(--inner-2)}
-  .grab{width:38px;height:4px;border-radius:99px;background:#C4C9C9;margin:0 auto 10px;flex:none}
-  #msearch{
-    flex:none;width:100%;padding:12px 14px;margin:0 0 12px;border:none;border-radius:12px;
-    font-size:16px;font-family:var(--sans);color:var(--ink);
-    background:linear-gradient(145deg,#E2E5E5,#EDEFEF);box-shadow:var(--inner-2);
-  }
-  #msearch:focus{outline:none;box-shadow:var(--inner-2),0 0 0 2px rgba(24,28,30,.35)}
-  .sheetlist{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:2px 2px 6px}
-  /* each system is a raised porcelain tile, same material as the brief cards */
-  .sheetlist details{
-    margin:0 0 9px;border-radius:15px;overflow:hidden;
-    background:linear-gradient(145deg,#F4F5F5 0%,#EEF0F0 55%,#E9EBEB 100%);
-    box-shadow:var(--e2);
-  }
-  .sheetlist summary{
-    list-style:none;cursor:pointer;padding:14px 15px;
-    display:flex;align-items:center;gap:10px;
-    font-size:15.5px;font-weight:600;color:var(--ink);
-  }
-  .sheetlist summary::-webkit-details-marker{display:none}
-  .sheetlist summary .t{flex:1;min-width:0}
-  /* the count is a recessed chip pinned beside the chevron, not floating mid-row */
-  .sheetlist summary i{
-    flex:none;font-style:normal;font-size:11px;font-weight:800;
-    color:var(--muted);min-width:26px;text-align:center;
-    padding:3px 8px;border-radius:99px;
-    background:linear-gradient(145deg,#E3E6E6,#EFF1F1);box-shadow:var(--inner-2);
-  }
-  .sheetlist summary::after{
-    content:"›";flex:none;font-size:20px;line-height:1;color:var(--faint);
-    transition:transform .18s;display:inline-block;width:12px;text-align:center;
-  }
-  .sheetlist details[open] summary::after{transform:rotate(90deg);color:var(--ink)}
-  .sheetlist details[open] summary{color:var(--ink)}
-  .sheetlist details[open] summary i{color:var(--ink-2)}
-  .sheetlist details[open]{box-shadow:var(--e2),inset 0 0 0 1.5px rgba(24,28,30,.22)}
-  .sheetlist a{
-    display:block;padding:12px 16px 12px 26px;text-decoration:none;
-    color:var(--ink-2);font-size:14.6px;
-    border-top:1px solid rgba(24,28,30,.07);
-    background:rgba(255,255,255,.42);
-  }
-  .sheetlist a.bs{padding-left:34px;color:var(--board)}
-  .sheetlist a:active{background:rgba(24,28,30,.07)}
-  .sheetlist .msub{
-    padding:10px 16px 4px 26px;font-size:9px;letter-spacing:1.3px;text-transform:uppercase;
-    font-weight:800;color:var(--board);
-    border-top:1px solid rgba(24,28,30,.07);background:rgba(255,255,255,.42);
-  }
 }
-@media print{ #mbar,#sheet{display:none!important} }
-
-/* Index sheet, pass 2. The list is the point of the sheet, so the chrome
-   above it is cut to one row each, the systems become one grouped card
-   instead of twelve floating tiles, and the sheet opens on where you are. */
-@media (max-width:980px){
-  .sheetin{max-height:88vh;max-height:88dvh}
-  .sheethead{margin:0 0 8px}
-  .sheethead b{font-size:19px}
-  .sheetin .shelfpick{margin:0 0 10px;display:block}
-  .sheetin .shelfpick .lbl{display:none}
-  .sheetin .shelfpick .seg{display:flex;flex-wrap:nowrap;gap:0;padding:3px;border-radius:12px}
-  .sheetin .shelfpick button{flex:1;padding:8px 4px;font-size:10px;letter-spacing:.9px;white-space:nowrap}
-  .sheetin .shelfpick button.soon{display:none}
-  #msearch{padding:10px 14px;margin:0 0 10px;border-radius:11px}
-  .sheetlist{
-    padding:0 0 4px;
-    -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 8px);
-            mask-image:linear-gradient(180deg,transparent 0,#000 8px);
-  }
-  .sheetgroup{
-    border-radius:15px;overflow:hidden;margin:4px 0 0;
-    background:linear-gradient(145deg,#F4F5F5 0%,#EEF0F0 55%,#E9EBEB 100%);
-    box-shadow:var(--e2);
-  }
-  .sheetlist details{margin:0;border-radius:0;background:none;box-shadow:none}
-  .sheetlist details+details{border-top:1px solid rgba(24,28,30,.08)}
-  .sheetlist details[open]{box-shadow:none;background:rgba(255,255,255,.35)}
-  .sheetlist summary{padding:13px 14px 13px 16px;font-size:15px}
-  .sheetlist summary i{padding:2px 7px;font-size:10.5px}
-  .sheetlist a{padding:11px 16px 11px 26px;font-size:14.2px;background:none}
-  .sheetlist a.bs{padding-left:26px}
-  .sheetlist .msub{background:none}
-  /* where you are: the system you were reading, and the brief itself */
-  .sheetlist details.here summary .t::after{
-    content:"Reading";margin-left:8px;vertical-align:2px;
-    font-size:8.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--accent);
-  }
-  .sheetlist a.here{color:var(--ink);font-weight:600;box-shadow:inset 3px 0 0 var(--accent)}
-}
+@media print{ #mbar{display:none!important} }
 
 /* ---------- PHONE: tables restack as one card per row ----------
    A 5-column mimics table cannot fit 390px. Scrolling it sideways pushes
@@ -602,7 +480,6 @@ tbody tr.em td{background:rgba(142,61,44,.05)}
 #nav .shelfsel option:disabled{color:rgba(255,255,255,.34)}
 @media (max-width:980px){
   .masthead .shelfpick{margin:18px 0 2px}
-  .sheetin .shelfpick{margin:0 0 12px}
   .shelfpick .seg{flex:1}
   .shelfpick button{text-align:center;padding:9px 11px;font-size:10.5px}
 }
@@ -807,7 +684,6 @@ body.flat #rvpanel{background:#FBFBFB}
 
 /* phone: the panel becomes a bottom sheet, same node, same dismissals */
 @media (max-width:900px){
-  #rvlaunch{display:none}
   #rvpanel{
     left:0;right:0;bottom:0;top:auto!important;width:auto;max-width:none;
     border-radius:20px 20px 0 0;padding:14px 16px calc(16px + env(safe-area-inset-bottom));
@@ -1012,8 +888,6 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
 .brief.nbme-linked > h4::after{content:"NBME" !important;display:inline-block;vertical-align:5px;margin-left:10px;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:1px;color:#fff !important;background:#3F4A8A !important;padding:5px 9px;border-radius:var(--r-chip);box-shadow:var(--ec);white-space:nowrap}
 .brief.nbme-linked > h4[data-nbme-n]::after{content:"NBME \00D7" attr(data-nbme-n) !important}
 .mcq.done[data-src="nbme"] .why::before,.mcq.done[data-nbme] .why::before{content:attr(data-nbme-label);display:block;font-family:var(--sans);font-size:10px;font-weight:800;letter-spacing:1px;color:#3F4A8A;margin:0 0 6px}
-.nbmetog{margin-left:10px;font-family:var(--sans);font-size:12px;font-weight:700;border:1px solid rgba(63,74,138,.35);background:none;color:#3F4A8A;border-radius:var(--r-chip);padding:5px 10px;cursor:pointer}
-.nbmetog.on{background:#3F4A8A;color:#fff}
 #bpview table td:not(:first-child),#bpview table th:not(:first-child){text-align:right;white-space:nowrap}
 #bpview .bpnote{font-size:13px;color:var(--ink-2);margin:6px 0 10px}
 #bpview tr.bpgap td:first-child{color:#9A5B0E}
@@ -1023,10 +897,6 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
 body.flat .aqband{background:var(--aquifer-bg);background-image:none}
 #nav .navsub.aq{color:#86BFCD}
 #nav a.aq{padding-left:30px;font-size:12.6px}
-@media (max-width:980px){
-  .sheetlist a.aq{padding-left:26px;color:var(--aquifer)}
-  .sheetlist .msub.aq{color:var(--aquifer)}
-}
 /* clue tables: plain clue, emphasized pointer */
 table.cluet tbody td:first-child{font-weight:400;color:var(--ink-2);width:46%}
 @media (max-width:640px){
@@ -1054,6 +924,81 @@ table.cluet tbody td:first-child{font-weight:400;color:var(--ink-2);width:46%}
   .tw tbody.grp tr:first-child td:nth-child(3){padding-top:8px}
   .tw tbody.grp tr:last-child td{border-bottom:none}
   .tw tbody.grp tr:first-child td:first-child{border-bottom:1px solid rgba(84,74,196,.16)}
+}
+
+/* ---------- ONE SIDEBAR + FULL-TEXT SEARCH (s32) ----------
+   Desktop: the fixed sidebar, now a pinned head (brand, search) over one
+   scrolling body. Below 980px the same sidebar is an off-canvas panel from
+   the left over a dimmed page; the bottom sheet is gone. While a query is
+   typed, search results replace the systems list. */
+#navtop{flex:none;border-bottom:1px solid rgba(255,255,255,.10)}
+#navtop .brand{border-bottom:none;margin-bottom:12px}
+#navscroll{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:14px 0 40px}
+.navclose{display:none}
+#modes .bsonly[aria-pressed="true"] .track{background:var(--accent)}
+#modes .bsonly[aria-pressed="true"] .knob{transform:translateX(15px)}
+#modes button:focus-visible{outline:2px solid #9A93E8;outline-offset:2px}
+#nav.sxon #navlinks{display:none}
+#sxres[hidden]{display:none}
+#sxres{padding:0 10px 12px}
+#sxres .sxstat{margin:4px 12px 10px;font-size:9.5px;letter-spacing:1.4px;text-transform:uppercase;font-weight:800;color:#8F88E0;line-height:1.5}
+#sxres .sxstat b{color:#fff;font-size:11px;letter-spacing:.4px}
+#sxres .sxlist{list-style:none;margin:0;padding:0}
+#sxres a.sxhit{display:block;padding:10px 12px 11px;margin:0 0 2px;border-left:none;border-radius:10px;color:rgba(255,255,255,.78);text-decoration:none}
+#sxres a.sxhit:hover{background:rgba(255,255,255,.06)}
+#sxres a.sxhit:focus-visible{outline:2px solid #9A93E8;outline-offset:-2px;background:rgba(255,255,255,.06)}
+#sxres .t{display:block;font-size:13.6px;font-weight:700;line-height:1.35;color:#fff}
+#sxres .b{display:block;margin:5px 0 3px;font-size:9px;letter-spacing:1.3px;text-transform:uppercase;font-weight:800;color:#C9A47B}
+#sxres .s{display:block;font-size:12.6px;line-height:1.5;color:rgba(255,255,255,.64)}
+#sxres mark{background:rgba(154,147,232,.34);color:#fff;border-radius:3px;padding:0 1px}
+body.study #sxres .s.sxm{filter:blur(4px);user-select:none}
+#sxres .sxcap{margin:10px 12px 0;font-size:12px;color:rgba(255,255,255,.5)}
+#sxres .sxmore{all:unset;cursor:pointer;display:block;margin:12px 12px 2px;padding:9px 12px;border-radius:10px;background:#101015;box-shadow:inset 3px 3px 7px rgba(0,0,0,.5);font-size:12.5px;font-weight:700;color:#B9B3F2}
+#sxres .sxmore:focus-visible{outline:2px solid #9A93E8;outline-offset:2px}
+/* the block a search result lands on */
+.sxflash{outline:3px solid transparent;outline-offset:4px;animation:sxflash 2s ease-out 1}
+@keyframes sxflash{0%,45%{outline-color:var(--accent)}100%{outline-color:rgba(84,74,196,0)}}
+@media (prefers-reduced-motion: reduce){ .sxflash{outline-color:var(--accent)} }
+#navscrim{display:none}
+@media print{ #navscrim{display:none!important} }
+
+@media (max-width:980px){
+  #nav{
+    display:flex;position:fixed;top:0;left:0;bottom:auto;z-index:150;
+    width:min(86vw,360px);height:100vh;height:100dvh;
+    padding:0 0 0 env(safe-area-inset-left,0px);
+    transform:translateX(-104%);visibility:hidden;
+    transition:transform .24s ease,visibility 0s linear .24s;
+    box-shadow:14px 0 34px -10px rgba(0,0,0,.5);
+  }
+  body.navopen #nav{transform:none;visibility:visible;transition:transform .24s ease,visibility 0s}
+  /* follows window.visualViewport while open, so the keyboard never covers it */
+  body.navopen #nav.vvfit{top:var(--vvt,0px);height:var(--vvh,100dvh)}
+  #navscrim{
+    display:block;position:fixed;left:0;top:0;right:0;bottom:0;z-index:148;
+    background:rgba(10,10,14,.46);opacity:0;pointer-events:none;transition:opacity .2s;
+  }
+  body.navopen #navscrim{opacity:1;pointer-events:auto}
+  body.navopen{overflow:hidden}
+  body.navopen #rvpanel{z-index:170}
+  #navtop{display:flex;flex-wrap:wrap;align-items:center;padding:calc(12px + env(safe-area-inset-top,0px)) 0 0}
+  #navtop .brand{flex:1 1 auto;min-width:0;display:flex;align-items:center;gap:10px;padding:0 0 12px 18px;margin:0}
+  #navtop .brand .mark{margin:0;width:30px;height:30px;border-radius:9px;flex:none}
+  #navtop .brand h1{font-size:17px;margin:0}
+  #navtop .brand p{display:none}
+  .navclose{
+    all:unset;cursor:pointer;flex:none;display:flex;align-items:center;justify-content:center;
+    width:40px;height:40px;margin:0 12px 12px 0;border-radius:50%;
+    background:#101015;color:rgba(255,255,255,.82);font-size:15px;line-height:1;
+    box-shadow:inset 3px 3px 7px rgba(0,0,0,.5);
+  }
+  .navclose:focus-visible{outline:2px solid #9A93E8;outline-offset:2px}
+  #search{flex:1 0 calc(100% - 36px);margin:0 18px 12px}
+  #navscroll{padding:12px 0 calc(28px + env(safe-area-inset-bottom,0px))}
+  #nav a{padding-top:9px;padding-bottom:9px}
+  #nav .shelfsel{font-size:16px}
+  /* with a query typed, results sit directly under the field */
+  #nav.sxon #navscroll > .shelfpick,#nav.sxon #modes,#nav.sxon #rvlaunch{display:none}
 }
 </style>
 </head>
@@ -12636,16 +12581,25 @@ function switches(){
   var brand=nav.querySelector('.brand');
   var box=document.createElement('div'); box.id='modes';
   box.innerHTML =
+    '<button class="bsonly" type="button" aria-pressed="false" title="Show only board-style briefs"><span class="track"><span class="knob"></span></span><span class="nm">BOARD-STYLE ONLY</span></button>'+
     '<button class="study" type="button" aria-pressed="false"><span class="track"><span class="knob"></span></span><span class="nm">STUDY MODE</span></button>'+
     '<button class="flatt" type="button" aria-pressed="false"><span class="track"><span class="knob"></span></span><span class="nm">FLAT THEME</span></button>';
   brand ? brand.after(box) : nav.prepend(box);
   var b=document.body;
   function sync(){
+    box.querySelector('.bsonly').setAttribute('aria-pressed',boardOnly?'true':'false');
     box.querySelector('.study').setAttribute('aria-pressed',b.classList.contains('study')?'true':'false');
     box.querySelector('.flatt').setAttribute('aria-pressed',b.classList.contains('flat')?'true':'false');
   }
   if(localStorage.getItem('ax-study')==='1') b.classList.add('study');
   if(localStorage.getItem('ax-flat')==='1') b.classList.add('flat');
+  /* Board-style only joins the shelf rule in shelfEligible(); it is a per-viewer
+     preference, so it lives in localStorage like the other two switches. */
+  box.querySelector('.bsonly').addEventListener('click',function(){
+    boardOnly=!boardOnly;
+    try{ localStorage.setItem('ax-bsonly',boardOnly?'1':'0'); }catch(e){}
+    sync(); applyShelf(shelf);
+  });
   box.querySelector('.study').addEventListener('click',function(){
     b.classList.toggle('study'); localStorage.setItem('ax-study',b.classList.contains('study')?'1':'0'); sync();
   });
@@ -12680,38 +12634,26 @@ function shelfPending(s){
 }
 var shelf='step2';
 var reviewSet=null;   /* fixed brief IDs while an active review is running */
+/* Search no longer filters the page: it lists results in the sidebar (see 0c).
+   searchTerm stays empty so applyShelf's composition is unchanged. */
 var searchTerm='';
-var mobileIndexQuery='';
-var savedReviewSearch=null;
+var boardOnly=false;
+try{ boardOnly=localStorage.getItem('ax-bsonly')==='1'; }catch(e){}
 
+/* Board-style = the set the title badge calls Board (or UWorld): .brief.bs
+   without an Aquifer source, the same split the masthead counts use. */
+function isBoardStyle(b){
+  return b.classList.contains('bs') && b.getAttribute('data-src')!=='aquifer';
+}
 function shelfEligible(b,s){
   if(!b || !b.id) return false;
   if(reviewSet) return !!reviewSet[b.id];
-  if(window.AX_NBME_ONLY && !b.querySelector('[data-nbme]')) return false;
+  if(boardOnly && !isBoardStyle(b)) return false;
   if(s==='step2') return true;
   return (b.getAttribute('data-shelf')||'').split(/\s+/).indexOf(s)>-1;
 }
 function desktopMatch(b){
   return !searchTerm || (b.textContent||'').toLowerCase().indexOf(searchTerm)>-1;
-}
-function applyMobileIndexFilter(){
-  document.querySelectorAll('#sheet .sheetlist details').forEach(function(d){
-    var hit=0;
-    d.querySelectorAll('a').forEach(function(a){
-      var eligible=a.dataset.eligible==='1';
-      var match=!mobileIndexQuery || a.textContent.toLowerCase().indexOf(mobileIndexQuery)>-1;
-      a.style.display=(eligible&&match)?'':'none';
-      if(eligible&&match) hit++;
-    });
-    d.querySelectorAll('.msub').forEach(function(x){
-      if(mobileIndexQuery){ x.style.display='none'; return; }
-      var n=0,el=x.nextElementSibling;
-      while(el&&!el.classList.contains('msub')){ if(el.tagName==='A'&&el.style.display!=='none')n++; el=el.nextElementSibling; }
-      x.style.display=n?'':'none';
-    });
-    d.style.display=hit?'':'none'; d.open=!!mobileIndexQuery;
-    var c=d.querySelector('summary i'); if(c) c.textContent=hit;
-  });
 }
 function setSearchMessage(visible,reviewBlocked){
   var n=document.getElementById('noresults'); if(!n) return;
@@ -12801,28 +12743,32 @@ function applyShelf(s){
     bb.style.display=n?'':'none';
     var c=bb.querySelector('.n'); if(c)c.textContent=n+(n===1?' brief':' briefs');
   });
-  document.querySelectorAll('#nav a[href^="#"], #sheet .sheetlist a[href^="#"]').forEach(function(a){
+  document.querySelectorAll('#navlinks a[href^="#"]').forEach(function(a){
     var t=document.getElementById(a.getAttribute('href').slice(1));
     var eligible=!!(t&&(!t.classList.contains('brief')||t.style.display!=='none'));
     a.dataset.eligible=eligible?'1':'0';
-    if(a.closest('#sheet'))return;
     a.style.display=eligible?'':'none';
   });
-  applyMobileIndexFilter();
+  /* Each system group shows how many of its links are live under the current
+     shelf, Board-style only and review filters, so the index never advertises
+     briefs it is hiding. */
   var navHost=document.getElementById('navlinks');
   if(navHost){
     var group=null,live=0,sub=null,subLive=0;
     function closeSub(){ if(sub)sub.style.display=subLive?'':'none'; sub=null; subLive=0; }
+    function closeGroup(){
+      if(!group) return;
+      group.style.display=live?'':'none';
+      var gc=group.querySelector('.count'); if(gc) gc.textContent=live;
+    }
     Array.prototype.slice.call(navHost.children).forEach(function(el){
       if(el.classList.contains('sect')){
-        closeSub();
-        if(group)group.style.display=live?'':'none';
+        closeSub(); closeGroup();
         group=el;live=0;
       }else if(el.tagName==='A'&&el.style.display!=='none'){live++;subLive++;}
       else if(el.classList.contains('navsub')){ closeSub(); sub=el; }
     });
-    closeSub();
-    if(group)group.style.display=live?'':'none';
+    closeSub(); closeGroup();
   }
   var meta=document.querySelector('.masthead .meta');
   if(meta){
@@ -12834,7 +12780,7 @@ function applyShelf(s){
     meta.innerHTML='<span><b>'+(visible-bs-aq)+'</b> topics</span>'+
       '<span><b>'+bs+'</b> board-style</span>'+(aq?'<span><b>'+aq+'</b> Aquifer</span>':'')+'<span><b>'+liveSystems+'</b> systems</span>'+
       '<span><b>10</b> named trap species</span><span>Viewing <b>'+
-      (SHELVES.filter(function(x){return x[0]===s;})[0]||['','Step 2'])[1]+'</b></span>';
+      (SHELVES.filter(function(x){return x[0]===s;})[0]||['','Step 2'])[1]+'</b>'+(boardOnly&&!reviewSet?' &middot; board-style only':'')+'</span>';
   }
   document.querySelectorAll('.shelfpick button').forEach(function(b){b.classList.toggle('on',b.dataset.shelf===s);});
   document.querySelectorAll('.shelfsel').forEach(function(sel){if(sel.value!==s)sel.value=s;});
@@ -12844,13 +12790,21 @@ function applyShelf(s){
 window.axApplyShelf=function(){ applyShelf(shelf); };
 window.axShelf=function(){ return shelf; };
 
+/* The address bar should always describe what is on screen, so a copied
+   URL reproduces it for someone else. */
+function syncShelfUrl(s){
+  if(!history.replaceState) return;
+  try{
+    var u=new URL(location.href);
+    u.searchParams.set('shelf', s);
+    history.replaceState(null, '', u.pathname + u.search + u.hash);
+  }catch(e){}
+}
 function shelfInit(){
   var m=document.querySelector('.masthead .wrap')||document.querySelector('.masthead');
   if(m) m.appendChild(shelfPicker());
   var nav=document.getElementById('modes');
   if(nav) nav.parentNode.insertBefore(shelfPicker('select'), nav);
-  var sheetIn=document.querySelector('.sheetin .sheethead');
-  if(sheetIn) sheetIn.after(shelfPicker());
 
   document.addEventListener('click',function(e){
     var b=e.target.closest && e.target.closest('.shelfpick button[data-shelf]');
@@ -12865,22 +12819,6 @@ function shelfInit(){
     applyShelf(sel.value);
     syncShelfUrl(sel.value);
   });
-
-  var desktopSearch=document.getElementById('search');
-  if(desktopSearch) desktopSearch.addEventListener('input',function(){
-    searchTerm=this.value.trim().toLowerCase(); applyShelf(shelf);
-  });
-
-  /* The address bar should always describe what is on screen, so a copied
-     URL reproduces it for someone else. */
-  function syncShelfUrl(s){
-    if(!history.replaceState) return;
-    try{
-      var u=new URL(location.href);
-      u.searchParams.set('shelf', s);
-      history.replaceState(null, '', u.pathname + u.search + u.hash);
-    }catch(e){}
-  }
 
   function valid(s){
     return !!s && !shelfPending(s) && SHELVES.some(function(x){ return x[0]===s; });
@@ -12916,127 +12854,614 @@ function shelfInit(){
   });
 }
 
-/* ---------- 0b. phone navigation ------------------------------------
-   On a phone the sidebar becomes a static block of ~100 links sitting
-   above the content: reaching the index means scrolling to the very top,
-   then scrolling through the whole index again. Instead: a floating
-   bottom bar and a sheet whose systems are collapsed by default, so all
-   12 fit one screen and you drill in rather than scroll past.        */
+/* ---------- 0b. one sidebar: fixed on desktop, off-canvas on phones ----------
+   Desktop keeps the fixed sidebar. Below 980px the same sidebar slides in from
+   the left over a dimmed page, opened by the bar's Index button and closed by
+   its X, a tap on the backdrop, Escape or choosing a link. Search is pinned at
+   the top and the list scrolls beneath it. While open, the panel's height
+   follows window.visualViewport, so the search field and its results stay
+   above the iOS keyboard. No edge swipe: Safari owns that gesture for Back. */
+var NAV_NARROW='(max-width:980px)';
+var navEl=null, navBar=null, navScrim=null, navOpen=false, navInvoker=null, navScrollY=0;
+function navNarrow(){ return !!(window.matchMedia && window.matchMedia(NAV_NARROW).matches); }
+function navFit(){
+  var vv=window.visualViewport;
+  if(!navEl) return;
+  if(!navOpen || !vv){
+    navEl.classList.remove('vvfit'); navEl.style.removeProperty('--vvh'); navEl.style.removeProperty('--vvt'); return;
+  }
+  navEl.style.setProperty('--vvh', Math.round(vv.height)+'px');
+  navEl.style.setProperty('--vvt', Math.round(vv.offsetTop)+'px');
+  navEl.classList.add('vvfit');
+}
+function navInert(on){
+  var main=document.querySelector('main');
+  [main, navBar].forEach(function(x){ if(!x) return; try{ x.inert=on; }catch(e){} if(on) x.setAttribute('aria-hidden','true'); else x.removeAttribute('aria-hidden'); });
+}
+function openNav(){
+  if(navOpen || !navEl || !navNarrow()) return;
+  navInvoker=document.activeElement;
+  navOpen=true;
+  navScrollY=window.pageYOffset||document.documentElement.scrollTop||0;
+  /* Lock the page behind the panel. overflow:hidden alone does not stop iOS
+     from scrolling the body, so the body is pinned in place and restored. */
+  var bs=document.body.style;
+  bs.position='fixed'; bs.top=(-navScrollY)+'px'; bs.left='0'; bs.right='0'; bs.width='100%';
+  document.body.classList.add('navopen');
+  navEl.setAttribute('role','dialog'); navEl.setAttribute('aria-modal','true');
+  var ib=navBar && navBar.querySelector('[data-act="index"]'); if(ib) ib.setAttribute('aria-expanded','true');
+  navInert(true);
+  if(window.visualViewport){
+    window.visualViewport.addEventListener('resize',navFit);
+    window.visualViewport.addEventListener('scroll',navFit);
+  }
+  navFit();
+  /* open on the brief being read */
+  var sc=document.getElementById('navscroll'), act=navEl.querySelector('#navlinks a.active');
+  if(sc && act && act.style.display!=='none' && !sxQuery()){
+    var off=act.getBoundingClientRect().top-sc.getBoundingClientRect().top+sc.scrollTop;
+    sc.scrollTop=Math.max(0, off-sc.clientHeight/3);
+  }
+  /* On touch, focusing the field would raise the keyboard over the list, so
+     focus goes to the close button; with a pointer it goes to the search. */
+  var coarse=window.matchMedia && window.matchMedia('(pointer:coarse)').matches;
+  var f=coarse ? navEl.querySelector('.navclose') : document.getElementById('search');
+  if(f) try{ f.focus({preventScroll:true}); }catch(e){ f.focus(); }
+}
+function closeNav(restoreFocus){
+  if(!navOpen) return;
+  navOpen=false;
+  if(window.visualViewport){
+    window.visualViewport.removeEventListener('resize',navFit);
+    window.visualViewport.removeEventListener('scroll',navFit);
+  }
+  navFit();
+  document.body.classList.remove('navopen');
+  var bs=document.body.style; bs.position=''; bs.top=''; bs.left=''; bs.right=''; bs.width='';
+  var de=document.documentElement, sb=de.style.scrollBehavior;
+  de.style.scrollBehavior='auto'; window.scrollTo(0,navScrollY); de.style.scrollBehavior=sb;
+  navEl.removeAttribute('role'); navEl.removeAttribute('aria-modal');
+  var ib=navBar && navBar.querySelector('[data-act="index"]'); if(ib) ib.setAttribute('aria-expanded','false');
+  navInert(false);
+  if(restoreFocus!==false){
+    var back=(navInvoker && navInvoker.isConnected && !navEl.contains(navInvoker)) ? navInvoker : ib;
+    if(back) try{ back.focus({preventScroll:true}); }catch(e){}
+  } else if(ib && navEl.contains(document.activeElement)){
+    try{ ib.focus({preventScroll:true}); }catch(e){}
+  }
+  navInvoker=null;
+}
 function mobileNav(){
   var nav=document.getElementById('nav'); if(!nav) return;
+  navEl=nav;
+  nav.setAttribute('aria-label','Index and search');
 
-  var bar=document.createElement('nav'); bar.id='mbar';
+  /* Pinned head (brand, close, search) above one scrolling body (shelf,
+     switches, review, then the systems list or the search results). */
+  var top=document.createElement('div'); top.id='navtop';
+  var body=document.createElement('div'); body.id='navscroll';
+  var brand=nav.querySelector('.brand'), search=document.getElementById('search');
+  var x=document.createElement('button'); x.type='button'; x.className='navclose';
+  x.setAttribute('aria-label','Close index'); x.innerHTML='<span aria-hidden="true">\u2715</span>';
+  Array.prototype.slice.call(nav.childNodes).forEach(function(n){ if(n!==brand && n!==search) body.appendChild(n); });
+  if(brand) top.appendChild(brand);
+  top.appendChild(x);
+  if(search) top.appendChild(search);
+  nav.appendChild(top); nav.appendChild(body);
+  var res=document.createElement('div'); res.id='sxres'; res.hidden=true;
+  res.innerHTML='<p class="sxstat" role="status" aria-live="polite"></p><ol class="sxlist" aria-label="Search results"></ol><div class="sxfoot"></div>';
+  var links=document.getElementById('navlinks');
+  if(links && links.parentNode===body) body.insertBefore(res,links); else body.appendChild(res);
+
+  var bar=document.createElement('nav'); bar.id='mbar'; bar.setAttribute('aria-label','Page tools');
   bar.innerHTML =
-    '<button data-act="index" aria-expanded="false" aria-controls="sheet"><span>Index</span></button>'+
-    '<button data-act="study" aria-pressed="false"><span>Study</span></button>'+
-    '<button data-act="top"><span>Top</span></button>';
-
-  var sheet=document.createElement('div'); sheet.id='sheet'; sheet.hidden=true; sheet.setAttribute('role','dialog'); sheet.setAttribute('aria-modal','true');
-  var inner=document.createElement('div'); inner.className='sheetin';
-  inner.innerHTML='<div class="grab"></div>'+
-    '<div class="sheethead"><b>Index</b><button class="sheetclose" aria-label="Close">✕</button></div>'+
-    '<input id="msearch" type="search" placeholder="Search all '+document.querySelectorAll('.brief').length+' briefs…" autocomplete="off">'+
-    '<div class="sheetlist"></div>';
-  sheet.appendChild(inner);
-  var list=inner.querySelector('.sheetlist');
-
-  /* rebuild the sidebar's flat list as one collapsible group per system.
-     The links live in #navlinks, not directly under #nav. */
-  var host=document.getElementById('navlinks')||nav;
-  var groups=[], cur=null;
-  Array.prototype.slice.call(host.children).forEach(function(el){
-    if(el.classList.contains('sect')){
-      var c=el.querySelector('.count');            // drop the trailing count
-      var title=norm(el.textContent.replace(c?c.textContent:'',''));
-      cur={title:title, items:[]}; groups.push(cur);
-    } else if(cur && el.tagName==='A'){
-      cur.items.push({href:el.getAttribute('href'), text:norm(el.textContent), cls:el.classList.contains('aq')?'aq':(el.classList.contains('bs')?'bs':'')});
-    } else if(cur && el.classList.contains('navsub')){
-      cur.items.push({sub:norm(el.textContent), aq:el.classList.contains('aq')});
-    }
-  });
-  var groupCard=document.createElement('div'); groupCard.className='sheetgroup';
-  list.appendChild(groupCard);
-  groups.forEach(function(g){
-    var d=document.createElement('details');
-    var s=document.createElement('summary');
-    s.innerHTML='<span class="t">'+g.title+'</span><i>'+g.items.filter(function(x){return x.href;}).length+'</i>';
-    d.appendChild(s);
-    g.items.forEach(function(it){
-      if(it.sub){ var h=document.createElement('div'); h.className='msub'+(it.aq?' aq':''); h.textContent=it.sub; d.appendChild(h); return; }
-      var a=document.createElement('a'); a.href=it.href; a.textContent=it.text;
-      if(it.cls) a.className=it.cls;
-      d.appendChild(a);
-    });
-    groupCard.appendChild(d);
-  });
-
-  document.body.appendChild(sheet);
+    '<button type="button" data-act="index" aria-expanded="false" aria-controls="nav"><span>Index</span></button>'+
+    '<button type="button" data-act="study" aria-pressed="false"><span>Study</span></button>'+
+    '<button type="button" data-act="top"><span>Top</span></button>';
+  var scrim=document.createElement('div'); scrim.id='navscrim';
+  document.body.appendChild(scrim);
   document.body.appendChild(bar);
+  navBar=bar; navScrim=scrim;
   var mobileStudy=bar.querySelector('[data-act="study"]');
   if(mobileStudy) mobileStudy.setAttribute('aria-pressed',document.body.classList.contains('study')?'true':'false');
-
-  var sheetInvoker=null;
-  function close(){
-    var wasOpen=sheet.classList.contains('open');
-    sheet.classList.remove('open'); document.body.classList.remove('sheetopen'); sheet.hidden=true;
-    var ib=bar.querySelector('[data-act="index"]'); if(ib) ib.setAttribute('aria-expanded','false');
-    if(wasOpen && sheetInvoker && sheetInvoker.isConnected) try{ sheetInvoker.focus({preventScroll:true}); }catch(e){}
-    sheetInvoker=null;
-  }
-  function open(){
-    sheetInvoker=document.activeElement; sheet.hidden=false; sheet.classList.add('open'); document.body.classList.add('sheetopen');
-    var ib=bar.querySelector('[data-act="index"]'); if(ib) ib.setAttribute('aria-expanded','true');
-    markHere();
-    /* on touch, focusing the field raises the keyboard over half the list */
-    var coarse=window.matchMedia && window.matchMedia('(pointer:coarse)').matches;
-    var ms=inner.querySelector('#msearch'); if(ms && !coarse) ms.focus({preventScroll:true});
-  }
-  /* Open on the system being read, with the brief marked. The current brief
-     is the last visible one whose top has passed the upper third of the screen. */
-  function markHere(){
-    list.querySelectorAll('.here').forEach(function(x){ x.classList.remove('here'); });
-    if(mobileIndexQuery) return;
-    var cur=null, line=window.innerHeight*0.33;
-    document.querySelectorAll('.brief').forEach(function(b){
-      if(!b.id) return;
-      var r=b.getBoundingClientRect();
-      if(!r.height) return;                       // hidden by the shelf or review filter
-      if(r.top<=line && r.bottom>0) cur=b;
-    });
-    if(!cur) return;
-    var a=list.querySelector('a[href="#'+cur.id+'"]'); if(!a || a.style.display==='none') return;
-    var d=a.closest('details');
-    a.classList.add('here'); d.classList.add('here');
-    list.querySelectorAll('details').forEach(function(x){ x.open=(x===d); });
-    requestAnimationFrame(function(){
-      var lt=list.getBoundingClientRect().top, st=d.getBoundingClientRect().top-lt+list.scrollTop;
-      list.scrollTop=Math.max(0, st-8);
-    });
-  }
 
   bar.addEventListener('click',function(e){
     var b=e.target.closest('button'); if(!b) return;
     var a=b.dataset.act;
-    if(a==='index'){ sheet.classList.contains('open')?close():open(); }
+    if(a==='index'){ navOpen?closeNav():openNav(); }
     if(a==='study'){
       document.body.classList.toggle('study');
-      localStorage.setItem('ax-study',document.body.classList.contains('study')?'1':'0');
+      try{ localStorage.setItem('ax-study',document.body.classList.contains('study')?'1':'0'); }catch(err){}
       b.setAttribute('aria-pressed',document.body.classList.contains('study')?'true':'false');
     }
-    if(a==='top'){ close(); window.scrollTo({top:0,behavior:(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)?'auto':'smooth'}); }
+    if(a==='top'){ closeNav(); window.scrollTo({top:0,behavior:(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)?'auto':'smooth'}); }
   });
-  sheet.addEventListener('click',function(e){
-    if(e.target===sheet) return close();            // tap the dimmed strip
-    if(e.target.closest('.sheetclose')) return close();
-    if(e.target.tagName==='A') close();
+  scrim.addEventListener('click',function(){ closeNav(); });
+  x.addEventListener('click',function(){ closeNav(); });
+  /* choosing an index link closes the panel; the browser then follows the hash */
+  nav.addEventListener('click',function(e){
+    var a=e.target.closest && e.target.closest('#navlinks a[href^="#"]');
+    if(a && navOpen) closeNav(false);
   });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+  document.addEventListener('keydown',function(e){
+    if(!navOpen) return;
+    var rp=document.getElementById('rvpanel'); if(rp && !rp.hidden) return;   /* the review popover handles its own keys */
+    if(e.key==='Escape'){ e.preventDefault(); closeNav(); return; }
+    if(e.key!=='Tab') return;
+    var f=Array.prototype.filter.call(nav.querySelectorAll('a[href],button,input,select,textarea,[tabindex]:not([tabindex="-1"])'),function(el){
+      return !el.disabled && el.getClientRects().length;
+    });
+    if(!f.length) return;
+    var first=f[0], last=f[f.length-1];
+    if(e.shiftKey && (document.activeElement===first || !nav.contains(document.activeElement))){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && (document.activeElement===last || !nav.contains(document.activeElement))){ e.preventDefault(); first.focus(); }
+  });
+  if(window.matchMedia){
+    var mq=window.matchMedia(NAV_NARROW), onMq=function(){ if(!mq.matches) closeNav(false); };
+    if(mq.addEventListener) mq.addEventListener('change',onMq); else if(mq.addListener) mq.addListener(onMq);
+  }
+  sxWire();
+}
 
-  /* Mobile search filters only already eligible index links. */
-  inner.querySelector('#msearch').addEventListener('input',function(){
-    mobileIndexQuery=this.value.trim().toLowerCase(); applyMobileIndexFilter();
+/* ---------- 0c. full-text search (one index for desktop and phone) ----------
+   Built once from each brief's visible text, block by block (title, subtitle,
+   decision point, criteria, tables, pearls, rule, traps, bank items, vignette).
+   Case, accents and punctuation are normalized; every query word must occur in
+   the brief (any order, word-start match). Ranking: the block that holds the
+   most query words, then title > subtitle > decision point > the rest, then
+   hit count. Results list in the sidebar in place of the systems list and
+   respect the shelf, Board-style only and an active review. */
+var SX={built:false, briefs:[], groups:[], gmap:{}, oneway:{}, buildMs:0, queryMs:0, hits:[], timer:null, cap:60};
+/* Small hand map; "ACRONYM (expansion)" pairs on the page are added at build.
+   A leading ~ marks a one-way alias: typing it finds the group, but the group
+   does not widen to it (HPS is also the Heart Protection Study). */
+var SX_ALIASES=[
+  ['ihps','~hps','pyloric stenosis','hypertrophic pyloric stenosis','infantile hypertrophic pyloric stenosis','pyloric','pyloromyotomy'],
+  ['tef','tracheoesophageal fistula','esophageal atresia'],
+  ['puv','posterior urethral valves'],
+  ['vur','vesicoureteral reflux'],
+  ['uti','urinary tract infection'],
+  ['nec','necrotizing enterocolitis'],
+  ['gerd','gastroesophageal reflux'],
+  ['dka','diabetic ketoacidosis'],
+  ['ddh','developmental dysplasia of the hip','hip dysplasia'],
+  ['scfe','slipped capital femoral epiphysis'],
+  ['jia','juvenile idiopathic arthritis'],
+  ['itp','immune thrombocytopenia','immune thrombocytopenic purpura'],
+  ['hsp','henoch schonlein purpura','iga vasculitis'],
+  ['rsv','respiratory syncytial virus'],
+  ['kawasaki','mucocutaneous lymph node syndrome'],
+  ['ekg','ecg','electrocardiogram','electrocardiography'],
+  ['cxr','chest x ray','chest radiograph'],
+  ['mi','myocardial infarction'],
+  ['copd','chronic obstructive pulmonary disease'],
+  ['sids','sudden infant death'],
+  ['adhd','attention deficit'],
+  ['ibd','inflammatory bowel disease']
+];
+/* Case and accents fold one character to one character, so an offset in the
+   folded text is an offset in the visible text. Punctuation is not rewritten
+   in the index (that pass is the expensive one); matching treats any
+   character that is not a letter or digit as a word boundary instead. */
+function sxNorm(s){
+  var l=s.toLowerCase();
+  if(l.length!==s.length){ l=''; for(var i=0;i<s.length;i++){ l+=s.charAt(i).toLowerCase().charAt(0); } }
+  if(!/[\u00c0-\u024f]/.test(l)) return l;
+  return l.replace(/[\u00c0-\u00d6\u00d8-\u00f6\u00f8-\u024f]/g,function(c){
+    var d=c.normalize ? c.normalize('NFD').charAt(0) : c; return /[a-z]/.test(d) ? d : c;
   });
+}
+function sxQNorm(s){ return sxNorm(s).replace(/[^a-z0-9\u00c0-\u00d6\u00d8-\u00f6\u00f8-\u024f\u0370-\u03ff]+/g,' ').trim(); }
+function sxAl(c){ return (c>=97&&c<=122)||(c>=48&&c<=57)||(c>=65&&c<=90)||(c>=0xc0&&c<=0x24f&&c!==0xd7&&c!==0xf7)||(c>=0x370&&c<=0x3ff); }
+function sxQuery(){ var i=document.getElementById('search'); return i ? norm(i.value) : ''; }
+function sxNow(){ return (window.performance && performance.now) ? performance.now() : Date.now(); }
+function sxEsc(s){ return s.replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+var SX_SKIP=/(^|\s)(lbl|mask-toggle|k|rv|qp|bktools|scalepeek|availability|reviewwrap|rvmark|cue|arw)(\s|$)/;
+var SX_MASK=/(^|\s)(mask|why)(\s|$)/;
+var SX_BRKT={DIV:1,P:1,LI:1,DT:1,DD:1,TD:1,TH:1,TR:1,BR:1,H4:1,H5:1,H6:1,UL:1,OL:1,DL:1,TABLE:1,CAPTION:1,THEAD:1,TBODY:1,BUTTON:1,text:1};
+function sxBlk(el,label,rank){ return {el:el,label:label,rank:rank,raw:'',n:'',bank:-1}; }
+/* One traversal, used twice: at build (to collect text) and at lookup (to find
+   the node and mask state behind a character offset). emit(text,node,masked). */
+function sxTrav(root,masked,emit){
+  for(var n=root.firstChild;n;n=n.nextSibling){
+    var t=n.nodeType;
+    if(t===3){ emit(n.nodeValue,n,masked); continue; }
+    if(t!==1) continue;
+    var tg=n.tagName; if(tg==='SCRIPT' || tg==='STYLE') continue;
+    var cn=n.className, m=masked; if(typeof cn!=='string') cn=n.getAttribute('class')||'';
+    if(cn){ if(SX_SKIP.test(cn)) continue; if(!m && SX_MASK.test(cn)) m=true; }
+    var brk=SX_BRKT[tg]===1;
+    if(brk) emit(' ',null,m);
+    sxTrav(n,m,emit);
+    if(brk) emit(' ',null,m);
+  }
+}
+/* One bank item: stem, then the options joined with " \u00b7 ", then the answer
+   chain (answer side, so it counts as masked). A chain node that repeats the
+   stem or an option label is skipped, so no label appears twice. */
+var SX_SEP=' \u00b7 ';
+function sxBankTrav(m,emit){
+  var seen={}, key=function(el){ return norm(el.textContent).toLowerCase(); };
+  var st=m.querySelector(':scope > .top .stem'); if(st) seen[key(st)]=1;
+  for(var c=m.firstElementChild;c;c=c.nextElementSibling){
+    var cn=c.getAttribute('class')||'';
+    if(/(^|\s)opts(\s|$)/.test(cn)){
+      for(var o=c.firstElementChild;o;o=o.nextElementSibling){
+        var kk=o.querySelector('.k'), ok=norm(o.textContent.slice(kk ? kk.textContent.length : 0)).toLowerCase();
+        if(!ok || seen[ok]) continue; seen[ok]=1;
+        emit(SX_SEP,null,false); sxTrav(o,false,emit);
+      }
+      continue;
+    }
+    if(/(^|\s)why(\s|$)/.test(cn)){
+      var ch=c.querySelector('.chain');
+      if(!ch){ emit(SX_SEP,null,true); sxTrav(c,true,emit); continue; }
+      for(var nd=ch.firstElementChild;nd;nd=nd.nextElementSibling){
+        if(/(^|\s)arw(\s|$)/.test(nd.getAttribute('class')||'')) continue;
+        var nk=key(nd); if(!nk || seen[nk]) continue; seen[nk]=1;
+        emit(SX_SEP,null,true); sxTrav(nd,true,emit);
+      }
+      continue;
+    }
+    if(SX_SKIP.test(cn)) continue;
+    emit(' ',null,false); sxTrav(c,false,emit);
+  }
+}
+function sxWalk(k,emit){ if(k.bank>-1) sxBankTrav(k.el,emit); else sxTrav(k.el,false,emit); }
+/* raw = the pieces joined, whitespace collapsed, trimmed; sxLocate replays the
+   same collapse to map a raw offset back to its text node. */
+function sxLocate(k,off){
+  var pos=0, sp=true, hit=null, WS=/\s/;
+  try{
+    sxWalk(k,function(text,node,masked){
+      if(hit) throw 0;
+      for(var i=0;i<text.length;i++){
+        if(WS.test(text.charAt(i))){ if(!sp){ sp=true; pos++; } }
+        else { if(pos>=off){ hit={node:node,masked:masked}; throw 0; } sp=false; pos++; }
+      }
+    });
+  }catch(e){ if(e!==0) throw e; }
+  return hit;
+}
+function sxLabel(el){
+  var cl=el.classList, t=el.tagName;
+  if(t==='H4') return ['Title',0];
+  if(cl.contains('sub')) return ['Subtitle',1];
+  if(cl.contains('dp')) return ['Decision point',2];
+  if(cl.contains('vignette')) return ['Source vignette',3];
+  if(cl.contains('crit')) return ['Criteria',3];
+  if(cl.contains('tw') || t==='TABLE') return ['Table',3];
+  if(cl.contains('rule')) return ['Rule',3];
+  if(cl.contains('traps')) return ['Traps',3];
+  if(cl.contains('figure')) return ['Figure',3];
+  if(cl.contains('pearls') || cl.contains('danger')){
+    var l=el.querySelector(':scope > .lbl'), s=l ? norm(l.textContent) : '';
+    s=s.split(/\s+[\u2014\u2013]\s+|:/)[0].trim();   /* "Neonatal conjunctivitis \u2014 a practical..." -> its name */
+    if(s.length>30) s=s.slice(0,29)+'\u2026';
+    return [s || (cl.contains('pearls') ? 'Pearls' : 'Caution'),3];
+  }
+  if(t==='H5') return cl.contains('authored-hdr') ? null : ['Heading',3];
+  return ['Text',3];
+}
+function sxGroup(phrases){
+  var g=-1;
+  phrases=phrases.map(function(p){ if(p.charAt(0)==='~'){ p=p.slice(1); SX.oneway[p]=1; } return p; });
+  phrases.forEach(function(p){ if(g<0 && SX.gmap[p]!==undefined) g=SX.gmap[p]; });
+  if(g<0){ g=SX.groups.length; SX.groups.push([]); }
+  phrases.forEach(function(p){
+    if(!p || SX.gmap[p]!==undefined || SX.groups[g].length>=14) return;
+    SX.gmap[p]=g; SX.groups[g].push(p);
+  });
+}
+function sxSubseq(acr,phrase){
+  var i=0; for(var j=0;j<phrase.length && i<acr.length;j++) if(phrase.charAt(j)===acr.charAt(i)) i++;
+  return i===acr.length;
+}
+/* "AFP (alpha-fetoprotein)" and "alpha-fetoprotein (AFP)": the expansion must
+   start with the acronym's first letter and contain its letters in order. */
+function sxPairs(raw){
+  var m, re=/\b([A-Z][A-Za-z0-9]*[A-Z][A-Za-z0-9]*?)(s?) \(([^()]{3,70})\)/g;
+  while((m=re.exec(raw))){
+    var acr=m[1].toLowerCase(), exp=sxQNorm(m[3]);
+    if(acr.length<2 || acr.length>8 || /[,;:]/.test(m[3])) continue;
+    var ew=exp.split(' ');
+    if(ew.length>acr.length+3 || exp.charAt(0)!==acr.charAt(0) || !sxSubseq(acr,exp.replace(/ /g,''))) continue;
+    sxGroup([acr,exp]);
+  }
+  var r2=/\(([A-Z][A-Za-z0-9]*[A-Z0-9])s?\)/g;
+  while((m=r2.exec(raw))){
+    var a=m[1].toLowerCase(); if(a.length<2 || a.length>8 || !/[a-z]/.test(a)) continue;
+    var pre=raw.slice(Math.max(0,m.index-90),m.index);
+    pre=pre.slice(Math.max(pre.lastIndexOf(','),pre.lastIndexOf(';'),pre.lastIndexOf(':'),pre.lastIndexOf('.'),pre.lastIndexOf('('),pre.lastIndexOf('\u00b7'))+1);
+    var w=sxQNorm(pre).split(' ');
+    for(var n=1;n<=Math.min(w.length,a.length+2);n++){
+      var ph=w.slice(w.length-n).join(' ');
+      if(ph.charAt(0)===a.charAt(0) && sxSubseq(a,ph.replace(/ /g,''))){ if(ph!==a) sxGroup([a,ph]); break; }
+    }
+  }
+}
+function sxBuildOne(b,di){
+  if(!b.id) return;
+  var h=b.querySelector(':scope > h4');
+  var rec={b:b,id:b.id,di:di,title:h ? norm(h.textContent) : b.id,sub:'',blocks:[],all:''};
+  var add=function(k){
+    var parts=[], vis=[]; sxWalk(k,function(t,n,m){ parts.push(t); if(!m) vis.push(t); });
+    k.raw=parts.join('').replace(/\s+/g,' ').trim();
+    if(k.bank>-1) k.stemEnd=vis.join('').replace(/\s+/g,' ').trim().length;   /* the answer chain comes last */
+    if(k.raw) rec.blocks.push(k);
+  };
+  for(var c=b.firstElementChild;c;c=c.nextElementSibling){
+    if(c.classList.contains('bankwrap')){
+      Array.prototype.forEach.call(c.querySelectorAll('.mcqwrap > .mcq'),function(m,i){
+        var k=sxBlk(m,'Question',3); k.bank=i; add(k);
+      });
+      continue;
+    }
+    if(c.classList.contains('rvmark')) continue;
+    var L=sxLabel(c); if(!L) continue;
+    var k=sxBlk(c,L[0],L[1]); add(k);
+    if(L[1]===1 && !rec.sub) rec.sub=k.raw;
+  }
+  var parts=[];
+  rec.blocks.forEach(function(k){ k.n=sxNorm(k.raw); parts.push(k.n); sxPairs(k.raw); });
+  rec.all=parts.join('\n');
+  SX.briefs.push(rec);
+}
+/* Built in idle slices after load so it never blocks a tap; a query that
+   arrives first finishes the build on the spot. */
+function sxBuild(deadline){
+  if(SX.built) return;
+  if(!SX.list){ SX.list=document.querySelectorAll('.brief'); SX.next=0; SX.work=0; SX.t0=sxNow(); SX_ALIASES.forEach(function(g){ sxGroup(g.map(function(p){ return (p.charAt(0)==='~'?'~':'')+sxQNorm(p); })); }); }
+  var t0=sxNow();
+  while(SX.next<SX.list.length){
+    sxBuildOne(SX.list[SX.next],SX.next); SX.next++;
+    if(deadline && (deadline.didTimeout ? sxNow()-t0>12 : deadline.timeRemaining()<2)) break;
+  }
+  SX.work+=sxNow()-t0; SX.slices=(SX.slices||0)+1;
+  if(SX.next>=SX.list.length){ SX.built=true; SX.buildMs=Math.round(SX.work); SX.wallMs=Math.round(sxNow()-SX.t0); }
+  else sxIdle();
+}
+function sxIdle(){
+  if(window.requestIdleCallback) requestIdleCallback(sxBuild,{timeout:1500});
+  else setTimeout(function(){ var t=sxNow(); sxBuild({didTimeout:false,timeRemaining:function(){ return 12-(sxNow()-t); }}); },40);
+}
+/* query -> terms; each term is a set of alternatives, and a brief must match
+   every term. Typed words match at a word start (words of one or two letters
+   whole); alias phrases match whole and in order. */
+function sxTerms(q){
+  var w=sxQNorm(q).split(' ').filter(Boolean), terms=[];
+  for(var i=0;i<w.length;){
+    var took=0;
+    for(var k=Math.min(5,w.length-i);k>=1 && !took;k--){
+      var ph=w.slice(i,i+k).join(' '), g=SX.gmap[ph];
+      if(g===undefined) continue;
+      var alts=[{words:w.slice(i,i+k)}];
+      SX.groups[g].forEach(function(p){ if(p!==ph && !SX.oneway[p]) alts.push({phrase:p}); });
+      terms.push(alts); took=k;
+    }
+    if(!took){ terms.push([{words:[w[i]]}]); took=1; }
+    i+=took;
+  }
+  return terms;
+}
+/* next match of w at or after `from` that starts a word; exact also needs it to
+   end one. Words of one or two letters always match whole. Returns index or -1. */
+function sxFind(s,w,from,exact){
+  if(w.length<=2) exact=true;
+  var p=s.indexOf(w,from);
+  while(p>-1){
+    if((p===0 || !sxAl(s.charCodeAt(p-1))) && (!exact || !sxAl(s.charCodeAt(p+w.length)))) return p;
+    p=s.indexOf(w,p+1);
+  }
+  return -1;
+}
+/* a phrase: its words in order, separated by anything that is not a letter or
+   digit ("alpha fetoprotein" finds "alpha-fetoprotein"). Returns end or -1. */
+function sxPhraseEnd(s,p,words){
+  var pos=p;
+  for(var i=0;i<words.length;i++){
+    if(i){ var j=pos; while(j<s.length && !sxAl(s.charCodeAt(j))) j++; if(j===pos) return -1; pos=j; }
+    if(s.substr(pos,words[i].length)!==words[i]) return -1;
+    pos+=words[i].length;
+  }
+  return sxAl(s.charCodeAt(pos)) ? -1 : pos;
+}
+function sxPhraseFind(s,words,from){
+  var p=sxFind(s,words[0],from,words.length===1);
+  while(p>-1){ var e=sxPhraseEnd(s,p,words); if(e>-1) return [p,e]; p=sxFind(s,words[0],p+1,words.length===1); }
+  return null;
+}
+function sxCountWord(s,w,cap,out){
+  var n=0, p=sxFind(s,w,0,false);
+  while(p>-1 && n<cap){ if(out.first<0 || p<out.first) out.first=p; n++; p=sxFind(s,w,p+1,false); }
+  return n;
+}
+function sxCountPhrase(s,words,cap,out){
+  var n=0, m=sxPhraseFind(s,words,0);
+  while(m && n<cap){ if(out.first<0 || m[0]<out.first) out.first=m[0]; n++; m=sxPhraseFind(s,words,m[1]); }
+  return n;
+}
+function sxAltHits(s,alt,cap,out){
+  if(alt.phrase) return sxCountPhrase(s,alt.pw||(alt.pw=alt.phrase.split(' ')),cap,out);
+  var tot=0, tmp={first:-1};
+  for(var i=0;i<alt.words.length;i++){
+    var c=sxCountWord(s,alt.words[i],cap,tmp); if(!c) return 0; tot+=c;
+  }
+  if(tmp.first>-1 && (out.first<0 || tmp.first<out.first)) out.first=tmp.first;
+  return tot;
+}
+function sxTermHits(s,alts,cap,out){
+  var t=0, own={first:-1}, alias={first:-1};
+  for(var i=0;i<alts.length;i++) t+=sxAltHits(s,alts[i],cap,i===0?own:alias);
+  var f=own.first>-1 ? own.first : alias.first;
+  if(f>-1 && (out.first<0 || f<out.first)) out.first=f;
+  return t;
+}
+function sxInShelf(b){ return shelfEligible(b,shelf); }
+function sxSearch(q){
+  sxBuild();
+  var t0=sxNow(), terms=sxTerms(q), hits=[], other=0;
+  if(!terms.length) return {hits:hits,other:0,ms:0};
+  SX.briefs.forEach(function(r){
+    var inShelf=sxInShelf(r.b);
+    if(!inShelf && (reviewSet || !shelfEligible(r.b,'step2'))) return;
+    for(var i=0;i<terms.length;i++) if(!sxTermHits(r.all,terms[i],1,{first:-1})) return;
+    if(!inShelf){ other++; return; }
+    var best=null, total=0;
+    r.blocks.forEach(function(k,bi){
+      var m=0, h=0, out={first:-1};
+      for(var i=0;i<terms.length;i++){ var c=sxTermHits(k.n,terms[i],40,out); if(c){ m++; h+=c; } }
+      if(!m) return;
+      total+=h;
+      if(!best || m>best.m || (m===best.m && (k.rank<best.rank || (k.rank===best.rank && h>best.h))))
+        best={bi:bi,m:m,rank:k.rank,h:h,first:out.first};
+    });
+    if(best) hits.push({r:r,best:best,total:total});
+  });
+  hits.sort(function(a,b){
+    return (b.best.m-a.best.m) || (a.best.rank-b.best.rank) || (b.total-a.total) || (a.r.di-b.r.di);
+  });
+  SX.queryMs=Math.round((sxNow()-t0)*10)/10;
+  return {hits:hits,other:other,terms:terms,ms:SX.queryMs};
+}
+/* spans to highlight: every query word (to the end of its word) or alias
+   phrase that starts inside [a,b) of the folded text n */
+function sxMarks(n,a,b,terms){
+  var spans=[];
+  terms.forEach(function(alts){ alts.forEach(function(alt){
+    if(alt.phrase){
+      var pw=alt.pw||(alt.pw=alt.phrase.split(' ')), m=sxPhraseFind(n,pw,a);
+      while(m && m[0]<b){ spans.push(m); m=sxPhraseFind(n,pw,m[1]); }
+      return;
+    }
+    alt.words.forEach(function(w){
+      var p=sxFind(n,w,a,false);
+      while(p>-1 && p<b){
+        var e=p+w.length; while(e<n.length && sxAl(n.charCodeAt(e))) e++;
+        spans.push([p,e]); p=sxFind(n,w,p+1,false);
+      }
+    });
+  }); });
+  spans.sort(function(x,y){ return x[0]-y[0]; });
+  return spans;
+}
+function sxHl(raw,n,a,b,terms){
+  var spans=sxMarks(n,a,b,terms), out='', at=a;
+  spans.forEach(function(sp){
+    var s=Math.max(sp[0],at), e=Math.min(sp[1],b); if(e<=s) return;
+    out+=sxEsc(raw.slice(at,s))+'<mark>'+sxEsc(raw.slice(s,e))+'</mark>'; at=e;
+  });
+  return out+sxEsc(raw.slice(at,b));
+}
+function sxSnippet(k,first,terms){
+  var loc=sxLocate(k,first), masked=!!(loc && loc.masked), inAnswer=false;
+  /* A bank item's answer stays hidden until the reader answers it, in any
+     mode, so a hit there shows the stem instead of spoiling the key. */
+  if(masked && k.bank>-1){ first=0; masked=false; inAnswer=true; }
+  var raw=k.raw, L=raw.length, a=Math.max(0,first-42), b;
+  if(a>0){ var sp=raw.indexOf(' ',a); a=(sp>-1 && sp<first) ? sp+1 : a; }
+  b=Math.min(L,a+150);
+  if(b<L){ var sp2=raw.lastIndexOf(' ',b); if(sp2>first) b=sp2; }
+  if(k.bank>-1 && k.stemEnd && first<k.stemEnd) b=Math.min(b,k.stemEnd);   /* never run on into the answer chain */
+  return {answer:inAnswer, html:(a>0?'\u2026':'')+sxHl(raw,k.n,a,b,terms)+(b<L?'\u2026':''), masked:masked};
+}
+function sxShelfName(){
+  if(reviewSet) return 'the active review';
+  return (SHELVES.filter(function(x){ return x[0]===shelf; })[0]||['','Step 2'])[1];
+}
+function sxRender(){
+  var input=document.getElementById('search'), res=document.getElementById('sxres'), nav=navEl;
+  if(!input || !res || !nav) return;
+  var q=norm(input.value);
+  if(!q){ res.hidden=true; nav.classList.remove('sxon'); SX.hits=[]; return; }
+  var out=sxSearch(q), hits=out.hits, list=res.querySelector('.sxlist'), stat=res.querySelector('.sxstat'), foot=res.querySelector('.sxfoot');
+  SX.hits=hits;
+  var scope=sxShelfName()+(boardOnly && !reviewSet ? ', board-style only' : '');
+  stat.innerHTML=hits.length ? ('<b>'+hits.length+'</b> '+(hits.length===1?'brief':'briefs')+' in '+sxEsc(scope))
+                             : ('No matches in '+sxEsc(scope)+'.');
+  var h='';
+  hits.slice(0,SX.cap).forEach(function(x,i){
+    var r=x.r, k=r.blocks[x.best.bi], label=k.label, snip;
+    if(k.rank===0){
+      var tn=sxNorm(r.title);
+      snip={html:sxEsc(r.sub||''),masked:false};
+      var th=sxHl(r.title,tn,0,r.title.length,out.terms);
+      h+='<li><a class="sxhit" href="#'+sxEsc(r.id)+'" data-i="'+i+'"><span class="t">'+th+'</span><span class="b">Title</span>'+(snip.html?'<span class="s">'+snip.html+'</span>':'')+'</a></li>';
+      return;
+    }
+    snip=sxSnippet(k,x.best.first,out.terms);
+    var tn2=sxNorm(r.title);
+    h+='<li><a class="sxhit" href="#'+sxEsc(r.id)+'" data-i="'+i+'"><span class="t">'+sxHl(r.title,tn2,0,r.title.length,out.terms)+'</span>'+
+       '<span class="b">'+sxEsc(label+(snip.answer?', in the answer':''))+'</span><span class="s'+(snip.masked?' sxm':'')+'">'+snip.html+'</span></a></li>';
+  });
+  list.innerHTML=h;
+  var f='';
+  if(hits.length>SX.cap) f+='<p class="sxcap">Showing the first '+SX.cap+' of '+hits.length+'. Add a word to narrow.</p>';
+  if(out.other) f+='<button type="button" class="sxmore">'+out.other+' more in other shelves</button>';
+  foot.innerHTML=f;
+  res.hidden=false; nav.classList.add('sxon');
+}
+function sxSchedule(){
+  clearTimeout(SX.timer);
+  SX.timer=setTimeout(sxRender,120);
+}
+/* Open the brief, scroll to the block that matched and flash it. Study-mode
+   masks are left exactly as they were. */
+function sxLand(x){
+  var r=x.r, k=r.blocks[x.best.bi], el=k.el;
+  if(navOpen) closeNav(false);
+  try{ if(history.replaceState) history.replaceState(null,'','#'+r.id); }catch(e){}
+  applyShelf(shelf);
+  if(k.bank>-1){
+    var bw=el.closest('.bankwrap');
+    if(bw && bw.classList.contains('review')){ var rr=bw.querySelectorAll('.reviewwrap > .rrow')[k.bank]; if(rr) el=rr; }
+  }
+  var tgt=el;
+  if(k.rank>0 && x.best.first>-1 && el===k.el){
+    var loc=sxLocate(k,x.best.first), node=loc && loc.node;
+    var p=node && node.parentElement;
+    while(p && p!==el && !p.getClientRects().length) p=p.parentElement;
+    if(p && el.contains(p) && /^(TD|TH|LI|DD|DT|P|DIV|SPAN|B|I)$/.test(p.tagName)){
+      while(p!==el && /^(SPAN|B|I|A)$/.test(p.tagName)) p=p.parentElement;
+      tgt=p;
+    }
+  }
+  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  requestAnimationFrame(function(){
+    var rc=tgt.getBoundingClientRect(), vh=window.innerHeight||document.documentElement.clientHeight;
+    var y=(window.pageYOffset||0)+rc.top-(rc.height<vh*0.6 ? (vh-rc.height)/2 : 76);
+    try{ window.scrollTo({top:Math.max(0,y),behavior:reduce?'auto':'smooth'}); }catch(e){ window.scrollTo(0,Math.max(0,y)); }
+    el.classList.remove('sxflash'); void el.offsetWidth; el.classList.add('sxflash');
+    clearTimeout(el._sxT); el._sxT=setTimeout(function(){ el.classList.remove('sxflash'); },2100);
+  });
+}
+function sxWire(){
+  var input=document.getElementById('search'), res=document.getElementById('sxres');
+  if(!input || !res) return;
+  input.setAttribute('placeholder','Search all '+document.querySelectorAll('.brief').length+' briefs\u2026');
+  input.setAttribute('aria-label','Search all briefs');
+  input.setAttribute('aria-controls','sxres');
+  input.setAttribute('enterkeyhint','search');
+  input.setAttribute('autocapitalize','off'); input.setAttribute('autocorrect','off'); input.setAttribute('spellcheck','false');
+  input.addEventListener('input',sxSchedule);
+  input.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){ e.preventDefault(); clearTimeout(SX.timer); sxRender(); if(SX.hits.length) sxLand(SX.hits[0]); }
+    else if(e.key==='ArrowDown'){ var a=res.querySelector('a.sxhit'); if(a){ e.preventDefault(); a.focus(); } }
+    else if(e.key==='Escape' && input.value && !navOpen){ input.value=''; sxRender(); }
+  });
+  res.addEventListener('click',function(e){
+    var more=e.target.closest && e.target.closest('.sxmore');
+    if(more){ applyShelf('step2'); syncShelfUrl('step2'); return; }
+    var a=e.target.closest && e.target.closest('a.sxhit'); if(!a) return;
+    e.preventDefault();
+    var x=SX.hits[parseInt(a.getAttribute('data-i'),10)]; if(x) sxLand(x);
+  });
+  document.addEventListener('ax-shelf',function(){ if(sxQuery()) sxRender(); });
+  /* build while the reader is still looking at the masthead */
+  sxIdle();
+  window.__axSearch={build:sxBuild,search:function(q){ return sxSearch(q); },render:sxRender,
+    stats:function(){ return {built:SX.built,buildMs:SX.buildMs,wallMs:SX.wallMs,slices:SX.slices,queryMs:SX.queryMs,briefs:SX.briefs.length,groups:SX.groups.length}; }};
 }
 
 /* ---------- 1. section headers get a protruding numbered tab ---------- */
@@ -13588,21 +14013,13 @@ function figures(){
   window.__axCheck={before:a,after:b,mcq:window.__ax.made,reveal:window.__ax.kept};
 }
 window.__axShelf={
+  /* Review narrows the page to its fixed set. The sidebar search keeps its
+     query and re-lists results inside the set (see 0c). */
   set:function(ids){
-    if(!reviewSet) savedReviewSearch=searchTerm;
-    var input=document.getElementById('search');
-    searchTerm=''; if(input) input.value='';
-    reviewSet=ids||null; applyShelf(shelf);
+    reviewSet=ids||null; closeNav(false); applyShelf(shelf);
   },
   clear:function(){
-    reviewSet=null;
-    if(savedReviewSearch!==null){
-      searchTerm=savedReviewSearch;
-      var input=document.getElementById('search');
-      if(input) input.value=searchTerm;
-      savedReviewSearch=null;
-    }
-    applyShelf(shelf);
+    reviewSet=null; applyShelf(shelf);
   },
   active:function(){ return !!reviewSet; },
   eligible:function(id){
@@ -14791,9 +15208,9 @@ function boot(){
   buildPanel();
   var nav=document.getElementById('nav');
   var search=document.getElementById('search');
-  /* Directly beneath the shelf selector: the two things you choose before
-     you read anything sit together, and Review is the larger of the two. */
-  var sp=document.querySelector('#nav .shelfpick');
+  /* Beneath the shelf selector and the three switches: what you choose
+     before you read sits together, and Review is the larger control. */
+  var sp=document.querySelector('#nav #modes')||document.querySelector('#nav .shelfpick');
   var lau=buildLauncher('side');
   if(sp && sp.parentNode) sp.parentNode.insertBefore(lau, sp.nextSibling);
   else if(nav && search) nav.insertBefore(lau, search.nextSibling);
@@ -14823,6 +15240,8 @@ function boot(){
     if(e.target.closest && e.target.closest('.shelfpick')) setTimeout(paintChip,0);
   });
   window.addEventListener('hashchange',function(){ setTimeout(paintChip,0); });
+  /* shelf, Board-style only and review all re-run applyShelf, which announces itself */
+  document.addEventListener('ax-shelf',function(){ setTimeout(paintChip,0); });
   window.addEventListener('storage',function(e){
     if(e.key && e.key.indexOf('ax-')===0) paintChip();     /* another tab */
   });
@@ -14847,7 +15266,6 @@ else boot();
    Everything here is computed from tags on the page; nothing is typed by hand.
    · section-header counts (topics, board-style, Aquifer) from the briefs themselves
    · "NBME xN" chip on a brief = distinct NBME ids linked to its questions
-   · NBME-tested filter (joins the shelf rule; an active review keeps its set)
    · blueprint panel: briefs and questions per NBME system for the shelf in view
    Source of weights: repair/nbme/outlines.json (NBME content outlines).        */
 (function(){
@@ -14886,19 +15304,6 @@ function chips(){
     var f=m.getAttribute('data-form'); w.setAttribute('data-nbme-label',(f&&FORMS[f])||'NBME form question');
   });
 }
-function toggles(){
-  document.querySelectorAll('.shelfpick').forEach(function(p){
-    if(p.nextElementSibling&&p.nextElementSibling.classList.contains('nbmetog')) return;
-    var b=document.createElement('button'); b.type='button'; b.className='nbmetog'; b.textContent='NBME-tested';
-    b.setAttribute('aria-pressed','false'); b.title='Show only briefs linked to an NBME question'; p.after(b);
-  });
-  document.addEventListener('click',function(e){
-    var t=e.target.closest&&e.target.closest('.nbmetog'); if(!t) return;
-    window.AX_NBME_ONLY=!window.AX_NBME_ONLY;
-    document.querySelectorAll('.nbmetog').forEach(function(x){ x.classList.toggle('on',!!window.AX_NBME_ONLY); x.setAttribute('aria-pressed',window.AX_NBME_ONLY?'true':'false'); });
-    if(window.axApplyShelf) window.axApplyShelf();
-  });
-}
 function pct(r){ return r?r[0]+'\u2013'+r[1]+'%':'\u2014'; }
 function blueprint(){
   var host=document.querySelector('#bpview .bptable'); if(!host) return;
@@ -14933,7 +15338,7 @@ function blueprint(){
   h+='</tbody></table></div>';
   host.innerHTML=h;
 }
-function run(){ headerCounts(); chips(); toggles(); blueprint();
+function run(){ headerCounts(); chips(); blueprint();
   document.addEventListener('ax-shelf',function(){ blueprint(); }); }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
 })();
