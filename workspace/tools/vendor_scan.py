@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """vendor_scan.py: find vendor (source) text outside the local-only sources.
 
-  python3 tools/vendor_scan.py [--repo DIR] [--sources DIR] [--stock DIR] [--history] [--min N] [--show PATH] [--json]
+  python3 tools/vendor_scan.py [--repo DIR] [--sources DIR] [--stock DIR] [--history] [--min N] [--index-max PCT] [--run-max N] [--show PATH] [--json]
 
 Builds 10-word shingles (tags stripped, entities decoded, lowercase [a-z0-9] words) from every
 file under the sources dir on disk (default <repo>/repair/sources, including aq/) plus, with
@@ -105,6 +105,18 @@ def read_blobs(repo, shas):
     return out
 
 
+def longest_run(t, hits):
+    best, end = 0, -1
+    start = 0
+    for i in range(len(t) - K + 1):
+        if ' '.join(t[i:i + K]) in hits:
+            if i > end:
+                start = i
+            end = i + K
+            best = max(best, end - start)
+    return best
+
+
 def main(argv):
     opt = lambda k, d=None: argv[argv.index(k) + 1] if k in argv else d  # noqa: E731
     repo = os.path.abspath(opt('--repo', os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
@@ -185,6 +197,13 @@ def main(argv):
         return 0
     flagged = {p: r for p, r in res.items() if r['shared'] >= mn and os.path.basename(p) != 'index.html'}
     idx = {p: r for p, r in res.items() if os.path.basename(p) == 'index.html'}
+    # published pages paraphrase the sources, so a few 10-word matches (vitals, lab strings, term
+    # lists) are expected; a page fails above --index-max percent of its shingles or with a shared
+    # run longer than --run-max words (a copied sentence or more).
+    imax, rmax = float(opt('--index-max', '0.1')), int(opt('--run-max', '25'))
+    for p, r in idx.items():
+        r['run'] = longest_run(words(texts[r['blob']]), r['hits'])
+        r['over'] = 100.0 * r['shared'] / max(1, r['of']) > imax or r['run'] > rmax
     if '--json' in argv:
         print(json.dumps({p: {k: v for k, v in r.items() if k != 'hits'} for p, r in list(flagged.items()) + list(idx.items())}, indent=1))
         return 0
@@ -193,8 +212,10 @@ def main(argv):
     for p, r in sorted(flagged.items(), key=lambda x: -x[1]['shared']):
         print('  %6d shared (%5.1f%% of %d)  %-50s top source: %s' % (r['shared'], 100.0 * r['shared'] / max(1, r['of']), r['of'], p, r['top']))
     for p, r in idx.items():
-        print('  index.html (%s): %d shared of %d (%.3f%%)' % (p, r['shared'], r['of'], 100.0 * r['shared'] / max(1, r['of'])))
-    return 1 if flagged else 0
+        print('  index.html (%s): %d shared of %d (%.3f%%), longest shared run %d words%s' % (
+            p, r['shared'], r['of'], 100.0 * r['shared'] / max(1, r['of']), r['run'],
+            ' OVER LIMIT (%.2f%% / %d words)' % (imax, rmax) if r['over'] else ''))
+    return 1 if flagged or any(r['over'] for r in idx.values()) else 0
 
 
 if __name__ == '__main__':

@@ -95,7 +95,7 @@ def main(argv):
         '# Worker packet %s: brief `%s`' % (T, bid),
         '**Instructions.** Everything you need is in this packet. Do not open the skill files or the full page '
         '(index.html). If something essential is missing, say so rather than guess. Write your edits to `%s` in the '
-        'format at the end, run `%s` from the repo root and loop until it prints PASS. '
+        'format at the end, run `%s` from the workspace folder (Step2Haki/workspace) and loop until it prints PASS. '
         'Return a 3 to 6 line report.' % (edits_name, verify_cmd),
         '## Task\n%s' % task,
         '## Rules\n%s' % demote(re.sub(r'^# .*\n', '', rules, count=1, flags=re.M).strip(), 3),

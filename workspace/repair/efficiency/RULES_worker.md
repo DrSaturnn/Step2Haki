@@ -27,7 +27,7 @@ Plain clinical English, concise, American spelling. When your edit rewrites an e
 - Authored items: `src` "authored", omit `nid`. Stems describe the patient only, standalone. Distractors are real mimics a classmate would pick. Answer-cue check: key not uniquely longer by more than about 4 characters, parallel grammar. Do not duplicate an item already in the bank.
 
 ## Before you finish
-Run the verify command the packet gives (`python3 tools/verify_edits.py <your edits file> --nids <source file>`) from the repo root and fix every FAIL until it prints PASS; `--nids` checks that every nid you add is a nid of a source question and is not already on another brief. Output: the edits file at the path the packet names, one `{"edits":[...]}` object holding the page edits, the `set_attr` and the `add_item` ops. Final reply: 3 to 6 lines: what you added, item count, any conflict.
+Run the verify command the packet gives (`python3 tools/verify_edits.py <your edits file> --nids <source file>`) from the workspace folder and fix every FAIL until it prints PASS; `--nids` checks that every nid you add is a nid of a source question and is not already on another brief. Output: the edits file at the path the packet names, one `{"edits":[...]}` object holding the page edits, the `set_attr` and the `add_item` ops. Final reply: 3 to 6 lines: what you added, item count, any conflict.
 
 ## Added after rebuild audit (untested in pilot)
 From the rebuilt sheet's audit against board-brief and study-page-builder (W numbers in brackets); only what the rules above do not already say. If one seems to conflict with the rules above, the rules above win.
