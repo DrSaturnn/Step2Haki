@@ -1,0 +1,74 @@
+[
+ {
+  "kind": "backfill",
+  "edits": [
+   {
+    "scope": "brief:peds-headache-imaging",
+    "op": "replace",
+    "old": "data-nid=\"1483930816351\"",
+    "new": "data-nid=\"1483930816351 1476583171440 1476583249637 1483930588591 1483930592160 1483930600854 1550673179147 1554499214691 1575134484671\"",
+    "why": "Record the 8 UWorld nids for the isotretinoin intracranial hypertension question (s26 Q4) on the brief div."
+   },
+   {
+    "scope": "brief:peds-headache-imaging",
+    "op": "replace",
+    "old": "<b>Papilledema</b> → MRI (venography if otherwise normal ⚠︎), then LP with an opening pressure → idiopathic intracranial hypertension.",
+    "new": "<b>Papilledema</b> → MRI, then MR venography, then LP with an opening pressure → intracranial hypertension; read the medication list for a retinoid, tetracycline, or growth hormone.",
+    "why": "Venography step is now in-context (UWorld s26 Q4 explanation: MRI, then MRV to exclude venous thrombosis, then LP), so the flag is resolved; adds the drug check."
+   },
+   {
+    "scope": "brief:peds-headache-imaging",
+    "op": "replace",
+    "old": "<tr><td>Lumbar puncture with opening pressure</td><td>By branch</td><td><b>High</b> opening pressure after a normal MRI</td><td>Idiopathic intracranial hypertension; with fever and meningismus, LP for meningitis</td></tr>",
+    "new": "<tr><td>MR venography, for papilledema with a normal MRI</td><td>Next</td><td><b>Patent</b> venous sinuses</td><td>Excludes cerebral venous sinus thrombosis before the LP</td></tr>\n<tr><td>Lumbar puncture with opening pressure</td><td>By branch</td><td><b>Over 250 mm H2O</b> with normal CSF, after normal MRI and MR venography</td><td>Intracranial hypertension: idiopathic, or drug-induced when a retinoid, tetracycline, or growth hormone is on the list; with fever and meningismus, LP for meningitis</td></tr>",
+    "why": "Workup order from the UWorld explanation: MRI (mass, hydrocephalus), MR venography (venous thrombosis), then LP with opening pressure over 250 mm H2O and normal CSF."
+   },
+   {
+    "scope": "brief:peds-headache-imaging",
+    "op": "insert_before",
+    "anchor": "<div class=\"pearls\"><span class=\"lbl\">Decision spine</span>",
+    "text": "<div class=\"danger\"><span class=\"lbl\">Papilledema on a medication: drug-induced intracranial hypertension</span> <b>Drug causes</b> &mdash; <b>retinoids and vitamin A</b> (oral isotretinoin for acne), <b>tetracyclines</b> (minocycline, doxycycline), and <b>growth hormone</b>; the other risk factors are obesity or recent weight gain and being a woman of childbearing age, so a normal-weight adolescent boy still qualifies when the drug is present &middot; <b>The tell</b> &mdash; morning headache with nausea and vomiting, transient visual blurring, <b>bilateral papilledema</b>, yet <b>full visual fields</b> (at most an enlarged blind spot) and an otherwise normal neurologic examination; horizontal diplopia from a CN VI palsy, pulsatile tinnitus, and headache worse lying flat may join &middot; <b>Workup order</b> &mdash; MRI of the brain (mass, hydrocephalus) → MR venography (venous sinus thrombosis) → LP with opening pressure <b>over 250 mm H2O</b> and normal CSF &middot; <b>Treatment</b> &mdash; <b>stop the drug</b>, which usually resolves it; acetazolamide or topiramate to lower CSF pressure, especially with visual loss; weight loss when obesity drives it</div>\n<div class=\"pearls\"><span class=\"lbl\">Papilledema with full fields: the distractor map</span> <b>Optic chiasm glioma</b> &mdash; compresses the chiasm, so expect a <b>bitemporal hemianopsia</b>; full fields argue against it &middot; <b>Optic neuritis</b> &mdash; acute vision loss with <b>eye pain</b>, disc swelling usually <b>unilateral</b>, and no morning headache or vomiting &middot; <b>Cluster headache</b> &mdash; brief unilateral periorbital or temporal attacks, typically in men aged 20 to 50, with <b>no papilledema</b> &middot; <b>Viral encephalitis</b> &mdash; <b>fever and altered mental status</b>, absent in an afebrile, alert teen</div>\n",
+    "why": "Backfill s26 Q4: drug causes, the full-fields tell, workup order, and treatment in one exit-ramp block after the existing papilledema ramp; the original distractors as a Term/definition map that masks in study mode."
+   }
+  ],
+  "items": [
+   {
+    "brief": "peds-headache-imaging",
+    "type": "dx",
+    "stem": "16 yo M taking oral isotretinoin for severe acne; 1 month of daily throbbing frontal headache, worse in the morning, with nausea and occasional vomiting; one brief episode of blurred vision in the left eye; BP 130/80; bilateral optic disc edema with decreased visual acuity, full visual fields, equal reactive pupils, no meningismus, normal motor, reflex, and sensory examination",
+    "key": "Drug-induced intracranial hypertension",
+    "companion": "Stop isotretinoin; MRI and MR venography, then LP with opening pressure",
+    "d1": "Optic chiasm glioma",
+    "d2": "Optic neuritis",
+    "lead": null,
+    "src": "uworld",
+    "nid": "1476583171440 1476583249637 1483930588591 1483930592160 1483930600854 1550673179147 1554499214691 1575134484671"
+   },
+   {
+    "brief": "peds-headache-imaging",
+    "type": "test",
+    "stem": "15 yo F taking minocycline for acne for 3 months; 3 weeks of daily headache that is worse lying down, brief episodes of graying vision, and horizontal double vision; afebrile and alert; bilateral papilledema, weak abduction of the left eye, full visual fields, otherwise normal neurologic examination",
+    "key": "MRI of the brain with MR venography",
+    "companion": "Excludes mass, hydrocephalus, and venous sinus thrombosis before LP with opening pressure; suspected drug-induced intracranial hypertension",
+    "d1": "Lumbar puncture with opening pressure",
+    "d2": "Noncontrast CT of the head",
+    "lead": "Which of the following is the most appropriate diagnostic study to obtain at this time?",
+    "src": "authored",
+    "nid": null
+   },
+   {
+    "brief": "peds-headache-imaging",
+    "type": "next",
+    "stem": "16 yo M taking isotretinoin for nodulocystic acne; 4 weeks of morning headache with vomiting; bilateral papilledema with decreased visual acuity and full visual fields; MRI of the brain and MR venography normal; LP opening pressure 340 mm H2O with normal cell count, protein, and glucose",
+    "key": "Stop isotretinoin and start acetazolamide",
+    "companion": "Drug-induced intracranial hypertension; usually resolves off the drug; follow acuity and fields",
+    "d1": "Continue isotretinoin and start acetazolamide",
+    "d2": "Ventriculoperitoneal shunt placement",
+    "lead": null,
+    "src": "authored",
+    "nid": null
+   }
+  ],
+  "notes": "Backfill of s26 Q4 into peds-headache-imaging. 4 edits: nids appended to the brief div data-nid; papilledema exit ramp in the 'Numbers that gate' danger rewritten (venography step now in-context from the UWorld explanation, so its flag is removed; drug check added); Diagnostic workup gains an MR venography row (Order: Next) and the LP row gains the >250 mm H2O, normal-CSF threshold and drug causes; new .danger (drug causes, full-fields tell, workup order, treatment) plus a .pearls distractor map inserted before the Decision spine. 3 items: dx source item (uworld, 8 nids; distractors are the two most tempting originals, chiasm glioma and optic neuritis), test (minocycline variant, MRI with MRV vs LP-first vs CT), next (stop drug plus acetazolamide vs continue drug vs VP shunt). Cue review: source item key is uniquely longest (38 vs 19/14) because 'Drug-induced intracranial hypertension' is the legitimate clinical term for the original 'medication effect' key; no padding applied. Other two sets are balanced (35/37/26; 40/44/36); keys do not repeat stem wording beyond the drug name, which the distractor also carries. Conflict: existing item q_b12f6262733250ab90ca keys LP after 'MRI of the brain normal' without MR venography; the UWorld order puts MRV before LP. Suggest editing that stem to 'MRI of the brain and MR venography normal' (meaning change, bump version). Related content: bs-fat-soluble-vitamins already has a vitamin A pseudotumor item (q_6a602762b258ee5a7b37); no duplication, possible Pairs-with later. Not in the source, standard Step 2 facts used unflagged: tetracycline examples (minocycline, doxycycline), eye pain with optic neuritis wording, VP shunt as the refractory surgical rung. WORKED_BRIEF.md referenced by the spec does not exist at the synced skill path; proceeded without it."
+ }
+]

@@ -1,0 +1,86 @@
+[
+ {
+  "kind": "backfill",
+  "edits": [
+   {
+    "scope": "brief:tumor-syndromes",
+    "op": "replace",
+    "old": "data-nid=\"1484188738574 1484188738575 1484188773693 1584150122461\"",
+    "new": "data-nid=\"1484188738574 1484188738575 1484188773693 1584150122461 1484188767774\"",
+    "why": "Add source nid 1484188767774; 1584150122461 already present."
+   },
+   {
+    "scope": "brief:tumor-syndromes",
+    "op": "replace",
+    "old": "<tr><td>Other phakomatoses <i>(tuberous sclerosis, NF2)</i></td><td>Ash-leaf macules, shagreen patch, cardiac rhabdomyoma ⚠︎ · bilateral vestibular schwannomas ⚠︎</td><td><b>The skin or the eighth nerve, not the retina</b></td><td>Neither lesion is present</td></tr>",
+    "new": "<tr><td>Tuberous sclerosis complex</td><td>Autosomal dominant TSC1 or TSC2 loss, inherited or de novo; benign hamartomas of brain, skin, eye, heart and kidney</td><td><b>Periungual fibroma</b>, ash-leaf macules, facial angiofibromas, shagreen patch; <b>calcified subependymal nodules</b>, cortical tubers, seizures; cardiac rhabdomyoma, renal angiomyolipoma</td><td>No hamartomatous skin lesion and no seizures; the eye lesion is a hemangioblastoma, not a hamartoma</td></tr>\n<tr><td>Neurofibromatosis type 2</td><td>Autosomal dominant; schwannomas and meningiomas</td><td><b>Bilateral vestibular schwannomas</b> with hearing loss</td><td>No eighth-nerve tumor; the eye lesion is a hemangioblastoma</td></tr>",
+    "why": "Split the lumped phakomatoses row: tuberous sclerosis gets its own row with its tells and organs; NF2 keeps a row. Removes warning flags from standard facts."
+   },
+   {
+    "scope": "brief:tumor-syndromes",
+    "op": "replace",
+    "old": "adrenal medulla with thyroid → MEN2</div>",
+    "new": "adrenal medulla with thyroid → MEN2 &middot; <b>A nail fibroma or calcified periventricular nodules?</b> &mdash; Tuberous sclerosis; MRI shows the cortical tubers</div>",
+    "why": "Decision spine step for the tuberous sclerosis tells from Q5."
+   },
+   {
+    "scope": "brief:tumor-syndromes",
+    "op": "insert_before",
+    "anchor": "<div class=\"pearls\"><span class=\"lbl\">Pairs with</span>",
+    "text": "<div class=\"pearls\"><span class=\"lbl\">Tuberous sclerosis: the tells</span> <b>Periungual (ungual) fibroma</b> &mdash; a firm flesh-colored growth from the nail fold, appearing in adolescence or adulthood &middot; <b>Calcified subependymal nodules</b> &mdash; head CT shows them lining the lateral ventricles; cortical tubers are seen better on MRI &middot; <b>A fall explained by a seizure</b> &mdash; epilepsy affects most patients, from infantile spasms in infancy to a first seizure at any age, with intellectual disability, autism and behavior disorders &middot; <b>The other skin lesions</b> &mdash; ash-leaf (hypopigmented) macules, facial angiofibromas, and the shagreen patch, an orange-peel plaque over the lower back &middot; <b>The other organs</b> &mdash; cardiac rhabdomyoma, renal angiomyolipoma, retinal hamartoma; a subependymal nodule can grow into a <b>subependymal giant cell astrocytoma</b> that obstructs CSF flow and needs resection &middot; <b>Diagnosis and surveillance</b> &mdash; the clinical constellation or TSC1/TSC2 testing; then skin and eye examinations, serial brain and kidney MRI, baseline echocardiogram with serial ECG, baseline EEG, and neuropsychiatric screening</div>\n<div class=\"pearls\"><span class=\"lbl\">Tuberous sclerosis vs. the distractors</span> <b>Neurofibromatosis type 1</b> &mdash; also autosomal dominant with seizures, but the skin shows café-au-lait macules and cutaneous neurofibromas on the trunk, and the tumor is an optic glioma; no nail fibromas or calcified periventricular nodules &middot; <b>Von Hippel-Lindau</b> &mdash; cerebellar and retinal hemangioblastomas; no skin hamartomas &middot; <b>Ataxia-telangiectasia</b> &mdash; autosomal recessive; ataxia from early childhood, abnormal eye movements, telangiectasias of the eyes and skin &middot; <b>Infective endocarditis</b> &mdash; fever, dyspnea and a murmur; its nail finding is a <b>splinter hemorrhage</b> under the nail plate, not a fibroma</div>\n",
+    "why": "Q5 teaching: the tells, organ findings, SEGA complication, surveillance, and why each original distractor fails."
+   }
+  ],
+  "items": [
+   {
+    "brief": "tumor-syndromes",
+    "type": "dx",
+    "stem": "17-year-old boy found confused at the bottom of a staircase after an unwitnessed fall, with a forehead contusion, a firm fibroma growing from under a toenail, and calcified nodules along the lateral ventricles on head CT",
+    "key": "Tuberous sclerosis",
+    "companion": "Nail fibroma plus calcified subependymal nodules; the fall was likely a seizure",
+    "d1": "Neurofibromatosis type 1",
+    "d2": "Ataxia-telangiectasia",
+    "lead": null,
+    "src": "uworld",
+    "nid": "1484188767774 1584150122461"
+   },
+   {
+    "brief": "tumor-syndromes",
+    "type": "dx",
+    "stem": "5-month-old with clusters of flexion spasms, three oval hypopigmented macules on the trunk, and an intracardiac mass on echocardiography",
+    "key": "Tuberous sclerosis complex",
+    "companion": "Infantile spasms, ash-leaf macules and a cardiac rhabdomyoma",
+    "d1": "Neurofibromatosis type 1",
+    "d2": "Sturge-Weber syndrome",
+    "lead": null,
+    "src": "authored",
+    "nid": null
+   },
+   {
+    "brief": "tumor-syndromes",
+    "type": "mech",
+    "stem": "14-year-old with tuberous sclerosis who has two weeks of morning headaches and vomiting; MRI shows an enlarging mass near the foramen of Monro with dilated lateral ventricles",
+    "key": "Subependymal giant cell astrocytoma",
+    "companion": "A subependymal nodule that grew and obstructed CSF flow; resection",
+    "d1": "Cerebellar hemangioblastoma",
+    "d2": "Intraventricular choroid plexus papilloma",
+    "lead": null,
+    "src": "authored",
+    "nid": null
+   },
+   {
+    "brief": "tumor-syndromes",
+    "type": "screen",
+    "stem": "6-year-old with facial angiofibromas, hypopigmented macules, epilepsy and cortical tubers on MRI, newly diagnosed with tuberous sclerosis complex",
+    "key": "Serial brain and kidney MRI with baseline echocardiography",
+    "companion": "Surveillance follows the organs: brain, kidney, heart, plus skin, eye, EEG and neuropsychiatric screening",
+    "d1": "Plasma metanephrines with annual dilated retinal examination",
+    "d2": "Serum calcitonin with annual thyroid ultrasonography",
+    "lead": "Which of the following is the most appropriate monitoring for this patient?",
+    "src": "authored",
+    "nid": null
+   }
+  ],
+  "notes": "Split the lumped 'Other phakomatoses' row into a tuberous sclerosis row and an NF2 row, and dropped the warning flags that were on standard facts (ash-leaf macules, shagreen patch, cardiac rhabdomyoma, bilateral vestibular schwannomas). No conflict between the brief and the source. Added one decision-spine step, a tells/organs/surveillance pearls block, and a distractor-split pearls block covering NF1, VHL, ataxia-telangiectasia and endocarditis. Nid 1484188767774 added; 1584150122461 was already on the brief."
+ }
+]

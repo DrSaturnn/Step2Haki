@@ -1,0 +1,74 @@
+[
+ {
+  "kind": "backfill",
+  "edits": [
+   {
+    "scope": "brief:neonatal-jaundice",
+    "op": "replace",
+    "old": "data-nid=\"\"",
+    "new": "data-nid=\"1482976984253 1486591392171 1512679081304 1517959834181 1555449924265\"",
+    "why": "Record the UWorld Q2 (biliary atresia) source nids on the brief div."
+   },
+   {
+    "scope": "brief:neonatal-jaundice",
+    "op": "replace",
+    "old": "<tr><td>Biliary atresia <span class=\"tag t-em\">Can&#39;t miss</span></td><td>Beyond 2 weeks</td><td><b>Raised direct fraction, acholic stools</b></td><td>Urgent evaluation; Kasai before about 60 days</td></tr>",
+    "new": "<tr><td>Biliary atresia <span class=\"tag t-em\">Can&#39;t miss</span></td><td>2 to 8 weeks, well infant</td><td><b>Raised direct fraction, acholic stools</b>, high GGT, small or absent gallbladder</td><td>Urgent evaluation; Kasai before about 60 days; most later need a transplant</td></tr>",
+    "why": "UWorld Q2: onset window 2 to 8 weeks, GGT and gallbladder tells, and the transplant endpoint after Kasai."
+   },
+   {
+    "scope": "brief:neonatal-jaundice",
+    "op": "insert_after",
+    "anchor": "<td>Never physiologic: cholestasis workup</td></tr>\n</tbody>",
+    "text": "\n<tbody class=\"grp\">\n<tr><td>GGT, ALP and reticulocyte count</td><td>Next</td><td><b>High GGT</b> and ALP, normal reticulocytes</td><td>Duct destruction without hemolysis: biliary atresia</td></tr>\n<tr><td></td><td></td><td>Direct fraction raised, GGT <b>normal</b></td><td>Progressive familial intrahepatic cholestasis (PFIC); gallbladder present</td></tr>\n<tr><td></td><td></td><td>High GGT with cytopenias and <b>low</b> reticulocytes in a febrile, ill infant</td><td>Hemophagocytic lymphohistiocytosis (HLH): marrow failure, normal gallbladder</td></tr>\n</tbody>\n<tbody>\n<tr><td>Abdominal ultrasound, direct branch</td><td>Next</td><td><b>Small or absent</b> gallbladder, triangular cord sign</td><td>Biliary atresia: proceed to cholangiography</td></tr>\n</tbody>",
+    "why": "UWorld Q2 lab pattern (direct up, GGT up, retics normal) and its distractor map (PFIC normal GGT, HLH low retics), plus the ultrasound tells, as a direct-branch group in the existing workup table."
+   },
+   {
+    "scope": "brief:neonatal-jaundice",
+    "op": "insert_before",
+    "anchor": "<tr><td>Hepatic ultrasound or serum albumin</td>",
+    "text": "<tr><td>Liver biopsy</td><td>Supports</td><td>Bile duct <b>proliferation</b>, portal edema and inflammation, fibrosis</td><td>Biliary atresia; cholangiography remains the gold standard</td></tr>\n",
+    "why": "UWorld Q2 confirmation: liver biopsy as the alternative to the gold-standard intraoperative cholangiogram."
+   }
+  ],
+  "items": [
+   {
+    "brief": "neonatal-jaundice",
+    "type": "test",
+    "stem": "4 week old term M, exclusively breast-fed, scleral icterus progressing over several weeks, stools fewer and paler, afebrile and well-appearing, enlarged liver, total bilirubin 12.5 mg/dL, ultrasound shows no gallbladder",
+    "key": "High direct bilirubin, high GGT, normal reticulocyte count",
+    "companion": "Biliary atresia: duct destruction raises GGT, and with no hemolysis the reticulocyte count stays normal",
+    "d1": "High direct bilirubin, normal GGT, normal reticulocyte count",
+    "d2": "High direct bilirubin, high GGT, low reticulocyte count",
+    "lead": "Which of the following sets of laboratory findings is most likely in this patient?",
+    "src": "uworld",
+    "nid": "1482976984253 1486591392171 1512679081304 1517959834181 1555449924265"
+   },
+   {
+    "brief": "neonatal-jaundice",
+    "type": "test",
+    "stem": "6 week old F, jaundiced since 3 weeks of age, pale clay-colored stools, dark urine, hepatomegaly, raised direct bilirubin and GGT, ultrasound with a small gallbladder and a triangular cord sign",
+    "key": "Intraoperative cholangiography",
+    "companion": "Biliary atresia: no contrast reaches the bowel; biopsy supports, but cholangiography is the gold standard",
+    "d1": "Percutaneous liver biopsy",
+    "d2": "Hepatobiliary scintigraphy (HIDA scan)",
+    "lead": "Which of the following is the gold-standard study to confirm the diagnosis?",
+    "src": "authored",
+    "nid": null
+   },
+   {
+    "brief": "neonatal-jaundice",
+    "type": "next",
+    "stem": "7 week old M with acholic stools and conjugated hyperbilirubinemia; intraoperative cholangiogram shows obliterated extrahepatic ducts with no contrast entering the bowel",
+    "key": "Kasai hepatoportoenterostomy",
+    "companion": "Biliary atresia: Kasai first; most children still need a liver transplant later",
+    "d1": "Liver transplantation",
+    "d2": "Ursodiol with fat-soluble vitamin supplements",
+    "lead": null,
+    "src": "authored",
+    "nid": null
+   }
+  ],
+  "notes": "UWorld Q2 (biliary atresia) backfilled into neonatal-jaundice. Existing biliary atresia row updated (2 to 8 week window, GGT and gallbladder tells, transplant endpoint); workup table gains a direct-branch group (GGT/ALP/retics with PFIC and HLH branches), an ultrasound row and a liver biopsy row. Three items: source lab-pattern item (key and the two most-chosen distractors, PFIC and HLH), gold-standard confirmation, and Kasai as the next step. Existing 'Kasai before about 60 days' and 'after ultrasound and HIDA' left as is (not in the UWorld explanation; the 60-day figure carries a warning flag elsewhere on the page). The Skip row ('Hepatic ultrasound or serum albumin') is scoped to jaundice under 24 hours, so the new ultrasound row is labeled 'direct branch' to avoid an apparent contradiction. No second vignette added: the brief's vignette is the NBME source and the Part I brief does not require one per question. Ursodiol distractor is standard cholestasis care, not from the UWorld text."
+ }
+]
