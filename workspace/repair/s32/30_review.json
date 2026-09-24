@@ -1,0 +1,14 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "  /* Directly beneath the shelf selector: the two things you choose before\n     you read anything sit together, and Review is the larger of the two. */\n  var sp=document.querySelector('#nav .shelfpick');\n",
+   "with": "  /* Beneath the shelf selector and the three switches: what you choose\n     before you read sits together, and Review is the larger control. */\n  var sp=document.querySelector('#nav #modes')||document.querySelector('#nav .shelfpick');\n"
+  },
+  {
+   "op": "replace_global",
+   "find": "  window.addEventListener('hashchange',function(){ setTimeout(paintChip,0); });\n",
+   "with": "  window.addEventListener('hashchange',function(){ setTimeout(paintChip,0); });\n  /* shelf, Board-style only and review all re-run applyShelf, which announces itself */\n  document.addEventListener('ax-shelf',function(){ setTimeout(paintChip,0); });\n"
+  }
+ ]
+}

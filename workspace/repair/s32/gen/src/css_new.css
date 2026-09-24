@@ -1,0 +1,75 @@
+
+/* ---------- ONE SIDEBAR + FULL-TEXT SEARCH (s32) ----------
+   Desktop: the fixed sidebar, now a pinned head (brand, search) over one
+   scrolling body. Below 980px the same sidebar is an off-canvas panel from
+   the left over a dimmed page; the bottom sheet is gone. While a query is
+   typed, search results replace the systems list. */
+#navtop{flex:none;border-bottom:1px solid rgba(255,255,255,.10)}
+#navtop .brand{border-bottom:none;margin-bottom:12px}
+#navscroll{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:14px 0 40px}
+.navclose{display:none}
+#modes .bsonly[aria-pressed="true"] .track{background:var(--accent)}
+#modes .bsonly[aria-pressed="true"] .knob{transform:translateX(15px)}
+#modes button:focus-visible{outline:2px solid #9A93E8;outline-offset:2px}
+#nav.sxon #navlinks{display:none}
+#sxres[hidden]{display:none}
+#sxres{padding:0 10px 12px}
+#sxres .sxstat{margin:4px 12px 10px;font-size:9.5px;letter-spacing:1.4px;text-transform:uppercase;font-weight:800;color:#8F88E0;line-height:1.5}
+#sxres .sxstat b{color:#fff;font-size:11px;letter-spacing:.4px}
+#sxres .sxlist{list-style:none;margin:0;padding:0}
+#sxres a.sxhit{display:block;padding:10px 12px 11px;margin:0 0 2px;border-left:none;border-radius:10px;color:rgba(255,255,255,.78);text-decoration:none}
+#sxres a.sxhit:hover{background:rgba(255,255,255,.06)}
+#sxres a.sxhit:focus-visible{outline:2px solid #9A93E8;outline-offset:-2px;background:rgba(255,255,255,.06)}
+#sxres .t{display:block;font-size:13.6px;font-weight:700;line-height:1.35;color:#fff}
+#sxres .b{display:block;margin:5px 0 3px;font-size:9px;letter-spacing:1.3px;text-transform:uppercase;font-weight:800;color:#C9A47B}
+#sxres .s{display:block;font-size:12.6px;line-height:1.5;color:rgba(255,255,255,.64)}
+#sxres mark{background:rgba(154,147,232,.34);color:#fff;border-radius:3px;padding:0 1px}
+body.study #sxres .s.sxm{filter:blur(4px);user-select:none}
+#sxres .sxcap{margin:10px 12px 0;font-size:12px;color:rgba(255,255,255,.5)}
+#sxres .sxmore{all:unset;cursor:pointer;display:block;margin:12px 12px 2px;padding:9px 12px;border-radius:10px;background:#101015;box-shadow:inset 3px 3px 7px rgba(0,0,0,.5);font-size:12.5px;font-weight:700;color:#B9B3F2}
+#sxres .sxmore:focus-visible{outline:2px solid #9A93E8;outline-offset:2px}
+/* the block a search result lands on */
+.sxflash{outline:3px solid transparent;outline-offset:4px;animation:sxflash 2s ease-out 1}
+@keyframes sxflash{0%,45%{outline-color:var(--accent)}100%{outline-color:rgba(84,74,196,0)}}
+@media (prefers-reduced-motion: reduce){ .sxflash{outline-color:var(--accent)} }
+#navscrim{display:none}
+@media print{ #navscrim{display:none!important} }
+
+@media (max-width:980px){
+  #nav{
+    display:flex;position:fixed;top:0;left:0;bottom:auto;z-index:150;
+    width:min(86vw,360px);height:100vh;height:100dvh;
+    padding:0 0 0 env(safe-area-inset-left,0px);
+    transform:translateX(-104%);visibility:hidden;
+    transition:transform .24s ease,visibility 0s linear .24s;
+    box-shadow:14px 0 34px -10px rgba(0,0,0,.5);
+  }
+  body.navopen #nav{transform:none;visibility:visible;transition:transform .24s ease,visibility 0s}
+  /* follows window.visualViewport while open, so the keyboard never covers it */
+  body.navopen #nav.vvfit{top:var(--vvt,0px);height:var(--vvh,100dvh)}
+  #navscrim{
+    display:block;position:fixed;left:0;top:0;right:0;bottom:0;z-index:148;
+    background:rgba(10,10,14,.46);opacity:0;pointer-events:none;transition:opacity .2s;
+  }
+  body.navopen #navscrim{opacity:1;pointer-events:auto}
+  body.navopen{overflow:hidden}
+  body.navopen #rvpanel{z-index:170}
+  #navtop{display:flex;flex-wrap:wrap;align-items:center;padding:calc(12px + env(safe-area-inset-top,0px)) 0 0}
+  #navtop .brand{flex:1 1 auto;min-width:0;display:flex;align-items:center;gap:10px;padding:0 0 12px 18px;margin:0}
+  #navtop .brand .mark{margin:0;width:30px;height:30px;border-radius:9px;flex:none}
+  #navtop .brand h1{font-size:17px;margin:0}
+  #navtop .brand p{display:none}
+  .navclose{
+    all:unset;cursor:pointer;flex:none;display:flex;align-items:center;justify-content:center;
+    width:40px;height:40px;margin:0 12px 12px 0;border-radius:50%;
+    background:#101015;color:rgba(255,255,255,.82);font-size:15px;line-height:1;
+    box-shadow:inset 3px 3px 7px rgba(0,0,0,.5);
+  }
+  .navclose:focus-visible{outline:2px solid #9A93E8;outline-offset:2px}
+  #search{flex:1 0 calc(100% - 36px);margin:0 18px 12px}
+  #navscroll{padding:12px 0 calc(28px + env(safe-area-inset-bottom,0px))}
+  #nav a{padding-top:9px;padding-bottom:9px}
+  #nav .shelfsel{font-size:16px}
+  /* with a query typed, results sit directly under the field */
+  #nav.sxon #navscroll > .shelfpick,#nav.sxon #modes,#nav.sxon #rvlaunch{display:none}
+}

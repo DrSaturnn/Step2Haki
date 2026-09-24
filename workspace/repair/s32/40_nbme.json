@@ -1,0 +1,19 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "   · NBME-tested filter (joins the shelf rule; an active review keeps its set)\n",
+   "with": ""
+  },
+  {
+   "op": "replace_global",
+   "find": "function toggles(){\n  document.querySelectorAll('.shelfpick').forEach(function(p){\n    if(p.nextElementSibling&&p.nextElementSibling.classList.contains('nbmetog')) return;\n    var b=document.createElement('button'); b.type='button'; b.className='nbmetog'; b.textContent='NBME-tested';\n    b.setAttribute('aria-pressed','false'); b.title='Show only briefs linked to an NBME question'; p.after(b);\n  });\n  document.addEventListener('click',function(e){\n    var t=e.target.closest&&e.target.closest('.nbmetog'); if(!t) return;\n    window.AX_NBME_ONLY=!window.AX_NBME_ONLY;\n    document.querySelectorAll('.nbmetog').forEach(function(x){ x.classList.toggle('on',!!window.AX_NBME_ONLY); x.setAttribute('aria-pressed',window.AX_NBME_ONLY?'true':'false'); });\n    if(window.axApplyShelf) window.axApplyShelf();\n  });\n}\n",
+   "with": ""
+  },
+  {
+   "op": "replace_global",
+   "find": "function run(){ headerCounts(); chips(); toggles(); blueprint();",
+   "with": "function run(){ headerCounts(); chips(); blueprint();"
+  }
+ ]
+}
