@@ -14,6 +14,7 @@ A running list, updated each pass. Newest at the top of each section. Answer any
 
 ## Waiting on material from you
 
+- **Aquifer case narratives for Pediatrics 10, Neurology 10, Pediatrics 29, Pediatrics 31.** Only the summaries came through, so each new workup brief's source case is marked partial and the case question stems are reconstructed. Neurology 10's summary never names the tumor (the content points to a posterior fossa tumor, likely pilocytic astrocytoma); the brief keys "posterior fossa tumor" until the narrative confirms it. *s27.*
 7. **s23 UWorld text** (apnea of prematurity, galactosemia, hereditary angioedema, Wilson). The full explanations were lost from the session; re-pasting lets me check cutoffs and swap in UWorld's real wrong answers for Wilson and angioedema. *s23.*
 8. **Aquifer credit for bs-puv and bs-leukemia.** You said you'd send updated cases. *Held.*
 9. **Peds 21 case narrative.** You said you'd send it. *Held.*
