@@ -35,3 +35,9 @@ Two instructions added to RULES_worker.md from the failures seen (rewrite slogan
 - Token counts are the harness's per-agent totals, not billed cost. The orchestrator's own tokens and the one-time setup (rules sheet, packet script, verifier) are not included; packet building is a script run of under a second.
 - The reviewer is the same model family as the workers.
 - RULES_worker.md condenses board-brief and SPEC_s19; when either changes, re-check the rules sheet and re-run a small pilot.
+
+# Part 2: this chat (orchestrator), measured 2026-09-24
+From the session transcript (`tools/session_usage.py`): 399 main-thread calls; 170M cached tokens read, 3.6M written, 0.48M output. Context grew from ~190k after the last compaction to ~670k, so later calls each re-read ~5x more. Batches: s25 22 calls 6.7M read; s26 22 calls 7.5M; s27 (Aquifer) 30 calls 12.6M; s28 19 calls 7.9M; the NBME build 106 calls 60.6M. By comparison the subagent saving from worker packets is ~50k per brief. The orchestrator's context size and call count dominate cost.
+
+Lean arm for the orchestrator: fresh chat seeded with CURRENT_STATE.md; `tools/ship.sh` (one call replaces ~6); summary-only tool output; short agent reports; text over images.
+Frozen test (before/after, not randomized; the orchestrator cannot be run twice on the same batch): the next comparable UWorld batch of 4 to 8 questions in the fresh chat versus s25/s26 (mean 22 calls, 7.1M read). Adopt the fresh-chat routine as standing practice if read tokens per batch fall by at least 60% with the gate, render and blinded quality spot-check unchanged. Confounds: batch difficulty and size differ; report calls and read tokens per question as well as per batch.
