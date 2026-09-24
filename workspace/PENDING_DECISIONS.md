@@ -4,6 +4,7 @@ A running list, updated each pass. Newest at the top of each section. Answer any
 
 ## Awaiting a yes/no
 
+0. **Retitled this pass (reversible):** "The Distended Newborn Abdomen" is now "The Distended Abdomen in a Newborn or Infant" (the malrotation question is a 7-month-old). Say "revert" if you prefer the old title. *s26.*
 1. **VUR corrections (researched, not yet written).** Change the grade wording to "mild I–II, dilating III–V" (blunting starts at III, complete at IV; V adds tortuous ureter). Replace the item where a 2-year-old with a normal ultrasound gets a VCUG with a child under 2 whose ultrasound is abnormal. Add the AUA prophylaxis rules and the RIVUR result (prophylaxis halves repeat UTIs, no change in scarring). *Asked s23.*
 2. **Thumbnail pilot.** Build one recreated figure (short stature evaluation flowchart) as a small preview on its tile that opens full size on click, for your review before rolling it out. *Asked s23.*
 3. **Short stature flowchart: precocious puberty branch.** My notes filed it under "impaired velocity + advanced bone age"; the page keeps standard teaching (fast growth now, short adult height). Confirm against the UWorld figure. *Asked s23.*
@@ -18,6 +19,8 @@ A running list, updated each pass. Newest at the top of each section. Answer any
 9. **Peds 21 case narrative.** You said you'd send it. *Held.*
 
 ## Open audit items (my list; your call on priority)
+
+- **peds-headache-imaging vignette mismatch:** the vignette is a 10-year-old boy but the decision point argues an adolescent girl after menarche (already on the s18 list; flagged again). *s26.*
 
 10. **Scope and source audit** of the s18 workup tables: trim specialist rows, flag memory-sourced numbers.
 11. **s18 conflicts:** bs-puv VCUG vs cystoscopy; enuresis age gate; SCFE effusion claim; newborn-cyanosis items; DVT duration; cervical ASC-US; sellar-mass and peds-headache vignette mismatches; bs-torch confirmation after 3 weeks; empty trap labels; stray ⚠︎.
