@@ -59,6 +59,39 @@ for (x,y),c in pairs.items():
     j=c/len(S[x][0]|S[y][0])
     if j>=0.6 and S[x][1]==S[y][1]: near.append((round(j,2),x,y))
 out.append(f"near-duplicate items (same key, stem Jaccard>=0.6): {len(near)}")
+# 8: blueprint tags -- once any brief is tagged, every brief needs one valid primary system
+import json,os,csv
+try: CODES=set(json.load(open('repair/nbme/outlines.json'))['codes'])
+except Exception: CODES=set()
+bp=[(b.id,(b.attr_map.get('data-bp') or '').split()) for b in briefs]
+if CODES and any(v for _,v in bp):
+    badbp=[bid for bid,v in bp if not v or len(v)>2 or any(c not in CODES for c in v)]
+    out.append(f"blueprint tags: {len(bp)-len(badbp)}/{len(bp)}")
+    if badbp: fail.append(('blueprint tag missing or invalid',badbp[:20]))
+# 9: NBME links -- every data-nbme id on an item has a coverage row naming that item, and the reverse
+covp='repair/nbme/coverage.csv'
+if os.path.exists(covp):
+    rows=list(csv.DictReader(open(covp,encoding='utf-8')))
+    page={(n,i.attr_map['data-item-id']) for i in items for n in (i.attr_map.get('data-nbme') or '').split()}
+    filed={(r['nbme_id'],r['item_id']) for r in rows if r.get('item_id')}
+    allids={i.attr_map['data-item-id'] for i in items}
+    orphan_page=sorted(page-filed);orphan_file=sorted(x for x in filed-page)
+    ghost=[r['item_id'] for r in rows if r.get('item_id') and r['item_id'] not in allids]
+    fp=collections.Counter(r['fingerprint'] for r in rows if r.get('fingerprint') and not r.get('same_as'))
+    dupfp=[k for k,v in fp.items() if v>1]
+    out.append(f"nbme links: {len(page)} on page, {len(filed)} filed")
+    if orphan_page or orphan_file or ghost: fail.append(('nbme link mismatch',{'page_only':orphan_page[:10],'file_only':orphan_file[:10],'no_such_item':ghost[:10]}))
+    if dupfp: fail.append(('nbme fingerprint repeated without same_as',dupfp[:10]))
+# 10: attribute-only pass -- with --attr-only <rev>, no existing item may change text, options, ids or version
+if '--attr-only' in sys.argv:
+    ref=sys.argv[sys.argv.index('--attr-only')+1]
+    od=axlib.parse_html(subprocess.run(['git','show',f'{ref}:{path}'],capture_output=True,text=True).stdout)
+    KEEP=('data-type','data-d1','data-d2','data-item-version','data-key-id','data-d1-id','data-d2-id','data-lead-in','data-item-status')
+    sig=lambda i:(tuple(i.attr_map.get(k) for k in KEEP),seg(i))
+    oldm={i.attr_map['data-item-id']:sig(i) for i in od.items}
+    changed=[q for q,v in ((i.attr_map['data-item-id'],sig(i)) for i in items) if q in oldm and oldm[q]!=v]
+    out.append(f"attr-only vs {ref}: {len(changed)} items changed")
+    if changed: fail.append(('attribute-only pass changed item content',changed[:10]))
 print(' | '.join(out));print(f"{(time.perf_counter()-t0)*1000:.0f} ms")
 for f in fail: print('FAIL',f)
 for n in sorted(near,reverse=True)[:15]: print('NEAR',n)

@@ -22,6 +22,15 @@ for ed in L['edits']:
         assert body.count(ed['old'])==1,(sc,ed['old'][:60],body.count(ed['old']));body=body.replace(ed['old'],ed['new'])
     elif ed['op']=='insert_before_end':
         assert body.endswith('</div>'),sc;body=body[:-6]+ed['text']+'</div>'
+    elif ed['op']=='set_attr':
+        # attribute-only edit on one opening tag: an item (by data-item-id) or the brief div itself
+        if 'item' in ed: pat=r'<li [^>]*data-item-id="%s"[^>]*>'%_re.escape(ed['item'])
+        else: pat=r'<div class="brief[^"]*" id="%s"[^>]*>'%_re.escape(sc.split(':',1)[1])
+        tags=_re.findall(pat,body);assert len(tags)==1,(sc,ed.get('item'),len(tags))
+        tag=tags[0];a=ed['attr'];v=ed['value'].replace('&','&amp;').replace('"','&quot;')
+        if _re.search(r'\s%s="[^"]*"'%_re.escape(a),tag): nt=_re.sub(r'(\s%s=")[^"]*(")'%_re.escape(a),lambda m:m.group(1)+v+m.group(2),tag,count=1)
+        else: nt=tag[:-1]+f' {a}="{v}">'
+        body=body.replace(tag,nt,1)
     elif ed['op'] in('insert_after','insert_before'):
         assert body.count(ed['anchor'])==1,(sc,ed['anchor'],body.count(ed['anchor']))
         i=body.index(ed['anchor'])+(len(ed['anchor']) if ed['op']=='insert_after' else 0);body=body[:i]+ed['text']+body[i:]
