@@ -87,12 +87,16 @@ def main(argv):
     kinds = {'brief': 'topic', 'bs': 'board-style', 'aq': 'Aquifer'}
     titles = '\n'.join('%s | %s | %s' % (x.id, x.title, kinds[x.kind]) for x in briefs(html))
     edits_name = 'repair/efficiency/%s_%s.json' % (T, bid)
+    src_rel = os.path.relpath(os.path.abspath(src), REPO)
+    if src_rel.startswith('..'):
+        src_rel = os.path.abspath(src)
+    verify_cmd = 'python3 tools/verify_edits.py %s --nids %s' % (edits_name, src_rel)
     parts = [
         '# Worker packet %s: brief `%s`' % (T, bid),
         '**Instructions.** Everything you need is in this packet. Do not open the skill files or the full page '
         '(index.html). If something essential is missing, say so rather than guess. Write your edits to `%s` in the '
-        'format at the end, run `python3 tools/verify_edits.py %s` from the repo root and loop until it prints PASS. '
-        'Return a 3 to 6 line report.' % (edits_name, edits_name),
+        'format at the end, run `%s` from the repo root and loop until it prints PASS. '
+        'Return a 3 to 6 line report.' % (edits_name, verify_cmd),
         '## Task\n%s' % task,
         '## Rules\n%s' % demote(re.sub(r'^# .*\n', '', rules, count=1, flags=re.M).strip(), 3),
         '## Source question (%s)\n%s' % (os.path.basename(src), demote(q, 3)),
@@ -105,6 +109,7 @@ def main(argv):
         f.write('\n\n'.join(parts) + '\n')
     print('make_packet: %s -> %s (%d chars, ~%d tokens; brief %d chars, source %d chars)'
           % (T, out, sum(map(len, parts)), sum(map(len, parts)) // 4, b.end - b.start, len(q)))
+    print('verify: %s' % verify_cmd)
     return 0
 
 

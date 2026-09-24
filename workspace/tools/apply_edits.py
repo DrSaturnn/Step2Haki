@@ -18,9 +18,9 @@ from pagelib import (TYPES, STATUSES, briefs, count, esc_attr, items, read_page,
 from idgen import new_item_ids, taken_ids  # noqa: E402
 
 OPS = {
-    'replace': ({'brief', 'find', 'with'}, {'item', 'note'}),
-    'insert_before': ({'brief', 'anchor', 'html'}, {'item', 'note'}),
-    'insert_after': ({'brief', 'anchor', 'html'}, {'item', 'note'}),
+    'replace': ({'brief', 'find', 'with'}, {'note'}),
+    'insert_before': ({'brief', 'anchor', 'html'}, {'note'}),
+    'insert_after': ({'brief', 'anchor', 'html'}, {'note'}),
     'add_item': ({'brief', 'type', 'stem', 'answer', 'd1', 'd2'},
                  {'companion', 'lead_in', 'status', 'src', 'nid', 'after_item', 'attrs', 'bold_answer', 'note'}),
     'set_attr': ({'target', 'attr', 'value'}, {'note'}),
@@ -96,13 +96,17 @@ def _item(html, qid, n, op):
 
 def _scope(html, e, n, op):
     b = _brief(html, e['brief'], n, op)
-    s, t = b.start, b.end
-    if e.get('item'):
-        it = _item(html, e['item'], n, op)
-        if it.brief_id != b.id:
-            raise EditError(n, op, 'item %s is in brief %s, not %s' % (it.id, it.brief_id, b.id), 'fix brief or item')
-        s, t = it.start, it.end
-    return s, t, b
+    return b.start, b.end, b
+
+
+def _bank_ranges(html, b):
+    """(start, end) of every ol.bank inside brief b, end just past its </ol>."""
+    out = []
+    for m in re.finditer(r'<ol\b[^>]*class="bank\b', html[b.start:b.end]):
+        s = b.start + m.start()
+        e = html.find('</ol>', s)
+        out.append((s, e + len('</ol>') if e >= 0 else b.end))
+    return out
 
 
 def _unique(html, s, t, needle, n, op, where):
@@ -121,9 +125,14 @@ def apply_one(html, e, n, taken, log):
     op = e['op']
     if op in ('replace', 'insert_before', 'insert_after'):
         s, t, b = _scope(html, e, n, op)
-        where = 'item %s' % e['item'] if e.get('item') else 'brief %s' % b.id
+        where = 'brief %s' % b.id
         needle = e['find'] if op == 'replace' else e['anchor']
         at = _unique(html, s, t, needle, n, op, where)
+        for bs, be in _bank_ranges(html, b):
+            if at < be and at + len(needle) > bs:
+                raise EditError(n, op, 'anchor falls inside the ol.bank of brief %s: %r' % (b.id, needle[:90]),
+                                'items change only through add_item (new question) or set_attr (attributes, '
+                                'data-item-version "+1"); anchor page edits on a block outside the bank')
         if op == 'replace':
             if b.start == at and needle.startswith('<div'):
                 raise EditError(n, op, 'replace may not rewrite the brief opening tag', 'use set_attr for brief attributes')

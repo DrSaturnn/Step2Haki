@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """verify_edits.py: the one check a worker runs before finishing.
 
-  python3 tools/verify_edits.py <edits.json> [page] [--no-render]
+  python3 tools/verify_edits.py <edits.json> [page] [--nids <source.md>] [--no-render]
 
 1. schema-checks every op; 2. applies the edits to a scratch copy (every anchor must be
 unique in its brief); 3. runs tools/gate.py on the copy with the original page as base
 (never delete, ids immutable, version bumped on key/distractor change); 4. runs
 tools/render.js on the copy (0 malformed MCQs, no dead anchors, no JS errors) and checks
 the MCQ count equals the static item count; 5. flags new or edited items that
-near-duplicate an existing item. Prints each failure with its fix. Exit 0 = clean.
+near-duplicate an existing item; 6. with --nids <source.md>, checks every data-nid token the
+edits add (on the brief div or any item) is a question nid listed on a heading line of that
+source ("(nid X)" / "(nids X Y)") and is not already on a different brief. Prints each failure with its fix. Exit 0 = clean.
 The original page is never written.
 """
 import json
@@ -22,7 +24,7 @@ import tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-from pagelib import items, read_page, text, write_page  # noqa: E402
+from pagelib import briefs, items, read_page, text, write_page  # noqa: E402
 import apply_edits  # noqa: E402
 
 STOPW = set('a an the and or of to in on for with at by from is are was with no not this that'.split())
@@ -54,8 +56,63 @@ def near_dups(before_html, after_html):
     return out
 
 
+def source_nids(md):
+    """Question nids: digit runs after 'nid'/'nids' on markdown heading lines."""
+    out = set()
+    for line in md.split('\n'):
+        if not line.startswith('#'):
+            continue
+        for m in re.finditer(r'\bnids?\b[\s:=#]*([^)\n]*)', line, re.I):
+            out.update(re.findall(r'\b\d{8,}\b', m.group(1)))
+    return out
+
+
+def nids_by_brief(html):
+    """brief id -> set of data-nid tokens on the brief div and its items."""
+    out = {}
+    for b in briefs(html):
+        toks = set((b.attrs.get('data-nid') or '').split())
+        for v in re.findall(r'<li\b[^>]*\bdata-nid="([^"]*)"', b.inner):
+            toks.update(v.split())
+        out[b.id] = toks
+    return out
+
+
+def nid_check(before, after, src_path):
+    """Returns (n_added, [failure messages])."""
+    qn = source_nids(open(src_path, encoding='utf-8').read())
+    old, new = nids_by_brief(before), nids_by_brief(after)
+    owners = {}
+    for bid, toks in old.items():
+        for t in toks:
+            owners.setdefault(t, set()).add(bid)
+    fails, n = [], 0
+    for bid, toks in new.items():
+        for t in sorted(toks - old.get(bid, set())):
+            n += 1
+            if t not in qn:
+                fails.append('nid %s added to %s is not a question nid in %s\n      fix: use only the nids on the '
+                             'source question heading; drop typos and nids from other questions' % (t, bid, os.path.basename(src_path)))
+            elsewhere = sorted(owners.get(t, set()) - {bid})
+            if elsewhere:
+                fails.append('nid %s added to %s already sits on brief %s\n      fix: do not add it here; that brief '
+                             'already owns the question (link it under Pairs with, or backfill that brief instead)' % (t, bid, ', '.join(elsewhere)))
+    return n, fails
+
+
 def main(argv):
     render = '--no-render' not in argv
+    nid_src = None
+    if '--nids' in argv:
+        i = argv.index('--nids')
+        if i + 1 >= len(argv):
+            print('verify_edits: FAIL --nids needs the source .md path')
+            return 2
+        nid_src = argv[i + 1]
+        argv = argv[:i] + argv[i + 2:]
+        if not os.path.isfile(nid_src):
+            print('verify_edits: FAIL --nids source %s not found' % nid_src)
+            return 2
     pos = [a for a in argv if not a.startswith('--')]
     if not pos:
         print(__doc__)
@@ -111,11 +168,18 @@ def main(argv):
             fails.append(('near-dup', '%s (%s) resembles %s (%s): stem overlap %.2f%s\n      new: %s -> %s\n      old: %s -> %s\n'
                           '      fix: do not duplicate a question; change the deciding variable, or drop the item and link the existing one'
                           % (t.id, t.brief_id, o.id, o.brief_id, j, ', same key' if same else '', t.stem[:90], t.key[:50], o.stem[:90], o.key[:50])))
+        if nid_src:
+            n_nid, nf = nid_check(before, after, nid_src)
+            nid_line = 'nids: %d added, checked against %s%s' % (n_nid, os.path.basename(nid_src), ' | %d failure(s)' % len(nf) if nf else '')
+            fails.extend(('nids', m) for m in nf)
+        else:
+            nid_line = 'nids: not checked (pass --nids <source.md>)'
         delta = len(items(after, with_briefs=False)) - len(items(before, with_briefs=False))
         status = 'FAIL' if fails else 'PASS'
         print('verify_edits: %s %d op(s), items %+d, near-dups %d' % (status, len(log), delta, len(dups)))
         print('  ' + gate_line)
         print('  ' + render_line)
+        print('  ' + nid_line)
         for code, msg in fails:
             if code in ('gate', 'render'):
                 body = [l for l in msg.splitlines()[1:]]

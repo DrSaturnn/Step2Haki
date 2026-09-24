@@ -3,17 +3,14 @@
 One JSON file per worker or task: `{"edits": [op, op, ...]}`. Ops run in order; each sees the result of the one before. The applier (`tools/apply_edits.py`) splices by offset, so bytes outside the edited ranges never change. Save batch files as `repair/sNN/NN_<brief>.json`; `repair/build.py sNN` applies them in name order.
 
 Rules
-- Anchors (`find`, `anchor`) are verbatim snippets of the current HTML, entities included (`&amp;`, `&middot;`, `&gt;`). Each must occur **exactly once inside its brief** (or inside one item when `item` is given); otherwise the op fails and nothing is written.
+- Anchors (`find`, `anchor`) are verbatim snippets of the current HTML, entities included (`&amp;`, `&middot;`, `&gt;`). Each must occur **exactly once inside its brief** and must lie **outside the brief's `ol.bank`**; otherwise the op fails and nothing is written. Items change only through `add_item` and `set_attr`.
 - Never delete a brief or an item. Never edit an id. Any meaning change to an item (stem, keyed answer or distractor label) requires `set_attr` `data-item-version` `+1`; formatting alone does not (gate enforces the key and label part). Preserve `data-src`, `data-nid`, `data-recon` and unknown attributes.
 - New item ids come from `tools/idgen.py` via `add_item`; do not write ids by hand.
-- Check before finishing: `python3 tools/verify_edits.py <edits.json>` (applies to a scratch copy, runs gate and render, flags near-duplicate items). Loop until it prints PASS.
+- Check before finishing: `python3 tools/verify_edits.py <edits.json> --nids <source.md>` (applies to a scratch copy, runs gate and render, flags near-duplicate items, and checks every added `data-nid` is a nid of a question in that source and not already on another brief). Loop until it prints PASS.
 
-## replace: swap a unique snippet inside a brief (optionally inside one item)
+## replace: swap a unique snippet inside a brief (outside its bank)
 ```json
 {"op": "replace", "brief": "pmr", "find": "PMR responds to <b>low</b>-dose steroids", "with": "PMR responds to <b>low</b>-dose prednisone"}
-```
-```json
-{"op": "replace", "brief": "pmr", "item": "q_3a5d925430f85de2b063", "find": "Hypothyroid myopathy", "with": "Hypothyroid myopathy"}
 ```
 
 ## insert_before / insert_after: add HTML next to a unique anchor
