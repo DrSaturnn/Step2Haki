@@ -4,6 +4,8 @@ A running list, updated each pass. Newest at the top of each section. Answer any
 
 ## Awaiting a yes/no
 
+- **NBME tag format (s28).** NBME form questions are now tagged on the item: `data-src="nbme"` plus a sub tag `data-form="Pediatrics CMS"`, and their source vignettes are labeled "NBME Pediatrics CMS". Confirm this is what you meant by sub tags, or tell me the scheme you want (a form number, the NBME content-outline system, or a visible chip on the question). *s28.*
+- **Retitle cgd?** "Recurrent Abscesses and Granulomas" now also holds low-neutrophil-count disorders. Option: "Neutrophil Disorders: Number and Function". *s28.*
 0. **Retitled this pass (reversible):** "The Distended Newborn Abdomen" is now "The Distended Abdomen in a Newborn or Infant" (the malrotation question is a 7-month-old). Say "revert" if you prefer the old title. *s26.*
 1. **VUR corrections (researched, not yet written).** Change the grade wording to "mild I–II, dilating III–V" (blunting starts at III, complete at IV; V adds tortuous ureter). Replace the item where a 2-year-old with a normal ultrasound gets a VCUG with a child under 2 whose ultrasound is abnormal. Add the AUA prophylaxis rules and the RIVUR result (prophylaxis halves repeat UTIs, no change in scarring). *Asked s23.*
 2. **Thumbnail pilot.** Build one recreated figure (short stature evaluation flowchart) as a small preview on its tile that opens full size on click, for your review before rolling it out. *Asked s23.*
