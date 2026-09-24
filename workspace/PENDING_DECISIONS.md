@@ -4,7 +4,9 @@ A running list, updated each pass. Newest at the top of each section. Answer any
 
 ## Awaiting a yes/no
 
-- **NBME tag format (s28).** NBME form questions are now tagged on the item: `data-src="nbme"` plus a sub tag `data-form="Pediatrics CMS"`, and their source vignettes are labeled "NBME Pediatrics CMS". Confirm this is what you meant by sub tags, or tell me the scheme you want (a form number, the NBME content-outline system, or a visible chip on the question). *s28.*
+- **NBME plan defaults in use (NBME phases 1-6).** Built with: fingerprint ids when no form number is given; badge reads Board, UWorld or Aquifer; NBME chip and filter shown; NBME tag shown after a question is answered; one-line framing note for matched questions; Pediatrics and FM weights; misses logged for UWorld and NBME; s28 RMSF questions kept. Say which to change.
+- **Blueprint judgment rows.** 17 briefs marked "review" in `repair/nbme/blueprint_map.csv` (for example abuse coded Multisystem, tics coded Behavioral, vitamins coded Multisystem). Spot-check and I'll retag.
+- **Form numbers.** If you send "Peds CMS <form>, #<item>" with future NBME questions, ids become readable and cross-form repeats are caught exactly.
 - **Retitle cgd?** "Recurrent Abscesses and Granulomas" now also holds low-neutrophil-count disorders. Option: "Neutrophil Disorders: Number and Function". *s28.*
 0. **Retitled this pass (reversible):** "The Distended Newborn Abdomen" is now "The Distended Abdomen in a Newborn or Infant" (the malrotation question is a 7-month-old). Say "revert" if you prefer the old title. *s26.*
 1. **VUR corrections (researched, not yet written).** Change the grade wording to "mild I–II, dilating III–V" (blunting starts at III, complete at IV; V adds tortuous ureter). Replace the item where a 2-year-old with a normal ultrasound gets a VCUG with a child under 2 whose ultrasound is abnormal. Add the AUA prophylaxis rules and the RIVUR result (prophylaxis halves repeat UTIs, no change in scarring). *Asked s23.*
