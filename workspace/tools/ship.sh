@@ -14,6 +14,7 @@
 set -uo pipefail
 WS="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 ROOT="$(git -C "$WS" rev-parse --show-toplevel)"
+git -C "$ROOT" config user.email 297481111+DrSaturnn@users.noreply.github.com; git -C "$ROOT" config user.name DrSaturnn  # GitHub blocks pushes exposing a private email
 SITE="$ROOT/discriminator-briefs-site/index.html"
 OUT=/mnt/user-data/outputs
 TOKF=/home/claude/.config/axbx/gh_token

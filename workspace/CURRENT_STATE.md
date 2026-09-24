@@ -8,7 +8,7 @@ Step 2 CK / Peds and FM shelf study page: `workspace/index.html` in the public G
 ## Start of a session
 1. `git clone https://github.com/DrSaturnn/Step2Haki /home/claude/Step2Haki && cd /home/claude/Step2Haki/workspace && npm i` (jsdom 24 from package.json).
 2. Restore the private local-only files (vendor text, never in git): `tar -xzf axbx-local-only.tar.gz -C /home/claude/Step2Haki/workspace` from the Mac backup `AxBx iOS/study-page/axbx-local-only.tar.gz` (every ship also writes a fresh copy to /mnt/user-data/outputs). Without it, ship prints `vendor: NOT CHECKED`.
-3. Pushing needs a GitHub token in `/home/claude/.config/axbx/gh_token` (one line, mode 600). Without it every ship still commits and prints `push skipped: no token`.
+3. Pushing needs a GitHub token in `/home/claude/.config/axbx/gh_token` (one line, mode 600). Without it every ship still commits and prints `push skipped: no token`. The token file lives on the Mac at `Documents/AxBx iOS/study-page/gh_token` (fine-grained, Step2Haki only, Contents read/write, 90-day expiry); stage it and move it into place without printing it. Commits must use the GitHub noreply email (ship.sh sets it) or GitHub rejects the push.
 
 ## How a batch ships
 1. Save the pasted source close to verbatim: `repair/sources/sNN_questions.md`. It is local-only (`tools/local_only.txt`, gitignored, removed from all history): vendor text never enters the public repo. Never embed vendor images; page text is paraphrase.
