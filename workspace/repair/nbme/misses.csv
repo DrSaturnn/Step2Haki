@@ -1,0 +1,20 @@
+pass,source,nid,item_id,topic,brief,result,time,miss_cause,note
+s24,uworld,1482289549128,q_3c3d26c6702192fc9f1b,Meckel diverticulum: confirm with pertechnetate scan,occult-gi-bleed,incorrect,2:23,misread,Read dark red stool as an upper GI bleed (reported by user).
+s24,uworld,,,Ewing sarcoma of the pelvis,bone-tumors,correct,7:18,,
+s25,uworld,1484623905318,q_2b330684b8e7973e9ec3,Metaphyseal corner fracture: child abuse,bs-nat-fracture,incorrect,1:00,unknown,
+s25,uworld,1482886567135,q_04cc8dab969e5a41b2f9,Hirschsprung: neural crest migration,neonatal-bowel,correct,0:25,,
+s25,uworld,1520972891460,,Choanal atresia: pass a catheter,newborn-cyanosis,correct,,,
+s25,uworld,1471990360540,q_7a1f8be2497e648cc861,Trisomy 18: VSD,aneuploidy,incorrect,0:44,unknown,
+s25,uworld,1503088048862,q_9381374131198f28cef9,Scarlet fever,bs-exanthems,correct,0:29,,
+s25,uworld,1480564165697,q_915d9f492460dff0d5ba,ALL: platelet production,bs-leukemia,incorrect,0:09,unknown,Answered in 9 seconds.
+s25,uworld,1476498925942,q_0a92cb08900a4b1a0575,Lesch-Nyhan syndrome,cerebral-palsy,correct,0:17,,
+s25,uworld,1475363809585,q_50de712bf9c94117a811,Minimal change disease: cytokine injury,nephrotic-child,incorrect,1:19,unknown,
+s26,uworld,1482959868268,q_44131b0bc9eaa69fa316,NEC: pneumatosis and portal venous gas,neonatal-bowel,correct,0:55,,
+s26,uworld,1482976984253,q_8f4f13f378a0151b32dd,Biliary atresia lab pattern,neonatal-jaundice,correct,0:31,,
+s26,uworld,1482959873096,q_d6ae55f4494c28124dcd,Malrotation with volvulus,neonatal-bowel,correct,0:23,,
+s26,uworld,1476583171440,q_cb09b11e0b8c49b3cdb3,Isotretinoin intracranial hypertension,peds-headache-imaging,correct,0:25,,
+s26,uworld,1484188767774,q_3e0b293d06e01d4e5346,Tuberous sclerosis,tumor-syndromes,correct,0:31,,
+s26,uworld,1487727609159,q_1ced7b06da1fa26a2048,CVID: IVIG,ig-panel,correct,0:50,,
+s26,uworld,1510103409414,q_7e003dd30ec6fb88545b,Nontyphoidal Salmonella source,bs-foodborne,correct,0:21,,
+s28,nbme,,,Cyclic neutropenia,cgd,incorrect,1:15,unknown,Coverage id peds-cms-fdc19e.
+s28,nbme,,,Rocky Mountain spotted fever,rmsf,incorrect,0:54,unknown,Coverage id peds-cms-aa91d7.

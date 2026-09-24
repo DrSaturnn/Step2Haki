@@ -116,7 +116,7 @@ h3.system .n{font-size:11.5px;font-family:var(--sans);color:var(--muted);font-we
 .brief + .brief{border-top:none;padding-top:30px}
 .brief > h4{font-family:var(--serif);font-size:25px;font-weight:600;color:var(--ink);margin:0 0 5px;letter-spacing:-.25px}
 .brief .sub{font-size:13.2px;color:var(--muted);margin:0 0 22px;letter-spacing:.2px}
-.brief.bs > h4::after{content:"NBME";display:inline-block;vertical-align:5px;margin-left:10px;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:1px;color:var(--board);background:linear-gradient(145deg,#F4EFE7 0%,#EDE7DE 52%,#E6DED3 100%);padding:5px 9px;border-radius:var(--r-chip);box-shadow:var(--ec)}
+.brief.bs > h4::after{content:"Board";display:inline-block;vertical-align:5px;margin-left:10px;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:1px;color:var(--board);background:linear-gradient(145deg,#F4EFE7 0%,#EDE7DE 52%,#E6DED3 100%);padding:5px 9px;border-radius:var(--r-chip);box-shadow:var(--ec)}
 .brief.bs h5{color:var(--board)}
 .brief.bs + .brief.bs{border-top:none}
 
@@ -1003,6 +1003,15 @@ body.study .rvmark .q,body.study #rvbar{opacity:1!important}
 :root{--aquifer:#1F6A7E;--aquifer-bg:#E2EDF0}
 .brief[data-src="aquifer"] > h4::after{content:"Aquifer";display:inline-block;vertical-align:5px;margin-left:10px;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:1px;color:var(--aquifer);background:linear-gradient(145deg,#E7F0F2 0%,#DDE9EC 52%,#D3E2E6 100%);padding:5px 9px;border-radius:var(--r-chip);box-shadow:var(--ec)}
 .brief[data-src="aquifer"] h5{color:var(--aquifer)}
+.brief.bs[data-nid]:not([data-src="aquifer"]) > h4::after{content:"UWorld"}
+.nbmechip{display:inline-block;vertical-align:5px;margin-left:10px;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:1px;color:#fff;background:#3F4A8A;padding:5px 9px;border-radius:var(--r-chip);box-shadow:var(--ec);white-space:nowrap}
+.mcq.done[data-src="nbme"] .why::before,.mcq.done[data-nbme] .why::before{content:attr(data-nbme-label);display:block;font-family:var(--sans);font-size:10px;font-weight:800;letter-spacing:1px;color:#3F4A8A;margin:0 0 6px}
+.nbmetog{margin-left:10px;font-family:var(--sans);font-size:12px;font-weight:700;border:1px solid rgba(63,74,138,.35);background:none;color:#3F4A8A;border-radius:var(--r-chip);padding:5px 10px;cursor:pointer}
+.nbmetog.on{background:#3F4A8A;color:#fff}
+#bpview table td:not(:first-child),#bpview table th:not(:first-child){text-align:right;white-space:nowrap}
+#bpview .bpnote{font-size:13px;color:var(--ink-2);margin:6px 0 10px}
+#bpview tr.bpgap td:first-child{color:#9A5B0E}
+
 .aqband{background:linear-gradient(145deg,#DCE8EB 0%,var(--aquifer-bg) 48%,#EEF5F6 100%)}
 .aqband .lbl,.aqband .n{color:var(--aquifer)}
 body.flat .aqband{background:var(--aquifer-bg);background-image:none}
@@ -1371,6 +1380,11 @@ table.cluet tbody td:first-child{font-weight:400;color:var(--ink-2);width:46%}
   Fast-and-wrong misses cluster where the deciding fact lives in the <b>background</b> — the past medical history, the gestational age, the menopausal status, the duration — rather than in the foreground finding. Recognition speed is not the problem; the missing step is a deliberate <b>10-second completion pass</b>: read the entire lab panel and the entire PMH before locking.
 </div>
 
+</details>
+
+<details class="fmdrop" id="bpview">
+<summary><span class="t">NBME blueprint: coverage by system</span><span class="hint">tap to expand</span></summary>
+<div class="bpbody"><p class="bpnote">Counts follow the shelf you are viewing. Ranges are NBME's published share of each exam. A low NBME count means not yet seen on a form you have logged, not untested.</p><div class="bptable"></div></div>
 </details>
 
 <!-- =================== MSK =================== -->
@@ -9046,7 +9060,7 @@ The bank's list says "family history of hip fracture." <b>FRAX asks specifically
 <li data-type="mech" data-d1="Bone marrow suppression by the organism" data-d2="Splenic sequestration" data-item-id="q_c198e349ddde5e0b85cf" data-item-version="1" data-item-status="ready" data-key-id="o_29258cb8a4045384949a" data-d1-id="o_b0d03a39a852559896d5" data-d2-id="o_26620642728b5c84bc85">The mechanism of thrombocytopenia in Rocky Mountain spotted fever &rarr; <b>Intravascular platelet destruction from infection of vascular endothelium</b> &rarr; small-vessel vasculitis</li>
 <li data-type="dx" data-d1="Acute appendicitis" data-d2="Amebic liver abscess" data-item-id="q_a0264f4b9ba55b0db36c" data-item-version="1" data-item-status="ready" data-key-id="o_7f5ea84505b1525cb506" data-d1-id="o_d9ef83e62d385160a8c6" data-d2-id="o_75968ce84c0457af8010">12 yo with severe abdominal pain and fever, a maculopapular rash on the wrists and ankles, and a normal abdominal CT &rarr; <b>Rocky Mountain spotted fever</b> &rarr; abdominal pain in children mimics appendicitis</li>
 <li data-type="test" data-d1="Blood cultures" data-d2="Peripheral smear for morulae" data-item-id="q_ec3184c84f36569e983b" data-item-version="2" data-item-status="ready" data-key-id="o_26a3b39c971b5e35bf12" data-d1-id="o_6ef635f0712257c4869d" data-d2-id="o_2a423b6368a452c2a1a9" data-lead-in="Which of the following laboratory studies is most likely to confirm the diagnosis?">Child already started on doxycycline for suspected Rocky Mountain spotted fever &rarr; <b>Rickettsia serology</b> &rarr; confirmation is retrospective and never delays therapy</li>
-<li data-type="dx" data-src="nbme" data-form="Pediatrics CMS" data-d1="Dengue fever" data-d2="Kawasaki disease" data-item-id="q_f301e03be41b7aa167b0" data-item-version="1" data-item-status="ready" data-key-id="o_1cc13c47061d6643eb92" data-d1-id="o_8449022a3cb5e68f07f9" data-d2-id="o_560fe940dfc7c20b50f3">6 yo F, previously healthy, seen in June with 4 days of high fever and severe headache and 1 day of a rash on the hands; lives in a rural area, often bitten by mosquitoes; finished a steroid course for poison ivy a month ago; appears ill; T 39 C; bilateral conjunctival injection without discharge; scattered petechiae on the palms and distal arms &rarr; <b>Rocky Mountain spotted fever</b> &rarr; doxycycline now, without waiting for serology</li>
+<li data-type="dx" data-src="nbme" data-form="Pediatrics CMS" data-d1="Dengue fever" data-d2="Kawasaki disease" data-item-id="q_f301e03be41b7aa167b0" data-item-version="1" data-item-status="ready" data-key-id="o_1cc13c47061d6643eb92" data-d1-id="o_8449022a3cb5e68f07f9" data-d2-id="o_560fe940dfc7c20b50f3" data-nbme="peds-cms-aa91d7">6 yo F, previously healthy, seen in June with 4 days of high fever and severe headache and 1 day of a rash on the hands; lives in a rural area, often bitten by mosquitoes; finished a steroid course for poison ivy a month ago; appears ill; T 39 C; bilateral conjunctival injection without discharge; scattered petechiae on the palms and distal arms &rarr; <b>Rocky Mountain spotted fever</b> &rarr; doxycycline now, without waiting for serology</li>
 <li data-type="dx" data-src="authored" data-d1="Rocky Mountain spotted fever" data-d2="Typhoid fever" data-item-id="q_cc6d2363a48165ac32a6" data-item-version="1" data-item-status="ready" data-key-id="o_9ef15c0c9473f90af624" data-d1-id="o_fe54aad4cd93c1b00cb1" data-d2-id="o_e0c7002fe7fe6ae8753d">10 yo F, 5 days after returning from 2 weeks in the Dominican Republic, with fever to 39.5 C, severe headache with pain behind the eyes, and severe bone and muscle pain; diffuse macular rash on the trunk; no outdoor or wooded exposure in the US; WBC 2,800, platelets 90,000, sodium normal &rarr; <b>Dengue fever</b> &rarr; supportive care with fluids; avoid NSAIDs</li>
 <li data-type="next" data-src="authored" data-d1="Start intravenous immunoglobulin and aspirin" data-d2="Send Rickettsia serology and treat if positive" data-item-id="q_f71a607ceba6cc5c862c" data-item-version="1" data-item-status="ready" data-key-id="o_b3d93f7365ed1801e5c3" data-d1-id="o_685b23f9675fcf7842f0" data-d2-id="o_3cc4fee204e8e29b14c9">4 yo M on a farm in Tennessee, seen in July with 4 days of fever and headache; bilateral conjunctival injection without discharge; blanching macules on the wrists and ankles that became petechial and now reach the palms, soles and trunk; no cracked lips or hand swelling; platelets 85,000, sodium 130, AST 140 &rarr; <b>Start doxycycline</b> &rarr; Rocky Mountain spotted fever; any age, treat on suspicion</li>
 </ol>
@@ -9253,7 +9267,7 @@ The bank's list says "family history of hip fracture." <b>FRAX asks specifically
 <li data-type="mech" data-src="authored" data-d1="NADPH oxidase cannot generate superoxide" data-d2="Neutrophils cannot adhere to the endothelium" data-item-id="q_3c5146726e233b18abde" data-item-version="1" data-item-status="ready" data-key-id="o_88361105a62ddb35789a" data-d1-id="o_06ab42cf71276f0fb4f2" data-d2-id="o_b23231652a78925efc53">Why the abscesses of hyper-IgE syndrome are cold, without erythema or tenderness &rarr; <b>Th17 defect blunts neutrophil recruitment</b> &rarr; few neutrophils arrive, so little inflammation</li>
 <li data-type="next" data-src="uworld" data-nid="1487642751066 1556129277421 1681522950380" data-d1="Granulocyte colony-stimulating factor" data-d2="Intravenous immunoglobulin" data-item-id="q_3f20f5f7eec45b843210" data-item-version="1" data-item-status="ready" data-key-id="o_804df038b583e104297a" data-d1-id="o_7186fe99ccbab858a800" data-d2-id="o_9bfcb5564a6baea832a1" data-lead-in="In addition to trimethoprim-sulfamethoxazole, which of the following is the most appropriate prophylaxis for this patient?">2 yo M with a Staphylococcus aureus perianal abscess drained at 2 months after failed oral antibiotics, left inguinal lymphadenitis at 7 months, and now a fluctuant right arm abscess that grows Serratia marcescens; leukocyte and platelet counts normal, B and T cells normal; dihydrorhodamine test abnormal &rarr; <b>Itraconazole</b> &rarr; antifungal prophylaxis in chronic granulomatous disease</li>
 <li data-type="avoid" data-src="authored" data-d1="Measles, mumps and rubella vaccine" data-d2="Varicella vaccine" data-item-id="q_225303c4837dd2f1f270" data-item-version="1" data-item-status="ready" data-key-id="o_e3a7e06c4a9967b62998" data-d1-id="o_f41349581e0c60b789b4" data-d2-id="o_ec3e130b84cc563c2a32">3 yo M with chronic granulomatous disease on TMP-SMX and itraconazole prophylaxis, due for vaccines before his family moves to a country where tuberculosis is common &rarr; <b>BCG vaccine</b> &rarr; live bacterial vaccine; live viral and inactivated vaccines are safe</li>
-<li data-type="dx" data-src="nbme" data-form="Pediatrics CMS" data-d1="Severe congenital neutropenia" data-d2="Viral illness" data-item-id="q_bd617d53d7c3c8f78cff" data-item-version="1" data-item-status="ready" data-key-id="o_25268e0a0aceff6d6798" data-d1-id="o_a63dfef6aaf8a8103d67" data-d2-id="o_79b62f8f0352008b4361">2 yo M with 2 days of fever and painful mouth sores, now improving; a year of similar episodes about every 3 weeks, each lasting 3 to 5 days, well and growing normally between them; T 38.4 C, scattered aphthous ulcers, no lymphadenopathy or splenomegaly; Hb 11.5, WBC 4,000 with 4% segmented neutrophils, platelets 250,000 &rarr; <b>Cyclic neutropenia</b> &rarr; neutrophil elastase (ELANE) mutation; confirm with serial counts, treat with G-CSF</li>
+<li data-type="dx" data-src="nbme" data-form="Pediatrics CMS" data-d1="Severe congenital neutropenia" data-d2="Viral illness" data-item-id="q_bd617d53d7c3c8f78cff" data-item-version="1" data-item-status="ready" data-key-id="o_25268e0a0aceff6d6798" data-d1-id="o_a63dfef6aaf8a8103d67" data-d2-id="o_79b62f8f0352008b4361" data-nbme="peds-cms-fdc19e">2 yo M with 2 days of fever and painful mouth sores, now improving; a year of similar episodes about every 3 weeks, each lasting 3 to 5 days, well and growing normally between them; T 38.4 C, scattered aphthous ulcers, no lymphadenopathy or splenomegaly; Hb 11.5, WBC 4,000 with 4% segmented neutrophils, platelets 250,000 &rarr; <b>Cyclic neutropenia</b> &rarr; neutrophil elastase (ELANE) mutation; confirm with serial counts, treat with G-CSF</li>
 <li data-type="test" data-src="authored" data-d1="Bone marrow aspiration and biopsy" data-d2="Dihydrorhodamine flow cytometry" data-item-id="q_0ba63d5246cebb009bff" data-item-version="1" data-item-status="ready" data-key-id="o_026d75798e1e43fd78ba" data-d1-id="o_37cf6eeee130e47bbf21" data-d2-id="o_2893deee4db046280440" data-lead-in="Which of the following is the most appropriate diagnostic study to obtain at this time?">4 yo F with fever, mouth ulcers and sore throat that recur about every 3 weeks and last 4 to 5 days, for 10 months; well between episodes with normal growth; today, on a well day, the examination is normal and a CBC shows WBC 7,200 with 45% neutrophils, normal hemoglobin and platelets &rarr; <b>Neutrophil counts twice weekly for 6 weeks</b> &rarr; cyclic neutropenia; a single count between episodes can be normal</li>
 <li data-type="next" data-src="authored" data-d1="Hematopoietic cell transplantation" data-d2="Trimethoprim-sulfamethoxazole prophylaxis" data-item-id="q_5d5121df9c114506081a" data-item-version="1" data-item-status="ready" data-key-id="o_7e1aca645c85805fbf48" data-d1-id="o_12abbf95e02ae803f482" data-d2-id="o_ce8ae6453d9a27b1b296">5 yo M with cyclic neutropenia confirmed by serial counts and an ELANE mutation; despite good dental care he has painful mouth ulcers every 3 weeks, early periodontal disease and two pneumonias this year, each during a nadir &rarr; <b>Granulocyte colony-stimulating factor</b> &rarr; keeps the count up and prevents episodes</li>
 <li data-type="dx" data-src="authored" data-d1="Cyclic neutropenia" data-d2="Leukocyte adhesion deficiency" data-item-id="q_c886f6f10705f542d3de" data-item-version="1" data-item-status="ready" data-key-id="o_90fd039f642af13ec65f" data-d1-id="o_9da7d23de8d67c31cc0b" data-d2-id="o_4241a030b03f415272d7">2-month-old boy with omphalitis at 3 weeks and now a perianal abscess; the umbilical cord separated at 10 days and the wound drains pus; absolute neutrophil count under 200 on every CBC over 4 weeks, with normal hemoglobin and platelets &rarr; <b>Severe congenital neutropenia</b> &rarr; G-CSF; lifelong risk of myelodysplasia and AML</li>
@@ -12291,6 +12305,7 @@ var savedReviewSearch=null;
 function shelfEligible(b,s){
   if(!b || !b.id) return false;
   if(reviewSet) return !!reviewSet[b.id];
+  if(window.AX_NBME_ONLY && !b.querySelector('[data-nbme]')) return false;
   if(s==='step2') return true;
   return (b.getAttribute('data-shelf')||'').split(/\s+/).indexOf(s)>-1;
 }
@@ -12442,7 +12457,10 @@ function applyShelf(s){
   document.querySelectorAll('.shelfpick button').forEach(function(b){b.classList.toggle('on',b.dataset.shelf===s);});
   document.querySelectorAll('.shelfsel').forEach(function(sel){if(sel.value!==s)sel.value=s;});
   setSearchMessage(visible,!!(reviewSet&&pin&&!reviewSet[pin]));
+  try{ document.dispatchEvent(new CustomEvent('ax-shelf',{detail:{shelf:s,visible:visible}})); }catch(e){}
 }
+window.axApplyShelf=function(){ applyShelf(shelf); };
+window.axShelf=function(){ return shelf; };
 
 function shelfInit(){
   var m=document.querySelector('.masthead .wrap')||document.querySelector('.masthead');
@@ -12453,7 +12471,7 @@ function shelfInit(){
   if(sheetIn) sheetIn.after(shelfPicker());
 
   document.addEventListener('click',function(e){
-    var b=e.target.closest && e.target.closest('.shelfpick button');
+    var b=e.target.closest && e.target.closest('.shelfpick button[data-shelf]');
     if(!b || b.disabled || shelfPending(b.dataset.shelf)) return;
     applyShelf(b.dataset.shelf);
     syncShelfUrl(b.dataset.shelf);
@@ -12961,6 +12979,7 @@ function mcq(){
       box.dataset.itemId=itemId;
       box.dataset.itemVersion=li.getAttribute('data-item-version')||'';
       box.dataset.itemStatus=li.getAttribute('data-item-status')||'';
+      ['data-src','data-nid','data-form','data-nbme'].forEach(function(k){ if(li.hasAttribute(k)) box.setAttribute(k,li.getAttribute(k)); });
       box.dataset.correctOptionId=optionDefs[0].id;
       var top=document.createElement('div'); top.className='top';
       var p=document.createElement('p'); p.className='stem'; p.appendChild(stemF.cloneNode(true));
@@ -14440,6 +14459,101 @@ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded'
 else boot();
 })();
 
+</script>
+<script>
+/* ====================== AxBx NBME ======================================
+   Everything here is computed from tags on the page; nothing is typed by hand.
+   · section-header counts (topics, board-style, Aquifer) from the briefs themselves
+   · "NBME xN" chip on a brief = distinct NBME ids linked to its questions
+   · NBME-tested filter (joins the shelf rule; an active review keeps its set)
+   · blueprint panel: briefs and questions per NBME system for the shelf in view
+   Source of weights: repair/nbme/outlines.json (NBME content outlines).        */
+(function(){
+'use strict';
+var OUT={"codes": {"gen": "General Principles, Normal Age-Related Findings, Care of the Well Patient", "immune": "Immune System", "heme": "Blood & Lymphoreticular System", "behav": "Behavioral Health", "neuro": "Nervous System & Special Senses", "skin": "Skin & Subcutaneous Tissue", "msk": "Musculoskeletal System", "cv": "Cardiovascular System", "resp": "Respiratory System", "gi": "Gastrointestinal System", "renal": "Renal & Urinary System", "newborn": "Disorders of the Newborn & Congenital Disorders", "preg": "Pregnancy, Childbirth & the Puerperium", "repro_f": "Female Reproductive System & Breast", "repro_m": "Male Reproductive System", "endo": "Endocrine System", "multi": "Multisystem Processes & Disorders", "biostat": "Biostatistics, Epidemiology/Population Health & Medical Literature", "social": "Social Sciences (ethics, consent, physician-patient relationship)"}, "weights": {"peds": {"gen": [3, 7], "immune": [3, 7], "heme": [3, 7], "behav": [1, 5], "neuro": [5, 10], "skin": [1, 5], "msk": [3, 7], "cv": [5, 10], "resp": [5, 10], "gi": [8, 12], "renal": [5, 10], "newborn": [5, 10], "repro_f": [3, 7], "repro_m": [1, 5], "endo": [5, 10], "multi": [10, 15], "social": [1, 5]}, "fm": {"gen": [5, 10], "immune": [1, 5], "heme": [1, 5], "behav": [5, 10], "neuro": [1, 5], "skin": [3, 7], "msk": [5, 10], "cv": [5, 10], "resp": [5, 10], "gi": [5, 10], "renal": [1, 5], "preg": [1, 5], "repro_f": [1, 5], "repro_m": [1, 5], "endo": [5, 10], "multi": [1, 5], "biostat": [1, 5], "social": [5, 10]}}, "tasks": {"peds": {"found": [13, 17], "dx": [55, 60], "mgmt": [20, 25]}, "fm": {"hm": [20, 25], "dx": [40, 50], "mgmt": [25, 30]}}, "type_to_task": {"dx": "dx", "test": "dx", "stage": "dx", "next": "mgmt", "avoid": "mgmt", "screen": "mgmt", "mech": "found", "claim": "review"}};
+var FORMS={'Pediatrics CMS':'NBME Pediatrics CMS'};
+function briefsIn(h3){ var a=[],start=h3.closest('.sectwrap')||h3,el=start.nextElementSibling;
+  while(el&&!el.classList.contains('sectwrap')&&!(el.tagName==='H3'&&el.classList.contains('system'))){
+    if(el.classList.contains('brief')) a.push(el);
+    else el.querySelectorAll('.brief').forEach(function(b){a.push(b);});
+    el=el.nextElementSibling; }
+  return a; }
+function kind(b){ return (b.dataset.src==='aquifer'||b.classList.contains('aq'))?'aq':(b.classList.contains('bs')?'bs':'topic'); }
+function headerCounts(){
+  document.querySelectorAll('h3.system').forEach(function(h){
+    var n=h.querySelector('.n'); if(!n) return;
+    var c={topic:0,bs:0,aq:0}; briefsIn(h).forEach(function(b){c[kind(b)]++;});
+    if(!c.topic&&!c.bs&&!c.aq) return;
+    n.innerHTML=c.topic+' topics'+(c.bs?' <span style="color:#9A5B0E">+ '+c.bs+' board-style</span>':'')+(c.aq?' <span style="color:#1F6A7E">+ '+c.aq+' Aquifer</span>':'');
+  });
+}
+function nbmeIds(root){ var ids={};
+  root.querySelectorAll('[data-nbme]').forEach(function(q){ q.getAttribute('data-nbme').split(/\s+/).forEach(function(i){ if(i) ids[i]=1; }); });
+  return Object.keys(ids); }
+function chips(){
+  document.querySelectorAll('.brief').forEach(function(b){
+    var h=b.querySelector(':scope > h4'); if(!h) return;
+    var old=h.querySelector('.nbmechip'); if(old) old.remove();
+    var n=nbmeIds(b).length; if(!n) return;
+    var c=document.createElement('span'); c.className='nbmechip'; c.textContent='NBME \u00d7'+n;
+    c.title='Linked to '+n+' NBME question'+(n>1?'s':''); h.appendChild(c);
+  });
+  document.querySelectorAll('.mcq[data-src="nbme"], .mcq[data-nbme]').forEach(function(m){
+    var w=m.querySelector('.why'); if(!w) return;
+    var f=m.getAttribute('data-form'); w.setAttribute('data-nbme-label',(f&&FORMS[f])||'NBME form question');
+  });
+}
+function toggles(){
+  document.querySelectorAll('.shelfpick').forEach(function(p){
+    if(p.nextElementSibling&&p.nextElementSibling.classList.contains('nbmetog')) return;
+    var b=document.createElement('button'); b.type='button'; b.className='nbmetog'; b.textContent='NBME-tested';
+    b.setAttribute('aria-pressed','false'); b.title='Show only briefs linked to an NBME question'; p.after(b);
+  });
+  document.addEventListener('click',function(e){
+    var t=e.target.closest&&e.target.closest('.nbmetog'); if(!t) return;
+    window.AX_NBME_ONLY=!window.AX_NBME_ONLY;
+    document.querySelectorAll('.nbmetog').forEach(function(x){ x.classList.toggle('on',!!window.AX_NBME_ONLY); x.setAttribute('aria-pressed',window.AX_NBME_ONLY?'true':'false'); });
+    if(window.axApplyShelf) window.axApplyShelf();
+  });
+}
+function pct(r){ return r?r[0]+'\u2013'+r[1]+'%':'\u2014'; }
+function blueprint(){
+  var host=document.querySelector('#bpview .bptable'); if(!host) return;
+  var shelf=(window.axShelf&&window.axShelf())||'step2';
+  var cols=shelf==='peds'?['peds']:shelf==='fm'?['fm']:['peds','fm'];
+  var rows={},tasks={dx:0,mgmt:0,found:0,review:0},total=0;
+  Object.keys(OUT.codes).forEach(function(k){ rows[k]={p:0,s:0,q:0,n:0}; });
+  document.querySelectorAll('.brief').forEach(function(b){
+    if(b.style.display==='none') return;
+    var bp=(b.getAttribute('data-bp')||'').split(/\s+/); if(!bp[0]||!rows[bp[0]]) return;
+    rows[bp[0]].p++; if(bp[1]&&rows[bp[1]]) rows[bp[1]].s++;
+    var qs=b.querySelectorAll('.mcq'); rows[bp[0]].q+=qs.length; rows[bp[0]].n+=nbmeIds(b).length;
+    qs.forEach(function(m){ var qp=m.querySelector('.qp'); var t=OUT.type_to_task[(qp&&qp.dataset.type)||'']||'review'; tasks[t]++; total++; });
+  });
+  var h='<div class="tw"><table><caption>Coverage by NBME system</caption><thead><tr><th>System</th>'+
+    cols.map(function(c){return '<th>'+(c==='peds'?'Peds share':'FM share')+'</th>';}).join('')+
+    '<th>Briefs</th><th>Also in</th><th>Questions</th><th>NBME-linked</th></tr></thead><tbody>';
+  Object.keys(OUT.codes).forEach(function(k){
+    var inScope=cols.some(function(c){return OUT.weights[c][k];}); var r=rows[k];
+    if(!inScope&&!r.p) return;
+    var gap=inScope&&r.p===0;
+    h+='<tr'+(gap?' class="bpgap"':'')+'><td>'+OUT.codes[k]+'</td>'+cols.map(function(c){return '<td>'+pct(OUT.weights[c][k])+'</td>';}).join('')+
+      '<td>'+(r.p||'<b>0</b>')+'</td><td>'+r.s+'</td><td>'+r.q+'</td><td>'+r.n+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  var tk=cols[0], TN={dx:'Diagnosis',mgmt:'Management and health maintenance',found:'Foundational science',hm:'Health maintenance'};
+  h+='<div class="tw"><table><caption>Questions by physician task</caption><thead><tr><th>Task</th><th>'+(tk==='peds'?'Peds share':'FM share')+'</th><th>Questions</th><th>Share here</th></tr></thead><tbody>';
+  ['dx','mgmt','found','review'].forEach(function(t){
+    var w=OUT.tasks[tk][t]||(t==='found'&&tk==='fm'?null:null);
+    h+='<tr><td>'+(t==='review'?'Unassigned (claim)':TN[t])+'</td><td>'+(t==='review'?'\u2014':pct(w))+'</td><td>'+tasks[t]+'</td><td>'+(total?Math.round(100*tasks[t]/total)+'%':'\u2014')+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  host.innerHTML=h;
+}
+function run(){ headerCounts(); chips(); toggles(); blueprint();
+  document.addEventListener('ax-shelf',function(){ blueprint(); }); }
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
+})();
 </script>
 </body>
 </html>
