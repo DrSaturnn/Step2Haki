@@ -1,0 +1,55 @@
+{
+ "edits": [
+  {
+   "op": "insert_after",
+   "brief": "growth",
+   "anchor": "argues for intact social development rather than against it</div>",
+   "html": "\n<div class=\"pearls\"><span class=\"lbl\">The 4-year set, and global delay</span> <b>Hops on one foot and throws a ball overhand</b> &mdash; gross motor &middot; <b>Copies a square and draws a simple stick figure</b> &mdash; fine motor &middot; <b>Speaks in sentences that strangers understand and tells stories</b> &mdash; language &middot; <b>Plays cooperatively with friends</b> &mdash; social &middot; <b>Jumping, imitating a line and combining words</b> &mdash; younger skills; having them does not make a 4-year-old normal in that domain &middot; <b>Global developmental delay</b> &mdash; significant delay in two or more domains; evaluate for a cause; under age 3, refer for early intervention; from age 3, refer to the school district for a preschool special education evaluation, with speech, physical and occupational therapy. <span class=\"ex\">How NBME framed it: the stem gives one skill present and one missing in each domain, and the options grid normal or delayed across three domains.</span></div>",
+   "note": "Q3: 4-year milestone set by domain, definition of global developmental delay, NBME framing sentence"
+  },
+  {
+   "op": "insert_after",
+   "brief": "growth",
+   "anchor": "rather than how much.</div>",
+   "html": "\n<div class=\"traps\">\n<div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Normal in all three domains &mdash; jumping and combining words are skills of a 2-year-old, so having them does not make a 4-year-old normal</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Gross motor marked normal &mdash; he can jump, but a 4-year-old hops on one foot and this boy cannot balance on one</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Fine motor marked normal &mdash; imitating a line is not copying a shape; a 4-year-old copies a square, and this boy cannot copy a circle</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Language marked normal &mdash; he combines words, but only half his speech is understood; a 4-year-old speaks in sentences strangers understand</span></div>\n</div>",
+   "note": "Q3: one trapline per group of distractors (each wrong row spares at least one domain)"
+  },
+  {
+   "op": "add_item",
+   "brief": "growth",
+   "type": "dx",
+   "stem": "4-year-old boy at a well-child visit who imitates a straight line but cannot copy a circle, jumps but cannot balance on one foot, and combines words with only half his speech understood; normal examination",
+   "answer": "Delayed gross motor, fine motor and language",
+   "companion": "global developmental delay: evaluate for a cause and refer to the school district for a preschool special education evaluation (early intervention is for children under 3)",
+   "d1": "Delayed gross motor and language, normal fine motor",
+   "d2": "Normal gross motor, fine motor and language",
+   "lead_in": "Which of the following is the most accurate assessment of this patient's development?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "growth",
+   "type": "dx",
+   "stem": "4-year-old girl who hops on one foot, copies a square, draws a stick figure and plays cooperatively, but speaks in two-word phrases that strangers rarely understand",
+   "answer": "Isolated language delay",
+   "companion": "one delayed domain; obtain a hearing evaluation",
+   "d1": "Global developmental delay",
+   "d2": "Normal development",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "growth",
+   "type": "dx",
+   "stem": "4-year-old boy who speaks in sentences strangers understand and plays cooperatively with friends, but cannot hop on one foot and cannot copy a circle",
+   "answer": "Global developmental delay",
+   "companion": "two domains delayed: gross motor and fine motor",
+   "d1": "Isolated gross motor delay",
+   "d2": "Normal development",
+   "src": "authored"
+  }
+ ]
+}

@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 """make_packet.py: assemble a lean worker packet for one backfill.
 
-  python3 repair/efficiency/make_packet.py <T> <brief_id> <source.md> "<Q heading>" "<task>" index.html <out.md>
+  python3 repair/efficiency/make_packet.py <T> <brief_id> <source.md> "<Q heading>" "<task>" index.html [out.md] [--edits PATH]
+
+A packet quotes the source question (vendor text), so it is written under repair/sources/ (local-only,
+never tracked): default repair/sources/<T>_packets/<brief_id>.md; an out.md outside repair/sources/ is refused.
+The edits path named in the packet's instruction line is --edits PATH, else the first repair/...json path in
+the task text, else repair/<T>/10_bf_<brief_id>.json, so the header and the Task line name the same file.
 
 Packet = instruction line, task line, RULES_worker.md, only that question's section of the
 source file, the brief's current HTML, every brief id + title, the edit format (tools/EDITS.md).
@@ -75,10 +80,24 @@ def backfill_format(fmt):
 
 
 def main(argv):
-    if len(argv) != 7:
+    edits_opt = None
+    if '--edits' in argv:
+        i = argv.index('--edits')
+        if i + 1 >= len(argv):
+            print(__doc__)
+            return 2
+        edits_opt = argv[i + 1]
+        argv = argv[:i] + argv[i + 2:]
+    if len(argv) not in (6, 7):
         print(__doc__)
         return 2
-    T, bid, src, qh, task, page, out = argv
+    T, bid, src, qh, task, page = argv[:6]
+    out = argv[6] if len(argv) == 7 else os.path.join(REPO, 'repair', 'sources', '%s_packets' % T, '%s.md' % bid)
+    local_dir = os.path.join(REPO, 'repair', 'sources') + os.sep
+    if not os.path.abspath(out).startswith(local_dir):
+        raise SystemExit('make_packet: %s is outside repair/sources/ (local-only); packets quote vendor text and '
+                         'must never land in a tracked path' % out)
+    os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
     html = read_page(page)
     b = brief_by_id(html, bid)
     q = section(open(src, encoding='utf-8').read(), qh)
@@ -86,7 +105,8 @@ def main(argv):
     fmt = open(os.path.join(REPO, 'tools', 'EDITS.md'), encoding='utf-8').read().strip()
     kinds = {'brief': 'topic', 'bs': 'board-style', 'aq': 'Aquifer'}
     titles = '\n'.join('%s | %s | %s' % (x.id, x.title, kinds[x.kind]) for x in briefs(html))
-    edits_name = 'repair/efficiency/%s_%s.json' % (T, bid)
+    m = re.search(r'\brepair/[\w./-]+\.json\b', task)
+    edits_name = edits_opt or (m.group(0) if m else 'repair/%s/10_bf_%s.json' % (T, bid))
     src_rel = os.path.relpath(os.path.abspath(src), REPO)
     if src_rel.startswith('..'):
         src_rel = os.path.abspath(src)

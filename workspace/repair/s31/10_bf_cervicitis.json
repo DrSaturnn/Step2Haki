@@ -1,0 +1,51 @@
+{
+ "edits": [
+  {
+   "op": "insert_after",
+   "brief": "cervicitis",
+   "anchor": "<tr><td>Risk factors</td><td><b>Age &lt;25</b>, high-risk sexual behavior</td></tr>",
+   "html": "\n<tr><td>Screening</td><td>Every <b>sexually active woman under 25</b>, even when asymptomatic with a normal exam; test for both organisms, which often coinfect</td></tr>",
+   "note": "Q27: screening indication as a new axis row of the existing table"
+  },
+  {
+   "op": "insert_before",
+   "brief": "cervicitis",
+   "anchor": "<div class=\"rule\">",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">Screening</span> <b>USPSTF</b> (US Preventive Services Task Force) recommends screening every sexually active woman under 25 for chlamydia and gonorrhea &middot; the screening test is <b>NAAT</b> (nucleic acid amplification testing) for both organisms, even with no discharge and a normal exam &middot; most infections are silent, and treating them prevents <b>PID</b> (pelvic inflammatory disease) and its sequelae. <span class=\"ex\">How NBME framed it: each decoy option had a planted cue, such as the mother's breast cancer at 40, and the key named the test in full.</span></div>\n<div class=\"pearls\"><span class=\"lbl\">Pairs with</span> Part II <b>Cervical Screening: the Age-21 Floor</b>: is she 21 or older, or is she due only for chlamydia and gonorrhea screening?</div>\n",
+   "note": "Q27: USPSTF screening rule, NAAT as screening test, NBME framing sentence; Pairs with the owner of the Pap decoy"
+  },
+  {
+   "op": "insert_after",
+   "brief": "cervicitis",
+   "anchor": "atypicals don't reduce nitrate.</span></div>",
+   "html": "\n  <div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Pap smear &mdash; cervical cytology starts at 21 whatever the sexual history, so a sexually active 16-year-old gets chlamydia and gonorrhea screening instead</span></div>\n  <div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Mammography &mdash; the mother's breast cancer at 40 is a planted cue; routine mammography starts at 40, not in adolescence</span></div>\n  <div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Fasting serum glucose &mdash; a body mass index of 25 alone does not meet the adolescent diabetes screening bar, which needs overweight plus risk factors such as insulin resistance</span></div>\n  <div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Hemoglobin concentration &mdash; irregular menses are a planted cue; the US Preventive Services Task Force does not recommend routine screening for iron deficiency anemia</span></div>",
+   "note": "Q27: one trapline per original distractor (Pap, mammography, glucose, hemoglobin)"
+  },
+  {
+   "op": "add_item",
+   "brief": "cervicitis",
+   "type": "screen",
+   "stem": "16 yo F at a health maintenance visit, sexually active with one male partner for a year without condoms, no discharge and a normal genital exam, BMI 25, mother had breast cancer at 40",
+   "answer": "Chlamydia and gonorrhea NAAT",
+   "companion": "every sexually active woman under 25 is screened because infection is often silent",
+   "d1": "Cervical cytology (Pap test)",
+   "d2": "Screening mammography",
+   "lead_in": "Which of the following is the most appropriate screening test at this time?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "cervicitis",
+   "type": "next",
+   "stem": "19 yo F with no symptoms whose routine screening NAAT is positive for chlamydia and negative for gonorrhea; normal pelvic exam, negative pregnancy test",
+   "answer": "Doxycycline alone",
+   "companion": "confirmed chlamydia alone in a nonpregnant patient needs no ceftriaxone; treat partners",
+   "d1": "Ceftriaxone plus doxycycline",
+   "d2": "Observation without treatment",
+   "src": "authored"
+  }
+ ]
+}

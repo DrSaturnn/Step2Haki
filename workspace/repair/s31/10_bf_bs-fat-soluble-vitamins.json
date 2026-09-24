@@ -1,0 +1,62 @@
+{
+ "edits": [
+  {
+   "op": "insert_after",
+   "brief": "bs-fat-soluble-vitamins",
+   "anchor": "fresh frozen plasma as well for serious bleeding",
+   "html": " (intracranial, gastrointestinal or at several sites); plasma replaces factors II, VII, IX and X and proteins C and S at once, while vitamin K restores them over hours",
+   "note": "NBME Q17: why FFP is added to vitamin K and what serious bleeding means"
+  },
+  {
+   "op": "insert_after",
+   "brief": "bs-fat-soluble-vitamins",
+   "anchor": "the cause of warfarin skin necrosis",
+   "html": " &middot; How NBME framed it: the lead-in grants vitamin K, so only the blood product is tested; factor VIII concentrate is the bait.",
+   "note": "NBME framing sentence"
+  },
+  {
+   "op": "insert_after",
+   "brief": "bs-fat-soluble-vitamins",
+   "anchor": "and scurvy leaves the PT normal.</span></div>",
+   "html": "<div class=\"trapline\"><span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">Cryoprecipitate &mdash; it carries fibrinogen, factors VIII and XIII and von Willebrand factor. It lacks factors II, VII, IX and X, the factors vitamin K deficiency lowers.</span></div><div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Factor VIII concentrate &mdash; it treats hemophilia A; only plasma-derived concentrates that contain von Willebrand factor treat von Willebrand disease. Factor VIII does not need vitamin K, so it is not the missing factor here.</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Platelets &mdash; vitamin K deficiency leaves the platelet count normal, so a platelet transfusion replaces nothing that is missing.</span></div><div class=\"trapline\"><span class=\"pill p-seq\">Sequencing trap</span><span class=\"trapwhy\">Lactated Ringer solution &mdash; it restores intravascular volume but carries no clotting factors. Replacing the factors with plasma treats the cause of the bleeding.</span></div>",
+   "note": "one trapline per Q17 distractor"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-fat-soluble-vitamins",
+   "type": "next",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   },
+   "stem": "5-day-old boy with vitamin K deficiency bleeding from the nose, mouth and gastrointestinal tract, and a subdural hemorrhage; vitamin K is being given",
+   "answer": "Fresh frozen plasma",
+   "companion": "replaces factors II, VII, IX and X and proteins C and S while vitamin K takes effect",
+   "d1": "Cryoprecipitate",
+   "d2": "Factor VIII concentrate",
+   "lead_in": "In addition to vitamin K, which of the following should be given now?"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-fat-soluble-vitamins",
+   "type": "dx",
+   "src": "authored",
+   "stem": "3-day-old boy born at home, exclusively breastfed, whose parents declined newborn injections; oozing from the umbilical stump and dark stools; well-appearing; platelets and fibrinogen normal, PT markedly prolonged, aPTT mildly prolonged",
+   "answer": "Vitamin K deficiency bleeding",
+   "companion": "parenteral vitamin K; add fresh frozen plasma if bleeding is serious",
+   "d1": "Disseminated intravascular coagulation",
+   "d2": "Hemophilia A"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-fat-soluble-vitamins",
+   "type": "screen",
+   "src": "authored",
+   "stem": "Healthy term newborn 1 hour after an uncomplicated vaginal delivery; the mother plans to breastfeed exclusively",
+   "answer": "Single intramuscular dose of vitamin K",
+   "companion": "prevents vitamin K deficiency bleeding; breast milk is low in vitamin K",
+   "d1": "Single oral dose of vitamin K",
+   "d2": "Vitamin K only if bleeding appears"
+  }
+ ]
+}

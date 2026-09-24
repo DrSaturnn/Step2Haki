@@ -1,0 +1,114 @@
+{
+ "edits": [
+  {
+   "op": "new_brief",
+   "after": "bs-peds-stroke",
+   "html": "<div class=\"brief bs\" id=\"bs-imprinting\" data-shelf=\"peds\" data-bp=\"neuro newborn\">\n<h4>Angelman Syndrome and Its Genetic Look-Alikes</h4>\n<p class=\"sub\">Happy, laughing child with seizures, ataxia and no words &middot; NBME &middot; which parent&#39;s chromosome 15 copy is missing?</p>\n<div class=\"vignette\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 3 yo F with a seizure disorder on valproic acid and strabismus; height and weight at the 25th percentile, head circumference at the 3rd &middot; <b>Exam</b> &mdash; happy and excitable, smiles and laughs often; flat back of the head, prominent jaw, widely spaced teeth; repeated hand flapping; stiff-legged gait, needs help on stairs; short attention span; communicates with gestures and sounds, no words &middot; <b>Q</b> &mdash; the most likely genetic defect; options spanned chromosome 15 deletions of maternal or paternal origin, a chromosome 7 deletion, an MECP2 mutation, trisomy 15 and trisomy 21</div>\n<div class=\"dp\"><span class=\"lbl\">The decision point</span>\n<p>A child with <b>no words</b>, <b>seizures</b>, <b>microcephaly</b>, a <b>stiff-legged, ataxic gait</b> and a <b>happy, excitable manner with frequent laughter</b> has Angelman syndrome. Hand flapping, a flat occiput, a prominent jaw, widely spaced teeth and strabismus support it. The usual cause is <b>deletion of the maternally inherited 15q11-q13 region</b>, which contains <b>UBE3A</b> (ubiquitin protein ligase E3A). In neurons, <b>imprinting</b> silences the paternal copy of UBE3A. Losing the maternal copy therefore leaves those neurons with no working gene.</p>\n<p>The same region deleted from the <b>paternal</b> chromosome causes <b>Prader-Willi syndrome</b>. Prader-Willi follows loss of the paternally expressed genes of the region. It presents as a floppy newborn with a poor suck, followed by hyperphagia, obesity, hypogonadism and short stature.</p>\n<p>A less common cause of Angelman syndrome is <b>paternal uniparental disomy</b>. Both chromosome 15s come from the father, so no maternal UBE3A copy is present even though nothing is deleted. Maternal uniparental disomy is the mirror cause of Prader-Willi syndrome.</p>\n</div>\n<div class=\"crit\"><span class=\"lbl\">Defining criteria</span> <b>Angelman syndrome</b> &mdash; no active maternal copy of UBE3A in neurons, usually from a maternal 15q11-q13 deletion &middot; <b>Prader-Willi syndrome</b> &mdash; no active paternal copy of the 15q11-q13 genes, usually from a paternal deletion &middot; <b>Imprinting</b> &mdash; silencing of one parent&#39;s copy of a gene by DNA methylation &middot; <b>Uniparental disomy</b> &mdash; both copies of a chromosome inherited from one parent</div>\n<table data-mask=\"3\">\n<caption>Developmental delay with a genetic syndrome: the differential</caption>\n<thead><tr><th>Diagnosis</th><th>Brief illness script</th><th>Key discriminator</th><th>Why less likely here</th></tr></thead>\n<tbody>\n<tr><td><b>Angelman syndrome</b>: maternal 15q11-q13 deletion; paternal uniparental disomy less often</td><td>Severe delay with little or no speech, seizures usually before age 3, microcephaly, ataxic gait</td><td><b>Happy, excitable manner with frequent laughter</b>; hand flapping</td><td>The answer: every finding in this child fits</td></tr>\n<tr><td>Prader-Willi syndrome: paternal 15q11-q13 deletion; maternal uniparental disomy in about a quarter</td><td>Floppy newborn with a poor suck; hyperphagia and obesity in childhood; hypogonadism, short stature, cognitive impairment</td><td><b>Hyperphagia and obesity after a hypotonic infancy</b>; hypogonadism</td><td>Her weight is at the 25th percentile, with no hyperphagia or hypogonadism</td></tr>\n<tr><td>Rett syndrome: <b>MECP2</b> (methyl-CpG binding protein 2) mutation, X-linked, mostly girls</td><td>Normal development for 6 to 18 months, then loss of speech and purposeful hand use; head growth slows; seizures, gait problems, scoliosis</td><td><b>Regression</b> after normal early development; <b>hand wringing</b></td><td>No loss of skills is described, and her hands flap rather than wring</td></tr>\n<tr><td>Williams syndrome: 7q11.23 deletion that includes the elastin gene</td><td>Overfriendly, usually mild intellectual disability; broad forehead, periorbital fullness, wide mouth with full lips; hypercalcemia in infancy</td><td><b>Overfriendliness with supravalvar aortic stenosis</b></td><td>No murmur, typical facies or hypercalcemia is described</td></tr>\n<tr><td>Down syndrome: trisomy 21</td><td>Hypotonia from birth, up-slanting palpebral fissures, epicanthal folds, single palmar crease; heart defects and duodenal atresia</td><td><b>Recognizable at birth</b> by the face, hands and low tone</td><td>None of its facial or hand features is described</td></tr>\n</tbody>\n</table>\n<h5 class=\"authored-hdr\">Scenario bank</h5>\n<ol class=\"bank authored\">\n</ol>\n<div class=\"pearls\"><span class=\"lbl\">Pearls</span> Other Angelman features include a fascination with water and a reduced need for sleep &middot; <b>DNA methylation analysis of 15q11-q13</b> is the first test. It detects deletion, uniparental disomy and imprinting defects &middot; A normal methylation result does not exclude Angelman syndrome. A <b>UBE3A</b> (ubiquitin protein ligase E3A) mutation accounts for about 1 in 10 cases and needs gene sequencing</div>\n<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The options named the genetic defect and parent of origin, not the syndrome; the two chromosome 15 deletions differed only by parent.</div>\n<div class=\"pearls\"><span class=\"lbl\">Pairs with</span> Part I <b>Aneuploidy: Reading the Newborn</b> covers Down syndrome and the newborn picture of Prader-Willi syndrome. Ask: was the child floppy from birth, or delayed with seizures and laughter later? Part I <b>Hypotonia in an Infant</b> owns the methylation workup for Prader-Willi syndrome in a floppy infant. Part I <b>Cerebral Palsy and the MRI Pattern</b> carries Rett syndrome as a regression mimic. Ask: did the child lose skills, or never gain them?</div>\n<div class=\"rule\"><span class=\"lbl\">Transferable rule</span> When the options name a genetic defect, identify the syndrome from the phenotype first. For chromosome 15, laughter, seizures and ataxia mean the maternal copy is missing. Hyperphagia after a floppy infancy means the paternal copy is missing.</div>\n<div class=\"traps\">\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Chromosome 15 deletion, paternally inherited &mdash; same region, other parent. This is Prader-Willi syndrome, with hypotonic infancy, then hyperphagia, obesity and hypogonadism.</span></div>\n<div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Mutation of MECP2 &mdash; Rett syndrome also affects girls with microcephaly, seizures and repetitive hand movements. It follows normal early development with regression, and the hands wring rather than flap.</span></div>\n<div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Chromosome 7 deletion &mdash; Williams syndrome also gives a sociable child, but with overfriendliness, elfin facies, supravalvar aortic stenosis and hypercalcemia.</span></div>\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Trisomy 15 &mdash; a complete trisomy 15 is typically lethal before birth. Paternal uniparental disomy, with two paternal chromosome 15s, is the less common route to Angelman syndrome.</span></div>\n<div class=\"trapline\"><span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">Trisomy 21 &mdash; Down syndrome is the most common chromosomal cause of intellectual disability. It shows at birth with hypotonia, up-slanting palpebral fissures and a single palmar crease, none of which is described.</span></div>\n</div>\n</div>",
+   "nav": {
+    "after_link": "bs-peds-stroke",
+    "title": "Angelman Syndrome &amp; Look-Alikes"
+   },
+   "note": "NBME Q13 (peds-cms-123615): Angelman vs Prader-Willi imprinting, Rett/Williams/Down look-alikes"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-imprinting",
+   "type": "mech",
+   "stem": "3 yo F with seizures treated with valproic acid and strabismus; head circumference at the 3rd percentile; happy and excitable with frequent laughter; flat occiput, prominent jaw and widely spaced teeth; repeated hand flapping; stiff-legged gait; communicates with gestures and sounds but no words",
+   "answer": "Chromosome 15 deletion, maternally inherited",
+   "companion": "Angelman syndrome; neurons express UBE3A only from the maternal copy",
+   "d1": "Chromosome 15 deletion, paternally inherited",
+   "d2": "Mutation of the MECP2 gene",
+   "lead_in": "Which of the following is the most likely genetic defect in this patient?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-imprinting",
+   "type": "mech",
+   "stem": "4 yo M who was floppy with a weak suck as a newborn and needed tube feeds; now constantly seeks food and is obese; short stature, small hands and feet, a small penis and undescended testes; mild developmental delay",
+   "answer": "Chromosome 15 deletion, paternally inherited",
+   "companion": "Prader-Willi syndrome; maternal uniparental disomy is the next most common cause",
+   "d1": "Chromosome 15 deletion, maternally inherited",
+   "d2": "Chromosome 7 deletion",
+   "lead_in": "Which of the following is the most likely genetic defect in this patient?",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-imprinting",
+   "type": "mech",
+   "stem": "3 yo F with seizures, microcephaly, an ataxic gait, no words and frequent laughter; DNA methylation analysis shows only the paternal pattern at 15q11-q13; SNP (single nucleotide polymorphism) microarray with parental samples shows no deletion and paternal isodisomy of chromosome 15",
+   "answer": "Paternal uniparental disomy of chromosome 15",
+   "companion": "Angelman syndrome without a deletion; no maternal UBE3A copy is present",
+   "d1": "Maternal uniparental disomy of chromosome 15",
+   "d2": "Trisomy 15",
+   "lead_in": "Which of the following is the most likely genetic defect in this patient?",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-imprinting",
+   "type": "mech",
+   "stem": "20 mo F who sat, babbled and picked up small objects by 9 months; over the past 6 months she stopped babbling and using her hands to hold toys; now makes constant hand-wringing movements; head growth has slowed",
+   "answer": "Mutation of the MECP2 gene",
+   "companion": "Rett syndrome; X-linked and nearly always de novo",
+   "d1": "Chromosome 15 deletion, maternally inherited",
+   "d2": "Chromosome 7 deletion",
+   "lead_in": "Which of the following is the most likely genetic defect in this patient?",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-imprinting",
+   "type": "mech",
+   "stem": "4 yo F who is overly friendly with strangers and has mild intellectual disability; broad forehead, periorbital fullness and a wide mouth with full lips; a systolic murmur from supravalvar aortic stenosis; high serum calcium as an infant",
+   "answer": "Chromosome 7 deletion",
+   "companion": "Williams syndrome; the 7q11.23 deletion includes the elastin gene",
+   "d1": "Chromosome 15 deletion, maternally inherited",
+   "d2": "Trisomy 21",
+   "lead_in": "Which of the following is the most likely genetic defect in this patient?",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-imprinting",
+   "type": "dx",
+   "stem": "4 yo F with no spoken words, a wide-based jerky gait, seizures since age 2 and a small head; she laughs often and easily, is fascinated by water, and has never lost a skill she had gained",
+   "answer": "Angelman syndrome",
+   "companion": "maternal 15q11-q13 deletion in most cases",
+   "d1": "Rett syndrome",
+   "d2": "Williams syndrome",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-imprinting",
+   "type": "test",
+   "stem": "3 yo F with seizures, microcephaly, an ataxic gait, no words and a happy, excitable manner with frequent laughter",
+   "answer": "DNA methylation analysis of 15q11-q13",
+   "companion": "detects deletion, uniparental disomy and imprinting defects; a normal result leads to UBE3A sequencing",
+   "d1": "Standard chromosome karyotype",
+   "d2": "Sequencing of the MECP2 gene",
+   "lead_in": "Which of the following is the most appropriate initial genetic test?",
+   "src": "authored"
+  },
+  {
+   "op": "insert_after",
+   "brief": "aneuploidy",
+   "anchor": "ask: is the infant weak, or only floppy?",
+   "html": " Part II <b>Angelman Syndrome and Its Genetic Look-Alikes</b> owns the chromosome 15 imprinting pair. Ask: which parent&#39;s copy is missing?",
+   "note": "reverse Pairs-with link"
+  },
+  {
+   "op": "insert_after",
+   "brief": "cerebral-palsy",
+   "anchor": "is the problem in the brain or the motor unit?",
+   "html": " Part II <b>Angelman Syndrome and Its Genetic Look-Alikes</b> separates Rett syndrome from Angelman syndrome. Ask: did the child lose skills, or never gain them?",
+   "note": "reverse Pairs-with link"
+  }
+ ]
+}

@@ -172,6 +172,10 @@ def main(argv):
                 for sh in shingles(words(srcblobs[s])):
                     src[sh].add(p)
     common = {h for h, fs in src.items() if len({os.path.basename(f) for f in fs}) >= 3}
+    # NBME lead-in boilerplate ("Which of the following is the most likely ...") is published item-writing
+    # guidance and appears in the skills; it is stock, not vendor text
+    common |= {h for h in src if 'which of the following' in h or
+               (re.search(r'\bmost (likely|appropriate|accurate)\b', h) and re.search(r'\b(this patient|the following|next step)\b', h))}
     for h in stock | common:
         src.pop(h, None)
     scan = [(s, p) for s, p in bl if not is_local(p, lo)]

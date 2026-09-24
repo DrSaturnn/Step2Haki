@@ -1,0 +1,83 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<tr><td><b>Secondary hypogammaglobulinemia</b> (HIV; protein-losing states ⚠︎)</td><td>Opportunistic infection, diarrhea, failure to thrive</td><td><b>Inverted CD4/CD8 with leukopenia</b>; IgG/IgA may be <i>elevated</i> from chronic stimulation while IgM is low</td><td>CD4/CD8 2.2, WBC 9,000</td></tr>",
+   "with": "<tr><td><b>Secondary immune defects</b> (HIV; protein-losing states ⚠︎)</td><td>Opportunistic infection, thrush, diarrhea, failure to thrive; in perinatal HIV, generalized lymphadenopathy, hepatosplenomegaly and a mother with an AIDS-suggestive illness</td><td>HIV: <b>inverted CD4/CD8 with leukopenia</b> and <b>polyclonal hypergammaglobulinemia</b> (IgG and IgA high, IgM normal or high); protein loss: low IgG ⚠︎</td><td>IgG 250 (low); CD4/CD8 2.2, WBC 9,000</td></tr>",
+   "note": "Conflict fix: current pediatric data show polyclonal hypergammaglobulinemia in perinatal HIV with IgM often elevated (NBME Q14 panel: IgG, IgA, IgM all high); removed 'IgM is low'. Row renamed because HIV raises, not lowers, immunoglobulins."
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"trapwhy\">HIV infection &mdash; Would show leukopenia and a <b>low</b> CD4/CD8; ratio is 2.2 and WBC 9,000. Chronic HIV raises IgG/IgA and lowers IgM — the mirror image of this panel</span>",
+   "with": "<span class=\"trapwhy\">HIV infection &mdash; HIV would show leukopenia and a <b>low</b> CD4/CD8 ratio; here the ratio is 2.2 and WBC 9,000. HIV raises IgG in a polyclonal rise, while this panel has IgG 250.</span>",
+   "note": "Conflict fix: dropped the unsupported 'lowers IgM, mirror image' claim; rests hyper-IgM vs HIV on low IgG and a normal CD4/CD8 ratio."
+  },
+  {
+   "op": "insert_before",
+   "brief": "ig-panel",
+   "anchor": "<b>Any finding off the panel?</b>",
+   "html": "<b>Is every isotype high?</b> &mdash; IgG, IgA and IgM all high is polyclonal hypergammaglobulinemia. The primary antibody deficiencies all lower IgG or IgA. With thrush, adenopathy and hepatosplenomegaly, test for <b>HIV</b> (human immunodeficiency virus) &middot; ",
+   "note": "NBME Q14 deciding finding: every isotype high points to HIV, away from primary antibody deficiency."
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "IgA alone: selective IgA deficiency</td>",
+   "with": "IgA alone: selective IgA deficiency; all high: polyclonal rise, as in HIV</td>",
+   "note": "Workup row carries the all-isotypes-high reading."
+  },
+  {
+   "op": "insert_after",
+   "brief": "ig-panel",
+   "anchor": "recheck, don't treat ⚠︎.",
+   "html": " &middot; How NBME framed it: the lead-in asks for a mechanism but lists diseases, and the mother's thrush, chronic diarrhea and weight loss hold the deciding clue.",
+   "note": "Required NBME framing sentence."
+  },
+  {
+   "op": "insert_after",
+   "brief": "ig-panel",
+   "anchor": "platelets are 260,000 and normal-sized, and there is no eczema</span></div>",
+   "html": "<div class=\"trapline\"><span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">Severe combined immunodeficiency &mdash; It presents in early infancy with lymphopenia, low immunoglobulins and no palpable nodes. A 2-year-old with every isotype high and 2-cm axillary nodes does not fit.</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Wiskott-Aldrich syndrome &mdash; Platelets of 95,000 are the lure. It classically has eczema and small platelets, and it is X-linked, while this patient with every isotype high is a girl.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Common variable immunodeficiency &mdash; It lowers IgG along with IgA and/or IgM, and it usually starts after puberty. Here every isotype is high at age 2.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Chronic granulomatous disease &mdash; It causes catalase-positive abscesses and granulomas with an abnormal DHR (dihydrorhodamine) test. Immunoglobulins are normal or high in it, so this panel does not exclude it; the thrush, the adenopathy and the mother&#39;s illness point to HIV.</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Ch&eacute;diak-Higashi syndrome &mdash; It needs oculocutaneous albinism and neuropathy, and neither is described in the girl with every isotype high.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Terminal complement deficiency &mdash; It causes recurrent Neisseria infection, not pneumococcal disease with thrush and every isotype high.</span></div><div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Cystic fibrosis &mdash; Recurrent pneumonia and low weight fit. It causes lung and pancreatic disease, without thrush, adenopathy or a mother with an AIDS-suggestive illness.</span></div>",
+   "note": "One trapline per original NBME Q14 distractor, tied to the all-isotypes-high case."
+  },
+  {
+   "op": "add_item",
+   "brief": "ig-panel",
+   "type": "dx",
+   "stem": "2 yo girl admitted with pneumococcal bacteremia; in the past year three otitis media episodes, two bacterial pneumonias and recurrent thrush; mother has persistent oral candidiasis, chronic diarrhea and a 9-kg weight loss; weight 5th percentile, height 50th percentile; white oral plaques, 2-cm nontender axillary nodes, spleen 2 cm and liver 3 cm below the costal margins; WBC 5,000, platelets 95,000; IgG 2,200, IgA 420 and IgM 400 mg/dL, all above normal",
+   "answer": "HIV infection",
+   "companion": "Perinatally acquired; confirm with an HIV viral load, then start antiretroviral therapy",
+   "d1": "Severe combined immunodeficiency",
+   "d2": "Wiskott-Aldrich syndrome",
+   "lead_in": "Which of the following is the most likely cause of this patient's symptoms?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "ig-panel",
+   "type": "dx",
+   "stem": "20 mo boy with recurrent otitis media, two bacterial pneumonias and chronic diarrhea; generalized lymphadenopathy and hepatosplenomegaly; IgG, IgA and IgM all high; CD4/CD8 ratio inverted",
+   "answer": "Perinatal HIV infection",
+   "companion": "Polyclonal hypergammaglobulinemia with an inverted CD4/CD8 ratio",
+   "d1": "CD40 ligand deficiency",
+   "d2": "Common variable immunodeficiency",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "ig-panel",
+   "type": "dx",
+   "stem": "14 mo boy with Pneumocystis pneumonia after two pneumococcal pneumonias; IgM high, IgG and IgA low; normal lymphocyte count and CD4/CD8 ratio",
+   "answer": "CD40 ligand deficiency",
+   "companion": "Class-switch failure; low IgG and a normal CD4/CD8 ratio separate it from HIV",
+   "d1": "Perinatal HIV infection",
+   "d2": "X-linked agammaglobulinemia",
+   "src": "authored"
+  }
+ ]
+}

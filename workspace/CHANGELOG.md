@@ -2,6 +2,52 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-09-24 s31: NBME Peds batch: 27 questions linked; 6 new briefs, 12 backfills, NBME wording guide
+
+```
+Page: 201 briefs, 1942 items -> 207 briefs, 2014 items
+Briefs added (6):
+  - bs-puncture-osteomyelitis: Foot Puncture Wound Infection (5 items)
+  - bs-acute-myositis: Benign Acute Childhood Myositis (8 items)
+  - bs-adolescent-bp: Confirming High Blood Pressure in an Adolescent (6 items)
+  - bs-isolated-proteinuria: Incidental Proteinuria in a Well Child (7 items)
+  - bs-imprinting: Angelman Syndrome and Its Genetic Look-Alikes (7 items)
+  - bs-genital-ulcer: Genital Ulcer: Painless or Painful (8 items)
+Briefs changed (26):
+  - limp (The Limping Child — Master Table): 2 items added (q_b599f8e62f2070a52991, q_11abb36f6ad6ea3085a4); prose edited (+2317 chars)
+  - growing-pains (Benign Limb Pain in a Child): prose edited (+110 chars)
+  - growth (Growth & Developmental Milestones): 3 items added (q_907cd6543effc4c0dec6, q_d0c9d6f19c78dd1fed12, q_eca33fcf91f5726143e5); prose edited (+2008 chars)
+  - newborn-hormone (Maternal Hormone Effects in the Newborn): prose edited (+77 chars)
+  - aneuploidy (Aneuploidy: Reading the Newborn): prose edited (+142 chars)
+  - cyanotic-chd (Cyanotic Congenital Heart Disease): 2 items added (q_1dafa1911a5a64278be2, q_dc06038895874469075d); prose edited (+1628 chars)
+  - kawasaki (Kawasaki Disease): 3 items added (q_5c5ebd26ef5fe11337d5, q_495dfa71396b7036d94a, q_e96fadc94a8327131c75); prose edited (+2035 chars)
+  - arf (Acute Rheumatic Fever): attrs set (q_163add7fdad553c2a5e2 data-nbme); prose edited (+284 chars)
+  - neonatal-jaundice (Neonatal Jaundice): 2 items added (q_68047f53bb547e1428b5, q_ea850ed3646b8e8e5167); prose edited (+1701 chars)
+  - bs-umbilical (Umbilical Findings in a Newborn): attrs set (q_7e472e5bd7e09a357f4d data-nbme); prose edited (+278 chars)
+  - bs-fat-soluble-vitamins (Fat-Soluble Vitamin Deficiency and Toxicity): 3 items added (q_44a4c5430977368dd3fc, q_187ede1b74536a0c7f62, q_ca7906ad3ce2003c2e2e); prose edited (+1423 chars)
+  - nephrotic-child (Nephrotic Syndrome in a Child): prose edited (+148 chars)
+  - bs-nephritic (Acute Nephritic Syndrome in a Child): attrs set (q_aeb588e544ebeb4b9c39 data-nbme); prose edited (+389 chars)
+  - bs-abdominal-mass (Abdominal Mass in a Young Child): 3 items added (q_d9b8dd343b4ca836c41d, q_aacccbc0cf7974df049d, q_9ba68702a02ebc4483c1); prose edited (+1565 chars)
+  - tumor-syndromes (Inherited Tumor Syndromes): 3 items added (q_791ab466c5d3371ac2d4, q_a73027aea794cb20e60e, q_07869c908680b86b0b69); prose edited (+2388 chars)
+  - bs-leukemia (Pediatric Acute Lymphoblastic Leukemia): attrs set (q_d5a219c1127f50cba341 data-nbme); prose edited (+296 chars)
+  - cervicitis (Acute Cervicitis): 2 items added (q_424c322e1a1fb44f35a6, q_6037409dfb4feb0f247f); prose edited (+2056 chars)
+  - ig-panel (The Immunoglobulin Panel): 3 items added (q_6f1f0484f7cc597f3a69, q_ef6b8e7ad853646f5cd4, q_4319327c01c3ba7a9234); prose edited (+2702 chars)
+  - rmsf (Tick-Borne Fever and Rash): prose edited (+243 chars)
+  - lymphadenitis (Enlarged Lymph Nodes: Reading the Pattern): attrs set (q_bbe63e88a23044cd7f3a data-nbme); prose edited (+260 chars)
+  - bs-torch (Congenital CMV and the TORCH Discriminations): 3 items added (q_f04e1e07cd1dacf1c640, q_92c751f85de71a0bcb69, q_a3ec9f313a821c1030d1); prose edited (+2501 chars)
+  - bs-fever-rash-arthralgia (Fever, Rash and Joint Pain in a Child or Adolescent): prose edited (+103 chars)
+  - redeye (The Red Eye): attrs set (q_bfc2adf60a295d1a841a data-nbme); prose edited (+288 chars)
+  - cerebral-palsy (Cerebral Palsy and the MRI Pattern): prose edited (+161 chars)
+  - neonatal-rash (Benign Neonatal Rashes): attrs set (q_ee07b7cec8875310382c data-nbme); prose edited (+242 chars)
+  - diaper-dermatitis (Diaper Dermatitis): 2 items added (q_02665e6eb263aaa1aecd, q_ccd48da198c8448a6e8f); prose edited (+1986 chars)
+Other page changes (nav, headers, scripts): +3593 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 207 briefs, 2014 items, 4 scripts, 31 checks, base HEAD | allowlisted 16 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 207 | bankwraps 207 | mcq 2014 (axCheck 2014, reveal-only 0) | malformed 0 | crit gridded 123/124 | vignette gridded 129/129 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (42269 source shingles; page 0.033%)
+```
+
 ## 2026-09-24 s30: GI plain-voice round 2: shorter sentences, acronyms written out, claim-mapped for no drift
 
 ```

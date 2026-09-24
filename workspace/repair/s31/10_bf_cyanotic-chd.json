@@ -1,0 +1,65 @@
+{
+ "edits": [
+  {
+   "op": "insert_after",
+   "brief": "cyanotic-chd",
+   "anchor": "spells relieved by squatting",
+   "html": "; murmur <b>fades</b> during a spell",
+   "note": "NBME Q4 deciding finding: murmur softens as the spell tightens the outflow obstruction"
+  },
+  {
+   "op": "insert_after",
+   "brief": "cyanotic-chd",
+   "anchor": "characteristically arrives in infancy, not at birth.",
+   "html": " · During a tet spell the outflow tract narrows further and pulmonary flow drops, so the harsh systolic murmur <b>softens or disappears</b>.",
+   "note": "Mechanism from NBME explanation (murmur from outflow obstruction; spell = transient obstruction, less pulmonary flow)"
+  },
+  {
+   "op": "insert_before",
+   "brief": "cyanotic-chd",
+   "anchor": "<div class=\"pearls\"><span class=\"lbl\">Pairs with</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The stem reads like a febrile stomach illness, and the witnessed spell, with saturation falling and the murmur fading, names the lesion.</div>\n",
+   "note": "Required framing sentence"
+  },
+  {
+   "op": "insert_after",
+   "brief": "cyanotic-chd",
+   "anchor": "runs the sort that has to finish before this lesion catalog opens.",
+   "html": " Part II <b>Congenital Shunts and the Transitional Clock</b> holds the look-alike large ventricular septal defect: did the cyanosis come as an acute spell with crying, or over months as the murmur faded?",
+   "note": "Pairs-with for the Eisenmenger look-alike item in bs-shunt-timing"
+  },
+  {
+   "op": "insert_after",
+   "brief": "cyanotic-chd",
+   "anchor": "<div class=\"traps\">",
+   "html": "\n  <div class=\"trapline\"><span class=\"pill p-mirror\">Mirror twin</span><span class=\"trapwhy\">Ventricular septal defect &mdash; An isolated defect gives a holosystolic murmur and no cyanosis. A defect whose murmur fades as cyanosis develops over months is Eisenmenger physiology, not an acute spell with crying.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Pulmonary stenosis &mdash; Isolated stenosis makes a similar outflow murmur, but with no ventricular septal defect it does not cause cyanotic spells with crying.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Atrial septal defect &mdash; It shunts left to right with a fixed split S2 and does not cause cyanosis.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Coarctation of the aorta &mdash; It causes arm hypertension, weak leg pulses and lower leg pressures, not cyanotic spells.</span></div>",
+   "note": "One trapline per original NBME distractor"
+  },
+  {
+   "op": "add_item",
+   "brief": "cyanotic-chd",
+   "type": "dx",
+   "stem": "3 mo M with 3 days of low-grade fever, vomiting and poor feeding is mildly dehydrated, with oxygen saturation 85% on room air and a harsh 3/6 systolic ejection murmur; while crying during intravenous catheter placement his saturation falls to 60% and the murmur becomes barely audible",
+   "answer": "Tetralogy of Fallot",
+   "companion": "the spell narrows the outflow tract, so less flow makes a softer murmur",
+   "d1": "Ventricular septal defect",
+   "d2": "Pulmonary stenosis",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "cyanotic-chd",
+   "type": "test",
+   "stem": "3 mo F with baseline oxygen saturation of 86%, a harsh systolic ejection murmur at the left upper sternal border, and episodes of deeper cyanosis with crying that resolve when she is calm",
+   "answer": "Echocardiography",
+   "companion": "shows the ventricular septal defect, overriding aorta and narrowed outflow tract",
+   "d1": "Chest radiography",
+   "d2": "Electrocardiography",
+   "lead_in": "Which of the following is most likely to confirm the diagnosis?",
+   "src": "authored"
+  }
+ ]
+}

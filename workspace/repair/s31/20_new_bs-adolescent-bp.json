@@ -1,0 +1,86 @@
+{
+ "edits": [
+  {
+   "op": "new_brief",
+   "after": "bs-shunt-timing",
+   "html": "<div class=\"brief bs\" id=\"bs-adolescent-bp\" data-shelf=\"fm peds\" data-bp=\"cv\">\n<h4>Confirming High Blood Pressure in an Adolescent</h4>\n<p class=\"sub\">High automated reading at a sports physical · confirm by auscultation, then stage</p>\n<div class=\"vignette\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 17 yo M at a pre-participation examination for football; feels well; no illnesses, medications or family history; BMI 29; automated oscillometric reading 138/88 mm Hg, stated as the 95th percentile for age and height, then 140/89 mm Hg on the same device; rest of the examination normal &middot; <b>Q</b> &mdash; the most appropriate next step in diagnosis; options spanned auscultatory measurement, echocardiography, 24-hour ambulatory monitoring and repeat device readings daily for 3 days or in 2 weeks</div>\n<div class=\"dp\"><span class=\"lbl\">The decision point</span>\n<p>Automated <b>oscillometric</b> devices tend to read higher than auscultation for both systolic and diastolic pressure. A high device reading needs confirmation <b>by auscultation</b>, even after the same device has repeated it. Take at least two auscultatory readings at that visit and <b>average</b> them. The averaged auscultatory value sets the category and the recheck interval.</p>\n<p>From <b>age 13</b>, the 2017 <b>AAP</b> (American Academy of Pediatrics) guideline uses fixed cutoffs that match the adult categories. By those cutoffs, 138/88 mm Hg falls in stage 1 and 140/89 mm Hg in stage 2. Device readings are not staged until auscultation confirms them. Ambulatory monitoring, echocardiography and drug therapy all come after that confirmation.</p>\n</div>\n<div class=\"crit\"><span class=\"lbl\">Defining criteria, age 13 and older</span> <b>Confirming a high reading</b> — repeat by auscultation at the same visit and average the readings; a device reading alone is not staged &middot; <b>Elevated blood pressure</b> — systolic 120 to 129 mm Hg with diastolic below 80 mm Hg &middot; <b>Stage 1 hypertension</b> — 130/80 to 139/89 mm Hg &middot; <b>Stage 2 hypertension</b> — 140/90 mm Hg or higher &middot; <b>Hypertension diagnosis</b> — auscultatory-confirmed readings of 130/80 mm Hg or higher at 3 separate visits</div>\n<table>\n<caption>Management ladder — high blood pressure in an adolescent</caption>\n<thead><tr><th>Tier</th><th>Intervention</th><th>Escalate when</th></tr></thead>\n<tbody>\n<tr><td><b>1</b></td><td>Screening reading at a routine visit; an <b>oscillometric</b> device is acceptable. Yearly from age 3, and at every visit with obesity, kidney disease, diabetes, prior coarctation or a drug that raises blood pressure</td><td>Reading of <b>120/80 mm Hg or higher</b></td></tr>\n<tr><td><b>2</b></td><td><b>Repeat by auscultation</b> at the same visit, at least 2 readings, and average them</td><td>Averaged auscultatory value in the elevated or hypertensive range; that value sets the stage</td></tr>\n<tr><td><b>3</b></td><td>Recheck by auscultation on a schedule set by stage: elevated, lifestyle advice and recheck in <b>6 months</b>; stage 1, lifestyle advice and recheck in <b>1 to 2 weeks</b>; stage 2, lifestyle advice and specialty referral within <b>1 week</b></td><td>Elevated readings for <b>1 year</b>, or stage 1 readings at <b>3 visits</b></td></tr>\n<tr><td><b>4</b></td><td><b>24-hour ambulatory blood pressure monitoring</b> to confirm hypertension</td><td>Hypertension confirmed: evaluate for secondary causes and end-organ damage</td></tr>\n<tr><td><b>5</b></td><td><b>Lifestyle change first</b>: the DASH (Dietary Approaches to Stop Hypertension) diet and moderate to vigorous activity 3 to 5 days a week. <b>Echocardiography</b> for left ventricular hypertrophy when drug therapy is considered</td><td>Lifestyle change fails, especially with left ventricular hypertrophy, symptoms or stage 2 without a modifiable cause: start a drug</td></tr>\n</tbody>\n</table>\n<h5 class=\"authored-hdr\">Scenario bank</h5>\n<ol class=\"bank authored\">\n</ol>\n<div class=\"danger\"><span class=\"lbl\">Guideline history</span> The 2004 Fourth Report defined hypertension as a reading at or above the <b>95th percentile</b> at every age, and older questions still use that definition. The 2017 AAP guideline set fixed adult cutoffs from age 13 and kept percentiles only for children <b>under 13</b>. Under 13, stage 1 starts at the 95th percentile for sex, age and height, or at 130/80 mm Hg if that is lower. From age 13, stage 1 starts at 130/80 mm Hg regardless of percentile.</div>\n<div class=\"danger\"><span class=\"lbl\">Exit ramps</span> A symptomatic adolescent, or a reading above <b>180/120 mm Hg</b>, goes to the emergency department &middot; Stage 1 or stage 2 readings call for a leg blood pressure; an arm reading higher than the leg suggests <b>coarctation of the aorta</b> &middot; Confirmed hypertension opens a search for secondary causes and end-organ damage</div>\n<div class=\"pearls\"><span class=\"lbl\">Pearls</span> Electrocardiography is not used to look for left ventricular hypertrophy in a hypertensive child; echocardiography is &middot; Lifestyle change aimed at obesity is the first treatment for most adolescent hypertension &middot; How NBME framed it: with the device reading already repeated, the key is a measurement method, not a diagnosis, heart test or later recheck</div>\n<div class=\"pearls\"><span class=\"lbl\">Pairs with</span> Part I <b>Hypertension: Workup &amp; Drug Choice</b> covers confirmation, baseline tests and drug choice in adults. Part I <b>Secondary Hypertension</b> covers the causes to test for once hypertension is confirmed.</div>\n<div class=\"rule\"><span class=\"lbl\">Transferable rule</span> A high blood pressure from an automated device is confirmed by averaged auscultatory readings before it is staged, monitored, imaged or treated.</div>\n<div class=\"traps\"><div class=\"trapline\"><span class=\"pill p-seq\">Sequencing trap</span><span class=\"trapwhy\">Echocardiography looks for left ventricular hypertrophy once drug therapy is considered, and this reading is not yet confirmed.</span></div><div class=\"trapline\"><span class=\"pill p-seq\">Sequencing trap</span><span class=\"trapwhy\">Ambulatory monitoring is accurate, but it follows auscultatory office readings that stay elevated for 1 year or in stage 1 across 3 visits.</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Daily device readings for 3 days repeat the same overestimate; the method must change, not the number of readings.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">A 1 to 2 week recheck follows stage 1 confirmed by auscultation, but a repeat device reading in 2 weeks confirms nothing.</span></div></div>\n</div>",
+   "nav": {
+    "after_link": "bs-murmur-map",
+    "title": "High BP in an Adolescent"
+   },
+   "note": "NBME peds CMS Q19 (peds-cms-9a2ab1); thresholds per AAP 2017 CPG (Flynn et al.)"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-adolescent-bp",
+   "type": "next",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   },
+   "stem": "17 yo M at a football pre-participation examination, well, BMI 29, automated oscillometric blood pressure 138/88 mm Hg and 140/89 mm Hg on repeat with the same device, otherwise normal examination",
+   "answer": "Blood pressure measurement by auscultation",
+   "companion": "the averaged auscultatory readings set the stage",
+   "d1": "24-hour ambulatory blood pressure monitoring",
+   "d2": "Repeat oscillometric measurement in the office in 2 weeks",
+   "lead_in": "Which of the following is the most appropriate next step in diagnosis?"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-adolescent-bp",
+   "type": "stage",
+   "src": "authored",
+   "stem": "15 yo F at a well visit with an automated reading of 136/82 mm Hg; two auscultatory readings at the same visit average 132/78 mm Hg",
+   "answer": "Stage 1 hypertension",
+   "companion": "a systolic of 130 to 139 mm Hg sets stage 1 even with a diastolic below 80",
+   "d1": "Elevated blood pressure",
+   "d2": "Stage 2 hypertension",
+   "lead_in": "By the 2017 American Academy of Pediatrics criteria, which category does her averaged reading fall in?"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-adolescent-bp",
+   "type": "next",
+   "src": "authored",
+   "stem": "14 yo M at a well visit whose auscultatory readings average 124/76 mm Hg, with a normal examination",
+   "answer": "Lifestyle advice and recheck in 6 months",
+   "companion": "elevated blood pressure",
+   "d1": "Recheck blood pressure in 1 to 2 weeks",
+   "d2": "Reassurance and recheck at the next annual visit"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-adolescent-bp",
+   "type": "next",
+   "src": "authored",
+   "stem": "16 yo F with obesity whose auscultatory averages are 134/84, 132/82 and 136/86 mm Hg at three visits over 3 months",
+   "answer": "24-hour ambulatory blood pressure monitoring",
+   "companion": "confirms hypertension before workup and treatment",
+   "d1": "Start an antihypertensive medication",
+   "d2": "Echocardiography"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-adolescent-bp",
+   "type": "next",
+   "src": "authored",
+   "stem": "17 yo M, asymptomatic with a normal examination, whose auscultatory readings at one visit average 146/94 mm Hg",
+   "answer": "Lifestyle advice and referral within 1 week",
+   "companion": "stage 2 hypertension",
+   "d1": "Lifestyle advice and recheck in 6 months",
+   "d2": "Lifestyle advice and recheck in 3 months"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-adolescent-bp",
+   "type": "test",
+   "src": "authored",
+   "stem": "16 yo M with obesity and hypertension confirmed by ambulatory monitoring whose blood pressure stays high after a trial of diet and exercise, so drug therapy is planned",
+   "answer": "Echocardiography",
+   "companion": "measures left ventricular mass before drug therapy",
+   "d1": "Electrocardiography",
+   "d2": "Chest radiograph",
+   "lead_in": "Which study best assesses for cardiac end-organ damage?"
+  }
+ ]
+}

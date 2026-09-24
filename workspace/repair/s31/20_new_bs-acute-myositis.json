@@ -1,0 +1,113 @@
+{
+ "edits": [
+  {
+   "op": "new_brief",
+   "after": "bs-synovitis-mgmt",
+   "html": "<div class=\"brief bs\" id=\"bs-acute-myositis\" data-shelf=\"peds\" data-bp=\"msk\">\n<h4>Benign Acute Childhood Myositis</h4>\n<p class=\"sub\">Bilateral calf pain and tenderness after influenza · is the calf tender, and are strength and reflexes normal?</p>\n<div class=\"vignette\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 12 yo M, 2 days of severe pain in both calves; a week earlier he had fever, dry cough, sore throat and headache that settled after 5 days of ibuprofen; now on no medication, afebrile (37 C), with marked tenderness of both calves &middot; <b>Q</b> &mdash; the most likely diagnosis; options spanned dermatomyositis, influenza-induced myositis, Kawasaki disease, parvovirus B19 arthritis and rheumatic fever</div>\n<div class=\"dp\"><span class=\"lbl\">The decision point</span>\n<p>Bilateral calf pain with <b>marked calf tenderness</b>, starting as a febrile respiratory illness resolves, is <b>influenza-induced myositis</b>. Influenza A or B can cause it, during the infection or after it. School-age boys are affected most. The child may walk on tiptoe or refuse to walk. Pain limits the gait, but <b>strength and reflexes are normal</b>. <b>CK</b> (creatine kinase) is elevated. A positive influenza test in this setting confirms the cause. Treatment is analgesia, fluids and rest, and recovery usually takes about a week.</p>\n<p><b>Dark urine</b> is the warning sign. A heme-positive dipstick with few red cells means <b>myoglobinuria</b> from <b>rhabdomyolysis</b>. Admit for intravenous fluids and check creatinine and potassium.</p></div>\n<table data-mask=\"3\">\n<caption>Muscle or joint pain after a febrile illness in a child — the differential</caption>\n<thead><tr><th>Diagnosis</th><th>Illness script</th><th>Key discriminator</th><th>Why less likely here</th></tr></thead>\n<tbody>\n<tr><td><b>Influenza-induced myositis</b> (benign acute childhood myositis)</td><td>School-age child; calf pain during or just after influenza A or B</td><td><b>Bilateral calf tenderness</b>, pain-limited gait, normal strength and reflexes, elevated creatine kinase</td><td>Fits: tender calves a week after a flu-like illness</td></tr>\n<tr><td>Growing pains</td><td>Ages 3 to 12; recurrent evening or night leg pain with pain-free days</td><td><b>Normal examination</b>, no tenderness</td><td>Acute onset after an illness, and the calves are tender</td></tr>\n<tr><td>Guillain-Barré syndrome <span class=\"tag t-em\">Can't miss</span></td><td>Ascending paralysis after an infection</td><td><b>True weakness with absent reflexes</b></td><td>Pain and muscle tenderness, with no weakness described</td></tr>\n<tr><td>Dermatomyositis</td><td>Inflammatory myopathy with skin findings</td><td><b>Proximal weakness</b>, heliotrope rash, Gottron papules</td><td>No rash; the pain is in the calves, not proximal weakness</td></tr>\n<tr><td>Kawasaki disease</td><td>Vasculitis of young children</td><td>Fever for <b>5 days or more</b> plus conjunctivitis, rash, lymphadenopathy, extremity and lip changes</td><td>Afebrile now, with none of the mucocutaneous findings</td></tr>\n<tr><td>Parvovirus B19 arthritis</td><td>Arthritis or arthralgia with or without the slapped-cheek rash</td><td><b>Symmetric small joints</b> of the hands, wrists and feet</td><td>The pain and tenderness are in muscle, not joints</td></tr>\n<tr><td>Acute rheumatic fever</td><td>Follows untreated group A streptococcal pharyngitis</td><td><b>Carditis, arthritis</b>, subcutaneous nodules, erythema marginatum, chorea</td><td>None of these findings; calf muscle tenderness is not a criterion</td></tr>\n</tbody>\n</table>\n<div class=\"tw\">\n<table data-mask=\"4\"><caption>Diagnostic workup</caption>\n<thead><tr><th>Test</th><th>Order</th><th>Result</th><th>What it points to</th></tr></thead>\n<tbody>\n<tr><td>Calf and neurologic examination</td><td>First</td><td>Calf <b>tenderness</b>, normal strength and reflexes</td><td>Myositis; a normal examination fits growing pains; weakness with absent reflexes suggests Guillain-Barré syndrome</td></tr>\n<tr><td>Serum creatine kinase</td><td>Confirms</td><td><b>Elevated</b></td><td>Muscle injury, placing the problem in muscle rather than joint or nerve</td></tr>\n<tr><td>Influenza test</td><td>Cause</td><td><b>Positive</b> for influenza A or B</td><td>Influenza-induced myositis, with compatible symptoms and an elevated creatine kinase</td></tr>\n<tr><td>Urinalysis with microscopy</td><td>Next</td><td>Heme-positive dipstick with <b>few red cells</b></td><td>Myoglobinuria from rhabdomyolysis: intravenous fluids, creatinine and potassium</td></tr>\n<tr><td>Electromyography, muscle MRI or biopsy</td><td>Skip</td><td>Not needed in a typical case</td><td>Tender calves, elevated creatine kinase and a recent flu-like illness make the diagnosis</td></tr>\n</tbody>\n</table>\n</div>\n<h5 class=\"authored-hdr\">Scenario bank</h5>\n<ol class=\"bank authored\">\n</ol>\n<div class=\"pearls\"><span class=\"lbl\">Pearls</span> How NBME framed it: the stem never names influenza, and the key names the cause, influenza-induced, rather than the syndrome &middot; Calf tenderness on palpation is incompatible with growing pains, which require a normal examination &middot; Guillain-Barré syndrome causes true weakness with lost reflexes; this myositis leaves strength and reflexes intact &middot; Avoid <b>aspirin</b> in a child with influenza because of the risk of Reye syndrome</div>\n<div class=\"pearls\"><span class=\"lbl\">Pairs with</span> Part I <b>Benign Limb Pain in a Child</b> also presents as bilateral calf pain in a school-age child, but the examination is normal. Part I <b>Hemoglobinuria: the Dipstick-Microscopy Mismatch</b> owns the heme-positive dipstick with few red cells that marks rhabdomyolysis. Store the discriminator as a question: is the calf tender?</div>\n<div class=\"rule\"><span class=\"lbl\">Transferable rule</span> In a child with bilateral calf pain, examine the calves. Tenderness after a febrile respiratory illness points to viral myositis. A normal examination points to growing pains.</div>\n<div class=\"traps\"><div class=\"trapline\"><span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">Dermatomyositis is also a myositis, but it causes proximal weakness with a heliotrope rash and Gottron papules.</span></div><div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Kawasaki disease needs 5 or more days of fever plus mucocutaneous findings; this child had fever without those findings, and it has resolved.</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Parvovirus B19 arthritis affects the small joints of the hands, wrists and feet; this pain is in the calf muscles.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Rheumatic fever follows group A streptococcal pharyngitis and causes carditis, arthritis, nodules, erythema marginatum or chorea, not calf myositis.</span></div></div>\n</div>",
+   "nav": {
+    "after_link": "bs-synovitis-mgmt",
+    "title": "Acute Childhood Myositis"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-acute-myositis",
+   "type": "dx",
+   "stem": "12 yo M with 2 days of severe bilateral calf pain; a week earlier he had fever, dry cough, sore throat and headache that resolved after 5 days of ibuprofen; now on no medication, T 37 C, marked tenderness of both calves",
+   "answer": "Influenza-induced myositis",
+   "companion": "creatine kinase elevated; supportive care",
+   "d1": "Dermatomyositis",
+   "d2": "Rheumatic fever",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-acute-myositis",
+   "type": "test",
+   "stem": "7 yo M with influenza B diagnosed 3 days ago, now afebrile, wakes up refusing to walk and walks on his toes; both calves are tender, strength is normal when encouraged, and knee and ankle reflexes are normal",
+   "answer": "Serum creatine kinase",
+   "companion": "benign acute childhood myositis",
+   "d1": "Erythrocyte sedimentation rate",
+   "d2": "Antinuclear antibody",
+   "src": "authored",
+   "lead_in": "Which of the following laboratory studies is most likely to support the diagnosis?"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-acute-myositis",
+   "type": "next",
+   "stem": "6 yo M, 4 days after the onset of influenza B, now afebrile with bilateral calf pain and tenderness and a tiptoe gait; strength and reflexes are normal, creatine kinase is elevated, and urinalysis is normal",
+   "answer": "Analgesics, fluids and reassurance",
+   "companion": "benign acute childhood myositis; recovery in about a week",
+   "d1": "Admission for intravenous fluids",
+   "d2": "Oral prednisone and a rheumatology referral",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-acute-myositis",
+   "type": "next",
+   "stem": "8 yo F with influenza A, 2 days of severe bilateral leg pain with calf tenderness and tea-colored urine; urine dipstick strongly positive for blood with 0 to 2 red cells per high-power field; creatine kinase markedly elevated",
+   "answer": "Admission for intravenous fluids and renal monitoring",
+   "companion": "rhabdomyolysis complicating influenza myositis; check creatinine and potassium",
+   "d1": "Discharge on oral ibuprofen, follow-up in 1 week",
+   "d2": "Admission for intravenous methylprednisolone",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-acute-myositis",
+   "type": "avoid",
+   "stem": "9 yo M with influenza, now afebrile, with bilateral calf pain and tenderness, normal strength, elevated creatine kinase and a normal urinalysis",
+   "answer": "Aspirin",
+   "companion": "Reye syndrome risk with influenza",
+   "d1": "Ibuprofen",
+   "d2": "Acetaminophen",
+   "src": "authored",
+   "lead_in": "Which of the following analgesics should be avoided?"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-acute-myositis",
+   "type": "dx",
+   "stem": "6 yo M, 10 days after an upper respiratory infection, with 2 days of leg pain and trouble climbing stairs that is spreading upward; symmetric leg weakness, absent knee and ankle reflexes, no sensory level, normal bladder function, no calf tenderness",
+   "answer": "Guillain-Barré syndrome",
+   "companion": "lumbar puncture and monitoring of respiratory function",
+   "d1": "Influenza-induced myositis",
+   "d2": "Transverse myelitis",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-acute-myositis",
+   "type": "dx",
+   "stem": "8 yo F with 2 months of difficulty climbing stairs and rising from the floor, a violaceous rash on the upper eyelids, scaly red papules over the knuckles and an elevated creatine kinase",
+   "answer": "Juvenile dermatomyositis",
+   "companion": "systemic glucocorticoids plus methotrexate",
+   "d1": "Influenza-induced myositis",
+   "d2": "Systemic lupus erythematosus",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-acute-myositis",
+   "type": "dx",
+   "stem": "7 yo F with 4 months of episodic aching in both calves in the evening, with pain-free days, no recent illness, and a normal examination with no calf tenderness",
+   "answer": "Growing pains",
+   "companion": "reassurance, massage and analgesics",
+   "d1": "Benign acute childhood myositis",
+   "d2": "Juvenile idiopathic arthritis",
+   "src": "authored"
+  },
+  {
+   "op": "insert_before",
+   "brief": "growing-pains",
+   "anchor": "Store the discriminator as a question: is it bilateral, and is the examination normal?",
+   "html": "Part II <b>Benign Acute Childhood Myositis</b> owns bilateral calf pain with calf tenderness after influenza. ",
+   "note": "reverse Pairs-with mention for the new brief"
+  }
+ ]
+}

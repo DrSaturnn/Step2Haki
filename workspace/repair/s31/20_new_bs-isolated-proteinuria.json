@@ -1,0 +1,108 @@
+{
+ "edits": [
+  {
+   "op": "new_brief",
+   "after": "bs-abdominal-mass",
+   "html": "<div class=\"brief bs\" id=\"bs-isolated-proteinuria\" data-shelf=\"peds\" data-bp=\"renal\">\n<h4>Incidental Proteinuria in a Well Child</h4>\n<p class=\"sub\">Protein on a routine dipstick in a well adolescent &middot; Is the protein still there in a first-morning urine?</p>\n<div class=\"vignette\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 12 yo M at a well-child visit, no illness in the past year; HR 102, RR 21, BP 102/60; normal examination &middot; <b>Labs</b> &mdash; urinalysis with 3+ protein &middot; <b>Q</b> &mdash; the most appropriate next step in diagnosis; options spanned a repeat urinalysis timed to posture, intravenous pyelography, renal ultrasonography, a corticosteroid trial and renal biopsy</div>\n<div class=\"dp\"><span class=\"lbl\">The decision point</span>\n<p>A well child with protein on a routine dipstick most likely has <b>transient</b> or <b>orthostatic</b> proteinuria. Both are benign. The first step is to <b>repeat the urinalysis</b>, before any imaging, steroids or biopsy. Transient proteinuria follows fever, exercise, stress or dehydration and clears once the trigger passes. Orthostatic proteinuria appears only while the child is upright and is most common in adolescent boys. A sample at bedtime shows protein. A <b>first-morning sample</b>, collected after a night lying down, is normal.</p>\n<p>Protein that is still present on a first-morning sample is <b>persistent</b> and needs a renal workup. Protein with blood, hypertension or edema points to glomerular disease from the start, so that child goes straight to the renal workup.</p>\n</div>\n<div class=\"crit\"><span class=\"lbl\">Defining criteria</span> <b>Normal first-morning urine</b> &mdash; protein-to-creatinine ratio of 0.2 mg/mg or less (0.5 or less at 6 to 24 months) with a normal urinalysis &middot; <b>Orthostatic proteinuria</b> &mdash; protein in urine made while upright, with a normal first-morning sample after lying down all night &middot; <b>Transient proteinuria</b> &mdash; protein during fever, exercise, stress, cold or dehydration that is gone on a repeat once the trigger passes &middot; <b>Persistent proteinuria</b> &mdash; first-morning ratio above 0.2 mg/mg, or protein with an abnormal urinalysis &middot; <b>Nephrotic range</b> &mdash; ratio above 2 mg/mg</div>\n<table data-mask=\"3\">\n<caption>Protein on a routine dipstick: the differential</caption>\n<thead><tr><th>Diagnosis</th><th>Illness script</th><th>The NBME tell</th><th>Why less likely here</th></tr></thead>\n<tbody>\n<tr><td><b>Orthostatic proteinuria</b></td><td>Protein leaks only while upright; most common in adolescent boys; benign</td><td>Protein in a <b>bedtime</b> sample, <b>none on waking</b></td><td>&mdash; (the leading cause here; the timed repeat confirms it)</td></tr>\n<tr><td>Transient proteinuria</td><td>Fever, exercise, stress, cold or dehydration; clears when the trigger passes</td><td>Protein gone on <b>any</b> repeat once the child is well</td><td>No recent illness or trigger; the same repeat urinalysis sorts it out</td></tr>\n<tr><td>Nephrotic syndrome</td><td>Minimal change disease in a young child; heavy protein with low albumin</td><td><b>Edema</b>, 3+ to 4+ protein, ratio above 2 mg/mg, low albumin</td><td>Normal examination, no edema</td></tr>\n<tr><td>Glomerulonephritis</td><td>Nephritic picture; PSGN (poststreptococcal glomerulonephritis), IgA nephropathy, lupus</td><td><b>Blood and red cell casts</b>, hypertension, rising creatinine</td><td>Normal blood pressure; protein is the only urine finding</td></tr>\n</tbody>\n</table>\n<table>\n<caption>Management ladder: incidental proteinuria in a well child</caption>\n<thead><tr><th>Tier</th><th>Intervention</th><th>Escalate when</th></tr></thead>\n<tbody>\n<tr><td><b>1</b></td><td><b>Repeat the urine</b> on a first-morning sample, after any fever or hard exercise has passed: dipstick, microscopy and protein-to-creatinine ratio; a bedtime sample alongside shows the orthostatic pattern</td><td>First-morning ratio <b>above 0.2 mg/mg</b>, or blood, casts, hypertension or edema</td></tr>\n<tr><td><b>Stop</b></td><td>Normal first-morning sample: <b>reassure</b> and repeat a first-morning dipstick in <b>1 year</b></td><td>Protein returns on a first-morning sample</td></tr>\n<tr><td><b>2</b></td><td>Persistent proteinuria: <b>complete blood count, electrolytes, blood urea nitrogen and creatinine</b>; add albumin, complement or renal ultrasound as the history and exam direct</td><td>Hematuria, hypertension, low complement, falling kidney function or signs of vasculitis</td></tr>\n<tr><td><b>3</b></td><td><b>Pediatric nephrology referral</b>; renal biopsy is considered for those features</td><td>&mdash;</td></tr>\n</tbody>\n</table>\n<h5 class=\"authored-hdr\">Scenario bank</h5>\n<ol class=\"bank authored\">\n</ol>\n<div class=\"pearls\"><span class=\"lbl\">Pearls</span> Up to 10% of school-age children show protein on a single screen; with repeated testing, about 0.1% do &middot; Orthostatic proteinuria affects about 2% to 5% of adolescents, more often boys; long-term follow-up shows no progressive kidney disease &middot; A first-morning spot protein-to-creatinine ratio replaces the 24-hour collection, which is impractical in children &middot; A dipstick can read falsely positive in very concentrated urine (specific gravity above 1.030) or alkaline urine (pH above 8) &middot; How NBME framed it: the key was a timed procedure, repeat urinalysis at bedtime and on waking, rather than the name orthostatic proteinuria.</div>\n<div class=\"pearls\"><span class=\"lbl\">Pairs with</span> Part I <b>Nephrotic Syndrome in a Child</b> owns proteinuria with edema, steroids without biopsy, and the atypical features that earn a biopsy. Part II <b>Acute Nephritic Syndrome in a Child</b> owns protein with blood, hypertension and a low C3. Part I <b>Hematuria</b> carries the parallel well child with isolated microscopic hematuria.</div>\n<div class=\"rule\"><span class=\"lbl\">Transferable rule</span> In a well child with protein on a routine dipstick, repeat the urine on a first-morning sample before any imaging, steroids or biopsy. Only protein that persists on waking, or protein with blood, hypertension or edema, needs a renal workup.</div>\n<div class=\"traps\"><div class=\"trapline\"><span class=\"pill p-seq\">Sequencing trap</span><span class=\"trapwhy\">Renal biopsy diagnoses persistent glomerular disease; it is invasive and comes only after persistence or red-flag features are shown.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">A corticosteroid trial treats nephrotic syndrome; this child has no edema and no diagnosis yet.</span></div><div class=\"trapline\"><span class=\"pill p-seq\">Sequencing trap</span><span class=\"trapwhy\">Renal ultrasonography looks for obstruction, cysts or masses; it cannot show whether the protein persists and is at most a later, selective test.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Intravenous pyelography images the collecting system for anatomic lesions and strictures; it cannot show whether the protein persists.</span></div></div>\n</div>",
+   "nav": {
+    "after_link": "bs-abdominal-mass",
+    "title": "Incidental Proteinuria"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-isolated-proteinuria",
+   "type": "next",
+   "stem": "12 yo M at a well-child visit with no illness in the past year; HR 102, RR 21, BP 102/60; normal examination; routine urinalysis shows 3+ protein",
+   "answer": "Repeat urinalysis at bedtime and on waking",
+   "companion": "orthostatic proteinuria shows protein at bedtime and a normal first-morning sample",
+   "d1": "Renal ultrasonography",
+   "d2": "Renal biopsy",
+   "lead_in": "Which of the following is the most appropriate next step in diagnosis?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-isolated-proteinuria",
+   "type": "dx",
+   "stem": "15 yo M at a sports physical; an afternoon dipstick shows 2+ protein, and a second afternoon sample a week later shows the same; first-morning urine protein-to-creatinine ratio 0.1 mg/mg with normal microscopy; BP 116/70, normal examination",
+   "answer": "Orthostatic proteinuria",
+   "companion": "reassure and repeat a first-morning dipstick in 1 year",
+   "d1": "Transient proteinuria",
+   "d2": "Persistent proteinuria",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-isolated-proteinuria",
+   "type": "dx",
+   "stem": "9 yo F seen for acute otitis media with a temperature of 39.2 °C has 1+ protein on a dipstick; 2 weeks later she is afebrile, and both an afternoon and a first-morning urine are negative for protein",
+   "answer": "Transient proteinuria",
+   "companion": "fever-related protein that needs no further testing",
+   "d1": "Orthostatic proteinuria",
+   "d2": "Persistent proteinuria",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-isolated-proteinuria",
+   "type": "next",
+   "stem": "13 yo M with 2+ protein on a well-visit dipstick; first-morning urine protein-to-creatinine ratio 0.6 mg/mg on two separate days; microscopy shows no blood or casts; BP 108/66, no edema",
+   "answer": "Complete blood count, electrolytes, blood urea nitrogen and creatinine",
+   "companion": "persistent proteinuria needs a basic renal workup",
+   "d1": "Reassurance and a repeat first-morning dipstick in 1 year",
+   "d2": "Renal biopsy",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-isolated-proteinuria",
+   "type": "next",
+   "stem": "11 yo M with 2+ protein and 2+ blood on a routine dipstick; microscopy shows red cell casts; BP 138/90; no edema",
+   "answer": "Referral to pediatric nephrology",
+   "companion": "protein with blood, casts and hypertension is glomerular disease, not a benign pattern",
+   "d1": "Repeat urinalysis on a first-morning sample",
+   "d2": "Trial of oral prednisone",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-isolated-proteinuria",
+   "type": "avoid",
+   "stem": "14 yo M with 3+ protein on a dipstick at a routine visit; no edema, normal blood pressure, no blood in the urine; no repeat sample collected yet",
+   "answer": "Trial of oral prednisone",
+   "companion": "steroids treat nephrotic syndrome, not an unconfirmed dipstick finding",
+   "d1": "Repeat urinalysis on a first-morning sample",
+   "d2": "Urine microscopy for red cells and casts",
+   "lead_in": "Which of the following should be avoided at this point?",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-isolated-proteinuria",
+   "type": "test",
+   "stem": "16 yo M with 1+ protein on a dipstick at a sports physical; normal examination and blood pressure; no blood in the urine",
+   "answer": "First-morning urine protein-to-creatinine ratio",
+   "companion": "0.2 mg/mg or less on waking fits orthostatic or transient proteinuria",
+   "d1": "Afternoon urine protein-to-creatinine ratio",
+   "d2": "24-hour urine protein collection",
+   "lead_in": "Which of the following urine studies is most appropriate to obtain next?",
+   "src": "authored"
+  },
+  {
+   "op": "insert_after",
+   "brief": "bs-nephritic",
+   "anchor": "does the urine show protein alone or blood?",
+   "html": " Part II <b>Incidental Proteinuria in a Well Child</b> covers protein on a routine dipstick in a child with no symptoms."
+  },
+  {
+   "op": "insert_after",
+   "brief": "nephrotic-child",
+   "anchor": "owns relapse, peritonitis, thrombosis and vaccines in the nephrotic child.",
+   "html": " Part II <b>Incidental Proteinuria in a Well Child</b> covers protein on a routine dipstick with no edema, which starts with a first-morning repeat."
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "edits": [
+  {
+   "op": "insert_after",
+   "brief": "limp",
+   "anchor": "Age picks the disease: infant DDH",
+   "html": " or a walker with missed DDH",
+   "note": "Q26: spine steered a 16-month-old away from DDH"
+  },
+  {
+   "op": "insert_after",
+   "brief": "limp",
+   "anchor": "Breech, female, family history",
+   "html": "; missed in infancy, a <b>painless limp</b>, <b>shorter leg</b> and <b>limited abduction</b> once walking",
+   "note": "Q26: late presentation of DDH"
+  },
+  {
+   "op": "insert_before",
+   "brief": "limp",
+   "anchor": "<tr><td>MRI</td>",
+   "html": "<tr><td>AP radiograph of the pelvis</td><td>By branch</td><td><b>Shallow</b> acetabulum with the femoral head displaced</td><td>Walker with a painless limp, shorter leg and limited abduction: missed DDH; under about 4 to 6 months, ultrasound instead</td></tr>\n",
+   "note": "Q26: imaging for late DDH; ultrasound age cutoff from NBME explanation"
+  },
+  {
+   "op": "insert_before",
+   "brief": "limp",
+   "anchor": "<div class=\"pearls\"><span class=\"lbl\">Pairs with</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">Missed DDH</span> <b>DDH</b> (developmental dysplasia of the hip) is a <b>poorly developed acetabulum</b> that leaves the femoral head unstable. Untreated, it leads to disability, pain and early osteoarthritis. How NBME framed it: every option was a disease written as its mechanism, and the stem gave a walker's signs instead of Barlow or Ortolani.</div>\n<div class=\"traps\"><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Displacement of the capital femoral epiphysis &mdash; this is slipped capital femoral epiphysis stated as a mechanism. It affects adolescents and limits hip internal rotation.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Failure of osteoid to mineralize &mdash; this is rickets stated as a mechanism. Vitamin D deficiency bows both legs; it does not shorten one leg or limit one hip.</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Acute epiphyseal fracture &mdash; a growth plate fracture follows trauma and causes pain, bruising and guarding. This limp is painless and has lasted 4 months.</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Acute suppurative arthritis &mdash; septic arthritis brings fever, joint pain and lost motion. This child is healthy with a painless limp for 4 months.</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Avulsion of muscle origin &mdash; an avulsion follows an injury and is painful, often with a palpable defect or mass. This history has no injury and no pain.</span></div></div>\n",
+   "note": "Q26: mechanism, outcome, NBME framing, one trapline per distractor"
+  },
+  {
+   "op": "insert_after",
+   "brief": "limp",
+   "anchor": "could the child have generated this force himself?",
+   "html": " Part II <b>Congenital Muscular Torticollis and Plagiocephaly</b> owns breech crowding in the newborn: does a baby with torticollis also need a hip exam?",
+   "note": "Q26: breech association owned by bs-torticollis"
+  },
+  {
+   "op": "add_item",
+   "brief": "limp",
+   "type": "mech",
+   "stem": "16 mo F born breech by cesarean, painless limp since she began walking 4 months ago, left leg shorter than the right, left hip abduction limited to 30 degrees, normal strength and sensation",
+   "answer": "Poorly developed acetabulum",
+   "companion": "Developmental dysplasia of the hip, presenting late",
+   "d1": "Displacement of the capital femoral epiphysis",
+   "d2": "Failure of osteoid to mineralize",
+   "lead_in": "Which of the following best explains the mechanism behind these findings?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "limp",
+   "type": "test",
+   "stem": "2 yo F, painless limp since she started walking, right leg shorter than the left, limited right hip abduction, afebrile",
+   "answer": "Radiograph of the pelvis",
+   "companion": "Missed developmental dysplasia of the hip; ultrasound is for infants under about 4 to 6 months",
+   "d1": "Ultrasound of the hips",
+   "d2": "MRI of the pelvis",
+   "lead_in": "Which of the following is the most appropriate diagnostic study to obtain at this time?",
+   "src": "authored"
+  }
+ ]
+}

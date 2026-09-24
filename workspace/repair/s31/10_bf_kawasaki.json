@@ -1,0 +1,56 @@
+{
+ "edits": [
+  {
+   "op": "insert_before",
+   "brief": "kawasaki",
+   "anchor": "<div class=\"rule\"><span class=\"lbl\">Transferable rule</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">Untreated disease</span> <b>Coronary aneurysm</b> &mdash; can expand, rupture or cause a myocardial infarction · <b>Heart failure</b> &mdash; tachypnea, tachycardia, hypotension, cardiomegaly and ischemic ST depression · <b>Mitral valve</b> &mdash; regurgitation, not stenosis · <b>Lungs and pulmonary vessels</b> &mdash; rarely involved · <b>Workup</b> &mdash; <b>ECG</b> (electrocardiogram) and echocardiogram as soon as Kawasaki is suspected</div>\n<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The untreated Kawasaki illness sits in the past history as an episode that resolved on its own, and the mechanism lead-in is keyed to heart failure.</div>\n<div class=\"pearls\"><span class=\"lbl\">Pairs with</span> Part I <b>New Heart Failure in a Child</b>: is the failing heart from an untreated Kawasaki illness in the history or from an acute viral myocarditis?</div>\n",
+   "note": "NBME Q9: late cardiac course of untreated Kawasaki, framing line, pairs-with myocarditis"
+  },
+  {
+   "op": "insert_after",
+   "brief": "kawasaki",
+   "anchor": "Ask which findings your diagnosis leaves orphaned.</div>",
+   "html": "\n<div class=\"traps\">\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Pericardial effusion &mdash; a real Kawasaki complication, but tamponade adds raised jugular venous pressure and pulsus paradoxus; cardiomegaly with ischemic ST depression fits heart failure.</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Mitral valve obstruction &mdash; Kawasaki affects the mitral valve as regurgitation, not stenosis, and no stenotic murmur is heard.</span></div>\n<div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Chronic inflammatory interstitial lung disease &mdash; Kawasaki rarely involves the lungs, and the film shows cardiomegaly rather than interstitial fibrosis.</span></div>\n<div class=\"trapline\"><span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">Thickened internal layer of pulmonary arterioles &mdash; Kawasaki is a medium-vessel vasculitis that targets the coronary arteries and rarely involves the pulmonary vessels.</span></div>\n</div>",
+   "note": "one trapline per original NBME Q9 distractor"
+  },
+  {
+   "op": "add_item",
+   "brief": "kawasaki",
+   "type": "mech",
+   "stem": "18 mo M with 2 days of fast breathing and irritability; 2 months ago he had high fever, conjunctivitis, red swollen hands, enlarged nodes and cracked red lips that resolved on their own; now T 38°C, HR 150/min, RR 60/min, BP 60/40 mm Hg, cardiomegaly on chest x-ray and ST depression on ECG",
+   "answer": "Congestive heart failure",
+   "companion": "late cardiac complication of untreated Kawasaki disease",
+   "d1": "Pericardial effusion",
+   "d2": "Mitral valve obstruction",
+   "lead_in": "Which of the following best explains this child's rapid breathing?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "kawasaki",
+   "type": "test",
+   "stem": "3 yo M with 6 days of fever, bilateral nonexudative conjunctivitis, cracked red lips, a polymorphous rash and swollen red hands",
+   "answer": "Echocardiogram",
+   "companion": "baseline coronary assessment at diagnosis; IVIG is not delayed for it",
+   "d1": "Urine culture",
+   "d2": "Rapid strep test",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "kawasaki",
+   "type": "mech",
+   "stem": "2 yo F, 3 weeks after 7 days of fever with conjunctivitis, cracked lips, rash and hand swelling that were never treated, now with peeling skin around the fingernails and a high platelet count",
+   "answer": "Coronary artery aneurysm",
+   "companion": "echocardiogram now; untreated aneurysms can progress to infarction or heart failure",
+   "d1": "Mitral valve stenosis",
+   "d2": "Interstitial lung disease",
+   "lead_in": "Which of the following complications is this child at greatest risk of developing?",
+   "src": "authored"
+  }
+ ]
+}

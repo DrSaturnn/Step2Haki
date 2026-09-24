@@ -1,0 +1,76 @@
+{
+ "edits": [
+  {
+   "op": "insert_after",
+   "brief": "tumor-syndromes",
+   "anchor": "<b>six or more with regular borders plus axillary freckling</b> is NF1",
+   "html": " (each macule over <b>5 mm</b> before puberty or over <b>15 mm</b> after puberty)",
+   "note": "NF1 size threshold, NIH 1988 criteria unchanged in 2021 revision (Legius et al., Genet Med 2021)"
+  },
+  {
+   "op": "insert_before",
+   "brief": "tumor-syndromes",
+   "anchor": "<div class=\"pearls\"><span class=\"lbl\">Decision spine</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">Neurofibromatosis type 1: tumor risk</span> <b>Optic nerve glioma</b> &mdash; the most common brain tumor in neurofibromatosis type 1; usually a low-grade pilocytic astrocytoma of one or both optic nerves or the chiasm &middot; <b>Presentation</b> &mdash; insidious vision loss, proptosis and optic atrophy &middot; <b>Eye surveillance</b> &mdash; children with neurofibromatosis type 1 need an eye examination yearly until age 8, then every 2 years until 18 &middot; <b>Pheochromocytoma</b> &mdash; risk also raised &middot; <b>No established link</b> &mdash; medulloblastoma, craniopharyngioma, and arteriovenous malformation, which belongs to Wyburn-Mason syndrome</div>\n",
+   "note": "NBME Q12: optic nerve glioma is the NF1 tumor risk; distractor lesions without a link"
+  },
+  {
+   "op": "insert_after",
+   "brief": "tumor-syndromes",
+   "anchor": "reversing the order leaves alpha stimulation unopposed ⚠︎.",
+   "html": " &middot; How NBME framed it: a well 17-year-old at a sports physical has about 10 light brown macules and axillary freckling, and the syndrome is never named. After puberty only macules over 15 mm count, so the axillary freckling supplies the second criterion. The lead-in asks which lesion carries a raised risk compared with the general population.",
+   "note": "NBME framing sentence"
+  },
+  {
+   "op": "insert_after",
+   "brief": "tumor-syndromes",
+   "anchor": "ask: is the skin lesion vascular, or a fibrous tumor?",
+   "html": " Part I <b>Sellar and Suprasellar Masses</b> owns optic pathway glioma and craniopharyngioma as masses; ask: does the visual field loss come from the optic nerve or from the sella?",
+   "note": "cross-link for the optic glioma and craniopharyngioma distractors"
+  },
+  {
+   "op": "insert_after",
+   "brief": "tumor-syndromes",
+   "anchor": "not a firm periungual fibroma</span></div>",
+   "html": "<div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Medulloblastoma, for the teenager with 10 café-au-lait macules &mdash; The most common malignant brain tumor of childhood, with raised intracranial pressure and ataxia, but neurofibromatosis type 1 does not raise its risk</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Craniopharyngioma &mdash; A Rathke pouch remnant that causes bitemporal field loss; neurofibromatosis type 1 does not raise its risk</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Arteriovenous malformation &mdash; Retinal and midbrain arteriovenous malformations belong to Wyburn-Mason syndrome, not neurofibromatosis type 1</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Cerebral aneurysm &mdash; An adult cause of intracranial hemorrhage; the tumor this skin pattern predicts is an optic nerve glioma</span></div>",
+   "note": "one trapline per Q12 distractor"
+  },
+  {
+   "op": "add_item",
+   "brief": "tumor-syndromes",
+   "type": "mech",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   },
+   "stem": "Asymptomatic 17 yo M at a sports physical with about 10 light brown macules 0.6 to 2 cm across the trunk and limbs and freckling in both axillae",
+   "answer": "Optic nerve glioma",
+   "companion": "Neurofibromatosis type 1; eye examination yearly until age 8, then every 2 years until 18",
+   "d1": "Medulloblastoma",
+   "d2": "Craniopharyngioma",
+   "lead_in": "This patient has a higher risk than the general population of developing which of the following?"
+  },
+  {
+   "op": "add_item",
+   "brief": "tumor-syndromes",
+   "type": "screen",
+   "src": "authored",
+   "stem": "6-year-old with 7 café-au-lait macules over 5 mm, inguinal freckling, normal vision and a normal examination otherwise",
+   "answer": "Yearly eye examination",
+   "companion": "Neurofibromatosis type 1; screens for optic nerve glioma",
+   "d1": "Yearly brain MRI",
+   "d2": "Yearly abdominal MRI"
+  },
+  {
+   "op": "add_item",
+   "brief": "tumor-syndromes",
+   "type": "mech",
+   "src": "authored",
+   "stem": "9-year-old with neurofibromatosis type 1 and months of painless vision loss in one eye, mild proptosis and a pale optic disc",
+   "answer": "Optic nerve glioma",
+   "companion": "Usually a low-grade pilocytic astrocytoma",
+   "d1": "Craniopharyngioma",
+   "d2": "Retinal hemangioblastoma"
+  }
+ ]
+}

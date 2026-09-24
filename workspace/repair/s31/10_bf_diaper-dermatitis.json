@@ -1,0 +1,65 @@
+{
+ "edits": [
+  {
+   "op": "insert_after",
+   "brief": "diaper-dermatitis",
+   "anchor": "<b>ulcers with fever and adenopathy</b> in HSV",
+   "html": ", or <b>mucopurulent discharge</b> in gonorrhea and chlamydia",
+   "note": "Q11 distractor A: gonorrhea and chlamydia give mucopurulent discharge (NBME explanation)"
+  },
+  {
+   "op": "insert_after",
+   "brief": "diaper-dermatitis",
+   "anchor": "<b>recent diarrhea, recent antibiotics, and oral thrush</b>",
+   "html": " &middot; <b>Candidal vulvovaginitis in a toilet-trained girl</b> &mdash; dysuria, redness over the vulva and whole perineum reaching the perianal skin, and white discharge at the introitus; treat with topical nystatin, since topical agents are preferred for superficial candidiasis &middot; <b>Risk factors for candidal vulvovaginitis</b> &mdash; diabetes mellitus, recent antibiotics and corticosteroids; none is required",
+   "note": "Q11 deciding finding, key and risk factors (NBME explanation and educational objective)"
+  },
+  {
+   "op": "insert_before",
+   "brief": "diaper-dermatitis",
+   "anchor": "<div class=\"pearls\"><span class=\"lbl\">Pairs with</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The stem opens on burning with urination and closes on a pending culture, while the diagnosis sits in the white discharge and perineal-to-perianal redness.</div>\n",
+   "note": "Q11 NBME framing sentence required by task"
+  },
+  {
+   "op": "insert_after",
+   "brief": "diaper-dermatitis",
+   "anchor": "are there satellites?</i>",
+   "html": " Part I <b>Maternal Hormone Effects in the Newborn</b> covers vaginal discharge in a newborn girl: <i>is the discharge white with perineal redness, or mucoid in a well newborn?</i>",
+   "note": "Pairs-with link for the vulvovaginal candidiasis angle"
+  },
+  {
+   "op": "insert_after",
+   "brief": "diaper-dermatitis",
+   "anchor": "a social detail is not a finding.</span></div>",
+   "html": "\n  <div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Intramuscular ceftriaxone and oral azithromycin &mdash; this treats gonorrhea and chlamydia, which give mucopurulent discharge, not white discharge; in a prepubertal child past the newborn period either infection also prompts a sexual abuse evaluation.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Oral acyclovir &mdash; herpes simplex virus gives painful vesicles on a red base; this perineum has no vesicles or pustules.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Oral amoxicillin &mdash; burning with urination suggests cystitis, but redness over the vulva and perineum with white discharge points to candidal vulvovaginitis.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Oral metronidazole &mdash; it treats bacterial vaginosis and trichomoniasis but has no activity against Candida.</span></div>",
+   "note": "Q11 one trapline per original distractor; metronidazole reason is standard pharmacology, not the NBME rationale"
+  },
+  {
+   "op": "add_item",
+   "brief": "diaper-dermatitis",
+   "type": "next",
+   "stem": "5 yo F, 5 days of burning with urination and vulvar redness, afebrile, no medications or serious illness, abuse denied; moderate erythema over the vulva and entire perineum reaching the perianal skin, no vesicles or pustules, scant white discharge at the introitus; vaginal culture pending",
+   "answer": "Topical nystatin",
+   "companion": "candidal vulvovaginitis",
+   "d1": "Oral amoxicillin",
+   "d2": "Oral metronidazole",
+   "lead_in": "Which of the following is the most appropriate pharmacotherapy?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "diaper-dermatitis",
+   "type": "dx",
+   "stem": "4 yo F, toilet-trained, finished amoxicillin for otitis media last week; vulvar itching, erythema over the vulva and perineum extending into the inguinal creases with satellite papules, thick white discharge at the introitus",
+   "answer": "Candidal vulvovaginitis",
+   "companion": "topical antifungal such as nystatin",
+   "d1": "Irritant contact dermatitis",
+   "d2": "Perianal group A streptococcal disease",
+   "src": "authored"
+  }
+ ]
+}

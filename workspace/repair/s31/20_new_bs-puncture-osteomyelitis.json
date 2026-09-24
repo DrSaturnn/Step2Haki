@@ -1,0 +1,76 @@
+{
+ "edits": [
+  {
+   "op": "new_brief",
+   "after": "bs-synovitis-mgmt",
+   "html": "<div class=\"brief bs\" id=\"bs-puncture-osteomyelitis\" data-shelf=\"fm peds\" data-bp=\"msk\">\n<h4>Foot Puncture Wound Infection</h4>\n<p class=\"sub\">Red, tender foot weeks after a nail through a shoe &middot; NBME &middot; what exposure did the stem give?</p>\n<div class=\"vignette\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 7 yo M seen 3 weeks after a nail went through his shoe into the right sole; the wound was cleaned and dressed, but moderate pain persists; last tetanus vaccine at age 5, otherwise healthy; T 37.2 C, other vitals normal; the site is red, warm and tender &middot; <b>Q</b> &mdash; the most likely causal organism; options spanned Pseudomonas aeruginosa, Staphylococcus aureus, group A streptococcus, Aeromonas hydrophila and Klebsiella pneumoniae</div>\n<div class=\"dp\"><span class=\"lbl\">The decision point</span>\n<p>A foot that stays <b>painful, red, warm and tender weeks after a nail went through a shoe</b> suggests osteomyelitis from direct inoculation. The classic organism is <b>Pseudomonas aeruginosa</b>. It colonizes the foam inner sole of athletic shoes, and the nail carries it into bone or cartilage. Systemic signs are often minimal; this boy's temperature was 37.2 C.</p>\n<p>Infection in the <b>first few days</b> after a puncture is usually cellulitis from <b>Staphylococcus aureus</b> or streptococci. S. aureus is also the most common cause of osteomyelitis overall. Pseudomonas is the classic organism only for the <b>delayed</b> bone or cartilage infection after a puncture through a shoe.</p></div>\n<table data-mask=\"3\"><caption>Wound organisms by exposure<span class=\"cap-sub\">what the history must supply for each</span></caption>\n<thead><tr><th>Organism</th><th>Exposure and course</th><th>Key discriminator</th><th>Why less likely here</th></tr></thead>\n<tbody>\n<tr><td><b>Pseudomonas aeruginosa</b></td><td>Nail through the sole of an athletic shoe; pain, redness and tenderness persist or return days to weeks later</td><td><b>Puncture through a shoe</b> with a <b>delayed</b> deep infection</td><td>Fits: shoe puncture and a 3-week course</td></tr>\n<tr><td>Staphylococcus aureus</td><td>Most common cause of osteomyelitis overall, by blood spread or direct inoculation; most common cause of early infection after a puncture</td><td><b>Early</b> cellulitis or abscess, or osteomyelitis without a shoe puncture</td><td>The puncture through a shoe makes Pseudomonas more likely</td></tr>\n<tr><td>Aeromonas hydrophila</td><td>Wound contaminated by <b>fresh water</b> at the time of injury; also diarrhea and infections in immunocompromised hosts</td><td><b>Freshwater</b> exposure at injury</td><td>No water exposure</td></tr>\n<tr><td>Group A streptococcus</td><td>Pharyngitis, impetigo, erysipelas and cellulitis; necrotizing fasciitis and toxic shock</td><td>Fast-spreading <b>superficial</b> skin infection</td><td>Not the classic cause of a delayed bone infection after a puncture</td></tr>\n<tr><td>Klebsiella pneumoniae</td><td>Aspiration pneumonia, for example in alcohol use disorder</td><td><b>Lung</b> infection with an aspiration risk</td><td>No lung source and no link to puncture wounds</td></tr>\n</tbody>\n</table>\n<table data-mask=\"4\"><caption>Diagnostic workup</caption>\n<thead><tr><th>Test</th><th>Order</th><th>Result</th><th>What it points to</th></tr></thead>\n<tbody>\n<tr><td>Plain radiograph of the foot</td><td>First</td><td>Often <b>normal</b> early; may show a retained radiopaque foreign body</td><td>A normal film does not exclude osteomyelitis</td></tr>\n<tr><td>MRI of the foot</td><td>Next</td><td><b>Marrow edema</b></td><td>Osteomyelitis; more sensitive than radiographs</td></tr>\n<tr><td>Bone culture at surgical debridement</td><td>Confirms</td><td><b>Organism</b> grown</td><td>Names the organism and guides antibiotics</td></tr>\n</tbody>\n</table>\n<h5 class=\"authored-hdr\">Scenario bank</h5>\n<ol class=\"bank authored\">\n</ol>\n<div class=\"danger\"><span class=\"lbl\">Management</span> Osteomyelitis after a puncture needs <b>surgical debridement</b> to remove dead tissue. Bone cultures taken at debridement name the organism. Empiric antibiotics should cover both <b>Pseudomonas</b> and <b>Staphylococcus aureus</b> until cultures return.</div>\n<div class=\"danger\"><span class=\"lbl\">Decoy note</span> The tetanus history does not point to any organism. His last dose was 2 years earlier, within the 5-year limit for a puncture wound, so he needs no booster. A near-normal temperature does not argue against bone infection after a puncture.</div>\n<div class=\"pearls\"><span class=\"lbl\">Pearls</span> Pseudomonas is a gram-negative rod that is aerobic and oxidase-positive &middot; Aeromonas hydrophila infects wounds exposed to fresh water; Vibrio vulnificus infects wounds exposed to salt water &middot; How NBME framed it: the stem never names osteomyelitis, and the options set the key beside S. aureus and a water-borne organism.</div>\n<div class=\"pearls\"><span class=\"lbl\">Pairs with</span> Part I <b>Septic Arthritis of the Hip</b> lists joint organisms by host. <b>Pyelonephritis: Naming the Organism</b> keys Pseudomonas for a catheter-associated urinary infection. Ask which the stem supplies: a host, a site or an exposure.</div>\n<div class=\"rule\"><span class=\"lbl\">Transferable rule</span> Name the organism from the exposure in the history. A delayed deep foot infection after a nail through a shoe points to <b>Pseudomonas</b>. Without that exposure, <b>S. aureus</b> remains the most common cause of osteomyelitis.</div>\n<div class=\"traps\">\n  <div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Staphylococcus aureus &mdash; the most common cause of osteomyelitis overall, but a nail through a shoe with a delayed bone infection points to Pseudomonas.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Aeromonas hydrophila &mdash; a real wound pathogen, but it needs fresh-water exposure at the time of injury, which this boy did not have.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Group A streptococcus &mdash; causes pharyngitis and fast-spreading skin infections, not the classic delayed bone infection after a puncture.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">Klebsiella pneumoniae &mdash; a gram-negative rod like the key, but it causes pneumonia in patients prone to aspiration, not puncture-wound osteomyelitis.</span></div>\n</div>\n</div>",
+   "nav": {
+    "after_link": "bs-synovitis-mgmt",
+    "title": "Foot Puncture Wound Infection"
+   },
+   "note": "s31 Q6 (peds-cms-f52102): new board-style brief; NBME explanation's 'anaerobic' Aeromonas not carried."
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-puncture-osteomyelitis",
+   "type": "mech",
+   "stem": "7 yo M seen 3 weeks after a nail went through his shoe into the right sole; the wound was cleaned and dressed, but moderate pain persists; last tetanus vaccine at age 5; T 37.2 C, other vitals normal; the site is red, warm and tender",
+   "answer": "Pseudomonas aeruginosa",
+   "companion": "Osteomyelitis from direct inoculation",
+   "d1": "Staphylococcus aureus",
+   "d2": "Aeromonas hydrophila",
+   "lead_in": "Which of the following organisms is the most likely cause?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-puncture-osteomyelitis",
+   "type": "mech",
+   "stem": "9 yo F seen 2 days after a nail went through her sneaker into the sole; spreading redness, warmth and tenderness around the puncture; T 38.1 C; foot radiograph normal",
+   "answer": "Staphylococcus aureus",
+   "companion": "Early cellulitis; Pseudomonas is the concern for a deep infection that appears later",
+   "d1": "Pseudomonas aeruginosa",
+   "d2": "Aeromonas hydrophila",
+   "lead_in": "Which of the following organisms is the most likely cause?",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-puncture-osteomyelitis",
+   "type": "mech",
+   "stem": "15 yo M who stepped on a sharp branch while wading barefoot in a freshwater lake; 1 day later, rapidly spreading painful redness and swelling of the foot; T 38.9 C",
+   "answer": "Aeromonas hydrophila",
+   "companion": "Freshwater wound infection; salt water or raw shellfish points to Vibrio vulnificus",
+   "d1": "Vibrio vulnificus",
+   "d2": "Pseudomonas aeruginosa",
+   "lead_in": "Which of the following organisms is the most likely cause?",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-puncture-osteomyelitis",
+   "type": "test",
+   "stem": "8 yo M seen 2 weeks after a nail went through his sneaker into the heel; worsening heel pain and swelling with tenderness over the calcaneus; T 37.4 C; plain radiographs of the foot are normal",
+   "answer": "MRI of the foot",
+   "companion": "Early radiographs are often normal in osteomyelitis",
+   "d1": "Ultrasonography of the foot",
+   "d2": "Repeat radiographs in 2 weeks",
+   "lead_in": "Which of the following is the most appropriate next imaging study?",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-puncture-osteomyelitis",
+   "type": "next",
+   "stem": "11 yo F seen 3 weeks after a nail went through her sneaker; MRI shows osteomyelitis of the calcaneus; she is afebrile and otherwise well",
+   "answer": "Surgical debridement with bone cultures and antipseudomonal antibiotics",
+   "companion": "Pseudomonas osteomyelitis after a puncture through a shoe; empiric therapy also covers Staphylococcus aureus until cultures return",
+   "d1": "Oral cephalexin and reexamination in 1 week",
+   "d2": "Intravenous nafcillin without surgical debridement",
+   "src": "authored"
+  }
+ ]
+}

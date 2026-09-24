@@ -1,0 +1,59 @@
+{
+ "edits": [
+  {
+   "op": "insert_after",
+   "brief": "neonatal-jaundice",
+   "anchor": "often an oxidant trigger",
+   "html": "; <b>Coombs negative</b>; X-linked, so mostly boys; common with Mediterranean, African or Asian ancestry",
+   "note": "Q5: Coombs-negative hemolysis plus ancestry identifies G6PD deficiency"
+  },
+  {
+   "op": "insert_after",
+   "brief": "neonatal-jaundice",
+   "anchor": "so they are avoided in jaundiced newborns",
+   "html": " &middot; <b>G6PD</b> (glucose-6-phosphate dehydrogenase) makes <b>NADPH</b> (reduced nicotinamide adenine dinucleotide phosphate), which keeps glutathione reduced &middot; Without G6PD, sulfonamides and other oxidants cause hemolysis &middot; A sulfonamide can therefore harm a newborn in two ways: albumin displacement, and hemolysis when G6PD is deficient",
+   "note": "Q5 mechanism from NBME explanation; separates the two sulfa roles (look-alike q_e3d808bf1661371049fc)"
+  },
+  {
+   "op": "insert_after",
+   "brief": "neonatal-jaundice",
+   "anchor": "A raised direct fraction makes newborn jaundice urgent",
+   "html": " &middot; How NBME framed it: the key named only the class, enzyme deficiency, and the stem pointed to G6PD through Mediterranean ancestry, a maternal sulfonamide and a negative Coombs test",
+   "note": "Q5 NBME framing sentence"
+  },
+  {
+   "op": "insert_after",
+   "brief": "neonatal-jaundice",
+   "anchor": "leaves the stools yellow and the gallbladder normal.</span></div>",
+   "html": "\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Physiologic jaundice &mdash; a total bilirubin of 20 mg/dL exceeds the physiologic peak of about 15, and a hematocrit of 33% points to hemolysis.</span></div>\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Dehydration &mdash; raises indirect bilirubin through enterohepatic reabsorption, but frequent feeds and five stools a day argue against it, and it does not cause anemia.</span></div>\n<div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Sepsis &mdash; can raise indirect bilirubin, but this infant is well on examination; Coombs-negative anemia after an oxidant exposure points to hemolysis.</span></div>\n<div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Milk protein allergy &mdash; the cow&#39;s milk formula is a decoy; allergy causes reflux, enterocolitis, enteropathy or urticaria, not hemolysis.</span></div>",
+   "note": "Q5: one trapline per original distractor"
+  },
+  {
+   "op": "add_item",
+   "brief": "neonatal-jaundice",
+   "type": "mech",
+   "stem": "5-day-old term boy of Mediterranean descent with 2 days of progressive jaundice to the upper thighs; formula-fed every 2 hours with five yellow stools a day; mother took sulfamethoxazole late in pregnancy; mother and infant both group O, Rh-positive; hematocrit 33%, total bilirubin 20 mg/dL, direct 0.9 mg/dL; direct and indirect Coombs tests negative",
+   "answer": "Enzyme deficiency",
+   "companion": "G6PD deficiency; the sulfonamide is an oxidant trigger for hemolysis",
+   "d1": "Physiologic jaundice",
+   "d2": "Dehydration",
+   "lead_in": "Which of the following is the most likely explanation for this patient's jaundice?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "neonatal-jaundice",
+   "type": "test",
+   "stem": "4-day-old term boy of Greek descent with jaundice to the abdomen; feeding well; mother and infant both group A, Rh-positive; hematocrit 36%, reticulocytes high, total bilirubin 17 mg/dL, direct 0.6 mg/dL; direct Coombs test negative; smear shows no spherocytes",
+   "answer": "G6PD enzyme activity level",
+   "companion": "Coombs-negative hemolysis in a boy of Mediterranean ancestry",
+   "d1": "Osmotic fragility testing",
+   "d2": "Liver panel with GGT",
+   "lead_in": "Which of the following laboratory studies is most likely to confirm the diagnosis?",
+   "src": "authored"
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "edits": [
+  {
+   "op": "set_attr",
+   "target": "q_aeb588e544ebeb4b9c39",
+   "attr": "data-nbme",
+   "value": "peds-cms-cb45d9"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7e472e5bd7e09a357f4d",
+   "attr": "data-nbme",
+   "value": "peds-cms-060d9c"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bfc2adf60a295d1a841a",
+   "attr": "data-nbme",
+   "value": "peds-cms-2944bc"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ee07b7cec8875310382c",
+   "attr": "data-nbme",
+   "value": "peds-cms-6facf4"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d5a219c1127f50cba341",
+   "attr": "data-nbme",
+   "value": "peds-cms-dbb94d"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bbe63e88a23044cd7f3a",
+   "attr": "data-nbme",
+   "value": "peds-cms-9b4c4f"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_163add7fdad553c2a5e2",
+   "attr": "data-nbme",
+   "value": "peds-cms-e6a460"
+  },
+  {
+   "op": "insert_before",
+   "brief": "rmsf",
+   "anchor": "<div class=\"rule\">",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> Kawasaki disease appeared under its formal name, mucocutaneous lymph node syndrome, as a decoy for a child with 4 days of fever, red eyes and a petechial rash on the palms.</div>\n"
+  },
+  {
+   "op": "insert_before",
+   "brief": "bs-nephritic",
+   "anchor": "<div class=\"rule\">",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> Serum C3 was keyed against echocardiography, an antinuclear antibody assay, urine culture and renal ultrasonography, with a soft ejection murmur after the sore throat as bait for rheumatic carditis.</div>\n"
+  },
+  {
+   "op": "insert_before",
+   "brief": "bs-umbilical",
+   "anchor": "<div class=\"rule\">",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> A sleepy 2-month-old at his first visit, with an umbilical hernia, persistent jaundice and cool extremities, needed thyroid function tests, not karyotype, sweat chloride or head or liver computed tomography.</div>\n"
+  },
+  {
+   "op": "insert_before",
+   "brief": "redeye",
+   "anchor": "<div class=\"rule\">",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> A home birth delivered by the father stood in for missing eye prophylaxis, and Kawasaki disease was listed under its formal name, mucocutaneous lymph node syndrome.</div>\n"
+  },
+  {
+   "op": "insert_before",
+   "brief": "neonatal-rash",
+   "anchor": "<div class=\"rule\">",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> Erythema toxicum appeared as small yellow papules on a red base; each decoy fits another rash: staphylococcal or herpes culture, potassium hydroxide prep, topical steroid.</div>\n"
+  },
+  {
+   "op": "insert_before",
+   "brief": "bs-leukemia",
+   "anchor": "<div class=\"rule\">",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> A systemic juvenile idiopathic arthritis diagnosis made 2 months earlier, partly improved on ibuprofen, was the anchor; new pancytopenia with hepatosplenomegaly still meant bone marrow aspiration, not imaging or liver biopsy.</div>\n"
+  },
+  {
+   "op": "insert_before",
+   "brief": "lymphadenitis",
+   "anchor": "<div class=\"rule\">",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> Scratches from a pet cat were planted beside a cat-scratch disease option, but acute midline pain that worsens with swallowing or tongue protrusion names an infected thyroglossal duct cyst.</div>\n"
+  },
+  {
+   "op": "insert_before",
+   "brief": "arf",
+   "anchor": "<div class=\"traps\">",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> No sore throat was mentioned, only a recent refugee camp, which also invited the travel-fever decoys; Kawasaki disease appeared as mucocutaneous lymph node syndrome, and the mitral murmur was described, not named.</div>\n"
+  },
+  {
+   "op": "replace",
+   "brief": "redeye",
+   "find": "→ <b>oral</b> erythromycin (counsel on pyloric stenosis)",
+   "with": "→ <b>oral</b> erythromycin, or oral azithromycin as the alternative (counsel on pyloric stenosis with either)"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "Yeast overgrowth; in a prepubertal child essentially requires recent antibiotics or immunosuppression",
+   "with": "Yeast overgrowth; uncommon in a prepubertal child without a risk factor such as diapers, recent antibiotics, diabetes or immunosuppression"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "in a prepubertal child it essentially requires recent antibiotics or immunosuppression",
+   "with": "in a prepubertal child it is uncommon without a risk factor such as diapers, recent antibiotics, diabetes or immunosuppression"
+  }
+ ]
+}

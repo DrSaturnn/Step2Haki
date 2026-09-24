@@ -1,0 +1,115 @@
+{
+ "edits": [
+  {
+   "op": "new_brief",
+   "after": "bs-tdap-preg",
+   "html": "<div class=\"brief bs\" id=\"bs-genital-ulcer\" data-shelf=\"fm peds\" data-bp=\"repro_f\">\n<h4>Genital Ulcer: Painless or Painful</h4>\n<p class=\"sub\">Painless genital ulcer with a raised border in a sexually active adolescent &middot; NBME &middot; does the ulcer hurt, and are there vesicles or suppurating nodes?</p>\n<div class=\"vignette\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 17 yo F, 5 days of a nontender vulvar lesion; three male partners, condoms used inconsistently; afebrile, normal vital signs &middot; <b>Exam</b> &mdash; 2 cm ulcer with raised borders on the right labium majus &middot; <b>Q</b> &mdash; the most likely causal organism; options were organism classes: gram-negative bacillus, gram-negative diplococcus, obligate intracellular bacterium, protozoan, spirochete and virus</div>\n<div class=\"dp\"><span class=\"lbl\">The decision point</span>\n<p>A single <b>painless</b> genital ulcer with a firm, raised border and no systemic signs is a <b>primary syphilis chancre</b>. The cause is <i>Treponema pallidum</i>, a <b>spirochete</b>. Genital herpes and chancroid both cause <b>painful</b> ulcers. <b>HSV</b> (herpes simplex virus) starts as grouped vesicles that break into shallow ulcers. Chancroid causes deep ulcers, often with <b>tender suppurative inguinal nodes</b>.</p>\n<p>A chancre can also be multiple or painful, and the exam alone often misleads. Test every genital ulcer for syphilis and HSV, and test for HIV. Early in primary syphilis the <b>RPR</b> (rapid plasma reagin) can still be <b>nonreactive</b>. Darkfield microscopy or a molecular test of the ulcer exudate detects the spirochete directly.</p>\n</div>\n<table data-mask=\"4\">\n<caption>Genital ulcer in a sexually active patient: the differential</caption>\n<thead><tr><th>Diagnosis</th><th>Ulcer</th><th>Nodes and course</th><th>The NBME tell</th></tr></thead>\n<tbody>\n<tr><td><b>Primary syphilis</b>: <i>Treponema pallidum</i>, a spirochete</td><td>Usually single, <b>painless</b>, clean base, firm raised border</td><td>Painless, rubbery inguinal nodes; heals in weeks even untreated, and secondary syphilis can follow</td><td><b>Painless ulcer with an indurated, raised border</b>; no vesicles</td></tr>\n<tr><td>Genital herpes: HSV-2 or HSV-1, a virus</td><td><b>Painful</b> grouped vesicles on a red base that break into shallow ulcers, then crust</td><td>Tender inguinal nodes; a first episode can bring fever and dysuria; recurs</td><td><b>Vesicles first</b>, painful, often multiple</td></tr>\n<tr><td>Chancroid: <i>Haemophilus ducreyi</i>, a gram-negative bacillus</td><td>One or more deep, <b>painful</b> ulcers with ragged, undermined edges and a purulent base</td><td>Tender suppurative inguinal nodes (buboes) that can rupture; rare in the United States</td><td><b>Painful ulcer with a suppurating node</b></td></tr>\n<tr><td>Lymphogranuloma venereum: <i>Chlamydia trachomatis</i> L1 to L3, an obligate intracellular bacterium</td><td>Small papule or ulcer that heals on its own and often goes unnoticed</td><td>Tender, usually unilateral inguinal or femoral nodes; proctocolitis after rectal exposure</td><td><b>The nodes, not the ulcer</b>, bring the patient in</td></tr>\n<tr><td>Discharge infections: <i>N. gonorrhoeae</i> (gram-negative diplococcus), <i>C. trachomatis</i> (obligate intracellular), <i>Trichomonas vaginalis</i> (protozoan)</td><td>No ulcer</td><td>Cervicitis, urethritis and pelvic inflammatory disease; trichomoniasis gives a frothy, malodorous discharge</td><td><b>Discharge without an ulcer</b></td></tr>\n</tbody>\n</table>\n<div class=\"tw\">\n<table data-mask=\"4\"><caption>Diagnostic workup</caption>\n<thead><tr><th>Test</th><th>Order</th><th>Result</th><th>What it points to</th></tr></thead>\n<tbody>\n<tr><td>Nontreponemal test (RPR or VDRL, Venereal Disease Research Laboratory) plus a treponemal test</td><td>First</td><td>Both <b>reactive</b></td><td>Syphilis; a nonreactive nontreponemal test does not exclude early primary syphilis</td></tr>\n<tr><td>HSV NAAT (nucleic acid amplification test, usually PCR, polymerase chain reaction) of a lesion swab</td><td>First</td><td><b>Positive</b></td><td>Genital herpes</td></tr>\n<tr><td>HIV test</td><td>Screen</td><td><b>Reactive</b></td><td>Co-infection; test everyone with a genital ulcer</td></tr>\n<tr><td>Darkfield microscopy or PCR of ulcer exudate</td><td>Confirms</td><td>Motile <b>spirochetes</b> or <i>T. pallidum</i> DNA</td><td>Primary syphilis, including before serology turns reactive</td></tr>\n<tr><td><i>H. ducreyi</i> culture on special media</td><td>By branch</td><td><b>Positive</b> in under 80%</td><td>Chancroid; probable when ulcers are painful and syphilis and HSV tests are negative</td></tr>\n<tr><td>Tzanck smear</td><td>Skip</td><td>Insensitive and nonspecific</td><td>Replaced by HSV NAAT</td></tr>\n</tbody>\n</table>\n</div>\n<h5 class=\"authored-hdr\">Scenario bank</h5>\n<ol class=\"bank authored\">\n</ol>\n<div class=\"danger\"><span class=\"lbl\">Management</span> <b>Primary syphilis</b> &mdash; <b>benzathine penicillin G</b> 2.4 million units IM (intramuscular) once for adults and adolescents; children get 50,000 units/kg, up to 2.4 million units &middot; <b>Penicillin allergy, not pregnant</b> &mdash; doxycycline 100 mg orally twice daily for 14 days &middot; <b>Pregnancy</b> &mdash; penicillin only; desensitize a patient with penicillin allergy, then treat &middot; <b>Genital herpes, first episode</b> &mdash; oral acyclovir, valacyclovir or famciclovir for 7 to 10 days &middot; <b>Chancroid</b> &mdash; azithromycin 1 g orally once or ceftriaxone 250 mg IM once</div>\n<div class=\"pearls\"><span class=\"lbl\">Organism classes</span> <b>Spirochete</b> &mdash; <i>Treponema pallidum</i>: painless chancre &middot; <b>Virus</b> &mdash; herpes simplex virus: painful vesicles, then ulcers &middot; <b>Gram-negative bacillus</b> &mdash; <i>Haemophilus ducreyi</i>: painful ulcer, suppurative nodes &middot; <b>Obligate intracellular bacterium</b> &mdash; <i>Chlamydia trachomatis</i>: cervicitis, or lymphogranuloma venereum with prominent nodes &middot; <b>Gram-negative diplococcus</b> &mdash; <i>Neisseria gonorrhoeae</i>: cervicitis and discharge &middot; <b>Protozoan</b> &mdash; <i>Trichomonas vaginalis</i>: frothy, malodorous discharge</div>\n<div class=\"pearls\"><span class=\"lbl\">Pearls</span> In the United States, most genital ulcers in young, sexually active patients are genital herpes or syphilis &middot; Treat presumptively for syphilis when the ulcer looks like a chancre, before results return &middot; The <b>Jarisch-Herxheimer reaction</b> is fever, headache and myalgia within 24 hours of treating syphilis; it is not a penicillin allergy &middot; How NBME framed it: every option was an organism class, so the ulcer had to be named as syphilis and then matched to spirochete.</div>\n<div class=\"pearls\"><span class=\"lbl\">Pairs with</span> Part II <b>Fever, Rash and Joint Pain in a Child or Adolescent</b> owns secondary syphilis: is there a rash on the palms and soles? Part I <b>Acute Cervicitis</b> owns gonorrhea and chlamydia: is there a discharge instead of an ulcer?</div>\n<div class=\"rule\"><span class=\"lbl\">Transferable rule</span> For a genital ulcer, ask first whether it hurts. A painless, indurated ulcer is primary syphilis until proven otherwise. A painful ulcer is herpes when vesicles came first and chancroid when the inguinal nodes suppurate.</div>\n<div class=\"traps\"><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Gram-negative bacillus: <i>Haemophilus ducreyi</i> causes a genital ulcer, but the chancroid ulcer is painful and comes with tender suppurative nodes.</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Virus: <b>HSV</b> (herpes simplex virus) is the most common cause of genital ulcers, but its lesions are painful and start as grouped vesicles.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Obligate intracellular bacterium: <i>Chlamydia trachomatis</i> is common in sexually active adolescents, but it causes cervicitis, and its lymphogranuloma venereum strains cause only a small transient ulcer.</span></div><div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Gram-negative diplococcus: multiple partners suggest gonorrhea, but gonorrhea causes cervicitis and discharge, not an ulcer.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Protozoan: <i>Trichomonas vaginalis</i> causes a frothy, malodorous discharge with itching, not an ulcer.</span></div></div>\n</div>",
+   "nav": {
+    "after_link": "bs-tdap-preg",
+    "title": "Genital Ulcer"
+   },
+   "note": "New Part II brief for NBME peds-cms Q24 (primary syphilis, organism class)"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-genital-ulcer",
+   "type": "mech",
+   "stem": "17 yo F, 5 days of a nontender vulvar lesion; three male partners, condoms used inconsistently; afebrile, normal vital signs; 2 cm ulcer with raised borders on the right labium majus",
+   "answer": "Spirochete",
+   "companion": "<i>Treponema pallidum</i>, primary syphilis chancre",
+   "d1": "Virus",
+   "d2": "Gram-negative bacillus",
+   "lead_in": "Which of the following is the most likely causal organism?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-genital-ulcer",
+   "type": "dx",
+   "stem": "18 yo F, 3 days of painful vulvar sores beginning a week after a new partner; dysuria, T 38.3 C; clusters of small vesicles and shallow ulcers on a red base on both labia; tender bilateral inguinal nodes",
+   "answer": "Genital herpes",
+   "companion": "HSV NAAT of a lesion; acyclovir or valacyclovir for 7 to 10 days",
+   "d1": "Primary syphilis",
+   "d2": "Chancroid",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-genital-ulcer",
+   "type": "mech",
+   "stem": "19 yo F, 1 week of two deep, painful vulvar ulcers with ragged, undermined edges and a purulent base; a tender, fluctuant left inguinal node; syphilis serology and HSV NAAT negative",
+   "answer": "Haemophilus ducreyi",
+   "companion": "chancroid; azithromycin 1 g orally once or ceftriaxone 250 mg IM (intramuscular) once",
+   "d1": "Treponema pallidum",
+   "d2": "Herpes simplex virus type 2",
+   "lead_in": "Which of the following is the most likely causal organism?",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-genital-ulcer",
+   "type": "test",
+   "stem": "17 yo F, 6 days of a painless vulvar ulcer with a firm, raised border; nonreactive RPR; rubbery, nontender inguinal nodes; no vesicles",
+   "answer": "Darkfield microscopy of the ulcer exudate",
+   "companion": "primary syphilis; the RPR can be nonreactive this early",
+   "d1": "Tzanck smear of the ulcer base",
+   "d2": "Type-specific HSV-2 antibody test",
+   "lead_in": "Which of the following is most likely to confirm the diagnosis?",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-genital-ulcer",
+   "type": "next",
+   "stem": "16 yo F, 1 week of a painless labial ulcer with a raised, indurated border; RPR and treponemal antibody test reactive; no rash; no drug allergies; negative pregnancy test",
+   "answer": "Benzathine penicillin G 2.4 million units IM once",
+   "companion": "primary syphilis; also test for HIV",
+   "d1": "Doxycycline 100 mg orally twice daily for 14 days",
+   "d2": "Azithromycin 1 g orally once",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-genital-ulcer",
+   "type": "next",
+   "stem": "20 yo F at 14 weeks of gestation with a painless vulvar ulcer; RPR and treponemal antibody test reactive; hives after amoxicillin as a child",
+   "answer": "Penicillin desensitization, then benzathine penicillin G",
+   "companion": "penicillin is the only recommended treatment in pregnancy",
+   "d1": "Doxycycline 100 mg orally twice daily for 14 days",
+   "d2": "Ceftriaxone 1 g IM daily for 10 days",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-genital-ulcer",
+   "type": "dx",
+   "stem": "17 yo F given benzathine penicillin G for primary syphilis 6 hours ago; now T 38.6 C, headache and myalgia; no hives, wheeze or hypotension",
+   "answer": "Jarisch-Herxheimer reaction",
+   "companion": "antipyretics; not a penicillin allergy",
+   "d1": "Anaphylaxis to penicillin",
+   "d2": "Serum sickness-like reaction",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-genital-ulcer",
+   "type": "dx",
+   "stem": "18 yo F, 2 weeks of a tender, enlarging left inguinal node mass; a small painless vulvar bump 3 weeks ago that healed on its own; no current ulcer",
+   "answer": "Lymphogranuloma venereum",
+   "companion": "<i>Chlamydia trachomatis</i> L1 to L3; doxycycline for 21 days",
+   "d1": "Chancroid",
+   "d2": "Primary syphilis",
+   "src": "authored"
+  },
+  {
+   "op": "insert_after",
+   "brief": "bs-fever-rash-arthralgia",
+   "anchor": "owns the rash-with-fever differential without joint pain, including varicella postexposure care.",
+   "html": " Part II <b>Genital Ulcer: Painless or Painful</b> owns primary syphilis: was there a painless chancre?",
+   "note": "reverse Pairs-with mention"
+  }
+ ]
+}
