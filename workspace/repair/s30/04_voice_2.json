@@ -1,0 +1,1180 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "Classify → localize → then test for causes",
+   "with": "Classify, localize, then test for causes",
+   "note": "sub: split arrow chain",
+   "claims": [
+    {
+     "claim": "Classify first, then localize, then test for causes.",
+     "to": "Classify, localize, then test for causes"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Classify, localize, then test for causes.",
+     "from": "Classify first, then localize, then test for causes."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "<p>Classify the <b>pattern</b> before testing for causes. <b>Alk phos ↑↑ with normal AST/ALT and a direct hyperbilirubinemia</b> is cholestasis. Then order an <b>abdominal ultrasound</b> to answer one question: <b>are the ducts dilated?</b> Nondilated ducts (intrahepatic) lead to an antibody test; dilated ducts (extrahepatic) lead to cross-sectional imaging.</p>\n<p>Step 1.5: confirm the alk phos is <b>hepatic</b> with a <b>GGT</b> (or 5′-nucleotidase); alkaline phosphatase also comes from <b>bone, placenta, and intestine</b>.</p>",
+   "with": "<p>Classify the <b>pattern</b> before testing for causes. <b>Alk phos ↑↑ with normal AST (aspartate aminotransferase)/ALT (alanine aminotransferase) and a direct hyperbilirubinemia</b> is cholestasis. Next, order an <b>abdominal ultrasound</b> to see <b>whether the ducts are dilated</b>. Nondilated ducts (intrahepatic) lead to an antibody test; dilated ducts (extrahepatic) lead to cross-sectional imaging.</p>\n<p>Step 1.5: confirm that the alk phos is <b>hepatic</b> with a <b>GGT</b> (gamma-glutamyl transferase) or 5′-nucleotidase. Alkaline phosphatase also comes from <b>bone, placenta, and intestine</b>.</p>",
+   "note": ".dp: remove rhetorical question, split sentence; expand GGT",
+   "reworded_bold": [
+    "are the ducts dilated?",
+    "Alk phos ↑↑ with normal AST/ALT and a direct hyperbilirubinemia"
+   ],
+   "claims": [
+    {
+     "claim": "Classify the pattern before testing for causes.",
+     "to": "Classify the pattern before testing for causes."
+    },
+    {
+     "claim": "Alk phos ↑↑ with normal AST/ALT and a direct hyperbilirubinemia is cholestasis.",
+     "to": "Alk phos ↑↑ with normal AST (aspartate aminotransferase)/ALT (alanine aminotransferase) and a direct hyperbilirubinemia is cholestasis."
+    },
+    {
+     "claim": "Then order an abdominal ultrasound.",
+     "to": "Next, order an abdominal ultrasound to see whether the ducts are dilated."
+    },
+    {
+     "claim": "The ultrasound answers whether the ducts are dilated.",
+     "to": "Next, order an abdominal ultrasound to see whether the ducts are dilated."
+    },
+    {
+     "claim": "Nondilated ducts (intrahepatic) lead to an antibody test.",
+     "to": "Nondilated ducts (intrahepatic) lead to an antibody test; dilated ducts (extrahepatic) lead to cross-sectional imaging."
+    },
+    {
+     "claim": "Dilated ducts (extrahepatic) lead to cross-sectional imaging.",
+     "to": "Nondilated ducts (intrahepatic) lead to an antibody test; dilated ducts (extrahepatic) lead to cross-sectional imaging."
+    },
+    {
+     "claim": "Confirm the alk phos is hepatic with a GGT or 5′-nucleotidase.",
+     "to": "Step 1.5: confirm that the alk phos is hepatic with a GGT (gamma-glutamyl transferase) or 5′-nucleotidase."
+    },
+    {
+     "claim": "This confirmation is step 1.5, between classifying the pattern and the ultrasound.",
+     "to": "Step 1.5: confirm that the alk phos is hepatic with a GGT (gamma-glutamyl transferase) or 5′-nucleotidase."
+    },
+    {
+     "claim": "Alkaline phosphatase also comes from bone, placenta, and intestine.",
+     "to": "Alkaline phosphatase also comes from bone, placenta, and intestine."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Classify the pattern before testing for causes.",
+     "from": "Classify the pattern before testing for causes."
+    },
+    {
+     "claim": "Alk phos ↑↑ with normal AST/ALT and a direct hyperbilirubinemia is cholestasis.",
+     "from": "Alk phos ↑↑ with normal AST/ALT and a direct hyperbilirubinemia is cholestasis."
+    },
+    {
+     "claim": "Next, order an abdominal ultrasound.",
+     "from": "Then order an abdominal ultrasound."
+    },
+    {
+     "claim": "The ultrasound shows whether the ducts are dilated.",
+     "from": "The ultrasound answers whether the ducts are dilated."
+    },
+    {
+     "claim": "Nondilated ducts (intrahepatic) lead to an antibody test.",
+     "from": "Nondilated ducts (intrahepatic) lead to an antibody test."
+    },
+    {
+     "claim": "Dilated ducts (extrahepatic) lead to cross-sectional imaging.",
+     "from": "Dilated ducts (extrahepatic) lead to cross-sectional imaging."
+    },
+    {
+     "claim": "This confirmation is step 1.5.",
+     "from": "This confirmation is step 1.5, between classifying the pattern and the ultrasound."
+    },
+    {
+     "claim": "Confirm the alk phos is hepatic with a GGT or 5′-nucleotidase.",
+     "from": "Confirm the alk phos is hepatic with a GGT or 5′-nucleotidase."
+    },
+    {
+     "claim": "GGT stands for gamma-glutamyl transferase.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Alkaline phosphatase also comes from bone, placenta, and intestine.",
+     "from": "Alkaline phosphatase also comes from bone, placenta, and intestine."
+    },
+    {
+     "claim": "AST stands for aspartate aminotransferase",
+     "from": "expansion"
+    },
+    {
+     "claim": "ALT stands for alanine aminotransferase",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "<b>ASMA and iron studies</b>: these test for autoimmune and metabolic liver disease, which cause hepatocellular injury, the <b>wrong pattern</b> here. <b>ERCP</b>: premature at this step; it is invasive, carries a risk of post-ERCP pancreatitis, and no lesion has yet been shown to need intervention. <b>Repeat LFTs in 3 months</b>: appropriate only when a reversible cause has been identified and removed; here the alk phos is 7× normal with no cause found.",
+   "with": "<b>ASMA (anti-smooth muscle antibody) and iron studies</b> test for autoimmune and metabolic liver disease. These cause hepatocellular injury, the <b>wrong pattern</b> here. <b>ERCP</b> (endoscopic retrograde cholangiopancreatography) is premature at this step. It is invasive and carries a risk of post-ERCP pancreatitis, and no lesion has yet been shown to need intervention. Repeat <b>LFTs</b> (liver function tests) in 3 months is appropriate only when a reversible cause has been identified and removed. Here the alk phos is 7× normal with no cause found.",
+   "note": ".danger: colon fragments to sentences; expand ERCP",
+   "claims": [
+    {
+     "claim": "ASMA and iron studies test for autoimmune and metabolic liver disease.",
+     "to": "↑ cholangiocarcinoma and colorectal cancer TreatmentUrsodeoxycholic acidNo effective medical therapy → transplant Scenario bank Ultrasound shows a dilated CBD and a pancreatic head mass → CT abdomen → pancreatic adenocarcinoma Normal ducts + AMA positive in a woman with pruritus → Primary biliary cholangitis → ursodiol Young man with ulcerative colitis and a cholestatic pattern → MRCP → beads on a string → PSC Alk phos elevated with a normal GGT → Bone source or pregnancy → not liver disease at all Charcot triad (fever + RUQ pain + jaundice) → Ascending cholangitis → urgent ERCP Painless jaundice + weight loss + palpable nontender gallbladder (Courvoisier sign) → Pancreatic head malignancy → not stones Isolated indirect hyperbilirubinemia appearing with fasting or illness, all else normal → Gilbert syndrome → reassurance Cholestatic pattern after amoxicillin-clavulanate, anabolic steroids, OCPs, or chlorpromazine → Stop the drug, then monitor Cholestasis + hilar lymphadenopathy + hypercalcemia → Sarcoidosis Why the distractors fail ASMA (anti-smooth muscle antibody) and iron studies test for autoimmune and metabolic liver disease."
+    },
+    {
+     "claim": "Autoimmune and metabolic liver disease cause hepatocellular injury.",
+     "to": "These cause hepatocellular injury, the wrong pattern here."
+    },
+    {
+     "claim": "Hepatocellular injury is the wrong pattern here.",
+     "to": "These cause hepatocellular injury, the wrong pattern here."
+    },
+    {
+     "claim": "ERCP is premature at this step.",
+     "to": "ERCP (endoscopic retrograde cholangiopancreatography) is premature at this step."
+    },
+    {
+     "claim": "ERCP is invasive.",
+     "to": "It is invasive and carries a risk of post-ERCP pancreatitis, and no lesion has yet been shown to need intervention."
+    },
+    {
+     "claim": "ERCP carries a risk of post-ERCP pancreatitis.",
+     "to": "It is invasive and carries a risk of post-ERCP pancreatitis, and no lesion has yet been shown to need intervention."
+    },
+    {
+     "claim": "No lesion has yet been shown to need intervention.",
+     "to": "It is invasive and carries a risk of post-ERCP pancreatitis, and no lesion has yet been shown to need intervention."
+    },
+    {
+     "claim": "Repeat LFTs in 3 months is appropriate only when a reversible cause has been identified and removed.",
+     "to": "Repeat LFTs (liver function tests) in 3 months is appropriate only when a reversible cause has been identified and removed."
+    },
+    {
+     "claim": "Here the alk phos is 7× normal with no cause found.",
+     "to": "Here the alk phos is 7× normal with no cause found."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "ASMA and iron studies test for autoimmune and metabolic liver disease.",
+     "from": "ASMA and iron studies test for autoimmune and metabolic liver disease."
+    },
+    {
+     "claim": "Autoimmune and metabolic liver disease cause hepatocellular injury, the wrong pattern here.",
+     "from": "Autoimmune and metabolic liver disease cause hepatocellular injury."
+    },
+    {
+     "claim": "ERCP stands for endoscopic retrograde cholangiopancreatography.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ERCP is premature at this step.",
+     "from": "ERCP is premature at this step."
+    },
+    {
+     "claim": "ERCP is invasive and carries a risk of post-ERCP pancreatitis.",
+     "from": "ERCP is invasive."
+    },
+    {
+     "claim": "No lesion has yet been shown to need intervention.",
+     "from": "No lesion has yet been shown to need intervention."
+    },
+    {
+     "claim": "Repeat LFTs in 3 months is appropriate only when a reversible cause has been identified and removed.",
+     "from": "Repeat LFTs in 3 months is appropriate only when a reversible cause has been identified and removed."
+    },
+    {
+     "claim": "Here the alk phos is 7× normal with no cause found.",
+     "from": "Here the alk phos is 7× normal with no cause found."
+    },
+    {
+     "claim": "ASMA stands for anti-smooth muscle antibody",
+     "from": "expansion"
+    },
+    {
+     "claim": "LFTs stands for liver function tests",
+     "from": "expansion"
+    }
+   ],
+   "reworded_bold": [
+    "ASMA and iron studies",
+    "Repeat LFTs in 3 months"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "Use the LFT pattern as a <b>triage instrument</b> to choose tests. Tests are pattern-specific: an autoimmune hepatitis antibody looks for hepatocellular disease and does not belong in the workup of a cholestatic pattern.",
+   "with": "Use the <b>LFT</b> (liver function test) pattern as a <b>triage instrument</b> to choose tests. Tests are pattern-specific. An autoimmune hepatitis antibody looks for hepatocellular disease and does not belong in the workup of a cholestatic pattern.",
+   "note": ".rule: split; expand LFT",
+   "claims": [
+    {
+     "claim": "Use the LFT pattern as a triage instrument to choose tests.",
+     "to": "Use the LFT (liver function test) pattern as a triage instrument to choose tests."
+    },
+    {
+     "claim": "Tests are pattern-specific.",
+     "to": "Tests are pattern-specific."
+    },
+    {
+     "claim": "An autoimmune hepatitis antibody looks for hepatocellular disease.",
+     "to": "An autoimmune hepatitis antibody looks for hepatocellular disease and does not belong in the workup of a cholestatic pattern."
+    },
+    {
+     "claim": "An autoimmune hepatitis antibody does not belong in the workup of a cholestatic pattern.",
+     "to": "An autoimmune hepatitis antibody looks for hepatocellular disease and does not belong in the workup of a cholestatic pattern."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "LFT stands for liver function test.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Use the LFT pattern as a triage instrument to choose tests.",
+     "from": "Use the LFT pattern as a triage instrument to choose tests."
+    },
+    {
+     "claim": "Tests are pattern-specific.",
+     "from": "Tests are pattern-specific."
+    },
+    {
+     "claim": "An autoimmune hepatitis antibody looks for hepatocellular disease and does not belong in the workup of a cholestatic pattern.",
+     "from": "An autoimmune hepatitis antibody does not belong in the workup of a cholestatic pattern."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "<p>Three benign stool complaints present in a <b>thriving, well-appearing</b> infant or child with alarmed parents; the <b>stool</b> and the <b>timing</b> set the answer. Straining and screaming for minutes, then a <b>normal soft stool</b>, under 9 months, is <b>infant dyschezia</b> → reassurance only. <b>Painless blood-streaked stools</b> in a well infant under 6 months is <b>food protein-induced allergic proctocolitis</b> → eliminate cow's milk and soy from the maternal diet, or use an extensively hydrolyzed formula. Watery diarrhea and bloating <b>after dairy is reintroduced</b> following gastroenteritis is <b>secondary lactase deficiency</b> → temporary lactose avoidance, no workup.</p>\n<p>Two mimics change the tier, and both are <b>ill-appearing</b>: <b>FPIES</b> (profuse vomiting and lethargy 1–4 h after the trigger, non-IgE) needs fluids, and <b>IgE-mediated</b> allergy (urticaria, wheeze, anaphylaxis within minutes) needs epinephrine. Parental distress is not a finding; a thriving infant does not need a formula change, a suppository, or a stool workup.</p>",
+   "with": "<p>Three benign stool complaints occur in a <b>thriving, well-appearing</b> infant or child whose parents are worried. Straining and screaming for minutes, followed by a <b>normal soft stool</b> in an infant under 9 months, is <b>infant dyschezia</b> → reassurance only. <b>Painless blood-streaked stools</b> in a well infant under 6 months are <b>food protein-induced allergic proctocolitis</b>. Treat it by removing cow's milk and soy from the maternal diet, or by using an extensively hydrolyzed formula. Watery diarrhea and bloating <b>after dairy is reintroduced</b> following gastroenteritis are <b>secondary lactase deficiency</b> → temporary lactose avoidance, with no workup.</p>\n<p>Two mimics present with an <b>ill-appearing</b> infant. <b>FPIES</b> (food protein-induced enterocolitis syndrome) causes profuse vomiting and lethargy 1–4 h after the trigger; it is non-IgE and needs fluids. <b>IgE-mediated</b> allergy causes urticaria, wheeze or anaphylaxis within minutes and needs epinephrine. Reassure the parents; a thriving infant needs no formula change, suppository or stool workup.</p>",
+   "note": "round 2 worked example: .dp",
+   "reworded_bold": [
+    "stool",
+    "timing"
+   ],
+   "claims": [
+    {
+     "claim": "The three stool complaints are benign.",
+     "to": "Three benign stool complaints occur in a thriving, well-appearing infant or child whose parents are worried."
+    },
+    {
+     "claim": "They occur in a thriving, well-appearing infant or child.",
+     "to": "Three benign stool complaints occur in a thriving, well-appearing infant or child whose parents are worried."
+    },
+    {
+     "claim": "The parents are alarmed.",
+     "to": "Three benign stool complaints occur in a thriving, well-appearing infant or child whose parents are worried."
+    },
+    {
+     "claim": "The stool and the timing set the answer.",
+     "dropped": "framing about the answer; the stool and timing details are stated in each of the next sentences"
+    },
+    {
+     "claim": "Straining and screaming for minutes, then a normal soft stool, under 9 months, is infant dyschezia.",
+     "to": "Straining and screaming for minutes, followed by a normal soft stool in an infant under 9 months, is infant dyschezia → reassurance only."
+    },
+    {
+     "claim": "Infant dyschezia needs reassurance only.",
+     "to": "Straining and screaming for minutes, followed by a normal soft stool in an infant under 9 months, is infant dyschezia → reassurance only."
+    },
+    {
+     "claim": "Painless blood-streaked stools in a well infant under 6 months are food protein-induced allergic proctocolitis.",
+     "to": "Painless blood-streaked stools in a well infant under 6 months are food protein-induced allergic proctocolitis."
+    },
+    {
+     "claim": "Proctocolitis is treated by eliminating cow's milk and soy from the maternal diet, or with an extensively hydrolyzed formula.",
+     "to": "Treat it by removing cow's milk and soy from the maternal diet, or by using an extensively hydrolyzed formula."
+    },
+    {
+     "claim": "Watery diarrhea and bloating after dairy is reintroduced following gastroenteritis is secondary lactase deficiency.",
+     "to": "Watery diarrhea and bloating after dairy is reintroduced following gastroenteritis are secondary lactase deficiency → temporary lactose avoidance, with no workup."
+    },
+    {
+     "claim": "Secondary lactase deficiency needs temporary lactose avoidance and no workup.",
+     "to": "Watery diarrhea and bloating after dairy is reintroduced following gastroenteritis are secondary lactase deficiency → temporary lactose avoidance, with no workup."
+    },
+    {
+     "claim": "Two mimics change the tier.",
+     "dropped": "framing about the tier; the two mimics and their treatments are stated next"
+    },
+    {
+     "claim": "Both mimics are ill-appearing.",
+     "to": "Two mimics present with an ill-appearing infant."
+    },
+    {
+     "claim": "FPIES gives profuse vomiting and lethargy 1–4 h after the trigger.",
+     "to": "FPIES (food protein-induced enterocolitis syndrome) causes profuse vomiting and lethargy 1–4 h after the trigger; it is non-IgE and needs fluids."
+    },
+    {
+     "claim": "FPIES is non-IgE.",
+     "to": "FPIES (food protein-induced enterocolitis syndrome) causes profuse vomiting and lethargy 1–4 h after the trigger; it is non-IgE and needs fluids."
+    },
+    {
+     "claim": "FPIES needs fluids.",
+     "to": "FPIES (food protein-induced enterocolitis syndrome) causes profuse vomiting and lethargy 1–4 h after the trigger; it is non-IgE and needs fluids."
+    },
+    {
+     "claim": "IgE-mediated allergy gives urticaria, wheeze or anaphylaxis within minutes.",
+     "to": "IgE-mediated allergy causes urticaria, wheeze or anaphylaxis within minutes and needs epinephrine."
+    },
+    {
+     "claim": "IgE-mediated allergy needs epinephrine.",
+     "to": "IgE-mediated allergy causes urticaria, wheeze or anaphylaxis within minutes and needs epinephrine."
+    },
+    {
+     "claim": "Parental distress is not a finding.",
+     "to": "Reassure the parents; a thriving infant needs no formula change, suppository or stool workup."
+    },
+    {
+     "claim": "A thriving infant does not need a formula change, a suppository, or a stool workup.",
+     "to": "Reassure the parents; a thriving infant needs no formula change, suppository or stool workup."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The three stool complaints are benign and occur in a thriving, well-appearing infant or child with worried parents.",
+     "from": "The three stool complaints are benign."
+    },
+    {
+     "claim": "Straining and screaming for minutes, then a normal soft stool, under 9 months, is infant dyschezia.",
+     "from": "Straining and screaming for minutes, then a normal soft stool, under 9 months, is infant dyschezia."
+    },
+    {
+     "claim": "Infant dyschezia needs reassurance only.",
+     "from": "Infant dyschezia needs reassurance only."
+    },
+    {
+     "claim": "Painless blood-streaked stools in a well infant under 6 months are food protein-induced allergic proctocolitis.",
+     "from": "Painless blood-streaked stools in a well infant under 6 months are food protein-induced allergic proctocolitis."
+    },
+    {
+     "claim": "Treat proctocolitis by removing cow's milk and soy from the maternal diet, or with an extensively hydrolyzed formula.",
+     "from": "Proctocolitis is treated by eliminating cow's milk and soy from the maternal diet, or with an extensively hydrolyzed formula."
+    },
+    {
+     "claim": "Watery diarrhea and bloating after dairy is reintroduced following gastroenteritis are secondary lactase deficiency.",
+     "from": "Watery diarrhea and bloating after dairy is reintroduced following gastroenteritis is secondary lactase deficiency."
+    },
+    {
+     "claim": "Secondary lactase deficiency needs temporary lactose avoidance and no workup.",
+     "from": "Secondary lactase deficiency needs temporary lactose avoidance and no workup."
+    },
+    {
+     "claim": "Two mimics present with an ill-appearing infant.",
+     "from": "Both mimics are ill-appearing."
+    },
+    {
+     "claim": "FPIES stands for food protein-induced enterocolitis syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "FPIES causes profuse vomiting and lethargy 1–4 h after the trigger.",
+     "from": "FPIES gives profuse vomiting and lethargy 1–4 h after the trigger."
+    },
+    {
+     "claim": "FPIES is non-IgE and needs fluids.",
+     "from": "FPIES is non-IgE."
+    },
+    {
+     "claim": "IgE-mediated allergy causes urticaria, wheeze or anaphylaxis within minutes and needs epinephrine.",
+     "from": "IgE-mediated allergy gives urticaria, wheeze or anaphylaxis within minutes."
+    },
+    {
+     "claim": "Reassure the parents.",
+     "from": "Parental distress is not a finding."
+    },
+    {
+     "claim": "A thriving infant needs no formula change, suppository or stool workup.",
+     "from": "A thriving infant does not need a formula change, a suppository, or a stool workup."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "The rule applies only to an infant who is <b>well-appearing and thriving</b>. Lethargy, dehydration, or profuse vomiting is FPIES; urticaria or wheeze is IgE-mediated allergy; a <b>preterm</b> infant with distension and bloody stools has necrotizing enterocolitis; a child with fever, vomiting, or weight loss after gastroenteritis does not fit secondary lactase deficiency and needs a workup. Formula changes, rectal stimulation, and laxatives are wrong for dyschezia; a laxative is right only when the stool is <b>hard</b>.",
+   "with": "Reassurance or trigger elimination before testing applies only to an infant who is <b>well-appearing and thriving</b>. Lethargy, dehydration, or profuse vomiting is <b>FPIES</b> (food protein-induced enterocolitis syndrome). Urticaria or wheeze is IgE-mediated allergy. A <b>preterm</b> infant with distension and bloody stools has necrotizing enterocolitis. A child with fever, vomiting, or weight loss after gastroenteritis does not fit secondary lactase deficiency and needs a workup. Formula changes, rectal stimulation, and laxatives are wrong for dyschezia; a laxative is right only when the stool is <b>hard</b>.",
+   "note": ".danger: replace 'The rule' reference with its content, split semicolon chain; expand FPIES",
+   "claims": [
+    {
+     "claim": "The rule (reassure or eliminate the trigger before testing) applies only to an infant who is well-appearing and thriving.",
+     "to": "Reassurance or trigger elimination before testing applies only to an infant who is well-appearing and thriving."
+    },
+    {
+     "claim": "Lethargy, dehydration, or profuse vomiting is FPIES.",
+     "to": "Lethargy, dehydration, or profuse vomiting is FPIES (food protein-induced enterocolitis syndrome)."
+    },
+    {
+     "claim": "Urticaria or wheeze is IgE-mediated allergy.",
+     "to": "Urticaria or wheeze is IgE-mediated allergy."
+    },
+    {
+     "claim": "A preterm infant with distension and bloody stools has necrotizing enterocolitis.",
+     "to": "A preterm infant with distension and bloody stools has necrotizing enterocolitis."
+    },
+    {
+     "claim": "A child with fever, vomiting, or weight loss after gastroenteritis does not fit secondary lactase deficiency.",
+     "to": "A child with fever, vomiting, or weight loss after gastroenteritis does not fit secondary lactase deficiency and needs a workup."
+    },
+    {
+     "claim": "That child needs a workup.",
+     "to": "A child with fever, vomiting, or weight loss after gastroenteritis does not fit secondary lactase deficiency and needs a workup."
+    },
+    {
+     "claim": "Formula changes, rectal stimulation, and laxatives are wrong for dyschezia.",
+     "to": "Formula changes, rectal stimulation, and laxatives are wrong for dyschezia; a laxative is right only when the stool is hard."
+    },
+    {
+     "claim": "A laxative is right only when the stool is hard.",
+     "to": "Formula changes, rectal stimulation, and laxatives are wrong for dyschezia; a laxative is right only when the stool is hard."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Reassurance or trigger elimination before testing applies only to an infant who is well-appearing and thriving.",
+     "from": "The rule (reassure or eliminate the trigger before testing) applies only to an infant who is well-appearing and thriving."
+    },
+    {
+     "claim": "FPIES stands for food protein-induced enterocolitis syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Lethargy, dehydration, or profuse vomiting is FPIES.",
+     "from": "Lethargy, dehydration, or profuse vomiting is FPIES."
+    },
+    {
+     "claim": "Urticaria or wheeze is IgE-mediated allergy.",
+     "from": "Urticaria or wheeze is IgE-mediated allergy."
+    },
+    {
+     "claim": "A preterm infant with distension and bloody stools has necrotizing enterocolitis.",
+     "from": "A preterm infant with distension and bloody stools has necrotizing enterocolitis."
+    },
+    {
+     "claim": "A child with fever, vomiting, or weight loss after gastroenteritis does not fit secondary lactase deficiency and needs a workup.",
+     "from": "A child with fever, vomiting, or weight loss after gastroenteritis does not fit secondary lactase deficiency."
+    },
+    {
+     "claim": "Formula changes, rectal stimulation, and laxatives are wrong for dyschezia.",
+     "from": "Formula changes, rectal stimulation, and laxatives are wrong for dyschezia."
+    },
+    {
+     "claim": "A laxative is right only when the stool is hard.",
+     "from": "A laxative is right only when the stool is hard."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "Dyschezia is a coordination failure: raised intra-abdominal pressure without pelvic-floor relaxation, and inadequate abdominal tone for an effective Valsalva · FPIAP is non-IgE and self-limited; the mother eliminates cow's milk <b>and</b> soy, and it resolves by about 1 year · FPIES is also non-IgE but ill-appearing: onset hours after the trigger, no urticaria, treated with fluids · Only IgE-mediated disease gets epinephrine · Secondary lactase deficiency is osmotic (stops with fasting, acidic stool, no fever); IBD also causes brush-border loss",
+   "with": "Dyschezia is a coordination failure: raised intra-abdominal pressure without pelvic-floor relaxation, and inadequate abdominal tone for an effective Valsalva · <b>FPIAP</b> (food protein-induced allergic proctocolitis) is non-IgE and self-limited. The mother eliminates both cow's milk and soy, and FPIAP resolves by about 1 year · <b>FPIES</b> (food protein-induced enterocolitis syndrome) is also non-IgE but ill-appearing: onset hours after the trigger, no urticaria, treated with fluids · Only IgE-mediated disease gets epinephrine · Secondary lactase deficiency is osmotic (stops with fasting, acidic stool, no fever); <b>IBD</b> (inflammatory bowel disease) also causes brush-border loss",
+   "note": ".pearls: remove emphasis bold on 'and' (kept as 'both ... and'), split long row; expand FPIAP, FPIES, IBD",
+   "reworded_bold": [
+    "and"
+   ],
+   "claims": [
+    {
+     "claim": "Dyschezia is a coordination failure: raised intra-abdominal pressure without pelvic-floor relaxation, and inadequate abdominal tone for an effective Valsalva.",
+     "to": "Dyschezia is a coordination failure: raised intra-abdominal pressure without pelvic-floor relaxation, and inadequate abdominal tone for an effective Valsalva"
+    },
+    {
+     "claim": "FPIAP is non-IgE and self-limited.",
+     "to": "FPIAP (food protein-induced allergic proctocolitis) is non-IgE and self-limited."
+    },
+    {
+     "claim": "The mother eliminates cow's milk and soy.",
+     "to": "The mother eliminates both cow's milk and soy, and FPIAP resolves by about 1 year"
+    },
+    {
+     "claim": "FPIAP resolves by about 1 year.",
+     "to": "The mother eliminates both cow's milk and soy, and FPIAP resolves by about 1 year"
+    },
+    {
+     "claim": "FPIES is also non-IgE but ill-appearing.",
+     "to": "FPIES (food protein-induced enterocolitis syndrome) is also non-IgE but ill-appearing: onset hours after the trigger, no urticaria, treated with fluids"
+    },
+    {
+     "claim": "FPIES has onset hours after the trigger, no urticaria, and is treated with fluids.",
+     "to": "FPIES (food protein-induced enterocolitis syndrome) is also non-IgE but ill-appearing: onset hours after the trigger, no urticaria, treated with fluids"
+    },
+    {
+     "claim": "Only IgE-mediated disease gets epinephrine.",
+     "to": "Only IgE-mediated disease gets epinephrine"
+    },
+    {
+     "claim": "Secondary lactase deficiency is osmotic (stops with fasting, acidic stool, no fever).",
+     "to": "Secondary lactase deficiency is osmotic (stops with fasting, acidic stool, no fever); IBD (inflammatory bowel disease) also causes brush-border loss"
+    },
+    {
+     "claim": "IBD also causes brush-border loss.",
+     "to": "Secondary lactase deficiency is osmotic (stops with fasting, acidic stool, no fever); IBD (inflammatory bowel disease) also causes brush-border loss"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Dyschezia is a coordination failure: raised intra-abdominal pressure without pelvic-floor relaxation, and inadequate abdominal tone for an effective Valsalva.",
+     "from": "Dyschezia is a coordination failure: raised intra-abdominal pressure without pelvic-floor relaxation, and inadequate abdominal tone for an effective Valsalva."
+    },
+    {
+     "claim": "FPIAP stands for food protein-induced allergic proctocolitis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "FPIAP is non-IgE and self-limited.",
+     "from": "FPIAP is non-IgE and self-limited."
+    },
+    {
+     "claim": "The mother eliminates both cow's milk and soy.",
+     "from": "The mother eliminates cow's milk and soy."
+    },
+    {
+     "claim": "FPIAP resolves by about 1 year.",
+     "from": "FPIAP resolves by about 1 year."
+    },
+    {
+     "claim": "FPIES stands for food protein-induced enterocolitis syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "FPIES is also non-IgE but ill-appearing.",
+     "from": "FPIES is also non-IgE but ill-appearing."
+    },
+    {
+     "claim": "FPIES has onset hours after the trigger, no urticaria, and is treated with fluids.",
+     "from": "FPIES has onset hours after the trigger, no urticaria, and is treated with fluids."
+    },
+    {
+     "claim": "Only IgE-mediated disease gets epinephrine.",
+     "from": "Only IgE-mediated disease gets epinephrine."
+    },
+    {
+     "claim": "Secondary lactase deficiency is osmotic (stops with fasting, acidic stool, no fever).",
+     "from": "Secondary lactase deficiency is osmotic (stops with fasting, acidic stool, no fever)."
+    },
+    {
+     "claim": "IBD stands for inflammatory bowel disease.",
+     "from": "expansion"
+    },
+    {
+     "claim": "IBD also causes brush-border loss.",
+     "from": "IBD also causes brush-border loss."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "In a thriving child with worried parents, choose the tier from the stool, the timing after the trigger, and the child's appearance; reassure or eliminate the trigger before testing.",
+   "with": "In a thriving child with worried parents, base management on the stool, the timing after the trigger, and the child's appearance. Reassure or eliminate the trigger before testing.",
+   "note": ".rule: replace 'choose the tier' framing, split",
+   "claims": [
+    {
+     "claim": "In a thriving child with worried parents, choose the tier from the stool, the timing after the trigger, and the child's appearance.",
+     "to": "In a thriving child with worried parents, base management on the stool, the timing after the trigger, and the child's appearance."
+    },
+    {
+     "claim": "Reassure or eliminate the trigger before testing.",
+     "to": "Reassure or eliminate the trigger before testing."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In a thriving child with worried parents, base management on the stool, the timing after the trigger, and the child's appearance.",
+     "from": "In a thriving child with worried parents, choose the tier from the stool, the timing after the trigger, and the child's appearance."
+    },
+    {
+     "claim": "Reassure or eliminate the trigger before testing.",
+     "from": "Reassure or eliminate the trigger before testing."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "Change an answer only when a new detail makes the current choice <b>impossible</b>, not when another option merely becomes plausible, and check whether the stem contains a finding that excludes the new option. Here, firm stool in the rectal vault excludes small bowel obstruction.",
+   "with": "Change an answer only when a new detail makes the current choice <b>impossible</b>, not when another option merely becomes plausible. Check whether the stem contains a finding that excludes the new option. Here, firm stool in the rectal vault excludes small bowel obstruction.",
+   "note": ".rule: split 36-word sentence; wording otherwise unchanged",
+   "claims": [
+    {
+     "claim": "Change an answer only when a new detail makes the current choice impossible, not when another option merely becomes plausible.",
+     "to": "Change an answer only when a new detail makes the current choice impossible, not when another option merely becomes plausible."
+    },
+    {
+     "claim": "Check whether the stem contains a finding that excludes the new option.",
+     "to": "Check whether the stem contains a finding that excludes the new option."
+    },
+    {
+     "claim": "Firm stool in the rectal vault excludes small bowel obstruction.",
+     "to": "Here, firm stool in the rectal vault excludes small bowel obstruction."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Change an answer only when a new detail makes the current choice impossible, not when another option merely becomes plausible.",
+     "from": "Change an answer only when a new detail makes the current choice impossible, not when another option merely becomes plausible."
+    },
+    {
+     "claim": "Check whether the stem contains a finding that excludes the new option.",
+     "from": "Check whether the stem contains a finding that excludes the new option."
+    },
+    {
+     "claim": "Firm stool in the rectal vault excludes small bowel obstruction.",
+     "from": "Firm stool in the rectal vault excludes small bowel obstruction."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "<p>Vitamins A, D, E and K need bile and pancreatic enzymes to be absorbed, so <b>any fat malabsorption</b> can deplete all four: <b>CF and other pancreatic insufficiency</b>, <b>cholestasis and biliary atresia</b>, <b>celiac disease and IBD</b>, and <b>gastric bypass</b> or short bowel. Name the deficiency by its sign: <b>night blindness and Bitot spots</b> (A), <b>rickets or osteomalacia</b> (D), <b>ataxia with loss of vibration and position sense plus hemolysis</b> (E), <b>bleeding with a long PT</b> (K). This teen with CF stopped his enzymes and vitamins; without vitamin K the liver cannot gamma-carboxylate (activate) factors II, VII, IX and X. Factor VII has the shortest half-life, so the <b>PT lengthens first</b> and the aPTT follows only when deficiency is severe; platelets stay normal.</p>\n<p>The exception is <b>liver failure</b>, which also prolongs the PT but lowers <b>factor V</b>, a factor that does not need vitamin K. Scurvy also causes gum bleeding and bruising, but vitamin C is water soluble, so CF does not deplete it, and its coagulation studies are normal. Toxicity is a concern only for A and D.</p>",
+   "with": "<p>Vitamins A, D, E and K need bile and pancreatic enzymes to be absorbed. Therefore <b>any fat malabsorption</b> can deplete all four. Causes include <b>CF (cystic fibrosis) and other pancreatic insufficiency</b>, <b>cholestasis and biliary atresia</b>, <b>celiac disease and IBD (inflammatory bowel disease)</b>, and <b>gastric bypass</b> or short bowel. Name the deficiency by its sign: <b>night blindness and Bitot spots</b> (A) &middot; <b>rickets or osteomalacia</b> (D) &middot; <b>ataxia with loss of vibration and position sense plus hemolysis</b> (E) &middot; <b>bleeding with a long PT</b> (K). This teen with CF has not taken his prescribed medications; in CF these are usually pancreatic enzymes and fat-soluble vitamins. Without vitamin K, the liver cannot gamma-carboxylate (activate) factors II, VII, IX and X. Factor VII has the shortest half-life, so the <b>PT lengthens first</b>. The <b>aPTT</b> (activated partial thromboplastin time) follows only when deficiency is severe, and platelets stay normal.</p>\n<p>In <b>liver failure</b>, the PT is also prolonged, but <b>factor V</b> is low; factor V does not need vitamin K. Scurvy also causes gum bleeding and bruising. Vitamin C is water soluble, so CF does not deplete it, and coagulation studies in scurvy are normal. Toxicity is a concern only for A and D.</p>",
+   "note": ".dp: split long sentences (sign list as rows), remove 'The exception is' framing; expand aPTT",
+   "claims": [
+    {
+     "claim": "Vitamins A, D, E and K need bile and pancreatic enzymes to be absorbed.",
+     "to": "Vitamins A, D, E and K need bile and pancreatic enzymes to be absorbed."
+    },
+    {
+     "claim": "Any fat malabsorption can deplete all four.",
+     "to": "Therefore any fat malabsorption can deplete all four."
+    },
+    {
+     "claim": "Causes of fat malabsorption: CF and other pancreatic insufficiency, cholestasis and biliary atresia, celiac disease and IBD, gastric bypass or short bowel.",
+     "to": "Causes include CF (cystic fibrosis) and other pancreatic insufficiency, cholestasis and biliary atresia, celiac disease and IBD (inflammatory bowel disease), and gastric bypass or short bowel."
+    },
+    {
+     "claim": "Name the deficiency by its sign.",
+     "to": "Name the deficiency by its sign: night blindness and Bitot spots (A)"
+    },
+    {
+     "claim": "Night blindness and Bitot spots point to A.",
+     "to": "Name the deficiency by its sign: night blindness and Bitot spots (A)"
+    },
+    {
+     "claim": "Rickets or osteomalacia point to D.",
+     "to": "rickets or osteomalacia (D)"
+    },
+    {
+     "claim": "Ataxia with loss of vibration and position sense plus hemolysis points to E.",
+     "to": "ataxia with loss of vibration and position sense plus hemolysis (E)"
+    },
+    {
+     "claim": "Bleeding with a long PT points to K.",
+     "to": "bleeding with a long PT (K)."
+    },
+    {
+     "claim": "This teen with CF stopped his enzymes and vitamins.",
+     "to": "This teen with CF has not taken his prescribed medications; in CF these are usually pancreatic enzymes and fat-soluble vitamins."
+    },
+    {
+     "claim": "Without vitamin K the liver cannot gamma-carboxylate (activate) factors II, VII, IX and X.",
+     "to": "Without vitamin K, the liver cannot gamma-carboxylate (activate) factors II, VII, IX and X."
+    },
+    {
+     "claim": "Factor VII has the shortest half-life, so the PT lengthens first.",
+     "to": "Factor VII has the shortest half-life, so the PT lengthens first."
+    },
+    {
+     "claim": "The aPTT follows only when deficiency is severe.",
+     "to": "The aPTT (activated partial thromboplastin time) follows only when deficiency is severe, and platelets stay normal."
+    },
+    {
+     "claim": "Platelets stay normal.",
+     "to": "The aPTT (activated partial thromboplastin time) follows only when deficiency is severe, and platelets stay normal."
+    },
+    {
+     "claim": "Liver failure is the exception.",
+     "to": "In liver failure, the PT is also prolonged, but factor V is low; factor V does not need vitamin K."
+    },
+    {
+     "claim": "Liver failure also prolongs the PT but lowers factor V.",
+     "to": "In liver failure, the PT is also prolonged, but factor V is low; factor V does not need vitamin K."
+    },
+    {
+     "claim": "Factor V does not need vitamin K.",
+     "to": "In liver failure, the PT is also prolonged, but factor V is low; factor V does not need vitamin K."
+    },
+    {
+     "claim": "Scurvy also causes gum bleeding and bruising.",
+     "to": "Scurvy also causes gum bleeding and bruising."
+    },
+    {
+     "claim": "Vitamin C is water soluble, so CF does not deplete it.",
+     "to": "Vitamin C is water soluble, so CF does not deplete it, and coagulation studies in scurvy are normal."
+    },
+    {
+     "claim": "Coagulation studies are normal in scurvy.",
+     "to": "Vitamin C is water soluble, so CF does not deplete it, and coagulation studies in scurvy are normal."
+    },
+    {
+     "claim": "Toxicity is a concern only for A and D.",
+     "to": "Toxicity is a concern only for A and D."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Vitamins A, D, E and K need bile and pancreatic enzymes to be absorbed.",
+     "from": "Vitamins A, D, E and K need bile and pancreatic enzymes to be absorbed."
+    },
+    {
+     "claim": "Any fat malabsorption can deplete all four.",
+     "from": "Any fat malabsorption can deplete all four."
+    },
+    {
+     "claim": "Causes include CF and other pancreatic insufficiency, cholestasis and biliary atresia, celiac disease and IBD, and gastric bypass or short bowel.",
+     "from": "Causes of fat malabsorption: CF and other pancreatic insufficiency, cholestasis and biliary atresia, celiac disease and IBD, gastric bypass or short bowel."
+    },
+    {
+     "claim": "Name the deficiency by its sign.",
+     "from": "Name the deficiency by its sign."
+    },
+    {
+     "claim": "Night blindness and Bitot spots point to A.",
+     "from": "Night blindness and Bitot spots point to A."
+    },
+    {
+     "claim": "Rickets or osteomalacia point to D.",
+     "from": "Rickets or osteomalacia point to D."
+    },
+    {
+     "claim": "Ataxia with loss of vibration and position sense plus hemolysis points to E.",
+     "from": "Ataxia with loss of vibration and position sense plus hemolysis points to E."
+    },
+    {
+     "claim": "Bleeding with a long PT points to K.",
+     "from": "Bleeding with a long PT points to K."
+    },
+    {
+     "claim": "This teen with CF has not taken his prescribed medications; in CF these are usually pancreatic enzymes and fat-soluble vitamins.",
+     "from": "This teen with CF stopped his enzymes and vitamins."
+    },
+    {
+     "claim": "Without vitamin K, the liver cannot gamma-carboxylate (activate) factors II, VII, IX and X.",
+     "from": "Without vitamin K the liver cannot gamma-carboxylate (activate) factors II, VII, IX and X."
+    },
+    {
+     "claim": "Factor VII has the shortest half-life, so the PT lengthens first.",
+     "from": "Factor VII has the shortest half-life, so the PT lengthens first."
+    },
+    {
+     "claim": "aPTT stands for activated partial thromboplastin time.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The aPTT follows only when deficiency is severe.",
+     "from": "The aPTT follows only when deficiency is severe."
+    },
+    {
+     "claim": "Platelets stay normal.",
+     "from": "Platelets stay normal."
+    },
+    {
+     "claim": "In liver failure, the PT is also prolonged, but factor V is low.",
+     "from": "Liver failure also prolongs the PT but lowers factor V."
+    },
+    {
+     "claim": "Factor V does not need vitamin K.",
+     "from": "Factor V does not need vitamin K."
+    },
+    {
+     "claim": "Scurvy also causes gum bleeding and bruising.",
+     "from": "Scurvy also causes gum bleeding and bruising."
+    },
+    {
+     "claim": "Vitamin C is water soluble, so CF does not deplete it.",
+     "from": "Vitamin C is water soluble, so CF does not deplete it."
+    },
+    {
+     "claim": "Coagulation studies in scurvy are normal.",
+     "from": "Coagulation studies are normal in scurvy."
+    },
+    {
+     "claim": "Toxicity is a concern only for A and D.",
+     "from": "Toxicity is a concern only for A and D."
+    },
+    {
+     "claim": "CF stands for cystic fibrosis",
+     "from": "expansion"
+    },
+    {
+     "claim": "IBD stands for inflammatory bowel disease",
+     "from": "expansion"
+    }
+   ],
+   "reworded_bold": [
+    "CF and other pancreatic insufficiency",
+    "celiac disease and IBD"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "Skin makes D3 from 7-dehydrocholesterol with UV light (diet adds D2 and D3) &rarr; <b>liver 25-hydroxylase</b> makes 25-OH D, the form measured &rarr; <b>kidney 1-alpha-hydroxylase</b>, driven by <b>PTH</b> and suppressed by high calcium, makes active 1,25-(OH)2 D, which raises intestinal calcium absorption (its main action) and renal calcium and phosphate reabsorption, mineralizes bone and suppresses PTH &middot;",
+   "with": "Skin makes D3 from 7-dehydrocholesterol with <b>UV</b> (ultraviolet) light, and diet adds D2 and D3. The <b>liver 25-hydroxylase</b> makes 25-OH D, the form measured. The <b>kidney 1-alpha-hydroxylase</b>, driven by <b>PTH</b> (parathyroid hormone) and suppressed by high calcium, makes active 1,25-(OH)2 D. Active vitamin D raises intestinal calcium absorption (its main action) and renal calcium and phosphate reabsorption, mineralizes bone and suppresses PTH &middot;",
+   "note": ".pearls (pathway row): split two-arrow chain into sentences; expand UV, PTH",
+   "claims": [
+    {
+     "claim": "Skin makes D3 from 7-dehydrocholesterol with UV light.",
+     "to": "Skin makes D3 from 7-dehydrocholesterol with UV (ultraviolet) light, and diet adds D2 and D3."
+    },
+    {
+     "claim": "Diet adds D2 and D3.",
+     "to": "Skin makes D3 from 7-dehydrocholesterol with UV (ultraviolet) light, and diet adds D2 and D3."
+    },
+    {
+     "claim": "Liver 25-hydroxylase then makes 25-OH D.",
+     "to": "The liver 25-hydroxylase makes 25-OH D, the form measured."
+    },
+    {
+     "claim": "25-OH D is the form measured.",
+     "to": "The liver 25-hydroxylase makes 25-OH D, the form measured."
+    },
+    {
+     "claim": "Kidney 1-alpha-hydroxylase then makes active 1,25-(OH)2 D.",
+     "to": "The kidney 1-alpha-hydroxylase, driven by PTH (parathyroid hormone) and suppressed by high calcium, makes active 1,25-(OH)2 D."
+    },
+    {
+     "claim": "Kidney 1-alpha-hydroxylase is driven by PTH and suppressed by high calcium.",
+     "to": "The kidney 1-alpha-hydroxylase, driven by PTH (parathyroid hormone) and suppressed by high calcium, makes active 1,25-(OH)2 D."
+    },
+    {
+     "claim": "1,25-(OH)2 D raises intestinal calcium absorption, its main action.",
+     "to": "Active vitamin D raises intestinal calcium absorption (its main action) and renal calcium and phosphate reabsorption, mineralizes bone and suppresses PTH"
+    },
+    {
+     "claim": "1,25-(OH)2 D raises renal calcium and phosphate reabsorption.",
+     "to": "Active vitamin D raises intestinal calcium absorption (its main action) and renal calcium and phosphate reabsorption, mineralizes bone and suppresses PTH"
+    },
+    {
+     "claim": "1,25-(OH)2 D mineralizes bone and suppresses PTH.",
+     "to": "Active vitamin D raises intestinal calcium absorption (its main action) and renal calcium and phosphate reabsorption, mineralizes bone and suppresses PTH"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "UV stands for ultraviolet.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Skin makes D3 from 7-dehydrocholesterol with UV light, and diet adds D2 and D3.",
+     "from": "Skin makes D3 from 7-dehydrocholesterol with UV light."
+    },
+    {
+     "claim": "The liver 25-hydroxylase makes 25-OH D, the form measured.",
+     "from": "Liver 25-hydroxylase then makes 25-OH D."
+    },
+    {
+     "claim": "PTH stands for parathyroid hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The kidney 1-alpha-hydroxylase, driven by PTH and suppressed by high calcium, makes active 1,25-(OH)2 D.",
+     "from": "Kidney 1-alpha-hydroxylase then makes active 1,25-(OH)2 D."
+    },
+    {
+     "claim": "Active vitamin D raises intestinal calcium absorption (its main action) and renal calcium and phosphate reabsorption.",
+     "from": "1,25-(OH)2 D raises intestinal calcium absorption, its main action."
+    },
+    {
+     "claim": "Active vitamin D mineralizes bone and suppresses PTH.",
+     "from": "1,25-(OH)2 D mineralizes bone and suppresses PTH."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "Name a fat-soluble deficiency by its sign (eye, bone, dorsal columns with hemolysis, or bleeding), then find why fat is not being absorbed; for bleeding with normal platelets, a long PT that corrects with vitamin K is vitamin K deficiency, and a low factor V moves it to the liver.",
+   "with": "Name a fat-soluble deficiency by its sign (eye, bone, dorsal columns with hemolysis, or bleeding), then find why fat is not being absorbed. In bleeding with normal platelets, a long <b>PT</b> (prothrombin time) that corrects with vitamin K is vitamin K deficiency. A low factor V points to the liver instead.",
+   "note": ".rule: split 48-word sentence; expand PT",
+   "claims": [
+    {
+     "claim": "Name a fat-soluble deficiency by its sign (eye, bone, dorsal columns with hemolysis, or bleeding).",
+     "to": "Name a fat-soluble deficiency by its sign (eye, bone, dorsal columns with hemolysis, or bleeding), then find why fat is not being absorbed."
+    },
+    {
+     "claim": "Then find why fat is not being absorbed.",
+     "to": "Name a fat-soluble deficiency by its sign (eye, bone, dorsal columns with hemolysis, or bleeding), then find why fat is not being absorbed."
+    },
+    {
+     "claim": "For bleeding with normal platelets, a long PT that corrects with vitamin K is vitamin K deficiency.",
+     "to": "In bleeding with normal platelets, a long PT (prothrombin time) that corrects with vitamin K is vitamin K deficiency."
+    },
+    {
+     "claim": "A low factor V moves it to the liver.",
+     "to": "A low factor V points to the liver instead."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Name a fat-soluble deficiency by its sign (eye, bone, dorsal columns with hemolysis, or bleeding), then find why fat is not being absorbed.",
+     "from": "Name a fat-soluble deficiency by its sign (eye, bone, dorsal columns with hemolysis, or bleeding)."
+    },
+    {
+     "claim": "PT stands for prothrombin time.",
+     "from": "expansion"
+    },
+    {
+     "claim": "In bleeding with normal platelets, a long PT that corrects with vitamin K is vitamin K deficiency.",
+     "from": "For bleeding with normal platelets, a long PT that corrects with vitamin K is vitamin K deficiency."
+    },
+    {
+     "claim": "A low factor V points to the liver instead.",
+     "from": "A low factor V moves it to the liver."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-water-soluble-vitamins",
+   "find": "<p>The body stores little of the B vitamins or vitamin C (B12 is the exception), so deficiency follows <b>chronic alcohol use</b>, poor intake, malabsorption (bypass, short bowel, Crohn disease) or a <b>drug</b>. The <b>organ pattern</b> identifies the vitamin: <b>brain, eyes and gait, or the heart</b> is B1; <b>photosensitive dermatitis with diarrhea and dementia</b> is B3; <b>neuropathy on isoniazid</b> is B6; <b>megaloblastic anemia</b> is B9 or B12, and a <b>high methylmalonic acid with neurologic signs</b> separates B12; <b>bleeding gums and perifollicular hemorrhages with normal platelets, PT and aPTT</b> is C.</p>\n<p>In a malnourished or alcohol-using patient, give <b>IV thiamine before or with glucose</b>, because a glucose load can precipitate or worsen Wernicke encephalopathy. Do not treat a megaloblastic anemia with <b>folate alone</b> until B12 is known: folate corrects the anemia but not the neurologic damage of B12 deficiency, so give both when the cause is unclear.</p>",
+   "with": "<p>The body stores little of the B vitamins or vitamin C (B12 is the exception). Deficiency therefore follows <b>chronic alcohol use</b>, poor intake, malabsorption (bypass, short bowel, Crohn disease) or a <b>drug</b>. The <b>organ pattern</b> identifies the vitamin: <b>brain, eyes and gait, or the heart</b> is B1 &middot; <b>photosensitive dermatitis with diarrhea and dementia</b> is B3 &middot; <b>neuropathy on isoniazid</b> is B6 &middot; <b>megaloblastic anemia</b> is B9 or B12, and a <b>high methylmalonic acid with neurologic signs</b> separates B12 &middot; <b>bleeding gums and perifollicular hemorrhages with normal platelets, PT (prothrombin time) and aPTT (activated partial thromboplastin time)</b> is C.</p>\n<p>In a malnourished or alcohol-using patient, give <b>IV (intravenous) thiamine before or with glucose</b>, because a glucose load can precipitate or worsen Wernicke encephalopathy. Do not treat a megaloblastic anemia with <b>folate alone</b> until B12 is known. Folate corrects the anemia but not the neurologic damage of B12 deficiency, so give both when the cause is unclear.</p>",
+   "note": ".dp: split long sentences, organ-pattern list as rows",
+   "claims": [
+    {
+     "claim": "The body stores little of the B vitamins or vitamin C.",
+     "to": "The body stores little of the B vitamins or vitamin C (B12 is the exception)."
+    },
+    {
+     "claim": "B12 is the exception to low body stores.",
+     "to": "The body stores little of the B vitamins or vitamin C (B12 is the exception)."
+    },
+    {
+     "claim": "So deficiency follows chronic alcohol use, poor intake, malabsorption (bypass, short bowel, Crohn disease) or a drug.",
+     "to": "Deficiency therefore follows chronic alcohol use, poor intake, malabsorption (bypass, short bowel, Crohn disease) or a drug."
+    },
+    {
+     "claim": "The organ pattern identifies the vitamin.",
+     "to": "The organ pattern identifies the vitamin: brain, eyes and gait, or the heart is B1"
+    },
+    {
+     "claim": "Brain, eyes and gait, or the heart is B1.",
+     "to": "The organ pattern identifies the vitamin: brain, eyes and gait, or the heart is B1"
+    },
+    {
+     "claim": "Photosensitive dermatitis with diarrhea and dementia is B3.",
+     "to": "photosensitive dermatitis with diarrhea and dementia is B3"
+    },
+    {
+     "claim": "Neuropathy on isoniazid is B6.",
+     "to": "neuropathy on isoniazid is B6"
+    },
+    {
+     "claim": "Megaloblastic anemia is B9 or B12.",
+     "to": "megaloblastic anemia is B9 or B12, and a high methylmalonic acid with neurologic signs separates B12"
+    },
+    {
+     "claim": "A high methylmalonic acid with neurologic signs separates B12.",
+     "to": "megaloblastic anemia is B9 or B12, and a high methylmalonic acid with neurologic signs separates B12"
+    },
+    {
+     "claim": "Bleeding gums and perifollicular hemorrhages with normal platelets, PT and aPTT is C.",
+     "to": "The organ pattern identifies the vitamin: brain, eyes and gait, or the heart is B1 · photosensitive dermatitis with diarrhea and dementia is B3 · neuropathy on isoniazid is B6 · megaloblastic anemia is B9 or B12, and a high methylmalonic acid with neurologic signs separates B12 · bleeding gums and perifollicular hemorrhages with normal platelets, PT (prothrombin time) and aPTT (activated partial thromboplastin time) is C."
+    },
+    {
+     "claim": "In a malnourished or alcohol-using patient, give IV thiamine before or with glucose.",
+     "to": "In a malnourished or alcohol-using patient, give IV (intravenous) thiamine before or with glucose, because a glucose load can precipitate or worsen Wernicke encephalopathy."
+    },
+    {
+     "claim": "A glucose load can precipitate or worsen Wernicke encephalopathy.",
+     "to": "In a malnourished or alcohol-using patient, give IV (intravenous) thiamine before or with glucose, because a glucose load can precipitate or worsen Wernicke encephalopathy."
+    },
+    {
+     "claim": "Do not treat a megaloblastic anemia with folate alone until B12 is known.",
+     "to": "Do not treat a megaloblastic anemia with folate alone until B12 is known."
+    },
+    {
+     "claim": "Folate corrects the anemia but not the neurologic damage of B12 deficiency.",
+     "to": "Folate corrects the anemia but not the neurologic damage of B12 deficiency, so give both when the cause is unclear."
+    },
+    {
+     "claim": "Give both when the cause is unclear.",
+     "to": "Folate corrects the anemia but not the neurologic damage of B12 deficiency, so give both when the cause is unclear."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The body stores little of the B vitamins or vitamin C (B12 is the exception).",
+     "from": "The body stores little of the B vitamins or vitamin C."
+    },
+    {
+     "claim": "Deficiency therefore follows chronic alcohol use, poor intake, malabsorption (bypass, short bowel, Crohn disease) or a drug.",
+     "from": "So deficiency follows chronic alcohol use, poor intake, malabsorption (bypass, short bowel, Crohn disease) or a drug."
+    },
+    {
+     "claim": "The organ pattern identifies the vitamin.",
+     "from": "The organ pattern identifies the vitamin."
+    },
+    {
+     "claim": "Brain, eyes and gait, or the heart is B1.",
+     "from": "Brain, eyes and gait, or the heart is B1."
+    },
+    {
+     "claim": "Photosensitive dermatitis with diarrhea and dementia is B3.",
+     "from": "Photosensitive dermatitis with diarrhea and dementia is B3."
+    },
+    {
+     "claim": "Neuropathy on isoniazid is B6.",
+     "from": "Neuropathy on isoniazid is B6."
+    },
+    {
+     "claim": "Megaloblastic anemia is B9 or B12.",
+     "from": "Megaloblastic anemia is B9 or B12."
+    },
+    {
+     "claim": "A high methylmalonic acid with neurologic signs separates B12.",
+     "from": "A high methylmalonic acid with neurologic signs separates B12."
+    },
+    {
+     "claim": "Bleeding gums and perifollicular hemorrhages with normal platelets, PT and aPTT is C.",
+     "from": "Bleeding gums and perifollicular hemorrhages with normal platelets, PT and aPTT is C."
+    },
+    {
+     "claim": "In a malnourished or alcohol-using patient, give IV thiamine before or with glucose.",
+     "from": "In a malnourished or alcohol-using patient, give IV thiamine before or with glucose."
+    },
+    {
+     "claim": "A glucose load can precipitate or worsen Wernicke encephalopathy.",
+     "from": "A glucose load can precipitate or worsen Wernicke encephalopathy."
+    },
+    {
+     "claim": "Do not treat a megaloblastic anemia with folate alone until B12 is known.",
+     "from": "Do not treat a megaloblastic anemia with folate alone until B12 is known."
+    },
+    {
+     "claim": "Folate corrects the anemia but not the neurologic damage of B12 deficiency.",
+     "from": "Folate corrects the anemia but not the neurologic damage of B12 deficiency."
+    },
+    {
+     "claim": "Give both when the cause is unclear.",
+     "from": "Give both when the cause is unclear."
+    },
+    {
+     "claim": "PT stands for prothrombin time",
+     "from": "expansion"
+    },
+    {
+     "claim": "aPTT stands for activated partial thromboplastin time",
+     "from": "expansion"
+    },
+    {
+     "claim": "IV stands for intravenous",
+     "from": "expansion"
+    }
+   ],
+   "reworded_bold": [
+    "IV thiamine before or with glucose",
+    "bleeding gums and perifollicular hemorrhages with normal platelets, PT and aPTT"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-water-soluble-vitamins",
+   "find": "<b>Wernicke triad</b> &mdash; confusion, ophthalmoplegia, ataxia; often incomplete, so one or two features in a drinker is enough to treat; add anterograde amnesia with confabulation and it has become <b>Korsakoff</b> (mammillary bodies), which is often permanent",
+   "with": "<b>Wernicke triad</b> &mdash; confusion, ophthalmoplegia, ataxia; often incomplete, so one or two features in a drinker is enough to treat. Anterograde amnesia with confabulation marks progression to <b>Korsakoff</b> (mammillary bodies), which is often permanent",
+   "note": ".pearls (Wernicke row): split 33-word row into two sentences",
+   "claims": [
+    {
+     "claim": "The Wernicke triad is confusion, ophthalmoplegia, ataxia.",
+     "to": "Wernicke triad — confusion, ophthalmoplegia, ataxia; often incomplete, so one or two features in a drinker is enough to treat."
+    },
+    {
+     "claim": "The triad is often incomplete, so one or two features in a drinker is enough to treat.",
+     "to": "Wernicke triad — confusion, ophthalmoplegia, ataxia; often incomplete, so one or two features in a drinker is enough to treat."
+    },
+    {
+     "claim": "Adding anterograde amnesia with confabulation means it has become Korsakoff (mammillary bodies).",
+     "to": "Anterograde amnesia with confabulation marks progression to Korsakoff (mammillary bodies), which is often permanent"
+    },
+    {
+     "claim": "Korsakoff is often permanent.",
+     "to": "Anterograde amnesia with confabulation marks progression to Korsakoff (mammillary bodies), which is often permanent"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The Wernicke triad is confusion, ophthalmoplegia, ataxia.",
+     "from": "The Wernicke triad is confusion, ophthalmoplegia, ataxia."
+    },
+    {
+     "claim": "The triad is often incomplete, so one or two features in a drinker is enough to treat.",
+     "from": "The triad is often incomplete, so one or two features in a drinker is enough to treat."
+    },
+    {
+     "claim": "Anterograde amnesia with confabulation marks progression to Korsakoff (mammillary bodies).",
+     "from": "Adding anterograde amnesia with confabulation means it has become Korsakoff (mammillary bodies)."
+    },
+    {
+     "claim": "Korsakoff is often permanent.",
+     "from": "Korsakoff is often permanent."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-water-soluble-vitamins",
+   "find": "Read the organ pattern first (brain, eyes and heart; sun-exposed skin with diarrhea; neuropathy on a drug; megaloblastic blood; bleeding gums with normal clotting), then ask what the patient drinks, takes or does not eat; give thiamine before glucose, and settle B12 (with MMA when the level is 200 to 300) before giving folate alone.",
+   "with": "Read the organ pattern first (brain, eyes and heart; sun-exposed skin with diarrhea; neuropathy on a drug; megaloblastic blood; bleeding gums with normal clotting). Then ask what the patient drinks, takes or does not eat. Give thiamine before glucose. Settle B12 before giving folate alone, using <b>MMA</b> (methylmalonic acid) when the B12 level is 200 to 300.",
+   "note": ".rule: split 55-word sentence; expand MMA",
+   "claims": [
+    {
+     "claim": "Read the organ pattern first (brain, eyes and heart; sun-exposed skin with diarrhea; neuropathy on a drug; megaloblastic blood; bleeding gums with normal clotting).",
+     "to": "Read the organ pattern first (brain, eyes and heart; sun-exposed skin with diarrhea; neuropathy on a drug; megaloblastic blood; bleeding gums with normal clotting)."
+    },
+    {
+     "claim": "Then ask what the patient drinks, takes or does not eat.",
+     "to": "Then ask what the patient drinks, takes or does not eat."
+    },
+    {
+     "claim": "Give thiamine before glucose.",
+     "to": "Give thiamine before glucose."
+    },
+    {
+     "claim": "Settle B12 before giving folate alone.",
+     "to": "Settle B12 before giving folate alone, using MMA (methylmalonic acid) when the B12 level is 200 to 300."
+    },
+    {
+     "claim": "Use MMA when the B12 level is 200 to 300.",
+     "to": "Settle B12 before giving folate alone, using MMA (methylmalonic acid) when the B12 level is 200 to 300."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Read the organ pattern first (brain, eyes and heart; sun-exposed skin with diarrhea; neuropathy on a drug; megaloblastic blood; bleeding gums with normal clotting).",
+     "from": "Read the organ pattern first (brain, eyes and heart; sun-exposed skin with diarrhea; neuropathy on a drug; megaloblastic blood; bleeding gums with normal clotting)."
+    },
+    {
+     "claim": "Then ask what the patient drinks, takes or does not eat.",
+     "from": "Then ask what the patient drinks, takes or does not eat."
+    },
+    {
+     "claim": "Give thiamine before glucose.",
+     "from": "Give thiamine before glucose."
+    },
+    {
+     "claim": "Settle B12 before giving folate alone.",
+     "from": "Settle B12 before giving folate alone."
+    },
+    {
+     "claim": "MMA stands for methylmalonic acid.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Use MMA when the B12 level is 200 to 300.",
+     "from": "Use MMA when the B12 level is 200 to 300."
+    }
+   ]
+  }
+ ]
+}

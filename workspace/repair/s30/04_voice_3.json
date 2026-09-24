@@ -1,0 +1,544 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "<p>An <b>elderly man</b> with dysphagia, <b>regurgitation of undigested food</b>, <b>halitosis</b>, and a <b>gurgling</b> sound in the neck has a Zenker diverticulum: a pulsion pouch through the weak posterior hypopharyngeal wall because the <b>cricopharyngeus fails to relax</b>. Order a <b>barium esophagram first</b>; a blind endoscope or nasogastric tube can enter the pouch and <b>perforate</b> it.</p>",
+   "with": "<p>An <b>elderly man</b> with dysphagia, <b>regurgitation of undigested food</b>, <b>halitosis</b>, and a <b>gurgling</b> sound in the neck has a Zenker diverticulum. It is a pulsion pouch through the weak posterior hypopharyngeal wall that forms because the <b>cricopharyngeus fails to relax</b>. Order a <b>barium esophagram first</b>. A blind endoscope or nasogastric tube can enter the pouch and <b>perforate</b> it.</p>",
+   "note": "split long sentences",
+   "claims": [
+    {
+     "claim": "An elderly man with dysphagia, regurgitation of undigested food, halitosis, and a gurgling sound in the neck has a Zenker diverticulum.",
+     "to": "An elderly man with dysphagia, regurgitation of undigested food, halitosis, and a gurgling sound in the neck has a Zenker diverticulum."
+    },
+    {
+     "claim": "Zenker diverticulum is a pulsion pouch through the weak posterior hypopharyngeal wall.",
+     "to": "It is a pulsion pouch through the weak posterior hypopharyngeal wall that forms because the cricopharyngeus fails to relax."
+    },
+    {
+     "claim": "The pouch forms because the cricopharyngeus fails to relax.",
+     "to": "It is a pulsion pouch through the weak posterior hypopharyngeal wall that forms because the cricopharyngeus fails to relax."
+    },
+    {
+     "claim": "Order a barium esophagram first.",
+     "to": "Order a barium esophagram first."
+    },
+    {
+     "claim": "A blind endoscope or nasogastric tube can enter the pouch and perforate it.",
+     "to": "A blind endoscope or nasogastric tube can enter the pouch and perforate it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "An elderly man with dysphagia, regurgitation of undigested food, halitosis, and a gurgling sound in the neck has a Zenker diverticulum.",
+     "from": "An elderly man with dysphagia, regurgitation of undigested food, halitosis, and a gurgling sound in the neck has a Zenker diverticulum."
+    },
+    {
+     "claim": "Zenker diverticulum is a pulsion pouch through the weak posterior hypopharyngeal wall.",
+     "from": "Zenker diverticulum is a pulsion pouch through the weak posterior hypopharyngeal wall."
+    },
+    {
+     "claim": "The pouch forms because the cricopharyngeus fails to relax.",
+     "from": "The pouch forms because the cricopharyngeus fails to relax."
+    },
+    {
+     "claim": "Order a barium esophagram first.",
+     "from": "Order a barium esophagram first."
+    },
+    {
+     "claim": "A blind endoscope or nasogastric tube can enter the pouch and perforate it.",
+     "from": "A blind endoscope or nasogastric tube can enter the pouch and perforate it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "feeding therapy for the maladaptive eating that follows <i>(all in-context)</i>.",
+   "with": "feeding therapy for the maladaptive eating that follows.",
+   "note": "strip internal provenance note",
+   "claims": [
+    {
+     "claim": "Feeding therapy treats the maladaptive eating that follows.",
+     "to": "Treatment: dietary elimination is first-line, with proton pump inhibitors and swallowed topical glucocorticoids as pharmacologic options and feeding therapy for the maladaptive eating that follows."
+    },
+    {
+     "claim": "All of these statements are in-context.",
+     "dropped": "internal workflow provenance note, not a clinical claim"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Feeding therapy treats the maladaptive eating that follows.",
+     "from": "Feeding therapy treats the maladaptive eating that follows."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "Tissue transglutaminase antibody &mdash; Celiac disease causes diarrhea or constipation with pain and distension, and children avoid <b>gluten-rich</b> foods, not every solid; this child's stools and abdomen are normal",
+   "with": "Tissue transglutaminase antibody: celiac disease causes diarrhea or constipation with pain and distension. Children with it avoid <b>gluten-rich</b> foods, not every solid. This child's stools and abdomen are normal.",
+   "note": "remove em dash; split sentence",
+   "claims": [
+    {
+     "claim": "Tissue transglutaminase antibody is the celiac decoy.",
+     "to": "Tissue transglutaminase antibody: celiac disease causes diarrhea or constipation with pain and distension."
+    },
+    {
+     "claim": "Celiac disease causes diarrhea or constipation with pain and distension.",
+     "to": "Tissue transglutaminase antibody: celiac disease causes diarrhea or constipation with pain and distension."
+    },
+    {
+     "claim": "Children with celiac disease avoid gluten-rich foods, not every solid.",
+     "to": "Children with it avoid gluten-rich foods, not every solid."
+    },
+    {
+     "claim": "This child's stools and abdomen are normal.",
+     "to": "This child's stools and abdomen are normal."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Tissue transglutaminase antibody tests for celiac disease, which causes diarrhea or constipation with pain and distension.",
+     "from": "Celiac disease causes diarrhea or constipation with pain and distension."
+    },
+    {
+     "claim": "Children with celiac disease avoid gluten-rich foods, not every solid.",
+     "from": "Children with celiac disease avoid gluten-rich foods, not every solid."
+    },
+    {
+     "claim": "This child's stools and abdomen are normal.",
+     "from": "This child's stools and abdomen are normal."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "Abdominal ultrasonography &mdash; A mass causes <b>anorexia</b>, not a preference for purees, and the abdomen is soft, nontender and nondistended",
+   "with": "Abdominal ultrasonography: a mass causes <b>anorexia</b>, not a preference for purees, and the abdomen is soft, nontender and nondistended.",
+   "note": "remove em dash",
+   "claims": [
+    {
+     "claim": "A mass causes anorexia, not a preference for purees.",
+     "to": "Abdominal ultrasonography: a mass causes anorexia, not a preference for purees, and the abdomen is soft, nontender and nondistended."
+    },
+    {
+     "claim": "The abdomen is soft, nontender and nondistended.",
+     "to": "Abdominal ultrasonography: a mass causes anorexia, not a preference for purees, and the abdomen is soft, nontender and nondistended."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A mass causes anorexia, not a preference for purees.",
+     "from": "A mass causes anorexia, not a preference for purees."
+    },
+    {
+     "claim": "The abdomen is soft, nontender and nondistended.",
+     "from": "The abdomen is soft, nontender and nondistended."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "Thyroid function tests &mdash; Hyperthyroidism increases appetite and causes tachycardia and goiter; this child refuses food",
+   "with": "Thyroid function tests: hyperthyroidism increases appetite and causes tachycardia and goiter; this child refuses food.",
+   "note": "remove em dash",
+   "claims": [
+    {
+     "claim": "Hyperthyroidism increases appetite and causes tachycardia and goiter.",
+     "to": "Thyroid function tests: hyperthyroidism increases appetite and causes tachycardia and goiter; this child refuses food."
+    },
+    {
+     "claim": "This child refuses food.",
+     "to": "Thyroid function tests: hyperthyroidism increases appetite and causes tachycardia and goiter; this child refuses food."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hyperthyroidism increases appetite and causes tachycardia and goiter.",
+     "from": "Hyperthyroidism increases appetite and causes tachycardia and goiter."
+    },
+    {
+     "claim": "This child refuses food.",
+     "from": "This child refuses food."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "Allergy skin testing &mdash; It diagnoses IgE-mediated allergy, which presents acutely with urticaria and angioedema; even in confirmed disease it only guides the diet, and the priority is establishing the diagnosis",
+   "with": "Allergy skin testing diagnoses IgE-mediated allergy, which presents acutely with urticaria and angioedema. Even in confirmed disease it only guides the diet; establishing the diagnosis comes first.",
+   "note": "remove em dash; split sentence",
+   "claims": [
+    {
+     "claim": "Allergy skin testing diagnoses IgE-mediated allergy.",
+     "to": "Allergy skin testing diagnoses IgE-mediated allergy, which presents acutely with urticaria and angioedema."
+    },
+    {
+     "claim": "IgE-mediated allergy presents acutely with urticaria and angioedema.",
+     "to": "Allergy skin testing diagnoses IgE-mediated allergy, which presents acutely with urticaria and angioedema."
+    },
+    {
+     "claim": "Even in confirmed disease allergy testing only guides the diet.",
+     "to": "Even in confirmed disease it only guides the diet; establishing the diagnosis comes first."
+    },
+    {
+     "claim": "The priority is establishing the diagnosis.",
+     "to": "Even in confirmed disease it only guides the diet; establishing the diagnosis comes first."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Allergy skin testing diagnoses IgE-mediated allergy.",
+     "from": "Allergy skin testing diagnoses IgE-mediated allergy."
+    },
+    {
+     "claim": "IgE-mediated allergy presents acutely with urticaria and angioedema.",
+     "from": "IgE-mediated allergy presents acutely with urticaria and angioedema."
+    },
+    {
+     "claim": "Even in confirmed disease allergy testing only guides the diet.",
+     "from": "Even in confirmed disease allergy testing only guides the diet."
+    },
+    {
+     "claim": "Establishing the diagnosis comes first.",
+     "from": "The priority is establishing the diagnosis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "done: nothing has been tried yet &middot; normal: growth, perineum, abdominal tenderness and urinary function &middot; bothered: the child cries with every stool, so treat today rather than counsel and wait.",
+   "with": "done: nothing has been tried yet &middot; normal: growth, perineum and urinary function, and a nontender abdomen &middot; bothered: the child cries with every stool, so treat today rather than counsel and wait.",
+   "note": "replace shorthand field names with plain statements",
+   "claims": [
+    {
+     "claim": "Nothing has been tried yet.",
+     "to": "done: nothing has been tried yet · normal: growth, perineum and urinary function, and a nontender abdomen · bothered: the child cries with every stool, so treat today rather than counsel and wait."
+    },
+    {
+     "claim": "Growth, perineum and urinary function are normal.",
+     "to": "done: nothing has been tried yet · normal: growth, perineum and urinary function, and a nontender abdomen · bothered: the child cries with every stool, so treat today rather than counsel and wait."
+    },
+    {
+     "claim": "Abdominal tenderness is normal (the abdomen is nontender).",
+     "to": "done: nothing has been tried yet · normal: growth, perineum and urinary function, and a nontender abdomen · bothered: the child cries with every stool, so treat today rather than counsel and wait."
+    },
+    {
+     "claim": "The child cries with every stool.",
+     "to": "done: nothing has been tried yet · normal: growth, perineum and urinary function, and a nontender abdomen · bothered: the child cries with every stool, so treat today rather than counsel and wait."
+    },
+    {
+     "claim": "Treat today rather than counsel and wait.",
+     "to": "done: nothing has been tried yet · normal: growth, perineum and urinary function, and a nontender abdomen · bothered: the child cries with every stool, so treat today rather than counsel and wait."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "done: nothing has been tried yet.",
+     "from": "Nothing has been tried yet."
+    },
+    {
+     "claim": "Growth, perineum and urinary function are normal.",
+     "from": "Growth, perineum and urinary function are normal."
+    },
+    {
+     "claim": "The abdomen is nontender.",
+     "from": "Abdominal tenderness is normal (the abdomen is nontender)."
+    },
+    {
+     "claim": "The child cries with every stool.",
+     "from": "The child cries with every stool."
+    },
+    {
+     "claim": "Treat today rather than counsel and wait.",
+     "from": "Treat today rather than counsel and wait."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "cow's milk under 24 oz per day and the alarm-sign list are in-context; the 48-hour meconium threshold, the duration of maintenance therapy and toileting-posture advice are ⚠︎. &middot; delayed meconium",
+   "with": "Delayed meconium",
+   "note": "strip internal provenance sentence; each item keeps its flag or source elsewhere in the brief",
+   "claims": [
+    {
+     "claim": "Cow's milk under 24 oz per day is in-context.",
+     "carried_by": "under 24 oz per day; this child's 24 oz is at the limit, not above it"
+    },
+    {
+     "claim": "The alarm-sign list is in-context.",
+     "carried_by": "delayed passage of meconium, fever or vomiting, ribbon stools, poor growth, severe abdominal distension"
+    },
+    {
+     "claim": "The 48-hour meconium threshold is flagged ⚠︎.",
+     "carried_by": "Delayed meconium beyond 48 hours ⚠︎"
+    },
+    {
+     "claim": "The duration of maintenance therapy is flagged ⚠︎.",
+     "carried_by": "Continue the laxative for months rather than days ⚠︎"
+    },
+    {
+     "claim": "Toileting-posture advice is flagged ⚠︎.",
+     "carried_by": "sitting after meals with the feet supported ⚠︎"
+    },
+    {
+     "claim": "Delayed meconium leads the next exit ramp.",
+     "to": "Delayed meconium with ribbon stools and poor growth → Hirschsprung disease, manometry then rectal biopsy ⚠︎"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Delayed meconium leads the next exit ramp.",
+     "from": "Delayed meconium leads the next exit ramp."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "Childhood constipation is a <b>behavioural cycle with a mechanical consequence</b>; the laxative makes stools painless so the child stops withholding, and it continues for months rather than days ⚠︎.",
+   "with": "Childhood constipation is a <b>behavioural cycle with a mechanical consequence</b>. The laxative makes stools painless so the child stops withholding; continue it for months rather than days ⚠︎.",
+   "note": "split long sentence",
+   "claims": [
+    {
+     "claim": "Childhood constipation is a behavioural cycle with a mechanical consequence.",
+     "to": "Childhood constipation is a behavioural cycle with a mechanical consequence."
+    },
+    {
+     "claim": "The laxative makes stools painless so the child stops withholding.",
+     "to": "The laxative makes stools painless so the child stops withholding; continue it for months rather than days ⚠︎."
+    },
+    {
+     "claim": "The laxative continues for months rather than days (flagged ⚠︎).",
+     "to": "The laxative makes stools painless so the child stops withholding; continue it for months rather than days ⚠︎."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Childhood constipation is a behavioural cycle with a mechanical consequence.",
+     "from": "Childhood constipation is a behavioural cycle with a mechanical consequence."
+    },
+    {
+     "claim": "The laxative makes stools painless so the child stops withholding.",
+     "from": "The laxative makes stools painless so the child stops withholding."
+    },
+    {
+     "claim": "Continue the laxative for months rather than days (flagged ⚠︎).",
+     "from": "The laxative continues for months rather than days (flagged ⚠︎)."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "<b>Growth is the alarm sign that does the most work</b>: a child tracking a percentile",
+   "with": "<b>Growth</b> is the most informative alarm sign; a child tracking a percentile",
+   "note": "reword slogan bold",
+   "reworded_bold": [
+    "Growth is the alarm sign that does the most work"
+   ],
+   "claims": [
+    {
+     "claim": "Growth is the most informative alarm sign.",
+     "to": "Growth is the most informative alarm sign; a child tracking a percentile has essentially excluded hypothyroidism, celiac disease and Hirschsprung disease."
+    },
+    {
+     "claim": "A child tracking a percentile has essentially excluded hypothyroidism, celiac disease and Hirschsprung disease.",
+     "to": "Growth is the most informative alarm sign; a child tracking a percentile has essentially excluded hypothyroidism, celiac disease and Hirschsprung disease."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Growth is the most informative alarm sign.",
+     "from": "Growth is the most informative alarm sign."
+    },
+    {
+     "claim": "A child tracking a percentile has essentially excluded hypothyroidism, celiac disease and Hirschsprung disease.",
+     "from": "A child tracking a percentile has essentially excluded hypothyroidism, celiac disease and Hirschsprung disease."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "Age at presentation narrows the differential. <b>Minutes to hours</b>: TEF/EA, choanal atresia, diaphragmatic hernia, respiratory distress syndrome, Potter sequence. <b>Beyond 24 hours</b>: neonatal abstinence, sepsis, ductal-dependent lesions as the PDA closes, bilious vomiting and malrotation. <b>3 to 6 weeks</b>: hypertrophic pyloric stenosis. <b>Months</b>: H-type fistula, laryngomalacia. Each wrong option here is a real disease that presents at a different age.",
+   "with": "Age at presentation narrows the differential. <b>Minutes to hours</b>: <b>TEF</b> (tracheoesophageal fistula) with <b>EA</b> (esophageal atresia), choanal atresia, diaphragmatic hernia, respiratory distress syndrome, Potter sequence. <b>Beyond 24 hours</b>: neonatal abstinence, sepsis, ductal-dependent lesions as the <b>PDA</b> (patent ductus arteriosus) closes, bilious vomiting and malrotation. <b>3 to 6 weeks</b>: hypertrophic pyloric stenosis. <b>Months</b>: H-type fistula, laryngomalacia.",
+   "note": "expand acronyms; drop sentence about the answer options",
+   "claims": [
+    {
+     "claim": "Age at presentation narrows the differential.",
+     "to": "Age at presentation narrows the differential."
+    },
+    {
+     "claim": "TEF/EA, choanal atresia, diaphragmatic hernia, respiratory distress syndrome and Potter sequence present within minutes to hours.",
+     "to": "Minutes to hours: TEF (tracheoesophageal fistula) with EA (esophageal atresia), choanal atresia, diaphragmatic hernia, respiratory distress syndrome, Potter sequence."
+    },
+    {
+     "claim": "Neonatal abstinence, sepsis, ductal-dependent lesions as the PDA closes, bilious vomiting and malrotation present beyond 24 hours.",
+     "to": "Beyond 24 hours: neonatal abstinence, sepsis, ductal-dependent lesions as the PDA (patent ductus arteriosus) closes, bilious vomiting and malrotation."
+    },
+    {
+     "claim": "Hypertrophic pyloric stenosis presents at 3 to 6 weeks.",
+     "to": "3 to 6 weeks: hypertrophic pyloric stenosis."
+    },
+    {
+     "claim": "H-type fistula and laryngomalacia present at months.",
+     "to": "Months: H-type fistula, laryngomalacia."
+    },
+    {
+     "claim": "Each wrong option is a real disease that presents at a different age.",
+     "dropped": "framing about the answer options; not a clinical claim"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Age at presentation narrows the differential.",
+     "from": "Age at presentation narrows the differential."
+    },
+    {
+     "claim": "TEF stands for tracheoesophageal fistula.",
+     "from": "expansion"
+    },
+    {
+     "claim": "EA stands for esophageal atresia.",
+     "from": "expansion"
+    },
+    {
+     "claim": "TEF/EA, choanal atresia, diaphragmatic hernia, respiratory distress syndrome and Potter sequence present within minutes to hours.",
+     "from": "TEF/EA, choanal atresia, diaphragmatic hernia, respiratory distress syndrome and Potter sequence present within minutes to hours."
+    },
+    {
+     "claim": "PDA stands for patent ductus arteriosus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Neonatal abstinence, sepsis, ductal-dependent lesions as the PDA closes, bilious vomiting and malrotation present beyond 24 hours.",
+     "from": "Neonatal abstinence, sepsis, ductal-dependent lesions as the PDA closes, bilious vomiting and malrotation present beyond 24 hours."
+    },
+    {
+     "claim": "Hypertrophic pyloric stenosis presents at 3 to 6 weeks.",
+     "from": "Hypertrophic pyloric stenosis presents at 3 to 6 weeks."
+    },
+    {
+     "claim": "H-type fistula and laryngomalacia present at months.",
+     "from": "H-type fistula and laryngomalacia present at months."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "VACTERL screening after diagnosis: <b>echocardiogram and renal ultrasound</b> at minimum",
+   "with": "<b>VACTERL</b> (vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies) screening after diagnosis: <b>echocardiogram and renal ultrasound</b> at minimum",
+   "note": "expand acronym",
+   "claims": [
+    {
+     "claim": "VACTERL screening is done after diagnosis.",
+     "to": "VACTERL (vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies) screening after diagnosis: echocardiogram and renal ultrasound at minimum"
+    },
+    {
+     "claim": "VACTERL screening is echocardiogram and renal ultrasound at minimum.",
+     "to": "VACTERL (vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies) screening after diagnosis: echocardiogram and renal ultrasound at minimum"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "VACTERL stands for vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies.",
+     "from": "expansion"
+    },
+    {
+     "claim": "VACTERL screening is done after diagnosis.",
+     "from": "VACTERL screening is done after diagnosis."
+    },
+    {
+     "claim": "VACTERL screening is echocardiogram and renal ultrasound at minimum.",
+     "from": "VACTERL screening is echocardiogram and renal ultrasound at minimum."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "covers VACTERL alongside the syndromes it is mistaken for and what excludes each.",
+   "with": "covers VACTERL (vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies) alongside the syndromes it is mistaken for and what excludes each.",
+   "note": "expand acronym",
+   "claims": [
+    {
+     "claim": "Multiple Anomalies in a Newborn covers VACTERL alongside the syndromes it is mistaken for and what excludes each.",
+     "to": "Part I Multiple Anomalies in a Newborn covers VACTERL (vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies) alongside the syndromes it is mistaken for and what excludes each."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "VACTERL stands for vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Multiple Anomalies in a Newborn covers VACTERL alongside the syndromes it is mistaken for and what excludes each.",
+     "from": "Multiple Anomalies in a Newborn covers VACTERL alongside the syndromes it is mistaken for and what excludes each."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "Imaging only confirms what the tube found. The other options are real diseases that present at other ages.",
+   "with": "Imaging only confirms what the tube found.",
+   "note": "drop sentence about the answer options; the age point is in the Age at presentation block",
+   "claims": [
+    {
+     "claim": "Imaging only confirms what the tube found.",
+     "to": "Imaging only confirms what the tube found."
+    },
+    {
+     "claim": "The other options are real diseases that present at other ages.",
+     "dropped": "framing about the answer options; not a clinical claim"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Imaging only confirms what the tube found.",
+     "from": "Imaging only confirms what the tube found."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "Echocardiography is indicated for VACTERL screening, after the diagnosis, not before it.",
+   "with": "Echocardiography is indicated for <b>VACTERL</b> (vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies) screening after the diagnosis, not before it.",
+   "note": "expand acronym",
+   "claims": [
+    {
+     "claim": "Echocardiography is indicated for VACTERL screening.",
+     "to": "Echocardiography is indicated for VACTERL (vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies) screening after the diagnosis, not before it."
+    },
+    {
+     "claim": "Echocardiography comes after the diagnosis, not before it.",
+     "to": "Echocardiography is indicated for VACTERL (vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies) screening after the diagnosis, not before it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "VACTERL stands for vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Echocardiography is indicated for VACTERL screening.",
+     "from": "Echocardiography is indicated for VACTERL screening."
+    },
+    {
+     "claim": "Echocardiography comes after the diagnosis, not before it.",
+     "from": "Echocardiography comes after the diagnosis, not before it."
+    }
+   ]
+  }
+ ]
+}

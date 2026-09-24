@@ -1,0 +1,976 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "<p>An <b>APC</b> mutation (autosomal dominant) causes <b>hundreds to thousands</b> of adenomas and colon cancer in nearly <b>100% by age 40</b>. Screening is <b>annual sigmoidoscopy or colonoscopy from age 10–12</b> (puberty), not the first-degree-relative or average-risk schedule. A <b>prophylactic proctocolectomy</b> is planned for the teens to early 20s and is indicated <b>at any age</b> for bleeding, polyps over 1 cm, innumerable polyps, or high-grade dysplasia.</p>",
+   "with": "<p>An autosomal dominant <b>APC</b> (adenomatous polyposis coli) mutation causes <b>hundreds to thousands</b> of adenomas and colon cancer in nearly <b>100% by age 40</b>. Screening is <b>annual sigmoidoscopy or colonoscopy from age 10–12</b> (puberty), not the first-degree-relative or average-risk schedule. A <b>prophylactic proctocolectomy</b> is planned for the teens to early 20s. It is indicated <b>at any age</b> for bleeding, polyps over 1 cm, innumerable polyps, or high-grade dysplasia.</p>",
+   "note": ".dp: expand APC, split long sentence",
+   "claims": [
+    {
+     "claim": "An APC mutation is autosomal dominant.",
+     "to": "An autosomal dominant APC (adenomatous polyposis coli) mutation causes hundreds to thousands of adenomas and colon cancer in nearly 100% by age 40."
+    },
+    {
+     "claim": "An APC mutation causes hundreds to thousands of adenomas.",
+     "to": "An autosomal dominant APC (adenomatous polyposis coli) mutation causes hundreds to thousands of adenomas and colon cancer in nearly 100% by age 40."
+    },
+    {
+     "claim": "An APC mutation causes colon cancer in nearly 100% by age 40.",
+     "to": "An autosomal dominant APC (adenomatous polyposis coli) mutation causes hundreds to thousands of adenomas and colon cancer in nearly 100% by age 40."
+    },
+    {
+     "claim": "Screening is annual sigmoidoscopy or colonoscopy from age 10–12 (puberty).",
+     "to": "Screening is annual sigmoidoscopy or colonoscopy from age 10–12 (puberty), not the first-degree-relative or average-risk schedule."
+    },
+    {
+     "claim": "This screening is not the first-degree-relative or average-risk schedule.",
+     "to": "Screening is annual sigmoidoscopy or colonoscopy from age 10–12 (puberty), not the first-degree-relative or average-risk schedule."
+    },
+    {
+     "claim": "A prophylactic proctocolectomy is planned for the teens to early 20s.",
+     "to": "A prophylactic proctocolectomy is planned for the teens to early 20s."
+    },
+    {
+     "claim": "Proctocolectomy is indicated at any age for bleeding, polyps over 1 cm, innumerable polyps, or high-grade dysplasia.",
+     "to": "It is indicated at any age for bleeding, polyps over 1 cm, innumerable polyps, or high-grade dysplasia."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "An APC mutation is autosomal dominant.",
+     "from": "An APC mutation is autosomal dominant."
+    },
+    {
+     "claim": "An APC mutation causes hundreds to thousands of adenomas.",
+     "from": "An APC mutation causes hundreds to thousands of adenomas."
+    },
+    {
+     "claim": "An APC mutation causes colon cancer in nearly 100% by age 40.",
+     "from": "An APC mutation causes colon cancer in nearly 100% by age 40."
+    },
+    {
+     "claim": "Screening is annual sigmoidoscopy or colonoscopy from age 10–12 (puberty).",
+     "from": "Screening is annual sigmoidoscopy or colonoscopy from age 10–12 (puberty)."
+    },
+    {
+     "claim": "This screening is not the first-degree-relative or average-risk schedule.",
+     "from": "This screening is not the first-degree-relative or average-risk schedule."
+    },
+    {
+     "claim": "A prophylactic proctocolectomy is planned for the teens to early 20s.",
+     "from": "A prophylactic proctocolectomy is planned for the teens to early 20s."
+    },
+    {
+     "claim": "Proctocolectomy is indicated at any age for bleeding, polyps over 1 cm, innumerable polyps, or high-grade dysplasia.",
+     "from": "Proctocolectomy is indicated at any age for bleeding, polyps over 1 cm, innumerable polyps, or high-grade dysplasia."
+    },
+    {
+     "claim": "APC stands for adenomatous polyposis coli.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "These numbers apply to a <b>known APC carrier</b>. A first-degree relative with sporadic colon cancer follows a different schedule (earlier than average-risk screening, but not annual scoping from puberty), and a Lynch pedigree (few polyps, endometrial cancer in the family) follows a third.",
+   "with": "These numbers apply to a known <b>APC</b> (adenomatous polyposis coli) carrier. A first-degree relative with sporadic colon cancer follows a different schedule: earlier than average-risk screening, but not annual scoping from puberty. A Lynch pedigree (few polyps, endometrial cancer in the family) follows a third schedule.",
+   "note": ".danger: expand APC, split long sentence",
+   "reworded_bold": [
+    "known APC carrier"
+   ],
+   "claims": [
+    {
+     "claim": "These numbers apply to a known APC carrier.",
+     "to": "These numbers apply to a known APC (adenomatous polyposis coli) carrier."
+    },
+    {
+     "claim": "A first-degree relative with sporadic colon cancer follows a different schedule.",
+     "to": "A first-degree relative with sporadic colon cancer follows a different schedule: earlier than average-risk screening, but not annual scoping from puberty."
+    },
+    {
+     "claim": "That schedule is earlier than average-risk screening but not annual scoping from puberty.",
+     "to": "A first-degree relative with sporadic colon cancer follows a different schedule: earlier than average-risk screening, but not annual scoping from puberty."
+    },
+    {
+     "claim": "A Lynch pedigree (few polyps, endometrial cancer in the family) follows a third schedule.",
+     "to": "A Lynch pedigree (few polyps, endometrial cancer in the family) follows a third schedule."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "These numbers apply to a known APC carrier.",
+     "from": "These numbers apply to a known APC carrier."
+    },
+    {
+     "claim": "A first-degree relative with sporadic colon cancer follows a different schedule.",
+     "from": "A first-degree relative with sporadic colon cancer follows a different schedule."
+    },
+    {
+     "claim": "That schedule is earlier than average-risk screening but not annual scoping from puberty.",
+     "from": "That schedule is earlier than average-risk screening but not annual scoping from puberty."
+    },
+    {
+     "claim": "A Lynch pedigree (few polyps, endometrial cancer in the family) follows a third schedule.",
+     "from": "A Lynch pedigree (few polyps, endometrial cancer in the family) follows a third schedule."
+    },
+    {
+     "claim": "APC stands for adenomatous polyposis coli.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "APC is autosomal dominant, so each child of an affected parent has a one-in-two risk and is tested rather than presumed",
+   "with": "<b>APC</b> (adenomatous polyposis coli) is autosomal dominant, so each child of an affected parent has a one-in-two risk and is tested rather than presumed",
+   "note": ".pearls: expand APC at first use",
+   "claims": [
+    {
+     "claim": "APC is autosomal dominant.",
+     "to": "APC (adenomatous polyposis coli) is autosomal dominant, so each child of an affected parent has a one-in-two risk and is tested rather than presumed"
+    },
+    {
+     "claim": "Each child of an affected parent has a one-in-two risk and is tested rather than presumed.",
+     "to": "APC (adenomatous polyposis coli) is autosomal dominant, so each child of an affected parent has a one-in-two risk and is tested rather than presumed"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "APC is autosomal dominant.",
+     "from": "APC is autosomal dominant."
+    },
+    {
+     "claim": "Each child of an affected parent has a one-in-two risk and is tested rather than presumed.",
+     "from": "Each child of an affected parent has a one-in-two risk and is tested rather than presumed."
+    },
+    {
+     "claim": "APC stands for adenomatous polyposis coli.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "adds CNS tumors; both are managed as FAP",
+   "with": "adds <b>CNS</b> (central nervous system) tumors; both are managed as <b>FAP</b> (familial adenomatous polyposis)",
+   "note": ".pearls: expand CNS and FAP at first use",
+   "claims": [
+    {
+     "claim": "Turcot adds CNS tumors.",
+     "to": "Turcot adds CNS (central nervous system) tumors; both are managed as FAP (familial adenomatous polyposis)"
+    },
+    {
+     "claim": "Gardner and Turcot are both managed as FAP.",
+     "to": "Turcot adds CNS (central nervous system) tumors; both are managed as FAP (familial adenomatous polyposis)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Turcot adds CNS tumors.",
+     "from": "Turcot adds CNS tumors."
+    },
+    {
+     "claim": "Gardner and Turcot are both managed as FAP.",
+     "from": "Gardner and Turcot are both managed as FAP."
+    },
+    {
+     "claim": "CNS stands for central nervous system.",
+     "from": "expansion"
+    },
+    {
+     "claim": "FAP stands for familial adenomatous polyposis.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "is there an APC mutation?",
+   "with": "is there an APC (adenomatous polyposis coli) mutation?",
+   "note": "Pairs with: expand APC",
+   "claims": [
+    {
+     "claim": "Ask whether there is an APC mutation.",
+     "to": "Ask: how many polyps, and is there an APC (adenomatous polyposis coli) mutation?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Ask whether there is an APC mutation.",
+     "from": "Ask whether there is an APC mutation."
+    },
+    {
+     "claim": "APC stands for adenomatous polyposis coli.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "an APC carrier is scoped annually from puberty.",
+   "with": "an <b>APC</b> (adenomatous polyposis coli) carrier is scoped annually from puberty.",
+   "note": ".traps: expand APC",
+   "claims": [
+    {
+     "claim": "An APC carrier is scoped annually from puberty.",
+     "to": "Colonoscopy at 40 is the sporadic family-history schedule; an APC (adenomatous polyposis coli) carrier is scoped annually from puberty."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "An APC carrier is scoped annually from puberty.",
+     "from": "An APC carrier is scoped annually from puberty."
+    },
+    {
+     "claim": "APC stands for adenomatous polyposis coli.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "<p>Three features together make this cyclic vomiting syndrome: episodes that are <b>stereotyped</b>, <b>self-limited over 1 to 2 days</b>, and complete wellness between them with <b>normal growth</b>. Stress at the start of term is the trigger; most patients have a personal or family history of migraine.",
+   "with": "<p>Three features together indicate cyclic vomiting syndrome: <b>stereotyped</b> episodes, each <b>self-limited over 1 to 2 days</b>, and complete wellness between them with <b>normal growth</b>. Stress at the start of term is the trigger. Most patients have a personal or family history of migraine.",
+   "note": ".dp p1: fix list parallelism, split sentence",
+   "claims": [
+    {
+     "claim": "Three features together make this cyclic vomiting syndrome.",
+     "to": "Three features together indicate cyclic vomiting syndrome: stereotyped episodes, each self-limited over 1 to 2 days, and complete wellness between them with normal growth."
+    },
+    {
+     "claim": "The episodes are stereotyped.",
+     "to": "Three features together indicate cyclic vomiting syndrome: stereotyped episodes, each self-limited over 1 to 2 days, and complete wellness between them with normal growth."
+    },
+    {
+     "claim": "Each episode is self-limited over 1 to 2 days.",
+     "to": "Three features together indicate cyclic vomiting syndrome: stereotyped episodes, each self-limited over 1 to 2 days, and complete wellness between them with normal growth."
+    },
+    {
+     "claim": "The child is completely well between episodes, with normal growth.",
+     "to": "Three features together indicate cyclic vomiting syndrome: stereotyped episodes, each self-limited over 1 to 2 days, and complete wellness between them with normal growth."
+    },
+    {
+     "claim": "Stress at the start of term is the trigger.",
+     "to": "Stress at the start of term is the trigger."
+    },
+    {
+     "claim": "Most patients have a personal or family history of migraine.",
+     "to": "Most patients have a personal or family history of migraine."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Three features together make this cyclic vomiting syndrome.",
+     "from": "Three features together make this cyclic vomiting syndrome."
+    },
+    {
+     "claim": "The episodes are stereotyped.",
+     "from": "The episodes are stereotyped."
+    },
+    {
+     "claim": "Each episode is self-limited over 1 to 2 days.",
+     "from": "Each episode is self-limited over 1 to 2 days."
+    },
+    {
+     "claim": "The child is completely well between episodes, with normal growth.",
+     "from": "The child is completely well between episodes, with normal growth."
+    },
+    {
+     "claim": "Stress at the start of term is the trigger.",
+     "from": "Stress at the start of term is the trigger."
+    },
+    {
+     "claim": "Most patients have a personal or family history of migraine.",
+     "from": "Most patients have a personal or family history of migraine."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "not evidence of purging; there is no bingeing, no restriction and no preoccupation with shape.",
+   "with": "not evidence of purging. There is no bingeing, no restriction and no preoccupation with shape.",
+   "note": ".dp p2: split sentence",
+   "claims": [
+    {
+     "claim": "The erosive caries are not evidence of purging.",
+     "to": "The erosive caries are evidence that the vomiting is real and recurrent, not evidence of purging."
+    },
+    {
+     "claim": "There is no bingeing, no restriction and no preoccupation with shape.",
+     "to": "There is no bingeing, no restriction and no preoccupation with shape."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The erosive caries are not evidence of purging.",
+     "from": "The erosive caries are not evidence of purging."
+    },
+    {
+     "claim": "There is no bingeing, no restriction and no preoccupation with shape.",
+     "from": "There is no bingeing, no restriction and no preoccupation with shape."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "For episodic illness, ask how the patient is between episodes; the interval holds most of the diagnostic information.",
+   "with": "For episodic illness, ask how the patient is between episodes. Most of the diagnostic information comes from the interval between episodes.",
+   "note": ".rule: remove personification, split",
+   "claims": [
+    {
+     "claim": "For episodic illness, ask how the patient is between episodes.",
+     "to": "For episodic illness, ask how the patient is between episodes."
+    },
+    {
+     "claim": "The interval between episodes holds most of the diagnostic information.",
+     "to": "Most of the diagnostic information comes from the interval between episodes."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "For episodic illness, ask how the patient is between episodes.",
+     "from": "For episodic illness, ask how the patient is between episodes."
+    },
+    {
+     "claim": "The interval between episodes holds most of the diagnostic information.",
+     "from": "The interval between episodes holds most of the diagnostic information."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "Normal growth is stated and excludes the chronic inflammatory and malabsorptive options.",
+   "with": "Normal growth excludes the chronic inflammatory and malabsorptive options.",
+   "note": ".traps: remove meta 'is stated'",
+   "claims": [
+    {
+     "claim": "Growth is normal.",
+     "to": "Normal growth excludes the chronic inflammatory and malabsorptive options."
+    },
+    {
+     "claim": "Normal growth excludes the chronic inflammatory and malabsorptive options.",
+     "to": "Normal growth excludes the chronic inflammatory and malabsorptive options."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Growth is normal.",
+     "from": "Growth is normal."
+    },
+    {
+     "claim": "Normal growth excludes the chronic inflammatory and malabsorptive options.",
+     "from": "Normal growth excludes the chronic inflammatory and malabsorptive options."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "Occult GI bleeding after a negative upper endoscopy and colonoscopy",
+   "with": "Occult <b>GI</b> (gastrointestinal) bleeding after a negative upper endoscopy and colonoscopy",
+   "note": "p.sub: expand GI",
+   "claims": [
+    {
+     "claim": "The topic is occult GI bleeding after a negative upper endoscopy and colonoscopy.",
+     "to": "Occult GI (gastrointestinal) bleeding after a negative upper endoscopy and colonoscopy"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The topic is occult GI bleeding after a negative upper endoscopy and colonoscopy.",
+     "from": "The topic is occult GI bleeding after a negative upper endoscopy and colonoscopy."
+    },
+    {
+     "claim": "GI stands for gastrointestinal.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "Both ends have been scoped and are clean, so the source is in the <b>small bowel</b>, which neither scope reaches. In a child the most common small-bowel bleeding lesion is a <b>Meckel diverticulum</b>, found by a <b>technetium 99m pertechnetate scan</b>, which images ectopic gastric mucosa rather than the bleeding.",
+   "with": "Upper endoscopy and colonoscopy are both unremarkable, so the source is in the <b>small bowel</b>, which neither scope reaches. In a child, the most common small-bowel bleeding lesion is a <b>Meckel diverticulum</b>. It is found by a <b>technetium 99m pertechnetate scan</b>, which images ectopic gastric mucosa rather than the bleeding.",
+   "note": ".dp p1: plain wording for 'both ends scoped', split long sentence",
+   "claims": [
+    {
+     "claim": "Both upper endoscopy and colonoscopy have been done and are clean.",
+     "to": "Upper endoscopy and colonoscopy are both unremarkable, so the source is in the small bowel, which neither scope reaches."
+    },
+    {
+     "claim": "The source is in the small bowel, which neither scope reaches.",
+     "to": "Upper endoscopy and colonoscopy are both unremarkable, so the source is in the small bowel, which neither scope reaches."
+    },
+    {
+     "claim": "In a child the most common small-bowel bleeding lesion is a Meckel diverticulum.",
+     "to": "In a child, the most common small-bowel bleeding lesion is a Meckel diverticulum."
+    },
+    {
+     "claim": "A Meckel diverticulum is found by a technetium 99m pertechnetate scan.",
+     "to": "It is found by a technetium 99m pertechnetate scan, which images ectopic gastric mucosa rather than the bleeding."
+    },
+    {
+     "claim": "The scan images ectopic gastric mucosa rather than the bleeding.",
+     "to": "It is found by a technetium 99m pertechnetate scan, which images ectopic gastric mucosa rather than the bleeding."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Both upper endoscopy and colonoscopy have been done and are clean.",
+     "from": "Both upper endoscopy and colonoscopy have been done and are clean."
+    },
+    {
+     "claim": "The source is in the small bowel, which neither scope reaches.",
+     "from": "The source is in the small bowel, which neither scope reaches."
+    },
+    {
+     "claim": "In a child the most common small-bowel bleeding lesion is a Meckel diverticulum.",
+     "from": "In a child the most common small-bowel bleeding lesion is a Meckel diverticulum."
+    },
+    {
+     "claim": "A Meckel diverticulum is found by a technetium 99m pertechnetate scan.",
+     "from": "A Meckel diverticulum is found by a technetium 99m pertechnetate scan."
+    },
+    {
+     "claim": "The scan images ectopic gastric mucosa rather than the bleeding.",
+     "from": "The scan images ectopic gastric mucosa rather than the bleeding."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "goes <b>straight to the pertechnetate scan</b> without endoscopy first.",
+   "with": "goes <b>straight to the pertechnetate scan</b>. Endoscopy is not done first.",
+   "note": ".dp p3: split long sentence",
+   "claims": [
+    {
+     "claim": "That toddler goes straight to the pertechnetate scan.",
+     "to": "A toddler with painless dark red or maroon stool, pallor and a soft, nontender abdomen, without diarrhea, vomiting or fever, goes straight to the pertechnetate scan."
+    },
+    {
+     "claim": "That toddler does not have endoscopy first.",
+     "to": "Endoscopy is not done first."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "That toddler goes straight to the pertechnetate scan.",
+     "from": "That toddler goes straight to the pertechnetate scan."
+    },
+    {
+     "claim": "That toddler does not have endoscopy first.",
+     "from": "That toddler does not have endoscopy first."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "The upper GI picture is <b>hematemesis</b>",
+   "with": "The upper <b>GI</b> (gastrointestinal) picture is <b>hematemesis</b>",
+   "note": ".danger (stool color): expand GI",
+   "claims": [
+    {
+     "claim": "The upper GI picture is hematemesis.",
+     "to": "The upper GI (gastrointestinal) picture is hematemesis with black, sticky melena, and it is more common in adults."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The upper GI picture is hematemesis.",
+     "from": "The upper GI picture is hematemesis."
+    },
+    {
+     "claim": "GI stands for gastrointestinal.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "hematemesis, melena or hematochezia goes to CT angiography, not a Meckel scan",
+   "with": "hematemesis, melena or hematochezia goes to <b>CT</b> (computed tomography) angiography, not a Meckel scan",
+   "note": ".danger (gates): expand CT",
+   "claims": [
+    {
+     "claim": "Visible bleeding with instability (hematemesis, melena or hematochezia) goes to CT angiography, not a Meckel scan.",
+     "to": "hematemesis, melena or hematochezia goes to CT (computed tomography) angiography, not a Meckel scan"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Visible bleeding with instability (hematemesis, melena or hematochezia) goes to CT angiography, not a Meckel scan.",
+     "from": "Visible bleeding with instability (hematemesis, melena or hematochezia) goes to CT angiography, not a Meckel scan."
+    },
+    {
+     "claim": "CT stands for computed tomography.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "the FOBT separates them",
+   "with": "the <b>FOBT</b> (fecal occult blood test) separates them",
+   "note": ".pearls: expand FOBT",
+   "claims": [
+    {
+     "claim": "The FOBT separates celiac from occult bleeding.",
+     "to": "Celiac gives iron deficiency without occult blood; the FOBT (fecal occult blood test) separates them"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The FOBT separates celiac from occult bleeding.",
+     "from": "The FOBT separates celiac from occult bleeding."
+    },
+    {
+     "claim": "FOBT stands for fecal occult blood test.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "which the positive FOBT excludes.",
+   "with": "which the positive <b>FOBT</b> (fecal occult blood test) excludes.",
+   "note": ".traps: expand FOBT",
+   "claims": [
+    {
+     "claim": "The positive FOBT excludes celiac serology here.",
+     "to": "Microcytic anemia in a child pulls toward celiac serology, which the positive FOBT (fecal occult blood test) excludes."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The positive FOBT excludes celiac serology here.",
+     "from": "The positive FOBT excludes celiac serology here."
+    },
+    {
+     "claim": "FOBT stands for fecal occult blood test.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "indicate <b>classic galactosemia</b> (GALT deficiency; galactose-1-phosphate accumulates in the liver).",
+   "with": "indicate <b>classic galactosemia</b>. This is <b>GALT</b> (galactose-1-phosphate uridyltransferase) deficiency, in which galactose-1-phosphate accumulates in the liver.",
+   "note": ".dp: expand GALT (approved text otherwise unchanged)",
+   "claims": [
+    {
+     "claim": "The triad indicates classic galactosemia.",
+     "to": "Conjugated hyperbilirubinemia, a large liver, and a non-glucose reducing sugar in the urine after ten days of milk feeds indicate classic galactosemia."
+    },
+    {
+     "claim": "Classic galactosemia is GALT deficiency.",
+     "to": "This is GALT (galactose-1-phosphate uridyltransferase) deficiency, in which galactose-1-phosphate accumulates in the liver."
+    },
+    {
+     "claim": "Galactose-1-phosphate accumulates in the liver.",
+     "to": "This is GALT (galactose-1-phosphate uridyltransferase) deficiency, in which galactose-1-phosphate accumulates in the liver."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The triad indicates classic galactosemia.",
+     "from": "The triad indicates classic galactosemia."
+    },
+    {
+     "claim": "Classic galactosemia is GALT deficiency.",
+     "from": "Classic galactosemia is GALT deficiency."
+    },
+    {
+     "claim": "Galactose-1-phosphate accumulates in the liver.",
+     "from": "Galactose-1-phosphate accumulates in the liver."
+    },
+    {
+     "claim": "GALT stands for galactose-1-phosphate uridyltransferase.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "<b>Stop all lactose and galactose immediately</b> — breast milk and standard formula give way to soy-based formula — <b>without waiting for confirmation</b>, because the injury is ongoing. In parallel, <b>send blood and urine cultures and start empiric neonatal antibiotics</b> &#9888; for Escherichia coli. Confirm afterwards with red cell GALT activity.",
+   "with": "<b>Stop all lactose and galactose immediately</b>, <b>without waiting for confirmation</b>, because the injury is ongoing. Replace breast milk and standard formula with soy-based formula. In parallel, <b>send blood and urine cultures and start empiric neonatal antibiotics</b> &#9888; for Escherichia coli. Confirm afterwards with red cell <b>GALT</b> (galactose-1-phosphate uridyltransferase) activity.",
+   "note": ".danger: remove prose em dashes, expand GALT",
+   "claims": [
+    {
+     "claim": "Stop all lactose and galactose immediately.",
+     "to": "Stop all lactose and galactose immediately, without waiting for confirmation, because the injury is ongoing."
+    },
+    {
+     "claim": "Do not wait for confirmation.",
+     "to": "Stop all lactose and galactose immediately, without waiting for confirmation, because the injury is ongoing."
+    },
+    {
+     "claim": "The injury is ongoing.",
+     "to": "Stop all lactose and galactose immediately, without waiting for confirmation, because the injury is ongoing."
+    },
+    {
+     "claim": "Breast milk and standard formula give way to soy-based formula.",
+     "to": "Replace breast milk and standard formula with soy-based formula."
+    },
+    {
+     "claim": "In parallel, send blood and urine cultures and start empiric neonatal antibiotics for Escherichia coli.",
+     "to": "In parallel, send blood and urine cultures and start empiric neonatal antibiotics ⚠ for Escherichia coli."
+    },
+    {
+     "claim": "Confirm afterwards with red cell GALT activity.",
+     "to": "Confirm afterwards with red cell GALT (galactose-1-phosphate uridyltransferase) activity."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Stop all lactose and galactose immediately.",
+     "from": "Stop all lactose and galactose immediately."
+    },
+    {
+     "claim": "Do not wait for confirmation.",
+     "from": "Do not wait for confirmation."
+    },
+    {
+     "claim": "The injury is ongoing.",
+     "from": "The injury is ongoing."
+    },
+    {
+     "claim": "Breast milk and standard formula give way to soy-based formula.",
+     "from": "Breast milk and standard formula give way to soy-based formula."
+    },
+    {
+     "claim": "In parallel, send blood and urine cultures and start empiric neonatal antibiotics for Escherichia coli.",
+     "from": "In parallel, send blood and urine cultures and start empiric neonatal antibiotics for Escherichia coli."
+    },
+    {
+     "claim": "Confirm afterwards with red cell GALT activity.",
+     "from": "Confirm afterwards with red cell GALT activity."
+    },
+    {
+     "claim": "GALT stands for galactose-1-phosphate uridyltransferase.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "The exam keys <b>60 days</b> as the Kasai window, and that is the number to pick. The evidence underneath it is not a cliff &mdash; native-liver survival falls continuously with age at operation, and a 2023 meta-analysis found operating at <b>30 days or earlier</b> still beat 31&ndash;60 days. Read 60 days as the keyed threshold, not as a deadline with room to spare.",
+   "with": "Board questions use <b>60 days</b> as the Kasai cutoff. The evidence shows no sharp cutoff at 60 days. Native-liver survival falls continuously with age at operation. A 2023 meta-analysis found that operating at <b>30 days or earlier</b> was still better than operating at 31&ndash;60 days. Use 60 days as the exam threshold, not as a deadline with room to spare.",
+   "note": ".pearls (exam vs evidence): remove em dash and 'cliff' metaphor, split",
+   "claims": [
+    {
+     "claim": "The exam keys 60 days as the Kasai window.",
+     "to": "Board questions use 60 days as the Kasai cutoff."
+    },
+    {
+     "claim": "60 days is the number to pick on the exam.",
+     "to": "Board questions use 60 days as the Kasai cutoff."
+    },
+    {
+     "claim": "The evidence is not a cliff at 60 days.",
+     "to": "The evidence shows no sharp cutoff at 60 days."
+    },
+    {
+     "claim": "Native-liver survival falls continuously with age at operation.",
+     "to": "Native-liver survival falls continuously with age at operation."
+    },
+    {
+     "claim": "A 2023 meta-analysis found operating at 30 days or earlier still beat 31–60 days.",
+     "to": "A 2023 meta-analysis found that operating at 30 days or earlier was still better than operating at 31–60 days."
+    },
+    {
+     "claim": "Read 60 days as the keyed threshold, not as a deadline with room to spare.",
+     "to": "Use 60 days as the exam threshold, not as a deadline with room to spare."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The exam keys 60 days as the Kasai window.",
+     "from": "The exam keys 60 days as the Kasai window."
+    },
+    {
+     "claim": "60 days is the number to pick on the exam.",
+     "from": "60 days is the number to pick on the exam."
+    },
+    {
+     "claim": "The evidence is not a cliff at 60 days.",
+     "from": "The evidence is not a cliff at 60 days."
+    },
+    {
+     "claim": "Native-liver survival falls continuously with age at operation.",
+     "from": "Native-liver survival falls continuously with age at operation."
+    },
+    {
+     "claim": "A 2023 meta-analysis found operating at 30 days or earlier still beat 31–60 days.",
+     "from": "A 2023 meta-analysis found operating at 30 days or earlier still beat 31–60 days."
+    },
+    {
+     "claim": "Read 60 days as the keyed threshold, not as a deadline with room to spare.",
+     "from": "Read 60 days as the keyed threshold, not as a deadline with room to spare."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "Classic galactosemia is GALT deficiency affecting liver, kidney, brain and lens with a predisposition to Escherichia coli sepsis &middot; The pathway: galactokinase (GALK) makes galactose-1-phosphate, and GALT converts it to UDP-galactose and glucose-1-phosphate.",
+   "with": "Classic galactosemia is <b>GALT</b> (galactose-1-phosphate uridyltransferase) deficiency affecting liver, kidney, brain and lens, with a predisposition to Escherichia coli sepsis &middot; In the pathway, <b>GALK</b> (galactokinase) makes galactose-1-phosphate, and GALT converts it to <b>UDP</b> (uridine diphosphate) galactose and glucose-1-phosphate.",
+   "note": ".pearls: expand GALT, GALK, UDP at first use",
+   "claims": [
+    {
+     "claim": "Classic galactosemia is GALT deficiency.",
+     "to": "Classic galactosemia is GALT (galactose-1-phosphate uridyltransferase) deficiency affecting liver, kidney, brain and lens, with a predisposition to Escherichia coli sepsis"
+    },
+    {
+     "claim": "It affects liver, kidney, brain and lens.",
+     "to": "Classic galactosemia is GALT (galactose-1-phosphate uridyltransferase) deficiency affecting liver, kidney, brain and lens, with a predisposition to Escherichia coli sepsis"
+    },
+    {
+     "claim": "It predisposes to Escherichia coli sepsis.",
+     "to": "Classic galactosemia is GALT (galactose-1-phosphate uridyltransferase) deficiency affecting liver, kidney, brain and lens, with a predisposition to Escherichia coli sepsis"
+    },
+    {
+     "claim": "Galactokinase (GALK) makes galactose-1-phosphate.",
+     "to": "In the pathway, GALK (galactokinase) makes galactose-1-phosphate, and GALT converts it to UDP (uridine diphosphate) galactose and glucose-1-phosphate."
+    },
+    {
+     "claim": "GALT converts galactose-1-phosphate to UDP-galactose and glucose-1-phosphate.",
+     "to": "In the pathway, GALK (galactokinase) makes galactose-1-phosphate, and GALT converts it to UDP (uridine diphosphate) galactose and glucose-1-phosphate."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Classic galactosemia is GALT deficiency.",
+     "from": "Classic galactosemia is GALT deficiency."
+    },
+    {
+     "claim": "It affects liver, kidney, brain and lens.",
+     "from": "It affects liver, kidney, brain and lens."
+    },
+    {
+     "claim": "It predisposes to Escherichia coli sepsis.",
+     "from": "It predisposes to Escherichia coli sepsis."
+    },
+    {
+     "claim": "Galactokinase (GALK) makes galactose-1-phosphate.",
+     "from": "Galactokinase (GALK) makes galactose-1-phosphate."
+    },
+    {
+     "claim": "GALT converts galactose-1-phosphate to UDP-galactose and glucose-1-phosphate.",
+     "from": "GALT converts galactose-1-phosphate to UDP-galactose and glucose-1-phosphate."
+    },
+    {
+     "claim": "GALT stands for galactose-1-phosphate uridyltransferase.",
+     "from": "expansion"
+    },
+    {
+     "claim": "GALK stands for galactokinase.",
+     "from": "expansion"
+    },
+    {
+     "claim": "UDP stands for uridine diphosphate.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "Hereditary fructose intolerance is the diet-shifted twin with the same hepatic picture plus hypoglycemia, appearing at weaning",
+   "with": "Hereditary fructose intolerance has the same hepatic picture plus hypoglycemia, but appears at weaning",
+   "note": ".pearls: remove 'diet-shifted twin' slogan",
+   "claims": [
+    {
+     "claim": "Hereditary fructose intolerance is the diet-shifted twin of galactosemia.",
+     "to": "Hereditary fructose intolerance has the same hepatic picture plus hypoglycemia, but appears at weaning"
+    },
+    {
+     "claim": "Hereditary fructose intolerance has the same hepatic picture plus hypoglycemia.",
+     "to": "Hereditary fructose intolerance has the same hepatic picture plus hypoglycemia, but appears at weaning"
+    },
+    {
+     "claim": "Hereditary fructose intolerance appears at weaning.",
+     "to": "Hereditary fructose intolerance has the same hepatic picture plus hypoglycemia, but appears at weaning"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hereditary fructose intolerance is the diet-shifted twin of galactosemia.",
+     "from": "Hereditary fructose intolerance is the diet-shifted twin of galactosemia."
+    },
+    {
+     "claim": "Hereditary fructose intolerance has the same hepatic picture plus hypoglycemia.",
+     "from": "Hereditary fructose intolerance has the same hepatic picture plus hypoglycemia."
+    },
+    {
+     "claim": "Hereditary fructose intolerance appears at weaning.",
+     "from": "Hereditary fructose intolerance appears at weaning."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "and the Kasai clock runs to about 60 days &#9888;",
+   "with": "and the Kasai window is about 60 days &#9888;",
+   "note": ".pearls: remove 'clock runs' personification",
+   "claims": [
+    {
+     "claim": "The Kasai clock runs to about 60 days.",
+     "to": "Direct hyperbilirubinemia in a well infant with acholic stools is biliary atresia, and the Kasai window is about 60 days ⚠"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The Kasai clock runs to about 60 days.",
+     "from": "The Kasai clock runs to about 60 days."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "and girls develop <b>primary ovarian insufficiency</b>; the diet reverses",
+   "with": "and girls develop <b>primary ovarian insufficiency</b>. The diet reverses",
+   "note": ".pearls: split long item",
+   "claims": [
+    {
+     "claim": "Girls develop primary ovarian insufficiency.",
+     "to": "Even with an early, strict diet, children can have cognitive deficits and speech problems (verbal dyspraxia), and girls develop primary ovarian insufficiency."
+    },
+    {
+     "claim": "The diet reverses the acute illness.",
+     "to": "The diet reverses the acute illness but does not prevent these"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Girls develop primary ovarian insufficiency.",
+     "from": "Girls develop primary ovarian insufficiency."
+    },
+    {
+     "claim": "The diet reverses the acute illness.",
+     "from": "The diet reverses the acute illness."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "is another positive newborn screen: there the TSH level and the neck locate the defect; here the enzyme deficiency and the organism do.",
+   "with": "is another positive newborn screen. There, the TSH (thyroid-stimulating hormone) level and the neck locate the defect. In galactosemia, the enzyme deficiency and the organism locate the defect.",
+   "note": "Pairs with: expand TSH, split paired contrast",
+   "claims": [
+    {
+     "claim": "Congenital Hypothyroidism is another positive newborn screen.",
+     "to": "Part I Congenital Hypothyroidism is another positive newborn screen."
+    },
+    {
+     "claim": "In congenital hypothyroidism, the TSH level and the neck locate the defect.",
+     "to": "There, the TSH (thyroid-stimulating hormone) level and the neck locate the defect."
+    },
+    {
+     "claim": "Here, the enzyme deficiency and the organism locate the defect.",
+     "to": "In galactosemia, the enzyme deficiency and the organism locate the defect."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Congenital Hypothyroidism is another positive newborn screen.",
+     "from": "Congenital Hypothyroidism is another positive newborn screen."
+    },
+    {
+     "claim": "In congenital hypothyroidism, the TSH level and the neck locate the defect.",
+     "from": "In congenital hypothyroidism, the TSH level and the neck locate the defect."
+    },
+    {
+     "claim": "Here, the enzyme deficiency and the organism locate the defect.",
+     "from": "Here, the enzyme deficiency and the organism locate the defect."
+    },
+    {
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "A positive newborn screen never names the disease because every option is on the panel, so the bilirubin fraction, the liver and the urine do the naming, and a febrile neonate is cultured and treated for sepsis in parallel with the metabolic answer rather than after it.",
+   "with": "A positive newborn screen never names the disease when every disorder under consideration is on the panel. The bilirubin fraction, the liver and the urine identify it. Culture and treat a febrile neonate for sepsis in parallel with the metabolic diagnosis, rather than after it.",
+   "note": ".rule: remove personification ('do the naming'), split into three sentences",
+   "claims": [
+    {
+     "claim": "A positive newborn screen never names the disease when every option is on the panel.",
+     "to": "A positive newborn screen never names the disease when every disorder under consideration is on the panel."
+    },
+    {
+     "claim": "The bilirubin fraction, the liver and the urine name the disease.",
+     "to": "The bilirubin fraction, the liver and the urine identify it."
+    },
+    {
+     "claim": "A febrile neonate is cultured and treated for sepsis in parallel with the metabolic answer rather than after it.",
+     "to": "Culture and treat a febrile neonate for sepsis in parallel with the metabolic diagnosis, rather than after it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A positive newborn screen never names the disease when every option is on the panel.",
+     "from": "A positive newborn screen never names the disease when every option is on the panel."
+    },
+    {
+     "claim": "The bilirubin fraction, the liver and the urine name the disease.",
+     "from": "The bilirubin fraction, the liver and the urine name the disease."
+    },
+    {
+     "claim": "A febrile neonate is cultured and treated for sepsis in parallel with the metabolic answer rather than after it.",
+     "from": "A febrile neonate is cultured and treated for sepsis in parallel with the metabolic answer rather than after it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "The positive screen sells cystic fibrosis, whose neonatal face is meconium ileus rather than fever with urinary sugar.",
+   "with": "The positive screen suggests cystic fibrosis, which presents in the neonate with meconium ileus rather than fever with urinary sugar.",
+   "note": ".traps: remove personification ('sells', 'face')",
+   "claims": [
+    {
+     "claim": "The positive screen suggests cystic fibrosis.",
+     "to": "The positive screen suggests cystic fibrosis, which presents in the neonate with meconium ileus rather than fever with urinary sugar."
+    },
+    {
+     "claim": "Cystic fibrosis presents in the neonate with meconium ileus rather than fever with urinary sugar.",
+     "to": "The positive screen suggests cystic fibrosis, which presents in the neonate with meconium ileus rather than fever with urinary sugar."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The positive screen suggests cystic fibrosis.",
+     "from": "The positive screen suggests cystic fibrosis."
+    },
+    {
+     "claim": "Cystic fibrosis presents in the neonate with meconium ileus rather than fever with urinary sugar.",
+     "from": "Cystic fibrosis presents in the neonate with meconium ileus rather than fever with urinary sugar."
+    }
+   ]
+  }
+ ]
+}

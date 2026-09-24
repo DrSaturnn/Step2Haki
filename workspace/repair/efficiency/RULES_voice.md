@@ -34,6 +34,21 @@
 - Strip internal and workflow text (batch notes, ledger, candidate, verified).
 - Reread every changed sentence for grammar.
 
+**Round 2 (after Jonathan's review of the live GI sample; no drift is the top priority):**
+- One idea per sentence, about 25 words at most. Split arrow chains: at most one → per sentence. Where a block lists parallel items (for example three benign complaints), a "·"-separated row list is allowed in `.dp`, `.pearls`, `.danger` and `.rule`.
+- No framing or meta sentences. Nothing that talks about the answer, the tier, the finding, the question, the stem or the decision instead of stating the clinical fact. "X and Y set the answer", "Two mimics change the tier" and "Parental distress is not a finding" become what to do, e.g. "Reassure; a thriving infant needs no formula change, suppository or stool workup."
+- Acronyms: at first use within each block, bold the acronym and write it out in parentheses, unbolded: `<b>FPIES</b> (food protein-induced enterocolitis syndrome)`. Later uses in the same block stay plain. Common units and immunoglobulin names (IgE, IgA) count as acronyms only if a learner might not expand them; list every acronym you skip in your report. Do not create a "`<b>Term</b> — definition`" pattern by accident (never follow the bold acronym with " — ").
+- Remove emphasis bold on non-terms (for example a bold "and"), and declare it in `reworded_bold`.
+- The approved galactosemia `.dp` text stays unless it breaks a rule above.
+
+**Drift protocol (mandatory; the verifier checks it):** every replace op carries a claim map.
+- `"claims"`: every atomic clinical claim in the OLD text, one short sentence each, with exactly one of:
+  `"to"`: the NEW sentence that now carries it, quoted exactly as visible text (tags stripped); or
+  `"carried_by"`: a quoted passage elsewhere in the same brief (another block, a table cell or a bank item) that already states it; or
+  `"dropped"`: the reason, allowed only for non-clinical framing. A dropped claim may not contain a number, drug, test or cutoff.
+- `"new_claims"`: every clinical claim in the NEW text, each with `"from"`: the exact `"claim"` text of the old claim it came from, or `"expansion"` for a written-out acronym (the expansion must be the standard one).
+- The verifier fails an op with no claims list, an unmapped claim, a quote that is not in the new brief, a new claim without `"from"` (or with a `"from"` that matches no old claim), or a dropped claim carrying clinical content. `--report` prints old text, new text and the claim map for the reviewer.
+
 If a block is already plain, leave it. If you are unsure a rewrite keeps the meaning, leave it and list it.
 
 **Output:** edits JSON (replace ops, anchors unique within the brief) and a report of 3 to 5 lines: blocks changed, blocks left, anything uncertain.

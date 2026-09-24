@@ -87,11 +87,21 @@ def blobs(repo, history):
                 paths[m.group(1)].add(m.group(2))
         return [(s, p) for s, ps in paths.items() for p in ps]
     raw = git(repo, 'ls-files', '-s').decode()
-    return [(l.split()[1], l.split('\t', 1)[1]) for l in raw.splitlines()]
+    out = [(l.split()[1], l.split('\t', 1)[1]) for l in raw.splitlines()]
+    # files about to be committed: untracked and not ignored (read from disk; 'disk:' marks them)
+    for p in git(repo, 'ls-files', '--others', '--exclude-standard').decode().splitlines():
+        out.append(('disk:' + p, p))
+    return out
 
 
 def read_blobs(repo, shas):
     out = {}
+    for sha in [x for x in shas if x.startswith('disk:')]:
+        try:
+            out[sha] = open(os.path.join(repo, sha[5:]), encoding='utf-8', errors='replace').read()
+        except OSError:
+            out[sha] = ''
+    shas = [x for x in shas if not x.startswith('disk:')]
     if not shas:
         return out
     data = git(repo, 'cat-file', '--batch', inp='\n'.join(shas).encode())
@@ -166,6 +176,12 @@ def main(argv):
         src.pop(h, None)
     scan = [(s, p) for s, p in bl if not is_local(p, lo)]
     texts = read_blobs(repo, sorted({s for s, _ in scan}))
+    # shingles already on the published page (any version of an index.html) are judged by the page
+    # limit, not per file: packets and edit files that quote the page carry no new vendor text
+    page_sh = set()
+    for s, p in scan:
+        if os.path.basename(p) == 'index.html':
+            page_sh |= shingles(words(texts.get(s, ''))) & src.keys()
     res = {}
     for s, p in scan:
         t = texts.get(s, '')
@@ -173,6 +189,8 @@ def main(argv):
             continue
         sh = shingles(words(t))
         hit = sh & src.keys()
+        if os.path.basename(p) != 'index.html':
+            hit = hit - page_sh
         key = p
         prev = res.get(key)
         if prev is None or len(hit) > prev['shared']:
@@ -207,8 +225,8 @@ def main(argv):
     if '--json' in argv:
         print(json.dumps({p: {k: v for k, v in r.items() if k != 'hits'} for p, r in list(flagged.items()) + list(idx.items())}, indent=1))
         return 0
-    print('vendor_scan: %s | %d source shingles | %d paths scanned | %d flagged (>= %d shared) | local-only: %s'
-          % ('all history' if history else 'tracked files', len(src), len(res), len(flagged), mn, ' '.join(lo)))
+    print('vendor_scan: %s | %d source shingles | %d paths scanned | %d flagged (>= %d shared, page text excluded) | local-only: %s'
+          % ('all history' if history else 'tracked + to-be-committed files', len(src), len(res), len(flagged), mn, ' '.join(lo)))
     for p, r in sorted(flagged.items(), key=lambda x: -x[1]['shared']):
         print('  %6d shared (%5.1f%% of %d)  %-50s top source: %s' % (r['shared'], 100.0 * r['shared'] / max(1, r['of']), r['of'], p, r['top']))
     for p, r in idx.items():

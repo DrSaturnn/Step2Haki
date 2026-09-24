@@ -1,0 +1,807 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "Macules on the lips, polyps in the gut",
+   "with": "Lip macules and gastrointestinal polyps",
+   "note": "subtitle: paired contrast for rhythm made plain",
+   "claims": [
+    {
+     "claim": "Peutz-Jeghers has macules on the lips.",
+     "to": "Lip macules and gastrointestinal polyps"
+    },
+    {
+     "claim": "Peutz-Jeghers has polyps in the gut.",
+     "to": "Lip macules and gastrointestinal polyps"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Peutz-Jeghers has lip macules.",
+     "from": "Peutz-Jeghers has macules on the lips."
+    },
+    {
+     "claim": "Peutz-Jeghers has gastrointestinal polyps.",
+     "from": "Peutz-Jeghers has polyps in the gut."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "<p>A 13-year-old with six-day menses and microcytic anaemia suggests menstrual iron deficiency, but <b>brown macules on the lips and buccal mucosa</b> are the mucocutaneous marker of <b>Peutz-Jeghers syndrome</b>.",
+   "with": "<p>Six-day menses and microcytic anaemia in a 13-year-old suggest menstrual iron deficiency. However, <b>brown macules on the lips and buccal mucosa</b> are the mucocutaneous marker of <b>Peutz-Jeghers syndrome</b>.",
+   "note": ".dp: split a 31-word sentence",
+   "claims": [
+    {
+     "claim": "A 13-year-old with six-day menses and microcytic anaemia suggests menstrual iron deficiency.",
+     "to": "Six-day menses and microcytic anaemia in a 13-year-old suggest menstrual iron deficiency."
+    },
+    {
+     "claim": "Brown macules on the lips and buccal mucosa are the mucocutaneous marker of Peutz-Jeghers syndrome.",
+     "to": "However, brown macules on the lips and buccal mucosa are the mucocutaneous marker of Peutz-Jeghers syndrome."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Six-day menses and microcytic anaemia in a 13-year-old suggest menstrual iron deficiency.",
+     "from": "A 13-year-old with six-day menses and microcytic anaemia suggests menstrual iron deficiency."
+    },
+    {
+     "claim": "Brown macules on the lips and buccal mucosa are the mucocutaneous marker of Peutz-Jeghers syndrome.",
+     "from": "Brown macules on the lips and buccal mucosa are the mucocutaneous marker of Peutz-Jeghers syndrome."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "<b>Hamartomatous</b>, not adenomatous, which is why the cancer risk is broader than colon alone &middot; MCV separates the bleeding causes from the marrow causes before any imaging",
+   "with": "<b>Hamartomatous</b> rather than adenomatous polyps explain why the cancer risk is broader than colon alone &middot; <b>MCV</b> (mean corpuscular volume) separates the bleeding causes from the marrow causes before any imaging",
+   "note": ".pearls: fragment made a sentence; acronym expanded",
+   "claims": [
+    {
+     "claim": "Peutz-Jeghers polyps are hamartomatous, not adenomatous.",
+     "to": "Hamartomatous rather than adenomatous polyps explain why the cancer risk is broader than colon alone"
+    },
+    {
+     "claim": "Because they are hamartomatous, the cancer risk is broader than colon alone.",
+     "to": "Hamartomatous rather than adenomatous polyps explain why the cancer risk is broader than colon alone"
+    },
+    {
+     "claim": "MCV separates the bleeding causes from the marrow causes before any imaging.",
+     "to": "MCV (mean corpuscular volume) separates the bleeding causes from the marrow causes before any imaging"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The polyps are hamartomatous rather than adenomatous.",
+     "from": "Peutz-Jeghers polyps are hamartomatous, not adenomatous."
+    },
+    {
+     "claim": "That explains why the cancer risk is broader than colon alone.",
+     "from": "Because they are hamartomatous, the cancer risk is broader than colon alone."
+    },
+    {
+     "claim": "MCV separates the bleeding causes from the marrow causes before any imaging.",
+     "from": "MCV separates the bleeding causes from the marrow causes before any imaging."
+    },
+    {
+     "claim": "MCV stands for mean corpuscular volume.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "Ask: where exactly is the pigment, and what is the MCV?",
+   "with": "Ask: where exactly is the pigment, and what is the MCV (mean corpuscular volume)?",
+   "note": "Pairs with: acronym expanded",
+   "claims": [
+    {
+     "claim": "Ask where exactly the pigment is and what the MCV is.",
+     "to": "Ask: where exactly is the pigment, and what is the MCV (mean corpuscular volume)?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Ask where exactly the pigment is and what the MCV is.",
+     "from": "Ask where exactly the pigment is and what the MCV is."
+    },
+    {
+     "claim": "MCV stands for mean corpuscular volume.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<i>Campylobacter</i> is treated <b>supportively</b> because it is usually self-limited within seven days; antibiotics are reserved for the severe or high-risk cases listed above, and <b>surgery is not required</b> in infectious ileocecitis <i>(all in-context)</i>.",
+   "with": "<i>Campylobacter</i> is treated <b>supportively</b> because it is usually self-limited within seven days. Antibiotics are reserved for the severe or high-risk cases listed above. In infectious ileocecitis, <b>surgery is not required</b>.",
+   "note": ".danger: split; internal note stripped",
+   "claims": [
+    {
+     "claim": "Campylobacter is treated supportively.",
+     "to": "Campylobacter is treated supportively because it is usually self-limited within seven days."
+    },
+    {
+     "claim": "Campylobacter is usually self-limited within seven days.",
+     "to": "Campylobacter is treated supportively because it is usually self-limited within seven days."
+    },
+    {
+     "claim": "Antibiotics are reserved for the severe or high-risk cases listed above.",
+     "to": "Antibiotics are reserved for the severe or high-risk cases listed above."
+    },
+    {
+     "claim": "Surgery is not required in infectious ileocecitis.",
+     "to": "In infectious ileocecitis, surgery is not required."
+    },
+    {
+     "claim": "All in-context.",
+     "dropped": "internal workflow note, not clinical"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Campylobacter is treated supportively because it is usually self-limited within seven days.",
+     "from": "Campylobacter is treated supportively."
+    },
+    {
+     "claim": "Antibiotics are reserved for the severe or high-risk cases listed above.",
+     "from": "Antibiotics are reserved for the severe or high-risk cases listed above."
+    },
+    {
+     "claim": "In infectious ileocecitis, surgery is not required.",
+     "from": "Surgery is not required in infectious ileocecitis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<b>The culture trap</b> &mdash; a positive culture with a susceptibility panel is not an indication; culture exists for protracted or severe illness and for outbreak control in day care and nursing homes",
+   "with": "<b>Stool culture</b> &mdash; a positive culture with a susceptibility panel is not an indication. Culture is for protracted or severe illness and for outbreak control in day care and nursing homes",
+   "note": ".pearls: rhetorical bold label replaced by the test name",
+   "reworded_bold": [
+    "The culture trap"
+   ],
+   "claims": [
+    {
+     "claim": "The culture trap.",
+     "to": "a positive culture with a susceptibility panel is not an indication"
+    },
+    {
+     "claim": "A positive culture with a susceptibility panel is not an indication for antibiotics.",
+     "to": "a positive culture with a susceptibility panel is not an indication"
+    },
+    {
+     "claim": "Culture is for protracted or severe illness and for outbreak control in day care and nursing homes.",
+     "to": "Culture is for protracted or severe illness and for outbreak control in day care and nursing homes"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A positive stool culture with a susceptibility panel is not an indication.",
+     "from": "A positive culture with a susceptibility panel is not an indication for antibiotics."
+    },
+    {
+     "claim": "Culture is for protracted or severe illness and for outbreak control in day care and nursing homes.",
+     "from": "Culture is for protracted or severe illness and for outbreak control in day care and nursing homes."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "avoided when another agent covers the organism, for tooth staining",
+   "with": "avoided when another agent covers the organism, because of tooth staining",
+   "note": ".pearls: grammar",
+   "claims": [
+    {
+     "claim": "Doxycycline under 8 is avoided when another agent covers the organism, because of tooth staining.",
+     "to": "avoided when another agent covers the organism, because of tooth staining"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Doxycycline under 8 is avoided when another agent covers the organism, because of tooth staining.",
+     "from": "Doxycycline under 8 is avoided when another agent covers the organism, because of tooth staining."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "look for the finding the script <b>cannot</b> explain",
+   "with": "look for the finding the script cannot explain",
+   "note": ".rule: emphasis bold on a non-term removed",
+   "reworded_bold": [
+    "cannot"
+   ],
+   "claims": [
+    {
+     "claim": "When a presentation fits a textbook script, look for the finding the script cannot explain.",
+     "to": "When a presentation fits a textbook script, look for the finding the script cannot explain, such as a symptom the disease does not produce or an exposure it cannot have."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a presentation fits a textbook script, look for the finding the script cannot explain.",
+     "from": "When a presentation fits a textbook script, look for the finding the script cannot explain."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "Acute appendicitis &mdash; Appendicitis is not associated with profuse watery then mucoid diarrhea, and it cannot explain a sibling with the same illness; there are no peritoneal signs",
+   "with": "Acute appendicitis is not associated with profuse watery then mucoid diarrhea and cannot explain a sibling with the same illness. There are no peritoneal signs.",
+   "note": ".traps: em dash removed",
+   "claims": [
+    {
+     "claim": "Appendicitis is not associated with profuse watery then mucoid diarrhea.",
+     "to": "Acute appendicitis is not associated with profuse watery then mucoid diarrhea and cannot explain a sibling with the same illness."
+    },
+    {
+     "claim": "Appendicitis cannot explain a sibling with the same illness.",
+     "to": "Acute appendicitis is not associated with profuse watery then mucoid diarrhea and cannot explain a sibling with the same illness."
+    },
+    {
+     "claim": "There are no peritoneal signs.",
+     "to": "There are no peritoneal signs."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Acute appendicitis is not associated with profuse watery then mucoid diarrhea.",
+     "from": "Appendicitis is not associated with profuse watery then mucoid diarrhea."
+    },
+    {
+     "claim": "Acute appendicitis cannot explain a sibling with the same illness.",
+     "from": "Appendicitis cannot explain a sibling with the same illness."
+    },
+    {
+     "claim": "There are no peritoneal signs.",
+     "from": "There are no peritoneal signs."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<i>E. coli</i> O157:H7 &mdash; Hematochezia appears in the patient within 1–3 days, and fever above 38.5 °C rarely occurs; the bloody stools are the brother's, not this patient's",
+   "with": "<i>E. coli</i> O157:H7 causes hematochezia in the patient within 1–3 days, and fever above 38.5 °C rarely occurs. The bloody stools are the brother's, not this patient's.",
+   "note": ".traps: em dash removed",
+   "claims": [
+    {
+     "claim": "E. coli O157:H7 causes hematochezia in the patient within 1–3 days.",
+     "to": "E. coli O157:H7 causes hematochezia in the patient within 1–3 days, and fever above 38.5 °C rarely occurs."
+    },
+    {
+     "claim": "In E. coli O157:H7, fever above 38.5 °C rarely occurs.",
+     "to": "E. coli O157:H7 causes hematochezia in the patient within 1–3 days, and fever above 38.5 °C rarely occurs."
+    },
+    {
+     "claim": "The bloody stools are the brother's, not this patient's.",
+     "to": "The bloody stools are the brother's, not this patient's."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "E. coli O157:H7 causes hematochezia in the patient within 1–3 days.",
+     "from": "E. coli O157:H7 causes hematochezia in the patient within 1–3 days."
+    },
+    {
+     "claim": "In E. coli O157:H7, fever above 38.5 °C rarely occurs.",
+     "from": "In E. coli O157:H7, fever above 38.5 °C rarely occurs."
+    },
+    {
+     "claim": "The bloody stools are the brother's, not this patient's.",
+     "from": "The bloody stools are the brother's, not this patient's."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "Norovirus &mdash; Norovirus gives <b>watery</b> stools",
+   "with": "Norovirus gives <b>watery</b> stools",
+   "note": ".traps: em dash and repeated name removed",
+   "claims": [
+    {
+     "claim": "Norovirus gives watery stools.",
+     "to": "Norovirus gives watery stools without mucus, a normal white blood cell count, and prominent vomiting"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Norovirus gives watery stools.",
+     "from": "Norovirus gives watery stools."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "Cecal diverticulitis &mdash; It is exceedingly rare in children and adolescents, and it does not produce profuse mucoid diarrhea",
+   "with": "Cecal diverticulitis is exceedingly rare in children and adolescents and does not produce profuse mucoid diarrhea.",
+   "note": ".traps: em dash removed",
+   "claims": [
+    {
+     "claim": "Cecal diverticulitis is exceedingly rare in children and adolescents.",
+     "to": "Cecal diverticulitis is exceedingly rare in children and adolescents and does not produce profuse mucoid diarrhea."
+    },
+    {
+     "claim": "Cecal diverticulitis does not produce profuse mucoid diarrhea.",
+     "to": "Cecal diverticulitis is exceedingly rare in children and adolescents and does not produce profuse mucoid diarrhea."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Cecal diverticulitis is exceedingly rare in children and adolescents.",
+     "from": "Cecal diverticulitis is exceedingly rare in children and adolescents."
+    },
+    {
+     "claim": "Cecal diverticulitis does not produce profuse mucoid diarrhea.",
+     "from": "Cecal diverticulitis does not produce profuse mucoid diarrhea."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "<p>Each wrong option is a <b>real mechanism stated in the wrong direction or the wrong compartment</b>. Ligandin is",
+   "with": "<p>Ligandin is",
+   "note": ".dp: meta sentence about the options removed; each mechanism's direction stays",
+   "reworded_bold": [
+    "real mechanism stated in the wrong direction or the wrong compartment"
+   ],
+   "claims": [
+    {
+     "claim": "Each wrong option is a real mechanism stated in the wrong direction or the wrong compartment.",
+     "dropped": "framing about the answer options; the direction or compartment of each mechanism is stated in the four sentences that follow"
+    }
+   ],
+   "new_claims": []
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "Read the three together &middot; <b>Direct high, GGT high, retics normal</b>: duct obstruction, biliary atresia in a well infant with pale stools &middot; <b>Direct high, GGT normal</b>: PFIC &middot; <b>Direct and GGT high, retics low, cytopenias</b>: HLH in a febrile, ill infant",
+   "with": "Interpret direct bilirubin, <b>GGT</b> (gamma-glutamyl transferase) and reticulocytes together &middot; <b>Direct high, GGT high, retics normal</b>: duct obstruction, biliary atresia in a well infant with pale stools &middot; <b>Direct high, GGT normal</b>: <b>PFIC</b> (progressive familial intrahepatic cholestasis) &middot; <b>Direct and GGT high, retics low, cytopenias</b>: <b>HLH</b> (hemophagocytic lymphohistiocytosis) in a febrile, ill infant",
+   "note": ".pearls: acronyms expanded; vague opener made specific",
+   "claims": [
+    {
+     "claim": "Read direct bilirubin, GGT and reticulocytes together.",
+     "to": "Interpret direct bilirubin, GGT (gamma-glutamyl transferase) and reticulocytes together"
+    },
+    {
+     "claim": "Direct high, GGT high, retics normal indicates duct obstruction, biliary atresia in a well infant with pale stools.",
+     "to": "Direct high, GGT high, retics normal: duct obstruction, biliary atresia in a well infant with pale stools"
+    },
+    {
+     "claim": "Direct high, GGT normal indicates PFIC.",
+     "to": "Direct high, GGT normal: PFIC (progressive familial intrahepatic cholestasis)"
+    },
+    {
+     "claim": "Direct and GGT high, retics low, cytopenias indicates HLH in a febrile, ill infant.",
+     "to": "Direct and GGT high, retics low, cytopenias: HLH (hemophagocytic lymphohistiocytosis) in a febrile, ill infant"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Interpret direct bilirubin, GGT and reticulocytes together.",
+     "from": "Read direct bilirubin, GGT and reticulocytes together."
+    },
+    {
+     "claim": "Direct high, GGT high, retics normal indicates duct obstruction, biliary atresia in a well infant with pale stools.",
+     "from": "Direct high, GGT high, retics normal indicates duct obstruction, biliary atresia in a well infant with pale stools."
+    },
+    {
+     "claim": "Direct high, GGT normal indicates PFIC.",
+     "from": "Direct high, GGT normal indicates PFIC."
+    },
+    {
+     "claim": "Direct and GGT high, retics low, cytopenias indicates HLH in a febrile, ill infant.",
+     "from": "Direct and GGT high, retics low, cytopenias indicates HLH in a febrile, ill infant."
+    },
+    {
+     "claim": "GGT stands for gamma-glutamyl transferase.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PFIC stands for progressive familial intrahepatic cholestasis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HLH stands for hemophagocytic lymphohistiocytosis.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "A direct hyperbilirubinemia with a normal GGT is PFIC; pale stools",
+   "with": "A direct hyperbilirubinemia with a normal <b>GGT</b> (gamma-glutamyl transferase) is <b>PFIC</b> (progressive familial intrahepatic cholestasis); pale stools",
+   "note": ".traps: acronyms expanded",
+   "claims": [
+    {
+     "claim": "A direct hyperbilirubinemia with a normal GGT is PFIC.",
+     "to": "A direct hyperbilirubinemia with a normal GGT (gamma-glutamyl transferase) is PFIC (progressive familial intrahepatic cholestasis); pale stools and an absent gallbladder mean bile duct destruction, which raises the GGT."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A direct hyperbilirubinemia with a normal GGT is PFIC.",
+     "from": "A direct hyperbilirubinemia with a normal GGT is PFIC."
+    },
+    {
+     "claim": "GGT stands for gamma-glutamyl transferase.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PFIC stands for progressive familial intrahepatic cholestasis.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "HLH also raises direct bilirubin and GGT, but with fever, an ill infant and marrow failure lowering the reticulocytes; this infant is afebrile and well.",
+   "with": "<b>HLH</b> (hemophagocytic lymphohistiocytosis) also raises direct bilirubin and GGT, but with fever, an ill infant and marrow failure lowering the reticulocytes. This infant is afebrile and well.",
+   "note": ".traps: acronym expanded; long sentence split",
+   "claims": [
+    {
+     "claim": "HLH also raises direct bilirubin and GGT.",
+     "to": "HLH (hemophagocytic lymphohistiocytosis) also raises direct bilirubin and GGT, but with fever, an ill infant and marrow failure lowering the reticulocytes."
+    },
+    {
+     "claim": "HLH comes with fever, an ill infant and marrow failure lowering the reticulocytes.",
+     "to": "HLH (hemophagocytic lymphohistiocytosis) also raises direct bilirubin and GGT, but with fever, an ill infant and marrow failure lowering the reticulocytes."
+    },
+    {
+     "claim": "This infant is afebrile and well.",
+     "to": "This infant is afebrile and well."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "HLH also raises direct bilirubin and GGT.",
+     "from": "HLH also raises direct bilirubin and GGT."
+    },
+    {
+     "claim": "HLH comes with fever, an ill infant and marrow failure lowering the reticulocytes.",
+     "from": "HLH comes with fever, an ill infant and marrow failure lowering the reticulocytes."
+    },
+    {
+     "claim": "This infant is afebrile and well.",
+     "from": "This infant is afebrile and well."
+    },
+    {
+     "claim": "HLH stands for hemophagocytic lymphohistiocytosis.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "<p>A <b>skin-covered, soft, reducible</b> bulge that grows with crying is a congenital umbilical hernia: the fascial ring around the umbilicus has not closed yet. It is common in healthy newborns, incarceration is very rare, and small hernias usually close on their own, so a well infant needs <b>observation only</b>. The diagnosis is clinical; no imaging or genetic test is needed.</p>\n<p>The cutoffs decide when observation ends: a defect <b>over 1.5 cm</b> is less likely to close, persistence to <b>about age 5</b> earns elective repair, and <b>incarceration</b> earns repair at any age. The exception is <b>no skin</b>: bowel in a membranous sac (omphalocele) or bare bowel beside the cord (gastroschisis) goes to surgery right after birth.</p>",
+   "with": "<p>A <b>skin-covered, soft, reducible</b> bulge that grows with crying is a congenital umbilical hernia: the fascial ring around the umbilicus has not closed yet. It is common in healthy newborns, and incarceration is very rare. Small hernias usually close on their own, so a well infant needs <b>observation only</b>. The diagnosis is clinical; no imaging or genetic test is needed.</p>\n<p>A defect <b>over 1.5 cm</b> is less likely to close. Persistence to <b>about age 5</b> calls for elective repair, and <b>incarceration</b> calls for repair at any age. Bowel with <b>no skin</b> over it, either in a membranous sac (omphalocele) or bare beside the cord (gastroschisis), goes to surgery right after birth.</p>",
+   "note": ".dp: long sentence split; framing and personification removed",
+   "claims": [
+    {
+     "claim": "A skin-covered, soft, reducible bulge that grows with crying is a congenital umbilical hernia.",
+     "to": "A skin-covered, soft, reducible bulge that grows with crying is a congenital umbilical hernia: the fascial ring around the umbilicus has not closed yet."
+    },
+    {
+     "claim": "In a congenital umbilical hernia, the fascial ring around the umbilicus has not closed yet.",
+     "to": "A skin-covered, soft, reducible bulge that grows with crying is a congenital umbilical hernia: the fascial ring around the umbilicus has not closed yet."
+    },
+    {
+     "claim": "Umbilical hernia is common in healthy newborns.",
+     "to": "It is common in healthy newborns, and incarceration is very rare."
+    },
+    {
+     "claim": "Incarceration is very rare.",
+     "to": "It is common in healthy newborns, and incarceration is very rare."
+    },
+    {
+     "claim": "Small hernias usually close on their own.",
+     "to": "Small hernias usually close on their own, so a well infant needs observation only."
+    },
+    {
+     "claim": "A well infant needs observation only.",
+     "to": "Small hernias usually close on their own, so a well infant needs observation only."
+    },
+    {
+     "claim": "The diagnosis is clinical.",
+     "to": "The diagnosis is clinical; no imaging or genetic test is needed."
+    },
+    {
+     "claim": "No imaging or genetic test is needed.",
+     "to": "The diagnosis is clinical; no imaging or genetic test is needed."
+    },
+    {
+     "claim": "The cutoffs decide when observation ends.",
+     "to": "Persistence to about age 5 calls for elective repair, and incarceration calls for repair at any age."
+    },
+    {
+     "claim": "A defect over 1.5 cm is less likely to close.",
+     "to": "A defect over 1.5 cm is less likely to close."
+    },
+    {
+     "claim": "Persistence to about age 5 earns elective repair.",
+     "to": "Persistence to about age 5 calls for elective repair, and incarceration calls for repair at any age."
+    },
+    {
+     "claim": "Incarceration earns repair at any age.",
+     "to": "Persistence to about age 5 calls for elective repair, and incarceration calls for repair at any age."
+    },
+    {
+     "claim": "With no skin, bowel in a membranous sac (omphalocele) goes to surgery right after birth.",
+     "to": "Bowel with no skin over it, either in a membranous sac (omphalocele) or bare beside the cord (gastroschisis), goes to surgery right after birth."
+    },
+    {
+     "claim": "With no skin, bare bowel beside the cord (gastroschisis) goes to surgery right after birth.",
+     "to": "Bowel with no skin over it, either in a membranous sac (omphalocele) or bare beside the cord (gastroschisis), goes to surgery right after birth."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A skin-covered, soft, reducible bulge that grows with crying is a congenital umbilical hernia.",
+     "from": "A skin-covered, soft, reducible bulge that grows with crying is a congenital umbilical hernia."
+    },
+    {
+     "claim": "The fascial ring around the umbilicus has not closed yet.",
+     "from": "In a congenital umbilical hernia, the fascial ring around the umbilicus has not closed yet."
+    },
+    {
+     "claim": "It is common in healthy newborns.",
+     "from": "Umbilical hernia is common in healthy newborns."
+    },
+    {
+     "claim": "Incarceration is very rare.",
+     "from": "Incarceration is very rare."
+    },
+    {
+     "claim": "Small hernias usually close on their own.",
+     "from": "Small hernias usually close on their own."
+    },
+    {
+     "claim": "A well infant needs observation only.",
+     "from": "A well infant needs observation only."
+    },
+    {
+     "claim": "The diagnosis is clinical; no imaging or genetic test is needed.",
+     "from": "The diagnosis is clinical."
+    },
+    {
+     "claim": "A defect over 1.5 cm is less likely to close.",
+     "from": "A defect over 1.5 cm is less likely to close."
+    },
+    {
+     "claim": "Persistence to about age 5 calls for elective repair.",
+     "from": "Persistence to about age 5 earns elective repair."
+    },
+    {
+     "claim": "Incarceration calls for repair at any age.",
+     "from": "Incarceration earns repair at any age."
+    },
+    {
+     "claim": "Bowel with no skin over it in a membranous sac (omphalocele) goes to surgery right after birth.",
+     "from": "With no skin, bowel in a membranous sac (omphalocele) goes to surgery right after birth."
+    },
+    {
+     "claim": "Bowel with no skin over it, bare beside the cord (gastroschisis), goes to surgery right after birth.",
+     "from": "With no skin, bare bowel beside the cord (gastroschisis) goes to surgery right after birth."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "Exposed bowel loses heat and fluid: cover it with a <b>sterile moist dressing or bowel bag</b>, place a nasogastric tube, give IV fluids and keep the infant warm, then <b>immediate surgery</b>. An omphalocele also gets a <b>karyotype and echocardiogram</b>, because trisomy 13 and 18, Beckwith-Wiedemann and heart defects travel with it; gastroschisis usually travels alone.",
+   "with": "Exposed bowel loses heat and fluid. Cover it with a <b>sterile moist dressing or bowel bag</b>, place a nasogastric tube, give <b>IV</b> (intravenous) fluids and keep the infant warm. Then proceed to <b>immediate surgery</b>. An omphalocele also needs a <b>karyotype and echocardiogram</b> because it is associated with trisomy 13 and 18, Beckwith-Wiedemann and heart defects. Gastroschisis is usually isolated.",
+   "note": ".danger: split; personification removed; acronym expanded",
+   "claims": [
+    {
+     "claim": "Exposed bowel loses heat and fluid.",
+     "to": "Exposed bowel loses heat and fluid."
+    },
+    {
+     "claim": "Cover exposed bowel with a sterile moist dressing or bowel bag.",
+     "to": "Cover it with a sterile moist dressing or bowel bag, place a nasogastric tube, give IV (intravenous) fluids and keep the infant warm."
+    },
+    {
+     "claim": "Place a nasogastric tube.",
+     "to": "Cover it with a sterile moist dressing or bowel bag, place a nasogastric tube, give IV (intravenous) fluids and keep the infant warm."
+    },
+    {
+     "claim": "Give IV fluids.",
+     "to": "Cover it with a sterile moist dressing or bowel bag, place a nasogastric tube, give IV (intravenous) fluids and keep the infant warm."
+    },
+    {
+     "claim": "Keep the infant warm.",
+     "to": "Cover it with a sterile moist dressing or bowel bag, place a nasogastric tube, give IV (intravenous) fluids and keep the infant warm."
+    },
+    {
+     "claim": "Then immediate surgery.",
+     "to": "Then proceed to immediate surgery."
+    },
+    {
+     "claim": "An omphalocele also gets a karyotype and echocardiogram.",
+     "to": "An omphalocele also needs a karyotype and echocardiogram because it is associated with trisomy 13 and 18, Beckwith-Wiedemann and heart defects."
+    },
+    {
+     "claim": "Trisomy 13 and 18, Beckwith-Wiedemann and heart defects travel with omphalocele.",
+     "to": "An omphalocele also needs a karyotype and echocardiogram because it is associated with trisomy 13 and 18, Beckwith-Wiedemann and heart defects."
+    },
+    {
+     "claim": "Gastroschisis usually travels alone.",
+     "to": "Gastroschisis is usually isolated."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Exposed bowel loses heat and fluid.",
+     "from": "Exposed bowel loses heat and fluid."
+    },
+    {
+     "claim": "Cover it with a sterile moist dressing or bowel bag.",
+     "from": "Cover exposed bowel with a sterile moist dressing or bowel bag."
+    },
+    {
+     "claim": "Place a nasogastric tube.",
+     "from": "Place a nasogastric tube."
+    },
+    {
+     "claim": "Give IV fluids.",
+     "from": "Give IV fluids."
+    },
+    {
+     "claim": "Keep the infant warm.",
+     "from": "Keep the infant warm."
+    },
+    {
+     "claim": "Then proceed to immediate surgery.",
+     "from": "Then immediate surgery."
+    },
+    {
+     "claim": "An omphalocele also needs a karyotype and echocardiogram.",
+     "from": "An omphalocele also gets a karyotype and echocardiogram."
+    },
+    {
+     "claim": "Omphalocele is associated with trisomy 13 and 18, Beckwith-Wiedemann and heart defects.",
+     "from": "Trisomy 13 and 18, Beckwith-Wiedemann and heart defects travel with omphalocele."
+    },
+    {
+     "claim": "Gastroschisis is usually isolated.",
+     "from": "Gastroschisis usually travels alone."
+    },
+    {
+     "claim": "IV stands for intravenous.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "is a reason to check <b>TSH</b>, because",
+   "with": "is a reason to check <b>TSH</b> (thyroid-stimulating hormone), because",
+   "note": ".pearls: acronym expanded",
+   "claims": [
+    {
+     "claim": "An umbilical hernia with prolonged jaundice, macroglossia, hypotonia, constipation or a large fontanelle is a reason to check TSH.",
+     "to": "An umbilical hernia with prolonged jaundice, macroglossia, hypotonia, constipation or a large fontanelle is a reason to check TSH (thyroid-stimulating hormone), because congenital hypothyroidism is the treatable association"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "An umbilical hernia with prolonged jaundice, macroglossia, hypotonia, constipation or a large fontanelle is a reason to check TSH.",
+     "from": "An umbilical hernia with prolonged jaundice, macroglossia, hypotonia, constipation or a large fontanelle is a reason to check TSH."
+    },
+    {
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "after any structural defect, screen for the anomalies that occur with it (VACTERL there, karyotype and echocardiogram for an omphalocele).",
+   "with": "after any structural defect, screen for the anomalies that occur with it. For esophageal atresia that means VACTERL (vertebral, anal, cardiac, tracheoesophageal, renal and limb) anomalies; for an omphalocele, a karyotype and echocardiogram.",
+   "note": "Pairs with: acronym expanded; parenthetical made a sentence",
+   "claims": [
+    {
+     "claim": "After any structural defect, screen for the anomalies that occur with it.",
+     "to": "after any structural defect, screen for the anomalies that occur with it."
+    },
+    {
+     "claim": "With tracheoesophageal fistula and esophageal atresia, screen for VACTERL.",
+     "to": "For esophageal atresia that means VACTERL (vertebral, anal, cardiac, tracheoesophageal, renal and limb) anomalies; for an omphalocele, a karyotype and echocardiogram."
+    },
+    {
+     "claim": "For an omphalocele, screen with karyotype and echocardiogram.",
+     "to": "For esophageal atresia that means VACTERL (vertebral, anal, cardiac, tracheoesophageal, renal and limb) anomalies; for an omphalocele, a karyotype and echocardiogram."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "After any structural defect, screen for the anomalies that occur with it.",
+     "from": "After any structural defect, screen for the anomalies that occur with it."
+    },
+    {
+     "claim": "For esophageal atresia, screen for VACTERL anomalies.",
+     "from": "With tracheoesophageal fistula and esophageal atresia, screen for VACTERL."
+    },
+    {
+     "claim": "For an omphalocele, a karyotype and echocardiogram.",
+     "from": "For an omphalocele, screen with karyotype and echocardiogram."
+    },
+    {
+     "claim": "VACTERL stands for vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "For a newborn umbilical finding, ask first whether skin covers it: skin-covered and reducible means observe, with repair set by the cutoffs (still present at about age 5, or incarcerated at any age), while bowel without skin goes to surgery at birth.",
+   "with": "For a newborn umbilical finding, ask first whether skin covers it. Observe a skin-covered, reducible bulge, and repair it if still present at about age 5 or incarcerated at any age. Bowel without skin goes to surgery at birth.",
+   "note": ".rule: 40-word sentence split",
+   "claims": [
+    {
+     "claim": "For a newborn umbilical finding, ask first whether skin covers it.",
+     "to": "For a newborn umbilical finding, ask first whether skin covers it."
+    },
+    {
+     "claim": "Skin-covered and reducible means observe.",
+     "to": "Observe a skin-covered, reducible bulge, and repair it if still present at about age 5 or incarcerated at any age."
+    },
+    {
+     "claim": "Repair if still present at about age 5.",
+     "to": "Observe a skin-covered, reducible bulge, and repair it if still present at about age 5 or incarcerated at any age."
+    },
+    {
+     "claim": "Repair if incarcerated at any age.",
+     "to": "Observe a skin-covered, reducible bulge, and repair it if still present at about age 5 or incarcerated at any age."
+    },
+    {
+     "claim": "Bowel without skin goes to surgery at birth.",
+     "to": "Bowel without skin goes to surgery at birth."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "For a newborn umbilical finding, ask first whether skin covers it.",
+     "from": "For a newborn umbilical finding, ask first whether skin covers it."
+    },
+    {
+     "claim": "Observe a skin-covered, reducible bulge.",
+     "from": "Skin-covered and reducible means observe."
+    },
+    {
+     "claim": "Repair it if still present at about age 5.",
+     "from": "Repair if still present at about age 5."
+    },
+    {
+     "claim": "Repair it if incarcerated at any age.",
+     "from": "Repair if incarcerated at any age."
+    },
+    {
+     "claim": "Bowel without skin goes to surgery at birth.",
+     "from": "Bowel without skin goes to surgery at birth."
+    }
+   ]
+  }
+ ]
+}

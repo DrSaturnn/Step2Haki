@@ -1,0 +1,152 @@
+{
+ "batch": "s30-example",
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "<p>Three benign stool complaints present in a <b>thriving, well-appearing</b> infant or child with alarmed parents; the <b>stool</b> and the <b>timing</b> set the answer. Straining and screaming for minutes, then a <b>normal soft stool</b>, under 9 months, is <b>infant dyschezia</b> → reassurance only. <b>Painless blood-streaked stools</b> in a well infant under 6 months is <b>food protein-induced allergic proctocolitis</b> → eliminate cow's milk and soy from the maternal diet, or use an extensively hydrolyzed formula. Watery diarrhea and bloating <b>after dairy is reintroduced</b> following gastroenteritis is <b>secondary lactase deficiency</b> → temporary lactose avoidance, no workup.</p>\n<p>Two mimics change the tier, and both are <b>ill-appearing</b>: <b>FPIES</b> (profuse vomiting and lethargy 1–4 h after the trigger, non-IgE) needs fluids, and <b>IgE-mediated</b> allergy (urticaria, wheeze, anaphylaxis within minutes) needs epinephrine. Parental distress is not a finding; a thriving infant does not need a formula change, a suppository, or a stool workup.</p>",
+   "with": "<p>These three benign stool complaints occur in a <b>thriving, well-appearing</b> infant or child whose parents are worried. Straining and screaming for minutes, followed by a <b>normal soft stool</b> in an infant under 9 months, is <b>infant dyschezia</b> → reassurance only. <b>Painless blood-streaked stools</b> in a well infant under 6 months are <b>food protein-induced allergic proctocolitis</b>. Treat it by removing cow's milk and soy from the maternal diet, or by using an extensively hydrolyzed formula. Watery diarrhea and bloating <b>after dairy is reintroduced</b> following gastroenteritis are <b>secondary lactase deficiency</b> → temporary lactose avoidance, with no workup.</p>\n<p>Two mimics present with an <b>ill-appearing</b> infant. <b>FPIES</b> (food protein-induced enterocolitis syndrome) causes profuse vomiting and lethargy 1–4 h after the trigger; it is non-IgE and needs fluids. <b>IgE-mediated</b> allergy causes urticaria, wheeze or anaphylaxis within minutes and needs epinephrine. Reassure the parents; a thriving infant needs no formula change, suppository or stool workup.</p>",
+   "note": "round 2 worked example: .dp",
+   "reworded_bold": [
+    "stool",
+    "timing"
+   ],
+   "claims": [
+    {
+     "claim": "The three stool complaints are benign.",
+     "to": "These three benign stool complaints occur in a thriving, well-appearing infant or child whose parents are worried."
+    },
+    {
+     "claim": "They occur in a thriving, well-appearing infant or child.",
+     "to": "These three benign stool complaints occur in a thriving, well-appearing infant or child whose parents are worried."
+    },
+    {
+     "claim": "The parents are alarmed.",
+     "to": "These three benign stool complaints occur in a thriving, well-appearing infant or child whose parents are worried."
+    },
+    {
+     "claim": "The stool and the timing set the answer.",
+     "dropped": "framing about the answer; the stool and timing details are stated in each of the next sentences"
+    },
+    {
+     "claim": "Straining and screaming for minutes, then a normal soft stool, under 9 months, is infant dyschezia.",
+     "to": "Straining and screaming for minutes, followed by a normal soft stool in an infant under 9 months, is infant dyschezia → reassurance only."
+    },
+    {
+     "claim": "Infant dyschezia needs reassurance only.",
+     "to": "Straining and screaming for minutes, followed by a normal soft stool in an infant under 9 months, is infant dyschezia → reassurance only."
+    },
+    {
+     "claim": "Painless blood-streaked stools in a well infant under 6 months are food protein-induced allergic proctocolitis.",
+     "to": "Painless blood-streaked stools in a well infant under 6 months are food protein-induced allergic proctocolitis."
+    },
+    {
+     "claim": "Proctocolitis is treated by eliminating cow's milk and soy from the maternal diet, or with an extensively hydrolyzed formula.",
+     "to": "Treat it by removing cow's milk and soy from the maternal diet, or by using an extensively hydrolyzed formula."
+    },
+    {
+     "claim": "Watery diarrhea and bloating after dairy is reintroduced following gastroenteritis is secondary lactase deficiency.",
+     "to": "Watery diarrhea and bloating after dairy is reintroduced following gastroenteritis are secondary lactase deficiency → temporary lactose avoidance, with no workup."
+    },
+    {
+     "claim": "Secondary lactase deficiency needs temporary lactose avoidance and no workup.",
+     "to": "Watery diarrhea and bloating after dairy is reintroduced following gastroenteritis are secondary lactase deficiency → temporary lactose avoidance, with no workup."
+    },
+    {
+     "claim": "Two mimics change the tier.",
+     "dropped": "framing about the tier; the two mimics and their treatments are stated next"
+    },
+    {
+     "claim": "Both mimics are ill-appearing.",
+     "to": "Two mimics present with an ill-appearing infant."
+    },
+    {
+     "claim": "FPIES gives profuse vomiting and lethargy 1–4 h after the trigger.",
+     "to": "FPIES (food protein-induced enterocolitis syndrome) causes profuse vomiting and lethargy 1–4 h after the trigger; it is non-IgE and needs fluids."
+    },
+    {
+     "claim": "FPIES is non-IgE.",
+     "to": "FPIES (food protein-induced enterocolitis syndrome) causes profuse vomiting and lethargy 1–4 h after the trigger; it is non-IgE and needs fluids."
+    },
+    {
+     "claim": "FPIES needs fluids.",
+     "to": "FPIES (food protein-induced enterocolitis syndrome) causes profuse vomiting and lethargy 1–4 h after the trigger; it is non-IgE and needs fluids."
+    },
+    {
+     "claim": "IgE-mediated allergy gives urticaria, wheeze or anaphylaxis within minutes.",
+     "to": "IgE-mediated allergy causes urticaria, wheeze or anaphylaxis within minutes and needs epinephrine."
+    },
+    {
+     "claim": "IgE-mediated allergy needs epinephrine.",
+     "to": "IgE-mediated allergy causes urticaria, wheeze or anaphylaxis within minutes and needs epinephrine."
+    },
+    {
+     "claim": "Parental distress is not a finding.",
+     "to": "Reassure the parents; a thriving infant needs no formula change, suppository or stool workup."
+    },
+    {
+     "claim": "A thriving infant does not need a formula change, a suppository, or a stool workup.",
+     "to": "Reassure the parents; a thriving infant needs no formula change, suppository or stool workup."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The three stool complaints are benign and occur in a thriving, well-appearing infant or child with worried parents.",
+     "from": "The three stool complaints are benign."
+    },
+    {
+     "claim": "Straining and screaming for minutes, then a normal soft stool, under 9 months, is infant dyschezia.",
+     "from": "Straining and screaming for minutes, then a normal soft stool, under 9 months, is infant dyschezia."
+    },
+    {
+     "claim": "Infant dyschezia needs reassurance only.",
+     "from": "Infant dyschezia needs reassurance only."
+    },
+    {
+     "claim": "Painless blood-streaked stools in a well infant under 6 months are food protein-induced allergic proctocolitis.",
+     "from": "Painless blood-streaked stools in a well infant under 6 months are food protein-induced allergic proctocolitis."
+    },
+    {
+     "claim": "Treat proctocolitis by removing cow's milk and soy from the maternal diet, or with an extensively hydrolyzed formula.",
+     "from": "Proctocolitis is treated by eliminating cow's milk and soy from the maternal diet, or with an extensively hydrolyzed formula."
+    },
+    {
+     "claim": "Watery diarrhea and bloating after dairy is reintroduced following gastroenteritis are secondary lactase deficiency.",
+     "from": "Watery diarrhea and bloating after dairy is reintroduced following gastroenteritis is secondary lactase deficiency."
+    },
+    {
+     "claim": "Secondary lactase deficiency needs temporary lactose avoidance and no workup.",
+     "from": "Secondary lactase deficiency needs temporary lactose avoidance and no workup."
+    },
+    {
+     "claim": "Two mimics present with an ill-appearing infant.",
+     "from": "Both mimics are ill-appearing."
+    },
+    {
+     "claim": "FPIES stands for food protein-induced enterocolitis syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "FPIES causes profuse vomiting and lethargy 1–4 h after the trigger.",
+     "from": "FPIES gives profuse vomiting and lethargy 1–4 h after the trigger."
+    },
+    {
+     "claim": "FPIES is non-IgE and needs fluids.",
+     "from": "FPIES is non-IgE."
+    },
+    {
+     "claim": "IgE-mediated allergy causes urticaria, wheeze or anaphylaxis within minutes and needs epinephrine.",
+     "from": "IgE-mediated allergy gives urticaria, wheeze or anaphylaxis within minutes."
+    },
+    {
+     "claim": "Reassure the parents.",
+     "from": "Parental distress is not a finding."
+    },
+    {
+     "claim": "A thriving infant needs no formula change, suppository or stool workup.",
+     "from": "A thriving infant does not need a formula change, a suppository, or a stool workup."
+    }
+   ]
+  }
+ ]
+}

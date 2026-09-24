@@ -18,7 +18,7 @@ from pagelib import (TYPES, STATUSES, briefs, count, esc_attr, items, read_page,
 from idgen import new_item_ids, taken_ids  # noqa: E402
 
 OPS = {
-    'replace': ({'brief', 'find', 'with'}, {'note', 'reworded_bold', 'reworded_label'}),
+    'replace': ({'brief', 'find', 'with'}, {'note', 'reworded_bold', 'reworded_label', 'claims', 'new_claims'}),
     'insert_before': ({'brief', 'anchor', 'html'}, {'note'}),
     'insert_after': ({'brief', 'anchor', 'html'}, {'note'}),
     'add_item': ({'brief', 'type', 'stem', 'answer', 'd1', 'd2'},
@@ -54,6 +54,10 @@ def validate(spec):
         if extra:
             errs.append((n, op, 'unknown field(s) ' + ', '.join(extra), 'remove them; allowed: ' + ', '.join(sorted(req | opt))))
         for k in req | opt:
+            if k in ('claims', 'new_claims'):
+                if k in e and not (isinstance(e[k], list) and all(isinstance(x, dict) for x in e[k])):
+                    errs.append((n, op, '%s must be a list of objects' % k, 'see the claim-map format in RULES_voice.md'))
+                continue
             if k in ('reworded_bold', 'reworded_label'):
                 if k in e and not (isinstance(e[k], list) and all(isinstance(x, str) and x.strip() for x in e[k])):
                     errs.append((n, op, '%s must be a list of the old texts' % k, 'e.g. ["The interval is the finding"]'))

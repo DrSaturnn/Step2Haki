@@ -2,6 +2,39 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-09-24 s30: GI plain-voice round 2: shorter sentences, acronyms written out, claim-mapped for no drift
+
+```
+Page: 201 briefs, 1942 items -> 201 briefs, 1942 items
+Briefs changed (21):
+  - liver-preg (Liver Disease in Pregnancy): prose edited (+246 chars)
+  - masld (MASLD / Metabolic Fatty Liver): prose edited (+149 chars)
+  - cholestasis (Cholestasis & the LFT Patterns): prose edited (+209 chars)
+  - zenker (Zenker Diverticulum): prose edited (+17 chars)
+  - infant-stool (Infant Stool Complaints: Dyschezia, FPIAP & Secondary Lactase Deficiency): prose edited (+312 chars)
+  - fap (Familial Adenomatous Polyposis): prose edited (+233 chars)
+  - peutz-jeghers (Peutz-Jeghers Syndrome): prose edited (+74 chars)
+  - feeding-refusal (Toddler Food Refusal): prose edited (-56 chars)
+  - rlq-pain (Right Lower Quadrant Pain): prose edited (-73 chars)
+  - peds-constipation (Constipation in a Child): prose edited (-194 chars)
+  - cyclic-vomiting (Cyclic Vomiting Syndrome): prose edited (+3 chars)
+  - neonatal-jaundice (Neonatal Jaundice): prose edited (+204 chars)
+  - neonatal-bowel (The Distended Abdomen in a Newborn or Infant): prose edited (+366 chars)
+  - occult-gi-bleed (Occult GI Bleeding in a Child): prose edited (+172 chars)
+  - bs-galactosemia (The Sick Jaundiced Neonate with a Positive Screen): prose edited (+249 chars)
+  - bs-impaction (Fecal Impaction & Overflow Diarrhea): prose edited (+31 chars)
+  - bs-tef (Tracheoesophageal Fistula with Esophageal Atresia): prose edited (+192 chars)
+  - bs-umbilical (Umbilical Findings in a Newborn): prose edited (+109 chars)
+  - bs-fat-soluble-vitamins (Fat-Soluble Vitamin Deficiency and Toxicity): prose edited (+824 chars)
+  - bs-water-soluble-vitamins (Water-Soluble Vitamin Deficiency): prose edited (+233 chars)
+  - bs-wilson (Wilson Disease: Copper in the Liver, Brain and Eye): prose edited (+22 chars)
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 201 briefs, 1942 items, 4 scripts, 31 checks, base HEAD | allowlisted 16 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 201 | bankwraps 201 | mcq 1942 (axCheck 1942, reveal-only 0) | malformed 0 | crit gridded 120/121 | vignette gridded 123/123 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (27616 source shingles; page 0.033%)
+```
+
 ## 2026-09-24 s29: Badges follow NBME first; subtitles drop provenance; GI plain-voice pass (sample)
 
 ```

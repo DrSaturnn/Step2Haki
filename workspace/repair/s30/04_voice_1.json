@@ -1,0 +1,913 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "liver-preg",
+   "find": "<p><b>Acute fatty liver of pregnancy, intrahepatic cholestasis, and preeclampsia/HELLP are all third-trimester diseases.</b> A patient at 14 weeks",
+   "with": "<p><b>Acute fatty liver of pregnancy</b>, <b>intrahepatic cholestasis</b> and preeclampsia/<b>HELLP</b> (hemolysis, elevated liver enzymes, low platelets) are all third-trimester diseases. A patient at 14 weeks",
+   "note": "acronym expansion (HELLP); full-sentence emphasis bold split to the three disease names",
+   "reworded_bold": [
+    "Acute fatty liver of pregnancy, intrahepatic cholestasis, and preeclampsia/HELLP are all third-trimester diseases."
+   ],
+   "claims": [
+    {
+     "claim": "Acute fatty liver of pregnancy, intrahepatic cholestasis and preeclampsia/HELLP are all third-trimester diseases.",
+     "to": "Acute fatty liver of pregnancy, intrahepatic cholestasis and preeclampsia/HELLP (hemolysis, elevated liver enzymes, low platelets) are all third-trimester diseases."
+    },
+    {
+     "claim": "A patient at 14 weeks with elevated transaminases, obesity, and diabetes has metabolic liver disease unrelated to pregnancy.",
+     "to": "A patient at 14 weeks with elevated transaminases, obesity, and diabetes has metabolic liver disease unrelated to pregnancy."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Acute fatty liver of pregnancy, intrahepatic cholestasis and preeclampsia/HELLP are all third-trimester diseases.",
+     "from": "Acute fatty liver of pregnancy, intrahepatic cholestasis and preeclampsia/HELLP are all third-trimester diseases."
+    },
+    {
+     "claim": "HELLP stands for hemolysis, elevated liver enzymes, low platelets.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A patient at 14 weeks with elevated transaminases, obesity, and diabetes has metabolic liver disease unrelated to pregnancy.",
+     "from": "A patient at 14 weeks with elevated transaminases, obesity, and diabetes has metabolic liver disease unrelated to pregnancy."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "liver-preg",
+   "find": "<b>Alkaline phosphatase is supposed to be elevated in pregnancy</b>: the placenta makes its own isoenzyme, and levels run 2–4× normal. <b>AST, ALT, and bilirubin do NOT rise physiologically</b>; any elevation is pathologic.",
+   "with": "<b>Alkaline phosphatase normally rises in pregnancy</b> because the placenta makes its own isoenzyme; levels run 2–4× normal. <b>AST</b> (aspartate aminotransferase), <b>ALT</b> (alanine aminotransferase) and <b>bilirubin do not rise physiologically</b>; any elevation is pathologic.",
+   "note": "plain wording; acronym expansion (AST, ALT); capitalized NOT removed",
+   "reworded_bold": [
+    "Alkaline phosphatase is supposed to be elevated in pregnancy",
+    "AST, ALT, and bilirubin do NOT rise physiologically"
+   ],
+   "claims": [
+    {
+     "claim": "Alkaline phosphatase is expected to be elevated in pregnancy.",
+     "to": "Alkaline phosphatase normally rises in pregnancy because the placenta makes its own isoenzyme; levels run 2–4× normal."
+    },
+    {
+     "claim": "The placenta makes its own alkaline phosphatase isoenzyme.",
+     "to": "Alkaline phosphatase normally rises in pregnancy because the placenta makes its own isoenzyme; levels run 2–4× normal."
+    },
+    {
+     "claim": "Alkaline phosphatase levels run 2–4× normal in pregnancy.",
+     "to": "Alkaline phosphatase normally rises in pregnancy because the placenta makes its own isoenzyme; levels run 2–4× normal."
+    },
+    {
+     "claim": "AST, ALT and bilirubin do not rise physiologically in pregnancy.",
+     "to": "AST (aspartate aminotransferase), ALT (alanine aminotransferase) and bilirubin do not rise physiologically; any elevation is pathologic."
+    },
+    {
+     "claim": "Any elevation of AST, ALT or bilirubin in pregnancy is pathologic.",
+     "to": "AST (aspartate aminotransferase), ALT (alanine aminotransferase) and bilirubin do not rise physiologically; any elevation is pathologic."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Alkaline phosphatase normally rises in pregnancy.",
+     "from": "Alkaline phosphatase is expected to be elevated in pregnancy."
+    },
+    {
+     "claim": "The placenta makes its own alkaline phosphatase isoenzyme.",
+     "from": "The placenta makes its own alkaline phosphatase isoenzyme."
+    },
+    {
+     "claim": "Alkaline phosphatase levels run 2–4× normal in pregnancy.",
+     "from": "Alkaline phosphatase levels run 2–4× normal in pregnancy."
+    },
+    {
+     "claim": "AST stands for aspartate aminotransferase.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ALT stands for alanine aminotransferase.",
+     "from": "expansion"
+    },
+    {
+     "claim": "AST, ALT and bilirubin do not rise physiologically in pregnancy.",
+     "from": "AST, ALT and bilirubin do not rise physiologically in pregnancy."
+    },
+    {
+     "claim": "Any elevation of AST, ALT or bilirubin in pregnancy is pathologic.",
+     "from": "Any elevation of AST, ALT or bilirubin in pregnancy is pathologic."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "liver-preg",
+   "find": "<b>Hypoglycemia + coagulopathy + high ammonia + renal failure = AFLP.</b> <b>Hemolysis + thrombocytopenia + more hypertension = HELLP.</b> Both are treated by delivering.",
+   "with": "<b>Hypoglycemia, coagulopathy, high ammonia and renal failure</b> indicate <b>AFLP</b> (acute fatty liver of pregnancy). <b>Hemolysis, thrombocytopenia and more hypertension</b> indicate <b>HELLP</b> (hemolysis, elevated liver enzymes, low platelets) syndrome. Both are treated by delivering.",
+   "note": "equation style to sentences; acronym expansion (AFLP, HELLP)",
+   "reworded_bold": [
+    "Hypoglycemia + coagulopathy + high ammonia + renal failure = AFLP.",
+    "Hemolysis + thrombocytopenia + more hypertension = HELLP."
+   ],
+   "claims": [
+    {
+     "claim": "Hypoglycemia, coagulopathy, high ammonia and renal failure indicate AFLP.",
+     "to": "Hypoglycemia, coagulopathy, high ammonia and renal failure indicate AFLP (acute fatty liver of pregnancy)."
+    },
+    {
+     "claim": "Hemolysis, thrombocytopenia and more hypertension indicate HELLP.",
+     "to": "Hemolysis, thrombocytopenia and more hypertension indicate HELLP (hemolysis, elevated liver enzymes, low platelets) syndrome."
+    },
+    {
+     "claim": "Both AFLP and HELLP are treated by delivering.",
+     "to": "Both are treated by delivering."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hypoglycemia, coagulopathy, high ammonia and renal failure indicate AFLP.",
+     "from": "Hypoglycemia, coagulopathy, high ammonia and renal failure indicate AFLP."
+    },
+    {
+     "claim": "AFLP stands for acute fatty liver of pregnancy.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Hemolysis, thrombocytopenia and more hypertension indicate HELLP.",
+     "from": "Hemolysis, thrombocytopenia and more hypertension indicate HELLP."
+    },
+    {
+     "claim": "HELLP stands for hemolysis, elevated liver enzymes, low platelets.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Both AFLP and HELLP are treated by delivering.",
+     "from": "Both AFLP and HELLP are treated by delivering."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "masld",
+   "find": "Formerly NAFLD",
+   "with": "Formerly <b>NAFLD</b> (nonalcoholic fatty liver disease)",
+   "note": "acronym expansion (NAFLD) in subtitle first segment",
+   "claims": [
+    {
+     "claim": "MASLD was formerly called NAFLD.",
+     "to": "Formerly NAFLD (nonalcoholic fatty liver disease)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "MASLD was formerly called NAFLD.",
+     "from": "MASLD was formerly called NAFLD."
+    },
+    {
+     "claim": "NAFLD stands for nonalcoholic fatty liver disease.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "masld",
+   "find": "<p>Metabolic syndrome (obesity, T2DM, hypertension, dyslipidemia) + transaminase elevation with <b>AST/ALT ratio &lt;1</b> + <b>hyperechoic liver</b> on ultrasound.",
+   "with": "<p>Metabolic syndrome (obesity, type 2 diabetes mellitus, hypertension, dyslipidemia) + transaminase elevation + <b>hyperechoic liver</b> on ultrasound. <b>AST</b> (aspartate aminotransferase) is below <b>ALT</b> (alanine aminotransferase), an <b>AST/ALT ratio &lt;1</b>.",
+   "note": "acronym expansion (T2DM written out; AST, ALT); ratio moved to its own sentence",
+   "claims": [
+    {
+     "claim": "The pattern includes metabolic syndrome (obesity, T2DM, hypertension, dyslipidemia).",
+     "to": "Metabolic syndrome (obesity, type 2 diabetes mellitus, hypertension, dyslipidemia) + transaminase elevation + hyperechoic liver on ultrasound."
+    },
+    {
+     "claim": "The pattern includes transaminase elevation with an AST/ALT ratio <1.",
+     "to": "AST (aspartate aminotransferase) is below ALT (alanine aminotransferase), an AST/ALT ratio <1."
+    },
+    {
+     "claim": "The pattern includes a hyperechoic liver on ultrasound.",
+     "to": "Metabolic syndrome (obesity, type 2 diabetes mellitus, hypertension, dyslipidemia) + transaminase elevation + hyperechoic liver on ultrasound."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The pattern includes metabolic syndrome (obesity, type 2 diabetes mellitus, hypertension, dyslipidemia).",
+     "from": "The pattern includes metabolic syndrome (obesity, T2DM, hypertension, dyslipidemia)."
+    },
+    {
+     "claim": "T2DM stands for type 2 diabetes mellitus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The pattern includes transaminase elevation with an AST/ALT ratio <1.",
+     "from": "The pattern includes transaminase elevation with an AST/ALT ratio <1."
+    },
+    {
+     "claim": "AST stands for aspartate aminotransferase.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ALT stands for alanine aminotransferase.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The pattern includes a hyperechoic liver on ultrasound.",
+     "from": "The pattern includes a hyperechoic liver on ultrasound."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<p>The combination of <b>temperature instability</b>, <b>abdominal distension with bloody stools</b>, and <b>pneumatosis intestinalis</b> on the film indicates necrotizing enterocolitis. NEC is mainly a disease of prematurity, but this infant is term. In a term infant, <b>cyanotic congenital heart disease and hypotension reduce mesenteric oxygen delivery</b> and cause the same ischemic bowel injury.</p>\n<p>The bilious return also fits volvulus, so rule it out deliberately. Volvulus gives <b>abrupt</b> vomiting in a previously well infant, with <b>proximal gas and a gasless distal abdomen</b>. NEC gives air <b>in the bowel wall</b> with gas still visible in the large bowel. Read the gas pattern first; if malrotation is still possible, only an upper GI series excludes it.</p>",
+   "with": "<p>The combination of <b>temperature instability</b>, <b>abdominal distension with bloody stools</b>, and <b>pneumatosis intestinalis</b> on the film indicates <b>NEC</b> (necrotizing enterocolitis). NEC is mainly a disease of prematurity, but this infant is term. In a term infant, <b>cyanotic congenital heart disease and hypotension reduce mesenteric oxygen delivery</b> and cause the same ischemic bowel injury.</p>\n<p>The bilious return also fits volvulus, so rule it out. Volvulus gives <b>abrupt</b> vomiting in a previously well infant, with <b>proximal gas and a gasless distal abdomen</b>. NEC gives air <b>in the bowel wall</b> with gas still visible in the large bowel. Read the gas pattern first; if malrotation is still possible, only an upper <b>GI</b> (gastrointestinal) series excludes it.</p>",
+   "note": "acronym expansion (NEC, GI); filler 'deliberately' removed",
+   "claims": [
+    {
+     "claim": "Temperature instability, abdominal distension with bloody stools, and pneumatosis intestinalis on the film indicate necrotizing enterocolitis.",
+     "to": "The combination of temperature instability, abdominal distension with bloody stools, and pneumatosis intestinalis on the film indicates NEC (necrotizing enterocolitis)."
+    },
+    {
+     "claim": "NEC is mainly a disease of prematurity.",
+     "to": "NEC is mainly a disease of prematurity, but this infant is term."
+    },
+    {
+     "claim": "This infant is term.",
+     "to": "NEC is mainly a disease of prematurity, but this infant is term."
+    },
+    {
+     "claim": "In a term infant, cyanotic congenital heart disease and hypotension reduce mesenteric oxygen delivery.",
+     "to": "In a term infant, cyanotic congenital heart disease and hypotension reduce mesenteric oxygen delivery and cause the same ischemic bowel injury."
+    },
+    {
+     "claim": "This causes the same ischemic bowel injury.",
+     "to": "In a term infant, cyanotic congenital heart disease and hypotension reduce mesenteric oxygen delivery and cause the same ischemic bowel injury."
+    },
+    {
+     "claim": "The bilious return also fits volvulus.",
+     "to": "The bilious return also fits volvulus, so rule it out."
+    },
+    {
+     "claim": "Volvulus should be ruled out deliberately.",
+     "to": "The bilious return also fits volvulus, so rule it out."
+    },
+    {
+     "claim": "Volvulus gives abrupt vomiting in a previously well infant.",
+     "to": "Volvulus gives abrupt vomiting in a previously well infant, with proximal gas and a gasless distal abdomen."
+    },
+    {
+     "claim": "Volvulus gives proximal gas and a gasless distal abdomen.",
+     "to": "Volvulus gives abrupt vomiting in a previously well infant, with proximal gas and a gasless distal abdomen."
+    },
+    {
+     "claim": "NEC gives air in the bowel wall.",
+     "to": "NEC gives air in the bowel wall with gas still visible in the large bowel."
+    },
+    {
+     "claim": "In NEC, gas is still visible in the large bowel.",
+     "to": "NEC gives air in the bowel wall with gas still visible in the large bowel."
+    },
+    {
+     "claim": "Read the gas pattern first.",
+     "to": "Read the gas pattern first; if malrotation is still possible, only an upper GI (gastrointestinal) series excludes it."
+    },
+    {
+     "claim": "If malrotation is still possible, only an upper GI series excludes it.",
+     "to": "Read the gas pattern first; if malrotation is still possible, only an upper GI (gastrointestinal) series excludes it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Temperature instability, abdominal distension with bloody stools, and pneumatosis intestinalis on the film indicate NEC.",
+     "from": "Temperature instability, abdominal distension with bloody stools, and pneumatosis intestinalis on the film indicate necrotizing enterocolitis."
+    },
+    {
+     "claim": "NEC stands for necrotizing enterocolitis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "NEC is mainly a disease of prematurity.",
+     "from": "NEC is mainly a disease of prematurity."
+    },
+    {
+     "claim": "This infant is term.",
+     "from": "This infant is term."
+    },
+    {
+     "claim": "In a term infant, cyanotic congenital heart disease and hypotension reduce mesenteric oxygen delivery.",
+     "from": "In a term infant, cyanotic congenital heart disease and hypotension reduce mesenteric oxygen delivery."
+    },
+    {
+     "claim": "This causes the same ischemic bowel injury.",
+     "from": "This causes the same ischemic bowel injury."
+    },
+    {
+     "claim": "The bilious return also fits volvulus.",
+     "from": "The bilious return also fits volvulus."
+    },
+    {
+     "claim": "Rule volvulus out.",
+     "from": "Volvulus should be ruled out deliberately."
+    },
+    {
+     "claim": "Volvulus gives abrupt vomiting in a previously well infant.",
+     "from": "Volvulus gives abrupt vomiting in a previously well infant."
+    },
+    {
+     "claim": "Volvulus gives proximal gas and a gasless distal abdomen.",
+     "from": "Volvulus gives proximal gas and a gasless distal abdomen."
+    },
+    {
+     "claim": "NEC gives air in the bowel wall.",
+     "from": "NEC gives air in the bowel wall."
+    },
+    {
+     "claim": "In NEC, gas is still visible in the large bowel.",
+     "from": "In NEC, gas is still visible in the large bowel."
+    },
+    {
+     "claim": "Read the gas pattern first.",
+     "from": "Read the gas pattern first."
+    },
+    {
+     "claim": "If malrotation is still possible, only an upper GI series excludes it.",
+     "from": "If malrotation is still possible, only an upper GI series excludes it."
+    },
+    {
+     "claim": "GI stands for gastrointestinal.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<b>Term infant with NEC</b> &mdash; look for the perfusion insult: cyanotic heart disease, hypotension, sepsis &middot; <b>NEC worsening despite bowel rest and antibiotics</b>: surgery &middot; <b>Late NEC sequelae</b> &mdash; strictures and short-bowel syndrome &middot; Bilious emesis in <b>any infant</b>, at any age, is malrotation until an upper GI series excludes it",
+   "with": "In a <b>term infant</b> with <b>NEC</b> (necrotizing enterocolitis), look for the perfusion insult: cyanotic heart disease, hypotension, sepsis &middot; <b>NEC worsening despite bowel rest and antibiotics</b>: surgery &middot; <b>Late NEC sequelae</b> &mdash; strictures and short-bowel syndrome &middot; Bilious emesis in <b>any infant</b>, at any age, is malrotation until an upper <b>GI</b> (gastrointestinal) series excludes it",
+   "note": "acronym expansion (NEC, GI); first row label turned into a sentence so the expansion does not sit before a structural dash",
+   "reworded_bold": [
+    "Term infant with NEC"
+   ],
+   "claims": [
+    {
+     "claim": "In a term infant with NEC, look for the perfusion insult: cyanotic heart disease, hypotension, sepsis.",
+     "to": "In a term infant with NEC (necrotizing enterocolitis), look for the perfusion insult: cyanotic heart disease, hypotension, sepsis"
+    },
+    {
+     "claim": "NEC worsening despite bowel rest and antibiotics needs surgery.",
+     "to": "NEC worsening despite bowel rest and antibiotics: surgery"
+    },
+    {
+     "claim": "Late NEC sequelae are strictures and short-bowel syndrome.",
+     "to": "Late NEC sequelae — strictures and short-bowel syndrome"
+    },
+    {
+     "claim": "Bilious emesis in any infant, at any age, is malrotation until an upper GI series excludes it.",
+     "to": "Bilious emesis in any infant, at any age, is malrotation until an upper GI (gastrointestinal) series excludes it"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In a term infant with NEC, look for the perfusion insult: cyanotic heart disease, hypotension, sepsis.",
+     "from": "In a term infant with NEC, look for the perfusion insult: cyanotic heart disease, hypotension, sepsis."
+    },
+    {
+     "claim": "NEC stands for necrotizing enterocolitis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "NEC worsening despite bowel rest and antibiotics needs surgery.",
+     "from": "NEC worsening despite bowel rest and antibiotics needs surgery."
+    },
+    {
+     "claim": "Late NEC sequelae are strictures and short-bowel syndrome.",
+     "from": "Late NEC sequelae are strictures and short-bowel syndrome."
+    },
+    {
+     "claim": "Bilious emesis in any infant, at any age, is malrotation until an upper GI series excludes it.",
+     "from": "Bilious emesis in any infant, at any age, is malrotation until an upper GI series excludes it."
+    },
+    {
+     "claim": "GI stands for gastrointestinal.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<b>The order</b> — stop feeds, NG decompression and IV fluids, echocardiogram, then <b>surgical repair</b> &middot; <b>Why the echo</b> — about <b>half</b> of infants with Down syndrome have heart disease; a loud holosystolic murmur at the left lower sternal border is a VSD &middot;",
+   "with": "<b>The order</b> — stop feeds, <b>NG</b> (nasogastric) decompression and <b>IV</b> (intravenous) fluids, echocardiogram, then <b>surgical repair</b> &middot; <b>Echocardiogram</b> — about <b>half</b> of infants with Down syndrome have heart disease. A loud holosystolic murmur at the left lower sternal border is a <b>VSD</b> (ventricular septal defect) &middot;",
+   "note": "acronym expansion (NG, IV, VSD); rhetorical label 'Why the echo' reworded",
+   "reworded_bold": [
+    "Why the echo"
+   ],
+   "claims": [
+    {
+     "claim": "The order is stop feeds, NG decompression and IV fluids, echocardiogram, then surgical repair.",
+     "to": "The order — stop feeds, NG (nasogastric) decompression and IV (intravenous) fluids, echocardiogram, then surgical repair"
+    },
+    {
+     "claim": "The echocardiogram is done because about half of infants with Down syndrome have heart disease.",
+     "to": "Echocardiogram — about half of infants with Down syndrome have heart disease."
+    },
+    {
+     "claim": "A loud holosystolic murmur at the left lower sternal border is a VSD.",
+     "to": "A loud holosystolic murmur at the left lower sternal border is a VSD (ventricular septal defect)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The order is stop feeds, NG decompression and IV fluids, echocardiogram, then surgical repair.",
+     "from": "The order is stop feeds, NG decompression and IV fluids, echocardiogram, then surgical repair."
+    },
+    {
+     "claim": "NG stands for nasogastric.",
+     "from": "expansion"
+    },
+    {
+     "claim": "IV stands for intravenous.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Echocardiogram: about half of infants with Down syndrome have heart disease.",
+     "from": "The echocardiogram is done because about half of infants with Down syndrome have heart disease."
+    },
+    {
+     "claim": "A loud holosystolic murmur at the left lower sternal border is a VSD.",
+     "from": "A loud holosystolic murmur at the left lower sternal border is a VSD."
+    },
+    {
+     "claim": "VSD stands for ventricular septal defect.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<b>Bilious</b> means the obstruction is distal to the ampulla; it locates the obstruction and is urgent until an upper GI series excludes malrotation &middot; NEC and volvulus both give a distended, bilious, unwell neonate; the gas pattern separates them &middot; A well infant with blood in the stool is almost never surgical; distension and instability suggest a surgical cause &middot; Prematurity is the commonest NEC risk factor, not a required one &middot; <b>Meconium ileus means cystic fibrosis</b> &mdash; nearly all patients with CF develop sinopulmonary disease",
+   "with": "<b>Bilious</b> vomiting means the obstruction is distal to the ampulla; it is urgent until an upper <b>GI</b> (gastrointestinal) series excludes malrotation &middot; <b>NEC</b> (necrotizing enterocolitis) and volvulus both give a distended, bilious, unwell neonate; the gas pattern separates them &middot; A well infant with blood in the stool is almost never surgical; distension and instability suggest a surgical cause &middot; Prematurity is the commonest NEC risk factor, not a required one &middot; <b>Meconium ileus means cystic fibrosis</b> &mdash; nearly all patients with cystic fibrosis develop sinopulmonary disease",
+   "note": "acronym expansion (GI, NEC; CF written out since cystic fibrosis is named just before); redundant clause folded",
+   "claims": [
+    {
+     "claim": "Bilious means the obstruction is distal to the ampulla.",
+     "to": "Bilious vomiting means the obstruction is distal to the ampulla; it is urgent until an upper GI (gastrointestinal) series excludes malrotation"
+    },
+    {
+     "claim": "Bilious emesis locates the obstruction.",
+     "to": "Bilious vomiting means the obstruction is distal to the ampulla; it is urgent until an upper GI (gastrointestinal) series excludes malrotation"
+    },
+    {
+     "claim": "Bilious emesis is urgent until an upper GI series excludes malrotation.",
+     "to": "Bilious vomiting means the obstruction is distal to the ampulla; it is urgent until an upper GI (gastrointestinal) series excludes malrotation"
+    },
+    {
+     "claim": "NEC and volvulus both give a distended, bilious, unwell neonate.",
+     "to": "NEC (necrotizing enterocolitis) and volvulus both give a distended, bilious, unwell neonate; the gas pattern separates them"
+    },
+    {
+     "claim": "The gas pattern separates NEC and volvulus.",
+     "to": "NEC (necrotizing enterocolitis) and volvulus both give a distended, bilious, unwell neonate; the gas pattern separates them"
+    },
+    {
+     "claim": "A well infant with blood in the stool is almost never surgical.",
+     "to": "A well infant with blood in the stool is almost never surgical; distension and instability suggest a surgical cause"
+    },
+    {
+     "claim": "Distension and instability suggest a surgical cause.",
+     "to": "A well infant with blood in the stool is almost never surgical; distension and instability suggest a surgical cause"
+    },
+    {
+     "claim": "Prematurity is the commonest NEC risk factor, not a required one.",
+     "to": "Prematurity is the commonest NEC risk factor, not a required one"
+    },
+    {
+     "claim": "Meconium ileus means cystic fibrosis.",
+     "to": "Meconium ileus means cystic fibrosis — nearly all patients with cystic fibrosis develop sinopulmonary disease"
+    },
+    {
+     "claim": "Nearly all patients with CF develop sinopulmonary disease.",
+     "to": "Meconium ileus means cystic fibrosis — nearly all patients with cystic fibrosis develop sinopulmonary disease"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Bilious vomiting means the obstruction is distal to the ampulla.",
+     "from": "Bilious means the obstruction is distal to the ampulla."
+    },
+    {
+     "claim": "Bilious emesis is urgent until an upper GI series excludes malrotation.",
+     "from": "Bilious emesis is urgent until an upper GI series excludes malrotation."
+    },
+    {
+     "claim": "GI stands for gastrointestinal.",
+     "from": "expansion"
+    },
+    {
+     "claim": "NEC and volvulus both give a distended, bilious, unwell neonate.",
+     "from": "NEC and volvulus both give a distended, bilious, unwell neonate."
+    },
+    {
+     "claim": "NEC stands for necrotizing enterocolitis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The gas pattern separates NEC and volvulus.",
+     "from": "The gas pattern separates NEC and volvulus."
+    },
+    {
+     "claim": "A well infant with blood in the stool is almost never surgical.",
+     "from": "A well infant with blood in the stool is almost never surgical."
+    },
+    {
+     "claim": "Distension and instability suggest a surgical cause.",
+     "from": "Distension and instability suggest a surgical cause."
+    },
+    {
+     "claim": "Prematurity is the commonest NEC risk factor, not a required one.",
+     "from": "Prematurity is the commonest NEC risk factor, not a required one."
+    },
+    {
+     "claim": "Meconium ileus means cystic fibrosis.",
+     "from": "Meconium ileus means cystic fibrosis."
+    },
+    {
+     "claim": "Nearly all patients with cystic fibrosis develop sinopulmonary disease.",
+     "from": "Nearly all patients with CF develop sinopulmonary disease."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<b>Severe</b>: adds hypotension, peritonitis, DIC and pneumoperitoneum",
+   "with": "<b>Severe</b>: adds hypotension, peritonitis, <b>DIC</b> (disseminated intravascular coagulation) and pneumoperitoneum",
+   "note": "acronym expansion (DIC) only",
+   "claims": [
+    {
+     "claim": "Severe NEC adds hypotension, peritonitis, DIC and pneumoperitoneum.",
+     "to": "Severe: adds hypotension, peritonitis, DIC (disseminated intravascular coagulation) and pneumoperitoneum"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Severe NEC adds hypotension, peritonitis, DIC and pneumoperitoneum.",
+     "from": "Severe NEC adds hypotension, peritonitis, DIC and pneumoperitoneum."
+    },
+    {
+     "claim": "DIC stands for disseminated intravascular coagulation.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<b>Age</b>: most present in the first month, but volvulus can happen at any age, so a 7-month-old with bilious vomiting, tachycardia and a silent distended abdomen still has malrotation first &middot; <b>Older children</b>: intermittent abdominal pain and vomiting, sometimes failure to thrive &middot; <b>Late signs</b>: hematochezia, peritonitis and shock mean the bowel is already ischemic &middot; <b>Not NEC</b>: NEC is a disease of preterm infants in the first weeks on feeds",
+   "with": "<b>Age</b>: most present in the first month, but volvulus can happen at any age. In a 7-month-old with bilious vomiting, tachycardia and a silent distended abdomen, malrotation is still the first diagnosis &middot; <b>Older children</b>: intermittent abdominal pain and vomiting, sometimes failure to thrive &middot; <b>Late signs</b>: hematochezia, peritonitis and shock mean the bowel is already ischemic &middot; <b>Not NEC</b> (necrotizing enterocolitis): a disease of preterm infants in the first weeks on feeds",
+   "note": "split long sentence; plain wording for 'still has malrotation first'; acronym expansion (NEC)",
+   "claims": [
+    {
+     "claim": "Most malrotation presents in the first month.",
+     "to": "Age: most present in the first month, but volvulus can happen at any age."
+    },
+    {
+     "claim": "Volvulus can happen at any age.",
+     "to": "Age: most present in the first month, but volvulus can happen at any age."
+    },
+    {
+     "claim": "A 7-month-old with bilious vomiting, tachycardia and a silent distended abdomen still has malrotation first.",
+     "to": "In a 7-month-old with bilious vomiting, tachycardia and a silent distended abdomen, malrotation is still the first diagnosis"
+    },
+    {
+     "claim": "Older children have intermittent abdominal pain and vomiting, sometimes failure to thrive.",
+     "to": "Older children: intermittent abdominal pain and vomiting, sometimes failure to thrive"
+    },
+    {
+     "claim": "Hematochezia, peritonitis and shock mean the bowel is already ischemic.",
+     "to": "Late signs: hematochezia, peritonitis and shock mean the bowel is already ischemic"
+    },
+    {
+     "claim": "It is not NEC: NEC is a disease of preterm infants in the first weeks on feeds.",
+     "to": "Not NEC (necrotizing enterocolitis): a disease of preterm infants in the first weeks on feeds"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Most malrotation presents in the first month.",
+     "from": "Most malrotation presents in the first month."
+    },
+    {
+     "claim": "Volvulus can happen at any age.",
+     "from": "Volvulus can happen at any age."
+    },
+    {
+     "claim": "In a 7-month-old with bilious vomiting, tachycardia and a silent distended abdomen, malrotation is still the first diagnosis.",
+     "from": "A 7-month-old with bilious vomiting, tachycardia and a silent distended abdomen still has malrotation first."
+    },
+    {
+     "claim": "Older children have intermittent abdominal pain and vomiting, sometimes failure to thrive.",
+     "from": "Older children have intermittent abdominal pain and vomiting, sometimes failure to thrive."
+    },
+    {
+     "claim": "Hematochezia, peritonitis and shock mean the bowel is already ischemic.",
+     "from": "Hematochezia, peritonitis and shock mean the bowel is already ischemic."
+    },
+    {
+     "claim": "It is not NEC, a disease of preterm infants in the first weeks on feeds.",
+     "from": "It is not NEC: NEC is a disease of preterm infants in the first weeks on feeds."
+    },
+    {
+     "claim": "NEC stands for necrotizing enterocolitis.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"trapwhy\">NEC filed under prematurity, so a term infant is ruled out without checking perfusion.</span>",
+   "with": "<span class=\"trapwhy\">If <b>NEC</b> (necrotizing enterocolitis) is filed under prematurity, a term infant is ruled out without checking perfusion.</span>",
+   "note": "fragment to one plain sentence; acronym expansion (NEC)",
+   "claims": [
+    {
+     "claim": "NEC filed under prematurity leads to ruling out a term infant without checking perfusion.",
+     "to": "If NEC (necrotizing enterocolitis) is filed under prematurity, a term infant is ruled out without checking perfusion."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "NEC filed under prematurity leads to ruling out a term infant without checking perfusion.",
+     "from": "NEC filed under prematurity leads to ruling out a term infant without checking perfusion."
+    },
+    {
+     "claim": "NEC stands for necrotizing enterocolitis.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "An upper GI series adds nothing once the film shows a double bubble",
+   "with": "An upper <b>GI</b> (gastrointestinal) series adds nothing once the film shows a double bubble",
+   "note": "acronym expansion (GI) only",
+   "claims": [
+    {
+     "claim": "An upper GI series adds nothing once the film shows a double bubble with no distal gas.",
+     "to": "An upper GI (gastrointestinal) series adds nothing once the film shows a double bubble with no distal gas; it is for malrotation."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "An upper GI series adds nothing once the film shows a double bubble with no distal gas.",
+     "from": "An upper GI series adds nothing once the film shows a double bubble with no distal gas."
+    },
+    {
+     "claim": "GI stands for gastrointestinal.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "<p>Think of <b>Wilson disease</b> in any patient <b>under about 40</b> ⚠︎ with unexplained liver disease, and especially when the liver disease comes with <b>neuropsychiatric signs</b> (tremor, dysarthria, dystonia, depression, personality change, psychosis), <b>Kayser-Fleischer rings</b>, or a <b>Coombs-negative hemolytic anemia</b>. Screen with serum ceruloplasmin (<b>low</b>) and a slit-lamp exam; a <b>high 24-hour urine copper</b> confirms, and liver biopsy copper settles cases where the tests disagree.</p>\n<p>The mechanism is autosomal recessive loss of the ATP7B hepatocyte transporter that loads copper onto ceruloplasmin and excretes the excess into bile, so copper builds up in the liver (hepatitis, cirrhosis, sometimes acute liver failure), then spills into the blood and deposits in the <b>basal ganglia</b>, the <b>cornea</b> and <b>red cells</b>. Ceruloplasmin is low because it is unstable without its copper. The exception is the patient with liver disease alone: Kayser-Fleischer rings are often absent, and ceruloplasmin can read normal because it rises with inflammation, so the urine copper or the biopsy decides.</p>",
+   "with": "<p>Think of <b>Wilson disease</b> in any patient <b>under about 40</b> ⚠︎ with unexplained liver disease. Think of it especially when liver disease comes with <b>neuropsychiatric signs</b> (tremor, dysarthria, dystonia, depression, personality change, psychosis), <b>Kayser-Fleischer rings</b>, or a <b>Coombs-negative hemolytic anemia</b>. Screen with serum ceruloplasmin (<b>low</b>) and a slit-lamp exam. A <b>high 24-hour urine copper</b> confirms the diagnosis, and liver biopsy copper settles cases where the tests disagree.</p>\n<p>Wilson disease is autosomal recessive loss of ATP7B, the hepatocyte transporter that loads copper onto ceruloplasmin and excretes the excess into bile. Copper builds up in the liver (hepatitis, cirrhosis, sometimes acute liver failure). It then spills into the blood and deposits in the <b>basal ganglia</b>, the <b>cornea</b> and <b>red cells</b>. Ceruloplasmin is low because it is unstable without its copper. In patients with liver disease alone, Kayser-Fleischer rings are often absent. Ceruloplasmin can also read normal in these patients because it rises with inflammation. The urine copper or the liver biopsy then makes the diagnosis.</p>",
+   "note": "split long sentences; 'decides' personification removed; 'The exception is' framing folded into the sentence",
+   "claims": [
+    {
+     "claim": "Think of Wilson disease in any patient under about 40 with unexplained liver disease.",
+     "to": "Think of Wilson disease in any patient under about 40 ⚠︎ with unexplained liver disease."
+    },
+    {
+     "claim": "Think of it especially when liver disease comes with neuropsychiatric signs (tremor, dysarthria, dystonia, depression, personality change, psychosis).",
+     "to": "Think of it especially when liver disease comes with neuropsychiatric signs (tremor, dysarthria, dystonia, depression, personality change, psychosis), Kayser-Fleischer rings, or a Coombs-negative hemolytic anemia."
+    },
+    {
+     "claim": "Think of it especially when liver disease comes with Kayser-Fleischer rings.",
+     "to": "Think of it especially when liver disease comes with neuropsychiatric signs (tremor, dysarthria, dystonia, depression, personality change, psychosis), Kayser-Fleischer rings, or a Coombs-negative hemolytic anemia."
+    },
+    {
+     "claim": "Think of it especially when liver disease comes with a Coombs-negative hemolytic anemia.",
+     "to": "Think of it especially when liver disease comes with neuropsychiatric signs (tremor, dysarthria, dystonia, depression, personality change, psychosis), Kayser-Fleischer rings, or a Coombs-negative hemolytic anemia."
+    },
+    {
+     "claim": "Screen with serum ceruloplasmin (low) and a slit-lamp exam.",
+     "to": "Screen with serum ceruloplasmin (low) and a slit-lamp exam."
+    },
+    {
+     "claim": "A high 24-hour urine copper confirms.",
+     "to": "A high 24-hour urine copper confirms the diagnosis, and liver biopsy copper settles cases where the tests disagree."
+    },
+    {
+     "claim": "Liver biopsy copper settles cases where the tests disagree.",
+     "to": "A high 24-hour urine copper confirms the diagnosis, and liver biopsy copper settles cases where the tests disagree."
+    },
+    {
+     "claim": "The mechanism is autosomal recessive loss of the ATP7B hepatocyte transporter.",
+     "to": "Wilson disease is autosomal recessive loss of ATP7B, the hepatocyte transporter that loads copper onto ceruloplasmin and excretes the excess into bile."
+    },
+    {
+     "claim": "ATP7B loads copper onto ceruloplasmin and excretes the excess into bile.",
+     "to": "Wilson disease is autosomal recessive loss of ATP7B, the hepatocyte transporter that loads copper onto ceruloplasmin and excretes the excess into bile."
+    },
+    {
+     "claim": "Copper builds up in the liver (hepatitis, cirrhosis, sometimes acute liver failure).",
+     "to": "Copper builds up in the liver (hepatitis, cirrhosis, sometimes acute liver failure)."
+    },
+    {
+     "claim": "Copper then spills into the blood and deposits in the basal ganglia, the cornea and red cells.",
+     "to": "It then spills into the blood and deposits in the basal ganglia, the cornea and red cells."
+    },
+    {
+     "claim": "Ceruloplasmin is low because it is unstable without its copper.",
+     "to": "Ceruloplasmin is low because it is unstable without its copper."
+    },
+    {
+     "claim": "With liver disease alone, Kayser-Fleischer rings are often absent.",
+     "to": "In patients with liver disease alone, Kayser-Fleischer rings are often absent."
+    },
+    {
+     "claim": "With liver disease alone, ceruloplasmin can read normal because it rises with inflammation.",
+     "to": "Ceruloplasmin can also read normal in these patients because it rises with inflammation."
+    },
+    {
+     "claim": "With liver disease alone, the urine copper or the biopsy decides.",
+     "to": "The urine copper or the liver biopsy then makes the diagnosis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Think of Wilson disease in any patient under about 40 with unexplained liver disease.",
+     "from": "Think of Wilson disease in any patient under about 40 with unexplained liver disease."
+    },
+    {
+     "claim": "Think of it especially when liver disease comes with neuropsychiatric signs (tremor, dysarthria, dystonia, depression, personality change, psychosis).",
+     "from": "Think of it especially when liver disease comes with neuropsychiatric signs (tremor, dysarthria, dystonia, depression, personality change, psychosis)."
+    },
+    {
+     "claim": "Think of it especially when liver disease comes with Kayser-Fleischer rings.",
+     "from": "Think of it especially when liver disease comes with Kayser-Fleischer rings."
+    },
+    {
+     "claim": "Think of it especially when liver disease comes with a Coombs-negative hemolytic anemia.",
+     "from": "Think of it especially when liver disease comes with a Coombs-negative hemolytic anemia."
+    },
+    {
+     "claim": "Screen with serum ceruloplasmin (low) and a slit-lamp exam.",
+     "from": "Screen with serum ceruloplasmin (low) and a slit-lamp exam."
+    },
+    {
+     "claim": "A high 24-hour urine copper confirms the diagnosis.",
+     "from": "A high 24-hour urine copper confirms."
+    },
+    {
+     "claim": "Liver biopsy copper settles cases where the tests disagree.",
+     "from": "Liver biopsy copper settles cases where the tests disagree."
+    },
+    {
+     "claim": "Wilson disease is autosomal recessive loss of ATP7B, the hepatocyte transporter.",
+     "from": "The mechanism is autosomal recessive loss of the ATP7B hepatocyte transporter."
+    },
+    {
+     "claim": "ATP7B loads copper onto ceruloplasmin and excretes the excess into bile.",
+     "from": "ATP7B loads copper onto ceruloplasmin and excretes the excess into bile."
+    },
+    {
+     "claim": "Copper builds up in the liver (hepatitis, cirrhosis, sometimes acute liver failure).",
+     "from": "Copper builds up in the liver (hepatitis, cirrhosis, sometimes acute liver failure)."
+    },
+    {
+     "claim": "Copper then spills into the blood and deposits in the basal ganglia, the cornea and red cells.",
+     "from": "Copper then spills into the blood and deposits in the basal ganglia, the cornea and red cells."
+    },
+    {
+     "claim": "Ceruloplasmin is low because it is unstable without its copper.",
+     "from": "Ceruloplasmin is low because it is unstable without its copper."
+    },
+    {
+     "claim": "With liver disease alone, Kayser-Fleischer rings are often absent.",
+     "from": "With liver disease alone, Kayser-Fleischer rings are often absent."
+    },
+    {
+     "claim": "With liver disease alone, ceruloplasmin can read normal because it rises with inflammation.",
+     "from": "With liver disease alone, ceruloplasmin can read normal because it rises with inflammation."
+    },
+    {
+     "claim": "With liver disease alone, the urine copper or the liver biopsy makes the diagnosis.",
+     "from": "With liver disease alone, the urine copper or the biopsy decides."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "Psychiatric change or falling school performance can precede the liver findings, so a young patient with new psychiatric illness and abnormal liver tests needs a ceruloplasmin &middot; Acute liver failure with a Coombs-negative hemolytic anemia in a teen or young adult is fulminant Wilson disease, and it needs a transplant center, not chelation alone &middot; A presumed autoimmune hepatitis in a young patient should have ceruloplasmin checked before steroids &middot; Serum total copper is usually low; the urine copper is the number that is high",
+   "with": "Psychiatric change or falling school performance can precede the liver findings. A young patient with new psychiatric illness and abnormal liver tests needs a ceruloplasmin &middot; Acute liver failure with a Coombs-negative hemolytic anemia in a teen or young adult is fulminant Wilson disease. It needs a transplant center, not chelation alone &middot; A presumed autoimmune hepatitis in a young patient should have ceruloplasmin checked before steroids &middot; Serum total copper is usually low; urine copper is high",
+   "note": "split long items; removed 'the number that is' filler",
+   "claims": [
+    {
+     "claim": "Psychiatric change or falling school performance can precede the liver findings.",
+     "to": "Psychiatric change or falling school performance can precede the liver findings."
+    },
+    {
+     "claim": "A young patient with new psychiatric illness and abnormal liver tests needs a ceruloplasmin.",
+     "to": "A young patient with new psychiatric illness and abnormal liver tests needs a ceruloplasmin"
+    },
+    {
+     "claim": "Acute liver failure with a Coombs-negative hemolytic anemia in a teen or young adult is fulminant Wilson disease.",
+     "to": "Acute liver failure with a Coombs-negative hemolytic anemia in a teen or young adult is fulminant Wilson disease."
+    },
+    {
+     "claim": "Fulminant Wilson disease needs a transplant center, not chelation alone.",
+     "to": "It needs a transplant center, not chelation alone"
+    },
+    {
+     "claim": "A presumed autoimmune hepatitis in a young patient should have ceruloplasmin checked before steroids.",
+     "to": "A presumed autoimmune hepatitis in a young patient should have ceruloplasmin checked before steroids"
+    },
+    {
+     "claim": "Serum total copper is usually low.",
+     "to": "Serum total copper is usually low; urine copper is high"
+    },
+    {
+     "claim": "The urine copper is high.",
+     "to": "Serum total copper is usually low; urine copper is high"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Psychiatric change or falling school performance can precede the liver findings.",
+     "from": "Psychiatric change or falling school performance can precede the liver findings."
+    },
+    {
+     "claim": "A young patient with new psychiatric illness and abnormal liver tests needs a ceruloplasmin.",
+     "from": "A young patient with new psychiatric illness and abnormal liver tests needs a ceruloplasmin."
+    },
+    {
+     "claim": "Acute liver failure with a Coombs-negative hemolytic anemia in a teen or young adult is fulminant Wilson disease.",
+     "from": "Acute liver failure with a Coombs-negative hemolytic anemia in a teen or young adult is fulminant Wilson disease."
+    },
+    {
+     "claim": "Fulminant Wilson disease needs a transplant center, not chelation alone.",
+     "from": "Fulminant Wilson disease needs a transplant center, not chelation alone."
+    },
+    {
+     "claim": "A presumed autoimmune hepatitis in a young patient should have ceruloplasmin checked before steroids.",
+     "from": "A presumed autoimmune hepatitis in a young patient should have ceruloplasmin checked before steroids."
+    },
+    {
+     "claim": "Serum total copper is usually low.",
+     "from": "Serum total copper is usually low."
+    },
+    {
+     "claim": "The urine copper is high.",
+     "from": "The urine copper is high."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "When liver disease in a patient under about 40 comes with a finding outside the liver, ask which organ it is: brain, cornea or red cells point to copper, the lung to alpha-1 antitrypsin, and the pancreas, skin, joints and heart in an older patient to iron.",
+   "with": "When liver disease in a patient under about 40 comes with a finding outside the liver, identify the organ. Brain, cornea or red cells point to copper, and the lung points to alpha-1 antitrypsin. The pancreas, skin, joints and heart in an older patient point to iron.",
+   "note": "split long sentence (one idea per sentence)",
+   "claims": [
+    {
+     "claim": "When liver disease in a patient under about 40 comes with a finding outside the liver, ask which organ it is.",
+     "to": "When liver disease in a patient under about 40 comes with a finding outside the liver, identify the organ."
+    },
+    {
+     "claim": "Brain, cornea or red cells point to copper.",
+     "to": "Brain, cornea or red cells point to copper, and the lung points to alpha-1 antitrypsin."
+    },
+    {
+     "claim": "The lung points to alpha-1 antitrypsin.",
+     "to": "Brain, cornea or red cells point to copper, and the lung points to alpha-1 antitrypsin."
+    },
+    {
+     "claim": "The pancreas, skin, joints and heart in an older patient point to iron.",
+     "to": "The pancreas, skin, joints and heart in an older patient point to iron."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When liver disease in a patient under about 40 comes with a finding outside the liver, identify the organ.",
+     "from": "When liver disease in a patient under about 40 comes with a finding outside the liver, ask which organ it is."
+    },
+    {
+     "claim": "Brain, cornea or red cells point to copper.",
+     "from": "Brain, cornea or red cells point to copper."
+    },
+    {
+     "claim": "The lung points to alpha-1 antitrypsin.",
+     "from": "The lung points to alpha-1 antitrypsin."
+    },
+    {
+     "claim": "The pancreas, skin, joints and heart in an older patient point to iron.",
+     "from": "The pancreas, skin, joints and heart in an older patient point to iron."
+    }
+   ]
+  }
+ ]
+}

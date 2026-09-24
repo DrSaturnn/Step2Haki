@@ -34,7 +34,29 @@ FORMAT = '''One JSON file: `{"edits": [op, op, ...]}`, replace ops only, applied
 - `find` is copied verbatim from the brief HTML below, entities included (`&amp;`, `&middot;`, `&gt;`, `&lt;`), and occurs exactly once inside that brief. Lengthen it with neighbouring text until it is unique.
 - `find` must lie inside `.dp`, `.rule`, `.pearls`, `.danger`, `.traps` or the first segment of `p.sub` (before the first `·`). Never inside `.vignette`, a table, `.crit` or the question bank (`ol.bank`); the verifier rejects those.
 - Keep every bold clinical term, every number and every `<span class="lbl">...</span>` label exactly (a bold slogan or rhetorical label may be reworded if listed in `"reworded_bold": ["<old bold text>"]` on that op); the only em dash allowed is the structural `<b>Term</b> — definition`.
-- One op per block is easiest: `find` = the block's prose (not its opening `<div ...>` tag), `with` = the rewrite.'''
+- One op per block is easiest: `find` = the block's prose (not its opening `<div ...>` tag), `with` = the rewrite.
+- Every op carries the claim map (drift protocol in the rules):
+
+```json
+{"op": "replace", "brief": "<id>", "find": "...", "with": "...", "note": "why",
+ "reworded_bold": ["<old bold slogan or emphasis-only bold, if any>"],
+ "claims": [
+   {"claim": "<atomic clinical claim from the OLD text>", "to": "<the NEW sentence that carries it, visible text, quoted exactly>"},
+   {"claim": "...", "carried_by": "<quoted passage elsewhere in this brief that already states it>"},
+   {"claim": "<non-clinical framing only>", "dropped": "<reason>"}],
+ "new_claims": [
+   {"claim": "<clinical claim in the NEW text>", "from": "<exact claim text of the old claim>"},
+   {"claim": "<ACRONYM> stands for <expansion>", "from": "expansion"}]}
+```'''
+
+
+def example():
+    """The worked example: before, after, and its full edits entry with the claim map."""
+    p = os.path.join(HERE, 'voice_example_infant_stool.json')
+    e = json.load(open(p, encoding='utf-8'))['edits'][0]
+    return ('Before (visible text):\n\n> %s\n\nAfter:\n\n> %s\n\nSkipped acronym: IgE (immunoglobulin name a learner '
+            'expands). The edits entry:\n\n```json\n%s\n```' % (text(e['find']), text(e['with']).replace('\n', ' '),
+                                                            json.dumps(e, indent=1, ensure_ascii=False)))
 
 
 def base_page(batch):
@@ -84,9 +106,10 @@ def main(argv):
         parts = ['# Voice packet %d of %d (%s, %s): %s' % (k, ng, batch, sysid, ', '.join(b.id for b in g)),
                  '**Instructions.** Everything you need is in this packet. Do not open index.html, the skill files or other '
                  'packets. Write your edits to `%s`, run `%s` from the workspace folder (Step2Haki/workspace) and loop until it '
-                 'prints PASS. Then reply with the 3 to 5 line report the rules ask for.' % (edits, cmd),
+                 'prints PASS (add `--report` to read your own claim map). Then reply with the 3 to 5 line report the rules ask for, including any acronym you skipped.' % (edits, cmd),
                  '## Rules\n' + rules,
                  '## Edit format (replace only)\n' + FORMAT,
+                 '## Worked example (infant-stool .dp, round 2; passes the verifier)\n' + example(),
                  '## Briefs (%d): current HTML\n' % len(g) + '\n\n'.join(
                      '### `%s`: %s\n\n```html\n%s\n```' % (b.id, b.title, html[b.start:b.end]) for b in g)]
         out = os.path.join(outdir, 'packet_%d.md' % k)

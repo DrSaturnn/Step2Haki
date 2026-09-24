@@ -1,0 +1,505 @@
+{
+ "batch": "s30",
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "llergy; FPIES vomitin",
+   "with": "llergy; <b>FPIES</b> (food protein-induced enterocolitis syndrome) vomitin",
+   "note": "acronym expansion at first use in .traps: FPIES",
+   "claims": [
+    {
+     "claim": "llergy; FPIES vomitin",
+     "to": "llergy; FPIES (food protein-induced enterocolitis syndrome) vomitin"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "FPIES stands for food protein-induced enterocolitis syndrome",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<b>Fever 38.8 °C with WBC 13,700 and 80% neutrophils</b>",
+   "with": "<b>Fever 38.8 °C with WBC (white blood cell count) 13,700 and 80% neutrophils</b>",
+   "note": "acronym expansion at first use in .pearls: WBC",
+   "claims": [
+    {
+     "claim": "Fever 38.8 °C with WBC 13,700 and 80% neutrophils",
+     "to": "Fever 38.8 °C with WBC (white blood cell count) 13,700 and 80% neutrophils"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "WBC stands for white blood cell count",
+     "from": "expansion"
+    }
+   ],
+   "reworded_bold": [
+    "Fever 38.8 °C with WBC 13,700 and 80% neutrophils"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "TCAs",
+   "with": "<b>TCAs</b> [tricyclic antidepressants]",
+   "note": "acronym expansion at first use in .pearls: TCAs",
+   "claims": [
+    {
+     "claim": "TCAs",
+     "to": "TCAs [tricyclic antidepressants]"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "TCAs stands for tricyclic antidepressants",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "demies (IOM 2011) c",
+   "with": "demies (<b>IOM</b> [Institute of Medicine] 2011) c",
+   "note": "acronym expansion at first use in .pearls: IOM",
+   "claims": [
+    {
+     "claim": "demies (IOM 2011) c",
+     "to": "demies (IOM [Institute of Medicine] 2011) c"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "IOM stands for Institute of Medicine",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "NIH",
+   "with": "<b>NIH</b> (National Institutes of Health)",
+   "note": "acronym expansion at first use in .pearls: NIH",
+   "claims": [
+    {
+     "claim": "NIH",
+     "to": "NIH (National Institutes of Health)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "NIH stands for National Institutes of Health",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "ce (600 IU, 800 IU",
+   "with": "ce (600 <b>IU</b> [international units], 800 IU",
+   "note": "acronym expansion at first use in .pearls: IU",
+   "claims": [
+    {
+     "claim": "ce (600 IU, 800 IU",
+     "to": "ce (600 IU [international units], 800 IU"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "IU stands for international units",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "ing; in CF, restar",
+   "with": "ing; in <b>CF</b> (cystic fibrosis), restar",
+   "note": "acronym expansion at first use in .danger: CF",
+   "claims": [
+    {
+     "claim": "ing; in CF, restar",
+     "to": "ing; in CF (cystic fibrosis), restar"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CF stands for cystic fibrosis",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": " &mdash; 50,000 IU weekly for 8 we",
+   "with": " &mdash; 50,000 <b>IU</b> (international units) weekly for 8 we",
+   "note": "acronym expansion at first use in .danger: IU",
+   "claims": [
+    {
+     "claim": "— 50,000 IU weekly for 8 we",
+     "to": "— 50,000 IU (international units) weekly for 8 we"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "IU stands for international units",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "without PTH control",
+   "with": "without <b>PTH</b> (parathyroid hormone) control",
+   "note": "acronym expansion at first use in .pearls: PTH",
+   "claims": [
+    {
+     "claim": "without PTH control",
+     "to": "without PTH (parathyroid hormone) control"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "PTH stands for parathyroid hormone",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "<b>CKD and chronic liver disease</b>",
+   "with": "<b>CKD (chronic kidney disease) and chronic liver disease</b>",
+   "note": "acronym expansion at first use in .pearls: CKD",
+   "claims": [
+    {
+     "claim": "CKD and chronic liver disease",
+     "to": "CKD (chronic kidney disease) and chronic liver disease"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CKD stands for chronic kidney disease",
+     "from": "expansion"
+    }
+   ],
+   "reworded_bold": [
+    "CKD and chronic liver disease"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "e, so a CF or chol",
+   "with": "e, so a <b>CF</b> (cystic fibrosis) or chol",
+   "note": "acronym expansion at first use in .pearls: CF",
+   "claims": [
+    {
+     "claim": "e, so a CF or chol",
+     "to": "e, so a CF (cystic fibrosis) or chol"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CF stands for cystic fibrosis",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "e: is the PT or the aPTT",
+   "with": "e: is the PT (prothrombin time) or the aPTT",
+   "note": "acronym expansion at first use in .pearls: PT",
+   "claims": [
+    {
+     "claim": "e: is the PT or the aPTT",
+     "to": "e: is the PT (prothrombin time) or the aPTT"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "PT stands for prothrombin time",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": " or the aPTT long, and a",
+   "with": " or the aPTT (activated partial thromboplastin time) long, and a",
+   "note": "acronym expansion at first use in .pearls: aPTT",
+   "claims": [
+    {
+     "claim": "or the aPTT long, and a",
+     "to": "or the aPTT (activated partial thromboplastin time) long, and a"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "aPTT stands for activated partial thromboplastin time",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "min D 400 IU for breastf",
+   "with": "min D 400 IU (international units) for breastf",
+   "note": "acronym expansion at first use in .pearls: IU",
+   "claims": [
+    {
+     "claim": "min D 400 IU for breastf",
+     "to": "min D 400 IU (international units) for breastf"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "IU stands for international units",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": " workup, MRI with MR ven",
+   "with": " workup, MRI (magnetic resonance imaging) with MR ven",
+   "note": "acronym expansion at first use in .pearls: MRI",
+   "claims": [
+    {
+     "claim": "workup, MRI with MR ven",
+     "to": "Part I Headache in a Child: What Earns Imaging covers the papilledema workup, MRI (magnetic resonance imaging) with MR (magnetic resonance) venography and then LP (lumbar puncture), and the other drugs that raise intracranial pressure;"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "MRI stands for magnetic resonance imaging",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "ing) with MR venography ",
+   "with": "ing) with MR (magnetic resonance) venography ",
+   "note": "acronym expansion at first use in .pearls: MR",
+   "claims": [
+    {
+     "claim": "ing) with MR venography",
+     "to": "ing) with MR (magnetic resonance) venography"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "MR stands for magnetic resonance",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": " and then LP, and the ot",
+   "with": " and then LP (lumbar puncture), and the ot",
+   "note": "acronym expansion at first use in .pearls: LP",
+   "claims": [
+    {
+     "claim": "and then LP, and the ot",
+     "to": "and then LP (lumbar puncture), and the ot"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "LP stands for lumbar puncture",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "sis and DIC, but DI",
+   "with": "sis and <b>DIC</b> (disseminated intravascular coagulation), but DI",
+   "note": "acronym expansion at first use in .traps: DIC",
+   "claims": [
+    {
+     "claim": "sis and DIC, but DI",
+     "to": "sis and DIC (disseminated intravascular coagulation), but DI"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "DIC stands for disseminated intravascular coagulation",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "ration: CF liver d",
+   "with": "ration: <b>CF</b> (cystic fibrosis) liver d",
+   "note": "acronym expansion at first use in .traps: CF",
+   "claims": [
+    {
+     "claim": "ration: CF liver d",
+     "to": "ration: CF (cystic fibrosis) liver d"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CF stands for cystic fibrosis",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "ing the PT.</span>",
+   "with": "ing the <b>PT</b> (prothrombin time).</span>",
+   "note": "acronym expansion at first use in .traps: PT",
+   "claims": [
+    {
+     "claim": "ing the PT.",
+     "to": "ing the PT (prothrombin time)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "PT stands for prothrombin time",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "tivity: TTP is acut",
+   "with": "tivity: <b>TTP</b> (thrombotic thrombocytopenic purpura) is acut",
+   "note": "acronym expansion at first use in .traps: TTP",
+   "claims": [
+    {
+     "claim": "tivity: TTP is acut",
+     "to": "tivity: TTP (thrombotic thrombocytopenic purpura) is acut"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "TTP stands for thrombotic thrombocytopenic purpura",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "teen with CF off his med",
+   "with": "teen with CF (cystic fibrosis) off his med",
+   "note": "acronym expansion at first use in p.sub first segment: CF",
+   "claims": [
+    {
+     "claim": "teen with CF off his med",
+     "to": "teen with CF (cystic fibrosis) off his med"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CF stands for cystic fibrosis",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-water-soluble-vitamins",
+   "find": "&mdash; IV, before",
+   "with": "&mdash; <b>IV</b> (intravenous), before",
+   "note": "acronym expansion at first use in .danger: IV",
+   "claims": [
+    {
+     "claim": "— IV, before",
+     "to": "— IV (intravenous), before"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "IV stands for intravenous",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-water-soluble-vitamins",
+   "find": "th a long PT: are the co",
+   "with": "th a long PT (prothrombin time): are the co",
+   "note": "acronym expansion at first use in .pearls: PT",
+   "claims": [
+    {
+     "claim": "th a long PT: are the co",
+     "to": "th a long PT (prothrombin time): are the co"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "PT stands for prothrombin time",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-water-soluble-vitamins",
+   "find": "o; only MMA separat",
+   "with": "o; only <b>MMA</b> (methylmalonic acid) separat",
+   "note": "acronym expansion at first use in .traps: MMA",
+   "claims": [
+    {
+     "claim": "o; only MMA separat",
+     "to": "o; only MMA (methylmalonic acid) separat"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "MMA stands for methylmalonic acid",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-water-soluble-vitamins",
+   "find": "ves the PT normal,",
+   "with": "ves the <b>PT</b> (prothrombin time) normal,",
+   "note": "acronym expansion at first use in .traps: PT",
+   "claims": [
+    {
+     "claim": "ves the PT normal,",
+     "to": "ves the PT (prothrombin time) normal,"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "PT stands for prothrombin time",
+     "from": "expansion"
+    }
+   ]
+  }
+ ]
+}
