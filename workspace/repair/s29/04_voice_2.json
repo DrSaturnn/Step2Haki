@@ -1,0 +1,109 @@
+{
+"edits": [
+{
+"op": "replace",
+"brief": "cholestasis",
+"find": "Classify the <b>pattern</b> before testing for causes. <b>Alk phos ↑↑ with normal AST/ALT and a direct hyperbilirubinemia</b> is cholestasis — and <b>abdominal ultrasound</b> answers the one question that branches everything downstream: <b>are the ducts dilated?</b> Intrahepatic vs. extrahepatic decides whether the next test is an antibody or a cross-sectional image.",
+"with": "Classify the <b>pattern</b> before testing for causes. <b>Alk phos ↑↑ with normal AST/ALT and a direct hyperbilirubinemia</b> is cholestasis. Then order an <b>abdominal ultrasound</b> to answer <b>are the ducts dilated?</b> Nondilated ducts (intrahepatic) lead to an antibody test; dilated ducts (extrahepatic) lead to cross-sectional imaging.",
+"note": "remove dramatic framing and em dash"
+},
+{
+"op": "replace",
+"brief": "cholestasis",
+"find": "Step 1.5, which stems love to test separately: confirm the alk phos is <b>hepatic</b> with a <b>GGT</b> (or 5′-nucleotidase). Alkaline phosphatase also comes from <b>bone, placenta, and intestine</b>.",
+"with": "Step 1.5: confirm the alk phos is <b>hepatic</b> with a <b>GGT</b> (or 5′-nucleotidase); alkaline phosphatase also comes from <b>bone, placenta, and intestine</b>.",
+"note": "remove question-framing opener"
+},
+{
+"op": "replace",
+"brief": "cholestasis",
+"find": "<b>ASMA and iron studies</b> — right idea (autoimmune and metabolic liver disease), <b>wrong pattern</b>: both cause hepatocellular injury. <b>ERCP</b> — correct modality, <b>wrong rung</b>: invasive, carries post-ERCP pancreatitis risk, and you don't yet know whether there is anything to intervene on.",
+"with": "<b>ASMA and iron studies</b> — test for autoimmune and metabolic liver disease, which cause hepatocellular injury, the <b>wrong pattern</b> here. <b>ERCP</b> — too early, the <b>wrong rung</b>: it is invasive, carries a risk of post-ERCP pancreatitis, and no lesion has yet been shown to need intervention.",
+"note": "remove paired contrasts"
+},
+{
+"op": "replace",
+"brief": "cholestasis",
+"find": "The LFT panel is a <b>triage instrument</b>, not a list of abnormal values. Diagnostic tests are pattern-specific — ordering an autoimmune hepatitis antibody in a cholestatic patient is testing for the wrong disease category entirely.",
+"with": "Use the LFT pattern as a <b>triage instrument</b> to choose tests. Tests are pattern-specific: an autoimmune hepatitis antibody looks for hepatocellular disease and does not belong in the workup of a cholestatic pattern.",
+"note": "remove aphorism and em dash"
+},
+{
+"op": "replace",
+"brief": "infant-stool",
+"find": "The well-appearing child decides the tier",
+"with": "Well-appearing infant with a stool complaint",
+"note": "remove personification"
+},
+{
+"op": "replace",
+"brief": "infant-stool",
+"find": "Three benign stool complaints share one exam shape — a <b>thriving, well-appearing</b> infant or child whose parents are alarmed — and the answer is set by the <b>stool</b> and the <b>timing</b>, not by the alarm.",
+"with": "Three benign stool complaints present in a <b>thriving, well-appearing</b> infant or child with alarmed parents; the <b>stool</b> and the <b>timing</b> set the answer.",
+"note": "remove em dashes and paired contrast"
+},
+{
+"op": "replace",
+"brief": "infant-stool",
+"find": "eliminate cow's milk and soy from the maternal diet, or an extensively hydrolyzed formula.",
+"with": "eliminate cow's milk and soy from the maternal diet, or use an extensively hydrolyzed formula.",
+"note": "clarity"
+},
+{
+"op": "replace",
+"brief": "infant-stool",
+"find": "<p>The two mimics that change the tier are both <b>ill-appearing</b>:",
+"with": "<p>Two mimics change the tier, and both are <b>ill-appearing</b>:",
+"note": "tighten"
+},
+{
+"op": "replace",
+"brief": "infant-stool",
+"find": "The miss is treating the parents' distress as a finding: a formula change, a suppository, or a stool workup for a thriving infant is the wrong rung.",
+"with": "Parental distress is not a finding; a thriving infant does not need a formula change, a suppository, or a stool workup.",
+"note": "remove question framing"
+},
+{
+"op": "replace",
+"brief": "infant-stool",
+"find": "The whole ladder rests on <b>well-appearing and thriving</b>. Lethargy, dehydration, or profuse vomiting is FPIES; urticaria or wheeze is IgE-mediated; a <b>preterm</b> infant with distension and bloody stools is necrotizing enterocolitis; a child with fever, vomiting, or weight loss after gastroenteritis is no longer the classic lactase vignette and earns a workup. Formula changes, rectal stimulation, and laxatives are the named wrong answers for dyschezia — <b>hard</b> stool is the only word that makes a laxative right.",
+"with": "The rule applies only to an infant who is <b>well-appearing and thriving</b>. Lethargy, dehydration, or profuse vomiting is FPIES; urticaria or wheeze is IgE-mediated allergy; a <b>preterm</b> infant with distension and bloody stools has necrotizing enterocolitis; a child with fever, vomiting, or weight loss after gastroenteritis does not fit secondary lactase deficiency and needs a workup. Formula changes, rectal stimulation, and laxatives are wrong for dyschezia; a laxative is right only when the stool is <b>hard</b>.",
+"note": "remove dramatic opener, em dash"
+},
+{
+"op": "replace",
+"brief": "infant-stool",
+"find": "Dyschezia is a coordination failure — raised intra-abdominal pressure without pelvic-floor relaxation, and inadequate abdominal tone for an effective Valsalva · FPIAP is non-IgE and self-limited; maternal elimination of cow's milk <b>and</b> soy, resolution by about 1 year · FPIES is the ill-appearing non-IgE twin: delayed hours, no urticaria, treated with fluids · IgE-mediated disease is the only one that gets epinephrine · secondary lactase deficiency is osmotic — stops with fasting, acidic stool, no fever — and IBD is the other cause of brush-border loss",
+"with": "Dyschezia is a coordination failure: raised intra-abdominal pressure without pelvic-floor relaxation, and inadequate abdominal tone for an effective Valsalva · FPIAP is non-IgE and self-limited; the mother eliminates cow's milk <b>and</b> soy, and it resolves by about 1 year · FPIES is also non-IgE but ill-appearing: onset hours after the trigger, no urticaria, treated with fluids · Only IgE-mediated disease gets epinephrine · Secondary lactase deficiency is osmotic (stops with fasting, acidic stool, no fever); IBD also causes brush-border loss",
+"note": "remove em dashes, personification"
+},
+{
+"op": "replace",
+"brief": "infant-stool",
+"find": "owns the cow's-milk age gate; this brief owns what cow's-milk protein does to the stool before that gate opens. Part I <b>Bronchopulmonary Dysplasia</b> carries the necrotizing enterocolitis item — the ill preemie that a bloody stool must never be called proctocolitis. Store the discriminator as a question: is the infant well-appearing, and is the stool soft? Part I <b>Constipation in a Child</b> owns the toddler end of the same complaint, where the withholding cycle rather than the protein is the disease.",
+"with": "owns the age for starting cow's milk; this brief covers the stool effects of cow's-milk protein before that age. Part I <b>Bronchopulmonary Dysplasia</b> has the necrotizing enterocolitis item: bloody stool in an ill preemie is not proctocolitis. Ask: is the infant well-appearing, and is the stool soft? Part I <b>Constipation in a Child</b> owns the same complaint in toddlers, where the withholding cycle, not milk protein, is the cause.",
+"note": "remove metaphor and em dash"
+},
+{
+"op": "replace",
+"brief": "infant-stool",
+"find": "When the patient is thriving and the parents are frightened, the tier is set by the finding, not by the fear — read the stool, the timing after the trigger, and the child's appearance, and reassure or eliminate before you ever test.",
+"with": "In a thriving child with worried parents, choose the tier from the stool, the timing after the trigger, and the child's appearance; reassure or eliminate the trigger before testing.",
+"note": "remove paired contrast and em dash"
+},
+{
+"op": "replace",
+"brief": "infant-stool",
+"find": "Soy formula is the right idea (remove the trigger) with a member that cross-reacts.",
+"with": "Soy formula removes cow's milk, but soy protein cross-reacts.",
+"note": "plain"
+},
+{
+"op": "replace",
+"brief": "infant-stool",
+"find": "Epinephrine treats food allergy — the IgE kind; FPIES vomiting hours later is non-IgE and needs fluids.",
+"with": "Epinephrine treats IgE-mediated food allergy; FPIES vomiting hours later is non-IgE and needs fluids.",
+"note": "remove em dash"
+}
+]
+}

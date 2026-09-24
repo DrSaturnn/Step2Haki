@@ -1,0 +1,263 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "<p>The stem gives an <b>elderly man</b> with dysphagia, <b>regurgitation of undigested food</b>, <b>halitosis</b>, and a <b>gurgling</b> sound in the neck. That cluster is Zenker — a pulsion pouch through the weak posterior hypopharyngeal wall because the <b>cricopharyngeus fails to relax</b>. The question the exam scores is not the diagnosis but the sequence: <b>barium esophagram first</b>, because a blind endoscope or nasogastric tube can enter the pouch and <b>perforate</b> it.</p>",
+   "with": "<p>An <b>elderly man</b> with dysphagia, <b>regurgitation of undigested food</b>, <b>halitosis</b>, and a <b>gurgling</b> sound in the neck has a Zenker diverticulum: a pulsion pouch through the weak posterior hypopharyngeal wall because the <b>cricopharyngeus fails to relax</b>. Order a <b>barium esophagram first</b>; a blind endoscope or nasogastric tube can enter the pouch and <b>perforate</b> it.</p>",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "<p>The miss is usually a reflex: dysphagia → endoscopy. Ask what the endoscope could hit before you order it. Once the pouch is shown, treatment is <b>cricopharyngeal myotomy</b> (with or without diverticulectomy); the tested complication is <b>aspiration pneumonia</b>.</p>",
+   "with": "<p>Once the esophagram shows the pouch, treatment is <b>cricopharyngeal myotomy</b> (with or without diverticulectomy). The main complication is <b>aspiration pneumonia</b>.</p>",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "Regurgitated <b>undigested</b> food means the food never reached the stomach — the pouch or a non-emptying esophagus is holding it. Undigested regurgitation plus a <b>neck</b> finding is the pouch; undigested regurgitation plus dysphagia to <b>liquids from day one</b> is achalasia. Either way the first study is the esophagram; endoscopy leads only when the stem carries an alarm feature for cancer (weight loss, smoking, progressive solid dysphagia) and no neck finding.",
+   "with": "Regurgitated <b>undigested</b> food never reached the stomach; a pouch or a non-emptying esophagus held it. With a <b>neck</b> finding it is a Zenker pouch; with dysphagia to <b>liquids from day one</b> it is achalasia. In both, the first study is the esophagram. Endoscopy comes first only with an alarm feature for cancer (weight loss, smoking, progressive solid dysphagia) and no neck finding.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "Zenker is a false (pulsion) diverticulum — mucosa and submucosa herniate through the posterior wall between the inferior pharyngeal constrictor and the cricopharyngeus · the mechanism tested is <b>cricopharyngeal motor dysfunction</b>, diminished relaxation, not a structural weakness alone · halitosis comes from food decaying in the pouch · the complication tested is <b>aspiration pneumonia</b>",
+   "with": "Zenker is a false (pulsion) diverticulum: mucosa and submucosa herniate through the posterior wall between the inferior pharyngeal constrictor and the cricopharyngeus · the mechanism is <b>cricopharyngeal motor dysfunction</b> (diminished relaxation), not structural weakness alone · halitosis comes from food decaying in the pouch · the main complication is <b>aspiration pneumonia</b>",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "This brief wants a partner on <i>achalasia and the esophageal dysphagia differential</i> (not yet written).",
+   "with": "Partner brief on <i>achalasia and the esophageal dysphagia differential</i> not yet written.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "When the diagnosis implies a blind pouch or a cavity the instrument cannot see, image it before you instrument it — the esophagram before the endoscope in Zenker is the same rule as the ultrasound before the needle in a hip effusion.",
+   "with": "When the diagnosis implies a blind pouch or cavity the instrument cannot see, image it before instrumenting it: esophagram before endoscopy in Zenker, as with ultrasound before the needle in a hip effusion.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "Upper endoscopy is the right modality one step early — the blind scope can perforate the pouch the esophagram would have shown.",
+   "with": "Upper endoscopy is ordered too early; a blind scope can perforate the pouch that the esophagram would have shown.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "Weight loss and age pull toward cancer, but undigested regurgitation with a neck gurgle is the pouch, and the esophagram settles both.",
+   "with": "Weight loss and age suggest cancer, but undigested regurgitation with a neck gurgle indicates a pouch, and the esophagram evaluates both.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "Manometry is the right family of test for a motility cause, but it answers achalasia, not a pharyngeal pouch.",
+   "with": "Manometry evaluates motility disorders such as achalasia, not a pharyngeal pouch.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "<p>Everything before the mouth reads as ordinary adolescent iron deficiency: a 13-year-old, six-day menses, microcytic anaemia. Then <b>brown macules on the lips and buccal mucosa</b> appear, and they are not part of that story. They are the mucocutaneous marker of <b>Peutz-Jeghers syndrome</b>, and the anaemia becomes occult bleeding from hamartomatous polyps rather than menstrual loss. The next step is <b>upper and lower endoscopy</b>.</p>",
+   "with": "<p>A 13-year-old with six-day menses and microcytic anaemia suggests menstrual iron deficiency, but <b>brown macules on the lips and buccal mucosa</b> are the mucocutaneous marker of <b>Peutz-Jeghers syndrome</b>. The anaemia is then occult bleeding from hamartomatous polyps, not menstrual loss. The next step is <b>upper and lower endoscopy</b>.</p>",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "<p>This is a stem where the answer lives in one clause of the physical examination and every earlier sentence points the other way. The distractor that fits the demographic &mdash; iron and an oral contraceptive &mdash; treats the anaemia and leaves the syndrome undiagnosed.</p>",
+   "with": "<p>Iron and an oral contraceptive treat the anaemia but leave the syndrome undiagnosed.</p>",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "<b>Microcytic anaemia in an adolescent girl is not automatically menstrual</b> &mdash; look at the mouth, the palms and the family history before settling &middot; <b>Intussusception in an older child</b> is a lead point until proven otherwise, and a hamartoma is one &middot; Cancer risk extends beyond the gut to breast and genital tract, so surveillance is lifelong &middot; A normal platelet and leukocyte count argues against marrow failure",
+   "with": "<b>Microcytic anaemia in an adolescent girl is not automatically menstrual</b> &mdash; check the mouth, palms and family history &middot; <b>Intussusception in an older child</b> has a lead point until proven otherwise; a hamartoma can be one &middot; Cancer risk includes breast and genital tract, so surveillance is lifelong &middot; Normal platelet and leukocyte counts argue against marrow failure",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "The macules can fade in adulthood while the polyp risk does not &mdash; a negative skin examination in a parent does not exclude the family history",
+   "with": "The macules can fade in adulthood but the polyp risk persists, so a normal skin examination in a parent does not exclude the family history",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "Perioral pigmentation plus intussusception in a child is the classic paired presentation",
+   "with": "Perioral pigmentation with intussusception in a child is the classic presentation",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "<b>Familial Adenomatous Polyposis</b>, which owns the adenomatous syndromes and their colectomy timing; this brief owns the hamartomatous one.",
+   "with": "<b>Familial Adenomatous Polyposis</b> covers the adenomatous syndromes and colectomy timing; this brief covers the hamartomatous one.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "When a stem builds an ordinary explanation and then adds one finding that does not belong to it, that finding is the question &mdash; the preceding sentences were the distractor.",
+   "with": "When one finding does not fit an otherwise ordinary explanation, that finding usually determines the diagnosis.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "Adolescent girl plus menses plus microcytic anaemia reads as iron deficiency before the mouth is examined.",
+   "with": "An adolescent girl with menses and microcytic anaemia suggests menstrual iron deficiency until the oral macules are noted.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "Right category of mucocutaneous pigmentation, wrong distribution.",
+   "with": "Addison disease and lead poisoning also cause pigmentation, but in a different distribution.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "The newborn breaks down fetal hemoglobin quickly while hepatic <b>UDP-glucuronosyltransferase</b> is still immature, so unconjugated bilirubin accumulates faster than it can be cleared. A well infant, feeding and voiding normally, jaundiced on day 4 at 11 mg/dL, is the ordinary version of this.",
+   "with": "The newborn breaks down fetal hemoglobin quickly while hepatic <b>UDP-glucuronosyltransferase</b> is still immature, so unconjugated bilirubin accumulates. A well infant, feeding and voiding normally, jaundiced on day 4 at 11 mg/dL has physiologic jaundice.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "<p>Every wrong option on that list is a <b>real mechanism stated in the wrong direction or the wrong compartment</b>. Ligandin is <b>low</b> at birth, not high. Enterohepatic circulation is <b>increased</b> in the newborn, not decreased. Cholestasis produces a <b>direct</b> hyperbilirubinemia, which this infant does not have. Albumin displacement is real but needs a displacing drug. Name the direction before you pick the mechanism.</p>",
+   "with": "<p>Each wrong option is a <b>real mechanism stated in the wrong direction or the wrong compartment</b>. Ligandin is <b>low</b> at birth. Enterohepatic circulation is <b>increased</b> in the newborn. Cholestasis produces a <b>direct</b> hyperbilirubinemia, which this infant does not have. Albumin displacement requires a displacing drug.</p>",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "<b>Any direct fraction</b> &mdash; stop thinking physiologic and start thinking obstruction or infection",
+   "with": "<b>Any direct fraction</b> &mdash; not physiologic; consider obstruction or infection",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "<b>Phototherapy versus exchange</b> &mdash; light first; exchange is for the severe range or for signs of encephalopathy, not for a number close to threshold &middot; <b>Feeding</b> &mdash; jaundice almost never earns stopping breast-feeding; more milk moves bilirubin out through the gut",
+   "with": "<b>Phototherapy versus exchange</b> &mdash; phototherapy first; exchange transfusion is for the severe range or signs of encephalopathy, not a level near threshold &middot; <b>Feeding</b> &mdash; jaundice is almost never a reason to stop breast-feeding; more milk increases bilirubin excretion through the gut",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "<b>Suboptimal-intake versus breast-milk jaundice</b> &mdash; the first is a hungry infant losing weight in the first week, the second a thriving one still jaundiced in the second &middot; Ligandin and glucuronosyltransferase are both <b>low</b> at birth; an option offering either as increased is inverted &middot; Sulfonamides and ceftriaxone displace bilirubin from albumin, which is why they are avoided in jaundiced newborns &middot; A direct fraction is the single finding that converts a routine newborn jaundice into an urgent one",
+   "with": "<b>Suboptimal-intake versus breast-milk jaundice</b> &mdash; suboptimal intake is a hungry infant losing weight in the first week; breast-milk jaundice is a thriving infant still jaundiced in the second week &middot; Ligandin and glucuronosyltransferase are both <b>low</b> at birth &middot; Sulfonamides and ceftriaxone displace bilirubin from albumin, so they are avoided in jaundiced newborns &middot; A raised direct fraction makes newborn jaundice urgent",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "<b>The Sick Jaundiced Neonate with a Positive Screen</b>, which owns the unwell infant with a metabolic cause; this brief owns the well one. Part I <b>Cholestasis &amp; the LFT Patterns</b> carries the direct-fraction workup.",
+   "with": "<b>The Sick Jaundiced Neonate with a Positive Screen</b> covers the unwell infant with a metabolic cause; this brief covers the well one. Part I <b>Cholestasis &amp; the LFT Patterns</b> covers the direct-fraction workup.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "When every option names a real mechanism, the question is usually direction, not identity &mdash; check which way each one moves in this patient before choosing between them.",
+   "with": "When every option names a real mechanism, check which direction each one moves in this patient before choosing.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "Ligandin and enterohepatic circulation are both real, and both stated backwards.",
+   "with": "Ligandin and enterohepatic circulation are real mechanisms, but the options state them in the wrong direction.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "Cholestasis is the right category of liver problem but the wrong bilirubin fraction.",
+   "with": "Cholestasis causes a direct hyperbilirubinemia; this infant's is indirect.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "Scope both ends, then think small bowel",
+   "with": "Occult GI bleeding after a negative upper endoscopy and colonoscopy",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "Both ends have already been scoped and are clean, which moves the search to the <b>small bowel</b> &mdash; the segment neither scope reaches. In a child the commonest small-bowel bleeding lesion is a <b>Meckel diverticulum</b>, and the study that finds it is a <b>technetium 99m pertechnetate scan</b>, which images the ectopic gastric mucosa rather than the bleeding itself.",
+   "with": "Both ends have been scoped and are clean, so the source is in the <b>small bowel</b>, which neither scope reaches. In a child the most common small-bowel bleeding lesion is a <b>Meckel diverticulum</b>, found by a <b>technetium 99m pertechnetate scan</b>, which images ectopic gastric mucosa rather than the bleeding.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<p>Age changes the answer at this exact fork. An adult with the same negative workup gets <b>capsule endoscopy</b>, because the adult small-bowel causes are angiodysplasia, neoplasia and ulcers. Same algorithm, different branch.</p>",
+   "with": "<p>An adult with the same negative workup gets <b>capsule endoscopy</b>, because adult small-bowel causes are angiodysplasia, neoplasia and ulcers.</p>",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<p>The same diverticulum also bleeds <b>visibly</b>.",
+   "with": "<p>A Meckel diverticulum can also bleed <b>visibly</b>.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "goes <b>straight to the pertechnetate scan</b>; no scopes come first. <b>Pain</b> means a complication or a different disease, and it changes the first test.</p>",
+   "with": "goes <b>straight to the pertechnetate scan</b> without endoscopy first. <b>Pain</b> suggests a complication or a different disease and changes the first test.</p>",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "The Meckel scan finds <b>gastric mucosa</b>, not blood &mdash; which is why it works on a lesion that is not actively bleeding &middot; <b>Occult</b> means invisible, and invisible means too slow for angiography &middot; Celiac gives iron deficiency <b>without</b> occult blood; the FOBT is the split &middot; The small bowel is defined here by what the two scopes cannot reach",
+   "with": "The Meckel scan detects <b>gastric mucosa</b>, not blood, so it works when the lesion is not actively bleeding &middot; <b>Occult</b> bleeding is too slow for angiography &middot; Celiac gives iron deficiency <b>without</b> occult blood; the FOBT separates them &middot; Here, small bowel means the segment the two scopes cannot reach",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<b>The Distended Abdomen in a Newborn or Infant</b>, which owns the obstructed and acutely bleeding infant gut. Part I <b>Microcytic Anemia: Iron First</b> carries the",
+   "with": "<b>The Distended Abdomen in a Newborn or Infant</b> covers the obstructed and acutely bleeding infant gut. Part I <b>Microcytic Anemia: Iron First</b> covers the",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "When an algorithm branches on age, the branch point is usually the question &mdash; the same negative workup sends a child and an adult to different tests.",
+   "with": "When an algorithm branches on age, the same negative workup can send a child and an adult to different tests.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "Right idea of small-bowel imaging, wrong modality for the age.",
+   "with": "Capsule endoscopy is the adult small-bowel study; a child gets the pertechnetate scan.",
+   "note": "plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "Reaching for a small-bowel study before the two scopes are done.",
+   "with": "Ordering a small-bowel study before upper endoscopy and colonoscopy are done.",
+   "note": "plain voice"
+  }
+ ]
+}

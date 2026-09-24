@@ -1,0 +1,256 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "the refusal pattern names the cause",
+   "with": "Toddler who will not advance past purees",
+   "note": "sub: slogan to plain descriptor"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "He is not anorexic and he is not avoiding a food group — he is stuck on a <b>texture</b>. Advancing from purees to solids normally happens between 6 and 12 months, and failure to make that transition is the toddler's way of reporting dysphagia he cannot describe. The stem then removes the competing explanations one at a time: the <b>swallow study is normal</b>, so the problem is below the pharynx; <b>development is normal</b>, so this is not a behavioral or autism-spectrum feeding disorder; the <b>stools are soft and daily with a benign abdomen</b>, so it is not celiac disease or an intraabdominal process. What remains is inflammation of the esophagus, and the supporting clue is the one that reads like background history — <b>eczema</b>, because atopy accompanies most eosinophilic esophagitis. The diagnosis is histologic, so the test that establishes it is <b>endoscopy with esophageal biopsy</b>.",
+   "with": "He is not anorexic and is not avoiding a food group; he refuses a <b>texture</b>. Children normally advance from purees to solids between 6 and 12 months, and failure to advance in a toddler suggests dysphagia. The <b>swallow study is normal</b>, so the problem is below the pharynx. Because <b>development is normal</b>, a behavioral or autism-spectrum feeding disorder is unlikely. The <b>stools are soft and daily with a benign abdomen</b>, which argues against celiac disease or an intraabdominal process. That leaves esophageal inflammation. His <b>eczema</b> supports eosinophilic esophagitis, since most patients are atopic. The diagnosis is histologic, so the test is <b>endoscopy with esophageal biopsy</b>.",
+   "note": "dp: remove personification, em dashes, dramatic framing"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "a texture-based refusal, not a food-group avoidance; this is the toddler presentation of esophageal disease",
+   "with": "a texture-based refusal, not a food-group avoidance; the toddler presentation of esophageal disease",
+   "note": "trim"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "atopy, present in most patients with eosinophilic esophagitis, and the detail that converts suspicion into a likely diagnosis",
+   "with": "atopy, present in most patients with eosinophilic esophagitis",
+   "note": "remove dramatic tail"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "a spent move; oropharyngeal dysfunction and aspiration are already excluded, so no further swallow-imaging option survives",
+   "with": "oropharyngeal dysfunction and aspiration are excluded, so repeat swallow imaging adds nothing",
+   "note": "remove question-framing"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "chronic and compensated, not acute; this is a diagnostic question, not a resuscitation one",
+   "with": "chronic and compensated, not acute; no resuscitation is needed",
+   "note": "remove question-framing"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "the distinction that separates an esophageal problem from a gluten one",
+   "with": "points to the esophagus rather than gluten",
+   "note": "trim"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "Management is not this question's fork, so in one sentence: <b>dietary elimination is first-line</b>",
+   "with": "Treatment: <b>dietary elimination is first-line</b>",
+   "note": "remove question-framing opener"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "Endoscopy with esophageal biopsy — the diagnosis is a cell count, not a serology",
+   "with": "Endoscopy with esophageal biopsy; the diagnosis rests on the eosinophil count, not serology",
+   "note": "remove em dash and paired contrast"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "\"Has always been a picky eater\" invites a behavioral reading and is the reason the stem bothers to say development is normal. The stool sentence is a planted negative doing real work: soft daily stools with no diarrhea or vomiting is what kills celiac disease and gastroenteritis. The eczema is the opposite of a decoy — it is the supporting evidence most readers skim past, because it arrives in the past-medical-history slot where decorative details usually live.",
+   "with": "\"Has always been a picky eater\" suggests a behavioral cause, but development is normal. Soft daily stools with no diarrhea or vomiting argue against celiac disease and gastroenteritis. The eczema, listed in the past medical history, is supporting evidence for eosinophilic esophagitis and is easy to overlook.",
+   "note": "decoy note: remove personification and em dash"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "A toddler stuck on purees with eczema and falling weight has eosinophilic esophagitis; endoscopic biopsy showing fifteen or more eosinophils proves it. &middot; The shape of the refusal localizes the problem: a <b>texture</b> refusal points at the esophagus, a <b>food-group</b> refusal at celiac disease or an IgE allergy, and a poor <b>appetite</b> with normal eating at systemic or metabolic disease. &middot; Eosinophilic esophagitis shifts its presentation with age — toddlers refuse solids, school-age children have abdominal pain and vomiting, adolescents get dysphagia and food impaction. &middot; Atopy accompanies most cases, so eczema, asthma, allergic rhinitis or a known food allergy in a feeding-refusal stem is a clue rather than background. &middot; The diagnosis is a cell count on biopsy, not a serology or a skin test; allergy testing guides the elimination diet only after the scope has settled the question. &middot; Dietary elimination is first-line, with a proton pump inhibitor or a swallowed topical glucocorticoid as pharmacologic options, and feeding therapy for the avoidance the illness taught.",
+   "with": "A toddler stuck on purees with eczema and falling weight likely has eosinophilic esophagitis; endoscopic biopsy showing fifteen or more eosinophils confirms it. &middot; The type of refusal localizes the problem: a <b>texture</b> refusal points to the esophagus, a <b>food-group</b> refusal to celiac disease or an IgE allergy, and a poor <b>appetite</b> with normal eating to systemic or metabolic disease. &middot; Presentation varies with age: toddlers refuse solids, school-age children have abdominal pain and vomiting, and adolescents have dysphagia and food impaction. &middot; Atopy accompanies most cases, so eczema, asthma, allergic rhinitis or a known food allergy in a child refusing food is a clue. &middot; The diagnosis rests on the biopsy eosinophil count, not a serology or a skin test; allergy testing guides the elimination diet only after biopsy confirms the diagnosis. &middot; Dietary elimination is first-line, with a proton pump inhibitor or a swallowed topical glucocorticoid as pharmacologic options, and feeding therapy for learned food avoidance.",
+   "note": "pearls: remove em dash, personification, question framing"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "When a complaint has a shape, the shape is the finding — in feeding problems, refusal of a texture, refusal of a food group, and loss of appetite are three different diseases wearing one growth curve, so name the shape before you choose a test.",
+   "with": "In feeding problems, refusal of a texture, refusal of a food group, and loss of appetite point to different diseases; identify which pattern is present before choosing a test.",
+   "note": "rule: remove aphorism, em dash, personification"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "Celiac brings diarrhea or constipation with pain and distension, and its children avoid <b>gluten-rich</b> foods — not every solid; this child's stools and abdomen are normal",
+   "with": "Celiac disease causes diarrhea or constipation with pain and distension, and children avoid <b>gluten-rich</b> foods, not every solid; this child's stools and abdomen are normal",
+   "note": "trap: remove em dash"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "Hyperthyroidism raises appetite and adds tachycardia and goiter — the appetite runs in the opposite direction from this stem",
+   "with": "Hyperthyroidism increases appetite and causes tachycardia and goiter; this child refuses food",
+   "note": "trap: remove em dash"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "Fever, right lower quadrant tenderness, and a neutrophil-predominant leukocytosis are shared by both live answers, so none of them decides anything. Two findings do, and appendicitis can explain neither: <b>twelve mucus-containing loose stools in 24 hours</b>, and a <b>brother with the same illness</b>. What owns both is <b>infectious ileocecitis</b> — the pseudoappendicitis of organisms with an ileocecal predilection, <i>Campylobacter jejuni</i> and <i>Yersinia enterocolitica</i>. The migratory periumbilical-to-right-lower-quadrant pain, which reads as the appendicitis script, is in fact explained by the same answer: <i>Campylobacter</i> may infect the jejunum first and then spread to the ileum and cecum.",
+   "with": "Fever, right lower quadrant tenderness, and a neutrophil-predominant leukocytosis occur in both appendicitis and ileocecitis and do not discriminate. Two findings that appendicitis does not explain are <b>twelve mucus-containing loose stools in 24 hours</b> and a <b>brother with the same illness</b>. Both fit <b>infectious ileocecitis</b> (pseudoappendicitis) from organisms with an ileocecal predilection, <i>Campylobacter jejuni</i> and <i>Yersinia enterocolitica</i>. The migratory periumbilical-to-right-lower-quadrant pain also fits: <i>Campylobacter</i> may infect the jejunum first and then spread to the ileum and cecum.",
+   "note": "dp: remove personification, em dash, question framing"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "profuse mucoid diarrhea; the single finding appendicitis cannot produce",
+   "with": "profuse mucoid diarrhea, not a feature of appendicitis",
+   "note": "trim"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "a shared exposure; appendicitis has no contacts, and the sibling's course also fits a self-limited enteritis",
+   "with": "a shared exposure, which appendicitis does not explain; the sibling's course fits a self-limited enteritis",
+   "note": "trim"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "the appendicitis script, and simultaneously explained by jejunal-then-ileocecal spread",
+   "with": "classic for appendicitis, but also explained by jejunal-then-ileocecal spread",
+   "note": "trim"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "inflammation shared by both diagnoses; decides nothing on its own",
+   "with": "present in both diagnoses; does not discriminate",
+   "note": "trim"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "diverticulitis is exceedingly rare at this age, which is most of why that option is a throwaway",
+   "with": "diverticulitis is exceedingly rare at this age",
+   "note": "remove question-framing"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "Management is not this question's fork, so in one sentence: <i>Campylobacter</i> is treated <b>supportively</b>, since it is usually self-limited within seven days, with antibiotics reserved",
+   "with": "<i>Campylobacter</i> is treated <b>supportively</b> because it is usually self-limited within seven days; antibiotics are reserved",
+   "note": "remove question-framing opener"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "Twelve mucoid stools → appendicitis does not do this",
+   "with": "Twelve mucoid stools → argues against appendicitis",
+   "note": "plain"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<i>Campylobacter</i> and <i>Yersinia</i> — and that is the answer",
+   "with": "<i>Campylobacter</i> and <i>Yersinia</i>",
+   "note": "remove em dash and dramatic closer"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "The brother is the most instructive detail in the stem, because it works in two directions at once: his existence supports an infectious cause, while his <i>bloody</i> stools invite the reader to assign Shiga toxin <i>E. coli</i> to a patient who has no blood in his own stool. A finding described in a contact is evidence about the exposure, not about this patient's phenotype. The migratory pain is the second trap and is subtler still — it is not inert, it is genuinely explained by the right answer, which is why it feels like confirmation of the wrong one.",
+   "with": "The brother's illness supports an infectious cause, but his <i>bloody</i> stools may prompt a diagnosis of Shiga toxin <i>E. coli</i> in a patient with no blood in his own stool. A contact's findings describe the exposure, not this patient's phenotype. The migratory pain is also explained by <i>Campylobacter</i> spread, so it does not confirm appendicitis.",
+   "note": "decoy note: remove personification, em dash, dramatic framing"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "Appendicitis does not cause twelve mucoid stools and does not come with a sick sibling; ileocecal Campylobacter or Yersinia does both. &middot; Profuse watery-then-mucoid diarrhea is what an appendix cannot do, and a sick contact is what an appendix cannot have; either one alone should stop the surgical reflex. &middot; <i>Campylobacter</i> and <i>Yersinia</i> have an ileocecal predilection and therefore mimic appendicitis; imaging shows ileocecal inflammation and mesenteric adenopathy with a <b>normal appendix</b>. &middot; <i>Campylobacter</i> may seed the jejunum before the ileum and cecum, which is exactly why the pain migrates like appendicitis.",
+   "with": "Appendicitis does not cause twelve mucoid stools or a sick sibling; ileocecal Campylobacter or Yersinia explains both. &middot; Profuse watery-then-mucoid diarrhea or a sick contact alone should prompt reconsideration of appendicitis before surgery. &middot; <i>Campylobacter</i> and <i>Yersinia</i> have an ileocecal predilection and mimic appendicitis; imaging shows ileocecal inflammation and mesenteric adenopathy with a <b>normal appendix</b>. &middot; <i>Campylobacter</i> may infect the jejunum before the ileum and cecum, so the pain can migrate as in appendicitis.",
+   "note": "pearls: remove paired contrast and personification"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "otherwise the treatment is supportive. &middot; The opposite instinct applies to Shiga toxin <i>E. coli</i>, where antibiotics are withheld ⚠︎ — so \"invasive bacterial diarrhea\" is not one management rule but two.",
+   "with": "otherwise the treatment is supportive. &middot; Antibiotics are withheld for Shiga toxin <i>E. coli</i> ⚠︎, so invasive bacterial diarrheas do not share one management rule.",
+   "note": "pearls: remove em dash and paired contrast"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "When a stem hands you a textbook script, deliberately hunt for the finding the script <b>cannot</b> explain — a symptom the disease does not produce, or an exposure it cannot have — because examiners build distractors out of complete scripts and build answers out of the leftovers.",
+   "with": "When a presentation fits a textbook script, look for the finding the script <b>cannot</b> explain, such as a symptom the disease does not produce or an exposure it cannot have.",
+   "note": "rule: remove em dashes, question framing, aphorism"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "the blood belongs to the brother, not to this patient",
+   "with": "the bloody stools are the brother's, not this patient's",
+   "note": "plain"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "It is a diagnosis of exclusion, so the well-between-episodes pattern does the work.",
+   "with": "It is a diagnosis of exclusion, supported by wellness between episodes.",
+   "note": "remove personification"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "The erosive caries are worth naming because they cut the other way from how they feel. They are <b>evidence that the vomiting is real and recurrent</b>, not evidence of purging &mdash; there is no bingeing, no restriction and no preoccupation with shape.",
+   "with": "The erosive caries are <b>evidence that the vomiting is real and recurrent</b>, not evidence of purging; there is no bingeing, no restriction and no preoccupation with shape.",
+   "note": "dp: remove dramatic opener and em dash"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "takes this off the cyclic list and onto an urgent one",
+   "with": "argues against cyclic vomiting and needs urgent evaluation",
+   "note": "plain"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "faltering growth means keep looking",
+   "with": "faltering growth needs further evaluation",
+   "note": "plain"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "Dental erosion documents recurrent acid exposure without saying who caused it &middot; Migraine history is the single most useful piece of the history &middot; Diagnosis of exclusion means the workup is aimed at what would be dangerous, not at confirming the label",
+   "with": "Dental erosion shows recurrent acid exposure, not its cause &middot; Migraine history is the most useful historical clue &middot; As a diagnosis of exclusion, the workup targets dangerous mimics",
+   "note": "pearls: plain"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "For episodic illness, the diagnostic information is in the interval, not the episode &mdash; ask what the patient is like when it is not happening.",
+   "with": "For episodic illness, ask how the patient is between episodes; the interval holds most of the diagnostic information.",
+   "note": "rule: remove em dash and paired contrast"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "Dental erosion in an adolescent girl suggests purging to anyone who stops reading there.",
+   "with": "Dental erosion suggests purging, but she has no bingeing, restriction or preoccupation with shape.",
+   "note": "trap: plain"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "The exception that changes the answer is <b>no skin</b>:",
+   "with": "The exception is <b>no skin</b>:",
+   "note": "trim"
+  }
+ ]
+}

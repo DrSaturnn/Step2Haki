@@ -1,0 +1,127 @@
+{
+ "batch": "s29",
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "on the film indicate necrotizing enterocolitis.",
+   "with": "on the film indicates necrotizing enterocolitis.",
+   "note": "grammar: subject-verb"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<p>The bilious return also fits volvulus, so exclude it on the film. Volvulus gives",
+   "with": "<p>The bilious return also fits volvulus, so rule it out deliberately. Volvulus gives",
+   "note": "CRITICAL: a film cannot exclude volvulus"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "NEC gives air <b>in the bowel wall</b> with gas still visible in the large bowel.</p>",
+   "with": "NEC gives air <b>in the bowel wall</b> with gas still visible in the large bowel. Read the gas pattern first; if malrotation is still possible, only an upper GI series excludes it.</p>",
+   "note": "CRITICAL: restore gas pattern + upper GI series"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "<p>The last bowel movement was 5 days ago, and the stool is <b>loose stool</b> now. Loose stool after days of constipation is <b>overflow diarrhea</b>: liquid stool passing around a hard impaction, and near-pathognomonic.</p>",
+   "with": "<p>The last bowel movement, 5 days ago, was <b>loose stool</b>. Loose stool in a constipated patient is <b>overflow diarrhea</b>: liquid stool passing around a hard impaction. It is near-pathognomonic.</p>",
+   "note": "CRITICAL: stem fact restored (the loose stool was the last movement)"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<b>Bilious</b> means the obstruction is distal to the ampulla; it indicates the level of obstruction, not its urgency",
+   "with": "<b>Bilious</b> means the obstruction is distal to the ampulla; it locates the obstruction and is urgent until an upper GI series excludes malrotation",
+   "note": "pearl no longer contradicts the exit ramp"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "identifies the disease: air in the bowel wall, air outside the bowel, or no distal air.",
+   "with": "identifies the disease: air in the wall, air where bowel should be, or no air at all.",
+   "note": "rule: original phrase restored"
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "has a one-in-two risk and is tested ·",
+   "with": "has a one-in-two risk and is tested rather than presumed ·",
+   "note": "hedge restored"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "Without these, relieve the impaction and also investigate.",
+   "with": "If any one of these is missing, relieve the impaction and also investigate.",
+   "note": "quantifier restored"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "Achalasia and the esophageal causes of dysphagia are not covered on this page. Ask:",
+   "with": "Ask:",
+   "note": "coverage claim was wrong (the brief covers achalasia)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "<b>Congenital Hypothyroidism</b> is the other positive newborn screen in this differential:",
+   "with": "<b>Congenital Hypothyroidism</b> is another positive newborn screen:",
+   "note": "not in this brief's table"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "stool load without obstruction; only severe distension is an alarm sign",
+   "with": "stool load without obstruction; severe distension or tenderness would be an alarm sign",
+   "note": "tenderness as alarm sign"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "covers hemolytic uremic syndrome after this infection.",
+   "with": "covers hemolytic uremic syndrome, which follows Shiga toxin-producing <i>E. coli</i>, not <i>Campylobacter</i>.",
+   "note": "HUS follows STEC"
+  },
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "<b>ASMA and iron studies</b> — test for autoimmune and metabolic liver disease, which cause hepatocellular injury, the <b>wrong pattern</b> here. <b>ERCP</b> — too early, the <b>wrong rung</b>: it is invasive, carries a risk of post-ERCP pancreatitis, and no lesion has yet been shown to need intervention. <b>Repeat LFTs in 3 months</b> — appropriate only",
+   "with": "<b>ASMA and iron studies</b>: these test for autoimmune and metabolic liver disease, which cause hepatocellular injury, the <b>wrong pattern</b> here. <b>ERCP</b>: premature at this step; it is invasive, carries a risk of post-ERCP pancreatitis, and no lesion has yet been shown to need intervention. <b>Repeat LFTs in 3 months</b>: appropriate only",
+   "note": "prose em dashes; slogan",
+   "reworded_bold": [
+    "wrong rung"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<b>Visible bleeding with instability</b> &mdash; hematemesis, melena or hematochezia with instability goes to CT angiography, not a Meckel scan",
+   "with": "<b>Visible bleeding with instability</b> &mdash; hematemesis, melena or hematochezia goes to CT angiography, not a Meckel scan",
+   "note": "repeat removed"
+  },
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "Then order an <b>abdominal ultrasound</b> to answer <b>are the ducts dilated?</b>",
+   "with": "Then order an <b>abdominal ultrasound</b> to answer one question: <b>are the ducts dilated?</b>",
+   "note": "grammar"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-water-soluble-vitamins",
+   "find": "Wernicke encephalopathy. And do not treat a megaloblastic anemia",
+   "with": "Wernicke encephalopathy. Do not treat a megaloblastic anemia",
+   "note": "grammar"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "resistance at roughly 9 to 11 cm (clinic ledger), confirmed on film",
+   "with": "resistance at roughly 9 to 11 cm, confirmed on film",
+   "note": "internal text in pearls"
+  }
+ ]
+}

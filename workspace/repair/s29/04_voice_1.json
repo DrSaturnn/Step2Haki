@@ -1,0 +1,158 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<p>Three findings arrive together and only one diagnosis takes all three: <b>temperature instability</b>, <b>abdominal distension with bloody stools</b>, and <b>pneumatosis intestinalis</b> on the film. That is necrotizing enterocolitis. The trap is the risk factor &mdash; NEC is filed under prematurity, and this infant is term. But <b>cyanotic congenital heart disease and hypotension reduce mesenteric oxygen delivery</b>, and ischemic bowel is ischemic bowel however it got that way.</p>",
+   "with": "<p>The combination of <b>temperature instability</b>, <b>abdominal distension with bloody stools</b>, and <b>pneumatosis intestinalis</b> on the film indicate necrotizing enterocolitis. NEC is mainly a disease of prematurity, but this infant is term. In a term infant, <b>cyanotic congenital heart disease and hypotension reduce mesenteric oxygen delivery</b> and cause the same ischemic bowel injury.</p>",
+   "note": "dp p1: remove trap framing, em dash, aphorism"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<p>Volvulus is the option that fits the bilious return, and it is the one to rule out deliberately rather than by feel. It gives <b>abrupt</b> vomiting in a previously well infant, with <b>proximal gas and a gasless distal abdomen</b>. NEC gives air <b>in the bowel wall</b> and gas still visible in the large bowel. Read the gas pattern before you commit.</p>",
+   "with": "<p>The bilious return also fits volvulus, so exclude it on the film. Volvulus gives <b>abrupt</b> vomiting in a previously well infant, with <b>proximal gas and a gasless distal abdomen</b>. NEC gives air <b>in the bowel wall</b> with gas still visible in the large bowel.</p>",
+   "note": "dp p2: remove option framing and closer"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "Bilious emesis in <b>any infant</b>, at any age, is malrotation until an upper GI series says otherwise",
+   "with": "Bilious emesis in <b>any infant</b>, at any age, is malrotation until an upper GI series excludes it",
+   "note": "danger: remove personification"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<b>Bilious</b> means the obstruction is distal to the ampulla, so it moves the level, not the urgency &middot;",
+   "with": "<b>Bilious</b> means the obstruction is distal to the ampulla; it indicates the level of obstruction, not its urgency &middot;",
+   "note": "pearls: plainer"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "The well infant with blood in the stool is almost never surgical &mdash; distension and instability are what make it so &middot;",
+   "with": "A well infant with blood in the stool is almost never surgical; distension and instability suggest a surgical cause &middot;",
+   "note": "pearls: remove prose em dash"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "this brief owns the sick one. Part II <b>Tracheoesophageal Fistula with Esophageal Atresia</b> carries obstruction above the pylorus. Store the discriminator as a question: is the infant well, and what is the gas doing?",
+   "with": "this brief covers the sick one. Part II <b>Tracheoesophageal Fistula with Esophageal Atresia</b> covers obstruction above the pylorus. The discriminators are whether the infant is well and the gas pattern.",
+   "note": "pairs: remove rhetorical question"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "In a distended neonate the stool and the vital signs tell you how sick, but the <b>gas pattern</b> tells you which disease &mdash; air in the wall, air where bowel should be, or no air at all.",
+   "with": "In a distended neonate, the stool and vital signs show severity and the <b>gas pattern</b> identifies the disease: air in the bowel wall, air outside the bowel, or no distal air.",
+   "note": "rule: remove paired contrast and em dash"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "The rectal exam is the diagnosis",
+   "with": "Firm stool on rectal exam confirms impaction",
+   "note": "sub: remove slogan"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "<p>\"<b>Rectal examination shows firm stool in the rectal vault.</b>\" That finding <i>is</i> the diagnosis — and it is <b>incompatible</b> with the usual competing answer: adhesive small bowel obstruction gives an <b>empty</b> rectum, a distended abdomen, and high-pitched or absent bowel sounds.</p>",
+   "with": "<p><b>Rectal examination shows firm stool in the rectal vault.</b> This confirms fecal impaction and is <b>incompatible</b> with adhesive small bowel obstruction, which gives an <b>empty</b> rectum, a distended abdomen, and high-pitched or absent bowel sounds.</p>",
+   "note": "dp p1: remove em dash and framing"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "last bowel movement 5 days ago, \"characterized by <b>loose stool</b>.\" Constipation <i>with</i> loose stool feels contradictory — it's <b>overflow diarrhea</b>, liquid tracking around a hard impaction, and it's near-pathognomonic.</p>",
+   "with": "last bowel movement 5 days ago, with <b>loose stool</b>. Constipation with loose stool is <b>overflow diarrhea</b>, liquid stool passing around a hard impaction, and is near-pathognomonic.</p>",
+   "note": "dp p2: remove em dash"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "<b>Oxybutynin</b> is an anticholinergic — it slows colonic transit and is the <i>cause</i> here, which is why the objective says \"treatment of underlying causes.\" And \"<b>warm, dry skin</b>\" is the anticholinergic sign planted alongside the drug. Constipating culprits:",
+   "with": "<b>Oxybutynin</b> is an anticholinergic that slows colonic transit and is the cause here, so treatment includes addressing it. The patient's <b>warm, dry skin</b> is an anticholinergic sign. Constipating drugs:",
+   "note": "pearls: remove em dash and framing"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "Impaction can sit <b>distal to</b> a second pathology — a slow-growing tumor or partial obstruction. What licenses stopping at impaction here is the <b>normal colonoscopy 3 years ago</b> plus absent weight loss and anemia. Change any of those and you relieve the impaction <i>and</i> investigate.",
+   "with": "Impaction can sit <b>distal to</b> a second lesion, such as a slow-growing tumor or partial obstruction. Here, a <b>normal colonoscopy 3 years ago</b> and no weight loss or anemia mean no further workup is needed. Without these, relieve the impaction and also investigate.",
+   "note": "danger: plain"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "is the paediatric mirror &mdash; there the rectal vault is empty and an anal fissure closes the rectal route that is first-line here.",
+   "with": "covers the paediatric case, where the rectal vault is empty and an anal fissure rules out the rectal route that is first-line here.",
+   "note": "pairs: remove em dash"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "Before changing an answer, ask whether the detail makes your current choice <i>impossible</i> — and check whether the stem contains an assassin for the option you're moving <i>toward</i>. Here it did, one sentence away from the finding already in hand.",
+   "with": "Change an answer only if a new detail makes the current choice impossible, and check whether the stem contains a finding that excludes the new option. Here, firm stool in the rectal vault excludes small bowel obstruction.",
+   "note": "rule: remove personification and em dash"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "<p><b>Formula mixed with saliva</b> is the diagnosis. Milk that returns mixed with pooled secretions never reached a stomach — it filled a blind proximal pouch and overflowed. Add choking on the <b>very first feed</b> and coarse lungs from aspiration, and this is <b>esophageal atresia with a distal tracheoesophageal fistula</b>.</p>",
+   "with": "<p><b>Formula mixed with saliva</b> means the milk filled a blind proximal pouch and overflowed without reaching the stomach. With choking on the <b>very first feed</b> and coarse lungs from aspiration, this is <b>esophageal atresia with a distal tracheoesophageal fistula</b>.</p>",
+   "note": "dp p1: remove slogan, em dash"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "<p>The question is then not what but what first, and the answer is the cheapest thing at the bedside: <b>pass a nasogastric tube</b>. It meets resistance at the pouch, and the film shows it coiled. The murmur, the maternal drug history and the absent prenatal care are all planted to sell an imaging or pharmacologic answer instead.</p>",
+   "with": "<p>The first step is to <b>pass a nasogastric tube</b> at the bedside. It meets resistance at the pouch, and the film shows it coiled. The murmur, maternal drug history and absent prenatal care do not call for imaging or drug treatment first.</p>",
+   "note": "dp p2: remove question framing"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "Age at presentation is a diagnostic instrument. <b>Minutes to hours</b>",
+   "with": "Age at presentation narrows the differential. <b>Minutes to hours</b>",
+   "note": "danger: remove slogan"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "Every wrong option in this stem is a real disease placed at the wrong point on that clock.",
+   "with": "Each wrong option here is a real disease that presents at a different age.",
+   "note": "danger: remove framing closer"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "Diagnosis is made by the tube, not the scanner — resistance at roughly 9 to 11 cm (clinic ledger), confirmed on film &middot; The abdominal gas pattern names the anatomic type before any endoscopy",
+   "with": "Diagnosis is made by passing the tube: resistance at roughly 9 to 11 cm (clinic ledger), confirmed on film &middot; The abdominal gas pattern shows the anatomic type without endoscopy",
+   "note": "pearls: remove paired contrast, em dash"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "is the mechanistic twin: amniotic fluid volume reads out fetal function in opposite directions. Cannot make urine gives oligohydramnios and Potter sequence; cannot swallow gives polyhydramnios and foregut or duodenal atresia. Store it as a question: which way did the fluid go? Part I <b>Cyanosis in the Newborn</b> owns the trigger axis &mdash; cyanosis worse with feeding and better with crying is choanal atresia, not a fistula. Part I <b>Multiple Anomalies in a Newborn</b> holds VACTERL beside the syndromes it is mistaken for, and names what excludes each.",
+   "with": "shares the mechanism in reverse: a fetus that cannot make urine has oligohydramnios and Potter sequence, and a fetus that cannot swallow has polyhydramnios and foregut or duodenal atresia. Part I <b>Cyanosis in the Newborn</b> covers cyanosis that worsens with feeding and improves with crying, which is choanal atresia, not a fistula. Part I <b>Multiple Anomalies in a Newborn</b> covers VACTERL alongside the syndromes it is mistaken for and what excludes each.",
+   "note": "pairs: remove rhetoric"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "When a newborn chokes or vomits with the first feed, the first question is anatomic, and the cheapest test of anatomy &mdash; does a tube reach the stomach? &mdash; comes before any picture or drug. The picture only confirms what the tube found, and every other option is a real disease placed at the wrong hour on the newborn clock.",
+   "with": "When a newborn chokes or vomits with the first feed, first check whether a nasogastric tube reaches the stomach, before any imaging or drug. Imaging only confirms what the tube found. The other options are real diseases that present at other ages.",
+   "note": "rule: remove em dashes, rhetoric"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "Echocardiography is indicated &mdash; for VACTERL, after the diagnosis, not before it.",
+   "with": "Echocardiography is indicated for VACTERL screening, after the diagnosis, not before it.",
+   "note": "traps: remove em dash"
+  }
+ ]
+}

@@ -69,7 +69,7 @@ def demote(md, top=3):
 def backfill_format(fmt):
     """EDITS.md without its title and without the new_brief op (backfills never add briefs)."""
     fmt = re.sub(r'^# .*\n', '', fmt, count=1, flags=re.M).strip()
-    fmt = re.sub(r'\n## new_brief\b.*?(?=\n## |\Z)', '', fmt, flags=re.S).strip()
+    fmt = re.sub(r'\n## (new_brief|replace_global)\b.*?(?=\n## |\Z)', '', fmt, flags=re.S).strip()
     fmt = re.sub(r' Save batch files as .*?in name order\.', '', fmt)
     return demote(fmt, 3)
 

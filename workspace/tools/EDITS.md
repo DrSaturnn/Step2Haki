@@ -47,3 +47,9 @@ Rules
  "nav": {"after_link": "pmr", "title": "Giant Cell Arteritis"}}
 ```
 Part II briefs go directly after the system's `.bsband` run (use `after` = the last board-style brief of that system) and need a `.vignette` with a `<b>Q</b>` line before `.dp`.
+
+## replace_global: page chrome only (CSS, scripts, nav); orchestrator use, never in worker packets
+The `find` text must occur exactly once in the whole page and lie outside every brief. Script edits are checked by `node --check` in the gate and by the jsdom render.
+```json
+{"op": "replace_global", "find": ".nbmechip{display:inline-block;", "with": ".nbmechip{display:inline-block;"}
+```

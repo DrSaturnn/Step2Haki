@@ -1,0 +1,19 @@
+{
+ "batch": "s29",
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "<p class=\"sub\">The screen names the panel, the presentation names the disease · handoff · conjugated, big liver, reducing sugar</p>",
+   "with": "<p class=\"sub\">Sick neonate with a positive newborn screen · conjugated jaundice, hepatomegaly, urine reducing sugar</p>",
+   "note": "approved subtitle (also drops the handoff slot)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "<p>The phone call is the decoy and the urine is the decider. Every option is on the newborn screen, so a positive screen eliminates nothing. What separates them is that this infant has <b>conjugated</b> hyperbilirubinemia, a <b>large liver</b>, and a <b>non-glucose reducing sugar in the urine</b> after ten days of milk feeds. That triad is galactose-1-phosphate accumulating in a GALT-deficient liver: <b>classic galactosemia</b>.</p>\n<p>The fever is not incidental. Galactosemia predisposes to <b>Escherichia coli sepsis</b>, and a febrile 10-day-old is septic until cultured — the sepsis workup runs in parallel with the metabolic answer, never after it.</p>",
+   "with": "<p><b>Conjugated</b> hyperbilirubinemia, a <b>large liver</b>, and a <b>non-glucose reducing sugar in the urine</b> after ten days of milk feeds indicate <b>classic galactosemia</b> (GALT deficiency; galactose-1-phosphate accumulates in the liver). Galactosemia predisposes to <b>Escherichia coli sepsis</b>, so start the sepsis workup and antibiotics while stopping lactose.</p>",
+   "note": "approved plain-voice decision point"
+  }
+ ]
+}

@@ -1,0 +1,309 @@
+{
+ "batch": "s29",
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "<b>A switch requires new incompatibility, not new plausibility.</b> Change an answer only if a new detail makes the current choice impossible, and check whether the stem contains a finding that excludes the new option.",
+   "with": "Change an answer only when a new detail makes the current choice <b>impossible</b>, not when another option merely becomes plausible, and check whether the stem contains a finding that excludes the new option.",
+   "note": "rule opener slogan",
+   "reworded_bold": [
+    "A switch requires new incompatibility, not new plausibility."
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "<p><b>The detail that invites over-reading:</b> last bowel movement 5 days ago, with <b>loose stool</b>. Constipation with loose stool is <b>overflow diarrhea</b>, liquid stool passing around a hard impaction, and is near-pathognomonic.</p>",
+   "with": "<p>The last bowel movement was 5 days ago, and the stool is <b>loose stool</b> now. Loose stool after days of constipation is <b>overflow diarrhea</b>: liquid stool passing around a hard impaction, and near-pathognomonic.</p>",
+   "note": "dp rhetorical label",
+   "reworded_bold": [
+    "The detail that invites over-reading:"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "<b>The interval is the finding</b> &mdash; regular, predictable, and symptom-free between",
+   "with": "<b>Symptom-free intervals</b> &mdash; episodes are regular and predictable, and the child is well between them",
+   "note": "pearl slogan",
+   "reworded_bold": [
+    "The interval is the finding"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<b>Visible bleeding changes everything</b> &mdash; hematemesis, melena or hematochezia with instability goes to CT angiography, not a Meckel scan",
+   "with": "<b>Visible bleeding with instability</b> &mdash; hematemesis, melena or hematochezia with instability goes to CT angiography, not a Meckel scan",
+   "note": "gate slogan",
+   "reworded_bold": [
+    "Visible bleeding changes everything"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "liver-preg",
+   "find": "<span class=\"lbl\">The lab detail most people misread</span>",
+   "with": "<span class=\"lbl\">Alkaline phosphatase in pregnancy</span>",
+   "note": "slogan label",
+   "reworded_label": [
+    "The lab detail most people misread"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "<span class=\"lbl\">Trap autopsy</span>",
+   "with": "<span class=\"lbl\">Why the distractors fail</span>",
+   "note": "slogan label",
+   "reworded_label": [
+    "Trap autopsy"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "<span class=\"lbl\">Why the sequence matters</span>",
+   "with": "<span class=\"lbl\">Undigested regurgitation</span>",
+   "note": "slogan label",
+   "reworded_label": [
+    "Why the sequence matters"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "<span class=\"lbl\">Where the rule breaks</span>",
+   "with": "<span class=\"lbl\">Exceptions</span>",
+   "note": "slogan label",
+   "reworded_label": [
+    "Where the rule breaks"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "<span class=\"lbl\">Where the rule breaks</span>",
+   "with": "<span class=\"lbl\">Exceptions</span>",
+   "note": "slogan label",
+   "reworded_label": [
+    "Where the rule breaks"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "<span class=\"lbl\">Where the rule breaks</span>",
+   "with": "<span class=\"lbl\">Exceptions</span>",
+   "note": "slogan label",
+   "reworded_label": [
+    "Where the rule breaks"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<span class=\"lbl\">Dark red is not upper GI</span>",
+   "with": "<span class=\"lbl\">Stool color and bleeding source</span>",
+   "note": "slogan label",
+   "reworded_label": [
+    "Dark red is not upper GI"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "<span class=\"lbl\">Exam vs clinic ledger</span>",
+   "with": "<span class=\"lbl\">Exam answer versus current evidence</span>",
+   "note": "slogan label",
+   "reworded_label": [
+    "Exam vs clinic ledger"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "<span class=\"lbl\">Two things happen at once</span>",
+   "with": "<span class=\"lbl\">Immediate management</span>",
+   "note": "slogan label",
+   "reworded_label": [
+    "Two things happen at once"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "<span class=\"lbl\">Two details most people skip</span>",
+   "with": "<span class=\"lbl\">Details that change management</span>",
+   "note": "slogan label",
+   "reworded_label": [
+    "Two details most people skip"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "<span class=\"lbl\">The newborn clock</span>",
+   "with": "<span class=\"lbl\">Age at presentation</span>",
+   "note": "slogan label",
+   "reworded_label": [
+    "The newborn clock"
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "masld",
+   "find": "Part II <b>Wilson Disease: Copper in the Liver, Brain and Eye</b> owns the copper exclusion: is the patient under about 40, with a tremor, psychiatric change or Kayser-Fleischer rings, and is the ceruloplasmin low?",
+   "with": "Part II <b>Wilson Disease: Copper in the Liver, Brain and Eye</b> covers the copper exclusion: is the patient under about 40, with a tremor, psychiatric change or Kayser-Fleischer rings, and is the ceruloplasmin low?",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "Partner brief on <i>achalasia and the esophageal dysphagia differential</i> not yet written. Store the discriminator as a question: is the regurgitated food undigested, and is the finding in the neck or in the chest?",
+   "with": "Achalasia and the esophageal causes of dysphagia are not covered on this page. Ask: is the regurgitated food undigested, and is the finding in the neck or in the chest?",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "Part II <b>Infant Feeding at Six Months</b> owns the age for starting cow's milk; this brief covers the stool effects of cow's-milk protein before that age. Part I <b>Bronchopulmonary Dysplasia</b> has the necrotizing enterocolitis item: bloody stool in an ill preemie is not proctocolitis. Ask: is the infant well-appearing, and is the stool soft? Part I <b>Constipation in a Child</b> owns the same complaint in toddlers, where the withholding cycle, not milk protein, is the cause.",
+   "with": "Part II <b>Infant Feeding at Six Months</b> covers the age for starting cow's milk; this brief covers the stool effects of cow's-milk protein before that age. Part I <b>Bronchopulmonary Dysplasia</b> has the necrotizing enterocolitis item: bloody stool in an ill preemie is not proctocolitis. Ask: is the infant well-appearing, and is the stool soft? Part I <b>Constipation in a Child</b> covers the same complaint in toddlers, where the withholding cycle, not milk protein, is the cause.",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "Part I <b>Postmenopausal Bleeding</b> lists Lynch syndrome among the endometrial cancer risk factors. A partner brief on <i>Lynch syndrome and colorectal cancer screening intervals</i> is not yet written. Discriminator: how many polyps, and is there an APC mutation?",
+   "with": "Part I <b>Postmenopausal Bleeding</b> lists Lynch syndrome among the endometrial cancer risk factors; Lynch syndrome and its colorectal screening intervals are not covered on this page. Ask: how many polyps, and is there an APC mutation?",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "Part I <b>Familial Adenomatous Polyposis</b> covers the adenomatous syndromes and colectomy timing; this brief covers the hamartomatous one. Store the discriminator as a question: where exactly is the pigment, and what is the MCV?",
+   "with": "Part I <b>Familial Adenomatous Polyposis</b> covers the adenomatous syndromes and colectomy timing; this brief covers the hamartomatous one. Ask: where exactly is the pigment, and what is the MCV?",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "Verified: Part II <b>Faltering Weight</b> owns the general approach to poor weight gain and the growth-curve reading; this brief takes over once the child is refusing rather than simply not growing. Store the discriminator as a question: <i>is he refusing food, and if so, is he refusing a texture or a food group?</i> Candidate twin — confirm: a celiac disease brief does not exist yet, and it would own the serology-and-biopsy pathway this brief only points at.",
+   "with": "Part II <b>Faltering Weight</b> covers the general approach to poor weight gain and reading the growth curve; this brief covers the child who refuses food rather than simply failing to grow. Ask: <i>is he refusing food, and if so, a texture or a food group?</i> Celiac disease appears here only as a distractor; its serology-and-biopsy workup is not covered on this page.",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "Verified: Part II <b>NSAID Prerenal AKI in a Child</b> carries the Shiga toxin and hemolytic uremic syndrome row from the renal side, which is where the <i>E. coli</i> O157:H7 branch of this differential ends. Store the discriminator as a question: <i>whose stool was bloody, and how many days into the illness?</i> Part I <b>Anemia with Thrombocytopenia</b> owns the hemolytic uremic syndrome end of the same organism's story. Part II <b>Foodborne Diarrhea: Source and Organism</b> owns the organism-by-exposure differential: what did the patient eat, and when?",
+   "with": "Part II <b>NSAID Prerenal AKI in a Child</b> has the Shiga toxin and hemolytic uremic syndrome row from the renal side, where the <i>E. coli</i> O157:H7 branch of this differential ends. Ask: <i>whose stool was bloody, and how many days into the illness?</i> Part I <b>Anemia with Thrombocytopenia</b> covers hemolytic uremic syndrome after this infection. Part II <b>Foodborne Diarrhea: Source and Organism</b> covers the organism by exposure: what did the patient eat, and when?",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "Verified: Part II <b>Fecal Impaction &amp; Overflow Diarrhea</b> is the adult counterpart of tier 2: there the rectal vault is full and an enema is first-line; here the vault is not full and the fissure rules out the rectal route. Part I <b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b> covers infants, and Part II <b>Tethered Cord and Closed Spinal Dysraphism</b> covers the dysraphism the perineal examination screens for. Discriminator: is growth normal, and is there stool in the rectum?",
+   "with": "Part II <b>Fecal Impaction &amp; Overflow Diarrhea</b> is the adult counterpart of tier 2: there the rectal vault is full and an enema is first-line; here the vault is not full and the fissure rules out the rectal route. Part I <b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b> covers infants, and Part II <b>Tethered Cord and Closed Spinal Dysraphism</b> covers the dysraphism the perineal examination screens for. Ask: is growth normal, and is there stool in the rectum?",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "Part I <b>Headache in a Child: What Earns Imaging</b>, which owns the migraine end of the same biology. Store the discriminator as a question: how is the child between the episodes?",
+   "with": "Part I <b>Headache in a Child: What Earns Imaging</b> covers migraine, which shares this condition's biology. Ask: how is the child between episodes?",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "Part II <b>The Sick Jaundiced Neonate with a Positive Screen</b> covers the unwell infant with a metabolic cause; this brief covers the well one. Part I <b>Cholestasis &amp; the LFT Patterns</b> covers the direct-fraction workup. Store the discriminator as a question: is the infant well, and is any of it direct?",
+   "with": "Part II <b>The Sick Jaundiced Neonate with a Positive Screen</b> covers the unwell infant with a metabolic cause; this brief covers the well one. Part I <b>Cholestasis &amp; the LFT Patterns</b> covers the direct-fraction workup. Ask: is the infant well, and is any of it direct?",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "Part I <b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b>, which owns the well infant with blood in the stool; this brief covers the sick one. Part II <b>Tracheoesophageal Fistula with Esophageal Atresia</b> covers obstruction above the pylorus. The discriminators are whether the infant is well and the gas pattern.",
+   "with": "Part I <b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b> covers the well infant with blood in the stool; this brief covers the sick one. Part II <b>Tracheoesophageal Fistula with Esophageal Atresia</b> covers obstruction above the pylorus. Ask: is the infant well, and what is the gas pattern?",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "Part I <b>The Distended Abdomen in a Newborn or Infant</b> covers the obstructed and acutely bleeding infant gut. Part I <b>Microcytic Anemia: Iron First</b> covers the iron-versus-thalassemia fork that precedes this workup. Store the discriminator as a question: is the bleeding visible, and have both ends been scoped?",
+   "with": "Part I <b>The Distended Abdomen in a Newborn or Infant</b> covers the obstructed and acutely bleeding infant gut. Part I <b>Microcytic Anemia: Iron First</b> covers the iron-versus-thalassemia fork that precedes this workup. Ask: is the bleeding visible, and have both ends been scoped?",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "Part I <b>Cholestasis &amp; the LFT Patterns</b> owns the adult conjugated-versus-unconjugated framework; this brief owns its neonatal form. Candidate twins &mdash; confirm: <b>hereditary fructose intolerance</b>, with the discriminator stored as a question: when did symptoms start relative to fruit or sucrose? And <b>biliary atresia</b> &mdash; is the infant sick or well, and are reducing substances present? Part I <b>Congenital Hypothyroidism</b> is the other positive newborn screen that turns on a direction: there the TSH direction and the neck locate the defect, here the enzyme and the organism do.",
+   "with": "Part I <b>Cholestasis &amp; the LFT Patterns</b> covers the conjugated-versus-unconjugated approach in adults; this brief covers the neonate. Related conditions without their own brief: <b>hereditary fructose intolerance</b> (ask: did symptoms start with fruit or sucrose?) and <b>biliary atresia</b> (ask: is the infant sick or well, and are reducing substances present?). Part I <b>Congenital Hypothyroidism</b> is the other positive newborn screen in this differential: there the TSH level and the neck locate the defect; here the enzyme deficiency and the organism do.",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "<b>Congenital Hypothyroidism</b>: an umbilical hernia is one of its soft signs; store it as a question: is there jaundice, macroglossia or a large fontanelle beside the hernia? <b>Tracheoesophageal Fistula with Esophageal Atresia</b>: the same move after any structural defect, screening for the anomalies that travel with it (VACTERL there, karyotype and echocardiogram for an omphalocele).",
+   "with": "<b>Congenital Hypothyroidism</b>: an umbilical hernia is one of its soft signs; ask: is there jaundice, macroglossia or a large fontanelle beside the hernia? <b>Tracheoesophageal Fistula with Esophageal Atresia</b>: after any structural defect, screen for the anomalies that occur with it (VACTERL there, karyotype and echocardiogram for an omphalocele).",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "Part I <b>Recurrent Sinopulmonary Infection</b> owns the diagnosis of cystic fibrosis: is growth poor with greasy stools, and is the sweat chloride high? Part I <b>Hemophilia A Inhibitor</b> owns the bleeding-pattern-to-lab table: is the PT or the aPTT long, and are platelets normal? Part I <b>Night Blindness</b> owns vitamin A against retinitis pigmentosa: is the front of the eye normal? Part I <b>Hypercalcemia Workup</b> owns vitamin D excess and sarcoidosis: is the 25-OH or the 1,25-OH vitamin D high? Aquifer <b>Infant Feeding at Six Months</b> owns vitamin D 400 IU for breastfed infants. Part II <b>Exanthems in a Child</b> owns measles. Part II <b>Water-Soluble Vitamin Deficiency</b> owns scurvy: are the coagulation studies normal? Part I <b>Headache in a Child: What Earns Imaging</b> owns the papilledema workup, MRI with MR venography and then LP, and the other drugs that raise intracranial pressure; ask: is the papilledema bilateral with full visual fields?",
+   "with": "Part I <b>Recurrent Sinopulmonary Infection</b> covers the diagnosis of cystic fibrosis: is growth poor with greasy stools, and is the sweat chloride high? Part I <b>Hemophilia A Inhibitor</b> covers the bleeding-pattern-to-lab table: is the PT or the aPTT long, and are platelets normal? Part I <b>Night Blindness</b> covers vitamin A against retinitis pigmentosa: is the front of the eye normal? Part I <b>Hypercalcemia Workup</b> covers vitamin D excess and sarcoidosis: is the 25-OH or the 1,25-OH vitamin D high? Aquifer <b>Infant Feeding at Six Months</b> covers vitamin D 400 IU for breastfed infants. Part II <b>Exanthems in a Child</b> covers measles. Part II <b>Water-Soluble Vitamin Deficiency</b> covers scurvy: are the coagulation studies normal? Part I <b>Headache in a Child: What Earns Imaging</b> covers the papilledema workup, MRI with MR venography and then LP, and the other drugs that raise intracranial pressure; ask: is the papilledema bilateral with full visual fields?",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-water-soluble-vitamins",
+   "find": "Part I <b>The Vegan Diet</b> owns B12 against folate in a plant diet: is there a fortified or animal source of B12? Part I <b>Marfanoid Habitus: Homocystinuria</b> owns inherited high homocysteine, treated with B6, folate and B12. Part I <b>Teratogenic Exposures</b> owns the folate-antagonist antiepileptics and neural tube defects. Part I <b>Tuberculosis</b> owns isoniazid with B6. Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> owns bleeding with a long PT: are the coagulation studies abnormal (K) or normal (C)?",
+   "with": "Part I <b>The Vegan Diet</b> covers B12 against folate in a plant diet: is there a fortified or animal source of B12? Part I <b>Marfanoid Habitus: Homocystinuria</b> covers inherited high homocysteine, treated with B6, folate and B12. Part I <b>Teratogenic Exposures</b> covers the folate-antagonist antiepileptics and neural tube defects. Part I <b>Tuberculosis</b> covers isoniazid with B6. Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> covers bleeding with a long PT: are the coagulation studies abnormal (K) or normal (C)?",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "Part I <b>MASLD / Metabolic Fatty Liver</b> lists Wilson disease among the exclusions: is the patient under about 40, with tremor or Kayser-Fleischer rings, and is the ceruloplasmin low? Part I <b>Cholestasis &amp; the LFT Patterns</b> places Wilson in the hepatocellular pattern: are the transaminases, not the alkaline phosphatase, leading? Part II <b>Hereditary Spherocytosis</b> owns the other Coombs-negative hemolysis of the young: are there spherocytes and an affected parent, or liver disease with corneal rings? Part I <b>Tick-Borne Fever and Rash</b> holds the acute mimic: did confusion with transaminitis arrive over hours with fever and a rash, or over months with a tremor?",
+   "with": "Part I <b>MASLD / Metabolic Fatty Liver</b> lists Wilson disease among the exclusions: is the patient under about 40, with tremor or Kayser-Fleischer rings, and is the ceruloplasmin low? Part I <b>Cholestasis &amp; the LFT Patterns</b> places Wilson in the hepatocellular pattern: are the transaminases, not the alkaline phosphatase, leading? Part II <b>Hereditary Spherocytosis</b> covers the other Coombs-negative hemolysis of the young: are there spherocytes and an affected parent, or liver disease with corneal rings? Part I <b>Tick-Borne Fever and Rash</b> holds the acute mimic: did confusion with transaminitis arrive over hours with fever and a rash, or over months with a tremor?",
+   "note": "Pairs-with plain voice"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "<span class=\"trapwhy\">Discontinue milk &mdash; ",
+   "with": "<span class=\"trapwhy\">Discontinue milk: ",
+   "note": "trapline colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "<span class=\"trapwhy\">Obtain abdominal radiograph &mdash; ",
+   "with": "<span class=\"trapwhy\">Obtain abdominal radiograph: ",
+   "note": "trapline colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "<span class=\"trapwhy\">Administer rectal enema &mdash; ",
+   "with": "<span class=\"trapwhy\">Administer rectal enema: ",
+   "note": "trapline colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "<span class=\"trapwhy\">Obtain anorectal manometry &mdash; ",
+   "with": "<span class=\"trapwhy\">Obtain anorectal manometry: ",
+   "note": "trapline colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "withdrawal costs calcium and vitamin D and buys nothing",
+   "with": "stopping it removes calcium and vitamin D with no benefit",
+   "note": "trap slogan"
+  }
+ ]
+}

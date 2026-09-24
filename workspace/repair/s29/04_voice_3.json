@@ -1,0 +1,193 @@
+{
+"edits": [
+{
+"op": "replace",
+"brief": "liver-preg",
+"find": "Trimester decides everything",
+"with": "Abnormal liver tests in pregnancy: check the trimester first",
+"note": "slogan subtitle"
+},
+{
+"op": "replace",
+"brief": "liver-preg",
+"find": "A patient at 14 weeks with elevated transaminases, obesity, and diabetes has a metabolic liver disease that has nothing to do with being pregnant.",
+"with": "A patient at 14 weeks with elevated transaminases, obesity, and diabetes has metabolic liver disease unrelated to pregnancy.",
+"note": "plainer"
+},
+{
+"op": "replace",
+"brief": "liver-preg",
+"find": "<b>Alkaline phosphatase is supposed to be elevated in pregnancy</b> — the placenta makes its own isoenzyme, and levels run 2–4× normal. But <b>AST, ALT, and bilirubin do NOT rise physiologically</b>. Elevation of those is always pathologic.",
+"with": "<b>Alkaline phosphatase is supposed to be elevated in pregnancy</b>: the placenta makes its own isoenzyme, and levels run 2–4× normal. <b>AST, ALT, and bilirubin do NOT rise physiologically</b>; any elevation is pathologic.",
+"note": "remove prose em dash and filler"
+},
+{
+"op": "replace",
+"brief": "liver-preg",
+"find": "Trimester is to obstetric stems what duration is to pediatric joint stems — check that the timing <i>permits</i> the pregnancy-specific disease before reaching for it.",
+"with": "Before diagnosing a pregnancy-specific liver disease, check that the gestational age fits it.",
+"note": "remove analogy and em dash"
+},
+{
+"op": "replace",
+"brief": "fap",
+"find": "Puberty starts the scope, the polyps set the colectomy",
+"with": "Known APC carrier: when to start screening and when to operate",
+"note": "paired-contrast subtitle"
+},
+{
+"op": "replace",
+"brief": "fap",
+"find": "An <b>APC</b> mutation (autosomal dominant) means <b>hundreds to thousands</b> of adenomas and colon cancer in nearly <b>100% by age 40</b>. The exam scores two gates. First, screening: <b>annual sigmoidoscopy or colonoscopy from age 10–12</b> (puberty) — not the first-degree-relative rule, not average-risk screening. Second, the operation: <b>prophylactic proctocolectomy</b> is planned for the teens to early 20s, but is indicated <b>at any age</b> for bleeding, large (over 1 cm) or innumerable polyps, or high-grade dysplasia.",
+"with": "An <b>APC</b> mutation (autosomal dominant) causes <b>hundreds to thousands</b> of adenomas and colon cancer in nearly <b>100% by age 40</b>. Screening is <b>annual sigmoidoscopy or colonoscopy from age 10–12</b> (puberty), not the first-degree-relative or average-risk schedule. A <b>prophylactic proctocolectomy</b> is planned for the teens to early 20s and is indicated <b>at any age</b> for bleeding, polyps over 1 cm, innumerable polyps, or high-grade dysplasia.",
+"note": "remove exam framing and em dash"
+},
+{
+"op": "replace",
+"brief": "fap",
+"find": "The miss is usually a parameter — the right rung with the wrong number (colonoscopy at 40, or at 10 years before the relative's cancer). Those are the rules for sporadic family history; a known APC carrier is a different pathway. The other tested move is the one after colectomy: <b>upper endoscopy</b> for duodenal and ampullary adenomas, which the colectomy does nothing about.",
+"with": "Colonoscopy at 40, or 10 years before the relative's cancer, is the schedule for sporadic family history and does not apply to a known APC carrier. After colectomy, continue <b>upper endoscopy</b> for duodenal and ampullary adenomas.",
+"note": "remove question framing and em dash"
+},
+{
+"op": "replace",
+"brief": "fap",
+"find": "The numbers here belong to a <b>known APC carrier</b>. A first-degree relative with sporadic colon cancer follows a different rule (earlier than average-risk screening, but not annual scoping from puberty), and a Lynch pedigree — few polyps, endometrial cancer in the family — follows a third. Match the pathway before you match the number. Colectomy timing is a plan, not a wait: any of <b>bleeding, polyps over 1 cm, innumerable polyps, or high-grade dysplasia</b> converts \"teens to early 20s\" into \"now.\"",
+"with": "These numbers apply to a <b>known APC carrier</b>. A first-degree relative with sporadic colon cancer follows a different schedule (earlier than average-risk screening, but not annual scoping from puberty), and a Lynch pedigree (few polyps, endometrial cancer in the family) follows a third. Any of <b>bleeding, polyps over 1 cm, innumerable polyps, or high-grade dysplasia</b> means colectomy now rather than in the teens to early 20s.",
+"note": "remove aphorisms and em dashes"
+},
+{
+"op": "replace",
+"brief": "fap",
+"find": "APC is autosomal dominant, so each child of an affected parent has a one-in-two risk and is tested rather than presumed · screening starts at puberty because adenomas appear in adolescence and cancer follows within decades · <b>Gardner</b> adds osteomas and desmoids, <b>Turcot</b> adds CNS tumors — both are FAP for management purposes · the colectomy fixes the colon and nothing else: duodenal and ampullary adenomas need their own endoscopy · Lynch is the polyp-poor counterpart with a mismatch-repair mechanism and an endometrial cancer in the pedigree",
+"with": "APC is autosomal dominant, so each child of an affected parent has a one-in-two risk and is tested · screening starts at puberty because adenomas appear in adolescence and cancer follows within decades · <b>Gardner</b> adds osteomas and desmoids, <b>Turcot</b> adds CNS tumors; both are managed as FAP · colectomy does not address duodenal and ampullary adenomas, which need upper endoscopy · Lynch has few polyps, a mismatch-repair mechanism and endometrial cancer in the pedigree",
+"note": "remove em dash and slogans"
+},
+{
+"op": "replace",
+"brief": "fap",
+"find": "names Lynch syndrome among the endometrial cancer risk factors — the same pedigree seen from the gynecologic side. This brief wants a partner on <i>Lynch syndrome and colorectal cancer screening intervals</i> (not yet written). Store the discriminator as a question: how many polyps, and is there an APC mutation?",
+"with": "lists Lynch syndrome among the endometrial cancer risk factors. A partner brief on <i>Lynch syndrome and colorectal cancer screening intervals</i> is not yet written. Discriminator: how many polyps, and is there an APC mutation?",
+"note": "remove em dash and filler"
+},
+{
+"op": "replace",
+"brief": "fap",
+"find": "Hereditary cancer questions are pathway questions — identify the syndrome first, because every number (start age, interval, operation) belongs to a pathway, and the sporadic family-history numbers are the planted wrong parameters.",
+"with": "Identify the hereditary syndrome first; start age, interval and operation all depend on it, and sporadic family-history numbers do not apply to a known carrier.",
+"note": "remove aphorism, framing and em dash"
+},
+{
+"op": "replace",
+"brief": "fap",
+"find": "\"Colonoscopy at 40\" is the right intervention with the sporadic family-history number; an APC carrier is scoped annually from puberty.",
+"with": "Colonoscopy at 40 is the sporadic family-history schedule; an APC carrier is scoped annually from puberty.",
+"note": "plainer trap"
+},
+{
+"op": "replace",
+"brief": "fap",
+"find": "Polypectomy of the largest lesions is a rung below what innumerable polyps or dysplasia already licenses.",
+"with": "Polypectomy of the largest lesions is not enough once innumerable polyps or dysplasia indicate colectomy.",
+"note": "plainer trap"
+},
+{
+"op": "replace",
+"brief": "fap",
+"find": "\"No further surveillance\" after colectomy feels earned, but the duodenum was never operated on.",
+"with": "Surveillance continues after colectomy because the duodenum and ampulla remain at risk.",
+"note": "plainer trap"
+},
+{
+"op": "replace",
+"brief": "peds-constipation",
+"find": "clear the alarm signs, then soften before you instrument",
+"with": "Exclude alarm signs, then start an oral laxative before any rectal treatment",
+"note": "slogan subtitle"
+},
+{
+"op": "replace",
+"brief": "peds-constipation",
+"find": "<p>The stem hands you the mechanism in its chronology: stools were <b>daily and soft until toilet training began</b>, and the pain came before the hardness got worse. That is the <b>withholding cycle</b> — one painful stool teaches the child to hold, holding lets the rectum desiccate the next stool, and the next one hurts more. The <b>anal fissure</b> is the cycle's signature and its accelerant. Everything the examination <i>doesn't</i> show is doing equal work: growth on the 75th percentile with a nontender abdomen and a normal perineum clears the alarm-sign screen, which is what licenses treating rather than investigating. The move is the one that breaks the cycle at its only modifiable point — <b>an oral osmotic laxative</b> to make the next stool painless.</p>",
+"with": "<p>Stools were <b>daily and soft until toilet training began</b>, and the pain came before the hardness worsened. This is the <b>withholding cycle</b>: a painful stool leads the child to hold, the rectum desiccates the retained stool, and the next stool hurts more. The <b>anal fissure</b> results from the cycle and worsens it. Growth on the 75th percentile, a nontender abdomen and a normal perineum mean no alarm signs, so treat rather than investigate. Give <b>an oral osmotic laxative</b> to make the next stool painless.</p>",
+"note": "remove framing, personification, em dashes"
+},
+{
+"op": "replace",
+"brief": "peds-constipation",
+"find": "the commonest trigger, alongside solid-food and cow's-milk introduction and school entry; it dates the problem to a behavior rather than an anatomy &middot; <b>Previously daily soft stools</b> &mdash; normal baseline function excludes a congenital motility defect, which would have declared earlier &middot; <b>Cries and screams with defecation</b> &mdash; pain is the engine of withholding, and it is the symptom the laxative is aimed at &middot; <b>Growth tracking at the 75th percentile</b> &mdash; clears the growth alarm sign and effectively removes Hirschsprung disease, hypothyroidism and celiac disease &middot; <b>Anal fissure</b> &mdash; a complication of hard stools, and the reason a rectal enema is the wrong instrument here &middot; <b>Abdomen firm and mildly distended but nontender</b> &mdash; stool load without obstruction; severe distension would be the alarm sign, and this is not it &middot; <b>24 oz of milk, refuses fruit</b> &mdash; the diet is a contributor to modify, not a cause to eliminate &middot; <b>Urinates in the toilet without difficulty</b> &mdash; the problem is stool-specific, which argues against a neurologic cause affecting both",
+"with": "the commonest trigger, with solid-food and cow's-milk introduction and school entry; points to a behavioral rather than anatomic cause &middot; <b>Previously daily soft stools</b> &mdash; normal baseline function excludes a congenital motility defect, which would have presented earlier &middot; <b>Cries and screams with defecation</b> &mdash; pain drives withholding and is what the laxative treats &middot; <b>Growth tracking at the 75th percentile</b> &mdash; no growth alarm sign; effectively excludes Hirschsprung disease, hypothyroidism and celiac disease &middot; <b>Anal fissure</b> &mdash; a complication of hard stools and the reason to avoid a rectal enema &middot; <b>Abdomen firm and mildly distended but nontender</b> &mdash; stool load without obstruction; only severe distension is an alarm sign &middot; <b>24 oz of milk, refuses fruit</b> &mdash; diet contributes and should be modified, not eliminated &middot; <b>Urinates in the toilet without difficulty</b> &mdash; normal bladder function argues against a neurologic cause",
+"note": "plainer definitions, keep Term — definition structure"
+},
+{
+"op": "replace",
+"brief": "peds-constipation",
+"find": "done — nothing has been tried, so no failure has been earned &middot; normal — growth, perineum, abdominal tenderness and urinary function, all of them eliminations &middot; bothered — the child cries with every stool, which licenses treating today rather than counselling and waiting.",
+"with": "done: nothing has been tried yet &middot; normal: growth, perineum, abdominal tenderness and urinary function &middot; bothered: the child cries with every stool, so treat today rather than counsel and wait.",
+"note": "remove unbolded em dashes and framing"
+},
+{
+"op": "replace",
+"brief": "peds-constipation",
+"find": "Growth normal, examination benign, meconium normal → no, so the investigation options are dead",
+"with": "Growth normal, examination benign, meconium normal → no, so do not investigate",
+"note": "remove framing"
+},
+{
+"op": "replace",
+"brief": "peds-constipation",
+"find": "Nontender abdomen with no stool ball → no, so disimpaction is not the tier being tested",
+"with": "Nontender abdomen with no stool ball → no, so no disimpaction",
+"note": "remove framing"
+},
+{
+"op": "replace",
+"brief": "peds-constipation",
+"find": "Two details invite over-reading in opposite directions. <b>Refusing to eat fruit</b> and the milk volume together read like a dietary indictment, but the stem quietly places the milk <i>at</i> the limit rather than above it, so the diet is a contributor to adjust rather than the answer. And <b>a firm, mildly distended abdomen</b> sounds ominous until you notice the two qualifiers the alarm-sign list actually uses: <i>severe</i> distension, and tenderness. Neither is here. The <b>anal fissure</b> is the most misread finding of all — it is not evidence of an alternative diagnosis, it is the expected complication of the diagnosis you already have, and its only management consequence is to close the rectal route.",
+"with": "<b>Refusing to eat fruit</b> and the milk volume suggest a dietary cause, but the milk is <i>at</i> the limit, not above it, so diet is a contributor to adjust. Finding <b>a firm, mildly distended abdomen</b> is not an alarm sign; the alarm signs are <i>severe</i> distension and tenderness, and neither is present. The <b>anal fissure</b> is an expected complication of functional constipation, not evidence of another diagnosis; its only effect on management is to rule out the rectal route.",
+"note": "remove dramatic framing and em dash"
+},
+{
+"op": "replace",
+"brief": "peds-constipation",
+"find": "gets an oral osmotic laxative, not a rectal procedure or an image. &middot; Constipation in children is a <b>behavioural cycle with a mechanical consequence</b>; the laxative exists to make the next stool painless so the child stops holding, which is why it runs for months rather than days",
+"with": "gets an oral osmotic laxative, not a rectal procedure or imaging. &middot; Childhood constipation is a <b>behavioural cycle with a mechanical consequence</b>; the laxative makes stools painless so the child stops withholding, and it continues for months rather than days",
+"note": "plainer"
+},
+{
+"op": "replace",
+"brief": "peds-constipation",
+"find": "The three transitions that generate it are <b>solid food and cow's milk, toilet training, and school entry</b> — a stem that names one is telling you the diagnosis. &middot; An anal fissure is a <b>complication</b> of constipation rather than a competing diagnosis, and it is the reason to disimpact by mouth rather than by rectum. &middot; Hirschsprung disease declares with <b>delayed meconium and poor growth</b>, and fissures are uncommon in it; normal growth with a fissure is functional disease. &middot; <b>Growth is the alarm sign that does the most work</b> — a child tracking a percentile has essentially excluded hypothyroidism, celiac disease and Hirschsprung disease before you order anything. &middot; Enuresis and urinary tract infections are complications of constipation, so a wet child with hard stools gets the bowel treated first.",
+"with": "The three common triggers are <b>solid food and cow's milk, toilet training, and school entry</b>; onset at one of them supports the diagnosis. &middot; An anal fissure is a <b>complication</b> of constipation, not a competing diagnosis, and is the reason to disimpact by mouth rather than by rectum. &middot; Hirschsprung disease presents with <b>delayed meconium and poor growth</b>, and fissures are uncommon in it; normal growth with a fissure indicates functional disease. &middot; <b>Growth is the alarm sign that does the most work</b>: a child tracking a percentile has essentially excluded hypothyroidism, celiac disease and Hirschsprung disease. &middot; Enuresis and urinary tract infections are complications of constipation, so in a child with both, treat the bowel first.",
+"note": "remove em dashes and question framing"
+},
+{
+"op": "replace",
+"brief": "peds-constipation",
+"find": "is the adult mirror of this brief's tier 2 — there the rectal vault is full and the enema is first-line, while here the vault is not and the fissure closes that route. Part I <b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b> owns the infant end of the same complaint, and Part II <b>Tethered Cord and Closed Spinal Dysraphism</b> owns the exit ramp this brief's perineal examination is screening for. Store the discriminator as a question: is growth normal, and is there stool in the rectum?",
+"with": "is the adult counterpart of tier 2: there the rectal vault is full and an enema is first-line; here the vault is not full and the fissure rules out the rectal route. Part I <b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b> covers infants, and Part II <b>Tethered Cord and Closed Spinal Dysraphism</b> covers the dysraphism the perineal examination screens for. Discriminator: is growth normal, and is there stool in the rectum?",
+"note": "remove em dash and personification"
+},
+{
+"op": "replace",
+"brief": "peds-constipation",
+"find": "When a common condition has a benign screening profile, the examination's normals are the permission to treat, and the alarm-sign list is the only thing that converts treatment into investigation. A complication of the diagnosis is evidence for it rather than against it — but it can still change which instrument you are allowed to use.",
+"with": "With no alarm signs and a normal examination, treat; investigate only when an alarm sign is present. A complication of the diagnosis supports it but can still change management, as an anal fissure rules out the rectal route.",
+"note": "remove aphorism and em dash"
+},
+{
+"op": "replace",
+"brief": "bs-water-soluble-vitamins",
+"find": "The <b>organ pattern</b> names the vitamin:",
+"with": "The <b>organ pattern</b> identifies the vitamin:",
+"note": "remove personification"
+},
+{
+"op": "replace",
+"brief": "bs-water-soluble-vitamins",
+"find": "<p>Two orders matter. In a malnourished",
+"with": "<p>In a malnourished",
+"note": "remove filler opener"
+}
+]
+}

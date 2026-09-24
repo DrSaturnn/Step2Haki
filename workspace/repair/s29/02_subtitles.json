@@ -1,0 +1,649 @@
+{
+ "batch": "s29",
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "<p class=\"sub\">Heterotopic bone weeks after a contusion · board question · did the pain resolve and come back, and does passive stretch reproduce it?</p>",
+   "with": "<p class=\"sub\">Heterotopic bone weeks after a contusion · did the pain resolve and come back, and does passive stretch reproduce it?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "<p class=\"sub\">Bilateral, nocturnal, normal examination · board question · is the pain bilateral, and is the examination normal?</p>",
+   "with": "<p class=\"sub\">Bilateral, nocturnal, normal examination · is the pain bilateral, and is the examination normal?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "bone-tumors",
+   "find": "<p class=\"sub\">Epiphysis, metaphysis or diaphysis &middot; UWorld &middot; where it sits and what it does next</p>",
+   "with": "<p class=\"sub\">Epiphysis, metaphysis or diaphysis &middot; where it sits and what it does next</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torticollis",
+   "find": "<p class=\"sub\">Tilt toward the mass, chin away · UWorld · the ear tells you which flat head</p>",
+   "with": "<p class=\"sub\">Tilt toward the mass, chin away · the ear tells you which flat head</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-brachial-plexus",
+   "find": "<p class=\"sub\">Absent grasp with Horner · UWorld · which of Moro, biceps and grasp is lost?</p>",
+   "with": "<p class=\"sub\">Absent grasp with Horner · which of Moro, biceps and grasp is lost?</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "shoulder-rom",
+   "find": "<p class=\"sub\">Aquifer FM 25 · rotator cuff · impingement</p>",
+   "with": "<p class=\"sub\">rotator cuff · impingement</p>",
+   "note": "drop provenance: lead 'Aquifer FM 25'"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "<p class=\"sub\">separate maternal carryover from the baby's own disease &middot; board question &middot; Is the infant voiding, growing and normal on exam — and does the mother's chart explain the number?</p>",
+   "with": "<p class=\"sub\">separate maternal carryover from the baby's own disease &middot; Is the infant voiding, growing and normal on exam — and does the mother's chart explain the number?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "<p class=\"sub\">what is physiologic and what is not &middot; board question &middot; Is the infant well, and is the finding inside the first two weeks?</p>",
+   "with": "<p class=\"sub\">what is physiologic and what is not &middot; Is the infant well, and is the finding inside the first two weeks?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "aneuploidy",
+   "find": "<p class=\"sub\">Which trisomy, from the hands, the midline and the cry &middot; UWorld &middot; the feature map</p>",
+   "with": "<p class=\"sub\">Which trisomy, from the hands, the midline and the cry &middot; the feature map</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "malform-syndromes",
+   "find": "<p class=\"sub\">the rarest component names the syndrome, never the commonest &middot; UWorld &middot; choanal atresia and coloboma are the two that decide</p>",
+   "with": "<p class=\"sub\">the rarest component names the syndrome, never the commonest &middot; choanal atresia and coloboma are the two that decide</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-learning",
+   "find": "<p class=\"sub\">Behavior confined to school · UWorld · read the child's private interview</p>",
+   "with": "<p class=\"sub\">Behavior confined to school · read the child's private interview</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nat-fracture",
+   "find": "<p class=\"sub\">A corner fracture of the distal femur in a toddler &middot; UWorld &middot; does the fracture need a pull or a twist, and does the film or exam give a bone disease its own sign?</p>",
+   "with": "<p class=\"sub\">A corner fracture of the distal femur in a toddler &middot; does the fracture need a pull or a twist, and does the film or exam give a bone disease its own sign?</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shock",
+   "find": "<p class=\"sub\">The category is the mechanism, not the appearance · Aquifer · perfusion before pressure</p>",
+   "with": "<p class=\"sub\">The category is the mechanism, not the appearance · perfusion before pressure</p>",
+   "note": "drop provenance: slot 'Aquifer'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-infant-feeding",
+   "find": "<p class=\"sub\">The answer is an age gate · Aquifer · iron first, then variety</p>",
+   "with": "<p class=\"sub\">The answer is an age gate · iron first, then variety</p>",
+   "note": "drop provenance: slot 'Aquifer'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tanner",
+   "find": "<p class=\"sub\">One contour or two · Aquifer · the phrase appears in exactly one stage</p>",
+   "with": "<p class=\"sub\">One contour or two · the phrase appears in exactly one stage</p>",
+   "note": "drop provenance: slot 'Aquifer'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-ftt",
+   "find": "<p class=\"sub\">The parameter pattern names the cause · Aquifer · weight, then length, then head</p>",
+   "with": "<p class=\"sub\">The parameter pattern names the cause · weight, then length, then head</p>",
+   "note": "drop provenance: slot 'Aquifer'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-preterm-followup",
+   "find": "<p class=\"sub\">Correct the age, then read the chart · Aquifer · a percentile is a position, not a pathology</p>",
+   "with": "<p class=\"sub\">Correct the age, then read the chart · a percentile is a position, not a pathology</p>",
+   "note": "drop provenance: slot 'Aquifer'"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "<p class=\"sub\">Aquifer Pediatrics 29 &middot; symptom workup &middot; brain, anterior horn cell, neuromuscular junction or muscle</p>",
+   "with": "<p class=\"sub\">brain, anterior horn cell, neuromuscular junction or muscle</p>",
+   "note": "drop provenance: slot 'symptom workup', lead 'Aquifer Pediatrics 29'"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "<p class=\"sub\">lung, heart, or airway &mdash; sorted before any lesion is named &middot; board question &middot; Is he working to breathe, does oxygen help, and does the cyanosis change with what he is doing?</p>",
+   "with": "<p class=\"sub\">lung, heart, or airway &mdash; sorted before any lesion is named &middot; Is he working to breathe, does oxygen help, and does the cyanosis change with what he is doing?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "myocarditis",
+   "find": "<p class=\"sub\">the viral prodrome that is not bronchiolitis &middot; UWorld &middot; a gallop reassigns the failing organ</p>",
+   "with": "<p class=\"sub\">the viral prodrome that is not bronchiolitis &middot; a gallop reassigns the failing organ</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "del22q11",
+   "find": "<p class=\"sub\">the cluster is given; name the component it withheld &middot; UWorld &middot; read the last sentence first</p>",
+   "with": "<p class=\"sub\">the cluster is given; name the component it withheld &middot; read the last sentence first</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-murmur-map",
+   "find": "<p class=\"sub\">Shape first, then breathing · UWorld · every distractor gets one coordinate right</p>",
+   "with": "<p class=\"sub\">Shape first, then breathing · every distractor gets one coordinate right</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shunt-timing",
+   "find": "<p class=\"sub\">Falling resistance opens the gradient · Aquifer · weeks for shunts, days for the ductus</p>",
+   "with": "<p class=\"sub\">Falling resistance opens the gradient · weeks for shunts, days for the ductus</p>",
+   "note": "drop provenance: slot 'Aquifer'"
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "<p class=\"sub\">the exam finding picks the test &middot; board question &middot; Which single structural clue in the stem is incompatible with every cause but one?</p>",
+   "with": "<p class=\"sub\">the exam finding picks the test &middot; Which single structural clue in the stem is incompatible with every cause but one?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "<p class=\"sub\">sort by A-a gradient and the oxygen response &middot; board question &middot; Is the A-a gradient widened, and does the hypoxemia correct when you raise inspired oxygen?</p>",
+   "with": "<p class=\"sub\">sort by A-a gradient and the oxygen response &middot; Is the A-a gradient widened, and does the hypoxemia correct when you raise inspired oxygen?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "<p class=\"sub\">eosinophils and IgE reclassify the exacerbation &middot; board question &middot; Did an adequate antibiotic course fail, and are the eosinophils and IgE up?</p>",
+   "with": "<p class=\"sub\">eosinophils and IgE reclassify the exacerbation &middot; Did an adequate antibiotic course fail, and are the eosinophils and IgE up?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "<p class=\"sub\">the timing pattern picks the test &middot; board question &middot; Are the symptoms nocturnal and intermittent, or exertional and progressive?</p>",
+   "with": "<p class=\"sub\">the timing pattern picks the test &middot; Are the symptoms nocturnal and intermittent, or exertional and progressive?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nrd",
+   "find": "<p class=\"sub\">Fluid in the fissures · Aquifer · four stem facts settle it before pathophysiology</p>",
+   "with": "<p class=\"sub\">Fluid in the fissures · four stem facts settle it before pathophysiology</p>",
+   "note": "drop provenance: slot 'Aquifer'"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "<p class=\"sub\">Regurgitation of undigested food in an old man · UWorld · the swallow study comes before any scope or tube</p>",
+   "with": "<p class=\"sub\">Regurgitation of undigested food in an old man · the swallow study comes before any scope or tube</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "<p class=\"sub\">The well-appearing child decides the tier · UWorld · reassure, eliminate, or work up</p>",
+   "with": "<p class=\"sub\">The well-appearing child decides the tier · reassure, eliminate, or work up</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "<p class=\"sub\">Puberty starts the scope, the polyps set the colectomy · UWorld · APC, hundreds of adenomas, cancer by 40</p>",
+   "with": "<p class=\"sub\">Puberty starts the scope, the polyps set the colectomy · APC, hundreds of adenomas, cancer by 40</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "peutz-jeghers",
+   "find": "<p class=\"sub\">Macules on the lips, polyps in the gut &middot; UWorld &middot; the exam finding that redirects the workup</p>",
+   "with": "<p class=\"sub\">Macules on the lips, polyps in the gut &middot; the exam finding that redirects the workup</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "<p class=\"sub\">the refusal pattern names the cause &middot; board question &middot; Is he refusing a texture, a food group, or eating altogether — and is he atopic?</p>",
+   "with": "<p class=\"sub\">the refusal pattern names the cause &middot; Is he refusing a texture, a food group, or eating altogether — and is he atopic?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<p class=\"sub\">appendix, ileocecum, or neither &middot; board question &middot; Is there profuse mucoid diarrhea, and is there a sick contact?</p>",
+   "with": "<p class=\"sub\">appendix, ileocecum, or neither &middot; Is there profuse mucoid diarrhea, and is there a sick contact?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "<p class=\"sub\">clear the alarm signs, then soften before you instrument &middot; board question &middot; Is growth normal and the examination benign, and is there stool in the rectum?</p>",
+   "with": "<p class=\"sub\">clear the alarm signs, then soften before you instrument &middot; Is growth normal and the examination benign, and is there stool in the rectum?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "<p class=\"sub\">Stereotyped episodes, well in between &middot; UWorld &middot; the pattern is the diagnosis</p>",
+   "with": "<p class=\"sub\">Stereotyped episodes, well in between &middot; the pattern is the diagnosis</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<p class=\"sub\">Bilious emesis, bloody stool &middot; UWorld &middot; the film tells you which one</p>",
+   "with": "<p class=\"sub\">Bilious emesis, bloody stool &middot; the film tells you which one</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<p class=\"sub\">Scope both ends, then think small bowel &middot; UWorld &middot; age decides the next study</p>",
+   "with": "<p class=\"sub\">Scope both ends, then think small bowel &middot; age decides the next study</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "<p class=\"sub\">Choking on the first feed · UWorld · pass a tube before you order a picture</p>",
+   "with": "<p class=\"sub\">Choking on the first feed · pass a tube before you order a picture</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "<p class=\"sub\">Skin-covered and reducible · UWorld · is there skin over it, and how big and how old is it?</p>",
+   "with": "<p class=\"sub\">Skin-covered and reducible · is there skin over it, and how big and how old is it?</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "<p class=\"sub\">Nosebleeds and bruising in a teen with CF off his medications &middot; UWorld &middot; which vitamin does the sign name, and why is fat not being absorbed?</p>",
+   "with": "<p class=\"sub\">Nosebleeds and bruising in a teen with CF off his medications &middot; which vitamin does the sign name, and why is fat not being absorbed?</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "<p class=\"sub\">A teen with hepatitis, a tremor and brown corneal rings &middot; UWorld &middot; is the patient young, with brain, eye or red-cell findings, and is the ceruloplasmin low?</p>",
+   "with": "<p class=\"sub\">A teen with hepatitis, a tremor and brown corneal rings &middot; is the patient young, with brain, eye or red-cell findings, and is the ceruloplasmin low?</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "<p class=\"sub\">the grade decides both the treatment and the ending &middot; board question &middot; Did the VCUG show ureteral filling only, or dilation with blunted calices?</p>",
+   "with": "<p class=\"sub\">the grade decides both the treatment and the ending &middot; Did the VCUG show ureteral filling only, or dilation with blunted calices?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "<p class=\"sub\">assign the tract, then name the risk factor &middot; board question &middot; Is this infection febrile or afebrile, and does the bladder empty?</p>",
+   "with": "<p class=\"sub\">assign the tract, then name the risk factor &middot; Is this infection febrile or afebrile, and does the bladder empty?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "<p class=\"sub\">the urine osmolality sorts it before any hormone is named &middot; UWorld &middot; when the water deprivation test is indicated, and when it has already been answered</p>",
+   "with": "<p class=\"sub\">the urine osmolality sorts it before any hormone is named &middot; when the water deprivation test is indicated, and when it has already been answered</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "<p class=\"sub\">the pattern names the lesion, the age names the search &middot; board question &middot; Are there red cells and casts, and how old is the patient?</p>",
+   "with": "<p class=\"sub\">the pattern names the lesion, the age names the search &middot; Are there red cells and casts, and how old is the patient?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "<p class=\"sub\">One lesion upstream of every finding · Aquifer · count the orphaned findings</p>",
+   "with": "<p class=\"sub\">One lesion upstream of every finding · count the orphaned findings</p>",
+   "note": "drop provenance: slot 'Aquifer'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nephritic",
+   "find": "<p class=\"sub\">Edema and hypertension weeks after strep &middot; UWorld &middot; How long since the infection, is the C3 low, and is the child overloaded?</p>",
+   "with": "<p class=\"sub\">Edema and hypertension weeks after strep &middot; How long since the infection, is the C3 low, and is the child overloaded?</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "<p class=\"sub\">Hypertension with a mass inside the kidney &middot; UWorld &middot; Where does the mass arise, and how old is the child?</p>",
+   "with": "<p class=\"sub\">Hypertension with a mass inside the kidney &middot; Where does the mass arise, and how old is the child?</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-puffy-eyes",
+   "find": "<p class=\"sub\">Aquifer Pediatrics 31 &middot; symptom workup &middot; swelling local to the eye, or the first sign of edema everywhere</p>",
+   "with": "<p class=\"sub\">swelling local to the eye, or the first sign of edema everywhere</p>",
+   "note": "drop provenance: slot 'symptom workup', lead 'Aquifer Pediatrics 31'"
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "<p class=\"sub\">read TSH direction and the neck to locate the defect &middot; board question &middot; is TSH high or low, and is there a goiter?</p>",
+   "with": "<p class=\"sub\">read TSH direction and the neck to locate the defect &middot; is TSH high or low, and is there a goiter?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<p class=\"sub\">the visible lesion plus the organ pattern settles it &middot; board question &middot; What exactly is the retinal lesion, and what color is the skin patch?</p>",
+   "with": "<p class=\"sub\">the visible lesion plus the organ pattern settles it &middot; What exactly is the retinal lesion, and what color is the skin patch?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "precocious-puberty",
+   "find": "<p class=\"sub\">Central or peripheral, then read the skin · board question · which hormones are on board, and what does the skin look like?</p>",
+   "with": "<p class=\"sub\">Central or peripheral, then read the skin · which hormones are on board, and what does the skin look like?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-short-stature",
+   "find": "<p class=\"sub\">A tired 14-year-old falling off her height curve with weight preserved &middot; UWorld &middot; is growth velocity normal, which falls first, weight or height, and what is the bone age?</p>",
+   "with": "<p class=\"sub\">A tired 14-year-old falling off her height curve with weight preserved &middot; is growth velocity normal, which falls first, weight or height, and what is the bone age?</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "<p class=\"sub\">the smear, the Coombs and the coags name the process &middot; board question &middot; Are two cell lines down, is the smear sheared, and are the coagulation studies normal?</p>",
+   "with": "<p class=\"sub\">the smear, the Coombs and the coags name the process &middot; Are two cell lines down, is the smear sheared, and are the coagulation studies normal?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "drug-hemolysis",
+   "find": "<p class=\"sub\">exposure and latency name the mechanism &middot; board question &middot; Which drug was given, how long ago, and are the platelets and liver enzymes normal?</p>",
+   "with": "<p class=\"sub\">exposure and latency name the mechanism &middot; Which drug was given, how long ago, and are the platelets and liver enzymes normal?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "<p class=\"sub\">timing and company decide, and most need nothing &middot; board question &middot; What are the vitals, and what else is on the skin besides hives?</p>",
+   "with": "<p class=\"sub\">timing and company decide, and most need nothing &middot; What are the vitals, and what else is on the skin besides hives?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-spherocytosis",
+   "find": "<p class=\"sub\">Spherocytes with a negative Coombs · handoff · map the disease to its assay</p>",
+   "with": "<p class=\"sub\">Spherocytes with a negative Coombs · map the disease to its assay</p>",
+   "note": "drop provenance: slot 'handoff'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-sickle-trait",
+   "find": "<p class=\"sub\">HbA exceeds HbS · UWorld · read the electrophoresis before the options</p>",
+   "with": "<p class=\"sub\">HbA exceeds HbS · read the electrophoresis before the options</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-bruising",
+   "find": "<p class=\"sub\">Aquifer Pediatrics 21 &middot; symptom workup &middot; vessel, platelets, clotting factors, or trauma</p>",
+   "with": "<p class=\"sub\">vessel, platelets, clotting factors, or trauma</p>",
+   "note": "drop provenance: slot 'symptom workup', lead 'Aquifer Pediatrics 21'"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<p class=\"sub\">which antibody defect, and what it predicts &middot; board question &middot; Are B cells present, and which isotype is preserved or elevated?</p>",
+   "with": "<p class=\"sub\">which antibody defect, and what it predicts &middot; Are B cells present, and which isotype is preserved or elevated?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<p class=\"sub\">treat the rickettsiosis before you prove it &middot; UWorld &middot; where the rash started, and what the platelets did</p>",
+   "with": "<p class=\"sub\">treat the rickettsiosis before you prove it &middot; where the rash started, and what the platelets did</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "lymphadenitis",
+   "find": "<p class=\"sub\">acute and unilateral is bacterial &middot; UWorld &middot; tempo and laterality sort every neck node</p>",
+   "with": "<p class=\"sub\">acute and unilateral is bacterial &middot; tempo and laterality sort every neck node</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "<p class=\"sub\">the location names the virus &middot; UWorld &middot; front of the mouth or back</p>",
+   "with": "<p class=\"sub\">the location names the virus &middot; front of the mouth or back</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<p class=\"sub\">the organism list is the diagnosis &middot; board question &middot; Are there granulomas, and is the infection outside the chest?</p>",
+   "with": "<p class=\"sub\">the organism list is the diagnosis &middot; Are there granulomas, and is the infection outside the chest?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-pta",
+   "find": "<p class=\"sub\">Trismus with a deviated uvula · UWorld · no imaging needed</p>",
+   "with": "<p class=\"sub\">Trismus with a deviated uvula · no imaging needed</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<p class=\"sub\">Periventricular calcifications · UWorld · organism first, then its signature sequela</p>",
+   "with": "<p class=\"sub\">Periventricular calcifications · organism first, then its signature sequela</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-neonatal-sepsis",
+   "find": "<p class=\"sub\">Afebrile neonate with leukopenia &middot; board question &middot; the WBC decides when the temperature does not</p>",
+   "with": "<p class=\"sub\">Afebrile neonate with leukopenia &middot; the WBC decides when the temperature does not</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fever-rash-arthralgia",
+   "find": "<p class=\"sub\">Hives on day 9 of penicillin; a face-first pink rash in the unvaccinated · UWorld · what is the rash, and what came before it, how long ago?</p>",
+   "with": "<p class=\"sub\">Hives on day 9 of penicillin; a face-first pink rash in the unvaccinated · what is the rash, and what came before it, how long ago?</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-exanthems",
+   "find": "<p class=\"sub\">Itchy vesicles in crops at different stages · UWorld · what is the lesion, where did it start, and how did it relate to the fever?</p>",
+   "with": "<p class=\"sub\">Itchy vesicles in crops at different stages · what is the lesion, where did it start, and how did it relate to the fever?</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "<p class=\"sub\">Swollen eyes, a tight throat and cramps half an hour after a new amoxicillin prescription &middot; UWorld &middot; how many organ systems, and how soon after the exposure?</p>",
+   "with": "<p class=\"sub\">Swollen eyes, a tight throat and cramps half an hour after a new amoxicillin prescription &middot; how many organ systems, and how soon after the exposure?</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-isolation",
+   "find": "<p class=\"sub\">Gram-negative diplococci in the CSF of a shocked infant &middot; UWorld &middot; how big is the particle, and who is being protected from whom?</p>",
+   "with": "<p class=\"sub\">Gram-negative diplococci in the CSF of a shocked infant &middot; how big is the particle, and who is being protected from whom?</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "<p class=\"sub\">Fever and bloody stools after camp food &middot; UWorld &middot; what did the patient eat, and does that organism need a blood culture or an antibiotic?</p>",
+   "with": "<p class=\"sub\">Fever and bloody stools after camp food &middot; what did the patient eat, and does that organism need a blood culture or an antibiotic?</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-febrile-infant",
+   "find": "<p class=\"sub\">Paradoxical irritability · Aquifer · every stem negative is an eliminated source</p>",
+   "with": "<p class=\"sub\">Paradoxical irritability · every stem negative is an eliminated source</p>",
+   "note": "drop provenance: slot 'Aquifer'"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-fever",
+   "find": "<p class=\"sub\">Aquifer Pediatrics 10 &middot; symptom workup &middot; urine, blood, meninges, lungs, or a virus</p>",
+   "with": "<p class=\"sub\">urine, blood, meninges, lungs, or a virus</p>",
+   "note": "drop provenance: slot 'symptom workup', lead 'Aquifer Pediatrics 10'"
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "<p class=\"sub\">endocrine signs localize the tumor, imaging confirms it &middot; board question &middot; Does the endocrine axis point at the stalk rather than the gland, and is the chiasm involved?</p>",
+   "with": "<p class=\"sub\">endocrine signs localize the tumor, imaging confirms it &middot; Does the endocrine axis point at the stalk rather than the gland, and is the chiasm involved?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<p class=\"sub\">what licenses neuroimaging, and what does not &middot; board question &middot; Is anything abnormal outside the headache history — the examination, the fundus, the growth chart, the vitals?</p>",
+   "with": "<p class=\"sub\">what licenses neuroimaging, and what does not &middot; Is anything abnormal outside the headache history — the examination, the fundus, the growth chart, the vitals?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "cholesteatoma",
+   "find": "<p class=\"sub\">the mass behind an intact drum &middot; board question &middot; Is the drum intact, is the mass on it, and is the loss conductive?</p>",
+   "with": "<p class=\"sub\">the mass behind an intact drum &middot; Is the drum intact, is the mass on it, and is the loss conductive?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "<p class=\"sub\">the age window and the intracranial signs decide whether it is benign &middot; board question &middot; Is this child inside the febrile-seizure age window, and is any sign of intracranial infection present?</p>",
+   "with": "<p class=\"sub\">the age window and the intracranial signs decide whether it is benign &middot; Is this child inside the febrile-seizure age window, and is any sign of intracranial infection present?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "<p class=\"sub\">the MRI pattern names the cause &middot; board question &middot; What does the MRI actually describe, and are the findings unilateral or global?</p>",
+   "with": "<p class=\"sub\">the MRI pattern names the cause &middot; What does the MRI actually describe, and are the findings unilateral or global?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "retinitis-pigmentosa",
+   "find": "<p class=\"sub\">the fundus names the cause &middot; UWorld &middot; pale disc or cupped disc, and is the front of the eye normal</p>",
+   "with": "<p class=\"sub\">the fundus names the cause &middot; pale disc or cupped disc, and is the front of the eye normal</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "<p class=\"sub\">name the movement before you name the disorder &middot; UWorld &middot; is the behaviour involuntary, or is it neutralising an obsession</p>",
+   "with": "<p class=\"sub\">name the movement before you name the disorder &middot; is the behaviour involuntary, or is it neutralising an obsession</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tethered",
+   "find": "<p class=\"sub\">Grade the reflexes first · UWorld · a number outranks a story</p>",
+   "with": "<p class=\"sub\">Grade the reflexes first · a number outranks a story</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-peds-stroke",
+   "find": "<p class=\"sub\">Find the arteriopathy &middot; UWorld &middot; constitutional symptoms plus unequal pulses make it inflammatory</p>",
+   "with": "<p class=\"sub\">Find the arteriopathy &middot; constitutional symptoms plus unequal pulses make it inflammatory</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-posterior-fossa",
+   "find": "<p class=\"sub\">Cerebellar signs are ipsilateral · Aquifer · side first, then structure</p>",
+   "with": "<p class=\"sub\">Cerebellar signs are ipsilateral · side first, then structure</p>",
+   "note": "drop provenance: slot 'Aquifer'"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-child-headache",
+   "find": "<p class=\"sub\">Aquifer Neurology 10 &middot; symptom workup &middot; primary headache, or a mass, raised pressure, infection or bleeding</p>",
+   "with": "<p class=\"sub\">primary headache, or a mass, raised pressure, infection or bleeding</p>",
+   "note": "drop provenance: slot 'symptom workup', lead 'Aquifer Neurology 10'"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "<p class=\"sub\">the scalp surface and the nodes decide &middot; board question &middot; Is the patch scaly, and are the draining nodes enlarged?</p>",
+   "with": "<p class=\"sub\">the scalp surface and the nodes decide &middot; Is the patch scaly, and are the draining nodes enlarged?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "<p class=\"sub\">when a working barrier stops working, name the superinfection &middot; UWorld &middot; folds spared or folds involved</p>",
+   "with": "<p class=\"sub\">when a working barrier stops working, name the superinfection &middot; folds spared or folds involved</p>",
+   "note": "drop provenance: slot 'UWorld'"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<p class=\"sub\">the malformation pattern names the drug &middot; board question &middot; Which single malformation belongs to only one agent?</p>",
+   "with": "<p class=\"sub\">the malformation pattern names the drug &middot; Which single malformation belongs to only one agent?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "<p class=\"sub\">uterus present or absent, then read the FSH &middot; board question &middot; Is there a uterus, and if so is the FSH high or low?</p>",
+   "with": "<p class=\"sub\">uterus present or absent, then read the FSH &middot; Is there a uterus, and if so is the FSH high or low?</p>",
+   "note": "drop provenance: slot 'board question'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-pid",
+   "find": "<p class=\"sub\">Treat on the exam finding, not the culture · Aquifer · the threshold is low by design</p>",
+   "with": "<p class=\"sub\">Treat on the exam finding, not the culture · the threshold is low by design</p>",
+   "note": "drop provenance: slot 'Aquifer'"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-vax",
+   "find": "<p class=\"sub\">Platform, series complete, season · Aquifer · a date buried in line one is data</p>",
+   "with": "<p class=\"sub\">Platform, series complete, season · a date buried in line one is data</p>",
+   "note": "drop provenance: slot 'Aquifer'"
+  }
+ ]
+}

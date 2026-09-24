@@ -1,0 +1,19 @@
+{
+ "batch": "s29",
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "about 85% of cases (clinic ledger) &middot;",
+   "with": "about 85% of cases &middot;",
+   "note": "internal text in .crit (outside voice scope, so kept out of 06)"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": " --- <i>Batch 5, brief 01 · 2026-09-10.</i>",
+   "with": "",
+   "note": "internal batch note"
+  }
+ ]
+}

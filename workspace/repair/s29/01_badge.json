@@ -1,0 +1,17 @@
+{
+ "batch": "s29",
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": ".nbmechip{display:inline-block;vertical-align:5px;margin-left:10px;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:1px;color:#fff;background:#3F4A8A;padding:5px 9px;border-radius:var(--r-chip);box-shadow:var(--ec);white-space:nowrap}",
+   "with": ".nbmechip{display:inline-block;vertical-align:5px;margin-left:10px;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:1px;color:#fff;background:#3F4A8A;padding:5px 9px;border-radius:var(--r-chip);box-shadow:var(--ec);white-space:nowrap}\n/* NBME priority: a brief with any NBME-linked question shows one NBME badge instead of UWorld / Aquifer / Board.\n   :has() rule for current browsers; .nbme-linked (set by the NBME script) for engines without :has().\n   Kept as separate rules: an unsupported selector would void a shared selector list. */\n.brief:has(li[data-nbme],.mcq[data-nbme]) > h4::after{content:\"NBME\" !important;display:inline-block;vertical-align:5px;margin-left:10px;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:1px;color:#fff !important;background:#3F4A8A !important;padding:5px 9px;border-radius:var(--r-chip);box-shadow:var(--ec);white-space:nowrap}\n.brief.nbme-linked > h4::after{content:\"NBME\" !important;display:inline-block;vertical-align:5px;margin-left:10px;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:1px;color:#fff !important;background:#3F4A8A !important;padding:5px 9px;border-radius:var(--r-chip);box-shadow:var(--ec);white-space:nowrap}\n.brief.nbme-linked > h4[data-nbme-n]::after{content:\"NBME \\00D7\" attr(data-nbme-n) !important}",
+   "note": "NBME-priority title badge (CSS :has + .nbme-linked fallback)"
+  },
+  {
+   "op": "replace_global",
+   "find": "    var old=h.querySelector('.nbmechip'); if(old) old.remove();\n    var n=nbmeIds(b).length; if(!n) return;\n    var c=document.createElement('span'); c.className='nbmechip'; c.textContent='NBME \\u00d7'+n;\n    c.title='Linked to '+n+' NBME question'+(n>1?'s':''); h.appendChild(c);",
+   "with": "    var old=h.querySelector('.nbmechip'); if(old) old.remove();\n    /* one NBME badge on the title (CSS h4::after); the count shows only when above 1 */\n    var n=nbmeIds(b).length;\n    b.classList.toggle('nbme-linked',n>0);\n    if(n>1) h.setAttribute('data-nbme-n',String(n)); else h.removeAttribute('data-nbme-n');",
+   "note": "fold the NBME x n chip into the one title badge"
+  }
+ ]
+}

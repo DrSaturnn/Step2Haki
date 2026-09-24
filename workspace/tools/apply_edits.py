@@ -18,13 +18,14 @@ from pagelib import (TYPES, STATUSES, briefs, count, esc_attr, items, read_page,
 from idgen import new_item_ids, taken_ids  # noqa: E402
 
 OPS = {
-    'replace': ({'brief', 'find', 'with'}, {'note'}),
+    'replace': ({'brief', 'find', 'with'}, {'note', 'reworded_bold', 'reworded_label'}),
     'insert_before': ({'brief', 'anchor', 'html'}, {'note'}),
     'insert_after': ({'brief', 'anchor', 'html'}, {'note'}),
     'add_item': ({'brief', 'type', 'stem', 'answer', 'd1', 'd2'},
                  {'companion', 'lead_in', 'status', 'src', 'nid', 'after_item', 'attrs', 'bold_answer', 'note'}),
     'set_attr': ({'target', 'attr', 'value'}, {'note'}),
     'new_brief': ({'after', 'html'}, {'nav', 'note'}),
+    'replace_global': ({'find', 'with'}, {'note'}),
 }
 IDENTITY = {'id', 'data-item-id', 'data-key-id', 'data-d1-id', 'data-d2-id'}
 
@@ -53,6 +54,10 @@ def validate(spec):
         if extra:
             errs.append((n, op, 'unknown field(s) ' + ', '.join(extra), 'remove them; allowed: ' + ', '.join(sorted(req | opt))))
         for k in req | opt:
+            if k in ('reworded_bold', 'reworded_label'):
+                if k in e and not (isinstance(e[k], list) and all(isinstance(x, str) and x.strip() for x in e[k])):
+                    errs.append((n, op, '%s must be a list of the old texts' % k, 'e.g. ["The interval is the finding"]'))
+                continue
             if k in e and k not in ('attrs', 'nav', 'bold_answer', 'companion') and not isinstance(e[k], str):
                 errs.append((n, op, 'field %s must be a string' % k, 'quote it'))
         if op == 'add_item':
@@ -196,6 +201,22 @@ def apply_one(html, e, n, taken, log):
         new = set_attr_in_tag(tag, name, esc_attr(val))
         html = splice(html, [(s, oe, new)])
         log.append('set_attr %s %s=%s' % (tgt, name, val))
+        return html
+    if op == 'replace_global':
+        needle = e['find']
+        if not needle:
+            raise EditError(n, op, 'empty anchor', 'give a verbatim, unique snippet of the page chrome')
+        c = count(html, needle)
+        if c != 1:
+            raise EditError(n, op, 'anchor occurs %d times in the page (must be exactly 1): %r' % (c, needle[:90]),
+                            'lengthen the anchor with neighbouring text until it is unique in the whole page')
+        at = html.find(needle)
+        for b in briefs(html):
+            if at < b.end and at + len(needle) > b.start:
+                raise EditError(n, op, 'anchor falls inside brief %s' % b.id,
+                                'edit brief content with replace/insert_* (brief-scoped); replace_global is for CSS, scripts and nav')
+        html = splice(html, [(at, at + len(needle), e['with'])])
+        log.append('replace_global at offset %d' % at)
         return html
     if op == 'new_brief':
         after = _brief(html, e['after'], n, op)
