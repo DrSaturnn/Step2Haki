@@ -1,0 +1,95 @@
+[
+ {
+  "kind": "backfill",
+  "edits": [
+   {
+    "scope": "brief:peds-headache-imaging",
+    "op": "replace",
+    "old": "data-nid=\"1483930816351\"",
+    "new": "data-nid=\"1483930816351 1476583171440 1476583249637 1483930588591 1483930592160 1483930600854 1550673179147 1554499214691 1575134484671\"",
+    "why": "Register the isotretinoin intracranial hypertension source question on this brief."
+   },
+   {
+    "scope": "brief:peds-headache-imaging",
+    "op": "replace",
+    "old": "<b>Papilledema</b> → MRI (venography if otherwise normal ⚠︎), then LP with an opening pressure → idiopathic intracranial hypertension.",
+    "new": "<b>Papilledema</b> → MRI to exclude mass or hydrocephalus, with MR venography to exclude venous sinus thrombosis, then LP with an opening pressure → idiopathic intracranial hypertension; ask first about <b>retinoids, tetracyclines, vitamin A and growth hormone</b>.",
+    "why": "MR venography is in the source, so the warning flag is removed; adds the drug history to the papilledema exit ramp."
+   },
+   {
+    "scope": "brief:peds-headache-imaging",
+    "op": "insert_after",
+    "anchor": "<td>Simple analgesics on ≥15 days/month, or triptans/combination analgesics on ≥10 days/month ⚠︎</td></tr>",
+    "text": "\n<tr><td>Exit / pressure branch</td><td><b>Drug-induced or idiopathic intracranial hypertension</b>: <b>stop the offending drug</b> (isotretinoin, tetracyclines, vitamin A, growth hormone), which usually resolves it; acetazolamide, or topiramate as an alternative; weight loss if overweight, including bariatric surgery in adults</td><td>Vision worsens despite medical therapy: urgent optic nerve sheath fenestration or CSF shunting</td></tr>",
+    "why": "The brief had no treatment for the pressure branch; source treatment list added as an exit row matching the ladder columns."
+   },
+   {
+    "scope": "brief:peds-headache-imaging",
+    "op": "replace",
+    "old": "<td><b>High</b> opening pressure after a normal MRI</td>",
+    "new": "<td><b>High</b> opening pressure (over 250 mm H2O) with normal CSF composition, after normal MRI and MR venography</td>",
+    "why": "Adds the source cutoff and the normal-CSF requirement, and places LP after both imaging studies."
+   },
+   {
+    "scope": "brief:peds-headache-imaging",
+    "op": "insert_before",
+    "anchor": "<tr><td>Noncontrast head CT</td><td>By branch</td>",
+    "text": "<tr><td>Visual fields and acuity, for papilledema</td><td>Supports</td><td><b>Enlarged blind spots</b>, otherwise full fields</td><td>Raised pressure; a bitemporal defect instead points to a chiasmal lesion</td></tr>\n<tr><td>Medication and weight history, for papilledema</td><td>Cause</td><td><b>Retinoid</b>, tetracycline, vitamin A or growth hormone; recent weight gain</td><td>Secondary intracranial hypertension; stop the drug</td></tr>\n<tr><td>MR venography, for papilledema</td><td>Next</td><td><b>No venous sinus thrombosis</b></td><td>Required before calling it idiopathic or drug-induced; done with the MRI, before LP</td></tr>\n",
+    "why": "Workup order for papilledema: fields, drug history, MRI with MRV, then LP."
+   },
+   {
+    "scope": "brief:peds-headache-imaging",
+    "op": "insert_before",
+    "anchor": "<div class=\"pearls\"><span class=\"lbl\">Decision spine</span>",
+    "text": "<div class=\"pearls\"><span class=\"lbl\">Papilledema on a drug: the tell and the mimics</span> <b>Bilateral disc edema, decreased acuity, full fields, normal neurologic examination, on isotretinoin</b> &mdash; medication-induced intracranial hypertension; daily morning headache with nausea and vomiting, brief visual obscurations, pulsatile tinnitus, diplopia from a CN VI palsy, and headache worse lying flat are the pressure features &middot; <b>Mechanism</b> &mdash; impaired CSF resorption and venous hypertension; risk rises with obesity, recent weight gain and female sex after puberty &middot; <b>Optic chiasm glioma</b> &mdash; compression of the chiasm gives a <b>bitemporal field defect</b>; full fields exclude it &middot; <b>Optic neuritis</b> &mdash; acute painful vision loss, pain with eye movement, usually <b>one</b> eye; no morning headache or vomiting &middot; <b>Cluster headache</b> &mdash; unilateral periorbital attacks with autonomic signs, typically adult men; never papilledema &middot; <b>Viral encephalitis</b> &mdash; fever and altered mental status, both absent</div>\n",
+    "why": "Teaches the deciding findings of the source question and maps each original distractor to why it fails; no such block existed."
+   },
+   {
+    "scope": "brief:peds-headache-imaging",
+    "op": "replace",
+    "old": "the pain's severity never opens the gate, and a specific finding always does.</div>",
+    "new": "the pain's severity never opens the gate, and a specific finding always does. <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> covers vitamin A excess, the same pressure mechanism as the retinoid that caused papilledema in the isotretinoin question.</div>",
+    "why": "Cross-links the retinoid and vitamin A cause of intracranial hypertension."
+   }
+  ],
+  "items": [
+   {
+    "brief": "peds-headache-imaging",
+    "type": "dx",
+    "stem": "16 yo M taking oral isotretinoin for severe acne, 1 month of daily frontal headache worse in the morning with nausea, vomiting and brief blurring in one eye; bilateral optic disc edema, reduced acuity, full visual fields, normal neurologic examination, afebrile",
+    "key": "Medication effect",
+    "companion": "Isotretinoin-induced intracranial hypertension",
+    "d1": "Optic chiasm glioma",
+    "d2": "Optic neuritis",
+    "lead": "Which of the following is the most likely explanation for these findings?",
+    "src": "uworld",
+    "nid": "1476583171440 1476583249637 1483930588591 1483930592160 1483930600854 1550673179147 1554499214691 1575134484671"
+   },
+   {
+    "brief": "peds-headache-imaging",
+    "type": "test",
+    "stem": "15 yo M taking minocycline for acne, 3 weeks of daily headache worse on lying down, pulsatile whooshing in both ears, bilateral papilledema, full visual fields, normal neurologic examination",
+    "key": "MRI of the brain with MR venography",
+    "companion": "Suspected tetracycline-induced intracranial hypertension",
+    "d1": "Lumbar puncture with opening pressure",
+    "d2": "Noncontrast CT of the head",
+    "lead": "Which of the following is the most appropriate diagnostic study to obtain at this time?",
+    "src": "authored",
+    "nid": null
+   },
+   {
+    "brief": "peds-headache-imaging",
+    "type": "next",
+    "stem": "17 yo F taking isotretinoin, daily headache and bilateral papilledema; MRI of the brain and MR venography normal, opening pressure 330 mm H2O with normal CSF cell count, protein and glucose, visual fields full",
+    "key": "Discontinue isotretinoin",
+    "companion": "Drug-induced intracranial hypertension",
+    "d1": "Begin oral prednisone",
+    "d2": "Refer for CSF shunting",
+    "lead": null,
+    "src": "authored",
+    "nid": null
+   }
+  ],
+  "notes": "No contradiction with the source. Removed the warning flag on MR venography in the papilledema exit ramp because the source supports it. Added the LP cutoff over 250 mm H2O from the source; the pediatric criteria's higher cutoff was left out as specialist detail. Pairs-with sentence names Fat-Soluble Vitamin Deficiency and Toxicity (vitamin A)."
+ }
+]

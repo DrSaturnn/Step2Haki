@@ -1,0 +1,74 @@
+[
+ {
+  "kind": "backfill",
+  "edits": [
+   {
+    "scope": "brief:ig-panel",
+    "op": "replace",
+    "old": "data-nid=\"1487727647861 1487727650568 1517066913174 1517092031410 1487727549762 1517014317302\"",
+    "new": "data-nid=\"1487727647861 1487727650568 1517066913174 1517092031410 1487727549762 1517014317302 1487727609159 1517014985490 1539186050114 1555782396320\"",
+    "why": "Add Q6 source nids."
+   },
+   {
+    "scope": "brief:ig-panel",
+    "op": "replace",
+    "old": "atopic and autoimmune associations, granulomas, and lymphoma risk ⚠︎",
+    "new": "chronic diarrhea or IBD-like enteropathy; <b>poor growth</b> in children; asthma and lung fibrosis; autoimmune disease (rheumatoid arthritis, thyroiditis), granulomas, and lymphoma risk",
+    "why": "Q6 adds CVID features the row lacked (chronic GI disease, growth failure, asthma/fibrosis, named autoimmune disease); lymphoma risk is standard and in the source, so the flag is removed."
+   },
+   {
+    "scope": "brief:ig-panel",
+    "op": "insert_before",
+    "anchor": "&middot; <b>A few toddler ear infections that cleared promptly</b>",
+    "text": "&middot; <b>Sex</b> &mdash; XLA: boys only; CVID: <b>either sex</b>, so a girl with encapsulated-bacterial and Giardia infections after a healthy early childhood is CVID ",
+    "why": "Q6 patient is a 12-year-old girl; sex separates CVID from XLA."
+   },
+   {
+    "scope": "brief:ig-panel",
+    "op": "replace",
+    "old": "<div class=\"danger\"><span class=\"lbl\">Management, in one line</span> Management is not the fork this question tests, so in one sentence: <b>replace what is missing and cover what the defect exposes</b> — immunoglobulin replacement for any low-IgG defect plus antibiotic prophylaxis <i>(in-context; TMP-SMX as the agent is memory-sourced ⚠︎)</i>, no live vaccines ⚠︎, washed/IgA-depleted products instead of IVIG in selective IgA deficiency ⚠︎, and allogeneic HSCT as the only cure for CD40L deficiency ⚠︎.</div>",
+    "new": "<div class=\"pearls\"><span class=\"lbl\">Long-term treatment matched to the defect</span> <b>Common variable immunodeficiency and XLA</b> &mdash; lifelong <b>immunoglobulin replacement</b> (IV or subcutaneous) and prompt antibiotics for each infection; in CVID it cuts infections but not the autoimmune and lymphoma risk, so both stay on the follow-up list &middot; <b>Hyper-IgM syndrome (CD40 ligand deficiency)</b> &mdash; immunoglobulin replacement plus trimethoprim-sulfamethoxazole against Pneumocystis; hematopoietic stem cell transplant is the only cure &middot; <b>Selective IgA deficiency</b> &mdash; no immunoglobulin replacement; washed or IgA-deficient blood products if transfused &middot; <b>SCID and Wiskott-Aldrich syndrome</b> &mdash; <b>hematopoietic stem cell transplant</b>, which fixes the missing lymphocyte line; it is not used for CVID &middot; <b>Complete (athymic) DiGeorge syndrome</b> &mdash; <b>cultured thymus tissue transplant</b>; the defect is the thymus, not the marrow &middot; <b>Chronic granulomatous disease</b> &mdash; <b>interferon gamma</b> plus trimethoprim-sulfamethoxazole and itraconazole prophylaxis &middot; <b>Antiviral and antifungal prophylaxis</b> &mdash; belongs to impaired cellular immunity (SCID, T-cell defects, CGD), not to a pure antibody defect with bacterial and Giardia infections &middot; <b>Live vaccines</b> &mdash; withheld in major antibody defects and in T-cell or combined defects</div>",
+    "why": "Q6 tests long-term management, so the block that said management is not tested is replaced by a treatment-to-defect map covering the key (IVIG for CVID) and every distractor (HSCT for SCID, thymus transplant for DiGeorge, interferon gamma for CGD, antiviral/antifungal prophylaxis for cellular defects); unneeded flags on standard facts removed."
+   }
+  ],
+  "items": [
+   {
+    "brief": "ig-panel",
+    "type": "next",
+    "stem": "12 yo F, 2 weeks of nasal congestion now with thick green discharge, fever today and maxillary tenderness; two prolonged sinusitis episodes this year, recent giardiasis, pneumococcal bacteremia last year; asthma since age 3; normal development, fully immunized; height and weight at the 5th percentile; Hb 12, platelets 180,000, WBC 7,500",
+    "key": "Intravenous immunoglobulin",
+    "companion": "Common variable immunodeficiency; autoimmune and lymphoma risk persist on treatment",
+    "d1": "Hematopoietic stem cell transplantation",
+    "d2": "Interferon gamma therapy",
+    "lead": "Which of the following is most important in this patient's long-term management?",
+    "src": "uworld",
+    "nid": "1487727609159 1517014985490 1539186050114 1555782396320"
+   },
+   {
+    "brief": "ig-panel",
+    "type": "next",
+    "stem": "3 mo F after repair of truncus arteriosus, with a hypocalcemic seizure, recurrent oral thrush, absent TRECs on the newborn screen, no thymic shadow on chest x-ray, CD3+ T cells nearly absent and normal B-cell count",
+    "key": "Cultured thymus tissue transplantation",
+    "companion": "Complete DiGeorge syndrome; the defect is the thymus, not the marrow",
+    "d1": "Hematopoietic stem cell transplantation",
+    "d2": "Monthly immunoglobulin replacement",
+    "lead": "Which of the following is the most appropriate definitive treatment?",
+    "src": "authored",
+    "nid": null
+   },
+   {
+    "brief": "ig-panel",
+    "type": "dx",
+    "stem": "34 yo F with common variable immunodeficiency, few infections on monthly immunoglobulin replacement, now 3 months of fevers, night sweats and 5 kg weight loss with enlarging painless cervical and axillary lymph nodes and splenomegaly",
+    "key": "Non-Hodgkin lymphoma",
+    "companion": "Immunoglobulin replacement does not lower the lymphoma risk of CVID",
+    "d1": "Sarcoidosis",
+    "d2": "Tuberculous lymphadenitis",
+    "lead": null,
+    "src": "authored",
+    "nid": null
+   }
+  ],
+  "notes": "Replaced the 'Management, in one line' danger block, which stated management is not tested; Q6 tests long-term management, so it is now a treatment-to-defect pearls block mapping the key and all four distractors. Removed flags on standard facts (TMP-SMX, no live vaccines, washed products, HSCT cure, CVID lymphoma risk). CVID table row extended with source features; sex added to CVID or XLA pearls. No factual conflict with the source."
+ }
+]

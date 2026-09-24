@@ -1,0 +1,202 @@
+id,title,section,kind,shelf,items,types
+pmr,Polymyalgia Rheumatica,msk,topic,fm,7,dx:6 next:1
+biceps,Biceps Tendinitis,msk,topic,fm,6,next:3 dx:3
+cts,Carpal Tunnel Syndrome,msk,topic,fm,5,dx:4 next:1
+dequervain,De Quervain Tendinopathy,msk,topic,fm,6,dx:5 next:1
+meralgia,Meralgia Paresthetica,msk,topic,fm,6,dx:5 test:1
+scaphoid,Scaphoid Fracture,msk,topic,fm,6,next:2 mech:2 test:1 dx:1
+backpain,Low Back Pain: Red Flags,msk,topic,fm,6,dx:5 test:1
+hippos,Hip Positioning: Fracture vs. Dislocation,msk,topic,fm,6,dx:4 next:1 mech:1
+gtps,Pain Around the Hip and Thigh,msk,topic,fm,10,dx:9 next:1
+inflam-back,Inflammatory Back Pain &amp; Spondyloarthritis,msk,topic,fm,9,dx:8 test:1
+oa-pharm,Osteoarthritis Pharmacotherapy,msk,topic,fm,6,next:5 dx:1
+septic-bursitis,Septic Bursitis,msk,topic,fm,6,next:3 dx:3
+septic-hip,Septic Arthritis of the Hip,msk,topic,fm peds,9,dx:4 next:3 mech:2
+synovitis,Transient Synovitis Mirror twin,msk,topic,fm peds,9,dx:4 next:2 test:2 avoid:1
+limp,The Limping Child — Master Table,msk,topic,fm peds,8,dx:8
+sjia,Juvenile Idiopathic Arthritis,msk,topic,fm peds,13,dx:7 next:4 screen:1 test:1
+nursemaid,Nursemaid's Elbow,msk,topic,fm peds,6,dx:4 next:2
+scfe,Slipped Capital Femoral Epiphysis,msk,topic,fm peds,9,dx:5 next:2 screen:1 mech:1
+myositis-ossificans,The Post-Traumatic Limb Mass,msk,topic,fm peds,10,next:6 dx:2 mech:1 avoid:1
+growing-pains,Benign Limb Pain in a Child,msk,topic,fm peds,10,next:7 dx:1 mech:1 avoid:1
+bone-tumors,"Bone Tumors: Location, Film, Course",msk,topic,peds,15,dx:9 claim:2 mech:2 next:2
+scheuermann,Scheuermann Kyphosis,msk,topic,fm peds,6,dx:2 next:2 test:1 mech:1
+bs-septic-adult,The Acute Hot Joint (adult),msk,bs,fm,8,dx:5 next:2 avoid:1
+bs-lbp-acute,Acute Low Back Pain with No Red Flags,msk,bs,fm,9,next:7 dx:2
+bs-synovitis-mgmt,Transient Synovitis: Management,msk,bs,fm peds,8,dx:5 next:3
+bs-torticollis,Congenital Muscular Torticollis and Plagiocephaly,msk,bs,peds,10,dx:8 screen:1 next:1
+bs-brachial-plexus,Brachial Plexus Injury at Birth,msk,bs,peds,6,dx:3 next:2 claim:1
+shoulder-rom,Shoulder Pain: the Range-of-Motion Rule,msk,topic,fm,0,
+growth,Growth &amp; Developmental Milestones,peds,topic,fm peds,9,dx:6 next:2 mech:1
+neonatal-maternal-labs,Maternal Carryover in Newborn Labs,peds,topic,fm peds,10,next:5 dx:2 mech:1 avoid:1 test:1
+newborn-hormone,Maternal Hormone Effects in the Newborn,peds,topic,fm peds,10,next:5 dx:3 mech:1 avoid:1
+aneuploidy,Aneuploidy: Reading the Newborn,peds,topic,peds,16,dx:11 mech:2 test:2 next:1
+malform-syndromes,Multiple Anomalies in a Newborn,peds,topic,peds,9,dx:5 next:2 test:1 mech:1
+bs-learning,Specific Learning Disorder,peds,bs,peds,9,dx:8 next:1
+bs-nat-fracture,Suspected Child Abuse: Fractures and the Next Step,peds,bs,fm peds,7,dx:3 next:2 mech:1 avoid:1
+bs-shock,Shock in Children,peds,bs,peds,9,next:6 dx:3
+bs-infant-feeding,Infant Feeding at Six Months,peds,bs,fm peds,9,next:7 screen:1 avoid:1
+bs-tanner,Sexual Maturity Rating,peds,bs,fm peds,9,next:5 stage:4
+bs-ftt,Faltering Weight,peds,bs,fm peds,9,next:5 dx:4
+bs-preterm-followup,Prematurity Follow-Up and Corrected Age,peds,bs,fm peds,16,next:6 dx:4 mech:3 screen:2 test:1
+aq-infant-hypotonia,Hypotonia in an Infant,peds,aq,peds,16,test:5 dx:5 avoid:2 next:2 screen:2
+chf,Heart Failure: Reducing Hospitalization,cv,topic,fm,6,next:6
+ascvd,Statins &amp; the 10-Year ASCVD Risk Assessment,cv,topic,fm,6,next:6
+angina,Anginal Equivalents &amp; Stress Test Selection,cv,topic,fm,6,test:3 dx:2 stage:1
+ie-ppx,Infective Endocarditis Prophylaxis,cv,topic,fm,6,next:4 screen:2
+secondary-htn,Secondary Hypertension,cv,topic,fm,10,dx:6 test:1 next:1 avoid:1 mech:1
+dvt,DVT &amp; Pulmonary Embolism,cv,topic,fm,6,test:3 dx:2 next:1
+ped-murmur,Innocent vs Pathologic Murmurs,cv,topic,fm peds,17,dx:10 next:4 mech:3
+cyanotic-chd,Cyanotic Congenital Heart Disease,cv,topic,fm peds,8,dx:5 mech:2 next:1
+right-murmurs,Right-Sided Murmurs: Pulmonic Stenosis &amp; Tricuspid Regurgitation,cv,topic,fm,6,dx:5 next:1
+htn-drugs,Hypertension: Workup &amp; Drug Choice,cv,topic,fm,6,next:6
+newborn-cyanosis,Cyanosis in the Newborn,cv,topic,fm peds,18,next:9 dx:5 mech:3 test:1
+kawasaki,Kawasaki Disease,cv,topic,fm peds,7,dx:4 next:3
+arf,Acute Rheumatic Fever,cv,topic,fm peds,7,dx:4 test:1 mech:1 screen:1
+myocarditis,New Heart Failure in a Child,cv,topic,fm peds,8,dx:4 next:2 avoid:1 mech:1
+del22q11,22q11.2 Deletion Syndrome,cv,topic,fm peds,8,dx:3 next:2 test:1 avoid:1 mech:1
+bs-murmur-map,Murmur Man and Post-ToF Pulmonic Regurgitation,cv,bs,fm,13,dx:12 next:1
+bs-shunt-timing,Congenital Shunts and the Transitional Clock,cv,bs,peds,11,next:6 mech:3 dx:2
+copd,COPD: Which Interventions Improve Survival,pulm,topic,fm,6,next:5 claim:1
+asthma-copd,Asthma vs. COPD,pulm,topic,fm,9,dx:5 test:3 next:1
+cough,Chronic Cough,pulm,topic,fm,10,dx:6 next:3 test:1
+pneumoconiosis,Occupational Lung Disease,pulm,topic,fm,11,dx:7 next:2 screen:1 mech:1
+rhinitis,Allergic Rhinitis,pulm,topic,fm,6,next:3 dx:2 claim:1
+sinopulm-structural,Recurrent Sinopulmonary Infection,pulm,topic,fm peds,12,next:5 dx:3 mech:2 test:1 screen:1
+hypoxemia-mech,Mechanisms of Hypoxemia,pulm,topic,fm peds,10,next:5 test:2 mech:2 avoid:1
+abpa,When Antibiotics Fail in a Structural Lung,pulm,topic,fm peds,10,next:5 dx:2 test:1 screen:1 mech:1
+scd-dyspnea,Chronic Dyspnea in Sickle Cell Disease,pulm,topic,fm peds,10,next:6 test:1 dx:1 mech:1 avoid:1
+airway,Pediatric Airway &amp; Noisy Breathing,pulm,topic,fm peds,20,dx:10 mech:5 next:2 test:1 screen:1 avoid:1
+mycoplasma,Pediatric Community-Acquired Pneumonia,pulm,topic,fm peds,9,mech:5 dx:4
+uri,Pediatric Upper Respiratory Infection,pulm,topic,fm peds,12,dx:6 next:4 claim:1 avoid:1
+asthma,Asthma: Severity Classification,pulm,topic,fm peds,6,stage:4 next:2
+bpd,Bronchopulmonary Dysplasia,pulm,topic,fm peds,10,dx:5 next:3 screen:1 claim:1
+bs-nrd,Neonatal Respiratory Distress,pulm,bs,peds,13,next:8 dx:4 mech:1
+liver-preg,Liver Disease in Pregnancy,gi,topic,fm,9,dx:6 next:3
+masld,MASLD / Metabolic Fatty Liver,gi,topic,fm,6,dx:3 next:2 claim:1
+cholestasis,Cholestasis &amp; the LFT Patterns,gi,topic,fm,9,dx:6 next:2 test:1
+zenker,Zenker Diverticulum,gi,topic,fm,7,dx:3 test:1 avoid:1 next:1 mech:1
+infant-stool,"Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency",gi,topic,fm peds,10,next:7 dx:1 avoid:1 mech:1
+fap,Familial Adenomatous Polyposis,gi,topic,fm,8,next:4 screen:2 dx:2
+peutz-jeghers,Peutz-Jeghers Syndrome,gi,topic,peds fm,7,dx:3 next:1 mech:1 screen:1 avoid:1
+feeding-refusal,Toddler Food Refusal,gi,topic,fm peds,10,next:5 test:1 dx:1 avoid:1 mech:1 claim:1
+rlq-pain,Right Lower Quadrant Pain,gi,topic,fm peds,13,next:8 dx:2 mech:2 avoid:1
+peds-constipation,Constipation in a Child,gi,topic,fm peds,11,next:7 dx:2 mech:1 avoid:1
+cyclic-vomiting,Cyclic Vomiting Syndrome,gi,topic,peds,6,dx:3 mech:1 next:1 claim:1
+neonatal-jaundice,Neonatal Jaundice,gi,topic,fm peds,12,mech:3 dx:3 test:3 next:2 avoid:1
+neonatal-bowel,The Distended Abdomen in a Newborn or Infant,gi,topic,peds,24,dx:9 next:6 test:5 mech:2 avoid:1 screen:1
+occult-gi-bleed,Occult GI Bleeding in a Child,gi,topic,peds fm,11,test:4 next:3 dx:2 mech:1 avoid:1
+bs-galactosemia,The Sick Jaundiced Neonate with a Positive Screen,gi,bs,peds,5,dx:3 mech:1 claim:1
+bs-impaction,Fecal Impaction &amp; Overflow Diarrhea,gi,bs,fm,7,dx:5 next:2
+bs-tef,Tracheoesophageal Fistula with Esophageal Atresia,gi,bs,peds,10,next:6 dx:3 screen:1
+bs-umbilical,Umbilical Findings in a Newborn,gi,bs,peds,8,next:5 test:2 dx:1
+bs-fat-soluble-vitamins,Fat-Soluble Vitamin Deficiency and Toxicity,gi,bs,fm peds,9,mech:3 test:2 next:2 dx:2
+bs-water-soluble-vitamins,Water-Soluble Vitamin Deficiency,gi,bs,fm peds,9,dx:4 next:3 test:1 screen:1
+bs-wilson,"Wilson Disease: Copper in the Liver, Brain and Eye",gi,bs,fm peds,7,next:2 mech:1 test:1 dx:1 screen:1 avoid:1
+pyelo,Pyelonephritis: Route &amp; Disposition,renal,topic,fm,9,next:7 mech:1 avoid:1
+bph,BPH &amp; Acute Urinary Retention,renal,topic,fm,6,dx:4 next:2
+nephropathy,Diabetic Nephropathy Screening,renal,topic,fm,6,screen:3 next:2 test:1
+hematuria,Hematuria,renal,topic,fm peds,10,dx:4 test:4 next:2
+scrotum,Acute Scrotum &amp; Scrotal Mass,renal,topic,fm peds,9,dx:7 next:2
+hypercalcemia,Hypercalcemia Workup,renal,topic,fm,6,dx:4 next:2
+vur,Vesicoureteral Reflux,renal,topic,fm peds,10,next:5 mech:3 screen:1 dx:1
+peds-uti-recurrent,Recurrent Urinary Infection in a Child,renal,topic,fm peds,13,next:9 dx:2 mech:1 avoid:1
+enuresis,Nocturnal Enuresis,renal,topic,fm peds,6,dx:5 next:1
+polyuria,Polyuria: Water or Solute,renal,topic,fm peds,10,next:5 dx:2 avoid:1 test:1 mech:1
+peds-aki,NSAID Prerenal AKI in a Child,renal,topic,fm peds,7,dx:5 next:2
+nephrotic-child,Nephrotic Syndrome in a Child,renal,topic,fm peds,11,dx:4 test:2 mech:2 next:2 avoid:1
+bs-puv,Posterior Urethral Valves and Potter Sequence,renal,bs,peds,14,dx:9 next:3 mech:2
+bs-pyelo-organism,Pyelonephritis: Naming the Organism,renal,bs,fm,7,mech:3 dx:3 next:1
+bs-incontinence,Incontinence &amp; the Postvoid Residual,renal,bs,fm,9,dx:8 screen:1
+bs-enuresis,Primary Monosymptomatic Enuresis: Management,renal,bs,fm peds,9,next:5 dx:4
+bs-nephritic,Acute Nephritic Syndrome in a Child,renal,bs,peds,6,next:3 dx:1 test:1 avoid:1
+bs-abdominal-mass,Abdominal Mass in a Young Child,renal,bs,fm peds,6,dx:4 test:2
+aq-puffy-eyes,Child with Puffy Eyes,renal,aq,fm peds,17,dx:8 next:3 test:2 claim:1 mech:1 avoid:1 screen:1
+thyroid,Thyroid Mimics &amp; Discriminators,endo,topic,fm,11,dx:7 next:3 test:1
+levo,Levothyroxine Titration,endo,topic,fm,6,next:6
+gynecomastia,Gynecomastia vs. Male Breast Cancer,endo,topic,fm,6,dx:5 claim:1
+prolactin,Hyperprolactinemia,endo,topic,fm,9,dx:6 next:2 mech:1
+osteoporosis,Osteoporosis Screening,endo,topic,fm,8,screen:4 next:3 dx:1
+preg-thyroid,Levothyroxine in Pregnancy,endo,topic,fm,5,next:3 dx:1 mech:1
+congenital-hypothyroid,Congenital Hypothyroidism,endo,topic,fm peds,10,next:5 dx:2 test:1 avoid:1 mech:1
+tumor-syndromes,Inherited Tumor Syndromes,endo,topic,fm peds,22,dx:10 next:5 mech:4 screen:3
+precocious-puberty,Precocious Puberty,endo,topic,fm peds,10,next:6 dx:2 test:1 avoid:1
+homocystinuria,Marfanoid Habitus: Homocystinuria,endo,topic,fm peds,7,dx:3 mech:1 next:1 test:1 avoid:1
+bs-dexa-highrisk,DEXA: When Screening Starts Early,endo,bs,fm,9,next:5 screen:4
+bs-dm-bundle,Diabetes: the Annual Care Bundle,endo,bs,fm,8,next:4 screen:3 dx:1
+bs-short-stature,Short Stature and Growth Velocity,endo,bs,peds,9,dx:3 test:3 next:2 mech:1
+anemia-thrombocytopenia,Anemia with Thrombocytopenia,heme,topic,fm peds,10,next:5 mech:2 dx:2 avoid:1
+drug-hemolysis,Drug-Induced Immune Hemolysis,heme,topic,fm peds,10,next:6 test:1 avoid:1 dx:1 mech:1
+dipstick-mismatch,Hemoglobinuria: the Dipstick-Microscopy Mismatch,heme,topic,fm peds,7,dx:3 next:2 test:1 mech:1
+microcytic-anemia,Microcytic Anemia: Iron First,heme,topic,fm peds,13,dx:5 test:3 next:3 mech:2
+factor-inhibitor,Hemophilia A Inhibitor,heme,topic,fm peds,18,next:6 test:5 dx:4 mech:2 avoid:1
+transfusion,Transfusion Reactions,heme,topic,fm,8,next:4 dx:2 mech:1 avoid:1
+bs-leukemia,Pediatric Acute Lymphoblastic Leukemia,heme,bs,peds,20,dx:11 next:3 test:2 mech:2 avoid:1 stage:1
+bs-spherocytosis,Hereditary Spherocytosis,heme,bs,peds,3,dx:1 mech:1 test:1
+bs-sickle-trait,Sickle Cell Trait versus Disease,heme,bs,fm peds,15,dx:13 claim:1 mech:1
+aq-bruising,Bruising and Purpura in a Child,heme,aq,fm peds,17,dx:5 test:5 next:5 claim:1 avoid:1
+tb,Tuberculosis,id,topic,fm,4,next:2 screen:2
+meningitis,Bacterial Meningitis,id,topic,fm peds,15,dx:6 test:3 next:3 mech:3
+hiv-vax,Vaccines in HIV,id,topic,fm,6,next:6
+dtap,DTaP: Contraindication vs. Precaution,id,topic,fm peds,6,stage:6
+cervicitis,Acute Cervicitis,id,topic,fm,5,next:3 dx:2
+ig-panel,The Immunoglobulin Panel,id,topic,fm peds,25,next:9 dx:9 avoid:2 mech:2 test:2 screen:1
+rmsf,Tick-Borne Fever and Rash,id,topic,fm peds,11,dx:5 next:3 avoid:1 mech:1 test:1
+lymphadenitis,Enlarged Lymph Nodes: Reading the Pattern,id,topic,fm peds,19,dx:11 next:3 mech:3 avoid:1 test:1
+herpangina,Oral Vesicles in a Child,id,topic,fm peds,9,dx:5 next:2 mech:1 avoid:1
+cgd,Recurrent Abscesses and Granulomas,id,topic,fm peds,18,dx:8 next:4 mech:3 test:2 avoid:1
+bs-pta,Peritonsillar Abscess and the Deep Neck Spaces,id,bs,fm peds,11,dx:8 mech:1 test:1 next:1
+bs-torch,Congenital CMV and the TORCH Discriminations,id,bs,peds,20,dx:10 next:5 mech:2 test:2 screen:1
+bs-neonatal-sepsis,Neonatal Sepsis and Its Mimics,id,bs,peds,8,next:4 dx:2 avoid:1 mech:1
+bs-fever-rash-arthralgia,"Fever, Rash and Joint Pain in a Child or Adolescent",id,bs,fm peds,8,dx:5 mech:1 next:1 test:1
+bs-exanthems,Exanthems in a Child,id,bs,fm peds,10,dx:5 next:5
+bs-anaphylaxis,Anaphylaxis and Its Mimics,id,bs,fm peds,11,next:4 mech:3 dx:2 test:1 avoid:1
+bs-isolation,Isolation Precautions,id,bs,fm peds,7,next:6 avoid:1
+bs-foodborne,Foodborne Diarrhea: Source and Organism,id,bs,fm peds,7,next:3 dx:2 mech:1 avoid:1
+bs-febrile-infant,The Febrile Infant — Finding the Source,id,bs,peds,9,test:3 next:3 dx:2 avoid:1
+aq-infant-fever,Fever in an Infant,id,aq,fm peds,18,next:7 test:4 dx:3 claim:2 avoid:2
+hearing,Hearing Loss &amp; Otosclerosis,neuro,topic,fm,9,dx:8 mech:1
+redeye,The Red Eye,neuro,topic,fm peds,11,dx:9 mech:1 avoid:1
+cluster,Headache Types &amp; Cluster Headache,neuro,topic,fm,6,dx:5 next:1
+sellar-mass,Sellar and Suprasellar Masses,neuro,topic,fm peds,10,next:5 dx:2 avoid:1 screen:1 mech:1
+peds-headache-imaging,Headache in a Child: What Earns Imaging,neuro,topic,fm peds,13,next:7 test:3 dx:2 avoid:1
+cholesteatoma,Cholesteatoma and Chronic Ear Drainage,neuro,topic,fm peds,10,next:6 dx:2 mech:1 avoid:1
+febrile-seizure,Seizure with Fever in a Child,neuro,topic,fm peds,14,next:10 dx:1 mech:1 avoid:1 claim:1
+cerebral-palsy,Cerebral Palsy and the MRI Pattern,neuro,topic,fm peds,12,next:5 dx:4 mech:1 avoid:1 screen:1
+abrs-complications,Sinusitis with Intracranial Extension,neuro,topic,fm peds,12,dx:8 next:2 mech:1 test:1
+vpshunt,VP Shunt Complications,neuro,topic,fm peds,11,next:8 mech:1 dx:1 test:1
+retinitis-pigmentosa,Night Blindness,neuro,topic,fm peds,8,dx:4 next:2 mech:1 screen:1
+tics,Tics in a School-Age Child,neuro,topic,fm peds,8,next:4 dx:2 mech:1 avoid:1
+bs-tethered,Tethered Cord and Closed Spinal Dysraphism,neuro,bs,peds,10,dx:9 next:1
+bs-reye,Cerebral Edema in a Child — Reye Syndrome,neuro,bs,fm peds,10,dx:7 mech:2 claim:1
+bs-peds-stroke,Stroke in a Child or Adolescent,neuro,bs,fm peds,8,dx:5 test:1 next:1 mech:1
+bs-posterior-fossa,Posterior Fossa Localization,neuro,bs,peds,9,dx:3 next:3 test:2 mech:1
+aq-child-headache,Headache in a School-Age Child,neuro,aq,peds,17,dx:9 next:3 test:2 mech:1 claim:1 screen:1
+psoriasis,Scaly Rash &amp; Psoriasis,derm,topic,fm,11,dx:7 next:2 test:1 avoid:1
+cellulitis,Cellulitis &amp; the Depth Ladder,derm,topic,fm,11,mech:6 dx:3 next:2
+footulcer,Diabetic Foot Ulcer,derm,topic,fm,7,dx:6 next:1
+eczemaherp,Atopic Dermatitis Complications,derm,topic,fm peds,9,dx:7 next:2
+peds-alopecia,Patchy Hair Loss in a Child,derm,topic,fm peds,14,next:5 dx:4 mech:2 avoid:1 test:1 screen:1
+neonatal-rash,Benign Neonatal Rashes,derm,topic,fm peds,13,dx:7 next:6
+diaper-dermatitis,Diaper Dermatitis,derm,topic,fm peds,8,next:4 dx:2 mech:1 avoid:1
+bs-scabies,Scabies,derm,bs,fm peds,8,dx:5 next:1 claim:1 mech:1
+preg-vax,Vaccines &amp; Timing in Pregnancy,obgyn,topic,fm,10,next:6 screen:3 dx:1
+cervical,Cervical Cancer Screening,obgyn,topic,fm,6,next:4 screen:2
+pmb,Postmenopausal Bleeding,obgyn,topic,fm,6,next:4 dx:2
+ectopic,Ectopic Pregnancy,obgyn,topic,fm,4,next:3 dx:1
+hpv,HPV Vaccination &amp; Series Rules,obgyn,topic,fm peds,6,screen:4 next:2
+adolescent-aub,Adolescent Abnormal Uterine Bleeding,obgyn,topic,fm,10,next:6 test:2 dx:2
+contraception,Contraception &amp; DMPA,obgyn,topic,fm,10,next:6 avoid:1 test:1 dx:1 claim:1
+fibroids,Uterine Fibroids,obgyn,topic,fm,9,next:6 dx:3
+teratogens,Teratogenic Exposures,obgyn,topic,fm,8,dx:5 next:1 avoid:1 screen:1
+primary-amenorrhea,Primary Amenorrhea,obgyn,topic,fm,9,next:4 dx:4 mech:1
+bs-cervical-gate,Cervical Screening: the Age-21 Floor,obgyn,bs,fm,11,next:6 screen:5
+bs-tdap-preg,Tdap in Pregnancy at 10 Weeks,obgyn,bs,fm,10,next:5 screen:4 claim:1
+bs-pid,Pelvic Inflammatory Disease,obgyn,bs,fm peds,9,next:6 dx:2 screen:1
+smoking,Ranking Preventive Interventions,prev,topic,fm,6,next:4 claim:1 screen:1
+lipid-screen,Lipid Screening &amp; Vaccine Eligibility by Condition,prev,topic,fm,6,screen:6
+preop,Preoperative Thresholds,prev,topic,fm,6,next:5 dx:1
+elder,Elder Abuse &amp; Mandated Reporting,prev,topic,fm,6,next:5 claim:1
+vegan,The Vegan Diet,prev,topic,fm,5,dx:3 screen:2
+bs-adolescent-confid,Adolescent Confidentiality,prev,bs,fm peds,11,next:11
+bs-adolescent-vax,Adolescent Immunization and the Age Platform,prev,bs,fm peds,9,next:6 screen:2 mech:1
