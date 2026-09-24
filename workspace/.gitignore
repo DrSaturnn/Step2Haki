@@ -2,3 +2,8 @@ node_modules/
 __pycache__/
 *.pyc
 /scratch/
+# local-only (tools/local_only.txt): vendor text and history-only drafts; never commit
+repair/sources/
+repair/LEDGER-*
+repair/workup/s[0-9]*
+local/

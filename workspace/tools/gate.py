@@ -115,7 +115,7 @@ def load_ref(ref):
         return None
     if os.path.isfile(ref):
         return read_page(ref)
-    r = subprocess.run(['git', '-C', REPO, 'show', '%s:index.html' % ref], capture_output=True)
+    r = subprocess.run(['git', '-C', REPO, 'show', '%s:./index.html' % ref], capture_output=True)
     if r.returncode != 0:
         raise SystemExit('gate: cannot read base %r: %s' % (ref, r.stderr.decode().strip()))
     return r.stdout.decode('utf-8')
