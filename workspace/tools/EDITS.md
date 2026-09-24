@@ -4,7 +4,7 @@ One JSON file per worker or task: `{"edits": [op, op, ...]}`. Ops run in order; 
 
 Rules
 - Anchors (`find`, `anchor`) are verbatim snippets of the current HTML, entities included (`&amp;`, `&middot;`, `&gt;`). Each must occur **exactly once inside its brief** (or inside one item when `item` is given); otherwise the op fails and nothing is written.
-- Never delete a brief or an item. Never edit an id. Changing a keyed answer or a distractor label requires `set_attr` `data-item-version` `+1` on that item.
+- Never delete a brief or an item. Never edit an id. Any meaning change to an item (stem, keyed answer or distractor label) requires `set_attr` `data-item-version` `+1`; formatting alone does not (gate enforces the key and label part). Preserve `data-src`, `data-nid`, `data-recon` and unknown attributes.
 - New item ids come from `tools/idgen.py` via `add_item`; do not write ids by hand.
 - Check before finishing: `python3 tools/verify_edits.py <edits.json>` (applies to a scratch copy, runs gate and render, flags near-duplicate items). Loop until it prints PASS.
 

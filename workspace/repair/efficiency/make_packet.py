@@ -40,6 +40,40 @@ def section(md, heading):
     return '\n'.join(lines[i:j]).strip()
 
 
+def demote(md, top=3):
+    """Shift markdown headings so the shallowest becomes level `top` (fenced code untouched)."""
+    lines, fence = md.split('\n'), False
+    levels = []
+    for l in lines:
+        if l.lstrip().startswith('```'):
+            fence = not fence
+        elif not fence:
+            m = re.match(r'^(#{1,6})\s', l)
+            if m:
+                levels.append(len(m.group(1)))
+    if not levels:
+        return md
+    shift = max(0, top - min(levels))
+    out, fence = [], False
+    for l in lines:
+        if l.lstrip().startswith('```'):
+            fence = not fence
+        elif not fence:
+            m = re.match(r'^(#{1,6})(\s.*)$', l)
+            if m:
+                l = '#' * min(6, len(m.group(1)) + shift) + m.group(2)
+        out.append(l)
+    return '\n'.join(out)
+
+
+def backfill_format(fmt):
+    """EDITS.md without its title and without the new_brief op (backfills never add briefs)."""
+    fmt = re.sub(r'^# .*\n', '', fmt, count=1, flags=re.M).strip()
+    fmt = re.sub(r'\n## new_brief\b.*?(?=\n## |\Z)', '', fmt, flags=re.S).strip()
+    fmt = re.sub(r' Save batch files as .*?in name order\.', '', fmt)
+    return demote(fmt, 3)
+
+
 def main(argv):
     if len(argv) != 7:
         print(__doc__)
@@ -60,12 +94,12 @@ def main(argv):
         'format at the end, run `python3 tools/verify_edits.py %s` from the repo root and loop until it prints PASS. '
         'Return a 3 to 6 line report.' % (edits_name, edits_name),
         '## Task\n%s' % task,
-        '## Rules\n%s' % re.sub(r'^# .*\n', '', rules, count=1).strip(),
-        '## Source question (%s)\n%s' % (os.path.basename(src), q),
+        '## Rules\n%s' % demote(re.sub(r'^# .*\n', '', rules, count=1, flags=re.M).strip(), 3),
+        '## Source question (%s)\n%s' % (os.path.basename(src), demote(q, 3)),
         '## Brief `%s` (%s): current HTML\nAnchors must be copied verbatim from this HTML and be unique inside it.\n\n```html\n%s\n```'
         % (bid, b.title, html[b.start:b.end]),
         '## All briefs (id | title | kind), for Pairs-with titles and links\n```\n%s\n```' % titles,
-        '## Edit format\n%s' % re.sub(r'^# .*\n', '', fmt, count=1).strip(),
+        '## Edit format (backfill ops only)\n%s' % backfill_format(fmt),
     ]
     with open(out, 'w', encoding='utf-8') as f:
         f.write('\n\n'.join(parts) + '\n')

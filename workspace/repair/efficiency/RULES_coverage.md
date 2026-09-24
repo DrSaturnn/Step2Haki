@@ -1,126 +1,133 @@
 # RULES_worker.md coverage map
 
-Every rule or section of the two governing skills, mapped to the rules-sheet line that carries it, or "omitted: <why>" (only where irrelevant to a one-question backfill into an existing brief). Skill hashes are in the RULES_worker.md header; when either changes, walk this table again.
+Every rule or section of the two governing skills, mapped to the rules-sheet line that carries it, or "omitted: <why>" (only where irrelevant to a one-question backfill into an existing brief). Skill sha256 hashes are in the provenance comment at the top of RULES_worker.md; when either changes, walk this table again. Amended 2026-09-24 after an independent audit (distractor analysis, merging, metadata, mechanism alternatives, criteria tile, revealed explanation, row sizing, de-escalation, boundary pass, precedence reconciliation, trapline form, figure option, prose notes).
+
+Where CURRENT_STATE.md's standing rules (the user's newer rules) differ from a skill, the sheet follows CURRENT_STATE: source precedence (W7, reconciled with the skill's "never silently replace a source mechanism from memory" as flag-and-report) and plain captions (W28).
 
 ## board-brief/SKILL.md
 
 | Rule / section | Rules sheet |
 | --- | --- |
-| Purpose: teach what decides the question, discrimination and management | W1, W2 |
-| Register (concise tutor, less likely / not appropriate / excluded, bold deciders, causal verbs) | W24 |
-| Depth preference (fast rule + one exception, deeper after reveal, existing table, no second table) | W2 |
-| HTML transfer: presentation and metadata contracts | W15, W17, W14; format in tools/EDITS.md |
-| Part 1 Step 0 scope the concept; title check | W4 (title untouched; every word true of new items) |
-| Step 1 route (discriminator vs ladder; task distinctions) | W2, W10, W14 |
-| Step 2 ledger / deciding comparison | W2, W8 |
-| Step 3 miss diagnosis; reported/inferred/unknown; performance metadata | W9 |
-| Check existing coverage; default to existing brief | W1, W16 |
-| Correct-answer case (no miss analysis, no padding) | W9, W3 |
-| Step 4 sketch bank, assign types, next-share advisory, no invented variants | W10, W13, W16 |
-| Step 5 draft in template | W1, W2 (backfill edits existing blocks) |
-| Step 6 boundary pass | W2 (one exception), W28 (report) |
-| Step 7 self-check, fix don't annotate | W28 (verify loop), W15 |
-| Part 2 template: card | omitted: optional, never rendered as a block; backfills do not add cards |
-| Part 2 template: decision point, criteria, pertinent +/-, discriminator table, management block, spine, bank, distractor analysis, decoy, pearls, pairs with, transferable rule | W2, W18, W19, W21, W22 (existing blocks are edited in place) |
-| Outside-the-brief block | W9, W28 (report) |
-| Length calibration (no minimum, no padding) | W2, W3 |
-| Shared contract: immutable ids, version bump, labels, lead-in, status, preserve src/nid/unknown attrs | W14, W15, W17, W12 (status) |
-| Arrow grammar: direct-child arrows; keyed = segment 2 | W17 |
-| Prose notes are not questions | W10 (only typed items via add_item) |
-| Clinical rule guard (negative test, completed tier, culture-before-antibiotics scope) | W8 |
-| Rule 1 meta-discussion outside the brief | W9, W28 |
+| Purpose: teach what decides the question | W1, W2 |
+| Register (concise tutor; less likely / not appropriate / excluded; bold deciders; causal verbs) | W28 |
+| Depth preference (fast rule + one exception; deeper after reveal; existing table; no second table) | W2 |
+| HTML transfer: presentation and metadata contracts | W17, W18, W20; format in the packet's edit-format section |
+| Part 1 Step 0 scope the concept; title check | W4 |
+| Step 1 route; task distinctions (initial / confirmatory test, next step, organism, mechanism) | W2, W13, W17 |
+| Step 2 ledger / deciding comparison | W2, W9 |
+| Step 3 miss diagnosis; reported / inferred / unknown | W12 |
+| Check existing coverage; default to existing brief | W1, W19 |
+| Correct-answer case (no miss analysis, no padding) | W12, W3 |
+| Step 4 bank sketch; types; next-share advisory; no invented variants | W13, W16, W19 |
+| Step 5 draft | W1, W2 |
+| Step 6 boundary pass, reported outside the brief | W2 (one exception), W32 (boundary-pass result in the report) |
+| Step 7 self-check; fix, don't annotate | W32, W18 |
+| Part 2 card | omitted: optional, never rendered; backfills add no card |
+| Part 2 decision point, criteria, pertinent +/-, table, management block, spine, pearls, pairs with, rule | W2, W21, W22, W23, W26 (existing blocks edited in place) |
+| Part 2 distractor analysis: every original distractor, task-specific, pattern only if it fits | W25 |
+| Part 2 decoy note | W25 (per-option reason), W11; separate block omitted: a backfill adds traplines, not a new decoy section |
+| Outside-the-brief block | W12, W32 |
+| Length calibration | W2, W3 |
+| Shared contract: immutable ids; version bump on meaning change; labels; lead-in; status values; preserve src/nid/unknown attrs; reconstruction flags | W15, W17, W18, W20 |
+| Arrow grammar; keyed = segment 2 | W20 |
+| Prose notes are a separate content kind (no ids, distractors, prompts) | W19 |
+| B0 vignette as a distinct case block | W5, W24 |
+| Clinical rule guard | W9 |
+| Rule 1 meta-discussion outside the brief | W12, W32 |
 | Rule 2 every sentence earns its place | W3 |
-| Rule 3 criteria tile holds criteria only | W18 (tile grammar); content rule folded into W3 |
-| Rule 4 tables sized to the discrimination | W2 |
-| Rule 5 author options with the question; context sufficiency | W11, W13 |
-| Rule 6 distractors from supported comparisons | W11 |
-| Rule 6a one best answer, F1 to F6 | W11, W12 |
-| Rule 7 pattern names describe temptation | W21 |
-| Rule 8 triggers are numbers or named failures; study gap | W8 |
-| Rule 9 numbers are liabilities; ⚠︎; digit collision; flags never silently dropped | W7 |
-| Rule 10 links load-bearing; bidirectional; discriminator as question | W22 |
-| Rule 11 paraphrase; no letters or percentages in Q; no vendor figures | W5, W20 |
-| Rule 12 source and provenance separate; UWorld/local as references | W6, W9 |
-| Rule 13 bank tests the way the exam asks; type by options; next rungs; threshold ⚠︎ | W10, W13, W7 |
-| Rule 13 avoid items key the forbidden act | W10 |
-| Rule 13a complete labels; rationale needs a verified consumer | W15 |
-| Rule 13b stem does not advertise options; shuffled-review context | W13 |
-| Rule 13c one precise prompt via lead-in | W14 |
-| Revealed explanation: decisive finding first, closest competitor | W2 (companion segment after reveal) |
-| Rule 13d answer-cue review, every cue class | W15 |
-| Rule 13d batch before/after cue metrics | omitted: batch/renderer-change measurement run by the orchestrator, not a one-question worker |
+| Rule 3 criteria tile holds criteria only, tested criterion first | W22 |
+| Rule 4 tables sized to the discrimination; non-discriminating row becomes a sentence | W2 |
+| Rule 5 author options with the question; context sufficiency; source-blocked items stay blocked | W14, W16, W15 (needs_source) |
+| Rule 6 distractors from supported comparisons; mechanism/organism alternatives of the same kind; no invented rows | W14 |
+| Rule 6a one best answer; F1 to F6 | W14, W15 |
+| Rule 7 pattern names describe temptation | W25 |
+| Rule 8 triggers are numbers or named failures; stop/de-escalation criteria | W10 |
+| Rule 9 numbers; ⚠︎; digit collision; flags never silently dropped | W8 |
+| Rule 10 links; bidirectional; discriminator as question | W26 |
+| Rule 11 paraphrase; no letters or percentages; no vendor figures | W6, W24 |
+| Rule 12 source and provenance separate | W7, W12 |
+| Rule 13 type by options; next rungs; threshold ⚠︎ | W13, W16, W8 |
+| Rule 13 avoid items key the forbidden act | W13 |
+| Rule 13a complete labels; rationale needs a verified consumer | W18 |
+| Rule 13b no option advertising; shuffled-review context | W16 |
+| Rule 13c one precise prompt | W17 |
+| Revealed explanation: decisive finding first; closest competitor; no manufactured mechanism | W11 |
+| Rule 13d answer-cue review | W18 |
+| Rule 13d batch before/after cue metrics | omitted: batch or renderer measurement run by the orchestrator |
 | Rule 14 brief scoped to concept | W4 |
-| 4.1 item authoring (companion, variant prompts) | W10, W13, W2 |
-| 4.2 canonical tuple | omitted: add_item carries the same six fields plus metadata; tuple form is for chat/Word output |
-| Distractor rules 1 to 8 | W11, W15 (7, 8) |
-| F1 to F6 table and F6 test | W11 |
-| 4.3 dual rendering; never author two copies of the bank | W17 (single chain line); rendering is automatic |
-| 4.4 distractor analysis and pattern catalog | W21 |
-| New pattern naming | W21 (leave unnamed rather than coin) |
-| 5.1 discriminator table spec; data-mask="3" | W19, W2 |
-| 5.2 management block (classify first, fingerprint, ladder, gates, exit ramps) | W8, W19, W2 |
-| 5.3 criteria tile scale rule | W23 (scale owed in place), W18 |
-| Part 6 worked brief | omitted: full-brief example; backfills edit an existing brief shown in the packet |
+| 4.1 item authoring (companion, variant prompts) | W13, W16, W2 |
+| 4.2 canonical tuple | omitted: add_item carries the same fields; tuple form is chat/Word output |
+| Distractor rules 1 to 8 | W14, W18 |
+| F1 to F6 and the F6 test | W14 |
+| 4.3 dual rendering; one authored bank | W20 (single chain line) |
+| 4.4 distractor analysis and pattern catalog | W25 |
+| New pattern naming | W25 (pill only when a species fits) |
+| 5.1 discriminator table spec; data-mask | W23, W2 |
+| 5.2 management block (classify first, fingerprint, ladder, gates, exit ramps, de-escalation) | W9, W10, W23, W2 |
+| 5.3 criteria tile scale rule | W27, W21, W22 |
+| Part 6 worked brief | omitted: full-brief example; backfills edit the brief shown in the packet |
 | 7.1 teaching value | W3 |
-| 7.2 read the ledger | W8 |
-| 7.3 trigger archaeology | W8 |
-| 7.4 naming patterns | W21 |
-| 7.5 document is an organism (twins) | W22 |
-| 7.6 exam framing and source support | W6 |
+| 7.2 read the ledger | W9 |
+| 7.3 trigger archaeology | W10 |
+| 7.4 naming patterns | W25 |
+| 7.5 document is an organism (twins) | W26 |
+| 7.6 exam framing; do not replace a source mechanism from memory; record discrepancies | W7 |
 | 7.7 calibration | W2 |
-| 7.8 behavioral coaching | W9 |
+| 7.8 behavioral coaching | W12 |
 | 7.9 control document growth | W1 |
-| 8.1 provenance classes; study aids not clinical evidence | W6, W7 |
-| 8.2 quality bar 1 to 12 | W2, W20, W4, W18, W19, W21, W11, W7, W22, W28, W1, W15 |
-| 8.3 placement on the page | W1 (existing brief); new placement omitted: no new briefs in a backfill |
-| 8.4 poster output | omitted: poster/PNG output, not page backfill |
-| 8.5 tone | W24 |
+| 8.1 provenance classes | W7, W8 |
+| 8.2 quality bar 1 to 12 | 1 W2; 2 W24; 2a W4; 3 W22; 4 W10, W23; 5 W25; 6 W13 to W18; 7 W8; 8 W26; 9 W32; 10 W2, W12; 11 W1; 12 W18 |
+| 8.3 placement on the page | W1; new placement omitted: no new briefs in a backfill |
+| 8.4 poster output | omitted: poster PNG, not page backfill |
+| 8.5 tone | W28 |
 | Part 9 optional card | omitted: see Part 2 card |
 
 ## study-page-builder/SKILL.md
 
 | Rule / section | Rules sheet |
 | --- | --- |
-| Use the current file; scoped edits | W27, W28 (packet holds the current brief HTML) |
-| Approved authoring preference; preserve blur-and-tap | W2, W19, W20 |
-| Architecture: transform, review module, script discovery | omitted: worker does not edit scripts; gate/render check them |
-| Transform edits are exceptional | W27 (content only); gate enforces node --check |
-| Shelf routing, ?shelf=, deep links | omitted: runtime behavior; W4 keeps data-shelf |
-| Figures (inline SVG, fignote) | W5 (tables or spine over drawings; no vendor images) |
-| Adding a Part I brief (skeleton) | omitted: backfills never add briefs (W1) |
-| id permanence | W4, W17 |
+| Use the current file; scoped edits | W31, W32 |
+| Approved authoring preference; preserve blur-and-tap | W2, W23, W24 |
+| Architecture: transform, review module, script discovery | omitted: workers do not edit scripts; gate and render check them |
+| Transform edits are exceptional | W31 (content only) |
+| Shelf routing, deep links | omitted: runtime behavior; W4 keeps data-shelf |
+| Figures (inline SVG, collapsed, fignote, theme classes) | W6 |
+| Adding a Part I brief | omitted: backfills never add briefs (W1) |
+| id permanence | W4, W20 |
 | data-shelf | W4 |
-| Every table titled | W19 |
-| Source vignette rules | W20 |
-| Criteria tile grammar | W18 |
-| Scale peek; scale owed in place; point at criteria; scale gap is an authoring gap | W23 |
-| Bank item grammar (direct-child arrows, plain-text options) | W17 |
-| Typed and identified items; lead-in; status | W10, W14, W12 |
-| Distractors hand-authored; cue review; capitalizing key is safe; keyed = segment 2 | W11, W15, W17 |
-| One prompt, existing tables | W14, W2 |
-| Labels and revealed explanations; verify consumers | W15 |
-| Trapline form; bare pills upgraded | W21 |
-| Pairs-with exact h4; reverse mention; <i> for missing partner | W22 |
-| Preserve study interaction | W19, W20 (markup only; no controls) |
-| Column-driven masking; data-mask | W19 |
-| `·` and ` — ` structural | W18 |
-| Inline flags t-em, t-peds | W23 (span class allowed); omitted detail: flags only where the brief already uses them |
-| Escaping and allowlisted tags | W23 |
+| Every table titled | W23 |
+| Source vignette rules (between p.sub and .dp; never masks; ~110 words; no letters or %) | W24, W5 |
+| Criteria tile (criteria only, tested criterion first, `·` separators, commas inside) | W21, W22 |
+| Scale peek; scale owed in place; point at criteria; scale gap is an authoring gap | W27 |
+| Bank item grammar | W20 |
+| Typed and identified items; lead-in; objective; status (needs_source vs needs_repair) | W13, W15, W17 |
+| Untyped `<li>` prose notes | W19 |
+| Distractors hand-authored; cue review; capitalizing the key is safe; keyed = segment 2 | W14, W18, W20 |
+| One prompt, existing tables | W17, W2 |
+| Labels and revealed explanations; verify consumers | W18, W11 |
+| Trapline form (`{option} — {why}`); bare pills upgraded | W25 |
+| Pairs-with exact h4; reverse mention; `<i>` for a missing partner | W26 |
+| Preserve study interaction | W23, W24 |
+| Column-driven masking | W23 |
+| `·` and ` — ` structural | W21, W25 |
+| Inline flags t-em, t-peds | W27 (span class allowed) |
+| Escaping and allowlisted tags | W27 |
 | Legibility / CSS rules | omitted: CSS is not edited in a backfill |
 | Front matter | omitted: not edited |
-| Shared contract (same as board-brief) | W14, W15, W17 |
-| Structural parser axlib.py | omitted: tools/pagelib.py replaces it; worker edits by anchor |
-| Clinical rule guard | W8 |
+| Shared contract (preserve src, nid, recon, unknown attrs; version on meaning change) | W20, W15 |
+| Structural parser axlib.py | omitted: tools/pagelib.py replaces it; workers edit by anchor |
+| Clinical rule guard | W9 |
 | Adding a Part II brief; bands | omitted: no new briefs |
-| Sidebar and counts | omitted: no new briefs (new_brief op handles nav) |
-| Distractor-pattern pills; adding a species costs four edits | W21 (use existing species only) |
-| Mapping board-brief output onto the page | W18, W20, W21, W22 |
-| Bulk insertions / converter / three traps | omitted: batch conversion tooling, not a single backfill; mask trap in W19 |
-| Scoped edits by immutable id within exact bounds | W28 (anchors unique inside the brief), W17 |
-| Parsing the page (depth-matching) | omitted: tooling (pagelib) |
-| Corpus-wide sweeps | omitted: sweep workflow, not a backfill |
+| Sidebar and counts | omitted: no new briefs |
+| Distractor-pattern pills; adding a species costs four edits | W25 (existing species only) |
+| Mapping board-brief output onto the page (distractor analysis to traplines, vignette never absorbed) | W24, W25, W26, W21 |
+| Bulk insertions / converter / mask trap / pairs-with titles | omitted: batch tooling; mask trap in W23, titles in W26 |
+| Merging two briefs: the stem the .dp argues about stays; the other lives in the bank | W5 |
+| Scoped edits within exact bounds | W32, W20 |
+| Parsing the page | omitted: tooling (pagelib) |
+| Corpus-wide sweeps | omitted: sweep workflow |
 | Review mode, profiles, sync | omitted: runtime module |
 | Deployment | omitted: orchestrator ships |
 | Restructuring the document | omitted: not a backfill |
-| Verification loop 0 to 5 | W28 (verify_edits runs gate and jsdom render); step 4 real-browser check omitted: orchestrator |
-| Copyright and provenance | W5, W7, W20 |
+| Verification loop 0 to 5 | W32 (verify_edits runs gate and jsdom render); real-browser step omitted: orchestrator |
+| Copyright and provenance | W6, W8, W24 |
