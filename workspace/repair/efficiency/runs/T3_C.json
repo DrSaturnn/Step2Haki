@@ -1,0 +1,79 @@
+[
+ {
+  "kind": "backfill",
+  "edits": [
+   {
+    "scope": "brief:tumor-syndromes",
+    "op": "replace",
+    "old": "data-nid=\"1484188738574 1484188738575 1484188773693 1584150122461\"",
+    "new": "data-nid=\"1484188738574 1484188738575 1484188773693 1584150122461 1484188767774\"",
+    "why": "Record the Q5 source nids on the brief div (1584150122461 already present; add 1484188767774)."
+   },
+   {
+    "scope": "brief:tumor-syndromes",
+    "op": "replace",
+    "old": "<tr><td>Other phakomatoses <i>(tuberous sclerosis, NF2)</i></td><td>Ash-leaf macules, shagreen patch, cardiac rhabdomyoma ⚠︎ · bilateral vestibular schwannomas ⚠︎</td><td><b>The skin or the eighth nerve, not the retina</b></td><td>Neither lesion is present</td></tr>",
+    "new": "<tr><td>Tuberous sclerosis</td><td>Autosomal dominant TSC1 or TSC2 mutation, inherited or de novo; benign hamartomas of brain, eye, skin, heart and kidney</td><td><b>Ash-leaf spots, facial angiofibromas, shagreen patch, periungual fibromas</b>; calcified subependymal nodules, seizures, cardiac rhabdomyoma, renal angiomyolipoma</td><td>No hypopigmented or fibrous skin lesion; the retinal lesion is a hemangioblastoma</td></tr>\n<tr><td>Other phakomatoses <i>(NF2)</i></td><td>Bilateral vestibular schwannomas ⚠︎</td><td><b>The eighth nerve, not the retina</b></td><td>No eighth-nerve lesion is present</td></tr>",
+    "why": "Split tuberous sclerosis out of the lumped phakomatoses row into its own differential row (tells, organs); NF2 keeps its row and flag. Rhabdomyoma is now in-context from the UWorld explanation, so no flag on the TSC row."
+   },
+   {
+    "scope": "brief:tumor-syndromes",
+    "op": "insert_before",
+    "anchor": "<div class=\"danger\"><span class=\"lbl\">Management, in one line</span>",
+    "text": "<div class=\"pearls\"><span class=\"lbl\">Tuberous sclerosis</span> <b>Skin</b> &mdash; ash-leaf (hypopigmented) spots, facial angiofibromas over the cheeks, a shagreen patch (orange-peel plaque on the lower back), and periungual fibromas, which appear in adolescence or adulthood &middot; <b>Brain</b> &mdash; calcified subependymal nodules along the ventricles on CT, and cortical tubers, better seen on MRI; epilepsy in most, often beginning as infantile spasms, though a first seizure can come at any age; intellectual disability, autism and behavior disorders &middot; <b>Growth to watch</b> &mdash; a subependymal nodule can enlarge into a subependymal giant cell astrocytoma that blocks CSF outflow; the resulting obstructive hydrocephalus needs resection &middot; <b>Heart and kidney</b> &mdash; cardiac rhabdomyomas; renal angiomyolipomas &middot; <b>Diagnosis</b> &mdash; the clinical constellation, genetic testing, or both &middot; <b>Surveillance</b> &mdash; skin and eye examinations, serial brain and kidney MRI, a baseline echocardiogram with serial ECGs, a baseline EEG, and neuropsychiatric screening</div>\n<div class=\"pearls\"><span class=\"lbl\">Tuberous sclerosis versus its mimics</span> <b>Neurofibromatosis type 1</b> &mdash; also autosomal dominant with seizures, but the skin lesions are <b>pigmented</b> café-au-lait macules and cutaneous neurofibromas on the trunk, with optic gliomas; a hypopigmented spot or a nail-fold fibroma is not NF1 &middot; <b>Von Hippel-Lindau</b> &mdash; autosomal dominant, but its tumors are cerebellar and retinal <b>hemangioblastomas</b>, with no characteristic skin lesion &middot; <b>Ataxia-telangiectasia</b> &mdash; autosomal <b>recessive</b>; childhood ataxia, oculomotor problems and telangiectasias, not hamartomas &middot; <b>Infective endocarditis</b> &mdash; fever, dyspnea and a murmur; its nail finding is a <b>splinter hemorrhage</b> under the nail, not a fibroma growing from the nail fold</div>\n",
+    "why": "Q5 backfill: TSC skin and organ findings, SEGA complication, diagnosis and surveillance, then the split from the four original distractors (NF1, VHL, A-T, endocarditis)."
+   }
+  ],
+  "items": [
+   {
+    "brief": "tumor-syndromes",
+    "type": "dx",
+    "stem": "17 yo M found confused at the bottom of the stairs after an unwitnessed fall, with a forehead contusion, a firm fibroma growing from under a toenail, and calcified nodules lining the lateral ventricles on head CT",
+    "key": "Tuberous sclerosis",
+    "companion": "Periungual fibroma plus calcified subependymal nodules; the fall was probably a seizure",
+    "d1": "Neurofibromatosis type 1",
+    "d2": "Ataxia-telangiectasia",
+    "lead": "Which of the following is the most likely underlying condition?",
+    "src": "uworld",
+    "nid": "1484188767774 1584150122461"
+   },
+   {
+    "brief": "tumor-syndromes",
+    "type": "dx",
+    "stem": "5-month-old with clusters of brief flexion spasms and four hypopigmented oval macules on the trunk",
+    "key": "Tuberous sclerosis",
+    "companion": "Infantile spasms with ash-leaf spots; pale macules, not pigmented or vascular ones",
+    "d1": "Sturge-Weber syndrome",
+    "d2": "Neurofibromatosis type 1",
+    "lead": null,
+    "src": "authored",
+    "nid": null
+   },
+   {
+    "brief": "tumor-syndromes",
+    "type": "mech",
+    "stem": "14 yo with tuberous sclerosis and 3 weeks of morning headaches and vomiting, papilledema, and an enlarging enhancing mass arising from the wall of the lateral ventricle with enlarged lateral ventricles on MRI",
+    "key": "Subependymal giant cell astrocytoma",
+    "companion": "Obstructive hydrocephalus; treated by resection",
+    "d1": "Cortical tuber",
+    "d2": "Cerebellar hemangioblastoma",
+    "lead": "Which of the following most likely explains these new symptoms?",
+    "src": "authored",
+    "nid": null
+   },
+   {
+    "brief": "tumor-syndromes",
+    "type": "screen",
+    "stem": "8-year-old with ash-leaf spots, facial angiofibromas and a first seizure, newly diagnosed with tuberous sclerosis",
+    "key": "Serial brain and kidney MRI, echocardiogram, ECG and EEG",
+    "companion": "Surveillance follows the organs the hamartomas occupy, plus skin, eye and neuropsychiatric review",
+    "d1": "Retinal exams, metanephrines, and brain, spine and abdominal MRI",
+    "d2": "Yearly eye and skin exams, imaging only for new symptoms",
+    "lead": "Which of the following is the most appropriate monitoring for this patient?",
+    "src": "authored",
+    "nid": null
+   }
+  ],
+  "notes": "Q5 (tuberous sclerosis) backfilled into tumor-syndromes. Edits: brief data-nid gains 1484188767774 (1584150122461 was already there, but no TSC item or row carried it); the lumped 'Other phakomatoses (tuberous sclerosis, NF2)' row is split into a Tuberous sclerosis row and an NF2-only row (NF2 flag kept); two .pearls blocks inserted before the management line: TSC skin, brain, SEGA complication, heart and kidney, diagnosis, surveillance; and TSC versus the four original distractors (NF1, VHL, ataxia-telangiectasia, endocarditis). All TSC content is in-context from the UWorld explanation, so the old row's rhabdomyoma flag is not carried to the new row. Items: 4 (source dx item with both nids, keyed tuberous sclerosis against NF1 and ataxia-telangiectasia, the two most tempting originals; infant ash-leaf/spasms dx; SEGA complication mech; TSC surveillance screen). Cue review: SEGA key is the longest option (legitimate clinical term; distractors are real TSC and VHL brain lesions); surveillance key is shorter than both distractors. Possible conflict: the Pairs-with block still proposes a separate neurocutaneous-syndromes brief as a candidate twin; TSC now partly lives here, which the assembler or reviewer may want to reconcile. Existing TSC mentions in precocious-puberty and sellar-mass briefs are consistent with this content. verify_edits.py: CLEAN."
+ }
+]

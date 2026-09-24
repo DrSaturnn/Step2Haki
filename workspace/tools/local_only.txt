@@ -1,0 +1,7 @@
+# Local-only paths: never tracked in git (and removed from all history), kept on disk and in
+# /mnt/user-data/outputs/axbx-local-only.tar.gz. Patterns are relative to workspace/; a trailing /
+# means a directory; * ? [ ] are globs. tools/vendor_scan.py treats these as the vendor sources side.
+repair/sources/          # vendor question text (UWorld/NBME sNN_questions.md), Aquifer case text (aq/), local audits
+repair/LEDGER-*          # historical ledgers: quote source stems, vitals and explanation lines (scan: 9 of 27 carry source text, up to 20 shared 10-word shingles; all removed as a class)
+repair/workup/s[0-9]*    # historical per-batch workup drafts: quote source case and explanation text (scan: 14 of 28 carry source text, up to 19 shared; all removed as a class)
+local/                   # history-only local files exported before the history rewrite

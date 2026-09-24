@@ -1,0 +1,67 @@
+[
+ {
+  "kind": "backfill",
+  "edits": [
+   {
+    "scope": "brief:ig-panel",
+    "op": "replace",
+    "old": "data-nid=\"1487727647861 1487727650568 1517066913174 1517092031410 1487727549762 1517014317302\"",
+    "new": "data-nid=\"1487727647861 1487727650568 1517066913174 1517092031410 1487727549762 1517014317302 1487727609159 1517014985490 1539186050114 1555782396320\"",
+    "why": "Add the Q6 source nids (CVID long-term management) to the brief div."
+   },
+   {
+    "scope": "brief:ig-panel",
+    "op": "replace",
+    "old": "<div class=\"danger\"><span class=\"lbl\">Management, in one line</span> Management is not the fork this question tests, so in one sentence: <b>replace what is missing and cover what the defect exposes</b> — immunoglobulin replacement for any low-IgG defect plus antibiotic prophylaxis <i>(in-context; TMP-SMX as the agent is memory-sourced ⚠︎)</i>, no live vaccines ⚠︎, washed/IgA-depleted products instead of IVIG in selective IgA deficiency ⚠︎, and allogeneic HSCT as the only cure for CD40L deficiency ⚠︎.</div>",
+    "new": "<div class=\"danger\"><span class=\"lbl\">Long-term treatment, matched to the defect</span> <b>CVID and XLA</b> &mdash; lifelong <b>immunoglobulin replacement</b> (IVIG); it replaces antibody but does not remove the autoimmune and malignancy risk of CVID &middot; <b>CD40 ligand deficiency</b> &mdash; immunoglobulin replacement plus antibiotic prophylaxis (TMP-SMX ⚠︎); allogeneic HSCT is the only cure ⚠︎ &middot; <b>SCID</b> &mdash; <b>hematopoietic stem cell transplant</b> as early as possible, with antiviral and antifungal prophylaxis until then &middot; <b>Complete DiGeorge (athymic)</b> &mdash; <b>cultured thymus tissue transplant</b>: the marrow precursors are normal but have no thymus to mature in, so the graft is thymus, not marrow &middot; <b>Chronic granulomatous disease</b> &mdash; <b>interferon gamma</b> with antibacterial and antifungal prophylaxis &middot; <b>Selective IgA deficiency</b> &mdash; <b>no IVIG</b>; washed or IgA-depleted blood products ⚠︎ &middot; <b>Any of these defects</b> &mdash; no live vaccines ⚠︎</div>",
+    "why": "Q6 tests long-term management, so the one-line management note becomes a masked defect-to-treatment grid: IVIG for CVID, HSCT for SCID, thymus transplant for DiGeorge, interferon gamma for CGD (all in the Q6 explanation); keeps the existing flags."
+   },
+   {
+    "scope": "brief:ig-panel",
+    "op": "replace",
+    "old": "atopic and autoimmune associations, granulomas, and lymphoma risk ⚠︎",
+    "new": "chronic diarrhea or an IBD-like enteropathy; <b>asthma</b> and later lung fibrosis; <b>autoimmune disease</b> (rheumatoid arthritis, thyroiditis); poor growth; granulomas ⚠︎; autoimmune disease and lymphoma risk persist on IVIG",
+    "why": "Adds the CVID features from the Q6 explanation missing from the differential row: chronic diarrhea/IBD-like disease, asthma and fibrosis, autoimmune disease (RA, thyroid), poor growth, and risk that persists on IVIG."
+   }
+  ],
+  "items": [
+   {
+    "brief": "ig-panel",
+    "type": "next",
+    "stem": "12 yo girl with 2 weeks of nasal congestion, now thick green discharge, fever and maxillary tenderness; two prolonged sinusitis episodes this year, recent giardiasis, and pneumococcal bacteremia last year; asthma since age 3; normal milestones and fully immunized; height and weight at the 5th percentile; hemoglobin, platelets and WBC normal",
+    "key": "Intravenous immunoglobulin replacement",
+    "companion": "Common variable immunodeficiency: B cells fail to become plasma cells, so IgG and IgA and/or IgM are low",
+    "d1": "Hematopoietic stem cell transplantation",
+    "d2": "Interferon gamma therapy",
+    "lead": "Which of the following is most important in this patient's long-term management?",
+    "src": "uworld",
+    "nid": "1487727609159 1517014985490 1539186050114 1555782396320"
+   },
+   {
+    "brief": "ig-panel",
+    "type": "next",
+    "stem": "6 wk old F with truncus arteriosus, a hypocalcemic seizure in the first week, and cleft palate; the newborn screen showed absent TRECs, and flow cytometry shows almost no CD3+ T cells",
+    "key": "Cultured thymus tissue transplantation",
+    "companion": "Complete DiGeorge syndrome: marrow precursors are normal but have no thymus to mature in",
+    "d1": "Hematopoietic stem cell transplantation",
+    "d2": "Lifelong immunoglobulin replacement",
+    "lead": "Which of the following is the most appropriate definitive treatment?",
+    "src": "authored",
+    "nid": null
+   },
+   {
+    "brief": "ig-panel",
+    "type": "mech",
+    "stem": "15 yo girl with common variable immunodeficiency diagnosed 3 years ago, on monthly intravenous immunoglobulin with no serious infection since starting it",
+    "key": "Lymphoma",
+    "companion": "IVIG replaces antibody but not immune regulation; autoimmune disease and malignancy risk persist",
+    "d1": "Invasive Aspergillus infection",
+    "d2": "Cryptosporidium sclerosing cholangitis",
+    "lead": "Which of the following remains a long-term risk despite adequate replacement therapy?",
+    "src": "authored",
+    "nid": null
+   }
+  ],
+  "notes": "Q6 (CVID long-term management, user correct). Backfilled into ig-panel: brief-div nids, a defect-to-long-term-treatment grid replacing the one-line management note, and missing CVID features in the differential row. Source item keys IVIG against the two most-chosen distractors (HSCT, interferon gamma). Authored items: complete DiGeorge (thymus transplant vs HSCT, absent TRECs makes SCID the mimic) and CVID residual lymphoma risk on IVIG. CGD treatment items already live on cgd, so none added here. Flags kept: TMP-SMX agent, HSCT cure for CD40L, IgA-depleted products, live vaccines, granulomas. Lymphoma left unflagged as standard CVID teaching (explanation says malignancy)."
+ }
+]

@@ -1,0 +1,94 @@
+[
+ {
+  "kind": "backfill",
+  "edits": [
+   {
+    "scope": "brief:neonatal-jaundice",
+    "op": "replace",
+    "old": "<div class=\"brief\" id=\"neonatal-jaundice\" data-shelf=\"fm peds\" data-nid=\"\">",
+    "new": "<div class=\"brief\" id=\"neonatal-jaundice\" data-shelf=\"fm peds\" data-nid=\"1482976984253 1486591392171 1512679081304 1517959834181 1555449924265\">",
+    "why": "Record the source nids on the brief."
+   },
+   {
+    "scope": "brief:neonatal-jaundice",
+    "op": "replace",
+    "old": "<td><b>Raised direct fraction, acholic stools</b></td><td>Urgent evaluation; Kasai before about 60 days</td>",
+    "new": "<td><b>Raised direct fraction, acholic stools</b>; high GGT, normal reticulocytes; small or absent gallbladder</td><td>Urgent evaluation; Kasai before about 60 days; most eventually need transplant</td>",
+    "why": "Extend the existing biliary atresia row with the lab pattern, ultrasound finding and long-term course from the source."
+   },
+   {
+    "scope": "brief:neonatal-jaundice",
+    "op": "insert_before",
+    "anchor": "<tr><td>Intraoperative cholangiogram, after ultrasound and HIDA</td>",
+    "text": "<tr><td>Liver panel with GGT, and reticulocyte count</td><td>Next</td><td>Direct bilirubin and <b>GGT high</b>, reticulocytes normal, aminotransferases normal or mildly high</td><td>Duct obstruction without hemolysis: biliary atresia; a normal GGT points to PFIC</td></tr>\n<tr><td>Abdominal ultrasound</td><td>Supports</td><td>Small or <b>absent gallbladder</b>, triangular cord sign</td><td>Biliary atresia: proceed to cholangiography</td></tr>\n",
+    "why": "The source question tests the direct bilirubin / GGT / reticulocyte pattern and the ultrasound; the workup lacked both steps."
+   },
+   {
+    "scope": "brief:neonatal-jaundice",
+    "op": "insert_after",
+    "anchor": "<td>Biliary atresia: Kasai before about 60 days</td></tr>",
+    "text": "\n<tr><td>Liver biopsy</td><td>Confirms</td><td><b>Bile duct proliferation</b>, portal edema and inflammation, fibrosis</td><td>Biliary atresia: the alternative to cholangiography</td></tr>",
+    "why": "Source names liver biopsy as the other definitive study."
+   },
+   {
+    "scope": "brief:neonatal-jaundice",
+    "op": "insert_before",
+    "anchor": "<h5 class=\"authored-hdr\">Scenario bank</h5>",
+    "text": "<div class=\"pearls\"><span class=\"lbl\">Reading the lab pattern</span> <b>Biliary atresia</b> &mdash; direct bilirubin high, <b>GGT high</b>, reticulocytes normal; well infant, pale stools, small or absent gallbladder &middot; <b>PFIC</b> &mdash; direct bilirubin high with a paradoxically <b>normal GGT</b>; gallbladder present &middot; <b>HLH</b> &mdash; direct bilirubin and GGT high but reticulocytes <b>low</b> from marrow failure; cytopenias, fever, an ill infant &middot; <b>Hemolysis</b> &mdash; <b>indirect</b> bilirubin with high reticulocytes &middot; <b>Breast-milk jaundice</b> &mdash; indirect, normal GGT and reticulocytes, normal stools and gallbladder &middot; <b>After Kasai</b> &mdash; bile flow often fails over time; most children eventually need a liver transplant</div>\n",
+    "why": "Distractor map for the source question: each option pattern tied to the disease it represents and why it fails here."
+   },
+   {
+    "scope": "brief:neonatal-jaundice",
+    "op": "insert_after",
+    "anchor": "Cholestasis is the right category of liver problem but the wrong bilirubin fraction.</span></div>",
+    "text": "\n<div class=\"trapline\"><span class=\"pill p-unchecked\">Unchecked attribute</span><span class=\"trapwhy\">PFIC also gives a direct hyperbilirubinemia, but its GGT is normal; a high GGT with an absent gallbladder is atresia.</span></div>",
+    "why": "The most tempting distractor (25%) was PFIC; the GGT is the unchecked attribute."
+   },
+   {
+    "scope": "brief:neonatal-jaundice",
+    "op": "insert_after",
+    "anchor": "is the infant well, and is any of it direct?",
+    "text": " <b>Hereditary Spherocytosis</b> carries the Coombs-negative hemolysis pattern: indirect bilirubin with a high reticulocyte count.",
+    "why": "Cross-link for the hemolysis distractor."
+   }
+  ],
+  "items": [
+   {
+    "brief": "neonatal-jaundice",
+    "type": "test",
+    "stem": "4 week old term boy, exclusively breastfed, weight at the 25th percentile, scleral icterus worsening over weeks, stools now paler and less frequent, afebrile and well-appearing, jaundice to the chest, enlarged liver, total bilirubin 12.5 mg/dL, ultrasound with no gallbladder seen and hepatomegaly",
+    "key": "High direct bilirubin, high GGT, normal reticulocytes",
+    "companion": "Biliary atresia: obstructed ducts raise direct bilirubin and GGT with no hemolysis",
+    "d1": "High direct bilirubin, normal GGT, normal reticulocytes",
+    "d2": "High direct bilirubin, high GGT, low reticulocytes",
+    "lead": "Which of the following sets of laboratory findings is most likely in this patient?",
+    "src": "uworld",
+    "nid": "1482976984253 1486591392171 1512679081304 1517959834181 1555449924265"
+   },
+   {
+    "brief": "neonatal-jaundice",
+    "type": "test",
+    "stem": "5 week old with jaundice, pale stools and dark urine, direct bilirubin 4 mg/dL, high GGT, normal reticulocyte count, ultrasound showing a small gallbladder and a triangular cord sign",
+    "key": "Intraoperative cholangiography",
+    "companion": "Biliary atresia: cholangiography is the gold standard before Kasai",
+    "d1": "Hepatobiliary scintigraphy",
+    "d2": "Magnetic resonance cholangiography",
+    "lead": "Which of the following is most likely to confirm the diagnosis?",
+    "src": "authored",
+    "nid": null
+   },
+   {
+    "brief": "neonatal-jaundice",
+    "type": "next",
+    "stem": "7 week old with acholic stools, direct hyperbilirubinemia and hepatomegaly; intraoperative cholangiogram shows no contrast reaching the duodenum",
+    "key": "Kasai hepatoportoenterostomy",
+    "companion": "Biliary atresia: restore bile drainage early; transplant usually follows later",
+    "d1": "Immediate liver transplantation",
+    "d2": "Ursodeoxycholic acid therapy",
+    "src": "authored",
+    "nid": null
+   }
+  ],
+  "notes": "No conflict with the source. Extended the existing biliary atresia table row and the workup table (GGT/reticulocyte panel, ultrasound, biopsy) instead of adding a new table; distractor map as a pearls block. Existing brief prose uses British spellings (haemoglobin, colour); left untouched, additions are American. Source item typed test with a custom lead since it asks for a lab pattern."
+ }
+]

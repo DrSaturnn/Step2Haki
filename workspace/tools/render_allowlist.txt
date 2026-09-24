@@ -1,0 +1,3 @@
+# render.js baseline allowlist: pre-existing findings in the NBME-build baseline (commit d233a96).
+# Format: <code> <key>  # reason. Content is not fixed by the toolchain rebuild; fix in a content pass, then delete the line.
+not-gridded bs-umbilical:.crit  # items use "<b>Term</b>: value" (colon), not " — ", so the tile renders as a fact list and its definitions do not mask

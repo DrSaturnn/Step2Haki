@@ -1,0 +1,169 @@
+{
+  "T1": {
+    "A": {
+      "checklist": [
+        {"point": "direct bili high + GGT high + retics normal", "score": 1},
+        {"point": "acholic stools / 2-8 weeks", "score": 1, "note": "acholic stools present; 2-8 week onset window not stated, only Kasai before ~60 days"},
+        {"point": "small or absent gallbladder / triangular cord", "score": 1},
+        {"point": "intraoperative cholangiogram (or biopsy) confirms", "score": 1},
+        {"point": "Kasai (eventual transplant)", "score": 1},
+        {"point": "distractor map (PFIC normal GGT, HLH, hemolysis, breast milk indirect)", "score": 1, "note": "all four covered in 'Reading the lab pattern'"}
+      ],
+      "checklist_score": 6,
+      "scope": "pass",
+      "accuracy": "pass",
+      "voice": "pass; minor: stray label fragment 'Unchecked attribute' before the PFIC sentence, and the PFIC normal-GGT point is repeated in three places",
+      "item_defects": [
+        "Item 3 lead is None (relies on default next-step lead); acceptable but not explicit"
+      ],
+      "critical": []
+    },
+    "B": {
+      "checklist": [
+        {"point": "direct bili high + GGT high + retics normal", "score": 1},
+        {"point": "acholic stools / 2-8 weeks", "score": 1},
+        {"point": "small or absent gallbladder / triangular cord", "score": 1},
+        {"point": "intraoperative cholangiogram (or biopsy) confirms", "score": 1, "note": "cholangiography gold standard, biopsy supports"},
+        {"point": "Kasai (eventual transplant)", "score": 1},
+        {"point": "distractor map (PFIC normal GGT, HLH, hemolysis, breast milk indirect)", "score": 0, "note": "PFIC and HLH covered; hemolysis and breast-milk jaundice (indirect patterns) absent from edits and items"}
+      ],
+      "checklist_score": 5,
+      "scope": "pass",
+      "accuracy": "pass",
+      "voice": "pass",
+      "item_defects": [
+        "Item 3 distractor 'Liver transplantation' (no 'immediate/primary' qualifier) sits against an explanation saying most children need transplant later; slightly arguable, A's 'Immediate liver transplantation' is cleaner"
+      ],
+      "critical": []
+    },
+    "preference": "A",
+    "why": "A covers the full distractor map, including the indirect patterns (hemolysis, breast-milk jaundice) that account for two answer options, while B leaves them out. B's 'gold-standard' lead for the biopsy distractor is a nice touch but doesn't make up for the gap."
+  },
+  "T2": {
+    "A": {
+      "checklist": [
+        {"point": "drug list (retinoids/vitamin A, tetracyclines, growth hormone)", "score": 1},
+        {"point": "bilateral papilledema with full fields vs chiasm lesion", "score": 1},
+        {"point": "MRI with MR venography before LP", "score": 1},
+        {"point": "LP opening pressure over 250 with normal CSF", "score": 1},
+        {"point": "stop the drug (weight loss, acetazolamide)", "score": 1},
+        {"point": "optic neuritis painful, usually unilateral", "score": 1}
+      ],
+      "checklist_score": 6,
+      "scope": "pass; borderline: optic nerve sheath fenestration / CSF shunting for worsening vision goes beyond the source, though Step 2 does sometimes test it",
+      "accuracy": "pass",
+      "voice": "fail: the replaced sentence keeps an aphorism ('the pain's severity never opens the gate, and a specific finding always does'); it was probably inherited, but this edit rewrites the sentence and keeps it",
+      "item_defects": [
+        "Item 1 key 'Medication effect' is vaguer than the named-diagnosis distractors (matches the source question, so acceptable)",
+        "Item 3 lead is None"
+      ],
+      "critical": []
+    },
+    "B": {
+      "checklist": [
+        {"point": "drug list (retinoids/vitamin A, tetracyclines, growth hormone)", "score": 1},
+        {"point": "bilateral papilledema with full fields vs chiasm lesion", "score": 1},
+        {"point": "MRI with MR venography before LP", "score": 1},
+        {"point": "LP opening pressure over 250 with normal CSF", "score": 1},
+        {"point": "stop the drug (weight loss, acetazolamide)", "score": 1},
+        {"point": "optic neuritis painful, usually unilateral", "score": 1}
+      ],
+      "checklist_score": 6,
+      "scope": "pass",
+      "accuracy": "pass; minor: the LP row ends with an off-topic 'with fever and meningismus, LP for meningitis' clause (not wrong)",
+      "voice": "pass",
+      "item_defects": [
+        "Item 1 lead is None; the key 'Drug-induced intracranial hypertension' is a more specific label than the source's 'Medication effect' but is the same kind of answer as the distractors",
+        "Item 3 lead is None"
+      ],
+      "critical": []
+    },
+    "preference": "B",
+    "why": "Both cover every point correctly, but B's management item fits the stem (stop the drug plus acetazolamide when acuity is down, against a one-word 'continue' distractor) and it avoids A's retained aphorism and shunt/fenestration extra."
+  },
+  "T3": {
+    "A": {
+      "checklist": [
+        {"point": "periungual fibroma", "score": 1},
+        {"point": "calcified subependymal nodules on CT", "score": 1},
+        {"point": "epilepsy / first seizure any age", "score": 1},
+        {"point": "cardiac rhabdomyoma or renal angiomyolipoma", "score": 1},
+        {"point": "surveillance", "score": 1},
+        {"point": "splits vs NF1, VHL, ataxia-telangiectasia, endocarditis", "score": 1}
+      ],
+      "checklist_score": 6,
+      "scope": "pass",
+      "accuracy": "pass",
+      "voice": "pass",
+      "item_defects": [
+        "Key naming is inconsistent across items ('Tuberous sclerosis' vs 'Tuberous sclerosis complex'); cosmetic",
+        "SEGA item is tagged [mech] but is a diagnosis item"
+      ],
+      "critical": []
+    },
+    "B": {
+      "checklist": [
+        {"point": "periungual fibroma", "score": 1},
+        {"point": "calcified subependymal nodules on CT", "score": 1},
+        {"point": "epilepsy / first seizure any age", "score": 1},
+        {"point": "cardiac rhabdomyoma or renal angiomyolipoma", "score": 1},
+        {"point": "surveillance", "score": 1},
+        {"point": "splits vs NF1, VHL, ataxia-telangiectasia, endocarditis", "score": 1}
+      ],
+      "checklist_score": 6,
+      "scope": "pass",
+      "accuracy": "pass",
+      "voice": "pass; minor: stray warning marker left in the NF2 row",
+      "item_defects": [
+        "Surveillance item distractor 'Yearly eye and skin exams, imaging only for new symptoms' is partly correct (skin and eye exams are part of TSC surveillance); only the 'imaging only' part makes it wrong",
+        "SEGA item is tagged [mech] but is a diagnosis item"
+      ],
+      "critical": []
+    },
+    "preference": "equivalent",
+    "why": "Both have the same correct content and sound items. A's infantile-spasm item adds the cardiac rhabdomyoma and its surveillance distractors are cleaner single-syndrome packages; B's cortical-tuber distractor is a good within-syndrome contrast."
+  },
+  "T4": {
+    "A": {
+      "checklist": [
+        {"point": "IVIG for CVID long term", "score": 1},
+        {"point": "SCID HSCT", "score": 1},
+        {"point": "DiGeorge thymus transplant", "score": 1},
+        {"point": "CGD interferon gamma (+ prophylaxis)", "score": 1},
+        {"point": "cellular defects antiviral/antifungal prophylaxis", "score": 1, "note": "given only as bridging for SCID; never contrasted with an antibody defect"},
+        {"point": "CVID features not duplicated", "score": 1, "note": "features line replaced in place; the 'risk persists on IVIG' point appears in both the treatment and features lines"}
+      ],
+      "checklist_score": 6,
+      "scope": "pass; borderline: Cryptosporidium sclerosing cholangitis (CD40L) as a distractor",
+      "accuracy": "fail: 'Any of these defects — no live vaccines' is overbroad. Selective IgA deficiency does not bar the usual live vaccines, and CGD bars only live bacterial vaccines (BCG, oral typhoid), not live viral ones",
+      "voice": "pass; minor: unresolved warning markers (TMP-SMX, HSCT only cure, washed products, live vaccines, granulomas) left in student-facing text",
+      "item_defects": [
+        "Lymphoma item: the key is the only non-infection option (both distractors are infections), which cues a student who reasons that IVIG prevents infection",
+        "Lymphoma item is tagged [mech] but asks about a long-term risk"
+      ],
+      "critical": [
+        "Teaches that live vaccines are contraindicated in all listed defects, including selective IgA deficiency and CGD (only live bacterial vaccines are contraindicated in CGD)"
+      ]
+    },
+    "B": {
+      "checklist": [
+        {"point": "IVIG for CVID long term", "score": 1},
+        {"point": "SCID HSCT", "score": 1},
+        {"point": "DiGeorge thymus transplant", "score": 1},
+        {"point": "CGD interferon gamma (+ prophylaxis)", "score": 1, "note": "TMP-SMX + itraconazole"},
+        {"point": "cellular defects antiviral/antifungal prophylaxis", "score": 1, "note": "explicitly: belongs to cellular defects, not to a pure antibody defect"},
+        {"point": "CVID features not duplicated", "score": 1, "note": "adds the new XLA-vs-CVID sex point instead of repeating features"}
+      ],
+      "checklist_score": 6,
+      "scope": "pass",
+      "accuracy": "pass; minor imprecision: CGD appears under 'antiviral and antifungal prophylaxis' (CGD gets antibacterial and antifungal, not antiviral), which follows the source's grouping",
+      "voice": "pass",
+      "item_defects": [
+        "Lymphoma item lead is None"
+      ],
+      "critical": []
+    },
+    "preference": "B",
+    "why": "B avoids A's wrong blanket live-vaccine rule, states outright why antiviral/antifungal prophylaxis does not fit an antibody defect, and its lymphoma item uses distractors of the same kind (sarcoidosis, TB adenitis) with no cue."
+  }
+}
