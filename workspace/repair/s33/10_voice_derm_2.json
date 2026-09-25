@@ -1,0 +1,949 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "neonatal-rash",
+   "find": "<p>Benign + self-limited + <b>no modifiable cause</b> → reassure. Benign + <b>an identifiable, removable trigger</b> → remove the trigger. Miliaria rubra has its cause in the history — onesies under pajamas under a fleece swaddle. You don't wait it out; you unwrap the baby.</p>",
+   "with": "<p>Reassure when a benign, self-limited rash has <b>no modifiable cause</b>. Remove the trigger when a benign rash has <b>an identifiable, removable trigger</b>. Miliaria rubra has its cause in the history: onesies under pajamas under a fleece swaddle. Treat it by unwrapping the baby, not by waiting it out.</p>",
+   "note": ".dp p1: arrow shorthand to sentences, em dash removed, rhetorical closer made plain",
+   "claims": [
+    {
+     "claim": "A benign, self-limited rash with no modifiable cause needs reassurance.",
+     "to": "Reassure when a benign, self-limited rash has no modifiable cause."
+    },
+    {
+     "claim": "A benign rash with an identifiable, removable trigger is treated by removing the trigger.",
+     "to": "Remove the trigger when a benign rash has an identifiable, removable trigger."
+    },
+    {
+     "claim": "Miliaria rubra has its cause in the history.",
+     "to": "Miliaria rubra has its cause in the history: onesies under pajamas under a fleece swaddle."
+    },
+    {
+     "claim": "The cause is onesies under pajamas under a fleece swaddle.",
+     "to": "Miliaria rubra has its cause in the history: onesies under pajamas under a fleece swaddle."
+    },
+    {
+     "claim": "Miliaria rubra is not waited out.",
+     "to": "Treat it by unwrapping the baby, not by waiting it out."
+    },
+    {
+     "claim": "Miliaria rubra is treated by unwrapping the baby.",
+     "to": "Treat it by unwrapping the baby, not by waiting it out."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Reassure when a benign, self-limited rash has no modifiable cause.",
+     "from": "A benign, self-limited rash with no modifiable cause needs reassurance."
+    },
+    {
+     "claim": "Remove the trigger when a benign rash has an identifiable, removable trigger.",
+     "from": "A benign rash with an identifiable, removable trigger is treated by removing the trigger."
+    },
+    {
+     "claim": "Miliaria rubra has its cause in the history.",
+     "from": "Miliaria rubra has its cause in the history."
+    },
+    {
+     "claim": "The cause is onesies under pajamas under a fleece swaddle.",
+     "from": "The cause is onesies under pajamas under a fleece swaddle."
+    },
+    {
+     "claim": "Treat miliaria rubra by unwrapping the baby.",
+     "from": "Miliaria rubra is treated by unwrapping the baby."
+    },
+    {
+     "claim": "Do not wait miliaria rubra out.",
+     "from": "Miliaria rubra is not waited out."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-rash",
+   "find": "; any one takes the rash out of the benign group (pustular melanosis, present at birth and nonerythematous, is the benign rash that may reach the palms and soles)",
+   "with": "; any one means the rash is not benign. Pustular melanosis, present at birth and nonerythematous, is the benign rash that may reach the palms and soles",
+   "note": ".danger red-flag row: plain wording, parenthesis made a sentence",
+   "claims": [
+    {
+     "claim": "Any one red flag takes the rash out of the benign group.",
+     "to": "Red flags — palms or soles involved in an otherwise erythema toxicum picture, vesicles or crusting, or fever or irritability; any one means the rash is not benign."
+    },
+    {
+     "claim": "Pustular melanosis is present at birth and nonerythematous.",
+     "to": "Pustular melanosis, present at birth and nonerythematous, is the benign rash that may reach the palms and soles"
+    },
+    {
+     "claim": "Pustular melanosis is the benign rash that may reach the palms and soles.",
+     "to": "Pustular melanosis, present at birth and nonerythematous, is the benign rash that may reach the palms and soles"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Any one red flag means the rash is not benign.",
+     "from": "Any one red flag takes the rash out of the benign group."
+    },
+    {
+     "claim": "Pustular melanosis is present at birth and nonerythematous.",
+     "from": "Pustular melanosis is present at birth and nonerythematous."
+    },
+    {
+     "claim": "Pustular melanosis is the benign rash that may reach the palms and soles.",
+     "from": "Pustular melanosis is the benign rash that may reach the palms and soles."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-rash",
+   "find": "<b>Neonatal HSV</b> — <b>clustered vesicles on an erythematous base</b>, days 5–14 → PCR + IV acyclovir; any vesicular rash in a neonate is HSV until proven otherwise",
+   "with": "<b>Neonatal HSV</b> — <b>clustered vesicles on an erythematous base</b>, days 5–14 → <b>PCR</b> (polymerase chain reaction) + IV acyclovir. Any vesicular rash in a neonate is <b>HSV</b> (herpes simplex virus) until proven otherwise",
+   "note": ".danger HSV row: acronym expansions only",
+   "claims": [
+    {
+     "claim": "Neonatal HSV presents with clustered vesicles on an erythematous base at days 5–14.",
+     "to": "Neonatal HSV — clustered vesicles on an erythematous base, days 5–14 → PCR (polymerase chain reaction) + IV acyclovir."
+    },
+    {
+     "claim": "Neonatal HSV is managed with PCR and IV acyclovir.",
+     "to": "Neonatal HSV — clustered vesicles on an erythematous base, days 5–14 → PCR (polymerase chain reaction) + IV acyclovir."
+    },
+    {
+     "claim": "Any vesicular rash in a neonate is HSV until proven otherwise.",
+     "to": "Any vesicular rash in a neonate is HSV (herpes simplex virus) until proven otherwise"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "HSV stands for herpes simplex virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PCR stands for polymerase chain reaction.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Neonatal HSV presents with clustered vesicles on an erythematous base at days 5–14.",
+     "from": "Neonatal HSV presents with clustered vesicles on an erythematous base at days 5–14."
+    },
+    {
+     "claim": "Neonatal HSV is managed with PCR and IV acyclovir.",
+     "from": "Neonatal HSV is managed with PCR and IV acyclovir."
+    },
+    {
+     "claim": "Any vesicular rash in a neonate is HSV until proven otherwise.",
+     "from": "Any vesicular rash in a neonate is HSV until proven otherwise."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-rash",
+   "find": "<b>Blueberry muffin rash</b> — TORCH",
+   "with": "<b>Blueberry muffin rash</b> — <b>TORCH</b> (toxoplasmosis, other agents, rubella, cytomegalovirus and herpes simplex virus)",
+   "note": ".danger TORCH row: acronym expansion only",
+   "claims": [
+    {
+     "claim": "Blueberry muffin rash points to TORCH infection.",
+     "to": "Blueberry muffin rash — TORCH (toxoplasmosis, other agents, rubella, cytomegalovirus and herpes simplex virus)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "TORCH stands for toxoplasmosis, other agents, rubella, cytomegalovirus and herpes simplex virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Blueberry muffin rash points to TORCH infection.",
+     "from": "Blueberry muffin rash points to TORCH infection."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-rash",
+   "find": "<b>Maternal cold sores</b> — do not turn a well 2-day-old with erythematous pustules and spared palms and soles into HSV; the morphology and the well infant decide.",
+   "with": "<b>Maternal cold sores</b> — do not diagnose HSV in a well 2-day-old with erythematous pustules and spared palms and soles. Base the diagnosis on the morphology and the infant's well appearance.",
+   "note": ".danger cold-sores row: personification removed",
+   "claims": [
+    {
+     "claim": "Maternal cold sores do not make a well 2-day-old with erythematous pustules and spared palms and soles HSV.",
+     "to": "Maternal cold sores — do not diagnose HSV in a well 2-day-old with erythematous pustules and spared palms and soles."
+    },
+    {
+     "claim": "The morphology and the well infant decide the diagnosis.",
+     "to": "Base the diagnosis on the morphology and the infant's well appearance."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Do not diagnose HSV in a well 2-day-old with erythematous pustules and spared palms and soles because of maternal cold sores.",
+     "from": "Maternal cold sores do not make a well 2-day-old with erythematous pustules and spared palms and soles HSV."
+    },
+    {
+     "claim": "Base the diagnosis on the morphology and the infant's well appearance.",
+     "from": "The morphology and the well infant decide the diagnosis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-rash",
+   "find": "Before choosing pure reassurance, scan the history for a <b>modifiable exposure</b> — bundling, a soap, a detergent, a medication, a position. If the stem spent a sentence describing the environment, that sentence is the treatment.",
+   "with": "Before choosing pure reassurance, scan the history for a <b>modifiable exposure</b>: bundling, a soap, a detergent, a medication, a position. When the history describes the environment, removing that exposure is the treatment.",
+   "note": ".rule: em dash to colon; stem/sentence framing made clinical",
+   "claims": [
+    {
+     "claim": "Before choosing pure reassurance, scan the history for a modifiable exposure.",
+     "to": "Before choosing pure reassurance, scan the history for a modifiable exposure: bundling, a soap, a detergent, a medication, a position."
+    },
+    {
+     "claim": "Modifiable exposures include bundling, a soap, a detergent, a medication and a position.",
+     "to": "Before choosing pure reassurance, scan the history for a modifiable exposure: bundling, a soap, a detergent, a medication, a position."
+    },
+    {
+     "claim": "An environmental exposure described in the history points to the treatment.",
+     "to": "When the history describes the environment, removing that exposure is the treatment."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Before choosing pure reassurance, scan the history for a modifiable exposure.",
+     "from": "Before choosing pure reassurance, scan the history for a modifiable exposure."
+    },
+    {
+     "claim": "Modifiable exposures include bundling, a soap, a detergent, a medication and a position.",
+     "from": "Modifiable exposures include bundling, a soap, a detergent, a medication and a position."
+    },
+    {
+     "claim": "When the history describes the environment, removing that exposure is the treatment.",
+     "from": "An environmental exposure described in the history points to the treatment."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "when a working barrier stops working, name the superinfection",
+   "with": "Diaper rash that improved on a barrier, then worsened: superinfection",
+   "note": "p.sub first segment: slogan made a plain subtitle",
+   "claims": [
+    {
+     "claim": "A diaper rash that stops responding to a barrier that was working has a superinfection.",
+     "to": "Diaper rash that improved on a barrier, then worsened: superinfection"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A diaper rash that improved on a barrier and then worsened has a superinfection.",
+     "from": "A diaper rash that stops responding to a barrier that was working has a superinfection."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "<p>The diagnosis is carried by a <b>trajectory</b>, not a morphology: barrier therapy is the correct and sufficient treatment for irritant contact dermatitis, so a rash that <b>got better on it and then got worse</b> has acquired something the barrier does not treat. Two examination findings name what: the rash <b>involves the skinfolds</b> and throws <b>satellite lesions</b>. Irritant dermatitis spares the creases, because the convex surfaces are what contact the wet diaper and the depths of the folds are protected. Candida does the opposite, thriving in the warm occluded crease, and satellite papules beyond the border of the main plaque are its signature. The recent diarrhea supplies the mechanism: fecal bacteria raise local pH, the barrier is compromised, and <i>Candida albicans</i> from the gastrointestinal tract colonises. Treatment is a <b>topical antifungal applied under the barrier ointment</b>, not instead of it.</p>",
+   "with": "<p>The diagnosis rests on the rash's <b>trajectory</b>, not its morphology. Barrier therapy is the correct and sufficient treatment for irritant contact dermatitis. A rash that <b>got better on it and then got worse</b> has therefore acquired something the barrier does not treat. Two examination findings identify the cause: the rash <b>involves the skinfolds</b> and has <b>satellite lesions</b>. Irritant dermatitis spares the creases because the convex surfaces contact the wet diaper and the depths of the folds are protected. Candida does the opposite and thrives in the warm, occluded crease. Satellite papules beyond the border of the main plaque are the hallmark of Candida. The recent diarrhea explains the mechanism: fecal bacteria raise local pH and compromise the barrier. <i>Candida albicans</i> from the gastrointestinal tract then colonises the skin. Treat with a <b>topical antifungal applied under the barrier ointment</b>, not instead of it.</p>",
+   "note": ".dp: long sentences split, personification (name what, throws, supplies) made plain",
+   "claims": [
+    {
+     "claim": "The diagnosis is carried by the trajectory, not the morphology.",
+     "to": "The diagnosis rests on the rash's trajectory, not its morphology."
+    },
+    {
+     "claim": "Barrier therapy is the correct and sufficient treatment for irritant contact dermatitis.",
+     "to": "Barrier therapy is the correct and sufficient treatment for irritant contact dermatitis."
+    },
+    {
+     "claim": "A rash that got better on barrier therapy and then got worse has acquired something the barrier does not treat.",
+     "to": "A rash that got better on it and then got worse has therefore acquired something the barrier does not treat."
+    },
+    {
+     "claim": "Two examination findings identify what was acquired.",
+     "to": "Two examination findings identify the cause: the rash involves the skinfolds and has satellite lesions."
+    },
+    {
+     "claim": "The rash involves the skinfolds.",
+     "to": "Two examination findings identify the cause: the rash involves the skinfolds and has satellite lesions."
+    },
+    {
+     "claim": "The rash has satellite lesions.",
+     "to": "Two examination findings identify the cause: the rash involves the skinfolds and has satellite lesions."
+    },
+    {
+     "claim": "Irritant dermatitis spares the creases.",
+     "to": "Irritant dermatitis spares the creases because the convex surfaces contact the wet diaper and the depths of the folds are protected."
+    },
+    {
+     "claim": "The convex surfaces contact the wet diaper and the depths of the folds are protected.",
+     "to": "Irritant dermatitis spares the creases because the convex surfaces contact the wet diaper and the depths of the folds are protected."
+    },
+    {
+     "claim": "Candida does the opposite of irritant dermatitis and involves the creases.",
+     "to": "Candida does the opposite and thrives in the warm, occluded crease."
+    },
+    {
+     "claim": "Candida thrives in the warm occluded crease.",
+     "to": "Candida does the opposite and thrives in the warm, occluded crease."
+    },
+    {
+     "claim": "Satellite papules beyond the border of the main plaque are the signature of Candida.",
+     "to": "Satellite papules beyond the border of the main plaque are the hallmark of Candida."
+    },
+    {
+     "claim": "The recent diarrhea supplies the mechanism.",
+     "to": "The recent diarrhea explains the mechanism: fecal bacteria raise local pH and compromise the barrier."
+    },
+    {
+     "claim": "Fecal bacteria raise local pH.",
+     "to": "The recent diarrhea explains the mechanism: fecal bacteria raise local pH and compromise the barrier."
+    },
+    {
+     "claim": "The barrier is compromised.",
+     "to": "The recent diarrhea explains the mechanism: fecal bacteria raise local pH and compromise the barrier."
+    },
+    {
+     "claim": "Candida albicans from the gastrointestinal tract colonises.",
+     "to": "Candida albicans from the gastrointestinal tract then colonises the skin."
+    },
+    {
+     "claim": "Treatment is a topical antifungal applied under the barrier ointment, not instead of it.",
+     "to": "Treat with a topical antifungal applied under the barrier ointment, not instead of it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The diagnosis rests on the rash's trajectory, not its morphology.",
+     "from": "The diagnosis is carried by the trajectory, not the morphology."
+    },
+    {
+     "claim": "Barrier therapy is the correct and sufficient treatment for irritant contact dermatitis.",
+     "from": "Barrier therapy is the correct and sufficient treatment for irritant contact dermatitis."
+    },
+    {
+     "claim": "A rash that got better on barrier therapy and then got worse has acquired something the barrier does not treat.",
+     "from": "A rash that got better on barrier therapy and then got worse has acquired something the barrier does not treat."
+    },
+    {
+     "claim": "Two examination findings identify the cause.",
+     "from": "Two examination findings identify what was acquired."
+    },
+    {
+     "claim": "The rash involves the skinfolds and has satellite lesions.",
+     "from": "The rash involves the skinfolds."
+    },
+    {
+     "claim": "Irritant dermatitis spares the creases because the convex surfaces contact the wet diaper and the depths of the folds are protected.",
+     "from": "Irritant dermatitis spares the creases."
+    },
+    {
+     "claim": "Candida does the opposite and thrives in the warm, occluded crease.",
+     "from": "Candida thrives in the warm occluded crease."
+    },
+    {
+     "claim": "Satellite papules beyond the border of the main plaque are the hallmark of Candida.",
+     "from": "Satellite papules beyond the border of the main plaque are the signature of Candida."
+    },
+    {
+     "claim": "The recent diarrhea explains the mechanism.",
+     "from": "The recent diarrhea supplies the mechanism."
+    },
+    {
+     "claim": "Fecal bacteria raise local pH and compromise the barrier.",
+     "from": "Fecal bacteria raise local pH."
+    },
+    {
+     "claim": "Candida albicans from the gastrointestinal tract then colonises the skin.",
+     "from": "Candida albicans from the gastrointestinal tract colonises."
+    },
+    {
+     "claim": "Treat with a topical antifungal applied under the barrier ointment, not instead of it.",
+     "from": "Treatment is a topical antifungal applied under the barrier ointment, not instead of it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "Topical nystatin or clotrimazole applied <b>beneath</b> a barrier ointment &mdash; the antifungal treats the yeast, and the barrier keeps stool and urine off skin that is still broken.",
+   "with": "Apply topical nystatin or clotrimazole beneath a barrier ointment. The antifungal treats the yeast, and the barrier keeps stool and urine off skin that is still broken.",
+   "note": ".danger management: prose em dash removed; emphasis-only bold on 'beneath' removed",
+   "reworded_bold": [
+    "beneath"
+   ],
+   "claims": [
+    {
+     "claim": "Topical nystatin or clotrimazole is applied beneath a barrier ointment.",
+     "to": "Apply topical nystatin or clotrimazole beneath a barrier ointment."
+    },
+    {
+     "claim": "The antifungal treats the yeast.",
+     "to": "The antifungal treats the yeast, and the barrier keeps stool and urine off skin that is still broken."
+    },
+    {
+     "claim": "The barrier keeps stool and urine off skin that is still broken.",
+     "to": "The antifungal treats the yeast, and the barrier keeps stool and urine off skin that is still broken."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Apply topical nystatin or clotrimazole beneath a barrier ointment.",
+     "from": "Topical nystatin or clotrimazole is applied beneath a barrier ointment."
+    },
+    {
+     "claim": "The antifungal treats the yeast.",
+     "from": "The antifungal treats the yeast."
+    },
+    {
+     "claim": "The barrier keeps stool and urine off skin that is still broken.",
+     "from": "The barrier keeps stool and urine off skin that is still broken."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "&mdash; the same shape appears in otitis with a new fever after day 3, in cellulitis with an abscess forming, and in eczema herpeticum &middot; <b>Folds are the discriminator</b>: irritant spares them, Candida seeks them &middot; <b>Satellite lesions are near-specific</b> for cutaneous candidiasis and worth naming out loud before you commit &middot;",
+   "with": "&mdash; the same pattern occurs in otitis with a new fever after day 3, in cellulitis with an abscess forming, and in eczema herpeticum &middot; <b>Folds are the discriminator</b>: irritant dermatitis spares them and Candida involves them &middot; <b>Satellite lesions are near-specific</b> for cutaneous candidiasis &middot;",
+   "note": ".pearls: metaphor and personification removed, exam-technique aside dropped; structural dash kept",
+   "claims": [
+    {
+     "claim": "The same shape appears in otitis with a new fever after day 3.",
+     "to": "the same pattern occurs in otitis with a new fever after day 3, in cellulitis with an abscess forming, and in eczema herpeticum"
+    },
+    {
+     "claim": "The same shape appears in cellulitis with an abscess forming.",
+     "to": "the same pattern occurs in otitis with a new fever after day 3, in cellulitis with an abscess forming, and in eczema herpeticum"
+    },
+    {
+     "claim": "The same shape appears in eczema herpeticum.",
+     "to": "the same pattern occurs in otitis with a new fever after day 3, in cellulitis with an abscess forming, and in eczema herpeticum"
+    },
+    {
+     "claim": "Folds are the discriminator.",
+     "to": "Folds are the discriminator: irritant dermatitis spares them and Candida involves them"
+    },
+    {
+     "claim": "Irritant dermatitis spares the folds.",
+     "to": "Folds are the discriminator: irritant dermatitis spares them and Candida involves them"
+    },
+    {
+     "claim": "Candida seeks the folds.",
+     "to": "Folds are the discriminator: irritant dermatitis spares them and Candida involves them"
+    },
+    {
+     "claim": "Satellite lesions are near-specific for cutaneous candidiasis.",
+     "to": "Satellite lesions are near-specific for cutaneous candidiasis"
+    },
+    {
+     "claim": "Satellite lesions are worth naming out loud before you commit.",
+     "dropped": "exam-technique advice, not a clinical fact"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The same pattern occurs in otitis with a new fever after day 3.",
+     "from": "The same shape appears in otitis with a new fever after day 3."
+    },
+    {
+     "claim": "The same pattern occurs in cellulitis with an abscess forming.",
+     "from": "The same shape appears in cellulitis with an abscess forming."
+    },
+    {
+     "claim": "The same pattern occurs in eczema herpeticum.",
+     "from": "The same shape appears in eczema herpeticum."
+    },
+    {
+     "claim": "Folds are the discriminator.",
+     "from": "Folds are the discriminator."
+    },
+    {
+     "claim": "Irritant dermatitis spares the folds.",
+     "from": "Irritant dermatitis spares the folds."
+    },
+    {
+     "claim": "Candida involves the folds.",
+     "from": "Candida seeks the folds."
+    },
+    {
+     "claim": "Satellite lesions are near-specific for cutaneous candidiasis.",
+     "from": "Satellite lesions are near-specific for cutaneous candidiasis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "<b>The parents are separated</b> and <b>attends day care</b> are demographic noise placed to raise the abuse and contagion hypotheses respectively &mdash; neither is an examination finding, and the stem explicitly closes the contagion route by telling you no classmate has a rash. The initial improvement on barrier therapy is the opposite of a decoy: it is the single most informative sentence, because it proves the original diagnosis was right and something was added.",
+   "with": "<b>The parents are separated</b> and <b>attends day care</b> are demographic noise that raises the abuse and contagion hypotheses, respectively. Neither is an examination finding. No classmate has a rash, which excludes contagion from day care. The initial improvement on barrier therapy is the single most informative detail. It proves the original diagnosis was right and something was added.",
+   "note": ".danger decoy note: em dash removed, sentences split, stem framing removed",
+   "claims": [
+    {
+     "claim": "Parents being separated and day-care attendance are demographic noise.",
+     "to": "The parents are separated and attends day care are demographic noise that raises the abuse and contagion hypotheses, respectively."
+    },
+    {
+     "claim": "They raise the abuse and contagion hypotheses respectively.",
+     "to": "The parents are separated and attends day care are demographic noise that raises the abuse and contagion hypotheses, respectively."
+    },
+    {
+     "claim": "They were placed in the stem to raise those hypotheses.",
+     "dropped": "framing about the question writer's intent; the effect of the details is kept"
+    },
+    {
+     "claim": "Neither is an examination finding.",
+     "to": "Neither is an examination finding."
+    },
+    {
+     "claim": "No classmate has a rash, which closes the contagion route.",
+     "to": "No classmate has a rash, which excludes contagion from day care."
+    },
+    {
+     "claim": "The initial improvement on barrier therapy is the opposite of a decoy.",
+     "dropped": "rhetorical framing; the positive claim that it is the most informative detail is kept"
+    },
+    {
+     "claim": "The initial improvement on barrier therapy is the single most informative detail.",
+     "to": "The initial improvement on barrier therapy is the single most informative detail."
+    },
+    {
+     "claim": "The improvement proves the original diagnosis was right and something was added.",
+     "to": "It proves the original diagnosis was right and something was added."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Parents being separated and day-care attendance are demographic noise that raises the abuse and contagion hypotheses, respectively.",
+     "from": "Parents being separated and day-care attendance are demographic noise."
+    },
+    {
+     "claim": "Neither is an examination finding.",
+     "from": "Neither is an examination finding."
+    },
+    {
+     "claim": "No classmate has a rash, which excludes contagion from day care.",
+     "from": "No classmate has a rash, which closes the contagion route."
+    },
+    {
+     "claim": "The initial improvement on barrier therapy is the single most informative detail.",
+     "from": "The initial improvement on barrier therapy is the single most informative detail."
+    },
+    {
+     "claim": "It proves the original diagnosis was right and something was added.",
+     "from": "The improvement proves the original diagnosis was right and something was added."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "Part I <b>Benign Neonatal Rashes</b>, which owns the one-line diaper rule and the newborn rashes that need no treatment at all. Store the discriminator as a question: <i>does the rash involve the creases, and are there satellites?</i>",
+   "with": "Part I <b>Benign Neonatal Rashes</b> covers the one-line diaper rule and the newborn rashes that need no treatment at all. Ask: <i>does the rash involve the creases, and are there satellites?</i>",
+   "note": "Pairs with: 'owns' to 'covers'; 'Store the discriminator as a question' to 'Ask'",
+   "claims": [
+    {
+     "claim": "Benign Neonatal Rashes covers the one-line diaper rule.",
+     "to": "Part I Benign Neonatal Rashes covers the one-line diaper rule and the newborn rashes that need no treatment at all."
+    },
+    {
+     "claim": "Benign Neonatal Rashes covers the newborn rashes that need no treatment at all.",
+     "to": "Part I Benign Neonatal Rashes covers the one-line diaper rule and the newborn rashes that need no treatment at all."
+    },
+    {
+     "claim": "The discriminating question is whether the rash involves the creases and whether there are satellites.",
+     "to": "Ask: does the rash involve the creases, and are there satellites?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Benign Neonatal Rashes covers the one-line diaper rule.",
+     "from": "Benign Neonatal Rashes covers the one-line diaper rule."
+    },
+    {
+     "claim": "Benign Neonatal Rashes covers the newborn rashes that need no treatment at all.",
+     "from": "Benign Neonatal Rashes covers the newborn rashes that need no treatment at all."
+    },
+    {
+     "claim": "Ask whether the rash involves the creases and whether there are satellites.",
+     "from": "The discriminating question is whether the rash involves the creases and whether there are satellites."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "When a correct treatment works and then stops working, the diagnosis was not wrong &mdash; something was added. Ask what the first treatment does not cover, and look for the finding that names it.",
+   "with": "When a correct treatment works and then stops working, the diagnosis was not wrong; something was added. Ask what the first treatment does not cover, and look for the finding that identifies it.",
+   "note": ".rule: em dash to semicolon; 'names' to 'identifies'",
+   "claims": [
+    {
+     "claim": "When a correct treatment works and then stops working, the diagnosis was not wrong.",
+     "to": "When a correct treatment works and then stops working, the diagnosis was not wrong; something was added."
+    },
+    {
+     "claim": "Something was added.",
+     "to": "When a correct treatment works and then stops working, the diagnosis was not wrong; something was added."
+    },
+    {
+     "claim": "Ask what the first treatment does not cover.",
+     "to": "Ask what the first treatment does not cover, and look for the finding that identifies it."
+    },
+    {
+     "claim": "Look for the finding that names what was added.",
+     "to": "Ask what the first treatment does not cover, and look for the finding that identifies it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a correct treatment works and then stops working, the diagnosis was not wrong; something was added.",
+     "from": "When a correct treatment works and then stops working, the diagnosis was not wrong."
+    },
+    {
+     "claim": "Ask what the first treatment does not cover.",
+     "from": "Ask what the first treatment does not cover."
+    },
+    {
+     "claim": "Look for the finding that identifies what was added.",
+     "from": "Look for the finding that names what was added."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "Oral zinc: the stem hands you a diarrheal illness, but acrodermatitis enteropathica needs chronic diarrhea plus perioral dermatitis and alopecia; hers resolved in days.",
+   "with": "Oral zinc: she had a diarrheal illness, but acrodermatitis enteropathica needs chronic diarrhea plus perioral dermatitis and alopecia, and hers resolved in days.",
+   "note": ".traps oral zinc: personified stem framing made plain",
+   "claims": [
+    {
+     "claim": "The patient had a diarrheal illness.",
+     "to": "Oral zinc: she had a diarrheal illness, but acrodermatitis enteropathica needs chronic diarrhea plus perioral dermatitis and alopecia, and hers resolved in days."
+    },
+    {
+     "claim": "Acrodermatitis enteropathica needs chronic diarrhea plus perioral dermatitis and alopecia.",
+     "to": "Oral zinc: she had a diarrheal illness, but acrodermatitis enteropathica needs chronic diarrhea plus perioral dermatitis and alopecia, and hers resolved in days."
+    },
+    {
+     "claim": "Her diarrhea resolved in days.",
+     "to": "Oral zinc: she had a diarrheal illness, but acrodermatitis enteropathica needs chronic diarrhea plus perioral dermatitis and alopecia, and hers resolved in days."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "She had a diarrheal illness.",
+     "from": "The patient had a diarrheal illness."
+    },
+    {
+     "claim": "Acrodermatitis enteropathica needs chronic diarrhea plus perioral dermatitis and alopecia.",
+     "from": "Acrodermatitis enteropathica needs chronic diarrhea plus perioral dermatitis and alopecia."
+    },
+    {
+     "claim": "Her diarrhea resolved in days.",
+     "from": "Her diarrhea resolved in days."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-scabies",
+   "find": "A close contact with the same rash outranks morphology",
+   "with": "A close contact with the same rash carries more weight than morphology",
+   "note": "p.sub: personified 'outranks' made plain",
+   "claims": [
+    {
+     "claim": "A close contact with the same rash outranks morphology.",
+     "to": "A close contact with the same rash carries more weight than morphology"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A close contact with the same rash carries more weight than morphology.",
+     "from": "A close contact with the same rash outranks morphology."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-scabies",
+   "find": "A <b>roommate with the identical itchy rash</b> makes this <b>transmissible by prolonged skin contact</b> — that single fact eliminates contact dermatitis, drug eruption, and every non-communicable itch. Add the distribution and the timeline and nothing else fits. Treatment: <b>permethrin 5%</b>.",
+   "with": "A <b>roommate with the identical itchy rash</b> means the rash is <b>transmissible by prolonged skin contact</b>. That fact alone excludes contact dermatitis, drug eruption and every non-communicable itch. With the distribution and the timeline added, only scabies fits. Treat with <b>permethrin 5%</b>.",
+   "note": ".dp: em dash removed, sentences split",
+   "claims": [
+    {
+     "claim": "A roommate with the identical itchy rash makes this transmissible by prolonged skin contact.",
+     "to": "A roommate with the identical itchy rash means the rash is transmissible by prolonged skin contact."
+    },
+    {
+     "claim": "That single fact eliminates contact dermatitis, drug eruption and every non-communicable itch.",
+     "to": "That fact alone excludes contact dermatitis, drug eruption and every non-communicable itch."
+    },
+    {
+     "claim": "With the distribution and the timeline, nothing else fits.",
+     "to": "With the distribution and the timeline added, only scabies fits."
+    },
+    {
+     "claim": "Treatment is permethrin 5%.",
+     "to": "Treat with permethrin 5%."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A roommate with the identical itchy rash means the rash is transmissible by prolonged skin contact.",
+     "from": "A roommate with the identical itchy rash makes this transmissible by prolonged skin contact."
+    },
+    {
+     "claim": "That fact alone excludes contact dermatitis, drug eruption and every non-communicable itch.",
+     "from": "That single fact eliminates contact dermatitis, drug eruption and every non-communicable itch."
+    },
+    {
+     "claim": "With the distribution and the timeline added, only scabies fits.",
+     "from": "With the distribution and the timeline, nothing else fits."
+    },
+    {
+     "claim": "Treat with permethrin 5%.",
+     "from": "Treatment is permethrin 5%."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-scabies",
+   "find": "<b>Oral acyclovir</b>: zoster is <b>dermatomal, unilateral, painful</b>, doesn't migrate hand→hand→waist, and doesn't infect a roommate. <b>Oral cephalexin</b>: \"<b>no crusting or spreading erythema</b>\" exists solely to kill this; impetigo means <b>honey-colored</b> crust. <b>Oral prednisone / topical triamcinolone</b>: both treat the itch, not the mite, and steroids produce <b>scabies incognito</b>: a masked, worsening infestation. The pruritus is a <b>type IV hypersensitivity</b> to mite antigen; suppressing the response doesn't touch the organism.",
+   "with": "<b>Oral acyclovir</b>: zoster is <b>dermatomal, unilateral, painful</b>. It does not migrate from one hand to the other hand and then to the waist, and it does not infect a roommate. <b>Oral cephalexin</b>: there is <b>no crusting or spreading erythema</b>, and impetigo causes <b>honey-colored</b> crust. <b>Oral prednisone / topical triamcinolone</b>: both treat the itch, not the mite, and steroids produce <b>scabies incognito</b>, a masked, worsening infestation. The pruritus is a <b>type IV hypersensitivity</b> to mite antigen, and suppressing the response does not affect the organism.",
+   "note": ".danger Distractors: arrow chain split, personification removed, second colon removed",
+   "claims": [
+    {
+     "claim": "Zoster is dermatomal, unilateral and painful.",
+     "to": "Oral acyclovir: zoster is dermatomal, unilateral, painful."
+    },
+    {
+     "claim": "Zoster does not migrate hand to other hand to waist.",
+     "to": "It does not migrate from one hand to the other hand and then to the waist, and it does not infect a roommate."
+    },
+    {
+     "claim": "Zoster does not infect a roommate.",
+     "to": "It does not migrate from one hand to the other hand and then to the waist, and it does not infect a roommate."
+    },
+    {
+     "claim": "There is no crusting or spreading erythema, which excludes impetigo and cephalexin.",
+     "to": "Oral cephalexin: there is no crusting or spreading erythema, and impetigo causes honey-colored crust."
+    },
+    {
+     "claim": "Impetigo means honey-colored crust.",
+     "to": "Oral cephalexin: there is no crusting or spreading erythema, and impetigo causes honey-colored crust."
+    },
+    {
+     "claim": "Oral prednisone and topical triamcinolone treat the itch, not the mite.",
+     "to": "Oral prednisone / topical triamcinolone: both treat the itch, not the mite, and steroids produce scabies incognito, a masked, worsening infestation."
+    },
+    {
+     "claim": "Steroids produce scabies incognito, a masked, worsening infestation.",
+     "to": "Oral prednisone / topical triamcinolone: both treat the itch, not the mite, and steroids produce scabies incognito, a masked, worsening infestation."
+    },
+    {
+     "claim": "The pruritus is a type IV hypersensitivity to mite antigen.",
+     "to": "The pruritus is a type IV hypersensitivity to mite antigen, and suppressing the response does not affect the organism."
+    },
+    {
+     "claim": "Suppressing the response does not touch the organism.",
+     "to": "The pruritus is a type IV hypersensitivity to mite antigen, and suppressing the response does not affect the organism."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Zoster is dermatomal, unilateral and painful.",
+     "from": "Zoster is dermatomal, unilateral and painful."
+    },
+    {
+     "claim": "Zoster does not migrate from one hand to the other hand and then to the waist.",
+     "from": "Zoster does not migrate hand to other hand to waist."
+    },
+    {
+     "claim": "Zoster does not infect a roommate.",
+     "from": "Zoster does not infect a roommate."
+    },
+    {
+     "claim": "There is no crusting or spreading erythema.",
+     "from": "There is no crusting or spreading erythema, which excludes impetigo and cephalexin."
+    },
+    {
+     "claim": "Impetigo causes honey-colored crust.",
+     "from": "Impetigo means honey-colored crust."
+    },
+    {
+     "claim": "Oral prednisone and topical triamcinolone treat the itch, not the mite.",
+     "from": "Oral prednisone and topical triamcinolone treat the itch, not the mite."
+    },
+    {
+     "claim": "Steroids produce scabies incognito, a masked, worsening infestation.",
+     "from": "Steroids produce scabies incognito, a masked, worsening infestation."
+    },
+    {
+     "claim": "The pruritus is a type IV hypersensitivity to mite antigen.",
+     "from": "The pruritus is a type IV hypersensitivity to mite antigen."
+    },
+    {
+     "claim": "Suppressing the response does not affect the organism.",
+     "from": "Suppressing the response does not touch the organism."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-scabies",
+   "find": "<span class=\"lbl\">Treatment specifics that get tested separately</span> <b>Permethrin 5%</b>, <b>neck-down</b> (whole body in infants), left on <b>8–14 hours</b>, <b>repeated in 1 week</b> — the first application doesn't kill eggs · <b>treat all household and close contacts simultaneously</b>, symptomatic or not · <b>wash bedding and clothing hot</b>, or bag 72 hours · <b>oral ivermectin</b> (200 mcg/kg, repeat day 8) for crusted scabies, outbreaks, or adherence problems — <b>avoid in pregnancy and under 15 kg</b>.",
+   "with": "<span class=\"lbl\">Treatment specifics</span> <b>Permethrin 5%</b>, <b>neck-down</b> (whole body in infants), left on <b>8–14 hours</b>, <b>repeated in 1 week</b> because the first application does not kill eggs · <b>treat all household and close contacts simultaneously</b>, symptomatic or not · <b>wash bedding and clothing hot</b>, or bag 72 hours · <b>oral ivermectin</b> (200 mcg/kg, repeat day 8) for crusted scabies, outbreaks, or adherence problems; <b>avoid in pregnancy and under 15 kg</b>.",
+   "note": ".pearls treatment: exam-framing label shortened; two prose em dashes removed",
+   "reworded_label": [
+    "Treatment specifics that get tested separately"
+   ],
+   "claims": [
+    {
+     "claim": "Permethrin 5% is applied neck-down, whole body in infants.",
+     "to": "Permethrin 5%, neck-down (whole body in infants), left on 8–14 hours, repeated in 1 week because the first application does not kill eggs"
+    },
+    {
+     "claim": "Permethrin is left on 8–14 hours.",
+     "to": "Permethrin 5%, neck-down (whole body in infants), left on 8–14 hours, repeated in 1 week because the first application does not kill eggs"
+    },
+    {
+     "claim": "Permethrin is repeated in 1 week.",
+     "to": "Permethrin 5%, neck-down (whole body in infants), left on 8–14 hours, repeated in 1 week because the first application does not kill eggs"
+    },
+    {
+     "claim": "The first application does not kill eggs.",
+     "to": "Permethrin 5%, neck-down (whole body in infants), left on 8–14 hours, repeated in 1 week because the first application does not kill eggs"
+    },
+    {
+     "claim": "Treat all household and close contacts simultaneously, symptomatic or not.",
+     "to": "treat all household and close contacts simultaneously, symptomatic or not"
+    },
+    {
+     "claim": "Wash bedding and clothing hot, or bag 72 hours.",
+     "to": "wash bedding and clothing hot, or bag 72 hours"
+    },
+    {
+     "claim": "Oral ivermectin 200 mcg/kg, repeated day 8, is for crusted scabies, outbreaks, or adherence problems.",
+     "to": "oral ivermectin (200 mcg/kg, repeat day 8) for crusted scabies, outbreaks, or adherence problems; avoid in pregnancy and under 15 kg."
+    },
+    {
+     "claim": "Avoid ivermectin in pregnancy and under 15 kg.",
+     "to": "oral ivermectin (200 mcg/kg, repeat day 8) for crusted scabies, outbreaks, or adherence problems; avoid in pregnancy and under 15 kg."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Permethrin 5% is applied neck-down, whole body in infants.",
+     "from": "Permethrin 5% is applied neck-down, whole body in infants."
+    },
+    {
+     "claim": "Permethrin is left on 8–14 hours.",
+     "from": "Permethrin is left on 8–14 hours."
+    },
+    {
+     "claim": "Permethrin is repeated in 1 week because the first application does not kill eggs.",
+     "from": "Permethrin is repeated in 1 week."
+    },
+    {
+     "claim": "Treat all household and close contacts simultaneously, symptomatic or not.",
+     "from": "Treat all household and close contacts simultaneously, symptomatic or not."
+    },
+    {
+     "claim": "Wash bedding and clothing hot, or bag 72 hours.",
+     "from": "Wash bedding and clothing hot, or bag 72 hours."
+    },
+    {
+     "claim": "Oral ivermectin 200 mcg/kg, repeated day 8, is for crusted scabies, outbreaks, or adherence problems.",
+     "from": "Oral ivermectin 200 mcg/kg, repeated day 8, is for crusted scabies, outbreaks, or adherence problems."
+    },
+    {
+     "claim": "Avoid ivermectin in pregnancy and under 15 kg.",
+     "from": "Avoid ivermectin in pregnancy and under 15 kg."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-scabies",
+   "find": "<span class=\"lbl\">The pearl that generates its own question</span>\n<b>Post-scabetic pruritus persists 2–4 weeks</b> after successful treatment — the leading reason therapy is thought to have failed. <i>That's</i> when triamcinolone and antihistamines become correct: after the mite is dead, not instead of killing it.",
+   "with": "<span class=\"lbl\">Itch after treatment</span>\n<b>Post-scabetic pruritus persists 2–4 weeks</b> after successful treatment. It is the leading reason therapy is thought to have failed. Triamcinolone and antihistamines are correct at that stage, once the mite is dead; they do not replace killing it.",
+   "note": ".danger post-scabetic pruritus: rhetorical label replaced, em dash removed, emphatic opener made plain",
+   "reworded_label": [
+    "The pearl that generates its own question"
+   ],
+   "claims": [
+    {
+     "claim": "Post-scabetic pruritus persists 2–4 weeks after successful treatment.",
+     "to": "Post-scabetic pruritus persists 2–4 weeks after successful treatment."
+    },
+    {
+     "claim": "Post-scabetic pruritus is the leading reason therapy is thought to have failed.",
+     "to": "It is the leading reason therapy is thought to have failed."
+    },
+    {
+     "claim": "Triamcinolone and antihistamines become correct during post-scabetic pruritus, after the mite is dead.",
+     "to": "Triamcinolone and antihistamines are correct at that stage, once the mite is dead; they do not replace killing it."
+    },
+    {
+     "claim": "Triamcinolone and antihistamines are not a substitute for killing the mite.",
+     "to": "Triamcinolone and antihistamines are correct at that stage, once the mite is dead; they do not replace killing it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Post-scabetic pruritus persists 2–4 weeks after successful treatment.",
+     "from": "Post-scabetic pruritus persists 2–4 weeks after successful treatment."
+    },
+    {
+     "claim": "Post-scabetic pruritus is the leading reason therapy is thought to have failed.",
+     "from": "Post-scabetic pruritus is the leading reason therapy is thought to have failed."
+    },
+    {
+     "claim": "Triamcinolone and antihistamines are correct at that stage, once the mite is dead.",
+     "from": "Triamcinolone and antihistamines become correct during post-scabetic pruritus, after the mite is dead."
+    },
+    {
+     "claim": "Triamcinolone and antihistamines do not replace killing the mite.",
+     "from": "Triamcinolone and antihistamines are not a substitute for killing the mite."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-scabies",
+   "find": "A <b>close contact with the same condition</b> outranks morphology — it converts the differential to transmissible causes before you interpret a single lesion. And when the loudest symptom is itch, check whether the offered drug kills the <b>cause</b> or only the <b>sensation</b>.",
+   "with": "A <b>close contact with the same condition</b> carries more weight than morphology. It narrows the differential to transmissible causes before you interpret a single lesion. When the dominant symptom is itch, check whether a drug kills the <b>cause</b> or only treats the <b>sensation</b>.",
+   "note": ".rule: em dash removed, personification and filler 'And' removed",
+   "claims": [
+    {
+     "claim": "A close contact with the same condition outranks morphology.",
+     "to": "A close contact with the same condition carries more weight than morphology."
+    },
+    {
+     "claim": "A close contact converts the differential to transmissible causes before any lesion is interpreted.",
+     "to": "It narrows the differential to transmissible causes before you interpret a single lesion."
+    },
+    {
+     "claim": "When itch is the loudest symptom, check whether the drug kills the cause or only the sensation.",
+     "to": "When the dominant symptom is itch, check whether a drug kills the cause or only treats the sensation."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A close contact with the same condition carries more weight than morphology.",
+     "from": "A close contact with the same condition outranks morphology."
+    },
+    {
+     "claim": "It narrows the differential to transmissible causes before you interpret a single lesion.",
+     "from": "A close contact converts the differential to transmissible causes before any lesion is interpreted."
+    },
+    {
+     "claim": "When the dominant symptom is itch, check whether a drug kills the cause or only treats the sensation.",
+     "from": "When itch is the loudest symptom, check whether the drug kills the cause or only the sensation."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,901 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "smoking",
+   "find": "\"Most beneficial\" is a magnitude question",
+   "with": "Ranking preventive interventions by magnitude of benefit",
+   "note": "sub: remove rhetorical framing",
+   "claims": [
+    {
+     "claim": "\"Most beneficial\" asks for ranking by magnitude of benefit.",
+     "to": "Ranking preventive interventions by magnitude of benefit"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Preventive interventions are ranked by magnitude of benefit.",
+     "from": "\"Most beneficial\" asks for ranking by magnitude of benefit."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "smoking",
+   "find": "<p>When every option is guideline-supported, the question is asking you to rank by <b>magnitude of benefit</b>. Nothing beats quitting a pack a day: smoking cessation reduces all-cause mortality more than any drug on the list, cuts CV risk substantially within 1–2 years, and approaches never-smoker risk over ~15 years.</p>",
+   "with": "<p>When every option is guideline-supported, rank them by <b>magnitude of benefit</b>. No option beats quitting a pack a day. Smoking cessation reduces all-cause mortality more than any drug on the list. It cuts <b>CV</b> (cardiovascular) risk substantially within 1–2 years. Over ~15 years, risk approaches that of a never-smoker.</p>",
+   "note": "dp: remove question framing; split sentence; expand CV",
+   "claims": [
+    {
+     "claim": "When every option is guideline-supported, rank by magnitude of benefit.",
+     "to": "When every option is guideline-supported, rank them by magnitude of benefit."
+    },
+    {
+     "claim": "Nothing beats quitting a pack a day.",
+     "to": "No option beats quitting a pack a day."
+    },
+    {
+     "claim": "Smoking cessation reduces all-cause mortality more than any drug on the list.",
+     "to": "Smoking cessation reduces all-cause mortality more than any drug on the list."
+    },
+    {
+     "claim": "Smoking cessation cuts CV risk substantially within 1–2 years.",
+     "to": "It cuts CV (cardiovascular) risk substantially within 1–2 years."
+    },
+    {
+     "claim": "After cessation, risk approaches never-smoker risk over ~15 years.",
+     "to": "Over ~15 years, risk approaches that of a never-smoker."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When every option is guideline-supported, rank by magnitude of benefit.",
+     "from": "When every option is guideline-supported, rank by magnitude of benefit."
+    },
+    {
+     "claim": "No option beats quitting a pack a day.",
+     "from": "Nothing beats quitting a pack a day."
+    },
+    {
+     "claim": "Smoking cessation reduces all-cause mortality more than any drug on the list.",
+     "from": "Smoking cessation reduces all-cause mortality more than any drug on the list."
+    },
+    {
+     "claim": "CV stands for cardiovascular.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Smoking cessation cuts CV risk substantially within 1–2 years.",
+     "from": "Smoking cessation cuts CV risk substantially within 1–2 years."
+    },
+    {
+     "claim": "Over ~15 years, risk approaches that of a never-smoker.",
+     "from": "After cessation, risk approaches never-smoker risk over ~15 years."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "smoking",
+   "find": "For macrovascular outcomes: <b>smoking cessation &gt; BP control &gt; statin &gt; glycemic control</b>. If smoking cessation is an option and the patient smokes, it wins — unless the question is scoped to a specific organ (\"risk of <i>nephropathy</i> progression\" → ACE-I/BP; \"<i>microvascular</i> complications\" → A1c). Lifestyle answers are traps when <b>vague</b> (\"recommend exercise\") and winners when <b>specific and high-magnitude</b> (smoking or alcohol cessation).",
+   "with": "For macrovascular outcomes: <b>smoking cessation &gt; BP control &gt; statin &gt; glycemic control</b>. In a patient who smokes, smoking cessation ranks first whenever it is offered. The exception is an outcome limited to one organ. For <i>nephropathy</i> progression, choose an <b>ACE-I</b> (angiotensin-converting enzyme inhibitor) or BP control. For <i>microvascular</i> complications, choose A1c control. Lifestyle advice is the wrong choice when <b>vague</b> (\"recommend exercise\") and the right choice when <b>specific and high-magnitude</b> (smoking or alcohol cessation).",
+   "note": "rule: remove em dash and arrow chain; split; expand ACE-I",
+   "claims": [
+    {
+     "claim": "For macrovascular outcomes the hierarchy is smoking cessation > BP control > statin > glycemic control.",
+     "to": "For macrovascular outcomes: smoking cessation > BP control > statin > glycemic control."
+    },
+    {
+     "claim": "If smoking cessation is an option and the patient smokes, it wins.",
+     "to": "In a patient who smokes, smoking cessation ranks first whenever it is offered."
+    },
+    {
+     "claim": "The exception is a question scoped to a specific organ.",
+     "to": "The exception is an outcome limited to one organ."
+    },
+    {
+     "claim": "For risk of nephropathy progression, choose ACE-I/BP.",
+     "to": "For nephropathy progression, choose an ACE-I (angiotensin-converting enzyme inhibitor) or BP control."
+    },
+    {
+     "claim": "For microvascular complications, choose A1c.",
+     "to": "For microvascular complications, choose A1c control."
+    },
+    {
+     "claim": "Lifestyle answers are wrong when vague, such as recommend exercise.",
+     "to": "Lifestyle advice is the wrong choice when vague (\"recommend exercise\") and the right choice when specific and high-magnitude (smoking or alcohol cessation)."
+    },
+    {
+     "claim": "Lifestyle answers are right when specific and high-magnitude, such as smoking or alcohol cessation.",
+     "to": "Lifestyle advice is the wrong choice when vague (\"recommend exercise\") and the right choice when specific and high-magnitude (smoking or alcohol cessation)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "For macrovascular outcomes the hierarchy is smoking cessation > BP control > statin > glycemic control.",
+     "from": "For macrovascular outcomes the hierarchy is smoking cessation > BP control > statin > glycemic control."
+    },
+    {
+     "claim": "In a patient who smokes, smoking cessation ranks first whenever it is offered.",
+     "from": "If smoking cessation is an option and the patient smokes, it wins."
+    },
+    {
+     "claim": "The exception is an outcome limited to one organ.",
+     "from": "The exception is a question scoped to a specific organ."
+    },
+    {
+     "claim": "ACE-I stands for angiotensin-converting enzyme inhibitor.",
+     "from": "expansion"
+    },
+    {
+     "claim": "For nephropathy progression, choose an ACE-I or BP control.",
+     "from": "For risk of nephropathy progression, choose ACE-I/BP."
+    },
+    {
+     "claim": "For microvascular complications, choose A1c control.",
+     "from": "For microvascular complications, choose A1c."
+    },
+    {
+     "claim": "Lifestyle advice is wrong when vague (recommend exercise).",
+     "from": "Lifestyle answers are wrong when vague, such as recommend exercise."
+    },
+    {
+     "claim": "Lifestyle advice is right when specific and high-magnitude (smoking or alcohol cessation).",
+     "from": "Lifestyle answers are right when specific and high-magnitude, such as smoking or alcohol cessation."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "lipid-screen",
+   "find": "<p>USPSTF <b>retired its standalone lipid-screening recommendation</b>. Lipid measurement now lives inside the statin primary-prevention recommendation: adults <b>40–75</b> get lipids as part of periodic 10-year ASCVD risk assessment. Under 40 and in children, the evidence is rated <b>insufficient</b>.</p>",
+   "with": "<p><b>USPSTF</b> (US Preventive Services Task Force) <b>retired its standalone lipid-screening recommendation</b>. Lipid measurement is now part of the statin primary-prevention recommendation. Adults <b>40–75</b> have lipids measured as part of periodic 10-year <b>ASCVD</b> (atherosclerotic cardiovascular disease) risk assessment. Under age 40 and in children, the evidence is rated <b>insufficient</b>.</p>",
+   "note": "dp: split sentence; expand USPSTF and ASCVD",
+   "claims": [
+    {
+     "claim": "USPSTF retired its standalone lipid-screening recommendation.",
+     "to": "USPSTF (US Preventive Services Task Force) retired its standalone lipid-screening recommendation."
+    },
+    {
+     "claim": "Lipid measurement now lives inside the statin primary-prevention recommendation.",
+     "to": "Lipid measurement is now part of the statin primary-prevention recommendation."
+    },
+    {
+     "claim": "Adults 40–75 get lipids as part of periodic 10-year ASCVD risk assessment.",
+     "to": "Adults 40–75 have lipids measured as part of periodic 10-year ASCVD (atherosclerotic cardiovascular disease) risk assessment."
+    },
+    {
+     "claim": "Under 40 and in children, the evidence is rated insufficient.",
+     "to": "Under age 40 and in children, the evidence is rated insufficient."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "USPSTF stands for US Preventive Services Task Force.",
+     "from": "expansion"
+    },
+    {
+     "claim": "USPSTF retired its standalone lipid-screening recommendation.",
+     "from": "USPSTF retired its standalone lipid-screening recommendation."
+    },
+    {
+     "claim": "Lipid measurement is now part of the statin primary-prevention recommendation.",
+     "from": "Lipid measurement now lives inside the statin primary-prevention recommendation."
+    },
+    {
+     "claim": "ASCVD stands for atherosclerotic cardiovascular disease.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Adults 40–75 have lipids measured as part of periodic 10-year ASCVD risk assessment.",
+     "from": "Adults 40–75 get lipids as part of periodic 10-year ASCVD risk assessment."
+    },
+    {
+     "claim": "Under age 40 and in children, the evidence is rated insufficient.",
+     "from": "Under 40 and in children, the evidence is rated insufficient."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "lipid-screen",
+   "find": " Men <b>≥35</b> screen · women <b>≥45</b> at increased risk · ages 20–35 (men) and 20–45 (women) only <b>with risk factors</b> (diabetes, HTN, smoking, obesity, premature family history). Conventional interval: <b>every ~5 years</b>; ACC/AHA says 4–6 years from age 20. <b>AAP</b> — not USPSTF — recommends universal pediatric lipid screening once at <b>9–11</b> and again at <b>17–21</b>.",
+   "with": " Men <b>≥35</b> screen · women <b>≥45</b> at increased risk · ages 20–35 (men) and 20–45 (women) only <b>with risk factors</b>: diabetes, <b>HTN</b> (hypertension), smoking, obesity, premature family history. Conventional interval: <b>every ~5 years</b>; <b>ACC/AHA</b> (American College of Cardiology/American Heart Association) says 4–6 years from age 20. The <b>AAP</b> (American Academy of Pediatrics), not <b>USPSTF</b> (US Preventive Services Task Force), recommends universal pediatric lipid screening once at <b>9–11</b> and again at <b>17–21</b>.",
+   "note": "pearls: remove em dashes; expand HTN, ACC/AHA, AAP, USPSTF",
+   "claims": [
+    {
+     "claim": "Legacy: men ≥35 screen.",
+     "to": "Men ≥35 screen · women ≥45 at increased risk · ages 20–35 (men) and 20–45 (women) only with risk factors: diabetes, HTN (hypertension), smoking, obesity, premature family history."
+    },
+    {
+     "claim": "Legacy: women ≥45 at increased risk screen.",
+     "to": "Men ≥35 screen · women ≥45 at increased risk · ages 20–35 (men) and 20–45 (women) only with risk factors: diabetes, HTN (hypertension), smoking, obesity, premature family history."
+    },
+    {
+     "claim": "Ages 20–35 (men) and 20–45 (women) screen only with risk factors.",
+     "to": "Men ≥35 screen · women ≥45 at increased risk · ages 20–35 (men) and 20–45 (women) only with risk factors: diabetes, HTN (hypertension), smoking, obesity, premature family history."
+    },
+    {
+     "claim": "Risk factors are diabetes, HTN, smoking, obesity, premature family history.",
+     "to": "Men ≥35 screen · women ≥45 at increased risk · ages 20–35 (men) and 20–45 (women) only with risk factors: diabetes, HTN (hypertension), smoking, obesity, premature family history."
+    },
+    {
+     "claim": "Conventional interval is every ~5 years.",
+     "to": "Conventional interval: every ~5 years; ACC/AHA (American College of Cardiology/American Heart Association) says 4–6 years from age 20."
+    },
+    {
+     "claim": "ACC/AHA says 4–6 years from age 20.",
+     "to": "Conventional interval: every ~5 years; ACC/AHA (American College of Cardiology/American Heart Association) says 4–6 years from age 20."
+    },
+    {
+     "claim": "AAP, not USPSTF, recommends universal pediatric lipid screening once at 9–11 and again at 17–21.",
+     "to": "The AAP (American Academy of Pediatrics), not USPSTF (US Preventive Services Task Force), recommends universal pediatric lipid screening once at 9–11 and again at 17–21."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Legacy: men ≥35 screen.",
+     "from": "Legacy: men ≥35 screen."
+    },
+    {
+     "claim": "Legacy: women ≥45 at increased risk screen.",
+     "from": "Legacy: women ≥45 at increased risk screen."
+    },
+    {
+     "claim": "Ages 20–35 (men) and 20–45 (women) screen only with risk factors.",
+     "from": "Ages 20–35 (men) and 20–45 (women) screen only with risk factors."
+    },
+    {
+     "claim": "HTN stands for hypertension.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Risk factors are diabetes, HTN, smoking, obesity, premature family history.",
+     "from": "Risk factors are diabetes, HTN, smoking, obesity, premature family history."
+    },
+    {
+     "claim": "Conventional interval is every ~5 years.",
+     "from": "Conventional interval is every ~5 years."
+    },
+    {
+     "claim": "ACC/AHA stands for American College of Cardiology/American Heart Association.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ACC/AHA says 4–6 years from age 20.",
+     "from": "ACC/AHA says 4–6 years from age 20."
+    },
+    {
+     "claim": "AAP stands for American Academy of Pediatrics.",
+     "from": "expansion"
+    },
+    {
+     "claim": "USPSTF stands for US Preventive Services Task Force.",
+     "from": "expansion"
+    },
+    {
+     "claim": "AAP, not USPSTF, recommends universal pediatric lipid screening once at 9–11 and again at 17–21.",
+     "from": "AAP, not USPSTF, recommends universal pediatric lipid screening once at 9–11 and again at 17–21."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "lipid-screen",
+   "find": " When a stem shows you an <b>enlarged</b> organ, ask what the enlargement means hemodynamically before pattern-matching to its absence. A congested spleen is not an absent spleen — cirrhosis loses <b>opsonins</b>, asplenia loses the <b>filter</b>, and the vaccine lists differ accordingly.",
+   "with": " With an <b>enlarged</b> organ, ask what the enlargement means hemodynamically before treating the organ as absent. A congested spleen is not an absent spleen. Cirrhosis causes loss of <b>opsonins</b>; asplenia causes loss of the <b>filter</b>. The vaccine lists differ accordingly.",
+   "note": "rule: remove stem framing and em dash; split",
+   "claims": [
+    {
+     "claim": "With an enlarged organ, ask what the enlargement means hemodynamically before pattern-matching to its absence.",
+     "to": "With an enlarged organ, ask what the enlargement means hemodynamically before treating the organ as absent."
+    },
+    {
+     "claim": "A congested spleen is not an absent spleen.",
+     "to": "A congested spleen is not an absent spleen."
+    },
+    {
+     "claim": "Cirrhosis loses opsonins.",
+     "to": "Cirrhosis causes loss of opsonins; asplenia causes loss of the filter."
+    },
+    {
+     "claim": "Asplenia loses the filter.",
+     "to": "Cirrhosis causes loss of opsonins; asplenia causes loss of the filter."
+    },
+    {
+     "claim": "The vaccine lists differ accordingly.",
+     "to": "The vaccine lists differ accordingly."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "With an enlarged organ, ask what the enlargement means hemodynamically before treating the organ as absent.",
+     "from": "With an enlarged organ, ask what the enlargement means hemodynamically before pattern-matching to its absence."
+    },
+    {
+     "claim": "A congested spleen is not an absent spleen.",
+     "from": "A congested spleen is not an absent spleen."
+    },
+    {
+     "claim": "Cirrhosis causes loss of opsonins.",
+     "from": "Cirrhosis loses opsonins."
+    },
+    {
+     "claim": "Asplenia causes loss of the filter.",
+     "from": "Asplenia loses the filter."
+    },
+    {
+     "claim": "The vaccine lists differ accordingly.",
+     "from": "The vaccine lists differ accordingly."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "preop",
+   "find": "<p>Preop questions test which numbers actually gate which procedures. If the value clears the threshold, the answer is almost always <b>proceed</b> — NBME rewards restraint.</p>",
+   "with": "<p>Each procedure has its own preoperative threshold values. If the value clears the threshold, almost always <b>proceed</b>.</p>",
+   "note": "dp: remove question framing and em dash",
+   "claims": [
+    {
+     "claim": "Specific numbers gate specific procedures.",
+     "to": "Each procedure has its own preoperative threshold values."
+    },
+    {
+     "claim": "If the value clears the threshold, the answer is almost always proceed.",
+     "to": "If the value clears the threshold, almost always proceed."
+    },
+    {
+     "claim": "NBME rewards restraint.",
+     "to": "If the value clears the threshold, almost always proceed."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Each procedure has its own preoperative threshold values.",
+     "from": "Specific numbers gate specific procedures."
+    },
+    {
+     "claim": "If the value clears the threshold, almost always proceed.",
+     "from": "If the value clears the threshold, the answer is almost always proceed."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "preop",
+   "find": " Petechiae with a count of 8,000 in a healthy young woman → <b>ITP</b> → steroids/IVIG, <b>not</b> transfusion (transfused platelets get consumed too) · heparin day 5–10 with a 50% drop → <b>HIT</b> → stop heparin, start argatroban, never transfuse · <b>clumps on the smear</b> → pseudothrombocytopenia from EDTA → repeat in a citrate tube — the one time \"recheck the count\" is correct · <b>DDAVP</b> is for qualitative defects (von Willebrand disease, mild hemophilia A, uremic platelet dysfunction), not for a low count.",
+   "with": " Petechiae with a count of 8,000 in a healthy young woman indicate <b>ITP</b> (immune thrombocytopenia) → steroids or <b>IVIG</b> (intravenous immunoglobulin), <b>not</b> transfusion. Transfused platelets are consumed too · a 50% drop on heparin day 5–10 indicates <b>HIT</b> (heparin-induced thrombocytopenia) → stop heparin, start argatroban and never transfuse · <b>clumps on the smear</b> indicate pseudothrombocytopenia from <b>EDTA</b> (ethylenediaminetetraacetic acid) → repeat in a citrate tube. This is the one time \"recheck the count\" is correct · <b>DDAVP</b> (desmopressin) is for qualitative defects (von Willebrand disease, mild hemophilia A, uremic platelet dysfunction), not for a low count.",
+   "note": "pearls: one arrow per row, remove em dash, expand acronyms",
+   "claims": [
+    {
+     "claim": "Petechiae with a count of 8,000 in a healthy young woman is ITP.",
+     "to": "Petechiae with a count of 8,000 in a healthy young woman indicate ITP (immune thrombocytopenia) → steroids or IVIG (intravenous immunoglobulin), not transfusion."
+    },
+    {
+     "claim": "ITP is treated with steroids/IVIG, not transfusion.",
+     "to": "Petechiae with a count of 8,000 in a healthy young woman indicate ITP (immune thrombocytopenia) → steroids or IVIG (intravenous immunoglobulin), not transfusion."
+    },
+    {
+     "claim": "Transfused platelets get consumed too in ITP.",
+     "to": "Transfused platelets are consumed too"
+    },
+    {
+     "claim": "Heparin day 5–10 with a 50% drop is HIT.",
+     "to": "a 50% drop on heparin day 5–10 indicates HIT (heparin-induced thrombocytopenia) → stop heparin, start argatroban and never transfuse"
+    },
+    {
+     "claim": "HIT: stop heparin, start argatroban, never transfuse.",
+     "to": "a 50% drop on heparin day 5–10 indicates HIT (heparin-induced thrombocytopenia) → stop heparin, start argatroban and never transfuse"
+    },
+    {
+     "claim": "Clumps on the smear are pseudothrombocytopenia from EDTA.",
+     "to": "clumps on the smear indicate pseudothrombocytopenia from EDTA (ethylenediaminetetraacetic acid) → repeat in a citrate tube."
+    },
+    {
+     "claim": "Pseudothrombocytopenia: repeat in a citrate tube.",
+     "to": "clumps on the smear indicate pseudothrombocytopenia from EDTA (ethylenediaminetetraacetic acid) → repeat in a citrate tube."
+    },
+    {
+     "claim": "This is the one time recheck the count is correct.",
+     "to": "This is the one time \"recheck the count\" is correct"
+    },
+    {
+     "claim": "DDAVP is for qualitative defects (von Willebrand disease, mild hemophilia A, uremic platelet dysfunction), not for a low count.",
+     "to": "DDAVP (desmopressin) is for qualitative defects (von Willebrand disease, mild hemophilia A, uremic platelet dysfunction), not for a low count."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Petechiae with a count of 8,000 in a healthy young woman indicate ITP.",
+     "from": "Petechiae with a count of 8,000 in a healthy young woman is ITP."
+    },
+    {
+     "claim": "ITP stands for immune thrombocytopenia.",
+     "from": "expansion"
+    },
+    {
+     "claim": "IVIG stands for intravenous immunoglobulin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ITP is treated with steroids or IVIG, not transfusion.",
+     "from": "ITP is treated with steroids/IVIG, not transfusion."
+    },
+    {
+     "claim": "Transfused platelets are consumed too.",
+     "from": "Transfused platelets get consumed too in ITP."
+    },
+    {
+     "claim": "A 50% drop on heparin day 5–10 indicates HIT.",
+     "from": "Heparin day 5–10 with a 50% drop is HIT."
+    },
+    {
+     "claim": "HIT stands for heparin-induced thrombocytopenia.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HIT: stop heparin, start argatroban and never transfuse.",
+     "from": "HIT: stop heparin, start argatroban, never transfuse."
+    },
+    {
+     "claim": "Clumps on the smear indicate pseudothrombocytopenia from EDTA.",
+     "from": "Clumps on the smear are pseudothrombocytopenia from EDTA."
+    },
+    {
+     "claim": "EDTA stands for ethylenediaminetetraacetic acid.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Repeat in a citrate tube.",
+     "from": "Pseudothrombocytopenia: repeat in a citrate tube."
+    },
+    {
+     "claim": "This is the one time recheck the count is correct.",
+     "from": "This is the one time recheck the count is correct."
+    },
+    {
+     "claim": "DDAVP stands for desmopressin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "DDAVP is for qualitative defects, not for a low count.",
+     "from": "DDAVP is for qualitative defects (von Willebrand disease, mild hemophilia A, uremic platelet dysfunction), not for a low count."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "elder",
+   "find": " You do not need proof, and you do not investigate first. Confounders like warfarin (easy bruising) and dementia (unreliable historian) are real and <b>irrelevant to the decision</b> — APS investigates; you don't adjudicate.</p>",
+   "with": " Proof is not required, and the physician does not investigate first. Warfarin (easy bruising) and dementia (unreliable historian) are real confounders but are <b>irrelevant to the decision</b> to report. <b>APS</b> (Adult Protective Services) investigates; the physician does not adjudicate.</p>",
+   "note": "dp: remove em dash; plain voice; expand APS",
+   "claims": [
+    {
+     "claim": "You do not need proof.",
+     "to": "Proof is not required, and the physician does not investigate first."
+    },
+    {
+     "claim": "You do not investigate first.",
+     "to": "Proof is not required, and the physician does not investigate first."
+    },
+    {
+     "claim": "Confounders like warfarin (easy bruising) and dementia (unreliable historian) are real.",
+     "to": "Warfarin (easy bruising) and dementia (unreliable historian) are real confounders but are irrelevant to the decision to report."
+    },
+    {
+     "claim": "These confounders are irrelevant to the decision.",
+     "to": "Warfarin (easy bruising) and dementia (unreliable historian) are real confounders but are irrelevant to the decision to report."
+    },
+    {
+     "claim": "APS investigates; you don't adjudicate.",
+     "to": "APS (Adult Protective Services) investigates; the physician does not adjudicate."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Proof is not required.",
+     "from": "You do not need proof."
+    },
+    {
+     "claim": "The physician does not investigate first.",
+     "from": "You do not investigate first."
+    },
+    {
+     "claim": "Warfarin (easy bruising) and dementia (unreliable historian) are real confounders.",
+     "from": "Confounders like warfarin (easy bruising) and dementia (unreliable historian) are real."
+    },
+    {
+     "claim": "These confounders are irrelevant to the decision to report.",
+     "from": "These confounders are irrelevant to the decision."
+    },
+    {
+     "claim": "APS stands for Adult Protective Services.",
+     "from": "expansion"
+    },
+    {
+     "claim": "APS investigates; the physician does not adjudicate.",
+     "from": "APS investigates; you don't adjudicate."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "elder",
+   "find": " Interview technique matters and can itself be the answer: <b>separate the patient from the caregiver</b>, ask direct nonjudgmental questions, don't confront the suspected abuser.",
+   "with": " Interview technique: <b>separate the patient from the caregiver</b>, ask direct nonjudgmental questions, and do not confront the suspected abuser.",
+   "note": "pearls: remove framing about the answer",
+   "claims": [
+    {
+     "claim": "Interview technique matters and can itself be the answer.",
+     "carried_by": "Interview her alone"
+    },
+    {
+     "claim": "Separate the patient from the caregiver.",
+     "to": "Interview technique: separate the patient from the caregiver, ask direct nonjudgmental questions, and do not confront the suspected abuser."
+    },
+    {
+     "claim": "Ask direct nonjudgmental questions.",
+     "to": "Interview technique: separate the patient from the caregiver, ask direct nonjudgmental questions, and do not confront the suspected abuser."
+    },
+    {
+     "claim": "Don't confront the suspected abuser.",
+     "to": "Interview technique: separate the patient from the caregiver, ask direct nonjudgmental questions, and do not confront the suspected abuser."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Separate the patient from the caregiver.",
+     "from": "Separate the patient from the caregiver."
+    },
+    {
+     "claim": "Ask direct nonjudgmental questions.",
+     "from": "Ask direct nonjudgmental questions."
+    },
+    {
+     "claim": "Do not confront the suspected abuser.",
+     "from": "Don't confront the suspected abuser."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "elder",
+   "find": " <b>Capacity determines the path.</b> Children and cognitively impaired elders get reported over anyone's objection; a competent adult experiencing IPV gets support and autonomy. And \"document and re-ask at the next visit\" is never the answer once abuse is on the table — it sends a dependent patient back into the home you suspect.",
+   "with": " <b>Capacity determines the reporting path.</b> Report abuse of children and cognitively impaired elders over anyone's objection. For a competent adult experiencing <b>IPV</b> (intimate partner violence), offer support and respect autonomy. Once abuse is suspected, \"document and re-ask at the next visit\" is never appropriate. It sends a dependent patient back into the home you suspect.",
+   "note": "rule: reword slogan bold; remove em dash and filler; expand IPV",
+   "reworded_bold": [
+    "Capacity determines the path."
+   ],
+   "claims": [
+    {
+     "claim": "Capacity determines the path.",
+     "to": "Capacity determines the reporting path."
+    },
+    {
+     "claim": "Children and cognitively impaired elders get reported over anyone's objection.",
+     "to": "Report abuse of children and cognitively impaired elders over anyone's objection."
+    },
+    {
+     "claim": "A competent adult experiencing IPV gets support and autonomy.",
+     "to": "For a competent adult experiencing IPV (intimate partner violence), offer support and respect autonomy."
+    },
+    {
+     "claim": "Document and re-ask at the next visit is never the answer once abuse is on the table.",
+     "to": "Once abuse is suspected, \"document and re-ask at the next visit\" is never appropriate."
+    },
+    {
+     "claim": "Waiting sends a dependent patient back into the home you suspect.",
+     "to": "It sends a dependent patient back into the home you suspect."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Capacity determines the reporting path.",
+     "from": "Capacity determines the path."
+    },
+    {
+     "claim": "Report abuse of children and cognitively impaired elders over anyone's objection.",
+     "from": "Children and cognitively impaired elders get reported over anyone's objection."
+    },
+    {
+     "claim": "IPV stands for intimate partner violence.",
+     "from": "expansion"
+    },
+    {
+     "claim": "For a competent adult experiencing IPV, offer support and respect autonomy.",
+     "from": "A competent adult experiencing IPV gets support and autonomy."
+    },
+    {
+     "claim": "Once abuse is suspected, document and re-ask at the next visit is never appropriate.",
+     "from": "Document and re-ask at the next visit is never the answer once abuse is on the table."
+    },
+    {
+     "claim": "It sends a dependent patient back into the home you suspect.",
+     "from": "Waiting sends a dependent patient back into the home you suspect."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "elder",
+   "find": "Capacity determines the path",
+   "with": "Capacity determines the reporting path",
+   "note": "sub: plain statement",
+   "claims": [
+    {
+     "claim": "Capacity determines the path.",
+     "to": "Capacity determines the reporting path"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Capacity determines the reporting path.",
+     "from": "Capacity determines the path."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vegan",
+   "find": "<p>The stem's deciding words are <b>\"unprocessed\"</b> and <b>\"no supplements.\"</b> A well-planned vegan diet meets most needs — the exam's fork is which nutrients cannot come from unfortified plants: <b>B12 always</b>, <b>vitamin D</b> (skin synthesis covers only ~half the requirement, less in northern latitudes), and <b>calcium</b> (plant sources are oxalate-bound). Iron and zinc join the list for children and menstruating women. The planted wrong answers are <b>folate and protein</b> — abundant in legumes, greens, and grains.</p>",
+   "with": "<p>A well-planned vegan diet meets most needs. This patient eats an <b>\"unprocessed\"</b> vegan diet and takes <b>\"no supplements.\"</b> Nutrients that cannot come from unfortified plants: <b>B12 always</b> · <b>vitamin D</b> (skin synthesis covers only ~half the requirement, less in northern latitudes) · <b>calcium</b> (plant sources are oxalate-bound). For children and menstruating women, add iron and zinc. Legumes, greens and grains are rich in <b>folate and protein</b>, so neither needs supplementing.</p>",
+   "note": "dp: remove stem/exam framing and em dashes; row list for parallel nutrients",
+   "claims": [
+    {
+     "claim": "The deciding words are unprocessed and no supplements.",
+     "to": "This patient eats an \"unprocessed\" vegan diet and takes \"no supplements.\""
+    },
+    {
+     "claim": "A well-planned vegan diet meets most needs.",
+     "to": "A well-planned vegan diet meets most needs."
+    },
+    {
+     "claim": "The key question is which nutrients cannot come from unfortified plants.",
+     "to": "Nutrients that cannot come from unfortified plants: B12 always · vitamin D (skin synthesis covers only ~half the requirement, less in northern latitudes) · calcium (plant sources are oxalate-bound)."
+    },
+    {
+     "claim": "B12 cannot come from unfortified plants, always.",
+     "to": "Nutrients that cannot come from unfortified plants: B12 always · vitamin D (skin synthesis covers only ~half the requirement, less in northern latitudes) · calcium (plant sources are oxalate-bound)."
+    },
+    {
+     "claim": "Vitamin D: skin synthesis covers only ~half the requirement, less in northern latitudes.",
+     "to": "Nutrients that cannot come from unfortified plants: B12 always · vitamin D (skin synthesis covers only ~half the requirement, less in northern latitudes) · calcium (plant sources are oxalate-bound)."
+    },
+    {
+     "claim": "Calcium: plant sources are oxalate-bound.",
+     "to": "Nutrients that cannot come from unfortified plants: B12 always · vitamin D (skin synthesis covers only ~half the requirement, less in northern latitudes) · calcium (plant sources are oxalate-bound)."
+    },
+    {
+     "claim": "Iron and zinc join the list for children and menstruating women.",
+     "to": "For children and menstruating women, add iron and zinc."
+    },
+    {
+     "claim": "Folate and protein are wrong answers.",
+     "to": "Legumes, greens and grains are rich in folate and protein, so neither needs supplementing."
+    },
+    {
+     "claim": "Folate and protein are abundant in legumes, greens, and grains.",
+     "to": "Legumes, greens and grains are rich in folate and protein, so neither needs supplementing."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A well-planned vegan diet meets most needs.",
+     "from": "A well-planned vegan diet meets most needs."
+    },
+    {
+     "claim": "The patient eats an unprocessed vegan diet and takes no supplements.",
+     "from": "The deciding words are unprocessed and no supplements."
+    },
+    {
+     "claim": "Nutrients that cannot come from unfortified plants: B12 always, vitamin D, calcium.",
+     "from": "The key question is which nutrients cannot come from unfortified plants."
+    },
+    {
+     "claim": "Vitamin D: skin synthesis covers only ~half the requirement, less in northern latitudes.",
+     "from": "Vitamin D: skin synthesis covers only ~half the requirement, less in northern latitudes."
+    },
+    {
+     "claim": "Calcium: plant sources are oxalate-bound.",
+     "from": "Calcium: plant sources are oxalate-bound."
+    },
+    {
+     "claim": "For children and menstruating women, add iron and zinc.",
+     "from": "Iron and zinc join the list for children and menstruating women."
+    },
+    {
+     "claim": "Legumes, greens and grains are rich in folate and protein.",
+     "from": "Folate and protein are abundant in legumes, greens, and grains."
+    },
+    {
+     "claim": "Neither folate nor protein needs supplementing.",
+     "from": "Folate and protein are wrong answers."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vegan",
+   "find": " Plant calcium (spinach) is oxalate-bound and poorly absorbed · B12 deficiency = macrocytosis <b>plus dorsal-column signs</b>; folate deficiency = macrocytosis alone · non-heme iron absorbs poorly — pair it with vitamin C · balanced vegan diets supply complete protein; \"protein deficiency\" is bait.",
+   "with": " Plant calcium (spinach) is oxalate-bound and poorly absorbed · B12 deficiency causes macrocytosis <b>plus dorsal-column signs</b>; folate deficiency causes macrocytosis alone · non-heme iron absorbs poorly, so pair it with vitamin C · balanced vegan diets supply complete protein and do not cause protein deficiency.",
+   "note": "pearls: remove em dash and 'bait' framing",
+   "claims": [
+    {
+     "claim": "Plant calcium (spinach) is oxalate-bound and poorly absorbed.",
+     "to": "Plant calcium (spinach) is oxalate-bound and poorly absorbed · B12 deficiency causes macrocytosis plus dorsal-column signs; folate deficiency causes macrocytosis alone · non-heme iron absorbs poorly, so pair it with vitamin C · balanced vegan diets supply complete protein and do not cause protein deficiency."
+    },
+    {
+     "claim": "B12 deficiency = macrocytosis plus dorsal-column signs.",
+     "to": "Plant calcium (spinach) is oxalate-bound and poorly absorbed · B12 deficiency causes macrocytosis plus dorsal-column signs; folate deficiency causes macrocytosis alone · non-heme iron absorbs poorly, so pair it with vitamin C · balanced vegan diets supply complete protein and do not cause protein deficiency."
+    },
+    {
+     "claim": "Folate deficiency = macrocytosis alone.",
+     "to": "Plant calcium (spinach) is oxalate-bound and poorly absorbed · B12 deficiency causes macrocytosis plus dorsal-column signs; folate deficiency causes macrocytosis alone · non-heme iron absorbs poorly, so pair it with vitamin C · balanced vegan diets supply complete protein and do not cause protein deficiency."
+    },
+    {
+     "claim": "Non-heme iron absorbs poorly; pair it with vitamin C.",
+     "to": "Plant calcium (spinach) is oxalate-bound and poorly absorbed · B12 deficiency causes macrocytosis plus dorsal-column signs; folate deficiency causes macrocytosis alone · non-heme iron absorbs poorly, so pair it with vitamin C · balanced vegan diets supply complete protein and do not cause protein deficiency."
+    },
+    {
+     "claim": "Balanced vegan diets supply complete protein.",
+     "to": "Plant calcium (spinach) is oxalate-bound and poorly absorbed · B12 deficiency causes macrocytosis plus dorsal-column signs; folate deficiency causes macrocytosis alone · non-heme iron absorbs poorly, so pair it with vitamin C · balanced vegan diets supply complete protein and do not cause protein deficiency."
+    },
+    {
+     "claim": "Protein deficiency is bait.",
+     "to": "Plant calcium (spinach) is oxalate-bound and poorly absorbed · B12 deficiency causes macrocytosis plus dorsal-column signs; folate deficiency causes macrocytosis alone · non-heme iron absorbs poorly, so pair it with vitamin C · balanced vegan diets supply complete protein and do not cause protein deficiency."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Plant calcium (spinach) is oxalate-bound and poorly absorbed.",
+     "from": "Plant calcium (spinach) is oxalate-bound and poorly absorbed."
+    },
+    {
+     "claim": "B12 deficiency causes macrocytosis plus dorsal-column signs.",
+     "from": "B12 deficiency = macrocytosis plus dorsal-column signs."
+    },
+    {
+     "claim": "Folate deficiency causes macrocytosis alone.",
+     "from": "Folate deficiency = macrocytosis alone."
+    },
+    {
+     "claim": "Non-heme iron absorbs poorly, so pair it with vitamin C.",
+     "from": "Non-heme iron absorbs poorly; pair it with vitamin C."
+    },
+    {
+     "claim": "Balanced vegan diets supply complete protein.",
+     "from": "Balanced vegan diets supply complete protein."
+    },
+    {
+     "claim": "Balanced vegan diets do not cause protein deficiency.",
+     "from": "Protein deficiency is bait."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vegan",
+   "find": " Part II <b>Water-Soluble Vitamin Deficiency</b> owns B12 against folate: are there neurologic signs, and is the methylmalonic acid high? Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> owns vitamin D deficiency:",
+   "with": " Part II <b>Water-Soluble Vitamin Deficiency</b> covers B12 against folate: are there neurologic signs, and is the methylmalonic acid high? Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> covers vitamin D deficiency:",
+   "note": "pairs with: owns -> covers",
+   "claims": [
+    {
+     "claim": "Water-Soluble Vitamin Deficiency covers B12 against folate: neurologic signs and high methylmalonic acid.",
+     "to": "Part II Water-Soluble Vitamin Deficiency covers B12 against folate: are there neurologic signs, and is the methylmalonic acid high?"
+    },
+    {
+     "claim": "Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin D deficiency.",
+     "to": "Part II Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin D deficiency:"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Water-Soluble Vitamin Deficiency covers B12 against folate: neurologic signs and high methylmalonic acid.",
+     "from": "Water-Soluble Vitamin Deficiency covers B12 against folate: neurologic signs and high methylmalonic acid."
+    },
+    {
+     "claim": "Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin D deficiency.",
+     "from": "Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin D deficiency."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vegan",
+   "find": " Diet questions are solved by sourcing, not by lists: ask where each nutrient physically comes from — a nutrient with no unfortified plant source must be supplemented, and a nutrient plants are rich in is the distractor.",
+   "with": " Ask where each nutrient comes from. A nutrient with no unfortified plant source must be supplemented. A nutrient that plants are rich in does not need supplementing.",
+   "note": "rule: remove slogan and em dash",
+   "claims": [
+    {
+     "claim": "Diet questions are solved by sourcing, not by lists.",
+     "dropped": "rhetorical paired contrast; the sourcing method is stated next"
+    },
+    {
+     "claim": "Ask where each nutrient physically comes from.",
+     "to": "Ask where each nutrient comes from."
+    },
+    {
+     "claim": "A nutrient with no unfortified plant source must be supplemented.",
+     "to": "A nutrient with no unfortified plant source must be supplemented."
+    },
+    {
+     "claim": "A nutrient plants are rich in is the distractor.",
+     "to": "A nutrient that plants are rich in does not need supplementing."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Ask where each nutrient comes from.",
+     "from": "Ask where each nutrient physically comes from."
+    },
+    {
+     "claim": "A nutrient with no unfortified plant source must be supplemented.",
+     "from": "A nutrient with no unfortified plant source must be supplemented."
+    },
+    {
+     "claim": "A nutrient that plants are rich in does not need supplementing.",
+     "from": "A nutrient plants are rich in is the distractor."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vegan",
+   "find": "<span class=\"trapwhy\">Folate matters in pregnancy stems — planted here where vegan diets are folate-rich.</span>",
+   "with": "<span class=\"trapwhy\">Folate: it matters in pregnancy, but vegan diets are folate-rich.</span>",
+   "note": "traps: Option: why",
+   "claims": [
+    {
+     "claim": "Folate matters in pregnancy stems.",
+     "to": "Folate: it matters in pregnancy, but vegan diets are folate-rich."
+    },
+    {
+     "claim": "Vegan diets are folate-rich.",
+     "to": "Folate: it matters in pregnancy, but vegan diets are folate-rich."
+    },
+    {
+     "claim": "Folate is planted here as a distractor.",
+     "dropped": "framing about the option; the reason it is wrong is stated"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Folate matters in pregnancy.",
+     "from": "Folate matters in pregnancy stems."
+    },
+    {
+     "claim": "Vegan diets are folate-rich.",
+     "from": "Vegan diets are folate-rich."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vegan",
+   "find": "<span class=\"trapwhy\">\"A well-planned vegan diet is nutritionally adequate\" feels too permissive but is the credited frame — except for B12.</span>",
+   "with": "<span class=\"trapwhy\">\"A well-planned vegan diet is nutritionally adequate\": this feels too permissive but is correct, except for B12.</span>",
+   "note": "traps: remove em dash; one colon",
+   "claims": [
+    {
+     "claim": "A well-planned vegan diet is nutritionally adequate is the credited frame, except for B12.",
+     "to": "\"A well-planned vegan diet is nutritionally adequate\": this feels too permissive but is correct, except for B12."
+    },
+    {
+     "claim": "It feels too permissive.",
+     "to": "\"A well-planned vegan diet is nutritionally adequate\": this feels too permissive but is correct, except for B12."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A well-planned vegan diet is nutritionally adequate is correct, except for B12.",
+     "from": "A well-planned vegan diet is nutritionally adequate is the credited frame, except for B12."
+    },
+    {
+     "claim": "It feels too permissive.",
+     "from": "It feels too permissive."
+    }
+   ]
+  }
+ ]
+}

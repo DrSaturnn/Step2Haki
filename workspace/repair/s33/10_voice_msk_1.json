@@ -1,0 +1,722 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "pmr",
+   "find": "<p>Age &gt;50 + bilateral <b>proximal girdle aching with morning stiffness</b> + systemic symptoms + <b>ESR ≥50</b>, with <b>no true weakness and no muscle tenderness</b>. The trap is confusing \"can't get out of bed\" (pain and stiffness) with weakness (myositis). Treatment is <b>low-dose prednisone ~15 mg</b>; a dramatic response within days is nearly diagnostic.</p>",
+   "with": "<p>Polymyalgia rheumatica presents at age &gt;50 with bilateral <b>proximal girdle aching with morning stiffness</b>, systemic symptoms and <b>ESR ≥50</b> (erythrocyte sedimentation rate). There is <b>no true weakness and no muscle tenderness</b>. \"Can't get out of bed\" here reflects pain and stiffness, not weakness; weakness points to myositis. Treatment is <b>low-dose prednisone ~15 mg</b>. A dramatic response within days is nearly diagnostic.</p>",
+   "note": "voice: .dp",
+   "claims": [
+    {
+     "claim": "The PMR picture is age >50.",
+     "to": "Polymyalgia rheumatica presents at age >50 with bilateral proximal girdle aching with morning stiffness, systemic symptoms and ESR ≥50 (erythrocyte sedimentation rate)."
+    },
+    {
+     "claim": "Bilateral proximal girdle aching with morning stiffness.",
+     "to": "Polymyalgia rheumatica presents at age >50 with bilateral proximal girdle aching with morning stiffness, systemic symptoms and ESR ≥50 (erythrocyte sedimentation rate)."
+    },
+    {
+     "claim": "Systemic symptoms are present.",
+     "to": "Polymyalgia rheumatica presents at age >50 with bilateral proximal girdle aching with morning stiffness, systemic symptoms and ESR ≥50 (erythrocyte sedimentation rate)."
+    },
+    {
+     "claim": "ESR is ≥50.",
+     "to": "Polymyalgia rheumatica presents at age >50 with bilateral proximal girdle aching with morning stiffness, systemic symptoms and ESR ≥50 (erythrocyte sedimentation rate)."
+    },
+    {
+     "claim": "There is no true weakness and no muscle tenderness.",
+     "to": "There is no true weakness and no muscle tenderness."
+    },
+    {
+     "claim": "\"Can't get out of bed\" reflects pain and stiffness.",
+     "to": "\"Can't get out of bed\" here reflects pain and stiffness, not weakness; weakness points to myositis."
+    },
+    {
+     "claim": "Weakness indicates myositis.",
+     "to": "\"Can't get out of bed\" here reflects pain and stiffness, not weakness; weakness points to myositis."
+    },
+    {
+     "claim": "Do not confuse \"can't get out of bed\" with weakness.",
+     "to": "\"Can't get out of bed\" here reflects pain and stiffness, not weakness; weakness points to myositis."
+    },
+    {
+     "claim": "Treatment is low-dose prednisone ~15 mg.",
+     "to": "Treatment is low-dose prednisone ~15 mg."
+    },
+    {
+     "claim": "A dramatic response within days is nearly diagnostic.",
+     "to": "A dramatic response within days is nearly diagnostic."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Polymyalgia rheumatica presents at age >50.",
+     "from": "The PMR picture is age >50."
+    },
+    {
+     "claim": "It presents with bilateral proximal girdle aching with morning stiffness.",
+     "from": "Bilateral proximal girdle aching with morning stiffness."
+    },
+    {
+     "claim": "It presents with systemic symptoms.",
+     "from": "Systemic symptoms are present."
+    },
+    {
+     "claim": "It presents with ESR ≥50.",
+     "from": "ESR is ≥50."
+    },
+    {
+     "claim": "ESR stands for erythrocyte sedimentation rate.",
+     "from": "expansion"
+    },
+    {
+     "claim": "There is no true weakness and no muscle tenderness.",
+     "from": "There is no true weakness and no muscle tenderness."
+    },
+    {
+     "claim": "\"Can't get out of bed\" reflects pain and stiffness, not weakness.",
+     "from": "Do not confuse \"can't get out of bed\" with weakness."
+    },
+    {
+     "claim": "Weakness points to myositis.",
+     "from": "Weakness indicates myositis."
+    },
+    {
+     "claim": "Treatment is low-dose prednisone ~15 mg.",
+     "from": "Treatment is low-dose prednisone ~15 mg."
+    },
+    {
+     "claim": "A dramatic response within days is nearly diagnostic.",
+     "from": "A dramatic response within days is nearly diagnostic."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "pmr",
+   "find": "PMR = pain with normal CK; polymyositis = weakness with high CK · PMR responds to <b>low</b>-dose steroids, GCA needs <b>high</b> dose · every PMR diagnosis gets a GCA symptom screen, and ~50% of GCA patients have PMR · NSAIDs fail in PMR — that's the \"close but inadequate therapy\" distractor.",
+   "with": "<b>PMR</b> (polymyalgia rheumatica) = pain with normal <b>CK</b> (creatine kinase); polymyositis = weakness with high CK · PMR responds to <b>low</b>-dose steroids, <b>GCA</b> (giant cell arteritis) needs <b>high</b> dose · every PMR diagnosis gets a GCA symptom screen, and ~50% of GCA patients have PMR · <b>NSAIDs</b> (nonsteroidal anti-inflammatory drugs) fail in PMR; they are a close but inadequate therapy.",
+   "note": "voice: .pearls (acronyms, em dash)",
+   "claims": [
+    {
+     "claim": "PMR is pain with normal CK.",
+     "to": "PMR (polymyalgia rheumatica) = pain with normal CK (creatine kinase); polymyositis = weakness with high CK"
+    },
+    {
+     "claim": "Polymyositis is weakness with high CK.",
+     "to": "PMR (polymyalgia rheumatica) = pain with normal CK (creatine kinase); polymyositis = weakness with high CK"
+    },
+    {
+     "claim": "PMR responds to low-dose steroids.",
+     "to": "PMR responds to low-dose steroids, GCA (giant cell arteritis) needs high dose"
+    },
+    {
+     "claim": "GCA needs high-dose steroids.",
+     "to": "PMR responds to low-dose steroids, GCA (giant cell arteritis) needs high dose"
+    },
+    {
+     "claim": "Every PMR diagnosis gets a GCA symptom screen.",
+     "to": "every PMR diagnosis gets a GCA symptom screen, and ~50% of GCA patients have PMR"
+    },
+    {
+     "claim": "~50% of GCA patients have PMR.",
+     "to": "every PMR diagnosis gets a GCA symptom screen, and ~50% of GCA patients have PMR"
+    },
+    {
+     "claim": "NSAIDs fail in PMR.",
+     "to": "NSAIDs (nonsteroidal anti-inflammatory drugs) fail in PMR; they are a close but inadequate therapy."
+    },
+    {
+     "claim": "NSAIDs are a close but inadequate therapy distractor.",
+     "to": "NSAIDs (nonsteroidal anti-inflammatory drugs) fail in PMR; they are a close but inadequate therapy."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "PMR stands for polymyalgia rheumatica.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CK stands for creatine kinase.",
+     "from": "expansion"
+    },
+    {
+     "claim": "GCA stands for giant cell arteritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "NSAIDs stands for nonsteroidal anti-inflammatory drugs.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PMR is pain with normal CK.",
+     "from": "PMR is pain with normal CK."
+    },
+    {
+     "claim": "Polymyositis is weakness with high CK.",
+     "from": "Polymyositis is weakness with high CK."
+    },
+    {
+     "claim": "PMR responds to low-dose steroids.",
+     "from": "PMR responds to low-dose steroids."
+    },
+    {
+     "claim": "GCA needs high-dose steroids.",
+     "from": "GCA needs high-dose steroids."
+    },
+    {
+     "claim": "Every PMR diagnosis gets a GCA symptom screen.",
+     "from": "Every PMR diagnosis gets a GCA symptom screen."
+    },
+    {
+     "claim": "~50% of GCA patients have PMR.",
+     "from": "~50% of GCA patients have PMR."
+    },
+    {
+     "claim": "NSAIDs fail in PMR.",
+     "from": "NSAIDs fail in PMR."
+    },
+    {
+     "claim": "NSAIDs are a close but inadequate therapy.",
+     "from": "NSAIDs are a close but inadequate therapy distractor."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "biceps",
+   "find": "<p>Anterior shoulder pain + <b>bicipital groove tenderness</b> + pain on resisted elbow flexion/supination in someone still doing the offending activity. \"Initial step\" questions reward the <b>least-intensive appropriate intervention</b>: activity modification (stop the throwing and lifting) → NSAIDs → PT if not improving in 2–4 weeks → injection → imaging.</p>",
+   "with": "<p>Biceps tendinitis presents with anterior shoulder pain, <b>bicipital groove tenderness</b> and pain on resisted elbow flexion/supination in a patient still doing the offending activity. The initial step is the <b>least-intensive appropriate intervention</b>. Start with activity modification (stop the throwing and lifting), then <b>NSAIDs</b> (nonsteroidal anti-inflammatory drugs). Add <b>PT</b> (physical therapy) if not improving in 2–4 weeks. Escalate next to injection, then imaging.</p>",
+   "note": "voice: .dp (split arrow chain, acronyms)",
+   "claims": [
+    {
+     "claim": "The presentation is anterior shoulder pain, bicipital groove tenderness and pain on resisted elbow flexion/supination.",
+     "to": "Biceps tendinitis presents with anterior shoulder pain, bicipital groove tenderness and pain on resisted elbow flexion/supination in a patient still doing the offending activity."
+    },
+    {
+     "claim": "The patient is still doing the offending activity.",
+     "to": "Biceps tendinitis presents with anterior shoulder pain, bicipital groove tenderness and pain on resisted elbow flexion/supination in a patient still doing the offending activity."
+    },
+    {
+     "claim": "The initial step is the least-intensive appropriate intervention.",
+     "to": "The initial step is the least-intensive appropriate intervention."
+    },
+    {
+     "claim": "Activity modification (stop the throwing and lifting) comes first.",
+     "to": "Start with activity modification (stop the throwing and lifting), then NSAIDs (nonsteroidal anti-inflammatory drugs)."
+    },
+    {
+     "claim": "NSAIDs follow activity modification.",
+     "to": "Start with activity modification (stop the throwing and lifting), then NSAIDs (nonsteroidal anti-inflammatory drugs)."
+    },
+    {
+     "claim": "PT follows if not improving in 2–4 weeks.",
+     "to": "Add PT (physical therapy) if not improving in 2–4 weeks."
+    },
+    {
+     "claim": "Injection follows PT.",
+     "to": "Escalate next to injection, then imaging."
+    },
+    {
+     "claim": "Imaging follows injection.",
+     "to": "Escalate next to injection, then imaging."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Biceps tendinitis presents with anterior shoulder pain, bicipital groove tenderness and pain on resisted elbow flexion/supination.",
+     "from": "The presentation is anterior shoulder pain, bicipital groove tenderness and pain on resisted elbow flexion/supination."
+    },
+    {
+     "claim": "The patient is still doing the offending activity.",
+     "from": "The patient is still doing the offending activity."
+    },
+    {
+     "claim": "The initial step is the least-intensive appropriate intervention.",
+     "from": "The initial step is the least-intensive appropriate intervention."
+    },
+    {
+     "claim": "Start with activity modification (stop the throwing and lifting).",
+     "from": "Activity modification (stop the throwing and lifting) comes first."
+    },
+    {
+     "claim": "NSAIDs follow activity modification.",
+     "from": "NSAIDs follow activity modification."
+    },
+    {
+     "claim": "NSAIDs stands for nonsteroidal anti-inflammatory drugs.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PT stands for physical therapy.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Add PT if not improving in 2–4 weeks.",
+     "from": "PT follows if not improving in 2–4 weeks."
+    },
+    {
+     "claim": "Injection comes next.",
+     "from": "Injection follows PT."
+    },
+    {
+     "claim": "Imaging follows injection.",
+     "from": "Imaging follows injection."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "biceps",
+   "find": "On the exam, PT is not <i>wrong</i> — it's not <i>initial</i> when the patient is still throwing every weekend. In clinic, modern tendinopathy management is <b>relative rest plus progressive loading</b>, and the two aren't really opposed. What matters at the bedside: say the words <b>\"do not wear a sling.\"</b> Patients hear \"rest\" and immobilize, and the shoulder is uniquely punished for immobilization — adhesive capsulitis can set in within weeks.",
+   "with": "On the exam, <b>PT</b> (physical therapy) is not wrong, but it is not the initial step while the patient is still throwing every weekend. In clinic, modern tendinopathy management is <b>relative rest plus progressive loading</b>, and the two are not really opposed. At the bedside, tell patients <b>\"do not wear a sling.\"</b> Patients hear \"rest\" and immobilize. The shoulder tolerates immobilization uniquely poorly; adhesive capsulitis can set in within weeks.",
+   "note": "voice: .danger (em dashes, personification, acronym)",
+   "claims": [
+    {
+     "claim": "On the exam, PT is not wrong.",
+     "to": "On the exam, PT (physical therapy) is not wrong, but it is not the initial step while the patient is still throwing every weekend."
+    },
+    {
+     "claim": "PT is not initial when the patient is still throwing every weekend.",
+     "to": "On the exam, PT (physical therapy) is not wrong, but it is not the initial step while the patient is still throwing every weekend."
+    },
+    {
+     "claim": "In clinic, modern tendinopathy management is relative rest plus progressive loading.",
+     "to": "In clinic, modern tendinopathy management is relative rest plus progressive loading, and the two are not really opposed."
+    },
+    {
+     "claim": "The two are not really opposed.",
+     "to": "In clinic, modern tendinopathy management is relative rest plus progressive loading, and the two are not really opposed."
+    },
+    {
+     "claim": "At the bedside, say the words \"do not wear a sling.\"",
+     "to": "At the bedside, tell patients \"do not wear a sling.\""
+    },
+    {
+     "claim": "Patients hear \"rest\" and immobilize.",
+     "to": "Patients hear \"rest\" and immobilize."
+    },
+    {
+     "claim": "The shoulder is uniquely punished for immobilization.",
+     "to": "The shoulder tolerates immobilization uniquely poorly; adhesive capsulitis can set in within weeks."
+    },
+    {
+     "claim": "Adhesive capsulitis can set in within weeks.",
+     "to": "The shoulder tolerates immobilization uniquely poorly; adhesive capsulitis can set in within weeks."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "PT stands for physical therapy.",
+     "from": "expansion"
+    },
+    {
+     "claim": "On the exam, PT is not wrong.",
+     "from": "On the exam, PT is not wrong."
+    },
+    {
+     "claim": "PT is not the initial step while the patient is still throwing every weekend.",
+     "from": "PT is not initial when the patient is still throwing every weekend."
+    },
+    {
+     "claim": "In clinic, modern tendinopathy management is relative rest plus progressive loading.",
+     "from": "In clinic, modern tendinopathy management is relative rest plus progressive loading."
+    },
+    {
+     "claim": "The two are not really opposed.",
+     "from": "The two are not really opposed."
+    },
+    {
+     "claim": "At the bedside, tell patients \"do not wear a sling.\"",
+     "from": "At the bedside, say the words \"do not wear a sling.\""
+    },
+    {
+     "claim": "Patients hear \"rest\" and immobilize.",
+     "from": "Patients hear \"rest\" and immobilize."
+    },
+    {
+     "claim": "The shoulder tolerates immobilization uniquely poorly.",
+     "from": "The shoulder is uniquely punished for immobilization."
+    },
+    {
+     "claim": "Adhesive capsulitis can set in within weeks.",
+     "from": "Adhesive capsulitis can set in within weeks."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cts",
+   "find": "<p><b>Read the verb.</b> \"Confirm the diagnosis\" → <b>nerve conduction studies</b>. \"Next step in management\" → <b>nocturnal neutral wrist splint</b>. \"Next step\" <i>with thenar atrophy</i> → <b>surgical release</b>. Phalen and Tinel are ~50–60% sensitive, so negative maneuvers cannot overturn a classic history.</p>",
+   "with": "<p>To confirm the diagnosis, order <b>nerve conduction studies</b>. The next step in management is a <b>nocturnal neutral wrist splint</b>. With <i>thenar atrophy</i>, the next step is <b>surgical release</b>. Phalen and Tinel are ~50–60% sensitive, so negative maneuvers cannot overturn a classic history.</p>",
+   "note": "voice: .dp (slogan opener removed)",
+   "reworded_bold": [
+    "Read the verb."
+   ],
+   "claims": [
+    {
+     "claim": "Read the verb of the question.",
+     "dropped": "slogan about reading the question; each verb's answer is stated in the next sentences"
+    },
+    {
+     "claim": "To confirm the diagnosis: nerve conduction studies.",
+     "to": "To confirm the diagnosis, order nerve conduction studies."
+    },
+    {
+     "claim": "Next step in management: nocturnal neutral wrist splint.",
+     "to": "The next step in management is a nocturnal neutral wrist splint."
+    },
+    {
+     "claim": "Next step with thenar atrophy: surgical release.",
+     "to": "With thenar atrophy, the next step is surgical release."
+    },
+    {
+     "claim": "Phalen and Tinel are ~50–60% sensitive.",
+     "to": "Phalen and Tinel are ~50–60% sensitive, so negative maneuvers cannot overturn a classic history."
+    },
+    {
+     "claim": "Negative maneuvers cannot overturn a classic history.",
+     "to": "Phalen and Tinel are ~50–60% sensitive, so negative maneuvers cannot overturn a classic history."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "To confirm the diagnosis, order nerve conduction studies.",
+     "from": "To confirm the diagnosis: nerve conduction studies."
+    },
+    {
+     "claim": "The next step in management is a nocturnal neutral wrist splint.",
+     "from": "Next step in management: nocturnal neutral wrist splint."
+    },
+    {
+     "claim": "With thenar atrophy, the next step is surgical release.",
+     "from": "Next step with thenar atrophy: surgical release."
+    },
+    {
+     "claim": "Phalen and Tinel are ~50–60% sensitive.",
+     "from": "Phalen and Tinel are ~50–60% sensitive."
+    },
+    {
+     "claim": "Negative maneuvers cannot overturn a classic history.",
+     "from": "Negative maneuvers cannot overturn a classic history."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cts",
+   "find": "<span class=\"lbl\">The anatomy fact they build questions on</span> CTS <b>spares sensation over the thenar eminence</b>, because the <b>palmar cutaneous branch</b> arises proximal to the tunnel and runs over the retinaculum. Numbness that <i>includes</i> the thenar eminence means a proximal lesion — <b>pronator teres syndrome</b>. Motor loss is late:",
+   "with": "<span class=\"lbl\">Anatomy</span> <b>CTS</b> (carpal tunnel syndrome) <b>spares sensation over the thenar eminence</b>, because the <b>palmar cutaneous branch</b> arises proximal to the tunnel and runs over the retinaculum. Numbness that <i>includes</i> the thenar eminence means a proximal lesion: <b>pronator teres syndrome</b>. Motor loss is late:",
+   "note": "voice: .pearls (rhetorical label, em dash, acronym)",
+   "reworded_label": [
+    "The anatomy fact they build questions on"
+   ],
+   "claims": [
+    {
+     "claim": "Exam questions are built on this anatomy fact.",
+     "dropped": "rhetorical label about the question"
+    },
+    {
+     "claim": "CTS spares sensation over the thenar eminence.",
+     "to": "CTS (carpal tunnel syndrome) spares sensation over the thenar eminence, because the palmar cutaneous branch arises proximal to the tunnel and runs over the retinaculum."
+    },
+    {
+     "claim": "The palmar cutaneous branch arises proximal to the tunnel and runs over the retinaculum.",
+     "to": "CTS (carpal tunnel syndrome) spares sensation over the thenar eminence, because the palmar cutaneous branch arises proximal to the tunnel and runs over the retinaculum."
+    },
+    {
+     "claim": "Numbness that includes the thenar eminence means a proximal lesion.",
+     "to": "Numbness that includes the thenar eminence means a proximal lesion: pronator teres syndrome."
+    },
+    {
+     "claim": "That proximal lesion is pronator teres syndrome.",
+     "to": "Numbness that includes the thenar eminence means a proximal lesion: pronator teres syndrome."
+    },
+    {
+     "claim": "Motor loss is late.",
+     "to": "Motor loss is late: LOAF (Lumbricals 1–2, Opponens, Abductor pollicis brevis, Flexor pollicis brevis)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CTS stands for carpal tunnel syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CTS spares sensation over the thenar eminence.",
+     "from": "CTS spares sensation over the thenar eminence."
+    },
+    {
+     "claim": "The palmar cutaneous branch arises proximal to the tunnel and runs over the retinaculum.",
+     "from": "The palmar cutaneous branch arises proximal to the tunnel and runs over the retinaculum."
+    },
+    {
+     "claim": "Numbness that includes the thenar eminence means a proximal lesion.",
+     "from": "Numbness that includes the thenar eminence means a proximal lesion."
+    },
+    {
+     "claim": "That proximal lesion is pronator teres syndrome.",
+     "from": "That proximal lesion is pronator teres syndrome."
+    },
+    {
+     "claim": "Motor loss is late.",
+     "from": "Motor loss is late."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dequervain",
+   "find": "is a <b>clinical diagnosis</b>. No imaging, no labs. Treatment: thumb spica splint + NSAIDs → corticosteroid injection → first dorsal compartment release.</p>",
+   "with": "is a <b>clinical diagnosis</b>. Order no imaging and no labs. Start with a thumb spica splint and <b>NSAIDs</b> (nonsteroidal anti-inflammatory drugs). Escalate to a corticosteroid injection, then first dorsal compartment release.</p>",
+   "note": "voice: .dp (split arrow chain, acronym)",
+   "claims": [
+    {
+     "claim": "It is a clinical diagnosis.",
+     "to": "Radial styloid tenderness + positive Finkelstein/Eichhoff (thumb flexed, wrist ulnar-deviated) is a clinical diagnosis."
+    },
+    {
+     "claim": "No imaging and no labs are needed.",
+     "to": "Order no imaging and no labs."
+    },
+    {
+     "claim": "First-line treatment is a thumb spica splint plus NSAIDs.",
+     "to": "Start with a thumb spica splint and NSAIDs (nonsteroidal anti-inflammatory drugs)."
+    },
+    {
+     "claim": "Next is a corticosteroid injection.",
+     "to": "Escalate to a corticosteroid injection, then first dorsal compartment release."
+    },
+    {
+     "claim": "Last is first dorsal compartment release.",
+     "to": "Escalate to a corticosteroid injection, then first dorsal compartment release."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "It is a clinical diagnosis.",
+     "from": "It is a clinical diagnosis."
+    },
+    {
+     "claim": "Order no imaging and no labs.",
+     "from": "No imaging and no labs are needed."
+    },
+    {
+     "claim": "Start with a thumb spica splint and NSAIDs.",
+     "from": "First-line treatment is a thumb spica splint plus NSAIDs."
+    },
+    {
+     "claim": "NSAIDs stands for nonsteroidal anti-inflammatory drugs.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Escalate to a corticosteroid injection.",
+     "from": "Next is a corticosteroid injection."
+    },
+    {
+     "claim": "Then first dorsal compartment release.",
+     "from": "Last is first dorsal compartment release."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dequervain",
+   "find": "\"No additional testing,\" \"reassurance,\" \"proceed with the procedure,\" and \"continue current management\" are a family of correct answers. They win when the diagnosis is <b>clinical</b>, a <b>provocative test is positive</b>, and there are <b>no red flags</b>. The instinct to \"get an X-ray to be safe\" adds only incidental findings.",
+   "with": "Restraint is correct when the diagnosis is <b>clinical</b>, a <b>provocative test is positive</b> and there are <b>no red flags</b>. Restraint means no additional testing, reassurance, proceeding with the procedure or continuing current management. An X-ray \"to be safe\" adds only incidental findings.",
+   "note": "voice: .rule (answer framing removed)",
+   "claims": [
+    {
+     "claim": "No additional testing, reassurance, proceeding with the procedure and continuing current management are a family of correct choices.",
+     "to": "Restraint means no additional testing, reassurance, proceeding with the procedure or continuing current management."
+    },
+    {
+     "claim": "They are correct when the diagnosis is clinical, a provocative test is positive, and there are no red flags.",
+     "to": "Restraint is correct when the diagnosis is clinical, a provocative test is positive and there are no red flags."
+    },
+    {
+     "claim": "Getting an X-ray to be safe adds only incidental findings.",
+     "to": "An X-ray \"to be safe\" adds only incidental findings."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Restraint is correct when the diagnosis is clinical, a provocative test is positive and there are no red flags.",
+     "from": "They are correct when the diagnosis is clinical, a provocative test is positive, and there are no red flags."
+    },
+    {
+     "claim": "Restraint means no additional testing, reassurance, proceeding with the procedure or continuing current management.",
+     "from": "No additional testing, reassurance, proceeding with the procedure and continuing current management are a family of correct choices."
+    },
+    {
+     "claim": "An X-ray to be safe adds only incidental findings.",
+     "from": "Getting an X-ray to be safe adds only incidental findings."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dequervain",
+   "find": "<span class=\"lbl\">Hand arthritis distribution — pure recall</span> <b>RA</b> = MCP and PIP, symmetric, <b>spares DIP</b> · <b>OA</b> = DIP",
+   "with": "<span class=\"lbl\">Hand arthritis distribution</span> <b>RA</b> (rheumatoid arthritis) = <b>MCP</b> (metacarpophalangeal) and <b>PIP</b> (proximal interphalangeal), symmetric, <b>spares DIP</b> (distal interphalangeal) · <b>OA</b> (osteoarthritis) = DIP",
+   "note": "voice: .pearls (rhetorical label with em dash, acronyms)",
+   "reworded_label": [
+    "Hand arthritis distribution — pure recall"
+   ],
+   "claims": [
+    {
+     "claim": "This is pure recall.",
+     "dropped": "rhetorical label about study method"
+    },
+    {
+     "claim": "RA involves MCP and PIP, symmetric, and spares DIP.",
+     "to": "RA (rheumatoid arthritis) = MCP (metacarpophalangeal) and PIP (proximal interphalangeal), symmetric, spares DIP (distal interphalangeal)"
+    },
+    {
+     "claim": "OA involves DIP (Heberden) and PIP (Bouchard).",
+     "to": "OA (osteoarthritis) = DIP (Heberden) and PIP (Bouchard)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "RA stands for rheumatoid arthritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MCP stands for metacarpophalangeal.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PIP stands for proximal interphalangeal.",
+     "from": "expansion"
+    },
+    {
+     "claim": "DIP stands for distal interphalangeal.",
+     "from": "expansion"
+    },
+    {
+     "claim": "OA stands for osteoarthritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "RA involves MCP and PIP, symmetric, and spares DIP.",
+     "from": "RA involves MCP and PIP, symmetric, and spares DIP."
+    },
+    {
+     "claim": "OA involves DIP (Heberden) and PIP (Bouchard).",
+     "from": "OA involves DIP (Heberden) and PIP (Bouchard)."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "meralgia",
+   "find": "<p>The LFCN is <b>purely sensory</b> — compressed under the inguinal ligament near the ASIS. No motor fibers means <b>no weakness is possible</b>, so 5/5 strength is <i>confirmatory</i>, not reassuring incidental data. Clinical diagnosis; conservative management resolves &gt;90%.</p>",
+   "with": "<p>The <b>LFCN</b> (lateral femoral cutaneous nerve) is <b>purely sensory</b>. It is compressed under the inguinal ligament near the <b>ASIS</b> (anterior superior iliac spine). With no motor fibers, <b>no weakness is possible</b>, so 5/5 strength is <i>confirmatory</i>, not reassuring incidental data. Meralgia paresthetica is a clinical diagnosis. Conservative management resolves &gt;90% of cases.</p>",
+   "note": "voice: .dp (em dash, acronyms, fragments)",
+   "claims": [
+    {
+     "claim": "The LFCN is purely sensory.",
+     "to": "The LFCN (lateral femoral cutaneous nerve) is purely sensory."
+    },
+    {
+     "claim": "The LFCN is compressed under the inguinal ligament near the ASIS.",
+     "to": "It is compressed under the inguinal ligament near the ASIS (anterior superior iliac spine)."
+    },
+    {
+     "claim": "No motor fibers means no weakness is possible.",
+     "to": "With no motor fibers, no weakness is possible, so 5/5 strength is confirmatory, not reassuring incidental data."
+    },
+    {
+     "claim": "5/5 strength is confirmatory, not reassuring incidental data.",
+     "to": "With no motor fibers, no weakness is possible, so 5/5 strength is confirmatory, not reassuring incidental data."
+    },
+    {
+     "claim": "It is a clinical diagnosis.",
+     "to": "Meralgia paresthetica is a clinical diagnosis."
+    },
+    {
+     "claim": "Conservative management resolves >90%.",
+     "to": "Conservative management resolves >90% of cases."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "LFCN stands for lateral femoral cutaneous nerve.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ASIS stands for anterior superior iliac spine.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The LFCN is purely sensory.",
+     "from": "The LFCN is purely sensory."
+    },
+    {
+     "claim": "It is compressed under the inguinal ligament near the ASIS.",
+     "from": "The LFCN is compressed under the inguinal ligament near the ASIS."
+    },
+    {
+     "claim": "With no motor fibers, no weakness is possible.",
+     "from": "No motor fibers means no weakness is possible."
+    },
+    {
+     "claim": "5/5 strength is confirmatory, not reassuring incidental data.",
+     "from": "5/5 strength is confirmatory, not reassuring incidental data."
+    },
+    {
+     "claim": "Meralgia paresthetica is a clinical diagnosis.",
+     "from": "It is a clinical diagnosis."
+    },
+    {
+     "claim": "Conservative management resolves >90% of cases.",
+     "from": "Conservative management resolves >90%."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "meralgia",
+   "find": "saphenous (medial leg), digital → <b>Morton neuroma</b> (3rd/4th interspace, Mulder click) · metformin causes B12 deficiency over <b>years</b>, producing a <b>distal symmetric</b> neuropathy — never a focal thigh patch · foot drop after leg-crossing or rapid weight loss = common peroneal at the fibular head.",
+   "with": "saphenous (medial leg) and digital (<b>Morton neuroma</b>, 3rd/4th interspace, Mulder click) · metformin causes B12 deficiency over <b>years</b>, producing a <b>distal symmetric</b> neuropathy and never a focal thigh patch · foot drop after leg-crossing or rapid weight loss is a common peroneal nerve lesion at the fibular head.",
+   "note": "voice: .pearls (em dash, = shorthand)",
+   "claims": [
+    {
+     "claim": "Digital nerve entrapment is Morton neuroma (3rd/4th interspace, Mulder click), a pure sensory entrapment.",
+     "to": "Other pure sensory entrapments: sural (lateral foot), superficial peroneal (foot dorsum), saphenous (medial leg) and digital (Morton neuroma, 3rd/4th interspace, Mulder click)"
+    },
+    {
+     "claim": "Metformin causes B12 deficiency over years.",
+     "to": "metformin causes B12 deficiency over years, producing a distal symmetric neuropathy and never a focal thigh patch"
+    },
+    {
+     "claim": "It produces a distal symmetric neuropathy, never a focal thigh patch.",
+     "to": "metformin causes B12 deficiency over years, producing a distal symmetric neuropathy and never a focal thigh patch"
+    },
+    {
+     "claim": "Foot drop after leg-crossing or rapid weight loss is common peroneal at the fibular head.",
+     "to": "foot drop after leg-crossing or rapid weight loss is a common peroneal nerve lesion at the fibular head."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Digital entrapment is Morton neuroma (3rd/4th interspace, Mulder click).",
+     "from": "Digital nerve entrapment is Morton neuroma (3rd/4th interspace, Mulder click), a pure sensory entrapment."
+    },
+    {
+     "claim": "Metformin causes B12 deficiency over years.",
+     "from": "Metformin causes B12 deficiency over years."
+    },
+    {
+     "claim": "It produces a distal symmetric neuropathy and never a focal thigh patch.",
+     "from": "It produces a distal symmetric neuropathy, never a focal thigh patch."
+    },
+    {
+     "claim": "Foot drop after leg-crossing or rapid weight loss is a common peroneal nerve lesion at the fibular head.",
+     "from": "Foot drop after leg-crossing or rapid weight loss is common peroneal at the fibular head."
+    }
+   ]
+  }
+ ]
+}

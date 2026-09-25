@@ -131,6 +131,8 @@ ACR_SKIP = {'IgA', 'IgE', 'IgG', 'IgM', 'US', 'UK', 'MD', 'IV', 'IM', 'PO', 'NBM
 ROMAN_RE = re.compile(r'(?=[IVXL])X{0,3}(IX|IV|V?I{0,3})')
 SENT_RE = re.compile(r'(?<=[.?!])\s+(?=[A-Z<(])|\s*·\s*')
 ARROW_RE = re.compile(r'→|&rarr;')
+NBME_RE = re.compile(r'How NBME framed it')  # s31-reviewed text; a voice pass leaves it verbatim
+BATCH_NOTE_RE = re.compile(r'-{2,}\s*<i>\s*Batch \d[^<]*</i>')  # workflow note, removed in the voice pass
 
 
 try:
@@ -196,6 +198,7 @@ def voice_check(before, spec, report=None):
     """Scope, keep-rules and the drift protocol for a voice pass.
     Returns (failures, warnings); appends reviewer lines to `report` when given."""
     fails, warns, html, quotes = [], [], before, []
+    titles = {norm_q(t) for t in re.findall(r'<h4>(.*?)</h4>', before, re.S)}
     touched = {}
     for n, e in enumerate(spec['edits'], 1):
         if e.get('op') != 'replace':
@@ -209,6 +212,11 @@ def voice_check(before, spec, report=None):
             continue
         end = at + len(e['find'])
         where = [lab for s, t, lab in voice_ranges(html, b) if s <= at and end <= t]
+        blk = [s for s, t, lab in voice_ranges(html, b) if s <= at and end <= t]
+        if blk and html.startswith('<span class="lbl">How NBME framed it</span>', blk[0]):
+            fails.append('edit %d (%s): a "How NBME framed it" block is out of scope (reviewed in s31)\n      fix: leave the block '
+                         'exactly as it is' % (n, b.id))
+        nbme_txt = [html[k.start():html.find('</div>', k.start())] for k in NBME_RE.finditer(html, b.start, b.end)]
         if not where:
             fails.append('edit %d (%s): anchor is outside the voice scope\n      fix: edit only inside .dp, .rule, .pearls, '
                          '.danger, .traps or the first segment of p.sub; never .vignette, tables, .crit or the bank' % (n, b.id))
@@ -226,7 +234,7 @@ def voice_check(before, spec, report=None):
                          'text exactly (tags stripped, entities decoded)' % (n, b.id, '; '.join(stray)))
         nums = lambda t: set(re.findall(r'\d+(?:[.,]\d+)?', t))  # noqa: E731
         carried = ' '.join(c.get('carried_by', '') for c in e.get('claims', []) if isinstance(c, dict))
-        lostn = sorted(nums(text(e['find'])) - nums(text(e['with'])) - nums(carried))
+        lostn = sorted(nums(text(BATCH_NOTE_RE.sub('', e['find']))) - nums(text(e['with'])) - nums(carried))
         if lostn:
             fails.append('edit %d (%s): number(s) dropped: %s\n      fix: keep every number and cutoff' % (n, b.id, ', '.join(lostn)))
         labs = re.findall(r'<span class="lbl">(.*?)</span>', e['find'])
@@ -237,7 +245,10 @@ def voice_check(before, spec, report=None):
             fails.append('edit %d (%s): label markup changed (%s)\n      fix: keep <span class="lbl">...</span> exactly, or declare a '
                          'slogan label rewrite with "reworded_label": ["<old label text>"]' % (n, b.id, '; '.join(text(l) for l in bad) or 'count'))
         ctx0 = html[max(0, at - 200):at]
+        titled = [(t.start(), t.end()) for t in re.finditer(r'<b>(.*?)</b>', e['with'], re.S) if norm_q(t.group(1)) in titles]
         for m in DASH_RE.finditer(e['with']):
+            if any(a <= m.start() < z for a, z in titled):
+                continue  # a quoted brief title (Pairs with) keeps its own punctuation
             if not re.search(r'</b>\s*$', ctx0 + e['with'][:m.start()]):
                 fails.append('edit %d (%s): em dash in prose near %r\n      fix: use a colon, comma, semicolon or period; the only '
                              'allowed em dash is the structural "<b>Term</b> — definition"' % (n, b.id, text(e['with'][max(0, m.start() - 30):m.end() + 20])))
@@ -309,6 +320,10 @@ def voice_check(before, spec, report=None):
         except apply_edits.EditError as ex:
             fails.append(str(ex))
             continue
+        nb0 = [x for x in briefs(html) if x.id == b.id]
+        if nb0 and any(t not in html[nb0[0].start:nb0[0].end] for t in nbme_txt):
+            fails.append('edit %d (%s): the "How NBME framed it" text changed (reviewed in s31)\n      fix: end find before '
+                         '"How NBME framed it", or copy that text into with unchanged' % (n, b.id))
         # acronyms: first use in the changed block (on the new page) is followed by its expansion
         try:
             nb = [x for x in briefs(html) if x.id == b.id][0]

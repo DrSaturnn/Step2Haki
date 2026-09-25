@@ -49,6 +49,22 @@
 - `"new_claims"`: every clinical claim in the NEW text, each with `"from"`: the exact `"claim"` text of the old claim it came from, or `"expansion"` for a written-out acronym (the expansion must be the standard one).
 - The verifier fails an op with no claims list, an unmapped claim, a quote that is not in the new brief, a new claim without `"from"` (or with a `"from"` that matches no old claim), or a dropped claim carrying clinical content. `--report` prints old text, new text and the claim map for the reviewer.
 
+**Page-wide decisions (s33, Jonathan; apply to every system):**
+- Trap lines are "Option: why": the option name, one colon, then the reason. Never "Option — why". `01_mechanical` already converted the plain cases (`.trapwhy` lines and the `<b>Option</b>` lines under the Distractors label). Where a trap line still has an em dash (the option sits inside a sentence, or the reason has a dash of its own), rewrite it as "Option: why" when the option can be named from the line; otherwise use a colon, semicolon or period. One colon per line: if the reason itself opens with a bold label and a colon (`<b>Desmopressin</b>: <b>skipped tier</b>: correct tier-2 drug...`), make the second one a semicolon or a new sentence.
+- No em dashes in prose anywhere, trap lines, Pairs with and pearls included. The only allowed " — " is the structural `<b>Term</b> — definition` in a block with "·" (`&middot;`) rows whose segments start with a bold term: the page turns those rows into a two-column grid, so keep those dashes exactly. In a block with no "·", `<b>Term</b> — text` is prose: use a colon. Brief titles quoted in Pairs with keep their own punctuation (three titles contain an em dash; the verifier allows it).
+- The trap section label is "Distractors" (renamed by `01_mechanical`). Keep it. Other labels such as "Decoy note" stay as they are.
+- "How NBME framed it" text is final (reviewed in s31). Leave any block labelled "How NBME framed it", and any sentence that starts "How NBME framed it:", exactly as it is, even if it breaks a style rule here. End your `find` before it; if an op must span it, copy it into `with` unchanged. The verifier fails an op that changes it.
+
+**Internal and workflow text: remove wherever seen** (it is not a clinical claim, so it needs no claim-map entry; if you list it, mark it `dropped` with a paraphrase that has no numbers or test names):
+- batch notes such as `--- <i>Batch 5, brief 01 · 2026-09-10.</i>`: delete (the verifier ignores their digits);
+- "Verified:" in front of a sentence: delete the word;
+- "Store the discriminator as a question:": keep the question, introduced by "Ask:" (the GI precedent: "Ask: is the baby making urine?");
+- "Candidate twin — confirm: ..." and "... are not yet written": keep any named conditions and their discriminating question as "Related conditions without their own brief: X (ask: ...?)"; drop the proposal about writing a brief;
+- "owns", "takes over" (and "is the twin for" used as ownership) in Pairs with: "covers" (the GI precedent: "Part I <b>X</b> covers the child whose gait is normal; this brief covers ...");
+- provenance tags "(clinic ledger)", "clinic-ledger", "exam ledger", "(in-context)", "(all in-context)", "in-context:": delete the tag and keep the fact ("(in-context: CBC is typically normal in RDS)" becomes "; the CBC is typically normal in RDS"). Keep ⚠︎ where it marks an unverified specific; "exam ledger versus clinic ledger" becomes "the exam answer versus clinical practice";
+- any other note about the page, the batch, the ledger, a candidate or a verification step.
+Pairs-with coverage claims must still match the page: name only briefs that exist, by their exact title.
+
 If a block is already plain, leave it. If you are unsure a rewrite keeps the meaning, leave it and list it.
 
 **Output:** edits JSON (replace ops, anchors unique within the brief) and a report of 3 to 5 lines: blocks changed, blocks left, anything uncertain.

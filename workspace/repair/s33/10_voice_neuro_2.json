@@ -1,0 +1,1947 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "cholesteatoma",
+   "find": "<p>Three examination findings close this before any option is read. The drum is <b>intact</b>, so the drainage is not coming through a perforation, which is what otitis media with discharge requires. The drum is <b>immobile with a superior retraction pocket containing a pearly white mass</b>, so the lesion is <i>of the tympanic membrane</i> rather than of the canal, which removes otitis externa and a foreign body. And the loss is <b>conductive</b>, so the ossicles are the problem rather than the nerve, which removes the schwannoma. The history explains why: <b>cleft palate</b>, chronic middle-ear effusions and <b>tympanostomy tubes</b> are the three named risk factors, all of them mechanisms for the chronic middle-ear disease that pulls a retraction pocket into the attic. That pocket traps desquamated epithelium, keratin accumulates, and the mass erodes toward the ossicles — a <b>cholesteatoma</b>, treated by surgical excision.</p>",
+   "with": "<p>The drum is <b>intact</b>, so the drainage is not coming through a perforation, which otitis media with discharge requires. The drum is <b>immobile with a superior retraction pocket containing a pearly white mass</b>. The lesion is therefore <i>of the tympanic membrane</i> rather than of the canal, which excludes otitis externa and a foreign body. The loss is <b>conductive</b>, so the problem is the ossicles rather than the nerve, which excludes the schwannoma. The three named risk factors are <b>cleft palate</b>, chronic middle-ear effusions and <b>tympanostomy tubes</b>. Each is a mechanism for the chronic middle-ear disease that pulls a retraction pocket into the attic. The pocket traps desquamated epithelium, and keratin accumulates. The mass erodes toward the ossicles; this is a <b>cholesteatoma</b>, treated by surgical excision.</p>",
+   "note": "round 2 voice: .dp; framing opener removed, long sentences split",
+   "claims": [
+    {
+     "claim": "Three examination findings close the diagnosis before any option is read.",
+     "dropped": "framing about reading the options; each examination finding is stated in the following sentences"
+    },
+    {
+     "claim": "The drum is intact, so the drainage is not coming through a perforation.",
+     "to": "The drum is intact, so the drainage is not coming through a perforation, which otitis media with discharge requires."
+    },
+    {
+     "claim": "Otitis media with discharge requires a perforation.",
+     "to": "The drum is intact, so the drainage is not coming through a perforation, which otitis media with discharge requires."
+    },
+    {
+     "claim": "The drum is immobile with a superior retraction pocket containing a pearly white mass.",
+     "to": "The drum is immobile with a superior retraction pocket containing a pearly white mass."
+    },
+    {
+     "claim": "The lesion is of the tympanic membrane rather than of the canal.",
+     "to": "The lesion is therefore of the tympanic membrane rather than of the canal, which excludes otitis externa and a foreign body."
+    },
+    {
+     "claim": "That removes otitis externa and a foreign body.",
+     "to": "The lesion is therefore of the tympanic membrane rather than of the canal, which excludes otitis externa and a foreign body."
+    },
+    {
+     "claim": "The loss is conductive, so the ossicles are the problem rather than the nerve.",
+     "to": "The loss is conductive, so the problem is the ossicles rather than the nerve, which excludes the schwannoma."
+    },
+    {
+     "claim": "That removes the schwannoma.",
+     "to": "The loss is conductive, so the problem is the ossicles rather than the nerve, which excludes the schwannoma."
+    },
+    {
+     "claim": "The history explains why.",
+     "dropped": "transition framing; the history items follow as their own sentence"
+    },
+    {
+     "claim": "Cleft palate, chronic middle-ear effusions and tympanostomy tubes are the three named risk factors.",
+     "to": "The three named risk factors are cleft palate, chronic middle-ear effusions and tympanostomy tubes."
+    },
+    {
+     "claim": "All three are mechanisms for the chronic middle-ear disease that pulls a retraction pocket into the attic.",
+     "to": "Each is a mechanism for the chronic middle-ear disease that pulls a retraction pocket into the attic."
+    },
+    {
+     "claim": "The pocket traps desquamated epithelium and keratin accumulates.",
+     "to": "The pocket traps desquamated epithelium, and keratin accumulates."
+    },
+    {
+     "claim": "The mass erodes toward the ossicles.",
+     "to": "The mass erodes toward the ossicles; this is a cholesteatoma, treated by surgical excision."
+    },
+    {
+     "claim": "The lesion is a cholesteatoma.",
+     "to": "The mass erodes toward the ossicles; this is a cholesteatoma, treated by surgical excision."
+    },
+    {
+     "claim": "Cholesteatoma is treated by surgical excision.",
+     "to": "The mass erodes toward the ossicles; this is a cholesteatoma, treated by surgical excision."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The drum is intact, so the drainage is not coming through a perforation.",
+     "from": "The drum is intact, so the drainage is not coming through a perforation."
+    },
+    {
+     "claim": "Otitis media with discharge requires a perforation.",
+     "from": "Otitis media with discharge requires a perforation."
+    },
+    {
+     "claim": "The drum is immobile with a superior retraction pocket containing a pearly white mass.",
+     "from": "The drum is immobile with a superior retraction pocket containing a pearly white mass."
+    },
+    {
+     "claim": "The lesion is of the tympanic membrane rather than of the canal.",
+     "from": "The lesion is of the tympanic membrane rather than of the canal."
+    },
+    {
+     "claim": "That removes otitis externa and a foreign body.",
+     "from": "That removes otitis externa and a foreign body."
+    },
+    {
+     "claim": "The loss is conductive, so the ossicles are the problem rather than the nerve.",
+     "from": "The loss is conductive, so the ossicles are the problem rather than the nerve."
+    },
+    {
+     "claim": "That removes the schwannoma.",
+     "from": "That removes the schwannoma."
+    },
+    {
+     "claim": "Cleft palate, chronic middle-ear effusions and tympanostomy tubes are the three named risk factors.",
+     "from": "Cleft palate, chronic middle-ear effusions and tympanostomy tubes are the three named risk factors."
+    },
+    {
+     "claim": "All three are mechanisms for the chronic middle-ear disease that pulls a retraction pocket into the attic.",
+     "from": "All three are mechanisms for the chronic middle-ear disease that pulls a retraction pocket into the attic."
+    },
+    {
+     "claim": "The pocket traps desquamated epithelium and keratin accumulates.",
+     "from": "The pocket traps desquamated epithelium and keratin accumulates."
+    },
+    {
+     "claim": "The mass erodes toward the ossicles.",
+     "from": "The mass erodes toward the ossicles."
+    },
+    {
+     "claim": "The lesion is a cholesteatoma.",
+     "from": "The lesion is a cholesteatoma."
+    },
+    {
+     "claim": "Cholesteatoma is treated by surgical excision.",
+     "from": "Cholesteatoma is treated by surgical excision."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cholesteatoma",
+   "find": "Management is one sentence, because this stem asked only for the process: cholesteatoma is treated by <b>surgical excision</b>, and no further topical or oral antibiotic will resolve it — antibiotics treat the superinfected debris rather than the epithelium generating it.",
+   "with": "Cholesteatoma is treated by <b>surgical excision</b>. No further topical or oral antibiotic will resolve it, because antibiotics treat the superinfected debris rather than the epithelium generating it.",
+   "note": "round 2 voice: management .danger; framing and em dash removed",
+   "claims": [
+    {
+     "claim": "Management is one sentence because the stem asked only for the process.",
+     "dropped": "framing about the question"
+    },
+    {
+     "claim": "Cholesteatoma is treated by surgical excision.",
+     "to": "Cholesteatoma is treated by surgical excision."
+    },
+    {
+     "claim": "No further topical or oral antibiotic will resolve it.",
+     "to": "No further topical or oral antibiotic will resolve it, because antibiotics treat the superinfected debris rather than the epithelium generating it."
+    },
+    {
+     "claim": "Antibiotics treat the superinfected debris rather than the epithelium generating it.",
+     "to": "No further topical or oral antibiotic will resolve it, because antibiotics treat the superinfected debris rather than the epithelium generating it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Cholesteatoma is treated by surgical excision.",
+     "from": "Cholesteatoma is treated by surgical excision."
+    },
+    {
+     "claim": "No further topical or oral antibiotic will resolve it.",
+     "from": "No further topical or oral antibiotic will resolve it."
+    },
+    {
+     "claim": "Antibiotics treat the superinfected debris rather than the epithelium generating it.",
+     "from": "Antibiotics treat the superinfected debris rather than the epithelium generating it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cholesteatoma",
+   "find": "The single most misleading word in the stem is <b>purulent</b>. It licenses an infectious reading for a month, and that is exploited: the drainage is real, and it is the cholesteatoma's trapped debris becoming superinfected, which is why antibiotics produce partial, temporary, unsatisfying responses. Note also what the stem tells you about <b>three years ago</b> — tubes removed, audiometry normal. That is not background colour, it establishes that the conductive loss is <b>new</b>, which converts chronic ear problems into something has changed. The absence of dizziness and the normal gait are not filler either: they confirm that no labyrinthine complication has occurred yet, which is why the question asks what is responsible rather than what to do first.",
+   "with": "The drainage is real and <b>purulent</b>, which suggests infection. It comes from the cholesteatoma's trapped debris becoming superinfected. That is why antibiotics produce partial, temporary, unsatisfying responses. The tubes were removed <b>three years ago</b>, and audiometry was normal then. The conductive loss is therefore <b>new</b>, so something has changed in these chronic ear problems. The absence of dizziness and the normal gait confirm that no labyrinthine complication has occurred yet.",
+   "note": "round 2 voice: decoy note; stem framing and em dash removed",
+   "claims": [
+    {
+     "claim": "Purulent is the most misleading word in the stem.",
+     "dropped": "framing about the stem wording; the clinical point that purulent suggests infection is kept"
+    },
+    {
+     "claim": "Purulent drainage suggests an infectious cause, sustained over a month.",
+     "to": "The drainage is real and purulent, which suggests infection."
+    },
+    {
+     "claim": "The drainage is real.",
+     "to": "The drainage is real and purulent, which suggests infection."
+    },
+    {
+     "claim": "The drainage is the cholesteatoma's trapped debris becoming superinfected.",
+     "to": "It comes from the cholesteatoma's trapped debris becoming superinfected."
+    },
+    {
+     "claim": "That is why antibiotics produce partial, temporary, unsatisfying responses.",
+     "to": "That is why antibiotics produce partial, temporary, unsatisfying responses."
+    },
+    {
+     "claim": "Three years ago the tubes were removed and audiometry was normal.",
+     "to": "The tubes were removed three years ago, and audiometry was normal then."
+    },
+    {
+     "claim": "This is not background colour.",
+     "dropped": "rhetorical framing"
+    },
+    {
+     "claim": "The conductive loss is new.",
+     "to": "The conductive loss is therefore new, so something has changed in these chronic ear problems."
+    },
+    {
+     "claim": "A new loss converts chronic ear problems into something that has changed.",
+     "to": "The conductive loss is therefore new, so something has changed in these chronic ear problems."
+    },
+    {
+     "claim": "The absence of dizziness and the normal gait are not filler.",
+     "dropped": "rhetorical framing"
+    },
+    {
+     "claim": "The absence of dizziness and the normal gait confirm that no labyrinthine complication has occurred yet.",
+     "to": "The absence of dizziness and the normal gait confirm that no labyrinthine complication has occurred yet."
+    },
+    {
+     "claim": "That is why the question asks what is responsible rather than what to do first.",
+     "dropped": "framing about the question; elective versus urgent status is stated in the pertinent negatives"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Purulent drainage suggests an infectious cause, sustained over a month.",
+     "from": "Purulent drainage suggests an infectious cause, sustained over a month."
+    },
+    {
+     "claim": "The drainage is real.",
+     "from": "The drainage is real."
+    },
+    {
+     "claim": "The drainage is the cholesteatoma's trapped debris becoming superinfected.",
+     "from": "The drainage is the cholesteatoma's trapped debris becoming superinfected."
+    },
+    {
+     "claim": "That is why antibiotics produce partial, temporary, unsatisfying responses.",
+     "from": "That is why antibiotics produce partial, temporary, unsatisfying responses."
+    },
+    {
+     "claim": "Three years ago the tubes were removed and audiometry was normal.",
+     "from": "Three years ago the tubes were removed and audiometry was normal."
+    },
+    {
+     "claim": "The conductive loss is new.",
+     "from": "The conductive loss is new."
+    },
+    {
+     "claim": "A new loss converts chronic ear problems into something that has changed.",
+     "from": "A new loss converts chronic ear problems into something that has changed."
+    },
+    {
+     "claim": "The absence of dizziness and the normal gait confirm that no labyrinthine complication has occurred yet.",
+     "from": "The absence of dizziness and the normal gait confirm that no labyrinthine complication has occurred yet."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cholesteatoma",
+   "find": "A retraction pocket traps keratin and squamous epithelium behind an intact drum, causing painless otorrhea and conductive loss; treatment is surgical excision. &middot; Discharge through an <b>intact</b> drum is not otitis media; middle-ear infection drains only through a perforation, so an intact drum with otorrhea means the source is the drum itself or the canal. &middot; <b>A cholesteatoma is not a tumour and not an infection</b> — it is skin in the wrong place, growing and shedding keratin, which is why the treatment is surgical and antibiotics only quiet the smell. &middot; The risk-factor triad is <b>recurrent acute otitis media, chronic effusion, and tympanostomy tubes</b>, and cleft palate multiplies all three through eustachian tube dysfunction. &middot; <b>Conductive loss localises to the ossicles</b>, so a cholesteatoma that has grown far enough to be heard is far enough to be eroding. &middot; The complications worth recognising are erosion into neighbours — <b>facial nerve palsy</b>, <b>labyrinthine fistula</b> with vertigo on canal pressure, and intracranial extension ⚠︎ — each converting an elective operation into an urgent one. &middot; A white mass behind an intact drum in a child with <b>no history of ear disease at all</b> is <b>congenital</b>, which needs no retraction pocket to explain it ⚠︎.",
+   "with": "A retraction pocket traps keratin and squamous epithelium behind an intact drum, causing painless otorrhea and conductive loss; treatment is surgical excision. &middot; Discharge through an <b>intact</b> drum is not otitis media. Middle-ear infection drains only through a perforation, so otorrhea with an intact drum comes from the drum itself or the canal. &middot; <b>A cholesteatoma is not a tumour and not an infection</b>. It is skin in the wrong place, growing and shedding keratin. The treatment is therefore surgical, and antibiotics only quiet the smell. &middot; The risk-factor triad is <b>recurrent acute otitis media, chronic effusion, and tympanostomy tubes</b>. Cleft palate multiplies all three through eustachian tube dysfunction. &middot; <b>Conductive loss localises to the ossicles</b>, so a cholesteatoma that causes hearing loss has grown far enough to be eroding. &middot; The complications come from erosion into neighbouring structures: <b>facial nerve palsy</b>, <b>labyrinthine fistula</b> with vertigo on canal pressure, and intracranial extension ⚠︎. Each converts an elective operation into an urgent one. &middot; A white mass behind an intact drum in a child with <b>no history of ear disease at all</b> is <b>congenital</b> ⚠︎. Congenital disease needs no retraction pocket to explain it.",
+   "note": "round 2 voice: pearls; em dashes removed, long sentences split",
+   "claims": [
+    {
+     "claim": "A retraction pocket traps keratin and squamous epithelium behind an intact drum.",
+     "to": "A retraction pocket traps keratin and squamous epithelium behind an intact drum, causing painless otorrhea and conductive loss; treatment is surgical excision."
+    },
+    {
+     "claim": "It causes painless otorrhea and conductive loss.",
+     "to": "A retraction pocket traps keratin and squamous epithelium behind an intact drum, causing painless otorrhea and conductive loss; treatment is surgical excision."
+    },
+    {
+     "claim": "Treatment is surgical excision.",
+     "to": "A retraction pocket traps keratin and squamous epithelium behind an intact drum, causing painless otorrhea and conductive loss; treatment is surgical excision."
+    },
+    {
+     "claim": "Discharge through an intact drum is not otitis media.",
+     "to": "Discharge through an intact drum is not otitis media."
+    },
+    {
+     "claim": "Middle-ear infection drains only through a perforation.",
+     "to": "Middle-ear infection drains only through a perforation, so otorrhea with an intact drum comes from the drum itself or the canal."
+    },
+    {
+     "claim": "An intact drum with otorrhea means the source is the drum itself or the canal.",
+     "to": "Middle-ear infection drains only through a perforation, so otorrhea with an intact drum comes from the drum itself or the canal."
+    },
+    {
+     "claim": "A cholesteatoma is not a tumour and not an infection.",
+     "to": "A cholesteatoma is not a tumour and not an infection."
+    },
+    {
+     "claim": "It is skin in the wrong place, growing and shedding keratin.",
+     "to": "It is skin in the wrong place, growing and shedding keratin."
+    },
+    {
+     "claim": "That is why the treatment is surgical.",
+     "to": "The treatment is therefore surgical, and antibiotics only quiet the smell."
+    },
+    {
+     "claim": "Antibiotics only quiet the smell.",
+     "to": "The treatment is therefore surgical, and antibiotics only quiet the smell."
+    },
+    {
+     "claim": "The risk-factor triad is recurrent acute otitis media, chronic effusion, and tympanostomy tubes.",
+     "to": "The risk-factor triad is recurrent acute otitis media, chronic effusion, and tympanostomy tubes."
+    },
+    {
+     "claim": "Cleft palate multiplies all three through eustachian tube dysfunction.",
+     "to": "Cleft palate multiplies all three through eustachian tube dysfunction."
+    },
+    {
+     "claim": "Conductive loss localises to the ossicles.",
+     "to": "Conductive loss localises to the ossicles, so a cholesteatoma that causes hearing loss has grown far enough to be eroding."
+    },
+    {
+     "claim": "A cholesteatoma that has grown far enough to be heard is far enough to be eroding.",
+     "to": "Conductive loss localises to the ossicles, so a cholesteatoma that causes hearing loss has grown far enough to be eroding."
+    },
+    {
+     "claim": "The complications worth recognising are erosion into neighbours.",
+     "to": "The complications come from erosion into neighbouring structures: facial nerve palsy, labyrinthine fistula with vertigo on canal pressure, and intracranial extension ⚠︎."
+    },
+    {
+     "claim": "The complications are facial nerve palsy, labyrinthine fistula with vertigo on canal pressure, and intracranial extension (flagged).",
+     "to": "The complications come from erosion into neighbouring structures: facial nerve palsy, labyrinthine fistula with vertigo on canal pressure, and intracranial extension ⚠︎."
+    },
+    {
+     "claim": "Each complication converts an elective operation into an urgent one.",
+     "to": "Each converts an elective operation into an urgent one."
+    },
+    {
+     "claim": "A white mass behind an intact drum in a child with no history of ear disease at all is congenital (flagged).",
+     "to": "A white mass behind an intact drum in a child with no history of ear disease at all is congenital ⚠︎."
+    },
+    {
+     "claim": "Congenital disease needs no retraction pocket to explain it.",
+     "to": "Congenital disease needs no retraction pocket to explain it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A retraction pocket traps keratin and squamous epithelium behind an intact drum.",
+     "from": "A retraction pocket traps keratin and squamous epithelium behind an intact drum."
+    },
+    {
+     "claim": "It causes painless otorrhea and conductive loss.",
+     "from": "It causes painless otorrhea and conductive loss."
+    },
+    {
+     "claim": "Treatment is surgical excision.",
+     "from": "Treatment is surgical excision."
+    },
+    {
+     "claim": "Discharge through an intact drum is not otitis media.",
+     "from": "Discharge through an intact drum is not otitis media."
+    },
+    {
+     "claim": "Middle-ear infection drains only through a perforation.",
+     "from": "Middle-ear infection drains only through a perforation."
+    },
+    {
+     "claim": "An intact drum with otorrhea means the source is the drum itself or the canal.",
+     "from": "An intact drum with otorrhea means the source is the drum itself or the canal."
+    },
+    {
+     "claim": "A cholesteatoma is not a tumour and not an infection.",
+     "from": "A cholesteatoma is not a tumour and not an infection."
+    },
+    {
+     "claim": "It is skin in the wrong place, growing and shedding keratin.",
+     "from": "It is skin in the wrong place, growing and shedding keratin."
+    },
+    {
+     "claim": "That is why the treatment is surgical.",
+     "from": "That is why the treatment is surgical."
+    },
+    {
+     "claim": "Antibiotics only quiet the smell.",
+     "from": "Antibiotics only quiet the smell."
+    },
+    {
+     "claim": "The risk-factor triad is recurrent acute otitis media, chronic effusion, and tympanostomy tubes.",
+     "from": "The risk-factor triad is recurrent acute otitis media, chronic effusion, and tympanostomy tubes."
+    },
+    {
+     "claim": "Cleft palate multiplies all three through eustachian tube dysfunction.",
+     "from": "Cleft palate multiplies all three through eustachian tube dysfunction."
+    },
+    {
+     "claim": "Conductive loss localises to the ossicles.",
+     "from": "Conductive loss localises to the ossicles."
+    },
+    {
+     "claim": "A cholesteatoma that has grown far enough to be heard is far enough to be eroding.",
+     "from": "A cholesteatoma that has grown far enough to be heard is far enough to be eroding."
+    },
+    {
+     "claim": "The complications worth recognising are erosion into neighbours.",
+     "from": "The complications worth recognising are erosion into neighbours."
+    },
+    {
+     "claim": "The complications are facial nerve palsy, labyrinthine fistula with vertigo on canal pressure, and intracranial extension (flagged).",
+     "from": "The complications are facial nerve palsy, labyrinthine fistula with vertigo on canal pressure, and intracranial extension (flagged)."
+    },
+    {
+     "claim": "Each complication converts an elective operation into an urgent one.",
+     "from": "Each complication converts an elective operation into an urgent one."
+    },
+    {
+     "claim": "A white mass behind an intact drum in a child with no history of ear disease at all is congenital (flagged).",
+     "from": "A white mass behind an intact drum in a child with no history of ear disease at all is congenital (flagged)."
+    },
+    {
+     "claim": "Congenital disease needs no retraction pocket to explain it.",
+     "from": "Congenital disease needs no retraction pocket to explain it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cholesteatoma",
+   "find": "Verified: Part I <b>Hearing Loss &amp; Otosclerosis</b> owns the tuning-fork sort that assigns any hearing loss to conductive or sensorineural and currently carries this disease as a single bank line; this brief is that line's expansion. Part II <b>Sinusitis with Intracranial Extension</b> is the same logic in the neighbouring air-filled space, where a chronic infection of a bony cavity is dangerous because of what it erodes into. Store the discriminator as a question: is the drum intact, and is the mass on it or in the canal?",
+   "with": "Part I <b>Hearing Loss &amp; Otosclerosis</b> covers the tuning-fork sort that assigns any hearing loss to conductive or sensorineural. It currently carries this disease as a single bank line, which this brief expands. Part II <b>Sinusitis with Intracranial Extension</b> applies the same logic to the neighbouring air-filled space. There, a chronic infection of a bony cavity is dangerous because of what it erodes into. Ask: is the drum intact, and is the mass on it or in the canal?",
+   "note": "round 2 voice: Pairs with; Verified, owns and store-the-discriminator workflow text converted",
+   "claims": [
+    {
+     "claim": "Hearing Loss & Otosclerosis owns the tuning-fork sort that assigns any hearing loss to conductive or sensorineural.",
+     "to": "Part I Hearing Loss & Otosclerosis covers the tuning-fork sort that assigns any hearing loss to conductive or sensorineural."
+    },
+    {
+     "claim": "It currently carries this disease as a single bank line, and this brief is that line's expansion.",
+     "to": "It currently carries this disease as a single bank line, which this brief expands."
+    },
+    {
+     "claim": "Sinusitis with Intracranial Extension is the same logic in the neighbouring air-filled space.",
+     "to": "Part II Sinusitis with Intracranial Extension applies the same logic to the neighbouring air-filled space."
+    },
+    {
+     "claim": "There a chronic infection of a bony cavity is dangerous because of what it erodes into.",
+     "to": "There, a chronic infection of a bony cavity is dangerous because of what it erodes into."
+    },
+    {
+     "claim": "Discriminator: is the drum intact, and is the mass on it or in the canal?",
+     "to": "Ask: is the drum intact, and is the mass on it or in the canal?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hearing Loss & Otosclerosis owns the tuning-fork sort that assigns any hearing loss to conductive or sensorineural.",
+     "from": "Hearing Loss & Otosclerosis owns the tuning-fork sort that assigns any hearing loss to conductive or sensorineural."
+    },
+    {
+     "claim": "It currently carries this disease as a single bank line, and this brief is that line's expansion.",
+     "from": "It currently carries this disease as a single bank line, and this brief is that line's expansion."
+    },
+    {
+     "claim": "Sinusitis with Intracranial Extension is the same logic in the neighbouring air-filled space.",
+     "from": "Sinusitis with Intracranial Extension is the same logic in the neighbouring air-filled space."
+    },
+    {
+     "claim": "There a chronic infection of a bony cavity is dangerous because of what it erodes into.",
+     "from": "There a chronic infection of a bony cavity is dangerous because of what it erodes into."
+    },
+    {
+     "claim": "Discriminator: is the drum intact, and is the mass on it or in the canal?",
+     "from": "Discriminator: is the drum intact, and is the mass on it or in the canal?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cholesteatoma",
+   "find": "When an option list describes <b>processes rather than diseases</b>, the item is testing whether you know the pathology behind the name, so translate your diagnosis into its mechanism before scanning or you will match on the clinical noise instead. And a discharge that fails adequate antibiotics is telling you the drainage is a symptom of something structural rather than the disease itself. --- <i>Batch 5, brief 04 · 2026-09-10.</i>",
+   "with": "When the options describe <b>processes rather than diseases</b>, translate the diagnosis into its mechanism before reading them. A discharge that fails adequate antibiotics is a symptom of something structural rather than the disease itself.",
+   "note": "round 2 voice: rule; framing and batch note removed",
+   "claims": [
+    {
+     "claim": "When an option list describes processes rather than diseases, translate the diagnosis into its mechanism before scanning.",
+     "to": "When the options describe processes rather than diseases, translate the diagnosis into its mechanism before reading them."
+    },
+    {
+     "claim": "The item checks knowledge of the pathology behind the name.",
+     "dropped": "framing about the question"
+    },
+    {
+     "claim": "Otherwise you will match on the clinical noise.",
+     "dropped": "rhetorical warning; the instruction itself is kept"
+    },
+    {
+     "claim": "A discharge that fails adequate antibiotics is a symptom of something structural rather than the disease itself.",
+     "to": "A discharge that fails adequate antibiotics is a symptom of something structural rather than the disease itself."
+    },
+    {
+     "claim": "Batch note.",
+     "dropped": "internal workflow text"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When an option list describes processes rather than diseases, translate the diagnosis into its mechanism before scanning.",
+     "from": "When an option list describes processes rather than diseases, translate the diagnosis into its mechanism before scanning."
+    },
+    {
+     "claim": "A discharge that fails adequate antibiotics is a symptom of something structural rather than the disease itself.",
+     "from": "A discharge that fails adequate antibiotics is a symptom of something structural rather than the disease itself."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "the age window and the intracranial signs decide whether it is benign",
+   "with": "benign only inside the age window and without intracranial signs",
+   "note": "round 2 voice: subtitle; personification removed",
+   "claims": [
+    {
+     "claim": "The age window and the intracranial signs decide whether a seizure with fever is benign.",
+     "to": "benign only inside the age window and without intracranial signs"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The age window and the intracranial signs decide whether a seizure with fever is benign.",
+     "from": "The age window and the intracranial signs decide whether a seizure with fever is benign."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "<p>Febrile seizure is not available here, and the reason is the first line of the stem: <b>10 weeks old</b>. Simple febrile seizures are defined between <b>6 months and 5 years</b>, and a child outside that window with fever and a seizure is a meningitis workup by definition, before any other finding is weighed. Three other findings independently reach the same answer — a <b>full anterior fontanelle</b> and <b>vomiting</b> are signs of raised intracranial pressure, and <b>drowsiness persisting an hour</b> is a postictal period far beyond the ten minutes a simple febrile seizure allows. The supple neck is not reassurance, because nuchal rigidity is unreliable in infants, which is why the fontanelle and the tone are what you read instead. The answer is <b>lumbar puncture</b>.</p>",
+   "with": "<p>At <b>10 weeks old</b>, this is not a febrile seizure. Simple febrile seizures are defined between <b>6 months and 5 years</b>. A child outside that window with fever and a seizure needs a meningitis workup by definition, before any other finding is weighed. Three other findings independently indicate a lumbar puncture. A <b>full anterior fontanelle</b> and <b>vomiting</b> are signs of raised intracranial pressure. Her <b>drowsiness persisting an hour</b> is a postictal period far beyond the ten minutes a simple febrile seizure allows. The supple neck does not reassure, because nuchal rigidity is unreliable in infants; assess the fontanelle and the tone instead. The next step is <b>lumbar puncture</b>.</p>",
+   "note": "round 2 voice: .dp; stem framing and em dash removed",
+   "claims": [
+    {
+     "claim": "Febrile seizure is not available here because the child is 10 weeks old.",
+     "to": "At 10 weeks old, this is not a febrile seizure."
+    },
+    {
+     "claim": "The age is the first line of the stem.",
+     "dropped": "framing about the stem layout"
+    },
+    {
+     "claim": "Simple febrile seizures are defined between 6 months and 5 years.",
+     "to": "Simple febrile seizures are defined between 6 months and 5 years."
+    },
+    {
+     "claim": "A child outside that window with fever and a seizure is a meningitis workup by definition, before any other finding is weighed.",
+     "to": "A child outside that window with fever and a seizure needs a meningitis workup by definition, before any other finding is weighed."
+    },
+    {
+     "claim": "Three other findings independently reach the same answer.",
+     "to": "Three other findings independently indicate a lumbar puncture."
+    },
+    {
+     "claim": "A full anterior fontanelle and vomiting are signs of raised intracranial pressure.",
+     "to": "A full anterior fontanelle and vomiting are signs of raised intracranial pressure."
+    },
+    {
+     "claim": "Drowsiness persisting an hour is a postictal period far beyond the ten minutes a simple febrile seizure allows.",
+     "to": "Her drowsiness persisting an hour is a postictal period far beyond the ten minutes a simple febrile seizure allows."
+    },
+    {
+     "claim": "The supple neck is not reassurance.",
+     "to": "The supple neck does not reassure, because nuchal rigidity is unreliable in infants; assess the fontanelle and the tone instead."
+    },
+    {
+     "claim": "Nuchal rigidity is unreliable in infants.",
+     "to": "The supple neck does not reassure, because nuchal rigidity is unreliable in infants; assess the fontanelle and the tone instead."
+    },
+    {
+     "claim": "That is why the fontanelle and the tone are read instead.",
+     "to": "The supple neck does not reassure, because nuchal rigidity is unreliable in infants; assess the fontanelle and the tone instead."
+    },
+    {
+     "claim": "The answer is lumbar puncture.",
+     "to": "The next step is lumbar puncture."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Febrile seizure is not available here because the child is 10 weeks old.",
+     "from": "Febrile seizure is not available here because the child is 10 weeks old."
+    },
+    {
+     "claim": "Simple febrile seizures are defined between 6 months and 5 years.",
+     "from": "Simple febrile seizures are defined between 6 months and 5 years."
+    },
+    {
+     "claim": "A child outside that window with fever and a seizure is a meningitis workup by definition, before any other finding is weighed.",
+     "from": "A child outside that window with fever and a seizure is a meningitis workup by definition, before any other finding is weighed."
+    },
+    {
+     "claim": "Three other findings independently reach the same answer.",
+     "from": "Three other findings independently reach the same answer."
+    },
+    {
+     "claim": "A full anterior fontanelle and vomiting are signs of raised intracranial pressure.",
+     "from": "A full anterior fontanelle and vomiting are signs of raised intracranial pressure."
+    },
+    {
+     "claim": "Drowsiness persisting an hour is a postictal period far beyond the ten minutes a simple febrile seizure allows.",
+     "from": "Drowsiness persisting an hour is a postictal period far beyond the ten minutes a simple febrile seizure allows."
+    },
+    {
+     "claim": "The supple neck is not reassurance.",
+     "from": "The supple neck is not reassurance."
+    },
+    {
+     "claim": "Nuchal rigidity is unreliable in infants.",
+     "from": "Nuchal rigidity is unreliable in infants."
+    },
+    {
+     "claim": "That is why the fontanelle and the tone are read instead.",
+     "from": "That is why the fontanelle and the tone are read instead."
+    },
+    {
+     "claim": "The answer is lumbar puncture.",
+     "from": "The answer is lumbar puncture."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "<b>How old?</b> &mdash; Ten weeks → outside the window, so this is not a febrile seizure and discharge is dead &middot; <b>Is she seizing now?</b> &mdash; No, it stopped in 4 minutes → the benzodiazepine is dead &middot; <b>Was it focal, prolonged or recurrent?</b> &mdash; No → EEG is dead &middot; <b>Any sign of intracranial infection?</b> &mdash; Full fontanelle, vomiting, hypotonia, still drowsy → yes &middot; <b>Does she need a CT first?</b> &mdash; The fontanelle is <b>open</b> → no, so tap her",
+   "with": "<b>How old?</b> &mdash; Ten weeks → outside the window, so this is not a febrile seizure and discharge is ruled out &middot; <b>Is she seizing now?</b> &mdash; No, it stopped in 4 minutes → no benzodiazepine &middot; <b>Was it focal, prolonged or recurrent?</b> &mdash; No → no <b>EEG</b> (electroencephalography) &middot; <b>Any sign of intracranial infection?</b> &mdash; Full fontanelle, vomiting, hypotonia, still drowsy → yes &middot; <b>Does she need a CT first?</b> &mdash; The fontanelle is <b>open</b> → no, so perform the lumbar puncture",
+   "note": "round 2 voice: decision spine; \"is dead\" slang replaced",
+   "claims": [
+    {
+     "claim": "At ten weeks she is outside the window, so this is not a febrile seizure and discharge is excluded.",
+     "to": "Ten weeks → outside the window, so this is not a febrile seizure and discharge is ruled out"
+    },
+    {
+     "claim": "She is not seizing now; it stopped in 4 minutes, so no benzodiazepine.",
+     "to": "No, it stopped in 4 minutes → no benzodiazepine"
+    },
+    {
+     "claim": "It was not focal, prolonged or recurrent, so no EEG.",
+     "to": "No → no EEG (electroencephalography)"
+    },
+    {
+     "claim": "Full fontanelle, vomiting, hypotonia and persistent drowsiness are signs of intracranial infection.",
+     "to": "Full fontanelle, vomiting, hypotonia, still drowsy → yes"
+    },
+    {
+     "claim": "The fontanelle is open, so no CT is needed first; tap her.",
+     "to": "The fontanelle is open → no, so perform the lumbar puncture"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "At ten weeks she is outside the window, so this is not a febrile seizure and discharge is excluded.",
+     "from": "At ten weeks she is outside the window, so this is not a febrile seizure and discharge is excluded."
+    },
+    {
+     "claim": "She is not seizing now; it stopped in 4 minutes, so no benzodiazepine.",
+     "from": "She is not seizing now; it stopped in 4 minutes, so no benzodiazepine."
+    },
+    {
+     "claim": "It was not focal, prolonged or recurrent, so no EEG.",
+     "from": "It was not focal, prolonged or recurrent, so no EEG."
+    },
+    {
+     "claim": "Full fontanelle, vomiting, hypotonia and persistent drowsiness are signs of intracranial infection.",
+     "from": "Full fontanelle, vomiting, hypotonia and persistent drowsiness are signs of intracranial infection."
+    },
+    {
+     "claim": "The fontanelle is open, so no CT is needed first; tap her.",
+     "from": "The fontanelle is open, so no CT is needed first; tap her."
+    },
+    {
+     "claim": "EEG stands for electroencephalography",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "The <b>supple neck</b> is the most reassuring-sounding finding in the stem and it means nothing, because nuchal rigidity is unreliable in infants, which is precisely why the criteria list substitutes the fontanelle, the tone and the feeding. Notice also that the stem builds a careful negative examination — normal tympanic membranes, oropharynx, lungs, abdomen and skin — which reads as no source found and quietly <i>strengthens</i> the case for tapping rather than weakening it: when every peripheral source is excluded in a febrile infant with neurologic signs, the meninges are what is left. And the up-to-date vaccinations remove one of the modifiers on the list without touching the four indications already present.",
+   "with": "A <b>supple neck</b> excludes nothing in an infant, because nuchal rigidity is unreliable at this age. The criteria list uses the fontanelle, the tone and the feeding instead. The rest of the examination is normal: tympanic membranes, oropharynx, lungs, abdomen and skin. Finding no peripheral source <i>strengthens</i> the case for tapping rather than weakening it. When every peripheral source is excluded in a febrile infant with neurologic signs, the meninges are what is left. Up-to-date vaccinations remove one of the modifiers on the list without touching the four indications already present.",
+   "note": "round 2 voice: decoy note; stem framing and em dashes removed",
+   "claims": [
+    {
+     "claim": "The supple neck is the most reassuring-sounding finding in the stem.",
+     "dropped": "framing about the stem"
+    },
+    {
+     "claim": "The supple neck means nothing, because nuchal rigidity is unreliable in infants.",
+     "to": "A supple neck excludes nothing in an infant, because nuchal rigidity is unreliable at this age."
+    },
+    {
+     "claim": "That is why the criteria list substitutes the fontanelle, the tone and the feeding.",
+     "to": "The criteria list uses the fontanelle, the tone and the feeding instead."
+    },
+    {
+     "claim": "The stem gives a negative examination: normal tympanic membranes, oropharynx, lungs, abdomen and skin.",
+     "to": "The rest of the examination is normal: tympanic membranes, oropharynx, lungs, abdomen and skin."
+    },
+    {
+     "claim": "No source found strengthens the case for tapping rather than weakening it.",
+     "to": "Finding no peripheral source strengthens the case for tapping rather than weakening it."
+    },
+    {
+     "claim": "When every peripheral source is excluded in a febrile infant with neurologic signs, the meninges are what is left.",
+     "to": "When every peripheral source is excluded in a febrile infant with neurologic signs, the meninges are what is left."
+    },
+    {
+     "claim": "The up-to-date vaccinations remove one of the modifiers on the list without touching the four indications already present.",
+     "to": "Up-to-date vaccinations remove one of the modifiers on the list without touching the four indications already present."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The supple neck means nothing, because nuchal rigidity is unreliable in infants.",
+     "from": "The supple neck means nothing, because nuchal rigidity is unreliable in infants."
+    },
+    {
+     "claim": "That is why the criteria list substitutes the fontanelle, the tone and the feeding.",
+     "from": "That is why the criteria list substitutes the fontanelle, the tone and the feeding."
+    },
+    {
+     "claim": "The stem gives a negative examination: normal tympanic membranes, oropharynx, lungs, abdomen and skin.",
+     "from": "The stem gives a negative examination: normal tympanic membranes, oropharynx, lungs, abdomen and skin."
+    },
+    {
+     "claim": "No source found strengthens the case for tapping rather than weakening it.",
+     "from": "No source found strengthens the case for tapping rather than weakening it."
+    },
+    {
+     "claim": "When every peripheral source is excluded in a febrile infant with neurologic signs, the meninges are what is left.",
+     "from": "When every peripheral source is excluded in a febrile infant with neurologic signs, the meninges are what is left."
+    },
+    {
+     "claim": "The up-to-date vaccinations remove one of the modifiers on the list without touching the four indications already present.",
+     "from": "The up-to-date vaccinations remove one of the modifiers on the list without touching the four indications already present."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "Fever with seizure under 6 months, or with a full fontanelle or prolonged drowsiness, is a lumbar puncture — and an open fontanelle needs no CT. &middot; <b>The febrile-seizure diagnosis has an age gate on both ends</b>, 6 months and 5 years, and it is the fastest disqualifier on the topic — check it before anything else. &middot; <b>An open fontanelle is a pop-off valve</b>, which is why infants tolerate rising intracranial pressure that would herniate an older child, and why the CT-before-tap rule generally does not apply to them. &middot; The same finding can be both the indication and the apparent contraindication; when that happens, ask <b>what the rule is protecting against</b>, and whether that risk exists in this patient. &middot; <b>Infants do not have neck signs</b> — read the fontanelle, the tone, the suck and the cry instead, because a supple neck excludes nothing under about 18 months ⚠︎. &middot; A postictal period beyond <b>10 minutes</b> is not a long febrile seizure, it is altered mental status, and it earns a tap on its own. &middot; With petechiae and hypotension the order inverts: <b>antibiotics first, tap after</b>, because a sterilised Gram stain is an acceptable price.",
+   "with": "Fever with seizure under 6 months, or with a full fontanelle or prolonged drowsiness, needs a lumbar puncture. With an open fontanelle, no <b>CT</b> (computed tomography) is needed. &middot; <b>The febrile-seizure diagnosis has an age gate on both ends</b>: 6 months and 5 years. Age is the fastest disqualifier on the topic, so check it before anything else. &middot; <b>An open fontanelle is a pop-off valve</b>. Infants therefore tolerate rising intracranial pressure that would herniate an older child. The CT-before-tap rule generally does not apply to them. &middot; When one finding is both the indication and the apparent contraindication, ask <b>what the rule is protecting against</b>. Then ask whether that risk exists in this patient. &middot; <b>Infants do not have neck signs</b>. Assess the fontanelle, the tone, the suck and the cry instead, because a supple neck excludes nothing under about 18 months ⚠︎. &middot; A postictal period beyond <b>10 minutes</b> is altered mental status, not a long febrile seizure. It is an indication for lumbar puncture on its own. &middot; With petechiae and hypotension, reverse the order: <b>antibiotics first, tap after</b>. A sterilised Gram stain is an acceptable price.",
+   "note": "round 2 voice: pearls; em dashes removed, long sentences split",
+   "claims": [
+    {
+     "claim": "Fever with seizure under 6 months, or with a full fontanelle or prolonged drowsiness, is a lumbar puncture.",
+     "to": "Fever with seizure under 6 months, or with a full fontanelle or prolonged drowsiness, needs a lumbar puncture."
+    },
+    {
+     "claim": "An open fontanelle needs no CT.",
+     "to": "With an open fontanelle, no CT (computed tomography) is needed."
+    },
+    {
+     "claim": "The febrile-seizure diagnosis has an age gate on both ends, 6 months and 5 years.",
+     "to": "The febrile-seizure diagnosis has an age gate on both ends: 6 months and 5 years."
+    },
+    {
+     "claim": "The age gate is the fastest disqualifier on the topic; check it before anything else.",
+     "to": "Age is the fastest disqualifier on the topic, so check it before anything else."
+    },
+    {
+     "claim": "An open fontanelle is a pop-off valve.",
+     "to": "An open fontanelle is a pop-off valve."
+    },
+    {
+     "claim": "That is why infants tolerate rising intracranial pressure that would herniate an older child.",
+     "to": "Infants therefore tolerate rising intracranial pressure that would herniate an older child."
+    },
+    {
+     "claim": "That is why the CT-before-tap rule generally does not apply to infants.",
+     "to": "The CT-before-tap rule generally does not apply to them."
+    },
+    {
+     "claim": "The same finding can be both the indication and the apparent contraindication.",
+     "to": "When one finding is both the indication and the apparent contraindication, ask what the rule is protecting against."
+    },
+    {
+     "claim": "When that happens, ask what the rule is protecting against.",
+     "to": "When one finding is both the indication and the apparent contraindication, ask what the rule is protecting against."
+    },
+    {
+     "claim": "And ask whether that risk exists in this patient.",
+     "to": "Then ask whether that risk exists in this patient."
+    },
+    {
+     "claim": "Infants do not have neck signs.",
+     "to": "Infants do not have neck signs."
+    },
+    {
+     "claim": "Read the fontanelle, the tone, the suck and the cry instead.",
+     "to": "Assess the fontanelle, the tone, the suck and the cry instead, because a supple neck excludes nothing under about 18 months ⚠︎."
+    },
+    {
+     "claim": "A supple neck excludes nothing under about 18 months (flagged).",
+     "to": "Assess the fontanelle, the tone, the suck and the cry instead, because a supple neck excludes nothing under about 18 months ⚠︎."
+    },
+    {
+     "claim": "A postictal period beyond 10 minutes is not a long febrile seizure; it is altered mental status.",
+     "to": "A postictal period beyond 10 minutes is altered mental status, not a long febrile seizure."
+    },
+    {
+     "claim": "It earns a tap on its own.",
+     "to": "It is an indication for lumbar puncture on its own."
+    },
+    {
+     "claim": "With petechiae and hypotension the order inverts: antibiotics first, tap after.",
+     "to": "With petechiae and hypotension, reverse the order: antibiotics first, tap after."
+    },
+    {
+     "claim": "A sterilised Gram stain is an acceptable price.",
+     "to": "A sterilised Gram stain is an acceptable price."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Fever with seizure under 6 months, or with a full fontanelle or prolonged drowsiness, is a lumbar puncture.",
+     "from": "Fever with seizure under 6 months, or with a full fontanelle or prolonged drowsiness, is a lumbar puncture."
+    },
+    {
+     "claim": "An open fontanelle needs no CT.",
+     "from": "An open fontanelle needs no CT."
+    },
+    {
+     "claim": "The febrile-seizure diagnosis has an age gate on both ends, 6 months and 5 years.",
+     "from": "The febrile-seizure diagnosis has an age gate on both ends, 6 months and 5 years."
+    },
+    {
+     "claim": "The age gate is the fastest disqualifier on the topic; check it before anything else.",
+     "from": "The age gate is the fastest disqualifier on the topic; check it before anything else."
+    },
+    {
+     "claim": "An open fontanelle is a pop-off valve.",
+     "from": "An open fontanelle is a pop-off valve."
+    },
+    {
+     "claim": "That is why infants tolerate rising intracranial pressure that would herniate an older child.",
+     "from": "That is why infants tolerate rising intracranial pressure that would herniate an older child."
+    },
+    {
+     "claim": "That is why the CT-before-tap rule generally does not apply to infants.",
+     "from": "That is why the CT-before-tap rule generally does not apply to infants."
+    },
+    {
+     "claim": "The same finding can be both the indication and the apparent contraindication.",
+     "from": "The same finding can be both the indication and the apparent contraindication."
+    },
+    {
+     "claim": "When that happens, ask what the rule is protecting against.",
+     "from": "When that happens, ask what the rule is protecting against."
+    },
+    {
+     "claim": "And ask whether that risk exists in this patient.",
+     "from": "And ask whether that risk exists in this patient."
+    },
+    {
+     "claim": "Infants do not have neck signs.",
+     "from": "Infants do not have neck signs."
+    },
+    {
+     "claim": "Read the fontanelle, the tone, the suck and the cry instead.",
+     "from": "Read the fontanelle, the tone, the suck and the cry instead."
+    },
+    {
+     "claim": "A supple neck excludes nothing under about 18 months (flagged).",
+     "from": "A supple neck excludes nothing under about 18 months (flagged)."
+    },
+    {
+     "claim": "A postictal period beyond 10 minutes is not a long febrile seizure; it is altered mental status.",
+     "from": "A postictal period beyond 10 minutes is not a long febrile seizure; it is altered mental status."
+    },
+    {
+     "claim": "It earns a tap on its own.",
+     "from": "It earns a tap on its own."
+    },
+    {
+     "claim": "With petechiae and hypotension the order inverts: antibiotics first, tap after.",
+     "from": "With petechiae and hypotension the order inverts: antibiotics first, tap after."
+    },
+    {
+     "claim": "A sterilised Gram stain is an acceptable price.",
+     "from": "A sterilised Gram stain is an acceptable price."
+    },
+    {
+     "claim": "CT stands for computed tomography",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "Verified: Part II <b>The Febrile Infant — Finding the Source</b> owns the workup when there is no seizure and stops at the decision to tap; this brief owns what a seizure adds to that decision. Part I <b>Bacterial Meningitis</b> owns the CSF grid that interprets the fluid once it is obtained. Store the discriminator as a question: is this child inside the age window, and is any sign of intracranial infection present?",
+   "with": "Part II <b>The Febrile Infant — Finding the Source</b> covers the workup when there is no seizure and stops at the decision to tap. This brief covers what a seizure adds to that decision. Part I <b>Bacterial Meningitis</b> covers the cerebrospinal fluid grid that interprets the fluid once it is obtained. Ask: is this child inside the age window, and is any sign of intracranial infection present?",
+   "note": "round 2 voice: Pairs with; Verified, owns and store-the-discriminator workflow text converted",
+   "claims": [
+    {
+     "claim": "The Febrile Infant — Finding the Source owns the workup when there is no seizure and stops at the decision to tap.",
+     "to": "Part II The Febrile Infant — Finding the Source covers the workup when there is no seizure and stops at the decision to tap."
+    },
+    {
+     "claim": "This brief owns what a seizure adds to that decision.",
+     "to": "This brief covers what a seizure adds to that decision."
+    },
+    {
+     "claim": "Bacterial Meningitis owns the CSF grid that interprets the fluid once it is obtained.",
+     "to": "Part I Bacterial Meningitis covers the cerebrospinal fluid grid that interprets the fluid once it is obtained."
+    },
+    {
+     "claim": "Discriminator: is this child inside the age window, and is any sign of intracranial infection present?",
+     "to": "Ask: is this child inside the age window, and is any sign of intracranial infection present?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The Febrile Infant — Finding the Source owns the workup when there is no seizure and stops at the decision to tap.",
+     "from": "The Febrile Infant — Finding the Source owns the workup when there is no seizure and stops at the decision to tap."
+    },
+    {
+     "claim": "This brief owns what a seizure adds to that decision.",
+     "from": "This brief owns what a seizure adds to that decision."
+    },
+    {
+     "claim": "Bacterial Meningitis owns the CSF grid that interprets the fluid once it is obtained.",
+     "from": "Bacterial Meningitis owns the CSF grid that interprets the fluid once it is obtained."
+    },
+    {
+     "claim": "Discriminator: is this child inside the age window, and is any sign of intracranial infection present?",
+     "from": "Discriminator: is this child inside the age window, and is any sign of intracranial infection present?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "A benign diagnosis defined by an age range is disqualified by the age before it is disqualified by anything else, so check the gate before weighing the findings. And when a rule and a finding point in opposite directions, ask what the rule was built to prevent — if the anatomy has already prevented it, the rule does not apply. --- <i>Batch 5, brief 07 · 2026-09-10.</i>",
+   "with": "When a benign diagnosis is defined by an age range, check the age before weighing the findings. When a rule and a finding point in opposite directions, ask what the rule was built to prevent. If the anatomy has already prevented it, the rule does not apply.",
+   "note": "round 2 voice: rule; em dash and batch note removed",
+   "claims": [
+    {
+     "claim": "A benign diagnosis defined by an age range is disqualified by the age before anything else.",
+     "to": "When a benign diagnosis is defined by an age range, check the age before weighing the findings."
+    },
+    {
+     "claim": "Check the age gate before weighing the findings.",
+     "to": "When a benign diagnosis is defined by an age range, check the age before weighing the findings."
+    },
+    {
+     "claim": "When a rule and a finding point in opposite directions, ask what the rule was built to prevent.",
+     "to": "When a rule and a finding point in opposite directions, ask what the rule was built to prevent."
+    },
+    {
+     "claim": "If the anatomy has already prevented it, the rule does not apply.",
+     "to": "If the anatomy has already prevented it, the rule does not apply."
+    },
+    {
+     "claim": "Batch note.",
+     "dropped": "internal workflow text"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A benign diagnosis defined by an age range is disqualified by the age before anything else.",
+     "from": "A benign diagnosis defined by an age range is disqualified by the age before anything else."
+    },
+    {
+     "claim": "Check the age gate before weighing the findings.",
+     "from": "Check the age gate before weighing the findings."
+    },
+    {
+     "claim": "When a rule and a finding point in opposite directions, ask what the rule was built to prevent.",
+     "from": "When a rule and a finding point in opposite directions, ask what the rule was built to prevent."
+    },
+    {
+     "claim": "If the anatomy has already prevented it, the rule does not apply.",
+     "from": "If the anatomy has already prevented it, the rule does not apply."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "<p>Every option is a candidate cause, so the question is which one produces <b>this</b> lesion — and the lesion is described for you. <b>White matter injury adjacent to the lateral ventricle is periventricular leukomalacia</b>: ischemia and necrosis in the poorly perfused zone beside the ventricles, and the signature injury of <b>prematurity</b>. The examination confirms the rest independently: increased tone, 3+ reflexes and ankle clonus on the <b>left only</b>, with a <b>right</b>-sided lesion, is spastic hemiplegia matching a unilateral injury — and a congenital infection produces global deficits, not one-sided spasticity.</p>",
+   "with": "<p><b>White matter injury adjacent to the lateral ventricle is periventricular leukomalacia</b>. It is ischemia and necrosis in the poorly perfused zone beside the ventricles, and the signature injury of <b>prematurity</b>. The examination confirms this independently. Increased tone, 3+ reflexes and ankle clonus on the <b>left only</b>, with a <b>right</b>-sided lesion, is spastic hemiplegia matching a unilateral injury. A congenital infection produces global deficits, not one-sided spasticity.</p>",
+   "note": "round 2 voice: .dp; option framing, emphasis bold and em dashes removed",
+   "reworded_bold": [
+    "this"
+   ],
+   "claims": [
+    {
+     "claim": "Every option is a candidate cause, so the question is which one produces this lesion.",
+     "dropped": "framing about the options"
+    },
+    {
+     "claim": "The lesion is described in the stem.",
+     "dropped": "framing about the stem"
+    },
+    {
+     "claim": "White matter injury adjacent to the lateral ventricle is periventricular leukomalacia.",
+     "to": "White matter injury adjacent to the lateral ventricle is periventricular leukomalacia."
+    },
+    {
+     "claim": "Periventricular leukomalacia is ischemia and necrosis in the poorly perfused zone beside the ventricles.",
+     "to": "It is ischemia and necrosis in the poorly perfused zone beside the ventricles, and the signature injury of prematurity."
+    },
+    {
+     "claim": "It is the signature injury of prematurity.",
+     "to": "It is ischemia and necrosis in the poorly perfused zone beside the ventricles, and the signature injury of prematurity."
+    },
+    {
+     "claim": "The examination confirms the rest independently.",
+     "to": "The examination confirms this independently."
+    },
+    {
+     "claim": "Increased tone, 3+ reflexes and ankle clonus on the left only, with a right-sided lesion, is spastic hemiplegia matching a unilateral injury.",
+     "to": "Increased tone, 3+ reflexes and ankle clonus on the left only, with a right-sided lesion, is spastic hemiplegia matching a unilateral injury."
+    },
+    {
+     "claim": "A congenital infection produces global deficits, not one-sided spasticity.",
+     "to": "A congenital infection produces global deficits, not one-sided spasticity."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "White matter injury adjacent to the lateral ventricle is periventricular leukomalacia.",
+     "from": "White matter injury adjacent to the lateral ventricle is periventricular leukomalacia."
+    },
+    {
+     "claim": "Periventricular leukomalacia is ischemia and necrosis in the poorly perfused zone beside the ventricles.",
+     "from": "Periventricular leukomalacia is ischemia and necrosis in the poorly perfused zone beside the ventricles."
+    },
+    {
+     "claim": "It is the signature injury of prematurity.",
+     "from": "It is the signature injury of prematurity."
+    },
+    {
+     "claim": "The examination confirms the rest independently.",
+     "from": "The examination confirms the rest independently."
+    },
+    {
+     "claim": "Increased tone, 3+ reflexes and ankle clonus on the left only, with a right-sided lesion, is spastic hemiplegia matching a unilateral injury.",
+     "from": "Increased tone, 3+ reflexes and ankle clonus on the left only, with a right-sided lesion, is spastic hemiplegia matching a unilateral injury."
+    },
+    {
+     "claim": "A congenital infection produces global deficits, not one-sided spasticity.",
+     "from": "A congenital infection produces global deficits, not one-sided spasticity."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "Management is not the fork this stem tests, so in one sentence: cerebral palsy is managed supportively and lifelong — early intervention and physical therapy, tone management, and surveillance of hips, feeding and growth, seizures, vision and hearing ⚠︎ — with no treatment that reverses the static injury itself.",
+   "with": "Cerebral palsy is managed supportively and lifelong. Management includes early intervention and physical therapy, tone management, and surveillance of hips, feeding and growth, seizures, vision and hearing ⚠︎. No treatment reverses the static injury itself.",
+   "note": "round 2 voice: management .danger; framing and em dashes removed",
+   "claims": [
+    {
+     "claim": "Management is not what this stem tests.",
+     "dropped": "framing about the question"
+    },
+    {
+     "claim": "Cerebral palsy is managed supportively and lifelong.",
+     "to": "Cerebral palsy is managed supportively and lifelong."
+    },
+    {
+     "claim": "Management is early intervention and physical therapy, tone management, and surveillance of hips, feeding and growth, seizures, vision and hearing (flagged).",
+     "to": "Management includes early intervention and physical therapy, tone management, and surveillance of hips, feeding and growth, seizures, vision and hearing ⚠︎."
+    },
+    {
+     "claim": "No treatment reverses the static injury itself.",
+     "to": "No treatment reverses the static injury itself."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Cerebral palsy is managed supportively and lifelong.",
+     "from": "Cerebral palsy is managed supportively and lifelong."
+    },
+    {
+     "claim": "Management is early intervention and physical therapy, tone management, and surveillance of hips, feeding and growth, seizures, vision and hearing (flagged).",
+     "from": "Management is early intervention and physical therapy, tone management, and surveillance of hips, feeding and growth, seizures, vision and hearing (flagged)."
+    },
+    {
+     "claim": "No treatment reverses the static injury itself.",
+     "from": "No treatment reverses the static injury itself."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "Prematurity — and the stem gives you 31 weeks",
+   "with": "Prematurity; the infant was born at 31 weeks",
+   "note": "round 2 voice: decision spine row; prose em dash removed",
+   "claims": [
+    {
+     "claim": "Prematurity produces that pattern.",
+     "to": "Prematurity; the infant was born at 31 weeks"
+    },
+    {
+     "claim": "The infant was born at 31 weeks.",
+     "to": "Prematurity; the infant was born at 31 weeks"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Prematurity produces that pattern.",
+     "from": "Prematurity produces that pattern."
+    },
+    {
+     "claim": "The infant was born at 31 weeks.",
+     "from": "The infant was born at 31 weeks."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "The veterinary office is the most deliberately constructed detail in this stem: an occupation chosen to evoke cat litter, reinforced one clause later by inconsistent prenatal care, and refuted one sentence later by the MRI. Three maternal drugs are named and only one is an option — and the <b>antenatal corticosteroids actually lowered</b> this infant's risk rather than raising it. The bilateral Babinski is a normal finding at 7 months ⚠︎ and is there to be over-read; the asymmetry of tone and reflexes is what matters.",
+   "with": "A veterinary office job evokes cat-litter exposure, and inconsistent prenatal care reinforces that story. The MRI refutes it. Three maternal drugs are named, and only one is an option. The <b>antenatal corticosteroids actually lowered</b> this infant's risk rather than raising it. The bilateral Babinski is a normal finding at 7 months ⚠︎ and should not be over-read. The asymmetry of tone and reflexes is what matters.",
+   "note": "round 2 voice: decoy note; stem framing and em dash removed",
+   "claims": [
+    {
+     "claim": "The veterinary office is the most deliberately constructed detail in this stem.",
+     "dropped": "framing about how the stem was written"
+    },
+    {
+     "claim": "The occupation evokes cat litter.",
+     "to": "A veterinary office job evokes cat-litter exposure, and inconsistent prenatal care reinforces that story."
+    },
+    {
+     "claim": "Inconsistent prenatal care reinforces it.",
+     "to": "A veterinary office job evokes cat-litter exposure, and inconsistent prenatal care reinforces that story."
+    },
+    {
+     "claim": "The MRI refutes it.",
+     "to": "The MRI refutes it."
+    },
+    {
+     "claim": "Three maternal drugs are named and only one is an option.",
+     "to": "Three maternal drugs are named, and only one is an option."
+    },
+    {
+     "claim": "The antenatal corticosteroids actually lowered this infant's risk rather than raising it.",
+     "to": "The antenatal corticosteroids actually lowered this infant's risk rather than raising it."
+    },
+    {
+     "claim": "The bilateral Babinski is a normal finding at 7 months (flagged).",
+     "to": "The bilateral Babinski is a normal finding at 7 months ⚠︎ and should not be over-read."
+    },
+    {
+     "claim": "The Babinski is there to be over-read.",
+     "to": "The bilateral Babinski is a normal finding at 7 months ⚠︎ and should not be over-read."
+    },
+    {
+     "claim": "The asymmetry of tone and reflexes is what matters.",
+     "to": "The asymmetry of tone and reflexes is what matters."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The occupation evokes cat litter.",
+     "from": "The occupation evokes cat litter."
+    },
+    {
+     "claim": "Inconsistent prenatal care reinforces it.",
+     "from": "Inconsistent prenatal care reinforces it."
+    },
+    {
+     "claim": "The MRI refutes it.",
+     "from": "The MRI refutes it."
+    },
+    {
+     "claim": "Three maternal drugs are named and only one is an option.",
+     "from": "Three maternal drugs are named and only one is an option."
+    },
+    {
+     "claim": "The antenatal corticosteroids actually lowered this infant's risk rather than raising it.",
+     "from": "The antenatal corticosteroids actually lowered this infant's risk rather than raising it."
+    },
+    {
+     "claim": "The bilateral Babinski is a normal finding at 7 months (flagged).",
+     "from": "The bilateral Babinski is a normal finding at 7 months (flagged)."
+    },
+    {
+     "claim": "The Babinski is there to be over-read.",
+     "from": "The Babinski is there to be over-read."
+    },
+    {
+     "claim": "The asymmetry of tone and reflexes is what matters.",
+     "from": "The asymmetry of tone and reflexes is what matters."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "White matter injury beside the lateral ventricle is periventricular leukomalacia, and prematurity is what causes it. &middot; The imaging pattern maps to the insult: <b>periventricular white matter → prematurity · watershed or basal ganglia → hypoxic-ischemic injury · a vascular territory → perinatal stroke · calcifications → congenital infection</b>. &middot; Distribution names the subtype: both legs is <b>spastic diplegia</b>, the commonest; one side is <b>spastic hemiplegia</b>, and it should match a unilateral lesion. &middot; Hand preference before age 1 is abnormal, and it is often the earliest sign a parent reports. &middot; Cerebral palsy is <b>nonprogressive</b> — <i>losing</i> an acquired milestone is a different disease and reopens the workup ⚠︎. &middot; Infants with cerebral palsy may begin hypotonic and become spastic later, so normal early tone never excludes it. &middot; Magnesium sulfate given before preterm birth is <b>neuroprotective</b> and reduces cerebral palsy risk ⚠︎ — the exact opposite of what its appearance in the option list implies.",
+   "with": "White matter injury beside the lateral ventricle is periventricular leukomalacia, which is caused by prematurity. &middot; The imaging pattern maps to the insult: <b>periventricular white matter → prematurity · watershed or basal ganglia → hypoxic-ischemic injury · a vascular territory → perinatal stroke · calcifications → congenital infection</b>. &middot; Involvement of both legs is <b>spastic diplegia</b>, the commonest subtype. One side is <b>spastic hemiplegia</b>, and it should match a unilateral lesion. &middot; Hand preference before age 1 is abnormal, and it is often the earliest sign a parent reports. &middot; Cerebral palsy is <b>nonprogressive</b>. <i>Losing</i> an acquired milestone means a different disease and reopens the workup ⚠︎. &middot; Infants with cerebral palsy may begin hypotonic and become spastic later, so normal early tone never excludes it. &middot; Magnesium sulfate given before preterm birth is <b>neuroprotective</b> and reduces cerebral palsy risk ⚠︎.",
+   "note": "round 2 voice: pearls; em dashes and option framing removed",
+   "claims": [
+    {
+     "claim": "White matter injury beside the lateral ventricle is periventricular leukomalacia.",
+     "to": "White matter injury beside the lateral ventricle is periventricular leukomalacia, which is caused by prematurity."
+    },
+    {
+     "claim": "Prematurity causes it.",
+     "to": "White matter injury beside the lateral ventricle is periventricular leukomalacia, which is caused by prematurity."
+    },
+    {
+     "claim": "The imaging pattern maps to the insult: periventricular white matter to prematurity, watershed or basal ganglia to hypoxic-ischemic injury, a vascular territory to perinatal stroke, calcifications to congenital infection.",
+     "to": "The imaging pattern maps to the insult: periventricular white matter → prematurity · watershed or basal ganglia → hypoxic-ischemic injury · a vascular territory → perinatal stroke · calcifications → congenital infection."
+    },
+    {
+     "claim": "Distribution names the subtype.",
+     "to": "Involvement of both legs is spastic diplegia, the commonest subtype."
+    },
+    {
+     "claim": "Both legs is spastic diplegia, the commonest.",
+     "to": "Involvement of both legs is spastic diplegia, the commonest subtype."
+    },
+    {
+     "claim": "One side is spastic hemiplegia, and it should match a unilateral lesion.",
+     "to": "One side is spastic hemiplegia, and it should match a unilateral lesion."
+    },
+    {
+     "claim": "Hand preference before age 1 is abnormal, and it is often the earliest sign a parent reports.",
+     "to": "Hand preference before age 1 is abnormal, and it is often the earliest sign a parent reports."
+    },
+    {
+     "claim": "Cerebral palsy is nonprogressive.",
+     "to": "Cerebral palsy is nonprogressive."
+    },
+    {
+     "claim": "Losing an acquired milestone is a different disease and reopens the workup (flagged).",
+     "to": "Losing an acquired milestone means a different disease and reopens the workup ⚠︎."
+    },
+    {
+     "claim": "Infants with cerebral palsy may begin hypotonic and become spastic later, so normal early tone never excludes it.",
+     "to": "Infants with cerebral palsy may begin hypotonic and become spastic later, so normal early tone never excludes it."
+    },
+    {
+     "claim": "Magnesium sulfate given before preterm birth is neuroprotective and reduces cerebral palsy risk (flagged).",
+     "to": "Magnesium sulfate given before preterm birth is neuroprotective and reduces cerebral palsy risk ⚠︎."
+    },
+    {
+     "claim": "This is the exact opposite of what its appearance in the option list implies.",
+     "dropped": "framing about the option list"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "White matter injury beside the lateral ventricle is periventricular leukomalacia.",
+     "from": "White matter injury beside the lateral ventricle is periventricular leukomalacia."
+    },
+    {
+     "claim": "Prematurity causes it.",
+     "from": "Prematurity causes it."
+    },
+    {
+     "claim": "The imaging pattern maps to the insult: periventricular white matter to prematurity, watershed or basal ganglia to hypoxic-ischemic injury, a vascular territory to perinatal stroke, calcifications to congenital infection.",
+     "from": "The imaging pattern maps to the insult: periventricular white matter to prematurity, watershed or basal ganglia to hypoxic-ischemic injury, a vascular territory to perinatal stroke, calcifications to congenital infection."
+    },
+    {
+     "claim": "Distribution names the subtype.",
+     "from": "Distribution names the subtype."
+    },
+    {
+     "claim": "Both legs is spastic diplegia, the commonest.",
+     "from": "Both legs is spastic diplegia, the commonest."
+    },
+    {
+     "claim": "One side is spastic hemiplegia, and it should match a unilateral lesion.",
+     "from": "One side is spastic hemiplegia, and it should match a unilateral lesion."
+    },
+    {
+     "claim": "Hand preference before age 1 is abnormal, and it is often the earliest sign a parent reports.",
+     "from": "Hand preference before age 1 is abnormal, and it is often the earliest sign a parent reports."
+    },
+    {
+     "claim": "Cerebral palsy is nonprogressive.",
+     "from": "Cerebral palsy is nonprogressive."
+    },
+    {
+     "claim": "Losing an acquired milestone is a different disease and reopens the workup (flagged).",
+     "from": "Losing an acquired milestone is a different disease and reopens the workup (flagged)."
+    },
+    {
+     "claim": "Infants with cerebral palsy may begin hypotonic and become spastic later, so normal early tone never excludes it.",
+     "from": "Infants with cerebral palsy may begin hypotonic and become spastic later, so normal early tone never excludes it."
+    },
+    {
+     "claim": "Magnesium sulfate given before preterm birth is neuroprotective and reduces cerebral palsy risk (flagged).",
+     "from": "Magnesium sulfate given before preterm birth is neuroprotective and reduces cerebral palsy risk (flagged)."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "Verified: Part II <b>Prematurity Follow-Up and Corrected Age</b> owns periventricular leukomalacia and intraventricular hemorrhage as prematurity outcomes and the corrected-age arithmetic this brief leans on; Part II <b>Congenital CMV and the TORCH Discriminations</b> owns the calcification pattern and the global-deficit picture that the toxoplasmosis distractor belongs to; Part II <b>Tethered Cord and Closed Spinal Dysraphism</b> owns the upper-versus-lower motor neuron examination that separates a brain lesion from a spinal one. Part I <b>Tics in a School-Age Child</b> owns Tourette syndrome, and Part I <b>Growth &amp; Developmental Milestones</b> owns the regression red flags. Store the discriminator as a question: <i>what does the imaging actually describe, and are the deficits one-sided or global?</i> Part I <b>Hypotonia in an Infant</b> owns the floppy infant before any spasticity appears: is the problem in the brain or the motor unit? Part II <b>Angelman Syndrome and Its Genetic Look-Alikes</b> separates Rett syndrome from Angelman syndrome. Ask: did the child lose skills, or never gain them?",
+   "with": "Part II <b>Prematurity Follow-Up and Corrected Age</b> covers periventricular leukomalacia and intraventricular hemorrhage as prematurity outcomes. It also covers the corrected-age arithmetic this brief relies on. Part II <b>Congenital CMV and the TORCH Discriminations</b> covers the calcification pattern and the global-deficit picture that the toxoplasmosis distractor belongs to. Part II <b>Tethered Cord and Closed Spinal Dysraphism</b> covers the upper-versus-lower motor neuron examination that separates a brain lesion from a spinal one. Part I <b>Tics in a School-Age Child</b> covers Tourette syndrome, and Part I <b>Growth &amp; Developmental Milestones</b> covers the regression red flags. Ask: <i>what does the imaging actually describe, and are the deficits one-sided or global?</i> Part I <b>Hypotonia in an Infant</b> covers the floppy infant before any spasticity appears. Ask: is the problem in the brain or the motor unit? Part II <b>Angelman Syndrome and Its Genetic Look-Alikes</b> separates Rett syndrome from Angelman syndrome. Ask: did the child lose skills, or never gain them?",
+   "note": "round 2 voice: Pairs with; Verified, owns and store-the-discriminator workflow text converted",
+   "claims": [
+    {
+     "claim": "Prematurity Follow-Up and Corrected Age owns periventricular leukomalacia and intraventricular hemorrhage as prematurity outcomes.",
+     "to": "Part II Prematurity Follow-Up and Corrected Age covers periventricular leukomalacia and intraventricular hemorrhage as prematurity outcomes."
+    },
+    {
+     "claim": "It owns the corrected-age arithmetic this brief leans on.",
+     "to": "It also covers the corrected-age arithmetic this brief relies on."
+    },
+    {
+     "claim": "Congenital CMV and the TORCH Discriminations owns the calcification pattern and the global-deficit picture that the toxoplasmosis distractor belongs to.",
+     "to": "Part II Congenital CMV and the TORCH Discriminations covers the calcification pattern and the global-deficit picture that the toxoplasmosis distractor belongs to."
+    },
+    {
+     "claim": "Tethered Cord and Closed Spinal Dysraphism owns the upper-versus-lower motor neuron examination that separates a brain lesion from a spinal one.",
+     "to": "Part II Tethered Cord and Closed Spinal Dysraphism covers the upper-versus-lower motor neuron examination that separates a brain lesion from a spinal one."
+    },
+    {
+     "claim": "Tics in a School-Age Child owns Tourette syndrome.",
+     "to": "Part I Tics in a School-Age Child covers Tourette syndrome, and Part I Growth & Developmental Milestones covers the regression red flags."
+    },
+    {
+     "claim": "Growth & Developmental Milestones owns the regression red flags.",
+     "to": "Part I Tics in a School-Age Child covers Tourette syndrome, and Part I Growth & Developmental Milestones covers the regression red flags."
+    },
+    {
+     "claim": "Discriminator: what does the imaging actually describe, and are the deficits one-sided or global?",
+     "to": "Ask: what does the imaging actually describe, and are the deficits one-sided or global?"
+    },
+    {
+     "claim": "Hypotonia in an Infant owns the floppy infant before any spasticity appears.",
+     "to": "Part I Hypotonia in an Infant covers the floppy infant before any spasticity appears."
+    },
+    {
+     "claim": "Its question is whether the problem is in the brain or the motor unit.",
+     "to": "Ask: is the problem in the brain or the motor unit?"
+    },
+    {
+     "claim": "Angelman Syndrome and Its Genetic Look-Alikes separates Rett syndrome from Angelman syndrome.",
+     "to": "Part II Angelman Syndrome and Its Genetic Look-Alikes separates Rett syndrome from Angelman syndrome."
+    },
+    {
+     "claim": "Ask: did the child lose skills, or never gain them?",
+     "to": "Ask: did the child lose skills, or never gain them?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Prematurity Follow-Up and Corrected Age owns periventricular leukomalacia and intraventricular hemorrhage as prematurity outcomes.",
+     "from": "Prematurity Follow-Up and Corrected Age owns periventricular leukomalacia and intraventricular hemorrhage as prematurity outcomes."
+    },
+    {
+     "claim": "It owns the corrected-age arithmetic this brief leans on.",
+     "from": "It owns the corrected-age arithmetic this brief leans on."
+    },
+    {
+     "claim": "Congenital CMV and the TORCH Discriminations owns the calcification pattern and the global-deficit picture that the toxoplasmosis distractor belongs to.",
+     "from": "Congenital CMV and the TORCH Discriminations owns the calcification pattern and the global-deficit picture that the toxoplasmosis distractor belongs to."
+    },
+    {
+     "claim": "Tethered Cord and Closed Spinal Dysraphism owns the upper-versus-lower motor neuron examination that separates a brain lesion from a spinal one.",
+     "from": "Tethered Cord and Closed Spinal Dysraphism owns the upper-versus-lower motor neuron examination that separates a brain lesion from a spinal one."
+    },
+    {
+     "claim": "Tics in a School-Age Child owns Tourette syndrome.",
+     "from": "Tics in a School-Age Child owns Tourette syndrome."
+    },
+    {
+     "claim": "Growth & Developmental Milestones owns the regression red flags.",
+     "from": "Growth & Developmental Milestones owns the regression red flags."
+    },
+    {
+     "claim": "Discriminator: what does the imaging actually describe, and are the deficits one-sided or global?",
+     "from": "Discriminator: what does the imaging actually describe, and are the deficits one-sided or global?"
+    },
+    {
+     "claim": "Hypotonia in an Infant owns the floppy infant before any spasticity appears.",
+     "from": "Hypotonia in an Infant owns the floppy infant before any spasticity appears."
+    },
+    {
+     "claim": "Its question is whether the problem is in the brain or the motor unit.",
+     "from": "Its question is whether the problem is in the brain or the motor unit."
+    },
+    {
+     "claim": "Angelman Syndrome and Its Genetic Look-Alikes separates Rett syndrome from Angelman syndrome.",
+     "from": "Angelman Syndrome and Its Genetic Look-Alikes separates Rett syndrome from Angelman syndrome."
+    },
+    {
+     "claim": "Ask: did the child lose skills, or never gain them?",
+     "from": "Ask: did the child lose skills, or never gain them?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "An exposure in the history <b>suggests</b>; a described imaging pattern <b>decides</b>. When a stem supplies both, read the imaging sentence first — the exposure was written to build a story, and the pattern is the only line capable of ending it.",
+   "with": "An exposure in the history suggests a cause, but a described imaging pattern decides it. When a stem gives both, read the imaging first.",
+   "note": "round 2 voice: rule; slogan and em dash removed, emphasis bold removed",
+   "reworded_bold": [
+    "suggests",
+    "decides"
+   ],
+   "claims": [
+    {
+     "claim": "An exposure in the history suggests.",
+     "to": "An exposure in the history suggests a cause, but a described imaging pattern decides it."
+    },
+    {
+     "claim": "A described imaging pattern decides.",
+     "to": "An exposure in the history suggests a cause, but a described imaging pattern decides it."
+    },
+    {
+     "claim": "When a stem supplies both, read the imaging sentence first.",
+     "to": "When a stem gives both, read the imaging first."
+    },
+    {
+     "claim": "The exposure was written to build a story, and only the pattern can end it.",
+     "dropped": "rhetorical framing about how the stem was written; the decision rule is kept"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "An exposure in the history suggests.",
+     "from": "An exposure in the history suggests."
+    },
+    {
+     "claim": "A described imaging pattern decides.",
+     "from": "A described imaging pattern decides."
+    },
+    {
+     "claim": "When a stem supplies both, read the imaging sentence first.",
+     "from": "When a stem supplies both, read the imaging sentence first."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "reflexes are <b>decreased</b> — the opposite of this examination",
+   "with": "reflexes are <b>decreased</b>; this examination shows the opposite",
+   "note": "round 2 voice: trap line; em dash removed",
+   "claims": [
+    {
+     "claim": "Neural tube defects give decreased lower-extremity tone and reflexes, the opposite of this examination.",
+     "to": "Folate deficiency causes neural tube defects, in which lower-extremity tone and reflexes are decreased; this examination shows the opposite"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Neural tube defects give decreased lower-extremity tone and reflexes, the opposite of this examination.",
+     "from": "Neural tube defects give decreased lower-extremity tone and reflexes, the opposite of this examination."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "abrs-complications",
+   "find": "<p>The stem builds acute bacterial rhinosinusitis (<b>double worsening</b>), then layers on <b>intracranial extension flags</b>: focal headache, <b>early-morning vomiting</b> (ICP rises in recumbency), and <b>drowsiness</b>. That converts an oral-antibiotic problem into an <b>urgent imaging</b> problem.</p>\n<p><b>\"Neurologic examination is nonfocal\" does not exclude a brain abscess</b> — frontal lobe abscesses are neurologically silent until late. And when raised ICP is suspected, <b>image before LP</b>.</p>",
+   "with": "<p>A <b>double worsening</b> course indicates acute bacterial rhinosinusitis. Focal headache, <b>early-morning vomiting</b> and <b>drowsiness</b> are <b>intracranial extension flags</b>. Early-morning vomiting occurs because <b>ICP</b> (intracranial pressure) rises in recumbency. These flags change an oral-antibiotic problem into an <b>urgent imaging</b> problem.</p>\n<p><b>\"Neurologic examination is nonfocal\" does not exclude a brain abscess</b>. Frontal lobe abscesses are neurologically silent until late. When raised ICP is suspected, <b>image before LP</b> (lumbar puncture).</p>",
+   "note": "round 2 voice: .dp; stem framing and em dash removed",
+   "claims": [
+    {
+     "claim": "The presentation is acute bacterial rhinosinusitis with double worsening.",
+     "to": "A double worsening course indicates acute bacterial rhinosinusitis."
+    },
+    {
+     "claim": "Focal headache, early-morning vomiting and drowsiness are intracranial extension flags.",
+     "to": "Focal headache, early-morning vomiting and drowsiness are intracranial extension flags."
+    },
+    {
+     "claim": "ICP rises in recumbency, causing early-morning vomiting.",
+     "to": "Early-morning vomiting occurs because ICP (intracranial pressure) rises in recumbency."
+    },
+    {
+     "claim": "These flags convert an oral-antibiotic problem into an urgent imaging problem.",
+     "to": "These flags change an oral-antibiotic problem into an urgent imaging problem."
+    },
+    {
+     "claim": "A nonfocal neurologic examination does not exclude a brain abscess.",
+     "to": "\"Neurologic examination is nonfocal\" does not exclude a brain abscess."
+    },
+    {
+     "claim": "Frontal lobe abscesses are neurologically silent until late.",
+     "to": "Frontal lobe abscesses are neurologically silent until late."
+    },
+    {
+     "claim": "When raised ICP is suspected, image before LP.",
+     "to": "When raised ICP is suspected, image before LP (lumbar puncture)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The presentation is acute bacterial rhinosinusitis with double worsening.",
+     "from": "The presentation is acute bacterial rhinosinusitis with double worsening."
+    },
+    {
+     "claim": "Focal headache, early-morning vomiting and drowsiness are intracranial extension flags.",
+     "from": "Focal headache, early-morning vomiting and drowsiness are intracranial extension flags."
+    },
+    {
+     "claim": "ICP rises in recumbency, causing early-morning vomiting.",
+     "from": "ICP rises in recumbency, causing early-morning vomiting."
+    },
+    {
+     "claim": "These flags convert an oral-antibiotic problem into an urgent imaging problem.",
+     "from": "These flags convert an oral-antibiotic problem into an urgent imaging problem."
+    },
+    {
+     "claim": "A nonfocal neurologic examination does not exclude a brain abscess.",
+     "from": "A nonfocal neurologic examination does not exclude a brain abscess."
+    },
+    {
+     "claim": "Frontal lobe abscesses are neurologically silent until late.",
+     "from": "Frontal lobe abscesses are neurologically silent until late."
+    },
+    {
+     "claim": "When raised ICP is suspected, image before LP.",
+     "from": "When raised ICP is suspected, image before LP."
+    },
+    {
+     "claim": "ICP stands for intracranial pressure",
+     "from": "expansion"
+    },
+    {
+     "claim": "LP stands for lumbar puncture",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "abrs-complications",
+   "find": "A normal neurologic exam is a <b>low-sensitivity test</b> for intracranial pathology. When the symptom pattern is <b>positional and progressive</b> — morning headache, morning vomiting, declining alertness — symptoms of raised ICP outrank a reassuring exam.",
+   "with": "A normal neurologic exam is a <b>low-sensitivity test</b> for intracranial pathology. Morning headache, morning vomiting and declining alertness form a <b>positional and progressive</b> pattern. With that pattern, symptoms of raised <b>ICP</b> (intracranial pressure) outrank a reassuring exam.",
+   "note": "round 2 voice: rule; em dashes removed",
+   "claims": [
+    {
+     "claim": "A normal neurologic exam is a low-sensitivity test for intracranial pathology.",
+     "to": "A normal neurologic exam is a low-sensitivity test for intracranial pathology."
+    },
+    {
+     "claim": "Morning headache, morning vomiting and declining alertness are a positional and progressive symptom pattern.",
+     "to": "Morning headache, morning vomiting and declining alertness form a positional and progressive pattern."
+    },
+    {
+     "claim": "When the pattern is positional and progressive, symptoms of raised ICP outrank a reassuring exam.",
+     "to": "With that pattern, symptoms of raised ICP (intracranial pressure) outrank a reassuring exam."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A normal neurologic exam is a low-sensitivity test for intracranial pathology.",
+     "from": "A normal neurologic exam is a low-sensitivity test for intracranial pathology."
+    },
+    {
+     "claim": "Morning headache, morning vomiting and declining alertness are a positional and progressive symptom pattern.",
+     "from": "Morning headache, morning vomiting and declining alertness are a positional and progressive symptom pattern."
+    },
+    {
+     "claim": "When the pattern is positional and progressive, symptoms of raised ICP outrank a reassuring exam.",
+     "from": "When the pattern is positional and progressive, symptoms of raised ICP outrank a reassuring exam."
+    },
+    {
+     "claim": "ICP stands for intracranial pressure",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "<p>A child with a VP shunt presents with <b>vomiting, irritability, lethargy, and hypertension</b> &mdash; four signs of increased intracranial pressure. The diagnostic reflex for raised ICP is neuroimaging, and the specific concern is <b>shunt malfunction</b> causing recurrent obstructive hydrocephalus. <b>CT of the head</b> is the first step &mdash; it shows whether the ventricles have re-dilated.</p>\n<p>The miss: choosing LP. <b>LP is contraindicated in obstructive hydrocephalus</b> &mdash; the pressure gradient between the ventricles and the lumbar subarachnoid space can cause transtentorial herniation. In a shunt patient, CSF is obtained by <b>tapping the shunt reservoir</b>, never by lumbar puncture.</p>",
+   "with": "<p>A child with a <b>VP</b> (ventriculoperitoneal) shunt presents with <b>vomiting, irritability, lethargy, and hypertension</b>, four signs of increased intracranial pressure. The standard response to raised <b>ICP</b> (intracranial pressure) is neuroimaging. The specific concern is <b>shunt malfunction</b> causing recurrent obstructive hydrocephalus. <b>CT of the head</b> is the first step because it shows whether the ventricles have re-dilated.</p>\n<p><b>LP is contraindicated in obstructive hydrocephalus</b>. The pressure gradient between the ventricles and the lumbar subarachnoid space can cause transtentorial herniation. In a shunt patient, <b>CSF</b> (cerebrospinal fluid) is obtained by <b>tapping the shunt reservoir</b>, never by lumbar puncture.</p>",
+   "note": "round 2 voice: .dp; em dashes and \"The miss\" framing removed",
+   "claims": [
+    {
+     "claim": "A child with a VP shunt presents with vomiting, irritability, lethargy, and hypertension.",
+     "to": "A child with a VP (ventriculoperitoneal) shunt presents with vomiting, irritability, lethargy, and hypertension, four signs of increased intracranial pressure."
+    },
+    {
+     "claim": "These are four signs of increased intracranial pressure.",
+     "to": "A child with a VP (ventriculoperitoneal) shunt presents with vomiting, irritability, lethargy, and hypertension, four signs of increased intracranial pressure."
+    },
+    {
+     "claim": "The diagnostic reflex for raised ICP is neuroimaging.",
+     "to": "The standard response to raised ICP (intracranial pressure) is neuroimaging."
+    },
+    {
+     "claim": "The specific concern is shunt malfunction causing recurrent obstructive hydrocephalus.",
+     "to": "The specific concern is shunt malfunction causing recurrent obstructive hydrocephalus."
+    },
+    {
+     "claim": "CT of the head is the first step.",
+     "to": "CT of the head is the first step because it shows whether the ventricles have re-dilated."
+    },
+    {
+     "claim": "CT shows whether the ventricles have re-dilated.",
+     "to": "CT of the head is the first step because it shows whether the ventricles have re-dilated."
+    },
+    {
+     "claim": "The miss is choosing LP.",
+     "to": "LP is contraindicated in obstructive hydrocephalus."
+    },
+    {
+     "claim": "LP is contraindicated in obstructive hydrocephalus.",
+     "to": "LP is contraindicated in obstructive hydrocephalus."
+    },
+    {
+     "claim": "The pressure gradient between the ventricles and the lumbar subarachnoid space can cause transtentorial herniation.",
+     "to": "The pressure gradient between the ventricles and the lumbar subarachnoid space can cause transtentorial herniation."
+    },
+    {
+     "claim": "In a shunt patient, CSF is obtained by tapping the shunt reservoir, never by lumbar puncture.",
+     "to": "In a shunt patient, CSF (cerebrospinal fluid) is obtained by tapping the shunt reservoir, never by lumbar puncture."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A child with a VP shunt presents with vomiting, irritability, lethargy, and hypertension.",
+     "from": "A child with a VP shunt presents with vomiting, irritability, lethargy, and hypertension."
+    },
+    {
+     "claim": "These are four signs of increased intracranial pressure.",
+     "from": "These are four signs of increased intracranial pressure."
+    },
+    {
+     "claim": "The diagnostic reflex for raised ICP is neuroimaging.",
+     "from": "The diagnostic reflex for raised ICP is neuroimaging."
+    },
+    {
+     "claim": "The specific concern is shunt malfunction causing recurrent obstructive hydrocephalus.",
+     "from": "The specific concern is shunt malfunction causing recurrent obstructive hydrocephalus."
+    },
+    {
+     "claim": "CT of the head is the first step.",
+     "from": "CT of the head is the first step."
+    },
+    {
+     "claim": "CT shows whether the ventricles have re-dilated.",
+     "from": "CT shows whether the ventricles have re-dilated."
+    },
+    {
+     "claim": "The miss is choosing LP.",
+     "from": "The miss is choosing LP."
+    },
+    {
+     "claim": "LP is contraindicated in obstructive hydrocephalus.",
+     "from": "LP is contraindicated in obstructive hydrocephalus."
+    },
+    {
+     "claim": "The pressure gradient between the ventricles and the lumbar subarachnoid space can cause transtentorial herniation.",
+     "from": "The pressure gradient between the ventricles and the lumbar subarachnoid space can cause transtentorial herniation."
+    },
+    {
+     "claim": "In a shunt patient, CSF is obtained by tapping the shunt reservoir, never by lumbar puncture.",
+     "from": "In a shunt patient, CSF is obtained by tapping the shunt reservoir, never by lumbar puncture."
+    },
+    {
+     "claim": "VP stands for ventriculoperitoneal",
+     "from": "expansion"
+    },
+    {
+     "claim": "ICP stands for intracranial pressure",
+     "from": "expansion"
+    },
+    {
+     "claim": "CSF stands for cerebrospinal fluid",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "The shunt series is three plain films (skull, chest, abdomen) that trace the catheter from ventricle to peritoneum &mdash; looking for fracture, disconnection, or migration &middot; <b>Slit ventricle syndrome</b> &mdash; chronic overdrainage collapses the ventricles, causing intermittent obstruction and headache with small or normal ventricles on CT &middot; Shunt infection risk is highest in the first 6 months after placement or revision &middot; The open fontanelle in infants acts as a pressure pop-off valve &mdash; papilledema and Cushing response may be absent; instead look for bulging fontanelle and increasing head circumference",
+   "with": "The shunt series is three plain films (skull, chest, abdomen) that trace the catheter from ventricle to peritoneum, looking for fracture, disconnection, or migration &middot; <b>Slit ventricle syndrome</b> &mdash; chronic overdrainage collapses the ventricles, causing intermittent obstruction and headache with small or normal ventricles on CT &middot; Shunt infection risk is highest in the first 6 months after placement or revision &middot; The open fontanelle in infants acts as a pressure pop-off valve; papilledema and Cushing response may be absent. Instead, look for bulging fontanelle and increasing head circumference",
+   "note": "round 2 voice: pearls; prose em dashes in two rows replaced, structural row kept",
+   "claims": [
+    {
+     "claim": "The shunt series is three plain films (skull, chest, abdomen) that trace the catheter from ventricle to peritoneum.",
+     "to": "The shunt series is three plain films (skull, chest, abdomen) that trace the catheter from ventricle to peritoneum, looking for fracture, disconnection, or migration"
+    },
+    {
+     "claim": "The shunt series looks for fracture, disconnection, or migration.",
+     "to": "The shunt series is three plain films (skull, chest, abdomen) that trace the catheter from ventricle to peritoneum, looking for fracture, disconnection, or migration"
+    },
+    {
+     "claim": "Slit ventricle syndrome: chronic overdrainage collapses the ventricles, causing intermittent obstruction and headache with small or normal ventricles on CT.",
+     "to": "chronic overdrainage collapses the ventricles, causing intermittent obstruction and headache with small or normal ventricles on CT"
+    },
+    {
+     "claim": "Shunt infection risk is highest in the first 6 months after placement or revision.",
+     "to": "Shunt infection risk is highest in the first 6 months after placement or revision"
+    },
+    {
+     "claim": "The open fontanelle in infants acts as a pressure pop-off valve.",
+     "to": "The open fontanelle in infants acts as a pressure pop-off valve; papilledema and Cushing response may be absent."
+    },
+    {
+     "claim": "Papilledema and Cushing response may be absent.",
+     "to": "The open fontanelle in infants acts as a pressure pop-off valve; papilledema and Cushing response may be absent."
+    },
+    {
+     "claim": "Look instead for bulging fontanelle and increasing head circumference.",
+     "to": "Instead, look for bulging fontanelle and increasing head circumference"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The shunt series is three plain films (skull, chest, abdomen) that trace the catheter from ventricle to peritoneum.",
+     "from": "The shunt series is three plain films (skull, chest, abdomen) that trace the catheter from ventricle to peritoneum."
+    },
+    {
+     "claim": "The shunt series looks for fracture, disconnection, or migration.",
+     "from": "The shunt series looks for fracture, disconnection, or migration."
+    },
+    {
+     "claim": "Slit ventricle syndrome: chronic overdrainage collapses the ventricles, causing intermittent obstruction and headache with small or normal ventricles on CT.",
+     "from": "Slit ventricle syndrome: chronic overdrainage collapses the ventricles, causing intermittent obstruction and headache with small or normal ventricles on CT."
+    },
+    {
+     "claim": "Shunt infection risk is highest in the first 6 months after placement or revision.",
+     "from": "Shunt infection risk is highest in the first 6 months after placement or revision."
+    },
+    {
+     "claim": "The open fontanelle in infants acts as a pressure pop-off valve.",
+     "from": "The open fontanelle in infants acts as a pressure pop-off valve."
+    },
+    {
+     "claim": "Papilledema and Cushing response may be absent.",
+     "from": "Papilledema and Cushing response may be absent."
+    },
+    {
+     "claim": "Look instead for bulging fontanelle and increasing head circumference.",
+     "from": "Look instead for bulging fontanelle and increasing head circumference."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "owns craniosynostosis",
+   "with": "covers craniosynostosis",
+   "note": "round 2 voice: Pairs with; owns -> covers",
+   "claims": [
+    {
+     "claim": "Congenital Muscular Torticollis and Plagiocephaly owns craniosynostosis.",
+     "to": "Congenital Muscular Torticollis and Plagiocephaly covers craniosynostosis"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Congenital Muscular Torticollis and Plagiocephaly owns craniosynostosis.",
+     "from": "Congenital Muscular Torticollis and Plagiocephaly owns craniosynostosis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "A VP shunt changes the entire workup for raised intracranial pressure &mdash; imaging replaces LP as the first move, the shunt reservoir replaces the lumbar space as the CSF source, and the catheter itself becomes a suspect that must be traced on plain films.",
+   "with": "A <b>VP</b> (ventriculoperitoneal) shunt changes the entire workup for raised intracranial pressure. Imaging replaces <b>LP</b> (lumbar puncture) as the first step. The shunt reservoir replaces the lumbar space as the <b>CSF</b> (cerebrospinal fluid) source. The catheter itself is a possible cause and must be traced on plain films.",
+   "note": "round 2 voice: rule; em dash and personification removed",
+   "claims": [
+    {
+     "claim": "A VP shunt changes the entire workup for raised intracranial pressure.",
+     "to": "A VP (ventriculoperitoneal) shunt changes the entire workup for raised intracranial pressure."
+    },
+    {
+     "claim": "Imaging replaces LP as the first move.",
+     "to": "Imaging replaces LP (lumbar puncture) as the first step."
+    },
+    {
+     "claim": "The shunt reservoir replaces the lumbar space as the CSF source.",
+     "to": "The shunt reservoir replaces the lumbar space as the CSF (cerebrospinal fluid) source."
+    },
+    {
+     "claim": "The catheter itself becomes a suspect that must be traced on plain films.",
+     "to": "The catheter itself is a possible cause and must be traced on plain films."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A VP shunt changes the entire workup for raised intracranial pressure.",
+     "from": "A VP shunt changes the entire workup for raised intracranial pressure."
+    },
+    {
+     "claim": "Imaging replaces LP as the first move.",
+     "from": "Imaging replaces LP as the first move."
+    },
+    {
+     "claim": "The shunt reservoir replaces the lumbar space as the CSF source.",
+     "from": "The shunt reservoir replaces the lumbar space as the CSF source."
+    },
+    {
+     "claim": "The catheter itself becomes a suspect that must be traced on plain films.",
+     "from": "The catheter itself becomes a suspect that must be traced on plain films."
+    },
+    {
+     "claim": "VP stands for ventriculoperitoneal",
+     "from": "expansion"
+    },
+    {
+     "claim": "LP stands for lumbar puncture",
+     "from": "expansion"
+    },
+    {
+     "claim": "CSF stands for cerebrospinal fluid",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "LP tempts as the standard workup for altered mental status, but it is contraindicated in obstructive hydrocephalus &mdash; herniation risk.</span></div>\n<div class=\"trapline\"><span class=\"pill p-seq\">Sequencing trap</span><span class=\"trapwhy\">Empiric antibiotics tempt when infection is the concern, but the patient is afebrile, and antibiotics should follow culture (shunt tap), not precede it.</span></div>\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">IV acetazolamide decreases CSF production but treats idiopathic intracranial hypertension, not obstructive hydrocephalus from shunt failure.</span></div>\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">LP diagnoses meningitis, but this infant is afebrile with a subacute course, and opening pressure does not diagnose hydrocephalus.</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Reassurance fits a large head only when it grows along its own percentile with normal development; this head is crossing percentiles in a delayed infant.</span></div>\n<div class=\"trapline\"><span class=\"pill p-mirror\">Mirror twin</span><span class=\"trapwhy\">A skull film looks for craniosynostosis, which gives an abnormal head shape and ridged sutures, not a full fontanelle with split sutures.",
+   "with": "Lumbar puncture: It is the standard workup for altered mental status, but it is contraindicated in obstructive hydrocephalus because of herniation risk.</span></div>\n<div class=\"trapline\"><span class=\"pill p-seq\">Sequencing trap</span><span class=\"trapwhy\">Empiric antibiotics: They are considered when infection is the concern. This patient is afebrile, and antibiotics should follow culture (shunt tap), not precede it.</span></div>\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Intravenous acetazolamide: It decreases <b>CSF</b> (cerebrospinal fluid) production but treats idiopathic intracranial hypertension, not obstructive hydrocephalus from shunt failure.</span></div>\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Lumbar puncture: It diagnoses meningitis, but this infant is afebrile with a subacute course, and opening pressure does not diagnose hydrocephalus.</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Reassurance: It fits a large head only when it grows along its own percentile with normal development. This head is crossing percentiles in a delayed infant.</span></div>\n<div class=\"trapline\"><span class=\"pill p-mirror\">Mirror twin</span><span class=\"trapwhy\">Skull film: It looks for craniosynostosis, which gives an abnormal head shape and ridged sutures, not a full fontanelle with split sutures.",
+   "note": "round 2 voice: trap lines as \"Option: why\"; em dash removed; hypothyroidism line left (option not nameable from the line)",
+   "claims": [
+    {
+     "claim": "LP tempts as the standard workup for altered mental status.",
+     "to": "Lumbar puncture: It is the standard workup for altered mental status, but it is contraindicated in obstructive hydrocephalus because of herniation risk."
+    },
+    {
+     "claim": "LP is contraindicated in obstructive hydrocephalus because of herniation risk.",
+     "to": "Lumbar puncture: It is the standard workup for altered mental status, but it is contraindicated in obstructive hydrocephalus because of herniation risk."
+    },
+    {
+     "claim": "Empiric antibiotics tempt when infection is the concern.",
+     "to": "Empiric antibiotics: They are considered when infection is the concern."
+    },
+    {
+     "claim": "The patient is afebrile.",
+     "to": "This patient is afebrile, and antibiotics should follow culture (shunt tap), not precede it."
+    },
+    {
+     "claim": "Antibiotics should follow culture (shunt tap), not precede it.",
+     "to": "This patient is afebrile, and antibiotics should follow culture (shunt tap), not precede it."
+    },
+    {
+     "claim": "IV acetazolamide decreases CSF production.",
+     "to": "Intravenous acetazolamide: It decreases CSF (cerebrospinal fluid) production but treats idiopathic intracranial hypertension, not obstructive hydrocephalus from shunt failure."
+    },
+    {
+     "claim": "IV acetazolamide treats idiopathic intracranial hypertension, not obstructive hydrocephalus from shunt failure.",
+     "to": "Intravenous acetazolamide: It decreases CSF (cerebrospinal fluid) production but treats idiopathic intracranial hypertension, not obstructive hydrocephalus from shunt failure."
+    },
+    {
+     "claim": "LP diagnoses meningitis.",
+     "to": "Lumbar puncture: It diagnoses meningitis, but this infant is afebrile with a subacute course, and opening pressure does not diagnose hydrocephalus."
+    },
+    {
+     "claim": "This infant is afebrile with a subacute course.",
+     "to": "Lumbar puncture: It diagnoses meningitis, but this infant is afebrile with a subacute course, and opening pressure does not diagnose hydrocephalus."
+    },
+    {
+     "claim": "Opening pressure does not diagnose hydrocephalus.",
+     "to": "Lumbar puncture: It diagnoses meningitis, but this infant is afebrile with a subacute course, and opening pressure does not diagnose hydrocephalus."
+    },
+    {
+     "claim": "Reassurance fits a large head only when it grows along its own percentile with normal development.",
+     "to": "Reassurance: It fits a large head only when it grows along its own percentile with normal development."
+    },
+    {
+     "claim": "This head is crossing percentiles in a delayed infant.",
+     "to": "This head is crossing percentiles in a delayed infant."
+    },
+    {
+     "claim": "A skull film looks for craniosynostosis.",
+     "to": "Skull film: It looks for craniosynostosis, which gives an abnormal head shape and ridged sutures, not a full fontanelle with split sutures."
+    },
+    {
+     "claim": "Craniosynostosis gives an abnormal head shape and ridged sutures, not a full fontanelle with split sutures.",
+     "to": "Skull film: It looks for craniosynostosis, which gives an abnormal head shape and ridged sutures, not a full fontanelle with split sutures."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "LP tempts as the standard workup for altered mental status.",
+     "from": "LP tempts as the standard workup for altered mental status."
+    },
+    {
+     "claim": "LP is contraindicated in obstructive hydrocephalus because of herniation risk.",
+     "from": "LP is contraindicated in obstructive hydrocephalus because of herniation risk."
+    },
+    {
+     "claim": "Empiric antibiotics tempt when infection is the concern.",
+     "from": "Empiric antibiotics tempt when infection is the concern."
+    },
+    {
+     "claim": "The patient is afebrile.",
+     "from": "The patient is afebrile."
+    },
+    {
+     "claim": "Antibiotics should follow culture (shunt tap), not precede it.",
+     "from": "Antibiotics should follow culture (shunt tap), not precede it."
+    },
+    {
+     "claim": "IV acetazolamide decreases CSF production.",
+     "from": "IV acetazolamide decreases CSF production."
+    },
+    {
+     "claim": "IV acetazolamide treats idiopathic intracranial hypertension, not obstructive hydrocephalus from shunt failure.",
+     "from": "IV acetazolamide treats idiopathic intracranial hypertension, not obstructive hydrocephalus from shunt failure."
+    },
+    {
+     "claim": "LP diagnoses meningitis.",
+     "from": "LP diagnoses meningitis."
+    },
+    {
+     "claim": "This infant is afebrile with a subacute course.",
+     "from": "This infant is afebrile with a subacute course."
+    },
+    {
+     "claim": "Opening pressure does not diagnose hydrocephalus.",
+     "from": "Opening pressure does not diagnose hydrocephalus."
+    },
+    {
+     "claim": "Reassurance fits a large head only when it grows along its own percentile with normal development.",
+     "from": "Reassurance fits a large head only when it grows along its own percentile with normal development."
+    },
+    {
+     "claim": "This head is crossing percentiles in a delayed infant.",
+     "from": "This head is crossing percentiles in a delayed infant."
+    },
+    {
+     "claim": "A skull film looks for craniosynostosis.",
+     "from": "A skull film looks for craniosynostosis."
+    },
+    {
+     "claim": "Craniosynostosis gives an abnormal head shape and ridged sutures, not a full fontanelle with split sutures.",
+     "from": "Craniosynostosis gives an abnormal head shape and ridged sutures, not a full fontanelle with split sutures."
+    },
+    {
+     "claim": "CSF stands for cerebrospinal fluid",
+     "from": "expansion"
+    }
+   ]
+  }
+ ]
+}

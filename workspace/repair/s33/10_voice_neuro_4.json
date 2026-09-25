@@ -1,0 +1,524 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "Part I <b>Hypotonia in an Infant</b> owns the methylation workup",
+   "with": "Part I <b>Hypotonia in an Infant</b> covers the methylation workup",
+   "note": "Pairs with: owns -> covers",
+   "claims": [
+    {
+     "claim": "Hypotonia in an Infant owns the methylation workup for Prader-Willi syndrome in a floppy infant.",
+     "to": "Part I Hypotonia in an Infant covers the methylation workup for Prader-Willi syndrome in a floppy infant."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hypotonia in an Infant covers the methylation workup for Prader-Willi syndrome in a floppy infant.",
+     "from": "Hypotonia in an Infant owns the methylation workup for Prader-Willi syndrome in a floppy infant."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "When the options name a genetic defect, identify the syndrome from the phenotype first.",
+   "with": "Identify the syndrome from the phenotype before choosing the genetic defect.",
+   "note": ".rule: remove framing about the options",
+   "claims": [
+    {
+     "claim": "When the options name a genetic defect, identify the syndrome from the phenotype first.",
+     "to": "Identify the syndrome from the phenotype before choosing the genetic defect."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Identify the syndrome from the phenotype before choosing the genetic defect.",
+     "from": "When the options name a genetic defect, identify the syndrome from the phenotype first."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "Chromosome 15 deletion, paternally inherited: same region, other parent. This is Prader-Willi syndrome, with hypotonic infancy, then hyperphagia, obesity and hypogonadism.",
+   "with": "Chromosome 15 deletion, paternally inherited: deletion of the same region from the paternal chromosome causes Prader-Willi syndrome, with hypotonic infancy, then hyperphagia, obesity and hypogonadism.",
+   "note": "trap: replace slogan fragment with plain sentence",
+   "claims": [
+    {
+     "claim": "A paternally inherited chromosome 15 deletion involves the same region from the other parent.",
+     "to": "Chromosome 15 deletion, paternally inherited: deletion of the same region from the paternal chromosome causes Prader-Willi syndrome, with hypotonic infancy, then hyperphagia, obesity and hypogonadism."
+    },
+    {
+     "claim": "It causes Prader-Willi syndrome.",
+     "to": "Chromosome 15 deletion, paternally inherited: deletion of the same region from the paternal chromosome causes Prader-Willi syndrome, with hypotonic infancy, then hyperphagia, obesity and hypogonadism."
+    },
+    {
+     "claim": "Prader-Willi syndrome has hypotonic infancy, then hyperphagia, obesity and hypogonadism.",
+     "to": "Chromosome 15 deletion, paternally inherited: deletion of the same region from the paternal chromosome causes Prader-Willi syndrome, with hypotonic infancy, then hyperphagia, obesity and hypogonadism."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A paternal deletion of the same region causes Prader-Willi syndrome.",
+     "from": "A paternally inherited chromosome 15 deletion involves the same region from the other parent."
+    },
+    {
+     "claim": "Prader-Willi syndrome has hypotonic infancy, then hyperphagia, obesity and hypogonadism.",
+     "from": "Prader-Willi syndrome has hypotonic infancy, then hyperphagia, obesity and hypogonadism."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "Mutation of MECP2: Rett syndrome also affects",
+   "with": "Mutation of <b>MECP2</b> (methyl-CpG binding protein 2): Rett syndrome also affects",
+   "note": "trap: expand MECP2 at first use in block",
+   "claims": [
+    {
+     "claim": "Mutation of MECP2 causes Rett syndrome, which also affects girls with microcephaly, seizures and repetitive hand movements.",
+     "to": "Mutation of MECP2 (methyl-CpG binding protein 2): Rett syndrome also affects girls with microcephaly, seizures and repetitive hand movements."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Mutation of MECP2 causes Rett syndrome, which also affects girls with microcephaly, seizures and repetitive hand movements.",
+     "from": "Mutation of MECP2 causes Rett syndrome, which also affects girls with microcephaly, seizures and repetitive hand movements."
+    },
+    {
+     "claim": "MECP2 stands for methyl-CpG binding protein 2.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-posterior-fossa",
+   "find": "<p>Every abnormal finding is on the <b>left</b> and every one is cerebellar: dysmetria reaching with the left hand, slow rapid alternating movements on the left, and a gait that <b>lists to the left</b>. Cerebellar output decussates twice, so the crossings cancel and cerebellar signs are <b>ipsilateral</b> — which eliminates the right middle cerebellar peduncle in one step.</p>\n<p>The pattern also names the part. <b>Limb</b> dysmetria is hemispheric, while a midline vermian lesion gives truncal and gait ataxia with spared limbs. He has both, so the mass is hemispheric and large enough to disturb midline structures — which fits the <b>left facial numbness</b>, since the trigeminal system serves the face ipsilaterally, and the <b>papilledema</b> from fourth-ventricular compression.</p>",
+   "with": "<p>Every abnormal finding is on the <b>left</b> and every one is cerebellar. He has dysmetria reaching with the left hand, slow rapid alternating movements on the left, and a gait that <b>lists to the left</b>. Cerebellar output decussates twice, so the crossings cancel and cerebellar signs are <b>ipsilateral</b>. This rules out the right middle cerebellar peduncle.</p>\n<p><b>Limb</b> dysmetria is hemispheric. A midline vermian lesion gives truncal and gait ataxia with spared limbs. He has both, so the mass is hemispheric and large enough to disturb midline structures. This fits the <b>left facial numbness</b>, because the trigeminal system serves the face ipsilaterally. It also fits the <b>papilledema</b> from fourth-ventricular compression.</p>",
+   "note": ".dp: remove em dashes, framing opener, split long sentences",
+   "claims": [
+    {
+     "claim": "Every abnormal finding is on the left and every one is cerebellar.",
+     "to": "Every abnormal finding is on the left and every one is cerebellar."
+    },
+    {
+     "claim": "The findings are dysmetria reaching with the left hand, slow rapid alternating movements on the left, and a gait that lists to the left.",
+     "to": "He has dysmetria reaching with the left hand, slow rapid alternating movements on the left, and a gait that lists to the left."
+    },
+    {
+     "claim": "Cerebellar output decussates twice, so the crossings cancel.",
+     "to": "Cerebellar output decussates twice, so the crossings cancel and cerebellar signs are ipsilateral."
+    },
+    {
+     "claim": "Cerebellar signs are ipsilateral.",
+     "to": "Cerebellar output decussates twice, so the crossings cancel and cerebellar signs are ipsilateral."
+    },
+    {
+     "claim": "Ipsilateral signs eliminate the right middle cerebellar peduncle.",
+     "to": "This rules out the right middle cerebellar peduncle."
+    },
+    {
+     "claim": "It does so in one step.",
+     "dropped": "rhetorical emphasis, no clinical content"
+    },
+    {
+     "claim": "The pattern also names the part.",
+     "dropped": "framing opener; the localization is stated in the next sentences"
+    },
+    {
+     "claim": "Limb dysmetria is hemispheric.",
+     "to": "Limb dysmetria is hemispheric."
+    },
+    {
+     "claim": "A midline vermian lesion gives truncal and gait ataxia with spared limbs.",
+     "to": "A midline vermian lesion gives truncal and gait ataxia with spared limbs."
+    },
+    {
+     "claim": "He has both, so the mass is hemispheric and large enough to disturb midline structures.",
+     "to": "He has both, so the mass is hemispheric and large enough to disturb midline structures."
+    },
+    {
+     "claim": "That fits the left facial numbness, since the trigeminal system serves the face ipsilaterally.",
+     "to": "This fits the left facial numbness, because the trigeminal system serves the face ipsilaterally."
+    },
+    {
+     "claim": "It fits the papilledema from fourth-ventricular compression.",
+     "to": "It also fits the papilledema from fourth-ventricular compression."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Every abnormal finding is on the left and every one is cerebellar.",
+     "from": "Every abnormal finding is on the left and every one is cerebellar."
+    },
+    {
+     "claim": "He has dysmetria reaching with the left hand, slow rapid alternating movements on the left, and a gait that lists to the left.",
+     "from": "The findings are dysmetria reaching with the left hand, slow rapid alternating movements on the left, and a gait that lists to the left."
+    },
+    {
+     "claim": "Cerebellar output decussates twice, so the crossings cancel.",
+     "from": "Cerebellar output decussates twice, so the crossings cancel."
+    },
+    {
+     "claim": "Cerebellar signs are ipsilateral.",
+     "from": "Cerebellar signs are ipsilateral."
+    },
+    {
+     "claim": "This rules out the right middle cerebellar peduncle.",
+     "from": "Ipsilateral signs eliminate the right middle cerebellar peduncle."
+    },
+    {
+     "claim": "Limb dysmetria is hemispheric.",
+     "from": "Limb dysmetria is hemispheric."
+    },
+    {
+     "claim": "A midline vermian lesion gives truncal and gait ataxia with spared limbs.",
+     "from": "A midline vermian lesion gives truncal and gait ataxia with spared limbs."
+    },
+    {
+     "claim": "He has both, so the mass is hemispheric and large enough to disturb midline structures.",
+     "from": "He has both, so the mass is hemispheric and large enough to disturb midline structures."
+    },
+    {
+     "claim": "This fits the left facial numbness, because the trigeminal system serves the face ipsilaterally.",
+     "from": "That fits the left facial numbness, since the trigeminal system serves the face ipsilaterally."
+    },
+    {
+     "claim": "It also fits the papilledema from fourth-ventricular compression.",
+     "from": "It fits the papilledema from fourth-ventricular compression."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-posterior-fossa",
+   "find": "Posterior fossa tumours are 54 to 70% of childhood brain tumours against only 15 to 20% in adults, so in a child ataxia with raised pressure is infratentorial until imaged.",
+   "with": "Posterior fossa tumours are 54 to 70% of childhood brain tumours but only 15 to 20% of adult brain tumours. In a child, ataxia with raised pressure is therefore infratentorial until imaged.",
+   "note": ".danger: split long sentence",
+   "claims": [
+    {
+     "claim": "Posterior fossa tumours are 54 to 70% of childhood brain tumours.",
+     "to": "Posterior fossa tumours are 54 to 70% of childhood brain tumours but only 15 to 20% of adult brain tumours."
+    },
+    {
+     "claim": "In adults they are only 15 to 20%.",
+     "to": "Posterior fossa tumours are 54 to 70% of childhood brain tumours but only 15 to 20% of adult brain tumours."
+    },
+    {
+     "claim": "In a child, ataxia with raised pressure is infratentorial until imaged.",
+     "to": "In a child, ataxia with raised pressure is therefore infratentorial until imaged."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Posterior fossa tumours are 54 to 70% of childhood brain tumours but only 15 to 20% of adult brain tumours.",
+     "from": "Posterior fossa tumours are 54 to 70% of childhood brain tumours."
+    },
+    {
+     "claim": "In a child, ataxia with raised pressure is infratentorial until imaged.",
+     "from": "In a child, ataxia with raised pressure is infratentorial until imaged."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-posterior-fossa",
+   "find": "Part I <b>Sellar and Suprasellar Masses</b> is the anterior compartment of the same question: which region does the endocrine or visual sign name? Part I <b>Headache in a School-Age Child</b> owns the workup before localization: is the headache primary or secondary, and do the fundi show raised pressure?",
+   "with": "Part I <b>Sellar and Suprasellar Masses</b> covers the anterior compartment. Ask: which region does the endocrine or visual sign point to? Part I <b>Headache in a School-Age Child</b> covers the workup before localization. Ask: is the headache primary or secondary, and do the fundi show raised pressure?",
+   "note": "Pairs with: owns -> covers, remove framing, Ask: form",
+   "claims": [
+    {
+     "claim": "Sellar and Suprasellar Masses is the anterior compartment of the same question.",
+     "to": "Part I Sellar and Suprasellar Masses covers the anterior compartment."
+    },
+    {
+     "claim": "Its question is which region the endocrine or visual sign names.",
+     "to": "Ask: which region does the endocrine or visual sign point to?"
+    },
+    {
+     "claim": "Headache in a School-Age Child owns the workup before localization.",
+     "to": "Part I Headache in a School-Age Child covers the workup before localization."
+    },
+    {
+     "claim": "Its question is whether the headache is primary or secondary, and whether the fundi show raised pressure.",
+     "to": "Ask: is the headache primary or secondary, and do the fundi show raised pressure?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Sellar and Suprasellar Masses covers the anterior compartment.",
+     "from": "Sellar and Suprasellar Masses is the anterior compartment of the same question."
+    },
+    {
+     "claim": "Ask which region the endocrine or visual sign points to.",
+     "from": "Its question is which region the endocrine or visual sign names."
+    },
+    {
+     "claim": "Headache in a School-Age Child covers the workup before localization.",
+     "from": "Headache in a School-Age Child owns the workup before localization."
+    },
+    {
+     "claim": "Ask whether the headache is primary or secondary, and whether the fundi show raised pressure.",
+     "from": "Its question is whether the headache is primary or secondary, and whether the fundi show raised pressure."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-posterior-fossa",
+   "find": "Localization is answered side first and structure second, and the cerebellum is the one place where signs stay on the same side as the lesion, so examiners build their distractors from anatomically respectable options on the wrong side.",
+   "with": "Localize side first and structure second. The cerebellum is the one place where signs stay on the same side as the lesion.",
+   "note": ".rule: split; remove framing about how distractors are built",
+   "claims": [
+    {
+     "claim": "Localization is answered side first and structure second.",
+     "to": "Localize side first and structure second."
+    },
+    {
+     "claim": "The cerebellum is the one place where signs stay on the same side as the lesion.",
+     "to": "The cerebellum is the one place where signs stay on the same side as the lesion."
+    },
+    {
+     "claim": "Examiners build distractors from anatomically respectable options on the wrong side.",
+     "dropped": "framing about how the question is built; the wrong-side option is named in the Distractors block"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Localize side first and structure second.",
+     "from": "Localization is answered side first and structure second."
+    },
+    {
+     "claim": "The cerebellum is the one place where signs stay on the same side as the lesion.",
+     "from": "The cerebellum is the one place where signs stay on the same side as the lesion."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-child-headache",
+   "find": "<p>Headache is a symptom, not a diagnosis. Ask first whether it is <b>primary</b> (migraine, tension-type headache) or <b>secondary</b>, and if secondary, what caused it: a <b>mass</b> (posterior fossa or supratentorial tumor), <b>pressure without a mass</b> (idiopathic intracranial hypertension), blocked <b>CSF flow</b> (hydrocephalus), <b>infection</b> (meningitis, abscess) or <b>bleeding</b>. Primary headaches come and go; secondary headaches progress. Check the vital signs for Cushing triad and fever first. Then the pattern over time, the fundi and the neurologic exam sort the branches; MRI finds the lesion, and tissue, CSF or the typical story confirms it.</p>",
+   "with": "<p>Ask first whether a headache is <b>primary</b> (migraine, tension-type headache) or <b>secondary</b>. Causes of a secondary headache include a <b>mass</b> (posterior fossa or supratentorial tumor) and <b>pressure without a mass</b> (idiopathic intracranial hypertension). The others are blocked <b>CSF flow</b> (cerebrospinal fluid; hydrocephalus), <b>infection</b> (meningitis, abscess) and <b>bleeding</b>. Primary headaches come and go; secondary headaches progress. Check the vital signs for Cushing triad and fever first. Then use the pattern over time, the fundi and the neurologic exam to sort the causes. <b>MRI</b> (magnetic resonance imaging) finds the lesion. Tissue, CSF or the typical story confirms the diagnosis.</p>",
+   "note": ".dp: drop slogan opener, split long sentences, expand acronyms",
+   "claims": [
+    {
+     "claim": "Headache is a symptom, not a diagnosis.",
+     "dropped": "slogan opener; the next sentence says to find the cause"
+    },
+    {
+     "claim": "Ask first whether the headache is primary (migraine, tension-type headache) or secondary.",
+     "to": "Ask first whether a headache is primary (migraine, tension-type headache) or secondary."
+    },
+    {
+     "claim": "If secondary, the cause is a mass (posterior fossa or supratentorial tumor) or pressure without a mass (idiopathic intracranial hypertension).",
+     "to": "Causes of a secondary headache include a mass (posterior fossa or supratentorial tumor) and pressure without a mass (idiopathic intracranial hypertension)."
+    },
+    {
+     "claim": "If secondary, the cause can also be blocked CSF flow (hydrocephalus), infection (meningitis, abscess) or bleeding.",
+     "to": "The others are blocked CSF flow (cerebrospinal fluid; hydrocephalus), infection (meningitis, abscess) and bleeding."
+    },
+    {
+     "claim": "Primary headaches come and go; secondary headaches progress.",
+     "to": "Primary headaches come and go; secondary headaches progress."
+    },
+    {
+     "claim": "Check the vital signs for Cushing triad and fever first.",
+     "to": "Check the vital signs for Cushing triad and fever first."
+    },
+    {
+     "claim": "Then the pattern over time, the fundi and the neurologic exam sort the branches.",
+     "to": "Then use the pattern over time, the fundi and the neurologic exam to sort the causes."
+    },
+    {
+     "claim": "MRI finds the lesion.",
+     "to": "MRI (magnetic resonance imaging) finds the lesion."
+    },
+    {
+     "claim": "Tissue, CSF or the typical story confirms it.",
+     "to": "Tissue, CSF or the typical story confirms the diagnosis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Ask first whether a headache is primary (migraine, tension-type headache) or secondary.",
+     "from": "Ask first whether the headache is primary (migraine, tension-type headache) or secondary."
+    },
+    {
+     "claim": "Causes of a secondary headache include a mass (posterior fossa or supratentorial tumor) and pressure without a mass (idiopathic intracranial hypertension).",
+     "from": "If secondary, the cause is a mass (posterior fossa or supratentorial tumor) or pressure without a mass (idiopathic intracranial hypertension)."
+    },
+    {
+     "claim": "The other secondary causes are blocked CSF flow (hydrocephalus), infection (meningitis, abscess) and bleeding.",
+     "from": "If secondary, the cause can also be blocked CSF flow (hydrocephalus), infection (meningitis, abscess) or bleeding."
+    },
+    {
+     "claim": "CSF stands for cerebrospinal fluid.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Primary headaches come and go; secondary headaches progress.",
+     "from": "Primary headaches come and go; secondary headaches progress."
+    },
+    {
+     "claim": "Check the vital signs for Cushing triad and fever first.",
+     "from": "Check the vital signs for Cushing triad and fever first."
+    },
+    {
+     "claim": "Then use the pattern over time, the fundi and the neurologic exam to sort the causes.",
+     "from": "Then the pattern over time, the fundi and the neurologic exam sort the branches."
+    },
+    {
+     "claim": "MRI stands for magnetic resonance imaging.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MRI finds the lesion.",
+     "from": "MRI finds the lesion."
+    },
+    {
+     "claim": "Tissue, CSF or the typical story confirms the diagnosis.",
+     "from": "Tissue, CSF or the typical story confirms it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-child-headache",
+   "find": "Part II <b>Posterior Fossa Localization</b> owns the side-and-structure question and the tap-before-imaging trap: which side, and which part of the cerebellum? Part I <b>Headache in a Child: What Earns Imaging</b> owns the imaging gate and the drug causes of intracranial hypertension. Part I <b>Sellar and Suprasellar Masses</b> owns the supratentorial midline mass: is growth or vision failing? Part I <b>VP Shunt Complications</b> owns hydrocephalus once a shunt is in. Part I <b>Inherited Tumor Syndromes</b> owns neurofibromatosis and tuberous sclerosis. Part I <b>Headache Types &amp; Cluster Headache</b> owns the adult primary headache types.",
+   "with": "Part II <b>Posterior Fossa Localization</b> covers localization by side and structure, and imaging before a lumbar puncture. Ask: which side, and which part of the cerebellum? Part I <b>Headache in a Child: What Earns Imaging</b> covers when to image and the drug causes of intracranial hypertension. Part I <b>Sellar and Suprasellar Masses</b> covers the supratentorial midline mass. Ask: is growth or vision failing? Part I <b>VP Shunt Complications</b> covers hydrocephalus once a shunt is in. Part I <b>Inherited Tumor Syndromes</b> covers neurofibromatosis and tuberous sclerosis. Part I <b>Headache Types &amp; Cluster Headache</b> covers the adult primary headache types.",
+   "note": "Pairs with: owns -> covers; plain wording for side-and-structure and tap-before-imaging; Ask: form",
+   "claims": [
+    {
+     "claim": "Posterior Fossa Localization owns the side-and-structure question and the tap-before-imaging trap.",
+     "to": "Part II Posterior Fossa Localization covers localization by side and structure, and imaging before a lumbar puncture."
+    },
+    {
+     "claim": "Its question is which side, and which part of the cerebellum.",
+     "to": "Ask: which side, and which part of the cerebellum?"
+    },
+    {
+     "claim": "Headache in a Child: What Earns Imaging owns the imaging gate and the drug causes of intracranial hypertension.",
+     "to": "Part I Headache in a Child: What Earns Imaging covers when to image and the drug causes of intracranial hypertension."
+    },
+    {
+     "claim": "Sellar and Suprasellar Masses owns the supratentorial midline mass.",
+     "to": "Part I Sellar and Suprasellar Masses covers the supratentorial midline mass."
+    },
+    {
+     "claim": "Its question is whether growth or vision is failing.",
+     "to": "Ask: is growth or vision failing?"
+    },
+    {
+     "claim": "VP Shunt Complications owns hydrocephalus once a shunt is in.",
+     "to": "Part I VP Shunt Complications covers hydrocephalus once a shunt is in."
+    },
+    {
+     "claim": "Inherited Tumor Syndromes owns neurofibromatosis and tuberous sclerosis.",
+     "to": "Part I Inherited Tumor Syndromes covers neurofibromatosis and tuberous sclerosis."
+    },
+    {
+     "claim": "Headache Types & Cluster Headache owns the adult primary headache types.",
+     "to": "Part I Headache Types & Cluster Headache covers the adult primary headache types."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Posterior Fossa Localization covers localization by side and structure, and imaging before a lumbar puncture.",
+     "from": "Posterior Fossa Localization owns the side-and-structure question and the tap-before-imaging trap."
+    },
+    {
+     "claim": "Ask which side, and which part of the cerebellum.",
+     "from": "Its question is which side, and which part of the cerebellum."
+    },
+    {
+     "claim": "Headache in a Child: What Earns Imaging covers when to image and the drug causes of intracranial hypertension.",
+     "from": "Headache in a Child: What Earns Imaging owns the imaging gate and the drug causes of intracranial hypertension."
+    },
+    {
+     "claim": "Sellar and Suprasellar Masses covers the supratentorial midline mass.",
+     "from": "Sellar and Suprasellar Masses owns the supratentorial midline mass."
+    },
+    {
+     "claim": "Ask whether growth or vision is failing.",
+     "from": "Its question is whether growth or vision is failing."
+    },
+    {
+     "claim": "VP Shunt Complications covers hydrocephalus once a shunt is in.",
+     "from": "VP Shunt Complications owns hydrocephalus once a shunt is in."
+    },
+    {
+     "claim": "Inherited Tumor Syndromes covers neurofibromatosis and tuberous sclerosis.",
+     "from": "Inherited Tumor Syndromes owns neurofibromatosis and tuberous sclerosis."
+    },
+    {
+     "claim": "Headache Types & Cluster Headache covers the adult primary headache types.",
+     "from": "Headache Types & Cluster Headache owns the adult primary headache types."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-child-headache",
+   "find": "For headache in a child, decide first whether it is primary or secondary; a headache that progresses, wakes the child, or comes with papilledema or a focal sign needs an MRI, and where the signs sit tells you where the lesion is.",
+   "with": "For headache in a child, decide first whether it is primary or secondary. A headache that progresses, wakes the child, or comes with papilledema or a focal sign needs an <b>MRI</b> (magnetic resonance imaging). The location of the signs shows where the lesion is.",
+   "note": ".rule: split long sentence, expand MRI",
+   "claims": [
+    {
+     "claim": "For headache in a child, decide first whether it is primary or secondary.",
+     "to": "For headache in a child, decide first whether it is primary or secondary."
+    },
+    {
+     "claim": "A headache that progresses, wakes the child, or comes with papilledema or a focal sign needs an MRI.",
+     "to": "A headache that progresses, wakes the child, or comes with papilledema or a focal sign needs an MRI (magnetic resonance imaging)."
+    },
+    {
+     "claim": "Where the signs sit tells you where the lesion is.",
+     "to": "The location of the signs shows where the lesion is."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "For headache in a child, decide first whether it is primary or secondary.",
+     "from": "For headache in a child, decide first whether it is primary or secondary."
+    },
+    {
+     "claim": "A headache that progresses, wakes the child, or comes with papilledema or a focal sign needs an MRI.",
+     "from": "A headache that progresses, wakes the child, or comes with papilledema or a focal sign needs an MRI."
+    },
+    {
+     "claim": "MRI stands for magnetic resonance imaging.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The location of the signs shows where the lesion is.",
+     "from": "Where the signs sit tells you where the lesion is."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-posterior-fossa",
+   "find": "Medulloblastoma seeds the CSF, so staging requires neuraxis MRI and CSF cytology",
+   "with": "Medulloblastoma seeds the <b>CSF</b> (cerebrospinal fluid), so staging requires neuraxis MRI and CSF cytology",
+   "note": ".pearls: expand CSF at first use in block",
+   "claims": [
+    {
+     "claim": "Medulloblastoma seeds the CSF, so staging requires neuraxis MRI and CSF cytology.",
+     "to": "Medulloblastoma seeds the CSF (cerebrospinal fluid), so staging requires neuraxis MRI and CSF cytology"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Medulloblastoma seeds the CSF, so staging requires neuraxis MRI and CSF cytology.",
+     "from": "Medulloblastoma seeds the CSF, so staging requires neuraxis MRI and CSF cytology."
+    },
+    {
+     "claim": "CSF stands for cerebrospinal fluid.",
+     "from": "expansion"
+    }
+   ]
+  }
+ ]
+}

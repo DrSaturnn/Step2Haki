@@ -1,0 +1,1513 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "adolescent-aub",
+   "find": "<p>Anovulatory cycles from an immature hypothalamic-pituitary-ovarian axis are genuinely normal in the first 1–2 years after menarche — which is why most people choose reassurance. But <b>reassurance requires two things: a benign cause and an acceptable consequence.</b> Anemia is a consequence. The physiology being normal doesn't make the outcome acceptable.</p>\n<p><b>Mechanism:</b> immature axis → no LH surge → <b>anovulation</b> → no corpus luteum → <b>no progesterone</b> → unopposed estrogen drives continuous proliferation with no secretory differentiation → the lining outgrows its blood supply and sheds unpredictably. <b>Progesterone converts proliferative to secretory endometrium</b> and produces organized withdrawal bleeding.</p>",
+   "with": "<p>Anovulatory cycles from an immature hypothalamic-pituitary-ovarian axis are normal in the first 1–2 years after menarche. <b>Reassurance requires a benign cause and an acceptable consequence.</b> Anemia is a consequence, and normal physiology does not make it acceptable.</p>\n<p><b>Mechanism:</b> the immature axis produces no <b>LH</b> (luteinizing hormone) surge, so there is <b>anovulation</b> and no corpus luteum. Without a corpus luteum there is <b>no progesterone</b>. Unopposed estrogen drives continuous proliferation with no secretory differentiation. The lining outgrows its blood supply and sheds unpredictably. <b>Progesterone converts proliferative to secretory endometrium</b> and produces organized withdrawal bleeding.</p>",
+   "note": "round 2 voice: .dp; split arrow chain, drop framing and em dash, expand LH",
+   "reworded_bold": [
+    "reassurance requires two things: a benign cause and an acceptable consequence."
+   ],
+   "claims": [
+    {
+     "claim": "Anovulatory cycles from an immature hypothalamic-pituitary-ovarian axis are normal in the first 1–2 years after menarche.",
+     "to": "Anovulatory cycles from an immature hypothalamic-pituitary-ovarian axis are normal in the first 1–2 years after menarche."
+    },
+    {
+     "claim": "Most people choose reassurance because of this.",
+     "dropped": "framing about test-takers' choices, not a clinical claim"
+    },
+    {
+     "claim": "Reassurance requires a benign cause and an acceptable consequence.",
+     "to": "Reassurance requires a benign cause and an acceptable consequence."
+    },
+    {
+     "claim": "Anemia is a consequence.",
+     "to": "Anemia is a consequence, and normal physiology does not make it acceptable."
+    },
+    {
+     "claim": "Normal physiology does not make the outcome acceptable.",
+     "to": "Anemia is a consequence, and normal physiology does not make it acceptable."
+    },
+    {
+     "claim": "An immature axis gives no LH surge.",
+     "to": "Mechanism: the immature axis produces no LH (luteinizing hormone) surge, so there is anovulation and no corpus luteum."
+    },
+    {
+     "claim": "No LH surge means anovulation.",
+     "to": "Mechanism: the immature axis produces no LH (luteinizing hormone) surge, so there is anovulation and no corpus luteum."
+    },
+    {
+     "claim": "Anovulation means no corpus luteum.",
+     "to": "Mechanism: the immature axis produces no LH (luteinizing hormone) surge, so there is anovulation and no corpus luteum."
+    },
+    {
+     "claim": "No corpus luteum means no progesterone.",
+     "to": "Without a corpus luteum there is no progesterone."
+    },
+    {
+     "claim": "Unopposed estrogen drives continuous proliferation with no secretory differentiation.",
+     "to": "Unopposed estrogen drives continuous proliferation with no secretory differentiation."
+    },
+    {
+     "claim": "The lining outgrows its blood supply and sheds unpredictably.",
+     "to": "The lining outgrows its blood supply and sheds unpredictably."
+    },
+    {
+     "claim": "Progesterone converts proliferative to secretory endometrium and produces organized withdrawal bleeding.",
+     "to": "Progesterone converts proliferative to secretory endometrium and produces organized withdrawal bleeding."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Anovulatory cycles from an immature hypothalamic-pituitary-ovarian axis are normal in the first 1–2 years after menarche.",
+     "from": "Anovulatory cycles from an immature hypothalamic-pituitary-ovarian axis are normal in the first 1–2 years after menarche."
+    },
+    {
+     "claim": "Reassurance requires a benign cause and an acceptable consequence.",
+     "from": "Reassurance requires a benign cause and an acceptable consequence."
+    },
+    {
+     "claim": "Anemia is a consequence.",
+     "from": "Anemia is a consequence."
+    },
+    {
+     "claim": "Normal physiology does not make the outcome acceptable.",
+     "from": "Normal physiology does not make the outcome acceptable."
+    },
+    {
+     "claim": "An immature axis gives no LH surge.",
+     "from": "An immature axis gives no LH surge."
+    },
+    {
+     "claim": "No LH surge means anovulation.",
+     "from": "No LH surge means anovulation."
+    },
+    {
+     "claim": "Anovulation means no corpus luteum.",
+     "from": "Anovulation means no corpus luteum."
+    },
+    {
+     "claim": "No corpus luteum means no progesterone.",
+     "from": "No corpus luteum means no progesterone."
+    },
+    {
+     "claim": "Unopposed estrogen drives continuous proliferation with no secretory differentiation.",
+     "from": "Unopposed estrogen drives continuous proliferation with no secretory differentiation."
+    },
+    {
+     "claim": "The lining outgrows its blood supply and sheds unpredictably.",
+     "from": "The lining outgrows its blood supply and sheds unpredictably."
+    },
+    {
+     "claim": "Progesterone converts proliferative to secretory endometrium and produces organized withdrawal bleeding.",
+     "from": "Progesterone converts proliferative to secretory endometrium and produces organized withdrawal bleeding."
+    },
+    {
+     "claim": "LH stands for luteinizing hormone.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "adolescent-aub",
+   "find": "<span class=\"lbl\">The detail most people skip</span> <b>\"Nonpainful.\"</b> Ovulatory cycles are crampy — <b>painless heavy irregular bleeding is the anovulatory signature</b>. Normal adolescent parameters: cycle length <b>21–45 days</b> (adults 24–38), duration ≤7 days, ≤3–6 products/day.",
+   "with": "<span class=\"lbl\">Painless bleeding</span> Ovulatory cycles are crampy, whereas <b>painless heavy irregular bleeding is the anovulatory signature</b>. Normal adolescent parameters: cycle length <b>21–45 days</b> (adults 24–38), duration ≤7 days, ≤3–6 products/day.",
+   "note": "round 2 voice: .pearls; rhetorical label and quoted emphasis bold reworded, em dash removed",
+   "reworded_bold": [
+    "\"Nonpainful.\""
+   ],
+   "reworded_label": [
+    "The detail most people skip"
+   ],
+   "claims": [
+    {
+     "claim": "Most people skip this detail.",
+     "dropped": "rhetorical label about test-takers"
+    },
+    {
+     "claim": "The absence of pain (nonpainful) is the key detail.",
+     "to": "Ovulatory cycles are crampy, whereas painless heavy irregular bleeding is the anovulatory signature."
+    },
+    {
+     "claim": "Ovulatory cycles are crampy.",
+     "to": "Ovulatory cycles are crampy, whereas painless heavy irregular bleeding is the anovulatory signature."
+    },
+    {
+     "claim": "Painless heavy irregular bleeding is the anovulatory signature.",
+     "to": "Ovulatory cycles are crampy, whereas painless heavy irregular bleeding is the anovulatory signature."
+    },
+    {
+     "claim": "Normal adolescent cycle length is 21–45 days (adults 24–38).",
+     "to": "Normal adolescent parameters: cycle length 21–45 days (adults 24–38), duration ≤7 days, ≤3–6 products/day."
+    },
+    {
+     "claim": "Normal duration is ≤7 days.",
+     "to": "Normal adolescent parameters: cycle length 21–45 days (adults 24–38), duration ≤7 days, ≤3–6 products/day."
+    },
+    {
+     "claim": "Normal use is ≤3–6 products/day.",
+     "to": "Normal adolescent parameters: cycle length 21–45 days (adults 24–38), duration ≤7 days, ≤3–6 products/day."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The absence of pain (nonpainful) is the key detail.",
+     "from": "The absence of pain (nonpainful) is the key detail."
+    },
+    {
+     "claim": "Ovulatory cycles are crampy.",
+     "from": "Ovulatory cycles are crampy."
+    },
+    {
+     "claim": "Painless heavy irregular bleeding is the anovulatory signature.",
+     "from": "Painless heavy irregular bleeding is the anovulatory signature."
+    },
+    {
+     "claim": "Normal adolescent cycle length is 21–45 days (adults 24–38).",
+     "from": "Normal adolescent cycle length is 21–45 days (adults 24–38)."
+    },
+    {
+     "claim": "Normal duration is ≤7 days.",
+     "from": "Normal duration is ≤7 days."
+    },
+    {
+     "claim": "Normal use is ≤3–6 products/day.",
+     "from": "Normal use is ≤3–6 products/day."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "adolescent-aub",
+   "find": "The <b>copper IUD makes menses heavier and longer</b> — contraindicated in heavy bleeding with anemia. The <b>levonorgestrel IUD makes them lighter</b> and is a legitimate treatment for heavy menstrual bleeding.",
+   "with": "The <b>copper IUD makes menses heavier and longer</b>, so it is contraindicated in heavy bleeding with anemia. The <b>levonorgestrel IUD makes them lighter</b> and is a legitimate treatment for heavy menstrual bleeding.",
+   "note": "round 2 voice: .danger; em dash removed",
+   "claims": [
+    {
+     "claim": "The copper IUD makes menses heavier and longer.",
+     "to": "The copper IUD makes menses heavier and longer, so it is contraindicated in heavy bleeding with anemia."
+    },
+    {
+     "claim": "The copper IUD is contraindicated in heavy bleeding with anemia.",
+     "to": "The copper IUD makes menses heavier and longer, so it is contraindicated in heavy bleeding with anemia."
+    },
+    {
+     "claim": "The levonorgestrel IUD makes menses lighter.",
+     "to": "The levonorgestrel IUD makes them lighter and is a legitimate treatment for heavy menstrual bleeding."
+    },
+    {
+     "claim": "The levonorgestrel IUD is a legitimate treatment for heavy menstrual bleeding.",
+     "to": "The levonorgestrel IUD makes them lighter and is a legitimate treatment for heavy menstrual bleeding."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The copper IUD makes menses heavier and longer.",
+     "from": "The copper IUD makes menses heavier and longer."
+    },
+    {
+     "claim": "The copper IUD is contraindicated in heavy bleeding with anemia.",
+     "from": "The copper IUD is contraindicated in heavy bleeding with anemia."
+    },
+    {
+     "claim": "The levonorgestrel IUD makes menses lighter.",
+     "from": "The levonorgestrel IUD makes menses lighter."
+    },
+    {
+     "claim": "The levonorgestrel IUD is a legitimate treatment for heavy menstrual bleeding.",
+     "from": "The levonorgestrel IUD is a legitimate treatment for heavy menstrual bleeding."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "adolescent-aub",
+   "find": "\"This is physiologically normal for her age\" answers the <b>diagnosis</b>, not the <b>management</b>. Before choosing reassurance, check whether the stem gave you a <b>consequence</b> — anemia, growth failure, functional impairment. A consequence converts a normal variant into something you treat.",
+   "with": "Physiology that is normal for her age settles the <b>diagnosis</b>, not the <b>management</b>. Before choosing reassurance, check for a <b>consequence</b> such as anemia, growth failure or functional impairment. A consequence converts a normal variant into something you treat.",
+   "note": "round 2 voice: .rule; stem framing and em dash removed",
+   "claims": [
+    {
+     "claim": "Physiologically normal for her age answers the diagnosis, not the management.",
+     "to": "Physiology that is normal for her age settles the diagnosis, not the management."
+    },
+    {
+     "claim": "Before choosing reassurance, check for a consequence.",
+     "to": "Before choosing reassurance, check for a consequence such as anemia, growth failure or functional impairment."
+    },
+    {
+     "claim": "Consequences include anemia, growth failure and functional impairment.",
+     "to": "Before choosing reassurance, check for a consequence such as anemia, growth failure or functional impairment."
+    },
+    {
+     "claim": "A consequence converts a normal variant into something you treat.",
+     "to": "A consequence converts a normal variant into something you treat."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Physiologically normal for her age answers the diagnosis, not the management.",
+     "from": "Physiologically normal for her age answers the diagnosis, not the management."
+    },
+    {
+     "claim": "Before choosing reassurance, check for a consequence.",
+     "from": "Before choosing reassurance, check for a consequence."
+    },
+    {
+     "claim": "Consequences include anemia, growth failure and functional impairment.",
+     "from": "Consequences include anemia, growth failure and functional impairment."
+    },
+    {
+     "claim": "A consequence converts a normal variant into something you treat.",
+     "from": "A consequence converts a normal variant into something you treat."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "contraception",
+   "find": "<p>When two explanations produce identical symptoms, test for the one that <b>changes management and can't be missed</b>. DMPA side effects — breast soreness, weight gain, fatigue, amenorrhea — are indistinguishable from early pregnancy. And the arithmetic assassin: <b>DMPA is due every 13 weeks; her last injection was 4 months ago</b>, so she has been uncovered.</p>\n<p>The structural rule: <b>a pregnancy test precedes every contraception decision, every amenorrhea workup, and absolutely every IUD placement</b> — inserting an IUD into an established intrauterine pregnancy can disrupt it.</p>",
+   "with": "<p>When two explanations produce identical symptoms, test for the one that <b>changes management and can't be missed</b>. Breast soreness, weight gain, fatigue and amenorrhea from <b>DMPA</b> (depot medroxyprogesterone acetate) are indistinguishable from early pregnancy. <b>DMPA is due every 13 weeks; her last injection was 4 months ago</b>, so she has been uncovered.</p>\n<p><b>A pregnancy test precedes</b> every contraception decision, every amenorrhea workup, and every <b>IUD</b> (intrauterine device) placement. Inserting an IUD into an established intrauterine pregnancy can disrupt it.</p>",
+   "note": "round 2 voice: .dp; slogans and framing labels removed, em dashes removed, DMPA and IUD expanded",
+   "reworded_bold": [
+    "a pregnancy test precedes every contraception decision, every amenorrhea workup, and absolutely every IUD placement"
+   ],
+   "claims": [
+    {
+     "claim": "When two explanations produce identical symptoms, test for the one that changes management and can't be missed.",
+     "to": "When two explanations produce identical symptoms, test for the one that changes management and can't be missed."
+    },
+    {
+     "claim": "DMPA side effects include breast soreness, weight gain, fatigue and amenorrhea.",
+     "to": "Breast soreness, weight gain, fatigue and amenorrhea from DMPA (depot medroxyprogesterone acetate) are indistinguishable from early pregnancy."
+    },
+    {
+     "claim": "These DMPA side effects are indistinguishable from early pregnancy.",
+     "to": "Breast soreness, weight gain, fatigue and amenorrhea from DMPA (depot medroxyprogesterone acetate) are indistinguishable from early pregnancy."
+    },
+    {
+     "claim": "The arithmetic is the key (arithmetic assassin).",
+     "dropped": "slogan; the dosing arithmetic itself is stated in the next sentence"
+    },
+    {
+     "claim": "DMPA is due every 13 weeks.",
+     "to": "DMPA is due every 13 weeks; her last injection was 4 months ago, so she has been uncovered."
+    },
+    {
+     "claim": "Her last injection was 4 months ago, so she has been uncovered.",
+     "to": "DMPA is due every 13 weeks; her last injection was 4 months ago, so she has been uncovered."
+    },
+    {
+     "claim": "This is the structural rule.",
+     "dropped": "framing label"
+    },
+    {
+     "claim": "A pregnancy test precedes every contraception decision.",
+     "to": "A pregnancy test precedes every contraception decision, every amenorrhea workup, and every IUD (intrauterine device) placement."
+    },
+    {
+     "claim": "A pregnancy test precedes every amenorrhea workup.",
+     "to": "A pregnancy test precedes every contraception decision, every amenorrhea workup, and every IUD (intrauterine device) placement."
+    },
+    {
+     "claim": "A pregnancy test precedes absolutely every IUD placement.",
+     "to": "A pregnancy test precedes every contraception decision, every amenorrhea workup, and every IUD (intrauterine device) placement."
+    },
+    {
+     "claim": "Inserting an IUD into an established intrauterine pregnancy can disrupt it.",
+     "to": "Inserting an IUD into an established intrauterine pregnancy can disrupt it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When two explanations produce identical symptoms, test for the one that changes management and can't be missed.",
+     "from": "When two explanations produce identical symptoms, test for the one that changes management and can't be missed."
+    },
+    {
+     "claim": "DMPA side effects include breast soreness, weight gain, fatigue and amenorrhea.",
+     "from": "DMPA side effects include breast soreness, weight gain, fatigue and amenorrhea."
+    },
+    {
+     "claim": "These DMPA side effects are indistinguishable from early pregnancy.",
+     "from": "These DMPA side effects are indistinguishable from early pregnancy."
+    },
+    {
+     "claim": "DMPA is due every 13 weeks.",
+     "from": "DMPA is due every 13 weeks."
+    },
+    {
+     "claim": "Her last injection was 4 months ago, so she has been uncovered.",
+     "from": "Her last injection was 4 months ago, so she has been uncovered."
+    },
+    {
+     "claim": "A pregnancy test precedes every contraception decision.",
+     "from": "A pregnancy test precedes every contraception decision."
+    },
+    {
+     "claim": "A pregnancy test precedes every amenorrhea workup.",
+     "from": "A pregnancy test precedes every amenorrhea workup."
+    },
+    {
+     "claim": "A pregnancy test precedes absolutely every IUD placement.",
+     "from": "A pregnancy test precedes absolutely every IUD placement."
+    },
+    {
+     "claim": "Inserting an IUD into an established intrauterine pregnancy can disrupt it.",
+     "from": "Inserting an IUD into an established intrauterine pregnancy can disrupt it."
+    },
+    {
+     "claim": "DMPA stands for depot medroxyprogesterone acetate.",
+     "from": "expansion"
+    },
+    {
+     "claim": "IUD stands for intrauterine device.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "contraception",
+   "find": "Suppresses GnRH → no LH surge → no ovulation; thickens cervical mucus",
+   "with": "Suppresses <b>GnRH</b> (gonadotropin-releasing hormone), so there is no <b>LH</b> (luteinizing hormone) surge and no ovulation; thickens cervical mucus",
+   "note": "round 2 voice: DMPA facts .pearls; arrow chain split, GnRH and LH expanded",
+   "claims": [
+    {
+     "claim": "DMPA suppresses GnRH.",
+     "to": "Suppresses GnRH (gonadotropin-releasing hormone), so there is no LH (luteinizing hormone) surge and no ovulation; thickens cervical mucus"
+    },
+    {
+     "claim": "GnRH suppression means no LH surge.",
+     "to": "Suppresses GnRH (gonadotropin-releasing hormone), so there is no LH (luteinizing hormone) surge and no ovulation; thickens cervical mucus"
+    },
+    {
+     "claim": "No LH surge means no ovulation.",
+     "to": "Suppresses GnRH (gonadotropin-releasing hormone), so there is no LH (luteinizing hormone) surge and no ovulation; thickens cervical mucus"
+    },
+    {
+     "claim": "DMPA thickens cervical mucus.",
+     "to": "Suppresses GnRH (gonadotropin-releasing hormone), so there is no LH (luteinizing hormone) surge and no ovulation; thickens cervical mucus"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "DMPA suppresses GnRH.",
+     "from": "DMPA suppresses GnRH."
+    },
+    {
+     "claim": "GnRH suppression means no LH surge.",
+     "from": "GnRH suppression means no LH surge."
+    },
+    {
+     "claim": "No LH surge means no ovulation.",
+     "from": "No LH surge means no ovulation."
+    },
+    {
+     "claim": "DMPA thickens cervical mucus.",
+     "from": "DMPA thickens cervical mucus."
+    },
+    {
+     "claim": "GnRH stands for gonadotropin-releasing hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "LH stands for luteinizing hormone.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "contraception",
+   "find": "migraine with aura, VTE history, and immediately postpartum.",
+   "with": "migraine with aura, <b>VTE</b> (venous thromboembolism) history, and immediately postpartum.",
+   "note": "round 2 voice: DMPA facts .pearls; VTE expanded",
+   "claims": [
+    {
+     "claim": "DMPA is safe with migraine with aura, VTE history, and immediately postpartum.",
+     "to": "no estrogen, so safe in smokers ≥35, migraine with aura, VTE (venous thromboembolism) history, and immediately postpartum."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "DMPA is safe with migraine with aura, VTE history, and immediately postpartum.",
+     "from": "DMPA is safe with migraine with aura, VTE history, and immediately postpartum."
+    },
+    {
+     "claim": "VTE stands for venous thromboembolism.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "contraception",
+   "find": "When a stem offers a plausible <b>drug-effect</b> explanation for symptoms that overlap a can't-miss diagnosis, the drug effect is a <b>diagnosis of exclusion</b> — especially when a date in the stem shows the drug wasn't actually working.",
+   "with": "When a <b>drug-effect</b> explanation is plausible for symptoms that overlap a can't-miss diagnosis, the drug effect is a <b>diagnosis of exclusion</b>. This applies especially when a date shows the drug was not actually working.",
+   "note": "round 2 voice: .rule; stem framing and em dash removed",
+   "claims": [
+    {
+     "claim": "A plausible drug-effect explanation for symptoms overlapping a can't-miss diagnosis is a diagnosis of exclusion.",
+     "to": "When a drug-effect explanation is plausible for symptoms that overlap a can't-miss diagnosis, the drug effect is a diagnosis of exclusion."
+    },
+    {
+     "claim": "This applies especially when a date shows the drug wasn't actually working.",
+     "to": "This applies especially when a date shows the drug was not actually working."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A plausible drug-effect explanation for symptoms overlapping a can't-miss diagnosis is a diagnosis of exclusion.",
+     "from": "A plausible drug-effect explanation for symptoms overlapping a can't-miss diagnosis is a diagnosis of exclusion."
+    },
+    {
+     "claim": "This applies especially when a date shows the drug wasn't actually working.",
+     "from": "This applies especially when a date shows the drug wasn't actually working."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "fibroids",
+   "find": "<p><b>Fibroid size does not drive treatment — symptoms do.</b> Stems front-load \"markedly enlarged,\" \"multiple,\" \"intramural and pedunculated\" to make impressive anatomy feel like it demands action, then explicitly negate every symptom domain. Asymptomatic fibroids get <b>observation</b>.</p>",
+   "with": "<p><b>Fibroid size does not drive treatment; symptoms do.</b> Markedly enlarged, multiple, intramural and pedunculated fibroids do not demand action when every symptom domain is negative. Asymptomatic fibroids get <b>observation</b>.</p>",
+   "note": "round 2 voice: .dp; stem framing and em dash removed",
+   "reworded_bold": [
+    "Fibroid size does not drive treatment — symptoms do."
+   ],
+   "claims": [
+    {
+     "claim": "Fibroid size does not drive treatment; symptoms do.",
+     "to": "Fibroid size does not drive treatment; symptoms do."
+    },
+    {
+     "claim": "Markedly enlarged, multiple, intramural and pedunculated anatomy feels impressive but does not demand action.",
+     "to": "Markedly enlarged, multiple, intramural and pedunculated fibroids do not demand action when every symptom domain is negative."
+    },
+    {
+     "claim": "Every symptom domain is negated.",
+     "to": "Markedly enlarged, multiple, intramural and pedunculated fibroids do not demand action when every symptom domain is negative."
+    },
+    {
+     "claim": "Asymptomatic fibroids get observation.",
+     "to": "Asymptomatic fibroids get observation."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Fibroid size does not drive treatment; symptoms do.",
+     "from": "Fibroid size does not drive treatment; symptoms do."
+    },
+    {
+     "claim": "Markedly enlarged, multiple, intramural and pedunculated anatomy feels impressive but does not demand action.",
+     "from": "Markedly enlarged, multiple, intramural and pedunculated anatomy feels impressive but does not demand action."
+    },
+    {
+     "claim": "Every symptom domain is negated.",
+     "from": "Every symptom domain is negated."
+    },
+    {
+     "claim": "Asymptomatic fibroids get observation.",
+     "from": "Asymptomatic fibroids get observation."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "fibroids",
+   "find": "so they <b>regress after menopause</b> — which is why they can never explain postmenopausal bleeding.",
+   "with": "so they <b>regress after menopause</b>. For that reason they can never explain postmenopausal bleeding.",
+   "note": "round 2 voice: .pearls; em dash removed",
+   "claims": [
+    {
+     "claim": "Fibroids regress after menopause.",
+     "to": "Fibroids are estrogen- and progesterone-dependent, so they regress after menopause."
+    },
+    {
+     "claim": "Because they regress, fibroids can never explain postmenopausal bleeding.",
+     "to": "For that reason they can never explain postmenopausal bleeding."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Fibroids regress after menopause.",
+     "from": "Fibroids regress after menopause."
+    },
+    {
+     "claim": "Because they regress, fibroids can never explain postmenopausal bleeding.",
+     "from": "Because they regress, fibroids can never explain postmenopausal bleeding."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "fibroids",
+   "find": "<span class=\"lbl\">A detail that was bait in one stem and signal in another</span>\nA <b>same-sex relationship</b> appeared in the cervical cancer stem as a <b>decoy</b> (implying low risk — wrong, screening is identical). Here it functions as <b>valid reasoning</b>: low pregnancy risk means the contraceptive benefit of a COC or IUD doesn't offset their risks. Details aren't inherently bait or signal — <b>what the detail is being asked to decide</b> determines which it is.",
+   "with": "<span class=\"lbl\">Same-sex relationship</span>\nA <b>same-sex relationship</b> does not imply low cervical cancer risk; screening is identical. In fibroid management, it implies low pregnancy risk. The contraceptive benefit of a <b>COC</b> (combined oral contraceptive) or <b>IUD</b> (intrauterine device) then does not offset their risks.",
+   "note": "round 2 voice: .danger; rhetorical label and meta framing removed, em dashes removed, COC and IUD expanded",
+   "reworded_bold": [
+    "decoy",
+    "valid reasoning",
+    "what the detail is being asked to decide"
+   ],
+   "reworded_label": [
+    "A detail that was bait in one stem and signal in another"
+   ],
+   "claims": [
+    {
+     "claim": "A detail can be bait in one stem and signal in another.",
+     "dropped": "rhetorical label about questions"
+    },
+    {
+     "claim": "In the cervical cancer stem a same-sex relationship was a decoy.",
+     "to": "A same-sex relationship does not imply low cervical cancer risk; screening is identical."
+    },
+    {
+     "claim": "A same-sex relationship does not imply low cervical cancer risk.",
+     "to": "A same-sex relationship does not imply low cervical cancer risk; screening is identical."
+    },
+    {
+     "claim": "Cervical cancer screening is identical.",
+     "to": "A same-sex relationship does not imply low cervical cancer risk; screening is identical."
+    },
+    {
+     "claim": "Here a same-sex relationship is valid reasoning: low pregnancy risk.",
+     "to": "In fibroid management, it implies low pregnancy risk."
+    },
+    {
+     "claim": "With low pregnancy risk the contraceptive benefit of a COC or IUD doesn't offset their risks.",
+     "to": "The contraceptive benefit of a COC (combined oral contraceptive) or IUD (intrauterine device) then does not offset their risks."
+    },
+    {
+     "claim": "Details are not inherently bait or signal; what the detail is asked to decide determines which it is.",
+     "dropped": "meta framing about question details, not a clinical claim"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In the cervical cancer stem a same-sex relationship was a decoy.",
+     "from": "In the cervical cancer stem a same-sex relationship was a decoy."
+    },
+    {
+     "claim": "A same-sex relationship does not imply low cervical cancer risk.",
+     "from": "A same-sex relationship does not imply low cervical cancer risk."
+    },
+    {
+     "claim": "Cervical cancer screening is identical.",
+     "from": "Cervical cancer screening is identical."
+    },
+    {
+     "claim": "Here a same-sex relationship is valid reasoning: low pregnancy risk.",
+     "from": "Here a same-sex relationship is valid reasoning: low pregnancy risk."
+    },
+    {
+     "claim": "With low pregnancy risk the contraceptive benefit of a COC or IUD doesn't offset their risks.",
+     "from": "With low pregnancy risk the contraceptive benefit of a COC or IUD doesn't offset their risks."
+    },
+    {
+     "claim": "COC stands for combined oral contraceptive.",
+     "from": "expansion"
+    },
+    {
+     "claim": "IUD stands for intrauterine device.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "fibroids",
+   "find": "<b>Treat consequences, not findings.</b> Anatomic impressiveness on a CT report is not clinical significance — it's treat-the-number in imaging clothing.",
+   "with": "<b>Treat the consequence, not the finding.</b> Anatomic impressiveness on a <b>CT</b> (computed tomography) report is not clinical significance.",
+   "note": "round 2 voice: .rule; slogan and em dash removed, CT expanded",
+   "reworded_bold": [
+    "Treat consequences, not findings."
+   ],
+   "claims": [
+    {
+     "claim": "Treat consequences, not findings.",
+     "to": "Treat the consequence, not the finding."
+    },
+    {
+     "claim": "Anatomic impressiveness on a CT report is not clinical significance.",
+     "to": "Anatomic impressiveness on a CT (computed tomography) report is not clinical significance."
+    },
+    {
+     "claim": "Acting on it is treat-the-number applied to imaging.",
+     "carried_by": "Treat-the-number"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Treat consequences, not findings.",
+     "from": "Treat consequences, not findings."
+    },
+    {
+     "claim": "Anatomic impressiveness on a CT report is not clinical significance.",
+     "from": "Anatomic impressiveness on a CT report is not clinical significance."
+    },
+    {
+     "claim": "CT stands for computed tomography.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "fibroids",
+   "find": "Treat consequences, not findings",
+   "with": "Asymptomatic fibroids get observation, whatever their size",
+   "note": "round 2 voice: p.sub slogan replaced by the plain clinical rule",
+   "claims": [
+    {
+     "claim": "Treat consequences, not findings.",
+     "to": "Asymptomatic fibroids get observation, whatever their size"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Treat consequences, not findings.",
+     "from": "Treat consequences, not findings."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "the malformation pattern names the drug",
+   "with": "the malformation pattern identifies the drug",
+   "note": "round 2 voice: p.sub first segment; personification removed",
+   "claims": [
+    {
+     "claim": "The malformation pattern names the drug.",
+     "to": "the malformation pattern identifies the drug"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The malformation pattern names the drug.",
+     "from": "The malformation pattern names the drug."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<p>Two findings do the work, and they are the two that alcohol does not cause. <b>Cleft palate</b> and <b>distal phalangeal hypoplasia</b> together are <b>fetal hydantoin syndrome</b> &mdash; in utero exposure to a folate-antagonising antiepileptic, classically phenytoin, which crosses the placenta and produces low fetal folate with high oxidative metabolites. The wide anterior fontanelle and microcephaly complete it. <b>Fetal alcohol syndrome shares the microcephaly and the midface hypoplasia but has no association with clefting</b>, and its signature is a smooth philtrum with a thin vermilion border and short palpebral fissures &mdash; none of which is described.</p>",
+   "with": "<p><b>Cleft palate</b> and <b>distal phalangeal hypoplasia</b> are the two findings that alcohol does not cause. Together they indicate <b>fetal hydantoin syndrome</b>, from in utero exposure to a folate-antagonising antiepileptic, classically phenytoin. Phenytoin crosses the placenta and produces low fetal folate with high oxidative metabolites. The wide anterior fontanelle and microcephaly complete the pattern. <b>Fetal alcohol syndrome shares the microcephaly and the midface hypoplasia but has no association with clefting</b>. Its signature is a smooth philtrum with a thin vermilion border and short palpebral fissures; none of these is described.</p>",
+   "note": "round 2 voice: .dp; framing and em dashes removed, long sentences split",
+   "claims": [
+    {
+     "claim": "Two findings do the work.",
+     "to": "Cleft palate and distal phalangeal hypoplasia are the two findings that alcohol does not cause."
+    },
+    {
+     "claim": "They are the two findings alcohol does not cause.",
+     "to": "Cleft palate and distal phalangeal hypoplasia are the two findings that alcohol does not cause."
+    },
+    {
+     "claim": "Cleft palate and distal phalangeal hypoplasia together are fetal hydantoin syndrome.",
+     "to": "Together they indicate fetal hydantoin syndrome, from in utero exposure to a folate-antagonising antiepileptic, classically phenytoin."
+    },
+    {
+     "claim": "Fetal hydantoin syndrome is in utero exposure to a folate-antagonising antiepileptic, classically phenytoin.",
+     "to": "Together they indicate fetal hydantoin syndrome, from in utero exposure to a folate-antagonising antiepileptic, classically phenytoin."
+    },
+    {
+     "claim": "Phenytoin crosses the placenta.",
+     "to": "Phenytoin crosses the placenta and produces low fetal folate with high oxidative metabolites."
+    },
+    {
+     "claim": "Phenytoin produces low fetal folate with high oxidative metabolites.",
+     "to": "Phenytoin crosses the placenta and produces low fetal folate with high oxidative metabolites."
+    },
+    {
+     "claim": "The wide anterior fontanelle and microcephaly complete it.",
+     "to": "The wide anterior fontanelle and microcephaly complete the pattern."
+    },
+    {
+     "claim": "Fetal alcohol syndrome shares the microcephaly and the midface hypoplasia but has no association with clefting.",
+     "to": "Fetal alcohol syndrome shares the microcephaly and the midface hypoplasia but has no association with clefting."
+    },
+    {
+     "claim": "The fetal alcohol signature is a smooth philtrum, thin vermilion border and short palpebral fissures.",
+     "to": "Its signature is a smooth philtrum with a thin vermilion border and short palpebral fissures; none of these is described."
+    },
+    {
+     "claim": "None of the fetal alcohol signature is described.",
+     "to": "Its signature is a smooth philtrum with a thin vermilion border and short palpebral fissures; none of these is described."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Two findings do the work.",
+     "from": "Two findings do the work."
+    },
+    {
+     "claim": "They are the two findings alcohol does not cause.",
+     "from": "They are the two findings alcohol does not cause."
+    },
+    {
+     "claim": "Cleft palate and distal phalangeal hypoplasia together are fetal hydantoin syndrome.",
+     "from": "Cleft palate and distal phalangeal hypoplasia together are fetal hydantoin syndrome."
+    },
+    {
+     "claim": "Fetal hydantoin syndrome is in utero exposure to a folate-antagonising antiepileptic, classically phenytoin.",
+     "from": "Fetal hydantoin syndrome is in utero exposure to a folate-antagonising antiepileptic, classically phenytoin."
+    },
+    {
+     "claim": "Phenytoin crosses the placenta.",
+     "from": "Phenytoin crosses the placenta."
+    },
+    {
+     "claim": "Phenytoin produces low fetal folate with high oxidative metabolites.",
+     "from": "Phenytoin produces low fetal folate with high oxidative metabolites."
+    },
+    {
+     "claim": "The wide anterior fontanelle and microcephaly complete it.",
+     "from": "The wide anterior fontanelle and microcephaly complete it."
+    },
+    {
+     "claim": "Fetal alcohol syndrome shares the microcephaly and the midface hypoplasia but has no association with clefting.",
+     "from": "Fetal alcohol syndrome shares the microcephaly and the midface hypoplasia but has no association with clefting."
+    },
+    {
+     "claim": "The fetal alcohol signature is a smooth philtrum, thin vermilion border and short palpebral fissures.",
+     "from": "The fetal alcohol signature is a smooth philtrum, thin vermilion border and short palpebral fissures."
+    },
+    {
+     "claim": "None of the fetal alcohol signature is described.",
+     "from": "None of the fetal alcohol signature is described."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "the single most discriminating finding in the stem",
+   "with": "the single most discriminating finding",
+   "note": "round 2 voice: pertinent positives; stem framing removed",
+   "claims": [
+    {
+     "claim": "Cleft palate is the single most discriminating finding in the stem.",
+     "to": "Cleft palate — present in hydantoin and absent in fetal alcohol syndrome; the single most discriminating finding"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Cleft palate is the single most discriminating finding in the stem.",
+     "from": "Cleft palate is the single most discriminating finding in the stem."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "part of the hydantoin pattern, and easy to skim",
+   "with": "part of the hydantoin pattern",
+   "note": "round 2 voice: pertinent positives; framing removed",
+   "claims": [
+    {
+     "claim": "The wide anterior fontanelle is part of the hydantoin pattern.",
+     "to": "Wide anterior fontanelle — part of the hydantoin pattern"
+    },
+    {
+     "claim": "It is easy to skim.",
+     "dropped": "reading advice, not a clinical claim"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The wide anterior fontanelle is part of the hydantoin pattern.",
+     "from": "The wide anterior fontanelle is part of the hydantoin pattern."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "explains why a maternal medication history was never taken; it is the setup, not a finding",
+   "with": "explains why a maternal medication history was never taken",
+   "note": "round 2 voice: pertinent positives; framing removed",
+   "claims": [
+    {
+     "claim": "No prenatal care explains why a maternal medication history was never taken.",
+     "to": "No prenatal care — explains why a maternal medication history was never taken"
+    },
+    {
+     "claim": "It is the setup, not a finding.",
+     "dropped": "framing about the stem; the clinical point is kept in the same row"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "No prenatal care explains why a maternal medication history was never taken.",
+     "from": "No prenatal care explains why a maternal medication history was never taken."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<b>Low molecular weight heparin and unfractionated heparin have no fetal effects</b>; warfarin is teratogenic to bone and cartilage. So mechanical valve patients take <b>LMWH in the first trimester, warfarin in the second and third, and unfractionated heparin near delivery</b> &mdash; the whole logic being that heparins do not cross the placenta and warfarin does.",
+   "with": "<b>Low molecular weight heparin and unfractionated heparin have no fetal effects</b>; warfarin is teratogenic to bone and cartilage. Heparins do not cross the placenta and warfarin does. So mechanical valve patients take <b>LMWH in the first trimester, warfarin in the second and third, and unfractionated heparin near delivery</b>.",
+   "note": "round 2 voice: .danger; em dash and closer removed, mechanism moved before the plan",
+   "claims": [
+    {
+     "claim": "Low molecular weight heparin and unfractionated heparin have no fetal effects.",
+     "to": "Low molecular weight heparin and unfractionated heparin have no fetal effects; warfarin is teratogenic to bone and cartilage."
+    },
+    {
+     "claim": "Warfarin is teratogenic to bone and cartilage.",
+     "to": "Low molecular weight heparin and unfractionated heparin have no fetal effects; warfarin is teratogenic to bone and cartilage."
+    },
+    {
+     "claim": "Mechanical valve patients take LMWH in the first trimester, warfarin in the second and third, and unfractionated heparin near delivery.",
+     "to": "So mechanical valve patients take LMWH in the first trimester, warfarin in the second and third, and unfractionated heparin near delivery."
+    },
+    {
+     "claim": "Heparins do not cross the placenta and warfarin does.",
+     "to": "Heparins do not cross the placenta and warfarin does."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Low molecular weight heparin and unfractionated heparin have no fetal effects.",
+     "from": "Low molecular weight heparin and unfractionated heparin have no fetal effects."
+    },
+    {
+     "claim": "Warfarin is teratogenic to bone and cartilage.",
+     "from": "Warfarin is teratogenic to bone and cartilage."
+    },
+    {
+     "claim": "Mechanical valve patients take LMWH in the first trimester, warfarin in the second and third, and unfractionated heparin near delivery.",
+     "from": "Mechanical valve patients take LMWH in the first trimester, warfarin in the second and third, and unfractionated heparin near delivery."
+    },
+    {
+     "claim": "Heparins do not cross the placenta and warfarin does.",
+     "from": "Heparins do not cross the placenta and warfarin does."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "alcohol takes the philtrum and the palpebral fissures, phenytoin takes the palate and the fingertips",
+   "with": "alcohol affects the philtrum and the palpebral fissures, and phenytoin affects the palate and the fingertips",
+   "note": "round 2 voice: Pearls; personified paired contrast made plain",
+   "claims": [
+    {
+     "claim": "Alcohol affects the philtrum and the palpebral fissures.",
+     "to": "alcohol affects the philtrum and the palpebral fissures, and phenytoin affects the palate and the fingertips"
+    },
+    {
+     "claim": "Phenytoin affects the palate and the fingertips.",
+     "to": "alcohol affects the philtrum and the palpebral fissures, and phenytoin affects the palate and the fingertips"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Alcohol affects the philtrum and the palpebral fissures.",
+     "from": "Alcohol affects the philtrum and the palpebral fissures."
+    },
+    {
+     "claim": "Phenytoin affects the palate and the fingertips.",
+     "from": "Phenytoin affects the palate and the fingertips."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<b>Timing predicts the kind of damage</b> &mdash; before 2 weeks all-or-none, 3&ndash;8 weeks structure, after 8 weeks growth and brain",
+   "with": "<b>Timing predicts the kind of damage</b>: before 2 weeks all-or-none, 3&ndash;8 weeks structure, after 8 weeks growth and brain",
+   "note": "round 2 voice: Pearls; prose em dash to colon (block has non-bold rows)",
+   "claims": [
+    {
+     "claim": "Timing predicts the kind of damage.",
+     "to": "Timing predicts the kind of damage: before 2 weeks all-or-none, 3–8 weeks structure, after 8 weeks growth and brain"
+    },
+    {
+     "claim": "Before 2 weeks exposure is all-or-none.",
+     "to": "Timing predicts the kind of damage: before 2 weeks all-or-none, 3–8 weeks structure, after 8 weeks growth and brain"
+    },
+    {
+     "claim": "3–8 weeks exposure affects structure.",
+     "to": "Timing predicts the kind of damage: before 2 weeks all-or-none, 3–8 weeks structure, after 8 weeks growth and brain"
+    },
+    {
+     "claim": "After 8 weeks exposure affects growth and brain.",
+     "to": "Timing predicts the kind of damage: before 2 weeks all-or-none, 3–8 weeks structure, after 8 weeks growth and brain"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Timing predicts the kind of damage.",
+     "from": "Timing predicts the kind of damage."
+    },
+    {
+     "claim": "Before 2 weeks exposure is all-or-none.",
+     "from": "Before 2 weeks exposure is all-or-none."
+    },
+    {
+     "claim": "3–8 weeks exposure affects structure.",
+     "from": "3–8 weeks exposure affects structure."
+    },
+    {
+     "claim": "After 8 weeks exposure affects growth and brain.",
+     "from": "After 8 weeks exposure affects growth and brain."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "as well as renal agenesis &mdash; same cascade, different first cause",
+   "with": "as well as renal agenesis, because the cascade is the same with a different first cause",
+   "note": "round 2 voice: Pearls; em dash and clipped contrast removed",
+   "claims": [
+    {
+     "claim": "ACE inhibitors and renal agenesis give the same cascade with a different first cause.",
+     "to": "Oligohydramnios with Potter sequence should raise ACE inhibitors as well as renal agenesis, because the cascade is the same with a different first cause"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "ACE inhibitors and renal agenesis give the same cascade with a different first cause.",
+     "from": "ACE inhibitors and renal agenesis give the same cascade with a different first cause."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "Part II <b>Posterior Urethral Valves and Potter Sequence</b>, which owns the oligohydramnios cascade this brief reaches from the drug side, and Part I <b>Cyanotic Congenital Heart Disease</b>, which owns Ebstein anomaly. Store the discriminator as a question: <i>which single malformation does only one drug on the roster cause?</i>",
+   "with": "Part II <b>Posterior Urethral Valves and Potter Sequence</b> covers the oligohydramnios cascade that this brief reaches from the drug side. Part I <b>Cyanotic Congenital Heart Disease</b> covers Ebstein anomaly. Ask: <i>which single malformation does only one drug on the roster cause?</i>",
+   "note": "round 2 voice: Pairs with; owns -> covers, discriminator as Ask:",
+   "claims": [
+    {
+     "claim": "Posterior Urethral Valves and Potter Sequence owns the oligohydramnios cascade this brief reaches from the drug side.",
+     "to": "Part II Posterior Urethral Valves and Potter Sequence covers the oligohydramnios cascade that this brief reaches from the drug side."
+    },
+    {
+     "claim": "Cyanotic Congenital Heart Disease owns Ebstein anomaly.",
+     "to": "Part I Cyanotic Congenital Heart Disease covers Ebstein anomaly."
+    },
+    {
+     "claim": "The discriminator: which single malformation does only one drug on the roster cause?",
+     "to": "Ask: which single malformation does only one drug on the roster cause?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Posterior Urethral Valves and Potter Sequence owns the oligohydramnios cascade this brief reaches from the drug side.",
+     "from": "Posterior Urethral Valves and Potter Sequence owns the oligohydramnios cascade this brief reaches from the drug side."
+    },
+    {
+     "claim": "Cyanotic Congenital Heart Disease owns Ebstein anomaly.",
+     "from": "Cyanotic Congenital Heart Disease owns Ebstein anomaly."
+    },
+    {
+     "claim": "The discriminator: which single malformation does only one drug on the roster cause?",
+     "from": "The discriminator: which single malformation does only one drug on the roster cause?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "Teratogen questions are a matching exercise with a fixed roster &mdash; so the work is finding the one malformation that belongs to only one agent, and ignoring the shared features that every option can produce.",
+   "with": "To identify a teratogen, find the one malformation that belongs to only one agent on the list. Ignore the shared features that every candidate agent can produce.",
+   "note": "round 2 voice: .rule; question framing and em dash removed",
+   "claims": [
+    {
+     "claim": "Teratogen identification is matching against a fixed roster.",
+     "to": "To identify a teratogen, find the one malformation that belongs to only one agent on the list."
+    },
+    {
+     "claim": "Find the one malformation that belongs to only one agent.",
+     "to": "To identify a teratogen, find the one malformation that belongs to only one agent on the list."
+    },
+    {
+     "claim": "Ignore the shared features that every option can produce.",
+     "to": "Ignore the shared features that every candidate agent can produce."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Teratogen identification is matching against a fixed roster.",
+     "from": "Teratogen identification is matching against a fixed roster."
+    },
+    {
+     "claim": "Find the one malformation that belongs to only one agent.",
+     "from": "Find the one malformation that belongs to only one agent."
+    },
+    {
+     "claim": "Ignore the shared features that every option can produce.",
+     "from": "Ignore the shared features that every option can produce."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "<p><b>Primary amenorrhea</b> is no menarche by <b>15 with</b> secondary sexual characteristics, or by <b>13 without</b> them. The first step is <b>pelvic ultrasonography</b>, and the reason is architectural: the obstruction can sit anywhere along hypothalamus &rarr; pituitary &rarr; ovary &rarr; uterus &rarr; vagina, and imaging is the only test that answers the anatomical half of that chain in one move. Every hormonal test is interpretable <i>only once you know whether there is a uterus</i>. Then the algorithm forks twice. <b>Uterus present &rarr; read the FSH</b>: high FSH with high LH is primary ovarian insufficiency, and with short stature that is <b>Turner syndrome</b> &mdash; gonadal dysgenesis from loss of an X, giving streak ovaries and absent oestrogen, while intact adrenals still produce pubic hair. <b>Uterus absent &rarr; read the pubic hair</b>: present means the androgen receptor works, so 46,XX M&uuml;llerian agenesis; absent means it does not, so 46,XY complete androgen insensitivity.</p>",
+   "with": "<p><b>Primary amenorrhea</b> is no menarche by <b>15 with</b> secondary sexual characteristics, or by <b>13 without</b> them. The first step is <b>pelvic ultrasonography</b>. The obstruction can sit anywhere along the chain from hypothalamus to pituitary, ovary, uterus and vagina. Imaging is the only test that answers the anatomical half of that chain in one step. Every hormonal test is interpretable <i>only once you know whether there is a uterus</i>. The algorithm then forks twice. <b>Uterus present &rarr; read the FSH</b> (follicle-stimulating hormone). High FSH with high <b>LH</b> (luteinizing hormone) is primary ovarian insufficiency. With short stature, that is <b>Turner syndrome</b>: gonadal dysgenesis from loss of an X, giving streak ovaries and absent oestrogen. The intact adrenals still produce pubic hair. <b>Uterus absent &rarr; read the pubic hair</b>. Pubic hair present means the androgen receptor works, so the diagnosis is 46,XX M&uuml;llerian agenesis. Absent pubic hair means the receptor does not work, so the diagnosis is 46,XY complete androgen insensitivity.</p>",
+   "note": "round 2 voice: .dp; arrow chain and em dash removed, long sentences split, FSH and LH expanded",
+   "claims": [
+    {
+     "claim": "Primary amenorrhea is no menarche by 15 with secondary sexual characteristics.",
+     "to": "Primary amenorrhea is no menarche by 15 with secondary sexual characteristics, or by 13 without them."
+    },
+    {
+     "claim": "Primary amenorrhea is no menarche by 13 without secondary sexual characteristics.",
+     "to": "Primary amenorrhea is no menarche by 15 with secondary sexual characteristics, or by 13 without them."
+    },
+    {
+     "claim": "The first step is pelvic ultrasonography.",
+     "to": "The first step is pelvic ultrasonography."
+    },
+    {
+     "claim": "The reason is architectural.",
+     "dropped": "framing; the reason itself is stated in the next two sentences"
+    },
+    {
+     "claim": "The obstruction can sit anywhere along hypothalamus → pituitary → ovary → uterus → vagina.",
+     "to": "The obstruction can sit anywhere along the chain from hypothalamus to pituitary, ovary, uterus and vagina."
+    },
+    {
+     "claim": "Imaging is the only test that answers the anatomical half of that chain in one move.",
+     "to": "Imaging is the only test that answers the anatomical half of that chain in one step."
+    },
+    {
+     "claim": "Every hormonal test is interpretable only once you know whether there is a uterus.",
+     "to": "Every hormonal test is interpretable only once you know whether there is a uterus."
+    },
+    {
+     "claim": "The algorithm forks twice.",
+     "to": "The algorithm then forks twice."
+    },
+    {
+     "claim": "Uterus present → read the FSH.",
+     "to": "Uterus present → read the FSH (follicle-stimulating hormone)."
+    },
+    {
+     "claim": "High FSH with high LH is primary ovarian insufficiency.",
+     "to": "High FSH with high LH (luteinizing hormone) is primary ovarian insufficiency."
+    },
+    {
+     "claim": "Primary ovarian insufficiency with short stature is Turner syndrome.",
+     "to": "With short stature, that is Turner syndrome: gonadal dysgenesis from loss of an X, giving streak ovaries and absent oestrogen."
+    },
+    {
+     "claim": "Turner syndrome is gonadal dysgenesis from loss of an X, giving streak ovaries and absent oestrogen.",
+     "to": "With short stature, that is Turner syndrome: gonadal dysgenesis from loss of an X, giving streak ovaries and absent oestrogen."
+    },
+    {
+     "claim": "Intact adrenals still produce pubic hair.",
+     "to": "The intact adrenals still produce pubic hair."
+    },
+    {
+     "claim": "Uterus absent → read the pubic hair.",
+     "to": "Uterus absent → read the pubic hair."
+    },
+    {
+     "claim": "Pubic hair present means the androgen receptor works, so 46,XX Müllerian agenesis.",
+     "to": "Pubic hair present means the androgen receptor works, so the diagnosis is 46,XX Müllerian agenesis."
+    },
+    {
+     "claim": "Pubic hair absent means the androgen receptor does not work, so 46,XY complete androgen insensitivity.",
+     "to": "Absent pubic hair means the receptor does not work, so the diagnosis is 46,XY complete androgen insensitivity."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Primary amenorrhea is no menarche by 15 with secondary sexual characteristics.",
+     "from": "Primary amenorrhea is no menarche by 15 with secondary sexual characteristics."
+    },
+    {
+     "claim": "Primary amenorrhea is no menarche by 13 without secondary sexual characteristics.",
+     "from": "Primary amenorrhea is no menarche by 13 without secondary sexual characteristics."
+    },
+    {
+     "claim": "The first step is pelvic ultrasonography.",
+     "from": "The first step is pelvic ultrasonography."
+    },
+    {
+     "claim": "The obstruction can sit anywhere along hypothalamus → pituitary → ovary → uterus → vagina.",
+     "from": "The obstruction can sit anywhere along hypothalamus → pituitary → ovary → uterus → vagina."
+    },
+    {
+     "claim": "Imaging is the only test that answers the anatomical half of that chain in one move.",
+     "from": "Imaging is the only test that answers the anatomical half of that chain in one move."
+    },
+    {
+     "claim": "Every hormonal test is interpretable only once you know whether there is a uterus.",
+     "from": "Every hormonal test is interpretable only once you know whether there is a uterus."
+    },
+    {
+     "claim": "The algorithm forks twice.",
+     "from": "The algorithm forks twice."
+    },
+    {
+     "claim": "Uterus present → read the FSH.",
+     "from": "Uterus present → read the FSH."
+    },
+    {
+     "claim": "High FSH with high LH is primary ovarian insufficiency.",
+     "from": "High FSH with high LH is primary ovarian insufficiency."
+    },
+    {
+     "claim": "Primary ovarian insufficiency with short stature is Turner syndrome.",
+     "from": "Primary ovarian insufficiency with short stature is Turner syndrome."
+    },
+    {
+     "claim": "Turner syndrome is gonadal dysgenesis from loss of an X, giving streak ovaries and absent oestrogen.",
+     "from": "Turner syndrome is gonadal dysgenesis from loss of an X, giving streak ovaries and absent oestrogen."
+    },
+    {
+     "claim": "Intact adrenals still produce pubic hair.",
+     "from": "Intact adrenals still produce pubic hair."
+    },
+    {
+     "claim": "Uterus absent → read the pubic hair.",
+     "from": "Uterus absent → read the pubic hair."
+    },
+    {
+     "claim": "Pubic hair present means the androgen receptor works, so 46,XX Müllerian agenesis.",
+     "from": "Pubic hair present means the androgen receptor works, so 46,XX Müllerian agenesis."
+    },
+    {
+     "claim": "Pubic hair absent means the androgen receptor does not work, so 46,XY complete androgen insensitivity.",
+     "from": "Pubic hair absent means the androgen receptor does not work, so 46,XY complete androgen insensitivity."
+    },
+    {
+     "claim": "FSH stands for follicle-stimulating hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "LH stands for luteinizing hormone.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "<span class=\"lbl\">Right test, wrong time</span> Most wrong options here are <b>correct tests offered one step too early</b>. A 17-hydroxyprogesterone, a testosterone, a karyotype and an MRI are each the right move in some branch of this algorithm &mdash; and every one of them is uninterpretable until the ultrasound has said whether there is a uterus. <b>Reassurance</b> is the other trap: it is right for a girl under 15 who has secondary sexual characteristics, and wrong here because the definition is already met and her height is below the 3rd percentile.",
+   "with": "<span class=\"lbl\">Premature tests</span> A 17-hydroxyprogesterone, a testosterone, a karyotype and an <b>MRI</b> (magnetic resonance imaging) are each right in some branch of this algorithm. Every one of them is uninterpretable until the ultrasound has shown whether there is a uterus. Ordered before the ultrasound, they are <b>correct tests offered one step too early</b>. <b>Reassurance</b> is right for a girl under 15 who has secondary sexual characteristics. It is wrong here because the definition is already met and her height is below the 3rd percentile.",
+   "note": "round 2 voice: .danger; slogan label and option framing removed, em dash removed, MRI expanded",
+   "reworded_label": [
+    "Right test, wrong time"
+   ],
+   "claims": [
+    {
+     "claim": "Right test, wrong time.",
+     "to": "Ordered before the ultrasound, they are correct tests offered one step too early."
+    },
+    {
+     "claim": "Most wrong options here are correct tests offered one step too early.",
+     "to": "Ordered before the ultrasound, they are correct tests offered one step too early."
+    },
+    {
+     "claim": "17-hydroxyprogesterone, testosterone, karyotype and MRI are each the right move in some branch of this algorithm.",
+     "to": "A 17-hydroxyprogesterone, a testosterone, a karyotype and an MRI (magnetic resonance imaging) are each right in some branch of this algorithm."
+    },
+    {
+     "claim": "Every one of them is uninterpretable until the ultrasound has said whether there is a uterus.",
+     "to": "Every one of them is uninterpretable until the ultrasound has shown whether there is a uterus."
+    },
+    {
+     "claim": "Reassurance is the other trap.",
+     "to": "It is wrong here because the definition is already met and her height is below the 3rd percentile."
+    },
+    {
+     "claim": "Reassurance is right for a girl under 15 who has secondary sexual characteristics.",
+     "to": "Reassurance is right for a girl under 15 who has secondary sexual characteristics."
+    },
+    {
+     "claim": "Reassurance is wrong here because the definition is already met and her height is below the 3rd percentile.",
+     "to": "It is wrong here because the definition is already met and her height is below the 3rd percentile."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Right test, wrong time.",
+     "from": "Right test, wrong time."
+    },
+    {
+     "claim": "Most wrong options here are correct tests offered one step too early.",
+     "from": "Most wrong options here are correct tests offered one step too early."
+    },
+    {
+     "claim": "17-hydroxyprogesterone, testosterone, karyotype and MRI are each the right move in some branch of this algorithm.",
+     "from": "17-hydroxyprogesterone, testosterone, karyotype and MRI are each the right move in some branch of this algorithm."
+    },
+    {
+     "claim": "Every one of them is uninterpretable until the ultrasound has said whether there is a uterus.",
+     "from": "Every one of them is uninterpretable until the ultrasound has said whether there is a uterus."
+    },
+    {
+     "claim": "Reassurance is the other trap.",
+     "from": "Reassurance is the other trap."
+    },
+    {
+     "claim": "Reassurance is right for a girl under 15 who has secondary sexual characteristics.",
+     "from": "Reassurance is right for a girl under 15 who has secondary sexual characteristics."
+    },
+    {
+     "claim": "Reassurance is wrong here because the definition is already met and her height is below the 3rd percentile.",
+     "from": "Reassurance is wrong here because the definition is already met and her height is below the 3rd percentile."
+    },
+    {
+     "claim": "MRI stands for magnetic resonance imaging.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "<b>Height below the 3rd percentile</b> &mdash; the Turner giveaway;",
+   "with": "<b>Height below the 3rd percentile</b> &mdash; the key clue to Turner syndrome;",
+   "note": "round 2 voice: pertinent positives; slang removed",
+   "claims": [
+    {
+     "claim": "Height below the 3rd percentile is the Turner giveaway.",
+     "to": "Height below the 3rd percentile — the key clue to Turner syndrome;"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Height below the 3rd percentile is the Turner giveaway.",
+     "from": "Height below the 3rd percentile is the Turner giveaway."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "pregnancy excluded before anything else, as it must be",
+   "with": "pregnancy must be excluded before anything else",
+   "note": "round 2 voice: pertinent positives; dramatic closer folded into the statement",
+   "claims": [
+    {
+     "claim": "Pregnancy is excluded before anything else, as it must be.",
+     "to": "pregnancy must be excluded before anything else"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Pregnancy is excluded before anything else, as it must be.",
+     "from": "Pregnancy is excluded before anything else, as it must be."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "<b>Ultrasound first, always</b> &mdash; every hormone",
+   "with": "<b>Ultrasound first, always</b>: every hormone",
+   "note": "round 2 voice: Pearls; prose em dash to colon (block has non-bold rows)",
+   "claims": [
+    {
+     "claim": "Ultrasound first, always; every hormone in this workup is uninterpretable until you know whether there is a uterus.",
+     "to": "Ultrasound first, always: every hormone in this workup is uninterpretable until you know whether there is a uterus"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Ultrasound first, always; every hormone in this workup is uninterpretable until you know whether there is a uterus.",
+     "from": "Ultrasound first, always; every hormone in this workup is uninterpretable until you know whether there is a uterus."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "<b>High FSH means the ovary failed; low FSH means the brain is quiet</b> &mdash; the gonadotropins tell you which end of the axis to investigate",
+   "with": "<b>High FSH means the ovary failed; low FSH means a central cause</b>: the gonadotropins show which end of the axis to investigate",
+   "note": "round 2 voice: Pearls; personification and em dash removed",
+   "reworded_bold": [
+    "High FSH means the ovary failed; low FSH means the brain is quiet"
+   ],
+   "claims": [
+    {
+     "claim": "High FSH means the ovary failed.",
+     "to": "High FSH means the ovary failed; low FSH means a central cause: the gonadotropins show which end of the axis to investigate"
+    },
+    {
+     "claim": "Low FSH means the brain is quiet (a central cause).",
+     "to": "High FSH means the ovary failed; low FSH means a central cause: the gonadotropins show which end of the axis to investigate"
+    },
+    {
+     "claim": "The gonadotropins tell you which end of the axis to investigate.",
+     "to": "High FSH means the ovary failed; low FSH means a central cause: the gonadotropins show which end of the axis to investigate"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "High FSH means the ovary failed.",
+     "from": "High FSH means the ovary failed."
+    },
+    {
+     "claim": "Low FSH means the brain is quiet (a central cause).",
+     "from": "Low FSH means the brain is quiet (a central cause)."
+    },
+    {
+     "claim": "The gonadotropins tell you which end of the axis to investigate.",
+     "from": "The gonadotropins tell you which end of the axis to investigate."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "hair without breasts names the ovary as the failure",
+   "with": "pubic hair without breasts points to ovarian failure",
+   "note": "round 2 voice: Pearls; personification removed",
+   "claims": [
+    {
+     "claim": "Hair without breasts names the ovary as the failure.",
+     "to": "pubic hair without breasts points to ovarian failure"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hair without breasts names the ovary as the failure.",
+     "from": "Hair without breasts names the ovary as the failure."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "both present with an absent uterus and split on hair",
+   "with": "both present with an absent uterus and are distinguished by pubic hair",
+   "note": "round 2 voice: Pearls; clipped phrasing made plain",
+   "claims": [
+    {
+     "claim": "Müllerian agenesis and androgen insensitivity both present with an absent uterus.",
+     "to": "both present with an absent uterus and are distinguished by pubic hair"
+    },
+    {
+     "claim": "They split on hair.",
+     "to": "both present with an absent uterus and are distinguished by pubic hair"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Müllerian agenesis and androgen insensitivity both present with an absent uterus.",
+     "from": "Müllerian agenesis and androgen insensitivity both present with an absent uterus."
+    },
+    {
+     "claim": "They split on hair.",
+     "from": "They split on hair."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "<b>M&uuml;llerian agenesis obliges a renal ultrasound</b> &mdash; the ducts develop alongside the urinary tract, so anomalies travel together",
+   "with": "<b>M&uuml;llerian agenesis obliges a renal ultrasound</b>: the ducts develop alongside the urinary tract, so anomalies occur together",
+   "note": "round 2 voice: Pearls; em dash and figurative phrasing removed",
+   "claims": [
+    {
+     "claim": "Müllerian agenesis obliges a renal ultrasound.",
+     "to": "Müllerian agenesis obliges a renal ultrasound: the ducts develop alongside the urinary tract, so anomalies occur together"
+    },
+    {
+     "claim": "The ducts develop alongside the urinary tract, so anomalies travel together.",
+     "to": "the ducts develop alongside the urinary tract, so anomalies occur together"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Müllerian agenesis obliges a renal ultrasound.",
+     "from": "Müllerian agenesis obliges a renal ultrasound."
+    },
+    {
+     "claim": "The ducts develop alongside the urinary tract, so anomalies travel together.",
+     "from": "The ducts develop alongside the urinary tract, so anomalies travel together."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "Part I <b>Adolescent Abnormal Uterine Bleeding</b>, which owns the opposite complaint on the same axis &mdash; too much bleeding rather than none &mdash; and shares the immature-axis physiology. Part II <b>Sexual Maturity Rating</b> owns the staging vocabulary this brief uses throughout. Store the discriminator as a question: <i>is there a uterus, and if so is the FSH high or low?</i>",
+   "with": "Part I <b>Adolescent Abnormal Uterine Bleeding</b> covers the opposite complaint on the same axis (too much bleeding rather than none) and shares the immature-axis physiology. Part II <b>Sexual Maturity Rating</b> covers the staging vocabulary this brief uses throughout. Ask: <i>is there a uterus, and if so is the FSH high or low?</i>",
+   "note": "round 2 voice: Pairs with; owns -> covers, em dashes removed, discriminator as Ask:",
+   "claims": [
+    {
+     "claim": "Adolescent Abnormal Uterine Bleeding owns the opposite complaint on the same axis: too much bleeding rather than none.",
+     "to": "Part I Adolescent Abnormal Uterine Bleeding covers the opposite complaint on the same axis (too much bleeding rather than none) and shares the immature-axis physiology."
+    },
+    {
+     "claim": "It shares the immature-axis physiology.",
+     "to": "Part I Adolescent Abnormal Uterine Bleeding covers the opposite complaint on the same axis (too much bleeding rather than none) and shares the immature-axis physiology."
+    },
+    {
+     "claim": "Sexual Maturity Rating owns the staging vocabulary this brief uses throughout.",
+     "to": "Part II Sexual Maturity Rating covers the staging vocabulary this brief uses throughout."
+    },
+    {
+     "claim": "The discriminator: is there a uterus, and if so is the FSH high or low?",
+     "to": "Ask: is there a uterus, and if so is the FSH high or low?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Adolescent Abnormal Uterine Bleeding owns the opposite complaint on the same axis: too much bleeding rather than none.",
+     "from": "Adolescent Abnormal Uterine Bleeding owns the opposite complaint on the same axis: too much bleeding rather than none."
+    },
+    {
+     "claim": "It shares the immature-axis physiology.",
+     "from": "It shares the immature-axis physiology."
+    },
+    {
+     "claim": "Sexual Maturity Rating owns the staging vocabulary this brief uses throughout.",
+     "from": "Sexual Maturity Rating owns the staging vocabulary this brief uses throughout."
+    },
+    {
+     "claim": "The discriminator: is there a uterus, and if so is the FSH high or low?",
+     "from": "The discriminator: is there a uterus, and if so is the FSH high or low?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "When a workup has an anatomical branch and a hormonal branch, image first &mdash; a hormone measured before you know the anatomy produces a number you cannot interpret, and most of the wrong answers in these stems are correct tests offered one step too early.",
+   "with": "When a workup has an anatomical branch and a hormonal branch, image first. A hormone measured before you know the anatomy produces a number you cannot interpret.",
+   "note": "round 2 voice: .rule; em dash removed, stem framing moved to the .danger statement",
+   "claims": [
+    {
+     "claim": "When a workup has an anatomical branch and a hormonal branch, image first.",
+     "to": "When a workup has an anatomical branch and a hormonal branch, image first."
+    },
+    {
+     "claim": "A hormone measured before you know the anatomy produces a number you cannot interpret.",
+     "to": "A hormone measured before you know the anatomy produces a number you cannot interpret."
+    },
+    {
+     "claim": "Most wrong answers in these stems are correct tests offered one step too early.",
+     "carried_by": "Ordered before the ultrasound, they are correct tests offered one step too early."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a workup has an anatomical branch and a hormonal branch, image first.",
+     "from": "When a workup has an anatomical branch and a hormonal branch, image first."
+    },
+    {
+     "claim": "A hormone measured before you know the anatomy produces a number you cannot interpret.",
+     "from": "A hormone measured before you know the anatomy produces a number you cannot interpret."
+    }
+   ]
+  }
+ ]
+}

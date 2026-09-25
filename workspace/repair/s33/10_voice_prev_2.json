@@ -1,0 +1,646 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "<p>A minor discloses substance use during a confidential interview. The answer is <b>keep it confidential and counsel him directly</b> — because <b>substance use is a confidential service in essentially every state</b>, and nothing in the stem triggers an exception. Confidentiality here isn't a courtesy; it's the mechanism that makes honest disclosure possible at all, and adolescents who don't expect it <b>don't disclose</b>.</p>\n<p>The right move is procedural, not just permissive: <b>set the frame before he talks</b> (\"what you tell me stays between us, unless someone's safety is at risk\"), then use the disclosure — screen with <b>CRAFFT</b>, deliver brief counseling, and <b>encourage him to tell his parents himself</b>. Encouraging voluntary disclosure is not the same as disclosing.</p>",
+   "with": "<p>A minor discloses substance use during a confidential interview. In this case, <b>keep it confidential and counsel him directly</b>. <b>Substance use is a confidential service in essentially every state</b>, and nothing he describes meets an exception. Confidentiality is what makes honest disclosure possible at all; adolescents who don't expect it <b>don't disclose</b>.</p>\n<p><b>Set the frame before he talks</b> by saying \"what you tell me stays between us, unless someone's safety is at risk\". Then screen with <b>CRAFFT</b> (Car, Relax, Alone, Forget, Family/Friends, Trouble), deliver brief counseling, and <b>encourage him to tell his parents himself</b>. Encouraging voluntary disclosure is not the same as disclosing.</p>",
+   "note": "round 2 voice: .dp; drop framing and em dashes; expand CRAFFT",
+   "reworded_bold": [
+    "substance use is a confidential service in essentially every state",
+    "set the frame before he talks"
+   ],
+   "claims": [
+    {
+     "claim": "A minor discloses substance use during a confidential interview.",
+     "to": "A minor discloses substance use during a confidential interview."
+    },
+    {
+     "claim": "The next step is to keep it confidential and counsel him directly.",
+     "to": "In this case, keep it confidential and counsel him directly."
+    },
+    {
+     "claim": "Substance use is a confidential service in essentially every state.",
+     "to": "Substance use is a confidential service in essentially every state, and nothing he describes meets an exception."
+    },
+    {
+     "claim": "Nothing in the presentation triggers an exception to confidentiality.",
+     "to": "Substance use is a confidential service in essentially every state, and nothing he describes meets an exception."
+    },
+    {
+     "claim": "Confidentiality is not a courtesy.",
+     "dropped": "rhetorical contrast; the reason confidentiality matters is stated in the next claim"
+    },
+    {
+     "claim": "Confidentiality is the mechanism that makes honest disclosure possible at all.",
+     "to": "Confidentiality is what makes honest disclosure possible at all; adolescents who don't expect it don't disclose."
+    },
+    {
+     "claim": "Adolescents who don't expect confidentiality don't disclose.",
+     "to": "Confidentiality is what makes honest disclosure possible at all; adolescents who don't expect it don't disclose."
+    },
+    {
+     "claim": "The right move is procedural, not just permissive.",
+     "dropped": "rhetorical framing; the procedural steps are stated next"
+    },
+    {
+     "claim": "Set the frame before he talks: what you tell me stays between us, unless someone's safety is at risk.",
+     "to": "Set the frame before he talks by saying \"what you tell me stays between us, unless someone's safety is at risk\"."
+    },
+    {
+     "claim": "Screen with CRAFFT.",
+     "to": "Then screen with CRAFFT (Car, Relax, Alone, Forget, Family/Friends, Trouble), deliver brief counseling, and encourage him to tell his parents himself."
+    },
+    {
+     "claim": "Deliver brief counseling.",
+     "to": "Then screen with CRAFFT (Car, Relax, Alone, Forget, Family/Friends, Trouble), deliver brief counseling, and encourage him to tell his parents himself."
+    },
+    {
+     "claim": "Encourage him to tell his parents himself.",
+     "to": "Then screen with CRAFFT (Car, Relax, Alone, Forget, Family/Friends, Trouble), deliver brief counseling, and encourage him to tell his parents himself."
+    },
+    {
+     "claim": "Encouraging voluntary disclosure is not the same as disclosing.",
+     "to": "Encouraging voluntary disclosure is not the same as disclosing."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Keep it confidential and counsel him directly.",
+     "from": "The next step is to keep it confidential and counsel him directly."
+    },
+    {
+     "claim": "Substance use is a confidential service in essentially every state, and nothing he describes meets an exception.",
+     "from": "Substance use is a confidential service in essentially every state."
+    },
+    {
+     "claim": "Confidentiality is what makes honest disclosure possible at all.",
+     "from": "Confidentiality is the mechanism that makes honest disclosure possible at all."
+    },
+    {
+     "claim": "Adolescents who don't expect confidentiality don't disclose.",
+     "from": "Adolescents who don't expect confidentiality don't disclose."
+    },
+    {
+     "claim": "A minor discloses substance use during a confidential interview.",
+     "from": "A minor discloses substance use during a confidential interview."
+    },
+    {
+     "claim": "Set the frame before he talks by saying what you tell me stays between us, unless someone's safety is at risk.",
+     "from": "Set the frame before he talks: what you tell me stays between us, unless someone's safety is at risk."
+    },
+    {
+     "claim": "CRAFFT stands for Car, Relax, Alone, Forget, Family/Friends, Trouble.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Then screen with CRAFFT, deliver brief counseling, and encourage him to tell his parents himself.",
+     "from": "Screen with CRAFFT."
+    },
+    {
+     "claim": "Encouraging voluntary disclosure is not the same as disclosing.",
+     "from": "Encouraging voluntary disclosure is not the same as disclosing."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "<b>\"Inform his parents\"</b>: the <b>trump-card inversion</b>: parental authority feels like the higher principle, and for most care it is, but the confidential-services carve-outs exist <i>precisely</i> to override it. <b>\"Tell him you can't promise confidentiality\"</b>: true-sounding and destructive; the correct framing is <b>conditional</b>, naming the specific exceptions, not a blanket refusal. <b>\"Refer to a substance-use program\"</b>: a <b>sequencing trap</b>: escalation before you've screened severity; occasional use gets brief counseling, not a program. <b>\"Order a urine drug screen\"</b>: he already told you.",
+   "with": "<b>\"Inform his parents\"</b>: parental authority is the higher principle for most care, but the confidential-services carve-outs exist to override it (<b>trump-card inversion</b>) &middot; <b>\"Tell him you can't promise confidentiality\"</b>: this sounds true but is harmful; frame confidentiality as <b>conditional</b>, naming the specific exceptions, not as a blanket refusal &middot; <b>\"Refer to a substance-use program\"</b>: escalating before you have screened severity is a <b>sequencing trap</b>; occasional use gets brief counseling, not a program &middot; <b>\"Order a urine drug screen\"</b>: he already told you.",
+   "note": "round 2 voice: distractors; one colon per line, drop rhetoric",
+   "claims": [
+    {
+     "claim": "Informing his parents is a trump-card inversion.",
+     "to": "\"Inform his parents\": parental authority is the higher principle for most care, but the confidential-services carve-outs exist to override it (trump-card inversion)"
+    },
+    {
+     "claim": "Parental authority is the higher principle for most care.",
+     "to": "\"Inform his parents\": parental authority is the higher principle for most care, but the confidential-services carve-outs exist to override it (trump-card inversion)"
+    },
+    {
+     "claim": "The confidential-services carve-outs exist to override parental authority.",
+     "to": "\"Inform his parents\": parental authority is the higher principle for most care, but the confidential-services carve-outs exist to override it (trump-card inversion)"
+    },
+    {
+     "claim": "Telling him you can't promise confidentiality sounds true but is destructive.",
+     "to": "\"Tell him you can't promise confidentiality\": this sounds true but is harmful; frame confidentiality as conditional, naming the specific exceptions, not as a blanket refusal"
+    },
+    {
+     "claim": "The correct framing is conditional, naming the specific exceptions, not a blanket refusal.",
+     "to": "\"Tell him you can't promise confidentiality\": this sounds true but is harmful; frame confidentiality as conditional, naming the specific exceptions, not as a blanket refusal"
+    },
+    {
+     "claim": "Referring to a substance-use program is a sequencing trap.",
+     "to": "\"Refer to a substance-use program\": escalating before you have screened severity is a sequencing trap; occasional use gets brief counseling, not a program"
+    },
+    {
+     "claim": "Referral to a program escalates before severity is screened.",
+     "to": "\"Refer to a substance-use program\": escalating before you have screened severity is a sequencing trap; occasional use gets brief counseling, not a program"
+    },
+    {
+     "claim": "Occasional use gets brief counseling, not a program.",
+     "to": "\"Refer to a substance-use program\": escalating before you have screened severity is a sequencing trap; occasional use gets brief counseling, not a program"
+    },
+    {
+     "claim": "Ordering a urine drug screen is wrong because he already told you.",
+     "to": "\"Order a urine drug screen\": he already told you."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Informing his parents is a trump-card inversion.",
+     "from": "Informing his parents is a trump-card inversion."
+    },
+    {
+     "claim": "Parental authority is the higher principle for most care, but the confidential-services carve-outs exist to override it.",
+     "from": "Parental authority is the higher principle for most care."
+    },
+    {
+     "claim": "Telling him you can't promise confidentiality sounds true but is harmful.",
+     "from": "Telling him you can't promise confidentiality sounds true but is destructive."
+    },
+    {
+     "claim": "Frame confidentiality as conditional, naming the specific exceptions, not as a blanket refusal.",
+     "from": "The correct framing is conditional, naming the specific exceptions, not a blanket refusal."
+    },
+    {
+     "claim": "Escalating to a program before you have screened severity is a sequencing trap.",
+     "from": "Referral to a program escalates before severity is screened."
+    },
+    {
+     "claim": "Occasional use gets brief counseling, not a program.",
+     "from": "Occasional use gets brief counseling, not a program."
+    },
+    {
+     "claim": "Ordering a urine drug screen is wrong because he already told you.",
+     "from": "Ordering a urine drug screen is wrong because he already told you."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "<b>HEEADSSS</b> &mdash; the adolescent psychosocial history, asked privately: Home, Education and employment, Eating, Activities, Drugs, Sexuality, Suicide and depression, Safety",
+   "with": "<b>HEEADSSS</b> (Home, Education and employment, Eating, Activities, Drugs, Sexuality, Suicide and depression, Safety) is the adolescent psychosocial history, asked privately.",
+   "note": "round 2 voice: mnemonic pearl; prose em dash removed, letters kept",
+   "claims": [
+    {
+     "claim": "HEEADSSS is the adolescent psychosocial history.",
+     "to": "HEEADSSS (Home, Education and employment, Eating, Activities, Drugs, Sexuality, Suicide and depression, Safety) is the adolescent psychosocial history, asked privately."
+    },
+    {
+     "claim": "HEEADSSS is asked privately.",
+     "to": "HEEADSSS (Home, Education and employment, Eating, Activities, Drugs, Sexuality, Suicide and depression, Safety) is the adolescent psychosocial history, asked privately."
+    },
+    {
+     "claim": "HEEADSSS stands for Home, Education and employment, Eating, Activities, Drugs, Sexuality, Suicide and depression, Safety.",
+     "to": "HEEADSSS (Home, Education and employment, Eating, Activities, Drugs, Sexuality, Suicide and depression, Safety) is the adolescent psychosocial history, asked privately."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "HEEADSSS is the adolescent psychosocial history, asked privately.",
+     "from": "HEEADSSS is the adolescent psychosocial history."
+    },
+    {
+     "claim": "HEEADSSS stands for Home, Education and employment, Eating, Activities, Drugs, Sexuality, Suicide and depression, Safety.",
+     "from": "HEEADSSS stands for Home, Education and employment, Eating, Activities, Drugs, Sexuality, Suicide and depression, Safety."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "<b>Set the frame before the disclosure</b>, not after — retroactive confidentiality doesn't exist ·",
+   "with": "<b>Set the frame before the disclosure</b>; confidentiality cannot be promised retroactively ·",
+   "note": "round 2 voice: paired pearls row 1; em dash removed",
+   "claims": [
+    {
+     "claim": "Set the frame before the disclosure, not after.",
+     "to": "Set the frame before the disclosure; confidentiality cannot be promised retroactively"
+    },
+    {
+     "claim": "Retroactive confidentiality doesn't exist.",
+     "to": "Set the frame before the disclosure; confidentiality cannot be promised retroactively"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Set the frame before the disclosure.",
+     "from": "Set the frame before the disclosure, not after."
+    },
+    {
+     "claim": "Confidentiality cannot be promised retroactively.",
+     "from": "Retroactive confidentiality doesn't exist."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "<b>\"encourage him to tell his parents\"</b> is almost always in the correct answer — it preserves confidentiality <i>and</i> the family relationship.",
+   "with": "management almost always includes <b>\"encourage him to tell his parents\"</b>, which preserves confidentiality and the family relationship.",
+   "note": "round 2 voice: paired pearls last row; em dash removed",
+   "claims": [
+    {
+     "claim": "Encourage him to tell his parents is almost always in the correct answer.",
+     "to": "management almost always includes \"encourage him to tell his parents\", which preserves confidentiality and the family relationship."
+    },
+    {
+     "claim": "It preserves confidentiality and the family relationship.",
+     "to": "management almost always includes \"encourage him to tell his parents\", which preserves confidentiality and the family relationship."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Management almost always includes encourage him to tell his parents.",
+     "from": "Encourage him to tell his parents is almost always in the correct answer."
+    },
+    {
+     "claim": "It preserves confidentiality and the family relationship.",
+     "from": "It preserves confidentiality and the family relationship."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "<b>Elder Abuse &amp; Mandated Reporting</b> above — same axis, opposite direction. There, <b>impaired capacity</b> forces reporting over the patient's wishes. Here, <b>a minor with a confidential service</b> forces silence over the parent's wishes.",
+   "with": "<b>Elder Abuse &amp; Mandated Reporting</b> above covers the same axis in the opposite direction. There, <b>impaired capacity</b> forces reporting over the patient's wishes. Here, <b>a minor with a confidential service</b> forces confidentiality over the parent's wishes.",
+   "note": "round 2 voice: pairs with; em dash removed",
+   "claims": [
+    {
+     "claim": "Elder Abuse & Mandated Reporting is on the same axis, in the opposite direction.",
+     "to": "Elder Abuse & Mandated Reporting above covers the same axis in the opposite direction."
+    },
+    {
+     "claim": "There, impaired capacity forces reporting over the patient's wishes.",
+     "to": "There, impaired capacity forces reporting over the patient's wishes."
+    },
+    {
+     "claim": "Here, a minor with a confidential service forces silence over the parent's wishes.",
+     "to": "Here, a minor with a confidential service forces confidentiality over the parent's wishes."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Elder Abuse & Mandated Reporting covers the same axis in the opposite direction.",
+     "from": "Elder Abuse & Mandated Reporting is on the same axis, in the opposite direction."
+    },
+    {
+     "claim": "There, impaired capacity forces reporting over the patient's wishes.",
+     "from": "There, impaired capacity forces reporting over the patient's wishes."
+    },
+    {
+     "claim": "Here, a minor with a confidential service forces confidentiality over the parent's wishes.",
+     "from": "Here, a minor with a confidential service forces silence over the parent's wishes."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "Confidentiality questions are <b>exception-list questions</b>. Don't weigh how serious the behavior sounds — ask whether it satisfies a <b>named exception</b> (harm to self, harm to others, abuse). If it doesn't, confidentiality holds no matter how alarming the disclosure.",
+   "with": "Maintain confidentiality unless the disclosure satisfies a <b>named exception</b> (harm to self, harm to others, abuse). Do not weigh how serious the behavior sounds; without a named exception, confidentiality holds no matter how alarming the disclosure.",
+   "note": "round 2 voice: rule; meta framing removed, em dash removed",
+   "reworded_bold": [
+    "exception-list questions"
+   ],
+   "claims": [
+    {
+     "claim": "Confidentiality questions are exception-list questions.",
+     "dropped": "framing about the question; the exception list is stated in the next sentence"
+    },
+    {
+     "claim": "Don't weigh how serious the behavior sounds.",
+     "to": "Do not weigh how serious the behavior sounds; without a named exception, confidentiality holds no matter how alarming the disclosure."
+    },
+    {
+     "claim": "Ask whether it satisfies a named exception (harm to self, harm to others, abuse).",
+     "to": "Maintain confidentiality unless the disclosure satisfies a named exception (harm to self, harm to others, abuse)."
+    },
+    {
+     "claim": "If it doesn't, confidentiality holds no matter how alarming the disclosure.",
+     "to": "Do not weigh how serious the behavior sounds; without a named exception, confidentiality holds no matter how alarming the disclosure."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Maintain confidentiality unless the disclosure satisfies a named exception (harm to self, harm to others, abuse).",
+     "from": "Ask whether it satisfies a named exception (harm to self, harm to others, abuse)."
+    },
+    {
+     "claim": "Do not weigh how serious the behavior sounds.",
+     "from": "Don't weigh how serious the behavior sounds."
+    },
+    {
+     "claim": "Without a named exception, confidentiality holds no matter how alarming the disclosure.",
+     "from": "If it doesn't, confidentiality holds no matter how alarming the disclosure."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-vax",
+   "find": "<p>Age 11 is the <b>adolescent immunization platform</b>, and it is the only age gate any option here satisfies. She was up to date at 9, so every infant and early-childhood series is finished — hepatitis B, MMR and pneumococcal conjugate. <b>Tdap</b> is the one vaccine whose scheduled slot is now.</p>\n<p>Influenza is the trap, and it is a timing trap rather than an eligibility one. She is due for influenza vaccine every year, just not in <b>June</b>: the target window is September or October, and July and August are explicitly discouraged for single-dose recipients because immunity wanes before influenza peaks from December through February.</p>",
+   "with": "<p>Age 11 is the <b>adolescent immunization platform</b>, the only age gate that any of the offered vaccines satisfies. She was up to date at 9, so every infant and early-childhood series is finished: hepatitis B, <b>MMR</b> (measles-mumps-rubella) and pneumococcal conjugate. <b>Tdap</b> (tetanus toxoid, reduced diphtheria toxoid and acellular pertussis) is the one vaccine whose scheduled slot is now.</p>\n<p>Influenza vaccine is excluded by timing, not eligibility: she is due for it every year, just not in <b>June</b>. The target window is September or October. July and August are explicitly discouraged for single-dose recipients because immunity wanes before influenza peaks from December through February.</p>",
+   "note": "round 2 voice: .dp; trap framing removed, sentences split, MMR and Tdap expanded",
+   "claims": [
+    {
+     "claim": "Age 11 is the adolescent immunization platform.",
+     "to": "Age 11 is the adolescent immunization platform, the only age gate that any of the offered vaccines satisfies."
+    },
+    {
+     "claim": "The adolescent platform is the only age gate any option satisfies.",
+     "to": "Age 11 is the adolescent immunization platform, the only age gate that any of the offered vaccines satisfies."
+    },
+    {
+     "claim": "She was up to date at 9.",
+     "to": "She was up to date at 9, so every infant and early-childhood series is finished: hepatitis B, MMR (measles-mumps-rubella) and pneumococcal conjugate."
+    },
+    {
+     "claim": "Every infant and early-childhood series is finished: hepatitis B, MMR and pneumococcal conjugate.",
+     "to": "She was up to date at 9, so every infant and early-childhood series is finished: hepatitis B, MMR (measles-mumps-rubella) and pneumococcal conjugate."
+    },
+    {
+     "claim": "Tdap is the one vaccine whose scheduled slot is now.",
+     "to": "Tdap (tetanus toxoid, reduced diphtheria toxoid and acellular pertussis) is the one vaccine whose scheduled slot is now."
+    },
+    {
+     "claim": "Influenza is the trap.",
+     "dropped": "framing about the question; why influenza is not given now is stated next"
+    },
+    {
+     "claim": "Influenza fails on timing rather than eligibility.",
+     "to": "Influenza vaccine is excluded by timing, not eligibility: she is due for it every year, just not in June."
+    },
+    {
+     "claim": "She is due for influenza vaccine every year, just not in June.",
+     "to": "Influenza vaccine is excluded by timing, not eligibility: she is due for it every year, just not in June."
+    },
+    {
+     "claim": "The influenza target window is September or October.",
+     "to": "The target window is September or October."
+    },
+    {
+     "claim": "July and August are explicitly discouraged for single-dose recipients.",
+     "to": "July and August are explicitly discouraged for single-dose recipients because immunity wanes before influenza peaks from December through February."
+    },
+    {
+     "claim": "Immunity wanes before influenza peaks from December through February.",
+     "to": "July and August are explicitly discouraged for single-dose recipients because immunity wanes before influenza peaks from December through February."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Age 11 is the adolescent immunization platform.",
+     "from": "Age 11 is the adolescent immunization platform."
+    },
+    {
+     "claim": "The adolescent platform is the only age gate that any of the offered vaccines satisfies.",
+     "from": "The adolescent platform is the only age gate any option satisfies."
+    },
+    {
+     "claim": "She was up to date at 9.",
+     "from": "She was up to date at 9."
+    },
+    {
+     "claim": "Every infant and early-childhood series is finished: hepatitis B, MMR and pneumococcal conjugate.",
+     "from": "Every infant and early-childhood series is finished: hepatitis B, MMR and pneumococcal conjugate."
+    },
+    {
+     "claim": "MMR stands for measles-mumps-rubella.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Tdap stands for tetanus toxoid, reduced diphtheria toxoid and acellular pertussis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Tdap is the one vaccine whose scheduled slot is now.",
+     "from": "Tdap is the one vaccine whose scheduled slot is now."
+    },
+    {
+     "claim": "Influenza vaccine is excluded by timing, not eligibility.",
+     "from": "Influenza fails on timing rather than eligibility."
+    },
+    {
+     "claim": "She is due for influenza vaccine every year, just not in June.",
+     "from": "She is due for influenza vaccine every year, just not in June."
+    },
+    {
+     "claim": "The target window is September or October.",
+     "from": "The influenza target window is September or October."
+    },
+    {
+     "claim": "July and August are explicitly discouraged for single-dose recipients.",
+     "from": "July and August are explicitly discouraged for single-dose recipients."
+    },
+    {
+     "claim": "Immunity wanes before influenza peaks from December through February.",
+     "from": "Immunity wanes before influenza peaks from December through February."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-vax",
+   "find": "The classic keyed answer on retired exam items remains two doses if initiated before 15 and three if at 15 or older or immunocompromised, so expect the exam ledger to lag the clinic ledger here. Dose-count mechanics live in the HPV brief.",
+   "with": "On retired exam items, the classic keyed answer remains two doses if initiated before 15 and three if at 15 or older or immunocompromised. Expect the exam answer to lag clinical practice here. The HPV brief covers dose-count mechanics.",
+   "note": "round 2 voice: divergence note; ledger wording replaced, sentence split",
+   "claims": [
+    {
+     "claim": "The classic keyed answer on retired exam items remains two doses if initiated before 15.",
+     "to": "On retired exam items, the classic keyed answer remains two doses if initiated before 15 and three if at 15 or older or immunocompromised."
+    },
+    {
+     "claim": "The classic keyed answer is three doses if at 15 or older or immunocompromised.",
+     "to": "On retired exam items, the classic keyed answer remains two doses if initiated before 15 and three if at 15 or older or immunocompromised."
+    },
+    {
+     "claim": "Expect the exam ledger to lag the clinic ledger here.",
+     "to": "Expect the exam answer to lag clinical practice here."
+    },
+    {
+     "claim": "Dose-count mechanics live in the HPV brief.",
+     "to": "The HPV brief covers dose-count mechanics."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "On retired exam items, the classic keyed answer remains two doses if initiated before 15.",
+     "from": "The classic keyed answer on retired exam items remains two doses if initiated before 15."
+    },
+    {
+     "claim": "The classic keyed answer is three doses if at 15 or older or immunocompromised.",
+     "from": "The classic keyed answer is three doses if at 15 or older or immunocompromised."
+    },
+    {
+     "claim": "Expect the exam answer to lag clinical practice here.",
+     "from": "Expect the exam ledger to lag the clinic ledger here."
+    },
+    {
+     "claim": "The HPV brief covers dose-count mechanics.",
+     "from": "Dose-count mechanics live in the HPV brief."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-vax",
+   "find": "The 11 to 12 platform is three vaccines: Tdap, HPV and MenACWY, and boards test it by offering one among decoys or asking what else is due &middot; MenACWY gets a booster at 16 when the risk period begins; MenB is separate at 16 to 23 by shared decision-making &middot;",
+   "with": "The 11 to 12 platform is three vaccines: <b>Tdap</b> (tetanus toxoid, reduced diphtheria toxoid and acellular pertussis), <b>HPV</b> (human papillomavirus) and <b>MenACWY</b> (meningococcal conjugate vaccine for serogroups A, C, W and Y). Boards test it by offering one among decoys or asking what else is due &middot; MenACWY gets a booster at 16 when the risk period begins; <b>MenB</b> (serogroup B meningococcal vaccine) is separate, at 16 to 23 by shared decision-making &middot;",
+   "note": "round 2 voice: pearls rows 1-2; acronyms expanded, long row split",
+   "claims": [
+    {
+     "claim": "The 11 to 12 platform is three vaccines: Tdap, HPV and MenACWY.",
+     "to": "The 11 to 12 platform is three vaccines: Tdap (tetanus toxoid, reduced diphtheria toxoid and acellular pertussis), HPV (human papillomavirus) and MenACWY (meningococcal conjugate vaccine for serogroups A, C, W and Y)."
+    },
+    {
+     "claim": "Boards test it by offering one among decoys or asking what else is due.",
+     "to": "Boards test it by offering one among decoys or asking what else is due"
+    },
+    {
+     "claim": "MenACWY gets a booster at 16 when the risk period begins.",
+     "to": "MenACWY gets a booster at 16 when the risk period begins; MenB (serogroup B meningococcal vaccine) is separate, at 16 to 23 by shared decision-making"
+    },
+    {
+     "claim": "MenB is separate, at 16 to 23 by shared decision-making.",
+     "to": "MenACWY gets a booster at 16 when the risk period begins; MenB (serogroup B meningococcal vaccine) is separate, at 16 to 23 by shared decision-making"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The 11 to 12 platform is three vaccines: Tdap, HPV and MenACWY.",
+     "from": "The 11 to 12 platform is three vaccines: Tdap, HPV and MenACWY."
+    },
+    {
+     "claim": "Tdap stands for tetanus toxoid, reduced diphtheria toxoid and acellular pertussis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HPV stands for human papillomavirus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MenACWY stands for meningococcal conjugate vaccine for serogroups A, C, W and Y.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MenB stands for serogroup B meningococcal vaccine.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Boards test it by offering one among decoys or asking what else is due.",
+     "from": "Boards test it by offering one among decoys or asking what else is due."
+    },
+    {
+     "claim": "MenACWY gets a booster at 16 when the risk period begins.",
+     "from": "MenACWY gets a booster at 16 when the risk period begins."
+    },
+    {
+     "claim": "MenB is separate, at 16 to 23 by shared decision-making.",
+     "from": "MenB is separate, at 16 to 23 by shared decision-making."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-vax",
+   "find": "Undocumented means unvaccinated — verbal report does not count",
+   "with": "Undocumented means unvaccinated; verbal report does not count",
+   "note": "round 2 voice: pearls last row; em dash removed",
+   "claims": [
+    {
+     "claim": "Undocumented means unvaccinated.",
+     "to": "Undocumented means unvaccinated; verbal report does not count"
+    },
+    {
+     "claim": "Verbal report does not count.",
+     "to": "Undocumented means unvaccinated; verbal report does not count"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Undocumented means unvaccinated.",
+     "from": "Undocumented means unvaccinated."
+    },
+    {
+     "claim": "Verbal report does not count.",
+     "from": "Verbal report does not count."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-vax",
+   "find": "Part I <b>HPV Vaccination &amp; Series Rules</b> owns the series rules and Part I <b>DTaP: Contraindication vs. Precaution</b> owns pertussis contraindication versus precaution. Store the link as a question: is this an age-platform question or a series-mechanics question?",
+   "with": "Part I <b>HPV Vaccination &amp; Series Rules</b> covers the series rules, and Part I <b>DTaP: Contraindication vs. Precaution</b> covers pertussis contraindication versus precaution. Ask: is this an age-platform question or a series-mechanics question?",
+   "note": "round 2 voice: pairs with; owns -> covers, store-as-question -> Ask",
+   "claims": [
+    {
+     "claim": "HPV Vaccination & Series Rules owns the series rules.",
+     "to": "Part I HPV Vaccination & Series Rules covers the series rules, and Part I DTaP: Contraindication vs. Precaution covers pertussis contraindication versus precaution."
+    },
+    {
+     "claim": "DTaP: Contraindication vs. Precaution owns pertussis contraindication versus precaution.",
+     "to": "Part I HPV Vaccination & Series Rules covers the series rules, and Part I DTaP: Contraindication vs. Precaution covers pertussis contraindication versus precaution."
+    },
+    {
+     "claim": "Is this an age-platform question or a series-mechanics question?",
+     "to": "Ask: is this an age-platform question or a series-mechanics question?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "HPV Vaccination & Series Rules covers the series rules.",
+     "from": "HPV Vaccination & Series Rules owns the series rules."
+    },
+    {
+     "claim": "DTaP: Contraindication vs. Precaution covers pertussis contraindication versus precaution.",
+     "from": "DTaP: Contraindication vs. Precaution owns pertussis contraindication versus precaution."
+    },
+    {
+     "claim": "Is this an age-platform question or a series-mechanics question?",
+     "from": "Is this an age-platform question or a series-mechanics question?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-vax",
+   "find": "When every option is a real vaccine the question is an eligibility gate, and there are only three gates — age platform, series already complete, and season — so check them in that order.",
+   "with": "When every option is a real vaccine, decide by eligibility. There are only three gates: age platform, series already complete, and season. Check them in that order.",
+   "note": "round 2 voice: rule; em dashes removed, split",
+   "claims": [
+    {
+     "claim": "When every option is a real vaccine the question is an eligibility gate.",
+     "to": "When every option is a real vaccine, decide by eligibility."
+    },
+    {
+     "claim": "There are only three gates: age platform, series already complete, and season.",
+     "to": "There are only three gates: age platform, series already complete, and season."
+    },
+    {
+     "claim": "Check them in that order.",
+     "to": "Check them in that order."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When every option is a real vaccine, decide by eligibility.",
+     "from": "When every option is a real vaccine the question is an eligibility gate."
+    },
+    {
+     "claim": "There are only three gates: age platform, series already complete, and season.",
+     "from": "There are only three gates: age platform, series already complete, and season."
+    },
+    {
+     "claim": "Check them in that order.",
+     "from": "Check them in that order."
+    }
+   ]
+  }
+ ]
+}

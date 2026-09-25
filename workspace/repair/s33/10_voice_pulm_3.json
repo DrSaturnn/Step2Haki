@@ -1,0 +1,1380 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "mycoplasma",
+   "find": "<p>2 weeks of gradually worsening dry cough + low-grade fever + <b>\"tired but not ill\"</b> + <b>bilateral</b> diffuse findings + normal saturation = <b>atypical pneumonia</b> in a school-aged child = <i>Mycoplasma pneumoniae</i>. Every distractor in these stems is killed by an explicit sentence — read it as a list of assassinations, not a puzzle.</p>",
+   "with": "<p>A child who looks <b>\"tired but not ill\"</b> has 2 weeks of gradually worsening dry cough, low-grade fever, <b>bilateral</b> diffuse findings and normal saturation. This is <b>atypical pneumonia</b>, which in a school-aged child is <i>Mycoplasma pneumoniae</i>.</p>",
+   "note": ".dp 1",
+   "claims": [
+    {
+     "claim": "2 weeks of gradually worsening dry cough, low-grade fever, \"tired but not ill\", bilateral diffuse findings and normal saturation indicate atypical pneumonia.",
+     "to": "A child who looks \"tired but not ill\" has 2 weeks of gradually worsening dry cough, low-grade fever, bilateral diffuse findings and normal saturation."
+    },
+    {
+     "claim": "These findings together indicate atypical pneumonia.",
+     "to": "This is atypical pneumonia, which in a school-aged child is Mycoplasma pneumoniae."
+    },
+    {
+     "claim": "Atypical pneumonia in a school-aged child is Mycoplasma pneumoniae.",
+     "to": "This is atypical pneumonia, which in a school-aged child is Mycoplasma pneumoniae."
+    },
+    {
+     "claim": "Every distractor in these stems is ruled out by an explicit sentence.",
+     "dropped": "framing about how the question stems are written"
+    },
+    {
+     "claim": "Read the stem as a list of eliminations, not a puzzle.",
+     "dropped": "rhetorical framing about reading the question"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A child who looks \"tired but not ill\" has 2 weeks of gradually worsening dry cough, low-grade fever, bilateral diffuse findings and normal saturation.",
+     "from": "2 weeks of gradually worsening dry cough, low-grade fever, \"tired but not ill\", bilateral diffuse findings and normal saturation indicate atypical pneumonia."
+    },
+    {
+     "claim": "This is atypical pneumonia.",
+     "from": "These findings together indicate atypical pneumonia."
+    },
+    {
+     "claim": "Atypical pneumonia in a school-aged child is Mycoplasma pneumoniae.",
+     "from": "Atypical pneumonia in a school-aged child is Mycoplasma pneumoniae."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "mycoplasma",
+   "find": "<span class=\"lbl\">The adult version — a second discriminator</span>\n<p><b>Upper AND lower respiratory tract involvement together.</b> Pharyngitis plus an interstitial pneumonia is distinctive — typical bacterial pneumonia does not cause pharyngitis. A <b>small serous pleural effusion occurs in ~25% of Mycoplasma</b>, so an effusion is not evidence for pneumococcus; what separates them is everything around it (abrupt onset, rigors, rusty sputum, lobar consolidation, ill appearance).</p>",
+   "with": "<span class=\"lbl\">The adult version</span>\n<p>In adults, pharyngitis plus an interstitial pneumonia, meaning <b>upper and lower respiratory tract involvement together</b>, is distinctive. Typical bacterial pneumonia does not cause pharyngitis. A <b>small serous pleural effusion occurs in ~25% of Mycoplasma</b>, so an effusion is not evidence for pneumococcus. Abrupt onset, rigors, rusty sputum, lobar consolidation and ill appearance separate pneumococcus from Mycoplasma.</p>",
+   "note": ".dp 2 adult version; label em dash removed",
+   "reworded_bold": [
+    "Upper AND lower respiratory tract involvement together."
+   ],
+   "reworded_label": [
+    "The adult version — a second discriminator"
+   ],
+   "claims": [
+    {
+     "claim": "In the adult version, upper and lower respiratory tract involvement together is a second discriminator.",
+     "to": "In adults, pharyngitis plus an interstitial pneumonia, meaning upper and lower respiratory tract involvement together, is distinctive."
+    },
+    {
+     "claim": "Pharyngitis plus an interstitial pneumonia is distinctive.",
+     "to": "In adults, pharyngitis plus an interstitial pneumonia, meaning upper and lower respiratory tract involvement together, is distinctive."
+    },
+    {
+     "claim": "Typical bacterial pneumonia does not cause pharyngitis.",
+     "to": "Typical bacterial pneumonia does not cause pharyngitis."
+    },
+    {
+     "claim": "A small serous pleural effusion occurs in ~25% of Mycoplasma.",
+     "to": "A small serous pleural effusion occurs in ~25% of Mycoplasma, so an effusion is not evidence for pneumococcus."
+    },
+    {
+     "claim": "An effusion is therefore not evidence for pneumococcus.",
+     "to": "A small serous pleural effusion occurs in ~25% of Mycoplasma, so an effusion is not evidence for pneumococcus."
+    },
+    {
+     "claim": "What separates pneumococcus from Mycoplasma is the surrounding picture: abrupt onset, rigors, rusty sputum, lobar consolidation, ill appearance.",
+     "to": "Abrupt onset, rigors, rusty sputum, lobar consolidation and ill appearance separate pneumococcus from Mycoplasma."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In adults, pharyngitis plus an interstitial pneumonia, meaning upper and lower respiratory tract involvement together, is distinctive.",
+     "from": "Pharyngitis plus an interstitial pneumonia is distinctive."
+    },
+    {
+     "claim": "Upper and lower respiratory tract involvement together applies in adults.",
+     "from": "In the adult version, upper and lower respiratory tract involvement together is a second discriminator."
+    },
+    {
+     "claim": "Typical bacterial pneumonia does not cause pharyngitis.",
+     "from": "Typical bacterial pneumonia does not cause pharyngitis."
+    },
+    {
+     "claim": "A small serous pleural effusion occurs in ~25% of Mycoplasma, so an effusion is not evidence for pneumococcus.",
+     "from": "A small serous pleural effusion occurs in ~25% of Mycoplasma."
+    },
+    {
+     "claim": "Abrupt onset, rigors, rusty sputum, lobar consolidation and ill appearance separate pneumococcus from Mycoplasma.",
+     "from": "What separates pneumococcus from Mycoplasma is the surrounding picture: abrupt onset, rigors, rusty sputum, lobar consolidation, ill appearance."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "mycoplasma",
+   "find": "Neonate = GBS / <i>E. coli</i> / Listeria · <b>&lt;5 = viruses</b> (RSV, parainfluenza, adenovirus, hMPV) · <b>≥5 = Mycoplasma, Chlamydophila, S. pneumoniae</b> · <b>1–3 months = Chlamydia trachomatis</b> — staccato cough, <b>afebrile</b>, conjunctivitis, eosinophilia.",
+   "with": "Neonate = <b>GBS</b> (group B streptococcus) / <i>E. coli</i> / Listeria · <b>&lt;5 = viruses</b>: <b>RSV</b> (respiratory syncytial virus), parainfluenza, adenovirus, <b>hMPV</b> (human metapneumovirus) · <b>≥5 = Mycoplasma, Chlamydophila, S. pneumoniae</b> · <b>1–3 months = Chlamydia trachomatis</b>: staccato cough, <b>afebrile</b>, conjunctivitis, eosinophilia.",
+   "note": "age-based pearls: em dash to colon, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Neonatal pneumonia organisms are GBS, E. coli and Listeria.",
+     "to": "Neonate = GBS (group B streptococcus) / E. coli / Listeria"
+    },
+    {
+     "claim": "Under 5, pneumonia is viral: RSV, parainfluenza, adenovirus, hMPV.",
+     "to": "<5 = viruses: RSV (respiratory syncytial virus), parainfluenza, adenovirus, hMPV (human metapneumovirus)"
+    },
+    {
+     "claim": "At 5 or older, pneumonia is Mycoplasma, Chlamydophila, S. pneumoniae.",
+     "to": "≥5 = Mycoplasma, Chlamydophila, S. pneumoniae"
+    },
+    {
+     "claim": "At 1–3 months, Chlamydia trachomatis gives staccato cough, afebrile course, conjunctivitis, eosinophilia.",
+     "to": "1–3 months = Chlamydia trachomatis: staccato cough, afebrile, conjunctivitis, eosinophilia."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Neonatal pneumonia organisms are GBS, E. coli and Listeria.",
+     "from": "Neonatal pneumonia organisms are GBS, E. coli and Listeria."
+    },
+    {
+     "claim": "GBS stands for group B streptococcus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Under 5, pneumonia is viral: RSV, parainfluenza, adenovirus, hMPV.",
+     "from": "Under 5, pneumonia is viral: RSV, parainfluenza, adenovirus, hMPV."
+    },
+    {
+     "claim": "RSV stands for respiratory syncytial virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "hMPV stands for human metapneumovirus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "At 5 or older, pneumonia is Mycoplasma, Chlamydophila, S. pneumoniae.",
+     "from": "At 5 or older, pneumonia is Mycoplasma, Chlamydophila, S. pneumoniae."
+    },
+    {
+     "claim": "At 1–3 months, Chlamydia trachomatis gives staccato cough, afebrile course, conjunctivitis, eosinophilia.",
+     "from": "At 1–3 months, Chlamydia trachomatis gives staccato cough, afebrile course, conjunctivitis, eosinophilia."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "mycoplasma",
+   "find": "<b>erythema multiforme / MIRM</b> — the leading <b>infectious</b> cause of EM after HSV",
+   "with": "<b>erythema multiforme / MIRM</b> (Mycoplasma pneumoniae-induced rash and mucositis): the leading <b>infectious</b> cause of erythema multiforme after <b>HSV</b> (herpes simplex virus)",
+   "note": "micro pearls: em dash to colon, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Mycoplasma causes erythema multiforme / MIRM and is the leading infectious cause of EM after HSV.",
+     "to": "erythema multiforme / MIRM (Mycoplasma pneumoniae-induced rash and mucositis): the leading infectious cause of erythema multiforme after HSV (herpes simplex virus)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Mycoplasma causes erythema multiforme / MIRM and is the leading infectious cause of EM after HSV.",
+     "from": "Mycoplasma causes erythema multiforme / MIRM and is the leading infectious cause of EM after HSV."
+    },
+    {
+     "claim": "MIRM stands for Mycoplasma pneumoniae-induced rash and mucositis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "EM stands for erythema multiforme.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HSV stands for herpes simplex virus.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "mycoplasma",
+   "find": "carries the cold-agglutinin hemolysis this organism causes, and the direct antiglobulin pattern that names it.",
+   "with": "covers the cold-agglutinin hemolysis Mycoplasma causes and the direct antiglobulin pattern that identifies it.",
+   "note": "Pairs with: carries to covers",
+   "claims": [
+    {
+     "claim": "Part I Drug-Induced Immune Hemolysis carries the cold-agglutinin hemolysis this organism causes.",
+     "to": "Part I Drug-Induced Immune Hemolysis covers the cold-agglutinin hemolysis Mycoplasma causes and the direct antiglobulin pattern that identifies it."
+    },
+    {
+     "claim": "That brief carries the direct antiglobulin pattern that names the hemolysis.",
+     "to": "Part I Drug-Induced Immune Hemolysis covers the cold-agglutinin hemolysis Mycoplasma causes and the direct antiglobulin pattern that identifies it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I Drug-Induced Immune Hemolysis covers the cold-agglutinin hemolysis Mycoplasma causes.",
+     "from": "Part I Drug-Induced Immune Hemolysis carries the cold-agglutinin hemolysis this organism causes."
+    },
+    {
+     "claim": "It covers the direct antiglobulin pattern that identifies the hemolysis.",
+     "from": "That brief carries the direct antiglobulin pattern that names the hemolysis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "mycoplasma",
+   "find": "When a stem gives symptoms in <b>two anatomic compartments at once</b> (upper + lower airway), ask which organisms actually span both. Compartment-spanning is a discriminator most people never check, and it collapses the atypical-vs-typical fork instantly.",
+   "with": "When symptoms involve <b>two anatomic compartments at once</b> (upper and lower airway), ask which organisms span both. This immediately separates atypical from typical pneumonia.",
+   "note": ".rule",
+   "claims": [
+    {
+     "claim": "With symptoms in two anatomic compartments at once (upper + lower airway), ask which organisms actually span both.",
+     "to": "When symptoms involve two anatomic compartments at once (upper and lower airway), ask which organisms span both."
+    },
+    {
+     "claim": "Compartment-spanning is a discriminator most people never check.",
+     "dropped": "framing about test-takers' habits"
+    },
+    {
+     "claim": "Compartment-spanning collapses the atypical-vs-typical fork instantly.",
+     "to": "This immediately separates atypical from typical pneumonia."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When symptoms involve two anatomic compartments at once (upper and lower airway), ask which organisms span both.",
+     "from": "With symptoms in two anatomic compartments at once (upper + lower airway), ask which organisms actually span both."
+    },
+    {
+     "claim": "This immediately separates atypical from typical pneumonia.",
+     "from": "Compartment-spanning collapses the atypical-vs-typical fork instantly."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "uri",
+   "find": "<p><b>Purulent or colored discharge does not mean bacterial.</b> Green comes from myeloperoxidase in neutrophils recruited by any inflammation, viral included. Afebrile + well-appearing + 2 days + <b>clear mobile TMs</b> + no exudate + clear lungs → viral URI → <b>supportive care</b>.</p>\n<p>The side comes before the color. <b>Unilateral</b>, foul-smelling, purulent discharge in a <b>well, afebrile</b> toddler is a <b>nasal foreign body</b>: the other naris is normal and nothing is systemic. Bacterial sinusitis is <b>bilateral</b>, usually brings <b>fever and cough</b>, and still has to meet a time or severity door below. Clear bilateral discharge with pale, boggy turbinates is allergic; bilateral obstruction with mouth breathing is adenoidal.</p>",
+   "with": "<p><b>Purulent or colored discharge does not mean bacterial.</b> The green color comes from myeloperoxidase in neutrophils recruited by any inflammation, including viral inflammation. An afebrile, well-appearing child at day 2 with <b>clear mobile TMs</b> (tympanic membranes), no exudate and clear lungs has a viral <b>URI</b> (upper respiratory infection). Treat it with <b>supportive care</b>.</p>\n<p>Assess the side of the discharge before its color. <b>Unilateral</b>, foul-smelling, purulent discharge in a <b>well, afebrile</b> toddler is a <b>nasal foreign body</b>. The other naris is normal, and there are no systemic signs. Bacterial sinusitis is <b>bilateral</b> and usually brings <b>fever and cough</b>. It still has to meet a time or severity door below. Clear bilateral discharge with pale, boggy turbinates is allergic. Bilateral obstruction with mouth breathing is adenoidal.</p>",
+   "note": ".dp: split arrow chain, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Purulent or colored discharge does not mean bacterial.",
+     "to": "Purulent or colored discharge does not mean bacterial."
+    },
+    {
+     "claim": "Green comes from myeloperoxidase in neutrophils recruited by any inflammation, viral included.",
+     "to": "The green color comes from myeloperoxidase in neutrophils recruited by any inflammation, including viral inflammation."
+    },
+    {
+     "claim": "Afebrile, well-appearing, 2 days, clear mobile TMs, no exudate and clear lungs indicate a viral URI.",
+     "to": "An afebrile, well-appearing child at day 2 with clear mobile TMs (tympanic membranes), no exudate and clear lungs has a viral URI (upper respiratory infection)."
+    },
+    {
+     "claim": "A viral URI gets supportive care.",
+     "to": "Treat it with supportive care."
+    },
+    {
+     "claim": "The side comes before the color.",
+     "to": "Assess the side of the discharge before its color."
+    },
+    {
+     "claim": "Unilateral, foul-smelling, purulent discharge in a well, afebrile toddler is a nasal foreign body.",
+     "to": "Unilateral, foul-smelling, purulent discharge in a well, afebrile toddler is a nasal foreign body."
+    },
+    {
+     "claim": "With a nasal foreign body the other naris is normal and nothing is systemic.",
+     "to": "The other naris is normal, and there are no systemic signs."
+    },
+    {
+     "claim": "Bacterial sinusitis is bilateral and usually brings fever and cough.",
+     "to": "Bacterial sinusitis is bilateral and usually brings fever and cough."
+    },
+    {
+     "claim": "Bacterial sinusitis still has to meet a time or severity door below.",
+     "to": "It still has to meet a time or severity door below."
+    },
+    {
+     "claim": "Clear bilateral discharge with pale, boggy turbinates is allergic.",
+     "to": "Clear bilateral discharge with pale, boggy turbinates is allergic."
+    },
+    {
+     "claim": "Bilateral obstruction with mouth breathing is adenoidal.",
+     "to": "Bilateral obstruction with mouth breathing is adenoidal."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Purulent or colored discharge does not mean bacterial.",
+     "from": "Purulent or colored discharge does not mean bacterial."
+    },
+    {
+     "claim": "The green color comes from myeloperoxidase in neutrophils recruited by any inflammation, including viral inflammation.",
+     "from": "Green comes from myeloperoxidase in neutrophils recruited by any inflammation, viral included."
+    },
+    {
+     "claim": "An afebrile, well-appearing child at day 2 with clear mobile TMs (tympanic membranes), no exudate and clear lungs has a viral URI (upper respiratory infection).",
+     "from": "Afebrile, well-appearing, 2 days, clear mobile TMs, no exudate and clear lungs indicate a viral URI."
+    },
+    {
+     "claim": "Treat it with supportive care.",
+     "from": "A viral URI gets supportive care."
+    },
+    {
+     "claim": "Assess the side of the discharge before its color.",
+     "from": "The side comes before the color."
+    },
+    {
+     "claim": "Unilateral, foul-smelling, purulent discharge in a well, afebrile toddler is a nasal foreign body.",
+     "from": "Unilateral, foul-smelling, purulent discharge in a well, afebrile toddler is a nasal foreign body."
+    },
+    {
+     "claim": "The other naris is normal, and there are no systemic signs.",
+     "from": "With a nasal foreign body the other naris is normal and nothing is systemic."
+    },
+    {
+     "claim": "Bacterial sinusitis is bilateral and usually brings fever and cough.",
+     "from": "Bacterial sinusitis is bilateral and usually brings fever and cough."
+    },
+    {
+     "claim": "It still has to meet a time or severity door below.",
+     "from": "Bacterial sinusitis still has to meet a time or severity door below."
+    },
+    {
+     "claim": "Clear bilateral discharge with pale, boggy turbinates is allergic.",
+     "from": "Clear bilateral discharge with pale, boggy turbinates is allergic."
+    },
+    {
+     "claim": "Bilateral obstruction with mouth breathing is adenoidal.",
+     "from": "Bilateral obstruction with mouth breathing is adenoidal."
+    },
+    {
+     "claim": "TMs stands for tympanic membranes.",
+     "from": "expansion"
+    },
+    {
+     "claim": "URI stands for upper respiratory infection.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "uri",
+   "find": "Loud detail → ask \"what job is this doing?\" If the answer is \"making me nervous,\" it's bait. Those seconds belong to the two-step genetics problem later in the block.",
+   "with": "For each striking detail, ask what it adds to the diagnosis. A detail that only raises alarm is a distractor.",
+   "note": ".rule: slogan and personification removed",
+   "claims": [
+    {
+     "claim": "For a loud detail, ask what job it is doing.",
+     "to": "For each striking detail, ask what it adds to the diagnosis."
+    },
+    {
+     "claim": "A detail whose only job is making you nervous is bait.",
+     "to": "A detail that only raises alarm is a distractor."
+    },
+    {
+     "claim": "Save the time for a later problem in the exam block.",
+     "dropped": "exam time-management framing, no clinical content"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "For each striking detail, ask what it adds to the diagnosis.",
+     "from": "For a loud detail, ask what job it is doing."
+    },
+    {
+     "claim": "A detail that only raises alarm is a distractor.",
+     "from": "A detail whose only job is making you nervous is bait."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "asthma",
+   "find": "<p>NBME tests the <b>NAEPP/EPR-3 severity ladder</b>. Intermittent (≤2 days/wk symptoms, ≤2 nights/mo, normal FEV₁, no activity limits) → <b>SABA PRN alone</b>. Mild persistent → add low-dose ICS. Moderate → low-dose ICS+LABA or medium ICS. Severe → high-dose ICS+LABA.</p>",
+   "with": "<p>NBME tests the <b>NAEPP/EPR-3 severity ladder</b> (National Asthma Education and Prevention Program, Expert Panel Report 3). Intermittent asthma means symptoms ≤2 days/wk, ≤2 nights/mo, normal <b>FEV₁</b> (forced expiratory volume in 1 second) and no activity limits. Treat it with <b>SABA PRN alone</b> (short-acting beta-agonist, as needed). Mild persistent → add low-dose <b>ICS</b> (inhaled corticosteroid). Moderate → low-dose ICS+<b>LABA</b> (long-acting beta-agonist) or medium ICS. Severe → high-dose ICS+LABA.</p>",
+   "note": ".dp: acronyms expanded, split intermittent sentence",
+   "claims": [
+    {
+     "claim": "NBME tests the NAEPP/EPR-3 severity ladder.",
+     "to": "NBME tests the NAEPP/EPR-3 severity ladder (National Asthma Education and Prevention Program, Expert Panel Report 3)."
+    },
+    {
+     "claim": "Intermittent is ≤2 days/wk symptoms, ≤2 nights/mo, normal FEV₁ and no activity limits.",
+     "to": "Intermittent asthma means symptoms ≤2 days/wk, ≤2 nights/mo, normal FEV₁ (forced expiratory volume in 1 second) and no activity limits."
+    },
+    {
+     "claim": "Intermittent gets SABA PRN alone.",
+     "to": "Treat it with SABA PRN alone (short-acting beta-agonist, as needed)."
+    },
+    {
+     "claim": "Mild persistent adds low-dose ICS.",
+     "to": "Mild persistent → add low-dose ICS (inhaled corticosteroid)."
+    },
+    {
+     "claim": "Moderate gets low-dose ICS+LABA or medium ICS.",
+     "to": "Moderate → low-dose ICS+LABA (long-acting beta-agonist) or medium ICS."
+    },
+    {
+     "claim": "Severe gets high-dose ICS+LABA.",
+     "to": "Severe → high-dose ICS+LABA."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "NBME tests the NAEPP/EPR-3 severity ladder.",
+     "from": "NBME tests the NAEPP/EPR-3 severity ladder."
+    },
+    {
+     "claim": "Intermittent is ≤2 days/wk symptoms, ≤2 nights/mo, normal FEV₁ and no activity limits.",
+     "from": "Intermittent is ≤2 days/wk symptoms, ≤2 nights/mo, normal FEV₁ and no activity limits."
+    },
+    {
+     "claim": "Intermittent gets SABA PRN alone.",
+     "from": "Intermittent gets SABA PRN alone."
+    },
+    {
+     "claim": "Mild persistent adds low-dose ICS.",
+     "from": "Mild persistent adds low-dose ICS."
+    },
+    {
+     "claim": "Moderate gets low-dose ICS+LABA or medium ICS.",
+     "from": "Moderate gets low-dose ICS+LABA or medium ICS."
+    },
+    {
+     "claim": "Severe gets high-dose ICS+LABA.",
+     "from": "Severe gets high-dose ICS+LABA."
+    },
+    {
+     "claim": "NAEPP/EPR-3 stands for National Asthma Education and Prevention Program, Expert Panel Report 3.",
+     "from": "expansion"
+    },
+    {
+     "claim": "FEV₁ stands for forced expiratory volume in 1 second.",
+     "from": "expansion"
+    },
+    {
+     "claim": "SABA PRN stands for short-acting beta-agonist, as needed.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ICS stands for inhaled corticosteroid.",
+     "from": "expansion"
+    },
+    {
+     "claim": "LABA stands for long-acting beta-agonist.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "asthma",
+   "find": "<b>GINA now states SABA monotherapy is not supported at any step, any severity, any age</b> — even intermittent asthma gets ICS-containing therapy (as-needed ICS-formoterol, or ICS-SABA combination reliever). Rationale: intermittent symptoms do not mean intermittent inflammation. <b>On the exam, play NAEPP; in clinic, GINA.</b> The tell that a question wants NAEPP is an answer ladder running \"nothing extra / montelukast / low-dose ICS / ICS+LABA.\"",
+   "with": "<b>GINA now states SABA monotherapy is not supported at any step, any severity, any age</b> (GINA, Global Initiative for Asthma; SABA, short-acting beta-agonist). Even intermittent asthma gets therapy containing an <b>ICS</b> (inhaled corticosteroid): as-needed ICS-formoterol, or an ICS-SABA combination reliever. This is because intermittent symptoms do not mean intermittent inflammation. Use <b>NAEPP</b> (National Asthma Education and Prevention Program) on the exam and GINA in clinic. An answer ladder running \"nothing extra / montelukast / low-dose ICS / ICS+<b>LABA</b> (long-acting beta-agonist)\" signals that the question is keyed to NAEPP.",
+   "note": ".danger: slogan bold reworded, em dash removed, acronyms expanded",
+   "reworded_bold": [
+    "On the exam, play NAEPP; in clinic, GINA."
+   ],
+   "claims": [
+    {
+     "claim": "GINA now states SABA monotherapy is not supported at any step, any severity, any age.",
+     "to": "GINA now states SABA monotherapy is not supported at any step, any severity, any age (GINA, Global Initiative for Asthma; SABA, short-acting beta-agonist)."
+    },
+    {
+     "claim": "Even intermittent asthma gets ICS-containing therapy: as-needed ICS-formoterol, or ICS-SABA combination reliever.",
+     "to": "Even intermittent asthma gets therapy containing an ICS (inhaled corticosteroid): as-needed ICS-formoterol, or an ICS-SABA combination reliever."
+    },
+    {
+     "claim": "The rationale is that intermittent symptoms do not mean intermittent inflammation.",
+     "to": "This is because intermittent symptoms do not mean intermittent inflammation."
+    },
+    {
+     "claim": "On the exam use NAEPP; in clinic use GINA.",
+     "to": "Use NAEPP (National Asthma Education and Prevention Program) on the exam and GINA in clinic."
+    },
+    {
+     "claim": "An answer ladder running nothing extra / montelukast / low-dose ICS / ICS+LABA signals that a question wants NAEPP.",
+     "to": "An answer ladder running \"nothing extra / montelukast / low-dose ICS / ICS+LABA (long-acting beta-agonist)\" signals that the question is keyed to NAEPP."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "GINA now states SABA monotherapy is not supported at any step, any severity, any age.",
+     "from": "GINA now states SABA monotherapy is not supported at any step, any severity, any age."
+    },
+    {
+     "claim": "Even intermittent asthma gets ICS-containing therapy: as-needed ICS-formoterol, or ICS-SABA combination reliever.",
+     "from": "Even intermittent asthma gets ICS-containing therapy: as-needed ICS-formoterol, or ICS-SABA combination reliever."
+    },
+    {
+     "claim": "The rationale is that intermittent symptoms do not mean intermittent inflammation.",
+     "from": "The rationale is that intermittent symptoms do not mean intermittent inflammation."
+    },
+    {
+     "claim": "On the exam use NAEPP; in clinic use GINA.",
+     "from": "On the exam use NAEPP; in clinic use GINA."
+    },
+    {
+     "claim": "An answer ladder running nothing extra / montelukast / low-dose ICS / ICS+LABA signals that a question wants NAEPP.",
+     "from": "An answer ladder running nothing extra / montelukast / low-dose ICS / ICS+LABA signals that a question wants NAEPP."
+    },
+    {
+     "claim": "GINA stands for Global Initiative for Asthma.",
+     "from": "expansion"
+    },
+    {
+     "claim": "SABA stands for short-acting beta-agonist.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ICS stands for inhaled corticosteroid.",
+     "from": "expansion"
+    },
+    {
+     "claim": "NAEPP stands for National Asthma Education and Prevention Program.",
+     "from": "expansion"
+    },
+    {
+     "claim": "LABA stands for long-acting beta-agonist.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "asthma",
+   "find": "The stem's frequency counts <i>are</i> the question.",
+   "with": "Classify severity by these frequency counts.",
+   "note": "numbers pearl: framing sentence made plain",
+   "claims": [
+    {
+     "claim": "The frequency counts decide the severity classification.",
+     "to": "Classify severity by these frequency counts."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Classify severity by these frequency counts.",
+     "from": "The frequency counts decide the severity classification."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "asthma",
+   "find": "owns the which-test question that precedes this classification in a patient with sickle cell disease.",
+   "with": "covers which test to order before this classification in a patient with sickle cell disease.",
+   "note": "Pairs with: owns to covers",
+   "claims": [
+    {
+     "claim": "Part I Chronic Dyspnea in Sickle Cell Disease owns the which-test question that precedes this classification in a patient with sickle cell disease.",
+     "to": "Part I Chronic Dyspnea in Sickle Cell Disease covers which test to order before this classification in a patient with sickle cell disease."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I Chronic Dyspnea in Sickle Cell Disease covers which test to order before this classification in a patient with sickle cell disease.",
+     "from": "Part I Chronic Dyspnea in Sickle Cell Disease owns the which-test question that precedes this classification in a patient with sickle cell disease."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "<p>The stem states the diagnosis verbatim: <b>preterm infant + supplemental O₂ requirement at ≥28 days of life = BPD</b>. The remaining step is translation — modern \"new\" BPD is <b>arrested alveolar development</b> (reduced alveolar number and septation, disrupted vasculogenesis), not the old fibrotic ventilator injury, not air leak. Every preemie lung complication owns a window on the clock, and the clock is read before the findings.</p>",
+   "with": "<p>The definition is <b>preterm infant + supplemental O₂ requirement at ≥28 days of life = BPD</b> (bronchopulmonary dysplasia). Modern \"new\" BPD is <b>arrested alveolar development</b> (reduced alveolar number and septation, disrupted vasculogenesis). It is not the old fibrotic ventilator injury and not air leak. Each preterm lung complication has its own time window. Check the timing before the findings.</p>",
+   "note": ".dp: framing removed, em dash removed, acronym expanded",
+   "claims": [
+    {
+     "claim": "Preterm infant + supplemental O₂ requirement at ≥28 days of life = BPD.",
+     "to": "The definition is preterm infant + supplemental O₂ requirement at ≥28 days of life = BPD (bronchopulmonary dysplasia)."
+    },
+    {
+     "claim": "Modern new BPD is arrested alveolar development (reduced alveolar number and septation, disrupted vasculogenesis).",
+     "to": "Modern \"new\" BPD is arrested alveolar development (reduced alveolar number and septation, disrupted vasculogenesis)."
+    },
+    {
+     "claim": "New BPD is not the old fibrotic ventilator injury, not air leak.",
+     "to": "It is not the old fibrotic ventilator injury and not air leak."
+    },
+    {
+     "claim": "Every preemie lung complication owns a window on the clock.",
+     "to": "Each preterm lung complication has its own time window."
+    },
+    {
+     "claim": "The clock is read before the findings.",
+     "to": "Check the timing before the findings."
+    },
+    {
+     "claim": "The stem states the diagnosis verbatim.",
+     "dropped": "framing about the question stem; the criterion itself is kept"
+    },
+    {
+     "claim": "The remaining step is translation into pathology.",
+     "dropped": "framing about the solving step"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The definition is preterm infant + supplemental O₂ requirement at ≥28 days of life = BPD (bronchopulmonary dysplasia).",
+     "from": "Preterm infant + supplemental O₂ requirement at ≥28 days of life = BPD."
+    },
+    {
+     "claim": "Modern \"new\" BPD is arrested alveolar development (reduced alveolar number and septation, disrupted vasculogenesis).",
+     "from": "Modern new BPD is arrested alveolar development (reduced alveolar number and septation, disrupted vasculogenesis)."
+    },
+    {
+     "claim": "It is not the old fibrotic ventilator injury and not air leak.",
+     "from": "New BPD is not the old fibrotic ventilator injury, not air leak."
+    },
+    {
+     "claim": "Each preterm lung complication has its own time window.",
+     "from": "Every preemie lung complication owns a window on the clock."
+    },
+    {
+     "claim": "Check the timing before the findings.",
+     "from": "The clock is read before the findings."
+    },
+    {
+     "claim": "BPD stands for bronchopulmonary dysplasia.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "<b>What it is</b> &mdash; the preterm brainstem has not yet learned to keep breathing, so the infant simply stops: a <b>central</b> pause",
+   "with": "<b>What it is</b> &mdash; the immature preterm brainstem does not sustain breathing, so the infant stops breathing: a <b>central</b> pause",
+   "note": "apnea danger: personification removed",
+   "claims": [
+    {
+     "claim": "The preterm brainstem has not yet learned to keep breathing, so the infant simply stops.",
+     "to": "the immature preterm brainstem does not sustain breathing, so the infant stops breathing"
+    },
+    {
+     "claim": "It is a central pause.",
+     "to": "the infant stops breathing: a central pause"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The immature preterm brainstem does not sustain breathing, so the infant stops breathing.",
+     "from": "The preterm brainstem has not yet learned to keep breathing, so the infant simply stops."
+    },
+    {
+     "claim": "It is a central pause.",
+     "from": "It is a central pause."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "<b>The tell</b> &mdash; the infant is <b>well between episodes</b>",
+   "with": "<b>Key feature</b> &mdash; the infant is <b>well between episodes</b>",
+   "note": "apnea danger: rhetorical bold label reworded",
+   "reworded_bold": [
+    "The tell"
+   ],
+   "claims": [
+    {
+     "claim": "The key sign is that the infant is well between episodes.",
+     "to": "Key feature — the infant is well between episodes"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The key feature is that the infant is well between episodes.",
+     "from": "The key sign is that the infant is well between episodes."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "(seizure and reflux are the other usual suspects)",
+   "with": "(seizure and reflux are the other usual mimics)",
+   "note": "apnea danger: idiom made plain",
+   "claims": [
+    {
+     "claim": "Seizure and reflux are the other usual suspects.",
+     "to": "seizure and reflux are the other usual mimics"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Seizure and reflux are the other usual mimics.",
+     "from": "Seizure and reflux are the other usual suspects."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "<b>Versus IVH</b> &mdash; lethargy, a tense fontanelle",
+   "with": "<b>Versus IVH</b> &mdash; intraventricular hemorrhage gives lethargy, a tense fontanelle",
+   "note": "apnea danger: IVH expanded",
+   "claims": [
+    {
+     "claim": "IVH gives lethargy and a tense fontanelle.",
+     "to": "intraventricular hemorrhage gives lethargy, a tense fontanelle"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Intraventricular hemorrhage gives lethargy and a tense fontanelle.",
+     "from": "IVH gives lethargy and a tense fontanelle."
+    },
+    {
+     "claim": "IVH stands for intraventricular hemorrhage.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "<b>Versus BPD</b> &mdash; a lung disease defined by oxygen need at <b>28 days</b>; dexamethasone and albuterol belong to it, not to apnea",
+   "with": "<b>Versus BPD</b> &mdash; bronchopulmonary dysplasia, a lung disease defined by oxygen need at <b>28 days</b>; dexamethasone and albuterol are used for it, not for apnea",
+   "note": "apnea danger: BPD expanded, personification removed",
+   "claims": [
+    {
+     "claim": "BPD is a lung disease defined by oxygen need at 28 days.",
+     "to": "bronchopulmonary dysplasia, a lung disease defined by oxygen need at 28 days"
+    },
+    {
+     "claim": "Dexamethasone and albuterol belong to BPD, not to apnea.",
+     "to": "dexamethasone and albuterol are used for it, not for apnea"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "BPD is a lung disease defined by oxygen need at 28 days.",
+     "from": "BPD is a lung disease defined by oxygen need at 28 days."
+    },
+    {
+     "claim": "Dexamethasone and albuterol are used for BPD, not for apnea.",
+     "from": "Dexamethasone and albuterol belong to BPD, not to apnea."
+    },
+    {
+     "claim": "BPD stands for bronchopulmonary dysplasia.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "adding <b>CPAP or high-flow nasal cannula</b> if spells continue",
+   "with": "adding <b>CPAP or high-flow nasal cannula</b> (CPAP, continuous positive airway pressure) if spells continue",
+   "note": "apnea danger: CPAP expanded",
+   "claims": [
+    {
+     "claim": "Add CPAP or high-flow nasal cannula if spells continue.",
+     "to": "adding CPAP or high-flow nasal cannula (CPAP, continuous positive airway pressure) if spells continue"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Add CPAP or high-flow nasal cannula if spells continue.",
+     "from": "Add CPAP or high-flow nasal cannula if spells continue."
+    },
+    {
+     "claim": "CPAP stands for continuous positive airway pressure.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "Caffeine (for apnea of prematurity) and vitamin A each reduce BPD incidence · antenatal steroids + surfactant converted BPD from fibrotic injury to developmental arrest · management is supportive — oxygen, nutrition, fluid restriction; alveoli continue to form over months · complications: pulmonary HTN, systemic HTN, recurrent respiratory infections, neurodevelopmental delay · RSV prophylaxis update (AAP): <b>palivizumab discontinued end of 2025; nirsevimab is standard</b>, and BPD earns a second-season dose.",
+   "with": "Caffeine (for apnea of prematurity) and vitamin A each reduce <b>BPD</b> (bronchopulmonary dysplasia) incidence · antenatal steroids + surfactant converted BPD from fibrotic injury to developmental arrest · management is supportive: oxygen, nutrition, fluid restriction; alveoli continue to form over months · complications: pulmonary <b>HTN</b> (hypertension), systemic HTN, recurrent respiratory infections, neurodevelopmental delay · <b>RSV</b> (respiratory syncytial virus) prophylaxis update from the <b>AAP</b> (American Academy of Pediatrics): <b>palivizumab discontinued end of 2025; nirsevimab is standard</b>. BPD qualifies for a second-season dose.",
+   "note": "pearls: em dash to colon, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Caffeine (for apnea of prematurity) and vitamin A each reduce BPD incidence.",
+     "to": "Caffeine (for apnea of prematurity) and vitamin A each reduce BPD (bronchopulmonary dysplasia) incidence"
+    },
+    {
+     "claim": "Antenatal steroids + surfactant converted BPD from fibrotic injury to developmental arrest.",
+     "to": "antenatal steroids + surfactant converted BPD from fibrotic injury to developmental arrest"
+    },
+    {
+     "claim": "Management is supportive: oxygen, nutrition, fluid restriction.",
+     "to": "management is supportive: oxygen, nutrition, fluid restriction"
+    },
+    {
+     "claim": "Alveoli continue to form over months.",
+     "to": "alveoli continue to form over months"
+    },
+    {
+     "claim": "Complications: pulmonary HTN, systemic HTN, recurrent respiratory infections, neurodevelopmental delay.",
+     "to": "complications: pulmonary HTN (hypertension), systemic HTN, recurrent respiratory infections, neurodevelopmental delay"
+    },
+    {
+     "claim": "AAP RSV prophylaxis update: palivizumab discontinued end of 2025; nirsevimab is standard.",
+     "to": "RSV (respiratory syncytial virus) prophylaxis update from the AAP (American Academy of Pediatrics): palivizumab discontinued end of 2025; nirsevimab is standard."
+    },
+    {
+     "claim": "BPD earns a second-season dose.",
+     "to": "BPD qualifies for a second-season dose"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Caffeine (for apnea of prematurity) and vitamin A each reduce BPD incidence.",
+     "from": "Caffeine (for apnea of prematurity) and vitamin A each reduce BPD incidence."
+    },
+    {
+     "claim": "Antenatal steroids + surfactant converted BPD from fibrotic injury to developmental arrest.",
+     "from": "Antenatal steroids + surfactant converted BPD from fibrotic injury to developmental arrest."
+    },
+    {
+     "claim": "Management is supportive: oxygen, nutrition, fluid restriction.",
+     "from": "Management is supportive: oxygen, nutrition, fluid restriction."
+    },
+    {
+     "claim": "Alveoli continue to form over months.",
+     "from": "Alveoli continue to form over months."
+    },
+    {
+     "claim": "Complications: pulmonary HTN, systemic HTN, recurrent respiratory infections, neurodevelopmental delay.",
+     "from": "Complications: pulmonary HTN, systemic HTN, recurrent respiratory infections, neurodevelopmental delay."
+    },
+    {
+     "claim": "AAP RSV prophylaxis update: palivizumab discontinued end of 2025; nirsevimab is standard.",
+     "from": "AAP RSV prophylaxis update: palivizumab discontinued end of 2025; nirsevimab is standard."
+    },
+    {
+     "claim": "BPD qualifies for a second-season dose.",
+     "from": "BPD earns a second-season dose."
+    },
+    {
+     "claim": "BPD stands for bronchopulmonary dysplasia.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HTN stands for hypertension.",
+     "from": "expansion"
+    },
+    {
+     "claim": "RSV stands for respiratory syncytial virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "AAP stands for American Academy of Pediatrics.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "owns the well-infant bloody stool; the necrotizing enterocolitis item here is its ill-preemie exit ramp. Store the discriminator as a question: is the infant preterm, distended, and unwell? Part II <b>Prematurity Follow-Up and Corrected Age</b> owns intraventricular hemorrhage and anemia of prematurity, the mimics to exclude before calling a spell apnea of prematurity: is the infant well between episodes?",
+   "with": "covers the well infant with bloody stool; the necrotizing enterocolitis item here covers the ill preterm infant. Ask: is the infant preterm, distended, and unwell? Part II <b>Prematurity Follow-Up and Corrected Age</b> covers intraventricular hemorrhage and anemia of prematurity. Exclude these mimics before calling a spell apnea of prematurity. Ask: is the infant well between episodes?",
+   "note": "Pairs with: owns to covers, Ask: form",
+   "claims": [
+    {
+     "claim": "Part I Infant Stool Complaints owns the well-infant bloody stool.",
+     "to": "Infant Stool Complaints: Dyschezia, FPIAP & Secondary Lactase Deficiency covers the well infant with bloody stool; the necrotizing enterocolitis item here covers the ill preterm infant."
+    },
+    {
+     "claim": "The necrotizing enterocolitis item here is the ill-preemie exit ramp from it.",
+     "to": "Infant Stool Complaints: Dyschezia, FPIAP & Secondary Lactase Deficiency covers the well infant with bloody stool; the necrotizing enterocolitis item here covers the ill preterm infant."
+    },
+    {
+     "claim": "The discriminating question: is the infant preterm, distended, and unwell?",
+     "to": "Ask: is the infant preterm, distended, and unwell?"
+    },
+    {
+     "claim": "Part II Prematurity Follow-Up and Corrected Age owns intraventricular hemorrhage and anemia of prematurity.",
+     "to": "Part II Prematurity Follow-Up and Corrected Age covers intraventricular hemorrhage and anemia of prematurity."
+    },
+    {
+     "claim": "These are mimics to exclude before calling a spell apnea of prematurity.",
+     "to": "Exclude these mimics before calling a spell apnea of prematurity."
+    },
+    {
+     "claim": "The discriminating question: is the infant well between episodes?",
+     "to": "Ask: is the infant well between episodes?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I Infant Stool Complaints covers the well infant with bloody stool.",
+     "from": "Part I Infant Stool Complaints owns the well-infant bloody stool."
+    },
+    {
+     "claim": "The necrotizing enterocolitis item here covers the ill preterm infant.",
+     "from": "The necrotizing enterocolitis item here is the ill-preemie exit ramp from it."
+    },
+    {
+     "claim": "Ask: is the infant preterm, distended, and unwell?",
+     "from": "The discriminating question: is the infant preterm, distended, and unwell?"
+    },
+    {
+     "claim": "Part II Prematurity Follow-Up and Corrected Age covers intraventricular hemorrhage and anemia of prematurity.",
+     "from": "Part II Prematurity Follow-Up and Corrected Age owns intraventricular hemorrhage and anemia of prematurity."
+    },
+    {
+     "claim": "Exclude these mimics before calling a spell apnea of prematurity.",
+     "from": "These are mimics to exclude before calling a spell apnea of prematurity."
+    },
+    {
+     "claim": "Ask: is the infant well between episodes?",
+     "from": "The discriminating question: is the infant well between episodes?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "Prematurity complication stems are clock questions — birth = RDS, ventilator days = air leak, day 2 to 3 apneas in a well infant = apnea of prematurity, ≥28 days = BPD, months = pulmonary HTN. Match the timeline before the findings, and when a stem states a diagnostic criterion verbatim, convert it directly to the answer.",
+   "with": "Prematurity complications follow a timeline: birth = <b>RDS</b> (respiratory distress syndrome) · ventilator days = air leak · day 2 to 3 apneas in a well infant = apnea of prematurity · ≥28 days = <b>BPD</b> (bronchopulmonary dysplasia) · months = pulmonary <b>HTN</b> (hypertension). Match the timeline before the findings. When the history states a diagnostic criterion exactly, make that diagnosis directly.",
+   "note": ".rule: em dash removed, rows, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Prematurity complications are timed: birth = RDS.",
+     "to": "Prematurity complications follow a timeline: birth = RDS (respiratory distress syndrome)"
+    },
+    {
+     "claim": "Ventilator days = air leak.",
+     "to": "ventilator days = air leak"
+    },
+    {
+     "claim": "Day 2 to 3 apneas in a well infant = apnea of prematurity.",
+     "to": "day 2 to 3 apneas in a well infant = apnea of prematurity"
+    },
+    {
+     "claim": "≥28 days = BPD.",
+     "to": "≥28 days = BPD (bronchopulmonary dysplasia)"
+    },
+    {
+     "claim": "Months = pulmonary HTN.",
+     "to": "months = pulmonary HTN (hypertension)."
+    },
+    {
+     "claim": "Match the timeline before the findings.",
+     "to": "Match the timeline before the findings."
+    },
+    {
+     "claim": "When a stem states a diagnostic criterion verbatim, convert it directly to the answer.",
+     "to": "When the history states a diagnostic criterion exactly, make that diagnosis directly."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Prematurity complications are timed: birth = RDS.",
+     "from": "Prematurity complications are timed: birth = RDS."
+    },
+    {
+     "claim": "Ventilator days = air leak.",
+     "from": "Ventilator days = air leak."
+    },
+    {
+     "claim": "Day 2 to 3 apneas in a well infant = apnea of prematurity.",
+     "from": "Day 2 to 3 apneas in a well infant = apnea of prematurity."
+    },
+    {
+     "claim": "≥28 days = BPD.",
+     "from": "≥28 days = BPD."
+    },
+    {
+     "claim": "Months = pulmonary HTN.",
+     "from": "Months = pulmonary HTN."
+    },
+    {
+     "claim": "Match the timeline before the findings.",
+     "from": "Match the timeline before the findings."
+    },
+    {
+     "claim": "When the history states a diagnostic criterion exactly, make that diagnosis directly.",
+     "from": "When a stem states a diagnostic criterion verbatim, convert it directly to the answer."
+    },
+    {
+     "claim": "RDS stands for respiratory distress syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "BPD stands for bronchopulmonary dysplasia.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HTN stands for hypertension.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "\"Enteral feeds introduced today\" baits refeeding syndrome — appropriate weight gain on TPN excludes prior malnutrition.",
+   "with": "Refeeding syndrome: \"enteral feeds introduced today\" suggests it, but appropriate weight gain on <b>TPN</b> (total parenteral nutrition) excludes prior malnutrition.",
+   "note": "trap: Option: why form, em dash removed",
+   "claims": [
+    {
+     "claim": "Enteral feeds introduced today baits refeeding syndrome.",
+     "to": "Refeeding syndrome: \"enteral feeds introduced today\" suggests it, but appropriate weight gain on TPN (total parenteral nutrition) excludes prior malnutrition."
+    },
+    {
+     "claim": "Appropriate weight gain on TPN excludes prior malnutrition.",
+     "to": "Refeeding syndrome: \"enteral feeds introduced today\" suggests it, but appropriate weight gain on TPN (total parenteral nutrition) excludes prior malnutrition."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Enteral feeds introduced today suggests refeeding syndrome.",
+     "from": "Enteral feeds introduced today baits refeeding syndrome."
+    },
+    {
+     "claim": "Appropriate weight gain on TPN excludes prior malnutrition.",
+     "from": "Appropriate weight gain on TPN excludes prior malnutrition."
+    },
+    {
+     "claim": "TPN stands for total parenteral nutrition.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "PIE is real preemie ventilator pathology offered weeks outside its first-days window.",
+   "with": "<b>PIE</b> (pulmonary interstitial emphysema): real preterm ventilator pathology, but it occurs in the first days, weeks outside this presentation.",
+   "note": "trap: Option: why form, acronym expanded",
+   "claims": [
+    {
+     "claim": "PIE is real preemie ventilator pathology.",
+     "to": "PIE (pulmonary interstitial emphysema): real preterm ventilator pathology, but it occurs in the first days, weeks outside this presentation."
+    },
+    {
+     "claim": "PIE is offered weeks outside its first-days window.",
+     "to": "PIE (pulmonary interstitial emphysema): real preterm ventilator pathology, but it occurs in the first days, weeks outside this presentation."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "PIE is real preterm ventilator pathology.",
+     "from": "PIE is real preemie ventilator pathology."
+    },
+    {
+     "claim": "PIE occurs in the first days, weeks outside this presentation.",
+     "from": "PIE is offered weeks outside its first-days window."
+    },
+    {
+     "claim": "PIE stands for pulmonary interstitial emphysema.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nrd",
+   "find": "<p><b>Fluid in the interlobar fissures</b> is retained fetal lung fluid — water where it should not be, in a term baby whose lungs are structurally normal — and it appears in no competing diagnosis. Add <b>88% correcting to 98% on supplemental oxygen</b>, which tells you the problem is alveolar fluid rather than a shunt, and this is <b>transient tachypnea of the newborn</b>.</p>\n<p>The mechanism sits in the delivery note. <b>Cesarean without labor</b> is the classic setup, because labor's catecholamine surge is what flips the alveolar epithelium from secreting fluid to absorbing it. Macrosomia at 4200 g rides along as a second risk factor.</p>",
+   "with": "<p><b>Fluid in the interlobar fissures</b> is retained fetal lung fluid in a term baby whose lungs are structurally normal. It appears in no competing diagnosis. Saturation of <b>88% correcting to 98% on supplemental oxygen</b> shows the problem is alveolar fluid rather than a shunt. Together, these indicate <b>transient tachypnea of the newborn</b>.</p>\n<p><b>Cesarean without labor</b> is the classic setup. Labor's catecholamine surge is what switches the alveolar epithelium from secreting fluid to absorbing it. Macrosomia at 4200 g is a second risk factor.</p>",
+   "note": ".dp: em dashes removed, framing removed",
+   "claims": [
+    {
+     "claim": "Fluid in the interlobar fissures is retained fetal lung fluid in a term baby whose lungs are structurally normal.",
+     "to": "Fluid in the interlobar fissures is retained fetal lung fluid in a term baby whose lungs are structurally normal."
+    },
+    {
+     "claim": "Fissural fluid appears in no competing diagnosis.",
+     "to": "It appears in no competing diagnosis."
+    },
+    {
+     "claim": "88% correcting to 98% on supplemental oxygen tells you the problem is alveolar fluid rather than a shunt.",
+     "to": "Saturation of 88% correcting to 98% on supplemental oxygen shows the problem is alveolar fluid rather than a shunt."
+    },
+    {
+     "claim": "Fissural fluid plus the oxygen response is transient tachypnea of the newborn.",
+     "to": "Together, these indicate transient tachypnea of the newborn."
+    },
+    {
+     "claim": "Cesarean without labor is the classic setup.",
+     "to": "Cesarean without labor is the classic setup."
+    },
+    {
+     "claim": "Labor's catecholamine surge is what flips the alveolar epithelium from secreting fluid to absorbing it.",
+     "to": "Labor's catecholamine surge is what switches the alveolar epithelium from secreting fluid to absorbing it."
+    },
+    {
+     "claim": "Macrosomia at 4200 g rides along as a second risk factor.",
+     "to": "Macrosomia at 4200 g is a second risk factor."
+    },
+    {
+     "claim": "Retained fetal lung fluid is water where it should not be.",
+     "to": "Fluid in the interlobar fissures is retained fetal lung fluid in a term baby whose lungs are structurally normal."
+    },
+    {
+     "claim": "The mechanism sits in the delivery note.",
+     "dropped": "framing about where to look; the mechanism is stated next"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Fluid in the interlobar fissures is retained fetal lung fluid in a term baby whose lungs are structurally normal.",
+     "from": "Fluid in the interlobar fissures is retained fetal lung fluid in a term baby whose lungs are structurally normal."
+    },
+    {
+     "claim": "It appears in no competing diagnosis.",
+     "from": "Fissural fluid appears in no competing diagnosis."
+    },
+    {
+     "claim": "Saturation of 88% correcting to 98% on supplemental oxygen shows the problem is alveolar fluid rather than a shunt.",
+     "from": "88% correcting to 98% on supplemental oxygen tells you the problem is alveolar fluid rather than a shunt."
+    },
+    {
+     "claim": "Together, these indicate transient tachypnea of the newborn.",
+     "from": "Fissural fluid plus the oxygen response is transient tachypnea of the newborn."
+    },
+    {
+     "claim": "Cesarean without labor is the classic setup.",
+     "from": "Cesarean without labor is the classic setup."
+    },
+    {
+     "claim": "Labor's catecholamine surge is what switches the alveolar epithelium from secreting fluid to absorbing it.",
+     "from": "Labor's catecholamine surge is what flips the alveolar epithelium from secreting fluid to absorbing it."
+    },
+    {
+     "claim": "Macrosomia at 4200 g is a second risk factor.",
+     "from": "Macrosomia at 4200 g rides along as a second risk factor."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nrd",
+   "find": "<b>Do not bag-mask a suspected diaphragmatic hernia</b> — you inflate bowel inside the chest; intubate and decompress with a nasogastric tube. And <b>maternal diabetes cuts both ways</b>: it raises the risk of transient tachypnea and simultaneously delays surfactant maturation, so an infant of a diabetic mother can develop respiratory distress syndrome at a gestational age that would otherwise be safe.",
+   "with": "<b>Do not bag-mask a suspected diaphragmatic hernia</b>, because bag-mask ventilation inflates bowel inside the chest. Intubate and decompress with a nasogastric tube. <b>Maternal diabetes</b> raises the risk of transient tachypnea and also delays surfactant maturation. An infant of a diabetic mother can therefore develop respiratory distress syndrome at a gestational age that would otherwise be safe.",
+   "note": ".danger: em dash and slogan bold removed",
+   "reworded_bold": [
+    "maternal diabetes cuts both ways"
+   ],
+   "claims": [
+    {
+     "claim": "Do not bag-mask a suspected diaphragmatic hernia.",
+     "to": "Do not bag-mask a suspected diaphragmatic hernia, because bag-mask ventilation inflates bowel inside the chest."
+    },
+    {
+     "claim": "Bag-masking inflates bowel inside the chest.",
+     "to": "Do not bag-mask a suspected diaphragmatic hernia, because bag-mask ventilation inflates bowel inside the chest."
+    },
+    {
+     "claim": "Intubate and decompress with a nasogastric tube.",
+     "to": "Intubate and decompress with a nasogastric tube."
+    },
+    {
+     "claim": "Maternal diabetes raises the risk of transient tachypnea and simultaneously delays surfactant maturation.",
+     "to": "Maternal diabetes raises the risk of transient tachypnea and also delays surfactant maturation."
+    },
+    {
+     "claim": "An infant of a diabetic mother can develop respiratory distress syndrome at a gestational age that would otherwise be safe.",
+     "to": "An infant of a diabetic mother can therefore develop respiratory distress syndrome at a gestational age that would otherwise be safe."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Do not bag-mask a suspected diaphragmatic hernia, because bag-mask ventilation inflates bowel inside the chest.",
+     "from": "Bag-masking inflates bowel inside the chest."
+    },
+    {
+     "claim": "Intubate and decompress with a nasogastric tube.",
+     "from": "Intubate and decompress with a nasogastric tube."
+    },
+    {
+     "claim": "Maternal diabetes raises the risk of transient tachypnea and also delays surfactant maturation.",
+     "from": "Maternal diabetes raises the risk of transient tachypnea and simultaneously delays surfactant maturation."
+    },
+    {
+     "claim": "An infant of a diabetic mother can develop respiratory distress syndrome at a gestational age that would otherwise be safe.",
+     "from": "An infant of a diabetic mother can develop respiratory distress syndrome at a gestational age that would otherwise be safe."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nrd",
+   "find": "Labor is what dries the lungs — the catecholamine surge switches alveolar epithelium from secretion to absorption &middot; Transient is a diagnostic criterion, not a description; beyond 72 hours the label is wrong &middot;",
+   "with": "Labor is what clears the fetal lung fluid: the catecholamine surge switches alveolar epithelium from secretion to absorption &middot; Transient is a diagnostic criterion, not a description: if tachypnea lasts beyond 72 hours, the diagnosis is wrong &middot;",
+   "note": "pearls: em dash and figurative wording removed",
+   "claims": [
+    {
+     "claim": "Labor is what dries the lungs: the catecholamine surge switches alveolar epithelium from secretion to absorption.",
+     "to": "Labor is what clears the fetal lung fluid: the catecholamine surge switches alveolar epithelium from secretion to absorption"
+    },
+    {
+     "claim": "Transient is a diagnostic criterion, not a description; beyond 72 hours the label is wrong.",
+     "to": "Transient is a diagnostic criterion, not a description: if tachypnea lasts beyond 72 hours, the diagnosis is wrong"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Labor is what clears the fetal lung fluid: the catecholamine surge switches alveolar epithelium from secretion to absorption",
+     "from": "Labor is what dries the lungs: the catecholamine surge switches alveolar epithelium from secretion to absorption."
+    },
+    {
+     "claim": "Transient is a diagnostic criterion, not a description: if tachypnea lasts beyond 72 hours, the diagnosis is wrong",
+     "from": "Transient is a diagnostic criterion, not a description; beyond 72 hours the label is wrong."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nrd",
+   "find": "<b>Displaced heart sounds have three owners and the abdomen tells you which</b> &mdash; scaphoid abdomen with absent breath sounds on the side of the defect is a diaphragmatic hernia, a distended hyperresonant hemithorax in a deteriorating infant is a tension pneumothorax needing needle decompression, and a well infant with the heart on the right and no distress is dextrocardia &middot; <b>The lungs stay small after the hernia is repaired</b> &mdash; viscera occupied the thorax during lung development, so hypoplasia with vascular remodeling, and the pulmonary hypertension that follows, outlast the defect",
+   "with": "<b>Displaced heart sounds have three causes, and the abdomen tells them apart</b>. A scaphoid abdomen with absent breath sounds on the side of the defect is a diaphragmatic hernia. A distended, hyperresonant hemithorax in a deteriorating infant is a tension pneumothorax needing needle decompression. A well infant with the heart on the right and no distress has dextrocardia &middot; <b>The lungs stay small after the hernia is repaired</b>: viscera occupied the thorax during lung development. Hypoplasia with vascular remodeling, and the pulmonary hypertension that follows, persist after the defect is repaired",
+   "note": "pearls: slogan bold reworded, em dashes removed, long sentence split",
+   "reworded_bold": [
+    "Displaced heart sounds have three owners and the abdomen tells you which"
+   ],
+   "claims": [
+    {
+     "claim": "Displaced heart sounds have three owners and the abdomen tells you which.",
+     "to": "Displaced heart sounds have three causes, and the abdomen tells them apart"
+    },
+    {
+     "claim": "Scaphoid abdomen with absent breath sounds on the side of the defect is a diaphragmatic hernia.",
+     "to": "A scaphoid abdomen with absent breath sounds on the side of the defect is a diaphragmatic hernia."
+    },
+    {
+     "claim": "A distended hyperresonant hemithorax in a deteriorating infant is a tension pneumothorax needing needle decompression.",
+     "to": "A distended, hyperresonant hemithorax in a deteriorating infant is a tension pneumothorax needing needle decompression."
+    },
+    {
+     "claim": "A well infant with the heart on the right and no distress is dextrocardia.",
+     "to": "A well infant with the heart on the right and no distress has dextrocardia"
+    },
+    {
+     "claim": "The lungs stay small after the hernia is repaired.",
+     "to": "The lungs stay small after the hernia is repaired"
+    },
+    {
+     "claim": "Viscera occupied the thorax during lung development.",
+     "to": "viscera occupied the thorax during lung development."
+    },
+    {
+     "claim": "Hypoplasia with vascular remodeling, and the pulmonary hypertension that follows, outlast the defect.",
+     "to": "Hypoplasia with vascular remodeling, and the pulmonary hypertension that follows, persist after the defect is repaired"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Displaced heart sounds have three causes, and the abdomen tells them apart",
+     "from": "Displaced heart sounds have three owners and the abdomen tells you which."
+    },
+    {
+     "claim": "A scaphoid abdomen with absent breath sounds on the side of the defect is a diaphragmatic hernia.",
+     "from": "Scaphoid abdomen with absent breath sounds on the side of the defect is a diaphragmatic hernia."
+    },
+    {
+     "claim": "A distended, hyperresonant hemithorax in a deteriorating infant is a tension pneumothorax needing needle decompression.",
+     "from": "A distended hyperresonant hemithorax in a deteriorating infant is a tension pneumothorax needing needle decompression."
+    },
+    {
+     "claim": "A well infant with the heart on the right and no distress has dextrocardia",
+     "from": "A well infant with the heart on the right and no distress is dextrocardia."
+    },
+    {
+     "claim": "The lungs stay small after the hernia is repaired",
+     "from": "The lungs stay small after the hernia is repaired."
+    },
+    {
+     "claim": "viscera occupied the thorax during lung development.",
+     "from": "Viscera occupied the thorax during lung development."
+    },
+    {
+     "claim": "Hypoplasia with vascular remodeling, and the pulmonary hypertension that follows, persist after the defect is repaired",
+     "from": "Hypoplasia with vascular remodeling, and the pulmonary hypertension that follows, outlast the defect."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nrd",
+   "find": "Part II <b>Posterior Urethral Valves and Potter Sequence</b>. Shared complaint is a newborn in respiratory distress in the first hours; what flips is whether the lungs are structurally normal. Store the discriminator as a question: is this fluid in normal lungs, or lungs that were never built? Part I <b>Cyanosis in the Newborn</b> is the seam upstream of this brief &mdash; work of breathing, the oxygen response and the limb gradient sort lung from heart before the film narrows the parenchymal causes. Part I <b>Mechanisms of Hypoxemia</b> supplies the physiology underneath the oxygen response used here.",
+   "with": "Part II <b>Posterior Urethral Valves and Potter Sequence</b> shares the complaint: a newborn in respiratory distress in the first hours. The difference is whether the lungs are structurally normal. Ask: is this fluid in normal lungs, or lungs that never developed? Part I <b>Cyanosis in the Newborn</b> covers the step before this brief. There, work of breathing, the oxygen response and the limb gradient sort lung from heart before the film narrows the parenchymal causes. Part I <b>Mechanisms of Hypoxemia</b> covers the physiology underneath the oxygen response used here.",
+   "note": "Pairs with: Ask: form, em dash and metaphor removed",
+   "claims": [
+    {
+     "claim": "Part II Posterior Urethral Valves and Potter Sequence shares the complaint of a newborn in respiratory distress in the first hours.",
+     "to": "Part II Posterior Urethral Valves and Potter Sequence shares the complaint: a newborn in respiratory distress in the first hours."
+    },
+    {
+     "claim": "What flips between them is whether the lungs are structurally normal.",
+     "to": "The difference is whether the lungs are structurally normal."
+    },
+    {
+     "claim": "The discriminating question: is this fluid in normal lungs, or lungs that were never built?",
+     "to": "Ask: is this fluid in normal lungs, or lungs that never developed?"
+    },
+    {
+     "claim": "Part I Cyanosis in the Newborn is the seam upstream of this brief.",
+     "to": "Part I Cyanosis in the Newborn covers the step before this brief."
+    },
+    {
+     "claim": "Work of breathing, the oxygen response and the limb gradient sort lung from heart before the film narrows the parenchymal causes.",
+     "to": "There, work of breathing, the oxygen response and the limb gradient sort lung from heart before the film narrows the parenchymal causes."
+    },
+    {
+     "claim": "Part I Mechanisms of Hypoxemia supplies the physiology underneath the oxygen response used here.",
+     "to": "Part I Mechanisms of Hypoxemia covers the physiology underneath the oxygen response used here."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part II Posterior Urethral Valves and Potter Sequence shares the complaint: a newborn in respiratory distress in the first hours.",
+     "from": "Part II Posterior Urethral Valves and Potter Sequence shares the complaint of a newborn in respiratory distress in the first hours."
+    },
+    {
+     "claim": "The difference is whether the lungs are structurally normal.",
+     "from": "What flips between them is whether the lungs are structurally normal."
+    },
+    {
+     "claim": "Ask: is this fluid in normal lungs, or lungs that never developed?",
+     "from": "The discriminating question: is this fluid in normal lungs, or lungs that were never built?"
+    },
+    {
+     "claim": "Part I Cyanosis in the Newborn covers the step before this brief.",
+     "from": "Part I Cyanosis in the Newborn is the seam upstream of this brief."
+    },
+    {
+     "claim": "There, work of breathing, the oxygen response and the limb gradient sort lung from heart before the film narrows the parenchymal causes.",
+     "from": "Work of breathing, the oxygen response and the limb gradient sort lung from heart before the film narrows the parenchymal causes."
+    },
+    {
+     "claim": "Part I Mechanisms of Hypoxemia covers the physiology underneath the oxygen response used here.",
+     "from": "Part I Mechanisms of Hypoxemia supplies the physiology underneath the oxygen response used here."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nrd",
+   "find": "Four stem facts decide neonatal respiratory distress before any pathophysiology — gestational age, whether labor occurred, when the distress began, and what the film shows — and then the oxygen response separates lung disease from shunt.",
+   "with": "Four facts decide neonatal respiratory distress before any pathophysiology: gestational age, whether labor occurred, when the distress began, and what the film shows. The oxygen response then separates lung disease from shunt.",
+   "note": ".rule: em dashes removed",
+   "claims": [
+    {
+     "claim": "Four stem facts decide neonatal respiratory distress before any pathophysiology: gestational age, whether labor occurred, when the distress began, and what the film shows.",
+     "to": "Four facts decide neonatal respiratory distress before any pathophysiology: gestational age, whether labor occurred, when the distress began, and what the film shows."
+    },
+    {
+     "claim": "Then the oxygen response separates lung disease from shunt.",
+     "to": "The oxygen response then separates lung disease from shunt."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Four facts decide neonatal respiratory distress before any pathophysiology: gestational age, whether labor occurred, when the distress began, and what the film shows.",
+     "from": "Four stem facts decide neonatal respiratory distress before any pathophysiology: gestational age, whether labor occurred, when the distress began, and what the film shows."
+    },
+    {
+     "claim": "The oxygen response then separates lung disease from shunt.",
+     "from": "Then the oxygen response separates lung disease from shunt."
+    }
+   ]
+  }
+ ]
+}

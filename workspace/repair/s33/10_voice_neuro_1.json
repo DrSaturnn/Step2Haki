@@ -1,0 +1,550 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "hearing",
+   "find": "Rinne and Weber before anything else",
+   "with": "Rinne and Weber tests first",
+   "note": "subtitle: remove dramatic phrasing",
+   "claims": [
+    {
+     "claim": "Rinne and Weber tests come first in the evaluation.",
+     "to": "Rinne and Weber tests first"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Rinne and Weber tests come first.",
+     "from": "Rinne and Weber tests come first in the evaluation."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hearing",
+   "find": "<p><b>Conductive</b> loss: Weber <b>lateralizes to the affected ear</b>, Rinne shows <b>BC &gt; AC</b> in that ear. <b>Sensorineural</b>: Weber lateralizes <b>away</b>, Rinne stays AC &gt; BC bilaterally.",
+   "with": "<p><b>Conductive</b> loss: Weber <b>lateralizes to the affected ear</b>, and Rinne shows <b>BC &gt; AC</b> (bone conduction greater than air conduction) in that ear. <b>Sensorineural</b> loss: Weber lateralizes <b>away</b>, and Rinne stays AC &gt; BC bilaterally.",
+   "note": ".dp: expand BC and AC",
+   "claims": [
+    {
+     "claim": "In conductive loss Weber lateralizes to the affected ear.",
+     "to": "Conductive loss: Weber lateralizes to the affected ear, and Rinne shows BC > AC (bone conduction greater than air conduction) in that ear."
+    },
+    {
+     "claim": "In conductive loss Rinne shows BC > AC in that ear.",
+     "to": "Conductive loss: Weber lateralizes to the affected ear, and Rinne shows BC > AC (bone conduction greater than air conduction) in that ear."
+    },
+    {
+     "claim": "In sensorineural loss Weber lateralizes away.",
+     "to": "Sensorineural loss: Weber lateralizes away, and Rinne stays AC > BC bilaterally."
+    },
+    {
+     "claim": "In sensorineural loss Rinne stays AC > BC bilaterally.",
+     "to": "Sensorineural loss: Weber lateralizes away, and Rinne stays AC > BC bilaterally."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In conductive loss Weber lateralizes to the affected ear and Rinne shows BC > AC in that ear.",
+     "from": "In conductive loss Weber lateralizes to the affected ear."
+    },
+    {
+     "claim": "BC stands for bone conduction.",
+     "from": "expansion"
+    },
+    {
+     "claim": "AC stands for air conduction.",
+     "from": "expansion"
+    },
+    {
+     "claim": "In sensorineural loss Weber lateralizes away and Rinne stays AC > BC bilaterally.",
+     "from": "In sensorineural loss Weber lateralizes away."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hearing",
+   "find": " A <b>genetic bone-remodeling disorder of the otic capsule</b> at the <b>fissula ante fenestram</b> — an <b>otospongiotic</b> (hypervascular, resorptive) phase followed by a <b>sclerotic</b> phase that <b>fixes the stapes footplate</b>. <b>Autosomal dominant with ~40% penetrance</b>, onset in the 20s–40s, female 2:1 — so family history is often absent. <b>Estrogen and progesterone accelerate it</b>, which is why it is classically unmasked in pregnancy. Measles virus RNA has been found in otosclerotic foci.",
+   "with": " Otosclerosis is a <b>genetic bone-remodeling disorder of the otic capsule</b> at the <b>fissula ante fenestram</b>. An <b>otospongiotic</b> (hypervascular, resorptive) phase is followed by a <b>sclerotic</b> phase that <b>fixes the stapes footplate</b>. <b>Autosomal dominant with ~40% penetrance</b> means family history is often absent. Onset is in the 20s–40s, with a female predominance of 2:1. <b>Estrogen and progesterone accelerate it</b>, so it is classically unmasked in pregnancy. Measles virus <b>RNA</b> (ribonucleic acid) has been found in otosclerotic foci.",
+   "note": "pathophysiology pearls: remove em dashes, split sentences, expand RNA",
+   "claims": [
+    {
+     "claim": "Otosclerosis is a genetic bone-remodeling disorder of the otic capsule at the fissula ante fenestram.",
+     "to": "Otosclerosis is a genetic bone-remodeling disorder of the otic capsule at the fissula ante fenestram."
+    },
+    {
+     "claim": "An otospongiotic (hypervascular, resorptive) phase is followed by a sclerotic phase that fixes the stapes footplate.",
+     "to": "An otospongiotic (hypervascular, resorptive) phase is followed by a sclerotic phase that fixes the stapes footplate."
+    },
+    {
+     "claim": "It is autosomal dominant with ~40% penetrance.",
+     "to": "Autosomal dominant with ~40% penetrance means family history is often absent."
+    },
+    {
+     "claim": "Onset is in the 20s–40s.",
+     "to": "Onset is in the 20s–40s, with a female predominance of 2:1."
+    },
+    {
+     "claim": "It is female 2:1.",
+     "to": "Onset is in the 20s–40s, with a female predominance of 2:1."
+    },
+    {
+     "claim": "Family history is therefore often absent.",
+     "to": "Autosomal dominant with ~40% penetrance means family history is often absent."
+    },
+    {
+     "claim": "Estrogen and progesterone accelerate it, which is why it is classically unmasked in pregnancy.",
+     "to": "Estrogen and progesterone accelerate it, so it is classically unmasked in pregnancy."
+    },
+    {
+     "claim": "Measles virus RNA has been found in otosclerotic foci.",
+     "to": "Measles virus RNA (ribonucleic acid) has been found in otosclerotic foci."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Otosclerosis is a genetic bone-remodeling disorder of the otic capsule at the fissula ante fenestram.",
+     "from": "Otosclerosis is a genetic bone-remodeling disorder of the otic capsule at the fissula ante fenestram."
+    },
+    {
+     "claim": "An otospongiotic (hypervascular, resorptive) phase is followed by a sclerotic phase that fixes the stapes footplate.",
+     "from": "An otospongiotic (hypervascular, resorptive) phase is followed by a sclerotic phase that fixes the stapes footplate."
+    },
+    {
+     "claim": "It is autosomal dominant with ~40% penetrance, so family history is often absent.",
+     "from": "It is autosomal dominant with ~40% penetrance."
+    },
+    {
+     "claim": "Onset is in the 20s–40s, with a female predominance of 2:1.",
+     "from": "Onset is in the 20s–40s."
+    },
+    {
+     "claim": "Estrogen and progesterone accelerate it, so it is classically unmasked in pregnancy.",
+     "from": "Estrogen and progesterone accelerate it, which is why it is classically unmasked in pregnancy."
+    },
+    {
+     "claim": "RNA stands for ribonucleic acid.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Measles virus RNA has been found in otosclerotic foci.",
+     "from": "Measles virus RNA has been found in otosclerotic foci."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hearing",
+   "find": "vestibular schwannoma = unilateral SNHL + tinnitus → MRI. All have normal otoscopy — the <b>tuning forks</b> separate them from otosclerosis.",
+   "with": "vestibular schwannoma = unilateral <b>SNHL</b> (sensorineural hearing loss) + tinnitus → MRI. All have normal otoscopy; the <b>tuning forks</b> separate them from otosclerosis.",
+   "note": ".danger: remove em dash, expand SNHL",
+   "claims": [
+    {
+     "claim": "Vestibular schwannoma is unilateral SNHL plus tinnitus and needs MRI.",
+     "to": "vestibular schwannoma = unilateral SNHL (sensorineural hearing loss) + tinnitus → MRI."
+    },
+    {
+     "claim": "All these mimics have normal otoscopy.",
+     "to": "All have normal otoscopy; the tuning forks separate them from otosclerosis."
+    },
+    {
+     "claim": "The tuning forks separate them from otosclerosis.",
+     "to": "All have normal otoscopy; the tuning forks separate them from otosclerosis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Vestibular schwannoma is unilateral SNHL plus tinnitus and needs MRI.",
+     "from": "Vestibular schwannoma is unilateral SNHL plus tinnitus and needs MRI."
+    },
+    {
+     "claim": "SNHL stands for sensorineural hearing loss.",
+     "from": "expansion"
+    },
+    {
+     "claim": "All these mimics have normal otoscopy.",
+     "from": "All these mimics have normal otoscopy."
+    },
+    {
+     "claim": "The tuning forks separate them from otosclerosis.",
+     "from": "The tuning forks separate them from otosclerosis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "redeye",
+   "find": "Three questions triage all of it",
+   "with": "Three triage questions: acuity, deep pain, and the pupil, cornea or globe",
+   "note": "subtitle: replace slogan with the content",
+   "claims": [
+    {
+     "claim": "Three questions triage the red eye.",
+     "to": "Three triage questions: acuity, deep pain, and the pupil, cornea or globe"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Three triage questions cover acuity, deep pain, and the pupil, cornea or globe.",
+     "from": "Three questions triage the red eye."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "redeye",
+   "find": "<b>Any \"yes\" means this is not simple conjunctivitis</b> and the answer moves toward urgent ophthalmology.</p>",
+   "with": "<b>Any \"yes\" means this is not simple conjunctivitis</b> and points toward urgent ophthalmology.</p>",
+   "note": ".dp: remove reference to the answer",
+   "claims": [
+    {
+     "claim": "Any \"yes\" means this is not simple conjunctivitis.",
+     "to": "Any \"yes\" means this is not simple conjunctivitis and points toward urgent ophthalmology."
+    },
+    {
+     "claim": "Any yes moves toward urgent ophthalmology.",
+     "to": "Any \"yes\" means this is not simple conjunctivitis and points toward urgent ophthalmology."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Any \"yes\" means this is not simple conjunctivitis.",
+     "from": "Any \"yes\" means this is not simple conjunctivitis."
+    },
+    {
+     "claim": "Any yes points toward urgent ophthalmology.",
+     "from": "Any yes moves toward urgent ophthalmology."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "redeye",
+   "find": "<span class=\"lbl\">Neonatal conjunctivitis — a pure timing question</span> Day <b>0–1</b> chemical · day <b>2–5</b> <b>gonococcal</b> → IM/IV ceftriaxone + irrigation · day <b>5–14</b> <b>chlamydial</b> → <b>oral</b> erythromycin, or oral azithromycin as the alternative (counsel on pyloric stenosis with either) · day 6–14 HSV → IV acyclovir.",
+   "with": "<span class=\"lbl\">Neonatal conjunctivitis by day of onset</span> Day <b>0–1</b> chemical · day <b>2–5</b> <b>gonococcal</b> → <b>IM</b> (intramuscular)/<b>IV</b> (intravenous) ceftriaxone + irrigation · day <b>5–14</b> <b>chlamydial</b> → <b>oral</b> erythromycin, or oral azithromycin as the alternative (counsel on pyloric stenosis with either) · day 6–14 <b>HSV</b> (herpes simplex virus) → IV acyclovir.",
+   "note": "neonatal pearls: reword rhetorical label, expand IM, IV, HSV",
+   "reworded_label": [
+    "Neonatal conjunctivitis — a pure timing question"
+   ],
+   "claims": [
+    {
+     "claim": "Neonatal conjunctivitis is decided by timing.",
+     "to": "Neonatal conjunctivitis by day of onset"
+    },
+    {
+     "claim": "Day 2–5 gonococcal is treated with IM/IV ceftriaxone plus irrigation.",
+     "to": "day 2–5 gonococcal → IM (intramuscular)/IV (intravenous) ceftriaxone + irrigation"
+    },
+    {
+     "claim": "Day 6–14 HSV is treated with IV acyclovir.",
+     "to": "day 6–14 HSV (herpes simplex virus) → IV acyclovir."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Neonatal conjunctivitis is sorted by day of onset.",
+     "from": "Neonatal conjunctivitis is decided by timing."
+    },
+    {
+     "claim": "Day 2–5 gonococcal is treated with IM/IV ceftriaxone plus irrigation.",
+     "from": "Day 2–5 gonococcal is treated with IM/IV ceftriaxone plus irrigation."
+    },
+    {
+     "claim": "IM stands for intramuscular.",
+     "from": "expansion"
+    },
+    {
+     "claim": "IV stands for intravenous.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HSV stands for herpes simplex virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Day 6–14 HSV is treated with IV acyclovir.",
+     "from": "Day 6–14 HSV is treated with IV acyclovir."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "redeye",
+   "find": " Topical steroids are the <b>answer</b> in uveitis and scleritis, and the <b>catastrophe</b> in HSV keratitis, bacterial/fungal keratitis, and undifferentiated red eye. If you cannot name the diagnosis with certainty, steroids are never the answer.",
+   "with": " Topical steroids are indicated in uveitis and scleritis. They are catastrophic in <b>HSV</b> (herpes simplex virus) keratitis, bacterial or fungal keratitis, and undifferentiated red eye. If you cannot name the diagnosis with certainty, never give steroids.",
+   "note": ".rule: remove rhythmic contrast and answer framing; expand HSV",
+   "reworded_bold": [
+    "answer",
+    "catastrophe"
+   ],
+   "claims": [
+    {
+     "claim": "Topical steroids are the answer in uveitis and scleritis.",
+     "to": "Topical steroids are indicated in uveitis and scleritis."
+    },
+    {
+     "claim": "Topical steroids are a catastrophe in HSV keratitis, bacterial/fungal keratitis, and undifferentiated red eye.",
+     "to": "They are catastrophic in HSV (herpes simplex virus) keratitis, bacterial or fungal keratitis, and undifferentiated red eye."
+    },
+    {
+     "claim": "If you cannot name the diagnosis with certainty, steroids are never the answer.",
+     "to": "If you cannot name the diagnosis with certainty, never give steroids."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Topical steroids are indicated in uveitis and scleritis.",
+     "from": "Topical steroids are the answer in uveitis and scleritis."
+    },
+    {
+     "claim": "Topical steroids are catastrophic in HSV keratitis, bacterial or fungal keratitis, and undifferentiated red eye.",
+     "from": "Topical steroids are a catastrophe in HSV keratitis, bacterial/fungal keratitis, and undifferentiated red eye."
+    },
+    {
+     "claim": "HSV stands for herpes simplex virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "If you cannot name the diagnosis with certainty, never give steroids.",
+     "from": "If you cannot name the diagnosis with certainty, steroids are never the answer."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cluster",
+   "find": "<p>Acute <b>unilateral periorbital pain with ipsilateral autonomic signs</b> — ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection — is a cluster headache, and the autonomic column is what decides the stem. Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting. Acute treatment is <b>100% oxygen</b>; sumatriptan aborts attacks but is second-line (slower onset, side effects). Vision stays intact — <b>vision change or a fixed mid-dilated pupil moves the diagnosis to angle-closure glaucoma</b>.</p>",
+   "with": "<p>Acute <b>unilateral periorbital pain with ipsilateral autonomic signs</b> (ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection) is a cluster headache. Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting. Acute treatment is <b>100% oxygen</b>. Sumatriptan aborts attacks but is second-line because of slower onset and side effects. Vision stays intact in cluster headache; <b>vision change or a fixed mid-dilated pupil moves the diagnosis to angle-closure glaucoma</b>.</p>",
+   "note": ".dp: remove em dashes and stem framing; split sentences",
+   "claims": [
+    {
+     "claim": "Acute unilateral periorbital pain with ipsilateral autonomic signs (ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection) is a cluster headache.",
+     "to": "Acute unilateral periorbital pain with ipsilateral autonomic signs (ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection) is a cluster headache."
+    },
+    {
+     "claim": "The autonomic column is what decides the stem.",
+     "dropped": "framing about the stem; the autonomic signs are named as the defining feature in the first sentence"
+    },
+    {
+     "claim": "Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting.",
+     "to": "Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting."
+    },
+    {
+     "claim": "Acute treatment is 100% oxygen.",
+     "to": "Acute treatment is 100% oxygen."
+    },
+    {
+     "claim": "Sumatriptan aborts attacks but is second-line (slower onset, side effects).",
+     "to": "Sumatriptan aborts attacks but is second-line because of slower onset and side effects."
+    },
+    {
+     "claim": "Vision stays intact.",
+     "to": "Vision stays intact in cluster headache; vision change or a fixed mid-dilated pupil moves the diagnosis to angle-closure glaucoma."
+    },
+    {
+     "claim": "Vision change or a fixed mid-dilated pupil moves the diagnosis to angle-closure glaucoma.",
+     "to": "Vision stays intact in cluster headache; vision change or a fixed mid-dilated pupil moves the diagnosis to angle-closure glaucoma."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Acute unilateral periorbital pain with ipsilateral autonomic signs (ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection) is a cluster headache.",
+     "from": "Acute unilateral periorbital pain with ipsilateral autonomic signs (ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection) is a cluster headache."
+    },
+    {
+     "claim": "Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting.",
+     "from": "Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting."
+    },
+    {
+     "claim": "Acute treatment is 100% oxygen.",
+     "from": "Acute treatment is 100% oxygen."
+    },
+    {
+     "claim": "Sumatriptan aborts attacks but is second-line because of slower onset and side effects.",
+     "from": "Sumatriptan aborts attacks but is second-line (slower onset, side effects)."
+    },
+    {
+     "claim": "Vision stays intact in cluster headache.",
+     "from": "Vision stays intact."
+    },
+    {
+     "claim": "Vision change or a fixed mid-dilated pupil moves the diagnosis to angle-closure glaucoma.",
+     "from": "Vision change or a fixed mid-dilated pupil moves the diagnosis to angle-closure glaucoma."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cluster",
+   "find": " Autonomic signs are nearly universal in cluster — their <b>absence</b> should force a second look · agitation during the attack is a cluster tell (migraineurs lie still) · rhinorrhea plus facial pain baits the sinusitis answer, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds, cluster lasts an hour and a half.",
+   "with": " Autonomic signs are nearly universal in cluster headache; their <b>absence</b> should prompt a second look at the diagnosis · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea with facial pain can suggest sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half.",
+   "note": "pearls: remove em dash and answer framing",
+   "claims": [
+    {
+     "claim": "Autonomic signs are nearly universal in cluster.",
+     "to": "Autonomic signs are nearly universal in cluster headache; their absence should prompt a second look at the diagnosis"
+    },
+    {
+     "claim": "Their absence should force a second look.",
+     "to": "Autonomic signs are nearly universal in cluster headache; their absence should prompt a second look at the diagnosis"
+    },
+    {
+     "claim": "Agitation during the attack is a cluster tell; migraineurs lie still.",
+     "to": "agitation during the attack points to cluster (migraineurs lie still)"
+    },
+    {
+     "claim": "Rhinorrhea plus facial pain baits the sinusitis answer.",
+     "to": "rhinorrhea with facial pain can suggest sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis"
+    },
+    {
+     "claim": "Sinusitis pain is not episodic and brings congestion and fever, not ptosis.",
+     "to": "rhinorrhea with facial pain can suggest sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis"
+    },
+    {
+     "claim": "Trigeminal neuralgia lasts seconds; cluster lasts an hour and a half.",
+     "to": "trigeminal neuralgia lasts seconds; cluster lasts an hour and a half."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Autonomic signs are nearly universal in cluster headache.",
+     "from": "Autonomic signs are nearly universal in cluster."
+    },
+    {
+     "claim": "Their absence should prompt a second look at the diagnosis.",
+     "from": "Their absence should force a second look."
+    },
+    {
+     "claim": "Agitation during the attack points to cluster; migraineurs lie still.",
+     "from": "Agitation during the attack is a cluster tell; migraineurs lie still."
+    },
+    {
+     "claim": "Rhinorrhea with facial pain can suggest sinusitis.",
+     "from": "Rhinorrhea plus facial pain baits the sinusitis answer."
+    },
+    {
+     "claim": "Sinusitis pain is not episodic and brings congestion and fever, not ptosis.",
+     "from": "Sinusitis pain is not episodic and brings congestion and fever, not ptosis."
+    },
+    {
+     "claim": "Trigeminal neuralgia lasts seconds; cluster lasts an hour and a half.",
+     "from": "Trigeminal neuralgia lasts seconds; cluster lasts an hour and a half."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cluster",
+   "find": "Part I <b>Headache in a Child: What Earns Imaging</b> owns the pediatric red-flag gate that runs before this type differential.",
+   "with": "Part I <b>Headache in a Child: What Earns Imaging</b> covers the pediatric red-flag gate that comes before this headache-type differential.",
+   "note": "Pairs with: owns -> covers",
+   "claims": [
+    {
+     "claim": "Headache in a Child: What Earns Imaging covers the pediatric red-flag gate that runs before this type differential.",
+     "to": "Part I Headache in a Child: What Earns Imaging covers the pediatric red-flag gate that comes before this headache-type differential."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Headache in a Child: What Earns Imaging covers the pediatric red-flag gate that comes before this headache-type differential.",
+     "from": "Headache in a Child: What Earns Imaging covers the pediatric red-flag gate that runs before this type differential."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cluster",
+   "find": " Headache stems are solved on two axes — duration and company: seconds = neuralgia, minutes-to-hours with autonomic signs = cluster, hours-to-days with nausea/photophobia = migraine. Match the clock before the character of the pain.",
+   "with": " Classify a headache by two features: duration and associated signs. Attacks lasting seconds are neuralgia · minutes to hours with autonomic signs are cluster · hours to days with nausea or photophobia are migraine. Match the duration before the character of the pain.",
+   "note": ".rule: remove stem framing, em dash and equals chain",
+   "claims": [
+    {
+     "claim": "Headaches are sorted on two axes, duration and associated features.",
+     "to": "Classify a headache by two features: duration and associated signs."
+    },
+    {
+     "claim": "Seconds is neuralgia.",
+     "to": "Attacks lasting seconds are neuralgia · minutes to hours with autonomic signs are cluster · hours to days with nausea or photophobia are migraine."
+    },
+    {
+     "claim": "Minutes to hours with autonomic signs is cluster.",
+     "to": "Attacks lasting seconds are neuralgia · minutes to hours with autonomic signs are cluster · hours to days with nausea or photophobia are migraine."
+    },
+    {
+     "claim": "Hours to days with nausea or photophobia is migraine.",
+     "to": "Attacks lasting seconds are neuralgia · minutes to hours with autonomic signs are cluster · hours to days with nausea or photophobia are migraine."
+    },
+    {
+     "claim": "Match the duration before the character of the pain.",
+     "to": "Match the duration before the character of the pain."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Classify a headache by duration and associated signs.",
+     "from": "Headaches are sorted on two axes, duration and associated features."
+    },
+    {
+     "claim": "Attacks lasting seconds are neuralgia.",
+     "from": "Seconds is neuralgia."
+    },
+    {
+     "claim": "Minutes to hours with autonomic signs are cluster.",
+     "from": "Minutes to hours with autonomic signs is cluster."
+    },
+    {
+     "claim": "Hours to days with nausea or photophobia are migraine.",
+     "from": "Hours to days with nausea or photophobia is migraine."
+    },
+    {
+     "claim": "Match the duration before the character of the pain.",
+     "from": "Match the duration before the character of the pain."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cluster",
+   "find": "<span class=\"trapwhy\">Rhinorrhea suggests sinusitis; the episodic pattern and autonomic bundle decide otherwise.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">Sumatriptan genuinely aborts cluster — but oxygen is the keyed first-line abortive.</span>",
+   "with": "<span class=\"trapwhy\">Sinusitis: Rhinorrhea suggests it, but the episodic pattern and the autonomic signs point to another diagnosis.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">Sumatriptan: It aborts cluster attacks, but oxygen is the first-line abortive.</span>",
+   "note": "traps: Option: why format, remove em dash and keyed framing",
+   "claims": [
+    {
+     "claim": "Rhinorrhea suggests sinusitis.",
+     "to": "Sinusitis: Rhinorrhea suggests it, but the episodic pattern and the autonomic signs point to another diagnosis."
+    },
+    {
+     "claim": "The episodic pattern and autonomic signs decide against sinusitis.",
+     "to": "Sinusitis: Rhinorrhea suggests it, but the episodic pattern and the autonomic signs point to another diagnosis."
+    },
+    {
+     "claim": "Sumatriptan aborts cluster.",
+     "to": "Sumatriptan: It aborts cluster attacks, but oxygen is the first-line abortive."
+    },
+    {
+     "claim": "Oxygen is the first-line abortive.",
+     "to": "Sumatriptan: It aborts cluster attacks, but oxygen is the first-line abortive."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Rhinorrhea suggests sinusitis.",
+     "from": "Rhinorrhea suggests sinusitis."
+    },
+    {
+     "claim": "The episodic pattern and autonomic signs point away from sinusitis.",
+     "from": "The episodic pattern and autonomic signs decide against sinusitis."
+    },
+    {
+     "claim": "Sumatriptan aborts cluster attacks.",
+     "from": "Sumatriptan aborts cluster."
+    },
+    {
+     "claim": "Oxygen is the first-line abortive.",
+     "from": "Oxygen is the first-line abortive."
+    }
+   ]
+  }
+ ]
+}

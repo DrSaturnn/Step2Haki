@@ -1,17 +1,22 @@
 #!/usr/bin/env python3
 """make_voice_packet.py: voice-pass packets for one system section.
 
-  python3 repair/efficiency/make_voice_packet.py <batch> <system id> [--groups N] [--exclude id,id]
+  python3 repair/efficiency/make_voice_packet.py <batch> <system id> [--groups N | --per N] [--exclude id,id]
+                                                 [--outdir DIR] [--prefix NN]
 
 1. Builds the verify base: index.html plus every repair/<batch>/*.json that is not a voice
    file (name without "voice"), written to scratch/<batch>_base.html, so worker anchors match
    the page as it will be when the voice edits apply.
 2. Takes every brief under <h3 class="system" id="<system id>"> in that base (topic, board-style,
    Aquifer), minus --exclude, and splits them into N groups (default 5) of similar HTML size
-   (largest first into the lightest group), each group kept in page order.
-3. Writes repair/<batch>/voice/packet_<k>.md per group: instructions and verify command,
-   RULES_voice.md, the replace-only edit format, the briefs' HTML. Workers write
-   repair/<batch>/04_voice_<k>.json, which build.py applies after the other batch files.
+   (largest first into the lightest group), each group kept in page order; or, with --per N,
+   into consecutive page-order packets of N briefs (the last one smaller).
+3. Writes <outdir>/packet_<k>.md per group (default outdir repair/<batch>/voice; with --outdir the
+   names are packet_<system>_<k>.md): instructions and verify command, RULES_voice.md, the
+   replace-only edit format, the worked example, the briefs' HTML. Workers write
+   repair/<batch>/<prefix>_voice_<k>.json (default prefix 04; with --outdir
+   <prefix>_voice_<system>_<k>.json), which build.py applies after the other batch files.
+   Packets quote page HTML only; put them under repair/sources/ when they must stay local.
 """
 import glob
 import os
@@ -86,22 +91,31 @@ def main(argv):
         print(__doc__)
         return 2
     batch, sysid = argv[0], argv[1]
-    ng = int(argv[argv.index('--groups') + 1]) if '--groups' in argv else 5
-    excl = set(argv[argv.index('--exclude') + 1].split(',')) if '--exclude' in argv else set()
+    opt = lambda k, d=None: argv[argv.index(k) + 1] if k in argv else d  # noqa: E731
+    excl = set(opt('--exclude', '').split(',')) - {''}
+    prefix = opt('--prefix', '04')
     html, base = base_page(batch)
     bl = [b for b in section_briefs(html, sysid) if b.id not in excl]
-    groups = [[] for _ in range(ng)]
-    for b in sorted(bl, key=lambda x: -(x.end - x.start)):
-        min(groups, key=lambda g: sum(x.end - x.start for x in g)).append(b)
+    if '--per' in argv:
+        per = int(opt('--per'))
+        groups = [bl[i:i + per] for i in range(0, len(bl), per)]
+        ng = len(groups)
+    else:
+        ng = int(opt('--groups', 5))
+        groups = [[] for _ in range(ng)]
+        for b in sorted(bl, key=lambda x: -(x.end - x.start)):
+            min(groups, key=lambda g: sum(x.end - x.start for x in g)).append(b)
     rules = open(os.path.join(HERE, 'RULES_voice.md'), encoding='utf-8').read()
     rules = re.sub(r'^# .*\n', '', rules, count=1).strip()
     rules = re.sub(r'^(#{1,4}) ', lambda m: '#' * (len(m.group(1)) + 2) + ' ', rules, flags=re.M)
-    outdir = os.path.join(WS, 'repair', batch, 'voice')
+    named = '--outdir' in argv
+    outdir = os.path.join(WS, opt('--outdir')) if named else os.path.join(WS, 'repair', batch, 'voice')
+    tag = '%s_%%d' % sysid if named else '%d'
     os.makedirs(outdir, exist_ok=True)
     base_rel = os.path.relpath(base, WS)
     for k, g in enumerate(groups, 1):
         g.sort(key=lambda b: b.start)
-        edits = 'repair/%s/04_voice_%d.json' % (batch, k)
+        edits = 'repair/%s/%s_voice_%s.json' % (batch, prefix, tag % k)
         cmd = 'python3 tools/verify_edits.py %s %s --voice' % (edits, base_rel)
         parts = ['# Voice packet %d of %d (%s, %s): %s' % (k, ng, batch, sysid, ', '.join(b.id for b in g)),
                  '**Instructions.** Everything you need is in this packet. Do not open index.html, the skill files or other '
@@ -112,7 +126,7 @@ def main(argv):
                  '## Worked example (infant-stool .dp, round 2; passes the verifier)\n' + example(),
                  '## Briefs (%d): current HTML\n' % len(g) + '\n\n'.join(
                      '### `%s`: %s\n\n```html\n%s\n```' % (b.id, b.title, html[b.start:b.end]) for b in g)]
-        out = os.path.join(outdir, 'packet_%d.md' % k)
+        out = os.path.join(outdir, 'packet_%s.md' % (tag % k))
         body = '\n\n'.join(parts) + '\n'
         open(out, 'w', encoding='utf-8').write(body)
         print('packet %d: %s | %d briefs (%s) | %d chars, ~%d tokens'

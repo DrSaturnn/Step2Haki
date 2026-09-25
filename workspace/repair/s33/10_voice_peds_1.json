@@ -1,0 +1,2390 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "Derive, don't memorize",
+   "with": "Normal growth and developmental milestones",
+   "note": "sub: slogan replaced by plain topic",
+   "claims": [
+    {
+     "claim": "Derive, don't memorize",
+     "dropped": "slogan about study method; not a clinical claim"
+    }
+   ],
+   "new_claims": []
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "<p>Growth: birth weight is <b>regained by 10–14 days</b>, <b>doubles by 4–6 months</b>, <b>triples by 1 year</b>, quadruples by 2. When numbers match a milestone rule and the exam is normal, the answer is the <b>reassurance</b> option and every distractor is an unnecessary intervention.</p>",
+   "with": "<p>Birth weight is <b>regained by 10–14 days</b>, <b>doubles by 4–6 months</b>, <b>triples by 1 year</b> and quadruples by 2 years. When the numbers match a milestone rule and the exam is normal, management is <b>reassurance</b>; any other intervention is unnecessary.</p>",
+   "note": ".dp: remove answer/distractor framing",
+   "claims": [
+    {
+     "claim": "Birth weight is regained by 10–14 days.",
+     "to": "Birth weight is regained by 10–14 days, doubles by 4–6 months, triples by 1 year and quadruples by 2 years."
+    },
+    {
+     "claim": "Birth weight doubles by 4–6 months.",
+     "to": "Birth weight is regained by 10–14 days, doubles by 4–6 months, triples by 1 year and quadruples by 2 years."
+    },
+    {
+     "claim": "Birth weight triples by 1 year.",
+     "to": "Birth weight is regained by 10–14 days, doubles by 4–6 months, triples by 1 year and quadruples by 2 years."
+    },
+    {
+     "claim": "Birth weight quadruples by 2.",
+     "to": "Birth weight is regained by 10–14 days, doubles by 4–6 months, triples by 1 year and quadruples by 2 years."
+    },
+    {
+     "claim": "When numbers match a milestone rule and the exam is normal, reassurance is correct.",
+     "to": "When the numbers match a milestone rule and the exam is normal, management is reassurance; any other intervention is unnecessary."
+    },
+    {
+     "claim": "Every other intervention is unnecessary.",
+     "to": "When the numbers match a milestone rule and the exam is normal, management is reassurance; any other intervention is unnecessary."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Birth weight is regained by 10–14 days.",
+     "from": "Birth weight is regained by 10–14 days."
+    },
+    {
+     "claim": "Birth weight doubles by 4–6 months.",
+     "from": "Birth weight doubles by 4–6 months."
+    },
+    {
+     "claim": "Birth weight triples by 1 year.",
+     "from": "Birth weight triples by 1 year."
+    },
+    {
+     "claim": "Birth weight quadruples by 2 years.",
+     "from": "Birth weight quadruples by 2."
+    },
+    {
+     "claim": "When the numbers match a milestone rule and the exam is normal, management is reassurance.",
+     "from": "When numbers match a milestone rule and the exam is normal, reassurance is correct."
+    },
+    {
+     "claim": "Any other intervention is unnecessary.",
+     "from": "Every other intervention is unnecessary."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "<span class=\"lbl\">Red flags — worth more points than the milestones</span>\nNo social smile by <b>3 mo</b> · no babbling by <b>9 mo</b> · no words by <b>15 mo</b> · not walking by <b>18 mo</b> · <b>hand preference before 12 months</b> (suggests hemiparesis) · <b>loss of any acquired milestone at any age</b> — regression is always pathologic (Rett, autistic regression, metabolic disease, leukodystrophy).",
+   "with": "<span class=\"lbl\">Red flags</span>\nNo social smile by <b>3 mo</b> · no babbling by <b>9 mo</b> · no words by <b>15 mo</b> · not walking by <b>18 mo</b> · <b>hand preference before 12 months</b> (suggests hemiparesis) · <b>loss of any acquired milestone at any age</b>; regression is always pathologic (Rett, autistic regression, metabolic disease, leukodystrophy).",
+   "note": ".danger: rhetorical label, em dash",
+   "reworded_label": [
+    "Red flags — worth more points than the milestones"
+   ],
+   "claims": [
+    {
+     "claim": "Red flags are worth more exam points than the milestones.",
+     "dropped": "exam-scoring framing in the label"
+    },
+    {
+     "claim": "No social smile by 3 mo is a red flag.",
+     "to": "No social smile by 3 mo · no babbling by 9 mo · no words by 15 mo · not walking by 18 mo · hand preference before 12 months (suggests hemiparesis) · loss of any acquired milestone at any age; regression is always pathologic (Rett, autistic regression, metabolic disease, leukodystrophy)."
+    },
+    {
+     "claim": "No babbling by 9 mo is a red flag.",
+     "to": "No social smile by 3 mo · no babbling by 9 mo · no words by 15 mo · not walking by 18 mo · hand preference before 12 months (suggests hemiparesis) · loss of any acquired milestone at any age; regression is always pathologic (Rett, autistic regression, metabolic disease, leukodystrophy)."
+    },
+    {
+     "claim": "No words by 15 mo is a red flag.",
+     "to": "No social smile by 3 mo · no babbling by 9 mo · no words by 15 mo · not walking by 18 mo · hand preference before 12 months (suggests hemiparesis) · loss of any acquired milestone at any age; regression is always pathologic (Rett, autistic regression, metabolic disease, leukodystrophy)."
+    },
+    {
+     "claim": "Not walking by 18 mo is a red flag.",
+     "to": "No social smile by 3 mo · no babbling by 9 mo · no words by 15 mo · not walking by 18 mo · hand preference before 12 months (suggests hemiparesis) · loss of any acquired milestone at any age; regression is always pathologic (Rett, autistic regression, metabolic disease, leukodystrophy)."
+    },
+    {
+     "claim": "Hand preference before 12 months is a red flag and suggests hemiparesis.",
+     "to": "No social smile by 3 mo · no babbling by 9 mo · no words by 15 mo · not walking by 18 mo · hand preference before 12 months (suggests hemiparesis) · loss of any acquired milestone at any age; regression is always pathologic (Rett, autistic regression, metabolic disease, leukodystrophy)."
+    },
+    {
+     "claim": "Loss of any acquired milestone at any age is a red flag.",
+     "to": "No social smile by 3 mo · no babbling by 9 mo · no words by 15 mo · not walking by 18 mo · hand preference before 12 months (suggests hemiparesis) · loss of any acquired milestone at any age; regression is always pathologic (Rett, autistic regression, metabolic disease, leukodystrophy)."
+    },
+    {
+     "claim": "Regression is always pathologic (Rett, autistic regression, metabolic disease, leukodystrophy).",
+     "to": "No social smile by 3 mo · no babbling by 9 mo · no words by 15 mo · not walking by 18 mo · hand preference before 12 months (suggests hemiparesis) · loss of any acquired milestone at any age; regression is always pathologic (Rett, autistic regression, metabolic disease, leukodystrophy)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "No social smile by 3 mo is a red flag.",
+     "from": "No social smile by 3 mo is a red flag."
+    },
+    {
+     "claim": "No babbling by 9 mo is a red flag.",
+     "from": "No babbling by 9 mo is a red flag."
+    },
+    {
+     "claim": "No words by 15 mo is a red flag.",
+     "from": "No words by 15 mo is a red flag."
+    },
+    {
+     "claim": "Not walking by 18 mo is a red flag.",
+     "from": "Not walking by 18 mo is a red flag."
+    },
+    {
+     "claim": "Hand preference before 12 months is a red flag and suggests hemiparesis.",
+     "from": "Hand preference before 12 months is a red flag and suggests hemiparesis."
+    },
+    {
+     "claim": "Loss of any acquired milestone at any age is a red flag.",
+     "from": "Loss of any acquired milestone at any age is a red flag."
+    },
+    {
+     "claim": "Regression is always pathologic (Rett, autistic regression, metabolic disease, leukodystrophy).",
+     "from": "Regression is always pathologic (Rett, autistic regression, metabolic disease, leukodystrophy)."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "Palmar grasp gone 3–6 mo (enables voluntary grasp) · Moro by 6 mo · rooting by 4 mo · ATNR by 4–6 mo · <b>parachute appears 6–8 mo and stays for life</b> · Babinski normal until 12–24 mo. Persistence beyond these windows = UMN lesion / cerebral palsy. <span class=\"ex\">Note: the CDC 2022 revision moved milestones from the 50th to the 75th percentile — that's why \"sits without support\" now sits at 9 months where older sources say 6.</span>",
+   "with": "Palmar grasp gone 3–6 mo (enables voluntary grasp) · Moro by 6 mo · rooting by 4 mo · <b>ATNR</b> (asymmetric tonic neck reflex) by 4–6 mo · <b>parachute appears 6–8 mo and stays for life</b> · Babinski normal until 12–24 mo. Persistence beyond these windows indicates a <b>UMN</b> (upper motor neuron) lesion or cerebral palsy. <span class=\"ex\">Note: the <b>CDC</b> (Centers for Disease Control and Prevention) 2022 revision moved milestones from the 50th to the 75th percentile. As a result, \"sits without support\" is now listed at 9 months, where older sources say 6.</span>",
+   "note": ".pearls: acronyms, = shorthand, em dash",
+   "claims": [
+    {
+     "claim": "Palmar grasp is gone by 3–6 mo, which enables voluntary grasp.",
+     "to": "Palmar grasp gone 3–6 mo (enables voluntary grasp) · Moro by 6 mo · rooting by 4 mo · ATNR (asymmetric tonic neck reflex) by 4–6 mo · parachute appears 6–8 mo and stays for life · Babinski normal until 12–24 mo."
+    },
+    {
+     "claim": "Moro is gone by 6 mo.",
+     "to": "Palmar grasp gone 3–6 mo (enables voluntary grasp) · Moro by 6 mo · rooting by 4 mo · ATNR (asymmetric tonic neck reflex) by 4–6 mo · parachute appears 6–8 mo and stays for life · Babinski normal until 12–24 mo."
+    },
+    {
+     "claim": "Rooting is gone by 4 mo.",
+     "to": "Palmar grasp gone 3–6 mo (enables voluntary grasp) · Moro by 6 mo · rooting by 4 mo · ATNR (asymmetric tonic neck reflex) by 4–6 mo · parachute appears 6–8 mo and stays for life · Babinski normal until 12–24 mo."
+    },
+    {
+     "claim": "ATNR is gone by 4–6 mo.",
+     "to": "Palmar grasp gone 3–6 mo (enables voluntary grasp) · Moro by 6 mo · rooting by 4 mo · ATNR (asymmetric tonic neck reflex) by 4–6 mo · parachute appears 6–8 mo and stays for life · Babinski normal until 12–24 mo."
+    },
+    {
+     "claim": "Parachute appears at 6–8 mo and stays for life.",
+     "to": "Palmar grasp gone 3–6 mo (enables voluntary grasp) · Moro by 6 mo · rooting by 4 mo · ATNR (asymmetric tonic neck reflex) by 4–6 mo · parachute appears 6–8 mo and stays for life · Babinski normal until 12–24 mo."
+    },
+    {
+     "claim": "Babinski is normal until 12–24 mo.",
+     "to": "Palmar grasp gone 3–6 mo (enables voluntary grasp) · Moro by 6 mo · rooting by 4 mo · ATNR (asymmetric tonic neck reflex) by 4–6 mo · parachute appears 6–8 mo and stays for life · Babinski normal until 12–24 mo."
+    },
+    {
+     "claim": "Persistence beyond these windows means a UMN lesion or cerebral palsy.",
+     "to": "Persistence beyond these windows indicates a UMN (upper motor neuron) lesion or cerebral palsy."
+    },
+    {
+     "claim": "The CDC 2022 revision moved milestones from the 50th to the 75th percentile.",
+     "to": "Note: the CDC (Centers for Disease Control and Prevention) 2022 revision moved milestones from the 50th to the 75th percentile."
+    },
+    {
+     "claim": "That is why sits without support is now at 9 months where older sources say 6.",
+     "to": "As a result, \"sits without support\" is now listed at 9 months, where older sources say 6."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Palmar grasp is gone by 3–6 mo, which enables voluntary grasp.",
+     "from": "Palmar grasp is gone by 3–6 mo, which enables voluntary grasp."
+    },
+    {
+     "claim": "Moro is gone by 6 mo.",
+     "from": "Moro is gone by 6 mo."
+    },
+    {
+     "claim": "Rooting is gone by 4 mo.",
+     "from": "Rooting is gone by 4 mo."
+    },
+    {
+     "claim": "ATNR is gone by 4–6 mo.",
+     "from": "ATNR is gone by 4–6 mo."
+    },
+    {
+     "claim": "Parachute appears at 6–8 mo and stays for life.",
+     "from": "Parachute appears at 6–8 mo and stays for life."
+    },
+    {
+     "claim": "Babinski is normal until 12–24 mo.",
+     "from": "Babinski is normal until 12–24 mo."
+    },
+    {
+     "claim": "ATNR stands for asymmetric tonic neck reflex.",
+     "from": "expansion"
+    },
+    {
+     "claim": "UMN stands for upper motor neuron.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CDC stands for Centers for Disease Control and Prevention.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Persistence beyond these windows indicates a UMN lesion or cerebral palsy.",
+     "from": "Persistence beyond these windows means a UMN lesion or cerebral palsy."
+    },
+    {
+     "claim": "The CDC 2022 revision moved milestones from the 50th to the 75th percentile.",
+     "from": "The CDC 2022 revision moved milestones from the 50th to the 75th percentile."
+    },
+    {
+     "claim": "Sits without support is now listed at 9 months, where older sources say 6.",
+     "from": "That is why sits without support is now at 9 months where older sources say 6."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "<b>Walks easily and climbs</b> &mdash; the gross motor item, and the one this stem fails &middot;",
+   "with": "<b>Walks easily and climbs</b> &mdash; the gross motor item &middot;",
+   "note": ".pearls 18-month: stem framing",
+   "claims": [
+    {
+     "claim": "Walking easily and climbing is the 18-month gross motor item.",
+     "to": "Walks easily and climbs — the gross motor item"
+    },
+    {
+     "claim": "This stem's child fails it.",
+     "dropped": "framing about the stem; the bank item states the child only cruises"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Walking easily and climbing is the 18-month gross motor item.",
+     "from": "Walking easily and climbing is the 18-month gross motor item."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "<b>Two-word phrases belong to 24 months</b> and <b>75% intelligible speech to age 3</b>, so a stem citing either against an 18-month-old is testing whether you know the age rather than the child &middot; <b>Stranger anxiety is normal from 6 to 9 months to about age 2</b> and argues for intact social development rather than against it",
+   "with": "<b>Two-word phrases belong to 24 months</b> and <b>75% intelligible speech to age 3</b>; neither is expected at 18 months &middot; <b>Stranger anxiety is normal from 6 to 9 months to about age 2</b> and supports intact social development",
+   "note": ".pearls 18-month: stem framing",
+   "claims": [
+    {
+     "claim": "Two-word phrases belong to 24 months.",
+     "to": "Two-word phrases belong to 24 months and 75% intelligible speech to age 3; neither is expected at 18 months"
+    },
+    {
+     "claim": "75% intelligible speech belongs to age 3.",
+     "to": "Two-word phrases belong to 24 months and 75% intelligible speech to age 3; neither is expected at 18 months"
+    },
+    {
+     "claim": "Lacking either at 18 months is not a delay.",
+     "to": "Two-word phrases belong to 24 months and 75% intelligible speech to age 3; neither is expected at 18 months"
+    },
+    {
+     "claim": "A stem citing either checks whether you know the age.",
+     "dropped": "framing about the stem"
+    },
+    {
+     "claim": "Stranger anxiety is normal from 6 to 9 months to about age 2.",
+     "to": "Stranger anxiety is normal from 6 to 9 months to about age 2 and supports intact social development"
+    },
+    {
+     "claim": "Stranger anxiety argues for intact social development rather than against it.",
+     "to": "Stranger anxiety is normal from 6 to 9 months to about age 2 and supports intact social development"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Two-word phrases belong to 24 months.",
+     "from": "Two-word phrases belong to 24 months."
+    },
+    {
+     "claim": "75% intelligible speech belongs to age 3.",
+     "from": "75% intelligible speech belongs to age 3."
+    },
+    {
+     "claim": "Neither is expected at 18 months.",
+     "from": "Lacking either at 18 months is not a delay."
+    },
+    {
+     "claim": "Stranger anxiety is normal from 6 to 9 months to about age 2.",
+     "from": "Stranger anxiety is normal from 6 to 9 months to about age 2."
+    },
+    {
+     "claim": "Stranger anxiety supports intact social development.",
+     "from": "Stranger anxiety argues for intact social development rather than against it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "Part I <b>Toddler Food Refusal</b> owns the case where growth falters because of how the child eats rather than how much.",
+   "with": "Part I <b>Toddler Food Refusal</b> covers the case where growth falters because of how the child eats rather than how much.",
+   "note": "Pairs with: owns -> covers",
+   "claims": [
+    {
+     "claim": "Toddler Food Refusal owns growth faltering from how the child eats rather than how much.",
+     "to": "Part I Toddler Food Refusal covers the case where growth falters because of how the child eats rather than how much."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Toddler Food Refusal covers growth faltering from how the child eats rather than how much.",
+     "from": "Toddler Food Refusal owns growth faltering from how the child eats rather than how much."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "<p>Creatinine <b>crosses the placenta freely</b>, so a value drawn at 23 hours is a two-patient result — and this mother has end-stage renal disease on regular hemodialysis. The infant's own ledger says the kidneys are working: <b>two voids</b> (the floor is one void per day of life), <b>3% weight loss</b> (expected is under 10%), normotensive, no edema, no dysmorphism. With no red flag and a maternal source sitting in the history, the number needs no renal explanation of its own.</p>",
+   "with": "<p>Creatinine <b>crosses the placenta freely</b>, so a value drawn at 23 hours reflects both mother and infant. This mother has end-stage renal disease on regular hemodialysis. The infant's own findings show that the kidneys are working. There are <b>two voids</b> (the floor is one void per day of life) and <b>3% weight loss</b> (expected is under 10%). The infant is normotensive, with no edema and no dysmorphism. With no red flag and a maternal source in the history, the creatinine needs no renal explanation of its own.</p>",
+   "note": ".dp: em dash, personification (ledger), split sentences",
+   "claims": [
+    {
+     "claim": "Creatinine crosses the placenta freely.",
+     "to": "Creatinine crosses the placenta freely, so a value drawn at 23 hours reflects both mother and infant."
+    },
+    {
+     "claim": "A creatinine drawn at 23 hours reflects both mother and infant.",
+     "to": "Creatinine crosses the placenta freely, so a value drawn at 23 hours reflects both mother and infant."
+    },
+    {
+     "claim": "This mother has end-stage renal disease on regular hemodialysis.",
+     "to": "This mother has end-stage renal disease on regular hemodialysis."
+    },
+    {
+     "claim": "The infant's kidneys are working.",
+     "to": "The infant's own findings show that the kidneys are working."
+    },
+    {
+     "claim": "The infant has two voids.",
+     "to": "There are two voids (the floor is one void per day of life) and 3% weight loss (expected is under 10%)."
+    },
+    {
+     "claim": "The floor is one void per day of life.",
+     "to": "There are two voids (the floor is one void per day of life) and 3% weight loss (expected is under 10%)."
+    },
+    {
+     "claim": "The infant has 3% weight loss.",
+     "to": "There are two voids (the floor is one void per day of life) and 3% weight loss (expected is under 10%)."
+    },
+    {
+     "claim": "Expected weight loss is under 10%.",
+     "to": "There are two voids (the floor is one void per day of life) and 3% weight loss (expected is under 10%)."
+    },
+    {
+     "claim": "The infant is normotensive, with no edema and no dysmorphism.",
+     "to": "The infant is normotensive, with no edema and no dysmorphism."
+    },
+    {
+     "claim": "With no red flag and a maternal source in the history, the creatinine needs no renal explanation of its own.",
+     "to": "With no red flag and a maternal source in the history, the creatinine needs no renal explanation of its own."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Creatinine crosses the placenta freely.",
+     "from": "Creatinine crosses the placenta freely."
+    },
+    {
+     "claim": "A creatinine drawn at 23 hours reflects both mother and infant.",
+     "from": "A creatinine drawn at 23 hours reflects both mother and infant."
+    },
+    {
+     "claim": "This mother has end-stage renal disease on regular hemodialysis.",
+     "from": "This mother has end-stage renal disease on regular hemodialysis."
+    },
+    {
+     "claim": "The infant's kidneys are working.",
+     "from": "The infant's kidneys are working."
+    },
+    {
+     "claim": "The infant has two voids.",
+     "from": "The infant has two voids."
+    },
+    {
+     "claim": "The floor is one void per day of life.",
+     "from": "The floor is one void per day of life."
+    },
+    {
+     "claim": "The infant has 3% weight loss.",
+     "from": "The infant has 3% weight loss."
+    },
+    {
+     "claim": "Expected weight loss is under 10%.",
+     "from": "Expected weight loss is under 10%."
+    },
+    {
+     "claim": "The infant is normotensive, with no edema and no dysmorphism.",
+     "from": "The infant is normotensive, with no edema and no dysmorphism."
+    },
+    {
+     "claim": "With no red flag and a maternal source in the history, the creatinine needs no renal explanation of its own.",
+     "from": "With no red flag and a maternal source in the history, the creatinine needs no renal explanation of its own."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "<b>Mother with ESRD on hemodialysis</b> &mdash; her creatinine is high and it crosses the placenta; this is the explanation",
+   "with": "<b>Mother with ESRD on hemodialysis</b> &mdash; end-stage renal disease; her creatinine is high and it crosses the placenta; this is the explanation",
+   "note": ".pearls: acronym expansion",
+   "claims": [
+    {
+     "claim": "The mother has ESRD on hemodialysis.",
+     "to": "Mother with ESRD on hemodialysis — end-stage renal disease; her creatinine is high and it crosses the placenta; this is the explanation"
+    },
+    {
+     "claim": "Her creatinine is high and crosses the placenta.",
+     "to": "Mother with ESRD on hemodialysis — end-stage renal disease; her creatinine is high and it crosses the placenta; this is the explanation"
+    },
+    {
+     "claim": "Maternal carryover is the explanation.",
+     "to": "Mother with ESRD on hemodialysis — end-stage renal disease; her creatinine is high and it crosses the placenta; this is the explanation"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The mother has ESRD on hemodialysis.",
+     "from": "The mother has ESRD on hemodialysis."
+    },
+    {
+     "claim": "Her creatinine is high and crosses the placenta.",
+     "from": "Her creatinine is high and crosses the placenta."
+    },
+    {
+     "claim": "Maternal carryover is the explanation.",
+     "from": "Maternal carryover is the explanation."
+    },
+    {
+     "claim": "ESRD stands for end-stage renal disease.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "<b>Total bilirubin 4.3 at 23 hours</b> &mdash; normal for age; the jaundice explains why a panel exists, not why the creatinine is high &middot; <b>Intraamniotic infection with ampicillin and cefotaxime</b> &mdash; the reason chemistries were drawn at all; neither drug is nephrotoxic, which removes a named risk factor ⚠︎ &middot; <b>Maternal SLE</b> &mdash; inert for the creatinine, but it is the setup for the transplacental antibody diseases the same axis generates ⚠︎",
+   "with": "<b>Total bilirubin 4.3 at 23 hours</b> &mdash; normal for age; the jaundice is why the panel was drawn and does not explain the creatinine &middot; <b>Intraamniotic infection with ampicillin and cefotaxime</b> &mdash; the reason chemistries were drawn; neither drug is nephrotoxic, so this risk factor is absent ⚠︎ &middot; <b>Maternal SLE</b> &mdash; systemic lupus erythematosus; irrelevant to the creatinine, but it sets up the transplacental antibody diseases ⚠︎",
+   "note": ".pearls: paired contrast, framing (axis), acronym",
+   "claims": [
+    {
+     "claim": "Total bilirubin 4.3 at 23 hours is normal for age.",
+     "to": "Total bilirubin 4.3 at 23 hours — normal for age; the jaundice is why the panel was drawn and does not explain the creatinine"
+    },
+    {
+     "claim": "The jaundice explains why the panel was drawn.",
+     "to": "Total bilirubin 4.3 at 23 hours — normal for age; the jaundice is why the panel was drawn and does not explain the creatinine"
+    },
+    {
+     "claim": "The jaundice does not explain the high creatinine.",
+     "to": "Total bilirubin 4.3 at 23 hours — normal for age; the jaundice is why the panel was drawn and does not explain the creatinine"
+    },
+    {
+     "claim": "Intraamniotic infection was treated with ampicillin and cefotaxime.",
+     "to": "Intraamniotic infection with ampicillin and cefotaxime — the reason chemistries were drawn; neither drug is nephrotoxic, so this risk factor is absent ⚠︎"
+    },
+    {
+     "claim": "The infection is the reason chemistries were drawn.",
+     "to": "Intraamniotic infection with ampicillin and cefotaxime — the reason chemistries were drawn; neither drug is nephrotoxic, so this risk factor is absent ⚠︎"
+    },
+    {
+     "claim": "Neither drug is nephrotoxic, which removes a named risk factor.",
+     "to": "Intraamniotic infection with ampicillin and cefotaxime — the reason chemistries were drawn; neither drug is nephrotoxic, so this risk factor is absent ⚠︎"
+    },
+    {
+     "claim": "Maternal SLE is inert for the creatinine.",
+     "to": "Maternal SLE — systemic lupus erythematosus; irrelevant to the creatinine, but it sets up the transplacental antibody diseases ⚠︎"
+    },
+    {
+     "claim": "Maternal SLE is the setup for the transplacental antibody diseases.",
+     "to": "Maternal SLE — systemic lupus erythematosus; irrelevant to the creatinine, but it sets up the transplacental antibody diseases ⚠︎"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Total bilirubin 4.3 at 23 hours is normal for age.",
+     "from": "Total bilirubin 4.3 at 23 hours is normal for age."
+    },
+    {
+     "claim": "The jaundice explains why the panel was drawn.",
+     "from": "The jaundice explains why the panel was drawn."
+    },
+    {
+     "claim": "The jaundice does not explain the high creatinine.",
+     "from": "The jaundice does not explain the high creatinine."
+    },
+    {
+     "claim": "Intraamniotic infection was treated with ampicillin and cefotaxime.",
+     "from": "Intraamniotic infection was treated with ampicillin and cefotaxime."
+    },
+    {
+     "claim": "The infection is the reason chemistries were drawn.",
+     "from": "The infection is the reason chemistries were drawn."
+    },
+    {
+     "claim": "Neither drug is nephrotoxic, so this risk factor is absent.",
+     "from": "Neither drug is nephrotoxic, which removes a named risk factor."
+    },
+    {
+     "claim": "Maternal SLE is irrelevant to the creatinine.",
+     "from": "Maternal SLE is inert for the creatinine."
+    },
+    {
+     "claim": "Maternal SLE sets up the transplacental antibody diseases.",
+     "from": "Maternal SLE is the setup for the transplacental antibody diseases."
+    },
+    {
+     "claim": "SLE stands for systemic lupus erythematosus.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "done — chemistry and bilirubin drawn as part of the sepsis workup &middot; normal — urine output, weight, blood pressure, examination &middot; elapsed — 23 hours, which is exactly when a maternal value has not yet cleared.",
+   "with": "Done: chemistry and bilirubin, drawn as part of the sepsis workup &middot; Normal: urine output, weight, blood pressure, examination &middot; Elapsed: 23 hours, before a maternal value has cleared.",
+   "note": ".pearls: prose em dashes to colons",
+   "claims": [
+    {
+     "claim": "Chemistry and bilirubin were drawn as part of the sepsis workup.",
+     "to": "Done: chemistry and bilirubin, drawn as part of the sepsis workup"
+    },
+    {
+     "claim": "Urine output, weight, blood pressure and examination are normal.",
+     "to": "Normal: urine output, weight, blood pressure, examination"
+    },
+    {
+     "claim": "At 23 hours a maternal value has not yet cleared.",
+     "to": "Elapsed: 23 hours, before a maternal value has cleared."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Chemistry and bilirubin were drawn as part of the sepsis workup.",
+     "from": "Chemistry and bilirubin were drawn as part of the sepsis workup."
+    },
+    {
+     "claim": "Urine output, weight, blood pressure and examination are normal.",
+     "from": "Urine output, weight, blood pressure and examination are normal."
+    },
+    {
+     "claim": "At 23 hours a maternal value has not yet cleared.",
+     "from": "At 23 hours a maternal value has not yet cleared."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "the one-void-per-day-of-life floor, the 10% weight-loss limit, and the 2-week normalization window — all in-context. &middot; no void by 24 hours with respiratory distress → obstructive uropathy or agenesis, image now &middot; maternal anti-Ro/SSA with fetal or neonatal bradycardia → congenital heart block ⚠︎ &middot; maternal Graves → transplacental TSI and neonatal thyrotoxicosis ⚠︎ &middot; maternal ITP → transplacental antiplatelet IgG and neonatal thrombocytopenia ⚠︎.",
+   "with": "The one-void-per-day-of-life floor, the 10% weight-loss limit and the 2-week normalization window &middot; No void by 24 hours with respiratory distress → obstructive uropathy or agenesis; image now &middot; Maternal anti-Ro/<b>SSA</b> (Sjögren syndrome antigen A) with fetal or neonatal bradycardia → congenital heart block ⚠︎ &middot; Maternal Graves → transplacental <b>TSI</b> (thyroid-stimulating immunoglobulin) and neonatal thyrotoxicosis ⚠︎ &middot; Maternal <b>ITP</b> (immune thrombocytopenia) → transplacental antiplatelet IgG and neonatal thrombocytopenia ⚠︎.",
+   "note": ".danger: provenance tag, em dash, acronyms",
+   "claims": [
+    {
+     "claim": "The gating numbers are the one-void-per-day-of-life floor, the 10% weight-loss limit and the 2-week normalization window.",
+     "to": "The one-void-per-day-of-life floor, the 10% weight-loss limit and the 2-week normalization window"
+    },
+    {
+     "claim": "These numbers are in-context.",
+     "dropped": "provenance tag"
+    },
+    {
+     "claim": "No void by 24 hours with respiratory distress suggests obstructive uropathy or agenesis; image now.",
+     "to": "No void by 24 hours with respiratory distress → obstructive uropathy or agenesis; image now"
+    },
+    {
+     "claim": "Maternal anti-Ro/SSA with fetal or neonatal bradycardia means congenital heart block.",
+     "to": "Maternal anti-Ro/SSA (Sjögren syndrome antigen A) with fetal or neonatal bradycardia → congenital heart block ⚠︎"
+    },
+    {
+     "claim": "Maternal Graves causes transplacental TSI and neonatal thyrotoxicosis.",
+     "to": "Maternal Graves → transplacental TSI (thyroid-stimulating immunoglobulin) and neonatal thyrotoxicosis ⚠︎"
+    },
+    {
+     "claim": "Maternal ITP causes transplacental antiplatelet IgG and neonatal thrombocytopenia.",
+     "to": "Maternal ITP (immune thrombocytopenia) → transplacental antiplatelet IgG and neonatal thrombocytopenia ⚠︎."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The gating numbers are the one-void-per-day-of-life floor, the 10% weight-loss limit and the 2-week normalization window.",
+     "from": "The gating numbers are the one-void-per-day-of-life floor, the 10% weight-loss limit and the 2-week normalization window."
+    },
+    {
+     "claim": "No void by 24 hours with respiratory distress suggests obstructive uropathy or agenesis; image now.",
+     "from": "No void by 24 hours with respiratory distress suggests obstructive uropathy or agenesis; image now."
+    },
+    {
+     "claim": "Maternal anti-Ro/SSA with fetal or neonatal bradycardia means congenital heart block.",
+     "from": "Maternal anti-Ro/SSA with fetal or neonatal bradycardia means congenital heart block."
+    },
+    {
+     "claim": "Maternal Graves causes transplacental TSI and neonatal thyrotoxicosis.",
+     "from": "Maternal Graves causes transplacental TSI and neonatal thyrotoxicosis."
+    },
+    {
+     "claim": "Maternal ITP causes transplacental antiplatelet IgG and neonatal thrombocytopenia.",
+     "from": "Maternal ITP causes transplacental antiplatelet IgG and neonatal thrombocytopenia."
+    },
+    {
+     "claim": "SSA stands for Sjögren syndrome antigen A.",
+     "from": "expansion"
+    },
+    {
+     "claim": "TSI stands for thyroid-stimulating immunoglobulin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ITP stands for immune thrombocytopenia.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "<b>What was actually asked?</b> &mdash; The creatinine — not the jaundice that brought her in",
+   "with": "<b>What was actually asked?</b> &mdash; The creatinine, not the jaundice that brought her in",
+   "note": ".pearls spine: prose em dash",
+   "claims": [
+    {
+     "claim": "The question asks about the creatinine, not the jaundice that brought her in.",
+     "to": "What was actually asked? — The creatinine, not the jaundice that brought her in"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The question asks about the creatinine, not the jaundice that brought her in.",
+     "from": "The question asks about the creatinine, not the jaundice that brought her in."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "&mdash; ESRD on hemodialysis → yes, and creatinine crosses the placenta",
+   "with": "&mdash; <b>ESRD</b> (end-stage renal disease) on hemodialysis → yes, and creatinine crosses the placenta",
+   "note": ".pearls spine: acronym",
+   "claims": [
+    {
+     "claim": "The mother's ESRD on hemodialysis contains the number.",
+     "to": "Does the mother's chart contain the number? — ESRD (end-stage renal disease) on hemodialysis → yes, and creatinine crosses the placenta"
+    },
+    {
+     "claim": "Creatinine crosses the placenta.",
+     "to": "Does the mother's chart contain the number? — ESRD (end-stage renal disease) on hemodialysis → yes, and creatinine crosses the placenta"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The mother's ESRD on hemodialysis contains the number.",
+     "from": "The mother's ESRD on hemodialysis contains the number."
+    },
+    {
+     "claim": "Creatinine crosses the placenta.",
+     "from": "Creatinine crosses the placenta."
+    },
+    {
+     "claim": "ESRD stands for end-stage renal disease.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "The delivery paragraph is the whole trap: infection, arrest of labor, cesarean — three details that are compatible with the right answer and suggestive of the wrong one, disarmed by the Apgars two sentences later. The jaundice is a second decoy of a different kind — it is the reason the panel was drawn, so it feels like the thing to explain, and the question deliberately asks about a different value in the same panel. Maternal SLE is inert for the creatinine but not for the topic: it is the entry point to the antibody-mediated members of this same family.",
+   "with": "Infection, arrest of labor and cesarean delivery fit maternal carryover but suggest another cause; the Apgars rule that cause out. The jaundice is the reason the panel was drawn, but the creatinine is the value that needs explaining. Maternal <b>SLE</b> (systemic lupus erythematosus) does not explain the creatinine. It is relevant to the antibody-mediated forms of maternal carryover.",
+   "note": ".danger decoy note: rhetorical framing, em dashes",
+   "claims": [
+    {
+     "claim": "The delivery paragraph is the whole trap.",
+     "dropped": "rhetorical framing; the three details are restated"
+    },
+    {
+     "claim": "Infection, arrest of labor and cesarean are compatible with the right answer.",
+     "to": "Infection, arrest of labor and cesarean delivery fit maternal carryover but suggest another cause; the Apgars rule that cause out."
+    },
+    {
+     "claim": "They are suggestive of the wrong answer.",
+     "to": "Infection, arrest of labor and cesarean delivery fit maternal carryover but suggest another cause; the Apgars rule that cause out."
+    },
+    {
+     "claim": "The Apgars disarm them.",
+     "to": "Infection, arrest of labor and cesarean delivery fit maternal carryover but suggest another cause; the Apgars rule that cause out."
+    },
+    {
+     "claim": "The jaundice is the reason the panel was drawn.",
+     "to": "The jaundice is the reason the panel was drawn, but the creatinine is the value that needs explaining."
+    },
+    {
+     "claim": "The question asks about a different value in the same panel.",
+     "to": "The jaundice is the reason the panel was drawn, but the creatinine is the value that needs explaining."
+    },
+    {
+     "claim": "The jaundice feels like the thing to explain.",
+     "dropped": "rhetorical framing about the reader"
+    },
+    {
+     "claim": "Maternal SLE is inert for the creatinine.",
+     "to": "Maternal SLE (systemic lupus erythematosus) does not explain the creatinine."
+    },
+    {
+     "claim": "Maternal SLE is the entry point to the antibody-mediated members of this family.",
+     "to": "It is relevant to the antibody-mediated forms of maternal carryover."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Infection, arrest of labor and cesarean delivery fit maternal carryover.",
+     "from": "Infection, arrest of labor and cesarean are compatible with the right answer."
+    },
+    {
+     "claim": "They suggest another cause.",
+     "from": "They are suggestive of the wrong answer."
+    },
+    {
+     "claim": "The Apgars rule that cause out.",
+     "from": "The Apgars disarm them."
+    },
+    {
+     "claim": "The jaundice is the reason the panel was drawn.",
+     "from": "The jaundice is the reason the panel was drawn."
+    },
+    {
+     "claim": "The creatinine is the value that needs explaining.",
+     "from": "The question asks about a different value in the same panel."
+    },
+    {
+     "claim": "Maternal SLE does not explain the creatinine.",
+     "from": "Maternal SLE is inert for the creatinine."
+    },
+    {
+     "claim": "Maternal SLE is relevant to the antibody-mediated forms of maternal carryover.",
+     "from": "Maternal SLE is the entry point to the antibody-mediated members of this family."
+    },
+    {
+     "claim": "SLE stands for systemic lupus erythematosus.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "Day-one creatinine is the mother's; it falls to the infant's own nadir over two weeks, and normal urine output proves the kidneys work. &middot; Creatinine, IgG antibodies, and thyroid-stimulating immunoglobulin all cross the placenta, so all three can produce a \"neonatal\" finding that is really maternal — IgM and TSH do not. &middot; Normal urine output is the cheapest renal function test in a newborn: at least one void per day of life, so two voids on day one is normal and none by 24 hours is not. &middot; Up to 10% weight loss in the first days is expected; beyond that, look for feeding failure with hypernatremia and prerenal azotemia. &middot; Ampicillin and cefotaxime are the non-nephrotoxic sepsis pair; when gentamicin is in the stem instead, a rising creatinine acquires a named risk factor ⚠︎. &middot; The maternal antibody diseases run on one sentence of history each: anti-Ro/SSA → congenital heart block; Graves → neonatal thyrotoxicosis; ITP → neonatal thrombocytopenia; all transient as maternal IgG clears ⚠︎.",
+   "with": "Day-one creatinine is the mother's; it falls to the infant's own nadir over two weeks. Normal urine output proves the kidneys work. &middot; Creatinine, IgG antibodies and thyroid-stimulating immunoglobulin all cross the placenta, so all three can produce a \"neonatal\" finding that is really maternal. IgM and <b>TSH</b> (thyroid-stimulating hormone) do not cross. &middot; Normal urine output is the cheapest renal function test in a newborn: at least one void per day of life. Two voids on day one is normal, and none by 24 hours is not. &middot; Up to 10% weight loss in the first days is expected; beyond that, look for feeding failure with hypernatremia and prerenal azotemia. &middot; Ampicillin and cefotaxime are the non-nephrotoxic sepsis pair; if gentamicin is given instead, a rising creatinine has a named risk factor ⚠︎. &middot; Each maternal antibody disease is identified by one line of maternal history. Anti-Ro/<b>SSA</b> (Sjögren syndrome antigen A) causes congenital heart block, Graves disease causes neonatal thyrotoxicosis, and <b>ITP</b> (immune thrombocytopenia) causes neonatal thrombocytopenia ⚠︎. All are transient as maternal IgG clears ⚠︎.",
+   "note": ".pearls: em dash, arrow chain, stem framing, acronyms",
+   "claims": [
+    {
+     "claim": "Day-one creatinine is the mother's.",
+     "to": "Day-one creatinine is the mother's; it falls to the infant's own nadir over two weeks."
+    },
+    {
+     "claim": "It falls to the infant's own nadir over two weeks.",
+     "to": "Day-one creatinine is the mother's; it falls to the infant's own nadir over two weeks."
+    },
+    {
+     "claim": "Normal urine output proves the kidneys work.",
+     "to": "Normal urine output proves the kidneys work."
+    },
+    {
+     "claim": "Creatinine, IgG antibodies and thyroid-stimulating immunoglobulin all cross the placenta.",
+     "to": "Creatinine, IgG antibodies and thyroid-stimulating immunoglobulin all cross the placenta, so all three can produce a \"neonatal\" finding that is really maternal."
+    },
+    {
+     "claim": "All three can produce a neonatal finding that is really maternal.",
+     "to": "Creatinine, IgG antibodies and thyroid-stimulating immunoglobulin all cross the placenta, so all three can produce a \"neonatal\" finding that is really maternal."
+    },
+    {
+     "claim": "IgM and TSH do not cross the placenta.",
+     "to": "IgM and TSH (thyroid-stimulating hormone) do not cross."
+    },
+    {
+     "claim": "Normal urine output is the cheapest renal function test in a newborn.",
+     "to": "Normal urine output is the cheapest renal function test in a newborn: at least one void per day of life."
+    },
+    {
+     "claim": "At least one void per day of life is expected.",
+     "to": "Normal urine output is the cheapest renal function test in a newborn: at least one void per day of life."
+    },
+    {
+     "claim": "Two voids on day one is normal.",
+     "to": "Two voids on day one is normal, and none by 24 hours is not."
+    },
+    {
+     "claim": "No void by 24 hours is not normal.",
+     "to": "Two voids on day one is normal, and none by 24 hours is not."
+    },
+    {
+     "claim": "Up to 10% weight loss in the first days is expected.",
+     "to": "Up to 10% weight loss in the first days is expected; beyond that, look for feeding failure with hypernatremia and prerenal azotemia."
+    },
+    {
+     "claim": "Beyond 10%, look for feeding failure with hypernatremia and prerenal azotemia.",
+     "to": "Up to 10% weight loss in the first days is expected; beyond that, look for feeding failure with hypernatremia and prerenal azotemia."
+    },
+    {
+     "claim": "Ampicillin and cefotaxime are the non-nephrotoxic sepsis pair.",
+     "to": "Ampicillin and cefotaxime are the non-nephrotoxic sepsis pair; if gentamicin is given instead, a rising creatinine has a named risk factor ⚠︎."
+    },
+    {
+     "claim": "When gentamicin is given instead, a rising creatinine acquires a named risk factor.",
+     "to": "Ampicillin and cefotaxime are the non-nephrotoxic sepsis pair; if gentamicin is given instead, a rising creatinine has a named risk factor ⚠︎."
+    },
+    {
+     "claim": "Each maternal antibody disease runs on one sentence of history.",
+     "to": "Each maternal antibody disease is identified by one line of maternal history."
+    },
+    {
+     "claim": "Anti-Ro/SSA causes congenital heart block.",
+     "to": "Anti-Ro/SSA (Sjögren syndrome antigen A) causes congenital heart block, Graves disease causes neonatal thyrotoxicosis, and ITP (immune thrombocytopenia) causes neonatal thrombocytopenia ⚠︎."
+    },
+    {
+     "claim": "Graves causes neonatal thyrotoxicosis.",
+     "to": "Anti-Ro/SSA (Sjögren syndrome antigen A) causes congenital heart block, Graves disease causes neonatal thyrotoxicosis, and ITP (immune thrombocytopenia) causes neonatal thrombocytopenia ⚠︎."
+    },
+    {
+     "claim": "ITP causes neonatal thrombocytopenia.",
+     "to": "Anti-Ro/SSA (Sjögren syndrome antigen A) causes congenital heart block, Graves disease causes neonatal thyrotoxicosis, and ITP (immune thrombocytopenia) causes neonatal thrombocytopenia ⚠︎."
+    },
+    {
+     "claim": "All are transient as maternal IgG clears.",
+     "to": "All are transient as maternal IgG clears ⚠︎."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Day-one creatinine is the mother's.",
+     "from": "Day-one creatinine is the mother's."
+    },
+    {
+     "claim": "It falls to the infant's own nadir over two weeks.",
+     "from": "It falls to the infant's own nadir over two weeks."
+    },
+    {
+     "claim": "Normal urine output proves the kidneys work.",
+     "from": "Normal urine output proves the kidneys work."
+    },
+    {
+     "claim": "Creatinine, IgG antibodies and thyroid-stimulating immunoglobulin all cross the placenta.",
+     "from": "Creatinine, IgG antibodies and thyroid-stimulating immunoglobulin all cross the placenta."
+    },
+    {
+     "claim": "All three can produce a neonatal finding that is really maternal.",
+     "from": "All three can produce a neonatal finding that is really maternal."
+    },
+    {
+     "claim": "IgM and TSH do not cross the placenta.",
+     "from": "IgM and TSH do not cross the placenta."
+    },
+    {
+     "claim": "Normal urine output is the cheapest renal function test in a newborn.",
+     "from": "Normal urine output is the cheapest renal function test in a newborn."
+    },
+    {
+     "claim": "At least one void per day of life is expected.",
+     "from": "At least one void per day of life is expected."
+    },
+    {
+     "claim": "Two voids on day one is normal.",
+     "from": "Two voids on day one is normal."
+    },
+    {
+     "claim": "No void by 24 hours is not normal.",
+     "from": "No void by 24 hours is not normal."
+    },
+    {
+     "claim": "Up to 10% weight loss in the first days is expected.",
+     "from": "Up to 10% weight loss in the first days is expected."
+    },
+    {
+     "claim": "Beyond 10%, look for feeding failure with hypernatremia and prerenal azotemia.",
+     "from": "Beyond 10%, look for feeding failure with hypernatremia and prerenal azotemia."
+    },
+    {
+     "claim": "Ampicillin and cefotaxime are the non-nephrotoxic sepsis pair.",
+     "from": "Ampicillin and cefotaxime are the non-nephrotoxic sepsis pair."
+    },
+    {
+     "claim": "When gentamicin is given instead, a rising creatinine acquires a named risk factor.",
+     "from": "When gentamicin is given instead, a rising creatinine acquires a named risk factor."
+    },
+    {
+     "claim": "Each maternal antibody disease runs on one sentence of history.",
+     "from": "Each maternal antibody disease runs on one sentence of history."
+    },
+    {
+     "claim": "Anti-Ro/SSA causes congenital heart block.",
+     "from": "Anti-Ro/SSA causes congenital heart block."
+    },
+    {
+     "claim": "Graves causes neonatal thyrotoxicosis.",
+     "from": "Graves causes neonatal thyrotoxicosis."
+    },
+    {
+     "claim": "ITP causes neonatal thrombocytopenia.",
+     "from": "ITP causes neonatal thrombocytopenia."
+    },
+    {
+     "claim": "All are transient as maternal IgG clears.",
+     "from": "All are transient as maternal IgG clears."
+    },
+    {
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "SSA stands for Sjögren syndrome antigen A.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ITP stands for immune thrombocytopenia.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "Verified: Part II <b>Posterior Urethral Valves and Potter Sequence</b> owns the obstructed, oliguric end of this differential — the infant whose creatinine really is his own. Store the discriminator as a question: <i>is the baby making urine, and does the mother's chart contain the number?</i> Candidate twin — confirm: a brief on maternal-antibody neonatal disease (anti-Ro, TSI, antiplatelet) does not exist yet; this brief wants it.",
+   "with": "Part II <b>Posterior Urethral Valves and Potter Sequence</b> covers the obstructed, oliguric end of this differential: the infant whose creatinine really is his own. Ask: <i>is the baby making urine, and does the mother's chart contain the number?</i> Related conditions without their own brief: neonatal disease from maternal anti-Ro, thyroid-stimulating immunoglobulin or antiplatelet antibodies.",
+   "note": "Pairs with: workflow text, owns -> covers, em dash",
+   "claims": [
+    {
+     "claim": "Posterior Urethral Valves and Potter Sequence owns the obstructed, oliguric infant whose creatinine really is his own.",
+     "to": "Part II Posterior Urethral Valves and Potter Sequence covers the obstructed, oliguric end of this differential: the infant whose creatinine really is his own."
+    },
+    {
+     "claim": "The discriminator: is the baby making urine, and does the mother's chart contain the number?",
+     "to": "Ask: is the baby making urine, and does the mother's chart contain the number?"
+    },
+    {
+     "claim": "Maternal-antibody neonatal disease (anti-Ro, TSI, antiplatelet) has no brief of its own.",
+     "to": "Related conditions without their own brief: neonatal disease from maternal anti-Ro, thyroid-stimulating immunoglobulin or antiplatelet antibodies."
+    },
+    {
+     "claim": "This brief wants a twin written.",
+     "dropped": "workflow proposal about writing a brief"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Posterior Urethral Valves and Potter Sequence covers the obstructed, oliguric infant whose creatinine really is his own.",
+     "from": "Posterior Urethral Valves and Potter Sequence owns the obstructed, oliguric infant whose creatinine really is his own."
+    },
+    {
+     "claim": "Ask: is the baby making urine, and does the mother's chart contain the number?",
+     "from": "The discriminator: is the baby making urine, and does the mother's chart contain the number?"
+    },
+    {
+     "claim": "Neonatal disease from maternal anti-Ro, thyroid-stimulating immunoglobulin or antiplatelet antibodies has no brief of its own.",
+     "from": "Maternal-antibody neonatal disease (anti-Ro, TSI, antiplatelet) has no brief of its own."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "A newborn's laboratory value in the first days belongs to two patients — read the maternal history as part of the panel before attributing anything to the infant, and when a number and a ledger disagree, the ledger of output, growth and examination decides.",
+   "with": "In the first days, a newborn's laboratory value reflects both mother and infant. Read the maternal history as part of the panel before attributing anything to the infant. When a value disagrees with urine output, growth and examination, those findings decide.",
+   "note": ".rule: em dash, ledger metaphor, split",
+   "claims": [
+    {
+     "claim": "A newborn's laboratory value in the first days belongs to two patients.",
+     "to": "In the first days, a newborn's laboratory value reflects both mother and infant."
+    },
+    {
+     "claim": "Read the maternal history as part of the panel before attributing anything to the infant.",
+     "to": "Read the maternal history as part of the panel before attributing anything to the infant."
+    },
+    {
+     "claim": "When a number disagrees with output, growth and examination, output, growth and examination decide.",
+     "to": "When a value disagrees with urine output, growth and examination, those findings decide."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In the first days, a newborn's laboratory value reflects both mother and infant.",
+     "from": "A newborn's laboratory value in the first days belongs to two patients."
+    },
+    {
+     "claim": "Read the maternal history as part of the panel before attributing anything to the infant.",
+     "from": "Read the maternal history as part of the panel before attributing anything to the infant."
+    },
+    {
+     "claim": "When a value disagrees with urine output, growth and examination, those findings decide.",
+     "from": "When a number disagrees with output, growth and examination, output, growth and examination decide."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "<p>In utero, maternal estrogen crosses the placenta and proliferates the fetal endometrium. At delivery that supply stops: <b>maternal progesterone is withdrawn and estrogen's trophic effect is lost</b>, the endometrium sloughs, and the newborn has light vaginal bleeding — typically within the <b>first 2 weeks</b> and lasting under five days. The white mucoid component is <b>physiologic leukorrhea</b>, the same hormone acting on the same tissue, and it travels with labial swelling and breast hypertrophy as the other estrogen effects. This infant is <b>afebrile, painless, feeding and voiding normally</b>, five days old, with an otherwise unremarkable examination. That is the whole answer, and the management is reassurance.</p>",
+   "with": "<p>In utero, maternal estrogen crosses the placenta and proliferates the fetal endometrium. At delivery that supply stops: <b>maternal progesterone is withdrawn and estrogen's trophic effect is lost</b>. The endometrium sloughs, and the newborn has light vaginal bleeding, typically within the <b>first 2 weeks</b> and lasting under five days. The white mucoid component is <b>physiologic leukorrhea</b>, from the same hormone acting on the same tissue. It occurs alongside labial swelling and breast hypertrophy, the other estrogen effects. This infant is <b>afebrile, painless, feeding and voiding normally</b>, five days old, with an otherwise unremarkable examination. Management is reassurance.</p>",
+   "note": ".dp: em dash, dramatic closer, split",
+   "claims": [
+    {
+     "claim": "Maternal estrogen crosses the placenta in utero.",
+     "to": "In utero, maternal estrogen crosses the placenta and proliferates the fetal endometrium."
+    },
+    {
+     "claim": "Maternal estrogen proliferates the fetal endometrium.",
+     "to": "In utero, maternal estrogen crosses the placenta and proliferates the fetal endometrium."
+    },
+    {
+     "claim": "At delivery the maternal supply stops.",
+     "to": "At delivery that supply stops: maternal progesterone is withdrawn and estrogen's trophic effect is lost."
+    },
+    {
+     "claim": "Maternal progesterone is withdrawn and estrogen's trophic effect is lost.",
+     "to": "At delivery that supply stops: maternal progesterone is withdrawn and estrogen's trophic effect is lost."
+    },
+    {
+     "claim": "The endometrium sloughs.",
+     "to": "The endometrium sloughs, and the newborn has light vaginal bleeding, typically within the first 2 weeks and lasting under five days."
+    },
+    {
+     "claim": "The newborn has light vaginal bleeding.",
+     "to": "The endometrium sloughs, and the newborn has light vaginal bleeding, typically within the first 2 weeks and lasting under five days."
+    },
+    {
+     "claim": "The bleeding is typically within the first 2 weeks.",
+     "to": "The endometrium sloughs, and the newborn has light vaginal bleeding, typically within the first 2 weeks and lasting under five days."
+    },
+    {
+     "claim": "The bleeding lasts under five days.",
+     "to": "The endometrium sloughs, and the newborn has light vaginal bleeding, typically within the first 2 weeks and lasting under five days."
+    },
+    {
+     "claim": "The white mucoid component is physiologic leukorrhea.",
+     "to": "The white mucoid component is physiologic leukorrhea, from the same hormone acting on the same tissue."
+    },
+    {
+     "claim": "Leukorrhea is the same hormone acting on the same tissue.",
+     "to": "The white mucoid component is physiologic leukorrhea, from the same hormone acting on the same tissue."
+    },
+    {
+     "claim": "Leukorrhea travels with labial swelling and breast hypertrophy as the other estrogen effects.",
+     "to": "It occurs alongside labial swelling and breast hypertrophy, the other estrogen effects."
+    },
+    {
+     "claim": "This infant is afebrile, painless, feeding and voiding normally.",
+     "to": "This infant is afebrile, painless, feeding and voiding normally, five days old, with an otherwise unremarkable examination."
+    },
+    {
+     "claim": "This infant is five days old.",
+     "to": "This infant is afebrile, painless, feeding and voiding normally, five days old, with an otherwise unremarkable examination."
+    },
+    {
+     "claim": "The examination is otherwise unremarkable.",
+     "to": "This infant is afebrile, painless, feeding and voiding normally, five days old, with an otherwise unremarkable examination."
+    },
+    {
+     "claim": "The management is reassurance.",
+     "to": "Management is reassurance."
+    },
+    {
+     "claim": "That is the whole answer.",
+     "dropped": "dramatic closer about the answer"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Maternal estrogen crosses the placenta in utero.",
+     "from": "Maternal estrogen crosses the placenta in utero."
+    },
+    {
+     "claim": "Maternal estrogen proliferates the fetal endometrium.",
+     "from": "Maternal estrogen proliferates the fetal endometrium."
+    },
+    {
+     "claim": "At delivery the maternal supply stops.",
+     "from": "At delivery the maternal supply stops."
+    },
+    {
+     "claim": "Maternal progesterone is withdrawn and estrogen's trophic effect is lost.",
+     "from": "Maternal progesterone is withdrawn and estrogen's trophic effect is lost."
+    },
+    {
+     "claim": "The endometrium sloughs.",
+     "from": "The endometrium sloughs."
+    },
+    {
+     "claim": "The newborn has light vaginal bleeding.",
+     "from": "The newborn has light vaginal bleeding."
+    },
+    {
+     "claim": "The bleeding is typically within the first 2 weeks.",
+     "from": "The bleeding is typically within the first 2 weeks."
+    },
+    {
+     "claim": "The bleeding lasts under five days.",
+     "from": "The bleeding lasts under five days."
+    },
+    {
+     "claim": "The white mucoid component is physiologic leukorrhea.",
+     "from": "The white mucoid component is physiologic leukorrhea."
+    },
+    {
+     "claim": "Leukorrhea is the same hormone acting on the same tissue.",
+     "from": "Leukorrhea is the same hormone acting on the same tissue."
+    },
+    {
+     "claim": "Leukorrhea occurs alongside labial swelling and breast hypertrophy, the other estrogen effects.",
+     "from": "Leukorrhea travels with labial swelling and breast hypertrophy as the other estrogen effects."
+    },
+    {
+     "claim": "This infant is afebrile, painless, feeding and voiding normally.",
+     "from": "This infant is afebrile, painless, feeding and voiding normally."
+    },
+    {
+     "claim": "This infant is five days old.",
+     "from": "This infant is five days old."
+    },
+    {
+     "claim": "The examination is otherwise unremarkable.",
+     "from": "The examination is otherwise unremarkable."
+    },
+    {
+     "claim": "Management is reassurance.",
+     "from": "The management is reassurance."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "<b>Mother treated for an STI early in pregnancy and subsequently tested negative</b> &mdash; a documented test of cure, which closes the vertical-transmission branch rather than opening it &middot; <b>Forceps-assisted delivery</b> &mdash; instrumentation is a planted trauma cue; it does not produce vaginal bleeding five days later &middot; <b>A 9-year-old sister at home</b> &mdash; the household-contact cue for group A <i>Streptococcus</i>, named in the source precisely because it is a plausible route",
+   "with": "<b>Mother treated for an STI early in pregnancy and subsequently tested negative</b> &mdash; a documented test of cure, which closes the vertical-transmission branch &middot; <b>Forceps-assisted delivery</b> &mdash; instrumentation suggests trauma, but it does not produce vaginal bleeding five days later &middot; <b>A 9-year-old sister at home</b> &mdash; a household contact and a plausible route for group A <i>Streptococcus</i>",
+   "note": ".pearls: planted-cue and source framing",
+   "claims": [
+    {
+     "claim": "The mother was treated for an STI early in pregnancy and subsequently tested negative.",
+     "to": "Mother treated for an STI early in pregnancy and subsequently tested negative — a documented test of cure, which closes the vertical-transmission branch"
+    },
+    {
+     "claim": "This is a documented test of cure.",
+     "to": "Mother treated for an STI early in pregnancy and subsequently tested negative — a documented test of cure, which closes the vertical-transmission branch"
+    },
+    {
+     "claim": "It closes the vertical-transmission branch rather than opening it.",
+     "to": "Mother treated for an STI early in pregnancy and subsequently tested negative — a documented test of cure, which closes the vertical-transmission branch"
+    },
+    {
+     "claim": "Forceps-assisted delivery is a trauma cue.",
+     "to": "Forceps-assisted delivery — instrumentation suggests trauma, but it does not produce vaginal bleeding five days later"
+    },
+    {
+     "claim": "Instrumentation does not produce vaginal bleeding five days later.",
+     "to": "Forceps-assisted delivery — instrumentation suggests trauma, but it does not produce vaginal bleeding five days later"
+    },
+    {
+     "claim": "A 9-year-old sister at home is a household contact for group A Streptococcus.",
+     "to": "A 9-year-old sister at home — a household contact and a plausible route for group A Streptococcus"
+    },
+    {
+     "claim": "A household contact is a plausible route.",
+     "to": "A 9-year-old sister at home — a household contact and a plausible route for group A Streptococcus"
+    },
+    {
+     "claim": "The source names the sister precisely for that reason.",
+     "dropped": "framing about the source"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The mother was treated for an STI early in pregnancy and subsequently tested negative.",
+     "from": "The mother was treated for an STI early in pregnancy and subsequently tested negative."
+    },
+    {
+     "claim": "This is a documented test of cure.",
+     "from": "This is a documented test of cure."
+    },
+    {
+     "claim": "It closes the vertical-transmission branch.",
+     "from": "It closes the vertical-transmission branch rather than opening it."
+    },
+    {
+     "claim": "Instrumentation suggests trauma.",
+     "from": "Forceps-assisted delivery is a trauma cue."
+    },
+    {
+     "claim": "Instrumentation does not produce vaginal bleeding five days later.",
+     "from": "Instrumentation does not produce vaginal bleeding five days later."
+    },
+    {
+     "claim": "A 9-year-old sister at home is a household contact and a plausible route for group A Streptococcus.",
+     "from": "A 9-year-old sister at home is a household contact for group A Streptococcus."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "Management is one sentence: the diagnosis is clinical, nothing is cultured or imaged, and the intervention is <b>education and reassurance</b> while it resolves over days.",
+   "with": "The diagnosis is clinical, and nothing is cultured or imaged. Management is <b>education and reassurance</b> while it resolves over days.",
+   "note": ".danger: framing opener",
+   "claims": [
+    {
+     "claim": "Management is one sentence.",
+     "dropped": "framing about length"
+    },
+    {
+     "claim": "The diagnosis is clinical.",
+     "to": "The diagnosis is clinical, and nothing is cultured or imaged."
+    },
+    {
+     "claim": "Nothing is cultured or imaged.",
+     "to": "The diagnosis is clinical, and nothing is cultured or imaged."
+    },
+    {
+     "claim": "The intervention is education and reassurance.",
+     "to": "Management is education and reassurance while it resolves over days."
+    },
+    {
+     "claim": "It resolves over days.",
+     "to": "Management is education and reassurance while it resolves over days."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The diagnosis is clinical.",
+     "from": "The diagnosis is clinical."
+    },
+    {
+     "claim": "Nothing is cultured or imaged.",
+     "from": "Nothing is cultured or imaged."
+    },
+    {
+     "claim": "It resolves over days.",
+     "from": "It resolves over days."
+    },
+    {
+     "claim": "Management is education and reassurance.",
+     "from": "The intervention is education and reassurance."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "&mdash; If not, reassurance is the answer — and the planted cues are not criteria",
+   "with": "&mdash; If not, reassure; suggestive details in the history are not disqualifying criteria",
+   "note": ".pearls spine: prose em dash, answer framing",
+   "claims": [
+    {
+     "claim": "If no disqualifying criterion can be named, reassurance is the answer.",
+     "to": "Can I name a disqualifying criterion? — If not, reassure; suggestive details in the history are not disqualifying criteria"
+    },
+    {
+     "claim": "The planted cues are not criteria.",
+     "to": "Can I name a disqualifying criterion? — If not, reassure; suggestive details in the history are not disqualifying criteria"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "If no disqualifying criterion can be named, reassure.",
+     "from": "If no disqualifying criterion can be named, reassurance is the answer."
+    },
+    {
+     "claim": "Suggestive details in the history are not disqualifying criteria.",
+     "from": "The planted cues are not criteria."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "This stem plants one cue per distractor, and reading them as a set is the fastest way through it: the word <b>white</b> for candida, the <b>maternal STI</b> for chlamydia, <b>streaks of blood</b> for a foreign body, the <b>9-year-old sister</b> for streptococcus, and the <b>forceps delivery</b> for trauma. Every one is answered by the same two facts — the age and the wellness. The maternal history in particular is a trap that runs backwards: \"a shot and a pill\" then \"subsequently tested negative\" is a documented test of cure, so the sentence that looks like it opens the infectious branch is the sentence that closes it.",
+   "with": "Each history detail points to a different diagnosis &middot; the word <b>white</b>: candida &middot; the <b>maternal STI</b> (sexually transmitted infection): chlamydia &middot; <b>streaks of blood</b>: a foreign body &middot; the <b>9-year-old sister</b>: streptococcus &middot; the <b>forceps delivery</b>: trauma. The infant's age and wellness answer every one. The history \"a shot and a pill,\" then \"subsequently tested negative,\" is a documented test of cure. It closes the infectious branch rather than opening it.",
+   "note": ".danger decoy note: stem framing, em dash, personification",
+   "claims": [
+    {
+     "claim": "Reading the cues as a set is the fastest way through the stem.",
+     "dropped": "framing about the stem"
+    },
+    {
+     "claim": "The word white is a cue for candida.",
+     "to": "Each history detail points to a different diagnosis · the word white: candida · the maternal STI (sexually transmitted infection): chlamydia · streaks of blood: a foreign body · the 9-year-old sister: streptococcus · the forceps delivery: trauma."
+    },
+    {
+     "claim": "The maternal STI is a cue for chlamydia.",
+     "to": "Each history detail points to a different diagnosis · the word white: candida · the maternal STI (sexually transmitted infection): chlamydia · streaks of blood: a foreign body · the 9-year-old sister: streptococcus · the forceps delivery: trauma."
+    },
+    {
+     "claim": "Streaks of blood are a cue for a foreign body.",
+     "to": "Each history detail points to a different diagnosis · the word white: candida · the maternal STI (sexually transmitted infection): chlamydia · streaks of blood: a foreign body · the 9-year-old sister: streptococcus · the forceps delivery: trauma."
+    },
+    {
+     "claim": "The 9-year-old sister is a cue for streptococcus.",
+     "to": "Each history detail points to a different diagnosis · the word white: candida · the maternal STI (sexually transmitted infection): chlamydia · streaks of blood: a foreign body · the 9-year-old sister: streptococcus · the forceps delivery: trauma."
+    },
+    {
+     "claim": "The forceps delivery is a cue for trauma.",
+     "to": "Each history detail points to a different diagnosis · the word white: candida · the maternal STI (sexually transmitted infection): chlamydia · streaks of blood: a foreign body · the 9-year-old sister: streptococcus · the forceps delivery: trauma."
+    },
+    {
+     "claim": "Every cue is answered by the age and the wellness.",
+     "to": "The infant's age and wellness answer every one."
+    },
+    {
+     "claim": "A shot and a pill then subsequently tested negative is a documented test of cure.",
+     "to": "The history \"a shot and a pill,\" then \"subsequently tested negative,\" is a documented test of cure."
+    },
+    {
+     "claim": "The maternal history closes the infectious branch rather than opening it.",
+     "to": "It closes the infectious branch rather than opening it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The word white points to candida.",
+     "from": "The word white is a cue for candida."
+    },
+    {
+     "claim": "The maternal STI points to chlamydia.",
+     "from": "The maternal STI is a cue for chlamydia."
+    },
+    {
+     "claim": "STI stands for sexually transmitted infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Streaks of blood point to a foreign body.",
+     "from": "Streaks of blood are a cue for a foreign body."
+    },
+    {
+     "claim": "The 9-year-old sister points to streptococcus.",
+     "from": "The 9-year-old sister is a cue for streptococcus."
+    },
+    {
+     "claim": "The forceps delivery points to trauma.",
+     "from": "The forceps delivery is a cue for trauma."
+    },
+    {
+     "claim": "The infant's age and wellness answer every one.",
+     "from": "Every cue is answered by the age and the wellness."
+    },
+    {
+     "claim": "A shot and a pill then subsequently tested negative is a documented test of cure.",
+     "from": "A shot and a pill then subsequently tested negative is a documented test of cure."
+    },
+    {
+     "claim": "The maternal history closes the infectious branch rather than opening it.",
+     "from": "The maternal history closes the infectious branch rather than opening it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "Light vaginal bleeding with white discharge in a well newborn's first two weeks is maternal hormone withdrawal, and it needs only reassurance. &middot; Maternal estrogen crosses the placenta and does four things to a newborn — withdrawal bleeding, leukorrhea, labial swelling, and breast hypertrophy with or without galactorrhea. All are physiologic, and all resolve. &middot; The window is the criterion: bleeding in the <b>first 2 weeks</b> lasting <b>under 5 days</b> is physiologic, and anything outside that is not. &middot; A newborn cannot place a vaginal foreign body; that diagnosis needs toilet-training age or self-exploration, plus odor and pain. &middot; Neonatal breast hypertrophy is bilateral and painless; a <b>red, warm, tender</b> breast bud with fever is mastitis and earns culture and antibiotics ⚠︎. &middot; Vertical chlamydia shows up in the <b>eyes and the lungs</b> — conjunctivitis in the first weeks, afebrile pneumonia at 4 to 12 weeks ⚠︎ — never as vaginal discharge. &middot; Prepubertal genital bleeding or a sexually transmitted organism outside the newborn period is an abuse evaluation until proven otherwise ⚠︎ — the one branch of this differential that is never reassurance.",
+   "with": "Light vaginal bleeding with white discharge in a well newborn's first two weeks is maternal hormone withdrawal, and it needs only reassurance. &middot; Maternal estrogen crosses the placenta and has four effects in a newborn: withdrawal bleeding, leukorrhea, labial swelling, and breast hypertrophy with or without galactorrhea. All are physiologic, and all resolve. &middot; Bleeding in the <b>first 2 weeks</b> lasting <b>under 5 days</b> is physiologic; bleeding outside that window is not. &middot; A newborn cannot place a vaginal foreign body; that diagnosis needs toilet-training age or self-exploration, plus odor and pain. &middot; Neonatal breast hypertrophy is bilateral and painless; a <b>red, warm, tender</b> breast bud with fever is mastitis and needs culture and antibiotics ⚠︎. &middot; Vertical chlamydia affects the <b>eyes and the lungs</b>: conjunctivitis in the first weeks and afebrile pneumonia at 4 to 12 weeks ⚠︎. It never causes vaginal discharge. &middot; Prepubertal genital bleeding or a sexually transmitted organism outside the newborn period calls for an abuse evaluation until proven otherwise ⚠︎. It is the one branch of this differential that is never managed with reassurance.",
+   "note": ".pearls: em dashes, slogan opener",
+   "claims": [
+    {
+     "claim": "Light vaginal bleeding with white discharge in a well newborn's first two weeks is maternal hormone withdrawal.",
+     "to": "Light vaginal bleeding with white discharge in a well newborn's first two weeks is maternal hormone withdrawal, and it needs only reassurance."
+    },
+    {
+     "claim": "It needs only reassurance.",
+     "to": "Light vaginal bleeding with white discharge in a well newborn's first two weeks is maternal hormone withdrawal, and it needs only reassurance."
+    },
+    {
+     "claim": "Maternal estrogen crosses the placenta and does four things to a newborn: withdrawal bleeding, leukorrhea, labial swelling, and breast hypertrophy with or without galactorrhea.",
+     "to": "Maternal estrogen crosses the placenta and has four effects in a newborn: withdrawal bleeding, leukorrhea, labial swelling, and breast hypertrophy with or without galactorrhea."
+    },
+    {
+     "claim": "All four are physiologic, and all resolve.",
+     "to": "All are physiologic, and all resolve."
+    },
+    {
+     "claim": "The window is the criterion.",
+     "to": "Bleeding in the first 2 weeks lasting under 5 days is physiologic; bleeding outside that window is not."
+    },
+    {
+     "claim": "Bleeding in the first 2 weeks lasting under 5 days is physiologic.",
+     "to": "Bleeding in the first 2 weeks lasting under 5 days is physiologic; bleeding outside that window is not."
+    },
+    {
+     "claim": "Bleeding outside that window is not physiologic.",
+     "to": "Bleeding in the first 2 weeks lasting under 5 days is physiologic; bleeding outside that window is not."
+    },
+    {
+     "claim": "A newborn cannot place a vaginal foreign body.",
+     "to": "A newborn cannot place a vaginal foreign body; that diagnosis needs toilet-training age or self-exploration, plus odor and pain."
+    },
+    {
+     "claim": "A foreign body needs toilet-training age or self-exploration, plus odor and pain.",
+     "to": "A newborn cannot place a vaginal foreign body; that diagnosis needs toilet-training age or self-exploration, plus odor and pain."
+    },
+    {
+     "claim": "Neonatal breast hypertrophy is bilateral and painless.",
+     "to": "Neonatal breast hypertrophy is bilateral and painless; a red, warm, tender breast bud with fever is mastitis and needs culture and antibiotics ⚠︎."
+    },
+    {
+     "claim": "A red, warm, tender breast bud with fever is mastitis.",
+     "to": "Neonatal breast hypertrophy is bilateral and painless; a red, warm, tender breast bud with fever is mastitis and needs culture and antibiotics ⚠︎."
+    },
+    {
+     "claim": "Mastitis earns culture and antibiotics.",
+     "to": "Neonatal breast hypertrophy is bilateral and painless; a red, warm, tender breast bud with fever is mastitis and needs culture and antibiotics ⚠︎."
+    },
+    {
+     "claim": "Vertical chlamydia shows up in the eyes and the lungs.",
+     "to": "Vertical chlamydia affects the eyes and the lungs: conjunctivitis in the first weeks and afebrile pneumonia at 4 to 12 weeks ⚠︎."
+    },
+    {
+     "claim": "Conjunctivitis occurs in the first weeks.",
+     "to": "Vertical chlamydia affects the eyes and the lungs: conjunctivitis in the first weeks and afebrile pneumonia at 4 to 12 weeks ⚠︎."
+    },
+    {
+     "claim": "Afebrile pneumonia occurs at 4 to 12 weeks.",
+     "to": "Vertical chlamydia affects the eyes and the lungs: conjunctivitis in the first weeks and afebrile pneumonia at 4 to 12 weeks ⚠︎."
+    },
+    {
+     "claim": "Vertical chlamydia never shows up as vaginal discharge.",
+     "to": "It never causes vaginal discharge."
+    },
+    {
+     "claim": "Prepubertal genital bleeding or a sexually transmitted organism outside the newborn period is an abuse evaluation until proven otherwise.",
+     "to": "Prepubertal genital bleeding or a sexually transmitted organism outside the newborn period calls for an abuse evaluation until proven otherwise ⚠︎."
+    },
+    {
+     "claim": "Abuse is the one branch of this differential that is never reassurance.",
+     "to": "It is the one branch of this differential that is never managed with reassurance."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Light vaginal bleeding with white discharge in a well newborn's first two weeks is maternal hormone withdrawal.",
+     "from": "Light vaginal bleeding with white discharge in a well newborn's first two weeks is maternal hormone withdrawal."
+    },
+    {
+     "claim": "It needs only reassurance.",
+     "from": "It needs only reassurance."
+    },
+    {
+     "claim": "Maternal estrogen crosses the placenta and has four effects in a newborn: withdrawal bleeding, leukorrhea, labial swelling, and breast hypertrophy with or without galactorrhea.",
+     "from": "Maternal estrogen crosses the placenta and does four things to a newborn: withdrawal bleeding, leukorrhea, labial swelling, and breast hypertrophy with or without galactorrhea."
+    },
+    {
+     "claim": "All four are physiologic, and all resolve.",
+     "from": "All four are physiologic, and all resolve."
+    },
+    {
+     "claim": "The window defines physiologic bleeding.",
+     "from": "The window is the criterion."
+    },
+    {
+     "claim": "Bleeding in the first 2 weeks lasting under 5 days is physiologic.",
+     "from": "Bleeding in the first 2 weeks lasting under 5 days is physiologic."
+    },
+    {
+     "claim": "Bleeding outside that window is not physiologic.",
+     "from": "Bleeding outside that window is not physiologic."
+    },
+    {
+     "claim": "A newborn cannot place a vaginal foreign body.",
+     "from": "A newborn cannot place a vaginal foreign body."
+    },
+    {
+     "claim": "A foreign body needs toilet-training age or self-exploration, plus odor and pain.",
+     "from": "A foreign body needs toilet-training age or self-exploration, plus odor and pain."
+    },
+    {
+     "claim": "Neonatal breast hypertrophy is bilateral and painless.",
+     "from": "Neonatal breast hypertrophy is bilateral and painless."
+    },
+    {
+     "claim": "A red, warm, tender breast bud with fever is mastitis.",
+     "from": "A red, warm, tender breast bud with fever is mastitis."
+    },
+    {
+     "claim": "Mastitis needs culture and antibiotics.",
+     "from": "Mastitis earns culture and antibiotics."
+    },
+    {
+     "claim": "Vertical chlamydia affects the eyes and the lungs.",
+     "from": "Vertical chlamydia shows up in the eyes and the lungs."
+    },
+    {
+     "claim": "Conjunctivitis occurs in the first weeks.",
+     "from": "Conjunctivitis occurs in the first weeks."
+    },
+    {
+     "claim": "Afebrile pneumonia occurs at 4 to 12 weeks.",
+     "from": "Afebrile pneumonia occurs at 4 to 12 weeks."
+    },
+    {
+     "claim": "Vertical chlamydia never causes vaginal discharge.",
+     "from": "Vertical chlamydia never shows up as vaginal discharge."
+    },
+    {
+     "claim": "Prepubertal genital bleeding or a sexually transmitted organism outside the newborn period calls for an abuse evaluation until proven otherwise.",
+     "from": "Prepubertal genital bleeding or a sexually transmitted organism outside the newborn period is an abuse evaluation until proven otherwise."
+    },
+    {
+     "claim": "Abuse is the one branch of this differential that is never managed with reassurance.",
+     "from": "Abuse is the one branch of this differential that is never reassurance."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "Verified: Part I <b>Benign Neonatal Rashes</b> is the same concept in a different organ — sort the newborn finding into physiologic, removable, or pathologic, and reassure only after the sort. That brief owns the skin; this one owns the genital and breast findings. Store the discriminator as a question: <i>is the baby well, and is the finding inside its window?</i>",
+   "with": "Part I <b>Benign Neonatal Rashes</b> applies the same approach to the skin. Sort the newborn finding into physiologic, removable or pathologic, and reassure only after sorting. That brief covers the skin; this one covers the genital and breast findings. Ask: <i>is the baby well, and is the finding inside its window?</i>",
+   "note": "Pairs with: workflow text, owns -> covers, em dash",
+   "claims": [
+    {
+     "claim": "Benign Neonatal Rashes is the same concept in a different organ.",
+     "to": "Part I Benign Neonatal Rashes applies the same approach to the skin."
+    },
+    {
+     "claim": "Sort the newborn finding into physiologic, removable, or pathologic, and reassure only after the sort.",
+     "to": "Sort the newborn finding into physiologic, removable or pathologic, and reassure only after sorting."
+    },
+    {
+     "claim": "That brief owns the skin; this one owns the genital and breast findings.",
+     "to": "That brief covers the skin; this one covers the genital and breast findings."
+    },
+    {
+     "claim": "The discriminator: is the baby well, and is the finding inside its window?",
+     "to": "Ask: is the baby well, and is the finding inside its window?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Benign Neonatal Rashes applies the same approach to the skin.",
+     "from": "Benign Neonatal Rashes is the same concept in a different organ."
+    },
+    {
+     "claim": "Sort the newborn finding into physiologic, removable or pathologic, and reassure only after sorting.",
+     "from": "Sort the newborn finding into physiologic, removable, or pathologic, and reassure only after the sort."
+    },
+    {
+     "claim": "That brief covers the skin; this one covers the genital and breast findings.",
+     "from": "That brief owns the skin; this one owns the genital and breast findings."
+    },
+    {
+     "claim": "Ask: is the baby well, and is the finding inside its window?",
+     "from": "The discriminator: is the baby well, and is the finding inside its window?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "Reassurance is a diagnosis with criteria, not an absence of one. Name the disqualifying finding — fever, pain, odor, purulence, systemic illness, or a finding outside its stated window — before you reject the benign answer, because a stem that plants one cue per distractor is testing whether you can leave all of them alone.",
+   "with": "Reassurance requires positive criteria; it is not just the absence of a diagnosis. Before rejecting the benign diagnosis, name the disqualifying finding: fever, pain, odor, purulence, systemic illness, or a finding outside its stated window.",
+   "note": ".rule: em dashes, stem framing",
+   "claims": [
+    {
+     "claim": "Reassurance is a diagnosis with criteria, not an absence of one.",
+     "to": "Reassurance requires positive criteria; it is not just the absence of a diagnosis."
+    },
+    {
+     "claim": "Name the disqualifying finding (fever, pain, odor, purulence, systemic illness, or a finding outside its stated window) before rejecting the benign answer.",
+     "to": "Before rejecting the benign diagnosis, name the disqualifying finding: fever, pain, odor, purulence, systemic illness, or a finding outside its stated window."
+    },
+    {
+     "claim": "Stems plant one misleading cue per wrong option.",
+     "dropped": "framing about how the stem is built"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Reassurance requires positive criteria; it is not just the absence of a diagnosis.",
+     "from": "Reassurance is a diagnosis with criteria, not an absence of one."
+    },
+    {
+     "claim": "Before rejecting the benign diagnosis, name the disqualifying finding: fever, pain, odor, purulence, systemic illness, or a finding outside its stated window.",
+     "from": "Name the disqualifying finding (fever, pain, odor, purulence, systemic illness, or a finding outside its stated window) before rejecting the benign answer."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "not vaginal discharge — and her post-treatment test was negative",
+   "with": "not vaginal discharge; her post-treatment test was negative",
+   "note": ".traps: em dash",
+   "claims": [
+    {
+     "claim": "Vertical chlamydia causes conjunctivitis or pneumonia, not vaginal discharge.",
+     "to": "Chlamydia trachomatis: Vertical chlamydia causes conjunctivitis or pneumonia, not vaginal discharge; her post-treatment test was negative"
+    },
+    {
+     "claim": "Her post-treatment test was negative.",
+     "to": "Chlamydia trachomatis: Vertical chlamydia causes conjunctivitis or pneumonia, not vaginal discharge; her post-treatment test was negative"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Vertical chlamydia causes conjunctivitis or pneumonia, not vaginal discharge.",
+     "from": "Vertical chlamydia causes conjunctivitis or pneumonia, not vaginal discharge."
+    },
+    {
+     "claim": "Her post-treatment test was negative.",
+     "from": "Her post-treatment test was negative."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aneuploidy",
+   "find": "<p>The hands close the question. <b>Clenched fists with overlapping fingers</b> plus <b>hypertonia</b>, growth restriction, microcephaly and a VSD is trisomy 18, and the expected companion finding is <b>micrognathia</b> &mdash; alongside a prominent occiput, low-set pointed ears and rocker-bottom feet. Advanced maternal age is the risk factor, through meiotic nondisjunction.</p>\n<p>Every wrong option belongs to a different aneuploidy, so this is a feature-map question, not a reasoning one. Cutis aplasia and microphthalmia are <b>trisomy 13</b>. A transverse palmar crease is <b>trisomy 21</b>, which is also <b>hypotonic</b> &mdash; the opposite tone to this infant. A cat-like cry is <b>cri-du-chat</b>, a webbed neck is <b>Turner</b>. Learn them as a grid rather than one at a time.</p>\n<p>When the question turns from the syndrome to the heart, the most common trisomy 18 lesion is a <b>ventricular septal defect</b>: a <b>holosystolic murmur at the left lower sternal border</b> that becomes audible as pulmonary vascular resistance falls after birth. Blue hands and feet with <b>pink oral mucosa</b> are acrocyanosis, which is normal in a healthy newborn, not central cyanosis. Transposition and truncus arteriosus give central cyanosis with a single S2, and neither is a trisomy 18 lesion.</p>",
+   "with": "<p><b>Clenched fists with overlapping fingers</b> plus <b>hypertonia</b>, growth restriction, microcephaly and a <b>VSD</b> (ventricular septal defect) is trisomy 18. The expected companion finding is <b>micrognathia</b>, along with a prominent occiput, low-set pointed ears and rocker-bottom feet. Advanced maternal age is the risk factor, through meiotic nondisjunction.</p>\n<p>Cutis aplasia and microphthalmia are <b>trisomy 13</b>. A transverse palmar crease is <b>trisomy 21</b>, which is also <b>hypotonic</b>, the opposite tone to this infant. A cat-like cry is <b>cri-du-chat</b>, and a webbed neck is <b>Turner</b>.</p>\n<p>The most common trisomy 18 lesion is a <b>ventricular septal defect</b>. It gives a <b>holosystolic murmur at the left lower sternal border</b> that becomes audible as pulmonary vascular resistance falls after birth. Blue hands and feet with <b>pink oral mucosa</b> are acrocyanosis, which is normal in a healthy newborn, not central cyanosis. Transposition and truncus arteriosus give central cyanosis with a single S2, and neither is a trisomy 18 lesion.</p>",
+   "note": ".dp: framing sentences, em dashes, acronym",
+   "claims": [
+    {
+     "claim": "The hands close the question.",
+     "dropped": "framing about the question; the hand finding is stated in the next sentence"
+    },
+    {
+     "claim": "Every wrong option belongs to a different aneuploidy.",
+     "dropped": "framing about the answer options; each finding's syndrome is stated in the following sentences"
+    },
+    {
+     "claim": "This is a feature-map question, not a reasoning one.",
+     "dropped": "framing about the question type"
+    },
+    {
+     "claim": "Learn them as a grid rather than one at a time.",
+     "dropped": "study advice"
+    },
+    {
+     "claim": "The question turns from the syndrome to the heart.",
+     "dropped": "framing about the question"
+    },
+    {
+     "claim": "Clenched fists with overlapping fingers plus hypertonia, growth restriction, microcephaly and a VSD is trisomy 18.",
+     "to": "Clenched fists with overlapping fingers plus hypertonia, growth restriction, microcephaly and a VSD (ventricular septal defect) is trisomy 18."
+    },
+    {
+     "claim": "The expected companion finding is micrognathia.",
+     "to": "The expected companion finding is micrognathia, along with a prominent occiput, low-set pointed ears and rocker-bottom feet."
+    },
+    {
+     "claim": "Trisomy 18 also has a prominent occiput, low-set pointed ears and rocker-bottom feet.",
+     "to": "The expected companion finding is micrognathia, along with a prominent occiput, low-set pointed ears and rocker-bottom feet."
+    },
+    {
+     "claim": "Advanced maternal age is the risk factor, through meiotic nondisjunction.",
+     "to": "Advanced maternal age is the risk factor, through meiotic nondisjunction."
+    },
+    {
+     "claim": "Cutis aplasia and microphthalmia are trisomy 13.",
+     "to": "Cutis aplasia and microphthalmia are trisomy 13."
+    },
+    {
+     "claim": "A transverse palmar crease is trisomy 21.",
+     "to": "A transverse palmar crease is trisomy 21, which is also hypotonic, the opposite tone to this infant."
+    },
+    {
+     "claim": "Trisomy 21 is hypotonic, the opposite tone to this infant.",
+     "to": "A transverse palmar crease is trisomy 21, which is also hypotonic, the opposite tone to this infant."
+    },
+    {
+     "claim": "A cat-like cry is cri-du-chat.",
+     "to": "A cat-like cry is cri-du-chat, and a webbed neck is Turner."
+    },
+    {
+     "claim": "A webbed neck is Turner.",
+     "to": "A cat-like cry is cri-du-chat, and a webbed neck is Turner."
+    },
+    {
+     "claim": "The most common trisomy 18 lesion is a ventricular septal defect.",
+     "to": "The most common trisomy 18 lesion is a ventricular septal defect."
+    },
+    {
+     "claim": "A VSD gives a holosystolic murmur at the left lower sternal border that becomes audible as pulmonary vascular resistance falls after birth.",
+     "to": "It gives a holosystolic murmur at the left lower sternal border that becomes audible as pulmonary vascular resistance falls after birth."
+    },
+    {
+     "claim": "Blue hands and feet with pink oral mucosa are acrocyanosis, which is normal in a healthy newborn, not central cyanosis.",
+     "to": "Blue hands and feet with pink oral mucosa are acrocyanosis, which is normal in a healthy newborn, not central cyanosis."
+    },
+    {
+     "claim": "Transposition and truncus arteriosus give central cyanosis with a single S2.",
+     "to": "Transposition and truncus arteriosus give central cyanosis with a single S2, and neither is a trisomy 18 lesion."
+    },
+    {
+     "claim": "Neither transposition nor truncus is a trisomy 18 lesion.",
+     "to": "Transposition and truncus arteriosus give central cyanosis with a single S2, and neither is a trisomy 18 lesion."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Clenched fists with overlapping fingers plus hypertonia, growth restriction, microcephaly and a VSD is trisomy 18.",
+     "from": "Clenched fists with overlapping fingers plus hypertonia, growth restriction, microcephaly and a VSD is trisomy 18."
+    },
+    {
+     "claim": "The expected companion finding is micrognathia.",
+     "from": "The expected companion finding is micrognathia."
+    },
+    {
+     "claim": "Trisomy 18 also has a prominent occiput, low-set pointed ears and rocker-bottom feet.",
+     "from": "Trisomy 18 also has a prominent occiput, low-set pointed ears and rocker-bottom feet."
+    },
+    {
+     "claim": "Advanced maternal age is the risk factor, through meiotic nondisjunction.",
+     "from": "Advanced maternal age is the risk factor, through meiotic nondisjunction."
+    },
+    {
+     "claim": "Cutis aplasia and microphthalmia are trisomy 13.",
+     "from": "Cutis aplasia and microphthalmia are trisomy 13."
+    },
+    {
+     "claim": "A transverse palmar crease is trisomy 21.",
+     "from": "A transverse palmar crease is trisomy 21."
+    },
+    {
+     "claim": "Trisomy 21 is hypotonic, the opposite tone to this infant.",
+     "from": "Trisomy 21 is hypotonic, the opposite tone to this infant."
+    },
+    {
+     "claim": "A cat-like cry is cri-du-chat.",
+     "from": "A cat-like cry is cri-du-chat."
+    },
+    {
+     "claim": "A webbed neck is Turner.",
+     "from": "A webbed neck is Turner."
+    },
+    {
+     "claim": "The most common trisomy 18 lesion is a ventricular septal defect.",
+     "from": "The most common trisomy 18 lesion is a ventricular septal defect."
+    },
+    {
+     "claim": "A VSD gives a holosystolic murmur at the left lower sternal border that becomes audible as pulmonary vascular resistance falls after birth.",
+     "from": "A VSD gives a holosystolic murmur at the left lower sternal border that becomes audible as pulmonary vascular resistance falls after birth."
+    },
+    {
+     "claim": "Blue hands and feet with pink oral mucosa are acrocyanosis, which is normal in a healthy newborn, not central cyanosis.",
+     "from": "Blue hands and feet with pink oral mucosa are acrocyanosis, which is normal in a healthy newborn, not central cyanosis."
+    },
+    {
+     "claim": "Transposition and truncus arteriosus give central cyanosis with a single S2.",
+     "from": "Transposition and truncus arteriosus give central cyanosis with a single S2."
+    },
+    {
+     "claim": "Neither transposition nor truncus is a trisomy 18 lesion.",
+     "from": "Neither transposition nor truncus is a trisomy 18 lesion."
+    },
+    {
+     "claim": "VSD stands for ventricular septal defect.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aneuploidy",
+   "find": "Trisomy 13 is the <b>midline</b> trisomy &mdash; scalp, eye, forebrain, abdominal wall &middot;",
+   "with": "Trisomy 13 is the <b>midline</b> trisomy: scalp, eye, forebrain, abdominal wall &middot;",
+   "note": ".pearls: prose em dash",
+   "claims": [
+    {
+     "claim": "Trisomy 13 is the midline trisomy: scalp, eye, forebrain, abdominal wall.",
+     "to": "Trisomy 13 is the midline trisomy: scalp, eye, forebrain, abdominal wall"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Trisomy 13 is the midline trisomy: scalp, eye, forebrain, abdominal wall.",
+     "from": "Trisomy 13 is the midline trisomy: scalp, eye, forebrain, abdominal wall."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aneuploidy",
+   "find": "Prominent occiput plus micrognathia is the trisomy 18 profile in one line",
+   "with": "Prominent occiput plus micrognathia is the trisomy 18 profile",
+   "note": ".pearls: slogan tail",
+   "claims": [
+    {
+     "claim": "Prominent occiput plus micrognathia is the trisomy 18 profile.",
+     "to": "Prominent occiput plus micrognathia is the trisomy 18 profile"
+    },
+    {
+     "claim": "It fits in one line.",
+     "dropped": "slogan tail"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Prominent occiput plus micrognathia is the trisomy 18 profile.",
+     "from": "Prominent occiput plus micrognathia is the trisomy 18 profile."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aneuploidy",
+   "find": "Part I <b>Teratogenic Exposures</b>, which owns the acquired dysmorphology this must be separated from. Store the discriminator as a question: what are the hands doing, and is the tone up or down? Part I <b>Multiple Anomalies in a Newborn</b> is the twin for the non-aneuploid malformation syndromes &mdash; CHARGE, VACTERL and Fanconi anemia &mdash; which share coloboma, cleft palate and cryptorchidism with the trisomies and are separated by head size and by the nares. Part I <b>Congenital Hypothyroidism</b> owns the floppy infant whose signs appear weeks after a normal birth; ask: was the baby hypotonic from the first hour, or did it develop later? Part I <b>Cyanosis in the Newborn</b> owns acrocyanosis versus central cyanosis; ask: are the lips and tongue pink? Part I <b>Hypotonia in an Infant</b> owns the full hypotonia workup and the Down syndrome health supervision grid; ask: is the infant weak, or only floppy? Part II <b>Angelman Syndrome and Its Genetic Look-Alikes</b> owns the chromosome 15 imprinting pair. Ask: which parent&#39;s copy is missing?",
+   "with": "Part I <b>Teratogenic Exposures</b> covers acquired dysmorphology, which must be separated from aneuploidy. Ask: what are the hands doing, and is the tone up or down? Part I <b>Multiple Anomalies in a Newborn</b> covers the non-aneuploid malformation syndromes (CHARGE, VACTERL and Fanconi anemia). They share coloboma, cleft palate and cryptorchidism with the trisomies and are separated by head size and by the nares. Part I <b>Congenital Hypothyroidism</b> covers the floppy infant whose signs appear weeks after a normal birth. Ask: was the baby hypotonic from the first hour, or did it develop later? Part I <b>Cyanosis in the Newborn</b> covers acrocyanosis versus central cyanosis. Ask: are the lips and tongue pink? Part I <b>Hypotonia in an Infant</b> covers the full hypotonia workup and the Down syndrome health supervision grid. Ask: is the infant weak, or only floppy? Part II <b>Angelman Syndrome and Its Genetic Look-Alikes</b> covers the chromosome 15 imprinting pair. Ask: which parent&#39;s copy is missing?",
+   "note": "Pairs with: owns/twin -> covers, workflow text, em dashes, fragment",
+   "claims": [
+    {
+     "claim": "Teratogenic Exposures owns the acquired dysmorphology this must be separated from.",
+     "to": "Part I Teratogenic Exposures covers acquired dysmorphology, which must be separated from aneuploidy."
+    },
+    {
+     "claim": "Discriminator: what are the hands doing, and is the tone up or down?",
+     "to": "Ask: what are the hands doing, and is the tone up or down?"
+    },
+    {
+     "claim": "Multiple Anomalies in a Newborn is the twin for the non-aneuploid malformation syndromes: CHARGE, VACTERL and Fanconi anemia.",
+     "to": "Part I Multiple Anomalies in a Newborn covers the non-aneuploid malformation syndromes (CHARGE, VACTERL and Fanconi anemia)."
+    },
+    {
+     "claim": "They share coloboma, cleft palate and cryptorchidism with the trisomies and are separated by head size and by the nares.",
+     "to": "They share coloboma, cleft palate and cryptorchidism with the trisomies and are separated by head size and by the nares."
+    },
+    {
+     "claim": "Congenital Hypothyroidism owns the floppy infant whose signs appear weeks after a normal birth; ask: was the baby hypotonic from the first hour, or did it develop later?",
+     "to": "Part I Congenital Hypothyroidism covers the floppy infant whose signs appear weeks after a normal birth. Ask: was the baby hypotonic from the first hour, or did it develop later?"
+    },
+    {
+     "claim": "Cyanosis in the Newborn owns acrocyanosis versus central cyanosis; ask: are the lips and tongue pink?",
+     "to": "Part I Cyanosis in the Newborn covers acrocyanosis versus central cyanosis. Ask: are the lips and tongue pink?"
+    },
+    {
+     "claim": "Hypotonia in an Infant owns the full hypotonia workup and the Down syndrome health supervision grid; ask: is the infant weak, or only floppy?",
+     "to": "Part I Hypotonia in an Infant covers the full hypotonia workup and the Down syndrome health supervision grid. Ask: is the infant weak, or only floppy?"
+    },
+    {
+     "claim": "Angelman Syndrome and Its Genetic Look-Alikes owns the chromosome 15 imprinting pair.",
+     "to": "Part II Angelman Syndrome and Its Genetic Look-Alikes covers the chromosome 15 imprinting pair."
+    },
+    {
+     "claim": "Ask: which parent's copy is missing?",
+     "to": "Ask: which parent's copy is missing?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Teratogenic Exposures covers acquired dysmorphology, which must be separated from aneuploidy.",
+     "from": "Teratogenic Exposures owns the acquired dysmorphology this must be separated from."
+    },
+    {
+     "claim": "Ask: what are the hands doing, and is the tone up or down?",
+     "from": "Discriminator: what are the hands doing, and is the tone up or down?"
+    },
+    {
+     "claim": "Multiple Anomalies in a Newborn covers the non-aneuploid malformation syndromes (CHARGE, VACTERL and Fanconi anemia).",
+     "from": "Multiple Anomalies in a Newborn is the twin for the non-aneuploid malformation syndromes: CHARGE, VACTERL and Fanconi anemia."
+    },
+    {
+     "claim": "They share coloboma, cleft palate and cryptorchidism with the trisomies and are separated by head size and by the nares.",
+     "from": "They share coloboma, cleft palate and cryptorchidism with the trisomies and are separated by head size and by the nares."
+    },
+    {
+     "claim": "Congenital Hypothyroidism covers the floppy infant whose signs appear weeks after a normal birth. Ask: was the baby hypotonic from the first hour, or did it develop later?",
+     "from": "Congenital Hypothyroidism owns the floppy infant whose signs appear weeks after a normal birth; ask: was the baby hypotonic from the first hour, or did it develop later?"
+    },
+    {
+     "claim": "Cyanosis in the Newborn covers acrocyanosis versus central cyanosis. Ask: are the lips and tongue pink?",
+     "from": "Cyanosis in the Newborn owns acrocyanosis versus central cyanosis; ask: are the lips and tongue pink?"
+    },
+    {
+     "claim": "Hypotonia in an Infant covers the full hypotonia workup and the Down syndrome health supervision grid. Ask: is the infant weak, or only floppy?",
+     "from": "Hypotonia in an Infant owns the full hypotonia workup and the Down syndrome health supervision grid; ask: is the infant weak, or only floppy?"
+    },
+    {
+     "claim": "Angelman Syndrome and Its Genetic Look-Alikes covers the chromosome 15 imprinting pair.",
+     "from": "Angelman Syndrome and Its Genetic Look-Alikes owns the chromosome 15 imprinting pair."
+    },
+    {
+     "claim": "Ask: which parent's copy is missing?",
+     "from": "Ask: which parent's copy is missing?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aneuploidy",
+   "find": "When every option is a finding from a different syndrome, the question is a lookup, not a deduction &mdash; find the one feature you are certain maps to the stem and let it carry the answer.",
+   "with": "When each candidate finding belongs to a different syndrome, identify the syndrome from the one feature you are certain of. Then choose the finding that belongs to that syndrome.",
+   "note": ".rule: framing, em dash",
+   "claims": [
+    {
+     "claim": "When every option is from a different syndrome, it is a lookup, not a deduction.",
+     "dropped": "framing about the question type"
+    },
+    {
+     "claim": "When every option is a finding from a different syndrome, find the one feature you are certain of.",
+     "to": "When each candidate finding belongs to a different syndrome, identify the syndrome from the one feature you are certain of."
+    },
+    {
+     "claim": "Let that feature carry the answer.",
+     "to": "Then choose the finding that belongs to that syndrome."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When each candidate finding belongs to a different syndrome, identify the syndrome from the one feature you are certain of.",
+     "from": "When every option is a finding from a different syndrome, find the one feature you are certain of."
+    },
+    {
+     "claim": "Then choose the finding that belongs to that syndrome.",
+     "from": "Let that feature carry the answer."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "malform-syndromes",
+   "find": "the rarest component names the syndrome, never the commonest",
+   "with": "identify the syndrome by its rarest component, never its commonest",
+   "note": "sub: personification",
+   "claims": [
+    {
+     "claim": "The rarest component names the syndrome, never the commonest.",
+     "to": "identify the syndrome by its rarest component, never its commonest"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Identify the syndrome by its rarest component, never its commonest.",
+     "from": "The rarest component names the syndrome, never the commonest."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "malform-syndromes",
+   "find": "<p>The stem hands you six anomalies and five syndromes, and most of the six are shared. A heart defect belongs to every option on the list. Cleft palate belongs to three of them, cryptorchidism to three, dysmorphic ears to four. Counting anomalies therefore cannot separate anything. What separates is the finding that appears on the fewest lists: <b>choanal atresia</b>, which among these five belongs to CHARGE alone, and <b>coloboma</b>, which belongs to CHARGE and trisomy 13 and to no one else. Take the intersection and only CHARGE survives &mdash; and the stem then closes trisomy 13 with a percentile, because head circumference is 25th&ndash;50th and trisomy 13 is microcephalic.</p>\n<p>Seven seconds and wrong is a single-cue read: a newborn with anomalies across several organ systems plus a heart defect looks like an association, and VACTERL is the association most students have a ready slot for. The fix is not more syndromes. It is to stop counting the anomalies and start hunting for the one that appears on the fewest lists &mdash; <b>a malformation syndrome is named by its rarest component</b>.</p>",
+   "with": "<p>This newborn has six anomalies, and five syndromes are in the differential; most of the six are shared. A heart defect belongs to all five. Cleft palate belongs to three of them, cryptorchidism to three and dysmorphic ears to four. Counting anomalies therefore cannot separate them. The findings that appear on the fewest lists separate them. Among these five, <b>choanal atresia</b> belongs to CHARGE alone, and <b>coloboma</b> belongs only to CHARGE and trisomy 13. Only CHARGE has both. Head circumference then excludes trisomy 13: it is 25th&ndash;50th percentile, and trisomy 13 is microcephalic.</p>\n<p>A newborn with anomalies across several organ systems plus a heart defect looks like an association such as VACTERL. Stop counting the anomalies and look for the one that appears on the fewest lists: <b>a malformation syndrome is named by its rarest component</b>.</p>",
+   "note": ".dp: stem framing, dramatic opener, em dashes",
+   "claims": [
+    {
+     "claim": "There are six anomalies and five syndromes.",
+     "to": "This newborn has six anomalies, and five syndromes are in the differential; most of the six are shared."
+    },
+    {
+     "claim": "Most of the six anomalies are shared.",
+     "to": "This newborn has six anomalies, and five syndromes are in the differential; most of the six are shared."
+    },
+    {
+     "claim": "A heart defect belongs to every option.",
+     "to": "A heart defect belongs to all five."
+    },
+    {
+     "claim": "Cleft palate belongs to three, cryptorchidism to three, dysmorphic ears to four.",
+     "to": "Cleft palate belongs to three of them, cryptorchidism to three and dysmorphic ears to four."
+    },
+    {
+     "claim": "Counting anomalies cannot separate anything.",
+     "to": "Counting anomalies therefore cannot separate them."
+    },
+    {
+     "claim": "What separates is the finding that appears on the fewest lists.",
+     "to": "The findings that appear on the fewest lists separate them."
+    },
+    {
+     "claim": "Choanal atresia, among these five, belongs to CHARGE alone.",
+     "to": "Among these five, choanal atresia belongs to CHARGE alone, and coloboma belongs only to CHARGE and trisomy 13."
+    },
+    {
+     "claim": "Coloboma belongs to CHARGE and trisomy 13 and to no one else.",
+     "to": "Among these five, choanal atresia belongs to CHARGE alone, and coloboma belongs only to CHARGE and trisomy 13."
+    },
+    {
+     "claim": "Taking the intersection, only CHARGE survives.",
+     "to": "Only CHARGE has both."
+    },
+    {
+     "claim": "Head circumference 25th–50th closes trisomy 13, because trisomy 13 is microcephalic.",
+     "to": "Head circumference then excludes trisomy 13: it is 25th–50th percentile, and trisomy 13 is microcephalic."
+    },
+    {
+     "claim": "A newborn with anomalies across several organ systems plus a heart defect looks like an association.",
+     "to": "A newborn with anomalies across several organ systems plus a heart defect looks like an association such as VACTERL."
+    },
+    {
+     "claim": "VACTERL is the association most students have a ready slot for.",
+     "to": "A newborn with anomalies across several organ systems plus a heart defect looks like an association such as VACTERL."
+    },
+    {
+     "claim": "Stop counting the anomalies and hunt for the one that appears on the fewest lists.",
+     "to": "Stop counting the anomalies and look for the one that appears on the fewest lists: a malformation syndrome is named by its rarest component."
+    },
+    {
+     "claim": "A malformation syndrome is named by its rarest component.",
+     "to": "Stop counting the anomalies and look for the one that appears on the fewest lists: a malformation syndrome is named by its rarest component."
+    },
+    {
+     "claim": "Seven seconds and wrong is a single-cue read.",
+     "dropped": "rhetorical framing about test-taking speed"
+    },
+    {
+     "claim": "The fix is not more syndromes.",
+     "dropped": "rhetorical framing about study"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "This newborn has six anomalies, and five syndromes are in the differential.",
+     "from": "There are six anomalies and five syndromes."
+    },
+    {
+     "claim": "Most of the six anomalies are shared.",
+     "from": "Most of the six anomalies are shared."
+    },
+    {
+     "claim": "A heart defect belongs to all five.",
+     "from": "A heart defect belongs to every option."
+    },
+    {
+     "claim": "Cleft palate belongs to three, cryptorchidism to three, dysmorphic ears to four.",
+     "from": "Cleft palate belongs to three, cryptorchidism to three, dysmorphic ears to four."
+    },
+    {
+     "claim": "Counting anomalies cannot separate them.",
+     "from": "Counting anomalies cannot separate anything."
+    },
+    {
+     "claim": "The findings that appear on the fewest lists separate them.",
+     "from": "What separates is the finding that appears on the fewest lists."
+    },
+    {
+     "claim": "Choanal atresia, among these five, belongs to CHARGE alone.",
+     "from": "Choanal atresia, among these five, belongs to CHARGE alone."
+    },
+    {
+     "claim": "Coloboma belongs only to CHARGE and trisomy 13.",
+     "from": "Coloboma belongs to CHARGE and trisomy 13 and to no one else."
+    },
+    {
+     "claim": "Only CHARGE has both.",
+     "from": "Taking the intersection, only CHARGE survives."
+    },
+    {
+     "claim": "Head circumference excludes trisomy 13: it is 25th–50th percentile, and trisomy 13 is microcephalic.",
+     "from": "Head circumference 25th–50th closes trisomy 13, because trisomy 13 is microcephalic."
+    },
+    {
+     "claim": "A newborn with anomalies across several organ systems plus a heart defect looks like an association such as VACTERL.",
+     "from": "A newborn with anomalies across several organ systems plus a heart defect looks like an association."
+    },
+    {
+     "claim": "Stop counting the anomalies and look for the one that appears on the fewest lists.",
+     "from": "Stop counting the anomalies and hunt for the one that appears on the fewest lists."
+    },
+    {
+     "claim": "A malformation syndrome is named by its rarest component.",
+     "from": "A malformation syndrome is named by its rarest component."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "malform-syndromes",
+   "find": "<span class=\"lbl\">Decision spine &mdash; solve the stem in 10 seconds</span>\n<p><b>1.</b> Does a catheter pass through both nares? &mdash; no is choanal atresia, and among these five it is CHARGE's alone. <b>2.</b> Is there a coloboma? &mdash; CHARGE or trisomy 13, and nobody else. <b>3.</b> Is the head small? &mdash; microcephaly moves it to trisomy 13; a normal head circumference moves it away. <b>4.</b> Are the thumbs and the skin normal? &mdash; normal thumbs with normal pigmentation exclude Fanconi anaemia. <b>5.</b> Is there a vertebral, anal, oesophageal, renal or limb anomaly? &mdash; their absence excludes VACTERL. <b>6.</b> Which finding sits on the fewest lists? &mdash; that one names the syndrome.</p>",
+   "with": "<span class=\"lbl\">Decision spine: solve the stem in 10 seconds</span>\n<p><b>1.</b> Does a catheter pass through both nares? If not, it is choanal atresia, which among these five is CHARGE's alone. <b>2.</b> Is there a coloboma? That means CHARGE or trisomy 13, and nobody else. <b>3.</b> Is the head small? Microcephaly points to trisomy 13; a normal head circumference points away from it. <b>4.</b> Are the thumbs and the skin normal? Normal thumbs with normal pigmentation exclude Fanconi anaemia. <b>5.</b> Is there a vertebral, anal, oesophageal, renal or limb anomaly? Their absence excludes VACTERL. <b>6.</b> Which finding sits on the fewest lists? That one names the syndrome.</p>",
+   "note": ".dp spine: rhetorical label, prose em dashes",
+   "reworded_label": [
+    "Decision spine — solve the stem in 10 seconds"
+   ],
+   "claims": [
+    {
+     "claim": "Solve the stem in 10 seconds.",
+     "to": "Decision spine: solve the stem in 10 seconds"
+    },
+    {
+     "claim": "If a catheter does not pass through both nares, it is choanal atresia, and among these five it is CHARGE's alone.",
+     "to": "1. Does a catheter pass through both nares? If not, it is choanal atresia, which among these five is CHARGE's alone."
+    },
+    {
+     "claim": "A coloboma means CHARGE or trisomy 13, and nobody else.",
+     "to": "2. Is there a coloboma? That means CHARGE or trisomy 13, and nobody else."
+    },
+    {
+     "claim": "Microcephaly moves it to trisomy 13; a normal head circumference moves it away.",
+     "to": "3. Is the head small? Microcephaly points to trisomy 13; a normal head circumference points away from it."
+    },
+    {
+     "claim": "Normal thumbs with normal pigmentation exclude Fanconi anaemia.",
+     "to": "4. Are the thumbs and the skin normal? Normal thumbs with normal pigmentation exclude Fanconi anaemia."
+    },
+    {
+     "claim": "Absence of a vertebral, anal, oesophageal, renal or limb anomaly excludes VACTERL.",
+     "to": "5. Is there a vertebral, anal, oesophageal, renal or limb anomaly? Their absence excludes VACTERL."
+    },
+    {
+     "claim": "The finding on the fewest lists names the syndrome.",
+     "to": "6. Which finding sits on the fewest lists? That one names the syndrome."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Solve the stem in 10 seconds.",
+     "from": "Solve the stem in 10 seconds."
+    },
+    {
+     "claim": "If a catheter does not pass through both nares, it is choanal atresia, and among these five it is CHARGE's alone.",
+     "from": "If a catheter does not pass through both nares, it is choanal atresia, and among these five it is CHARGE's alone."
+    },
+    {
+     "claim": "A coloboma means CHARGE or trisomy 13, and nobody else.",
+     "from": "A coloboma means CHARGE or trisomy 13, and nobody else."
+    },
+    {
+     "claim": "Microcephaly points to trisomy 13; a normal head circumference points away from it.",
+     "from": "Microcephaly moves it to trisomy 13; a normal head circumference moves it away."
+    },
+    {
+     "claim": "Normal thumbs with normal pigmentation exclude Fanconi anaemia.",
+     "from": "Normal thumbs with normal pigmentation exclude Fanconi anaemia."
+    },
+    {
+     "claim": "Absence of a vertebral, anal, oesophageal, renal or limb anomaly excludes VACTERL.",
+     "from": "Absence of a vertebral, anal, oesophageal, renal or limb anomaly excludes VACTERL."
+    },
+    {
+     "claim": "The finding on the fewest lists names the syndrome.",
+     "from": "The finding on the fewest lists names the syndrome."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "malform-syndromes",
+   "find": "Cleft lip or palate, hypotonia and anosmia are common in CHARGE but do not name it &mdash; the eye and the nose do &middot; Choanal atresia can be isolated, but finding it obliges a search for the rest of the acronym &middot; Trisomy 13 and CHARGE share coloboma, cleft palate, cryptorchidism and a heart defect; <b>microcephaly and choanal atresia</b> are the two that separate them &middot; VACTERL and CHARGE overlap only in the cardiac and renal letters, which is exactly why neither of those letters can be used to choose &middot; They re-ask this by holding the heart defect constant and swapping the single uncommon anomaly: the thumbs for Fanconi, the anus for VACTERL, the thymus for 22q11.2, the head size for trisomy 13 &middot; <b>CHD7</b> &mdash; the gene, and a useful hook, since the letters of the syndrome and the gene both start with CH",
+   "with": "Cleft lip or palate, hypotonia and anosmia are common in CHARGE but do not identify it; the eye and nose findings do &middot; Choanal atresia can be isolated, but finding it requires a search for the other CHARGE features &middot; Trisomy 13 and CHARGE share coloboma, cleft palate, cryptorchidism and a heart defect; <b>microcephaly and choanal atresia</b> are the two that separate them &middot; VACTERL and CHARGE overlap only in cardiac and renal anomalies, so neither of those can be used to choose between them &middot; With the heart defect held constant, the single uncommon anomaly separates the syndromes. It is the thumbs for Fanconi, the anus for VACTERL, the thymus for 22q11.2 and the head size for trisomy 13 &middot; <b>CHD7</b> is the gene; the syndrome and the gene both start with CH",
+   "note": ".pearls: em dashes, exam framing, personification",
+   "claims": [
+    {
+     "claim": "Cleft lip or palate, hypotonia and anosmia are common in CHARGE but do not name it.",
+     "to": "Cleft lip or palate, hypotonia and anosmia are common in CHARGE but do not identify it; the eye and nose findings do"
+    },
+    {
+     "claim": "The eye and the nose name CHARGE.",
+     "to": "Cleft lip or palate, hypotonia and anosmia are common in CHARGE but do not identify it; the eye and nose findings do"
+    },
+    {
+     "claim": "Choanal atresia can be isolated.",
+     "to": "Choanal atresia can be isolated, but finding it requires a search for the other CHARGE features"
+    },
+    {
+     "claim": "Finding choanal atresia obliges a search for the rest of the acronym.",
+     "to": "Choanal atresia can be isolated, but finding it requires a search for the other CHARGE features"
+    },
+    {
+     "claim": "Trisomy 13 and CHARGE share coloboma, cleft palate, cryptorchidism and a heart defect.",
+     "to": "Trisomy 13 and CHARGE share coloboma, cleft palate, cryptorchidism and a heart defect; microcephaly and choanal atresia are the two that separate them"
+    },
+    {
+     "claim": "Microcephaly and choanal atresia are the two that separate them.",
+     "to": "Trisomy 13 and CHARGE share coloboma, cleft palate, cryptorchidism and a heart defect; microcephaly and choanal atresia are the two that separate them"
+    },
+    {
+     "claim": "VACTERL and CHARGE overlap only in the cardiac and renal letters.",
+     "to": "VACTERL and CHARGE overlap only in cardiac and renal anomalies, so neither of those can be used to choose between them"
+    },
+    {
+     "claim": "Neither of those letters can be used to choose.",
+     "to": "VACTERL and CHARGE overlap only in cardiac and renal anomalies, so neither of those can be used to choose between them"
+    },
+    {
+     "claim": "Holding the heart defect constant, the single uncommon anomaly is swapped: the thumbs for Fanconi, the anus for VACTERL, the thymus for 22q11.2, the head size for trisomy 13.",
+     "to": "It is the thumbs for Fanconi, the anus for VACTERL, the thymus for 22q11.2 and the head size for trisomy 13"
+    },
+    {
+     "claim": "CHD7 is the gene.",
+     "to": "CHD7 is the gene; the syndrome and the gene both start with CH"
+    },
+    {
+     "claim": "The syndrome and the gene both start with CH.",
+     "to": "CHD7 is the gene; the syndrome and the gene both start with CH"
+    },
+    {
+     "claim": "The gene name is a useful memory hook.",
+     "dropped": "mnemonic framing"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Cleft lip or palate, hypotonia and anosmia are common in CHARGE but do not identify it.",
+     "from": "Cleft lip or palate, hypotonia and anosmia are common in CHARGE but do not name it."
+    },
+    {
+     "claim": "The eye and nose findings identify CHARGE.",
+     "from": "The eye and the nose name CHARGE."
+    },
+    {
+     "claim": "Choanal atresia can be isolated.",
+     "from": "Choanal atresia can be isolated."
+    },
+    {
+     "claim": "Finding choanal atresia requires a search for the other CHARGE features.",
+     "from": "Finding choanal atresia obliges a search for the rest of the acronym."
+    },
+    {
+     "claim": "Trisomy 13 and CHARGE share coloboma, cleft palate, cryptorchidism and a heart defect.",
+     "from": "Trisomy 13 and CHARGE share coloboma, cleft palate, cryptorchidism and a heart defect."
+    },
+    {
+     "claim": "Microcephaly and choanal atresia are the two that separate them.",
+     "from": "Microcephaly and choanal atresia are the two that separate them."
+    },
+    {
+     "claim": "VACTERL and CHARGE overlap only in cardiac and renal anomalies.",
+     "from": "VACTERL and CHARGE overlap only in the cardiac and renal letters."
+    },
+    {
+     "claim": "Neither of those can be used to choose between them.",
+     "from": "Neither of those letters can be used to choose."
+    },
+    {
+     "claim": "With the heart defect held constant, the single uncommon anomaly separates the syndromes: the thumbs for Fanconi, the anus for VACTERL, the thymus for 22q11.2 and the head size for trisomy 13.",
+     "from": "Holding the heart defect constant, the single uncommon anomaly is swapped: the thumbs for Fanconi, the anus for VACTERL, the thymus for 22q11.2, the head size for trisomy 13."
+    },
+    {
+     "claim": "CHD7 is the gene.",
+     "from": "CHD7 is the gene."
+    },
+    {
+     "claim": "The syndrome and the gene both start with CH.",
+     "from": "The syndrome and the gene both start with CH."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "malform-syndromes",
+   "find": "Part I <b>Aneuploidy: Reading the Newborn</b> is the twin that runs the same feature-map reasoning for the trisomies, which is where this brief hands off once microcephaly appears. <b>22q11.2 Deletion Syndrome</b> owns the option in depth. <b>Cyanosis in the Newborn</b> owns the bedside catheter test and the crying manoeuvre. Part II <b>Tracheoesophageal Fistula with Esophageal Atresia</b> owns the VACTERL workup. Store the discriminator as a question: <i>which of these anomalies is on the fewest lists?</i>",
+   "with": "Part I <b>Aneuploidy: Reading the Newborn</b> applies the same feature-map reasoning to the trisomies. This brief hands off to it once microcephaly appears. <b>22q11.2 Deletion Syndrome</b> covers that option in depth. <b>Cyanosis in the Newborn</b> covers the bedside catheter test and the crying manoeuvre. Part II <b>Tracheoesophageal Fistula with Esophageal Atresia</b> covers the VACTERL workup. Ask: <i>which of these anomalies is on the fewest lists?</i>",
+   "note": "Pairs with: owns/twin -> covers, workflow text",
+   "claims": [
+    {
+     "claim": "Aneuploidy: Reading the Newborn runs the same feature-map reasoning for the trisomies; this brief hands off to it once microcephaly appears.",
+     "to": "Part I Aneuploidy: Reading the Newborn applies the same feature-map reasoning to the trisomies. This brief hands off to it once microcephaly appears."
+    },
+    {
+     "claim": "22q11.2 Deletion Syndrome owns the option in depth.",
+     "to": "22q11.2 Deletion Syndrome covers that option in depth."
+    },
+    {
+     "claim": "Cyanosis in the Newborn owns the bedside catheter test and the crying manoeuvre.",
+     "to": "Cyanosis in the Newborn covers the bedside catheter test and the crying manoeuvre."
+    },
+    {
+     "claim": "Tracheoesophageal Fistula with Esophageal Atresia owns the VACTERL workup.",
+     "to": "Part II Tracheoesophageal Fistula with Esophageal Atresia covers the VACTERL workup."
+    },
+    {
+     "claim": "Discriminator: which of these anomalies is on the fewest lists?",
+     "to": "Ask: which of these anomalies is on the fewest lists?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Aneuploidy: Reading the Newborn applies the same feature-map reasoning to the trisomies. This brief hands off to it once microcephaly appears.",
+     "from": "Aneuploidy: Reading the Newborn runs the same feature-map reasoning for the trisomies; this brief hands off to it once microcephaly appears."
+    },
+    {
+     "claim": "22q11.2 Deletion Syndrome covers that option in depth.",
+     "from": "22q11.2 Deletion Syndrome owns the option in depth."
+    },
+    {
+     "claim": "Cyanosis in the Newborn covers the bedside catheter test and the crying manoeuvre.",
+     "from": "Cyanosis in the Newborn owns the bedside catheter test and the crying manoeuvre."
+    },
+    {
+     "claim": "Tracheoesophageal Fistula with Esophageal Atresia covers the VACTERL workup.",
+     "from": "Tracheoesophageal Fistula with Esophageal Atresia owns the VACTERL workup."
+    },
+    {
+     "claim": "Ask: which of these anomalies is on the fewest lists?",
+     "from": "Discriminator: which of these anomalies is on the fewest lists?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "malform-syndromes",
+   "find": "In a newborn with anomalies in several systems, do not count the anomalies &mdash; find the one that appears on the fewest syndrome lists and let it name the diagnosis. The shared findings tell you that a syndrome exists; they never tell you which one.",
+   "with": "In a newborn with anomalies in several systems, do not count the anomalies. Find the one that appears on the fewest syndrome lists and use it to name the diagnosis. The shared findings show that a syndrome exists; they never show which one.",
+   "note": ".rule: em dash, split",
+   "claims": [
+    {
+     "claim": "In a newborn with anomalies in several systems, do not count the anomalies.",
+     "to": "In a newborn with anomalies in several systems, do not count the anomalies."
+    },
+    {
+     "claim": "Find the one that appears on the fewest syndrome lists and let it name the diagnosis.",
+     "to": "Find the one that appears on the fewest syndrome lists and use it to name the diagnosis."
+    },
+    {
+     "claim": "The shared findings tell you that a syndrome exists; they never tell you which one.",
+     "to": "The shared findings show that a syndrome exists; they never show which one."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In a newborn with anomalies in several systems, do not count the anomalies.",
+     "from": "In a newborn with anomalies in several systems, do not count the anomalies."
+    },
+    {
+     "claim": "Find the one that appears on the fewest syndrome lists and use it to name the diagnosis.",
+     "from": "Find the one that appears on the fewest syndrome lists and let it name the diagnosis."
+    },
+    {
+     "claim": "The shared findings show that a syndrome exists; they never show which one.",
+     "from": "The shared findings tell you that a syndrome exists; they never tell you which one."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "malform-syndromes",
+   "find": "Trisomy 13 matches four of the stem's findings and is excluded by two it does not have &mdash; the head circumference was given and not read.",
+   "with": "Trisomy 13: it matches four of the stem's findings and is excluded by two it does not have; the head circumference was given and not read.",
+   "note": ".traps: Option: why, em dash",
+   "claims": [
+    {
+     "claim": "Trisomy 13 matches four of the stem's findings.",
+     "to": "Trisomy 13: it matches four of the stem's findings and is excluded by two it does not have; the head circumference was given and not read."
+    },
+    {
+     "claim": "Trisomy 13 is excluded by two findings it does not have.",
+     "to": "Trisomy 13: it matches four of the stem's findings and is excluded by two it does not have; the head circumference was given and not read."
+    },
+    {
+     "claim": "The head circumference was given and not read.",
+     "to": "Trisomy 13: it matches four of the stem's findings and is excluded by two it does not have; the head circumference was given and not read."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Trisomy 13 matches four of the stem's findings.",
+     "from": "Trisomy 13 matches four of the stem's findings."
+    },
+    {
+     "claim": "Trisomy 13 is excluded by two findings it does not have.",
+     "from": "Trisomy 13 is excluded by two findings it does not have."
+    },
+    {
+     "claim": "The head circumference was given and not read.",
+     "from": "The head circumference was given and not read."
+    }
+   ]
+  }
+ ]
+}

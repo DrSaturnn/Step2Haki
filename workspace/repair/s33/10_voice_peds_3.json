@@ -1,0 +1,1028 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bs-ftt",
+   "find": "The parameter pattern names the cause",
+   "with": "The pattern of growth parameters points to the cause",
+   "note": "sub: remove personification",
+   "claims": [
+    {
+     "claim": "The pattern of growth parameters indicates the cause.",
+     "to": "The pattern of growth parameters points to the cause"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The pattern of growth parameters points to the cause.",
+     "from": "The pattern of growth parameters indicates the cause."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-ftt",
+   "find": "<p>The three growth parameters are the question. <b>Weight at the 2nd percentile with length at the 30th and head circumference at the 40th</b> is an isolated weight deficit with linear and brain growth preserved, and that pattern is <b>inadequate caloric intake</b> — malnutrition consumes the parameters in order, sparing the brain until deprivation is prolonged and severe.</p>\n<p>Inadequate intake is the commonest cause of faltering growth, and the commonest reason intake is inadequate is <b>behavioral and psychosocial</b>. Up to 80% of growth failure has no organic disorder behind it. The history seals it: he is active, keeps up with peers, eats well at daycare, has never been hospitalized, and examines normally.</p>",
+   "with": "<p><b>Weight at the 2nd percentile with length at the 30th and head circumference at the 40th</b> is an isolated weight deficit. Linear and brain growth are preserved. This pattern indicates <b>inadequate caloric intake</b>. Malnutrition affects the parameters in order and spares the brain until deprivation is prolonged and severe.</p>\n<p>Inadequate intake is the commonest cause of faltering growth. The commonest reason for inadequate intake is <b>behavioral and psychosocial</b>. Up to 80% of growth failure has no organic disorder behind it. The history confirms it: he is active, keeps up with peers, eats well at daycare, has never been hospitalized, and has a normal examination.</p>",
+   "note": "round 2 voice: .dp; framing opener removed, em dash removed, sentences split",
+   "claims": [
+    {
+     "claim": "The three growth parameters are the question.",
+     "dropped": "framing about the question; the parameters are stated in the next sentence"
+    },
+    {
+     "claim": "Weight at the 2nd percentile with length at the 30th and head circumference at the 40th is an isolated weight deficit.",
+     "to": "Weight at the 2nd percentile with length at the 30th and head circumference at the 40th is an isolated weight deficit."
+    },
+    {
+     "claim": "In this pattern linear and brain growth are preserved.",
+     "to": "Linear and brain growth are preserved."
+    },
+    {
+     "claim": "That pattern is inadequate caloric intake.",
+     "to": "This pattern indicates inadequate caloric intake."
+    },
+    {
+     "claim": "Malnutrition consumes the parameters in order.",
+     "to": "Malnutrition affects the parameters in order and spares the brain until deprivation is prolonged and severe."
+    },
+    {
+     "claim": "Malnutrition spares the brain until deprivation is prolonged and severe.",
+     "to": "Malnutrition affects the parameters in order and spares the brain until deprivation is prolonged and severe."
+    },
+    {
+     "claim": "Inadequate intake is the commonest cause of faltering growth.",
+     "to": "Inadequate intake is the commonest cause of faltering growth."
+    },
+    {
+     "claim": "The commonest reason intake is inadequate is behavioral and psychosocial.",
+     "to": "The commonest reason for inadequate intake is behavioral and psychosocial."
+    },
+    {
+     "claim": "Up to 80% of growth failure has no organic disorder behind it.",
+     "to": "Up to 80% of growth failure has no organic disorder behind it."
+    },
+    {
+     "claim": "The history seals the diagnosis.",
+     "to": "The history confirms it: he is active, keeps up with peers, eats well at daycare, has never been hospitalized, and has a normal examination."
+    },
+    {
+     "claim": "He is active, keeps up with peers, eats well at daycare, has never been hospitalized, and examines normally.",
+     "to": "The history confirms it: he is active, keeps up with peers, eats well at daycare, has never been hospitalized, and has a normal examination."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Weight at the 2nd percentile with length at the 30th and head circumference at the 40th is an isolated weight deficit.",
+     "from": "Weight at the 2nd percentile with length at the 30th and head circumference at the 40th is an isolated weight deficit."
+    },
+    {
+     "claim": "Linear and brain growth are preserved.",
+     "from": "In this pattern linear and brain growth are preserved."
+    },
+    {
+     "claim": "This pattern indicates inadequate caloric intake.",
+     "from": "That pattern is inadequate caloric intake."
+    },
+    {
+     "claim": "Malnutrition affects the parameters in order.",
+     "from": "Malnutrition consumes the parameters in order."
+    },
+    {
+     "claim": "Malnutrition spares the brain until deprivation is prolonged and severe.",
+     "from": "Malnutrition spares the brain until deprivation is prolonged and severe."
+    },
+    {
+     "claim": "Inadequate intake is the commonest cause of faltering growth.",
+     "from": "Inadequate intake is the commonest cause of faltering growth."
+    },
+    {
+     "claim": "The commonest reason for inadequate intake is behavioral and psychosocial.",
+     "from": "The commonest reason intake is inadequate is behavioral and psychosocial."
+    },
+    {
+     "claim": "Up to 80% of growth failure has no organic disorder behind it.",
+     "from": "Up to 80% of growth failure has no organic disorder behind it."
+    },
+    {
+     "claim": "The history confirms it.",
+     "from": "The history seals the diagnosis."
+    },
+    {
+     "claim": "He is active, keeps up with peers, eats well at daycare, has never been hospitalized, and has a normal examination.",
+     "from": "He is active, keeps up with peers, eats well at daycare, has never been hospitalized, and examines normally."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-ftt",
+   "find": "<span class=\"lbl\">Extensive testing is the wrong reflex</span> In a well-appearing child with a normal history and examination, broad laboratory and genetic testing has a very low yield. The evaluation is a <b>diet history, observed feeding, and attention to the social determinants</b>, and <b>catch-up growth on adequate calories is both the treatment and the confirmation</b>.",
+   "with": "<span class=\"lbl\">Avoid extensive testing</span> In a well-appearing child with a normal history and examination, broad laboratory and genetic testing has a very low yield. Evaluate with a <b>diet history, observed feeding, and attention to the social determinants</b>. <b>Catch-up growth on adequate calories</b> is both the treatment and the confirmation.",
+   "note": "round 2 voice: .danger; rhetorical label reworded, full-sentence bold narrowed to the term, sentence split",
+   "reworded_bold": [
+    "catch-up growth on adequate calories is both the treatment and the confirmation"
+   ],
+   "reworded_label": [
+    "Extensive testing is the wrong reflex"
+   ],
+   "claims": [
+    {
+     "claim": "Extensive testing is the wrong approach.",
+     "to": "In a well-appearing child with a normal history and examination, broad laboratory and genetic testing has a very low yield."
+    },
+    {
+     "claim": "In a well-appearing child with a normal history and examination, broad laboratory and genetic testing has a very low yield.",
+     "to": "In a well-appearing child with a normal history and examination, broad laboratory and genetic testing has a very low yield."
+    },
+    {
+     "claim": "The evaluation is a diet history, observed feeding, and attention to the social determinants.",
+     "to": "Evaluate with a diet history, observed feeding, and attention to the social determinants."
+    },
+    {
+     "claim": "Catch-up growth on adequate calories is both the treatment and the confirmation.",
+     "to": "Catch-up growth on adequate calories is both the treatment and the confirmation."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Avoid extensive testing.",
+     "from": "Extensive testing is the wrong approach."
+    },
+    {
+     "claim": "In a well-appearing child with a normal history and examination, broad laboratory and genetic testing has a very low yield.",
+     "from": "In a well-appearing child with a normal history and examination, broad laboratory and genetic testing has a very low yield."
+    },
+    {
+     "claim": "Evaluate with a diet history, observed feeding, and attention to the social determinants.",
+     "from": "The evaluation is a diet history, observed feeding, and attention to the social determinants."
+    },
+    {
+     "claim": "Catch-up growth on adequate calories is both the treatment and the confirmation.",
+     "from": "Catch-up growth on adequate calories is both the treatment and the confirmation."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-ftt",
+   "find": "Plot all three parameters before naming a cause; the relationship between them is the diagnostic instrument &middot; Head circumference is defended last, so a fallen head circumference means prolonged severe deprivation or a non-nutritional diagnosis &middot; Familial short stature and constitutional delay are not faltering growth; the child tracks a low but steady curve &middot; Endocrine causes give the inverse pattern — short with preserved or excess weight",
+   "with": "Plot all three parameters before naming a cause; the relationship between them points to the diagnosis &middot; Head circumference is spared longest, so a fallen head circumference means prolonged severe deprivation or a non-nutritional diagnosis &middot; Familial short stature and constitutional delay are not faltering growth; the child tracks a low but steady curve &middot; Endocrine causes give the inverse pattern: short stature with preserved or excess weight",
+   "note": "round 2 voice: Pearls; personification removed, prose em dash to colon",
+   "claims": [
+    {
+     "claim": "Plot all three parameters before naming a cause.",
+     "to": "Plot all three parameters before naming a cause; the relationship between them points to the diagnosis"
+    },
+    {
+     "claim": "The relationship between the parameters is the diagnostic instrument.",
+     "to": "Plot all three parameters before naming a cause; the relationship between them points to the diagnosis"
+    },
+    {
+     "claim": "Head circumference is defended last.",
+     "to": "Head circumference is spared longest, so a fallen head circumference means prolonged severe deprivation or a non-nutritional diagnosis"
+    },
+    {
+     "claim": "A fallen head circumference means prolonged severe deprivation or a non-nutritional diagnosis.",
+     "to": "Head circumference is spared longest, so a fallen head circumference means prolonged severe deprivation or a non-nutritional diagnosis"
+    },
+    {
+     "claim": "Familial short stature and constitutional delay are not faltering growth.",
+     "to": "Familial short stature and constitutional delay are not faltering growth; the child tracks a low but steady curve"
+    },
+    {
+     "claim": "In familial short stature and constitutional delay the child tracks a low but steady curve.",
+     "to": "Familial short stature and constitutional delay are not faltering growth; the child tracks a low but steady curve"
+    },
+    {
+     "claim": "Endocrine causes give the inverse pattern, short with preserved or excess weight.",
+     "to": "Endocrine causes give the inverse pattern: short stature with preserved or excess weight"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Plot all three parameters before naming a cause.",
+     "from": "Plot all three parameters before naming a cause."
+    },
+    {
+     "claim": "The relationship between the parameters points to the diagnosis.",
+     "from": "The relationship between the parameters is the diagnostic instrument."
+    },
+    {
+     "claim": "Head circumference is spared longest.",
+     "from": "Head circumference is defended last."
+    },
+    {
+     "claim": "A fallen head circumference means prolonged severe deprivation or a non-nutritional diagnosis.",
+     "from": "A fallen head circumference means prolonged severe deprivation or a non-nutritional diagnosis."
+    },
+    {
+     "claim": "Familial short stature and constitutional delay are not faltering growth.",
+     "from": "Familial short stature and constitutional delay are not faltering growth."
+    },
+    {
+     "claim": "In familial short stature and constitutional delay the child tracks a low but steady curve.",
+     "from": "In familial short stature and constitutional delay the child tracks a low but steady curve."
+    },
+    {
+     "claim": "Endocrine causes give the inverse pattern: short stature with preserved or excess weight.",
+     "from": "Endocrine causes give the inverse pattern, short with preserved or excess weight."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-ftt",
+   "find": "Part II <b>Prematurity Follow-Up and Corrected Age</b> is the direct mirror: there the parameters are proportionate and the answer is normal; here they are disproportionate and the answer is pathologic. Store the discriminator as a question: are the three parameters together or apart? Part I <b>Toddler Food Refusal</b> owns the case where the refusal pattern, not the calorie ledger, is the finding.",
+   "with": "Part II <b>Prematurity Follow-Up and Corrected Age</b> covers the contrasting case, in which the parameters are proportionate and growth is normal. In faltering weight the parameters are disproportionate and growth is pathologic. Ask: are the three parameters together or apart? Part I <b>Toddler Food Refusal</b> covers the case where the refusal pattern, not calorie intake, is the key finding.",
+   "note": "round 2 voice: Pairs with; mirror framing removed, 'Store the discriminator' to 'Ask:', owns to covers",
+   "claims": [
+    {
+     "claim": "Prematurity Follow-Up and Corrected Age is the direct mirror of this brief.",
+     "to": "Part II Prematurity Follow-Up and Corrected Age covers the contrasting case, in which the parameters are proportionate and growth is normal."
+    },
+    {
+     "claim": "In Prematurity Follow-Up the parameters are proportionate and the answer is normal.",
+     "to": "Part II Prematurity Follow-Up and Corrected Age covers the contrasting case, in which the parameters are proportionate and growth is normal."
+    },
+    {
+     "claim": "In faltering weight the parameters are disproportionate and the answer is pathologic.",
+     "to": "In faltering weight the parameters are disproportionate and growth is pathologic."
+    },
+    {
+     "claim": "The discriminator is whether the three parameters are together or apart.",
+     "to": "Ask: are the three parameters together or apart?"
+    },
+    {
+     "claim": "Toddler Food Refusal covers the case where the refusal pattern, not the calorie ledger, is the finding.",
+     "to": "Part I Toddler Food Refusal covers the case where the refusal pattern, not calorie intake, is the key finding."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Prematurity Follow-Up and Corrected Age covers the contrasting case.",
+     "from": "Prematurity Follow-Up and Corrected Age is the direct mirror of this brief."
+    },
+    {
+     "claim": "In that case the parameters are proportionate and growth is normal.",
+     "from": "In Prematurity Follow-Up the parameters are proportionate and the answer is normal."
+    },
+    {
+     "claim": "In faltering weight the parameters are disproportionate and growth is pathologic.",
+     "from": "In faltering weight the parameters are disproportionate and the answer is pathologic."
+    },
+    {
+     "claim": "Ask: are the three parameters together or apart?",
+     "from": "The discriminator is whether the three parameters are together or apart."
+    },
+    {
+     "claim": "Toddler Food Refusal covers the case where the refusal pattern, not calorie intake, is the key finding.",
+     "from": "Toddler Food Refusal covers the case where the refusal pattern, not the calorie ledger, is the finding."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-ftt",
+   "find": "When a stem gives several growth parameters the pattern among them is the diagnostic instrument, and when a differential contains one common unglamorous cause alongside several rare organic ones, the rare disease has to earn its place with a symptom, a sign or an admission.",
+   "with": "When several growth parameters are given, the pattern among them points to the diagnosis. If one common cause competes with several rare organic ones, choose a rare disease only if a symptom, sign or admission supports it.",
+   "note": "round 2 voice: .rule; stem framing and 'earn its place' metaphor removed, split",
+   "claims": [
+    {
+     "claim": "When several growth parameters are given, the pattern among them is the diagnostic instrument.",
+     "to": "When several growth parameters are given, the pattern among them points to the diagnosis."
+    },
+    {
+     "claim": "When a differential contains one common cause alongside several rare organic ones, a rare disease needs a symptom, a sign or an admission to support it.",
+     "to": "If one common cause competes with several rare organic ones, choose a rare disease only if a symptom, sign or admission supports it."
+    },
+    {
+     "claim": "The common cause is unglamorous.",
+     "dropped": "rhetorical adjective with no clinical content"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When several growth parameters are given, the pattern among them points to the diagnosis.",
+     "from": "When several growth parameters are given, the pattern among them is the diagnostic instrument."
+    },
+    {
+     "claim": "With one common cause and several rare organic ones, choose a rare disease only when a symptom, a sign or an admission supports it.",
+     "from": "When a differential contains one common cause alongside several rare organic ones, a rare disease needs a symptom, a sign or an admission to support it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-preterm-followup",
+   "find": "<p>Do the arithmetic first. Born at 26 weeks she was <b>14 weeks early</b>, so at 18 months chronological her <b>corrected age is about 14 and a half months</b>, and every milestone must be judged against that. Walking has just arrived on time, <b>10 words is ahead</b> of the three to five expected at 15 months, and following a call, imitating and scribbling are age-appropriate.</p>\n<p>The growth line is a percentile-literacy question. <b>All three parameters sit together at the 15th percentile</b> — proportionate, symmetric and comfortably normal. Faltering growth requires a parameter below about the 2nd percentile or a downward crossing of two major lines, and she has neither.</p>",
+   "with": "<p>Calculate the corrected age first. Born at 26 weeks, she was <b>14 weeks early</b>. At 18 months chronological age, her <b>corrected age is about 14 and a half months</b>. Judge every milestone against that age. She has just started walking, which is on time. Her vocabulary of <b>10 words is ahead</b> of the three to five words expected at 15 months. Following a call, imitating and scribbling are age-appropriate.</p>\n<p><b>All three parameters sit together at the 15th percentile</b>. They are proportionate, symmetric and well within normal. Faltering growth requires a parameter below about the 2nd percentile or a downward crossing of two major lines, and she has neither.</p>",
+   "note": "round 2 voice: .dp; framing sentence removed, em dash removed, sentences split",
+   "claims": [
+    {
+     "claim": "Do the arithmetic first.",
+     "to": "Calculate the corrected age first."
+    },
+    {
+     "claim": "Born at 26 weeks she was 14 weeks early.",
+     "to": "Born at 26 weeks, she was 14 weeks early."
+    },
+    {
+     "claim": "At 18 months chronological her corrected age is about 14 and a half months.",
+     "to": "At 18 months chronological age, her corrected age is about 14 and a half months."
+    },
+    {
+     "claim": "Every milestone must be judged against the corrected age.",
+     "to": "Judge every milestone against that age."
+    },
+    {
+     "claim": "Walking has just arrived on time.",
+     "to": "She has just started walking, which is on time."
+    },
+    {
+     "claim": "10 words is ahead of the three to five expected at 15 months.",
+     "to": "Her vocabulary of 10 words is ahead of the three to five words expected at 15 months."
+    },
+    {
+     "claim": "Following a call, imitating and scribbling are age-appropriate.",
+     "to": "Following a call, imitating and scribbling are age-appropriate."
+    },
+    {
+     "claim": "The growth assessment turns on reading percentiles.",
+     "to": "All three parameters sit together at the 15th percentile."
+    },
+    {
+     "claim": "All three parameters sit together at the 15th percentile.",
+     "to": "All three parameters sit together at the 15th percentile."
+    },
+    {
+     "claim": "The parameters are proportionate, symmetric and comfortably normal.",
+     "to": "They are proportionate, symmetric and well within normal."
+    },
+    {
+     "claim": "Faltering growth requires a parameter below about the 2nd percentile or a downward crossing of two major lines.",
+     "to": "Faltering growth requires a parameter below about the 2nd percentile or a downward crossing of two major lines, and she has neither."
+    },
+    {
+     "claim": "She has neither.",
+     "to": "Faltering growth requires a parameter below about the 2nd percentile or a downward crossing of two major lines, and she has neither."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Calculate the corrected age first.",
+     "from": "Do the arithmetic first."
+    },
+    {
+     "claim": "Born at 26 weeks, she was 14 weeks early.",
+     "from": "Born at 26 weeks she was 14 weeks early."
+    },
+    {
+     "claim": "At 18 months chronological age, her corrected age is about 14 and a half months.",
+     "from": "At 18 months chronological her corrected age is about 14 and a half months."
+    },
+    {
+     "claim": "Judge every milestone against that age.",
+     "from": "Every milestone must be judged against the corrected age."
+    },
+    {
+     "claim": "She has just started walking, which is on time.",
+     "from": "Walking has just arrived on time."
+    },
+    {
+     "claim": "Her vocabulary of 10 words is ahead of the three to five words expected at 15 months.",
+     "from": "10 words is ahead of the three to five expected at 15 months."
+    },
+    {
+     "claim": "Following a call, imitating and scribbling are age-appropriate.",
+     "from": "Following a call, imitating and scribbling are age-appropriate."
+    },
+    {
+     "claim": "All three parameters sit together at the 15th percentile.",
+     "from": "All three parameters sit together at the 15th percentile."
+    },
+    {
+     "claim": "They are proportionate, symmetric and well within normal.",
+     "from": "The parameters are proportionate, symmetric and comfortably normal."
+    },
+    {
+     "claim": "Faltering growth requires a parameter below about the 2nd percentile or a downward crossing of two major lines.",
+     "from": "Faltering growth requires a parameter below about the 2nd percentile or a downward crossing of two major lines."
+    },
+    {
+     "claim": "She has neither.",
+     "from": "She has neither."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-preterm-followup",
+   "find": "<span class=\"lbl\">What the scary numbers actually mean</span> <b>Former 26-week premature</b> is the correction factor, not the problem. <b>Mild bronchopulmonary dysplasia with normal head ultrasounds</b> reads as a list of morbidities and is a list of reassurances — normal cranial imaging removes the intraventricular hemorrhage and periventricular leukomalacia that drive adverse neurodevelopmental outcome at this gestational age.",
+   "with": "<span class=\"lbl\">Reading the neonatal history</span> <b>Former 26-week premature</b> sets the age correction; it is not the problem. <b>Mild bronchopulmonary dysplasia with normal head ultrasounds</b> looks like a list of morbidities but is reassuring. Normal cranial imaging excludes the intraventricular hemorrhage and periventricular leukomalacia that drive adverse neurodevelopmental outcome at this gestational age.",
+   "note": "round 2 voice: .danger; rhetorical label reworded, em dash removed, split",
+   "reworded_label": [
+    "What the scary numbers actually mean"
+   ],
+   "claims": [
+    {
+     "claim": "Former 26-week premature is the correction factor.",
+     "to": "Former 26-week premature sets the age correction; it is not the problem."
+    },
+    {
+     "claim": "Former 26-week premature is not the problem.",
+     "to": "Former 26-week premature sets the age correction; it is not the problem."
+    },
+    {
+     "claim": "Mild bronchopulmonary dysplasia with normal head ultrasounds reads as a list of morbidities.",
+     "to": "Mild bronchopulmonary dysplasia with normal head ultrasounds looks like a list of morbidities but is reassuring."
+    },
+    {
+     "claim": "Mild bronchopulmonary dysplasia with normal head ultrasounds is a list of reassurances.",
+     "to": "Mild bronchopulmonary dysplasia with normal head ultrasounds looks like a list of morbidities but is reassuring."
+    },
+    {
+     "claim": "Normal cranial imaging removes intraventricular hemorrhage and periventricular leukomalacia.",
+     "to": "Normal cranial imaging excludes the intraventricular hemorrhage and periventricular leukomalacia that drive adverse neurodevelopmental outcome at this gestational age."
+    },
+    {
+     "claim": "Intraventricular hemorrhage and periventricular leukomalacia drive adverse neurodevelopmental outcome at this gestational age.",
+     "to": "Normal cranial imaging excludes the intraventricular hemorrhage and periventricular leukomalacia that drive adverse neurodevelopmental outcome at this gestational age."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Former 26-week premature sets the age correction.",
+     "from": "Former 26-week premature is the correction factor."
+    },
+    {
+     "claim": "Former 26-week premature is not the problem.",
+     "from": "Former 26-week premature is not the problem."
+    },
+    {
+     "claim": "Mild bronchopulmonary dysplasia with normal head ultrasounds looks like a list of morbidities.",
+     "from": "Mild bronchopulmonary dysplasia with normal head ultrasounds reads as a list of morbidities."
+    },
+    {
+     "claim": "Mild bronchopulmonary dysplasia with normal head ultrasounds is reassuring.",
+     "from": "Mild bronchopulmonary dysplasia with normal head ultrasounds is a list of reassurances."
+    },
+    {
+     "claim": "Normal cranial imaging excludes intraventricular hemorrhage and periventricular leukomalacia.",
+     "from": "Normal cranial imaging removes intraventricular hemorrhage and periventricular leukomalacia."
+    },
+    {
+     "claim": "Intraventricular hemorrhage and periventricular leukomalacia drive adverse neurodevelopmental outcome at this gestational age.",
+     "from": "Intraventricular hemorrhage and periventricular leukomalacia drive adverse neurodevelopmental outcome at this gestational age."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-preterm-followup",
+   "find": "frequent NICU blood draws",
+   "with": "frequent <b>NICU</b> (neonatal intensive care unit) blood draws",
+   "note": "round 2 voice: anemia .danger; acronym expanded at first use",
+   "claims": [
+    {
+     "claim": "Frequent NICU blood draws make anemia worse in preterm than term infants.",
+     "to": "lower hematocrit at birth, shorter red cell life span, frequent NICU (neonatal intensive care unit) blood draws, iron depletion"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Frequent NICU blood draws make anemia worse in preterm than term infants.",
+     "from": "Frequent NICU blood draws make anemia worse in preterm than term infants."
+    },
+    {
+     "claim": "NICU stands for neonatal intensive care unit.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-preterm-followup",
+   "find": "Head circumference is the parameter that predicts neurodevelopment, so preserved head growth in a former preemie is the most reassuring single measurement &middot; A percentile is a position, not a pathology; the concerning patterns are crossing lines downward and disproportion between parameters &middot; Retinopathy of prematurity and hearing screening are gestational-age-driven obligations regardless of how well the infant looks &middot; A preterm infant is more vulnerable to vaccine-preventable disease, not less, which is why the schedule is never delayed",
+   "with": "Head circumference is the parameter that predicts neurodevelopment, so preserved head growth in a former preemie is the most reassuring single measurement &middot; A percentile by itself is not a pathology; the concerning patterns are crossing lines downward and disproportion between parameters &middot; Retinopathy of prematurity and hearing screening are required by gestational age, however well the infant looks &middot; A preterm infant is more vulnerable to vaccine-preventable disease, so the vaccine schedule is never delayed",
+   "note": "round 2 voice: Pearls; aphorism and rhythmic contrast removed",
+   "claims": [
+    {
+     "claim": "Head circumference predicts neurodevelopment.",
+     "to": "Head circumference is the parameter that predicts neurodevelopment, so preserved head growth in a former preemie is the most reassuring single measurement"
+    },
+    {
+     "claim": "Preserved head growth in a former preemie is the most reassuring single measurement.",
+     "to": "Head circumference is the parameter that predicts neurodevelopment, so preserved head growth in a former preemie is the most reassuring single measurement"
+    },
+    {
+     "claim": "A percentile is a position, not a pathology.",
+     "to": "A percentile by itself is not a pathology; the concerning patterns are crossing lines downward and disproportion between parameters"
+    },
+    {
+     "claim": "The concerning patterns are crossing lines downward and disproportion between parameters.",
+     "to": "A percentile by itself is not a pathology; the concerning patterns are crossing lines downward and disproportion between parameters"
+    },
+    {
+     "claim": "Retinopathy of prematurity and hearing screening are gestational-age-driven obligations regardless of how well the infant looks.",
+     "to": "Retinopathy of prematurity and hearing screening are required by gestational age, however well the infant looks"
+    },
+    {
+     "claim": "A preterm infant is more vulnerable to vaccine-preventable disease, not less.",
+     "to": "A preterm infant is more vulnerable to vaccine-preventable disease, so the vaccine schedule is never delayed"
+    },
+    {
+     "claim": "That is why the schedule is never delayed.",
+     "to": "A preterm infant is more vulnerable to vaccine-preventable disease, so the vaccine schedule is never delayed"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Head circumference predicts neurodevelopment.",
+     "from": "Head circumference predicts neurodevelopment."
+    },
+    {
+     "claim": "Preserved head growth in a former preemie is the most reassuring single measurement.",
+     "from": "Preserved head growth in a former preemie is the most reassuring single measurement."
+    },
+    {
+     "claim": "A percentile by itself is not a pathology.",
+     "from": "A percentile is a position, not a pathology."
+    },
+    {
+     "claim": "The concerning patterns are crossing lines downward and disproportion between parameters.",
+     "from": "The concerning patterns are crossing lines downward and disproportion between parameters."
+    },
+    {
+     "claim": "Retinopathy of prematurity and hearing screening are required by gestational age, however well the infant looks.",
+     "from": "Retinopathy of prematurity and hearing screening are gestational-age-driven obligations regardless of how well the infant looks."
+    },
+    {
+     "claim": "A preterm infant is more vulnerable to vaccine-preventable disease.",
+     "from": "A preterm infant is more vulnerable to vaccine-preventable disease, not less."
+    },
+    {
+     "claim": "So the vaccine schedule is never delayed.",
+     "from": "That is why the schedule is never delayed."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-preterm-followup",
+   "find": "Part II <b>Faltering Weight</b> is the mirror. Store the discriminator as a question: are the three parameters together or apart? Together and steady is normal; apart with weight lowest is inadequate calories. Part I <b>Cerebral Palsy and the MRI Pattern</b> owns what the imaging names when the delay does not resolve with corrected age. Part I <b>Bronchopulmonary Dysplasia</b> owns apnea of prematurity, the spell to call once IVH and anemia are excluded: did it start on day 2 to 3 in an infant who is well between episodes?",
+   "with": "Part II <b>Faltering Weight</b> covers the contrasting case. Ask: are the three parameters together or apart? Parameters that are together and steady are normal. Parameters that are apart, with weight lowest, indicate inadequate calories. Part I <b>Cerebral Palsy and the MRI Pattern</b> covers the imaging diagnosis when the delay does not resolve with corrected age. Part I <b>Bronchopulmonary Dysplasia</b> covers apnea of prematurity, the diagnosis for the spells once intraventricular hemorrhage and anemia are excluded. Ask: did the spells start on day 2 to 3 in an infant who is well between episodes?",
+   "note": "round 2 voice: Pairs with; mirror framing removed, 'Store the discriminator' to 'Ask:', owns to covers, IVH expanded",
+   "claims": [
+    {
+     "claim": "Faltering Weight is the mirror of this brief.",
+     "to": "Part II Faltering Weight covers the contrasting case."
+    },
+    {
+     "claim": "The discriminator is whether the three parameters are together or apart.",
+     "to": "Ask: are the three parameters together or apart?"
+    },
+    {
+     "claim": "Together and steady is normal.",
+     "to": "Parameters that are together and steady are normal."
+    },
+    {
+     "claim": "Apart with weight lowest is inadequate calories.",
+     "to": "Parameters that are apart, with weight lowest, indicate inadequate calories."
+    },
+    {
+     "claim": "Cerebral Palsy and the MRI Pattern covers what the imaging names when the delay does not resolve with corrected age.",
+     "to": "Part I Cerebral Palsy and the MRI Pattern covers the imaging diagnosis when the delay does not resolve with corrected age."
+    },
+    {
+     "claim": "Bronchopulmonary Dysplasia covers apnea of prematurity.",
+     "to": "Part I Bronchopulmonary Dysplasia covers apnea of prematurity, the diagnosis for the spells once intraventricular hemorrhage and anemia are excluded."
+    },
+    {
+     "claim": "Apnea of prematurity is the spell to call once IVH and anemia are excluded.",
+     "to": "Part I Bronchopulmonary Dysplasia covers apnea of prematurity, the diagnosis for the spells once intraventricular hemorrhage and anemia are excluded."
+    },
+    {
+     "claim": "Ask whether the spell started on day 2 to 3 in an infant who is well between episodes.",
+     "to": "Ask: did the spells start on day 2 to 3 in an infant who is well between episodes?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Faltering Weight covers the contrasting case.",
+     "from": "Faltering Weight is the mirror of this brief."
+    },
+    {
+     "claim": "Ask: are the three parameters together or apart?",
+     "from": "The discriminator is whether the three parameters are together or apart."
+    },
+    {
+     "claim": "Parameters that are together and steady are normal.",
+     "from": "Together and steady is normal."
+    },
+    {
+     "claim": "Parameters that are apart, with weight lowest, indicate inadequate calories.",
+     "from": "Apart with weight lowest is inadequate calories."
+    },
+    {
+     "claim": "Cerebral Palsy and the MRI Pattern covers the imaging diagnosis when the delay does not resolve with corrected age.",
+     "from": "Cerebral Palsy and the MRI Pattern covers what the imaging names when the delay does not resolve with corrected age."
+    },
+    {
+     "claim": "Bronchopulmonary Dysplasia covers apnea of prematurity.",
+     "from": "Bronchopulmonary Dysplasia covers apnea of prematurity."
+    },
+    {
+     "claim": "Apnea of prematurity is the diagnosis for the spells once IVH and anemia are excluded.",
+     "from": "Apnea of prematurity is the spell to call once IVH and anemia are excluded."
+    },
+    {
+     "claim": "IVH is written out as intraventricular hemorrhage.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Ask: did the spells start on day 2 to 3 in an infant who is well between episodes?",
+     "from": "Ask whether the spell started on day 2 to 3 in an infant who is well between episodes."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-preterm-followup",
+   "find": "When a stem hands you a gestational age the first move is arithmetic rather than interpretation, and when an option set includes the claim that assessment is impossible, treat that as almost always wrong.",
+   "with": "When a gestational age is given, do the arithmetic before interpreting anything. An option claiming that assessment is impossible is almost always wrong.",
+   "note": "round 2 voice: .rule; stem framing removed, split",
+   "claims": [
+    {
+     "claim": "When a gestational age is given, the first move is arithmetic rather than interpretation.",
+     "to": "When a gestational age is given, do the arithmetic before interpreting anything."
+    },
+    {
+     "claim": "An option claiming that assessment is impossible is almost always wrong.",
+     "to": "An option claiming that assessment is impossible is almost always wrong."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a gestational age is given, do the arithmetic before interpreting anything.",
+     "from": "When a gestational age is given, the first move is arithmetic rather than interpretation."
+    },
+    {
+     "claim": "An option claiming that assessment is impossible is almost always wrong.",
+     "from": "An option claiming that assessment is impossible is almost always wrong."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-preterm-followup",
+   "find": "Global delay is the right framework judged against the wrong age.",
+   "with": "Global delay is a valid framework, but here it is judged against chronological rather than corrected age.",
+   "note": "round 2 voice: trap line; rhythmic contrast replaced by the plain reason",
+   "claims": [
+    {
+     "claim": "Global delay is the right framework.",
+     "to": "Global delay is a valid framework, but here it is judged against chronological rather than corrected age."
+    },
+    {
+     "claim": "Here global delay is judged against the wrong age.",
+     "to": "Global delay is a valid framework, but here it is judged against chronological rather than corrected age."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Global delay is a valid framework.",
+     "from": "Global delay is the right framework."
+    },
+    {
+     "claim": "Here it is judged against chronological rather than corrected age.",
+     "from": "Here global delay is judged against the wrong age."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "<p>Hypotonia is a finding, not a diagnosis. Ask where it starts: the <b>brain</b> (Down syndrome, Prader-Willi syndrome, congenital hypothyroidism, hypoxic-ischemic encephalopathy), the <b>anterior horn cell</b> (spinal muscular atrophy), the <b>neuromuscular junction</b> (infant botulism), or the <b>muscle</b> (congenital myotonic dystrophy, congenital myopathies). A central cause leaves an infant who is floppy but strong for the tone, often dysmorphic or sleepy, with normal or brisk reflexes. A peripheral cause leaves a weak, alert infant with low or absent reflexes. Check breathing and feeding first. The confirmatory test, usually genetic, comes once the level is known.</p>",
+   "with": "<p>Hypotonia is a finding, not a diagnosis. Localize where it starts. Causes in the <b>brain</b> include Down syndrome, Prader-Willi syndrome, congenital hypothyroidism and hypoxic-ischemic encephalopathy. Other levels are the <b>anterior horn cell</b> (spinal muscular atrophy), the <b>neuromuscular junction</b> (infant botulism) and the <b>muscle</b> (congenital myotonic dystrophy, congenital myopathies). A central cause produces an infant who is floppy but strong for the tone, often dysmorphic or sleepy, with normal or brisk reflexes. A peripheral cause produces a weak, alert infant with low or absent reflexes. Check breathing and feeding first. Send the confirmatory test, usually genetic, once the level is known.</p>",
+   "note": "round 2 voice: .dp; 40-word list sentence split",
+   "claims": [
+    {
+     "claim": "Hypotonia is a finding, not a diagnosis.",
+     "to": "Hypotonia is a finding, not a diagnosis."
+    },
+    {
+     "claim": "Ask where hypotonia starts.",
+     "to": "Localize where it starts."
+    },
+    {
+     "claim": "Brain causes are Down syndrome, Prader-Willi syndrome, congenital hypothyroidism and hypoxic-ischemic encephalopathy.",
+     "to": "Causes in the brain include Down syndrome, Prader-Willi syndrome, congenital hypothyroidism and hypoxic-ischemic encephalopathy."
+    },
+    {
+     "claim": "The anterior horn cell cause is spinal muscular atrophy.",
+     "to": "Other levels are the anterior horn cell (spinal muscular atrophy), the neuromuscular junction (infant botulism) and the muscle (congenital myotonic dystrophy, congenital myopathies)."
+    },
+    {
+     "claim": "The neuromuscular junction cause is infant botulism.",
+     "to": "Other levels are the anterior horn cell (spinal muscular atrophy), the neuromuscular junction (infant botulism) and the muscle (congenital myotonic dystrophy, congenital myopathies)."
+    },
+    {
+     "claim": "Muscle causes are congenital myotonic dystrophy and congenital myopathies.",
+     "to": "Other levels are the anterior horn cell (spinal muscular atrophy), the neuromuscular junction (infant botulism) and the muscle (congenital myotonic dystrophy, congenital myopathies)."
+    },
+    {
+     "claim": "A central cause leaves an infant who is floppy but strong for the tone, often dysmorphic or sleepy, with normal or brisk reflexes.",
+     "to": "A central cause produces an infant who is floppy but strong for the tone, often dysmorphic or sleepy, with normal or brisk reflexes."
+    },
+    {
+     "claim": "A peripheral cause leaves a weak, alert infant with low or absent reflexes.",
+     "to": "A peripheral cause produces a weak, alert infant with low or absent reflexes."
+    },
+    {
+     "claim": "Check breathing and feeding first.",
+     "to": "Check breathing and feeding first."
+    },
+    {
+     "claim": "The confirmatory test, usually genetic, comes once the level is known.",
+     "to": "Send the confirmatory test, usually genetic, once the level is known."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hypotonia is a finding, not a diagnosis.",
+     "from": "Hypotonia is a finding, not a diagnosis."
+    },
+    {
+     "claim": "Localize where hypotonia starts.",
+     "from": "Ask where hypotonia starts."
+    },
+    {
+     "claim": "Brain causes include Down syndrome, Prader-Willi syndrome, congenital hypothyroidism and hypoxic-ischemic encephalopathy.",
+     "from": "Brain causes are Down syndrome, Prader-Willi syndrome, congenital hypothyroidism and hypoxic-ischemic encephalopathy."
+    },
+    {
+     "claim": "The anterior horn cell level: spinal muscular atrophy.",
+     "from": "The anterior horn cell cause is spinal muscular atrophy."
+    },
+    {
+     "claim": "The neuromuscular junction level: infant botulism.",
+     "from": "The neuromuscular junction cause is infant botulism."
+    },
+    {
+     "claim": "The muscle level: congenital myotonic dystrophy and congenital myopathies.",
+     "from": "Muscle causes are congenital myotonic dystrophy and congenital myopathies."
+    },
+    {
+     "claim": "A central cause produces an infant who is floppy but strong for the tone, often dysmorphic or sleepy, with normal or brisk reflexes.",
+     "from": "A central cause leaves an infant who is floppy but strong for the tone, often dysmorphic or sleepy, with normal or brisk reflexes."
+    },
+    {
+     "claim": "A peripheral cause produces a weak, alert infant with low or absent reflexes.",
+     "from": "A peripheral cause leaves a weak, alert infant with low or absent reflexes."
+    },
+    {
+     "claim": "Check breathing and feeding first.",
+     "from": "Check breathing and feeding first."
+    },
+    {
+     "claim": "Send the confirmatory test, usually genetic, once the level is known.",
+     "from": "The confirmatory test, usually genetic, comes once the level is known."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "<b>submicroscopic deletions</b> need FISH or a microarray",
+   "with": "<b>submicroscopic deletions</b> need <b>FISH</b> (fluorescence in situ hybridization) or a microarray",
+   "note": "round 2 voice: chromosome-studies .pearls; acronym expanded at first use",
+   "claims": [
+    {
+     "claim": "Submicroscopic deletions need FISH or a microarray.",
+     "to": "submicroscopic deletions need FISH (fluorescence in situ hybridization) or a microarray"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Submicroscopic deletions need FISH or a microarray.",
+     "from": "Submicroscopic deletions need FISH or a microarray."
+    },
+    {
+     "claim": "FISH stands for fluorescence in situ hybridization.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "then plan the next visit (SPIKES)",
+   "with": "then plan the next visit; this sequence is <b>SPIKES</b> (setting, perception, invitation, knowledge, emotions, strategy and summary)",
+   "note": "round 2 voice: chromosome-studies .pearls; acronym expanded at first use",
+   "claims": [
+    {
+     "claim": "The sequence for sharing the diagnosis is SPIKES.",
+     "to": "then plan the next visit; this sequence is SPIKES (setting, perception, invitation, knowledge, emotions, strategy and summary)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The sequence for sharing the diagnosis is SPIKES.",
+     "from": "The sequence for sharing the diagnosis is SPIKES."
+    },
+    {
+     "claim": "SPIKES stands for setting, perception, invitation, knowledge, emotions, strategy and summary.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "CVS or amniocentesis diagnose",
+   "with": "<b>CVS</b> (chorionic villus sampling) or amniocentesis diagnose",
+   "note": "round 2 voice: Down syndrome .danger; acronym expanded at first use",
+   "claims": [
+    {
+     "claim": "CVS or amniocentesis diagnose Down syndrome prenatally.",
+     "to": "CVS (chorionic villus sampling) or amniocentesis diagnose"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CVS or amniocentesis diagnose Down syndrome prenatally.",
+     "from": "CVS or amniocentesis diagnose Down syndrome prenatally."
+    },
+    {
+     "claim": "CVS stands for chorionic villus sampling.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "an IEP at school entry, with parents as advocates",
+   "with": "an <b>IEP</b> (individualized education program) at school entry, with parents as advocates",
+   "note": "round 2 voice: Down syndrome .danger; acronym expanded at first use",
+   "claims": [
+    {
+     "claim": "An IEP at school entry, with parents as advocates.",
+     "to": "early intervention at diagnosis; an IEP (individualized education program) at school entry, with parents as advocates"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "An IEP at school entry, with parents as advocates.",
+     "from": "An IEP at school entry, with parents as advocates."
+    },
+    {
+     "claim": "IEP stands for individualized education program.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "Part I <b>Aneuploidy: Reading the Newborn</b> owns the trisomy feature map and the prenatal screen; ask: are the hands clenched or open, and is the tone up or down? Part I <b>Congenital Hypothyroidism</b> owns the floppy infant found on the newborn screen. Part I <b>Multiple Anomalies in a Newborn</b> owns the malformation syndromes without an aneuploidy. Part I <b>Cerebral Palsy and the MRI Pattern</b> owns hypoxic-ischemic injury and its imaging. Part I <b>The Distended Abdomen in a Newborn or Infant</b> owns duodenal atresia and Hirschsprung disease in Down syndrome. Part II <b>Short Stature and Growth Velocity</b> owns Turner syndrome in the short girl, and Part I <b>Growth &amp; Developmental Milestones</b> owns the early intervention referral for delay.",
+   "with": "Part I <b>Aneuploidy: Reading the Newborn</b> covers the trisomy feature map and the prenatal screen. Ask: are the hands clenched or open, and is the tone up or down? Part I <b>Congenital Hypothyroidism</b> covers the floppy infant found on the newborn screen. Part I <b>Multiple Anomalies in a Newborn</b> covers the malformation syndromes without an aneuploidy. Part I <b>Cerebral Palsy and the MRI Pattern</b> covers hypoxic-ischemic injury and its imaging. Part I <b>The Distended Abdomen in a Newborn or Infant</b> covers duodenal atresia and Hirschsprung disease in Down syndrome. Part II <b>Short Stature and Growth Velocity</b> covers Turner syndrome in the short girl. Part I <b>Growth &amp; Developmental Milestones</b> covers the early intervention referral for delay.",
+   "note": "round 2 voice: Pairs with; owns to covers, sentences split",
+   "claims": [
+    {
+     "claim": "Aneuploidy: Reading the Newborn covers the trisomy feature map and the prenatal screen.",
+     "to": "Part I Aneuploidy: Reading the Newborn covers the trisomy feature map and the prenatal screen."
+    },
+    {
+     "claim": "Ask: are the hands clenched or open, and is the tone up or down?",
+     "to": "Ask: are the hands clenched or open, and is the tone up or down?"
+    },
+    {
+     "claim": "Congenital Hypothyroidism covers the floppy infant found on the newborn screen.",
+     "to": "Part I Congenital Hypothyroidism covers the floppy infant found on the newborn screen."
+    },
+    {
+     "claim": "Multiple Anomalies in a Newborn covers the malformation syndromes without an aneuploidy.",
+     "to": "Part I Multiple Anomalies in a Newborn covers the malformation syndromes without an aneuploidy."
+    },
+    {
+     "claim": "Cerebral Palsy and the MRI Pattern covers hypoxic-ischemic injury and its imaging.",
+     "to": "Part I Cerebral Palsy and the MRI Pattern covers hypoxic-ischemic injury and its imaging."
+    },
+    {
+     "claim": "The Distended Abdomen in a Newborn or Infant covers duodenal atresia and Hirschsprung disease in Down syndrome.",
+     "to": "Part I The Distended Abdomen in a Newborn or Infant covers duodenal atresia and Hirschsprung disease in Down syndrome."
+    },
+    {
+     "claim": "Short Stature and Growth Velocity covers Turner syndrome in the short girl.",
+     "to": "Part II Short Stature and Growth Velocity covers Turner syndrome in the short girl."
+    },
+    {
+     "claim": "Growth & Developmental Milestones covers the early intervention referral for delay.",
+     "to": "Part I Growth & Developmental Milestones covers the early intervention referral for delay."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Aneuploidy: Reading the Newborn covers the trisomy feature map and the prenatal screen.",
+     "from": "Aneuploidy: Reading the Newborn covers the trisomy feature map and the prenatal screen."
+    },
+    {
+     "claim": "Ask: are the hands clenched or open, and is the tone up or down?",
+     "from": "Ask: are the hands clenched or open, and is the tone up or down?"
+    },
+    {
+     "claim": "Congenital Hypothyroidism covers the floppy infant found on the newborn screen.",
+     "from": "Congenital Hypothyroidism covers the floppy infant found on the newborn screen."
+    },
+    {
+     "claim": "Multiple Anomalies in a Newborn covers the malformation syndromes without an aneuploidy.",
+     "from": "Multiple Anomalies in a Newborn covers the malformation syndromes without an aneuploidy."
+    },
+    {
+     "claim": "Cerebral Palsy and the MRI Pattern covers hypoxic-ischemic injury and its imaging.",
+     "from": "Cerebral Palsy and the MRI Pattern covers hypoxic-ischemic injury and its imaging."
+    },
+    {
+     "claim": "The Distended Abdomen in a Newborn or Infant covers duodenal atresia and Hirschsprung disease in Down syndrome.",
+     "from": "The Distended Abdomen in a Newborn or Infant covers duodenal atresia and Hirschsprung disease in Down syndrome."
+    },
+    {
+     "claim": "Short Stature and Growth Velocity covers Turner syndrome in the short girl.",
+     "from": "Short Stature and Growth Velocity covers Turner syndrome in the short girl."
+    },
+    {
+     "claim": "Growth & Developmental Milestones covers the early intervention referral for delay.",
+     "from": "Growth & Developmental Milestones covers the early intervention referral for delay."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "For a floppy infant, decide first whether the problem is in the brain or the motor unit: an infant who is strong for the tone with normal reflexes has a central cause, often chromosomal, and a weak infant with absent reflexes has a peripheral one; then send the genetic test that names that level.",
+   "with": "For a floppy infant, first decide whether the problem is in the brain or the motor unit. An infant who is strong for the tone with normal reflexes has a central cause, often chromosomal. A weak infant with absent reflexes has a peripheral cause. Then send the genetic test for that level.",
+   "note": "round 2 voice: .rule; long sentence split",
+   "claims": [
+    {
+     "claim": "For a floppy infant, decide first whether the problem is in the brain or the motor unit.",
+     "to": "For a floppy infant, first decide whether the problem is in the brain or the motor unit."
+    },
+    {
+     "claim": "An infant who is strong for the tone with normal reflexes has a central cause, often chromosomal.",
+     "to": "An infant who is strong for the tone with normal reflexes has a central cause, often chromosomal."
+    },
+    {
+     "claim": "A weak infant with absent reflexes has a peripheral cause.",
+     "to": "A weak infant with absent reflexes has a peripheral cause."
+    },
+    {
+     "claim": "Then send the genetic test that names that level.",
+     "to": "Then send the genetic test for that level."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "For a floppy infant, first decide whether the problem is in the brain or the motor unit.",
+     "from": "For a floppy infant, decide first whether the problem is in the brain or the motor unit."
+    },
+    {
+     "claim": "An infant who is strong for the tone with normal reflexes has a central cause, often chromosomal.",
+     "from": "An infant who is strong for the tone with normal reflexes has a central cause, often chromosomal."
+    },
+    {
+     "claim": "A weak infant with absent reflexes has a peripheral cause.",
+     "from": "A weak infant with absent reflexes has a peripheral cause."
+    },
+    {
+     "claim": "Then send the genetic test for that level.",
+     "from": "Then send the genetic test that names that level."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "A positive FISH taken as the final answer",
+   "with": "A positive <b>FISH</b> (fluorescence in situ hybridization) taken as the final answer",
+   "note": "round 2 voice: trap line; acronym expanded at first use in block",
+   "claims": [
+    {
+     "claim": "A positive FISH is not the final answer; only the karyotype shows a translocation that changes the parents' recurrence risk.",
+     "to": "A positive FISH (fluorescence in situ hybridization) taken as the final answer, when only the karyotype shows a translocation that changes the parents’ recurrence risk."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A positive FISH is not the final answer; only the karyotype shows a translocation that changes the parents' recurrence risk.",
+     "from": "A positive FISH is not the final answer; only the karyotype shows a translocation that changes the parents' recurrence risk."
+    },
+    {
+     "claim": "FISH stands for fluorescence in situ hybridization.",
+     "from": "expansion"
+    }
+   ]
+  }
+ ]
+}

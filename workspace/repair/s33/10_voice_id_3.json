@@ -1,0 +1,1655 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bs-pta",
+   "find": "<p>A week of worsening <b>unilateral</b> sore throat with <b>trismus</b>, a muffled voice and a <b>uvula deviated away from the swelling</b> is a peritonsillar abscess, and it is a clinical diagnosis. Imaging answers a question that has already been answered — the next step is <b>needle aspiration or incision and drainage plus antibiotics</b>.</p>",
+   "with": "<p>A week of worsening <b>unilateral</b> sore throat with <b>trismus</b>, a muffled voice and a <b>uvula deviated away from the swelling</b> is a peritonsillar abscess. It is a clinical diagnosis, so imaging is not needed. The next step is <b>needle aspiration or incision and drainage plus antibiotics</b>.</p>",
+   "note": "voice: .dp first paragraph; remove em dash and rhetorical imaging line",
+   "claims": [
+    {
+     "claim": "A week of worsening unilateral sore throat with trismus, a muffled voice and a uvula deviated away from the swelling is a peritonsillar abscess.",
+     "to": "A week of worsening unilateral sore throat with trismus, a muffled voice and a uvula deviated away from the swelling is a peritonsillar abscess."
+    },
+    {
+     "claim": "Peritonsillar abscess is a clinical diagnosis.",
+     "to": "It is a clinical diagnosis, so imaging is not needed."
+    },
+    {
+     "claim": "Imaging adds nothing because the diagnosis is already made.",
+     "to": "It is a clinical diagnosis, so imaging is not needed."
+    },
+    {
+     "claim": "The next step is needle aspiration or incision and drainage plus antibiotics.",
+     "to": "The next step is needle aspiration or incision and drainage plus antibiotics."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A week of worsening unilateral sore throat with trismus, a muffled voice and a uvula deviated away from the swelling is a peritonsillar abscess.",
+     "from": "A week of worsening unilateral sore throat with trismus, a muffled voice and a uvula deviated away from the swelling is a peritonsillar abscess."
+    },
+    {
+     "claim": "Peritonsillar abscess is a clinical diagnosis, so imaging is not needed.",
+     "from": "Imaging adds nothing because the diagnosis is already made."
+    },
+    {
+     "claim": "Peritonsillar abscess is a clinical diagnosis.",
+     "from": "Peritonsillar abscess is a clinical diagnosis."
+    },
+    {
+     "claim": "The next step is needle aspiration or incision and drainage plus antibiotics.",
+     "from": "The next step is needle aspiration or incision and drainage plus antibiotics."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-pta",
+   "find": "In Ludwig angina and epiglottitis the airway is the emergency and examination can precipitate obstruction — <b>do not depress the tongue or instrument the pharynx of a tripoding child outside the operating theatre</b>. Recurrent peritonsillar abscess, three or more in a year, earns tonsillectomy.",
+   "with": "In Ludwig angina and epiglottitis the airway is the emergency. Examination can precipitate obstruction, so <b>do not depress the tongue or instrument the pharynx of a tripoding child outside the operating theatre</b>. Recurrent peritonsillar abscess, three or more in a year, is an indication for tonsillectomy.",
+   "note": "voice: .danger; remove em dash, plain verb",
+   "claims": [
+    {
+     "claim": "In Ludwig angina and epiglottitis the airway is the emergency.",
+     "to": "In Ludwig angina and epiglottitis the airway is the emergency."
+    },
+    {
+     "claim": "Examination can precipitate obstruction.",
+     "to": "Examination can precipitate obstruction, so do not depress the tongue or instrument the pharynx of a tripoding child outside the operating theatre."
+    },
+    {
+     "claim": "Do not depress the tongue or instrument the pharynx of a tripoding child outside the operating theatre.",
+     "to": "Examination can precipitate obstruction, so do not depress the tongue or instrument the pharynx of a tripoding child outside the operating theatre."
+    },
+    {
+     "claim": "Recurrent peritonsillar abscess, three or more in a year, earns tonsillectomy.",
+     "to": "Recurrent peritonsillar abscess, three or more in a year, is an indication for tonsillectomy."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In Ludwig angina and epiglottitis the airway is the emergency.",
+     "from": "In Ludwig angina and epiglottitis the airway is the emergency."
+    },
+    {
+     "claim": "Examination can precipitate obstruction.",
+     "from": "Examination can precipitate obstruction."
+    },
+    {
+     "claim": "Do not depress the tongue or instrument the pharynx of a tripoding child outside the operating theatre.",
+     "from": "Do not depress the tongue or instrument the pharynx of a tripoding child outside the operating theatre."
+    },
+    {
+     "claim": "Recurrent peritonsillar abscess, three or more in a year, is an indication for tonsillectomy.",
+     "from": "Recurrent peritonsillar abscess, three or more in a year, earns tonsillectomy."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-pta",
+   "find": "covers the uncomplicated end of this spectrum; the discriminator as a question is whether anything is unilateral.",
+   "with": "covers the uncomplicated end of this spectrum. Ask: is anything unilateral?",
+   "note": "voice: Pairs with; discriminator as a question becomes Ask:",
+   "claims": [
+    {
+     "claim": "Part I Pediatric Upper Respiratory Infection covers the uncomplicated end of this spectrum.",
+     "to": "Part I Pediatric Upper Respiratory Infection covers the uncomplicated end of this spectrum."
+    },
+    {
+     "claim": "The discriminating question is whether anything is unilateral.",
+     "to": "Ask: is anything unilateral?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I Pediatric Upper Respiratory Infection covers the uncomplicated end of this spectrum.",
+     "from": "Part I Pediatric Upper Respiratory Infection covers the uncomplicated end of this spectrum."
+    },
+    {
+     "claim": "Ask whether anything is unilateral.",
+     "from": "The discriminating question is whether anything is unilateral."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-pta",
+   "find": "When a diagnosis is clinical and the complication is airway compromise, the imaging option is almost always the wrong next step, because the picture cannot change what you already know and costs time the airway may not have.",
+   "with": "When a diagnosis is clinical and the complication is airway compromise, imaging is almost always the wrong next step. It cannot change a diagnosis already made, and the delay may endanger the airway.",
+   "note": "voice: .rule; split, remove personification",
+   "claims": [
+    {
+     "claim": "When a diagnosis is clinical and the complication is airway compromise, imaging is almost always the wrong next step.",
+     "to": "When a diagnosis is clinical and the complication is airway compromise, imaging is almost always the wrong next step."
+    },
+    {
+     "claim": "Imaging cannot change what is already known.",
+     "to": "It cannot change a diagnosis already made, and the delay may endanger the airway."
+    },
+    {
+     "claim": "Imaging costs time the airway may not have.",
+     "to": "It cannot change a diagnosis already made, and the delay may endanger the airway."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a diagnosis is clinical and the complication is airway compromise, imaging is almost always the wrong next step.",
+     "from": "When a diagnosis is clinical and the complication is airway compromise, imaging is almost always the wrong next step."
+    },
+    {
+     "claim": "Imaging cannot change a diagnosis already made.",
+     "from": "Imaging cannot change what is already known."
+    },
+    {
+     "claim": "The delay of imaging may endanger the airway.",
+     "from": "Imaging costs time the airway may not have."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<p>Two steps, and the second is where most people fall off: identify the organism, <b>then</b> jump to its signature sequela. The question never asks which infection.</p>\n<p>The organism is settled by one word — <b>periventricular</b>. Calcifications hugging the ventricular margin are CMV; scattered through the parenchyma they are toxoplasmosis. The indoor cat exists to sell toxoplasmosis, and it is compatible with congenital CMV rather than incompatible with it.</p>",
+   "with": "<p>Identify the organism first, then its signature sequela.</p>\n<p>The <b>periventricular</b> location settles the organism. Calcifications along the ventricular margin are <b>CMV</b> (cytomegalovirus); calcifications scattered through the parenchyma are toxoplasmosis. An indoor cat suggests toxoplasmosis, but it is also compatible with congenital CMV.</p>",
+   "note": "voice: .dp; remove meta framing, personification, em dash, emphasis bold; expand CMV",
+   "reworded_bold": [
+    "then"
+   ],
+   "claims": [
+    {
+     "claim": "Identify the organism, then its signature sequela.",
+     "to": "Identify the organism first, then its signature sequela."
+    },
+    {
+     "claim": "Most people fail at the second step.",
+     "dropped": "framing about test-takers, not a clinical fact"
+    },
+    {
+     "claim": "The question never asks which infection.",
+     "dropped": "framing about the question itself"
+    },
+    {
+     "claim": "The word periventricular settles the organism.",
+     "to": "The periventricular location settles the organism."
+    },
+    {
+     "claim": "Calcifications along the ventricular margin are CMV.",
+     "to": "Calcifications along the ventricular margin are CMV (cytomegalovirus); calcifications scattered through the parenchyma are toxoplasmosis."
+    },
+    {
+     "claim": "Calcifications scattered through the parenchyma are toxoplasmosis.",
+     "to": "Calcifications along the ventricular margin are CMV (cytomegalovirus); calcifications scattered through the parenchyma are toxoplasmosis."
+    },
+    {
+     "claim": "An indoor cat suggests toxoplasmosis.",
+     "to": "An indoor cat suggests toxoplasmosis, but it is also compatible with congenital CMV."
+    },
+    {
+     "claim": "An indoor cat is compatible with congenital CMV.",
+     "to": "An indoor cat suggests toxoplasmosis, but it is also compatible with congenital CMV."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Identify the organism, then its signature sequela.",
+     "from": "Identify the organism, then its signature sequela."
+    },
+    {
+     "claim": "The word periventricular settles the organism.",
+     "from": "The word periventricular settles the organism."
+    },
+    {
+     "claim": "CMV stands for cytomegalovirus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Calcifications along the ventricular margin are CMV.",
+     "from": "Calcifications along the ventricular margin are CMV."
+    },
+    {
+     "claim": "Calcifications scattered through the parenchyma are toxoplasmosis.",
+     "from": "Calcifications scattered through the parenchyma are toxoplasmosis."
+    },
+    {
+     "claim": "An indoor cat suggests toxoplasmosis.",
+     "from": "An indoor cat suggests toxoplasmosis."
+    },
+    {
+     "claim": "An indoor cat is compatible with congenital CMV.",
+     "from": "An indoor cat is compatible with congenital CMV."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<b>TORCH</b> &mdash; Toxoplasmosis,",
+   "with": "<b>TORCH</b>: Toxoplasmosis,",
+   "note": "voice: no-row block, Term — text becomes colon",
+   "claims": [
+    {
+     "claim": "TORCH stands for Toxoplasmosis, Other (syphilis, varicella, parvovirus B19, HIV), Rubella, Cytomegalovirus, Herpes simplex virus.",
+     "to": "TORCH: Toxoplasmosis, Other (syphilis, varicella, parvovirus B19, HIV), Rubella, Cytomegalovirus, Herpes simplex virus"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "TORCH stands for Toxoplasmosis, Other (syphilis, varicella, parvovirus B19, HIV), Rubella, Cytomegalovirus, Herpes simplex virus.",
+     "from": "TORCH stands for Toxoplasmosis, Other (syphilis, varicella, parvovirus B19, HIV), Rubella, Cytomegalovirus, Herpes simplex virus."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<span class=\"lbl\">Why getting this right may not mean you read it right</span> Rubella <b>also</b> causes sensorineural hearing loss, so a reader who misidentified the organism as rubella could still have landed on the correct sequela. Getting this question right does not prove you read the calcification pattern.",
+   "with": "<span class=\"lbl\">Shared sequela</span> Rubella also causes sensorineural hearing loss. Hearing loss as the sequela therefore does not confirm the organism; the calcification pattern does.",
+   "note": "voice: .danger; rhetorical label and meta framing replaced by the clinical point; emphasis bold removed",
+   "reworded_bold": [
+    "also"
+   ],
+   "reworded_label": [
+    "Why getting this right may not mean you read it right"
+   ],
+   "claims": [
+    {
+     "claim": "Rubella also causes sensorineural hearing loss.",
+     "to": "Rubella also causes sensorineural hearing loss."
+    },
+    {
+     "claim": "Misidentifying the organism as rubella still leads to the correct sequela, hearing loss.",
+     "to": "Hearing loss as the sequela therefore does not confirm the organism; the calcification pattern does."
+    },
+    {
+     "claim": "A correct sequela does not prove the calcification pattern was read.",
+     "to": "Hearing loss as the sequela therefore does not confirm the organism; the calcification pattern does."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Rubella also causes sensorineural hearing loss.",
+     "from": "Rubella also causes sensorineural hearing loss."
+    },
+    {
+     "claim": "Hearing loss as the sequela does not confirm the organism.",
+     "from": "Misidentifying the organism as rubella still leads to the correct sequela, hearing loss."
+    },
+    {
+     "claim": "The calcification pattern confirms the organism.",
+     "from": "A correct sequela does not prove the calcification pattern was read."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<b>Maternal arthralgia after a febrile illness in pregnancy has two owners</b> &mdash; rubella gives organ malformation from first-trimester organogenesis, parvovirus B19 gives hydrops and no malformation",
+   "with": "<b>Maternal arthralgia after a febrile illness in pregnancy</b> &mdash; rubella (organ malformation from first-trimester organogenesis) or parvovirus B19 (hydrops, no malformation)",
+   "note": "voice: rubella triad row; personified bold ('two owners') reworded",
+   "reworded_bold": [
+    "Maternal arthralgia after a febrile illness in pregnancy has two owners"
+   ],
+   "claims": [
+    {
+     "claim": "Maternal arthralgia after a febrile illness in pregnancy has two causes: rubella and parvovirus B19.",
+     "to": "Maternal arthralgia after a febrile illness in pregnancy — rubella (organ malformation from first-trimester organogenesis) or parvovirus B19 (hydrops, no malformation)"
+    },
+    {
+     "claim": "Rubella gives organ malformation from first-trimester organogenesis.",
+     "to": "rubella (organ malformation from first-trimester organogenesis)"
+    },
+    {
+     "claim": "Parvovirus B19 gives hydrops and no malformation.",
+     "to": "parvovirus B19 (hydrops, no malformation)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Maternal arthralgia after a febrile illness in pregnancy has two causes: rubella and parvovirus B19.",
+     "from": "Maternal arthralgia after a febrile illness in pregnancy has two causes: rubella and parvovirus B19."
+    },
+    {
+     "claim": "Rubella gives organ malformation from first-trimester organogenesis.",
+     "from": "Rubella gives organ malformation from first-trimester organogenesis."
+    },
+    {
+     "claim": "Parvovirus B19 gives hydrops and no malformation.",
+     "from": "Parvovirus B19 gives hydrops and no malformation."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "CMV is the most common congenital infection and the leading non-genetic cause of childhood sensorineural hearing loss &middot; Only about 10% are symptomatic at birth, and that group carries up to 50% hearing-loss risk untreated &middot; Six months of valganciclovir beats six weeks — 8% versus 13% hearing worsening at one year &middot; Hearing loss is progressive and can be late-onset, so passing the newborn screen does not discharge the child from audiology",
+   "with": "The most common congenital infection is <b>CMV</b> (cytomegalovirus), which is also the leading non-genetic cause of childhood sensorineural hearing loss &middot; Only about 10% are symptomatic at birth, and that group carries up to 50% hearing-loss risk untreated &middot; Six months of valganciclovir is better than six weeks: 8% versus 13% hearing worsening at one year &middot; Hearing loss is progressive and can be late-onset, so a child who passes the newborn screen still needs audiology follow-up",
+   "note": "voice: Pearls; remove prose em dash, expand CMV, plain wording",
+   "claims": [
+    {
+     "claim": "CMV is the most common congenital infection.",
+     "to": "The most common congenital infection is CMV (cytomegalovirus), which is also the leading non-genetic cause of childhood sensorineural hearing loss"
+    },
+    {
+     "claim": "CMV is the leading non-genetic cause of childhood sensorineural hearing loss.",
+     "to": "The most common congenital infection is CMV (cytomegalovirus), which is also the leading non-genetic cause of childhood sensorineural hearing loss"
+    },
+    {
+     "claim": "Six months of valganciclovir beats six weeks.",
+     "to": "Six months of valganciclovir is better than six weeks: 8% versus 13% hearing worsening at one year"
+    },
+    {
+     "claim": "Hearing worsening at one year is 8% versus 13%.",
+     "to": "Six months of valganciclovir is better than six weeks: 8% versus 13% hearing worsening at one year"
+    },
+    {
+     "claim": "Hearing loss is progressive and can be late-onset.",
+     "to": "Hearing loss is progressive and can be late-onset, so a child who passes the newborn screen still needs audiology follow-up"
+    },
+    {
+     "claim": "Passing the newborn screen does not discharge the child from audiology.",
+     "to": "Hearing loss is progressive and can be late-onset, so a child who passes the newborn screen still needs audiology follow-up"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CMV is the most common congenital infection.",
+     "from": "CMV is the most common congenital infection."
+    },
+    {
+     "claim": "CMV stands for cytomegalovirus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CMV is the leading non-genetic cause of childhood sensorineural hearing loss.",
+     "from": "CMV is the leading non-genetic cause of childhood sensorineural hearing loss."
+    },
+    {
+     "claim": "Six months of valganciclovir is better than six weeks.",
+     "from": "Six months of valganciclovir beats six weeks."
+    },
+    {
+     "claim": "Hearing worsening at one year is 8% versus 13%.",
+     "from": "Hearing worsening at one year is 8% versus 13%."
+    },
+    {
+     "claim": "Hearing loss is progressive and can be late-onset.",
+     "from": "Hearing loss is progressive and can be late-onset."
+    },
+    {
+     "claim": "A child who passes the newborn screen still needs audiology follow-up.",
+     "from": "Passing the newborn screen does not discharge the child from audiology."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "Part I <b>Hearing Loss &amp; Otosclerosis</b> carries the childhood sensorineural causes and should gain the congenital CMV row. Part I <b>Cerebral Palsy and the MRI Pattern</b> reads the same films forward &mdash; the calcification pattern and the white-matter injury each name a different cause.",
+   "with": "Part I <b>Hearing Loss &amp; Otosclerosis</b> covers the childhood sensorineural causes. Part I <b>Cerebral Palsy and the MRI Pattern</b> covers the same imaging; the calcification pattern and the white-matter injury each point to a different cause.",
+   "note": "voice: Pairs with; workflow proposal removed, em dash removed, 'covers'",
+   "claims": [
+    {
+     "claim": "Part I Hearing Loss & Otosclerosis carries the childhood sensorineural causes.",
+     "to": "Part I Hearing Loss & Otosclerosis covers the childhood sensorineural causes."
+    },
+    {
+     "claim": "Hearing Loss & Otosclerosis should gain the congenital CMV row.",
+     "dropped": "workflow proposal to edit another brief, not a clinical claim"
+    },
+    {
+     "claim": "Part I Cerebral Palsy and the MRI Pattern reads the same films forward.",
+     "to": "Part I Cerebral Palsy and the MRI Pattern covers the same imaging; the calcification pattern and the white-matter injury each point to a different cause."
+    },
+    {
+     "claim": "The calcification pattern and the white-matter injury each name a different cause.",
+     "to": "Part I Cerebral Palsy and the MRI Pattern covers the same imaging; the calcification pattern and the white-matter injury each point to a different cause."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I Hearing Loss & Otosclerosis covers the childhood sensorineural causes.",
+     "from": "Part I Hearing Loss & Otosclerosis carries the childhood sensorineural causes."
+    },
+    {
+     "claim": "Part I Cerebral Palsy and the MRI Pattern covers the same imaging.",
+     "from": "Part I Cerebral Palsy and the MRI Pattern reads the same films forward."
+    },
+    {
+     "claim": "The calcification pattern and the white-matter injury each point to a different cause.",
+     "from": "The calcification pattern and the white-matter injury each name a different cause."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "When a stem gives a syndrome and asks for its complication, there are two independent failure points, and exposure history is placed to attack the first one, so anatomic distribution beats exposure history every time both are offered.",
+   "with": "To name the complication of a syndrome, identify the cause first and the complication second; either step can fail on its own. Exposure history can mislead the first step, so anatomic distribution outweighs exposure history whenever both are given.",
+   "note": "voice: .rule; remove stem framing, split",
+   "claims": [
+    {
+     "claim": "When a syndrome's complication is asked, there are two independent failure points: the cause and the complication.",
+     "to": "To name the complication of a syndrome, identify the cause first and the complication second; either step can fail on its own."
+    },
+    {
+     "claim": "Exposure history is placed to mislead the first step.",
+     "to": "Exposure history can mislead the first step, so anatomic distribution outweighs exposure history whenever both are given."
+    },
+    {
+     "claim": "Anatomic distribution beats exposure history every time both are offered.",
+     "to": "Exposure history can mislead the first step, so anatomic distribution outweighs exposure history whenever both are given."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Identify the cause first and the complication second; either step can fail on its own.",
+     "from": "When a syndrome's complication is asked, there are two independent failure points: the cause and the complication."
+    },
+    {
+     "claim": "Exposure history can mislead the first step.",
+     "from": "Exposure history is placed to mislead the first step."
+    },
+    {
+     "claim": "Anatomic distribution outweighs exposure history whenever both are given.",
+     "from": "Anatomic distribution beats exposure history every time both are offered."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "neither produces cataracts or a cardiac defect &mdash; the maternal history is shared and the fetal organ pattern is what separates them.",
+   "with": "neither produces cataracts or a cardiac defect. The maternal history is shared; the fetal organ pattern separates them.",
+   "note": "voice: trap line em dash removed",
+   "claims": [
+    {
+     "claim": "Cytomegalovirus and toxoplasmosis share the maternal history with rubella.",
+     "to": "The maternal history is shared; the fetal organ pattern separates them."
+    },
+    {
+     "claim": "The fetal organ pattern separates them.",
+     "to": "The maternal history is shared; the fetal organ pattern separates them."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The maternal history is shared.",
+     "from": "Cytomegalovirus and toxoplasmosis share the maternal history with rubella."
+    },
+    {
+     "claim": "The fetal organ pattern separates them.",
+     "from": "The fetal organ pattern separates them."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "The indoor cat sells toxoplasmosis but is compatible with CMV.",
+   "with": "Toxoplasmosis: an indoor cat suggests it, but a cat is compatible with cytomegalovirus.",
+   "note": "voice: trap line as Option: why; remove personification",
+   "claims": [
+    {
+     "claim": "The indoor cat suggests toxoplasmosis.",
+     "to": "Toxoplasmosis: an indoor cat suggests it, but a cat is compatible with cytomegalovirus."
+    },
+    {
+     "claim": "The indoor cat is compatible with CMV.",
+     "to": "Toxoplasmosis: an indoor cat suggests it, but a cat is compatible with cytomegalovirus."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The indoor cat suggests toxoplasmosis.",
+     "from": "The indoor cat suggests toxoplasmosis."
+    },
+    {
+     "claim": "The indoor cat is compatible with CMV.",
+     "from": "The indoor cat is compatible with CMV."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "Rubella has real cataracts, but no periventricular calcifications.",
+   "with": "Rubella: it causes cataracts, but not periventricular calcifications.",
+   "note": "voice: trap line as Option: why",
+   "claims": [
+    {
+     "claim": "Rubella causes cataracts.",
+     "to": "Rubella: it causes cataracts, but not periventricular calcifications."
+    },
+    {
+     "claim": "Rubella does not cause periventricular calcifications.",
+     "to": "Rubella: it causes cataracts, but not periventricular calcifications."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Rubella causes cataracts.",
+     "from": "Rubella causes cataracts."
+    },
+    {
+     "claim": "Rubella does not cause periventricular calcifications.",
+     "from": "Rubella does not cause periventricular calcifications."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-neonatal-sepsis",
+   "find": "<p>The stem strips away fever and gives you an <b>afebrile 3-day-old</b> with irritability, feeding refusal, and tachycardia. Everything in the behavioral pattern is shared by NAS, hypoglycemia, and neonatal thyrotoxicosis. The single value that separates sepsis from all three is <b>WBC 3,000 &mdash; leukopenia</b>. NAS produces tremor with a normal WBC; hypoglycemia is excluded by a normal glucose; thyrotoxicosis requires a maternal Graves history. Leukopenia in a neonate reflects <b>marrow depletion by overwhelming infection</b> and is more ominous than leukocytosis. The empiric regimen is <b>ampicillin plus gentamicin</b> &mdash; ampicillin for GBS and Listeria, gentamicin for gram-negative coverage.</p>\n<p>You answered correctly in under two minutes.</p>",
+   "with": "<p>An <b>afebrile 3-day-old</b> has irritability, feeding refusal and tachycardia. <b>NAS</b> (neonatal abstinence syndrome), hypoglycemia and neonatal thyrotoxicosis share the whole behavioral pattern. The single value that separates sepsis from all three is <b>leukopenia</b>, a <b>WBC</b> (white blood cell count) of 3,000. NAS produces tremor with a normal WBC. A normal glucose excludes hypoglycemia. Thyrotoxicosis requires a maternal Graves history. Leukopenia in a neonate reflects <b>marrow depletion by overwhelming infection</b> and is more ominous than leukocytosis. The empiric regimen is <b>ampicillin plus gentamicin</b>. Ampicillin covers <b>GBS</b> (group B Streptococcus) and Listeria; gentamicin gives gram-negative coverage.</p>",
+   "note": "voice: .dp; remove stem framing, em dashes, split chained sentence, expand NAS/WBC/GBS; personal timing note deleted",
+   "reworded_bold": [
+    "WBC 3,000 — leukopenia"
+   ],
+   "claims": [
+    {
+     "claim": "The infant is an afebrile 3-day-old.",
+     "to": "An afebrile 3-day-old has irritability, feeding refusal and tachycardia."
+    },
+    {
+     "claim": "The infant has irritability, feeding refusal and tachycardia.",
+     "to": "An afebrile 3-day-old has irritability, feeding refusal and tachycardia."
+    },
+    {
+     "claim": "NAS, hypoglycemia and neonatal thyrotoxicosis share the whole behavioral pattern.",
+     "to": "NAS (neonatal abstinence syndrome), hypoglycemia and neonatal thyrotoxicosis share the whole behavioral pattern."
+    },
+    {
+     "claim": "WBC 3,000, leukopenia, is the single value that separates sepsis from all three.",
+     "to": "The single value that separates sepsis from all three is leukopenia, a WBC (white blood cell count) of 3,000."
+    },
+    {
+     "claim": "NAS produces tremor with a normal WBC.",
+     "to": "NAS produces tremor with a normal WBC."
+    },
+    {
+     "claim": "A normal glucose excludes hypoglycemia.",
+     "to": "A normal glucose excludes hypoglycemia."
+    },
+    {
+     "claim": "Thyrotoxicosis requires a maternal Graves history.",
+     "to": "Thyrotoxicosis requires a maternal Graves history."
+    },
+    {
+     "claim": "Leukopenia in a neonate reflects marrow depletion by overwhelming infection.",
+     "to": "Leukopenia in a neonate reflects marrow depletion by overwhelming infection and is more ominous than leukocytosis."
+    },
+    {
+     "claim": "Leukopenia in a neonate is more ominous than leukocytosis.",
+     "to": "Leukopenia in a neonate reflects marrow depletion by overwhelming infection and is more ominous than leukocytosis."
+    },
+    {
+     "claim": "The empiric regimen is ampicillin plus gentamicin.",
+     "to": "The empiric regimen is ampicillin plus gentamicin."
+    },
+    {
+     "claim": "Ampicillin covers GBS and Listeria.",
+     "to": "Ampicillin covers GBS (group B Streptococcus) and Listeria; gentamicin gives gram-negative coverage."
+    },
+    {
+     "claim": "Gentamicin gives gram-negative coverage.",
+     "to": "Ampicillin covers GBS (group B Streptococcus) and Listeria; gentamicin gives gram-negative coverage."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "An afebrile 3-day-old has irritability, feeding refusal and tachycardia.",
+     "from": "The infant has irritability, feeding refusal and tachycardia."
+    },
+    {
+     "claim": "The infant is an afebrile 3-day-old.",
+     "from": "The infant is an afebrile 3-day-old."
+    },
+    {
+     "claim": "NAS stands for neonatal abstinence syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "NAS, hypoglycemia and neonatal thyrotoxicosis share the whole behavioral pattern.",
+     "from": "NAS, hypoglycemia and neonatal thyrotoxicosis share the whole behavioral pattern."
+    },
+    {
+     "claim": "WBC stands for white blood cell count.",
+     "from": "expansion"
+    },
+    {
+     "claim": "WBC 3,000, leukopenia, is the single value that separates sepsis from all three.",
+     "from": "WBC 3,000, leukopenia, is the single value that separates sepsis from all three."
+    },
+    {
+     "claim": "NAS produces tremor with a normal WBC.",
+     "from": "NAS produces tremor with a normal WBC."
+    },
+    {
+     "claim": "A normal glucose excludes hypoglycemia.",
+     "from": "A normal glucose excludes hypoglycemia."
+    },
+    {
+     "claim": "Thyrotoxicosis requires a maternal Graves history.",
+     "from": "Thyrotoxicosis requires a maternal Graves history."
+    },
+    {
+     "claim": "Leukopenia in a neonate reflects marrow depletion by overwhelming infection.",
+     "from": "Leukopenia in a neonate reflects marrow depletion by overwhelming infection."
+    },
+    {
+     "claim": "Leukopenia in a neonate is more ominous than leukocytosis.",
+     "from": "Leukopenia in a neonate is more ominous than leukocytosis."
+    },
+    {
+     "claim": "The empiric regimen is ampicillin plus gentamicin.",
+     "from": "The empiric regimen is ampicillin plus gentamicin."
+    },
+    {
+     "claim": "GBS stands for group B Streptococcus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Ampicillin covers GBS and Listeria.",
+     "from": "Ampicillin covers GBS and Listeria."
+    },
+    {
+     "claim": "Gentamicin gives gram-negative coverage.",
+     "from": "Gentamicin gives gram-negative coverage."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-neonatal-sepsis",
+   "find": "<b>Neonate (0&ndash;28 days)</b>: ampicillin plus gentamicin (or cefotaxime) &mdash; covers GBS, E. coli, Listeria &middot; <b>Infant &gt;28 days</b>: ceftriaxone plus vancomycin &mdash; the neonatal organisms recede and ceftriaxone&rsquo;s biliary risk becomes acceptable &middot; <b>Never ceftriaxone in a neonate</b>: it displaces unconjugated bilirubin from albumin (kernicterus risk) and precipitates in the biliary tract. The under-28-day rule also means <b>a well appearance does not reassure</b> &mdash; full evaluation, admission, and empiric antibiotics regardless of clinical impression.",
+   "with": "<b>Neonate (0&ndash;28 days)</b>: ampicillin plus gentamicin (or cefotaxime), covering <b>GBS</b> (group B Streptococcus), E. coli and Listeria &middot; <b>Infant &gt;28 days</b>: ceftriaxone plus vancomycin; the neonatal organisms recede and ceftriaxone&rsquo;s biliary risk becomes acceptable &middot; <b>Never ceftriaxone in a neonate</b>: it displaces unconjugated bilirubin from albumin (kernicterus risk) and precipitates in the biliary tract. Under 28 days, <b>a well appearance does not reassure</b>: do a full evaluation, admit, and give empiric antibiotics regardless of clinical impression.",
+   "note": "voice: .danger; prose em dashes removed, GBS expanded",
+   "claims": [
+    {
+     "claim": "Neonates 0–28 days get ampicillin plus gentamicin (or cefotaxime).",
+     "to": "Neonate (0–28 days): ampicillin plus gentamicin (or cefotaxime), covering GBS (group B Streptococcus), E. coli and Listeria"
+    },
+    {
+     "claim": "The neonatal regimen covers GBS, E. coli and Listeria.",
+     "to": "Neonate (0–28 days): ampicillin plus gentamicin (or cefotaxime), covering GBS (group B Streptococcus), E. coli and Listeria"
+    },
+    {
+     "claim": "Infants >28 days get ceftriaxone plus vancomycin.",
+     "to": "Infant >28 days: ceftriaxone plus vancomycin; the neonatal organisms recede and ceftriaxone’s biliary risk becomes acceptable"
+    },
+    {
+     "claim": "After 28 days the neonatal organisms recede and ceftriaxone's biliary risk becomes acceptable.",
+     "to": "Infant >28 days: ceftriaxone plus vancomycin; the neonatal organisms recede and ceftriaxone’s biliary risk becomes acceptable"
+    },
+    {
+     "claim": "Never give ceftriaxone in a neonate: it displaces unconjugated bilirubin from albumin (kernicterus risk) and precipitates in the biliary tract.",
+     "to": "Never ceftriaxone in a neonate: it displaces unconjugated bilirubin from albumin (kernicterus risk) and precipitates in the biliary tract."
+    },
+    {
+     "claim": "Under 28 days a well appearance does not reassure.",
+     "to": "Under 28 days, a well appearance does not reassure: do a full evaluation, admit, and give empiric antibiotics regardless of clinical impression."
+    },
+    {
+     "claim": "Under 28 days: full evaluation, admission, and empiric antibiotics regardless of clinical impression.",
+     "to": "Under 28 days, a well appearance does not reassure: do a full evaluation, admit, and give empiric antibiotics regardless of clinical impression."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Neonates 0–28 days get ampicillin plus gentamicin (or cefotaxime).",
+     "from": "Neonates 0–28 days get ampicillin plus gentamicin (or cefotaxime)."
+    },
+    {
+     "claim": "GBS stands for group B Streptococcus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The neonatal regimen covers GBS, E. coli and Listeria.",
+     "from": "The neonatal regimen covers GBS, E. coli and Listeria."
+    },
+    {
+     "claim": "Infants >28 days get ceftriaxone plus vancomycin.",
+     "from": "Infants >28 days get ceftriaxone plus vancomycin."
+    },
+    {
+     "claim": "After 28 days the neonatal organisms recede and ceftriaxone's biliary risk becomes acceptable.",
+     "from": "After 28 days the neonatal organisms recede and ceftriaxone's biliary risk becomes acceptable."
+    },
+    {
+     "claim": "Never give ceftriaxone in a neonate: it displaces unconjugated bilirubin from albumin (kernicterus risk) and precipitates in the biliary tract.",
+     "from": "Never give ceftriaxone in a neonate: it displaces unconjugated bilirubin from albumin (kernicterus risk) and precipitates in the biliary tract."
+    },
+    {
+     "claim": "Under 28 days a well appearance does not reassure.",
+     "from": "Under 28 days a well appearance does not reassure."
+    },
+    {
+     "claim": "Under 28 days, do a full evaluation, admit, and give empiric antibiotics regardless of clinical impression.",
+     "from": "Under 28 days: full evaluation, admission, and empiric antibiotics regardless of clinical impression."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-neonatal-sepsis",
+   "find": "Neonates with sepsis may be afebrile or hypothermic &mdash; <b>fever is unreliable in the first month</b>, and leukopenia is more ominous than leukocytosis because it signals marrow exhaustion &middot; Early-onset organisms come from the maternal genital tract: GBS, E. coli (K1 capsule), Listeria &middot; Late-onset organisms add nosocomial flora: coagulase-negative staphylococci, S. aureus, Candida in VLBW infants &middot; GBS prophylaxis (intrapartum penicillin) reduced early-onset GBS disease but did not change E. coli rates &mdash; E. coli now predominates among preterm and VLBW neonates",
+   "with": "Neonates with sepsis may be afebrile or hypothermic; <b>fever is unreliable in the first month</b>. Leukopenia is more ominous than leukocytosis because it signals marrow exhaustion &middot; Early-onset organisms come from the maternal genital tract: <b>GBS</b> (group B Streptococcus), E. coli (K1 capsule), Listeria &middot; Late-onset organisms add nosocomial flora: coagulase-negative staphylococci, S. aureus, Candida in <b>VLBW</b> (very low birth weight) infants &middot; GBS prophylaxis (intrapartum penicillin) reduced early-onset GBS disease but did not change E. coli rates; E. coli now predominates among preterm and VLBW neonates",
+   "note": "voice: Pearls; prose em dashes removed, GBS and VLBW expanded",
+   "claims": [
+    {
+     "claim": "Neonates with sepsis may be afebrile or hypothermic.",
+     "to": "Neonates with sepsis may be afebrile or hypothermic; fever is unreliable in the first month."
+    },
+    {
+     "claim": "Fever is unreliable in the first month.",
+     "to": "Neonates with sepsis may be afebrile or hypothermic; fever is unreliable in the first month."
+    },
+    {
+     "claim": "Leukopenia is more ominous than leukocytosis because it signals marrow exhaustion.",
+     "to": "Leukopenia is more ominous than leukocytosis because it signals marrow exhaustion"
+    },
+    {
+     "claim": "Early-onset organisms come from the maternal genital tract: GBS, E. coli (K1 capsule), Listeria.",
+     "to": "Early-onset organisms come from the maternal genital tract: GBS (group B Streptococcus), E. coli (K1 capsule), Listeria"
+    },
+    {
+     "claim": "Late-onset organisms add nosocomial flora: coagulase-negative staphylococci, S. aureus, Candida in VLBW infants.",
+     "to": "Late-onset organisms add nosocomial flora: coagulase-negative staphylococci, S. aureus, Candida in VLBW (very low birth weight) infants"
+    },
+    {
+     "claim": "GBS prophylaxis (intrapartum penicillin) reduced early-onset GBS disease but did not change E. coli rates.",
+     "to": "GBS prophylaxis (intrapartum penicillin) reduced early-onset GBS disease but did not change E. coli rates; E. coli now predominates among preterm and VLBW neonates"
+    },
+    {
+     "claim": "E. coli now predominates among preterm and VLBW neonates.",
+     "to": "GBS prophylaxis (intrapartum penicillin) reduced early-onset GBS disease but did not change E. coli rates; E. coli now predominates among preterm and VLBW neonates"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Neonates with sepsis may be afebrile or hypothermic.",
+     "from": "Neonates with sepsis may be afebrile or hypothermic."
+    },
+    {
+     "claim": "Fever is unreliable in the first month.",
+     "from": "Fever is unreliable in the first month."
+    },
+    {
+     "claim": "Leukopenia is more ominous than leukocytosis because it signals marrow exhaustion.",
+     "from": "Leukopenia is more ominous than leukocytosis because it signals marrow exhaustion."
+    },
+    {
+     "claim": "GBS stands for group B Streptococcus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Early-onset organisms come from the maternal genital tract: GBS, E. coli (K1 capsule), Listeria.",
+     "from": "Early-onset organisms come from the maternal genital tract: GBS, E. coli (K1 capsule), Listeria."
+    },
+    {
+     "claim": "VLBW stands for very low birth weight.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Late-onset organisms add nosocomial flora: coagulase-negative staphylococci, S. aureus, Candida in VLBW infants.",
+     "from": "Late-onset organisms add nosocomial flora: coagulase-negative staphylococci, S. aureus, Candida in VLBW infants."
+    },
+    {
+     "claim": "GBS prophylaxis (intrapartum penicillin) reduced early-onset GBS disease but did not change E. coli rates.",
+     "from": "GBS prophylaxis (intrapartum penicillin) reduced early-onset GBS disease but did not change E. coli rates."
+    },
+    {
+     "claim": "E. coli now predominates among preterm and VLBW neonates.",
+     "from": "E. coli now predominates among preterm and VLBW neonates."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-neonatal-sepsis",
+   "find": "owns the source-identification algorithm and the under-28-day rule; store the discriminator as a question: <i>is the neonate febrile, or is the lab the only sign?</i> Part I <b>Bacterial Meningitis</b> owns the CSF grid and the neonatal organism-by-host list.",
+   "with": "covers the source-identification algorithm and the under-28-day rule. Ask: <i>is the neonate febrile, or is the lab the only sign?</i> Part I <b>Bacterial Meningitis</b> covers the <b>CSF</b> (cerebrospinal fluid) grid and the neonatal organism-by-host list.",
+   "note": "voice: Pairs with; owns becomes covers, stored question becomes Ask:, CSF expanded",
+   "claims": [
+    {
+     "claim": "Part II The Febrile Infant — Finding the Source owns the source-identification algorithm and the under-28-day rule.",
+     "to": "Part II The Febrile Infant — Finding the Source covers the source-identification algorithm and the under-28-day rule."
+    },
+    {
+     "claim": "The discriminating question is: is the neonate febrile, or is the lab the only sign?",
+     "to": "Ask: is the neonate febrile, or is the lab the only sign?"
+    },
+    {
+     "claim": "Part I Bacterial Meningitis owns the CSF grid and the neonatal organism-by-host list.",
+     "to": "Part I Bacterial Meningitis covers the CSF (cerebrospinal fluid) grid and the neonatal organism-by-host list."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part II The Febrile Infant — Finding the Source covers the source-identification algorithm and the under-28-day rule.",
+     "from": "Part II The Febrile Infant — Finding the Source owns the source-identification algorithm and the under-28-day rule."
+    },
+    {
+     "claim": "Ask: is the neonate febrile, or is the lab the only sign?",
+     "from": "The discriminating question is: is the neonate febrile, or is the lab the only sign?"
+    },
+    {
+     "claim": "CSF stands for cerebrospinal fluid.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Part I Bacterial Meningitis covers the CSF grid and the neonatal organism-by-host list.",
+     "from": "Part I Bacterial Meningitis owns the CSF grid and the neonatal organism-by-host list."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-neonatal-sepsis",
+   "find": "In a neonate, the absence of fever does not exclude sepsis &mdash; the lab decides when the temperature does not, and leukopenia in a newborn is sepsis until proven otherwise. When the stem strips away fever and maternal drug history, the WBC is the decider, not the behavioral pattern.",
+   "with": "In a neonate, the absence of fever does not exclude sepsis. When the temperature is normal, base the decision on laboratory values. Leukopenia in a newborn is sepsis until proven otherwise. Without fever or a maternal drug history, the <b>WBC</b> (white blood cell count) decides, not the behavioral pattern.",
+   "note": "voice: .rule; em dash and stem framing removed, WBC expanded",
+   "claims": [
+    {
+     "claim": "In a neonate, the absence of fever does not exclude sepsis.",
+     "to": "In a neonate, the absence of fever does not exclude sepsis."
+    },
+    {
+     "claim": "The lab decides when the temperature does not.",
+     "to": "When the temperature is normal, base the decision on laboratory values."
+    },
+    {
+     "claim": "Leukopenia in a newborn is sepsis until proven otherwise.",
+     "to": "Leukopenia in a newborn is sepsis until proven otherwise."
+    },
+    {
+     "claim": "Without fever or maternal drug history, the WBC decides, not the behavioral pattern.",
+     "to": "Without fever or a maternal drug history, the WBC (white blood cell count) decides, not the behavioral pattern."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In a neonate, the absence of fever does not exclude sepsis.",
+     "from": "In a neonate, the absence of fever does not exclude sepsis."
+    },
+    {
+     "claim": "When the temperature is normal, base the decision on laboratory values.",
+     "from": "The lab decides when the temperature does not."
+    },
+    {
+     "claim": "Leukopenia in a newborn is sepsis until proven otherwise.",
+     "from": "Leukopenia in a newborn is sepsis until proven otherwise."
+    },
+    {
+     "claim": "WBC stands for white blood cell count.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Without fever or maternal drug history, the WBC decides, not the behavioral pattern.",
+     "from": "Without fever or maternal drug history, the WBC decides, not the behavioral pattern."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-neonatal-sepsis",
+   "find": "Irritability and poor feeding pattern-match to NAS or hypoglycemia; leukopenia belongs to neither.",
+   "with": "<b>NAS</b> (neonatal abstinence syndrome) or hypoglycemia: irritability and poor feeding fit both, but neither causes leukopenia.",
+   "note": "voice: trap line as Option: why; NAS expanded",
+   "claims": [
+    {
+     "claim": "Irritability and poor feeding fit NAS or hypoglycemia.",
+     "to": "NAS (neonatal abstinence syndrome) or hypoglycemia: irritability and poor feeding fit both, but neither causes leukopenia."
+    },
+    {
+     "claim": "Neither NAS nor hypoglycemia causes leukopenia.",
+     "to": "NAS (neonatal abstinence syndrome) or hypoglycemia: irritability and poor feeding fit both, but neither causes leukopenia."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "NAS stands for neonatal abstinence syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Irritability and poor feeding fit NAS or hypoglycemia.",
+     "from": "Irritability and poor feeding fit NAS or hypoglycemia."
+    },
+    {
+     "claim": "Neither NAS nor hypoglycemia causes leukopenia.",
+     "from": "Neither NAS nor hypoglycemia causes leukopenia."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-neonatal-sepsis",
+   "find": "Ceftriaxone and vancomycin is the right class of empiric coverage at the wrong age &mdash; neonates get ampicillin plus gentamicin.",
+   "with": "Ceftriaxone and vancomycin: the right class of empiric coverage at the wrong age; neonates get ampicillin plus gentamicin.",
+   "note": "voice: trap line as Option: why; em dash removed",
+   "claims": [
+    {
+     "claim": "Ceftriaxone and vancomycin is the right class of empiric coverage at the wrong age.",
+     "to": "Ceftriaxone and vancomycin: the right class of empiric coverage at the wrong age; neonates get ampicillin plus gentamicin."
+    },
+    {
+     "claim": "Neonates get ampicillin plus gentamicin.",
+     "to": "Ceftriaxone and vancomycin: the right class of empiric coverage at the wrong age; neonates get ampicillin plus gentamicin."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Ceftriaxone and vancomycin is the right class of empiric coverage at the wrong age.",
+     "from": "Ceftriaxone and vancomycin is the right class of empiric coverage at the wrong age."
+    },
+    {
+     "claim": "Neonates get ampicillin plus gentamicin.",
+     "from": "Neonates get ampicillin plus gentamicin."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-neonatal-sepsis",
+   "find": "Propranolol genuinely treats neonatal thyrotoxicosis, but thyrotoxicosis does not produce leukopenia.",
+   "with": "Propranolol: it treats neonatal thyrotoxicosis, but thyrotoxicosis does not produce leukopenia.",
+   "note": "voice: trap line as Option: why",
+   "claims": [
+    {
+     "claim": "Propranolol treats neonatal thyrotoxicosis.",
+     "to": "Propranolol: it treats neonatal thyrotoxicosis, but thyrotoxicosis does not produce leukopenia."
+    },
+    {
+     "claim": "Thyrotoxicosis does not produce leukopenia.",
+     "to": "Propranolol: it treats neonatal thyrotoxicosis, but thyrotoxicosis does not produce leukopenia."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Propranolol treats neonatal thyrotoxicosis.",
+     "from": "Propranolol treats neonatal thyrotoxicosis."
+    },
+    {
+     "claim": "Thyrotoxicosis does not produce leukopenia.",
+     "from": "Thyrotoxicosis does not produce leukopenia."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fever-rash-arthralgia",
+   "find": "<p>Fever, rash and joint pain together separate nothing; <b>name the rash, then date it against the exposure</b>. <b>Urticarial</b> plaques with low-grade fever, lymphadenopathy and <b>tender but unswollen</b> joints <b>5 to 14 days after starting a drug</b> (penicillin, amoxicillin, cefaclor, TMP-SMX) are a <b>serum sickness-like reaction</b>: stop the drug and it resolves. A <b>fine pink maculopapular rash that starts on the face and reaches the feet within 24 hours</b>, sparing palms and soles, with <b>posterior auricular and suboccipital nodes</b> in an <b>unvaccinated</b>, well-appearing patient is <b>rubella</b>; finger and wrist arthralgia is its adolescent and adult female form.</p>\n<p>The exception is the strep clock: rheumatic fever comes <b>2 to 4 weeks after an untreated</b> pharyngitis with <b>swollen, migratory</b> joints, carditis or a <b>nonpruritic</b> erythema marginatum, and is extremely rare after prompt penicillin.</p>",
+   "with": "<p>Fever, rash and joint pain together do not separate the causes. First, <b>name the rash, then date it against the exposure</b>. <b>Urticarial</b> plaques with low-grade fever, lymphadenopathy and <b>tender but unswollen</b> joints <b>5 to 14 days after starting a drug</b> are a <b>serum sickness-like reaction</b>. Culprit drugs include penicillin, amoxicillin, cefaclor and <b>TMP-SMX</b> (trimethoprim-sulfamethoxazole). Stopping the drug resolves it.</p>\n<p>In an <b>unvaccinated</b>, well-appearing patient with <b>posterior auricular and suboccipital nodes</b>, a <b>fine pink maculopapular rash that starts on the face and reaches the feet within 24 hours</b>, sparing palms and soles, is <b>rubella</b>. Finger and wrist arthralgia is its adolescent and adult female form.</p>\n<p>Rheumatic fever follows the strep clock. It comes <b>2 to 4 weeks after an untreated</b> pharyngitis with <b>swollen, migratory</b> joints, carditis or a <b>nonpruritic</b> erythema marginatum. It is extremely rare after prompt penicillin.</p>",
+   "note": "voice: .dp; split long sentences, remove 'the exception' framing, expand TMP-SMX",
+   "claims": [
+    {
+     "claim": "Fever, rash and joint pain together separate nothing.",
+     "to": "Fever, rash and joint pain together do not separate the causes."
+    },
+    {
+     "claim": "Name the rash, then date it against the exposure.",
+     "to": "First, name the rash, then date it against the exposure."
+    },
+    {
+     "claim": "Urticarial plaques with low-grade fever, lymphadenopathy and tender but unswollen joints 5 to 14 days after starting a drug are a serum sickness-like reaction.",
+     "to": "Urticarial plaques with low-grade fever, lymphadenopathy and tender but unswollen joints 5 to 14 days after starting a drug are a serum sickness-like reaction."
+    },
+    {
+     "claim": "Culprit drugs include penicillin, amoxicillin, cefaclor and TMP-SMX.",
+     "to": "Culprit drugs include penicillin, amoxicillin, cefaclor and TMP-SMX (trimethoprim-sulfamethoxazole)."
+    },
+    {
+     "claim": "Stopping the drug resolves a serum sickness-like reaction.",
+     "to": "Stopping the drug resolves it."
+    },
+    {
+     "claim": "A fine pink maculopapular rash that starts on the face and reaches the feet within 24 hours, sparing palms and soles, with posterior auricular and suboccipital nodes in an unvaccinated, well-appearing patient is rubella.",
+     "to": "In an unvaccinated, well-appearing patient with posterior auricular and suboccipital nodes, a fine pink maculopapular rash that starts on the face and reaches the feet within 24 hours, sparing palms and soles, is rubella."
+    },
+    {
+     "claim": "Finger and wrist arthralgia is rubella's adolescent and adult female form.",
+     "to": "Finger and wrist arthralgia is its adolescent and adult female form."
+    },
+    {
+     "claim": "Rheumatic fever is the exception and follows the strep clock.",
+     "to": "Rheumatic fever follows the strep clock."
+    },
+    {
+     "claim": "Rheumatic fever comes 2 to 4 weeks after an untreated pharyngitis with swollen, migratory joints, carditis or a nonpruritic erythema marginatum.",
+     "to": "It comes 2 to 4 weeks after an untreated pharyngitis with swollen, migratory joints, carditis or a nonpruritic erythema marginatum."
+    },
+    {
+     "claim": "Rheumatic fever is extremely rare after prompt penicillin.",
+     "to": "It is extremely rare after prompt penicillin."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Fever, rash and joint pain together do not separate the causes.",
+     "from": "Fever, rash and joint pain together separate nothing."
+    },
+    {
+     "claim": "Name the rash, then date it against the exposure.",
+     "from": "Name the rash, then date it against the exposure."
+    },
+    {
+     "claim": "Urticarial plaques with low-grade fever, lymphadenopathy and tender but unswollen joints 5 to 14 days after starting a drug are a serum sickness-like reaction.",
+     "from": "Urticarial plaques with low-grade fever, lymphadenopathy and tender but unswollen joints 5 to 14 days after starting a drug are a serum sickness-like reaction."
+    },
+    {
+     "claim": "TMP-SMX stands for trimethoprim-sulfamethoxazole.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Culprit drugs include penicillin, amoxicillin, cefaclor and TMP-SMX.",
+     "from": "Culprit drugs include penicillin, amoxicillin, cefaclor and TMP-SMX."
+    },
+    {
+     "claim": "Stopping the drug resolves a serum sickness-like reaction.",
+     "from": "Stopping the drug resolves a serum sickness-like reaction."
+    },
+    {
+     "claim": "A fine pink maculopapular rash that starts on the face and reaches the feet within 24 hours, sparing palms and soles, with posterior auricular and suboccipital nodes in an unvaccinated, well-appearing patient is rubella.",
+     "from": "A fine pink maculopapular rash that starts on the face and reaches the feet within 24 hours, sparing palms and soles, with posterior auricular and suboccipital nodes in an unvaccinated, well-appearing patient is rubella."
+    },
+    {
+     "claim": "Finger and wrist arthralgia is rubella's adolescent and adult female form.",
+     "from": "Finger and wrist arthralgia is rubella's adolescent and adult female form."
+    },
+    {
+     "claim": "Rheumatic fever follows the strep clock.",
+     "from": "Rheumatic fever is the exception and follows the strep clock."
+    },
+    {
+     "claim": "Rheumatic fever comes 2 to 4 weeks after an untreated pharyngitis with swollen, migratory joints, carditis or a nonpruritic erythema marginatum.",
+     "from": "Rheumatic fever comes 2 to 4 weeks after an untreated pharyngitis with swollen, migratory joints, carditis or a nonpruritic erythema marginatum."
+    },
+    {
+     "claim": "Rheumatic fever is extremely rare after prompt penicillin.",
+     "from": "Rheumatic fever is extremely rare after prompt penicillin."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fever-rash-arthralgia",
+   "find": "antihistamines and NSAIDs for comfort",
+   "with": "antihistamines and <b>NSAIDs</b> (nonsteroidal anti-inflammatory drugs) for comfort",
+   "note": "acronym expansion only",
+   "claims": [
+    {
+     "claim": "Serum sickness-like reaction: antihistamines and NSAIDs for comfort.",
+     "to": "antihistamines and NSAIDs (nonsteroidal anti-inflammatory drugs) for comfort"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "NSAIDs stands for nonsteroidal anti-inflammatory drugs.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Serum sickness-like reaction: antihistamines and NSAIDs for comfort.",
+     "from": "Serum sickness-like reaction: antihistamines and NSAIDs for comfort."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fever-rash-arthralgia",
+   "find": "The joints separate the two post-strep options: SSLR joints are <b>tender and painful to move but not swollen</b>; ARF joints are <b>swollen, hot and migratory</b>",
+   "with": "The joints separate the two post-strep diagnoses: <b>SSLR</b> (serum sickness-like reaction) joints are <b>tender and painful to move but not swollen</b>; <b>ARF</b> (acute rheumatic fever) joints are <b>swollen, hot and migratory</b>",
+   "note": "voice: Pearls; 'options' framing, SSLR and ARF expanded",
+   "claims": [
+    {
+     "claim": "The joints separate the two post-strep options.",
+     "to": "The joints separate the two post-strep diagnoses: SSLR (serum sickness-like reaction) joints are tender and painful to move but not swollen; ARF (acute rheumatic fever) joints are swollen, hot and migratory"
+    },
+    {
+     "claim": "SSLR joints are tender and painful to move but not swollen.",
+     "to": "The joints separate the two post-strep diagnoses: SSLR (serum sickness-like reaction) joints are tender and painful to move but not swollen; ARF (acute rheumatic fever) joints are swollen, hot and migratory"
+    },
+    {
+     "claim": "ARF joints are swollen, hot and migratory.",
+     "to": "The joints separate the two post-strep diagnoses: SSLR (serum sickness-like reaction) joints are tender and painful to move but not swollen; ARF (acute rheumatic fever) joints are swollen, hot and migratory"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The joints separate the two post-strep diagnoses.",
+     "from": "The joints separate the two post-strep options."
+    },
+    {
+     "claim": "SSLR stands for serum sickness-like reaction.",
+     "from": "expansion"
+    },
+    {
+     "claim": "SSLR joints are tender and painful to move but not swollen.",
+     "from": "SSLR joints are tender and painful to move but not swollen."
+    },
+    {
+     "claim": "ARF stands for acute rheumatic fever.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ARF joints are swollen, hot and migratory.",
+     "from": "ARF joints are swollen, hot and migratory."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fever-rash-arthralgia",
+   "find": "Part I <b>Acute Rheumatic Fever</b> owns Jones and the post-strep clock: were the joints swollen and migratory, and was the throat treated? Aquifer <b>Bruising and Purpura in a Child</b> owns IgA vasculitis: is the rash palpable purpura? Part I <b>Tick-Borne Fever and Rash</b> owns Lyme: is there a single expanding ring? Part I <b>Kawasaki Disease</b> sorts scarlet fever, measles and SJS as mimics of prolonged fever with rash. Part II <b>Congenital CMV and the TORCH Discriminations</b> owns rubella in pregnancy. Part II <b>Exanthems in a Child</b> owns the rash-with-fever differential without joint pain, including varicella postexposure care. Part II <b>Genital Ulcer: Painless or Painful</b> owns primary syphilis: was there a painless chancre?",
+   "with": "Part I <b>Acute Rheumatic Fever</b> covers the Jones criteria and the post-strep clock. Ask: were the joints swollen and migratory, and was the throat treated? Aquifer <b>Bruising and Purpura in a Child</b> covers IgA vasculitis. Ask: is the rash palpable purpura? Part I <b>Tick-Borne Fever and Rash</b> covers Lyme disease. Ask: is there a single expanding ring? Part I <b>Kawasaki Disease</b> covers scarlet fever, measles and <b>SJS</b> (Stevens-Johnson syndrome) as mimics of prolonged fever with rash. Part II <b>Congenital CMV and the TORCH Discriminations</b> covers rubella in pregnancy. Part II <b>Exanthems in a Child</b> covers the rash-with-fever differential without joint pain, including varicella postexposure care. Part II <b>Genital Ulcer: Painless or Painful</b> covers primary syphilis. Ask: was there a painless chancre?",
+   "note": "voice: Pairs with; owns/sorts become covers, questions introduced by Ask:, SJS expanded",
+   "claims": [
+    {
+     "claim": "Acute Rheumatic Fever owns Jones and the post-strep clock.",
+     "to": "Part I Acute Rheumatic Fever covers the Jones criteria and the post-strep clock."
+    },
+    {
+     "claim": "Ask whether the joints were swollen and migratory and whether the throat was treated.",
+     "to": "Ask: were the joints swollen and migratory, and was the throat treated?"
+    },
+    {
+     "claim": "Bruising and Purpura in a Child owns IgA vasculitis.",
+     "to": "Aquifer Bruising and Purpura in a Child covers IgA vasculitis."
+    },
+    {
+     "claim": "Ask whether the rash is palpable purpura.",
+     "to": "Ask: is the rash palpable purpura?"
+    },
+    {
+     "claim": "Tick-Borne Fever and Rash owns Lyme.",
+     "to": "Part I Tick-Borne Fever and Rash covers Lyme disease."
+    },
+    {
+     "claim": "Ask whether there is a single expanding ring.",
+     "to": "Ask: is there a single expanding ring?"
+    },
+    {
+     "claim": "Kawasaki Disease sorts scarlet fever, measles and SJS as mimics of prolonged fever with rash.",
+     "to": "Part I Kawasaki Disease covers scarlet fever, measles and SJS (Stevens-Johnson syndrome) as mimics of prolonged fever with rash."
+    },
+    {
+     "claim": "Congenital CMV and the TORCH Discriminations owns rubella in pregnancy.",
+     "to": "Part II Congenital CMV and the TORCH Discriminations covers rubella in pregnancy."
+    },
+    {
+     "claim": "Exanthems in a Child owns the rash-with-fever differential without joint pain, including varicella postexposure care.",
+     "to": "Part II Exanthems in a Child covers the rash-with-fever differential without joint pain, including varicella postexposure care."
+    },
+    {
+     "claim": "Genital Ulcer: Painless or Painful owns primary syphilis.",
+     "to": "Part II Genital Ulcer: Painless or Painful covers primary syphilis."
+    },
+    {
+     "claim": "Ask whether there was a painless chancre.",
+     "to": "Ask: was there a painless chancre?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I Acute Rheumatic Fever covers the Jones criteria and the post-strep clock.",
+     "from": "Acute Rheumatic Fever owns Jones and the post-strep clock."
+    },
+    {
+     "claim": "Ask: were the joints swollen and migratory, and was the throat treated?",
+     "from": "Ask whether the joints were swollen and migratory and whether the throat was treated."
+    },
+    {
+     "claim": "Aquifer Bruising and Purpura in a Child covers IgA vasculitis.",
+     "from": "Bruising and Purpura in a Child owns IgA vasculitis."
+    },
+    {
+     "claim": "Ask: is the rash palpable purpura?",
+     "from": "Ask whether the rash is palpable purpura."
+    },
+    {
+     "claim": "Part I Tick-Borne Fever and Rash covers Lyme disease.",
+     "from": "Tick-Borne Fever and Rash owns Lyme."
+    },
+    {
+     "claim": "Ask: is there a single expanding ring?",
+     "from": "Ask whether there is a single expanding ring."
+    },
+    {
+     "claim": "Part I Kawasaki Disease covers scarlet fever, measles and SJS (Stevens-Johnson syndrome) as mimics of prolonged fever with rash.",
+     "from": "Kawasaki Disease sorts scarlet fever, measles and SJS as mimics of prolonged fever with rash."
+    },
+    {
+     "claim": "SJS stands for Stevens-Johnson syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Part II Congenital CMV and the TORCH Discriminations covers rubella in pregnancy.",
+     "from": "Congenital CMV and the TORCH Discriminations owns rubella in pregnancy."
+    },
+    {
+     "claim": "Part II Exanthems in a Child covers the rash-with-fever differential without joint pain, including varicella postexposure care.",
+     "from": "Exanthems in a Child owns the rash-with-fever differential without joint pain, including varicella postexposure care."
+    },
+    {
+     "claim": "Part II Genital Ulcer: Painless or Painful covers primary syphilis.",
+     "from": "Genital Ulcer: Painless or Painful owns primary syphilis."
+    },
+    {
+     "claim": "Ask: was there a painless chancre?",
+     "from": "Ask whether there was a painless chancre."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fever-rash-arthralgia",
+   "find": "When fever, rash and joint pain arrive together, classify the rash by morphology and distribution first, then date it against the exposure (drug 5 to 14 days, strep 2 to 4 weeks, no vaccines), because the shared triad separates none of the options and the rash with its clock separates nearly all of them.",
+   "with": "When fever, rash and joint pain occur together, classify the rash by morphology and distribution first. Then date it against the exposure: drug 5 to 14 days, strep 2 to 4 weeks, no vaccines. The shared triad separates none of the causes; the rash with its timing separates nearly all of them.",
+   "note": "voice: .rule; split long sentence",
+   "claims": [
+    {
+     "claim": "When fever, rash and joint pain arrive together, classify the rash by morphology and distribution first.",
+     "to": "When fever, rash and joint pain occur together, classify the rash by morphology and distribution first."
+    },
+    {
+     "claim": "Then date the rash against the exposure: drug 5 to 14 days, strep 2 to 4 weeks, no vaccines.",
+     "to": "Then date it against the exposure: drug 5 to 14 days, strep 2 to 4 weeks, no vaccines."
+    },
+    {
+     "claim": "The shared triad separates none of the options.",
+     "to": "The shared triad separates none of the causes; the rash with its timing separates nearly all of them."
+    },
+    {
+     "claim": "The rash with its clock separates nearly all of them.",
+     "to": "The shared triad separates none of the causes; the rash with its timing separates nearly all of them."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When fever, rash and joint pain occur together, classify the rash by morphology and distribution first.",
+     "from": "When fever, rash and joint pain arrive together, classify the rash by morphology and distribution first."
+    },
+    {
+     "claim": "Then date the rash against the exposure: drug 5 to 14 days, strep 2 to 4 weeks, no vaccines.",
+     "from": "Then date the rash against the exposure: drug 5 to 14 days, strep 2 to 4 weeks, no vaccines."
+    },
+    {
+     "claim": "The shared triad separates none of the causes.",
+     "from": "The shared triad separates none of the options."
+    },
+    {
+     "claim": "The rash with its timing separates nearly all of them.",
+     "from": "The rash with its clock separates nearly all of them."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fever-rash-arthralgia",
+   "find": "the recent strep throat sells it, but",
+   "with": "the recent strep throat suggests it, but",
+   "note": "voice: trap personification removed",
+   "claims": [
+    {
+     "claim": "The recent strep throat suggests acute rheumatic fever.",
+     "to": "Acute rheumatic fever: the recent strep throat suggests it, but the throat was treated, the joints are not swollen and the rash itches."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The recent strep throat suggests acute rheumatic fever.",
+     "from": "The recent strep throat suggests acute rheumatic fever."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fever-rash-arthralgia",
+   "find": "inconsistent condom use sells it, but",
+   "with": "inconsistent condom use suggests it, but",
+   "note": "voice: trap personification removed",
+   "claims": [
+    {
+     "claim": "Inconsistent condom use suggests N. gonorrhoeae.",
+     "to": "N. gonorrhoeae: inconsistent condom use suggests it, but its rash is a few pustules that rarely touch the face."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Inconsistent condom use suggests N. gonorrhoeae.",
+     "from": "Inconsistent condom use suggests N. gonorrhoeae."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fever-rash-arthralgia",
+   "find": "<span class=\"trapwhy\">EBV: it does cause rash",
+   "with": "<span class=\"trapwhy\"><b>EBV</b> (Epstein-Barr virus): it does cause rash",
+   "note": "acronym expansion only",
+   "claims": [
+    {
+     "claim": "EBV does cause rash and posterior nodes.",
+     "to": "EBV (Epstein-Barr virus): it does cause rash and posterior nodes, but its rash mainly follows a beta-lactam and exudative pharyngitis dominates."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "EBV stands for Epstein-Barr virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "EBV does cause rash and posterior nodes.",
+     "from": "EBV does cause rash and posterior nodes."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-exanthems",
+   "find": "<p>Name the <b>lesion</b> first, then ask <b>where it started</b> and <b>how it related to the fever</b>. <b>Itchy macules, papules and vesicles arriving in successive crops</b>, so that several stages sit side by side, starting on the <b>trunk and face</b> and spreading to the limbs after a short febrile prodrome, is <b>varicella</b>. The other common exanthems are <b>not vesicular</b>: measles and rubella are maculopapular and spread head to toe, roseola appears <b>as the fever breaks</b>, erythema infectiosum is <b>slapped cheeks then a lacy rash</b>, and scarlet fever is <b>sandpaper</b> with a sore throat.</p>\n<p>Being up to date on vaccines does not exclude varicella at age 3. The child has had only the first of <b>two doses</b> (ages 1 and 4), and <b>breakthrough varicella</b> is milder, with lower fever and fewer lesions, exactly the picture here.</p>",
+   "with": "<p>Name the <b>lesion</b> first, then ask <b>where it started</b> and <b>how it related to the fever</b>. <b>Itchy macules, papules and vesicles arriving in successive crops</b> leave several stages side by side. When they start on the <b>trunk and face</b> and spread to the limbs after a short febrile prodrome, they are <b>varicella</b>.</p>\n<p>The other common exanthems are <b>not vesicular</b>. Measles and rubella are maculopapular and spread head to toe. Roseola appears <b>as the fever breaks</b>. Erythema infectiosum is <b>slapped cheeks then a lacy rash</b>. Scarlet fever is <b>sandpaper</b> with a sore throat.</p>\n<p>Being up to date on vaccines does not exclude varicella at age 3, because the child has had only the first of <b>two doses</b> (ages 1 and 4). The picture here fits <b>breakthrough varicella</b>, which is milder, with lower fever and fewer lesions.</p>",
+   "note": "voice: .dp; split long sentences",
+   "claims": [
+    {
+     "claim": "Name the lesion first, then ask where it started and how it related to the fever.",
+     "to": "Name the lesion first, then ask where it started and how it related to the fever."
+    },
+    {
+     "claim": "Itchy macules, papules and vesicles arriving in successive crops leave several stages side by side.",
+     "to": "Itchy macules, papules and vesicles arriving in successive crops leave several stages side by side."
+    },
+    {
+     "claim": "Lesions starting on the trunk and face and spreading to the limbs after a short febrile prodrome are varicella.",
+     "to": "When they start on the trunk and face and spread to the limbs after a short febrile prodrome, they are varicella."
+    },
+    {
+     "claim": "The other common exanthems are not vesicular.",
+     "to": "The other common exanthems are not vesicular."
+    },
+    {
+     "claim": "Measles and rubella are maculopapular and spread head to toe.",
+     "to": "Measles and rubella are maculopapular and spread head to toe."
+    },
+    {
+     "claim": "Roseola appears as the fever breaks.",
+     "to": "Roseola appears as the fever breaks."
+    },
+    {
+     "claim": "Erythema infectiosum is slapped cheeks then a lacy rash.",
+     "to": "Erythema infectiosum is slapped cheeks then a lacy rash."
+    },
+    {
+     "claim": "Scarlet fever is sandpaper with a sore throat.",
+     "to": "Scarlet fever is sandpaper with a sore throat."
+    },
+    {
+     "claim": "Being up to date on vaccines does not exclude varicella at age 3.",
+     "to": "Being up to date on vaccines does not exclude varicella at age 3, because the child has had only the first of two doses (ages 1 and 4)."
+    },
+    {
+     "claim": "At age 3 the child has had only the first of two doses (ages 1 and 4).",
+     "to": "Being up to date on vaccines does not exclude varicella at age 3, because the child has had only the first of two doses (ages 1 and 4)."
+    },
+    {
+     "claim": "Breakthrough varicella is milder, with lower fever and fewer lesions.",
+     "to": "The picture here fits breakthrough varicella, which is milder, with lower fever and fewer lesions."
+    },
+    {
+     "claim": "This child's picture is exactly breakthrough varicella.",
+     "to": "The picture here fits breakthrough varicella, which is milder, with lower fever and fewer lesions."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Name the lesion first, then ask where it started and how it related to the fever.",
+     "from": "Name the lesion first, then ask where it started and how it related to the fever."
+    },
+    {
+     "claim": "Itchy macules, papules and vesicles arriving in successive crops leave several stages side by side.",
+     "from": "Itchy macules, papules and vesicles arriving in successive crops leave several stages side by side."
+    },
+    {
+     "claim": "Lesions starting on the trunk and face and spreading to the limbs after a short febrile prodrome are varicella.",
+     "from": "Lesions starting on the trunk and face and spreading to the limbs after a short febrile prodrome are varicella."
+    },
+    {
+     "claim": "The other common exanthems are not vesicular.",
+     "from": "The other common exanthems are not vesicular."
+    },
+    {
+     "claim": "Measles and rubella are maculopapular and spread head to toe.",
+     "from": "Measles and rubella are maculopapular and spread head to toe."
+    },
+    {
+     "claim": "Roseola appears as the fever breaks.",
+     "from": "Roseola appears as the fever breaks."
+    },
+    {
+     "claim": "Erythema infectiosum is slapped cheeks then a lacy rash.",
+     "from": "Erythema infectiosum is slapped cheeks then a lacy rash."
+    },
+    {
+     "claim": "Scarlet fever is sandpaper with a sore throat.",
+     "from": "Scarlet fever is sandpaper with a sore throat."
+    },
+    {
+     "claim": "Being up to date on vaccines does not exclude varicella at age 3.",
+     "from": "Being up to date on vaccines does not exclude varicella at age 3."
+    },
+    {
+     "claim": "At age 3 the child has had only the first of two doses (ages 1 and 4).",
+     "from": "At age 3 the child has had only the first of two doses (ages 1 and 4)."
+    },
+    {
+     "claim": "The picture here fits breakthrough varicella.",
+     "from": "This child's picture is exactly breakthrough varicella."
+    },
+    {
+     "claim": "Breakthrough varicella is milder, with lower fever and fewer lesions.",
+     "from": "Breakthrough varicella is milder, with lower fever and fewer lesions."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-exanthems",
+   "find": "clinical; VZV PCR of a vesicle only when the picture is atypical",
+   "with": "clinical; <b>VZV</b> (varicella-zoster virus) <b>PCR</b> (polymerase chain reaction) of a vesicle only when the picture is atypical",
+   "note": "acronym expansion only",
+   "claims": [
+    {
+     "claim": "Varicella diagnosis: VZV PCR of a vesicle only when the picture is atypical.",
+     "to": "clinical; VZV (varicella-zoster virus) PCR (polymerase chain reaction) of a vesicle only when the picture is atypical"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "VZV stands for varicella-zoster virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PCR stands for polymerase chain reaction.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Varicella diagnosis: VZV PCR of a vesicle only when the picture is atypical.",
+     "from": "Varicella diagnosis: VZV PCR of a vesicle only when the picture is atypical."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-exanthems",
+   "find": "serology or PCR is for severe or atypical cases",
+   "with": "serology or <b>PCR</b> (polymerase chain reaction) is for severe or atypical cases",
+   "note": "acronym expansion only",
+   "claims": [
+    {
+     "claim": "Serology or PCR is for severe or atypical viral exanthems.",
+     "to": "Diagnosis of the viral exanthems is clinical; serology or PCR (polymerase chain reaction) is for severe or atypical cases"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "PCR stands for polymerase chain reaction.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Serology or PCR is for severe or atypical viral exanthems.",
+     "from": "Serology or PCR is for severe or atypical viral exanthems."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-exanthems",
+   "find": "while SSSS begins with flaccid bullae",
+   "with": "while <b>SSSS</b> (staphylococcal scalded skin syndrome) begins with flaccid bullae",
+   "note": "acronym expansion only",
+   "claims": [
+    {
+     "claim": "SSSS begins with flaccid bullae in a young child.",
+     "to": "while SSSS (staphylococcal scalded skin syndrome) begins with flaccid bullae in a young child"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "SSSS stands for staphylococcal scalded skin syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "SSSS begins with flaccid bullae in a young child.",
+     "from": "SSSS begins with flaccid bullae in a young child."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-exanthems",
+   "find": "Part I <b>Oral Vesicles in a Child</b> owns hand-foot-and-mouth disease and the oral vesicles: are the lesions in the mouth, and front or back? Part II <b>Fever, Rash and Joint Pain in a Child or Adolescent</b> owns rubella with arthralgia: are there posterior auricular nodes in an unvaccinated patient? Part II <b>Congenital CMV and the TORCH Discriminations</b> owns parvovirus in pregnancy (hydrops) and congenital rubella. <b>Vaccines &amp; Timing in Pregnancy</b> owns varicella exposure in a pregnant patient. <b>Seizure with Fever in a Child</b> owns the seizure that roseola can bring. <b>Atopic Dermatitis Complications</b> owns eczema herpeticum, and <b>Scabies</b> owns the afebrile itchy mimic. Part I <b>Kawasaki Disease</b> owns the fever-for-5-days criteria that separate it from scarlet fever: how many days of fever, and is the throat exudative?",
+   "with": "Part I <b>Oral Vesicles in a Child</b> covers hand-foot-and-mouth disease and the oral vesicles. Ask: are the lesions in the mouth, and front or back? Part II <b>Fever, Rash and Joint Pain in a Child or Adolescent</b> covers rubella with arthralgia. Ask: are there posterior auricular nodes in an unvaccinated patient? Part II <b>Congenital CMV and the TORCH Discriminations</b> covers parvovirus in pregnancy (hydrops) and congenital rubella. <b>Vaccines &amp; Timing in Pregnancy</b> covers varicella exposure in a pregnant patient. <b>Seizure with Fever in a Child</b> covers the seizure that roseola can bring. <b>Atopic Dermatitis Complications</b> covers eczema herpeticum, and <b>Scabies</b> covers the afebrile itchy mimic. Part I <b>Kawasaki Disease</b> covers the fever-for-5-days criteria that separate it from scarlet fever. Ask: how many days of fever, and is the throat exudative?",
+   "note": "voice: Pairs with; owns becomes covers, questions introduced by Ask:",
+   "claims": [
+    {
+     "claim": "Oral Vesicles in a Child owns hand-foot-and-mouth disease and the oral vesicles.",
+     "to": "Part I Oral Vesicles in a Child covers hand-foot-and-mouth disease and the oral vesicles."
+    },
+    {
+     "claim": "Ask whether the lesions are in the mouth, and front or back.",
+     "to": "Ask: are the lesions in the mouth, and front or back?"
+    },
+    {
+     "claim": "Fever, Rash and Joint Pain in a Child or Adolescent owns rubella with arthralgia.",
+     "to": "Part II Fever, Rash and Joint Pain in a Child or Adolescent covers rubella with arthralgia."
+    },
+    {
+     "claim": "Ask whether there are posterior auricular nodes in an unvaccinated patient.",
+     "to": "Ask: are there posterior auricular nodes in an unvaccinated patient?"
+    },
+    {
+     "claim": "Congenital CMV and the TORCH Discriminations owns parvovirus in pregnancy (hydrops) and congenital rubella.",
+     "to": "Part II Congenital CMV and the TORCH Discriminations covers parvovirus in pregnancy (hydrops) and congenital rubella."
+    },
+    {
+     "claim": "Vaccines & Timing in Pregnancy owns varicella exposure in a pregnant patient.",
+     "to": "Vaccines & Timing in Pregnancy covers varicella exposure in a pregnant patient."
+    },
+    {
+     "claim": "Seizure with Fever in a Child owns the seizure that roseola can bring.",
+     "to": "Seizure with Fever in a Child covers the seizure that roseola can bring."
+    },
+    {
+     "claim": "Atopic Dermatitis Complications owns eczema herpeticum.",
+     "to": "Atopic Dermatitis Complications covers eczema herpeticum, and Scabies covers the afebrile itchy mimic."
+    },
+    {
+     "claim": "Scabies owns the afebrile itchy mimic.",
+     "to": "Atopic Dermatitis Complications covers eczema herpeticum, and Scabies covers the afebrile itchy mimic."
+    },
+    {
+     "claim": "Kawasaki Disease owns the fever-for-5-days criteria that separate it from scarlet fever.",
+     "to": "Part I Kawasaki Disease covers the fever-for-5-days criteria that separate it from scarlet fever."
+    },
+    {
+     "claim": "Ask how many days of fever, and whether the throat is exudative.",
+     "to": "Ask: how many days of fever, and is the throat exudative?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Oral Vesicles in a Child covers hand-foot-and-mouth disease and the oral vesicles.",
+     "from": "Oral Vesicles in a Child owns hand-foot-and-mouth disease and the oral vesicles."
+    },
+    {
+     "claim": "Ask whether the lesions are in the mouth, and front or back.",
+     "from": "Ask whether the lesions are in the mouth, and front or back."
+    },
+    {
+     "claim": "Fever, Rash and Joint Pain in a Child or Adolescent covers rubella with arthralgia.",
+     "from": "Fever, Rash and Joint Pain in a Child or Adolescent owns rubella with arthralgia."
+    },
+    {
+     "claim": "Ask whether there are posterior auricular nodes in an unvaccinated patient.",
+     "from": "Ask whether there are posterior auricular nodes in an unvaccinated patient."
+    },
+    {
+     "claim": "Congenital CMV and the TORCH Discriminations covers parvovirus in pregnancy (hydrops) and congenital rubella.",
+     "from": "Congenital CMV and the TORCH Discriminations owns parvovirus in pregnancy (hydrops) and congenital rubella."
+    },
+    {
+     "claim": "Vaccines & Timing in Pregnancy covers varicella exposure in a pregnant patient.",
+     "from": "Vaccines & Timing in Pregnancy owns varicella exposure in a pregnant patient."
+    },
+    {
+     "claim": "Seizure with Fever in a Child covers the seizure that roseola can bring.",
+     "from": "Seizure with Fever in a Child owns the seizure that roseola can bring."
+    },
+    {
+     "claim": "Atopic Dermatitis Complications covers eczema herpeticum.",
+     "from": "Atopic Dermatitis Complications owns eczema herpeticum."
+    },
+    {
+     "claim": "Scabies covers the afebrile itchy mimic.",
+     "from": "Scabies owns the afebrile itchy mimic."
+    },
+    {
+     "claim": "Kawasaki Disease covers the fever-for-5-days criteria that separate it from scarlet fever.",
+     "from": "Kawasaki Disease owns the fever-for-5-days criteria that separate it from scarlet fever."
+    },
+    {
+     "claim": "Ask how many days of fever, and whether the throat is exudative.",
+     "from": "Ask how many days of fever, and whether the throat is exudative."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-exanthems",
+   "find": "The trip to South Africa invites a travel infection, but day care and a single vaccine dose explain everything.",
+   "with": "Travel infection: the trip to South Africa suggests one, but day care and a single vaccine dose explain all the findings.",
+   "note": "voice: trap line as Option: why",
+   "claims": [
+    {
+     "claim": "The trip to South Africa invites a travel infection.",
+     "to": "Travel infection: the trip to South Africa suggests one, but day care and a single vaccine dose explain all the findings."
+    },
+    {
+     "claim": "Day care and a single vaccine dose explain everything.",
+     "to": "Travel infection: the trip to South Africa suggests one, but day care and a single vaccine dose explain all the findings."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The trip to South Africa suggests a travel infection.",
+     "from": "The trip to South Africa invites a travel infection."
+    },
+    {
+     "claim": "Day care and a single vaccine dose explain all the findings.",
+     "from": "Day care and a single vaccine dose explain everything."
+    }
+   ]
+  }
+ ]
+}

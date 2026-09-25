@@ -1,0 +1,1771 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<p>The infection history only establishes that this is a primary immunodeficiency rather than ordinary toddler illness — ICU-level pneumococcal pneumonia, tympanic perforation with otorrhea, and weight below the 3rd percentile clear that bar. The actual fork is decided by one line of the panel: <b>IgM 450 against IgG 250 and IgA 24</b>. Every other option on the list requires IgM to be low (XLA), low or normal (CVID), normal (selective IgA deficiency, Job), or accompanied by a non-immunologic finding this child does not have (Wiskott-Aldrich's microthrombocytopenia, HIV's inverted CD4/CD8). <b>An isolated elevation of IgM with everything downstream absent is class-switch failure</b> — CD40 ligand on the T cell cannot engage CD40 on the B cell, so the B cell stays locked on its native isotype. The <b>neutropenia</b> (15% of 9,000) is the free confirmatory detail: it accompanies CD40L deficiency and does not belong to XLA or CVID.</p>",
+   "with": "<p>Pneumococcal pneumonia at <b>ICU</b> (intensive care unit) level, tympanic perforation with otorrhea, and weight below the 3rd percentile only establish a primary immunodeficiency rather than ordinary toddler illness. The discriminating result is <b>IgM 450 against IgG 250 and IgA 24</b>. Every other option on the list requires a different IgM or a finding this child lacks. <b>XLA</b> (X-linked agammaglobulinemia) requires a low IgM, and <b>CVID</b> (common variable immunodeficiency) a low or normal IgM. Selective IgA deficiency and Job syndrome require a normal IgM. Wiskott-Aldrich syndrome requires microthrombocytopenia, and <b>HIV</b> (human immunodeficiency virus) an inverted CD4/CD8 ratio; this child has neither non-immunologic finding. <b>An isolated elevation of IgM with everything downstream absent is class-switch failure</b>. CD40 ligand on the T cell cannot engage CD40 on the B cell, so the B cell stays locked on its native isotype. The <b>neutropenia</b> (15% of 9,000) confirms it: neutropenia accompanies <b>CD40L</b> (CD40 ligand) deficiency and does not belong to XLA or CVID.</p>",
+   "note": "voice: dp; split sentences, removed framing and em dashes, expanded acronyms",
+   "claims": [
+    {
+     "claim": "The infection history only establishes a primary immunodeficiency rather than ordinary toddler illness.",
+     "to": "Pneumococcal pneumonia at ICU (intensive care unit) level, tympanic perforation with otorrhea, and weight below the 3rd percentile only establish a primary immunodeficiency rather than ordinary toddler illness."
+    },
+    {
+     "claim": "ICU-level pneumococcal pneumonia, tympanic perforation with otorrhea, and weight below the 3rd percentile clear that bar.",
+     "to": "Pneumococcal pneumonia at ICU (intensive care unit) level, tympanic perforation with otorrhea, and weight below the 3rd percentile only establish a primary immunodeficiency rather than ordinary toddler illness."
+    },
+    {
+     "claim": "The fork is decided by IgM 450 against IgG 250 and IgA 24.",
+     "to": "The discriminating result is IgM 450 against IgG 250 and IgA 24."
+    },
+    {
+     "claim": "Every other option on the list requires something this child does not have.",
+     "to": "Every other option on the list requires a different IgM or a finding this child lacks."
+    },
+    {
+     "claim": "XLA requires IgM to be low.",
+     "to": "XLA (X-linked agammaglobulinemia) requires a low IgM, and CVID (common variable immunodeficiency) a low or normal IgM."
+    },
+    {
+     "claim": "CVID requires IgM to be low or normal.",
+     "to": "XLA (X-linked agammaglobulinemia) requires a low IgM, and CVID (common variable immunodeficiency) a low or normal IgM."
+    },
+    {
+     "claim": "Selective IgA deficiency and Job require IgM to be normal.",
+     "to": "Selective IgA deficiency and Job syndrome require a normal IgM."
+    },
+    {
+     "claim": "Wiskott-Aldrich requires microthrombocytopenia, a non-immunologic finding this child does not have.",
+     "to": "Wiskott-Aldrich syndrome requires microthrombocytopenia, and HIV (human immunodeficiency virus) an inverted CD4/CD8 ratio; this child has neither non-immunologic finding."
+    },
+    {
+     "claim": "HIV requires an inverted CD4/CD8, a non-immunologic finding this child does not have.",
+     "to": "Wiskott-Aldrich syndrome requires microthrombocytopenia, and HIV (human immunodeficiency virus) an inverted CD4/CD8 ratio; this child has neither non-immunologic finding."
+    },
+    {
+     "claim": "An isolated elevation of IgM with everything downstream absent is class-switch failure.",
+     "to": "An isolated elevation of IgM with everything downstream absent is class-switch failure."
+    },
+    {
+     "claim": "CD40 ligand on the T cell cannot engage CD40 on the B cell, so the B cell stays locked on its native isotype.",
+     "to": "CD40 ligand on the T cell cannot engage CD40 on the B cell, so the B cell stays locked on its native isotype."
+    },
+    {
+     "claim": "The neutropenia (15% of 9,000) is the confirmatory detail.",
+     "to": "The neutropenia (15% of 9,000) confirms it: neutropenia accompanies CD40L (CD40 ligand) deficiency and does not belong to XLA or CVID."
+    },
+    {
+     "claim": "Neutropenia accompanies CD40L deficiency and does not belong to XLA or CVID.",
+     "to": "The neutropenia (15% of 9,000) confirms it: neutropenia accompanies CD40L (CD40 ligand) deficiency and does not belong to XLA or CVID."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Pneumococcal pneumonia at ICU level, tympanic perforation with otorrhea, and weight below the 3rd percentile only establish a primary immunodeficiency rather than ordinary toddler illness.",
+     "from": "The infection history only establishes a primary immunodeficiency rather than ordinary toddler illness."
+    },
+    {
+     "claim": "ICU stands for intensive care unit.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The discriminating result is IgM 450 against IgG 250 and IgA 24.",
+     "from": "The fork is decided by IgM 450 against IgG 250 and IgA 24."
+    },
+    {
+     "claim": "Every other option requires a different IgM or a finding this child lacks.",
+     "from": "Every other option on the list requires something this child does not have."
+    },
+    {
+     "claim": "XLA stands for X-linked agammaglobulinemia.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CVID stands for common variable immunodeficiency.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HIV stands for human immunodeficiency virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CD40L stands for CD40 ligand.",
+     "from": "expansion"
+    },
+    {
+     "claim": "XLA requires a low IgM.",
+     "from": "XLA requires IgM to be low."
+    },
+    {
+     "claim": "CVID requires a low or normal IgM.",
+     "from": "CVID requires IgM to be low or normal."
+    },
+    {
+     "claim": "Selective IgA deficiency and Job syndrome require a normal IgM.",
+     "from": "Selective IgA deficiency and Job require IgM to be normal."
+    },
+    {
+     "claim": "Wiskott-Aldrich syndrome requires microthrombocytopenia; the child does not have it.",
+     "from": "Wiskott-Aldrich requires microthrombocytopenia, a non-immunologic finding this child does not have."
+    },
+    {
+     "claim": "HIV requires an inverted CD4/CD8 ratio; the child does not have it.",
+     "from": "HIV requires an inverted CD4/CD8, a non-immunologic finding this child does not have."
+    },
+    {
+     "claim": "An isolated elevation of IgM with everything downstream absent is class-switch failure.",
+     "from": "An isolated elevation of IgM with everything downstream absent is class-switch failure."
+    },
+    {
+     "claim": "CD40 ligand on the T cell cannot engage CD40 on the B cell, so the B cell stays locked on its native isotype.",
+     "from": "CD40 ligand on the T cell cannot engage CD40 on the B cell, so the B cell stays locked on its native isotype."
+    },
+    {
+     "claim": "The neutropenia (15% of 9,000) confirms it.",
+     "from": "The neutropenia (15% of 9,000) is the confirmatory detail."
+    },
+    {
+     "claim": "Neutropenia accompanies CD40L deficiency and does not belong to XLA or CVID.",
+     "from": "Neutropenia accompanies CD40L deficiency and does not belong to XLA or CVID."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "The panel question does not test management, so in one sentence: <b>replace what is missing and cover what the defect exposes</b> — immunoglobulin replacement for any low-IgG defect plus antibiotic prophylaxis <i>(in-context; TMP-SMX as the agent is memory-sourced ⚠︎)</i>, no live vaccines ⚠︎, washed/IgA-depleted products instead of IVIG in selective IgA deficiency ⚠︎, and allogeneic HSCT as the only cure for CD40L deficiency ⚠︎.",
+   "with": "Replace what is missing and cover what the defect exposes. Give immunoglobulin replacement for any low-IgG defect plus antibiotic prophylaxis, with <b>TMP-SMX</b> (trimethoprim-sulfamethoxazole) as the agent ⚠︎. Give no live vaccines ⚠︎. In selective IgA deficiency, use washed or IgA-depleted products instead of <b>IVIG</b> (intravenous immunoglobulin) ⚠︎. Allogeneic <b>HSCT</b> (hematopoietic stem cell transplantation) is the only cure for <b>CD40L</b> (CD40 ligand) deficiency ⚠︎.",
+   "note": "voice: management danger; removed framing, slogan bold, provenance tag and em dash",
+   "reworded_bold": [
+    "replace what is missing and cover what the defect exposes"
+   ],
+   "claims": [
+    {
+     "claim": "Management is summarized in one sentence because it is not the focus here.",
+     "dropped": "framing about the question; the management points follow"
+    },
+    {
+     "claim": "Replace what is missing and cover what the defect exposes.",
+     "to": "Replace what is missing and cover what the defect exposes."
+    },
+    {
+     "claim": "Any low-IgG defect gets immunoglobulin replacement plus antibiotic prophylaxis.",
+     "to": "Give immunoglobulin replacement for any low-IgG defect plus antibiotic prophylaxis, with TMP-SMX (trimethoprim-sulfamethoxazole) as the agent ⚠︎."
+    },
+    {
+     "claim": "TMP-SMX is the prophylactic agent, flagged as unverified.",
+     "to": "Give immunoglobulin replacement for any low-IgG defect plus antibiotic prophylaxis, with TMP-SMX (trimethoprim-sulfamethoxazole) as the agent ⚠︎."
+    },
+    {
+     "claim": "No live vaccines, flagged as unverified.",
+     "to": "Give no live vaccines ⚠︎."
+    },
+    {
+     "claim": "Selective IgA deficiency gets washed/IgA-depleted products instead of IVIG, flagged as unverified.",
+     "to": "In selective IgA deficiency, use washed or IgA-depleted products instead of IVIG (intravenous immunoglobulin) ⚠︎."
+    },
+    {
+     "claim": "Allogeneic HSCT is the only cure for CD40L deficiency, flagged as unverified.",
+     "to": "Allogeneic HSCT (hematopoietic stem cell transplantation) is the only cure for CD40L (CD40 ligand) deficiency ⚠︎."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Replace what is missing and cover what the defect exposes.",
+     "from": "Replace what is missing and cover what the defect exposes."
+    },
+    {
+     "claim": "Give immunoglobulin replacement for any low-IgG defect plus antibiotic prophylaxis.",
+     "from": "Any low-IgG defect gets immunoglobulin replacement plus antibiotic prophylaxis."
+    },
+    {
+     "claim": "TMP-SMX is the agent (unverified).",
+     "from": "TMP-SMX is the prophylactic agent, flagged as unverified."
+    },
+    {
+     "claim": "TMP-SMX stands for trimethoprim-sulfamethoxazole.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Give no live vaccines (unverified).",
+     "from": "No live vaccines, flagged as unverified."
+    },
+    {
+     "claim": "In selective IgA deficiency, use washed or IgA-depleted products instead of IVIG (unverified).",
+     "from": "Selective IgA deficiency gets washed/IgA-depleted products instead of IVIG, flagged as unverified."
+    },
+    {
+     "claim": "IVIG stands for intravenous immunoglobulin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Allogeneic HSCT is the only cure for CD40L deficiency (unverified).",
+     "from": "Allogeneic HSCT is the only cure for CD40L deficiency, flagged as unverified."
+    },
+    {
+     "claim": "HSCT stands for hematopoietic stem cell transplantation.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CD40L stands for CD40 ligand.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<b>The trap</b> &mdash; each option is the right therapy for some defect; an antibody defect with normal T cells needs antibody, not a transplant or an immunomodulator",
+   "with": "<b>Antibody defect with normal T cells</b> &mdash; needs antibody, not a transplant or an immunomodulator; each therapy above is the right one for some defect",
+   "note": "voice: replaced rhetorical label \"The trap\" with the clinical term",
+   "reworded_bold": [
+    "The trap"
+   ],
+   "claims": [
+    {
+     "claim": "Each option is the right therapy for some defect.",
+     "to": "Antibody defect with normal T cells — needs antibody, not a transplant or an immunomodulator; each therapy above is the right one for some defect"
+    },
+    {
+     "claim": "An antibody defect with normal T cells needs antibody, not a transplant or an immunomodulator.",
+     "to": "Antibody defect with normal T cells — needs antibody, not a transplant or an immunomodulator; each therapy above is the right one for some defect"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "An antibody defect with normal T cells needs antibody, not a transplant or an immunomodulator.",
+     "from": "An antibody defect with normal T cells needs antibody, not a transplant or an immunomodulator."
+    },
+    {
+     "claim": "Each therapy above is the right one for some defect.",
+     "from": "Each option is the right therapy for some defect."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<b>Is this beyond normal childhood illness?</b> &mdash; ICU pneumonia, perforated TMs, weight &lt;3rd percentile → yes, work it up as primary immunodeficiency &middot; <b>Are B cells / lymphocytes present?</b> &mdash; Normal → XLA is out before you read another line &middot; <b>Is IgM high, normal, or low?</b> &mdash; High with everything else low → class-switch failure → CD40L deficiency",
+   "with": "<b>Is this beyond normal childhood illness?</b> &mdash; <b>ICU</b> (intensive care unit) pneumonia, perforated <b>TMs</b> (tympanic membranes), weight &lt;3rd percentile → yes, work it up as primary immunodeficiency &middot; <b>Are B cells / lymphocytes present?</b> &mdash; Normal → <b>XLA</b> (X-linked agammaglobulinemia) is excluded &middot; <b>Is IgM high, normal, or low?</b> &mdash; High with everything else low is class-switch failure → <b>CD40L</b> (CD40 ligand) deficiency",
+   "note": "voice: decision spine; removed dramatic closer, one arrow per row",
+   "claims": [
+    {
+     "claim": "ICU pneumonia, perforated TMs and weight <3rd percentile mean yes, work it up as primary immunodeficiency.",
+     "to": "Is this beyond normal childhood illness? — ICU (intensive care unit) pneumonia, perforated TMs (tympanic membranes), weight <3rd percentile → yes, work it up as primary immunodeficiency"
+    },
+    {
+     "claim": "Normal B cells/lymphocytes exclude XLA.",
+     "to": "Are B cells / lymphocytes present? — Normal → XLA (X-linked agammaglobulinemia) is excluded"
+    },
+    {
+     "claim": "High IgM with everything else low is class-switch failure.",
+     "to": "Is IgM high, normal, or low? — High with everything else low is class-switch failure → CD40L (CD40 ligand) deficiency"
+    },
+    {
+     "claim": "Class-switch failure means CD40L deficiency.",
+     "to": "Is IgM high, normal, or low? — High with everything else low is class-switch failure → CD40L (CD40 ligand) deficiency"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "ICU pneumonia, perforated TMs and weight <3rd percentile mean yes, work it up as primary immunodeficiency.",
+     "from": "ICU pneumonia, perforated TMs and weight <3rd percentile mean yes, work it up as primary immunodeficiency."
+    },
+    {
+     "claim": "ICU stands for intensive care unit.",
+     "from": "expansion"
+    },
+    {
+     "claim": "TMs stands for tympanic membranes.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Normal B cells/lymphocytes exclude XLA.",
+     "from": "Normal B cells/lymphocytes exclude XLA."
+    },
+    {
+     "claim": "XLA stands for X-linked agammaglobulinemia.",
+     "from": "expansion"
+    },
+    {
+     "claim": "High IgM with everything else low is class-switch failure.",
+     "from": "High IgM with everything else low is class-switch failure."
+    },
+    {
+     "claim": "Class-switch failure means CD40L deficiency.",
+     "from": "Class-switch failure means CD40L deficiency."
+    },
+    {
+     "claim": "CD40L stands for CD40 ligand.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<b>Now use the pattern:</b> &mdash; which organisms and which treatment does this specific block predict?",
+   "with": "<b>What does the block predict?</b> &mdash; the organisms to cover and the treatment",
+   "note": "voice: decision spine; rhetorical label became a plain question",
+   "reworded_bold": [
+    "Now use the pattern:"
+   ],
+   "claims": [
+    {
+     "claim": "Use the pattern to predict which organisms and which treatment this specific block implies.",
+     "to": "What does the block predict? — the organisms to cover and the treatment"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The block predicts the organisms to cover and the treatment.",
+     "from": "Use the pattern to predict which organisms and which treatment this specific block implies."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "Lymphocytes at 75% look alarming but are in-context expected — lymphocytosis accompanies active infection and, more usefully, confirms that lymphocyte <i>numbers</i> are intact, which is what kills XLA. The three bronchiolitis episodes read as ordinary infant viral illness but actually support the answer: CD40L deficiency impairs viral defense as well as opsonization. \"Vaccinations up to date\" is not filler — it converts the pneumococcal ICU admission into vaccine failure, which is an immunodeficiency finding rather than a gap in care.",
+   "with": "Lymphocytes at 75% look alarming but are expected, because lymphocytosis accompanies active infection. They also confirm that lymphocyte <i>numbers</i> are intact, which excludes <b>XLA</b> (X-linked agammaglobulinemia). The three bronchiolitis episodes look like ordinary infant viral illness but support <b>CD40L</b> (CD40 ligand) deficiency. CD40L deficiency impairs viral defense as well as opsonization. With vaccinations up to date, the pneumococcal <b>ICU</b> (intensive care unit) admission is a vaccine failure. That is an immunodeficiency finding rather than a gap in care.",
+   "note": "voice: decoy note; removed em dashes, provenance tag and framing",
+   "claims": [
+    {
+     "claim": "Lymphocytes at 75% look alarming but are expected.",
+     "to": "Lymphocytes at 75% look alarming but are expected, because lymphocytosis accompanies active infection."
+    },
+    {
+     "claim": "Lymphocytosis accompanies active infection.",
+     "to": "Lymphocytes at 75% look alarming but are expected, because lymphocytosis accompanies active infection."
+    },
+    {
+     "claim": "Lymphocytosis confirms that lymphocyte numbers are intact, which excludes XLA.",
+     "to": "They also confirm that lymphocyte numbers are intact, which excludes XLA (X-linked agammaglobulinemia)."
+    },
+    {
+     "claim": "The three bronchiolitis episodes read as ordinary infant viral illness but support the answer.",
+     "to": "The three bronchiolitis episodes look like ordinary infant viral illness but support CD40L (CD40 ligand) deficiency."
+    },
+    {
+     "claim": "CD40L deficiency impairs viral defense as well as opsonization.",
+     "to": "CD40L deficiency impairs viral defense as well as opsonization."
+    },
+    {
+     "claim": "\"Vaccinations up to date\" converts the pneumococcal ICU admission into vaccine failure.",
+     "to": "With vaccinations up to date, the pneumococcal ICU (intensive care unit) admission is a vaccine failure."
+    },
+    {
+     "claim": "Vaccine failure is an immunodeficiency finding rather than a gap in care.",
+     "to": "That is an immunodeficiency finding rather than a gap in care."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Lymphocytes at 75% look alarming but are expected, because lymphocytosis accompanies active infection.",
+     "from": "Lymphocytes at 75% look alarming but are expected."
+    },
+    {
+     "claim": "They confirm that lymphocyte numbers are intact, which excludes XLA.",
+     "from": "Lymphocytosis confirms that lymphocyte numbers are intact, which excludes XLA."
+    },
+    {
+     "claim": "XLA stands for X-linked agammaglobulinemia.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The three bronchiolitis episodes look like ordinary infant viral illness but support CD40L deficiency.",
+     "from": "The three bronchiolitis episodes read as ordinary infant viral illness but support the answer."
+    },
+    {
+     "claim": "CD40L stands for CD40 ligand.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CD40L deficiency impairs viral defense as well as opsonization.",
+     "from": "CD40L deficiency impairs viral defense as well as opsonization."
+    },
+    {
+     "claim": "With vaccinations up to date, the pneumococcal ICU admission is a vaccine failure.",
+     "from": "\"Vaccinations up to date\" converts the pneumococcal ICU admission into vaccine failure."
+    },
+    {
+     "claim": "ICU stands for intensive care unit.",
+     "from": "expansion"
+    },
+    {
+     "claim": "That is an immunodeficiency finding rather than a gap in care.",
+     "from": "Vaccine failure is an immunodeficiency finding rather than a gap in care."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "High IgM with low IgG/IgA is class-switch failure; absent B cells is XLA; low IgG with low IgA and/or IgM and B cells present is CVID. &middot; Read the panel in fixed order — B cells, then IgM, then IgG/IgA/IgE — and the disease names itself. Naming the disease first is how the wrong panel gets forced to fit. &middot; The missing isotype predicts the organism: no opsonizing IgG → <b>encapsulated bacteria</b> (pneumococcus, <i>H. influenzae</i>); a broken CD40L–CD40 axis also breaks T-cell licensing of macrophages → <b><i>Pneumocystis</b></i> and <i>Cryptosporidium</i> ⚠︎. &middot; Neutropenia alongside hypogammaglobulinemia points at CD40L deficiency rather than XLA. &middot; Selective IgA deficiency is the defect whose management is what you <b>withhold</b>: no IVIG, and washed or IgA-deficient blood products for transfusion ⚠︎. &middot; Any patient on immunoglobulin replacement or with a defective T-cell limb gets <b>no live vaccines</b> ⚠︎; and replacement IgG makes serologic testing uninterpretable afterward. &middot; A mildly low IgG at 6–9 months in a thriving infant with normal IgM, normal B cells, and protective vaccine titers is transient hypogammaglobulinemia of infancy — recheck, don't treat ⚠︎.",
+   "with": "High IgM with low IgG/IgA is class-switch failure. Absent B cells is <b>XLA</b> (X-linked agammaglobulinemia). Low IgG with low IgA and/or IgM and B cells present is <b>CVID</b> (common variable immunodeficiency). &middot; Read the panel in fixed order to identify the disease: B cells, then IgM, then IgG/IgA/IgE. Naming the disease first risks forcing the panel to fit the wrong disease. &middot; The missing isotype predicts the organism. No opsonizing IgG → <b>encapsulated bacteria</b> (pneumococcus, <i>H. influenzae</i>). A broken CD40L–CD40 axis also breaks T-cell licensing of macrophages → <b><i>Pneumocystis</i></b> and <i>Cryptosporidium</i> ⚠︎. &middot; Neutropenia alongside hypogammaglobulinemia points to <b>CD40L</b> (CD40 ligand) deficiency rather than XLA. &middot; In selective IgA deficiency, management is what you <b>withhold</b>: no <b>IVIG</b> (intravenous immunoglobulin), and washed or IgA-deficient blood products for transfusion ⚠︎. &middot; Any patient on immunoglobulin replacement or with a defective T-cell limb gets <b>no live vaccines</b> ⚠︎. Replacement IgG also makes serologic testing uninterpretable afterward. &middot; A mildly low IgG at 6–9 months in a thriving infant with normal IgM, normal B cells, and protective vaccine titers is transient hypogammaglobulinemia of infancy. Recheck rather than treat ⚠︎.",
+   "note": "voice: pearls; removed em dashes and slogan, split rows, fixed bold/italic nesting; How NBME framed it untouched",
+   "claims": [
+    {
+     "claim": "High IgM with low IgG/IgA is class-switch failure.",
+     "to": "High IgM with low IgG/IgA is class-switch failure."
+    },
+    {
+     "claim": "Absent B cells is XLA.",
+     "to": "Absent B cells is XLA (X-linked agammaglobulinemia)."
+    },
+    {
+     "claim": "Low IgG with low IgA and/or IgM and B cells present is CVID.",
+     "to": "Low IgG with low IgA and/or IgM and B cells present is CVID (common variable immunodeficiency)."
+    },
+    {
+     "claim": "Read the panel in fixed order: B cells, then IgM, then IgG/IgA/IgE.",
+     "to": "Read the panel in fixed order to identify the disease: B cells, then IgM, then IgG/IgA/IgE."
+    },
+    {
+     "claim": "Reading the panel in that order identifies the disease.",
+     "to": "Read the panel in fixed order to identify the disease: B cells, then IgM, then IgG/IgA/IgE."
+    },
+    {
+     "claim": "Naming the disease first is how the wrong panel gets forced to fit.",
+     "to": "Naming the disease first risks forcing the panel to fit the wrong disease."
+    },
+    {
+     "claim": "The missing isotype predicts the organism.",
+     "to": "The missing isotype predicts the organism."
+    },
+    {
+     "claim": "No opsonizing IgG leads to encapsulated bacteria (pneumococcus, H. influenzae).",
+     "to": "No opsonizing IgG → encapsulated bacteria (pneumococcus, H. influenzae)."
+    },
+    {
+     "claim": "A broken CD40L–CD40 axis also breaks T-cell licensing of macrophages, leading to Pneumocystis and Cryptosporidium (unverified).",
+     "to": "A broken CD40L–CD40 axis also breaks T-cell licensing of macrophages → Pneumocystis and Cryptosporidium ⚠︎."
+    },
+    {
+     "claim": "Neutropenia alongside hypogammaglobulinemia points at CD40L deficiency rather than XLA.",
+     "to": "Neutropenia alongside hypogammaglobulinemia points to CD40L (CD40 ligand) deficiency rather than XLA."
+    },
+    {
+     "claim": "Selective IgA deficiency is the defect whose management is what you withhold: no IVIG, and washed or IgA-deficient blood products for transfusion (unverified).",
+     "to": "In selective IgA deficiency, management is what you withhold: no IVIG (intravenous immunoglobulin), and washed or IgA-deficient blood products for transfusion ⚠︎."
+    },
+    {
+     "claim": "Any patient on immunoglobulin replacement or with a defective T-cell limb gets no live vaccines (unverified).",
+     "to": "Any patient on immunoglobulin replacement or with a defective T-cell limb gets no live vaccines ⚠︎."
+    },
+    {
+     "claim": "Replacement IgG makes serologic testing uninterpretable afterward.",
+     "to": "Replacement IgG also makes serologic testing uninterpretable afterward."
+    },
+    {
+     "claim": "A mildly low IgG at 6–9 months in a thriving infant with normal IgM, normal B cells, and protective vaccine titers is transient hypogammaglobulinemia of infancy.",
+     "to": "A mildly low IgG at 6–9 months in a thriving infant with normal IgM, normal B cells, and protective vaccine titers is transient hypogammaglobulinemia of infancy."
+    },
+    {
+     "claim": "Recheck, do not treat (unverified).",
+     "to": "Recheck rather than treat ⚠︎."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "High IgM with low IgG/IgA is class-switch failure.",
+     "from": "High IgM with low IgG/IgA is class-switch failure."
+    },
+    {
+     "claim": "Absent B cells is XLA.",
+     "from": "Absent B cells is XLA."
+    },
+    {
+     "claim": "XLA stands for X-linked agammaglobulinemia.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Low IgG with low IgA and/or IgM and B cells present is CVID.",
+     "from": "Low IgG with low IgA and/or IgM and B cells present is CVID."
+    },
+    {
+     "claim": "CVID stands for common variable immunodeficiency.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Read the panel in fixed order (B cells, then IgM, then IgG/IgA/IgE) to identify the disease.",
+     "from": "Read the panel in fixed order: B cells, then IgM, then IgG/IgA/IgE."
+    },
+    {
+     "claim": "Naming the disease first risks forcing the panel to fit the wrong disease.",
+     "from": "Naming the disease first is how the wrong panel gets forced to fit."
+    },
+    {
+     "claim": "The missing isotype predicts the organism.",
+     "from": "The missing isotype predicts the organism."
+    },
+    {
+     "claim": "No opsonizing IgG leads to encapsulated bacteria (pneumococcus, H. influenzae).",
+     "from": "No opsonizing IgG leads to encapsulated bacteria (pneumococcus, H. influenzae)."
+    },
+    {
+     "claim": "A broken CD40L–CD40 axis also breaks T-cell licensing of macrophages, leading to Pneumocystis and Cryptosporidium (unverified).",
+     "from": "A broken CD40L–CD40 axis also breaks T-cell licensing of macrophages, leading to Pneumocystis and Cryptosporidium (unverified)."
+    },
+    {
+     "claim": "Neutropenia alongside hypogammaglobulinemia points to CD40L deficiency rather than XLA.",
+     "from": "Neutropenia alongside hypogammaglobulinemia points at CD40L deficiency rather than XLA."
+    },
+    {
+     "claim": "CD40L stands for CD40 ligand.",
+     "from": "expansion"
+    },
+    {
+     "claim": "In selective IgA deficiency, management is what you withhold: no IVIG, and washed or IgA-deficient blood products for transfusion (unverified).",
+     "from": "Selective IgA deficiency is the defect whose management is what you withhold: no IVIG, and washed or IgA-deficient blood products for transfusion (unverified)."
+    },
+    {
+     "claim": "IVIG stands for intravenous immunoglobulin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Any patient on immunoglobulin replacement or with a defective T-cell limb gets no live vaccines (unverified).",
+     "from": "Any patient on immunoglobulin replacement or with a defective T-cell limb gets no live vaccines (unverified)."
+    },
+    {
+     "claim": "Replacement IgG also makes serologic testing uninterpretable afterward.",
+     "from": "Replacement IgG makes serologic testing uninterpretable afterward."
+    },
+    {
+     "claim": "A mildly low IgG at 6–9 months in a thriving infant with normal IgM, normal B cells, and protective vaccine titers is transient hypogammaglobulinemia of infancy.",
+     "from": "A mildly low IgG at 6–9 months in a thriving infant with normal IgM, normal B cells, and protective vaccine titers is transient hypogammaglobulinemia of infancy."
+    },
+    {
+     "claim": "Recheck rather than treat (unverified).",
+     "from": "Recheck, do not treat (unverified)."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "Verified: Part I <b>Recurrent Sinopulmonary Infection</b> (shared complaint: recurrent otitis media and pneumonia in a child; discriminator as a question: <i>does the immunoglobulin panel explain it, or does the anatomy?</i>). When the panel is normal, that brief owns the structural and mucociliary axis; when an isotype is out of step, this one does. Part I <b>Recurrent Abscesses and Granulomas</b> owns the phagocyte defects (CGD, leukocyte adhesion deficiency, Ch&eacute;diak-Higashi); ask: are the immunoglobulins normal and is there pus? Part I <b>22q11.2 Deletion Syndrome</b> owns the thymic T-cell defect with hypocalcemia (CATCH-22); ask: is there a conotruncal heart lesion? Part II <b>Foodborne Diarrhea: Source and Organism</b> follows a patient with CVID on immunoglobulin replacement who develops Salmonella gastroenteritis; ask: does the organism point to the immune defect, or to the food it came from?",
+   "with": "Part I <b>Recurrent Sinopulmonary Infection</b> shares the complaint of recurrent otitis media and pneumonia in a child. Ask: <i>does the immunoglobulin panel explain it, or does the anatomy?</i> When the panel is normal, that brief covers the structural and mucociliary axis; when an isotype is out of step, this one does. Part I <b>Recurrent Abscesses and Granulomas</b> covers the phagocyte defects: CGD (chronic granulomatous disease), leukocyte adhesion deficiency and Ch&eacute;diak-Higashi. Ask: are the immunoglobulins normal and is there pus? Part I <b>22q11.2 Deletion Syndrome</b> covers the thymic T-cell defect with hypocalcemia (CATCH-22). Ask: is there a conotruncal heart lesion? Part II <b>Foodborne Diarrhea: Source and Organism</b> follows a patient with CVID (common variable immunodeficiency) on immunoglobulin replacement who develops Salmonella gastroenteritis. Ask: does the organism point to the immune defect, or to the food it came from?",
+   "note": "voice: pairs with; removed Verified tag, owns -> covers, question as Ask",
+   "claims": [
+    {
+     "claim": "Verified.",
+     "dropped": "internal workflow tag"
+    },
+    {
+     "claim": "Recurrent Sinopulmonary Infection shares the complaint of recurrent otitis media and pneumonia in a child.",
+     "to": "Part I Recurrent Sinopulmonary Infection shares the complaint of recurrent otitis media and pneumonia in a child."
+    },
+    {
+     "claim": "The discriminator question: does the immunoglobulin panel explain it, or does the anatomy?",
+     "to": "Ask: does the immunoglobulin panel explain it, or does the anatomy?"
+    },
+    {
+     "claim": "When the panel is normal, that brief owns the structural and mucociliary axis; when an isotype is out of step, this one does.",
+     "to": "When the panel is normal, that brief covers the structural and mucociliary axis; when an isotype is out of step, this one does."
+    },
+    {
+     "claim": "Recurrent Abscesses and Granulomas owns the phagocyte defects (CGD, leukocyte adhesion deficiency, Chédiak-Higashi).",
+     "to": "Part I Recurrent Abscesses and Granulomas covers the phagocyte defects: CGD (chronic granulomatous disease), leukocyte adhesion deficiency and Chédiak-Higashi."
+    },
+    {
+     "claim": "Ask: are the immunoglobulins normal and is there pus?",
+     "to": "Ask: are the immunoglobulins normal and is there pus?"
+    },
+    {
+     "claim": "22q11.2 Deletion Syndrome owns the thymic T-cell defect with hypocalcemia (CATCH-22).",
+     "to": "Part I 22q11.2 Deletion Syndrome covers the thymic T-cell defect with hypocalcemia (CATCH-22)."
+    },
+    {
+     "claim": "Ask: is there a conotruncal heart lesion?",
+     "to": "Ask: is there a conotruncal heart lesion?"
+    },
+    {
+     "claim": "Foodborne Diarrhea: Source and Organism follows a patient with CVID on immunoglobulin replacement who develops Salmonella gastroenteritis.",
+     "to": "Part II Foodborne Diarrhea: Source and Organism follows a patient with CVID (common variable immunodeficiency) on immunoglobulin replacement who develops Salmonella gastroenteritis."
+    },
+    {
+     "claim": "Ask: does the organism point to the immune defect, or to the food it came from?",
+     "to": "Ask: does the organism point to the immune defect, or to the food it came from?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Recurrent Sinopulmonary Infection shares the complaint of recurrent otitis media and pneumonia in a child.",
+     "from": "Recurrent Sinopulmonary Infection shares the complaint of recurrent otitis media and pneumonia in a child."
+    },
+    {
+     "claim": "Ask: does the immunoglobulin panel explain it, or does the anatomy?",
+     "from": "The discriminator question: does the immunoglobulin panel explain it, or does the anatomy?"
+    },
+    {
+     "claim": "When the panel is normal, that brief covers the structural and mucociliary axis; when an isotype is out of step, this one does.",
+     "from": "When the panel is normal, that brief owns the structural and mucociliary axis; when an isotype is out of step, this one does."
+    },
+    {
+     "claim": "Recurrent Abscesses and Granulomas covers the phagocyte defects: CGD, leukocyte adhesion deficiency and Chédiak-Higashi.",
+     "from": "Recurrent Abscesses and Granulomas owns the phagocyte defects (CGD, leukocyte adhesion deficiency, Chédiak-Higashi)."
+    },
+    {
+     "claim": "CGD stands for chronic granulomatous disease.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Ask: are the immunoglobulins normal and is there pus?",
+     "from": "Ask: are the immunoglobulins normal and is there pus?"
+    },
+    {
+     "claim": "22q11.2 Deletion Syndrome covers the thymic T-cell defect with hypocalcemia (CATCH-22).",
+     "from": "22q11.2 Deletion Syndrome owns the thymic T-cell defect with hypocalcemia (CATCH-22)."
+    },
+    {
+     "claim": "Ask: is there a conotruncal heart lesion?",
+     "from": "Ask: is there a conotruncal heart lesion?"
+    },
+    {
+     "claim": "Foodborne Diarrhea: Source and Organism follows a patient with CVID on immunoglobulin replacement who develops Salmonella gastroenteritis.",
+     "from": "Foodborne Diarrhea: Source and Organism follows a patient with CVID on immunoglobulin replacement who develops Salmonella gastroenteritis."
+    },
+    {
+     "claim": "CVID stands for common variable immunodeficiency.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Ask: does the organism point to the immune defect, or to the food it came from?",
+     "from": "Ask: does the organism point to the immune defect, or to the food it came from?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "When recurrent sinopulmonary infection arrives with an immunoglobulin panel, the question is a pattern read, not a disease recalled: count the B cells, then ask <b>which isotype is preserved</b> — the preserved isotype names the block, and the missing ones name the organisms you must cover.",
+   "with": "When recurrent sinopulmonary infection comes with an immunoglobulin panel, read the pattern rather than recalling a disease. Count the B cells, then ask <b>which isotype is preserved</b>. The preserved isotype identifies the block, and the missing isotypes predict the organisms you must cover.",
+   "note": "voice: rule; removed framing and em dash",
+   "claims": [
+    {
+     "claim": "With recurrent sinopulmonary infection and an immunoglobulin panel, read the pattern rather than recall a disease.",
+     "to": "When recurrent sinopulmonary infection comes with an immunoglobulin panel, read the pattern rather than recalling a disease."
+    },
+    {
+     "claim": "Count the B cells, then ask which isotype is preserved.",
+     "to": "Count the B cells, then ask which isotype is preserved."
+    },
+    {
+     "claim": "The preserved isotype names the block.",
+     "to": "The preserved isotype identifies the block, and the missing isotypes predict the organisms you must cover."
+    },
+    {
+     "claim": "The missing isotypes name the organisms you must cover.",
+     "to": "The preserved isotype identifies the block, and the missing isotypes predict the organisms you must cover."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "With recurrent sinopulmonary infection and an immunoglobulin panel, read the pattern rather than recall a disease.",
+     "from": "With recurrent sinopulmonary infection and an immunoglobulin panel, read the pattern rather than recall a disease."
+    },
+    {
+     "claim": "Count the B cells, then ask which isotype is preserved.",
+     "from": "Count the B cells, then ask which isotype is preserved."
+    },
+    {
+     "claim": "The preserved isotype identifies the block.",
+     "from": "The preserved isotype names the block."
+    },
+    {
+     "claim": "The missing isotypes predict the organisms you must cover.",
+     "from": "The missing isotypes name the organisms you must cover."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"trapwhy\">Eczema plus recurrent infection is the Wiskott-Aldrich shape, but that syndrome requires small, low platelets &mdash; a normal count retires it, and atopy is itself a feature of transient hypogammaglobulinemia.</span>",
+   "with": "<span class=\"trapwhy\">Wiskott-Aldrich syndrome: eczema plus recurrent infection fits its pattern, but it requires small, low platelets. A normal count excludes it, and atopy is itself a feature of transient hypogammaglobulinemia.</span>",
+   "note": "voice: trap line as \"Option: why\", em dash removed",
+   "claims": [
+    {
+     "claim": "Eczema plus recurrent infection is the Wiskott-Aldrich pattern.",
+     "to": "Wiskott-Aldrich syndrome: eczema plus recurrent infection fits its pattern, but it requires small, low platelets."
+    },
+    {
+     "claim": "Wiskott-Aldrich requires small, low platelets.",
+     "to": "Wiskott-Aldrich syndrome: eczema plus recurrent infection fits its pattern, but it requires small, low platelets."
+    },
+    {
+     "claim": "A normal platelet count excludes it.",
+     "to": "A normal count excludes it, and atopy is itself a feature of transient hypogammaglobulinemia."
+    },
+    {
+     "claim": "Atopy is itself a feature of transient hypogammaglobulinemia.",
+     "to": "A normal count excludes it, and atopy is itself a feature of transient hypogammaglobulinemia."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Eczema plus recurrent infection fits the Wiskott-Aldrich pattern, but it requires small, low platelets.",
+     "from": "Eczema plus recurrent infection is the Wiskott-Aldrich pattern."
+    },
+    {
+     "claim": "A normal count excludes it.",
+     "from": "A normal platelet count excludes it."
+    },
+    {
+     "claim": "Atopy is itself a feature of transient hypogammaglobulinemia.",
+     "from": "Atopy is itself a feature of transient hypogammaglobulinemia."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "treat the rickettsiosis before you prove it",
+   "with": "suspected rickettsiosis: treat before confirming",
+   "note": "voice: subtitle slogan made plain",
+   "claims": [
+    {
+     "claim": "Treat the rickettsiosis before proving it.",
+     "to": "suspected rickettsiosis: treat before confirming"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Treat suspected rickettsiosis before confirming it.",
+     "from": "Treat the rickettsiosis before proving it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<p>Three to four days of undifferentiated fever, headache and myalgia followed by a <b>rash on the extremities</b>, in a child with <b>wooded exposure</b>, carrying the laboratory triad of <b>thrombocytopenia, transaminitis and hyponatremia</b> &mdash; that is <b>Rocky Mountain spotted fever</b>, and the management is <b>empiric doxycycline started now</b>. Diagnosis is made retrospectively by serology; the disease progresses to vascular collapse and death if you wait for it. The abdominal pain is not a second problem: <b>severe abdominal pain is part of RMSF in children</b>, and it is the specific reason this boy got a CT rather than an antibiotic on his first visit.</p>",
+   "with": "<p>A child with <b>wooded exposure</b> has three to four days of undifferentiated fever, headache and myalgia, followed by a <b>rash on the extremities</b>. This is <b>Rocky Mountain spotted fever</b>. It comes with the laboratory triad of <b>thrombocytopenia, transaminitis and hyponatremia</b>. Management is <b>empiric doxycycline started now</b>. Serology makes the diagnosis only retrospectively. Waiting for it lets the disease progress to vascular collapse and death. The abdominal pain is not a second problem: <b>severe abdominal pain is part of RMSF in children</b>. It is the specific reason this boy got a CT rather than an antibiotic on his first visit.</p>",
+   "note": "voice: dp; split the long sentence, removed em dash and framing",
+   "claims": [
+    {
+     "claim": "Three to four days of undifferentiated fever, headache and myalgia followed by a rash on the extremities, in a child with wooded exposure, is Rocky Mountain spotted fever.",
+     "to": "This is Rocky Mountain spotted fever."
+    },
+    {
+     "claim": "The pattern is fever, headache and myalgia for three to four days, then an extremity rash, after wooded exposure.",
+     "to": "A child with wooded exposure has three to four days of undifferentiated fever, headache and myalgia, followed by a rash on the extremities."
+    },
+    {
+     "claim": "The picture carries the laboratory triad of thrombocytopenia, transaminitis and hyponatremia.",
+     "to": "It comes with the laboratory triad of thrombocytopenia, transaminitis and hyponatremia."
+    },
+    {
+     "claim": "Management is empiric doxycycline started now.",
+     "to": "Management is empiric doxycycline started now."
+    },
+    {
+     "claim": "Diagnosis is made retrospectively by serology.",
+     "to": "Serology makes the diagnosis only retrospectively."
+    },
+    {
+     "claim": "The disease progresses to vascular collapse and death if you wait for serology.",
+     "to": "Waiting for it lets the disease progress to vascular collapse and death."
+    },
+    {
+     "claim": "The abdominal pain is not a second problem.",
+     "to": "The abdominal pain is not a second problem: severe abdominal pain is part of RMSF in children."
+    },
+    {
+     "claim": "Severe abdominal pain is part of RMSF in children.",
+     "to": "The abdominal pain is not a second problem: severe abdominal pain is part of RMSF in children."
+    },
+    {
+     "claim": "Abdominal pain is the specific reason this boy got a CT rather than an antibiotic on his first visit.",
+     "to": "It is the specific reason this boy got a CT rather than an antibiotic on his first visit."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A child with wooded exposure has three to four days of undifferentiated fever, headache and myalgia, followed by a rash on the extremities.",
+     "from": "The pattern is fever, headache and myalgia for three to four days, then an extremity rash, after wooded exposure."
+    },
+    {
+     "claim": "This is Rocky Mountain spotted fever.",
+     "from": "Three to four days of undifferentiated fever, headache and myalgia followed by a rash on the extremities, in a child with wooded exposure, is Rocky Mountain spotted fever."
+    },
+    {
+     "claim": "It comes with the laboratory triad of thrombocytopenia, transaminitis and hyponatremia.",
+     "from": "The pattern is fever, headache and myalgia for three to four days, then an extremity rash, after wooded exposure."
+    },
+    {
+     "claim": "Management is empiric doxycycline started now.",
+     "from": "The picture carries the laboratory triad of thrombocytopenia, transaminitis and hyponatremia."
+    },
+    {
+     "claim": "Serology makes the diagnosis only retrospectively.",
+     "from": "Management is empiric doxycycline started now."
+    },
+    {
+     "claim": "Waiting for serology lets the disease progress to vascular collapse and death.",
+     "from": "Diagnosis is made retrospectively by serology."
+    },
+    {
+     "claim": "The abdominal pain is not a second problem: severe abdominal pain is part of RMSF in children.",
+     "from": "The disease progresses to vascular collapse and death if you wait for serology."
+    },
+    {
+     "claim": "Severe abdominal pain is part of RMSF in children.",
+     "from": "The abdominal pain is not a second problem."
+    },
+    {
+     "claim": "It is the specific reason this boy got a CT rather than an antibiotic on his first visit.",
+     "from": "Severe abdominal pain is part of RMSF in children."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "Two details send you down abdominal and hepatic paths. <b>Worsening abdominal pain with a normal CT</b> is the classic paediatric RMSF presentation that gets children taken to theatre, and the stem shows the negative scan precisely so you stop pursuing it. <b>Confusion</b> pairs with transaminitis to suggest Wilson disease, but confusion in RMSF is early encephalitis arriving over hours, not over months.",
+   "with": "Two details suggest abdominal and hepatic causes. <b>Worsening abdominal pain with a normal CT</b> is the classic paediatric <b>RMSF</b> (Rocky Mountain spotted fever) presentation that gets children taken to theatre. Once the scan is negative, stop pursuing the abdomen. <b>Confusion</b> with transaminitis suggests Wilson disease. In RMSF, confusion is early encephalitis arriving over hours, not over months.",
+   "note": "voice: decoy note; removed stem framing",
+   "claims": [
+    {
+     "claim": "Two details send you down abdominal and hepatic paths.",
+     "to": "Two details suggest abdominal and hepatic causes."
+    },
+    {
+     "claim": "Worsening abdominal pain with a normal CT is the classic paediatric RMSF presentation that gets children taken to theatre.",
+     "to": "Worsening abdominal pain with a normal CT is the classic paediatric RMSF (Rocky Mountain spotted fever) presentation that gets children taken to theatre."
+    },
+    {
+     "claim": "The negative scan is shown so you stop pursuing the abdomen.",
+     "to": "Once the scan is negative, stop pursuing the abdomen."
+    },
+    {
+     "claim": "Confusion pairs with transaminitis to suggest Wilson disease.",
+     "to": "Confusion with transaminitis suggests Wilson disease."
+    },
+    {
+     "claim": "Confusion in RMSF is early encephalitis arriving over hours, not over months.",
+     "to": "In RMSF, confusion is early encephalitis arriving over hours, not over months."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Two details suggest abdominal and hepatic causes.",
+     "from": "Two details send you down abdominal and hepatic paths."
+    },
+    {
+     "claim": "Worsening abdominal pain with a normal CT is the classic paediatric RMSF presentation that gets children taken to theatre.",
+     "from": "Worsening abdominal pain with a normal CT is the classic paediatric RMSF presentation that gets children taken to theatre."
+    },
+    {
+     "claim": "RMSF stands for Rocky Mountain spotted fever.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Once the scan is negative, stop pursuing the abdomen.",
+     "from": "The negative scan is shown so you stop pursuing the abdomen."
+    },
+    {
+     "claim": "Confusion with transaminitis suggests Wilson disease.",
+     "from": "Confusion pairs with transaminitis to suggest Wilson disease."
+    },
+    {
+     "claim": "In RMSF, confusion is early encephalitis arriving over hours, not over months.",
+     "from": "Confusion in RMSF is early encephalitis arriving over hours, not over months."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<b>Treat on suspicion, confirm retrospectively</b> &mdash; serology is for the chart, doxycycline is for the patient",
+   "with": "<b>Treat on suspicion, confirm retrospectively</b> &mdash; serology documents the diagnosis later; doxycycline treats the patient now",
+   "note": "voice: pearls; slogan made plain",
+   "claims": [
+    {
+     "claim": "Treat on suspicion, confirm retrospectively.",
+     "to": "Treat on suspicion, confirm retrospectively — serology documents the diagnosis later; doxycycline treats the patient now"
+    },
+    {
+     "claim": "Serology is for the chart, doxycycline is for the patient.",
+     "to": "Treat on suspicion, confirm retrospectively — serology documents the diagnosis later; doxycycline treats the patient now"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Treat on suspicion, confirm retrospectively.",
+     "from": "Treat on suspicion, confirm retrospectively."
+    },
+    {
+     "claim": "Serology documents the diagnosis later; doxycycline treats the patient now.",
+     "from": "Serology is for the chart, doxycycline is for the patient."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<b>No recalled tick bite means nothing</b> &mdash; exposure history is habitat, not bite",
+   "with": "<b>A recalled tick bite is not required</b> &mdash; the exposure history is the habitat, not a bite",
+   "note": "voice: pearls; slogan bold made plain",
+   "reworded_bold": [
+    "No recalled tick bite means nothing"
+   ],
+   "claims": [
+    {
+     "claim": "No recalled tick bite means nothing.",
+     "to": "A recalled tick bite is not required — the exposure history is the habitat, not a bite"
+    },
+    {
+     "claim": "Exposure history is habitat, not bite.",
+     "to": "A recalled tick bite is not required — the exposure history is the habitat, not a bite"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A recalled tick bite is not required.",
+     "from": "No recalled tick bite means nothing."
+    },
+    {
+     "claim": "The exposure history is the habitat, not a bite.",
+     "from": "Exposure history is habitat, not bite."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "Part I <b>Cellulitis &amp; the Depth Ladder</b> for the febrile-rash differential; <b>Exanthems in a Child</b> for measles and roseola, and <b>Kawasaki Disease</b> for the 5-day fever with red eyes; <i>Lyme disease</i> and <i>ehrlichiosis</i> are the natural companions and are not yet written. Store the discriminator as a question: <i>where did the rash start, and what did the platelets and transaminases do?</i>",
+   "with": "Part I <b>Cellulitis &amp; the Depth Ladder</b> covers the febrile-rash differential. <b>Exanthems in a Child</b> covers measles and roseola, and <b>Kawasaki Disease</b> covers the 5-day fever with red eyes. Related conditions without their own brief: <i>Lyme disease</i> and <i>ehrlichiosis</i>. Ask: <i>where did the rash start, and what did the platelets and transaminases do?</i>",
+   "note": "voice: pairs with; removed not-yet-written note, question as Ask",
+   "claims": [
+    {
+     "claim": "Cellulitis & the Depth Ladder covers the febrile-rash differential.",
+     "to": "Part I Cellulitis & the Depth Ladder covers the febrile-rash differential."
+    },
+    {
+     "claim": "Exanthems in a Child covers measles and roseola.",
+     "to": "Exanthems in a Child covers measles and roseola, and Kawasaki Disease covers the 5-day fever with red eyes."
+    },
+    {
+     "claim": "Kawasaki Disease covers the 5-day fever with red eyes.",
+     "to": "Exanthems in a Child covers measles and roseola, and Kawasaki Disease covers the 5-day fever with red eyes."
+    },
+    {
+     "claim": "Lyme disease and ehrlichiosis are the natural companions and have no brief yet.",
+     "to": "Related conditions without their own brief: Lyme disease and ehrlichiosis."
+    },
+    {
+     "claim": "Discriminator: where did the rash start, and what did the platelets and transaminases do?",
+     "to": "Ask: where did the rash start, and what did the platelets and transaminases do?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Cellulitis & the Depth Ladder covers the febrile-rash differential.",
+     "from": "Cellulitis & the Depth Ladder covers the febrile-rash differential."
+    },
+    {
+     "claim": "Exanthems in a Child covers measles and roseola.",
+     "from": "Exanthems in a Child covers measles and roseola."
+    },
+    {
+     "claim": "Kawasaki Disease covers the 5-day fever with red eyes.",
+     "from": "Kawasaki Disease covers the 5-day fever with red eyes."
+    },
+    {
+     "claim": "Lyme disease and ehrlichiosis are related conditions without their own brief.",
+     "from": "Lyme disease and ehrlichiosis are the natural companions and have no brief yet."
+    },
+    {
+     "claim": "Ask: where did the rash start, and what did the platelets and transaminases do?",
+     "from": "Discriminator: where did the rash start, and what did the platelets and transaminases do?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "When the confirmatory test is retrospective and the untreated disease is lethal, the diagnostic threshold collapses into the treatment threshold &mdash; treat on the clinical picture and let the serology arrive whenever it arrives. A pending test is not a reason to wait; it is a reason to have already started.",
+   "with": "When the confirmatory test is retrospective and the untreated disease is lethal, the diagnostic threshold becomes the treatment threshold. Treat on the clinical picture and let the serology arrive whenever it arrives. A pending test is not a reason to wait; treatment should already have started.",
+   "note": "voice: rule; removed em dash and aphorism",
+   "claims": [
+    {
+     "claim": "When the confirmatory test is retrospective and the untreated disease is lethal, the diagnostic threshold collapses into the treatment threshold.",
+     "to": "When the confirmatory test is retrospective and the untreated disease is lethal, the diagnostic threshold becomes the treatment threshold."
+    },
+    {
+     "claim": "Treat on the clinical picture and let the serology arrive whenever it arrives.",
+     "to": "Treat on the clinical picture and let the serology arrive whenever it arrives."
+    },
+    {
+     "claim": "A pending test is not a reason to wait.",
+     "to": "A pending test is not a reason to wait; treatment should already have started."
+    },
+    {
+     "claim": "A pending test is a reason to have already started.",
+     "to": "A pending test is not a reason to wait; treatment should already have started."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When the confirmatory test is retrospective and the untreated disease is lethal, the diagnostic threshold becomes the treatment threshold.",
+     "from": "When the confirmatory test is retrospective and the untreated disease is lethal, the diagnostic threshold collapses into the treatment threshold."
+    },
+    {
+     "claim": "Treat on the clinical picture and let the serology arrive whenever it arrives.",
+     "from": "Treat on the clinical picture and let the serology arrive whenever it arrives."
+    },
+    {
+     "claim": "A pending test is not a reason to wait.",
+     "from": "A pending test is not a reason to wait."
+    },
+    {
+     "claim": "Treatment should already have started.",
+     "from": "A pending test is a reason to have already started."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "Laparoscopy: the abdominal CT is already normal, so the ledger has answered the surgical question.",
+   "with": "Laparoscopy: the abdominal CT is already normal, which answers the surgical question.",
+   "note": "voice: trap; removed internal ledger wording",
+   "claims": [
+    {
+     "claim": "The abdominal CT is already normal, answering the surgical question.",
+     "to": "Laparoscopy: the abdominal CT is already normal, which answers the surgical question."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The abdominal CT is already normal, which answers the surgical question.",
+     "from": "The abdominal CT is already normal, answering the surgical question."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "lymphadenitis",
+   "find": "<p>Two axes settle this: <b>tempo</b> and <b>laterality</b>. A node that appeared yesterday and is bigger, red and tender today is <b>acute</b>; a single inflamed node on one side is <b>unilateral</b>. Acute unilateral cervical lymphadenitis in a child under five is a <b>bacterial</b> infection of the node itself, and the organisms are <b>Staphylococcus aureus and Streptococcus pyogenes</b>, with anaerobes when there is periodontal disease. Empiric therapy has to cover gram-positives <b>including MRSA</b> plus anaerobes, and among the offered agents only <b>clindamycin</b> does all three. The preceding viral illness is not the cause &mdash; it is the portal, and it has already resolved.</p>",
+   "with": "<p>The diagnosis turns on <b>tempo</b> and <b>laterality</b>. A node that appeared yesterday and is bigger, red and tender today is <b>acute</b>. A single inflamed node on one side is <b>unilateral</b>. Acute unilateral cervical lymphadenitis in a child under five is a <b>bacterial</b> infection of the node itself. The organisms are <b>Staphylococcus aureus and Streptococcus pyogenes</b>, with anaerobes when there is periodontal disease. Empiric therapy has to cover gram-positives <b>including MRSA</b> (methicillin-resistant <i>Staphylococcus aureus</i>) plus anaerobes. Among the offered agents, only <b>clindamycin</b> covers all three. The preceding viral illness is the portal, not the cause, and it has already resolved.</p>",
+   "note": "voice: dp; removed framing and em dash, split sentences, expanded MRSA",
+   "claims": [
+    {
+     "claim": "Two axes settle this: tempo and laterality.",
+     "to": "The diagnosis turns on tempo and laterality."
+    },
+    {
+     "claim": "A node that appeared yesterday and is bigger, red and tender today is acute.",
+     "to": "A node that appeared yesterday and is bigger, red and tender today is acute."
+    },
+    {
+     "claim": "A single inflamed node on one side is unilateral.",
+     "to": "A single inflamed node on one side is unilateral."
+    },
+    {
+     "claim": "Acute unilateral cervical lymphadenitis in a child under five is a bacterial infection of the node itself.",
+     "to": "Acute unilateral cervical lymphadenitis in a child under five is a bacterial infection of the node itself."
+    },
+    {
+     "claim": "The organisms are Staphylococcus aureus and Streptococcus pyogenes, with anaerobes when there is periodontal disease.",
+     "to": "The organisms are Staphylococcus aureus and Streptococcus pyogenes, with anaerobes when there is periodontal disease."
+    },
+    {
+     "claim": "Empiric therapy has to cover gram-positives including MRSA plus anaerobes.",
+     "to": "Empiric therapy has to cover gram-positives including MRSA (methicillin-resistant Staphylococcus aureus) plus anaerobes."
+    },
+    {
+     "claim": "Among the offered agents only clindamycin does all three.",
+     "to": "Among the offered agents, only clindamycin covers all three."
+    },
+    {
+     "claim": "The preceding viral illness is not the cause; it is the portal, and it has already resolved.",
+     "to": "The preceding viral illness is the portal, not the cause, and it has already resolved."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The diagnosis turns on tempo and laterality.",
+     "from": "Two axes settle this: tempo and laterality."
+    },
+    {
+     "claim": "A node that appeared yesterday and is bigger, red and tender today is acute.",
+     "from": "A node that appeared yesterday and is bigger, red and tender today is acute."
+    },
+    {
+     "claim": "A single inflamed node on one side is unilateral.",
+     "from": "A single inflamed node on one side is unilateral."
+    },
+    {
+     "claim": "Acute unilateral cervical lymphadenitis in a child under five is a bacterial infection of the node itself.",
+     "from": "Acute unilateral cervical lymphadenitis in a child under five is a bacterial infection of the node itself."
+    },
+    {
+     "claim": "The organisms are Staphylococcus aureus and Streptococcus pyogenes, with anaerobes when there is periodontal disease.",
+     "from": "The organisms are Staphylococcus aureus and Streptococcus pyogenes, with anaerobes when there is periodontal disease."
+    },
+    {
+     "claim": "Empiric therapy has to cover gram-positives including MRSA plus anaerobes.",
+     "from": "Empiric therapy has to cover gram-positives including MRSA plus anaerobes."
+    },
+    {
+     "claim": "MRSA stands for methicillin-resistant Staphylococcus aureus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Among the offered agents, only clindamycin covers all three.",
+     "from": "Among the offered agents only clindamycin does all three."
+    },
+    {
+     "claim": "The preceding viral illness is the portal, not the cause, and it has already resolved.",
+     "from": "The preceding viral illness is not the cause; it is the portal, and it has already resolved."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "lymphadenitis",
+   "find": "The geography is the trap and it is precisely placed: <b>eastern Arkansas</b> is genuinely endemic for histoplasmosis, and the stem puts it in the same sentence as the sick contacts so it reads as an exposure history. It is neither &mdash; the cousins explain the resolved URI, and the location explains nothing, because histoplasmosis does not present as a single hot node.",
+   "with": "Histoplasmosis is endemic in <b>eastern Arkansas</b>, and its mention beside the sick contacts makes it read as an exposure history. The cousins explain the resolved <b>URI</b> (upper respiratory infection). The location explains nothing, because histoplasmosis does not present as a single hot node.",
+   "note": "voice: decoy note; removed framing and em dash",
+   "claims": [
+    {
+     "claim": "The geography is the trap and it is precisely placed.",
+     "dropped": "framing about the question"
+    },
+    {
+     "claim": "Eastern Arkansas is genuinely endemic for histoplasmosis.",
+     "to": "Histoplasmosis is endemic in eastern Arkansas, and its mention beside the sick contacts makes it read as an exposure history."
+    },
+    {
+     "claim": "It sits beside the sick contacts so it reads as an exposure history.",
+     "to": "Histoplasmosis is endemic in eastern Arkansas, and its mention beside the sick contacts makes it read as an exposure history."
+    },
+    {
+     "claim": "It is neither a relevant exposure nor a clue.",
+     "to": "The location explains nothing, because histoplasmosis does not present as a single hot node."
+    },
+    {
+     "claim": "The cousins explain the resolved URI.",
+     "to": "The cousins explain the resolved URI (upper respiratory infection)."
+    },
+    {
+     "claim": "The location explains nothing, because histoplasmosis does not present as a single hot node.",
+     "to": "The location explains nothing, because histoplasmosis does not present as a single hot node."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Histoplasmosis is endemic in eastern Arkansas.",
+     "from": "Eastern Arkansas is genuinely endemic for histoplasmosis."
+    },
+    {
+     "claim": "Its mention beside the sick contacts makes it read as an exposure history.",
+     "from": "It sits beside the sick contacts so it reads as an exposure history."
+    },
+    {
+     "claim": "The cousins explain the resolved URI.",
+     "from": "The cousins explain the resolved URI."
+    },
+    {
+     "claim": "URI stands for upper respiratory infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The location explains nothing, because histoplasmosis does not present as a single hot node.",
+     "from": "The location explains nothing, because histoplasmosis does not present as a single hot node."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "lymphadenitis",
+   "find": "<b>Clindamycin is the answer because of its spectrum, not its class</b> &mdash; a cephalosporin that misses staphylococci fails even though the class sounds right",
+   "with": "<b>Clindamycin is chosen for its spectrum, not its class</b> &mdash; a cephalosporin that misses staphylococci fails even though the class sounds right",
+   "note": "voice: pearls; removed answer framing from bold",
+   "reworded_bold": [
+    "Clindamycin is the answer because of its spectrum, not its class"
+   ],
+   "claims": [
+    {
+     "claim": "Clindamycin is the answer because of its spectrum, not its class.",
+     "to": "Clindamycin is chosen for its spectrum, not its class — a cephalosporin that misses staphylococci fails even though the class sounds right"
+    },
+    {
+     "claim": "A cephalosporin that misses staphylococci fails even though the class sounds right.",
+     "to": "Clindamycin is chosen for its spectrum, not its class — a cephalosporin that misses staphylococci fails even though the class sounds right"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Clindamycin is chosen for its spectrum, not its class.",
+     "from": "Clindamycin is the answer because of its spectrum, not its class."
+    },
+    {
+     "claim": "A cephalosporin that misses staphylococci fails even though the class sounds right.",
+     "from": "A cephalosporin that misses staphylococci fails even though the class sounds right."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "lymphadenitis",
+   "find": "Part I <b>Pediatric Upper Respiratory Infection</b>, which owns the reactive-adenopathy end of this spectrum and the exudative pharyngitis fork. Store the discriminator as a question: <i>how fast did it appear, and is it one node or many?</i>",
+   "with": "Part I <b>Pediatric Upper Respiratory Infection</b> covers the reactive-adenopathy end of this spectrum and the exudative pharyngitis fork. Ask: <i>how fast did it appear, and is it one node or many?</i>",
+   "note": "voice: pairs with; owns -> covers, question as Ask",
+   "claims": [
+    {
+     "claim": "Pediatric Upper Respiratory Infection owns the reactive-adenopathy end of this spectrum and the exudative pharyngitis fork.",
+     "to": "Part I Pediatric Upper Respiratory Infection covers the reactive-adenopathy end of this spectrum and the exudative pharyngitis fork."
+    },
+    {
+     "claim": "Discriminator: how fast did it appear, and is it one node or many?",
+     "to": "Ask: how fast did it appear, and is it one node or many?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Pediatric Upper Respiratory Infection covers the reactive-adenopathy end of this spectrum and the exudative pharyngitis fork.",
+     "from": "Pediatric Upper Respiratory Infection owns the reactive-adenopathy end of this spectrum and the exudative pharyngitis fork."
+    },
+    {
+     "claim": "Ask: how fast did it appear, and is it one node or many?",
+     "from": "Discriminator: how fast did it appear, and is it one node or many?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "lymphadenitis",
+   "find": "When every option is a drug, the question is spectrum, not diagnosis &mdash; name the organisms you must cover, then find the single agent that covers all of them. And a geographic detail earns its place only when the syndrome matches the endemic disease, not merely the map.",
+   "with": "When every option is a drug, choose by spectrum rather than by diagnosis. Name the organisms you must cover, then find the single agent that covers all of them. A geographic detail matters only when the syndrome matches the endemic disease, not merely the map.",
+   "note": "voice: rule; removed em dash and filler",
+   "claims": [
+    {
+     "claim": "When every option is a drug, the question is spectrum, not diagnosis.",
+     "to": "When every option is a drug, choose by spectrum rather than by diagnosis."
+    },
+    {
+     "claim": "Name the organisms you must cover, then find the single agent that covers all of them.",
+     "to": "Name the organisms you must cover, then find the single agent that covers all of them."
+    },
+    {
+     "claim": "A geographic detail earns its place only when the syndrome matches the endemic disease, not merely the map.",
+     "to": "A geographic detail matters only when the syndrome matches the endemic disease, not merely the map."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When every option is a drug, choose by spectrum rather than by diagnosis.",
+     "from": "When every option is a drug, the question is spectrum, not diagnosis."
+    },
+    {
+     "claim": "Name the organisms you must cover, then find the single agent that covers all of them.",
+     "from": "Name the organisms you must cover, then find the single agent that covers all of them."
+    },
+    {
+     "claim": "A geographic detail matters only when the syndrome matches the endemic disease, not merely the map.",
+     "from": "A geographic detail earns its place only when the syndrome matches the endemic disease, not merely the map."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "the location names the virus",
+   "with": "lesion location identifies the virus",
+   "note": "voice: subtitle personification removed",
+   "claims": [
+    {
+     "claim": "The location of the lesions identifies the virus.",
+     "to": "lesion location identifies the virus"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Lesion location identifies the virus.",
+     "from": "The location of the lesions identifies the virus."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "<p>Two features settle this and both are anatomical. First, the lesions are <b>vesicles and ulcers, not exudate</b>, which removes every bacterial and mononucleosis-type pharyngitis at a stroke, since adenovirus, EBV and <i>S. pyogenes</i> all produce tonsillar exudate and none produces oral vesicles. Second, and this is the whole question, the lesions are <b>posterior</b> &mdash; soft palate, uvula, anterior palatine pillars &mdash; with the <b>tongue, lips and buccal mucosa explicitly spared</b>. Herpangina, from <b>coxsackievirus A</b>, lives in the back of the mouth; <b>herpetic gingivostomatitis</b> lives in the front, with red swollen gums. The stem spares exactly the structures HSV would involve.</p>",
+   "with": "<p>The lesions are <b>vesicles and ulcers, not exudate</b>, which excludes every bacterial and mononucleosis-type pharyngitis. Adenovirus, <b>EBV</b> (Epstein-Barr virus) and <i>S. pyogenes</i> all produce tonsillar exudate, and none produces oral vesicles. The lesions are <b>posterior</b> (soft palate, uvula, anterior palatine pillars), with the <b>tongue, lips and buccal mucosa explicitly spared</b>. Herpangina, from <b>coxsackievirus A</b>, affects the back of the mouth, and <b>herpetic gingivostomatitis</b> the front, with red swollen gums. The spared structures are exactly those <b>HSV</b> (herpes simplex virus) would involve.</p>",
+   "note": "voice: dp; removed framing and em dashes, split sentences",
+   "claims": [
+    {
+     "claim": "Two features settle this and both are anatomical.",
+     "dropped": "framing about the question; both features are stated next"
+    },
+    {
+     "claim": "The lesions are vesicles and ulcers, not exudate.",
+     "to": "The lesions are vesicles and ulcers, not exudate, which excludes every bacterial and mononucleosis-type pharyngitis."
+    },
+    {
+     "claim": "This removes every bacterial and mononucleosis-type pharyngitis at a stroke.",
+     "to": "The lesions are vesicles and ulcers, not exudate, which excludes every bacterial and mononucleosis-type pharyngitis."
+    },
+    {
+     "claim": "Adenovirus, EBV and S. pyogenes all produce tonsillar exudate and none produces oral vesicles.",
+     "to": "Adenovirus, EBV (Epstein-Barr virus) and S. pyogenes all produce tonsillar exudate, and none produces oral vesicles."
+    },
+    {
+     "claim": "The posterior location is the whole question.",
+     "dropped": "framing about the question; the posterior location is stated"
+    },
+    {
+     "claim": "The lesions are posterior: soft palate, uvula, anterior palatine pillars.",
+     "to": "The lesions are posterior (soft palate, uvula, anterior palatine pillars), with the tongue, lips and buccal mucosa explicitly spared."
+    },
+    {
+     "claim": "The tongue, lips and buccal mucosa are explicitly spared.",
+     "to": "The lesions are posterior (soft palate, uvula, anterior palatine pillars), with the tongue, lips and buccal mucosa explicitly spared."
+    },
+    {
+     "claim": "Herpangina, from coxsackievirus A, lives in the back of the mouth.",
+     "to": "Herpangina, from coxsackievirus A, affects the back of the mouth, and herpetic gingivostomatitis the front, with red swollen gums."
+    },
+    {
+     "claim": "Herpetic gingivostomatitis lives in the front, with red swollen gums.",
+     "to": "Herpangina, from coxsackievirus A, affects the back of the mouth, and herpetic gingivostomatitis the front, with red swollen gums."
+    },
+    {
+     "claim": "The stem spares exactly the structures HSV would involve.",
+     "to": "The spared structures are exactly those HSV (herpes simplex virus) would involve."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The lesions are vesicles and ulcers, not exudate, which excludes every bacterial and mononucleosis-type pharyngitis.",
+     "from": "The lesions are vesicles and ulcers, not exudate."
+    },
+    {
+     "claim": "Adenovirus, EBV and S. pyogenes all produce tonsillar exudate, and none produces oral vesicles.",
+     "from": "Adenovirus, EBV and S. pyogenes all produce tonsillar exudate and none produces oral vesicles."
+    },
+    {
+     "claim": "EBV stands for Epstein-Barr virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The lesions are posterior (soft palate, uvula, anterior palatine pillars).",
+     "from": "The lesions are posterior: soft palate, uvula, anterior palatine pillars."
+    },
+    {
+     "claim": "The tongue, lips and buccal mucosa are explicitly spared.",
+     "from": "The tongue, lips and buccal mucosa are explicitly spared."
+    },
+    {
+     "claim": "Herpangina, from coxsackievirus A, affects the back of the mouth.",
+     "from": "Herpangina, from coxsackievirus A, lives in the back of the mouth."
+    },
+    {
+     "claim": "Herpetic gingivostomatitis affects the front, with red swollen gums.",
+     "from": "Herpetic gingivostomatitis lives in the front, with red swollen gums."
+    },
+    {
+     "claim": "The spared structures are exactly those HSV would involve.",
+     "from": "The stem spares exactly the structures HSV would involve."
+    },
+    {
+     "claim": "HSV stands for herpes simplex virus.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "<b>Anterior is herpes, posterior is coxsackie</b> &mdash; one attribute decides the entire question, and both diseases otherwise present with fever, sore throat and a miserable child",
+   "with": "<b>Anterior is herpes, posterior is coxsackie</b> &mdash; location alone separates them; both otherwise present with fever, sore throat and a miserable child",
+   "note": "voice: pearls; removed question framing",
+   "claims": [
+    {
+     "claim": "Anterior is herpes, posterior is coxsackie.",
+     "to": "Anterior is herpes, posterior is coxsackie — location alone separates them; both otherwise present with fever, sore throat and a miserable child"
+    },
+    {
+     "claim": "One attribute (location) decides between them.",
+     "to": "Anterior is herpes, posterior is coxsackie — location alone separates them; both otherwise present with fever, sore throat and a miserable child"
+    },
+    {
+     "claim": "Both diseases otherwise present with fever, sore throat and a miserable child.",
+     "to": "Anterior is herpes, posterior is coxsackie — location alone separates them; both otherwise present with fever, sore throat and a miserable child"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Anterior is herpes, posterior is coxsackie.",
+     "from": "Anterior is herpes, posterior is coxsackie."
+    },
+    {
+     "claim": "Location alone separates them.",
+     "from": "One attribute (location) decides between them."
+    },
+    {
+     "claim": "Both otherwise present with fever, sore throat and a miserable child.",
+     "from": "Both diseases otherwise present with fever, sore throat and a miserable child."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "<b>Starting the fall term in two weeks is dating the season</b>, not describing an exposure",
+   "with": "<b>Starting the fall term in two weeks</b> dates the season; it does not describe an exposure",
+   "note": "voice: pearls; sentence-length bold trimmed to the finding",
+   "reworded_bold": [
+    "Starting the fall term in two weeks is dating the season"
+   ],
+   "claims": [
+    {
+     "claim": "Starting the fall term in two weeks dates the season, not an exposure.",
+     "to": "Starting the fall term in two weeks dates the season; it does not describe an exposure"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Starting the fall term in two weeks dates the season; it does not describe an exposure.",
+     "from": "Starting the fall term in two weeks dates the season, not an exposure."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "Part I <b>Pediatric Upper Respiratory Infection</b>, which owns the exudative pharyngitis fork and the <span class=\"scaleref\" data-scale=\"centor-criteria\">Centor rule</span>; this brief owns what happens when the lesions are vesicular instead. Store the discriminator as a question: <i>are the lesions exudate or vesicles, and are they front or back?</i> Part II <b>Exanthems in a Child</b> sorts hand-foot-and-mouth disease among the other rashes with fever.",
+   "with": "Part I <b>Pediatric Upper Respiratory Infection</b> covers the exudative pharyngitis fork and the <span class=\"scaleref\" data-scale=\"centor-criteria\">Centor rule</span>; this brief covers vesicular lesions. Ask: <i>are the lesions exudate or vesicles, and are they front or back?</i> Part II <b>Exanthems in a Child</b> sorts hand-foot-and-mouth disease among the other rashes with fever.",
+   "note": "voice: pairs with; owns -> covers, question as Ask",
+   "claims": [
+    {
+     "claim": "Pediatric Upper Respiratory Infection owns the exudative pharyngitis fork and the Centor rule.",
+     "to": "Part I Pediatric Upper Respiratory Infection covers the exudative pharyngitis fork and the Centor rule; this brief covers vesicular lesions."
+    },
+    {
+     "claim": "This brief owns what happens when the lesions are vesicular instead.",
+     "to": "Part I Pediatric Upper Respiratory Infection covers the exudative pharyngitis fork and the Centor rule; this brief covers vesicular lesions."
+    },
+    {
+     "claim": "Discriminator: are the lesions exudate or vesicles, and are they front or back?",
+     "to": "Ask: are the lesions exudate or vesicles, and are they front or back?"
+    },
+    {
+     "claim": "Exanthems in a Child sorts hand-foot-and-mouth disease among the other rashes with fever.",
+     "to": "Part II Exanthems in a Child sorts hand-foot-and-mouth disease among the other rashes with fever."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Pediatric Upper Respiratory Infection covers the exudative pharyngitis fork and the Centor rule.",
+     "from": "Pediatric Upper Respiratory Infection owns the exudative pharyngitis fork and the Centor rule."
+    },
+    {
+     "claim": "This brief covers vesicular lesions.",
+     "from": "This brief owns what happens when the lesions are vesicular instead."
+    },
+    {
+     "claim": "Ask: are the lesions exudate or vesicles, and are they front or back?",
+     "from": "Discriminator: are the lesions exudate or vesicles, and are they front or back?"
+    },
+    {
+     "claim": "Exanthems in a Child sorts hand-foot-and-mouth disease among the other rashes with fever.",
+     "from": "Exanthems in a Child sorts hand-foot-and-mouth disease among the other rashes with fever."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "When two diseases share a lesion type, the discriminating attribute is usually anatomical, not clinical. Ask where before you ask what &mdash; and treat a stated spared structure as an active exclusion, not as background.",
+   "with": "When two diseases share a lesion type, the discriminating attribute is usually anatomical, not clinical. Ask where the lesions are before asking what they are. Treat a stated spared structure as an active exclusion, not as background.",
+   "note": "voice: rule; removed em dash",
+   "claims": [
+    {
+     "claim": "When two diseases share a lesion type, the discriminating attribute is usually anatomical, not clinical.",
+     "to": "When two diseases share a lesion type, the discriminating attribute is usually anatomical, not clinical."
+    },
+    {
+     "claim": "Ask where before you ask what.",
+     "to": "Ask where the lesions are before asking what they are."
+    },
+    {
+     "claim": "Treat a stated spared structure as an active exclusion, not as background.",
+     "to": "Treat a stated spared structure as an active exclusion, not as background."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When two diseases share a lesion type, the discriminating attribute is usually anatomical, not clinical.",
+     "from": "When two diseases share a lesion type, the discriminating attribute is usually anatomical, not clinical."
+    },
+    {
+     "claim": "Ask where the lesions are before asking what they are.",
+     "from": "Ask where before you ask what."
+    },
+    {
+     "claim": "Treat a stated spared structure as an active exclusion, not as background.",
+     "from": "Treat a stated spared structure as an active exclusion, not as background."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "the organism list is the diagnosis",
+   "with": "the organism pattern points to the defect",
+   "note": "voice: subtitle slogan made plain",
+   "claims": [
+    {
+     "claim": "The organism list identifies the diagnosis.",
+     "to": "the organism pattern points to the defect"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The organism pattern points to the defect.",
+     "from": "The organism list identifies the diagnosis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<p>Two findings name the defect and neither is the pneumonia. <b>Granulomas on biopsy</b> and a <b>Burkholderia cepacia</b> culture together point at one disease: chronic granulomatous disease, a disorder of <b>NADPH oxidase</b>, commonly X-linked with autosomal recessive forms. The enzyme drives the neutrophil respiratory burst, so its loss means <b>decreased superoxide production</b> &mdash; phagocytes migrate normally and ingest normally, but have impaired intracellular killing. The organism list follows directly: neutrophils can borrow hydrogen peroxide made by the pathogen itself, so susceptibility particularly involves characteristic catalase-positive organisms that <b>destroy their own peroxide</b>; this is not an exclusive organism list. The granulomas are the same defect seen histologically: phagocytes arrive but clear pathogens poorly, contributing to granuloma formation.</p>",
+   "with": "<p><b>Granulomas on biopsy</b> and a <b>Burkholderia cepacia</b> culture name the defect; the pneumonia does not. Together they point to one disease: chronic granulomatous disease. It is a disorder of <b>NADPH oxidase</b> (nicotinamide adenine dinucleotide phosphate oxidase), commonly X-linked with autosomal recessive forms. The enzyme drives the neutrophil respiratory burst, so its loss means <b>decreased superoxide production</b>. Phagocytes migrate normally and ingest normally, but have impaired intracellular killing. Neutrophils can borrow hydrogen peroxide made by the pathogen itself. Susceptibility therefore particularly involves characteristic catalase-positive organisms that <b>destroy their own peroxide</b>; this is not an exclusive organism list. The granulomas are the same defect seen histologically: phagocytes arrive but clear pathogens poorly, contributing to granuloma formation.</p>",
+   "note": "voice: dp; removed em dash and filler, split sentences",
+   "claims": [
+    {
+     "claim": "Two findings name the defect and neither is the pneumonia.",
+     "to": "Granulomas on biopsy and a Burkholderia cepacia culture name the defect; the pneumonia does not."
+    },
+    {
+     "claim": "Granulomas on biopsy and a Burkholderia cepacia culture together point at chronic granulomatous disease.",
+     "to": "Together they point to one disease: chronic granulomatous disease."
+    },
+    {
+     "claim": "CGD is a disorder of NADPH oxidase, commonly X-linked with autosomal recessive forms.",
+     "to": "It is a disorder of NADPH oxidase (nicotinamide adenine dinucleotide phosphate oxidase), commonly X-linked with autosomal recessive forms."
+    },
+    {
+     "claim": "The enzyme drives the neutrophil respiratory burst, so its loss means decreased superoxide production.",
+     "to": "The enzyme drives the neutrophil respiratory burst, so its loss means decreased superoxide production."
+    },
+    {
+     "claim": "Phagocytes migrate normally and ingest normally, but have impaired intracellular killing.",
+     "to": "Phagocytes migrate normally and ingest normally, but have impaired intracellular killing."
+    },
+    {
+     "claim": "Neutrophils can borrow hydrogen peroxide made by the pathogen itself.",
+     "to": "Neutrophils can borrow hydrogen peroxide made by the pathogen itself."
+    },
+    {
+     "claim": "Susceptibility particularly involves characteristic catalase-positive organisms that destroy their own peroxide.",
+     "to": "Susceptibility therefore particularly involves characteristic catalase-positive organisms that destroy their own peroxide; this is not an exclusive organism list."
+    },
+    {
+     "claim": "This is not an exclusive organism list.",
+     "to": "Susceptibility therefore particularly involves characteristic catalase-positive organisms that destroy their own peroxide; this is not an exclusive organism list."
+    },
+    {
+     "claim": "The granulomas are the same defect seen histologically: phagocytes arrive but clear pathogens poorly, contributing to granuloma formation.",
+     "to": "The granulomas are the same defect seen histologically: phagocytes arrive but clear pathogens poorly, contributing to granuloma formation."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Granulomas on biopsy and a Burkholderia cepacia culture name the defect; the pneumonia does not.",
+     "from": "Two findings name the defect and neither is the pneumonia."
+    },
+    {
+     "claim": "Together they point to one disease: chronic granulomatous disease.",
+     "from": "Granulomas on biopsy and a Burkholderia cepacia culture together point at chronic granulomatous disease."
+    },
+    {
+     "claim": "It is a disorder of NADPH oxidase, commonly X-linked with autosomal recessive forms.",
+     "from": "CGD is a disorder of NADPH oxidase, commonly X-linked with autosomal recessive forms."
+    },
+    {
+     "claim": "NADPH stands for nicotinamide adenine dinucleotide phosphate.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The enzyme drives the neutrophil respiratory burst, so its loss means decreased superoxide production.",
+     "from": "The enzyme drives the neutrophil respiratory burst, so its loss means decreased superoxide production."
+    },
+    {
+     "claim": "Phagocytes migrate normally and ingest normally, but have impaired intracellular killing.",
+     "from": "Phagocytes migrate normally and ingest normally, but have impaired intracellular killing."
+    },
+    {
+     "claim": "Neutrophils can borrow hydrogen peroxide made by the pathogen itself.",
+     "from": "Neutrophils can borrow hydrogen peroxide made by the pathogen itself."
+    },
+    {
+     "claim": "Susceptibility particularly involves characteristic catalase-positive organisms that destroy their own peroxide.",
+     "from": "Susceptibility particularly involves characteristic catalase-positive organisms that destroy their own peroxide."
+    },
+    {
+     "claim": "This is not an exclusive organism list.",
+     "from": "This is not an exclusive organism list."
+    },
+    {
+     "claim": "The granulomas are the same defect seen histologically: phagocytes arrive but clear pathogens poorly, contributing to granuloma formation.",
+     "from": "The granulomas are the same defect seen histologically: phagocytes arrive but clear pathogens poorly, contributing to granuloma formation."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<span class=\"lbl\">The organism is never the discriminator here</span> <b>Burkholderia cepacia belongs to two diseases</b> &mdash; cystic fibrosis and chronic granulomatous disease &mdash; so it identifies neither alone. <b>Granulomas and extrapulmonary abscesses</b> are what split them, and a perirectal abscess in an infant is the single most specific line in a CGD stem. It sits in the past medical history, where it is easy to skim.",
+   "with": "<span class=\"lbl\">Burkholderia cepacia in two diseases</span> <b>Burkholderia cepacia belongs to two diseases</b>, cystic fibrosis and chronic granulomatous disease, so it identifies neither alone. <b>Granulomas and extrapulmonary abscesses</b> are what split them. A perirectal abscess in an infant is the single most specific finding for <b>CGD</b> (chronic granulomatous disease). It sits in the past medical history, where it is easy to skim.",
+   "note": "voice: danger; rhetorical label reworded, em dashes removed",
+   "reworded_label": [
+    "The organism is never the discriminator here"
+   ],
+   "claims": [
+    {
+     "claim": "The organism is never the discriminator here.",
+     "to": "Burkholderia cepacia in two diseases Burkholderia cepacia belongs to two diseases, cystic fibrosis and chronic granulomatous disease, so it identifies neither alone."
+    },
+    {
+     "claim": "Burkholderia cepacia belongs to two diseases: cystic fibrosis and chronic granulomatous disease.",
+     "to": "Burkholderia cepacia in two diseases Burkholderia cepacia belongs to two diseases, cystic fibrosis and chronic granulomatous disease, so it identifies neither alone."
+    },
+    {
+     "claim": "So it identifies neither alone.",
+     "to": "Burkholderia cepacia in two diseases Burkholderia cepacia belongs to two diseases, cystic fibrosis and chronic granulomatous disease, so it identifies neither alone."
+    },
+    {
+     "claim": "Granulomas and extrapulmonary abscesses are what split them.",
+     "to": "Granulomas and extrapulmonary abscesses are what split them."
+    },
+    {
+     "claim": "A perirectal abscess in an infant is the single most specific line in a CGD stem.",
+     "to": "A perirectal abscess in an infant is the single most specific finding for CGD (chronic granulomatous disease)."
+    },
+    {
+     "claim": "It sits in the past medical history, where it is easy to skim.",
+     "to": "It sits in the past medical history, where it is easy to skim."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Burkholderia cepacia occurs in two diseases.",
+     "from": "The organism is never the discriminator here."
+    },
+    {
+     "claim": "Burkholderia cepacia belongs to two diseases, cystic fibrosis and chronic granulomatous disease, so it identifies neither alone.",
+     "from": "Burkholderia cepacia belongs to two diseases: cystic fibrosis and chronic granulomatous disease."
+    },
+    {
+     "claim": "Granulomas and extrapulmonary abscesses are what split them.",
+     "from": "Granulomas and extrapulmonary abscesses are what split them."
+    },
+    {
+     "claim": "A perirectal abscess in an infant is the single most specific finding for CGD.",
+     "from": "A perirectal abscess in an infant is the single most specific line in a CGD stem."
+    },
+    {
+     "claim": "CGD stands for chronic granulomatous disease.",
+     "from": "expansion"
+    },
+    {
+     "claim": "It sits in the past medical history, where it is easy to skim.",
+     "from": "It sits in the past medical history, where it is easy to skim."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "Part I <b>The Immunoglobulin Panel</b>, which owns the antibody deficiencies and now has a phagocyte counterpart &mdash; the two together cover the immunodeficiency option list. Store the discriminator as a question: <i>are there granulomas, and is the infection outside the chest?</i>",
+   "with": "Part I <b>The Immunoglobulin Panel</b> covers the antibody deficiencies, and this brief covers the phagocyte defects; together they cover the immunodeficiency option list. Ask: <i>are there granulomas, and is the infection outside the chest?</i>",
+   "note": "voice: pairs with; owns -> covers, em dash removed, question as Ask",
+   "claims": [
+    {
+     "claim": "The Immunoglobulin Panel owns the antibody deficiencies.",
+     "to": "Part I The Immunoglobulin Panel covers the antibody deficiencies, and this brief covers the phagocyte defects; together they cover the immunodeficiency option list."
+    },
+    {
+     "claim": "It now has a phagocyte counterpart (this brief).",
+     "to": "Part I The Immunoglobulin Panel covers the antibody deficiencies, and this brief covers the phagocyte defects; together they cover the immunodeficiency option list."
+    },
+    {
+     "claim": "The two together cover the immunodeficiency option list.",
+     "to": "Part I The Immunoglobulin Panel covers the antibody deficiencies, and this brief covers the phagocyte defects; together they cover the immunodeficiency option list."
+    },
+    {
+     "claim": "Discriminator: are there granulomas, and is the infection outside the chest?",
+     "to": "Ask: are there granulomas, and is the infection outside the chest?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The Immunoglobulin Panel covers the antibody deficiencies.",
+     "from": "The Immunoglobulin Panel owns the antibody deficiencies."
+    },
+    {
+     "claim": "This brief covers the phagocyte defects.",
+     "from": "It now has a phagocyte counterpart (this brief)."
+    },
+    {
+     "claim": "Together they cover the immunodeficiency option list.",
+     "from": "The two together cover the immunodeficiency option list."
+    },
+    {
+     "claim": "Ask: are there granulomas, and is the infection outside the chest?",
+     "from": "Discriminator: are there granulomas, and is the infection outside the chest?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "When an organism belongs to two diseases, it cannot be the discriminator &mdash; find the finding that belongs to only one. Here the shared organism is B cepacia and the private findings are the granuloma and the perirectal abscess.",
+   "with": "When an organism belongs to two diseases, it cannot discriminate between them; find the finding that belongs to only one. Here the shared organism is B cepacia, and the findings that belong to only one disease are the granuloma and the perirectal abscess.",
+   "note": "voice: rule; removed em dash",
+   "claims": [
+    {
+     "claim": "When an organism belongs to two diseases, it cannot be the discriminator.",
+     "to": "When an organism belongs to two diseases, it cannot discriminate between them; find the finding that belongs to only one."
+    },
+    {
+     "claim": "Find the finding that belongs to only one.",
+     "to": "When an organism belongs to two diseases, it cannot discriminate between them; find the finding that belongs to only one."
+    },
+    {
+     "claim": "Here the shared organism is B cepacia.",
+     "to": "Here the shared organism is B cepacia, and the findings that belong to only one disease are the granuloma and the perirectal abscess."
+    },
+    {
+     "claim": "The private findings are the granuloma and the perirectal abscess.",
+     "to": "Here the shared organism is B cepacia, and the findings that belong to only one disease are the granuloma and the perirectal abscess."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When an organism belongs to two diseases, it cannot discriminate between them.",
+     "from": "When an organism belongs to two diseases, it cannot be the discriminator."
+    },
+    {
+     "claim": "Find the finding that belongs to only one.",
+     "from": "Find the finding that belongs to only one."
+    },
+    {
+     "claim": "Here the shared organism is B cepacia.",
+     "from": "Here the shared organism is B cepacia."
+    },
+    {
+     "claim": "The findings that belong to only one disease are the granuloma and the perirectal abscess.",
+     "from": "The private findings are the granuloma and the perirectal abscess."
+    }
+   ]
+  }
+ ]
+}

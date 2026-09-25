@@ -1,0 +1,944 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "preg-thyroid",
+   "find": "Estrogen raises <b>thyroxine-binding globulin</b>, and β-hCG (which shares an alpha subunit with TSH) stimulates the TSH receptor — so a normal pregnancy makes more thyroxine on its own. A patient with <b>pre-existing hypothyroidism cannot up-regulate</b>, so the answer is proactive: <b>increase levothyroxine ~30% as soon as pregnancy is detected</b>, even with a currently normal TSH. Waiting for the TSH to rise is the tested wrong move.",
+   "with": "Estrogen raises <b>thyroxine-binding globulin</b>. <b>β-hCG</b> (beta human chorionic gonadotropin) shares an alpha subunit with <b>TSH</b> (thyroid-stimulating hormone) and stimulates the TSH receptor. A normal pregnancy therefore makes more thyroxine on its own. A patient with <b>pre-existing hypothyroidism cannot up-regulate</b>, so <b>increase levothyroxine ~30% as soon as pregnancy is detected</b>, even with a currently normal TSH. Do not wait for the TSH to rise.",
+   "note": "dp: split, remove framing, expand acronyms",
+   "claims": [
+    {
+     "claim": "Estrogen raises thyroxine-binding globulin.",
+     "to": "Estrogen raises thyroxine-binding globulin."
+    },
+    {
+     "claim": "β-hCG shares an alpha subunit with TSH.",
+     "to": "β-hCG (beta human chorionic gonadotropin) shares an alpha subunit with TSH (thyroid-stimulating hormone) and stimulates the TSH receptor."
+    },
+    {
+     "claim": "β-hCG stimulates the TSH receptor.",
+     "to": "β-hCG (beta human chorionic gonadotropin) shares an alpha subunit with TSH (thyroid-stimulating hormone) and stimulates the TSH receptor."
+    },
+    {
+     "claim": "So a normal pregnancy makes more thyroxine on its own.",
+     "to": "A normal pregnancy therefore makes more thyroxine on its own."
+    },
+    {
+     "claim": "A patient with pre-existing hypothyroidism cannot up-regulate.",
+     "to": "A patient with pre-existing hypothyroidism cannot up-regulate, so increase levothyroxine ~30% as soon as pregnancy is detected, even with a currently normal TSH."
+    },
+    {
+     "claim": "So the management is proactive.",
+     "to": "A patient with pre-existing hypothyroidism cannot up-regulate, so increase levothyroxine ~30% as soon as pregnancy is detected, even with a currently normal TSH."
+    },
+    {
+     "claim": "Increase levothyroxine ~30% as soon as pregnancy is detected.",
+     "to": "A patient with pre-existing hypothyroidism cannot up-regulate, so increase levothyroxine ~30% as soon as pregnancy is detected, even with a currently normal TSH."
+    },
+    {
+     "claim": "Increase it even with a currently normal TSH.",
+     "to": "A patient with pre-existing hypothyroidism cannot up-regulate, so increase levothyroxine ~30% as soon as pregnancy is detected, even with a currently normal TSH."
+    },
+    {
+     "claim": "Waiting for the TSH to rise is the wrong move.",
+     "to": "Do not wait for the TSH to rise."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Estrogen raises thyroxine-binding globulin.",
+     "from": "Estrogen raises thyroxine-binding globulin."
+    },
+    {
+     "claim": "β-hCG stands for beta human chorionic gonadotropin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "β-hCG shares an alpha subunit with TSH and stimulates the TSH receptor.",
+     "from": "β-hCG shares an alpha subunit with TSH."
+    },
+    {
+     "claim": "A normal pregnancy therefore makes more thyroxine on its own.",
+     "from": "So a normal pregnancy makes more thyroxine on its own."
+    },
+    {
+     "claim": "A patient with pre-existing hypothyroidism cannot up-regulate, so increase levothyroxine ~30% as soon as pregnancy is detected.",
+     "from": "Increase levothyroxine ~30% as soon as pregnancy is detected."
+    },
+    {
+     "claim": "Increase it even with a currently normal TSH.",
+     "from": "Increase it even with a currently normal TSH."
+    },
+    {
+     "claim": "Do not wait for the TSH to rise.",
+     "from": "Waiting for the TSH to rise is the wrong move."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "preg-thyroid",
+   "find": "Untreated maternal hypothyroidism risks impaired fetal neurodevelopment — the fetus depends on maternal T4 early · a low TSH with high total T4 in the first trimester is <b>physiology</b>, not Graves — free T4 decides · T3 (liothyronine) is never the pregnancy answer.",
+   "with": "Untreated maternal hypothyroidism risks impaired fetal neurodevelopment, because the fetus depends on maternal <b>T4</b> (thyroxine) early · A low <b>TSH</b> (thyroid-stimulating hormone) with high total T4 in the first trimester is <b>physiology</b>, not Graves disease; free T4 distinguishes them · <b>T3</b> (triiodothyronine), given as liothyronine, is never the right choice in pregnancy.",
+   "note": "pearls: remove prose em dashes, expand acronyms",
+   "claims": [
+    {
+     "claim": "Untreated maternal hypothyroidism risks impaired fetal neurodevelopment.",
+     "to": "Untreated maternal hypothyroidism risks impaired fetal neurodevelopment, because the fetus depends on maternal T4 (thyroxine) early"
+    },
+    {
+     "claim": "The fetus depends on maternal T4 early.",
+     "to": "Untreated maternal hypothyroidism risks impaired fetal neurodevelopment, because the fetus depends on maternal T4 (thyroxine) early"
+    },
+    {
+     "claim": "A low TSH with high total T4 in the first trimester is physiology, not Graves.",
+     "to": "A low TSH (thyroid-stimulating hormone) with high total T4 in the first trimester is physiology, not Graves disease; free T4 distinguishes them"
+    },
+    {
+     "claim": "Free T4 decides between physiology and Graves.",
+     "to": "A low TSH (thyroid-stimulating hormone) with high total T4 in the first trimester is physiology, not Graves disease; free T4 distinguishes them"
+    },
+    {
+     "claim": "T3 (liothyronine) is never the pregnancy answer.",
+     "to": "T3 (triiodothyronine), given as liothyronine, is never the right choice in pregnancy."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Untreated maternal hypothyroidism risks impaired fetal neurodevelopment because the fetus depends on maternal T4 early.",
+     "from": "Untreated maternal hypothyroidism risks impaired fetal neurodevelopment."
+    },
+    {
+     "claim": "T4 stands for thyroxine.",
+     "from": "expansion"
+    },
+    {
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A low TSH with high total T4 in the first trimester is physiology, not Graves disease.",
+     "from": "A low TSH with high total T4 in the first trimester is physiology, not Graves."
+    },
+    {
+     "claim": "Free T4 distinguishes them.",
+     "from": "Free T4 decides between physiology and Graves."
+    },
+    {
+     "claim": "T3 stands for triiodothyronine.",
+     "from": "expansion"
+    },
+    {
+     "claim": "T3, given as liothyronine, is never the right choice in pregnancy.",
+     "from": "T3 (liothyronine) is never the pregnancy answer."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "preg-thyroid",
+   "find": "Part I <b>Levothyroxine Titration</b> — same drug, opposite clock: outside pregnancy you wait 6–8 weeks for the TSH to be trustworthy; at conception you act <b>before</b> the TSH moves. Store the discriminator: <b>\"is she pregnant right now?\"</b>",
+   "with": "Part I <b>Levothyroxine Titration</b>: same drug. Outside pregnancy, wait 6–8 weeks for the <b>TSH</b> (thyroid-stimulating hormone) to be trustworthy; at conception, act before the TSH moves. Ask: <b>\"is she pregnant right now?\"</b>",
+   "note": "pairs with: remove slogan and em dash, Ask:",
+   "reworded_bold": [
+    "before"
+   ],
+   "claims": [
+    {
+     "claim": "Levothyroxine Titration (Part I) concerns the same drug.",
+     "to": "Part I Levothyroxine Titration: same drug."
+    },
+    {
+     "claim": "Opposite clock.",
+     "dropped": "slogan; the two timings are stated in the next sentence"
+    },
+    {
+     "claim": "Outside pregnancy you wait 6–8 weeks for the TSH to be trustworthy.",
+     "to": "Outside pregnancy, wait 6–8 weeks for the TSH (thyroid-stimulating hormone) to be trustworthy; at conception, act before the TSH moves."
+    },
+    {
+     "claim": "At conception you act before the TSH moves.",
+     "to": "Outside pregnancy, wait 6–8 weeks for the TSH (thyroid-stimulating hormone) to be trustworthy; at conception, act before the TSH moves."
+    },
+    {
+     "claim": "The discriminator is: is she pregnant right now?",
+     "to": "Ask: \"is she pregnant right now?\""
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I Levothyroxine Titration: same drug.",
+     "from": "Levothyroxine Titration (Part I) concerns the same drug."
+    },
+    {
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Outside pregnancy, wait 6–8 weeks for the TSH to be trustworthy.",
+     "from": "Outside pregnancy you wait 6–8 weeks for the TSH to be trustworthy."
+    },
+    {
+     "claim": "At conception, act before the TSH moves.",
+     "from": "At conception you act before the TSH moves."
+    },
+    {
+     "claim": "Ask: is she pregnant right now?",
+     "from": "The discriminator is: is she pregnant right now?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "preg-thyroid",
+   "find": "When physiology predictably outruns a fixed drug dose, the exam rewards the pre-emptive adjustment — not the recheck-and-react answer that is correct in every other setting.",
+   "with": "When physiology predictably outruns a fixed drug dose, adjust the dose pre-emptively. Do not recheck and react, although that approach is correct in every other setting.",
+   "note": "rule: remove exam framing and em dash",
+   "claims": [
+    {
+     "claim": "When physiology predictably outruns a fixed drug dose, the pre-emptive adjustment is correct.",
+     "to": "When physiology predictably outruns a fixed drug dose, adjust the dose pre-emptively."
+    },
+    {
+     "claim": "Recheck-and-react is not correct here.",
+     "to": "Do not recheck and react, although that approach is correct in every other setting."
+    },
+    {
+     "claim": "Recheck-and-react is correct in every other setting.",
+     "to": "Do not recheck and react, although that approach is correct in every other setting."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When physiology predictably outruns a fixed drug dose, adjust the dose pre-emptively.",
+     "from": "When physiology predictably outruns a fixed drug dose, the pre-emptive adjustment is correct."
+    },
+    {
+     "claim": "Do not recheck and react.",
+     "from": "Recheck-and-react is not correct here."
+    },
+    {
+     "claim": "Recheck-and-react is correct in every other setting.",
+     "from": "Recheck-and-react is correct in every other setting."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "preg-thyroid",
+   "find": "<span class=\"trapwhy\">TSH 0.3 in early pregnancy invites antithyroid workup; β-hCG cross-reactivity is the explanation.</span>",
+   "with": "<span class=\"trapwhy\"><b>TSH</b> (thyroid-stimulating hormone) 0.3 in early pregnancy tempts an antithyroid workup, but <b>β-hCG</b> (beta human chorionic gonadotropin) cross-reactivity explains it.</span>",
+   "note": "trap 1: plain sentence, expand acronyms",
+   "claims": [
+    {
+     "claim": "TSH 0.3 in early pregnancy invites antithyroid workup.",
+     "to": "TSH (thyroid-stimulating hormone) 0.3 in early pregnancy tempts an antithyroid workup, but β-hCG (beta human chorionic gonadotropin) cross-reactivity explains it."
+    },
+    {
+     "claim": "β-hCG cross-reactivity is the explanation for TSH 0.3.",
+     "to": "TSH (thyroid-stimulating hormone) 0.3 in early pregnancy tempts an antithyroid workup, but β-hCG (beta human chorionic gonadotropin) cross-reactivity explains it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "β-hCG stands for beta human chorionic gonadotropin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "TSH 0.3 in early pregnancy tempts an antithyroid workup.",
+     "from": "TSH 0.3 in early pregnancy invites antithyroid workup."
+    },
+    {
+     "claim": "β-hCG cross-reactivity explains it.",
+     "from": "β-hCG cross-reactivity is the explanation for TSH 0.3."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "preg-thyroid",
+   "find": "<span class=\"trapwhy\">\"Recheck in 6–8 weeks\" is the correct titration rule — placed in the one setting where acting first is right.</span>",
+   "with": "<span class=\"trapwhy\">\"Recheck in 6–8 weeks\": correct for titration, but pregnancy is the one setting where acting first is right.</span>",
+   "note": "trap 2: Option: why, no em dash",
+   "claims": [
+    {
+     "claim": "\"Recheck in 6–8 weeks\" is the correct titration rule.",
+     "to": "\"Recheck in 6–8 weeks\": correct for titration, but pregnancy is the one setting where acting first is right."
+    },
+    {
+     "claim": "Pregnancy is the one setting where acting first is right.",
+     "to": "\"Recheck in 6–8 weeks\": correct for titration, but pregnancy is the one setting where acting first is right."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "\"Recheck in 6–8 weeks\" is correct for titration.",
+     "from": "\"Recheck in 6–8 weeks\" is the correct titration rule."
+    },
+    {
+     "claim": "Pregnancy is the one setting where acting first is right.",
+     "from": "Pregnancy is the one setting where acting first is right."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "Two stem facts close the question. <b>TSH 110 with T4 0.6</b> puts the lesion below the pituitary — the feedback loop is intact and screaming, so panhypopituitarism is excluded outright and neonatal Graves (which runs TSH-suppressed with high T4) is excluded in the opposite direction. Among the primary causes, the <b>exam is silent on goiter</b> and the <b>maternal history is clean</b> (balanced diet, prenatal vitamins), which strips the two goitrous mechanisms — dyshormonogenesis and iodine deficiency — of their tell and leaves the default: <b>dysgenesis</b> (agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract). The home birth is not a cause; it explains only why a screen-detected, asymptomatic diagnosis instead presented at one month, as maternal T4 washed out.",
+   "with": "<b>TSH 110 with T4 0.6</b> puts the lesion below the pituitary: the feedback loop is intact and responding strongly. That excludes panhypopituitarism outright. It also excludes neonatal Graves disease, which has the opposite pattern of suppressed <b>TSH</b> (thyroid-stimulating hormone) with high <b>T4</b> (thyroxine). Among the primary causes, the <b>exam is silent on goiter</b> and the <b>maternal history is clean</b> (balanced diet, prenatal vitamins). Dyshormonogenesis and iodine deficiency are both goitrous, so neither has its usual clue here. That leaves the default: <b>dysgenesis</b> (agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract). The home birth is not a cause. It explains only why a diagnosis usually made by screening in an asymptomatic infant instead presented at one month, as maternal T4 washed out.",
+   "note": "dp: remove framing and personification, split, expand acronyms",
+   "claims": [
+    {
+     "claim": "Two stem facts close the question.",
+     "dropped": "framing about the question; the two facts are stated next"
+    },
+    {
+     "claim": "TSH 110 with T4 0.6 puts the lesion below the pituitary.",
+     "to": "TSH 110 with T4 0.6 puts the lesion below the pituitary: the feedback loop is intact and responding strongly."
+    },
+    {
+     "claim": "The feedback loop is intact and strongly driven.",
+     "to": "TSH 110 with T4 0.6 puts the lesion below the pituitary: the feedback loop is intact and responding strongly."
+    },
+    {
+     "claim": "Panhypopituitarism is excluded outright.",
+     "to": "That excludes panhypopituitarism outright."
+    },
+    {
+     "claim": "Neonatal Graves runs TSH-suppressed with high T4.",
+     "to": "It also excludes neonatal Graves disease, which has the opposite pattern of suppressed TSH (thyroid-stimulating hormone) with high T4 (thyroxine)."
+    },
+    {
+     "claim": "Neonatal Graves is excluded in the opposite direction.",
+     "to": "It also excludes neonatal Graves disease, which has the opposite pattern of suppressed TSH (thyroid-stimulating hormone) with high T4 (thyroxine)."
+    },
+    {
+     "claim": "Among the primary causes, the exam is silent on goiter.",
+     "to": "Among the primary causes, the exam is silent on goiter and the maternal history is clean (balanced diet, prenatal vitamins)."
+    },
+    {
+     "claim": "The maternal history is clean (balanced diet, prenatal vitamins).",
+     "to": "Among the primary causes, the exam is silent on goiter and the maternal history is clean (balanced diet, prenatal vitamins)."
+    },
+    {
+     "claim": "Dyshormonogenesis and iodine deficiency are the two goitrous mechanisms.",
+     "to": "Dyshormonogenesis and iodine deficiency are both goitrous, so neither has its usual clue here."
+    },
+    {
+     "claim": "The absent goiter and clean maternal history strip them of their tell.",
+     "to": "Dyshormonogenesis and iodine deficiency are both goitrous, so neither has its usual clue here."
+    },
+    {
+     "claim": "That leaves the default: dysgenesis.",
+     "to": "That leaves the default: dysgenesis (agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract)."
+    },
+    {
+     "claim": "Dysgenesis is agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract.",
+     "to": "That leaves the default: dysgenesis (agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract)."
+    },
+    {
+     "claim": "The home birth is not a cause.",
+     "to": "The home birth is not a cause."
+    },
+    {
+     "claim": "The home birth explains only why a screen-detected, asymptomatic diagnosis instead presented at one month.",
+     "to": "It explains only why a diagnosis usually made by screening in an asymptomatic infant instead presented at one month, as maternal T4 washed out."
+    },
+    {
+     "claim": "It presented at one month as maternal T4 washed out.",
+     "to": "It explains only why a diagnosis usually made by screening in an asymptomatic infant instead presented at one month, as maternal T4 washed out."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "TSH 110 with T4 0.6 puts the lesion below the pituitary.",
+     "from": "TSH 110 with T4 0.6 puts the lesion below the pituitary."
+    },
+    {
+     "claim": "The feedback loop is intact and responding strongly.",
+     "from": "The feedback loop is intact and strongly driven."
+    },
+    {
+     "claim": "That excludes panhypopituitarism outright.",
+     "from": "Panhypopituitarism is excluded outright."
+    },
+    {
+     "claim": "It also excludes neonatal Graves disease.",
+     "from": "Neonatal Graves is excluded in the opposite direction."
+    },
+    {
+     "claim": "Neonatal Graves disease has the opposite pattern of suppressed TSH with high T4.",
+     "from": "Neonatal Graves runs TSH-suppressed with high T4."
+    },
+    {
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "T4 stands for thyroxine.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Among the primary causes, the exam is silent on goiter.",
+     "from": "Among the primary causes, the exam is silent on goiter."
+    },
+    {
+     "claim": "The maternal history is clean (balanced diet, prenatal vitamins).",
+     "from": "The maternal history is clean (balanced diet, prenatal vitamins)."
+    },
+    {
+     "claim": "Dyshormonogenesis and iodine deficiency are both goitrous.",
+     "from": "Dyshormonogenesis and iodine deficiency are the two goitrous mechanisms."
+    },
+    {
+     "claim": "Neither has its usual clue here.",
+     "from": "The absent goiter and clean maternal history strip them of their tell."
+    },
+    {
+     "claim": "That leaves the default: dysgenesis.",
+     "from": "That leaves the default: dysgenesis."
+    },
+    {
+     "claim": "Dysgenesis is agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract.",
+     "from": "Dysgenesis is agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract."
+    },
+    {
+     "claim": "The home birth is not a cause.",
+     "from": "The home birth is not a cause."
+    },
+    {
+     "claim": "It explains only why a diagnosis usually made by screening in an asymptomatic infant instead presented at one month.",
+     "from": "The home birth explains only why a screen-detected, asymptomatic diagnosis instead presented at one month."
+    },
+    {
+     "claim": "It presented at one month as maternal T4 washed out.",
+     "from": "It presented at one month as maternal T4 washed out."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "iodine deficiency is off the table (formula is iodine-supplemented)",
+   "with": "excludes iodine deficiency (formula is iodine-supplemented)",
+   "note": "pertinent: remove idiom",
+   "claims": [
+    {
+     "claim": "Iodine deficiency is off the table.",
+     "to": "excludes iodine deficiency (formula is iodine-supplemented)"
+    },
+    {
+     "claim": "Formula is iodine-supplemented.",
+     "to": "excludes iodine deficiency (formula is iodine-supplemented)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The maternal diet and formula feeding exclude iodine deficiency.",
+     "from": "Iodine deficiency is off the table."
+    },
+    {
+     "claim": "Formula is iodine-supplemented.",
+     "from": "Formula is iodine-supplemented."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "maternal T4 crossed the placenta and masked the deficit; timing is the concept's signature, not a distractor",
+   "with": "maternal T4 crossed the placenta and masked the deficit; this delayed onset is characteristic of congenital hypothyroidism",
+   "note": "pertinent: remove framing",
+   "claims": [
+    {
+     "claim": "Maternal T4 crossed the placenta and masked the deficit.",
+     "to": "maternal T4 crossed the placenta and masked the deficit; this delayed onset is characteristic of congenital hypothyroidism"
+    },
+    {
+     "claim": "The timing is the signature of congenital hypothyroidism.",
+     "to": "maternal T4 crossed the placenta and masked the deficit; this delayed onset is characteristic of congenital hypothyroidism"
+    },
+    {
+     "claim": "The timing is not a distractor.",
+     "dropped": "framing about distractors; the timing is stated as characteristic"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Maternal T4 crossed the placenta and masked the deficit.",
+     "from": "Maternal T4 crossed the placenta and masked the deficit."
+    },
+    {
+     "claim": "This delayed onset is characteristic of congenital hypothyroidism.",
+     "from": "The timing is the signature of congenital hypothyroidism."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "<i>Maternal TSH-receptor <b>blocking</b> antibody is the rare mirror of the last row — transient primary hypothyroidism with high TSH, indistinguishable from dysgenesis until it resolves ⚠︎.</i>",
+   "with": "<i>Maternal <b>TSH</b> (thyroid-stimulating hormone) receptor <b>blocking</b> antibody is rare. It is the mirror image of the stimulating antibody in the last row: transient primary hypothyroidism with high TSH, indistinguishable from dysgenesis until it resolves ⚠︎.</i>",
+   "note": "danger: remove em dash, split",
+   "claims": [
+    {
+     "claim": "Maternal TSH-receptor blocking antibody is rare.",
+     "to": "Maternal TSH (thyroid-stimulating hormone) receptor blocking antibody is rare."
+    },
+    {
+     "claim": "It is the mirror of the last row (stimulating antibody).",
+     "to": "It is the mirror image of the stimulating antibody in the last row: transient primary hypothyroidism with high TSH, indistinguishable from dysgenesis until it resolves ⚠︎."
+    },
+    {
+     "claim": "It causes transient primary hypothyroidism with high TSH.",
+     "to": "It is the mirror image of the stimulating antibody in the last row: transient primary hypothyroidism with high TSH, indistinguishable from dysgenesis until it resolves ⚠︎."
+    },
+    {
+     "claim": "It is indistinguishable from dysgenesis until it resolves.",
+     "to": "It is the mirror image of the stimulating antibody in the last row: transient primary hypothyroidism with high TSH, indistinguishable from dysgenesis until it resolves ⚠︎."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Maternal TSH receptor blocking antibody is rare.",
+     "from": "Maternal TSH-receptor blocking antibody is rare."
+    },
+    {
+     "claim": "It is the mirror image of the stimulating antibody in the last row.",
+     "from": "It is the mirror of the last row (stimulating antibody)."
+    },
+    {
+     "claim": "It gives transient primary hypothyroidism with high TSH.",
+     "from": "It causes transient primary hypothyroidism with high TSH."
+    },
+    {
+     "claim": "It is indistinguishable from dysgenesis until it resolves.",
+     "from": "It is indistinguishable from dysgenesis until it resolves."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "High → primary; the pituitary options are dead",
+   "with": "High → primary; the pituitary causes are excluded",
+   "note": "spine: remove idiom",
+   "claims": [
+    {
+     "claim": "If TSH is high, the pituitary options are dead.",
+     "to": "High → primary; the pituitary causes are excluded"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "If TSH is high, the pituitary causes are excluded.",
+     "from": "If TSH is high, the pituitary options are dead."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "The <b>home birth</b> is the stem's most conspicuous detail and it is not a cause — it explains the missed newborn screen and therefore the unusual symptomatic presentation. The <b>maternal diet sentence</b> is a negative clue disguised as a positive one: it exists to kill option B. <b>Primigravida, age 24, unremarkable family history</b> are all inert here, though the absent family history does modestly argue against a recessive enzyme defect.",
+   "with": "The <b>home birth</b> is not a cause. It explains the missed newborn screen and therefore the unusual symptomatic presentation. The <b>maternal diet</b> is a negative clue: it excludes iodine deficiency. <b>Primigravida, age 24, unremarkable family history</b> do not point to a cause, though the absent family history modestly argues against a recessive enzyme defect.",
+   "note": "decoy note: remove framing and personification",
+   "reworded_bold": [
+    "maternal diet sentence"
+   ],
+   "claims": [
+    {
+     "claim": "The home birth is the stem's most conspicuous detail.",
+     "dropped": "framing about the stem"
+    },
+    {
+     "claim": "The home birth is not a cause.",
+     "to": "The home birth is not a cause."
+    },
+    {
+     "claim": "It explains the missed newborn screen and therefore the unusual symptomatic presentation.",
+     "to": "It explains the missed newborn screen and therefore the unusual symptomatic presentation."
+    },
+    {
+     "claim": "The maternal diet sentence is a negative clue disguised as a positive one.",
+     "to": "The maternal diet is a negative clue: it excludes iodine deficiency."
+    },
+    {
+     "claim": "It exists to exclude option B (iodine deficiency).",
+     "to": "The maternal diet is a negative clue: it excludes iodine deficiency."
+    },
+    {
+     "claim": "Primigravida, age 24 and unremarkable family history are all inert here.",
+     "to": "Primigravida, age 24, unremarkable family history do not point to a cause, though the absent family history modestly argues against a recessive enzyme defect."
+    },
+    {
+     "claim": "The absent family history does modestly argue against a recessive enzyme defect.",
+     "to": "Primigravida, age 24, unremarkable family history do not point to a cause, though the absent family history modestly argues against a recessive enzyme defect."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The home birth is not a cause.",
+     "from": "The home birth is not a cause."
+    },
+    {
+     "claim": "It explains the missed newborn screen and therefore the unusual symptomatic presentation.",
+     "from": "It explains the missed newborn screen and therefore the unusual symptomatic presentation."
+    },
+    {
+     "claim": "The maternal diet is a negative clue.",
+     "from": "The maternal diet sentence is a negative clue disguised as a positive one."
+    },
+    {
+     "claim": "It excludes iodine deficiency.",
+     "from": "It exists to exclude option B (iodine deficiency)."
+    },
+    {
+     "claim": "Primigravida, age 24, unremarkable family history do not point to a cause.",
+     "from": "Primigravida, age 24 and unremarkable family history are all inert here."
+    },
+    {
+     "claim": "The absent family history modestly argues against a recessive enzyme defect.",
+     "from": "The absent family history does modestly argue against a recessive enzyme defect."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "High TSH, low T4, no goiter is <b>dysgenesis</b>; a goiter means a synthesis defect, and a low TSH means the pituitary. &middot; Symptom onset at weeks-to-months, not at birth, is the fingerprint of congenital hypothyroidism — placental maternal T4 covers the first weeks, so a normal newborn exam never reassures. &middot; Unconjugated jaundice past <b>2 weeks</b> of age earns a thyroid and a galactosemia thought; conjugated jaundice at any age earns a biliary one. &middot; Macroglossia plus hoarse cry equals mucopolysaccharide deposition — the exam's shorthand for hypothyroid soft tissue, distinct from Beckwith-Wiedemann (macroglossia with hemihyperplasia and hypoglycemia ⚠︎). &middot; Treat on the screening result; imaging to name the cause never delays levothyroxine, because the neurodevelopmental window is measured in weeks <i>(in-context: no deficits when treatment begins in the neonatal period)</i>. &middot; A goiter in a hypothyroid newborn reroutes you to a synthesis problem or an iodine problem — dysgenesis has no gland to enlarge.",
+   "with": "High <b>TSH</b> (thyroid-stimulating hormone), low <b>T4</b> (thyroxine), no goiter is <b>dysgenesis</b>; a goiter means a synthesis defect, and a low TSH means the pituitary. &middot; Symptom onset at weeks to months, not at birth, is characteristic of congenital hypothyroidism. Placental maternal T4 covers the first weeks, so a normal newborn exam never reassures. &middot; Unconjugated jaundice past <b>2 weeks</b> of age should prompt consideration of hypothyroidism and galactosemia; conjugated jaundice at any age should prompt consideration of a biliary cause. &middot; Macroglossia plus hoarse cry reflects mucopolysaccharide deposition in hypothyroid soft tissue. This differs from Beckwith-Wiedemann syndrome (macroglossia with hemihyperplasia and hypoglycemia ⚠︎). &middot; Treat on the screening result. Imaging to name the cause never delays levothyroxine, because the neurodevelopmental window is measured in weeks; there are no deficits when treatment begins in the neonatal period. &middot; A goiter in a hypothyroid newborn points to a synthesis problem or an iodine problem; dysgenesis has no gland to enlarge.",
+   "note": "pearls: remove em dashes, idioms, provenance tag; expand acronyms",
+   "claims": [
+    {
+     "claim": "High TSH, low T4, no goiter is dysgenesis.",
+     "to": "High TSH (thyroid-stimulating hormone), low T4 (thyroxine), no goiter is dysgenesis; a goiter means a synthesis defect, and a low TSH means the pituitary."
+    },
+    {
+     "claim": "A goiter means a synthesis defect.",
+     "to": "High TSH (thyroid-stimulating hormone), low T4 (thyroxine), no goiter is dysgenesis; a goiter means a synthesis defect, and a low TSH means the pituitary."
+    },
+    {
+     "claim": "A low TSH means the pituitary.",
+     "to": "High TSH (thyroid-stimulating hormone), low T4 (thyroxine), no goiter is dysgenesis; a goiter means a synthesis defect, and a low TSH means the pituitary."
+    },
+    {
+     "claim": "Symptom onset at weeks-to-months, not at birth, is the fingerprint of congenital hypothyroidism.",
+     "to": "Symptom onset at weeks to months, not at birth, is characteristic of congenital hypothyroidism."
+    },
+    {
+     "claim": "Placental maternal T4 covers the first weeks.",
+     "to": "Placental maternal T4 covers the first weeks, so a normal newborn exam never reassures."
+    },
+    {
+     "claim": "A normal newborn exam never reassures.",
+     "to": "Placental maternal T4 covers the first weeks, so a normal newborn exam never reassures."
+    },
+    {
+     "claim": "Unconjugated jaundice past 2 weeks of age earns a thyroid and a galactosemia thought.",
+     "to": "Unconjugated jaundice past 2 weeks of age should prompt consideration of hypothyroidism and galactosemia; conjugated jaundice at any age should prompt consideration of a biliary cause."
+    },
+    {
+     "claim": "Conjugated jaundice at any age earns a biliary thought.",
+     "to": "Unconjugated jaundice past 2 weeks of age should prompt consideration of hypothyroidism and galactosemia; conjugated jaundice at any age should prompt consideration of a biliary cause."
+    },
+    {
+     "claim": "Macroglossia plus hoarse cry equals mucopolysaccharide deposition.",
+     "to": "Macroglossia plus hoarse cry reflects mucopolysaccharide deposition in hypothyroid soft tissue."
+    },
+    {
+     "claim": "This is the shorthand for hypothyroid soft tissue.",
+     "to": "Macroglossia plus hoarse cry reflects mucopolysaccharide deposition in hypothyroid soft tissue."
+    },
+    {
+     "claim": "It is distinct from Beckwith-Wiedemann (macroglossia with hemihyperplasia and hypoglycemia ⚠︎).",
+     "to": "This differs from Beckwith-Wiedemann syndrome (macroglossia with hemihyperplasia and hypoglycemia ⚠︎)."
+    },
+    {
+     "claim": "Treat on the screening result.",
+     "to": "Treat on the screening result."
+    },
+    {
+     "claim": "Imaging to name the cause never delays levothyroxine.",
+     "to": "Imaging to name the cause never delays levothyroxine, because the neurodevelopmental window is measured in weeks; there are no deficits when treatment begins in the neonatal period."
+    },
+    {
+     "claim": "The neurodevelopmental window is measured in weeks.",
+     "to": "Imaging to name the cause never delays levothyroxine, because the neurodevelopmental window is measured in weeks; there are no deficits when treatment begins in the neonatal period."
+    },
+    {
+     "claim": "There are no deficits when treatment begins in the neonatal period.",
+     "to": "Imaging to name the cause never delays levothyroxine, because the neurodevelopmental window is measured in weeks; there are no deficits when treatment begins in the neonatal period."
+    },
+    {
+     "claim": "A goiter in a hypothyroid newborn reroutes you to a synthesis problem or an iodine problem.",
+     "to": "A goiter in a hypothyroid newborn points to a synthesis problem or an iodine problem; dysgenesis has no gland to enlarge."
+    },
+    {
+     "claim": "Dysgenesis has no gland to enlarge.",
+     "to": "A goiter in a hypothyroid newborn points to a synthesis problem or an iodine problem; dysgenesis has no gland to enlarge."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "T4 stands for thyroxine.",
+     "from": "expansion"
+    },
+    {
+     "claim": "High TSH, low T4, no goiter is dysgenesis.",
+     "from": "High TSH, low T4, no goiter is dysgenesis."
+    },
+    {
+     "claim": "A goiter means a synthesis defect.",
+     "from": "A goiter means a synthesis defect."
+    },
+    {
+     "claim": "A low TSH means the pituitary.",
+     "from": "A low TSH means the pituitary."
+    },
+    {
+     "claim": "Symptom onset at weeks to months, not at birth, is characteristic of congenital hypothyroidism.",
+     "from": "Symptom onset at weeks-to-months, not at birth, is the fingerprint of congenital hypothyroidism."
+    },
+    {
+     "claim": "Placental maternal T4 covers the first weeks.",
+     "from": "Placental maternal T4 covers the first weeks."
+    },
+    {
+     "claim": "A normal newborn exam never reassures.",
+     "from": "A normal newborn exam never reassures."
+    },
+    {
+     "claim": "Unconjugated jaundice past 2 weeks should prompt consideration of hypothyroidism and galactosemia.",
+     "from": "Unconjugated jaundice past 2 weeks of age earns a thyroid and a galactosemia thought."
+    },
+    {
+     "claim": "Conjugated jaundice at any age should prompt consideration of a biliary cause.",
+     "from": "Conjugated jaundice at any age earns a biliary thought."
+    },
+    {
+     "claim": "Macroglossia plus hoarse cry reflects mucopolysaccharide deposition.",
+     "from": "Macroglossia plus hoarse cry equals mucopolysaccharide deposition."
+    },
+    {
+     "claim": "The deposition is in hypothyroid soft tissue.",
+     "from": "This is the shorthand for hypothyroid soft tissue."
+    },
+    {
+     "claim": "This differs from Beckwith-Wiedemann syndrome (macroglossia with hemihyperplasia and hypoglycemia ⚠︎).",
+     "from": "It is distinct from Beckwith-Wiedemann (macroglossia with hemihyperplasia and hypoglycemia ⚠︎)."
+    },
+    {
+     "claim": "Treat on the screening result.",
+     "from": "Treat on the screening result."
+    },
+    {
+     "claim": "Imaging to name the cause never delays levothyroxine.",
+     "from": "Imaging to name the cause never delays levothyroxine."
+    },
+    {
+     "claim": "The neurodevelopmental window is measured in weeks.",
+     "from": "The neurodevelopmental window is measured in weeks."
+    },
+    {
+     "claim": "There are no deficits when treatment begins in the neonatal period.",
+     "from": "There are no deficits when treatment begins in the neonatal period."
+    },
+    {
+     "claim": "A goiter in a hypothyroid newborn points to a synthesis problem or an iodine problem.",
+     "from": "A goiter in a hypothyroid newborn reroutes you to a synthesis problem or an iodine problem."
+    },
+    {
+     "claim": "Dysgenesis has no gland to enlarge.",
+     "from": "Dysgenesis has no gland to enlarge."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "Verified partner: <b>The Sick Jaundiced Neonate with a Positive Screen</b> — shared complaint (jaundiced newborn with an abnormal screen), discriminator as a question: <i>is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?</i> Also pairs with <b>Thyroid Mimics &amp; Discriminators</b> and <b>Levothyroxine Titration</b>, which own the adult version of the same TSH-direction logic and the dosing loop this brief only points at. Part I <b>Hypotonia in an Infant</b> owns the other causes of low tone in infancy and the yearly TSH in Down syndrome.",
+   "with": "<b>The Sick Jaundiced Neonate with a Positive Screen</b> shares the complaint of a jaundiced newborn with an abnormal screen. Ask: <i>is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?</i> <b>Thyroid Mimics &amp; Discriminators</b> and <b>Levothyroxine Titration</b> cover the adult version of the same <b>TSH</b> (thyroid-stimulating hormone) direction logic and the dosing loop, which this brief only mentions. Part I <b>Hypotonia in an Infant</b> covers the other causes of low tone in infancy and the yearly TSH in Down syndrome.",
+   "note": "pairs with: remove Verified, em dash, owns",
+   "claims": [
+    {
+     "claim": "Verified partner.",
+     "dropped": "workflow verification note"
+    },
+    {
+     "claim": "The Sick Jaundiced Neonate with a Positive Screen shares the complaint (jaundiced newborn with an abnormal screen).",
+     "to": "The Sick Jaundiced Neonate with a Positive Screen shares the complaint of a jaundiced newborn with an abnormal screen."
+    },
+    {
+     "claim": "Discriminator: is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?",
+     "to": "Ask: is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?"
+    },
+    {
+     "claim": "Thyroid Mimics & Discriminators and Levothyroxine Titration own the adult version of the same TSH-direction logic and the dosing loop.",
+     "to": "Thyroid Mimics & Discriminators and Levothyroxine Titration cover the adult version of the same TSH (thyroid-stimulating hormone) direction logic and the dosing loop, which this brief only mentions."
+    },
+    {
+     "claim": "This brief only points at the dosing loop.",
+     "to": "Thyroid Mimics & Discriminators and Levothyroxine Titration cover the adult version of the same TSH (thyroid-stimulating hormone) direction logic and the dosing loop, which this brief only mentions."
+    },
+    {
+     "claim": "Part I Hypotonia in an Infant owns the other causes of low tone in infancy and the yearly TSH in Down syndrome.",
+     "to": "Part I Hypotonia in an Infant covers the other causes of low tone in infancy and the yearly TSH in Down syndrome."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The Sick Jaundiced Neonate with a Positive Screen shares the complaint of a jaundiced newborn with an abnormal screen.",
+     "from": "The Sick Jaundiced Neonate with a Positive Screen shares the complaint (jaundiced newborn with an abnormal screen)."
+    },
+    {
+     "claim": "Ask: is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?",
+     "from": "Discriminator: is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?"
+    },
+    {
+     "claim": "Thyroid Mimics & Discriminators and Levothyroxine Titration cover the adult version of the same TSH direction logic and the dosing loop.",
+     "from": "Thyroid Mimics & Discriminators and Levothyroxine Titration own the adult version of the same TSH-direction logic and the dosing loop."
+    },
+    {
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "This brief only mentions the dosing loop.",
+     "from": "This brief only points at the dosing loop."
+    },
+    {
+     "claim": "Part I Hypotonia in an Infant covers the other causes of low tone in infancy and the yearly TSH in Down syndrome.",
+     "from": "Part I Hypotonia in an Infant owns the other causes of low tone in infancy and the yearly TSH in Down syndrome."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "In any hormone-deficiency stem, the <b>trophic hormone's direction locates the lesion</b> — high TSH puts it in the gland, low TSH puts it in the pituitary — and once you are in the gland, the <b>presence or absence of an organ</b> (goiter or none) separates a machinery defect from a formation defect.",
+   "with": "In any hormone deficiency, the <b>trophic hormone's direction locates the lesion</b>. High <b>TSH</b> (thyroid-stimulating hormone) puts it in the gland; low TSH puts it in the pituitary. Within the gland, the <b>presence or absence of an organ</b> (goiter or none) separates a machinery defect from a formation defect.",
+   "note": "rule: split, remove em dashes",
+   "claims": [
+    {
+     "claim": "In any hormone-deficiency stem, the trophic hormone's direction locates the lesion.",
+     "to": "In any hormone deficiency, the trophic hormone's direction locates the lesion."
+    },
+    {
+     "claim": "High TSH puts the lesion in the gland.",
+     "to": "High TSH (thyroid-stimulating hormone) puts it in the gland; low TSH puts it in the pituitary."
+    },
+    {
+     "claim": "Low TSH puts the lesion in the pituitary.",
+     "to": "High TSH (thyroid-stimulating hormone) puts it in the gland; low TSH puts it in the pituitary."
+    },
+    {
+     "claim": "Within the gland, presence or absence of an organ (goiter or none) separates a machinery defect from a formation defect.",
+     "to": "Within the gland, the presence or absence of an organ (goiter or none) separates a machinery defect from a formation defect."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In any hormone deficiency, the trophic hormone's direction locates the lesion.",
+     "from": "In any hormone-deficiency stem, the trophic hormone's direction locates the lesion."
+    },
+    {
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "High TSH puts it in the gland.",
+     "from": "High TSH puts the lesion in the gland."
+    },
+    {
+     "claim": "Low TSH puts it in the pituitary.",
+     "from": "Low TSH puts the lesion in the pituitary."
+    },
+    {
+     "claim": "Within the gland, the presence or absence of an organ (goiter or none) separates a machinery defect from a formation defect.",
+     "from": "Within the gland, presence or absence of an organ (goiter or none) separates a machinery defect from a formation defect."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "It causes neonatal <b>Graves</b> — suppressed TSH, high T4, tachycardia and hyperphagia; every value and symptom here is inverted",
+   "with": "It causes neonatal <b>Graves</b> disease, with suppressed TSH, high T4, tachycardia and hyperphagia; every value and symptom here is inverted",
+   "note": "trap: remove em dash",
+   "claims": [
+    {
+     "claim": "Transplacental TSH receptor-stimulating antibody causes neonatal Graves.",
+     "to": "It causes neonatal Graves disease, with suppressed TSH, high T4, tachycardia and hyperphagia; every value and symptom here is inverted"
+    },
+    {
+     "claim": "Neonatal Graves has suppressed TSH, high T4, tachycardia and hyperphagia.",
+     "to": "It causes neonatal Graves disease, with suppressed TSH, high T4, tachycardia and hyperphagia; every value and symptom here is inverted"
+    },
+    {
+     "claim": "Every value and symptom here is inverted.",
+     "to": "It causes neonatal Graves disease, with suppressed TSH, high T4, tachycardia and hyperphagia; every value and symptom here is inverted"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "It causes neonatal Graves disease.",
+     "from": "Transplacental TSH receptor-stimulating antibody causes neonatal Graves."
+    },
+    {
+     "claim": "Neonatal Graves disease has suppressed TSH, high T4, tachycardia and hyperphagia.",
+     "from": "Neonatal Graves has suppressed TSH, high T4, tachycardia and hyperphagia."
+    },
+    {
+     "claim": "Every value and symptom here is inverted.",
+     "from": "Every value and symptom here is inverted."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "Iodine deficiency, endemic goiter: That sentence <b>excludes</b> it: balanced diet plus prenatal vitamins, and all formula contains iodine",
+   "with": "Iodine deficiency, endemic goiter: the balanced maternal diet plus prenatal vitamins excludes it, and all formula contains iodine",
+   "note": "trap: one colon per line; emphasis bold removed",
+   "reworded_bold": [
+    "excludes"
+   ],
+   "claims": [
+    {
+     "claim": "The maternal diet sentence (balanced diet plus prenatal vitamins) excludes iodine deficiency.",
+     "to": "Iodine deficiency, endemic goiter: the balanced maternal diet plus prenatal vitamins excludes it, and all formula contains iodine"
+    },
+    {
+     "claim": "All formula contains iodine.",
+     "to": "Iodine deficiency, endemic goiter: the balanced maternal diet plus prenatal vitamins excludes it, and all formula contains iodine"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The balanced maternal diet plus prenatal vitamins excludes iodine deficiency.",
+     "from": "The maternal diet sentence (balanced diet plus prenatal vitamins) excludes iodine deficiency."
+    },
+    {
+     "claim": "All formula contains iodine.",
+     "from": "All formula contains iodine."
+    }
+   ]
+  }
+ ]
+}

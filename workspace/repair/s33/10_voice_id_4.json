@@ -1,0 +1,1381 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "<p>Anaphylaxis is a clinical diagnosis made by <b>counting organ systems against the clock</b>; hypotension is not required. Within minutes to hours of a likely allergen, <b>skin or mucosal findings plus one more system</b> (respiratory, gastrointestinal or cardiovascular) meet criteria. This boy has wheals and periorbital swelling (skin), throat tightness (respiratory) and cramps (gut) <b>30 minutes</b> after amoxicillin, so this is anaphylaxis despite a normal blood pressure. The mechanism is <b>IgE-mediated mast cell and basophil degranulation</b> releasing histamine, prostaglandins and leukotrienes. &quot;No known drug allergies&quot; does not argue against it: an <b>earlier exposure sensitized</b> him without a reaction, and re-exposure triggers the release.</p>\n<p>The exception is <b>angioedema without hives</b>. Swelling of the lips, tongue, face or bowel wall with <b>no wheals and no itch</b>, from an ACE inhibitor or hereditary angioedema, is <b>bradykinin</b>-mediated, builds over hours and responds poorly to epinephrine and antihistamines. Rashes that arrive <b>days</b> into a drug or an infection are delayed reactions, not anaphylaxis.</p>",
+   "with": "<p>Anaphylaxis is a clinical diagnosis made by <b>counting the organ systems involved</b> and timing their onset after exposure; hypotension is not required. Within minutes to hours of a likely allergen, <b>skin or mucosal findings plus one more system</b> (respiratory, gastrointestinal or cardiovascular) meet criteria. This boy has wheals and periorbital swelling (skin), throat tightness (respiratory) and cramps (gut) <b>30 minutes</b> after amoxicillin. This is anaphylaxis despite a normal blood pressure. The mechanism is <b>IgE-mediated mast cell and basophil degranulation</b> releasing histamine, prostaglandins and leukotrienes. &quot;No known drug allergies&quot; does not argue against it: an <b>earlier exposure sensitized</b> him without a reaction, and re-exposure triggers the release.</p>\n<p>The exception is <b>angioedema without hives</b>. Swelling of the lips, tongue, face or bowel wall with <b>no wheals and no itch</b>, from an <b>ACE</b> (angiotensin-converting enzyme) inhibitor or hereditary angioedema, is <b>bradykinin</b>-mediated. It builds over hours and responds poorly to epinephrine and antihistamines. Rashes that arrive <b>days</b> into a drug or an infection are delayed reactions, not anaphylaxis.</p>",
+   "note": "voice: .dp; slogan bold reworded, long sentences split, ACE expanded",
+   "reworded_bold": [
+    "counting organ systems against the clock"
+   ],
+   "claims": [
+    {
+     "claim": "Anaphylaxis is a clinical diagnosis made by counting organ systems against the clock.",
+     "to": "Anaphylaxis is a clinical diagnosis made by counting the organ systems involved and timing their onset after exposure; hypotension is not required."
+    },
+    {
+     "claim": "Hypotension is not required for anaphylaxis.",
+     "to": "Anaphylaxis is a clinical diagnosis made by counting the organ systems involved and timing their onset after exposure; hypotension is not required."
+    },
+    {
+     "claim": "Within minutes to hours of a likely allergen, skin or mucosal findings plus one more system (respiratory, gastrointestinal or cardiovascular) meet criteria.",
+     "to": "Within minutes to hours of a likely allergen, skin or mucosal findings plus one more system (respiratory, gastrointestinal or cardiovascular) meet criteria."
+    },
+    {
+     "claim": "This boy has wheals and periorbital swelling (skin), throat tightness (respiratory) and cramps (gut) 30 minutes after amoxicillin.",
+     "to": "This boy has wheals and periorbital swelling (skin), throat tightness (respiratory) and cramps (gut) 30 minutes after amoxicillin."
+    },
+    {
+     "claim": "This is anaphylaxis despite a normal blood pressure.",
+     "to": "This is anaphylaxis despite a normal blood pressure."
+    },
+    {
+     "claim": "The mechanism is IgE-mediated mast cell and basophil degranulation releasing histamine, prostaglandins and leukotrienes.",
+     "to": "The mechanism is IgE-mediated mast cell and basophil degranulation releasing histamine, prostaglandins and leukotrienes."
+    },
+    {
+     "claim": "No known drug allergies does not argue against anaphylaxis.",
+     "to": "\"No known drug allergies\" does not argue against it: an earlier exposure sensitized him without a reaction, and re-exposure triggers the release."
+    },
+    {
+     "claim": "An earlier exposure sensitized him without a reaction, and re-exposure triggers the release.",
+     "to": "\"No known drug allergies\" does not argue against it: an earlier exposure sensitized him without a reaction, and re-exposure triggers the release."
+    },
+    {
+     "claim": "The exception is angioedema without hives.",
+     "to": "The exception is angioedema without hives."
+    },
+    {
+     "claim": "Swelling of the lips, tongue, face or bowel wall with no wheals and no itch, from an ACE inhibitor or hereditary angioedema, is bradykinin-mediated.",
+     "to": "Swelling of the lips, tongue, face or bowel wall with no wheals and no itch, from an ACE (angiotensin-converting enzyme) inhibitor or hereditary angioedema, is bradykinin-mediated."
+    },
+    {
+     "claim": "Bradykinin swelling builds over hours and responds poorly to epinephrine and antihistamines.",
+     "to": "It builds over hours and responds poorly to epinephrine and antihistamines."
+    },
+    {
+     "claim": "Rashes that arrive days into a drug or an infection are delayed reactions, not anaphylaxis.",
+     "to": "Rashes that arrive days into a drug or an infection are delayed reactions, not anaphylaxis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Anaphylaxis is a clinical diagnosis made by counting the organ systems involved and timing their onset after exposure.",
+     "from": "Anaphylaxis is a clinical diagnosis made by counting organ systems against the clock."
+    },
+    {
+     "claim": "Hypotension is not required for anaphylaxis.",
+     "from": "Hypotension is not required for anaphylaxis."
+    },
+    {
+     "claim": "Within minutes to hours of a likely allergen, skin or mucosal findings plus one more system (respiratory, gastrointestinal or cardiovascular) meet criteria.",
+     "from": "Within minutes to hours of a likely allergen, skin or mucosal findings plus one more system (respiratory, gastrointestinal or cardiovascular) meet criteria."
+    },
+    {
+     "claim": "This boy has wheals and periorbital swelling (skin), throat tightness (respiratory) and cramps (gut) 30 minutes after amoxicillin.",
+     "from": "This boy has wheals and periorbital swelling (skin), throat tightness (respiratory) and cramps (gut) 30 minutes after amoxicillin."
+    },
+    {
+     "claim": "This is anaphylaxis despite a normal blood pressure.",
+     "from": "This is anaphylaxis despite a normal blood pressure."
+    },
+    {
+     "claim": "The mechanism is IgE-mediated mast cell and basophil degranulation releasing histamine, prostaglandins and leukotrienes.",
+     "from": "The mechanism is IgE-mediated mast cell and basophil degranulation releasing histamine, prostaglandins and leukotrienes."
+    },
+    {
+     "claim": "No known drug allergies does not argue against anaphylaxis.",
+     "from": "No known drug allergies does not argue against anaphylaxis."
+    },
+    {
+     "claim": "An earlier exposure sensitized him without a reaction, and re-exposure triggers the release.",
+     "from": "An earlier exposure sensitized him without a reaction, and re-exposure triggers the release."
+    },
+    {
+     "claim": "The exception is angioedema without hives.",
+     "from": "The exception is angioedema without hives."
+    },
+    {
+     "claim": "Swelling of the lips, tongue, face or bowel wall with no wheals and no itch, from an ACE inhibitor or hereditary angioedema, is bradykinin-mediated.",
+     "from": "Swelling of the lips, tongue, face or bowel wall with no wheals and no itch, from an ACE inhibitor or hereditary angioedema, is bradykinin-mediated."
+    },
+    {
+     "claim": "Bradykinin swelling builds over hours and responds poorly to epinephrine and antihistamines.",
+     "from": "Bradykinin swelling builds over hours and responds poorly to epinephrine and antihistamines."
+    },
+    {
+     "claim": "Rashes that arrive days into a drug or an infection are delayed reactions, not anaphylaxis.",
+     "from": "Rashes that arrive days into a drug or an infection are delayed reactions, not anaphylaxis."
+    },
+    {
+     "claim": "ACE stands for angiotensin-converting enzyme.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "The deadly delay is waiting for hypotension; in children it is a late sign, and throat tightness or wheeze with hives is enough to give epinephrine &middot; Diagnosis is clinical; a serum tryptase drawn early can support mast cell activation afterward but never delays treatment &middot; Bradykinin swelling is the one angioedema where epinephrine disappoints; stop the ACE inhibitor for life and check C4 when swelling recurs without a drug &middot;",
+   "with": "Waiting for hypotension delays treatment and can be fatal; in children hypotension is a late sign, and throat tightness or wheeze with hives is enough to give epinephrine &middot; Diagnosis is clinical; a serum tryptase drawn early can support mast cell activation afterward but never delays treatment &middot; Bradykinin swelling is the one angioedema that responds poorly to epinephrine; stop the <b>ACE</b> (angiotensin-converting enzyme) inhibitor for life and check C4 when swelling recurs without a drug &middot;",
+   "note": "voice: pearls; dramatic opener and personification removed, ACE expanded",
+   "claims": [
+    {
+     "claim": "Waiting for hypotension is a deadly delay.",
+     "to": "Waiting for hypotension delays treatment and can be fatal; in children hypotension is a late sign, and throat tightness or wheeze with hives is enough to give epinephrine"
+    },
+    {
+     "claim": "In children hypotension is a late sign.",
+     "to": "Waiting for hypotension delays treatment and can be fatal; in children hypotension is a late sign, and throat tightness or wheeze with hives is enough to give epinephrine"
+    },
+    {
+     "claim": "Throat tightness or wheeze with hives is enough to give epinephrine.",
+     "to": "Waiting for hypotension delays treatment and can be fatal; in children hypotension is a late sign, and throat tightness or wheeze with hives is enough to give epinephrine"
+    },
+    {
+     "claim": "Diagnosis is clinical.",
+     "to": "Diagnosis is clinical; a serum tryptase drawn early can support mast cell activation afterward but never delays treatment"
+    },
+    {
+     "claim": "A serum tryptase drawn early can support mast cell activation afterward but never delays treatment.",
+     "to": "Diagnosis is clinical; a serum tryptase drawn early can support mast cell activation afterward but never delays treatment"
+    },
+    {
+     "claim": "Bradykinin swelling is the one angioedema where epinephrine disappoints.",
+     "to": "Bradykinin swelling is the one angioedema that responds poorly to epinephrine; stop the ACE (angiotensin-converting enzyme) inhibitor for life and check C4 when swelling recurs without a drug"
+    },
+    {
+     "claim": "Stop the ACE inhibitor for life.",
+     "to": "Bradykinin swelling is the one angioedema that responds poorly to epinephrine; stop the ACE (angiotensin-converting enzyme) inhibitor for life and check C4 when swelling recurs without a drug"
+    },
+    {
+     "claim": "Check C4 when swelling recurs without a drug.",
+     "to": "Bradykinin swelling is the one angioedema that responds poorly to epinephrine; stop the ACE (angiotensin-converting enzyme) inhibitor for life and check C4 when swelling recurs without a drug"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Waiting for hypotension delays treatment and can be fatal.",
+     "from": "Waiting for hypotension is a deadly delay."
+    },
+    {
+     "claim": "In children hypotension is a late sign.",
+     "from": "In children hypotension is a late sign."
+    },
+    {
+     "claim": "Throat tightness or wheeze with hives is enough to give epinephrine.",
+     "from": "Throat tightness or wheeze with hives is enough to give epinephrine."
+    },
+    {
+     "claim": "Diagnosis is clinical.",
+     "from": "Diagnosis is clinical."
+    },
+    {
+     "claim": "A serum tryptase drawn early can support mast cell activation afterward but never delays treatment.",
+     "from": "A serum tryptase drawn early can support mast cell activation afterward but never delays treatment."
+    },
+    {
+     "claim": "Bradykinin swelling is the one angioedema that responds poorly to epinephrine.",
+     "from": "Bradykinin swelling is the one angioedema where epinephrine disappoints."
+    },
+    {
+     "claim": "Stop the ACE inhibitor for life.",
+     "from": "Stop the ACE inhibitor for life."
+    },
+    {
+     "claim": "Check C4 when swelling recurs without a drug.",
+     "from": "Check C4 when swelling recurs without a drug."
+    },
+    {
+     "claim": "ACE stands for angiotensin-converting enzyme.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "Part II <b>Fever, Rash and Joint Pain in a Child or Adolescent</b> owns the serum sickness-like reaction: did the hives start 5 to 14 days into the drug, with joint pain? Part I <b>Transfusion Reactions</b> owns anaphylaxis during transfusion: is the recipient IgA deficient? Aquifer <b>Shock in Children</b> owns anaphylactic shock as a distributive subtype: is perfusion abnormal? Part I <b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b> owns FPIES, the non-IgE mimic: is it hours of vomiting without hives? Part I <b>DTaP: Contraindication vs. Precaution</b> owns anaphylaxis after a vaccine dose as a contraindication.  Aquifer",
+   "with": "Part II <b>Fever, Rash and Joint Pain in a Child or Adolescent</b> covers the serum sickness-like reaction: did the hives start 5 to 14 days into the drug, with joint pain? Part I <b>Transfusion Reactions</b> covers anaphylaxis during transfusion: is the recipient IgA deficient? Aquifer <b>Shock in Children</b> covers anaphylactic shock as a distributive subtype: is perfusion abnormal? Part I <b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b> covers <b>FPIES</b> (food protein-induced enterocolitis syndrome), the non-IgE mimic: is it hours of vomiting without hives? Part I <b>DTaP: Contraindication vs. Precaution</b> covers anaphylaxis after a vaccine dose as a contraindication. Aquifer",
+   "note": "voice: Pairs with; owns -> covers, FPIES expanded, double space removed",
+   "claims": [
+    {
+     "claim": "Fever, Rash and Joint Pain in a Child or Adolescent covers the serum sickness-like reaction: hives starting 5 to 14 days into the drug, with joint pain.",
+     "to": "Part II Fever, Rash and Joint Pain in a Child or Adolescent covers the serum sickness-like reaction: did the hives start 5 to 14 days into the drug, with joint pain?"
+    },
+    {
+     "claim": "Transfusion Reactions covers anaphylaxis during transfusion: is the recipient IgA deficient?",
+     "to": "Part I Transfusion Reactions covers anaphylaxis during transfusion: is the recipient IgA deficient?"
+    },
+    {
+     "claim": "Shock in Children covers anaphylactic shock as a distributive subtype: is perfusion abnormal?",
+     "to": "Aquifer Shock in Children covers anaphylactic shock as a distributive subtype: is perfusion abnormal?"
+    },
+    {
+     "claim": "Infant Stool Complaints covers FPIES, the non-IgE mimic: hours of vomiting without hives.",
+     "to": "Part I Infant Stool Complaints: Dyschezia, FPIAP & Secondary Lactase Deficiency covers FPIES (food protein-induced enterocolitis syndrome), the non-IgE mimic: is it hours of vomiting without hives?"
+    },
+    {
+     "claim": "DTaP: Contraindication vs. Precaution covers anaphylaxis after a vaccine dose as a contraindication.",
+     "to": "Precaution covers anaphylaxis after a vaccine dose as a contraindication."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Fever, Rash and Joint Pain in a Child or Adolescent covers the serum sickness-like reaction: hives starting 5 to 14 days into the drug, with joint pain.",
+     "from": "Fever, Rash and Joint Pain in a Child or Adolescent covers the serum sickness-like reaction: hives starting 5 to 14 days into the drug, with joint pain."
+    },
+    {
+     "claim": "Transfusion Reactions covers anaphylaxis during transfusion: is the recipient IgA deficient?",
+     "from": "Transfusion Reactions covers anaphylaxis during transfusion: is the recipient IgA deficient?"
+    },
+    {
+     "claim": "Shock in Children covers anaphylactic shock as a distributive subtype: is perfusion abnormal?",
+     "from": "Shock in Children covers anaphylactic shock as a distributive subtype: is perfusion abnormal?"
+    },
+    {
+     "claim": "Infant Stool Complaints covers FPIES, the non-IgE mimic: hours of vomiting without hives.",
+     "from": "Infant Stool Complaints covers FPIES, the non-IgE mimic: hours of vomiting without hives."
+    },
+    {
+     "claim": "DTaP: Contraindication vs. Precaution covers anaphylaxis after a vaccine dose as a contraindication.",
+     "from": "DTaP: Contraindication vs. Precaution covers anaphylaxis after a vaccine dose as a contraindication."
+    },
+    {
+     "claim": "FPIES stands for food protein-induced enterocolitis syndrome.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "Count systems against the clock: skin or mucosa plus any second system within minutes to hours of an exposure is anaphylaxis and gets IM epinephrine first; swelling with no hives points to bradykinin, and a rash that arrives days later points to a delayed drug or immune complex reaction.",
+   "with": "Skin or mucosal involvement plus any second system within minutes to hours of an exposure is anaphylaxis. Give <b>IM</b> (intramuscular) epinephrine first. Swelling with no hives points to bradykinin. A rash that arrives days later points to a delayed drug or immune complex reaction.",
+   "note": "voice: rule; slogan opener removed, split, IM expanded",
+   "claims": [
+    {
+     "claim": "Count systems against the clock.",
+     "dropped": "slogan; the counting of systems and the time window are stated in the next sentence"
+    },
+    {
+     "claim": "Skin or mucosa plus any second system within minutes to hours of an exposure is anaphylaxis.",
+     "to": "Skin or mucosal involvement plus any second system within minutes to hours of an exposure is anaphylaxis."
+    },
+    {
+     "claim": "Anaphylaxis gets IM epinephrine first.",
+     "to": "Give IM (intramuscular) epinephrine first."
+    },
+    {
+     "claim": "Swelling with no hives points to bradykinin.",
+     "to": "Swelling with no hives points to bradykinin."
+    },
+    {
+     "claim": "A rash that arrives days later points to a delayed drug or immune complex reaction.",
+     "to": "A rash that arrives days later points to a delayed drug or immune complex reaction."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Skin or mucosa plus any second system within minutes to hours of an exposure is anaphylaxis.",
+     "from": "Skin or mucosa plus any second system within minutes to hours of an exposure is anaphylaxis."
+    },
+    {
+     "claim": "Anaphylaxis gets IM epinephrine first.",
+     "from": "Anaphylaxis gets IM epinephrine first."
+    },
+    {
+     "claim": "Swelling with no hives points to bradykinin.",
+     "from": "Swelling with no hives points to bradykinin."
+    },
+    {
+     "claim": "A rash that arrives days later points to a delayed drug or immune complex reaction.",
+     "from": "A rash that arrives days later points to a delayed drug or immune complex reaction."
+    },
+    {
+     "claim": "IM stands for intramuscular.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-isolation",
+   "find": "<p>Choose the precaution by <b>how the organism travels</b>. <b>Droplets</b> are 5 microns or larger and fall within <b>3 to 6 feet</b>, so a <b>surgical mask</b> within that range is enough: <i>N. meningitidis</i>, <i>H. influenzae</i> type b, <i>Mycoplasma pneumoniae</i>, influenza, adenovirus, pertussis. <b>Airborne</b> particles are <b>under 5 microns</b> and stay suspended, so they need an <b>N95 respirator and a negative-pressure room</b>: tuberculosis, <b>measles</b>, <b>varicella</b>, SARS. <b>Contact</b> organisms spread by hands and surfaces and need a <b>gown and gloves</b>: MRSA, VRE, <i>C. difficile</i>, <i>E. coli</i> O157:H7, scabies, RSV. Gram-negative diplococci in CSF are meningococcus, so this infant needs <b>droplet precautions until 24 hours of effective antibiotics</b>.</p>\n<p>Standard precautions apply to <b>every</b> patient and are never the added answer. <b>Neutropenic</b> precautions run the other way: they <b>protect the patient</b> from the environment rather than others from the patient.</p>",
+   "with": "<p>Choose the precaution by <b>how the organism travels</b>. <b>Droplets</b> are 5 microns or larger and fall within <b>3 to 6 feet</b>, so a <b>surgical mask</b> within that range is enough. Droplet organisms include <i>N. meningitidis</i>, <i>H. influenzae</i> type b, <i>Mycoplasma pneumoniae</i>, influenza, adenovirus and pertussis. <b>Airborne</b> particles are <b>under 5 microns</b> and stay suspended, so they need an <b>N95 respirator and a negative-pressure room</b>. Airborne organisms include tuberculosis, <b>measles</b>, <b>varicella</b> and <b>SARS</b> (severe acute respiratory syndrome). <b>Contact</b> organisms spread by hands and surfaces and need a <b>gown and gloves</b>. They include <b>MRSA</b> (methicillin-resistant <i>Staphylococcus aureus</i>), <b>VRE</b> (vancomycin-resistant enterococci), <i>C. difficile</i>, <i>E. coli</i> O157:H7, scabies and <b>RSV</b> (respiratory syncytial virus). Gram-negative diplococci in <b>CSF</b> (cerebrospinal fluid) are meningococcus, so this infant needs <b>droplet precautions until 24 hours of effective antibiotics</b>.</p>\n<p>Standard precautions apply to every patient; they are the baseline and never the added precaution. <b>Neutropenic</b> precautions <b>protect the patient</b> from the environment rather than others from the patient.</p>",
+   "note": "voice: .dp; lists split into sentences, acronyms expanded, meta 'added answer' and emphasis bold removed",
+   "reworded_bold": [
+    "every"
+   ],
+   "claims": [
+    {
+     "claim": "Choose the precaution by how the organism travels.",
+     "to": "Choose the precaution by how the organism travels."
+    },
+    {
+     "claim": "Droplets are 5 microns or larger and fall within 3 to 6 feet, so a surgical mask within that range is enough.",
+     "to": "Droplets are 5 microns or larger and fall within 3 to 6 feet, so a surgical mask within that range is enough."
+    },
+    {
+     "claim": "Droplet organisms: N. meningitidis, H. influenzae type b, Mycoplasma pneumoniae, influenza, adenovirus, pertussis.",
+     "to": "Droplet organisms include N. meningitidis, H. influenzae type b, Mycoplasma pneumoniae, influenza, adenovirus and pertussis."
+    },
+    {
+     "claim": "Airborne particles are under 5 microns and stay suspended, so they need an N95 respirator and a negative-pressure room.",
+     "to": "Airborne particles are under 5 microns and stay suspended, so they need an N95 respirator and a negative-pressure room."
+    },
+    {
+     "claim": "Airborne organisms: tuberculosis, measles, varicella, SARS.",
+     "to": "Airborne organisms include tuberculosis, measles, varicella and SARS (severe acute respiratory syndrome)."
+    },
+    {
+     "claim": "Contact organisms spread by hands and surfaces and need a gown and gloves.",
+     "to": "Contact organisms spread by hands and surfaces and need a gown and gloves."
+    },
+    {
+     "claim": "Contact organisms: MRSA, VRE, C. difficile, E. coli O157:H7, scabies, RSV.",
+     "to": "They include MRSA (methicillin-resistant Staphylococcus aureus), VRE (vancomycin-resistant enterococci), C. difficile, E. coli O157:H7, scabies and RSV (respiratory syncytial virus)."
+    },
+    {
+     "claim": "Gram-negative diplococci in CSF are meningococcus.",
+     "to": "Gram-negative diplococci in CSF (cerebrospinal fluid) are meningococcus, so this infant needs droplet precautions until 24 hours of effective antibiotics."
+    },
+    {
+     "claim": "This infant needs droplet precautions until 24 hours of effective antibiotics.",
+     "to": "Gram-negative diplococci in CSF (cerebrospinal fluid) are meningococcus, so this infant needs droplet precautions until 24 hours of effective antibiotics."
+    },
+    {
+     "claim": "Standard precautions apply to every patient.",
+     "to": "Standard precautions apply to every patient; they are the baseline and never the added precaution."
+    },
+    {
+     "claim": "Standard precautions are never the added answer.",
+     "to": "Standard precautions apply to every patient; they are the baseline and never the added precaution."
+    },
+    {
+     "claim": "Neutropenic precautions run the other way.",
+     "dropped": "rhetorical transition; the direction is stated in the same sentence"
+    },
+    {
+     "claim": "Neutropenic precautions protect the patient from the environment rather than others from the patient.",
+     "to": "Neutropenic precautions protect the patient from the environment rather than others from the patient."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Choose the precaution by how the organism travels.",
+     "from": "Choose the precaution by how the organism travels."
+    },
+    {
+     "claim": "Droplets are 5 microns or larger and fall within 3 to 6 feet, so a surgical mask within that range is enough.",
+     "from": "Droplets are 5 microns or larger and fall within 3 to 6 feet, so a surgical mask within that range is enough."
+    },
+    {
+     "claim": "Droplet organisms: N. meningitidis, H. influenzae type b, Mycoplasma pneumoniae, influenza, adenovirus, pertussis.",
+     "from": "Droplet organisms: N. meningitidis, H. influenzae type b, Mycoplasma pneumoniae, influenza, adenovirus, pertussis."
+    },
+    {
+     "claim": "Airborne particles are under 5 microns and stay suspended, so they need an N95 respirator and a negative-pressure room.",
+     "from": "Airborne particles are under 5 microns and stay suspended, so they need an N95 respirator and a negative-pressure room."
+    },
+    {
+     "claim": "Airborne organisms: tuberculosis, measles, varicella, SARS.",
+     "from": "Airborne organisms: tuberculosis, measles, varicella, SARS."
+    },
+    {
+     "claim": "Contact organisms spread by hands and surfaces and need a gown and gloves.",
+     "from": "Contact organisms spread by hands and surfaces and need a gown and gloves."
+    },
+    {
+     "claim": "Contact organisms: MRSA, VRE, C. difficile, E. coli O157:H7, scabies, RSV.",
+     "from": "Contact organisms: MRSA, VRE, C. difficile, E. coli O157:H7, scabies, RSV."
+    },
+    {
+     "claim": "Gram-negative diplococci in CSF are meningococcus.",
+     "from": "Gram-negative diplococci in CSF are meningococcus."
+    },
+    {
+     "claim": "This infant needs droplet precautions until 24 hours of effective antibiotics.",
+     "from": "This infant needs droplet precautions until 24 hours of effective antibiotics."
+    },
+    {
+     "claim": "Standard precautions apply to every patient.",
+     "from": "Standard precautions apply to every patient."
+    },
+    {
+     "claim": "Neutropenic precautions protect the patient from the environment rather than others from the patient.",
+     "from": "Neutropenic precautions protect the patient from the environment rather than others from the patient."
+    },
+    {
+     "claim": "Standard precautions are the baseline and never the added precaution.",
+     "from": "Standard precautions are never the added answer."
+    },
+    {
+     "claim": "SARS stands for severe acute respiratory syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MRSA stands for methicillin-resistant Staphylococcus aureus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "VRE stands for vancomycin-resistant enterococci.",
+     "from": "expansion"
+    },
+    {
+     "claim": "RSV stands for respiratory syncytial virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CSF stands for cerebrospinal fluid.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-isolation",
+   "find": "Many respiratory viruses need contact <b>plus</b> droplet precautions, because they spread by both hands and large droplets; RSV is classically contact &middot; <i>C. difficile</i> is the one where the <b>hand-hygiene method</b> is tested: alcohol rub fails against spores &middot; The 24-hour rule belongs to meningococcus and Hib; TB is released by smears, varicella by crusting &middot;",
+   "with": "Many respiratory viruses need contact plus droplet precautions, because they spread by both hands and large droplets; <b>RSV</b> (respiratory syncytial virus) is classically contact &middot; <i>C. difficile</i> is the organism for which the <b>hand-hygiene method</b> matters: alcohol rub fails against spores &middot; The 24-hour rule applies to meningococcus and <b>Hib</b> (<i>Haemophilus influenzae</i> type b); <b>TB</b> (tuberculosis) isolation ends with negative smears, and varicella isolation ends with crusting &middot;",
+   "note": "voice: pearls; meta 'is tested' removed, emphasis bold removed, acronyms expanded",
+   "reworded_bold": [
+    "plus"
+   ],
+   "claims": [
+    {
+     "claim": "Many respiratory viruses need contact plus droplet precautions, because they spread by both hands and large droplets.",
+     "to": "Many respiratory viruses need contact plus droplet precautions, because they spread by both hands and large droplets; RSV (respiratory syncytial virus) is classically contact"
+    },
+    {
+     "claim": "RSV is classically contact.",
+     "to": "Many respiratory viruses need contact plus droplet precautions, because they spread by both hands and large droplets; RSV (respiratory syncytial virus) is classically contact"
+    },
+    {
+     "claim": "C. difficile is the one where the hand-hygiene method is tested.",
+     "to": "C. difficile is the organism for which the hand-hygiene method matters: alcohol rub fails against spores"
+    },
+    {
+     "claim": "Alcohol rub fails against spores.",
+     "to": "C. difficile is the organism for which the hand-hygiene method matters: alcohol rub fails against spores"
+    },
+    {
+     "claim": "The 24-hour rule belongs to meningococcus and Hib.",
+     "to": "The 24-hour rule applies to meningococcus and Hib (Haemophilus influenzae type b); TB (tuberculosis) isolation ends with negative smears, and varicella isolation ends with crusting"
+    },
+    {
+     "claim": "TB is released from isolation by smears.",
+     "to": "The 24-hour rule applies to meningococcus and Hib (Haemophilus influenzae type b); TB (tuberculosis) isolation ends with negative smears, and varicella isolation ends with crusting"
+    },
+    {
+     "claim": "Varicella is released from isolation by crusting.",
+     "to": "The 24-hour rule applies to meningococcus and Hib (Haemophilus influenzae type b); TB (tuberculosis) isolation ends with negative smears, and varicella isolation ends with crusting"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Many respiratory viruses need contact plus droplet precautions, because they spread by both hands and large droplets.",
+     "from": "Many respiratory viruses need contact plus droplet precautions, because they spread by both hands and large droplets."
+    },
+    {
+     "claim": "RSV is classically contact.",
+     "from": "RSV is classically contact."
+    },
+    {
+     "claim": "C. difficile is the organism for which the hand-hygiene method matters.",
+     "from": "C. difficile is the one where the hand-hygiene method is tested."
+    },
+    {
+     "claim": "Alcohol rub fails against spores.",
+     "from": "Alcohol rub fails against spores."
+    },
+    {
+     "claim": "The 24-hour rule applies to meningococcus and Hib.",
+     "from": "The 24-hour rule belongs to meningococcus and Hib."
+    },
+    {
+     "claim": "TB isolation ends with negative smears.",
+     "from": "TB is released from isolation by smears."
+    },
+    {
+     "claim": "Varicella isolation ends with crusting.",
+     "from": "Varicella is released from isolation by crusting."
+    },
+    {
+     "claim": "RSV stands for respiratory syncytial virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Hib stands for Haemophilus influenzae type b.",
+     "from": "expansion"
+    },
+    {
+     "claim": "TB stands for tuberculosis.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-isolation",
+   "find": "Part I <b>Bacterial Meningitis</b> owns the CSF grid, the organism by age and chemoprophylaxis: who counts as a close contact? Part II <b>Exanthems in a Child</b> owns measles and varicella, including postexposure prophylaxis: is the contact immune, and how long since exposure? Part I <b>Tuberculosis</b> owns the latent-versus-active sort: is the radiograph abnormal or are there symptoms? Part II <b>Scabies</b> owns the contact-spread rash that treats the household.",
+   "with": "Part I <b>Bacterial Meningitis</b> covers the <b>CSF</b> (cerebrospinal fluid) grid, the organism by age and chemoprophylaxis: who counts as a close contact? Part II <b>Exanthems in a Child</b> covers measles and varicella, including postexposure prophylaxis: is the contact immune, and how long since exposure? Part I <b>Tuberculosis</b> covers the latent-versus-active sort: is the radiograph abnormal or are there symptoms? Part II <b>Scabies</b> covers the contact-spread rash for which the household is treated.",
+   "note": "voice: Pairs with; owns -> covers, CSF expanded",
+   "claims": [
+    {
+     "claim": "Bacterial Meningitis covers the CSF grid, the organism by age and chemoprophylaxis: who counts as a close contact?",
+     "to": "Part I Bacterial Meningitis covers the CSF (cerebrospinal fluid) grid, the organism by age and chemoprophylaxis: who counts as a close contact?"
+    },
+    {
+     "claim": "Exanthems in a Child covers measles and varicella, including postexposure prophylaxis: is the contact immune, and how long since exposure?",
+     "to": "Part II Exanthems in a Child covers measles and varicella, including postexposure prophylaxis: is the contact immune, and how long since exposure?"
+    },
+    {
+     "claim": "Tuberculosis covers the latent-versus-active sort: is the radiograph abnormal or are there symptoms?",
+     "to": "Part I Tuberculosis covers the latent-versus-active sort: is the radiograph abnormal or are there symptoms?"
+    },
+    {
+     "claim": "Scabies covers the contact-spread rash that treats the household.",
+     "to": "Part II Scabies covers the contact-spread rash for which the household is treated."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Bacterial Meningitis covers the CSF grid, the organism by age and chemoprophylaxis: who counts as a close contact?",
+     "from": "Bacterial Meningitis covers the CSF grid, the organism by age and chemoprophylaxis: who counts as a close contact?"
+    },
+    {
+     "claim": "Exanthems in a Child covers measles and varicella, including postexposure prophylaxis: is the contact immune, and how long since exposure?",
+     "from": "Exanthems in a Child covers measles and varicella, including postexposure prophylaxis: is the contact immune, and how long since exposure?"
+    },
+    {
+     "claim": "Tuberculosis covers the latent-versus-active sort: is the radiograph abnormal or are there symptoms?",
+     "from": "Tuberculosis covers the latent-versus-active sort: is the radiograph abnormal or are there symptoms?"
+    },
+    {
+     "claim": "Scabies covers the contact-spread rash for which the household is treated.",
+     "from": "Scabies covers the contact-spread rash that treats the household."
+    },
+    {
+     "claim": "CSF stands for cerebrospinal fluid.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-isolation",
+   "find": "Pick the precaution by the particle and the route: large droplets that fall within 6 feet need a surgical mask, small particles that hang in the air need an N95 and a negative-pressure room, organisms on skin, stool or surfaces need a gown and gloves, and neutropenic precautions protect the patient rather than the staff.",
+   "with": "Pick the precaution by particle size and route. Large droplets that fall within 6 feet need a surgical mask. Small particles that stay suspended in the air need an N95 and a negative-pressure room. Organisms on skin, stool or surfaces need a gown and gloves. Neutropenic precautions protect the patient rather than the staff.",
+   "note": "voice: rule; one long sentence split",
+   "claims": [
+    {
+     "claim": "Pick the precaution by the particle and the route.",
+     "to": "Pick the precaution by particle size and route."
+    },
+    {
+     "claim": "Large droplets that fall within 6 feet need a surgical mask.",
+     "to": "Large droplets that fall within 6 feet need a surgical mask."
+    },
+    {
+     "claim": "Small particles that hang in the air need an N95 and a negative-pressure room.",
+     "to": "Small particles that stay suspended in the air need an N95 and a negative-pressure room."
+    },
+    {
+     "claim": "Organisms on skin, stool or surfaces need a gown and gloves.",
+     "to": "Organisms on skin, stool or surfaces need a gown and gloves."
+    },
+    {
+     "claim": "Neutropenic precautions protect the patient rather than the staff.",
+     "to": "Neutropenic precautions protect the patient rather than the staff."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Pick the precaution by the particle and the route.",
+     "from": "Pick the precaution by the particle and the route."
+    },
+    {
+     "claim": "Large droplets that fall within 6 feet need a surgical mask.",
+     "from": "Large droplets that fall within 6 feet need a surgical mask."
+    },
+    {
+     "claim": "Small particles that hang in the air need an N95 and a negative-pressure room.",
+     "from": "Small particles that hang in the air need an N95 and a negative-pressure room."
+    },
+    {
+     "claim": "Organisms on skin, stool or surfaces need a gown and gloves.",
+     "from": "Organisms on skin, stool or surfaces need a gown and gloves."
+    },
+    {
+     "claim": "Neutropenic precautions protect the patient rather than the staff.",
+     "from": "Neutropenic precautions protect the patient rather than the staff."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-isolation",
+   "find": "Airborne precautions: the right idea, a respiratory route, with the wrong particle size; meningococcus travels in large droplets that fall within 3 to 6 feet, and airborne isolation is for TB, measles and varicella.</span></div><div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Contact precautions: a septic, possibly petechial infant in the ICU feels like a gown-and-gloves patient, but",
+   "with": "Airborne precautions: the route is respiratory, but the particle size is wrong; meningococcus travels in large droplets that fall within 3 to 6 feet, and airborne isolation is for <b>TB</b> (tuberculosis), measles and varicella.</span></div><div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Contact precautions: a septic, possibly petechial infant in the <b>ICU</b> (intensive care unit) may seem to need gown and gloves, but",
+   "note": "voice: traps; 'the right idea' framing removed, TB and ICU expanded",
+   "claims": [
+    {
+     "claim": "Airborne precautions have the right respiratory route but the wrong particle size.",
+     "to": "Airborne precautions: the route is respiratory, but the particle size is wrong; meningococcus travels in large droplets that fall within 3 to 6 feet, and airborne isolation is for TB (tuberculosis), measles and varicella.Salient decoyContact precautions: a septic, possibly petechial infant in the ICU (intensive care unit) may seem to need gown and gloves, but"
+    },
+    {
+     "claim": "Meningococcus travels in large droplets that fall within 3 to 6 feet.",
+     "to": "Airborne precautions: the route is respiratory, but the particle size is wrong; meningococcus travels in large droplets that fall within 3 to 6 feet, and airborne isolation is for TB (tuberculosis), measles and varicella.Salient decoyContact precautions: a septic, possibly petechial infant in the ICU (intensive care unit) may seem to need gown and gloves, but"
+    },
+    {
+     "claim": "Airborne isolation is for TB, measles and varicella.",
+     "to": "Airborne precautions: the route is respiratory, but the particle size is wrong; meningococcus travels in large droplets that fall within 3 to 6 feet, and airborne isolation is for TB (tuberculosis), measles and varicella.Salient decoyContact precautions: a septic, possibly petechial infant in the ICU (intensive care unit) may seem to need gown and gloves, but"
+    },
+    {
+     "claim": "A septic, possibly petechial infant in the ICU feels like a gown-and-gloves patient.",
+     "to": "Airborne precautions: the route is respiratory, but the particle size is wrong; meningococcus travels in large droplets that fall within 3 to 6 feet, and airborne isolation is for TB (tuberculosis), measles and varicella.Salient decoyContact precautions: a septic, possibly petechial infant in the ICU (intensive care unit) may seem to need gown and gloves, but"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Airborne precautions: the route is respiratory, but the particle size is wrong.",
+     "from": "Airborne precautions have the right respiratory route but the wrong particle size."
+    },
+    {
+     "claim": "Meningococcus travels in large droplets that fall within 3 to 6 feet.",
+     "from": "Meningococcus travels in large droplets that fall within 3 to 6 feet."
+    },
+    {
+     "claim": "Airborne isolation is for TB, measles and varicella.",
+     "from": "Airborne isolation is for TB, measles and varicella."
+    },
+    {
+     "claim": "A septic, possibly petechial infant in the ICU may seem to need gown and gloves.",
+     "from": "A septic, possibly petechial infant in the ICU feels like a gown-and-gloves patient."
+    },
+    {
+     "claim": "TB stands for tuberculosis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ICU stands for intensive care unit.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "<p><b>The exposure names the organism.</b> Nontyphoidal <i>Salmonella</i> comes from <b>undercooked poultry and eggs</b>, and food left <b>unrefrigerated</b> lets it multiply; symptoms start <b>within 3 days</b> with fever, vomiting, cramps and diarrhea, which can be <b>bloody in children</b>. Camp food fits; her culture confirms it.</p>\n<p><b>The organism then decides the workup and treatment.</b> Invasive diarrhea gets a stool culture; a fever-first illness after travel is typhoid and needs a <b>blood</b> culture. Most bacterial diarrhea needs only rehydration. Each distractor here is a real exposure that produces a <b>different</b> organism or illness.</p>",
+   "with": "<p>Identify the organism from the exposure. Nontyphoidal <i>Salmonella</i> comes from <b>undercooked poultry and eggs</b>, and it multiplies in food left <b>unrefrigerated</b>. Symptoms start <b>within 3 days</b> with fever, vomiting, cramps and diarrhea, which can be <b>bloody in children</b>. Her camp food fits this exposure, and her stool culture confirms <i>Salmonella</i>.</p>\n<p>Base the workup and treatment on the organism. Invasive diarrhea gets a stool culture; a fever-first illness after travel is typhoid and needs a <b>blood</b> culture. Most bacterial diarrhea needs only rehydration.</p>",
+   "note": "voice: .dp; personified slogan bolds reworded, meta distractor sentence and emphasis bold removed",
+   "reworded_bold": [
+    "The exposure names the organism.",
+    "The organism then decides the workup and treatment.",
+    "different"
+   ],
+   "claims": [
+    {
+     "claim": "The exposure names the organism.",
+     "to": "Identify the organism from the exposure."
+    },
+    {
+     "claim": "Nontyphoidal Salmonella comes from undercooked poultry and eggs.",
+     "to": "Nontyphoidal Salmonella comes from undercooked poultry and eggs, and it multiplies in food left unrefrigerated."
+    },
+    {
+     "claim": "Food left unrefrigerated lets Salmonella multiply.",
+     "to": "Nontyphoidal Salmonella comes from undercooked poultry and eggs, and it multiplies in food left unrefrigerated."
+    },
+    {
+     "claim": "Salmonella symptoms start within 3 days with fever, vomiting, cramps and diarrhea.",
+     "to": "Symptoms start within 3 days with fever, vomiting, cramps and diarrhea, which can be bloody in children."
+    },
+    {
+     "claim": "The diarrhea can be bloody in children.",
+     "to": "Symptoms start within 3 days with fever, vomiting, cramps and diarrhea, which can be bloody in children."
+    },
+    {
+     "claim": "Camp food fits.",
+     "to": "Her camp food fits this exposure, and her stool culture confirms Salmonella."
+    },
+    {
+     "claim": "Her culture confirms Salmonella.",
+     "to": "Her camp food fits this exposure, and her stool culture confirms Salmonella."
+    },
+    {
+     "claim": "The organism then decides the workup and treatment.",
+     "to": "Base the workup and treatment on the organism."
+    },
+    {
+     "claim": "Invasive diarrhea gets a stool culture.",
+     "to": "Invasive diarrhea gets a stool culture; a fever-first illness after travel is typhoid and needs a blood culture."
+    },
+    {
+     "claim": "A fever-first illness after travel is typhoid and needs a blood culture.",
+     "to": "Invasive diarrhea gets a stool culture; a fever-first illness after travel is typhoid and needs a blood culture."
+    },
+    {
+     "claim": "Most bacterial diarrhea needs only rehydration.",
+     "to": "Most bacterial diarrhea needs only rehydration."
+    },
+    {
+     "claim": "Each distractor here is a real exposure that produces a different organism or illness.",
+     "dropped": "framing about the answer options; the other exposures and organisms are stated in the table and the Distractors"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Nontyphoidal Salmonella comes from undercooked poultry and eggs.",
+     "from": "Nontyphoidal Salmonella comes from undercooked poultry and eggs."
+    },
+    {
+     "claim": "Salmonella symptoms start within 3 days with fever, vomiting, cramps and diarrhea.",
+     "from": "Salmonella symptoms start within 3 days with fever, vomiting, cramps and diarrhea."
+    },
+    {
+     "claim": "The diarrhea can be bloody in children.",
+     "from": "The diarrhea can be bloody in children."
+    },
+    {
+     "claim": "Camp food fits.",
+     "from": "Camp food fits."
+    },
+    {
+     "claim": "Her culture confirms Salmonella.",
+     "from": "Her culture confirms Salmonella."
+    },
+    {
+     "claim": "Invasive diarrhea gets a stool culture.",
+     "from": "Invasive diarrhea gets a stool culture."
+    },
+    {
+     "claim": "A fever-first illness after travel is typhoid and needs a blood culture.",
+     "from": "A fever-first illness after travel is typhoid and needs a blood culture."
+    },
+    {
+     "claim": "Most bacterial diarrhea needs only rehydration.",
+     "from": "Most bacterial diarrhea needs only rehydration."
+    },
+    {
+     "claim": "Identify the organism from the exposure.",
+     "from": "The exposure names the organism."
+    },
+    {
+     "claim": "Salmonella multiplies in food left unrefrigerated.",
+     "from": "Food left unrefrigerated lets Salmonella multiply."
+    },
+    {
+     "claim": "Base the workup and treatment on the organism.",
+     "from": "The organism then decides the workup and treatment."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "They re-ask this by changing the exposure (a pet turtle, reheated rice, raw oysters, a hamburger), the timing, or the question from organism to treatment &middot; Humoral immunodeficiency such as CVID raises",
+   "with": "Humoral immunodeficiency such as <b>CVID</b> (common variable immunodeficiency) raises",
+   "note": "voice: pearls; exam-framing row removed, CVID expanded",
+   "claims": [
+    {
+     "claim": "The exam re-asks this by changing the exposure, the timing, or the question from organism to treatment.",
+     "dropped": "framing about how the question is re-asked; the exposures themselves appear in the table and the scenario bank"
+    },
+    {
+     "claim": "Humoral immunodeficiency such as CVID raises the risk of Salmonella, Campylobacter and Giardia infection.",
+     "to": "Humoral immunodeficiency such as CVID (common variable immunodeficiency) raises"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Humoral immunodeficiency such as CVID raises the risk of Salmonella, Campylobacter and Giardia infection.",
+     "from": "Humoral immunodeficiency such as CVID raises the risk of Salmonella, Campylobacter and Giardia infection."
+    },
+    {
+     "claim": "CVID stands for common variable immunodeficiency.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "Part I <b>The Immunoglobulin Panel</b> owns CVID: are IgG and at least one other isotype low, with poor vaccine responses? Part I <b>Right Lower Quadrant Pain</b> owns <i>Campylobacter</i> and <i>Yersinia</i> pseudoappendicitis and its list of who gets antibiotics: is the pain from the appendix or the ileocecum? Part I <b>Anemia with Thrombocytopenia</b> owns HUS, where the Shiga toxin branch ends: is a second cell line down a week after bloody diarrhea? Part II <b>Sickle Cell Trait versus Disease</b> owns <i>Salmonella</i> osteomyelitis: is it trait or disease?",
+   "with": "Part I <b>The Immunoglobulin Panel</b> covers <b>CVID</b> (common variable immunodeficiency): are IgG and at least one other isotype low, with poor vaccine responses? Part I <b>Right Lower Quadrant Pain</b> covers <i>Campylobacter</i> and <i>Yersinia</i> pseudoappendicitis and its list of who gets antibiotics: is the pain from the appendix or the ileocecum? Part I <b>Anemia with Thrombocytopenia</b> covers <b>HUS</b> (hemolytic uremic syndrome), where the Shiga toxin branch ends: is a second cell line down a week after bloody diarrhea? Part II <b>Sickle Cell Trait versus Disease</b> covers <i>Salmonella</i> osteomyelitis: is it trait or disease?",
+   "note": "voice: Pairs with; owns -> covers, CVID and HUS expanded",
+   "claims": [
+    {
+     "claim": "The Immunoglobulin Panel covers CVID: are IgG and at least one other isotype low, with poor vaccine responses?",
+     "to": "Part I The Immunoglobulin Panel covers CVID (common variable immunodeficiency): are IgG and at least one other isotype low, with poor vaccine responses?"
+    },
+    {
+     "claim": "Right Lower Quadrant Pain covers Campylobacter and Yersinia pseudoappendicitis and its list of who gets antibiotics: is the pain from the appendix or the ileocecum?",
+     "to": "Part I Right Lower Quadrant Pain covers Campylobacter and Yersinia pseudoappendicitis and its list of who gets antibiotics: is the pain from the appendix or the ileocecum?"
+    },
+    {
+     "claim": "Anemia with Thrombocytopenia covers HUS, where the Shiga toxin branch ends: is a second cell line down a week after bloody diarrhea?",
+     "to": "Part I Anemia with Thrombocytopenia covers HUS (hemolytic uremic syndrome), where the Shiga toxin branch ends: is a second cell line down a week after bloody diarrhea?"
+    },
+    {
+     "claim": "Sickle Cell Trait versus Disease covers Salmonella osteomyelitis: is it trait or disease?",
+     "to": "Part II Sickle Cell Trait versus Disease covers Salmonella osteomyelitis: is it trait or disease?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The Immunoglobulin Panel covers CVID: are IgG and at least one other isotype low, with poor vaccine responses?",
+     "from": "The Immunoglobulin Panel covers CVID: are IgG and at least one other isotype low, with poor vaccine responses?"
+    },
+    {
+     "claim": "Right Lower Quadrant Pain covers Campylobacter and Yersinia pseudoappendicitis and its list of who gets antibiotics: is the pain from the appendix or the ileocecum?",
+     "from": "Right Lower Quadrant Pain covers Campylobacter and Yersinia pseudoappendicitis and its list of who gets antibiotics: is the pain from the appendix or the ileocecum?"
+    },
+    {
+     "claim": "Anemia with Thrombocytopenia covers HUS, where the Shiga toxin branch ends: is a second cell line down a week after bloody diarrhea?",
+     "from": "Anemia with Thrombocytopenia covers HUS, where the Shiga toxin branch ends: is a second cell line down a week after bloody diarrhea?"
+    },
+    {
+     "claim": "Sickle Cell Trait versus Disease covers Salmonella osteomyelitis: is it trait or disease?",
+     "from": "Sickle Cell Trait versus Disease covers Salmonella osteomyelitis: is it trait or disease?"
+    },
+    {
+     "claim": "CVID stands for common variable immunodeficiency.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HUS stands for hemolytic uremic syndrome.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "In infectious diarrhea, name the organism from the exposure and the timing, then let that organism decide the culture and whether to treat; a risk factor that belongs to a different organism is not the exposure.",
+   "with": "In infectious diarrhea, name the organism from the exposure and the timing. That organism determines the culture and whether to treat. A risk factor that belongs to a different organism is not the exposure.",
+   "note": "voice: rule; split",
+   "claims": [
+    {
+     "claim": "In infectious diarrhea, name the organism from the exposure and the timing.",
+     "to": "In infectious diarrhea, name the organism from the exposure and the timing."
+    },
+    {
+     "claim": "The organism decides the culture and whether to treat.",
+     "to": "That organism determines the culture and whether to treat."
+    },
+    {
+     "claim": "A risk factor that belongs to a different organism is not the exposure.",
+     "to": "A risk factor that belongs to a different organism is not the exposure."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In infectious diarrhea, name the organism from the exposure and the timing.",
+     "from": "In infectious diarrhea, name the organism from the exposure and the timing."
+    },
+    {
+     "claim": "The organism decides the culture and whether to treat.",
+     "from": "The organism decides the culture and whether to treat."
+    },
+    {
+     "claim": "A risk factor that belongs to a different organism is not the exposure.",
+     "from": "A risk factor that belongs to a different organism is not the exposure."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-febrile-infant",
+   "find": "<p>One sentence in the physical examination is the whole question: <b>he is calm when left alone and screams when picked up</b>. That is <b>paradoxical irritability</b> — handling stretches inflamed meninges, so being comforted makes an infant worse. It is the meningeal sign of infancy, and it exists because nuchal rigidity, Kernig and Brudzinski are unreliable under roughly 12 to 18 months.</p>\n<p>Everything else in the stem is a negative that closes an alternative source. No cough or rhinorrhea closes the respiratory branch. A negative leukocyte esterase and nitrite in urine <b>concentrated to a specific gravity of 1.030</b> closes the urinary branch — concentration is what makes the negative trustworthy. When the sources are eliminated one by one and a meningeal sign remains, the answer is the lumbar puncture.</p>",
+   "with": "<p>On examination, <b>he is calm when left alone and screams when picked up</b>. This is <b>paradoxical irritability</b>: handling stretches inflamed meninges, so being comforted makes an infant worse. It is the meningeal sign of infancy, because nuchal rigidity, Kernig and Brudzinski signs are unreliable under roughly 12 to 18 months.</p>\n<p>The other findings are negatives, and each closes an alternative source. No cough or rhinorrhea closes the respiratory branch. A negative leukocyte esterase and nitrite in urine <b>concentrated to a specific gravity of 1.030</b> closes the urinary branch. The concentration is what makes the negative trustworthy. When the other sources are eliminated one by one and a meningeal sign remains, perform a lumbar puncture.</p>",
+   "note": "voice: .dp; dramatic opener and 'the answer is' framing removed, em dashes removed",
+   "claims": [
+    {
+     "claim": "One sentence in the physical examination is the whole question.",
+     "dropped": "dramatic framing about the question; the examination finding is kept"
+    },
+    {
+     "claim": "He is calm when left alone and screams when picked up.",
+     "to": "On examination, he is calm when left alone and screams when picked up."
+    },
+    {
+     "claim": "That is paradoxical irritability.",
+     "to": "This is paradoxical irritability: handling stretches inflamed meninges, so being comforted makes an infant worse."
+    },
+    {
+     "claim": "Handling stretches inflamed meninges, so being comforted makes an infant worse.",
+     "to": "This is paradoxical irritability: handling stretches inflamed meninges, so being comforted makes an infant worse."
+    },
+    {
+     "claim": "Paradoxical irritability is the meningeal sign of infancy.",
+     "to": "It is the meningeal sign of infancy, because nuchal rigidity, Kernig and Brudzinski signs are unreliable under roughly 12 to 18 months."
+    },
+    {
+     "claim": "It exists because nuchal rigidity, Kernig and Brudzinski are unreliable under roughly 12 to 18 months.",
+     "to": "It is the meningeal sign of infancy, because nuchal rigidity, Kernig and Brudzinski signs are unreliable under roughly 12 to 18 months."
+    },
+    {
+     "claim": "Everything else in the stem is a negative that closes an alternative source.",
+     "to": "The other findings are negatives, and each closes an alternative source."
+    },
+    {
+     "claim": "No cough or rhinorrhea closes the respiratory branch.",
+     "to": "No cough or rhinorrhea closes the respiratory branch."
+    },
+    {
+     "claim": "A negative leukocyte esterase and nitrite in urine concentrated to a specific gravity of 1.030 closes the urinary branch.",
+     "to": "A negative leukocyte esterase and nitrite in urine concentrated to a specific gravity of 1.030 closes the urinary branch."
+    },
+    {
+     "claim": "Concentration is what makes the negative trustworthy.",
+     "to": "The concentration is what makes the negative trustworthy."
+    },
+    {
+     "claim": "When the sources are eliminated one by one and a meningeal sign remains, the answer is the lumbar puncture.",
+     "to": "When the other sources are eliminated one by one and a meningeal sign remains, perform a lumbar puncture."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "He is calm when left alone and screams when picked up.",
+     "from": "He is calm when left alone and screams when picked up."
+    },
+    {
+     "claim": "That is paradoxical irritability.",
+     "from": "That is paradoxical irritability."
+    },
+    {
+     "claim": "Handling stretches inflamed meninges, so being comforted makes an infant worse.",
+     "from": "Handling stretches inflamed meninges, so being comforted makes an infant worse."
+    },
+    {
+     "claim": "Paradoxical irritability is the meningeal sign of infancy.",
+     "from": "Paradoxical irritability is the meningeal sign of infancy."
+    },
+    {
+     "claim": "It exists because nuchal rigidity, Kernig and Brudzinski are unreliable under roughly 12 to 18 months.",
+     "from": "It exists because nuchal rigidity, Kernig and Brudzinski are unreliable under roughly 12 to 18 months."
+    },
+    {
+     "claim": "No cough or rhinorrhea closes the respiratory branch.",
+     "from": "No cough or rhinorrhea closes the respiratory branch."
+    },
+    {
+     "claim": "A negative leukocyte esterase and nitrite in urine concentrated to a specific gravity of 1.030 closes the urinary branch.",
+     "from": "A negative leukocyte esterase and nitrite in urine concentrated to a specific gravity of 1.030 closes the urinary branch."
+    },
+    {
+     "claim": "Concentration is what makes the negative trustworthy.",
+     "from": "Concentration is what makes the negative trustworthy."
+    },
+    {
+     "claim": "The other findings are negatives, and each closes an alternative source.",
+     "from": "Everything else in the stem is a negative that closes an alternative source."
+    },
+    {
+     "claim": "When the other sources are eliminated one by one and a meningeal sign remains, perform a lumbar puncture.",
+     "from": "When the sources are eliminated one by one and a meningeal sign remains, the answer is the lumbar puncture."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-febrile-infant",
+   "find": "Head CT precedes lumbar puncture only for <b>focal deficits, papilledema, altered consciousness or immunocompromise</b> — and <b>antibiotics precede the CT</b>, not the other way round. In an <b>infant with an open fontanelle the requirement is generally suspended</b>: the fontanelle decompresses rising pressure, so tap without imaging first. Under 28 days a well appearance does not reassure: full evaluation, admission and empiric antibiotics regardless.",
+   "with": "Head <b>CT</b> (computed tomography) precedes lumbar puncture only for <b>focal deficits, papilledema, altered consciousness or immunocompromise</b>. When CT is needed, <b>antibiotics precede the CT</b>, not the other way round. In an <b>infant with an open fontanelle the requirement is generally suspended</b>: the fontanelle decompresses rising pressure, so tap without imaging first. Under 28 days, a well appearance does not reassure; the infant needs a full evaluation, admission and empiric antibiotics regardless.",
+   "note": "voice: danger; em dash removed, CT expanded",
+   "claims": [
+    {
+     "claim": "Head CT precedes lumbar puncture only for focal deficits, papilledema, altered consciousness or immunocompromise.",
+     "to": "Head CT (computed tomography) precedes lumbar puncture only for focal deficits, papilledema, altered consciousness or immunocompromise."
+    },
+    {
+     "claim": "Antibiotics precede the CT, not the other way round.",
+     "to": "When CT is needed, antibiotics precede the CT, not the other way round."
+    },
+    {
+     "claim": "In an infant with an open fontanelle the requirement is generally suspended.",
+     "to": "In an infant with an open fontanelle the requirement is generally suspended: the fontanelle decompresses rising pressure, so tap without imaging first."
+    },
+    {
+     "claim": "The fontanelle decompresses rising pressure, so tap without imaging first.",
+     "to": "In an infant with an open fontanelle the requirement is generally suspended: the fontanelle decompresses rising pressure, so tap without imaging first."
+    },
+    {
+     "claim": "Under 28 days a well appearance does not reassure.",
+     "to": "Under 28 days, a well appearance does not reassure; the infant needs a full evaluation, admission and empiric antibiotics regardless."
+    },
+    {
+     "claim": "Under 28 days: full evaluation, admission and empiric antibiotics regardless.",
+     "to": "Under 28 days, a well appearance does not reassure; the infant needs a full evaluation, admission and empiric antibiotics regardless."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Head CT precedes lumbar puncture only for focal deficits, papilledema, altered consciousness or immunocompromise.",
+     "from": "Head CT precedes lumbar puncture only for focal deficits, papilledema, altered consciousness or immunocompromise."
+    },
+    {
+     "claim": "Antibiotics precede the CT, not the other way round.",
+     "from": "Antibiotics precede the CT, not the other way round."
+    },
+    {
+     "claim": "In an infant with an open fontanelle the requirement is generally suspended.",
+     "from": "In an infant with an open fontanelle the requirement is generally suspended."
+    },
+    {
+     "claim": "The fontanelle decompresses rising pressure, so tap without imaging first.",
+     "from": "The fontanelle decompresses rising pressure, so tap without imaging first."
+    },
+    {
+     "claim": "Under 28 days a well appearance does not reassure.",
+     "from": "Under 28 days a well appearance does not reassure."
+    },
+    {
+     "claim": "Under 28 days: full evaluation, admission and empiric antibiotics regardless.",
+     "from": "Under 28 days: full evaluation, admission and empiric antibiotics regardless."
+    },
+    {
+     "claim": "CT stands for computed tomography.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-febrile-infant",
+   "find": "A dipstick is a screen, not a rule-out — nitrite is insensitive because",
+   "with": "A dipstick is a screen, not a rule-out; nitrite is insensitive because",
+   "note": "voice: pearls; em dash removed",
+   "claims": [
+    {
+     "claim": "A dipstick is a screen, not a rule-out.",
+     "to": "A dipstick is a screen, not a rule-out; nitrite is insensitive because"
+    },
+    {
+     "claim": "Nitrite is insensitive because infant bladder transit is too short for nitrate reduction.",
+     "to": "A dipstick is a screen, not a rule-out; nitrite is insensitive because"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A dipstick is a screen, not a rule-out.",
+     "from": "A dipstick is a screen, not a rule-out."
+    },
+    {
+     "claim": "Nitrite is insensitive because infant bladder transit is too short for nitrate reduction.",
+     "from": "Nitrite is insensitive because infant bladder transit is too short for nitrate reduction."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-febrile-infant",
+   "find": "Part I <b>Bacterial Meningitis</b> owns the CSF grid, so this brief stops at the decision to tap. Store the link as a question: am I deciding whether to tap, or reading the fluid? Part I <b>Seizure with Fever in a Child</b> owns what a seizure adds to the decision to tap. Part II <b>Neonatal Sepsis and Its Mimics</b> owns the afebrile neonate whose lab is the only sign; store the discriminator: <i>is the infant febrile, or is the WBC the decider?</i> Aquifer <b>Fever in an Infant</b> owns the workup before a source is found: which tests the age, appearance and vaccines call for, and the febrile UTI that most often turns up.",
+   "with": "Part I <b>Bacterial Meningitis</b> covers the <b>CSF</b> (cerebrospinal fluid) grid, so this brief stops at the decision to tap. Ask: am I deciding whether to tap, or reading the fluid? Part I <b>Seizure with Fever in a Child</b> covers what a seizure adds to the decision to tap. Part II <b>Neonatal Sepsis and Its Mimics</b> covers the afebrile neonate whose lab is the only sign. Ask: <i>is the infant febrile, or is the <b>WBC</b> (white blood cell count) the only sign?</i> Aquifer <b>Fever in an Infant</b> covers the workup before a source is found: which tests the age, appearance and vaccines call for, and the febrile <b>UTI</b> (urinary tract infection) that most often turns up.",
+   "note": "voice: Pairs with; owns -> covers, 'store as a question' -> Ask, personification removed, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Bacterial Meningitis covers the CSF grid, so this brief stops at the decision to tap.",
+     "to": "Part I Bacterial Meningitis covers the CSF (cerebrospinal fluid) grid, so this brief stops at the decision to tap."
+    },
+    {
+     "claim": "Discriminating question: am I deciding whether to tap, or reading the fluid?",
+     "to": "Ask: am I deciding whether to tap, or reading the fluid?"
+    },
+    {
+     "claim": "Seizure with Fever in a Child covers what a seizure adds to the decision to tap.",
+     "to": "Part I Seizure with Fever in a Child covers what a seizure adds to the decision to tap."
+    },
+    {
+     "claim": "Neonatal Sepsis and Its Mimics covers the afebrile neonate whose lab is the only sign.",
+     "to": "Part II Neonatal Sepsis and Its Mimics covers the afebrile neonate whose lab is the only sign."
+    },
+    {
+     "claim": "Discriminating question: is the infant febrile, or is the WBC the decider?",
+     "to": "Ask: is the infant febrile, or is the WBC (white blood cell count) the only sign?"
+    },
+    {
+     "claim": "Fever in an Infant covers the workup before a source is found: which tests the age, appearance and vaccines call for, and the febrile UTI that most often turns up.",
+     "to": "Aquifer Fever in an Infant covers the workup before a source is found: which tests the age, appearance and vaccines call for, and the febrile UTI (urinary tract infection) that most often turns up."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Bacterial Meningitis covers the CSF grid, so this brief stops at the decision to tap.",
+     "from": "Bacterial Meningitis covers the CSF grid, so this brief stops at the decision to tap."
+    },
+    {
+     "claim": "Discriminating question: am I deciding whether to tap, or reading the fluid?",
+     "from": "Discriminating question: am I deciding whether to tap, or reading the fluid?"
+    },
+    {
+     "claim": "Seizure with Fever in a Child covers what a seizure adds to the decision to tap.",
+     "from": "Seizure with Fever in a Child covers what a seizure adds to the decision to tap."
+    },
+    {
+     "claim": "Neonatal Sepsis and Its Mimics covers the afebrile neonate whose lab is the only sign.",
+     "from": "Neonatal Sepsis and Its Mimics covers the afebrile neonate whose lab is the only sign."
+    },
+    {
+     "claim": "Fever in an Infant covers the workup before a source is found: which tests the age, appearance and vaccines call for, and the febrile UTI that most often turns up.",
+     "from": "Fever in an Infant covers the workup before a source is found: which tests the age, appearance and vaccines call for, and the febrile UTI that most often turns up."
+    },
+    {
+     "claim": "Discriminating question: is the infant febrile, or is the WBC the only sign?",
+     "from": "Discriminating question: is the infant febrile, or is the WBC the decider?"
+    },
+    {
+     "claim": "CSF stands for cerebrospinal fluid.",
+     "from": "expansion"
+    },
+    {
+     "claim": "WBC stands for white blood cell count.",
+     "from": "expansion"
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-febrile-infant",
+   "find": "When the options are tests, name the disease first and let the test follow, and in a febrile infant do it by elimination, because every negative the stem supplies is an eliminated source and the diagnosis is whatever survives.",
+   "with": "Name the disease first, then choose the test. In a febrile infant, reach the diagnosis by elimination. Each negative finding eliminates a source, and the diagnosis is whatever source remains.",
+   "note": "voice: rule; meta about options and stem removed, split",
+   "claims": [
+    {
+     "claim": "When the options are tests, name the disease first and let the test follow.",
+     "to": "Name the disease first, then choose the test."
+    },
+    {
+     "claim": "In a febrile infant, name the disease by elimination.",
+     "to": "In a febrile infant, reach the diagnosis by elimination."
+    },
+    {
+     "claim": "Every negative the stem supplies is an eliminated source.",
+     "to": "Each negative finding eliminates a source, and the diagnosis is whatever source remains."
+    },
+    {
+     "claim": "The diagnosis is whatever survives.",
+     "to": "Each negative finding eliminates a source, and the diagnosis is whatever source remains."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Name the disease first, then choose the test.",
+     "from": "When the options are tests, name the disease first and let the test follow."
+    },
+    {
+     "claim": "In a febrile infant, reach the diagnosis by elimination.",
+     "from": "In a febrile infant, name the disease by elimination."
+    },
+    {
+     "claim": "Each negative finding eliminates a source.",
+     "from": "Every negative the stem supplies is an eliminated source."
+    },
+    {
+     "claim": "The diagnosis is whatever source remains.",
+     "from": "The diagnosis is whatever survives."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-fever",
+   "find": "A small minority have a serious bacterial infection, and the question is where: the <b>urine</b> (UTI, the commonest), the <b>blood</b> (occult bacteremia, sepsis), the <b>meninges</b> (bacterial meningitis), the <b>lungs</b> (pneumonia), or rarely bone, joint or gut. Look at the child first: an ill-appearing infant gets the full workup. In a well infant, age and vaccine status decide how much testing is needed. The catheter urine culture, blood culture or CSF culture confirms.</p>",
+   "with": "A small minority have a serious bacterial infection. The commonest source is the <b>urine</b>: a <b>UTI</b> (urinary tract infection). Other sources are the <b>blood</b> (occult bacteremia, sepsis), the <b>meninges</b> (bacterial meningitis) and the <b>lungs</b> (pneumonia), or rarely bone, joint or gut. Look at the child first: an ill-appearing infant gets the full workup. In a well infant, age and vaccine status decide how much testing is needed. The catheter urine culture, blood culture or <b>CSF</b> (cerebrospinal fluid) culture confirms the diagnosis.</p>",
+   "note": "voice: .dp; 'the question is where' framing removed, list split, UTI and CSF expanded",
+   "claims": [
+    {
+     "claim": "A small minority have a serious bacterial infection.",
+     "to": "A small minority have a serious bacterial infection."
+    },
+    {
+     "claim": "The question is where the infection is.",
+     "dropped": "framing about the question; the sources are listed next"
+    },
+    {
+     "claim": "The urine (UTI) is the commonest source.",
+     "to": "The commonest source is the urine: a UTI (urinary tract infection)."
+    },
+    {
+     "claim": "Other sources: the blood (occult bacteremia, sepsis), the meninges (bacterial meningitis), the lungs (pneumonia), or rarely bone, joint or gut.",
+     "to": "Other sources are the blood (occult bacteremia, sepsis), the meninges (bacterial meningitis) and the lungs (pneumonia), or rarely bone, joint or gut."
+    },
+    {
+     "claim": "Look at the child first: an ill-appearing infant gets the full workup.",
+     "to": "Look at the child first: an ill-appearing infant gets the full workup."
+    },
+    {
+     "claim": "In a well infant, age and vaccine status decide how much testing is needed.",
+     "to": "In a well infant, age and vaccine status decide how much testing is needed."
+    },
+    {
+     "claim": "The catheter urine culture, blood culture or CSF culture confirms.",
+     "to": "The catheter urine culture, blood culture or CSF (cerebrospinal fluid) culture confirms the diagnosis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A small minority have a serious bacterial infection.",
+     "from": "A small minority have a serious bacterial infection."
+    },
+    {
+     "claim": "The urine (UTI) is the commonest source.",
+     "from": "The urine (UTI) is the commonest source."
+    },
+    {
+     "claim": "Other sources: the blood (occult bacteremia, sepsis), the meninges (bacterial meningitis), the lungs (pneumonia), or rarely bone, joint or gut.",
+     "from": "Other sources: the blood (occult bacteremia, sepsis), the meninges (bacterial meningitis), the lungs (pneumonia), or rarely bone, joint or gut."
+    },
+    {
+     "claim": "Look at the child first: an ill-appearing infant gets the full workup.",
+     "from": "Look at the child first: an ill-appearing infant gets the full workup."
+    },
+    {
+     "claim": "In a well infant, age and vaccine status decide how much testing is needed.",
+     "from": "In a well infant, age and vaccine status decide how much testing is needed."
+    },
+    {
+     "claim": "The catheter urine culture, blood culture or CSF culture confirms.",
+     "from": "The catheter urine culture, blood culture or CSF culture confirms."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CSF stands for cerebrospinal fluid.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-fever",
+   "find": "Part II <b>The Febrile Infant &mdash; Finding the Source</b> owns the decision to tap once other sources are closed: is there a meningeal sign, or only a fever? Part I <b>Recurrent Urinary Infection in a Child</b> owns the imaging rules after a febrile UTI and the child not improving by 72 hours; Part I <b>Vesicoureteral Reflux</b> takes over once the VCUG shows reflux. Part I <b>Bacterial Meningitis</b> owns the CSF grid. Part II <b>Neonatal Sepsis and Its Mimics</b> owns the first month of life. Part II <b>Exanthems in a Child</b> owns roseola among the rashes, and Part I <b>Kawasaki Disease</b> owns fever of 5 days or more with red eyes and lips.",
+   "with": "Part II <b>The Febrile Infant &mdash; Finding the Source</b> covers the decision to tap once other sources are closed: is there a meningeal sign, or only a fever? Part I <b>Recurrent Urinary Infection in a Child</b> covers the imaging rules after a febrile <b>UTI</b> (urinary tract infection) and the child not improving by 72 hours; Part I <b>Vesicoureteral Reflux</b> covers the child once the <b>VCUG</b> (voiding cystourethrogram) shows reflux. Part I <b>Bacterial Meningitis</b> covers the <b>CSF</b> (cerebrospinal fluid) grid. Part II <b>Neonatal Sepsis and Its Mimics</b> covers the first month of life. Part II <b>Exanthems in a Child</b> covers roseola among the rashes, and Part I <b>Kawasaki Disease</b> covers fever of 5 days or more with red eyes and lips.",
+   "note": "voice: Pairs with; owns/takes over -> covers, acronyms expanded",
+   "claims": [
+    {
+     "claim": "The Febrile Infant covers the decision to tap once other sources are closed: is there a meningeal sign, or only a fever?",
+     "to": "Part II The Febrile Infant — Finding the Source covers the decision to tap once other sources are closed: is there a meningeal sign, or only a fever?"
+    },
+    {
+     "claim": "Recurrent Urinary Infection in a Child covers the imaging rules after a febrile UTI and the child not improving by 72 hours.",
+     "to": "Part I Recurrent Urinary Infection in a Child covers the imaging rules after a febrile UTI (urinary tract infection) and the child not improving by 72 hours; Part I Vesicoureteral Reflux covers the child once the VCUG (voiding cystourethrogram) shows reflux."
+    },
+    {
+     "claim": "Vesicoureteral Reflux takes over once the VCUG shows reflux.",
+     "to": "Part I Recurrent Urinary Infection in a Child covers the imaging rules after a febrile UTI (urinary tract infection) and the child not improving by 72 hours; Part I Vesicoureteral Reflux covers the child once the VCUG (voiding cystourethrogram) shows reflux."
+    },
+    {
+     "claim": "Bacterial Meningitis covers the CSF grid.",
+     "to": "Part I Bacterial Meningitis covers the CSF (cerebrospinal fluid) grid."
+    },
+    {
+     "claim": "Neonatal Sepsis and Its Mimics covers the first month of life.",
+     "to": "Part II Neonatal Sepsis and Its Mimics covers the first month of life."
+    },
+    {
+     "claim": "Exanthems in a Child covers roseola among the rashes.",
+     "to": "Part II Exanthems in a Child covers roseola among the rashes, and Part I Kawasaki Disease covers fever of 5 days or more with red eyes and lips."
+    },
+    {
+     "claim": "Kawasaki Disease covers fever of 5 days or more with red eyes and lips.",
+     "to": "Part II Exanthems in a Child covers roseola among the rashes, and Part I Kawasaki Disease covers fever of 5 days or more with red eyes and lips."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The Febrile Infant covers the decision to tap once other sources are closed: is there a meningeal sign, or only a fever?",
+     "from": "The Febrile Infant covers the decision to tap once other sources are closed: is there a meningeal sign, or only a fever?"
+    },
+    {
+     "claim": "Recurrent Urinary Infection in a Child covers the imaging rules after a febrile UTI and the child not improving by 72 hours.",
+     "from": "Recurrent Urinary Infection in a Child covers the imaging rules after a febrile UTI and the child not improving by 72 hours."
+    },
+    {
+     "claim": "Bacterial Meningitis covers the CSF grid.",
+     "from": "Bacterial Meningitis covers the CSF grid."
+    },
+    {
+     "claim": "Neonatal Sepsis and Its Mimics covers the first month of life.",
+     "from": "Neonatal Sepsis and Its Mimics covers the first month of life."
+    },
+    {
+     "claim": "Exanthems in a Child covers roseola among the rashes.",
+     "from": "Exanthems in a Child covers roseola among the rashes."
+    },
+    {
+     "claim": "Kawasaki Disease covers fever of 5 days or more with red eyes and lips.",
+     "from": "Kawasaki Disease covers fever of 5 days or more with red eyes and lips."
+    },
+    {
+     "claim": "Vesicoureteral Reflux covers the child once the VCUG shows reflux.",
+     "from": "Vesicoureteral Reflux takes over once the VCUG shows reflux."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "VCUG stands for voiding cystourethrogram.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CSF stands for cerebrospinal fluid.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-fever",
+   "find": "In an infant with fever and no source, let appearance, age and vaccine status decide how much testing is needed; test the urine of any child at risk, collect it by catheter, and let the culture, not the dipstick, confirm the infection.",
+   "with": "In an infant with fever and no source, appearance, age and vaccine status decide how much testing is needed. Test the urine of any child at risk, and collect it by catheter. The culture, not the dipstick, confirms the infection.",
+   "note": "voice: rule; split",
+   "claims": [
+    {
+     "claim": "In an infant with fever and no source, appearance, age and vaccine status decide how much testing is needed.",
+     "to": "In an infant with fever and no source, appearance, age and vaccine status decide how much testing is needed."
+    },
+    {
+     "claim": "Test the urine of any child at risk.",
+     "to": "Test the urine of any child at risk, and collect it by catheter."
+    },
+    {
+     "claim": "Collect the urine by catheter.",
+     "to": "Test the urine of any child at risk, and collect it by catheter."
+    },
+    {
+     "claim": "The culture, not the dipstick, confirms the infection.",
+     "to": "The culture, not the dipstick, confirms the infection."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In an infant with fever and no source, appearance, age and vaccine status decide how much testing is needed.",
+     "from": "In an infant with fever and no source, appearance, age and vaccine status decide how much testing is needed."
+    },
+    {
+     "claim": "Test the urine of any child at risk.",
+     "from": "Test the urine of any child at risk."
+    },
+    {
+     "claim": "Collect the urine by catheter.",
+     "from": "Collect the urine by catheter."
+    },
+    {
+     "claim": "The culture, not the dipstick, confirms the infection.",
+     "from": "The culture, not the dipstick, confirms the infection."
+    }
+   ]
+  }
+ ]
+}

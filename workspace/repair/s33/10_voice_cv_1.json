@@ -1,0 +1,1337 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "chf",
+   "find": "<p>The question isn't \"what's abnormal?\" — it's \"what drives <b>this outcome</b>?\" Uncontrolled hypertension is the direct mechanical driver of decompensation: ↑ afterload → ↑ LV wall stress → remodeling → pump failure → admission. Lipids matter for <b>ischemic events over years</b>; BP matters for <b>decompensations over months</b>. <b>Time horizon is the whole question.</b></p>",
+   "with": "<p>Target the factor that drives <b>this outcome</b>, not simply the value that is abnormal. Uncontrolled hypertension is the direct mechanical driver of decompensation. Increased afterload raises <b>LV</b> (left ventricular) wall stress, which leads to remodeling, pump failure and admission. Lipids matter for <b>ischemic events over years</b>. <b>BP</b> (blood pressure) matters for <b>decompensations over months</b>.</p>",
+   "note": "voice: .dp; split arrow chain, removed slogan closer (carried by rule)",
+   "reworded_bold": [
+    "Time horizon is the whole question."
+   ],
+   "claims": [
+    {
+     "claim": "Choose by what drives this outcome, not by what is abnormal.",
+     "to": "Target the factor that drives this outcome, not simply the value that is abnormal."
+    },
+    {
+     "claim": "Uncontrolled hypertension is the direct mechanical driver of decompensation.",
+     "to": "Uncontrolled hypertension is the direct mechanical driver of decompensation."
+    },
+    {
+     "claim": "Increased afterload raises LV wall stress, leading to remodeling, pump failure and admission.",
+     "to": "Increased afterload raises LV (left ventricular) wall stress, which leads to remodeling, pump failure and admission."
+    },
+    {
+     "claim": "Lipids matter for ischemic events over years.",
+     "to": "Lipids matter for ischemic events over years."
+    },
+    {
+     "claim": "BP matters for decompensations over months.",
+     "to": "BP (blood pressure) matters for decompensations over months."
+    },
+    {
+     "claim": "Time horizon is the whole question.",
+     "carried_by": "Match time-to-benefit to the outcome's time horizon."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Target the factor that drives this outcome, not simply the value that is abnormal.",
+     "from": "Choose by what drives this outcome, not by what is abnormal."
+    },
+    {
+     "claim": "Uncontrolled hypertension is the direct mechanical driver of decompensation.",
+     "from": "Uncontrolled hypertension is the direct mechanical driver of decompensation."
+    },
+    {
+     "claim": "Increased afterload raises LV wall stress, which leads to remodeling, pump failure and admission.",
+     "from": "Increased afterload raises LV wall stress, leading to remodeling, pump failure and admission."
+    },
+    {
+     "claim": "Lipids matter for ischemic events over years.",
+     "from": "Lipids matter for ischemic events over years."
+    },
+    {
+     "claim": "BP matters for decompensations over months.",
+     "from": "BP matters for decompensations over months."
+    },
+    {
+     "claim": "LV stands for left ventricular.",
+     "from": "expansion"
+    },
+    {
+     "claim": "BP stands for blood pressure.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "chf",
+   "find": "<b>CORONA</b> and <b>GISSI-HF</b> tested rosuvastatin specifically in established heart failure and showed <b>no mortality or hospitalization benefit</b>. Once ventricular remodeling is the disease, lipids are a bystander. Pair with the mortality list: ACE-I/ARB/ARNI, beta-blocker, MRA, SGLT2i reduce mortality — <b>diuretics only reduce symptoms and hospitalizations</b>.",
+   "with": "<b>CORONA</b> and <b>GISSI-HF</b> tested rosuvastatin specifically in established heart failure and showed <b>no mortality or hospitalization benefit</b>. Once ventricular remodeling is the disease, lipids no longer drive it. An <b>ACE-I</b> (angiotensin-converting enzyme inhibitor), <b>ARB</b> (angiotensin II receptor blocker) or <b>ARNI</b> (angiotensin receptor-neprilysin inhibitor) reduces mortality. A beta-blocker, an <b>MRA</b> (mineralocorticoid receptor antagonist) and an <b>SGLT2i</b> (sodium-glucose cotransporter-2 inhibitor) also reduce mortality. Unlike these drugs, <b>diuretics only reduce symptoms and hospitalizations</b>.",
+   "note": "voice: .danger; removed aphorism and em dash, expanded drug-class acronyms",
+   "claims": [
+    {
+     "claim": "CORONA and GISSI-HF tested rosuvastatin specifically in established heart failure.",
+     "to": "CORONA and GISSI-HF tested rosuvastatin specifically in established heart failure and showed no mortality or hospitalization benefit."
+    },
+    {
+     "claim": "Rosuvastatin showed no mortality or hospitalization benefit in established heart failure.",
+     "to": "CORONA and GISSI-HF tested rosuvastatin specifically in established heart failure and showed no mortality or hospitalization benefit."
+    },
+    {
+     "claim": "Once ventricular remodeling is the disease, lipids are a bystander.",
+     "to": "Once ventricular remodeling is the disease, lipids no longer drive it."
+    },
+    {
+     "claim": "Pair this with the mortality list.",
+     "dropped": "framing that links to a list; the mortality drugs are stated next"
+    },
+    {
+     "claim": "ACE-I, ARB or ARNI reduces mortality.",
+     "to": "An ACE-I (angiotensin-converting enzyme inhibitor), ARB (angiotensin II receptor blocker) or ARNI (angiotensin receptor-neprilysin inhibitor) reduces mortality."
+    },
+    {
+     "claim": "Beta-blocker, MRA and SGLT2i reduce mortality.",
+     "to": "A beta-blocker, an MRA (mineralocorticoid receptor antagonist) and an SGLT2i (sodium-glucose cotransporter-2 inhibitor) also reduce mortality."
+    },
+    {
+     "claim": "Diuretics only reduce symptoms and hospitalizations.",
+     "to": "Unlike these drugs, diuretics only reduce symptoms and hospitalizations."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CORONA and GISSI-HF tested rosuvastatin specifically in established heart failure.",
+     "from": "CORONA and GISSI-HF tested rosuvastatin specifically in established heart failure."
+    },
+    {
+     "claim": "Rosuvastatin showed no mortality or hospitalization benefit in established heart failure.",
+     "from": "Rosuvastatin showed no mortality or hospitalization benefit in established heart failure."
+    },
+    {
+     "claim": "Once ventricular remodeling is the disease, lipids no longer drive it.",
+     "from": "Once ventricular remodeling is the disease, lipids are a bystander."
+    },
+    {
+     "claim": "An ACE-I, ARB or ARNI reduces mortality.",
+     "from": "ACE-I, ARB or ARNI reduces mortality."
+    },
+    {
+     "claim": "A beta-blocker, an MRA and an SGLT2i also reduce mortality.",
+     "from": "Beta-blocker, MRA and SGLT2i reduce mortality."
+    },
+    {
+     "claim": "Unlike these drugs, diuretics only reduce symptoms and hospitalizations.",
+     "from": "Diuretics only reduce symptoms and hospitalizations."
+    },
+    {
+     "claim": "ACE-I stands for angiotensin-converting enzyme inhibitor.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ARB stands for angiotensin II receptor blocker.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ARNI stands for angiotensin receptor-neprilysin inhibitor.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MRA stands for mineralocorticoid receptor antagonist.",
+     "from": "expansion"
+    },
+    {
+     "claim": "SGLT2i stands for sodium-glucose cotransporter-2 inhibitor.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "chf",
+   "find": "When NBME gives multiple abnormal values, the answer is the one <b>mechanistically linked to the outcome in the stem</b>, not the most abnormal number. Match time-to-benefit to the outcome's time horizon.",
+   "with": "When several values are abnormal, target the one <b>mechanistically linked to the outcome</b>, not the most abnormal number. Match time-to-benefit to the outcome's time horizon.",
+   "note": "voice: .rule; removed exam framing",
+   "reworded_bold": [
+    "mechanistically linked to the outcome in the stem"
+   ],
+   "claims": [
+    {
+     "claim": "When several values are abnormal, the answer is the one mechanistically linked to the outcome, not the most abnormal number.",
+     "to": "When several values are abnormal, target the one mechanistically linked to the outcome, not the most abnormal number."
+    },
+    {
+     "claim": "Match time-to-benefit to the outcome's time horizon.",
+     "to": "Match time-to-benefit to the outcome's time horizon."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When several values are abnormal, target the one mechanistically linked to the outcome, not the most abnormal number.",
+     "from": "When several values are abnormal, the answer is the one mechanistically linked to the outcome, not the most abnormal number."
+    },
+    {
+     "claim": "Match time-to-benefit to the outcome's time horizon.",
+     "from": "Match time-to-benefit to the outcome's time horizon."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ascvd",
+   "find": "Trump cards → calculator → enhancers",
+   "with": "Statin-benefit groups, then the risk calculator, then risk enhancers",
+   "note": "voice: p.sub; removed slogan and arrow chain",
+   "claims": [
+    {
+     "claim": "Statin-benefit groups (trump cards) come first, then the calculator, then risk enhancers.",
+     "to": "Statin-benefit groups, then the risk calculator, then risk enhancers"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Statin-benefit groups come first, then the risk calculator, then risk enhancers.",
+     "from": "Statin-benefit groups (trump cards) come first, then the calculator, then risk enhancers."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ascvd",
+   "find": "<p><b>Order of operations.</b> Four statin-benefit groups get a statin with <b>no calculation</b>: clinical ASCVD, <b>LDL ≥190</b>, <b>diabetes age 40–75</b>, and — only for the rest — 10-year risk ≥7.5%. The Pooled Cohort Equations apply to <b>ages 40–75 without ASCVD</b>; they aren't even validated under 40.</p>",
+   "with": "<p>Four statin-benefit groups get a statin. Clinical <b>ASCVD</b> (atherosclerotic cardiovascular disease), <b>LDL ≥190</b> and <b>diabetes age 40–75</b> need <b>no calculation</b>. The fourth group, a 10-year risk ≥7.5%, applies only to everyone else. The Pooled Cohort Equations apply to <b>ages 40–75 without ASCVD</b> and are not validated under 40.</p>",
+   "note": "voice: .dp; removed rhetorical opener and em dashes, split the fourth group",
+   "reworded_bold": [
+    "Order of operations."
+   ],
+   "claims": [
+    {
+     "claim": "The statin groups are applied in order.",
+     "to": "The fourth group, a 10-year risk ≥7.5%, applies only to everyone else."
+    },
+    {
+     "claim": "Four statin-benefit groups get a statin.",
+     "to": "Four statin-benefit groups get a statin."
+    },
+    {
+     "claim": "Clinical ASCVD, LDL ≥190 and diabetes age 40–75 get a statin with no calculation.",
+     "to": "Clinical ASCVD (atherosclerotic cardiovascular disease), LDL ≥190 and diabetes age 40–75 need no calculation."
+    },
+    {
+     "claim": "The 10-year risk ≥7.5% group applies only to the rest.",
+     "to": "The fourth group, a 10-year risk ≥7.5%, applies only to everyone else."
+    },
+    {
+     "claim": "The Pooled Cohort Equations apply to ages 40–75 without ASCVD.",
+     "to": "The Pooled Cohort Equations apply to ages 40–75 without ASCVD and are not validated under 40."
+    },
+    {
+     "claim": "The Pooled Cohort Equations are not validated under 40.",
+     "to": "The Pooled Cohort Equations apply to ages 40–75 without ASCVD and are not validated under 40."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Four statin-benefit groups get a statin.",
+     "from": "Four statin-benefit groups get a statin."
+    },
+    {
+     "claim": "Clinical ASCVD, LDL ≥190 and diabetes age 40–75 need no calculation.",
+     "from": "Clinical ASCVD, LDL ≥190 and diabetes age 40–75 get a statin with no calculation."
+    },
+    {
+     "claim": "The fourth group, a 10-year risk ≥7.5%, applies only to everyone else.",
+     "from": "The 10-year risk ≥7.5% group applies only to the rest."
+    },
+    {
+     "claim": "The Pooled Cohort Equations apply to ages 40–75 without ASCVD.",
+     "from": "The Pooled Cohort Equations apply to ages 40–75 without ASCVD."
+    },
+    {
+     "claim": "The Pooled Cohort Equations are not validated under 40.",
+     "from": "The Pooled Cohort Equations are not validated under 40."
+    },
+    {
+     "claim": "ASCVD stands for atherosclerotic cardiovascular disease.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ascvd",
+   "find": "<b>Risk enhancers</b> push borderline/intermediate toward treatment: family history of premature ASCVD, LDL ≥160, CKD, metabolic syndrome, preeclampsia or early menopause, <b>inflammatory disease (RA, psoriasis, lupus, HIV)</b>, South Asian ancestry, TG ≥175, elevated ApoB / Lp(a) / hsCRP · <b>CAC score</b> is for genuinely uncertain intermediate-risk decisions: <b>0</b> → statin may be withheld (unless diabetic or smoker); <b>≥100</b> → statin, full stop.",
+   "with": "<b>Risk enhancers</b> push borderline or intermediate risk toward treatment. They include family history of premature <b>ASCVD</b> (atherosclerotic cardiovascular disease), <b>LDL</b> (low-density lipoprotein) ≥160, <b>CKD</b> (chronic kidney disease), metabolic syndrome, and preeclampsia or early menopause. Others are <b>inflammatory disease (RA, psoriasis, lupus, HIV)</b>, South Asian ancestry and <b>TG</b> (triglycerides) ≥175. Elevated <b>ApoB</b> (apolipoprotein B), <b>Lp(a)</b> (lipoprotein(a)) or <b>hsCRP</b> (high-sensitivity C-reactive protein) also counts · <b>CAC score</b> (coronary artery calcium score) is for genuinely uncertain intermediate-risk decisions. A score of <b>0</b> means a statin may be withheld unless the patient has diabetes or smokes. A score of <b>≥100</b> means a statin is indicated.",
+   "note": "voice: .pearls; split arrows, removed dramatic closer, expanded acronyms",
+   "claims": [
+    {
+     "claim": "Risk enhancers push borderline or intermediate risk toward treatment.",
+     "to": "Risk enhancers push borderline or intermediate risk toward treatment."
+    },
+    {
+     "claim": "Risk enhancers include family history of premature ASCVD, LDL ≥160, CKD, metabolic syndrome, and preeclampsia or early menopause.",
+     "to": "They include family history of premature ASCVD (atherosclerotic cardiovascular disease), LDL (low-density lipoprotein) ≥160, CKD (chronic kidney disease), metabolic syndrome, and preeclampsia or early menopause."
+    },
+    {
+     "claim": "Risk enhancers include inflammatory disease (RA, psoriasis, lupus, HIV), South Asian ancestry, TG ≥175, and elevated ApoB, Lp(a) or hsCRP.",
+     "to": "Others are inflammatory disease (RA, psoriasis, lupus, HIV), South Asian ancestry and TG (triglycerides) ≥175."
+    },
+    {
+     "claim": "Risk enhancers include inflammatory disease (RA, psoriasis, lupus, HIV), South Asian ancestry, TG ≥175, and elevated ApoB, Lp(a) or hsCRP.",
+     "to": "Elevated ApoB (apolipoprotein B), Lp(a) (lipoprotein(a)) or hsCRP (high-sensitivity C-reactive protein) also counts"
+    },
+    {
+     "claim": "CAC score is for genuinely uncertain intermediate-risk decisions.",
+     "to": "CAC score (coronary artery calcium score) is for genuinely uncertain intermediate-risk decisions."
+    },
+    {
+     "claim": "A CAC score of 0 means a statin may be withheld, unless diabetic or smoker.",
+     "to": "A score of 0 means a statin may be withheld unless the patient has diabetes or smokes."
+    },
+    {
+     "claim": "A CAC score of ≥100 means a statin, full stop.",
+     "to": "A score of ≥100 means a statin is indicated."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Risk enhancers push borderline or intermediate risk toward treatment.",
+     "from": "Risk enhancers push borderline or intermediate risk toward treatment."
+    },
+    {
+     "claim": "Risk enhancers include family history of premature ASCVD, LDL ≥160, CKD, metabolic syndrome, and preeclampsia or early menopause.",
+     "from": "Risk enhancers include family history of premature ASCVD, LDL ≥160, CKD, metabolic syndrome, and preeclampsia or early menopause."
+    },
+    {
+     "claim": "Risk enhancers include inflammatory disease (RA, psoriasis, lupus, HIV), South Asian ancestry, TG ≥175, and elevated ApoB, Lp(a) or hsCRP.",
+     "from": "Risk enhancers include inflammatory disease (RA, psoriasis, lupus, HIV), South Asian ancestry, TG ≥175, and elevated ApoB, Lp(a) or hsCRP."
+    },
+    {
+     "claim": "CAC score is for genuinely uncertain intermediate-risk decisions.",
+     "from": "CAC score is for genuinely uncertain intermediate-risk decisions."
+    },
+    {
+     "claim": "A score of 0 means a statin may be withheld unless the patient has diabetes or smokes.",
+     "from": "A CAC score of 0 means a statin may be withheld, unless diabetic or smoker."
+    },
+    {
+     "claim": "A score of ≥100 means a statin is indicated.",
+     "from": "A CAC score of ≥100 means a statin, full stop."
+    },
+    {
+     "claim": "ASCVD stands for atherosclerotic cardiovascular disease.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CKD stands for chronic kidney disease.",
+     "from": "expansion"
+    },
+    {
+     "claim": "LDL stands for low-density lipoprotein.",
+     "from": "expansion"
+    },
+    {
+     "claim": "TG stands for triglycerides.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ApoB stands for apolipoprotein B.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Lp(a) stands for lipoprotein(a).",
+     "from": "expansion"
+    },
+    {
+     "claim": "hsCRP stands for high-sensitivity C-reactive protein.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CAC stands for coronary artery calcium.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ascvd",
+   "find": "<span class=\"lbl\">Why HDL is bait</span>\nLow HDL <i>predicts</i> risk but raising it pharmacologically has <b>never reduced events</b>. <b>Niacin</b> (AIM-HIGH, HPS2-THRIVE) — no benefit on top of statin, plus harm. <b>CETP inhibitors</b> raised HDL up to 130% with no benefit; torcetrapib <i>increased</i> mortality. <b>Fibrates</b> (FIELD, ACCORD-Lipid) — no consistent mortality benefit. HDL is a <b>risk marker, not a drug target</b>. And when the stem says \"prevent cardiovascular <b>mortality</b>,\" only statins have reproducible mortality data (4S, HPS, JUPITER).",
+   "with": "<span class=\"lbl\">HDL as a drug target</span>\nLow <b>HDL</b> (high-density lipoprotein) <i>predicts</i> risk, but raising it with drugs has <b>never reduced events</b>. <b>Niacin</b> (AIM-HIGH, HPS2-THRIVE) gave no benefit on top of a statin and added harm. <b>CETP inhibitors</b> (cholesteryl ester transfer protein inhibitors) raised HDL up to 130% with no benefit, and torcetrapib <i>increased</i> mortality. <b>Fibrates</b> (FIELD, ACCORD-Lipid) showed no consistent mortality benefit. HDL is a <b>risk marker, not a drug target</b>. For preventing cardiovascular <b>mortality</b>, only statins have reproducible mortality data (4S, HPS, JUPITER).",
+   "note": "voice: .danger; rhetorical label reworded, em dashes and stem framing removed",
+   "reworded_label": [
+    "Why HDL is bait"
+   ],
+   "claims": [
+    {
+     "claim": "Low HDL predicts risk.",
+     "to": "Low HDL (high-density lipoprotein) predicts risk, but raising it with drugs has never reduced events."
+    },
+    {
+     "claim": "Raising HDL pharmacologically has never reduced events.",
+     "to": "Low HDL (high-density lipoprotein) predicts risk, but raising it with drugs has never reduced events."
+    },
+    {
+     "claim": "Niacin (AIM-HIGH, HPS2-THRIVE) gave no benefit on top of statin.",
+     "to": "Niacin (AIM-HIGH, HPS2-THRIVE) gave no benefit on top of a statin and added harm."
+    },
+    {
+     "claim": "Niacin added harm.",
+     "to": "Niacin (AIM-HIGH, HPS2-THRIVE) gave no benefit on top of a statin and added harm."
+    },
+    {
+     "claim": "CETP inhibitors raised HDL up to 130% with no benefit.",
+     "to": "CETP inhibitors (cholesteryl ester transfer protein inhibitors) raised HDL up to 130% with no benefit, and torcetrapib increased mortality."
+    },
+    {
+     "claim": "Torcetrapib increased mortality.",
+     "to": "CETP inhibitors (cholesteryl ester transfer protein inhibitors) raised HDL up to 130% with no benefit, and torcetrapib increased mortality."
+    },
+    {
+     "claim": "Fibrates (FIELD, ACCORD-Lipid) showed no consistent mortality benefit.",
+     "to": "Fibrates (FIELD, ACCORD-Lipid) showed no consistent mortality benefit."
+    },
+    {
+     "claim": "HDL is a risk marker, not a drug target.",
+     "to": "HDL is a risk marker, not a drug target."
+    },
+    {
+     "claim": "To prevent cardiovascular mortality, only statins have reproducible mortality data (4S, HPS, JUPITER).",
+     "to": "For preventing cardiovascular mortality, only statins have reproducible mortality data (4S, HPS, JUPITER)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Low HDL predicts risk, but raising it with drugs has never reduced events.",
+     "from": "Low HDL predicts risk."
+    },
+    {
+     "claim": "Raising HDL with drugs has never reduced events.",
+     "from": "Raising HDL pharmacologically has never reduced events."
+    },
+    {
+     "claim": "Niacin (AIM-HIGH, HPS2-THRIVE) gave no benefit on top of a statin and added harm.",
+     "from": "Niacin (AIM-HIGH, HPS2-THRIVE) gave no benefit on top of statin."
+    },
+    {
+     "claim": "CETP inhibitors raised HDL up to 130% with no benefit.",
+     "from": "CETP inhibitors raised HDL up to 130% with no benefit."
+    },
+    {
+     "claim": "Torcetrapib increased mortality.",
+     "from": "Torcetrapib increased mortality."
+    },
+    {
+     "claim": "Fibrates (FIELD, ACCORD-Lipid) showed no consistent mortality benefit.",
+     "from": "Fibrates (FIELD, ACCORD-Lipid) showed no consistent mortality benefit."
+    },
+    {
+     "claim": "HDL is a risk marker, not a drug target.",
+     "from": "HDL is a risk marker, not a drug target."
+    },
+    {
+     "claim": "For preventing cardiovascular mortality, only statins have reproducible mortality data (4S, HPS, JUPITER).",
+     "from": "To prevent cardiovascular mortality, only statins have reproducible mortality data (4S, HPS, JUPITER)."
+    },
+    {
+     "claim": "HDL stands for high-density lipoprotein.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CETP stands for cholesteryl ester transfer protein.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "angina",
+   "find": "<p>Score the three angina criteria and <b>ignore your instinct about location</b>: (1) provoked by exertion, (2) relieved by rest, (3) typical substernal location. <b>3/3 = typical, 2/3 = atypical, &lt;2 = nonanginal.</b> \"Epigastric burning\" is a textbook anginal equivalent — and <b>not relieved by antacids</b> kills the GI story outright.</p>",
+   "with": "<p>Score the three angina criteria rather than judging by location. The criteria are (1) provoked by exertion, (2) relieved by rest and (3) typical substernal location. <b>3/3 = typical, 2/3 = atypical, &lt;2 = nonanginal.</b> \"Epigastric burning\" is a textbook anginal equivalent. Burning <b>not relieved by antacids</b> rules out a <b>GI</b> (gastrointestinal) cause.</p>",
+   "note": "voice: .dp; rhetorical bold reworded, em dash and slang removed",
+   "reworded_bold": [
+    "ignore your instinct about location"
+   ],
+   "claims": [
+    {
+     "claim": "Score the three angina criteria.",
+     "to": "Score the three angina criteria rather than judging by location."
+    },
+    {
+     "claim": "Ignore your instinct about location.",
+     "to": "Score the three angina criteria rather than judging by location."
+    },
+    {
+     "claim": "The criteria are provoked by exertion, relieved by rest, and typical substernal location.",
+     "to": "The criteria are (1) provoked by exertion, (2) relieved by rest and (3) typical substernal location."
+    },
+    {
+     "claim": "3/3 = typical, 2/3 = atypical, <2 = nonanginal.",
+     "to": "3/3 = typical, 2/3 = atypical, <2 = nonanginal."
+    },
+    {
+     "claim": "Epigastric burning is a textbook anginal equivalent.",
+     "to": "\"Epigastric burning\" is a textbook anginal equivalent."
+    },
+    {
+     "claim": "Burning not relieved by antacids rules out the GI explanation.",
+     "to": "Burning not relieved by antacids rules out a GI (gastrointestinal) cause."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Score the three angina criteria rather than judging by location.",
+     "from": "Ignore your instinct about location."
+    },
+    {
+     "claim": "Score the three angina criteria.",
+     "from": "Score the three angina criteria."
+    },
+    {
+     "claim": "The criteria are provoked by exertion, relieved by rest, and typical substernal location.",
+     "from": "The criteria are provoked by exertion, relieved by rest, and typical substernal location."
+    },
+    {
+     "claim": "3/3 = typical, 2/3 = atypical, <2 = nonanginal.",
+     "from": "3/3 = typical, 2/3 = atypical, <2 = nonanginal."
+    },
+    {
+     "claim": "Epigastric burning is a textbook anginal equivalent.",
+     "from": "Epigastric burning is a textbook anginal equivalent."
+    },
+    {
+     "claim": "Burning not relieved by antacids rules out a GI cause.",
+     "from": "Burning not relieved by antacids rules out the GI explanation."
+    },
+    {
+     "claim": "GI stands for gastrointestinal.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "angina",
+   "find": "<span class=\"lbl\">Guideline currency — the terminology was retired</span>\nThe <b>2021 AHA/ACC Chest Pain Guideline discourages \"typical / atypical / nonanginal.\"</b> The problem: \"atypical\" was <i>meant</i> to signal angina without classic features, but clinicians were reading it as \"not cardiac\" — the opposite of its purpose. The preferred descriptors are now <b>cardiac · possible cardiac · noncardiac</b>:\n<ul class=\"plain\" style=\"margin-top:10px;margin-bottom:0\">\n<li><b>Cardiac</b> — central, retrosternal, squeezing, pressure, exertional</li>\n<li><b>Possible cardiac</b> — stabbing, tearing, ripping, <b>burning</b> ← where epigastric burning lands</li>\n<li><b>Noncardiac</b> — pleuritic, positional, fleeting</li>\n</ul>\n<b>Question banks still key \"atypical angina\"</b> for a 2-of-3 presentation, so know both vocabularies: score the three criteria for the exam, describe by probability in clinic. Note the shift does not change management — \"possible cardiac\" still gets risk-stratified and tested.",
+   "with": "<span class=\"lbl\">Guideline currency: the terminology was retired</span>\nThe 2021 <b>AHA/ACC</b> (American Heart Association/American College of Cardiology) Chest Pain Guideline <b>discourages \"typical / atypical / nonanginal\"</b> as terms. The term \"atypical\" was <i>meant</i> to signal angina without classic features, but clinicians were reading it as \"not cardiac,\" the opposite of its purpose. The preferred descriptors are now <b>cardiac · possible cardiac · noncardiac</b>:\n<ul class=\"plain\" style=\"margin-top:10px;margin-bottom:0\">\n<li><b>Cardiac</b>: central, retrosternal, squeezing, pressure, exertional</li>\n<li><b>Possible cardiac</b>: stabbing, tearing, ripping, <b>burning</b> (epigastric burning lands here)</li>\n<li><b>Noncardiac</b>: pleuritic, positional, fleeting</li>\n</ul>\n<b>Question banks still key \"atypical angina\"</b> for a 2-of-3 presentation. Know both vocabularies: score the three criteria for the exam, and describe by probability in clinic. The shift does not change management; \"possible cardiac\" still gets risk-stratified and tested.",
+   "note": "voice: .danger; em dashes in label, prose and list rows replaced; acronym expanded",
+   "reworded_bold": [
+    "2021 AHA/ACC Chest Pain Guideline discourages \"typical / atypical / nonanginal.\""
+   ],
+   "reworded_label": [
+    "Guideline currency — the terminology was retired"
+   ],
+   "claims": [
+    {
+     "claim": "The 2021 AHA/ACC Chest Pain Guideline discourages typical / atypical / nonanginal.",
+     "to": "The 2021 AHA/ACC (American Heart Association/American College of Cardiology) Chest Pain Guideline discourages \"typical / atypical / nonanginal\" as terms."
+    },
+    {
+     "claim": "Atypical was meant to signal angina without classic features.",
+     "to": "The term \"atypical\" was meant to signal angina without classic features, but clinicians were reading it as \"not cardiac,\" the opposite of its purpose."
+    },
+    {
+     "claim": "Clinicians were reading atypical as not cardiac, the opposite of its purpose.",
+     "to": "The term \"atypical\" was meant to signal angina without classic features, but clinicians were reading it as \"not cardiac,\" the opposite of its purpose."
+    },
+    {
+     "claim": "The preferred descriptors are now cardiac, possible cardiac, noncardiac.",
+     "to": "The preferred descriptors are now cardiac · possible cardiac · noncardiac:"
+    },
+    {
+     "claim": "Cardiac: central, retrosternal, squeezing, pressure, exertional.",
+     "to": "Cardiac: central, retrosternal, squeezing, pressure, exertional"
+    },
+    {
+     "claim": "Possible cardiac: stabbing, tearing, ripping, burning.",
+     "to": "Possible cardiac: stabbing, tearing, ripping, burning (epigastric burning lands here)"
+    },
+    {
+     "claim": "Epigastric burning lands in possible cardiac.",
+     "to": "Possible cardiac: stabbing, tearing, ripping, burning (epigastric burning lands here)"
+    },
+    {
+     "claim": "Noncardiac: pleuritic, positional, fleeting.",
+     "to": "Noncardiac: pleuritic, positional, fleeting"
+    },
+    {
+     "claim": "Question banks still key atypical angina for a 2-of-3 presentation.",
+     "to": "Question banks still key \"atypical angina\" for a 2-of-3 presentation."
+    },
+    {
+     "claim": "Know both vocabularies.",
+     "to": "Know both vocabularies: score the three criteria for the exam, and describe by probability in clinic."
+    },
+    {
+     "claim": "Score the three criteria for the exam; describe by probability in clinic.",
+     "to": "Know both vocabularies: score the three criteria for the exam, and describe by probability in clinic."
+    },
+    {
+     "claim": "The shift does not change management.",
+     "to": "The shift does not change management; \"possible cardiac\" still gets risk-stratified and tested."
+    },
+    {
+     "claim": "Possible cardiac still gets risk-stratified and tested.",
+     "to": "The shift does not change management; \"possible cardiac\" still gets risk-stratified and tested."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The 2021 AHA/ACC Chest Pain Guideline discourages typical / atypical / nonanginal.",
+     "from": "The 2021 AHA/ACC Chest Pain Guideline discourages typical / atypical / nonanginal."
+    },
+    {
+     "claim": "Atypical was meant to signal angina without classic features.",
+     "from": "Atypical was meant to signal angina without classic features."
+    },
+    {
+     "claim": "Clinicians were reading atypical as not cardiac, the opposite of its purpose.",
+     "from": "Clinicians were reading atypical as not cardiac, the opposite of its purpose."
+    },
+    {
+     "claim": "The preferred descriptors are now cardiac, possible cardiac, noncardiac.",
+     "from": "The preferred descriptors are now cardiac, possible cardiac, noncardiac."
+    },
+    {
+     "claim": "Cardiac: central, retrosternal, squeezing, pressure, exertional.",
+     "from": "Cardiac: central, retrosternal, squeezing, pressure, exertional."
+    },
+    {
+     "claim": "Possible cardiac: stabbing, tearing, ripping, burning.",
+     "from": "Possible cardiac: stabbing, tearing, ripping, burning."
+    },
+    {
+     "claim": "Epigastric burning lands in possible cardiac.",
+     "from": "Epigastric burning lands in possible cardiac."
+    },
+    {
+     "claim": "Noncardiac: pleuritic, positional, fleeting.",
+     "from": "Noncardiac: pleuritic, positional, fleeting."
+    },
+    {
+     "claim": "Question banks still key atypical angina for a 2-of-3 presentation.",
+     "from": "Question banks still key atypical angina for a 2-of-3 presentation."
+    },
+    {
+     "claim": "Know both vocabularies.",
+     "from": "Know both vocabularies."
+    },
+    {
+     "claim": "Score the three criteria for the exam; describe by probability in clinic.",
+     "from": "Score the three criteria for the exam; describe by probability in clinic."
+    },
+    {
+     "claim": "The shift does not change management.",
+     "from": "The shift does not change management."
+    },
+    {
+     "claim": "Possible cardiac still gets risk-stratified and tested.",
+     "from": "Possible cardiac still gets risk-stratified and tested."
+    },
+    {
+     "claim": "AHA/ACC stands for American Heart Association/American College of Cardiology.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "angina",
+   "find": "large or multiple perfusion defects · drop in EF.",
+   "with": "large or multiple perfusion defects · drop in <b>EF</b> (ejection fraction).",
+   "note": "voice: .danger; acronym expansion only",
+   "claims": [
+    {
+     "claim": "A drop in EF is a high-risk stress finding.",
+     "to": "drop in EF (ejection fraction)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A drop in EF is a high-risk stress finding.",
+     "from": "A drop in EF is a high-risk stress finding."
+    },
+    {
+     "claim": "EF stands for ejection fraction.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "angina",
+   "find": "<span class=\"lbl\">The risk factor hidden in the PMH</span> <b>SLE causes accelerated atherosclerosis</b> — lupus mortality is famously <b>bimodal</b> (early from disease activity and infection, late from cardiovascular disease). Chronic prednisone compounds it; antiphospholipid antibodies add thrombosis. Framingham and the PCE <b>underestimate</b> risk in SLE. Stems strip the traditional risk factors so the only one available is in the past medical history.",
+   "with": "<span class=\"lbl\">SLE as a cardiac risk factor</span> <b>SLE</b> (systemic lupus erythematosus) <b>causes accelerated atherosclerosis</b>. Lupus mortality is <b>bimodal</b>: early deaths come from disease activity and infection, and late deaths from cardiovascular disease. Chronic prednisone compounds the risk, and antiphospholipid antibodies add thrombosis. Framingham and the <b>PCE</b> (Pooled Cohort Equations) <b>underestimate</b> risk in SLE. When traditional risk factors are absent, look for one in the past medical history.",
+   "note": "voice: .pearls; rhetorical label reworded, em dash and stem framing removed",
+   "reworded_bold": [
+    "SLE causes accelerated atherosclerosis"
+   ],
+   "reworded_label": [
+    "The risk factor hidden in the PMH"
+   ],
+   "claims": [
+    {
+     "claim": "SLE causes accelerated atherosclerosis.",
+     "to": "SLE (systemic lupus erythematosus) causes accelerated atherosclerosis."
+    },
+    {
+     "claim": "Lupus mortality is bimodal.",
+     "to": "Lupus mortality is bimodal: early deaths come from disease activity and infection, and late deaths from cardiovascular disease."
+    },
+    {
+     "claim": "Early lupus deaths come from disease activity and infection.",
+     "to": "Lupus mortality is bimodal: early deaths come from disease activity and infection, and late deaths from cardiovascular disease."
+    },
+    {
+     "claim": "Late lupus deaths come from cardiovascular disease.",
+     "to": "Lupus mortality is bimodal: early deaths come from disease activity and infection, and late deaths from cardiovascular disease."
+    },
+    {
+     "claim": "Chronic prednisone compounds the risk.",
+     "to": "Chronic prednisone compounds the risk, and antiphospholipid antibodies add thrombosis."
+    },
+    {
+     "claim": "Antiphospholipid antibodies add thrombosis.",
+     "to": "Chronic prednisone compounds the risk, and antiphospholipid antibodies add thrombosis."
+    },
+    {
+     "claim": "Framingham and the PCE underestimate risk in SLE.",
+     "to": "Framingham and the PCE (Pooled Cohort Equations) underestimate risk in SLE."
+    },
+    {
+     "claim": "When traditional risk factors are absent, the risk factor is in the past medical history.",
+     "to": "When traditional risk factors are absent, look for one in the past medical history."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "SLE causes accelerated atherosclerosis.",
+     "from": "SLE causes accelerated atherosclerosis."
+    },
+    {
+     "claim": "SLE is a cardiac risk factor.",
+     "from": "SLE causes accelerated atherosclerosis."
+    },
+    {
+     "claim": "Lupus mortality is bimodal.",
+     "from": "Lupus mortality is bimodal."
+    },
+    {
+     "claim": "Early lupus deaths come from disease activity and infection.",
+     "from": "Early lupus deaths come from disease activity and infection."
+    },
+    {
+     "claim": "Late lupus deaths come from cardiovascular disease.",
+     "from": "Late lupus deaths come from cardiovascular disease."
+    },
+    {
+     "claim": "Chronic prednisone compounds the risk.",
+     "from": "Chronic prednisone compounds the risk."
+    },
+    {
+     "claim": "Antiphospholipid antibodies add thrombosis.",
+     "from": "Antiphospholipid antibodies add thrombosis."
+    },
+    {
+     "claim": "Framingham and the PCE underestimate risk in SLE.",
+     "from": "Framingham and the PCE underestimate risk in SLE."
+    },
+    {
+     "claim": "When traditional risk factors are absent, look for one in the past medical history.",
+     "from": "When traditional risk factors are absent, the risk factor is in the past medical history."
+    },
+    {
+     "claim": "SLE stands for systemic lupus erythematosus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PCE stands for Pooled Cohort Equations.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "angina",
+   "find": "In chest or epigastric symptom stems, the <b>trigger and the reliever</b> localize disease better than the location does. Exertion + rest-relief = cardiac, wherever the patient points. Meals + antacids = GI. Position/breathing = pleural or pericardial. Reproducible on palpation = musculoskeletal.",
+   "with": "For chest or epigastric symptoms, the <b>trigger and the reliever</b> localize disease better than the location does. Pain on exertion that is relieved by rest is cardiac, wherever the patient points. Pain with meals that is relieved by antacids is <b>GI</b> (gastrointestinal). Pain with position or breathing is pleural or pericardial. Pain reproducible on palpation is musculoskeletal.",
+   "note": "voice: .rule; equations written as sentences, stem framing removed",
+   "claims": [
+    {
+     "claim": "For chest or epigastric symptoms, the trigger and the reliever localize disease better than the location does.",
+     "to": "For chest or epigastric symptoms, the trigger and the reliever localize disease better than the location does."
+    },
+    {
+     "claim": "Exertion with rest relief is cardiac, wherever the patient points.",
+     "to": "Pain on exertion that is relieved by rest is cardiac, wherever the patient points."
+    },
+    {
+     "claim": "Meals with antacid relief is GI.",
+     "to": "Pain with meals that is relieved by antacids is GI (gastrointestinal)."
+    },
+    {
+     "claim": "Pain with position or breathing is pleural or pericardial.",
+     "to": "Pain with position or breathing is pleural or pericardial."
+    },
+    {
+     "claim": "Pain reproducible on palpation is musculoskeletal.",
+     "to": "Pain reproducible on palpation is musculoskeletal."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "For chest or epigastric symptoms, the trigger and the reliever localize disease better than the location does.",
+     "from": "For chest or epigastric symptoms, the trigger and the reliever localize disease better than the location does."
+    },
+    {
+     "claim": "Pain on exertion that is relieved by rest is cardiac, wherever the patient points.",
+     "from": "Exertion with rest relief is cardiac, wherever the patient points."
+    },
+    {
+     "claim": "Pain with meals that is relieved by antacids is GI.",
+     "from": "Meals with antacid relief is GI."
+    },
+    {
+     "claim": "Pain with position or breathing is pleural or pericardial.",
+     "from": "Pain with position or breathing is pleural or pericardial."
+    },
+    {
+     "claim": "Pain reproducible on palpation is musculoskeletal.",
+     "from": "Pain reproducible on palpation is musculoskeletal."
+    },
+    {
+     "claim": "GI stands for gastrointestinal.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ie-ppx",
+   "find": "Two gates, both must open",
+   "with": "Both a high-risk cardiac condition and a high-risk procedure are required",
+   "note": "voice: p.sub; slogan to plain statement",
+   "claims": [
+    {
+     "claim": "Two gates must both open: a high-risk condition and a high-risk procedure.",
+     "to": "Both a high-risk cardiac condition and a high-risk procedure are required"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Both a high-risk cardiac condition and a high-risk procedure are required.",
+     "from": "Two gates must both open: a high-risk condition and a high-risk procedure."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ie-ppx",
+   "find": "<p>Prophylaxis requires <b>a high-risk cardiac condition AND a high-risk procedure</b>. MVP with regurgitation, bicuspid valve, rheumatic valve disease, and HCM all came <b>off the list in 2007</b> — and NBME has been recycling \"MVP + dental visit → nothing\" ever since.</p>",
+   "with": "<p>Prophylaxis requires <b>a high-risk cardiac condition AND a high-risk procedure</b>. <b>MVP</b> (mitral valve prolapse) with regurgitation, bicuspid valve, rheumatic valve disease and <b>HCM</b> (hypertrophic cardiomyopathy) all came <b>off the list in 2007</b>. A patient with MVP having a dental visit needs no prophylaxis.</p>",
+   "note": "voice: .dp; exam framing and em dash removed, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Prophylaxis requires a high-risk cardiac condition AND a high-risk procedure.",
+     "to": "Prophylaxis requires a high-risk cardiac condition AND a high-risk procedure."
+    },
+    {
+     "claim": "MVP with regurgitation came off the list in 2007.",
+     "to": "MVP (mitral valve prolapse) with regurgitation, bicuspid valve, rheumatic valve disease and HCM (hypertrophic cardiomyopathy) all came off the list in 2007."
+    },
+    {
+     "claim": "Bicuspid valve came off the list in 2007.",
+     "to": "MVP (mitral valve prolapse) with regurgitation, bicuspid valve, rheumatic valve disease and HCM (hypertrophic cardiomyopathy) all came off the list in 2007."
+    },
+    {
+     "claim": "Rheumatic valve disease came off the list in 2007.",
+     "to": "MVP (mitral valve prolapse) with regurgitation, bicuspid valve, rheumatic valve disease and HCM (hypertrophic cardiomyopathy) all came off the list in 2007."
+    },
+    {
+     "claim": "HCM came off the list in 2007.",
+     "to": "MVP (mitral valve prolapse) with regurgitation, bicuspid valve, rheumatic valve disease and HCM (hypertrophic cardiomyopathy) all came off the list in 2007."
+    },
+    {
+     "claim": "MVP with a dental visit needs no prophylaxis.",
+     "to": "A patient with MVP having a dental visit needs no prophylaxis."
+    },
+    {
+     "claim": "The exam keeps reusing this item.",
+     "dropped": "framing about how often the exam reuses the item; the clinical point is kept"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Prophylaxis requires a high-risk cardiac condition AND a high-risk procedure.",
+     "from": "Prophylaxis requires a high-risk cardiac condition AND a high-risk procedure."
+    },
+    {
+     "claim": "MVP with regurgitation came off the list in 2007.",
+     "from": "MVP with regurgitation came off the list in 2007."
+    },
+    {
+     "claim": "Bicuspid valve came off the list in 2007.",
+     "from": "Bicuspid valve came off the list in 2007."
+    },
+    {
+     "claim": "Rheumatic valve disease came off the list in 2007.",
+     "from": "Rheumatic valve disease came off the list in 2007."
+    },
+    {
+     "claim": "HCM came off the list in 2007.",
+     "from": "HCM came off the list in 2007."
+    },
+    {
+     "claim": "A patient with MVP having a dental visit needs no prophylaxis.",
+     "from": "MVP with a dental visit needs no prophylaxis."
+    },
+    {
+     "claim": "MVP stands for mitral valve prolapse.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HCM stands for hypertrophic cardiomyopathy.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ie-ppx",
+   "find": "Amoxicillin 2 g PO 30–60 min before → penicillin-allergic: <b>macrolide or doxycycline</b> → can't take oral: cefazolin/ceftriaxone IV. <b>Clindamycin is out</b> (C. difficile risk) — the newest edit and prime distractor material.",
+   "with": "Give amoxicillin 2 g <b>PO</b> (by mouth) 30–60 min before the procedure. If the patient is penicillin-allergic, give a <b>macrolide or doxycycline</b>. If the patient cannot take oral drugs, give <b>IV</b> (intravenous) cefazolin or ceftriaxone. <b>Clindamycin is out</b> because of C. difficile risk. Its removal is the newest edit.",
+   "note": "voice: .pearls; arrow chain split, em dash and distractor framing removed",
+   "claims": [
+    {
+     "claim": "If both gates open, give amoxicillin 2 g PO 30–60 min before.",
+     "to": "Give amoxicillin 2 g PO (by mouth) 30–60 min before the procedure."
+    },
+    {
+     "claim": "Penicillin-allergic: macrolide or doxycycline.",
+     "to": "If the patient is penicillin-allergic, give a macrolide or doxycycline."
+    },
+    {
+     "claim": "Unable to take oral: cefazolin or ceftriaxone IV.",
+     "to": "If the patient cannot take oral drugs, give IV (intravenous) cefazolin or ceftriaxone."
+    },
+    {
+     "claim": "Clindamycin is out because of C. difficile risk.",
+     "to": "Clindamycin is out because of C. difficile risk."
+    },
+    {
+     "claim": "Removing clindamycin is the newest edit.",
+     "to": "Its removal is the newest edit."
+    },
+    {
+     "claim": "It is prime distractor material.",
+     "dropped": "framing about exam distractors"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Give amoxicillin 2 g PO (by mouth) 30–60 min before the procedure.",
+     "from": "If both gates open, give amoxicillin 2 g PO 30–60 min before."
+    },
+    {
+     "claim": "If the patient is penicillin-allergic, give a macrolide or doxycycline.",
+     "from": "Penicillin-allergic: macrolide or doxycycline."
+    },
+    {
+     "claim": "If the patient cannot take oral drugs, give IV (intravenous) cefazolin or ceftriaxone.",
+     "from": "Unable to take oral: cefazolin or ceftriaxone IV."
+    },
+    {
+     "claim": "Clindamycin is out because of C. difficile risk.",
+     "from": "Clindamycin is out because of C. difficile risk."
+    },
+    {
+     "claim": "Its removal is the newest edit.",
+     "from": "Removing clindamycin is the newest edit."
+    },
+    {
+     "claim": "PO stands for by mouth.",
+     "from": "expansion"
+    },
+    {
+     "claim": "IV stands for intravenous.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ie-ppx",
+   "find": "When a stem lavishes detail on a patient-specific factor that only matters <i>if</i> the intervention is indicated (an allergy, a dose adjustment), treat it as a prompt to <b>verify the indication</b> — not as confirmation of it.",
+   "with": "When a case details a patient-specific factor that only matters <i>if</i> the intervention is indicated (an allergy, a dose adjustment), <b>verify the indication</b>. The detail does not confirm the indication.",
+   "note": "voice: .rule; stem framing and em dash removed",
+   "claims": [
+    {
+     "claim": "A patient-specific factor that only matters if the intervention is indicated (an allergy, a dose adjustment) is a prompt to verify the indication.",
+     "to": "When a case details a patient-specific factor that only matters if the intervention is indicated (an allergy, a dose adjustment), verify the indication."
+    },
+    {
+     "claim": "Such a detail is not confirmation of the indication.",
+     "to": "The detail does not confirm the indication."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a case details a patient-specific factor that only matters if the intervention is indicated (an allergy, a dose adjustment), verify the indication.",
+     "from": "A patient-specific factor that only matters if the intervention is indicated (an allergy, a dose adjustment) is a prompt to verify the indication."
+    },
+    {
+     "claim": "The detail does not confirm the indication.",
+     "from": "Such a detail is not confirmation of the indication."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "secondary-htn",
+   "find": "Hyperaldosteronism, FMD, and the renin fork",
+   "with": "Hyperaldosteronism, fibromuscular dysplasia and how renin separates them",
+   "note": "voice: p.sub; metaphor removed, acronym written out",
+   "claims": [
+    {
+     "claim": "The brief covers hyperaldosteronism and FMD.",
+     "to": "Hyperaldosteronism, fibromuscular dysplasia and how renin separates them"
+    },
+    {
+     "claim": "Renin is the fork that separates them.",
+     "to": "Hyperaldosteronism, fibromuscular dysplasia and how renin separates them"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The brief covers hyperaldosteronism and fibromuscular dysplasia.",
+     "from": "The brief covers hyperaldosteronism and FMD."
+    },
+    {
+     "claim": "Renin separates them.",
+     "from": "Renin is the fork that separates them."
+    },
+    {
+     "claim": "FMD stands for fibromuscular dysplasia.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "secondary-htn",
+   "find": "<p>Young patient + hypertension + <b>hypokalemia and metabolic alkalosis</b> with normal renal function = mineralocorticoid excess. Then <b>renin splits the two look-alikes</b>: primary hyperaldosteronism has <b>suppressed renin</b>; renal artery stenosis has <b>high renin</b>.</p>",
+   "with": "<p>In a young patient with hypertension, <b>hypokalemia and metabolic alkalosis</b> with normal renal function indicate mineralocorticoid excess. <b>Renin</b> then separates the two look-alikes. Primary hyperaldosteronism has <b>suppressed renin</b>, and renal artery stenosis has <b>high renin</b>.</p>",
+   "note": "voice: .dp; equation written as a sentence, slogan bold reworded",
+   "reworded_bold": [
+    "renin splits the two look-alikes"
+   ],
+   "claims": [
+    {
+     "claim": "Young patient with hypertension, hypokalemia and metabolic alkalosis and normal renal function has mineralocorticoid excess.",
+     "to": "In a young patient with hypertension, hypokalemia and metabolic alkalosis with normal renal function indicate mineralocorticoid excess."
+    },
+    {
+     "claim": "Renin splits the two look-alikes.",
+     "to": "Renin then separates the two look-alikes."
+    },
+    {
+     "claim": "Primary hyperaldosteronism has suppressed renin.",
+     "to": "Primary hyperaldosteronism has suppressed renin, and renal artery stenosis has high renin."
+    },
+    {
+     "claim": "Renal artery stenosis has high renin.",
+     "to": "Primary hyperaldosteronism has suppressed renin, and renal artery stenosis has high renin."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In a young patient with hypertension, hypokalemia and metabolic alkalosis with normal renal function indicate mineralocorticoid excess.",
+     "from": "Young patient with hypertension, hypokalemia and metabolic alkalosis and normal renal function has mineralocorticoid excess."
+    },
+    {
+     "claim": "Renin then separates the two look-alikes.",
+     "from": "Renin splits the two look-alikes."
+    },
+    {
+     "claim": "Primary hyperaldosteronism has suppressed renin.",
+     "from": "Primary hyperaldosteronism has suppressed renin."
+    },
+    {
+     "claim": "Renal artery stenosis has high renin.",
+     "from": "Renal artery stenosis has high renin."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "secondary-htn",
+   "find": "<span class=\"lbl\">Choice architecture</span> When both a <b>disease</b> and its <b>cause</b> appear as options (hyperaldosteronism vs. adrenal adenoma), the evidence level picks the winner. Labs proving physiology → name the <b>syndrome</b>. Imaging or pathology proving anatomy → name the <b>lesion</b>. Bilateral adrenal hyperplasia is more common than adenoma, and <b>adrenal venous sampling</b> precedes surgery.",
+   "with": "<span class=\"lbl\">Syndrome or lesion</span> Whether to name the <b>disease</b> or its <b>cause</b> (hyperaldosteronism vs. adrenal adenoma) depends on the level of evidence. If labs prove the physiology, name the <b>syndrome</b>. If imaging or pathology proves the anatomy, name the <b>lesion</b>. Bilateral adrenal hyperplasia is more common than adenoma, and <b>adrenal venous sampling</b> precedes surgery.",
+   "note": "voice: .danger; rhetorical label reworded, option framing and arrows removed",
+   "reworded_label": [
+    "Choice architecture"
+   ],
+   "claims": [
+    {
+     "claim": "When both a disease and its cause appear (hyperaldosteronism vs. adrenal adenoma), the evidence level decides which to name.",
+     "to": "Whether to name the disease or its cause (hyperaldosteronism vs. adrenal adenoma) depends on the level of evidence."
+    },
+    {
+     "claim": "Labs proving physiology mean name the syndrome.",
+     "to": "If labs prove the physiology, name the syndrome."
+    },
+    {
+     "claim": "Imaging or pathology proving anatomy means name the lesion.",
+     "to": "If imaging or pathology proves the anatomy, name the lesion."
+    },
+    {
+     "claim": "Bilateral adrenal hyperplasia is more common than adenoma.",
+     "to": "Bilateral adrenal hyperplasia is more common than adenoma, and adrenal venous sampling precedes surgery."
+    },
+    {
+     "claim": "Adrenal venous sampling precedes surgery.",
+     "to": "Bilateral adrenal hyperplasia is more common than adenoma, and adrenal venous sampling precedes surgery."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Whether to name the disease or its cause (hyperaldosteronism vs. adrenal adenoma) depends on the level of evidence.",
+     "from": "When both a disease and its cause appear (hyperaldosteronism vs. adrenal adenoma), the evidence level decides which to name."
+    },
+    {
+     "claim": "If labs prove the physiology, name the syndrome.",
+     "from": "Labs proving physiology mean name the syndrome."
+    },
+    {
+     "claim": "If imaging or pathology proves the anatomy, name the lesion.",
+     "from": "Imaging or pathology proving anatomy means name the lesion."
+    },
+    {
+     "claim": "Bilateral adrenal hyperplasia is more common than adenoma.",
+     "from": "Bilateral adrenal hyperplasia is more common than adenoma."
+    },
+    {
+     "claim": "Adrenal venous sampling precedes surgery.",
+     "from": "Adrenal venous sampling precedes surgery."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "secondary-htn",
+   "find": "<span class=\"lbl\">Mechanism chains they test link by link</span> Aldosterone → ENaC upregulation in the collecting duct → Na⁺ reabsorption → electronegative lumen → K⁺ and H⁺ secretion → hypokalemia + metabolic alkalosis. <b>Aldosterone escape</b> (ANP + pressure natriuresis) means sodium plateaus and there is <b>no edema</b> — a normal sodium does not argue against the diagnosis. For renovascular disease, read the <b>verb</b>: \"initiated by\" → <b>renin</b>; \"directly mediates vasoconstriction\" → angiotensin II; \"causes the hypokalemia\" → aldosterone.",
+   "with": "<span class=\"lbl\">Mechanism chains</span> Aldosterone upregulates <b>ENaC</b> (epithelial sodium channel) in the collecting duct, which increases Na⁺ reabsorption. The lumen becomes electronegative, which drives K⁺ and H⁺ secretion. The result is hypokalemia and metabolic alkalosis. <b>Aldosterone escape</b>, through <b>ANP</b> (atrial natriuretic peptide) and pressure natriuresis, means sodium plateaus and there is <b>no edema</b>. A normal sodium does not argue against the diagnosis. In renovascular disease, <b>renin</b> initiates the cascade, angiotensin II directly mediates vasoconstriction, and aldosterone causes the hypokalemia.",
+   "note": "voice: .pearls; rhetorical label reworded, arrow chain split, question framing removed",
+   "reworded_bold": [
+    "verb"
+   ],
+   "reworded_label": [
+    "Mechanism chains they test link by link"
+   ],
+   "claims": [
+    {
+     "claim": "Aldosterone upregulates ENaC in the collecting duct.",
+     "to": "Aldosterone upregulates ENaC (epithelial sodium channel) in the collecting duct, which increases Na⁺ reabsorption."
+    },
+    {
+     "claim": "ENaC upregulation increases Na⁺ reabsorption.",
+     "to": "Aldosterone upregulates ENaC (epithelial sodium channel) in the collecting duct, which increases Na⁺ reabsorption."
+    },
+    {
+     "claim": "Na⁺ reabsorption makes the lumen electronegative.",
+     "to": "The lumen becomes electronegative, which drives K⁺ and H⁺ secretion."
+    },
+    {
+     "claim": "The electronegative lumen drives K⁺ and H⁺ secretion.",
+     "to": "The lumen becomes electronegative, which drives K⁺ and H⁺ secretion."
+    },
+    {
+     "claim": "K⁺ and H⁺ secretion causes hypokalemia and metabolic alkalosis.",
+     "to": "The result is hypokalemia and metabolic alkalosis."
+    },
+    {
+     "claim": "Aldosterone escape (ANP and pressure natriuresis) means sodium plateaus.",
+     "to": "Aldosterone escape, through ANP (atrial natriuretic peptide) and pressure natriuresis, means sodium plateaus and there is no edema."
+    },
+    {
+     "claim": "Aldosterone escape means there is no edema.",
+     "to": "Aldosterone escape, through ANP (atrial natriuretic peptide) and pressure natriuresis, means sodium plateaus and there is no edema."
+    },
+    {
+     "claim": "A normal sodium does not argue against the diagnosis.",
+     "to": "A normal sodium does not argue against the diagnosis."
+    },
+    {
+     "claim": "In renovascular disease, initiated by points to renin.",
+     "to": "In renovascular disease, renin initiates the cascade, angiotensin II directly mediates vasoconstriction, and aldosterone causes the hypokalemia."
+    },
+    {
+     "claim": "Directly mediates vasoconstriction points to angiotensin II.",
+     "to": "In renovascular disease, renin initiates the cascade, angiotensin II directly mediates vasoconstriction, and aldosterone causes the hypokalemia."
+    },
+    {
+     "claim": "Causes the hypokalemia points to aldosterone.",
+     "to": "In renovascular disease, renin initiates the cascade, angiotensin II directly mediates vasoconstriction, and aldosterone causes the hypokalemia."
+    },
+    {
+     "claim": "Read the verb.",
+     "dropped": "framing about reading the question wording; the three mediators are stated"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Aldosterone upregulates ENaC in the collecting duct.",
+     "from": "Aldosterone upregulates ENaC in the collecting duct."
+    },
+    {
+     "claim": "ENaC upregulation increases Na⁺ reabsorption.",
+     "from": "ENaC upregulation increases Na⁺ reabsorption."
+    },
+    {
+     "claim": "The lumen becomes electronegative.",
+     "from": "Na⁺ reabsorption makes the lumen electronegative."
+    },
+    {
+     "claim": "The electronegative lumen drives K⁺ and H⁺ secretion.",
+     "from": "The electronegative lumen drives K⁺ and H⁺ secretion."
+    },
+    {
+     "claim": "K⁺ and H⁺ secretion causes hypokalemia and metabolic alkalosis.",
+     "from": "K⁺ and H⁺ secretion causes hypokalemia and metabolic alkalosis."
+    },
+    {
+     "claim": "Aldosterone escape (ANP and pressure natriuresis) means sodium plateaus.",
+     "from": "Aldosterone escape (ANP and pressure natriuresis) means sodium plateaus."
+    },
+    {
+     "claim": "Aldosterone escape means there is no edema.",
+     "from": "Aldosterone escape means there is no edema."
+    },
+    {
+     "claim": "A normal sodium does not argue against the diagnosis.",
+     "from": "A normal sodium does not argue against the diagnosis."
+    },
+    {
+     "claim": "In renovascular disease, renin initiates the cascade.",
+     "from": "In renovascular disease, initiated by points to renin."
+    },
+    {
+     "claim": "Angiotensin II directly mediates vasoconstriction.",
+     "from": "Directly mediates vasoconstriction points to angiotensin II."
+    },
+    {
+     "claim": "Aldosterone causes the hypokalemia.",
+     "from": "Causes the hypokalemia points to aldosterone."
+    },
+    {
+     "claim": "ENaC stands for epithelial sodium channel.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ANP stands for atrial natriuretic peptide.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "secondary-htn",
+   "find": "<b>Bilateral</b> RAS + ACE-I → AKI, because the efferent arteriole needs angiotensin II to maintain GFR. Flash pulmonary edema with severe HTN in an elderly vasculopath is the bilateral-RAS stem.",
+   "with": "<b>Bilateral</b> <b>RAS</b> (renal artery stenosis) plus an <b>ACE-I</b> (angiotensin-converting enzyme inhibitor) causes <b>AKI</b> (acute kidney injury). This happens because the efferent arteriole needs angiotensin II to maintain <b>GFR</b> (glomerular filtration rate). Flash pulmonary edema with severe <b>HTN</b> (hypertension) in an elderly patient with vascular disease is the classic presentation of bilateral RAS.",
+   "note": "voice: .pearls; arrows written out, acronyms expanded, stem framing removed",
+   "claims": [
+    {
+     "claim": "Bilateral RAS with an ACE-I causes AKI.",
+     "to": "Bilateral RAS (renal artery stenosis) plus an ACE-I (angiotensin-converting enzyme inhibitor) causes AKI (acute kidney injury)."
+    },
+    {
+     "claim": "The efferent arteriole needs angiotensin II to maintain GFR.",
+     "to": "This happens because the efferent arteriole needs angiotensin II to maintain GFR (glomerular filtration rate)."
+    },
+    {
+     "claim": "Flash pulmonary edema with severe HTN in an elderly vasculopath is the bilateral-RAS presentation.",
+     "to": "Flash pulmonary edema with severe HTN (hypertension) in an elderly patient with vascular disease is the classic presentation of bilateral RAS."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Bilateral RAS with an ACE-I causes AKI.",
+     "from": "Bilateral RAS with an ACE-I causes AKI."
+    },
+    {
+     "claim": "The efferent arteriole needs angiotensin II to maintain GFR.",
+     "from": "The efferent arteriole needs angiotensin II to maintain GFR."
+    },
+    {
+     "claim": "Flash pulmonary edema with severe HTN in an elderly vasculopath is the bilateral-RAS presentation.",
+     "from": "Flash pulmonary edema with severe HTN in an elderly vasculopath is the bilateral-RAS presentation."
+    },
+    {
+     "claim": "RAS stands for renal artery stenosis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ACE-I stands for angiotensin-converting enzyme inhibitor.",
+     "from": "expansion"
+    },
+    {
+     "claim": "AKI stands for acute kidney injury.",
+     "from": "expansion"
+    },
+    {
+     "claim": "GFR stands for glomerular filtration rate.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HTN stands for hypertension.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "secondary-htn",
+   "find": "Part I <b>Hypertension: Workup &amp; Drug Choice</b> — once the secondary hunt is negative, that brief picks the agent by comorbidity. Part I <b>Inherited Tumor Syndromes</b> owns the case where the hypertension is one organ in a heritable pattern. Part II <b>Stroke in a Child or Adolescent</b> sets fibromuscular dysplasia beside Takayasu arteritis, the inflammatory cause of renal artery stenosis in a young patient.",
+   "with": "Part I <b>Hypertension: Workup &amp; Drug Choice</b> covers choosing the agent by comorbidity once the secondary workup is negative. Part I <b>Inherited Tumor Syndromes</b> covers the case where the hypertension is one organ in a heritable pattern. Part II <b>Stroke in a Child or Adolescent</b> compares fibromuscular dysplasia with Takayasu arteritis, the inflammatory cause of renal artery stenosis in a young patient.",
+   "note": "voice: Pairs with; em dash removed, owns -> covers",
+   "claims": [
+    {
+     "claim": "Part I Hypertension: Workup & Drug Choice picks the agent by comorbidity once the secondary hunt is negative.",
+     "to": "Part I Hypertension: Workup & Drug Choice covers choosing the agent by comorbidity once the secondary workup is negative."
+    },
+    {
+     "claim": "Part I Inherited Tumor Syndromes covers the case where hypertension is one organ in a heritable pattern.",
+     "to": "Part I Inherited Tumor Syndromes covers the case where the hypertension is one organ in a heritable pattern."
+    },
+    {
+     "claim": "Part II Stroke in a Child or Adolescent sets fibromuscular dysplasia beside Takayasu arteritis.",
+     "to": "Part II Stroke in a Child or Adolescent compares fibromuscular dysplasia with Takayasu arteritis, the inflammatory cause of renal artery stenosis in a young patient."
+    },
+    {
+     "claim": "Takayasu arteritis is the inflammatory cause of renal artery stenosis in a young patient.",
+     "to": "Part II Stroke in a Child or Adolescent compares fibromuscular dysplasia with Takayasu arteritis, the inflammatory cause of renal artery stenosis in a young patient."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I Hypertension: Workup & Drug Choice covers choosing the agent by comorbidity once the secondary workup is negative.",
+     "from": "Part I Hypertension: Workup & Drug Choice picks the agent by comorbidity once the secondary hunt is negative."
+    },
+    {
+     "claim": "Part I Inherited Tumor Syndromes covers the case where the hypertension is one organ in a heritable pattern.",
+     "from": "Part I Inherited Tumor Syndromes covers the case where hypertension is one organ in a heritable pattern."
+    },
+    {
+     "claim": "Part II Stroke in a Child or Adolescent compares fibromuscular dysplasia with Takayasu arteritis, the inflammatory cause of renal artery stenosis in a young patient.",
+     "from": "Part II Stroke in a Child or Adolescent sets fibromuscular dysplasia beside Takayasu arteritis."
+    },
+    {
+     "claim": "Takayasu arteritis is the inflammatory cause of renal artery stenosis in a young patient.",
+     "from": "Takayasu arteritis is the inflammatory cause of renal artery stenosis in a young patient."
+    }
+   ]
+  }
+ ]
+}

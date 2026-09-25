@@ -1,0 +1,1266 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bs-learning",
+   "find": "<p>The mother's history is the chief complaint; <b>the child's private disclosure is the diagnosis</b>. She describes irritability, a fight and school refusal; he says his classmates call him a baby because he counts on his fingers and reads slowly. Every behavioral option explains the noise, and only one explains the noise <b>and</b> the failing grades.</p>\n<p>Two structural signals seal it. Onset is anchored to an <b>academic transition</b> — third grade, where learning to read becomes reading to learn — and the symptoms are <b>confined to school</b>, with normal behavior at home.</p>",
+   "with": "<p>The mother's chief complaint is irritability, a fight and school refusal. In a private interview, the child says his classmates call him a baby because he counts on his fingers and reads slowly. <b>This private disclosure identifies the diagnosis</b>. Each behavioral disorder in the differential explains the behavior, but only specific learning disorder also explains the failing grades.</p>\n<p>Onset coincides with an <b>academic transition</b>: third grade, where learning to read becomes reading to learn. The symptoms are <b>confined to school</b>, with normal behavior at home.</p>",
+   "note": "round 2 voice: .dp",
+   "reworded_bold": [
+    "the child's private disclosure is the diagnosis",
+    "and"
+   ],
+   "claims": [
+    {
+     "claim": "The mother's history is the chief complaint.",
+     "to": "The mother's chief complaint is irritability, a fight and school refusal."
+    },
+    {
+     "claim": "The mother describes irritability, a fight and school refusal.",
+     "to": "The mother's chief complaint is irritability, a fight and school refusal."
+    },
+    {
+     "claim": "The child's private disclosure is the diagnosis.",
+     "to": "This private disclosure identifies the diagnosis."
+    },
+    {
+     "claim": "The child says his classmates call him a baby because he counts on his fingers and reads slowly.",
+     "to": "In a private interview, the child says his classmates call him a baby because he counts on his fingers and reads slowly."
+    },
+    {
+     "claim": "Every behavioral option explains the behavior.",
+     "to": "Each behavioral disorder in the differential explains the behavior, but only specific learning disorder also explains the failing grades."
+    },
+    {
+     "claim": "Only one option also explains the failing grades.",
+     "to": "Each behavioral disorder in the differential explains the behavior, but only specific learning disorder also explains the failing grades."
+    },
+    {
+     "claim": "Two structural signals seal it.",
+     "dropped": "framing; the two signals (onset at an academic transition, symptoms confined to school) are stated next"
+    },
+    {
+     "claim": "Onset is anchored to an academic transition: third grade, where learning to read becomes reading to learn.",
+     "to": "Onset coincides with an academic transition: third grade, where learning to read becomes reading to learn."
+    },
+    {
+     "claim": "The symptoms are confined to school, with normal behavior at home.",
+     "to": "The symptoms are confined to school, with normal behavior at home."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The mother's chief complaint is irritability, a fight and school refusal.",
+     "from": "The mother's history is the chief complaint."
+    },
+    {
+     "claim": "In a private interview, the child says classmates call him a baby because he counts on his fingers and reads slowly.",
+     "from": "The child says his classmates call him a baby because he counts on his fingers and reads slowly."
+    },
+    {
+     "claim": "The child's private disclosure identifies the diagnosis.",
+     "from": "The child's private disclosure is the diagnosis."
+    },
+    {
+     "claim": "Each behavioral disorder in the differential explains the behavior.",
+     "from": "Every behavioral option explains the behavior."
+    },
+    {
+     "claim": "Only specific learning disorder also explains the failing grades.",
+     "from": "Only one option also explains the failing grades."
+    },
+    {
+     "claim": "Onset coincides with an academic transition: third grade, where learning to read becomes reading to learn.",
+     "from": "Onset is anchored to an academic transition: third grade, where learning to read becomes reading to learn."
+    },
+    {
+     "claim": "The symptoms are confined to school, with normal behavior at home.",
+     "from": "The symptoms are confined to school, with normal behavior at home."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-learning",
+   "find": "Count the settings — behavior in one setting means something about that setting, in two or more it is a disorder the child carries",
+   "with": "Count the settings: behavior in one setting means something about that setting; behavior in two or more settings is a disorder the child carries",
+   "note": "round 2 voice: .pearls first row, em dash removed",
+   "claims": [
+    {
+     "claim": "Count the settings in which the behavior occurs.",
+     "to": "Count the settings: behavior in one setting means something about that setting; behavior in two or more settings is a disorder the child carries"
+    },
+    {
+     "claim": "Behavior in one setting means something about that setting.",
+     "to": "Count the settings: behavior in one setting means something about that setting; behavior in two or more settings is a disorder the child carries"
+    },
+    {
+     "claim": "Behavior in two or more settings is a disorder the child carries.",
+     "to": "Count the settings: behavior in one setting means something about that setting; behavior in two or more settings is a disorder the child carries"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Count the settings in which the behavior occurs.",
+     "from": "Count the settings in which the behavior occurs."
+    },
+    {
+     "claim": "Behavior in one setting means something about that setting.",
+     "from": "Behavior in one setting means something about that setting."
+    },
+    {
+     "claim": "Behavior in two or more settings is a disorder the child carries.",
+     "from": "Behavior in two or more settings is a disorder the child carries."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-learning",
+   "find": "Candidate twin — confirm. This brief wants a partner on ADHD diagnosis and stimulant management, which the page does not yet carry.",
+   "with": "Related conditions without their own brief: ADHD (attention deficit hyperactivity disorder) diagnosis and stimulant management.",
+   "note": "round 2 voice: Pairs with, candidate-twin workflow text converted",
+   "claims": [
+    {
+     "claim": "This is a candidate twin to confirm.",
+     "dropped": "workflow note about proposing a brief"
+    },
+    {
+     "claim": "The page has no brief on ADHD diagnosis and stimulant management.",
+     "to": "Related conditions without their own brief: ADHD (attention deficit hyperactivity disorder) diagnosis and stimulant management."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "ADHD stands for attention deficit hyperactivity disorder.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ADHD diagnosis and stimulant management have no brief of their own.",
+     "from": "The page has no brief on ADHD diagnosis and stimulant management."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-learning",
+   "find": "In a pediatric behavior stem the parent's history is the chief complaint and the child's private disclosure is the diagnosis, so when a stem bothers to write that the child was interviewed privately, that sentence is the answer.",
+   "with": "In a child with a behavior problem, the parent's history gives the chief complaint and the child's private disclosure gives the diagnosis.",
+   "note": "round 2 voice: .rule, stem framing removed",
+   "claims": [
+    {
+     "claim": "In a pediatric behavior problem the parent's history is the chief complaint.",
+     "to": "In a child with a behavior problem, the parent's history gives the chief complaint and the child's private disclosure gives the diagnosis."
+    },
+    {
+     "claim": "The child's private disclosure is the diagnosis.",
+     "to": "In a child with a behavior problem, the parent's history gives the chief complaint and the child's private disclosure gives the diagnosis."
+    },
+    {
+     "claim": "When the child is interviewed privately, what the child says there identifies the diagnosis.",
+     "to": "In a child with a behavior problem, the parent's history gives the chief complaint and the child's private disclosure gives the diagnosis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In a child with a behavior problem, the parent's history gives the chief complaint.",
+     "from": "In a pediatric behavior problem the parent's history is the chief complaint."
+    },
+    {
+     "claim": "The child's private disclosure gives the diagnosis.",
+     "from": "The child's private disclosure is the diagnosis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nat-fracture",
+   "find": "<p>Three fractures are <b>abuse until proven otherwise</b> in a young child: a <b>metaphyseal corner</b> (bucket-handle) fracture, which needs a forcible <b>pull or twist</b> of the limb; a <b>posterior rib</b> fracture, from squeezing the chest; and a <b>femur fracture in a child who does not yet walk</b>. The bone-disease mimics each need <b>their own finding</b> on the film or exam: osteopenia with cupped, frayed metaphyses for rickets; blue sclerae and many low-energy fractures for osteogenesis imperfecta; a punched-out lytic lesion for Langerhans cell histiocytosis.</p>\n<p>A risk factor in the history (breastfeeding without vitamin D, no prenatal care, a parent's single childhood fracture) is not that finding; a film with normal bone density and a classic abuse fracture answers it.</p>",
+   "with": "<p>In a young child, three fractures are <b>abuse until proven otherwise</b>. A <b>metaphyseal corner</b> (bucket-handle) fracture needs a forcible <b>pull or twist</b> of the limb. A <b>posterior rib</b> fracture comes from squeezing the chest. The third is a <b>femur fracture in a child who does not yet walk</b>. The bone-disease mimics each need <b>their own finding</b> on the film or exam. Rickets needs osteopenia with cupped, frayed metaphyses. Osteogenesis imperfecta needs blue sclerae and many low-energy fractures. Langerhans cell histiocytosis needs a punched-out lytic lesion.</p>\n<p>A risk factor in the history (breastfeeding without vitamin D, no prenatal care, a parent's single childhood fracture) is not that finding. A film with normal bone density and a classic abuse fracture indicates abuse.</p>",
+   "note": "round 2 voice: .dp split into short sentences",
+   "claims": [
+    {
+     "claim": "Three fractures are abuse until proven otherwise in a young child.",
+     "to": "In a young child, three fractures are abuse until proven otherwise."
+    },
+    {
+     "claim": "A metaphyseal corner (bucket-handle) fracture needs a forcible pull or twist of the limb.",
+     "to": "A metaphyseal corner (bucket-handle) fracture needs a forcible pull or twist of the limb."
+    },
+    {
+     "claim": "A posterior rib fracture comes from squeezing the chest.",
+     "to": "A posterior rib fracture comes from squeezing the chest."
+    },
+    {
+     "claim": "A femur fracture in a child who does not yet walk is the third.",
+     "to": "The third is a femur fracture in a child who does not yet walk."
+    },
+    {
+     "claim": "The bone-disease mimics each need their own finding on the film or exam.",
+     "to": "The bone-disease mimics each need their own finding on the film or exam."
+    },
+    {
+     "claim": "Rickets needs osteopenia with cupped, frayed metaphyses.",
+     "to": "Rickets needs osteopenia with cupped, frayed metaphyses."
+    },
+    {
+     "claim": "Osteogenesis imperfecta needs blue sclerae and many low-energy fractures.",
+     "to": "Osteogenesis imperfecta needs blue sclerae and many low-energy fractures."
+    },
+    {
+     "claim": "Langerhans cell histiocytosis needs a punched-out lytic lesion.",
+     "to": "Langerhans cell histiocytosis needs a punched-out lytic lesion."
+    },
+    {
+     "claim": "A risk factor in the history (breastfeeding without vitamin D, no prenatal care, a parent's single childhood fracture) is not that finding.",
+     "to": "A risk factor in the history (breastfeeding without vitamin D, no prenatal care, a parent's single childhood fracture) is not that finding."
+    },
+    {
+     "claim": "A film with normal bone density and a classic abuse fracture answers it as abuse.",
+     "to": "A film with normal bone density and a classic abuse fracture indicates abuse."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In a young child, three fractures are abuse until proven otherwise.",
+     "from": "Three fractures are abuse until proven otherwise in a young child."
+    },
+    {
+     "claim": "A metaphyseal corner (bucket-handle) fracture needs a forcible pull or twist of the limb.",
+     "from": "A metaphyseal corner (bucket-handle) fracture needs a forcible pull or twist of the limb."
+    },
+    {
+     "claim": "A posterior rib fracture comes from squeezing the chest.",
+     "from": "A posterior rib fracture comes from squeezing the chest."
+    },
+    {
+     "claim": "The third is a femur fracture in a child who does not yet walk.",
+     "from": "A femur fracture in a child who does not yet walk is the third."
+    },
+    {
+     "claim": "The bone-disease mimics each need their own finding on the film or exam.",
+     "from": "The bone-disease mimics each need their own finding on the film or exam."
+    },
+    {
+     "claim": "Rickets needs osteopenia with cupped, frayed metaphyses.",
+     "from": "Rickets needs osteopenia with cupped, frayed metaphyses."
+    },
+    {
+     "claim": "Osteogenesis imperfecta needs blue sclerae and many low-energy fractures.",
+     "from": "Osteogenesis imperfecta needs blue sclerae and many low-energy fractures."
+    },
+    {
+     "claim": "Langerhans cell histiocytosis needs a punched-out lytic lesion.",
+     "from": "Langerhans cell histiocytosis needs a punched-out lytic lesion."
+    },
+    {
+     "claim": "A risk factor in the history is not that finding.",
+     "from": "A risk factor in the history (breastfeeding without vitamin D, no prenatal care, a parent's single childhood fracture) is not that finding."
+    },
+    {
+     "claim": "A film with normal bone density and a classic abuse fracture indicates abuse.",
+     "from": "A film with normal bone density and a classic abuse fracture answers it as abuse."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nat-fracture",
+   "find": "They re-ask this by moving the fracture (posterior rib, femur before walking), adding a bruise on the ear or trunk, or asking the next step instead of the cause &middot; A walking toddler with a spiral distal tibial fracture after a minor twist is the accidental mirror; the same child with a corner fracture is not &middot; Caregivers who were themselves abused or neglected, an unstable home and a child with chronic medical problems raise the risk, but the fracture pattern is what decides",
+   "with": "Abuse also presents as a posterior rib fracture or a femur fracture before walking, or with an added bruise on the ear or trunk &middot; A walking toddler with a spiral distal tibial fracture after a minor twist has an accidental injury. The same child with a corner fracture does not &middot; Caregivers who were themselves abused or neglected, an unstable home and a child with chronic medical problems raise the risk. The diagnosis rests on the fracture pattern",
+   "note": "round 2 voice: .pearls, question-format framing and personification removed",
+   "claims": [
+    {
+     "claim": "Abuse can present with the fracture moved to a posterior rib or a femur before walking.",
+     "to": "Abuse also presents as a posterior rib fracture or a femur fracture before walking, or with an added bruise on the ear or trunk"
+    },
+    {
+     "claim": "Abuse can present with an added bruise on the ear or trunk.",
+     "to": "Abuse also presents as a posterior rib fracture or a femur fracture before walking, or with an added bruise on the ear or trunk"
+    },
+    {
+     "claim": "The exam may ask the next step instead of the cause.",
+     "dropped": "framing about how the question is asked; no clinical content"
+    },
+    {
+     "claim": "A walking toddler with a spiral distal tibial fracture after a minor twist is the accidental counterpart.",
+     "to": "A walking toddler with a spiral distal tibial fracture after a minor twist has an accidental injury."
+    },
+    {
+     "claim": "The same child with a corner fracture is not accidental.",
+     "to": "The same child with a corner fracture does not"
+    },
+    {
+     "claim": "Caregivers who were themselves abused or neglected, an unstable home and a child with chronic medical problems raise the risk.",
+     "to": "Caregivers who were themselves abused or neglected, an unstable home and a child with chronic medical problems raise the risk."
+    },
+    {
+     "claim": "The fracture pattern is what decides.",
+     "to": "The diagnosis rests on the fracture pattern"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Abuse also presents as a posterior rib fracture or a femur fracture before walking.",
+     "from": "Abuse can present with the fracture moved to a posterior rib or a femur before walking."
+    },
+    {
+     "claim": "Abuse also presents with an added bruise on the ear or trunk.",
+     "from": "Abuse can present with an added bruise on the ear or trunk."
+    },
+    {
+     "claim": "A walking toddler with a spiral distal tibial fracture after a minor twist has an accidental injury.",
+     "from": "A walking toddler with a spiral distal tibial fracture after a minor twist is the accidental counterpart."
+    },
+    {
+     "claim": "The same child with a corner fracture does not have an accidental injury.",
+     "from": "The same child with a corner fracture is not accidental."
+    },
+    {
+     "claim": "Caregivers who were themselves abused or neglected, an unstable home and a child with chronic medical problems raise the risk.",
+     "from": "Caregivers who were themselves abused or neglected, an unstable home and a child with chronic medical problems raise the risk."
+    },
+    {
+     "claim": "The diagnosis rests on the fracture pattern.",
+     "from": "The fracture pattern is what decides."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nat-fracture",
+   "find": "Aquifer <b>Bruising and Purpura in a Child</b> owns the bruising branch: is the bruise somewhere a child of this age could bump, and are the platelets normal? Part I <b>The Limping Child</b> master table holds the toddler's fracture: does the child walk, and is it a spiral tibial fracture or a corner fracture? Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> owns vitamin D deficiency rickets and the 400 IU supplement for breastfed infants. Part I <b>Bone Tumors: Location, Film, Course</b> owns the lytic lesion: is the bone destroyed, or broken?",
+   "with": "Aquifer <b>Bruising and Purpura in a Child</b> covers bruising. Ask: is the bruise somewhere a child of this age could bump, and are the platelets normal? Part I <b>The Limping Child</b> master table covers the toddler's fracture. Ask: does the child walk, and is it a spiral tibial fracture or a corner fracture? Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> covers vitamin D deficiency rickets and the 400 IU supplement for breastfed infants. Part I <b>Bone Tumors: Location, Film, Course</b> covers the lytic lesion. Ask: is the bone destroyed, or broken?",
+   "note": "round 2 voice: Pairs with, owns/holds to covers, questions as Ask:",
+   "claims": [
+    {
+     "claim": "Bruising and Purpura in a Child covers the bruising branch.",
+     "to": "Aquifer Bruising and Purpura in a Child covers bruising."
+    },
+    {
+     "claim": "Bruising discriminator: is the bruise somewhere a child of this age could bump, and are the platelets normal?",
+     "to": "Ask: is the bruise somewhere a child of this age could bump, and are the platelets normal?"
+    },
+    {
+     "claim": "The Limping Child master table covers the toddler's fracture.",
+     "to": "Part I The Limping Child master table covers the toddler's fracture."
+    },
+    {
+     "claim": "Toddler's fracture discriminator: does the child walk, and is it a spiral tibial fracture or a corner fracture?",
+     "to": "Ask: does the child walk, and is it a spiral tibial fracture or a corner fracture?"
+    },
+    {
+     "claim": "Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin D deficiency rickets and the 400 IU supplement for breastfed infants.",
+     "to": "Part II Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin D deficiency rickets and the 400 IU supplement for breastfed infants."
+    },
+    {
+     "claim": "Bone Tumors: Location, Film, Course covers the lytic lesion.",
+     "to": "Part I Bone Tumors: Location, Film, Course covers the lytic lesion."
+    },
+    {
+     "claim": "Lytic lesion discriminator: is the bone destroyed, or broken?",
+     "to": "Ask: is the bone destroyed, or broken?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Bruising and Purpura in a Child covers bruising.",
+     "from": "Bruising and Purpura in a Child covers the bruising branch."
+    },
+    {
+     "claim": "Ask: is the bruise somewhere a child of this age could bump, and are the platelets normal?",
+     "from": "Bruising discriminator: is the bruise somewhere a child of this age could bump, and are the platelets normal?"
+    },
+    {
+     "claim": "The Limping Child master table covers the toddler's fracture.",
+     "from": "The Limping Child master table covers the toddler's fracture."
+    },
+    {
+     "claim": "Ask: does the child walk, and is it a spiral tibial fracture or a corner fracture?",
+     "from": "Toddler's fracture discriminator: does the child walk, and is it a spiral tibial fracture or a corner fracture?"
+    },
+    {
+     "claim": "Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin D deficiency rickets and the 400 IU supplement for breastfed infants.",
+     "from": "Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin D deficiency rickets and the 400 IU supplement for breastfed infants."
+    },
+    {
+     "claim": "Bone Tumors: Location, Film, Course covers the lytic lesion.",
+     "from": "Bone Tumors: Location, Film, Course covers the lytic lesion."
+    },
+    {
+     "claim": "Ask: is the bone destroyed, or broken?",
+     "from": "Lytic lesion discriminator: is the bone destroyed, or broken?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nat-fracture",
+   "find": "When a young child's fracture needs a force the child could not generate, treat it as abuse until the film or exam gives a bone disease its own sign; a risk factor in the history is not that sign.",
+   "with": "Some fractures in a young child need a force the child could not generate. Treat these as abuse until the film or exam shows a sign specific to a bone disease. A risk factor in the history is not that sign.",
+   "note": "round 2 voice: .rule split",
+   "claims": [
+    {
+     "claim": "Some fractures in a young child need a force the child could not generate.",
+     "to": "Some fractures in a young child need a force the child could not generate."
+    },
+    {
+     "claim": "When a young child's fracture needs a force the child could not generate, treat it as abuse until the film or exam gives a bone disease its own sign.",
+     "to": "Treat these as abuse until the film or exam shows a sign specific to a bone disease."
+    },
+    {
+     "claim": "A risk factor in the history is not that sign.",
+     "to": "A risk factor in the history is not that sign."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Some fractures in a young child need a force the child could not generate.",
+     "from": "Some fractures in a young child need a force the child could not generate."
+    },
+    {
+     "claim": "Treat these fractures as abuse until the film or exam shows a sign specific to a bone disease.",
+     "from": "When a young child's fracture needs a force the child could not generate, treat it as abuse until the film or exam gives a bone disease its own sign."
+    },
+    {
+     "claim": "A risk factor in the history is not that sign.",
+     "from": "A risk factor in the history is not that sign."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nat-fracture",
+   "find": "LCH makes punched-out lytic lesions, not corner fractures.",
+   "with": "Langerhans cell histiocytosis causes punched-out lytic lesions, not corner fractures.",
+   "note": "acronym LCH written out (full name already opens the line)",
+   "claims": [
+    {
+     "claim": "LCH makes punched-out lytic lesions, not corner fractures.",
+     "to": "Langerhans cell histiocytosis: the beefy diaper rash with satellite papules is ordinary candida; Langerhans cell histiocytosis causes punched-out lytic lesions, not corner fractures."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Langerhans cell histiocytosis causes punched-out lytic lesions, not corner fractures.",
+     "from": "LCH makes punched-out lytic lesions, not corner fractures."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nat-fracture",
+   "find": "there is no OI here.",
+   "with": "this is not osteogenesis imperfecta.",
+   "note": "acronym OI written out (full name already opens the line)",
+   "claims": [
+    {
+     "claim": "Without blue sclerae, short stature, bruising or many fractures, there is no OI here.",
+     "to": "Osteogenesis imperfecta: the mother's one childhood forearm fracture is common; without blue sclerae, short stature, bruising or many fractures, this is not osteogenesis imperfecta."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Without blue sclerae, short stature, bruising or many fractures, this is not osteogenesis imperfecta.",
+     "from": "Without blue sclerae, short stature, bruising or many fractures, there is no OI here."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shock",
+   "find": "The category is the mechanism, not the appearance",
+   "with": "Shock is classified by mechanism, not appearance",
+   "note": "round 2 voice: p.sub first segment, aphorism made plain",
+   "claims": [
+    {
+     "claim": "The shock category is set by the mechanism, not the appearance.",
+     "to": "Shock is classified by mechanism, not appearance"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Shock is classified by mechanism, not appearance.",
+     "from": "The shock category is set by the mechanism, not the appearance."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shock",
+   "find": "<p>Fever, a petechial rash and shock in a preschooler is <b>septic shock</b>, and septic shock is by definition <b>distributive</b>: inflammatory mediators produce vasodilation and capillary leak, so blood is maldistributed rather than absent, inadequate or obstructed.</p>\n<p>The trap is that she does not look vasodilated. <b>Capillary refill of 4 seconds is cold shock</b>, which is how children usually present — they compensate by vasoconstricting and running the heart rate up, so the bedside picture mimics hypovolemia. Note also what the stem withholds: <b>there is no blood pressure</b>, because in children hypotension is a late, pre-arrest finding.</p>",
+   "with": "<p>Fever, a petechial rash and shock in a preschooler indicate <b>septic shock</b>. Septic shock is by definition <b>distributive</b>. Inflammatory mediators produce vasodilation and capillary leak, so blood is maldistributed rather than absent, inadequate or obstructed.</p>\n<p>She does not look vasodilated. <b>Capillary refill of 4 seconds is cold shock</b>, which is how children usually present. Children compensate by vasoconstricting and raising the heart rate, so the bedside picture mimics hypovolemia. The vignette gives <b>no blood pressure</b>, because in children hypotension is a late, pre-arrest finding.</p>",
+   "note": "round 2 voice: .dp, trap/stem framing removed, em dash removed",
+   "reworded_bold": [
+    "there is no blood pressure"
+   ],
+   "claims": [
+    {
+     "claim": "Fever, a petechial rash and shock in a preschooler is septic shock.",
+     "to": "Fever, a petechial rash and shock in a preschooler indicate septic shock."
+    },
+    {
+     "claim": "Septic shock is by definition distributive.",
+     "to": "Septic shock is by definition distributive."
+    },
+    {
+     "claim": "Inflammatory mediators produce vasodilation and capillary leak.",
+     "to": "Inflammatory mediators produce vasodilation and capillary leak, so blood is maldistributed rather than absent, inadequate or obstructed."
+    },
+    {
+     "claim": "Blood is maldistributed rather than absent, inadequate or obstructed.",
+     "to": "Inflammatory mediators produce vasodilation and capillary leak, so blood is maldistributed rather than absent, inadequate or obstructed."
+    },
+    {
+     "claim": "She does not look vasodilated.",
+     "to": "She does not look vasodilated."
+    },
+    {
+     "claim": "Capillary refill of 4 seconds is cold shock.",
+     "to": "Capillary refill of 4 seconds is cold shock, which is how children usually present."
+    },
+    {
+     "claim": "Cold shock is how children usually present.",
+     "to": "Capillary refill of 4 seconds is cold shock, which is how children usually present."
+    },
+    {
+     "claim": "Children compensate by vasoconstricting and running the heart rate up, so the bedside picture mimics hypovolemia.",
+     "to": "Children compensate by vasoconstricting and raising the heart rate, so the bedside picture mimics hypovolemia."
+    },
+    {
+     "claim": "The stem gives no blood pressure.",
+     "to": "The vignette gives no blood pressure, because in children hypotension is a late, pre-arrest finding."
+    },
+    {
+     "claim": "In children hypotension is a late, pre-arrest finding.",
+     "to": "The vignette gives no blood pressure, because in children hypotension is a late, pre-arrest finding."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Fever, a petechial rash and shock in a preschooler indicate septic shock.",
+     "from": "Fever, a petechial rash and shock in a preschooler is septic shock."
+    },
+    {
+     "claim": "Septic shock is by definition distributive.",
+     "from": "Septic shock is by definition distributive."
+    },
+    {
+     "claim": "Inflammatory mediators produce vasodilation and capillary leak.",
+     "from": "Inflammatory mediators produce vasodilation and capillary leak."
+    },
+    {
+     "claim": "Blood is maldistributed rather than absent, inadequate or obstructed.",
+     "from": "Blood is maldistributed rather than absent, inadequate or obstructed."
+    },
+    {
+     "claim": "She does not look vasodilated.",
+     "from": "She does not look vasodilated."
+    },
+    {
+     "claim": "Capillary refill of 4 seconds is cold shock, which is how children usually present.",
+     "from": "Capillary refill of 4 seconds is cold shock."
+    },
+    {
+     "claim": "Children compensate by vasoconstricting and raising the heart rate, so the bedside picture mimics hypovolemia.",
+     "from": "Children compensate by vasoconstricting and running the heart rate up, so the bedside picture mimics hypovolemia."
+    },
+    {
+     "claim": "The vignette gives no blood pressure.",
+     "from": "The stem gives no blood pressure."
+    },
+    {
+     "claim": "In children hypotension is a late, pre-arrest finding.",
+     "from": "In children hypotension is a late, pre-arrest finding."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shock",
+   "find": "<span class=\"lbl\">Where the reflex inverts</span> Where intensive care is <b>not</b> available and the child has sepsis <b>without</b> hypotension, bolus fluid is recommended against — a strong, high-certainty recommendation that reverses the usual instinct. And <b>adolescence is never itself a reason to admit</b>: the same hospitalisation thresholds apply as for adults.",
+   "with": "<span class=\"lbl\">Exceptions</span> Where intensive care is not available and the child has sepsis without hypotension, bolus fluid is recommended against. This is a strong, high-certainty recommendation. Also, <b>adolescence is never itself a reason to admit</b>; the same hospitalisation thresholds apply as for adults.",
+   "note": "round 2 voice: .danger, rhetorical label and emphasis bold removed, em dash removed",
+   "reworded_bold": [
+    "not",
+    "without"
+   ],
+   "reworded_label": [
+    "Where the reflex inverts"
+   ],
+   "claims": [
+    {
+     "claim": "Where intensive care is not available and the child has sepsis without hypotension, bolus fluid is recommended against.",
+     "to": "Where intensive care is not available and the child has sepsis without hypotension, bolus fluid is recommended against."
+    },
+    {
+     "claim": "It is a strong, high-certainty recommendation.",
+     "to": "This is a strong, high-certainty recommendation."
+    },
+    {
+     "claim": "The recommendation reverses the usual instinct.",
+     "dropped": "rhetorical framing; the recommendation itself is kept"
+    },
+    {
+     "claim": "Adolescence is never itself a reason to admit.",
+     "to": "Also, adolescence is never itself a reason to admit; the same hospitalisation thresholds apply as for adults."
+    },
+    {
+     "claim": "The same hospitalisation thresholds apply as for adults.",
+     "to": "Also, adolescence is never itself a reason to admit; the same hospitalisation thresholds apply as for adults."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Where intensive care is not available and the child has sepsis without hypotension, bolus fluid is recommended against.",
+     "from": "Where intensive care is not available and the child has sepsis without hypotension, bolus fluid is recommended against."
+    },
+    {
+     "claim": "This is a strong, high-certainty recommendation.",
+     "from": "It is a strong, high-certainty recommendation."
+    },
+    {
+     "claim": "Adolescence is never itself a reason to admit.",
+     "from": "Adolescence is never itself a reason to admit."
+    },
+    {
+     "claim": "The same hospitalisation thresholds apply as for adults.",
+     "from": "The same hospitalisation thresholds apply as for adults."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shock",
+   "find": "Children get cold shock, adults get warm shock — the vasoconstricted child is still distributive &middot; Anaphylactic and neurogenic shock are distributive subtypes, so the category wins unless the subtype's trigger is in the stem &middot; Neurogenic shock is the one hypotension with <b>bradycardia</b>; everything else in shock is tachycardic",
+   "with": "Children get cold shock and adults get warm shock; a vasoconstricted child's shock is still distributive &middot; Anaphylactic and neurogenic shock are distributive subtypes, so classify the shock as distributive, not as the subtype, unless the subtype's trigger is present &middot; Neurogenic shock is the one form of shock with hypotension and <b>bradycardia</b>; all other shock is tachycardic",
+   "note": "round 2 voice: .pearls rows 2 to 4, em dash and personification removed",
+   "claims": [
+    {
+     "claim": "Children get cold shock, adults get warm shock.",
+     "to": "Children get cold shock and adults get warm shock; a vasoconstricted child's shock is still distributive"
+    },
+    {
+     "claim": "The vasoconstricted child is still distributive.",
+     "to": "Children get cold shock and adults get warm shock; a vasoconstricted child's shock is still distributive"
+    },
+    {
+     "claim": "Anaphylactic and neurogenic shock are distributive subtypes.",
+     "to": "Anaphylactic and neurogenic shock are distributive subtypes, so classify the shock as distributive, not as the subtype, unless the subtype's trigger is present"
+    },
+    {
+     "claim": "The category (distributive) is the answer unless the subtype's trigger is in the stem.",
+     "to": "Anaphylactic and neurogenic shock are distributive subtypes, so classify the shock as distributive, not as the subtype, unless the subtype's trigger is present"
+    },
+    {
+     "claim": "Neurogenic shock is the one hypotension with bradycardia.",
+     "to": "Neurogenic shock is the one form of shock with hypotension and bradycardia; all other shock is tachycardic"
+    },
+    {
+     "claim": "Everything else in shock is tachycardic.",
+     "to": "Neurogenic shock is the one form of shock with hypotension and bradycardia; all other shock is tachycardic"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Children get cold shock and adults get warm shock.",
+     "from": "Children get cold shock, adults get warm shock."
+    },
+    {
+     "claim": "A vasoconstricted child's shock is still distributive.",
+     "from": "The vasoconstricted child is still distributive."
+    },
+    {
+     "claim": "Anaphylactic and neurogenic shock are distributive subtypes.",
+     "from": "Anaphylactic and neurogenic shock are distributive subtypes."
+    },
+    {
+     "claim": "Classify the shock as distributive, not as the subtype, unless the subtype's trigger is present.",
+     "from": "The category (distributive) is the answer unless the subtype's trigger is in the stem."
+    },
+    {
+     "claim": "Neurogenic shock is the one form of shock with hypotension and bradycardia.",
+     "from": "Neurogenic shock is the one hypotension with bradycardia."
+    },
+    {
+     "claim": "All other shock is tachycardic.",
+     "from": "Everything else in shock is tachycardic."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shock",
+   "find": "Part I <b>Bacterial Meningitis</b> owns the CSF grid and meningococcal disease, so this brief stops at recognition and resuscitation. Store the discriminator as a question: is perfusion abnormal? If yes, resuscitate before you investigate.",
+   "with": "Part I <b>Bacterial Meningitis</b> covers the CSF (cerebrospinal fluid) grid and meningococcal disease; this brief covers only recognition and resuscitation. Ask: is perfusion abnormal? If yes, resuscitate before you investigate.",
+   "note": "round 2 voice: Pairs with, owns to covers, discriminator as Ask:",
+   "claims": [
+    {
+     "claim": "Bacterial Meningitis covers the CSF grid and meningococcal disease.",
+     "to": "Part I Bacterial Meningitis covers the CSF (cerebrospinal fluid) grid and meningococcal disease; this brief covers only recognition and resuscitation."
+    },
+    {
+     "claim": "This brief stops at recognition and resuscitation.",
+     "to": "Part I Bacterial Meningitis covers the CSF (cerebrospinal fluid) grid and meningococcal disease; this brief covers only recognition and resuscitation."
+    },
+    {
+     "claim": "The discriminator: is perfusion abnormal?",
+     "to": "Ask: is perfusion abnormal?"
+    },
+    {
+     "claim": "If perfusion is abnormal, resuscitate before you investigate.",
+     "to": "If yes, resuscitate before you investigate."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CSF stands for cerebrospinal fluid.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Bacterial Meningitis covers the CSF grid and meningococcal disease.",
+     "from": "Bacterial Meningitis covers the CSF grid and meningococcal disease."
+    },
+    {
+     "claim": "This brief covers only recognition and resuscitation.",
+     "from": "This brief stops at recognition and resuscitation."
+    },
+    {
+     "claim": "Ask: is perfusion abnormal?",
+     "from": "The discriminator: is perfusion abnormal?"
+    },
+    {
+     "claim": "If yes, resuscitate before you investigate.",
+     "from": "If perfusion is abnormal, resuscitate before you investigate."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shock",
+   "find": "Shock is classified by mechanism rather than appearance, and the exam builds its distractors from the appearance, so ask what is wrong with the circulation instead of what the skin looks like.",
+   "with": "Shock is classified by mechanism rather than appearance, so ask what is wrong with the circulation instead of what the skin looks like.",
+   "note": "round 2 voice: .rule, exam framing removed",
+   "claims": [
+    {
+     "claim": "Shock is classified by mechanism rather than appearance.",
+     "to": "Shock is classified by mechanism rather than appearance, so ask what is wrong with the circulation instead of what the skin looks like."
+    },
+    {
+     "claim": "The exam builds its distractors from the appearance.",
+     "dropped": "framing about how the exam writes distractors"
+    },
+    {
+     "claim": "Ask what is wrong with the circulation instead of what the skin looks like.",
+     "to": "Shock is classified by mechanism rather than appearance, so ask what is wrong with the circulation instead of what the skin looks like."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Shock is classified by mechanism rather than appearance.",
+     "from": "Shock is classified by mechanism rather than appearance."
+    },
+    {
+     "claim": "Ask what is wrong with the circulation instead of what the skin looks like.",
+     "from": "Ask what is wrong with the circulation instead of what the skin looks like."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shock",
+   "find": "Anaphylaxis is the right class with the wrong member — no exposure, no urticaria.",
+   "with": "Anaphylaxis: it is in the right class but is the wrong member, with no exposure and no urticaria.",
+   "note": "trap line to Option: why, em dash removed",
+   "claims": [
+    {
+     "claim": "Anaphylaxis is the right class with the wrong member.",
+     "to": "Anaphylaxis: it is in the right class but is the wrong member, with no exposure and no urticaria."
+    },
+    {
+     "claim": "There is no exposure and no urticaria.",
+     "to": "Anaphylaxis: it is in the right class but is the wrong member, with no exposure and no urticaria."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Anaphylaxis is in the right class but is the wrong member.",
+     "from": "Anaphylaxis is the right class with the wrong member."
+    },
+    {
+     "claim": "There is no exposure and no urticaria.",
+     "from": "There is no exposure and no urticaria."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-infant-feeding",
+   "find": "The answer is an age gate",
+   "with": "Each feeding step has an age gate",
+   "note": "round 2 voice: p.sub first segment, answer framing removed",
+   "claims": [
+    {
+     "claim": "The feeding step is decided by an age gate.",
+     "to": "Each feeding step has an age gate"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Each feeding step has an age gate.",
+     "from": "The feeding step is decided by an age gate."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-infant-feeding",
+   "find": "<p>Nothing is wrong with this infant, so the question is sequence. At 6 months she has crossed the gate for complementary foods, and she has crossed it correctly — <b>iron-fortified cereal is already in the diet</b>, which is the first complementary food because iron is the limiting nutrient once fetal stores deplete at 4 to 6 months.</p>\n<p>Having started with an iron source, the next move is variety: <b>pureed vegetables and fruit, one new single-ingredient food at a time</b>. Every other option is the right intervention at the wrong age — finger foods belong at 8 to 9 months, whole milk at 12 months, and exclusive breastfeeding through 6 months and not beyond.</p>",
+   "with": "<p>Nothing is wrong with this infant, so the next step follows the normal feeding sequence. At 6 months she is old enough for complementary foods, and she has started them correctly: <b>iron-fortified cereal is already in the diet</b>. Iron-fortified cereal is the first complementary food because iron is the limiting nutrient once fetal stores deplete at 4 to 6 months.</p>\n<p>After an iron source, the next step is variety: <b>pureed vegetables and fruit, one new single-ingredient food at a time</b>. Finger foods, whole milk and exclusive breastfeeding are right interventions at other ages. Finger foods belong at 8 to 9 months and whole milk at 12 months. Exclusive breastfeeding belongs through 6 months and not beyond.</p>",
+   "note": "round 2 voice: .dp, question framing and em dashes removed",
+   "claims": [
+    {
+     "claim": "Nothing is wrong with this infant.",
+     "to": "Nothing is wrong with this infant, so the next step follows the normal feeding sequence."
+    },
+    {
+     "claim": "The next step is a matter of sequence.",
+     "to": "Nothing is wrong with this infant, so the next step follows the normal feeding sequence."
+    },
+    {
+     "claim": "At 6 months she has crossed the gate for complementary foods.",
+     "to": "At 6 months she is old enough for complementary foods, and she has started them correctly: iron-fortified cereal is already in the diet."
+    },
+    {
+     "claim": "She has started complementary foods correctly: iron-fortified cereal is already in the diet.",
+     "to": "At 6 months she is old enough for complementary foods, and she has started them correctly: iron-fortified cereal is already in the diet."
+    },
+    {
+     "claim": "Iron-fortified cereal is the first complementary food.",
+     "to": "Iron-fortified cereal is the first complementary food because iron is the limiting nutrient once fetal stores deplete at 4 to 6 months."
+    },
+    {
+     "claim": "Iron is the limiting nutrient once fetal stores deplete at 4 to 6 months.",
+     "to": "Iron-fortified cereal is the first complementary food because iron is the limiting nutrient once fetal stores deplete at 4 to 6 months."
+    },
+    {
+     "claim": "After an iron source, the next move is variety: pureed vegetables and fruit, one new single-ingredient food at a time.",
+     "to": "After an iron source, the next step is variety: pureed vegetables and fruit, one new single-ingredient food at a time."
+    },
+    {
+     "claim": "Every other option is the right intervention at the wrong age.",
+     "to": "Finger foods, whole milk and exclusive breastfeeding are right interventions at other ages."
+    },
+    {
+     "claim": "Finger foods belong at 8 to 9 months.",
+     "to": "Finger foods belong at 8 to 9 months and whole milk at 12 months."
+    },
+    {
+     "claim": "Whole milk belongs at 12 months.",
+     "to": "Finger foods belong at 8 to 9 months and whole milk at 12 months."
+    },
+    {
+     "claim": "Exclusive breastfeeding belongs through 6 months and not beyond.",
+     "to": "Exclusive breastfeeding belongs through 6 months and not beyond."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Nothing is wrong with this infant.",
+     "from": "Nothing is wrong with this infant."
+    },
+    {
+     "claim": "The next step follows the normal feeding sequence.",
+     "from": "The next step is a matter of sequence."
+    },
+    {
+     "claim": "At 6 months she is old enough for complementary foods.",
+     "from": "At 6 months she has crossed the gate for complementary foods."
+    },
+    {
+     "claim": "She has started them correctly: iron-fortified cereal is already in the diet.",
+     "from": "She has started complementary foods correctly: iron-fortified cereal is already in the diet."
+    },
+    {
+     "claim": "Iron-fortified cereal is the first complementary food.",
+     "from": "Iron-fortified cereal is the first complementary food."
+    },
+    {
+     "claim": "Iron is the limiting nutrient once fetal stores deplete at 4 to 6 months.",
+     "from": "Iron is the limiting nutrient once fetal stores deplete at 4 to 6 months."
+    },
+    {
+     "claim": "After an iron source, the next step is variety: pureed vegetables and fruit, one new single-ingredient food at a time.",
+     "from": "After an iron source, the next move is variety: pureed vegetables and fruit, one new single-ingredient food at a time."
+    },
+    {
+     "claim": "Finger foods, whole milk and exclusive breastfeeding are right interventions at other ages.",
+     "from": "Every other option is the right intervention at the wrong age."
+    },
+    {
+     "claim": "Finger foods belong at 8 to 9 months.",
+     "from": "Finger foods belong at 8 to 9 months."
+    },
+    {
+     "claim": "Whole milk belongs at 12 months.",
+     "from": "Whole milk belongs at 12 months."
+    },
+    {
+     "claim": "Exclusive breastfeeding belongs through 6 months and not beyond.",
+     "from": "Exclusive breastfeeding belongs through 6 months and not beyond."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-infant-feeding",
+   "find": "After 12 months cap milk at 16 to 24 oz daily or you manufacture iron deficiency. And <b>delaying allergens is obsolete</b> — severe eczema or egg allergy means introducing peanut at 4 to 6 months after evaluation.",
+   "with": "After 12 months, cap milk at 16 to 24 oz daily to avoid causing iron deficiency. Also, <b>delaying allergens is obsolete</b>. In an infant with severe eczema or egg allergy, introduce peanut at 4 to 6 months after evaluation.",
+   "note": "round 2 voice: .danger, em dash removed",
+   "claims": [
+    {
+     "claim": "After 12 months cap milk at 16 to 24 oz daily.",
+     "to": "After 12 months, cap milk at 16 to 24 oz daily to avoid causing iron deficiency."
+    },
+    {
+     "claim": "More milk than that causes iron deficiency.",
+     "to": "After 12 months, cap milk at 16 to 24 oz daily to avoid causing iron deficiency."
+    },
+    {
+     "claim": "Delaying allergens is obsolete.",
+     "to": "Also, delaying allergens is obsolete."
+    },
+    {
+     "claim": "Severe eczema or egg allergy means introducing peanut at 4 to 6 months after evaluation.",
+     "to": "In an infant with severe eczema or egg allergy, introduce peanut at 4 to 6 months after evaluation."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "After 12 months, cap milk at 16 to 24 oz daily.",
+     "from": "After 12 months cap milk at 16 to 24 oz daily."
+    },
+    {
+     "claim": "The cap avoids causing iron deficiency.",
+     "from": "More milk than that causes iron deficiency."
+    },
+    {
+     "claim": "Delaying allergens is obsolete.",
+     "from": "Delaying allergens is obsolete."
+    },
+    {
+     "claim": "In an infant with severe eczema or egg allergy, introduce peanut at 4 to 6 months after evaluation.",
+     "from": "Severe eczema or egg allergy means introducing peanut at 4 to 6 months after evaluation."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-infant-feeding",
+   "find": "Iron first, then variety — iron and zinc are the nutrients breast milk stops covering at 6 months",
+   "with": "Start with iron-rich foods, then add variety; iron and zinc are the nutrients breast milk stops covering at 6 months",
+   "note": "round 2 voice: .pearls first row, slogan and em dash removed",
+   "claims": [
+    {
+     "claim": "Iron first, then variety.",
+     "to": "Start with iron-rich foods, then add variety; iron and zinc are the nutrients breast milk stops covering at 6 months"
+    },
+    {
+     "claim": "Iron and zinc are the nutrients breast milk stops covering at 6 months.",
+     "to": "Start with iron-rich foods, then add variety; iron and zinc are the nutrients breast milk stops covering at 6 months"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Start with iron-rich foods, then add variety.",
+     "from": "Iron first, then variety."
+    },
+    {
+     "claim": "Iron and zinc are the nutrients breast milk stops covering at 6 months.",
+     "from": "Iron and zinc are the nutrients breast milk stops covering at 6 months."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-infant-feeding",
+   "find": "Part I <b>Growth &amp; Developmental Milestones</b> owns the velocity rules and milestone anchors; this brief supplies the feeding ladder. Store the discriminator as a question: is the growth curve normal, or is it crossing lines? Part I <b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b> owns what cow's-milk protein does to the stool before the 12-month gate.",
+   "with": "Part I <b>Growth &amp; Developmental Milestones</b> covers the velocity rules and milestone anchors; this brief covers the feeding ladder. Ask: is the growth curve normal, or is it crossing lines? Part I <b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b> covers what cow's-milk protein does to the stool before 12 months.",
+   "note": "round 2 voice: Pairs with, owns to covers, discriminator as Ask:",
+   "claims": [
+    {
+     "claim": "Growth & Developmental Milestones covers the velocity rules and milestone anchors.",
+     "to": "Part I Growth & Developmental Milestones covers the velocity rules and milestone anchors; this brief covers the feeding ladder."
+    },
+    {
+     "claim": "This brief supplies the feeding ladder.",
+     "to": "Part I Growth & Developmental Milestones covers the velocity rules and milestone anchors; this brief covers the feeding ladder."
+    },
+    {
+     "claim": "Discriminator: is the growth curve normal, or is it crossing lines?",
+     "to": "Ask: is the growth curve normal, or is it crossing lines?"
+    },
+    {
+     "claim": "Infant Stool Complaints covers what cow's-milk protein does to the stool before the 12-month gate.",
+     "to": "Part I Infant Stool Complaints: Dyschezia, FPIAP & Secondary Lactase Deficiency covers what cow's-milk protein does to the stool before 12 months."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Growth & Developmental Milestones covers the velocity rules and milestone anchors.",
+     "from": "Growth & Developmental Milestones covers the velocity rules and milestone anchors."
+    },
+    {
+     "claim": "This brief covers the feeding ladder.",
+     "from": "This brief supplies the feeding ladder."
+    },
+    {
+     "claim": "Ask: is the growth curve normal, or is it crossing lines?",
+     "from": "Discriminator: is the growth curve normal, or is it crossing lines?"
+    },
+    {
+     "claim": "Infant Stool Complaints covers what cow's-milk protein does to the stool before 12 months.",
+     "from": "Infant Stool Complaints covers what cow's-milk protein does to the stool before the 12-month gate."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-infant-feeding",
+   "find": "When every option is a reasonable intervention and the patient is well, the question is not what but when, so read the age first and eliminate anything whose gate has not opened yet.",
+   "with": "When the patient is well and every option is a reasonable intervention, choose by timing. Read the age first and eliminate any intervention that is not yet age-appropriate.",
+   "note": "round 2 voice: .rule, aphorism removed",
+   "claims": [
+    {
+     "claim": "When every option is a reasonable intervention and the patient is well, the choice is about when, not what.",
+     "to": "When the patient is well and every option is a reasonable intervention, choose by timing."
+    },
+    {
+     "claim": "Read the age first.",
+     "to": "Read the age first and eliminate any intervention that is not yet age-appropriate."
+    },
+    {
+     "claim": "Eliminate anything whose age gate has not opened yet.",
+     "to": "Read the age first and eliminate any intervention that is not yet age-appropriate."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When the patient is well and every option is a reasonable intervention, choose by timing.",
+     "from": "When every option is a reasonable intervention and the patient is well, the choice is about when, not what."
+    },
+    {
+     "claim": "Read the age first.",
+     "from": "Read the age first."
+    },
+    {
+     "claim": "Eliminate any intervention that is not yet age-appropriate.",
+     "from": "Eliminate anything whose age gate has not opened yet."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tanner",
+   "find": "<p>Breast and pubic hair are staged <b>separately</b>, and both land on 3 here, so a single number is safe. The phrase carrying the whole question is <b>without a separate contour</b>: breast tissue extending beyond the areola while still sharing one smooth contour is stage 3, and the moment the areola and papilla rise as a <b>second mound</b> above the breast it becomes stage 4.</p>\n<p>The pubic hair corroborates. <b>Curled</b> puts her past stage 2, which is straight and sparse, and <b>partially across the pubis</b> keeps her below stage 4, which is adult-quality hair across the pubis sparing the medial thighs.</p>",
+   "with": "<p>Breast and pubic hair are staged <b>separately</b>. Both are stage 3 here, so a single number is acceptable. Breast tissue that extends beyond the areola <b>without a separate contour</b>, still sharing one smooth contour, is stage 3. Once the areola and papilla rise as a <b>second mound</b> above the breast, it is stage 4.</p>\n<p>The pubic hair also fits stage 3. <b>Curled</b> hair places her past stage 2, which is straight and sparse. Hair spread <b>partially across the pubis</b> places her below stage 4, which is adult-quality hair across the pubis sparing the medial thighs.</p>",
+   "note": "round 2 voice: .dp, dramatic framing removed, sentences split",
+   "claims": [
+    {
+     "claim": "Breast and pubic hair are staged separately.",
+     "to": "Breast and pubic hair are staged separately."
+    },
+    {
+     "claim": "Both land on stage 3 here.",
+     "to": "Both are stage 3 here, so a single number is acceptable."
+    },
+    {
+     "claim": "A single number is safe here.",
+     "to": "Both are stage 3 here, so a single number is acceptable."
+    },
+    {
+     "claim": "The phrase carrying the whole question is 'without a separate contour'.",
+     "to": "Breast tissue that extends beyond the areola without a separate contour, still sharing one smooth contour, is stage 3."
+    },
+    {
+     "claim": "Breast tissue extending beyond the areola while still sharing one smooth contour is stage 3.",
+     "to": "Breast tissue that extends beyond the areola without a separate contour, still sharing one smooth contour, is stage 3."
+    },
+    {
+     "claim": "When the areola and papilla rise as a second mound above the breast it becomes stage 4.",
+     "to": "Once the areola and papilla rise as a second mound above the breast, it is stage 4."
+    },
+    {
+     "claim": "The pubic hair corroborates stage 3.",
+     "to": "The pubic hair also fits stage 3."
+    },
+    {
+     "claim": "Curled hair puts her past stage 2, which is straight and sparse.",
+     "to": "Curled hair places her past stage 2, which is straight and sparse."
+    },
+    {
+     "claim": "Hair partially across the pubis keeps her below stage 4, which is adult-quality hair across the pubis sparing the medial thighs.",
+     "to": "Hair spread partially across the pubis places her below stage 4, which is adult-quality hair across the pubis sparing the medial thighs."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Breast and pubic hair are staged separately.",
+     "from": "Breast and pubic hair are staged separately."
+    },
+    {
+     "claim": "Both are stage 3 here.",
+     "from": "Both land on stage 3 here."
+    },
+    {
+     "claim": "A single number is acceptable here.",
+     "from": "A single number is safe here."
+    },
+    {
+     "claim": "Breast tissue that extends beyond the areola without a separate contour, still sharing one smooth contour, is stage 3.",
+     "from": "Breast tissue extending beyond the areola while still sharing one smooth contour is stage 3."
+    },
+    {
+     "claim": "Once the areola and papilla rise as a second mound above the breast, it is stage 4.",
+     "from": "When the areola and papilla rise as a second mound above the breast it becomes stage 4."
+    },
+    {
+     "claim": "The pubic hair also fits stage 3.",
+     "from": "The pubic hair corroborates stage 3."
+    },
+    {
+     "claim": "Curled hair places her past stage 2, which is straight and sparse.",
+     "from": "Curled hair puts her past stage 2, which is straight and sparse."
+    },
+    {
+     "claim": "Hair spread partially across the pubis places her below stage 4, which is adult-quality hair across the pubis sparing the medial thighs.",
+     "from": "Hair partially across the pubis keeps her below stage 4, which is adult-quality hair across the pubis sparing the medial thighs."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tanner",
+   "find": "Staging is descriptive until the stage is wrong for the age, and then it becomes a workup.",
+   "with": "Staging is descriptive; a stage that is wrong for the age needs a workup.",
+   "note": "round 2 voice: .danger last sentence made plain",
+   "claims": [
+    {
+     "claim": "Staging is descriptive until the stage is wrong for the age.",
+     "to": "Staging is descriptive; a stage that is wrong for the age needs a workup."
+    },
+    {
+     "claim": "A stage wrong for the age becomes a workup.",
+     "to": "Staging is descriptive; a stage that is wrong for the age needs a workup."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Staging is descriptive.",
+     "from": "Staging is descriptive until the stage is wrong for the age."
+    },
+    {
+     "claim": "A stage that is wrong for the age needs a workup.",
+     "from": "A stage wrong for the age becomes a workup."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tanner",
+   "find": "Girls reach peak height velocity at SMR 2 to 3",
+   "with": "Girls reach peak height velocity at <b>SMR</b> (sexual maturity rating) 2 to 3",
+   "note": "acronym SMR expanded at first use in .pearls",
+   "claims": [
+    {
+     "claim": "Girls reach peak height velocity at SMR 2 to 3.",
+     "to": "Girls reach peak height velocity at SMR (sexual maturity rating) 2 to 3, boys at SMR 4, which is why a girl who has menstruated has little growth left"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "SMR stands for sexual maturity rating.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Girls reach peak height velocity at SMR 2 to 3.",
+     "from": "Girls reach peak height velocity at SMR 2 to 3."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tanner",
+   "find": "Part I <b>Growth &amp; Developmental Milestones</b> for the velocity framework. This brief wants a partner on precocious versus delayed puberty, where the discriminator is whether bone age is ahead of, matching, or behind chronological age. Part I <b>Precocious Puberty</b> is the partner this brief asked for &mdash; the discriminator is whether the stage is merely being described or is wrong for the age.",
+   "with": "Part I <b>Growth &amp; Developmental Milestones</b> covers the velocity framework. Part I <b>Precocious Puberty</b> is the partner brief on precocious versus delayed puberty. Ask: is bone age ahead of, matching, or behind chronological age? Ask: is the stage merely being described, or is it wrong for the age?",
+   "note": "round 2 voice: Pairs with, workflow text removed, em dash removed, discriminators as Ask:",
+   "claims": [
+    {
+     "claim": "Growth & Developmental Milestones pairs for the velocity framework.",
+     "to": "Part I Growth & Developmental Milestones covers the velocity framework."
+    },
+    {
+     "claim": "This brief wants a partner on precocious versus delayed puberty.",
+     "to": "Part I Precocious Puberty is the partner brief on precocious versus delayed puberty."
+    },
+    {
+     "claim": "Precocious Puberty is the partner this brief asked for.",
+     "to": "Part I Precocious Puberty is the partner brief on precocious versus delayed puberty."
+    },
+    {
+     "claim": "Precocious versus delayed puberty discriminator: is bone age ahead of, matching, or behind chronological age?",
+     "to": "Ask: is bone age ahead of, matching, or behind chronological age?"
+    },
+    {
+     "claim": "Precocious Puberty discriminator: is the stage merely being described or wrong for the age?",
+     "to": "Ask: is the stage merely being described, or is it wrong for the age?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Growth & Developmental Milestones covers the velocity framework.",
+     "from": "Growth & Developmental Milestones pairs for the velocity framework."
+    },
+    {
+     "claim": "Precocious Puberty is the partner brief on precocious versus delayed puberty.",
+     "from": "Precocious Puberty is the partner this brief asked for."
+    },
+    {
+     "claim": "Ask: is bone age ahead of, matching, or behind chronological age?",
+     "from": "Precocious versus delayed puberty discriminator: is bone age ahead of, matching, or behind chronological age?"
+    },
+    {
+     "claim": "Ask: is the stage merely being described, or is it wrong for the age?",
+     "from": "Precocious Puberty discriminator: is the stage merely being described or wrong for the age?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tanner",
+   "find": "When the options are the levels of a named scale the stem is quoting one definition verbatim, so find the phrase that appears in exactly one level and stop.",
+   "with": "When staging with a named scale, find the phrase in the description that appears in exactly one level; that level is the rating.",
+   "note": "round 2 voice: .rule, stem framing removed",
+   "claims": [
+    {
+     "claim": "When the options are the levels of a named scale, the stem quotes one definition verbatim.",
+     "to": "When staging with a named scale, find the phrase in the description that appears in exactly one level; that level is the rating."
+    },
+    {
+     "claim": "Find the phrase that appears in exactly one level and stop.",
+     "to": "When staging with a named scale, find the phrase in the description that appears in exactly one level; that level is the rating."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When staging with a named scale, find the phrase in the description that appears in exactly one level.",
+     "from": "Find the phrase that appears in exactly one level and stop."
+    },
+    {
+     "claim": "That level is the rating.",
+     "from": "When the options are the levels of a named scale, the stem quotes one definition verbatim."
+    }
+   ]
+  }
+ ]
+}

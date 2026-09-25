@@ -1,0 +1,1001 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "tb",
+   "find": "<p>A positive test plus a <b>normal CXR and no symptoms</b> = latent TB → <b>monotherapy</b>. Positive test plus symptoms or an abnormal CXR = active TB → <b>isolate first</b>, then four drugs. <b>No test distinguishes latent from active</b> — the CXR and symptoms do.</p>",
+   "with": "<p><b>No test distinguishes latent from active</b> <b>TB</b> (tuberculosis); the <b>CXR</b> (chest X-ray) and symptoms do. A positive test with a <b>normal CXR and no symptoms</b> means latent TB → <b>monotherapy</b>. A positive test with symptoms or an abnormal CXR means active TB. For active TB, <b>isolate first</b>, then give four drugs.</p>",
+   "note": "voice: .dp; em dash removed, arrow chain split, acronyms expanded",
+   "claims": [
+    {
+     "claim": "A positive test with a normal CXR and no symptoms is latent TB.",
+     "to": "A positive test with a normal CXR and no symptoms means latent TB → monotherapy."
+    },
+    {
+     "claim": "Latent TB is treated with monotherapy.",
+     "to": "A positive test with a normal CXR and no symptoms means latent TB → monotherapy."
+    },
+    {
+     "claim": "A positive test with symptoms or an abnormal CXR is active TB.",
+     "to": "A positive test with symptoms or an abnormal CXR means active TB."
+    },
+    {
+     "claim": "Active TB: isolate first.",
+     "to": "For active TB, isolate first, then give four drugs."
+    },
+    {
+     "claim": "Active TB: then four drugs.",
+     "to": "For active TB, isolate first, then give four drugs."
+    },
+    {
+     "claim": "No test distinguishes latent from active TB.",
+     "to": "No test distinguishes latent from active TB (tuberculosis); the CXR (chest X-ray) and symptoms do."
+    },
+    {
+     "claim": "The CXR and symptoms distinguish latent from active TB.",
+     "to": "No test distinguishes latent from active TB (tuberculosis); the CXR (chest X-ray) and symptoms do."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "No test distinguishes latent from active TB.",
+     "from": "No test distinguishes latent from active TB."
+    },
+    {
+     "claim": "TB stands for tuberculosis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CXR stands for chest X-ray.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The CXR and symptoms distinguish latent from active TB.",
+     "from": "The CXR and symptoms distinguish latent from active TB."
+    },
+    {
+     "claim": "A positive test with a normal CXR and no symptoms means latent TB.",
+     "from": "A positive test with a normal CXR and no symptoms is latent TB."
+    },
+    {
+     "claim": "Latent TB is treated with monotherapy.",
+     "from": "Latent TB is treated with monotherapy."
+    },
+    {
+     "claim": "A positive test with symptoms or an abnormal CXR means active TB.",
+     "from": "A positive test with symptoms or an abnormal CXR is active TB."
+    },
+    {
+     "claim": "For active TB, isolate first.",
+     "from": "Active TB: isolate first."
+    },
+    {
+     "claim": "Then give four drugs.",
+     "from": "Active TB: then four drugs."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tb",
+   "find": "<b>BCG-vaccinated → IGRA</b> (unaffected by BCG) · <b>anergy</b> = false-negative PPD in HIV, steroids, sarcoid · PPD is a <b>type IV hypersensitivity</b> reaction.",
+   "with": "<b>BCG-vaccinated → IGRA</b>: after <b>BCG</b> (bacille Calmette-Guérin) vaccination, use an <b>IGRA</b> (interferon-gamma release assay), which BCG does not affect · <b>anergy</b> is a false-negative <b>PPD</b> (purified protein derivative) in <b>HIV</b> (human immunodeficiency virus), steroid use or sarcoid · PPD is a <b>type IV hypersensitivity</b> reaction.",
+   "note": "voice: Test mechanics pearls; acronyms expanded",
+   "claims": [
+    {
+     "claim": "BCG-vaccinated patients should get an IGRA.",
+     "to": "BCG-vaccinated → IGRA: after BCG (bacille Calmette-Guérin) vaccination, use an IGRA (interferon-gamma release assay), which BCG does not affect"
+    },
+    {
+     "claim": "IGRA is unaffected by BCG.",
+     "to": "BCG-vaccinated → IGRA: after BCG (bacille Calmette-Guérin) vaccination, use an IGRA (interferon-gamma release assay), which BCG does not affect"
+    },
+    {
+     "claim": "Anergy is a false-negative PPD in HIV, steroids and sarcoid.",
+     "to": "anergy is a false-negative PPD (purified protein derivative) in HIV (human immunodeficiency virus), steroid use or sarcoid"
+    },
+    {
+     "claim": "PPD is a type IV hypersensitivity reaction.",
+     "to": "PPD is a type IV hypersensitivity reaction."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "BCG-vaccinated patients should get an IGRA.",
+     "from": "BCG-vaccinated patients should get an IGRA."
+    },
+    {
+     "claim": "BCG stands for bacille Calmette-Guérin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "IGRA stands for interferon-gamma release assay.",
+     "from": "expansion"
+    },
+    {
+     "claim": "IGRA is not affected by BCG.",
+     "from": "IGRA is unaffected by BCG."
+    },
+    {
+     "claim": "Anergy is a false-negative PPD in HIV, steroid use or sarcoid.",
+     "from": "Anergy is a false-negative PPD in HIV, steroids and sarcoid."
+    },
+    {
+     "claim": "PPD stands for purified protein derivative.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HIV stands for human immunodeficiency virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PPD is a type IV hypersensitivity reaction.",
+     "from": "PPD is a type IV hypersensitivity reaction."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "<p>The whole CSF grid collapses to a <b>2×2</b>: cell type on one axis, glucose on the other.</p>",
+   "with": "<p>Read the <b>CSF</b> (cerebrospinal fluid) as a <b>2×2</b>: cell type on one axis, glucose on the other.</p>",
+   "note": "voice: .dp; dramatic opener removed, acronym expanded",
+   "claims": [
+    {
+     "claim": "CSF interpretation reduces to a 2×2.",
+     "to": "Read the CSF (cerebrospinal fluid) as a 2×2: cell type on one axis, glucose on the other."
+    },
+    {
+     "claim": "The 2×2 axes are cell type and glucose.",
+     "to": "Read the CSF (cerebrospinal fluid) as a 2×2: cell type on one axis, glucose on the other."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Read the CSF as a 2×2.",
+     "from": "CSF interpretation reduces to a 2×2."
+    },
+    {
+     "claim": "CSF stands for cerebrospinal fluid.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The axes are cell type and glucose.",
+     "from": "The 2×2 axes are cell type and glucose."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "Encapsulated organisms need <b>opsonization</b> — hit hardest in <b>asplenia/sickle cell</b> (lost filter), <b>complement deficiency</b> (lost MAC → recurrent Neisseria; screen with <b>CH50</b>), and <b>cirrhosis</b> (lost complement synthesis) · <b>lipid A of LOS</b> → TNF/IL-1 → shock, DIC, <b>Waterhouse-Friderichsen</b> · <b>Listeria</b> escapes the phagosome with listeriolysin O and spreads via <b>ActA-driven host actin polymerization</b>; intrinsic cephalosporin resistance · <b>conjugate vaccines</b> convert T-independent polysaccharide into a T-dependent response, which is why they work under age 2.",
+   "with": "Encapsulated organisms need <b>opsonization</b>, so they hit hardest in <b>asplenia/sickle cell</b> (lost filter), <b>complement deficiency</b> and <b>cirrhosis</b> (lost complement synthesis). Complement deficiency means a lost <b>MAC</b> (membrane attack complex), which causes recurrent Neisseria infection; screen with <b>CH50</b> (total hemolytic complement) · <b>lipid A of LOS</b> (lipooligosaccharide) triggers <b>TNF</b> (tumor necrosis factor) and <b>IL-1</b> (interleukin-1) release → shock, <b>DIC</b> (disseminated intravascular coagulation), <b>Waterhouse-Friderichsen</b> · <b>Listeria</b> escapes the phagosome with listeriolysin O and spreads via <b>ActA-driven host actin polymerization</b>; it has intrinsic cephalosporin resistance · <b>conjugate vaccines</b> convert T-independent polysaccharide into a T-dependent response, which is why they work under age 2.",
+   "note": "voice: Mechanism pearls; em dash removed, arrow chain split, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Encapsulated organisms need opsonization.",
+     "to": "Encapsulated organisms need opsonization, so they hit hardest in asplenia/sickle cell (lost filter), complement deficiency and cirrhosis (lost complement synthesis)."
+    },
+    {
+     "claim": "They hit hardest in asplenia/sickle cell (lost filter).",
+     "to": "Encapsulated organisms need opsonization, so they hit hardest in asplenia/sickle cell (lost filter), complement deficiency and cirrhosis (lost complement synthesis)."
+    },
+    {
+     "claim": "They hit hardest in complement deficiency.",
+     "to": "Encapsulated organisms need opsonization, so they hit hardest in asplenia/sickle cell (lost filter), complement deficiency and cirrhosis (lost complement synthesis)."
+    },
+    {
+     "claim": "They hit hardest in cirrhosis (lost complement synthesis).",
+     "to": "Encapsulated organisms need opsonization, so they hit hardest in asplenia/sickle cell (lost filter), complement deficiency and cirrhosis (lost complement synthesis)."
+    },
+    {
+     "claim": "Complement deficiency means lost MAC, causing recurrent Neisseria.",
+     "to": "Complement deficiency means a lost MAC (membrane attack complex), which causes recurrent Neisseria infection; screen with CH50 (total hemolytic complement)"
+    },
+    {
+     "claim": "Screen for complement deficiency with CH50.",
+     "to": "Complement deficiency means a lost MAC (membrane attack complex), which causes recurrent Neisseria infection; screen with CH50 (total hemolytic complement)"
+    },
+    {
+     "claim": "Lipid A of LOS drives TNF/IL-1, leading to shock, DIC and Waterhouse-Friderichsen.",
+     "to": "lipid A of LOS (lipooligosaccharide) triggers TNF (tumor necrosis factor) and IL-1 (interleukin-1) release → shock, DIC (disseminated intravascular coagulation), Waterhouse-Friderichsen"
+    },
+    {
+     "claim": "Listeria escapes the phagosome with listeriolysin O.",
+     "to": "Listeria escapes the phagosome with listeriolysin O and spreads via ActA-driven host actin polymerization; it has intrinsic cephalosporin resistance"
+    },
+    {
+     "claim": "Listeria spreads via ActA-driven host actin polymerization.",
+     "to": "Listeria escapes the phagosome with listeriolysin O and spreads via ActA-driven host actin polymerization; it has intrinsic cephalosporin resistance"
+    },
+    {
+     "claim": "Listeria has intrinsic cephalosporin resistance.",
+     "to": "Listeria escapes the phagosome with listeriolysin O and spreads via ActA-driven host actin polymerization; it has intrinsic cephalosporin resistance"
+    },
+    {
+     "claim": "Conjugate vaccines convert a T-independent polysaccharide into a T-dependent response, so they work under age 2.",
+     "to": "conjugate vaccines convert T-independent polysaccharide into a T-dependent response, which is why they work under age 2."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Encapsulated organisms need opsonization.",
+     "from": "Encapsulated organisms need opsonization."
+    },
+    {
+     "claim": "They hit hardest in asplenia/sickle cell (lost filter).",
+     "from": "They hit hardest in asplenia/sickle cell (lost filter)."
+    },
+    {
+     "claim": "They hit hardest in complement deficiency.",
+     "from": "They hit hardest in complement deficiency."
+    },
+    {
+     "claim": "They hit hardest in cirrhosis (lost complement synthesis).",
+     "from": "They hit hardest in cirrhosis (lost complement synthesis)."
+    },
+    {
+     "claim": "Complement deficiency means a lost MAC, which causes recurrent Neisseria infection.",
+     "from": "Complement deficiency means lost MAC, causing recurrent Neisseria."
+    },
+    {
+     "claim": "MAC stands for membrane attack complex.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Screen with CH50.",
+     "from": "Screen for complement deficiency with CH50."
+    },
+    {
+     "claim": "CH50 stands for total hemolytic complement.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Lipid A of LOS triggers TNF and IL-1 release, leading to shock, DIC and Waterhouse-Friderichsen.",
+     "from": "Lipid A of LOS drives TNF/IL-1, leading to shock, DIC and Waterhouse-Friderichsen."
+    },
+    {
+     "claim": "LOS stands for lipooligosaccharide.",
+     "from": "expansion"
+    },
+    {
+     "claim": "TNF stands for tumor necrosis factor.",
+     "from": "expansion"
+    },
+    {
+     "claim": "IL-1 stands for interleukin-1.",
+     "from": "expansion"
+    },
+    {
+     "claim": "DIC stands for disseminated intravascular coagulation.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Listeria escapes the phagosome with listeriolysin O.",
+     "from": "Listeria escapes the phagosome with listeriolysin O."
+    },
+    {
+     "claim": "Listeria spreads via ActA-driven host actin polymerization.",
+     "from": "Listeria spreads via ActA-driven host actin polymerization."
+    },
+    {
+     "claim": "Listeria has intrinsic cephalosporin resistance.",
+     "from": "Listeria has intrinsic cephalosporin resistance."
+    },
+    {
+     "claim": "Conjugate vaccines convert T-independent polysaccharide into a T-dependent response, so they work under age 2.",
+     "from": "Conjugate vaccines convert a T-independent polysaccharide into a T-dependent response, so they work under age 2."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "<b>CT before LP</b> only if: papilledema, focal deficit, seizure, immunocompromise, depressed consciousness, age &gt;60 &mdash; <b>an open fontanelle in an infant generally removes the requirement</b>, since it acts as a pop-off valve. <b>Never delay antibiotics</b> — draw cultures and treat. Empiric: <b>vancomycin + ceftriaxone</b> (+ ampicillin for Listeria); neonates get <b>cefotaxime, not ceftriaxone</b> (biliary sludging, bilirubin displacement). <b>Dexamethasone before or with the first antibiotic dose</b> — it blunts the cytokine burst from bacterial lysis.",
+   "with": "Get <b>CT before LP</b> (computed tomography before lumbar puncture) only if there is papilledema, focal deficit, seizure, immunocompromise, depressed consciousness or age &gt;60. However, <b>an open fontanelle in an infant generally removes the requirement</b>, since it acts as a pop-off valve. <b>Never delay antibiotics</b>; draw cultures and treat. Empiric therapy is <b>vancomycin + ceftriaxone</b> (+ ampicillin for Listeria). Neonates get <b>cefotaxime, not ceftriaxone</b> (biliary sludging, bilirubin displacement). <b>Dexamethasone before or with the first antibiotic dose</b> blunts the cytokine burst from bacterial lysis.",
+   "note": "voice: Sequencing danger; em dashes removed, acronyms expanded",
+   "claims": [
+    {
+     "claim": "CT before LP only if papilledema, focal deficit, seizure, immunocompromise, depressed consciousness, or age >60.",
+     "to": "Get CT before LP (computed tomography before lumbar puncture) only if there is papilledema, focal deficit, seizure, immunocompromise, depressed consciousness or age >60."
+    },
+    {
+     "claim": "An open fontanelle in an infant generally removes the requirement for CT before LP.",
+     "to": "However, an open fontanelle in an infant generally removes the requirement, since it acts as a pop-off valve."
+    },
+    {
+     "claim": "The open fontanelle acts as a pop-off valve.",
+     "to": "However, an open fontanelle in an infant generally removes the requirement, since it acts as a pop-off valve."
+    },
+    {
+     "claim": "Never delay antibiotics.",
+     "to": "Never delay antibiotics; draw cultures and treat."
+    },
+    {
+     "claim": "Draw cultures and treat.",
+     "to": "Never delay antibiotics; draw cultures and treat."
+    },
+    {
+     "claim": "Empiric therapy is vancomycin + ceftriaxone, plus ampicillin for Listeria.",
+     "to": "Empiric therapy is vancomycin + ceftriaxone (+ ampicillin for Listeria)."
+    },
+    {
+     "claim": "Neonates get cefotaxime, not ceftriaxone, because of biliary sludging and bilirubin displacement.",
+     "to": "Neonates get cefotaxime, not ceftriaxone (biliary sludging, bilirubin displacement)."
+    },
+    {
+     "claim": "Dexamethasone is given before or with the first antibiotic dose.",
+     "to": "Dexamethasone before or with the first antibiotic dose blunts the cytokine burst from bacterial lysis."
+    },
+    {
+     "claim": "Dexamethasone blunts the cytokine burst from bacterial lysis.",
+     "to": "Dexamethasone before or with the first antibiotic dose blunts the cytokine burst from bacterial lysis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CT before LP only if papilledema, focal deficit, seizure, immunocompromise, depressed consciousness or age >60.",
+     "from": "CT before LP only if papilledema, focal deficit, seizure, immunocompromise, depressed consciousness, or age >60."
+    },
+    {
+     "claim": "CT stands for computed tomography.",
+     "from": "expansion"
+    },
+    {
+     "claim": "LP stands for lumbar puncture.",
+     "from": "expansion"
+    },
+    {
+     "claim": "An open fontanelle in an infant generally removes the requirement for CT before LP.",
+     "from": "An open fontanelle in an infant generally removes the requirement for CT before LP."
+    },
+    {
+     "claim": "The open fontanelle acts as a pop-off valve.",
+     "from": "The open fontanelle acts as a pop-off valve."
+    },
+    {
+     "claim": "Never delay antibiotics.",
+     "from": "Never delay antibiotics."
+    },
+    {
+     "claim": "Draw cultures and treat.",
+     "from": "Draw cultures and treat."
+    },
+    {
+     "claim": "Empiric therapy is vancomycin + ceftriaxone, plus ampicillin for Listeria.",
+     "from": "Empiric therapy is vancomycin + ceftriaxone, plus ampicillin for Listeria."
+    },
+    {
+     "claim": "Neonates get cefotaxime, not ceftriaxone, because of biliary sludging and bilirubin displacement.",
+     "from": "Neonates get cefotaxime, not ceftriaxone, because of biliary sludging and bilirubin displacement."
+    },
+    {
+     "claim": "Give dexamethasone before or with the first antibiotic dose.",
+     "from": "Dexamethasone is given before or with the first antibiotic dose."
+    },
+    {
+     "claim": "Dexamethasone blunts the cytokine burst from bacterial lysis.",
+     "from": "Dexamethasone blunts the cytokine burst from bacterial lysis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "Classic triad present in only <b>44%</b> (van de Beek, NEJM 2004; n=696) · most common sequela is <b>sensorineural hearing loss</b> — check hearing in every survivor · prophylaxis: meningococcus → rifampin, cipro, or ceftriaxone; Hib → rifampin · <b>eculizumab</b> blocks C5 → mandatory meningococcal vaccination first.",
+   "with": "The classic triad is present in only <b>44%</b> (van de Beek, NEJM 2004; n=696) · the most common sequela is <b>sensorineural hearing loss</b>; check hearing in every survivor · prophylaxis for meningococcus is rifampin, cipro or ceftriaxone; for <b>Hib</b> (Haemophilus influenzae type b) it is rifampin · <b>eculizumab</b> blocks C5, so meningococcal vaccination is mandatory first.",
+   "note": "voice: Follow-up facts; em dash removed, arrows replaced, Hib expanded",
+   "claims": [
+    {
+     "claim": "The classic triad is present in only 44% (van de Beek, NEJM 2004; n=696).",
+     "to": "The classic triad is present in only 44% (van de Beek, NEJM 2004; n=696)"
+    },
+    {
+     "claim": "The most common sequela is sensorineural hearing loss.",
+     "to": "the most common sequela is sensorineural hearing loss; check hearing in every survivor"
+    },
+    {
+     "claim": "Check hearing in every survivor.",
+     "to": "the most common sequela is sensorineural hearing loss; check hearing in every survivor"
+    },
+    {
+     "claim": "Meningococcus prophylaxis is rifampin, cipro, or ceftriaxone.",
+     "to": "prophylaxis for meningococcus is rifampin, cipro or ceftriaxone; for Hib (Haemophilus influenzae type b) it is rifampin"
+    },
+    {
+     "claim": "Hib prophylaxis is rifampin.",
+     "to": "prophylaxis for meningococcus is rifampin, cipro or ceftriaxone; for Hib (Haemophilus influenzae type b) it is rifampin"
+    },
+    {
+     "claim": "Eculizumab blocks C5.",
+     "to": "eculizumab blocks C5, so meningococcal vaccination is mandatory first."
+    },
+    {
+     "claim": "Meningococcal vaccination is mandatory before eculizumab.",
+     "to": "eculizumab blocks C5, so meningococcal vaccination is mandatory first."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The classic triad is present in only 44% (van de Beek, NEJM 2004; n=696).",
+     "from": "The classic triad is present in only 44% (van de Beek, NEJM 2004; n=696)."
+    },
+    {
+     "claim": "The most common sequela is sensorineural hearing loss.",
+     "from": "The most common sequela is sensorineural hearing loss."
+    },
+    {
+     "claim": "Check hearing in every survivor.",
+     "from": "Check hearing in every survivor."
+    },
+    {
+     "claim": "Meningococcus prophylaxis is rifampin, cipro or ceftriaxone.",
+     "from": "Meningococcus prophylaxis is rifampin, cipro, or ceftriaxone."
+    },
+    {
+     "claim": "Hib prophylaxis is rifampin.",
+     "from": "Hib prophylaxis is rifampin."
+    },
+    {
+     "claim": "Hib stands for Haemophilus influenzae type b.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Eculizumab blocks C5.",
+     "from": "Eculizumab blocks C5."
+    },
+    {
+     "claim": "Meningococcal vaccination is mandatory before eculizumab.",
+     "from": "Meningococcal vaccination is mandatory before eculizumab."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "Part I <b>Seizure with Fever in a Child</b> owns the decision to obtain the fluid that this brief interprets.",
+   "with": "Part I <b>Seizure with Fever in a Child</b> covers the decision to obtain the fluid; this brief covers interpreting it.",
+   "note": "voice: Pairs with; owns -> covers",
+   "claims": [
+    {
+     "claim": "Seizure with Fever in a Child covers the decision to obtain the fluid.",
+     "to": "Part I Seizure with Fever in a Child covers the decision to obtain the fluid; this brief covers interpreting it."
+    },
+    {
+     "claim": "This brief covers interpreting the fluid.",
+     "to": "Part I Seizure with Fever in a Child covers the decision to obtain the fluid; this brief covers interpreting it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Seizure with Fever in a Child covers the decision to obtain the fluid.",
+     "from": "Seizure with Fever in a Child covers the decision to obtain the fluid."
+    },
+    {
+     "claim": "This brief covers interpreting the fluid.",
+     "from": "This brief covers interpreting the fluid."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hiv-vax",
+   "find": "Live vaccines are CD4-gated, not banned",
+   "with": "Live vaccines in HIV depend on the CD4 count",
+   "note": "voice: subtitle; paired contrast removed",
+   "claims": [
+    {
+     "claim": "Live vaccines are gated by CD4 count.",
+     "to": "Live vaccines in HIV depend on the CD4 count"
+    },
+    {
+     "claim": "Live vaccines are not banned in HIV.",
+     "carried_by": "CD4 ≥200 permits varicella, MMR (measles, mumps, rubella) and yellow fever (with caution)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Live vaccines in HIV depend on the CD4 count.",
+     "from": "Live vaccines are gated by CD4 count."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hiv-vax",
+   "find": "<p>The stored rule should be <b>\"HIV → check the CD4 count,\"</b> not \"HIV → no live vaccines.\" <b>CD4 ≥200</b> permits varicella, MMR, and yellow fever (with caution). <b>CD4 &lt;200</b> contraindicates them. <b>Never at any CD4:</b> LAIV (use inactivated influenza), BCG, oral polio.</p>",
+   "with": "<p>In <b>HIV</b> (human immunodeficiency virus), check the <b>CD4 count</b> before giving a live vaccine; HIV alone does not exclude every live vaccine. <b>CD4 ≥200</b> permits varicella, <b>MMR</b> (measles, mumps, rubella) and yellow fever (with caution). <b>CD4 &lt;200</b> contraindicates them. <b>Never at any CD4:</b> <b>LAIV</b> (live attenuated influenza vaccine; use inactivated influenza), <b>BCG</b> (bacille Calmette-Guérin), oral polio.</p>",
+   "note": "voice: .dp; slogan framing removed, acronyms expanded",
+   "reworded_bold": [
+    "\"HIV → check the CD4 count,\""
+   ],
+   "claims": [
+    {
+     "claim": "In HIV, check the CD4 count.",
+     "to": "In HIV (human immunodeficiency virus), check the CD4 count before giving a live vaccine; HIV alone does not exclude every live vaccine."
+    },
+    {
+     "claim": "HIV does not mean no live vaccines.",
+     "to": "In HIV (human immunodeficiency virus), check the CD4 count before giving a live vaccine; HIV alone does not exclude every live vaccine."
+    },
+    {
+     "claim": "The stored rule should be phrased this way.",
+     "dropped": "framing about memorising a rule; the rule itself is kept"
+    },
+    {
+     "claim": "CD4 ≥200 permits varicella, MMR, and yellow fever (with caution).",
+     "to": "CD4 ≥200 permits varicella, MMR (measles, mumps, rubella) and yellow fever (with caution)."
+    },
+    {
+     "claim": "CD4 <200 contraindicates them.",
+     "to": "CD4 <200 contraindicates them."
+    },
+    {
+     "claim": "Never at any CD4: LAIV (use inactivated influenza), BCG, oral polio.",
+     "to": "Never at any CD4: LAIV (live attenuated influenza vaccine; use inactivated influenza), BCG (bacille Calmette-Guérin), oral polio."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In HIV, check the CD4 count before giving a live vaccine.",
+     "from": "In HIV, check the CD4 count."
+    },
+    {
+     "claim": "HIV stands for human immunodeficiency virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HIV alone does not exclude every live vaccine.",
+     "from": "HIV does not mean no live vaccines."
+    },
+    {
+     "claim": "CD4 ≥200 permits varicella, MMR and yellow fever (with caution).",
+     "from": "CD4 ≥200 permits varicella, MMR, and yellow fever (with caution)."
+    },
+    {
+     "claim": "MMR stands for measles, mumps, rubella.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CD4 <200 contraindicates them.",
+     "from": "CD4 <200 contraindicates them."
+    },
+    {
+     "claim": "Never at any CD4: LAIV (use inactivated influenza), BCG, oral polio.",
+     "from": "Never at any CD4: LAIV (use inactivated influenza), BCG, oral polio."
+    },
+    {
+     "claim": "LAIV stands for live attenuated influenza vaccine.",
+     "from": "expansion"
+    },
+    {
+     "claim": "BCG stands for bacille Calmette-Guérin.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hiv-vax",
+   "find": "<b>Meningococcal ACWY with boosters every 5 years</b> (unique to HIV, asplenia, and complement deficiency — the opsonization club) · pneumococcal regardless of age · hepatitis A and B unless immune · HPV through 26 (consider to 45) ·",
+   "with": "<b>Meningococcal ACWY with boosters every 5 years</b>, a schedule unique to <b>HIV</b> (human immunodeficiency virus), asplenia and complement deficiency · pneumococcal regardless of age · hepatitis A and B unless immune · <b>HPV</b> (human papillomavirus) through 26 (consider to 45) ·",
+   "note": "voice: HIV additions pearls; em dash and slogan nickname removed, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Meningococcal ACWY with boosters every 5 years.",
+     "to": "Meningococcal ACWY with boosters every 5 years, a schedule unique to HIV (human immunodeficiency virus), asplenia and complement deficiency"
+    },
+    {
+     "claim": "This is unique to HIV, asplenia, and complement deficiency.",
+     "to": "Meningococcal ACWY with boosters every 5 years, a schedule unique to HIV (human immunodeficiency virus), asplenia and complement deficiency"
+    },
+    {
+     "claim": "These form the opsonization club.",
+     "dropped": "slogan nickname for the group; the three conditions are kept"
+    },
+    {
+     "claim": "Pneumococcal vaccine regardless of age.",
+     "to": "pneumococcal regardless of age"
+    },
+    {
+     "claim": "Hepatitis A and B unless immune.",
+     "to": "hepatitis A and B unless immune"
+    },
+    {
+     "claim": "HPV through 26 (consider to 45).",
+     "to": "HPV (human papillomavirus) through 26 (consider to 45)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Meningococcal ACWY with boosters every 5 years.",
+     "from": "Meningococcal ACWY with boosters every 5 years."
+    },
+    {
+     "claim": "This schedule is unique to HIV, asplenia and complement deficiency.",
+     "from": "This is unique to HIV, asplenia, and complement deficiency."
+    },
+    {
+     "claim": "HIV stands for human immunodeficiency virus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Pneumococcal vaccine regardless of age.",
+     "from": "Pneumococcal vaccine regardless of age."
+    },
+    {
+     "claim": "Hepatitis A and B unless immune.",
+     "from": "Hepatitis A and B unless immune."
+    },
+    {
+     "claim": "HPV through 26 (consider to 45).",
+     "from": "HPV through 26 (consider to 45)."
+    },
+    {
+     "claim": "HPV stands for human papillomavirus.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hiv-vax",
+   "find": "Before rejecting a uniform option (\"yes to all four\"), you need a <b>specific disqualifying criterion you can name</b> — not a general sense that it's too easy.",
+   "with": "Reject a uniform option (\"yes to all four\") only for a <b>specific disqualifying criterion you can name</b>, not because it seems too easy.",
+   "note": "voice: .rule; em dash removed",
+   "claims": [
+    {
+     "claim": "Rejecting a uniform option (\"yes to all four\") needs a specific disqualifying criterion you can name.",
+     "to": "Reject a uniform option (\"yes to all four\") only for a specific disqualifying criterion you can name, not because it seems too easy."
+    },
+    {
+     "claim": "A general sense that it is too easy is not enough.",
+     "to": "Reject a uniform option (\"yes to all four\") only for a specific disqualifying criterion you can name, not because it seems too easy."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Reject a uniform option (\"yes to all four\") only for a specific disqualifying criterion you can name.",
+     "from": "Rejecting a uniform option (\"yes to all four\") needs a specific disqualifying criterion you can name."
+    },
+    {
+     "claim": "Do not reject it because it seems too easy.",
+     "from": "A general sense that it is too easy is not enough."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dtap",
+   "find": "Three false contraindications in one stem",
+   "with": "Three false contraindications to DTaP",
+   "note": "voice: subtitle; reference to the stem removed",
+   "claims": [
+    {
+     "claim": "There are three false contraindications.",
+     "to": "Three false contraindications to DTaP"
+    },
+    {
+     "claim": "They are in one stem.",
+     "dropped": "framing about the question stem"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "There are three false contraindications to DTaP.",
+     "from": "There are three false contraindications."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dtap",
+   "find": "<p>Separate <b>contraindication</b> (never give) from <b>precaution</b> (weigh risk vs. benefit) from <b>neither</b>. A brief self-limited seizure hours after a prior dose is technically a <i>precaution</i> — and precautions are overcome when benefit is high, as in an outbreak. Family history of epilepsy is in the \"neither\" bucket entirely.</p>",
+   "with": "<p>Classify each history as a <b>contraindication</b> (never give), a <b>precaution</b> (weigh risk vs. benefit) or <b>neither</b>. A brief self-limited seizure hours after a prior dose is technically a <i>precaution</i>. Precautions are overcome when benefit is high, as in an outbreak. Family history of epilepsy is neither a contraindication nor a precaution.</p>",
+   "note": "voice: .dp; em dash removed, bucket metaphor removed",
+   "claims": [
+    {
+     "claim": "Separate contraindication (never give) from precaution (weigh risk vs. benefit) from neither.",
+     "to": "Classify each history as a contraindication (never give), a precaution (weigh risk vs. benefit) or neither."
+    },
+    {
+     "claim": "A brief self-limited seizure hours after a prior dose is technically a precaution.",
+     "to": "A brief self-limited seizure hours after a prior dose is technically a precaution."
+    },
+    {
+     "claim": "Precautions are overcome when benefit is high, as in an outbreak.",
+     "to": "Precautions are overcome when benefit is high, as in an outbreak."
+    },
+    {
+     "claim": "Family history of epilepsy is in the neither category.",
+     "to": "Family history of epilepsy is neither a contraindication nor a precaution."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Classify each history as contraindication (never give), precaution (weigh risk vs. benefit) or neither.",
+     "from": "Separate contraindication (never give) from precaution (weigh risk vs. benefit) from neither."
+    },
+    {
+     "claim": "A brief self-limited seizure hours after a prior dose is technically a precaution.",
+     "from": "A brief self-limited seizure hours after a prior dose is technically a precaution."
+    },
+    {
+     "claim": "Precautions are overcome when benefit is high, as in an outbreak.",
+     "from": "Precautions are overcome when benefit is high, as in an outbreak."
+    },
+    {
+     "claim": "Family history of epilepsy is neither a contraindication nor a precaution.",
+     "from": "Family history of epilepsy is in the neither category."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dtap",
+   "find": "Vaccine questions are eligibility questions, and the stem's job is to make an ineligible-<i>sounding</i> history feel disqualifying. If you can't <b>name the criterion</b>, the answer is vaccinate.",
+   "with": "Vaccinate unless you can <b>name the criterion</b> that makes the patient ineligible; a history that only <i>sounds</i> disqualifying is not one.",
+   "note": "voice: .rule; framing about the stem removed",
+   "claims": [
+    {
+     "claim": "Vaccination decisions turn on eligibility.",
+     "to": "Vaccinate unless you can name the criterion that makes the patient ineligible; a history that only sounds disqualifying is not one."
+    },
+    {
+     "claim": "An ineligible-sounding history can feel disqualifying without being so.",
+     "to": "Vaccinate unless you can name the criterion that makes the patient ineligible; a history that only sounds disqualifying is not one."
+    },
+    {
+     "claim": "The stem's job is to make the history feel disqualifying.",
+     "dropped": "framing about the question stem"
+    },
+    {
+     "claim": "If you cannot name the criterion, vaccinate.",
+     "to": "Vaccinate unless you can name the criterion that makes the patient ineligible; a history that only sounds disqualifying is not one."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Vaccinate unless you can name the criterion that makes the patient ineligible.",
+     "from": "If you cannot name the criterion, vaccinate."
+    },
+    {
+     "claim": "A history that only sounds disqualifying is not a criterion.",
+     "from": "An ineligible-sounding history can feel disqualifying without being so."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "is a clinical diagnosis of cervicitis, most prevalent in women under 25. NAAT for both organisms is sent — and <b>empiric ceftriaxone plus doxycycline is given before results return</b>, to interrupt transmission and prevent PID, ectopic pregnancy, and infertility. The absence of cervical motion tenderness does not reassure: CMT marks ascent, and early or low-burden infection lacks it.</p>",
+   "with": "is a clinical diagnosis of cervicitis. Cervicitis is most prevalent in women under 25. <b>NAAT</b> (nucleic acid amplification testing) for both organisms is sent, and <b>empiric ceftriaxone plus doxycycline is given before results return</b>. The aim is to interrupt transmission and prevent <b>PID</b> (pelvic inflammatory disease), ectopic pregnancy and infertility. Absent <b>CMT</b> (cervical motion tenderness) does not reassure. CMT marks ascent, and early or low-burden infection lacks it.</p>",
+   "note": "voice: .dp; em dash removed, sentences split, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Mucopurulent cervical discharge + a friable cervix that bleeds on contact is a clinical diagnosis of cervicitis.",
+     "to": "Mucopurulent cervical discharge + a friable cervix that bleeds on contact is a clinical diagnosis of cervicitis."
+    },
+    {
+     "claim": "Cervicitis is most prevalent in women under 25.",
+     "to": "Cervicitis is most prevalent in women under 25."
+    },
+    {
+     "claim": "NAAT for both organisms is sent.",
+     "to": "NAAT (nucleic acid amplification testing) for both organisms is sent, and empiric ceftriaxone plus doxycycline is given before results return."
+    },
+    {
+     "claim": "Empiric ceftriaxone plus doxycycline is given before results return.",
+     "to": "NAAT (nucleic acid amplification testing) for both organisms is sent, and empiric ceftriaxone plus doxycycline is given before results return."
+    },
+    {
+     "claim": "Treatment aims to interrupt transmission and prevent PID, ectopic pregnancy, and infertility.",
+     "to": "The aim is to interrupt transmission and prevent PID (pelvic inflammatory disease), ectopic pregnancy and infertility."
+    },
+    {
+     "claim": "The absence of cervical motion tenderness does not reassure.",
+     "to": "Absent CMT (cervical motion tenderness) does not reassure."
+    },
+    {
+     "claim": "CMT marks ascent.",
+     "to": "CMT marks ascent, and early or low-burden infection lacks it."
+    },
+    {
+     "claim": "Early or low-burden infection lacks CMT.",
+     "to": "CMT marks ascent, and early or low-burden infection lacks it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Mucopurulent cervical discharge + a friable cervix that bleeds on contact is a clinical diagnosis of cervicitis.",
+     "from": "Mucopurulent cervical discharge + a friable cervix that bleeds on contact is a clinical diagnosis of cervicitis."
+    },
+    {
+     "claim": "Cervicitis is most prevalent in women under 25.",
+     "from": "Cervicitis is most prevalent in women under 25."
+    },
+    {
+     "claim": "NAAT for both organisms is sent.",
+     "from": "NAAT for both organisms is sent."
+    },
+    {
+     "claim": "NAAT stands for nucleic acid amplification testing.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Empiric ceftriaxone plus doxycycline is given before results return.",
+     "from": "Empiric ceftriaxone plus doxycycline is given before results return."
+    },
+    {
+     "claim": "The aim is to interrupt transmission and prevent PID, ectopic pregnancy and infertility.",
+     "from": "Treatment aims to interrupt transmission and prevent PID, ectopic pregnancy, and infertility."
+    },
+    {
+     "claim": "PID stands for pelvic inflammatory disease.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Absent CMT does not reassure.",
+     "from": "The absence of cervical motion tenderness does not reassure."
+    },
+    {
+     "claim": "CMT stands for cervical motion tenderness.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CMT marks ascent.",
+     "from": "CMT marks ascent."
+    },
+    {
+     "claim": "Early or low-burden infection lacks CMT.",
+     "from": "Early or low-burden infection lacks CMT."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "Azithromycin + doxycycline doubles atypical coverage and leaves <b>N gonorrhoeae untreated</b> — the classic wrong pairing · gonococcus is multidrug-resistant, including to sulfonamides — TMP-SMX never treats an STI syndrome · sterile pyuria in a sexually active woman (LE-positive, nitrite-negative) is chlamydia until the pelvic exam says otherwise · treat partners.",
+   "with": "Azithromycin + doxycycline doubles atypical coverage and leaves <b>N gonorrhoeae untreated</b>; it is the classic wrong pairing · gonococcus is multidrug-resistant, including to sulfonamides, so <b>TMP-SMX</b> (trimethoprim-sulfamethoxazole) never treats an <b>STI</b> (sexually transmitted infection) syndrome · sterile pyuria in a sexually active woman (leukocyte esterase-positive, nitrite-negative) is chlamydia until the pelvic exam shows otherwise · treat partners.",
+   "note": "voice: Pearls; em dashes removed, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Azithromycin + doxycycline doubles atypical coverage.",
+     "to": "Azithromycin + doxycycline doubles atypical coverage and leaves N gonorrhoeae untreated; it is the classic wrong pairing"
+    },
+    {
+     "claim": "Azithromycin + doxycycline leaves N gonorrhoeae untreated.",
+     "to": "Azithromycin + doxycycline doubles atypical coverage and leaves N gonorrhoeae untreated; it is the classic wrong pairing"
+    },
+    {
+     "claim": "Azithromycin + doxycycline is the classic wrong pairing.",
+     "to": "Azithromycin + doxycycline doubles atypical coverage and leaves N gonorrhoeae untreated; it is the classic wrong pairing"
+    },
+    {
+     "claim": "Gonococcus is multidrug-resistant, including to sulfonamides.",
+     "to": "gonococcus is multidrug-resistant, including to sulfonamides, so TMP-SMX (trimethoprim-sulfamethoxazole) never treats an STI (sexually transmitted infection) syndrome"
+    },
+    {
+     "claim": "TMP-SMX never treats an STI syndrome.",
+     "to": "gonococcus is multidrug-resistant, including to sulfonamides, so TMP-SMX (trimethoprim-sulfamethoxazole) never treats an STI (sexually transmitted infection) syndrome"
+    },
+    {
+     "claim": "Sterile pyuria in a sexually active woman (LE-positive, nitrite-negative) is chlamydia until the pelvic exam says otherwise.",
+     "to": "sterile pyuria in a sexually active woman (leukocyte esterase-positive, nitrite-negative) is chlamydia until the pelvic exam shows otherwise"
+    },
+    {
+     "claim": "Treat partners.",
+     "to": "treat partners."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Azithromycin + doxycycline doubles atypical coverage.",
+     "from": "Azithromycin + doxycycline doubles atypical coverage."
+    },
+    {
+     "claim": "Azithromycin + doxycycline leaves N gonorrhoeae untreated.",
+     "from": "Azithromycin + doxycycline leaves N gonorrhoeae untreated."
+    },
+    {
+     "claim": "It is the classic wrong pairing.",
+     "from": "Azithromycin + doxycycline is the classic wrong pairing."
+    },
+    {
+     "claim": "Gonococcus is multidrug-resistant, including to sulfonamides.",
+     "from": "Gonococcus is multidrug-resistant, including to sulfonamides."
+    },
+    {
+     "claim": "TMP-SMX never treats an STI syndrome.",
+     "from": "TMP-SMX never treats an STI syndrome."
+    },
+    {
+     "claim": "TMP-SMX stands for trimethoprim-sulfamethoxazole.",
+     "from": "expansion"
+    },
+    {
+     "claim": "STI stands for sexually transmitted infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "LE stands for leukocyte esterase.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Sterile pyuria in a sexually active woman (leukocyte esterase-positive, nitrite-negative) is chlamydia until the pelvic exam shows otherwise.",
+     "from": "Sterile pyuria in a sexually active woman (LE-positive, nitrite-negative) is chlamydia until the pelvic exam says otherwise."
+    },
+    {
+     "claim": "Treat partners.",
+     "from": "Treat partners."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "When a clinical diagnosis is sufficient and the sequelae are irreversible, the exam rewards treating at the visit — testing runs in parallel, never as a gate.",
+   "with": "When a clinical diagnosis is sufficient and the sequelae are irreversible, treat at the visit. Send tests at the same time; never wait for results before treating.",
+   "note": "voice: .rule; exam framing, em dash and gate metaphor removed",
+   "claims": [
+    {
+     "claim": "When a clinical diagnosis is sufficient and the sequelae are irreversible, treat at the visit.",
+     "to": "When a clinical diagnosis is sufficient and the sequelae are irreversible, treat at the visit."
+    },
+    {
+     "claim": "The exam rewards this.",
+     "dropped": "framing about the exam; the instruction to treat at the visit is kept"
+    },
+    {
+     "claim": "Testing runs in parallel.",
+     "to": "Send tests at the same time; never wait for results before treating."
+    },
+    {
+     "claim": "Testing is never a gate to treatment.",
+     "to": "Send tests at the same time; never wait for results before treating."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a clinical diagnosis is sufficient and the sequelae are irreversible, treat at the visit.",
+     "from": "When a clinical diagnosis is sufficient and the sequelae are irreversible, treat at the visit."
+    },
+    {
+     "claim": "Send tests at the same time.",
+     "from": "Testing runs in parallel."
+    },
+    {
+     "claim": "Never wait for results before treating.",
+     "from": "Testing is never a gate to treatment."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "A negative nitrite cannot rule out infection that nitrite was never sensitive for — atypicals don't reduce nitrate.",
+   "with": "A negative nitrite cannot rule out infection that nitrite was never sensitive for, because atypicals do not reduce nitrate.",
+   "note": "voice: trap line; em dash removed",
+   "claims": [
+    {
+     "claim": "A negative nitrite cannot rule out infection that nitrite was never sensitive for.",
+     "to": "A negative nitrite cannot rule out infection that nitrite was never sensitive for, because atypicals do not reduce nitrate."
+    },
+    {
+     "claim": "Atypicals don't reduce nitrate.",
+     "to": "A negative nitrite cannot rule out infection that nitrite was never sensitive for, because atypicals do not reduce nitrate."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A negative nitrite cannot rule out infection that nitrite was never sensitive for.",
+     "from": "A negative nitrite cannot rule out infection that nitrite was never sensitive for."
+    },
+    {
+     "claim": "Atypicals do not reduce nitrate.",
+     "from": "Atypicals don't reduce nitrate."
+    }
+   ]
+  }
+ ]
+}

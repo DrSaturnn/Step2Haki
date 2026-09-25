@@ -1,0 +1,1120 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "preg-vax",
+   "find": "Which one is due today?",
+   "with": "Choosing the one intervention due today",
+   "note": "subtitle: rhetorical question to plain description",
+   "claims": [
+    {
+     "claim": "Only one of the options is due today.",
+     "to": "Choosing the one intervention due today"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Only one intervention is due today.",
+     "from": "Only one of the options is due today."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "preg-vax",
+   "find": "<p>These stems stack several things the patient will <b>eventually</b> need, so the question is really <b>\"which one is due today?\"</b> — and the deciding variable is a <b>date, a gestational age, or a serology</b>, not a symptom. In the classic version the answer is signaled by <b>\"mid-September\"</b> in the first sentence: influenza vaccine, given as soon as it becomes available, in any trimester.</p>",
+   "with": "<p>The patient will eventually need several interventions, but only one is due today. A <b>date, a gestational age, or a serology</b> decides which one, not a symptom. When the date is <b>\"mid-September\"</b>, as in the classic version, influenza vaccine is due. Give it as soon as it becomes available, in any trimester.</p>",
+   "note": ".dp: remove question framing and em dash; split sentences",
+   "reworded_bold": [
+    "eventually",
+    "\"which one is due today?\""
+   ],
+   "claims": [
+    {
+     "claim": "The stem offers several things the patient will eventually need.",
+     "to": "The patient will eventually need several interventions, but only one is due today."
+    },
+    {
+     "claim": "Only one of them is due today.",
+     "to": "The patient will eventually need several interventions, but only one is due today."
+    },
+    {
+     "claim": "The deciding variable is a date, a gestational age, or a serology.",
+     "to": "A date, a gestational age, or a serology decides which one, not a symptom."
+    },
+    {
+     "claim": "The deciding variable is not a symptom.",
+     "to": "A date, a gestational age, or a serology decides which one, not a symptom."
+    },
+    {
+     "claim": "In the classic version, \"mid-September\" signals the answer.",
+     "to": "When the date is \"mid-September\", as in the classic version, influenza vaccine is due."
+    },
+    {
+     "claim": "The cue sits in the opening sentence of the stem.",
+     "dropped": "framing about where the cue sits in the stem; the cue itself is kept"
+    },
+    {
+     "claim": "The classic answer is influenza vaccine.",
+     "to": "When the date is \"mid-September\", as in the classic version, influenza vaccine is due."
+    },
+    {
+     "claim": "Influenza vaccine is given as soon as it becomes available.",
+     "to": "Give it as soon as it becomes available, in any trimester."
+    },
+    {
+     "claim": "Influenza vaccine is given in any trimester.",
+     "to": "Give it as soon as it becomes available, in any trimester."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The patient will eventually need several interventions.",
+     "from": "The stem offers several things the patient will eventually need."
+    },
+    {
+     "claim": "Only one is due today.",
+     "from": "Only one of them is due today."
+    },
+    {
+     "claim": "A date, a gestational age, or a serology decides which one.",
+     "from": "The deciding variable is a date, a gestational age, or a serology."
+    },
+    {
+     "claim": "A symptom does not decide which one.",
+     "from": "The deciding variable is not a symptom."
+    },
+    {
+     "claim": "In the classic version the date is mid-September.",
+     "from": "In the classic version, \"mid-September\" signals the answer."
+    },
+    {
+     "claim": "Influenza vaccine is due.",
+     "from": "The classic answer is influenza vaccine."
+    },
+    {
+     "claim": "Give it as soon as it becomes available.",
+     "from": "Influenza vaccine is given as soon as it becomes available."
+    },
+    {
+     "claim": "Give it in any trimester.",
+     "from": "Influenza vaccine is given in any trimester."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "preg-vax",
+   "find": "amniocentesis/CVS, external cephalic version, abdominal trauma) · and the trap — <b>a positive antibody screen means she is already alloimmunized</b>, so anti-D is useless and you switch to <b>titers and MCA Doppler</b>.",
+   "with": "amniocentesis/<b>CVS</b> (chorionic villus sampling), external cephalic version, abdominal trauma) · <b>a positive antibody screen means she is already alloimmunized</b>, so anti-D is useless; switch to <b>titers and MCA Doppler</b> (MCA, middle cerebral artery).",
+   "note": ".pearls: drop 'the trap' framing and em dash; expand CVS and MCA",
+   "claims": [
+    {
+     "claim": "Amniocentesis/CVS is a sensitizing event.",
+     "to": "amniocentesis/CVS (chorionic villus sampling), external cephalic version, abdominal trauma)"
+    },
+    {
+     "claim": "External cephalic version is a sensitizing event.",
+     "to": "amniocentesis/CVS (chorionic villus sampling), external cephalic version, abdominal trauma)"
+    },
+    {
+     "claim": "Abdominal trauma is a sensitizing event.",
+     "to": "amniocentesis/CVS (chorionic villus sampling), external cephalic version, abdominal trauma)"
+    },
+    {
+     "claim": "This is the trap.",
+     "dropped": "rhetorical framing"
+    },
+    {
+     "claim": "A positive antibody screen means she is already alloimmunized.",
+     "to": "a positive antibody screen means she is already alloimmunized, so anti-D is useless; switch to titers and MCA Doppler (MCA, middle cerebral artery)."
+    },
+    {
+     "claim": "Anti-D is then useless.",
+     "to": "a positive antibody screen means she is already alloimmunized, so anti-D is useless; switch to titers and MCA Doppler (MCA, middle cerebral artery)."
+    },
+    {
+     "claim": "Management switches to titers and MCA Doppler.",
+     "to": "a positive antibody screen means she is already alloimmunized, so anti-D is useless; switch to titers and MCA Doppler (MCA, middle cerebral artery)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CVS stands for chorionic villus sampling.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MCA stands for middle cerebral artery.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Amniocentesis/CVS is a sensitizing event.",
+     "from": "Amniocentesis/CVS is a sensitizing event."
+    },
+    {
+     "claim": "External cephalic version is a sensitizing event.",
+     "from": "External cephalic version is a sensitizing event."
+    },
+    {
+     "claim": "Abdominal trauma is a sensitizing event.",
+     "from": "Abdominal trauma is a sensitizing event."
+    },
+    {
+     "claim": "A positive antibody screen means she is already alloimmunized.",
+     "from": "A positive antibody screen means she is already alloimmunized."
+    },
+    {
+     "claim": "Anti-D is useless.",
+     "from": "Anti-D is then useless."
+    },
+    {
+     "claim": "Switch to titers and MCA Doppler.",
+     "from": "Management switches to titers and MCA Doppler."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "preg-vax",
+   "find": "Non-immune + exposed → <b>VZIG within 10 days</b> (ideally 96 hours) · maternal varicella → <b>varicella pneumonia</b>, high mortality → IV acyclovir",
+   "with": "Non-immune + exposed → <b>VZIG within 10 days</b> (varicella-zoster immune globulin; ideally 96 hours) · maternal varicella → <b>varicella pneumonia</b> (high mortality), treated with IV acyclovir",
+   "note": ".danger: one arrow per row; expand VZIG",
+   "claims": [
+    {
+     "claim": "A non-immune exposed pregnant patient gets VZIG within 10 days.",
+     "to": "Non-immune + exposed → VZIG within 10 days (varicella-zoster immune globulin; ideally 96 hours)"
+    },
+    {
+     "claim": "VZIG is ideally given within 96 hours.",
+     "to": "Non-immune + exposed → VZIG within 10 days (varicella-zoster immune globulin; ideally 96 hours)"
+    },
+    {
+     "claim": "Maternal varicella can lead to varicella pneumonia.",
+     "to": "maternal varicella → varicella pneumonia (high mortality), treated with IV acyclovir"
+    },
+    {
+     "claim": "Varicella pneumonia has high mortality.",
+     "to": "maternal varicella → varicella pneumonia (high mortality), treated with IV acyclovir"
+    },
+    {
+     "claim": "Varicella pneumonia is treated with IV acyclovir.",
+     "to": "maternal varicella → varicella pneumonia (high mortality), treated with IV acyclovir"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "VZIG stands for varicella-zoster immune globulin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Non-immune and exposed patients get VZIG within 10 days.",
+     "from": "A non-immune exposed pregnant patient gets VZIG within 10 days."
+    },
+    {
+     "claim": "VZIG is ideally given at 96 hours.",
+     "from": "VZIG is ideally given within 96 hours."
+    },
+    {
+     "claim": "Maternal varicella leads to varicella pneumonia.",
+     "from": "Maternal varicella can lead to varicella pneumonia."
+    },
+    {
+     "claim": "Varicella pneumonia has high mortality.",
+     "from": "Varicella pneumonia has high mortality."
+    },
+    {
+     "claim": "Varicella pneumonia is treated with IV acyclovir.",
+     "from": "Varicella pneumonia is treated with IV acyclovir."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "preg-vax",
+   "find": "When several choices are all things this patient will eventually need, scan for the <b>number</b> — date, gestational age, titer — before weighing the indications.",
+   "with": "When the patient will eventually need several of the choices, check the <b>number</b> (date, gestational age or titer) before weighing the indications.",
+   "note": ".rule: remove em dashes",
+   "claims": [
+    {
+     "claim": "When several choices are all eventually needed, look for the number first.",
+     "to": "When the patient will eventually need several of the choices, check the number (date, gestational age or titer) before weighing the indications."
+    },
+    {
+     "claim": "The number is a date, gestational age, or titer.",
+     "to": "When the patient will eventually need several of the choices, check the number (date, gestational age or titer) before weighing the indications."
+    },
+    {
+     "claim": "Check the number before weighing the indications.",
+     "to": "When the patient will eventually need several of the choices, check the number (date, gestational age or titer) before weighing the indications."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When several choices are all eventually needed, check the number.",
+     "from": "When several choices are all eventually needed, look for the number first."
+    },
+    {
+     "claim": "The number is a date, gestational age or titer.",
+     "from": "The number is a date, gestational age, or titer."
+    },
+    {
+     "claim": "Check it before weighing the indications.",
+     "from": "Check the number before weighing the indications."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cervical",
+   "find": "<p><b>Each negative test starts its own clock, the test type sets the length, and you're due when your longest valid coverage expires.</b> Negative cytology = 3 years of coverage from that date. Negative HPV-containing test = 5 years.</p>",
+   "with": "<p><b>Each negative test starts its own coverage clock.</b> The test type sets its length. Negative cytology gives 3 years of coverage from that date. A negative test that includes <b>HPV</b> (human papillomavirus) testing gives 5 years. The next screen is due when the longest valid coverage expires.</p>",
+   "note": ".dp: split bold aphorism into plain sentences; expand HPV",
+   "reworded_bold": [
+    "Each negative test starts its own clock, the test type sets the length, and you're due when your longest valid coverage expires."
+   ],
+   "claims": [
+    {
+     "claim": "Each negative test starts its own clock.",
+     "to": "Each negative test starts its own coverage clock."
+    },
+    {
+     "claim": "The test type sets the length of coverage.",
+     "to": "The test type sets its length."
+    },
+    {
+     "claim": "You are due when the longest valid coverage expires.",
+     "to": "The next screen is due when the longest valid coverage expires."
+    },
+    {
+     "claim": "Negative cytology gives 3 years of coverage from that date.",
+     "to": "Negative cytology gives 3 years of coverage from that date."
+    },
+    {
+     "claim": "A negative HPV-containing test gives 5 years.",
+     "to": "A negative test that includes HPV (human papillomavirus) testing gives 5 years."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Each negative test starts its own coverage clock.",
+     "from": "Each negative test starts its own clock."
+    },
+    {
+     "claim": "The test type sets its length.",
+     "from": "The test type sets the length of coverage."
+    },
+    {
+     "claim": "Negative cytology gives 3 years of coverage from that date.",
+     "from": "Negative cytology gives 3 years of coverage from that date."
+    },
+    {
+     "claim": "HPV stands for human papillomavirus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A negative test that includes HPV testing gives 5 years.",
+     "from": "A negative HPV-containing test gives 5 years."
+    },
+    {
+     "claim": "The next screen is due when the longest valid coverage expires.",
+     "from": "You are due when the longest valid coverage expires."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cervical",
+   "find": "<span class=\"lbl\">⚠︎ Primary HPV start age — the ledgers split</span>\n<b>Exam ledger (USPSTF, what the bank scores):</b> primary HPV testing begins at <b>age 30</b>; 21–29 is cytology alone.<br>\n<b>Clinic ledger (ACS 2020):</b> primary HPV begins at <b>age 25</b>, every 5 years, preferred — which removes the 25–29 cytology block entirely.<br>\n<b>Answer 30 on the exam.</b> The age-21 floor is identical in both and is not in dispute — see <a href=\"#bs-cervical-gate\">Cervical Screening: the Age-21 Floor</a>.",
+   "with": "<span class=\"lbl\">⚠︎ Primary HPV start age: exam versus clinical practice</span>\n<b>Exam answer:</b> <b>USPSTF</b> (US Preventive Services Task Force) starts primary <b>HPV</b> (human papillomavirus) testing at <b>age 30</b>; 21–29 is cytology alone.<br>\n<b>Clinical practice:</b> <b>ACS</b> (American Cancer Society) 2020 starts primary HPV testing at <b>age 25</b>, every 5 years, as the preferred test. This removes cytology-alone screening at 25–29 entirely.<br>\n<b>On the exam, primary HPV testing starts at age 30.</b> The age-21 floor is the same in both; see <a href=\"#bs-cervical-gate\">Cervical Screening: the Age-21 Floor</a>.",
+   "note": ".danger: ledger wording to exam versus clinical practice; remove em dashes; expand acronyms",
+   "reworded_bold": [
+    "Exam ledger (USPSTF, what the bank scores):",
+    "Clinic ledger (ACS 2020):",
+    "Answer 30 on the exam."
+   ],
+   "reworded_label": [
+    "⚠︎ Primary HPV start age — the ledgers split"
+   ],
+   "claims": [
+    {
+     "claim": "USPSTF is the exam standard.",
+     "to": "Exam answer: USPSTF (US Preventive Services Task Force) starts primary HPV (human papillomavirus) testing at age 30; 21–29 is cytology alone."
+    },
+    {
+     "claim": "Under USPSTF, primary HPV testing begins at age 30.",
+     "to": "Exam answer: USPSTF (US Preventive Services Task Force) starts primary HPV (human papillomavirus) testing at age 30; 21–29 is cytology alone."
+    },
+    {
+     "claim": "Under USPSTF, 21–29 is cytology alone.",
+     "to": "Exam answer: USPSTF (US Preventive Services Task Force) starts primary HPV (human papillomavirus) testing at age 30; 21–29 is cytology alone."
+    },
+    {
+     "claim": "Under ACS 2020, primary HPV begins at age 25.",
+     "to": "Clinical practice: ACS (American Cancer Society) 2020 starts primary HPV testing at age 25, every 5 years, as the preferred test."
+    },
+    {
+     "claim": "Under ACS 2020, primary HPV is every 5 years.",
+     "to": "Clinical practice: ACS (American Cancer Society) 2020 starts primary HPV testing at age 25, every 5 years, as the preferred test."
+    },
+    {
+     "claim": "Under ACS 2020, primary HPV is preferred.",
+     "to": "Clinical practice: ACS (American Cancer Society) 2020 starts primary HPV testing at age 25, every 5 years, as the preferred test."
+    },
+    {
+     "claim": "The ACS approach removes the 25–29 cytology block entirely.",
+     "to": "This removes cytology-alone screening at 25–29 entirely."
+    },
+    {
+     "claim": "Answer 30 on the exam.",
+     "to": "On the exam, primary HPV testing starts at age 30."
+    },
+    {
+     "claim": "The age-21 floor is identical in both.",
+     "to": "The age-21 floor is the same in both; see Cervical Screening: the Age-21 Floor."
+    },
+    {
+     "claim": "The age-21 floor is not in dispute.",
+     "to": "The age-21 floor is the same in both; see Cervical Screening: the Age-21 Floor."
+    },
+    {
+     "claim": "See the Age-21 Floor brief.",
+     "to": "The age-21 floor is the same in both; see Cervical Screening: the Age-21 Floor."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "USPSTF stands for US Preventive Services Task Force.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HPV stands for human papillomavirus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ACS stands for American Cancer Society.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The exam answer is USPSTF.",
+     "from": "USPSTF is the exam standard."
+    },
+    {
+     "claim": "USPSTF starts primary HPV testing at age 30.",
+     "from": "Under USPSTF, primary HPV testing begins at age 30."
+    },
+    {
+     "claim": "Under USPSTF, 21–29 is cytology alone.",
+     "from": "Under USPSTF, 21–29 is cytology alone."
+    },
+    {
+     "claim": "ACS 2020 starts primary HPV testing at age 25.",
+     "from": "Under ACS 2020, primary HPV begins at age 25."
+    },
+    {
+     "claim": "ACS 2020 primary HPV testing is every 5 years.",
+     "from": "Under ACS 2020, primary HPV is every 5 years."
+    },
+    {
+     "claim": "ACS 2020 primary HPV testing is the preferred test.",
+     "from": "Under ACS 2020, primary HPV is preferred."
+    },
+    {
+     "claim": "This removes cytology-alone screening at 25–29 entirely.",
+     "from": "The ACS approach removes the 25–29 cytology block entirely."
+    },
+    {
+     "claim": "On the exam, primary HPV testing starts at age 30.",
+     "from": "Answer 30 on the exam."
+    },
+    {
+     "claim": "The age-21 floor is the same in both.",
+     "from": "The age-21 floor is identical in both."
+    },
+    {
+     "claim": "See the Age-21 Floor brief.",
+     "from": "See the Age-21 Floor brief."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cervical",
+   "find": "A <b>female partner</b> does not lower risk — HPV transmits between women and screening is identical. <b>Obesity</b> is a real endometrial risk factor but does not trigger endometrial biopsy without AUB.",
+   "with": "A <b>female partner</b> does not lower risk; <b>HPV</b> (human papillomavirus) transmits between women, and screening is identical. <b>Obesity</b> is a real endometrial risk factor but does not trigger endometrial biopsy without <b>AUB</b> (abnormal uterine bleeding).",
+   "note": ".pearls: remove em dash; expand HPV and AUB",
+   "claims": [
+    {
+     "claim": "A female partner does not lower risk.",
+     "to": "A female partner does not lower risk; HPV (human papillomavirus) transmits between women, and screening is identical."
+    },
+    {
+     "claim": "HPV transmits between women.",
+     "to": "A female partner does not lower risk; HPV (human papillomavirus) transmits between women, and screening is identical."
+    },
+    {
+     "claim": "Screening is identical with a female partner.",
+     "to": "A female partner does not lower risk; HPV (human papillomavirus) transmits between women, and screening is identical."
+    },
+    {
+     "claim": "Obesity is a real endometrial risk factor.",
+     "to": "Obesity is a real endometrial risk factor but does not trigger endometrial biopsy without AUB (abnormal uterine bleeding)."
+    },
+    {
+     "claim": "Obesity does not trigger endometrial biopsy without AUB.",
+     "to": "Obesity is a real endometrial risk factor but does not trigger endometrial biopsy without AUB (abnormal uterine bleeding)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "HPV stands for human papillomavirus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "AUB stands for abnormal uterine bleeding.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A female partner does not lower risk.",
+     "from": "A female partner does not lower risk."
+    },
+    {
+     "claim": "HPV transmits between women.",
+     "from": "HPV transmits between women."
+    },
+    {
+     "claim": "Screening is identical.",
+     "from": "Screening is identical with a female partner."
+    },
+    {
+     "claim": "Obesity is a real endometrial risk factor.",
+     "from": "Obesity is a real endometrial risk factor."
+    },
+    {
+     "claim": "Obesity does not trigger endometrial biopsy without AUB.",
+     "from": "Obesity does not trigger endometrial biopsy without AUB."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "pmb",
+   "find": "One line decides it",
+   "with": "Any bleeding after 12 months of amenorrhea",
+   "note": "subtitle: slogan to plain description",
+   "claims": [
+    {
+     "claim": "One line of history (no menstrual period for over a year) decides the case.",
+     "to": "Any bleeding after 12 months of amenorrhea"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The presentation is any bleeding after 12 months of amenorrhea.",
+     "from": "One line of history (no menstrual period for over a year) decides the case."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "pmb",
+   "find": "<p><b>\"No menstrual period for over a year\"</b> makes her postmenopausal, and any bleeding after 12 months of amenorrhea is <b>endometrial cancer until proven otherwise</b>. Amount and duration are irrelevant; a single episode of spotting counts. ~90% of endometrial cancer presents this way; ~9–10% of PMB <i>is</i> cancer.</p>",
+   "with": "<p><b>\"No menstrual period for over a year\"</b> makes her postmenopausal. Any bleeding after 12 months of amenorrhea is <b>endometrial cancer until proven otherwise</b>. Amount and duration are irrelevant; a single episode of spotting counts. ~90% of endometrial cancer presents with <b>PMB</b> (postmenopausal bleeding). Of all PMB, ~9–10% is cancer.</p>",
+   "note": ".dp: split sentences; expand PMB",
+   "claims": [
+    {
+     "claim": "\"No menstrual period for over a year\" makes her postmenopausal.",
+     "to": "\"No menstrual period for over a year\" makes her postmenopausal."
+    },
+    {
+     "claim": "Any bleeding after 12 months of amenorrhea is endometrial cancer until proven otherwise.",
+     "to": "Any bleeding after 12 months of amenorrhea is endometrial cancer until proven otherwise."
+    },
+    {
+     "claim": "Amount and duration are irrelevant.",
+     "to": "Amount and duration are irrelevant; a single episode of spotting counts."
+    },
+    {
+     "claim": "A single episode of spotting counts.",
+     "to": "Amount and duration are irrelevant; a single episode of spotting counts."
+    },
+    {
+     "claim": "~90% of endometrial cancer presents with postmenopausal bleeding.",
+     "to": "~90% of endometrial cancer presents with PMB (postmenopausal bleeding)."
+    },
+    {
+     "claim": "~9–10% of PMB is cancer.",
+     "to": "Of all PMB, ~9–10% is cancer."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "\"No menstrual period for over a year\" makes her postmenopausal.",
+     "from": "\"No menstrual period for over a year\" makes her postmenopausal."
+    },
+    {
+     "claim": "Any bleeding after 12 months of amenorrhea is endometrial cancer until proven otherwise.",
+     "from": "Any bleeding after 12 months of amenorrhea is endometrial cancer until proven otherwise."
+    },
+    {
+     "claim": "Amount and duration are irrelevant.",
+     "from": "Amount and duration are irrelevant."
+    },
+    {
+     "claim": "A single episode of spotting counts.",
+     "from": "A single episode of spotting counts."
+    },
+    {
+     "claim": "PMB stands for postmenopausal bleeding.",
+     "from": "expansion"
+    },
+    {
+     "claim": "~90% of endometrial cancer presents with PMB.",
+     "from": "~90% of endometrial cancer presents with postmenopausal bleeding."
+    },
+    {
+     "claim": "~9–10% of PMB is cancer.",
+     "from": "~9–10% of PMB is cancer."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "pmb",
+   "find": "<span class=\"lbl\">The two traps in one stem</span>\n<b>Fibroids</b> cause bleeding in <i>pre</i>menopausal women; after menopause they involute. <b>Atrophy</b> is the most common cause of PMB (~60%) — but it is a <b>diagnosis of exclusion</b>, so \"pale vagina with minimal rugation\" does not license reassurance. And a <b>progestin IUD is contraindicated in undiagnosed bleeding</b>.",
+   "with": "<span class=\"lbl\">Fibroids and atrophy after menopause</span>\n<b>Fibroids</b> cause bleeding in <i>pre</i>menopausal women; after menopause they involute. <b>Atrophy</b> is the most common cause of <b>PMB</b> (postmenopausal bleeding), at ~60%, but it is a <b>diagnosis of exclusion</b>. A \"pale vagina with minimal rugation\" therefore does not license reassurance. A <b>progestin IUD is contraindicated in undiagnosed bleeding</b> (IUD, intrauterine device).",
+   "note": ".danger: rhetorical label reworded; remove em dash and filler 'And'; expand PMB",
+   "reworded_label": [
+    "The two traps in one stem"
+   ],
+   "claims": [
+    {
+     "claim": "Fibroids cause bleeding in premenopausal women.",
+     "to": "Fibroids cause bleeding in premenopausal women; after menopause they involute."
+    },
+    {
+     "claim": "After menopause fibroids involute.",
+     "to": "Fibroids cause bleeding in premenopausal women; after menopause they involute."
+    },
+    {
+     "claim": "Atrophy is the most common cause of PMB (~60%).",
+     "to": "Atrophy is the most common cause of PMB (postmenopausal bleeding), at ~60%, but it is a diagnosis of exclusion."
+    },
+    {
+     "claim": "Atrophy is a diagnosis of exclusion.",
+     "to": "Atrophy is the most common cause of PMB (postmenopausal bleeding), at ~60%, but it is a diagnosis of exclusion."
+    },
+    {
+     "claim": "A \"pale vagina with minimal rugation\" does not license reassurance.",
+     "to": "A \"pale vagina with minimal rugation\" therefore does not license reassurance."
+    },
+    {
+     "claim": "A progestin IUD is contraindicated in undiagnosed bleeding.",
+     "to": "A progestin IUD is contraindicated in undiagnosed bleeding (IUD, intrauterine device)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "PMB stands for postmenopausal bleeding.",
+     "from": "expansion"
+    },
+    {
+     "claim": "IUD stands for intrauterine device.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Fibroids cause bleeding in premenopausal women.",
+     "from": "Fibroids cause bleeding in premenopausal women."
+    },
+    {
+     "claim": "After menopause fibroids involute.",
+     "from": "After menopause fibroids involute."
+    },
+    {
+     "claim": "Atrophy is the most common cause of PMB, at ~60%.",
+     "from": "Atrophy is the most common cause of PMB (~60%)."
+    },
+    {
+     "claim": "Atrophy is a diagnosis of exclusion.",
+     "from": "Atrophy is a diagnosis of exclusion."
+    },
+    {
+     "claim": "A \"pale vagina with minimal rugation\" does not license reassurance.",
+     "from": "A \"pale vagina with minimal rugation\" does not license reassurance."
+    },
+    {
+     "claim": "A progestin IUD is contraindicated in undiagnosed bleeding.",
+     "from": "A progestin IUD is contraindicated in undiagnosed bleeding."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "pmb",
+   "find": "Part I <b>Familial Adenomatous Polyposis</b> holds the hereditary colon cancer differential in which Lynch syndrome — the endometrial-cancer pedigree — is the polyp-poor row. Store the discriminator as a question: is there an endometrial cancer in the family?",
+   "with": "Part I <b>Familial Adenomatous Polyposis</b> covers the hereditary colon cancer differential. In that differential, Lynch syndrome, the endometrial-cancer pedigree, is the polyp-poor row. Ask: is there an endometrial cancer in the family?",
+   "note": ".pearls Pairs with: holds to covers; remove em dashes; discriminator question as Ask:",
+   "claims": [
+    {
+     "claim": "Part I Familial Adenomatous Polyposis holds the hereditary colon cancer differential.",
+     "to": "Part I Familial Adenomatous Polyposis covers the hereditary colon cancer differential."
+    },
+    {
+     "claim": "Lynch syndrome is the endometrial-cancer pedigree.",
+     "to": "In that differential, Lynch syndrome, the endometrial-cancer pedigree, is the polyp-poor row."
+    },
+    {
+     "claim": "Lynch syndrome is the polyp-poor row of that differential.",
+     "to": "In that differential, Lynch syndrome, the endometrial-cancer pedigree, is the polyp-poor row."
+    },
+    {
+     "claim": "The discriminator is whether there is an endometrial cancer in the family.",
+     "to": "Ask: is there an endometrial cancer in the family?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I Familial Adenomatous Polyposis covers the hereditary colon cancer differential.",
+     "from": "Part I Familial Adenomatous Polyposis holds the hereditary colon cancer differential."
+    },
+    {
+     "claim": "Lynch syndrome is the endometrial-cancer pedigree.",
+     "from": "Lynch syndrome is the endometrial-cancer pedigree."
+    },
+    {
+     "claim": "Lynch syndrome is the polyp-poor row.",
+     "from": "Lynch syndrome is the polyp-poor row of that differential."
+    },
+    {
+     "claim": "Ask whether there is an endometrial cancer in the family.",
+     "from": "The discriminator is whether there is an endometrial cancer in the family."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "pmb",
+   "find": "When a stem offers a familiar benign explanation, check whether the patient is still in the <b>physiologic state</b> where that explanation applies.",
+   "with": "Before accepting a familiar benign explanation, check whether the patient is still in the <b>physiologic state</b> where it applies.",
+   "note": ".rule: remove stem framing",
+   "claims": [
+    {
+     "claim": "When a familiar benign explanation is offered, check whether the patient is still in the physiologic state where it applies.",
+     "to": "Before accepting a familiar benign explanation, check whether the patient is still in the physiologic state where it applies."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Before accepting a familiar benign explanation, check whether the patient is still in the physiologic state where it applies.",
+     "from": "When a familiar benign explanation is offered, check whether the patient is still in the physiologic state where it applies."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ectopic",
+   "find": "Location questions need imaging, not numbers",
+   "with": "Locating the pregnancy needs imaging, not numbers",
+   "note": "subtitle: framing about questions to plain statement",
+   "claims": [
+    {
+     "claim": "Locating the pregnancy needs imaging.",
+     "to": "Locating the pregnancy needs imaging, not numbers"
+    },
+    {
+     "claim": "Numbers do not locate the pregnancy.",
+     "to": "Locating the pregnancy needs imaging, not numbers"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Locating the pregnancy needs imaging.",
+     "from": "Locating the pregnancy needs imaging."
+    },
+    {
+     "claim": "Numbers do not locate the pregnancy.",
+     "from": "Numbers do not locate the pregnancy."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ectopic",
+   "find": "<p>Pregnancy is already confirmed by the urine test. The question is no longer \"is she pregnant?\" but <b>\"where is the pregnancy?\"</b> — and only one tool answers a location question: <b>transvaginal ultrasound</b>. A single serum β-hCG localizes nothing.</p>",
+   "with": "<p>Pregnancy is already confirmed by the urine test. The next step is to find <b>where the pregnancy is</b>. Only <b>transvaginal ultrasound</b> can locate it. A single serum <b>β-hCG</b> (beta human chorionic gonadotropin) localizes nothing.</p>",
+   "note": ".dp: remove question framing and em dash; expand hCG",
+   "reworded_bold": [
+    "\"where is the pregnancy?\""
+   ],
+   "claims": [
+    {
+     "claim": "Pregnancy is already confirmed by the urine test.",
+     "to": "Pregnancy is already confirmed by the urine test."
+    },
+    {
+     "claim": "Whether she is pregnant is no longer in question.",
+     "to": "Pregnancy is already confirmed by the urine test."
+    },
+    {
+     "claim": "The issue is where the pregnancy is.",
+     "to": "The next step is to find where the pregnancy is."
+    },
+    {
+     "claim": "Only transvaginal ultrasound answers the location question.",
+     "to": "Only transvaginal ultrasound can locate it."
+    },
+    {
+     "claim": "A single serum β-hCG localizes nothing.",
+     "to": "A single serum β-hCG (beta human chorionic gonadotropin) localizes nothing."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Pregnancy is already confirmed by the urine test.",
+     "from": "Pregnancy is already confirmed by the urine test."
+    },
+    {
+     "claim": "The next step is to find where the pregnancy is.",
+     "from": "The issue is where the pregnancy is."
+    },
+    {
+     "claim": "Only transvaginal ultrasound can locate it.",
+     "from": "Only transvaginal ultrasound answers the location question."
+    },
+    {
+     "claim": "β-hCG stands for beta human chorionic gonadotropin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A single serum β-hCG localizes nothing.",
+     "from": "A single serum β-hCG localizes nothing."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ectopic",
+   "find": "<span class=\"lbl\">Stability picks the branch</span> Hypotensive, rebound, or <b>shoulder pain</b> (diaphragmatic irritation from hemoperitoneum) → skip everything, <b>emergent laparoscopy/laparotomy</b>. Stable ectopic workup = image; unstable = operate — the same logic as PE.",
+   "with": "<span class=\"lbl\">Stable versus unstable</span> Hypotension, rebound, or <b>shoulder pain</b> (diaphragmatic irritation from hemoperitoneum) → <b>emergent laparoscopy/laparotomy</b>, with no further workup. A stable patient with a suspected ectopic gets imaging; an unstable patient goes to surgery. This is the same logic as in <b>PE</b> (pulmonary embolism).",
+   "note": ".danger: personified label reworded; remove equals shorthand and em dash; expand PE",
+   "reworded_label": [
+    "Stability picks the branch"
+   ],
+   "claims": [
+    {
+     "claim": "Hypotension, rebound, or shoulder pain call for emergent laparoscopy/laparotomy.",
+     "to": "Hypotension, rebound, or shoulder pain (diaphragmatic irritation from hemoperitoneum) → emergent laparoscopy/laparotomy, with no further workup."
+    },
+    {
+     "claim": "Shoulder pain reflects diaphragmatic irritation from hemoperitoneum.",
+     "to": "Hypotension, rebound, or shoulder pain (diaphragmatic irritation from hemoperitoneum) → emergent laparoscopy/laparotomy, with no further workup."
+    },
+    {
+     "claim": "In that case skip the rest of the workup.",
+     "to": "Hypotension, rebound, or shoulder pain (diaphragmatic irritation from hemoperitoneum) → emergent laparoscopy/laparotomy, with no further workup."
+    },
+    {
+     "claim": "A stable ectopic workup is imaging.",
+     "to": "A stable patient with a suspected ectopic gets imaging; an unstable patient goes to surgery."
+    },
+    {
+     "claim": "An unstable ectopic is operated on.",
+     "to": "A stable patient with a suspected ectopic gets imaging; an unstable patient goes to surgery."
+    },
+    {
+     "claim": "This is the same logic as PE.",
+     "to": "This is the same logic as in PE (pulmonary embolism)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hypotension, rebound, or shoulder pain call for emergent laparoscopy/laparotomy.",
+     "from": "Hypotension, rebound, or shoulder pain call for emergent laparoscopy/laparotomy."
+    },
+    {
+     "claim": "Shoulder pain reflects diaphragmatic irritation from hemoperitoneum.",
+     "from": "Shoulder pain reflects diaphragmatic irritation from hemoperitoneum."
+    },
+    {
+     "claim": "No further workup is done.",
+     "from": "In that case skip the rest of the workup."
+    },
+    {
+     "claim": "A stable patient with a suspected ectopic gets imaging.",
+     "from": "A stable ectopic workup is imaging."
+    },
+    {
+     "claim": "An unstable patient goes to surgery.",
+     "from": "An unstable ectopic is operated on."
+    },
+    {
+     "claim": "PE stands for pulmonary embolism.",
+     "from": "expansion"
+    },
+    {
+     "claim": "This is the same logic as in PE.",
+     "from": "This is the same logic as PE."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ectopic",
+   "find": "When two tests both seem reasonable, choose the one <b>whose result forks the management tree</b>. A single hCG changes nothing tonight; the ultrasound changes everything.",
+   "with": "When two tests both seem reasonable, choose the one <b>whose result changes management</b>. A single <b>hCG</b> (human chorionic gonadotropin) level does not change management tonight; the ultrasound result does.",
+   "note": ".rule: metaphor and dramatic closer to plain wording; expand hCG",
+   "reworded_bold": [
+    "whose result forks the management tree"
+   ],
+   "claims": [
+    {
+     "claim": "When two tests both seem reasonable, choose the one whose result forks the management tree.",
+     "to": "When two tests both seem reasonable, choose the one whose result changes management."
+    },
+    {
+     "claim": "A single hCG changes nothing tonight.",
+     "to": "A single hCG (human chorionic gonadotropin) level does not change management tonight; the ultrasound result does."
+    },
+    {
+     "claim": "The ultrasound changes management.",
+     "to": "A single hCG (human chorionic gonadotropin) level does not change management tonight; the ultrasound result does."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When two tests both seem reasonable, choose the one whose result changes management.",
+     "from": "When two tests both seem reasonable, choose the one whose result forks the management tree."
+    },
+    {
+     "claim": "hCG stands for human chorionic gonadotropin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A single hCG level does not change management tonight.",
+     "from": "A single hCG changes nothing tonight."
+    },
+    {
+     "claim": "The ultrasound result changes management.",
+     "from": "The ultrasound changes management."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hpv",
+   "find": "A two-lock door",
+   "with": "Two rules: age at first dose sets the series length; never restart a series",
+   "note": "subtitle: slogan to plain description",
+   "claims": [
+    {
+     "claim": "Two independent rules govern the series.",
+     "to": "Two rules: age at first dose sets the series length; never restart a series"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Age at first dose sets the series length.",
+     "from": "Two independent rules govern the series."
+    },
+    {
+     "claim": "Never restart a series.",
+     "from": "Two independent rules govern the series."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hpv",
+   "find": "<p>Two independent facts: <b>(1) age at first dose sets the series length</b> — under 15 → 2 doses; <b>≥15 → 3 doses</b> (immunocompromised → 3 regardless. <b>(2) Never restart a vaccine series</b> — delayed doses are simply given late. Minimum intervals matter; maximum intervals don't exist.</p>",
+   "with": "<p>Two independent rules apply. <b>(1) age at first dose sets the series length</b>. Under 15, the series is 2 doses. <b>≥15 → 3 doses</b>. Immunocompromised → 3 doses regardless of age. <b>(2) Never restart a vaccine series</b>; delayed doses are simply given late. Minimum intervals matter; there is no maximum interval.</p>",
+   "note": ".dp: remove em dashes, one arrow per sentence, fix unclosed parenthesis",
+   "claims": [
+    {
+     "claim": "There are two independent facts.",
+     "to": "Two independent rules apply."
+    },
+    {
+     "claim": "Age at first dose sets the series length.",
+     "to": "(1) age at first dose sets the series length."
+    },
+    {
+     "claim": "Under 15 at first dose gets 2 doses.",
+     "to": "Under 15, the series is 2 doses."
+    },
+    {
+     "claim": "15 or older at first dose gets 3 doses.",
+     "to": "≥15 → 3 doses."
+    },
+    {
+     "claim": "Immunocompromised patients get 3 doses regardless.",
+     "to": "Immunocompromised → 3 doses regardless of age."
+    },
+    {
+     "claim": "Never restart a vaccine series.",
+     "to": "(2) Never restart a vaccine series; delayed doses are simply given late."
+    },
+    {
+     "claim": "Delayed doses are simply given late.",
+     "to": "(2) Never restart a vaccine series; delayed doses are simply given late."
+    },
+    {
+     "claim": "Minimum intervals matter.",
+     "to": "Minimum intervals matter; there is no maximum interval."
+    },
+    {
+     "claim": "Maximum intervals don't exist.",
+     "to": "Minimum intervals matter; there is no maximum interval."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "There are two independent rules.",
+     "from": "There are two independent facts."
+    },
+    {
+     "claim": "Age at first dose sets the series length.",
+     "from": "Age at first dose sets the series length."
+    },
+    {
+     "claim": "Under 15, the series is 2 doses.",
+     "from": "Under 15 at first dose gets 2 doses."
+    },
+    {
+     "claim": "15 or older gets 3 doses.",
+     "from": "15 or older at first dose gets 3 doses."
+    },
+    {
+     "claim": "Immunocompromised patients get 3 doses regardless of age.",
+     "from": "Immunocompromised patients get 3 doses regardless."
+    },
+    {
+     "claim": "Never restart a vaccine series.",
+     "from": "Never restart a vaccine series."
+    },
+    {
+     "claim": "Delayed doses are simply given late.",
+     "from": "Delayed doses are simply given late."
+    },
+    {
+     "claim": "Minimum intervals matter.",
+     "from": "Minimum intervals matter."
+    },
+    {
+     "claim": "There is no maximum interval.",
+     "from": "Maximum intervals don't exist."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hpv",
+   "find": "<span class=\"lbl\">Bankable rules</span> \"Do not restart, do not repeat\" applies to <b>every</b> vaccine series — a gap just means resume where you left off · catch-up HPV vaccination is recommended through <b>age 26</b>, with shared decision-making 27–45 · <b>sexual activity, prior HPV exposure, and abnormal Pap results do not change the recommendation</b> — vaccinate anyway, because it still protects against strains not yet acquired.",
+   "with": "<span class=\"lbl\">Series and catch-up rules</span> Never restart or repeat any vaccine series; after a gap, resume where the patient left off · catch-up <b>HPV</b> (human papillomavirus) vaccination is recommended through <b>age 26</b>, with shared decision-making 27–45 · <b>sexual activity, prior HPV exposure, and abnormal Pap results do not change the recommendation</b>. Vaccinate anyway, because the vaccine still protects against strains not yet acquired.",
+   "note": ".pearls: slogan and exam-jargon label to plain; remove em dashes and emphasis bold; expand HPV",
+   "reworded_bold": [
+    "every"
+   ],
+   "reworded_label": [
+    "Bankable rules"
+   ],
+   "claims": [
+    {
+     "claim": "Do not restart and do not repeat any vaccine series.",
+     "to": "Never restart or repeat any vaccine series; after a gap, resume where the patient left off"
+    },
+    {
+     "claim": "This applies to every vaccine series.",
+     "to": "Never restart or repeat any vaccine series; after a gap, resume where the patient left off"
+    },
+    {
+     "claim": "A gap means resume where you left off.",
+     "to": "Never restart or repeat any vaccine series; after a gap, resume where the patient left off"
+    },
+    {
+     "claim": "Catch-up HPV vaccination is recommended through age 26.",
+     "to": "catch-up HPV (human papillomavirus) vaccination is recommended through age 26, with shared decision-making 27–45"
+    },
+    {
+     "claim": "Shared decision-making applies at 27–45.",
+     "to": "catch-up HPV (human papillomavirus) vaccination is recommended through age 26, with shared decision-making 27–45"
+    },
+    {
+     "claim": "Sexual activity, prior HPV exposure, and abnormal Pap results do not change the recommendation.",
+     "to": "sexual activity, prior HPV exposure, and abnormal Pap results do not change the recommendation."
+    },
+    {
+     "claim": "Vaccinate anyway.",
+     "to": "Vaccinate anyway, because the vaccine still protects against strains not yet acquired."
+    },
+    {
+     "claim": "The vaccine still protects against strains not yet acquired.",
+     "to": "Vaccinate anyway, because the vaccine still protects against strains not yet acquired."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Never restart or repeat any vaccine series.",
+     "from": "Do not restart and do not repeat any vaccine series."
+    },
+    {
+     "claim": "After a gap, resume where the patient left off.",
+     "from": "A gap means resume where you left off."
+    },
+    {
+     "claim": "HPV stands for human papillomavirus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Catch-up HPV vaccination is recommended through age 26.",
+     "from": "Catch-up HPV vaccination is recommended through age 26."
+    },
+    {
+     "claim": "Shared decision-making applies at 27–45.",
+     "from": "Shared decision-making applies at 27–45."
+    },
+    {
+     "claim": "Sexual activity, prior HPV exposure, and abnormal Pap results do not change the recommendation.",
+     "from": "Sexual activity, prior HPV exposure, and abnormal Pap results do not change the recommendation."
+    },
+    {
+     "claim": "Vaccinate anyway.",
+     "from": "Vaccinate anyway."
+    },
+    {
+     "claim": "The vaccine still protects against strains not yet acquired.",
+     "from": "The vaccine still protects against strains not yet acquired."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hpv",
+   "find": "When a guideline stem includes lifestyle color, ask whether it actually <b>changes the algorithm</b>. Usually it's there precisely because it doesn't.",
+   "with": "When the history includes a lifestyle detail, check whether it actually <b>changes the algorithm</b>. Usually it does not.",
+   "note": ".rule: remove stem framing",
+   "claims": [
+    {
+     "claim": "When lifestyle detail appears, ask whether it actually changes the algorithm.",
+     "to": "When the history includes a lifestyle detail, check whether it actually changes the algorithm."
+    },
+    {
+     "claim": "Usually it does not change the algorithm.",
+     "to": "Usually it does not."
+    },
+    {
+     "claim": "It is included precisely because it does not.",
+     "dropped": "framing about why the stem includes the detail"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When the history includes a lifestyle detail, check whether it actually changes the algorithm.",
+     "from": "When lifestyle detail appears, ask whether it actually changes the algorithm."
+    },
+    {
+     "claim": "Usually it does not.",
+     "from": "Usually it does not change the algorithm."
+    }
+   ]
+  }
+ ]
+}

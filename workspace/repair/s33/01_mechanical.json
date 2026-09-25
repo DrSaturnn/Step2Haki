@@ -1,0 +1,1964 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bs-septic-adult",
+   "find": "<span class=\"lbl\">Trap autopsy</span>",
+   "with": "<span class=\"lbl\">Distractors</span>",
+   "note": "s33 mechanical: trap section label renamed to Distractors"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-lbp-acute",
+   "find": "<span class=\"lbl\">Trap autopsy</span>",
+   "with": "<span class=\"lbl\">Distractors</span>",
+   "note": "s33 mechanical: trap section label renamed to Distractors"
+  },
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "<span class=\"lbl\">Why the distractors fail</span>",
+   "with": "<span class=\"lbl\">Distractors</span>",
+   "note": "s33 mechanical: trap section label renamed to Distractors"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "<span class=\"lbl\">Trap autopsy</span>",
+   "with": "<span class=\"lbl\">Distractors</span>",
+   "note": "s33 mechanical: trap section label renamed to Distractors"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-reye",
+   "find": "<span class=\"lbl\">Trap autopsy</span>",
+   "with": "<span class=\"lbl\">Distractors</span>",
+   "note": "s33 mechanical: trap section label renamed to Distractors"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-scabies",
+   "find": "<span class=\"lbl\">Trap autopsy</span>",
+   "with": "<span class=\"lbl\">Distractors</span>",
+   "note": "s33 mechanical: trap section label renamed to Distractors"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-cervical-gate",
+   "find": "<span class=\"lbl\">Trap autopsy</span>",
+   "with": "<span class=\"lbl\">Distractors</span>",
+   "note": "s33 mechanical: trap section label renamed to Distractors"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "<span class=\"lbl\">Trap autopsy</span>",
+   "with": "<span class=\"lbl\">Distractors</span>",
+   "note": "s33 mechanical: trap section label renamed to Distractors"
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "Displacement of the capital femoral epiphysis &mdash; ",
+   "with": "Displacement of the capital femoral epiphysis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "Failure of osteoid to mineralize &mdash; ",
+   "with": "Failure of osteoid to mineralize: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "Acute epiphyseal fracture &mdash; ",
+   "with": "Acute epiphyseal fracture: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "Acute suppurative arthritis &mdash; ",
+   "with": "Acute suppurative arthritis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "Avulsion of muscle origin &mdash; ",
+   "with": "Avulsion of muscle origin: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "sjia",
+   "find": "Vitamin D and calcium &mdash; ",
+   "with": "Vitamin D and calcium: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "sjia",
+   "find": "Levothyroxine &mdash; ",
+   "with": "Levothyroxine: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "Necrotizing myositis &mdash; ",
+   "with": "Necrotizing myositis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "Complete quadriceps muscle tear &mdash; ",
+   "with": "Complete quadriceps muscle tear: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "Femoral vein thrombosis &mdash; ",
+   "with": "Femoral vein thrombosis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "Neoplastic bone tumour &mdash; ",
+   "with": "Neoplastic bone tumour: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "Order plain radiographs &mdash; ",
+   "with": "Order plain radiographs: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "Order complete blood count &mdash; ",
+   "with": "Order complete blood count: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "Order bone scan &mdash; ",
+   "with": "Order bone scan: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "Recommend knee braces during activity &mdash; ",
+   "with": "Recommend knee braces during activity: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puncture-osteomyelitis",
+   "find": "Staphylococcus aureus &mdash; ",
+   "with": "Staphylococcus aureus: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puncture-osteomyelitis",
+   "find": "Aeromonas hydrophila &mdash; ",
+   "with": "Aeromonas hydrophila: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puncture-osteomyelitis",
+   "find": "Group A streptococcus &mdash; ",
+   "with": "Group A streptococcus: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puncture-osteomyelitis",
+   "find": "Klebsiella pneumoniae &mdash; ",
+   "with": "Klebsiella pneumoniae: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "Normal in all three domains &mdash; ",
+   "with": "Normal in all three domains: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "Gross motor marked normal &mdash; ",
+   "with": "Gross motor marked normal: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "Fine motor marked normal &mdash; ",
+   "with": "Fine motor marked normal: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "Language marked normal &mdash; ",
+   "with": "Language marked normal: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "Hypoxic-ischemic renal injury &mdash; ",
+   "with": "Hypoxic-ischemic renal injury: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "Dehydration &mdash; ",
+   "with": "Dehydration: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "Breastfeeding jaundice &mdash; ",
+   "with": "Breastfeeding jaundice: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "Bilateral renal agenesis &mdash; ",
+   "with": "Bilateral renal agenesis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "Candidal vaginitis &mdash; ",
+   "with": "Candidal vaginitis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "<i>Chlamydia trachomatis</i> &mdash; ",
+   "with": "<i>Chlamydia trachomatis</i>: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "Vaginal foreign body &mdash; ",
+   "with": "Vaginal foreign body: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-hormone",
+   "find": "Group A streptococcal vaginitis &mdash; ",
+   "with": "Group A streptococcal vaginitis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cyanotic-chd",
+   "find": "Ventricular septal defect &mdash; ",
+   "with": "Ventricular septal defect: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cyanotic-chd",
+   "find": "Pulmonary stenosis &mdash; ",
+   "with": "Pulmonary stenosis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cyanotic-chd",
+   "find": "Atrial septal defect &mdash; ",
+   "with": "Atrial septal defect: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cyanotic-chd",
+   "find": "Coarctation of the aorta &mdash; ",
+   "with": "Coarctation of the aorta: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "d-Transposition of the great arteries &mdash; ",
+   "with": "d-Transposition of the great arteries: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "Persistent pulmonary hypertension &mdash; ",
+   "with": "Persistent pulmonary hypertension: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "Transient tachypnea of the newborn &mdash; ",
+   "with": "Transient tachypnea of the newborn: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "Coarctation of the aorta &mdash; ",
+   "with": "Coarctation of the aorta: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "Tetralogy of Fallot &mdash; ",
+   "with": "Tetralogy of Fallot: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "Tracheoesophageal fistula with esophageal atresia &mdash; ",
+   "with": "Tracheoesophageal fistula with esophageal atresia: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "Laryngomalacia &mdash; ",
+   "with": "Laryngomalacia: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "Pericardial effusion &mdash; ",
+   "with": "Pericardial effusion: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "Mitral valve obstruction &mdash; ",
+   "with": "Mitral valve obstruction: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "Chronic inflammatory interstitial lung disease &mdash; ",
+   "with": "Chronic inflammatory interstitial lung disease: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "Thickened internal layer of pulmonary arterioles &mdash; ",
+   "with": "Thickened internal layer of pulmonary arterioles: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "myocarditis",
+   "find": "Acute rheumatic fever &mdash; ",
+   "with": "Acute rheumatic fever: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "myocarditis",
+   "find": "Kawasaki disease &mdash; ",
+   "with": "Kawasaki disease: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "myocarditis",
+   "find": "Glomerulonephritis &mdash; ",
+   "with": "Glomerulonephritis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "myocarditis",
+   "find": "Bronchiolitis &mdash; ",
+   "with": "Bronchiolitis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "del22q11",
+   "find": "Horseshoe kidney &mdash; ",
+   "with": "Horseshoe kidney: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "del22q11",
+   "find": "Duodenal atresia &mdash; ",
+   "with": "Duodenal atresia: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "del22q11",
+   "find": "Neutropenia &mdash; ",
+   "with": "Neutropenia: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "del22q11",
+   "find": "Hypoglycemia &mdash; ",
+   "with": "Hypoglycemia: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "X-linked agammaglobulinemia &mdash; ",
+   "with": "X-linked agammaglobulinemia: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "Cystic fibrosis &mdash; ",
+   "with": "Cystic fibrosis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "Common variable immunodeficiency &mdash; ",
+   "with": "Common variable immunodeficiency: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "Foreign body &mdash; ",
+   "with": "Foreign body: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "Normal childhood infections &mdash; ",
+   "with": "Normal childhood infections: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "Underdeveloped medullary respiratory center &mdash; ",
+   "with": "Underdeveloped medullary respiratory center: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "Obstructed pulmonary arterial blood flow &mdash; ",
+   "with": "Obstructed pulmonary arterial blood flow: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "Greater red blood cell oxygen affinity &mdash; ",
+   "with": "Greater red blood cell oxygen affinity: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "Increased intracardiac left-to-right shunting &mdash; ",
+   "with": "Increased intracardiac left-to-right shunting: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "Hypersensitivity pneumonitis &mdash; ",
+   "with": "Hypersensitivity pneumonitis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "Strongyloidiasis &mdash; ",
+   "with": "Strongyloidiasis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "Granulomatosis with polyangiitis &mdash; ",
+   "with": "Granulomatosis with polyangiitis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "Tuberculosis &mdash; ",
+   "with": "Tuberculosis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "CT pulmonary angiogram &mdash; ",
+   "with": "CT pulmonary angiogram: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "CT scan of the chest &mdash; ",
+   "with": "CT scan of the chest: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "Echocardiogram &mdash; ",
+   "with": "Echocardiogram: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "Serum ACE activity &mdash; ",
+   "with": "Serum ACE activity: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "D-dimer &mdash; ",
+   "with": "D-dimer: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "Bronchoscopy with transbronchial biopsy &mdash; ",
+   "with": "Bronchoscopy with transbronchial biopsy: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "airway",
+   "find": "Throat exam or lateral neck film in a toxic, drooling child &mdash; ",
+   "with": "Throat exam or lateral neck film in a toxic, drooling child: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "airway",
+   "find": "Expiratory stridor &mdash; ",
+   "with": "Expiratory stridor: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "airway",
+   "find": "Biphasic stridor &mdash; ",
+   "with": "Biphasic stridor: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "uri",
+   "find": "Acute bacterial sinusitis &mdash; ",
+   "with": "Acute bacterial sinusitis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "uri",
+   "find": "Allergic rhinitis &mdash; ",
+   "with": "Allergic rhinitis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "uri",
+   "find": "Mucormycosis &mdash; ",
+   "with": "Mucormycosis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "Physiologic jaundice &mdash; a tot",
+   "with": "Physiologic jaundice: a tot",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "Dehydration &mdash; ",
+   "with": "Dehydration: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "Sepsis &mdash; ",
+   "with": "Sepsis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "Milk protein allergy &mdash; ",
+   "with": "Milk protein allergy: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "Cryoprecipitate &mdash; ",
+   "with": "Cryoprecipitate: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "Factor VIII concentrate &mdash; ",
+   "with": "Factor VIII concentrate: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "Platelets &mdash; ",
+   "with": "Platelets: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "Lactated Ringer solution &mdash; ",
+   "with": "Lactated Ringer solution: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "hematuria",
+   "find": "A negative nitrite &mdash; ",
+   "with": "A negative nitrite: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "hematuria",
+   "find": "Cystoscopy &mdash; ",
+   "with": "Cystoscopy: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "hematuria",
+   "find": "Noncontrast CT of the abdomen &mdash; ",
+   "with": "Noncontrast CT of the abdomen: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "hematuria",
+   "find": "24-hour urine protein or kidney biopsy &mdash; ",
+   "with": "24-hour urine protein or kidney biopsy: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "Inflammation of the renal glomerulus &mdash; ",
+   "with": "Inflammation of the renal glomerulus: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "Development of renal cysts &mdash; ",
+   "with": "Development of renal cysts: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "Obstruction from uric acid stones &mdash; ",
+   "with": "Obstruction from uric acid stones: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "No long-term complications &mdash; ",
+   "with": "No long-term complications: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "Vesicoureteral reflux &mdash; ",
+   "with": "Vesicoureteral reflux: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "Sexual abuse &mdash; ",
+   "with": "Sexual abuse: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "Inadequate treatment of prior infection &mdash; ",
+   "with": "Inadequate treatment of prior infection: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "Primary immunodeficiency &mdash; ",
+   "with": "Primary immunodeficiency: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "No additional management after a second febrile UTI with a normal ultrasound &mdash; ",
+   "with": "No additional management after a second febrile UTI with a normal ultrasound: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "Daily antibiotic prophylaxis &mdash; ",
+   "with": "Daily antibiotic prophylaxis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "No additional workup &mdash; ",
+   "with": "No additional workup: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "Antistreptolysin O &mdash; ",
+   "with": "Antistreptolysin O: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "Audiology evaluation &mdash; ",
+   "with": "Audiology evaluation: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "Echocardiography &mdash; ",
+   "with": "Echocardiography: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "Wilms tumor (nephroblastoma) &mdash; ",
+   "with": "Wilms tumor (nephroblastoma): ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "Neuroblastoma &mdash; ",
+   "with": "Neuroblastoma: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "Germ cell tumor &mdash; ",
+   "with": "Germ cell tumor: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "Spina bifida occulta &mdash; ",
+   "with": "Spina bifida occulta: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "Defective thyroid peroxidase activity &mdash; ",
+   "with": "Defective thyroid peroxidase activity: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "Transplacental TSH receptor–stimulating antibody &mdash; ",
+   "with": "Transplacental TSH receptor–stimulating antibody: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "Iodine deficiency, endemic goiter &mdash; ",
+   "with": "Iodine deficiency, endemic goiter: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "Panhypopituitarism &mdash; ",
+   "with": "Panhypopituitarism: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Neurofibromatosis type 1 &mdash; ",
+   "with": "Neurofibromatosis type 1: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Sturge-Weber syndrome &mdash; ",
+   "with": "Sturge-Weber syndrome: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Li-Fraumeni syndrome &mdash; ",
+   "with": "Li-Fraumeni syndrome: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Multiple endocrine neoplasia type 2B &mdash; ",
+   "with": "Multiple endocrine neoplasia type 2B: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Neurofibromatosis type 1, for the teenager with the toenail fibroma &mdash; ",
+   "with": "Neurofibromatosis type 1, for the teenager with the toenail fibroma: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Ataxia-telangiectasia &mdash; ",
+   "with": "Ataxia-telangiectasia: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Bacterial endocarditis &mdash; ",
+   "with": "Bacterial endocarditis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Medulloblastoma, for the teenager with 10 café-au-lait macules &mdash; ",
+   "with": "Medulloblastoma, for the teenager with 10 café-au-lait macules: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Craniopharyngioma &mdash; ",
+   "with": "Craniopharyngioma: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Arteriovenous malformation &mdash; ",
+   "with": "Arteriovenous malformation: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Cerebral aneurysm &mdash; ",
+   "with": "Cerebral aneurysm: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "precocious-puberty",
+   "find": "Adrenal tumour &mdash; ",
+   "with": "Adrenal tumour: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "precocious-puberty",
+   "find": "Neurofibromatosis type 1 &mdash; ",
+   "with": "Neurofibromatosis type 1: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "precocious-puberty",
+   "find": "Tuberous sclerosis &mdash; ",
+   "with": "Tuberous sclerosis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "precocious-puberty",
+   "find": "Sturge-Weber syndrome &mdash; ",
+   "with": "Sturge-Weber syndrome: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "precocious-puberty",
+   "find": "Peutz-Jeghers syndrome &mdash; ",
+   "with": "Peutz-Jeghers syndrome: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "Increased serum haptoglobin &mdash; ",
+   "with": "Increased serum haptoglobin: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "Positive direct Coombs test &mdash; ",
+   "with": "Positive direct Coombs test: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "Decreased ferritin level &mdash; ",
+   "with": "Decreased ferritin level: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "Increased PT &mdash; ",
+   "with": "Increased PT: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "Decreased reticulocyte count &mdash; ",
+   "with": "Decreased reticulocyte count: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "drug-hemolysis",
+   "find": "Glucose-6-phosphate dehydrogenase level &mdash; ",
+   "with": "Glucose-6-phosphate dehydrogenase level: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "drug-hemolysis",
+   "find": "CT scan of the abdomen &mdash; ",
+   "with": "CT scan of the abdomen: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "drug-hemolysis",
+   "find": "Liver ultrasonography &mdash; ",
+   "with": "Liver ultrasonography: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "drug-hemolysis",
+   "find": "Serum fibrinogen level &mdash; ",
+   "with": "Serum fibrinogen level: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "Direct Coombs test &mdash; ",
+   "with": "Direct Coombs test: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "PT and PTT &mdash; ",
+   "with": "PT and PTT: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "Peripheral smear &mdash; ",
+   "with": "Peripheral smear: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "Culture of the product &mdash; ",
+   "with": "Culture of the product: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "Heterophile antibody test &mdash; ",
+   "with": "Heterophile antibody test: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "CT scan of the neck &mdash; ",
+   "with": "CT scan of the neck: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "Throat culture for diphtheria &mdash; ",
+   "with": "Throat culture for diphtheria: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "HIV antigen/antibody test &mdash; ",
+   "with": "HIV antigen/antibody test: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "Pap smear &mdash; ",
+   "with": "Pap smear: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "Mammography &mdash; ",
+   "with": "Mammography: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "Fasting serum glucose &mdash; ",
+   "with": "Fasting serum glucose: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "Hemoglobin concentration &mdash; ",
+   "with": "Hemoglobin concentration: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "Bruton agammaglobulinemia &mdash; ",
+   "with": "Bruton agammaglobulinemia: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "Common variable immunodeficiency &mdash; CVID ",
+   "with": "Common variable immunodeficiency: CVID ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "HIV infection &mdash; ",
+   "with": "HIV infection: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "IgA deficiency &mdash; ",
+   "with": "IgA deficiency: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "Wiskott-Aldrich syndrome &mdash; The s",
+   "with": "Wiskott-Aldrich syndrome: The s",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "Severe combined immunodeficiency &mdash; ",
+   "with": "Severe combined immunodeficiency: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "Wiskott-Aldrich syndrome &mdash; Plate",
+   "with": "Wiskott-Aldrich syndrome: Plate",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "Common variable immunodeficiency &mdash; It lo",
+   "with": "Common variable immunodeficiency: It lo",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "Chronic granulomatous disease &mdash; ",
+   "with": "Chronic granulomatous disease: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "Ch&eacute;diak-Higashi syndrome &mdash; ",
+   "with": "Ch&eacute;diak-Higashi syndrome: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "Terminal complement deficiency &mdash; ",
+   "with": "Terminal complement deficiency: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "Cystic fibrosis &mdash; ",
+   "with": "Cystic fibrosis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "Stool for ova and parasites &mdash; ",
+   "with": "Stool for ova and parasites: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "Prednisone &mdash; ",
+   "with": "Prednisone: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "Amoxicillin &mdash; ",
+   "with": "Amoxicillin: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "Serum ceruloplasmin &mdash; ",
+   "with": "Serum ceruloplasmin: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "Laparoscopy &mdash; ",
+   "with": "Laparoscopy: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "Dengue fever &mdash; ",
+   "with": "Dengue fever: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "Kawasaki disease &mdash; ",
+   "with": "Kawasaki disease: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "Measles &mdash; ",
+   "with": "Measles: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "lymphadenitis",
+   "find": "Supportive care only &mdash; ",
+   "with": "Supportive care only: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "lymphadenitis",
+   "find": "Azithromycin &mdash; ",
+   "with": "Azithromycin: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "lymphadenitis",
+   "find": "Cefdinir &mdash; ",
+   "with": "Cefdinir: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "lymphadenitis",
+   "find": "Itraconazole &mdash; ",
+   "with": "Itraconazole: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "lymphadenitis",
+   "find": "Oseltamivir &mdash; ",
+   "with": "Oseltamivir: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "Herpes simplex virus &mdash; ",
+   "with": "Herpes simplex virus: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "Adenovirus &mdash; ",
+   "with": "Adenovirus: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "Streptococcus pyogenes &mdash; ",
+   "with": "Streptococcus pyogenes: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "Epstein-Barr virus &mdash; ",
+   "with": "Epstein-Barr virus: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "Impaired clearing of airway secretions &mdash; ",
+   "with": "Impaired clearing of airway secretions: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "Defective opsonization &mdash; ",
+   "with": "Defective opsonization: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "Impaired neutrophil chemotaxis &mdash; ",
+   "with": "Impaired neutrophil chemotaxis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "Decreased immunoglobulin production &mdash; ",
+   "with": "Decreased immunoglobulin production: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "Severe congenital neutropenia &mdash; ",
+   "with": "Severe congenital neutropenia: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "Viral illness &mdash; ",
+   "with": "Viral illness: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "Fanconi syndrome &mdash; ",
+   "with": "Fanconi syndrome: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "Group B streptococcus &mdash; ",
+   "with": "Group B streptococcus: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<i>Escherichia coli</i> &mdash; ",
+   "with": "<i>Escherichia coli</i>: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "Cytomegalovirus &mdash; ",
+   "with": "Cytomegalovirus: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<i>Toxoplasma gondii</i> &mdash; ",
+   "with": "<i>Toxoplasma gondii</i>: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "Subependymal nodules in the lateral ventricles &mdash; ",
+   "with": "Subependymal nodules in the lateral ventricles: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "Tumor in the cerebellar vermis &mdash; ",
+   "with": "Tumor in the cerebellar vermis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "Parietal lesion with air-fluid levels and a hyperdense rim &mdash; ",
+   "with": "Parietal lesion with air-fluid levels and a hyperdense rim: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "Enhancing lesion in the internal auditory canal &mdash; ",
+   "with": "Enhancing lesion in the internal auditory canal: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "CT scan of the head &mdash; ",
+   "with": "CT scan of the head: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "Urine toxicology screen &mdash; ",
+   "with": "Urine toxicology screen: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "Serum electrolyte measurement &mdash; ",
+   "with": "Serum electrolyte measurement: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "Lumbar puncture &mdash; ",
+   "with": "Lumbar puncture: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "Cluster headache, for the adolescent on isotretinoin &mdash; ",
+   "with": "Cluster headache, for the adolescent on isotretinoin: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "Optic chiasm glioma &mdash; ",
+   "with": "Optic chiasm glioma: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "Optic neuritis &mdash; ",
+   "with": "Optic neuritis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "Viral encephalitis &mdash; ",
+   "with": "Viral encephalitis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cholesteatoma",
+   "find": "Acute middle ear effusion with tympanic membrane inflammation &mdash; ",
+   "with": "Acute middle ear effusion with tympanic membrane inflammation: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cholesteatoma",
+   "find": "Chronic foreign body impaction with canal abrasion &mdash; ",
+   "with": "Chronic foreign body impaction with canal abrasion: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cholesteatoma",
+   "find": "External ear canal epithelial maceration and inflammation &mdash; ",
+   "with": "External ear canal epithelial maceration and inflammation: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cholesteatoma",
+   "find": "Schwannoma formation with cochlear nerve injury &mdash; ",
+   "with": "Schwannoma formation with cochlear nerve injury: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "Neuroimaging &mdash; ",
+   "with": "Neuroimaging: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "Reassurance and discharge &mdash; ",
+   "with": "Reassurance and discharge: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "Electroencephalography &mdash; ",
+   "with": "Electroencephalography: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "Intravenous lorazepam &mdash; ",
+   "with": "Intravenous lorazepam: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "Transplacental <i>Toxoplasma gondii</i> &mdash; ",
+   "with": "Transplacental <i>Toxoplasma gondii</i>: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "Lack of maternal folic acid &mdash; ",
+   "with": "Lack of maternal folic acid: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "Maternal magnesium sulfate &mdash; ",
+   "with": "Maternal magnesium sulfate: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "Inherited thrombophilia &mdash; ",
+   "with": "Inherited thrombophilia: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "retinitis-pigmentosa",
+   "find": "Vitamin A deficiency &mdash; ",
+   "with": "Vitamin A deficiency: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "retinitis-pigmentosa",
+   "find": "Open-angle glaucoma &mdash; ",
+   "with": "Open-angle glaucoma: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "retinitis-pigmentosa",
+   "find": "Retinal detachment &mdash; ",
+   "with": "Retinal detachment: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "retinitis-pigmentosa",
+   "find": "Cataract &mdash; ",
+   "with": "Cataract: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "Exposure and response prevention &mdash; ",
+   "with": "Exposure and response prevention: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "Fluoxetine &mdash; ",
+   "with": "Fluoxetine: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "Parent management training &mdash; ",
+   "with": "Parent management training: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "Methylphenidate and atomoxetine &mdash; ",
+   "with": "Methylphenidate and atomoxetine: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "Chromosome 15 deletion, paternally inherited &mdash; ",
+   "with": "Chromosome 15 deletion, paternally inherited: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "Mutation of MECP2 &mdash; ",
+   "with": "Mutation of MECP2: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "Chromosome 7 deletion &mdash; ",
+   "with": "Chromosome 7 deletion: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "Trisomy 15 &mdash; ",
+   "with": "Trisomy 15: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "Trisomy 21 &mdash; ",
+   "with": "Trisomy 21: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "Traction alopecia &mdash; ",
+   "with": "Traction alopecia: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "Trichotillomania &mdash; ",
+   "with": "Trichotillomania: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "Cutaneous candidiasis &mdash; ",
+   "with": "Cutaneous candidiasis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "Seborrheic dermatitis &mdash; ",
+   "with": "Seborrheic dermatitis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "Discoid lupus erythematosus &mdash; ",
+   "with": "Discoid lupus erythematosus: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "Oral amoxicillin &mdash; bacte",
+   "with": "Oral amoxicillin: bacte",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "Topical permethrin &mdash; ",
+   "with": "Topical permethrin: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "Oral zinc &mdash; ",
+   "with": "Oral zinc: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "Screening for sexual abuse &mdash; ",
+   "with": "Screening for sexual abuse: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "Intramuscular ceftriaxone and oral azithromycin &mdash; ",
+   "with": "Intramuscular ceftriaxone and oral azithromycin: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "Oral acyclovir &mdash; ",
+   "with": "Oral acyclovir: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "Oral amoxicillin &mdash; burni",
+   "with": "Oral amoxicillin: burni",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "diaper-dermatitis",
+   "find": "Oral metronidazole &mdash; ",
+   "with": "Oral metronidazole: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "Alcohol use &mdash; ",
+   "with": "Alcohol use: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "Cocaine use &mdash; ",
+   "with": "Cocaine use: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "Lisinopril &mdash; ",
+   "with": "Lisinopril: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "Untreated syphilis &mdash; ",
+   "with": "Untreated syphilis: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "17-hydroxyprogesterone &mdash; ",
+   "with": "17-hydroxyprogesterone: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "Reassurance and observation &mdash; ",
+   "with": "Reassurance and observation: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "Androgen insensitivity &mdash; ",
+   "with": "Androgen insensitivity: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "Developmental failure of the urogenital sinus &mdash; ",
+   "with": "Developmental failure of the urogenital sinus: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "Abnormal GnRH pulsatility &mdash; ",
+   "with": "Abnormal GnRH pulsatility: ",
+   "note": "s33 mechanical: trapline separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-septic-adult",
+   "find": "<b>Naproxen</b> — skipped ",
+   "with": "<b>Naproxen</b>: skipped ",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-septic-adult",
+   "find": "<b>Serum uric acid</b> — wrong pa",
+   "with": "<b>Serum uric acid</b>: wrong pa",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-septic-adult",
+   "find": "<b>Intra-articular corticosteroid</b> — <b>activ",
+   "with": "<b>Intra-articular corticosteroid</b>: <b>activ",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-septic-adult",
+   "find": "<b>MRI</b> — redundan",
+   "with": "<b>MRI</b>: redundan",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-lbp-acute",
+   "find": "<b>Bed rest</b> — <b>activ",
+   "with": "<b>Bed rest</b>: <b>activ",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-lbp-acute",
+   "find": "<b>CT lumbosacral spine</b> — wrong tw",
+   "with": "<b>CT lumbosacral spine</b>: wrong tw",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-lbp-acute",
+   "find": "<b>Epidural injection</b> — skipped ",
+   "with": "<b>Epidural injection</b>: skipped ",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-lbp-acute",
+   "find": "<b>Oral prednisone</b> — systemic",
+   "with": "<b>Oral prednisone</b>: systemic",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "<b>Desmopressin</b> — <b>skipp",
+   "with": "<b>Desmopressin</b>: <b>skipp",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "<b>Fluid restriction after 2 pm</b> — <b>wrong",
+   "with": "<b>Fluid restriction after 2 pm</b>: <b>wrong",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "<b>Renal US</b> — <b>phant",
+   "with": "<b>Renal US</b>: <b>phant",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "<b>Urine culture</b> — <b>redun",
+   "with": "<b>Urine culture</b>: <b>redun",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-reye",
+   "find": "<b>Hypoglycemia</b> — the shar",
+   "with": "<b>Hypoglycemia</b>: the shar",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-reye",
+   "find": "<b>Uremia</b> — correctl",
+   "with": "<b>Uremia</b>: correctl",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-reye",
+   "find": "<b>Adrenal insufficiency</b> — plausibl",
+   "with": "<b>Adrenal insufficiency</b>: plausibl",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-reye",
+   "find": "<b>Hypothyroidism</b> — nobody f",
+   "with": "<b>Hypothyroidism</b>: nobody f",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-scabies",
+   "find": "<b>Oral acyclovir</b> — zoster i",
+   "with": "<b>Oral acyclovir</b>: zoster i",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-scabies",
+   "find": "<b>Oral cephalexin</b> — \"<b>no c",
+   "with": "<b>Oral cephalexin</b>: \"<b>no c",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-scabies",
+   "find": "<b>Oral prednisone / topical triamcinolone</b> — both tre",
+   "with": "<b>Oral prednisone / topical triamcinolone</b>: both tre",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "<b>\"Inform his parents\"</b> — the <b>t",
+   "with": "<b>\"Inform his parents\"</b>: the <b>t",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "<b>\"Tell him you can't promise confidentiality\"</b> — true-sou",
+   "with": "<b>\"Tell him you can't promise confidentiality\"</b>: true-sou",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "<b>\"Refer to a substance-use program\"</b> — a <b>seq",
+   "with": "<b>\"Refer to a substance-use program\"</b>: a <b>seq",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "<b>\"Order a urine drug screen\"</b> — he alrea",
+   "with": "<b>\"Order a urine drug screen\"</b>: he alrea",
+   "note": "s33 mechanical: distractor line separator em dash to colon"
+  }
+ ]
+}

@@ -1,0 +1,1331 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "pyelo",
+   "find": "The diagnosis is given; the question is where and how",
+   "with": "Diagnosed pyelonephritis: choosing the treatment route and setting",
+   "note": "sub: remove framing about the question",
+   "claims": [
+    {
+     "claim": "The diagnosis of pyelonephritis is already made.",
+     "to": "Diagnosed pyelonephritis: choosing the treatment route and setting"
+    },
+    {
+     "claim": "What remains is where and how to treat.",
+     "to": "Diagnosed pyelonephritis: choosing the treatment route and setting"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Pyelonephritis is diagnosed; choose the treatment route and setting.",
+     "from": "The diagnosis of pyelonephritis is already made."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "pyelo",
+   "find": "<p>Fever + chills + dysuria + <b>CVA tenderness</b> hands you pyelonephritis. The real question is <b>route and setting</b>, and one line usually decides it: <b>\"only clear fluids for 2 days\"</b> means the patient cannot tolerate oral therapy.</p>",
+   "with": "<p>Fever, chills, dysuria and <b>CVA tenderness</b> (costovertebral angle tenderness) indicate pyelonephritis. Then choose the <b>route and setting</b> of treatment. One detail usually decides it: <b>\"only clear fluids for 2 days\"</b> means the patient cannot tolerate oral therapy.</p>",
+   "note": "dp: remove personification and framing; expand CVA",
+   "claims": [
+    {
+     "claim": "Fever, chills, dysuria and CVA tenderness indicate pyelonephritis.",
+     "to": "Fever, chills, dysuria and CVA tenderness (costovertebral angle tenderness) indicate pyelonephritis."
+    },
+    {
+     "claim": "The decision is the route and setting of treatment.",
+     "to": "Then choose the route and setting of treatment."
+    },
+    {
+     "claim": "One line usually decides the route and setting.",
+     "to": "One detail usually decides it: \"only clear fluids for 2 days\" means the patient cannot tolerate oral therapy."
+    },
+    {
+     "claim": "\"Only clear fluids for 2 days\" means the patient cannot tolerate oral therapy.",
+     "to": "One detail usually decides it: \"only clear fluids for 2 days\" means the patient cannot tolerate oral therapy."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Fever, chills, dysuria and CVA tenderness indicate pyelonephritis.",
+     "from": "Fever, chills, dysuria and CVA tenderness indicate pyelonephritis."
+    },
+    {
+     "claim": "CVA stands for costovertebral angle.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Choose the route and setting of treatment.",
+     "from": "The decision is the route and setting of treatment."
+    },
+    {
+     "claim": "One detail usually decides the route and setting.",
+     "from": "One line usually decides the route and setting."
+    },
+    {
+     "claim": "\"Only clear fluids for 2 days\" means the patient cannot tolerate oral therapy.",
+     "from": "\"Only clear fluids for 2 days\" means the patient cannot tolerate oral therapy."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "pyelo",
+   "find": "<span class=\"lbl\">Two reading skills this stem teaches</span> \"Long-standing hypertension + BP 104/68\" is NBME writing <b>hypotensive</b> without saying it — vitals must be read against the patient's baseline · a <b>benign abdominal exam</b> means no CT: imaging in pyelonephritis is reserved for failure to improve at 48–72 hours, suspected obstruction or stone, recurrence, or concern for emphysematous pyelonephritis in a diabetic.",
+   "with": "<span class=\"lbl\">Reading vitals and the exam</span> With long-standing hypertension, a blood pressure of 104/68 means the patient is <b>hypotensive</b>; read vitals against the patient's baseline · a <b>benign abdominal exam</b> means no <b>CT</b> (computed tomography) · imaging in pyelonephritis is reserved for failure to improve at 48–72 hours, suspected obstruction or stone, recurrence, or concern for emphysematous pyelonephritis in a diabetic.",
+   "note": "pearls: reword rhetorical label, remove em dash and NBME framing, expand CT",
+   "reworded_label": [
+    "Two reading skills this stem teaches"
+   ],
+   "claims": [
+    {
+     "claim": "Long-standing hypertension with BP 104/68 means the patient is hypotensive.",
+     "to": "With long-standing hypertension, a blood pressure of 104/68 means the patient is hypotensive; read vitals against the patient's baseline"
+    },
+    {
+     "claim": "The stem implies this without stating it.",
+     "dropped": "framing about how the exam words the stem; the clinical meaning is kept"
+    },
+    {
+     "claim": "Vitals must be read against the patient's baseline.",
+     "to": "With long-standing hypertension, a blood pressure of 104/68 means the patient is hypotensive; read vitals against the patient's baseline"
+    },
+    {
+     "claim": "A benign abdominal exam means no CT.",
+     "to": "a benign abdominal exam means no CT (computed tomography)"
+    },
+    {
+     "claim": "Imaging in pyelonephritis is reserved for failure to improve at 48–72 hours, suspected obstruction or stone, recurrence, or concern for emphysematous pyelonephritis in a diabetic.",
+     "to": "imaging in pyelonephritis is reserved for failure to improve at 48–72 hours, suspected obstruction or stone, recurrence, or concern for emphysematous pyelonephritis in a diabetic."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "With long-standing hypertension, a blood pressure of 104/68 means the patient is hypotensive.",
+     "from": "Long-standing hypertension with BP 104/68 means the patient is hypotensive."
+    },
+    {
+     "claim": "Read vitals against the patient's baseline.",
+     "from": "Vitals must be read against the patient's baseline."
+    },
+    {
+     "claim": "A benign abdominal exam means no CT.",
+     "from": "A benign abdominal exam means no CT."
+    },
+    {
+     "claim": "CT stands for computed tomography.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Imaging in pyelonephritis is reserved for failure to improve at 48–72 hours, suspected obstruction or stone, recurrence, or concern for emphysematous pyelonephritis in a diabetic.",
+     "from": "Imaging in pyelonephritis is reserved for failure to improve at 48–72 hours, suspected obstruction or stone, recurrence, or concern for emphysematous pyelonephritis in a diabetic."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "pyelo",
+   "find": "Part I <b>Vesicoureteral Reflux</b> owns what happens after the febrile UTI is treated and the imaging comes back. Part I <b>Recurrent Urinary Infection in a Child</b> owns the afebrile recurrences that never reach the kidney.",
+   "with": "Part I <b>Vesicoureteral Reflux</b> covers what happens after the febrile UTI (urinary tract infection) is treated and the imaging comes back. Part I <b>Recurrent Urinary Infection in a Child</b> covers the afebrile recurrences that never reach the kidney.",
+   "note": "pairs with: owns -> covers; expand UTI",
+   "claims": [
+    {
+     "claim": "Vesicoureteral Reflux covers what happens after the febrile UTI is treated and the imaging comes back.",
+     "to": "Part I Vesicoureteral Reflux covers what happens after the febrile UTI (urinary tract infection) is treated and the imaging comes back."
+    },
+    {
+     "claim": "Recurrent Urinary Infection in a Child covers the afebrile recurrences that never reach the kidney.",
+     "to": "Part I Recurrent Urinary Infection in a Child covers the afebrile recurrences that never reach the kidney."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Vesicoureteral Reflux covers what happens after the febrile UTI is treated and the imaging comes back.",
+     "from": "Vesicoureteral Reflux covers what happens after the febrile UTI is treated and the imaging comes back."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Recurrent Urinary Infection in a Child covers the afebrile recurrences that never reach the kidney.",
+     "from": "Recurrent Urinary Infection in a Child covers the afebrile recurrences that never reach the kidney."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "pyelo",
+   "find": "When the clinical diagnosis is sufficient and the patient is infected, <b>treat — don't image</b>. Uncomplicated version (healthy young woman tolerating PO, stable) → outpatient oral therapy.",
+   "with": "When the clinical diagnosis is sufficient and the patient is infected, <b>treat without imaging</b>. In the uncomplicated case (a healthy, stable young woman tolerating oral intake), give outpatient oral therapy.",
+   "note": "rule: remove em dash slogan bold; write out PO",
+   "reworded_bold": [
+    "treat — don't image"
+   ],
+   "claims": [
+    {
+     "claim": "When the clinical diagnosis is sufficient and the patient is infected, treat and do not image.",
+     "to": "When the clinical diagnosis is sufficient and the patient is infected, treat without imaging."
+    },
+    {
+     "claim": "The uncomplicated case is a healthy, stable young woman tolerating oral intake.",
+     "to": "In the uncomplicated case (a healthy, stable young woman tolerating oral intake), give outpatient oral therapy."
+    },
+    {
+     "claim": "The uncomplicated case gets outpatient oral therapy.",
+     "to": "In the uncomplicated case (a healthy, stable young woman tolerating oral intake), give outpatient oral therapy."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When the clinical diagnosis is sufficient and the patient is infected, treat without imaging.",
+     "from": "When the clinical diagnosis is sufficient and the patient is infected, treat and do not image."
+    },
+    {
+     "claim": "PO stands for by mouth (oral intake).",
+     "from": "expansion"
+    },
+    {
+     "claim": "In the uncomplicated case (a healthy, stable young woman tolerating oral intake), give outpatient oral therapy.",
+     "from": "The uncomplicated case gets outpatient oral therapy."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bph",
+   "find": "Reading a three-act chronology",
+   "with": "Prostatic obstruction presenting as a three-stage history",
+   "note": "sub: remove rhetorical framing",
+   "claims": [
+    {
+     "claim": "The case is a three-stage chronology.",
+     "to": "Prostatic obstruction presenting as a three-stage history"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Prostatic obstruction presents as a three-stage history.",
+     "from": "The case is a three-stage chronology."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bph",
+   "find": "<p>\"Underlying cause\" questions want the <b>trunk of the causal tree</b>, not a branch. Six months of hesitancy and dribbling → five days of frequency and incomplete emptying → one day of anuria with suprapubic pain. The retention, the UTI, and the creatinine of 3.4 all flow from <b>prostatic obstruction</b>.</p>",
+   "with": "<p>The underlying cause is the <b>primary process</b> that produces the other findings, not one of its complications. Six months of hesitancy and dribbling came first. Five days of frequency and incomplete emptying followed, then one day of anuria with suprapubic pain. The retention, the <b>UTI</b> (urinary tract infection) and the creatinine of 3.4 all result from <b>prostatic obstruction</b>.</p>",
+   "note": "dp: remove tree metaphor, split arrow chain, expand UTI",
+   "reworded_bold": [
+    "trunk of the causal tree"
+   ],
+   "claims": [
+    {
+     "claim": "The underlying cause is the root process, not a downstream branch.",
+     "to": "The underlying cause is the primary process that produces the other findings, not one of its complications."
+    },
+    {
+     "claim": "Six months of hesitancy and dribbling came first.",
+     "to": "Six months of hesitancy and dribbling came first."
+    },
+    {
+     "claim": "Five days of frequency and incomplete emptying followed.",
+     "to": "Five days of frequency and incomplete emptying followed, then one day of anuria with suprapubic pain."
+    },
+    {
+     "claim": "Then one day of anuria with suprapubic pain.",
+     "to": "Five days of frequency and incomplete emptying followed, then one day of anuria with suprapubic pain."
+    },
+    {
+     "claim": "The retention, the UTI and the creatinine of 3.4 all flow from prostatic obstruction.",
+     "to": "The retention, the UTI (urinary tract infection) and the creatinine of 3.4 all result from prostatic obstruction."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The underlying cause is the primary process that produces the other findings, not one of its complications.",
+     "from": "The underlying cause is the root process, not a downstream branch."
+    },
+    {
+     "claim": "Six months of hesitancy and dribbling came first.",
+     "from": "Six months of hesitancy and dribbling came first."
+    },
+    {
+     "claim": "Five days of frequency and incomplete emptying followed, then one day of anuria with suprapubic pain.",
+     "from": "Five days of frequency and incomplete emptying followed."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The retention, the UTI and the creatinine of 3.4 all result from prostatic obstruction.",
+     "from": "The retention, the UTI and the creatinine of 3.4 all flow from prostatic obstruction."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bph",
+   "find": "<span class=\"lbl\">Why 1+ blood means nothing</span> Trace-to-1+ hematuria is expected with UTI, with bladder distension, and with BPH itself. Nephrolithiasis needs the <b>pain syndrome</b> — colicky flank pain radiating to the groin — and doesn't explain six months of hesitancy. <b>A single nonspecific dipstick finding cannot outvote a six-month narrative.</b>",
+   "with": "<span class=\"lbl\">Why 1+ blood does not change the diagnosis</span> Trace-to-1+ hematuria is expected with <b>UTI</b> (urinary tract infection), bladder distension and <b>BPH</b> (benign prostatic hyperplasia) itself. Nephrolithiasis needs the <b>pain syndrome</b> of colicky flank pain radiating to the groin. It also does not explain six months of hesitancy. <b>A single nonspecific dipstick finding does not outweigh a six-month history.</b>",
+   "note": "pearls: reword rhetorical label and aphorism bold, remove em dashes, expand UTI and BPH",
+   "reworded_bold": [
+    "A single nonspecific dipstick finding cannot outvote a six-month narrative."
+   ],
+   "reworded_label": [
+    "Why 1+ blood means nothing"
+   ],
+   "claims": [
+    {
+     "claim": "Trace-to-1+ hematuria is expected with UTI, bladder distension and BPH itself.",
+     "to": "Trace-to-1+ hematuria is expected with UTI (urinary tract infection), bladder distension and BPH (benign prostatic hyperplasia) itself."
+    },
+    {
+     "claim": "Nephrolithiasis needs the pain syndrome of colicky flank pain radiating to the groin.",
+     "to": "Nephrolithiasis needs the pain syndrome of colicky flank pain radiating to the groin."
+    },
+    {
+     "claim": "Nephrolithiasis does not explain six months of hesitancy.",
+     "to": "It also does not explain six months of hesitancy."
+    },
+    {
+     "claim": "A single nonspecific dipstick finding cannot outweigh a six-month history.",
+     "to": "A single nonspecific dipstick finding does not outweigh a six-month history."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Trace-to-1+ hematuria is expected with UTI, bladder distension and BPH itself.",
+     "from": "Trace-to-1+ hematuria is expected with UTI, bladder distension and BPH itself."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "BPH stands for benign prostatic hyperplasia.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Nephrolithiasis needs the pain syndrome of colicky flank pain radiating to the groin.",
+     "from": "Nephrolithiasis needs the pain syndrome of colicky flank pain radiating to the groin."
+    },
+    {
+     "claim": "Nephrolithiasis does not explain six months of hesitancy.",
+     "from": "Nephrolithiasis does not explain six months of hesitancy."
+    },
+    {
+     "claim": "A single nonspecific dipstick finding does not outweigh a six-month history.",
+     "from": "A single nonspecific dipstick finding cannot outweigh a six-month history."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bph",
+   "find": "Acute retention → <b>bladder catheterization first</b> (suprapubic if the urethra is impassable) → treat the UTI → watch for <b>post-obstructive diuresis</b> → expect the creatinine to fall, proving the AKI was post-renal. Renal ultrasound shows hydronephrosis if confirmation is needed. Long-term: tamsulosin ± finasteride; TURP if refractory.",
+   "with": "Acute retention → <b>bladder catheterization first</b> (suprapubic if the urethra is impassable). Then treat the <b>UTI</b> (urinary tract infection) and watch for <b>post-obstructive diuresis</b>. Expect the creatinine to fall; the fall proves the <b>AKI</b> (acute kidney injury) was post-renal. Renal ultrasound shows hydronephrosis if confirmation is needed. Long-term, give tamsulosin ± finasteride, with <b>TURP</b> (transurethral resection of the prostate) if refractory.",
+   "note": "danger: split arrow chain; expand UTI, AKI, TURP",
+   "claims": [
+    {
+     "claim": "Acute retention is treated with bladder catheterization first.",
+     "to": "Acute retention → bladder catheterization first (suprapubic if the urethra is impassable)."
+    },
+    {
+     "claim": "Use suprapubic catheterization if the urethra is impassable.",
+     "to": "Acute retention → bladder catheterization first (suprapubic if the urethra is impassable)."
+    },
+    {
+     "claim": "Then treat the UTI.",
+     "to": "Then treat the UTI (urinary tract infection) and watch for post-obstructive diuresis."
+    },
+    {
+     "claim": "Watch for post-obstructive diuresis.",
+     "to": "Then treat the UTI (urinary tract infection) and watch for post-obstructive diuresis."
+    },
+    {
+     "claim": "Expect the creatinine to fall, proving the AKI was post-renal.",
+     "to": "Expect the creatinine to fall; the fall proves the AKI (acute kidney injury) was post-renal."
+    },
+    {
+     "claim": "Renal ultrasound shows hydronephrosis if confirmation is needed.",
+     "to": "Renal ultrasound shows hydronephrosis if confirmation is needed."
+    },
+    {
+     "claim": "Long-term treatment is tamsulosin ± finasteride.",
+     "to": "Long-term, give tamsulosin ± finasteride, with TURP (transurethral resection of the prostate) if refractory."
+    },
+    {
+     "claim": "TURP if refractory.",
+     "to": "Long-term, give tamsulosin ± finasteride, with TURP (transurethral resection of the prostate) if refractory."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Acute retention is treated with bladder catheterization first, suprapubic if the urethra is impassable.",
+     "from": "Acute retention is treated with bladder catheterization first."
+    },
+    {
+     "claim": "Then treat the UTI and watch for post-obstructive diuresis.",
+     "from": "Then treat the UTI."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Expect the creatinine to fall; the fall proves the AKI was post-renal.",
+     "from": "Expect the creatinine to fall, proving the AKI was post-renal."
+    },
+    {
+     "claim": "AKI stands for acute kidney injury.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Renal ultrasound shows hydronephrosis if confirmation is needed.",
+     "from": "Renal ultrasound shows hydronephrosis if confirmation is needed."
+    },
+    {
+     "claim": "Long-term, give tamsulosin ± finasteride, with TURP if refractory.",
+     "from": "Long-term treatment is tamsulosin ± finasteride."
+    },
+    {
+     "claim": "TURP stands for transurethral resection of the prostate.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bph",
+   "find": "A single lab value should flip your answer only if it is <b>incompatible</b> with your diagnosis — not merely <i>compatible</i> with another one.",
+   "with": "A single lab value should change the diagnosis only if it is <b>incompatible</b> with it, not merely <i>compatible</i> with another diagnosis.",
+   "note": "rule: remove em dash and answer framing",
+   "claims": [
+    {
+     "claim": "A single lab value should change the diagnosis only if it is incompatible with it, not merely compatible with another.",
+     "to": "A single lab value should change the diagnosis only if it is incompatible with it, not merely compatible with another diagnosis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A single lab value should change the diagnosis only if it is incompatible with it, not merely compatible with another diagnosis.",
+     "from": "A single lab value should change the diagnosis only if it is incompatible with it, not merely compatible with another."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "nephropathy",
+   "find": "Detection threshold, not accuracy",
+   "with": "Screening test chosen by detection threshold rather than accuracy",
+   "note": "sub: remove rhythmic contrast",
+   "claims": [
+    {
+     "claim": "The screening test is chosen by detection threshold, not accuracy.",
+     "to": "Screening test chosen by detection threshold rather than accuracy"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The screening test is chosen by detection threshold rather than accuracy.",
+     "from": "The screening test is chosen by detection threshold, not accuracy."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "nephropathy",
+   "find": "<p>\"Most sensitive\" asks for the <b>lowest detection threshold</b>. <b>UACR</b> detects 30–300 mg/g — the reversible window. Dipstick needs ~≥300 mg/day and is concentration-dependent. And early nephropathy causes <b>hyperfiltration</b>, so creatinine can be normal or low while glomeruli are being destroyed.</p>",
+   "with": "<p>The most sensitive test has the <b>lowest detection threshold</b>. <b>UACR</b> (urine albumin-to-creatinine ratio) detects 30–300 mg/g, the reversible window. Dipstick needs ~≥300 mg/day and is concentration-dependent. Early nephropathy causes <b>hyperfiltration</b>, so creatinine can be normal or low while glomeruli are being destroyed.</p>",
+   "note": "dp: remove em dash and filler; expand UACR",
+   "claims": [
+    {
+     "claim": "The most sensitive test is the one with the lowest detection threshold.",
+     "to": "The most sensitive test has the lowest detection threshold."
+    },
+    {
+     "claim": "UACR detects 30–300 mg/g, the reversible window.",
+     "to": "UACR (urine albumin-to-creatinine ratio) detects 30–300 mg/g, the reversible window."
+    },
+    {
+     "claim": "Dipstick needs ~≥300 mg/day and is concentration-dependent.",
+     "to": "Dipstick needs ~≥300 mg/day and is concentration-dependent."
+    },
+    {
+     "claim": "Early nephropathy causes hyperfiltration, so creatinine can be normal or low while glomeruli are being destroyed.",
+     "to": "Early nephropathy causes hyperfiltration, so creatinine can be normal or low while glomeruli are being destroyed."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The most sensitive test has the lowest detection threshold.",
+     "from": "The most sensitive test is the one with the lowest detection threshold."
+    },
+    {
+     "claim": "UACR stands for urine albumin-to-creatinine ratio.",
+     "from": "expansion"
+    },
+    {
+     "claim": "UACR detects 30–300 mg/g, the reversible window.",
+     "from": "UACR detects 30–300 mg/g, the reversible window."
+    },
+    {
+     "claim": "Dipstick needs ~≥300 mg/day and is concentration-dependent.",
+     "from": "Dipstick needs ~≥300 mg/day and is concentration-dependent."
+    },
+    {
+     "claim": "Early nephropathy causes hyperfiltration, so creatinine can be normal or low while glomeruli are being destroyed.",
+     "from": "Early nephropathy causes hyperfiltration, so creatinine can be normal or low while glomeruli are being destroyed."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "nephropathy",
+   "find": "<span class=\"lbl\">Biopsy triggers — \"this isn't ordinary diabetic nephropathy\"</span> <b>Absence of retinopathy</b> · active sediment (<b>dysmorphic RBCs, RBC casts</b>) · rapid GFR decline ·",
+   "with": "<span class=\"lbl\">Biopsy triggers: features atypical for diabetic nephropathy</span> <b>Absence of retinopathy</b> · active sediment (<b>dysmorphic RBCs, RBC casts</b>) · rapid <b>GFR</b> (glomerular filtration rate) decline ·",
+   "note": "danger: remove em dash from label; expand GFR",
+   "reworded_label": [
+    "Biopsy triggers — \"this isn't ordinary diabetic nephropathy\""
+   ],
+   "claims": [
+    {
+     "claim": "These findings trigger biopsy because they are not ordinary diabetic nephropathy.",
+     "to": "Biopsy triggers: features atypical for diabetic nephropathy"
+    },
+    {
+     "claim": "Absence of retinopathy is a biopsy trigger.",
+     "to": "Absence of retinopathy"
+    },
+    {
+     "claim": "Active sediment (dysmorphic RBCs, RBC casts) is a biopsy trigger.",
+     "to": "active sediment (dysmorphic RBCs, RBC casts)"
+    },
+    {
+     "claim": "Rapid GFR decline is a biopsy trigger.",
+     "to": "rapid GFR (glomerular filtration rate) decline"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Biopsy triggers are features atypical for diabetic nephropathy.",
+     "from": "These findings trigger biopsy because they are not ordinary diabetic nephropathy."
+    },
+    {
+     "claim": "Absence of retinopathy is a biopsy trigger.",
+     "from": "Absence of retinopathy is a biopsy trigger."
+    },
+    {
+     "claim": "Active sediment (dysmorphic RBCs, RBC casts) is a biopsy trigger.",
+     "from": "Active sediment (dysmorphic RBCs, RBC casts) is a biopsy trigger."
+    },
+    {
+     "claim": "Rapid GFR decline is a biopsy trigger.",
+     "from": "Rapid GFR decline is a biopsy trigger."
+    },
+    {
+     "claim": "GFR stands for glomerular filtration rate.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "nephropathy",
+   "find": "\"Microalbuminuria\" → <b>\"UACR 85 mg/g\"</b> ·",
+   "with": "\"Microalbuminuria\" → <b>\"UACR 85 mg/g\"</b> (urine albumin-to-creatinine ratio) ·",
+   "note": "pearls: expand UACR at first use",
+   "claims": [
+    {
+     "claim": "\"Microalbuminuria\" appears on Step 2 as \"UACR 85 mg/g\".",
+     "to": "\"Microalbuminuria\" → \"UACR 85 mg/g\" (urine albumin-to-creatinine ratio)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "\"Microalbuminuria\" appears on Step 2 as \"UACR 85 mg/g\".",
+     "from": "\"Microalbuminuria\" appears on Step 2 as \"UACR 85 mg/g\"."
+    },
+    {
+     "claim": "UACR stands for urine albumin-to-creatinine ratio.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "nephropathy",
+   "find": "\"Most sensitive\" = lowest detection threshold. \"Most specific / confirmatory\" = hardest to fool. Normal creatinine never excludes early diabetic kidney disease.",
+   "with": "The most sensitive test has the lowest detection threshold. The most specific or confirmatory test is the least likely to give a false positive. Normal creatinine never excludes early diabetic kidney disease.",
+   "note": "rule: remove personification (hardest to fool)",
+   "claims": [
+    {
+     "claim": "The most sensitive test has the lowest detection threshold.",
+     "to": "The most sensitive test has the lowest detection threshold."
+    },
+    {
+     "claim": "The most specific or confirmatory test is the hardest to fool.",
+     "to": "The most specific or confirmatory test is the least likely to give a false positive."
+    },
+    {
+     "claim": "Normal creatinine never excludes early diabetic kidney disease.",
+     "to": "Normal creatinine never excludes early diabetic kidney disease."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The most sensitive test has the lowest detection threshold.",
+     "from": "The most sensitive test has the lowest detection threshold."
+    },
+    {
+     "claim": "The most specific or confirmatory test is the least likely to give a false positive.",
+     "from": "The most specific or confirmatory test is the hardest to fool."
+    },
+    {
+     "claim": "Normal creatinine never excludes early diabetic kidney disease.",
+     "from": "Normal creatinine never excludes early diabetic kidney disease."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hematuria",
+   "find": "<p>When the urinalysis contains <b>dysuria + leukocyte esterase + pyuria</b>, hematuria is a <b>feature of cystitis</b>, not a separate finding requiring parallel workup. Treat the infection, then <b>repeat the UA after antibiotics</b>. If the blood doesn't clear, <i>that's</i> when imaging enters.</p>",
+   "with": "<p>When the urinalysis contains <b>dysuria + leukocyte esterase + pyuria</b>, hematuria is a <b>feature of cystitis</b>, not a separate finding requiring parallel workup. Treat the infection, then <b>repeat the UA after antibiotics</b>. If the blood does not clear, proceed to imaging.</p>",
+   "note": "dp p1: remove dramatic closer",
+   "claims": [
+    {
+     "claim": "With dysuria, leukocyte esterase and pyuria, hematuria is a feature of cystitis, not a separate finding requiring parallel workup.",
+     "to": "When the urinalysis contains dysuria + leukocyte esterase + pyuria, hematuria is a feature of cystitis, not a separate finding requiring parallel workup."
+    },
+    {
+     "claim": "Treat the infection, then repeat the UA after antibiotics.",
+     "to": "Treat the infection, then repeat the UA after antibiotics."
+    },
+    {
+     "claim": "Imaging comes only if the blood does not clear.",
+     "to": "If the blood does not clear, proceed to imaging."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "With dysuria, leukocyte esterase and pyuria, hematuria is a feature of cystitis, not a separate finding requiring parallel workup.",
+     "from": "With dysuria, leukocyte esterase and pyuria, hematuria is a feature of cystitis, not a separate finding requiring parallel workup."
+    },
+    {
+     "claim": "Treat the infection, then repeat the UA after antibiotics.",
+     "from": "Treat the infection, then repeat the UA after antibiotics."
+    },
+    {
+     "claim": "If the blood does not clear, proceed to imaging.",
+     "from": "Imaging comes only if the blood does not clear."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hematuria",
+   "find": "<p>Without infection, ask two questions in order. <b>Is it glomerular?</b> Brown urine, edema, hypertension, proteinuria or RBC casts send you to creatinine, complement levels and a CBC. <b>If not, does a symptom name the cause?</b> Trauma gets a CT, dysuria with pyuria gets a culture and antibiotics, a sore, irritated meatus gets reassurance, and flank pain with crystals gets a renal ultrasound. A well child with <b>bright red, painless</b> hematuria and none of these gets a <b>renal and bladder ultrasound</b>, because a young child&#39;s kidney stone is often painless; cystoscopy is an adult test.</p>",
+   "with": "<p>Without infection, ask two questions in order. <b>Is it glomerular?</b> If brown urine, edema, hypertension, proteinuria or <b>RBC</b> (red blood cell) casts are present, check creatinine, complement levels and a <b>CBC</b> (complete blood count). <b>If not, does a symptom name the cause?</b> Order a <b>CT</b> (computed tomography) for trauma, a culture and antibiotics for dysuria with pyuria, and a renal ultrasound for flank pain with crystals. Reassure for a sore, irritated meatus. In a young child, a kidney stone is often painless. So a well child with <b>bright red, painless</b> hematuria and none of these gets a <b>renal and bladder ultrasound</b>. Cystoscopy is an adult test.</p>",
+   "note": "dp p2: remove personification, split long sentences, expand RBC, CBC, CT",
+   "claims": [
+    {
+     "claim": "Without infection, ask two questions in order.",
+     "to": "Without infection, ask two questions in order."
+    },
+    {
+     "claim": "First ask whether it is glomerular.",
+     "to": "Is it glomerular?"
+    },
+    {
+     "claim": "Brown urine, edema, hypertension, proteinuria or RBC casts lead to creatinine, complement levels and a CBC.",
+     "to": "If brown urine, edema, hypertension, proteinuria or RBC (red blood cell) casts are present, check creatinine, complement levels and a CBC (complete blood count)."
+    },
+    {
+     "claim": "If not glomerular, ask whether a symptom names the cause.",
+     "to": "If not, does a symptom name the cause?"
+    },
+    {
+     "claim": "Trauma gets a CT.",
+     "to": "Order a CT (computed tomography) for trauma, a culture and antibiotics for dysuria with pyuria, and a renal ultrasound for flank pain with crystals."
+    },
+    {
+     "claim": "Dysuria with pyuria gets a culture and antibiotics.",
+     "to": "Order a CT (computed tomography) for trauma, a culture and antibiotics for dysuria with pyuria, and a renal ultrasound for flank pain with crystals."
+    },
+    {
+     "claim": "A sore, irritated meatus gets reassurance.",
+     "to": "Reassure for a sore, irritated meatus."
+    },
+    {
+     "claim": "Flank pain with crystals gets a renal ultrasound.",
+     "to": "Order a CT (computed tomography) for trauma, a culture and antibiotics for dysuria with pyuria, and a renal ultrasound for flank pain with crystals."
+    },
+    {
+     "claim": "A well child with bright red, painless hematuria and none of these gets a renal and bladder ultrasound.",
+     "to": "So a well child with bright red, painless hematuria and none of these gets a renal and bladder ultrasound."
+    },
+    {
+     "claim": "A young child's kidney stone is often painless.",
+     "to": "In a young child, a kidney stone is often painless."
+    },
+    {
+     "claim": "Cystoscopy is an adult test.",
+     "to": "Cystoscopy is an adult test."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Without infection, ask two questions in order.",
+     "from": "Without infection, ask two questions in order."
+    },
+    {
+     "claim": "First ask whether it is glomerular.",
+     "from": "First ask whether it is glomerular."
+    },
+    {
+     "claim": "If brown urine, edema, hypertension, proteinuria or RBC casts are present, check creatinine, complement levels and a CBC.",
+     "from": "Brown urine, edema, hypertension, proteinuria or RBC casts lead to creatinine, complement levels and a CBC."
+    },
+    {
+     "claim": "RBC stands for red blood cell.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CBC stands for complete blood count.",
+     "from": "expansion"
+    },
+    {
+     "claim": "If not glomerular, ask whether a symptom names the cause.",
+     "from": "If not glomerular, ask whether a symptom names the cause."
+    },
+    {
+     "claim": "Order a CT for trauma.",
+     "from": "Trauma gets a CT."
+    },
+    {
+     "claim": "CT stands for computed tomography.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Order a culture and antibiotics for dysuria with pyuria.",
+     "from": "Dysuria with pyuria gets a culture and antibiotics."
+    },
+    {
+     "claim": "Order a renal ultrasound for flank pain with crystals.",
+     "from": "Flank pain with crystals gets a renal ultrasound."
+    },
+    {
+     "claim": "Reassure for a sore, irritated meatus.",
+     "from": "A sore, irritated meatus gets reassurance."
+    },
+    {
+     "claim": "A well child with bright red, painless hematuria and none of these gets a renal and bladder ultrasound.",
+     "from": "A well child with bright red, painless hematuria and none of these gets a renal and bladder ultrasound."
+    },
+    {
+     "claim": "A young child's kidney stone is often painless.",
+     "from": "A young child's kidney stone is often painless."
+    },
+    {
+     "claim": "Cystoscopy is an adult test.",
+     "from": "Cystoscopy is an adult test."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hematuria",
+   "find": "A negative nitrite never excludes UTI when LE, pyuria, and symptoms agree.",
+   "with": "A negative nitrite never excludes <b>UTI</b> (urinary tract infection) when <b>LE</b> (leukocyte esterase), pyuria and symptoms agree.",
+   "note": "danger: expand UTI and LE",
+   "claims": [
+    {
+     "claim": "A negative nitrite never excludes UTI when LE, pyuria and symptoms agree.",
+     "to": "A negative nitrite never excludes UTI (urinary tract infection) when LE (leukocyte esterase), pyuria and symptoms agree."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A negative nitrite never excludes UTI when LE, pyuria and symptoms agree.",
+     "from": "A negative nitrite never excludes UTI when LE, pyuria and symptoms agree."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "LE stands for leukocyte esterase.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hematuria",
+   "find": "edema, hypertension, proteinuria or RBC casts is glomerular &middot;",
+   "with": "edema, hypertension, proteinuria or <b>RBC</b> (red blood cell) casts is glomerular &middot;",
+   "note": "pearls: expand RBC",
+   "claims": [
+    {
+     "claim": "Brown or cola urine with edema, hypertension, proteinuria or RBC casts is glomerular.",
+     "to": "brown or cola urine with edema, hypertension, proteinuria or RBC (red blood cell) casts is glomerular"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Brown or cola urine with edema, hypertension, proteinuria or RBC casts is glomerular.",
+     "from": "Brown or cola urine with edema, hypertension, proteinuria or RBC casts is glomerular."
+    },
+    {
+     "claim": "RBC stands for red blood cell.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hematuria",
+   "find": "noncontrast CT only if it is nondiagnostic &middot;",
+   "with": "noncontrast <b>CT</b> (computed tomography) only if it is nondiagnostic &middot;",
+   "note": "pearls: expand CT",
+   "claims": [
+    {
+     "claim": "Noncontrast CT only if the ultrasound is nondiagnostic.",
+     "to": "noncontrast CT (computed tomography) only if it is nondiagnostic"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Noncontrast CT only if the ultrasound is nondiagnostic.",
+     "from": "Noncontrast CT only if the ultrasound is nondiagnostic."
+    },
+    {
+     "claim": "CT stands for computed tomography.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hematuria",
+   "find": "Part I <b>Nephrotic Syndrome in a Child</b> &mdash; the other half of this fork: protein without blood, and the one where a normotensive 3-year-old with periorbital edema is treated on presentation rather than biopsied. Store the discriminator as a question: is the urine showing red cells and casts, or protein alone?",
+   "with": "Part I <b>Nephrotic Syndrome in a Child</b> covers protein without blood. There, a normotensive 3-year-old with periorbital edema is treated on presentation rather than biopsied. Ask: is the urine showing red cells and casts, or protein alone?",
+   "note": "pairs with: remove em dash and framing; Ask: per workflow rule",
+   "claims": [
+    {
+     "claim": "Nephrotic Syndrome in a Child is the other half of this fork.",
+     "dropped": "framing about the page structure; the coverage is stated next"
+    },
+    {
+     "claim": "Nephrotic Syndrome in a Child covers protein without blood.",
+     "to": "Part I Nephrotic Syndrome in a Child covers protein without blood."
+    },
+    {
+     "claim": "There a normotensive 3-year-old with periorbital edema is treated on presentation rather than biopsied.",
+     "to": "There, a normotensive 3-year-old with periorbital edema is treated on presentation rather than biopsied."
+    },
+    {
+     "claim": "The discriminator: is the urine showing red cells and casts, or protein alone?",
+     "to": "Ask: is the urine showing red cells and casts, or protein alone?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Nephrotic Syndrome in a Child covers protein without blood.",
+     "from": "Nephrotic Syndrome in a Child covers protein without blood."
+    },
+    {
+     "claim": "There a normotensive 3-year-old with periorbital edema is treated on presentation rather than biopsied.",
+     "from": "There a normotensive 3-year-old with periorbital edema is treated on presentation rather than biopsied."
+    },
+    {
+     "claim": "Ask: is the urine showing red cells and casts, or protein alone?",
+     "from": "The discriminator: is the urine showing red cells and casts, or protein alone?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hematuria",
+   "find": "When a stem gives a full lab panel, the diagnosis is in the <b>pattern of the panel</b>, not the most alarming single value. A discordant component is a sensitivity problem, not a veto.",
+   "with": "With a full lab panel, base the diagnosis on the <b>pattern of the panel</b>, not the most alarming single value. A discordant component reflects a test&#39;s limited sensitivity; it does not overrule the pattern.",
+   "note": "rule: remove stem framing and veto slogan",
+   "claims": [
+    {
+     "claim": "With a full lab panel, the diagnosis is in the pattern of the panel, not the most alarming single value.",
+     "to": "With a full lab panel, base the diagnosis on the pattern of the panel, not the most alarming single value."
+    },
+    {
+     "claim": "A discordant component is a sensitivity problem, not a veto.",
+     "to": "A discordant component reflects a test's limited sensitivity; it does not overrule the pattern."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "With a full lab panel, base the diagnosis on the pattern of the panel, not the most alarming single value.",
+     "from": "With a full lab panel, the diagnosis is in the pattern of the panel, not the most alarming single value."
+    },
+    {
+     "claim": "A discordant component reflects a test's limited sensitivity and does not overrule the pattern.",
+     "from": "A discordant component is a sensitivity problem, not a veto."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hematuria",
+   "find": "so it never excludes UTI when LE, pyuria and symptoms agree</span>",
+   "with": "so it never excludes <b>UTI</b> (urinary tract infection) when <b>LE</b> (leukocyte esterase), pyuria and symptoms agree</span>",
+   "note": "traps: expand UTI and LE",
+   "claims": [
+    {
+     "claim": "A negative nitrite never excludes UTI when LE, pyuria and symptoms agree.",
+     "to": "A negative nitrite: it needs a nitrate-reducing organism and bladder dwell time, so it never excludes UTI (urinary tract infection) when LE (leukocyte esterase), pyuria and symptoms agree"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A negative nitrite never excludes UTI when LE, pyuria and symptoms agree.",
+     "from": "A negative nitrite never excludes UTI when LE, pyuria and symptoms agree."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "LE stands for leukocyte esterase.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scrotum",
+   "find": "Two separate trees, split by pain",
+   "with": "Painful acute scrotum and painless scrotal mass follow separate workups",
+   "note": "sub: remove tree metaphor",
+   "claims": [
+    {
+     "claim": "There are two separate diagnostic trees, split by the presence of pain.",
+     "to": "Painful acute scrotum and painless scrotal mass follow separate workups"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Painful acute scrotum and painless scrotal mass follow separate workups.",
+     "from": "There are two separate diagnostic trees, split by the presence of pain."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scrotum",
+   "find": "<p><b>Timeline + location + infection signs.</b> Torsion is sudden and maximal within minutes-to-hours; a 3-day escalating course with fever and dysuria and <b>posterior</b> tenderness is epididymitis — a <b>clinical</b> diagnosis. Ultrasound and urology are torsion answers transplanted onto an epididymitis stem.</p>",
+   "with": "<p>Separate torsion from epididymitis by <b>timeline, location and infection signs</b>. Torsion is sudden and maximal within minutes to hours. A 3-day escalating course with fever, dysuria and <b>posterior</b> tenderness is epididymitis, a <b>clinical</b> diagnosis. Ultrasound and urology are torsion steps; they are not indicated for epididymitis.</p>",
+   "note": "dp: remove em dash and stem framing; split sentence",
+   "reworded_bold": [
+    "Timeline + location + infection signs."
+   ],
+   "claims": [
+    {
+     "claim": "Timeline, location and infection signs separate the diagnoses.",
+     "to": "Separate torsion from epididymitis by timeline, location and infection signs."
+    },
+    {
+     "claim": "Torsion is sudden and maximal within minutes to hours.",
+     "to": "Torsion is sudden and maximal within minutes to hours."
+    },
+    {
+     "claim": "A 3-day escalating course with fever, dysuria and posterior tenderness is epididymitis.",
+     "to": "A 3-day escalating course with fever, dysuria and posterior tenderness is epididymitis, a clinical diagnosis."
+    },
+    {
+     "claim": "Epididymitis is a clinical diagnosis.",
+     "to": "A 3-day escalating course with fever, dysuria and posterior tenderness is epididymitis, a clinical diagnosis."
+    },
+    {
+     "claim": "Ultrasound and urology are torsion steps, wrong for an epididymitis presentation.",
+     "to": "Ultrasound and urology are torsion steps; they are not indicated for epididymitis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Separate torsion from epididymitis by timeline, location and infection signs.",
+     "from": "Timeline, location and infection signs separate the diagnoses."
+    },
+    {
+     "claim": "Torsion is sudden and maximal within minutes to hours.",
+     "from": "Torsion is sudden and maximal within minutes to hours."
+    },
+    {
+     "claim": "A 3-day escalating course with fever, dysuria and posterior tenderness is epididymitis, a clinical diagnosis.",
+     "from": "A 3-day escalating course with fever, dysuria and posterior tenderness is epididymitis."
+    },
+    {
+     "claim": "Ultrasound and urology are torsion steps and are not indicated for epididymitis.",
+     "from": "Ultrasound and urology are torsion steps, wrong for an epididymitis presentation."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scrotum",
+   "find": "<span class=\"lbl\">Marker logic ties the mass table together</span> <b>AFP elevated → never a seminoma</b> (yolk sac or embryonal/teratoma component) · <b>β-hCG</b> can rise in seminoma <i>and</i> nonseminoma — only AFP is exclusionary · <b>both markers normal</b> with a solid mass → pure seminoma <i>or</i> a <b>sex cord–stromal</b> tumor (Leydig, Sertoli), and the presence of a <b>hormonal syndrome</b> separates them · <b>LDH</b> tracks tumor burden, not histology · <b>Sertoli cell tumor</b> is the mirror twin of Leydig — also stromal, also usually benign, but typically <b>hormonally silent</b>.",
+   "with": "<span class=\"lbl\">Tumor marker logic</span> <b>AFP elevated → never a seminoma</b> (AFP, alpha-fetoprotein; it indicates a yolk sac or embryonal/teratoma component) · <b>β-hCG</b> (beta human chorionic gonadotropin) can rise in seminoma <i>and</i> nonseminoma; only AFP is exclusionary · <b>both markers normal</b> with a solid mass → pure seminoma <i>or</i> a <b>sex cord–stromal</b> tumor (Leydig, Sertoli); a <b>hormonal syndrome</b> separates them · <b>LDH</b> (lactate dehydrogenase) tracks tumor burden, not histology · <b>Sertoli cell tumor</b> is, like Leydig, stromal and usually benign, but is typically <b>hormonally silent</b>.",
+   "note": "pearls: reword rhetorical label, remove em dashes and mirror-twin slogan; expand AFP, beta-hCG, LDH",
+   "reworded_label": [
+    "Marker logic ties the mass table together"
+   ],
+   "claims": [
+    {
+     "claim": "Elevated AFP means never a seminoma.",
+     "to": "AFP elevated → never a seminoma (AFP, alpha-fetoprotein; it indicates a yolk sac or embryonal/teratoma component)"
+    },
+    {
+     "claim": "Elevated AFP indicates a yolk sac or embryonal/teratoma component.",
+     "to": "AFP elevated → never a seminoma (AFP, alpha-fetoprotein; it indicates a yolk sac or embryonal/teratoma component)"
+    },
+    {
+     "claim": "β-hCG can rise in seminoma and nonseminoma.",
+     "to": "β-hCG (beta human chorionic gonadotropin) can rise in seminoma and nonseminoma; only AFP is exclusionary"
+    },
+    {
+     "claim": "Only AFP is exclusionary.",
+     "to": "β-hCG (beta human chorionic gonadotropin) can rise in seminoma and nonseminoma; only AFP is exclusionary"
+    },
+    {
+     "claim": "Both markers normal with a solid mass means pure seminoma or a sex cord–stromal tumor (Leydig, Sertoli).",
+     "to": "both markers normal with a solid mass → pure seminoma or a sex cord–stromal tumor (Leydig, Sertoli); a hormonal syndrome separates them"
+    },
+    {
+     "claim": "The presence of a hormonal syndrome separates them.",
+     "to": "both markers normal with a solid mass → pure seminoma or a sex cord–stromal tumor (Leydig, Sertoli); a hormonal syndrome separates them"
+    },
+    {
+     "claim": "LDH tracks tumor burden, not histology.",
+     "to": "LDH (lactate dehydrogenase) tracks tumor burden, not histology"
+    },
+    {
+     "claim": "Sertoli cell tumor is the counterpart of Leydig: also stromal, also usually benign.",
+     "to": "Sertoli cell tumor is, like Leydig, stromal and usually benign, but is typically hormonally silent."
+    },
+    {
+     "claim": "Sertoli cell tumor is typically hormonally silent.",
+     "to": "Sertoli cell tumor is, like Leydig, stromal and usually benign, but is typically hormonally silent."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Elevated AFP means never a seminoma.",
+     "from": "Elevated AFP means never a seminoma."
+    },
+    {
+     "claim": "AFP stands for alpha-fetoprotein.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Elevated AFP indicates a yolk sac or embryonal/teratoma component.",
+     "from": "Elevated AFP indicates a yolk sac or embryonal/teratoma component."
+    },
+    {
+     "claim": "β-hCG stands for beta human chorionic gonadotropin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "β-hCG can rise in seminoma and nonseminoma; only AFP is exclusionary.",
+     "from": "β-hCG can rise in seminoma and nonseminoma."
+    },
+    {
+     "claim": "Both markers normal with a solid mass means pure seminoma or a sex cord–stromal tumor (Leydig, Sertoli).",
+     "from": "Both markers normal with a solid mass means pure seminoma or a sex cord–stromal tumor (Leydig, Sertoli)."
+    },
+    {
+     "claim": "A hormonal syndrome separates them.",
+     "from": "The presence of a hormonal syndrome separates them."
+    },
+    {
+     "claim": "LDH stands for lactate dehydrogenase.",
+     "from": "expansion"
+    },
+    {
+     "claim": "LDH tracks tumor burden, not histology.",
+     "from": "LDH tracks tumor burden, not histology."
+    },
+    {
+     "claim": "Sertoli cell tumor is, like Leydig, stromal and usually benign.",
+     "from": "Sertoli cell tumor is the counterpart of Leydig: also stromal, also usually benign."
+    },
+    {
+     "claim": "Sertoli cell tumor is typically hormonally silent.",
+     "from": "Sertoli cell tumor is typically hormonally silent."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scrotum",
+   "find": "<span class=\"lbl\">Pearls</span> Epididymitis treatment splits by age: <b>&lt;35 / sexually active</b> → ceftriaxone + doxycycline; <b>&gt;35 / low STI risk</b> → levofloxacin or TMP-SMX · varicocele is the most common <b>correctable cause of male infertility</b>; testicular size discrepancy in an adolescent is the surgical indication · <b>seminoma never makes AFP</b>.",
+   "with": "<span class=\"lbl\">Pearls</span> Epididymitis treatment splits by age · <b>&lt;35 / sexually active</b> → ceftriaxone + doxycycline · <b>&gt;35 / low STI risk</b> (STI, sexually transmitted infection) → levofloxacin or <b>TMP-SMX</b> (trimethoprim-sulfamethoxazole) · varicocele is the most common <b>correctable cause of male infertility</b>; testicular size discrepancy in an adolescent is the surgical indication · <b>seminoma never makes AFP</b> (alpha-fetoprotein).",
+   "note": "pearls: split two arrows into rows; expand STI, TMP-SMX, AFP",
+   "claims": [
+    {
+     "claim": "Epididymitis treatment splits by age.",
+     "to": "Epididymitis treatment splits by age"
+    },
+    {
+     "claim": "Under 35 or sexually active: ceftriaxone + doxycycline.",
+     "to": "<35 / sexually active → ceftriaxone + doxycycline"
+    },
+    {
+     "claim": "Over 35 or low STI risk: levofloxacin or TMP-SMX.",
+     "to": ">35 / low STI risk (STI, sexually transmitted infection) → levofloxacin or TMP-SMX (trimethoprim-sulfamethoxazole)"
+    },
+    {
+     "claim": "Varicocele is the most common correctable cause of male infertility.",
+     "to": "varicocele is the most common correctable cause of male infertility; testicular size discrepancy in an adolescent is the surgical indication"
+    },
+    {
+     "claim": "Testicular size discrepancy in an adolescent is the surgical indication.",
+     "to": "varicocele is the most common correctable cause of male infertility; testicular size discrepancy in an adolescent is the surgical indication"
+    },
+    {
+     "claim": "Seminoma never makes AFP.",
+     "to": "seminoma never makes AFP (alpha-fetoprotein)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Epididymitis treatment splits by age.",
+     "from": "Epididymitis treatment splits by age."
+    },
+    {
+     "claim": "Under 35 or sexually active: ceftriaxone + doxycycline.",
+     "from": "Under 35 or sexually active: ceftriaxone + doxycycline."
+    },
+    {
+     "claim": "Over 35 or low STI risk: levofloxacin or TMP-SMX.",
+     "from": "Over 35 or low STI risk: levofloxacin or TMP-SMX."
+    },
+    {
+     "claim": "STI stands for sexually transmitted infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "TMP-SMX stands for trimethoprim-sulfamethoxazole.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Varicocele is the most common correctable cause of male infertility.",
+     "from": "Varicocele is the most common correctable cause of male infertility."
+    },
+    {
+     "claim": "Testicular size discrepancy in an adolescent is the surgical indication.",
+     "from": "Testicular size discrepancy in an adolescent is the surgical indication."
+    },
+    {
+     "claim": "Seminoma never makes AFP.",
+     "from": "Seminoma never makes AFP."
+    },
+    {
+     "claim": "AFP stands for alpha-fetoprotein.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scrotum",
+   "find": "<b>~90% left-sided</b>: the left gonadal vein drains into the <b>left renal vein at a right angle</b> (± \"nutcracker\" compression between aorta and SMA), while the right drains obliquely into the IVC · subfertility comes from <b>increased scrotal temperature</b> impairing spermatogenesis; may cause ipsilateral atrophy · treatment: observation if asymptomatic → <b>gonadal vein ligation or embolization</b> for pain, <b>&gt;20% testicular volume discrepancy</b> in adolescents, or abnormal semen analysis; scrotal support and NSAIDs for older men not seeking fertility. &middot; A varicocele in a <b>prepubertal child</b>, right-sided, or persistent when supine is secondary until proven otherwise; in children think Wilms (with hypertension from renin secretion), in adults think RCC invading the renal vein",
+   "with": "<b>~90% left-sided</b>: the left gonadal vein drains into the <b>left renal vein at a right angle</b> · possible \"nutcracker\" compression between the aorta and the <b>SMA</b> (superior mesenteric artery) · the right gonadal vein drains obliquely into the <b>IVC</b> (inferior vena cava) · subfertility comes from <b>increased scrotal temperature</b> impairing spermatogenesis; a varicocele may also cause ipsilateral atrophy · treatment: observation if asymptomatic · <b>gonadal vein ligation or embolization</b> for pain, <b>&gt;20% testicular volume discrepancy</b> in adolescents, or abnormal semen analysis · scrotal support and <b>NSAIDs</b> (nonsteroidal anti-inflammatory drugs) for older men not seeking fertility &middot; a varicocele in a <b>prepubertal child</b>, right-sided, or persistent when supine is secondary until proven otherwise · in children think Wilms (with hypertension from renin secretion); in adults think <b>RCC</b> (renal cell carcinoma) invading the renal vein",
+   "note": "pearls: split long rows; expand SMA, IVC, NSAIDs, RCC",
+   "claims": [
+    {
+     "claim": "Varicocele is ~90% left-sided.",
+     "to": "~90% left-sided: the left gonadal vein drains into the left renal vein at a right angle"
+    },
+    {
+     "claim": "The left gonadal vein drains into the left renal vein at a right angle.",
+     "to": "~90% left-sided: the left gonadal vein drains into the left renal vein at a right angle"
+    },
+    {
+     "claim": "There may be nutcracker compression between the aorta and SMA.",
+     "to": "possible \"nutcracker\" compression between the aorta and the SMA (superior mesenteric artery)"
+    },
+    {
+     "claim": "The right gonadal vein drains obliquely into the IVC.",
+     "to": "the right gonadal vein drains obliquely into the IVC (inferior vena cava)"
+    },
+    {
+     "claim": "Subfertility comes from increased scrotal temperature impairing spermatogenesis.",
+     "to": "subfertility comes from increased scrotal temperature impairing spermatogenesis; a varicocele may also cause ipsilateral atrophy"
+    },
+    {
+     "claim": "A varicocele may cause ipsilateral atrophy.",
+     "to": "subfertility comes from increased scrotal temperature impairing spermatogenesis; a varicocele may also cause ipsilateral atrophy"
+    },
+    {
+     "claim": "Treatment is observation if asymptomatic.",
+     "to": "treatment: observation if asymptomatic"
+    },
+    {
+     "claim": "Gonadal vein ligation or embolization for pain, >20% testicular volume discrepancy in adolescents, or abnormal semen analysis.",
+     "to": "gonadal vein ligation or embolization for pain, >20% testicular volume discrepancy in adolescents, or abnormal semen analysis"
+    },
+    {
+     "claim": "Scrotal support and NSAIDs for older men not seeking fertility.",
+     "to": "scrotal support and NSAIDs (nonsteroidal anti-inflammatory drugs) for older men not seeking fertility"
+    },
+    {
+     "claim": "A varicocele in a prepubertal child, right-sided, or persistent when supine is secondary until proven otherwise.",
+     "to": "a varicocele in a prepubertal child, right-sided, or persistent when supine is secondary until proven otherwise"
+    },
+    {
+     "claim": "In children think Wilms (with hypertension from renin secretion).",
+     "to": "in children think Wilms (with hypertension from renin secretion); in adults think RCC (renal cell carcinoma) invading the renal vein"
+    },
+    {
+     "claim": "In adults think RCC invading the renal vein.",
+     "to": "in children think Wilms (with hypertension from renin secretion); in adults think RCC (renal cell carcinoma) invading the renal vein"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Varicocele is ~90% left-sided.",
+     "from": "Varicocele is ~90% left-sided."
+    },
+    {
+     "claim": "The left gonadal vein drains into the left renal vein at a right angle.",
+     "from": "The left gonadal vein drains into the left renal vein at a right angle."
+    },
+    {
+     "claim": "There may be nutcracker compression between the aorta and the SMA.",
+     "from": "There may be nutcracker compression between the aorta and SMA."
+    },
+    {
+     "claim": "SMA stands for superior mesenteric artery.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The right gonadal vein drains obliquely into the IVC.",
+     "from": "The right gonadal vein drains obliquely into the IVC."
+    },
+    {
+     "claim": "IVC stands for inferior vena cava.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Subfertility comes from increased scrotal temperature impairing spermatogenesis.",
+     "from": "Subfertility comes from increased scrotal temperature impairing spermatogenesis."
+    },
+    {
+     "claim": "A varicocele may also cause ipsilateral atrophy.",
+     "from": "A varicocele may cause ipsilateral atrophy."
+    },
+    {
+     "claim": "Treatment is observation if asymptomatic.",
+     "from": "Treatment is observation if asymptomatic."
+    },
+    {
+     "claim": "Gonadal vein ligation or embolization for pain, >20% testicular volume discrepancy in adolescents, or abnormal semen analysis.",
+     "from": "Gonadal vein ligation or embolization for pain, >20% testicular volume discrepancy in adolescents, or abnormal semen analysis."
+    },
+    {
+     "claim": "Scrotal support and NSAIDs for older men not seeking fertility.",
+     "from": "Scrotal support and NSAIDs for older men not seeking fertility."
+    },
+    {
+     "claim": "NSAIDs stands for nonsteroidal anti-inflammatory drugs.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A varicocele in a prepubertal child, right-sided, or persistent when supine is secondary until proven otherwise.",
+     "from": "A varicocele in a prepubertal child, right-sided, or persistent when supine is secondary until proven otherwise."
+    },
+    {
+     "claim": "In children think Wilms (with hypertension from renin secretion).",
+     "from": "In children think Wilms (with hypertension from renin secretion)."
+    },
+    {
+     "claim": "In adults think RCC invading the renal vein.",
+     "from": "In adults think RCC invading the renal vein."
+    },
+    {
+     "claim": "RCC stands for renal cell carcinoma.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scrotum",
+   "find": "A 3-day timeline in a scrotal pain stem is not laziness — that number <i>is</i> the torsion exclusion; confirmed-enough clinical infection → treat, don't image. And <b>read the grammatical form of the answer choices before the stem</b>: all anatomic processes → the question wants mechanism; all tests → next step in diagnosis; all drugs → treatment. The choice format tells you what kind of thinking is being graded.",
+   "with": "A 3-day timeline of scrotal pain excludes torsion. When the clinical findings confirm infection well enough, treat rather than image. Also, <b>read the grammatical form of the answer choices before the stem</b>. All anatomic processes mean a mechanism question; all tests mean next step in diagnosis; all drugs mean treatment.",
+   "note": "rule: remove dramatic framing and em dash; split arrows",
+   "claims": [
+    {
+     "claim": "The timeline is deliberate, not laziness.",
+     "dropped": "dramatic framing about how the stem is written"
+    },
+    {
+     "claim": "A 3-day timeline in scrotal pain is the torsion exclusion.",
+     "to": "A 3-day timeline of scrotal pain excludes torsion."
+    },
+    {
+     "claim": "Confirmed-enough clinical infection: treat, don't image.",
+     "to": "When the clinical findings confirm infection well enough, treat rather than image."
+    },
+    {
+     "claim": "Read the grammatical form of the answer choices before the stem.",
+     "to": "Also, read the grammatical form of the answer choices before the stem."
+    },
+    {
+     "claim": "All anatomic processes means the question wants mechanism.",
+     "to": "All anatomic processes mean a mechanism question; all tests mean next step in diagnosis; all drugs mean treatment."
+    },
+    {
+     "claim": "All tests means next step in diagnosis.",
+     "to": "All anatomic processes mean a mechanism question; all tests mean next step in diagnosis; all drugs mean treatment."
+    },
+    {
+     "claim": "All drugs means treatment.",
+     "to": "All anatomic processes mean a mechanism question; all tests mean next step in diagnosis; all drugs mean treatment."
+    },
+    {
+     "claim": "The choice format tells you what kind of thinking is being graded.",
+     "dropped": "summary framing that restates the previous sentence"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A 3-day timeline of scrotal pain excludes torsion.",
+     "from": "A 3-day timeline in scrotal pain is the torsion exclusion."
+    },
+    {
+     "claim": "When the clinical findings confirm infection well enough, treat rather than image.",
+     "from": "Confirmed-enough clinical infection: treat, don't image."
+    },
+    {
+     "claim": "Read the grammatical form of the answer choices before the stem.",
+     "from": "Read the grammatical form of the answer choices before the stem."
+    },
+    {
+     "claim": "All anatomic processes mean a mechanism question.",
+     "from": "All anatomic processes means the question wants mechanism."
+    },
+    {
+     "claim": "All tests mean next step in diagnosis.",
+     "from": "All tests means next step in diagnosis."
+    },
+    {
+     "claim": "All drugs mean treatment.",
+     "from": "All drugs means treatment."
+    }
+   ]
+  }
+ ]
+}

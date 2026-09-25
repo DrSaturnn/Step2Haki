@@ -1,0 +1,1638 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "sjia",
+   "find": "<p>Chronic arthritis + <b>quotidian fever</b> + <b>evanescent salmon rash</b>. The subtle confirmatory detail: quotidian fever spikes once or twice daily and <b>returns to normal or subnormal between spikes</b> — so being afebrile in clinic <i>supports</i> sJIA. Infection doesn't do that.</p>\n<p>Outside the systemic subtype, <b>count the joints</b>: <b>5 or more</b> in the first 6 months is polyarticular, <b>4 or fewer</b> is oligoarticular. Neither has fever or rash. Morning stiffness that loosens through the day, with true joint swelling, separates JIA from infection (acute, one joint, skin clue), malignancy (night bone pain, cytopenias) and deficiency states (diffuse pain, no swelling).</p>",
+   "with": "<p>Chronic arthritis with <b>quotidian fever</b> and an <b>evanescent salmon rash</b> is <b>sJIA</b> (systemic juvenile idiopathic arthritis). Quotidian fever spikes once or twice daily and <b>returns to normal or subnormal between spikes</b>, so being afebrile in clinic <i>supports</i> sJIA. Infection does not follow this pattern.</p>\n<p>Outside the systemic subtype, <b>count the joints</b>. Involvement of <b>5 or more</b> joints in the first 6 months is polyarticular disease; <b>4 or fewer</b> is oligoarticular. Neither has fever or rash. Morning stiffness that loosens through the day, with true joint swelling, separates <b>JIA</b> (juvenile idiopathic arthritis) from infection, malignancy and deficiency states. Infection is acute and involves one joint, with a skin clue. Malignancy causes night bone pain and cytopenias. Deficiency states cause diffuse pain without swelling.</p>",
+   "note": "voice: .dp; remove em dash and framing, split sentences, expand sJIA and JIA",
+   "claims": [
+    {
+     "claim": "Chronic arthritis with quotidian fever and an evanescent salmon rash is the systemic presentation (sJIA).",
+     "to": "Chronic arthritis with quotidian fever and an evanescent salmon rash is sJIA (systemic juvenile idiopathic arthritis)."
+    },
+    {
+     "claim": "This is the subtle confirmatory detail.",
+     "dropped": "framing label; the confirming role is carried by 'supports sJIA'"
+    },
+    {
+     "claim": "Quotidian fever spikes once or twice daily.",
+     "to": "Quotidian fever spikes once or twice daily and returns to normal or subnormal between spikes, so being afebrile in clinic supports sJIA."
+    },
+    {
+     "claim": "Quotidian fever returns to normal or subnormal between spikes.",
+     "to": "Quotidian fever spikes once or twice daily and returns to normal or subnormal between spikes, so being afebrile in clinic supports sJIA."
+    },
+    {
+     "claim": "Being afebrile in clinic supports sJIA.",
+     "to": "Quotidian fever spikes once or twice daily and returns to normal or subnormal between spikes, so being afebrile in clinic supports sJIA."
+    },
+    {
+     "claim": "Infection does not do that.",
+     "to": "Infection does not follow this pattern."
+    },
+    {
+     "claim": "Outside the systemic subtype, count the joints.",
+     "to": "Outside the systemic subtype, count the joints."
+    },
+    {
+     "claim": "5 or more joints in the first 6 months is polyarticular.",
+     "to": "Involvement of 5 or more joints in the first 6 months is polyarticular disease; 4 or fewer is oligoarticular."
+    },
+    {
+     "claim": "4 or fewer joints is oligoarticular.",
+     "to": "Involvement of 5 or more joints in the first 6 months is polyarticular disease; 4 or fewer is oligoarticular."
+    },
+    {
+     "claim": "Neither polyarticular nor oligoarticular has fever or rash.",
+     "to": "Neither has fever or rash."
+    },
+    {
+     "claim": "Morning stiffness that loosens through the day, with true joint swelling, separates JIA from infection, malignancy and deficiency states.",
+     "to": "Morning stiffness that loosens through the day, with true joint swelling, separates JIA (juvenile idiopathic arthritis) from infection, malignancy and deficiency states."
+    },
+    {
+     "claim": "Infection is acute, involves one joint and has a skin clue.",
+     "to": "Infection is acute and involves one joint, with a skin clue."
+    },
+    {
+     "claim": "Malignancy has night bone pain and cytopenias.",
+     "to": "Malignancy causes night bone pain and cytopenias."
+    },
+    {
+     "claim": "Deficiency states have diffuse pain and no swelling.",
+     "to": "Deficiency states cause diffuse pain without swelling."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Chronic arthritis with quotidian fever and an evanescent salmon rash is sJIA.",
+     "from": "Chronic arthritis with quotidian fever and an evanescent salmon rash is the systemic presentation (sJIA)."
+    },
+    {
+     "claim": "sJIA stands for systemic juvenile idiopathic arthritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Quotidian fever spikes once or twice daily.",
+     "from": "Quotidian fever spikes once or twice daily."
+    },
+    {
+     "claim": "Quotidian fever returns to normal or subnormal between spikes.",
+     "from": "Quotidian fever returns to normal or subnormal between spikes."
+    },
+    {
+     "claim": "Being afebrile in clinic supports sJIA.",
+     "from": "Being afebrile in clinic supports sJIA."
+    },
+    {
+     "claim": "Infection does not follow this pattern.",
+     "from": "Infection does not do that."
+    },
+    {
+     "claim": "Outside the systemic subtype, count the joints.",
+     "from": "Outside the systemic subtype, count the joints."
+    },
+    {
+     "claim": "5 or more joints in the first 6 months is polyarticular disease.",
+     "from": "5 or more joints in the first 6 months is polyarticular."
+    },
+    {
+     "claim": "4 or fewer joints is oligoarticular.",
+     "from": "4 or fewer joints is oligoarticular."
+    },
+    {
+     "claim": "Neither has fever or rash.",
+     "from": "Neither polyarticular nor oligoarticular has fever or rash."
+    },
+    {
+     "claim": "Morning stiffness that loosens through the day, with true joint swelling, separates JIA from infection, malignancy and deficiency states.",
+     "from": "Morning stiffness that loosens through the day, with true joint swelling, separates JIA from infection, malignancy and deficiency states."
+    },
+    {
+     "claim": "JIA stands for juvenile idiopathic arthritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Infection is acute and involves one joint, with a skin clue.",
+     "from": "Infection is acute, involves one joint and has a skin clue."
+    },
+    {
+     "claim": "Malignancy causes night bone pain and cytopenias.",
+     "from": "Malignancy has night bone pain and cytopenias."
+    },
+    {
+     "claim": "Deficiency states cause diffuse pain without swelling.",
+     "from": "Deficiency states have diffuse pain and no swelling."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sjia",
+   "find": "A systemic JIA patient who suddenly deteriorates with <b>cytopenias, ferritin in the thousands, hypertriglyceridemia, liver dysfunction, DIC — and a paradoxically FALLING ESR</b> (fibrinogen consumed). That inverted ESR is the pathognomonic tell. Treat with high-dose steroids ± anakinra.",
+   "with": "Macrophage activation syndrome presents as sudden deterioration in a patient with systemic <b>JIA</b> (juvenile idiopathic arthritis). Findings are <b>cytopenias, ferritin in the thousands, hypertriglyceridemia, liver dysfunction and DIC</b> (disseminated intravascular coagulation). The <b>ESR</b> (erythrocyte sedimentation rate) <b>paradoxically falls</b> because fibrinogen is consumed. The falling ESR is the pathognomonic sign. Treat with high-dose steroids ± anakinra.",
+   "note": "voice: .danger; remove em dash inside bold and capitals, split, expand JIA, DIC, ESR",
+   "reworded_bold": [
+    "cytopenias, ferritin in the thousands, hypertriglyceridemia, liver dysfunction, DIC — and a paradoxically FALLING ESR"
+   ],
+   "claims": [
+    {
+     "claim": "Macrophage activation syndrome is a systemic JIA patient who suddenly deteriorates.",
+     "to": "Macrophage activation syndrome presents as sudden deterioration in a patient with systemic JIA (juvenile idiopathic arthritis)."
+    },
+    {
+     "claim": "It has cytopenias, ferritin in the thousands, hypertriglyceridemia, liver dysfunction and DIC.",
+     "to": "Findings are cytopenias, ferritin in the thousands, hypertriglyceridemia, liver dysfunction and DIC (disseminated intravascular coagulation)."
+    },
+    {
+     "claim": "The ESR paradoxically falls.",
+     "to": "The ESR (erythrocyte sedimentation rate) paradoxically falls because fibrinogen is consumed."
+    },
+    {
+     "claim": "The ESR falls because fibrinogen is consumed.",
+     "to": "The ESR (erythrocyte sedimentation rate) paradoxically falls because fibrinogen is consumed."
+    },
+    {
+     "claim": "The falling (inverted) ESR is pathognomonic.",
+     "to": "The falling ESR is the pathognomonic sign."
+    },
+    {
+     "claim": "Treat with high-dose steroids ± anakinra.",
+     "to": "Treat with high-dose steroids ± anakinra."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Macrophage activation syndrome presents as sudden deterioration in a patient with systemic JIA.",
+     "from": "Macrophage activation syndrome is a systemic JIA patient who suddenly deteriorates."
+    },
+    {
+     "claim": "JIA stands for juvenile idiopathic arthritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Findings are cytopenias, ferritin in the thousands, hypertriglyceridemia, liver dysfunction and DIC.",
+     "from": "It has cytopenias, ferritin in the thousands, hypertriglyceridemia, liver dysfunction and DIC."
+    },
+    {
+     "claim": "DIC stands for disseminated intravascular coagulation.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ESR stands for erythrocyte sedimentation rate.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The ESR paradoxically falls because fibrinogen is consumed.",
+     "from": "The ESR falls because fibrinogen is consumed."
+    },
+    {
+     "claim": "The falling ESR is the pathognomonic sign.",
+     "from": "The falling (inverted) ESR is pathognomonic."
+    },
+    {
+     "claim": "Treat with high-dose steroids ± anakinra.",
+     "from": "Treat with high-dose steroids ± anakinra."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sjia",
+   "find": "<b>Oligoarticular</b> (≤4 joints, young girls, ANA+) = <b>highest</b> uveitis risk → slit-lamp every 3–4 months. <b>Systemic (Still)</b> = <b>lowest</b>. Enthesitis-related (HLA-B27, older boys) = acute symptomatic uveitis.",
+   "with": "<b>Oligoarticular</b> disease carries the <b>highest</b> uveitis risk. It involves ≤4 joints in young girls who are <b>ANA</b> (antinuclear antibody) positive. Screen with a slit-lamp exam every 3–4 months. <b>Systemic (Still)</b> disease carries the <b>lowest</b> risk. Enthesitis-related disease, in older boys with <b>HLA-B27</b> (human leukocyte antigen B27), causes acute symptomatic uveitis.",
+   "note": "voice: uveitis pearls; replace = and arrow shorthand with sentences, expand ANA and HLA-B27",
+   "claims": [
+    {
+     "claim": "Oligoarticular JIA has the highest uveitis risk.",
+     "to": "Oligoarticular disease carries the highest uveitis risk."
+    },
+    {
+     "claim": "Oligoarticular JIA involves ≤4 joints, in young girls, ANA positive.",
+     "to": "It involves ≤4 joints in young girls who are ANA (antinuclear antibody) positive."
+    },
+    {
+     "claim": "Oligoarticular JIA needs slit-lamp exams every 3–4 months.",
+     "to": "Screen with a slit-lamp exam every 3–4 months."
+    },
+    {
+     "claim": "Systemic (Still) JIA has the lowest uveitis risk.",
+     "to": "Systemic (Still) disease carries the lowest risk."
+    },
+    {
+     "claim": "Enthesitis-related JIA (HLA-B27, older boys) causes acute symptomatic uveitis.",
+     "to": "Enthesitis-related disease, in older boys with HLA-B27 (human leukocyte antigen B27), causes acute symptomatic uveitis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Oligoarticular disease carries the highest uveitis risk.",
+     "from": "Oligoarticular JIA has the highest uveitis risk."
+    },
+    {
+     "claim": "It involves ≤4 joints in young girls who are ANA positive.",
+     "from": "Oligoarticular JIA involves ≤4 joints, in young girls, ANA positive."
+    },
+    {
+     "claim": "ANA stands for antinuclear antibody.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Screen with a slit-lamp exam every 3–4 months.",
+     "from": "Oligoarticular JIA needs slit-lamp exams every 3–4 months."
+    },
+    {
+     "claim": "Systemic (Still) disease carries the lowest risk.",
+     "from": "Systemic (Still) JIA has the lowest uveitis risk."
+    },
+    {
+     "claim": "Enthesitis-related disease, in older boys with HLA-B27, causes acute symptomatic uveitis.",
+     "from": "Enthesitis-related JIA (HLA-B27, older boys) causes acute symptomatic uveitis."
+    },
+    {
+     "claim": "HLA-B27 stands for human leukocyte antigen B27.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sjia",
+   "find": "the mirror image of this leukocytosis with thrombocytosis",
+   "with": "the opposite of this child's leukocytosis with thrombocytosis",
+   "note": "voice: returning-traveller dengue row; remove figurative 'mirror image'",
+   "claims": [
+    {
+     "claim": "Dengue's leukopenia and thrombocytopenia are the opposite of this child's leukocytosis with thrombocytosis.",
+     "to": "the opposite of this child's leukocytosis with thrombocytosis"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Dengue's cytopenias are the opposite of this child's leukocytosis with thrombocytosis.",
+     "from": "Dengue's leukopenia and thrombocytopenia are the opposite of this child's leukocytosis with thrombocytosis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sjia",
+   "find": "The travel history sells malaria and dengue, but the blood count runs the opposite way &mdash; both cause cytopenias, and this child has leukocytosis with thrombocytosis.",
+   "with": "Malaria and dengue: the travel history suggests them, but both cause cytopenias, and this child has leukocytosis with thrombocytosis.",
+   "note": "voice: trap line to Option: why; remove em dash and personification",
+   "claims": [
+    {
+     "claim": "The travel history suggests malaria and dengue.",
+     "to": "Malaria and dengue: the travel history suggests them, but both cause cytopenias, and this child has leukocytosis with thrombocytosis."
+    },
+    {
+     "claim": "The blood count runs the opposite way.",
+     "dropped": "figurative summary; the specific counts are stated in the same sentence"
+    },
+    {
+     "claim": "Malaria and dengue both cause cytopenias.",
+     "to": "Malaria and dengue: the travel history suggests them, but both cause cytopenias, and this child has leukocytosis with thrombocytosis."
+    },
+    {
+     "claim": "This child has leukocytosis with thrombocytosis.",
+     "to": "Malaria and dengue: the travel history suggests them, but both cause cytopenias, and this child has leukocytosis with thrombocytosis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The travel history suggests malaria and dengue.",
+     "from": "The travel history suggests malaria and dengue."
+    },
+    {
+     "claim": "Malaria and dengue both cause cytopenias.",
+     "from": "Malaria and dengue both cause cytopenias."
+    },
+    {
+     "claim": "This child has leukocytosis with thrombocytosis.",
+     "from": "This child has leukocytosis with thrombocytosis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sjia",
+   "find": "a new plant-based diet and fatigue invite a deficiency answer, but",
+   "with": "a new plant-based diet and fatigue suggest deficiency, but",
+   "note": "voice: trap line; remove framing about the answer",
+   "claims": [
+    {
+     "claim": "A new plant-based diet and fatigue suggest a deficiency.",
+     "to": "Vitamin D and calcium: a new plant-based diet and fatigue suggest deficiency, but deficiency pain is diffuse, does not improve through the day, and never swells the joints."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A new plant-based diet and fatigue suggest deficiency.",
+     "from": "A new plant-based diet and fatigue suggest a deficiency."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sjia",
+   "find": "Parvovirus B19 really does cause fever, rash and joint pain, but",
+   "with": "Parvovirus B19: it does cause fever, rash and joint pain, but",
+   "note": "voice: trap line to Option: why",
+   "claims": [
+    {
+     "claim": "Parvovirus B19 does cause fever, rash and joint pain.",
+     "to": "Parvovirus B19: it does cause fever, rash and joint pain, but the arthropathy is an adult-female pattern and resolves within 3 weeks."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Parvovirus B19 does cause fever, rash and joint pain.",
+     "from": "Parvovirus B19 does cause fever, rash and joint pain."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "nursemaid",
+   "find": "<p>In the newer \"Patient Information\" format, <b>the treatment is often buried inside the physical exam section</b>. \"When the forearm is supinated and the elbow flexed… she begins to reach for toys 15 minutes later\" <i>is</i> the reduction and <i>is</i> the confirmation it worked. The answer is what comes after a successful reduction: <b>nothing</b>.</p>",
+   "with": "<p>In the newer \"Patient Information\" format, <b>the physical exam section often contains the treatment</b>. The exam line \"When the forearm is supinated and the elbow flexed… she begins to reach for toys 15 minutes later\" describes the reduction and confirms that it worked. After a successful reduction, do <b>nothing</b> further.</p>",
+   "note": "voice: .dp; plain wording, remove answer framing and emphasis italics",
+   "reworded_bold": [
+    "the treatment is often buried inside the physical exam section"
+   ],
+   "claims": [
+    {
+     "claim": "In the newer Patient Information format, the treatment is often inside the physical exam section.",
+     "to": "In the newer \"Patient Information\" format, the physical exam section often contains the treatment."
+    },
+    {
+     "claim": "Supinating the forearm and flexing the elbow, then reaching for toys 15 minutes later, is the reduction.",
+     "to": "The exam line \"When the forearm is supinated and the elbow flexed… she begins to reach for toys 15 minutes later\" describes the reduction and confirms that it worked."
+    },
+    {
+     "claim": "Reaching for toys 15 minutes later confirms the reduction worked.",
+     "to": "The exam line \"When the forearm is supinated and the elbow flexed… she begins to reach for toys 15 minutes later\" describes the reduction and confirms that it worked."
+    },
+    {
+     "claim": "After a successful reduction, nothing further is done.",
+     "to": "After a successful reduction, do nothing further."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In the newer Patient Information format, the physical exam section often contains the treatment.",
+     "from": "In the newer Patient Information format, the treatment is often inside the physical exam section."
+    },
+    {
+     "claim": "The quoted exam text describes the reduction.",
+     "from": "Supinating the forearm and flexing the elbow, then reaching for toys 15 minutes later, is the reduction."
+    },
+    {
+     "claim": "The quoted exam text confirms the reduction worked.",
+     "from": "Reaching for toys 15 minutes later confirms the reduction worked."
+    },
+    {
+     "claim": "After a successful reduction, do nothing further.",
+     "from": "After a successful reduction, nothing further is done."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "nursemaid",
+   "find": "<b>Supracondylar humerus fracture</b> — 5–8 yrs, FOOSH hyperextension, <b>posterior fat pad sign</b>; check the <b>anterior interosseous nerve</b> (\"OK sign\") and brachial artery; watch for <b>Volkmann ischemic contracture</b> · newborn not moving an arm after shoulder dystocia with an <b>asymmetric Moro</b> → clavicle fracture or <b>Erb palsy (C5–C6, \"waiter's tip\")</b>; a lost <b>grasp</b> with the Moro kept is <b>Klumpke (C8–T1, claw hand)</b>. Part II <b>Brachial Plexus Injury at Birth</b> owns the reflex split.",
+   "with": "<b>Supracondylar humerus fracture</b>: age 5–8 yrs, <b>FOOSH</b> (fall on an outstretched hand) hyperextension and a <b>posterior fat pad sign</b>. Check the <b>anterior interosseous nerve</b> (\"OK sign\") and brachial artery, and watch for <b>Volkmann ischemic contracture</b> · A newborn not moving an arm after shoulder dystocia, with an <b>asymmetric Moro</b>, has a clavicle fracture or <b>Erb palsy (C5–C6, \"waiter's tip\")</b>. A lost <b>grasp</b> with the Moro kept is <b>Klumpke (C8–T1, claw hand)</b>. Part II <b>Brachial Plexus Injury at Birth</b> covers the reflex split.",
+   "note": "voice: elbow neighbours pearls; prose em dash to colon (second row has no bold lead, so not a grid), split, expand FOOSH, owns to covers",
+   "claims": [
+    {
+     "claim": "Supracondylar humerus fracture occurs at 5–8 yrs.",
+     "to": "Supracondylar humerus fracture: age 5–8 yrs, FOOSH (fall on an outstretched hand) hyperextension and a posterior fat pad sign."
+    },
+    {
+     "claim": "Supracondylar humerus fracture follows FOOSH hyperextension.",
+     "to": "Supracondylar humerus fracture: age 5–8 yrs, FOOSH (fall on an outstretched hand) hyperextension and a posterior fat pad sign."
+    },
+    {
+     "claim": "Supracondylar humerus fracture shows a posterior fat pad sign.",
+     "to": "Supracondylar humerus fracture: age 5–8 yrs, FOOSH (fall on an outstretched hand) hyperextension and a posterior fat pad sign."
+    },
+    {
+     "claim": "Check the anterior interosseous nerve (\"OK sign\") and brachial artery.",
+     "to": "Check the anterior interosseous nerve (\"OK sign\") and brachial artery, and watch for Volkmann ischemic contracture"
+    },
+    {
+     "claim": "Watch for Volkmann ischemic contracture.",
+     "to": "Check the anterior interosseous nerve (\"OK sign\") and brachial artery, and watch for Volkmann ischemic contracture"
+    },
+    {
+     "claim": "A newborn not moving an arm after shoulder dystocia with an asymmetric Moro has a clavicle fracture or Erb palsy (C5–C6, waiter's tip).",
+     "to": "A newborn not moving an arm after shoulder dystocia, with an asymmetric Moro, has a clavicle fracture or Erb palsy (C5–C6, \"waiter's tip\")."
+    },
+    {
+     "claim": "A lost grasp with the Moro kept is Klumpke (C8–T1, claw hand).",
+     "to": "A lost grasp with the Moro kept is Klumpke (C8–T1, claw hand)."
+    },
+    {
+     "claim": "Part II Brachial Plexus Injury at Birth owns the reflex split.",
+     "to": "Part II Brachial Plexus Injury at Birth covers the reflex split."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Supracondylar humerus fracture occurs at age 5–8 yrs.",
+     "from": "Supracondylar humerus fracture occurs at 5–8 yrs."
+    },
+    {
+     "claim": "FOOSH stands for fall on an outstretched hand.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Supracondylar humerus fracture follows FOOSH hyperextension.",
+     "from": "Supracondylar humerus fracture follows FOOSH hyperextension."
+    },
+    {
+     "claim": "Supracondylar humerus fracture shows a posterior fat pad sign.",
+     "from": "Supracondylar humerus fracture shows a posterior fat pad sign."
+    },
+    {
+     "claim": "Check the anterior interosseous nerve (\"OK sign\") and brachial artery.",
+     "from": "Check the anterior interosseous nerve (\"OK sign\") and brachial artery."
+    },
+    {
+     "claim": "Watch for Volkmann ischemic contracture.",
+     "from": "Watch for Volkmann ischemic contracture."
+    },
+    {
+     "claim": "A newborn not moving an arm after shoulder dystocia, with an asymmetric Moro, has a clavicle fracture or Erb palsy.",
+     "from": "A newborn not moving an arm after shoulder dystocia with an asymmetric Moro has a clavicle fracture or Erb palsy (C5–C6, waiter's tip)."
+    },
+    {
+     "claim": "A lost grasp with the Moro kept is Klumpke (C8–T1, claw hand).",
+     "from": "A lost grasp with the Moro kept is Klumpke (C8–T1, claw hand)."
+    },
+    {
+     "claim": "Part II Brachial Plexus Injury at Birth covers the reflex split.",
+     "from": "Part II Brachial Plexus Injury at Birth owns the reflex split."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scfe",
+   "find": "The stereotype that stems are built to defeat",
+   "with": "Patients who do not fit the stereotype",
+   "note": "voice: p.sub first segment; remove framing about stems",
+   "claims": [
+    {
+     "claim": "SCFE stems deliberately present patients who do not fit the stereotype.",
+     "to": "Patients who do not fit the stereotype"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Some patients with SCFE do not fit the stereotype.",
+     "from": "SCFE stems deliberately present patients who do not fit the stereotype."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scfe",
+   "find": "<p><b>\"SCFE = obese teenager\" is a stereotype stored as a rule</b>, and question-writers defeat it deliberately. The physis is mechanically weak during <i>any</i> rapid growth spurt, so <b>tall, thin adolescents get SCFE too</b>. The real discriminators are <b>age at the growth spurt</b> (girls 11–13, boys 13–15), <b>loss of internal rotation</b>, and <b>obligate external rotation on passive flexion</b> — not body habitus.</p>",
+   "with": "<p>The link between <b>SCFE</b> (slipped capital femoral epiphysis) and obese teenagers is a stereotype, not a rule. The physis is mechanically weak during <i>any</i> rapid growth spurt, so <b>tall, thin adolescents get SCFE too</b>. The discriminators are <b>age at the growth spurt</b> (girls 11–13, boys 13–15), <b>loss of internal rotation</b> and <b>obligate external rotation on passive flexion</b>, not body habitus.</p>",
+   "note": "voice: .dp; reword slogan bold, drop question-writer framing, remove em dash, expand SCFE",
+   "reworded_bold": [
+    "\"SCFE = obese teenager\" is a stereotype stored as a rule"
+   ],
+   "claims": [
+    {
+     "claim": "SCFE = obese teenager is a stereotype, not a rule.",
+     "to": "The link between SCFE (slipped capital femoral epiphysis) and obese teenagers is a stereotype, not a rule."
+    },
+    {
+     "claim": "Question-writers defeat the stereotype deliberately.",
+     "dropped": "framing about question writers"
+    },
+    {
+     "claim": "The physis is mechanically weak during any rapid growth spurt.",
+     "to": "The physis is mechanically weak during any rapid growth spurt, so tall, thin adolescents get SCFE too."
+    },
+    {
+     "claim": "Tall, thin adolescents get SCFE too.",
+     "to": "The physis is mechanically weak during any rapid growth spurt, so tall, thin adolescents get SCFE too."
+    },
+    {
+     "claim": "The discriminators are age at the growth spurt (girls 11–13, boys 13–15), loss of internal rotation and obligate external rotation on passive flexion.",
+     "to": "The discriminators are age at the growth spurt (girls 11–13, boys 13–15), loss of internal rotation and obligate external rotation on passive flexion, not body habitus."
+    },
+    {
+     "claim": "Body habitus is not a discriminator.",
+     "to": "The discriminators are age at the growth spurt (girls 11–13, boys 13–15), loss of internal rotation and obligate external rotation on passive flexion, not body habitus."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The link between SCFE and obese teenagers is a stereotype, not a rule.",
+     "from": "SCFE = obese teenager is a stereotype, not a rule."
+    },
+    {
+     "claim": "SCFE stands for slipped capital femoral epiphysis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The physis is mechanically weak during any rapid growth spurt.",
+     "from": "The physis is mechanically weak during any rapid growth spurt."
+    },
+    {
+     "claim": "Tall, thin adolescents get SCFE too.",
+     "from": "Tall, thin adolescents get SCFE too."
+    },
+    {
+     "claim": "The discriminators are age at the growth spurt (girls 11–13, boys 13–15), loss of internal rotation and obligate external rotation on passive flexion.",
+     "from": "The discriminators are age at the growth spurt (girls 11–13, boys 13–15), loss of internal rotation and obligate external rotation on passive flexion."
+    },
+    {
+     "claim": "Body habitus is not a discriminator.",
+     "from": "Body habitus is not a discriminator."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scfe",
+   "find": "<b>\"Runny nose last week\"</b> — the post-URI transient synovitis bait, planted where the age and a 3-week course forbid it. <b>\"Fell while skateboarding\"</b> — the fracture bait; minor trauma <b>exacerbating</b> a weeks-long insidious problem is classic SCFE, whereas a pediatric femoral neck fracture needs high-impact trauma and shows a fracture line.",
+   "with": "<b>\"Runny nose last week\"</b> suggests transient synovitis after a <b>URI</b> (upper respiratory infection). The age and a 3-week course rule it out. <b>\"Fell while skateboarding\"</b> suggests a fracture. Minor trauma <b>exacerbating</b> a weeks-long insidious problem is classic <b>SCFE</b> (slipped capital femoral epiphysis). A pediatric femoral neck fracture needs high-impact trauma and shows a fracture line.",
+   "note": "voice: .danger; remove prose em dashes and 'bait' framing, expand URI and SCFE",
+   "claims": [
+    {
+     "claim": "Runny nose last week suggests post-URI transient synovitis.",
+     "to": "\"Runny nose last week\" suggests transient synovitis after a URI (upper respiratory infection)."
+    },
+    {
+     "claim": "The age and a 3-week course rule out transient synovitis.",
+     "to": "The age and a 3-week course rule it out."
+    },
+    {
+     "claim": "Fell while skateboarding suggests a fracture.",
+     "to": "\"Fell while skateboarding\" suggests a fracture."
+    },
+    {
+     "claim": "Minor trauma exacerbating a weeks-long insidious problem is classic SCFE.",
+     "to": "Minor trauma exacerbating a weeks-long insidious problem is classic SCFE (slipped capital femoral epiphysis)."
+    },
+    {
+     "claim": "A pediatric femoral neck fracture needs high-impact trauma.",
+     "to": "A pediatric femoral neck fracture needs high-impact trauma and shows a fracture line."
+    },
+    {
+     "claim": "A pediatric femoral neck fracture shows a fracture line.",
+     "to": "A pediatric femoral neck fracture needs high-impact trauma and shows a fracture line."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Runny nose last week suggests transient synovitis after a URI.",
+     "from": "Runny nose last week suggests post-URI transient synovitis."
+    },
+    {
+     "claim": "URI stands for upper respiratory infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The age and a 3-week course rule it out.",
+     "from": "The age and a 3-week course rule out transient synovitis."
+    },
+    {
+     "claim": "Fell while skateboarding suggests a fracture.",
+     "from": "Fell while skateboarding suggests a fracture."
+    },
+    {
+     "claim": "Minor trauma exacerbating a weeks-long insidious problem is classic SCFE.",
+     "from": "Minor trauma exacerbating a weeks-long insidious problem is classic SCFE."
+    },
+    {
+     "claim": "SCFE stands for slipped capital femoral epiphysis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A pediatric femoral neck fracture needs high-impact trauma and shows a fracture line.",
+     "from": "A pediatric femoral neck fracture needs high-impact trauma."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scfe",
+   "find": "owns the adolescent thigh mass that dates to a specific injury.",
+   "with": "covers the adolescent thigh mass that dates to a specific injury.",
+   "note": "voice: Pairs with; owns to covers",
+   "claims": [
+    {
+     "claim": "Part I The Post-Traumatic Limb Mass covers the adolescent thigh mass that dates to a specific injury.",
+     "to": "covers the adolescent thigh mass that dates to a specific injury."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I The Post-Traumatic Limb Mass covers the adolescent thigh mass that dates to a specific injury.",
+     "from": "Part I The Post-Traumatic Limb Mass covers the adolescent thigh mass that dates to a specific injury."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scfe",
+   "find": "Demographic stereotypes are <b>priors with exceptions</b>, and exceptions are what question-writers write. When a patient violates the classic demographic but matches the <b>exam findings</b>, the findings win — and an atypical demographic is itself a prompt to ask <i>why</i>.",
+   "with": "Demographic stereotypes are <b>priors with exceptions</b>. When a patient does not fit the classic demographic but has the <b>exam findings</b>, trust the findings. An atypical demographic is itself a prompt to ask <i>why</i>.",
+   "note": "voice: .rule; drop question-writer framing and em dash",
+   "claims": [
+    {
+     "claim": "Demographic stereotypes are priors with exceptions.",
+     "to": "Demographic stereotypes are priors with exceptions."
+    },
+    {
+     "claim": "Exceptions are what question-writers write.",
+     "dropped": "framing about question writers"
+    },
+    {
+     "claim": "When a patient violates the classic demographic but matches the exam findings, the findings win.",
+     "to": "When a patient does not fit the classic demographic but has the exam findings, trust the findings."
+    },
+    {
+     "claim": "An atypical demographic is itself a prompt to ask why.",
+     "to": "An atypical demographic is itself a prompt to ask why."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Demographic stereotypes are priors with exceptions.",
+     "from": "Demographic stereotypes are priors with exceptions."
+    },
+    {
+     "claim": "When a patient does not fit the classic demographic but has the exam findings, trust the findings.",
+     "from": "When a patient violates the classic demographic but matches the exam findings, the findings win."
+    },
+    {
+     "claim": "An atypical demographic is itself a prompt to ask why.",
+     "from": "An atypical demographic is itself a prompt to ask why."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "<p>The shape of this stem is a <b>biphasic course</b>, and that is the whole diagnosis: a contusion, complete resolution over two weeks, then <i>recurrent</i> pain with a mass a week after that. Nothing that was injured at the time behaves that way — a torn muscle does not get better and then produce a mass. What fills that interval is <b>metaplasia</b>: bone morphogenic protein expression draws in spindle stem cells that mature into fibroblasts, chondrocytes and osteocytes, laying down <b>lamellar bone inside the muscle</b>. The examination confirms it rather than the history alone — the mass is <b>indurated and mobile</b>, there is <b>no erythema</b>, <b>strength and sensation are intact</b>, and the pain is reproduced by <b>passive knee flexion</b>, which stretches the quadriceps over a rigid intramuscular plaque.</p>",
+   "with": "<p>A <b>biphasic course</b> makes the diagnosis: a contusion, complete resolution over two weeks, then <i>recurrent</i> pain with a mass a week after that. No tissue injured at the time behaves that way; a torn muscle does not get better and then produce a mass. The interval is filled by <b>metaplasia</b>. Bone morphogenic protein expression draws in spindle stem cells that mature into fibroblasts, chondrocytes and osteocytes. These cells lay down <b>lamellar bone inside the muscle</b>. The examination, not the history alone, confirms it. The mass is <b>indurated and mobile</b>, there is <b>no erythema</b>, and <b>strength and sensation are intact</b>. The pain is reproduced by <b>passive knee flexion</b>, which stretches the quadriceps over a rigid intramuscular plaque.</p>",
+   "note": "voice: .dp; drop stem framing, remove em dashes, split long sentences",
+   "claims": [
+    {
+     "claim": "The shape of this stem is a biphasic course.",
+     "dropped": "framing about the stem; the biphasic course itself is kept"
+    },
+    {
+     "claim": "The biphasic course is the whole diagnosis.",
+     "to": "A biphasic course makes the diagnosis: a contusion, complete resolution over two weeks, then recurrent pain with a mass a week after that."
+    },
+    {
+     "claim": "The course is a contusion, complete resolution over two weeks, then recurrent pain with a mass a week after that.",
+     "to": "A biphasic course makes the diagnosis: a contusion, complete resolution over two weeks, then recurrent pain with a mass a week after that."
+    },
+    {
+     "claim": "Nothing that was injured at the time behaves that way.",
+     "to": "No tissue injured at the time behaves that way; a torn muscle does not get better and then produce a mass."
+    },
+    {
+     "claim": "A torn muscle does not get better and then produce a mass.",
+     "to": "No tissue injured at the time behaves that way; a torn muscle does not get better and then produce a mass."
+    },
+    {
+     "claim": "Metaplasia fills that interval.",
+     "to": "The interval is filled by metaplasia."
+    },
+    {
+     "claim": "Bone morphogenic protein expression draws in spindle stem cells that mature into fibroblasts, chondrocytes and osteocytes.",
+     "to": "Bone morphogenic protein expression draws in spindle stem cells that mature into fibroblasts, chondrocytes and osteocytes."
+    },
+    {
+     "claim": "These cells lay down lamellar bone inside the muscle.",
+     "to": "These cells lay down lamellar bone inside the muscle."
+    },
+    {
+     "claim": "The examination confirms it rather than the history alone.",
+     "to": "The examination, not the history alone, confirms it."
+    },
+    {
+     "claim": "The mass is indurated and mobile.",
+     "to": "The mass is indurated and mobile, there is no erythema, and strength and sensation are intact."
+    },
+    {
+     "claim": "There is no erythema.",
+     "to": "The mass is indurated and mobile, there is no erythema, and strength and sensation are intact."
+    },
+    {
+     "claim": "Strength and sensation are intact.",
+     "to": "The mass is indurated and mobile, there is no erythema, and strength and sensation are intact."
+    },
+    {
+     "claim": "The pain is reproduced by passive knee flexion, which stretches the quadriceps over a rigid intramuscular plaque.",
+     "to": "The pain is reproduced by passive knee flexion, which stretches the quadriceps over a rigid intramuscular plaque."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A biphasic course makes the diagnosis.",
+     "from": "The biphasic course is the whole diagnosis."
+    },
+    {
+     "claim": "The course is a contusion, complete resolution over two weeks, then recurrent pain with a mass a week after that.",
+     "from": "The course is a contusion, complete resolution over two weeks, then recurrent pain with a mass a week after that."
+    },
+    {
+     "claim": "No tissue injured at the time behaves that way.",
+     "from": "Nothing that was injured at the time behaves that way."
+    },
+    {
+     "claim": "A torn muscle does not get better and then produce a mass.",
+     "from": "A torn muscle does not get better and then produce a mass."
+    },
+    {
+     "claim": "The interval is filled by metaplasia.",
+     "from": "Metaplasia fills that interval."
+    },
+    {
+     "claim": "Bone morphogenic protein expression draws in spindle stem cells that mature into fibroblasts, chondrocytes and osteocytes.",
+     "from": "Bone morphogenic protein expression draws in spindle stem cells that mature into fibroblasts, chondrocytes and osteocytes."
+    },
+    {
+     "claim": "These cells lay down lamellar bone inside the muscle.",
+     "from": "These cells lay down lamellar bone inside the muscle."
+    },
+    {
+     "claim": "The examination, not the history alone, confirms it.",
+     "from": "The examination confirms it rather than the history alone."
+    },
+    {
+     "claim": "The mass is indurated and mobile.",
+     "from": "The mass is indurated and mobile."
+    },
+    {
+     "claim": "There is no erythema.",
+     "from": "There is no erythema."
+    },
+    {
+     "claim": "Strength and sensation are intact.",
+     "from": "Strength and sensation are intact."
+    },
+    {
+     "claim": "The pain is reproduced by passive knee flexion, which stretches the quadriceps over a rigid intramuscular plaque.",
+     "from": "The pain is reproduced by passive knee flexion, which stretches the quadriceps over a rigid intramuscular plaque."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "Management is one sentence, because this stem asked only for the cause: <b>range-of-motion exercise and NSAIDs such as indomethacin</b>, with <b>surgical excision</b> reserved for lesions that stay symptomatic, and excision delayed until the bone matures ⚠︎ because early resection recurs.",
+   "with": "Treat with <b>range-of-motion exercise and NSAIDs such as indomethacin</b>. Reserve <b>surgical excision</b> for lesions that stay symptomatic. Delay excision until the bone matures ⚠︎, because early resection recurs.",
+   "note": "voice: management .danger; drop stem framing, split",
+   "claims": [
+    {
+     "claim": "Management is one sentence because the stem asked only for the cause.",
+     "dropped": "framing about the stem"
+    },
+    {
+     "claim": "Management is range-of-motion exercise and NSAIDs such as indomethacin.",
+     "to": "Treat with range-of-motion exercise and NSAIDs such as indomethacin."
+    },
+    {
+     "claim": "Surgical excision is reserved for lesions that stay symptomatic.",
+     "to": "Reserve surgical excision for lesions that stay symptomatic."
+    },
+    {
+     "claim": "Excision is delayed until the bone matures (unverified).",
+     "to": "Delay excision until the bone matures ⚠︎, because early resection recurs."
+    },
+    {
+     "claim": "Early resection recurs.",
+     "to": "Delay excision until the bone matures ⚠︎, because early resection recurs."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Treat with range-of-motion exercise and NSAIDs such as indomethacin.",
+     "from": "Management is range-of-motion exercise and NSAIDs such as indomethacin."
+    },
+    {
+     "claim": "Reserve surgical excision for lesions that stay symptomatic.",
+     "from": "Surgical excision is reserved for lesions that stay symptomatic."
+    },
+    {
+     "claim": "Delay excision until the bone matures (unverified).",
+     "from": "Excision is delayed until the bone matures (unverified)."
+    },
+    {
+     "claim": "Early resection recurs.",
+     "from": "Early resection recurs."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "The <b>2 cm circumference difference</b> is the most cleverly chosen number in the stem, because it is the measurement taught for deep vein thrombosis and it appears here attached to a completely different process. The stem then removes thrombosis with two quiet clauses: the lower legs are normal and symmetric, and peripheral pulses are normal. Note also what the stem does not say — no fever, no erythema, no night pain, no weight loss. Each omission is doing eliminating work, and a reader hunting for positives rather than reading the negatives will find the mass alarming rather than reassuring.",
+   "with": "A <b>2 cm circumference difference</b> is the measurement taught for deep vein thrombosis, but here it accompanies a completely different process. Normal, symmetric lower legs and normal peripheral pulses exclude thrombosis. The history includes no fever, erythema, night pain or weight loss, and each absence helps exclude a competing diagnosis. Read with these negatives, the mass is reassuring rather than alarming.",
+   "note": "voice: Decoy note; drop stem framing and em dash",
+   "claims": [
+    {
+     "claim": "The 2 cm circumference difference is a deliberately chosen number in the stem.",
+     "to": "A 2 cm circumference difference is the measurement taught for deep vein thrombosis, but here it accompanies a completely different process."
+    },
+    {
+     "claim": "The 2 cm circumference difference is the measurement taught for deep vein thrombosis.",
+     "to": "A 2 cm circumference difference is the measurement taught for deep vein thrombosis, but here it accompanies a completely different process."
+    },
+    {
+     "claim": "Here the 2 cm difference is attached to a completely different process.",
+     "to": "A 2 cm circumference difference is the measurement taught for deep vein thrombosis, but here it accompanies a completely different process."
+    },
+    {
+     "claim": "Normal and symmetric lower legs exclude thrombosis.",
+     "to": "Normal, symmetric lower legs and normal peripheral pulses exclude thrombosis."
+    },
+    {
+     "claim": "Normal peripheral pulses exclude thrombosis.",
+     "to": "Normal, symmetric lower legs and normal peripheral pulses exclude thrombosis."
+    },
+    {
+     "claim": "There is no fever, no erythema, no night pain and no weight loss.",
+     "to": "The history includes no fever, erythema, night pain or weight loss, and each absence helps exclude a competing diagnosis."
+    },
+    {
+     "claim": "Each omission does eliminating work.",
+     "to": "The history includes no fever, erythema, night pain or weight loss, and each absence helps exclude a competing diagnosis."
+    },
+    {
+     "claim": "Reading the negatives, the mass is reassuring rather than alarming.",
+     "to": "Read with these negatives, the mass is reassuring rather than alarming."
+    },
+    {
+     "claim": "A reader hunting for positives will find the mass alarming.",
+     "dropped": "framing about the reader; the clinical point is kept in the same sentence"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A 2 cm circumference difference is the measurement taught for deep vein thrombosis.",
+     "from": "The 2 cm circumference difference is the measurement taught for deep vein thrombosis."
+    },
+    {
+     "claim": "Here it accompanies a completely different process.",
+     "from": "Here the 2 cm difference is attached to a completely different process."
+    },
+    {
+     "claim": "Normal, symmetric lower legs and normal peripheral pulses exclude thrombosis.",
+     "from": "Normal and symmetric lower legs exclude thrombosis."
+    },
+    {
+     "claim": "The history includes no fever, erythema, night pain or weight loss.",
+     "from": "There is no fever, no erythema, no night pain and no weight loss."
+    },
+    {
+     "claim": "Each absence helps exclude a competing diagnosis.",
+     "from": "Each omission does eliminating work."
+    },
+    {
+     "claim": "Read with these negatives, the mass is reassuring rather than alarming.",
+     "from": "Reading the negatives, the mass is reassuring rather than alarming."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "Pain and a firm mass in the quadriceps two to four weeks after a contusion is myositis ossificans; treat with range of motion and NSAIDs. &middot; <b>The biphasic course is the diagnosis</b> — injury, recovery, then recurrence with a mass. Nothing that was torn at the time gets better first. &middot; <b>Quadriceps and brachialis</b> are the two named sites, and the mechanism is metaplasia rather than healing. &middot; <b>Pain on passive stretch localises the lesion to muscle</b>; a bone lesion hurts on weight-bearing and at night but not on stretching the muscle over it. &middot; Alkaline phosphatase, ESR and CRP are <b>often elevated</b>, so inflammatory markers do not distinguish this from infection — the skin and the tempo do. &middot; <b>Early x-rays are often normal</b>, and eggshell calcification around a radiolucent centre appears later, so a negative early film does not exclude it ⚠︎. &middot; The neurogenic trigger is worth knowing — <b>stroke, brain injury, spinal cord injury</b> — because those patients have a stiff painful joint and no trauma history to explain it.",
+   "with": "Pain and a firm mass in the quadriceps two to four weeks after a contusion is myositis ossificans; treat with range of motion and NSAIDs. &middot; A <b>biphasic course</b> of injury, recovery, then recurrence with a mass establishes the diagnosis. Nothing that was torn at the time gets better first. &middot; <b>Quadriceps and brachialis</b> are the two named sites, and the mechanism is metaplasia rather than healing. &middot; <b>Pain on passive stretch localises the lesion to muscle</b>; a bone lesion hurts on weight-bearing and at night but not on stretching the muscle over it. &middot; Alkaline phosphatase, <b>ESR</b> (erythrocyte sedimentation rate) and <b>CRP</b> (C-reactive protein) are <b>often elevated</b>, so inflammatory markers do not distinguish this from infection. The skin findings and the tempo of illness do. &middot; <b>Early x-rays are often normal</b>, and eggshell calcification around a radiolucent centre appears later, so a negative early film does not exclude it ⚠︎. &middot; The neurogenic triggers are <b>stroke, brain injury, spinal cord injury</b>. These patients have a stiff painful joint and no trauma history to explain it.",
+   "note": "voice: Pearls; reword slogan bold, remove prose em dashes, expand ESR and CRP",
+   "reworded_bold": [
+    "The biphasic course is the diagnosis"
+   ],
+   "claims": [
+    {
+     "claim": "Pain and a firm mass in the quadriceps two to four weeks after a contusion is myositis ossificans.",
+     "to": "Pain and a firm mass in the quadriceps two to four weeks after a contusion is myositis ossificans; treat with range of motion and NSAIDs."
+    },
+    {
+     "claim": "Treat with range of motion and NSAIDs.",
+     "to": "Pain and a firm mass in the quadriceps two to four weeks after a contusion is myositis ossificans; treat with range of motion and NSAIDs."
+    },
+    {
+     "claim": "The biphasic course (injury, recovery, then recurrence with a mass) is the diagnosis.",
+     "to": "A biphasic course of injury, recovery, then recurrence with a mass establishes the diagnosis."
+    },
+    {
+     "claim": "Nothing that was torn at the time gets better first.",
+     "to": "Nothing that was torn at the time gets better first."
+    },
+    {
+     "claim": "Quadriceps and brachialis are the two named sites.",
+     "to": "Quadriceps and brachialis are the two named sites, and the mechanism is metaplasia rather than healing."
+    },
+    {
+     "claim": "The mechanism is metaplasia rather than healing.",
+     "to": "Quadriceps and brachialis are the two named sites, and the mechanism is metaplasia rather than healing."
+    },
+    {
+     "claim": "Pain on passive stretch localises the lesion to muscle.",
+     "to": "Pain on passive stretch localises the lesion to muscle; a bone lesion hurts on weight-bearing and at night but not on stretching the muscle over it."
+    },
+    {
+     "claim": "A bone lesion hurts on weight-bearing and at night but not on stretching the muscle over it.",
+     "to": "Pain on passive stretch localises the lesion to muscle; a bone lesion hurts on weight-bearing and at night but not on stretching the muscle over it."
+    },
+    {
+     "claim": "Alkaline phosphatase, ESR and CRP are often elevated.",
+     "to": "Alkaline phosphatase, ESR (erythrocyte sedimentation rate) and CRP (C-reactive protein) are often elevated, so inflammatory markers do not distinguish this from infection."
+    },
+    {
+     "claim": "Inflammatory markers do not distinguish this from infection.",
+     "to": "Alkaline phosphatase, ESR (erythrocyte sedimentation rate) and CRP (C-reactive protein) are often elevated, so inflammatory markers do not distinguish this from infection."
+    },
+    {
+     "claim": "The skin and the tempo distinguish it from infection.",
+     "to": "The skin findings and the tempo of illness do."
+    },
+    {
+     "claim": "Early x-rays are often normal.",
+     "to": "Early x-rays are often normal, and eggshell calcification around a radiolucent centre appears later, so a negative early film does not exclude it ⚠︎."
+    },
+    {
+     "claim": "Eggshell calcification around a radiolucent centre appears later.",
+     "to": "Early x-rays are often normal, and eggshell calcification around a radiolucent centre appears later, so a negative early film does not exclude it ⚠︎."
+    },
+    {
+     "claim": "A negative early film does not exclude it (unverified).",
+     "to": "Early x-rays are often normal, and eggshell calcification around a radiolucent centre appears later, so a negative early film does not exclude it ⚠︎."
+    },
+    {
+     "claim": "The neurogenic triggers are stroke, brain injury, spinal cord injury.",
+     "to": "The neurogenic triggers are stroke, brain injury, spinal cord injury."
+    },
+    {
+     "claim": "The neurogenic trigger is worth knowing.",
+     "dropped": "framing about what to learn"
+    },
+    {
+     "claim": "Those patients have a stiff painful joint and no trauma history to explain it.",
+     "to": "These patients have a stiff painful joint and no trauma history to explain it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Pain and a firm mass in the quadriceps two to four weeks after a contusion is myositis ossificans.",
+     "from": "Pain and a firm mass in the quadriceps two to four weeks after a contusion is myositis ossificans."
+    },
+    {
+     "claim": "Treat with range of motion and NSAIDs.",
+     "from": "Treat with range of motion and NSAIDs."
+    },
+    {
+     "claim": "A biphasic course of injury, recovery, then recurrence with a mass establishes the diagnosis.",
+     "from": "The biphasic course (injury, recovery, then recurrence with a mass) is the diagnosis."
+    },
+    {
+     "claim": "Nothing that was torn at the time gets better first.",
+     "from": "Nothing that was torn at the time gets better first."
+    },
+    {
+     "claim": "Quadriceps and brachialis are the two named sites.",
+     "from": "Quadriceps and brachialis are the two named sites."
+    },
+    {
+     "claim": "The mechanism is metaplasia rather than healing.",
+     "from": "The mechanism is metaplasia rather than healing."
+    },
+    {
+     "claim": "Pain on passive stretch localises the lesion to muscle.",
+     "from": "Pain on passive stretch localises the lesion to muscle."
+    },
+    {
+     "claim": "A bone lesion hurts on weight-bearing and at night but not on stretching the muscle over it.",
+     "from": "A bone lesion hurts on weight-bearing and at night but not on stretching the muscle over it."
+    },
+    {
+     "claim": "Alkaline phosphatase, ESR and CRP are often elevated.",
+     "from": "Alkaline phosphatase, ESR and CRP are often elevated."
+    },
+    {
+     "claim": "ESR stands for erythrocyte sedimentation rate.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CRP stands for C-reactive protein.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Inflammatory markers do not distinguish this from infection.",
+     "from": "Inflammatory markers do not distinguish this from infection."
+    },
+    {
+     "claim": "The skin findings and the tempo of illness distinguish it from infection.",
+     "from": "The skin and the tempo distinguish it from infection."
+    },
+    {
+     "claim": "Early x-rays are often normal.",
+     "from": "Early x-rays are often normal."
+    },
+    {
+     "claim": "Eggshell calcification around a radiolucent centre appears later.",
+     "from": "Eggshell calcification around a radiolucent centre appears later."
+    },
+    {
+     "claim": "A negative early film does not exclude it (unverified).",
+     "from": "A negative early film does not exclude it (unverified)."
+    },
+    {
+     "claim": "The neurogenic triggers are stroke, brain injury, spinal cord injury.",
+     "from": "The neurogenic triggers are stroke, brain injury, spinal cord injury."
+    },
+    {
+     "claim": "These patients have a stiff painful joint and no trauma history to explain it.",
+     "from": "Those patients have a stiff painful joint and no trauma history to explain it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "Verified: Part I <b>Slipped Capital Femoral Epiphysis</b> and Part I <b>The Limping Child — Master Table</b> own the other adolescent hip and thigh complaints that turn on age and tempo, and Part II <b>The Acute Hot Joint (adult)</b> owns the inflamed-limb emergency this brief excludes on the skin examination. Store the discriminator as a question: did the pain resolve and come back, and does passive stretch reproduce it?",
+   "with": "Part I <b>Slipped Capital Femoral Epiphysis</b> and Part I <b>The Limping Child — Master Table</b> cover the other adolescent hip and thigh complaints. These complaints turn on age and tempo. Part II <b>The Acute Hot Joint (adult)</b> covers the inflamed-limb emergency that this brief excludes on the skin examination. Ask: did the pain resolve and come back, and does passive stretch reproduce it?",
+   "note": "voice: Pairs with; strip Verified, owns to covers, question as Ask:",
+   "claims": [
+    {
+     "claim": "Verified.",
+     "dropped": "workflow tag"
+    },
+    {
+     "claim": "Part I Slipped Capital Femoral Epiphysis and Part I The Limping Child — Master Table own the other adolescent hip and thigh complaints.",
+     "to": "Part I Slipped Capital Femoral Epiphysis and Part I The Limping Child — Master Table cover the other adolescent hip and thigh complaints."
+    },
+    {
+     "claim": "Those complaints turn on age and tempo.",
+     "to": "These complaints turn on age and tempo."
+    },
+    {
+     "claim": "Part II The Acute Hot Joint (adult) owns the inflamed-limb emergency this brief excludes on the skin examination.",
+     "to": "Part II The Acute Hot Joint (adult) covers the inflamed-limb emergency that this brief excludes on the skin examination."
+    },
+    {
+     "claim": "The discriminator: did the pain resolve and come back, and does passive stretch reproduce it?",
+     "to": "Ask: did the pain resolve and come back, and does passive stretch reproduce it?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I Slipped Capital Femoral Epiphysis and Part I The Limping Child — Master Table cover the other adolescent hip and thigh complaints.",
+     "from": "Part I Slipped Capital Femoral Epiphysis and Part I The Limping Child — Master Table own the other adolescent hip and thigh complaints."
+    },
+    {
+     "claim": "These complaints turn on age and tempo.",
+     "from": "Those complaints turn on age and tempo."
+    },
+    {
+     "claim": "Part II The Acute Hot Joint (adult) covers the inflamed-limb emergency that this brief excludes on the skin examination.",
+     "from": "Part II The Acute Hot Joint (adult) owns the inflamed-limb emergency this brief excludes on the skin examination."
+    },
+    {
+     "claim": "Ask: did the pain resolve and come back, and does passive stretch reproduce it?",
+     "from": "The discriminator: did the pain resolve and come back, and does passive stretch reproduce it?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "A course that <b>resolves and then recurs</b> is rarely the original injury and rarely a tumour — it is a process that needed time to develop, which makes the interval itself the most informative number in the stem. And when a mass and a bone lesion compete, ask what provokes the pain: muscle lesions hurt on stretch, bone lesions hurt at rest and at night. --- <i>Batch 6, brief 01 · 2026-09-11.</i>",
+   "with": "A course that <b>resolves and then recurs</b> is rarely the original injury and rarely a tumour. It is a process that needed time to develop, so the interval itself is the most informative number in the history. When a mass and a bone lesion are both possible, ask what provokes the pain. Muscle lesions hurt on stretch; bone lesions hurt at rest and at night.",
+   "note": "voice: .rule; remove em dash and batch note, split",
+   "claims": [
+    {
+     "claim": "A course that resolves and then recurs is rarely the original injury.",
+     "to": "A course that resolves and then recurs is rarely the original injury and rarely a tumour."
+    },
+    {
+     "claim": "A course that resolves and then recurs is rarely a tumour.",
+     "to": "A course that resolves and then recurs is rarely the original injury and rarely a tumour."
+    },
+    {
+     "claim": "It is a process that needed time to develop.",
+     "to": "It is a process that needed time to develop, so the interval itself is the most informative number in the history."
+    },
+    {
+     "claim": "The interval is the most informative number.",
+     "to": "It is a process that needed time to develop, so the interval itself is the most informative number in the history."
+    },
+    {
+     "claim": "When a mass and a bone lesion compete, ask what provokes the pain.",
+     "to": "When a mass and a bone lesion are both possible, ask what provokes the pain."
+    },
+    {
+     "claim": "Muscle lesions hurt on stretch.",
+     "to": "Muscle lesions hurt on stretch; bone lesions hurt at rest and at night."
+    },
+    {
+     "claim": "Bone lesions hurt at rest and at night.",
+     "to": "Muscle lesions hurt on stretch; bone lesions hurt at rest and at night."
+    },
+    {
+     "claim": "Batch note.",
+     "dropped": "workflow note"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A course that resolves and then recurs is rarely the original injury and rarely a tumour.",
+     "from": "A course that resolves and then recurs is rarely the original injury."
+    },
+    {
+     "claim": "It is a process that needed time to develop.",
+     "from": "It is a process that needed time to develop."
+    },
+    {
+     "claim": "The interval itself is the most informative number in the history.",
+     "from": "The interval is the most informative number."
+    },
+    {
+     "claim": "When a mass and a bone lesion are both possible, ask what provokes the pain.",
+     "from": "When a mass and a bone lesion compete, ask what provokes the pain."
+    },
+    {
+     "claim": "Muscle lesions hurt on stretch.",
+     "from": "Muscle lesions hurt on stretch."
+    },
+    {
+     "claim": "Bone lesions hurt at rest and at night.",
+     "from": "Bone lesions hurt at rest and at night."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "<p>Every feature here is on the benign side of a list that has exactly one dangerous side. The pain is <b>bilateral</b>, <b>nocturnal with pain-free days</b>, <b>non-progressive over three months</b>, provoked by <b>daytime exertion</b>, and relieved by massage and simple analgesics — and critically, the child <b>walks, runs and plays without complaint</b> with a <b>completely normal examination and gait</b>. That is the full profile of <b>growing pains</b>, the commonest cause of musculoskeletal pain in children aged 3 to 12, and it is a <b>clinical diagnosis</b> requiring no laboratory test and no film. Management is <b>parental education and reassurance</b> with massage, heat, analgesics or stretching. The useful inversion is that night pain is not the red flag it is treated as: osteoid osteoma also hurts at night and also responds to NSAIDs, and what separates it is that it is <b>unilateral</b>.</p>",
+   "with": "<p>Every feature here is on the benign side. The pain is <b>bilateral</b>, <b>nocturnal with pain-free days</b> and <b>non-progressive over three months</b>. It is provoked by <b>daytime exertion</b> and relieved by massage and simple analgesics. The child <b>walks, runs and plays without complaint</b>, with a <b>completely normal examination and gait</b>. This is the full profile of <b>growing pains</b>, the commonest cause of musculoskeletal pain in children aged 3 to 12. It is a <b>clinical diagnosis</b> that needs no laboratory test and no film. Management is <b>parental education and reassurance</b> with massage, heat, analgesics or stretching. Night pain is not the red flag it is treated as; osteoid osteoma also hurts at night and also responds to NSAIDs. What separates osteoid osteoma is that it is <b>unilateral</b>.</p>",
+   "note": "voice: .dp; drop rhetorical opener and 'useful inversion', remove em dash, split",
+   "claims": [
+    {
+     "claim": "Every feature here is on the benign side.",
+     "to": "Every feature here is on the benign side."
+    },
+    {
+     "claim": "The list has exactly one dangerous side.",
+     "dropped": "rhetorical framing; the dangerous feature (unilateral) is stated at the end"
+    },
+    {
+     "claim": "The pain is bilateral.",
+     "to": "The pain is bilateral, nocturnal with pain-free days and non-progressive over three months."
+    },
+    {
+     "claim": "The pain is nocturnal with pain-free days.",
+     "to": "The pain is bilateral, nocturnal with pain-free days and non-progressive over three months."
+    },
+    {
+     "claim": "The pain is non-progressive over three months.",
+     "to": "The pain is bilateral, nocturnal with pain-free days and non-progressive over three months."
+    },
+    {
+     "claim": "The pain is provoked by daytime exertion.",
+     "to": "It is provoked by daytime exertion and relieved by massage and simple analgesics."
+    },
+    {
+     "claim": "The pain is relieved by massage and simple analgesics.",
+     "to": "It is provoked by daytime exertion and relieved by massage and simple analgesics."
+    },
+    {
+     "claim": "Critically, the child walks, runs and plays without complaint.",
+     "to": "The child walks, runs and plays without complaint, with a completely normal examination and gait."
+    },
+    {
+     "claim": "The child has a completely normal examination and gait.",
+     "to": "The child walks, runs and plays without complaint, with a completely normal examination and gait."
+    },
+    {
+     "claim": "That is the full profile of growing pains.",
+     "to": "This is the full profile of growing pains, the commonest cause of musculoskeletal pain in children aged 3 to 12."
+    },
+    {
+     "claim": "Growing pains are the commonest cause of musculoskeletal pain in children aged 3 to 12.",
+     "to": "This is the full profile of growing pains, the commonest cause of musculoskeletal pain in children aged 3 to 12."
+    },
+    {
+     "claim": "It is a clinical diagnosis requiring no laboratory test and no film.",
+     "to": "It is a clinical diagnosis that needs no laboratory test and no film."
+    },
+    {
+     "claim": "Management is parental education and reassurance with massage, heat, analgesics or stretching.",
+     "to": "Management is parental education and reassurance with massage, heat, analgesics or stretching."
+    },
+    {
+     "claim": "This is the useful inversion.",
+     "dropped": "rhetorical framing"
+    },
+    {
+     "claim": "Night pain is not the red flag it is treated as.",
+     "to": "Night pain is not the red flag it is treated as; osteoid osteoma also hurts at night and also responds to NSAIDs."
+    },
+    {
+     "claim": "Osteoid osteoma also hurts at night and also responds to NSAIDs.",
+     "to": "Night pain is not the red flag it is treated as; osteoid osteoma also hurts at night and also responds to NSAIDs."
+    },
+    {
+     "claim": "What separates osteoid osteoma is that it is unilateral.",
+     "to": "What separates osteoid osteoma is that it is unilateral."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Every feature here is on the benign side.",
+     "from": "Every feature here is on the benign side."
+    },
+    {
+     "claim": "The pain is bilateral, nocturnal with pain-free days and non-progressive over three months.",
+     "from": "The pain is bilateral."
+    },
+    {
+     "claim": "It is provoked by daytime exertion.",
+     "from": "The pain is provoked by daytime exertion."
+    },
+    {
+     "claim": "It is relieved by massage and simple analgesics.",
+     "from": "The pain is relieved by massage and simple analgesics."
+    },
+    {
+     "claim": "The child walks, runs and plays without complaint.",
+     "from": "Critically, the child walks, runs and plays without complaint."
+    },
+    {
+     "claim": "The child has a completely normal examination and gait.",
+     "from": "The child has a completely normal examination and gait."
+    },
+    {
+     "claim": "This is the full profile of growing pains.",
+     "from": "That is the full profile of growing pains."
+    },
+    {
+     "claim": "Growing pains are the commonest cause of musculoskeletal pain in children aged 3 to 12.",
+     "from": "Growing pains are the commonest cause of musculoskeletal pain in children aged 3 to 12."
+    },
+    {
+     "claim": "It is a clinical diagnosis that needs no laboratory test and no film.",
+     "from": "It is a clinical diagnosis requiring no laboratory test and no film."
+    },
+    {
+     "claim": "Management is parental education and reassurance with massage, heat, analgesics or stretching.",
+     "from": "Management is parental education and reassurance with massage, heat, analgesics or stretching."
+    },
+    {
+     "claim": "Night pain is not the red flag it is treated as.",
+     "from": "Night pain is not the red flag it is treated as."
+    },
+    {
+     "claim": "Osteoid osteoma also hurts at night and also responds to NSAIDs.",
+     "from": "Osteoid osteoma also hurts at night and also responds to NSAIDs."
+    },
+    {
+     "claim": "What separates osteoid osteoma is that it is unilateral.",
+     "from": "What separates osteoid osteoma is that it is unilateral."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "the single load-bearing feature, because unilateral pain flips the entire pathway",
+   "with": "the single most important feature, because unilateral pain changes the entire workup",
+   "note": "voice: pertinent row; remove figurative wording",
+   "claims": [
+    {
+     "claim": "Bilateral is the single load-bearing feature.",
+     "to": "the single most important feature, because unilateral pain changes the entire workup"
+    },
+    {
+     "claim": "Unilateral pain flips the entire pathway.",
+     "to": "the single most important feature, because unilateral pain changes the entire workup"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Bilateral is the single most important feature.",
+     "from": "Bilateral is the single load-bearing feature."
+    },
+    {
+     "claim": "Unilateral pain changes the entire workup.",
+     "from": "Unilateral pain flips the entire pathway."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "The relieving factors are the trap. Improvement with massage or over-the-counter analgesics reads as reassuring, and it is — but <b>it is not discriminating</b>, because the one benign-looking mimic on the list, osteoid osteoma, is famous for dramatic NSAID relief. A reader who uses analgesic response as evidence of benignity has used a feature both diagnoses share. The stem also offers the detail that pain is more common on days when he runs a lot as if it were a worrying exertional pattern; in this diagnosis it is an expected trigger and belongs on the benign side.",
+   "with": "Improvement with massage or over-the-counter analgesics is reassuring, but <b>it is not discriminating</b>. Osteoid osteoma, the one benign-looking mimic on the list, is famous for dramatic NSAID relief. Analgesic response is a feature both diagnoses share, so it is not evidence of benignity. Pain that is more common on days when he runs a lot can look like a worrying exertional pattern. In growing pains it is an expected trigger and belongs on the benign side.",
+   "note": "voice: Decoy note; drop trap/reader/stem framing and em dash",
+   "claims": [
+    {
+     "claim": "The relieving factors are the trap.",
+     "dropped": "framing about the question; the reason is stated next"
+    },
+    {
+     "claim": "Improvement with massage or over-the-counter analgesics is reassuring.",
+     "to": "Improvement with massage or over-the-counter analgesics is reassuring, but it is not discriminating."
+    },
+    {
+     "claim": "Improvement with analgesics is not discriminating.",
+     "to": "Improvement with massage or over-the-counter analgesics is reassuring, but it is not discriminating."
+    },
+    {
+     "claim": "Osteoid osteoma, the one benign-looking mimic on the list, is famous for dramatic NSAID relief.",
+     "to": "Osteoid osteoma, the one benign-looking mimic on the list, is famous for dramatic NSAID relief."
+    },
+    {
+     "claim": "Analgesic response is a feature both diagnoses share and is not evidence of benignity.",
+     "to": "Analgesic response is a feature both diagnoses share, so it is not evidence of benignity."
+    },
+    {
+     "claim": "Pain more common on days when he runs a lot is offered as if it were a worrying exertional pattern.",
+     "to": "Pain that is more common on days when he runs a lot can look like a worrying exertional pattern."
+    },
+    {
+     "claim": "In this diagnosis exertion is an expected trigger and belongs on the benign side.",
+     "to": "In growing pains it is an expected trigger and belongs on the benign side."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Improvement with massage or over-the-counter analgesics is reassuring, but it is not discriminating.",
+     "from": "Improvement with massage or over-the-counter analgesics is reassuring."
+    },
+    {
+     "claim": "Osteoid osteoma, the one benign-looking mimic on the list, is famous for dramatic NSAID relief.",
+     "from": "Osteoid osteoma, the one benign-looking mimic on the list, is famous for dramatic NSAID relief."
+    },
+    {
+     "claim": "Analgesic response is a feature both diagnoses share, so it is not evidence of benignity.",
+     "from": "Analgesic response is a feature both diagnoses share and is not evidence of benignity."
+    },
+    {
+     "claim": "Pain more common on days when he runs a lot can look like a worrying exertional pattern.",
+     "from": "Pain more common on days when he runs a lot is offered as if it were a worrying exertional pattern."
+    },
+    {
+     "claim": "In growing pains it is an expected trigger and belongs on the benign side.",
+     "from": "In this diagnosis exertion is an expected trigger and belongs on the benign side."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "Episodic bilateral night-time leg pain in a 3-to-12-year-old with a normal examination is growing pains — reassurance, massage and analgesia, no imaging. &middot; <b>Laterality is the discriminator; nocturnality is not.</b> Bilateral night pain with a normal examination is benign, and unilateral night pain earns an x-ray even when it responds beautifully to NSAIDs. &middot; Growing pains are <b>the commonest cause of musculoskeletal pain in children aged 3 to 12</b>, and the name is wrong, since onset and location are unrelated to growth. &middot; The diagnosis requires a <b>normal physical examination</b>, so tenderness on palpation is not compatible with it and points at marrow or bone. &middot; <b>Pain-free intervals</b> are part of the definition, and persistent daily pain is a different problem. &middot; <b>Activity restriction and bracing are not recommended</b>, which makes them reliable wrong answers on this topic. &middot; It <b>waxes and wanes for months to years and resolves by adolescence</b>, so recurrence at follow-up is expected rather than a reason to escalate.",
+   "with": "Episodic bilateral night-time leg pain in a 3-to-12-year-old with a normal examination is growing pains: reassurance, massage and analgesia, and no imaging. &middot; <b>Laterality is the discriminator; nocturnality is not.</b> Bilateral night pain with a normal examination is benign, and unilateral night pain needs an x-ray even when it responds well to NSAIDs. &middot; Growing pains are <b>the commonest cause of musculoskeletal pain in children aged 3 to 12</b>. The name is a misnomer, since onset and location are unrelated to growth. &middot; The diagnosis requires a <b>normal physical examination</b>, so tenderness on palpation is not compatible with it and points at marrow or bone. &middot; <b>Pain-free intervals</b> are part of the definition, and persistent daily pain is a different problem. &middot; <b>Activity restriction and bracing are not recommended</b>. &middot; It <b>waxes and wanes for months to years and resolves by adolescence</b>, so recurrence at follow-up is expected rather than a reason to escalate.",
+   "note": "voice: Pearls; remove prose em dash, answer framing and figurative wording",
+   "claims": [
+    {
+     "claim": "Episodic bilateral night-time leg pain in a 3-to-12-year-old with a normal examination is growing pains.",
+     "to": "Episodic bilateral night-time leg pain in a 3-to-12-year-old with a normal examination is growing pains: reassurance, massage and analgesia, and no imaging."
+    },
+    {
+     "claim": "Growing pains are managed with reassurance, massage and analgesia, and no imaging.",
+     "to": "Episodic bilateral night-time leg pain in a 3-to-12-year-old with a normal examination is growing pains: reassurance, massage and analgesia, and no imaging."
+    },
+    {
+     "claim": "Laterality is the discriminator; nocturnality is not.",
+     "to": "Laterality is the discriminator; nocturnality is not."
+    },
+    {
+     "claim": "Bilateral night pain with a normal examination is benign.",
+     "to": "Bilateral night pain with a normal examination is benign, and unilateral night pain needs an x-ray even when it responds well to NSAIDs."
+    },
+    {
+     "claim": "Unilateral night pain earns an x-ray even when it responds to NSAIDs.",
+     "to": "Bilateral night pain with a normal examination is benign, and unilateral night pain needs an x-ray even when it responds well to NSAIDs."
+    },
+    {
+     "claim": "Growing pains are the commonest cause of musculoskeletal pain in children aged 3 to 12.",
+     "to": "Growing pains are the commonest cause of musculoskeletal pain in children aged 3 to 12."
+    },
+    {
+     "claim": "The name is wrong, since onset and location are unrelated to growth.",
+     "to": "The name is a misnomer, since onset and location are unrelated to growth."
+    },
+    {
+     "claim": "The diagnosis requires a normal physical examination.",
+     "to": "The diagnosis requires a normal physical examination, so tenderness on palpation is not compatible with it and points at marrow or bone."
+    },
+    {
+     "claim": "Tenderness on palpation is not compatible with growing pains and points at marrow or bone.",
+     "to": "The diagnosis requires a normal physical examination, so tenderness on palpation is not compatible with it and points at marrow or bone."
+    },
+    {
+     "claim": "Pain-free intervals are part of the definition.",
+     "to": "Pain-free intervals are part of the definition, and persistent daily pain is a different problem."
+    },
+    {
+     "claim": "Persistent daily pain is a different problem.",
+     "to": "Pain-free intervals are part of the definition, and persistent daily pain is a different problem."
+    },
+    {
+     "claim": "Activity restriction and bracing are not recommended.",
+     "to": "Activity restriction and bracing are not recommended."
+    },
+    {
+     "claim": "They are reliable wrong answers on this topic.",
+     "dropped": "framing about answer options"
+    },
+    {
+     "claim": "It waxes and wanes for months to years and resolves by adolescence.",
+     "to": "It waxes and wanes for months to years and resolves by adolescence, so recurrence at follow-up is expected rather than a reason to escalate."
+    },
+    {
+     "claim": "Recurrence at follow-up is expected rather than a reason to escalate.",
+     "to": "It waxes and wanes for months to years and resolves by adolescence, so recurrence at follow-up is expected rather than a reason to escalate."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Episodic bilateral night-time leg pain in a 3-to-12-year-old with a normal examination is growing pains.",
+     "from": "Episodic bilateral night-time leg pain in a 3-to-12-year-old with a normal examination is growing pains."
+    },
+    {
+     "claim": "Growing pains are managed with reassurance, massage and analgesia, and no imaging.",
+     "from": "Growing pains are managed with reassurance, massage and analgesia, and no imaging."
+    },
+    {
+     "claim": "Laterality is the discriminator; nocturnality is not.",
+     "from": "Laterality is the discriminator; nocturnality is not."
+    },
+    {
+     "claim": "Bilateral night pain with a normal examination is benign.",
+     "from": "Bilateral night pain with a normal examination is benign."
+    },
+    {
+     "claim": "Unilateral night pain needs an x-ray even when it responds well to NSAIDs.",
+     "from": "Unilateral night pain earns an x-ray even when it responds to NSAIDs."
+    },
+    {
+     "claim": "Growing pains are the commonest cause of musculoskeletal pain in children aged 3 to 12.",
+     "from": "Growing pains are the commonest cause of musculoskeletal pain in children aged 3 to 12."
+    },
+    {
+     "claim": "The name is a misnomer, since onset and location are unrelated to growth.",
+     "from": "The name is wrong, since onset and location are unrelated to growth."
+    },
+    {
+     "claim": "The diagnosis requires a normal physical examination.",
+     "from": "The diagnosis requires a normal physical examination."
+    },
+    {
+     "claim": "Tenderness on palpation is not compatible with it and points at marrow or bone.",
+     "from": "Tenderness on palpation is not compatible with growing pains and points at marrow or bone."
+    },
+    {
+     "claim": "Pain-free intervals are part of the definition.",
+     "from": "Pain-free intervals are part of the definition."
+    },
+    {
+     "claim": "Persistent daily pain is a different problem.",
+     "from": "Persistent daily pain is a different problem."
+    },
+    {
+     "claim": "Activity restriction and bracing are not recommended.",
+     "from": "Activity restriction and bracing are not recommended."
+    },
+    {
+     "claim": "It waxes and wanes for months to years and resolves by adolescence.",
+     "from": "It waxes and wanes for months to years and resolves by adolescence."
+    },
+    {
+     "claim": "Recurrence at follow-up is expected rather than a reason to escalate.",
+     "from": "Recurrence at follow-up is expected rather than a reason to escalate."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "Verified: Part I <b>The Limping Child — Master Table</b> owns the child whose gait is abnormal, and this brief is the one whose gait is normal, which is the fork between them. Part II <b>Pediatric Acute Lymphoblastic Leukemia</b> owns the systemic presentation this brief's negatives exclude, and Part I <b>Slipped Capital Femoral Epiphysis</b> owns the adolescent unilateral hip and thigh pain. Part II <b>Benign Acute Childhood Myositis</b> owns bilateral calf pain with calf tenderness after influenza. Store the discriminator as a question: is it bilateral, and is the examination normal?",
+   "with": "Part I <b>The Limping Child — Master Table</b> covers the child whose gait is abnormal; this brief covers the child whose gait is normal. Part II <b>Pediatric Acute Lymphoblastic Leukemia</b> covers the systemic presentation that this brief's negatives exclude. Part I <b>Slipped Capital Femoral Epiphysis</b> covers the adolescent unilateral hip and thigh pain. Part II <b>Benign Acute Childhood Myositis</b> covers bilateral calf pain with calf tenderness after influenza. Ask: is it bilateral, and is the examination normal?",
+   "note": "voice: Pairs with; strip Verified, owns to covers, question as Ask:",
+   "claims": [
+    {
+     "claim": "Verified.",
+     "dropped": "workflow tag"
+    },
+    {
+     "claim": "Part I The Limping Child — Master Table owns the child whose gait is abnormal; this brief is the one whose gait is normal.",
+     "to": "Part I The Limping Child — Master Table covers the child whose gait is abnormal; this brief covers the child whose gait is normal."
+    },
+    {
+     "claim": "Gait is the fork between the two briefs.",
+     "dropped": "framing; the gait split is stated in the same sentence"
+    },
+    {
+     "claim": "Part II Pediatric Acute Lymphoblastic Leukemia owns the systemic presentation this brief's negatives exclude.",
+     "to": "Part II Pediatric Acute Lymphoblastic Leukemia covers the systemic presentation that this brief's negatives exclude."
+    },
+    {
+     "claim": "Part I Slipped Capital Femoral Epiphysis owns the adolescent unilateral hip and thigh pain.",
+     "to": "Part I Slipped Capital Femoral Epiphysis covers the adolescent unilateral hip and thigh pain."
+    },
+    {
+     "claim": "Part II Benign Acute Childhood Myositis owns bilateral calf pain with calf tenderness after influenza.",
+     "to": "Part II Benign Acute Childhood Myositis covers bilateral calf pain with calf tenderness after influenza."
+    },
+    {
+     "claim": "The discriminator: is it bilateral, and is the examination normal?",
+     "to": "Ask: is it bilateral, and is the examination normal?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I The Limping Child — Master Table covers the child whose gait is abnormal; this brief covers the child whose gait is normal.",
+     "from": "Part I The Limping Child — Master Table owns the child whose gait is abnormal; this brief is the one whose gait is normal."
+    },
+    {
+     "claim": "Part II Pediatric Acute Lymphoblastic Leukemia covers the systemic presentation that this brief's negatives exclude.",
+     "from": "Part II Pediatric Acute Lymphoblastic Leukemia owns the systemic presentation this brief's negatives exclude."
+    },
+    {
+     "claim": "Part I Slipped Capital Femoral Epiphysis covers the adolescent unilateral hip and thigh pain.",
+     "from": "Part I Slipped Capital Femoral Epiphysis owns the adolescent unilateral hip and thigh pain."
+    },
+    {
+     "claim": "Part II Benign Acute Childhood Myositis covers bilateral calf pain with calf tenderness after influenza.",
+     "from": "Part II Benign Acute Childhood Myositis owns bilateral calf pain with calf tenderness after influenza."
+    },
+    {
+     "claim": "Ask: is it bilateral, and is the examination normal?",
+     "from": "The discriminator: is it bilateral, and is the examination normal?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "When a symptom has a frightening reputation, find the feature that actually separates its benign and sinister forms rather than treating the symptom itself as the flag — here night pain is shared by both and <b>laterality</b> does the work. And a response to treatment is only discriminating if the competing diagnosis does not also respond. --- <i>Batch 6, brief 02 · 2026-09-11.</i>",
+   "with": "When a symptom has a frightening reputation, do not treat the symptom itself as the flag. Find the feature that actually separates its benign and sinister forms. Here night pain is shared by both, and <b>laterality</b> separates them. A response to treatment is only discriminating if the competing diagnosis does not also respond.",
+   "note": "voice: .rule; remove em dash and batch note, split",
+   "claims": [
+    {
+     "claim": "When a symptom has a frightening reputation, do not treat the symptom itself as the flag.",
+     "to": "When a symptom has a frightening reputation, do not treat the symptom itself as the flag."
+    },
+    {
+     "claim": "Find the feature that separates its benign and sinister forms.",
+     "to": "Find the feature that actually separates its benign and sinister forms."
+    },
+    {
+     "claim": "Night pain is shared by both forms.",
+     "to": "Here night pain is shared by both, and laterality separates them."
+    },
+    {
+     "claim": "Laterality separates them.",
+     "to": "Here night pain is shared by both, and laterality separates them."
+    },
+    {
+     "claim": "A response to treatment is only discriminating if the competing diagnosis does not also respond.",
+     "to": "A response to treatment is only discriminating if the competing diagnosis does not also respond."
+    },
+    {
+     "claim": "Batch note.",
+     "dropped": "workflow note"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a symptom has a frightening reputation, do not treat the symptom itself as the flag.",
+     "from": "When a symptom has a frightening reputation, do not treat the symptom itself as the flag."
+    },
+    {
+     "claim": "Find the feature that separates its benign and sinister forms.",
+     "from": "Find the feature that separates its benign and sinister forms."
+    },
+    {
+     "claim": "Night pain is shared by both.",
+     "from": "Night pain is shared by both forms."
+    },
+    {
+     "claim": "Laterality separates them.",
+     "from": "Laterality separates them."
+    },
+    {
+     "claim": "A response to treatment is only discriminating if the competing diagnosis does not also respond.",
+     "from": "A response to treatment is only discriminating if the competing diagnosis does not also respond."
+    }
+   ]
+  }
+ ]
+}

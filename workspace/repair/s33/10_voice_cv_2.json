@@ -1,0 +1,1414 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "dvt",
+   "find": "<p><b>Pretest probability picks the branch, and stability picks the test.</b> High probability → skip D-dimer and image. D-dimer only earns its keep as a <b>rule-out in low-probability patients</b> — it's elevated in infection, malignancy, pregnancy, and post-op states, so it can never rule anything <i>in</i>.</p>",
+   "with": "<p>Pretest probability picks the testing branch, and stability picks the test. With high probability, skip the D-dimer and go to imaging. Use D-dimer only as a <b>rule-out in low-probability patients</b>. It is elevated in infection, malignancy, pregnancy and post-op states, so it can never rule anything <i>in</i>.</p>",
+   "note": "voice: .dp; bold slogan unbolded, arrow and em dash removed",
+   "reworded_bold": [
+    "Pretest probability picks the branch, and stability picks the test."
+   ],
+   "claims": [
+    {
+     "claim": "Pretest probability picks the testing branch.",
+     "to": "Pretest probability picks the testing branch, and stability picks the test."
+    },
+    {
+     "claim": "Stability picks the test.",
+     "to": "Pretest probability picks the testing branch, and stability picks the test."
+    },
+    {
+     "claim": "High probability means skip D-dimer and image.",
+     "to": "With high probability, skip the D-dimer and go to imaging."
+    },
+    {
+     "claim": "D-dimer is useful only as a rule-out in low-probability patients.",
+     "to": "Use D-dimer only as a rule-out in low-probability patients."
+    },
+    {
+     "claim": "D-dimer is elevated in infection, malignancy, pregnancy, and post-op states.",
+     "to": "It is elevated in infection, malignancy, pregnancy and post-op states, so it can never rule anything in."
+    },
+    {
+     "claim": "D-dimer can never rule anything in.",
+     "to": "It is elevated in infection, malignancy, pregnancy and post-op states, so it can never rule anything in."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Pretest probability picks the testing branch, and stability picks the test.",
+     "from": "Pretest probability picks the testing branch."
+    },
+    {
+     "claim": "With high probability, skip the D-dimer and go to imaging.",
+     "from": "High probability means skip D-dimer and image."
+    },
+    {
+     "claim": "Use D-dimer only as a rule-out in low-probability patients.",
+     "from": "D-dimer is useful only as a rule-out in low-probability patients."
+    },
+    {
+     "claim": "D-dimer is elevated in infection, malignancy, pregnancy and post-op states.",
+     "from": "D-dimer is elevated in infection, malignancy, pregnancy, and post-op states."
+    },
+    {
+     "claim": "D-dimer can never rule anything in.",
+     "from": "D-dimer can never rule anything in."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dvt",
+   "find": "<b>Virchow triad</b> &mdash; the three routes to venous thrombosis: stasis (immobility, long travel), endothelial injury (surgery, trauma, a line), hypercoagulability (cancer, pregnancy, estrogen, inherited thrombophilia)",
+   "with": "<b>Virchow triad</b> names the three routes to venous thrombosis. They are stasis (immobility, long travel), endothelial injury (surgery, trauma, a line) and hypercoagulability (cancer, pregnancy, estrogen, inherited thrombophilia).",
+   "note": "voice: Mnemonic pearl; prose em dash removed (no middot rows)",
+   "claims": [
+    {
+     "claim": "Virchow triad is the three routes to venous thrombosis.",
+     "to": "Virchow triad names the three routes to venous thrombosis."
+    },
+    {
+     "claim": "Stasis (immobility, long travel) is one route.",
+     "to": "They are stasis (immobility, long travel), endothelial injury (surgery, trauma, a line) and hypercoagulability (cancer, pregnancy, estrogen, inherited thrombophilia)."
+    },
+    {
+     "claim": "Endothelial injury (surgery, trauma, a line) is one route.",
+     "to": "They are stasis (immobility, long travel), endothelial injury (surgery, trauma, a line) and hypercoagulability (cancer, pregnancy, estrogen, inherited thrombophilia)."
+    },
+    {
+     "claim": "Hypercoagulability (cancer, pregnancy, estrogen, inherited thrombophilia) is one route.",
+     "to": "They are stasis (immobility, long travel), endothelial injury (surgery, trauma, a line) and hypercoagulability (cancer, pregnancy, estrogen, inherited thrombophilia)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Virchow triad names the three routes to venous thrombosis.",
+     "from": "Virchow triad is the three routes to venous thrombosis."
+    },
+    {
+     "claim": "The routes are stasis (immobility, long travel), endothelial injury (surgery, trauma, a line) and hypercoagulability (cancer, pregnancy, estrogen, inherited thrombophilia).",
+     "from": "Stasis (immobility, long travel) is one route."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dvt",
+   "find": "<span class=\"lbl\">Pearls</span> ECG in PE is usually just <b>sinus tachycardia</b>; S1Q3T3 is trivia and neither confirms nor excludes · treatment: DOAC or heparin bridge; <b>thrombolytics only if hypotensive/massive</b> · provoked DVT 3 months, unprovoked ≥3–6 months · IVC filter only if anticoagulation is contraindicated or fails · the named emergencies: <b>phlegmasia</b> and PE · <b>smokers ≥35 cannot use estrogen-containing OCPs</b> (WHO category 4).",
+   "with": "<span class=\"lbl\">Pearls</span> The <b>ECG</b> (electrocardiogram) in <b>PE</b> (pulmonary embolism) is usually just <b>sinus tachycardia</b>; S1Q3T3 neither confirms nor excludes it · treatment: <b>DOAC</b> (direct oral anticoagulant) or heparin bridge; <b>thrombolytics only if hypotensive/massive</b> · provoked <b>DVT</b> (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · <b>IVC</b> (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: <b>phlegmasia</b> and PE · <b>smokers ≥35 cannot use estrogen-containing OCPs</b> (oral contraceptive pills; <b>WHO</b> (World Health Organization) category 4).",
+   "note": "voice: Pearls; 'trivia' dropped, acronyms expanded",
+   "claims": [
+    {
+     "claim": "ECG in PE is usually just sinus tachycardia.",
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+    },
+    {
+     "claim": "S1Q3T3 is trivia (of no diagnostic value).",
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+    },
+    {
+     "claim": "S1Q3T3 neither confirms nor excludes PE.",
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+    },
+    {
+     "claim": "Treatment is DOAC or heparin bridge.",
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+    },
+    {
+     "claim": "Thrombolytics only if hypotensive/massive.",
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+    },
+    {
+     "claim": "Provoked DVT 3 months, unprovoked ≥3–6 months.",
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+    },
+    {
+     "claim": "IVC filter only if anticoagulation is contraindicated or fails.",
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+    },
+    {
+     "claim": "The named emergencies are phlegmasia and PE.",
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+    },
+    {
+     "claim": "Smokers ≥35 cannot use estrogen-containing OCPs (WHO category 4).",
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "ECG in PE is usually just sinus tachycardia.",
+     "from": "ECG in PE is usually just sinus tachycardia."
+    },
+    {
+     "claim": "S1Q3T3 neither confirms nor excludes PE.",
+     "from": "S1Q3T3 neither confirms nor excludes PE."
+    },
+    {
+     "claim": "Treatment is DOAC or heparin bridge.",
+     "from": "Treatment is DOAC or heparin bridge."
+    },
+    {
+     "claim": "Thrombolytics only if hypotensive/massive.",
+     "from": "Thrombolytics only if hypotensive/massive."
+    },
+    {
+     "claim": "Provoked DVT 3 months, unprovoked ≥3–6 months.",
+     "from": "Provoked DVT 3 months, unprovoked ≥3–6 months."
+    },
+    {
+     "claim": "IVC filter only if anticoagulation is contraindicated or fails.",
+     "from": "IVC filter only if anticoagulation is contraindicated or fails."
+    },
+    {
+     "claim": "The named emergencies are phlegmasia and PE.",
+     "from": "The named emergencies are phlegmasia and PE."
+    },
+    {
+     "claim": "Smokers ≥35 cannot use estrogen-containing OCPs (WHO category 4).",
+     "from": "Smokers ≥35 cannot use estrogen-containing OCPs (WHO category 4)."
+    },
+    {
+     "claim": "ECG stands for electrocardiogram.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PE stands for pulmonary embolism.",
+     "from": "expansion"
+    },
+    {
+     "claim": "DOAC stands for direct oral anticoagulant.",
+     "from": "expansion"
+    },
+    {
+     "claim": "DVT stands for deep vein thrombosis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "IVC stands for inferior vena cava.",
+     "from": "expansion"
+    },
+    {
+     "claim": "OCPs stands for oral contraceptive pills.",
+     "from": "expansion"
+    },
+    {
+     "claim": "WHO stands for World Health Organization.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "<p>Innocent murmurs are turbulent flow through a <b>structurally normal heart</b>: grade 1–2, early or midsystolic, musical or vibratory, and <b>softer with standing or Valsalva</b>. The rule that decides these stems runs in one direction: <b>any single pathologic feature</b> — grade ≥3, holosystolic or diastolic timing, harsh quality, persistence upright, abnormal S2, weak femoral pulses, or symptoms — buys ECG and echocardiography. And the reversal is its own diagnosis: a murmur that gets <b>louder</b> on standing or Valsalva is hypertrophic cardiomyopathy until proven otherwise.</p>",
+   "with": "<p>Innocent murmurs are turbulent flow through a <b>structurally normal heart</b>. They are grade 1–2, early or midsystolic, musical or vibratory, and <b>softer with standing or Valsalva</b>. Order <b>ECG</b> (electrocardiogram) and echocardiography for <b>any single pathologic feature</b>. Pathologic features are grade ≥3, holosystolic or diastolic timing, harsh quality, persistence upright, abnormal S2, weak femoral pulses, or symptoms. A murmur that gets <b>louder</b> on standing or Valsalva is hypertrophic cardiomyopathy until proven otherwise.</p>",
+   "note": "voice: .dp; framing removed, em dashes removed, list split out",
+   "claims": [
+    {
+     "claim": "Innocent murmurs are turbulent flow through a structurally normal heart.",
+     "to": "Innocent murmurs are turbulent flow through a structurally normal heart."
+    },
+    {
+     "claim": "Innocent murmurs are grade 1–2, early or midsystolic, musical or vibratory.",
+     "to": "They are grade 1–2, early or midsystolic, musical or vibratory, and softer with standing or Valsalva."
+    },
+    {
+     "claim": "Innocent murmurs are softer with standing or Valsalva.",
+     "to": "They are grade 1–2, early or midsystolic, musical or vibratory, and softer with standing or Valsalva."
+    },
+    {
+     "claim": "The rule that decides these stems runs in one direction.",
+     "dropped": "framing about the question"
+    },
+    {
+     "claim": "Any single pathologic feature buys ECG and echocardiography.",
+     "to": "Order ECG (electrocardiogram) and echocardiography for any single pathologic feature."
+    },
+    {
+     "claim": "Pathologic features are grade ≥3, holosystolic or diastolic timing, harsh quality, persistence upright, abnormal S2, weak femoral pulses, or symptoms.",
+     "to": "Pathologic features are grade ≥3, holosystolic or diastolic timing, harsh quality, persistence upright, abnormal S2, weak femoral pulses, or symptoms."
+    },
+    {
+     "claim": "The reversal is its own diagnosis.",
+     "dropped": "framing; the diagnosis itself is stated in the next sentence"
+    },
+    {
+     "claim": "A murmur that gets louder on standing or Valsalva is hypertrophic cardiomyopathy until proven otherwise.",
+     "to": "A murmur that gets louder on standing or Valsalva is hypertrophic cardiomyopathy until proven otherwise."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Innocent murmurs are turbulent flow through a structurally normal heart.",
+     "from": "Innocent murmurs are turbulent flow through a structurally normal heart."
+    },
+    {
+     "claim": "Innocent murmurs are grade 1–2, early or midsystolic, musical or vibratory, and softer with standing or Valsalva.",
+     "from": "Innocent murmurs are grade 1–2, early or midsystolic, musical or vibratory."
+    },
+    {
+     "claim": "Order ECG and echocardiography for any single pathologic feature.",
+     "from": "Any single pathologic feature buys ECG and echocardiography."
+    },
+    {
+     "claim": "ECG stands for electrocardiogram.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Pathologic features are grade ≥3, holosystolic or diastolic timing, harsh quality, persistence upright, abnormal S2, weak femoral pulses, or symptoms.",
+     "from": "Pathologic features are grade ≥3, holosystolic or diastolic timing, harsh quality, persistence upright, abnormal S2, weak femoral pulses, or symptoms."
+    },
+    {
+     "claim": "A murmur that gets louder on standing or Valsalva is hypertrophic cardiomyopathy until proven otherwise.",
+     "from": "A murmur that gets louder on standing or Valsalva is hypertrophic cardiomyopathy until proven otherwise."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "A <b>continuous</b> murmur in a child has three owners and the location separates them: <b>Right infraclavicular and positional</b>",
+   "with": "A <b>continuous</b> murmur in a child has three causes, separated by location: <b>Right infraclavicular and positional</b>",
+   "note": "voice: continuous-murmur pearl opener; personification removed",
+   "claims": [
+    {
+     "claim": "A continuous murmur in a child has three causes.",
+     "to": "A continuous murmur in a child has three causes, separated by location: Right infraclavicular and positional — venous hum, benign, fades with ipsilateral head rotation and when supine"
+    },
+    {
+     "claim": "Location separates the three causes.",
+     "to": "A continuous murmur in a child has three causes, separated by location: Right infraclavicular and positional — venous hum, benign, fades with ipsilateral head rotation and when supine"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A continuous murmur in a child has three causes, separated by location.",
+     "from": "A continuous murmur in a child has three causes."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "<b>A normally split S2 is not filler</b> &mdash; a <i>fixed</i> split is the atrial septal defect tell, so a stem that says S2 moves with respiration is retiring that option on purpose.",
+   "with": "<b>Normally split S2</b> &mdash; a <i>fixed</i> split is the atrial septal defect sign, so an S2 split that moves with respiration excludes atrial septal defect.",
+   "note": "voice: continuous-murmur pearl last row; slogan bold reworded, stem framing removed",
+   "reworded_bold": [
+    "A normally split S2 is not filler"
+   ],
+   "claims": [
+    {
+     "claim": "A normally split S2 is not filler.",
+     "to": "Normally split S2 — a fixed split is the atrial septal defect sign, so an S2 split that moves with respiration excludes atrial septal defect."
+    },
+    {
+     "claim": "A fixed split S2 is the atrial septal defect tell.",
+     "to": "Normally split S2 — a fixed split is the atrial septal defect sign, so an S2 split that moves with respiration excludes atrial septal defect."
+    },
+    {
+     "claim": "An S2 that moves with respiration eliminates atrial septal defect.",
+     "to": "Normally split S2 — a fixed split is the atrial septal defect sign, so an S2 split that moves with respiration excludes atrial septal defect."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A fixed split is the atrial septal defect sign.",
+     "from": "A fixed split S2 is the atrial septal defect tell."
+    },
+    {
+     "claim": "An S2 split that moves with respiration excludes atrial septal defect.",
+     "from": "An S2 that moves with respiration eliminates atrial septal defect."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "Part I <b>Cyanotic Congenital Heart Disease</b> (the pathologic column's cyanosis and single S2 live there) and <b>Right-Sided Murmurs: Pulmonic Stenosis &amp; Tricuspid Regurgitation</b> — the pathologic counterpart of the innocent pulmonic flow murmur. Store the discriminator: <b>\"what does standing do to it?\"</b>",
+   "with": "Part I <b>Cyanotic Congenital Heart Disease</b> covers the cyanosis and single S2 of the pathologic column. <b>Right-Sided Murmurs: Pulmonic Stenosis &amp; Tricuspid Regurgitation</b> covers the pathologic counterpart of the innocent pulmonic flow murmur. Ask: <b>\"what does standing do to it?\"</b>",
+   "note": "voice: Pairs with; 'covers', 'Ask:', em dash removed",
+   "claims": [
+    {
+     "claim": "Cyanotic Congenital Heart Disease covers the pathologic column's cyanosis and single S2.",
+     "to": "Part I Cyanotic Congenital Heart Disease covers the cyanosis and single S2 of the pathologic column."
+    },
+    {
+     "claim": "Right-Sided Murmurs covers the pathologic counterpart of the innocent pulmonic flow murmur.",
+     "to": "Right-Sided Murmurs: Pulmonic Stenosis & Tricuspid Regurgitation covers the pathologic counterpart of the innocent pulmonic flow murmur."
+    },
+    {
+     "claim": "The discriminator is what standing does to the murmur.",
+     "to": "Ask: \"what does standing do to it?\""
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Cyanotic Congenital Heart Disease covers the cyanosis and single S2 of the pathologic column.",
+     "from": "Cyanotic Congenital Heart Disease covers the pathologic column's cyanosis and single S2."
+    },
+    {
+     "claim": "Right-Sided Murmurs covers the pathologic counterpart of the innocent pulmonic flow murmur.",
+     "from": "Right-Sided Murmurs covers the pathologic counterpart of the innocent pulmonic flow murmur."
+    },
+    {
+     "claim": "Ask what standing does to the murmur.",
+     "from": "The discriminator is what standing does to the murmur."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "<b>Every benign murmur has an expiry date</b> &mdash; outliving the window is itself a pathologic feature &middot; <b>Intensity is not size</b> &mdash; a small ventricular septal defect",
+   "with": "<b>Persistence past the expected age</b> &mdash; a benign murmur that outlives its window is itself a pathologic feature &middot; <b>Intensity and defect size</b> &mdash; a small ventricular septal defect",
+   "note": "voice: four-benign-murmurs pearl; slogan bold terms reworded, structural dashes kept",
+   "reworded_bold": [
+    "Every benign murmur has an expiry date",
+    "Intensity is not size"
+   ],
+   "claims": [
+    {
+     "claim": "Every benign murmur has an expected age window.",
+     "to": "Persistence past the expected age — a benign murmur that outlives its window is itself a pathologic feature"
+    },
+    {
+     "claim": "Outliving the window is itself a pathologic feature.",
+     "to": "Persistence past the expected age — a benign murmur that outlives its window is itself a pathologic feature"
+    },
+    {
+     "claim": "Intensity is not size.",
+     "to": "Intensity and defect size — a small ventricular septal defect is loud and a large one is soft or silent, because turbulence falls as the orifice widens"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A benign murmur persisting past the expected age window is itself a pathologic feature.",
+     "from": "Outliving the window is itself a pathologic feature."
+    },
+    {
+     "claim": "Intensity does not track defect size.",
+     "from": "Intensity is not size."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "<span class=\"lbl\">Transferable rule</span> Screening rules run on single disqualifiers: reassurance requires the entire benign profile, but one pathologic feature — on exam, in the vitals, or in the history — is sufficient to buy the workup.",
+   "with": "<span class=\"lbl\">Transferable rule</span> In screening, reassurance requires the entire benign profile. One pathologic feature on exam, in the vitals or in the history is sufficient to start the workup.",
+   "note": "voice: rule; aphorism opener removed, em dashes removed",
+   "claims": [
+    {
+     "claim": "Screening rules run on single disqualifiers.",
+     "to": "One pathologic feature on exam, in the vitals or in the history is sufficient to start the workup."
+    },
+    {
+     "claim": "Reassurance requires the entire benign profile.",
+     "to": "In screening, reassurance requires the entire benign profile."
+    },
+    {
+     "claim": "One pathologic feature on exam, in the vitals, or in the history is sufficient to buy the workup.",
+     "to": "One pathologic feature on exam, in the vitals or in the history is sufficient to start the workup."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In screening, reassurance requires the entire benign profile.",
+     "from": "Reassurance requires the entire benign profile."
+    },
+    {
+     "claim": "One pathologic feature on exam, in the vitals or in the history is sufficient to start the workup.",
+     "from": "One pathologic feature on exam, in the vitals, or in the history is sufficient to buy the workup."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "Patent ductus arteriosus is the right category for a continuous murmur near a clavicle, but the side and the positional change were never checked &mdash; a ductus does not care which way the head turns.",
+   "with": "Patent ductus arteriosus: it is the right category for a continuous murmur near a clavicle. Check the side and the positional change; a ductus murmur does not change with head turning.",
+   "note": "voice: trap line to Option: why; personification removed",
+   "claims": [
+    {
+     "claim": "Patent ductus arteriosus is the right category for a continuous murmur near a clavicle.",
+     "to": "Patent ductus arteriosus: it is the right category for a continuous murmur near a clavicle."
+    },
+    {
+     "claim": "The side and the positional change were never checked.",
+     "to": "Check the side and the positional change; a ductus murmur does not change with head turning."
+    },
+    {
+     "claim": "A ductus murmur does not change with which way the head turns.",
+     "to": "Check the side and the positional change; a ductus murmur does not change with head turning."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Patent ductus arteriosus is the right category for a continuous murmur near a clavicle.",
+     "from": "Patent ductus arteriosus is the right category for a continuous murmur near a clavicle."
+    },
+    {
+     "claim": "Check the side and the positional change.",
+     "from": "The side and the positional change were never checked."
+    },
+    {
+     "claim": "A ductus murmur does not change with head turning.",
+     "from": "A ductus murmur does not change with which way the head turns."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "Atrial septal defect survives only if the split S2 goes unread; the stem states that it moves with respiration, which is the opposite of the fixed split ASD requires.",
+   "with": "Atrial septal defect: the split S2 here moves with respiration, the opposite of the fixed split it requires.",
+   "note": "voice: trap line to Option: why; stem framing removed",
+   "claims": [
+    {
+     "claim": "Atrial septal defect survives only if the split S2 goes unread.",
+     "to": "Atrial septal defect: the split S2 here moves with respiration, the opposite of the fixed split it requires."
+    },
+    {
+     "claim": "The split S2 moves with respiration.",
+     "to": "Atrial septal defect: the split S2 here moves with respiration, the opposite of the fixed split it requires."
+    },
+    {
+     "claim": "ASD requires a fixed split, the opposite of a split that moves with respiration.",
+     "to": "Atrial septal defect: the split S2 here moves with respiration, the opposite of the fixed split it requires."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The split S2 moves with respiration.",
+     "from": "The split S2 moves with respiration."
+    },
+    {
+     "claim": "Atrial septal defect requires a fixed split.",
+     "from": "ASD requires a fixed split, the opposite of a split that moves with respiration."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "HCM is the dangerous twin of the innocent murmur — the discriminator is the direction the murmur moves on standing.",
+   "with": "Hypertrophic cardiomyopathy: it is the dangerous mimic of the innocent murmur; the direction the murmur moves on standing separates them.",
+   "note": "voice: trap line to Option: why; acronym written out",
+   "claims": [
+    {
+     "claim": "HCM is the dangerous twin of the innocent murmur.",
+     "to": "Hypertrophic cardiomyopathy: it is the dangerous mimic of the innocent murmur; the direction the murmur moves on standing separates them."
+    },
+    {
+     "claim": "The direction the murmur moves on standing discriminates HCM from the innocent murmur.",
+     "to": "Hypertrophic cardiomyopathy: it is the dangerous mimic of the innocent murmur; the direction the murmur moves on standing separates them."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hypertrophic cardiomyopathy is the dangerous mimic of the innocent murmur.",
+     "from": "HCM is the dangerous twin of the innocent murmur."
+    },
+    {
+     "claim": "The direction the murmur moves on standing separates them.",
+     "from": "The direction the murmur moves on standing discriminates HCM from the innocent murmur."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "\"Reassurance\" feels too easy on a murmur stem — accept it only after naming the full benign profile.",
+   "with": "Reassurance: accept it only after naming the full benign profile.",
+   "note": "voice: trap line to Option: why; meta removed",
+   "claims": [
+    {
+     "claim": "Reassurance feels too easy on a murmur stem.",
+     "dropped": "framing about the question"
+    },
+    {
+     "claim": "Accept reassurance only after naming the full benign profile.",
+     "to": "Reassurance: accept it only after naming the full benign profile."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Accept reassurance only after naming the full benign profile.",
+     "from": "Accept reassurance only after naming the full benign profile."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cyanotic-chd",
+   "find": "<p>Two axes sort every cyanotic lesion: <b>when the cyanosis appears</b> (birth vs infancy vs intermittent spells) and <b>whether a murmur is present</b>. The most-tested mechanism is the tet spell: TOF's outflow obstruction is partly <b>dynamic</b>, so crying or dehydration deepens the right-to-left shunt, and <b>squatting or knee-chest raises systemic vascular resistance</b> to reverse it. The most-tested trap: TOF's murmur comes from the <b>narrowed RVOT, not the VSD</b> — the VSD is too large to generate one.</p>",
+   "with": "<p>Sort every cyanotic lesion by <b>when the cyanosis appears</b> (birth vs infancy vs intermittent spells) and <b>whether a murmur is present</b>. In <b>TOF</b> (tetralogy of Fallot), outflow obstruction is partly <b>dynamic</b>, so crying or dehydration deepens the right-to-left shunt. In a spell, <b>squatting or knee-chest raises systemic vascular resistance</b> and reverses the shunt. The TOF murmur comes from the <b>narrowed RVOT, not the VSD</b> (right ventricular outflow tract; ventricular septal defect). The VSD is too large to generate a murmur.</p>",
+   "note": "voice: .dp; exam-yield framing removed, em dash removed, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Two axes sort every cyanotic lesion: when the cyanosis appears and whether a murmur is present.",
+     "to": "Sort every cyanotic lesion by when the cyanosis appears (birth vs infancy vs intermittent spells) and whether a murmur is present."
+    },
+    {
+     "claim": "Timing is birth vs infancy vs intermittent spells.",
+     "to": "Sort every cyanotic lesion by when the cyanosis appears (birth vs infancy vs intermittent spells) and whether a murmur is present."
+    },
+    {
+     "claim": "The tet spell is the most-tested mechanism.",
+     "dropped": "exam-yield framing; the mechanism itself is kept"
+    },
+    {
+     "claim": "TOF's outflow obstruction is partly dynamic.",
+     "to": "In TOF (tetralogy of Fallot), outflow obstruction is partly dynamic, so crying or dehydration deepens the right-to-left shunt."
+    },
+    {
+     "claim": "Crying or dehydration deepens the right-to-left shunt.",
+     "to": "In TOF (tetralogy of Fallot), outflow obstruction is partly dynamic, so crying or dehydration deepens the right-to-left shunt."
+    },
+    {
+     "claim": "Squatting or knee-chest raises systemic vascular resistance to reverse the shunt.",
+     "to": "In a spell, squatting or knee-chest raises systemic vascular resistance and reverses the shunt."
+    },
+    {
+     "claim": "The murmur source is the most-tested trap.",
+     "dropped": "exam-yield framing about the trap"
+    },
+    {
+     "claim": "TOF's murmur comes from the narrowed RVOT, not the VSD.",
+     "to": "The TOF murmur comes from the narrowed RVOT, not the VSD (right ventricular outflow tract; ventricular septal defect)."
+    },
+    {
+     "claim": "The VSD is too large to generate a murmur.",
+     "to": "The VSD is too large to generate a murmur."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Sort every cyanotic lesion by when the cyanosis appears (birth vs infancy vs intermittent spells) and whether a murmur is present.",
+     "from": "Two axes sort every cyanotic lesion: when the cyanosis appears and whether a murmur is present."
+    },
+    {
+     "claim": "TOF stands for tetralogy of Fallot.",
+     "from": "expansion"
+    },
+    {
+     "claim": "In TOF, outflow obstruction is partly dynamic.",
+     "from": "TOF's outflow obstruction is partly dynamic."
+    },
+    {
+     "claim": "Crying or dehydration deepens the right-to-left shunt.",
+     "from": "Crying or dehydration deepens the right-to-left shunt."
+    },
+    {
+     "claim": "In a spell, squatting or knee-chest raises systemic vascular resistance and reverses the shunt.",
+     "from": "Squatting or knee-chest raises systemic vascular resistance to reverse the shunt."
+    },
+    {
+     "claim": "The TOF murmur comes from the narrowed RVOT, not the VSD.",
+     "from": "TOF's murmur comes from the narrowed RVOT, not the VSD."
+    },
+    {
+     "claim": "RVOT stands for right ventricular outflow tract.",
+     "from": "expansion"
+    },
+    {
+     "claim": "VSD stands for ventricular septal defect.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The VSD is too large to generate a murmur.",
+     "from": "The VSD is too large to generate a murmur."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cyanotic-chd",
+   "find": "<span class=\"lbl\">Pearls</span> Silent cyanosis (no murmur) = TAPVR or HLHS — flow through an ASD or a large PDA is too low-velocity to murmur · severe RVOT narrowing = cyanosis at birth; milder narrowing = intermittent spells in infancy · Ebstein's spectrum runs from birth cyanosis (tiny RV, severe TR) to adult right-heart failure · truncus is the one whose cyanosis characteristically arrives in infancy, not at birth. · During a tet spell the outflow tract narrows further and pulmonary flow drops, so the harsh systolic murmur <b>softens or disappears</b>.",
+   "with": "<span class=\"lbl\">Pearls</span> Silent cyanosis (no murmur) = <b>TAPVR</b> (total anomalous pulmonary venous return) or <b>HLHS</b> (hypoplastic left heart syndrome). Flow through an atrial septal defect or a large patent ductus arteriosus is too low-velocity to murmur · severe right ventricular outflow tract narrowing = cyanosis at birth; milder narrowing = intermittent spells in infancy · Ebstein's spectrum runs from birth cyanosis (tiny right ventricle, severe tricuspid regurgitation) to adult right-heart failure · truncus is the one whose cyanosis characteristically arrives in infancy, not at birth · during a tet spell the outflow tract narrows further and pulmonary flow drops, so the harsh systolic murmur <b>softens or disappears</b>.",
+   "note": "voice: Pearls; prose em dash removed, acronyms expanded or written out",
+   "claims": [
+    {
+     "claim": "Silent cyanosis (no murmur) = TAPVR or HLHS.",
+     "to": "Silent cyanosis (no murmur) = TAPVR (total anomalous pulmonary venous return) or HLHS (hypoplastic left heart syndrome). Flow through an atrial septal defect or a large patent ductus arteriosus is too low-velocity to murmur · severe right ventricular outflow tract narrowing = cyanosis at birth; milder narrowing = intermittent spells in infancy · Ebstein's spectrum runs from birth cyanosis (tiny right ventricle, severe tricuspid regurgitation) to adult right-heart failure · truncus is the one whose cyanosis characteristically arrives in infancy, not at birth · during a tet spell the outflow tract narrows further and pulmonary flow drops, so the harsh systolic murmur softens or disappears."
+    },
+    {
+     "claim": "Flow through an ASD or a large PDA is too low-velocity to murmur.",
+     "to": "Silent cyanosis (no murmur) = TAPVR (total anomalous pulmonary venous return) or HLHS (hypoplastic left heart syndrome). Flow through an atrial septal defect or a large patent ductus arteriosus is too low-velocity to murmur · severe right ventricular outflow tract narrowing = cyanosis at birth; milder narrowing = intermittent spells in infancy · Ebstein's spectrum runs from birth cyanosis (tiny right ventricle, severe tricuspid regurgitation) to adult right-heart failure · truncus is the one whose cyanosis characteristically arrives in infancy, not at birth · during a tet spell the outflow tract narrows further and pulmonary flow drops, so the harsh systolic murmur softens or disappears."
+    },
+    {
+     "claim": "Severe RVOT narrowing = cyanosis at birth.",
+     "to": "Silent cyanosis (no murmur) = TAPVR (total anomalous pulmonary venous return) or HLHS (hypoplastic left heart syndrome). Flow through an atrial septal defect or a large patent ductus arteriosus is too low-velocity to murmur · severe right ventricular outflow tract narrowing = cyanosis at birth; milder narrowing = intermittent spells in infancy · Ebstein's spectrum runs from birth cyanosis (tiny right ventricle, severe tricuspid regurgitation) to adult right-heart failure · truncus is the one whose cyanosis characteristically arrives in infancy, not at birth · during a tet spell the outflow tract narrows further and pulmonary flow drops, so the harsh systolic murmur softens or disappears."
+    },
+    {
+     "claim": "Milder narrowing = intermittent spells in infancy.",
+     "to": "Silent cyanosis (no murmur) = TAPVR (total anomalous pulmonary venous return) or HLHS (hypoplastic left heart syndrome). Flow through an atrial septal defect or a large patent ductus arteriosus is too low-velocity to murmur · severe right ventricular outflow tract narrowing = cyanosis at birth; milder narrowing = intermittent spells in infancy · Ebstein's spectrum runs from birth cyanosis (tiny right ventricle, severe tricuspid regurgitation) to adult right-heart failure · truncus is the one whose cyanosis characteristically arrives in infancy, not at birth · during a tet spell the outflow tract narrows further and pulmonary flow drops, so the harsh systolic murmur softens or disappears."
+    },
+    {
+     "claim": "Ebstein's spectrum runs from birth cyanosis (tiny RV, severe TR) to adult right-heart failure.",
+     "to": "Silent cyanosis (no murmur) = TAPVR (total anomalous pulmonary venous return) or HLHS (hypoplastic left heart syndrome). Flow through an atrial septal defect or a large patent ductus arteriosus is too low-velocity to murmur · severe right ventricular outflow tract narrowing = cyanosis at birth; milder narrowing = intermittent spells in infancy · Ebstein's spectrum runs from birth cyanosis (tiny right ventricle, severe tricuspid regurgitation) to adult right-heart failure · truncus is the one whose cyanosis characteristically arrives in infancy, not at birth · during a tet spell the outflow tract narrows further and pulmonary flow drops, so the harsh systolic murmur softens or disappears."
+    },
+    {
+     "claim": "Truncus is the one whose cyanosis characteristically arrives in infancy, not at birth.",
+     "to": "Silent cyanosis (no murmur) = TAPVR (total anomalous pulmonary venous return) or HLHS (hypoplastic left heart syndrome). Flow through an atrial septal defect or a large patent ductus arteriosus is too low-velocity to murmur · severe right ventricular outflow tract narrowing = cyanosis at birth; milder narrowing = intermittent spells in infancy · Ebstein's spectrum runs from birth cyanosis (tiny right ventricle, severe tricuspid regurgitation) to adult right-heart failure · truncus is the one whose cyanosis characteristically arrives in infancy, not at birth · during a tet spell the outflow tract narrows further and pulmonary flow drops, so the harsh systolic murmur softens or disappears."
+    },
+    {
+     "claim": "During a tet spell the outflow tract narrows further and pulmonary flow drops.",
+     "to": "Silent cyanosis (no murmur) = TAPVR (total anomalous pulmonary venous return) or HLHS (hypoplastic left heart syndrome). Flow through an atrial septal defect or a large patent ductus arteriosus is too low-velocity to murmur · severe right ventricular outflow tract narrowing = cyanosis at birth; milder narrowing = intermittent spells in infancy · Ebstein's spectrum runs from birth cyanosis (tiny right ventricle, severe tricuspid regurgitation) to adult right-heart failure · truncus is the one whose cyanosis characteristically arrives in infancy, not at birth · during a tet spell the outflow tract narrows further and pulmonary flow drops, so the harsh systolic murmur softens or disappears."
+    },
+    {
+     "claim": "The harsh systolic murmur softens or disappears during a tet spell.",
+     "to": "Silent cyanosis (no murmur) = TAPVR (total anomalous pulmonary venous return) or HLHS (hypoplastic left heart syndrome). Flow through an atrial septal defect or a large patent ductus arteriosus is too low-velocity to murmur · severe right ventricular outflow tract narrowing = cyanosis at birth; milder narrowing = intermittent spells in infancy · Ebstein's spectrum runs from birth cyanosis (tiny right ventricle, severe tricuspid regurgitation) to adult right-heart failure · truncus is the one whose cyanosis characteristically arrives in infancy, not at birth · during a tet spell the outflow tract narrows further and pulmonary flow drops, so the harsh systolic murmur softens or disappears."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Silent cyanosis (no murmur) = TAPVR or HLHS.",
+     "from": "Silent cyanosis (no murmur) = TAPVR or HLHS."
+    },
+    {
+     "claim": "TAPVR stands for total anomalous pulmonary venous return.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HLHS stands for hypoplastic left heart syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Flow through an atrial septal defect or a large patent ductus arteriosus is too low-velocity to murmur.",
+     "from": "Flow through an ASD or a large PDA is too low-velocity to murmur."
+    },
+    {
+     "claim": "Severe right ventricular outflow tract narrowing = cyanosis at birth.",
+     "from": "Severe RVOT narrowing = cyanosis at birth."
+    },
+    {
+     "claim": "Milder narrowing = intermittent spells in infancy.",
+     "from": "Milder narrowing = intermittent spells in infancy."
+    },
+    {
+     "claim": "Ebstein's spectrum runs from birth cyanosis (tiny right ventricle, severe tricuspid regurgitation) to adult right-heart failure.",
+     "from": "Ebstein's spectrum runs from birth cyanosis (tiny RV, severe TR) to adult right-heart failure."
+    },
+    {
+     "claim": "Truncus is the one whose cyanosis characteristically arrives in infancy, not at birth.",
+     "from": "Truncus is the one whose cyanosis characteristically arrives in infancy, not at birth."
+    },
+    {
+     "claim": "During a tet spell the outflow tract narrows further and pulmonary flow drops.",
+     "from": "During a tet spell the outflow tract narrows further and pulmonary flow drops."
+    },
+    {
+     "claim": "The harsh systolic murmur softens or disappears.",
+     "from": "The harsh systolic murmur softens or disappears during a tet spell."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cyanotic-chd",
+   "find": "Part I <b>Innocent vs Pathologic Murmurs</b> — central cyanosis and a single or fixed S2 sit in that brief's pathologic column and land here. Store the discriminator: <b>\"cyanosis at birth, and is there a murmur?\"</b> Part I <b>Cyanosis in the Newborn</b> runs the sort that has to finish before this lesion catalog opens. Part II <b>Congenital Shunts and the Transitional Clock</b> holds the look-alike large ventricular septal defect: did the cyanosis come as an acute spell with crying, or over months as the murmur faded?",
+   "with": "Part I <b>Innocent vs Pathologic Murmurs</b> lists central cyanosis and a single or fixed S2 in its pathologic column; this brief covers those lesions. Ask: <b>\"cyanosis at birth, and is there a murmur?\"</b> Part I <b>Cyanosis in the Newborn</b> covers the sort that must be finished before this lesion catalog applies. Part II <b>Congenital Shunts and the Transitional Clock</b> covers the look-alike large ventricular septal defect. Ask: did the cyanosis come as an acute spell with crying, or over months as the murmur faded?",
+   "note": "voice: Pairs with; 'covers', 'Ask:', em dash removed",
+   "claims": [
+    {
+     "claim": "Central cyanosis and a single or fixed S2 sit in the pathologic column of Innocent vs Pathologic Murmurs and are covered here.",
+     "to": "Part I Innocent vs Pathologic Murmurs lists central cyanosis and a single or fixed S2 in its pathologic column; this brief covers those lesions."
+    },
+    {
+     "claim": "The discriminator is cyanosis at birth, and is there a murmur.",
+     "to": "Ask: \"cyanosis at birth, and is there a murmur?\""
+    },
+    {
+     "claim": "Cyanosis in the Newborn runs the sort that has to finish before this lesion catalog.",
+     "to": "Part I Cyanosis in the Newborn covers the sort that must be finished before this lesion catalog applies."
+    },
+    {
+     "claim": "Congenital Shunts and the Transitional Clock holds the look-alike large ventricular septal defect.",
+     "to": "Part II Congenital Shunts and the Transitional Clock covers the look-alike large ventricular septal defect."
+    },
+    {
+     "claim": "The discriminating question is whether the cyanosis came as an acute spell with crying or over months as the murmur faded.",
+     "to": "Ask: did the cyanosis come as an acute spell with crying, or over months as the murmur faded?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Innocent vs Pathologic Murmurs lists central cyanosis and a single or fixed S2 in its pathologic column; this brief covers those lesions.",
+     "from": "Central cyanosis and a single or fixed S2 sit in the pathologic column of Innocent vs Pathologic Murmurs and are covered here."
+    },
+    {
+     "claim": "Ask: cyanosis at birth, and is there a murmur?",
+     "from": "The discriminator is cyanosis at birth, and is there a murmur."
+    },
+    {
+     "claim": "Cyanosis in the Newborn covers the sort that must be finished before this lesion catalog applies.",
+     "from": "Cyanosis in the Newborn runs the sort that has to finish before this lesion catalog."
+    },
+    {
+     "claim": "Congenital Shunts and the Transitional Clock covers the look-alike large ventricular septal defect.",
+     "from": "Congenital Shunts and the Transitional Clock holds the look-alike large ventricular septal defect."
+    },
+    {
+     "claim": "Ask whether the cyanosis came as an acute spell with crying or over months as the murmur faded.",
+     "from": "The discriminating question is whether the cyanosis came as an acute spell with crying or over months as the murmur faded."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cyanotic-chd",
+   "find": "<span class=\"lbl\">Transferable rule</span> Congenital heart stems are sorted on two axes before any anatomy is recalled — the clock (birth / infancy / episodic) and the murmur (present, absent, and which structure actually makes it).",
+   "with": "<span class=\"lbl\">Transferable rule</span> Sort congenital heart disease on two axes before recalling any anatomy. The axes are the timing of cyanosis (birth / infancy / episodic) and the murmur (present or absent, and which structure actually makes it).",
+   "note": "voice: rule; em dash and 'stems' framing removed",
+   "claims": [
+    {
+     "claim": "Congenital heart stems are sorted on two axes before any anatomy is recalled.",
+     "to": "Sort congenital heart disease on two axes before recalling any anatomy."
+    },
+    {
+     "claim": "One axis is the clock (birth / infancy / episodic).",
+     "to": "The axes are the timing of cyanosis (birth / infancy / episodic) and the murmur (present or absent, and which structure actually makes it)."
+    },
+    {
+     "claim": "The other axis is the murmur (present, absent, and which structure actually makes it).",
+     "to": "The axes are the timing of cyanosis (birth / infancy / episodic) and the murmur (present or absent, and which structure actually makes it)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Sort congenital heart disease on two axes before recalling any anatomy.",
+     "from": "Congenital heart stems are sorted on two axes before any anatomy is recalled."
+    },
+    {
+     "claim": "One axis is the timing of cyanosis (birth / infancy / episodic).",
+     "from": "One axis is the clock (birth / infancy / episodic)."
+    },
+    {
+     "claim": "The other axis is the murmur (present or absent, and which structure actually makes it).",
+     "from": "The other axis is the murmur (present, absent, and which structure actually makes it)."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cyanotic-chd",
+   "find": "The VSD is real anatomy in TOF — offered as the murmur's source, where the RVOT is the answer.",
+   "with": "Flow across the ventricular septal defect: the defect is real anatomy in tetralogy of Fallot, but the murmur comes from the right ventricular outflow tract.",
+   "note": "voice: trap line to Option: why; acronyms written out",
+   "claims": [
+    {
+     "claim": "The VSD is real anatomy in TOF.",
+     "to": "Flow across the ventricular septal defect: the defect is real anatomy in tetralogy of Fallot, but the murmur comes from the right ventricular outflow tract."
+    },
+    {
+     "claim": "The VSD is offered as the murmur's source, but the RVOT is the source.",
+     "to": "Flow across the ventricular septal defect: the defect is real anatomy in tetralogy of Fallot, but the murmur comes from the right ventricular outflow tract."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The ventricular septal defect is real anatomy in tetralogy of Fallot.",
+     "from": "The VSD is real anatomy in TOF."
+    },
+    {
+     "claim": "The murmur comes from the right ventricular outflow tract, not the ventricular septal defect.",
+     "from": "The VSD is offered as the murmur's source, but the RVOT is the source."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cyanotic-chd",
+   "find": "A spell's oxygen saturation invites \"give oxygen\" — the shunt is anatomic; SVR, not FiO₂, is the lever.",
+   "with": "Give oxygen: a spell's low oxygen saturation invites it, but the shunt is anatomic. Systemic vascular resistance, not fraction of inspired oxygen, is the lever.",
+   "note": "voice: trap line to Option: why; acronyms written out",
+   "claims": [
+    {
+     "claim": "A spell's oxygen saturation invites giving oxygen.",
+     "to": "Give oxygen: a spell's low oxygen saturation invites it, but the shunt is anatomic."
+    },
+    {
+     "claim": "The shunt is anatomic.",
+     "to": "Give oxygen: a spell's low oxygen saturation invites it, but the shunt is anatomic."
+    },
+    {
+     "claim": "SVR, not FiO2, is the lever.",
+     "to": "Systemic vascular resistance, not fraction of inspired oxygen, is the lever."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A spell's low oxygen saturation invites giving oxygen.",
+     "from": "A spell's oxygen saturation invites giving oxygen."
+    },
+    {
+     "claim": "The shunt is anatomic.",
+     "from": "The shunt is anatomic."
+    },
+    {
+     "claim": "Systemic vascular resistance, not fraction of inspired oxygen, is the lever.",
+     "from": "SVR, not FiO2, is the lever."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "right-murmurs",
+   "find": "<p>Right-sided murmurs <b>intensify with increased venous return</b> — inspiration, leg raise, hepatic compression. Within the right side, the accessory sounds decide: <b>pulmonic stenosis</b> is an <b>ejection click followed by a crescendo–decrescendo murmur at the left 2nd interspace with widened splitting of S2</b>, usually congenital and often silent until adult dyspnea; <b>tricuspid regurgitation</b> is <b>holosystolic at the left lower sternal border</b> with the right-heart-failure exam — distended jugulars, <b>pulsatile tender hepatomegaly</b>, ascites, edema, RV heave.</p>",
+   "with": "<p>Right-sided murmurs <b>intensify with increased venous return</b>: inspiration, leg raise or hepatic compression. Within the right side, the accessory sounds separate the lesions. In <b>pulmonic stenosis</b>, there is an <b>ejection click followed by a crescendo–decrescendo murmur at the left 2nd interspace with widened splitting of S2</b>. It is usually congenital and often silent until adult dyspnea. In <b>tricuspid regurgitation</b>, the murmur is <b>holosystolic at the left lower sternal border</b>. It comes with the right-heart-failure exam: distended jugulars, <b>pulsatile tender hepatomegaly</b>, ascites, edema and a right ventricular heave.</p>",
+   "note": "voice: .dp; long sentence split, em dashes removed, RV written out",
+   "claims": [
+    {
+     "claim": "Right-sided murmurs intensify with increased venous return.",
+     "to": "Right-sided murmurs intensify with increased venous return: inspiration, leg raise or hepatic compression."
+    },
+    {
+     "claim": "Increased venous return comes from inspiration, leg raise, hepatic compression.",
+     "to": "Right-sided murmurs intensify with increased venous return: inspiration, leg raise or hepatic compression."
+    },
+    {
+     "claim": "Within the right side, the accessory sounds decide.",
+     "to": "Within the right side, the accessory sounds separate the lesions."
+    },
+    {
+     "claim": "Pulmonic stenosis is an ejection click followed by a crescendo–decrescendo murmur at the left 2nd interspace with widened splitting of S2.",
+     "to": "In pulmonic stenosis, there is an ejection click followed by a crescendo–decrescendo murmur at the left 2nd interspace with widened splitting of S2."
+    },
+    {
+     "claim": "Pulmonic stenosis is usually congenital and often silent until adult dyspnea.",
+     "to": "It is usually congenital and often silent until adult dyspnea."
+    },
+    {
+     "claim": "Tricuspid regurgitation is holosystolic at the left lower sternal border.",
+     "to": "In tricuspid regurgitation, the murmur is holosystolic at the left lower sternal border."
+    },
+    {
+     "claim": "Tricuspid regurgitation comes with the right-heart-failure exam: distended jugulars, pulsatile tender hepatomegaly, ascites, edema, RV heave.",
+     "to": "It comes with the right-heart-failure exam: distended jugulars, pulsatile tender hepatomegaly, ascites, edema and a right ventricular heave."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Right-sided murmurs intensify with increased venous return: inspiration, leg raise or hepatic compression.",
+     "from": "Right-sided murmurs intensify with increased venous return."
+    },
+    {
+     "claim": "Within the right side, the accessory sounds separate the lesions.",
+     "from": "Within the right side, the accessory sounds decide."
+    },
+    {
+     "claim": "In pulmonic stenosis, there is an ejection click followed by a crescendo–decrescendo murmur at the left 2nd interspace with widened splitting of S2.",
+     "from": "Pulmonic stenosis is an ejection click followed by a crescendo–decrescendo murmur at the left 2nd interspace with widened splitting of S2."
+    },
+    {
+     "claim": "Pulmonic stenosis is usually congenital and often silent until adult dyspnea.",
+     "from": "Pulmonic stenosis is usually congenital and often silent until adult dyspnea."
+    },
+    {
+     "claim": "Tricuspid regurgitation is holosystolic at the left lower sternal border.",
+     "from": "Tricuspid regurgitation is holosystolic at the left lower sternal border."
+    },
+    {
+     "claim": "Tricuspid regurgitation comes with the right-heart-failure exam: distended jugulars, pulsatile tender hepatomegaly, ascites, edema and a right ventricular heave.",
+     "from": "Tricuspid regurgitation comes with the right-heart-failure exam: distended jugulars, pulsatile tender hepatomegaly, ascites, edema, RV heave."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "right-murmurs",
+   "find": "<span class=\"lbl\">Pearls</span> Inspiration is the free maneuver in every murmur stem — right-sided murmurs grow, left-sided don't · pulsatile liver + v waves in the JVP belong to TR · pulmonic stenosis is the murmur that hides until adulthood, then presents as exertional dyspnea · carcinoid is the rare acquired cause of PS.",
+   "with": "<span class=\"lbl\">Pearls</span> Check inspiration in every murmur: right-sided murmurs grow and left-sided murmurs do not · a pulsatile liver and v waves in the <b>JVP</b> (jugular venous pressure) belong to tricuspid regurgitation · pulmonic stenosis goes unnoticed until adulthood, then presents as exertional dyspnea · carcinoid is the rare acquired cause of pulmonic stenosis.",
+   "note": "voice: Pearls; em dash and stem framing removed, acronyms expanded or written out",
+   "claims": [
+    {
+     "claim": "Inspiration is the free maneuver in every murmur.",
+     "to": "Check inspiration in every murmur: right-sided murmurs grow and left-sided murmurs do not · a pulsatile liver and v waves in the JVP (jugular venous pressure) belong to tricuspid regurgitation · pulmonic stenosis goes unnoticed until adulthood, then presents as exertional dyspnea · carcinoid is the rare acquired cause of pulmonic stenosis."
+    },
+    {
+     "claim": "Right-sided murmurs grow with inspiration, left-sided don't.",
+     "to": "Check inspiration in every murmur: right-sided murmurs grow and left-sided murmurs do not · a pulsatile liver and v waves in the JVP (jugular venous pressure) belong to tricuspid regurgitation · pulmonic stenosis goes unnoticed until adulthood, then presents as exertional dyspnea · carcinoid is the rare acquired cause of pulmonic stenosis."
+    },
+    {
+     "claim": "Pulsatile liver + v waves in the JVP belong to TR.",
+     "to": "Check inspiration in every murmur: right-sided murmurs grow and left-sided murmurs do not · a pulsatile liver and v waves in the JVP (jugular venous pressure) belong to tricuspid regurgitation · pulmonic stenosis goes unnoticed until adulthood, then presents as exertional dyspnea · carcinoid is the rare acquired cause of pulmonic stenosis."
+    },
+    {
+     "claim": "Pulmonic stenosis hides until adulthood, then presents as exertional dyspnea.",
+     "to": "Check inspiration in every murmur: right-sided murmurs grow and left-sided murmurs do not · a pulsatile liver and v waves in the JVP (jugular venous pressure) belong to tricuspid regurgitation · pulmonic stenosis goes unnoticed until adulthood, then presents as exertional dyspnea · carcinoid is the rare acquired cause of pulmonic stenosis."
+    },
+    {
+     "claim": "Carcinoid is the rare acquired cause of PS.",
+     "to": "Check inspiration in every murmur: right-sided murmurs grow and left-sided murmurs do not · a pulsatile liver and v waves in the JVP (jugular venous pressure) belong to tricuspid regurgitation · pulmonic stenosis goes unnoticed until adulthood, then presents as exertional dyspnea · carcinoid is the rare acquired cause of pulmonic stenosis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Check inspiration in every murmur.",
+     "from": "Inspiration is the free maneuver in every murmur."
+    },
+    {
+     "claim": "Right-sided murmurs grow and left-sided murmurs do not.",
+     "from": "Right-sided murmurs grow with inspiration, left-sided don't."
+    },
+    {
+     "claim": "A pulsatile liver and v waves in the JVP belong to tricuspid regurgitation.",
+     "from": "Pulsatile liver + v waves in the JVP belong to TR."
+    },
+    {
+     "claim": "JVP stands for jugular venous pressure.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Pulmonic stenosis goes unnoticed until adulthood, then presents as exertional dyspnea.",
+     "from": "Pulmonic stenosis hides until adulthood, then presents as exertional dyspnea."
+    },
+    {
+     "claim": "Carcinoid is the rare acquired cause of pulmonic stenosis.",
+     "from": "Carcinoid is the rare acquired cause of PS."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "right-murmurs",
+   "find": "Part I <b>Innocent vs Pathologic Murmurs</b> — the innocent pulmonic flow murmur is this brief's benign twin; the ejection click and the S2 split are what separate them. Store the discriminator: <b>\"is there a click, and what is the S2 doing?\"</b>",
+   "with": "Part I <b>Innocent vs Pathologic Murmurs</b> covers the innocent pulmonic flow murmur, the benign counterpart of pulmonic stenosis. The ejection click and the S2 split separate them. Ask: <b>\"is there a click, and what is the S2 doing?\"</b>",
+   "note": "voice: Pairs with; 'covers', 'Ask:', em dash removed",
+   "claims": [
+    {
+     "claim": "The innocent pulmonic flow murmur (in Innocent vs Pathologic Murmurs) is this brief's benign twin.",
+     "to": "Part I Innocent vs Pathologic Murmurs covers the innocent pulmonic flow murmur, the benign counterpart of pulmonic stenosis."
+    },
+    {
+     "claim": "The ejection click and the S2 split separate them.",
+     "to": "The ejection click and the S2 split separate them."
+    },
+    {
+     "claim": "The discriminator is: is there a click, and what is the S2 doing?",
+     "to": "Ask: \"is there a click, and what is the S2 doing?\""
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Innocent vs Pathologic Murmurs covers the innocent pulmonic flow murmur, the benign counterpart of pulmonic stenosis.",
+     "from": "The innocent pulmonic flow murmur (in Innocent vs Pathologic Murmurs) is this brief's benign twin."
+    },
+    {
+     "claim": "The ejection click and the S2 split separate them.",
+     "from": "The ejection click and the S2 split separate them."
+    },
+    {
+     "claim": "Ask: is there a click, and what is the S2 doing?",
+     "from": "The discriminator is: is there a click, and what is the S2 doing?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "right-murmurs",
+   "find": "<span class=\"lbl\">Transferable rule</span> Systolic murmurs are separated by their company, not their sound: the accessory findings — click, S2 behavior, response to inspiration or standing — carry the diagnosis, and the murmur itself is nearly interchangeable.",
+   "with": "<span class=\"lbl\">Transferable rule</span> Separate systolic murmurs by their accompanying findings, not their sound. The accessory findings (click, S2 behavior, response to inspiration or standing) carry the diagnosis. The murmur itself is nearly interchangeable.",
+   "note": "voice: rule; figurative 'company' and em dashes removed",
+   "claims": [
+    {
+     "claim": "Systolic murmurs are separated by their company, not their sound.",
+     "to": "Separate systolic murmurs by their accompanying findings, not their sound."
+    },
+    {
+     "claim": "The accessory findings (click, S2 behavior, response to inspiration or standing) carry the diagnosis.",
+     "to": "The accessory findings (click, S2 behavior, response to inspiration or standing) carry the diagnosis."
+    },
+    {
+     "claim": "The murmur itself is nearly interchangeable.",
+     "to": "The murmur itself is nearly interchangeable."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Separate systolic murmurs by their accompanying findings, not their sound.",
+     "from": "Systolic murmurs are separated by their company, not their sound."
+    },
+    {
+     "claim": "The accessory findings (click, S2 behavior, response to inspiration or standing) carry the diagnosis.",
+     "from": "The accessory findings (click, S2 behavior, response to inspiration or standing) carry the diagnosis."
+    },
+    {
+     "claim": "The murmur itself is nearly interchangeable.",
+     "from": "The murmur itself is nearly interchangeable."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "right-murmurs",
+   "find": "TR also augments with inspiration — offered against PS, where the click and split decide.",
+   "with": "Tricuspid regurgitation: it also augments with inspiration, so against pulmonic stenosis the click and the split decide.",
+   "note": "voice: trap line to Option: why; acronyms written out",
+   "claims": [
+    {
+     "claim": "TR also augments with inspiration.",
+     "to": "Tricuspid regurgitation: it also augments with inspiration, so against pulmonic stenosis the click and the split decide."
+    },
+    {
+     "claim": "Against PS, the click and split decide.",
+     "to": "Tricuspid regurgitation: it also augments with inspiration, so against pulmonic stenosis the click and the split decide."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Tricuspid regurgitation also augments with inspiration.",
+     "from": "TR also augments with inspiration."
+    },
+    {
+     "claim": "Against pulmonic stenosis, the click and the split decide.",
+     "from": "Against PS, the click and split decide."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "right-murmurs",
+   "find": "The anemia flow murmur is the benign twin — normal S2 and no click are its exoneration.",
+   "with": "Anemia flow murmur: it is the benign look-alike; a normal S2 and no click exonerate it.",
+   "note": "voice: trap line to Option: why; em dash removed",
+   "claims": [
+    {
+     "claim": "The anemia flow murmur is the benign twin.",
+     "to": "Anemia flow murmur: it is the benign look-alike; a normal S2 and no click exonerate it."
+    },
+    {
+     "claim": "Normal S2 and no click exonerate the anemia flow murmur.",
+     "to": "Anemia flow murmur: it is the benign look-alike; a normal S2 and no click exonerate it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The anemia flow murmur is the benign look-alike.",
+     "from": "The anemia flow murmur is the benign twin."
+    },
+    {
+     "claim": "A normal S2 and no click exonerate it.",
+     "from": "Normal S2 and no click exonerate the anemia flow murmur."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "htn-drugs",
+   "find": "<p>Confirmed hypertension gets a fixed baseline panel — and the panel's job is to find <b>end-organ injury and the comorbidity that picks the drug</b>. Injury on the initial workup (LVH on ECG) means <b>start treatment now</b>; further characterization (echo, stress testing) never delays the first agent. With no comorbidity, four classes are interchangeable first-line. With one, the stem is a matching exercise — and the most-tested match is <b>gout → losartan</b> (mildly uricosuric) with <b>thiazides avoided</b> (they raise urate).</p>",
+   "with": "<p>Confirmed hypertension gets a fixed baseline panel. The panel looks for <b>end-organ injury and the comorbidity that picks the drug</b>. Injury on the initial workup, such as <b>LVH</b> (left ventricular hypertrophy) on <b>ECG</b> (electrocardiogram), means <b>start treatment now</b>. Further characterization (echo, stress testing) never delays the first agent. With no comorbidity, four classes are interchangeable first-line. With one, match the drug to the comorbidity. The most-tested match is <b>gout → losartan</b> (mildly uricosuric), with <b>thiazides avoided</b> (they raise urate).</p>",
+   "note": "voice: .dp; em dashes and stem framing removed, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Confirmed hypertension gets a fixed baseline panel.",
+     "to": "Confirmed hypertension gets a fixed baseline panel."
+    },
+    {
+     "claim": "The panel's job is to find end-organ injury and the comorbidity that picks the drug.",
+     "to": "The panel looks for end-organ injury and the comorbidity that picks the drug."
+    },
+    {
+     "claim": "Injury on the initial workup (LVH on ECG) means start treatment now.",
+     "to": "Injury on the initial workup, such as LVH (left ventricular hypertrophy) on ECG (electrocardiogram), means start treatment now."
+    },
+    {
+     "claim": "Further characterization (echo, stress testing) never delays the first agent.",
+     "to": "Further characterization (echo, stress testing) never delays the first agent."
+    },
+    {
+     "claim": "With no comorbidity, four classes are interchangeable first-line.",
+     "to": "With no comorbidity, four classes are interchangeable first-line."
+    },
+    {
+     "claim": "With one comorbidity, the stem is a matching exercise.",
+     "to": "With one, match the drug to the comorbidity."
+    },
+    {
+     "claim": "The most-tested match is gout → losartan (mildly uricosuric).",
+     "to": "The most-tested match is gout → losartan (mildly uricosuric), with thiazides avoided (they raise urate)."
+    },
+    {
+     "claim": "In gout, thiazides are avoided (they raise urate).",
+     "to": "The most-tested match is gout → losartan (mildly uricosuric), with thiazides avoided (they raise urate)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Confirmed hypertension gets a fixed baseline panel.",
+     "from": "Confirmed hypertension gets a fixed baseline panel."
+    },
+    {
+     "claim": "The panel looks for end-organ injury and the comorbidity that picks the drug.",
+     "from": "The panel's job is to find end-organ injury and the comorbidity that picks the drug."
+    },
+    {
+     "claim": "Injury on the initial workup, such as LVH on ECG, means start treatment now.",
+     "from": "Injury on the initial workup (LVH on ECG) means start treatment now."
+    },
+    {
+     "claim": "LVH stands for left ventricular hypertrophy.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ECG stands for electrocardiogram.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Further characterization (echo, stress testing) never delays the first agent.",
+     "from": "Further characterization (echo, stress testing) never delays the first agent."
+    },
+    {
+     "claim": "With no comorbidity, four classes are interchangeable first-line.",
+     "from": "With no comorbidity, four classes are interchangeable first-line."
+    },
+    {
+     "claim": "With one comorbidity, match the drug to the comorbidity.",
+     "from": "With one comorbidity, the stem is a matching exercise."
+    },
+    {
+     "claim": "The most-tested match is gout → losartan (mildly uricosuric).",
+     "from": "The most-tested match is gout → losartan (mildly uricosuric)."
+    },
+    {
+     "claim": "In gout, thiazides are avoided (they raise urate).",
+     "from": "In gout, thiazides are avoided (they raise urate)."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "htn-drugs",
+   "find": "<span class=\"lbl\">Pearls</span> Stopping allopurinol treats neither the pressure nor the LVH — and invites a flare · LVH regresses on ARB/ACEi therapy · β-blocker + nondihydropyridine CCB is the rate-control pairing for AF that also happens to treat the pressure · the same thiazide that is wrong in gout is doubly right in osteoporosis and calcium stones — the comorbidity flips the drug's sign.",
+   "with": "<span class=\"lbl\">Pearls</span> Stopping allopurinol treats neither the pressure nor the <b>LVH</b> (left ventricular hypertrophy), and it invites a flare · LVH regresses on <b>ARB</b> (angiotensin receptor blocker) or <b>ACEi</b> (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine <b>CCB</b> (calcium channel blocker) is the rate-control pairing for <b>AF</b> (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both conditions.",
+   "note": "voice: Pearls; em dashes and aphorism removed, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Stopping allopurinol treats neither the pressure nor the LVH.",
+     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both conditions."
+    },
+    {
+     "claim": "Stopping allopurinol invites a flare.",
+     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both conditions."
+    },
+    {
+     "claim": "LVH regresses on ARB/ACEi therapy.",
+     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both conditions."
+    },
+    {
+     "claim": "β-blocker + nondihydropyridine CCB is the rate-control pairing for AF that also treats the pressure.",
+     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both conditions."
+    },
+    {
+     "claim": "The same thiazide that is wrong in gout is doubly right in osteoporosis and calcium stones.",
+     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both conditions."
+    },
+    {
+     "claim": "The comorbidity flips the drug's sign.",
+     "dropped": "aphorism restating the previous claim"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Stopping allopurinol treats neither the pressure nor the LVH.",
+     "from": "Stopping allopurinol treats neither the pressure nor the LVH."
+    },
+    {
+     "claim": "LVH stands for left ventricular hypertrophy.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Stopping allopurinol invites a flare.",
+     "from": "Stopping allopurinol invites a flare."
+    },
+    {
+     "claim": "LVH regresses on ARB or ACEi therapy.",
+     "from": "LVH regresses on ARB/ACEi therapy."
+    },
+    {
+     "claim": "ARB stands for angiotensin receptor blocker.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ACEi stands for angiotensin-converting enzyme inhibitor.",
+     "from": "expansion"
+    },
+    {
+     "claim": "β-blocker + nondihydropyridine CCB is the rate-control pairing for AF that also treats the pressure.",
+     "from": "β-blocker + nondihydropyridine CCB is the rate-control pairing for AF that also treats the pressure."
+    },
+    {
+     "claim": "CCB stands for calcium channel blocker.",
+     "from": "expansion"
+    },
+    {
+     "claim": "AF stands for atrial fibrillation.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both conditions.",
+     "from": "The same thiazide that is wrong in gout is doubly right in osteoporosis and calcium stones."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "htn-drugs",
+   "find": "Part I <b>Secondary Hypertension</b> — that brief decides <i>whether to hunt a cause</i>; this one decides <i>which drug</i>, once the hunt is negative or not indicated. Store the discriminator: <b>\"resistant, young, or hypokalemic?\"</b>",
+   "with": "Part I <b>Secondary Hypertension</b> covers <i>whether to hunt a cause</i>. This brief covers <i>which drug</i>, once the hunt is negative or not indicated. Ask: <b>\"resistant, young, or hypokalemic?\"</b>",
+   "note": "voice: Pairs with; 'covers', 'Ask:', em dash removed",
+   "claims": [
+    {
+     "claim": "Secondary Hypertension decides whether to hunt a cause.",
+     "to": "Part I Secondary Hypertension covers whether to hunt a cause."
+    },
+    {
+     "claim": "This brief decides which drug, once the hunt is negative or not indicated.",
+     "to": "This brief covers which drug, once the hunt is negative or not indicated."
+    },
+    {
+     "claim": "The discriminator is: resistant, young, or hypokalemic?",
+     "to": "Ask: \"resistant, young, or hypokalemic?\""
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Secondary Hypertension covers whether to hunt a cause.",
+     "from": "Secondary Hypertension decides whether to hunt a cause."
+    },
+    {
+     "claim": "This brief covers which drug, once the hunt is negative or not indicated.",
+     "from": "This brief decides which drug, once the hunt is negative or not indicated."
+    },
+    {
+     "claim": "Ask: resistant, young, or hypokalemic?",
+     "from": "The discriminator is: resistant, young, or hypokalemic?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "htn-drugs",
+   "find": "<span class=\"lbl\">Transferable rule</span> Drug-choice stems are matching exercises where each agent has a signed value per comorbidity — the same drug is the answer in one stem and the avoided option in the next, so store the pairings, never a favorite drug.",
+   "with": "<span class=\"lbl\">Transferable rule</span> In drug choice, match each agent to the comorbidity; each agent helps or harms per comorbidity. The same drug is the answer with one comorbidity and the avoided option with another, so store the pairings, never a favorite drug.",
+   "note": "voice: rule; em dash and stem framing removed",
+   "claims": [
+    {
+     "claim": "Drug-choice stems are matching exercises.",
+     "to": "In drug choice, match each agent to the comorbidity; each agent helps or harms per comorbidity."
+    },
+    {
+     "claim": "Each agent has a signed value per comorbidity.",
+     "to": "In drug choice, match each agent to the comorbidity; each agent helps or harms per comorbidity."
+    },
+    {
+     "claim": "The same drug is the answer in one stem and the avoided option in the next.",
+     "to": "The same drug is the answer with one comorbidity and the avoided option with another, so store the pairings, never a favorite drug."
+    },
+    {
+     "claim": "Store the pairings, never a favorite drug.",
+     "to": "The same drug is the answer with one comorbidity and the avoided option with another, so store the pairings, never a favorite drug."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In drug choice, match each agent to the comorbidity.",
+     "from": "Drug-choice stems are matching exercises."
+    },
+    {
+     "claim": "Each agent helps or harms per comorbidity.",
+     "from": "Each agent has a signed value per comorbidity."
+    },
+    {
+     "claim": "The same drug is the answer with one comorbidity and the avoided option with another.",
+     "from": "The same drug is the answer in one stem and the avoided option in the next."
+    },
+    {
+     "claim": "Store the pairings, never a favorite drug.",
+     "from": "Store the pairings, never a favorite drug."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "htn-drugs",
+   "find": "The uric acid level baits \"discontinue allopurinol\" — a move that lowers nothing that matters.",
+   "with": "Discontinue allopurinol: the uric acid level baits this choice, but it lowers nothing that matters.",
+   "note": "voice: trap line to Option: why",
+   "claims": [
+    {
+     "claim": "The uric acid level baits discontinuing allopurinol.",
+     "to": "Discontinue allopurinol: the uric acid level baits this choice, but it lowers nothing that matters."
+    },
+    {
+     "claim": "Discontinuing allopurinol lowers nothing that matters.",
+     "to": "Discontinue allopurinol: the uric acid level baits this choice, but it lowers nothing that matters."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The uric acid level baits discontinuing allopurinol.",
+     "from": "The uric acid level baits discontinuing allopurinol."
+    },
+    {
+     "claim": "Discontinuing allopurinol lowers nothing that matters.",
+     "from": "Discontinuing allopurinol lowers nothing that matters."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "htn-drugs",
+   "find": "Echo or stress testing offered before the first antihypertensive — characterization never delays treatment.",
+   "with": "Echo or stress testing before the first antihypertensive: characterization never delays treatment.",
+   "note": "voice: trap line to Option: why",
+   "claims": [
+    {
+     "claim": "Echo or stress testing is offered before the first antihypertensive.",
+     "to": "Echo or stress testing before the first antihypertensive: characterization never delays treatment."
+    },
+    {
+     "claim": "Characterization never delays treatment.",
+     "to": "Echo or stress testing before the first antihypertensive: characterization never delays treatment."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Echo or stress testing before the first antihypertensive is the option.",
+     "from": "Echo or stress testing is offered before the first antihypertensive."
+    },
+    {
+     "claim": "Characterization never delays treatment.",
+     "from": "Characterization never delays treatment."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cyanotic-chd",
+   "find": "Right ventricular hypertrophy, Overriding aorta, VSD",
+   "with": "Right ventricular hypertrophy, Overriding aorta, <b>VSD</b> (ventricular septal defect)",
+   "note": "voice: Mnemonic pearl; acronym expanded (PROVe is a mnemonic, not expanded)",
+   "claims": [
+    {
+     "claim": "VSD is the fourth component of tetralogy in PROVe.",
+     "to": "PROVe — tetralogy: Pulmonic stenosis (right ventricular outflow obstruction), Right ventricular hypertrophy, Overriding aorta, VSD (ventricular septal defect)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "VSD is the fourth component of tetralogy in PROVe.",
+     "from": "VSD is the fourth component of tetralogy in PROVe."
+    },
+    {
+     "claim": "VSD stands for ventricular septal defect.",
+     "from": "expansion"
+    }
+   ]
+  }
+ ]
+}

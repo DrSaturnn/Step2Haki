@@ -1,0 +1,2336 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "<p>The infection history is deliberately non-discriminating: eight antibiotic courses for sinusitis and pneumonia is compatible with every option on the list except \"normal.\" The fork is settled by one line of the physical exam — <b>the PMI is in the right chest</b>, i.e. dextrocardia, i.e. situs inversus. Antibody deficiencies do not move the heart; retained secretions do not move the heart; only a disorder of ciliary motility does, because the same dynein-arm defect that leaves airway cilia dysmotile also leaves embryonic nodal cilia unable to establish left–right asymmetry, so laterality is randomized. That converts \"recurrent sinopulmonary infection\" into <b>Kartagener syndrome</b> — the situs inversus / recurrent sinusitis / bronchiectasis subgroup of primary ciliary dyskinesia. The secondary confirmation is the tonsils: lymphoid tissue is present, which is inconsistent with X-linked agammaglobulinemia.</p>",
+   "with": "<p>Eight antibiotic courses for sinusitis and pneumonia fit every cause listed except normal childhood infection. One physical exam finding separates them: <b>the PMI is in the right chest</b> (point of maximal impulse), meaning dextrocardia and situs inversus. Antibody deficiencies and retained secretions do not move the heart; only a disorder of ciliary motility does. The same dynein-arm defect that makes airway cilia dysmotile leaves embryonic nodal cilia unable to establish left–right asymmetry, so laterality is randomized. Recurrent sinopulmonary infection with situs inversus is therefore <b>Kartagener syndrome</b>, the subgroup of primary ciliary dyskinesia with situs inversus, recurrent sinusitis and bronchiectasis. The tonsils add a second confirmation: lymphoid tissue is present, which is inconsistent with X-linked agammaglobulinemia.</p>",
+   "note": "voice rewrite",
+   "claims": [
+    {
+     "claim": "The infection history is deliberately non-discriminating.",
+     "dropped": "framing about the stem; the clinical content (the courses fit every cause but one) is kept in the next claim"
+    },
+    {
+     "claim": "Eight antibiotic courses for sinusitis and pneumonia are compatible with every option except normal.",
+     "to": "Eight antibiotic courses for sinusitis and pneumonia fit every cause listed except normal childhood infection."
+    },
+    {
+     "claim": "One line of the physical exam settles the diagnosis.",
+     "to": "One physical exam finding separates them: the PMI is in the right chest (point of maximal impulse), meaning dextrocardia and situs inversus."
+    },
+    {
+     "claim": "The PMI is in the right chest.",
+     "to": "One physical exam finding separates them: the PMI is in the right chest (point of maximal impulse), meaning dextrocardia and situs inversus."
+    },
+    {
+     "claim": "A right-chest PMI means dextrocardia, i.e. situs inversus.",
+     "to": "One physical exam finding separates them: the PMI is in the right chest (point of maximal impulse), meaning dextrocardia and situs inversus."
+    },
+    {
+     "claim": "Antibody deficiencies do not move the heart.",
+     "to": "Antibody deficiencies and retained secretions do not move the heart; only a disorder of ciliary motility does."
+    },
+    {
+     "claim": "Retained secretions do not move the heart.",
+     "to": "Antibody deficiencies and retained secretions do not move the heart; only a disorder of ciliary motility does."
+    },
+    {
+     "claim": "Only a disorder of ciliary motility moves the heart.",
+     "to": "Antibody deficiencies and retained secretions do not move the heart; only a disorder of ciliary motility does."
+    },
+    {
+     "claim": "The same dynein-arm defect leaves airway cilia dysmotile and embryonic nodal cilia unable to establish left–right asymmetry.",
+     "to": "The same dynein-arm defect that makes airway cilia dysmotile leaves embryonic nodal cilia unable to establish left–right asymmetry, so laterality is randomized."
+    },
+    {
+     "claim": "Laterality is therefore randomized.",
+     "to": "The same dynein-arm defect that makes airway cilia dysmotile leaves embryonic nodal cilia unable to establish left–right asymmetry, so laterality is randomized."
+    },
+    {
+     "claim": "Recurrent sinopulmonary infection with this finding is Kartagener syndrome.",
+     "to": "Recurrent sinopulmonary infection with situs inversus is therefore Kartagener syndrome, the subgroup of primary ciliary dyskinesia with situs inversus, recurrent sinusitis and bronchiectasis."
+    },
+    {
+     "claim": "Kartagener syndrome is the situs inversus, recurrent sinusitis and bronchiectasis subgroup of primary ciliary dyskinesia.",
+     "to": "Recurrent sinopulmonary infection with situs inversus is therefore Kartagener syndrome, the subgroup of primary ciliary dyskinesia with situs inversus, recurrent sinusitis and bronchiectasis."
+    },
+    {
+     "claim": "The tonsils are the secondary confirmation.",
+     "to": "The tonsils add a second confirmation: lymphoid tissue is present, which is inconsistent with X-linked agammaglobulinemia."
+    },
+    {
+     "claim": "Lymphoid tissue is present, which is inconsistent with X-linked agammaglobulinemia.",
+     "to": "The tonsils add a second confirmation: lymphoid tissue is present, which is inconsistent with X-linked agammaglobulinemia."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Eight antibiotic courses for sinusitis and pneumonia are compatible with every option except normal.",
+     "from": "Eight antibiotic courses for sinusitis and pneumonia are compatible with every option except normal."
+    },
+    {
+     "claim": "One line of the physical exam settles the diagnosis.",
+     "from": "One line of the physical exam settles the diagnosis."
+    },
+    {
+     "claim": "The PMI is in the right chest.",
+     "from": "The PMI is in the right chest."
+    },
+    {
+     "claim": "A right-chest PMI means dextrocardia, i.e. situs inversus.",
+     "from": "A right-chest PMI means dextrocardia, i.e. situs inversus."
+    },
+    {
+     "claim": "Antibody deficiencies do not move the heart.",
+     "from": "Antibody deficiencies do not move the heart."
+    },
+    {
+     "claim": "Retained secretions do not move the heart.",
+     "from": "Retained secretions do not move the heart."
+    },
+    {
+     "claim": "Only a disorder of ciliary motility moves the heart.",
+     "from": "Only a disorder of ciliary motility moves the heart."
+    },
+    {
+     "claim": "The same dynein-arm defect leaves airway cilia dysmotile and embryonic nodal cilia unable to establish left–right asymmetry.",
+     "from": "The same dynein-arm defect leaves airway cilia dysmotile and embryonic nodal cilia unable to establish left–right asymmetry."
+    },
+    {
+     "claim": "Laterality is therefore randomized.",
+     "from": "Laterality is therefore randomized."
+    },
+    {
+     "claim": "Recurrent sinopulmonary infection with this finding is Kartagener syndrome.",
+     "from": "Recurrent sinopulmonary infection with this finding is Kartagener syndrome."
+    },
+    {
+     "claim": "Kartagener syndrome is the situs inversus, recurrent sinusitis and bronchiectasis subgroup of primary ciliary dyskinesia.",
+     "from": "Kartagener syndrome is the situs inversus, recurrent sinusitis and bronchiectasis subgroup of primary ciliary dyskinesia."
+    },
+    {
+     "claim": "The tonsils are the secondary confirmation.",
+     "from": "The tonsils are the secondary confirmation."
+    },
+    {
+     "claim": "Lymphoid tissue is present, which is inconsistent with X-linked agammaglobulinemia.",
+     "from": "Lymphoid tissue is present, which is inconsistent with X-linked agammaglobulinemia."
+    },
+    {
+     "claim": "PMI stands for point of maximal impulse.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "excludes CVID, which presents in adolescence or adulthood",
+   "with": "excludes <b>CVID</b> (common variable immunodeficiency), which presents in adolescence or adulthood",
+   "note": "acronym expanded",
+   "claims": [
+    {
+     "claim": "Age 18 months excludes CVID, which presents in adolescence or adulthood.",
+     "to": "excludes CVID (common variable immunodeficiency), which presents in adolescence or adulthood"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Age 18 months excludes CVID, which presents in adolescence or adulthood.",
+     "from": "Age 18 months excludes CVID, which presents in adolescence or adulthood."
+    },
+    {
+     "claim": "CVID stands for common variable immunodeficiency.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "consistent with autosomal recessive inheritance (PCD, CF); by itself it does not separate them, and it does not exclude X-linked disease — the tonsils do",
+   "with": "consistent with autosomal recessive inheritance, as in <b>PCD</b> (primary ciliary dyskinesia) and <b>CF</b> (cystic fibrosis). By itself it does not separate them or exclude X-linked disease; the tonsils do",
+   "note": "em dash removed; acronyms expanded",
+   "claims": [
+    {
+     "claim": "An affected older brother is consistent with autosomal recessive inheritance (PCD, CF).",
+     "to": "consistent with autosomal recessive inheritance, as in PCD (primary ciliary dyskinesia) and CF (cystic fibrosis)."
+    },
+    {
+     "claim": "By itself the affected brother does not separate PCD and CF.",
+     "to": "By itself it does not separate them or exclude X-linked disease; the tonsils do"
+    },
+    {
+     "claim": "The affected brother does not exclude X-linked disease; the tonsils do.",
+     "to": "By itself it does not separate them or exclude X-linked disease; the tonsils do"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "An affected older brother is consistent with autosomal recessive inheritance (PCD, CF).",
+     "from": "An affected older brother is consistent with autosomal recessive inheritance (PCD, CF)."
+    },
+    {
+     "claim": "By itself the affected brother does not separate PCD and CF.",
+     "from": "By itself the affected brother does not separate PCD and CF."
+    },
+    {
+     "claim": "The affected brother does not exclude X-linked disease; the tonsils do.",
+     "from": "The affected brother does not exclude X-linked disease; the tonsils do."
+    },
+    {
+     "claim": "PCD stands for primary ciliary dyskinesia.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CF stands for cystic fibrosis.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "The confirmatory ladder is not what this stem tests, so it collapses to one sentence: a suggestive phenotype is worked up with <b>low nasal nitric oxide</b>, then <b>bronchoscopic biopsy with electron microscopy showing ciliary/dynein-arm abnormality</b>, then <b>genetic testing</b> <i>(all in-context)</i> — with sweat chloride obtained first whenever growth or stools raise cystic fibrosis ⚠︎, because there is no single gold standard for PCD.",
+   "with": "There is no single gold standard for <b>PCD</b> (primary ciliary dyskinesia). Work up a suggestive phenotype with <b>low nasal nitric oxide</b>, then <b>bronchoscopic biopsy with electron microscopy showing ciliary/dynein-arm abnormality</b>, then <b>genetic testing</b>. Obtain sweat chloride first whenever growth or stools raise cystic fibrosis ⚠︎.",
+   "note": "voice rewrite",
+   "claims": [
+    {
+     "claim": "The confirmatory ladder is not what this stem tests, so it is one sentence.",
+     "dropped": "framing about the question"
+    },
+    {
+     "claim": "A suggestive phenotype is worked up with low nasal nitric oxide, then bronchoscopic biopsy with electron microscopy showing ciliary/dynein-arm abnormality, then genetic testing.",
+     "to": "Work up a suggestive phenotype with low nasal nitric oxide, then bronchoscopic biopsy with electron microscopy showing ciliary/dynein-arm abnormality, then genetic testing."
+    },
+    {
+     "claim": "Sweat chloride is obtained first whenever growth or stools raise cystic fibrosis.",
+     "to": "Obtain sweat chloride first whenever growth or stools raise cystic fibrosis ⚠︎."
+    },
+    {
+     "claim": "There is no single gold standard for PCD.",
+     "to": "There is no single gold standard for PCD (primary ciliary dyskinesia)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A suggestive phenotype is worked up with low nasal nitric oxide, then bronchoscopic biopsy with electron microscopy showing ciliary/dynein-arm abnormality, then genetic testing.",
+     "from": "A suggestive phenotype is worked up with low nasal nitric oxide, then bronchoscopic biopsy with electron microscopy showing ciliary/dynein-arm abnormality, then genetic testing."
+    },
+    {
+     "claim": "Sweat chloride is obtained first whenever growth or stools raise cystic fibrosis.",
+     "from": "Sweat chloride is obtained first whenever growth or stools raise cystic fibrosis."
+    },
+    {
+     "claim": "There is no single gold standard for PCD.",
+     "from": "There is no single gold standard for PCD."
+    },
+    {
+     "claim": "PCD stands for primary ciliary dyskinesia.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "PMI on the right → situs inversus → ciliary axis, and stop",
+   "with": "<b>PMI</b> (point of maximal impulse) on the right means situs inversus → ciliary axis, and stop",
+   "note": "one arrow per sentence",
+   "claims": [
+    {
+     "claim": "A PMI on the right means situs inversus.",
+     "to": "PMI (point of maximal impulse) on the right means situs inversus → ciliary axis, and stop"
+    },
+    {
+     "claim": "Situs inversus puts the case on the ciliary axis, and the workup stops there.",
+     "to": "PMI (point of maximal impulse) on the right means situs inversus → ciliary axis, and stop"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A PMI on the right means situs inversus.",
+     "from": "A PMI on the right means situs inversus."
+    },
+    {
+     "claim": "Situs inversus puts the case on the ciliary axis, and the workup stops there.",
+     "from": "Situs inversus puts the case on the ciliary axis, and the workup stops there."
+    },
+    {
+     "claim": "PMI stands for point of maximal impulse.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "\"Delivered vaginally without complications\" is planted to close off perinatal explanations and quietly withholds the neonatal respiratory distress that many PCD infants have ⚠︎ — its absence does not weaken the diagnosis. The SpO₂ of 99% is inert for the diagnosis but does work against focal obstruction, and the affected older brother is compatible with autosomal recessive PCD, autosomal recessive CF, and X-linked disease simultaneously, so it decides nothing on its own.",
+   "with": "\"Delivered vaginally without complications\" closes off perinatal explanations. No neonatal respiratory distress is reported, although many infants with <b>PCD</b> (primary ciliary dyskinesia) have it ⚠︎; its absence does not weaken the diagnosis. The SpO₂ of 99% does not help the diagnosis but argues against focal obstruction. The affected older brother fits autosomal recessive PCD, autosomal recessive <b>CF</b> (cystic fibrosis) and X-linked disease, so alone it separates none of them.",
+   "note": "voice rewrite",
+   "claims": [
+    {
+     "claim": "An uncomplicated vaginal delivery closes off perinatal explanations.",
+     "to": "\"Delivered vaginally without complications\" closes off perinatal explanations."
+    },
+    {
+     "claim": "The stem does not report neonatal respiratory distress.",
+     "to": "No neonatal respiratory distress is reported, although many infants with PCD (primary ciliary dyskinesia) have it ⚠︎; its absence does not weaken the diagnosis."
+    },
+    {
+     "claim": "Many PCD infants have neonatal respiratory distress.",
+     "to": "No neonatal respiratory distress is reported, although many infants with PCD (primary ciliary dyskinesia) have it ⚠︎; its absence does not weaken the diagnosis."
+    },
+    {
+     "claim": "The absence of neonatal distress does not weaken the diagnosis.",
+     "to": "No neonatal respiratory distress is reported, although many infants with PCD (primary ciliary dyskinesia) have it ⚠︎; its absence does not weaken the diagnosis."
+    },
+    {
+     "claim": "The SpO₂ of 99% is inert for the diagnosis.",
+     "to": "The SpO₂ of 99% does not help the diagnosis but argues against focal obstruction."
+    },
+    {
+     "claim": "The SpO₂ of 99% works against focal obstruction.",
+     "to": "The SpO₂ of 99% does not help the diagnosis but argues against focal obstruction."
+    },
+    {
+     "claim": "The affected older brother is compatible with autosomal recessive PCD, autosomal recessive CF, and X-linked disease simultaneously.",
+     "to": "The affected older brother fits autosomal recessive PCD, autosomal recessive CF (cystic fibrosis) and X-linked disease, so alone it separates none of them."
+    },
+    {
+     "claim": "The affected brother decides nothing on its own.",
+     "to": "The affected older brother fits autosomal recessive PCD, autosomal recessive CF (cystic fibrosis) and X-linked disease, so alone it separates none of them."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "An uncomplicated vaginal delivery closes off perinatal explanations.",
+     "from": "An uncomplicated vaginal delivery closes off perinatal explanations."
+    },
+    {
+     "claim": "The stem does not report neonatal respiratory distress.",
+     "from": "The stem does not report neonatal respiratory distress."
+    },
+    {
+     "claim": "Many PCD infants have neonatal respiratory distress.",
+     "from": "Many PCD infants have neonatal respiratory distress."
+    },
+    {
+     "claim": "The absence of neonatal distress does not weaken the diagnosis.",
+     "from": "The absence of neonatal distress does not weaken the diagnosis."
+    },
+    {
+     "claim": "The SpO₂ of 99% is inert for the diagnosis.",
+     "from": "The SpO₂ of 99% is inert for the diagnosis."
+    },
+    {
+     "claim": "The SpO₂ of 99% works against focal obstruction.",
+     "from": "The SpO₂ of 99% works against focal obstruction."
+    },
+    {
+     "claim": "The affected older brother is compatible with autosomal recessive PCD, autosomal recessive CF, and X-linked disease simultaneously.",
+     "from": "The affected older brother is compatible with autosomal recessive PCD, autosomal recessive CF, and X-linked disease simultaneously."
+    },
+    {
+     "claim": "The affected brother decides nothing on its own.",
+     "from": "The affected brother decides nothing on its own."
+    },
+    {
+     "claim": "PCD stands for primary ciliary dyskinesia.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CF stands for cystic fibrosis.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "Anything that moves an organ in a recurrent-infection stem — dextrocardia, right-sided stomach bubble, midline liver — takes you off the immunoglobulin axis immediately; antibody defects never alter anatomy.",
+   "with": "In recurrent infection, any displaced organ (dextrocardia, right-sided stomach bubble, midline liver) moves the workup off the immunoglobulin axis immediately. Antibody defects never alter anatomy.",
+   "note": "em dashes removed",
+   "claims": [
+    {
+     "claim": "In a recurrent-infection case, anything that moves an organ (dextrocardia, right-sided stomach bubble, midline liver) takes the workup off the immunoglobulin axis immediately.",
+     "to": "In recurrent infection, any displaced organ (dextrocardia, right-sided stomach bubble, midline liver) moves the workup off the immunoglobulin axis immediately."
+    },
+    {
+     "claim": "Antibody defects never alter anatomy.",
+     "to": "Antibody defects never alter anatomy."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In a recurrent-infection case, anything that moves an organ (dextrocardia, right-sided stomach bubble, midline liver) takes the workup off the immunoglobulin axis immediately.",
+     "from": "In a recurrent-infection case, anything that moves an organ (dextrocardia, right-sided stomach bubble, midline liver) takes the workup off the immunoglobulin axis immediately."
+    },
+    {
+     "claim": "Antibody defects never alter anatomy.",
+     "from": "Antibody defects never alter anatomy."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "so a normal PMI does not exclude it; the substitute clues are chronic otitis from infancy, year-round wet cough, and unexplained respiratory distress in a term newborn ⚠︎. &middot; Male infertility separates the two clearance diseases at the mechanism: PCD gives normal sperm counts with absent motility, CF gives obstructive azoospermia from congenital absence of the vas deferens ⚠︎.",
+   "with": "so a normal <b>PMI</b> (point of maximal impulse) does not exclude it. Other clues are chronic otitis from infancy, year-round wet cough, and unexplained respiratory distress in a term newborn ⚠︎. &middot; Male infertility separates the two clearance diseases by mechanism. <b>PCD</b> (primary ciliary dyskinesia) gives normal sperm counts with absent motility. <b>CF</b> (cystic fibrosis) gives obstructive azoospermia from congenital absence of the vas deferens ⚠︎.",
+   "note": "voice rewrite",
+   "claims": [
+    {
+     "claim": "A normal PMI does not exclude PCD.",
+     "to": "so a normal PMI (point of maximal impulse) does not exclude it."
+    },
+    {
+     "claim": "The substitute clues are chronic otitis from infancy, year-round wet cough, and unexplained respiratory distress in a term newborn.",
+     "to": "Other clues are chronic otitis from infancy, year-round wet cough, and unexplained respiratory distress in a term newborn ⚠︎."
+    },
+    {
+     "claim": "Male infertility separates the two clearance diseases at the mechanism.",
+     "to": "Male infertility separates the two clearance diseases by mechanism."
+    },
+    {
+     "claim": "PCD gives normal sperm counts with absent motility.",
+     "to": "PCD (primary ciliary dyskinesia) gives normal sperm counts with absent motility."
+    },
+    {
+     "claim": "CF gives obstructive azoospermia from congenital absence of the vas deferens.",
+     "to": "CF (cystic fibrosis) gives obstructive azoospermia from congenital absence of the vas deferens ⚠︎."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A normal PMI does not exclude PCD.",
+     "from": "A normal PMI does not exclude PCD."
+    },
+    {
+     "claim": "The substitute clues are chronic otitis from infancy, year-round wet cough, and unexplained respiratory distress in a term newborn.",
+     "from": "The substitute clues are chronic otitis from infancy, year-round wet cough, and unexplained respiratory distress in a term newborn."
+    },
+    {
+     "claim": "Male infertility separates the two clearance diseases at the mechanism.",
+     "from": "Male infertility separates the two clearance diseases at the mechanism."
+    },
+    {
+     "claim": "PCD gives normal sperm counts with absent motility.",
+     "from": "PCD gives normal sperm counts with absent motility."
+    },
+    {
+     "claim": "CF gives obstructive azoospermia from congenital absence of the vas deferens.",
+     "from": "CF gives obstructive azoospermia from congenital absence of the vas deferens."
+    },
+    {
+     "claim": "PMI stands for point of maximal impulse.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PCD stands for primary ciliary dyskinesia.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CF stands for cystic fibrosis.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "Situs inversus <i>totalis</i> points at cilia; situs <i>ambiguus</i> (heterotaxy) points at asplenia or polysplenia with congenital heart disease, and the management question becomes encapsulated-organism prophylaxis ⚠︎. &middot; Any cause of persistently retained secretions — dysmotile cilia, thick mucus, or an obstructing foreign body — converges on the same endpoint of bronchiectasis, so bronchiectasis names the endpoint, never the etiology.",
+   "with": "Situs inversus <i>totalis</i> suggests a ciliary defect. Situs <i>ambiguus</i> (heterotaxy) suggests asplenia or polysplenia with congenital heart disease, and management turns to encapsulated-organism prophylaxis ⚠︎. &middot; Any cause of persistently retained secretions (dysmotile cilia, thick mucus, or an obstructing foreign body) leads to the same endpoint of bronchiectasis. Bronchiectasis therefore identifies the endpoint, never the etiology.",
+   "note": "em dashes removed; plain verbs",
+   "claims": [
+    {
+     "claim": "Situs inversus totalis points at cilia.",
+     "to": "Situs inversus totalis suggests a ciliary defect."
+    },
+    {
+     "claim": "Situs ambiguus (heterotaxy) points at asplenia or polysplenia with congenital heart disease.",
+     "to": "Situs ambiguus (heterotaxy) suggests asplenia or polysplenia with congenital heart disease, and management turns to encapsulated-organism prophylaxis ⚠︎."
+    },
+    {
+     "claim": "In heterotaxy the management question becomes encapsulated-organism prophylaxis.",
+     "to": "Situs ambiguus (heterotaxy) suggests asplenia or polysplenia with congenital heart disease, and management turns to encapsulated-organism prophylaxis ⚠︎."
+    },
+    {
+     "claim": "Any cause of persistently retained secretions (dysmotile cilia, thick mucus, or an obstructing foreign body) converges on bronchiectasis.",
+     "to": "Any cause of persistently retained secretions (dysmotile cilia, thick mucus, or an obstructing foreign body) leads to the same endpoint of bronchiectasis."
+    },
+    {
+     "claim": "Bronchiectasis names the endpoint, never the etiology.",
+     "to": "Bronchiectasis therefore identifies the endpoint, never the etiology."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Situs inversus totalis points at cilia.",
+     "from": "Situs inversus totalis points at cilia."
+    },
+    {
+     "claim": "Situs ambiguus (heterotaxy) points at asplenia or polysplenia with congenital heart disease.",
+     "from": "Situs ambiguus (heterotaxy) points at asplenia or polysplenia with congenital heart disease."
+    },
+    {
+     "claim": "In heterotaxy the management question becomes encapsulated-organism prophylaxis.",
+     "from": "In heterotaxy the management question becomes encapsulated-organism prophylaxis."
+    },
+    {
+     "claim": "Any cause of persistently retained secretions (dysmotile cilia, thick mucus, or an obstructing foreign body) converges on bronchiectasis.",
+     "from": "Any cause of persistently retained secretions (dysmotile cilia, thick mucus, or an obstructing foreign body) converges on bronchiectasis."
+    },
+    {
+     "claim": "Bronchiectasis names the endpoint, never the etiology.",
+     "from": "Bronchiectasis names the endpoint, never the etiology."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "Candidate twin — confirm: Part I <b>The Immunoglobulin Panel</b> (shared complaint: recurrent sinopulmonary infection; discriminator stored as a question: <i>does the physical exam show an anatomic or clearance abnormality, or is the airway structurally normal?</i> — if normal, the immunoglobulin levels and B-cell count take over). Part I <b>When Antibiotics Fail in a Structural Lung</b> owns what happens once the structural diagnosis is established and an exacerbation stops responding. Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> owns what pancreatic insufficiency does to vitamins A, D, E and K: which sign is present, and is the PT long?",
+   "with": "Part I <b>The Immunoglobulin Panel</b> shares the complaint of recurrent sinopulmonary infection. Ask: <i>does the physical exam show an anatomic or clearance abnormality, or is the airway structurally normal?</i> If the airway is normal, that brief covers the immunoglobulin levels and B-cell count. Part I <b>When Antibiotics Fail in a Structural Lung</b> covers what happens once the structural diagnosis is established and an exacerbation stops responding. Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> covers what pancreatic insufficiency does to vitamins A, D, E and K. Ask: which sign is present, and is the PT (prothrombin time) long?",
+   "note": "workflow text removed; owns to covers",
+   "claims": [
+    {
+     "claim": "This pairing was a candidate twin awaiting confirmation.",
+     "dropped": "workflow note about a candidate pairing"
+    },
+    {
+     "claim": "The Immunoglobulin Panel shares the complaint of recurrent sinopulmonary infection.",
+     "to": "Part I The Immunoglobulin Panel shares the complaint of recurrent sinopulmonary infection."
+    },
+    {
+     "claim": "The discriminator question is whether the physical exam shows an anatomic or clearance abnormality or the airway is structurally normal.",
+     "to": "Ask: does the physical exam show an anatomic or clearance abnormality, or is the airway structurally normal?"
+    },
+    {
+     "claim": "If the airway is normal, the immunoglobulin levels and B-cell count take over.",
+     "to": "If the airway is normal, that brief covers the immunoglobulin levels and B-cell count."
+    },
+    {
+     "claim": "When Antibiotics Fail in a Structural Lung covers what happens once the structural diagnosis is established and an exacerbation stops responding.",
+     "to": "Part I When Antibiotics Fail in a Structural Lung covers what happens once the structural diagnosis is established and an exacerbation stops responding."
+    },
+    {
+     "claim": "Fat-Soluble Vitamin Deficiency and Toxicity covers what pancreatic insufficiency does to vitamins A, D, E and K.",
+     "to": "Part II Fat-Soluble Vitamin Deficiency and Toxicity covers what pancreatic insufficiency does to vitamins A, D, E and K."
+    },
+    {
+     "claim": "Its question is which sign is present and whether the PT is long.",
+     "to": "Ask: which sign is present, and is the PT (prothrombin time) long?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The Immunoglobulin Panel shares the complaint of recurrent sinopulmonary infection.",
+     "from": "The Immunoglobulin Panel shares the complaint of recurrent sinopulmonary infection."
+    },
+    {
+     "claim": "The discriminator question is whether the physical exam shows an anatomic or clearance abnormality or the airway is structurally normal.",
+     "from": "The discriminator question is whether the physical exam shows an anatomic or clearance abnormality or the airway is structurally normal."
+    },
+    {
+     "claim": "If the airway is normal, the immunoglobulin levels and B-cell count take over.",
+     "from": "If the airway is normal, the immunoglobulin levels and B-cell count take over."
+    },
+    {
+     "claim": "When Antibiotics Fail in a Structural Lung covers what happens once the structural diagnosis is established and an exacerbation stops responding.",
+     "from": "When Antibiotics Fail in a Structural Lung covers what happens once the structural diagnosis is established and an exacerbation stops responding."
+    },
+    {
+     "claim": "Fat-Soluble Vitamin Deficiency and Toxicity covers what pancreatic insufficiency does to vitamins A, D, E and K.",
+     "from": "Fat-Soluble Vitamin Deficiency and Toxicity covers what pancreatic insufficiency does to vitamins A, D, E and K."
+    },
+    {
+     "claim": "Its question is which sign is present and whether the PT is long.",
+     "from": "Its question is which sign is present and whether the PT is long."
+    },
+    {
+     "claim": "PT stands for prothrombin time.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "When a recurrent-infection stem hands you a physical finding that no immune defect could produce, that finding is the entire question — infection frequency establishes only that something is wrong, while anatomy establishes what. Store the clue as a question about structure, not as a reflex to the loudest buzzword.",
+   "with": "In recurrent infection, a physical finding that no immune defect could produce decides the diagnosis. Infection frequency establishes only that something is wrong; anatomy establishes what. Ask about structure rather than reacting to the loudest buzzword.",
+   "note": "slogan and em dash removed",
+   "claims": [
+    {
+     "claim": "In recurrent infection, a physical finding that no immune defect could produce is decisive.",
+     "to": "In recurrent infection, a physical finding that no immune defect could produce decides the diagnosis."
+    },
+    {
+     "claim": "Infection frequency establishes only that something is wrong.",
+     "to": "Infection frequency establishes only that something is wrong; anatomy establishes what."
+    },
+    {
+     "claim": "Anatomy establishes what is wrong.",
+     "to": "Infection frequency establishes only that something is wrong; anatomy establishes what."
+    },
+    {
+     "claim": "Treat the clue as a question about structure, not a reflex to the loudest buzzword.",
+     "to": "Ask about structure rather than reacting to the loudest buzzword."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In recurrent infection, a physical finding that no immune defect could produce is decisive.",
+     "from": "In recurrent infection, a physical finding that no immune defect could produce is decisive."
+    },
+    {
+     "claim": "Infection frequency establishes only that something is wrong.",
+     "from": "Infection frequency establishes only that something is wrong."
+    },
+    {
+     "claim": "Anatomy establishes what is wrong.",
+     "from": "Anatomy establishes what is wrong."
+    },
+    {
+     "claim": "Treat the clue as a question about structure, not a reflex to the loudest buzzword.",
+     "from": "Treat the clue as a question about structure, not a reflex to the loudest buzzword."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "Tonsils are present; XLA patients have no tonsillar or adenoidal tissue, and no antibody defect displaces the PMI</span>",
+   "with": "Tonsils are present. Patients with it have no tonsillar or adenoidal tissue, and no antibody defect displaces the <b>PMI</b> (point of maximal impulse)</span>",
+   "note": "acronym XLA replaced by the option name; PMI expanded",
+   "claims": [
+    {
+     "claim": "Tonsils are present.",
+     "to": "Tonsils are present."
+    },
+    {
+     "claim": "XLA patients have no tonsillar or adenoidal tissue.",
+     "to": "Patients with it have no tonsillar or adenoidal tissue, and no antibody defect displaces the PMI (point of maximal impulse)"
+    },
+    {
+     "claim": "No antibody defect displaces the PMI.",
+     "to": "Patients with it have no tonsillar or adenoidal tissue, and no antibody defect displaces the PMI (point of maximal impulse)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Tonsils are present.",
+     "from": "Tonsils are present."
+    },
+    {
+     "claim": "XLA patients have no tonsillar or adenoidal tissue.",
+     "from": "XLA patients have no tonsillar or adenoidal tissue."
+    },
+    {
+     "claim": "No antibody defect displaces the PMI.",
+     "from": "No antibody defect displaces the PMI."
+    },
+    {
+     "claim": "PMI stands for point of maximal impulse.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "No pancreatic insufficiency described and no mechanism by which CFTR relocates the heart",
+   "with": "No pancreatic insufficiency described and no mechanism by which <b>CFTR</b> (cystic fibrosis transmembrane conductance regulator) relocates the heart",
+   "note": "acronym expanded",
+   "claims": [
+    {
+     "claim": "No pancreatic insufficiency is described.",
+     "to": "No pancreatic insufficiency described and no mechanism by which CFTR (cystic fibrosis transmembrane conductance regulator) relocates the heart"
+    },
+    {
+     "claim": "There is no mechanism by which CFTR relocates the heart.",
+     "to": "No pancreatic insufficiency described and no mechanism by which CFTR (cystic fibrosis transmembrane conductance regulator) relocates the heart"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "No pancreatic insufficiency is described.",
+     "from": "No pancreatic insufficiency is described."
+    },
+    {
+     "claim": "There is no mechanism by which CFTR relocates the heart.",
+     "from": "There is no mechanism by which CFTR relocates the heart."
+    },
+    {
+     "claim": "CFTR stands for cystic fibrosis transmembrane conductance regulator.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "eight antibiotic courses plus dextrocardia is a phenotype, not a base rate</span>",
+   "with": "eight antibiotic courses plus dextrocardia are a disease pattern, not a normal infection rate</span>",
+   "note": "plain wording",
+   "claims": [
+    {
+     "claim": "Eight antibiotic courses plus dextrocardia are a disease phenotype, not the normal base rate.",
+     "to": "eight antibiotic courses plus dextrocardia are a disease pattern, not a normal infection rate"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Eight antibiotic courses plus dextrocardia are a disease phenotype, not the normal base rate.",
+     "from": "Eight antibiotic courses plus dextrocardia are a disease phenotype, not the normal base rate."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "<p>The five options are one mechanism each, so the stem is asking you to classify physiology, not to name a disease — and two findings close it. <b>Grunting with bilaterally decreased breath sounds at one hour of life in a 28-weeker</b> is diffuse alveolar collapse: surfactant deficiency raises alveolar surface tension, alveoli close, and those units stay perfused while ventilation falls to zero. Blood traversing them reaches the left heart unoxygenated. That is <b>intrapulmonary right-to-left shunt</b>, and it is the only listed mechanism that produces cyanosis <i>with</i> increased work of breathing <i>and</i> bilaterally reduced air entry.</p>",
+   "with": "<p><b>Grunting with bilaterally decreased breath sounds at one hour of life in a 28-weeker</b> indicates diffuse alveolar collapse. Surfactant deficiency raises alveolar surface tension, and the alveoli close. Those units stay perfused while their ventilation falls to zero, so blood crossing them reaches the left heart unoxygenated. This is <b>intrapulmonary right-to-left shunt</b>. Of the five mechanisms listed, it is the only one that produces cyanosis <i>with</i> increased work of breathing <i>and</i> bilaterally reduced air entry.</p>",
+   "note": "voice rewrite",
+   "claims": [
+    {
+     "claim": "The stem asks you to classify physiology, not name a disease, and two findings close it.",
+     "dropped": "framing about the question; the options are mechanisms, kept in the last sentence"
+    },
+    {
+     "claim": "The five options are one mechanism each.",
+     "to": "Of the five mechanisms listed, it is the only one that produces cyanosis with increased work of breathing and bilaterally reduced air entry."
+    },
+    {
+     "claim": "Grunting with bilaterally decreased breath sounds at one hour of life in a 28-weeker is diffuse alveolar collapse.",
+     "to": "Grunting with bilaterally decreased breath sounds at one hour of life in a 28-weeker indicates diffuse alveolar collapse."
+    },
+    {
+     "claim": "Surfactant deficiency raises alveolar surface tension and alveoli close.",
+     "to": "Surfactant deficiency raises alveolar surface tension, and the alveoli close."
+    },
+    {
+     "claim": "Those units stay perfused while ventilation falls to zero.",
+     "to": "Those units stay perfused while their ventilation falls to zero, so blood crossing them reaches the left heart unoxygenated."
+    },
+    {
+     "claim": "Blood traversing them reaches the left heart unoxygenated.",
+     "to": "Those units stay perfused while their ventilation falls to zero, so blood crossing them reaches the left heart unoxygenated."
+    },
+    {
+     "claim": "That is intrapulmonary right-to-left shunt.",
+     "to": "This is intrapulmonary right-to-left shunt."
+    },
+    {
+     "claim": "Shunt is the only listed mechanism that produces cyanosis with increased work of breathing and bilaterally reduced air entry.",
+     "to": "Of the five mechanisms listed, it is the only one that produces cyanosis with increased work of breathing and bilaterally reduced air entry."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The five options are one mechanism each.",
+     "from": "The five options are one mechanism each."
+    },
+    {
+     "claim": "Grunting with bilaterally decreased breath sounds at one hour of life in a 28-weeker is diffuse alveolar collapse.",
+     "from": "Grunting with bilaterally decreased breath sounds at one hour of life in a 28-weeker is diffuse alveolar collapse."
+    },
+    {
+     "claim": "Surfactant deficiency raises alveolar surface tension and alveoli close.",
+     "from": "Surfactant deficiency raises alveolar surface tension and alveoli close."
+    },
+    {
+     "claim": "Those units stay perfused while ventilation falls to zero.",
+     "from": "Those units stay perfused while ventilation falls to zero."
+    },
+    {
+     "claim": "Blood traversing them reaches the left heart unoxygenated.",
+     "from": "Blood traversing them reaches the left heart unoxygenated."
+    },
+    {
+     "claim": "That is intrapulmonary right-to-left shunt.",
+     "from": "That is intrapulmonary right-to-left shunt."
+    },
+    {
+     "claim": "Shunt is the only listed mechanism that produces cyanosis with increased work of breathing and bilaterally reduced air entry.",
+     "from": "Shunt is the only listed mechanism that produces cyanosis with increased work of breathing and bilaterally reduced air entry."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "no anemia to lower content, no leukocytosis; the sepsis workup already running is not the answer (in-context: CBC is typically normal in RDS)",
+   "with": "no anemia to lower content, no leukocytosis. The sepsis workup already running does not explain the hypoxemia; the CBC is typically normal in <b>RDS</b> (respiratory distress syndrome)",
+   "note": "provenance tag removed; meta wording replaced; acronym expanded",
+   "claims": [
+    {
+     "claim": "A normal CBC shows no anemia to lower content and no leukocytosis.",
+     "to": "no anemia to lower content, no leukocytosis."
+    },
+    {
+     "claim": "The sepsis workup already running is not the answer.",
+     "to": "The sepsis workup already running does not explain the hypoxemia; the CBC is typically normal in RDS (respiratory distress syndrome)"
+    },
+    {
+     "claim": "CBC is typically normal in RDS.",
+     "to": "The sepsis workup already running does not explain the hypoxemia; the CBC is typically normal in RDS (respiratory distress syndrome)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A normal CBC shows no anemia to lower content and no leukocytosis.",
+     "from": "A normal CBC shows no anemia to lower content and no leukocytosis."
+    },
+    {
+     "claim": "The sepsis workup already running is not the answer.",
+     "from": "The sepsis workup already running is not the answer."
+    },
+    {
+     "claim": "CBC is typically normal in RDS.",
+     "from": "CBC is typically normal in RDS."
+    },
+    {
+     "claim": "RDS stands for respiratory distress syndrome.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "the shunt fraction is large enough that a modest FiO2 cannot overcome it; the fix is recruitment, not concentration",
+   "with": "the shunt fraction is large enough that a modest FiO2 cannot overcome it; recruit alveoli rather than raise the oxygen concentration",
+   "note": "slogan reworded",
+   "claims": [
+    {
+     "claim": "The shunt fraction is large enough that a modest FiO2 cannot overcome it.",
+     "to": "the shunt fraction is large enough that a modest FiO2 cannot overcome it; recruit alveoli rather than raise the oxygen concentration"
+    },
+    {
+     "claim": "The fix is recruitment, not concentration.",
+     "to": "the shunt fraction is large enough that a modest FiO2 cannot overcome it; recruit alveoli rather than raise the oxygen concentration"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The shunt fraction is large enough that a modest FiO2 cannot overcome it.",
+     "from": "The shunt fraction is large enough that a modest FiO2 cannot overcome it."
+    },
+    {
+     "claim": "The fix is recruitment, not concentration.",
+     "from": "The fix is recruitment, not concentration."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "<b>Diffusion limitation</b> is the seventh category and does not earn a row here: it is a chronic, exertional finding (interstitial disease, emphysema) with a low DLCO and a resting saturation that is often normal — it is tested by a stem where the patient desaturates only on the walk down the hall. Sequencing is not the fork in this stem, and the whole ladder it contains is one line: shunt from collapsed alveoli is treated by <b>reopening them — surfactant plus CPAP</b> — not by turning the oxygen up.",
+   "with": "<b>Diffusion limitation</b> is a seventh category and has no row in the table. It is a chronic, exertional finding (interstitial disease, emphysema) with a low <b>DLCO</b> (diffusing capacity of the lung for carbon monoxide). The resting saturation is often normal. The typical patient desaturates only on the walk down the hall. Shunt from collapsed alveoli is treated by <b>reopening them with surfactant plus CPAP</b> (continuous positive airway pressure), not by turning the oxygen up.",
+   "note": "em dashes removed from prose and bold",
+   "reworded_bold": [
+    "reopening them — surfactant plus CPAP"
+   ],
+   "claims": [
+    {
+     "claim": "Diffusion limitation is the seventh category and does not earn a row here.",
+     "to": "Diffusion limitation is a seventh category and has no row in the table."
+    },
+    {
+     "claim": "Diffusion limitation is a chronic, exertional finding (interstitial disease, emphysema).",
+     "to": "It is a chronic, exertional finding (interstitial disease, emphysema) with a low DLCO (diffusing capacity of the lung for carbon monoxide)."
+    },
+    {
+     "claim": "Diffusion limitation has a low DLCO.",
+     "to": "It is a chronic, exertional finding (interstitial disease, emphysema) with a low DLCO (diffusing capacity of the lung for carbon monoxide)."
+    },
+    {
+     "claim": "The resting saturation is often normal in diffusion limitation.",
+     "to": "The resting saturation is often normal."
+    },
+    {
+     "claim": "It is tested by a patient who desaturates only on the walk down the hall.",
+     "to": "The typical patient desaturates only on the walk down the hall."
+    },
+    {
+     "claim": "Sequencing is not the fork in this stem, and the ladder is one line.",
+     "dropped": "framing about the question"
+    },
+    {
+     "claim": "Shunt from collapsed alveoli is treated by reopening them with surfactant plus CPAP.",
+     "to": "Shunt from collapsed alveoli is treated by reopening them with surfactant plus CPAP (continuous positive airway pressure), not by turning the oxygen up."
+    },
+    {
+     "claim": "Shunt is not treated by turning the oxygen up.",
+     "to": "Shunt from collapsed alveoli is treated by reopening them with surfactant plus CPAP (continuous positive airway pressure), not by turning the oxygen up."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Diffusion limitation is the seventh category and does not earn a row here.",
+     "from": "Diffusion limitation is the seventh category and does not earn a row here."
+    },
+    {
+     "claim": "Diffusion limitation is a chronic, exertional finding (interstitial disease, emphysema).",
+     "from": "Diffusion limitation is a chronic, exertional finding (interstitial disease, emphysema)."
+    },
+    {
+     "claim": "Diffusion limitation has a low DLCO.",
+     "from": "Diffusion limitation has a low DLCO."
+    },
+    {
+     "claim": "The resting saturation is often normal in diffusion limitation.",
+     "from": "The resting saturation is often normal in diffusion limitation."
+    },
+    {
+     "claim": "It is tested by a patient who desaturates only on the walk down the hall.",
+     "from": "It is tested by a patient who desaturates only on the walk down the hall."
+    },
+    {
+     "claim": "Shunt from collapsed alveoli is treated by reopening them with surfactant plus CPAP.",
+     "from": "Shunt from collapsed alveoli is treated by reopening them with surfactant plus CPAP."
+    },
+    {
+     "claim": "Shunt is not treated by turning the oxygen up.",
+     "from": "Shunt is not treated by turning the oxygen up."
+    },
+    {
+     "claim": "DLCO stands for diffusing capacity of the lung for carbon monoxide.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CPAP stands for continuous positive airway pressure.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "Saturation-only → hemoglobin problem (CO, metHb)",
+   "with": "Saturation-only → hemoglobin problem (carbon monoxide, methemoglobin)",
+   "note": "acronyms written out",
+   "claims": [
+    {
+     "claim": "A saturation-only problem is a hemoglobin problem (CO, metHb).",
+     "to": "Saturation-only → hemoglobin problem (carbon monoxide, methemoglobin)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A saturation-only problem is a hemoglobin problem (CO, metHb).",
+     "from": "A saturation-only problem is a hemoglobin problem (CO, metHb)."
+    },
+    {
+     "claim": "CO stands for carbon monoxide and metHb for methemoglobin.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "low inspired PO2 (normal PaCO2). Done &middot; <b>Widened — what happens on oxygen?</b>",
+   "with": "low inspired PO2 (normal PaCO2) &middot; <b>Widened: what happens on oxygen?</b>",
+   "note": "em dash in bold label removed; filler dropped",
+   "reworded_bold": [
+    "Widened — what happens on oxygen?"
+   ],
+   "claims": [
+    {
+     "claim": "A normal A-a gradient with normal PaCO2 means low inspired PO2.",
+     "to": "low inspired PO2 (normal PaCO2)"
+    },
+    {
+     "claim": "Done.",
+     "dropped": "filler; the branch ends there"
+    },
+    {
+     "claim": "If the A-a gradient is widened, check what happens on oxygen.",
+     "to": "Widened: what happens on oxygen?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A normal A-a gradient with normal PaCO2 means low inspired PO2.",
+     "from": "A normal A-a gradient with normal PaCO2 means low inspired PO2."
+    },
+    {
+     "claim": "If the A-a gradient is widened, check what happens on oxygen.",
+     "from": "If the A-a gradient is widened, check what happens on oxygen."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "Sudden onset, clear chest, risk factors — otherwise the exam is not asking about embolus",
+   "with": "Sudden onset, clear chest, risk factors; without them, embolus is not the concern",
+   "note": "em dash and meta wording removed",
+   "claims": [
+    {
+     "claim": "Dead space is suggested by sudden onset, clear chest and risk factors.",
+     "to": "Sudden onset, clear chest, risk factors; without them, embolus is not the concern"
+    },
+    {
+     "claim": "Otherwise the exam is not asking about embolus.",
+     "to": "Sudden onset, clear chest, risk factors; without them, embolus is not the concern"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Dead space is suggested by sudden onset, clear chest and risk factors.",
+     "from": "Dead space is suggested by sudden onset, clear chest and risk factors."
+    },
+    {
+     "claim": "Otherwise the exam is not asking about embolus.",
+     "from": "Otherwise the exam is not asking about embolus."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "Normal A-a means hypoventilation or thin air; widened and oxygen-responsive means V/Q mismatch; widened and oxygen-refractory means shunt. &middot; <b>Shunt is the hypoxemia that oxygen will not fix.</b> When the FiO2 goes up and the saturation does not follow, stop titrating and start recruiting — PEEP, CPAP, surfactant, drainage, or a diuretic for the edema behind it. &middot; The vendor calls the RDS hypoxemia \"responsive to oxygen administration\" and it is, clinically — but the reason is that partially collapsed alveoli are <i>recruitable</i> by the CPAP delivering that oxygen, not that shunted blood responds to FiO2. Keep the answer; correct the mechanism.",
+   "with": "Normal A-a means hypoventilation or low inspired oxygen; widened and oxygen-responsive means V/Q mismatch; widened and oxygen-refractory means shunt. &middot; <b>Shunt is the hypoxemia that oxygen will not fix.</b> When the FiO2 goes up and the saturation does not follow, stop titrating and start recruiting. Recruit with <b>PEEP</b> (positive end-expiratory pressure), <b>CPAP</b> (continuous positive airway pressure), surfactant, drainage, or a diuretic for the edema behind it. &middot; <b>RDS</b> (respiratory distress syndrome) hypoxemia is clinically responsive to oxygen administration. The reason is that partially collapsed alveoli are <i>recruitable</i> by the CPAP delivering that oxygen, not that shunted blood responds to FiO2.",
+   "note": "em dashes, vendor framing and slogan removed; acronyms expanded",
+   "claims": [
+    {
+     "claim": "Normal A-a means hypoventilation or thin air (low inspired oxygen).",
+     "to": "Normal A-a means hypoventilation or low inspired oxygen; widened and oxygen-responsive means V/Q mismatch; widened and oxygen-refractory means shunt."
+    },
+    {
+     "claim": "Widened and oxygen-responsive means V/Q mismatch.",
+     "to": "Normal A-a means hypoventilation or low inspired oxygen; widened and oxygen-responsive means V/Q mismatch; widened and oxygen-refractory means shunt."
+    },
+    {
+     "claim": "Widened and oxygen-refractory means shunt.",
+     "to": "Normal A-a means hypoventilation or low inspired oxygen; widened and oxygen-responsive means V/Q mismatch; widened and oxygen-refractory means shunt."
+    },
+    {
+     "claim": "Shunt is the hypoxemia that oxygen will not fix.",
+     "to": "Shunt is the hypoxemia that oxygen will not fix."
+    },
+    {
+     "claim": "When the FiO2 goes up and the saturation does not follow, stop titrating and start recruiting.",
+     "to": "When the FiO2 goes up and the saturation does not follow, stop titrating and start recruiting."
+    },
+    {
+     "claim": "Recruit with PEEP, CPAP, surfactant, drainage, or a diuretic for the edema behind it.",
+     "to": "Recruit with PEEP (positive end-expiratory pressure), CPAP (continuous positive airway pressure), surfactant, drainage, or a diuretic for the edema behind it."
+    },
+    {
+     "claim": "The vendor is the one who calls it responsive to oxygen.",
+     "dropped": "attribution to the question source; the clinical statement is kept"
+    },
+    {
+     "claim": "RDS hypoxemia is responsive to oxygen administration, clinically.",
+     "to": "RDS (respiratory distress syndrome) hypoxemia is clinically responsive to oxygen administration."
+    },
+    {
+     "claim": "The reason is that partially collapsed alveoli are recruitable by the CPAP delivering that oxygen, not that shunted blood responds to FiO2.",
+     "to": "The reason is that partially collapsed alveoli are recruitable by the CPAP delivering that oxygen, not that shunted blood responds to FiO2."
+    },
+    {
+     "claim": "Keep the answer; correct the mechanism.",
+     "dropped": "slogan about the answer; the mechanism correction is stated in the previous sentence"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Normal A-a means hypoventilation or thin air (low inspired oxygen).",
+     "from": "Normal A-a means hypoventilation or thin air (low inspired oxygen)."
+    },
+    {
+     "claim": "Widened and oxygen-responsive means V/Q mismatch.",
+     "from": "Widened and oxygen-responsive means V/Q mismatch."
+    },
+    {
+     "claim": "Widened and oxygen-refractory means shunt.",
+     "from": "Widened and oxygen-refractory means shunt."
+    },
+    {
+     "claim": "Shunt is the hypoxemia that oxygen will not fix.",
+     "from": "Shunt is the hypoxemia that oxygen will not fix."
+    },
+    {
+     "claim": "When the FiO2 goes up and the saturation does not follow, stop titrating and start recruiting.",
+     "from": "When the FiO2 goes up and the saturation does not follow, stop titrating and start recruiting."
+    },
+    {
+     "claim": "Recruit with PEEP, CPAP, surfactant, drainage, or a diuretic for the edema behind it.",
+     "from": "Recruit with PEEP, CPAP, surfactant, drainage, or a diuretic for the edema behind it."
+    },
+    {
+     "claim": "RDS hypoxemia is responsive to oxygen administration, clinically.",
+     "from": "RDS hypoxemia is responsive to oxygen administration, clinically."
+    },
+    {
+     "claim": "The reason is that partially collapsed alveoli are recruitable by the CPAP delivering that oxygen, not that shunted blood responds to FiO2.",
+     "from": "The reason is that partially collapsed alveoli are recruitable by the CPAP delivering that oxygen, not that shunted blood responds to FiO2."
+    },
+    {
+     "claim": "PEEP stands for positive end-expiratory pressure.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CPAP stands for continuous positive airway pressure.",
+     "from": "expansion"
+    },
+    {
+     "claim": "RDS stands for respiratory distress syndrome.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "A normal or high PaO2 in a cyanotic patient means the hemoglobin cannot carry or release oxygen — methemoglobin, carbon monoxide, cyanide (where the tissue, not the blood, is the problem). &middot; <b>Boundary:</b> refractory hypoxemia with clear lungs and no cardiac history can still be an embolus — if it raises right-sided pressures enough to open a PFO, a dead-space disease presents as a right-to-left shunt.",
+   "with": "A normal or high PaO2 in a cyanotic patient means the hemoglobin cannot carry or release oxygen. Causes are methemoglobin, carbon monoxide, or cyanide (where the tissue, not the blood, is the problem). &middot; <b>Boundary:</b> refractory hypoxemia with clear lungs and no cardiac history can still be an embolus. If it raises right-sided pressures enough to open a <b>PFO</b> (patent foramen ovale), a dead-space disease presents as a right-to-left shunt.",
+   "note": "em dashes removed; acronym expanded",
+   "claims": [
+    {
+     "claim": "A normal or high PaO2 in a cyanotic patient means the hemoglobin cannot carry or release oxygen.",
+     "to": "A normal or high PaO2 in a cyanotic patient means the hemoglobin cannot carry or release oxygen."
+    },
+    {
+     "claim": "Causes are methemoglobin, carbon monoxide, cyanide (where the tissue, not the blood, is the problem).",
+     "to": "Causes are methemoglobin, carbon monoxide, or cyanide (where the tissue, not the blood, is the problem)."
+    },
+    {
+     "claim": "Refractory hypoxemia with clear lungs and no cardiac history can still be an embolus.",
+     "to": "Boundary: refractory hypoxemia with clear lungs and no cardiac history can still be an embolus."
+    },
+    {
+     "claim": "If an embolus raises right-sided pressures enough to open a PFO, a dead-space disease presents as a right-to-left shunt.",
+     "to": "If it raises right-sided pressures enough to open a PFO (patent foramen ovale), a dead-space disease presents as a right-to-left shunt."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A normal or high PaO2 in a cyanotic patient means the hemoglobin cannot carry or release oxygen.",
+     "from": "A normal or high PaO2 in a cyanotic patient means the hemoglobin cannot carry or release oxygen."
+    },
+    {
+     "claim": "Causes are methemoglobin, carbon monoxide, cyanide (where the tissue, not the blood, is the problem).",
+     "from": "Causes are methemoglobin, carbon monoxide, cyanide (where the tissue, not the blood, is the problem)."
+    },
+    {
+     "claim": "Refractory hypoxemia with clear lungs and no cardiac history can still be an embolus.",
+     "from": "Refractory hypoxemia with clear lungs and no cardiac history can still be an embolus."
+    },
+    {
+     "claim": "If an embolus raises right-sided pressures enough to open a PFO, a dead-space disease presents as a right-to-left shunt.",
+     "from": "If an embolus raises right-sided pressures enough to open a PFO, a dead-space disease presents as a right-to-left shunt."
+    },
+    {
+     "claim": "PFO stands for patent foramen ovale.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "<b>Neonatal Respiratory Distress</b> owns the parenchymal differential by chest film (ground glass and air bronchograms versus retained fluid, meconium, or air leak) and <b>Cyanotic Congenital Heart Disease</b> owns the lesions themselves; the newborn-cyanosis brief authored this week owns sorting at-rest physiology in the delivery room. This brief owns the layer above all three — the mechanism categories, stored as a question: <i>is the A-a gradient widened, and does the hypoxemia answer oxygen?</i>",
+   "with": "<b>Neonatal Respiratory Distress</b> covers the parenchymal differential by chest film (ground glass and air bronchograms versus retained fluid, meconium, or air leak). <b>Cyanotic Congenital Heart Disease</b> covers the lesions themselves. This brief covers the mechanism categories above them. Ask: <i>is the A-a gradient widened, and does the hypoxemia respond to oxygen?</i>",
+   "note": "owns to covers; workflow reference removed; em dash removed",
+   "claims": [
+    {
+     "claim": "Neonatal Respiratory Distress covers the parenchymal differential by chest film (ground glass and air bronchograms versus retained fluid, meconium, or air leak).",
+     "to": "Neonatal Respiratory Distress covers the parenchymal differential by chest film (ground glass and air bronchograms versus retained fluid, meconium, or air leak)."
+    },
+    {
+     "claim": "Cyanotic Congenital Heart Disease covers the lesions themselves.",
+     "to": "Cyanotic Congenital Heart Disease covers the lesions themselves."
+    },
+    {
+     "claim": "An untitled newborn-cyanosis brief covers sorting resting physiology in the delivery room.",
+     "dropped": "workflow note naming a brief by its authoring week, not by title"
+    },
+    {
+     "claim": "This brief covers the layer above them: the mechanism categories.",
+     "to": "This brief covers the mechanism categories above them."
+    },
+    {
+     "claim": "The stored question: is the A-a gradient widened, and does the hypoxemia answer oxygen?",
+     "to": "Ask: is the A-a gradient widened, and does the hypoxemia respond to oxygen?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Neonatal Respiratory Distress covers the parenchymal differential by chest film (ground glass and air bronchograms versus retained fluid, meconium, or air leak).",
+     "from": "Neonatal Respiratory Distress covers the parenchymal differential by chest film (ground glass and air bronchograms versus retained fluid, meconium, or air leak)."
+    },
+    {
+     "claim": "Cyanotic Congenital Heart Disease covers the lesions themselves.",
+     "from": "Cyanotic Congenital Heart Disease covers the lesions themselves."
+    },
+    {
+     "claim": "This brief covers the layer above them: the mechanism categories.",
+     "from": "This brief covers the layer above them: the mechanism categories."
+    },
+    {
+     "claim": "The stored question: is the A-a gradient widened, and does the hypoxemia answer oxygen?",
+     "from": "The stored question: is the A-a gradient widened, and does the hypoxemia answer oxygen?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "Hypoxemia is a physiology question wearing a disease costume: compute the A-a gradient, then ask what happens on supplemental oxygen — those two answers name the mechanism before you have named the illness, and the mechanism is what the option list is made of.",
+   "with": "Treat hypoxemia as a physiology question. Compute the A-a gradient, then check what happens on supplemental oxygen. Those two answers name the mechanism before the illness is named.",
+   "note": "metaphor, em dash and option-list framing removed",
+   "claims": [
+    {
+     "claim": "Hypoxemia is a physiology question.",
+     "to": "Treat hypoxemia as a physiology question."
+    },
+    {
+     "claim": "It wears a disease costume.",
+     "dropped": "metaphor"
+    },
+    {
+     "claim": "Compute the A-a gradient, then ask what happens on supplemental oxygen.",
+     "to": "Compute the A-a gradient, then check what happens on supplemental oxygen."
+    },
+    {
+     "claim": "Those two answers name the mechanism before the illness is named.",
+     "to": "Those two answers name the mechanism before the illness is named."
+    },
+    {
+     "claim": "The mechanism is what the option list is made of.",
+     "dropped": "framing about the option list"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hypoxemia is a physiology question.",
+     "from": "Hypoxemia is a physiology question."
+    },
+    {
+     "claim": "Compute the A-a gradient, then ask what happens on supplemental oxygen.",
+     "from": "Compute the A-a gradient, then ask what happens on supplemental oxygen."
+    },
+    {
+     "claim": "Those two answers name the mechanism before the illness is named.",
+     "from": "Those two answers name the mechanism before the illness is named."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "It is the normal neonatal state — physiologic, and it does not cause respiratory distress",
+   "with": "It is the normal neonatal state; it is physiologic and does not cause respiratory distress",
+   "note": "em dash removed",
+   "claims": [
+    {
+     "claim": "Greater red cell oxygen affinity is the normal neonatal state.",
+     "to": "It is the normal neonatal state; it is physiologic and does not cause respiratory distress"
+    },
+    {
+     "claim": "It is physiologic and does not cause respiratory distress.",
+     "to": "It is the normal neonatal state; it is physiologic and does not cause respiratory distress"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Greater red cell oxygen affinity is the normal neonatal state.",
+     "from": "Greater red cell oxygen affinity is the normal neonatal state."
+    },
+    {
+     "claim": "It is physiologic and does not cause respiratory distress.",
+     "from": "It is physiologic and does not cause respiratory distress."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "The umbilical line and the started antibiotics are the sepsis frame, and they are inert here: the CBC is normal and no fever or instability is reported. Apgar 7 at both marks argues against perinatal depression, which would present as hypoventilation. The absent murmur does not exclude cyanotic heart disease on its own — the parenchymal findings do.",
+   "with": "The umbilical line and the started antibiotics reflect a sepsis workup. They do not explain the hypoxemia: the <b>CBC</b> (complete blood count) is normal and no fever or instability is reported. Apgar 7 at both marks argues against perinatal depression, which would present as hypoventilation. The absent murmur does not exclude cyanotic heart disease on its own; the parenchymal findings do.",
+   "note": "em dash removed; frame wording plain; acronym expanded",
+   "claims": [
+    {
+     "claim": "The umbilical line and started antibiotics are the sepsis frame.",
+     "to": "The umbilical line and the started antibiotics reflect a sepsis workup."
+    },
+    {
+     "claim": "They are inert here.",
+     "to": "They do not explain the hypoxemia: the CBC (complete blood count) is normal and no fever or instability is reported."
+    },
+    {
+     "claim": "The CBC is normal and no fever or instability is reported.",
+     "to": "They do not explain the hypoxemia: the CBC (complete blood count) is normal and no fever or instability is reported."
+    },
+    {
+     "claim": "Apgar 7 at both marks argues against perinatal depression, which would present as hypoventilation.",
+     "to": "Apgar 7 at both marks argues against perinatal depression, which would present as hypoventilation."
+    },
+    {
+     "claim": "The absent murmur does not exclude cyanotic heart disease on its own; the parenchymal findings do.",
+     "to": "The absent murmur does not exclude cyanotic heart disease on its own; the parenchymal findings do."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The umbilical line and started antibiotics are the sepsis frame.",
+     "from": "The umbilical line and started antibiotics are the sepsis frame."
+    },
+    {
+     "claim": "They are inert here.",
+     "from": "They are inert here."
+    },
+    {
+     "claim": "The CBC is normal and no fever or instability is reported.",
+     "from": "The CBC is normal and no fever or instability is reported."
+    },
+    {
+     "claim": "Apgar 7 at both marks argues against perinatal depression, which would present as hypoventilation.",
+     "from": "Apgar 7 at both marks argues against perinatal depression, which would present as hypoventilation."
+    },
+    {
+     "claim": "The absent murmur does not exclude cyanotic heart disease on its own; the parenchymal findings do.",
+     "from": "The absent murmur does not exclude cyanotic heart disease on its own; the parenchymal findings do."
+    },
+    {
+     "claim": "CBC stands for complete blood count.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "<p>The stem's structure is a two-step gate, and the second step is the one being scored. First, <b>a week of appropriate broad-spectrum antibiotics with no improvement</b> — the explicit trigger for suspecting allergic bronchopulmonary aspergillosis in cystic fibrosis, because the presentation is otherwise <i>indistinguishable</i> from a cystic fibrosis bronchopneumonia. Second, the two laboratory values that assign a category: <b>eosinophilia and an IgE of 3,225</b>, which is a Th2 allergic response rather than a bacterial one. The mechanism follows from the host — <i>Aspergillus</i> spores are inhaled by everyone and cleared by the mucociliary escalator, but a structurally damaged airway traps them, colonisation becomes chronic, and chronic exposure becomes <b>hypersensitisation</b>. The disease is the immune response, which is why the treatment is a steroid and the antifungal is adjunctive.</p>",
+   "with": "<p>The explicit trigger for suspecting allergic bronchopulmonary aspergillosis in cystic fibrosis is <b>a week of appropriate broad-spectrum antibiotics with no improvement</b>. Otherwise the presentation is <i>indistinguishable</i> from a cystic fibrosis bronchopneumonia. Two laboratory values then assign the category: <b>eosinophilia and an IgE of 3,225</b> indicate a Th2 allergic response rather than a bacterial one. <i>Aspergillus</i> spores are inhaled by everyone and cleared by the mucociliary escalator. A structurally damaged airway traps them, colonisation becomes chronic, and chronic exposure becomes <b>hypersensitisation</b>. The disease is the immune response, so the treatment is a steroid and the antifungal is adjunctive.</p>",
+   "note": "voice rewrite",
+   "claims": [
+    {
+     "claim": "The stem is a two-step gate and the second step is the one being scored.",
+     "dropped": "framing about the question; both steps are stated below"
+    },
+    {
+     "claim": "A week of appropriate broad-spectrum antibiotics with no improvement is the explicit trigger for suspecting allergic bronchopulmonary aspergillosis in cystic fibrosis.",
+     "to": "The explicit trigger for suspecting allergic bronchopulmonary aspergillosis in cystic fibrosis is a week of appropriate broad-spectrum antibiotics with no improvement."
+    },
+    {
+     "claim": "The presentation is otherwise indistinguishable from a cystic fibrosis bronchopneumonia.",
+     "to": "Otherwise the presentation is indistinguishable from a cystic fibrosis bronchopneumonia."
+    },
+    {
+     "claim": "Two laboratory values assign a category.",
+     "to": "Two laboratory values then assign the category: eosinophilia and an IgE of 3,225 indicate a Th2 allergic response rather than a bacterial one."
+    },
+    {
+     "claim": "Eosinophilia and an IgE of 3,225 are a Th2 allergic response rather than a bacterial one.",
+     "to": "Two laboratory values then assign the category: eosinophilia and an IgE of 3,225 indicate a Th2 allergic response rather than a bacterial one."
+    },
+    {
+     "claim": "The mechanism follows from the host: Aspergillus spores are inhaled by everyone and cleared by the mucociliary escalator.",
+     "to": "Aspergillus spores are inhaled by everyone and cleared by the mucociliary escalator."
+    },
+    {
+     "claim": "A structurally damaged airway traps them.",
+     "to": "A structurally damaged airway traps them, colonisation becomes chronic, and chronic exposure becomes hypersensitisation."
+    },
+    {
+     "claim": "Colonisation becomes chronic, and chronic exposure becomes hypersensitisation.",
+     "to": "A structurally damaged airway traps them, colonisation becomes chronic, and chronic exposure becomes hypersensitisation."
+    },
+    {
+     "claim": "The disease is the immune response.",
+     "to": "The disease is the immune response, so the treatment is a steroid and the antifungal is adjunctive."
+    },
+    {
+     "claim": "That is why the treatment is a steroid and the antifungal is adjunctive.",
+     "to": "The disease is the immune response, so the treatment is a steroid and the antifungal is adjunctive."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A week of appropriate broad-spectrum antibiotics with no improvement is the explicit trigger for suspecting allergic bronchopulmonary aspergillosis in cystic fibrosis.",
+     "from": "A week of appropriate broad-spectrum antibiotics with no improvement is the explicit trigger for suspecting allergic bronchopulmonary aspergillosis in cystic fibrosis."
+    },
+    {
+     "claim": "The presentation is otherwise indistinguishable from a cystic fibrosis bronchopneumonia.",
+     "from": "The presentation is otherwise indistinguishable from a cystic fibrosis bronchopneumonia."
+    },
+    {
+     "claim": "Two laboratory values assign a category.",
+     "from": "Two laboratory values assign a category."
+    },
+    {
+     "claim": "Eosinophilia and an IgE of 3,225 are a Th2 allergic response rather than a bacterial one.",
+     "from": "Eosinophilia and an IgE of 3,225 are a Th2 allergic response rather than a bacterial one."
+    },
+    {
+     "claim": "The mechanism follows from the host: Aspergillus spores are inhaled by everyone and cleared by the mucociliary escalator.",
+     "from": "The mechanism follows from the host: Aspergillus spores are inhaled by everyone and cleared by the mucociliary escalator."
+    },
+    {
+     "claim": "A structurally damaged airway traps them.",
+     "from": "A structurally damaged airway traps them."
+    },
+    {
+     "claim": "Colonisation becomes chronic, and chronic exposure becomes hypersensitisation.",
+     "from": "Colonisation becomes chronic, and chronic exposure becomes hypersensitisation."
+    },
+    {
+     "claim": "The disease is the immune response.",
+     "from": "The disease is the immune response."
+    },
+    {
+     "claim": "That is why the treatment is a steroid and the antifungal is adjunctive.",
+     "from": "That is why the treatment is a steroid and the antifungal is adjunctive."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "the gate; a bacterial exacerbation would have moved",
+   "with": "the trigger to suspect it; a bacterial exacerbation would have improved",
+   "note": "plain wording",
+   "claims": [
+    {
+     "claim": "Failure to improve after a week of broad-spectrum antibiotics is the gate.",
+     "to": "the trigger to suspect it; a bacterial exacerbation would have improved"
+    },
+    {
+     "claim": "A bacterial exacerbation would have moved.",
+     "to": "the trigger to suspect it; a bacterial exacerbation would have improved"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Failure to improve after a week of broad-spectrum antibiotics is the gate.",
+     "from": "Failure to improve after a week of broad-spectrum antibiotics is the gate."
+    },
+    {
+     "claim": "A bacterial exacerbation would have moved.",
+     "from": "A bacterial exacerbation would have moved."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "eliminates the vasculitis, the pneumonitis and the mycobacterium at a stroke",
+   "with": "eliminates the vasculitis, the pneumonitis and the mycobacterium",
+   "note": "dramatic phrase removed",
+   "claims": [
+    {
+     "claim": "Peripheral eosinophilia eliminates the vasculitis, the pneumonitis and the mycobacterium at a stroke.",
+     "to": "eliminates the vasculitis, the pneumonitis and the mycobacterium"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Peripheral eosinophilia eliminates the vasculitis, the pneumonitis and the mycobacterium at a stroke.",
+     "from": "Peripheral eosinophilia eliminates the vasculitis, the pneumonitis and the mycobacterium at a stroke."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "Management is not this question's fork, so in two sentences: <b>systemic glucocorticoids</b> are first-line because the pathology is allergic inflammation, and an <b>antifungal such as voriconazole</b> is added to reduce spore burden alongside treatment of the underlying airway disease. The corollary worth storing is that an antifungal alone does not treat this disease, because it addresses the antigen and not the response.",
+   "with": "Give <b>systemic glucocorticoids</b> first-line, because the pathology is allergic inflammation. An <b>antifungal such as voriconazole</b> is added to reduce spore burden, alongside treatment of the underlying airway disease. An antifungal alone does not treat this disease, because it addresses the antigen and not the response.",
+   "note": "framing removed",
+   "claims": [
+    {
+     "claim": "Management is not this question's fork.",
+     "dropped": "framing about the question"
+    },
+    {
+     "claim": "Systemic glucocorticoids are first-line because the pathology is allergic inflammation.",
+     "to": "Give systemic glucocorticoids first-line, because the pathology is allergic inflammation."
+    },
+    {
+     "claim": "An antifungal such as voriconazole is added to reduce spore burden alongside treatment of the underlying airway disease.",
+     "to": "An antifungal such as voriconazole is added to reduce spore burden, alongside treatment of the underlying airway disease."
+    },
+    {
+     "claim": "An antifungal alone does not treat this disease, because it addresses the antigen and not the response.",
+     "to": "An antifungal alone does not treat this disease, because it addresses the antigen and not the response."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Systemic glucocorticoids are first-line because the pathology is allergic inflammation.",
+     "from": "Systemic glucocorticoids are first-line because the pathology is allergic inflammation."
+    },
+    {
+     "claim": "An antifungal such as voriconazole is added to reduce spore burden alongside treatment of the underlying airway disease.",
+     "from": "An antifungal such as voriconazole is added to reduce spore burden alongside treatment of the underlying airway disease."
+    },
+    {
+     "claim": "An antifungal alone does not treat this disease, because it addresses the antigen and not the response.",
+     "from": "An antifungal alone does not treat this disease, because it addresses the antigen and not the response."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "Structural airway disease — cystic fibrosis or asthma, which is the entry condition",
+   "with": "Structural airway disease (cystic fibrosis or asthma), the entry condition",
+   "note": "em dash removed",
+   "claims": [
+    {
+     "claim": "The host is structural airway disease, cystic fibrosis or asthma, which is the entry condition.",
+     "to": "Structural airway disease (cystic fibrosis or asthma), the entry condition"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The host is structural airway disease, cystic fibrosis or asthma, which is the entry condition.",
+     "from": "The host is structural airway disease, cystic fibrosis or asthma, which is the entry condition."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "A week of broad-spectrum therapy without improvement → this is not the bacteria",
+   "with": "A week of broad-spectrum therapy without improvement → not a bacterial cause",
+   "note": "plain wording",
+   "claims": [
+    {
+     "claim": "A week of broad-spectrum therapy without improvement means it is not the bacteria.",
+     "to": "A week of broad-spectrum therapy without improvement → not a bacterial cause"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A week of broad-spectrum therapy without improvement means it is not the bacteria.",
+     "from": "A week of broad-spectrum therapy without improvement means it is not the bacteria."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "3,225 → allergic sensitisation, and only two options carry it",
+   "with": "3,225 → allergic sensitisation, found in only two of the listed causes",
+   "note": "option framing removed",
+   "claims": [
+    {
+     "claim": "An IgE of 3,225 means allergic sensitisation, which only two options carry.",
+     "to": "3,225 → allergic sensitisation, found in only two of the listed causes"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "An IgE of 3,225 means allergic sensitisation, which only two options carry.",
+     "from": "An IgE of 3,225 means allergic sensitisation, which only two options carry."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "The stem is engineered so the <i>infectious</i> framing survives as long as possible: an admission, broad-spectrum antibiotics, fever and crackles all point one way, and the two findings that overturn it arrive last and quietly as a laboratory line. The fever is not evidence against the answer — fever, malaise and thick blood-streaked sputum are explicitly common in it — so a reader who uses fever as an infection marker never reaches the reclassification. The real discriminator sentence is <b>a week later, there is no improvement</b>, and it is doing the work of an entire negative workup.",
+   "with": "An admission, broad-spectrum antibiotics, fever and crackles all point toward <i>infection</i>. The two findings that overturn that framing arrive last, as a laboratory line. Fever is not evidence against allergic bronchopulmonary aspergillosis, because fever, malaise and thick blood-streaked sputum are common in it. Using fever as an infection marker misses the reclassification. The key sentence is <b>a week later, there is no improvement</b>, and it does the work of an entire negative workup.",
+   "note": "stem framing and em dashes removed",
+   "claims": [
+    {
+     "claim": "The stem is engineered so the infectious framing survives as long as possible.",
+     "dropped": "framing about how the stem is written; the misleading features are listed next"
+    },
+    {
+     "claim": "An admission, broad-spectrum antibiotics, fever and crackles all point toward infection.",
+     "to": "An admission, broad-spectrum antibiotics, fever and crackles all point toward infection."
+    },
+    {
+     "claim": "The two findings that overturn the infectious framing arrive last as a laboratory line.",
+     "to": "The two findings that overturn that framing arrive last, as a laboratory line."
+    },
+    {
+     "claim": "Fever is not evidence against the answer.",
+     "to": "Fever is not evidence against allergic bronchopulmonary aspergillosis, because fever, malaise and thick blood-streaked sputum are common in it."
+    },
+    {
+     "claim": "Fever, malaise and thick blood-streaked sputum are common in it.",
+     "to": "Fever is not evidence against allergic bronchopulmonary aspergillosis, because fever, malaise and thick blood-streaked sputum are common in it."
+    },
+    {
+     "claim": "Using fever as an infection marker prevents the reclassification.",
+     "to": "Using fever as an infection marker misses the reclassification."
+    },
+    {
+     "claim": "The discriminating sentence is a week later, there is no improvement.",
+     "to": "The key sentence is a week later, there is no improvement, and it does the work of an entire negative workup."
+    },
+    {
+     "claim": "That sentence does the work of an entire negative workup.",
+     "to": "The key sentence is a week later, there is no improvement, and it does the work of an entire negative workup."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "An admission, broad-spectrum antibiotics, fever and crackles all point toward infection.",
+     "from": "An admission, broad-spectrum antibiotics, fever and crackles all point toward infection."
+    },
+    {
+     "claim": "The two findings that overturn the infectious framing arrive last as a laboratory line.",
+     "from": "The two findings that overturn the infectious framing arrive last as a laboratory line."
+    },
+    {
+     "claim": "Fever is not evidence against the answer.",
+     "from": "Fever is not evidence against the answer."
+    },
+    {
+     "claim": "Fever, malaise and thick blood-streaked sputum are common in it.",
+     "from": "Fever, malaise and thick blood-streaked sputum are common in it."
+    },
+    {
+     "claim": "Using fever as an infection marker prevents the reclassification.",
+     "from": "Using fever as an infection marker prevents the reclassification."
+    },
+    {
+     "claim": "The discriminating sentence is a week later, there is no improvement.",
+     "from": "The discriminating sentence is a week later, there is no improvement."
+    },
+    {
+     "claim": "That sentence does the work of an entire negative workup.",
+     "from": "That sentence does the work of an entire negative workup."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "In structural lung disease it should prompt a change of <i>category</i> — allergic, mycobacterial, vasculitic — before a change of spectrum.",
+   "with": "In structural lung disease it should prompt a change of <i>category</i> (allergic, mycobacterial, vasculitic) before a change of spectrum.",
+   "note": "em dashes removed",
+   "claims": [
+    {
+     "claim": "In structural lung disease antibiotic failure should prompt a change of category (allergic, mycobacterial, vasculitic) before a change of spectrum.",
+     "to": "In structural lung disease it should prompt a change of category (allergic, mycobacterial, vasculitic) before a change of spectrum."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In structural lung disease antibiotic failure should prompt a change of category (allergic, mycobacterial, vasculitic) before a change of spectrum.",
+     "from": "In structural lung disease antibiotic failure should prompt a change of category (allergic, mycobacterial, vasculitic) before a change of spectrum."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "and an antifungal second — the disease is the immune response, so treating only the fungus treats only the trigger.",
+   "with": "and an antifungal second. The disease is the immune response, so treating only the fungus treats only the trigger.",
+   "note": "em dash removed",
+   "claims": [
+    {
+     "claim": "Treatment is a glucocorticoid first and an antifungal second.",
+     "to": "Treatment is a glucocorticoid first and an antifungal second."
+    },
+    {
+     "claim": "The disease is the immune response, so treating only the fungus treats only the trigger.",
+     "to": "The disease is the immune response, so treating only the fungus treats only the trigger."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Treatment is a glucocorticoid first and an antifungal second.",
+     "from": "Treatment is a glucocorticoid first and an antifungal second."
+    },
+    {
+     "claim": "The disease is the immune response, so treating only the fungus treats only the trigger.",
+     "from": "The disease is the immune response, so treating only the fungus treats only the trigger."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "Verified: Part I <b>Recurrent Sinopulmonary Infection</b> owns the upstream question of why a child keeps getting infections and lands on cystic fibrosis and the mucociliary axis; this brief owns what happens once that diagnosis is established and an exacerbation stops responding. Part I <b>Asthma vs. COPD</b> carries this disease as one line of its adult test-selection block, with the brown-mucus-plug presentation. Store the discriminator as a question: did an adequate antibiotic course fail, and are the eosinophils and IgE up?",
+   "with": "Part I <b>Recurrent Sinopulmonary Infection</b> covers the upstream question of why a child keeps getting infections, which leads to cystic fibrosis and the mucociliary axis. This brief covers what happens once that diagnosis is established and an exacerbation stops responding. Part I <b>Asthma vs. COPD</b> carries this disease as one line of its adult test-selection block, with the brown-mucus-plug presentation. Ask: did an adequate antibiotic course fail, and are the eosinophils and IgE up?",
+   "note": "Verified removed; owns to covers; Ask:",
+   "claims": [
+    {
+     "claim": "Recurrent Sinopulmonary Infection covers the upstream question of why a child keeps getting infections and lands on cystic fibrosis and the mucociliary axis.",
+     "to": "Part I Recurrent Sinopulmonary Infection covers the upstream question of why a child keeps getting infections, which leads to cystic fibrosis and the mucociliary axis."
+    },
+    {
+     "claim": "This brief covers what happens once that diagnosis is established and an exacerbation stops responding.",
+     "to": "This brief covers what happens once that diagnosis is established and an exacerbation stops responding."
+    },
+    {
+     "claim": "Asthma vs. COPD carries this disease as one line of its adult test-selection block, with the brown-mucus-plug presentation.",
+     "to": "Part I Asthma vs. COPD carries this disease as one line of its adult test-selection block, with the brown-mucus-plug presentation."
+    },
+    {
+     "claim": "The discriminator question: did an adequate antibiotic course fail, and are the eosinophils and IgE up?",
+     "to": "Ask: did an adequate antibiotic course fail, and are the eosinophils and IgE up?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Recurrent Sinopulmonary Infection covers the upstream question of why a child keeps getting infections and lands on cystic fibrosis and the mucociliary axis.",
+     "from": "Recurrent Sinopulmonary Infection covers the upstream question of why a child keeps getting infections and lands on cystic fibrosis and the mucociliary axis."
+    },
+    {
+     "claim": "This brief covers what happens once that diagnosis is established and an exacerbation stops responding.",
+     "from": "This brief covers what happens once that diagnosis is established and an exacerbation stops responding."
+    },
+    {
+     "claim": "Asthma vs. COPD carries this disease as one line of its adult test-selection block, with the brown-mucus-plug presentation.",
+     "from": "Asthma vs. COPD carries this disease as one line of its adult test-selection block, with the brown-mucus-plug presentation."
+    },
+    {
+     "claim": "The discriminator question: did an adequate antibiotic course fail, and are the eosinophils and IgE up?",
+     "from": "The discriminator question: did an adequate antibiotic course fail, and are the eosinophils and IgE up?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "abpa",
+   "find": "When a treatment that should work does not, the failure itself is diagnostic information, and the next move is to ask which <i>category</i> of disease you are in rather than to intensify within the category you assumed. In a host with structural organ damage the commonest reclassification is from infection to hypersensitivity, and the laboratory tests that make it are cheap. --- <i>Batch 5, brief 02 · 2026-09-10.</i>",
+   "with": "When a treatment that should work does not, the failure itself is diagnostic information. Next, ask which <i>category</i> of disease you are in rather than intensifying treatment within the category you assumed. In a host with structural organ damage, the commonest reclassification is from infection to hypersensitivity, and the laboratory tests that make it are cheap.",
+   "note": "batch note removed; long sentence split",
+   "claims": [
+    {
+     "claim": "When a treatment that should work does not, the failure itself is diagnostic information.",
+     "to": "When a treatment that should work does not, the failure itself is diagnostic information."
+    },
+    {
+     "claim": "The next move is to ask which category of disease you are in rather than to intensify within the category you assumed.",
+     "to": "Next, ask which category of disease you are in rather than intensifying treatment within the category you assumed."
+    },
+    {
+     "claim": "In a host with structural organ damage the commonest reclassification is from infection to hypersensitivity.",
+     "to": "In a host with structural organ damage, the commonest reclassification is from infection to hypersensitivity, and the laboratory tests that make it are cheap."
+    },
+    {
+     "claim": "The laboratory tests that make the reclassification are cheap.",
+     "to": "In a host with structural organ damage, the commonest reclassification is from infection to hypersensitivity, and the laboratory tests that make it are cheap."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a treatment that should work does not, the failure itself is diagnostic information.",
+     "from": "When a treatment that should work does not, the failure itself is diagnostic information."
+    },
+    {
+     "claim": "The next move is to ask which category of disease you are in rather than to intensify within the category you assumed.",
+     "from": "The next move is to ask which category of disease you are in rather than to intensify within the category you assumed."
+    },
+    {
+     "claim": "In a host with structural organ damage the commonest reclassification is from infection to hypersensitivity.",
+     "from": "In a host with structural organ damage the commonest reclassification is from infection to hypersensitivity."
+    },
+    {
+     "claim": "The laboratory tests that make the reclassification are cheap.",
+     "from": "The laboratory tests that make the reclassification are cheap."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "<p>The sickle cell disease is real, relevant, and not the discriminator. What decides this is a two-word symptom pattern — <b>nocturnal and intermittent</b> — and everything else in the examination exists to remove the alternatives that would have been exertional. <b>Normal vital signs and a normal chest film</b> remove pulmonary embolism, which arrives acute and persistent with tachycardia and hypoxia. <b>No peripheral edema with the apex beat in the fifth intercostal space at the midclavicular line</b> removes pulmonary hypertension and heart failure, both of which announce themselves with right-sided signs or a displaced point of maximal impulse. <b>A normal film with no reticular markings</b> removes fibrosis, which is progressive and exertional. <b>No hilar adenopathy</b> removes sarcoidosis, and the family history of sarcoid is there precisely to make you forget that sarcoid is not associated with sickle cell disease at all. What remains is obstructive airway disease, and <b>asthma is a common comorbidity in children and adolescents with sickle cell disease</b> — so the first test is <b>spirometry</b>, looking for obstruction that reverses with a bronchodilator.</p>",
+   "with": "<p>The sickle cell disease is real and relevant but does not discriminate. The deciding symptom pattern is <b>nocturnal and intermittent</b>. The rest of the examination removes the alternatives that would have been exertional. <b>Normal vital signs and a normal chest film</b> remove pulmonary embolism, which arrives acute and persistent with tachycardia and hypoxia. <b>No peripheral edema with the apex beat in the fifth intercostal space at the midclavicular line</b> removes pulmonary hypertension and heart failure. Both would show right-sided signs or a displaced point of maximal impulse. <b>A normal film with no reticular markings</b> removes fibrosis, which is progressive and exertional. <b>No hilar adenopathy</b> removes sarcoidosis. The family history of sarcoid does not change this, because sarcoid is not associated with sickle cell disease at all. What remains is obstructive airway disease, and <b>asthma is a common comorbidity in children and adolescents with sickle cell disease</b>. The first test is therefore <b>spirometry</b>, looking for obstruction that reverses with a bronchodilator.</p>",
+   "note": "voice rewrite",
+   "claims": [
+    {
+     "claim": "The sickle cell disease is real and relevant but not the discriminator.",
+     "to": "The sickle cell disease is real and relevant but does not discriminate."
+    },
+    {
+     "claim": "The deciding symptom pattern is nocturnal and intermittent.",
+     "to": "The deciding symptom pattern is nocturnal and intermittent."
+    },
+    {
+     "claim": "The rest of the examination removes the alternatives that would have been exertional.",
+     "to": "The rest of the examination removes the alternatives that would have been exertional."
+    },
+    {
+     "claim": "Normal vital signs and a normal chest film remove pulmonary embolism.",
+     "to": "Normal vital signs and a normal chest film remove pulmonary embolism, which arrives acute and persistent with tachycardia and hypoxia."
+    },
+    {
+     "claim": "Pulmonary embolism arrives acute and persistent with tachycardia and hypoxia.",
+     "to": "Normal vital signs and a normal chest film remove pulmonary embolism, which arrives acute and persistent with tachycardia and hypoxia."
+    },
+    {
+     "claim": "No peripheral edema with the apex beat in the fifth intercostal space at the midclavicular line removes pulmonary hypertension and heart failure.",
+     "to": "No peripheral edema with the apex beat in the fifth intercostal space at the midclavicular line removes pulmonary hypertension and heart failure."
+    },
+    {
+     "claim": "Pulmonary hypertension and heart failure announce themselves with right-sided signs or a displaced point of maximal impulse.",
+     "to": "Both would show right-sided signs or a displaced point of maximal impulse."
+    },
+    {
+     "claim": "A normal film with no reticular markings removes fibrosis, which is progressive and exertional.",
+     "to": "A normal film with no reticular markings removes fibrosis, which is progressive and exertional."
+    },
+    {
+     "claim": "No hilar adenopathy removes sarcoidosis.",
+     "to": "No hilar adenopathy removes sarcoidosis."
+    },
+    {
+     "claim": "The family history is there precisely to make you forget.",
+     "dropped": "framing about the stem's intent"
+    },
+    {
+     "claim": "Sarcoid is not associated with sickle cell disease at all.",
+     "to": "The family history of sarcoid does not change this, because sarcoid is not associated with sickle cell disease at all."
+    },
+    {
+     "claim": "What remains is obstructive airway disease.",
+     "to": "What remains is obstructive airway disease, and asthma is a common comorbidity in children and adolescents with sickle cell disease."
+    },
+    {
+     "claim": "Asthma is a common comorbidity in children and adolescents with sickle cell disease.",
+     "to": "What remains is obstructive airway disease, and asthma is a common comorbidity in children and adolescents with sickle cell disease."
+    },
+    {
+     "claim": "The first test is spirometry, looking for obstruction that reverses with a bronchodilator.",
+     "to": "The first test is therefore spirometry, looking for obstruction that reverses with a bronchodilator."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The sickle cell disease is real and relevant but not the discriminator.",
+     "from": "The sickle cell disease is real and relevant but not the discriminator."
+    },
+    {
+     "claim": "The deciding symptom pattern is nocturnal and intermittent.",
+     "from": "The deciding symptom pattern is nocturnal and intermittent."
+    },
+    {
+     "claim": "The rest of the examination removes the alternatives that would have been exertional.",
+     "from": "The rest of the examination removes the alternatives that would have been exertional."
+    },
+    {
+     "claim": "Normal vital signs and a normal chest film remove pulmonary embolism.",
+     "from": "Normal vital signs and a normal chest film remove pulmonary embolism."
+    },
+    {
+     "claim": "Pulmonary embolism arrives acute and persistent with tachycardia and hypoxia.",
+     "from": "Pulmonary embolism arrives acute and persistent with tachycardia and hypoxia."
+    },
+    {
+     "claim": "No peripheral edema with the apex beat in the fifth intercostal space at the midclavicular line removes pulmonary hypertension and heart failure.",
+     "from": "No peripheral edema with the apex beat in the fifth intercostal space at the midclavicular line removes pulmonary hypertension and heart failure."
+    },
+    {
+     "claim": "Pulmonary hypertension and heart failure announce themselves with right-sided signs or a displaced point of maximal impulse.",
+     "from": "Pulmonary hypertension and heart failure announce themselves with right-sided signs or a displaced point of maximal impulse."
+    },
+    {
+     "claim": "A normal film with no reticular markings removes fibrosis, which is progressive and exertional.",
+     "from": "A normal film with no reticular markings removes fibrosis, which is progressive and exertional."
+    },
+    {
+     "claim": "No hilar adenopathy removes sarcoidosis.",
+     "from": "No hilar adenopathy removes sarcoidosis."
+    },
+    {
+     "claim": "Sarcoid is not associated with sickle cell disease at all.",
+     "from": "Sarcoid is not associated with sickle cell disease at all."
+    },
+    {
+     "claim": "What remains is obstructive airway disease.",
+     "from": "What remains is obstructive airway disease."
+    },
+    {
+     "claim": "Asthma is a common comorbidity in children and adolescents with sickle cell disease.",
+     "from": "Asthma is a common comorbidity in children and adolescents with sickle cell disease."
+    },
+    {
+     "claim": "The first test is spirometry, looking for obstruction that reverses with a bronchodilator.",
+     "from": "The first test is spirometry, looking for obstruction that reverses with a bronchodilator."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "and the film shows no adenopathy, so the history is bait",
+   "with": "and the film shows no adenopathy, so the history does not point to sarcoid",
+   "note": "plain wording",
+   "claims": [
+    {
+     "claim": "The family history of sarcoidosis is bait.",
+     "to": "and the film shows no adenopathy, so the history does not point to sarcoid"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The family history of sarcoidosis is bait.",
+     "from": "The family history of sarcoidosis is bait."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "Management follows the test and is one sentence: asthma in sickle cell disease is treated <b>as asthma is treated in anyone else</b>, with inhaled bronchodilators and corticosteroids, with the added stake that controlling it lowers the risk of the next acute chest syndrome.",
+   "with": "Asthma in sickle cell disease is treated <b>as asthma is treated in anyone else</b>, with inhaled bronchodilators and corticosteroids. Controlling it also lowers the risk of the next acute chest syndrome.",
+   "note": "framing removed",
+   "claims": [
+    {
+     "claim": "Management is one sentence here.",
+     "dropped": "framing about length"
+    },
+    {
+     "claim": "Asthma in sickle cell disease is treated as asthma is treated in anyone else, with inhaled bronchodilators and corticosteroids.",
+     "to": "Asthma in sickle cell disease is treated as asthma is treated in anyone else, with inhaled bronchodilators and corticosteroids."
+    },
+    {
+     "claim": "Controlling it lowers the risk of the next acute chest syndrome.",
+     "to": "Controlling it also lowers the risk of the next acute chest syndrome."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Asthma in sickle cell disease is treated as asthma is treated in anyone else, with inhaled bronchodilators and corticosteroids.",
+     "from": "Asthma in sickle cell disease is treated as asthma is treated in anyone else, with inhaled bronchodilators and corticosteroids."
+    },
+    {
+     "claim": "Controlling it lowers the risk of the next acute chest syndrome.",
+     "from": "Controlling it lowers the risk of the next acute chest syndrome."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "Nothing — no infiltrate, no reticular markings, no hilar nodes",
+   "with": "Nothing: no infiltrate, no reticular markings, no hilar nodes",
+   "note": "em dash removed",
+   "claims": [
+    {
+     "claim": "The film shows nothing: no infiltrate, no reticular markings, no hilar nodes.",
+     "to": "Nothing: no infiltrate, no reticular markings, no hilar nodes"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The film shows nothing: no infiltrate, no reticular markings, no hilar nodes.",
+     "from": "The film shows nothing: no infiltrate, no reticular markings, no hilar nodes."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "Almost every sentence of the history is doing decoy work, and none of it is doing discrimination. Acute chest syndrome six months ago, prior vasoocclusive episodes requiring transfusion, hydroxyurea and a family history of sarcoidosis together create the impression that a sickle cell patient must have a sickle cell answer. The counterintuitive fact is stated outright: <b>asthma is a common comorbidity</b>, and the prior acute chest syndrome makes it <i>more</i> likely rather than less. Note also that clear lungs on examination is not evidence against asthma, since wheezing is often absent when symptoms are mild or intermittent, and that the deliberately normal <b>point of maximal impulse</b> and <b>absence of edema</b> are two findings whose only job is to kill the echocardiogram.",
+   "with": "Acute chest syndrome six months ago, prior vasoocclusive episodes requiring transfusion, hydroxyurea and a family history of sarcoidosis suggest a sickle cell cause. None of these history items separates the causes. However, <b>asthma is a common comorbidity</b>, and the prior acute chest syndrome makes it <i>more</i> likely rather than less. Clear lungs on examination are not evidence against asthma, since wheezing is often absent when symptoms are mild or intermittent. The normal <b>point of maximal impulse</b> and <b>absence of edema</b> argue against ordering the echocardiogram.",
+   "note": "decoy framing reduced to the facts",
+   "claims": [
+    {
+     "claim": "Almost every sentence of the history is doing decoy work.",
+     "dropped": "framing about the stem; the misleading items are listed next"
+    },
+    {
+     "claim": "None of the history is doing discrimination.",
+     "to": "None of these history items separates the causes."
+    },
+    {
+     "claim": "Acute chest syndrome six months ago, prior vasoocclusive episodes requiring transfusion, hydroxyurea and a family history of sarcoidosis create the impression of a sickle cell answer.",
+     "to": "Acute chest syndrome six months ago, prior vasoocclusive episodes requiring transfusion, hydroxyurea and a family history of sarcoidosis suggest a sickle cell cause."
+    },
+    {
+     "claim": "Asthma is a common comorbidity.",
+     "to": "However, asthma is a common comorbidity, and the prior acute chest syndrome makes it more likely rather than less."
+    },
+    {
+     "claim": "The prior acute chest syndrome makes asthma more likely rather than less.",
+     "to": "However, asthma is a common comorbidity, and the prior acute chest syndrome makes it more likely rather than less."
+    },
+    {
+     "claim": "Clear lungs on examination are not evidence against asthma.",
+     "to": "Clear lungs on examination are not evidence against asthma, since wheezing is often absent when symptoms are mild or intermittent."
+    },
+    {
+     "claim": "Wheezing is often absent when symptoms are mild or intermittent.",
+     "to": "Clear lungs on examination are not evidence against asthma, since wheezing is often absent when symptoms are mild or intermittent."
+    },
+    {
+     "claim": "The normal point of maximal impulse and absence of edema serve only to exclude the echocardiogram.",
+     "to": "The normal point of maximal impulse and absence of edema argue against ordering the echocardiogram."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "None of the history is doing discrimination.",
+     "from": "None of the history is doing discrimination."
+    },
+    {
+     "claim": "Acute chest syndrome six months ago, prior vasoocclusive episodes requiring transfusion, hydroxyurea and a family history of sarcoidosis create the impression of a sickle cell answer.",
+     "from": "Acute chest syndrome six months ago, prior vasoocclusive episodes requiring transfusion, hydroxyurea and a family history of sarcoidosis create the impression of a sickle cell answer."
+    },
+    {
+     "claim": "Asthma is a common comorbidity.",
+     "from": "Asthma is a common comorbidity."
+    },
+    {
+     "claim": "The prior acute chest syndrome makes asthma more likely rather than less.",
+     "from": "The prior acute chest syndrome makes asthma more likely rather than less."
+    },
+    {
+     "claim": "Clear lungs on examination are not evidence against asthma.",
+     "from": "Clear lungs on examination are not evidence against asthma."
+    },
+    {
+     "claim": "Wheezing is often absent when symptoms are mild or intermittent.",
+     "from": "Wheezing is often absent when symptoms are mild or intermittent."
+    },
+    {
+     "claim": "The normal point of maximal impulse and absence of edema serve only to exclude the echocardiogram.",
+     "from": "The normal point of maximal impulse and absence of edema serve only to exclude the echocardiogram."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "means vascular or interstitial</b> — that single axis sorts the whole chronic-dyspnea differential in sickle cell disease.",
+   "with": "means vascular or interstitial</b>. That single axis sorts the whole chronic-dyspnea differential in sickle cell disease.",
+   "note": "em dash removed",
+   "claims": [
+    {
+     "claim": "That single axis sorts the whole chronic-dyspnea differential in sickle cell disease.",
+     "to": "That single axis sorts the whole chronic-dyspnea differential in sickle cell disease."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "That single axis sorts the whole chronic-dyspnea differential in sickle cell disease.",
+     "from": "That single axis sorts the whole chronic-dyspnea differential in sickle cell disease."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "the relationship is bidirectional</b> — acute chest syndrome drives airway hyperreactivity",
+   "with": "the relationship is bidirectional</b>: acute chest syndrome drives airway hyperreactivity",
+   "note": "em dash removed",
+   "claims": [
+    {
+     "claim": "Acute chest syndrome drives airway hyperreactivity, and asthma raises the risk of the next acute chest syndrome.",
+     "to": "acute chest syndrome drives airway hyperreactivity, and asthma raises the risk of the next acute chest syndrome."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Acute chest syndrome drives airway hyperreactivity, and asthma raises the risk of the next acute chest syndrome.",
+     "from": "Acute chest syndrome drives airway hyperreactivity, and asthma raises the risk of the next acute chest syndrome."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "and serum ACE has poor sensitivity and specificity even when sarcoid is genuinely suspected — the chest film leads. &middot; Treating the asthma is not just symptom control, it is <b>acute chest syndrome prevention</b>, which is why the exam wants it found.",
+   "with": "and serum <b>ACE</b> (angiotensin-converting enzyme) has poor sensitivity and specificity even when sarcoid is genuinely suspected. The chest film leads. &middot; Treating the asthma is not just symptom control; it is also <b>acute chest syndrome prevention</b>.",
+   "note": "em dash and exam framing removed; acronym expanded",
+   "claims": [
+    {
+     "claim": "Serum ACE has poor sensitivity and specificity even when sarcoid is genuinely suspected.",
+     "to": "and serum ACE (angiotensin-converting enzyme) has poor sensitivity and specificity even when sarcoid is genuinely suspected."
+    },
+    {
+     "claim": "The chest film leads.",
+     "to": "The chest film leads."
+    },
+    {
+     "claim": "Treating the asthma is not just symptom control; it is acute chest syndrome prevention.",
+     "to": "Treating the asthma is not just symptom control; it is also acute chest syndrome prevention."
+    },
+    {
+     "claim": "That is why the exam wants it found.",
+     "dropped": "framing about the exam"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Serum ACE has poor sensitivity and specificity even when sarcoid is genuinely suspected.",
+     "from": "Serum ACE has poor sensitivity and specificity even when sarcoid is genuinely suspected."
+    },
+    {
+     "claim": "The chest film leads.",
+     "from": "The chest film leads."
+    },
+    {
+     "claim": "Treating the asthma is not just symptom control; it is acute chest syndrome prevention.",
+     "from": "Treating the asthma is not just symptom control; it is acute chest syndrome prevention."
+    },
+    {
+     "claim": "ACE stands for angiotensin-converting enzyme.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "Verified: Part II <b>Sickle Cell Trait versus Disease</b> owns the trait–disease boundary and carries acute chest syndrome as the acute event; this brief owns the chronic pulmonary sequelae that follow it. Part I <b>Asthma: Severity Classification</b> owns what happens after spirometry confirms the diagnosis, and Part I <b>Asthma vs. COPD</b> owns the adult version of the which-test question. Store the discriminator as a question: are the symptoms nocturnal and intermittent, or exertional and progressive?",
+   "with": "Part II <b>Sickle Cell Trait versus Disease</b> covers the trait–disease boundary and carries acute chest syndrome as the acute event. This brief covers the chronic pulmonary sequelae that follow it. Part I <b>Asthma: Severity Classification</b> covers what happens after spirometry confirms the diagnosis. Part I <b>Asthma vs. COPD</b> covers the adult version of the which-test question. Ask: are the symptoms nocturnal and intermittent, or exertional and progressive?",
+   "note": "Verified removed; owns to covers; Ask:",
+   "claims": [
+    {
+     "claim": "Sickle Cell Trait versus Disease covers the trait–disease boundary and carries acute chest syndrome as the acute event.",
+     "to": "Part II Sickle Cell Trait versus Disease covers the trait–disease boundary and carries acute chest syndrome as the acute event."
+    },
+    {
+     "claim": "This brief covers the chronic pulmonary sequelae that follow it.",
+     "to": "This brief covers the chronic pulmonary sequelae that follow it."
+    },
+    {
+     "claim": "Asthma: Severity Classification covers what happens after spirometry confirms the diagnosis.",
+     "to": "Part I Asthma: Severity Classification covers what happens after spirometry confirms the diagnosis."
+    },
+    {
+     "claim": "Asthma vs. COPD covers the adult version of the which-test question.",
+     "to": "Part I Asthma vs. COPD covers the adult version of the which-test question."
+    },
+    {
+     "claim": "The discriminator question: are the symptoms nocturnal and intermittent, or exertional and progressive?",
+     "to": "Ask: are the symptoms nocturnal and intermittent, or exertional and progressive?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Sickle Cell Trait versus Disease covers the trait–disease boundary and carries acute chest syndrome as the acute event.",
+     "from": "Sickle Cell Trait versus Disease covers the trait–disease boundary and carries acute chest syndrome as the acute event."
+    },
+    {
+     "claim": "This brief covers the chronic pulmonary sequelae that follow it.",
+     "from": "This brief covers the chronic pulmonary sequelae that follow it."
+    },
+    {
+     "claim": "Asthma: Severity Classification covers what happens after spirometry confirms the diagnosis.",
+     "from": "Asthma: Severity Classification covers what happens after spirometry confirms the diagnosis."
+    },
+    {
+     "claim": "Asthma vs. COPD covers the adult version of the which-test question.",
+     "from": "Asthma vs. COPD covers the adult version of the which-test question."
+    },
+    {
+     "claim": "The discriminator question: are the symptoms nocturnal and intermittent, or exertional and progressive?",
+     "from": "The discriminator question: are the symptoms nocturnal and intermittent, or exertional and progressive?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "A dramatic chronic disease in the history sets the prior for its own complications, but it does not suspend the base rate of common disease — so when a patient with a rare condition develops common symptoms, the symptom pattern still selects the test. Ask what the timing of the complaint means before asking what the diagnosis in the first line predisposes to. --- <i>Batch 5, brief 06 · 2026-09-10.</i>",
+   "with": "A dramatic chronic disease in the history sets the prior for its own complications but does not suspend the base rate of common disease. When a patient with a rare condition develops common symptoms, the symptom pattern still selects the test. Ask what the timing of the complaint means before asking what the known diagnosis predisposes to.",
+   "note": "batch note and em dash removed",
+   "claims": [
+    {
+     "claim": "A dramatic chronic disease in the history sets the prior for its own complications.",
+     "to": "A dramatic chronic disease in the history sets the prior for its own complications but does not suspend the base rate of common disease."
+    },
+    {
+     "claim": "It does not suspend the base rate of common disease.",
+     "to": "A dramatic chronic disease in the history sets the prior for its own complications but does not suspend the base rate of common disease."
+    },
+    {
+     "claim": "When a patient with a rare condition develops common symptoms, the symptom pattern still selects the test.",
+     "to": "When a patient with a rare condition develops common symptoms, the symptom pattern still selects the test."
+    },
+    {
+     "claim": "Ask what the timing of the complaint means before asking what the diagnosis in the first line predisposes to.",
+     "to": "Ask what the timing of the complaint means before asking what the known diagnosis predisposes to."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A dramatic chronic disease in the history sets the prior for its own complications.",
+     "from": "A dramatic chronic disease in the history sets the prior for its own complications."
+    },
+    {
+     "claim": "It does not suspend the base rate of common disease.",
+     "from": "It does not suspend the base rate of common disease."
+    },
+    {
+     "claim": "When a patient with a rare condition develops common symptoms, the symptom pattern still selects the test.",
+     "from": "When a patient with a rare condition develops common symptoms, the symptom pattern still selects the test."
+    },
+    {
+     "claim": "Ask what the timing of the complaint means before asking what the diagnosis in the first line predisposes to.",
+     "from": "Ask what the timing of the complaint means before asking what the diagnosis in the first line predisposes to."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "D-dimer: The same failure as the angiogram, because the clinical picture is not an embolism picture, so no rung of that pathway applies",
+   "with": "D-dimer: As with the angiogram, the clinical picture is not embolism, so no step of that pathway applies",
+   "note": "plain wording",
+   "claims": [
+    {
+     "claim": "D-dimer fails like the angiogram because the clinical picture is not an embolism picture, so no rung of that pathway applies.",
+     "to": "D-dimer: As with the angiogram, the clinical picture is not embolism, so no step of that pathway applies"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "D-dimer fails like the angiogram because the clinical picture is not an embolism picture, so no rung of that pathway applies.",
+     "from": "D-dimer fails like the angiogram because the clinical picture is not an embolism picture, so no rung of that pathway applies."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "airway",
+   "find": "<b>4 Ds of epiglottitis</b> &mdash; Drooling, Dysphagia, Dysphonia (muffled voice), Distress (tripod position)",
+   "with": "<b>4 Ds of epiglottitis</b>: Drooling, Dysphagia, Dysphonia (muffled voice), Distress (tripod position)",
+   "note": "prose em dash to colon (block has no middot rows)",
+   "claims": [
+    {
+     "claim": "The 4 Ds of epiglottitis are Drooling, Dysphagia, Dysphonia (muffled voice), Distress (tripod position).",
+     "to": "4 Ds of epiglottitis: Drooling, Dysphagia, Dysphonia (muffled voice), Distress (tripod position)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The 4 Ds of epiglottitis are Drooling, Dysphagia, Dysphonia (muffled voice), Distress (tripod position).",
+     "from": "The 4 Ds of epiglottitis are Drooling, Dysphagia, Dysphonia (muffled voice), Distress (tripod position)."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "airway",
+   "find": "<b>2.</b> Sudden + afebrile → foreign body — absence of fever does heavy lifting. <b>3.</b> Toxic + drooling + tripod → epiglottitis, <b>airway first in the OR</b>; throat exam or X-ray first is the trap. <b>4.</b> Barky + nontoxic → croup. <b>5.</b> Croup not behaving → bacterial tracheitis. <b>6.</b> Vaccination status is never decoration.",
+   "with": "<b>2.</b> Sudden + afebrile → foreign body; the absence of fever is a key clue. <b>3.</b> Toxic + drooling + tripod → epiglottitis, <b>airway first in the OR</b> (operating room). Getting a throat exam or X-ray first is an error. <b>4.</b> Barky + nontoxic → croup. <b>5.</b> Croup that is not behaving like croup → bacterial tracheitis. <b>6.</b> Vaccination status always matters.",
+   "note": "em dash, slogans and trap framing removed; acronym expanded",
+   "claims": [
+    {
+     "claim": "Sudden + afebrile means foreign body.",
+     "to": "Sudden + afebrile → foreign body; the absence of fever is a key clue."
+    },
+    {
+     "claim": "Absence of fever does heavy lifting.",
+     "to": "Sudden + afebrile → foreign body; the absence of fever is a key clue."
+    },
+    {
+     "claim": "Toxic + drooling + tripod means epiglottitis, airway first in the OR.",
+     "to": "Toxic + drooling + tripod → epiglottitis, airway first in the OR (operating room)."
+    },
+    {
+     "claim": "A throat exam or X-ray first is the trap.",
+     "to": "Getting a throat exam or X-ray first is an error."
+    },
+    {
+     "claim": "Barky + nontoxic means croup.",
+     "to": "Barky + nontoxic → croup."
+    },
+    {
+     "claim": "Croup not behaving means bacterial tracheitis.",
+     "to": "Croup that is not behaving like croup → bacterial tracheitis."
+    },
+    {
+     "claim": "Vaccination status is never decoration.",
+     "to": "Vaccination status always matters."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Sudden + afebrile means foreign body.",
+     "from": "Sudden + afebrile means foreign body."
+    },
+    {
+     "claim": "Absence of fever does heavy lifting.",
+     "from": "Absence of fever does heavy lifting."
+    },
+    {
+     "claim": "Toxic + drooling + tripod means epiglottitis, airway first in the OR.",
+     "from": "Toxic + drooling + tripod means epiglottitis, airway first in the OR."
+    },
+    {
+     "claim": "A throat exam or X-ray first is the trap.",
+     "from": "A throat exam or X-ray first is the trap."
+    },
+    {
+     "claim": "Barky + nontoxic means croup.",
+     "from": "Barky + nontoxic means croup."
+    },
+    {
+     "claim": "Croup not behaving means bacterial tracheitis.",
+     "from": "Croup not behaving means bacterial tracheitis."
+    },
+    {
+     "claim": "Vaccination status is never decoration.",
+     "from": "Vaccination status is never decoration."
+    },
+    {
+     "claim": "OR stands for operating room.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "airway",
+   "find": "dental caries and lower respiratory infection &mdash; not epiglottitis",
+   "with": "dental caries and lower respiratory infection, but not epiglottitis",
+   "note": "prose em dash removed",
+   "claims": [
+    {
+     "claim": "Secondhand smoke causes middle ear disease, dental caries and lower respiratory infection, not epiglottitis.",
+     "to": "Secondhand smoke causes middle ear disease, dental caries and lower respiratory infection, but not epiglottitis"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Secondhand smoke causes middle ear disease, dental caries and lower respiratory infection, not epiglottitis.",
+     "from": "Secondhand smoke causes middle ear disease, dental caries and lower respiratory infection, not epiglottitis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "airway",
+   "find": "<b>Peritonsillar Abscess and the Deep Neck Spaces</b> owns Ludwig angina and the retropharyngeal space, the two deep-neck mimics of a toxic child with a sore throat. Store the discriminator as a question: <i>is the submandibular space soft?</i>",
+   "with": "<b>Peritonsillar Abscess and the Deep Neck Spaces</b> covers Ludwig angina and the retropharyngeal space. These are the two deep-neck mimics of a toxic child with a sore throat. Ask: <i>is the submandibular space soft?</i>",
+   "note": "owns to covers; Ask:",
+   "claims": [
+    {
+     "claim": "Peritonsillar Abscess and the Deep Neck Spaces covers Ludwig angina and the retropharyngeal space.",
+     "to": "Peritonsillar Abscess and the Deep Neck Spaces covers Ludwig angina and the retropharyngeal space."
+    },
+    {
+     "claim": "Ludwig angina and the retropharyngeal space are the two deep-neck mimics of a toxic child with a sore throat.",
+     "to": "These are the two deep-neck mimics of a toxic child with a sore throat."
+    },
+    {
+     "claim": "The discriminator question: is the submandibular space soft?",
+     "to": "Ask: is the submandibular space soft?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Peritonsillar Abscess and the Deep Neck Spaces covers Ludwig angina and the retropharyngeal space.",
+     "from": "Peritonsillar Abscess and the Deep Neck Spaces covers Ludwig angina and the retropharyngeal space."
+    },
+    {
+     "claim": "Ludwig angina and the retropharyngeal space are the two deep-neck mimics of a toxic child with a sore throat.",
+     "from": "Ludwig angina and the retropharyngeal space are the two deep-neck mimics of a toxic child with a sore throat."
+    },
+    {
+     "claim": "The discriminator question: is the submandibular space soft?",
+     "from": "The discriminator question: is the submandibular space soft?"
+    }
+   ]
+  }
+ ]
+}

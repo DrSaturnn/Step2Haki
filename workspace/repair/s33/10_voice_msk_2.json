@@ -1,0 +1,840 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "scaphoid",
+   "find": "<p>FOOSH + <b>anatomic snuffbox tenderness</b> = scaphoid fracture until proven otherwise, and a <b>negative initial X-ray proves nothing</b> — up to 20–25% are radiographically occult in week one. Answer: <b>thumb spica cast anyway</b>, re-image in 2–3 weeks (or MRI now, if offered).</p>",
+   "with": "<p><b>FOOSH</b> (fall on an outstretched hand) with <b>anatomic snuffbox tenderness</b> is a scaphoid fracture until proven otherwise. A <b>negative initial X-ray does not rule it out</b>; up to 20–25% are radiographically occult in week one. Apply a <b>thumb spica cast</b> even with a negative film, and re-image in 2–3 weeks (or MRI now, if offered).</p>",
+   "note": "voice: .dp; em dash removed, 'Answer:' framing removed",
+   "reworded_bold": [
+    "negative initial X-ray proves nothing",
+    "thumb spica cast anyway"
+   ],
+   "claims": [
+    {
+     "claim": "FOOSH plus anatomic snuffbox tenderness is a scaphoid fracture until proven otherwise.",
+     "to": "FOOSH (fall on an outstretched hand) with anatomic snuffbox tenderness is a scaphoid fracture until proven otherwise."
+    },
+    {
+     "claim": "A negative initial X-ray proves nothing.",
+     "to": "A negative initial X-ray does not rule it out; up to 20–25% are radiographically occult in week one."
+    },
+    {
+     "claim": "Up to 20–25% are radiographically occult in week one.",
+     "to": "A negative initial X-ray does not rule it out; up to 20–25% are radiographically occult in week one."
+    },
+    {
+     "claim": "The answer is a thumb spica cast despite the negative film.",
+     "to": "Apply a thumb spica cast even with a negative film, and re-image in 2–3 weeks (or MRI now, if offered)."
+    },
+    {
+     "claim": "Re-image in 2–3 weeks.",
+     "to": "Apply a thumb spica cast even with a negative film, and re-image in 2–3 weeks (or MRI now, if offered)."
+    },
+    {
+     "claim": "MRI now is the alternative, if offered.",
+     "to": "Apply a thumb spica cast even with a negative film, and re-image in 2–3 weeks (or MRI now, if offered)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "FOOSH stands for fall on an outstretched hand.",
+     "from": "expansion"
+    },
+    {
+     "claim": "FOOSH with anatomic snuffbox tenderness is a scaphoid fracture until proven otherwise.",
+     "from": "FOOSH plus anatomic snuffbox tenderness is a scaphoid fracture until proven otherwise."
+    },
+    {
+     "claim": "A negative initial X-ray does not rule it out.",
+     "from": "A negative initial X-ray proves nothing."
+    },
+    {
+     "claim": "Up to 20–25% are radiographically occult in week one.",
+     "from": "Up to 20–25% are radiographically occult in week one."
+    },
+    {
+     "claim": "Apply a thumb spica cast even with a negative film.",
+     "from": "The answer is a thumb spica cast despite the negative film."
+    },
+    {
+     "claim": "Re-image in 2–3 weeks.",
+     "from": "Re-image in 2–3 weeks."
+    },
+    {
+     "claim": "Or MRI now, if offered.",
+     "from": "MRI now is the alternative, if offered."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scaphoid",
+   "find": "The scaphoid's blood supply enters <b>distally</b> and runs <b>retrograde</b> to the proximal pole. A missed fracture means <b>avascular necrosis</b> and nonunion. Highest AVN risk = <b>proximal pole</b>. The AVN club worth memorizing: femoral head, <b>scaphoid proximal pole</b>, talus, humeral head — all retrograde or tenuous supply.",
+   "with": "The scaphoid's blood supply enters <b>distally</b> and runs <b>retrograde</b> to the proximal pole. A missed fracture leads to <b>avascular necrosis</b> and nonunion. <b>AVN</b> (avascular necrosis) risk is highest at the <b>proximal pole</b>. The femoral head, <b>scaphoid proximal pole</b>, talus and humeral head are all AVN sites with a retrograde or tenuous blood supply.",
+   "note": "voice: .danger; '=' and 'AVN club' slogan and em dash removed",
+   "claims": [
+    {
+     "claim": "The scaphoid's blood supply enters distally and runs retrograde to the proximal pole.",
+     "to": "The scaphoid's blood supply enters distally and runs retrograde to the proximal pole."
+    },
+    {
+     "claim": "A missed fracture means avascular necrosis and nonunion.",
+     "to": "A missed fracture leads to avascular necrosis and nonunion."
+    },
+    {
+     "claim": "Highest AVN risk is at the proximal pole.",
+     "to": "AVN (avascular necrosis) risk is highest at the proximal pole."
+    },
+    {
+     "claim": "The AVN sites worth memorizing are femoral head, scaphoid proximal pole, talus, humeral head.",
+     "to": "The femoral head, scaphoid proximal pole, talus and humeral head are all AVN sites with a retrograde or tenuous blood supply."
+    },
+    {
+     "claim": "All of these sites have a retrograde or tenuous supply.",
+     "to": "The femoral head, scaphoid proximal pole, talus and humeral head are all AVN sites with a retrograde or tenuous blood supply."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The scaphoid's blood supply enters distally and runs retrograde to the proximal pole.",
+     "from": "The scaphoid's blood supply enters distally and runs retrograde to the proximal pole."
+    },
+    {
+     "claim": "A missed fracture leads to avascular necrosis and nonunion.",
+     "from": "A missed fracture means avascular necrosis and nonunion."
+    },
+    {
+     "claim": "AVN stands for avascular necrosis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "AVN risk is highest at the proximal pole.",
+     "from": "Highest AVN risk is at the proximal pole."
+    },
+    {
+     "claim": "The femoral head, scaphoid proximal pole, talus and humeral head are AVN sites.",
+     "from": "The AVN sites worth memorizing are femoral head, scaphoid proximal pole, talus, humeral head."
+    },
+    {
+     "claim": "These sites have a retrograde or tenuous blood supply.",
+     "from": "All of these sites have a retrograde or tenuous supply."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scaphoid",
+   "find": "<span class=\"lbl\">Transferable rule</span> The D-dimer principle in orthopedic clothing: a negative test cannot rule out disease when pretest probability is high. High-probability PE → CTA regardless of dimer; high-probability scaphoid → cast regardless of film.",
+   "with": "<span class=\"lbl\">Transferable rule</span> A negative test cannot rule out disease when pretest probability is high. The same principle applies to D-dimer: high-probability <b>PE</b> (pulmonary embolism) goes to <b>CTA</b> (computed tomography angiography) regardless of D-dimer. A high-probability scaphoid fracture gets a cast regardless of the film.",
+   "note": "voice: .rule; 'in orthopedic clothing' figure removed, arrows split, acronyms expanded",
+   "claims": [
+    {
+     "claim": "This is the D-dimer principle applied to orthopedics.",
+     "to": "The same principle applies to D-dimer: high-probability PE (pulmonary embolism) goes to CTA (computed tomography angiography) regardless of D-dimer."
+    },
+    {
+     "claim": "A negative test cannot rule out disease when pretest probability is high.",
+     "to": "A negative test cannot rule out disease when pretest probability is high."
+    },
+    {
+     "claim": "High-probability PE goes to CTA regardless of D-dimer.",
+     "to": "The same principle applies to D-dimer: high-probability PE (pulmonary embolism) goes to CTA (computed tomography angiography) regardless of D-dimer."
+    },
+    {
+     "claim": "High-probability scaphoid gets a cast regardless of film.",
+     "to": "A high-probability scaphoid fracture gets a cast regardless of the film."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A negative test cannot rule out disease when pretest probability is high.",
+     "from": "A negative test cannot rule out disease when pretest probability is high."
+    },
+    {
+     "claim": "The same principle applies to D-dimer.",
+     "from": "This is the D-dimer principle applied to orthopedics."
+    },
+    {
+     "claim": "PE stands for pulmonary embolism.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CTA stands for computed tomography angiography.",
+     "from": "expansion"
+    },
+    {
+     "claim": "High-probability PE goes to CTA regardless of D-dimer.",
+     "from": "High-probability PE goes to CTA regardless of D-dimer."
+    },
+    {
+     "claim": "A high-probability scaphoid fracture gets a cast regardless of the film.",
+     "from": "High-probability scaphoid gets a cast regardless of film."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "backpain",
+   "find": "<p>Acute low back pain (&lt;4 weeks) gets <b>no imaging</b> — unless a red flag fires. Red flags",
+   "with": "<p>Acute low back pain (&lt;4 weeks) needs <b>no imaging</b> unless a red flag is present. Red flags",
+   "note": "voice: .dp; em dash removed, 'fires' replaced; rest of block unchanged",
+   "claims": [
+    {
+     "claim": "Acute low back pain (<4 weeks) gets no imaging unless a red flag fires.",
+     "to": "Acute low back pain (<4 weeks) needs no imaging unless a red flag is present."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Acute low back pain (<4 weeks) needs no imaging unless a red flag is present.",
+     "from": "Acute low back pain (<4 weeks) gets no imaging unless a red flag fires."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "backpain",
+   "find": "<span class=\"lbl\">Pearls</span> Vertebral mets seed the <b>vertebral body first</b> via <b>Batson's valveless venous plexus</b> · pedicle destruction = <b>\"winking owl\" sign</b> · bone-seeking primaries: <b>\"BLT with a Kosher Pickle\"</b> — Breast, Lung, Thyroid, Kidney, Prostate · <b>give dexamethasone before imaging</b> when cord compression is suspected with deficits — the one place treatment precedes diagnosis · plain films miss 30–50% of bone loss.",
+   "with": "<span class=\"lbl\">Pearls</span> Vertebral metastases seed the <b>vertebral body first</b> via <b>Batson's valveless venous plexus</b> · pedicle destruction produces the <b>\"winking owl\" sign</b> · bone-seeking primaries: <b>\"BLT with a Kosher Pickle\"</b> (Breast, Lung, Thyroid, Kidney, Prostate) · <b>give dexamethasone before imaging</b> when cord compression is suspected with deficits; this is the one place treatment precedes diagnosis · plain films miss 30–50% of bone loss.",
+   "note": "voice: .pearls; em dashes removed ('mets' written out)",
+   "claims": [
+    {
+     "claim": "Vertebral mets seed the vertebral body first via Batson's valveless venous plexus.",
+     "to": "Vertebral metastases seed the vertebral body first via Batson's valveless venous plexus"
+    },
+    {
+     "claim": "Pedicle destruction is the winking owl sign.",
+     "to": "pedicle destruction produces the \"winking owl\" sign"
+    },
+    {
+     "claim": "Bone-seeking primaries are Breast, Lung, Thyroid, Kidney, Prostate (BLT with a Kosher Pickle).",
+     "to": "bone-seeking primaries: \"BLT with a Kosher Pickle\" (Breast, Lung, Thyroid, Kidney, Prostate)"
+    },
+    {
+     "claim": "Give dexamethasone before imaging when cord compression is suspected with deficits.",
+     "to": "give dexamethasone before imaging when cord compression is suspected with deficits; this is the one place treatment precedes diagnosis"
+    },
+    {
+     "claim": "This is the one place treatment precedes diagnosis.",
+     "to": "give dexamethasone before imaging when cord compression is suspected with deficits; this is the one place treatment precedes diagnosis"
+    },
+    {
+     "claim": "Plain films miss 30–50% of bone loss.",
+     "to": "plain films miss 30–50% of bone loss."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Vertebral metastases seed the vertebral body first via Batson's valveless venous plexus.",
+     "from": "Vertebral mets seed the vertebral body first via Batson's valveless venous plexus."
+    },
+    {
+     "claim": "Pedicle destruction produces the winking owl sign.",
+     "from": "Pedicle destruction is the winking owl sign."
+    },
+    {
+     "claim": "Bone-seeking primaries are Breast, Lung, Thyroid, Kidney, Prostate (BLT with a Kosher Pickle).",
+     "from": "Bone-seeking primaries are Breast, Lung, Thyroid, Kidney, Prostate (BLT with a Kosher Pickle)."
+    },
+    {
+     "claim": "Give dexamethasone before imaging when cord compression is suspected with deficits.",
+     "from": "Give dexamethasone before imaging when cord compression is suspected with deficits."
+    },
+    {
+     "claim": "This is the one place treatment precedes diagnosis.",
+     "from": "This is the one place treatment precedes diagnosis."
+    },
+    {
+     "claim": "Plain films miss 30–50% of bone loss.",
+     "from": "Plain films miss 30–50% of bone loss."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "backpain",
+   "find": "<span class=\"lbl\">Transferable rule</span> In any \"most patients don't need X\" topic, the question is never whether the base rate is low — it's whether <i>this</i> patient is the exception. Scan the PMH before applying the population rule.",
+   "with": "<span class=\"lbl\">Transferable rule</span> When most patients do not need X, ask whether this patient is the exception, not whether the base rate is low. Review the <b>PMH</b> (past medical history) before applying the population rule.",
+   "note": "voice: .rule; question framing and em dash removed, PMH expanded",
+   "claims": [
+    {
+     "claim": "In a 'most patients don't need X' topic, the issue is whether this patient is the exception, not whether the base rate is low.",
+     "to": "When most patients do not need X, ask whether this patient is the exception, not whether the base rate is low."
+    },
+    {
+     "claim": "Scan the PMH before applying the population rule.",
+     "to": "Review the PMH (past medical history) before applying the population rule."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When most patients do not need X, ask whether this patient is the exception, not whether the base rate is low.",
+     "from": "In a 'most patients don't need X' topic, the issue is whether this patient is the exception, not whether the base rate is low."
+    },
+    {
+     "claim": "PMH stands for past medical history.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Review the PMH before applying the population rule.",
+     "from": "Scan the PMH before applying the population rule."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hippos",
+   "find": "Free points, frequently reversed",
+   "with": "Hip fracture versus posterior dislocation: leg positions often reversed",
+   "note": "voice: p.sub; slogan replaced with plain subtitle",
+   "claims": [
+    {
+     "claim": "These are free points.",
+     "dropped": "framing about exam scoring; no clinical content"
+    },
+    {
+     "claim": "The positions are frequently reversed.",
+     "to": "Hip fracture versus posterior dislocation: leg positions often reversed"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hip fracture and posterior dislocation leg positions are often reversed.",
+     "from": "The positions are frequently reversed."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hippos",
+   "find": "<b>Shortened + internally rotated + adducted + flexed = posterior hip dislocation</b> — the dashboard injury, ~90% of hip dislocations, with the <b>sciatic nerve</b> at risk.</p>",
+   "with": "<b>Shortened + internally rotated + adducted + flexed = posterior hip dislocation</b>. It is the dashboard injury, accounts for ~90% of hip dislocations, and puts the <b>sciatic nerve</b> at risk.</p>",
+   "note": "voice: .dp; em dash removed",
+   "claims": [
+    {
+     "claim": "Shortened, internally rotated, adducted, flexed = posterior hip dislocation.",
+     "to": "Shortened + internally rotated + adducted + flexed = posterior hip dislocation."
+    },
+    {
+     "claim": "Posterior hip dislocation is the dashboard injury.",
+     "to": "It is the dashboard injury, accounts for ~90% of hip dislocations, and puts the sciatic nerve at risk."
+    },
+    {
+     "claim": "Posterior dislocation is ~90% of hip dislocations.",
+     "to": "It is the dashboard injury, accounts for ~90% of hip dislocations, and puts the sciatic nerve at risk."
+    },
+    {
+     "claim": "The sciatic nerve is at risk.",
+     "to": "It is the dashboard injury, accounts for ~90% of hip dislocations, and puts the sciatic nerve at risk."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Shortened, internally rotated, adducted, flexed = posterior hip dislocation.",
+     "from": "Shortened, internally rotated, adducted, flexed = posterior hip dislocation."
+    },
+    {
+     "claim": "Posterior hip dislocation is the dashboard injury.",
+     "from": "Posterior hip dislocation is the dashboard injury."
+    },
+    {
+     "claim": "Posterior dislocation accounts for ~90% of hip dislocations.",
+     "from": "Posterior dislocation is ~90% of hip dislocations."
+    },
+    {
+     "claim": "It puts the sciatic nerve at risk.",
+     "from": "The sciatic nerve is at risk."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hippos",
+   "find": "<span class=\"lbl\">Time-critical</span> Posterior dislocation needs <b>reduction within ~6 hours</b> to avoid femoral head AVN. Femoral neck fracture in the elderly → AVN risk from retinacular vessel disruption → arthroplasty.",
+   "with": "<span class=\"lbl\">Time-critical</span> Posterior dislocation needs <b>reduction within ~6 hours</b> to avoid femoral head <b>AVN</b> (avascular necrosis). In the elderly, femoral neck fracture carries AVN risk from retinacular vessel disruption; treat it with arthroplasty.",
+   "note": "voice: .danger; arrow chain split, AVN expanded",
+   "claims": [
+    {
+     "claim": "Posterior dislocation needs reduction within ~6 hours to avoid femoral head AVN.",
+     "to": "Posterior dislocation needs reduction within ~6 hours to avoid femoral head AVN (avascular necrosis)."
+    },
+    {
+     "claim": "Femoral neck fracture in the elderly carries AVN risk from retinacular vessel disruption.",
+     "to": "In the elderly, femoral neck fracture carries AVN risk from retinacular vessel disruption; treat it with arthroplasty."
+    },
+    {
+     "claim": "Femoral neck fracture in the elderly is treated with arthroplasty.",
+     "to": "In the elderly, femoral neck fracture carries AVN risk from retinacular vessel disruption; treat it with arthroplasty."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Posterior dislocation needs reduction within ~6 hours to avoid femoral head AVN.",
+     "from": "Posterior dislocation needs reduction within ~6 hours to avoid femoral head AVN."
+    },
+    {
+     "claim": "AVN stands for avascular necrosis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "In the elderly, femoral neck fracture carries AVN risk from retinacular vessel disruption.",
+     "from": "Femoral neck fracture in the elderly carries AVN risk from retinacular vessel disruption."
+    },
+    {
+     "claim": "Treat it with arthroplasty.",
+     "from": "Femoral neck fracture in the elderly is treated with arthroplasty."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "gtps",
+   "find": "Findings beat pain descriptors",
+   "with": "Physical findings outweigh pain descriptors",
+   "note": "voice: p.sub; slogan verb replaced",
+   "claims": [
+    {
+     "claim": "Findings beat pain descriptors.",
+     "to": "Physical findings outweigh pain descriptors"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Physical findings outweigh pain descriptors.",
+     "from": "Findings beat pain descriptors."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "gtps",
+   "find": "<p><b>Point tenderness over the greater trochanter with a normal neurologic exam.</b> Stems plant \"burning,\" which sounds neuropathic and pulls toward meralgia paresthetica — but burning is a <b>quality descriptor</b>, while tenderness and a normal neuro exam are <b>findings</b>. GTPS is a <b>tendinopathy</b>; meralgia is a <b>neuropathy</b>.</p>\n<p><b>The location rule that organizes all hip pain:</b> <b>groin → the joint itself</b> (OA, AVN, fracture, labral tear) · <b>lateral → trochanter and its tendons</b>, or the LFCN · <b>posterior/buttock → spine, SI joint, or piriformis</b>.</p>",
+   "with": "<p><b>Point tenderness over the greater trochanter with a normal neurologic exam.</b> Pain described as \"burning\" sounds neuropathic and pulls toward meralgia paresthetica. However, burning is a <b>quality descriptor</b>, while tenderness and a normal neurologic exam are <b>findings</b>. <b>GTPS</b> (greater trochanteric pain syndrome) is a <b>tendinopathy</b>; meralgia is a <b>neuropathy</b>.</p>\n<p><b>All hip pain sorts by location:</b> <b>groin → the joint itself</b> (<b>OA</b> (osteoarthritis), <b>AVN</b> (avascular necrosis), fracture, labral tear) · <b>lateral → trochanter and its tendons</b>, or the <b>LFCN</b> (lateral femoral cutaneous nerve) · <b>posterior/buttock → spine, SI joint, or piriformis</b>.</p>",
+   "note": "voice: .dp; stem framing and em dash removed, rhetorical bold label reworded, acronyms expanded",
+   "reworded_bold": [
+    "The location rule that organizes all hip pain:"
+   ],
+   "claims": [
+    {
+     "claim": "The decision point is point tenderness over the greater trochanter with a normal neurologic exam.",
+     "to": "Point tenderness over the greater trochanter with a normal neurologic exam."
+    },
+    {
+     "claim": "Stems plant 'burning'.",
+     "dropped": "meta framing about how stems are written; the burning descriptor itself is kept"
+    },
+    {
+     "claim": "Burning sounds neuropathic and pulls toward meralgia paresthetica.",
+     "to": "Pain described as \"burning\" sounds neuropathic and pulls toward meralgia paresthetica."
+    },
+    {
+     "claim": "Burning is a quality descriptor.",
+     "to": "However, burning is a quality descriptor, while tenderness and a normal neurologic exam are findings."
+    },
+    {
+     "claim": "Tenderness and a normal neuro exam are findings.",
+     "to": "However, burning is a quality descriptor, while tenderness and a normal neurologic exam are findings."
+    },
+    {
+     "claim": "GTPS is a tendinopathy; meralgia is a neuropathy.",
+     "to": "GTPS (greater trochanteric pain syndrome) is a tendinopathy; meralgia is a neuropathy."
+    },
+    {
+     "claim": "A location rule organizes all hip pain.",
+     "to": "All hip pain sorts by location: groin → the joint itself (OA (osteoarthritis), AVN (avascular necrosis), fracture, labral tear) · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis."
+    },
+    {
+     "claim": "Groin pain points to the joint itself (OA, AVN, fracture, labral tear).",
+     "to": "All hip pain sorts by location: groin → the joint itself (OA (osteoarthritis), AVN (avascular necrosis), fracture, labral tear) · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis."
+    },
+    {
+     "claim": "Lateral pain points to the trochanter and its tendons, or the LFCN.",
+     "to": "All hip pain sorts by location: groin → the joint itself (OA (osteoarthritis), AVN (avascular necrosis), fracture, labral tear) · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis."
+    },
+    {
+     "claim": "Posterior/buttock pain points to the spine, SI joint, or piriformis.",
+     "to": "All hip pain sorts by location: groin → the joint itself (OA (osteoarthritis), AVN (avascular necrosis), fracture, labral tear) · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Point tenderness over the greater trochanter with a normal neurologic exam.",
+     "from": "The decision point is point tenderness over the greater trochanter with a normal neurologic exam."
+    },
+    {
+     "claim": "Pain described as burning sounds neuropathic and pulls toward meralgia paresthetica.",
+     "from": "Burning sounds neuropathic and pulls toward meralgia paresthetica."
+    },
+    {
+     "claim": "Burning is a quality descriptor.",
+     "from": "Burning is a quality descriptor."
+    },
+    {
+     "claim": "Tenderness and a normal neurologic exam are findings.",
+     "from": "Tenderness and a normal neuro exam are findings."
+    },
+    {
+     "claim": "GTPS stands for greater trochanteric pain syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "GTPS is a tendinopathy; meralgia is a neuropathy.",
+     "from": "GTPS is a tendinopathy; meralgia is a neuropathy."
+    },
+    {
+     "claim": "All hip pain sorts by location.",
+     "from": "A location rule organizes all hip pain."
+    },
+    {
+     "claim": "Groin pain points to the joint itself (OA, AVN, fracture, labral tear).",
+     "from": "Groin pain points to the joint itself (OA, AVN, fracture, labral tear)."
+    },
+    {
+     "claim": "OA stands for osteoarthritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "AVN stands for avascular necrosis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Lateral pain points to the trochanter and its tendons, or the LFCN.",
+     "from": "Lateral pain points to the trochanter and its tendons, or the LFCN."
+    },
+    {
+     "claim": "LFCN stands for lateral femoral cutaneous nerve.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Posterior/buttock pain points to the spine, SI joint, or piriformis.",
+     "from": "Posterior/buttock pain points to the spine, SI joint, or piriformis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "gtps",
+   "find": "<span class=\"lbl\">GTPS essentials</span> An <b>overuse tendinopathy of the gluteus medius and minimus</b> at the greater trochanter — \"trochanteric bursitis\" is a misnomer, since the bursa usually isn't the source. Risk factors: <b>age ≥50, women &gt; men, obesity</b>, and lower-limb or low-back disorders. <b>Clinical diagnosis</b>; X-ray excludes hip joint disease rather than confirming GTPS. Ladder: <b>activity modification + NSAIDs + physical therapy</b> (abductor strengthening) → <b>corticosteroid injection</b> if refractory.",
+   "with": "<span class=\"lbl\">GTPS essentials</span> <b>GTPS</b> (greater trochanteric pain syndrome) is an <b>overuse tendinopathy of the gluteus medius and minimus</b> at the greater trochanter. \"Trochanteric bursitis\" is a misnomer, since the bursa usually isn't the source. Risk factors: <b>age ≥50, women &gt; men, obesity</b>, and lower-limb or low-back disorders. <b>Clinical diagnosis</b>; X-ray excludes hip joint disease rather than confirming GTPS. Treatment ladder: <b>activity modification + NSAIDs + physical therapy</b> (abductor strengthening) → <b>corticosteroid injection</b> if refractory.",
+   "note": "voice: .pearls; em dash removed, subject added, GTPS expanded",
+   "claims": [
+    {
+     "claim": "GTPS is an overuse tendinopathy of the gluteus medius and minimus at the greater trochanter.",
+     "to": "GTPS (greater trochanteric pain syndrome) is an overuse tendinopathy of the gluteus medius and minimus at the greater trochanter."
+    },
+    {
+     "claim": "Trochanteric bursitis is a misnomer, since the bursa usually isn't the source.",
+     "to": "\"Trochanteric bursitis\" is a misnomer, since the bursa usually isn't the source."
+    },
+    {
+     "claim": "Risk factors are age ≥50, women > men, obesity, and lower-limb or low-back disorders.",
+     "to": "Risk factors: age ≥50, women > men, obesity, and lower-limb or low-back disorders."
+    },
+    {
+     "claim": "GTPS is a clinical diagnosis.",
+     "to": "Clinical diagnosis; X-ray excludes hip joint disease rather than confirming GTPS."
+    },
+    {
+     "claim": "X-ray excludes hip joint disease rather than confirming GTPS.",
+     "to": "Clinical diagnosis; X-ray excludes hip joint disease rather than confirming GTPS."
+    },
+    {
+     "claim": "First-line is activity modification + NSAIDs + physical therapy (abductor strengthening).",
+     "to": "Treatment ladder: activity modification + NSAIDs + physical therapy (abductor strengthening) → corticosteroid injection if refractory."
+    },
+    {
+     "claim": "Corticosteroid injection if refractory.",
+     "to": "Treatment ladder: activity modification + NSAIDs + physical therapy (abductor strengthening) → corticosteroid injection if refractory."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "GTPS stands for greater trochanteric pain syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "GTPS is an overuse tendinopathy of the gluteus medius and minimus at the greater trochanter.",
+     "from": "GTPS is an overuse tendinopathy of the gluteus medius and minimus at the greater trochanter."
+    },
+    {
+     "claim": "Trochanteric bursitis is a misnomer, since the bursa usually isn't the source.",
+     "from": "Trochanteric bursitis is a misnomer, since the bursa usually isn't the source."
+    },
+    {
+     "claim": "Risk factors are age ≥50, women > men, obesity, and lower-limb or low-back disorders.",
+     "from": "Risk factors are age ≥50, women > men, obesity, and lower-limb or low-back disorders."
+    },
+    {
+     "claim": "GTPS is a clinical diagnosis.",
+     "from": "GTPS is a clinical diagnosis."
+    },
+    {
+     "claim": "X-ray excludes hip joint disease rather than confirming GTPS.",
+     "from": "X-ray excludes hip joint disease rather than confirming GTPS."
+    },
+    {
+     "claim": "Treatment is activity modification + NSAIDs + physical therapy (abductor strengthening).",
+     "from": "First-line is activity modification + NSAIDs + physical therapy (abductor strengthening)."
+    },
+    {
+     "claim": "Corticosteroid injection if refractory.",
+     "from": "Corticosteroid injection if refractory."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "gtps",
+   "find": "<span class=\"lbl\">Transferable rule</span> When a stem gives a <b>pain quality</b> suggesting one mechanism and <b>physical findings</b> suggesting another, the findings win. \"Burning\" and \"shooting\" are how patients describe pain, not how you localize a lesion.",
+   "with": "<span class=\"lbl\">Transferable rule</span> When the <b>pain quality</b> suggests one mechanism and the <b>physical findings</b> suggest another, rely on the findings. \"Burning\" and \"shooting\" are how patients describe pain; they do not localize a lesion.",
+   "note": "voice: .rule; stem framing and paired contrast removed",
+   "claims": [
+    {
+     "claim": "When pain quality suggests one mechanism and physical findings suggest another, the findings win.",
+     "to": "When the pain quality suggests one mechanism and the physical findings suggest another, rely on the findings."
+    },
+    {
+     "claim": "Burning and shooting are how patients describe pain.",
+     "to": "\"Burning\" and \"shooting\" are how patients describe pain; they do not localize a lesion."
+    },
+    {
+     "claim": "Burning and shooting do not localize a lesion.",
+     "to": "\"Burning\" and \"shooting\" are how patients describe pain; they do not localize a lesion."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When the pain quality suggests one mechanism and the physical findings suggest another, rely on the findings.",
+     "from": "When pain quality suggests one mechanism and physical findings suggest another, the findings win."
+    },
+    {
+     "claim": "Burning and shooting are how patients describe pain.",
+     "from": "Burning and shooting are how patients describe pain."
+    },
+    {
+     "claim": "Burning and shooting do not localize a lesion.",
+     "from": "Burning and shooting do not localize a lesion."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "inflam-back",
+   "find": "<p>Inflammatory back pain is defined by its relationship to <b>rest and activity</b>: age <b>&lt;40</b>, insidious onset <b>&gt;3 months</b>, <b>worse at night and with rest</b>, <b>better with movement</b> — the exact inverse of mechanical pain. The mechanism is <b>enthesitis</b>: inflammation where tendons and ligaments insert into bone, as opposed to RA's synovitis.</p>",
+   "with": "<p>Inflammatory back pain is defined by its relationship to <b>rest and activity</b>. Its defining features are age <b>&lt;40</b>, insidious onset <b>&gt;3 months</b>, pain <b>worse at night and with rest</b>, and pain <b>better with movement</b>. This pattern is the exact inverse of mechanical pain. The mechanism is <b>enthesitis</b>, inflammation where tendons and ligaments insert into bone. <b>RA</b> (rheumatoid arthritis) instead causes synovitis.</p>",
+   "note": "voice: .dp; em dash removed, split, RA expanded",
+   "claims": [
+    {
+     "claim": "Inflammatory back pain is defined by its relationship to rest and activity.",
+     "to": "Inflammatory back pain is defined by its relationship to rest and activity."
+    },
+    {
+     "claim": "Features: age <40.",
+     "to": "Its defining features are age &lt;40, insidious onset &gt;3 months, pain worse at night and with rest, and pain better with movement."
+    },
+    {
+     "claim": "Features: insidious onset >3 months.",
+     "to": "Its defining features are age &lt;40, insidious onset &gt;3 months, pain worse at night and with rest, and pain better with movement."
+    },
+    {
+     "claim": "Features: worse at night and with rest.",
+     "to": "Its defining features are age &lt;40, insidious onset &gt;3 months, pain worse at night and with rest, and pain better with movement."
+    },
+    {
+     "claim": "Features: better with movement.",
+     "to": "Its defining features are age &lt;40, insidious onset &gt;3 months, pain worse at night and with rest, and pain better with movement."
+    },
+    {
+     "claim": "This is the exact inverse of mechanical pain.",
+     "to": "This pattern is the exact inverse of mechanical pain."
+    },
+    {
+     "claim": "The mechanism is enthesitis: inflammation where tendons and ligaments insert into bone.",
+     "to": "The mechanism is enthesitis, inflammation where tendons and ligaments insert into bone."
+    },
+    {
+     "claim": "This contrasts with RA's synovitis.",
+     "to": "RA (rheumatoid arthritis) instead causes synovitis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Inflammatory back pain is defined by its relationship to rest and activity.",
+     "from": "Inflammatory back pain is defined by its relationship to rest and activity."
+    },
+    {
+     "claim": "Defining feature: age <40.",
+     "from": "Features: age <40."
+    },
+    {
+     "claim": "Defining feature: insidious onset >3 months.",
+     "from": "Features: insidious onset >3 months."
+    },
+    {
+     "claim": "Defining feature: pain worse at night and with rest.",
+     "from": "Features: worse at night and with rest."
+    },
+    {
+     "claim": "Defining feature: pain better with movement.",
+     "from": "Features: better with movement."
+    },
+    {
+     "claim": "This pattern is the exact inverse of mechanical pain.",
+     "from": "This is the exact inverse of mechanical pain."
+    },
+    {
+     "claim": "The mechanism is enthesitis, inflammation where tendons and ligaments insert into bone.",
+     "from": "The mechanism is enthesitis: inflammation where tendons and ligaments insert into bone."
+    },
+    {
+     "claim": "RA stands for rheumatoid arthritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "RA instead causes synovitis.",
+     "from": "This contrasts with RA's synovitis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "inflam-back",
+   "find": "<span class=\"lbl\">The discriminator worth extracting</span>\nBoth <b>inflammatory back pain</b> and <b>malignancy</b> wake patients at night. The separator: inflammatory pain <b>improves once you get up and move</b>; malignant pain is <b>unrelieved</b>, and comes with age &gt;50, prior cancer, or weight loss. Same symptom, opposite response to activity.",
+   "with": "<span class=\"lbl\">Night pain: inflammatory versus malignant</span>\nBoth <b>inflammatory back pain</b> and <b>malignancy</b> wake patients at night. Response to activity separates them: inflammatory pain <b>improves once you get up and move</b>. Malignant pain is <b>unrelieved</b>, and comes with age &gt;50, prior cancer, or weight loss.",
+   "note": "voice: .danger; rhetorical label reworded, closing slogan removed",
+   "reworded_label": [
+    "The discriminator worth extracting"
+   ],
+   "claims": [
+    {
+     "claim": "Both inflammatory back pain and malignancy wake patients at night.",
+     "to": "Both inflammatory back pain and malignancy wake patients at night."
+    },
+    {
+     "claim": "The separator is response to getting up and moving.",
+     "to": "Response to activity separates them: inflammatory pain improves once you get up and move."
+    },
+    {
+     "claim": "Inflammatory pain improves once you get up and move.",
+     "to": "Response to activity separates them: inflammatory pain improves once you get up and move."
+    },
+    {
+     "claim": "Malignant pain is unrelieved.",
+     "to": "Malignant pain is unrelieved, and comes with age >50, prior cancer, or weight loss."
+    },
+    {
+     "claim": "Malignant pain comes with age >50, prior cancer, or weight loss.",
+     "to": "Malignant pain is unrelieved, and comes with age >50, prior cancer, or weight loss."
+    },
+    {
+     "claim": "Same symptom, opposite response to activity.",
+     "to": "Response to activity separates them: inflammatory pain improves once you get up and move."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Both inflammatory back pain and malignancy wake patients at night.",
+     "from": "Both inflammatory back pain and malignancy wake patients at night."
+    },
+    {
+     "claim": "Response to activity separates them.",
+     "from": "The separator is response to getting up and moving."
+    },
+    {
+     "claim": "Inflammatory pain improves once you get up and move.",
+     "from": "Inflammatory pain improves once you get up and move."
+    },
+    {
+     "claim": "Malignant pain is unrelieved.",
+     "from": "Malignant pain is unrelieved."
+    },
+    {
+     "claim": "Malignant pain comes with age >50, prior cancer, or weight loss.",
+     "from": "Malignant pain comes with age >50, prior cancer, or weight loss."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "inflam-back",
+   "find": "<span class=\"lbl\">The spondyloarthritis family — \"PAIR\"</span> <b>P</b>soriatic arthritis · <b>A</b>nkylosing spondylitis · <b>I</b>BD-associated · <b>R</b>eactive arthritis. All <b>seronegative</b> (RF-negative), <b>HLA-B27</b>-associated, sharing <b>enthesitis, dactylitis, and uveitis</b>.",
+   "with": "<span class=\"lbl\">The spondyloarthritis family: \"PAIR\"</span> <b>P</b>soriatic arthritis · <b>A</b>nkylosing spondylitis · <b>I</b>BD-associated · <b>R</b>eactive arthritis. All are <b>seronegative</b>: <b>RF</b> (rheumatoid factor) is negative. They are <b>HLA-B27</b>-associated and share <b>enthesitis, dactylitis, and uveitis</b>.",
+   "note": "voice: .pearls; em dash in label replaced by colon, fragment made a sentence, RF expanded",
+   "reworded_label": [
+    "The spondyloarthritis family — \"PAIR\""
+   ],
+   "claims": [
+    {
+     "claim": "PAIR: Psoriatic arthritis, Ankylosing spondylitis, IBD-associated, Reactive arthritis.",
+     "to": "Psoriatic arthritis · Ankylosing spondylitis · IBD-associated · Reactive arthritis."
+    },
+    {
+     "claim": "All are seronegative (RF-negative).",
+     "to": "All are seronegative: RF (rheumatoid factor) is negative."
+    },
+    {
+     "claim": "All are HLA-B27-associated.",
+     "to": "They are HLA-B27-associated and share enthesitis, dactylitis, and uveitis."
+    },
+    {
+     "claim": "All share enthesitis, dactylitis, and uveitis.",
+     "to": "They are HLA-B27-associated and share enthesitis, dactylitis, and uveitis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "All are seronegative: RF is negative.",
+     "from": "All are seronegative (RF-negative)."
+    },
+    {
+     "claim": "RF stands for rheumatoid factor.",
+     "from": "expansion"
+    },
+    {
+     "claim": "They are HLA-B27-associated.",
+     "from": "All are HLA-B27-associated."
+    },
+    {
+     "claim": "They share enthesitis, dactylitis, and uveitis.",
+     "from": "All share enthesitis, dactylitis, and uveitis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "inflam-back",
+   "find": "<span class=\"lbl\">Transferable rule</span> When a symptom appears in two categories, find the <b>modifier that separates them</b> — here, what happens when the patient gets up. Symptoms rarely discriminate; <b>symptom behavior</b> does.",
+   "with": "<span class=\"lbl\">Transferable rule</span> When a symptom appears in two categories, find the <b>modifier that separates them</b>. Here, it is what happens when the patient gets up. Symptoms rarely discriminate, but <b>symptom behavior</b> does.",
+   "note": "voice: .rule; em dash removed",
+   "claims": [
+    {
+     "claim": "When a symptom appears in two categories, find the modifier that separates them.",
+     "to": "When a symptom appears in two categories, find the modifier that separates them."
+    },
+    {
+     "claim": "Here the modifier is what happens when the patient gets up.",
+     "to": "Here, it is what happens when the patient gets up."
+    },
+    {
+     "claim": "Symptoms rarely discriminate; symptom behavior does.",
+     "to": "Symptoms rarely discriminate, but symptom behavior does."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a symptom appears in two categories, find the modifier that separates them.",
+     "from": "When a symptom appears in two categories, find the modifier that separates them."
+    },
+    {
+     "claim": "Here, it is what happens when the patient gets up.",
+     "from": "Here the modifier is what happens when the patient gets up."
+    },
+    {
+     "claim": "Symptoms rarely discriminate, but symptom behavior does.",
+     "from": "Symptoms rarely discriminate; symptom behavior does."
+    }
+   ]
+  }
+ ]
+}

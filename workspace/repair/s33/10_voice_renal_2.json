@@ -1,0 +1,2502 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "hypercalcemia",
+   "find": "PTH first, always",
+   "with": "Check <b>PTH</b> (parathyroid hormone) first in every case of hypercalcemia",
+   "note": "sub: slogan to plain instruction",
+   "claims": [
+    {
+     "claim": "PTH is checked first, always.",
+     "to": "Check PTH (parathyroid hormone) first in every case of hypercalcemia"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Check PTH first in every case of hypercalcemia.",
+     "from": "PTH is checked first, always."
+    },
+    {
+     "claim": "PTH stands for parathyroid hormone.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypercalcemia",
+   "find": "<p><b>Calcium high + phosphorus low = PTH-driven</b> until proven otherwise. The first step in any confirmed hypercalcemia is <b>PTH</b>, because it splits the entire differential before anything else gets ordered.</p>",
+   "with": "<p><b>Calcium high + phosphorus low = PTH-driven</b> until proven otherwise. The first step in any confirmed hypercalcemia is <b>PTH</b> (parathyroid hormone), because it splits the entire differential before anything else is ordered.</p>",
+   "note": ".dp: acronym expansion, minor wording",
+   "claims": [
+    {
+     "claim": "Calcium high with phosphorus low is PTH-driven until proven otherwise.",
+     "to": "Calcium high + phosphorus low = PTH-driven until proven otherwise."
+    },
+    {
+     "claim": "The first step in any confirmed hypercalcemia is PTH.",
+     "to": "The first step in any confirmed hypercalcemia is PTH (parathyroid hormone), because it splits the entire differential before anything else is ordered."
+    },
+    {
+     "claim": "PTH splits the entire differential before anything else gets ordered.",
+     "to": "The first step in any confirmed hypercalcemia is PTH (parathyroid hormone), because it splits the entire differential before anything else is ordered."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Calcium high with phosphorus low is PTH-driven until proven otherwise.",
+     "from": "Calcium high with phosphorus low is PTH-driven until proven otherwise."
+    },
+    {
+     "claim": "The first step in any confirmed hypercalcemia is PTH.",
+     "from": "The first step in any confirmed hypercalcemia is PTH."
+    },
+    {
+     "claim": "PTH splits the entire differential before anything else is ordered.",
+     "from": "PTH splits the entire differential before anything else gets ordered."
+    },
+    {
+     "claim": "PTH stands for parathyroid hormone.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypercalcemia",
+   "find": "<span class=\"lbl\">The Ca–Phos decoder ring</span> <b>Ca↑ / Phos↓</b> = PTH or PTHrP · <b>Ca↑ / Phos↑</b> = vitamin D–mediated · <b>Ca↓ / Phos↑</b> = renal failure or hypoparathyroidism · <b>Ca↓ / Phos↓</b> = vitamin D deficiency. Symptoms: \"stones, bones, groans, thrones, psychiatric overtones\" — and <b>polyuria with a dilute urine</b> is hypercalcemia-induced <b>nephrogenic diabetes insipidus</b>.",
+   "with": "<span class=\"lbl\">Calcium and phosphorus patterns</span> <b>Ca↑ / Phos↓</b> = <b>PTH</b> (parathyroid hormone) or <b>PTHrP</b> (parathyroid hormone-related protein) · <b>Ca↑ / Phos↑</b> = vitamin D–mediated · <b>Ca↓ / Phos↑</b> = renal failure or hypoparathyroidism · <b>Ca↓ / Phos↓</b> = vitamin D deficiency. Symptoms: \"stones, bones, groans, thrones, psychiatric overtones.\" Hypercalcemia-induced <b>nephrogenic diabetes insipidus</b> causes <b>polyuria with a dilute urine</b>.",
+   "note": ".pearls: metaphor label reworded, em dash removed, acronyms expanded",
+   "reworded_label": [
+    "The Ca–Phos decoder ring"
+   ],
+   "claims": [
+    {
+     "claim": "Calcium high with phosphorus low means PTH or PTHrP.",
+     "to": "Ca↑ / Phos↓ = PTH (parathyroid hormone) or PTHrP (parathyroid hormone-related protein)"
+    },
+    {
+     "claim": "Calcium high with phosphorus high means vitamin D-mediated.",
+     "to": "Ca↑ / Phos↑ = vitamin D–mediated"
+    },
+    {
+     "claim": "Calcium low with phosphorus high means renal failure or hypoparathyroidism.",
+     "to": "Ca↓ / Phos↑ = renal failure or hypoparathyroidism"
+    },
+    {
+     "claim": "Calcium low with phosphorus low means vitamin D deficiency.",
+     "to": "Ca↓ / Phos↓ = vitamin D deficiency."
+    },
+    {
+     "claim": "Symptoms are stones, bones, groans, thrones, psychiatric overtones.",
+     "to": "Symptoms: \"stones, bones, groans, thrones, psychiatric overtones.\""
+    },
+    {
+     "claim": "Polyuria with a dilute urine is hypercalcemia-induced nephrogenic diabetes insipidus.",
+     "to": "Hypercalcemia-induced nephrogenic diabetes insipidus causes polyuria with a dilute urine."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Calcium high with phosphorus low means PTH or PTHrP.",
+     "from": "Calcium high with phosphorus low means PTH or PTHrP."
+    },
+    {
+     "claim": "PTH stands for parathyroid hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PTHrP stands for parathyroid hormone-related protein.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Calcium high with phosphorus high means vitamin D-mediated.",
+     "from": "Calcium high with phosphorus high means vitamin D-mediated."
+    },
+    {
+     "claim": "Calcium low with phosphorus high means renal failure or hypoparathyroidism.",
+     "from": "Calcium low with phosphorus high means renal failure or hypoparathyroidism."
+    },
+    {
+     "claim": "Calcium low with phosphorus low means vitamin D deficiency.",
+     "from": "Calcium low with phosphorus low means vitamin D deficiency."
+    },
+    {
+     "claim": "Symptoms are stones, bones, groans, thrones, psychiatric overtones.",
+     "from": "Symptoms are stones, bones, groans, thrones, psychiatric overtones."
+    },
+    {
+     "claim": "Hypercalcemia-induced nephrogenic diabetes insipidus causes polyuria with a dilute urine.",
+     "from": "Polyuria with a dilute urine is hypercalcemia-induced nephrogenic diabetes insipidus."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypercalcemia",
+   "find": "<span class=\"lbl\">Normal labs that assassinate distractors</span> A <b>normal albumin</b> means the calcium is truly elevated (no correction needed) · a <b>specific gravity of 1.005</b> kills diabetes mellitus, because glucosuria drags SG <i>up</i> · <b>low phosphorus</b> argues against vitamin D excess, which raises both · <b>enalapril rather than a thiazide</b> removes the drug confounder deliberately.",
+   "with": "<span class=\"lbl\">Normal labs that rule out alternatives</span> A <b>normal albumin</b> means the calcium is truly elevated, with no correction needed · a <b>specific gravity of 1.005</b> rules out diabetes mellitus, because glucosuria raises the specific gravity · <b>low phosphorus</b> argues against vitamin D excess, which raises both calcium and phosphorus · <b>enalapril rather than a thiazide</b> removes the drug confounder.",
+   "note": ".danger: rhetorical label and slang removed",
+   "reworded_label": [
+    "Normal labs that assassinate distractors"
+   ],
+   "claims": [
+    {
+     "claim": "A normal albumin means the calcium is truly elevated.",
+     "to": "A normal albumin means the calcium is truly elevated, with no correction needed"
+    },
+    {
+     "claim": "No albumin correction is needed.",
+     "to": "A normal albumin means the calcium is truly elevated, with no correction needed"
+    },
+    {
+     "claim": "A specific gravity of 1.005 excludes diabetes mellitus.",
+     "to": "a specific gravity of 1.005 rules out diabetes mellitus, because glucosuria raises the specific gravity"
+    },
+    {
+     "claim": "Glucosuria raises the specific gravity.",
+     "to": "a specific gravity of 1.005 rules out diabetes mellitus, because glucosuria raises the specific gravity"
+    },
+    {
+     "claim": "Low phosphorus argues against vitamin D excess.",
+     "to": "low phosphorus argues against vitamin D excess, which raises both calcium and phosphorus"
+    },
+    {
+     "claim": "Vitamin D excess raises both calcium and phosphorus.",
+     "to": "low phosphorus argues against vitamin D excess, which raises both calcium and phosphorus"
+    },
+    {
+     "claim": "Enalapril rather than a thiazide removes the drug confounder.",
+     "to": "enalapril rather than a thiazide removes the drug confounder."
+    },
+    {
+     "claim": "The confounder is removed deliberately.",
+     "dropped": "framing about the question writer's intent"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A normal albumin means the calcium is truly elevated.",
+     "from": "A normal albumin means the calcium is truly elevated."
+    },
+    {
+     "claim": "No albumin correction is needed.",
+     "from": "No albumin correction is needed."
+    },
+    {
+     "claim": "A specific gravity of 1.005 rules out diabetes mellitus.",
+     "from": "A specific gravity of 1.005 excludes diabetes mellitus."
+    },
+    {
+     "claim": "Glucosuria raises the specific gravity.",
+     "from": "Glucosuria raises the specific gravity."
+    },
+    {
+     "claim": "Low phosphorus argues against vitamin D excess.",
+     "from": "Low phosphorus argues against vitamin D excess."
+    },
+    {
+     "claim": "Vitamin D excess raises both calcium and phosphorus.",
+     "from": "Vitamin D excess raises both calcium and phosphorus."
+    },
+    {
+     "claim": "Enalapril rather than a thiazide removes the drug confounder.",
+     "from": "Enalapril rather than a thiazide removes the drug confounder."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "hypercalcemia",
+   "find": "Part I <b>Polyuria: Water or Solute</b> owns the polyuria hypercalcaemia causes &mdash; an acquired, reversible resistance to vasopressin at the collecting duct, which corrects when the calcium does. Store the discriminator as a question: <i>does the kidney concentrate after desmopressin?</i>",
+   "with": "Part I <b>Polyuria: Water or Solute</b> covers the polyuria hypercalcaemia causes. It results from an acquired, reversible resistance to vasopressin at the collecting duct, which corrects when the calcium does. Ask: <i>does the kidney concentrate after desmopressin?</i>",
+   "note": "Pairs with: owns to covers, em dash removed, discriminator as Ask",
+   "claims": [
+    {
+     "claim": "Polyuria: Water or Solute covers the polyuria hypercalcaemia causes.",
+     "to": "Part I Polyuria: Water or Solute covers the polyuria hypercalcaemia causes."
+    },
+    {
+     "claim": "That polyuria is an acquired, reversible resistance to vasopressin at the collecting duct.",
+     "to": "It results from an acquired, reversible resistance to vasopressin at the collecting duct, which corrects when the calcium does."
+    },
+    {
+     "claim": "The resistance corrects when the calcium does.",
+     "to": "It results from an acquired, reversible resistance to vasopressin at the collecting duct, which corrects when the calcium does."
+    },
+    {
+     "claim": "The discriminating question is whether the kidney concentrates after desmopressin.",
+     "to": "Ask: does the kidney concentrate after desmopressin?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Polyuria: Water or Solute covers the polyuria hypercalcaemia causes.",
+     "from": "Polyuria: Water or Solute covers the polyuria hypercalcaemia causes."
+    },
+    {
+     "claim": "The polyuria results from an acquired, reversible resistance to vasopressin at the collecting duct.",
+     "from": "That polyuria is an acquired, reversible resistance to vasopressin at the collecting duct."
+    },
+    {
+     "claim": "The resistance corrects when the calcium does.",
+     "from": "The resistance corrects when the calcium does."
+    },
+    {
+     "claim": "Ask whether the kidney concentrates after desmopressin.",
+     "from": "The discriminating question is whether the kidney concentrates after desmopressin."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "the grade decides both the treatment and the ending",
+   "with": "Reflux grade determines both the treatment and the long-term outcome",
+   "note": "sub: personification removed",
+   "claims": [
+    {
+     "claim": "The grade decides both the treatment and the ending.",
+     "to": "Reflux grade determines both the treatment and the long-term outcome"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Reflux grade determines both the treatment and the long-term outcome.",
+     "from": "The grade decides both the treatment and the ending."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "<p>The whole question is one phrase on the VCUG: <b>dilation and blunting of the renal calices</b>. Reflux that reaches only the ureter is mild and usually disappears on its own as the intravesical ureter lengthens with growth; reflux that has already deformed the calices is <b>severe</b>, and severe reflux untreated means recurrent febrile UTIs, bacteria in the parenchyma, an inflammatory response, ischemia, and <b>focal wedges of interstitial fibrosis</b> — renal scarring. Enough of it becomes chronic kidney disease, which in a child announces itself as secondary hypertension, proteinuria, and failure to thrive.</p>",
+   "with": "<p>In this child, the <b>VCUG</b> (voiding cystourethrogram) shows <b>dilation and blunting of the renal calices</b>. Reflux that reaches only the ureter is mild. Mild reflux usually disappears on its own as the intravesical ureter lengthens with growth. Reflux that has already deformed the calices is <b>severe</b>. Untreated severe reflux leads to recurrent febrile <b>UTIs</b> (urinary tract infections), bacteria in the parenchyma, an inflammatory response and ischemia. The result is <b>focal wedges of interstitial fibrosis</b>, which is renal scarring. Enough scarring becomes chronic kidney disease. In a child, chronic kidney disease presents as secondary hypertension, proteinuria and failure to thrive.</p>",
+   "note": ".dp: dramatic opener removed, long sentence split, acronyms expanded",
+   "claims": [
+    {
+     "claim": "The VCUG shows dilation and blunting of the renal calices.",
+     "to": "In this child, the VCUG (voiding cystourethrogram) shows dilation and blunting of the renal calices."
+    },
+    {
+     "claim": "That one phrase is the whole question.",
+     "dropped": "dramatic framing about the question"
+    },
+    {
+     "claim": "Reflux that reaches only the ureter is mild.",
+     "to": "Reflux that reaches only the ureter is mild."
+    },
+    {
+     "claim": "Mild reflux usually disappears on its own as the intravesical ureter lengthens with growth.",
+     "to": "Mild reflux usually disappears on its own as the intravesical ureter lengthens with growth."
+    },
+    {
+     "claim": "Reflux that has already deformed the calices is severe.",
+     "to": "Reflux that has already deformed the calices is severe."
+    },
+    {
+     "claim": "Untreated severe reflux means recurrent febrile UTIs, bacteria in the parenchyma, an inflammatory response and ischemia.",
+     "to": "Untreated severe reflux leads to recurrent febrile UTIs (urinary tract infections), bacteria in the parenchyma, an inflammatory response and ischemia."
+    },
+    {
+     "claim": "Untreated severe reflux ends in focal wedges of interstitial fibrosis.",
+     "to": "The result is focal wedges of interstitial fibrosis, which is renal scarring."
+    },
+    {
+     "claim": "Focal wedges of interstitial fibrosis are renal scarring.",
+     "to": "The result is focal wedges of interstitial fibrosis, which is renal scarring."
+    },
+    {
+     "claim": "Enough scarring becomes chronic kidney disease.",
+     "to": "Enough scarring becomes chronic kidney disease."
+    },
+    {
+     "claim": "In a child, chronic kidney disease shows as secondary hypertension, proteinuria and failure to thrive.",
+     "to": "In a child, chronic kidney disease presents as secondary hypertension, proteinuria and failure to thrive."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The VCUG shows dilation and blunting of the renal calices.",
+     "from": "The VCUG shows dilation and blunting of the renal calices."
+    },
+    {
+     "claim": "VCUG stands for voiding cystourethrogram.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Reflux that reaches only the ureter is mild.",
+     "from": "Reflux that reaches only the ureter is mild."
+    },
+    {
+     "claim": "Mild reflux usually disappears on its own as the intravesical ureter lengthens with growth.",
+     "from": "Mild reflux usually disappears on its own as the intravesical ureter lengthens with growth."
+    },
+    {
+     "claim": "Reflux that has already deformed the calices is severe.",
+     "from": "Reflux that has already deformed the calices is severe."
+    },
+    {
+     "claim": "Untreated severe reflux leads to recurrent febrile UTIs, bacteria in the parenchyma, an inflammatory response and ischemia.",
+     "from": "Untreated severe reflux means recurrent febrile UTIs, bacteria in the parenchyma, an inflammatory response and ischemia."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The result is focal wedges of interstitial fibrosis.",
+     "from": "Untreated severe reflux ends in focal wedges of interstitial fibrosis."
+    },
+    {
+     "claim": "Focal wedges of interstitial fibrosis are renal scarring.",
+     "from": "Focal wedges of interstitial fibrosis are renal scarring."
+    },
+    {
+     "claim": "Enough scarring becomes chronic kidney disease.",
+     "from": "Enough scarring becomes chronic kidney disease."
+    },
+    {
+     "claim": "In a child, chronic kidney disease presents as secondary hypertension, proteinuria and failure to thrive.",
+     "from": "In a child, chronic kidney disease shows as secondary hypertension, proteinuria and failure to thrive."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "<b>First febrile UTI at 6 months</b> &mdash; the presentation that earns imaging in the first place &middot; <b>Normal vital signs and examination</b> &mdash; no hypertension, proteinuria or growth failure <i>yet</i>; the question asks about a trajectory, not today &middot; <b>\"Mild\" hydronephrosis</b> &mdash; that adjective belongs to the ultrasound's degree of dilation, not to the reflux grade, which only the VCUG assigns",
+   "with": "<b>First febrile UTI at 6 months</b> &mdash; the presentation that prompts imaging &middot; <b>Normal vital signs and examination</b> &mdash; no hypertension, proteinuria or growth failure <i>yet</i> &middot; <b>\"Mild\" hydronephrosis</b> &mdash; describes the ultrasound's degree of dilation, not the reflux grade; only the <b>VCUG</b> (voiding cystourethrogram) assigns the grade",
+   "note": ".pearls pertinent: meta phrases removed",
+   "claims": [
+    {
+     "claim": "A first febrile UTI at 6 months is the presentation that earns imaging.",
+     "to": "First febrile UTI at 6 months — the presentation that prompts imaging"
+    },
+    {
+     "claim": "Normal vital signs and examination mean no hypertension, proteinuria or growth failure yet.",
+     "to": "Normal vital signs and examination — no hypertension, proteinuria or growth failure yet"
+    },
+    {
+     "claim": "The question asks about a trajectory, not today.",
+     "dropped": "framing about the question; the point survives in 'yet'"
+    },
+    {
+     "claim": "Mild describes the ultrasound's degree of dilation, not the reflux grade.",
+     "to": "describes the ultrasound's degree of dilation, not the reflux grade; only the VCUG (voiding cystourethrogram) assigns the grade"
+    },
+    {
+     "claim": "Only the VCUG assigns the reflux grade.",
+     "to": "only the VCUG (voiding cystourethrogram) assigns the grade"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A first febrile UTI at 6 months is the presentation that prompts imaging.",
+     "from": "A first febrile UTI at 6 months is the presentation that earns imaging."
+    },
+    {
+     "claim": "Normal vital signs and examination mean no hypertension, proteinuria or growth failure yet.",
+     "from": "Normal vital signs and examination mean no hypertension, proteinuria or growth failure yet."
+    },
+    {
+     "claim": "Mild describes the ultrasound's degree of dilation, not the reflux grade.",
+     "from": "Mild describes the ultrasound's degree of dilation, not the reflux grade."
+    },
+    {
+     "claim": "Only the VCUG assigns the reflux grade.",
+     "from": "Only the VCUG assigns the reflux grade."
+    },
+    {
+     "claim": "VCUG stands for voiding cystourethrogram.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "done — the UTI has been treated, the ultrasound and the VCUG are both back, so no further-imaging option survives &middot; normal — examination and vital signs, which is why nothing needs treating <i>today</i> &middot; at stake — the grade, which is the only variable that changes the plan.",
+   "with": "done: the <b>UTI</b> (urinary tract infection) has been treated. The ultrasound and the <b>VCUG</b> (voiding cystourethrogram) are both back, so no further imaging is needed &middot; normal: examination and vital signs, so nothing needs treating <i>today</i> &middot; at stake: the grade, the only variable that changes the plan.",
+   "note": ".pearls tier fingerprint: prose em dashes to colons, acronyms",
+   "claims": [
+    {
+     "claim": "The UTI has been treated.",
+     "to": "done: the UTI (urinary tract infection) has been treated."
+    },
+    {
+     "claim": "The ultrasound and the VCUG are both back.",
+     "to": "The ultrasound and the VCUG (voiding cystourethrogram) are both back, so no further imaging is needed"
+    },
+    {
+     "claim": "No further imaging is warranted.",
+     "to": "so no further imaging is needed"
+    },
+    {
+     "claim": "Examination and vital signs are normal.",
+     "to": "normal: examination and vital signs, so nothing needs treating today"
+    },
+    {
+     "claim": "Nothing needs treating today.",
+     "to": "normal: examination and vital signs, so nothing needs treating today"
+    },
+    {
+     "claim": "The grade is the only variable that changes the plan.",
+     "to": "at stake: the grade, the only variable that changes the plan."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The UTI has been treated.",
+     "from": "The UTI has been treated."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The ultrasound and the VCUG are both back.",
+     "from": "The ultrasound and the VCUG are both back."
+    },
+    {
+     "claim": "VCUG stands for voiding cystourethrogram.",
+     "from": "expansion"
+    },
+    {
+     "claim": "No further imaging is needed.",
+     "from": "No further imaging is warranted."
+    },
+    {
+     "claim": "Examination and vital signs are normal.",
+     "from": "Examination and vital signs are normal."
+    },
+    {
+     "claim": "Nothing needs treating today.",
+     "from": "Nothing needs treating today."
+    },
+    {
+     "claim": "The grade is the only variable that changes the plan.",
+     "from": "The grade is the only variable that changes the plan."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "none are numeric here — the gate is categorical, mild versus severe, and it is read off the VCUG rather than calculated. &middot; a boy with hydronephrosis and a weak urinary stream → outlet obstruction causing <i>secondary</i> reflux, a different pathway &middot; urinary stasis → calcium stones &middot; UTIs with urease-producing organisms → struvite stones.",
+   "with": "none are numeric here; the gate is categorical, mild versus severe, and it is read off the <b>VCUG</b> (voiding cystourethrogram) rather than calculated. &middot; a boy with hydronephrosis and a weak urinary stream → outlet obstruction causing <i>secondary</i> reflux, a different pathway &middot; urinary stasis → calcium stones &middot; <b>UTIs</b> (urinary tract infections) with urease-producing organisms → struvite stones.",
+   "note": ".danger: em dash removed, acronyms expanded",
+   "claims": [
+    {
+     "claim": "No gate here is numeric.",
+     "to": "none are numeric here; the gate is categorical, mild versus severe, and it is read off the VCUG (voiding cystourethrogram) rather than calculated."
+    },
+    {
+     "claim": "The gate is categorical, mild versus severe, read off the VCUG rather than calculated.",
+     "to": "none are numeric here; the gate is categorical, mild versus severe, and it is read off the VCUG (voiding cystourethrogram) rather than calculated."
+    },
+    {
+     "claim": "A boy with hydronephrosis and a weak urinary stream has outlet obstruction causing secondary reflux, a different pathway.",
+     "to": "a boy with hydronephrosis and a weak urinary stream → outlet obstruction causing secondary reflux, a different pathway"
+    },
+    {
+     "claim": "Urinary stasis leads to calcium stones.",
+     "to": "urinary stasis → calcium stones"
+    },
+    {
+     "claim": "UTIs with urease-producing organisms lead to struvite stones.",
+     "to": "UTIs (urinary tract infections) with urease-producing organisms → struvite stones."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "No gate here is numeric.",
+     "from": "No gate here is numeric."
+    },
+    {
+     "claim": "The gate is categorical, mild versus severe, read off the VCUG rather than calculated.",
+     "from": "The gate is categorical, mild versus severe, read off the VCUG rather than calculated."
+    },
+    {
+     "claim": "VCUG stands for voiding cystourethrogram.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A boy with hydronephrosis and a weak urinary stream has outlet obstruction causing secondary reflux, a different pathway.",
+     "from": "A boy with hydronephrosis and a weak urinary stream has outlet obstruction causing secondary reflux, a different pathway."
+    },
+    {
+     "claim": "Urinary stasis leads to calcium stones.",
+     "from": "Urinary stasis leads to calcium stones."
+    },
+    {
+     "claim": "UTIs with urease-producing organisms lead to struvite stones.",
+     "from": "UTIs with urease-producing organisms lead to struvite stones."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "&mdash; Yes → this is why imaging exists &middot; <b>What did the ultrasound do?</b> &mdash; Found hydronephrosis — it detects, it does not grade &middot;",
+   "with": "&mdash; Yes → this is why imaging is done &middot; <b>What did the ultrasound do?</b> &mdash; Found hydronephrosis; ultrasound detects but does not grade &middot;",
+   "note": ".pearls decision spine: prose em dash removed",
+   "claims": [
+    {
+     "claim": "A febrile UTI is why imaging is done.",
+     "to": "Yes → this is why imaging is done"
+    },
+    {
+     "claim": "The ultrasound found hydronephrosis.",
+     "to": "Found hydronephrosis; ultrasound detects but does not grade"
+    },
+    {
+     "claim": "Ultrasound detects but does not grade.",
+     "to": "Found hydronephrosis; ultrasound detects but does not grade"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A febrile UTI is why imaging is done.",
+     "from": "A febrile UTI is why imaging is done."
+    },
+    {
+     "claim": "The ultrasound found hydronephrosis.",
+     "from": "The ultrasound found hydronephrosis."
+    },
+    {
+     "claim": "Ultrasound detects but does not grade.",
+     "from": "Ultrasound detects but does not grade."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "&mdash; Focal wedges of interstitial fibrosis — tubulointerstitial, not glomerular",
+   "with": "&mdash; Focal wedges of interstitial fibrosis, tubulointerstitial rather than glomerular",
+   "note": ".pearls decision spine: prose em dash removed",
+   "claims": [
+    {
+     "claim": "A reflux scar is focal wedges of interstitial fibrosis.",
+     "to": "Focal wedges of interstitial fibrosis, tubulointerstitial rather than glomerular"
+    },
+    {
+     "claim": "The scar is tubulointerstitial, not glomerular.",
+     "to": "Focal wedges of interstitial fibrosis, tubulointerstitial rather than glomerular"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A reflux scar is focal wedges of interstitial fibrosis.",
+     "from": "A reflux scar is focal wedges of interstitial fibrosis."
+    },
+    {
+     "claim": "The scar is tubulointerstitial rather than glomerular.",
+     "from": "The scar is tubulointerstitial, not glomerular."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "Two details make \"no complications\" feel safe: the mother reports no recurrence, and the examination is normal — both true, and both irrelevant to a question that says <i>if untreated</i>. The sharper decoy is the word <b>mild</b>, which the stem attaches to the hydronephrosis on ultrasound; a reader who carries that adjective across to the reflux answers a different patient's question. The grade lives on the VCUG, one sentence later.",
+   "with": "The mother reports no recurrence, and the examination is normal. Both are true, but neither rules out complications <i>if untreated</i>. The word <b>mild</b> describes the hydronephrosis on ultrasound, not the reflux; do not carry it over to the reflux grade. The <b>VCUG</b> (voiding cystourethrogram) assigns the grade.",
+   "note": "Decoy note: meta framing removed",
+   "claims": [
+    {
+     "claim": "Two details make no complications look safe.",
+     "to": "Both are true, but neither rules out complications if untreated."
+    },
+    {
+     "claim": "The mother reports no recurrence.",
+     "to": "The mother reports no recurrence, and the examination is normal."
+    },
+    {
+     "claim": "The examination is normal.",
+     "to": "The mother reports no recurrence, and the examination is normal."
+    },
+    {
+     "claim": "Both details are true but irrelevant to the course if untreated.",
+     "to": "Both are true, but neither rules out complications if untreated."
+    },
+    {
+     "claim": "The sharper decoy is the word mild.",
+     "dropped": "ranking of decoys; the point about mild is stated next"
+    },
+    {
+     "claim": "Mild is attached to the hydronephrosis on ultrasound.",
+     "to": "The word mild describes the hydronephrosis on ultrasound, not the reflux; do not carry it over to the reflux grade."
+    },
+    {
+     "claim": "Carrying mild across to the reflux gives the wrong answer.",
+     "to": "The word mild describes the hydronephrosis on ultrasound, not the reflux; do not carry it over to the reflux grade."
+    },
+    {
+     "claim": "The grade is read on the VCUG.",
+     "to": "The VCUG (voiding cystourethrogram) assigns the grade."
+    },
+    {
+     "claim": "That finding sits one sentence later in the case.",
+     "dropped": "position of a sentence in the stem, not clinical"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The mother reports no recurrence and the examination is normal.",
+     "from": "The mother reports no recurrence."
+    },
+    {
+     "claim": "Neither detail rules out complications if untreated.",
+     "from": "Both details are true but irrelevant to the course if untreated."
+    },
+    {
+     "claim": "Mild describes the hydronephrosis on ultrasound, not the reflux.",
+     "from": "Mild is attached to the hydronephrosis on ultrasound."
+    },
+    {
+     "claim": "Do not carry mild over to the reflux grade.",
+     "from": "Carrying mild across to the reflux gives the wrong answer."
+    },
+    {
+     "claim": "The VCUG assigns the grade.",
+     "from": "The grade is read on the VCUG."
+    },
+    {
+     "claim": "VCUG stands for voiding cystourethrogram.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "Blunted calices mean severe reflux: recurrent infection scars the interstitium in wedges, and widespread scarring is chronic kidney disease. &middot; Ultrasound finds the hydronephrosis; the VCUG assigns the grade — and only the grade predicts the ending. &middot; Reflux scarring is tubulointerstitial: bacteria in the parenchyma → inflammation → ischemia → wedge-shaped fibrosis, with the glomeruli lost secondarily. &middot; Widespread scarring shows up in a child as secondary hypertension, proteinuria, and failure to thrive — the pediatric face of chronic kidney disease. &middot; Mild reflux resolves because the intravesical ureter lengthens as the child grows; the anatomy that caused it outgrows itself. &middot; Reflux makes calcium stones through stasis and struvite stones through urease-producing organisms — never uric acid stones. &middot; Bladder–bowel dysfunction is screened and treated alongside reflux at every grade; constipation is a modifiable part of the problem, not a coincidence.",
+   "with": "Blunted calices mean severe reflux: recurrent infection scars the interstitium in wedges, and widespread scarring is chronic kidney disease. &middot; Ultrasound finds the hydronephrosis; the <b>VCUG</b> (voiding cystourethrogram) assigns the grade. Only the grade predicts the long-term outcome. &middot; Reflux scarring is tubulointerstitial. Bacteria in the parenchyma cause inflammation and ischemia, which lead to wedge-shaped fibrosis. The glomeruli are lost secondarily. &middot; In a child, widespread scarring presents as secondary hypertension, proteinuria and failure to thrive, the pediatric signs of chronic kidney disease. &middot; Mild reflux resolves because the intravesical ureter lengthens as the child grows. &middot; Reflux makes calcium stones through stasis and struvite stones through urease-producing organisms. It never makes uric acid stones. &middot; Bladder–bowel dysfunction is screened and treated alongside reflux at every grade. Constipation is a modifiable part of the problem, not a coincidence.",
+   "note": "Pearls: em dashes, arrow chain and aphorism removed",
+   "claims": [
+    {
+     "claim": "Blunted calices mean severe reflux.",
+     "to": "Blunted calices mean severe reflux: recurrent infection scars the interstitium in wedges, and widespread scarring is chronic kidney disease."
+    },
+    {
+     "claim": "Recurrent infection scars the interstitium in wedges.",
+     "to": "Blunted calices mean severe reflux: recurrent infection scars the interstitium in wedges, and widespread scarring is chronic kidney disease."
+    },
+    {
+     "claim": "Widespread scarring is chronic kidney disease.",
+     "to": "Blunted calices mean severe reflux: recurrent infection scars the interstitium in wedges, and widespread scarring is chronic kidney disease."
+    },
+    {
+     "claim": "Ultrasound finds the hydronephrosis.",
+     "to": "Ultrasound finds the hydronephrosis; the VCUG (voiding cystourethrogram) assigns the grade."
+    },
+    {
+     "claim": "The VCUG assigns the grade.",
+     "to": "Ultrasound finds the hydronephrosis; the VCUG (voiding cystourethrogram) assigns the grade."
+    },
+    {
+     "claim": "Only the grade predicts the ending.",
+     "to": "Only the grade predicts the long-term outcome."
+    },
+    {
+     "claim": "Reflux scarring is tubulointerstitial.",
+     "to": "Reflux scarring is tubulointerstitial."
+    },
+    {
+     "claim": "Bacteria in the parenchyma lead to inflammation, then ischemia, then wedge-shaped fibrosis.",
+     "to": "Bacteria in the parenchyma cause inflammation and ischemia, which lead to wedge-shaped fibrosis."
+    },
+    {
+     "claim": "The glomeruli are lost secondarily.",
+     "to": "The glomeruli are lost secondarily."
+    },
+    {
+     "claim": "Widespread scarring shows up in a child as secondary hypertension, proteinuria and failure to thrive.",
+     "to": "In a child, widespread scarring presents as secondary hypertension, proteinuria and failure to thrive, the pediatric signs of chronic kidney disease."
+    },
+    {
+     "claim": "That triad is the pediatric face of chronic kidney disease.",
+     "to": "In a child, widespread scarring presents as secondary hypertension, proteinuria and failure to thrive, the pediatric signs of chronic kidney disease."
+    },
+    {
+     "claim": "Mild reflux resolves because the intravesical ureter lengthens as the child grows.",
+     "to": "Mild reflux resolves because the intravesical ureter lengthens as the child grows."
+    },
+    {
+     "claim": "The anatomy that caused mild reflux outgrows itself.",
+     "to": "Mild reflux resolves because the intravesical ureter lengthens as the child grows."
+    },
+    {
+     "claim": "Reflux makes calcium stones through stasis.",
+     "to": "Reflux makes calcium stones through stasis and struvite stones through urease-producing organisms."
+    },
+    {
+     "claim": "Reflux makes struvite stones through urease-producing organisms.",
+     "to": "Reflux makes calcium stones through stasis and struvite stones through urease-producing organisms."
+    },
+    {
+     "claim": "Reflux never makes uric acid stones.",
+     "to": "It never makes uric acid stones."
+    },
+    {
+     "claim": "Bladder–bowel dysfunction is screened and treated alongside reflux at every grade.",
+     "to": "Bladder–bowel dysfunction is screened and treated alongside reflux at every grade."
+    },
+    {
+     "claim": "Constipation is a modifiable part of the problem, not a coincidence.",
+     "to": "Constipation is a modifiable part of the problem, not a coincidence."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Blunted calices mean severe reflux.",
+     "from": "Blunted calices mean severe reflux."
+    },
+    {
+     "claim": "Recurrent infection scars the interstitium in wedges.",
+     "from": "Recurrent infection scars the interstitium in wedges."
+    },
+    {
+     "claim": "Widespread scarring is chronic kidney disease.",
+     "from": "Widespread scarring is chronic kidney disease."
+    },
+    {
+     "claim": "Ultrasound finds the hydronephrosis.",
+     "from": "Ultrasound finds the hydronephrosis."
+    },
+    {
+     "claim": "The VCUG assigns the grade.",
+     "from": "The VCUG assigns the grade."
+    },
+    {
+     "claim": "VCUG stands for voiding cystourethrogram.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Only the grade predicts the long-term outcome.",
+     "from": "Only the grade predicts the ending."
+    },
+    {
+     "claim": "Reflux scarring is tubulointerstitial.",
+     "from": "Reflux scarring is tubulointerstitial."
+    },
+    {
+     "claim": "Bacteria in the parenchyma cause inflammation and ischemia, which lead to wedge-shaped fibrosis.",
+     "from": "Bacteria in the parenchyma lead to inflammation, then ischemia, then wedge-shaped fibrosis."
+    },
+    {
+     "claim": "The glomeruli are lost secondarily.",
+     "from": "The glomeruli are lost secondarily."
+    },
+    {
+     "claim": "In a child, widespread scarring presents as secondary hypertension, proteinuria and failure to thrive.",
+     "from": "Widespread scarring shows up in a child as secondary hypertension, proteinuria and failure to thrive."
+    },
+    {
+     "claim": "These are the pediatric signs of chronic kidney disease.",
+     "from": "That triad is the pediatric face of chronic kidney disease."
+    },
+    {
+     "claim": "Mild reflux resolves because the intravesical ureter lengthens as the child grows.",
+     "from": "Mild reflux resolves because the intravesical ureter lengthens as the child grows."
+    },
+    {
+     "claim": "Reflux makes calcium stones through stasis.",
+     "from": "Reflux makes calcium stones through stasis."
+    },
+    {
+     "claim": "Reflux makes struvite stones through urease-producing organisms.",
+     "from": "Reflux makes struvite stones through urease-producing organisms."
+    },
+    {
+     "claim": "Reflux never makes uric acid stones.",
+     "from": "Reflux never makes uric acid stones."
+    },
+    {
+     "claim": "Bladder–bowel dysfunction is screened and treated alongside reflux at every grade.",
+     "from": "Bladder–bowel dysfunction is screened and treated alongside reflux at every grade."
+    },
+    {
+     "claim": "Constipation is a modifiable part of the problem, not a coincidence.",
+     "from": "Constipation is a modifiable part of the problem, not a coincidence."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "Verified: Part II <b>Posterior Urethral Valves and Potter Sequence</b> is the obstructive twin — the same VCUG, the same hydronephrosis, but reflux that is <i>secondary</i> to outlet obstruction rather than a short intravesical ureter. Store the discriminator as a question: <i>is there a weak stream or a palpable bladder, and is the reflux the disease or its consequence?</i> Part I <b>Recurrent Urinary Infection in a Child</b> now carries the imaging rules after a febrile UTI (who gets an ultrasound, who gets a VCUG) and empiric treatment; this brief begins after that decision has been made. Part I <b>Recurrent Urinary Infection in a Child</b> owns the lower-tract arm of the same complaint, where constipation rather than reflux is the risk factor.",
+   "with": "Part II <b>Posterior Urethral Valves and Potter Sequence</b> covers the obstructive counterpart. It has the same VCUG (voiding cystourethrogram) and the same hydronephrosis, but the reflux is <i>secondary</i> to outlet obstruction rather than a short intravesical ureter. Ask: <i>is there a weak stream or a palpable bladder, and is the reflux the disease or its consequence?</i> Part I <b>Recurrent Urinary Infection in a Child</b> covers empiric treatment and the imaging rules after a febrile UTI (urinary tract infection). Those rules set who gets an ultrasound and who gets a VCUG. This brief begins after that decision has been made. Part I <b>Recurrent Urinary Infection in a Child</b> also covers the lower-tract arm of the same complaint. There, constipation rather than reflux is the risk factor.",
+   "note": "Pairs with: workflow text removed, twin to covers, Ask",
+   "claims": [
+    {
+     "claim": "Posterior Urethral Valves and Potter Sequence is the obstructive counterpart.",
+     "to": "Part II Posterior Urethral Valves and Potter Sequence covers the obstructive counterpart."
+    },
+    {
+     "claim": "It shares the same VCUG and the same hydronephrosis.",
+     "to": "It has the same VCUG (voiding cystourethrogram) and the same hydronephrosis, but the reflux is secondary to outlet obstruction rather than a short intravesical ureter."
+    },
+    {
+     "claim": "There the reflux is secondary to outlet obstruction rather than a short intravesical ureter.",
+     "to": "It has the same VCUG (voiding cystourethrogram) and the same hydronephrosis, but the reflux is secondary to outlet obstruction rather than a short intravesical ureter."
+    },
+    {
+     "claim": "The discriminating question is whether there is a weak stream or a palpable bladder, and whether the reflux is the disease or its consequence.",
+     "to": "Ask: is there a weak stream or a palpable bladder, and is the reflux the disease or its consequence?"
+    },
+    {
+     "claim": "Recurrent Urinary Infection in a Child carries the imaging rules after a febrile UTI and empiric treatment.",
+     "to": "Part I Recurrent Urinary Infection in a Child covers empiric treatment and the imaging rules after a febrile UTI (urinary tract infection)."
+    },
+    {
+     "claim": "The imaging rules set who gets an ultrasound and who gets a VCUG.",
+     "to": "Those rules set who gets an ultrasound and who gets a VCUG."
+    },
+    {
+     "claim": "This brief begins after that decision has been made.",
+     "to": "This brief begins after that decision has been made."
+    },
+    {
+     "claim": "Recurrent Urinary Infection in a Child covers the lower-tract arm, where constipation rather than reflux is the risk factor.",
+     "to": "Part I Recurrent Urinary Infection in a Child also covers the lower-tract arm of the same complaint. There, constipation rather than reflux is the risk factor."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Posterior Urethral Valves and Potter Sequence covers the obstructive counterpart.",
+     "from": "Posterior Urethral Valves and Potter Sequence is the obstructive counterpart."
+    },
+    {
+     "claim": "It has the same VCUG and the same hydronephrosis.",
+     "from": "It shares the same VCUG and the same hydronephrosis."
+    },
+    {
+     "claim": "VCUG stands for voiding cystourethrogram.",
+     "from": "expansion"
+    },
+    {
+     "claim": "There the reflux is secondary to outlet obstruction rather than a short intravesical ureter.",
+     "from": "There the reflux is secondary to outlet obstruction rather than a short intravesical ureter."
+    },
+    {
+     "claim": "Ask whether there is a weak stream or a palpable bladder, and whether the reflux is the disease or its consequence.",
+     "from": "The discriminating question is whether there is a weak stream or a palpable bladder, and whether the reflux is the disease or its consequence."
+    },
+    {
+     "claim": "Recurrent Urinary Infection in a Child covers empiric treatment and the imaging rules after a febrile UTI.",
+     "from": "Recurrent Urinary Infection in a Child carries the imaging rules after a febrile UTI and empiric treatment."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The imaging rules set who gets an ultrasound and who gets a VCUG.",
+     "from": "The imaging rules set who gets an ultrasound and who gets a VCUG."
+    },
+    {
+     "claim": "This brief begins after that decision has been made.",
+     "from": "This brief begins after that decision has been made."
+    },
+    {
+     "claim": "Recurrent Urinary Infection in a Child also covers the lower-tract arm, where constipation rather than reflux is the risk factor.",
+     "from": "Recurrent Urinary Infection in a Child covers the lower-tract arm, where constipation rather than reflux is the risk factor."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "When a question asks what happens <b>if untreated</b>, it is asking for the trajectory of the severity you were handed, not the disease's average — locate the grading finding before you pick a prognosis, and never let a severity adjective migrate from one study to another.",
+   "with": "The course <b>if untreated</b> follows the severity present in this patient, not the disease's average course. Find the grading finding before predicting a prognosis. Never carry a severity adjective from one study to another.",
+   "note": ".rule: question framing and em dash removed",
+   "claims": [
+    {
+     "claim": "The course if untreated follows the given severity, not the disease's average.",
+     "to": "The course if untreated follows the severity present in this patient, not the disease's average course."
+    },
+    {
+     "claim": "Locate the grading finding before choosing a prognosis.",
+     "to": "Find the grading finding before predicting a prognosis."
+    },
+    {
+     "claim": "Never let a severity adjective migrate from one study to another.",
+     "to": "Never carry a severity adjective from one study to another."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The course if untreated follows the severity present in this patient, not the disease's average course.",
+     "from": "The course if untreated follows the given severity, not the disease's average."
+    },
+    {
+     "claim": "Find the grading finding before predicting a prognosis.",
+     "from": "Locate the grading finding before choosing a prognosis."
+    },
+    {
+     "claim": "Never carry a severity adjective from one study to another.",
+     "from": "Never let a severity adjective migrate from one study to another."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "The stem is a <b>lower</b>-tract infection and says so four times: no fever, no vomiting, <b>suprapubic</b> tenderness, <b>no back pain</b>. That single classification does most of the elimination, because the anatomic causes of recurrent paediatric urinary infection — reflux above all — produce recurrent <b>pyelonephritis</b> rather than recurrent cystitis. What is left is a mechanical question about emptying, and the stem answers it explicitly: <b>hard stool in the rectal vault</b> in a child with <b>functional constipation since day care</b>. A chronically loaded rectum dilates, and the dilated rectum compresses the bladder and urethra so the bladder never empties; the residual urine is the culture medium, and <i>E. coli</i> ascends from the perineum into it. The management corollary is the part worth storing — treating the cystitis without treating the constipation guarantees a fourth episode, so <b>long-term laxative therapy</b> is part of the prescription.",
+   "with": "This is a <b>lower</b>-tract infection: no fever, no vomiting, <b>suprapubic</b> tenderness and <b>no back pain</b>. That classification excludes most of the differential. The anatomic causes of recurrent paediatric urinary infection, reflux above all, produce recurrent <b>pyelonephritis</b> rather than recurrent cystitis. The remaining cause is mechanical: incomplete bladder emptying. This child has <b>hard stool in the rectal vault</b> and <b>functional constipation since day care</b>. A chronically loaded rectum dilates and compresses the bladder and urethra, so the bladder never empties. The residual urine is the culture medium, and <i>E. coli</i> ascends from the perineum into it. Treating the cystitis without treating the constipation guarantees a fourth episode. The prescription therefore includes <b>long-term laxative therapy</b>.",
+   "note": ".dp p1: meta framing and em dashes removed, sentences split",
+   "claims": [
+    {
+     "claim": "The infection is lower tract.",
+     "to": "This is a lower-tract infection: no fever, no vomiting, suprapubic tenderness and no back pain."
+    },
+    {
+     "claim": "The stem says so four times.",
+     "dropped": "framing about the stem; the four features are listed"
+    },
+    {
+     "claim": "The lower-tract features are no fever, no vomiting, suprapubic tenderness and no back pain.",
+     "to": "This is a lower-tract infection: no fever, no vomiting, suprapubic tenderness and no back pain."
+    },
+    {
+     "claim": "The lower-tract classification does most of the elimination.",
+     "to": "That classification excludes most of the differential."
+    },
+    {
+     "claim": "Anatomic causes of recurrent paediatric urinary infection, reflux above all, produce recurrent pyelonephritis rather than recurrent cystitis.",
+     "to": "The anatomic causes of recurrent paediatric urinary infection, reflux above all, produce recurrent pyelonephritis rather than recurrent cystitis."
+    },
+    {
+     "claim": "What is left is a mechanical question about emptying.",
+     "to": "The remaining cause is mechanical: incomplete bladder emptying."
+    },
+    {
+     "claim": "The child has hard stool in the rectal vault and functional constipation since day care.",
+     "to": "This child has hard stool in the rectal vault and functional constipation since day care."
+    },
+    {
+     "claim": "A chronically loaded rectum dilates.",
+     "to": "A chronically loaded rectum dilates and compresses the bladder and urethra, so the bladder never empties."
+    },
+    {
+     "claim": "The dilated rectum compresses the bladder and urethra so the bladder never empties.",
+     "to": "A chronically loaded rectum dilates and compresses the bladder and urethra, so the bladder never empties."
+    },
+    {
+     "claim": "The residual urine is the culture medium.",
+     "to": "The residual urine is the culture medium, and E. coli ascends from the perineum into it."
+    },
+    {
+     "claim": "E. coli ascends from the perineum into the residual urine.",
+     "to": "The residual urine is the culture medium, and E. coli ascends from the perineum into it."
+    },
+    {
+     "claim": "This management point is the part worth storing.",
+     "dropped": "study framing"
+    },
+    {
+     "claim": "Treating the cystitis without treating the constipation guarantees a fourth episode.",
+     "to": "Treating the cystitis without treating the constipation guarantees a fourth episode."
+    },
+    {
+     "claim": "Long-term laxative therapy is part of the prescription.",
+     "to": "The prescription therefore includes long-term laxative therapy."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "This is a lower-tract infection: no fever, no vomiting, suprapubic tenderness and no back pain.",
+     "from": "The lower-tract features are no fever, no vomiting, suprapubic tenderness and no back pain."
+    },
+    {
+     "claim": "That classification excludes most of the differential.",
+     "from": "The lower-tract classification does most of the elimination."
+    },
+    {
+     "claim": "Anatomic causes of recurrent paediatric urinary infection, reflux above all, produce recurrent pyelonephritis rather than recurrent cystitis.",
+     "from": "Anatomic causes of recurrent paediatric urinary infection, reflux above all, produce recurrent pyelonephritis rather than recurrent cystitis."
+    },
+    {
+     "claim": "The remaining cause is mechanical: incomplete bladder emptying.",
+     "from": "What is left is a mechanical question about emptying."
+    },
+    {
+     "claim": "The child has hard stool in the rectal vault and functional constipation since day care.",
+     "from": "The child has hard stool in the rectal vault and functional constipation since day care."
+    },
+    {
+     "claim": "A chronically loaded rectum dilates and compresses the bladder and urethra, so the bladder never empties.",
+     "from": "The dilated rectum compresses the bladder and urethra so the bladder never empties."
+    },
+    {
+     "claim": "The residual urine is the culture medium, and E. coli ascends from the perineum into it.",
+     "from": "E. coli ascends from the perineum into the residual urine."
+    },
+    {
+     "claim": "Treating the cystitis without treating the constipation guarantees a fourth episode.",
+     "from": "Treating the cystitis without treating the constipation guarantees a fourth episode."
+    },
+    {
+     "claim": "The prescription includes long-term laxative therapy.",
+     "from": "Long-term laxative therapy is part of the prescription."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "The <b>febrile</b> side runs on imaging rules instead. A first febrile UTI earns a renal and bladder ultrasound only <b>under age 2</b>, and a VCUG only if that ultrasound is abnormal. A <b>second febrile UTI</b> earns a <b>VCUG</b> at any age, even when the ultrasound is normal again, because ultrasound shows dilation and scarring but cannot show reflux. Prophylaxis waits for the VCUG result.",
+   "with": "The <b>febrile</b> pathway follows imaging rules instead. After a first febrile <b>UTI</b> (urinary tract infection), order a renal and bladder ultrasound only <b>under age 2</b>. Order a <b>VCUG</b> (voiding cystourethrogram) only if that ultrasound is abnormal. A <b>second febrile UTI</b> needs a VCUG at any age, even when the ultrasound is normal again. Ultrasound shows dilation and scarring but cannot show reflux. Prophylaxis waits for the VCUG result.",
+   "note": ".dp p2: split, acronyms expanded",
+   "claims": [
+    {
+     "claim": "The febrile side runs on imaging rules.",
+     "to": "The febrile pathway follows imaging rules instead."
+    },
+    {
+     "claim": "A first febrile UTI earns a renal and bladder ultrasound only under age 2.",
+     "to": "After a first febrile UTI (urinary tract infection), order a renal and bladder ultrasound only under age 2."
+    },
+    {
+     "claim": "After a first febrile UTI, a VCUG is done only if that ultrasound is abnormal.",
+     "to": "Order a VCUG (voiding cystourethrogram) only if that ultrasound is abnormal."
+    },
+    {
+     "claim": "A second febrile UTI earns a VCUG at any age, even when the ultrasound is normal again.",
+     "to": "A second febrile UTI needs a VCUG at any age, even when the ultrasound is normal again."
+    },
+    {
+     "claim": "Ultrasound shows dilation and scarring but cannot show reflux.",
+     "to": "Ultrasound shows dilation and scarring but cannot show reflux."
+    },
+    {
+     "claim": "Prophylaxis waits for the VCUG result.",
+     "to": "Prophylaxis waits for the VCUG result."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The febrile pathway follows imaging rules.",
+     "from": "The febrile side runs on imaging rules."
+    },
+    {
+     "claim": "After a first febrile UTI, order a renal and bladder ultrasound only under age 2.",
+     "from": "A first febrile UTI earns a renal and bladder ultrasound only under age 2."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Order a VCUG only if that ultrasound is abnormal.",
+     "from": "After a first febrile UTI, a VCUG is done only if that ultrasound is abnormal."
+    },
+    {
+     "claim": "VCUG stands for voiding cystourethrogram.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A second febrile UTI needs a VCUG at any age, even when the ultrasound is normal again.",
+     "from": "A second febrile UTI earns a VCUG at any age, even when the ultrasound is normal again."
+    },
+    {
+     "claim": "Ultrasound shows dilation and scarring but cannot show reflux.",
+     "from": "Ultrasound shows dilation and scarring but cannot show reflux."
+    },
+    {
+     "claim": "Prophylaxis waits for the VCUG result.",
+     "from": "Prophylaxis waits for the VCUG result."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "&mdash; lower tract, and this is the sentence that kills the reflux option &middot;",
+   "with": "&mdash; lower tract, which rules out reflux &middot;",
+   "note": ".pearls pertinent: meta removed",
+   "claims": [
+    {
+     "claim": "Afebrile, suprapubic tenderness and no back pain place it in the lower tract.",
+     "to": "Afebrile with suprapubic tenderness and no back pain — lower tract, which rules out reflux"
+    },
+    {
+     "claim": "This finding excludes reflux.",
+     "to": "lower tract, which rules out reflux"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Afebrile, suprapubic tenderness and no back pain place it in the lower tract.",
+     "from": "Afebrile, suprapubic tenderness and no back pain place it in the lower tract."
+    },
+    {
+     "claim": "The lower-tract pattern rules out reflux.",
+     "from": "This finding excludes reflux."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "while <b>normal tone</b> simultaneously argues against a neurologic cause and against anal trauma &middot; <b>Anal fissures at 12 and 2 o'clock</b> &mdash; a complication of chronic constipation rather than evidence of injury; their position and the constipation history are the point &middot; <b>Normal genitalia</b> &mdash; no injury, and combined with the fissures' explanation this is what makes abuse unlikely rather than merely unmentioned &middot; <b>Three cystitis episodes in a year, none febrile</b> &mdash; recurrence confined to one tract; a reflux child would have had at least one febrile episode by now",
+   "with": "while <b>normal tone</b> argues against both a neurologic cause and anal trauma &middot; <b>Anal fissures at 12 and 2 o'clock</b> &mdash; a complication of chronic constipation rather than evidence of injury. Their position and the constipation history support this &middot; <b>Normal genitalia</b> &mdash; no injury; with the fissures explained by constipation, abuse is unlikely &middot; <b>Three cystitis episodes in a year, none febrile</b> &mdash; recurrence confined to one tract. A child with reflux would have had at least one febrile episode by now",
+   "note": ".pearls pertinent: meta and filler removed",
+   "claims": [
+    {
+     "claim": "Normal tone argues against a neurologic cause and against anal trauma.",
+     "to": "while normal tone argues against both a neurologic cause and anal trauma"
+    },
+    {
+     "claim": "Anal fissures at 12 and 2 o'clock are a complication of chronic constipation rather than evidence of injury.",
+     "to": "Anal fissures at 12 and 2 o'clock — a complication of chronic constipation rather than evidence of injury"
+    },
+    {
+     "claim": "Their position and the constipation history support that reading.",
+     "to": "Their position and the constipation history support this"
+    },
+    {
+     "claim": "Normal genitalia mean no injury.",
+     "to": "Normal genitalia — no injury; with the fissures explained by constipation, abuse is unlikely"
+    },
+    {
+     "claim": "With the fissures explained, normal genitalia make abuse unlikely.",
+     "to": "with the fissures explained by constipation, abuse is unlikely"
+    },
+    {
+     "claim": "Abuse is unlikely rather than merely unmentioned.",
+     "dropped": "rhetorical contrast; unlikely is kept"
+    },
+    {
+     "claim": "Three cystitis episodes in a year, none febrile, mean recurrence confined to one tract.",
+     "to": "Three cystitis episodes in a year, none febrile — recurrence confined to one tract"
+    },
+    {
+     "claim": "A child with reflux would have had at least one febrile episode by now.",
+     "to": "A child with reflux would have had at least one febrile episode by now"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Normal tone argues against both a neurologic cause and anal trauma.",
+     "from": "Normal tone argues against a neurologic cause and against anal trauma."
+    },
+    {
+     "claim": "Anal fissures at 12 and 2 o'clock are a complication of chronic constipation rather than evidence of injury.",
+     "from": "Anal fissures at 12 and 2 o'clock are a complication of chronic constipation rather than evidence of injury."
+    },
+    {
+     "claim": "Their position and the constipation history support this.",
+     "from": "Their position and the constipation history support that reading."
+    },
+    {
+     "claim": "Normal genitalia mean no injury.",
+     "from": "Normal genitalia mean no injury."
+    },
+    {
+     "claim": "With the fissures explained by constipation, abuse is unlikely.",
+     "from": "With the fissures explained, normal genitalia make abuse unlikely."
+    },
+    {
+     "claim": "Three cystitis episodes in a year, none febrile, mean recurrence confined to one tract.",
+     "from": "Three cystitis episodes in a year, none febrile, mean recurrence confined to one tract."
+    },
+    {
+     "claim": "A child with reflux would have had at least one febrile episode by now.",
+     "from": "A child with reflux would have had at least one febrile episode by now."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "no other sites and no severe infections, so primary immunodeficiency has no foothold",
+   "with": "no other sites and no severe infections, so nothing supports primary immunodeficiency",
+   "note": ".pearls pertinent: idiom removed",
+   "claims": [
+    {
+     "claim": "No other sites and no severe infections leave primary immunodeficiency unsupported.",
+     "to": "no other sites and no severe infections, so nothing supports primary immunodeficiency"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "No other sites and no severe infections, so nothing supports primary immunodeficiency.",
+     "from": "No other sites and no severe infections leave primary immunodeficiency unsupported."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "Management is a two-part prescription rather than a ladder: <b>treat the infection</b>, and <b>treat the risk factor</b> with long-term laxative therapy to soften stools, stop the withholding and let the dilated rectum return to normal size, which is what relieves the pressure on the bladder. Imaging is not the answer to this stem — a renal and bladder ultrasound belongs to the <b>febrile</b> urinary infection pathway, and a VCUG follows an abnormal ultrasound or a second febrile infection.",
+   "with": "Management has two parts: <b>treat the infection</b>, and <b>treat the risk factor</b> with long-term laxative therapy. The laxative softens stools, stops the withholding and lets the dilated rectum return to normal size. That relieves the pressure on the bladder. Imaging is not indicated for this afebrile infection. A renal and bladder ultrasound belongs to the <b>febrile</b> urinary infection pathway. A <b>VCUG</b> (voiding cystourethrogram) follows an abnormal ultrasound or a second febrile infection.",
+   "note": ".danger management: split, em dash removed",
+   "claims": [
+    {
+     "claim": "Management is a two-part prescription.",
+     "to": "Management has two parts: treat the infection, and treat the risk factor with long-term laxative therapy."
+    },
+    {
+     "claim": "It is not a ladder.",
+     "dropped": "framing about format; the two parts are stated"
+    },
+    {
+     "claim": "Treat the infection.",
+     "to": "Management has two parts: treat the infection, and treat the risk factor with long-term laxative therapy."
+    },
+    {
+     "claim": "Treat the risk factor with long-term laxative therapy.",
+     "to": "Management has two parts: treat the infection, and treat the risk factor with long-term laxative therapy."
+    },
+    {
+     "claim": "The laxative softens stools, stops the withholding and lets the dilated rectum return to normal size.",
+     "to": "The laxative softens stools, stops the withholding and lets the dilated rectum return to normal size."
+    },
+    {
+     "claim": "Return of the rectum to normal size relieves the pressure on the bladder.",
+     "to": "That relieves the pressure on the bladder."
+    },
+    {
+     "claim": "Imaging is not indicated in this case.",
+     "to": "Imaging is not indicated for this afebrile infection."
+    },
+    {
+     "claim": "A renal and bladder ultrasound belongs to the febrile urinary infection pathway.",
+     "to": "A renal and bladder ultrasound belongs to the febrile urinary infection pathway."
+    },
+    {
+     "claim": "A VCUG follows an abnormal ultrasound or a second febrile infection.",
+     "to": "A VCUG (voiding cystourethrogram) follows an abnormal ultrasound or a second febrile infection."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Management has two parts: treat the infection, and treat the risk factor with long-term laxative therapy.",
+     "from": "Management is a two-part prescription."
+    },
+    {
+     "claim": "The laxative softens stools, stops the withholding and lets the dilated rectum return to normal size.",
+     "from": "The laxative softens stools, stops the withholding and lets the dilated rectum return to normal size."
+    },
+    {
+     "claim": "That relieves the pressure on the bladder.",
+     "from": "Return of the rectum to normal size relieves the pressure on the bladder."
+    },
+    {
+     "claim": "Imaging is not indicated for this afebrile infection.",
+     "from": "Imaging is not indicated in this case."
+    },
+    {
+     "claim": "A renal and bladder ultrasound belongs to the febrile urinary infection pathway.",
+     "from": "A renal and bladder ultrasound belongs to the febrile urinary infection pathway."
+    },
+    {
+     "claim": "A VCUG follows an abnormal ultrasound or a second febrile infection.",
+     "from": "A VCUG follows an abnormal ultrasound or a second febrile infection."
+    },
+    {
+     "claim": "VCUG stands for voiding cystourethrogram.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "<b>Does that kill the anatomic options?</b> &mdash; Yes — reflux and obstruction produce upper-tract disease",
+   "with": "<b>Does that rule out the anatomic causes?</b> &mdash; Yes; reflux and obstruction produce upper-tract disease",
+   "note": "Decision spine: slang bold question reworded, prose em dash removed",
+   "reworded_bold": [
+    "Does that kill the anatomic options?"
+   ],
+   "claims": [
+    {
+     "claim": "The lower-tract finding eliminates the anatomic options.",
+     "to": "Does that rule out the anatomic causes? — Yes; reflux and obstruction produce upper-tract disease"
+    },
+    {
+     "claim": "Reflux and obstruction produce upper-tract disease.",
+     "to": "Yes; reflux and obstruction produce upper-tract disease"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The lower-tract finding rules out the anatomic causes.",
+     "from": "The lower-tract finding eliminates the anatomic options."
+    },
+    {
+     "claim": "Reflux and obstruction produce upper-tract disease.",
+     "from": "Reflux and obstruction produce upper-tract disease."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "The anal fissures are the most cleverly placed detail in the stem, because they point at abuse and are simultaneously explained by the diagnosis. The stem also supplies the two facts that close the abuse question properly — <b>normal genitalia</b> and <b>normal rectal tone</b> — rather than leaving it to be dismissed by feel, which is how the exam signals which reading it wants. The other half of the decoy work is done by <b>omission</b>: the stem never says afebrile as a headline, it gives a temperature of 37.2, no fever, no back pain and suprapubic tenderness, and expects you to assemble them into a tract assignment yourself.",
+   "with": "The anal fissures suggest abuse but are explained by the constipation. The <b>normal genitalia</b> and <b>normal rectal tone</b> make abuse unlikely. A temperature of 37.2, no fever, no back pain and suprapubic tenderness together place the infection in the lower tract.",
+   "note": "Decoy note: exam-design framing removed",
+   "reworded_bold": [
+    "omission"
+   ],
+   "claims": [
+    {
+     "claim": "The anal fissures are the most cleverly placed detail.",
+     "dropped": "framing about item design"
+    },
+    {
+     "claim": "The anal fissures point at abuse.",
+     "to": "The anal fissures suggest abuse but are explained by the constipation."
+    },
+    {
+     "claim": "The anal fissures are explained by the diagnosis.",
+     "to": "The anal fissures suggest abuse but are explained by the constipation."
+    },
+    {
+     "claim": "Normal genitalia and normal rectal tone close the abuse question.",
+     "to": "The normal genitalia and normal rectal tone make abuse unlikely."
+    },
+    {
+     "claim": "Stating them signals which reading the exam wants.",
+     "dropped": "framing about exam intent"
+    },
+    {
+     "claim": "The other decoy is by omission: afebrile is never stated as a headline.",
+     "dropped": "framing about how the item is worded; the findings are listed next"
+    },
+    {
+     "claim": "The findings given are a temperature of 37.2, no fever, no back pain and suprapubic tenderness.",
+     "to": "A temperature of 37.2, no fever, no back pain and suprapubic tenderness together place the infection in the lower tract."
+    },
+    {
+     "claim": "Together they assign the lower tract.",
+     "to": "A temperature of 37.2, no fever, no back pain and suprapubic tenderness together place the infection in the lower tract."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The anal fissures suggest abuse.",
+     "from": "The anal fissures point at abuse."
+    },
+    {
+     "claim": "The anal fissures are explained by the constipation.",
+     "from": "The anal fissures are explained by the diagnosis."
+    },
+    {
+     "claim": "Normal genitalia and normal rectal tone make abuse unlikely.",
+     "from": "Normal genitalia and normal rectal tone close the abuse question."
+    },
+    {
+     "claim": "A temperature of 37.2, no fever, no back pain and suprapubic tenderness place the infection in the lower tract.",
+     "from": "Together they assign the lower tract."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "<b>Tract before cause.</b> Afebrile recurrent cystitis and recurrent febrile pyelonephritis have different differentials; reflux and obstruction live on the upper-tract side, and emptying problems live on the lower. &middot; Constipation is the <b>commonest modifiable risk factor</b> for recurrent cystitis in a young child, and the mechanism is purely mechanical — a dilated rectum compressing the bladder. &middot; Treating a urinary infection without treating the constipation is treating the episode instead of the disease; the laxative runs for months so the rectum can shrink ⚠︎. &middot; <b>Anal fissures are a complication of constipation</b>, and their presence alongside normal genitalia argues against injury rather than for it. &middot; Immunodeficiency shows up as <b>severe and multi-site</b> rather than as three simple cystitides; a child confined to one tract with one organism has a plumbing problem. &middot; A recurrence weeks after a completed, appropriate course is <b>reinfection</b> rather than treatment failure — the interval is the discriminator, not the drug.",
+   "with": "<b>Identify the tract before the cause.</b> Afebrile recurrent cystitis and recurrent febrile pyelonephritis have different differentials. Reflux and obstruction cause upper-tract disease; emptying problems cause lower-tract disease. &middot; Constipation is the <b>commonest modifiable risk factor</b> for recurrent cystitis in a young child. The mechanism is purely mechanical: a dilated rectum compresses the bladder. &middot; Treating a urinary infection without treating the constipation treats the episode, not the disease. The laxative runs for months so the rectum can shrink ⚠︎. &middot; <b>Anal fissures are a complication of constipation</b>. Alongside normal genitalia, they argue against injury rather than for it. &middot; Immunodeficiency causes <b>severe and multi-site</b> infections rather than three simple cystitides. A child whose infections stay in one tract with one organism has a mechanical urinary problem. &middot; A recurrence weeks after a completed, appropriate course is <b>reinfection</b> rather than treatment failure. The interval, not the drug, makes that distinction.",
+   "note": "Pearls: slogan bold reworded, em dashes and metaphors removed",
+   "reworded_bold": [
+    "Tract before cause."
+   ],
+   "claims": [
+    {
+     "claim": "Identify the tract before the cause.",
+     "to": "Identify the tract before the cause."
+    },
+    {
+     "claim": "Afebrile recurrent cystitis and recurrent febrile pyelonephritis have different differentials.",
+     "to": "Afebrile recurrent cystitis and recurrent febrile pyelonephritis have different differentials."
+    },
+    {
+     "claim": "Reflux and obstruction belong to the upper-tract side.",
+     "to": "Reflux and obstruction cause upper-tract disease; emptying problems cause lower-tract disease."
+    },
+    {
+     "claim": "Emptying problems belong to the lower-tract side.",
+     "to": "Reflux and obstruction cause upper-tract disease; emptying problems cause lower-tract disease."
+    },
+    {
+     "claim": "Constipation is the commonest modifiable risk factor for recurrent cystitis in a young child.",
+     "to": "Constipation is the commonest modifiable risk factor for recurrent cystitis in a young child."
+    },
+    {
+     "claim": "The mechanism is purely mechanical: a dilated rectum compressing the bladder.",
+     "to": "The mechanism is purely mechanical: a dilated rectum compresses the bladder."
+    },
+    {
+     "claim": "Treating a urinary infection without treating the constipation treats the episode instead of the disease.",
+     "to": "Treating a urinary infection without treating the constipation treats the episode, not the disease."
+    },
+    {
+     "claim": "The laxative runs for months so the rectum can shrink (unverified specific).",
+     "to": "The laxative runs for months so the rectum can shrink ⚠︎."
+    },
+    {
+     "claim": "Anal fissures are a complication of constipation.",
+     "to": "Anal fissures are a complication of constipation."
+    },
+    {
+     "claim": "Fissures alongside normal genitalia argue against injury rather than for it.",
+     "to": "Alongside normal genitalia, they argue against injury rather than for it."
+    },
+    {
+     "claim": "Immunodeficiency shows up as severe and multi-site infection rather than three simple cystitides.",
+     "to": "Immunodeficiency causes severe and multi-site infections rather than three simple cystitides."
+    },
+    {
+     "claim": "A child confined to one tract with one organism has a plumbing problem.",
+     "to": "A child whose infections stay in one tract with one organism has a mechanical urinary problem."
+    },
+    {
+     "claim": "A recurrence weeks after a completed, appropriate course is reinfection rather than treatment failure.",
+     "to": "A recurrence weeks after a completed, appropriate course is reinfection rather than treatment failure."
+    },
+    {
+     "claim": "The interval, not the drug, is the discriminator.",
+     "to": "The interval, not the drug, makes that distinction."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Identify the tract before the cause.",
+     "from": "Identify the tract before the cause."
+    },
+    {
+     "claim": "Afebrile recurrent cystitis and recurrent febrile pyelonephritis have different differentials.",
+     "from": "Afebrile recurrent cystitis and recurrent febrile pyelonephritis have different differentials."
+    },
+    {
+     "claim": "Reflux and obstruction cause upper-tract disease.",
+     "from": "Reflux and obstruction belong to the upper-tract side."
+    },
+    {
+     "claim": "Emptying problems cause lower-tract disease.",
+     "from": "Emptying problems belong to the lower-tract side."
+    },
+    {
+     "claim": "Constipation is the commonest modifiable risk factor for recurrent cystitis in a young child.",
+     "from": "Constipation is the commonest modifiable risk factor for recurrent cystitis in a young child."
+    },
+    {
+     "claim": "The mechanism is purely mechanical: a dilated rectum compresses the bladder.",
+     "from": "The mechanism is purely mechanical: a dilated rectum compressing the bladder."
+    },
+    {
+     "claim": "Treating a urinary infection without treating the constipation treats the episode, not the disease.",
+     "from": "Treating a urinary infection without treating the constipation treats the episode instead of the disease."
+    },
+    {
+     "claim": "The laxative runs for months so the rectum can shrink (unverified specific).",
+     "from": "The laxative runs for months so the rectum can shrink (unverified specific)."
+    },
+    {
+     "claim": "Anal fissures are a complication of constipation.",
+     "from": "Anal fissures are a complication of constipation."
+    },
+    {
+     "claim": "Alongside normal genitalia, fissures argue against injury rather than for it.",
+     "from": "Fissures alongside normal genitalia argue against injury rather than for it."
+    },
+    {
+     "claim": "Immunodeficiency causes severe and multi-site infections rather than three simple cystitides.",
+     "from": "Immunodeficiency shows up as severe and multi-site infection rather than three simple cystitides."
+    },
+    {
+     "claim": "A child whose infections stay in one tract with one organism has a mechanical urinary problem.",
+     "from": "A child confined to one tract with one organism has a plumbing problem."
+    },
+    {
+     "claim": "A recurrence weeks after a completed, appropriate course is reinfection rather than treatment failure.",
+     "from": "A recurrence weeks after a completed, appropriate course is reinfection rather than treatment failure."
+    },
+    {
+     "claim": "The interval, not the drug, makes that distinction.",
+     "from": "The interval, not the drug, is the discriminator."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "Verified: Part I <b>Vesicoureteral Reflux</b> owns the upper-tract arm of this same complaint and already carries bladder–bowel dysfunction as part of reflux management at every grade; this brief is the case where the bowel <i>is</i> the whole diagnosis and there is no reflux to manage. Part II <b>Pyelonephritis: Route &amp; Disposition</b> owns oral versus IV route in adults, while the imaging rules and empiric treatment for a child&#39;s febrile UTI now sit in this brief, and Part I <b>Constipation in a Child</b> owns the upstream cycle whose urinary complication this is. Store the discriminator as a question: is this infection febrile or afebrile, and does the bladder empty? Aquifer <b>Fever in an Infant</b> owns the first febrile UTI in an infant: the catheter specimen, oral or IV treatment, the drug and the dose.",
+   "with": "Part I <b>Vesicoureteral Reflux</b> covers the upper-tract arm of this same complaint. It already includes bladder–bowel dysfunction as part of reflux management at every grade. In this brief, the bowel <i>is</i> the whole diagnosis and there is no reflux to manage. Part II <b>Pyelonephritis: Route &amp; Disposition</b> covers oral versus IV (intravenous) route in adults. This brief covers the imaging rules and empiric treatment for a febrile UTI (urinary tract infection) in a child. Part I <b>Constipation in a Child</b> covers the upstream cycle whose urinary complication this is. Ask: is this infection febrile or afebrile, and does the bladder empty? Aquifer <b>Fever in an Infant</b> covers the first febrile UTI in an infant: the catheter specimen, oral or IV treatment, the drug and the dose.",
+   "note": "Pairs with: workflow text removed, owns to covers, Ask",
+   "claims": [
+    {
+     "claim": "Vesicoureteral Reflux covers the upper-tract arm of this complaint.",
+     "to": "Part I Vesicoureteral Reflux covers the upper-tract arm of this same complaint."
+    },
+    {
+     "claim": "Vesicoureteral Reflux already carries bladder–bowel dysfunction as part of reflux management at every grade.",
+     "to": "It already includes bladder–bowel dysfunction as part of reflux management at every grade."
+    },
+    {
+     "claim": "In this brief the bowel is the whole diagnosis and there is no reflux to manage.",
+     "to": "In this brief, the bowel is the whole diagnosis and there is no reflux to manage."
+    },
+    {
+     "claim": "Pyelonephritis: Route & Disposition covers oral versus IV route in adults.",
+     "to": "Part II Pyelonephritis: Route & Disposition covers oral versus IV (intravenous) route in adults."
+    },
+    {
+     "claim": "The imaging rules and empiric treatment for a child's febrile UTI are in this brief.",
+     "to": "This brief covers the imaging rules and empiric treatment for a febrile UTI (urinary tract infection) in a child."
+    },
+    {
+     "claim": "Constipation in a Child covers the upstream cycle whose urinary complication this is.",
+     "to": "Part I Constipation in a Child covers the upstream cycle whose urinary complication this is."
+    },
+    {
+     "claim": "The discriminating question is whether the infection is febrile or afebrile, and whether the bladder empties.",
+     "to": "Ask: is this infection febrile or afebrile, and does the bladder empty?"
+    },
+    {
+     "claim": "Fever in an Infant covers the first febrile UTI in an infant: the catheter specimen, oral or IV treatment, the drug and the dose.",
+     "to": "Aquifer Fever in an Infant covers the first febrile UTI in an infant: the catheter specimen, oral or IV treatment, the drug and the dose."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Vesicoureteral Reflux covers the upper-tract arm of this complaint.",
+     "from": "Vesicoureteral Reflux covers the upper-tract arm of this complaint."
+    },
+    {
+     "claim": "Vesicoureteral Reflux already includes bladder–bowel dysfunction as part of reflux management at every grade.",
+     "from": "Vesicoureteral Reflux already carries bladder–bowel dysfunction as part of reflux management at every grade."
+    },
+    {
+     "claim": "In this brief the bowel is the whole diagnosis and there is no reflux to manage.",
+     "from": "In this brief the bowel is the whole diagnosis and there is no reflux to manage."
+    },
+    {
+     "claim": "Pyelonephritis: Route & Disposition covers oral versus IV route in adults.",
+     "from": "Pyelonephritis: Route & Disposition covers oral versus IV route in adults."
+    },
+    {
+     "claim": "IV stands for intravenous.",
+     "from": "expansion"
+    },
+    {
+     "claim": "This brief covers the imaging rules and empiric treatment for a febrile UTI in a child.",
+     "from": "The imaging rules and empiric treatment for a child's febrile UTI are in this brief."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Constipation in a Child covers the upstream cycle whose urinary complication this is.",
+     "from": "Constipation in a Child covers the upstream cycle whose urinary complication this is."
+    },
+    {
+     "claim": "Ask whether the infection is febrile or afebrile, and whether the bladder empties.",
+     "from": "The discriminating question is whether the infection is febrile or afebrile, and whether the bladder empties."
+    },
+    {
+     "claim": "Fever in an Infant covers the first febrile UTI in an infant: the catheter specimen, oral or IV treatment, the drug and the dose.",
+     "from": "Fever in an Infant covers the first febrile UTI in an infant: the catheter specimen, oral or IV treatment, the drug and the dose."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "A disease name strongly associated with a complaint will retrieve before the discriminator that governs it, and recently learned associations retrieve fastest of all. Convert every such association into a question — here, which tract? — because the stem usually answers the question before it offers the association. --- <i>Batch 5, brief 03 · 2026-09-10.</i>",
+   "with": "A disease name strongly associated with a complaint comes to mind before the finding that discriminates it. Recently learned associations come to mind fastest of all. Convert every such association into a question; here, ask which tract is infected.",
+   "note": ".rule: batch note and stem framing removed, split",
+   "claims": [
+    {
+     "claim": "A disease name strongly associated with a complaint is recalled before the discriminator that governs it.",
+     "to": "A disease name strongly associated with a complaint comes to mind before the finding that discriminates it."
+    },
+    {
+     "claim": "Recently learned associations are recalled fastest of all.",
+     "to": "Recently learned associations come to mind fastest of all."
+    },
+    {
+     "claim": "Convert every such association into a question, here which tract.",
+     "to": "Convert every such association into a question; here, ask which tract is infected."
+    },
+    {
+     "claim": "The stem usually answers the question before it offers the association.",
+     "dropped": "framing about how items are written"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A disease name strongly associated with a complaint comes to mind before the finding that discriminates it.",
+     "from": "A disease name strongly associated with a complaint is recalled before the discriminator that governs it."
+    },
+    {
+     "claim": "Recently learned associations come to mind fastest of all.",
+     "from": "Recently learned associations are recalled fastest of all."
+    },
+    {
+     "claim": "Convert every such association into a question; here, ask which tract is infected.",
+     "from": "Convert every such association into a question, here which tract."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "Immunodeficiency presents with <b>severe</b> infections — pyelonephritis rather than cystitis — and with <b>multiple types</b> of infection; the history is otherwise unremarkable",
+   "with": "Immunodeficiency presents with <b>severe</b> infections (pyelonephritis rather than cystitis) and with <b>multiple types</b> of infection; the history is otherwise unremarkable",
+   "note": "trap line: em dashes to parentheses",
+   "claims": [
+    {
+     "claim": "Immunodeficiency presents with severe infections, pyelonephritis rather than cystitis.",
+     "to": "Immunodeficiency presents with severe infections (pyelonephritis rather than cystitis) and with multiple types of infection"
+    },
+    {
+     "claim": "Immunodeficiency presents with multiple types of infection.",
+     "to": "Immunodeficiency presents with severe infections (pyelonephritis rather than cystitis) and with multiple types of infection"
+    },
+    {
+     "claim": "The history is otherwise unremarkable.",
+     "to": "the history is otherwise unremarkable"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Immunodeficiency presents with severe infections, pyelonephritis rather than cystitis.",
+     "from": "Immunodeficiency presents with severe infections, pyelonephritis rather than cystitis."
+    },
+    {
+     "claim": "Immunodeficiency presents with multiple types of infection.",
+     "from": "Immunodeficiency presents with multiple types of infection."
+    },
+    {
+     "claim": "The history is otherwise unremarkable.",
+     "from": "The history is otherwise unremarkable."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "enuresis",
+   "find": "Dry for ≥6 months and now wetting = <b>secondary</b> enuresis. Primary vs. secondary changes the <i>differential</i> — but <b>both get a urinalysis first</b>. One cheap test screens the entire organic differential, and a plausible psychosocial explanation (divorce, new sibling) never substitutes for excluding organic disease.",
+   "with": "A child who was dry for ≥6 months and is now wetting has <b>secondary</b> enuresis. Primary versus secondary changes the <i>differential</i>, but <b>both get a urinalysis first</b>. This one cheap test screens the entire organic differential. A plausible psychosocial explanation (divorce, new sibling) never substitutes for excluding organic disease.",
+   "note": ".dp: em dash removed, split",
+   "claims": [
+    {
+     "claim": "Dry for ≥6 months and now wetting is secondary enuresis.",
+     "to": "A child who was dry for ≥6 months and is now wetting has secondary enuresis."
+    },
+    {
+     "claim": "Primary vs. secondary changes the differential.",
+     "to": "Primary versus secondary changes the differential, but both get a urinalysis first."
+    },
+    {
+     "claim": "Both get a urinalysis first.",
+     "to": "Primary versus secondary changes the differential, but both get a urinalysis first."
+    },
+    {
+     "claim": "One cheap test screens the entire organic differential.",
+     "to": "This one cheap test screens the entire organic differential."
+    },
+    {
+     "claim": "A plausible psychosocial explanation (divorce, new sibling) never substitutes for excluding organic disease.",
+     "to": "A plausible psychosocial explanation (divorce, new sibling) never substitutes for excluding organic disease."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A child dry for ≥6 months and now wetting has secondary enuresis.",
+     "from": "Dry for ≥6 months and now wetting is secondary enuresis."
+    },
+    {
+     "claim": "Primary versus secondary changes the differential.",
+     "from": "Primary vs. secondary changes the differential."
+    },
+    {
+     "claim": "Both get a urinalysis first.",
+     "from": "Both get a urinalysis first."
+    },
+    {
+     "claim": "This one cheap test screens the entire organic differential.",
+     "from": "One cheap test screens the entire organic differential."
+    },
+    {
+     "claim": "A plausible psychosocial explanation (divorce, new sibling) never substitutes for excluding organic disease.",
+     "from": "A plausible psychosocial explanation (divorce, new sibling) never substitutes for excluding organic disease."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "enuresis",
+   "find": "Address the stressor → behavioral (evening fluid restriction, timed voiding, no caffeine, voiding diary) → <b>enuresis alarm</b> (most effective long-term, but it is a conditioning device for <i>primary</i> enuresis) → <b>desmopressin</b> last, for sleepovers and camp, with high relapse and hyponatremia risk. Other secondary causes the stem will negate: <b>constipation</b> (very common), <b>sexual abuse</b>, OSA.",
+   "with": "First address the stressor. Then use behavioral measures: evening fluid restriction, timed voiding, no caffeine and a voiding diary. Next comes the <b>enuresis alarm</b>, the most effective long-term option, but it is a conditioning device for <i>primary</i> enuresis. Use <b>desmopressin</b> last, for sleepovers and camp; it carries high relapse and hyponatremia risk. Other secondary causes to exclude: <b>constipation</b> (very common), <b>sexual abuse</b> and <b>OSA</b> (obstructive sleep apnea).",
+   "note": ".pearls: arrow chain split, stem framing removed, acronym expanded",
+   "claims": [
+    {
+     "claim": "After a negative UA, address the stressor first.",
+     "to": "First address the stressor."
+    },
+    {
+     "claim": "Behavioral measures come next: evening fluid restriction, timed voiding, no caffeine, voiding diary.",
+     "to": "Then use behavioral measures: evening fluid restriction, timed voiding, no caffeine and a voiding diary."
+    },
+    {
+     "claim": "The enuresis alarm comes after behavioral measures.",
+     "to": "Next comes the enuresis alarm, the most effective long-term option, but it is a conditioning device for primary enuresis."
+    },
+    {
+     "claim": "The enuresis alarm is most effective long-term.",
+     "to": "Next comes the enuresis alarm, the most effective long-term option, but it is a conditioning device for primary enuresis."
+    },
+    {
+     "claim": "The enuresis alarm is a conditioning device for primary enuresis.",
+     "to": "Next comes the enuresis alarm, the most effective long-term option, but it is a conditioning device for primary enuresis."
+    },
+    {
+     "claim": "Desmopressin is last, for sleepovers and camp.",
+     "to": "Use desmopressin last, for sleepovers and camp; it carries high relapse and hyponatremia risk."
+    },
+    {
+     "claim": "Desmopressin carries high relapse and hyponatremia risk.",
+     "to": "Use desmopressin last, for sleepovers and camp; it carries high relapse and hyponatremia risk."
+    },
+    {
+     "claim": "Other secondary causes the stem will negate are constipation (very common), sexual abuse and OSA.",
+     "to": "Other secondary causes to exclude: constipation (very common), sexual abuse and OSA (obstructive sleep apnea)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Address the stressor first.",
+     "from": "After a negative UA, address the stressor first."
+    },
+    {
+     "claim": "Then use behavioral measures: evening fluid restriction, timed voiding, no caffeine and a voiding diary.",
+     "from": "Behavioral measures come next: evening fluid restriction, timed voiding, no caffeine, voiding diary."
+    },
+    {
+     "claim": "Next comes the enuresis alarm.",
+     "from": "The enuresis alarm comes after behavioral measures."
+    },
+    {
+     "claim": "The enuresis alarm is the most effective long-term option.",
+     "from": "The enuresis alarm is most effective long-term."
+    },
+    {
+     "claim": "The enuresis alarm is a conditioning device for primary enuresis.",
+     "from": "The enuresis alarm is a conditioning device for primary enuresis."
+    },
+    {
+     "claim": "Use desmopressin last, for sleepovers and camp.",
+     "from": "Desmopressin is last, for sleepovers and camp."
+    },
+    {
+     "claim": "Desmopressin carries high relapse and hyponatremia risk.",
+     "from": "Desmopressin carries high relapse and hyponatremia risk."
+    },
+    {
+     "claim": "Other secondary causes to exclude are constipation (very common), sexual abuse and OSA.",
+     "from": "Other secondary causes the stem will negate are constipation (very common), sexual abuse and OSA."
+    },
+    {
+     "claim": "OSA stands for obstructive sleep apnea.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "enuresis",
+   "find": "Part I <b>Polyuria: Water or Solute</b> takes over once the very low specific gravity has pointed at diabetes insipidus &mdash; it owns the water deprivation test, what its result means, and the one child in whom it must not be done. Store the discriminator as a question: <i>is the serum sodium high, low, or normal?</i>",
+   "with": "Part I <b>Polyuria: Water or Solute</b> covers the next step once a very low specific gravity points to diabetes insipidus. It covers the water deprivation test, what its result means, and the one child in whom it must not be done. Ask: <i>is the serum sodium high, low, or normal?</i>",
+   "note": "Pairs with: takes over/owns to covers, em dash removed, Ask",
+   "claims": [
+    {
+     "claim": "Polyuria: Water or Solute takes over once a very low specific gravity points at diabetes insipidus.",
+     "to": "Part I Polyuria: Water or Solute covers the next step once a very low specific gravity points to diabetes insipidus."
+    },
+    {
+     "claim": "It covers the water deprivation test, what its result means, and the one child in whom it must not be done.",
+     "to": "It covers the water deprivation test, what its result means, and the one child in whom it must not be done."
+    },
+    {
+     "claim": "The discriminating question is whether the serum sodium is high, low or normal.",
+     "to": "Ask: is the serum sodium high, low, or normal?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Polyuria: Water or Solute covers the next step once a very low specific gravity points to diabetes insipidus.",
+     "from": "Polyuria: Water or Solute takes over once a very low specific gravity points at diabetes insipidus."
+    },
+    {
+     "claim": "It covers the water deprivation test, what its result means, and the one child in whom it must not be done.",
+     "from": "It covers the water deprivation test, what its result means, and the one child in whom it must not be done."
+    },
+    {
+     "claim": "Ask whether the serum sodium is high, low or normal.",
+     "from": "The discriminating question is whether the serum sodium is high, low or normal."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "Two numbers order this stem and neither of them is the one being asked about. <b>Urine osmolality 120</b> is a water diuresis &mdash; the kidney is failing to concentrate, so solute diuresis and every test that chases it are out before any hormone is named. Then <b>serum sodium 142</b>, a normal value, is what makes the deprivation test necessary rather than redundant: a patient who drinks enough to hold his sodium normal has not yet shown whether the dilute urine is a failure to make or to heed vasopressin, or simply a kidney doing its job against a flood of water. <b>Water deprivation is the manoeuvre that forces that distinction</b>, by driving serum osmolality to the point where vasopressin secretion must be maximal and then asking what the urine did.",
+   "with": "<b>Urine osmolality 120</b> is a water diuresis. The kidney is failing to concentrate, so solute diuresis and every test for it are excluded before any hormone is named. Then <b>serum sodium 142</b>, a normal value, makes the deprivation test necessary rather than redundant. A patient who drinks enough to hold his sodium normal has not yet shown the cause of the dilute urine. It may be a failure to make or to respond to vasopressin, or simply a normal kidney excreting a large water intake. <b>Water deprivation is the manoeuvre that forces that distinction</b>. It drives serum osmolality to the point where vasopressin secretion must be maximal, then shows whether the urine concentrates.",
+   "note": ".dp p1: framing opener removed, long sentences split, personification removed",
+   "claims": [
+    {
+     "claim": "The key values in the stem are not what is being asked about.",
+     "dropped": "framing about the stem"
+    },
+    {
+     "claim": "Urine osmolality 120 is a water diuresis.",
+     "to": "Urine osmolality 120 is a water diuresis."
+    },
+    {
+     "claim": "The kidney is failing to concentrate.",
+     "to": "The kidney is failing to concentrate, so solute diuresis and every test for it are excluded before any hormone is named."
+    },
+    {
+     "claim": "Solute diuresis and every test that chases it are out before any hormone is named.",
+     "to": "The kidney is failing to concentrate, so solute diuresis and every test for it are excluded before any hormone is named."
+    },
+    {
+     "claim": "Serum sodium 142 is a normal value.",
+     "to": "Then serum sodium 142, a normal value, makes the deprivation test necessary rather than redundant."
+    },
+    {
+     "claim": "The normal sodium makes the deprivation test necessary rather than redundant.",
+     "to": "Then serum sodium 142, a normal value, makes the deprivation test necessary rather than redundant."
+    },
+    {
+     "claim": "A patient who drinks enough to hold his sodium normal has not yet shown the cause of the dilute urine.",
+     "to": "A patient who drinks enough to hold his sodium normal has not yet shown the cause of the dilute urine."
+    },
+    {
+     "claim": "The dilute urine may be a failure to make or to heed vasopressin, or a kidney doing its job against a flood of water.",
+     "to": "It may be a failure to make or to respond to vasopressin, or simply a normal kidney excreting a large water intake."
+    },
+    {
+     "claim": "Water deprivation is the manoeuvre that forces that distinction.",
+     "to": "Water deprivation is the manoeuvre that forces that distinction."
+    },
+    {
+     "claim": "It drives serum osmolality to the point where vasopressin secretion must be maximal.",
+     "to": "It drives serum osmolality to the point where vasopressin secretion must be maximal, then shows whether the urine concentrates."
+    },
+    {
+     "claim": "Then the urine response is read.",
+     "to": "then shows whether the urine concentrates."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Urine osmolality 120 is a water diuresis.",
+     "from": "Urine osmolality 120 is a water diuresis."
+    },
+    {
+     "claim": "The kidney is failing to concentrate.",
+     "from": "The kidney is failing to concentrate."
+    },
+    {
+     "claim": "Solute diuresis and every test for it are excluded before any hormone is named.",
+     "from": "Solute diuresis and every test that chases it are out before any hormone is named."
+    },
+    {
+     "claim": "Serum sodium 142 is a normal value.",
+     "from": "Serum sodium 142 is a normal value."
+    },
+    {
+     "claim": "The normal sodium makes the deprivation test necessary rather than redundant.",
+     "from": "The normal sodium makes the deprivation test necessary rather than redundant."
+    },
+    {
+     "claim": "A patient who drinks enough to hold his sodium normal has not yet shown the cause of the dilute urine.",
+     "from": "A patient who drinks enough to hold his sodium normal has not yet shown the cause of the dilute urine."
+    },
+    {
+     "claim": "The dilute urine may be a failure to make or to respond to vasopressin, or a normal kidney excreting a large water intake.",
+     "from": "The dilute urine may be a failure to make or to heed vasopressin, or a kidney doing its job against a flood of water."
+    },
+    {
+     "claim": "Water deprivation is the manoeuvre that forces that distinction.",
+     "from": "Water deprivation is the manoeuvre that forces that distinction."
+    },
+    {
+     "claim": "It drives serum osmolality to the point where vasopressin secretion must be maximal.",
+     "from": "It drives serum osmolality to the point where vasopressin secretion must be maximal."
+    },
+    {
+     "claim": "Then it shows whether the urine concentrates.",
+     "from": "Then the urine response is read."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "This one was answered quickly and correctly, so the lesson is not the key but the shape of the wrong options: the two imaging studies were not wrong tests, they were <b>right tests in the wrong order</b> &mdash; MRI localises an established deficiency, renal ultrasonography an established resistance, and both wait on a diagnosis this stem has not yet made.",
+   "with": "The two imaging studies are <b>right tests in the wrong order</b>. <b>MRI</b> (magnetic resonance imaging) localises an established deficiency, and renal ultrasonography localises an established resistance. Both wait on a diagnosis that has not yet been made.",
+   "note": ".dp p2: workflow and framing removed",
+   "claims": [
+    {
+     "claim": "This item was answered quickly and correctly.",
+     "dropped": "workflow note about the learner's performance"
+    },
+    {
+     "claim": "The lesson is the shape of the wrong options, not the key.",
+     "dropped": "framing about the options"
+    },
+    {
+     "claim": "The two imaging studies were not wrong tests.",
+     "to": "The two imaging studies are right tests in the wrong order."
+    },
+    {
+     "claim": "The two imaging studies were right tests in the wrong order.",
+     "to": "The two imaging studies are right tests in the wrong order."
+    },
+    {
+     "claim": "MRI localises an established deficiency.",
+     "to": "MRI (magnetic resonance imaging) localises an established deficiency, and renal ultrasonography localises an established resistance."
+    },
+    {
+     "claim": "Renal ultrasonography localises an established resistance.",
+     "to": "MRI (magnetic resonance imaging) localises an established deficiency, and renal ultrasonography localises an established resistance."
+    },
+    {
+     "claim": "Both wait on a diagnosis not yet made.",
+     "to": "Both wait on a diagnosis that has not yet been made."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The two imaging studies are right tests in the wrong order.",
+     "from": "The two imaging studies were right tests in the wrong order."
+    },
+    {
+     "claim": "MRI localises an established deficiency.",
+     "from": "MRI localises an established deficiency."
+    },
+    {
+     "claim": "MRI stands for magnetic resonance imaging.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Renal ultrasonography localises an established resistance.",
+     "from": "Renal ultrasonography localises an established resistance."
+    },
+    {
+     "claim": "Both wait on a diagnosis that has not yet been made.",
+     "from": "Both wait on a diagnosis not yet made."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "<p><b>1.</b> Is the urine dilute or concentrated? &mdash; 600 or above means the kidney concentrates, so look for solute, not for a hormone. <b>2.</b> Is there glucose in the urine? &mdash; glucosuria explains the whole picture without one. <b>3.</b> Is the sodium above 145 with osmolality above 295? &mdash; the AVP disorder is already proven; go straight to desmopressin. <b>4.</b> Is the sodium frankly low? &mdash; polyuria with hyponatraemia is primary polydipsia and needs no deprivation test. <b>5.</b> Is the sodium normal? &mdash; that is the one value that earns the test. <b>6.</b> After deprivation, did desmopressin raise the urine osmolality? &mdash; yes is deficiency, so image the brain; no is resistance, so look at the kidney and the drug list.</p>",
+   "with": "<p><b>1.</b> Is the urine dilute or concentrated? Urine osmolality of 600 or above means the kidney concentrates, so look for solute, not for a hormone. <b>2.</b> Is there glucose in the urine? Glucosuria explains the whole picture without a hormone. <b>3.</b> Is the sodium above 145 with osmolality above 295? Then the <b>AVP</b> (arginine vasopressin) disorder is already proven; go straight to desmopressin. <b>4.</b> Is the sodium frankly low? Polyuria with hyponatraemia is primary polydipsia and needs no deprivation test. <b>5.</b> Is the sodium normal? That is the only value that calls for the test. <b>6.</b> After deprivation, did desmopressin raise the urine osmolality? If yes, it is deficiency, so image the brain. If no, it is resistance, so look at the kidney and the drug list.</p>",
+   "note": "Decision spine .dp: prose em dashes removed, acronym expanded",
+   "claims": [
+    {
+     "claim": "Step 1 asks whether the urine is dilute or concentrated.",
+     "to": "Is the urine dilute or concentrated?"
+    },
+    {
+     "claim": "Urine osmolality 600 or above means the kidney concentrates, so look for solute, not a hormone.",
+     "to": "Urine osmolality of 600 or above means the kidney concentrates, so look for solute, not for a hormone."
+    },
+    {
+     "claim": "Step 2 asks whether there is glucose in the urine.",
+     "to": "Is there glucose in the urine?"
+    },
+    {
+     "claim": "Glucosuria explains the whole picture without a hormone.",
+     "to": "Glucosuria explains the whole picture without a hormone."
+    },
+    {
+     "claim": "Step 3 asks whether the sodium is above 145 with osmolality above 295.",
+     "to": "Is the sodium above 145 with osmolality above 295?"
+    },
+    {
+     "claim": "If so, the AVP disorder is already proven; go straight to desmopressin.",
+     "to": "Then the AVP (arginine vasopressin) disorder is already proven; go straight to desmopressin."
+    },
+    {
+     "claim": "Step 4 asks whether the sodium is frankly low.",
+     "to": "Is the sodium frankly low?"
+    },
+    {
+     "claim": "Polyuria with hyponatraemia is primary polydipsia and needs no deprivation test.",
+     "to": "Polyuria with hyponatraemia is primary polydipsia and needs no deprivation test."
+    },
+    {
+     "claim": "Step 5 asks whether the sodium is normal.",
+     "to": "Is the sodium normal?"
+    },
+    {
+     "claim": "A normal sodium is the one value that earns the test.",
+     "to": "That is the only value that calls for the test."
+    },
+    {
+     "claim": "Step 6 asks whether desmopressin raised the urine osmolality after deprivation.",
+     "to": "After deprivation, did desmopressin raise the urine osmolality?"
+    },
+    {
+     "claim": "A rise is deficiency, so image the brain.",
+     "to": "If yes, it is deficiency, so image the brain."
+    },
+    {
+     "claim": "No rise is resistance, so look at the kidney and the drug list.",
+     "to": "If no, it is resistance, so look at the kidney and the drug list."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Is the urine dilute or concentrated?",
+     "from": "Step 1 asks whether the urine is dilute or concentrated."
+    },
+    {
+     "claim": "Urine osmolality 600 or above means the kidney concentrates, so look for solute, not a hormone.",
+     "from": "Urine osmolality 600 or above means the kidney concentrates, so look for solute, not a hormone."
+    },
+    {
+     "claim": "Is there glucose in the urine?",
+     "from": "Step 2 asks whether there is glucose in the urine."
+    },
+    {
+     "claim": "Glucosuria explains the whole picture without a hormone.",
+     "from": "Glucosuria explains the whole picture without a hormone."
+    },
+    {
+     "claim": "Is the sodium above 145 with osmolality above 295?",
+     "from": "Step 3 asks whether the sodium is above 145 with osmolality above 295."
+    },
+    {
+     "claim": "Then the AVP disorder is already proven; go straight to desmopressin.",
+     "from": "If so, the AVP disorder is already proven; go straight to desmopressin."
+    },
+    {
+     "claim": "AVP stands for arginine vasopressin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Is the sodium frankly low?",
+     "from": "Step 4 asks whether the sodium is frankly low."
+    },
+    {
+     "claim": "Polyuria with hyponatraemia is primary polydipsia and needs no deprivation test.",
+     "from": "Polyuria with hyponatraemia is primary polydipsia and needs no deprivation test."
+    },
+    {
+     "claim": "Is the sodium normal?",
+     "from": "Step 5 asks whether the sodium is normal."
+    },
+    {
+     "claim": "A normal sodium is the only value that calls for the test.",
+     "from": "A normal sodium is the one value that earns the test."
+    },
+    {
+     "claim": "After deprivation, did desmopressin raise the urine osmolality?",
+     "from": "Step 6 asks whether desmopressin raised the urine osmolality after deprivation."
+    },
+    {
+     "claim": "If yes, it is deficiency, so image the brain.",
+     "from": "A rise is deficiency, so image the brain."
+    },
+    {
+     "claim": "If no, it is resistance, so look at the kidney and the drug list.",
+     "from": "No rise is resistance, so look at the kidney and the drug list."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "They re-ask this by moving the sodium: raise it above 145 and the test is redundant, drop it below normal and the diagnosis is already primary polydipsia &mdash; only a normal sodium buys the test &middot;",
+   "with": "A sodium above 145 makes the test redundant. A sodium below normal already means primary polydipsia. Only a normal sodium calls for the test. &middot;",
+   "note": "Pearls row 1: exam framing and em dash removed",
+   "claims": [
+    {
+     "claim": "The exam re-asks this by moving the sodium.",
+     "dropped": "framing about how the exam varies the item"
+    },
+    {
+     "claim": "A sodium above 145 makes the test redundant.",
+     "to": "A sodium above 145 makes the test redundant."
+    },
+    {
+     "claim": "A sodium below normal means the diagnosis is already primary polydipsia.",
+     "to": "A sodium below normal already means primary polydipsia."
+    },
+    {
+     "claim": "Only a normal sodium buys the test.",
+     "to": "Only a normal sodium calls for the test."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A sodium above 145 makes the test redundant.",
+     "from": "A sodium above 145 makes the test redundant."
+    },
+    {
+     "claim": "A sodium below normal already means primary polydipsia.",
+     "from": "A sodium below normal means the diagnosis is already primary polydipsia."
+    },
+    {
+     "claim": "Only a normal sodium calls for the test.",
+     "from": "Only a normal sodium buys the test."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "the current name for nephrogenic diabetes insipidus; the renaming changes nothing about what is scored &middot;",
+   "with": "the current name for nephrogenic diabetes insipidus &middot;",
+   "note": "Pearls: exam-scoring framing removed",
+   "claims": [
+    {
+     "claim": "AVP resistance is the current name for nephrogenic diabetes insipidus.",
+     "to": "the current name for nephrogenic diabetes insipidus"
+    },
+    {
+     "claim": "The renaming changes nothing about what is scored.",
+     "dropped": "framing about exam scoring"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "AVP resistance is the current name for nephrogenic diabetes insipidus.",
+     "from": "AVP resistance is the current name for nephrogenic diabetes insipidus."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "through placental vasopressinase &mdash; it resolves with delivery",
+   "with": "through placental vasopressinase; it resolves with delivery",
+   "note": "Pearls: prose em dash removed",
+   "claims": [
+    {
+     "claim": "Pregnancy can produce a transient deficiency through placental vasopressinase.",
+     "to": "Pregnancy can produce a transient deficiency through placental vasopressinase; it resolves with delivery"
+    },
+    {
+     "claim": "It resolves with delivery.",
+     "to": "it resolves with delivery"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Pregnancy can produce a transient deficiency through placental vasopressinase.",
+     "from": "Pregnancy can produce a transient deficiency through placental vasopressinase."
+    },
+    {
+     "claim": "It resolves with delivery.",
+     "from": "It resolves with delivery."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "Part I <b>Nocturnal Enuresis</b> already keys a very low specific gravity to diabetes insipidus and to this test &mdash; this brief is what happens after the test is ordered. <b>Sellar and Suprasellar Masses</b> owns the causes of AVP deficiency and the post-operative case where the diagnosis is not in doubt. <b>Hypercalcemia Workup</b> owns the commonest acquired resistance. Store the discriminator as a question: <i>is the serum sodium high, low, or normal?</i>",
+   "with": "Part I <b>Nocturnal Enuresis</b> already links a very low specific gravity to diabetes insipidus and to this test. This brief covers what happens after the test is ordered. <b>Sellar and Suprasellar Masses</b> covers the causes of AVP (arginine vasopressin) deficiency and the post-operative case where the diagnosis is not in doubt. <b>Hypercalcemia Workup</b> covers the commonest acquired resistance. Ask: <i>is the serum sodium high, low, or normal?</i>",
+   "note": "Pairs with: owns to covers, em dash removed, Ask",
+   "claims": [
+    {
+     "claim": "Nocturnal Enuresis already keys a very low specific gravity to diabetes insipidus and to this test.",
+     "to": "Part I Nocturnal Enuresis already links a very low specific gravity to diabetes insipidus and to this test."
+    },
+    {
+     "claim": "This brief is what happens after the test is ordered.",
+     "to": "This brief covers what happens after the test is ordered."
+    },
+    {
+     "claim": "Sellar and Suprasellar Masses covers the causes of AVP deficiency and the post-operative case where the diagnosis is not in doubt.",
+     "to": "Sellar and Suprasellar Masses covers the causes of AVP (arginine vasopressin) deficiency and the post-operative case where the diagnosis is not in doubt."
+    },
+    {
+     "claim": "Hypercalcemia Workup covers the commonest acquired resistance.",
+     "to": "Hypercalcemia Workup covers the commonest acquired resistance."
+    },
+    {
+     "claim": "The discriminating question is whether the serum sodium is high, low or normal.",
+     "to": "Ask: is the serum sodium high, low, or normal?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Nocturnal Enuresis already links a very low specific gravity to diabetes insipidus and to this test.",
+     "from": "Nocturnal Enuresis already keys a very low specific gravity to diabetes insipidus and to this test."
+    },
+    {
+     "claim": "This brief covers what happens after the test is ordered.",
+     "from": "This brief is what happens after the test is ordered."
+    },
+    {
+     "claim": "Sellar and Suprasellar Masses covers the causes of AVP deficiency and the post-operative case where the diagnosis is not in doubt.",
+     "from": "Sellar and Suprasellar Masses covers the causes of AVP deficiency and the post-operative case where the diagnosis is not in doubt."
+    },
+    {
+     "claim": "AVP stands for arginine vasopressin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Hypercalcemia Workup covers the commonest acquired resistance.",
+     "from": "Hypercalcemia Workup covers the commonest acquired resistance."
+    },
+    {
+     "claim": "Ask whether the serum sodium is high, low or normal.",
+     "from": "The discriminating question is whether the serum sodium is high, low or normal."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "When the kidney is making dilute urine, the serum sodium tells you not the diagnosis but whether you still need the test: a high sodium has already answered the question, a low sodium has answered it the other way, and a normal sodium is the only value that buys a water deprivation test.",
+   "with": "When the kidney is making dilute urine, the serum sodium shows whether a water deprivation test is still needed, not the diagnosis. A high sodium already proves an <b>AVP</b> (arginine vasopressin) disorder. A low sodium already means primary polydipsia. A normal sodium is the only value that calls for a water deprivation test.",
+   "note": ".rule: split, question framing replaced by the answers the brief already states",
+   "claims": [
+    {
+     "claim": "With dilute urine, the serum sodium tells whether the test is still needed, not the diagnosis.",
+     "to": "When the kidney is making dilute urine, the serum sodium shows whether a water deprivation test is still needed, not the diagnosis."
+    },
+    {
+     "claim": "A high sodium has already answered the question.",
+     "to": "A high sodium already proves an AVP (arginine vasopressin) disorder."
+    },
+    {
+     "claim": "A low sodium has answered it the other way.",
+     "to": "A low sodium already means primary polydipsia."
+    },
+    {
+     "claim": "A normal sodium is the only value that buys a water deprivation test.",
+     "to": "A normal sodium is the only value that calls for a water deprivation test."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "With dilute urine, the serum sodium shows whether a water deprivation test is still needed, not the diagnosis.",
+     "from": "With dilute urine, the serum sodium tells whether the test is still needed, not the diagnosis."
+    },
+    {
+     "claim": "A high sodium already proves an AVP disorder.",
+     "from": "A high sodium has already answered the question."
+    },
+    {
+     "claim": "AVP stands for arginine vasopressin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A low sodium already means primary polydipsia.",
+     "from": "A low sodium has answered it the other way."
+    },
+    {
+     "claim": "A normal sodium is the only value that calls for a water deprivation test.",
+     "from": "A normal sodium is the only value that buys a water deprivation test."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "MRI of the brain is the right study once a deficiency is proven, and this stem has proven nothing yet.",
+   "with": "<b>MRI</b> (magnetic resonance imaging) of the brain: the right study once a deficiency is proven, and nothing has been proven yet.",
+   "note": "trap line to Option: why",
+   "claims": [
+    {
+     "claim": "MRI of the brain is the right study once a deficiency is proven.",
+     "to": "MRI (magnetic resonance imaging) of the brain: the right study once a deficiency is proven, and nothing has been proven yet."
+    },
+    {
+     "claim": "Nothing has been proven yet.",
+     "to": "and nothing has been proven yet."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "MRI of the brain is the right study once a deficiency is proven.",
+     "from": "MRI of the brain is the right study once a deficiency is proven."
+    },
+    {
+     "claim": "MRI stands for magnetic resonance imaging.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Nothing has been proven yet.",
+     "from": "Nothing has been proven yet."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "Renal ultrasonography is the mirror error &mdash; it images the organ that is only implicated if desmopressin fails.",
+   "with": "Renal ultrasonography: it images the kidney, which is implicated only if desmopressin fails.",
+   "note": "trap line to Option: why, em dash removed",
+   "claims": [
+    {
+     "claim": "This option is the mirror error.",
+     "dropped": "rhetorical label; the reason follows"
+    },
+    {
+     "claim": "Renal ultrasonography images the organ that is only implicated if desmopressin fails.",
+     "to": "Renal ultrasonography: it images the kidney, which is implicated only if desmopressin fails."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Renal ultrasonography images the kidney, which is implicated only if desmopressin fails.",
+     "from": "Renal ultrasonography images the organ that is only implicated if desmopressin fails."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "Fractional excretion of sodium measures perfusion, and nothing in this stem asks about perfusion.",
+   "with": "Fractional excretion of sodium: it measures perfusion, and perfusion is not in question here.",
+   "note": "trap line to Option: why",
+   "claims": [
+    {
+     "claim": "Fractional excretion of sodium measures perfusion.",
+     "to": "Fractional excretion of sodium: it measures perfusion, and perfusion is not in question here."
+    },
+    {
+     "claim": "Perfusion is not at issue here.",
+     "to": "and perfusion is not in question here."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Fractional excretion of sodium measures perfusion.",
+     "from": "Fractional excretion of sodium measures perfusion."
+    },
+    {
+     "claim": "Perfusion is not in question here.",
+     "from": "Perfusion is not at issue here."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "Chest radiography chases SIADH, which produces concentrated urine and hyponatraemia &mdash; both opposite to what is here.",
+   "with": "Chest radiography: it looks for <b>SIADH</b> (syndrome of inappropriate antidiuretic hormone secretion), which produces concentrated urine and hyponatraemia, both opposite to the findings here.",
+   "note": "trap line to Option: why, em dash removed, acronym expanded",
+   "claims": [
+    {
+     "claim": "Chest radiography chases SIADH.",
+     "to": "Chest radiography: it looks for SIADH (syndrome of inappropriate antidiuretic hormone secretion)"
+    },
+    {
+     "claim": "SIADH produces concentrated urine and hyponatraemia.",
+     "to": "which produces concentrated urine and hyponatraemia, both opposite to the findings here."
+    },
+    {
+     "claim": "Both are opposite to what is here.",
+     "to": "both opposite to the findings here."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Chest radiography looks for SIADH.",
+     "from": "Chest radiography chases SIADH."
+    },
+    {
+     "claim": "SIADH stands for syndrome of inappropriate antidiuretic hormone secretion.",
+     "from": "expansion"
+    },
+    {
+     "claim": "SIADH produces concentrated urine and hyponatraemia.",
+     "from": "SIADH produces concentrated urine and hyponatraemia."
+    },
+    {
+     "claim": "Both are opposite to the findings here.",
+     "from": "Both are opposite to what is here."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "No additional management after a second febrile UTI with a normal ultrasound: right for a first febrile UTI; a second one needs a VCUG because ultrasound cannot show reflux",
+   "with": "No additional management after a second febrile <b>UTI</b> (urinary tract infection) with a normal ultrasound: right for a first febrile UTI. A second one needs a <b>VCUG</b> (voiding cystourethrogram) because ultrasound cannot show reflux",
+   "note": "trap line: acronyms expanded",
+   "claims": [
+    {
+     "claim": "No additional management is right for a first febrile UTI.",
+     "to": "right for a first febrile UTI"
+    },
+    {
+     "claim": "A second febrile UTI needs a VCUG even with a normal ultrasound.",
+     "to": "A second one needs a VCUG (voiding cystourethrogram) because ultrasound cannot show reflux"
+    },
+    {
+     "claim": "Ultrasound cannot show reflux.",
+     "to": "because ultrasound cannot show reflux"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "No additional management is right for a first febrile UTI.",
+     "from": "No additional management is right for a first febrile UTI."
+    },
+    {
+     "claim": "A second febrile UTI needs a VCUG even with a normal ultrasound.",
+     "from": "A second febrile UTI needs a VCUG even with a normal ultrasound."
+    },
+    {
+     "claim": "Ultrasound cannot show reflux.",
+     "from": "Ultrasound cannot show reflux."
+    },
+    {
+     "claim": "UTI stands for urinary tract infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "VCUG stands for voiding cystourethrogram.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "A BUN of 30 pulls toward renal disease",
+   "with": "A <b>BUN</b> (blood urea nitrogen) of 30 pulls toward renal disease",
+   "note": "trap line: acronym expanded",
+   "claims": [
+    {
+     "claim": "A BUN of 30 pulls toward renal disease.",
+     "to": "A BUN (blood urea nitrogen) of 30 pulls toward renal disease"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A BUN of 30 pulls toward renal disease.",
+     "from": "A BUN of 30 pulls toward renal disease."
+    },
+    {
+     "claim": "BUN stands for blood urea nitrogen.",
+     "from": "expansion"
+    }
+   ]
+  }
+ ]
+}

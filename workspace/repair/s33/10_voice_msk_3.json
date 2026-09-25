@@ -1,0 +1,972 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "oa-pharm",
+   "find": "<p>A keyed answer can look like it contradicts a guideline when the right <b>class</b> is represented by the wrong <b>member</b>. \"NSAIDs are first-line for knee OA\" is correct — but if the only NSAID offered is <b>ketorolac</b>, a drug with a hard <b>5-day maximum</b> because of GI, renal, and bleeding risk, then it is disqualified for a 6-month condition in a 72-year-old, and acetaminophen wins by default.</p>",
+   "with": "<p>A drug <b>class</b> can be correct while the offered <b>member</b> is wrong. An <b>NSAID</b> (nonsteroidal anti-inflammatory drug) is first-line for knee <b>OA</b> (osteoarthritis). The NSAID <b>ketorolac</b> has a hard <b>5-day maximum</b> because of <b>GI</b> (gastrointestinal), renal and bleeding risk. If it is the only NSAID offered, it is ruled out for a 6-month condition in a 72-year-old, and acetaminophen is the default choice.</p>",
+   "note": "voice: .dp; drop answer-key framing and em dash; expand acronyms",
+   "claims": [
+    {
+     "claim": "A keyed answer can look like it contradicts a guideline.",
+     "dropped": "framing about the answer key; the class-versus-member fact is kept"
+    },
+    {
+     "claim": "The right class can be represented by the wrong member.",
+     "to": "A drug class can be correct while the offered member is wrong."
+    },
+    {
+     "claim": "NSAIDs are first-line for knee OA.",
+     "to": "An NSAID (nonsteroidal anti-inflammatory drug) is first-line for knee OA (osteoarthritis)."
+    },
+    {
+     "claim": "Ketorolac has a hard 5-day maximum because of GI, renal and bleeding risk.",
+     "to": "The NSAID ketorolac has a hard 5-day maximum because of GI (gastrointestinal), renal and bleeding risk."
+    },
+    {
+     "claim": "If ketorolac is the only NSAID offered, it is disqualified for a 6-month condition in a 72-year-old.",
+     "to": "If it is the only NSAID offered, it is ruled out for a 6-month condition in a 72-year-old, and acetaminophen is the default choice."
+    },
+    {
+     "claim": "Acetaminophen is then chosen by default.",
+     "to": "If it is the only NSAID offered, it is ruled out for a 6-month condition in a 72-year-old, and acetaminophen is the default choice."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A drug class can be correct while the offered member is wrong.",
+     "from": "The right class can be represented by the wrong member."
+    },
+    {
+     "claim": "An NSAID is first-line for knee OA.",
+     "from": "NSAIDs are first-line for knee OA."
+    },
+    {
+     "claim": "NSAID stands for nonsteroidal anti-inflammatory drug.",
+     "from": "expansion"
+    },
+    {
+     "claim": "OA stands for osteoarthritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Ketorolac has a hard 5-day maximum because of GI, renal and bleeding risk.",
+     "from": "Ketorolac has a hard 5-day maximum because of GI, renal and bleeding risk."
+    },
+    {
+     "claim": "GI stands for gastrointestinal.",
+     "from": "expansion"
+    },
+    {
+     "claim": "If ketorolac is the only NSAID offered, it is ruled out for a 6-month condition in a 72-year-old.",
+     "from": "If ketorolac is the only NSAID offered, it is disqualified for a 6-month condition in a 72-year-old."
+    },
+    {
+     "claim": "Acetaminophen is the default choice.",
+     "from": "Acetaminophen is then chosen by default."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "oa-pharm",
+   "find": "<b>ACR/Arthritis Foundation 2019</b> <b>strongly recommends topical NSAIDs for knee OA</b> (upgraded from conditional in 2012) and strongly recommends oral NSAIDs, while <b>acetaminophen was downgraded to conditional</b> — framed for patients unable to take NSAIDs, with small effect sizes in trials. Older NBME items still key acetaminophen. Patient factors here also favor it: <b>age 72</b> (GI, renal, CV risk) and pain rated <b>3/10</b>.",
+   "with": "The <b>ACR/Arthritis Foundation 2019</b> guideline (ACR, American College of Rheumatology) <b>strongly recommends topical NSAIDs for knee OA</b> (upgraded from conditional in 2012). It also strongly recommends oral <b>NSAIDs</b> (nonsteroidal anti-inflammatory drugs). In the same guideline, <b>acetaminophen was downgraded to conditional</b>. It is framed for patients unable to take NSAIDs, and its effect sizes in trials are small. Older <b>NBME</b> (National Board of Medical Examiners) items still key acetaminophen. This patient's factors also favor it: <b>age 72</b>, with its <b>GI</b> (gastrointestinal), renal and <b>CV</b> (cardiovascular) risk, and pain rated <b>3/10</b>.",
+   "note": "voice: .danger; split long sentence, remove em dash, expand acronyms",
+   "claims": [
+    {
+     "claim": "ACR/Arthritis Foundation 2019 strongly recommends topical NSAIDs for knee OA.",
+     "to": "The ACR/Arthritis Foundation 2019 guideline (ACR, American College of Rheumatology) strongly recommends topical NSAIDs for knee OA (upgraded from conditional in 2012)."
+    },
+    {
+     "claim": "Topical NSAIDs were upgraded from conditional in 2012.",
+     "to": "The ACR/Arthritis Foundation 2019 guideline (ACR, American College of Rheumatology) strongly recommends topical NSAIDs for knee OA (upgraded from conditional in 2012)."
+    },
+    {
+     "claim": "ACR/Arthritis Foundation 2019 strongly recommends oral NSAIDs.",
+     "to": "It also strongly recommends oral NSAIDs (nonsteroidal anti-inflammatory drugs)."
+    },
+    {
+     "claim": "Acetaminophen was downgraded to conditional.",
+     "to": "In the same guideline, acetaminophen was downgraded to conditional."
+    },
+    {
+     "claim": "Acetaminophen is framed for patients unable to take NSAIDs.",
+     "to": "It is framed for patients unable to take NSAIDs, and its effect sizes in trials are small."
+    },
+    {
+     "claim": "Acetaminophen had small effect sizes in trials.",
+     "to": "It is framed for patients unable to take NSAIDs, and its effect sizes in trials are small."
+    },
+    {
+     "claim": "Older NBME items still key acetaminophen.",
+     "to": "Older NBME (National Board of Medical Examiners) items still key acetaminophen."
+    },
+    {
+     "claim": "Patient factors here also favor acetaminophen: age 72 (GI, renal, CV risk) and pain rated 3/10.",
+     "to": "This patient's factors also favor it: age 72, with its GI (gastrointestinal), renal and CV (cardiovascular) risk, and pain rated 3/10."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "ACR/Arthritis Foundation 2019 strongly recommends topical NSAIDs for knee OA.",
+     "from": "ACR/Arthritis Foundation 2019 strongly recommends topical NSAIDs for knee OA."
+    },
+    {
+     "claim": "ACR stands for American College of Rheumatology.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Topical NSAIDs were upgraded from conditional in 2012.",
+     "from": "Topical NSAIDs were upgraded from conditional in 2012."
+    },
+    {
+     "claim": "The guideline also strongly recommends oral NSAIDs.",
+     "from": "ACR/Arthritis Foundation 2019 strongly recommends oral NSAIDs."
+    },
+    {
+     "claim": "NSAIDs stands for nonsteroidal anti-inflammatory drugs.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Acetaminophen was downgraded to conditional.",
+     "from": "Acetaminophen was downgraded to conditional."
+    },
+    {
+     "claim": "Acetaminophen is framed for patients unable to take NSAIDs.",
+     "from": "Acetaminophen is framed for patients unable to take NSAIDs."
+    },
+    {
+     "claim": "Acetaminophen's effect sizes in trials are small.",
+     "from": "Acetaminophen had small effect sizes in trials."
+    },
+    {
+     "claim": "Older NBME items still key acetaminophen.",
+     "from": "Older NBME items still key acetaminophen."
+    },
+    {
+     "claim": "NBME stands for National Board of Medical Examiners.",
+     "from": "expansion"
+    },
+    {
+     "claim": "This patient's factors also favor acetaminophen: age 72 (GI, renal and CV risk) and pain rated 3/10.",
+     "from": "Patient factors here also favor acetaminophen: age 72 (GI, renal, CV risk) and pain rated 3/10."
+    },
+    {
+     "claim": "GI stands for gastrointestinal.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CV stands for cardiovascular.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "oa-pharm",
+   "find": "<span class=\"lbl\">How the stem pre-excludes inflammatory arthritis</span> <b>No fever, no morning stiffness, no synovitis, crepitus present</b> — that is mechanical, not inflammatory, which kills hydroxychloroquine and prednisone before you weigh them. Oral steroids are strongly recommended against in OA; the accepted steroid route is <b>intra-articular</b>.",
+   "with": "<span class=\"lbl\">Excluding inflammatory arthritis</span> <b>No fever, no morning stiffness, no synovitis, crepitus present</b>: this pattern is mechanical, not inflammatory. It excludes hydroxychloroquine and prednisone. Oral steroids are strongly recommended against in <b>OA</b> (osteoarthritis); the accepted steroid route is <b>intra-articular</b>.",
+   "note": "voice: .pearls; label talked about the stem; remove em dash and 'kills'",
+   "reworded_label": [
+    "How the stem pre-excludes inflammatory arthritis"
+   ],
+   "claims": [
+    {
+     "claim": "No fever, no morning stiffness, no synovitis and crepitus present is mechanical, not inflammatory.",
+     "to": "No fever, no morning stiffness, no synovitis, crepitus present: this pattern is mechanical, not inflammatory."
+    },
+    {
+     "claim": "A mechanical picture excludes hydroxychloroquine and prednisone.",
+     "to": "It excludes hydroxychloroquine and prednisone."
+    },
+    {
+     "claim": "You exclude them before you weigh them.",
+     "dropped": "framing about the reader's process"
+    },
+    {
+     "claim": "Oral steroids are strongly recommended against in OA.",
+     "to": "Oral steroids are strongly recommended against in OA (osteoarthritis); the accepted steroid route is intra-articular."
+    },
+    {
+     "claim": "The accepted steroid route in OA is intra-articular.",
+     "to": "Oral steroids are strongly recommended against in OA (osteoarthritis); the accepted steroid route is intra-articular."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "No fever, no morning stiffness, no synovitis and crepitus present is mechanical, not inflammatory.",
+     "from": "No fever, no morning stiffness, no synovitis and crepitus present is mechanical, not inflammatory."
+    },
+    {
+     "claim": "This pattern excludes hydroxychloroquine and prednisone.",
+     "from": "A mechanical picture excludes hydroxychloroquine and prednisone."
+    },
+    {
+     "claim": "Oral steroids are strongly recommended against in OA.",
+     "from": "Oral steroids are strongly recommended against in OA."
+    },
+    {
+     "claim": "OA stands for osteoarthritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The accepted steroid route is intra-articular.",
+     "from": "The accepted steroid route in OA is intra-articular."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "oa-pharm",
+   "find": "<span class=\"lbl\">Transferable rule</span> When a question asks for \"initial pharmacotherapy,\" <b>read which specific agent represents each class</b>. A class can be right while the offered member is wrong — ketorolac for chronic OA, gentamicin for simple cystitis, chloramphenicol for otitis. Don't reject a guideline; check the drug.",
+   "with": "<span class=\"lbl\">Transferable rule</span> When choosing initial pharmacotherapy, <b>read which specific agent represents each class</b>. A class can be right while the offered member is wrong: ketorolac for chronic <b>OA</b> (osteoarthritis), gentamicin for simple cystitis, chloramphenicol for otitis. Check the offered drug rather than rejecting the guideline.",
+   "note": "voice: .rule; remove question framing and em dash",
+   "claims": [
+    {
+     "claim": "For initial pharmacotherapy, read which specific agent represents each class.",
+     "to": "When choosing initial pharmacotherapy, read which specific agent represents each class."
+    },
+    {
+     "claim": "A class can be right while the offered member is wrong.",
+     "to": "A class can be right while the offered member is wrong: ketorolac for chronic OA (osteoarthritis), gentamicin for simple cystitis, chloramphenicol for otitis."
+    },
+    {
+     "claim": "Examples are ketorolac for chronic OA, gentamicin for simple cystitis and chloramphenicol for otitis.",
+     "to": "A class can be right while the offered member is wrong: ketorolac for chronic OA (osteoarthritis), gentamicin for simple cystitis, chloramphenicol for otitis."
+    },
+    {
+     "claim": "Do not reject a guideline; check the drug.",
+     "to": "Check the offered drug rather than rejecting the guideline."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When choosing initial pharmacotherapy, read which specific agent represents each class.",
+     "from": "For initial pharmacotherapy, read which specific agent represents each class."
+    },
+    {
+     "claim": "A class can be right while the offered member is wrong.",
+     "from": "A class can be right while the offered member is wrong."
+    },
+    {
+     "claim": "Examples: ketorolac for chronic OA, gentamicin for simple cystitis, chloramphenicol for otitis.",
+     "from": "Examples are ketorolac for chronic OA, gentamicin for simple cystitis and chloramphenicol for otitis."
+    },
+    {
+     "claim": "OA stands for osteoarthritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Check the offered drug rather than rejecting the guideline.",
+     "from": "Do not reject a guideline; check the drug."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "septic-bursitis",
+   "find": "<p><b>Localized bursal swelling with erythema and warmth, but preserved joint range of motion</b> = the pathology is extraarticular. That single exam finding separates septic bursitis from septic arthritis and decides which space gets the needle. When infection is plausible — erythema, warmth, fever (~40%), or worsening pain days after an injection — <b>aspirate the bursal fluid</b> (cell count, Gram stain, culture, crystals) before any empiric therapy.</p>",
+   "with": "<p><b>Localized bursal swelling with erythema and warmth, but preserved joint range of motion</b>, means the process is extraarticular. This one exam finding separates septic bursitis from septic arthritis and determines whether the bursa or the joint is aspirated. When infection is plausible, <b>aspirate the bursal fluid</b> before any empiric therapy. Infection is plausible with erythema, warmth, fever (~40%), or worsening pain days after an injection. Send the fluid for cell count, Gram stain, culture and crystals.</p>",
+   "note": "voice: .dp; remove em dashes and '=' shorthand",
+   "claims": [
+    {
+     "claim": "Localized bursal swelling with erythema and warmth but preserved joint range of motion means the pathology is extraarticular.",
+     "to": "Localized bursal swelling with erythema and warmth, but preserved joint range of motion, means the process is extraarticular."
+    },
+    {
+     "claim": "That single exam finding separates septic bursitis from septic arthritis.",
+     "to": "This one exam finding separates septic bursitis from septic arthritis and determines whether the bursa or the joint is aspirated."
+    },
+    {
+     "claim": "That finding decides which space gets the needle.",
+     "to": "This one exam finding separates septic bursitis from septic arthritis and determines whether the bursa or the joint is aspirated."
+    },
+    {
+     "claim": "Infection is plausible with erythema, warmth, fever (~40%), or worsening pain days after an injection.",
+     "to": "Infection is plausible with erythema, warmth, fever (~40%), or worsening pain days after an injection."
+    },
+    {
+     "claim": "When infection is plausible, aspirate the bursal fluid before any empiric therapy.",
+     "to": "When infection is plausible, aspirate the bursal fluid before any empiric therapy."
+    },
+    {
+     "claim": "The bursal fluid is sent for cell count, Gram stain, culture and crystals.",
+     "to": "Send the fluid for cell count, Gram stain, culture and crystals."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Localized bursal swelling with erythema and warmth but preserved joint range of motion means the process is extraarticular.",
+     "from": "Localized bursal swelling with erythema and warmth but preserved joint range of motion means the pathology is extraarticular."
+    },
+    {
+     "claim": "This one exam finding separates septic bursitis from septic arthritis.",
+     "from": "That single exam finding separates septic bursitis from septic arthritis."
+    },
+    {
+     "claim": "It determines whether the bursa or the joint is aspirated.",
+     "from": "That finding decides which space gets the needle."
+    },
+    {
+     "claim": "Infection is plausible with erythema, warmth, fever (~40%), or worsening pain days after an injection.",
+     "from": "Infection is plausible with erythema, warmth, fever (~40%), or worsening pain days after an injection."
+    },
+    {
+     "claim": "When infection is plausible, aspirate the bursal fluid before any empiric therapy.",
+     "from": "When infection is plausible, aspirate the bursal fluid before any empiric therapy."
+    },
+    {
+     "claim": "Send the fluid for cell count, Gram stain, culture and crystals.",
+     "from": "The bursal fluid is sent for cell count, Gram stain, culture and crystals."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "septic-bursitis",
+   "find": "Serum uric acid never rules infection in or out — even a high level cannot replace aspiration ·",
+   "with": "Serum uric acid never rules infection in or out; even a high level cannot replace aspiration ·",
+   "note": "voice: .pearls; em dash to semicolon",
+   "claims": [
+    {
+     "claim": "Serum uric acid never rules infection in or out.",
+     "to": "Serum uric acid never rules infection in or out; even a high level cannot replace aspiration"
+    },
+    {
+     "claim": "Even a high uric acid level cannot replace aspiration.",
+     "to": "Serum uric acid never rules infection in or out; even a high level cannot replace aspiration"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Serum uric acid never rules infection in or out.",
+     "from": "Serum uric acid never rules infection in or out."
+    },
+    {
+     "claim": "Even a high uric acid level cannot replace aspiration.",
+     "from": "Even a high uric acid level cannot replace aspiration."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "septic-bursitis",
+   "find": "Part II <b>The Acute Hot Joint (adult)</b> — same rule, different space: any hot fluid collection is aspirated before treatment. Store the discriminator: <b>\"is joint motion preserved?\"</b>",
+   "with": "Part II <b>The Acute Hot Joint (adult)</b> applies the same rule in a different space: any hot fluid collection is aspirated before treatment. Ask: <b>\"is joint motion preserved?\"</b>",
+   "note": "voice: Pairs with; em dash removed; 'Store the discriminator' becomes 'Ask:'",
+   "claims": [
+    {
+     "claim": "The Acute Hot Joint (adult) applies the same rule in a different space.",
+     "to": "Part II The Acute Hot Joint (adult) applies the same rule in a different space: any hot fluid collection is aspirated before treatment."
+    },
+    {
+     "claim": "Any hot fluid collection is aspirated before treatment.",
+     "to": "Part II The Acute Hot Joint (adult) applies the same rule in a different space: any hot fluid collection is aspirated before treatment."
+    },
+    {
+     "claim": "The discriminator is whether joint motion is preserved.",
+     "to": "Ask: \"is joint motion preserved?\""
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The Acute Hot Joint (adult) applies the same rule in a different space.",
+     "from": "The Acute Hot Joint (adult) applies the same rule in a different space."
+    },
+    {
+     "claim": "Any hot fluid collection is aspirated before treatment.",
+     "from": "Any hot fluid collection is aspirated before treatment."
+    },
+    {
+     "claim": "Ask whether joint motion is preserved.",
+     "from": "The discriminator is whether joint motion is preserved."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "septic-bursitis",
+   "find": "<span class=\"lbl\">Transferable rule</span> The needle goes where the infection is: preserved joint motion moves the aspiration from the joint to the bursa — and no empiric therapy (antibiotics, colchicine, steroids) precedes the fluid.",
+   "with": "<span class=\"lbl\">Transferable rule</span> Aspirate the space that is infected. Preserved joint motion moves the aspiration from the joint to the bursa. No empiric therapy (antibiotics, colchicine, steroids) comes before the fluid is sampled.",
+   "note": "voice: .rule; slogan and em dash removed",
+   "claims": [
+    {
+     "claim": "The needle goes where the infection is.",
+     "to": "Aspirate the space that is infected."
+    },
+    {
+     "claim": "Preserved joint motion moves the aspiration from the joint to the bursa.",
+     "to": "Preserved joint motion moves the aspiration from the joint to the bursa."
+    },
+    {
+     "claim": "No empiric therapy (antibiotics, colchicine, steroids) precedes the fluid.",
+     "to": "No empiric therapy (antibiotics, colchicine, steroids) comes before the fluid is sampled."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Aspirate the space that is infected.",
+     "from": "The needle goes where the infection is."
+    },
+    {
+     "claim": "Preserved joint motion moves the aspiration from the joint to the bursa.",
+     "from": "Preserved joint motion moves the aspiration from the joint to the bursa."
+    },
+    {
+     "claim": "No empiric therapy (antibiotics, colchicine, steroids) comes before the fluid is sampled.",
+     "from": "No empiric therapy (antibiotics, colchicine, steroids) precedes the fluid."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "septic-bursitis",
+   "find": "<span class=\"trapwhy\">Steroid flare is the benign twin of iatrogenic infection — the discriminator is the clock, not the severity.</span>",
+   "with": "<span class=\"trapwhy\">Post-injection steroid flare: the benign twin of iatrogenic infection. Timing separates them, not severity.</span>",
+   "note": "voice: trap line as Option: why; em dash and personification removed",
+   "claims": [
+    {
+     "claim": "Steroid flare is the benign twin of iatrogenic infection.",
+     "to": "Post-injection steroid flare: the benign twin of iatrogenic infection."
+    },
+    {
+     "claim": "The discriminator is the clock, not the severity.",
+     "to": "Timing separates them, not severity."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Post-injection steroid flare is the benign twin of iatrogenic infection.",
+     "from": "Steroid flare is the benign twin of iatrogenic infection."
+    },
+    {
+     "claim": "Timing separates them, not severity.",
+     "from": "The discriminator is the clock, not the severity."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "septic-hip",
+   "find": "<p>Score the <b>Kocher criteria</b>: fever &gt;38.5 °C, <b>non-weight-bearing</b>, ESR &gt;40, WBC &gt;12,000 (CRP &gt;2.0 often added as a fifth). Three criteria ≈ 93% probability, four ≈ 99% → <b>arthrocentesis</b>. Hip held <b>flexed, abducted, externally rotated</b> maximizes capsular volume — but that position occurs in transient synovitis too and discriminates nothing.</p>",
+   "with": "<p>Score the <b>Kocher criteria</b>: fever &gt;38.5 °C, <b>non-weight-bearing</b>, <b>ESR</b> (erythrocyte sedimentation rate) &gt;40, <b>WBC</b> (white blood cell count) &gt;12,000. <b>CRP</b> (C-reactive protein) &gt;2.0 is often added as a fifth. Three criteria give ≈ 93% probability and four give ≈ 99%; either → <b>arthrocentesis</b>. Holding the hip <b>flexed, abducted, externally rotated</b> maximizes capsular volume. That position occurs in transient synovitis too, so it does not discriminate.</p>",
+   "note": "voice: .dp; split sentences, remove em dash, expand acronyms",
+   "claims": [
+    {
+     "claim": "Score the Kocher criteria: fever >38.5 °C, non-weight-bearing, ESR >40, WBC >12,000.",
+     "to": "Score the Kocher criteria: fever >38.5 °C, non-weight-bearing, ESR (erythrocyte sedimentation rate) >40, WBC (white blood cell count) >12,000."
+    },
+    {
+     "claim": "CRP >2.0 is often added as a fifth criterion.",
+     "to": "CRP (C-reactive protein) >2.0 is often added as a fifth."
+    },
+    {
+     "claim": "Three criteria give ≈ 93% probability.",
+     "to": "Three criteria give ≈ 93% probability and four give ≈ 99%; either → arthrocentesis."
+    },
+    {
+     "claim": "Four criteria give ≈ 99% probability.",
+     "to": "Three criteria give ≈ 93% probability and four give ≈ 99%; either → arthrocentesis."
+    },
+    {
+     "claim": "Three or four criteria lead to arthrocentesis.",
+     "to": "Three criteria give ≈ 93% probability and four give ≈ 99%; either → arthrocentesis."
+    },
+    {
+     "claim": "A hip held flexed, abducted, externally rotated maximizes capsular volume.",
+     "to": "Holding the hip flexed, abducted, externally rotated maximizes capsular volume."
+    },
+    {
+     "claim": "That position occurs in transient synovitis too and discriminates nothing.",
+     "to": "That position occurs in transient synovitis too, so it does not discriminate."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Score the Kocher criteria: fever >38.5 °C, non-weight-bearing, ESR >40, WBC >12,000.",
+     "from": "Score the Kocher criteria: fever >38.5 °C, non-weight-bearing, ESR >40, WBC >12,000."
+    },
+    {
+     "claim": "ESR stands for erythrocyte sedimentation rate.",
+     "from": "expansion"
+    },
+    {
+     "claim": "WBC stands for white blood cell count.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CRP >2.0 is often added as a fifth.",
+     "from": "CRP >2.0 is often added as a fifth criterion."
+    },
+    {
+     "claim": "CRP stands for C-reactive protein.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Three criteria give ≈ 93% probability.",
+     "from": "Three criteria give ≈ 93% probability."
+    },
+    {
+     "claim": "Four criteria give ≈ 99% probability.",
+     "from": "Four criteria give ≈ 99% probability."
+    },
+    {
+     "claim": "Either count leads to arthrocentesis.",
+     "from": "Three or four criteria lead to arthrocentesis."
+    },
+    {
+     "claim": "Holding the hip flexed, abducted, externally rotated maximizes capsular volume.",
+     "from": "A hip held flexed, abducted, externally rotated maximizes capsular volume."
+    },
+    {
+     "claim": "That position occurs in transient synovitis too, so it does not discriminate.",
+     "from": "That position occurs in transient synovitis too and discriminates nothing."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "septic-hip",
+   "find": "Synovial fluid &gt;50,000 WBC (PMN-predominant) confirms it. Septic hip is a surgical emergency — delayed drainage causes femoral head AVN and growth arrest.",
+   "with": "Synovial fluid &gt;50,000 <b>WBC</b> (white blood cells) with <b>PMN</b> (polymorphonuclear neutrophil) predominance confirms it. Septic hip is a surgical emergency. Delayed drainage causes femoral head <b>AVN</b> (avascular necrosis) and growth arrest.",
+   "note": "voice: .danger; em dash removed, acronyms expanded",
+   "claims": [
+    {
+     "claim": "Synovial fluid >50,000 WBC, PMN-predominant, confirms septic arthritis.",
+     "to": "Synovial fluid >50,000 WBC (white blood cells) with PMN (polymorphonuclear neutrophil) predominance confirms it."
+    },
+    {
+     "claim": "Septic hip is a surgical emergency.",
+     "to": "Septic hip is a surgical emergency."
+    },
+    {
+     "claim": "Delayed drainage causes femoral head AVN and growth arrest.",
+     "to": "Delayed drainage causes femoral head AVN (avascular necrosis) and growth arrest."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Synovial fluid >50,000 WBC with PMN predominance confirms it.",
+     "from": "Synovial fluid >50,000 WBC, PMN-predominant, confirms septic arthritis."
+    },
+    {
+     "claim": "WBC stands for white blood cells.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PMN stands for polymorphonuclear neutrophil.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Septic hip is a surgical emergency.",
+     "from": "Septic hip is a surgical emergency."
+    },
+    {
+     "claim": "Delayed drainage causes femoral head AVN and growth arrest.",
+     "from": "Delayed drainage causes femoral head AVN and growth arrest."
+    },
+    {
+     "claim": "AVN stands for avascular necrosis.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "synovitis",
+   "find": "The benign version of the same stem",
+   "with": "Benign mimic of septic arthritis of the hip",
+   "note": "voice: subtitle talked about the stem",
+   "claims": [
+    {
+     "claim": "Transient synovitis is the benign version of the septic hip presentation.",
+     "to": "Benign mimic of septic arthritis of the hip"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Transient synovitis is a benign mimic of septic arthritis of the hip.",
+     "from": "Transient synovitis is the benign version of the septic hip presentation."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "synovitis",
+   "find": "Well-appearing, afebrile, <b>limps but walks</b>, post-viral URI 1–2 weeks prior. A small effusion on ultrasound is a <b>decoy</b> — it is present in both twins. Its <b>laterality</b> is not: septic arthritis produces a <b>unilateral</b> effusion, while transient synovitis may be <b>unilateral or bilateral</b>, even when the symptoms are one-sided. Management is NSAIDs and follow-up.</p>",
+   "with": "The child is well-appearing and afebrile, <b>limps but walks</b>, and had a viral <b>URI</b> (upper respiratory infection) 1–2 weeks prior. A small effusion on ultrasound is present in both transient synovitis and septic arthritis, so its presence does not discriminate. Its <b>laterality</b> does: septic arthritis produces a <b>unilateral</b> effusion. Transient synovitis may be <b>unilateral or bilateral</b>, even when the symptoms are one-sided. Management is <b>NSAIDs</b> (nonsteroidal anti-inflammatory drugs) and follow-up.</p>",
+   "note": "voice: .dp; 'decoy' personification and em dash removed, acronyms expanded",
+   "reworded_bold": [
+    "decoy"
+   ],
+   "claims": [
+    {
+     "claim": "Transient synovitis scores Kocher 0–1 of 4.",
+     "carried_by": "Kocher 0–1 of 4."
+    },
+    {
+     "claim": "The child is well-appearing and afebrile.",
+     "to": "The child is well-appearing and afebrile, limps but walks, and had a viral URI (upper respiratory infection) 1–2 weeks prior."
+    },
+    {
+     "claim": "The child limps but walks.",
+     "to": "The child is well-appearing and afebrile, limps but walks, and had a viral URI (upper respiratory infection) 1–2 weeks prior."
+    },
+    {
+     "claim": "There was a post-viral URI 1–2 weeks prior.",
+     "to": "The child is well-appearing and afebrile, limps but walks, and had a viral URI (upper respiratory infection) 1–2 weeks prior."
+    },
+    {
+     "claim": "A small effusion on ultrasound is a decoy because it is present in both twins.",
+     "to": "A small effusion on ultrasound is present in both transient synovitis and septic arthritis, so its presence does not discriminate."
+    },
+    {
+     "claim": "Laterality of the effusion is not a decoy.",
+     "to": "Its laterality does: septic arthritis produces a unilateral effusion."
+    },
+    {
+     "claim": "Septic arthritis produces a unilateral effusion.",
+     "to": "Its laterality does: septic arthritis produces a unilateral effusion."
+    },
+    {
+     "claim": "Transient synovitis may be unilateral or bilateral, even when the symptoms are one-sided.",
+     "to": "Transient synovitis may be unilateral or bilateral, even when the symptoms are one-sided."
+    },
+    {
+     "claim": "Management is NSAIDs and follow-up.",
+     "to": "Management is NSAIDs (nonsteroidal anti-inflammatory drugs) and follow-up."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The child is well-appearing and afebrile.",
+     "from": "The child is well-appearing and afebrile."
+    },
+    {
+     "claim": "The child limps but walks.",
+     "from": "The child limps but walks."
+    },
+    {
+     "claim": "The child had a viral URI 1–2 weeks prior.",
+     "from": "There was a post-viral URI 1–2 weeks prior."
+    },
+    {
+     "claim": "URI stands for upper respiratory infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A small effusion on ultrasound is present in both transient synovitis and septic arthritis, so its presence does not discriminate.",
+     "from": "A small effusion on ultrasound is a decoy because it is present in both twins."
+    },
+    {
+     "claim": "Its laterality does discriminate.",
+     "from": "Laterality of the effusion is not a decoy."
+    },
+    {
+     "claim": "Septic arthritis produces a unilateral effusion.",
+     "from": "Septic arthritis produces a unilateral effusion."
+    },
+    {
+     "claim": "Transient synovitis may be unilateral or bilateral, even when the symptoms are one-sided.",
+     "from": "Transient synovitis may be unilateral or bilateral, even when the symptoms are one-sided."
+    },
+    {
+     "claim": "Management is NSAIDs and follow-up.",
+     "from": "Management is NSAIDs and follow-up."
+    },
+    {
+     "claim": "NSAIDs stands for nonsteroidal anti-inflammatory drugs.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "synovitis",
+   "find": "<span class=\"lbl\">Why this one gets people</span> It arrives right after you learn septic arthritis. The lesson you should store from a septic-hip miss is never \"limping child → aspirate\"; it is <b>\"limping child → score Kocher.\"</b> A rule stored as an <i>outcome</i> fires indiscriminately; stored as a <i>test</i>, it self-corrects.",
+   "with": "<span class=\"lbl\">Transferable rule</span> A limp alone is not an indication to aspirate. In a limping child, <b>score Kocher</b> first.",
+   "note": "voice: .rule; rhetorical label, study-meta and aphorism removed",
+   "reworded_bold": [
+    "\"limping child → score Kocher.\""
+   ],
+   "reworded_label": [
+    "Why this one gets people"
+   ],
+   "claims": [
+    {
+     "claim": "This brief arrives right after learning septic arthritis.",
+     "dropped": "study-sequence framing, not clinical"
+    },
+    {
+     "claim": "The rule is never limping child → aspirate.",
+     "to": "A limp alone is not an indication to aspirate."
+    },
+    {
+     "claim": "The rule is limping child → score Kocher.",
+     "to": "In a limping child, score Kocher first."
+    },
+    {
+     "claim": "Storing the rule as a step rather than an outcome makes it self-correct.",
+     "dropped": "aphorism about how to store rules"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A limp alone is not an indication to aspirate.",
+     "from": "The rule is never limping child → aspirate."
+    },
+    {
+     "claim": "In a limping child, score Kocher first.",
+     "from": "The rule is limping child → score Kocher."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "Sick or well → acute or chronic → age",
+   "with": "Sick or well, then acute or chronic, then age",
+   "note": "voice: subtitle arrow chain split",
+   "claims": [
+    {
+     "claim": "The limping child is sorted by sick or well, then acute or chronic, then age.",
+     "to": "Sick or well, then acute or chronic, then age"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Sort by sick or well, then acute or chronic, then age.",
+     "from": "The limping child is sorted by sick or well, then acute or chronic, then age."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "<b>1.</b> Sick or well? <b>2.</b> Acute (days = infection/synovitis/fracture) or chronic (weeks–months = LCP, SCFE, JIA, tumor)? <b>3.</b> Age picks the disease: infant DDH or a walker with missed DDH; 1–3 toddler's fracture; 3–8 synovitis/LCP; <b>10–16 SCFE (any body habitus — obesity raises risk but is not required)</b>. <b>4.</b> Night pain, weight loss, or bruising overrides everything → CBC. <b>5. Knee pain in a child = examine the hip.</b>",
+   "with": "<b>1.</b> Sick or well? <b>2.</b> Acute or chronic? Acute (days) points to infection, synovitis or fracture. Chronic (weeks–months) points to <b>LCP</b> (Legg-Calvé-Perthes disease), <b>SCFE</b> (slipped capital femoral epiphysis), <b>JIA</b> (juvenile idiopathic arthritis) or tumor. <b>3.</b> Age: infant <b>DDH</b> (developmental dysplasia of the hip) or a walker with missed DDH; 1–3 toddler's fracture; 3–8 synovitis/LCP; <b>10–16 SCFE (any body habitus; obesity raises risk but is not required)</b>. <b>4.</b> Night pain, weight loss, or bruising → <b>CBC</b> (complete blood count), whatever the other findings. <b>5. Knee pain in a child = examine the hip.</b>",
+   "note": "voice: Decision spine; split step 2, remove em dash in bold, 'overrides everything', expand acronyms",
+   "reworded_bold": [
+    "10–16 SCFE (any body habitus — obesity raises risk but is not required)"
+   ],
+   "claims": [
+    {
+     "claim": "Step 1: sick or well?",
+     "to": "1. Sick or well?"
+    },
+    {
+     "claim": "Step 2: acute or chronic?",
+     "to": "2. Acute or chronic?"
+    },
+    {
+     "claim": "Acute (days) = infection/synovitis/fracture.",
+     "to": "Acute (days) points to infection, synovitis or fracture."
+    },
+    {
+     "claim": "Chronic (weeks–months) = LCP, SCFE, JIA, tumor.",
+     "to": "Chronic (weeks–months) points to LCP (Legg-Calvé-Perthes disease), SCFE (slipped capital femoral epiphysis), JIA (juvenile idiopathic arthritis) or tumor."
+    },
+    {
+     "claim": "Age picks the disease: infant DDH or a walker with missed DDH; 1–3 toddler's fracture; 3–8 synovitis/LCP; 10–16 SCFE.",
+     "to": "3. Age: infant DDH (developmental dysplasia of the hip) or a walker with missed DDH; 1–3 toddler's fracture; 3–8 synovitis/LCP; 10–16 SCFE (any body habitus; obesity raises risk but is not required)."
+    },
+    {
+     "claim": "SCFE occurs with any body habitus; obesity raises risk but is not required.",
+     "to": "3. Age: infant DDH (developmental dysplasia of the hip) or a walker with missed DDH; 1–3 toddler's fracture; 3–8 synovitis/LCP; 10–16 SCFE (any body habitus; obesity raises risk but is not required)."
+    },
+    {
+     "claim": "Night pain, weight loss, or bruising overrides everything → CBC.",
+     "to": "4. Night pain, weight loss, or bruising → CBC (complete blood count), whatever the other findings."
+    },
+    {
+     "claim": "Knee pain in a child = examine the hip.",
+     "to": "5. Knee pain in a child = examine the hip."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Sick or well?",
+     "from": "Step 1: sick or well?"
+    },
+    {
+     "claim": "Acute or chronic?",
+     "from": "Step 2: acute or chronic?"
+    },
+    {
+     "claim": "Acute (days) points to infection, synovitis or fracture.",
+     "from": "Acute (days) = infection/synovitis/fracture."
+    },
+    {
+     "claim": "Chronic (weeks–months) points to LCP, SCFE, JIA or tumor.",
+     "from": "Chronic (weeks–months) = LCP, SCFE, JIA, tumor."
+    },
+    {
+     "claim": "LCP stands for Legg-Calvé-Perthes disease.",
+     "from": "expansion"
+    },
+    {
+     "claim": "SCFE stands for slipped capital femoral epiphysis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "JIA stands for juvenile idiopathic arthritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "By age: infant DDH or a walker with missed DDH; 1–3 toddler's fracture; 3–8 synovitis/LCP; 10–16 SCFE.",
+     "from": "Age picks the disease: infant DDH or a walker with missed DDH; 1–3 toddler's fracture; 3–8 synovitis/LCP; 10–16 SCFE."
+    },
+    {
+     "claim": "DDH stands for developmental dysplasia of the hip.",
+     "from": "expansion"
+    },
+    {
+     "claim": "SCFE occurs with any body habitus; obesity raises risk but is not required.",
+     "from": "SCFE occurs with any body habitus; obesity raises risk but is not required."
+    },
+    {
+     "claim": "Night pain, weight loss, or bruising → CBC, whatever the other findings.",
+     "from": "Night pain, weight loss, or bruising overrides everything → CBC."
+    },
+    {
+     "claim": "CBC stands for complete blood count.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Knee pain in a child = examine the hip.",
+     "from": "Knee pain in a child = examine the hip."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "\"SCFE = obese teenager\" is a <b>stereotype stored as a rule</b>, and stems defeat it deliberately. The physis is weak during any rapid growth spurt, so <b>tall, thin adolescents get SCFE too</b>. The real discriminators are <b>age at the growth spurt</b>, <b>loss of internal rotation</b>, and <b>obligate external rotation on passive flexion</b> — not body habitus. And when SCFE appears in an <b>atypical</b> patient (age &lt;10 or &gt;16, short stature, very thin), screen for <b>hypothyroidism, growth hormone deficiency, panhypopituitarism, hypogonadism, or renal osteodystrophy</b>.",
+   "with": "Obesity is not required for <b>SCFE</b> (slipped capital femoral epiphysis). The physis is weak during any rapid growth spurt, so <b>tall, thin adolescents get SCFE too</b>. The findings that distinguish SCFE are <b>age at the growth spurt</b>, <b>loss of internal rotation</b>, and <b>obligate external rotation on passive flexion</b>, not body habitus. An <b>atypical</b> SCFE patient is younger than 10 or older than 16, has short stature or is very thin. In such a patient, screen for <b>hypothyroidism, growth hormone deficiency, panhypopituitarism, hypogonadism, or renal osteodystrophy</b>.",
+   "note": "voice: .danger; slogan bold and stem framing removed, em dash removed, SCFE expanded",
+   "reworded_bold": [
+    "stereotype stored as a rule"
+   ],
+   "claims": [
+    {
+     "claim": "\"SCFE = obese teenager\" is a stereotype stored as a rule.",
+     "to": "Obesity is not required for SCFE (slipped capital femoral epiphysis)."
+    },
+    {
+     "claim": "Stems defeat the stereotype deliberately.",
+     "dropped": "framing about exam stems"
+    },
+    {
+     "claim": "The physis is weak during any rapid growth spurt.",
+     "to": "The physis is weak during any rapid growth spurt, so tall, thin adolescents get SCFE too."
+    },
+    {
+     "claim": "Tall, thin adolescents get SCFE too.",
+     "to": "The physis is weak during any rapid growth spurt, so tall, thin adolescents get SCFE too."
+    },
+    {
+     "claim": "The real discriminators are age at the growth spurt, loss of internal rotation, and obligate external rotation on passive flexion, not body habitus.",
+     "to": "The findings that distinguish SCFE are age at the growth spurt, loss of internal rotation, and obligate external rotation on passive flexion, not body habitus."
+    },
+    {
+     "claim": "An atypical SCFE patient is age <10 or >16, short stature, or very thin.",
+     "to": "An atypical SCFE patient is younger than 10 or older than 16, has short stature or is very thin."
+    },
+    {
+     "claim": "In an atypical SCFE patient, screen for hypothyroidism, growth hormone deficiency, panhypopituitarism, hypogonadism, or renal osteodystrophy.",
+     "to": "In such a patient, screen for hypothyroidism, growth hormone deficiency, panhypopituitarism, hypogonadism, or renal osteodystrophy."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Obesity is not required for SCFE.",
+     "from": "\"SCFE = obese teenager\" is a stereotype stored as a rule."
+    },
+    {
+     "claim": "SCFE stands for slipped capital femoral epiphysis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The physis is weak during any rapid growth spurt.",
+     "from": "The physis is weak during any rapid growth spurt."
+    },
+    {
+     "claim": "Tall, thin adolescents get SCFE too.",
+     "from": "Tall, thin adolescents get SCFE too."
+    },
+    {
+     "claim": "The findings that distinguish SCFE are age at the growth spurt, loss of internal rotation, and obligate external rotation on passive flexion, not body habitus.",
+     "from": "The real discriminators are age at the growth spurt, loss of internal rotation, and obligate external rotation on passive flexion, not body habitus."
+    },
+    {
+     "claim": "An atypical SCFE patient is age <10 or >16, short stature, or very thin.",
+     "from": "An atypical SCFE patient is age <10 or >16, short stature, or very thin."
+    },
+    {
+     "claim": "In an atypical SCFE patient, screen for hypothyroidism, growth hormone deficiency, panhypopituitarism, hypogonadism, or renal osteodystrophy.",
+     "from": "In an atypical SCFE patient, screen for hypothyroidism, growth hormone deficiency, panhypopituitarism, hypogonadism, or renal osteodystrophy."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "Part I <b>Benign Limb Pain in a Child</b> owns the child whose gait is normal, which is the fork between the two briefs. Part II <b>Suspected Child Abuse: Fractures and the Next Step</b> owns the corner fracture and the femur fracture in a child who does not yet walk: could the child have generated this force himself? Part II <b>Congenital Muscular Torticollis and Plagiocephaly</b> owns breech crowding in the newborn: does a baby with torticollis also need a hip exam?",
+   "with": "Part I <b>Benign Limb Pain in a Child</b> covers the child whose gait is normal; gait separates the two briefs. Part II <b>Suspected Child Abuse: Fractures and the Next Step</b> covers corner and femur fractures in a child who does not yet walk. Ask: could the child have generated this force himself? Part II <b>Congenital Muscular Torticollis and Plagiocephaly</b> covers breech crowding in the newborn. Ask: does a baby with torticollis also need a hip exam?",
+   "note": "voice: Pairs with; 'owns' becomes 'covers'",
+   "claims": [
+    {
+     "claim": "Benign Limb Pain in a Child covers the child whose gait is normal.",
+     "to": "Part I Benign Limb Pain in a Child covers the child whose gait is normal; gait separates the two briefs."
+    },
+    {
+     "claim": "Normal gait is the fork between the two briefs.",
+     "to": "Part I Benign Limb Pain in a Child covers the child whose gait is normal; gait separates the two briefs."
+    },
+    {
+     "claim": "Suspected Child Abuse: Fractures and the Next Step covers the corner fracture and the femur fracture in a child who does not yet walk.",
+     "to": "Part II Suspected Child Abuse: Fractures and the Next Step covers corner and femur fractures in a child who does not yet walk."
+    },
+    {
+     "claim": "Its question: could the child have generated this force himself?",
+     "to": "Ask: could the child have generated this force himself?"
+    },
+    {
+     "claim": "Congenital Muscular Torticollis and Plagiocephaly covers breech crowding in the newborn.",
+     "to": "Part II Congenital Muscular Torticollis and Plagiocephaly covers breech crowding in the newborn."
+    },
+    {
+     "claim": "Its question: does a baby with torticollis also need a hip exam?",
+     "to": "Ask: does a baby with torticollis also need a hip exam?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Benign Limb Pain in a Child covers the child whose gait is normal.",
+     "from": "Benign Limb Pain in a Child covers the child whose gait is normal."
+    },
+    {
+     "claim": "Gait separates the two briefs.",
+     "from": "Normal gait is the fork between the two briefs."
+    },
+    {
+     "claim": "Suspected Child Abuse: Fractures and the Next Step covers the corner fracture and the femur fracture in a child who does not yet walk.",
+     "from": "Suspected Child Abuse: Fractures and the Next Step covers the corner fracture and the femur fracture in a child who does not yet walk."
+    },
+    {
+     "claim": "Ask: could the child have generated this force himself?",
+     "from": "Its question: could the child have generated this force himself?"
+    },
+    {
+     "claim": "Congenital Muscular Torticollis and Plagiocephaly covers breech crowding in the newborn.",
+     "from": "Congenital Muscular Torticollis and Plagiocephaly covers breech crowding in the newborn."
+    },
+    {
+     "claim": "Ask: does a baby with torticollis also need a hip exam?",
+     "from": "Its question: does a baby with torticollis also need a hip exam?"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1589 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bone-tumors",
+   "find": "<p>A hard painless mass near a joint with a <b>bony spur whose cortex and medulla run continuously into the parent bone</b> is an osteochondroma, the most common benign bone tumor. Its natural course is to <b>grow with the skeleton until the physis closes</b>, then stay put. Management is observation.</p>\n<p>Every wrong option is another tumor&#39;s natural course. <b>Spontaneous involution</b> belongs to osteoid osteoma. <b>Pathological fracture from medullary expansion</b> belongs to the unicameral bone cyst, which hollows the shaft from within. <b>Aggressive cortical destruction</b> belongs to the epiphyseal pair, chondroblastoma and giant cell tumor. <b>Malignant transformation</b> to chondrosarcoma is real but around 1% for a solitary lesion, so it is the thing to counsel about rather than the expected course.</p>\n<p>A painful lytic lesion in the <b>pelvis</b> of a teenager with <b>fever</b> is Ewing sarcoma. It peaks at <b>age 10 to 15</b>, favors the <b>diaphysis, pelvis and axial skeleton</b>, and can bring fever, leukocytosis and high ESR and CRP, so it is mistaken for osteomyelitis; systemic findings often mean it has already spread. The film shows a <b>permeative lytic lesion with onion-skin periosteal layers</b>, and biopsy shows <b>sheets of small round blue cells</b>. Osteosarcoma is the more common adolescent bone cancer, but it sits in a long-bone <b>metaphysis</b>, rarely the pelvis, and systemic findings are rare. Osteomyelitis usually seeds a long-bone metaphysis rather than the ilium, and its biopsy shows inflammatory cells and necrotic bone. Leukemia causes bone pain by <b>marrow expansion</b> without a lytic lesion. Chondrosarcoma is the pelvic tumor of adults <b>over 40 to 50</b>.</p>",
+   "with": "<p>A hard painless mass near a joint with a <b>bony spur whose cortex and medulla run continuously into the parent bone</b> is an osteochondroma. It is the most common benign bone tumor. Its natural course is to <b>grow with the skeleton until the physis closes</b> and then remain static. Management is observation.</p>\n<p><b>Spontaneous involution</b> is the course of osteoid osteoma. <b>Pathological fracture from medullary expansion</b> is the course of the unicameral bone cyst, which hollows the shaft from within. <b>Aggressive cortical destruction</b> is the course of the two epiphyseal tumors, chondroblastoma and giant cell tumor. <b>Malignant transformation</b> to chondrosarcoma is real but occurs in around 1% of solitary lesions. Counsel about it, but it is not the expected course.</p>\n<p>A painful lytic lesion in the <b>pelvis</b> of a teenager with <b>fever</b> is Ewing sarcoma. It peaks at <b>age 10 to 15</b> and favors the <b>diaphysis, pelvis and axial skeleton</b>. It can cause fever, leukocytosis and high <b>ESR</b> (erythrocyte sedimentation rate) and <b>CRP</b> (C-reactive protein), so it is mistaken for osteomyelitis. Systemic findings often mean it has already spread. The film shows a <b>permeative lytic lesion with onion-skin periosteal layers</b>, and biopsy shows <b>sheets of small round blue cells</b>. Osteosarcoma is the more common adolescent bone cancer, but it sits in a long-bone <b>metaphysis</b>, rarely the pelvis, and systemic findings are rare. Osteomyelitis usually seeds a long-bone metaphysis rather than the ilium, and its biopsy shows inflammatory cells and necrotic bone. Leukemia causes bone pain by <b>marrow expansion</b> without a lytic lesion. Chondrosarcoma is the pelvic tumor of adults <b>over 40 to 50</b>.</p>",
+   "note": "voice: dp; option framing removed, long sentence split, ESR/CRP expanded",
+   "claims": [
+    {
+     "claim": "A hard painless mass near a joint with a bony spur whose cortex and medulla run continuously into the parent bone is an osteochondroma.",
+     "to": "A hard painless mass near a joint with a bony spur whose cortex and medulla run continuously into the parent bone is an osteochondroma."
+    },
+    {
+     "claim": "Osteochondroma is the most common benign bone tumor.",
+     "to": "It is the most common benign bone tumor."
+    },
+    {
+     "claim": "Its natural course is to grow with the skeleton until the physis closes, then stay put.",
+     "to": "Its natural course is to grow with the skeleton until the physis closes and then remain static."
+    },
+    {
+     "claim": "Management of osteochondroma is observation.",
+     "to": "Management is observation."
+    },
+    {
+     "claim": "Every wrong option is another tumor's natural course.",
+     "dropped": "framing about the answer options; each tumor's course is stated in the next sentences"
+    },
+    {
+     "claim": "Spontaneous involution belongs to osteoid osteoma.",
+     "to": "Spontaneous involution is the course of osteoid osteoma."
+    },
+    {
+     "claim": "Pathological fracture from medullary expansion belongs to the unicameral bone cyst.",
+     "to": "Pathological fracture from medullary expansion is the course of the unicameral bone cyst, which hollows the shaft from within."
+    },
+    {
+     "claim": "The unicameral bone cyst hollows the shaft from within.",
+     "to": "Pathological fracture from medullary expansion is the course of the unicameral bone cyst, which hollows the shaft from within."
+    },
+    {
+     "claim": "Aggressive cortical destruction belongs to the epiphyseal pair, chondroblastoma and giant cell tumor.",
+     "to": "Aggressive cortical destruction is the course of the two epiphyseal tumors, chondroblastoma and giant cell tumor."
+    },
+    {
+     "claim": "Malignant transformation to chondrosarcoma is real but around 1% for a solitary lesion.",
+     "to": "Malignant transformation to chondrosarcoma is real but occurs in around 1% of solitary lesions."
+    },
+    {
+     "claim": "Malignant transformation is the thing to counsel about rather than the expected course.",
+     "to": "Counsel about it, but it is not the expected course."
+    },
+    {
+     "claim": "A painful lytic lesion in the pelvis of a teenager with fever is Ewing sarcoma.",
+     "to": "A painful lytic lesion in the pelvis of a teenager with fever is Ewing sarcoma."
+    },
+    {
+     "claim": "Ewing sarcoma peaks at age 10 to 15.",
+     "to": "It peaks at age 10 to 15 and favors the diaphysis, pelvis and axial skeleton."
+    },
+    {
+     "claim": "Ewing sarcoma favors the diaphysis, pelvis and axial skeleton.",
+     "to": "It peaks at age 10 to 15 and favors the diaphysis, pelvis and axial skeleton."
+    },
+    {
+     "claim": "Ewing sarcoma can bring fever, leukocytosis and high ESR and CRP, so it is mistaken for osteomyelitis.",
+     "to": "It can cause fever, leukocytosis and high ESR (erythrocyte sedimentation rate) and CRP (C-reactive protein), so it is mistaken for osteomyelitis."
+    },
+    {
+     "claim": "Systemic findings often mean Ewing sarcoma has already spread.",
+     "to": "Systemic findings often mean it has already spread."
+    },
+    {
+     "claim": "The Ewing film shows a permeative lytic lesion with onion-skin periosteal layers.",
+     "to": "The film shows a permeative lytic lesion with onion-skin periosteal layers, and biopsy shows sheets of small round blue cells."
+    },
+    {
+     "claim": "Ewing biopsy shows sheets of small round blue cells.",
+     "to": "The film shows a permeative lytic lesion with onion-skin periosteal layers, and biopsy shows sheets of small round blue cells."
+    },
+    {
+     "claim": "Osteosarcoma is the more common adolescent bone cancer.",
+     "to": "Osteosarcoma is the more common adolescent bone cancer, but it sits in a long-bone metaphysis, rarely the pelvis, and systemic findings are rare."
+    },
+    {
+     "claim": "Osteosarcoma sits in a long-bone metaphysis, rarely the pelvis, and systemic findings are rare.",
+     "to": "Osteosarcoma is the more common adolescent bone cancer, but it sits in a long-bone metaphysis, rarely the pelvis, and systemic findings are rare."
+    },
+    {
+     "claim": "Osteomyelitis usually seeds a long-bone metaphysis rather than the ilium.",
+     "to": "Osteomyelitis usually seeds a long-bone metaphysis rather than the ilium, and its biopsy shows inflammatory cells and necrotic bone."
+    },
+    {
+     "claim": "Osteomyelitis biopsy shows inflammatory cells and necrotic bone.",
+     "to": "Osteomyelitis usually seeds a long-bone metaphysis rather than the ilium, and its biopsy shows inflammatory cells and necrotic bone."
+    },
+    {
+     "claim": "Leukemia causes bone pain by marrow expansion without a lytic lesion.",
+     "to": "Leukemia causes bone pain by marrow expansion without a lytic lesion."
+    },
+    {
+     "claim": "Chondrosarcoma is the pelvic tumor of adults over 40 to 50.",
+     "to": "Chondrosarcoma is the pelvic tumor of adults over 40 to 50."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A hard painless mass near a joint with a bony spur whose cortex and medulla run continuously into the parent bone is an osteochondroma.",
+     "from": "A hard painless mass near a joint with a bony spur whose cortex and medulla run continuously into the parent bone is an osteochondroma."
+    },
+    {
+     "claim": "Osteochondroma is the most common benign bone tumor.",
+     "from": "Osteochondroma is the most common benign bone tumor."
+    },
+    {
+     "claim": "Its natural course is to grow with the skeleton until the physis closes, then stay put.",
+     "from": "Its natural course is to grow with the skeleton until the physis closes, then stay put."
+    },
+    {
+     "claim": "Management of osteochondroma is observation.",
+     "from": "Management of osteochondroma is observation."
+    },
+    {
+     "claim": "Spontaneous involution belongs to osteoid osteoma.",
+     "from": "Spontaneous involution belongs to osteoid osteoma."
+    },
+    {
+     "claim": "Pathological fracture from medullary expansion belongs to the unicameral bone cyst.",
+     "from": "Pathological fracture from medullary expansion belongs to the unicameral bone cyst."
+    },
+    {
+     "claim": "The unicameral bone cyst hollows the shaft from within.",
+     "from": "The unicameral bone cyst hollows the shaft from within."
+    },
+    {
+     "claim": "Aggressive cortical destruction belongs to the epiphyseal pair, chondroblastoma and giant cell tumor.",
+     "from": "Aggressive cortical destruction belongs to the epiphyseal pair, chondroblastoma and giant cell tumor."
+    },
+    {
+     "claim": "Malignant transformation to chondrosarcoma is real but around 1% for a solitary lesion.",
+     "from": "Malignant transformation to chondrosarcoma is real but around 1% for a solitary lesion."
+    },
+    {
+     "claim": "Malignant transformation is the thing to counsel about rather than the expected course.",
+     "from": "Malignant transformation is the thing to counsel about rather than the expected course."
+    },
+    {
+     "claim": "A painful lytic lesion in the pelvis of a teenager with fever is Ewing sarcoma.",
+     "from": "A painful lytic lesion in the pelvis of a teenager with fever is Ewing sarcoma."
+    },
+    {
+     "claim": "Ewing sarcoma peaks at age 10 to 15.",
+     "from": "Ewing sarcoma peaks at age 10 to 15."
+    },
+    {
+     "claim": "Ewing sarcoma favors the diaphysis, pelvis and axial skeleton.",
+     "from": "Ewing sarcoma favors the diaphysis, pelvis and axial skeleton."
+    },
+    {
+     "claim": "Ewing sarcoma can bring fever, leukocytosis and high ESR and CRP, so it is mistaken for osteomyelitis.",
+     "from": "Ewing sarcoma can bring fever, leukocytosis and high ESR and CRP, so it is mistaken for osteomyelitis."
+    },
+    {
+     "claim": "Systemic findings often mean Ewing sarcoma has already spread.",
+     "from": "Systemic findings often mean Ewing sarcoma has already spread."
+    },
+    {
+     "claim": "The Ewing film shows a permeative lytic lesion with onion-skin periosteal layers.",
+     "from": "The Ewing film shows a permeative lytic lesion with onion-skin periosteal layers."
+    },
+    {
+     "claim": "Ewing biopsy shows sheets of small round blue cells.",
+     "from": "Ewing biopsy shows sheets of small round blue cells."
+    },
+    {
+     "claim": "Osteosarcoma is the more common adolescent bone cancer.",
+     "from": "Osteosarcoma is the more common adolescent bone cancer."
+    },
+    {
+     "claim": "Osteosarcoma sits in a long-bone metaphysis, rarely the pelvis, and systemic findings are rare.",
+     "from": "Osteosarcoma sits in a long-bone metaphysis, rarely the pelvis, and systemic findings are rare."
+    },
+    {
+     "claim": "Osteomyelitis usually seeds a long-bone metaphysis rather than the ilium.",
+     "from": "Osteomyelitis usually seeds a long-bone metaphysis rather than the ilium."
+    },
+    {
+     "claim": "Osteomyelitis biopsy shows inflammatory cells and necrotic bone.",
+     "from": "Osteomyelitis biopsy shows inflammatory cells and necrotic bone."
+    },
+    {
+     "claim": "Leukemia causes bone pain by marrow expansion without a lytic lesion.",
+     "from": "Leukemia causes bone pain by marrow expansion without a lytic lesion."
+    },
+    {
+     "claim": "Chondrosarcoma is the pelvic tumor of adults over 40 to 50.",
+     "from": "Chondrosarcoma is the pelvic tumor of adults over 40 to 50."
+    },
+    {
+     "claim": "ESR stands for erythrocyte sedimentation rate.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CRP stands for C-reactive protein.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bone-tumors",
+   "find": "<b>Growth after physeal closure</b> in an osteochondroma is the counseling point: it suggests chondrosarcoma &middot; <b>Night pain that wakes from sleep with systemic features</b> points at malignancy or Ewing, not a benign lesion &middot; <b>Periosteal reaction</b> separates the aggressive from the indolent: sunburst and onion-skin are ominous, absent reaction is reassuring &middot; <b>Age splits the epiphyseal pair</b> &mdash; chondroblastoma before skeletal maturity, giant cell tumor after &middot; A painless hard mass with no systemic features and cortical continuity needs observation, not biopsy &middot; <b>Fever does not exclude a tumor</b>: Ewing sarcoma raises temperature and inflammatory markers, so a lytic lesion in the pelvis or diaphysis with onion-skin layers, or one that does not answer to antibiotics, needs MRI and biopsy",
+   "with": "<b>Growth after physeal closure</b> in an osteochondroma suggests chondrosarcoma; include it in counseling &middot; <b>Night pain that wakes from sleep with systemic features</b> suggests malignancy or Ewing sarcoma, not a benign lesion &middot; <b>Periosteal reaction</b> separates aggressive from indolent lesions: sunburst and onion-skin are ominous; absent reaction is reassuring &middot; <b>Age</b> separates the two epiphyseal tumors: chondroblastoma before skeletal maturity, giant cell tumor after &middot; A painless hard mass with no systemic features and cortical continuity needs observation, not biopsy &middot; <b>Fever does not exclude a tumor</b>: Ewing sarcoma raises temperature and inflammatory markers. A lytic lesion in the pelvis or diaphysis with onion-skin layers needs <b>MRI</b> (magnetic resonance imaging) and biopsy. So does a lesion that does not answer to antibiotics",
+   "note": "voice: danger; em dash removed, rhetorical bold reworded, long row split, MRI expanded",
+   "reworded_bold": [
+    "Age splits the epiphyseal pair"
+   ],
+   "claims": [
+    {
+     "claim": "Growth after physeal closure in an osteochondroma suggests chondrosarcoma.",
+     "to": "Growth after physeal closure in an osteochondroma suggests chondrosarcoma; include it in counseling"
+    },
+    {
+     "claim": "Growth after physeal closure is the counseling point.",
+     "to": "Growth after physeal closure in an osteochondroma suggests chondrosarcoma; include it in counseling"
+    },
+    {
+     "claim": "Night pain that wakes from sleep with systemic features points at malignancy or Ewing, not a benign lesion.",
+     "to": "Night pain that wakes from sleep with systemic features suggests malignancy or Ewing sarcoma, not a benign lesion"
+    },
+    {
+     "claim": "Periosteal reaction separates the aggressive from the indolent.",
+     "to": "Periosteal reaction separates aggressive from indolent lesions: sunburst and onion-skin are ominous; absent reaction is reassuring"
+    },
+    {
+     "claim": "Sunburst and onion-skin periosteal reactions are ominous.",
+     "to": "Periosteal reaction separates aggressive from indolent lesions: sunburst and onion-skin are ominous; absent reaction is reassuring"
+    },
+    {
+     "claim": "Absent periosteal reaction is reassuring.",
+     "to": "Periosteal reaction separates aggressive from indolent lesions: sunburst and onion-skin are ominous; absent reaction is reassuring"
+    },
+    {
+     "claim": "Age splits the epiphyseal pair: chondroblastoma before skeletal maturity, giant cell tumor after.",
+     "to": "Age separates the two epiphyseal tumors: chondroblastoma before skeletal maturity, giant cell tumor after"
+    },
+    {
+     "claim": "A painless hard mass with no systemic features and cortical continuity needs observation, not biopsy.",
+     "to": "A painless hard mass with no systemic features and cortical continuity needs observation, not biopsy"
+    },
+    {
+     "claim": "Fever does not exclude a tumor.",
+     "to": "Fever does not exclude a tumor: Ewing sarcoma raises temperature and inflammatory markers."
+    },
+    {
+     "claim": "Ewing sarcoma raises temperature and inflammatory markers.",
+     "to": "Fever does not exclude a tumor: Ewing sarcoma raises temperature and inflammatory markers."
+    },
+    {
+     "claim": "A lytic lesion in the pelvis or diaphysis with onion-skin layers needs MRI and biopsy.",
+     "to": "A lytic lesion in the pelvis or diaphysis with onion-skin layers needs MRI (magnetic resonance imaging) and biopsy."
+    },
+    {
+     "claim": "A lesion that does not answer to antibiotics needs MRI and biopsy.",
+     "to": "So does a lesion that does not answer to antibiotics"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Growth after physeal closure in an osteochondroma suggests chondrosarcoma.",
+     "from": "Growth after physeal closure in an osteochondroma suggests chondrosarcoma."
+    },
+    {
+     "claim": "Growth after physeal closure is the counseling point.",
+     "from": "Growth after physeal closure is the counseling point."
+    },
+    {
+     "claim": "Night pain that wakes from sleep with systemic features points at malignancy or Ewing, not a benign lesion.",
+     "from": "Night pain that wakes from sleep with systemic features points at malignancy or Ewing, not a benign lesion."
+    },
+    {
+     "claim": "Periosteal reaction separates the aggressive from the indolent.",
+     "from": "Periosteal reaction separates the aggressive from the indolent."
+    },
+    {
+     "claim": "Sunburst and onion-skin periosteal reactions are ominous.",
+     "from": "Sunburst and onion-skin periosteal reactions are ominous."
+    },
+    {
+     "claim": "Absent periosteal reaction is reassuring.",
+     "from": "Absent periosteal reaction is reassuring."
+    },
+    {
+     "claim": "Age splits the epiphyseal pair: chondroblastoma before skeletal maturity, giant cell tumor after.",
+     "from": "Age splits the epiphyseal pair: chondroblastoma before skeletal maturity, giant cell tumor after."
+    },
+    {
+     "claim": "A painless hard mass with no systemic features and cortical continuity needs observation, not biopsy.",
+     "from": "A painless hard mass with no systemic features and cortical continuity needs observation, not biopsy."
+    },
+    {
+     "claim": "Fever does not exclude a tumor.",
+     "from": "Fever does not exclude a tumor."
+    },
+    {
+     "claim": "Ewing sarcoma raises temperature and inflammatory markers.",
+     "from": "Ewing sarcoma raises temperature and inflammatory markers."
+    },
+    {
+     "claim": "A lytic lesion in the pelvis or diaphysis with onion-skin layers needs MRI and biopsy.",
+     "from": "A lytic lesion in the pelvis or diaphysis with onion-skin layers needs MRI and biopsy."
+    },
+    {
+     "claim": "A lesion that does not answer to antibiotics needs MRI and biopsy.",
+     "from": "A lesion that does not answer to antibiotics needs MRI and biopsy."
+    },
+    {
+     "claim": "MRI stands for magnetic resonance imaging.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bone-tumors",
+   "find": "<b>Location first</b> &mdash; epiphysis, metaphysis or diaphysis narrows the list before the film is read &middot; Cortical and medullary <b>continuity</b> is what makes an osteochondroma diagnosable on a single plain film &middot; Osteoid osteoma&#39;s NSAID response is mechanistic: the nidus makes prostaglandins &middot; Giant cell tumor is benign but behaves badly, and denosumab works because the stroma overexpresses RANKL &middot; Ewing is the <b>diaphyseal</b> small round blue cell tumor; osteosarcoma is the <b>metaphyseal</b> osteoid-producing one &middot; <b>Location, age and fever</b> split the pelvic lesion: Ewing in a febrile teen, osteomyelitis in a long bone after days of fever, chondrosarcoma after 40 to 50 &middot; A unicameral bone cyst shows <b>no periosteal reaction</b>; its management is <b>observation with serial x-rays</b> unless it fractures &middot; An aneurysmal bone cyst is the rapidly growing, expansile lytic mimic in adolescents",
+   "with": "<b>Location first</b>: epiphysis, metaphysis or diaphysis narrows the list before the film is read &middot; Cortical and medullary <b>continuity</b> makes an osteochondroma diagnosable on a single plain film &middot; Osteoid osteoma responds to <b>NSAIDs</b> (nonsteroidal anti-inflammatory drugs) because the nidus makes prostaglandins &middot; Giant cell tumor is benign but behaves aggressively. Denosumab works because the stroma overexpresses <b>RANKL</b> (receptor activator of nuclear factor kappa-B ligand) &middot; Ewing sarcoma is the <b>diaphyseal</b> small round blue cell tumor; osteosarcoma is the <b>metaphyseal</b> osteoid-producing one &middot; <b>Location, age and fever</b> separate the causes of a pelvic lesion. Ewing sarcoma occurs in a febrile teen, osteomyelitis in a long bone after days of fever, and chondrosarcoma after 40 to 50 &middot; A unicameral bone cyst shows <b>no periosteal reaction</b>; its management is <b>observation with serial x-rays</b> unless it fractures &middot; An aneurysmal bone cyst is the rapidly growing, expansile lytic mimic in adolescents",
+   "note": "voice: pearls; em dash to colon, NSAID/RANKL expanded",
+   "claims": [
+    {
+     "claim": "Location first: epiphysis, metaphysis or diaphysis narrows the list before the film is read.",
+     "to": "Location first: epiphysis, metaphysis or diaphysis narrows the list before the film is read"
+    },
+    {
+     "claim": "Cortical and medullary continuity is what makes an osteochondroma diagnosable on a single plain film.",
+     "to": "Cortical and medullary continuity makes an osteochondroma diagnosable on a single plain film"
+    },
+    {
+     "claim": "Osteoid osteoma's NSAID response is mechanistic: the nidus makes prostaglandins.",
+     "to": "Osteoid osteoma responds to NSAIDs (nonsteroidal anti-inflammatory drugs) because the nidus makes prostaglandins"
+    },
+    {
+     "claim": "Giant cell tumor is benign but behaves badly.",
+     "to": "Giant cell tumor is benign but behaves aggressively."
+    },
+    {
+     "claim": "Denosumab works in giant cell tumor because the stroma overexpresses RANKL.",
+     "to": "Denosumab works because the stroma overexpresses RANKL (receptor activator of nuclear factor kappa-B ligand)"
+    },
+    {
+     "claim": "Ewing is the diaphyseal small round blue cell tumor; osteosarcoma is the metaphyseal osteoid-producing one.",
+     "to": "Ewing sarcoma is the diaphyseal small round blue cell tumor; osteosarcoma is the metaphyseal osteoid-producing one"
+    },
+    {
+     "claim": "Location, age and fever split the pelvic lesion: Ewing in a febrile teen, osteomyelitis in a long bone after days of fever, chondrosarcoma after 40 to 50.",
+     "to": "Location, age and fever separate the causes of a pelvic lesion."
+    },
+    {
+     "claim": "Ewing in a febrile teen, osteomyelitis in a long bone after days of fever, chondrosarcoma after 40 to 50.",
+     "to": "Ewing sarcoma occurs in a febrile teen, osteomyelitis in a long bone after days of fever, and chondrosarcoma after 40 to 50"
+    },
+    {
+     "claim": "A unicameral bone cyst shows no periosteal reaction.",
+     "to": "A unicameral bone cyst shows no periosteal reaction; its management is observation with serial x-rays unless it fractures"
+    },
+    {
+     "claim": "Unicameral bone cyst management is observation with serial x-rays unless it fractures.",
+     "to": "A unicameral bone cyst shows no periosteal reaction; its management is observation with serial x-rays unless it fractures"
+    },
+    {
+     "claim": "An aneurysmal bone cyst is the rapidly growing, expansile lytic mimic in adolescents.",
+     "to": "An aneurysmal bone cyst is the rapidly growing, expansile lytic mimic in adolescents"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Location first: epiphysis, metaphysis or diaphysis narrows the list before the film is read.",
+     "from": "Location first: epiphysis, metaphysis or diaphysis narrows the list before the film is read."
+    },
+    {
+     "claim": "Cortical and medullary continuity is what makes an osteochondroma diagnosable on a single plain film.",
+     "from": "Cortical and medullary continuity is what makes an osteochondroma diagnosable on a single plain film."
+    },
+    {
+     "claim": "Osteoid osteoma's NSAID response is mechanistic: the nidus makes prostaglandins.",
+     "from": "Osteoid osteoma's NSAID response is mechanistic: the nidus makes prostaglandins."
+    },
+    {
+     "claim": "Giant cell tumor is benign but behaves badly.",
+     "from": "Giant cell tumor is benign but behaves badly."
+    },
+    {
+     "claim": "Denosumab works in giant cell tumor because the stroma overexpresses RANKL.",
+     "from": "Denosumab works in giant cell tumor because the stroma overexpresses RANKL."
+    },
+    {
+     "claim": "Ewing is the diaphyseal small round blue cell tumor; osteosarcoma is the metaphyseal osteoid-producing one.",
+     "from": "Ewing is the diaphyseal small round blue cell tumor; osteosarcoma is the metaphyseal osteoid-producing one."
+    },
+    {
+     "claim": "Location, age and fever split the pelvic lesion: Ewing in a febrile teen, osteomyelitis in a long bone after days of fever, chondrosarcoma after 40 to 50.",
+     "from": "Location, age and fever split the pelvic lesion: Ewing in a febrile teen, osteomyelitis in a long bone after days of fever, chondrosarcoma after 40 to 50."
+    },
+    {
+     "claim": "Ewing in a febrile teen, osteomyelitis in a long bone after days of fever, chondrosarcoma after 40 to 50.",
+     "from": "Ewing in a febrile teen, osteomyelitis in a long bone after days of fever, chondrosarcoma after 40 to 50."
+    },
+    {
+     "claim": "A unicameral bone cyst shows no periosteal reaction.",
+     "from": "A unicameral bone cyst shows no periosteal reaction."
+    },
+    {
+     "claim": "Unicameral bone cyst management is observation with serial x-rays unless it fractures.",
+     "from": "Unicameral bone cyst management is observation with serial x-rays unless it fractures."
+    },
+    {
+     "claim": "An aneurysmal bone cyst is the rapidly growing, expansile lytic mimic in adolescents.",
+     "from": "An aneurysmal bone cyst is the rapidly growing, expansile lytic mimic in adolescents."
+    },
+    {
+     "claim": "NSAIDs stands for nonsteroidal anti-inflammatory drugs.",
+     "from": "expansion"
+    },
+    {
+     "claim": "RANKL stands for receptor activator of nuclear factor kappa-B ligand.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bone-tumors",
+   "find": "Part I <b>Benign Limb Pain in a Child</b>, which owns the well child with limb pain and the osteoid osteoma discrimination. Part I <b>The Post-Traumatic Limb Mass</b> carries myositis ossificans. Part II <b>Pediatric Acute Lymphoblastic Leukemia</b> owns bone pain from marrow expansion, and Part I <b>Precocious Puberty</b> owns McCune-Albright syndrome. Store the discriminator as a question: where in the bone, and what is the periosteum doing?",
+   "with": "Part I <b>Benign Limb Pain in a Child</b> covers the well child with limb pain and the osteoid osteoma discrimination. Part I <b>The Post-Traumatic Limb Mass</b> covers myositis ossificans. Part II <b>Pediatric Acute Lymphoblastic Leukemia</b> covers bone pain from marrow expansion. Part I <b>Precocious Puberty</b> covers McCune-Albright syndrome. Ask: where in the bone is the lesion, and what is the periosteum doing?",
+   "note": "voice: pairs; owns/carries to covers, store-the-discriminator to Ask",
+   "claims": [
+    {
+     "claim": "Benign Limb Pain in a Child owns the well child with limb pain and the osteoid osteoma discrimination.",
+     "to": "Part I Benign Limb Pain in a Child covers the well child with limb pain and the osteoid osteoma discrimination."
+    },
+    {
+     "claim": "The Post-Traumatic Limb Mass carries myositis ossificans.",
+     "to": "Part I The Post-Traumatic Limb Mass covers myositis ossificans."
+    },
+    {
+     "claim": "Pediatric Acute Lymphoblastic Leukemia owns bone pain from marrow expansion.",
+     "to": "Part II Pediatric Acute Lymphoblastic Leukemia covers bone pain from marrow expansion."
+    },
+    {
+     "claim": "Precocious Puberty owns McCune-Albright syndrome.",
+     "to": "Part I Precocious Puberty covers McCune-Albright syndrome."
+    },
+    {
+     "claim": "The discriminator: where in the bone, and what is the periosteum doing?",
+     "to": "Ask: where in the bone is the lesion, and what is the periosteum doing?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Benign Limb Pain in a Child owns the well child with limb pain and the osteoid osteoma discrimination.",
+     "from": "Benign Limb Pain in a Child owns the well child with limb pain and the osteoid osteoma discrimination."
+    },
+    {
+     "claim": "The Post-Traumatic Limb Mass carries myositis ossificans.",
+     "from": "The Post-Traumatic Limb Mass carries myositis ossificans."
+    },
+    {
+     "claim": "Pediatric Acute Lymphoblastic Leukemia owns bone pain from marrow expansion.",
+     "from": "Pediatric Acute Lymphoblastic Leukemia owns bone pain from marrow expansion."
+    },
+    {
+     "claim": "Precocious Puberty owns McCune-Albright syndrome.",
+     "from": "Precocious Puberty owns McCune-Albright syndrome."
+    },
+    {
+     "claim": "The discriminator: where in the bone, and what is the periosteum doing?",
+     "from": "The discriminator: where in the bone, and what is the periosteum doing?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bone-tumors",
+   "find": "When the options are natural courses rather than diagnoses, name the lesion first and then recall what it does; each wrong option is a different tumor&#39;s behavior, offered to whoever never named one. When the options are diagnoses, check location, age and systemic features before reading the film.",
+   "with": "To predict a bone lesion&#39;s natural course, name the lesion first and then recall what it does. To make the diagnosis, check location, age and systemic features before reading the film.",
+   "note": "voice: rule; option framing removed",
+   "claims": [
+    {
+     "claim": "When the options are natural courses rather than diagnoses, name the lesion first and then recall what it does.",
+     "to": "To predict a bone lesion's natural course, name the lesion first and then recall what it does."
+    },
+    {
+     "claim": "Each wrong option is a different tumor's behavior, offered to whoever never named one.",
+     "dropped": "framing about answer options and test-takers"
+    },
+    {
+     "claim": "When the options are diagnoses, check location, age and systemic features before reading the film.",
+     "to": "To make the diagnosis, check location, age and systemic features before reading the film."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When the options are natural courses rather than diagnoses, name the lesion first and then recall what it does.",
+     "from": "When the options are natural courses rather than diagnoses, name the lesion first and then recall what it does."
+    },
+    {
+     "claim": "When the options are diagnoses, check location, age and systemic features before reading the film.",
+     "from": "When the options are diagnoses, check location, age and systemic features before reading the film."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scheuermann",
+   "find": "<p>A teenager presents with progressive thoracic kyphosis. The question gives you one exam move: <b>does the curve correct when the patient lies prone or on hyperextension?</b> A curve that corrects is postural roundback; a curve that does not correct is structural. When the kyphosis is rigid and the lateral spine film shows <b>anterior wedging &ge;5&deg; in &ge;3 consecutive vertebrae</b>, the diagnosis is <b>Scheuermann disease</b>. Schmorl nodes (disc herniation through the endplate) support the diagnosis but are not required.</p>\n<p>Pattern-matching &ldquo;teenager with kyphosis&rdquo; to postural roundback without running the correction test is the miss. The fix is a single exam finding: ask &ldquo;does it correct?&rdquo; before naming the disease.</p>",
+   "with": "<p>In a teenager with progressive thoracic kyphosis, check one exam finding: <b>does the curve correct when the patient lies prone or on hyperextension?</b> A curve that corrects is postural roundback; a curve that does not correct is structural. Rigid kyphosis with <b>anterior wedging &ge;5&deg; in &ge;3 consecutive vertebrae</b> on the lateral spine film is <b>Scheuermann disease</b>. Schmorl nodes (disc herniation through the endplate) support the diagnosis but are not required.</p>\n<p>Do not call a teenager&#39;s kyphosis postural roundback without running the correction test. Ask &ldquo;does it correct?&rdquo; before naming the disease.</p>",
+   "note": "voice: dp; question framing removed",
+   "claims": [
+    {
+     "claim": "A teenager presents with progressive thoracic kyphosis.",
+     "to": "In a teenager with progressive thoracic kyphosis, check one exam finding: does the curve correct when the patient lies prone or on hyperextension?"
+    },
+    {
+     "claim": "The one exam move is whether the curve corrects when the patient lies prone or on hyperextension.",
+     "to": "In a teenager with progressive thoracic kyphosis, check one exam finding: does the curve correct when the patient lies prone or on hyperextension?"
+    },
+    {
+     "claim": "A curve that corrects is postural roundback; a curve that does not correct is structural.",
+     "to": "A curve that corrects is postural roundback; a curve that does not correct is structural."
+    },
+    {
+     "claim": "Rigid kyphosis with anterior wedging of at least 5 degrees in at least 3 consecutive vertebrae on the lateral spine film is Scheuermann disease.",
+     "to": "Rigid kyphosis with anterior wedging ≥5° in ≥3 consecutive vertebrae on the lateral spine film is Scheuermann disease."
+    },
+    {
+     "claim": "Schmorl nodes are disc herniation through the endplate.",
+     "to": "Schmorl nodes (disc herniation through the endplate) support the diagnosis but are not required."
+    },
+    {
+     "claim": "Schmorl nodes support the diagnosis but are not required.",
+     "to": "Schmorl nodes (disc herniation through the endplate) support the diagnosis but are not required."
+    },
+    {
+     "claim": "Pattern-matching a teenager with kyphosis to postural roundback without running the correction test is the miss.",
+     "to": "Do not call a teenager's kyphosis postural roundback without running the correction test."
+    },
+    {
+     "claim": "Ask whether it corrects before naming the disease.",
+     "to": "Ask “does it correct?” before naming the disease."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A teenager presents with progressive thoracic kyphosis.",
+     "from": "A teenager presents with progressive thoracic kyphosis."
+    },
+    {
+     "claim": "The one exam move is whether the curve corrects when the patient lies prone or on hyperextension.",
+     "from": "The one exam move is whether the curve corrects when the patient lies prone or on hyperextension."
+    },
+    {
+     "claim": "A curve that corrects is postural roundback; a curve that does not correct is structural.",
+     "from": "A curve that corrects is postural roundback; a curve that does not correct is structural."
+    },
+    {
+     "claim": "Rigid kyphosis with anterior wedging of at least 5 degrees in at least 3 consecutive vertebrae on the lateral spine film is Scheuermann disease.",
+     "from": "Rigid kyphosis with anterior wedging of at least 5 degrees in at least 3 consecutive vertebrae on the lateral spine film is Scheuermann disease."
+    },
+    {
+     "claim": "Schmorl nodes are disc herniation through the endplate.",
+     "from": "Schmorl nodes are disc herniation through the endplate."
+    },
+    {
+     "claim": "Schmorl nodes support the diagnosis but are not required.",
+     "from": "Schmorl nodes support the diagnosis but are not required."
+    },
+    {
+     "claim": "Pattern-matching a teenager with kyphosis to postural roundback without running the correction test is the miss.",
+     "from": "Pattern-matching a teenager with kyphosis to postural roundback without running the correction test is the miss."
+    },
+    {
+     "claim": "Ask whether it corrects before naming the disease.",
+     "from": "Ask whether it corrects before naming the disease."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scheuermann",
+   "find": "The correction test is the fastest discriminator in spinal deformity: prone or hyperextension separates structural from postural in one move &middot; <b>Scheuermann treatment</b> &mdash; Cobb-angle-driven: &lt;50&deg; and asymptomatic &rarr; observe; 50&ndash;75&deg; with growth remaining &rarr; brace; &gt;75&deg; or refractory pain &rarr; surgery &middot; Schmorl nodes are disc herniations through the endplate &mdash; they look dramatic on imaging but are the mechanism, not the emergency &middot; Postural kyphosis has no structural vertebral changes; films are normal or show smooth, correctable curvature",
+   "with": "The correction test (prone or hyperextension) is the fastest discriminator in spinal deformity; it separates structural from postural in one step &middot; <b>Scheuermann treatment</b> depends on the Cobb angle. Observe a curve &lt;50&deg; that is asymptomatic. Brace a curve of 50&ndash;75&deg; with growth remaining. Treat a curve &gt;75&deg; or refractory pain with surgery &middot; Schmorl nodes are disc herniations through the endplate. They look dramatic on imaging but are the mechanism, not the emergency &middot; Postural kyphosis has no structural vertebral changes; films are normal or show smooth, correctable curvature",
+   "note": "voice: pearls; em dashes removed, arrow chain split",
+   "claims": [
+    {
+     "claim": "The correction test is the fastest discriminator in spinal deformity.",
+     "to": "The correction test (prone or hyperextension) is the fastest discriminator in spinal deformity; it separates structural from postural in one step"
+    },
+    {
+     "claim": "Prone or hyperextension separates structural from postural in one move.",
+     "to": "The correction test (prone or hyperextension) is the fastest discriminator in spinal deformity; it separates structural from postural in one step"
+    },
+    {
+     "claim": "Scheuermann treatment is Cobb-angle-driven.",
+     "to": "Scheuermann treatment depends on the Cobb angle."
+    },
+    {
+     "claim": "Cobb angle under 50 degrees and asymptomatic: observe.",
+     "to": "Observe a curve <50° that is asymptomatic."
+    },
+    {
+     "claim": "Cobb angle 50 to 75 degrees with growth remaining: brace.",
+     "to": "Brace a curve of 50–75° with growth remaining."
+    },
+    {
+     "claim": "Cobb angle over 75 degrees or refractory pain: surgery.",
+     "to": "Treat a curve >75° or refractory pain with surgery"
+    },
+    {
+     "claim": "Schmorl nodes are disc herniations through the endplate.",
+     "to": "Schmorl nodes are disc herniations through the endplate."
+    },
+    {
+     "claim": "Schmorl nodes look dramatic on imaging but are the mechanism, not the emergency.",
+     "to": "They look dramatic on imaging but are the mechanism, not the emergency"
+    },
+    {
+     "claim": "Postural kyphosis has no structural vertebral changes; films are normal or show smooth, correctable curvature.",
+     "to": "Postural kyphosis has no structural vertebral changes; films are normal or show smooth, correctable curvature"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The correction test is the fastest discriminator in spinal deformity.",
+     "from": "The correction test is the fastest discriminator in spinal deformity."
+    },
+    {
+     "claim": "Prone or hyperextension separates structural from postural in one move.",
+     "from": "Prone or hyperextension separates structural from postural in one move."
+    },
+    {
+     "claim": "Scheuermann treatment is Cobb-angle-driven.",
+     "from": "Scheuermann treatment is Cobb-angle-driven."
+    },
+    {
+     "claim": "Cobb angle under 50 degrees and asymptomatic: observe.",
+     "from": "Cobb angle under 50 degrees and asymptomatic: observe."
+    },
+    {
+     "claim": "Cobb angle 50 to 75 degrees with growth remaining: brace.",
+     "from": "Cobb angle 50 to 75 degrees with growth remaining: brace."
+    },
+    {
+     "claim": "Cobb angle over 75 degrees or refractory pain: surgery.",
+     "from": "Cobb angle over 75 degrees or refractory pain: surgery."
+    },
+    {
+     "claim": "Schmorl nodes are disc herniations through the endplate.",
+     "from": "Schmorl nodes are disc herniations through the endplate."
+    },
+    {
+     "claim": "Schmorl nodes look dramatic on imaging but are the mechanism, not the emergency.",
+     "from": "Schmorl nodes look dramatic on imaging but are the mechanism, not the emergency."
+    },
+    {
+     "claim": "Postural kyphosis has no structural vertebral changes; films are normal or show smooth, correctable curvature.",
+     "from": "Postural kyphosis has no structural vertebral changes; films are normal or show smooth, correctable curvature."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scheuermann",
+   "find": "<i>Scoliosis screening</i> &mdash; shared complaint: adolescent spinal deformity; discriminator: coronal vs sagittal plane.",
+   "with": "<i>Scoliosis screening</i> shares the complaint of adolescent spinal deformity. Ask: is the curve in the coronal or the sagittal plane?",
+   "note": "voice: pairs; em dash removed",
+   "claims": [
+    {
+     "claim": "Scoliosis screening shares the complaint of adolescent spinal deformity.",
+     "to": "Scoliosis screening shares the complaint of adolescent spinal deformity."
+    },
+    {
+     "claim": "The discriminator is coronal vs sagittal plane.",
+     "to": "Ask: is the curve in the coronal or the sagittal plane?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Scoliosis screening shares the complaint of adolescent spinal deformity.",
+     "from": "Scoliosis screening shares the complaint of adolescent spinal deformity."
+    },
+    {
+     "claim": "The discriminator is coronal vs sagittal plane.",
+     "from": "The discriminator is coronal vs sagittal plane."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scheuermann",
+   "find": "One exam maneuver &mdash; does the curve correct with positioning &mdash; separates structural from postural kyphosis, and the radiographic criteria exist to confirm Scheuermann, not to diagnose it; the bedside test comes first.",
+   "with": "One exam maneuver, whether the curve corrects with positioning, separates structural from postural kyphosis. Do this bedside test first. The radiographic criteria confirm Scheuermann; they do not diagnose it.",
+   "note": "voice: rule; em dashes removed, split",
+   "claims": [
+    {
+     "claim": "One exam maneuver, whether the curve corrects with positioning, separates structural from postural kyphosis.",
+     "to": "One exam maneuver, whether the curve corrects with positioning, separates structural from postural kyphosis."
+    },
+    {
+     "claim": "The radiographic criteria exist to confirm Scheuermann, not to diagnose it.",
+     "to": "The radiographic criteria confirm Scheuermann; they do not diagnose it."
+    },
+    {
+     "claim": "The bedside test comes first.",
+     "to": "Do this bedside test first."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "One exam maneuver, whether the curve corrects with positioning, separates structural from postural kyphosis.",
+     "from": "One exam maneuver, whether the curve corrects with positioning, separates structural from postural kyphosis."
+    },
+    {
+     "claim": "The radiographic criteria exist to confirm Scheuermann, not to diagnose it.",
+     "from": "The radiographic criteria exist to confirm Scheuermann, not to diagnose it."
+    },
+    {
+     "claim": "The bedside test comes first.",
+     "from": "The bedside test comes first."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "scheuermann",
+   "find": "AS causes spinal deformity in young males, but presents with sacroiliac involvement, not isolated thoracic wedging.",
+   "with": "<b>AS</b> (ankylosing spondylitis) causes spinal deformity in young males, but presents with sacroiliac involvement, not isolated thoracic wedging.",
+   "note": "voice: trap; AS expanded",
+   "claims": [
+    {
+     "claim": "AS causes spinal deformity in young males, but presents with sacroiliac involvement, not isolated thoracic wedging.",
+     "to": "AS (ankylosing spondylitis) causes spinal deformity in young males, but presents with sacroiliac involvement, not isolated thoracic wedging."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "AS causes spinal deformity in young males, but presents with sacroiliac involvement, not isolated thoracic wedging.",
+     "from": "AS causes spinal deformity in young males, but presents with sacroiliac involvement, not isolated thoracic wedging."
+    },
+    {
+     "claim": "AS stands for ankylosing spondylitis.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-septic-adult",
+   "find": "<p>An acute <b>hot, swollen, erythematous</b> joint with <b>severe pain on passive range of motion</b> and fever gets <b>aspirated</b> — and the reason is stronger than \"this looks septic.\" <b>Nothing on exam can exclude infection</b>, gout and septic arthritis overlap completely, and a missed septic joint destroys cartilage in days. Aspiration is diagnostic <i>and</i> therapeutic.</p>\n<p><b>The comorbidities point the opposite way from how they read.</b> Obesity, hypertension, and diabetes feel like \"metabolic → gout\" — but <b>diabetes is a septic arthritis risk factor</b>, and joint space narrowing on x-ray means <b>preexisting joint disease</b>, another one.</p>",
+   "with": "<p>An acute <b>hot, swollen, erythematous</b> joint with <b>severe pain on passive range of motion</b> and fever should be <b>aspirated</b>. <b>Nothing on exam can exclude infection</b>. Gout and septic arthritis overlap completely. A missed septic joint destroys cartilage in days. Aspiration is diagnostic and therapeutic.</p>\n<p>Obesity, hypertension and diabetes may suggest a metabolic cause such as gout, but <b>diabetes is a septic arthritis risk factor</b>. Joint space narrowing on x-ray means <b>preexisting joint disease</b>, another septic arthritis risk factor.</p>",
+   "note": "voice: dp; em dashes, rhetorical bold and framing removed",
+   "reworded_bold": [
+    "The comorbidities point the opposite way from how they read."
+   ],
+   "claims": [
+    {
+     "claim": "An acute hot, swollen, erythematous joint with severe pain on passive range of motion and fever gets aspirated.",
+     "to": "An acute hot, swollen, erythematous joint with severe pain on passive range of motion and fever should be aspirated."
+    },
+    {
+     "claim": "The reason to aspirate is stronger than \"this looks septic\".",
+     "carried_by": "Aspirate because infection cannot be excluded, not because the joint is probably septic."
+    },
+    {
+     "claim": "Nothing on exam can exclude infection.",
+     "to": "Nothing on exam can exclude infection."
+    },
+    {
+     "claim": "Gout and septic arthritis overlap completely.",
+     "to": "Gout and septic arthritis overlap completely."
+    },
+    {
+     "claim": "A missed septic joint destroys cartilage in days.",
+     "to": "A missed septic joint destroys cartilage in days."
+    },
+    {
+     "claim": "Aspiration is diagnostic and therapeutic.",
+     "to": "Aspiration is diagnostic and therapeutic."
+    },
+    {
+     "claim": "The comorbidities point the opposite way from how they read.",
+     "to": "Obesity, hypertension and diabetes may suggest a metabolic cause such as gout, but diabetes is a septic arthritis risk factor."
+    },
+    {
+     "claim": "Obesity, hypertension and diabetes feel like metabolic, suggesting gout.",
+     "to": "Obesity, hypertension and diabetes may suggest a metabolic cause such as gout, but diabetes is a septic arthritis risk factor."
+    },
+    {
+     "claim": "Diabetes is a septic arthritis risk factor.",
+     "to": "Obesity, hypertension and diabetes may suggest a metabolic cause such as gout, but diabetes is a septic arthritis risk factor."
+    },
+    {
+     "claim": "Joint space narrowing on x-ray means preexisting joint disease.",
+     "to": "Joint space narrowing on x-ray means preexisting joint disease, another septic arthritis risk factor."
+    },
+    {
+     "claim": "Preexisting joint disease is another septic arthritis risk factor.",
+     "to": "Joint space narrowing on x-ray means preexisting joint disease, another septic arthritis risk factor."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "An acute hot, swollen, erythematous joint with severe pain on passive range of motion and fever gets aspirated.",
+     "from": "An acute hot, swollen, erythematous joint with severe pain on passive range of motion and fever gets aspirated."
+    },
+    {
+     "claim": "Nothing on exam can exclude infection.",
+     "from": "Nothing on exam can exclude infection."
+    },
+    {
+     "claim": "Gout and septic arthritis overlap completely.",
+     "from": "Gout and septic arthritis overlap completely."
+    },
+    {
+     "claim": "A missed septic joint destroys cartilage in days.",
+     "from": "A missed septic joint destroys cartilage in days."
+    },
+    {
+     "claim": "Aspiration is diagnostic and therapeutic.",
+     "from": "Aspiration is diagnostic and therapeutic."
+    },
+    {
+     "claim": "The comorbidities point the opposite way from how they read.",
+     "from": "The comorbidities point the opposite way from how they read."
+    },
+    {
+     "claim": "Obesity, hypertension and diabetes feel like metabolic, suggesting gout.",
+     "from": "Obesity, hypertension and diabetes feel like metabolic, suggesting gout."
+    },
+    {
+     "claim": "Diabetes is a septic arthritis risk factor.",
+     "from": "Diabetes is a septic arthritis risk factor."
+    },
+    {
+     "claim": "Joint space narrowing on x-ray means preexisting joint disease.",
+     "from": "Joint space narrowing on x-ray means preexisting joint disease."
+    },
+    {
+     "claim": "Preexisting joint disease is another septic arthritis risk factor.",
+     "from": "Preexisting joint disease is another septic arthritis risk factor."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-septic-adult",
+   "find": "<b>Gout</b> — negatively birefringent <b>needles</b> (monosodium urate). <b>Pseudogout</b> — positively birefringent <b>rhomboids</b> (CPPD), with <b>chondrocalcinosis</b> on x-ray. <b>Serum uric acid is useless acutely</b> — often normal during a flare (urate shifts into the joint) and elevated in many who never flare.",
+   "with": "<b>Gout</b>: negatively birefringent <b>needles</b> (monosodium urate). <b>Pseudogout</b>: positively birefringent <b>rhomboids</b> of <b>CPPD</b> (calcium pyrophosphate dihydrate), with <b>chondrocalcinosis</b> on x-ray. <b>Serum uric acid is useless acutely</b>: it is often normal during a flare (urate shifts into the joint) and elevated in many who never flare.",
+   "note": "voice: crystals; em dashes to colons, CPPD expanded",
+   "claims": [
+    {
+     "claim": "Gout shows negatively birefringent needles (monosodium urate).",
+     "to": "Gout: negatively birefringent needles (monosodium urate)."
+    },
+    {
+     "claim": "Pseudogout shows positively birefringent rhomboids (CPPD).",
+     "to": "Pseudogout: positively birefringent rhomboids of CPPD (calcium pyrophosphate dihydrate), with chondrocalcinosis on x-ray."
+    },
+    {
+     "claim": "Pseudogout has chondrocalcinosis on x-ray.",
+     "to": "Pseudogout: positively birefringent rhomboids of CPPD (calcium pyrophosphate dihydrate), with chondrocalcinosis on x-ray."
+    },
+    {
+     "claim": "Serum uric acid is useless acutely.",
+     "to": "Serum uric acid is useless acutely: it is often normal during a flare (urate shifts into the joint) and elevated in many who never flare."
+    },
+    {
+     "claim": "Serum uric acid is often normal during a flare because urate shifts into the joint.",
+     "to": "Serum uric acid is useless acutely: it is often normal during a flare (urate shifts into the joint) and elevated in many who never flare."
+    },
+    {
+     "claim": "Serum uric acid is elevated in many who never flare.",
+     "to": "Serum uric acid is useless acutely: it is often normal during a flare (urate shifts into the joint) and elevated in many who never flare."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Gout shows negatively birefringent needles (monosodium urate).",
+     "from": "Gout shows negatively birefringent needles (monosodium urate)."
+    },
+    {
+     "claim": "Pseudogout shows positively birefringent rhomboids (CPPD).",
+     "from": "Pseudogout shows positively birefringent rhomboids (CPPD)."
+    },
+    {
+     "claim": "Pseudogout has chondrocalcinosis on x-ray.",
+     "from": "Pseudogout has chondrocalcinosis on x-ray."
+    },
+    {
+     "claim": "Serum uric acid is useless acutely.",
+     "from": "Serum uric acid is useless acutely."
+    },
+    {
+     "claim": "Serum uric acid is often normal during a flare because urate shifts into the joint.",
+     "from": "Serum uric acid is often normal during a flare because urate shifts into the joint."
+    },
+    {
+     "claim": "Serum uric acid is elevated in many who never flare.",
+     "from": "Serum uric acid is elevated in many who never flare."
+    },
+    {
+     "claim": "CPPD stands for calcium pyrophosphate dihydrate.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-septic-adult",
+   "find": "Part I <b>Septic Arthritis of the Hip</b>, <b>Transient Synovitis <span class=\"tag t-peds\">Mirror twin</span></b> (pediatric), and <b>Septic Bursitis</b> — the extraarticular mimic, where preserved joint motion moves the needle from joint to bursa. Note the asymmetry: <b>tier 1 has no fork in adults</b> — every acute hot joint aspirates. The pediatric twin is the only place the answer diverges, and it diverges on <b>toxicity and inflammatory signs</b>, not on the presence of fluid.",
+   "with": "Part I <b>Septic Arthritis of the Hip</b>, <b>Transient Synovitis <span class=\"tag t-peds\">Mirror twin</span></b> (pediatric), and <b>Septic Bursitis</b>. Septic Bursitis is the extraarticular mimic; preserved joint motion moves the needle from joint to bursa. In adults, tier 1 has no fork: every acute hot joint is aspirated. Only in children does tier 1 differ; there it depends on <b>toxicity and inflammatory signs</b>, not on the presence of fluid.",
+   "note": "voice: pairs; em dashes and framing removed",
+   "reworded_bold": [
+    "tier 1 has no fork in adults"
+   ],
+   "claims": [
+    {
+     "claim": "This brief pairs with Part I Septic Arthritis of the Hip, Transient Synovitis (pediatric) and Septic Bursitis.",
+     "to": "Part I Septic Arthritis of the Hip, Transient Synovitis Mirror twin (pediatric), and Septic Bursitis."
+    },
+    {
+     "claim": "Septic Bursitis is the extraarticular mimic, where preserved joint motion moves the needle from joint to bursa.",
+     "to": "Septic Bursitis is the extraarticular mimic; preserved joint motion moves the needle from joint to bursa."
+    },
+    {
+     "claim": "Note the asymmetry.",
+     "dropped": "filler framing; the asymmetry is stated in the next sentences"
+    },
+    {
+     "claim": "Tier 1 has no fork in adults: every acute hot joint aspirates.",
+     "to": "In adults, tier 1 has no fork: every acute hot joint is aspirated."
+    },
+    {
+     "claim": "The pediatric twin is the only place the answer diverges.",
+     "to": "Only in children does tier 1 differ; there it depends on toxicity and inflammatory signs, not on the presence of fluid."
+    },
+    {
+     "claim": "In children it diverges on toxicity and inflammatory signs, not on the presence of fluid.",
+     "to": "Only in children does tier 1 differ; there it depends on toxicity and inflammatory signs, not on the presence of fluid."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "This brief pairs with Part I Septic Arthritis of the Hip, Transient Synovitis (pediatric) and Septic Bursitis.",
+     "from": "This brief pairs with Part I Septic Arthritis of the Hip, Transient Synovitis (pediatric) and Septic Bursitis."
+    },
+    {
+     "claim": "Septic Bursitis is the extraarticular mimic, where preserved joint motion moves the needle from joint to bursa.",
+     "from": "Septic Bursitis is the extraarticular mimic, where preserved joint motion moves the needle from joint to bursa."
+    },
+    {
+     "claim": "Tier 1 has no fork in adults: every acute hot joint aspirates.",
+     "from": "Tier 1 has no fork in adults: every acute hot joint aspirates."
+    },
+    {
+     "claim": "The pediatric twin is the only place the answer diverges.",
+     "from": "The pediatric twin is the only place the answer diverges."
+    },
+    {
+     "claim": "In children it diverges on toxicity and inflammatory signs, not on the presence of fluid.",
+     "from": "In children it diverges on toxicity and inflammatory signs, not on the presence of fluid."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-septic-adult",
+   "find": "When a test is both <b>diagnostic and therapeutic</b> and the disease it excludes is <b>time-destructive</b>, it precedes every treatment option — even one that would be right for the more likely diagnosis. You don't aspirate because it's probably septic; you aspirate because you can't prove it isn't.",
+   "with": "When a test is both <b>diagnostic and therapeutic</b> and the disease it excludes is <b>time-destructive</b>, the test precedes every treatment option. This holds even for a treatment that would be right for the more likely diagnosis. Aspirate because infection cannot be excluded, not because the joint is probably septic.",
+   "note": "voice: rule; em dash and aphorism removed",
+   "claims": [
+    {
+     "claim": "When a test is both diagnostic and therapeutic and the disease it excludes is time-destructive, it precedes every treatment option.",
+     "to": "When a test is both diagnostic and therapeutic and the disease it excludes is time-destructive, the test precedes every treatment option."
+    },
+    {
+     "claim": "This holds even for one that would be right for the more likely diagnosis.",
+     "to": "This holds even for a treatment that would be right for the more likely diagnosis."
+    },
+    {
+     "claim": "You don't aspirate because it's probably septic; you aspirate because you can't prove it isn't.",
+     "to": "Aspirate because infection cannot be excluded, not because the joint is probably septic."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a test is both diagnostic and therapeutic and the disease it excludes is time-destructive, it precedes every treatment option.",
+     "from": "When a test is both diagnostic and therapeutic and the disease it excludes is time-destructive, it precedes every treatment option."
+    },
+    {
+     "claim": "This holds even for one that would be right for the more likely diagnosis.",
+     "from": "This holds even for one that would be right for the more likely diagnosis."
+    },
+    {
+     "claim": "You don't aspirate because it's probably septic; you aspirate because you can't prove it isn't.",
+     "from": "You don't aspirate because it's probably septic; you aspirate because you can't prove it isn't."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-lbp-acute",
+   "find": "A wall of negatives is permission to do less",
+   "with": "Many pertinent negatives permit conservative management",
+   "note": "voice: subtitle slogan",
+   "claims": [
+    {
+     "claim": "A wall of negatives is permission to do less.",
+     "to": "Many pertinent negatives permit conservative management"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A wall of negatives is permission to do less.",
+     "from": "A wall of negatives is permission to do less."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-lbp-acute",
+   "find": "<p>Acute (&lt;4–6 weeks) back pain with a <b>clear mechanical trigger</b> and a <b>completely normal neurologic exam</b>, in a stem that spends its sentences deleting red flags. Nothing licenses imaging or escalation → <b>NSAIDs + stay active</b>.</p>",
+   "with": "<p>The back pain is acute (&lt;4–6 weeks), with a <b>clear mechanical trigger</b>, a <b>completely normal neurologic exam</b> and no red flags in the history. Nothing indicates imaging or escalation, so treat with <b>NSAIDs</b> (nonsteroidal anti-inflammatory drugs) and advise the patient to <b>stay active</b>.</p>",
+   "note": "voice: dp; stem framing removed",
+   "reworded_bold": [
+    "NSAIDs + stay active"
+   ],
+   "claims": [
+    {
+     "claim": "The back pain is acute (under 4 to 6 weeks).",
+     "to": "The back pain is acute (<4–6 weeks), with a clear mechanical trigger, a completely normal neurologic exam and no red flags in the history."
+    },
+    {
+     "claim": "There is a clear mechanical trigger.",
+     "to": "The back pain is acute (<4–6 weeks), with a clear mechanical trigger, a completely normal neurologic exam and no red flags in the history."
+    },
+    {
+     "claim": "The neurologic exam is completely normal.",
+     "to": "The back pain is acute (<4–6 weeks), with a clear mechanical trigger, a completely normal neurologic exam and no red flags in the history."
+    },
+    {
+     "claim": "The stem spends its sentences deleting red flags.",
+     "to": "The back pain is acute (<4–6 weeks), with a clear mechanical trigger, a completely normal neurologic exam and no red flags in the history."
+    },
+    {
+     "claim": "Nothing licenses imaging or escalation.",
+     "to": "Nothing indicates imaging or escalation, so treat with NSAIDs (nonsteroidal anti-inflammatory drugs) and advise the patient to stay active."
+    },
+    {
+     "claim": "Treatment is NSAIDs + stay active.",
+     "to": "Nothing indicates imaging or escalation, so treat with NSAIDs (nonsteroidal anti-inflammatory drugs) and advise the patient to stay active."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The back pain is acute (under 4 to 6 weeks).",
+     "from": "The back pain is acute (under 4 to 6 weeks)."
+    },
+    {
+     "claim": "There is a clear mechanical trigger.",
+     "from": "There is a clear mechanical trigger."
+    },
+    {
+     "claim": "The neurologic exam is completely normal.",
+     "from": "The neurologic exam is completely normal."
+    },
+    {
+     "claim": "The stem spends its sentences deleting red flags.",
+     "from": "The stem spends its sentences deleting red flags."
+    },
+    {
+     "claim": "Nothing licenses imaging or escalation.",
+     "from": "Nothing licenses imaging or escalation."
+    },
+    {
+     "claim": "Treatment is NSAIDs + stay active.",
+     "from": "Treatment is NSAIDs + stay active."
+    },
+    {
+     "claim": "NSAIDs stands for nonsteroidal anti-inflammatory drugs.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-lbp-acute",
+   "find": "<b>Bed rest</b>: <b>actively harmful</b>; bed rest delays recovery. A reversed-teaching item: the old advice is now the wrong answer. <b>CT lumbosacral spine</b>: wrong twice: no indication at 1 week, <b>and wrong modality</b> (MRI images disc and nerve root). <b>Epidural injection</b>: skipped tier, needs ≥4–6 weeks of failed conservative care. <b>Oral prednisone</b>: systemic steroids do not improve outcomes in acute sciatica.",
+   "with": "<b>Bed rest</b>: <b>actively harmful</b>; bed rest delays recovery. It was the old advice and is now wrong. <b>CT lumbosacral spine</b>: not indicated at 1 week, <b>and wrong modality</b>; <b>MRI</b> (magnetic resonance imaging) images disc and nerve root. <b>Epidural injection</b>: needs ≥4–6 weeks of failed conservative care first. <b>Oral prednisone</b>: systemic steroids do not improve outcomes in acute sciatica.",
+   "note": "voice: distractors; one colon per line, framing removed, MRI expanded",
+   "claims": [
+    {
+     "claim": "Bed rest is actively harmful.",
+     "to": "Bed rest: actively harmful; bed rest delays recovery."
+    },
+    {
+     "claim": "Bed rest delays recovery.",
+     "to": "Bed rest: actively harmful; bed rest delays recovery."
+    },
+    {
+     "claim": "Bed rest was the old advice and is now the wrong answer.",
+     "to": "It was the old advice and is now wrong."
+    },
+    {
+     "claim": "A reversed-teaching item.",
+     "dropped": "framing about the item type"
+    },
+    {
+     "claim": "CT lumbosacral spine is wrong twice.",
+     "to": "CT lumbosacral spine: not indicated at 1 week, and wrong modality; MRI (magnetic resonance imaging) images disc and nerve root."
+    },
+    {
+     "claim": "CT lumbosacral spine has no indication at 1 week.",
+     "to": "CT lumbosacral spine: not indicated at 1 week, and wrong modality; MRI (magnetic resonance imaging) images disc and nerve root."
+    },
+    {
+     "claim": "CT is the wrong modality; MRI images disc and nerve root.",
+     "to": "CT lumbosacral spine: not indicated at 1 week, and wrong modality; MRI (magnetic resonance imaging) images disc and nerve root."
+    },
+    {
+     "claim": "Epidural injection is a skipped tier.",
+     "dropped": "framing about the ladder; the requirement is stated in the same line"
+    },
+    {
+     "claim": "Epidural injection needs at least 4 to 6 weeks of failed conservative care.",
+     "to": "Epidural injection: needs ≥4–6 weeks of failed conservative care first."
+    },
+    {
+     "claim": "Systemic steroids such as oral prednisone do not improve outcomes in acute sciatica.",
+     "to": "Oral prednisone: systemic steroids do not improve outcomes in acute sciatica."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Bed rest is actively harmful.",
+     "from": "Bed rest is actively harmful."
+    },
+    {
+     "claim": "Bed rest delays recovery.",
+     "from": "Bed rest delays recovery."
+    },
+    {
+     "claim": "Bed rest was the old advice and is now the wrong answer.",
+     "from": "Bed rest was the old advice and is now the wrong answer."
+    },
+    {
+     "claim": "CT lumbosacral spine is wrong twice.",
+     "from": "CT lumbosacral spine is wrong twice."
+    },
+    {
+     "claim": "CT lumbosacral spine has no indication at 1 week.",
+     "from": "CT lumbosacral spine has no indication at 1 week."
+    },
+    {
+     "claim": "CT is the wrong modality; MRI images disc and nerve root.",
+     "from": "CT is the wrong modality; MRI images disc and nerve root."
+    },
+    {
+     "claim": "Epidural injection needs at least 4 to 6 weeks of failed conservative care.",
+     "from": "Epidural injection needs at least 4 to 6 weeks of failed conservative care."
+    },
+    {
+     "claim": "Systemic steroids such as oral prednisone do not improve outcomes in acute sciatica.",
+     "from": "Systemic steroids such as oral prednisone do not improve outcomes in acute sciatica."
+    },
+    {
+     "claim": "MRI stands for magnetic resonance imaging.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-lbp-acute",
+   "find": "<b>Early imaging leads to more surgery without better outcomes.</b> Asymptomatic disc bulges and degenerative change are near-universal by middle age, so a scan mostly generates incidental findings that invite intervention. Also: ~90% of acute low back pain and ~90% of sciatica resolve within 6 weeks.",
+   "with": "<b>Early imaging leads to more surgery without better outcomes.</b> Asymptomatic disc bulges and degenerative change are near-universal by middle age. A scan therefore mostly generates incidental findings that invite intervention. ~90% of acute low back pain and ~90% of sciatica resolve within 6 weeks.",
+   "note": "voice: pearls; filler removed, long sentence split",
+   "claims": [
+    {
+     "claim": "Early imaging leads to more surgery without better outcomes.",
+     "to": "Early imaging leads to more surgery without better outcomes."
+    },
+    {
+     "claim": "Asymptomatic disc bulges and degenerative change are near-universal by middle age.",
+     "to": "Asymptomatic disc bulges and degenerative change are near-universal by middle age."
+    },
+    {
+     "claim": "A scan mostly generates incidental findings that invite intervention.",
+     "to": "A scan therefore mostly generates incidental findings that invite intervention. ~90% of acute low back pain and ~90% of sciatica resolve within 6 weeks."
+    },
+    {
+     "claim": "About 90% of acute low back pain and about 90% of sciatica resolve within 6 weeks.",
+     "to": "A scan therefore mostly generates incidental findings that invite intervention. ~90% of acute low back pain and ~90% of sciatica resolve within 6 weeks."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Early imaging leads to more surgery without better outcomes.",
+     "from": "Early imaging leads to more surgery without better outcomes."
+    },
+    {
+     "claim": "Asymptomatic disc bulges and degenerative change are near-universal by middle age.",
+     "from": "Asymptomatic disc bulges and degenerative change are near-universal by middle age."
+    },
+    {
+     "claim": "A scan mostly generates incidental findings that invite intervention.",
+     "from": "A scan mostly generates incidental findings that invite intervention."
+    },
+    {
+     "claim": "About 90% of acute low back pain and about 90% of sciatica resolve within 6 weeks.",
+     "from": "About 90% of acute low back pain and about 90% of sciatica resolve within 6 weeks."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-lbp-acute",
+   "find": "Part I <b>Low Back Pain Red Flags</b> and <b>Inflammatory Back Pain &amp; Spondyloarthritis</b>. This is the third member of the family and the one with <b>no</b> red flags. Store the discriminator as a question: <b>\"Any red flag, and is the neuro exam normal?\"</b>",
+   "with": "Part I <b>Low Back Pain Red Flags</b> and <b>Inflammatory Back Pain &amp; Spondyloarthritis</b>. This brief is the third of the family and covers back pain with no red flags. Ask: <b>\"Any red flag, and is the neuro exam normal?\"</b>",
+   "note": "voice: pairs; emphasis bold removed, store-the-discriminator to Ask",
+   "reworded_bold": [
+    "no"
+   ],
+   "claims": [
+    {
+     "claim": "This brief pairs with Part I Low Back Pain Red Flags and Inflammatory Back Pain & Spondyloarthritis.",
+     "to": "Part I Low Back Pain Red Flags and Inflammatory Back Pain & Spondyloarthritis."
+    },
+    {
+     "claim": "This is the third member of the family and the one with no red flags.",
+     "to": "This brief is the third of the family and covers back pain with no red flags."
+    },
+    {
+     "claim": "The discriminator: any red flag, and is the neuro exam normal?",
+     "to": "Ask: \"Any red flag, and is the neuro exam normal?\""
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "This brief pairs with Part I Low Back Pain Red Flags and Inflammatory Back Pain & Spondyloarthritis.",
+     "from": "This brief pairs with Part I Low Back Pain Red Flags and Inflammatory Back Pain & Spondyloarthritis."
+    },
+    {
+     "claim": "This is the third member of the family and the one with no red flags.",
+     "from": "This is the third member of the family and the one with no red flags."
+    },
+    {
+     "claim": "The discriminator: any red flag, and is the neuro exam normal?",
+     "from": "The discriminator: any red flag, and is the neuro exam normal?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-lbp-acute",
+   "find": "When a stem spends most of its sentences on what the patient <i>doesn't</i> have, it is building a case for <b>doing less</b>. A dense list of pertinent negatives is permission for conservative management.",
+   "with": "When most of the history describes findings the patient does not have, it supports <b>doing less</b>. A dense list of pertinent negatives permits conservative management.",
+   "note": "voice: rule; stem framing removed",
+   "claims": [
+    {
+     "claim": "When a stem spends most of its sentences on what the patient doesn't have, it builds a case for doing less.",
+     "to": "When most of the history describes findings the patient does not have, it supports doing less."
+    },
+    {
+     "claim": "A dense list of pertinent negatives is permission for conservative management.",
+     "to": "A dense list of pertinent negatives permits conservative management."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a stem spends most of its sentences on what the patient doesn't have, it builds a case for doing less.",
+     "from": "When a stem spends most of its sentences on what the patient doesn't have, it builds a case for doing less."
+    },
+    {
+     "claim": "A dense list of pertinent negatives is permission for conservative management.",
+     "from": "A dense list of pertinent negatives is permission for conservative management."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-synovitis-mgmt",
+   "find": "<p>In this source case, the <b>ultrasound has shown a small effusion</b>, and the child appears well with <b>no trauma and no bony tenderness</b>. The available facts support symptom treatment with <b>ibuprofen</b>. Before adding another imaging study, identify a remaining question that would change management; a completed ultrasound does not exclude every indication for another modality.</p>\n<p><b>Laboratory results are pending in this source case</b>. The supplied clinical picture supports the keyed next step while those results are unavailable. This does not make pending laboratory results irrelevant in every limping child; interpret them with the course and examination when available.</p>",
+   "with": "<p>In this case, the <b>ultrasound has shown a small effusion</b>, and the child appears well with <b>no trauma and no bony tenderness</b>. These findings support symptom treatment with <b>ibuprofen</b>. Before adding another imaging study, identify a remaining question that would change management. A completed ultrasound does not exclude every indication for another modality.</p>\n<p><b>Laboratory results are pending in this case</b>. The clinical picture supports symptom treatment while those results are unavailable. This does not make pending laboratory results irrelevant in every limping child. Interpret them with the course and examination when available.</p>",
+   "note": "voice: dp; workflow wording (source case, keyed) removed, split",
+   "reworded_bold": [
+    "Laboratory results are pending in this source case"
+   ],
+   "claims": [
+    {
+     "claim": "The ultrasound has shown a small effusion.",
+     "to": "In this case, the ultrasound has shown a small effusion, and the child appears well with no trauma and no bony tenderness."
+    },
+    {
+     "claim": "The child appears well.",
+     "to": "In this case, the ultrasound has shown a small effusion, and the child appears well with no trauma and no bony tenderness."
+    },
+    {
+     "claim": "There is no trauma and no bony tenderness.",
+     "to": "In this case, the ultrasound has shown a small effusion, and the child appears well with no trauma and no bony tenderness."
+    },
+    {
+     "claim": "The available facts support symptom treatment with ibuprofen.",
+     "to": "These findings support symptom treatment with ibuprofen."
+    },
+    {
+     "claim": "Before adding another imaging study, identify a remaining question that would change management.",
+     "to": "Before adding another imaging study, identify a remaining question that would change management."
+    },
+    {
+     "claim": "A completed ultrasound does not exclude every indication for another modality.",
+     "to": "A completed ultrasound does not exclude every indication for another modality."
+    },
+    {
+     "claim": "Laboratory results are pending in this case.",
+     "to": "Laboratory results are pending in this case."
+    },
+    {
+     "claim": "The supplied clinical picture supports the keyed next step while those results are unavailable.",
+     "to": "The clinical picture supports symptom treatment while those results are unavailable."
+    },
+    {
+     "claim": "This does not make pending laboratory results irrelevant in every limping child.",
+     "to": "This does not make pending laboratory results irrelevant in every limping child."
+    },
+    {
+     "claim": "Interpret pending results with the course and examination when available.",
+     "to": "Interpret them with the course and examination when available."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The ultrasound has shown a small effusion.",
+     "from": "The ultrasound has shown a small effusion."
+    },
+    {
+     "claim": "The child appears well.",
+     "from": "The child appears well."
+    },
+    {
+     "claim": "There is no trauma and no bony tenderness.",
+     "from": "There is no trauma and no bony tenderness."
+    },
+    {
+     "claim": "The available facts support symptom treatment with ibuprofen.",
+     "from": "The available facts support symptom treatment with ibuprofen."
+    },
+    {
+     "claim": "Before adding another imaging study, identify a remaining question that would change management.",
+     "from": "Before adding another imaging study, identify a remaining question that would change management."
+    },
+    {
+     "claim": "A completed ultrasound does not exclude every indication for another modality.",
+     "from": "A completed ultrasound does not exclude every indication for another modality."
+    },
+    {
+     "claim": "Laboratory results are pending in this case.",
+     "from": "Laboratory results are pending in this case."
+    },
+    {
+     "claim": "The supplied clinical picture supports the keyed next step while those results are unavailable.",
+     "from": "The supplied clinical picture supports the keyed next step while those results are unavailable."
+    },
+    {
+     "claim": "This does not make pending laboratory results irrelevant in every limping child.",
+     "from": "This does not make pending laboratory results irrelevant in every limping child."
+    },
+    {
+     "claim": "Interpret pending results with the course and examination when available.",
+     "from": "Interpret pending results with the course and examination when available."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-synovitis-mgmt",
+   "find": "Fever &gt;38.5 <b>no</b> · non-weight-bearing <b>no</b> (he walks with a limp) · ESR &gt;40 <b>pending</b> · WBC &gt;12,000 <b>pending</b>. Two known criteria negative; even if both pending values returned positive that's 2/4 — below the aspiration threshold. <span class=\"ex\">Kocher is clinic-ledger — not stated in the bank explanation for either this or the septic-arthritis stem.</span>",
+   "with": "Fever &gt;38.5 <b>no</b> · non-weight-bearing <b>no</b> (he walks with a limp) · <b>ESR</b> (erythrocyte sedimentation rate) &gt;40 <b>pending</b> · <b>WBC</b> (white blood cell count) &gt;12,000 <b>pending</b>. Two known criteria are negative. Even if both pending values returned positive, the score would be 2/4, below the aspiration threshold.",
+   "note": "voice: Kocher pearls; provenance note removed, ESR/WBC expanded",
+   "claims": [
+    {
+     "claim": "Fever over 38.5: no.",
+     "to": "Fever >38.5 no"
+    },
+    {
+     "claim": "Non-weight-bearing: no; he walks with a limp.",
+     "to": "non-weight-bearing no (he walks with a limp)"
+    },
+    {
+     "claim": "ESR over 40: pending.",
+     "to": "ESR (erythrocyte sedimentation rate) >40 pending"
+    },
+    {
+     "claim": "WBC over 12,000: pending.",
+     "to": "WBC (white blood cell count) >12,000 pending."
+    },
+    {
+     "claim": "Two known criteria are negative.",
+     "to": "Two known criteria are negative."
+    },
+    {
+     "claim": "Even if both pending values returned positive that's 2/4, below the aspiration threshold.",
+     "to": "Even if both pending values returned positive, the score would be 2/4, below the aspiration threshold."
+    },
+    {
+     "claim": "Provenance note: the scoring rule comes from clinical practice and is not in the source explanation.",
+     "dropped": "internal provenance note about the source, not a clinical claim"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Fever over 38.5: no.",
+     "from": "Fever over 38.5: no."
+    },
+    {
+     "claim": "Non-weight-bearing: no; he walks with a limp.",
+     "from": "Non-weight-bearing: no; he walks with a limp."
+    },
+    {
+     "claim": "ESR over 40: pending.",
+     "from": "ESR over 40: pending."
+    },
+    {
+     "claim": "WBC over 12,000: pending.",
+     "from": "WBC over 12,000: pending."
+    },
+    {
+     "claim": "Two known criteria are negative.",
+     "from": "Two known criteria are negative."
+    },
+    {
+     "claim": "Even if both pending values returned positive that's 2/4, below the aspiration threshold.",
+     "from": "Even if both pending values returned positive that's 2/4, below the aspiration threshold."
+    },
+    {
+     "claim": "ESR stands for erythrocyte sedimentation rate.",
+     "from": "expansion"
+    },
+    {
+     "claim": "WBC stands for white blood cell count.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-synovitis-mgmt",
+   "find": "Fever → septic pathway · refuses to bear weight → Kocher climbs · <b>point tenderness over bone</b> → osteomyelitis → MRI · <b>not resolving past 1–2 weeks</b> ⚠︎ → Legg-Calvé-Perthes → X-ray · age 10–16 → SCFE → frog-leg lateral · night pain, bruising, weight loss → CBC with smear.",
+   "with": "Fever → septic pathway · refuses to bear weight → Kocher score rises · <b>point tenderness over bone</b> suggests osteomyelitis → <b>MRI</b> (magnetic resonance imaging) · <b>not resolving past 1–2 weeks</b> ⚠︎ suggests Legg-Calvé-Perthes → X-ray · age 10–16 suggests <b>SCFE</b> (slipped capital femoral epiphysis) → frog-leg lateral · night pain, bruising, weight loss → <b>CBC</b> (complete blood count) with smear.",
+   "note": "voice: exit ramps; one arrow per row, MRI/SCFE/CBC expanded",
+   "claims": [
+    {
+     "claim": "Fever leads to the septic pathway.",
+     "to": "Fever → septic pathway"
+    },
+    {
+     "claim": "Refusing to bear weight raises the Kocher score.",
+     "to": "refuses to bear weight → Kocher score rises"
+    },
+    {
+     "claim": "Point tenderness over bone points to osteomyelitis, imaged with MRI.",
+     "to": "point tenderness over bone suggests osteomyelitis → MRI (magnetic resonance imaging)"
+    },
+    {
+     "claim": "Not resolving past 1 to 2 weeks points to Legg-Calvé-Perthes, imaged with X-ray.",
+     "to": "not resolving past 1–2 weeks ⚠︎ suggests Legg-Calvé-Perthes → X-ray"
+    },
+    {
+     "claim": "Age 10 to 16 points to SCFE, imaged with a frog-leg lateral.",
+     "to": "age 10–16 suggests SCFE (slipped capital femoral epiphysis) → frog-leg lateral"
+    },
+    {
+     "claim": "Night pain, bruising and weight loss call for a CBC with smear.",
+     "to": "night pain, bruising, weight loss → CBC (complete blood count) with smear."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Fever leads to the septic pathway.",
+     "from": "Fever leads to the septic pathway."
+    },
+    {
+     "claim": "Refusing to bear weight raises the Kocher score.",
+     "from": "Refusing to bear weight raises the Kocher score."
+    },
+    {
+     "claim": "Point tenderness over bone points to osteomyelitis, imaged with MRI.",
+     "from": "Point tenderness over bone points to osteomyelitis, imaged with MRI."
+    },
+    {
+     "claim": "Not resolving past 1 to 2 weeks points to Legg-Calvé-Perthes, imaged with X-ray.",
+     "from": "Not resolving past 1 to 2 weeks points to Legg-Calvé-Perthes, imaged with X-ray."
+    },
+    {
+     "claim": "Age 10 to 16 points to SCFE, imaged with a frog-leg lateral.",
+     "from": "Age 10 to 16 points to SCFE, imaged with a frog-leg lateral."
+    },
+    {
+     "claim": "Night pain, bruising and weight loss call for a CBC with smear.",
+     "from": "Night pain, bruising and weight loss call for a CBC with smear."
+    },
+    {
+     "claim": "MRI stands for magnetic resonance imaging.",
+     "from": "expansion"
+    },
+    {
+     "claim": "SCFE stands for slipped capital femoral epiphysis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CBC stands for complete blood count.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-synovitis-mgmt",
+   "find": "\"Post-viral limp = ibuprofen, not imaging\" is an <b>outcome</b>, not a discriminator — and it fails on bank item 1, where a post-viral limp with fever is septic arthritis. Store the question instead: <b>\"Is he toxic, and has the joint already been imaged?\"</b>",
+   "with": "\"Post-viral limp = ibuprofen, not imaging\" is an <b>outcome</b>, not a discriminator. It fails on bank item 1, where a post-viral limp with fever is septic arthritis. Ask instead: <b>\"Is he toxic, and has the joint already been imaged?\"</b>",
+   "note": "voice: mnemonic warning; em dash removed, split",
+   "claims": [
+    {
+     "claim": "\"Post-viral limp = ibuprofen, not imaging\" is an outcome, not a discriminator.",
+     "to": "\"Post-viral limp = ibuprofen, not imaging\" is an outcome, not a discriminator."
+    },
+    {
+     "claim": "It fails on bank item 1, where a post-viral limp with fever is septic arthritis.",
+     "to": "It fails on bank item 1, where a post-viral limp with fever is septic arthritis."
+    },
+    {
+     "claim": "Store the question instead: is he toxic, and has the joint already been imaged?",
+     "to": "Ask instead: \"Is he toxic, and has the joint already been imaged?\""
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "\"Post-viral limp = ibuprofen, not imaging\" is an outcome, not a discriminator.",
+     "from": "\"Post-viral limp = ibuprofen, not imaging\" is an outcome, not a discriminator."
+    },
+    {
+     "claim": "It fails on bank item 1, where a post-viral limp with fever is septic arthritis.",
+     "from": "It fails on bank item 1, where a post-viral limp with fever is septic arthritis."
+    },
+    {
+     "claim": "Store the question instead: is he toxic, and has the joint already been imaged?",
+     "from": "Store the question instead: is he toxic, and has the joint already been imaged?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-synovitis-mgmt",
+   "find": "Part I <b>Transient Synovitis <span class=\"tag t-peds\">Mirror twin</span></b> and <b>Septic Arthritis of the Hip</b>. Part I settles <i>which disease</i>; this settles <i>what to do</i>.",
+   "with": "Part I <b>Transient Synovitis <span class=\"tag t-peds\">Mirror twin</span></b> and <b>Septic Arthritis of the Hip</b> cover <i>which disease</i> it is; this brief covers <i>what to do</i>.",
+   "note": "voice: pairs; settles to covers",
+   "claims": [
+    {
+     "claim": "Part I Transient Synovitis and Septic Arthritis of the Hip settle which disease.",
+     "to": "Part I Transient Synovitis Mirror twin and Septic Arthritis of the Hip cover which disease it is; this brief covers what to do."
+    },
+    {
+     "claim": "This brief settles what to do.",
+     "to": "Part I Transient Synovitis Mirror twin and Septic Arthritis of the Hip cover which disease it is; this brief covers what to do."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I Transient Synovitis and Septic Arthritis of the Hip settle which disease.",
+     "from": "Part I Transient Synovitis and Septic Arthritis of the Hip settle which disease."
+    },
+    {
+     "claim": "This brief settles what to do.",
+     "from": "This brief settles what to do."
+    }
+   ]
+  }
+ ]
+}

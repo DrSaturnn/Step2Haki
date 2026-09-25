@@ -1,0 +1,1396 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "Classify, then take the lowest unexhausted rung",
+   "with": "Classify the enuresis, then choose the lowest treatment tier not yet exhausted",
+   "note": "p.sub: plain wording",
+   "claims": [
+    {
+     "claim": "Classify first, then take the lowest tier not yet exhausted.",
+     "to": "Classify the enuresis, then choose the lowest treatment tier not yet exhausted"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Classify the enuresis, then choose the lowest treatment tier not yet exhausted.",
+     "from": "Classify first, then take the lowest tier not yet exhausted."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "<p>Two classification calls decide this before any option is worth reading: <b>primary</b> (\"never had a dry night\") and <b>monosymptomatic</b> (daytime-trained, no daytime symptoms). With a normal exam, normal UA, and normal glucose this is <b>maturational</b> — and <b>nothing has been tried yet</b>. First rung: <b>reassurance + education + motivational therapy</b>.</p>",
+   "with": "<p>Classify the enuresis first. It is <b>primary</b> (\"never had a dry night\") and <b>monosymptomatic</b> (daytime-trained, no daytime symptoms). With a normal exam, normal <b>UA</b> (urinalysis) and normal glucose, it is <b>maturational</b>. Because <b>nothing has been tried yet</b>, the first rung is <b>reassurance + education + motivational therapy</b>.</p>",
+   "note": ".dp: drop framing, em dash, expand UA",
+   "claims": [
+    {
+     "claim": "Two classification calls come first.",
+     "to": "Classify the enuresis first."
+    },
+    {
+     "claim": "The enuresis is primary (never had a dry night).",
+     "to": "It is primary (\"never had a dry night\") and monosymptomatic (daytime-trained, no daytime symptoms)."
+    },
+    {
+     "claim": "The enuresis is monosymptomatic (daytime-trained, no daytime symptoms).",
+     "to": "It is primary (\"never had a dry night\") and monosymptomatic (daytime-trained, no daytime symptoms)."
+    },
+    {
+     "claim": "With a normal exam, normal UA and normal glucose, it is maturational.",
+     "to": "With a normal exam, normal UA (urinalysis) and normal glucose, it is maturational."
+    },
+    {
+     "claim": "Nothing has been tried yet.",
+     "to": "Because nothing has been tried yet, the first rung is reassurance + education + motivational therapy."
+    },
+    {
+     "claim": "The first rung is reassurance + education + motivational therapy.",
+     "to": "Because nothing has been tried yet, the first rung is reassurance + education + motivational therapy."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Classify the enuresis first.",
+     "from": "Two classification calls come first."
+    },
+    {
+     "claim": "The enuresis is primary (never had a dry night).",
+     "from": "The enuresis is primary (never had a dry night)."
+    },
+    {
+     "claim": "The enuresis is monosymptomatic (daytime-trained, no daytime symptoms).",
+     "from": "The enuresis is monosymptomatic (daytime-trained, no daytime symptoms)."
+    },
+    {
+     "claim": "UA stands for urinalysis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "With a normal exam, normal UA and normal glucose, it is maturational.",
+     "from": "With a normal exam, normal UA and normal glucose, it is maturational."
+    },
+    {
+     "claim": "Nothing has been tried yet.",
+     "from": "Nothing has been tried yet."
+    },
+    {
+     "claim": "The first rung is reassurance + education + motivational therapy.",
+     "from": "The first rung is reassurance + education + motivational therapy."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "Durable cure + motivated family → <b>alarm</b>; fast and event-driven → <b>desmopressin</b>. The exam tests this choice separately.",
+   "with": "Choose the <b>alarm</b> for a durable cure in a motivated family; choose <b>desmopressin</b> for a fast, event-driven effect.",
+   "note": "pearls: plain sentence, drop exam meta",
+   "claims": [
+    {
+     "claim": "Durable cure in a motivated family favors the alarm.",
+     "to": "Choose the alarm for a durable cure in a motivated family; choose desmopressin for a fast, event-driven effect."
+    },
+    {
+     "claim": "A fast, event-driven need favors desmopressin.",
+     "to": "Choose the alarm for a durable cure in a motivated family; choose desmopressin for a fast, event-driven effect."
+    },
+    {
+     "claim": "The exam tests this choice separately.",
+     "dropped": "meta sentence about the exam, not a clinical fact"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Choose the alarm for a durable cure in a motivated family.",
+     "from": "Durable cure in a motivated family favors the alarm."
+    },
+    {
+     "claim": "Choose desmopressin for a fast, event-driven effect.",
+     "from": "A fast, event-driven need favors desmopressin."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "<b>Diagnostic gates:</b> age <b>≥5</b> to diagnose · <b>6 months</b> of prior dryness defines secondary · daytime symptoms define nonmonosymptomatic. <b>Escalation gate: 3–6 months</b> of failed tier 1. <span class=\"ex\">Age ≥5, the 6-month definition, and the 3–6 month trigger are in-context. The 14-dry-nights",
+   "with": "<b>Diagnostic gates:</b> age <b>≥5</b> to diagnose · <b>6 months</b> of prior dryness defines secondary · daytime symptoms define nonmonosymptomatic. <b>Escalation gate: 3–6 months</b> of failed tier 1. <span class=\"ex\">The 14-dry-nights",
+   "note": "pearls: delete provenance sentence (in-context tag); the gates themselves are unchanged",
+   "claims": [
+    {
+     "claim": "Age ≥5 is needed to diagnose enuresis.",
+     "to": "Diagnostic gates: age ≥5 to diagnose · 6 months of prior dryness defines secondary · daytime symptoms define nonmonosymptomatic."
+    },
+    {
+     "claim": "6 months of prior dryness defines secondary enuresis.",
+     "to": "Diagnostic gates: age ≥5 to diagnose · 6 months of prior dryness defines secondary · daytime symptoms define nonmonosymptomatic."
+    },
+    {
+     "claim": "Daytime symptoms define nonmonosymptomatic enuresis.",
+     "to": "Diagnostic gates: age ≥5 to diagnose · 6 months of prior dryness defines secondary · daytime symptoms define nonmonosymptomatic."
+    },
+    {
+     "claim": "The escalation gate is 3–6 months of failed tier 1.",
+     "to": "Escalation gate: 3–6 months of failed tier 1."
+    },
+    {
+     "claim": "The diagnostic age, the secondary definition and the escalation trigger are tagged in-context.",
+     "dropped": "provenance tag; the facts stay stated in the gates in this block"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Age ≥5 is needed to diagnose enuresis.",
+     "from": "Age ≥5 is needed to diagnose enuresis."
+    },
+    {
+     "claim": "6 months of prior dryness defines secondary enuresis.",
+     "from": "6 months of prior dryness defines secondary enuresis."
+    },
+    {
+     "claim": "Daytime symptoms define nonmonosymptomatic enuresis.",
+     "from": "Daytime symptoms define nonmonosymptomatic enuresis."
+    },
+    {
+     "claim": "The escalation gate is 3–6 months of failed tier 1.",
+     "from": "The escalation gate is 3–6 months of failed tier 1."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "Daytime symptoms → nonmono pathway (diary, uroflow; <b>treat constipation — often curative</b>) · recurrent UTIs → renal/bladder US ± VCUG · <b>weak stream or dribbling in a boy</b> → posterior urethral valves · sacral dimple, tuft, abnormal gait → <b>spinal dysraphism → MRI</b> · polyuria + polydipsia → DM/DI · growth failure or hypertension → renal disease · new onset after a stressor → screen for abuse.",
+   "with": "Daytime symptoms → nonmonosymptomatic pathway (diary, uroflow; <b>treat constipation, often curative</b>) · recurrent <b>UTIs</b> (urinary tract infections) → renal/bladder <b>US</b> (ultrasound) ± <b>VCUG</b> (voiding cystourethrogram) · <b>weak stream or dribbling in a boy</b> → posterior urethral valves · sacral dimple, tuft, abnormal gait → <b>spinal dysraphism</b>; obtain <b>MRI</b> (magnetic resonance imaging) · polyuria + polydipsia → <b>DM</b> (diabetes mellitus) or <b>DI</b> (diabetes insipidus) · growth failure or hypertension → renal disease · new onset after a stressor → screen for abuse.",
+   "note": "exit ramps: remove em dash, split two-arrow chain, expand acronyms",
+   "reworded_bold": [
+    "treat constipation — often curative",
+    "spinal dysraphism → MRI"
+   ],
+   "claims": [
+    {
+     "claim": "Daytime symptoms lead to the nonmonosymptomatic pathway (diary, uroflow).",
+     "to": "Daytime symptoms → nonmonosymptomatic pathway (diary, uroflow; treat constipation, often curative)"
+    },
+    {
+     "claim": "Treating constipation is often curative.",
+     "to": "Daytime symptoms → nonmonosymptomatic pathway (diary, uroflow; treat constipation, often curative)"
+    },
+    {
+     "claim": "Recurrent UTIs lead to renal/bladder US ± VCUG.",
+     "to": "recurrent UTIs (urinary tract infections) → renal/bladder US (ultrasound) ± VCUG (voiding cystourethrogram)"
+    },
+    {
+     "claim": "Weak stream or dribbling in a boy points to posterior urethral valves.",
+     "to": "weak stream or dribbling in a boy → posterior urethral valves"
+    },
+    {
+     "claim": "Sacral dimple, tuft, abnormal gait point to spinal dysraphism.",
+     "to": "sacral dimple, tuft, abnormal gait → spinal dysraphism; obtain MRI (magnetic resonance imaging)"
+    },
+    {
+     "claim": "Spinal dysraphism needs MRI.",
+     "to": "sacral dimple, tuft, abnormal gait → spinal dysraphism; obtain MRI (magnetic resonance imaging)"
+    },
+    {
+     "claim": "Polyuria + polydipsia point to DM/DI.",
+     "to": "polyuria + polydipsia → DM (diabetes mellitus) or DI (diabetes insipidus)"
+    },
+    {
+     "claim": "Growth failure or hypertension point to renal disease.",
+     "to": "growth failure or hypertension → renal disease"
+    },
+    {
+     "claim": "New onset after a stressor calls for screening for abuse.",
+     "to": "new onset after a stressor → screen for abuse."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Daytime symptoms lead to the nonmonosymptomatic pathway (diary, uroflow).",
+     "from": "Daytime symptoms lead to the nonmonosymptomatic pathway (diary, uroflow)."
+    },
+    {
+     "claim": "Treating constipation is often curative.",
+     "from": "Treating constipation is often curative."
+    },
+    {
+     "claim": "UTIs stands for urinary tract infections.",
+     "from": "expansion"
+    },
+    {
+     "claim": "US stands for ultrasound.",
+     "from": "expansion"
+    },
+    {
+     "claim": "VCUG stands for voiding cystourethrogram.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Recurrent UTIs lead to renal/bladder US ± VCUG.",
+     "from": "Recurrent UTIs lead to renal/bladder US ± VCUG."
+    },
+    {
+     "claim": "Weak stream or dribbling in a boy points to posterior urethral valves.",
+     "from": "Weak stream or dribbling in a boy points to posterior urethral valves."
+    },
+    {
+     "claim": "Sacral dimple, tuft, abnormal gait point to spinal dysraphism.",
+     "from": "Sacral dimple, tuft, abnormal gait point to spinal dysraphism."
+    },
+    {
+     "claim": "Obtain MRI for spinal dysraphism.",
+     "from": "Spinal dysraphism needs MRI."
+    },
+    {
+     "claim": "MRI stands for magnetic resonance imaging.",
+     "from": "expansion"
+    },
+    {
+     "claim": "DM stands for diabetes mellitus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "DI stands for diabetes insipidus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Polyuria + polydipsia point to DM or DI.",
+     "from": "Polyuria + polydipsia point to DM/DI."
+    },
+    {
+     "claim": "Growth failure or hypertension point to renal disease.",
+     "from": "Growth failure or hypertension point to renal disease."
+    },
+    {
+     "claim": "New onset after a stressor calls for screening for abuse.",
+     "from": "New onset after a stressor calls for screening for abuse."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "<b>Desmopressin</b>: <b>skipped tier</b>: correct tier-2 drug with zero months of tier 1 on the clock. <b>Fluid restriction after 2 pm</b>: <b>wrong parameter</b>: real intervention, wrong hour; evening moderation (~after 5 pm) with morning compensation is the advice, and 2 pm risks daytime dehydration. <b>Renal US</b>: <b>phantom indication</b>. <b>Urine culture</b>: <b>redundant workup</b>; UA already normal. <b>Decoy:</b> \"three siblings dry by age 3\" is parental-comparison bait — and a family history of enuresis actually <i>supports</i> the maturational diagnosis.",
+   "with": "<b>Desmopressin</b>: <b>skipped tier</b>; it is the correct tier-2 drug, but zero months of tier 1 have been tried. <b>Fluid restriction after 2 pm</b>: <b>wrong parameter</b>; the intervention is real but the hour is wrong. Advise evening moderation (~after 5 pm) with morning compensation; restriction from 2 pm risks daytime dehydration. <b>Renal US</b> (ultrasound): <b>no indication</b>. <b>Urine culture</b>: <b>redundant workup</b>; the <b>UA</b> (urinalysis) is already normal. <b>Decoy:</b> \"three siblings dry by age 3\" is a parental comparison meant to mislead. A family history of enuresis <i>supports</i> the maturational diagnosis.",
+   "note": "distractors: one colon per line, em dash removed, rhetorical 'phantom indication' reworded, acronyms expanded",
+   "reworded_bold": [
+    "phantom indication"
+   ],
+   "claims": [
+    {
+     "claim": "Desmopressin skips a tier.",
+     "to": "Desmopressin: skipped tier; it is the correct tier-2 drug, but zero months of tier 1 have been tried."
+    },
+    {
+     "claim": "Desmopressin is the correct tier-2 drug but zero months of tier 1 have passed.",
+     "to": "Desmopressin: skipped tier; it is the correct tier-2 drug, but zero months of tier 1 have been tried."
+    },
+    {
+     "claim": "Fluid restriction after 2 pm is the wrong parameter: real intervention, wrong hour.",
+     "to": "Fluid restriction after 2 pm: wrong parameter; the intervention is real but the hour is wrong."
+    },
+    {
+     "claim": "The advice is evening moderation (~after 5 pm) with morning compensation.",
+     "to": "Advise evening moderation (~after 5 pm) with morning compensation; restriction from 2 pm risks daytime dehydration."
+    },
+    {
+     "claim": "Restriction from 2 pm risks daytime dehydration.",
+     "to": "Advise evening moderation (~after 5 pm) with morning compensation; restriction from 2 pm risks daytime dehydration."
+    },
+    {
+     "claim": "Renal US has no real indication.",
+     "to": "Renal US (ultrasound): no indication."
+    },
+    {
+     "claim": "Urine culture is redundant workup because the UA is already normal.",
+     "to": "Urine culture: redundant workup; the UA (urinalysis) is already normal."
+    },
+    {
+     "claim": "Three siblings dry by age 3 is parental-comparison bait.",
+     "to": "Decoy: \"three siblings dry by age 3\" is a parental comparison meant to mislead."
+    },
+    {
+     "claim": "A family history of enuresis supports the maturational diagnosis.",
+     "to": "A family history of enuresis supports the maturational diagnosis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Desmopressin skips a tier.",
+     "from": "Desmopressin skips a tier."
+    },
+    {
+     "claim": "Desmopressin is the correct tier-2 drug but zero months of tier 1 have been tried.",
+     "from": "Desmopressin is the correct tier-2 drug but zero months of tier 1 have passed."
+    },
+    {
+     "claim": "Fluid restriction after 2 pm is the wrong parameter; the intervention is real but the hour is wrong.",
+     "from": "Fluid restriction after 2 pm is the wrong parameter: real intervention, wrong hour."
+    },
+    {
+     "claim": "Advise evening moderation (~after 5 pm) with morning compensation.",
+     "from": "The advice is evening moderation (~after 5 pm) with morning compensation."
+    },
+    {
+     "claim": "Restriction from 2 pm risks daytime dehydration.",
+     "from": "Restriction from 2 pm risks daytime dehydration."
+    },
+    {
+     "claim": "US stands for ultrasound.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Renal US has no indication.",
+     "from": "Renal US has no real indication."
+    },
+    {
+     "claim": "UA stands for urinalysis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Urine culture is redundant workup because the UA is already normal.",
+     "from": "Urine culture is redundant workup because the UA is already normal."
+    },
+    {
+     "claim": "Three siblings dry by age 3 is a parental comparison meant to mislead.",
+     "from": "Three siblings dry by age 3 is parental-comparison bait."
+    },
+    {
+     "claim": "A family history of enuresis supports the maturational diagnosis.",
+     "from": "A family history of enuresis supports the maturational diagnosis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "Desmopressin is an <b>ADH (V2) analog</b> — free-water retention is the mechanism of both its effect and its <b>hyponatremic seizures</b>. The alarm works by <b>conditioning</b>, which is why its cure survives discontinuation and desmopressin's doesn't. Imipramine kills in overdose via <b>Na⁺-channel blockade → wide-QRS arrhythmias</b> (treat with bicarbonate). <b>Constipation</b> impersonates bladder dysfunction — a distended rectum triggers detrusor overactivity.",
+   "with": "Desmopressin is an <b>ADH (V2) analog</b> (antidiuretic hormone analog). Free-water retention causes both its effect and its <b>hyponatremic seizures</b>. The alarm works by <b>conditioning</b>, so its cure survives discontinuation; desmopressin's does not. Imipramine kills in overdose via <b>Na⁺-channel blockade → wide-QRS arrhythmias</b> (treat with bicarbonate). <b>Constipation</b> mimics bladder dysfunction; a distended rectum triggers detrusor overactivity.",
+   "note": "paired pearls: remove em dashes and personification, expand ADH",
+   "claims": [
+    {
+     "claim": "Desmopressin is an ADH (V2) analog.",
+     "to": "Desmopressin is an ADH (V2) analog (antidiuretic hormone analog)."
+    },
+    {
+     "claim": "Free-water retention is the mechanism of both its effect and its hyponatremic seizures.",
+     "to": "Free-water retention causes both its effect and its hyponatremic seizures."
+    },
+    {
+     "claim": "The alarm works by conditioning.",
+     "to": "The alarm works by conditioning, so its cure survives discontinuation; desmopressin's does not."
+    },
+    {
+     "claim": "That is why the alarm's cure survives discontinuation and desmopressin's does not.",
+     "to": "The alarm works by conditioning, so its cure survives discontinuation; desmopressin's does not."
+    },
+    {
+     "claim": "Imipramine kills in overdose via Na⁺-channel blockade causing wide-QRS arrhythmias.",
+     "to": "Imipramine kills in overdose via Na⁺-channel blockade → wide-QRS arrhythmias (treat with bicarbonate)."
+    },
+    {
+     "claim": "Imipramine overdose is treated with bicarbonate.",
+     "to": "Imipramine kills in overdose via Na⁺-channel blockade → wide-QRS arrhythmias (treat with bicarbonate)."
+    },
+    {
+     "claim": "Constipation impersonates bladder dysfunction.",
+     "to": "Constipation mimics bladder dysfunction; a distended rectum triggers detrusor overactivity."
+    },
+    {
+     "claim": "A distended rectum triggers detrusor overactivity.",
+     "to": "Constipation mimics bladder dysfunction; a distended rectum triggers detrusor overactivity."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Desmopressin is an ADH (V2) analog.",
+     "from": "Desmopressin is an ADH (V2) analog."
+    },
+    {
+     "claim": "ADH stands for antidiuretic hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Free-water retention causes both its effect and its hyponatremic seizures.",
+     "from": "Free-water retention is the mechanism of both its effect and its hyponatremic seizures."
+    },
+    {
+     "claim": "The alarm works by conditioning.",
+     "from": "The alarm works by conditioning."
+    },
+    {
+     "claim": "So the alarm's cure survives discontinuation; desmopressin's does not.",
+     "from": "That is why the alarm's cure survives discontinuation and desmopressin's does not."
+    },
+    {
+     "claim": "Imipramine kills in overdose via Na⁺-channel blockade causing wide-QRS arrhythmias.",
+     "from": "Imipramine kills in overdose via Na⁺-channel blockade causing wide-QRS arrhythmias."
+    },
+    {
+     "claim": "Imipramine overdose is treated with bicarbonate.",
+     "from": "Imipramine overdose is treated with bicarbonate."
+    },
+    {
+     "claim": "Constipation mimics bladder dysfunction.",
+     "from": "Constipation impersonates bladder dysfunction."
+    },
+    {
+     "claim": "A distended rectum triggers detrusor overactivity.",
+     "from": "A distended rectum triggers detrusor overactivity."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "Part I <b>Nocturnal Enuresis</b> (secondary — dry ×1 year, now wetting → urinalysis). Same complaint, opposite classification, opposite answer. Store the discriminator: <b>\"Ever dry for 6 months?\"</b>",
+   "with": "Part I <b>Nocturnal Enuresis</b> covers secondary enuresis: dry ×1 year, now wetting → urinalysis. Ask: <b>\"Ever dry for 6 months?\"</b>",
+   "note": "pairs with: covers, remove em dash and rhythm contrast, Ask:",
+   "claims": [
+    {
+     "claim": "Part I Nocturnal Enuresis is the secondary case.",
+     "to": "Part I Nocturnal Enuresis covers secondary enuresis: dry ×1 year, now wetting → urinalysis."
+    },
+    {
+     "claim": "Its case is dry ×1 year, now wetting, managed with urinalysis.",
+     "to": "Part I Nocturnal Enuresis covers secondary enuresis: dry ×1 year, now wetting → urinalysis."
+    },
+    {
+     "claim": "Same complaint, opposite classification, opposite answer.",
+     "dropped": "paired contrast written for rhythm; the secondary classification and its urinalysis step are stated in the previous sentence"
+    },
+    {
+     "claim": "The discriminator is: ever dry for 6 months?",
+     "to": "Ask: \"Ever dry for 6 months?\""
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I Nocturnal Enuresis covers secondary enuresis.",
+     "from": "Part I Nocturnal Enuresis is the secondary case."
+    },
+    {
+     "claim": "Its case is dry ×1 year, now wetting, managed with urinalysis.",
+     "from": "Its case is dry ×1 year, now wetting, managed with urinalysis."
+    },
+    {
+     "claim": "Ask: ever dry for 6 months?",
+     "from": "The discriminator is: ever dry for 6 months?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "The stem's <b>completed actions and elapsed time set the tier</b>: a reported-normal workup kills every further-testing option, and an empty treatment history kills every escalation option. Classify, find the tier, then pick the <b>lowest rung not yet exhausted</b>.",
+   "with": "Set the tier by <b>what has already been done and for how long</b>. A workup already reported as normal means no further testing, and no treatment so far means no escalation. Classify, find the tier, then pick the <b>lowest rung not yet exhausted</b>.",
+   "note": "rule: drop stem framing and 'kills' wording",
+   "reworded_bold": [
+    "completed actions and elapsed time set the tier"
+   ],
+   "claims": [
+    {
+     "claim": "Completed actions and elapsed time set the tier.",
+     "to": "Set the tier by what has already been done and for how long."
+    },
+    {
+     "claim": "A reported-normal workup eliminates every further-testing option.",
+     "to": "A workup already reported as normal means no further testing, and no treatment so far means no escalation."
+    },
+    {
+     "claim": "An empty treatment history eliminates every escalation option.",
+     "to": "A workup already reported as normal means no further testing, and no treatment so far means no escalation."
+    },
+    {
+     "claim": "Classify, find the tier, then pick the lowest rung not yet exhausted.",
+     "to": "Classify, find the tier, then pick the lowest rung not yet exhausted."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Set the tier by what has already been done and for how long.",
+     "from": "Completed actions and elapsed time set the tier."
+    },
+    {
+     "claim": "A workup already reported as normal means no further testing.",
+     "from": "A reported-normal workup eliminates every further-testing option."
+    },
+    {
+     "claim": "No treatment so far means no escalation.",
+     "from": "An empty treatment history eliminates every escalation option."
+    },
+    {
+     "claim": "Classify, find the tier, then pick the lowest rung not yet exhausted.",
+     "from": "Classify, find the tier, then pick the lowest rung not yet exhausted."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nephritic",
+   "find": "<p>Two questions, in order. First, which nephritis: <b>hematuria with protein, hypertension, edema and a rising creatinine two weeks after a sore throat</b> is poststreptococcal glomerulonephritis. A <b>latent period of weeks</b>, not days, separates it from IgA nephropathy; no rash and a normal blood count set aside IgA vasculitis and HUS.</p>\n<p>Second, what the kidney needs. Inflamed glomeruli filter less, so the kidney <b>retains salt and water</b>, and the edema and hypertension both come from that volume. The first drug is a <b>loop diuretic</b>, with sodium and fluid restriction; saline, tempting for the oliguria, would worsen the overload. The disease is self-limited, so plasmapheresis has no role, and an ACE inhibitor is used with caution because it can raise potassium in AKI; if pressure stays high after diuresis, add a <b>calcium channel blocker</b>.</p>",
+   "with": "<p>The combination of <b>hematuria with protein, hypertension, edema and a rising creatinine two weeks after a sore throat</b> is poststreptococcal glomerulonephritis. A <b>latent period of weeks</b>, not days, separates it from IgA nephropathy. No rash and a normal blood count set aside IgA vasculitis and <b>HUS</b> (hemolytic uremic syndrome).</p>\n<p>Inflamed glomeruli filter less, so the kidney <b>retains salt and water</b>. The edema and hypertension both come from that volume. The first drug is a <b>loop diuretic</b>, with sodium and fluid restriction. Saline for the oliguria would worsen the overload. The disease is self-limited, so plasmapheresis has no role. Use an <b>ACE</b> (angiotensin-converting enzyme) inhibitor with caution, because it can raise potassium in <b>AKI</b> (acute kidney injury). If pressure stays high after diuresis, add a <b>calcium channel blocker</b>.</p>",
+   "note": ".dp: drop question framing, split sentences, expand acronyms",
+   "claims": [
+    {
+     "claim": "Two questions, in order: which nephritis, then what the kidney needs.",
+     "dropped": "framing about the question order; both answers are stated next"
+    },
+    {
+     "claim": "Hematuria with protein, hypertension, edema and a rising creatinine two weeks after a sore throat is poststreptococcal glomerulonephritis.",
+     "to": "The combination of hematuria with protein, hypertension, edema and a rising creatinine two weeks after a sore throat is poststreptococcal glomerulonephritis."
+    },
+    {
+     "claim": "A latent period of weeks, not days, separates it from IgA nephropathy.",
+     "to": "A latent period of weeks, not days, separates it from IgA nephropathy."
+    },
+    {
+     "claim": "No rash and a normal blood count set aside IgA vasculitis and HUS.",
+     "to": "No rash and a normal blood count set aside IgA vasculitis and HUS (hemolytic uremic syndrome)."
+    },
+    {
+     "claim": "Inflamed glomeruli filter less, so the kidney retains salt and water.",
+     "to": "Inflamed glomeruli filter less, so the kidney retains salt and water."
+    },
+    {
+     "claim": "The edema and hypertension both come from that volume.",
+     "to": "The edema and hypertension both come from that volume."
+    },
+    {
+     "claim": "The first drug is a loop diuretic, with sodium and fluid restriction.",
+     "to": "The first drug is a loop diuretic, with sodium and fluid restriction."
+    },
+    {
+     "claim": "Saline, tempting for the oliguria, would worsen the overload.",
+     "to": "Saline for the oliguria would worsen the overload."
+    },
+    {
+     "claim": "The disease is self-limited, so plasmapheresis has no role.",
+     "to": "The disease is self-limited, so plasmapheresis has no role."
+    },
+    {
+     "claim": "An ACE inhibitor is used with caution because it can raise potassium in AKI.",
+     "to": "Use an ACE (angiotensin-converting enzyme) inhibitor with caution, because it can raise potassium in AKI (acute kidney injury)."
+    },
+    {
+     "claim": "If pressure stays high after diuresis, add a calcium channel blocker.",
+     "to": "If pressure stays high after diuresis, add a calcium channel blocker."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hematuria with protein, hypertension, edema and a rising creatinine two weeks after a sore throat is poststreptococcal glomerulonephritis.",
+     "from": "Hematuria with protein, hypertension, edema and a rising creatinine two weeks after a sore throat is poststreptococcal glomerulonephritis."
+    },
+    {
+     "claim": "A latent period of weeks, not days, separates it from IgA nephropathy.",
+     "from": "A latent period of weeks, not days, separates it from IgA nephropathy."
+    },
+    {
+     "claim": "No rash and a normal blood count set aside IgA vasculitis and HUS.",
+     "from": "No rash and a normal blood count set aside IgA vasculitis and HUS."
+    },
+    {
+     "claim": "HUS stands for hemolytic uremic syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Inflamed glomeruli filter less, so the kidney retains salt and water.",
+     "from": "Inflamed glomeruli filter less, so the kidney retains salt and water."
+    },
+    {
+     "claim": "The edema and hypertension both come from that volume.",
+     "from": "The edema and hypertension both come from that volume."
+    },
+    {
+     "claim": "The first drug is a loop diuretic, with sodium and fluid restriction.",
+     "from": "The first drug is a loop diuretic, with sodium and fluid restriction."
+    },
+    {
+     "claim": "Saline for the oliguria would worsen the overload.",
+     "from": "Saline, tempting for the oliguria, would worsen the overload."
+    },
+    {
+     "claim": "The disease is self-limited, so plasmapheresis has no role.",
+     "from": "The disease is self-limited, so plasmapheresis has no role."
+    },
+    {
+     "claim": "Use an ACE inhibitor with caution because it can raise potassium in AKI.",
+     "from": "An ACE inhibitor is used with caution because it can raise potassium in AKI."
+    },
+    {
+     "claim": "ACE stands for angiotensin-converting enzyme.",
+     "from": "expansion"
+    },
+    {
+     "claim": "AKI stands for acute kidney injury.",
+     "from": "expansion"
+    },
+    {
+     "claim": "If pressure stays high after diuresis, add a calcium channel blocker.",
+     "from": "If pressure stays high after diuresis, add a calcium channel blocker."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nephritic",
+   "find": "ACE inhibitors only with caution in AKI because of hyperkalemia",
+   "with": "<b>ACE</b> (angiotensin-converting enzyme) inhibitors only with caution in <b>AKI</b> (acute kidney injury) because of hyperkalemia",
+   "note": "management ladder: expand acronyms",
+   "claims": [
+    {
+     "claim": "ACE inhibitors are used only with caution in AKI because of hyperkalemia.",
+     "to": "ACE (angiotensin-converting enzyme) inhibitors only with caution in AKI (acute kidney injury) because of hyperkalemia"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "ACE inhibitors are used only with caution in AKI because of hyperkalemia.",
+     "from": "ACE inhibitors are used only with caution in AKI because of hyperkalemia."
+    },
+    {
+     "claim": "ACE stands for angiotensin-converting enzyme.",
+     "from": "expansion"
+    },
+    {
+     "claim": "AKI stands for acute kidney injury.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nephritic",
+   "find": "The interval decides the lesion: <b>days</b> after a URI is IgA nephropathy, <b>weeks</b> after pharyngitis or impetigo is PSGN &middot; A C3 that has not recovered by 8 weeks is the trigger for biopsy, looking for MPGN or lupus",
+   "with": "Nephritis <b>days</b> after a <b>URI</b> (upper respiratory infection) is IgA nephropathy; nephritis <b>weeks</b> after pharyngitis or impetigo is <b>PSGN</b> (poststreptococcal glomerulonephritis) &middot; A C3 that has not recovered by 8 weeks triggers a biopsy to look for <b>MPGN</b> (membranoproliferative glomerulonephritis) or lupus",
+   "note": "pearls: drop personification, expand acronyms",
+   "claims": [
+    {
+     "claim": "The interval after infection decides the lesion.",
+     "to": "Nephritis days after a URI (upper respiratory infection) is IgA nephropathy; nephritis weeks after pharyngitis or impetigo is PSGN (poststreptococcal glomerulonephritis)"
+    },
+    {
+     "claim": "Days after a URI is IgA nephropathy.",
+     "to": "Nephritis days after a URI (upper respiratory infection) is IgA nephropathy; nephritis weeks after pharyngitis or impetigo is PSGN (poststreptococcal glomerulonephritis)"
+    },
+    {
+     "claim": "Weeks after pharyngitis or impetigo is PSGN.",
+     "to": "Nephritis days after a URI (upper respiratory infection) is IgA nephropathy; nephritis weeks after pharyngitis or impetigo is PSGN (poststreptococcal glomerulonephritis)"
+    },
+    {
+     "claim": "A C3 that has not recovered by 8 weeks is the trigger for biopsy.",
+     "to": "A C3 that has not recovered by 8 weeks triggers a biopsy to look for MPGN (membranoproliferative glomerulonephritis) or lupus"
+    },
+    {
+     "claim": "The biopsy looks for MPGN or lupus.",
+     "to": "A C3 that has not recovered by 8 weeks triggers a biopsy to look for MPGN (membranoproliferative glomerulonephritis) or lupus"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Nephritis days after a URI is IgA nephropathy.",
+     "from": "Days after a URI is IgA nephropathy."
+    },
+    {
+     "claim": "URI stands for upper respiratory infection.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Nephritis weeks after pharyngitis or impetigo is PSGN.",
+     "from": "Weeks after pharyngitis or impetigo is PSGN."
+    },
+    {
+     "claim": "PSGN stands for poststreptococcal glomerulonephritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A C3 that has not recovered by 8 weeks triggers a biopsy.",
+     "from": "A C3 that has not recovered by 8 weeks is the trigger for biopsy."
+    },
+    {
+     "claim": "The biopsy looks for MPGN or lupus.",
+     "from": "The biopsy looks for MPGN or lupus."
+    },
+    {
+     "claim": "MPGN stands for membranoproliferative glomerulonephritis.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nephritic",
+   "find": "Part I <b>Nephrotic Syndrome in a Child</b> is the mirror: protein without red cells, normal pressure and creatinine. Part I <b>Hematuria</b> owns the glomerular versus non-glomerular split. Part I <b>NSAID Prerenal AKI in a Child</b> is the AKI that does need fluids. Aquifer <b>Bruising and Purpura in a Child</b> owns IgA vasculitis, and Part I <b>Anemia with Thrombocytopenia</b> owns HUS. Store the discriminator as a question: how long since the infection, and is the C3 low?  Aquifer <b>Child with Puffy Eyes</b> starts one step earlier: is the swelling local to the eye, and does the urine show protein alone or blood? Part II <b>Incidental Proteinuria in a Well Child</b> covers protein on a routine dipstick in a child with no symptoms.",
+   "with": "Part I <b>Nephrotic Syndrome in a Child</b> covers the contrasting picture: protein without red cells, with normal pressure and creatinine. Part I <b>Hematuria</b> covers the glomerular versus non-glomerular split. Part I <b>NSAID Prerenal AKI in a Child</b> covers the AKI (acute kidney injury) that does need fluids. Aquifer <b>Bruising and Purpura in a Child</b> covers IgA vasculitis, and Part I <b>Anemia with Thrombocytopenia</b> covers HUS (hemolytic uremic syndrome). Ask: how long since the infection, and is the C3 low? Aquifer <b>Child with Puffy Eyes</b> starts one step earlier: is the swelling local to the eye, and does the urine show protein alone or blood? Part II <b>Incidental Proteinuria in a Well Child</b> covers protein on a routine dipstick in a child with no symptoms.",
+   "note": "pairs with: owns -> covers, Ask:, expand AKI and HUS",
+   "claims": [
+    {
+     "claim": "Nephrotic Syndrome in a Child is the mirror: protein without red cells, normal pressure and creatinine.",
+     "to": "Part I Nephrotic Syndrome in a Child covers the contrasting picture: protein without red cells, with normal pressure and creatinine."
+    },
+    {
+     "claim": "Hematuria covers the glomerular versus non-glomerular split.",
+     "to": "Part I Hematuria covers the glomerular versus non-glomerular split."
+    },
+    {
+     "claim": "NSAID Prerenal AKI in a Child is the AKI that does need fluids.",
+     "to": "Part I NSAID Prerenal AKI in a Child covers the AKI (acute kidney injury) that does need fluids."
+    },
+    {
+     "claim": "Bruising and Purpura in a Child covers IgA vasculitis.",
+     "to": "Aquifer Bruising and Purpura in a Child covers IgA vasculitis, and Part I Anemia with Thrombocytopenia covers HUS (hemolytic uremic syndrome)."
+    },
+    {
+     "claim": "Anemia with Thrombocytopenia covers HUS.",
+     "to": "Aquifer Bruising and Purpura in a Child covers IgA vasculitis, and Part I Anemia with Thrombocytopenia covers HUS (hemolytic uremic syndrome)."
+    },
+    {
+     "claim": "The discriminator: how long since the infection, and is the C3 low?",
+     "to": "Ask: how long since the infection, and is the C3 low?"
+    },
+    {
+     "claim": "Child with Puffy Eyes starts one step earlier: is the swelling local to the eye, and does the urine show protein alone or blood?",
+     "to": "Aquifer Child with Puffy Eyes starts one step earlier: is the swelling local to the eye, and does the urine show protein alone or blood?"
+    },
+    {
+     "claim": "Incidental Proteinuria in a Well Child covers protein on a routine dipstick in a child with no symptoms.",
+     "to": "Part II Incidental Proteinuria in a Well Child covers protein on a routine dipstick in a child with no symptoms."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Nephrotic Syndrome in a Child covers the contrasting picture: protein without red cells, normal pressure and creatinine.",
+     "from": "Nephrotic Syndrome in a Child is the mirror: protein without red cells, normal pressure and creatinine."
+    },
+    {
+     "claim": "Hematuria covers the glomerular versus non-glomerular split.",
+     "from": "Hematuria covers the glomerular versus non-glomerular split."
+    },
+    {
+     "claim": "NSAID Prerenal AKI in a Child covers the AKI that does need fluids.",
+     "from": "NSAID Prerenal AKI in a Child is the AKI that does need fluids."
+    },
+    {
+     "claim": "AKI stands for acute kidney injury.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Bruising and Purpura in a Child covers IgA vasculitis.",
+     "from": "Bruising and Purpura in a Child covers IgA vasculitis."
+    },
+    {
+     "claim": "Anemia with Thrombocytopenia covers HUS.",
+     "from": "Anemia with Thrombocytopenia covers HUS."
+    },
+    {
+     "claim": "HUS stands for hemolytic uremic syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Ask: how long since the infection, and is the C3 low?",
+     "from": "The discriminator: how long since the infection, and is the C3 low?"
+    },
+    {
+     "claim": "Child with Puffy Eyes starts one step earlier: is the swelling local to the eye, and does the urine show protein alone or blood?",
+     "from": "Child with Puffy Eyes starts one step earlier: is the swelling local to the eye, and does the urine show protein alone or blood?"
+    },
+    {
+     "claim": "Incidental Proteinuria in a Well Child covers protein on a routine dipstick in a child with no symptoms.",
+     "from": "Incidental Proteinuria in a Well Child covers protein on a routine dipstick in a child with no symptoms."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nephritic",
+   "find": "In a child with AKI, decide whether the kidney needs volume given or volume removed before choosing a drug: edema with hypertension means overload, so the loop diuretic comes first and saline is harmful.",
+   "with": "In a child with <b>AKI</b> (acute kidney injury), decide whether the kidney needs volume given or volume removed before choosing a drug. Edema with hypertension means overload, so the loop diuretic comes first and saline is harmful.",
+   "note": "rule: split sentence, expand AKI",
+   "claims": [
+    {
+     "claim": "In a child with AKI, decide whether the kidney needs volume given or removed before choosing a drug.",
+     "to": "In a child with AKI (acute kidney injury), decide whether the kidney needs volume given or volume removed before choosing a drug."
+    },
+    {
+     "claim": "Edema with hypertension means overload.",
+     "to": "Edema with hypertension means overload, so the loop diuretic comes first and saline is harmful."
+    },
+    {
+     "claim": "The loop diuretic comes first and saline is harmful.",
+     "to": "Edema with hypertension means overload, so the loop diuretic comes first and saline is harmful."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In a child with AKI, decide whether the kidney needs volume given or removed before choosing a drug.",
+     "from": "In a child with AKI, decide whether the kidney needs volume given or removed before choosing a drug."
+    },
+    {
+     "claim": "AKI stands for acute kidney injury.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Edema with hypertension means overload.",
+     "from": "Edema with hypertension means overload."
+    },
+    {
+     "claim": "The loop diuretic comes first and saline is harmful.",
+     "from": "The loop diuretic comes first and saline is harmful."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nephritic",
+   "find": "Plasmapheresis treats antibody-mediated anti-GBM disease; PSGN is immune-complex and self-limited.",
+   "with": "Plasmapheresis treats antibody-mediated anti-<b>GBM</b> (glomerular basement membrane) disease; <b>PSGN</b> (poststreptococcal glomerulonephritis) is immune-complex and self-limited.",
+   "note": "traps: expand acronyms",
+   "claims": [
+    {
+     "claim": "Plasmapheresis treats antibody-mediated anti-GBM disease.",
+     "to": "Plasmapheresis treats antibody-mediated anti-GBM (glomerular basement membrane) disease; PSGN (poststreptococcal glomerulonephritis) is immune-complex and self-limited."
+    },
+    {
+     "claim": "PSGN is immune-complex and self-limited.",
+     "to": "Plasmapheresis treats antibody-mediated anti-GBM (glomerular basement membrane) disease; PSGN (poststreptococcal glomerulonephritis) is immune-complex and self-limited."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Plasmapheresis treats antibody-mediated anti-GBM disease.",
+     "from": "Plasmapheresis treats antibody-mediated anti-GBM disease."
+    },
+    {
+     "claim": "GBM stands for glomerular basement membrane.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PSGN is immune-complex and self-limited.",
+     "from": "PSGN is immune-complex and self-limited."
+    },
+    {
+     "claim": "PSGN stands for poststreptococcal glomerulonephritis.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nephritic",
+   "find": "Lisinopril lowers pressure but risks hyperkalemia in AKI; diuresis",
+   "with": "Lisinopril lowers pressure but risks hyperkalemia in <b>AKI</b> (acute kidney injury); diuresis",
+   "note": "traps: expand AKI",
+   "claims": [
+    {
+     "claim": "Lisinopril lowers pressure but risks hyperkalemia in AKI.",
+     "to": "Lisinopril lowers pressure but risks hyperkalemia in AKI (acute kidney injury); diuresis comes first, then a calcium channel blocker."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Lisinopril lowers pressure but risks hyperkalemia in AKI.",
+     "from": "Lisinopril lowers pressure but risks hyperkalemia in AKI."
+    },
+    {
+     "claim": "AKI stands for acute kidney injury.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "The hypertension fits, from renin secretion or compression of the renal vessels.</p>\n<p>The nearest mimic is neuroblastoma, which also causes hypertension, through catecholamines. It arises from neural crest in the <b>adrenal</b> or sympathetic chain, displaces the kidney rather than growing inside it, usually presents <b>before age 2</b>, and may cross the midline. Pheochromocytoma is also adrenal and announces itself with episodes of headache, sweating and palpitations.</p>",
+   "with": "The hypertension fits Wilms tumor and comes from renin secretion or compression of the renal vessels.</p>\n<p>Neuroblastoma is the nearest mimic and also causes hypertension, through catecholamines. It arises from neural crest in the <b>adrenal</b> or sympathetic chain and displaces the kidney rather than growing inside it. It usually presents <b>before age 2</b> and may cross the midline. Pheochromocytoma is also adrenal and presents with episodes of headache, sweating and palpitations.</p>",
+   "note": ".dp: split long sentence, drop personification",
+   "claims": [
+    {
+     "claim": "The hypertension fits Wilms tumor.",
+     "to": "The hypertension fits Wilms tumor and comes from renin secretion or compression of the renal vessels."
+    },
+    {
+     "claim": "The hypertension comes from renin secretion or compression of the renal vessels.",
+     "to": "The hypertension fits Wilms tumor and comes from renin secretion or compression of the renal vessels."
+    },
+    {
+     "claim": "The nearest mimic is neuroblastoma.",
+     "to": "Neuroblastoma is the nearest mimic and also causes hypertension, through catecholamines."
+    },
+    {
+     "claim": "Neuroblastoma also causes hypertension, through catecholamines.",
+     "to": "Neuroblastoma is the nearest mimic and also causes hypertension, through catecholamines."
+    },
+    {
+     "claim": "Neuroblastoma arises from neural crest in the adrenal or sympathetic chain.",
+     "to": "It arises from neural crest in the adrenal or sympathetic chain and displaces the kidney rather than growing inside it."
+    },
+    {
+     "claim": "Neuroblastoma displaces the kidney rather than growing inside it.",
+     "to": "It arises from neural crest in the adrenal or sympathetic chain and displaces the kidney rather than growing inside it."
+    },
+    {
+     "claim": "Neuroblastoma usually presents before age 2.",
+     "to": "It usually presents before age 2 and may cross the midline."
+    },
+    {
+     "claim": "Neuroblastoma may cross the midline.",
+     "to": "It usually presents before age 2 and may cross the midline."
+    },
+    {
+     "claim": "Pheochromocytoma is also adrenal.",
+     "to": "Pheochromocytoma is also adrenal and presents with episodes of headache, sweating and palpitations."
+    },
+    {
+     "claim": "Pheochromocytoma announces itself with episodes of headache, sweating and palpitations.",
+     "to": "Pheochromocytoma is also adrenal and presents with episodes of headache, sweating and palpitations."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The hypertension fits Wilms tumor.",
+     "from": "The hypertension fits Wilms tumor."
+    },
+    {
+     "claim": "The hypertension comes from renin secretion or compression of the renal vessels.",
+     "from": "The hypertension comes from renin secretion or compression of the renal vessels."
+    },
+    {
+     "claim": "Neuroblastoma is the nearest mimic.",
+     "from": "The nearest mimic is neuroblastoma."
+    },
+    {
+     "claim": "Neuroblastoma also causes hypertension, through catecholamines.",
+     "from": "Neuroblastoma also causes hypertension, through catecholamines."
+    },
+    {
+     "claim": "Neuroblastoma arises from neural crest in the adrenal or sympathetic chain.",
+     "from": "Neuroblastoma arises from neural crest in the adrenal or sympathetic chain."
+    },
+    {
+     "claim": "Neuroblastoma displaces the kidney rather than growing inside it.",
+     "from": "Neuroblastoma displaces the kidney rather than growing inside it."
+    },
+    {
+     "claim": "Neuroblastoma usually presents before age 2.",
+     "from": "Neuroblastoma usually presents before age 2."
+    },
+    {
+     "claim": "Neuroblastoma may cross the midline.",
+     "from": "Neuroblastoma may cross the midline."
+    },
+    {
+     "claim": "Pheochromocytoma is also adrenal.",
+     "from": "Pheochromocytoma is also adrenal."
+    },
+    {
+     "claim": "Pheochromocytoma presents with episodes of headache, sweating and palpitations.",
+     "from": "Pheochromocytoma announces itself with episodes of headache, sweating and palpitations."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "Wilms tumor is treated with <b>excision</b> plus chemotherapy, with or without radiation, and about 90% of children survive; tissue at excision or biopsy makes the diagnosis, and ultrasound, not CT, is the first study.",
+   "with": "Wilms tumor is treated with <b>excision</b> plus chemotherapy, with or without radiation; about 90% of children survive. Tissue at excision or biopsy makes the diagnosis. Ultrasound, not <b>CT</b> (computed tomography), is the first study.",
+   "note": "management: split sentence, expand CT",
+   "claims": [
+    {
+     "claim": "Wilms tumor is treated with excision plus chemotherapy, with or without radiation.",
+     "to": "Wilms tumor is treated with excision plus chemotherapy, with or without radiation; about 90% of children survive."
+    },
+    {
+     "claim": "About 90% of children survive.",
+     "to": "Wilms tumor is treated with excision plus chemotherapy, with or without radiation; about 90% of children survive."
+    },
+    {
+     "claim": "Tissue at excision or biopsy makes the diagnosis.",
+     "to": "Tissue at excision or biopsy makes the diagnosis."
+    },
+    {
+     "claim": "Ultrasound, not CT, is the first study.",
+     "to": "Ultrasound, not CT (computed tomography), is the first study."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Wilms tumor is treated with excision plus chemotherapy, with or without radiation.",
+     "from": "Wilms tumor is treated with excision plus chemotherapy, with or without radiation."
+    },
+    {
+     "claim": "About 90% of children survive.",
+     "from": "About 90% of children survive."
+    },
+    {
+     "claim": "Tissue at excision or biopsy makes the diagnosis.",
+     "from": "Tissue at excision or biopsy makes the diagnosis."
+    },
+    {
+     "claim": "Ultrasound, not CT, is the first study.",
+     "from": "Ultrasound, not CT, is the first study."
+    },
+    {
+     "claim": "CT stands for computed tomography.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "Origin before age: <b>within the kidney</b> is Wilms tumor, <b>adrenal or paraspinal</b> is neuroblastoma or pheochromocytoma &middot; Hypertension does not separate the two tumors: Wilms raises renin, neuroblastoma releases catecholamines &middot; A well child with a smooth flank mass leans Wilms; an irritable child with weight loss, bone pain or raccoon eyes leans neuroblastoma",
+   "with": "Establish the origin before weighing age: a mass <b>within the kidney</b> is Wilms tumor; an <b>adrenal or paraspinal</b> mass is neuroblastoma or pheochromocytoma &middot; Hypertension does not separate the two tumors: Wilms raises renin, neuroblastoma releases catecholamines &middot; A well child with a smooth flank mass favors Wilms; an irritable child with weight loss, bone pain or raccoon eyes favors neuroblastoma",
+   "note": "pearls: slogan opener made a plain sentence; 'leans' to 'favors'",
+   "claims": [
+    {
+     "claim": "Origin is weighed before age.",
+     "to": "Establish the origin before weighing age: a mass within the kidney is Wilms tumor; an adrenal or paraspinal mass is neuroblastoma or pheochromocytoma"
+    },
+    {
+     "claim": "A mass within the kidney is Wilms tumor.",
+     "to": "Establish the origin before weighing age: a mass within the kidney is Wilms tumor; an adrenal or paraspinal mass is neuroblastoma or pheochromocytoma"
+    },
+    {
+     "claim": "An adrenal or paraspinal mass is neuroblastoma or pheochromocytoma.",
+     "to": "Establish the origin before weighing age: a mass within the kidney is Wilms tumor; an adrenal or paraspinal mass is neuroblastoma or pheochromocytoma"
+    },
+    {
+     "claim": "Hypertension does not separate the two tumors.",
+     "to": "Hypertension does not separate the two tumors: Wilms raises renin, neuroblastoma releases catecholamines"
+    },
+    {
+     "claim": "Wilms raises renin; neuroblastoma releases catecholamines.",
+     "to": "Hypertension does not separate the two tumors: Wilms raises renin, neuroblastoma releases catecholamines"
+    },
+    {
+     "claim": "A well child with a smooth flank mass leans Wilms.",
+     "to": "A well child with a smooth flank mass favors Wilms; an irritable child with weight loss, bone pain or raccoon eyes favors neuroblastoma"
+    },
+    {
+     "claim": "An irritable child with weight loss, bone pain or raccoon eyes leans neuroblastoma.",
+     "to": "A well child with a smooth flank mass favors Wilms; an irritable child with weight loss, bone pain or raccoon eyes favors neuroblastoma"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Establish the origin before weighing age.",
+     "from": "Origin is weighed before age."
+    },
+    {
+     "claim": "A mass within the kidney is Wilms tumor.",
+     "from": "A mass within the kidney is Wilms tumor."
+    },
+    {
+     "claim": "An adrenal or paraspinal mass is neuroblastoma or pheochromocytoma.",
+     "from": "An adrenal or paraspinal mass is neuroblastoma or pheochromocytoma."
+    },
+    {
+     "claim": "Hypertension does not separate the two tumors.",
+     "from": "Hypertension does not separate the two tumors."
+    },
+    {
+     "claim": "Wilms raises renin; neuroblastoma releases catecholamines.",
+     "from": "Wilms raises renin; neuroblastoma releases catecholamines."
+    },
+    {
+     "claim": "A well child with a smooth flank mass favors Wilms.",
+     "from": "A well child with a smooth flank mass leans Wilms."
+    },
+    {
+     "claim": "An irritable child with weight loss, bone pain or raccoon eyes favors neuroblastoma.",
+     "from": "An irritable child with weight loss, bone pain or raccoon eyes leans neuroblastoma."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "Part I <b>Inherited Tumor Syndromes</b> owns WAGR, Beckwith-Wiedemann and the surveillance that follows. Part II <b>Posterior Urethral Valves and Potter Sequence</b> owns the neonatal flank mass, where hydronephrosis and multicystic dysplastic kidney come first. Part II <b>Pediatric Acute Lymphoblastic Leukemia</b> shares neuroblastoma through marrow infiltration and periorbital ecchymoses. Store the discriminator as a question: does the mass arise within the kidney, and is the child older than 2?",
+   "with": "Part I <b>Inherited Tumor Syndromes</b> covers WAGR, Beckwith-Wiedemann and the surveillance that follows. Part II <b>Posterior Urethral Valves and Potter Sequence</b> covers the neonatal flank mass, where hydronephrosis and multicystic dysplastic kidney come first. Part II <b>Pediatric Acute Lymphoblastic Leukemia</b> shares neuroblastoma through marrow infiltration and periorbital ecchymoses. Ask: does the mass arise within the kidney, and is the child older than 2?",
+   "note": "pairs with: owns -> covers, Ask:",
+   "claims": [
+    {
+     "claim": "Inherited Tumor Syndromes owns WAGR, Beckwith-Wiedemann and the surveillance that follows.",
+     "to": "Part I Inherited Tumor Syndromes covers WAGR, Beckwith-Wiedemann and the surveillance that follows."
+    },
+    {
+     "claim": "Posterior Urethral Valves and Potter Sequence owns the neonatal flank mass.",
+     "to": "Part II Posterior Urethral Valves and Potter Sequence covers the neonatal flank mass, where hydronephrosis and multicystic dysplastic kidney come first."
+    },
+    {
+     "claim": "In the neonatal flank mass, hydronephrosis and multicystic dysplastic kidney come first.",
+     "to": "Part II Posterior Urethral Valves and Potter Sequence covers the neonatal flank mass, where hydronephrosis and multicystic dysplastic kidney come first."
+    },
+    {
+     "claim": "Pediatric Acute Lymphoblastic Leukemia shares neuroblastoma through marrow infiltration and periorbital ecchymoses.",
+     "to": "Part II Pediatric Acute Lymphoblastic Leukemia shares neuroblastoma through marrow infiltration and periorbital ecchymoses."
+    },
+    {
+     "claim": "The discriminator: does the mass arise within the kidney, and is the child older than 2?",
+     "to": "Ask: does the mass arise within the kidney, and is the child older than 2?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Inherited Tumor Syndromes covers WAGR, Beckwith-Wiedemann and the surveillance that follows.",
+     "from": "Inherited Tumor Syndromes owns WAGR, Beckwith-Wiedemann and the surveillance that follows."
+    },
+    {
+     "claim": "Posterior Urethral Valves and Potter Sequence covers the neonatal flank mass.",
+     "from": "Posterior Urethral Valves and Potter Sequence owns the neonatal flank mass."
+    },
+    {
+     "claim": "In the neonatal flank mass, hydronephrosis and multicystic dysplastic kidney come first.",
+     "from": "In the neonatal flank mass, hydronephrosis and multicystic dysplastic kidney come first."
+    },
+    {
+     "claim": "Pediatric Acute Lymphoblastic Leukemia shares neuroblastoma through marrow infiltration and periorbital ecchymoses.",
+     "from": "Pediatric Acute Lymphoblastic Leukemia shares neuroblastoma through marrow infiltration and periorbital ecchymoses."
+    },
+    {
+     "claim": "Ask: does the mass arise within the kidney, and is the child older than 2?",
+     "from": "The discriminator: does the mass arise within the kidney, and is the child older than 2?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "For a solid mass in a child, name the organ it arises from before naming the tumor, and let age settle the rest; a finding two tumors share, such as hypertension, cannot decide between them.",
+   "with": "For a solid mass in a child, name the organ it arises from before naming the tumor, then use age to decide among the rest. A finding two tumors share, such as hypertension, cannot distinguish them.",
+   "note": "rule: split sentence, drop personification",
+   "claims": [
+    {
+     "claim": "For a solid mass in a child, name the organ of origin before naming the tumor.",
+     "to": "For a solid mass in a child, name the organ it arises from before naming the tumor, then use age to decide among the rest."
+    },
+    {
+     "claim": "Age settles the rest.",
+     "to": "For a solid mass in a child, name the organ it arises from before naming the tumor, then use age to decide among the rest."
+    },
+    {
+     "claim": "A finding two tumors share, such as hypertension, cannot decide between them.",
+     "to": "A finding two tumors share, such as hypertension, cannot distinguish them."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "For a solid mass in a child, name the organ of origin before naming the tumor.",
+     "from": "For a solid mass in a child, name the organ of origin before naming the tumor."
+    },
+    {
+     "claim": "Use age to decide among the rest.",
+     "from": "Age settles the rest."
+    },
+    {
+     "claim": "A finding two tumors share, such as hypertension, cannot distinguish them.",
+     "from": "A finding two tumors share, such as hypertension, cannot decide between them."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-isolated-proteinuria",
+   "find": "Part I <b>Nephrotic Syndrome in a Child</b> owns proteinuria with edema, steroids without biopsy, and the atypical features that earn a biopsy. Part II <b>Acute Nephritic Syndrome in a Child</b> owns protein with blood, hypertension and a low C3. Part I <b>Hematuria</b> carries the parallel well child with isolated microscopic hematuria.",
+   "with": "Part I <b>Nephrotic Syndrome in a Child</b> covers proteinuria with edema, steroids without biopsy, and the atypical features that earn a biopsy. Part II <b>Acute Nephritic Syndrome in a Child</b> covers protein with blood, hypertension and a low C3. Part I <b>Hematuria</b> covers the parallel well child with isolated microscopic hematuria.",
+   "note": "pairs with: owns/carries -> covers",
+   "claims": [
+    {
+     "claim": "Nephrotic Syndrome in a Child owns proteinuria with edema, steroids without biopsy, and the atypical features that earn a biopsy.",
+     "to": "Part I Nephrotic Syndrome in a Child covers proteinuria with edema, steroids without biopsy, and the atypical features that earn a biopsy."
+    },
+    {
+     "claim": "Acute Nephritic Syndrome in a Child owns protein with blood, hypertension and a low C3.",
+     "to": "Part II Acute Nephritic Syndrome in a Child covers protein with blood, hypertension and a low C3."
+    },
+    {
+     "claim": "Hematuria carries the parallel well child with isolated microscopic hematuria.",
+     "to": "Part I Hematuria covers the parallel well child with isolated microscopic hematuria."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Nephrotic Syndrome in a Child covers proteinuria with edema, steroids without biopsy, and the atypical features that earn a biopsy.",
+     "from": "Nephrotic Syndrome in a Child owns proteinuria with edema, steroids without biopsy, and the atypical features that earn a biopsy."
+    },
+    {
+     "claim": "Acute Nephritic Syndrome in a Child covers protein with blood, hypertension and a low C3.",
+     "from": "Acute Nephritic Syndrome in a Child owns protein with blood, hypertension and a low C3."
+    },
+    {
+     "claim": "Hematuria covers the parallel well child with isolated microscopic hematuria.",
+     "from": "Hematuria carries the parallel well child with isolated microscopic hematuria."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-puffy-eyes",
+   "find": "<p>Puffy eyes are a finding, not a diagnosis. Ask first whether the swelling belongs to the eye or to the whole child.",
+   "with": "<p>Ask first whether the swelling belongs to the eye or to the whole child.",
+   "note": ".dp: drop aphorism opener",
+   "claims": [
+    {
+     "claim": "Puffy eyes are a finding, not a diagnosis.",
+     "dropped": "aphorism; the approach that follows builds the differential"
+    },
+    {
+     "claim": "Ask first whether the swelling belongs to the eye or to the whole child.",
+     "to": "Ask first whether the swelling belongs to the eye or to the whole child."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Ask first whether the swelling belongs to the eye or to the whole child.",
+     "from": "Ask first whether the swelling belongs to the eye or to the whole child."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-puffy-eyes",
+   "find": "In the generalized branch the urine dipstick removes most of the list at once; the confirmatory test comes last.",
+   "with": "In the generalized branch, the urine dipstick eliminates most of the differential at once; the confirmatory test comes last.",
+   "note": ".dp: plain wording for 'the list'",
+   "claims": [
+    {
+     "claim": "In the generalized branch the urine dipstick removes most of the list at once.",
+     "to": "In the generalized branch, the urine dipstick eliminates most of the differential at once; the confirmatory test comes last."
+    },
+    {
+     "claim": "The confirmatory test comes last.",
+     "to": "In the generalized branch, the urine dipstick eliminates most of the differential at once; the confirmatory test comes last."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "In the generalized branch, the urine dipstick eliminates most of the differential at once.",
+     "from": "In the generalized branch the urine dipstick removes most of the list at once."
+    },
+    {
+     "claim": "The confirmatory test comes last.",
+     "from": "The confirmatory test comes last."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-puffy-eyes",
+   "find": "Part I <b>Nephrotic Syndrome in a Child</b> owns the lesion: minimal change disease against membranous and FSGS, and starting steroids without a biopsy. Part II <b>Acute Nephritic Syndrome in a Child</b> owns PSGN and its C3 clock. Part II <b>Anaphylaxis and Its Mimics</b> owns the acute allergic reaction and angioedema without hives. Part I <b>Sinusitis with Intracranial Extension</b> owns preseptal against orbital cellulitis and the orbital CT. Part I <b>The Red Eye</b> owns the conjunctivitis types.",
+   "with": "Part I <b>Nephrotic Syndrome in a Child</b> covers the lesion: minimal change disease versus membranous and FSGS (focal segmental glomerulosclerosis). It also covers starting steroids without a biopsy. Part II <b>Acute Nephritic Syndrome in a Child</b> covers PSGN (poststreptococcal glomerulonephritis) and its C3 clock. Part II <b>Anaphylaxis and Its Mimics</b> covers the acute allergic reaction and angioedema without hives. Part I <b>Sinusitis with Intracranial Extension</b> covers preseptal versus orbital cellulitis and the orbital CT (computed tomography). Part I <b>The Red Eye</b> covers the conjunctivitis types.",
+   "note": "pairs with: owns -> covers, expand acronyms",
+   "claims": [
+    {
+     "claim": "Nephrotic Syndrome in a Child owns the lesion: minimal change disease against membranous and FSGS.",
+     "to": "Part I Nephrotic Syndrome in a Child covers the lesion: minimal change disease versus membranous and FSGS (focal segmental glomerulosclerosis)."
+    },
+    {
+     "claim": "Nephrotic Syndrome in a Child owns starting steroids without a biopsy.",
+     "to": "It also covers starting steroids without a biopsy."
+    },
+    {
+     "claim": "Acute Nephritic Syndrome in a Child owns PSGN and its C3 clock.",
+     "to": "Part II Acute Nephritic Syndrome in a Child covers PSGN (poststreptococcal glomerulonephritis) and its C3 clock."
+    },
+    {
+     "claim": "Anaphylaxis and Its Mimics owns the acute allergic reaction and angioedema without hives.",
+     "to": "Part II Anaphylaxis and Its Mimics covers the acute allergic reaction and angioedema without hives."
+    },
+    {
+     "claim": "Sinusitis with Intracranial Extension owns preseptal against orbital cellulitis and the orbital CT.",
+     "to": "Part I Sinusitis with Intracranial Extension covers preseptal versus orbital cellulitis and the orbital CT (computed tomography)."
+    },
+    {
+     "claim": "The Red Eye owns the conjunctivitis types.",
+     "to": "Part I The Red Eye covers the conjunctivitis types."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Nephrotic Syndrome in a Child covers the lesion: minimal change disease versus membranous and FSGS.",
+     "from": "Nephrotic Syndrome in a Child owns the lesion: minimal change disease against membranous and FSGS."
+    },
+    {
+     "claim": "Nephrotic Syndrome in a Child also covers starting steroids without a biopsy.",
+     "from": "Nephrotic Syndrome in a Child owns starting steroids without a biopsy."
+    },
+    {
+     "claim": "FSGS stands for focal segmental glomerulosclerosis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Acute Nephritic Syndrome in a Child covers PSGN and its C3 clock.",
+     "from": "Acute Nephritic Syndrome in a Child owns PSGN and its C3 clock."
+    },
+    {
+     "claim": "PSGN stands for poststreptococcal glomerulonephritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Anaphylaxis and Its Mimics covers the acute allergic reaction and angioedema without hives.",
+     "from": "Anaphylaxis and Its Mimics owns the acute allergic reaction and angioedema without hives."
+    },
+    {
+     "claim": "Sinusitis with Intracranial Extension covers preseptal versus orbital cellulitis and the orbital CT.",
+     "from": "Sinusitis with Intracranial Extension owns preseptal against orbital cellulitis and the orbital CT."
+    },
+    {
+     "claim": "CT stands for computed tomography.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The Red Eye covers the conjunctivitis types.",
+     "from": "The Red Eye owns the conjunctivitis types."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "aq-puffy-eyes",
+   "find": "For puffy eyes in a child, decide first whether the swelling belongs to the eye or to the whole child; if it is generalized, the urinalysis sorts it, with protein alone meaning nephrotic syndrome and blood with high blood pressure meaning nephritis.",
+   "with": "For puffy eyes in a child, decide first whether the swelling belongs to the eye or to the whole child. If it is generalized, the urinalysis sorts it: protein alone means nephrotic syndrome, and blood with high blood pressure means nephritis.",
+   "note": "rule: split long sentence",
+   "claims": [
+    {
+     "claim": "For puffy eyes, decide first whether the swelling belongs to the eye or to the whole child.",
+     "to": "For puffy eyes in a child, decide first whether the swelling belongs to the eye or to the whole child."
+    },
+    {
+     "claim": "If generalized, the urinalysis sorts it.",
+     "to": "If it is generalized, the urinalysis sorts it: protein alone means nephrotic syndrome, and blood with high blood pressure means nephritis."
+    },
+    {
+     "claim": "Protein alone means nephrotic syndrome.",
+     "to": "If it is generalized, the urinalysis sorts it: protein alone means nephrotic syndrome, and blood with high blood pressure means nephritis."
+    },
+    {
+     "claim": "Blood with high blood pressure means nephritis.",
+     "to": "If it is generalized, the urinalysis sorts it: protein alone means nephrotic syndrome, and blood with high blood pressure means nephritis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "For puffy eyes, decide first whether the swelling belongs to the eye or to the whole child.",
+     "from": "For puffy eyes, decide first whether the swelling belongs to the eye or to the whole child."
+    },
+    {
+     "claim": "If generalized, the urinalysis sorts it.",
+     "from": "If generalized, the urinalysis sorts it."
+    },
+    {
+     "claim": "Protein alone means nephrotic syndrome.",
+     "from": "Protein alone means nephrotic syndrome."
+    },
+    {
+     "claim": "Blood with high blood pressure means nephritis.",
+     "from": "Blood with high blood pressure means nephritis."
+    }
+   ]
+  }
+ ]
+}

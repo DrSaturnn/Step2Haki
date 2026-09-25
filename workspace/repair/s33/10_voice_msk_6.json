@@ -1,0 +1,740 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bs-acute-myositis",
+   "find": "Part I <b>Benign Limb Pain in a Child</b> also presents as bilateral calf pain in a school-age child, but the examination is normal. Part I <b>Hemoglobinuria: the Dipstick-Microscopy Mismatch</b> owns the heme-positive dipstick with few red cells that marks rhabdomyolysis. Store the discriminator as a question: is the calf tender?",
+   "with": "Part I <b>Benign Limb Pain in a Child</b> also presents as bilateral calf pain in a school-age child, but the examination is normal. Part I <b>Hemoglobinuria: the Dipstick-Microscopy Mismatch</b> covers the heme-positive dipstick with few red cells that marks rhabdomyolysis. Ask: is the calf tender?",
+   "note": "Pairs with: owns -> covers; store-as-question -> Ask:",
+   "claims": [
+    {
+     "claim": "Benign Limb Pain in a Child also presents as bilateral calf pain in a school-age child, with a normal examination.",
+     "to": "Part I Benign Limb Pain in a Child also presents as bilateral calf pain in a school-age child, but the examination is normal."
+    },
+    {
+     "claim": "A heme-positive dipstick with few red cells marks rhabdomyolysis, and the Hemoglobinuria brief covers it.",
+     "to": "Part I Hemoglobinuria: the Dipstick-Microscopy Mismatch covers the heme-positive dipstick with few red cells that marks rhabdomyolysis."
+    },
+    {
+     "claim": "The discriminating question is whether the calf is tender.",
+     "to": "Ask: is the calf tender?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Benign Limb Pain in a Child also presents as bilateral calf pain in a school-age child, with a normal examination.",
+     "from": "Benign Limb Pain in a Child also presents as bilateral calf pain in a school-age child, with a normal examination."
+    },
+    {
+     "claim": "A heme-positive dipstick with few red cells marks rhabdomyolysis, and the Hemoglobinuria brief covers it.",
+     "from": "A heme-positive dipstick with few red cells marks rhabdomyolysis, and the Hemoglobinuria brief covers it."
+    },
+    {
+     "claim": "The discriminating question is whether the calf is tender.",
+     "from": "The discriminating question is whether the calf is tender."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torticollis",
+   "find": "Tilt toward the mass, chin away",
+   "with": "Head tilts toward the mass, chin turns away",
+   "note": "subtitle: slogan to plain description",
+   "claims": [
+    {
+     "claim": "The head tilts toward the mass.",
+     "to": "Head tilts toward the mass, chin turns away"
+    },
+    {
+     "claim": "The chin turns away from the mass.",
+     "to": "Head tilts toward the mass, chin turns away"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The head tilts toward the mass.",
+     "from": "The head tilts toward the mass."
+    },
+    {
+     "claim": "The chin turns away from the mass.",
+     "from": "The chin turns away from the mass."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torticollis",
+   "find": "<p>Torticollis has a direction, and the direction is the diagnosis. The sternocleidomastoid turns the head to the opposite side, so a shortened <b>left</b> muscle pulls the left ear toward the left shoulder and swings the chin <b>right</b> — exactly the geometry described, with the mass in the left sternocleidomastoid. The flat head is downstream: she can only look one way, so she lies on one spot.</p>\n<p>The etiology is in the delivery note. <b>Breech presentation</b> means intrauterine crowding, the same mechanism that produces developmental dysplasia of the hip, metatarsus adductus and clubfoot. The <b>non-transilluminating</b> mass is the sentence written to stop you answering the neck lump instead of the syndrome.</p>",
+   "with": "<p>The sternocleidomastoid turns the head to the opposite side. A shortened <b>left</b> muscle therefore pulls the left ear toward the left shoulder and turns the chin <b>right</b>. The direction of the tilt identifies the side of the tight muscle. In this infant the mass is in the left sternocleidomastoid, which fits this pattern. The flat head is secondary: she can only look one way, so she lies on one spot.</p>\n<p><b>Breech presentation</b> points to intrauterine crowding as the cause. The same mechanism produces developmental dysplasia of the hip, metatarsus adductus and clubfoot. The <b>non-transilluminating</b> mass is part of the torticollis syndrome, not a separate neck lump.</p>",
+   "note": ".dp: remove aphorism, em dash and question-framing; split long sentences",
+   "claims": [
+    {
+     "claim": "The direction of the torticollis identifies the diagnosis.",
+     "to": "The direction of the tilt identifies the side of the tight muscle."
+    },
+    {
+     "claim": "The sternocleidomastoid turns the head to the opposite side.",
+     "to": "The sternocleidomastoid turns the head to the opposite side."
+    },
+    {
+     "claim": "A shortened left sternocleidomastoid pulls the left ear toward the left shoulder.",
+     "to": "A shortened left muscle therefore pulls the left ear toward the left shoulder and turns the chin right."
+    },
+    {
+     "claim": "A shortened left sternocleidomastoid swings the chin right.",
+     "to": "A shortened left muscle therefore pulls the left ear toward the left shoulder and turns the chin right."
+    },
+    {
+     "claim": "The mass is in the left sternocleidomastoid, matching this geometry.",
+     "to": "In this infant the mass is in the left sternocleidomastoid, which fits this pattern."
+    },
+    {
+     "claim": "The flat head is downstream of the torticollis.",
+     "to": "The flat head is secondary: she can only look one way, so she lies on one spot."
+    },
+    {
+     "claim": "She can only look one way, so she lies on one spot.",
+     "to": "The flat head is secondary: she can only look one way, so she lies on one spot."
+    },
+    {
+     "claim": "The etiology is given by the delivery history.",
+     "to": "Breech presentation points to intrauterine crowding as the cause."
+    },
+    {
+     "claim": "Breech presentation means intrauterine crowding.",
+     "to": "Breech presentation points to intrauterine crowding as the cause."
+    },
+    {
+     "claim": "Intrauterine crowding is the same mechanism that produces developmental dysplasia of the hip, metatarsus adductus and clubfoot.",
+     "to": "The same mechanism produces developmental dysplasia of the hip, metatarsus adductus and clubfoot."
+    },
+    {
+     "claim": "The non-transilluminating mass belongs to the syndrome rather than being an isolated neck lump.",
+     "to": "The non-transilluminating mass is part of the torticollis syndrome, not a separate neck lump."
+    },
+    {
+     "claim": "The non-transilluminating detail is written to stop the reader answering the neck lump.",
+     "dropped": "framing about the question's intent; the clinical point is kept in the sentence on the mass"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The sternocleidomastoid turns the head to the opposite side.",
+     "from": "The sternocleidomastoid turns the head to the opposite side."
+    },
+    {
+     "claim": "A shortened left muscle pulls the left ear toward the left shoulder and turns the chin right.",
+     "from": "A shortened left sternocleidomastoid pulls the left ear toward the left shoulder."
+    },
+    {
+     "claim": "The direction of the tilt identifies the side of the tight muscle.",
+     "from": "The direction of the torticollis identifies the diagnosis."
+    },
+    {
+     "claim": "In this infant the mass is in the left sternocleidomastoid, which fits this pattern.",
+     "from": "The mass is in the left sternocleidomastoid, matching this geometry."
+    },
+    {
+     "claim": "The flat head is secondary.",
+     "from": "The flat head is downstream of the torticollis."
+    },
+    {
+     "claim": "She can only look one way, so she lies on one spot.",
+     "from": "She can only look one way, so she lies on one spot."
+    },
+    {
+     "claim": "Breech presentation points to intrauterine crowding as the cause.",
+     "from": "Breech presentation means intrauterine crowding."
+    },
+    {
+     "claim": "The same mechanism produces developmental dysplasia of the hip, metatarsus adductus and clubfoot.",
+     "from": "Intrauterine crowding is the same mechanism that produces developmental dysplasia of the hip, metatarsus adductus and clubfoot."
+    },
+    {
+     "claim": "The non-transilluminating mass is part of the torticollis syndrome, not a separate neck lump.",
+     "from": "The non-transilluminating mass belongs to the syndrome rather than being an isolated neck lump."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torticollis",
+   "find": "<span class=\"lbl\">Crowding is a package deal</span> Breech, oligohydramnios and multiple gestation produce <b>congenital muscular torticollis, developmental dysplasia of the hip, metatarsus adductus and clubfoot</b> together. Find one and examine for the rest — the stem's explicit note that the hips are stable is the examiner confirming they know this.",
+   "with": "<span class=\"lbl\">Crowding associations</span> Breech, oligohydramnios and multiple gestation produce <b>congenital muscular torticollis, developmental dysplasia of the hip, metatarsus adductus and clubfoot</b> together. When you find one, examine for the rest.",
+   "note": ".danger: slogan label reworded; em dash and examiner-intent meta removed",
+   "reworded_label": [
+    "Crowding is a package deal"
+   ],
+   "claims": [
+    {
+     "claim": "Breech, oligohydramnios and multiple gestation produce congenital muscular torticollis, developmental dysplasia of the hip, metatarsus adductus and clubfoot together.",
+     "to": "Breech, oligohydramnios and multiple gestation produce congenital muscular torticollis, developmental dysplasia of the hip, metatarsus adductus and clubfoot together."
+    },
+    {
+     "claim": "Find one and examine for the rest.",
+     "to": "When you find one, examine for the rest."
+    },
+    {
+     "claim": "The stem notes the hips on purpose, showing the examiner knows the association.",
+     "dropped": "meta comment about the examiner's intent, not a clinical claim"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Breech, oligohydramnios and multiple gestation produce congenital muscular torticollis, developmental dysplasia of the hip, metatarsus adductus and clubfoot together.",
+     "from": "Breech, oligohydramnios and multiple gestation produce congenital muscular torticollis, developmental dysplasia of the hip, metatarsus adductus and clubfoot together."
+    },
+    {
+     "claim": "When you find one, examine for the rest.",
+     "from": "Find one and examine for the rest."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torticollis",
+   "find": "Part II <b>Posterior Urethral Valves and Potter Sequence</b> shares the constraint physiology — absent amniotic fluid produces clubfeet and flat facies by the same mechanism that produces torticollis in a breech infant.",
+   "with": "Part II <b>Posterior Urethral Valves and Potter Sequence</b> shares the constraint physiology. Absent amniotic fluid produces clubfeet and flat facies by the same mechanism that produces torticollis in a breech infant.",
+   "note": "Pairs with: em dash split into two sentences",
+   "claims": [
+    {
+     "claim": "Posterior Urethral Valves and Potter Sequence shares the constraint physiology.",
+     "to": "Part II Posterior Urethral Valves and Potter Sequence shares the constraint physiology."
+    },
+    {
+     "claim": "Absent amniotic fluid produces clubfeet and flat facies by the same mechanism that produces torticollis in a breech infant.",
+     "to": "Absent amniotic fluid produces clubfeet and flat facies by the same mechanism that produces torticollis in a breech infant."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Posterior Urethral Valves and Potter Sequence shares the constraint physiology.",
+     "from": "Posterior Urethral Valves and Potter Sequence shares the constraint physiology."
+    },
+    {
+     "claim": "Absent amniotic fluid produces clubfeet and flat facies by the same mechanism that produces torticollis in a breech infant.",
+     "from": "Absent amniotic fluid produces clubfeet and flat facies by the same mechanism that produces torticollis in a breech infant."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torticollis",
+   "find": "<span class=\"lbl\">Transferable rule</span> When a stem asks for the underlying cause, the answer explains every finding rather than the most alarming one, so count the findings your choice leaves orphaned and reject any option that leaves one behind.",
+   "with": "<span class=\"lbl\">Transferable rule</span> The underlying cause explains every finding, not only the most alarming one. Reject any diagnosis that leaves a finding unexplained.",
+   "note": "rule: remove stem/answer framing, split",
+   "claims": [
+    {
+     "claim": "The underlying cause explains every finding rather than the most alarming one.",
+     "to": "The underlying cause explains every finding, not only the most alarming one."
+    },
+    {
+     "claim": "Reject any option that leaves a finding unexplained.",
+     "to": "Reject any diagnosis that leaves a finding unexplained."
+    },
+    {
+     "claim": "Count the findings your choice leaves orphaned.",
+     "to": "Reject any diagnosis that leaves a finding unexplained."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The underlying cause explains every finding rather than the most alarming one.",
+     "from": "The underlying cause explains every finding rather than the most alarming one."
+    },
+    {
+     "claim": "Reject any diagnosis that leaves a finding unexplained.",
+     "from": "Reject any option that leaves a finding unexplained."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torticollis",
+   "find": "Birth trauma sells the clavicle fracture, which affects the arm rather than the neck.",
+   "with": "Clavicle fracture: suggested by the birth trauma, but it affects the arm rather than the neck.",
+   "note": "trap: personification removed, Option: why",
+   "claims": [
+    {
+     "claim": "Birth trauma makes clavicle fracture attractive.",
+     "to": "Clavicle fracture: suggested by the birth trauma, but it affects the arm rather than the neck."
+    },
+    {
+     "claim": "Clavicle fracture affects the arm rather than the neck.",
+     "to": "Clavicle fracture: suggested by the birth trauma, but it affects the arm rather than the neck."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Clavicle fracture is suggested by the birth trauma.",
+     "from": "Birth trauma makes clavicle fracture attractive."
+    },
+    {
+     "claim": "Clavicle fracture affects the arm rather than the neck.",
+     "from": "Clavicle fracture affects the arm rather than the neck."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-brachial-plexus",
+   "find": "<p>Three reflexes localize a weak newborn arm. The <b>Moro</b> needs shoulder abduction and elbow extension (C5-C6) and a pain-free arm; the <b>biceps</b> reflex runs through C5-C6; the <b>grasp</b> runs through C8-T1. Here the grasp is <b>absent</b> while Moro and biceps are <b>intact</b>, the hand is clawed, and the same side has ptosis and miosis: a <b>lower plexus (Klumpke, C8-T1)</b> injury, with Horner syndrome because the sympathetic fibers to the eye leave the cord with T1.</p>\n<p>Erb palsy (C5-C6) is the commonest birth palsy and the mirror image: Moro and biceps lost, grasp kept. A clavicle or humerus fracture lowers the Moro only through pain, keeps biceps and grasp, and has crepitus.</p>",
+   "with": "<p>Three reflexes localize a weak newborn arm. The <b>Moro</b> reflex needs shoulder abduction and elbow extension (C5-C6) and a pain-free arm. The <b>biceps</b> reflex runs through C5-C6, and the <b>grasp</b> runs through C8-T1. Here the grasp is <b>absent</b> while Moro and biceps are <b>intact</b>. The hand is clawed, and the same side has ptosis and miosis. This is a <b>lower plexus (Klumpke, C8-T1)</b> injury. Horner syndrome occurs because the sympathetic fibers to the eye leave the cord with T1.</p>\n<p>Erb palsy (C5-C6) is the most common birth palsy and shows the reverse pattern: Moro and biceps lost, grasp kept. A clavicle or humerus fracture lowers the Moro only through pain. It keeps biceps and grasp and has crepitus.</p>",
+   "note": ".dp: split long sentences; 'mirror image' made plain",
+   "claims": [
+    {
+     "claim": "Three reflexes localize a weak newborn arm.",
+     "to": "Three reflexes localize a weak newborn arm."
+    },
+    {
+     "claim": "The Moro needs shoulder abduction and elbow extension (C5-C6) and a pain-free arm.",
+     "to": "The Moro reflex needs shoulder abduction and elbow extension (C5-C6) and a pain-free arm."
+    },
+    {
+     "claim": "The biceps reflex runs through C5-C6.",
+     "to": "The biceps reflex runs through C5-C6, and the grasp runs through C8-T1."
+    },
+    {
+     "claim": "The grasp runs through C8-T1.",
+     "to": "The biceps reflex runs through C5-C6, and the grasp runs through C8-T1."
+    },
+    {
+     "claim": "Here the grasp is absent while Moro and biceps are intact.",
+     "to": "Here the grasp is absent while Moro and biceps are intact."
+    },
+    {
+     "claim": "The hand is clawed.",
+     "to": "The hand is clawed, and the same side has ptosis and miosis."
+    },
+    {
+     "claim": "The same side has ptosis and miosis.",
+     "to": "The hand is clawed, and the same side has ptosis and miosis."
+    },
+    {
+     "claim": "This is a lower plexus (Klumpke, C8-T1) injury.",
+     "to": "This is a lower plexus (Klumpke, C8-T1) injury."
+    },
+    {
+     "claim": "Horner syndrome is present because the sympathetic fibers to the eye leave the cord with T1.",
+     "to": "Horner syndrome occurs because the sympathetic fibers to the eye leave the cord with T1."
+    },
+    {
+     "claim": "Erb palsy (C5-C6) is the commonest birth palsy.",
+     "to": "Erb palsy (C5-C6) is the most common birth palsy and shows the reverse pattern: Moro and biceps lost, grasp kept."
+    },
+    {
+     "claim": "Erb palsy is the mirror image: Moro and biceps lost, grasp kept.",
+     "to": "Erb palsy (C5-C6) is the most common birth palsy and shows the reverse pattern: Moro and biceps lost, grasp kept."
+    },
+    {
+     "claim": "A clavicle or humerus fracture lowers the Moro only through pain.",
+     "to": "A clavicle or humerus fracture lowers the Moro only through pain."
+    },
+    {
+     "claim": "A clavicle or humerus fracture keeps biceps and grasp.",
+     "to": "It keeps biceps and grasp and has crepitus."
+    },
+    {
+     "claim": "A clavicle or humerus fracture has crepitus.",
+     "to": "It keeps biceps and grasp and has crepitus."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Three reflexes localize a weak newborn arm.",
+     "from": "Three reflexes localize a weak newborn arm."
+    },
+    {
+     "claim": "The Moro reflex needs shoulder abduction and elbow extension (C5-C6) and a pain-free arm.",
+     "from": "The Moro needs shoulder abduction and elbow extension (C5-C6) and a pain-free arm."
+    },
+    {
+     "claim": "The biceps reflex runs through C5-C6.",
+     "from": "The biceps reflex runs through C5-C6."
+    },
+    {
+     "claim": "The grasp runs through C8-T1.",
+     "from": "The grasp runs through C8-T1."
+    },
+    {
+     "claim": "Here the grasp is absent while Moro and biceps are intact.",
+     "from": "Here the grasp is absent while Moro and biceps are intact."
+    },
+    {
+     "claim": "The hand is clawed.",
+     "from": "The hand is clawed."
+    },
+    {
+     "claim": "The same side has ptosis and miosis.",
+     "from": "The same side has ptosis and miosis."
+    },
+    {
+     "claim": "This is a lower plexus (Klumpke, C8-T1) injury.",
+     "from": "This is a lower plexus (Klumpke, C8-T1) injury."
+    },
+    {
+     "claim": "Horner syndrome occurs because the sympathetic fibers to the eye leave the cord with T1.",
+     "from": "Horner syndrome is present because the sympathetic fibers to the eye leave the cord with T1."
+    },
+    {
+     "claim": "Erb palsy (C5-C6) is the most common birth palsy.",
+     "from": "Erb palsy (C5-C6) is the commonest birth palsy."
+    },
+    {
+     "claim": "Erb palsy shows the reverse pattern: Moro and biceps lost, grasp kept.",
+     "from": "Erb palsy is the mirror image: Moro and biceps lost, grasp kept."
+    },
+    {
+     "claim": "A clavicle or humerus fracture lowers the Moro only through pain.",
+     "from": "A clavicle or humerus fracture lowers the Moro only through pain."
+    },
+    {
+     "claim": "A fracture keeps biceps and grasp.",
+     "from": "A clavicle or humerus fracture keeps biceps and grasp."
+    },
+    {
+     "claim": "A fracture has crepitus.",
+     "from": "A clavicle or humerus fracture has crepitus."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-brachial-plexus",
+   "find": "<b>Nursemaid's Elbow</b>: its pediatric elbow neighbors line names these palsies; this brief owns the reflex split. <b>Congenital Muscular Torticollis and Plagiocephaly</b>: the other birth-position injury, whose bank already holds a newborn clavicle fracture. <b>Stroke in a Child or Adolescent</b>: perinatal stroke presents with focal seizures and upper motor neuron signs rather than a limp arm with one lost reflex; store it as a question: are the signs upper or lower motor neuron?",
+   "with": "<b>Nursemaid's Elbow</b>: its pediatric elbow neighbors line names these palsies; this brief covers the reflex split. <b>Congenital Muscular Torticollis and Plagiocephaly</b>: the other birth-position injury, whose bank already holds a newborn clavicle fracture. <b>Stroke in a Child or Adolescent</b>: perinatal stroke presents with focal seizures and upper motor neuron signs, not a limp arm with one lost reflex. Ask: are the signs upper or lower motor neuron?",
+   "note": "Pairs with: owns -> covers; store-as-question -> Ask:",
+   "claims": [
+    {
+     "claim": "Nursemaid's Elbow names these palsies in its pediatric elbow neighbors line; this brief covers the reflex split.",
+     "to": "Nursemaid's Elbow: its pediatric elbow neighbors line names these palsies; this brief covers the reflex split."
+    },
+    {
+     "claim": "Congenital Muscular Torticollis and Plagiocephaly is the other birth-position injury, and its bank holds a newborn clavicle fracture.",
+     "to": "Congenital Muscular Torticollis and Plagiocephaly: the other birth-position injury, whose bank already holds a newborn clavicle fracture."
+    },
+    {
+     "claim": "Perinatal stroke presents with focal seizures and upper motor neuron signs rather than a limp arm with one lost reflex.",
+     "to": "Stroke in a Child or Adolescent: perinatal stroke presents with focal seizures and upper motor neuron signs, not a limp arm with one lost reflex."
+    },
+    {
+     "claim": "The discriminating question is whether the signs are upper or lower motor neuron.",
+     "to": "Ask: are the signs upper or lower motor neuron?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Nursemaid's Elbow names these palsies in its pediatric elbow neighbors line; this brief covers the reflex split.",
+     "from": "Nursemaid's Elbow names these palsies in its pediatric elbow neighbors line; this brief covers the reflex split."
+    },
+    {
+     "claim": "Congenital Muscular Torticollis and Plagiocephaly is the other birth-position injury, and its bank holds a newborn clavicle fracture.",
+     "from": "Congenital Muscular Torticollis and Plagiocephaly is the other birth-position injury, and its bank holds a newborn clavicle fracture."
+    },
+    {
+     "claim": "Perinatal stroke presents with focal seizures and upper motor neuron signs rather than a limp arm with one lost reflex.",
+     "from": "Perinatal stroke presents with focal seizures and upper motor neuron signs rather than a limp arm with one lost reflex."
+    },
+    {
+     "claim": "The discriminating question is whether the signs are upper or lower motor neuron.",
+     "from": "The discriminating question is whether the signs are upper or lower motor neuron."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-brachial-plexus",
+   "find": "<span class=\"lbl\">Transferable rule</span> When a newborn will not move one arm, read three reflexes before the posture: a lower Moro alone with crepitus is a fracture, lost Moro and biceps with a kept grasp is C5-C6, and a lost grasp with Moro and biceps kept is C8-T1, where ptosis and miosis confirm T1 and predict slower recovery.",
+   "with": "<span class=\"lbl\">Transferable rule</span> When a newborn will not move one arm, read three reflexes before the posture. A lower Moro alone with crepitus is a fracture. Lost Moro and biceps with a kept grasp is C5-C6. A lost grasp with Moro and biceps kept is C8-T1. In C8-T1 injury, ptosis and miosis confirm T1 and predict slower recovery.",
+   "note": "rule: split one long sentence",
+   "claims": [
+    {
+     "claim": "When a newborn will not move one arm, read three reflexes before the posture.",
+     "to": "When a newborn will not move one arm, read three reflexes before the posture."
+    },
+    {
+     "claim": "A lower Moro alone with crepitus is a fracture.",
+     "to": "A lower Moro alone with crepitus is a fracture."
+    },
+    {
+     "claim": "Lost Moro and biceps with a kept grasp is C5-C6.",
+     "to": "Lost Moro and biceps with a kept grasp is C5-C6."
+    },
+    {
+     "claim": "A lost grasp with Moro and biceps kept is C8-T1.",
+     "to": "A lost grasp with Moro and biceps kept is C8-T1."
+    },
+    {
+     "claim": "In C8-T1 injury, ptosis and miosis confirm T1.",
+     "to": "In C8-T1 injury, ptosis and miosis confirm T1 and predict slower recovery."
+    },
+    {
+     "claim": "Ptosis and miosis predict slower recovery.",
+     "to": "In C8-T1 injury, ptosis and miosis confirm T1 and predict slower recovery."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a newborn will not move one arm, read three reflexes before the posture.",
+     "from": "When a newborn will not move one arm, read three reflexes before the posture."
+    },
+    {
+     "claim": "A lower Moro alone with crepitus is a fracture.",
+     "from": "A lower Moro alone with crepitus is a fracture."
+    },
+    {
+     "claim": "Lost Moro and biceps with a kept grasp is C5-C6.",
+     "from": "Lost Moro and biceps with a kept grasp is C5-C6."
+    },
+    {
+     "claim": "A lost grasp with Moro and biceps kept is C8-T1.",
+     "from": "A lost grasp with Moro and biceps kept is C8-T1."
+    },
+    {
+     "claim": "In C8-T1 injury, ptosis and miosis confirm T1.",
+     "from": "In C8-T1 injury, ptosis and miosis confirm T1."
+    },
+    {
+     "claim": "Ptosis and miosis predict slower recovery.",
+     "from": "Ptosis and miosis predict slower recovery."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-brachial-plexus",
+   "find": "A 4.4 kg infant after shoulder dystocia sells a clavicle fracture, which lowers the Moro from pain, keeps the grasp and gives crepitus; none of these is present.",
+   "with": "Clavicle fracture: suggested by a 4.4 kg infant after shoulder dystocia. It lowers the Moro from pain, keeps the grasp and gives crepitus; none of these is present.",
+   "note": "trap: personification removed, Option: why",
+   "claims": [
+    {
+     "claim": "A 4.4 kg infant after shoulder dystocia makes clavicle fracture attractive.",
+     "to": "Clavicle fracture: suggested by a 4.4 kg infant after shoulder dystocia."
+    },
+    {
+     "claim": "A clavicle fracture lowers the Moro from pain, keeps the grasp and gives crepitus.",
+     "to": "It lowers the Moro from pain, keeps the grasp and gives crepitus; none of these is present."
+    },
+    {
+     "claim": "None of these clavicle-fracture features is present.",
+     "to": "It lowers the Moro from pain, keeps the grasp and gives crepitus; none of these is present."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Clavicle fracture is suggested by a 4.4 kg infant after shoulder dystocia.",
+     "from": "A 4.4 kg infant after shoulder dystocia makes clavicle fracture attractive."
+    },
+    {
+     "claim": "A clavicle fracture lowers the Moro from pain, keeps the grasp and gives crepitus.",
+     "from": "A clavicle fracture lowers the Moro from pain, keeps the grasp and gives crepitus."
+    },
+    {
+     "claim": "None of these clavicle-fracture features is present.",
+     "from": "None of these clavicle-fracture features is present."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "shoulder-rom",
+   "find": "<p>One rule sorts every shoulder stem: <b>active ROM lost with passive preserved = muscle/tendon</b> (rotator cuff tendinopathy or tear, biceps tendinitis, impingement). <b>Both active and passive lost = joint</b> (adhesive capsulitis, glenohumeral OA, septic joint). Then the maneuvers map one-to-one onto muscles.</p>",
+   "with": "<p>Sort all shoulder pain by <b>ROM</b> (range of motion): <b>active ROM lost with passive preserved = muscle/tendon</b> (rotator cuff tendinopathy or tear, biceps tendinitis, impingement). <b>Both active and passive lost = joint</b>, as in adhesive capsulitis, glenohumeral <b>OA</b> (osteoarthritis) and septic joint. The maneuvers then map one-to-one onto muscles.</p>",
+   "note": ".dp: framing opener removed; ROM and OA expanded",
+   "claims": [
+    {
+     "claim": "One rule sorts every shoulder presentation.",
+     "to": "Sort all shoulder pain by ROM (range of motion): active ROM lost with passive preserved = muscle/tendon (rotator cuff tendinopathy or tear, biceps tendinitis, impingement)."
+    },
+    {
+     "claim": "Active ROM lost with passive preserved means a muscle/tendon problem.",
+     "to": "Sort all shoulder pain by ROM (range of motion): active ROM lost with passive preserved = muscle/tendon (rotator cuff tendinopathy or tear, biceps tendinitis, impingement)."
+    },
+    {
+     "claim": "Muscle/tendon causes include rotator cuff tendinopathy or tear, biceps tendinitis and impingement.",
+     "to": "Sort all shoulder pain by ROM (range of motion): active ROM lost with passive preserved = muscle/tendon (rotator cuff tendinopathy or tear, biceps tendinitis, impingement)."
+    },
+    {
+     "claim": "Both active and passive ROM lost means a joint problem.",
+     "to": "Both active and passive lost = joint, as in adhesive capsulitis, glenohumeral OA (osteoarthritis) and septic joint."
+    },
+    {
+     "claim": "Joint causes include adhesive capsulitis, glenohumeral OA and septic joint.",
+     "to": "Both active and passive lost = joint, as in adhesive capsulitis, glenohumeral OA (osteoarthritis) and septic joint."
+    },
+    {
+     "claim": "The maneuvers then map one-to-one onto muscles.",
+     "to": "The maneuvers then map one-to-one onto muscles."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "All shoulder pain is sorted by ROM.",
+     "from": "One rule sorts every shoulder presentation."
+    },
+    {
+     "claim": "ROM stands for range of motion.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Active ROM lost with passive preserved means a muscle/tendon problem.",
+     "from": "Active ROM lost with passive preserved means a muscle/tendon problem."
+    },
+    {
+     "claim": "Muscle/tendon causes include rotator cuff tendinopathy or tear, biceps tendinitis and impingement.",
+     "from": "Muscle/tendon causes include rotator cuff tendinopathy or tear, biceps tendinitis and impingement."
+    },
+    {
+     "claim": "Both active and passive ROM lost means a joint problem.",
+     "from": "Both active and passive ROM lost means a joint problem."
+    },
+    {
+     "claim": "Joint causes include adhesive capsulitis, glenohumeral OA and septic joint.",
+     "from": "Joint causes include adhesive capsulitis, glenohumeral OA and septic joint."
+    },
+    {
+     "claim": "OA stands for osteoarthritis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The maneuvers then map one-to-one onto muscles.",
+     "from": "The maneuvers then map one-to-one onto muscles."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "shoulder-rom",
+   "find": "<span class=\"lbl\">Management ladder &amp; the sling trap</span>\nFirst-line is <b>relative rest + physical therapy</b> — strengthen the cuff and scapular stabilizers to open the subacromial space. \"Rest\" must never be communicated as <b>immobilize</b>: a sling causes atrophy and <b>adhesive capsulitis</b>, and slings are for dislocation and fracture only. No reflex MRI — X-ray only for trauma or failed therapy, and older adults have asymptomatic cuff tears on MRI. Subacromial steroid injection gives short-term relief only, and never through suspected infection.",
+   "with": "<span class=\"lbl\">Management ladder &amp; sling avoidance</span>\nFirst-line is <b>relative rest + physical therapy</b>. Therapy strengthens the cuff and scapular stabilizers to open the subacromial space. \"Rest\" must never be communicated as <b>immobilize</b>. A sling causes atrophy and <b>adhesive capsulitis</b>; slings are for dislocation and fracture only. Do not order a reflex <b>MRI</b> (magnetic resonance imaging). Obtain an X-ray only for trauma or failed therapy. Older adults have asymptomatic cuff tears on MRI. Subacromial steroid injection gives short-term relief only and is never given through suspected infection.",
+   "note": ".danger: em dashes removed, sentences split, MRI expanded; rhetorical label reworded",
+   "reworded_label": [
+    "Management ladder & the sling trap"
+   ],
+   "claims": [
+    {
+     "claim": "First-line is relative rest + physical therapy.",
+     "to": "First-line is relative rest + physical therapy."
+    },
+    {
+     "claim": "Therapy strengthens the cuff and scapular stabilizers to open the subacromial space.",
+     "to": "Therapy strengthens the cuff and scapular stabilizers to open the subacromial space."
+    },
+    {
+     "claim": "Rest must never be communicated as immobilize.",
+     "to": "\"Rest\" must never be communicated as immobilize."
+    },
+    {
+     "claim": "A sling causes atrophy and adhesive capsulitis.",
+     "to": "A sling causes atrophy and adhesive capsulitis; slings are for dislocation and fracture only."
+    },
+    {
+     "claim": "Slings are for dislocation and fracture only.",
+     "to": "A sling causes atrophy and adhesive capsulitis; slings are for dislocation and fracture only."
+    },
+    {
+     "claim": "No reflex MRI.",
+     "to": "Do not order a reflex MRI (magnetic resonance imaging)."
+    },
+    {
+     "claim": "X-ray only for trauma or failed therapy.",
+     "to": "Obtain an X-ray only for trauma or failed therapy."
+    },
+    {
+     "claim": "Older adults have asymptomatic cuff tears on MRI.",
+     "to": "Older adults have asymptomatic cuff tears on MRI."
+    },
+    {
+     "claim": "Subacromial steroid injection gives short-term relief only.",
+     "to": "Subacromial steroid injection gives short-term relief only and is never given through suspected infection."
+    },
+    {
+     "claim": "Subacromial steroid injection is never given through suspected infection.",
+     "to": "Subacromial steroid injection gives short-term relief only and is never given through suspected infection."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "First-line is relative rest + physical therapy.",
+     "from": "First-line is relative rest + physical therapy."
+    },
+    {
+     "claim": "Therapy strengthens the cuff and scapular stabilizers to open the subacromial space.",
+     "from": "Therapy strengthens the cuff and scapular stabilizers to open the subacromial space."
+    },
+    {
+     "claim": "Rest must never be communicated as immobilize.",
+     "from": "Rest must never be communicated as immobilize."
+    },
+    {
+     "claim": "A sling causes atrophy and adhesive capsulitis.",
+     "from": "A sling causes atrophy and adhesive capsulitis."
+    },
+    {
+     "claim": "Slings are for dislocation and fracture only.",
+     "from": "Slings are for dislocation and fracture only."
+    },
+    {
+     "claim": "No reflex MRI.",
+     "from": "No reflex MRI."
+    },
+    {
+     "claim": "MRI stands for magnetic resonance imaging.",
+     "from": "expansion"
+    },
+    {
+     "claim": "X-ray only for trauma or failed therapy.",
+     "from": "X-ray only for trauma or failed therapy."
+    },
+    {
+     "claim": "Older adults have asymptomatic cuff tears on MRI.",
+     "from": "Older adults have asymptomatic cuff tears on MRI."
+    },
+    {
+     "claim": "Subacromial steroid injection gives short-term relief only.",
+     "from": "Subacromial steroid injection gives short-term relief only."
+    },
+    {
+     "claim": "Subacromial steroid injection is never given through suspected infection.",
+     "from": "Subacromial steroid injection is never given through suspected infection."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "shoulder-rom",
+   "find": "<span class=\"lbl\">Transferable rule</span> The exam answer is usually the boring next rung: activity modification beats PT beats injection beats MRI beats surgery.",
+   "with": "<span class=\"lbl\">Transferable rule</span> The next step is usually the next rung of the ladder. The order is activity modification, then <b>PT</b> (physical therapy), then injection, then <b>MRI</b> (magnetic resonance imaging), then surgery.",
+   "note": "rule: exam framing and slogan removed; PT and MRI expanded",
+   "claims": [
+    {
+     "claim": "The correct next step is usually the next rung of the ladder.",
+     "to": "The next step is usually the next rung of the ladder."
+    },
+    {
+     "claim": "The ladder order is activity modification, then PT, then injection, then MRI, then surgery.",
+     "to": "The order is activity modification, then PT (physical therapy), then injection, then MRI (magnetic resonance imaging), then surgery."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The next step is usually the next rung of the ladder.",
+     "from": "The correct next step is usually the next rung of the ladder."
+    },
+    {
+     "claim": "The ladder order is activity modification, then PT, then injection, then MRI, then surgery.",
+     "from": "The ladder order is activity modification, then PT, then injection, then MRI, then surgery."
+    },
+    {
+     "claim": "PT stands for physical therapy.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MRI stands for magnetic resonance imaging.",
+     "from": "expansion"
+    }
+   ]
+  }
+ ]
+}
