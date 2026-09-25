@@ -1,0 +1,32 @@
+{
+ "edits": [
+  {
+   "op": "insert_before",
+   "brief": "teratogens",
+   "anchor": "<div class=\"pearls\"><span class=\"lbl\">Pairs with</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">Fetal alcohol syndrome without an exposure history</span> <b>FAS</b> (fetal alcohol syndrome) can be diagnosed from the examination when no exposure history is given. The 2016 revised Institute of Medicine criteria require all four of these. First, 2 of 3 facial features: <b>short palpebral fissures</b> (at or below the 10th percentile), a <b>thin upper lip vermilion</b> and a <b>smooth philtrum</b>. Second, height or weight at or below the 10th percentile. Third, a head circumference at or below the 10th percentile, a structural brain anomaly, or recurrent nonfebrile seizures. Fourth, neurobehavioral impairment, which under age 3 means developmental delay. Confirmed alcohol exposure is not required; a confirmed absence of exposure excludes the diagnosis. <b>Short</b> fissures point to FAS. <b>Upslanting</b> fissures with epicanthal folds, a flat facial profile and a single palmar crease point to Down syndrome.</div>\n<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> No maternal alcohol history was given; the face, with length, weight and head size at the 5th percentile, made the diagnosis in a hypotonic 2-week-old. Short palpebral fissures separated it from Down syndrome, whose fissures slant upward; trisomy 13, fragile X, Klinefelter syndrome and congenital toxoplasmosis were the other decoys.</div>\n",
+   "note": "Q1: FAS diagnosed without an exposure history, all four Hoyme 2016 criteria; framing line"
+  },
+  {
+   "op": "insert_after",
+   "brief": "teratogens",
+   "anchor": "none present here.</span></div>",
+   "html": "\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Down syndrome: hypotonia and a soft murmur fit, but Down syndrome gives upslanting palpebral fissures with epicanthal folds, a flat facial profile and a single palmar crease. These fissures are short.</span></div>\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Trisomy 13 syndrome: it causes cleft lip and palate, holoprosencephaly, small eyes, scalp defects and extra digits, none of which this newborn has.</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Fragile X syndrome: the long face, large ears, prominent jaw and large testes appear later in childhood and after puberty; this newborn has a small jaw.</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Klinefelter syndrome (seminiferous tubule dysgenesis): boys with 47,XXY look normal at birth; small testes, tall stature and gynecomastia appear at puberty.</span></div>\n<div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Congenital toxoplasmosis: growth restriction fits, but it brings chorioretinitis, hydrocephalus, scattered intracranial calcifications and an enlarged liver and spleen, not a facial pattern.</span></div>",
+   "note": "Q1: one trapline per NBME distractor"
+  },
+  {
+   "op": "add_item",
+   "brief": "teratogens",
+   "type": "dx",
+   "stem": "2-week-old boy born at 38 weeks to a 27-year-old first-time mother after an uncomplicated pregnancy, with no maternal alcohol or drug history recorded; birth weight about 2.3 kg; length, weight and head circumference at the 5th percentile; short palpebral fissures, flat midface, small jaw and thin upper lip; soft systolic murmur with normal femoral pulses; mild hypotonia",
+   "answer": "Fetal alcohol syndrome",
+   "companion": "the face and growth decide without an exposure history; the palpebral fissures are short, not upslanting",
+   "d1": "Down syndrome",
+   "d2": "Trisomy 13 syndrome",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  }
+ ]
+}

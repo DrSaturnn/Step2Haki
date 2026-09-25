@@ -1,0 +1,52 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "aq-bruising",
+   "find": "<td>Platelets: too few</td>",
+   "with": "<td>Platelets: destroyed (antibody-coated, cleared in the spleen)</td>",
+   "note": "Q3: mechanism class in the differential"
+  },
+  {
+   "op": "insert_before",
+   "brief": "aq-bruising",
+   "anchor": "<div class=\"pearls\"><span class=\"lbl\">Pairs with</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">Bleeding by mechanism</span> Normal <b>PT</b> (prothrombin time) and <b>aPTT</b> (activated partial thromboplastin time) argue against a clotting factor deficiency and against <b>DIC</b> (disseminated intravascular coagulation). A low platelet count with a normal hemoglobin and white count in a well child means <b>increased platelet destruction</b>. In <b>ITP</b> (immune thrombocytopenia), antibodies coat platelets and splenic macrophages clear them; the antibodies also reduce platelet production. <b>Decreased production</b> from leukemia or aplastic anemia usually lowers two or more cell lines. <b>Abnormal platelet function</b> (von Willebrand disease, Glanzmann thrombasthenia) causes bleeding at a normal or near-normal count.</div>\n<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The key was a mechanism class, increased platelet destruction, not the name <b>ITP</b> (immune thrombocytopenia). Child abuse was the decoy, planted as an active boy with bruises in several stages of healing. Widespread petechiae, a platelet count of 1,000 and a normal <b>PT</b> (prothrombin time) and <b>aPTT</b> (activated partial thromboplastin time) explain the bruising.</div>\n",
+   "note": "Q3: mechanism classes (PMC3410635); framing line"
+  },
+  {
+   "op": "insert_after",
+   "brief": "aq-bruising",
+   "anchor": "when it is high in only about half.</span></div>",
+   "html": "\n<div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Child abuse: bruises of different colors on an active boy invite it, but bruise color cannot reliably date a bruise. Widespread petechiae, a platelet count of 1,000 and normal clotting times explain the bleeding; a platelet count and coagulation studies belong in most bruising workups for suspected abuse.</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Abnormal platelet function: von Willebrand disease and Glanzmann thrombasthenia cause bleeding at a normal or near-normal count; this count is 1,000.</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Decreased platelet production: leukemia and aplastic anemia usually lower more than one cell line; a hemoglobin of 12 and a white count of 6,000 are normal.</span></div>\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Disseminated intravascular coagulation: it occurs in an ill patient and prolongs the clotting times, with low fibrinogen and high D-dimer; this boy is well and his clotting times are normal.</span></div>",
+   "note": "Q3: one trapline per NBME distractor; bruise dating (Maguire 2005 systematic review)"
+  },
+  {
+   "op": "add_item",
+   "brief": "aq-bruising",
+   "type": "mech",
+   "stem": "Previously healthy 4 yo boy with 3 days of bruising that started on the arms and legs and has spread to the trunk; no injury recalled, and his parents call him very active; afebrile, normal vital signs; scattered petechiae and bruises of different ages, most on the limbs; hemoglobin 12 g/dL, white count 6,000, platelets 1,000, PT and aPTT normal",
+   "answer": "Increased platelet destruction",
+   "companion": "immune thrombocytopenia; antibody-coated platelets are cleared in the spleen",
+   "d1": "Child abuse",
+   "d2": "Decreased platelet production",
+   "lead_in": "Which of the following is the most likely cause of this patient's condition?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "aq-bruising",
+   "type": "mech",
+   "stem": "5 yo with 2 weeks of bruising, pallor, fever and leg pain; liver and spleen enlarged; hemoglobin 7 g/dL, white count 2,000, platelets 15,000; PT and aPTT normal",
+   "answer": "Decreased platelet production",
+   "companion": "marrow replacement, as in leukemia; peripheral smear next, and bone marrow examination confirms",
+   "d1": "Increased platelet destruction",
+   "d2": "Abnormal platelet function",
+   "lead_in": "Which of the following is the most likely cause of this patient's condition?",
+   "src": "authored"
+  }
+ ]
+}

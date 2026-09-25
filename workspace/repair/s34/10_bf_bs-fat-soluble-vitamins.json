@@ -1,0 +1,45 @@
+{
+ "edits": [
+  {
+   "op": "insert_before",
+   "brief": "bs-fat-soluble-vitamins",
+   "anchor": "<div class=\"pearls\"><span class=\"lbl\">Pairs with</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">Rickets: which serum value rises</span> In vitamin D deficiency rickets, <b>alkaline phosphatase</b> activity and <b>PTH</b> (parathyroid hormone) rise, and 25-hydroxyvitamin D falls. Phosphate is low, because less is absorbed and PTH increases its loss in the urine. Calcium is low or normal, because PTH defends it. Osteoblasts make alkaline phosphatase as they lay down bone matrix; it is high in active rickets and often rises before calcium or phosphate falls. PTH raises intestinal calcium absorption only indirectly, by increasing kidney production of 1,25-dihydroxyvitamin D. In an infant, rickets can present as late crawling or walking with widened wrists.</div>\n<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The lead-in asked which serum value is increased, and the key was an enzyme activity, alkaline phosphatase, set among minerals (calcium, phosphorus, magnesium) and a liver enzyme. The child was a 15-month-old fed only breast milk who was not yet crawling or walking and had widened wrists.</div>\n",
+   "note": "Q2: lab pattern of nutritional rickets (osteoblast ALP, PMC9931734); framing line"
+  },
+  {
+   "op": "insert_after",
+   "brief": "bs-fat-soluble-vitamins",
+   "anchor": "treats the cause of the bleeding.</span></div>",
+   "html": "\n<div class=\"trapline\"><span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">ALT activity: <b>ALT</b> (alanine aminotransferase) is a liver enzyme that rises with liver cell injury. When alkaline phosphatase is high and ALT and <b>GGT</b> (gamma-glutamyl transferase) are normal, the source is bone.</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Calcium concentration: vitamin D deficiency lowers calcium absorption, and <b>PTH</b> (parathyroid hormone) holds serum calcium low or normal. A high calcium points to hyperparathyroidism or vitamin D excess.</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Phosphorus concentration: it falls in vitamin D deficiency, because absorption drops and <b>PTH</b> (parathyroid hormone) increases urinary loss. A high phosphate points to kidney failure or hypoparathyroidism.</span></div>\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Magnesium concentration: vitamin D deficiency does not raise it. Magnesium matters to calcium balance in the other direction: a low level impairs <b>PTH</b> (parathyroid hormone) secretion and action.</span></div>",
+   "note": "Q2: one trapline per NBME distractor"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-fat-soluble-vitamins",
+   "type": "test",
+   "stem": "15 mo F fed only breast milk since birth, not yet crawling or walking; language and social skills normal for age; length at the 50th and weight at the 85th percentile; examination normal apart from widened wrists",
+   "answer": "Alkaline phosphatase activity",
+   "companion": "vitamin D deficiency rickets; osteoblasts release more of the enzyme",
+   "d1": "Phosphorus concentration",
+   "d2": "Calcium concentration",
+   "lead_in": "Which of the following serum findings is most likely to be increased?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-fat-soluble-vitamins",
+   "type": "test",
+   "stem": "22-month-old girl who still drinks mostly breast milk and has never had vitamin D drops; walked late and now waddles; bowed legs and thickened wrists and ankles",
+   "answer": "Phosphorus concentration",
+   "companion": "vitamin D deficiency rickets; less is absorbed and parathyroid hormone increases urinary loss",
+   "d1": "Parathyroid hormone concentration",
+   "d2": "Alkaline phosphatase activity",
+   "lead_in": "Which of the following serum findings is most likely to be decreased?",
+   "src": "authored"
+  }
+ ]
+}

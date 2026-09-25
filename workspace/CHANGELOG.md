@@ -2,6 +2,22 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-09-25 s34: NBME Peds batch: FAS, rickets alkaline phosphatase, ITP mechanism; factor-inhibitor cleanup
+
+```
+Page: 207 briefs, 2014 items -> 207 briefs, 2019 items
+Briefs changed (4):
+  - bs-fat-soluble-vitamins (Fat-Soluble Vitamin Deficiency and Toxicity): 2 items added (q_f1da4cfcf0b5965ee660, q_a6f735a57b23ad49910f); prose edited (+2349 chars)
+  - factor-inhibitor (Hemophilia A Inhibitor): prose edited (-132 chars)
+  - aq-bruising (Bruising and Purpura in a Child): 2 items added (q_ee5e56588e265abea6ad, q_179857279bfa2f2d0870); prose edited (+2511 chars)
+  - teratogens (Teratogenic Exposures): 1 item added (q_25742c68c19ec216b8d0); prose edited (+2767 chars)
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 207 briefs, 2019 items, 4 scripts, 31 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 207 | bankwraps 207 | mcq 2019 (axCheck 2019, reveal-only 0) | malformed 0 | crit gridded 123/124 | vignette gridded 129/129 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (44118 source shingles; page 0.031%)
+```
+
 ## 2026-09-25 s33: Plain-voice pass on all remaining systems; trap lines use colons; Distractors label
 
 ```
