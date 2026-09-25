@@ -4,100 +4,76 @@
    "op": "replace",
    "brief": "bs-dexa-highrisk",
    "find": "<p>Four screening risk factors — <b>prior fragility fracture</b> (wrist), family history of hip fracture, <b>30 pack-years</b>, and <b>low body weight (50 kg)</b>. Any one overrides the age-65 default → <b>DEXA now</b>.</p>\n<p><b>This is a mirror twin, and the wrong answer is the twin's right answer.</b> \"DEXA at 65\" is correct for the <i>no-risk-factor</i> version: 55 yo F, timely menopause, <b>BMI 31</b>, never smoked, no fractures.</p>",
-   "with": "<p>She has four <b>DEXA</b> (dual-energy X-ray absorptiometry) screening risk factors: <b>prior fragility fracture</b> (wrist), family history of hip fracture, <b>30 pack-years</b>, and <b>low body weight (50 kg)</b>. Any one of them overrides the age-65 default → <b>DEXA now</b>.</p>\n<p>DEXA at 65 is correct for a woman with <i>no risk factors</i>. An example is a 55 yo F with timely menopause and <b>BMI 31</b> (body mass index) who never smoked and has no fractures.</p>",
-   "note": "voice: .dp; em dash removed, mirror-twin slogan removed, DEXA expanded",
+   "with": "<p>She has four screening risk factors: <b>prior fragility fracture</b> (wrist), family history of hip fracture, <b>30 pack-years</b>, and <b>low body weight (50 kg)</b>. Any one overrides the age-65 default → <b>DEXA now</b> (dual-energy X-ray absorptiometry).</p>\n<p>For a patient with <i>no risk factors</i>, \"DEXA at 65\" is correct. An example is a 55 yo F with timely menopause and <b>BMI 31</b> who never smoked and has no fractures.</p>",
+   "note": "round 2 voice: .dp; em dash removed, mirror-twin slogan removed, DEXA expanded",
    "reworded_bold": [
     "This is a mirror twin, and the wrong answer is the twin's right answer."
    ],
    "claims": [
     {
-     "claim": "She has four screening risk factors.",
-     "to": "She has four DEXA (dual-energy X-ray absorptiometry) screening risk factors: prior fragility fracture (wrist), family history of hip fracture, 30 pack-years, and low body weight (50 kg)."
+     "claim": "There are four screening risk factors.",
+     "to": "She has four screening risk factors: prior fragility fracture (wrist), family history of hip fracture, 30 pack-years, and low body weight (50 kg)."
     },
     {
-     "claim": "A prior wrist fragility fracture is a screening risk factor.",
-     "to": "She has four DEXA (dual-energy X-ray absorptiometry) screening risk factors: prior fragility fracture (wrist), family history of hip fracture, 30 pack-years, and low body weight (50 kg)."
+     "claim": "Prior fragility fracture (wrist) is one of the risk factors.",
+     "to": "She has four screening risk factors: prior fragility fracture (wrist), family history of hip fracture, 30 pack-years, and low body weight (50 kg)."
     },
     {
-     "claim": "Family history of hip fracture is a screening risk factor.",
-     "to": "She has four DEXA (dual-energy X-ray absorptiometry) screening risk factors: prior fragility fracture (wrist), family history of hip fracture, 30 pack-years, and low body weight (50 kg)."
+     "claim": "Family history of hip fracture is one of the risk factors.",
+     "to": "She has four screening risk factors: prior fragility fracture (wrist), family history of hip fracture, 30 pack-years, and low body weight (50 kg)."
     },
     {
-     "claim": "30 pack-years is a screening risk factor.",
-     "to": "She has four DEXA (dual-energy X-ray absorptiometry) screening risk factors: prior fragility fracture (wrist), family history of hip fracture, 30 pack-years, and low body weight (50 kg)."
+     "claim": "30 pack-years is one of the risk factors.",
+     "to": "She has four screening risk factors: prior fragility fracture (wrist), family history of hip fracture, 30 pack-years, and low body weight (50 kg)."
     },
     {
-     "claim": "Low body weight (50 kg) is a screening risk factor.",
-     "to": "She has four DEXA (dual-energy X-ray absorptiometry) screening risk factors: prior fragility fracture (wrist), family history of hip fracture, 30 pack-years, and low body weight (50 kg)."
+     "claim": "Low body weight (50 kg) is one of the risk factors.",
+     "to": "She has four screening risk factors: prior fragility fracture (wrist), family history of hip fracture, 30 pack-years, and low body weight (50 kg)."
     },
     {
      "claim": "Any one risk factor overrides the age-65 default.",
-     "to": "Any one of them overrides the age-65 default → DEXA now."
+     "to": "Any one overrides the age-65 default → DEXA now (dual-energy X-ray absorptiometry)."
     },
     {
-     "claim": "With a risk factor, the answer is DEXA now.",
-     "to": "Any one of them overrides the age-65 default → DEXA now."
+     "claim": "The patient needs DEXA now.",
+     "to": "Any one overrides the age-65 default → DEXA now (dual-energy X-ray absorptiometry)."
     },
     {
-     "claim": "This is a mirror twin.",
-     "dropped": "framing label about how the question is paired; the twin's content is stated in the next sentence"
+     "claim": "This is a mirror twin; the wrong answer is the twin's right answer.",
+     "dropped": "framing about answer options; the no-risk-factor case it refers to is stated in the next sentence"
     },
     {
-     "claim": "The wrong answer here is the twin's right answer.",
-     "to": "DEXA at 65 is correct for a woman with no risk factors."
-    },
-    {
-     "claim": "DEXA at 65 is correct for the no-risk-factor version.",
-     "to": "DEXA at 65 is correct for a woman with no risk factors."
+     "claim": "\"DEXA at 65\" is correct for the no-risk-factor version.",
+     "to": "For a patient with no risk factors, \"DEXA at 65\" is correct."
     },
     {
      "claim": "The no-risk-factor version is a 55 yo F with timely menopause, BMI 31, never smoked, no fractures.",
-     "to": "An example is a 55 yo F with timely menopause and BMI 31 (body mass index) who never smoked and has no fractures."
+     "to": "An example is a 55 yo F with timely menopause and BMI 31 who never smoked and has no fractures."
     }
    ],
    "new_claims": [
+    {
+     "claim": "She has four screening risk factors: prior fragility fracture (wrist), family history of hip fracture, 30 pack-years, and low body weight (50 kg).",
+     "from": "There are four screening risk factors."
+    },
+    {
+     "claim": "Any one overrides the age-65 default → DEXA now (dual-energy X-ray absorptiometry).",
+     "from": "Any one risk factor overrides the age-65 default."
+    },
+    {
+     "claim": "Any one overrides the age-65 default → DEXA now (dual-energy X-ray absorptiometry).",
+     "from": "The patient needs DEXA now."
+    },
     {
      "claim": "DEXA stands for dual-energy X-ray absorptiometry.",
      "from": "expansion"
     },
     {
-     "claim": "BMI stands for body mass index.",
-     "from": "expansion"
+     "claim": "For a patient with no risk factors, \"DEXA at 65\" is correct.",
+     "from": "\"DEXA at 65\" is correct for the no-risk-factor version."
     },
     {
-     "claim": "She has four screening risk factors: prior wrist fragility fracture, family history of hip fracture, 30 pack-years, low body weight (50 kg).",
-     "from": "She has four screening risk factors."
-    },
-    {
-     "claim": "A prior wrist fragility fracture is a screening risk factor.",
-     "from": "A prior wrist fragility fracture is a screening risk factor."
-    },
-    {
-     "claim": "Family history of hip fracture is a screening risk factor.",
-     "from": "Family history of hip fracture is a screening risk factor."
-    },
-    {
-     "claim": "30 pack-years is a screening risk factor.",
-     "from": "30 pack-years is a screening risk factor."
-    },
-    {
-     "claim": "Low body weight (50 kg) is a screening risk factor.",
-     "from": "Low body weight (50 kg) is a screening risk factor."
-    },
-    {
-     "claim": "Any one risk factor overrides the age-65 default.",
-     "from": "Any one risk factor overrides the age-65 default."
-    },
-    {
-     "claim": "With a risk factor, DEXA now.",
-     "from": "With a risk factor, the answer is DEXA now."
-    },
-    {
-     "claim": "DEXA at 65 is correct for a woman with no risk factors.",
-     "from": "DEXA at 65 is correct for the no-risk-factor version."
-    },
-    {
-     "claim": "Example: a 55 yo F with timely menopause and BMI 31 who never smoked and has no fractures.",
+     "claim": "An example is a 55 yo F with timely menopause and BMI 31 who never smoked and has no fractures.",
      "from": "The no-risk-factor version is a 55 yo F with timely menopause, BMI 31, never smoked, no fractures."
     }
    ]
@@ -106,81 +82,82 @@
    "op": "replace",
    "brief": "bs-dexa-highrisk",
    "find": "<span class=\"lbl\">⚠︎ Two ledgers on the early-screening trigger</span>\n<b>Exam ledger (bank, verbatim):</b> DEXA \"at age 65 years or earlier in those who have <b>at least one risk factor</b> — family history of hip fracture, prior fragility fracture, smoking history, low BMI, or use of corticosteroids.\"<br>\n<b>Clinic ledger (USPSTF):</b> under 65, screen when <b>FRAX 10-year major osteoporotic risk ≥9.3%</b>. The bank's version is the operational shorthand; the exam scores the shorthand.",
-   "with": "<span class=\"lbl\">⚠︎ Exam answer versus clinical practice</span>\n<b>Exam answer:</b> <b>DEXA</b> (dual-energy X-ray absorptiometry) at age 65 years, or earlier in those who have <b>at least one risk factor</b>. The listed risk factors are family history of hip fracture, prior fragility fracture, smoking history, low <b>BMI</b> (body mass index) and use of corticosteroids.<br>\n<b>Clinical practice:</b> the <b>USPSTF</b> (U.S. Preventive Services Task Force) uses the <b>FRAX</b> (Fracture Risk Assessment Tool) under 65. It screens when the <b>FRAX 10-year major osteoporotic risk ≥9.3%</b>. The risk-factor list is the operational shorthand, and the exam scores it.",
-   "note": "voice: .danger; ledger wording replaced per page-wide rule, em dash removed, acronyms expanded",
+   "with": "<span class=\"lbl\">⚠︎ Early screening: exam versus practice</span>\n<b>Exam answer (bank, verbatim):</b> <b>DEXA</b> (dual-energy X-ray absorptiometry) \"at age 65 years or earlier in those who have <b>at least one risk factor</b>\". The bank lists these risk factors: \"family history of hip fracture, prior fragility fracture, smoking history, low BMI, or use of corticosteroids\".<br>\n<b>Clinical practice</b> follows the <b>USPSTF</b> (US Preventive Services Task Force). Under 65, screen when the <b>FRAX</b> (Fracture Risk Assessment Tool) <b>10-year major osteoporotic risk is ≥9.3%</b>. The bank's version is operational shorthand, and the exam scores the shorthand.",
+   "note": "round 2 voice: ledger wording replaced (exam answer versus clinical practice), em dash removed, acronyms expanded",
    "reworded_bold": [
     "Exam ledger (bank, verbatim):",
-    "Clinic ledger (USPSTF):"
+    "Clinic ledger (USPSTF):",
+    "FRAX 10-year major osteoporotic risk ≥9.3%"
    ],
    "reworded_label": [
     "⚠︎ Two ledgers on the early-screening trigger"
    ],
    "claims": [
     {
-     "claim": "The block contrasts two ledgers.",
-     "dropped": "workflow label; the exam answer and clinical practice are each stated below"
+     "claim": "The early-screening trigger differs between the exam and clinical practice.",
+     "to": "Early screening: exam versus practice"
     },
     {
-     "claim": "The bank text is quoted verbatim.",
-     "dropped": "provenance tag"
+     "claim": "Exam (bank, verbatim): DEXA at age 65 years or earlier in those who have at least one risk factor.",
+     "to": "Exam answer (bank, verbatim): DEXA (dual-energy X-ray absorptiometry) \"at age 65 years or earlier in those who have at least one risk factor\"."
     },
     {
-     "claim": "Exam: DEXA at age 65 years or earlier in those who have at least one risk factor.",
-     "to": "Exam answer: DEXA (dual-energy X-ray absorptiometry) at age 65 years, or earlier in those who have at least one risk factor."
+     "claim": "The bank's risk factors are family history of hip fracture, prior fragility fracture, smoking history, low BMI, or use of corticosteroids.",
+     "to": "The bank lists these risk factors: \"family history of hip fracture, prior fragility fracture, smoking history, low BMI, or use of corticosteroids\"."
     },
     {
-     "claim": "The exam's risk factors are family history of hip fracture, prior fragility fracture, smoking history, low BMI, or use of corticosteroids.",
-     "to": "The listed risk factors are family history of hip fracture, prior fragility fracture, smoking history, low BMI (body mass index) and use of corticosteroids."
+     "claim": "The clinical standard is the USPSTF.",
+     "to": "Clinical practice follows the USPSTF (US Preventive Services Task Force)."
     },
     {
-     "claim": "USPSTF: under 65, screen when FRAX 10-year major osteoporotic risk ≥9.3%.",
-     "to": "It screens when the FRAX 10-year major osteoporotic risk ≥9.3%."
+     "claim": "USPSTF: under 65, screen when FRAX 10-year major osteoporotic risk is ≥9.3%.",
+     "to": "Under 65, screen when the FRAX (Fracture Risk Assessment Tool) 10-year major osteoporotic risk is ≥9.3%."
     },
     {
      "claim": "The bank's version is the operational shorthand.",
-     "to": "The risk-factor list is the operational shorthand, and the exam scores it."
+     "to": "The bank's version is operational shorthand, and the exam scores the shorthand."
     },
     {
      "claim": "The exam scores the shorthand.",
-     "to": "The risk-factor list is the operational shorthand, and the exam scores it."
+     "to": "The bank's version is operational shorthand, and the exam scores the shorthand."
     }
    ],
    "new_claims": [
+    {
+     "claim": "Early screening: exam versus practice",
+     "from": "The early-screening trigger differs between the exam and clinical practice."
+    },
     {
      "claim": "DEXA stands for dual-energy X-ray absorptiometry.",
      "from": "expansion"
     },
     {
-     "claim": "USPSTF stands for U.S. Preventive Services Task Force.",
+     "claim": "Exam answer (bank, verbatim): DEXA (dual-energy X-ray absorptiometry) \"at age 65 years or earlier in those who have at least one risk factor\".",
+     "from": "Exam (bank, verbatim): DEXA at age 65 years or earlier in those who have at least one risk factor."
+    },
+    {
+     "claim": "The bank lists these risk factors: \"family history of hip fracture, prior fragility fracture, smoking history, low BMI, or use of corticosteroids\".",
+     "from": "The bank's risk factors are family history of hip fracture, prior fragility fracture, smoking history, low BMI, or use of corticosteroids."
+    },
+    {
+     "claim": "Clinical practice follows the USPSTF.",
+     "from": "The clinical standard is the USPSTF."
+    },
+    {
+     "claim": "USPSTF stands for US Preventive Services Task Force.",
      "from": "expansion"
+    },
+    {
+     "claim": "Under 65, screen when the FRAX (Fracture Risk Assessment Tool) 10-year major osteoporotic risk is ≥9.3%.",
+     "from": "USPSTF: under 65, screen when FRAX 10-year major osteoporotic risk is ≥9.3%."
     },
     {
      "claim": "FRAX stands for Fracture Risk Assessment Tool.",
      "from": "expansion"
     },
     {
-     "claim": "BMI stands for body mass index.",
-     "from": "expansion"
-    },
-    {
-     "claim": "Exam answer: DEXA at age 65 years, or earlier with at least one risk factor.",
-     "from": "Exam: DEXA at age 65 years or earlier in those who have at least one risk factor."
-    },
-    {
-     "claim": "Risk factors: family history of hip fracture, prior fragility fracture, smoking history, low BMI, or use of corticosteroids.",
-     "from": "The exam's risk factors are family history of hip fracture, prior fragility fracture, smoking history, low BMI, or use of corticosteroids."
-    },
-    {
-     "claim": "USPSTF uses FRAX under 65 and screens when FRAX 10-year major osteoporotic risk ≥9.3%.",
-     "from": "USPSTF: under 65, screen when FRAX 10-year major osteoporotic risk ≥9.3%."
-    },
-    {
-     "claim": "The risk-factor list is the operational shorthand.",
+     "claim": "The bank's version is operational shorthand, and the exam scores the shorthand.",
      "from": "The bank's version is the operational shorthand."
-    },
-    {
-     "claim": "The exam scores it.",
-     "from": "The exam scores the shorthand."
     }
    ]
   },
@@ -188,74 +165,66 @@
    "op": "replace",
    "brief": "bs-dexa-highrisk",
    "find": "<b>Hip or vertebral</b> fragility fracture → osteoporosis is diagnosed <b>clinically</b> → <b>treat, don't just screen</b> · chronic glucocorticoids → DEXA regardless of age · premenopausal or male &lt;50 → <b>Z-score</b> and hunt secondary causes · aromatase inhibitor or ADT → screen · height loss or kyphosis → vertebral imaging.",
-   "with": "<b>Hip or vertebral</b> fragility fracture: osteoporosis is diagnosed <b>clinically</b> → <b>treat, don't just screen</b> · chronic glucocorticoids → <b>DEXA</b> (dual-energy X-ray absorptiometry) regardless of age · premenopausal or male &lt;50 → <b>Z-score</b> and a search for secondary causes · aromatase inhibitor or <b>ADT</b> (androgen deprivation therapy) → screen · height loss or kyphosis → vertebral imaging.",
-   "note": "voice: exit ramps; one arrow per row, acronyms expanded",
+   "with": "<b>Hip or vertebral</b> fragility fracture: osteoporosis is diagnosed <b>clinically</b> → <b>treat, don't just screen</b> · chronic glucocorticoids → <b>DEXA</b> (dual-energy X-ray absorptiometry) regardless of age · premenopausal or male &lt;50 → <b>Z-score</b> and look for secondary causes · aromatase inhibitor or <b>ADT</b> (androgen deprivation therapy) → screen · height loss or kyphosis → vertebral imaging.",
+   "note": "round 2 voice: one arrow per row segment, acronyms expanded",
    "claims": [
     {
-     "claim": "Hip or vertebral fragility fracture means osteoporosis is diagnosed clinically.",
+     "claim": "A hip or vertebral fragility fracture means osteoporosis is diagnosed clinically.",
      "to": "Hip or vertebral fragility fracture: osteoporosis is diagnosed clinically → treat, don't just screen"
     },
     {
-     "claim": "With a hip or vertebral fragility fracture, treat, don't just screen.",
+     "claim": "After a hip or vertebral fragility fracture, treat rather than just screen.",
      "to": "Hip or vertebral fragility fracture: osteoporosis is diagnosed clinically → treat, don't just screen"
     },
     {
-     "claim": "Chronic glucocorticoids → DEXA regardless of age.",
+     "claim": "Chronic glucocorticoids call for DEXA regardless of age.",
      "to": "chronic glucocorticoids → DEXA (dual-energy X-ray absorptiometry) regardless of age"
     },
     {
-     "claim": "Premenopausal or male <50 → Z-score.",
-     "to": "premenopausal or male <50 → Z-score and a search for secondary causes"
+     "claim": "Premenopausal women or men <50 get a Z-score and a search for secondary causes.",
+     "to": "premenopausal or male <50 → Z-score and look for secondary causes"
     },
     {
-     "claim": "Premenopausal or male <50 → hunt secondary causes.",
-     "to": "premenopausal or male <50 → Z-score and a search for secondary causes"
-    },
-    {
-     "claim": "Aromatase inhibitor or ADT → screen.",
+     "claim": "Aromatase inhibitor or ADT calls for screening.",
      "to": "aromatase inhibitor or ADT (androgen deprivation therapy) → screen"
     },
     {
-     "claim": "Height loss or kyphosis → vertebral imaging.",
+     "claim": "Height loss or kyphosis calls for vertebral imaging.",
      "to": "height loss or kyphosis → vertebral imaging."
     }
    ],
    "new_claims": [
     {
+     "claim": "Hip or vertebral fragility fracture: osteoporosis is diagnosed clinically → treat, don't just screen",
+     "from": "A hip or vertebral fragility fracture means osteoporosis is diagnosed clinically."
+    },
+    {
+     "claim": "Hip or vertebral fragility fracture: osteoporosis is diagnosed clinically → treat, don't just screen",
+     "from": "After a hip or vertebral fragility fracture, treat rather than just screen."
+    },
+    {
+     "claim": "chronic glucocorticoids → DEXA (dual-energy X-ray absorptiometry) regardless of age",
+     "from": "Chronic glucocorticoids call for DEXA regardless of age."
+    },
+    {
      "claim": "DEXA stands for dual-energy X-ray absorptiometry.",
      "from": "expansion"
+    },
+    {
+     "claim": "premenopausal or male <50 → Z-score and look for secondary causes",
+     "from": "Premenopausal women or men <50 get a Z-score and a search for secondary causes."
+    },
+    {
+     "claim": "aromatase inhibitor or ADT (androgen deprivation therapy) → screen",
+     "from": "Aromatase inhibitor or ADT calls for screening."
     },
     {
      "claim": "ADT stands for androgen deprivation therapy.",
      "from": "expansion"
     },
     {
-     "claim": "Hip or vertebral fragility fracture: osteoporosis is diagnosed clinically.",
-     "from": "Hip or vertebral fragility fracture means osteoporosis is diagnosed clinically."
-    },
-    {
-     "claim": "Treat, don't just screen.",
-     "from": "With a hip or vertebral fragility fracture, treat, don't just screen."
-    },
-    {
-     "claim": "Chronic glucocorticoids → DEXA regardless of age.",
-     "from": "Chronic glucocorticoids → DEXA regardless of age."
-    },
-    {
-     "claim": "Premenopausal or male <50 → Z-score.",
-     "from": "Premenopausal or male <50 → Z-score."
-    },
-    {
-     "claim": "Premenopausal or male <50 → search for secondary causes.",
-     "from": "Premenopausal or male <50 → hunt secondary causes."
-    },
-    {
-     "claim": "Aromatase inhibitor or ADT → screen.",
-     "from": "Aromatase inhibitor or ADT → screen."
-    },
-    {
-     "claim": "Height loss or kyphosis → vertebral imaging.",
-     "from": "Height loss or kyphosis → vertebral imaging."
+     "claim": "height loss or kyphosis → vertebral imaging.",
+     "from": "Height loss or kyphosis calls for vertebral imaging."
     }
    ]
   },
@@ -263,9 +232,10 @@
    "op": "replace",
    "brief": "bs-dexa-highrisk",
    "find": "<span class=\"lbl\">Adversarial pass — one real hole</span>\nThe bank's list says \"family history of hip fracture.\" <b>FRAX asks specifically about a <i>parental</i> hip fracture</b>, not a sibling's. It doesn't change this answer — three other factors qualify — but a stem whose <i>only</i> risk factor is a sibling fracture splits the ledgers. <b>Parent counts everywhere; sibling counts on the exam.</b>",
-   "with": "<span class=\"lbl\">Parent versus sibling fracture</span>\nThe exam's risk-factor list says \"family history of hip fracture\". <b>FRAX asks specifically about a <i>parental</i> hip fracture</b> (<b>FRAX</b>: Fracture Risk Assessment Tool), not a sibling's. This patient still qualifies through three other risk factors. When a sibling's hip fracture is the <i>only</i> risk factor, the exam answer and clinical practice differ. <b>A parent's hip fracture counts on the exam and in FRAX; a sibling's counts on the exam but not in FRAX.</b>",
-   "note": "voice: .danger; rhetorical label and em dashes removed, ledger wording replaced, FRAX expanded",
+   "with": "<span class=\"lbl\">Parental versus sibling hip fracture</span>\nThe bank's risk-factor list includes a family history of hip fracture. <b>FRAX</b> (Fracture Risk Assessment Tool) asks specifically about a <b><i>parental</i> hip fracture</b>, not a sibling's. The sibling history does not change her management, because three other risk factors qualify. If a sibling fracture is the <i>only</i> risk factor, the exam answer and clinical practice differ. A parental hip fracture counts on the exam and in clinical practice; a sibling fracture counts only on the exam.",
+   "note": "round 2 voice: rhetorical label and slogan reworded, ledger wording replaced, em dashes removed, FRAX expanded",
    "reworded_bold": [
+    "FRAX asks specifically about a parental hip fracture",
     "Parent counts everywhere; sibling counts on the exam."
    ],
    "reworded_label": [
@@ -273,62 +243,66 @@
    ],
    "claims": [
     {
-     "claim": "This is an adversarial pass that found one real hole.",
-     "dropped": "workflow label"
-    },
-    {
      "claim": "The bank's list says family history of hip fracture.",
-     "to": "The exam's risk-factor list says \"family history of hip fracture\"."
+     "to": "The bank's risk-factor list includes a family history of hip fracture."
     },
     {
      "claim": "FRAX asks specifically about a parental hip fracture, not a sibling's.",
-     "to": "FRAX asks specifically about a parental hip fracture (FRAX: Fracture Risk Assessment Tool), not a sibling's."
+     "to": "FRAX (Fracture Risk Assessment Tool) asks specifically about a parental hip fracture, not a sibling's."
     },
     {
-     "claim": "It doesn't change this answer: three other factors qualify.",
-     "to": "This patient still qualifies through three other risk factors."
+     "claim": "The sibling issue does not change this patient's answer.",
+     "to": "The sibling history does not change her management, because three other risk factors qualify."
     },
     {
-     "claim": "A stem whose only risk factor is a sibling fracture splits the exam and clinic answers.",
-     "to": "When a sibling's hip fracture is the only risk factor, the exam answer and clinical practice differ."
+     "claim": "Three other risk factors qualify her.",
+     "to": "The sibling history does not change her management, because three other risk factors qualify."
     },
     {
-     "claim": "A parent's fracture counts everywhere.",
-     "to": "A parent's hip fracture counts on the exam and in FRAX; a sibling's counts on the exam but not in FRAX."
+     "claim": "When a sibling fracture is the only risk factor, the exam and clinical practice diverge.",
+     "to": "If a sibling fracture is the only risk factor, the exam answer and clinical practice differ."
     },
     {
-     "claim": "A sibling's fracture counts on the exam.",
-     "to": "A parent's hip fracture counts on the exam and in FRAX; a sibling's counts on the exam but not in FRAX."
+     "claim": "A parental fracture counts in both the exam and clinical practice.",
+     "to": "A parental hip fracture counts on the exam and in clinical practice; a sibling fracture counts only on the exam."
+    },
+    {
+     "claim": "A sibling fracture counts only on the exam.",
+     "to": "A parental hip fracture counts on the exam and in clinical practice; a sibling fracture counts only on the exam."
     }
    ],
    "new_claims": [
+    {
+     "claim": "The bank's risk-factor list includes a family history of hip fracture.",
+     "from": "The bank's list says family history of hip fracture."
+    },
+    {
+     "claim": "FRAX (Fracture Risk Assessment Tool) asks specifically about a parental hip fracture, not a sibling's.",
+     "from": "FRAX asks specifically about a parental hip fracture, not a sibling's."
+    },
     {
      "claim": "FRAX stands for Fracture Risk Assessment Tool.",
      "from": "expansion"
     },
     {
-     "claim": "The exam's risk-factor list says family history of hip fracture.",
-     "from": "The bank's list says family history of hip fracture."
+     "claim": "The sibling history does not change her management.",
+     "from": "The sibling issue does not change this patient's answer."
     },
     {
-     "claim": "FRAX asks specifically about a parental hip fracture, not a sibling's.",
-     "from": "FRAX asks specifically about a parental hip fracture, not a sibling's."
+     "claim": "Three other risk factors qualify.",
+     "from": "Three other risk factors qualify her."
     },
     {
-     "claim": "This patient still qualifies through three other risk factors.",
-     "from": "It doesn't change this answer: three other factors qualify."
+     "claim": "If a sibling fracture is the only risk factor, the exam answer and clinical practice differ.",
+     "from": "When a sibling fracture is the only risk factor, the exam and clinical practice diverge."
     },
     {
-     "claim": "When a sibling's hip fracture is the only risk factor, the exam answer and clinical practice differ.",
-     "from": "A stem whose only risk factor is a sibling fracture splits the exam and clinic answers."
+     "claim": "A parental hip fracture counts on the exam and in clinical practice.",
+     "from": "A parental fracture counts in both the exam and clinical practice."
     },
     {
-     "claim": "A parent's hip fracture counts on the exam and in FRAX.",
-     "from": "A parent's fracture counts everywhere."
-    },
-    {
-     "claim": "A sibling's counts on the exam but not in FRAX.",
-     "from": "A sibling's fracture counts on the exam."
+     "claim": "A sibling fracture counts only on the exam.",
+     "from": "A sibling fracture counts only on the exam."
     }
    ]
   },
@@ -336,8 +310,8 @@
    "op": "replace",
    "brief": "bs-dexa-highrisk",
    "find": "Part I <b>Osteoporosis Screening</b>. Store the discriminator as a question: <b>\"Does she have ≥1 risk factor — and did I actually count them?\"</b>",
-   "with": "Part I <b>Osteoporosis Screening</b>. Ask: <b>does she have ≥1 risk factor, and have I actually counted them?</b>",
-   "note": "voice: Pairs with; 'Store the discriminator' becomes 'Ask:', em dash removed",
+   "with": "Part I <b>Osteoporosis Screening</b>. Ask: <b>does she have ≥1 risk factor, and have I counted them all?</b>",
+   "note": "round 2 voice: Pairs with; \"Store the discriminator\" becomes \"Ask:\", em dash removed",
    "reworded_bold": [
     "\"Does she have ≥1 risk factor — and did I actually count them?\""
    ],
@@ -347,18 +321,18 @@
      "to": "Part I Osteoporosis Screening."
     },
     {
-     "claim": "The discriminator: does she have ≥1 risk factor, and did I actually count them?",
-     "to": "Ask: does she have ≥1 risk factor, and have I actually counted them?"
+     "claim": "The discriminating question is whether she has ≥1 risk factor, counted carefully.",
+     "to": "Ask: does she have ≥1 risk factor, and have I counted them all?"
     }
    ],
    "new_claims": [
     {
-     "claim": "Pairs with Part I Osteoporosis Screening.",
+     "claim": "Part I Osteoporosis Screening.",
      "from": "This brief pairs with Part I Osteoporosis Screening."
     },
     {
-     "claim": "Ask: does she have ≥1 risk factor, and have I actually counted them?",
-     "from": "The discriminator: does she have ≥1 risk factor, and did I actually count them?"
+     "claim": "Ask: does she have ≥1 risk factor, and have I counted them all?",
+     "from": "The discriminating question is whether she has ≥1 risk factor, counted carefully."
     }
    ]
   },
@@ -366,21 +340,25 @@
    "op": "replace",
    "brief": "bs-dexa-highrisk",
    "find": "An age-based screening default is the answer only <i>after</i> the risk-factor list comes back empty. Run the list before applying the default.",
-   "with": "Apply an age-based screening default only <i>after</i> the risk-factor list comes back empty.",
-   "note": "voice: .rule; merged the restated second sentence",
+   "with": "Run the risk-factor list first. Apply an age-based screening default only <i>after</i> the list comes back empty.",
+   "note": "round 2 voice: .rule, meta wording removed",
    "claims": [
     {
      "claim": "An age-based screening default applies only after the risk-factor list comes back empty.",
-     "to": "Apply an age-based screening default only after the risk-factor list comes back empty."
+     "to": "Apply an age-based screening default only after the list comes back empty."
     },
     {
      "claim": "Run the risk-factor list before applying the default.",
-     "to": "Apply an age-based screening default only after the risk-factor list comes back empty."
+     "to": "Run the risk-factor list first."
     }
    ],
    "new_claims": [
     {
-     "claim": "Apply an age-based screening default only after the risk-factor list comes back empty.",
+     "claim": "Run the risk-factor list first.",
+     "from": "Run the risk-factor list before applying the default."
+    },
+    {
+     "claim": "Apply an age-based screening default only after the list comes back empty.",
      "from": "An age-based screening default applies only after the risk-factor list comes back empty."
     }
    ]
@@ -389,17 +367,17 @@
    "op": "replace",
    "brief": "bs-dm-bundle",
    "find": "Morbidity is not mortality",
-   "with": "Morbidity and mortality are different outcomes",
-   "note": "voice: p.sub slogan made plain",
+   "with": "Morbidity versus mortality in diabetes care",
+   "note": "round 2 voice: p.sub slogan reworded",
    "claims": [
     {
      "claim": "Morbidity is not mortality.",
-     "to": "Morbidity and mortality are different outcomes"
+     "to": "Morbidity versus mortality in diabetes care"
     }
    ],
    "new_claims": [
     {
-     "claim": "Morbidity and mortality are different outcomes.",
+     "claim": "Morbidity versus mortality in diabetes care",
      "from": "Morbidity is not mortality."
     }
    ]
@@ -408,18 +386,18 @@
    "op": "replace",
    "brief": "bs-dm-bundle",
    "find": "<p><b>Morbidity ≠ death.</b> Morbidity is disease burden — complications, disability. Mortality is death. They're paired precisely <i>because</i> they differ. \"Prevent disease-related <b>morbidity</b>\" in a diabetic means prevent the <b>complications of diabetes</b>, and the annual <b>dilated eye exam</b> catches the most common preventable one: retinopathy is <b>asymptomatic until advanced</b> and the leading cause of new blindness in working-age adults.</p>",
-   "with": "<p>Morbidity is disease burden: complications and disability. Mortality is death. In a patient with diabetes, preventing disease-related <b>morbidity</b> means preventing the <b>complications of diabetes</b>. The annual <b>dilated eye exam</b> detects the most common preventable complication, retinopathy. Retinopathy is <b>asymptomatic until advanced</b> and is the leading cause of new blindness in working-age adults.</p>",
-   "note": "voice: .dp; slogan bold, em dash and rhetorical sentence removed",
+   "with": "<p>Morbidity is disease burden: complications and disability. Mortality is death. In a patient with diabetes, preventing disease-related <b>morbidity</b> means preventing the <b>complications of diabetes</b>. The annual <b>dilated eye exam</b> detects retinopathy, the most common preventable complication. Retinopathy is <b>asymptomatic until advanced</b> and is the leading cause of new blindness in working-age adults.</p>",
+   "note": "round 2 voice: .dp; slogan bold and em dash removed, long sentence split",
    "reworded_bold": [
     "Morbidity ≠ death."
    ],
    "claims": [
     {
      "claim": "Morbidity is not death.",
-     "to": "Morbidity is disease burden: complications and disability."
+     "to": "Mortality is death."
     },
     {
-     "claim": "Morbidity is disease burden: complications, disability.",
+     "claim": "Morbidity is disease burden: complications and disability.",
      "to": "Morbidity is disease burden: complications and disability."
     },
     {
@@ -427,8 +405,8 @@
      "to": "Mortality is death."
     },
     {
-     "claim": "Morbidity and mortality are paired because they differ.",
-     "dropped": "rhetorical framing; the definitions carry the difference"
+     "claim": "They are paired because they differ.",
+     "dropped": "rhetorical framing; the two definitions that show the difference are kept"
     },
     {
      "claim": "Preventing disease-related morbidity in a diabetic means preventing the complications of diabetes.",
@@ -436,11 +414,11 @@
     },
     {
      "claim": "The annual dilated eye exam catches the most common preventable complication.",
-     "to": "The annual dilated eye exam detects the most common preventable complication, retinopathy."
+     "to": "The annual dilated eye exam detects retinopathy, the most common preventable complication."
     },
     {
      "claim": "That complication is retinopathy.",
-     "to": "The annual dilated eye exam detects the most common preventable complication, retinopathy."
+     "to": "The annual dilated eye exam detects retinopathy, the most common preventable complication."
     },
     {
      "claim": "Retinopathy is asymptomatic until advanced.",
@@ -454,18 +432,18 @@
    "new_claims": [
     {
      "claim": "Morbidity is disease burden: complications and disability.",
-     "from": "Morbidity is disease burden: complications, disability."
+     "from": "Morbidity is disease burden: complications and disability."
     },
     {
      "claim": "Mortality is death.",
      "from": "Mortality is death."
     },
     {
-     "claim": "In diabetes, preventing disease-related morbidity means preventing the complications of diabetes.",
+     "claim": "In a patient with diabetes, preventing disease-related morbidity means preventing the complications of diabetes.",
      "from": "Preventing disease-related morbidity in a diabetic means preventing the complications of diabetes."
     },
     {
-     "claim": "The annual dilated eye exam detects the most common preventable complication, retinopathy.",
+     "claim": "The annual dilated eye exam detects retinopathy, the most common preventable complication.",
      "from": "The annual dilated eye exam catches the most common preventable complication."
     },
     {
@@ -473,7 +451,7 @@
      "from": "Retinopathy is asymptomatic until advanced."
     },
     {
-     "claim": "Retinopathy is the leading cause of new blindness in working-age adults.",
+     "claim": "Retinopathy is asymptomatic until advanced and is the leading cause of new blindness in working-age adults.",
      "from": "Retinopathy is the leading cause of new blindness in working-age adults."
     }
    ]
@@ -481,15 +459,23 @@
   {
    "op": "replace",
    "brief": "bs-dm-bundle",
-   "find": "<b>UACR + serum creatinine</b> annually · <b>blood pressure at every visit</b> · lipids at least q5y ·",
-   "with": "<b>UACR</b> (urine albumin-to-creatinine ratio) + <b>serum creatinine</b> annually · <b>blood pressure at every visit</b> · lipids at least every 5 years ·",
-   "note": "voice: annual bundle; UACR expanded, q5y written out",
+   "find": "<b>Dilated eye exam</b> annually · <b>foot exam with monofilament</b> annually · <b>UACR + serum creatinine</b> annually · <b>blood pressure at every visit</b> · lipids at least q5y · depression screening · weight and tobacco counseling.",
+   "with": "<b>Dilated eye exam</b> annually · <b>foot exam with monofilament</b> annually · <b>UACR</b> (urine albumin-to-creatinine ratio) <b>+ serum creatinine</b> annually · <b>blood pressure at every visit</b> · lipids at least every 5 years · depression screening · weight and tobacco counseling.",
+   "note": "round 2 voice: UACR expanded, q5y written out",
    "reworded_bold": [
     "UACR + serum creatinine"
    ],
    "claims": [
     {
-     "claim": "UACR + serum creatinine annually.",
+     "claim": "Dilated eye exam annually.",
+     "to": "Dilated eye exam annually"
+    },
+    {
+     "claim": "Foot exam with monofilament annually.",
+     "to": "foot exam with monofilament annually"
+    },
+    {
+     "claim": "UACR and serum creatinine annually.",
      "to": "UACR (urine albumin-to-creatinine ratio) + serum creatinine annually"
     },
     {
@@ -497,18 +483,34 @@
      "to": "blood pressure at every visit"
     },
     {
-     "claim": "Lipids at least q5y.",
+     "claim": "Lipids at least every 5 years.",
      "to": "lipids at least every 5 years"
+    },
+    {
+     "claim": "Depression screening.",
+     "to": "depression screening"
+    },
+    {
+     "claim": "Weight and tobacco counseling.",
+     "to": "weight and tobacco counseling."
     }
    ],
    "new_claims": [
     {
-     "claim": "UACR stands for urine albumin-to-creatinine ratio.",
-     "from": "expansion"
+     "claim": "Dilated eye exam annually.",
+     "from": "Dilated eye exam annually."
     },
     {
-     "claim": "UACR + serum creatinine annually.",
-     "from": "UACR + serum creatinine annually."
+     "claim": "Foot exam with monofilament annually.",
+     "from": "Foot exam with monofilament annually."
+    },
+    {
+     "claim": "UACR (urine albumin-to-creatinine ratio) + serum creatinine annually",
+     "from": "UACR and serum creatinine annually."
+    },
+    {
+     "claim": "UACR stands for urine albumin-to-creatinine ratio.",
+     "from": "expansion"
     },
     {
      "claim": "Blood pressure at every visit.",
@@ -516,7 +518,15 @@
     },
     {
      "claim": "Lipids at least every 5 years.",
-     "from": "Lipids at least q5y."
+     "from": "Lipids at least every 5 years."
+    },
+    {
+     "claim": "Depression screening.",
+     "from": "Depression screening."
+    },
+    {
+     "claim": "Weight and tobacco counseling.",
+     "from": "Weight and tobacco counseling."
     }
    ]
   },
@@ -524,8 +534,8 @@
    "op": "replace",
    "brief": "bs-dm-bundle",
    "find": "<b>1. The pneumococcal rationale is wrong.</b> It says vaccination \"is recommended for patients over the age of 65 or for patients who are asplenic\" — but <b>diabetes is itself an ACIP indication in adults 19–64</b>. She <i>is</i> a candidate. E loses because vaccination addresses infection risk <i>downstream</i> of diabetes while the eye exam targets a diabetes-specific complication — not because she doesn't qualify.<br>\n<b>2. The attribution is off.</b> The annual bundle and A1c intervals are <b>ADA Standards of Care</b>, not USPSTF.",
-   "with": "<b>1. The pneumococcal rationale is wrong.</b> It says vaccination \"is recommended for patients over the age of 65 or for patients who are asplenic\". However, <b>diabetes is itself an ACIP indication in adults 19–64</b> (<b>ACIP</b>: Advisory Committee on Immunization Practices), so she <i>is</i> a candidate. Vaccination ranks below the eye exam because it addresses infection risk <i>downstream</i> of diabetes, while the eye exam targets a diabetes-specific complication.<br>\n<b>2. The attribution is off.</b> The annual bundle and A1c intervals are <b>ADA Standards of Care</b> (<b>ADA</b>: American Diabetes Association), not <b>USPSTF</b> (U.S. Preventive Services Task Force) recommendations.",
-   "note": "voice: .danger; em dashes and option-letter framing removed, acronyms expanded",
+   "with": "<b>1. The pneumococcal rationale is wrong.</b> It says vaccination \"is recommended for patients over the age of 65 or for patients who are asplenic\". However, <b>diabetes is itself an ACIP indication in adults 19–64</b> (ACIP: Advisory Committee on Immunization Practices), so she <i>is</i> a candidate. The eye exam is preferred because it targets a diabetes-specific complication; vaccination addresses infection risk <i>downstream</i> of diabetes.<br>\n<b>2. The attribution is off.</b> The annual bundle and A1c intervals come from the <b>ADA Standards of Care</b> (American Diabetes Association), not the <b>USPSTF</b> (US Preventive Services Task Force).",
+   "note": "round 2 voice: em dashes removed, option-letter framing restated as the clinical reason, acronyms expanded",
    "claims": [
     {
      "claim": "The vendor's pneumococcal rationale is wrong.",
@@ -544,11 +554,15 @@
      "to": "However, diabetes is itself an ACIP indication in adults 19–64 (ACIP: Advisory Committee on Immunization Practices), so she is a candidate."
     },
     {
-     "claim": "Vaccination loses because it addresses infection risk downstream of diabetes while the eye exam targets a diabetes-specific complication.",
-     "to": "Vaccination ranks below the eye exam because it addresses infection risk downstream of diabetes, while the eye exam targets a diabetes-specific complication."
+     "claim": "Vaccination addresses infection risk downstream of diabetes.",
+     "to": "The eye exam is preferred because it targets a diabetes-specific complication; vaccination addresses infection risk downstream of diabetes."
     },
     {
-     "claim": "Vaccination does not lose because she doesn't qualify.",
+     "claim": "The eye exam targets a diabetes-specific complication, which is why it beats vaccination.",
+     "to": "The eye exam is preferred because it targets a diabetes-specific complication; vaccination addresses infection risk downstream of diabetes."
+    },
+    {
+     "claim": "Vaccination does not lose because she fails to qualify.",
      "to": "However, diabetes is itself an ACIP indication in adults 19–64 (ACIP: Advisory Committee on Immunization Practices), so she is a candidate."
     },
     {
@@ -557,49 +571,49 @@
     },
     {
      "claim": "The annual bundle and A1c intervals are ADA Standards of Care, not USPSTF.",
-     "to": "The annual bundle and A1c intervals are ADA Standards of Care (ADA: American Diabetes Association), not USPSTF (U.S. Preventive Services Task Force) recommendations."
+     "to": "The annual bundle and A1c intervals come from the ADA Standards of Care (American Diabetes Association), not the USPSTF (US Preventive Services Task Force)."
     }
    ],
    "new_claims": [
-    {
-     "claim": "ACIP stands for Advisory Committee on Immunization Practices.",
-     "from": "expansion"
-    },
-    {
-     "claim": "ADA stands for American Diabetes Association.",
-     "from": "expansion"
-    },
-    {
-     "claim": "USPSTF stands for U.S. Preventive Services Task Force.",
-     "from": "expansion"
-    },
     {
      "claim": "The pneumococcal rationale is wrong.",
      "from": "The vendor's pneumococcal rationale is wrong."
     },
     {
-     "claim": "It says vaccination is recommended for patients over 65 or asplenic patients.",
+     "claim": "It says vaccination \"is recommended for patients over the age of 65 or for patients who are asplenic\".",
      "from": "The vendor says vaccination is recommended for patients over 65 or asplenic patients."
     },
     {
-     "claim": "Diabetes is itself an ACIP indication in adults 19–64.",
+     "claim": "However, diabetes is itself an ACIP indication in adults 19–64 (ACIP: Advisory Committee on Immunization Practices), so she is a candidate.",
      "from": "Diabetes is itself an ACIP indication in adults 19–64."
     },
     {
-     "claim": "She is a candidate.",
-     "from": "She is a candidate for pneumococcal vaccination."
+     "claim": "ACIP stands for Advisory Committee on Immunization Practices.",
+     "from": "expansion"
     },
     {
-     "claim": "Vaccination ranks below the eye exam because it addresses infection risk downstream of diabetes, while the eye exam targets a diabetes-specific complication.",
-     "from": "Vaccination loses because it addresses infection risk downstream of diabetes while the eye exam targets a diabetes-specific complication."
+     "claim": "The eye exam is preferred because it targets a diabetes-specific complication.",
+     "from": "The eye exam targets a diabetes-specific complication, which is why it beats vaccination."
+    },
+    {
+     "claim": "Vaccination addresses infection risk downstream of diabetes.",
+     "from": "Vaccination addresses infection risk downstream of diabetes."
     },
     {
      "claim": "The attribution is off.",
      "from": "The vendor's attribution is off."
     },
     {
-     "claim": "The annual bundle and A1c intervals are ADA Standards of Care, not USPSTF recommendations.",
+     "claim": "The annual bundle and A1c intervals come from the ADA Standards of Care (American Diabetes Association), not the USPSTF (US Preventive Services Task Force).",
      "from": "The annual bundle and A1c intervals are ADA Standards of Care, not USPSTF."
+    },
+    {
+     "claim": "ADA stands for American Diabetes Association.",
+     "from": "expansion"
+    },
+    {
+     "claim": "USPSTF stands for US Preventive Services Task Force.",
+     "from": "expansion"
     }
    ]
   },
@@ -608,7 +622,7 @@
    "brief": "bs-dm-bundle",
    "find": "A1c reflects glycation across the <b>90–120 day</b> RBC lifespan, so consecutive monthly values measure heavily overlapping windows. Intervals: <b>q3 months</b> if not at goal or after a therapy change; <b>q6 months</b> if stable and at goal. At <b>A1c 6.1%</b> she's at goal → 6-month schedule, making monthly wrong by a factor of six.",
    "with": "A1c reflects glycation across the <b>90–120 day</b> <b>RBC</b> (red blood cell) lifespan, so consecutive monthly values measure heavily overlapping windows. Check the A1c <b>q3 months</b> if not at goal or after a therapy change, and <b>q6 months</b> if stable and at goal. At <b>A1c 6.1%</b> she is at goal, so she needs the 6-month schedule. Monthly testing is six times more often than that schedule.",
-   "note": "voice: pearls; arrow and slogan phrasing made plain, RBC expanded",
+   "note": "round 2 voice: arrow chain split, RBC expanded",
    "claims": [
     {
      "claim": "A1c reflects glycation across the 90–120 day RBC lifespan.",
@@ -631,7 +645,7 @@
      "to": "At A1c 6.1% she is at goal, so she needs the 6-month schedule."
     },
     {
-     "claim": "At goal, she is on the 6-month schedule.",
+     "claim": "She belongs on the 6-month schedule.",
      "to": "At A1c 6.1% she is at goal, so she needs the 6-month schedule."
     },
     {
@@ -641,23 +655,23 @@
    ],
    "new_claims": [
     {
+     "claim": "A1c reflects glycation across the 90–120 day RBC (red blood cell) lifespan, so consecutive monthly values measure heavily overlapping windows.",
+     "from": "A1c reflects glycation across the 90–120 day RBC lifespan."
+    },
+    {
      "claim": "RBC stands for red blood cell.",
      "from": "expansion"
     },
     {
-     "claim": "A1c reflects glycation across the 90–120 day RBC lifespan.",
-     "from": "A1c reflects glycation across the 90–120 day RBC lifespan."
-    },
-    {
-     "claim": "Consecutive monthly values measure heavily overlapping windows.",
+     "claim": "A1c reflects glycation across the 90–120 day RBC (red blood cell) lifespan, so consecutive monthly values measure heavily overlapping windows.",
      "from": "Consecutive monthly A1c values measure heavily overlapping windows."
     },
     {
-     "claim": "Check the A1c q3 months if not at goal or after a therapy change.",
+     "claim": "Check the A1c q3 months if not at goal or after a therapy change, and q6 months if stable and at goal.",
      "from": "Check A1c q3 months if not at goal or after a therapy change."
     },
     {
-     "claim": "Check the A1c q6 months if stable and at goal.",
+     "claim": "Check the A1c q3 months if not at goal or after a therapy change, and q6 months if stable and at goal.",
      "from": "Check A1c q6 months if stable and at goal."
     },
     {
@@ -666,7 +680,7 @@
     },
     {
      "claim": "She needs the 6-month schedule.",
-     "from": "At goal, she is on the 6-month schedule."
+     "from": "She belongs on the 6-month schedule."
     },
     {
      "claim": "Monthly testing is six times more often than that schedule.",
@@ -678,8 +692,8 @@
    "op": "replace",
    "brief": "bs-dm-bundle",
    "find": "Part I <b>Diabetic Nephropathy Screening</b> — the renal limb of the same bundle. Store the discriminator: <b>\"Which outcome word is in the stem?\"</b>",
-   "with": "Part I <b>Diabetic Nephropathy Screening</b> covers the renal limb of the same bundle. Ask: <b>which outcome word is in the stem?</b>",
-   "note": "voice: Pairs with; em dash removed, 'Store the discriminator' becomes 'Ask:'",
+   "with": "Part I <b>Diabetic Nephropathy Screening</b> covers the renal limb of the same bundle. Ask: <b>is the outcome morbidity, mortality, hospitalization or benefit?</b>",
+   "note": "round 2 voice: Pairs with; em dash removed, \"Store the discriminator\" becomes \"Ask:\"",
    "reworded_bold": [
     "\"Which outcome word is in the stem?\""
    ],
@@ -689,8 +703,8 @@
      "to": "Part I Diabetic Nephropathy Screening covers the renal limb of the same bundle."
     },
     {
-     "claim": "The discriminator: which outcome word is in the stem?",
-     "to": "Ask: which outcome word is in the stem?"
+     "claim": "The discriminating question is which outcome word is in the stem.",
+     "to": "Ask: is the outcome morbidity, mortality, hospitalization or benefit?"
     }
    ],
    "new_claims": [
@@ -699,8 +713,8 @@
      "from": "Part I Diabetic Nephropathy Screening is the renal limb of the same bundle."
     },
     {
-     "claim": "Ask: which outcome word is in the stem?",
-     "from": "The discriminator: which outcome word is in the stem?"
+     "claim": "Ask: is the outcome morbidity, mortality, hospitalization or benefit?",
+     "from": "The discriminating question is which outcome word is in the stem."
     }
    ]
   },
@@ -709,7 +723,7 @@
    "brief": "bs-dm-bundle",
    "find": "Read the <b>outcome noun</b> before the options. <i>Morbidity, mortality, hospitalization,</i> and <i>benefit</i> are four different targets, and a question can place the right intervention for the <i>wrong</i> target among the distractors.",
    "with": "Read the <b>outcome noun</b> before the options. <i>Morbidity, mortality, hospitalization,</i> and <i>benefit</i> are four different targets. A distractor can be the right intervention for the <i>wrong</i> target.",
-   "note": "voice: .rule; long sentence split",
+   "note": "round 2 voice: .rule, long sentence split",
    "claims": [
     {
      "claim": "Read the outcome noun before the options.",
@@ -743,16 +757,16 @@
    "op": "replace",
    "brief": "bs-short-stature",
    "find": "<p>Short stature is a height at or below the <b>2nd percentile</b>, but the decider is <b>velocity</b>, not height. A child who tracks a low but steady channel has a normal variant (familial short stature or constitutional delay); a child who <b>crosses 2 or more major percentile lines</b> (for example 25th to 10th to 2nd) has pathologic growth failure. Then read <b>weight against height</b>: <b>weight falls first</b> in malnutrition and gut disease such as celiac disease or IBD; <b>height falls first with weight preserved</b> or rising in endocrine disease (hypothyroidism, GH deficiency, glucocorticoid excess). <b>Bone age</b> is the first test: delayed bone age means growth potential remains; advanced bone age means sex steroid exposure.</p>\n<p>The evaluation runs in a fixed order. <b>Dysmorphic features</b> come first and send you to a genetic cause (Turner syndrome, Down syndrome, skeletal dysplasia) and a karyotype. Without them, <b>velocity</b> splits the rest. Impaired velocity with a <b>delayed</b> bone age is endocrine disease, malnutrition or systemic illness (IBD, celiac, kidney disease); an <b>advanced</b> bone age is precocious puberty, a child tall now who ends up short. Normal velocity with <b>delayed puberty and bone age</b> is constitutional delay; normal velocity with <b>normal puberty and bone age</b> is familial or idiopathic short stature.</p>\n<p>This girl has falling height velocity, preserved weight, delayed bone age, fatigue and <b>bradycardia</b>: acquired hypothyroidism. Her puberty shows the <b>thelarche and adrenarche split</b>: hypothyroidism suppresses gonadotropins, so breasts stay Tanner 1, while adrenal androgens still drive pubic hair to Tanner 4. Constitutional delay shares the delayed bone age and late puberty but keeps a normal velocity and causes no symptoms.</p>",
-   "with": "<p>Short stature is a height at or below the <b>2nd percentile</b>, but <b>velocity</b>, not height, separates a normal variant from growth failure. A child who tracks a low but steady channel has a normal variant (familial short stature or constitutional delay). A child who <b>crosses 2 or more major percentile lines</b> (for example 25th to 10th to 2nd) has pathologic growth failure. Then compare <b>weight against height</b>. In malnutrition and gut disease such as celiac disease or <b>IBD</b> (inflammatory bowel disease), <b>weight falls first</b>. In endocrine disease, such as hypothyroidism, <b>GH</b> (growth hormone) deficiency or glucocorticoid excess, <b>height falls first with weight preserved</b> or rising. <b>Bone age</b> is the first test. A delayed bone age means growth potential remains; an advanced bone age means sex steroid exposure.</p>\n<p>Evaluate in a fixed order. <b>Dysmorphic features</b> come first; they point to a genetic cause (Turner syndrome, Down syndrome, skeletal dysplasia) and call for a karyotype. Without them, <b>velocity</b> sorts the remaining causes. Impaired velocity with a <b>delayed</b> bone age indicates endocrine disease, malnutrition or systemic illness (IBD, celiac disease, kidney disease). An <b>advanced</b> bone age indicates precocious puberty, in a child who is tall now and ends up short. Normal velocity with <b>delayed puberty and bone age</b> is constitutional delay. Normal velocity with <b>normal puberty and bone age</b> is familial or idiopathic short stature.</p>\n<p>This girl's falling height velocity, preserved weight, delayed bone age, fatigue and <b>bradycardia</b> indicate acquired hypothyroidism. Her puberty shows the <b>thelarche and adrenarche split</b>. Hypothyroidism suppresses gonadotropins, so her breasts stay Tanner 1, while adrenal androgens still drive pubic hair to Tanner 4. Constitutional delay shares the delayed bone age and late puberty, but velocity stays normal and it causes no symptoms.</p>",
-   "note": "voice: .dp; long sentences split, 'decider' and 'send you' phrasing made plain, IBD and GH expanded",
+   "with": "<p>Short stature is a height at or below the <b>2nd percentile</b>, but growth <b>velocity</b> matters more than height. A child who tracks a low but steady channel has a normal variant (familial short stature or constitutional delay). A child who <b>crosses 2 or more major percentile lines</b> (for example 25th to 10th to 2nd) has pathologic growth failure. Next, compare <b>weight against height</b>. In malnutrition and gut disease such as celiac disease or <b>IBD</b> (inflammatory bowel disease), <b>weight falls first</b>. In endocrine disease, <b>height falls first with weight preserved</b> or rising; examples are hypothyroidism, <b>GH</b> (growth hormone) deficiency and glucocorticoid excess. <b>Bone age</b> is the first test. A delayed bone age means growth potential remains; an advanced bone age means sex steroid exposure.</p>\n<p>Evaluate in a fixed order. <b>Dysmorphic features</b> come first; they point to a genetic cause (Turner syndrome, Down syndrome, skeletal dysplasia) and a karyotype. Without them, <b>velocity</b> sorts the remaining causes. Impaired velocity with a <b>delayed</b> bone age means endocrine disease, malnutrition or systemic illness (IBD, celiac, kidney disease). An <b>advanced</b> bone age means precocious puberty, in a child who is tall now but ends up short. Normal velocity with <b>delayed puberty and bone age</b> is constitutional delay. Normal velocity with <b>normal puberty and bone age</b> is familial or idiopathic short stature.</p>\n<p>This girl's falling height velocity, preserved weight, delayed bone age, fatigue and <b>bradycardia</b> indicate acquired hypothyroidism. Her puberty shows the <b>thelarche and adrenarche split</b>. Hypothyroidism suppresses gonadotropins, so breasts stay Tanner 1. Adrenal androgens still drive pubic hair to Tanner 4. Constitutional delay shares the delayed bone age and late puberty but keeps a normal velocity and causes no symptoms.</p>",
+   "note": "round 2 voice: .dp; long sentences split, \"decider\" wording removed, IBD and GH expanded",
    "claims": [
     {
      "claim": "Short stature is a height at or below the 2nd percentile.",
-     "to": "Short stature is a height at or below the 2nd percentile, but velocity, not height, separates a normal variant from growth failure."
+     "to": "Short stature is a height at or below the 2nd percentile, but growth velocity matters more than height."
     },
     {
-     "claim": "Velocity, not height, is the decider.",
-     "to": "Short stature is a height at or below the 2nd percentile, but velocity, not height, separates a normal variant from growth failure."
+     "claim": "Velocity, not height, is the deciding feature.",
+     "to": "Short stature is a height at or below the 2nd percentile, but growth velocity matters more than height."
     },
     {
      "claim": "A child who tracks a low but steady channel has a normal variant (familial short stature or constitutional delay).",
@@ -763,8 +777,8 @@
      "to": "A child who crosses 2 or more major percentile lines (for example 25th to 10th to 2nd) has pathologic growth failure."
     },
     {
-     "claim": "Next, read weight against height.",
-     "to": "Then compare weight against height."
+     "claim": "Then read weight against height.",
+     "to": "Next, compare weight against height."
     },
     {
      "claim": "Weight falls first in malnutrition and gut disease such as celiac disease or IBD.",
@@ -772,7 +786,7 @@
     },
     {
      "claim": "Height falls first with weight preserved or rising in endocrine disease (hypothyroidism, GH deficiency, glucocorticoid excess).",
-     "to": "In endocrine disease, such as hypothyroidism, GH (growth hormone) deficiency or glucocorticoid excess, height falls first with weight preserved or rising."
+     "to": "In endocrine disease, height falls first with weight preserved or rising; examples are hypothyroidism, GH (growth hormone) deficiency and glucocorticoid excess."
     },
     {
      "claim": "Bone age is the first test.",
@@ -792,11 +806,11 @@
     },
     {
      "claim": "Dysmorphic features come first.",
-     "to": "Dysmorphic features come first; they point to a genetic cause (Turner syndrome, Down syndrome, skeletal dysplasia) and call for a karyotype."
+     "to": "Dysmorphic features come first; they point to a genetic cause (Turner syndrome, Down syndrome, skeletal dysplasia) and a karyotype."
     },
     {
      "claim": "Dysmorphic features send you to a genetic cause (Turner syndrome, Down syndrome, skeletal dysplasia) and a karyotype.",
-     "to": "Dysmorphic features come first; they point to a genetic cause (Turner syndrome, Down syndrome, skeletal dysplasia) and call for a karyotype."
+     "to": "Dysmorphic features come first; they point to a genetic cause (Turner syndrome, Down syndrome, skeletal dysplasia) and a karyotype."
     },
     {
      "claim": "Without dysmorphic features, velocity splits the rest.",
@@ -804,11 +818,11 @@
     },
     {
      "claim": "Impaired velocity with a delayed bone age is endocrine disease, malnutrition or systemic illness (IBD, celiac, kidney disease).",
-     "to": "Impaired velocity with a delayed bone age indicates endocrine disease, malnutrition or systemic illness (IBD, celiac disease, kidney disease)."
+     "to": "Impaired velocity with a delayed bone age means endocrine disease, malnutrition or systemic illness (IBD, celiac, kidney disease)."
     },
     {
      "claim": "An advanced bone age is precocious puberty, a child tall now who ends up short.",
-     "to": "An advanced bone age indicates precocious puberty, in a child who is tall now and ends up short."
+     "to": "An advanced bone age means precocious puberty, in a child who is tall now but ends up short."
     },
     {
      "claim": "Normal velocity with delayed puberty and bone age is constitutional delay.",
@@ -819,7 +833,7 @@
      "to": "Normal velocity with normal puberty and bone age is familial or idiopathic short stature."
     },
     {
-     "claim": "Falling height velocity, preserved weight, delayed bone age, fatigue and bradycardia in this girl indicate acquired hypothyroidism.",
+     "claim": "This girl has falling height velocity, preserved weight, delayed bone age, fatigue and bradycardia: acquired hypothyroidism.",
      "to": "This girl's falling height velocity, preserved weight, delayed bone age, fatigue and bradycardia indicate acquired hypothyroidism."
     },
     {
@@ -828,37 +842,25 @@
     },
     {
      "claim": "Hypothyroidism suppresses gonadotropins, so breasts stay Tanner 1.",
-     "to": "Hypothyroidism suppresses gonadotropins, so her breasts stay Tanner 1, while adrenal androgens still drive pubic hair to Tanner 4."
+     "to": "Hypothyroidism suppresses gonadotropins, so breasts stay Tanner 1."
     },
     {
      "claim": "Adrenal androgens still drive pubic hair to Tanner 4.",
-     "to": "Hypothyroidism suppresses gonadotropins, so her breasts stay Tanner 1, while adrenal androgens still drive pubic hair to Tanner 4."
+     "to": "Adrenal androgens still drive pubic hair to Tanner 4."
     },
     {
-     "claim": "Constitutional delay shares the delayed bone age and late puberty.",
-     "to": "Constitutional delay shares the delayed bone age and late puberty, but velocity stays normal and it causes no symptoms."
-    },
-    {
-     "claim": "Constitutional delay keeps a normal velocity and causes no symptoms.",
-     "to": "Constitutional delay shares the delayed bone age and late puberty, but velocity stays normal and it causes no symptoms."
+     "claim": "Constitutional delay shares the delayed bone age and late puberty but keeps a normal velocity and causes no symptoms.",
+     "to": "Constitutional delay shares the delayed bone age and late puberty but keeps a normal velocity and causes no symptoms."
     }
    ],
    "new_claims": [
-    {
-     "claim": "IBD stands for inflammatory bowel disease.",
-     "from": "expansion"
-    },
-    {
-     "claim": "GH stands for growth hormone.",
-     "from": "expansion"
-    },
     {
      "claim": "Short stature is a height at or below the 2nd percentile.",
      "from": "Short stature is a height at or below the 2nd percentile."
     },
     {
-     "claim": "Velocity, not height, separates a normal variant from growth failure.",
-     "from": "Velocity, not height, is the decider."
+     "claim": "Growth velocity matters more than height.",
+     "from": "Velocity, not height, is the deciding feature."
     },
     {
      "claim": "A child who tracks a low but steady channel has a normal variant (familial short stature or constitutional delay).",
@@ -869,27 +871,35 @@
      "from": "A child who crosses 2 or more major percentile lines (for example 25th to 10th to 2nd) has pathologic growth failure."
     },
     {
-     "claim": "Then compare weight against height.",
-     "from": "Next, read weight against height."
+     "claim": "Next, compare weight against height.",
+     "from": "Then read weight against height."
     },
     {
-     "claim": "Weight falls first in malnutrition and gut disease such as celiac disease or IBD.",
+     "claim": "In malnutrition and gut disease such as celiac disease or IBD (inflammatory bowel disease), weight falls first.",
      "from": "Weight falls first in malnutrition and gut disease such as celiac disease or IBD."
     },
     {
-     "claim": "In endocrine disease, such as hypothyroidism, GH deficiency or glucocorticoid excess, height falls first with weight preserved or rising.",
+     "claim": "IBD stands for inflammatory bowel disease.",
+     "from": "expansion"
+    },
+    {
+     "claim": "In endocrine disease, height falls first with weight preserved or rising; examples are hypothyroidism, GH (growth hormone) deficiency and glucocorticoid excess.",
      "from": "Height falls first with weight preserved or rising in endocrine disease (hypothyroidism, GH deficiency, glucocorticoid excess)."
+    },
+    {
+     "claim": "GH stands for growth hormone.",
+     "from": "expansion"
     },
     {
      "claim": "Bone age is the first test.",
      "from": "Bone age is the first test."
     },
     {
-     "claim": "A delayed bone age means growth potential remains.",
+     "claim": "Delayed bone age means growth potential remains.",
      "from": "Delayed bone age means growth potential remains."
     },
     {
-     "claim": "An advanced bone age means sex steroid exposure.",
+     "claim": "Advanced bone age means sex steroid exposure.",
      "from": "Advanced bone age means sex steroid exposure."
     },
     {
@@ -901,7 +911,7 @@
      "from": "Dysmorphic features come first."
     },
     {
-     "claim": "Dysmorphic features point to a genetic cause (Turner syndrome, Down syndrome, skeletal dysplasia) and call for a karyotype.",
+     "claim": "Dysmorphic features come first; they point to a genetic cause (Turner syndrome, Down syndrome, skeletal dysplasia) and a karyotype.",
      "from": "Dysmorphic features send you to a genetic cause (Turner syndrome, Down syndrome, skeletal dysplasia) and a karyotype."
     },
     {
@@ -909,11 +919,11 @@
      "from": "Without dysmorphic features, velocity splits the rest."
     },
     {
-     "claim": "Impaired velocity with a delayed bone age indicates endocrine disease, malnutrition or systemic illness (IBD, celiac disease, kidney disease).",
+     "claim": "Impaired velocity with a delayed bone age means endocrine disease, malnutrition or systemic illness (IBD, celiac, kidney disease).",
      "from": "Impaired velocity with a delayed bone age is endocrine disease, malnutrition or systemic illness (IBD, celiac, kidney disease)."
     },
     {
-     "claim": "An advanced bone age indicates precocious puberty, in a child who is tall now and ends up short.",
+     "claim": "An advanced bone age means precocious puberty, in a child who is tall now but ends up short.",
      "from": "An advanced bone age is precocious puberty, a child tall now who ends up short."
     },
     {
@@ -926,14 +936,14 @@
     },
     {
      "claim": "This girl's falling height velocity, preserved weight, delayed bone age, fatigue and bradycardia indicate acquired hypothyroidism.",
-     "from": "Falling height velocity, preserved weight, delayed bone age, fatigue and bradycardia in this girl indicate acquired hypothyroidism."
+     "from": "This girl has falling height velocity, preserved weight, delayed bone age, fatigue and bradycardia: acquired hypothyroidism."
     },
     {
      "claim": "Her puberty shows the thelarche and adrenarche split.",
      "from": "Her puberty shows the thelarche and adrenarche split."
     },
     {
-     "claim": "Hypothyroidism suppresses gonadotropins, so her breasts stay Tanner 1.",
+     "claim": "Hypothyroidism suppresses gonadotropins, so breasts stay Tanner 1.",
      "from": "Hypothyroidism suppresses gonadotropins, so breasts stay Tanner 1."
     },
     {
@@ -941,12 +951,51 @@
      "from": "Adrenal androgens still drive pubic hair to Tanner 4."
     },
     {
-     "claim": "Constitutional delay shares the delayed bone age and late puberty.",
-     "from": "Constitutional delay shares the delayed bone age and late puberty."
+     "claim": "Constitutional delay shares the delayed bone age and late puberty but keeps a normal velocity and causes no symptoms.",
+     "from": "Constitutional delay shares the delayed bone age and late puberty but keeps a normal velocity and causes no symptoms."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-short-stature",
+   "find": "Breast development needs gonadotropins and ovarian estrogen; pubic hair needs only adrenal androgens. So <b>Tanner 1 breasts with pubic hair</b> points to a gonadal problem: hypothyroidism (suppressed gonadotropins, delayed bone age, bradycardia) or Turner syndrome (ovarian failure, high FSH, karyotype)",
+   "with": "Breast development needs gonadotropins and ovarian estrogen; pubic hair needs only adrenal androgens. <b>Tanner 1 breasts with pubic hair</b> therefore point to a gonadal problem: hypothyroidism (suppressed gonadotropins, delayed bone age, bradycardia) or Turner syndrome (ovarian failure, high FSH, karyotype)",
+   "note": "round 2 voice: first pearl row split into shorter sentences",
+   "claims": [
+    {
+     "claim": "Breast development needs gonadotropins and ovarian estrogen.",
+     "to": "Breast development needs gonadotropins and ovarian estrogen; pubic hair needs only adrenal androgens."
     },
     {
-     "claim": "In constitutional delay velocity stays normal and it causes no symptoms.",
-     "from": "Constitutional delay keeps a normal velocity and causes no symptoms."
+     "claim": "Pubic hair needs only adrenal androgens.",
+     "to": "Breast development needs gonadotropins and ovarian estrogen; pubic hair needs only adrenal androgens."
+    },
+    {
+     "claim": "Tanner 1 breasts with pubic hair point to a gonadal problem.",
+     "to": "Tanner 1 breasts with pubic hair therefore point to a gonadal problem: hypothyroidism (suppressed gonadotropins, delayed bone age, bradycardia) or Turner syndrome (ovarian failure, high FSH, karyotype)"
+    },
+    {
+     "claim": "The gonadal problem is hypothyroidism (suppressed gonadotropins, delayed bone age, bradycardia) or Turner syndrome (ovarian failure, high FSH, karyotype).",
+     "to": "Tanner 1 breasts with pubic hair therefore point to a gonadal problem: hypothyroidism (suppressed gonadotropins, delayed bone age, bradycardia) or Turner syndrome (ovarian failure, high FSH, karyotype)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Breast development needs gonadotropins and ovarian estrogen.",
+     "from": "Breast development needs gonadotropins and ovarian estrogen."
+    },
+    {
+     "claim": "Pubic hair needs only adrenal androgens.",
+     "from": "Pubic hair needs only adrenal androgens."
+    },
+    {
+     "claim": "Tanner 1 breasts with pubic hair therefore point to a gonadal problem: hypothyroidism (suppressed gonadotropins, delayed bone age, bradycardia) or Turner syndrome (ovarian failure, high FSH, karyotype)",
+     "from": "Tanner 1 breasts with pubic hair point to a gonadal problem."
+    },
+    {
+     "claim": "Tanner 1 breasts with pubic hair therefore point to a gonadal problem: hypothyroidism (suppressed gonadotropins, delayed bone age, bradycardia) or Turner syndrome (ovarian failure, high FSH, karyotype)",
+     "from": "The gonadal problem is hypothyroidism (suppressed gonadotropins, delayed bone age, bradycardia) or Turner syndrome (ovarian failure, high FSH, karyotype)."
     }
    ]
   },
@@ -954,32 +1003,52 @@
    "op": "replace",
    "brief": "bs-short-stature",
    "find": "Aquifer <b>Sexual Maturity Rating</b> owns staging and the pubertal delay items: is the bone age delayed in a late bloomer? Aquifer <b>Faltering Weight</b> owns the infant and toddler pattern: which parameter fell first? Part I <b>Primary Amenorrhea</b> owns the Turner branch: is there a uterus, and is the FSH high? Part I <b>Sellar and Suprasellar Masses</b> owns growth failure from a craniopharyngioma: is there headache, papilledema or a visual field defect? Part I <b>Precocious Puberty</b> owns the advanced bone age: central or peripheral? Part I <b>Congenital Hypothyroidism</b> owns the newborn screen; Part I <b>Thyroid Mimics &amp; Discriminators</b> owns Hashimoto thyroiditis in adults.",
-   "with": "Aquifer <b>Sexual Maturity Rating</b> covers staging and the pubertal delay items: is the bone age delayed in a late bloomer? Aquifer <b>Faltering Weight</b> covers the infant and toddler pattern: which parameter fell first? Part I <b>Primary Amenorrhea</b> covers the Turner branch: is there a uterus, and is the <b>FSH</b> (follicle-stimulating hormone) high? Part I <b>Sellar and Suprasellar Masses</b> covers growth failure from a craniopharyngioma: is there headache, papilledema or a visual field defect? Part I <b>Precocious Puberty</b> covers the advanced bone age: central or peripheral? Part I <b>Congenital Hypothyroidism</b> covers the newborn screen; Part I <b>Thyroid Mimics &amp; Discriminators</b> covers Hashimoto thyroiditis in adults.",
-   "note": "voice: Pairs with; 'owns' becomes 'covers' per page-wide rule",
+   "with": "Aquifer <b>Sexual Maturity Rating</b> covers staging and pubertal delay (ask: is the bone age delayed in a late bloomer?). Aquifer <b>Faltering Weight</b> covers the infant and toddler pattern (ask: which parameter fell first?). Part I <b>Primary Amenorrhea</b> covers the Turner branch (ask: is there a uterus, and is the FSH high?). Part I <b>Sellar and Suprasellar Masses</b> covers growth failure from a craniopharyngioma (ask: is there headache, papilledema or a visual field defect?). Part I <b>Precocious Puberty</b> covers the advanced bone age (ask: central or peripheral?). Part I <b>Congenital Hypothyroidism</b> covers the newborn screen; Part I <b>Thyroid Mimics &amp; Discriminators</b> covers Hashimoto thyroiditis in adults.",
+   "note": "round 2 voice: Pairs with; \"owns\" becomes \"covers\", questions introduced by \"ask:\"",
    "claims": [
     {
-     "claim": "Aquifer Sexual Maturity Rating owns staging and the pubertal delay items; ask: is the bone age delayed in a late bloomer?",
-     "to": "Aquifer Sexual Maturity Rating covers staging and the pubertal delay items: is the bone age delayed in a late bloomer?"
+     "claim": "Aquifer Sexual Maturity Rating owns staging and the pubertal delay items.",
+     "to": "Aquifer Sexual Maturity Rating covers staging and pubertal delay (ask: is the bone age delayed in a late bloomer?)."
     },
     {
-     "claim": "Aquifer Faltering Weight owns the infant and toddler pattern; ask: which parameter fell first?",
-     "to": "Aquifer Faltering Weight covers the infant and toddler pattern: which parameter fell first?"
+     "claim": "Its question: is the bone age delayed in a late bloomer?",
+     "to": "Aquifer Sexual Maturity Rating covers staging and pubertal delay (ask: is the bone age delayed in a late bloomer?)."
     },
     {
-     "claim": "Part I Primary Amenorrhea owns the Turner branch; ask: is there a uterus, and is the FSH high?",
-     "to": "Part I Primary Amenorrhea covers the Turner branch: is there a uterus, and is the FSH (follicle-stimulating hormone) high?"
+     "claim": "Aquifer Faltering Weight owns the infant and toddler pattern.",
+     "to": "Aquifer Faltering Weight covers the infant and toddler pattern (ask: which parameter fell first?)."
     },
     {
-     "claim": "Part I Sellar and Suprasellar Masses owns growth failure from a craniopharyngioma; ask: is there headache, papilledema or a visual field defect?",
-     "to": "Part I Sellar and Suprasellar Masses covers growth failure from a craniopharyngioma: is there headache, papilledema or a visual field defect?"
+     "claim": "Its question: which parameter fell first?",
+     "to": "Aquifer Faltering Weight covers the infant and toddler pattern (ask: which parameter fell first?)."
     },
     {
-     "claim": "Part I Precocious Puberty owns the advanced bone age; ask: central or peripheral?",
-     "to": "Part I Precocious Puberty covers the advanced bone age: central or peripheral?"
+     "claim": "Part I Primary Amenorrhea owns the Turner branch.",
+     "to": "Part I Primary Amenorrhea covers the Turner branch (ask: is there a uterus, and is the FSH high?)."
+    },
+    {
+     "claim": "Its question: is there a uterus, and is the FSH high?",
+     "to": "Part I Primary Amenorrhea covers the Turner branch (ask: is there a uterus, and is the FSH high?)."
+    },
+    {
+     "claim": "Part I Sellar and Suprasellar Masses owns growth failure from a craniopharyngioma.",
+     "to": "Part I Sellar and Suprasellar Masses covers growth failure from a craniopharyngioma (ask: is there headache, papilledema or a visual field defect?)."
+    },
+    {
+     "claim": "Its question: is there headache, papilledema or a visual field defect?",
+     "to": "Part I Sellar and Suprasellar Masses covers growth failure from a craniopharyngioma (ask: is there headache, papilledema or a visual field defect?)."
+    },
+    {
+     "claim": "Part I Precocious Puberty owns the advanced bone age.",
+     "to": "Part I Precocious Puberty covers the advanced bone age (ask: central or peripheral?)."
+    },
+    {
+     "claim": "Its question: central or peripheral?",
+     "to": "Part I Precocious Puberty covers the advanced bone age (ask: central or peripheral?)."
     },
     {
      "claim": "Part I Congenital Hypothyroidism owns the newborn screen.",
-     "to": "Part I Congenital Hypothyroidism covers the newborn screen;"
+     "to": "Part I Congenital Hypothyroidism covers the newborn screen"
     },
     {
      "claim": "Part I Thyroid Mimics & Discriminators owns Hashimoto thyroiditis in adults.",
@@ -988,36 +1057,52 @@
    ],
    "new_claims": [
     {
-     "claim": "Aquifer Sexual Maturity Rating covers staging and the pubertal delay items: is the bone age delayed in a late bloomer?",
-     "from": "Aquifer Sexual Maturity Rating owns staging and the pubertal delay items; ask: is the bone age delayed in a late bloomer?"
+     "claim": "Aquifer Sexual Maturity Rating covers staging and pubertal delay.",
+     "from": "Aquifer Sexual Maturity Rating owns staging and the pubertal delay items."
     },
     {
-     "claim": "Aquifer Faltering Weight covers the infant and toddler pattern: which parameter fell first?",
-     "from": "Aquifer Faltering Weight owns the infant and toddler pattern; ask: which parameter fell first?"
+     "claim": "Ask: is the bone age delayed in a late bloomer?",
+     "from": "Its question: is the bone age delayed in a late bloomer?"
     },
     {
-     "claim": "Part I Primary Amenorrhea covers the Turner branch: is there a uterus, and is the FSH (follicle-stimulating hormone) high?",
-     "from": "Part I Primary Amenorrhea owns the Turner branch; ask: is there a uterus, and is the FSH high?"
+     "claim": "Aquifer Faltering Weight covers the infant and toddler pattern.",
+     "from": "Aquifer Faltering Weight owns the infant and toddler pattern."
     },
     {
-     "claim": "Part I Sellar and Suprasellar Masses covers growth failure from a craniopharyngioma: is there headache, papilledema or a visual field defect?",
-     "from": "Part I Sellar and Suprasellar Masses owns growth failure from a craniopharyngioma; ask: is there headache, papilledema or a visual field defect?"
+     "claim": "Ask: which parameter fell first?",
+     "from": "Its question: which parameter fell first?"
     },
     {
-     "claim": "Part I Precocious Puberty covers the advanced bone age: central or peripheral?",
-     "from": "Part I Precocious Puberty owns the advanced bone age; ask: central or peripheral?"
+     "claim": "Part I Primary Amenorrhea covers the Turner branch.",
+     "from": "Part I Primary Amenorrhea owns the Turner branch."
     },
     {
-     "claim": "Part I Congenital Hypothyroidism covers the newborn screen",
+     "claim": "Ask: is there a uterus, and is the FSH high?",
+     "from": "Its question: is there a uterus, and is the FSH high?"
+    },
+    {
+     "claim": "Part I Sellar and Suprasellar Masses covers growth failure from a craniopharyngioma.",
+     "from": "Part I Sellar and Suprasellar Masses owns growth failure from a craniopharyngioma."
+    },
+    {
+     "claim": "Ask: is there headache, papilledema or a visual field defect?",
+     "from": "Its question: is there headache, papilledema or a visual field defect?"
+    },
+    {
+     "claim": "Part I Precocious Puberty covers the advanced bone age.",
+     "from": "Part I Precocious Puberty owns the advanced bone age."
+    },
+    {
+     "claim": "Ask: central or peripheral?",
+     "from": "Its question: central or peripheral?"
+    },
+    {
+     "claim": "Part I Congenital Hypothyroidism covers the newborn screen.",
      "from": "Part I Congenital Hypothyroidism owns the newborn screen."
     },
     {
      "claim": "Part I Thyroid Mimics & Discriminators covers Hashimoto thyroiditis in adults.",
      "from": "Part I Thyroid Mimics & Discriminators owns Hashimoto thyroiditis in adults."
-    },
-    {
-     "claim": "FSH stands for follicle-stimulating hormone.",
-     "from": "expansion"
     }
    ]
   },
@@ -1025,12 +1110,12 @@
    "op": "replace",
    "brief": "bs-short-stature",
    "find": "Judge a short child by velocity first, then by which parameter fell first and the bone age: a steady channel is a normal variant, weight falling before height is nutrition or gut, height falling with weight preserved is endocrine, and an advanced bone age means sex steroids.",
-   "with": "Judge a short child by velocity first, then by which parameter fell first and the bone age. A steady channel is a normal variant. Weight falling before height indicates a nutritional or gut cause. Height falling with weight preserved indicates an endocrine cause. An advanced bone age means sex steroid exposure.",
-   "note": "voice: .rule; one idea per sentence",
+   "with": "Judge a short child by velocity first, then by which parameter fell first, then by bone age. A steady channel is a normal variant. Weight falling before height indicates a nutritional or gut cause. Height falling with weight preserved indicates an endocrine cause. An advanced bone age means sex steroid exposure.",
+   "note": "round 2 voice: .rule split into one idea per sentence",
    "claims": [
     {
      "claim": "Judge a short child by velocity first, then by which parameter fell first and the bone age.",
-     "to": "Judge a short child by velocity first, then by which parameter fell first and the bone age."
+     "to": "Judge a short child by velocity first, then by which parameter fell first, then by bone age."
     },
     {
      "claim": "A steady channel is a normal variant.",
@@ -1051,7 +1136,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Judge a short child by velocity first, then by which parameter fell first and the bone age.",
+     "claim": "Judge a short child by velocity first, then by which parameter fell first, then by bone age.",
      "from": "Judge a short child by velocity first, then by which parameter fell first and the bone age."
     },
     {

@@ -89,7 +89,7 @@
      "from": "Malnutrition consumes the parameters in order."
     },
     {
-     "claim": "Malnutrition spares the brain until deprivation is prolonged and severe.",
+     "claim": "Malnutrition affects the parameters in order and spares the brain until deprivation is prolonged and severe.",
      "from": "Malnutrition spares the brain until deprivation is prolonged and severe."
     },
     {
@@ -205,7 +205,7 @@
      "from": "Plot all three parameters before naming a cause."
     },
     {
-     "claim": "The relationship between the parameters points to the diagnosis.",
+     "claim": "Plot all three parameters before naming a cause; the relationship between them points to the diagnosis",
      "from": "The relationship between the parameters is the diagnostic instrument."
     },
     {
@@ -221,7 +221,7 @@
      "from": "Familial short stature and constitutional delay are not faltering growth."
     },
     {
-     "claim": "In familial short stature and constitutional delay the child tracks a low but steady curve.",
+     "claim": "Familial short stature and constitutional delay are not faltering growth; the child tracks a low but steady curve",
      "from": "In familial short stature and constitutional delay the child tracks a low but steady curve."
     },
     {
@@ -264,7 +264,7 @@
      "from": "Prematurity Follow-Up and Corrected Age is the direct mirror of this brief."
     },
     {
-     "claim": "In that case the parameters are proportionate and growth is normal.",
+     "claim": "Part II Prematurity Follow-Up and Corrected Age covers the contrasting case, in which the parameters are proportionate and growth is normal.",
      "from": "In Prematurity Follow-Up the parameters are proportionate and the answer is normal."
     },
     {
@@ -307,7 +307,7 @@
      "from": "When several growth parameters are given, the pattern among them is the diagnostic instrument."
     },
     {
-     "claim": "With one common cause and several rare organic ones, choose a rare disease only when a symptom, a sign or an admission supports it.",
+     "claim": "If one common cause competes with several rare organic ones, choose a rare disease only if a symptom, sign or admission supports it.",
      "from": "When a differential contains one common cause alongside several rare organic ones, a rare disease needs a symptom, a sign or an admission to support it."
     }
    ]
@@ -349,7 +349,7 @@
     },
     {
      "claim": "The growth assessment turns on reading percentiles.",
-     "to": "All three parameters sit together at the 15th percentile."
+     "dropped": "framing about the question type"
     },
     {
      "claim": "All three parameters sit together at the 15th percentile.",
@@ -456,7 +456,7 @@
      "from": "Former 26-week premature is the correction factor."
     },
     {
-     "claim": "Former 26-week premature is not the problem.",
+     "claim": "Former 26-week premature sets the age correction; it is not the problem.",
      "from": "Former 26-week premature is not the problem."
     },
     {
@@ -464,15 +464,15 @@
      "from": "Mild bronchopulmonary dysplasia with normal head ultrasounds reads as a list of morbidities."
     },
     {
-     "claim": "Mild bronchopulmonary dysplasia with normal head ultrasounds is reassuring.",
+     "claim": "Mild bronchopulmonary dysplasia with normal head ultrasounds looks like a list of morbidities but is reassuring.",
      "from": "Mild bronchopulmonary dysplasia with normal head ultrasounds is a list of reassurances."
     },
     {
-     "claim": "Normal cranial imaging excludes intraventricular hemorrhage and periventricular leukomalacia.",
+     "claim": "Normal cranial imaging excludes the intraventricular hemorrhage and periventricular leukomalacia that drive adverse neurodevelopmental outcome at this gestational age.",
      "from": "Normal cranial imaging removes intraventricular hemorrhage and periventricular leukomalacia."
     },
     {
-     "claim": "Intraventricular hemorrhage and periventricular leukomalacia drive adverse neurodevelopmental outcome at this gestational age.",
+     "claim": "Normal cranial imaging excludes the intraventricular hemorrhage and periventricular leukomalacia that drive adverse neurodevelopmental outcome at this gestational age.",
      "from": "Intraventricular hemorrhage and periventricular leukomalacia drive adverse neurodevelopmental outcome at this gestational age."
     }
    ]
@@ -491,7 +491,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Frequent NICU blood draws make anemia worse in preterm than term infants.",
+     "claim": "lower hematocrit at birth, shorter red cell life span, frequent NICU (neonatal intensive care unit) blood draws, iron depletion",
      "from": "Frequent NICU blood draws make anemia worse in preterm than term infants."
     },
     {
@@ -538,7 +538,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Head circumference predicts neurodevelopment.",
+     "claim": "Head circumference is the parameter that predicts neurodevelopment, so preserved head growth in a former preemie is the most reassuring single measurement",
      "from": "Head circumference predicts neurodevelopment."
     },
     {
@@ -633,7 +633,7 @@
      "from": "Bronchopulmonary Dysplasia covers apnea of prematurity."
     },
     {
-     "claim": "Apnea of prematurity is the diagnosis for the spells once IVH and anemia are excluded.",
+     "claim": "Part I Bronchopulmonary Dysplasia covers apnea of prematurity, the diagnosis for the spells once intraventricular hemorrhage and anemia are excluded.",
      "from": "Apnea of prematurity is the spell to call once IVH and anemia are excluded."
     },
     {
@@ -754,23 +754,23 @@
      "from": "Hypotonia is a finding, not a diagnosis."
     },
     {
-     "claim": "Localize where hypotonia starts.",
+     "claim": "Localize where it starts.",
      "from": "Ask where hypotonia starts."
     },
     {
-     "claim": "Brain causes include Down syndrome, Prader-Willi syndrome, congenital hypothyroidism and hypoxic-ischemic encephalopathy.",
+     "claim": "Causes in the brain include Down syndrome, Prader-Willi syndrome, congenital hypothyroidism and hypoxic-ischemic encephalopathy.",
      "from": "Brain causes are Down syndrome, Prader-Willi syndrome, congenital hypothyroidism and hypoxic-ischemic encephalopathy."
     },
     {
-     "claim": "The anterior horn cell level: spinal muscular atrophy.",
+     "claim": "Other levels are the anterior horn cell (spinal muscular atrophy), the neuromuscular junction (infant botulism) and the muscle (congenital myotonic dystrophy, congenital myopathies).",
      "from": "The anterior horn cell cause is spinal muscular atrophy."
     },
     {
-     "claim": "The neuromuscular junction level: infant botulism.",
+     "claim": "Other levels are the anterior horn cell (spinal muscular atrophy), the neuromuscular junction (infant botulism) and the muscle (congenital myotonic dystrophy, congenital myopathies).",
      "from": "The neuromuscular junction cause is infant botulism."
     },
     {
-     "claim": "The muscle level: congenital myotonic dystrophy and congenital myopathies.",
+     "claim": "Other levels are the anterior horn cell (spinal muscular atrophy), the neuromuscular junction (infant botulism) and the muscle (congenital myotonic dystrophy, congenital myopathies).",
      "from": "Muscle causes are congenital myotonic dystrophy and congenital myopathies."
     },
     {
@@ -805,7 +805,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Submicroscopic deletions need FISH or a microarray.",
+     "claim": "submicroscopic deletions need FISH (fluorescence in situ hybridization) or a microarray",
      "from": "Submicroscopic deletions need FISH or a microarray."
     },
     {
@@ -828,7 +828,7 @@
    ],
    "new_claims": [
     {
-     "claim": "The sequence for sharing the diagnosis is SPIKES.",
+     "claim": "then plan the next visit; this sequence is SPIKES (setting, perception, invitation, knowledge, emotions, strategy and summary)",
      "from": "The sequence for sharing the diagnosis is SPIKES."
     },
     {
@@ -851,7 +851,7 @@
    ],
    "new_claims": [
     {
-     "claim": "CVS or amniocentesis diagnose Down syndrome prenatally.",
+     "claim": "CVS (chorionic villus sampling) or amniocentesis diagnose",
      "from": "CVS or amniocentesis diagnose Down syndrome prenatally."
     },
     {
@@ -874,7 +874,7 @@
    ],
    "new_claims": [
     {
-     "claim": "An IEP at school entry, with parents as advocates.",
+     "claim": "early intervention at diagnosis; an IEP (individualized education program) at school entry, with parents as advocates",
      "from": "An IEP at school entry, with parents as advocates."
     },
     {
@@ -1015,7 +1015,7 @@
    ],
    "new_claims": [
     {
-     "claim": "A positive FISH is not the final answer; only the karyotype shows a translocation that changes the parents' recurrence risk.",
+     "claim": "A positive FISH (fluorescence in situ hybridization) taken as the final answer, when only the karyotype shows a translocation that changes the parents' recurrence risk.",
      "from": "A positive FISH is not the final answer; only the karyotype shows a translocation that changes the parents' recurrence risk."
     },
     {

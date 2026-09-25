@@ -58,7 +58,7 @@
      "from": "expansion"
     },
     {
-     "claim": "If ketorolac is the only NSAID offered, it is ruled out for a 6-month condition in a 72-year-old.",
+     "claim": "If it is the only NSAID offered, it is ruled out for a 6-month condition in a 72-year-old, and acetaminophen is the default choice.",
      "from": "If ketorolac is the only NSAID offered, it is disqualified for a 6-month condition in a 72-year-old."
     },
     {
@@ -71,16 +71,16 @@
    "op": "replace",
    "brief": "oa-pharm",
    "find": "<b>ACR/Arthritis Foundation 2019</b> <b>strongly recommends topical NSAIDs for knee OA</b> (upgraded from conditional in 2012) and strongly recommends oral NSAIDs, while <b>acetaminophen was downgraded to conditional</b> — framed for patients unable to take NSAIDs, with small effect sizes in trials. Older NBME items still key acetaminophen. Patient factors here also favor it: <b>age 72</b> (GI, renal, CV risk) and pain rated <b>3/10</b>.",
-   "with": "The <b>ACR/Arthritis Foundation 2019</b> guideline (ACR, American College of Rheumatology) <b>strongly recommends topical NSAIDs for knee OA</b> (upgraded from conditional in 2012). It also strongly recommends oral <b>NSAIDs</b> (nonsteroidal anti-inflammatory drugs). In the same guideline, <b>acetaminophen was downgraded to conditional</b>. It is framed for patients unable to take NSAIDs, and its effect sizes in trials are small. Older <b>NBME</b> (National Board of Medical Examiners) items still key acetaminophen. This patient's factors also favor it: <b>age 72</b>, with its <b>GI</b> (gastrointestinal), renal and <b>CV</b> (cardiovascular) risk, and pain rated <b>3/10</b>.",
+   "with": "The <b>ACR/Arthritis Foundation 2019</b> (ACR: American College of Rheumatology) guideline <b>strongly recommends topical NSAIDs for knee OA</b> (upgraded from conditional in 2012). It also strongly recommends oral <b>NSAIDs</b> (nonsteroidal anti-inflammatory drugs). In the same guideline, <b>acetaminophen was downgraded to conditional</b>. It is framed for patients unable to take NSAIDs, and its effect sizes in trials are small. Older <b>NBME</b> (National Board of Medical Examiners) items still key acetaminophen. This patient's factors also favor it: <b>age 72</b>, with its <b>GI</b> (gastrointestinal), renal and <b>CV</b> (cardiovascular) risk, and pain rated <b>3/10</b>.",
    "note": "voice: .danger; split long sentence, remove em dash, expand acronyms",
    "claims": [
     {
      "claim": "ACR/Arthritis Foundation 2019 strongly recommends topical NSAIDs for knee OA.",
-     "to": "The ACR/Arthritis Foundation 2019 guideline (ACR, American College of Rheumatology) strongly recommends topical NSAIDs for knee OA (upgraded from conditional in 2012)."
+     "to": "The ACR/Arthritis Foundation 2019 (ACR: American College of Rheumatology) guideline strongly recommends topical NSAIDs for knee OA (upgraded from conditional in 2012)."
     },
     {
      "claim": "Topical NSAIDs were upgraded from conditional in 2012.",
-     "to": "The ACR/Arthritis Foundation 2019 guideline (ACR, American College of Rheumatology) strongly recommends topical NSAIDs for knee OA (upgraded from conditional in 2012)."
+     "to": "The ACR/Arthritis Foundation 2019 (ACR: American College of Rheumatology) guideline strongly recommends topical NSAIDs for knee OA (upgraded from conditional in 2012)."
     },
     {
      "claim": "ACR/Arthritis Foundation 2019 strongly recommends oral NSAIDs.",
@@ -109,7 +109,7 @@
    ],
    "new_claims": [
     {
-     "claim": "ACR/Arthritis Foundation 2019 strongly recommends topical NSAIDs for knee OA.",
+     "claim": "The ACR/Arthritis Foundation 2019 (ACR: American College of Rheumatology) guideline strongly recommends topical NSAIDs for knee OA (upgraded from conditional in 2012).",
      "from": "ACR/Arthritis Foundation 2019 strongly recommends topical NSAIDs for knee OA."
     },
     {
@@ -117,11 +117,11 @@
      "from": "expansion"
     },
     {
-     "claim": "Topical NSAIDs were upgraded from conditional in 2012.",
+     "claim": "The ACR/Arthritis Foundation 2019 (ACR: American College of Rheumatology) guideline strongly recommends topical NSAIDs for knee OA (upgraded from conditional in 2012).",
      "from": "Topical NSAIDs were upgraded from conditional in 2012."
     },
     {
-     "claim": "The guideline also strongly recommends oral NSAIDs.",
+     "claim": "It also strongly recommends oral NSAIDs (nonsteroidal anti-inflammatory drugs).",
      "from": "ACR/Arthritis Foundation 2019 strongly recommends oral NSAIDs."
     },
     {
@@ -133,15 +133,15 @@
      "from": "Acetaminophen was downgraded to conditional."
     },
     {
-     "claim": "Acetaminophen is framed for patients unable to take NSAIDs.",
+     "claim": "It is framed for patients unable to take NSAIDs, and its effect sizes in trials are small.",
      "from": "Acetaminophen is framed for patients unable to take NSAIDs."
     },
     {
-     "claim": "Acetaminophen's effect sizes in trials are small.",
+     "claim": "It is framed for patients unable to take NSAIDs, and its effect sizes in trials are small.",
      "from": "Acetaminophen had small effect sizes in trials."
     },
     {
-     "claim": "Older NBME items still key acetaminophen.",
+     "claim": "Older NBME (National Board of Medical Examiners) items still key acetaminophen.",
      "from": "Older NBME items still key acetaminophen."
     },
     {
@@ -149,7 +149,7 @@
      "from": "expansion"
     },
     {
-     "claim": "This patient's factors also favor acetaminophen: age 72 (GI, renal and CV risk) and pain rated 3/10.",
+     "claim": "This patient's factors also favor it: age 72, with its GI (gastrointestinal), renal and CV (cardiovascular) risk, and pain rated 3/10.",
      "from": "Patient factors here also favor acetaminophen: age 72 (GI, renal, CV risk) and pain rated 3/10."
     },
     {
@@ -195,11 +195,11 @@
    ],
    "new_claims": [
     {
-     "claim": "No fever, no morning stiffness, no synovitis and crepitus present is mechanical, not inflammatory.",
+     "claim": "No fever, no morning stiffness, no synovitis, crepitus present: this pattern is mechanical, not inflammatory.",
      "from": "No fever, no morning stiffness, no synovitis and crepitus present is mechanical, not inflammatory."
     },
     {
-     "claim": "This pattern excludes hydroxychloroquine and prednisone.",
+     "claim": "It excludes hydroxychloroquine and prednisone.",
      "from": "A mechanical picture excludes hydroxychloroquine and prednisone."
     },
     {
@@ -250,7 +250,7 @@
      "from": "A class can be right while the offered member is wrong."
     },
     {
-     "claim": "Examples: ketorolac for chronic OA, gentamicin for simple cystitis, chloramphenicol for otitis.",
+     "claim": "A class can be right while the offered member is wrong: ketorolac for chronic OA (osteoarthritis), gentamicin for simple cystitis, chloramphenicol for otitis.",
      "from": "Examples are ketorolac for chronic OA, gentamicin for simple cystitis and chloramphenicol for otitis."
     },
     {
@@ -297,7 +297,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Localized bursal swelling with erythema and warmth but preserved joint range of motion means the process is extraarticular.",
+     "claim": "Localized bursal swelling with erythema and warmth, but preserved joint range of motion, means the process is extraarticular.",
      "from": "Localized bursal swelling with erythema and warmth but preserved joint range of motion means the pathology is extraarticular."
     },
     {
@@ -305,7 +305,7 @@
      "from": "That single exam finding separates septic bursitis from septic arthritis."
     },
     {
-     "claim": "It determines whether the bursa or the joint is aspirated.",
+     "claim": "This one exam finding separates septic bursitis from septic arthritis and determines whether the bursa or the joint is aspirated.",
      "from": "That finding decides which space gets the needle."
     },
     {
@@ -344,7 +344,7 @@
      "from": "Serum uric acid never rules infection in or out."
     },
     {
-     "claim": "Even a high uric acid level cannot replace aspiration.",
+     "claim": "Serum uric acid never rules infection in or out; even a high level cannot replace aspiration",
      "from": "Even a high uric acid level cannot replace aspiration."
     }
    ]
@@ -379,7 +379,7 @@
      "from": "Any hot fluid collection is aspirated before treatment."
     },
     {
-     "claim": "Ask whether joint motion is preserved.",
+     "claim": "Ask: \"is joint motion preserved?\"",
      "from": "The discriminator is whether joint motion is preserved."
     }
    ]
@@ -423,12 +423,12 @@
    "op": "replace",
    "brief": "septic-bursitis",
    "find": "<span class=\"trapwhy\">Steroid flare is the benign twin of iatrogenic infection — the discriminator is the clock, not the severity.</span>",
-   "with": "<span class=\"trapwhy\">Post-injection steroid flare: the benign twin of iatrogenic infection. Timing separates them, not severity.</span>",
+   "with": "<span class=\"trapwhy\">Post-injection steroid flare: a benign mimic of iatrogenic infection. Timing separates them, not severity.</span>",
    "note": "voice: trap line as Option: why; em dash and personification removed",
    "claims": [
     {
      "claim": "Steroid flare is the benign twin of iatrogenic infection.",
-     "to": "Post-injection steroid flare: the benign twin of iatrogenic infection."
+     "to": "Post-injection steroid flare: a benign mimic of iatrogenic infection."
     },
     {
      "claim": "The discriminator is the clock, not the severity.",
@@ -437,7 +437,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Post-injection steroid flare is the benign twin of iatrogenic infection.",
+     "claim": "Post-injection steroid flare: a benign mimic of iatrogenic infection.",
      "from": "Steroid flare is the benign twin of iatrogenic infection."
     },
     {
@@ -484,7 +484,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Score the Kocher criteria: fever >38.5 °C, non-weight-bearing, ESR >40, WBC >12,000.",
+     "claim": "Score the Kocher criteria: fever >38.5 °C, non-weight-bearing, ESR (erythrocyte sedimentation rate) >40, WBC (white blood cell count) >12,000.",
      "from": "Score the Kocher criteria: fever >38.5 °C, non-weight-bearing, ESR >40, WBC >12,000."
     },
     {
@@ -496,7 +496,7 @@
      "from": "expansion"
     },
     {
-     "claim": "CRP >2.0 is often added as a fifth.",
+     "claim": "CRP (C-reactive protein) >2.0 is often added as a fifth.",
      "from": "CRP >2.0 is often added as a fifth criterion."
     },
     {
@@ -508,11 +508,11 @@
      "from": "Three criteria give ≈ 93% probability."
     },
     {
-     "claim": "Four criteria give ≈ 99% probability.",
+     "claim": "Three criteria give ≈ 93% probability and four give ≈ 99%; either → arthrocentesis.",
      "from": "Four criteria give ≈ 99% probability."
     },
     {
-     "claim": "Either count leads to arthrocentesis.",
+     "claim": "Three criteria give ≈ 93% probability and four give ≈ 99%; either → arthrocentesis.",
      "from": "Three or four criteria lead to arthrocentesis."
     },
     {
@@ -547,7 +547,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Synovial fluid >50,000 WBC with PMN predominance confirms it.",
+     "claim": "Synovial fluid >50,000 WBC (white blood cells) with PMN (polymorphonuclear neutrophil) predominance confirms it.",
      "from": "Synovial fluid >50,000 WBC, PMN-predominant, confirms septic arthritis."
     },
     {
@@ -563,7 +563,7 @@
      "from": "Septic hip is a surgical emergency."
     },
     {
-     "claim": "Delayed drainage causes femoral head AVN and growth arrest.",
+     "claim": "Delayed drainage causes femoral head AVN (avascular necrosis) and growth arrest.",
      "from": "Delayed drainage causes femoral head AVN and growth arrest."
     },
     {
@@ -586,7 +586,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Transient synovitis is a benign mimic of septic arthritis of the hip.",
+     "claim": "Benign mimic of septic arthritis of the hip",
      "from": "Transient synovitis is the benign version of the septic hip presentation."
     }
    ]
@@ -644,11 +644,11 @@
      "from": "The child is well-appearing and afebrile."
     },
     {
-     "claim": "The child limps but walks.",
+     "claim": "The child is well-appearing and afebrile, limps but walks, and had a viral URI (upper respiratory infection) 1–2 weeks prior.",
      "from": "The child limps but walks."
     },
     {
-     "claim": "The child had a viral URI 1–2 weeks prior.",
+     "claim": "The child is well-appearing and afebrile, limps but walks, and had a viral URI (upper respiratory infection) 1–2 weeks prior.",
      "from": "There was a post-viral URI 1–2 weeks prior."
     },
     {
@@ -660,7 +660,7 @@
      "from": "A small effusion on ultrasound is a decoy because it is present in both twins."
     },
     {
-     "claim": "Its laterality does discriminate.",
+     "claim": "Its laterality does: septic arthritis produces a unilateral effusion.",
      "from": "Laterality of the effusion is not a decoy."
     },
     {
@@ -672,7 +672,7 @@
      "from": "Transient synovitis may be unilateral or bilateral, even when the symptoms are one-sided."
     },
     {
-     "claim": "Management is NSAIDs and follow-up.",
+     "claim": "Management is NSAIDs (nonsteroidal anti-inflammatory drugs) and follow-up.",
      "from": "Management is NSAIDs and follow-up."
     },
     {
@@ -736,7 +736,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Sort by sick or well, then acute or chronic, then age.",
+     "claim": "Sick or well, then acute or chronic, then age",
      "from": "The limping child is sorted by sick or well, then acute or chronic, then age."
     }
    ]
@@ -798,7 +798,7 @@
      "from": "Acute (days) = infection/synovitis/fracture."
     },
     {
-     "claim": "Chronic (weeks–months) points to LCP, SCFE, JIA or tumor.",
+     "claim": "Chronic (weeks–months) points to LCP (Legg-Calvé-Perthes disease), SCFE (slipped capital femoral epiphysis), JIA (juvenile idiopathic arthritis) or tumor.",
      "from": "Chronic (weeks–months) = LCP, SCFE, JIA, tumor."
     },
     {
@@ -814,7 +814,7 @@
      "from": "expansion"
     },
     {
-     "claim": "By age: infant DDH or a walker with missed DDH; 1–3 toddler's fracture; 3–8 synovitis/LCP; 10–16 SCFE.",
+     "claim": "3. Age: infant DDH (developmental dysplasia of the hip) or a walker with missed DDH; 1–3 toddler's fracture; 3–8 synovitis/LCP; 10–16 SCFE (any body habitus; obesity raises risk but is not required).",
      "from": "Age picks the disease: infant DDH or a walker with missed DDH; 1–3 toddler's fracture; 3–8 synovitis/LCP; 10–16 SCFE."
     },
     {
@@ -822,11 +822,11 @@
      "from": "expansion"
     },
     {
-     "claim": "SCFE occurs with any body habitus; obesity raises risk but is not required.",
+     "claim": "3. Age: infant DDH (developmental dysplasia of the hip) or a walker with missed DDH; 1–3 toddler's fracture; 3–8 synovitis/LCP; 10–16 SCFE (any body habitus; obesity raises risk but is not required).",
      "from": "SCFE occurs with any body habitus; obesity raises risk but is not required."
     },
     {
-     "claim": "Night pain, weight loss, or bruising → CBC, whatever the other findings.",
+     "claim": "4. Night pain, weight loss, or bruising → CBC (complete blood count), whatever the other findings.",
      "from": "Night pain, weight loss, or bruising overrides everything → CBC."
     },
     {
@@ -900,11 +900,11 @@
      "from": "The real discriminators are age at the growth spurt, loss of internal rotation, and obligate external rotation on passive flexion, not body habitus."
     },
     {
-     "claim": "An atypical SCFE patient is age <10 or >16, short stature, or very thin.",
+     "claim": "An atypical SCFE patient is younger than 10 or older than 16, has short stature or is very thin.",
      "from": "An atypical SCFE patient is age <10 or >16, short stature, or very thin."
     },
     {
-     "claim": "In an atypical SCFE patient, screen for hypothyroidism, growth hormone deficiency, panhypopituitarism, hypogonadism, or renal osteodystrophy.",
+     "claim": "In such a patient, screen for hypothyroidism, growth hormone deficiency, panhypopituitarism, hypogonadism, or renal osteodystrophy.",
      "from": "In an atypical SCFE patient, screen for hypothyroidism, growth hormone deficiency, panhypopituitarism, hypogonadism, or renal osteodystrophy."
     }
    ]
@@ -951,7 +951,7 @@
      "from": "Normal gait is the fork between the two briefs."
     },
     {
-     "claim": "Suspected Child Abuse: Fractures and the Next Step covers the corner fracture and the femur fracture in a child who does not yet walk.",
+     "claim": "Part II Suspected Child Abuse: Fractures and the Next Step covers corner and femur fractures in a child who does not yet walk.",
      "from": "Suspected Child Abuse: Fractures and the Next Step covers the corner fracture and the femur fracture in a child who does not yet walk."
     },
     {

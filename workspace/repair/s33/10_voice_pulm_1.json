@@ -4,7 +4,7 @@
    "op": "replace",
    "brief": "copd",
    "find": "<p>\"Maximum impact on survival\" asks you to rank by <b>outcome</b>, not to treat the disease. Only a handful of things reduce mortality in COPD — and stems often <b>preemptively remove smoking cessation</b> (patient already quit) to force you into the second tier.</p>",
-   "with": "<p>For \"maximum impact on survival,\" rank options by <b>outcome</b>, not by whether they treat the disease. Only a handful of interventions reduce mortality in <b>COPD</b> (chronic obstructive pulmonary disease). Stems often say the patient has already quit, which removes <b>smoking cessation</b>; then choose from the other interventions that reduce mortality.</p>",
+   "with": "<p>To maximize survival, rank interventions by <b>outcome</b>, not by whether they treat the disease. Only a handful of interventions reduce mortality in <b>COPD</b> (chronic obstructive pulmonary disease). If the patient has already quit, <b>smoking cessation</b> is no longer available; choose from the other interventions that reduce mortality.</p>",
    "note": "voice: .dp",
    "reworded_bold": [
     "preemptively remove smoking cessation"
@@ -12,7 +12,7 @@
    "claims": [
     {
      "claim": "\"Maximum impact on survival\" asks you to rank by outcome, not to treat the disease.",
-     "to": "For \"maximum impact on survival,\" rank options by outcome, not by whether they treat the disease."
+     "to": "To maximize survival, rank interventions by outcome, not by whether they treat the disease."
     },
     {
      "claim": "Only a handful of things reduce mortality in COPD.",
@@ -20,16 +20,16 @@
     },
     {
      "claim": "Stems often preemptively remove smoking cessation because the patient already quit.",
-     "to": "Stems often say the patient has already quit, which removes smoking cessation; then choose from the other interventions that reduce mortality."
+     "to": "If the patient has already quit, smoking cessation is no longer available; choose from the other interventions that reduce mortality."
     },
     {
      "claim": "Removing smoking cessation forces the choice into the second tier of mortality-reducing interventions.",
-     "to": "Stems often say the patient has already quit, which removes smoking cessation; then choose from the other interventions that reduce mortality."
+     "to": "If the patient has already quit, smoking cessation is no longer available; choose from the other interventions that reduce mortality."
     }
    ],
    "new_claims": [
     {
-     "claim": "For maximum impact on survival, rank options by outcome, not by whether they treat the disease.",
+     "claim": "To maximize survival, rank interventions by outcome, not by whether they treat the disease.",
      "from": "\"Maximum impact on survival\" asks you to rank by outcome, not to treat the disease."
     },
     {
@@ -41,11 +41,11 @@
      "from": "Only a handful of things reduce mortality in COPD."
     },
     {
-     "claim": "Stems often say the patient has already quit, which removes smoking cessation.",
+     "claim": "If the patient has already quit, smoking cessation is no longer available; choose from the other interventions that reduce mortality.",
      "from": "Stems often preemptively remove smoking cessation because the patient already quit."
     },
     {
-     "claim": "Then choose from the other interventions that reduce mortality.",
+     "claim": "If the patient has already quit, smoking cessation is no longer available; choose from the other interventions that reduce mortality.",
      "from": "Removing smoking cessation forces the choice into the second tier of mortality-reducing interventions."
     }
    ]
@@ -91,7 +91,7 @@
      "from": "The hematocrit of 58% is what qualifies the patient under the second criterion."
     },
     {
-     "claim": "The ruddy and plethoric face is the same finding on physical exam.",
+     "claim": "The \"ruddy and plethoric\" face is the same finding on physical exam.",
      "from": "The ruddy and plethoric face is the same finding in physical-exam form."
     },
     {
@@ -142,11 +142,11 @@
      "from": "The polycythemia is appropriate compensation for hypoxemia."
     },
     {
-     "claim": "Removing the polycythemia reduces oxygen delivery.",
+     "claim": "The polycythemia is appropriate compensation for hypoxemia; removing it reduces oxygen delivery.",
      "from": "Removing the polycythemia reduces oxygen delivery."
     },
     {
-     "claim": "Phlebotomy is only for symptomatic hyperviscosity (blurred vision, confusion), typically at Hct >65.",
+     "claim": "Phlebotomy is only for symptomatic hyperviscosity (blurred vision, confusion), typically at Hct (hematocrit) >65.",
      "from": "Phlebotomy is only for symptomatic hyperviscosity (blurred vision, confusion), typically Hct >65."
     },
     {
@@ -162,11 +162,11 @@
      "from": "expansion"
     },
     {
-     "claim": "Normal WBC count and platelets make this secondary polycythemia.",
+     "claim": "Normal WBC (white blood cell) count and platelets make this secondary polycythemia.",
      "from": "Normal WBC and platelets make this secondary polycythemia."
     },
     {
-     "claim": "Polycythemia vera would elevate all three lines, with low EPO and JAK2 V617F.",
+     "claim": "Polycythemia vera would elevate all three lines, with low EPO (erythropoietin) and JAK2 (Janus kinase 2) V617F.",
      "from": "Polycythemia vera would elevate all three lines with low EPO and JAK2 V617F."
     },
     {
@@ -193,7 +193,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Objective measurement is preferred over subjective report.",
+     "claim": "Objective measurement over subjective report",
      "from": "Objective measurement beats subjective report."
     }
    ]
@@ -247,7 +247,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Asthma and COPD are distinguished by reversibility of airflow obstruction.",
+     "claim": "Asthma and COPD (chronic obstructive pulmonary disease) are distinguished by reversibility of airflow obstruction.",
      "from": "Asthma and COPD are defined apart by reversibility of airflow obstruction."
     },
     {
@@ -255,7 +255,7 @@
      "from": "Reversibility is a measurement, not an impression."
     },
     {
-     "claim": "Spirometry before and after a bronchodilator is preferred over symptomatic response to a trial of albuterol.",
+     "claim": "Therefore, spirometry before and after a bronchodilator is preferred over \"symptomatic response to a trial of albuterol,\" even though both use the same drug.",
      "from": "Spirometry before and after a bronchodilator beats symptomatic response to a trial of albuterol."
     },
     {
@@ -267,7 +267,7 @@
      "from": "Subjective relief does not correlate with the spirometric bronchodilator response."
     },
     {
-     "claim": "When asthma features are set against COPD features, the history cannot settle the diagnosis.",
+     "claim": "When asthma features (seasonal, episodic, eczema, family history) are set against COPD features (age, pack-years), the history cannot settle the diagnosis.",
      "from": "Asthma features (seasonal, episodic, eczema, family history) are stacked against COPD features (age, pack-years)."
     },
     {
@@ -309,11 +309,11 @@
      "from": "expansion"
     },
     {
-     "claim": "COPD is defined by a post-bronchodilator FEV₁/FVC <0.70.",
+     "claim": "COPD (chronic obstructive pulmonary disease) is defined by a POST-bronchodilator FEV₁/FVC <0.70; obstruction persists even if some improvement occurs.",
      "from": "COPD is defined by a post-bronchodilator FEV₁/FVC <0.70."
     },
     {
-     "claim": "In COPD, obstruction persists even if some improvement occurs.",
+     "claim": "COPD (chronic obstructive pulmonary disease) is defined by a POST-bronchodilator FEV₁/FVC <0.70; obstruction persists even if some improvement occurs.",
      "from": "In COPD, obstruction persists even if some improvement occurs."
     }
    ]
@@ -348,7 +348,7 @@
      "from": "When two choices test the same physiologic variable, pick the one that yields a number over the one that yields an impression."
     },
     {
-     "claim": "Symptomatic response to a trial of X is nearly always a distractor when objective measurement is available.",
+     "claim": "When objective measurement is available, \"symptomatic response to a trial of X\" is nearly always a distractor.",
      "from": "Symptomatic response to a trial of X is nearly always a distractor when objective measurement is available."
     },
     {
@@ -384,7 +384,7 @@
    "op": "replace",
    "brief": "cough",
    "find": "<p>Chronic cough (&gt;8 weeks) with a normal chest X-ray comes down to three causes: <b>upper airway cough syndrome, asthma, and GERD</b>. A completed empiric trial <i>is</i> a diagnostic test — \"did not respond to antihistamines and decongestants\" is the diagnostic trial for UACS, and failure effectively excludes it.</p>",
-   "with": "<p>Chronic cough (&gt;8 weeks) with a normal chest X-ray comes down to three causes: <b>upper airway cough syndrome, asthma, and GERD</b> (gastroesophageal reflux disease). A completed empiric trial <i>is</i> a diagnostic test. Antihistamines and decongestants are the diagnostic trial for <b>UACS</b> (upper airway cough syndrome). Failure of that trial (\"did not respond to antihistamines and decongestants\") effectively excludes it.</p>",
+   "with": "<p>Chronic cough (&gt;8 weeks) with a normal chest X-ray comes down to three causes: <b>upper airway cough syndrome, asthma, and GERD</b> (gastroesophageal reflux disease). A completed empiric trial <i>is</i> a diagnostic test. Antihistamines and decongestants are the diagnostic trial for upper airway cough syndrome. Failure of that trial (\"did not respond to antihistamines and decongestants\") effectively excludes it.</p>",
    "note": "voice: .dp; em dash removed, acronyms expanded",
    "claims": [
     {
@@ -397,7 +397,7 @@
     },
     {
      "claim": "Did not respond to antihistamines and decongestants is the diagnostic trial for UACS.",
-     "to": "Antihistamines and decongestants are the diagnostic trial for UACS (upper airway cough syndrome)."
+     "to": "Antihistamines and decongestants are the diagnostic trial for upper airway cough syndrome."
     },
     {
      "claim": "Failure of that trial effectively excludes UACS.",
@@ -418,7 +418,7 @@
      "from": "A completed empiric trial is a diagnostic test."
     },
     {
-     "claim": "Antihistamines and decongestants are the diagnostic trial for UACS.",
+     "claim": "Antihistamines and decongestants are the diagnostic trial for upper airway cough syndrome.",
      "from": "Did not respond to antihistamines and decongestants is the diagnostic trial for UACS."
     },
     {
@@ -426,7 +426,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Failure of that trial (did not respond to antihistamines and decongestants) effectively excludes UACS.",
+     "claim": "Failure of that trial (\"did not respond to antihistamines and decongestants\") effectively excludes it.",
      "from": "Failure of that trial effectively excludes UACS."
     }
    ]
@@ -460,11 +460,11 @@
    ],
    "new_claims": [
     {
-     "claim": "When a stem says did not respond to X, it is not giving history.",
+     "claim": "When a stem says \"did not respond to X,\" it is not giving history; it eliminates the cause X treats.",
      "from": "When a stem says did not respond to X, it is not giving history."
     },
     {
-     "claim": "A failed trial of X eliminates the cause X treats.",
+     "claim": "When a stem says \"did not respond to X,\" it is not giving history; it eliminates the cause X treats.",
      "from": "It is crossing an answer off for you."
     },
     {
@@ -472,7 +472,7 @@
      "from": "Read treatment failures as eliminations."
     },
     {
-     "claim": "Nocturnal dry cough with a normal exam and everything else normal is GERD until proven otherwise.",
+     "claim": "Nocturnal dry cough with a normal exam and everything else normal is GERD (gastroesophageal reflux disease) until proven otherwise.",
      "from": "Nocturnal dry cough + normal exam + normal everything = GERD until proven otherwise."
     },
     {
@@ -495,7 +495,7 @@
    ],
    "new_claims": [
     {
-     "claim": "The task is matching occupational exposure to lung disease.",
+     "claim": "Matching occupational exposure to lung disease",
      "from": "The question is a lookup (exposure to disease) presented as a clinical case."
     }
    ]
@@ -542,7 +542,7 @@
      "from": "Asbestosis is the odd one out."
     },
     {
-     "claim": "Asbestosis affects the lower lobes and involves the pleura.",
+     "claim": "Asbestosis is the exception: it affects the lower lobes and involves the pleura.",
      "from": "Asbestosis goes to the lower lobes and involves the pleura."
     },
     {
@@ -577,11 +577,11 @@
    ],
    "new_claims": [
     {
-     "claim": "A long stem answered in under 40 seconds means one cue was pattern-matched and the verification pass was skipped.",
+     "claim": "Answering a long stem in under 40 seconds means one cue was pattern-matched and the verification pass was skipped.",
      "from": "A long stem answered in under 40 seconds means one cue was pattern-matched and the verification pass was skipped."
     },
     {
-     "claim": "Pattern-matching costs the most in occupational stems.",
+     "claim": "This costs the most in occupational stems.",
      "from": "Occupational stems reward it least."
     },
     {
@@ -589,7 +589,7 @@
      "from": "The lobe distribution is usually the deciding line."
     },
     {
-     "claim": "The lobe distribution comes at the end of the stem.",
+     "claim": "The lobe distribution usually decides the diagnosis, and it comes at the end of the stem.",
      "from": "The lobe distribution sits at the end."
     }
    ]
@@ -628,11 +628,11 @@
      "from": "Moderate-to-severe seasonal rhinitis that has failed antihistamines steps up to an intranasal corticosteroid."
     },
     {
-     "claim": "Intranasal corticosteroid is the single most effective drug class for allergic rhinitis.",
+     "claim": "It is the single most effective drug class for allergic rhinitis.",
      "from": "Intranasal corticosteroid is the single most effective drug class for allergic rhinitis."
     },
     {
-     "claim": "A visit in late winter points to prophylaxis.",
+     "claim": "A visit in \"late winter\" points to prophylaxis: start it ~2 weeks before pollen season.",
      "from": "Late winter is the prophylaxis clue."
     },
     {
@@ -671,15 +671,15 @@
    ],
    "new_claims": [
     {
-     "claim": "The ladder starts with allergen avoidance (when practical).",
+     "claim": "Start with allergen avoidance (when practical), then an intranasal corticosteroid.",
      "from": "The ladder starts with allergen avoidance (when practical)."
     },
     {
-     "claim": "Then intranasal corticosteroid.",
+     "claim": "Start with allergen avoidance (when practical), then an intranasal corticosteroid.",
      "from": "Then intranasal corticosteroid."
     },
     {
-     "claim": "Then add second-generation oral or intranasal antihistamine.",
+     "claim": "Next, add a second-generation oral or intranasal antihistamine.",
      "from": "Then add second-generation oral or intranasal antihistamine."
     },
     {

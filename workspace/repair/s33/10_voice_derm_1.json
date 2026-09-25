@@ -5,17 +5,17 @@
    "brief": "psoriasis",
    "find": "Findings beat exposures",
    "with": "Exam findings outweigh the exposure history",
-   "note": "sub: slogan to plain statement",
+   "note": "subtitle slogan",
    "claims": [
     {
-     "claim": "Exam findings outweigh exposures.",
+     "claim": "Findings outweigh exposures.",
      "to": "Exam findings outweigh the exposure history"
     }
    ],
    "new_claims": [
     {
      "claim": "Exam findings outweigh the exposure history.",
-     "from": "Exam findings outweigh exposures."
+     "from": "Findings outweigh exposures."
     }
    ]
   },
@@ -23,68 +23,68 @@
    "op": "replace",
    "brief": "psoriasis",
    "find": "<p><b>Nail dystrophy + extensor-surface scaly plaques together = psoriasis.</b> Distribution does the rest: <b>extensor</b> = psoriasis; <b>flexural</b> = eczema. Occupational \"wet work\" is bait — though it hides a real pearl, since psoriasis exhibits the <b>Koebner phenomenon</b> and friction can localize it.</p>",
-   "with": "<p><b>Nail dystrophy</b> together with <b>extensor-surface scaly plaques</b> means psoriasis. An <b>extensor</b> distribution means psoriasis; a <b>flexural</b> distribution means eczema. Occupational \"wet work\" is a distractor. Psoriasis shows the <b>Koebner phenomenon</b>, so friction can localize it.</p>",
-   "note": ".dp: split slogan bold sentence, remove em dash and 'bait/pearl' framing",
+   "with": "<p><b>Nail dystrophy together with extensor-surface scaly plaques</b> indicates psoriasis. An <b>extensor</b> distribution indicates psoriasis; a <b>flexural</b> distribution indicates eczema. An occupational \"wet work\" history does not override these findings. Psoriasis does show the <b>Koebner phenomenon</b>, so friction can localize it.</p>",
+   "note": ".dp: remove slogan equations, bait framing, em dash",
    "reworded_bold": [
     "Nail dystrophy + extensor-surface scaly plaques together = psoriasis."
    ],
    "claims": [
     {
      "claim": "Nail dystrophy plus extensor-surface scaly plaques together indicate psoriasis.",
-     "to": "Nail dystrophy together with extensor-surface scaly plaques means psoriasis."
+     "to": "Nail dystrophy together with extensor-surface scaly plaques indicates psoriasis."
     },
     {
-     "claim": "Distribution separates the diagnoses.",
-     "to": "An extensor distribution means psoriasis; a flexural distribution means eczema."
+     "claim": "Distribution does the rest.",
+     "dropped": "framing; the distribution rule is stated next"
     },
     {
      "claim": "Extensor distribution indicates psoriasis.",
-     "to": "An extensor distribution means psoriasis; a flexural distribution means eczema."
+     "to": "An extensor distribution indicates psoriasis; a flexural distribution indicates eczema."
     },
     {
      "claim": "Flexural distribution indicates eczema.",
-     "to": "An extensor distribution means psoriasis; a flexural distribution means eczema."
+     "to": "An extensor distribution indicates psoriasis; a flexural distribution indicates eczema."
     },
     {
      "claim": "Occupational wet work is bait.",
-     "to": "Occupational \"wet work\" is a distractor."
+     "to": "An occupational \"wet work\" history does not override these findings."
     },
     {
-     "claim": "Wet work hides a real pearl.",
-     "dropped": "framing; the pearl itself (Koebner phenomenon) is stated in the next sentence"
+     "claim": "The wet-work history hides a real pearl.",
+     "to": "Psoriasis does show the Koebner phenomenon, so friction can localize it."
     },
     {
      "claim": "Psoriasis exhibits the Koebner phenomenon.",
-     "to": "Psoriasis shows the Koebner phenomenon, so friction can localize it."
+     "to": "Psoriasis does show the Koebner phenomenon, so friction can localize it."
     },
     {
      "claim": "Friction can localize psoriasis.",
-     "to": "Psoriasis shows the Koebner phenomenon, so friction can localize it."
+     "to": "Psoriasis does show the Koebner phenomenon, so friction can localize it."
     }
    ],
    "new_claims": [
     {
-     "claim": "Nail dystrophy together with extensor-surface scaly plaques means psoriasis.",
+     "claim": "Nail dystrophy together with extensor-surface scaly plaques indicates psoriasis.",
      "from": "Nail dystrophy plus extensor-surface scaly plaques together indicate psoriasis."
     },
     {
-     "claim": "An extensor distribution means psoriasis.",
+     "claim": "Extensor distribution indicates psoriasis.",
      "from": "Extensor distribution indicates psoriasis."
     },
     {
-     "claim": "A flexural distribution means eczema.",
+     "claim": "Flexural distribution indicates eczema.",
      "from": "Flexural distribution indicates eczema."
     },
     {
-     "claim": "Occupational wet work is a distractor.",
+     "claim": "An occupational \"wet work\" history does not override these findings.",
      "from": "Occupational wet work is bait."
     },
     {
-     "claim": "Psoriasis shows the Koebner phenomenon.",
+     "claim": "Psoriasis does show the Koebner phenomenon, so friction can localize it.",
      "from": "Psoriasis exhibits the Koebner phenomenon."
     },
     {
-     "claim": "Friction can localize psoriasis.",
+     "claim": "Psoriasis does show the Koebner phenomenon, so friction can localize it.",
      "from": "Friction can localize psoriasis."
     }
    ]
@@ -92,123 +92,115 @@
   {
    "op": "replace",
    "brief": "psoriasis",
-   "find": "Pathology: parakeratosis, acanthosis, <b>Munro microabscesses</b>, thinned suprapapillary plates (→ Auspitz) · immunology: <b>Th17 / IL-17 / IL-23</b> axis — secukinumab (IL-17), ustekinumab (IL-12/23), TNF-α inhibitors (<b>screen for latent TB first</b>) · associations: psoriatic arthritis (<b>DIP joints, \"pencil-in-cup,\" dactylitis</b>), metabolic syndrome and CV risk · ladder: topical steroids + <b>calcipotriene</b> → narrowband UVB → systemics · trap: abrupt steroid withdrawal can trigger a pustular flare · if it were tinea, the answer is a <b>KOH prep</b> — never a steroid (tinea incognito).",
-   "with": "Pathology: parakeratosis, acanthosis, <b>Munro microabscesses</b>, thinned suprapapillary plates (→ Auspitz) · immunology: <b>Th17 / IL-17 / IL-23</b> axis (T helper 17 cells, interleukin 17, interleukin 23); secukinumab (IL-17), ustekinumab (IL-12/23), <b>TNF-α</b> (tumor necrosis factor alpha) inhibitors (<b>screen for latent TB first</b>) · associations: psoriatic arthritis (<b>DIP joints, \"pencil-in-cup,\" dactylitis</b>), metabolic syndrome and cardiovascular risk · ladder: topical steroids + <b>calcipotriene</b>, then narrowband <b>UVB</b> (ultraviolet B), then systemics · abrupt steroid withdrawal can trigger a pustular flare · if the lesion is tinea, get a <b>KOH prep</b> (potassium hydroxide preparation) and never give a steroid (tinea incognito).",
-   "note": ".pearls: remove em dashes, split arrow chain, drop 'trap' label, expand acronyms",
+   "find": "immunology: <b>Th17 / IL-17 / IL-23</b> axis — secukinumab (IL-17), ustekinumab (IL-12/23), TNF-α inhibitors (<b>screen for latent TB first</b>) · associations: psoriatic arthritis (<b>DIP joints, \"pencil-in-cup,\" dactylitis</b>), metabolic syndrome and CV risk · ladder: topical steroids + <b>calcipotriene</b> → narrowband UVB → systemics · trap: abrupt steroid withdrawal can trigger a pustular flare · if it were tinea, the answer is a <b>KOH prep</b> — never a steroid (tinea incognito).",
+   "with": "immunology: <b>Th17 / IL-17 / IL-23</b> (T helper 17 cell / interleukin 17 / interleukin 23) axis · drugs: secukinumab (IL-17), ustekinumab (IL-12/23), <b>TNF-α</b> (tumor necrosis factor alpha) inhibitors after <b>screening for latent TB</b> (tuberculosis) · associations: psoriatic arthritis with <b>DIP</b> (distal interphalangeal) <b>joints, \"pencil-in-cup,\" dactylitis</b>; metabolic syndrome and <b>CV</b> (cardiovascular) risk · ladder: topical steroids + <b>calcipotriene</b> first, then narrowband <b>UVB</b> (ultraviolet B), then systemics · abrupt steroid withdrawal can trigger a pustular flare · for tinea, order a <b>KOH prep</b> (potassium hydroxide preparation), never a steroid (tinea incognito).",
+   "note": ".pearls: remove em dashes, arrow chain and trap framing; expand acronyms",
+   "reworded_bold": [
+    "screen for latent TB first",
+    "DIP joints, \"pencil-in-cup,\" dactylitis"
+   ],
    "claims": [
     {
-     "claim": "Psoriasis pathology: parakeratosis, acanthosis, Munro microabscesses, thinned suprapapillary plates.",
-     "to": "Pathology: parakeratosis, acanthosis, Munro microabscesses, thinned suprapapillary plates (→ Auspitz)"
-    },
-    {
-     "claim": "Thinned suprapapillary plates produce the Auspitz sign.",
-     "to": "Pathology: parakeratosis, acanthosis, Munro microabscesses, thinned suprapapillary plates (→ Auspitz)"
-    },
-    {
      "claim": "Psoriasis immunology is the Th17 / IL-17 / IL-23 axis.",
-     "to": "immunology: Th17 / IL-17 / IL-23 axis (T helper 17 cells, interleukin 17, interleukin 23); secukinumab (IL-17), ustekinumab (IL-12/23), TNF-α (tumor necrosis factor alpha) inhibitors (screen for latent TB first)"
+     "to": "immunology: Th17 / IL-17 / IL-23 (T helper 17 cell / interleukin 17 / interleukin 23) axis"
     },
     {
      "claim": "Secukinumab targets IL-17.",
-     "to": "immunology: Th17 / IL-17 / IL-23 axis (T helper 17 cells, interleukin 17, interleukin 23); secukinumab (IL-17), ustekinumab (IL-12/23), TNF-α (tumor necrosis factor alpha) inhibitors (screen for latent TB first)"
+     "to": "secukinumab (IL-17)"
     },
     {
      "claim": "Ustekinumab targets IL-12/23.",
-     "to": "immunology: Th17 / IL-17 / IL-23 axis (T helper 17 cells, interleukin 17, interleukin 23); secukinumab (IL-17), ustekinumab (IL-12/23), TNF-α (tumor necrosis factor alpha) inhibitors (screen for latent TB first)"
+     "to": "ustekinumab (IL-12/23)"
     },
     {
-     "claim": "TNF-α inhibitors are used; screen for latent TB first.",
-     "to": "immunology: Th17 / IL-17 / IL-23 axis (T helper 17 cells, interleukin 17, interleukin 23); secukinumab (IL-17), ustekinumab (IL-12/23), TNF-α (tumor necrosis factor alpha) inhibitors (screen for latent TB first)"
+     "claim": "TNF-alpha inhibitors are used, and latent TB must be screened for first.",
+     "to": "TNF-α (tumor necrosis factor alpha) inhibitors after screening for latent TB (tuberculosis)"
     },
     {
-     "claim": "Psoriatic arthritis involves DIP joints, pencil-in-cup, dactylitis.",
-     "to": "associations: psoriatic arthritis (DIP joints, \"pencil-in-cup,\" dactylitis), metabolic syndrome and cardiovascular risk"
+     "claim": "Psoriatic arthritis involves DIP joints, pencil-in-cup deformity, and dactylitis.",
+     "to": "psoriatic arthritis with DIP (distal interphalangeal) joints, \"pencil-in-cup,\" dactylitis"
     },
     {
      "claim": "Psoriasis is associated with metabolic syndrome and CV risk.",
-     "to": "associations: psoriatic arthritis (DIP joints, \"pencil-in-cup,\" dactylitis), metabolic syndrome and cardiovascular risk"
+     "to": "metabolic syndrome and CV (cardiovascular) risk"
     },
     {
-     "claim": "Treatment ladder: topical steroids + calcipotriene, then narrowband UVB, then systemics.",
-     "to": "ladder: topical steroids + calcipotriene, then narrowband UVB (ultraviolet B), then systemics"
+     "claim": "The treatment ladder is topical steroids plus calcipotriene, then narrowband UVB, then systemics.",
+     "to": "ladder: topical steroids + calcipotriene first, then narrowband UVB (ultraviolet B), then systemics"
     },
     {
-     "claim": "Abrupt steroid withdrawal can trigger a pustular flare (a trap).",
+     "claim": "Abrupt steroid withdrawal can trigger a pustular flare, which is a trap.",
      "to": "abrupt steroid withdrawal can trigger a pustular flare"
     },
     {
-     "claim": "If it were tinea, the answer is a KOH prep.",
-     "to": "if the lesion is tinea, get a KOH prep (potassium hydroxide preparation) and never give a steroid (tinea incognito)."
-    },
-    {
-     "claim": "Never give a steroid for tinea (tinea incognito).",
-     "to": "if the lesion is tinea, get a KOH prep (potassium hydroxide preparation) and never give a steroid (tinea incognito)."
+     "claim": "If it were tinea, the answer is a KOH prep, never a steroid, because of tinea incognito.",
+     "to": "for tinea, order a KOH prep (potassium hydroxide preparation), never a steroid (tinea incognito)."
     }
    ],
    "new_claims": [
     {
-     "claim": "Psoriasis pathology: parakeratosis, acanthosis, Munro microabscesses, thinned suprapapillary plates.",
-     "from": "Psoriasis pathology: parakeratosis, acanthosis, Munro microabscesses, thinned suprapapillary plates."
-    },
-    {
-     "claim": "Thinned suprapapillary plates produce the Auspitz sign.",
-     "from": "Thinned suprapapillary plates produce the Auspitz sign."
-    },
-    {
-     "claim": "Psoriasis immunology is the Th17 / IL-17 / IL-23 axis.",
+     "claim": "immunology: Th17 / IL-17 / IL-23 (T helper 17 cell / interleukin 17 / interleukin 23) axis",
      "from": "Psoriasis immunology is the Th17 / IL-17 / IL-23 axis."
     },
     {
-     "claim": "Th17 stands for T helper 17 cells; IL stands for interleukin.",
+     "claim": "Th17 stands for T helper 17 cells, IL-17 for interleukin 17 and IL-23 for interleukin 23.",
      "from": "expansion"
     },
     {
-     "claim": "Secukinumab targets IL-17.",
-     "from": "Secukinumab targets IL-17."
-    },
-    {
-     "claim": "Ustekinumab targets IL-12/23.",
-     "from": "Ustekinumab targets IL-12/23."
-    },
-    {
-     "claim": "TNF-α stands for tumor necrosis factor alpha.",
+     "claim": "TNF stands for tumor necrosis factor.",
      "from": "expansion"
     },
     {
-     "claim": "TNF-α inhibitors are used; screen for latent TB first.",
-     "from": "TNF-α inhibitors are used; screen for latent TB first."
+     "claim": "CV stands for cardiovascular.",
+     "from": "expansion"
     },
     {
-     "claim": "Psoriatic arthritis involves DIP joints, pencil-in-cup, dactylitis.",
-     "from": "Psoriatic arthritis involves DIP joints, pencil-in-cup, dactylitis."
+     "claim": "TB stands for tuberculosis.",
+     "from": "expansion"
     },
     {
-     "claim": "Psoriasis is associated with metabolic syndrome and cardiovascular risk.",
-     "from": "Psoriasis is associated with metabolic syndrome and CV risk."
-    },
-    {
-     "claim": "Treatment ladder: topical steroids + calcipotriene, then narrowband UVB, then systemics.",
-     "from": "Treatment ladder: topical steroids + calcipotriene, then narrowband UVB, then systemics."
+     "claim": "DIP stands for distal interphalangeal.",
+     "from": "expansion"
     },
     {
      "claim": "UVB stands for ultraviolet B.",
      "from": "expansion"
     },
     {
-     "claim": "Abrupt steroid withdrawal can trigger a pustular flare.",
-     "from": "Abrupt steroid withdrawal can trigger a pustular flare (a trap)."
-    },
-    {
-     "claim": "If the lesion is tinea, get a KOH prep.",
-     "from": "If it were tinea, the answer is a KOH prep."
-    },
-    {
-     "claim": "KOH stands for potassium hydroxide.",
+     "claim": "KOH prep stands for potassium hydroxide preparation.",
      "from": "expansion"
     },
     {
-     "claim": "Never give a steroid for tinea (tinea incognito).",
-     "from": "Never give a steroid for tinea (tinea incognito)."
+     "claim": "secukinumab (IL-17)",
+     "from": "Secukinumab targets IL-17."
+    },
+    {
+     "claim": "ustekinumab (IL-12/23)",
+     "from": "Ustekinumab targets IL-12/23."
+    },
+    {
+     "claim": "TNF-α (tumor necrosis factor alpha) inhibitors after screening for latent TB (tuberculosis)",
+     "from": "TNF-alpha inhibitors are used, and latent TB must be screened for first."
+    },
+    {
+     "claim": "psoriatic arthritis with DIP (distal interphalangeal) joints, \"pencil-in-cup,\" dactylitis",
+     "from": "Psoriatic arthritis involves DIP joints, pencil-in-cup deformity, and dactylitis."
+    },
+    {
+     "claim": "metabolic syndrome and CV (cardiovascular) risk",
+     "from": "Psoriasis is associated with metabolic syndrome and CV risk."
+    },
+    {
+     "claim": "ladder: topical steroids + calcipotriene first, then narrowband UVB (ultraviolet B), then systemics",
+     "from": "The treatment ladder is topical steroids plus calcipotriene, then narrowband UVB, then systemics."
+    },
+    {
+     "claim": "Abrupt steroid withdrawal can trigger a pustular flare.",
+     "from": "Abrupt steroid withdrawal can trigger a pustular flare, which is a trap."
+    },
+    {
+     "claim": "for tinea, order a KOH prep (potassium hydroxide preparation), never a steroid (tinea incognito).",
+     "from": "If it were tinea, the answer is a KOH prep, never a steroid, because of tinea incognito."
     }
    ]
   },
@@ -216,41 +208,33 @@
    "op": "replace",
    "brief": "psoriasis",
    "find": "Exposures <b>suggest</b>; findings <b>decide</b>. When history and exam point in different directions, the exam wins — occupational details are written to test whether a story will overrule a lesion you can see.",
-   "with": "Exposures suggest a diagnosis, but exam findings decide it. When the history and the exam point in different directions, trust the exam.",
-   "note": ".rule: aphorism and em dash removed; emphasis bold removed",
+   "with": "Exposures can suggest a diagnosis, but examination findings determine it. When the history and the exam conflict, rely on the exam.",
+   "note": ".rule: remove slogan, emphasis bold, question framing, em dash",
    "reworded_bold": [
     "suggest",
     "decide"
    ],
    "claims": [
     {
-     "claim": "Exposures suggest a diagnosis.",
-     "to": "Exposures suggest a diagnosis, but exam findings decide it."
-    },
-    {
-     "claim": "Findings decide the diagnosis.",
-     "to": "Exposures suggest a diagnosis, but exam findings decide it."
+     "claim": "Exposures suggest; findings decide.",
+     "to": "Exposures can suggest a diagnosis, but examination findings determine it."
     },
     {
      "claim": "When history and exam point in different directions, the exam wins.",
-     "to": "When the history and the exam point in different directions, trust the exam."
+     "to": "When the history and the exam conflict, rely on the exam."
     },
     {
-     "claim": "Occupational details are written to test whether a story will overrule a visible lesion.",
+     "claim": "Occupational details are written to check whether a story will overrule a visible lesion.",
      "dropped": "framing about how the question is written"
     }
    ],
    "new_claims": [
     {
-     "claim": "Exposures suggest a diagnosis.",
-     "from": "Exposures suggest a diagnosis."
+     "claim": "Exposures can suggest a diagnosis, but examination findings determine it.",
+     "from": "Exposures suggest; findings decide."
     },
     {
-     "claim": "Exam findings decide the diagnosis.",
-     "from": "Findings decide the diagnosis."
-    },
-    {
-     "claim": "When history and exam conflict, trust the exam.",
+     "claim": "When the history and the exam conflict, rely on the exam.",
      "from": "When history and exam point in different directions, the exam wins."
     }
    ]
@@ -259,18 +243,18 @@
    "op": "replace",
    "brief": "cellulitis",
    "find": "Border sharpness is a depth readout",
-   "with": "Border sharpness indicates the depth of infection",
-   "note": "sub: plain statement",
+   "with": "Border sharpness reflects the depth of infection",
+   "note": "subtitle slogan",
    "claims": [
     {
-     "claim": "Border sharpness is a readout of depth.",
-     "to": "Border sharpness indicates the depth of infection"
+     "claim": "Border sharpness reflects depth.",
+     "to": "Border sharpness reflects the depth of infection"
     }
    ],
    "new_claims": [
     {
-     "claim": "Border sharpness indicates the depth of infection.",
-     "from": "Border sharpness is a readout of depth."
+     "claim": "Border sharpness reflects the depth of infection.",
+     "from": "Border sharpness reflects depth."
     }
    ]
   },
@@ -278,52 +262,52 @@
    "op": "replace",
    "brief": "cellulitis",
    "find": "<p>One adjective decides it: <b>flat border = cellulitis; raised, sharply demarcated border = erysipelas</b>. And the buzzword has a mechanism — <b>superficial infection is contained by tissue planes</b> and stops at a sharp edge, while <b>deeper infection diffuses through fat</b> and fades into an indistinct one.</p>",
-   "with": "<p>A <b>flat border</b> means cellulitis; a <b>raised, sharply demarcated border</b> means erysipelas. <b>Superficial infection is contained by tissue planes</b> and stops at a sharp edge. <b>Deeper infection diffuses through fat</b> and fades into an indistinct edge.</p>",
-   "note": ".dp: slogan opener and em dash removed; bold equation split into bold terms",
+   "with": "<p>A <b>flat border</b> indicates cellulitis; a <b>raised, sharply demarcated border</b> indicates erysipelas. Superficial infection stops at a sharp edge because <b>superficial infection is contained by tissue planes</b>. Deeper infection fades into an indistinct edge because <b>deeper infection diffuses through fat</b>.</p>",
+   "note": ".dp: remove framing, slogan equation, em dash",
    "reworded_bold": [
     "flat border = cellulitis; raised, sharply demarcated border = erysipelas"
    ],
    "claims": [
     {
      "claim": "One adjective decides it.",
-     "dropped": "framing about the answer; the border findings are stated next"
+     "dropped": "framing; the border descriptions are stated"
     },
     {
      "claim": "A flat border indicates cellulitis.",
-     "to": "A flat border means cellulitis; a raised, sharply demarcated border means erysipelas."
+     "to": "A flat border indicates cellulitis; a raised, sharply demarcated border indicates erysipelas."
     },
     {
      "claim": "A raised, sharply demarcated border indicates erysipelas.",
-     "to": "A flat border means cellulitis; a raised, sharply demarcated border means erysipelas."
+     "to": "A flat border indicates cellulitis; a raised, sharply demarcated border indicates erysipelas."
     },
     {
      "claim": "The buzzword has a mechanism.",
-     "dropped": "framing; the mechanism is stated in the next two sentences"
+     "dropped": "framing; the mechanism is stated next"
     },
     {
      "claim": "Superficial infection is contained by tissue planes and stops at a sharp edge.",
-     "to": "Superficial infection is contained by tissue planes and stops at a sharp edge."
+     "to": "Superficial infection stops at a sharp edge because superficial infection is contained by tissue planes."
     },
     {
      "claim": "Deeper infection diffuses through fat and fades into an indistinct edge.",
-     "to": "Deeper infection diffuses through fat and fades into an indistinct edge."
+     "to": "Deeper infection fades into an indistinct edge because deeper infection diffuses through fat."
     }
    ],
    "new_claims": [
     {
-     "claim": "A flat border means cellulitis.",
+     "claim": "A flat border indicates cellulitis.",
      "from": "A flat border indicates cellulitis."
     },
     {
-     "claim": "A raised, sharply demarcated border means erysipelas.",
+     "claim": "A raised, sharply demarcated border indicates erysipelas.",
      "from": "A raised, sharply demarcated border indicates erysipelas."
     },
     {
-     "claim": "Superficial infection is contained by tissue planes and stops at a sharp edge.",
+     "claim": "Superficial infection stops at a sharp edge because superficial infection is contained by tissue planes.",
      "from": "Superficial infection is contained by tissue planes and stops at a sharp edge."
     },
     {
-     "claim": "Deeper infection diffuses through fat and fades into an indistinct edge.",
+     "claim": "Deeper infection fades into an indistinct edge because deeper infection diffuses through fat.",
      "from": "Deeper infection diffuses through fat and fades into an indistinct edge."
     }
    ]
@@ -332,82 +316,82 @@
    "op": "replace",
    "brief": "cellulitis",
    "find": "<b>Nonpurulent</b> → cover <b>streptococci</b> → cephalexin or dicloxacillin (penicillin for erysipelas). <b>Purulent</b> → cover <b>MRSA</b> → <b>incision and drainage</b> plus TMP-SMX, doxycycline, or clindamycin. <b>Necrotizing</b> → <b>emergent surgical exploration</b>, which is both diagnostic and therapeutic — never wait for imaging.",
-   "with": "<b>Nonpurulent</b> infection needs coverage of <b>streptococci</b>: cephalexin or dicloxacillin (penicillin for erysipelas). <b>Purulent</b> infection needs coverage of <b>MRSA</b> (methicillin-resistant Staphylococcus aureus): <b>incision and drainage</b> plus <b>TMP-SMX</b> (trimethoprim-sulfamethoxazole), doxycycline, or clindamycin. <b>Necrotizing</b> infection needs <b>emergent surgical exploration</b>, which is both diagnostic and therapeutic. Never wait for imaging.",
-   "note": ".pearls: arrow chains split, em dash removed, acronyms expanded",
+   "with": "<b>Nonpurulent</b> infection: cover <b>streptococci</b> with cephalexin or dicloxacillin (penicillin for erysipelas). <b>Purulent</b> infection: <b>incision and drainage</b>, plus coverage of <b>MRSA</b> (methicillin-resistant Staphylococcus aureus) with <b>TMP-SMX</b> (trimethoprim-sulfamethoxazole), doxycycline, or clindamycin. <b>Necrotizing</b> infection: <b>emergent surgical exploration</b>, which is both diagnostic and therapeutic. Never wait for imaging.",
+   "note": ".pearls: split arrow chains, remove em dash, expand acronyms",
    "claims": [
     {
-     "claim": "Nonpurulent infection: cover streptococci.",
-     "to": "Nonpurulent infection needs coverage of streptococci: cephalexin or dicloxacillin (penicillin for erysipelas)."
+     "claim": "Nonpurulent infection: cover streptococci with cephalexin or dicloxacillin.",
+     "to": "Nonpurulent infection: cover streptococci with cephalexin or dicloxacillin (penicillin for erysipelas)."
     },
     {
-     "claim": "Nonpurulent: cephalexin or dicloxacillin (penicillin for erysipelas).",
-     "to": "Nonpurulent infection needs coverage of streptococci: cephalexin or dicloxacillin (penicillin for erysipelas)."
+     "claim": "Erysipelas is treated with penicillin.",
+     "to": "Nonpurulent infection: cover streptococci with cephalexin or dicloxacillin (penicillin for erysipelas)."
     },
     {
      "claim": "Purulent infection: cover MRSA.",
-     "to": "Purulent infection needs coverage of MRSA (methicillin-resistant Staphylococcus aureus): incision and drainage plus TMP-SMX (trimethoprim-sulfamethoxazole), doxycycline, or clindamycin."
+     "to": "Purulent infection: incision and drainage, plus coverage of MRSA (methicillin-resistant Staphylococcus aureus) with TMP-SMX (trimethoprim-sulfamethoxazole), doxycycline, or clindamycin."
     },
     {
-     "claim": "Purulent: incision and drainage plus TMP-SMX, doxycycline, or clindamycin.",
-     "to": "Purulent infection needs coverage of MRSA (methicillin-resistant Staphylococcus aureus): incision and drainage plus TMP-SMX (trimethoprim-sulfamethoxazole), doxycycline, or clindamycin."
+     "claim": "Purulent infection: incision and drainage plus TMP-SMX, doxycycline, or clindamycin.",
+     "to": "Purulent infection: incision and drainage, plus coverage of MRSA (methicillin-resistant Staphylococcus aureus) with TMP-SMX (trimethoprim-sulfamethoxazole), doxycycline, or clindamycin."
     },
     {
      "claim": "Necrotizing infection: emergent surgical exploration.",
-     "to": "Necrotizing infection needs emergent surgical exploration, which is both diagnostic and therapeutic."
+     "to": "Necrotizing infection: emergent surgical exploration, which is both diagnostic and therapeutic."
     },
     {
      "claim": "Surgical exploration is both diagnostic and therapeutic.",
-     "to": "Necrotizing infection needs emergent surgical exploration, which is both diagnostic and therapeutic."
+     "to": "Necrotizing infection: emergent surgical exploration, which is both diagnostic and therapeutic."
     },
     {
-     "claim": "Never wait for imaging.",
+     "claim": "Never wait for imaging in necrotizing infection.",
      "to": "Never wait for imaging."
     }
    ],
    "new_claims": [
     {
-     "claim": "Nonpurulent infection: cover streptococci.",
-     "from": "Nonpurulent infection: cover streptococci."
+     "claim": "Nonpurulent infection: cover streptococci with cephalexin or dicloxacillin.",
+     "from": "Nonpurulent infection: cover streptococci with cephalexin or dicloxacillin."
     },
     {
-     "claim": "Nonpurulent: cephalexin or dicloxacillin (penicillin for erysipelas).",
-     "from": "Nonpurulent: cephalexin or dicloxacillin (penicillin for erysipelas)."
+     "claim": "Nonpurulent infection: cover streptococci with cephalexin or dicloxacillin (penicillin for erysipelas).",
+     "from": "Erysipelas is treated with penicillin."
     },
     {
-     "claim": "Purulent infection: cover MRSA.",
+     "claim": "Purulent infection: incision and drainage, plus coverage of MRSA (methicillin-resistant Staphylococcus aureus) with TMP-SMX (trimethoprim-sulfamethoxazole), doxycycline, or clindamycin.",
      "from": "Purulent infection: cover MRSA."
     },
     {
-     "claim": "MRSA stands for methicillin-resistant Staphylococcus aureus.",
-     "from": "expansion"
-    },
-    {
-     "claim": "Purulent: incision and drainage plus TMP-SMX, doxycycline, or clindamycin.",
-     "from": "Purulent: incision and drainage plus TMP-SMX, doxycycline, or clindamycin."
-    },
-    {
-     "claim": "TMP-SMX stands for trimethoprim-sulfamethoxazole.",
-     "from": "expansion"
+     "claim": "Purulent infection: incision and drainage, plus coverage of MRSA (methicillin-resistant Staphylococcus aureus) with TMP-SMX (trimethoprim-sulfamethoxazole), doxycycline, or clindamycin.",
+     "from": "Purulent infection: incision and drainage plus TMP-SMX, doxycycline, or clindamycin."
     },
     {
      "claim": "Necrotizing infection: emergent surgical exploration.",
      "from": "Necrotizing infection: emergent surgical exploration."
     },
     {
-     "claim": "Surgical exploration is both diagnostic and therapeutic.",
+     "claim": "Necrotizing infection: emergent surgical exploration, which is both diagnostic and therapeutic.",
      "from": "Surgical exploration is both diagnostic and therapeutic."
     },
     {
      "claim": "Never wait for imaging.",
-     "from": "Never wait for imaging."
+     "from": "Never wait for imaging in necrotizing infection."
+    },
+    {
+     "claim": "MRSA stands for methicillin-resistant Staphylococcus aureus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "TMP-SMX stands for trimethoprim-sulfamethoxazole.",
+     "from": "expansion"
     }
    ]
   },
   {
    "op": "replace",
    "brief": "cellulitis",
-   "find": "Bilateral lower-extremity erythema is <b>stasis dermatitis until proven otherwise</b> — treat with compression, not antibiotics.",
-   "with": "Bilateral lower-extremity erythema is <b>stasis dermatitis until proven otherwise</b>; treat with compression, not antibiotics.",
+   "find": "<b>stasis dermatitis until proven otherwise</b> — treat with compression, not antibiotics.",
+   "with": "<b>stasis dermatitis until proven otherwise</b>; treat with compression, not antibiotics.",
    "note": ".danger: em dash to semicolon",
    "claims": [
     {
@@ -416,16 +400,16 @@
     },
     {
      "claim": "Treat stasis dermatitis with compression, not antibiotics.",
-     "to": "Bilateral lower-extremity erythema is stasis dermatitis until proven otherwise; treat with compression, not antibiotics."
+     "to": "treat with compression, not antibiotics."
     }
    ],
    "new_claims": [
     {
-     "claim": "Bilateral lower-extremity erythema is stasis dermatitis until proven otherwise.",
+     "claim": "Bilateral lower-extremity erythema is stasis dermatitis until proven otherwise; treat with compression, not antibiotics.",
      "from": "Bilateral lower-extremity erythema is stasis dermatitis until proven otherwise."
     },
     {
-     "claim": "Treat stasis dermatitis with compression, not antibiotics.",
+     "claim": "treat with compression, not antibiotics.",
      "from": "Treat stasis dermatitis with compression, not antibiotics."
     }
    ]
@@ -434,26 +418,30 @@
    "op": "replace",
    "brief": "cellulitis",
    "find": "Buzzwords that describe <b>morphology</b> usually encode an underlying anatomic fact. \"Sharply demarcated\" isn't arbitrary — it's telling you how deep the process is.",
-   "with": "Buzzwords that describe <b>morphology</b> usually reflect an underlying anatomic fact. A sharply demarcated border shows how deep the process is.",
-   "note": ".rule: personification and em dash removed",
+   "with": "Terms that describe <b>morphology</b> usually reflect an underlying anatomic fact. A \"sharply demarcated\" border shows how deep the process is.",
+   "note": ".rule: remove personification and em dash",
    "claims": [
     {
      "claim": "Buzzwords that describe morphology usually encode an underlying anatomic fact.",
-     "to": "Buzzwords that describe morphology usually reflect an underlying anatomic fact."
+     "to": "Terms that describe morphology usually reflect an underlying anatomic fact."
     },
     {
-     "claim": "Sharply demarcated is not arbitrary; it tells how deep the process is.",
-     "to": "A sharply demarcated border shows how deep the process is."
+     "claim": "Sharply demarcated isn't arbitrary.",
+     "dropped": "rhetorical emphasis; the meaning is stated next"
+    },
+    {
+     "claim": "Sharply demarcated indicates how deep the process is.",
+     "to": "A \"sharply demarcated\" border shows how deep the process is."
     }
    ],
    "new_claims": [
     {
-     "claim": "Buzzwords that describe morphology usually reflect an underlying anatomic fact.",
+     "claim": "Terms that describe morphology usually reflect an underlying anatomic fact.",
      "from": "Buzzwords that describe morphology usually encode an underlying anatomic fact."
     },
     {
-     "claim": "A sharply demarcated border shows how deep the process is.",
-     "from": "Sharply demarcated is not arbitrary; it tells how deep the process is."
+     "claim": "A \"sharply demarcated\" border shows how deep the process is.",
+     "from": "Sharply demarcated indicates how deep the process is."
     }
    ]
   },
@@ -462,7 +450,7 @@
    "brief": "footulcer",
    "find": "Findings beat the risk profile",
    "with": "Exam findings outweigh the risk profile",
-   "note": "sub: slogan to plain statement",
+   "note": "subtitle slogan",
    "claims": [
     {
      "claim": "Findings outweigh the risk profile.",
@@ -479,52 +467,36 @@
   {
    "op": "replace",
    "brief": "footulcer",
-   "find": "<p>Three findings each independently exclude arterial disease: <b>painless</b>, <b>plantar over a bony prominence</b>, and <b>warm</b> feet. \"Warm and <b>dry</b>\" does double duty — warm means perfused, dry means <b>autonomic denervation</b>. That's a neuropathic ulcer, and the most common cause is diabetes. Note the verb: <b>\"diagnose the underlying cause\"</b> — a culture characterizes the wound, an ABI characterizes perfusion, only the <b>A1c</b> names the disease.</p>",
-   "with": "<p>Three findings each independently exclude arterial disease: a <b>painless</b> ulcer, a site <b>plantar over a bony prominence</b>, and <b>warm</b> feet. Warm means perfused, and <b>dry</b> means <b>autonomic denervation</b>. These findings indicate a neuropathic ulcer, and the most common cause is diabetes. A culture characterizes the wound, and an <b>ABI</b> (ankle-brachial index) characterizes perfusion. Only the <b>A1c</b> identifies the underlying disease.</p>",
-   "note": ".dp: 'double duty' and 'note the verb' framing and em dashes removed",
+   "find": "\"Warm and <b>dry</b>\" does double duty — warm means perfused, dry means <b>autonomic denervation</b>. That's a neuropathic ulcer, and the most common cause is diabetes. Note the verb: <b>\"diagnose the underlying cause\"</b> — a culture characterizes the wound, an ABI characterizes perfusion, only the <b>A1c</b> names the disease.</p>",
+   "with": "Warm feet are perfused, and <b>dry</b> feet indicate <b>autonomic denervation</b>. These findings indicate a neuropathic ulcer, and the most common cause is diabetes. A culture characterizes the wound, and an <b>ABI</b> (ankle-brachial index) characterizes perfusion. Only the <b>A1c</b> (hemoglobin A1c) identifies the underlying disease.</p>",
+   "note": ".dp: remove framing about the verb, em dashes; expand acronyms",
    "reworded_bold": [
     "\"diagnose the underlying cause\""
    ],
    "claims": [
     {
-     "claim": "Three findings each independently exclude arterial disease.",
-     "to": "Three findings each independently exclude arterial disease: a painless ulcer, a site plantar over a bony prominence, and warm feet."
-    },
-    {
-     "claim": "A painless ulcer excludes arterial disease.",
-     "to": "Three findings each independently exclude arterial disease: a painless ulcer, a site plantar over a bony prominence, and warm feet."
-    },
-    {
-     "claim": "A plantar ulcer over a bony prominence excludes arterial disease.",
-     "to": "Three findings each independently exclude arterial disease: a painless ulcer, a site plantar over a bony prominence, and warm feet."
-    },
-    {
-     "claim": "Warm feet exclude arterial disease.",
-     "to": "Three findings each independently exclude arterial disease: a painless ulcer, a site plantar over a bony prominence, and warm feet."
-    },
-    {
-     "claim": "Warm and dry does double duty.",
-     "dropped": "rhetorical framing; both meanings are stated in the next sentence"
-    },
-    {
      "claim": "Warm means perfused.",
-     "to": "Warm means perfused, and dry means autonomic denervation."
+     "to": "Warm feet are perfused, and dry feet indicate autonomic denervation."
     },
     {
      "claim": "Dry means autonomic denervation.",
-     "to": "Warm means perfused, and dry means autonomic denervation."
+     "to": "Warm feet are perfused, and dry feet indicate autonomic denervation."
     },
     {
-     "claim": "These findings are a neuropathic ulcer.",
+     "claim": "Warm and dry does double duty.",
+     "dropped": "rhetorical framing; both meanings are stated"
+    },
+    {
+     "claim": "This is a neuropathic ulcer.",
      "to": "These findings indicate a neuropathic ulcer, and the most common cause is diabetes."
     },
     {
-     "claim": "The most common cause of a neuropathic ulcer is diabetes.",
+     "claim": "The most common cause of neuropathic ulcer is diabetes.",
      "to": "These findings indicate a neuropathic ulcer, and the most common cause is diabetes."
     },
     {
-     "claim": "The question verb is 'diagnose the underlying cause'.",
-     "dropped": "framing about the question wording"
+     "claim": "The question asks to diagnose the underlying cause.",
+     "dropped": "framing about the question wording; the next sentences state which test identifies the cause"
     },
     {
      "claim": "A culture characterizes the wound.",
@@ -536,57 +508,94 @@
     },
     {
      "claim": "Only the A1c names the disease.",
-     "to": "Only the A1c identifies the underlying disease."
+     "to": "Only the A1c (hemoglobin A1c) identifies the underlying disease."
     }
    ],
    "new_claims": [
     {
-     "claim": "Three findings each independently exclude arterial disease.",
-     "from": "Three findings each independently exclude arterial disease."
-    },
-    {
-     "claim": "A painless ulcer excludes arterial disease.",
-     "from": "A painless ulcer excludes arterial disease."
-    },
-    {
-     "claim": "A plantar ulcer over a bony prominence excludes arterial disease.",
-     "from": "A plantar ulcer over a bony prominence excludes arterial disease."
-    },
-    {
-     "claim": "Warm feet exclude arterial disease.",
-     "from": "Warm feet exclude arterial disease."
-    },
-    {
-     "claim": "Warm means perfused.",
+     "claim": "Warm feet are perfused.",
      "from": "Warm means perfused."
     },
     {
-     "claim": "Dry means autonomic denervation.",
+     "claim": "Dry feet indicate autonomic denervation.",
      "from": "Dry means autonomic denervation."
     },
     {
-     "claim": "These findings indicate a neuropathic ulcer.",
-     "from": "These findings are a neuropathic ulcer."
+     "claim": "These findings indicate a neuropathic ulcer, and the most common cause is diabetes.",
+     "from": "This is a neuropathic ulcer."
     },
     {
-     "claim": "The most common cause of a neuropathic ulcer is diabetes.",
-     "from": "The most common cause of a neuropathic ulcer is diabetes."
+     "claim": "These findings indicate a neuropathic ulcer, and the most common cause is diabetes.",
+     "from": "The most common cause of neuropathic ulcer is diabetes."
     },
     {
      "claim": "A culture characterizes the wound.",
      "from": "A culture characterizes the wound."
     },
     {
-     "claim": "An ABI characterizes perfusion.",
+     "claim": "A culture characterizes the wound, and an ABI (ankle-brachial index) characterizes perfusion.",
      "from": "An ABI characterizes perfusion."
+    },
+    {
+     "claim": "Only the A1c (hemoglobin A1c) identifies the underlying disease.",
+     "from": "Only the A1c names the disease."
     },
     {
      "claim": "ABI stands for ankle-brachial index.",
      "from": "expansion"
     },
     {
-     "claim": "Only the A1c identifies the underlying disease.",
-     "from": "Only the A1c names the disease."
+     "claim": "A1c stands for hemoglobin A1c.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "footulcer",
+   "find": "calcified (<b>diabetes, ESRD</b>) →",
+   "with": "calcified (<b>diabetes</b>, <b>ESRD</b> (end-stage renal disease)) →",
+   "note": ".pearls: expand ESRD",
+   "reworded_bold": [
+    "diabetes, ESRD"
+   ],
+   "claims": [
+    {
+     "claim": "Values over 1.4 mean noncompressible, calcified vessels in diabetes or ESRD.",
+     "to": "calcified (diabetes, ESRD (end-stage renal disease)) →"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "calcified (diabetes, ESRD (end-stage renal disease)) →",
+     "from": "Values over 1.4 mean noncompressible, calcified vessels in diabetes or ESRD."
+    },
+    {
+     "claim": "ESRD stands for end-stage renal disease.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "footulcer",
+   "find": "· check the ABI anyway, since",
+   "with": "· check the <b>ABI</b> (ankle-brachial index) anyway, since",
+   "note": ".pearls: expand ABI at first use",
+   "claims": [
+    {
+     "claim": "Check the ABI anyway.",
+     "to": "check the ABI (ankle-brachial index) anyway"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "check the ABI (ankle-brachial index) anyway",
+     "from": "Check the ABI anyway."
+    },
+    {
+     "claim": "ABI stands for ankle-brachial index.",
+     "from": "expansion"
     }
    ]
   },
@@ -594,25 +603,25 @@
    "op": "replace",
    "brief": "footulcer",
    "find": "Risk factors set a <b>prior</b>; physical findings set the <b>posterior</b>. When the exam contradicts the risk profile on three separate axes, the exam wins.",
-   "with": "Risk factors set the <b>prior</b> probability, and physical findings set the <b>posterior</b> probability. When the exam contradicts the risk profile on three separate axes, trust the exam.",
-   "note": ".rule: rhythmic contrast made plain",
+   "with": "Risk factors set the <b>prior</b> probability; physical findings set the <b>posterior</b> probability. When the exam contradicts the risk profile on three separate axes, rely on the exam.",
+   "note": ".rule: remove personification",
    "claims": [
     {
      "claim": "Risk factors set a prior; physical findings set the posterior.",
-     "to": "Risk factors set the prior probability, and physical findings set the posterior probability."
+     "to": "Risk factors set the prior probability; physical findings set the posterior probability."
     },
     {
      "claim": "When the exam contradicts the risk profile on three separate axes, the exam wins.",
-     "to": "When the exam contradicts the risk profile on three separate axes, trust the exam."
+     "to": "When the exam contradicts the risk profile on three separate axes, rely on the exam."
     }
    ],
    "new_claims": [
     {
-     "claim": "Risk factors set the prior probability, and physical findings set the posterior probability.",
+     "claim": "Risk factors set the prior probability; physical findings set the posterior probability.",
      "from": "Risk factors set a prior; physical findings set the posterior."
     },
     {
-     "claim": "When the exam contradicts the risk profile on three separate axes, trust the exam.",
+     "claim": "When the exam contradicts the risk profile on three separate axes, rely on the exam.",
      "from": "When the exam contradicts the risk profile on three separate axes, the exam wins."
     }
    ]
@@ -621,18 +630,18 @@
    "op": "replace",
    "brief": "eczemaherp",
    "find": "The PMH is the precondition",
-   "with": "Atopic dermatitis is the precondition for eczema herpeticum",
-   "note": "sub: name the history instead of the unexpanded PMH",
+   "with": "Atopic dermatitis as the precondition for HSV spread",
+   "note": "subtitle slogan; PMH named",
    "claims": [
     {
-     "claim": "The past medical history is the precondition.",
-     "to": "Atopic dermatitis is the precondition for eczema herpeticum"
+     "claim": "The PMH is the precondition.",
+     "to": "Atopic dermatitis as the precondition for HSV spread"
     }
    ],
    "new_claims": [
     {
-     "claim": "Atopic dermatitis is the precondition for eczema herpeticum.",
-     "from": "The past medical history is the precondition."
+     "claim": "Atopic dermatitis as the precondition for HSV spread",
+     "from": "The PMH is the precondition."
     }
    ]
   },
@@ -641,7 +650,7 @@
    "brief": "eczemaherp",
    "find": "<p><b>Atopic dermatitis + vesicles = eczema herpeticum until proven otherwise.</b> The atopic dermatitis isn't background color — it's the <b>precondition</b>. A disrupted barrier plus local immune dysfunction is what lets HSV spread across skin instead of staying a single cold sore. Treatment is <b>immediate systemic acyclovir</b>, because it can disseminate to liver and brain.</p>",
    "with": "<p><b>Atopic dermatitis with vesicles is eczema herpeticum until proven otherwise.</b> The atopic dermatitis is the <b>precondition</b>. A disrupted barrier plus local immune dysfunction lets <b>HSV</b> (herpes simplex virus) spread across the skin instead of staying a single cold sore. Treatment is <b>immediate systemic acyclovir</b>, because the infection can disseminate to the liver and brain.</p>",
-   "note": ".dp: equation sign and em dash removed; HSV expanded",
+   "note": ".dp: remove slogan equation, rhetorical contrast, em dash; expand HSV",
    "reworded_bold": [
     "Atopic dermatitis + vesicles = eczema herpeticum until proven otherwise."
    ],
@@ -651,7 +660,7 @@
      "to": "Atopic dermatitis with vesicles is eczema herpeticum until proven otherwise."
     },
     {
-     "claim": "The atopic dermatitis is the precondition, not background.",
+     "claim": "Atopic dermatitis is the precondition, not background.",
      "to": "The atopic dermatitis is the precondition."
     },
     {
@@ -669,28 +678,28 @@
    ],
    "new_claims": [
     {
-     "claim": "Atopic dermatitis plus vesicles is eczema herpeticum until proven otherwise.",
+     "claim": "Atopic dermatitis with vesicles is eczema herpeticum until proven otherwise.",
      "from": "Atopic dermatitis plus vesicles is eczema herpeticum until proven otherwise."
     },
     {
      "claim": "The atopic dermatitis is the precondition.",
-     "from": "The atopic dermatitis is the precondition, not background."
+     "from": "Atopic dermatitis is the precondition, not background."
     },
     {
-     "claim": "A disrupted barrier plus local immune dysfunction lets HSV spread across skin instead of staying a single cold sore.",
+     "claim": "A disrupted barrier plus local immune dysfunction lets HSV (herpes simplex virus) spread across the skin instead of staying a single cold sore.",
      "from": "A disrupted barrier plus local immune dysfunction lets HSV spread across skin instead of staying a single cold sore."
-    },
-    {
-     "claim": "HSV stands for herpes simplex virus.",
-     "from": "expansion"
     },
     {
      "claim": "Treatment is immediate systemic acyclovir.",
      "from": "Treatment is immediate systemic acyclovir."
     },
     {
-     "claim": "Eczema herpeticum can disseminate to liver and brain.",
+     "claim": "Treatment is immediate systemic acyclovir, because the infection can disseminate to the liver and brain.",
      "from": "Eczema herpeticum can disseminate to liver and brain."
+    },
+    {
+     "claim": "HSV stands for herpes simplex virus.",
+     "from": "expansion"
     }
    ]
   },
@@ -698,8 +707,8 @@
    "op": "replace",
    "brief": "eczemaherp",
    "find": "<span class=\"lbl\">The two assassins</span>\n<b>\"Conjunctiva and oropharynx are clear\"</b> kills the drug reaction — SJS/TEN requires <b>mucosal involvement</b> (classically ≥2 sites) plus symmetric target lesions. <b>\"Progressive worsening on TMP-SMX\"</b> kills impetigo — that drug covers staph including MRSA, and <b>failure on appropriate antibacterial therapy eliminates the bacterial hypothesis</b>, exactly as a failed antihistamine eliminates upper airway cough syndrome.",
-   "with": "<span class=\"lbl\">Findings that exclude the mimics</span>\n<b>\"Conjunctiva and oropharynx are clear\"</b> excludes the drug reaction. <b>SJS</b> (Stevens-Johnson syndrome) and <b>TEN</b> (toxic epidermal necrolysis) require <b>mucosal involvement</b> (classically ≥2 sites) plus symmetric target lesions. <b>\"Progressive worsening on TMP-SMX\"</b> excludes impetigo. <b>TMP-SMX</b> (trimethoprim-sulfamethoxazole) covers staph, including <b>MRSA</b> (methicillin-resistant Staphylococcus aureus). <b>Failure on appropriate antibacterial therapy eliminates the bacterial hypothesis</b>, just as a failed antihistamine eliminates upper airway cough syndrome.",
-   "note": ".danger: rhetorical label and 'kills' personification replaced; em dashes removed; acronyms expanded",
+   "with": "<span class=\"lbl\">Findings that exclude the mimics</span>\n<b>\"Conjunctiva and oropharynx are clear\"</b> excludes the drug reaction. <b>SJS</b> (Stevens-Johnson syndrome) and <b>TEN</b> (toxic epidermal necrolysis) require <b>mucosal involvement</b> (classically ≥2 sites) plus symmetric target lesions. <b>\"Progressive worsening on TMP-SMX\"</b> (trimethoprim-sulfamethoxazole) excludes impetigo. TMP-SMX covers staph, including <b>MRSA</b> (methicillin-resistant Staphylococcus aureus). So <b>failure on appropriate antibacterial therapy eliminates the bacterial hypothesis</b>, exactly as a failed antihistamine eliminates upper airway cough syndrome.",
+   "note": ".danger: remove personification and em dashes; reword rhetorical label; expand acronyms",
    "reworded_label": [
     "The two assassins"
    ],
@@ -709,50 +718,58 @@
      "to": "\"Conjunctiva and oropharynx are clear\" excludes the drug reaction."
     },
     {
-     "claim": "SJS/TEN requires mucosal involvement, classically at 2 or more sites.",
-     "to": "SJS (Stevens-Johnson syndrome) and TEN (toxic epidermal necrolysis) require mucosal involvement (classically ≥2 sites) plus symmetric target lesions."
-    },
-    {
-     "claim": "SJS/TEN requires symmetric target lesions.",
+     "claim": "SJS/TEN requires mucosal involvement (classically at least 2 sites) plus symmetric target lesions.",
      "to": "SJS (Stevens-Johnson syndrome) and TEN (toxic epidermal necrolysis) require mucosal involvement (classically ≥2 sites) plus symmetric target lesions."
     },
     {
      "claim": "Progressive worsening on TMP-SMX excludes impetigo.",
-     "to": "\"Progressive worsening on TMP-SMX\" excludes impetigo."
+     "to": "\"Progressive worsening on TMP-SMX\" (trimethoprim-sulfamethoxazole) excludes impetigo."
     },
     {
      "claim": "TMP-SMX covers staph including MRSA.",
-     "to": "TMP-SMX (trimethoprim-sulfamethoxazole) covers staph, including MRSA (methicillin-resistant Staphylococcus aureus)."
+     "to": "TMP-SMX covers staph, including MRSA (methicillin-resistant Staphylococcus aureus)."
     },
     {
      "claim": "Failure on appropriate antibacterial therapy eliminates the bacterial hypothesis.",
-     "to": "Failure on appropriate antibacterial therapy eliminates the bacterial hypothesis, just as a failed antihistamine eliminates upper airway cough syndrome."
+     "to": "So failure on appropriate antibacterial therapy eliminates the bacterial hypothesis, exactly as a failed antihistamine eliminates upper airway cough syndrome."
     },
     {
-     "claim": "A failed antihistamine eliminates upper airway cough syndrome in the same way.",
-     "to": "Failure on appropriate antibacterial therapy eliminates the bacterial hypothesis, just as a failed antihistamine eliminates upper airway cough syndrome."
+     "claim": "This is exactly as a failed antihistamine eliminates upper airway cough syndrome.",
+     "to": "So failure on appropriate antibacterial therapy eliminates the bacterial hypothesis, exactly as a failed antihistamine eliminates upper airway cough syndrome."
     }
    ],
    "new_claims": [
     {
-     "claim": "Clear conjunctiva and oropharynx exclude the drug reaction.",
+     "claim": "\"Conjunctiva and oropharynx are clear\" excludes the drug reaction.",
      "from": "Clear conjunctiva and oropharynx exclude the drug reaction."
     },
     {
-     "claim": "SJS stands for Stevens-Johnson syndrome; TEN stands for toxic epidermal necrolysis.",
+     "claim": "SJS (Stevens-Johnson syndrome) and TEN (toxic epidermal necrolysis) require mucosal involvement (classically ≥2 sites) plus symmetric target lesions.",
+     "from": "SJS/TEN requires mucosal involvement (classically at least 2 sites) plus symmetric target lesions."
+    },
+    {
+     "claim": "\"Progressive worsening on TMP-SMX\" (trimethoprim-sulfamethoxazole) excludes impetigo.",
+     "from": "Progressive worsening on TMP-SMX excludes impetigo."
+    },
+    {
+     "claim": "TMP-SMX covers staph, including MRSA (methicillin-resistant Staphylococcus aureus).",
+     "from": "TMP-SMX covers staph including MRSA."
+    },
+    {
+     "claim": "Failure on appropriate antibacterial therapy eliminates the bacterial hypothesis.",
+     "from": "Failure on appropriate antibacterial therapy eliminates the bacterial hypothesis."
+    },
+    {
+     "claim": "So failure on appropriate antibacterial therapy eliminates the bacterial hypothesis, exactly as a failed antihistamine eliminates upper airway cough syndrome.",
+     "from": "This is exactly as a failed antihistamine eliminates upper airway cough syndrome."
+    },
+    {
+     "claim": "SJS stands for Stevens-Johnson syndrome.",
      "from": "expansion"
     },
     {
-     "claim": "SJS/TEN requires mucosal involvement, classically at 2 or more sites.",
-     "from": "SJS/TEN requires mucosal involvement, classically at 2 or more sites."
-    },
-    {
-     "claim": "SJS/TEN requires symmetric target lesions.",
-     "from": "SJS/TEN requires symmetric target lesions."
-    },
-    {
-     "claim": "Progressive worsening on TMP-SMX excludes impetigo.",
-     "from": "Progressive worsening on TMP-SMX excludes impetigo."
+     "claim": "TEN stands for toxic epidermal necrolysis.",
+     "from": "expansion"
     },
     {
      "claim": "TMP-SMX stands for trimethoprim-sulfamethoxazole.",
@@ -761,57 +778,73 @@
     {
      "claim": "MRSA stands for methicillin-resistant Staphylococcus aureus.",
      "from": "expansion"
-    },
-    {
-     "claim": "TMP-SMX covers staph including MRSA.",
-     "from": "TMP-SMX covers staph including MRSA."
-    },
-    {
-     "claim": "Failure on appropriate antibacterial therapy eliminates the bacterial hypothesis.",
-     "from": "Failure on appropriate antibacterial therapy eliminates the bacterial hypothesis."
-    },
-    {
-     "claim": "A failed antihistamine eliminates upper airway cough syndrome in the same way.",
-     "from": "A failed antihistamine eliminates upper airway cough syndrome in the same way."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "eczemaherp",
-   "find": "Impetigo makes <b>honey-colored</b> crust — hemorrhagic ≠ honey. Diagnosis is clinical, confirmed with <b>HSV PCR of vesicle fluid</b> (Tzanck shows multinucleated giant cells, less sensitive).",
-   "with": "Impetigo makes <b>honey-colored</b> crust, not hemorrhagic crust. Diagnosis is clinical, confirmed with <b>HSV PCR of vesicle fluid</b> (herpes simplex virus polymerase chain reaction). A Tzanck smear shows multinucleated giant cells but is less sensitive.",
-   "note": ".pearls: slogan em dash removed; Tzanck parenthetical made a sentence; HSV PCR expanded",
+   "find": "Herpes makes <b>monomorphic</b> vesicles evolving into <b>\"punched-out\" erosions with hemorrhagic crust</b> and scalloped coalescing borders. Impetigo makes <b>honey-colored</b> crust — hemorrhagic ≠ honey. Diagnosis is clinical, confirmed with <b>HSV PCR of vesicle fluid</b> (Tzanck shows multinucleated giant cells, less sensitive). <b>IV acyclovir</b> if widespread, ill-appearing, or a young infant; <b>ophthalmology consult if periocular</b>.",
+   "with": "Herpes causes <b>monomorphic</b> vesicles that evolve into <b>\"punched-out\" erosions with hemorrhagic crust</b> and scalloped coalescing borders. Impetigo causes <b>honey-colored</b> crust, not hemorrhagic crust. Diagnosis is clinical, confirmed with <b>HSV PCR of vesicle fluid</b> (herpes simplex virus polymerase chain reaction). A Tzanck smear shows multinucleated giant cells but is less sensitive. Give <b>IV acyclovir</b> if the eruption is widespread, the patient is ill-appearing, or the patient is a young infant; <b>ophthalmology consult if periocular</b>.",
+   "note": ".pearls: remove em dash and symbol contrast; expand acronyms",
    "claims": [
     {
-     "claim": "Impetigo makes honey-colored crust, not hemorrhagic crust.",
-     "to": "Impetigo makes honey-colored crust, not hemorrhagic crust."
+     "claim": "Herpes makes monomorphic vesicles evolving into punched-out erosions with hemorrhagic crust and scalloped coalescing borders.",
+     "to": "Herpes causes monomorphic vesicles that evolve into \"punched-out\" erosions with hemorrhagic crust and scalloped coalescing borders."
+    },
+    {
+     "claim": "Impetigo makes honey-colored crust.",
+     "to": "Impetigo causes honey-colored crust, not hemorrhagic crust."
+    },
+    {
+     "claim": "Hemorrhagic crust is not honey-colored crust.",
+     "to": "Impetigo causes honey-colored crust, not hemorrhagic crust."
     },
     {
      "claim": "Diagnosis is clinical, confirmed with HSV PCR of vesicle fluid.",
      "to": "Diagnosis is clinical, confirmed with HSV PCR of vesicle fluid (herpes simplex virus polymerase chain reaction)."
     },
     {
-     "claim": "Tzanck shows multinucleated giant cells but is less sensitive.",
+     "claim": "Tzanck shows multinucleated giant cells and is less sensitive.",
      "to": "A Tzanck smear shows multinucleated giant cells but is less sensitive."
+    },
+    {
+     "claim": "IV acyclovir if widespread, ill-appearing, or a young infant.",
+     "to": "Give IV acyclovir if the eruption is widespread, the patient is ill-appearing, or the patient is a young infant"
+    },
+    {
+     "claim": "Ophthalmology consult if periocular.",
+     "to": "ophthalmology consult if periocular."
     }
    ],
    "new_claims": [
     {
-     "claim": "Impetigo makes honey-colored crust, not hemorrhagic crust.",
-     "from": "Impetigo makes honey-colored crust, not hemorrhagic crust."
+     "claim": "Herpes causes monomorphic vesicles that evolve into \"punched-out\" erosions with hemorrhagic crust and scalloped coalescing borders.",
+     "from": "Herpes makes monomorphic vesicles evolving into punched-out erosions with hemorrhagic crust and scalloped coalescing borders."
+    },
+    {
+     "claim": "Impetigo causes honey-colored crust, not hemorrhagic crust.",
+     "from": "Impetigo makes honey-colored crust."
     },
     {
      "claim": "Diagnosis is clinical, confirmed with HSV PCR of vesicle fluid.",
      "from": "Diagnosis is clinical, confirmed with HSV PCR of vesicle fluid."
     },
     {
-     "claim": "HSV PCR stands for herpes simplex virus polymerase chain reaction.",
-     "from": "expansion"
+     "claim": "A Tzanck smear shows multinucleated giant cells but is less sensitive.",
+     "from": "Tzanck shows multinucleated giant cells and is less sensitive."
     },
     {
-     "claim": "Tzanck shows multinucleated giant cells but is less sensitive.",
-     "from": "Tzanck shows multinucleated giant cells but is less sensitive."
+     "claim": "Give IV acyclovir if the eruption is widespread, the patient is ill-appearing, or the patient is a young infant",
+     "from": "IV acyclovir if widespread, ill-appearing, or a young infant."
+    },
+    {
+     "claim": "Ophthalmology consult if periocular.",
+     "from": "Ophthalmology consult if periocular."
+    },
+    {
+     "claim": "HSV PCR stands for herpes simplex virus polymerase chain reaction.",
+     "from": "expansion"
     }
    ]
   },
@@ -819,49 +852,50 @@
    "op": "replace",
    "brief": "eczemaherp",
    "find": "The past medical history is where the deciding fact hides. Sometimes it's a <b>risk factor</b> overriding a benign read (prior cancer → spinal mets), sometimes a risk factor <b>masquerading as an explanation</b> (Klinefelter → gynecomastia), and sometimes the <b>precondition that makes the right diagnosis possible at all</b>. Read the PMH as enabling information, not biography.",
-   "with": "Look for the deciding fact in the past medical history. Sometimes it is a <b>risk factor</b> that overrides a benign reading (prior cancer → spinal metastases). Sometimes it is a risk factor <b>masquerading as an explanation</b> (Klinefelter → gynecomastia). Sometimes it is the <b>precondition that makes the right diagnosis possible</b>.",
-   "note": ".rule: personification and closing aphorism removed; split into one idea per sentence",
-   "reworded_bold": [
-    "precondition that makes the right diagnosis possible at all"
-   ],
+   "with": "The past medical history can contain the deciding fact. Sometimes it is a <b>risk factor</b> that overrides a benign reading (prior cancer → spinal mets). Sometimes it is a risk factor <b>masquerading as an explanation</b> (Klinefelter → gynecomastia). Sometimes it is the <b>precondition that makes the right diagnosis possible at all</b>. Read the past medical history as information that enables a diagnosis.",
+   "note": ".rule: split long sentence, remove slogan contrast",
    "claims": [
     {
-     "claim": "Look for the deciding fact in the past medical history.",
-     "to": "Look for the deciding fact in the past medical history."
+     "claim": "The past medical history is where the deciding fact hides.",
+     "to": "The past medical history can contain the deciding fact."
     },
     {
-     "claim": "Sometimes the history is a risk factor overriding a benign read (prior cancer → spinal mets).",
-     "to": "Sometimes it is a risk factor that overrides a benign reading (prior cancer → spinal metastases)."
+     "claim": "Sometimes the PMH is a risk factor overriding a benign read, as prior cancer points to spinal mets.",
+     "to": "Sometimes it is a risk factor that overrides a benign reading (prior cancer → spinal mets)."
     },
     {
-     "claim": "Sometimes it is a risk factor masquerading as an explanation (Klinefelter → gynecomastia).",
+     "claim": "Sometimes it is a risk factor masquerading as an explanation, as Klinefelter explains gynecomastia.",
      "to": "Sometimes it is a risk factor masquerading as an explanation (Klinefelter → gynecomastia)."
     },
     {
-     "claim": "Sometimes it is the precondition that makes the right diagnosis possible.",
-     "to": "Sometimes it is the precondition that makes the right diagnosis possible."
+     "claim": "Sometimes it is the precondition that makes the right diagnosis possible at all.",
+     "to": "Sometimes it is the precondition that makes the right diagnosis possible at all."
     },
     {
      "claim": "Read the PMH as enabling information, not biography.",
-     "to": "Sometimes it is the precondition that makes the right diagnosis possible."
+     "to": "Read the past medical history as information that enables a diagnosis."
     }
    ],
    "new_claims": [
     {
-     "claim": "Look for the deciding fact in the past medical history.",
-     "from": "Look for the deciding fact in the past medical history."
+     "claim": "The past medical history can contain the deciding fact.",
+     "from": "The past medical history is where the deciding fact hides."
     },
     {
-     "claim": "Sometimes it is a risk factor that overrides a benign reading (prior cancer → spinal metastases).",
-     "from": "Sometimes the history is a risk factor overriding a benign read (prior cancer → spinal mets)."
+     "claim": "Sometimes it is a risk factor that overrides a benign reading (prior cancer → spinal mets).",
+     "from": "Sometimes the PMH is a risk factor overriding a benign read, as prior cancer points to spinal mets."
     },
     {
      "claim": "Sometimes it is a risk factor masquerading as an explanation (Klinefelter → gynecomastia).",
-     "from": "Sometimes it is a risk factor masquerading as an explanation (Klinefelter → gynecomastia)."
+     "from": "Sometimes it is a risk factor masquerading as an explanation, as Klinefelter explains gynecomastia."
     },
     {
-     "claim": "Sometimes it is the precondition that makes the right diagnosis possible.",
-     "from": "Sometimes it is the precondition that makes the right diagnosis possible."
+     "claim": "Sometimes it is the precondition that makes the right diagnosis possible at all.",
+     "from": "Sometimes it is the precondition that makes the right diagnosis possible at all."
+    },
+    {
+     "claim": "Read the past medical history as information that enables a diagnosis.",
+     "from": "Read the PMH as enabling information, not biography."
     }
    ]
   },
@@ -869,18 +903,18 @@
    "op": "replace",
    "brief": "peds-alopecia",
    "find": "the scalp surface and the nodes decide",
-   "with": "Child with an enlarging scaly bald patch and tender nodes",
-   "note": "sub: framing replaced with the presentation, as in the vignette",
+   "with": "The scalp surface and the nodes identify the cause",
+   "note": "subtitle first segment: remove personification",
    "claims": [
     {
-     "claim": "The scalp surface and the nodes decide the diagnosis.",
-     "to": "Child with an enlarging scaly bald patch and tender nodes"
+     "claim": "The scalp surface and the nodes decide.",
+     "to": "The scalp surface and the nodes identify the cause"
     }
    ],
    "new_claims": [
     {
-     "claim": "A child has an enlarging scaly bald patch and tender nodes.",
-     "from": "The scalp surface and the nodes decide the diagnosis."
+     "claim": "The scalp surface and the nodes identify the cause.",
+     "from": "The scalp surface and the nodes decide."
     }
    ]
   },
@@ -888,93 +922,81 @@
    "op": "replace",
    "brief": "peds-alopecia",
    "find": "<p>Two findings settle this and both are on the examination rather than in the history. The patch carries <b>overlying scale</b>, which means an inflammatory or infectious process in the skin rather than a hair that is simply being pulled or shed; and the <b>occipital and posterior auricular nodes are enlarged and tender</b>, which is regional lymphadenopathy draining an infected scalp. Together they name <b>tinea capitis</b> — a dermatophyte that, unlike tinea of the body, invades the hair follicle and shaft, so the hair breaks and the patch expands centrifugally over weeks. The recent school change and the anxiety are the stem's deliberate offer of trichotillomania, and neither scale nor tender nodes belongs to that diagnosis.</p>",
-   "with": "<p>The patch has <b>overlying scale</b>, which means an inflammatory or infectious process in the skin, not hair simply being pulled or shed. The <b>occipital and posterior auricular nodes are enlarged and tender</b>, which is regional lymphadenopathy draining an infected scalp. Together these examination findings, not the history, indicate <b>tinea capitis</b>. Unlike tinea of the body, this dermatophyte invades the hair follicle and shaft, so the hair breaks and the patch expands centrifugally over weeks. The recent school change and the anxiety point toward trichotillomania, but trichotillomania causes neither scale nor tender nodes.</p>",
-   "note": ".dp: em dash, 'settle this' and 'stem's deliberate offer' framing removed; sentences split",
+   "with": "<p>Two examination findings, not the history, identify the cause. The patch has <b>overlying scale</b>, which means an inflammatory or infectious process in the skin rather than hair that is simply being pulled or shed. The <b>occipital and posterior auricular nodes are enlarged and tender</b>, which is regional lymphadenopathy draining an infected scalp. Together these findings indicate <b>tinea capitis</b>. Unlike tinea of the body, this dermatophyte invades the hair follicle and shaft. As a result, the hair breaks and the patch expands centrifugally over weeks. The recent school change and the anxiety suggest trichotillomania, but neither scale nor tender nodes occurs in trichotillomania.</p>",
+   "note": ".dp: split long sentences, remove stem framing and em dash",
    "claims": [
     {
-     "claim": "Two findings settle the diagnosis.",
-     "to": "Together these examination findings, not the history, indicate tinea capitis."
+     "claim": "Two findings settle this, both on the examination rather than in the history.",
+     "to": "Two examination findings, not the history, identify the cause."
     },
     {
-     "claim": "Both findings are on the examination rather than in the history.",
-     "to": "Together these examination findings, not the history, indicate tinea capitis."
-    },
-    {
-     "claim": "The patch carries overlying scale.",
-     "to": "The patch has overlying scale, which means an inflammatory or infectious process in the skin, not hair simply being pulled or shed."
-    },
-    {
-     "claim": "Scale means an inflammatory or infectious process in the skin rather than hair simply being pulled or shed.",
-     "to": "The patch has overlying scale, which means an inflammatory or infectious process in the skin, not hair simply being pulled or shed."
+     "claim": "Overlying scale on the patch means an inflammatory or infectious process in the skin rather than hair being pulled or shed.",
+     "to": "The patch has overlying scale, which means an inflammatory or infectious process in the skin rather than hair that is simply being pulled or shed."
     },
     {
      "claim": "The occipital and posterior auricular nodes are enlarged and tender.",
      "to": "The occipital and posterior auricular nodes are enlarged and tender, which is regional lymphadenopathy draining an infected scalp."
     },
     {
-     "claim": "The nodes are regional lymphadenopathy draining an infected scalp.",
+     "claim": "This is regional lymphadenopathy draining an infected scalp.",
      "to": "The occipital and posterior auricular nodes are enlarged and tender, which is regional lymphadenopathy draining an infected scalp."
     },
     {
      "claim": "Together they indicate tinea capitis.",
-     "to": "Together these examination findings, not the history, indicate tinea capitis."
+     "to": "Together these findings indicate tinea capitis."
     },
     {
      "claim": "Unlike tinea of the body, the dermatophyte invades the hair follicle and shaft.",
-     "to": "Unlike tinea of the body, this dermatophyte invades the hair follicle and shaft, so the hair breaks and the patch expands centrifugally over weeks."
+     "to": "Unlike tinea of the body, this dermatophyte invades the hair follicle and shaft."
     },
     {
      "claim": "So the hair breaks and the patch expands centrifugally over weeks.",
-     "to": "Unlike tinea of the body, this dermatophyte invades the hair follicle and shaft, so the hair breaks and the patch expands centrifugally over weeks."
+     "to": "As a result, the hair breaks and the patch expands centrifugally over weeks."
     },
     {
-     "claim": "The recent school change and anxiety offer trichotillomania.",
-     "to": "The recent school change and the anxiety point toward trichotillomania, but trichotillomania causes neither scale nor tender nodes."
+     "claim": "The recent school change and anxiety are the stem's deliberate offer of trichotillomania.",
+     "to": "The recent school change and the anxiety suggest trichotillomania, but neither scale nor tender nodes occurs in trichotillomania."
     },
     {
      "claim": "Neither scale nor tender nodes belongs to trichotillomania.",
-     "to": "The recent school change and the anxiety point toward trichotillomania, but trichotillomania causes neither scale nor tender nodes."
+     "to": "The recent school change and the anxiety suggest trichotillomania, but neither scale nor tender nodes occurs in trichotillomania."
     }
    ],
    "new_claims": [
     {
-     "claim": "The patch has overlying scale.",
-     "from": "The patch carries overlying scale."
+     "claim": "Two examination findings, not the history, identify the cause.",
+     "from": "Two findings settle this, both on the examination rather than in the history."
     },
     {
-     "claim": "Scale means an inflammatory or infectious process in the skin rather than hair simply being pulled or shed.",
-     "from": "Scale means an inflammatory or infectious process in the skin rather than hair simply being pulled or shed."
+     "claim": "The patch has overlying scale, which means an inflammatory or infectious process in the skin rather than hair that is simply being pulled or shed.",
+     "from": "Overlying scale on the patch means an inflammatory or infectious process in the skin rather than hair being pulled or shed."
     },
     {
      "claim": "The occipital and posterior auricular nodes are enlarged and tender.",
      "from": "The occipital and posterior auricular nodes are enlarged and tender."
     },
     {
-     "claim": "The nodes are regional lymphadenopathy draining an infected scalp.",
-     "from": "The nodes are regional lymphadenopathy draining an infected scalp."
+     "claim": "The occipital and posterior auricular nodes are enlarged and tender, which is regional lymphadenopathy draining an infected scalp.",
+     "from": "This is regional lymphadenopathy draining an infected scalp."
     },
     {
      "claim": "Together these findings indicate tinea capitis.",
      "from": "Together they indicate tinea capitis."
     },
     {
-     "claim": "The findings are on the examination, not in the history.",
-     "from": "Both findings are on the examination rather than in the history."
-    },
-    {
-     "claim": "Unlike tinea of the body, the dermatophyte invades the hair follicle and shaft.",
+     "claim": "Unlike tinea of the body, this dermatophyte invades the hair follicle and shaft.",
      "from": "Unlike tinea of the body, the dermatophyte invades the hair follicle and shaft."
     },
     {
-     "claim": "So the hair breaks and the patch expands centrifugally over weeks.",
+     "claim": "As a result, the hair breaks and the patch expands centrifugally over weeks.",
      "from": "So the hair breaks and the patch expands centrifugally over weeks."
     },
     {
-     "claim": "The recent school change and anxiety point toward trichotillomania.",
-     "from": "The recent school change and anxiety offer trichotillomania."
+     "claim": "The recent school change and the anxiety suggest trichotillomania.",
+     "from": "The recent school change and anxiety are the stem's deliberate offer of trichotillomania."
     },
     {
-     "claim": "Trichotillomania causes neither scale nor tender nodes.",
+     "claim": "The recent school change and the anxiety suggest trichotillomania, but neither scale nor tender nodes occurs in trichotillomania.",
      "from": "Neither scale nor tender nodes belongs to trichotillomania."
     }
    ]
@@ -982,54 +1004,63 @@
   {
    "op": "replace",
    "brief": "peds-alopecia",
-   "find": "the planted psychosocial cue for hair-pulling",
-   "with": "a psychosocial cue for hair-pulling",
-   "note": ".pearls: 'planted' stem framing removed",
+   "find": "&mdash; the planted psychosocial cue for hair-pulling, which the scale and the nodes exclude",
+   "with": "&mdash; a psychosocial cue for hair-pulling, which the scale and the nodes exclude",
+   "note": ".pearls: remove stem framing word",
    "claims": [
     {
-     "claim": "Recent school change with anxiety is a psychosocial cue for hair-pulling that the scale and nodes exclude.",
-     "to": "a psychosocial cue for hair-pulling, which the scale and the nodes exclude"
+     "claim": "Recent school change with anxiety is the planted psychosocial cue for hair-pulling.",
+     "to": "a psychosocial cue for hair-pulling"
     },
     {
-     "claim": "The cue was planted in the stem.",
-     "dropped": "framing about how the stem is written"
+     "claim": "The scale and the nodes exclude hair-pulling.",
+     "to": "which the scale and the nodes exclude"
     }
    ],
    "new_claims": [
     {
-     "claim": "Recent school change with anxiety is a psychosocial cue for hair-pulling that the scale and nodes exclude.",
-     "from": "Recent school change with anxiety is a psychosocial cue for hair-pulling that the scale and nodes exclude."
+     "claim": "a psychosocial cue for hair-pulling",
+     "from": "Recent school change with anxiety is the planted psychosocial cue for hair-pulling."
+    },
+    {
+     "claim": "which the scale and the nodes exclude",
+     "from": "The scale and the nodes exclude hair-pulling."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "peds-alopecia",
-   "find": "when the stem gives another reason for them, traction still does not explain",
-   "with": "even when another reason for them is given, traction does not explain",
-   "note": ".pearls: stem framing removed",
+   "find": "used to hide the loss; when the stem gives another reason for them, traction still does not explain the eyebrows or a parietal patch",
+   "with": "used to hide the loss; even when another reason for them is given, traction does not explain the eyebrows or a parietal patch",
+   "note": ".pearls: remove stem framing",
    "claims": [
     {
-     "claim": "When another reason for hats is given, traction still does not explain the eyebrows or a parietal patch.",
-     "to": "used to hide the loss; even when another reason for them is given, traction does not explain the eyebrows or a parietal patch"
+     "claim": "Hats or wigs are used to hide the loss.",
+     "to": "used to hide the loss"
+    },
+    {
+     "claim": "When another reason for hats or wigs is given, traction still does not explain the eyebrows or a parietal patch.",
+     "to": "even when another reason for them is given, traction does not explain the eyebrows or a parietal patch"
     }
    ],
    "new_claims": [
     {
-     "claim": "When another reason for hats is given, traction still does not explain the eyebrows or a parietal patch.",
-     "from": "When another reason for hats is given, traction still does not explain the eyebrows or a parietal patch."
+     "claim": "used to hide the loss",
+     "from": "Hats or wigs are used to hide the loss."
+    },
+    {
+     "claim": "even when another reason for them is given, traction does not explain the eyebrows or a parietal patch",
+     "from": "When another reason for hats or wigs is given, traction still does not explain the eyebrows or a parietal patch."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "peds-alopecia",
-   "find": "<span class=\"lbl\">Management, in one line</span> Management is not this question's fork, so in one sentence: <b>oral griseofulvin or terbinafine</b> is required, because topical antifungals do not reach the organism inside the hair follicle.",
-   "with": "<span class=\"lbl\">Management</span> Treatment requires <b>oral griseofulvin or terbinafine</b>, because topical antifungals do not reach the organism inside the hair follicle.",
-   "note": ".danger: meta label and opener removed",
-   "reworded_label": [
-    "Management, in one line"
-   ],
+   "find": "Management is not this question's fork, so in one sentence: <b>oral griseofulvin or terbinafine</b> is required,",
+   "with": "Treatment requires <b>oral griseofulvin or terbinafine</b>,",
+   "note": ".danger: remove question framing",
    "claims": [
     {
      "claim": "Management is not this question's fork.",
@@ -1038,49 +1069,26 @@
     {
      "claim": "Oral griseofulvin or terbinafine is required.",
      "to": "Treatment requires oral griseofulvin or terbinafine, because topical antifungals do not reach the organism inside the hair follicle."
-    },
-    {
-     "claim": "Topical antifungals do not reach the organism inside the hair follicle.",
-     "to": "Treatment requires oral griseofulvin or terbinafine, because topical antifungals do not reach the organism inside the hair follicle."
     }
    ],
    "new_claims": [
     {
      "claim": "Treatment requires oral griseofulvin or terbinafine.",
      "from": "Oral griseofulvin or terbinafine is required."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "Yes → infection, and trichotillomania and traction alopecia are finished &middot; <b>Are the remaining hairs broken?</b> &mdash; Black dots are shafts snapped at the follicle — the fungus is inside the hair &middot; <b>Any traction history or geometric pattern?</b> &mdash; No &middot; <b>Confirm and treat</b> &mdash; KOH of the proximal shafts;",
+   "with": "Yes → infection, which excludes trichotillomania and traction alopecia &middot; <b>Are the remaining hairs broken?</b> &mdash; Black dots are shafts snapped at the follicle; the fungus is inside the hair &middot; <b>Any traction history or geometric pattern?</b> &mdash; No &middot; <b>Confirm and treat</b> &mdash; <b>KOH</b> (potassium hydroxide) of the proximal shafts;",
+   "note": ".pearls decision spine: remove slang and prose em dash; expand KOH",
+   "claims": [
+    {
+     "claim": "Enlarged draining nodes mean infection, and trichotillomania and traction alopecia are finished.",
+     "to": "Yes → infection, which excludes trichotillomania and traction alopecia"
     },
-    {
-     "claim": "Topical antifungals do not reach the organism inside the hair follicle.",
-     "from": "Topical antifungals do not reach the organism inside the hair follicle."
-    }
-   ]
-  },
-  {
-   "op": "replace",
-   "brief": "peds-alopecia",
-   "find": "Yes → infection, and trichotillomania and traction alopecia are finished",
-   "with": "Yes → infection; trichotillomania and traction alopecia are excluded",
-   "note": ".pearls: dramatic 'finished' made plain",
-   "claims": [
-    {
-     "claim": "If the draining nodes are enlarged, it is infection, and trichotillomania and traction alopecia are finished.",
-     "to": "Yes → infection; trichotillomania and traction alopecia are excluded"
-    }
-   ],
-   "new_claims": [
-    {
-     "claim": "If the draining nodes are enlarged, it is infection; trichotillomania and traction alopecia are excluded.",
-     "from": "If the draining nodes are enlarged, it is infection, and trichotillomania and traction alopecia are finished."
-    }
-   ]
-  },
-  {
-   "op": "replace",
-   "brief": "peds-alopecia",
-   "find": "Black dots are shafts snapped at the follicle — the fungus is inside the hair",
-   "with": "Black dots are shafts snapped at the follicle; the fungus is inside the hair",
-   "note": ".pearls: em dash in prose to semicolon",
-   "claims": [
     {
      "claim": "Black dots are shafts snapped at the follicle.",
      "to": "Black dots are shafts snapped at the follicle; the fungus is inside the hair"
@@ -1088,9 +1096,21 @@
     {
      "claim": "The fungus is inside the hair.",
      "to": "Black dots are shafts snapped at the follicle; the fungus is inside the hair"
+    },
+    {
+     "claim": "No traction history or geometric pattern.",
+     "to": "Any traction history or geometric pattern? — No"
+    },
+    {
+     "claim": "Confirm with KOH of the proximal shafts.",
+     "to": "KOH (potassium hydroxide) of the proximal shafts;"
     }
    ],
    "new_claims": [
+    {
+     "claim": "Yes → infection, which excludes trichotillomania and traction alopecia",
+     "from": "Enlarged draining nodes mean infection, and trichotillomania and traction alopecia are finished."
+    },
     {
      "claim": "Black dots are shafts snapped at the follicle.",
      "from": "Black dots are shafts snapped at the follicle."
@@ -1098,37 +1118,18 @@
     {
      "claim": "The fungus is inside the hair.",
      "from": "The fungus is inside the hair."
-    }
-   ]
-  },
-  {
-   "op": "replace",
-   "brief": "peds-alopecia",
-   "find": "KOH of the proximal shafts; oral, never topical alone",
-   "with": "<b>KOH</b> (potassium hydroxide) of the proximal shafts; oral, never topical alone",
-   "note": ".pearls: KOH expanded at first use in the block",
-   "claims": [
-    {
-     "claim": "Confirm with KOH of the proximal shafts.",
-     "to": "KOH (potassium hydroxide) of the proximal shafts; oral, never topical alone"
     },
     {
-     "claim": "Treat orally, never topical alone.",
-     "to": "KOH (potassium hydroxide) of the proximal shafts; oral, never topical alone"
-    }
-   ],
-   "new_claims": [
+     "claim": "Any traction history or geometric pattern? — No",
+     "from": "No traction history or geometric pattern."
+    },
     {
-     "claim": "Confirm with KOH of the proximal shafts.",
+     "claim": "KOH (potassium hydroxide) of the proximal shafts;",
      "from": "Confirm with KOH of the proximal shafts."
     },
     {
      "claim": "KOH stands for potassium hydroxide.",
      "from": "expansion"
-    },
-    {
-     "claim": "Treat orally, never topical alone.",
-     "from": "Treat orally, never topical alone."
     }
    ]
   },
@@ -1136,61 +1137,69 @@
    "op": "replace",
    "brief": "peds-alopecia",
    "find": "The psychosocial sentence is the whole trap: a new school and anxiety about teachers and friends is a complete, plausible causal story, offered one line before the examination that refutes it. \"Frequently scratches at the area\" reinforces it, since scratching sounds like a behavior — but it is pruritus, an inflammatory symptom, and it points the other way. The stem also says the patch is <b>nontender</b>, which is easy to misread as a general absence of tenderness; it is the <i>nodes</i> that are tender, and that is the finding.",
-   "with": "A new school and anxiety about teachers and friends offer a complete, plausible cause for the hair loss, but the examination refutes it. Frequent scratching at the area can seem behavioral, but it is pruritus, an inflammatory symptom, and it argues against hair-pulling. The patch itself is <b>nontender</b>; it is the <i>nodes</i> that are tender.",
-   "note": ".danger: trap framing and em dash removed",
+   "with": "A new school and anxiety about teachers and friends make a complete, plausible causal story. The examination refutes it. \"Frequently scratches at the area\" seems to support it, since scratching sounds like a behavior. However, scratching reflects pruritus, an inflammatory symptom, and it points the other way. The patch is <b>nontender</b>, which is easy to misread as a general absence of tenderness. The <i>nodes</i> are tender, and that tenderness is the key finding.",
+   "note": ".danger decoy note: remove trap framing, split sentences, remove em dash",
    "claims": [
     {
      "claim": "The psychosocial sentence is the whole trap.",
-     "dropped": "framing about the stem as a trap"
+     "dropped": "framing about the question; the psychosocial story and its refutation are stated"
     },
     {
      "claim": "A new school and anxiety about teachers and friends is a complete, plausible causal story.",
-     "to": "A new school and anxiety about teachers and friends offer a complete, plausible cause for the hair loss, but the examination refutes it."
+     "to": "A new school and anxiety about teachers and friends make a complete, plausible causal story."
     },
     {
      "claim": "The examination refutes the psychosocial story.",
-     "to": "A new school and anxiety about teachers and friends offer a complete, plausible cause for the hair loss, but the examination refutes it."
+     "to": "The examination refutes it."
     },
     {
-     "claim": "Frequently scratching at the area sounds like a behavior and reinforces the story.",
-     "to": "Frequent scratching at the area can seem behavioral, but it is pruritus, an inflammatory symptom, and it argues against hair-pulling."
+     "claim": "Frequently scratches at the area reinforces the story, since scratching sounds like a behavior.",
+     "to": "\"Frequently scratches at the area\" seems to support it, since scratching sounds like a behavior."
     },
     {
-     "claim": "Scratching is pruritus, an inflammatory symptom, and points the other way.",
-     "to": "Frequent scratching at the area can seem behavioral, but it is pruritus, an inflammatory symptom, and it argues against hair-pulling."
+     "claim": "Scratching is pruritus, an inflammatory symptom, and it points the other way.",
+     "to": "However, scratching reflects pruritus, an inflammatory symptom, and it points the other way."
     },
     {
      "claim": "The patch is nontender.",
-     "to": "The patch itself is nontender; it is the nodes that are tender."
+     "to": "The patch is nontender, which is easy to misread as a general absence of tenderness."
     },
     {
-     "claim": "Nontender patch is easy to misread as a general absence of tenderness.",
-     "to": "The patch itself is nontender; it is the nodes that are tender."
+     "claim": "Nontender is easy to misread as a general absence of tenderness.",
+     "to": "The patch is nontender, which is easy to misread as a general absence of tenderness."
     },
     {
      "claim": "The nodes are tender, and that is the finding.",
-     "to": "The patch itself is nontender; it is the nodes that are tender."
+     "to": "The nodes are tender, and that tenderness is the key finding."
     }
    ],
    "new_claims": [
     {
-     "claim": "A new school and anxiety about teachers and friends offer a complete, plausible cause for the hair loss, but the examination refutes it.",
+     "claim": "A new school and anxiety about teachers and friends make a complete, plausible causal story.",
      "from": "A new school and anxiety about teachers and friends is a complete, plausible causal story."
     },
     {
-     "claim": "Frequent scratching can seem behavioral.",
-     "from": "Frequently scratching at the area sounds like a behavior and reinforces the story."
+     "claim": "The examination refutes it.",
+     "from": "The examination refutes the psychosocial story."
     },
     {
-     "claim": "Scratching is pruritus, an inflammatory symptom, and argues against hair-pulling.",
-     "from": "Scratching is pruritus, an inflammatory symptom, and points the other way."
+     "claim": "\"Frequently scratches at the area\" seems to support it, since scratching sounds like a behavior.",
+     "from": "Frequently scratches at the area reinforces the story, since scratching sounds like a behavior."
     },
     {
-     "claim": "The patch itself is nontender.",
+     "claim": "However, scratching reflects pruritus, an inflammatory symptom, and it points the other way.",
+     "from": "Scratching is pruritus, an inflammatory symptom, and it points the other way."
+    },
+    {
+     "claim": "The patch is nontender.",
      "from": "The patch is nontender."
     },
     {
-     "claim": "The nodes are tender.",
+     "claim": "The patch is nontender, which is easy to misread as a general absence of tenderness.",
+     "from": "Nontender is easy to misread as a general absence of tenderness."
+    },
+    {
+     "claim": "The nodes are tender, and that tenderness is the key finding.",
      "from": "The nodes are tender, and that is the finding."
     }
    ]
@@ -1198,27 +1207,19 @@
   {
    "op": "replace",
    "brief": "peds-alopecia",
-   "find": "Scale plus regional lymphadenopathy converts \"alopecia\" into \"infection\"; the two pulling alopecias",
-   "with": "Scale plus regional lymphadenopathy means infection; the two pulling alopecias",
-   "note": ".pearls: slogan phrasing made plain",
+   "find": "Scale plus regional lymphadenopathy converts \"alopecia\" into \"infection\";",
+   "with": "Scale plus regional lymphadenopathy means infection rather than a simple alopecia;",
+   "note": ".pearls: remove rhetorical conversion phrasing",
    "claims": [
     {
      "claim": "Scale plus regional lymphadenopathy converts alopecia into infection.",
-     "to": "Scale plus regional lymphadenopathy means infection; the two pulling alopecias, traction and trichotillomania, have neither."
-    },
-    {
-     "claim": "The two pulling alopecias, traction and trichotillomania, have neither.",
-     "to": "Scale plus regional lymphadenopathy means infection; the two pulling alopecias, traction and trichotillomania, have neither."
+     "to": "Scale plus regional lymphadenopathy means infection rather than a simple alopecia;"
     }
    ],
    "new_claims": [
     {
-     "claim": "Scale plus regional lymphadenopathy means infection.",
+     "claim": "Scale plus regional lymphadenopathy means infection rather than a simple alopecia.",
      "from": "Scale plus regional lymphadenopathy converts alopecia into infection."
-    },
-    {
-     "claim": "The two pulling alopecias, traction and trichotillomania, have neither.",
-     "from": "The two pulling alopecias, traction and trichotillomania, have neither."
     }
    ]
   },
@@ -1226,72 +1227,68 @@
    "op": "replace",
    "brief": "peds-alopecia",
    "find": "so it needs an oral antifungal — the single most tested management point on the topic.",
-   "with": "so it needs an oral antifungal.",
-   "note": ".pearls: meta tail and em dash removed",
+   "with": "so it needs an oral antifungal, the single most tested management point on the topic.",
+   "note": ".pearls: em dash to comma",
    "claims": [
     {
      "claim": "Tinea capitis invades the follicle and shaft, so it needs an oral antifungal.",
-     "to": "Tinea capitis invades the follicle and shaft, so it needs an oral antifungal."
+     "to": "so it needs an oral antifungal, the single most tested management point on the topic."
     },
     {
-     "claim": "This is the single most tested management point on the topic.",
-     "dropped": "framing about exam frequency, not a clinical fact"
+     "claim": "Oral antifungal need is the single most tested management point on the topic.",
+     "to": "so it needs an oral antifungal, the single most tested management point on the topic."
     }
    ],
    "new_claims": [
     {
-     "claim": "Tinea capitis invades the follicle and shaft, so it needs an oral antifungal.",
+     "claim": "so it needs an oral antifungal, the single most tested management point on the topic.",
      "from": "Tinea capitis invades the follicle and shaft, so it needs an oral antifungal."
+    },
+    {
+     "claim": "so it needs an oral antifungal, the single most tested management point on the topic.",
+     "from": "Oral antifungal need is the single most tested management point on the topic."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "peds-alopecia",
-   "find": "The mimic this option list omitted is <b>alopecia areata</b>: a smooth, scale-free, sharply circumscribed patch",
-   "with": "Another mimic, <b>alopecia areata</b>, is a smooth, scale-free, sharply circumscribed patch",
-   "note": ".pearls: option-list framing removed (table already marks it)",
+   "find": "The mimic this option list omitted is <b>alopecia areata</b>: a smooth, scale-free, sharply circumscribed patch with no lymphadenopathy, sometimes with nail pitting ⚠︎. &middot; Fomites carry it — combs, hats, pillowcases — so the household is examined rather than treated blindly.",
+   "with": "<b>Alopecia areata</b> causes a smooth, scale-free, sharply circumscribed patch with no lymphadenopathy, sometimes with nail pitting ⚠︎. &middot; Fomites such as combs, hats and pillowcases carry it, so the household is examined rather than treated blindly.",
+   "note": ".pearls: remove option-list framing and em dashes",
+   "reworded_bold": [
+    "alopecia areata"
+   ],
    "claims": [
     {
      "claim": "The option list omitted alopecia areata.",
-     "carried_by": "not on the option list"
+     "carried_by": "Alopecia areata ⚠︎ (not on the option list)"
     },
     {
-     "claim": "Alopecia areata is a smooth, scale-free, sharply circumscribed patch with no lymphadenopathy, sometimes with nail pitting (unverified).",
-     "to": "Another mimic, alopecia areata, is a smooth, scale-free, sharply circumscribed patch with no lymphadenopathy, sometimes with nail pitting ⚠︎."
+     "claim": "Alopecia areata is a smooth, scale-free, sharply circumscribed patch with no lymphadenopathy, sometimes with nail pitting.",
+     "to": "Alopecia areata causes a smooth, scale-free, sharply circumscribed patch with no lymphadenopathy, sometimes with nail pitting ⚠︎."
+    },
+    {
+     "claim": "Fomites carry tinea capitis: combs, hats, pillowcases.",
+     "to": "Fomites such as combs, hats and pillowcases carry it, so the household is examined rather than treated blindly."
+    },
+    {
+     "claim": "So the household is examined rather than treated blindly.",
+     "to": "Fomites such as combs, hats and pillowcases carry it, so the household is examined rather than treated blindly."
     }
    ],
    "new_claims": [
     {
-     "claim": "Alopecia areata is a smooth, scale-free, sharply circumscribed patch with no lymphadenopathy, sometimes with nail pitting (unverified).",
-     "from": "Alopecia areata is a smooth, scale-free, sharply circumscribed patch with no lymphadenopathy, sometimes with nail pitting (unverified)."
-    }
-   ]
-  },
-  {
-   "op": "replace",
-   "brief": "peds-alopecia",
-   "find": "Fomites carry it — combs, hats, pillowcases — so the household is examined rather than treated blindly.",
-   "with": "Fomites such as combs, hats and pillowcases carry it, so examine the household rather than treating it blindly.",
-   "note": ".pearls: em dashes removed",
-   "claims": [
-    {
-     "claim": "Fomites carry it: combs, hats, pillowcases.",
-     "to": "Fomites such as combs, hats and pillowcases carry it, so examine the household rather than treating it blindly."
+     "claim": "Alopecia areata causes a smooth, scale-free, sharply circumscribed patch with no lymphadenopathy, sometimes with nail pitting.",
+     "from": "Alopecia areata is a smooth, scale-free, sharply circumscribed patch with no lymphadenopathy, sometimes with nail pitting."
     },
     {
-     "claim": "The household is examined rather than treated blindly.",
-     "to": "Fomites such as combs, hats and pillowcases carry it, so examine the household rather than treating it blindly."
-    }
-   ],
-   "new_claims": [
-    {
-     "claim": "Fomites carry it: combs, hats, pillowcases.",
-     "from": "Fomites carry it: combs, hats, pillowcases."
+     "claim": "Fomites such as combs, hats and pillowcases carry it, so the household is examined rather than treated blindly.",
+     "from": "Fomites carry tinea capitis: combs, hats, pillowcases."
     },
     {
-     "claim": "The household is examined rather than treated blindly.",
-     "from": "The household is examined rather than treated blindly."
+     "claim": "So the household is examined rather than treated blindly.",
+     "from": "So the household is examined rather than treated blindly."
     }
    ]
   },
@@ -1299,46 +1296,50 @@
    "op": "replace",
    "brief": "peds-alopecia",
    "find": "Verified: Part I <b>Scaly Rash &amp; Psoriasis</b> owns the scaly-plaque differential of the body and the rule that a scaly annular lesion earns a KOH preparation rather than a steroid; this brief is the scalp version, where the follicle changes the therapy. Store the discriminator as a question: <i>is there scale, and are the draining nodes up?</i>",
-   "with": "Part I <b>Scaly Rash &amp; Psoriasis</b> covers the scaly-plaque differential of the body and the rule that a scaly annular lesion needs a <b>KOH</b> (potassium hydroxide) preparation rather than a steroid; this brief covers the scalp version, where the follicle changes the therapy. Ask: <i>is there scale, and are the draining nodes up?</i>",
-   "note": "Pairs with: 'Verified', 'owns' and 'store as a question' workflow text replaced",
+   "with": "Part I <b>Scaly Rash &amp; Psoriasis</b> covers the scaly-plaque differential of the body. It also covers the rule that a scaly annular lesion needs a KOH (potassium hydroxide) preparation rather than a steroid. This brief covers the scalp version, where the follicle changes the therapy. Ask: <i>is there scale, and are the draining nodes enlarged?</i>",
+   "note": ".pearls pairs with: remove workflow text; owns to covers; Ask:",
    "claims": [
     {
-     "claim": "Part I Scaly Rash & Psoriasis covers the scaly-plaque differential of the body.",
-     "to": "Part I Scaly Rash & Psoriasis covers the scaly-plaque differential of the body and the rule that a scaly annular lesion needs a KOH (potassium hydroxide) preparation rather than a steroid; this brief covers the scalp version, where the follicle changes the therapy."
+     "claim": "Verified.",
+     "dropped": "workflow text"
     },
     {
-     "claim": "It covers the rule that a scaly annular lesion earns a KOH preparation rather than a steroid.",
-     "to": "Part I Scaly Rash & Psoriasis covers the scaly-plaque differential of the body and the rule that a scaly annular lesion needs a KOH (potassium hydroxide) preparation rather than a steroid; this brief covers the scalp version, where the follicle changes the therapy."
+     "claim": "Scaly Rash & Psoriasis covers the scaly-plaque differential of the body.",
+     "to": "Part I Scaly Rash & Psoriasis covers the scaly-plaque differential of the body."
+    },
+    {
+     "claim": "A scaly annular lesion earns a KOH preparation rather than a steroid.",
+     "to": "It also covers the rule that a scaly annular lesion needs a KOH (potassium hydroxide) preparation rather than a steroid."
     },
     {
      "claim": "This brief is the scalp version, where the follicle changes the therapy.",
-     "to": "Part I Scaly Rash & Psoriasis covers the scaly-plaque differential of the body and the rule that a scaly annular lesion needs a KOH (potassium hydroxide) preparation rather than a steroid; this brief covers the scalp version, where the follicle changes the therapy."
+     "to": "This brief covers the scalp version, where the follicle changes the therapy."
     },
     {
-     "claim": "The discriminator: is there scale, and are the draining nodes up?",
-     "to": "Ask: is there scale, and are the draining nodes up?"
+     "claim": "The discriminating question: is there scale, and are the draining nodes up?",
+     "to": "Ask: is there scale, and are the draining nodes enlarged?"
     }
    ],
    "new_claims": [
     {
-     "claim": "Part I Scaly Rash & Psoriasis covers the scaly-plaque differential of the body.",
-     "from": "Part I Scaly Rash & Psoriasis covers the scaly-plaque differential of the body."
+     "claim": "Scaly Rash & Psoriasis covers the scaly-plaque differential of the body.",
+     "from": "Scaly Rash & Psoriasis covers the scaly-plaque differential of the body."
     },
     {
-     "claim": "It covers the rule that a scaly annular lesion needs a KOH preparation rather than a steroid.",
-     "from": "It covers the rule that a scaly annular lesion earns a KOH preparation rather than a steroid."
-    },
-    {
-     "claim": "KOH stands for potassium hydroxide.",
-     "from": "expansion"
+     "claim": "It also covers the rule that a scaly annular lesion needs a KOH (potassium hydroxide) preparation rather than a steroid.",
+     "from": "A scaly annular lesion earns a KOH preparation rather than a steroid."
     },
     {
      "claim": "This brief covers the scalp version, where the follicle changes the therapy.",
      "from": "This brief is the scalp version, where the follicle changes the therapy."
     },
     {
-     "claim": "Ask: is there scale, and are the draining nodes up?",
-     "from": "The discriminator: is there scale, and are the draining nodes up?"
+     "claim": "Ask: is there scale, and are the draining nodes enlarged?",
+     "from": "The discriminating question: is there scale, and are the draining nodes up?"
+    },
+    {
+     "claim": "KOH stands for potassium hydroxide.",
+     "from": "expansion"
     }
    ]
   },
@@ -1346,12 +1347,12 @@
    "op": "replace",
    "brief": "peds-alopecia",
    "find": "In hair loss, the <b>surface of the patch</b> is the diagnosis — scale with regional nodes means infection, a smooth patch means an autoimmune or traction cause, and broken hairs of unequal length mean the hair is being pulled — so read the scalp before you accept a psychosocial story the stem has helpfully supplied.",
-   "with": "In hair loss, the <b>surface of the patch</b> determines the diagnosis. Scale with regional nodes means infection. A smooth patch means an autoimmune or traction cause. Broken hairs of unequal length mean the hair is being pulled. Examine the scalp before accepting a psychosocial explanation.",
-   "note": ".rule: em dashes and stem framing removed; split into one idea per sentence",
+   "with": "In hair loss, the <b>surface of the patch</b> identifies the diagnosis. Scale with regional nodes means infection. A smooth patch means an autoimmune or traction cause. Broken hairs of unequal length mean the hair is being pulled. Examine the scalp before you accept a psychosocial explanation.",
+   "note": ".rule: split, remove em dashes and stem framing",
    "claims": [
     {
      "claim": "In hair loss, the surface of the patch is the diagnosis.",
-     "to": "In hair loss, the surface of the patch determines the diagnosis."
+     "to": "In hair loss, the surface of the patch identifies the diagnosis."
     },
     {
      "claim": "Scale with regional nodes means infection.",
@@ -1366,17 +1367,13 @@
      "to": "Broken hairs of unequal length mean the hair is being pulled."
     },
     {
-     "claim": "Read the scalp before accepting a psychosocial story.",
-     "to": "Examine the scalp before accepting a psychosocial explanation."
-    },
-    {
-     "claim": "The stem has helpfully supplied the psychosocial story.",
-     "dropped": "framing about the stem"
+     "claim": "Read the scalp before accepting a psychosocial story the stem has supplied.",
+     "to": "Examine the scalp before you accept a psychosocial explanation."
     }
    ],
    "new_claims": [
     {
-     "claim": "In hair loss, the surface of the patch determines the diagnosis.",
+     "claim": "In hair loss, the surface of the patch identifies the diagnosis.",
      "from": "In hair loss, the surface of the patch is the diagnosis."
     },
     {
@@ -1392,8 +1389,8 @@
      "from": "Broken hairs of unequal length mean the hair is being pulled."
     },
     {
-     "claim": "Examine the scalp before accepting a psychosocial explanation.",
-     "from": "Read the scalp before accepting a psychosocial story."
+     "claim": "Examine the scalp before you accept a psychosocial explanation.",
+     "from": "Read the scalp before accepting a psychosocial story the stem has supplied."
     }
    ]
   },
@@ -1405,21 +1402,21 @@
    "note": ".traps: em dashes to parentheses",
    "claims": [
     {
-     "claim": "Traction produces geometric loss along the sites of pulling: temporal areas, along braids.",
-     "to": "Traction alopecia: Traction produces geometric loss along the sites of pulling (temporal areas, along braids), with no scale and no lymphadenopathy"
+     "claim": "Traction produces geometric loss along the sites of pulling, such as temporal areas and along braids.",
+     "to": "Traction produces geometric loss along the sites of pulling (temporal areas, along braids)"
     },
     {
      "claim": "Traction alopecia has no scale and no lymphadenopathy.",
-     "to": "Traction alopecia: Traction produces geometric loss along the sites of pulling (temporal areas, along braids), with no scale and no lymphadenopathy"
+     "to": "with no scale and no lymphadenopathy"
     }
    ],
    "new_claims": [
     {
-     "claim": "Traction produces geometric loss along the sites of pulling: temporal areas, along braids.",
-     "from": "Traction produces geometric loss along the sites of pulling: temporal areas, along braids."
+     "claim": "Traction produces geometric loss along the sites of pulling (temporal areas, along braids)",
+     "from": "Traction produces geometric loss along the sites of pulling, such as temporal areas and along braids."
     },
     {
-     "claim": "Traction alopecia has no scale and no lymphadenopathy.",
+     "claim": "with no scale and no lymphadenopathy",
      "from": "Traction alopecia has no scale and no lymphadenopathy."
     }
    ]
@@ -1428,29 +1425,29 @@
    "op": "replace",
    "brief": "peds-alopecia",
    "find": "It explains the scale and the pruritus and <b>nothing else</b> — not the hair loss, not the nodes",
-   "with": "It explains the scale and the pruritus but not the hair loss or the nodes",
-   "note": ".traps: em dash and emphasis bold removed",
+   "with": "It explains only the scale and the pruritus, not the hair loss or the nodes",
+   "note": ".traps: remove emphasis bold and em dash",
    "reworded_bold": [
     "nothing else"
    ],
    "claims": [
     {
      "claim": "Seborrheic dermatitis explains the scale and the pruritus and nothing else.",
-     "to": "Seborrheic dermatitis: It explains the scale and the pruritus but not the hair loss or the nodes"
+     "to": "It explains only the scale and the pruritus, not the hair loss or the nodes"
     },
     {
-     "claim": "It does not explain the hair loss or the nodes.",
-     "to": "Seborrheic dermatitis: It explains the scale and the pruritus but not the hair loss or the nodes"
+     "claim": "Seborrheic dermatitis does not explain the hair loss or the nodes.",
+     "to": "It explains only the scale and the pruritus, not the hair loss or the nodes"
     }
    ],
    "new_claims": [
     {
-     "claim": "Seborrheic dermatitis explains the scale and the pruritus and nothing else.",
+     "claim": "It explains only the scale and the pruritus, not the hair loss or the nodes",
      "from": "Seborrheic dermatitis explains the scale and the pruritus and nothing else."
     },
     {
-     "claim": "It does not explain the hair loss or the nodes.",
-     "from": "It does not explain the hair loss or the nodes."
+     "claim": "It explains only the scale and the pruritus, not the hair loss or the nodes",
+     "from": "Seborrheic dermatitis does not explain the hair loss or the nodes."
     }
    ]
   }

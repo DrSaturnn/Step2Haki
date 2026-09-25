@@ -4,102 +4,122 @@
    "op": "replace",
    "brief": "hearing",
    "find": "Rinne and Weber before anything else",
-   "with": "Rinne and Weber tests first",
-   "note": "subtitle: remove dramatic phrasing",
+   "with": "Start with the Rinne and Weber tests",
+   "note": "sub: remove dramatic closer",
    "claims": [
     {
-     "claim": "Rinne and Weber tests come first in the evaluation.",
-     "to": "Rinne and Weber tests first"
+     "claim": "Rinne and Weber come before anything else.",
+     "to": "Start with the Rinne and Weber tests"
     }
    ],
    "new_claims": [
     {
-     "claim": "Rinne and Weber tests come first.",
-     "from": "Rinne and Weber tests come first in the evaluation."
+     "claim": "Start with the Rinne and Weber tests.",
+     "from": "Rinne and Weber come before anything else."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "hearing",
-   "find": "<p><b>Conductive</b> loss: Weber <b>lateralizes to the affected ear</b>, Rinne shows <b>BC &gt; AC</b> in that ear. <b>Sensorineural</b>: Weber lateralizes <b>away</b>, Rinne stays AC &gt; BC bilaterally.",
-   "with": "<p><b>Conductive</b> loss: Weber <b>lateralizes to the affected ear</b>, and Rinne shows <b>BC &gt; AC</b> (bone conduction greater than air conduction) in that ear. <b>Sensorineural</b> loss: Weber lateralizes <b>away</b>, and Rinne stays AC &gt; BC bilaterally.",
-   "note": ".dp: expand BC and AC",
+   "find": "<b>Conductive</b> loss: Weber <b>lateralizes to the affected ear</b>, Rinne shows <b>BC &gt; AC</b> in that ear. <b>Sensorineural</b>: Weber lateralizes <b>away</b>, Rinne stays AC &gt; BC bilaterally. A conductive loss with a <b>normal otoscopic exam</b> in a young adult is otosclerosis.",
+   "with": "<b>Conductive</b> loss: Weber <b>lateralizes to the affected ear</b>, and Rinne shows <b>BC &gt; AC</b> (bone conduction greater than air conduction) in that ear. <b>Sensorineural</b> loss: Weber lateralizes <b>away</b> from the affected ear, and Rinne stays AC &gt; BC bilaterally. A conductive loss with a <b>normal otoscopic exam</b> in a young adult is otosclerosis.",
+   "note": ".dp: acronym expansion, grammar",
    "claims": [
     {
-     "claim": "In conductive loss Weber lateralizes to the affected ear.",
+     "claim": "In conductive loss, Weber lateralizes to the affected ear.",
      "to": "Conductive loss: Weber lateralizes to the affected ear, and Rinne shows BC > AC (bone conduction greater than air conduction) in that ear."
     },
     {
-     "claim": "In conductive loss Rinne shows BC > AC in that ear.",
+     "claim": "In conductive loss, Rinne shows BC > AC in that ear.",
      "to": "Conductive loss: Weber lateralizes to the affected ear, and Rinne shows BC > AC (bone conduction greater than air conduction) in that ear."
     },
     {
-     "claim": "In sensorineural loss Weber lateralizes away.",
-     "to": "Sensorineural loss: Weber lateralizes away, and Rinne stays AC > BC bilaterally."
+     "claim": "In sensorineural loss, Weber lateralizes away.",
+     "to": "Sensorineural loss: Weber lateralizes away from the affected ear, and Rinne stays AC > BC bilaterally."
     },
     {
-     "claim": "In sensorineural loss Rinne stays AC > BC bilaterally.",
-     "to": "Sensorineural loss: Weber lateralizes away, and Rinne stays AC > BC bilaterally."
+     "claim": "In sensorineural loss, Rinne stays AC > BC bilaterally.",
+     "to": "Sensorineural loss: Weber lateralizes away from the affected ear, and Rinne stays AC > BC bilaterally."
+    },
+    {
+     "claim": "A conductive loss with a normal otoscopic exam in a young adult is otosclerosis.",
+     "to": "A conductive loss with a normal otoscopic exam in a young adult is otosclerosis."
     }
    ],
    "new_claims": [
     {
-     "claim": "In conductive loss Weber lateralizes to the affected ear and Rinne shows BC > AC in that ear.",
-     "from": "In conductive loss Weber lateralizes to the affected ear."
+     "claim": "Conductive loss: Weber lateralizes to the affected ear, and Rinne shows BC > AC (bone conduction greater than air conduction) in that ear.",
+     "from": "In conductive loss, Weber lateralizes to the affected ear."
     },
     {
-     "claim": "BC stands for bone conduction.",
+     "claim": "Conductive loss: Weber lateralizes to the affected ear, and Rinne shows BC > AC (bone conduction greater than air conduction) in that ear.",
+     "from": "In conductive loss, Rinne shows BC > AC in that ear."
+    },
+    {
+     "claim": "Sensorineural loss: Weber lateralizes away from the affected ear, and Rinne stays AC > BC bilaterally.",
+     "from": "In sensorineural loss, Weber lateralizes away."
+    },
+    {
+     "claim": "Sensorineural loss: Weber lateralizes away from the affected ear, and Rinne stays AC > BC bilaterally.",
+     "from": "In sensorineural loss, Rinne stays AC > BC bilaterally."
+    },
+    {
+     "claim": "A conductive loss with a normal otoscopic exam in a young adult is otosclerosis.",
+     "from": "A conductive loss with a normal otoscopic exam in a young adult is otosclerosis."
+    },
+    {
+     "claim": "BC stands for bone conduction and AC for air conduction.",
      "from": "expansion"
-    },
-    {
-     "claim": "AC stands for air conduction.",
-     "from": "expansion"
-    },
-    {
-     "claim": "In sensorineural loss Weber lateralizes away and Rinne stays AC > BC bilaterally.",
-     "from": "In sensorineural loss Weber lateralizes away."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "hearing",
-   "find": " A <b>genetic bone-remodeling disorder of the otic capsule</b> at the <b>fissula ante fenestram</b> — an <b>otospongiotic</b> (hypervascular, resorptive) phase followed by a <b>sclerotic</b> phase that <b>fixes the stapes footplate</b>. <b>Autosomal dominant with ~40% penetrance</b>, onset in the 20s–40s, female 2:1 — so family history is often absent. <b>Estrogen and progesterone accelerate it</b>, which is why it is classically unmasked in pregnancy. Measles virus RNA has been found in otosclerotic foci.",
-   "with": " Otosclerosis is a <b>genetic bone-remodeling disorder of the otic capsule</b> at the <b>fissula ante fenestram</b>. An <b>otospongiotic</b> (hypervascular, resorptive) phase is followed by a <b>sclerotic</b> phase that <b>fixes the stapes footplate</b>. <b>Autosomal dominant with ~40% penetrance</b> means family history is often absent. Onset is in the 20s–40s, with a female predominance of 2:1. <b>Estrogen and progesterone accelerate it</b>, so it is classically unmasked in pregnancy. Measles virus <b>RNA</b> (ribonucleic acid) has been found in otosclerotic foci.",
-   "note": "pathophysiology pearls: remove em dashes, split sentences, expand RNA",
+   "find": "A <b>genetic bone-remodeling disorder of the otic capsule</b> at the <b>fissula ante fenestram</b> — an <b>otospongiotic</b> (hypervascular, resorptive) phase followed by a <b>sclerotic</b> phase that <b>fixes the stapes footplate</b>. <b>Autosomal dominant with ~40% penetrance</b>, onset in the 20s–40s, female 2:1 — so family history is often absent. <b>Estrogen and progesterone accelerate it</b>, which is why it is classically unmasked in pregnancy. Measles virus RNA has been found in otosclerotic foci.",
+   "with": "Otosclerosis is a <b>genetic bone-remodeling disorder of the otic capsule</b> at the <b>fissula ante fenestram</b>. An <b>otospongiotic</b> (hypervascular, resorptive) phase is followed by a <b>sclerotic</b> phase that <b>fixes the stapes footplate</b>. Inheritance: <b>Autosomal dominant with ~40% penetrance</b>, so family history is often absent. Onset is in the 20s–40s, with a 2:1 female predominance. <b>Estrogen and progesterone accelerate it</b>, so it is classically unmasked in pregnancy. Measles virus RNA has been found in otosclerotic foci.",
+   "note": ".pearls: remove em dashes, split sentences",
    "claims": [
     {
      "claim": "Otosclerosis is a genetic bone-remodeling disorder of the otic capsule at the fissula ante fenestram.",
      "to": "Otosclerosis is a genetic bone-remodeling disorder of the otic capsule at the fissula ante fenestram."
     },
     {
-     "claim": "An otospongiotic (hypervascular, resorptive) phase is followed by a sclerotic phase that fixes the stapes footplate.",
+     "claim": "An otospongiotic (hypervascular, resorptive) phase is followed by a sclerotic phase.",
+     "to": "An otospongiotic (hypervascular, resorptive) phase is followed by a sclerotic phase that fixes the stapes footplate."
+    },
+    {
+     "claim": "The sclerotic phase fixes the stapes footplate.",
      "to": "An otospongiotic (hypervascular, resorptive) phase is followed by a sclerotic phase that fixes the stapes footplate."
     },
     {
      "claim": "It is autosomal dominant with ~40% penetrance.",
-     "to": "Autosomal dominant with ~40% penetrance means family history is often absent."
+     "to": "Inheritance: Autosomal dominant with ~40% penetrance, so family history is often absent."
+    },
+    {
+     "claim": "Family history is often absent.",
+     "to": "Inheritance: Autosomal dominant with ~40% penetrance, so family history is often absent."
     },
     {
      "claim": "Onset is in the 20s–40s.",
-     "to": "Onset is in the 20s–40s, with a female predominance of 2:1."
+     "to": "Onset is in the 20s–40s, with a 2:1 female predominance."
     },
     {
      "claim": "It is female 2:1.",
-     "to": "Onset is in the 20s–40s, with a female predominance of 2:1."
+     "to": "Onset is in the 20s–40s, with a 2:1 female predominance."
     },
     {
-     "claim": "Family history is therefore often absent.",
-     "to": "Autosomal dominant with ~40% penetrance means family history is often absent."
+     "claim": "Estrogen and progesterone accelerate it.",
+     "to": "Estrogen and progesterone accelerate it, so it is classically unmasked in pregnancy."
     },
     {
-     "claim": "Estrogen and progesterone accelerate it, which is why it is classically unmasked in pregnancy.",
+     "claim": "It is classically unmasked in pregnancy.",
      "to": "Estrogen and progesterone accelerate it, so it is classically unmasked in pregnancy."
     },
     {
      "claim": "Measles virus RNA has been found in otosclerotic foci.",
-     "to": "Measles virus RNA (ribonucleic acid) has been found in otosclerotic foci."
+     "to": "Measles virus RNA has been found in otosclerotic foci."
     }
    ],
    "new_claims": [
@@ -108,24 +128,36 @@
      "from": "Otosclerosis is a genetic bone-remodeling disorder of the otic capsule at the fissula ante fenestram."
     },
     {
-     "claim": "An otospongiotic (hypervascular, resorptive) phase is followed by a sclerotic phase that fixes the stapes footplate.",
-     "from": "An otospongiotic (hypervascular, resorptive) phase is followed by a sclerotic phase that fixes the stapes footplate."
+     "claim": "An otospongiotic (hypervascular, resorptive) phase is followed by a sclerotic phase.",
+     "from": "An otospongiotic (hypervascular, resorptive) phase is followed by a sclerotic phase."
     },
     {
-     "claim": "It is autosomal dominant with ~40% penetrance, so family history is often absent.",
+     "claim": "An otospongiotic (hypervascular, resorptive) phase is followed by a sclerotic phase that fixes the stapes footplate.",
+     "from": "The sclerotic phase fixes the stapes footplate."
+    },
+    {
+     "claim": "Inheritance: Autosomal dominant with ~40% penetrance, so family history is often absent.",
      "from": "It is autosomal dominant with ~40% penetrance."
     },
     {
-     "claim": "Onset is in the 20s–40s, with a female predominance of 2:1.",
+     "claim": "Family history is often absent.",
+     "from": "Family history is often absent."
+    },
+    {
+     "claim": "Onset is in the 20s–40s.",
      "from": "Onset is in the 20s–40s."
     },
     {
-     "claim": "Estrogen and progesterone accelerate it, so it is classically unmasked in pregnancy.",
-     "from": "Estrogen and progesterone accelerate it, which is why it is classically unmasked in pregnancy."
+     "claim": "Onset is in the 20s–40s, with a 2:1 female predominance.",
+     "from": "It is female 2:1."
     },
     {
-     "claim": "RNA stands for ribonucleic acid.",
-     "from": "expansion"
+     "claim": "Estrogen and progesterone accelerate it.",
+     "from": "Estrogen and progesterone accelerate it."
+    },
+    {
+     "claim": "It is classically unmasked in pregnancy.",
+     "from": "It is classically unmasked in pregnancy."
     },
     {
      "claim": "Measles virus RNA has been found in otosclerotic foci.",
@@ -137,38 +169,46 @@
    "op": "replace",
    "brief": "hearing",
    "find": "vestibular schwannoma = unilateral SNHL + tinnitus → MRI. All have normal otoscopy — the <b>tuning forks</b> separate them from otosclerosis.",
-   "with": "vestibular schwannoma = unilateral <b>SNHL</b> (sensorineural hearing loss) + tinnitus → MRI. All have normal otoscopy; the <b>tuning forks</b> separate them from otosclerosis.",
-   "note": ".danger: remove em dash, expand SNHL",
+   "with": "vestibular schwannoma = unilateral <b>SNHL</b> (sensorineural hearing loss) + tinnitus → MRI. All have normal otoscopy. The <b>tuning forks</b> separate them from otosclerosis.",
+   "note": ".danger: em dash, acronym",
    "claims": [
     {
-     "claim": "Vestibular schwannoma is unilateral SNHL plus tinnitus and needs MRI.",
-     "to": "vestibular schwannoma = unilateral SNHL (sensorineural hearing loss) + tinnitus → MRI."
+     "claim": "Vestibular schwannoma = unilateral SNHL + tinnitus.",
+     "to": "Aminoglycosides cause sensorineural loss (hair cell damage), never conductive · Ménière = episodic vertigo + fluctuating hearing loss + tinnitus · presbycusis = gradual, high-frequency, elderly · vestibular schwannoma = unilateral SNHL (sensorineural hearing loss) + tinnitus → MRI."
     },
     {
-     "claim": "All these mimics have normal otoscopy.",
-     "to": "All have normal otoscopy; the tuning forks separate them from otosclerosis."
+     "claim": "Vestibular schwannoma needs MRI.",
+     "to": "Aminoglycosides cause sensorineural loss (hair cell damage), never conductive · Ménière = episodic vertigo + fluctuating hearing loss + tinnitus · presbycusis = gradual, high-frequency, elderly · vestibular schwannoma = unilateral SNHL (sensorineural hearing loss) + tinnitus → MRI."
+    },
+    {
+     "claim": "All have normal otoscopy.",
+     "to": "All have normal otoscopy."
     },
     {
      "claim": "The tuning forks separate them from otosclerosis.",
-     "to": "All have normal otoscopy; the tuning forks separate them from otosclerosis."
+     "to": "The tuning forks separate them from otosclerosis."
     }
    ],
    "new_claims": [
     {
-     "claim": "Vestibular schwannoma is unilateral SNHL plus tinnitus and needs MRI.",
-     "from": "Vestibular schwannoma is unilateral SNHL plus tinnitus and needs MRI."
+     "claim": "Aminoglycosides cause sensorineural loss (hair cell damage), never conductive · Ménière = episodic vertigo + fluctuating hearing loss + tinnitus · presbycusis = gradual, high-frequency, elderly · vestibular schwannoma = unilateral SNHL (sensorineural hearing loss) + tinnitus → MRI.",
+     "from": "Vestibular schwannoma = unilateral SNHL + tinnitus."
     },
     {
-     "claim": "SNHL stands for sensorineural hearing loss.",
-     "from": "expansion"
+     "claim": "Aminoglycosides cause sensorineural loss (hair cell damage), never conductive · Ménière = episodic vertigo + fluctuating hearing loss + tinnitus · presbycusis = gradual, high-frequency, elderly · vestibular schwannoma = unilateral SNHL (sensorineural hearing loss) + tinnitus → MRI.",
+     "from": "Vestibular schwannoma needs MRI."
     },
     {
-     "claim": "All these mimics have normal otoscopy.",
-     "from": "All these mimics have normal otoscopy."
+     "claim": "All have normal otoscopy.",
+     "from": "All have normal otoscopy."
     },
     {
      "claim": "The tuning forks separate them from otosclerosis.",
      "from": "The tuning forks separate them from otosclerosis."
+    },
+    {
+     "claim": "SNHL stands for sensorineural hearing loss.",
+     "from": "expansion"
     }
    ]
   },
@@ -176,104 +216,99 @@
    "op": "replace",
    "brief": "redeye",
    "find": "Three questions triage all of it",
-   "with": "Three triage questions: acuity, deep pain, and the pupil, cornea or globe",
-   "note": "subtitle: replace slogan with the content",
+   "with": "Three questions triage every red eye",
+   "note": "sub: plain wording",
    "claims": [
     {
-     "claim": "Three questions triage the red eye.",
-     "to": "Three triage questions: acuity, deep pain, and the pupil, cornea or globe"
+     "claim": "Three questions triage all red eyes.",
+     "to": "Three questions triage every red eye"
     }
    ],
    "new_claims": [
     {
-     "claim": "Three triage questions cover acuity, deep pain, and the pupil, cornea or globe.",
-     "from": "Three questions triage the red eye."
+     "claim": "Three questions triage every red eye",
+     "from": "Three questions triage all red eyes."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "redeye",
-   "find": "<b>Any \"yes\" means this is not simple conjunctivitis</b> and the answer moves toward urgent ophthalmology.</p>",
-   "with": "<b>Any \"yes\" means this is not simple conjunctivitis</b> and points toward urgent ophthalmology.</p>",
-   "note": ".dp: remove reference to the answer",
+   "find": "<b>Any \"yes\" means this is not simple conjunctivitis</b> and the answer moves toward urgent ophthalmology.",
+   "with": "<b>Any \"yes\" means this is not simple conjunctivitis</b> and points toward urgent ophthalmology.",
+   "note": ".dp: remove framing about the answer",
    "claims": [
     {
-     "claim": "Any \"yes\" means this is not simple conjunctivitis.",
+     "claim": "Any yes means this is not simple conjunctivitis.",
      "to": "Any \"yes\" means this is not simple conjunctivitis and points toward urgent ophthalmology."
     },
     {
-     "claim": "Any yes moves toward urgent ophthalmology.",
+     "claim": "Any yes moves the management toward urgent ophthalmology.",
      "to": "Any \"yes\" means this is not simple conjunctivitis and points toward urgent ophthalmology."
     }
    ],
    "new_claims": [
     {
-     "claim": "Any \"yes\" means this is not simple conjunctivitis.",
-     "from": "Any \"yes\" means this is not simple conjunctivitis."
+     "claim": "Any \"yes\" means this is not simple conjunctivitis and points toward urgent ophthalmology.",
+     "from": "Any yes means this is not simple conjunctivitis."
     },
     {
-     "claim": "Any yes points toward urgent ophthalmology.",
-     "from": "Any yes moves toward urgent ophthalmology."
+     "claim": "Any \"yes\" means this is not simple conjunctivitis and points toward urgent ophthalmology.",
+     "from": "Any yes moves the management toward urgent ophthalmology."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "redeye",
-   "find": "<span class=\"lbl\">Neonatal conjunctivitis — a pure timing question</span> Day <b>0–1</b> chemical · day <b>2–5</b> <b>gonococcal</b> → IM/IV ceftriaxone + irrigation · day <b>5–14</b> <b>chlamydial</b> → <b>oral</b> erythromycin, or oral azithromycin as the alternative (counsel on pyloric stenosis with either) · day 6–14 HSV → IV acyclovir.",
-   "with": "<span class=\"lbl\">Neonatal conjunctivitis by day of onset</span> Day <b>0–1</b> chemical · day <b>2–5</b> <b>gonococcal</b> → <b>IM</b> (intramuscular)/<b>IV</b> (intravenous) ceftriaxone + irrigation · day <b>5–14</b> <b>chlamydial</b> → <b>oral</b> erythromycin, or oral azithromycin as the alternative (counsel on pyloric stenosis with either) · day 6–14 <b>HSV</b> (herpes simplex virus) → IV acyclovir.",
-   "note": "neonatal pearls: reword rhetorical label, expand IM, IV, HSV",
+   "find": "<span class=\"lbl\">Neonatal conjunctivitis — a pure timing question</span>",
+   "with": "<span class=\"lbl\">Neonatal conjunctivitis by day of onset</span>",
+   "note": "pearls label: rhetorical label with em dash",
    "reworded_label": [
     "Neonatal conjunctivitis — a pure timing question"
    ],
    "claims": [
     {
-     "claim": "Neonatal conjunctivitis is decided by timing.",
+     "claim": "Neonatal conjunctivitis is a pure timing question.",
      "to": "Neonatal conjunctivitis by day of onset"
-    },
-    {
-     "claim": "Day 2–5 gonococcal is treated with IM/IV ceftriaxone plus irrigation.",
-     "to": "day 2–5 gonococcal → IM (intramuscular)/IV (intravenous) ceftriaxone + irrigation"
-    },
-    {
-     "claim": "Day 6–14 HSV is treated with IV acyclovir.",
-     "to": "day 6–14 HSV (herpes simplex virus) → IV acyclovir."
     }
    ],
    "new_claims": [
     {
-     "claim": "Neonatal conjunctivitis is sorted by day of onset.",
-     "from": "Neonatal conjunctivitis is decided by timing."
-    },
-    {
-     "claim": "Day 2–5 gonococcal is treated with IM/IV ceftriaxone plus irrigation.",
-     "from": "Day 2–5 gonococcal is treated with IM/IV ceftriaxone plus irrigation."
-    },
-    {
-     "claim": "IM stands for intramuscular.",
-     "from": "expansion"
-    },
-    {
-     "claim": "IV stands for intravenous.",
-     "from": "expansion"
-    },
-    {
-     "claim": "HSV stands for herpes simplex virus.",
-     "from": "expansion"
-    },
-    {
-     "claim": "Day 6–14 HSV is treated with IV acyclovir.",
-     "from": "Day 6–14 HSV is treated with IV acyclovir."
+     "claim": "Neonatal conjunctivitis by day of onset",
+     "from": "Neonatal conjunctivitis is a pure timing question."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "redeye",
-   "find": " Topical steroids are the <b>answer</b> in uveitis and scleritis, and the <b>catastrophe</b> in HSV keratitis, bacterial/fungal keratitis, and undifferentiated red eye. If you cannot name the diagnosis with certainty, steroids are never the answer.",
-   "with": " Topical steroids are indicated in uveitis and scleritis. They are catastrophic in <b>HSV</b> (herpes simplex virus) keratitis, bacterial or fungal keratitis, and undifferentiated red eye. If you cannot name the diagnosis with certainty, never give steroids.",
-   "note": ".rule: remove rhythmic contrast and answer framing; expand HSV",
+   "find": "day 6–14 HSV → IV acyclovir.",
+   "with": "day 6–14 <b>HSV</b> (herpes simplex virus) → IV acyclovir.",
+   "note": "pearls: acronym",
+   "claims": [
+    {
+     "claim": "Day 6–14 HSV conjunctivitis is treated with IV acyclovir.",
+     "to": "Day 0–1 chemical · day 2–5 gonococcal → IM/IV ceftriaxone + irrigation · day 5–14 chlamydial → oral erythromycin, or oral azithromycin as the alternative (counsel on pyloric stenosis with either) · day 6–14 HSV (herpes simplex virus) → IV acyclovir."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Day 0–1 chemical · day 2–5 gonococcal → IM/IV ceftriaxone + irrigation · day 5–14 chlamydial → oral erythromycin, or oral azithromycin as the alternative (counsel on pyloric stenosis with either) · day 6–14 HSV (herpes simplex virus) → IV acyclovir.",
+     "from": "Day 6–14 HSV conjunctivitis is treated with IV acyclovir."
+    },
+    {
+     "claim": "HSV stands for herpes simplex virus.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "redeye",
+   "find": "Topical steroids are the <b>answer</b> in uveitis and scleritis, and the <b>catastrophe</b> in HSV keratitis, bacterial/fungal keratitis, and undifferentiated red eye. If you cannot name the diagnosis with certainty, steroids are never the answer.",
+   "with": "Topical steroids are indicated in uveitis and scleritis. They are catastrophic in <b>HSV</b> (herpes simplex virus) keratitis, bacterial/fungal keratitis, and undifferentiated red eye. If you cannot name the diagnosis with certainty, do not give steroids.",
+   "note": ".rule: remove emphasis bold and paired contrast",
    "reworded_bold": [
     "answer",
     "catastrophe"
@@ -284,12 +319,20 @@
      "to": "Topical steroids are indicated in uveitis and scleritis."
     },
     {
-     "claim": "Topical steroids are a catastrophe in HSV keratitis, bacterial/fungal keratitis, and undifferentiated red eye.",
-     "to": "They are catastrophic in HSV (herpes simplex virus) keratitis, bacterial or fungal keratitis, and undifferentiated red eye."
+     "claim": "Topical steroids are a catastrophe in HSV keratitis.",
+     "to": "They are catastrophic in HSV (herpes simplex virus) keratitis, bacterial/fungal keratitis, and undifferentiated red eye."
+    },
+    {
+     "claim": "Topical steroids are a catastrophe in bacterial/fungal keratitis.",
+     "to": "They are catastrophic in HSV (herpes simplex virus) keratitis, bacterial/fungal keratitis, and undifferentiated red eye."
+    },
+    {
+     "claim": "Topical steroids are a catastrophe in undifferentiated red eye.",
+     "to": "They are catastrophic in HSV (herpes simplex virus) keratitis, bacterial/fungal keratitis, and undifferentiated red eye."
     },
     {
      "claim": "If you cannot name the diagnosis with certainty, steroids are never the answer.",
-     "to": "If you cannot name the diagnosis with certainty, never give steroids."
+     "to": "If you cannot name the diagnosis with certainty, do not give steroids."
     }
    ],
    "new_claims": [
@@ -298,45 +341,69 @@
      "from": "Topical steroids are the answer in uveitis and scleritis."
     },
     {
-     "claim": "Topical steroids are catastrophic in HSV keratitis, bacterial or fungal keratitis, and undifferentiated red eye.",
-     "from": "Topical steroids are a catastrophe in HSV keratitis, bacterial/fungal keratitis, and undifferentiated red eye."
+     "claim": "They are catastrophic in HSV (herpes simplex virus) keratitis, bacterial/fungal keratitis, and undifferentiated red eye.",
+     "from": "Topical steroids are a catastrophe in HSV keratitis."
+    },
+    {
+     "claim": "They are catastrophic in HSV (herpes simplex virus) keratitis, bacterial/fungal keratitis, and undifferentiated red eye.",
+     "from": "Topical steroids are a catastrophe in bacterial/fungal keratitis."
+    },
+    {
+     "claim": "They are catastrophic in HSV (herpes simplex virus) keratitis, bacterial/fungal keratitis, and undifferentiated red eye.",
+     "from": "Topical steroids are a catastrophe in undifferentiated red eye."
+    },
+    {
+     "claim": "If you cannot name the diagnosis with certainty, do not give steroids.",
+     "from": "If you cannot name the diagnosis with certainty, steroids are never the answer."
     },
     {
      "claim": "HSV stands for herpes simplex virus.",
      "from": "expansion"
-    },
-    {
-     "claim": "If you cannot name the diagnosis with certainty, never give steroids.",
-     "from": "If you cannot name the diagnosis with certainty, steroids are never the answer."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "cluster",
-   "find": "<p>Acute <b>unilateral periorbital pain with ipsilateral autonomic signs</b> — ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection — is a cluster headache, and the autonomic column is what decides the stem. Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting. Acute treatment is <b>100% oxygen</b>; sumatriptan aborts attacks but is second-line (slower onset, side effects). Vision stays intact — <b>vision change or a fixed mid-dilated pupil moves the diagnosis to angle-closure glaucoma</b>.</p>",
-   "with": "<p>Acute <b>unilateral periorbital pain with ipsilateral autonomic signs</b> (ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection) is a cluster headache. Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting. Acute treatment is <b>100% oxygen</b>. Sumatriptan aborts attacks but is second-line because of slower onset and side effects. Vision stays intact in cluster headache; <b>vision change or a fixed mid-dilated pupil moves the diagnosis to angle-closure glaucoma</b>.</p>",
-   "note": ".dp: remove em dashes and stem framing; split sentences",
+   "find": "Acute <b>unilateral periorbital pain with ipsilateral autonomic signs</b> — ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection — is a cluster headache, and the autonomic column is what decides the stem. Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting. Acute treatment is <b>100% oxygen</b>; sumatriptan aborts attacks but is second-line (slower onset, side effects). Vision stays intact — <b>vision change or a fixed mid-dilated pupil moves the diagnosis to angle-closure glaucoma</b>.",
+   "with": "Acute <b>unilateral periorbital pain with ipsilateral autonomic signs</b> (ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection) is a cluster headache. Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting. Acute treatment is <b>100% oxygen</b>; sumatriptan aborts attacks but is second-line (slower onset, side effects). Vision stays intact in cluster headache; <b>vision change or a fixed mid-dilated pupil moves the diagnosis to angle-closure glaucoma</b>.",
+   "note": ".dp: remove em dashes and framing",
    "claims": [
     {
-     "claim": "Acute unilateral periorbital pain with ipsilateral autonomic signs (ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection) is a cluster headache.",
+     "claim": "Acute unilateral periorbital pain with ipsilateral autonomic signs is a cluster headache.",
+     "to": "Acute unilateral periorbital pain with ipsilateral autonomic signs (ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection) is a cluster headache."
+    },
+    {
+     "claim": "The autonomic signs are ptosis, miosis, lacrimation, rhinorrhea and conjunctival injection.",
      "to": "Acute unilateral periorbital pain with ipsilateral autonomic signs (ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection) is a cluster headache."
     },
     {
      "claim": "The autonomic column is what decides the stem.",
-     "dropped": "framing about the stem; the autonomic signs are named as the defining feature in the first sentence"
+     "dropped": "framing about the stem; the autonomic signs are stated in the first sentence"
     },
     {
-     "claim": "Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting.",
+     "claim": "Attacks wake the patient from sleep.",
+     "to": "Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting."
+    },
+    {
+     "claim": "Attacks peak fast.",
+     "to": "Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting."
+    },
+    {
+     "claim": "Attacks last ~90 minutes.",
+     "to": "Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting."
+    },
+    {
+     "claim": "Attacks recur several times daily for weeks before remitting.",
      "to": "Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting."
     },
     {
      "claim": "Acute treatment is 100% oxygen.",
-     "to": "Acute treatment is 100% oxygen."
+     "to": "Acute treatment is 100% oxygen; sumatriptan aborts attacks but is second-line (slower onset, side effects)."
     },
     {
-     "claim": "Sumatriptan aborts attacks but is second-line (slower onset, side effects).",
-     "to": "Sumatriptan aborts attacks but is second-line because of slower onset and side effects."
+     "claim": "Sumatriptan aborts attacks but is second-line because of slower onset and side effects.",
+     "to": "Acute treatment is 100% oxygen; sumatriptan aborts attacks but is second-line (slower onset, side effects)."
     },
     {
      "claim": "Vision stays intact.",
@@ -349,23 +416,39 @@
    ],
    "new_claims": [
     {
+     "claim": "Acute unilateral periorbital pain with ipsilateral autonomic signs is a cluster headache.",
+     "from": "Acute unilateral periorbital pain with ipsilateral autonomic signs is a cluster headache."
+    },
+    {
      "claim": "Acute unilateral periorbital pain with ipsilateral autonomic signs (ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection) is a cluster headache.",
-     "from": "Acute unilateral periorbital pain with ipsilateral autonomic signs (ptosis, miosis, lacrimation, rhinorrhea, conjunctival injection) is a cluster headache."
+     "from": "The autonomic signs are ptosis, miosis, lacrimation, rhinorrhea and conjunctival injection."
+    },
+    {
+     "claim": "Attacks wake the patient from sleep.",
+     "from": "Attacks wake the patient from sleep."
     },
     {
      "claim": "Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting.",
-     "from": "Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting."
+     "from": "Attacks peak fast."
+    },
+    {
+     "claim": "Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting.",
+     "from": "Attacks last ~90 minutes."
+    },
+    {
+     "claim": "Attacks wake the patient from sleep, peak fast, last ~90 minutes, and recur several times daily for weeks before remitting.",
+     "from": "Attacks recur several times daily for weeks before remitting."
     },
     {
      "claim": "Acute treatment is 100% oxygen.",
      "from": "Acute treatment is 100% oxygen."
     },
     {
-     "claim": "Sumatriptan aborts attacks but is second-line because of slower onset and side effects.",
-     "from": "Sumatriptan aborts attacks but is second-line (slower onset, side effects)."
+     "claim": "Acute treatment is 100% oxygen; sumatriptan aborts attacks but is second-line (slower onset, side effects).",
+     "from": "Sumatriptan aborts attacks but is second-line because of slower onset and side effects."
     },
     {
-     "claim": "Vision stays intact in cluster headache.",
+     "claim": "Vision stays intact.",
      "from": "Vision stays intact."
     },
     {
@@ -377,128 +460,152 @@
   {
    "op": "replace",
    "brief": "cluster",
-   "find": " Autonomic signs are nearly universal in cluster — their <b>absence</b> should force a second look · agitation during the attack is a cluster tell (migraineurs lie still) · rhinorrhea plus facial pain baits the sinusitis answer, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds, cluster lasts an hour and a half.",
-   "with": " Autonomic signs are nearly universal in cluster headache; their <b>absence</b> should prompt a second look at the diagnosis · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea with facial pain can suggest sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half.",
-   "note": "pearls: remove em dash and answer framing",
+   "find": "Autonomic signs are nearly universal in cluster — their <b>absence</b> should force a second look · agitation during the attack is a cluster tell (migraineurs lie still) · rhinorrhea plus facial pain baits the sinusitis answer, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds, cluster lasts an hour and a half.",
+   "with": "Autonomic signs are nearly universal in cluster headache; their <b>absence</b> should force a second look · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea plus facial pain suggests sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half.",
+   "note": ".pearls: em dash, personification",
    "claims": [
     {
      "claim": "Autonomic signs are nearly universal in cluster.",
-     "to": "Autonomic signs are nearly universal in cluster headache; their absence should prompt a second look at the diagnosis"
+     "to": "Autonomic signs are nearly universal in cluster headache; their absence should force a second look · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea plus facial pain suggests sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half."
     },
     {
      "claim": "Their absence should force a second look.",
-     "to": "Autonomic signs are nearly universal in cluster headache; their absence should prompt a second look at the diagnosis"
+     "to": "Autonomic signs are nearly universal in cluster headache; their absence should force a second look · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea plus facial pain suggests sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half."
     },
     {
-     "claim": "Agitation during the attack is a cluster tell; migraineurs lie still.",
-     "to": "agitation during the attack points to cluster (migraineurs lie still)"
+     "claim": "Agitation during the attack is a cluster tell.",
+     "to": "Autonomic signs are nearly universal in cluster headache; their absence should force a second look · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea plus facial pain suggests sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half."
+    },
+    {
+     "claim": "Migraineurs lie still.",
+     "to": "Autonomic signs are nearly universal in cluster headache; their absence should force a second look · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea plus facial pain suggests sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half."
     },
     {
      "claim": "Rhinorrhea plus facial pain baits the sinusitis answer.",
-     "to": "rhinorrhea with facial pain can suggest sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis"
+     "to": "Autonomic signs are nearly universal in cluster headache; their absence should force a second look · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea plus facial pain suggests sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half."
     },
     {
-     "claim": "Sinusitis pain is not episodic and brings congestion and fever, not ptosis.",
-     "to": "rhinorrhea with facial pain can suggest sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis"
+     "claim": "Sinusitis pain is not episodic.",
+     "to": "Autonomic signs are nearly universal in cluster headache; their absence should force a second look · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea plus facial pain suggests sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half."
     },
     {
-     "claim": "Trigeminal neuralgia lasts seconds; cluster lasts an hour and a half.",
-     "to": "trigeminal neuralgia lasts seconds; cluster lasts an hour and a half."
+     "claim": "Sinusitis brings congestion and fever, not ptosis.",
+     "to": "Autonomic signs are nearly universal in cluster headache; their absence should force a second look · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea plus facial pain suggests sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half."
+    },
+    {
+     "claim": "Trigeminal neuralgia lasts seconds.",
+     "to": "Autonomic signs are nearly universal in cluster headache; their absence should force a second look · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea plus facial pain suggests sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half."
+    },
+    {
+     "claim": "Cluster lasts an hour and a half.",
+     "to": "Autonomic signs are nearly universal in cluster headache; their absence should force a second look · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea plus facial pain suggests sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half."
     }
    ],
    "new_claims": [
     {
-     "claim": "Autonomic signs are nearly universal in cluster headache.",
+     "claim": "Autonomic signs are nearly universal in cluster.",
      "from": "Autonomic signs are nearly universal in cluster."
     },
     {
-     "claim": "Their absence should prompt a second look at the diagnosis.",
+     "claim": "Their absence should force a second look.",
      "from": "Their absence should force a second look."
     },
     {
-     "claim": "Agitation during the attack points to cluster; migraineurs lie still.",
-     "from": "Agitation during the attack is a cluster tell; migraineurs lie still."
+     "claim": "Autonomic signs are nearly universal in cluster headache; their absence should force a second look · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea plus facial pain suggests sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half.",
+     "from": "Agitation during the attack is a cluster tell."
     },
     {
-     "claim": "Rhinorrhea with facial pain can suggest sinusitis.",
+     "claim": "Migraineurs lie still.",
+     "from": "Migraineurs lie still."
+    },
+    {
+     "claim": "Autonomic signs are nearly universal in cluster headache; their absence should force a second look · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea plus facial pain suggests sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half.",
      "from": "Rhinorrhea plus facial pain baits the sinusitis answer."
     },
     {
-     "claim": "Sinusitis pain is not episodic and brings congestion and fever, not ptosis.",
-     "from": "Sinusitis pain is not episodic and brings congestion and fever, not ptosis."
+     "claim": "Sinusitis pain is not episodic.",
+     "from": "Sinusitis pain is not episodic."
     },
     {
-     "claim": "Trigeminal neuralgia lasts seconds; cluster lasts an hour and a half.",
-     "from": "Trigeminal neuralgia lasts seconds; cluster lasts an hour and a half."
+     "claim": "Autonomic signs are nearly universal in cluster headache; their absence should force a second look · agitation during the attack points to cluster (migraineurs lie still) · rhinorrhea plus facial pain suggests sinusitis, but sinusitis pain is not episodic and brings congestion and fever, not ptosis · trigeminal neuralgia lasts seconds; cluster lasts an hour and a half.",
+     "from": "Sinusitis brings congestion and fever, not ptosis."
+    },
+    {
+     "claim": "Trigeminal neuralgia lasts seconds.",
+     "from": "Trigeminal neuralgia lasts seconds."
+    },
+    {
+     "claim": "Cluster lasts an hour and a half.",
+     "from": "Cluster lasts an hour and a half."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "cluster",
-   "find": "Part I <b>Headache in a Child: What Earns Imaging</b> owns the pediatric red-flag gate that runs before this type differential.",
-   "with": "Part I <b>Headache in a Child: What Earns Imaging</b> covers the pediatric red-flag gate that comes before this headache-type differential.",
+   "find": "owns the pediatric red-flag gate that runs before this type differential.",
+   "with": "covers the pediatric red-flag check that comes before this headache-type differential.",
    "note": "Pairs with: owns -> covers",
    "claims": [
     {
-     "claim": "Headache in a Child: What Earns Imaging covers the pediatric red-flag gate that runs before this type differential.",
-     "to": "Part I Headache in a Child: What Earns Imaging covers the pediatric red-flag gate that comes before this headache-type differential."
+     "claim": "Headache in a Child: What Earns Imaging owns the pediatric red-flag gate that runs before this type differential.",
+     "to": "Part I Headache in a Child: What Earns Imaging covers the pediatric red-flag check that comes before this headache-type differential."
     }
    ],
    "new_claims": [
     {
-     "claim": "Headache in a Child: What Earns Imaging covers the pediatric red-flag gate that comes before this headache-type differential.",
-     "from": "Headache in a Child: What Earns Imaging covers the pediatric red-flag gate that runs before this type differential."
+     "claim": "Part I Headache in a Child: What Earns Imaging covers the pediatric red-flag check that comes before this headache-type differential.",
+     "from": "Headache in a Child: What Earns Imaging owns the pediatric red-flag gate that runs before this type differential."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "cluster",
-   "find": " Headache stems are solved on two axes — duration and company: seconds = neuralgia, minutes-to-hours with autonomic signs = cluster, hours-to-days with nausea/photophobia = migraine. Match the clock before the character of the pain.",
-   "with": " Classify a headache by two features: duration and associated signs. Attacks lasting seconds are neuralgia · minutes to hours with autonomic signs are cluster · hours to days with nausea or photophobia are migraine. Match the duration before the character of the pain.",
-   "note": ".rule: remove stem framing, em dash and equals chain",
+   "find": "Headache stems are solved on two axes — duration and company: seconds = neuralgia, minutes-to-hours with autonomic signs = cluster, hours-to-days with nausea/photophobia = migraine. Match the clock before the character of the pain.",
+   "with": "Classify headache by duration and associated features: seconds = neuralgia; minutes-to-hours with autonomic signs = cluster; hours-to-days with nausea/photophobia = migraine. Establish the duration before the character of the pain.",
+   "note": ".rule: em dash, slogan",
    "claims": [
     {
-     "claim": "Headaches are sorted on two axes, duration and associated features.",
-     "to": "Classify a headache by two features: duration and associated signs."
+     "claim": "Headache is classified on two axes, duration and associated features.",
+     "to": "Classify headache by duration and associated features: seconds = neuralgia; minutes-to-hours with autonomic signs = cluster; hours-to-days with nausea/photophobia = migraine."
     },
     {
-     "claim": "Seconds is neuralgia.",
-     "to": "Attacks lasting seconds are neuralgia · minutes to hours with autonomic signs are cluster · hours to days with nausea or photophobia are migraine."
+     "claim": "Seconds = neuralgia.",
+     "to": "Classify headache by duration and associated features: seconds = neuralgia; minutes-to-hours with autonomic signs = cluster; hours-to-days with nausea/photophobia = migraine."
     },
     {
-     "claim": "Minutes to hours with autonomic signs is cluster.",
-     "to": "Attacks lasting seconds are neuralgia · minutes to hours with autonomic signs are cluster · hours to days with nausea or photophobia are migraine."
+     "claim": "Minutes-to-hours with autonomic signs = cluster.",
+     "to": "Classify headache by duration and associated features: seconds = neuralgia; minutes-to-hours with autonomic signs = cluster; hours-to-days with nausea/photophobia = migraine."
     },
     {
-     "claim": "Hours to days with nausea or photophobia is migraine.",
-     "to": "Attacks lasting seconds are neuralgia · minutes to hours with autonomic signs are cluster · hours to days with nausea or photophobia are migraine."
+     "claim": "Hours-to-days with nausea/photophobia = migraine.",
+     "to": "Classify headache by duration and associated features: seconds = neuralgia; minutes-to-hours with autonomic signs = cluster; hours-to-days with nausea/photophobia = migraine."
     },
     {
      "claim": "Match the duration before the character of the pain.",
-     "to": "Match the duration before the character of the pain."
+     "to": "Establish the duration before the character of the pain."
     }
    ],
    "new_claims": [
     {
-     "claim": "Classify a headache by duration and associated signs.",
-     "from": "Headaches are sorted on two axes, duration and associated features."
+     "claim": "Classify headache by duration and associated features: seconds = neuralgia; minutes-to-hours with autonomic signs = cluster; hours-to-days with nausea/photophobia = migraine.",
+     "from": "Headache is classified on two axes, duration and associated features."
     },
     {
-     "claim": "Attacks lasting seconds are neuralgia.",
-     "from": "Seconds is neuralgia."
+     "claim": "Seconds = neuralgia.",
+     "from": "Seconds = neuralgia."
     },
     {
-     "claim": "Minutes to hours with autonomic signs are cluster.",
-     "from": "Minutes to hours with autonomic signs is cluster."
+     "claim": "Minutes-to-hours with autonomic signs = cluster.",
+     "from": "Minutes-to-hours with autonomic signs = cluster."
     },
     {
-     "claim": "Hours to days with nausea or photophobia are migraine.",
-     "from": "Hours to days with nausea or photophobia is migraine."
+     "claim": "Hours-to-days with nausea/photophobia = migraine.",
+     "from": "Hours-to-days with nausea/photophobia = migraine."
     },
     {
-     "claim": "Match the duration before the character of the pain.",
+     "claim": "Establish the duration before the character of the pain.",
      "from": "Match the duration before the character of the pain."
     }
    ]
@@ -506,43 +613,1610 @@
   {
    "op": "replace",
    "brief": "cluster",
-   "find": "<span class=\"trapwhy\">Rhinorrhea suggests sinusitis; the episodic pattern and autonomic bundle decide otherwise.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">Sumatriptan genuinely aborts cluster — but oxygen is the keyed first-line abortive.</span>",
-   "with": "<span class=\"trapwhy\">Sinusitis: Rhinorrhea suggests it, but the episodic pattern and the autonomic signs point to another diagnosis.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">Sumatriptan: It aborts cluster attacks, but oxygen is the first-line abortive.</span>",
-   "note": "traps: Option: why format, remove em dash and keyed framing",
+   "find": "Rhinorrhea suggests sinusitis; the episodic pattern and autonomic bundle decide otherwise.",
+   "with": "Sinusitis: rhinorrhea suggests it, but the episodic pattern and the autonomic signs point away from it.",
+   "note": "trap: Option: why",
    "claims": [
     {
      "claim": "Rhinorrhea suggests sinusitis.",
-     "to": "Sinusitis: Rhinorrhea suggests it, but the episodic pattern and the autonomic signs point to another diagnosis."
+     "to": "Sinusitis: rhinorrhea suggests it, but the episodic pattern and the autonomic signs point away from it."
     },
     {
-     "claim": "The episodic pattern and autonomic signs decide against sinusitis.",
-     "to": "Sinusitis: Rhinorrhea suggests it, but the episodic pattern and the autonomic signs point to another diagnosis."
-    },
-    {
-     "claim": "Sumatriptan aborts cluster.",
-     "to": "Sumatriptan: It aborts cluster attacks, but oxygen is the first-line abortive."
-    },
-    {
-     "claim": "Oxygen is the first-line abortive.",
-     "to": "Sumatriptan: It aborts cluster attacks, but oxygen is the first-line abortive."
+     "claim": "The episodic pattern and autonomic bundle argue against sinusitis.",
+     "to": "Sinusitis: rhinorrhea suggests it, but the episodic pattern and the autonomic signs point away from it."
     }
    ],
    "new_claims": [
     {
-     "claim": "Rhinorrhea suggests sinusitis.",
+     "claim": "Sinusitis: rhinorrhea suggests it, but the episodic pattern and the autonomic signs point away from it.",
      "from": "Rhinorrhea suggests sinusitis."
     },
     {
-     "claim": "The episodic pattern and autonomic signs point away from sinusitis.",
-     "from": "The episodic pattern and autonomic signs decide against sinusitis."
+     "claim": "Sinusitis: rhinorrhea suggests it, but the episodic pattern and the autonomic signs point away from it.",
+     "from": "The episodic pattern and autonomic bundle argue against sinusitis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "cluster",
+   "find": "Sumatriptan genuinely aborts cluster — but oxygen is the keyed first-line abortive.",
+   "with": "Sumatriptan: it aborts cluster attacks, but oxygen is the first-line abortive.",
+   "note": "trap: Option: why, em dash",
+   "claims": [
+    {
+     "claim": "Sumatriptan aborts cluster.",
+     "to": "Sumatriptan: it aborts cluster attacks, but oxygen is the first-line abortive."
     },
     {
-     "claim": "Sumatriptan aborts cluster attacks.",
+     "claim": "Oxygen is the first-line abortive.",
+     "to": "Sumatriptan: it aborts cluster attacks, but oxygen is the first-line abortive."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Sumatriptan: it aborts cluster attacks, but oxygen is the first-line abortive.",
      "from": "Sumatriptan aborts cluster."
     },
     {
      "claim": "Oxygen is the first-line abortive.",
      "from": "Oxygen is the first-line abortive."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "endocrine signs localize the tumor, imaging confirms it",
+   "with": "Endocrine signs localize the tumor, and imaging confirms it",
+   "note": "sub: rhythm pair",
+   "claims": [
+    {
+     "claim": "Endocrine signs localize the tumor.",
+     "to": "Endocrine signs localize the tumor, and imaging confirms it"
+    },
+    {
+     "claim": "Imaging confirms it.",
+     "to": "Endocrine signs localize the tumor, and imaging confirms it"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Endocrine signs localize the tumor.",
+     "from": "Endocrine signs localize the tumor."
+    },
+    {
+     "claim": "Imaging confirms it.",
+     "from": "Imaging confirms it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "Every option names a compartment, so the question is localization and the neurologic examination is deliberately clean — no dysmetria, no gait abnormality, no focal weakness, no skin findings. What is left are three endocrine facts: <b>linear growth arrested at age 11 while weight held</b>, <b><span class=\"scaleref\" data-scale=\"tanner-stages\">Tanner</span> 1 at 13</b>, and <b>papilledema</b>. Growth failure with preserved weight is a hormonal deceleration, not a nutritional one; arrest of puberty with it means more than one anterior pituitary axis has failed; and multiple axes failing together points at the <b>stalk</b>, not the gland. Add a headache with disc edema from obstructive hydrocephalus and the mass is midline and suprasellar — <b>cystic and calcified on MRI, a craniopharyngioma</b> from Rathke pouch remnants.",
+   "with": "The neurologic examination is normal: no dysmetria, no gait abnormality, no focal weakness, no skin findings. Three findings remain: <b>linear growth arrested at age 11 while weight held</b>, <b><span class=\"scaleref\" data-scale=\"tanner-stages\">Tanner</span> 1 at 13</b>, and <b>papilledema</b>. Growth failure with preserved weight is a hormonal deceleration, not a nutritional one. Arrest of puberty with it means more than one anterior pituitary axis has failed. Multiple axes failing together point to the <b>stalk</b>, not the gland. With headache and disc edema from obstructive hydrocephalus, the mass is midline and suprasellar. It is <b>cystic and calcified on MRI, a craniopharyngioma</b> from Rathke pouch remnants.",
+   "note": ".dp: framing, em dashes, split sentences",
+   "claims": [
+    {
+     "claim": "Every option names a compartment, so the question is localization.",
+     "dropped": "framing about the options and the question"
+    },
+    {
+     "claim": "The neurologic examination is clean: no dysmetria, no gait abnormality, no focal weakness, no skin findings.",
+     "to": "The neurologic examination is normal: no dysmetria, no gait abnormality, no focal weakness, no skin findings."
+    },
+    {
+     "claim": "Three endocrine facts remain: linear growth arrested at age 11 while weight held, Tanner 1 at 13, and papilledema.",
+     "to": "Three findings remain: linear growth arrested at age 11 while weight held, Tanner 1 at 13, and papilledema."
+    },
+    {
+     "claim": "Growth failure with preserved weight is a hormonal deceleration, not a nutritional one.",
+     "to": "Growth failure with preserved weight is a hormonal deceleration, not a nutritional one."
+    },
+    {
+     "claim": "Arrest of puberty with it means more than one anterior pituitary axis has failed.",
+     "to": "Arrest of puberty with it means more than one anterior pituitary axis has failed."
+    },
+    {
+     "claim": "Multiple axes failing together points at the stalk, not the gland.",
+     "to": "Multiple axes failing together point to the stalk, not the gland."
+    },
+    {
+     "claim": "With a headache and disc edema from obstructive hydrocephalus, the mass is midline and suprasellar.",
+     "to": "With headache and disc edema from obstructive hydrocephalus, the mass is midline and suprasellar."
+    },
+    {
+     "claim": "The mass is cystic and calcified on MRI.",
+     "to": "It is cystic and calcified on MRI, a craniopharyngioma from Rathke pouch remnants."
+    },
+    {
+     "claim": "It is a craniopharyngioma from Rathke pouch remnants.",
+     "to": "It is cystic and calcified on MRI, a craniopharyngioma from Rathke pouch remnants."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The neurologic examination is normal: no dysmetria, no gait abnormality, no focal weakness, no skin findings.",
+     "from": "The neurologic examination is clean: no dysmetria, no gait abnormality, no focal weakness, no skin findings."
+    },
+    {
+     "claim": "Three findings remain: linear growth arrested at age 11 while weight held, Tanner 1 at 13, and papilledema.",
+     "from": "Three endocrine facts remain: linear growth arrested at age 11 while weight held, Tanner 1 at 13, and papilledema."
+    },
+    {
+     "claim": "Growth failure with preserved weight is a hormonal deceleration, not a nutritional one.",
+     "from": "Growth failure with preserved weight is a hormonal deceleration, not a nutritional one."
+    },
+    {
+     "claim": "Arrest of puberty with it means more than one anterior pituitary axis has failed.",
+     "from": "Arrest of puberty with it means more than one anterior pituitary axis has failed."
+    },
+    {
+     "claim": "Multiple axes failing together point to the stalk, not the gland.",
+     "from": "Multiple axes failing together points at the stalk, not the gland."
+    },
+    {
+     "claim": "With headache and disc edema from obstructive hydrocephalus, the mass is midline and suprasellar.",
+     "from": "With a headache and disc edema from obstructive hydrocephalus, the mass is midline and suprasellar."
+    },
+    {
+     "claim": "It is cystic and calcified on MRI, a craniopharyngioma from Rathke pouch remnants.",
+     "from": "The mass is cystic and calcified on MRI."
+    },
+    {
+     "claim": "It is cystic and calcified on MRI, a craniopharyngioma from Rathke pouch remnants.",
+     "from": "It is a craniopharyngioma from Rathke pouch remnants."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "a second failed axis, which converts \"short child\" into \"hypopituitary child.\"",
+   "with": "a second failed axis, which indicates hypopituitarism rather than short stature alone.",
+   "note": "pertinent: rhetorical phrasing",
+   "claims": [
+    {
+     "claim": "A second failed axis converts short child into hypopituitary child.",
+     "to": "a second failed axis, which indicates hypopituitarism rather than short stature alone."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "a second failed axis, which indicates hypopituitarism rather than short stature alone.",
+     "from": "A second failed axis converts short child into hypopituitary child."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "excludes the cerebellar compartment and with it medulloblastoma, the posterior fossa option",
+   "with": "excludes the cerebellar compartment and with it medulloblastoma, the posterior fossa candidate",
+   "note": "pertinent: option framing",
+   "claims": [
+    {
+     "claim": "Normal coordination and gait exclude the cerebellar compartment and with it medulloblastoma, the posterior fossa option.",
+     "to": "excludes the cerebellar compartment and with it medulloblastoma, the posterior fossa candidate"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "excludes the cerebellar compartment and with it medulloblastoma, the posterior fossa candidate",
+     "from": "Normal coordination and gait exclude the cerebellar compartment and with it medulloblastoma, the posterior fossa option."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "<span class=\"lbl\">Management, in one line</span> The sequencing lesson this stem contains is one line and the bank carries it: once the mass is found, <b>glucocorticoid replacement goes in before levothyroxine</b> — thyroid hormone raises metabolic demand and can precipitate adrenal crisis in an unrecognized cortisol deficiency ⚠︎ — and desmopressin, not fluid restriction, answers the post-operative hypotonic polyuria.",
+   "with": "<span class=\"lbl\">Management</span> Once the mass is found, <b>glucocorticoid replacement goes in before levothyroxine</b>. Thyroid hormone raises metabolic demand and can precipitate adrenal crisis in an unrecognized cortisol deficiency ⚠︎. Treat post-operative hypotonic polyuria with desmopressin, not fluid restriction.",
+   "note": ".danger: framing, em dashes",
+   "reworded_label": [
+    "Management, in one line"
+   ],
+   "claims": [
+    {
+     "claim": "The sequencing lesson this stem contains is one line and the bank carries it.",
+     "dropped": "framing about the stem and the bank"
+    },
+    {
+     "claim": "Once the mass is found, glucocorticoid replacement goes in before levothyroxine.",
+     "to": "Once the mass is found, glucocorticoid replacement goes in before levothyroxine."
+    },
+    {
+     "claim": "Thyroid hormone raises metabolic demand.",
+     "to": "Thyroid hormone raises metabolic demand and can precipitate adrenal crisis in an unrecognized cortisol deficiency ⚠︎."
+    },
+    {
+     "claim": "Thyroid hormone can precipitate adrenal crisis in an unrecognized cortisol deficiency.",
+     "to": "Thyroid hormone raises metabolic demand and can precipitate adrenal crisis in an unrecognized cortisol deficiency ⚠︎."
+    },
+    {
+     "claim": "Desmopressin, not fluid restriction, answers the post-operative hypotonic polyuria.",
+     "to": "Treat post-operative hypotonic polyuria with desmopressin, not fluid restriction."
+    },
+    {
+     "claim": "Management in one line.",
+     "dropped": "rhetorical label"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Once the mass is found, glucocorticoid replacement goes in before levothyroxine.",
+     "from": "Once the mass is found, glucocorticoid replacement goes in before levothyroxine."
+    },
+    {
+     "claim": "Thyroid hormone raises metabolic demand.",
+     "from": "Thyroid hormone raises metabolic demand."
+    },
+    {
+     "claim": "Thyroid hormone raises metabolic demand and can precipitate adrenal crisis in an unrecognized cortisol deficiency ⚠︎.",
+     "from": "Thyroid hormone can precipitate adrenal crisis in an unrecognized cortisol deficiency."
+    },
+    {
+     "claim": "Treat post-operative hypotonic polyuria with desmopressin, not fluid restriction.",
+     "from": "Desmopressin, not fluid restriction, answers the post-operative hypotonic polyuria."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "No → this is not a hemispheric or posterior fossa question",
+   "with": "No → the lesion is not hemispheric or in the posterior fossa",
+   "note": "spine: meta",
+   "claims": [
+    {
+     "claim": "A nonfocal examination means this is not a hemispheric or posterior fossa question.",
+     "to": "No → the lesion is not hemispheric or in the posterior fossa"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "No → the lesion is not hemispheric or in the posterior fossa",
+     "from": "A nonfocal examination means this is not a hemispheric or posterior fossa question."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "Growth <i>and</i> puberty → panhypopituitarism → the stalk",
+   "with": "Growth <i>and</i> puberty → panhypopituitarism, which localizes to the stalk",
+   "note": "spine: one arrow",
+   "claims": [
+    {
+     "claim": "Failure of growth and puberty means panhypopituitarism.",
+     "to": "Growth and puberty → panhypopituitarism, which localizes to the stalk"
+    },
+    {
+     "claim": "Panhypopituitarism points to the stalk.",
+     "to": "Growth and puberty → panhypopituitarism, which localizes to the stalk"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Growth and puberty → panhypopituitarism, which localizes to the stalk",
+     "from": "Failure of growth and puberty means panhypopituitarism."
+    },
+    {
+     "claim": "Growth and puberty → panhypopituitarism, which localizes to the stalk",
+     "from": "Panhypopituitarism points to the stalk."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "germinoma or histiocytosis climb the list. Absent here",
+   "with": "germinoma or histiocytosis become more likely. Polyuria is absent here",
+   "note": "spine: plain",
+   "claims": [
+    {
+     "claim": "Polyuria makes germinoma or histiocytosis climb the list.",
+     "to": "germinoma or histiocytosis become more likely. Polyuria is absent here"
+    },
+    {
+     "claim": "Polyuria is absent here.",
+     "to": "germinoma or histiocytosis become more likely. Polyuria is absent here"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "germinoma or histiocytosis become more likely. Polyuria is absent here",
+     "from": "Polyuria makes germinoma or histiocytosis climb the list."
+    },
+    {
+     "claim": "Polyuria is absent here.",
+     "from": "Polyuria is absent here."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "The one-year duration is not a reassurance signal — it is the classic tempo of a slow-growing suprasellar tumor. The normal blood pressure and temperature exclude infection and crisis but say nothing about the pituitary; a morning cortisol would.",
+   "with": "The one-year duration is not reassuring; it is the classic tempo of a slow-growing suprasellar tumor. The normal blood pressure and temperature exclude infection and crisis but say nothing about the pituitary; a morning cortisol would.",
+   "note": "decoy: em dash",
+   "claims": [
+    {
+     "claim": "The one-year duration is not a reassurance signal.",
+     "to": "The one-year duration is not reassuring; it is the classic tempo of a slow-growing suprasellar tumor."
+    },
+    {
+     "claim": "One year is the classic tempo of a slow-growing suprasellar tumor.",
+     "to": "The one-year duration is not reassuring; it is the classic tempo of a slow-growing suprasellar tumor."
+    },
+    {
+     "claim": "Normal blood pressure and temperature exclude infection and crisis.",
+     "to": "The normal blood pressure and temperature exclude infection and crisis but say nothing about the pituitary; a morning cortisol would."
+    },
+    {
+     "claim": "Normal blood pressure and temperature say nothing about the pituitary.",
+     "to": "The normal blood pressure and temperature exclude infection and crisis but say nothing about the pituitary; a morning cortisol would."
+    },
+    {
+     "claim": "A morning cortisol would assess the pituitary.",
+     "to": "The normal blood pressure and temperature exclude infection and crisis but say nothing about the pituitary; a morning cortisol would."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The one-year duration is not reassuring; it is the classic tempo of a slow-growing suprasellar tumor.",
+     "from": "The one-year duration is not a reassurance signal."
+    },
+    {
+     "claim": "The one-year duration is not reassuring; it is the classic tempo of a slow-growing suprasellar tumor.",
+     "from": "One year is the classic tempo of a slow-growing suprasellar tumor."
+    },
+    {
+     "claim": "Normal blood pressure and temperature exclude infection and crisis.",
+     "from": "Normal blood pressure and temperature exclude infection and crisis."
+    },
+    {
+     "claim": "The normal blood pressure and temperature exclude infection and crisis but say nothing about the pituitary; a morning cortisol would.",
+     "from": "Normal blood pressure and temperature say nothing about the pituitary."
+    },
+    {
+     "claim": "The normal blood pressure and temperature exclude infection and crisis but say nothing about the pituitary; a morning cortisol would.",
+     "from": "A morning cortisol would assess the pituitary."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "Height falling away from a stable weight with Tanner arrest and headache is a suprasellar mass until MRI says otherwise — calcified and cystic names craniopharyngioma. &middot; <b>Plot the growth chart before you order the headache imaging.</b> A height percentile crossing is a localizing sign, and it is the one finding a normal neurologic examination cannot conceal. &middot; Height lost with weight preserved is endocrine; weight lost before height is nutritional or gastrointestinal. The diencephalic syndrome of a hypothalamic glioma is the exception that proves it — emaciation with a normal appetite ⚠︎. &middot; <b>Diabetes insipidus first, anterior axes later</b> shifts the list from craniopharyngioma to germinoma or Langerhans cell histiocytosis; send CSF and serum β-hCG and AFP before you assume the calcified answer. &middot; Replace <b>cortisol before thyroid hormone</b> in any new panhypopituitarism ⚠︎, and expect the post-operative sodium to rise, not fall, when the stalk has been handled. &middot; <b>Boundary:</b> untreated acquired primary hypothyroidism reproduces this growth pattern exactly — height arrest, preserved or rising weight, delayed puberty. It does not produce papilledema. Check TSH and free T4, and let the disc edema break the tie.",
+   "with": "Height falling away from a stable weight with Tanner arrest and headache is a suprasellar mass until MRI says otherwise; calcified and cystic indicates craniopharyngioma. &middot; <b>Plot the growth chart before you order the headache imaging.</b> A height percentile crossing is a localizing sign, and it remains detectable when the neurologic examination is normal. &middot; Height lost with weight preserved is endocrine; weight lost before height is nutritional or gastrointestinal. The exception is the diencephalic syndrome of a hypothalamic glioma: emaciation with a normal appetite ⚠︎. &middot; <b>Diabetes insipidus first, anterior axes later</b> makes germinoma or Langerhans cell histiocytosis more likely than craniopharyngioma. Send <b>CSF</b> (cerebrospinal fluid) and serum <b>β-hCG</b> (beta human chorionic gonadotropin) and <b>AFP</b> (alpha-fetoprotein) before assuming craniopharyngioma. &middot; Replace <b>cortisol before thyroid hormone</b> in any new panhypopituitarism ⚠︎. Expect the post-operative sodium to rise, not fall, when the stalk has been handled. &middot; <b>Boundary:</b> untreated acquired primary hypothyroidism reproduces this growth pattern exactly: height arrest, preserved or rising weight, delayed puberty. It does not produce papilledema. Check <b>TSH</b> (thyroid-stimulating hormone) and free T4; disc edema separates the two.",
+   "note": ".pearls: em dashes, aphorisms, acronyms",
+   "claims": [
+    {
+     "claim": "Height falling away from a stable weight with Tanner arrest and headache is a suprasellar mass until MRI says otherwise.",
+     "to": "Height falling away from a stable weight with Tanner arrest and headache is a suprasellar mass until MRI says otherwise; calcified and cystic indicates craniopharyngioma."
+    },
+    {
+     "claim": "Calcified and cystic names craniopharyngioma.",
+     "to": "Height falling away from a stable weight with Tanner arrest and headache is a suprasellar mass until MRI says otherwise; calcified and cystic indicates craniopharyngioma."
+    },
+    {
+     "claim": "Plot the growth chart before you order the headache imaging.",
+     "to": "Plot the growth chart before you order the headache imaging."
+    },
+    {
+     "claim": "A height percentile crossing is a localizing sign.",
+     "to": "A height percentile crossing is a localizing sign, and it remains detectable when the neurologic examination is normal."
+    },
+    {
+     "claim": "A normal neurologic examination cannot conceal a height percentile crossing.",
+     "to": "A height percentile crossing is a localizing sign, and it remains detectable when the neurologic examination is normal."
+    },
+    {
+     "claim": "Height lost with weight preserved is endocrine.",
+     "to": "Height lost with weight preserved is endocrine; weight lost before height is nutritional or gastrointestinal."
+    },
+    {
+     "claim": "Weight lost before height is nutritional or gastrointestinal.",
+     "to": "Height lost with weight preserved is endocrine; weight lost before height is nutritional or gastrointestinal."
+    },
+    {
+     "claim": "The diencephalic syndrome of a hypothalamic glioma, emaciation with a normal appetite, is the exception.",
+     "to": "The exception is the diencephalic syndrome of a hypothalamic glioma: emaciation with a normal appetite ⚠︎."
+    },
+    {
+     "claim": "Diabetes insipidus first, anterior axes later shifts the list from craniopharyngioma to germinoma or Langerhans cell histiocytosis.",
+     "to": "Diabetes insipidus first, anterior axes later makes germinoma or Langerhans cell histiocytosis more likely than craniopharyngioma."
+    },
+    {
+     "claim": "Send CSF and serum β-hCG and AFP before you assume the calcified answer.",
+     "to": "Send CSF (cerebrospinal fluid) and serum β-hCG (beta human chorionic gonadotropin) and AFP (alpha-fetoprotein) before assuming craniopharyngioma."
+    },
+    {
+     "claim": "Replace cortisol before thyroid hormone in any new panhypopituitarism.",
+     "to": "Replace cortisol before thyroid hormone in any new panhypopituitarism ⚠︎."
+    },
+    {
+     "claim": "Expect the post-operative sodium to rise, not fall, when the stalk has been handled.",
+     "to": "Expect the post-operative sodium to rise, not fall, when the stalk has been handled."
+    },
+    {
+     "claim": "Untreated acquired primary hypothyroidism reproduces this growth pattern exactly: height arrest, preserved or rising weight, delayed puberty.",
+     "to": "Boundary: untreated acquired primary hypothyroidism reproduces this growth pattern exactly: height arrest, preserved or rising weight, delayed puberty."
+    },
+    {
+     "claim": "Hypothyroidism does not produce papilledema.",
+     "to": "It does not produce papilledema."
+    },
+    {
+     "claim": "Check TSH and free T4.",
+     "to": "Check TSH (thyroid-stimulating hormone) and free T4; disc edema separates the two."
+    },
+    {
+     "claim": "The disc edema breaks the tie.",
+     "to": "Check TSH (thyroid-stimulating hormone) and free T4; disc edema separates the two."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Height falling away from a stable weight with Tanner arrest and headache is a suprasellar mass until MRI says otherwise.",
+     "from": "Height falling away from a stable weight with Tanner arrest and headache is a suprasellar mass until MRI says otherwise."
+    },
+    {
+     "claim": "Height falling away from a stable weight with Tanner arrest and headache is a suprasellar mass until MRI says otherwise; calcified and cystic indicates craniopharyngioma.",
+     "from": "Calcified and cystic names craniopharyngioma."
+    },
+    {
+     "claim": "Plot the growth chart before you order the headache imaging.",
+     "from": "Plot the growth chart before you order the headache imaging."
+    },
+    {
+     "claim": "A height percentile crossing is a localizing sign.",
+     "from": "A height percentile crossing is a localizing sign."
+    },
+    {
+     "claim": "A height percentile crossing is a localizing sign, and it remains detectable when the neurologic examination is normal.",
+     "from": "A normal neurologic examination cannot conceal a height percentile crossing."
+    },
+    {
+     "claim": "Height lost with weight preserved is endocrine.",
+     "from": "Height lost with weight preserved is endocrine."
+    },
+    {
+     "claim": "Weight lost before height is nutritional or gastrointestinal.",
+     "from": "Weight lost before height is nutritional or gastrointestinal."
+    },
+    {
+     "claim": "The exception is the diencephalic syndrome of a hypothalamic glioma: emaciation with a normal appetite ⚠︎.",
+     "from": "The diencephalic syndrome of a hypothalamic glioma, emaciation with a normal appetite, is the exception."
+    },
+    {
+     "claim": "Diabetes insipidus first, anterior axes later makes germinoma or Langerhans cell histiocytosis more likely than craniopharyngioma.",
+     "from": "Diabetes insipidus first, anterior axes later shifts the list from craniopharyngioma to germinoma or Langerhans cell histiocytosis."
+    },
+    {
+     "claim": "Send CSF (cerebrospinal fluid) and serum β-hCG (beta human chorionic gonadotropin) and AFP (alpha-fetoprotein) before assuming craniopharyngioma.",
+     "from": "Send CSF and serum β-hCG and AFP before you assume the calcified answer."
+    },
+    {
+     "claim": "Replace cortisol before thyroid hormone in any new panhypopituitarism.",
+     "from": "Replace cortisol before thyroid hormone in any new panhypopituitarism."
+    },
+    {
+     "claim": "Expect the post-operative sodium to rise, not fall, when the stalk has been handled.",
+     "from": "Expect the post-operative sodium to rise, not fall, when the stalk has been handled."
+    },
+    {
+     "claim": "Untreated acquired primary hypothyroidism reproduces this growth pattern exactly: height arrest, preserved or rising weight, delayed puberty.",
+     "from": "Untreated acquired primary hypothyroidism reproduces this growth pattern exactly: height arrest, preserved or rising weight, delayed puberty."
+    },
+    {
+     "claim": "It does not produce papilledema.",
+     "from": "Hypothyroidism does not produce papilledema."
+    },
+    {
+     "claim": "Check TSH and free T4.",
+     "from": "Check TSH and free T4."
+    },
+    {
+     "claim": "Check TSH (thyroid-stimulating hormone) and free T4; disc edema separates the two.",
+     "from": "The disc edema breaks the tie."
+    },
+    {
+     "claim": "CSF stands for cerebrospinal fluid.",
+     "from": "expansion"
+    },
+    {
+     "claim": "β-hCG stands for beta human chorionic gonadotropin.",
+     "from": "expansion"
+    },
+    {
+     "claim": "AFP stands for alpha-fetoprotein.",
+     "from": "expansion"
+    },
+    {
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "its mirror twin, <b>Headache in a Child: What Earns Imaging</b>. Same complaint — a 13-year-old girl with worsening headaches — with the red-flag gate answered in opposite directions. Store the discriminator as a question: <i>is anything abnormal outside the headache history — the fundus, the growth chart, the Tanner stage, the neurologic examination?</i> If yes, image and look at the sella; if no, explain the change in pattern. <b>Posterior Fossa Localization</b> owns the other compartment: when the abnormality is on the neurologic examination rather than the growth chart, the mass is in the posterior fossa, not the sella. <b>Hyperprolactinemia</b> owns the intrasellar adenoma in the adult. Part I <b>Polyuria: Water or Solute</b> owns the step before this one &mdash; whether the polyuria is water or solute, and whether the deprivation test is still owed.",
+   "with": "<b>Headache in a Child: What Earns Imaging</b> covers the same complaint, a 13-year-old girl with worsening headaches, with the red-flag gate answered in opposite directions. Ask: <i>is anything abnormal outside the headache history (the fundus, the growth chart, the Tanner stage, the neurologic examination)?</i> If yes, image and look at the sella; if no, explain the change in pattern. <b>Posterior Fossa Localization</b> covers the other compartment. When the abnormality is on the neurologic examination rather than the growth chart, the mass is in the posterior fossa, not the sella. <b>Hyperprolactinemia</b> covers the intrasellar adenoma in the adult. Part I <b>Polyuria: Water or Solute</b> covers the step before this one: whether the polyuria is water or solute, and whether the deprivation test is still needed.",
+   "note": "Pairs with: owns -> covers, Ask:, em dashes",
+   "claims": [
+    {
+     "claim": "Its mirror twin is Headache in a Child: What Earns Imaging.",
+     "to": "Headache in a Child: What Earns Imaging covers the same complaint, a 13-year-old girl with worsening headaches, with the red-flag gate answered in opposite directions."
+    },
+    {
+     "claim": "The twin has the same complaint, a 13-year-old girl with worsening headaches.",
+     "to": "Headache in a Child: What Earns Imaging covers the same complaint, a 13-year-old girl with worsening headaches, with the red-flag gate answered in opposite directions."
+    },
+    {
+     "claim": "The red-flag gate is answered in opposite directions.",
+     "to": "Headache in a Child: What Earns Imaging covers the same complaint, a 13-year-old girl with worsening headaches, with the red-flag gate answered in opposite directions."
+    },
+    {
+     "claim": "The discriminator question: is anything abnormal outside the headache history, the fundus, the growth chart, the Tanner stage, the neurologic examination?",
+     "to": "Ask: is anything abnormal outside the headache history (the fundus, the growth chart, the Tanner stage, the neurologic examination)?"
+    },
+    {
+     "claim": "If yes, image and look at the sella; if no, explain the change in pattern.",
+     "to": "If yes, image and look at the sella; if no, explain the change in pattern."
+    },
+    {
+     "claim": "Posterior Fossa Localization owns the other compartment.",
+     "to": "Posterior Fossa Localization covers the other compartment."
+    },
+    {
+     "claim": "When the abnormality is on the neurologic examination rather than the growth chart, the mass is in the posterior fossa, not the sella.",
+     "to": "When the abnormality is on the neurologic examination rather than the growth chart, the mass is in the posterior fossa, not the sella."
+    },
+    {
+     "claim": "Hyperprolactinemia owns the intrasellar adenoma in the adult.",
+     "to": "Hyperprolactinemia covers the intrasellar adenoma in the adult."
+    },
+    {
+     "claim": "Polyuria: Water or Solute owns the step before this one: whether the polyuria is water or solute, and whether the deprivation test is still owed.",
+     "to": "Part I Polyuria: Water or Solute covers the step before this one: whether the polyuria is water or solute, and whether the deprivation test is still needed."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Headache in a Child: What Earns Imaging covers the same complaint, a 13-year-old girl with worsening headaches, with the red-flag gate answered in opposite directions.",
+     "from": "Its mirror twin is Headache in a Child: What Earns Imaging."
+    },
+    {
+     "claim": "Headache in a Child: What Earns Imaging covers the same complaint, a 13-year-old girl with worsening headaches, with the red-flag gate answered in opposite directions.",
+     "from": "The twin has the same complaint, a 13-year-old girl with worsening headaches."
+    },
+    {
+     "claim": "Headache in a Child: What Earns Imaging covers the same complaint, a 13-year-old girl with worsening headaches, with the red-flag gate answered in opposite directions.",
+     "from": "The red-flag gate is answered in opposite directions."
+    },
+    {
+     "claim": "Ask: is anything abnormal outside the headache history (the fundus, the growth chart, the Tanner stage, the neurologic examination)?",
+     "from": "The discriminator question: is anything abnormal outside the headache history, the fundus, the growth chart, the Tanner stage, the neurologic examination?"
+    },
+    {
+     "claim": "If yes, image and look at the sella; if no, explain the change in pattern.",
+     "from": "If yes, image and look at the sella; if no, explain the change in pattern."
+    },
+    {
+     "claim": "Posterior Fossa Localization covers the other compartment.",
+     "from": "Posterior Fossa Localization owns the other compartment."
+    },
+    {
+     "claim": "When the abnormality is on the neurologic examination rather than the growth chart, the mass is in the posterior fossa, not the sella.",
+     "from": "When the abnormality is on the neurologic examination rather than the growth chart, the mass is in the posterior fossa, not the sella."
+    },
+    {
+     "claim": "Hyperprolactinemia covers the intrasellar adenoma in the adult.",
+     "from": "Hyperprolactinemia owns the intrasellar adenoma in the adult."
+    },
+    {
+     "claim": "Part I Polyuria: Water or Solute covers the step before this one: whether the polyuria is water or solute, and whether the deprivation test is still needed.",
+     "from": "Polyuria: Water or Solute owns the step before this one: whether the polyuria is water or solute, and whether the deprivation test is still owed."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "When a mass sits on a midline structure, the localizing finding may be endocrine rather than neurologic — a growth chart and a Tanner stage are examination findings, and in the sellar region they arrive years before the field cut and the papilledema.",
+   "with": "When a mass sits on a midline structure, the localizing finding may be endocrine rather than neurologic. A growth chart and a Tanner stage are examination findings. In the sellar region they appear years before the field cut and the papilledema.",
+   "note": ".rule: em dash, split",
+   "claims": [
+    {
+     "claim": "When a mass sits on a midline structure, the localizing finding may be endocrine rather than neurologic.",
+     "to": "When a mass sits on a midline structure, the localizing finding may be endocrine rather than neurologic."
+    },
+    {
+     "claim": "A growth chart and a Tanner stage are examination findings.",
+     "to": "A growth chart and a Tanner stage are examination findings."
+    },
+    {
+     "claim": "In the sellar region they arrive years before the field cut and the papilledema.",
+     "to": "In the sellar region they appear years before the field cut and the papilledema."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a mass sits on a midline structure, the localizing finding may be endocrine rather than neurologic.",
+     "from": "When a mass sits on a midline structure, the localizing finding may be endocrine rather than neurologic."
+    },
+    {
+     "claim": "A growth chart and a Tanner stage are examination findings.",
+     "from": "A growth chart and a Tanner stage are examination findings."
+    },
+    {
+     "claim": "In the sellar region they appear years before the field cut and the papilledema.",
+     "from": "In the sellar region they arrive years before the field cut and the papilledema."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "and TSC does not arrest linear growth",
+   "with": "and <b>TSC</b> (tuberous sclerosis complex) does not arrest linear growth",
+   "note": "trap: acronym",
+   "claims": [
+    {
+     "claim": "TSC does not arrest linear growth.",
+     "to": "Subependymal nodules in the lateral ventricles: Tuberous sclerosis is a skin-first diagnosis; the stem states the skin examination is normal, and TSC (tuberous sclerosis complex) does not arrest linear growth"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Subependymal nodules in the lateral ventricles: Tuberous sclerosis is a skin-first diagnosis; the stem states the skin examination is normal, and TSC (tuberous sclerosis complex) does not arrest linear growth",
+     "from": "TSC does not arrest linear growth."
+    },
+    {
+     "claim": "TSC stands for tuberous sclerosis complex.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "what licenses neuroimaging, and what does not",
+   "with": "When pediatric headache needs neuroimaging, and when it does not",
+   "note": "sub: plain wording",
+   "claims": [
+    {
+     "claim": "Some features license neuroimaging and others do not.",
+     "to": "When pediatric headache needs neuroimaging, and when it does not"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When pediatric headache needs neuroimaging, and when it does not",
+     "from": "Some features license neuroimaging and others do not."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "The fork is a threshold, not a differential: this headache is already diagnosable — <b>unilateral, pulsatile, hours long, worsened by activity, with nausea and vomiting, in an adolescent girl with a two-year history of the same thing</b> — so the only question is whether anything in the stem crosses the imaging gate. Three features are offered as if they do, and none of them does: vomiting is a <b>diagnostic criterion of migraine</b>, not a pressure sign; the disability (\"could not finish her homework\") measures severity, which no guideline images for; and the increase in frequency is a change in <b>rate, not in character</b> (in-context: the headaches \"have the same characteristics,\" remain monthly, and the change tracks the arrival of regular menses since menarche). The examination is normal, including the pupils, and no papilledema is described. <b>No additional testing</b> (in-context: imaging is reserved for an abnormal neurologic examination, signs of raised intracranial pressure, or a dramatic change in headache characteristics).",
+   "with": "This headache is already diagnosable: <b>unilateral, pulsatile, hours long, worsened by activity, with nausea and vomiting, in an adolescent girl with a two-year history of the same thing</b>. Image only if a feature meets an imaging indication. None of the following three features meets one. Vomiting is a <b>diagnostic criterion of migraine</b>, not a pressure sign. The disability (\"could not finish her homework\") measures severity, and no guideline images for severity. The increase in frequency is a change in <b>rate, not in character</b>. The headaches \"have the same characteristics\" and remain monthly. The change tracks the arrival of regular menses since menarche. The examination is normal, including the pupils, and no papilledema is described. <b>No additional testing</b> is needed. Imaging is reserved for an abnormal neurologic examination, signs of raised intracranial pressure, or a dramatic change in headache characteristics.",
+   "note": ".dp p1: framing, em dashes, in-context tags",
+   "claims": [
+    {
+     "claim": "The fork is a threshold, not a differential.",
+     "to": "Image only if a feature meets an imaging indication."
+    },
+    {
+     "claim": "This headache is already diagnosable: unilateral, pulsatile, hours long, worsened by activity, with nausea and vomiting, in an adolescent girl with a two-year history of the same thing.",
+     "to": "This headache is already diagnosable: unilateral, pulsatile, hours long, worsened by activity, with nausea and vomiting, in an adolescent girl with a two-year history of the same thing."
+    },
+    {
+     "claim": "The only question is whether anything in the stem crosses the imaging gate.",
+     "to": "Image only if a feature meets an imaging indication."
+    },
+    {
+     "claim": "Three features are offered as if they cross the gate, and none of them does.",
+     "to": "None of the following three features meets one."
+    },
+    {
+     "claim": "Vomiting is a diagnostic criterion of migraine, not a pressure sign.",
+     "to": "Vomiting is a diagnostic criterion of migraine, not a pressure sign."
+    },
+    {
+     "claim": "The disability (could not finish her homework) measures severity.",
+     "to": "The disability (\"could not finish her homework\") measures severity, and no guideline images for severity."
+    },
+    {
+     "claim": "No guideline images for severity.",
+     "to": "The disability (\"could not finish her homework\") measures severity, and no guideline images for severity."
+    },
+    {
+     "claim": "The increase in frequency is a change in rate, not in character.",
+     "to": "The increase in frequency is a change in rate, not in character."
+    },
+    {
+     "claim": "The headaches have the same characteristics and remain monthly.",
+     "to": "The headaches \"have the same characteristics\" and remain monthly."
+    },
+    {
+     "claim": "The change tracks the arrival of regular menses since menarche.",
+     "to": "The change tracks the arrival of regular menses since menarche."
+    },
+    {
+     "claim": "The examination is normal, including the pupils.",
+     "to": "The examination is normal, including the pupils, and no papilledema is described."
+    },
+    {
+     "claim": "No papilledema is described.",
+     "to": "The examination is normal, including the pupils, and no papilledema is described."
+    },
+    {
+     "claim": "The answer is no additional testing.",
+     "to": "No additional testing is needed."
+    },
+    {
+     "claim": "Imaging is reserved for an abnormal neurologic examination, signs of raised intracranial pressure, or a dramatic change in headache characteristics.",
+     "to": "Imaging is reserved for an abnormal neurologic examination, signs of raised intracranial pressure, or a dramatic change in headache characteristics."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Image only if a feature meets an imaging indication.",
+     "from": "The fork is a threshold, not a differential."
+    },
+    {
+     "claim": "This headache is already diagnosable: unilateral, pulsatile, hours long, worsened by activity, with nausea and vomiting, in an adolescent girl with a two-year history of the same thing.",
+     "from": "This headache is already diagnosable: unilateral, pulsatile, hours long, worsened by activity, with nausea and vomiting, in an adolescent girl with a two-year history of the same thing."
+    },
+    {
+     "claim": "Image only if a feature meets an imaging indication.",
+     "from": "The only question is whether anything in the stem crosses the imaging gate."
+    },
+    {
+     "claim": "None of the following three features meets one.",
+     "from": "Three features are offered as if they cross the gate, and none of them does."
+    },
+    {
+     "claim": "Vomiting is a diagnostic criterion of migraine, not a pressure sign.",
+     "from": "Vomiting is a diagnostic criterion of migraine, not a pressure sign."
+    },
+    {
+     "claim": "The disability (\"could not finish her homework\") measures severity, and no guideline images for severity.",
+     "from": "The disability (could not finish her homework) measures severity."
+    },
+    {
+     "claim": "No guideline images for severity.",
+     "from": "No guideline images for severity."
+    },
+    {
+     "claim": "The increase in frequency is a change in rate, not in character.",
+     "from": "The increase in frequency is a change in rate, not in character."
+    },
+    {
+     "claim": "The headaches \"have the same characteristics\" and remain monthly.",
+     "from": "The headaches have the same characteristics and remain monthly."
+    },
+    {
+     "claim": "The change tracks the arrival of regular menses since menarche.",
+     "from": "The change tracks the arrival of regular menses since menarche."
+    },
+    {
+     "claim": "The examination is normal, including the pupils.",
+     "from": "The examination is normal, including the pupils."
+    },
+    {
+     "claim": "No papilledema is described.",
+     "from": "No papilledema is described."
+    },
+    {
+     "claim": "No additional testing is needed.",
+     "from": "The answer is no additional testing."
+    },
+    {
+     "claim": "Imaging is reserved for an abnormal neurologic examination, signs of raised intracranial pressure, or a dramatic change in headache characteristics.",
+     "from": "Imaging is reserved for an abnormal neurologic examination, signs of raised intracranial pressure, or a dramatic change in headache characteristics."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "Once <b>papilledema</b> opens the gate, the next question is why the pressure is high, and the medication list often answers it. An adolescent on <b>isotretinoin</b> with a month of morning headache and vomiting, brief blurring of vision, <b>bilateral</b> disc edema and <b>full visual fields</b> has <b>drug-induced intracranial hypertension</b>: a mass at the optic chiasm would cut the fields, and optic neuritis is painful, acute and usually one eye.",
+   "with": "When <b>papilledema</b> is present, imaging is indicated. Then find why the pressure is high; the medication list often answers it. An adolescent on <b>isotretinoin</b> with a month of morning headache and vomiting, brief blurring of vision, <b>bilateral</b> disc edema and <b>full visual fields</b> has <b>drug-induced intracranial hypertension</b>. A mass at the optic chiasm would cut the fields. Optic neuritis is painful, acute and usually affects one eye.",
+   "note": ".dp p2: metaphor, split",
+   "claims": [
+    {
+     "claim": "Papilledema opens the imaging gate.",
+     "to": "When papilledema is present, imaging is indicated."
+    },
+    {
+     "claim": "The next question is why the pressure is high.",
+     "to": "Then find why the pressure is high; the medication list often answers it."
+    },
+    {
+     "claim": "The medication list often answers it.",
+     "to": "Then find why the pressure is high; the medication list often answers it."
+    },
+    {
+     "claim": "An adolescent on isotretinoin with a month of morning headache and vomiting, brief blurring of vision, bilateral disc edema and full visual fields has drug-induced intracranial hypertension.",
+     "to": "An adolescent on isotretinoin with a month of morning headache and vomiting, brief blurring of vision, bilateral disc edema and full visual fields has drug-induced intracranial hypertension."
+    },
+    {
+     "claim": "A mass at the optic chiasm would cut the fields.",
+     "to": "A mass at the optic chiasm would cut the fields."
+    },
+    {
+     "claim": "Optic neuritis is painful, acute and usually one eye.",
+     "to": "Optic neuritis is painful, acute and usually affects one eye."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When papilledema is present, imaging is indicated.",
+     "from": "Papilledema opens the imaging gate."
+    },
+    {
+     "claim": "Then find why the pressure is high; the medication list often answers it.",
+     "from": "The next question is why the pressure is high."
+    },
+    {
+     "claim": "The medication list often answers it.",
+     "from": "The medication list often answers it."
+    },
+    {
+     "claim": "An adolescent on isotretinoin with a month of morning headache and vomiting, brief blurring of vision, bilateral disc edema and full visual fields has drug-induced intracranial hypertension.",
+     "from": "An adolescent on isotretinoin with a month of morning headache and vomiting, brief blurring of vision, bilateral disc edema and full visual fields has drug-induced intracranial hypertension."
+    },
+    {
+     "claim": "A mass at the optic chiasm would cut the fields.",
+     "from": "A mass at the optic chiasm would cut the fields."
+    },
+    {
+     "claim": "Optic neuritis is painful, acute and usually affects one eye.",
+     "from": "Optic neuritis is painful, acute and usually one eye."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "the physiologic explanation for the change in rate; a change with a cause is not an unexplained change",
+   "with": "the physiologic explanation for the change in rate, so the change is explained",
+   "note": "pertinent: aphorism",
+   "claims": [
+    {
+     "claim": "Menarche and regular cycles are the physiologic explanation for the change in rate.",
+     "to": "the physiologic explanation for the change in rate, so the change is explained"
+    },
+    {
+     "claim": "A change with a cause is not an unexplained change.",
+     "to": "the physiologic explanation for the change in rate, so the change is explained"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "the physiologic explanation for the change in rate, so the change is explained",
+     "from": "Menarche and regular cycles are the physiologic explanation for the change in rate."
+    },
+    {
+     "claim": "the physiologic explanation for the change in rate, so the change is explained",
+     "from": "A change with a cause is not an unexplained change."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "excludes meningitis, and with it the lumbar puncture option",
+   "with": "excludes meningitis, so lumbar puncture is not indicated",
+   "note": "pertinent: option framing",
+   "claims": [
+    {
+     "claim": "Afebrile, alert and oriented excludes meningitis.",
+     "to": "excludes meningitis, so lumbar puncture is not indicated"
+    },
+    {
+     "claim": "It excludes the lumbar puncture option.",
+     "to": "excludes meningitis, so lumbar puncture is not indicated"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "excludes meningitis, so lumbar puncture is not indicated",
+     "from": "Afebrile, alert and oriented excludes meningitis."
+    },
+    {
+     "claim": "excludes meningitis, so lumbar puncture is not indicated",
+     "from": "It excludes the lumbar puncture option."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "done — nothing but intermittent acetaminophen &middot; failed — 2 years of attacks with <b>inadequate abortive dosing and timing</b>, the actual unmet need &middot; bothered — missed schoolwork, which licenses better treatment, not more testing.",
+   "with": "done: nothing but intermittent acetaminophen &middot; failed: 2 years of attacks with <b>inadequate abortive dosing and timing</b>, the actual unmet need &middot; bothered: missed schoolwork, which justifies better treatment, not more testing.",
+   "note": "tier fingerprint: prose em dashes",
+   "claims": [
+    {
+     "claim": "Done: nothing but intermittent acetaminophen.",
+     "to": "done: nothing but intermittent acetaminophen · failed: 2 years of attacks with inadequate abortive dosing and timing, the actual unmet need · bothered: missed schoolwork, which justifies better treatment, not more testing."
+    },
+    {
+     "claim": "Failed: 2 years of attacks with inadequate abortive dosing and timing.",
+     "to": "done: nothing but intermittent acetaminophen · failed: 2 years of attacks with inadequate abortive dosing and timing, the actual unmet need · bothered: missed schoolwork, which justifies better treatment, not more testing."
+    },
+    {
+     "claim": "Inadequate abortive dosing and timing is the actual unmet need.",
+     "to": "done: nothing but intermittent acetaminophen · failed: 2 years of attacks with inadequate abortive dosing and timing, the actual unmet need · bothered: missed schoolwork, which justifies better treatment, not more testing."
+    },
+    {
+     "claim": "Bothered: missed schoolwork.",
+     "to": "done: nothing but intermittent acetaminophen · failed: 2 years of attacks with inadequate abortive dosing and timing, the actual unmet need · bothered: missed schoolwork, which justifies better treatment, not more testing."
+    },
+    {
+     "claim": "Missed schoolwork licenses better treatment, not more testing.",
+     "to": "done: nothing but intermittent acetaminophen · failed: 2 years of attacks with inadequate abortive dosing and timing, the actual unmet need · bothered: missed schoolwork, which justifies better treatment, not more testing."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Done: nothing but intermittent acetaminophen.",
+     "from": "Done: nothing but intermittent acetaminophen."
+    },
+    {
+     "claim": "Failed: 2 years of attacks with inadequate abortive dosing and timing.",
+     "from": "Failed: 2 years of attacks with inadequate abortive dosing and timing."
+    },
+    {
+     "claim": "done: nothing but intermittent acetaminophen · failed: 2 years of attacks with inadequate abortive dosing and timing, the actual unmet need · bothered: missed schoolwork, which justifies better treatment, not more testing.",
+     "from": "Inadequate abortive dosing and timing is the actual unmet need."
+    },
+    {
+     "claim": "Bothered: missed schoolwork.",
+     "from": "Bothered: missed schoolwork."
+    },
+    {
+     "claim": "done: nothing but intermittent acetaminophen · failed: 2 years of attacks with inadequate abortive dosing and timing, the actual unmet need · bothered: missed schoolwork, which justifies better treatment, not more testing.",
+     "from": "Missed schoolwork licenses better treatment, not more testing."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<i>diagnostic</i> — up to 3 days per attack; ≥5 prior attacks of 2–72 hours ⚠︎. <i>Escalation</i> — 2 adequately dosed failures ⚠︎, ≥4 headache days/month ⚠︎, and the overuse thresholds above ⚠︎. Exam versus clinic ledger: the exam keys the preventive rung, though pediatric trials found amitriptyline and topiramate no better than placebo ⚠︎ — do not let that change the keyed rung. &middot; <b>Papilledema</b> → MRI with MR venography, then LP with an opening pressure → intracranial hypertension, idiopathic or drug-induced. &middot; <b>Fever with meningismus</b> → lumbar puncture; <b>thunderclap</b> → noncontrast CT, then LP if negative ⚠︎. &middot; <b>Wakes from sleep, worse on waking or with Valsalva</b> → MRI, however migrainous the rest sounds. &middot; <b>Focal deficit or ataxia</b> → <b>Posterior Fossa Localization</b>; <b>falling height percentile or arrested puberty</b> → MRI with sellar views → <b>\"The sellar/suprasellar mass.\"</b> &middot; <b>Household all symptomatic</b> → carboxyhemoglobin; <b>immunocompromised, shunted, or anticoagulated</b> → image, full stop.",
+   "with": "<i>Diagnostic</i>: up to 3 days per attack; ≥5 prior attacks of 2–72 hours ⚠︎. <i>Escalation</i>: 2 adequately dosed failures ⚠︎, ≥4 headache days/month ⚠︎, and the overuse thresholds above ⚠︎. The exam answer versus clinical practice: the exam keys the preventive rung, though pediatric trials found amitriptyline and topiramate no better than placebo ⚠︎. That trial result does not change the keyed rung. &middot; <b>Papilledema</b> → MRI with MR (magnetic resonance) venography, then <b>LP</b> (lumbar puncture) with an opening pressure; a normal MRI with a high opening pressure means intracranial hypertension, idiopathic or drug-induced. &middot; <b>Fever with meningismus</b> → lumbar puncture. A <b>thunderclap</b> headache → noncontrast CT, then LP if negative ⚠︎. &middot; <b>Wakes from sleep, worse on waking or with Valsalva</b> → MRI, however migrainous the rest sounds. &middot; <b>Focal deficit or ataxia</b> → <b>Posterior Fossa Localization</b>. A <b>falling height percentile or arrested puberty</b> → MRI with sellar views; see <b>Sellar and Suprasellar Masses</b>. &middot; <b>Household all symptomatic</b> → carboxyhemoglobin. Image any child who is <b>immunocompromised, shunted, or anticoagulated</b>.",
+   "note": ".danger: ledger tag, em dashes, arrow chains, exact brief title",
+   "reworded_bold": [
+    "\"The sellar/suprasellar mass.\""
+   ],
+   "claims": [
+    {
+     "claim": "Diagnostic: up to 3 days per attack.",
+     "to": "Diagnostic: up to 3 days per attack; ≥5 prior attacks of 2–72 hours ⚠︎."
+    },
+    {
+     "claim": "Diagnostic: ≥5 prior attacks of 2–72 hours.",
+     "to": "Diagnostic: up to 3 days per attack; ≥5 prior attacks of 2–72 hours ⚠︎."
+    },
+    {
+     "claim": "Escalation: 2 adequately dosed failures.",
+     "to": "Escalation: 2 adequately dosed failures ⚠︎, ≥4 headache days/month ⚠︎, and the overuse thresholds above ⚠︎."
+    },
+    {
+     "claim": "Escalation: ≥4 headache days/month.",
+     "to": "Escalation: 2 adequately dosed failures ⚠︎, ≥4 headache days/month ⚠︎, and the overuse thresholds above ⚠︎."
+    },
+    {
+     "claim": "Escalation: the overuse thresholds above.",
+     "to": "Escalation: 2 adequately dosed failures ⚠︎, ≥4 headache days/month ⚠︎, and the overuse thresholds above ⚠︎."
+    },
+    {
+     "claim": "The exam keys the preventive rung.",
+     "to": "The exam answer versus clinical practice: the exam keys the preventive rung, though pediatric trials found amitriptyline and topiramate no better than placebo ⚠︎."
+    },
+    {
+     "claim": "Pediatric trials found amitriptyline and topiramate no better than placebo.",
+     "to": "The exam answer versus clinical practice: the exam keys the preventive rung, though pediatric trials found amitriptyline and topiramate no better than placebo ⚠︎."
+    },
+    {
+     "claim": "Do not let the trial result change the keyed rung.",
+     "to": "That trial result does not change the keyed rung."
+    },
+    {
+     "claim": "Papilledema → MRI with MR venography, then LP with an opening pressure.",
+     "to": "Papilledema → MRI with MR (magnetic resonance) venography, then LP (lumbar puncture) with an opening pressure; a normal MRI with a high opening pressure means intracranial hypertension, idiopathic or drug-induced."
+    },
+    {
+     "claim": "Papilledema workup leads to intracranial hypertension, idiopathic or drug-induced.",
+     "to": "Papilledema → MRI with MR (magnetic resonance) venography, then LP (lumbar puncture) with an opening pressure; a normal MRI with a high opening pressure means intracranial hypertension, idiopathic or drug-induced."
+    },
+    {
+     "claim": "Fever with meningismus → lumbar puncture.",
+     "to": "Fever with meningismus → lumbar puncture."
+    },
+    {
+     "claim": "Thunderclap → noncontrast CT, then LP if negative.",
+     "to": "A thunderclap headache → noncontrast CT, then LP if negative ⚠︎."
+    },
+    {
+     "claim": "Wakes from sleep, worse on waking or with Valsalva → MRI, however migrainous the rest sounds.",
+     "to": "Wakes from sleep, worse on waking or with Valsalva → MRI, however migrainous the rest sounds."
+    },
+    {
+     "claim": "Focal deficit or ataxia → Posterior Fossa Localization.",
+     "to": "Focal deficit or ataxia → Posterior Fossa Localization."
+    },
+    {
+     "claim": "Falling height percentile or arrested puberty → MRI with sellar views → The sellar/suprasellar mass.",
+     "to": "A falling height percentile or arrested puberty → MRI with sellar views; see Sellar and Suprasellar Masses."
+    },
+    {
+     "claim": "Household all symptomatic → carboxyhemoglobin.",
+     "to": "Household all symptomatic → carboxyhemoglobin."
+    },
+    {
+     "claim": "Immunocompromised, shunted, or anticoagulated → image, full stop.",
+     "to": "Image any child who is immunocompromised, shunted, or anticoagulated."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Diagnostic: up to 3 days per attack.",
+     "from": "Diagnostic: up to 3 days per attack."
+    },
+    {
+     "claim": "Diagnostic: up to 3 days per attack; ≥5 prior attacks of 2–72 hours ⚠︎.",
+     "from": "Diagnostic: ≥5 prior attacks of 2–72 hours."
+    },
+    {
+     "claim": "Escalation: 2 adequately dosed failures.",
+     "from": "Escalation: 2 adequately dosed failures."
+    },
+    {
+     "claim": "Escalation: 2 adequately dosed failures ⚠︎, ≥4 headache days/month ⚠︎, and the overuse thresholds above ⚠︎.",
+     "from": "Escalation: ≥4 headache days/month."
+    },
+    {
+     "claim": "Escalation: 2 adequately dosed failures ⚠︎, ≥4 headache days/month ⚠︎, and the overuse thresholds above ⚠︎.",
+     "from": "Escalation: the overuse thresholds above."
+    },
+    {
+     "claim": "The exam keys the preventive rung.",
+     "from": "The exam keys the preventive rung."
+    },
+    {
+     "claim": "Pediatric trials found amitriptyline and topiramate no better than placebo.",
+     "from": "Pediatric trials found amitriptyline and topiramate no better than placebo."
+    },
+    {
+     "claim": "That trial result does not change the keyed rung.",
+     "from": "Do not let the trial result change the keyed rung."
+    },
+    {
+     "claim": "Papilledema → MRI with MR venography, then LP with an opening pressure.",
+     "from": "Papilledema → MRI with MR venography, then LP with an opening pressure."
+    },
+    {
+     "claim": "Papilledema → MRI with MR (magnetic resonance) venography, then LP (lumbar puncture) with an opening pressure; a normal MRI with a high opening pressure means intracranial hypertension, idiopathic or drug-induced.",
+     "from": "Papilledema workup leads to intracranial hypertension, idiopathic or drug-induced."
+    },
+    {
+     "claim": "Fever with meningismus → lumbar puncture.",
+     "from": "Fever with meningismus → lumbar puncture."
+    },
+    {
+     "claim": "A thunderclap headache → noncontrast CT, then LP if negative ⚠︎.",
+     "from": "Thunderclap → noncontrast CT, then LP if negative."
+    },
+    {
+     "claim": "Wakes from sleep, worse on waking or with Valsalva → MRI, however migrainous the rest sounds.",
+     "from": "Wakes from sleep, worse on waking or with Valsalva → MRI, however migrainous the rest sounds."
+    },
+    {
+     "claim": "Focal deficit or ataxia → Posterior Fossa Localization.",
+     "from": "Focal deficit or ataxia → Posterior Fossa Localization."
+    },
+    {
+     "claim": "A falling height percentile or arrested puberty → MRI with sellar views; see Sellar and Suprasellar Masses.",
+     "from": "Falling height percentile or arrested puberty → MRI with sellar views → The sellar/suprasellar mass."
+    },
+    {
+     "claim": "Household all symptomatic → carboxyhemoglobin.",
+     "from": "Household all symptomatic → carboxyhemoglobin."
+    },
+    {
+     "claim": "Image any child who is immunocompromised, shunted, or anticoagulated.",
+     "from": "Immunocompromised, shunted, or anticoagulated → image, full stop."
+    },
+    {
+     "claim": "LP stands for lumbar puncture.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MR stands for magnetic resonance.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "then LP: opening pressure",
+   "with": "then <b>LP</b> (lumbar puncture): opening pressure",
+   "note": "IH pearls: acronym",
+   "claims": [
+    {
+     "claim": "Then LP: opening pressure over 250 mm H2O with normal CSF.",
+     "to": "then LP (lumbar puncture): opening pressure over 250 mm H2O with normal CSF"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "then LP (lumbar puncture): opening pressure over 250 mm H2O with normal CSF",
+     "from": "Then LP: opening pressure over 250 mm H2O with normal CSF."
+    },
+    {
+     "claim": "LP stands for lumbar puncture.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<b>Any systemic signal — fever, altered sensorium, abnormal vitals, growth failure?</b> &mdash; None → the answer is a diagnosis and a treatment plan, not a test",
+   "with": "<b>Any systemic signal: fever, altered sensorium, abnormal vitals, growth failure?</b> &mdash; None → make a diagnosis and a treatment plan, not a test",
+   "note": "spine: em dash in bold, answer framing",
+   "reworded_bold": [
+    "Any systemic signal — fever, altered sensorium, abnormal vitals, growth failure?"
+   ],
+   "claims": [
+    {
+     "claim": "Check for any systemic signal: fever, altered sensorium, abnormal vitals, growth failure.",
+     "to": "Any systemic signal: fever, altered sensorium, abnormal vitals, growth failure? — None → make a diagnosis and a treatment plan, not a test"
+    },
+    {
+     "claim": "With none, the answer is a diagnosis and a treatment plan, not a test.",
+     "to": "Any systemic signal: fever, altered sensorium, abnormal vitals, growth failure? — None → make a diagnosis and a treatment plan, not a test"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Any systemic signal: fever, altered sensorium, abnormal vitals, growth failure? — None → make a diagnosis and a treatment plan, not a test",
+     "from": "Check for any systemic signal: fever, altered sensorium, abnormal vitals, growth failure."
+    },
+    {
+     "claim": "Any systemic signal: fever, altered sensorium, abnormal vitals, growth failure? — None → make a diagnosis and a treatment plan, not a test",
+     "from": "With none, the answer is a diagnosis and a treatment plan, not a test."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "\"Awakened from sleep\" is the finding that <i>would</i> flip this stem — and it is not here; do not import it from the twin. The homework detail measures disability, which sets the treatment tier and never the imaging threshold, and the near-doubling of frequency is real but explained.",
+   "with": "Awakening from sleep would indicate imaging, and it is absent here. The homework detail measures disability, which sets the treatment tier and never the imaging threshold. The near-doubling of frequency is real but explained.",
+   "note": "decoy: em dash, framing",
+   "claims": [
+    {
+     "claim": "Awakened from sleep is the finding that would flip this stem.",
+     "to": "Awakening from sleep would indicate imaging, and it is absent here."
+    },
+    {
+     "claim": "Awakened from sleep is not present here.",
+     "to": "Awakening from sleep would indicate imaging, and it is absent here."
+    },
+    {
+     "claim": "Do not import it from the twin.",
+     "dropped": "framing about the paired brief"
+    },
+    {
+     "claim": "The homework detail measures disability.",
+     "to": "The homework detail measures disability, which sets the treatment tier and never the imaging threshold."
+    },
+    {
+     "claim": "Disability sets the treatment tier and never the imaging threshold.",
+     "to": "The homework detail measures disability, which sets the treatment tier and never the imaging threshold."
+    },
+    {
+     "claim": "The near-doubling of frequency is real but explained.",
+     "to": "The near-doubling of frequency is real but explained."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Awakening from sleep would indicate imaging, and it is absent here.",
+     "from": "Awakened from sleep is the finding that would flip this stem."
+    },
+    {
+     "claim": "Awakening from sleep would indicate imaging, and it is absent here.",
+     "from": "Awakened from sleep is not present here."
+    },
+    {
+     "claim": "The homework detail measures disability.",
+     "from": "The homework detail measures disability."
+    },
+    {
+     "claim": "The homework detail measures disability, which sets the treatment tier and never the imaging threshold.",
+     "from": "Disability sets the treatment tier and never the imaging threshold."
+    },
+    {
+     "claim": "The near-doubling of frequency is real but explained.",
+     "from": "The near-doubling of frequency is real but explained."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "Frequency changes earn an explanation; character changes, examination findings, and pressure signs earn a scan. &middot; <b>Reassurance is defensible only when you can name the criteria you cleared.</b> \"No additional testing\" is rejected far more often for feeling too easy than for a stated disqualifying finding — uniform-answer doubt, and it costs points on every shelf. &middot; <b>Change in rate ≠ change in character.</b> Ask what changed; if the answer is only \"more often,\" look for the physiologic cause (menarche, a new schedule, a new medication) before you look at the brain. &middot; <b>MRI for chronic and progressive; CT for acute and hemorrhagic.</b> Getting the threshold right and the modality wrong still scores zero. &middot; <b>Boundary:</b> nocturnal awakening, morning vomiting, and headache worsened by Valsalva are pressure signs even when the rest is textbook migraine — they override the phenotype. &middot; Migraine onset and change in frequency cluster around menarche; the same estrogen link makes menstrual migraine the commonest \"my headaches got worse this year\" story in an adolescent.",
+   "with": "A change in frequency needs an explanation; a change in character, an examination finding or a pressure sign needs a scan. &middot; <b>Reassurance is defensible only when you can name the criteria you cleared.</b> The option \"No additional testing\" is rejected far more often because it feels too easy than because of a stated disqualifying finding. This uniform-answer doubt costs points on every shelf. &middot; <b>Change in rate ≠ change in character.</b> Ask what changed. If the only change is \"more often,\" look for the physiologic cause (menarche, a new schedule, a new medication) before you look at the brain. &middot; <b>MRI for chronic and progressive; CT for acute and hemorrhagic.</b> The right decision to image still needs the right modality. &middot; <b>Boundary:</b> nocturnal awakening, morning vomiting, and headache worsened by Valsalva are pressure signs even when the rest is textbook migraine. They take precedence over the migraine features. &middot; Migraine onset and changes in frequency cluster around menarche. Through the same estrogen link, menstrual migraine is the commonest cause of headaches that got worse this year in an adolescent.",
+   "note": ".pearls: aphorisms, em dashes",
+   "claims": [
+    {
+     "claim": "Frequency changes earn an explanation.",
+     "to": "A change in frequency needs an explanation; a change in character, an examination finding or a pressure sign needs a scan."
+    },
+    {
+     "claim": "Character changes, examination findings, and pressure signs earn a scan.",
+     "to": "A change in frequency needs an explanation; a change in character, an examination finding or a pressure sign needs a scan."
+    },
+    {
+     "claim": "Reassurance is defensible only when you can name the criteria you cleared.",
+     "to": "Reassurance is defensible only when you can name the criteria you cleared."
+    },
+    {
+     "claim": "No additional testing is rejected far more often for feeling too easy than for a stated disqualifying finding.",
+     "to": "The option \"No additional testing\" is rejected far more often because it feels too easy than because of a stated disqualifying finding."
+    },
+    {
+     "claim": "This uniform-answer doubt costs points on every shelf.",
+     "to": "This uniform-answer doubt costs points on every shelf."
+    },
+    {
+     "claim": "Change in rate ≠ change in character.",
+     "to": "Change in rate ≠ change in character."
+    },
+    {
+     "claim": "Ask what changed.",
+     "to": "Ask what changed."
+    },
+    {
+     "claim": "If the answer is only more often, look for the physiologic cause (menarche, a new schedule, a new medication) before you look at the brain.",
+     "to": "If the only change is \"more often,\" look for the physiologic cause (menarche, a new schedule, a new medication) before you look at the brain."
+    },
+    {
+     "claim": "MRI for chronic and progressive; CT for acute and hemorrhagic.",
+     "to": "MRI for chronic and progressive; CT for acute and hemorrhagic. The right decision to image still needs the right modality."
+    },
+    {
+     "claim": "Getting the threshold right and the modality wrong still scores zero.",
+     "to": "The right decision to image still needs the right modality."
+    },
+    {
+     "claim": "Nocturnal awakening, morning vomiting, and headache worsened by Valsalva are pressure signs even when the rest is textbook migraine.",
+     "to": "Boundary: nocturnal awakening, morning vomiting, and headache worsened by Valsalva are pressure signs even when the rest is textbook migraine."
+    },
+    {
+     "claim": "These pressure signs override the phenotype.",
+     "to": "They take precedence over the migraine features."
+    },
+    {
+     "claim": "Migraine onset and change in frequency cluster around menarche.",
+     "to": "Migraine onset and changes in frequency cluster around menarche."
+    },
+    {
+     "claim": "The same estrogen link makes menstrual migraine the commonest story of headaches that got worse this year in an adolescent.",
+     "to": "Through the same estrogen link, menstrual migraine is the commonest cause of headaches that got worse this year in an adolescent."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A change in frequency needs an explanation; a change in character, an examination finding or a pressure sign needs a scan.",
+     "from": "Frequency changes earn an explanation."
+    },
+    {
+     "claim": "A change in frequency needs an explanation; a change in character, an examination finding or a pressure sign needs a scan.",
+     "from": "Character changes, examination findings, and pressure signs earn a scan."
+    },
+    {
+     "claim": "Reassurance is defensible only when you can name the criteria you cleared.",
+     "from": "Reassurance is defensible only when you can name the criteria you cleared."
+    },
+    {
+     "claim": "The option \"No additional testing\" is rejected far more often because it feels too easy than because of a stated disqualifying finding.",
+     "from": "No additional testing is rejected far more often for feeling too easy than for a stated disqualifying finding."
+    },
+    {
+     "claim": "This uniform-answer doubt costs points on every shelf.",
+     "from": "This uniform-answer doubt costs points on every shelf."
+    },
+    {
+     "claim": "Change in rate ≠ change in character.",
+     "from": "Change in rate ≠ change in character."
+    },
+    {
+     "claim": "Ask what changed.",
+     "from": "Ask what changed."
+    },
+    {
+     "claim": "If the only change is \"more often,\" look for the physiologic cause (menarche, a new schedule, a new medication) before you look at the brain.",
+     "from": "If the answer is only more often, look for the physiologic cause (menarche, a new schedule, a new medication) before you look at the brain."
+    },
+    {
+     "claim": "MRI for chronic and progressive; CT for acute and hemorrhagic.",
+     "from": "MRI for chronic and progressive; CT for acute and hemorrhagic."
+    },
+    {
+     "claim": "The right decision to image still needs the right modality.",
+     "from": "Getting the threshold right and the modality wrong still scores zero."
+    },
+    {
+     "claim": "Nocturnal awakening, morning vomiting, and headache worsened by Valsalva are pressure signs even when the rest is textbook migraine.",
+     "from": "Nocturnal awakening, morning vomiting, and headache worsened by Valsalva are pressure signs even when the rest is textbook migraine."
+    },
+    {
+     "claim": "They take precedence over the migraine features.",
+     "from": "These pressure signs override the phenotype."
+    },
+    {
+     "claim": "Migraine onset and changes in frequency cluster around menarche.",
+     "from": "Migraine onset and change in frequency cluster around menarche."
+    },
+    {
+     "claim": "Through the same estrogen link, menstrual migraine is the commonest cause of headaches that got worse this year in an adolescent.",
+     "from": "The same estrogen link makes menstrual migraine the commonest story of headaches that got worse this year in an adolescent."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "its mirror twin, <b>Sellar and Suprasellar Masses</b>. Same complaint, same age and sex, opposite side of the gate: there, the headache came with papilledema, a height percentile crossing, and Tanner 1; here it comes with a normal examination and an explained change in frequency. Store the discriminator as a question, never as an outcome: <i>is anything abnormal outside the headache history — the fundus, the growth chart, the <span class=\"scaleref\" data-scale=\"tanner-stages\">Tanner</span> stage, the neurologic examination?</i> <b>Headache Types &amp; Cluster Headache</b> owns the type differential once imaging has been excluded; <b>Low Back Pain: Red Flags</b> is the same gating logic in a different region — the pain's severity never opens the gate, and a specific finding always does. Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> owns vitamin A excess as a cause of pseudotumor cerebri; ask: is the patient taking a retinoid or a vitamin A supplement? Part I <b>Headache in a School-Age Child</b> owns the whole workup once the gate opens, through the posterior fossa tumor it most often finds: does the exam show ataxia as well as papilledema?",
+   "with": "<b>Sellar and Suprasellar Masses</b> covers the same complaint at the same age and sex, on the opposite side of the imaging gate. There, the headache came with papilledema, a height percentile crossing, and Tanner 1. Here it comes with a normal examination and an explained change in frequency. Ask: <i>is anything abnormal outside the headache history (the fundus, the growth chart, the <span class=\"scaleref\" data-scale=\"tanner-stages\">Tanner</span> stage, the neurologic examination)?</i> <b>Headache Types &amp; Cluster Headache</b> covers the headache-type differential once imaging has been excluded. <b>Low Back Pain: Red Flags</b> uses the same gating logic in a different region. The pain's severity never opens the gate, and a specific finding always does. Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> covers vitamin A excess as a cause of pseudotumor cerebri. Ask: is the patient taking a retinoid or a vitamin A supplement? Part I <b>Headache in a School-Age Child</b> covers the whole workup once the gate opens, through the posterior fossa tumor it most often finds. Ask: does the exam show ataxia as well as papilledema?",
+   "note": "Pairs with: owns -> covers, Ask:, em dashes",
+   "claims": [
+    {
+     "claim": "Its mirror twin is Sellar and Suprasellar Masses.",
+     "to": "Sellar and Suprasellar Masses covers the same complaint at the same age and sex, on the opposite side of the imaging gate."
+    },
+    {
+     "claim": "Same complaint, same age and sex, opposite side of the gate.",
+     "to": "Sellar and Suprasellar Masses covers the same complaint at the same age and sex, on the opposite side of the imaging gate."
+    },
+    {
+     "claim": "There, the headache came with papilledema, a height percentile crossing, and Tanner 1.",
+     "to": "There, the headache came with papilledema, a height percentile crossing, and Tanner 1."
+    },
+    {
+     "claim": "Here it comes with a normal examination and an explained change in frequency.",
+     "to": "Here it comes with a normal examination and an explained change in frequency."
+    },
+    {
+     "claim": "Store the discriminator as a question, never as an outcome.",
+     "dropped": "workflow note on how to store the discriminator; the question itself is kept after Ask:"
+    },
+    {
+     "claim": "Is anything abnormal outside the headache history: the fundus, the growth chart, the Tanner stage, the neurologic examination?",
+     "to": "Ask: is anything abnormal outside the headache history (the fundus, the growth chart, the Tanner stage, the neurologic examination)?"
+    },
+    {
+     "claim": "Headache Types & Cluster Headache owns the type differential once imaging has been excluded.",
+     "to": "Headache Types & Cluster Headache covers the headache-type differential once imaging has been excluded."
+    },
+    {
+     "claim": "Low Back Pain: Red Flags is the same gating logic in a different region.",
+     "to": "Low Back Pain: Red Flags uses the same gating logic in a different region."
+    },
+    {
+     "claim": "The pain's severity never opens the gate, and a specific finding always does.",
+     "to": "The pain's severity never opens the gate, and a specific finding always does."
+    },
+    {
+     "claim": "Fat-Soluble Vitamin Deficiency and Toxicity owns vitamin A excess as a cause of pseudotumor cerebri.",
+     "to": "Part II Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin A excess as a cause of pseudotumor cerebri."
+    },
+    {
+     "claim": "Ask: is the patient taking a retinoid or a vitamin A supplement?",
+     "to": "Ask: is the patient taking a retinoid or a vitamin A supplement?"
+    },
+    {
+     "claim": "Headache in a School-Age Child owns the whole workup once the gate opens, through the posterior fossa tumor it most often finds.",
+     "to": "Part I Headache in a School-Age Child covers the whole workup once the gate opens, through the posterior fossa tumor it most often finds."
+    },
+    {
+     "claim": "Ask: does the exam show ataxia as well as papilledema?",
+     "to": "Ask: does the exam show ataxia as well as papilledema?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Sellar and Suprasellar Masses covers the same complaint at the same age and sex, on the opposite side of the imaging gate.",
+     "from": "Its mirror twin is Sellar and Suprasellar Masses."
+    },
+    {
+     "claim": "Sellar and Suprasellar Masses covers the same complaint at the same age and sex, on the opposite side of the imaging gate.",
+     "from": "Same complaint, same age and sex, opposite side of the gate."
+    },
+    {
+     "claim": "There, the headache came with papilledema, a height percentile crossing, and Tanner 1.",
+     "from": "There, the headache came with papilledema, a height percentile crossing, and Tanner 1."
+    },
+    {
+     "claim": "Here it comes with a normal examination and an explained change in frequency.",
+     "from": "Here it comes with a normal examination and an explained change in frequency."
+    },
+    {
+     "claim": "Ask: is anything abnormal outside the headache history (the fundus, the growth chart, the Tanner stage, the neurologic examination)?",
+     "from": "Is anything abnormal outside the headache history: the fundus, the growth chart, the Tanner stage, the neurologic examination?"
+    },
+    {
+     "claim": "Headache Types & Cluster Headache covers the headache-type differential once imaging has been excluded.",
+     "from": "Headache Types & Cluster Headache owns the type differential once imaging has been excluded."
+    },
+    {
+     "claim": "Low Back Pain: Red Flags uses the same gating logic in a different region.",
+     "from": "Low Back Pain: Red Flags is the same gating logic in a different region."
+    },
+    {
+     "claim": "The pain's severity never opens the gate, and a specific finding always does.",
+     "from": "The pain's severity never opens the gate, and a specific finding always does."
+    },
+    {
+     "claim": "Part II Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin A excess as a cause of pseudotumor cerebri.",
+     "from": "Fat-Soluble Vitamin Deficiency and Toxicity owns vitamin A excess as a cause of pseudotumor cerebri."
+    },
+    {
+     "claim": "Ask: is the patient taking a retinoid or a vitamin A supplement?",
+     "from": "Ask: is the patient taking a retinoid or a vitamin A supplement?"
+    },
+    {
+     "claim": "Part I Headache in a School-Age Child covers the whole workup once the gate opens, through the posterior fossa tumor it most often finds.",
+     "from": "Headache in a School-Age Child owns the whole workup once the gate opens, through the posterior fossa tumor it most often finds."
+    },
+    {
+     "claim": "Ask: does the exam show ataxia as well as papilledema?",
+     "from": "Ask: does the exam show ataxia as well as papilledema?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "An imaging threshold is crossed by findings, not by suffering: the examination, the fundus, the tempo of change in <i>character</i>, and the systemic signs decide, while frequency, duration, and disability decide only the treatment tier. When a pattern changes and you can name why, you have explained the change — not discovered a red flag.",
+   "with": "Findings, not suffering, cross an imaging threshold. The examination, the fundus, the tempo of change in <i>character</i>, and the systemic signs decide imaging. Frequency, duration, and disability decide only the treatment tier. When a pattern changes and you can name why, the change is explained and is not a red flag.",
+   "note": ".rule: em dash, split",
+   "claims": [
+    {
+     "claim": "An imaging threshold is crossed by findings, not by suffering.",
+     "to": "Findings, not suffering, cross an imaging threshold."
+    },
+    {
+     "claim": "The examination, the fundus, the tempo of change in character, and the systemic signs decide imaging.",
+     "to": "The examination, the fundus, the tempo of change in character, and the systemic signs decide imaging."
+    },
+    {
+     "claim": "Frequency, duration, and disability decide only the treatment tier.",
+     "to": "Frequency, duration, and disability decide only the treatment tier."
+    },
+    {
+     "claim": "When a pattern changes and you can name why, you have explained the change, not discovered a red flag.",
+     "to": "When a pattern changes and you can name why, the change is explained and is not a red flag."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Findings, not suffering, cross an imaging threshold.",
+     "from": "An imaging threshold is crossed by findings, not by suffering."
+    },
+    {
+     "claim": "The examination, the fundus, the tempo of change in character, and the systemic signs decide imaging.",
+     "from": "The examination, the fundus, the tempo of change in character, and the systemic signs decide imaging."
+    },
+    {
+     "claim": "Frequency, duration, and disability decide only the treatment tier.",
+     "from": "Frequency, duration, and disability decide only the treatment tier."
+    },
+    {
+     "claim": "When a pattern changes and you can name why, the change is explained and is not a red flag.",
+     "from": "When a pattern changes and you can name why, you have explained the change, not discovered a red flag."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "The gate is examination findings, pressure signs, or a change in <i>character</i> — none present; and even where imaging is indicated for a chronic pediatric headache the modality is MRI, so the option fails twice",
+   "with": "Imaging requires examination findings, pressure signs, or a change in <i>character</i>, and none is present; even where imaging is indicated for a chronic pediatric headache, the modality is MRI",
+   "note": "trap: em dash, framing",
+   "claims": [
+    {
+     "claim": "The imaging gate is examination findings, pressure signs, or a change in character.",
+     "to": "CT scan of the head: Imaging requires examination findings, pressure signs, or a change in character, and none is present; even where imaging is indicated for a chronic pediatric headache, the modality is MRI"
+    },
+    {
+     "claim": "None is present.",
+     "to": "CT scan of the head: Imaging requires examination findings, pressure signs, or a change in character, and none is present; even where imaging is indicated for a chronic pediatric headache, the modality is MRI"
+    },
+    {
+     "claim": "Even where imaging is indicated for a chronic pediatric headache the modality is MRI.",
+     "to": "CT scan of the head: Imaging requires examination findings, pressure signs, or a change in character, and none is present; even where imaging is indicated for a chronic pediatric headache, the modality is MRI"
+    },
+    {
+     "claim": "So the option fails twice.",
+     "dropped": "framing about the option"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CT scan of the head: Imaging requires examination findings, pressure signs, or a change in character, and none is present; even where imaging is indicated for a chronic pediatric headache, the modality is MRI",
+     "from": "The imaging gate is examination findings, pressure signs, or a change in character."
+    },
+    {
+     "claim": "None is present.",
+     "from": "None is present."
+    },
+    {
+     "claim": "CT scan of the head: Imaging requires examination findings, pressure signs, or a change in character, and none is present; even where imaging is indicated for a chronic pediatric headache, the modality is MRI",
+     "from": "Even where imaging is indicated for a chronic pediatric headache the modality is MRI."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "the ledger already answers the question electrolytes would ask",
+   "with": "the clinical findings already answer the question electrolytes would ask",
+   "note": "trap: ledger word",
+   "claims": [
+    {
+     "claim": "The ledger already answers the question electrolytes would ask.",
+     "to": "Serum electrolyte measurement: Two episodes in a well-hydrated, alert adolescent change no management decision; the clinical findings already answer the question electrolytes would ask"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Serum electrolyte measurement: Two episodes in a well-hydrated, alert adolescent change no management decision; the clinical findings already answer the question electrolytes would ask",
+     "from": "The ledger already answers the question electrolytes would ask."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "and IIH would show papilledema; LP before imaging",
+   "with": "and <b>IIH</b> (idiopathic intracranial hypertension) would show papilledema; lumbar puncture before imaging",
+   "note": "trap: acronyms",
+   "claims": [
+    {
+     "claim": "IIH would show papilledema.",
+     "to": "Lumbar puncture: She is afebrile with a normal examination, and IIH (idiopathic intracranial hypertension) would show papilledema; lumbar puncture before imaging in a patient with pressure signs is also out of order"
+    },
+    {
+     "claim": "LP before imaging in a patient with pressure signs is also out of order.",
+     "to": "Lumbar puncture: She is afebrile with a normal examination, and IIH (idiopathic intracranial hypertension) would show papilledema; lumbar puncture before imaging in a patient with pressure signs is also out of order"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Lumbar puncture: She is afebrile with a normal examination, and IIH (idiopathic intracranial hypertension) would show papilledema; lumbar puncture before imaging in a patient with pressure signs is also out of order",
+     "from": "IIH would show papilledema."
+    },
+    {
+     "claim": "Lumbar puncture: She is afebrile with a normal examination, and IIH (idiopathic intracranial hypertension) would show papilledema; lumbar puncture before imaging in a patient with pressure signs is also out of order",
+     "from": "LP before imaging in a patient with pressure signs is also out of order."
+    },
+    {
+     "claim": "IIH stands for idiopathic intracranial hypertension.",
+     "from": "expansion"
     }
    ]
   }

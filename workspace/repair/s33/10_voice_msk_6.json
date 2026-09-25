@@ -22,15 +22,15 @@
    ],
    "new_claims": [
     {
-     "claim": "Benign Limb Pain in a Child also presents as bilateral calf pain in a school-age child, with a normal examination.",
+     "claim": "Part I Benign Limb Pain in a Child also presents as bilateral calf pain in a school-age child, but the examination is normal.",
      "from": "Benign Limb Pain in a Child also presents as bilateral calf pain in a school-age child, with a normal examination."
     },
     {
-     "claim": "A heme-positive dipstick with few red cells marks rhabdomyolysis, and the Hemoglobinuria brief covers it.",
+     "claim": "Part I Hemoglobinuria: the Dipstick-Microscopy Mismatch covers the heme-positive dipstick with few red cells that marks rhabdomyolysis.",
      "from": "A heme-positive dipstick with few red cells marks rhabdomyolysis, and the Hemoglobinuria brief covers it."
     },
     {
-     "claim": "The discriminating question is whether the calf is tender.",
+     "claim": "Ask: is the calf tender?",
      "from": "The discriminating question is whether the calf is tender."
     }
    ]
@@ -53,11 +53,11 @@
    ],
    "new_claims": [
     {
-     "claim": "The head tilts toward the mass.",
+     "claim": "Head tilts toward the mass, chin turns away",
      "from": "The head tilts toward the mass."
     },
     {
-     "claim": "The chin turns away from the mass.",
+     "claim": "Head tilts toward the mass, chin turns away",
      "from": "The chin turns away from the mass."
     }
    ]
@@ -124,7 +124,7 @@
      "from": "The sternocleidomastoid turns the head to the opposite side."
     },
     {
-     "claim": "A shortened left muscle pulls the left ear toward the left shoulder and turns the chin right.",
+     "claim": "A shortened left muscle therefore pulls the left ear toward the left shoulder and turns the chin right.",
      "from": "A shortened left sternocleidomastoid pulls the left ear toward the left shoulder."
     },
     {
@@ -161,7 +161,7 @@
    "op": "replace",
    "brief": "bs-torticollis",
    "find": "<span class=\"lbl\">Crowding is a package deal</span> Breech, oligohydramnios and multiple gestation produce <b>congenital muscular torticollis, developmental dysplasia of the hip, metatarsus adductus and clubfoot</b> together. Find one and examine for the rest — the stem's explicit note that the hips are stable is the examiner confirming they know this.",
-   "with": "<span class=\"lbl\">Crowding associations</span> Breech, oligohydramnios and multiple gestation produce <b>congenital muscular torticollis, developmental dysplasia of the hip, metatarsus adductus and clubfoot</b> together. When you find one, examine for the rest.",
+   "with": "<span class=\"lbl\">Crowding associations</span> Breech, oligohydramnios and multiple gestation produce <b>congenital muscular torticollis, developmental dysplasia of the hip, metatarsus adductus and clubfoot</b> together. When you find one, examine for the rest. In this infant the hips are stable.",
    "note": ".danger: slogan label reworded; em dash and examiner-intent meta removed",
    "reworded_label": [
     "Crowding is a package deal"
@@ -173,11 +173,11 @@
     },
     {
      "claim": "Find one and examine for the rest.",
-     "to": "When you find one, examine for the rest."
+     "to": "When you find one, examine for the rest. In this infant the hips are stable."
     },
     {
      "claim": "The stem notes the hips on purpose, showing the examiner knows the association.",
-     "dropped": "meta comment about the examiner's intent, not a clinical claim"
+     "to": "In this infant the hips are stable."
     }
    ],
    "new_claims": [
@@ -188,6 +188,10 @@
     {
      "claim": "When you find one, examine for the rest.",
      "from": "Find one and examine for the rest."
+    },
+    {
+     "claim": "In this infant the hips are stable.",
+     "from": "The stem notes the hips on purpose, showing the examiner knows the association."
     }
    ]
   },
@@ -240,7 +244,7 @@
    ],
    "new_claims": [
     {
-     "claim": "The underlying cause explains every finding rather than the most alarming one.",
+     "claim": "The underlying cause explains every finding, not only the most alarming one.",
      "from": "The underlying cause explains every finding rather than the most alarming one."
     },
     {
@@ -267,11 +271,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Clavicle fracture is suggested by the birth trauma.",
+     "claim": "Clavicle fracture: suggested by the birth trauma, but it affects the arm rather than the neck.",
      "from": "Birth trauma makes clavicle fracture attractive."
     },
     {
-     "claim": "Clavicle fracture affects the arm rather than the neck.",
+     "claim": "Clavicle fracture: suggested by the birth trauma, but it affects the arm rather than the neck.",
      "from": "Clavicle fracture affects the arm rather than the neck."
     }
    ]
@@ -382,7 +386,7 @@
      "from": "Erb palsy (C5-C6) is the commonest birth palsy."
     },
     {
-     "claim": "Erb palsy shows the reverse pattern: Moro and biceps lost, grasp kept.",
+     "claim": "Erb palsy (C5-C6) is the most common birth palsy and shows the reverse pattern: Moro and biceps lost, grasp kept.",
      "from": "Erb palsy is the mirror image: Moro and biceps lost, grasp kept."
     },
     {
@@ -390,11 +394,11 @@
      "from": "A clavicle or humerus fracture lowers the Moro only through pain."
     },
     {
-     "claim": "A fracture keeps biceps and grasp.",
+     "claim": "It keeps biceps and grasp and has crepitus.",
      "from": "A clavicle or humerus fracture keeps biceps and grasp."
     },
     {
-     "claim": "A fracture has crepitus.",
+     "claim": "It keeps biceps and grasp and has crepitus.",
      "from": "A clavicle or humerus fracture has crepitus."
     }
    ]
@@ -425,19 +429,19 @@
    ],
    "new_claims": [
     {
-     "claim": "Nursemaid's Elbow names these palsies in its pediatric elbow neighbors line; this brief covers the reflex split.",
+     "claim": "Nursemaid's Elbow: its pediatric elbow neighbors line names these palsies; this brief covers the reflex split.",
      "from": "Nursemaid's Elbow names these palsies in its pediatric elbow neighbors line; this brief covers the reflex split."
     },
     {
-     "claim": "Congenital Muscular Torticollis and Plagiocephaly is the other birth-position injury, and its bank holds a newborn clavicle fracture.",
+     "claim": "Congenital Muscular Torticollis and Plagiocephaly: the other birth-position injury, whose bank already holds a newborn clavicle fracture.",
      "from": "Congenital Muscular Torticollis and Plagiocephaly is the other birth-position injury, and its bank holds a newborn clavicle fracture."
     },
     {
-     "claim": "Perinatal stroke presents with focal seizures and upper motor neuron signs rather than a limp arm with one lost reflex.",
+     "claim": "Stroke in a Child or Adolescent: perinatal stroke presents with focal seizures and upper motor neuron signs, not a limp arm with one lost reflex.",
      "from": "Perinatal stroke presents with focal seizures and upper motor neuron signs rather than a limp arm with one lost reflex."
     },
     {
-     "claim": "The discriminating question is whether the signs are upper or lower motor neuron.",
+     "claim": "Ask: are the signs upper or lower motor neuron?",
      "from": "The discriminating question is whether the signs are upper or lower motor neuron."
     }
    ]
@@ -496,7 +500,7 @@
      "from": "In C8-T1 injury, ptosis and miosis confirm T1."
     },
     {
-     "claim": "Ptosis and miosis predict slower recovery.",
+     "claim": "In C8-T1 injury, ptosis and miosis confirm T1 and predict slower recovery.",
      "from": "Ptosis and miosis predict slower recovery."
     }
    ]
@@ -523,15 +527,15 @@
    ],
    "new_claims": [
     {
-     "claim": "Clavicle fracture is suggested by a 4.4 kg infant after shoulder dystocia.",
+     "claim": "Clavicle fracture: suggested by a 4.4 kg infant after shoulder dystocia.",
      "from": "A 4.4 kg infant after shoulder dystocia makes clavicle fracture attractive."
     },
     {
-     "claim": "A clavicle fracture lowers the Moro from pain, keeps the grasp and gives crepitus.",
+     "claim": "It lowers the Moro from pain, keeps the grasp and gives crepitus; none of these is present.",
      "from": "A clavicle fracture lowers the Moro from pain, keeps the grasp and gives crepitus."
     },
     {
-     "claim": "None of these clavicle-fracture features is present.",
+     "claim": "It lowers the Moro from pain, keeps the grasp and gives crepitus; none of these is present.",
      "from": "None of these clavicle-fracture features is present."
     }
    ]
@@ -570,7 +574,7 @@
    ],
    "new_claims": [
     {
-     "claim": "All shoulder pain is sorted by ROM.",
+     "claim": "Sort all shoulder pain by ROM (range of motion): active ROM lost with passive preserved = muscle/tendon (rotator cuff tendinopathy or tear, biceps tendinitis, impingement).",
      "from": "One rule sorts every shoulder presentation."
     },
     {
@@ -578,19 +582,19 @@
      "from": "expansion"
     },
     {
-     "claim": "Active ROM lost with passive preserved means a muscle/tendon problem.",
+     "claim": "Sort all shoulder pain by ROM (range of motion): active ROM lost with passive preserved = muscle/tendon (rotator cuff tendinopathy or tear, biceps tendinitis, impingement).",
      "from": "Active ROM lost with passive preserved means a muscle/tendon problem."
     },
     {
-     "claim": "Muscle/tendon causes include rotator cuff tendinopathy or tear, biceps tendinitis and impingement.",
+     "claim": "Sort all shoulder pain by ROM (range of motion): active ROM lost with passive preserved = muscle/tendon (rotator cuff tendinopathy or tear, biceps tendinitis, impingement).",
      "from": "Muscle/tendon causes include rotator cuff tendinopathy or tear, biceps tendinitis and impingement."
     },
     {
-     "claim": "Both active and passive ROM lost means a joint problem.",
+     "claim": "Both active and passive lost = joint, as in adhesive capsulitis, glenohumeral OA (osteoarthritis) and septic joint.",
      "from": "Both active and passive ROM lost means a joint problem."
     },
     {
-     "claim": "Joint causes include adhesive capsulitis, glenohumeral OA and septic joint.",
+     "claim": "Both active and passive lost = joint, as in adhesive capsulitis, glenohumeral OA (osteoarthritis) and septic joint.",
      "from": "Joint causes include adhesive capsulitis, glenohumeral OA and septic joint."
     },
     {
@@ -664,7 +668,7 @@
      "from": "Therapy strengthens the cuff and scapular stabilizers to open the subacromial space."
     },
     {
-     "claim": "Rest must never be communicated as immobilize.",
+     "claim": "\"Rest\" must never be communicated as immobilize.",
      "from": "Rest must never be communicated as immobilize."
     },
     {
@@ -676,7 +680,7 @@
      "from": "Slings are for dislocation and fracture only."
     },
     {
-     "claim": "No reflex MRI.",
+     "claim": "Do not order a reflex MRI (magnetic resonance imaging).",
      "from": "No reflex MRI."
     },
     {
@@ -696,7 +700,7 @@
      "from": "Subacromial steroid injection gives short-term relief only."
     },
     {
-     "claim": "Subacromial steroid injection is never given through suspected infection.",
+     "claim": "Subacromial steroid injection gives short-term relief only and is never given through suspected infection.",
      "from": "Subacromial steroid injection is never given through suspected infection."
     }
    ]
@@ -723,7 +727,7 @@
      "from": "The correct next step is usually the next rung of the ladder."
     },
     {
-     "claim": "The ladder order is activity modification, then PT, then injection, then MRI, then surgery.",
+     "claim": "The order is activity modification, then PT (physical therapy), then injection, then MRI (magnetic resonance imaging), then surgery.",
      "from": "The ladder order is activity modification, then PT, then injection, then MRI, then surgery."
     },
     {

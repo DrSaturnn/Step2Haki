@@ -3,36 +3,9 @@
   {
    "op": "replace",
    "brief": "thyroid",
-   "find": "TSH first, then RAIU splits making from leaking",
-   "with": "Check thyroid-stimulating hormone first, then radioactive iodine uptake to tell a gland making hormone from one leaking it",
-   "note": "sub: expand jargon",
-   "claims": [
-    {
-     "claim": "TSH is checked first.",
-     "to": "Check thyroid-stimulating hormone first, then radioactive iodine uptake to tell a gland making hormone from one leaking it"
-    },
-    {
-     "claim": "RAIU then separates a gland making hormone from one leaking it.",
-     "to": "Check thyroid-stimulating hormone first, then radioactive iodine uptake to tell a gland making hormone from one leaking it"
-    }
-   ],
-   "new_claims": [
-    {
-     "claim": "Check TSH first.",
-     "from": "TSH is checked first."
-    },
-    {
-     "claim": "Radioactive iodine uptake then separates a gland making hormone from one leaking it.",
-     "from": "RAIU then separates a gland making hormone from one leaking it."
-    }
-   ]
-  },
-  {
-   "op": "replace",
-   "brief": "thyroid",
    "find": "<p><b>TSH first</b>: low TSH + high T4 = thyrotoxicosis; high TSH + low T4 = primary hypothyroidism; <b>both low = central</b>. Then <b>RAIU splits thyrotoxicosis</b>: <b>high uptake = the gland is MAKING hormone</b>; <b>low uptake = leaking or exogenous</b>, where antithyroid drugs are useless.</p>",
-   "with": "<p>Check <b>TSH</b> (thyroid-stimulating hormone) first. Low TSH with high T4 is thyrotoxicosis. High TSH with low T4 is primary hypothyroidism. <b>Both low</b> means central hypothyroidism. In thyrotoxicosis, <b>RAIU</b> (radioactive iodine uptake) then separates the causes. <b>High uptake</b> means the gland is making hormone. <b>Low uptake</b> means the hormone is leaking from the gland or is exogenous; antithyroid drugs are useless in these cases.</p>",
-   "note": ".dp: split equation chain, expand acronyms",
+   "with": "<p>Check <b>TSH</b> (thyroid-stimulating hormone) first. Low TSH with high <b>T4</b> (thyroxine) is thyrotoxicosis. High TSH with low T4 is primary hypothyroidism. <b>Both low</b> means central hypothyroidism. In thyrotoxicosis, <b>RAIU</b> (radioactive iodine uptake) is the next step. <b>High uptake</b> means the gland is making hormone. <b>Low uptake</b> means the hormone is leaking from the gland or is exogenous; antithyroid drugs are useless there.</p>",
+   "note": "round 2 voice: .dp; formula bolds reworded, acronyms expanded",
    "reworded_bold": [
     "TSH first",
     "both low = central",
@@ -47,19 +20,19 @@
     },
     {
      "claim": "Low TSH with high T4 is thyrotoxicosis.",
-     "to": "Low TSH with high T4 is thyrotoxicosis."
+     "to": "Low TSH with high T4 (thyroxine) is thyrotoxicosis."
     },
     {
      "claim": "High TSH with low T4 is primary hypothyroidism.",
      "to": "High TSH with low T4 is primary hypothyroidism."
     },
     {
-     "claim": "Both TSH and T4 low is central.",
+     "claim": "Both TSH and T4 low is central hypothyroidism.",
      "to": "Both low means central hypothyroidism."
     },
     {
-     "claim": "RAIU splits thyrotoxicosis.",
-     "to": "In thyrotoxicosis, RAIU (radioactive iodine uptake) then separates the causes."
+     "claim": "RAIU is used next to split thyrotoxicosis.",
+     "to": "In thyrotoxicosis, RAIU (radioactive iodine uptake) is the next step."
     },
     {
      "claim": "High uptake means the gland is making hormone.",
@@ -67,11 +40,11 @@
     },
     {
      "claim": "Low uptake means leaking or exogenous hormone.",
-     "to": "Low uptake means the hormone is leaking from the gland or is exogenous; antithyroid drugs are useless in these cases."
+     "to": "Low uptake means the hormone is leaking from the gland or is exogenous; antithyroid drugs are useless there."
     },
     {
      "claim": "Antithyroid drugs are useless when uptake is low.",
-     "to": "Low uptake means the hormone is leaking from the gland or is exogenous; antithyroid drugs are useless in these cases."
+     "to": "Low uptake means the hormone is leaking from the gland or is exogenous; antithyroid drugs are useless there."
     }
    ],
    "new_claims": [
@@ -80,11 +53,19 @@
      "from": "expansion"
     },
     {
+     "claim": "T4 stands for thyroxine.",
+     "from": "expansion"
+    },
+    {
+     "claim": "RAIU stands for radioactive iodine uptake.",
+     "from": "expansion"
+    },
+    {
      "claim": "Check TSH first.",
      "from": "TSH is checked first."
     },
     {
-     "claim": "Low TSH with high T4 is thyrotoxicosis.",
+     "claim": "Low TSH with high T4 (thyroxine) is thyrotoxicosis.",
      "from": "Low TSH with high T4 is thyrotoxicosis."
     },
     {
@@ -93,15 +74,11 @@
     },
     {
      "claim": "Both low means central hypothyroidism.",
-     "from": "Both TSH and T4 low is central."
+     "from": "Both TSH and T4 low is central hypothyroidism."
     },
     {
-     "claim": "RAIU stands for radioactive iodine uptake.",
-     "from": "expansion"
-    },
-    {
-     "claim": "In thyrotoxicosis, RAIU then separates the causes.",
-     "from": "RAIU splits thyrotoxicosis."
+     "claim": "In thyrotoxicosis, RAIU (radioactive iodine uptake) is the next step.",
+     "from": "RAIU is used next to split thyrotoxicosis."
     },
     {
      "claim": "High uptake means the gland is making hormone.",
@@ -112,7 +89,7 @@
      "from": "Low uptake means leaking or exogenous hormone."
     },
     {
-     "claim": "Antithyroid drugs are useless in low-uptake cases.",
+     "claim": "Low uptake means the hormone is leaking from the gland or is exogenous; antithyroid drugs are useless there.",
      "from": "Antithyroid drugs are useless when uptake is low."
     }
    ]
@@ -121,50 +98,67 @@
    "op": "replace",
    "brief": "thyroid",
    "find": "Lid lag and stare = <b>any</b> thyrotoxicosis (sympathetic); proptosis + pretibial myxedema = <b>Graves only</b> · hot nodule ≈ never cancer; cold nodule → FNA · pregnancy: PTU first trimester, methimazole after, <b>RAI never</b> · nodule workup: TSH → low? uptake scan; normal or high? ultrasound → FNA.",
-   "with": "Lid lag and stare occur in <b>any</b> thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in <b>Graves only</b> · a hot nodule is almost never cancer; a cold nodule needs <b>FNA</b> (fine-needle aspiration) · in pregnancy, give <b>PTU</b> (propylthiouracil) in the first trimester and methimazole after; never give <b>RAI</b> (radioactive iodine) · nodule workup: check <b>TSH</b> (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA.",
-   "note": ".pearls: replace symbols and arrows with words, expand acronyms",
+   "with": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in <b>Graves only</b> · a hot nodule is almost never cancer; a cold nodule needs <b>FNA</b> (fine-needle aspiration) · in pregnancy, give <b>PTU</b> (propylthiouracil) in the first trimester and methimazole after; never give <b>RAI</b> (radioactive iodine) · nodule workup starts with <b>TSH</b> (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA.",
+   "note": "round 2 voice: paired pearls; arrows and = split, acronyms expanded, emphasis bold removed",
    "reworded_bold": [
+    "any",
     "RAI never"
    ],
    "claims": [
     {
      "claim": "Lid lag and stare occur in any thyrotoxicosis (sympathetic).",
-     "to": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only"
+     "to": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only · a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration) · in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine) · nodule workup starts with TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA."
     },
     {
      "claim": "Proptosis and pretibial myxedema occur in Graves only.",
-     "to": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only"
+     "to": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only · a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration) · in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine) · nodule workup starts with TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA."
     },
     {
      "claim": "A hot nodule is almost never cancer.",
-     "to": "a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration)"
+     "to": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only · a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration) · in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine) · nodule workup starts with TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA."
     },
     {
      "claim": "A cold nodule needs FNA.",
-     "to": "a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration)"
+     "to": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only · a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration) · in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine) · nodule workup starts with TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA."
     },
     {
      "claim": "In pregnancy, PTU in the first trimester, methimazole after.",
-     "to": "in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine)"
+     "to": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only · a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration) · in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine) · nodule workup starts with TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA."
     },
     {
      "claim": "RAI is never used in pregnancy.",
-     "to": "in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine)"
+     "to": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only · a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration) · in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine) · nodule workup starts with TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA."
     },
     {
      "claim": "Nodule workup starts with TSH.",
-     "to": "nodule workup: check TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA."
+     "to": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only · a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration) · in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine) · nodule workup starts with TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA."
     },
     {
-     "claim": "Low TSH leads to an uptake scan.",
-     "to": "nodule workup: check TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA."
+     "claim": "If TSH is low, get an uptake scan.",
+     "to": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only · a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration) · in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine) · nodule workup starts with TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA."
     },
     {
-     "claim": "Normal or high TSH leads to ultrasound, then FNA.",
-     "to": "nodule workup: check TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA."
+     "claim": "If TSH is normal or high, get ultrasound then FNA.",
+     "to": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only · a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration) · in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine) · nodule workup starts with TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA."
     }
    ],
    "new_claims": [
+    {
+     "claim": "FNA stands for fine-needle aspiration.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PTU stands for propylthiouracil.",
+     "from": "expansion"
+    },
+    {
+     "claim": "RAI stands for radioactive iodine.",
+     "from": "expansion"
+    },
+    {
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    },
     {
      "claim": "Lid lag and stare occur in any thyrotoxicosis (sympathetic).",
      "from": "Lid lag and stare occur in any thyrotoxicosis (sympathetic)."
@@ -182,63 +176,24 @@
      "from": "A cold nodule needs FNA."
     },
     {
-     "claim": "FNA stands for fine-needle aspiration.",
-     "from": "expansion"
-    },
-    {
-     "claim": "PTU stands for propylthiouracil.",
-     "from": "expansion"
-    },
-    {
-     "claim": "In pregnancy, give PTU in the first trimester and methimazole after.",
+     "claim": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only · a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration) · in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine) · nodule workup starts with TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA.",
      "from": "In pregnancy, PTU in the first trimester, methimazole after."
     },
     {
-     "claim": "Never give RAI in pregnancy.",
+     "claim": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only · a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration) · in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine) · nodule workup starts with TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA.",
      "from": "RAI is never used in pregnancy."
     },
     {
-     "claim": "RAI stands for radioactive iodine.",
-     "from": "expansion"
-    },
-    {
-     "claim": "TSH stands for thyroid-stimulating hormone.",
-     "from": "expansion"
-    },
-    {
-     "claim": "Nodule workup: check TSH.",
+     "claim": "Nodule workup starts with TSH.",
      "from": "Nodule workup starts with TSH."
     },
     {
-     "claim": "If TSH is low, get an uptake scan.",
-     "from": "Low TSH leads to an uptake scan."
+     "claim": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only · a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration) · in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine) · nodule workup starts with TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA.",
+     "from": "If TSH is low, get an uptake scan."
     },
     {
-     "claim": "If TSH is normal or high, get an ultrasound, then FNA.",
-     "from": "Normal or high TSH leads to ultrasound, then FNA."
-    }
-   ]
-  },
-  {
-   "op": "replace",
-   "brief": "thyroid",
-   "find": "is the neonatal version, where the TSH direction and the neck locate the defect.",
-   "with": "is the neonatal version, where the TSH (thyroid-stimulating hormone) direction and the neck locate the defect.",
-   "note": "Pairs with: expand TSH only",
-   "claims": [
-    {
-     "claim": "Congenital Hypothyroidism is the neonatal version, where the TSH direction and the neck locate the defect.",
-     "to": "Part I Congenital Hypothyroidism is the neonatal version, where the TSH (thyroid-stimulating hormone) direction and the neck locate the defect."
-    }
-   ],
-   "new_claims": [
-    {
-     "claim": "TSH stands for thyroid-stimulating hormone.",
-     "from": "expansion"
-    },
-    {
-     "claim": "Congenital Hypothyroidism is the neonatal version, where the TSH direction and the neck locate the defect.",
-     "from": "Congenital Hypothyroidism is the neonatal version, where the TSH direction and the neck locate the defect."
+     "claim": "Lid lag and stare occur in any thyrotoxicosis (sympathetic); proptosis and pretibial myxedema occur in Graves only · a hot nodule is almost never cancer; a cold nodule needs FNA (fine-needle aspiration) · in pregnancy, give PTU (propylthiouracil) in the first trimester and methimazole after; never give RAI (radioactive iodine) · nodule workup starts with TSH (thyroid-stimulating hormone); if low, get an uptake scan; if normal or high, get an ultrasound, then FNA.",
+     "from": "If TSH is normal or high, get ultrasound then FNA."
     }
    ]
   },
@@ -246,18 +201,18 @@
    "op": "replace",
    "brief": "levo",
    "find": "The timing trick, and when it doesn't apply",
-   "with": "Timing of the thyroid-stimulating hormone recheck, and when it does not apply",
-   "note": "sub: drop 'trick' framing",
+   "with": "Recheck timing after a dose change, and its exceptions",
+   "note": "round 2 voice: subtitle; rhetorical 'trick' removed",
    "claims": [
     {
-     "claim": "There is a TSH timing rule, and settings where it does not apply.",
-     "to": "Timing of the thyroid-stimulating hormone recheck, and when it does not apply"
+     "claim": "The brief covers the recheck-timing rule and when it does not apply.",
+     "to": "Recheck timing after a dose change, and its exceptions"
     }
    ],
    "new_claims": [
     {
-     "claim": "TSH recheck timing, and when it does not apply.",
-     "from": "There is a TSH timing rule, and settings where it does not apply."
+     "claim": "Recheck timing after a dose change, and its exceptions.",
+     "from": "The brief covers the recheck-timing rule and when it does not apply."
     }
    ]
   },
@@ -265,8 +220,8 @@
    "op": "replace",
    "brief": "levo",
    "find": "<p>TSH lags dose changes by <b>6–8 weeks</b>. A stem that specifies <b>8 weeks</b> is telling you the TSH is now trustworthy — so a TSH of 9.5 means the dose is genuinely inadequate → <b>increase it</b>. When a stem conspicuously specifies a timeframe, it's telling you <i>which rule applies</i>, not testing whether you remember that a rule exists.</p>",
-   "with": "<p><b>TSH</b> (thyroid-stimulating hormone) lags dose changes by <b>6–8 weeks</b>. At <b>8 weeks</b>, the TSH is trustworthy. A TSH of 9.5 at that point means the dose is genuinely inadequate, so <b>increase it</b>.</p>",
-   "note": ".dp: remove stem framing and em dash, expand TSH",
+   "with": "<p><b>TSH</b> (thyroid-stimulating hormone) lags dose changes by <b>6–8 weeks</b>. At <b>8 weeks</b>, the TSH is reliable. A TSH of 9.5 at that point means the dose is genuinely inadequate, so <b>increase it</b>.</p>",
+   "note": "round 2 voice: .dp; stem-framing sentence removed, em dash removed",
    "claims": [
     {
      "claim": "TSH lags dose changes by 6–8 weeks.",
@@ -274,19 +229,19 @@
     },
     {
      "claim": "At 8 weeks the TSH is trustworthy.",
-     "to": "At 8 weeks, the TSH is trustworthy."
+     "to": "At 8 weeks, the TSH is reliable."
     },
     {
      "claim": "A TSH of 9.5 at 8 weeks means the dose is genuinely inadequate.",
      "to": "A TSH of 9.5 at that point means the dose is genuinely inadequate, so increase it."
     },
     {
-     "claim": "Increase the dose.",
+     "claim": "The dose should be increased.",
      "to": "A TSH of 9.5 at that point means the dose is genuinely inadequate, so increase it."
     },
     {
-     "claim": "A stated timeframe tells you which rule applies, not whether you remember that a rule exists.",
-     "dropped": "framing about the question stem; the timing rule itself is stated in the first two sentences"
+     "claim": "A stated timeframe signals which rule applies rather than checking recall of the rule.",
+     "dropped": "framing about the question stem, not a clinical fact"
     }
    ],
    "new_claims": [
@@ -299,7 +254,7 @@
      "from": "TSH lags dose changes by 6–8 weeks."
     },
     {
-     "claim": "At 8 weeks, the TSH is trustworthy.",
+     "claim": "At 8 weeks, the TSH is reliable.",
      "from": "At 8 weeks the TSH is trustworthy."
     },
     {
@@ -307,8 +262,8 @@
      "from": "A TSH of 9.5 at 8 weeks means the dose is genuinely inadequate."
     },
     {
-     "claim": "Increase the dose.",
-     "from": "Increase the dose."
+     "claim": "A TSH of 9.5 at that point means the dose is genuinely inadequate, so increase it.",
+     "from": "The dose should be increased."
     }
    ]
   },
@@ -316,30 +271,33 @@
    "op": "replace",
    "brief": "levo",
    "find": "Part I <b>Levothyroxine in Pregnancy</b> — the one setting where you adjust the dose before the TSH moves. Store the discriminator: <b>\"is she pregnant right now?\"</b>",
-   "with": "Part I <b>Levothyroxine in Pregnancy</b> covers the one setting where you adjust the dose before the TSH (thyroid-stimulating hormone) moves. Ask: <b>\"is she pregnant right now?\"</b>",
-   "note": "Pairs with: em dash to 'covers', 'Store the discriminator' to 'Ask:'",
+   "with": "Part I <b>Levothyroxine in Pregnancy</b> covers the one setting where you adjust the dose before the TSH (thyroid-stimulating hormone) moves. Ask: <b>is she pregnant right now?</b>",
+   "note": "round 2 voice: Pairs with; em dash removed, 'Store the discriminator' -> 'Ask:'",
+   "reworded_bold": [
+    "\"is she pregnant right now?\""
+   ],
    "claims": [
     {
-     "claim": "Levothyroxine in Pregnancy is the one setting where you adjust the dose before the TSH moves.",
+     "claim": "Levothyroxine in Pregnancy is the one setting where the dose is adjusted before the TSH moves.",
      "to": "Part I Levothyroxine in Pregnancy covers the one setting where you adjust the dose before the TSH (thyroid-stimulating hormone) moves."
     },
     {
-     "claim": "The discriminator is: is she pregnant right now?",
-     "to": "Ask: \"is she pregnant right now?\""
+     "claim": "The discriminating question is whether she is pregnant right now.",
+     "to": "Ask: is she pregnant right now?"
     }
    ],
    "new_claims": [
-    {
-     "claim": "Levothyroxine in Pregnancy covers the one setting where you adjust the dose before the TSH moves.",
-     "from": "Levothyroxine in Pregnancy is the one setting where you adjust the dose before the TSH moves."
-    },
     {
      "claim": "TSH stands for thyroid-stimulating hormone.",
      "from": "expansion"
     },
     {
+     "claim": "Levothyroxine in Pregnancy covers the one setting where you adjust the dose before the TSH moves.",
+     "from": "Levothyroxine in Pregnancy is the one setting where the dose is adjusted before the TSH moves."
+    },
+    {
      "claim": "Ask: is she pregnant right now?",
-     "from": "The discriminator is: is she pregnant right now?"
+     "from": "The discriminating question is whether she is pregnant right now."
     }
    ]
   },
@@ -347,26 +305,30 @@
    "op": "replace",
    "brief": "levo",
    "find": "Half-remembered gotchas are more dangerous than ignorance. Before applying a \"trick,\" verify its <b>trigger condition</b> is actually in the stem. Sometimes the question really is that boring — and \"this must be a trick\" is itself the trick.",
-   "with": "Before applying a special-case rule, verify that its <b>trigger condition</b> is actually present.",
-   "note": ".rule: drop aphorisms and question framing",
+   "with": "Apply an exception to the standard titration rule only when its <b>trigger condition</b> is actually present. Otherwise, follow the standard rule.",
+   "note": "round 2 voice: .rule; aphorisms and question framing removed",
    "claims": [
     {
      "claim": "Half-remembered gotchas are more dangerous than ignorance.",
-     "dropped": "aphorism"
+     "dropped": "aphorism about test-taking"
     },
     {
      "claim": "Before applying a trick, verify its trigger condition is actually present.",
-     "to": "Before applying a special-case rule, verify that its trigger condition is actually present."
+     "to": "Apply an exception to the standard titration rule only when its trigger condition is actually present."
     },
     {
-     "claim": "Sometimes the question really is that boring, and 'this must be a trick' is itself the trick.",
-     "dropped": "aphorism about the question"
+     "claim": "Sometimes the standard rule is the answer; assuming a trick is itself the error.",
+     "to": "Otherwise, follow the standard rule."
     }
    ],
    "new_claims": [
     {
-     "claim": "Before applying a special-case rule, verify that its trigger condition is actually present.",
+     "claim": "Apply an exception to the standard titration rule only when its trigger condition is actually present.",
      "from": "Before applying a trick, verify its trigger condition is actually present."
+    },
+    {
+     "claim": "Otherwise, follow the standard rule.",
+     "from": "Sometimes the standard rule is the answer; assuming a trick is itself the error."
     }
    ]
   },
@@ -374,18 +336,18 @@
    "op": "replace",
    "brief": "gynecomastia",
    "find": "A known condition is a prior, not a verdict",
-   "with": "A known condition sets the prior probability; it does not make the diagnosis",
-   "note": "sub: plain wording",
+   "with": "A known condition raises the prior probability but does not make the diagnosis",
+   "note": "round 2 voice: subtitle slogan reworded",
    "claims": [
     {
-     "claim": "A known condition is a prior, not a verdict.",
-     "to": "A known condition sets the prior probability; it does not make the diagnosis"
+     "claim": "A known condition is a prior probability, not the diagnosis.",
+     "to": "A known condition raises the prior probability but does not make the diagnosis"
     }
    ],
    "new_claims": [
     {
-     "claim": "A known condition sets the prior probability but does not make the diagnosis.",
-     "from": "A known condition is a prior, not a verdict."
+     "claim": "A known condition raises the prior probability but does not make the diagnosis.",
+     "from": "A known condition is a prior probability, not the diagnosis."
     }
    ]
   },
@@ -393,8 +355,11 @@
    "op": "replace",
    "brief": "gynecomastia",
    "find": "<p>A <b>unilateral, firm, progressive, nontender</b> subareolar mass has only cancer adjectives. Klinefelter isn't the explanation — it's the <b>risk factor</b> (20–50× increased male breast cancer risk from a chronically elevated estrogen/androgen ratio). <b>Image first, always.</b></p>",
-   "with": "<p>A <b>unilateral, firm, progressive, nontender</b> subareolar mass has only features of cancer. Klinefelter syndrome does not explain the mass; it is the <b>risk factor</b>. It raises male breast cancer risk 20–50× through a chronically elevated estrogen/androgen ratio. <b>Image first, always.</b></p>",
-   "note": ".dp: remove em dash and paired contrast",
+   "with": "<p>A <b>unilateral, firm, progressive, nontender</b> subareolar mass has only features of cancer. Klinefelter syndrome is the <b>risk factor</b>, not the explanation. It increases male breast cancer risk 20–50× through a chronically elevated estrogen/androgen ratio. Always <b>image first</b>.</p>",
+   "note": "round 2 voice: .dp; em dash and slogan closer removed",
+   "reworded_bold": [
+    "Image first, always."
+   ],
    "claims": [
     {
      "claim": "A unilateral, firm, progressive, nontender subareolar mass has only cancer features.",
@@ -402,23 +367,23 @@
     },
     {
      "claim": "Klinefelter is not the explanation.",
-     "to": "Klinefelter syndrome does not explain the mass; it is the risk factor."
+     "to": "Klinefelter syndrome is the risk factor, not the explanation."
     },
     {
      "claim": "Klinefelter is the risk factor.",
-     "to": "Klinefelter syndrome does not explain the mass; it is the risk factor."
+     "to": "Klinefelter syndrome is the risk factor, not the explanation."
     },
     {
-     "claim": "Klinefelter gives a 20–50× increased male breast cancer risk.",
-     "to": "It raises male breast cancer risk 20–50× through a chronically elevated estrogen/androgen ratio."
+     "claim": "Klinefelter increases male breast cancer risk 20–50×.",
+     "to": "It increases male breast cancer risk 20–50× through a chronically elevated estrogen/androgen ratio."
     },
     {
      "claim": "The increased risk comes from a chronically elevated estrogen/androgen ratio.",
-     "to": "It raises male breast cancer risk 20–50× through a chronically elevated estrogen/androgen ratio."
+     "to": "It increases male breast cancer risk 20–50× through a chronically elevated estrogen/androgen ratio."
     },
     {
-     "claim": "Image first, always.",
-     "to": "Image first, always."
+     "claim": "Always image first.",
+     "to": "Always image first."
     }
    ],
    "new_claims": [
@@ -427,50 +392,42 @@
      "from": "A unilateral, firm, progressive, nontender subareolar mass has only cancer features."
     },
     {
-     "claim": "Klinefelter syndrome does not explain the mass.",
-     "from": "Klinefelter is not the explanation."
-    },
-    {
-     "claim": "Klinefelter syndrome is the risk factor.",
+     "claim": "Klinefelter syndrome is the risk factor, not the explanation.",
      "from": "Klinefelter is the risk factor."
     },
     {
-     "claim": "Klinefelter raises male breast cancer risk 20–50×.",
-     "from": "Klinefelter gives a 20–50× increased male breast cancer risk."
+     "claim": "It increases male breast cancer risk 20–50× through a chronically elevated estrogen/androgen ratio.",
+     "from": "Klinefelter increases male breast cancer risk 20–50×."
     },
     {
-     "claim": "The mechanism is a chronically elevated estrogen/androgen ratio.",
-     "from": "The increased risk comes from a chronically elevated estrogen/androgen ratio."
-    },
-    {
-     "claim": "Image first, always.",
-     "from": "Image first, always."
+     "claim": "Always image first.",
+     "from": "Always image first."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "gynecomastia",
-   "find": "A known condition in the past medical history is a <b>prior probability</b>, not a verdict. If the lesion",
-   "with": "A known condition in the past medical history sets the <b>prior probability</b>; it does not make the diagnosis. If the lesion",
-   "note": ".rule: plain wording for 'not a verdict'",
+   "find": "A known condition in the past medical history is a <b>prior probability</b>, not a verdict. If the lesion behaves differently than the known disease does, the known disease is the risk factor and something else is the diagnosis.",
+   "with": "A known condition in the past medical history raises the <b>prior probability</b> but does not make the diagnosis. If the lesion behaves differently from the known disease, the known disease is the risk factor and something else is the diagnosis.",
+   "note": "round 2 voice: .rule; 'not a verdict' slogan made plain",
    "claims": [
     {
-     "claim": "A known condition in the past medical history is a prior probability, not a verdict.",
-     "to": "A known condition in the past medical history sets the prior probability; it does not make the diagnosis."
+     "claim": "A known condition in the past medical history is a prior probability, not the diagnosis.",
+     "to": "A known condition in the past medical history raises the prior probability but does not make the diagnosis."
     },
     {
      "claim": "If the lesion behaves differently than the known disease, the known disease is the risk factor and something else is the diagnosis.",
-     "to": "If the lesion behaves differently than the known disease does, the known disease is the risk factor and something else is the diagnosis."
+     "to": "If the lesion behaves differently from the known disease, the known disease is the risk factor and something else is the diagnosis."
     }
    ],
    "new_claims": [
     {
-     "claim": "A known condition in the past medical history sets the prior probability and does not make the diagnosis.",
-     "from": "A known condition in the past medical history is a prior probability, not a verdict."
+     "claim": "A known condition in the past medical history raises the prior probability but does not make the diagnosis.",
+     "from": "A known condition in the past medical history is a prior probability, not the diagnosis."
     },
     {
-     "claim": "If the lesion behaves differently than the known disease, the known disease is the risk factor and something else is the diagnosis.",
+     "claim": "If the lesion behaves differently from the known disease, the known disease is the risk factor and something else is the diagnosis.",
      "from": "If the lesion behaves differently than the known disease, the known disease is the risk factor and something else is the diagnosis."
     }
    ]
@@ -479,26 +436,26 @@
    "op": "replace",
    "brief": "prolactin",
    "find": "Two-step inference, and a number that discriminates",
-   "with": "Infer the unnamed drug from the illness; the prolactin level separates drug effect from prolactinoma",
-   "note": "sub: plain wording",
+   "with": "Infer the drug from the illness; the prolactin level separates drug effect from prolactinoma",
+   "note": "round 2 voice: subtitle framing made concrete",
    "claims": [
     {
-     "claim": "The unnamed drug is found by a two-step inference.",
-     "to": "Infer the unnamed drug from the illness; the prolactin level separates drug effect from prolactinoma"
+     "claim": "An unnamed drug is found by two-step inference.",
+     "to": "Infer the drug from the illness; the prolactin level separates drug effect from prolactinoma"
     },
     {
-     "claim": "A number (the prolactin level) discriminates.",
-     "to": "Infer the unnamed drug from the illness; the prolactin level separates drug effect from prolactinoma"
+     "claim": "The prolactin number discriminates between causes.",
+     "to": "Infer the drug from the illness; the prolactin level separates drug effect from prolactinoma"
     }
    ],
    "new_claims": [
     {
-     "claim": "Infer the unnamed drug from the illness.",
-     "from": "The unnamed drug is found by a two-step inference."
+     "claim": "Infer the drug from the illness.",
+     "from": "An unnamed drug is found by two-step inference."
     },
     {
      "claim": "The prolactin level separates drug effect from prolactinoma.",
-     "from": "A number (the prolactin level) discriminates."
+     "from": "The prolactin number discriminates between causes."
     }
    ]
   },
@@ -506,65 +463,65 @@
    "op": "replace",
    "brief": "prolactin",
    "find": "<p>When a stem describes an <b>illness</b> and says the patient \"remains on medication\" without naming it, the question is a <b>two-step inference</b>: identify the drug class the illness requires, then choose the member whose side-effect profile matches the complaint. Psychosis → antipsychotic → the one with the highest prolactin liability.</p>\n<p><b>The number is the discriminator.</b> <b>Drug-induced hyperprolactinemia runs 25–100</b> and rarely exceeds 200; <b>a prolactinoma typically produces &gt;200</b>. A level of 70 assassinates the prolactinoma option without any imaging.</p>",
-   "with": "<p>When a patient with an <b>illness</b> \"remains on medication\" that is not named, use a <b>two-step inference</b>. First, identify the drug class the illness requires. Then choose the member of that class whose side-effect profile matches the complaint. For psychosis, choose the antipsychotic with the highest prolactin liability.</p>\n<p>The prolactin level separates the causes. <b>Drug-induced hyperprolactinemia runs 25–100</b> and rarely exceeds 200, while <b>a prolactinoma typically produces &gt;200</b>. A level of 70 excludes prolactinoma without any imaging.</p>",
-   "note": ".dp: remove stem framing, split arrow chain, drop slogan bold and 'assassinates'",
+   "with": "<p>When a patient with a known <b>illness</b> remains on an unnamed medication, identify the drug by <b>two-step inference</b>. First identify the drug class the illness requires. Then choose the member whose side-effect profile matches the complaint. In psychosis, the class is an antipsychotic, and the member is the one with the highest prolactin liability.</p>\n<p>The prolactin level separates drug-induced hyperprolactinemia from prolactinoma. <b>Drug-induced hyperprolactinemia runs 25–100</b> and rarely exceeds 200; <b>a prolactinoma typically produces &gt;200</b>. In this patient, a level of 70 is in the drug-induced range and excludes prolactinoma without any imaging.</p>",
+   "note": "round 2 voice: .dp; stem framing, arrow chain and slogan removed",
    "reworded_bold": [
     "The number is the discriminator."
    ],
    "claims": [
     {
-     "claim": "When the patient remains on an unnamed medication for a described illness, use a two-step inference.",
-     "to": "When a patient with an illness \"remains on medication\" that is not named, use a two-step inference."
+     "claim": "When the patient has an illness and remains on an unnamed medication, the drug is found by two-step inference.",
+     "to": "When a patient with a known illness remains on an unnamed medication, identify the drug by two-step inference."
     },
     {
      "claim": "First identify the drug class the illness requires.",
-     "to": "First, identify the drug class the illness requires."
+     "to": "First identify the drug class the illness requires."
     },
     {
      "claim": "Then choose the member whose side-effect profile matches the complaint.",
-     "to": "Then choose the member of that class whose side-effect profile matches the complaint."
+     "to": "Then choose the member whose side-effect profile matches the complaint."
     },
     {
-     "claim": "For psychosis, the drug is the antipsychotic with the highest prolactin liability.",
-     "to": "For psychosis, choose the antipsychotic with the highest prolactin liability."
+     "claim": "For psychosis, the class is antipsychotic and the member is the one with the highest prolactin liability.",
+     "to": "In psychosis, the class is an antipsychotic, and the member is the one with the highest prolactin liability."
     },
     {
-     "claim": "The number is the discriminator.",
-     "to": "The prolactin level separates the causes."
+     "claim": "The prolactin number is the discriminator.",
+     "to": "The prolactin level separates drug-induced hyperprolactinemia from prolactinoma."
     },
     {
      "claim": "Drug-induced hyperprolactinemia runs 25–100 and rarely exceeds 200.",
-     "to": "Drug-induced hyperprolactinemia runs 25–100 and rarely exceeds 200, while a prolactinoma typically produces >200."
+     "to": "Drug-induced hyperprolactinemia runs 25–100 and rarely exceeds 200; a prolactinoma typically produces >200."
     },
     {
      "claim": "A prolactinoma typically produces >200.",
-     "to": "Drug-induced hyperprolactinemia runs 25–100 and rarely exceeds 200, while a prolactinoma typically produces >200."
+     "to": "Drug-induced hyperprolactinemia runs 25–100 and rarely exceeds 200; a prolactinoma typically produces >200."
     },
     {
      "claim": "A level of 70 eliminates prolactinoma without any imaging.",
-     "to": "A level of 70 excludes prolactinoma without any imaging."
+     "to": "In this patient, a level of 70 is in the drug-induced range and excludes prolactinoma without any imaging."
     }
    ],
    "new_claims": [
     {
-     "claim": "When a patient with an illness remains on an unnamed medication, use a two-step inference.",
-     "from": "When the patient remains on an unnamed medication for a described illness, use a two-step inference."
+     "claim": "When a patient with a known illness remains on an unnamed medication, identify the drug by two-step inference.",
+     "from": "When the patient has an illness and remains on an unnamed medication, the drug is found by two-step inference."
     },
     {
-     "claim": "First, identify the drug class the illness requires.",
+     "claim": "First identify the drug class the illness requires.",
      "from": "First identify the drug class the illness requires."
     },
     {
-     "claim": "Then choose the member of that class whose side-effect profile matches the complaint.",
+     "claim": "Then choose the member whose side-effect profile matches the complaint.",
      "from": "Then choose the member whose side-effect profile matches the complaint."
     },
     {
-     "claim": "For psychosis, choose the antipsychotic with the highest prolactin liability.",
-     "from": "For psychosis, the drug is the antipsychotic with the highest prolactin liability."
+     "claim": "In psychosis, the class is an antipsychotic, and the member is the one with the highest prolactin liability.",
+     "from": "For psychosis, the class is antipsychotic and the member is the one with the highest prolactin liability."
     },
     {
-     "claim": "The prolactin level separates the causes.",
-     "from": "The number is the discriminator."
+     "claim": "The prolactin level separates drug-induced hyperprolactinemia from prolactinoma.",
+     "from": "The prolactin number is the discriminator."
     },
     {
      "claim": "Drug-induced hyperprolactinemia runs 25–100 and rarely exceeds 200.",
@@ -575,7 +532,7 @@
      "from": "A prolactinoma typically produces >200."
     },
     {
-     "claim": "A level of 70 excludes prolactinoma without any imaging.",
+     "claim": "In this patient, a level of 70 is in the drug-induced range and excludes prolactinoma without any imaging.",
      "from": "A level of 70 eliminates prolactinoma without any imaging."
     }
    ]
@@ -584,8 +541,8 @@
    "op": "replace",
    "brief": "prolactin",
    "find": "Dopamine <i>is</i> prolactin-inhibiting factor; D2 blockade in the <b>tuberoinfundibular pathway</b> removes that inhibition. <b>Highest prolactin effect: risperidone and paliperidone</b>, plus high-potency typicals like haloperidol. <b>Lowest: aripiprazole</b> (a D2 <b>partial agonist</b> that can lower prolactin), quetiapine, clozapine — which makes aripiprazole the answer to both \"least likely to cause this\" and \"what should you switch to.\"",
-   "with": "Dopamine <i>is</i> prolactin-inhibiting factor. D2 blockade in the <b>tuberoinfundibular pathway</b> removes that inhibition. <b>Highest prolactin effect: risperidone and paliperidone</b>, plus high-potency typicals such as haloperidol. <b>Lowest: aripiprazole</b> (a D2 <b>partial agonist</b> that can lower prolactin), quetiapine and clozapine. Aripiprazole is therefore both the drug least likely to cause hyperprolactinemia and the drug to switch to.",
-   "note": ".pearls: remove em dash and answer framing",
+   "with": "Dopamine is prolactin-inhibiting factor. D2 blockade in the <b>tuberoinfundibular pathway</b> removes that inhibition. <b>Highest prolactin effect: risperidone and paliperidone</b>, plus high-potency typicals such as haloperidol. <b>Lowest: aripiprazole</b> (a D2 <b>partial agonist</b> that can lower prolactin), quetiapine and clozapine. Aripiprazole is therefore the antipsychotic least likely to cause hyperprolactinemia and the one to switch to.",
+   "note": "round 2 voice: mechanism pearl; em dash and answer framing removed",
    "claims": [
     {
      "claim": "Dopamine is prolactin-inhibiting factor.",
@@ -596,7 +553,11 @@
      "to": "D2 blockade in the tuberoinfundibular pathway removes that inhibition."
     },
     {
-     "claim": "Risperidone and paliperidone have the highest prolactin effect, plus high-potency typicals like haloperidol.",
+     "claim": "Risperidone and paliperidone have the highest prolactin effect.",
+     "to": "Highest prolactin effect: risperidone and paliperidone, plus high-potency typicals such as haloperidol."
+    },
+    {
+     "claim": "High-potency typicals like haloperidol also have a high prolactin effect.",
      "to": "Highest prolactin effect: risperidone and paliperidone, plus high-potency typicals such as haloperidol."
     },
     {
@@ -608,12 +569,12 @@
      "to": "Lowest: aripiprazole (a D2 partial agonist that can lower prolactin), quetiapine and clozapine."
     },
     {
-     "claim": "Aripiprazole is the answer to 'least likely to cause this'.",
-     "to": "Aripiprazole is therefore both the drug least likely to cause hyperprolactinemia and the drug to switch to."
+     "claim": "Aripiprazole is the drug least likely to cause hyperprolactinemia.",
+     "to": "Aripiprazole is therefore the antipsychotic least likely to cause hyperprolactinemia and the one to switch to."
     },
     {
-     "claim": "Aripiprazole is the answer to 'what should you switch to'.",
-     "to": "Aripiprazole is therefore both the drug least likely to cause hyperprolactinemia and the drug to switch to."
+     "claim": "Aripiprazole is the drug to switch to.",
+     "to": "Aripiprazole is therefore the antipsychotic least likely to cause hyperprolactinemia and the one to switch to."
     }
    ],
    "new_claims": [
@@ -627,23 +588,19 @@
     },
     {
      "claim": "Highest prolactin effect: risperidone and paliperidone, plus high-potency typicals such as haloperidol.",
-     "from": "Risperidone and paliperidone have the highest prolactin effect, plus high-potency typicals like haloperidol."
+     "from": "Risperidone and paliperidone have the highest prolactin effect."
     },
     {
-     "claim": "Lowest: aripiprazole, quetiapine and clozapine.",
+     "claim": "Lowest: aripiprazole (a D2 partial agonist that can lower prolactin), quetiapine and clozapine.",
      "from": "Aripiprazole, quetiapine and clozapine have the lowest prolactin effect."
     },
     {
-     "claim": "Aripiprazole is a D2 partial agonist that can lower prolactin.",
-     "from": "Aripiprazole is a D2 partial agonist that can lower prolactin."
+     "claim": "Aripiprazole is therefore the antipsychotic least likely to cause hyperprolactinemia and the one to switch to.",
+     "from": "Aripiprazole is the drug least likely to cause hyperprolactinemia."
     },
     {
-     "claim": "Aripiprazole is the drug least likely to cause hyperprolactinemia.",
-     "from": "Aripiprazole is the answer to 'least likely to cause this'."
-    },
-    {
-     "claim": "Aripiprazole is the drug to switch to.",
-     "from": "Aripiprazole is the answer to 'what should you switch to'."
+     "claim": "Aripiprazole is therefore the antipsychotic least likely to cause hyperprolactinemia and the one to switch to.",
+     "from": "Aripiprazole is the drug to switch to."
     }
    ]
   },
@@ -651,22 +608,23 @@
    "op": "replace",
    "brief": "prolactin",
    "find": "Elevated prolactin → <b>pregnancy test, TSH, medication review, renal function</b> → <i>only if all negative</i> → <b>MRI pituitary</b>. Don't image before excluding the cheap causes. <b>Hook effect:</b> a very large prolactinoma can saturate the assay and give a <b>falsely low</b> value — repeat with dilution. And <b>prolactinoma is the pituitary tumor you treat medically</b>: <b>dopamine agonists (cabergoline &gt; bromocriptine)</b> are first-line even for macroadenomas because they shrink the tumor; surgery is for medical failure, intolerance, or apoplexy.",
-   "with": "Workup of elevated prolactin: <b>pregnancy test</b>, <b>TSH</b> (thyroid-stimulating hormone), <b>medication review</b> and <b>renal function</b>. Image with <b>MRI pituitary</b> <i>only if all are negative</i>. Do not image before excluding the cheap causes. <b>Hook effect:</b> a very large prolactinoma can saturate the assay and give a <b>falsely low</b> value; repeat with dilution. A <b>prolactinoma is the pituitary tumor you treat medically</b>. First-line treatment is <b>dopamine agonists (cabergoline &gt; bromocriptine)</b>, even for macroadenomas, because they shrink the tumor. Surgery is for medical failure, intolerance, or apoplexy.",
-   "note": ".danger: split arrow chain, remove em dash, expand TSH",
+   "with": "For elevated prolactin, first get a <b>pregnancy test</b>, <b>TSH</b> (thyroid-stimulating hormone), <b>medication review</b> and <b>renal function</b>. Order an <b>MRI pituitary</b> only if all are negative. Do not image before excluding the cheap causes. <b>Hook effect:</b> a very large prolactinoma can saturate the assay and give a <b>falsely low</b> value; repeat with dilution. <b>Prolactinoma is the pituitary tumor you treat medically</b>. First-line treatment is <b>dopamine agonists (cabergoline &gt; bromocriptine)</b>, even for macroadenomas, because they shrink the tumor. Surgery is for medical failure, intolerance, or apoplexy.",
+   "note": "round 2 voice: workup danger block; arrow chain split, em dash removed, TSH expanded",
    "reworded_bold": [
-    "pregnancy test, TSH, medication review, renal function"
+    "pregnancy test, TSH, medication review, renal function",
+    "prolactinoma is the pituitary tumor you treat medically"
    ],
    "claims": [
     {
-     "claim": "Elevated prolactin is worked up first with pregnancy test, TSH, medication review and renal function.",
-     "to": "Workup of elevated prolactin: pregnancy test, TSH (thyroid-stimulating hormone), medication review and renal function."
+     "claim": "Elevated prolactin is first worked up with pregnancy test, TSH, medication review and renal function.",
+     "to": "For elevated prolactin, first get a pregnancy test, TSH (thyroid-stimulating hormone), medication review and renal function."
     },
     {
-     "claim": "MRI pituitary only if all are negative.",
-     "to": "Image with MRI pituitary only if all are negative."
+     "claim": "MRI pituitary only if all of these are negative.",
+     "to": "Order an MRI pituitary only if all are negative."
     },
     {
-     "claim": "Don't image before excluding the cheap causes.",
+     "claim": "Do not image before excluding the cheap causes.",
      "to": "Do not image before excluding the cheap causes."
     },
     {
@@ -674,12 +632,12 @@
      "to": "Hook effect: a very large prolactinoma can saturate the assay and give a falsely low value; repeat with dilution."
     },
     {
-     "claim": "Hook effect: repeat with dilution.",
+     "claim": "With hook effect, repeat with dilution.",
      "to": "Hook effect: a very large prolactinoma can saturate the assay and give a falsely low value; repeat with dilution."
     },
     {
      "claim": "Prolactinoma is the pituitary tumor you treat medically.",
-     "to": "A prolactinoma is the pituitary tumor you treat medically."
+     "to": "Prolactinoma is the pituitary tumor you treat medically."
     },
     {
      "claim": "Dopamine agonists (cabergoline > bromocriptine) are first-line even for macroadenomas because they shrink the tumor.",
@@ -692,20 +650,20 @@
    ],
    "new_claims": [
     {
-     "claim": "Workup of elevated prolactin: pregnancy test, TSH, medication review and renal function.",
-     "from": "Elevated prolactin is worked up first with pregnancy test, TSH, medication review and renal function."
-    },
-    {
      "claim": "TSH stands for thyroid-stimulating hormone.",
      "from": "expansion"
     },
     {
-     "claim": "Image with MRI pituitary only if all are negative.",
-     "from": "MRI pituitary only if all are negative."
+     "claim": "For elevated prolactin, first get a pregnancy test, TSH, medication review and renal function.",
+     "from": "Elevated prolactin is first worked up with pregnancy test, TSH, medication review and renal function."
+    },
+    {
+     "claim": "Order an MRI pituitary only if all are negative.",
+     "from": "MRI pituitary only if all of these are negative."
     },
     {
      "claim": "Do not image before excluding the cheap causes.",
-     "from": "Don't image before excluding the cheap causes."
+     "from": "Do not image before excluding the cheap causes."
     },
     {
      "claim": "Hook effect: a very large prolactinoma can saturate the assay and give a falsely low value.",
@@ -713,10 +671,10 @@
     },
     {
      "claim": "Repeat with dilution.",
-     "from": "Hook effect: repeat with dilution."
+     "from": "With hook effect, repeat with dilution."
     },
     {
-     "claim": "A prolactinoma is the pituitary tumor you treat medically.",
+     "claim": "Prolactinoma is the pituitary tumor you treat medically.",
      "from": "Prolactinoma is the pituitary tumor you treat medically."
     },
     {
@@ -732,19 +690,19 @@
   {
    "op": "replace",
    "brief": "prolactin",
-   "find": "Part I <b>Sellar and Suprasellar Masses</b> owns the localization once",
-   "with": "Part I <b>Sellar and Suprasellar Masses</b> covers the localization once",
-   "note": "Pairs with: owns -> covers",
+   "find": "Part I <b>Sellar and Suprasellar Masses</b> owns the localization once the trophic-hormone pattern points at the region.",
+   "with": "Part I <b>Sellar and Suprasellar Masses</b> covers the localization once the trophic-hormone pattern points to the region.",
+   "note": "Pairs with: 'owns' -> 'covers'",
    "claims": [
     {
-     "claim": "Sellar and Suprasellar Masses owns the localization once the trophic-hormone pattern points at the region.",
-     "to": "Part I Sellar and Suprasellar Masses covers the localization once the trophic-hormone pattern points at the region."
+     "claim": "Sellar and Suprasellar Masses covers localization once the trophic-hormone pattern points to the region.",
+     "to": "Part I Sellar and Suprasellar Masses covers the localization once the trophic-hormone pattern points to the region."
     }
    ],
    "new_claims": [
     {
-     "claim": "Sellar and Suprasellar Masses covers the localization once the trophic-hormone pattern points at the region.",
-     "from": "Sellar and Suprasellar Masses owns the localization once the trophic-hormone pattern points at the region."
+     "claim": "Sellar and Suprasellar Masses covers the localization once the trophic-hormone pattern points to the region.",
+     "from": "Sellar and Suprasellar Masses covers localization once the trophic-hormone pattern points to the region."
     }
    ]
   },
@@ -752,21 +710,21 @@
    "op": "replace",
    "brief": "prolactin",
    "find": "When a lab value has a well-known range that separates two candidate causes, <b>the number is the discriminator</b>, not the story.",
-   "with": "When a lab value has a well-known range that separates two candidate causes, <b>use the value</b>, not the history, to choose between them.",
-   "note": ".rule: drop slogan bold",
+   "with": "When a lab value has a well-known range that separates two candidate causes, use <b>the value</b> rather than the history to decide between them.",
+   "note": "round 2 voice: .rule slogan reworded",
    "reworded_bold": [
     "the number is the discriminator"
    ],
    "claims": [
     {
-     "claim": "When a lab value has a well-known range that separates two candidate causes, the number is the discriminator, not the story.",
-     "to": "When a lab value has a well-known range that separates two candidate causes, use the value, not the history, to choose between them."
+     "claim": "When a lab value has a well-known range that separates two candidate causes, the number decides, not the history.",
+     "to": "When a lab value has a well-known range that separates two candidate causes, use the value rather than the history to decide between them."
     }
    ],
    "new_claims": [
     {
-     "claim": "When a lab value has a well-known range that separates two candidate causes, use the value, not the history, to choose between them.",
-     "from": "When a lab value has a well-known range that separates two candidate causes, the number is the discriminator, not the story."
+     "claim": "When a lab value has a well-known range that separates two candidate causes, use the value rather than the history to decide between them.",
+     "from": "When a lab value has a well-known range that separates two candidate causes, the number decides, not the history."
     }
    ]
   },
@@ -774,18 +732,18 @@
    "op": "replace",
    "brief": "osteoporosis",
    "find": "Verify each variable's direction",
-   "with": "Check whether each variable raises or lowers osteoporosis risk",
-   "note": "sub: plain wording",
+   "with": "Check whether each patient variable raises or lowers risk",
+   "note": "round 2 voice: subtitle made plain",
    "claims": [
     {
-     "claim": "Verify each variable's direction.",
-     "to": "Check whether each variable raises or lowers osteoporosis risk"
+     "claim": "Verify the direction of each variable.",
+     "to": "Check whether each patient variable raises or lowers risk"
     }
    ],
    "new_claims": [
     {
-     "claim": "Check whether each variable raises or lowers osteoporosis risk.",
-     "from": "Verify each variable's direction."
+     "claim": "Check whether each patient variable raises or lowers risk",
+     "from": "Verify the direction of each variable."
     }
    ]
   },
@@ -793,13 +751,14 @@
    "op": "replace",
    "brief": "osteoporosis",
    "find": "<p><b>DXA at age 65 for all women — or earlier if she has ≥1 risk factor</b> (prior fragility fracture, parental hip fracture, smoking, low BMI, chronic glucocorticoids). Run the risk-factor list <i>before</i> applying the age default. A patient with timely menopause and an empty list waits until 65.</p>\n<p><b>⚠︎ Two ledgers.</b> The rule above is the <b>exam ledger</b> and the operational shorthand. The <b>USPSTF</b> statement expresses the same idea quantitatively: screen before 65 when a <b>FRAX</b>-estimated 10-year major osteoporotic fracture risk reaches that of a 65-year-old with no risk factors (~<b>9.3%</b>). The exam scores the risk-factor list; know FRAX for the clinic and for questions that hand you a percentage. Fully worked in the board-style brief <a href=\"#bs-dexa-highrisk\">DEXA: When Screening Starts Early</a>.</p>\n<p>The most common time-waster here: <b>obesity is protective for osteoporosis, not a risk factor.</b> The risk factor is <b>low</b> body weight (&lt;58 kg / 127 lb) — higher weight increases bone density through mechanical loading and peripheral aromatization to estrogen.</p>",
-   "with": "<p>Screen all women with <b>DXA</b> (dual-energy X-ray absorptiometry) at age 65. Screen earlier if she has <b>≥1 risk factor</b>: prior fragility fracture, parental hip fracture, smoking, low <b>BMI</b> (body mass index) or chronic glucocorticoids. Run the risk-factor list <i>before</i> applying the age default. A patient with timely menopause and no risk factors waits until 65.</p>\n<p><b>⚠︎ Exam answer versus clinical practice.</b> The rule above is the exam answer and the operational shorthand. The <b>USPSTF</b> (US Preventive Services Task Force) statement expresses the same idea quantitatively, using <b>FRAX</b> (Fracture Risk Assessment Tool). Screen before 65 when the FRAX-estimated 10-year major osteoporotic fracture risk reaches that of a 65-year-old with no risk factors (~<b>9.3%</b>). The exam scores the risk-factor list. Use FRAX in clinical practice and when a question gives a percentage. The board-style brief <a href=\"#bs-dexa-highrisk\">DEXA: When Screening Starts Early</a> works this through in full.</p>\n<p><b>Obesity is protective for osteoporosis, not a risk factor.</b> The risk factor is <b>low</b> body weight (&lt;58 kg / 127 lb). Higher weight increases bone density through mechanical loading and peripheral aromatization to estrogen.</p>",
-   "note": ".dp: remove em dashes and ledger wording, expand acronyms, drop framing opener",
+   "with": "<p>Screen all women with <b>DXA</b> (dual-energy X-ray absorptiometry) at age 65. Screen earlier if she has <b>≥1 risk factor</b>: prior fragility fracture, parental hip fracture, smoking, low <b>BMI</b> (body mass index) or chronic glucocorticoids. Check the risk-factor list before applying the age default. A patient with timely menopause and no risk factors waits until 65.</p>\n<p>⚠︎ The rule above is the exam answer and the operational shorthand. The <b>USPSTF</b> (US Preventive Services Task Force) statement expresses the same idea quantitatively. Screen before 65 when the <b>FRAX</b> (Fracture Risk Assessment Tool) 10-year major osteoporotic fracture risk reaches that of a 65-year-old with no risk factors (~<b>9.3%</b>). The exam answer uses the risk-factor list; use FRAX in clinical practice and when a percentage is given. The board-style brief <a href=\"#bs-dexa-highrisk\">DEXA: When Screening Starts Early</a> works this through in full.</p>\n<p><b>Obesity is protective for osteoporosis, not a risk factor.</b> <b>Low body weight</b> (&lt;58 kg / 127 lb) is the risk factor. Higher weight increases bone density through mechanical loading and peripheral aromatization to estrogen.</p>",
+   "note": "round 2 voice: .dp; em dashes, ledger wording and time-waster framing removed, acronyms expanded",
    "reworded_bold": [
     "DXA at age 65 for all women — or earlier if she has ≥1 risk factor",
     "⚠︎ Two ledgers.",
     "exam ledger",
-    "obesity is protective for osteoporosis, not a risk factor."
+    "obesity is protective for osteoporosis, not a risk factor.",
+    "low"
    ],
    "claims": [
     {
@@ -811,48 +770,44 @@
      "to": "Screen earlier if she has ≥1 risk factor: prior fragility fracture, parental hip fracture, smoking, low BMI (body mass index) or chronic glucocorticoids."
     },
     {
-     "claim": "Risk factors: prior fragility fracture, parental hip fracture, smoking, low BMI, chronic glucocorticoids.",
+     "claim": "Risk factors include prior fragility fracture, parental hip fracture, smoking, low BMI and chronic glucocorticoids.",
      "to": "Screen earlier if she has ≥1 risk factor: prior fragility fracture, parental hip fracture, smoking, low BMI (body mass index) or chronic glucocorticoids."
     },
     {
      "claim": "Run the risk-factor list before applying the age default.",
-     "to": "Run the risk-factor list before applying the age default."
+     "to": "Check the risk-factor list before applying the age default."
     },
     {
      "claim": "A patient with timely menopause and an empty risk-factor list waits until 65.",
      "to": "A patient with timely menopause and no risk factors waits until 65."
     },
     {
-     "claim": "There are two ledgers.",
-     "to": "⚠︎ Exam answer versus clinical practice."
-    },
-    {
-     "claim": "The rule above is the exam ledger and the operational shorthand.",
-     "to": "The rule above is the exam answer and the operational shorthand."
+     "claim": "The risk-factor rule is the exam answer and the operational shorthand.",
+     "to": "⚠︎ The rule above is the exam answer and the operational shorthand."
     },
     {
      "claim": "The USPSTF statement expresses the same idea quantitatively.",
-     "to": "The USPSTF (US Preventive Services Task Force) statement expresses the same idea quantitatively, using FRAX (Fracture Risk Assessment Tool)."
+     "to": "The USPSTF (US Preventive Services Task Force) statement expresses the same idea quantitatively."
     },
     {
-     "claim": "USPSTF: screen before 65 when FRAX-estimated 10-year major osteoporotic fracture risk reaches that of a 65-year-old with no risk factors (~9.3%).",
-     "to": "Screen before 65 when the FRAX-estimated 10-year major osteoporotic fracture risk reaches that of a 65-year-old with no risk factors (~9.3%)."
+     "claim": "Screen before 65 when FRAX 10-year major osteoporotic fracture risk reaches that of a 65-year-old with no risk factors (~9.3%).",
+     "to": "Screen before 65 when the FRAX (Fracture Risk Assessment Tool) 10-year major osteoporotic fracture risk reaches that of a 65-year-old with no risk factors (~9.3%)."
     },
     {
      "claim": "The exam scores the risk-factor list.",
-     "to": "The exam scores the risk-factor list."
+     "to": "The exam answer uses the risk-factor list; use FRAX in clinical practice and when a percentage is given."
     },
     {
-     "claim": "Know FRAX for the clinic and for questions that hand you a percentage.",
-     "to": "Use FRAX in clinical practice and when a question gives a percentage."
+     "claim": "Use FRAX for the clinic and for questions that give a percentage.",
+     "to": "The exam answer uses the risk-factor list; use FRAX in clinical practice and when a percentage is given."
     },
     {
-     "claim": "The board-style brief DEXA: When Screening Starts Early works this fully.",
+     "claim": "This is fully worked in the board-style brief DEXA: When Screening Starts Early.",
      "to": "The board-style brief DEXA: When Screening Starts Early works this through in full."
     },
     {
-     "claim": "This is the most common time-waster here.",
-     "dropped": "framing about the question"
+     "claim": "Obesity is the most common time-waster here.",
+     "dropped": "framing about study time; the fact about obesity is kept"
     },
     {
      "claim": "Obesity is protective for osteoporosis, not a risk factor.",
@@ -860,7 +815,7 @@
     },
     {
      "claim": "The risk factor is low body weight (<58 kg / 127 lb).",
-     "to": "The risk factor is low body weight (<58 kg / 127 lb)."
+     "to": "Low body weight (<58 kg / 127 lb) is the risk factor."
     },
     {
      "claim": "Higher weight increases bone density through mechanical loading and peripheral aromatization to estrogen.",
@@ -873,7 +828,19 @@
      "from": "expansion"
     },
     {
-     "claim": "Screen all women with DXA at age 65.",
+     "claim": "BMI stands for body mass index.",
+     "from": "expansion"
+    },
+    {
+     "claim": "USPSTF stands for US Preventive Services Task Force.",
+     "from": "expansion"
+    },
+    {
+     "claim": "FRAX stands for Fracture Risk Assessment Tool.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Screen all women with DXA (dual-energy X-ray absorptiometry) at age 65.",
      "from": "DXA at age 65 for all women."
     },
     {
@@ -881,15 +848,11 @@
      "from": "DXA earlier if she has ≥1 risk factor."
     },
     {
-     "claim": "Risk factors: prior fragility fracture, parental hip fracture, smoking, low BMI or chronic glucocorticoids.",
-     "from": "Risk factors: prior fragility fracture, parental hip fracture, smoking, low BMI, chronic glucocorticoids."
+     "claim": "Screen earlier if she has ≥1 risk factor: prior fragility fracture, parental hip fracture, smoking, low BMI (body mass index) or chronic glucocorticoids.",
+     "from": "Risk factors include prior fragility fracture, parental hip fracture, smoking, low BMI and chronic glucocorticoids."
     },
     {
-     "claim": "BMI stands for body mass index.",
-     "from": "expansion"
-    },
-    {
-     "claim": "Run the risk-factor list before applying the age default.",
+     "claim": "Check the risk-factor list before applying the age default.",
      "from": "Run the risk-factor list before applying the age default."
     },
     {
@@ -897,47 +860,35 @@
      "from": "A patient with timely menopause and an empty risk-factor list waits until 65."
     },
     {
-     "claim": "Exam answer versus clinical practice.",
-     "from": "There are two ledgers."
-    },
-    {
      "claim": "The rule above is the exam answer and the operational shorthand.",
-     "from": "The rule above is the exam ledger and the operational shorthand."
+     "from": "The risk-factor rule is the exam answer and the operational shorthand."
     },
     {
-     "claim": "USPSTF stands for US Preventive Services Task Force.",
-     "from": "expansion"
-    },
-    {
-     "claim": "The USPSTF statement expresses the same idea quantitatively, using FRAX.",
+     "claim": "The USPSTF (US Preventive Services Task Force) statement expresses the same idea quantitatively.",
      "from": "The USPSTF statement expresses the same idea quantitatively."
     },
     {
-     "claim": "FRAX stands for Fracture Risk Assessment Tool.",
-     "from": "expansion"
+     "claim": "Screen before 65 when the FRAX (Fracture Risk Assessment Tool) 10-year major osteoporotic fracture risk reaches that of a 65-year-old with no risk factors (~9.3%).",
+     "from": "Screen before 65 when FRAX 10-year major osteoporotic fracture risk reaches that of a 65-year-old with no risk factors (~9.3%)."
     },
     {
-     "claim": "Screen before 65 when the FRAX-estimated 10-year major osteoporotic fracture risk reaches that of a 65-year-old with no risk factors (~9.3%).",
-     "from": "USPSTF: screen before 65 when FRAX-estimated 10-year major osteoporotic fracture risk reaches that of a 65-year-old with no risk factors (~9.3%)."
-    },
-    {
-     "claim": "The exam scores the risk-factor list.",
+     "claim": "The exam answer uses the risk-factor list.",
      "from": "The exam scores the risk-factor list."
     },
     {
-     "claim": "Use FRAX in clinical practice and when a question gives a percentage.",
-     "from": "Know FRAX for the clinic and for questions that hand you a percentage."
+     "claim": "Use FRAX in clinical practice and when a percentage is given.",
+     "from": "Use FRAX for the clinic and for questions that give a percentage."
     },
     {
      "claim": "The board-style brief DEXA: When Screening Starts Early works this through in full.",
-     "from": "The board-style brief DEXA: When Screening Starts Early works this fully."
+     "from": "This is fully worked in the board-style brief DEXA: When Screening Starts Early."
     },
     {
      "claim": "Obesity is protective for osteoporosis, not a risk factor.",
      "from": "Obesity is protective for osteoporosis, not a risk factor."
     },
     {
-     "claim": "The risk factor is low body weight (<58 kg / 127 lb).",
+     "claim": "Low body weight (<58 kg / 127 lb) is the risk factor.",
      "from": "The risk factor is low body weight (<58 kg / 127 lb)."
     },
     {
@@ -949,58 +900,112 @@
   {
    "op": "replace",
    "brief": "osteoporosis",
-   "find": "<b>Bisphosphonates</b> first-line — upright with water, remain upright 30 min (esophagitis); long-term risks are <b>osteonecrosis of the jaw</b> and <b>atypical femoral fracture</b> → drug holiday after ~5 yrs oral / 3 yrs IV if low risk · <b>denosumab</b> — <b>rebound vertebral fractures if stopped abruptly</b>, never simply discontinue · teriparatide/abaloparatide anabolic for very high risk · romosozumab carries a <b>cardiovascular boxed warning</b> · raloxifene lowers breast cancer risk but raises VTE · and the recycled one: <b>correct vitamin D deficiency before starting a bisphosphonate</b> or you precipitate hypocalcemia.",
-   "with": "<b>Bisphosphonates</b> are first-line; take them upright with water and remain upright 30 min (esophagitis). Long-term risks are <b>osteonecrosis of the jaw</b> and <b>atypical femoral fracture</b> → drug holiday after ~5 yrs oral / 3 yrs IV if low risk · <b>denosumab</b> — <b>rebound vertebral fractures if stopped abruptly</b>; never simply discontinue · teriparatide/abaloparatide are anabolic for very high risk · romosozumab carries a <b>cardiovascular boxed warning</b> · raloxifene lowers breast cancer risk but raises <b>VTE</b> (venous thromboembolism) risk · <b>correct vitamin D deficiency before starting a bisphosphonate</b>, or you precipitate hypocalcemia.",
-   "note": ".danger: remove prose em dash and 'recycled one' framing, expand VTE; structural denosumab dash kept",
+   "find": "Osteoporosis can be diagnosed <b>regardless of T-score</b> by a <b>fragility fracture of the hip or vertebra</b>. Treat if: T ≤ <b>−2.5</b>, <b>or</b> prior hip/vertebral fragility fracture, <b>or</b> osteopenia plus FRAX <b>≥20% major osteoporotic</b> or <b>≥3% hip</b>.",
+   "with": "Osteoporosis can be diagnosed <b>regardless of T-score</b> by a <b>fragility fracture of the hip or vertebra</b>. Treat if the T-score is ≤ <b>−2.5</b> or there is a prior hip or vertebral fragility fracture. Also treat osteopenia with a <b>FRAX</b> (Fracture Risk Assessment Tool) risk of <b>≥20% major osteoporotic</b> or <b>≥3% hip</b> fracture.",
+   "note": "round 2 voice: thresholds pearl; emphasis bold on 'or' removed, FRAX expanded",
+   "reworded_bold": [
+    "or"
+   ],
    "claims": [
     {
-     "claim": "Bisphosphonates are first-line.",
-     "to": "Bisphosphonates are first-line; take them upright with water and remain upright 30 min (esophagitis)."
+     "claim": "Osteoporosis can be diagnosed regardless of T-score by a fragility fracture of the hip or vertebra.",
+     "to": "Osteoporosis can be diagnosed regardless of T-score by a fragility fracture of the hip or vertebra."
     },
     {
-     "claim": "Take bisphosphonates upright with water and remain upright 30 min (esophagitis).",
-     "to": "Bisphosphonates are first-line; take them upright with water and remain upright 30 min (esophagitis)."
+     "claim": "Treat if T ≤ −2.5.",
+     "to": "Treat if the T-score is ≤ −2.5 or there is a prior hip or vertebral fragility fracture."
     },
     {
-     "claim": "Long-term bisphosphonate risks are osteonecrosis of the jaw and atypical femoral fracture.",
-     "to": "Long-term risks are osteonecrosis of the jaw and atypical femoral fracture → drug holiday after ~5 yrs oral / 3 yrs IV if low risk"
+     "claim": "Treat if prior hip/vertebral fragility fracture.",
+     "to": "Treat if the T-score is ≤ −2.5 or there is a prior hip or vertebral fragility fracture."
     },
     {
-     "claim": "Drug holiday after ~5 yrs oral / 3 yrs IV if low risk.",
-     "to": "Long-term risks are osteonecrosis of the jaw and atypical femoral fracture → drug holiday after ~5 yrs oral / 3 yrs IV if low risk"
-    },
-    {
-     "claim": "Denosumab causes rebound vertebral fractures if stopped abruptly; never simply discontinue.",
-     "to": "denosumab — rebound vertebral fractures if stopped abruptly; never simply discontinue"
-    },
-    {
-     "claim": "Teriparatide/abaloparatide are anabolic for very high risk.",
-     "to": "teriparatide/abaloparatide are anabolic for very high risk"
-    },
-    {
-     "claim": "Romosozumab carries a cardiovascular boxed warning.",
-     "to": "romosozumab carries a cardiovascular boxed warning"
-    },
-    {
-     "claim": "Raloxifene lowers breast cancer risk but raises VTE.",
-     "to": "raloxifene lowers breast cancer risk but raises VTE (venous thromboembolism) risk"
-    },
-    {
-     "claim": "This is the recycled one.",
-     "dropped": "framing about how often it is tested"
-    },
-    {
-     "claim": "Correct vitamin D deficiency before starting a bisphosphonate or you precipitate hypocalcemia.",
-     "to": "correct vitamin D deficiency before starting a bisphosphonate, or you precipitate hypocalcemia."
+     "claim": "Treat if osteopenia plus FRAX ≥20% major osteoporotic or ≥3% hip.",
+     "to": "Also treat osteopenia with a FRAX (Fracture Risk Assessment Tool) risk of ≥20% major osteoporotic or ≥3% hip fracture."
     }
    ],
    "new_claims": [
+    {
+     "claim": "FRAX stands for Fracture Risk Assessment Tool.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Osteoporosis can be diagnosed regardless of T-score by a fragility fracture of the hip or vertebra.",
+     "from": "Osteoporosis can be diagnosed regardless of T-score by a fragility fracture of the hip or vertebra."
+    },
+    {
+     "claim": "Treat if the T-score is ≤ −2.5.",
+     "from": "Treat if T ≤ −2.5."
+    },
+    {
+     "claim": "Treat if the T-score is ≤ −2.5 or there is a prior hip or vertebral fragility fracture.",
+     "from": "Treat if prior hip/vertebral fragility fracture."
+    },
+    {
+     "claim": "Also treat osteopenia with a FRAX (Fracture Risk Assessment Tool) risk of ≥20% major osteoporotic or ≥3% hip fracture.",
+     "from": "Treat if osteopenia plus FRAX ≥20% major osteoporotic or ≥3% hip."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "osteoporosis",
+   "find": "<b>Bisphosphonates</b> first-line — upright with water, remain upright 30 min (esophagitis); long-term risks are <b>osteonecrosis of the jaw</b> and <b>atypical femoral fracture</b> → drug holiday after ~5 yrs oral / 3 yrs IV if low risk · <b>denosumab</b> — <b>rebound vertebral fractures if stopped abruptly</b>, never simply discontinue · teriparatide/abaloparatide anabolic for very high risk · romosozumab carries a <b>cardiovascular boxed warning</b> · raloxifene lowers breast cancer risk but raises VTE · and the recycled one: <b>correct vitamin D deficiency before starting a bisphosphonate</b> or you precipitate hypocalcemia.",
+   "with": "<b>Bisphosphonates</b> are first-line: take upright with water and remain upright 30 min (esophagitis). Long-term risks are <b>osteonecrosis of the jaw</b> and <b>atypical femoral fracture</b>. If low risk, give a drug holiday after ~5 yrs oral / 3 yrs IV · <b>denosumab</b>: <b>rebound vertebral fractures if stopped abruptly</b>, so never simply discontinue · teriparatide/abaloparatide: anabolic for very high risk · romosozumab carries a <b>cardiovascular boxed warning</b> · raloxifene lowers breast cancer risk but raises <b>VTE</b> (venous thromboembolism) · <b>correct vitamin D deficiency before starting a bisphosphonate</b> or you precipitate hypocalcemia.",
+   "note": "round 2 voice: drug pearls; em dashes to colons, arrow split, 'recycled one' framing removed, VTE expanded",
+   "claims": [
+    {
+     "claim": "Bisphosphonates are first-line.",
+     "to": "Bisphosphonates are first-line: take upright with water and remain upright 30 min (esophagitis)."
+    },
+    {
+     "claim": "Take bisphosphonates upright with water and remain upright 30 min (esophagitis).",
+     "to": "Bisphosphonates are first-line: take upright with water and remain upright 30 min (esophagitis)."
+    },
+    {
+     "claim": "Long-term bisphosphonate risks are osteonecrosis of the jaw and atypical femoral fracture.",
+     "to": "Long-term risks are osteonecrosis of the jaw and atypical femoral fracture."
+    },
+    {
+     "claim": "Drug holiday after ~5 yrs oral / 3 yrs IV if low risk.",
+     "to": "If low risk, give a drug holiday after ~5 yrs oral / 3 yrs IV · denosumab: rebound vertebral fractures if stopped abruptly, so never simply discontinue · teriparatide/abaloparatide: anabolic for very high risk · romosozumab carries a cardiovascular boxed warning · raloxifene lowers breast cancer risk but raises VTE (venous thromboembolism) · correct vitamin D deficiency before starting a bisphosphonate or you precipitate hypocalcemia."
+    },
+    {
+     "claim": "Denosumab causes rebound vertebral fractures if stopped abruptly; never simply discontinue.",
+     "to": "If low risk, give a drug holiday after ~5 yrs oral / 3 yrs IV · denosumab: rebound vertebral fractures if stopped abruptly, so never simply discontinue · teriparatide/abaloparatide: anabolic for very high risk · romosozumab carries a cardiovascular boxed warning · raloxifene lowers breast cancer risk but raises VTE (venous thromboembolism) · correct vitamin D deficiency before starting a bisphosphonate or you precipitate hypocalcemia."
+    },
+    {
+     "claim": "Teriparatide/abaloparatide are anabolic for very high risk.",
+     "to": "If low risk, give a drug holiday after ~5 yrs oral / 3 yrs IV · denosumab: rebound vertebral fractures if stopped abruptly, so never simply discontinue · teriparatide/abaloparatide: anabolic for very high risk · romosozumab carries a cardiovascular boxed warning · raloxifene lowers breast cancer risk but raises VTE (venous thromboembolism) · correct vitamin D deficiency before starting a bisphosphonate or you precipitate hypocalcemia."
+    },
+    {
+     "claim": "Romosozumab carries a cardiovascular boxed warning.",
+     "to": "If low risk, give a drug holiday after ~5 yrs oral / 3 yrs IV · denosumab: rebound vertebral fractures if stopped abruptly, so never simply discontinue · teriparatide/abaloparatide: anabolic for very high risk · romosozumab carries a cardiovascular boxed warning · raloxifene lowers breast cancer risk but raises VTE (venous thromboembolism) · correct vitamin D deficiency before starting a bisphosphonate or you precipitate hypocalcemia."
+    },
+    {
+     "claim": "Raloxifene lowers breast cancer risk but raises VTE.",
+     "to": "If low risk, give a drug holiday after ~5 yrs oral / 3 yrs IV · denosumab: rebound vertebral fractures if stopped abruptly, so never simply discontinue · teriparatide/abaloparatide: anabolic for very high risk · romosozumab carries a cardiovascular boxed warning · raloxifene lowers breast cancer risk but raises VTE (venous thromboembolism) · correct vitamin D deficiency before starting a bisphosphonate or you precipitate hypocalcemia."
+    },
+    {
+     "claim": "Vitamin D correction is a recycled (often-repeated) point.",
+     "dropped": "framing about repetition; the clinical fact is kept"
+    },
+    {
+     "claim": "Correct vitamin D deficiency before starting a bisphosphonate or you precipitate hypocalcemia.",
+     "to": "If low risk, give a drug holiday after ~5 yrs oral / 3 yrs IV · denosumab: rebound vertebral fractures if stopped abruptly, so never simply discontinue · teriparatide/abaloparatide: anabolic for very high risk · romosozumab carries a cardiovascular boxed warning · raloxifene lowers breast cancer risk but raises VTE (venous thromboembolism) · correct vitamin D deficiency before starting a bisphosphonate or you precipitate hypocalcemia."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "VTE stands for venous thromboembolism.",
+     "from": "expansion"
+    },
     {
      "claim": "Bisphosphonates are first-line.",
      "from": "Bisphosphonates are first-line."
     },
     {
-     "claim": "Take them upright with water and remain upright 30 min (esophagitis).",
+     "claim": "Take upright with water and remain upright 30 min (esophagitis).",
      "from": "Take bisphosphonates upright with water and remain upright 30 min (esophagitis)."
     },
     {
@@ -1008,15 +1013,15 @@
      "from": "Long-term bisphosphonate risks are osteonecrosis of the jaw and atypical femoral fracture."
     },
     {
-     "claim": "Drug holiday after ~5 yrs oral / 3 yrs IV if low risk.",
+     "claim": "If low risk, give a drug holiday after ~5 yrs oral / 3 yrs IV.",
      "from": "Drug holiday after ~5 yrs oral / 3 yrs IV if low risk."
     },
     {
-     "claim": "Denosumab: rebound vertebral fractures if stopped abruptly; never simply discontinue.",
+     "claim": "Denosumab: rebound vertebral fractures if stopped abruptly, so never simply discontinue.",
      "from": "Denosumab causes rebound vertebral fractures if stopped abruptly; never simply discontinue."
     },
     {
-     "claim": "Teriparatide/abaloparatide are anabolic for very high risk.",
+     "claim": "Teriparatide/abaloparatide: anabolic for very high risk.",
      "from": "Teriparatide/abaloparatide are anabolic for very high risk."
     },
     {
@@ -1024,15 +1029,11 @@
      "from": "Romosozumab carries a cardiovascular boxed warning."
     },
     {
-     "claim": "Raloxifene lowers breast cancer risk but raises VTE risk.",
+     "claim": "Raloxifene lowers breast cancer risk but raises VTE.",
      "from": "Raloxifene lowers breast cancer risk but raises VTE."
     },
     {
-     "claim": "VTE stands for venous thromboembolism.",
-     "from": "expansion"
-    },
-    {
-     "claim": "Correct vitamin D deficiency before starting a bisphosphonate, or you precipitate hypocalcemia.",
+     "claim": "Correct vitamin D deficiency before starting a bisphosphonate or you precipitate hypocalcemia.",
      "from": "Correct vitamin D deficiency before starting a bisphosphonate or you precipitate hypocalcemia."
     }
    ]
@@ -1041,45 +1042,41 @@
    "op": "replace",
    "brief": "osteoporosis",
    "find": "Before debating whether to screen early, <b>verify each patient variable points the direction you assume it does</b>. Obesity raises cardiovascular, endometrial, and OSA risk — and <i>lowers</i> osteoporosis risk. A variable's direction is disease-specific.",
-   "with": "Before deciding whether to screen early, <b>verify each patient variable points the direction you assume it does</b>. Obesity raises cardiovascular, endometrial and <b>OSA</b> (obstructive sleep apnea) risk. It <i>lowers</i> osteoporosis risk. A variable's direction is disease-specific.",
-   "note": ".rule: remove em dash, expand OSA",
+   "with": "Before deciding whether to screen early, <b>verify each patient variable points the direction you assume it does</b>. Obesity raises cardiovascular, endometrial and <b>OSA</b> (obstructive sleep apnea) risk but lowers osteoporosis risk. Whether a variable raises or lowers risk depends on the disease.",
+   "note": "round 2 voice: .rule; em dash removed, OSA expanded",
    "claims": [
     {
-     "claim": "Before debating whether to screen early, verify each patient variable points the direction you assume it does.",
+     "claim": "Before deciding whether to screen early, verify each patient variable points the direction you assume.",
      "to": "Before deciding whether to screen early, verify each patient variable points the direction you assume it does."
     },
     {
-     "claim": "Obesity raises cardiovascular, endometrial, and OSA risk.",
-     "to": "Obesity raises cardiovascular, endometrial and OSA (obstructive sleep apnea) risk."
+     "claim": "Obesity raises cardiovascular, endometrial and OSA risk.",
+     "to": "Obesity raises cardiovascular, endometrial and OSA (obstructive sleep apnea) risk but lowers osteoporosis risk."
     },
     {
      "claim": "Obesity lowers osteoporosis risk.",
-     "to": "It lowers osteoporosis risk."
+     "to": "Obesity raises cardiovascular, endometrial and OSA (obstructive sleep apnea) risk but lowers osteoporosis risk."
     },
     {
      "claim": "A variable's direction is disease-specific.",
-     "to": "A variable's direction is disease-specific."
+     "to": "Whether a variable raises or lowers risk depends on the disease."
     }
    ],
    "new_claims": [
-    {
-     "claim": "Before deciding whether to screen early, verify each patient variable points the direction you assume it does.",
-     "from": "Before debating whether to screen early, verify each patient variable points the direction you assume it does."
-    },
-    {
-     "claim": "Obesity raises cardiovascular, endometrial and OSA risk.",
-     "from": "Obesity raises cardiovascular, endometrial, and OSA risk."
-    },
     {
      "claim": "OSA stands for obstructive sleep apnea.",
      "from": "expansion"
     },
     {
-     "claim": "Obesity lowers osteoporosis risk.",
-     "from": "Obesity lowers osteoporosis risk."
+     "claim": "Before deciding whether to screen early, verify each patient variable points the direction you assume it does.",
+     "from": "Before deciding whether to screen early, verify each patient variable points the direction you assume."
     },
     {
-     "claim": "A variable's direction is disease-specific.",
+     "claim": "Obesity raises cardiovascular, endometrial and OSA (obstructive sleep apnea) risk but lowers osteoporosis risk.",
+     "from": "Obesity raises cardiovascular, endometrial and OSA risk."
+    },
+    {
+     "claim": "Whether a variable raises or lowers risk depends on the disease.",
      "from": "A variable's direction is disease-specific."
     }
    ]

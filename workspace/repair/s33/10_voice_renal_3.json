@@ -74,7 +74,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Hypovolemia makes GFR prostaglandin-dependent.",
+     "claim": "Hypovolemia makes GFR (glomerular filtration rate) prostaglandin-dependent, and COX (cyclooxygenase) inhibition constricts the afferent arteriole.",
      "from": "Hypovolemia makes GFR prostaglandin-dependent."
     },
     {
@@ -82,7 +82,7 @@
      "from": "expansion"
     },
     {
-     "claim": "COX inhibition constricts the afferent arteriole.",
+     "claim": "Hypovolemia makes GFR (glomerular filtration rate) prostaglandin-dependent, and COX (cyclooxygenase) inhibition constricts the afferent arteriole.",
      "from": "COX inhibition constricts the afferent arteriole."
     },
     {
@@ -145,7 +145,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Prostaglandins dilate the afferent arteriole and angiotensin II constricts the efferent arteriole.",
+     "claim": "Prostaglandins dilate the afferent arteriole, and angiotensin II constricts the efferent arteriole.",
      "from": "Prostaglandins dilate the afferent arteriole."
     },
     {
@@ -161,7 +161,7 @@
      "from": "expansion"
     },
     {
-     "claim": "An NSAID and an ACE inhibitor drop GFR from opposite ends.",
+     "claim": "An NSAID (nonsteroidal anti-inflammatory drug) and an ACE (angiotensin-converting enzyme) inhibitor drop GFR (glomerular filtration rate) from opposite ends.",
      "from": "NSAIDs and ACE inhibitors drop GFR from opposite ends."
     },
     {
@@ -169,7 +169,7 @@
      "from": "expansion"
     },
     {
-     "claim": "An NSAID plus an ACE inhibitor or ARB plus a diuretic is the triple whammy.",
+     "claim": "An NSAID plus an ACE inhibitor or ARB (angiotensin II receptor blocker) plus a diuretic is the \"triple whammy\"",
      "from": "NSAID + ACEi/ARB + diuretic is the triple whammy."
     },
     {
@@ -177,7 +177,7 @@
      "from": "expansion"
     },
     {
-     "claim": "FENa <1% supports prerenal but is unreliable after diuretics.",
+     "claim": "FENa (fractional excretion of sodium) <1% supports prerenal but is unreliable after diuretics",
      "from": "FENa <1% supports prerenal."
     },
     {
@@ -185,7 +185,7 @@
      "from": "expansion"
     },
     {
-     "claim": "The AIN triad is present in a minority.",
+     "claim": "the AIN (acute interstitial nephritis) triad is present in a minority; WBC (white blood cell) casts carry the diagnosis",
      "from": "The AIN triad is present in a minority."
     },
     {
@@ -193,7 +193,7 @@
      "from": "expansion"
     },
     {
-     "claim": "WBC casts carry the diagnosis.",
+     "claim": "the AIN (acute interstitial nephritis) triad is present in a minority; WBC (white blood cell) casts carry the diagnosis",
      "from": "WBC casts carry the AIN diagnosis."
     },
     {
@@ -201,7 +201,7 @@
      "from": "expansion"
     },
     {
-     "claim": "PSGN vs IgA nephropathy is timing plus complement.",
+     "claim": "PSGN (poststreptococcal glomerulonephritis) vs IgA nephropathy is timing plus complement.",
      "from": "PSGN vs IgA is timing plus complement."
     },
     {
@@ -213,7 +213,7 @@
      "from": "expansion"
     },
     {
-     "claim": "IgA nephropathy comes during the URI with normal C3.",
+     "claim": "PSGN comes 2–4 weeks after the infection with low C3; IgA nephropathy comes during the URI (upper respiratory infection) with normal C3.",
      "from": "IgA nephropathy is during the URI with normal C3."
     }
    ]
@@ -286,11 +286,11 @@
    ],
    "new_claims": [
     {
-     "claim": "The named drug draws attention to drug-induced interstitial nephritis.",
+     "claim": "Drug-induced interstitial nephritis: the named drug draws attention to it, but the timeline and the sediment are wrong.",
      "from": "The named drug pulls toward drug-induced interstitial nephritis."
     },
     {
-     "claim": "The timeline and the sediment are wrong for it.",
+     "claim": "Drug-induced interstitial nephritis: the named drug draws attention to it, but the timeline and the sediment are wrong.",
      "from": "The timeline is wrong for interstitial nephritis."
     }
    ]
@@ -317,11 +317,11 @@
      "from": "expansion"
     },
     {
-     "claim": "Gastroenteritis cues HUS.",
+     "claim": "HUS (hemolytic uremic syndrome): gastroenteritis cues it, but it needs bloody diarrhea, schistocytes and an active sediment.",
      "from": "Gastroenteritis cues HUS."
     },
     {
-     "claim": "HUS needs bloody diarrhea, schistocytes and an active sediment.",
+     "claim": "HUS (hemolytic uremic syndrome): gastroenteritis cues it, but it needs bloody diarrhea, schistocytes and an active sediment.",
      "from": "HUS needs bloody diarrhea, schistocytes, and an active sediment."
     }
    ]
@@ -410,7 +410,7 @@
      "from": "The biopsy result is a premise, not a puzzle: the lesion is already named."
     },
     {
-     "claim": "The lesion is membranous nephropathy.",
+     "claim": "The biopsy already names the lesion: membranous nephropathy.",
      "from": "The lesion is membranous nephropathy."
     },
     {
@@ -418,7 +418,7 @@
      "from": "Membranous nephropathy in adults is usually primary; in children it is usually secondary."
     },
     {
-     "claim": "In this 17-year-old the diagnosis requires a search for a cause.",
+     "claim": "In this 17-year-old, the diagnosis therefore requires a search for a cause.",
      "from": "The diagnosis obliges a search for a cause."
     },
     {
@@ -430,7 +430,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Circulating HBeAg and anti-HBeAg immune complexes deposit subepithelially and produce exactly this picture.",
+     "claim": "Circulating immune complexes of HBeAg (hepatitis B e antigen) and anti-HBeAg deposit subepithelially and produce exactly this picture.",
      "from": "Circulating HBeAg–anti-HBeAg immune complexes deposit subepithelially and produce exactly this picture."
     },
     {
@@ -457,7 +457,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Normal BP and creatinine argue against post-streptococcal glomerulonephritis, where hypertension and a rising creatinine are the rule.",
+     "claim": "Blood pressure 110/70 with creatinine 0.9 — both normal, characteristic of membranous and against post-streptococcal glomerulonephritis, where hypertension and a rising creatinine are the rule",
      "from": "Normal BP and creatinine argue against PSGN, where hypertension and a rising creatinine are the rule."
     }
    ]
@@ -480,7 +480,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Age 17: primary membranous is an adult disease, so a paediatric case is secondary until proven otherwise.",
+     "claim": "Age 17 — primary membranous is an adult disease, so a paediatric case is secondary until proven otherwise",
      "from": "Primary membranous is an adult disease, so a paediatric case is secondary until proven otherwise."
     }
    ]
@@ -530,11 +530,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Seventeen is paediatric.",
+     "claim": "How old is the patient? — Seventeen, so paediatric → secondary until proven otherwise",
      "from": "Seventeen is paediatric."
     },
     {
-     "claim": "Paediatric means secondary until proven otherwise.",
+     "claim": "How old is the patient? — Seventeen, so paediatric → secondary until proven otherwise",
      "from": "Paediatric means secondary until proven otherwise."
     }
    ]
@@ -557,7 +557,7 @@
      "from": "expansion"
     },
     {
-     "claim": "T-cell dysregulation releases cytokines such as IL-13 that injure podocytes.",
+     "claim": "Mechanism — T-cell dysregulation releases cytokines such as IL-13 (interleukin 13) that injure podocytes",
      "from": "T-cell dysregulation releases cytokines such as IL-13 that injure podocytes."
     }
    ]
@@ -587,7 +587,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Obesity is a real FSGS association.",
+     "claim": "Obesity — a real FSGS (focal segmental glomerulosclerosis) association, but FSGS is far less common at age 5 and usually brings hematuria and hypertension",
      "from": "Obesity is a real FSGS association."
     },
     {
@@ -595,7 +595,7 @@
      "from": "expansion"
     },
     {
-     "claim": "FSGS is far less common at age 5.",
+     "claim": "Obesity — a real FSGS (focal segmental glomerulosclerosis) association, but FSGS is far less common at age 5 and usually brings hematuria and hypertension",
      "from": "FSGS is far less common at age 5."
     }
    ]
@@ -644,7 +644,7 @@
      "from": "An adult with this biopsy is usually primary."
     },
     {
-     "claim": "In an adult the workup can be brief.",
+     "claim": "In an adult, membranous nephropathy is usually primary and the workup can be brief.",
      "from": "In an adult the workup can be brief."
     },
     {
@@ -652,7 +652,7 @@
      "from": "A child with the identical biopsy has almost certainly got a cause."
     },
     {
-     "claim": "In a child, finding the cause is the management.",
+     "claim": "A child with the identical biopsy almost certainly has a cause, and finding it is the management.",
      "from": "In a child, finding the cause is the management."
     }
    ]
@@ -679,7 +679,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Immune complex deposition causes PSGN and MPGN, which bring hematuria.",
+     "claim": "Immune complex deposition — PSGN (post-streptococcal glomerulonephritis) and MPGN (membranoproliferative glomerulonephritis), which bring hematuria",
      "from": "Immune complex deposition causes PSGN and MPGN, which bring hematuria."
     }
    ]
@@ -706,7 +706,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Glomerular sclerosis is FSGS, associated with obesity, African ancestry and HIV.",
+     "claim": "Glomerular sclerosis — FSGS (focal segmental glomerulosclerosis); obesity, African ancestry, HIV (human immunodeficiency virus); often hematuria, hypertension and steroid resistance",
      "from": "Glomerular sclerosis is FSGS, associated with obesity, African ancestry and HIV."
     }
    ]
@@ -753,7 +753,7 @@
      "from": "Deposits accumulate slowly; foot processes efface suddenly."
     },
     {
-     "claim": "Subepithelial deposits are membranous, subendothelial lupus nephritis, mesangial IgA.",
+     "claim": "Location of the deposits — subepithelial is membranous, subendothelial is lupus nephritis, mesangial is IgA",
      "from": "Subepithelial deposits are membranous, subendothelial lupus nephritis, mesangial IgA."
     },
     {
@@ -796,7 +796,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Part I Hematuria covers the nephritic side of this fork and the Alport link.",
+     "claim": "Part I Hematuria (glomerular vs non-glomerular) covers the nephritic side of this fork and the Alport link.",
      "from": "Part I Hematuria (glomerular vs non-glomerular) owns the nephritic side of this fork and the Alport link."
     },
     {
@@ -812,7 +812,7 @@
      "from": "Aquifer Child with Puffy Eyes works the chief complaint back to this diagnosis."
     },
     {
-     "claim": "Aquifer Child with Puffy Eyes covers relapse, peritonitis, thrombosis and vaccines in the nephrotic child.",
+     "claim": "Aquifer Child with Puffy Eyes works from the chief complaint to this diagnosis and covers relapse, peritonitis, thrombosis and vaccines in the nephrotic child.",
      "from": "Aquifer Child with Puffy Eyes owns relapse, peritonitis, thrombosis and vaccines in the nephrotic child."
     },
     {
@@ -855,7 +855,7 @@
      "from": "Ask what the disease is associated with."
     },
     {
-     "claim": "The patient's age decides whether the association list is the priority or an afterthought.",
+     "claim": "Let the patient's age decide whether the association list is the priority or an afterthought.",
      "from": "The patient's age decides whether the association list is the answer or an afterthought."
     }
    ]
@@ -905,7 +905,7 @@
      "from": "expansion"
     },
     {
-     "claim": "PSGN is nephritic, with haematuria, hypertension and a raised creatinine.",
+     "claim": "Antistreptolysin O: PSGN (post-streptococcal glomerulonephritis) is nephritic, with haematuria, hypertension and a raised creatinine; strep is not associated with membranous.",
      "from": "PSGN is nephritic, with haematuria, hypertension and a raised creatinine."
     }
    ]
@@ -976,7 +976,7 @@
      "from": "Oligohydramnios names the sequence, not the cause."
     },
     {
-     "claim": "A distended abdomen with a soft suprapubic midline mass in a male is a distended bladder, which establishes the cause.",
+     "claim": "Distended abdomen with a soft suprapubic midline mass in a male is a distended bladder, which establishes the cause.",
      "from": "A distended abdomen with a soft suprapubic midline mass in a male is a distended bladder."
     },
     {
@@ -1001,7 +1001,7 @@
    "op": "replace",
    "brief": "bs-puv",
    "find": "<b>Decompress before you image, image before you cut.</b> Urethral catheter first, then voiding cystourethrogram — the confirmatory study, showing a dilated posterior urethra and a thick-walled trabeculated bladder. <b>Renal ultrasound shows hydronephrosis but cannot confirm the diagnosis.</b> Then VACTERL-style screening with echocardiography and renal ultrasound, and surgical valve ablation.",
-   "with": "<b>Decompress the bladder before imaging, and image before surgery.</b> Place a urethral catheter first, then obtain a voiding cystourethrogram. The cystourethrogram is the confirmatory study; it shows a dilated posterior urethra and a thick-walled trabeculated bladder. <b>Renal ultrasound shows hydronephrosis but cannot confirm the diagnosis.</b> Then complete <b>VACTERL</b> (vertebral, anal, cardiac, tracheoesophageal, renal and limb)-style screening with echocardiography and renal ultrasound, and perform surgical valve ablation.",
+   "with": "<b>Decompress the bladder before imaging, and image before surgery.</b> Place a urethral catheter first, then obtain a voiding cystourethrogram. The cystourethrogram is the confirmatory study; it shows a dilated posterior urethra and a thick-walled trabeculated bladder. <b>Renal ultrasound shows hydronephrosis but cannot confirm the diagnosis.</b> Then complete <b>VACTERL</b>-style screening (vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies) with echocardiography and renal ultrasound, and perform surgical valve ablation.",
    "note": "voice: .danger; slogan bold made plain directive, em dash removed, acronym",
    "reworded_bold": [
     "Decompress before you image, image before you cut."
@@ -1029,11 +1029,11 @@
     },
     {
      "claim": "Then VACTERL-style screening with echocardiography and renal ultrasound.",
-     "to": "Then complete VACTERL (vertebral, anal, cardiac, tracheoesophageal, renal and limb)-style screening with echocardiography and renal ultrasound, and perform surgical valve ablation."
+     "to": "Then complete VACTERL-style screening (vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies) with echocardiography and renal ultrasound, and perform surgical valve ablation."
     },
     {
      "claim": "Then surgical valve ablation.",
-     "to": "Then complete VACTERL (vertebral, anal, cardiac, tracheoesophageal, renal and limb)-style screening with echocardiography and renal ultrasound, and perform surgical valve ablation."
+     "to": "Then complete VACTERL-style screening (vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies) with echocardiography and renal ultrasound, and perform surgical valve ablation."
     }
    ],
    "new_claims": [
@@ -1066,7 +1066,7 @@
      "from": "Then VACTERL-style screening with echocardiography and renal ultrasound."
     },
     {
-     "claim": "Then perform surgical valve ablation.",
+     "claim": "Then complete VACTERL-style screening (vertebral, anal, cardiac, tracheoesophageal, renal and limb anomalies) with echocardiography and renal ultrasound, and perform surgical valve ablation.",
      "from": "Then surgical valve ablation."
     }
    ]
@@ -1175,7 +1175,7 @@
      "from": "Cannot make urine gives oligohydramnios."
     },
     {
-     "claim": "A fetus that cannot swallow develops polyhydramnios.",
+     "claim": "A fetus that cannot make urine develops oligohydramnios, and one that cannot swallow develops polyhydramnios.",
      "from": "Cannot swallow gives polyhydramnios."
     },
     {
@@ -1245,7 +1245,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Diaphragmatic hernia and Wilms each explain the most prominent finding and leave the rest unexplained.",
+     "claim": "Diaphragmatic hernia and Wilms: each explains the most prominent finding and leaves the rest unexplained.",
      "from": "Diaphragmatic hernia and Wilms each explain the loudest finding and orphan the rest."
     }
    ]
@@ -1268,11 +1268,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Duodenal atresia causes polyhydramnios.",
+     "claim": "Duodenal atresia: it causes polyhydramnios, the opposite of the oligohydramnios the clubfeet prove.",
      "from": "Duodenal atresia causes polyhydramnios."
     },
     {
-     "claim": "The clubfeet prove oligohydramnios, the opposite.",
+     "claim": "Duodenal atresia: it causes polyhydramnios, the opposite of the oligohydramnios the clubfeet prove.",
      "from": "That is the opposite of what the clubfeet prove."
     }
    ]
@@ -1295,11 +1295,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Transient tachypnea is mild and self-limited.",
+     "claim": "Transient tachypnea: it is mild and self-limited, and cannot explain a mass or clubfeet.",
      "from": "Transient tachypnea is mild and self-limited."
     },
     {
-     "claim": "Transient tachypnea cannot explain a mass or clubfeet.",
+     "claim": "Transient tachypnea: it is mild and self-limited, and cannot explain a mass or clubfeet.",
      "from": "Transient tachypnea cannot explain a mass or clubfeet."
     }
    ]
@@ -1393,11 +1393,11 @@
    ],
    "new_claims": [
     {
-     "claim": "The bank explanation says S. saprophyticus is not a urease-splitting organism, so nitrites would be unlikely.",
+     "claim": "The explanation states S. saprophyticus \"is not a urease-splitting organism, so urinalysis would be unlikely to show positive nitrites.\"",
      "from": "The bank explanation says S. saprophyticus is not a urease-splitting organism, so nitrites would be unlikely."
     },
     {
-     "claim": "The explanation contains two errors.",
+     "claim": "It contains two errors: nitrites come from nitrate reductase, not urease, and S. saprophyticus is urease-positive.",
      "from": "There are two stacked errors in it."
     },
     {
@@ -1413,7 +1413,7 @@
      "from": "The conclusion holds: S. saprophyticus is nitrite-negative."
     },
     {
-     "claim": "It is nitrite-negative because it lacks nitrate reductase.",
+     "claim": "S. saprophyticus is still nitrite-negative, but because it lacks nitrate reductase.",
      "from": "It is nitrite-negative because it lacks nitrate reductase."
     }
    ]
@@ -1452,7 +1452,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Male sex makes any UTI complicated by definition.",
+     "claim": "Male sex makes any UTI \"complicated\" by definition (UTI, urinary tract infection).",
      "from": "Male sex makes any UTI complicated by definition."
     },
     {
@@ -1468,11 +1468,11 @@
      "from": "expansion"
     },
     {
-     "claim": "Complicated means a fluoroquinolone or TMP-SMX rather than nitrofurantoin.",
+     "claim": "Complicated means a longer course (7–14 days), a fluoroquinolone or TMP-SMX (trimethoprim-sulfamethoxazole) rather than nitrofurantoin, and a lower threshold for imaging.",
      "from": "Complicated means a fluoroquinolone or TMP-SMX rather than nitrofurantoin."
     },
     {
-     "claim": "Complicated means a lower threshold for imaging.",
+     "claim": "Complicated means a longer course (7–14 days), a fluoroquinolone or TMP-SMX (trimethoprim-sulfamethoxazole) rather than nitrofurantoin, and a lower threshold for imaging.",
      "from": "Complicated means a lower threshold for imaging."
     },
     {
@@ -1480,7 +1480,7 @@
      "from": "expansion"
     },
     {
-     "claim": "BPH supplies the mechanism: incomplete emptying causes stasis and ascending infection.",
+     "claim": "BPH (benign prostatic hyperplasia) supplies the mechanism: incomplete emptying causes stasis and ascending infection.",
      "from": "BPH supplies the mechanism: incomplete emptying, stasis, ascending infection."
     }
    ]
@@ -1507,7 +1507,7 @@
      "from": "Nitrite sensitivity is only ~50%."
     },
     {
-     "claim": "A short bladder dwell time can give a false negative despite E. coli.",
+     "claim": "A short bladder dwell time (frequent voiding, continuous catheter drainage) can give a false negative despite E. coli.",
      "from": "A short bladder dwell time can give a false negative despite E. coli."
     }
    ]
@@ -1545,7 +1545,7 @@
      "from": "Urease and nitrate reductase get conflated constantly, including in vendor explanations."
     },
     {
-     "claim": "Treat urease and nitrate reductase as independent properties.",
+     "claim": "Treat them as independent properties.",
      "from": "Urease and nitrate reductase are independent axes."
     }
    ]
@@ -1614,7 +1614,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Postvoid residual is 800 mL.",
+     "claim": "Postvoid residual 800 mL.",
      "from": "Postvoid residual is 800 mL."
     },
     {
@@ -1626,7 +1626,7 @@
      "from": "expansion"
     },
     {
-     "claim": "The PVR splits the entire differential before any symptom is weighed.",
+     "claim": "The PVR (postvoid residual) splits the entire differential before any symptom is weighed.",
      "from": "The PVR splits the entire differential before any symptom is weighed."
     },
     {
@@ -1692,7 +1692,7 @@
      "from": "A chronically overdistended bladder leaks with any rise in intra-abdominal pressure."
     },
     {
-     "claim": "The test loses specificity once the PVR is high.",
+     "claim": "However, a chronically overdistended bladder leaks with any rise in intra-abdominal pressure, so the test loses specificity once the PVR (postvoid residual) is high.",
      "from": "The cough stress test loses specificity once the PVR is high."
     },
     {
@@ -1759,7 +1759,7 @@
      "from": "expansion"
     },
     {
-     "claim": "T1DM since age 6 causes diabetic autonomic neuropathy.",
+     "claim": "T1DM (type 1 diabetes mellitus) since age 6 causes diabetic autonomic neuropathy.",
      "from": "T1DM since age 6 leads to diabetic autonomic neuropathy."
     },
     {
@@ -1775,7 +1775,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Retention causes the recurrent UTIs from stasis.",
+     "claim": "Retention causes overflow leakage and the recurrent UTIs (urinary tract infections) from stasis.",
      "from": "Retention leads to the recurrent UTIs from stasis."
     },
     {
@@ -1783,7 +1783,7 @@
      "from": "Oxybutynin treats urge."
     },
     {
-     "claim": "Oxybutynin would worsen overflow.",
+     "claim": "Oxybutynin treats urge incontinence and would worsen overflow.",
      "from": "Oxybutynin would worsen overflow."
     },
     {
@@ -1791,7 +1791,7 @@
      "from": "Oxybutynin causes fecal impaction."
     },
     {
-     "claim": "Oxybutynin lowers gut motility and bladder emptying; check both on an elderly or diabetic patient's medication list.",
+     "claim": "Gut motility down, bladder emptying down: when oxybutynin appears on an elderly or diabetic patient's medication list, check both.",
      "from": "Oxybutynin lowers gut motility and bladder emptying; check both on an elderly or diabetic med list."
     }
    ]
@@ -1838,7 +1838,7 @@
      "from": "expansion"
     },
     {
-     "claim": "A high PVR establishes that overflow is present, not that it is the only mechanism.",
+     "claim": "A high PVR (postvoid residual) establishes that overflow is present, not that it is the only mechanism; mixed incontinence is common.",
      "from": "A high PVR establishes overflow is present, not that it is the only mechanism."
     },
     {
@@ -1854,7 +1854,7 @@
      "from": "A PVR is only interpretable when measured after a normal void."
     },
     {
-     "claim": "PVR thresholds are normal <50 and abnormal >200, unverified.",
+     "claim": "⚠︎ PVR thresholds: normal under 50, abnormal over 200.",
      "from": "PVR thresholds are normal <50 and abnormal >200, unverified."
     }
    ]
@@ -1877,7 +1877,7 @@
    ],
    "new_claims": [
     {
-     "claim": "When a quantitative measure of organ function is given, check each candidate diagnosis is compatible with that number before weighing symptoms.",
+     "claim": "When a quantitative measure of organ function is given, check whether each candidate diagnosis is compatible with that number before weighing symptoms.",
      "from": "With a quantitative measure of organ function, check each candidate diagnosis is compatible with that number before weighing symptoms."
     },
     {
@@ -1900,7 +1900,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Protein without cells or casts with normal blood pressure and creatinine is nephrotic.",
+     "claim": "Nephrotic or nephritic? — Protein without cells or casts, normal blood pressure and creatinine → nephrotic",
      "from": "Protein without cells or casts with normal BP and creatinine is nephrotic."
     }
    ]
@@ -1923,7 +1923,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Blood pressure and GFR are typically normal in membranous.",
+     "claim": "Blood pressure and GFR (glomerular filtration rate) are typically normal in membranous, and partial or complete remission is common with end-stage disease rare",
      "from": "Blood pressure and GFR are typically normal in membranous."
     }
    ]

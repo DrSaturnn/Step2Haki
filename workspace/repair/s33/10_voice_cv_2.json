@@ -49,11 +49,11 @@
      "from": "D-dimer is useful only as a rule-out in low-probability patients."
     },
     {
-     "claim": "D-dimer is elevated in infection, malignancy, pregnancy and post-op states.",
+     "claim": "It is elevated in infection, malignancy, pregnancy and post-op states, so it can never rule anything in.",
      "from": "D-dimer is elevated in infection, malignancy, pregnancy, and post-op states."
     },
     {
-     "claim": "D-dimer can never rule anything in.",
+     "claim": "It is elevated in infection, malignancy, pregnancy and post-op states, so it can never rule anything in.",
      "from": "D-dimer can never rule anything in."
     }
    ]
@@ -88,7 +88,7 @@
      "from": "Virchow triad is the three routes to venous thrombosis."
     },
     {
-     "claim": "The routes are stasis (immobility, long travel), endothelial injury (surgery, trauma, a line) and hypercoagulability (cancer, pregnancy, estrogen, inherited thrombophilia).",
+     "claim": "They are stasis (immobility, long travel), endothelial injury (surgery, trauma, a line) and hypercoagulability (cancer, pregnancy, estrogen, inherited thrombophilia).",
      "from": "Stasis (immobility, long travel) is one route."
     }
    ]
@@ -97,57 +97,57 @@
    "op": "replace",
    "brief": "dvt",
    "find": "<span class=\"lbl\">Pearls</span> ECG in PE is usually just <b>sinus tachycardia</b>; S1Q3T3 is trivia and neither confirms nor excludes · treatment: DOAC or heparin bridge; <b>thrombolytics only if hypotensive/massive</b> · provoked DVT 3 months, unprovoked ≥3–6 months · IVC filter only if anticoagulation is contraindicated or fails · the named emergencies: <b>phlegmasia</b> and PE · <b>smokers ≥35 cannot use estrogen-containing OCPs</b> (WHO category 4).",
-   "with": "<span class=\"lbl\">Pearls</span> The <b>ECG</b> (electrocardiogram) in <b>PE</b> (pulmonary embolism) is usually just <b>sinus tachycardia</b>; S1Q3T3 neither confirms nor excludes it · treatment: <b>DOAC</b> (direct oral anticoagulant) or heparin bridge; <b>thrombolytics only if hypotensive/massive</b> · provoked <b>DVT</b> (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · <b>IVC</b> (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: <b>phlegmasia</b> and PE · <b>smokers ≥35 cannot use estrogen-containing OCPs</b> (oral contraceptive pills; <b>WHO</b> (World Health Organization) category 4).",
+   "with": "<span class=\"lbl\">Pearls</span> The <b>ECG</b> (electrocardiogram) in <b>PE</b> (pulmonary embolism) is usually just <b>sinus tachycardia</b>; S1Q3T3 neither confirms nor excludes it · treatment: <b>DOAC</b> (direct oral anticoagulant) or heparin bridge; <b>thrombolytics only if hypotensive/massive</b> · provoked <b>DVT</b> (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · <b>IVC</b> (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: <b>phlegmasia</b> and PE · <b>smokers ≥35 cannot use estrogen-containing OCPs</b> (oral contraceptive pills); <b>WHO</b> (World Health Organization) category 4.",
    "note": "voice: Pearls; 'trivia' dropped, acronyms expanded",
    "claims": [
     {
      "claim": "ECG in PE is usually just sinus tachycardia.",
-     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4."
     },
     {
      "claim": "S1Q3T3 is trivia (of no diagnostic value).",
-     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4."
     },
     {
      "claim": "S1Q3T3 neither confirms nor excludes PE.",
-     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4."
     },
     {
      "claim": "Treatment is DOAC or heparin bridge.",
-     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4."
     },
     {
      "claim": "Thrombolytics only if hypotensive/massive.",
-     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4."
     },
     {
      "claim": "Provoked DVT 3 months, unprovoked ≥3–6 months.",
-     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4."
     },
     {
      "claim": "IVC filter only if anticoagulation is contraindicated or fails.",
-     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4."
     },
     {
      "claim": "The named emergencies are phlegmasia and PE.",
-     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4."
     },
     {
      "claim": "Smokers ≥35 cannot use estrogen-containing OCPs (WHO category 4).",
-     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills; WHO (World Health Organization) category 4)."
+     "to": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4."
     }
    ],
    "new_claims": [
     {
-     "claim": "ECG in PE is usually just sinus tachycardia.",
+     "claim": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4.",
      "from": "ECG in PE is usually just sinus tachycardia."
     },
     {
-     "claim": "S1Q3T3 neither confirms nor excludes PE.",
+     "claim": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4.",
      "from": "S1Q3T3 neither confirms nor excludes PE."
     },
     {
-     "claim": "Treatment is DOAC or heparin bridge.",
+     "claim": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4.",
      "from": "Treatment is DOAC or heparin bridge."
     },
     {
@@ -155,19 +155,19 @@
      "from": "Thrombolytics only if hypotensive/massive."
     },
     {
-     "claim": "Provoked DVT 3 months, unprovoked ≥3–6 months.",
+     "claim": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4.",
      "from": "Provoked DVT 3 months, unprovoked ≥3–6 months."
     },
     {
-     "claim": "IVC filter only if anticoagulation is contraindicated or fails.",
+     "claim": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4.",
      "from": "IVC filter only if anticoagulation is contraindicated or fails."
     },
     {
-     "claim": "The named emergencies are phlegmasia and PE.",
+     "claim": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4.",
      "from": "The named emergencies are phlegmasia and PE."
     },
     {
-     "claim": "Smokers ≥35 cannot use estrogen-containing OCPs (WHO category 4).",
+     "claim": "The ECG (electrocardiogram) in PE (pulmonary embolism) is usually just sinus tachycardia; S1Q3T3 neither confirms nor excludes it · treatment: DOAC (direct oral anticoagulant) or heparin bridge; thrombolytics only if hypotensive/massive · provoked DVT (deep vein thrombosis) 3 months, unprovoked ≥3–6 months · IVC (inferior vena cava) filter only if anticoagulation is contraindicated or fails · the named emergencies: phlegmasia and PE · smokers ≥35 cannot use estrogen-containing OCPs (oral contraceptive pills); WHO (World Health Organization) category 4.",
      "from": "Smokers ≥35 cannot use estrogen-containing OCPs (WHO category 4)."
     },
     {
@@ -246,11 +246,11 @@
      "from": "Innocent murmurs are turbulent flow through a structurally normal heart."
     },
     {
-     "claim": "Innocent murmurs are grade 1–2, early or midsystolic, musical or vibratory, and softer with standing or Valsalva.",
+     "claim": "They are grade 1–2, early or midsystolic, musical or vibratory, and softer with standing or Valsalva.",
      "from": "Innocent murmurs are grade 1–2, early or midsystolic, musical or vibratory."
     },
     {
-     "claim": "Order ECG and echocardiography for any single pathologic feature.",
+     "claim": "Order ECG (electrocardiogram) and echocardiography for any single pathologic feature.",
      "from": "Any single pathologic feature buys ECG and echocardiography."
     },
     {
@@ -350,11 +350,11 @@
      "from": "Cyanotic Congenital Heart Disease covers the pathologic column's cyanosis and single S2."
     },
     {
-     "claim": "Right-Sided Murmurs covers the pathologic counterpart of the innocent pulmonic flow murmur.",
+     "claim": "Right-Sided Murmurs: Pulmonic Stenosis & Tricuspid Regurgitation covers the pathologic counterpart of the innocent pulmonic flow murmur.",
      "from": "Right-Sided Murmurs covers the pathologic counterpart of the innocent pulmonic flow murmur."
     },
     {
-     "claim": "Ask what standing does to the murmur.",
+     "claim": "Ask: \"what does standing do to it?\"",
      "from": "The discriminator is what standing does to the murmur."
     }
    ]
@@ -385,11 +385,11 @@
    ],
    "new_claims": [
     {
-     "claim": "A benign murmur persisting past the expected age window is itself a pathologic feature.",
+     "claim": "Persistence past the expected age — a benign murmur that outlives its window is itself a pathologic feature",
      "from": "Outliving the window is itself a pathologic feature."
     },
     {
-     "claim": "Intensity does not track defect size.",
+     "claim": "Intensity and defect size — a small ventricular septal defect is loud and a large one is soft or silent, because turbulence falls as the orifice widens",
      "from": "Intensity is not size."
     }
    ]
@@ -447,7 +447,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Patent ductus arteriosus is the right category for a continuous murmur near a clavicle.",
+     "claim": "Patent ductus arteriosus: it is the right category for a continuous murmur near a clavicle.",
      "from": "Patent ductus arteriosus is the right category for a continuous murmur near a clavicle."
     },
     {
@@ -482,11 +482,11 @@
    ],
    "new_claims": [
     {
-     "claim": "The split S2 moves with respiration.",
+     "claim": "Atrial septal defect: the split S2 here moves with respiration, the opposite of the fixed split it requires.",
      "from": "The split S2 moves with respiration."
     },
     {
-     "claim": "Atrial septal defect requires a fixed split.",
+     "claim": "Atrial septal defect: the split S2 here moves with respiration, the opposite of the fixed split it requires.",
      "from": "ASD requires a fixed split, the opposite of a split that moves with respiration."
     }
    ]
@@ -509,7 +509,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Hypertrophic cardiomyopathy is the dangerous mimic of the innocent murmur.",
+     "claim": "Hypertrophic cardiomyopathy: it is the dangerous mimic of the innocent murmur; the direction the murmur moves on standing separates them.",
      "from": "HCM is the dangerous twin of the innocent murmur."
     },
     {
@@ -536,7 +536,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Accept reassurance only after naming the full benign profile.",
+     "claim": "Reassurance: accept it only after naming the full benign profile.",
      "from": "Accept reassurance only after naming the full benign profile."
     }
    ]
@@ -545,7 +545,7 @@
    "op": "replace",
    "brief": "cyanotic-chd",
    "find": "<p>Two axes sort every cyanotic lesion: <b>when the cyanosis appears</b> (birth vs infancy vs intermittent spells) and <b>whether a murmur is present</b>. The most-tested mechanism is the tet spell: TOF's outflow obstruction is partly <b>dynamic</b>, so crying or dehydration deepens the right-to-left shunt, and <b>squatting or knee-chest raises systemic vascular resistance</b> to reverse it. The most-tested trap: TOF's murmur comes from the <b>narrowed RVOT, not the VSD</b> — the VSD is too large to generate one.</p>",
-   "with": "<p>Sort every cyanotic lesion by <b>when the cyanosis appears</b> (birth vs infancy vs intermittent spells) and <b>whether a murmur is present</b>. In <b>TOF</b> (tetralogy of Fallot), outflow obstruction is partly <b>dynamic</b>, so crying or dehydration deepens the right-to-left shunt. In a spell, <b>squatting or knee-chest raises systemic vascular resistance</b> and reverses the shunt. The TOF murmur comes from the <b>narrowed RVOT, not the VSD</b> (right ventricular outflow tract; ventricular septal defect). The VSD is too large to generate a murmur.</p>",
+   "with": "<p>Sort every cyanotic lesion by <b>when the cyanosis appears</b> (birth vs infancy vs intermittent spells) and <b>whether a murmur is present</b>. In <b>TOF</b> (tetralogy of Fallot), outflow obstruction is partly <b>dynamic</b>, so crying or dehydration deepens the right-to-left shunt. During a tet spell, <b>squatting or knee-chest raises systemic vascular resistance</b> and reverses the shunt. The TOF murmur comes from the <b>narrowed RVOT, not the VSD</b>. The RVOT (right ventricular outflow tract) is narrowed; the VSD (ventricular septal defect) is too large to generate a murmur.</p>",
    "note": "voice: .dp; exam-yield framing removed, em dash removed, acronyms expanded",
    "claims": [
     {
@@ -558,7 +558,7 @@
     },
     {
      "claim": "The tet spell is the most-tested mechanism.",
-     "dropped": "exam-yield framing; the mechanism itself is kept"
+     "to": "During a tet spell, squatting or knee-chest raises systemic vascular resistance and reverses the shunt."
     },
     {
      "claim": "TOF's outflow obstruction is partly dynamic.",
@@ -570,7 +570,7 @@
     },
     {
      "claim": "Squatting or knee-chest raises systemic vascular resistance to reverse the shunt.",
-     "to": "In a spell, squatting or knee-chest raises systemic vascular resistance and reverses the shunt."
+     "to": "During a tet spell, squatting or knee-chest raises systemic vascular resistance and reverses the shunt."
     },
     {
      "claim": "The murmur source is the most-tested trap.",
@@ -578,11 +578,11 @@
     },
     {
      "claim": "TOF's murmur comes from the narrowed RVOT, not the VSD.",
-     "to": "The TOF murmur comes from the narrowed RVOT, not the VSD (right ventricular outflow tract; ventricular septal defect)."
+     "to": "The TOF murmur comes from the narrowed RVOT, not the VSD."
     },
     {
      "claim": "The VSD is too large to generate a murmur.",
-     "to": "The VSD is too large to generate a murmur."
+     "to": "The RVOT (right ventricular outflow tract) is narrowed; the VSD (ventricular septal defect) is too large to generate a murmur."
     }
    ],
    "new_claims": [
@@ -595,7 +595,7 @@
      "from": "expansion"
     },
     {
-     "claim": "In TOF, outflow obstruction is partly dynamic.",
+     "claim": "In TOF (tetralogy of Fallot), outflow obstruction is partly dynamic, so crying or dehydration deepens the right-to-left shunt.",
      "from": "TOF's outflow obstruction is partly dynamic."
     },
     {
@@ -603,7 +603,7 @@
      "from": "Crying or dehydration deepens the right-to-left shunt."
     },
     {
-     "claim": "In a spell, squatting or knee-chest raises systemic vascular resistance and reverses the shunt.",
+     "claim": "During a tet spell, squatting or knee-chest raises systemic vascular resistance and reverses the shunt.",
      "from": "Squatting or knee-chest raises systemic vascular resistance to reverse the shunt."
     },
     {
@@ -666,7 +666,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Silent cyanosis (no murmur) = TAPVR or HLHS.",
+     "claim": "Silent cyanosis (no murmur) = TAPVR (total anomalous pulmonary venous return) or HLHS (hypoplastic left heart syndrome). Flow through an atrial septal defect or a large patent ductus arteriosus is too low-velocity to murmur · severe right ventricular outflow tract narrowing = cyanosis at birth; milder narrowing = intermittent spells in infancy · Ebstein's spectrum runs from birth cyanosis (tiny right ventricle, severe tricuspid regurgitation) to adult right-heart failure · truncus is the one whose cyanosis characteristically arrives in infancy, not at birth · during a tet spell the outflow tract narrows further and pulmonary flow drops, so the harsh systolic murmur softens or disappears.",
      "from": "Silent cyanosis (no murmur) = TAPVR or HLHS."
     },
     {
@@ -741,7 +741,7 @@
      "from": "Central cyanosis and a single or fixed S2 sit in the pathologic column of Innocent vs Pathologic Murmurs and are covered here."
     },
     {
-     "claim": "Ask: cyanosis at birth, and is there a murmur?",
+     "claim": "Ask: \"cyanosis at birth, and is there a murmur?\"",
      "from": "The discriminator is cyanosis at birth, and is there a murmur."
     },
     {
@@ -753,7 +753,7 @@
      "from": "Congenital Shunts and the Transitional Clock holds the look-alike large ventricular septal defect."
     },
     {
-     "claim": "Ask whether the cyanosis came as an acute spell with crying or over months as the murmur faded.",
+     "claim": "Ask: did the cyanosis come as an acute spell with crying, or over months as the murmur faded?",
      "from": "The discriminating question is whether the cyanosis came as an acute spell with crying or over months as the murmur faded."
     }
    ]
@@ -784,11 +784,11 @@
      "from": "Congenital heart stems are sorted on two axes before any anatomy is recalled."
     },
     {
-     "claim": "One axis is the timing of cyanosis (birth / infancy / episodic).",
+     "claim": "The axes are the timing of cyanosis (birth / infancy / episodic) and the murmur (present or absent, and which structure actually makes it).",
      "from": "One axis is the clock (birth / infancy / episodic)."
     },
     {
-     "claim": "The other axis is the murmur (present or absent, and which structure actually makes it).",
+     "claim": "The axes are the timing of cyanosis (birth / infancy / episodic) and the murmur (present or absent, and which structure actually makes it).",
      "from": "The other axis is the murmur (present, absent, and which structure actually makes it)."
     }
    ]
@@ -811,11 +811,11 @@
    ],
    "new_claims": [
     {
-     "claim": "The ventricular septal defect is real anatomy in tetralogy of Fallot.",
+     "claim": "Flow across the ventricular septal defect: the defect is real anatomy in tetralogy of Fallot, but the murmur comes from the right ventricular outflow tract.",
      "from": "The VSD is real anatomy in TOF."
     },
     {
-     "claim": "The murmur comes from the right ventricular outflow tract, not the ventricular septal defect.",
+     "claim": "Flow across the ventricular septal defect: the defect is real anatomy in tetralogy of Fallot, but the murmur comes from the right ventricular outflow tract.",
      "from": "The VSD is offered as the murmur's source, but the RVOT is the source."
     }
    ]
@@ -842,7 +842,7 @@
    ],
    "new_claims": [
     {
-     "claim": "A spell's low oxygen saturation invites giving oxygen.",
+     "claim": "Give oxygen: a spell's low oxygen saturation invites it, but the shunt is anatomic.",
      "from": "A spell's oxygen saturation invites giving oxygen."
     },
     {
@@ -905,15 +905,15 @@
      "from": "Pulmonic stenosis is an ejection click followed by a crescendo–decrescendo murmur at the left 2nd interspace with widened splitting of S2."
     },
     {
-     "claim": "Pulmonic stenosis is usually congenital and often silent until adult dyspnea.",
+     "claim": "It is usually congenital and often silent until adult dyspnea.",
      "from": "Pulmonic stenosis is usually congenital and often silent until adult dyspnea."
     },
     {
-     "claim": "Tricuspid regurgitation is holosystolic at the left lower sternal border.",
+     "claim": "In tricuspid regurgitation, the murmur is holosystolic at the left lower sternal border.",
      "from": "Tricuspid regurgitation is holosystolic at the left lower sternal border."
     },
     {
-     "claim": "Tricuspid regurgitation comes with the right-heart-failure exam: distended jugulars, pulsatile tender hepatomegaly, ascites, edema and a right ventricular heave.",
+     "claim": "It comes with the right-heart-failure exam: distended jugulars, pulsatile tender hepatomegaly, ascites, edema and a right ventricular heave.",
      "from": "Tricuspid regurgitation comes with the right-heart-failure exam: distended jugulars, pulsatile tender hepatomegaly, ascites, edema, RV heave."
     }
    ]
@@ -956,7 +956,7 @@
      "from": "Right-sided murmurs grow with inspiration, left-sided don't."
     },
     {
-     "claim": "A pulsatile liver and v waves in the JVP belong to tricuspid regurgitation.",
+     "claim": "Check inspiration in every murmur: right-sided murmurs grow and left-sided murmurs do not · a pulsatile liver and v waves in the JVP (jugular venous pressure) belong to tricuspid regurgitation · pulmonic stenosis goes unnoticed until adulthood, then presents as exertional dyspnea · carcinoid is the rare acquired cause of pulmonic stenosis.",
      "from": "Pulsatile liver + v waves in the JVP belong to TR."
     },
     {
@@ -1003,7 +1003,7 @@
      "from": "The ejection click and the S2 split separate them."
     },
     {
-     "claim": "Ask: is there a click, and what is the S2 doing?",
+     "claim": "Ask: \"is there a click, and what is the S2 doing?\"",
      "from": "The discriminator is: is there a click, and what is the S2 doing?"
     }
    ]
@@ -1061,11 +1061,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Tricuspid regurgitation also augments with inspiration.",
+     "claim": "Tricuspid regurgitation: it also augments with inspiration, so against pulmonic stenosis the click and the split decide.",
      "from": "TR also augments with inspiration."
     },
     {
-     "claim": "Against pulmonic stenosis, the click and the split decide.",
+     "claim": "Tricuspid regurgitation: it also augments with inspiration, so against pulmonic stenosis the click and the split decide.",
      "from": "Against PS, the click and split decide."
     }
    ]
@@ -1088,7 +1088,7 @@
    ],
    "new_claims": [
     {
-     "claim": "The anemia flow murmur is the benign look-alike.",
+     "claim": "Anemia flow murmur: it is the benign look-alike; a normal S2 and no click exonerate it.",
      "from": "The anemia flow murmur is the benign twin."
     },
     {
@@ -1147,7 +1147,7 @@
      "from": "The panel's job is to find end-organ injury and the comorbidity that picks the drug."
     },
     {
-     "claim": "Injury on the initial workup, such as LVH on ECG, means start treatment now.",
+     "claim": "Injury on the initial workup, such as LVH (left ventricular hypertrophy) on ECG (electrocardiogram), means start treatment now.",
      "from": "Injury on the initial workup (LVH on ECG) means start treatment now."
     },
     {
@@ -1167,7 +1167,7 @@
      "from": "With no comorbidity, four classes are interchangeable first-line."
     },
     {
-     "claim": "With one comorbidity, match the drug to the comorbidity.",
+     "claim": "With one, match the drug to the comorbidity.",
      "from": "With one comorbidity, the stem is a matching exercise."
     },
     {
@@ -1175,7 +1175,7 @@
      "from": "The most-tested match is gout → losartan (mildly uricosuric)."
     },
     {
-     "claim": "In gout, thiazides are avoided (they raise urate).",
+     "claim": "The most-tested match is gout → losartan (mildly uricosuric), with thiazides avoided (they raise urate).",
      "from": "In gout, thiazides are avoided (they raise urate)."
     }
    ]
@@ -1184,28 +1184,28 @@
    "op": "replace",
    "brief": "htn-drugs",
    "find": "<span class=\"lbl\">Pearls</span> Stopping allopurinol treats neither the pressure nor the LVH — and invites a flare · LVH regresses on ARB/ACEi therapy · β-blocker + nondihydropyridine CCB is the rate-control pairing for AF that also happens to treat the pressure · the same thiazide that is wrong in gout is doubly right in osteoporosis and calcium stones — the comorbidity flips the drug's sign.",
-   "with": "<span class=\"lbl\">Pearls</span> Stopping allopurinol treats neither the pressure nor the <b>LVH</b> (left ventricular hypertrophy), and it invites a flare · LVH regresses on <b>ARB</b> (angiotensin receptor blocker) or <b>ACEi</b> (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine <b>CCB</b> (calcium channel blocker) is the rate-control pairing for <b>AF</b> (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both conditions.",
+   "with": "<span class=\"lbl\">Pearls</span> Stopping allopurinol treats neither the pressure nor the <b>LVH</b> (left ventricular hypertrophy), and it invites a flare · LVH regresses on <b>ARB</b> (angiotensin receptor blocker) or <b>ACEi</b> (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine <b>CCB</b> (calcium channel blocker) is the rate-control pairing for <b>AF</b> (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both the pressure and the comorbidity.",
    "note": "voice: Pearls; em dashes and aphorism removed, acronyms expanded",
    "claims": [
     {
      "claim": "Stopping allopurinol treats neither the pressure nor the LVH.",
-     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both conditions."
+     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both the pressure and the comorbidity."
     },
     {
      "claim": "Stopping allopurinol invites a flare.",
-     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both conditions."
+     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both the pressure and the comorbidity."
     },
     {
      "claim": "LVH regresses on ARB/ACEi therapy.",
-     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both conditions."
+     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both the pressure and the comorbidity."
     },
     {
      "claim": "β-blocker + nondihydropyridine CCB is the rate-control pairing for AF that also treats the pressure.",
-     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both conditions."
+     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both the pressure and the comorbidity."
     },
     {
      "claim": "The same thiazide that is wrong in gout is doubly right in osteoporosis and calcium stones.",
-     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both conditions."
+     "to": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both the pressure and the comorbidity."
     },
     {
      "claim": "The comorbidity flips the drug's sign.",
@@ -1222,11 +1222,11 @@
      "from": "expansion"
     },
     {
-     "claim": "Stopping allopurinol invites a flare.",
+     "claim": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both the pressure and the comorbidity.",
      "from": "Stopping allopurinol invites a flare."
     },
     {
-     "claim": "LVH regresses on ARB or ACEi therapy.",
+     "claim": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both the pressure and the comorbidity.",
      "from": "LVH regresses on ARB/ACEi therapy."
     },
     {
@@ -1238,7 +1238,7 @@
      "from": "expansion"
     },
     {
-     "claim": "β-blocker + nondihydropyridine CCB is the rate-control pairing for AF that also treats the pressure.",
+     "claim": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both the pressure and the comorbidity.",
      "from": "β-blocker + nondihydropyridine CCB is the rate-control pairing for AF that also treats the pressure."
     },
     {
@@ -1250,7 +1250,7 @@
      "from": "expansion"
     },
     {
-     "claim": "A thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both conditions.",
+     "claim": "Stopping allopurinol treats neither the pressure nor the LVH (left ventricular hypertrophy), and it invites a flare · LVH regresses on ARB (angiotensin receptor blocker) or ACEi (angiotensin-converting enzyme inhibitor) therapy · β-blocker + nondihydropyridine CCB (calcium channel blocker) is the rate-control pairing for AF (atrial fibrillation) that also treats the pressure · a thiazide is avoided in gout but doubly right in osteoporosis and calcium stones, where it treats both the pressure and the comorbidity.",
      "from": "The same thiazide that is wrong in gout is doubly right in osteoporosis and calcium stones."
     }
    ]
@@ -1285,7 +1285,7 @@
      "from": "This brief decides which drug, once the hunt is negative or not indicated."
     },
     {
-     "claim": "Ask: resistant, young, or hypokalemic?",
+     "claim": "Ask: \"resistant, young, or hypokalemic?\"",
      "from": "The discriminator is: resistant, young, or hypokalemic?"
     }
    ]
@@ -1294,7 +1294,7 @@
    "op": "replace",
    "brief": "htn-drugs",
    "find": "<span class=\"lbl\">Transferable rule</span> Drug-choice stems are matching exercises where each agent has a signed value per comorbidity — the same drug is the answer in one stem and the avoided option in the next, so store the pairings, never a favorite drug.",
-   "with": "<span class=\"lbl\">Transferable rule</span> In drug choice, match each agent to the comorbidity; each agent helps or harms per comorbidity. The same drug is the answer with one comorbidity and the avoided option with another, so store the pairings, never a favorite drug.",
+   "with": "<span class=\"lbl\">Transferable rule</span> In drug choice, match each agent to the comorbidity; each agent helps or harms per comorbidity. The same drug is preferred with one comorbidity and avoided with another, so store the pairings, never a favorite drug.",
    "note": "voice: rule; em dash and stem framing removed",
    "claims": [
     {
@@ -1307,11 +1307,11 @@
     },
     {
      "claim": "The same drug is the answer in one stem and the avoided option in the next.",
-     "to": "The same drug is the answer with one comorbidity and the avoided option with another, so store the pairings, never a favorite drug."
+     "to": "The same drug is preferred with one comorbidity and avoided with another, so store the pairings, never a favorite drug."
     },
     {
      "claim": "Store the pairings, never a favorite drug.",
-     "to": "The same drug is the answer with one comorbidity and the avoided option with another, so store the pairings, never a favorite drug."
+     "to": "The same drug is preferred with one comorbidity and avoided with another, so store the pairings, never a favorite drug."
     }
    ],
    "new_claims": [
@@ -1324,7 +1324,7 @@
      "from": "Each agent has a signed value per comorbidity."
     },
     {
-     "claim": "The same drug is the answer with one comorbidity and the avoided option with another.",
+     "claim": "The same drug is preferred with one comorbidity and avoided with another, so store the pairings, never a favorite drug.",
      "from": "The same drug is the answer in one stem and the avoided option in the next."
     },
     {
@@ -1351,11 +1351,11 @@
    ],
    "new_claims": [
     {
-     "claim": "The uric acid level baits discontinuing allopurinol.",
+     "claim": "Discontinue allopurinol: the uric acid level baits this choice, but it lowers nothing that matters.",
      "from": "The uric acid level baits discontinuing allopurinol."
     },
     {
-     "claim": "Discontinuing allopurinol lowers nothing that matters.",
+     "claim": "Discontinue allopurinol: the uric acid level baits this choice, but it lowers nothing that matters.",
      "from": "Discontinuing allopurinol lowers nothing that matters."
     }
    ]
@@ -1378,7 +1378,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Echo or stress testing before the first antihypertensive is the option.",
+     "claim": "Echo or stress testing before the first antihypertensive: characterization never delays treatment.",
      "from": "Echo or stress testing is offered before the first antihypertensive."
     },
     {
@@ -1401,7 +1401,7 @@
    ],
    "new_claims": [
     {
-     "claim": "VSD is the fourth component of tetralogy in PROVe.",
+     "claim": "PROVe — tetralogy: Pulmonic stenosis (right ventricular outflow obstruction), Right ventricular hypertrophy, Overriding aorta, VSD (ventricular septal defect)",
      "from": "VSD is the fourth component of tetralogy in PROVe."
     },
     {

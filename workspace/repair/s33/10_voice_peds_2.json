@@ -54,11 +54,11 @@
      "from": "The mother's history is the chief complaint."
     },
     {
-     "claim": "In a private interview, the child says classmates call him a baby because he counts on his fingers and reads slowly.",
+     "claim": "In a private interview, the child says his classmates call him a baby because he counts on his fingers and reads slowly.",
      "from": "The child says his classmates call him a baby because he counts on his fingers and reads slowly."
     },
     {
-     "claim": "The child's private disclosure identifies the diagnosis.",
+     "claim": "This private disclosure identifies the diagnosis.",
      "from": "The child's private disclosure is the diagnosis."
     },
     {
@@ -101,7 +101,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Count the settings in which the behavior occurs.",
+     "claim": "Count the settings: behavior in one setting means something about that setting; behavior in two or more settings is a disorder the child carries",
      "from": "Count the settings in which the behavior occurs."
     },
     {
@@ -136,7 +136,7 @@
      "from": "expansion"
     },
     {
-     "claim": "ADHD diagnosis and stimulant management have no brief of their own.",
+     "claim": "Related conditions without their own brief: ADHD (attention deficit hyperactivity disorder) diagnosis and stimulant management.",
      "from": "The page has no brief on ADHD diagnosis and stimulant management."
     }
    ]
@@ -176,7 +176,7 @@
    "op": "replace",
    "brief": "bs-nat-fracture",
    "find": "<p>Three fractures are <b>abuse until proven otherwise</b> in a young child: a <b>metaphyseal corner</b> (bucket-handle) fracture, which needs a forcible <b>pull or twist</b> of the limb; a <b>posterior rib</b> fracture, from squeezing the chest; and a <b>femur fracture in a child who does not yet walk</b>. The bone-disease mimics each need <b>their own finding</b> on the film or exam: osteopenia with cupped, frayed metaphyses for rickets; blue sclerae and many low-energy fractures for osteogenesis imperfecta; a punched-out lytic lesion for Langerhans cell histiocytosis.</p>\n<p>A risk factor in the history (breastfeeding without vitamin D, no prenatal care, a parent's single childhood fracture) is not that finding; a film with normal bone density and a classic abuse fracture answers it.</p>",
-   "with": "<p>In a young child, three fractures are <b>abuse until proven otherwise</b>. A <b>metaphyseal corner</b> (bucket-handle) fracture needs a forcible <b>pull or twist</b> of the limb. A <b>posterior rib</b> fracture comes from squeezing the chest. The third is a <b>femur fracture in a child who does not yet walk</b>. The bone-disease mimics each need <b>their own finding</b> on the film or exam. Rickets needs osteopenia with cupped, frayed metaphyses. Osteogenesis imperfecta needs blue sclerae and many low-energy fractures. Langerhans cell histiocytosis needs a punched-out lytic lesion.</p>\n<p>A risk factor in the history (breastfeeding without vitamin D, no prenatal care, a parent's single childhood fracture) is not that finding. A film with normal bone density and a classic abuse fracture indicates abuse.</p>",
+   "with": "<p>In a young child, three fractures are <b>abuse until proven otherwise</b>. A <b>metaphyseal corner</b> (bucket-handle) fracture needs a forcible <b>pull or twist</b> of the limb. A <b>posterior rib</b> fracture comes from squeezing the chest. The third is a <b>femur fracture in a child who does not yet walk</b>. The bone-disease mimics each need <b>their own finding</b> on the film or exam. Rickets needs osteopenia with cupped, frayed metaphyses. Osteogenesis imperfecta needs blue sclerae and many low-energy fractures. Langerhans cell histiocytosis needs a punched-out lytic lesion.</p>\n<p>A risk factor in the history (breastfeeding without vitamin D, no prenatal care, a parent's single childhood fracture) is not that finding. A film with normal bone density and a classic abuse fracture outweighs that risk factor; the fracture stays abuse until proven otherwise.</p>",
    "note": "round 2 voice: .dp split into short sentences",
    "claims": [
     {
@@ -217,7 +217,7 @@
     },
     {
      "claim": "A film with normal bone density and a classic abuse fracture answers it as abuse.",
-     "to": "A film with normal bone density and a classic abuse fracture indicates abuse."
+     "to": "A film with normal bone density and a classic abuse fracture outweighs that risk factor; the fracture stays abuse until proven otherwise."
     }
    ],
    "new_claims": [
@@ -254,11 +254,11 @@
      "from": "Langerhans cell histiocytosis needs a punched-out lytic lesion."
     },
     {
-     "claim": "A risk factor in the history is not that finding.",
+     "claim": "A risk factor in the history (breastfeeding without vitamin D, no prenatal care, a parent's single childhood fracture) is not that finding.",
      "from": "A risk factor in the history (breastfeeding without vitamin D, no prenatal care, a parent's single childhood fracture) is not that finding."
     },
     {
-     "claim": "A film with normal bone density and a classic abuse fracture indicates abuse.",
+     "claim": "A film with normal bone density and a classic abuse fracture outweighs that risk factor; the fracture stays abuse until proven otherwise.",
      "from": "A film with normal bone density and a classic abuse fracture answers it as abuse."
     }
    ]
@@ -305,7 +305,7 @@
      "from": "Abuse can present with the fracture moved to a posterior rib or a femur before walking."
     },
     {
-     "claim": "Abuse also presents with an added bruise on the ear or trunk.",
+     "claim": "Abuse also presents as a posterior rib fracture or a femur fracture before walking, or with an added bruise on the ear or trunk",
      "from": "Abuse can present with an added bruise on the ear or trunk."
     },
     {
@@ -313,7 +313,7 @@
      "from": "A walking toddler with a spiral distal tibial fracture after a minor twist is the accidental counterpart."
     },
     {
-     "claim": "The same child with a corner fracture does not have an accidental injury.",
+     "claim": "The same child with a corner fracture does not",
      "from": "The same child with a corner fracture is not accidental."
     },
     {
@@ -419,7 +419,7 @@
      "from": "Some fractures in a young child need a force the child could not generate."
     },
     {
-     "claim": "Treat these fractures as abuse until the film or exam shows a sign specific to a bone disease.",
+     "claim": "Treat these as abuse until the film or exam shows a sign specific to a bone disease.",
      "from": "When a young child's fracture needs a force the child could not generate, treat it as abuse until the film or exam gives a bone disease its own sign."
     },
     {
@@ -461,7 +461,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Without blue sclerae, short stature, bruising or many fractures, this is not osteogenesis imperfecta.",
+     "claim": "Osteogenesis imperfecta: the mother's one childhood forearm fracture is common; without blue sclerae, short stature, bruising or many fractures, this is not osteogenesis imperfecta.",
      "from": "Without blue sclerae, short stature, bruising or many fractures, there is no OI here."
     }
    ]
@@ -718,7 +718,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Bacterial Meningitis covers the CSF grid and meningococcal disease.",
+     "claim": "Part I Bacterial Meningitis covers the CSF (cerebrospinal fluid) grid and meningococcal disease; this brief covers only recognition and resuscitation.",
      "from": "Bacterial Meningitis covers the CSF grid and meningococcal disease."
     },
     {
@@ -784,11 +784,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Anaphylaxis is in the right class but is the wrong member.",
+     "claim": "Anaphylaxis: it is in the right class but is the wrong member, with no exposure and no urticaria.",
      "from": "Anaphylaxis is the right class with the wrong member."
     },
     {
-     "claim": "There is no exposure and no urticaria.",
+     "claim": "Anaphylaxis: it is in the right class but is the wrong member, with no exposure and no urticaria.",
      "from": "There is no exposure and no urticaria."
     }
    ]
@@ -902,7 +902,7 @@
      "from": "Finger foods belong at 8 to 9 months."
     },
     {
-     "claim": "Whole milk belongs at 12 months.",
+     "claim": "Finger foods belong at 8 to 9 months and whole milk at 12 months.",
      "from": "Whole milk belongs at 12 months."
     },
     {
@@ -941,7 +941,7 @@
      "from": "After 12 months cap milk at 16 to 24 oz daily."
     },
     {
-     "claim": "The cap avoids causing iron deficiency.",
+     "claim": "After 12 months, cap milk at 16 to 24 oz daily to avoid causing iron deficiency.",
      "from": "More milk than that causes iron deficiency."
     },
     {
@@ -1019,7 +1019,7 @@
      "from": "Discriminator: is the growth curve normal, or is it crossing lines?"
     },
     {
-     "claim": "Infant Stool Complaints covers what cow's-milk protein does to the stool before 12 months.",
+     "claim": "Part I Infant Stool Complaints: Dyschezia, FPIAP & Secondary Lactase Deficiency covers what cow's-milk protein does to the stool before 12 months.",
      "from": "Infant Stool Complaints covers what cow's-milk protein does to the stool before the 12-month gate."
     }
    ]
@@ -1063,7 +1063,7 @@
    "op": "replace",
    "brief": "bs-tanner",
    "find": "<p>Breast and pubic hair are staged <b>separately</b>, and both land on 3 here, so a single number is safe. The phrase carrying the whole question is <b>without a separate contour</b>: breast tissue extending beyond the areola while still sharing one smooth contour is stage 3, and the moment the areola and papilla rise as a <b>second mound</b> above the breast it becomes stage 4.</p>\n<p>The pubic hair corroborates. <b>Curled</b> puts her past stage 2, which is straight and sparse, and <b>partially across the pubis</b> keeps her below stage 4, which is adult-quality hair across the pubis sparing the medial thighs.</p>",
-   "with": "<p>Breast and pubic hair are staged <b>separately</b>. Both are stage 3 here, so a single number is acceptable. Breast tissue that extends beyond the areola <b>without a separate contour</b>, still sharing one smooth contour, is stage 3. Once the areola and papilla rise as a <b>second mound</b> above the breast, it is stage 4.</p>\n<p>The pubic hair also fits stage 3. <b>Curled</b> hair places her past stage 2, which is straight and sparse. Hair spread <b>partially across the pubis</b> places her below stage 4, which is adult-quality hair across the pubis sparing the medial thighs.</p>",
+   "with": "<p>Breast and pubic hair are staged <b>separately</b>. Both are stage 3 here, so a single number is acceptable. Breast tissue that extends beyond the areola <b>without a separate contour</b> is stage 3. Once the areola and papilla rise as a <b>second mound</b> above the breast, it is stage 4.</p>\n<p>The pubic hair also fits stage 3. <b>Curled</b> hair places her past stage 2, which is straight and sparse. Hair spread <b>partially across the pubis</b> places her below stage 4, which is adult-quality hair across the pubis sparing the medial thighs.</p>",
    "note": "round 2 voice: .dp, dramatic framing removed, sentences split",
    "claims": [
     {
@@ -1080,11 +1080,11 @@
     },
     {
      "claim": "The phrase carrying the whole question is 'without a separate contour'.",
-     "to": "Breast tissue that extends beyond the areola without a separate contour, still sharing one smooth contour, is stage 3."
+     "to": "Breast tissue that extends beyond the areola without a separate contour is stage 3."
     },
     {
      "claim": "Breast tissue extending beyond the areola while still sharing one smooth contour is stage 3.",
-     "to": "Breast tissue that extends beyond the areola without a separate contour, still sharing one smooth contour, is stage 3."
+     "to": "Breast tissue that extends beyond the areola without a separate contour is stage 3."
     },
     {
      "claim": "When the areola and papilla rise as a second mound above the breast it becomes stage 4.",
@@ -1113,11 +1113,11 @@
      "from": "Both land on stage 3 here."
     },
     {
-     "claim": "A single number is acceptable here.",
+     "claim": "Both are stage 3 here, so a single number is acceptable.",
      "from": "A single number is safe here."
     },
     {
-     "claim": "Breast tissue that extends beyond the areola without a separate contour, still sharing one smooth contour, is stage 3.",
+     "claim": "Breast tissue that extends beyond the areola without a separate contour is stage 3.",
      "from": "Breast tissue extending beyond the areola while still sharing one smooth contour is stage 3."
     },
     {
@@ -1183,7 +1183,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Girls reach peak height velocity at SMR 2 to 3.",
+     "claim": "Girls reach peak height velocity at SMR (sexual maturity rating) 2 to 3, boys at SMR 4, which is why a girl who has menstruated has little growth left",
      "from": "Girls reach peak height velocity at SMR 2 to 3."
     }
    ]
@@ -1192,7 +1192,7 @@
    "op": "replace",
    "brief": "bs-tanner",
    "find": "Part I <b>Growth &amp; Developmental Milestones</b> for the velocity framework. This brief wants a partner on precocious versus delayed puberty, where the discriminator is whether bone age is ahead of, matching, or behind chronological age. Part I <b>Precocious Puberty</b> is the partner this brief asked for &mdash; the discriminator is whether the stage is merely being described or is wrong for the age.",
-   "with": "Part I <b>Growth &amp; Developmental Milestones</b> covers the velocity framework. Part I <b>Precocious Puberty</b> is the partner brief on precocious versus delayed puberty. Ask: is bone age ahead of, matching, or behind chronological age? Ask: is the stage merely being described, or is it wrong for the age?",
+   "with": "Part I <b>Growth &amp; Developmental Milestones</b> covers the velocity framework. Part I <b>Precocious Puberty</b> covers early puberty. Ask: is the stage merely being described, or is it wrong for the age? For precocious versus delayed puberty, ask: is bone age ahead of, matching, or behind chronological age?",
    "note": "round 2 voice: Pairs with, workflow text removed, em dash removed, discriminators as Ask:",
    "claims": [
     {
@@ -1201,15 +1201,15 @@
     },
     {
      "claim": "This brief wants a partner on precocious versus delayed puberty.",
-     "to": "Part I Precocious Puberty is the partner brief on precocious versus delayed puberty."
+     "dropped": "workflow wish about a partner brief; delayed puberty has no partner brief on the page"
     },
     {
      "claim": "Precocious Puberty is the partner this brief asked for.",
-     "to": "Part I Precocious Puberty is the partner brief on precocious versus delayed puberty."
+     "to": "Part I Precocious Puberty covers early puberty."
     },
     {
      "claim": "Precocious versus delayed puberty discriminator: is bone age ahead of, matching, or behind chronological age?",
-     "to": "Ask: is bone age ahead of, matching, or behind chronological age?"
+     "to": "For precocious versus delayed puberty, ask: is bone age ahead of, matching, or behind chronological age?"
     },
     {
      "claim": "Precocious Puberty discriminator: is the stage merely being described or wrong for the age?",
@@ -1218,20 +1218,20 @@
    ],
    "new_claims": [
     {
-     "claim": "Growth & Developmental Milestones covers the velocity framework.",
+     "claim": "Part I Growth & Developmental Milestones covers the velocity framework.",
      "from": "Growth & Developmental Milestones pairs for the velocity framework."
     },
     {
-     "claim": "Precocious Puberty is the partner brief on precocious versus delayed puberty.",
+     "claim": "Part I Precocious Puberty covers early puberty.",
      "from": "Precocious Puberty is the partner this brief asked for."
-    },
-    {
-     "claim": "Ask: is bone age ahead of, matching, or behind chronological age?",
-     "from": "Precocious versus delayed puberty discriminator: is bone age ahead of, matching, or behind chronological age?"
     },
     {
      "claim": "Ask: is the stage merely being described, or is it wrong for the age?",
      "from": "Precocious Puberty discriminator: is the stage merely being described or wrong for the age?"
+    },
+    {
+     "claim": "For precocious versus delayed puberty, ask: is bone age ahead of, matching, or behind chronological age?",
+     "from": "Precocious versus delayed puberty discriminator: is bone age ahead of, matching, or behind chronological age?"
     }
    ]
   },
@@ -1244,7 +1244,7 @@
    "claims": [
     {
      "claim": "When the options are the levels of a named scale, the stem quotes one definition verbatim.",
-     "to": "When staging with a named scale, find the phrase in the description that appears in exactly one level; that level is the rating."
+     "dropped": "framing about how the stem is written"
     },
     {
      "claim": "Find the phrase that appears in exactly one level and stop.",
@@ -1258,7 +1258,7 @@
     },
     {
      "claim": "That level is the rating.",
-     "from": "When the options are the levels of a named scale, the stem quotes one definition verbatim."
+     "from": "Find the phrase that appears in exactly one level and stop."
     }
    ]
   }

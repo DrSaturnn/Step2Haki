@@ -54,15 +54,15 @@
      "from": "The PMR picture is age >50."
     },
     {
-     "claim": "It presents with bilateral proximal girdle aching with morning stiffness.",
+     "claim": "Polymyalgia rheumatica presents at age >50 with bilateral proximal girdle aching with morning stiffness, systemic symptoms and ESR ≥50 (erythrocyte sedimentation rate).",
      "from": "Bilateral proximal girdle aching with morning stiffness."
     },
     {
-     "claim": "It presents with systemic symptoms.",
+     "claim": "Polymyalgia rheumatica presents at age >50 with bilateral proximal girdle aching with morning stiffness, systemic symptoms and ESR ≥50 (erythrocyte sedimentation rate).",
      "from": "Systemic symptoms are present."
     },
     {
-     "claim": "It presents with ESR ≥50.",
+     "claim": "Polymyalgia rheumatica presents at age >50 with bilateral proximal girdle aching with morning stiffness, systemic symptoms and ESR ≥50 (erythrocyte sedimentation rate).",
      "from": "ESR is ≥50."
     },
     {
@@ -74,7 +74,7 @@
      "from": "There is no true weakness and no muscle tenderness."
     },
     {
-     "claim": "\"Can't get out of bed\" reflects pain and stiffness, not weakness.",
+     "claim": "\"Can't get out of bed\" here reflects pain and stiffness, not weakness; weakness points to myositis.",
      "from": "Do not confuse \"can't get out of bed\" with weakness."
     },
     {
@@ -149,11 +149,11 @@
      "from": "expansion"
     },
     {
-     "claim": "PMR is pain with normal CK.",
+     "claim": "PMR (polymyalgia rheumatica) = pain with normal CK (creatine kinase); polymyositis = weakness with high CK",
      "from": "PMR is pain with normal CK."
     },
     {
-     "claim": "Polymyositis is weakness with high CK.",
+     "claim": "PMR (polymyalgia rheumatica) = pain with normal CK (creatine kinase); polymyositis = weakness with high CK",
      "from": "Polymyositis is weakness with high CK."
     },
     {
@@ -161,7 +161,7 @@
      "from": "PMR responds to low-dose steroids."
     },
     {
-     "claim": "GCA needs high-dose steroids.",
+     "claim": "PMR responds to low-dose steroids, GCA (giant cell arteritis) needs high dose",
      "from": "GCA needs high-dose steroids."
     },
     {
@@ -173,11 +173,11 @@
      "from": "~50% of GCA patients have PMR."
     },
     {
-     "claim": "NSAIDs fail in PMR.",
+     "claim": "NSAIDs (nonsteroidal anti-inflammatory drugs) fail in PMR; they are a close but inadequate therapy.",
      "from": "NSAIDs fail in PMR."
     },
     {
-     "claim": "NSAIDs are a close but inadequate therapy.",
+     "claim": "NSAIDs (nonsteroidal anti-inflammatory drugs) fail in PMR; they are a close but inadequate therapy.",
      "from": "NSAIDs are a close but inadequate therapy distractor."
     }
    ]
@@ -228,7 +228,7 @@
      "from": "The presentation is anterior shoulder pain, bicipital groove tenderness and pain on resisted elbow flexion/supination."
     },
     {
-     "claim": "The patient is still doing the offending activity.",
+     "claim": "Biceps tendinitis presents with anterior shoulder pain, bicipital groove tenderness and pain on resisted elbow flexion/supination in a patient still doing the offending activity.",
      "from": "The patient is still doing the offending activity."
     },
     {
@@ -240,7 +240,7 @@
      "from": "Activity modification (stop the throwing and lifting) comes first."
     },
     {
-     "claim": "NSAIDs follow activity modification.",
+     "claim": "Start with activity modification (stop the throwing and lifting), then NSAIDs (nonsteroidal anti-inflammatory drugs).",
      "from": "NSAIDs follow activity modification."
     },
     {
@@ -252,15 +252,15 @@
      "from": "expansion"
     },
     {
-     "claim": "Add PT if not improving in 2–4 weeks.",
+     "claim": "Add PT (physical therapy) if not improving in 2–4 weeks.",
      "from": "PT follows if not improving in 2–4 weeks."
     },
     {
-     "claim": "Injection comes next.",
+     "claim": "Escalate next to injection, then imaging.",
      "from": "Injection follows PT."
     },
     {
-     "claim": "Imaging follows injection.",
+     "claim": "Escalate next to injection, then imaging.",
      "from": "Imaging follows injection."
     }
    ]
@@ -311,11 +311,11 @@
      "from": "expansion"
     },
     {
-     "claim": "On the exam, PT is not wrong.",
+     "claim": "On the exam, PT (physical therapy) is not wrong, but it is not the initial step while the patient is still throwing every weekend.",
      "from": "On the exam, PT is not wrong."
     },
     {
-     "claim": "PT is not the initial step while the patient is still throwing every weekend.",
+     "claim": "On the exam, PT (physical therapy) is not wrong, but it is not the initial step while the patient is still throwing every weekend.",
      "from": "PT is not initial when the patient is still throwing every weekend."
     },
     {
@@ -443,7 +443,7 @@
      "from": "expansion"
     },
     {
-     "claim": "CTS spares sensation over the thenar eminence.",
+     "claim": "CTS (carpal tunnel syndrome) spares sensation over the thenar eminence, because the palmar cutaneous branch arises proximal to the tunnel and runs over the retinaculum.",
      "from": "CTS spares sensation over the thenar eminence."
     },
     {
@@ -455,7 +455,7 @@
      "from": "Numbness that includes the thenar eminence means a proximal lesion."
     },
     {
-     "claim": "That proximal lesion is pronator teres syndrome.",
+     "claim": "Numbness that includes the thenar eminence means a proximal lesion: pronator teres syndrome.",
      "from": "That proximal lesion is pronator teres syndrome."
     },
     {
@@ -494,7 +494,7 @@
    ],
    "new_claims": [
     {
-     "claim": "It is a clinical diagnosis.",
+     "claim": "Radial styloid tenderness + positive Finkelstein/Eichhoff (thumb flexed, wrist ulnar-deviated) is a clinical diagnosis.",
      "from": "It is a clinical diagnosis."
     },
     {
@@ -549,7 +549,7 @@
      "from": "No additional testing, reassurance, proceeding with the procedure and continuing current management are a family of correct choices."
     },
     {
-     "claim": "An X-ray to be safe adds only incidental findings.",
+     "claim": "An X-ray \"to be safe\" adds only incidental findings.",
      "from": "Getting an X-ray to be safe adds only incidental findings."
     }
    ]
@@ -599,11 +599,11 @@
      "from": "expansion"
     },
     {
-     "claim": "RA involves MCP and PIP, symmetric, and spares DIP.",
+     "claim": "RA (rheumatoid arthritis) = MCP (metacarpophalangeal) and PIP (proximal interphalangeal), symmetric, spares DIP (distal interphalangeal)",
      "from": "RA involves MCP and PIP, symmetric, and spares DIP."
     },
     {
-     "claim": "OA involves DIP (Heberden) and PIP (Bouchard).",
+     "claim": "OA (osteoarthritis) = DIP (Heberden) and PIP (Bouchard)",
      "from": "OA involves DIP (Heberden) and PIP (Bouchard)."
     }
    ]
@@ -650,7 +650,7 @@
      "from": "expansion"
     },
     {
-     "claim": "The LFCN is purely sensory.",
+     "claim": "The LFCN (lateral femoral cutaneous nerve) is purely sensory.",
      "from": "The LFCN is purely sensory."
     },
     {
@@ -701,7 +701,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Digital entrapment is Morton neuroma (3rd/4th interspace, Mulder click).",
+     "claim": "Other pure sensory entrapments: sural (lateral foot), superficial peroneal (foot dorsum), saphenous (medial leg) and digital (Morton neuroma, 3rd/4th interspace, Mulder click)",
      "from": "Digital nerve entrapment is Morton neuroma (3rd/4th interspace, Mulder click), a pure sensory entrapment."
     },
     {
@@ -709,7 +709,7 @@
      "from": "Metformin causes B12 deficiency over years."
     },
     {
-     "claim": "It produces a distal symmetric neuropathy and never a focal thigh patch.",
+     "claim": "metformin causes B12 deficiency over years, producing a distal symmetric neuropathy and never a focal thigh patch",
      "from": "It produces a distal symmetric neuropathy, never a focal thigh patch."
     },
     {

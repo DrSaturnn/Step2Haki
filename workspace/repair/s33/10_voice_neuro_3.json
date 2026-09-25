@@ -4,18 +4,18 @@
    "op": "replace",
    "brief": "retinitis-pigmentosa",
    "find": "the fundus names the cause",
-   "with": "Fundus findings identify the cause of night blindness",
+   "with": "Night blindness: the fundus exam identifies the cause",
    "note": "sub: personification",
    "claims": [
     {
-     "claim": "The fundus names the cause of night blindness.",
-     "to": "Fundus findings identify the cause of night blindness"
+     "claim": "The fundus identifies the cause of night blindness.",
+     "to": "Night blindness: the fundus exam identifies the cause"
     }
    ],
    "new_claims": [
     {
-     "claim": "The fundus names the cause of night blindness.",
-     "from": "The fundus names the cause of night blindness."
+     "claim": "Night blindness: the fundus exam identifies the cause",
+     "from": "The fundus identifies the cause of night blindness."
     }
    ]
   },
@@ -23,20 +23,16 @@
    "op": "replace",
    "brief": "retinitis-pigmentosa",
    "find": "<p>Night blindness has a short differential and the fundus settles it in one look. <b>Optic disc pallor with attenuated retinal vessels and patchy pigmentary change</b> is the triad of retinitis pigmentosa &mdash; rods degenerate first, and rods are densest in the midperiphery and responsible for dim-light vision, which is why the first symptom is night blindness and the first field defect is midperipheral. Acuity stays 20/20 until cones go late. Every competing option is excluded by a finding the examiner deliberately printed: a normal red reflex and 20/20 vision close cataract, a <b>pale rather than cupped</b> disc closes glaucoma, a two-month progressive course with no tear closes detachment, and <b>normal cornea and conjunctivae</b> close vitamin A deficiency, whose ocular disease is xerophthalmia.</p>",
-   "with": "<p>Night blindness has a short differential, and the fundus settles it. <b>Optic disc pallor with attenuated retinal vessels and patchy pigmentary change</b> is the triad of retinitis pigmentosa. Rods degenerate first; they are densest in the midperiphery and responsible for dim-light vision. That is why the first symptom is night blindness and the first field defect is midperipheral. Acuity stays 20/20 until the cones are affected late. A normal red reflex and 20/20 vision exclude cataract. A <b>pale rather than cupped</b> disc excludes glaucoma. A two-month progressive course with no tear excludes detachment. Vitamin A deficiency is excluded by <b>normal cornea and conjunctivae</b>; its ocular disease is xerophthalmia.</p>",
-   "note": ".dp: split, remove em dash and stem framing",
+   "with": "<p>Night blindness has a short differential, and the fundus exam settles it. <b>Optic disc pallor with attenuated retinal vessels and patchy pigmentary change</b> is the triad of retinitis pigmentosa. Rods degenerate first; they are densest in the midperiphery and serve dim-light vision. So the first symptom is night blindness, and the first field defect is midperipheral. Acuity stays 20/20 until cones are lost late. A normal red reflex and 20/20 vision exclude cataract. A <b>pale rather than cupped</b> disc excludes glaucoma. A two-month progressive course with no tear excludes detachment. The <b>normal cornea and conjunctivae</b> exclude vitamin A deficiency, whose ocular disease is xerophthalmia.</p>",
+   "note": "dp: split, remove em dash and framing",
    "claims": [
     {
      "claim": "Night blindness has a short differential.",
-     "to": "Night blindness has a short differential, and the fundus settles it."
+     "to": "Night blindness has a short differential, and the fundus exam settles it."
     },
     {
      "claim": "The fundus settles the differential.",
-     "to": "Night blindness has a short differential, and the fundus settles it."
-    },
-    {
-     "claim": "It settles it in one look.",
-     "dropped": "rhetorical emphasis; the fundus settling the differential is kept"
+     "to": "Night blindness has a short differential, and the fundus exam settles it."
     },
     {
      "claim": "Optic disc pallor with attenuated retinal vessels and patchy pigmentary change is the triad of retinitis pigmentosa.",
@@ -44,23 +40,23 @@
     },
     {
      "claim": "Rods degenerate first.",
-     "to": "Rods degenerate first; they are densest in the midperiphery and responsible for dim-light vision."
+     "to": "Rods degenerate first; they are densest in the midperiphery and serve dim-light vision."
     },
     {
      "claim": "Rods are densest in the midperiphery and responsible for dim-light vision.",
-     "to": "Rods degenerate first; they are densest in the midperiphery and responsible for dim-light vision."
+     "to": "Rods degenerate first; they are densest in the midperiphery and serve dim-light vision."
     },
     {
      "claim": "That is why the first symptom is night blindness and the first field defect is midperipheral.",
-     "to": "That is why the first symptom is night blindness and the first field defect is midperipheral."
+     "to": "So the first symptom is night blindness, and the first field defect is midperipheral."
     },
     {
      "claim": "Acuity stays 20/20 until cones go late.",
-     "to": "Acuity stays 20/20 until the cones are affected late."
+     "to": "Acuity stays 20/20 until cones are lost late."
     },
     {
      "claim": "Every competing option is excluded by a finding the examiner deliberately printed.",
-     "dropped": "framing about the stem; each exclusion is stated in the next four sentences"
+     "dropped": "framing about the stem; each exclusion is stated in the next sentences"
     },
     {
      "claim": "A normal red reflex and 20/20 vision close cataract.",
@@ -76,11 +72,11 @@
     },
     {
      "claim": "Normal cornea and conjunctivae close vitamin A deficiency.",
-     "to": "Vitamin A deficiency is excluded by normal cornea and conjunctivae; its ocular disease is xerophthalmia."
+     "to": "The normal cornea and conjunctivae exclude vitamin A deficiency, whose ocular disease is xerophthalmia."
     },
     {
      "claim": "The ocular disease of vitamin A deficiency is xerophthalmia.",
-     "to": "Vitamin A deficiency is excluded by normal cornea and conjunctivae; its ocular disease is xerophthalmia."
+     "to": "The normal cornea and conjunctivae exclude vitamin A deficiency, whose ocular disease is xerophthalmia."
     }
    ],
    "new_claims": [
@@ -89,7 +85,7 @@
      "from": "Night blindness has a short differential."
     },
     {
-     "claim": "The fundus settles the differential.",
+     "claim": "Night blindness has a short differential, and the fundus exam settles it.",
      "from": "The fundus settles the differential."
     },
     {
@@ -101,35 +97,35 @@
      "from": "Rods degenerate first."
     },
     {
-     "claim": "Rods are densest in the midperiphery and responsible for dim-light vision.",
+     "claim": "Rods degenerate first; they are densest in the midperiphery and serve dim-light vision.",
      "from": "Rods are densest in the midperiphery and responsible for dim-light vision."
     },
     {
-     "claim": "That is why the first symptom is night blindness and the first field defect is midperipheral.",
+     "claim": "So the first symptom is night blindness, and the first field defect is midperipheral.",
      "from": "That is why the first symptom is night blindness and the first field defect is midperipheral."
     },
     {
-     "claim": "Acuity stays 20/20 until cones go late.",
+     "claim": "Acuity stays 20/20 until cones are lost late.",
      "from": "Acuity stays 20/20 until cones go late."
     },
     {
-     "claim": "A normal red reflex and 20/20 vision close cataract.",
+     "claim": "A normal red reflex and 20/20 vision exclude cataract.",
      "from": "A normal red reflex and 20/20 vision close cataract."
     },
     {
-     "claim": "A pale rather than cupped disc closes glaucoma.",
+     "claim": "A pale rather than cupped disc excludes glaucoma.",
      "from": "A pale rather than cupped disc closes glaucoma."
     },
     {
-     "claim": "A two-month progressive course with no tear closes detachment.",
+     "claim": "A two-month progressive course with no tear excludes detachment.",
      "from": "A two-month progressive course with no tear closes detachment."
     },
     {
-     "claim": "Normal cornea and conjunctivae close vitamin A deficiency.",
+     "claim": "Normal cornea and conjunctivae exclude vitamin A deficiency.",
      "from": "Normal cornea and conjunctivae close vitamin A deficiency."
     },
     {
-     "claim": "The ocular disease of vitamin A deficiency is xerophthalmia.",
+     "claim": "The normal cornea and conjunctivae exclude vitamin A deficiency, whose ocular disease is xerophthalmia.",
      "from": "The ocular disease of vitamin A deficiency is xerophthalmia."
     }
    ]
@@ -137,13 +133,32 @@
   {
    "op": "replace",
    "brief": "retinitis-pigmentosa",
+   "find": "<b>Optic disc pallor, not cupping</b> &mdash; the single most efficient discriminator in the stem &middot;",
+   "with": "<b>Optic disc pallor, not cupping</b> &mdash; the single most efficient discriminator &middot;",
+   "note": "pertinent positives: remove reference to the stem",
+   "claims": [
+    {
+     "claim": "Optic disc pallor, not cupping, is the single most efficient discriminator.",
+     "to": "Optic disc pallor, not cupping — the single most efficient discriminator"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Optic disc pallor, not cupping — the single most efficient discriminator",
+     "from": "Optic disc pallor, not cupping, is the single most efficient discriminator."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "retinitis-pigmentosa",
    "find": "Refer for formal visual fields and electroretinography with genetic counselling; treatment slows rather than reverses and most patients are legally blind by age 40, so the deliverable is prognosis, low-vision support and family screening &mdash; not a cure.",
-   "with": "Refer for formal visual fields and electroretinography with genetic counselling. Treatment slows rather than reverses the disease, and most patients are legally blind by age 40. Care therefore centres on prognosis, low-vision support and family screening, not a cure.",
-   "note": ".danger management: split, remove em dash",
+   "with": "Refer for formal visual fields and electroretinography, with genetic counselling. Treatment slows rather than reverses the disease, and most patients are legally blind by age 40. Care therefore focuses on prognosis, low-vision support and family screening rather than cure.",
+   "note": "management: split, remove em dash",
    "claims": [
     {
      "claim": "Refer for formal visual fields and electroretinography with genetic counselling.",
-     "to": "Refer for formal visual fields and electroretinography with genetic counselling."
+     "to": "Refer for formal visual fields and electroretinography, with genetic counselling."
     },
     {
      "claim": "Treatment slows rather than reverses the disease.",
@@ -155,12 +170,12 @@
     },
     {
      "claim": "The deliverable is prognosis, low-vision support and family screening, not a cure.",
-     "to": "Care therefore centres on prognosis, low-vision support and family screening, not a cure."
+     "to": "Care therefore focuses on prognosis, low-vision support and family screening rather than cure."
     }
    ],
    "new_claims": [
     {
-     "claim": "Refer for formal visual fields and electroretinography with genetic counselling.",
+     "claim": "Refer for formal visual fields and electroretinography, with genetic counselling.",
      "from": "Refer for formal visual fields and electroretinography with genetic counselling."
     },
     {
@@ -172,7 +187,7 @@
      "from": "Most patients are legally blind by age 40."
     },
     {
-     "claim": "The deliverable is prognosis, low-vision support and family screening, not a cure.",
+     "claim": "Care therefore focuses on prognosis, low-vision support and family screening rather than cure.",
      "from": "The deliverable is prognosis, low-vision support and family screening, not a cure."
     }
    ]
@@ -181,53 +196,45 @@
    "op": "replace",
    "brief": "retinitis-pigmentosa",
    "find": "<b>Strict vegan</b> is the whole trap, and it is placed before any examination finding so it frames everything that follows. The counter-detail &mdash; eats a variety of plant products &mdash; is in the same sentence and is doing the opposite work. When a stem gives you a risk factor and then immediately qualifies it, the qualifier is the instruction.",
-   "with": "<b>Strict vegan</b> is the decoy, and it appears before any examination finding. The same sentence says she eats a variety of plant products, which points the other way. When a risk factor is immediately qualified, follow the qualifier.",
-   "note": "decoy note: remove em dashes and dramatic framing",
+   "with": "<b>Strict vegan</b> is the decoy. She also eats a variety of plant products, which counters that risk factor. When a risk factor is qualified straight away, the qualifier takes precedence.",
+   "note": "decoy note: remove dramatic framing and em dashes",
    "claims": [
     {
-     "claim": "Strict vegan is the whole trap.",
-     "to": "Strict vegan is the decoy, and it appears before any examination finding."
+     "claim": "Strict vegan is the decoy.",
+     "to": "Strict vegan is the decoy."
     },
     {
-     "claim": "It is placed before any examination finding.",
-     "to": "Strict vegan is the decoy, and it appears before any examination finding."
+     "claim": "It is placed before any examination finding and frames everything that follows.",
+     "dropped": "framing about the order of the stem"
     },
     {
-     "claim": "It frames everything that follows.",
-     "dropped": "rhetorical framing about the order of the stem"
+     "claim": "She eats a variety of plant products.",
+     "to": "She also eats a variety of plant products, which counters that risk factor."
     },
     {
-     "claim": "The counter-detail, eats a variety of plant products, is in the same sentence.",
-     "to": "The same sentence says she eats a variety of plant products, which points the other way."
-    },
-    {
-     "claim": "The counter-detail does the opposite work.",
-     "to": "The same sentence says she eats a variety of plant products, which points the other way."
+     "claim": "That counter-detail works against the vegan risk factor.",
+     "to": "She also eats a variety of plant products, which counters that risk factor."
     },
     {
      "claim": "When a risk factor is immediately qualified, the qualifier is the instruction.",
-     "to": "When a risk factor is immediately qualified, follow the qualifier."
+     "to": "When a risk factor is qualified straight away, the qualifier takes precedence."
     }
    ],
    "new_claims": [
     {
-     "claim": "Strict vegan is the whole trap.",
-     "from": "Strict vegan is the whole trap."
+     "claim": "Strict vegan is the decoy.",
+     "from": "Strict vegan is the decoy."
     },
     {
-     "claim": "It is placed before any examination finding.",
-     "from": "It is placed before any examination finding."
+     "claim": "She also eats a variety of plant products, which counters that risk factor.",
+     "from": "She eats a variety of plant products."
     },
     {
-     "claim": "The counter-detail, eats a variety of plant products, is in the same sentence.",
-     "from": "The counter-detail, eats a variety of plant products, is in the same sentence."
+     "claim": "She also eats a variety of plant products, which counters that risk factor.",
+     "from": "That counter-detail works against the vegan risk factor."
     },
     {
-     "claim": "The counter-detail does the opposite work.",
-     "from": "The counter-detail does the opposite work."
-    },
-    {
-     "claim": "When a risk factor is immediately qualified, the qualifier is the instruction.",
+     "claim": "When a risk factor is qualified straight away, the qualifier takes precedence.",
      "from": "When a risk factor is immediately qualified, the qualifier is the instruction."
     }
    ]
@@ -235,8 +242,8 @@
   {
    "op": "replace",
    "brief": "retinitis-pigmentosa",
-   "find": "<b>The fundus outranks the history</b> &mdash; diet, occupation and travel raise hypotheses; the examination closes them, and if they disagree, believe the organ &middot; <b>Pale disc is retinitis pigmentosa; cupped disc is glaucoma</b> &mdash; one word of the funduscopic description separates a teenager&#x27;s genetic degeneration from an older adult&#x27;s pressure disease &middot; vitamin A deficiency and retinitis pigmentosa share night blindness and split on the <b>front</b> of the eye",
-   "with": "<b>Trust the fundus over the history</b> &mdash; diet, occupation and travel raise hypotheses, and the examination settles them; if they disagree, trust the examination &middot; <b>Pale disc is retinitis pigmentosa; cupped disc is glaucoma</b> &mdash; the disc description alone separates a teenager&#x27;s genetic degeneration from an older adult&#x27;s pressure disease &middot; vitamin A deficiency and retinitis pigmentosa share night blindness and differ at the <b>front</b> of the eye",
+   "find": "<b>The fundus outranks the history</b> &mdash; diet, occupation and travel raise hypotheses; the examination closes them, and if they disagree, believe the organ &middot; <b>Pale disc is retinitis pigmentosa; cupped disc is glaucoma</b> &mdash; one word of the funduscopic description separates a teenager&#x27;s genetic degeneration from an older adult&#x27;s pressure disease &middot; vitamin A deficiency and retinitis pigmentosa share night blindness and split on the <b>front</b> of the eye &middot;",
+   "with": "<b>Examination versus history</b> &mdash; diet, occupation and travel raise hypotheses, and the examination settles them; when the two disagree, trust the fundus &middot; <b>Pale disc is retinitis pigmentosa; cupped disc is glaucoma</b> &mdash; one descriptive word separates a teenager's genetic degeneration from an older adult's pressure disease &middot; vitamin A deficiency and retinitis pigmentosa share night blindness and differ at the <b>front</b> of the eye &middot;",
    "note": "pearls: remove aphorism and personification",
    "reworded_bold": [
     "The fundus outranks the history"
@@ -244,23 +251,27 @@
    "claims": [
     {
      "claim": "The fundus outranks the history.",
-     "to": "Trust the fundus over the history"
+     "to": "Examination versus history — diet, occupation and travel raise hypotheses, and the examination settles them; when the two disagree, trust the fundus"
     },
     {
      "claim": "Diet, occupation and travel raise hypotheses.",
-     "to": "diet, occupation and travel raise hypotheses, and the examination settles them; if they disagree, trust the examination"
+     "to": "Examination versus history — diet, occupation and travel raise hypotheses, and the examination settles them; when the two disagree, trust the fundus"
     },
     {
-     "claim": "The examination closes them.",
-     "to": "diet, occupation and travel raise hypotheses, and the examination settles them; if they disagree, trust the examination"
+     "claim": "The examination closes the hypotheses.",
+     "to": "Examination versus history — diet, occupation and travel raise hypotheses, and the examination settles them; when the two disagree, trust the fundus"
     },
     {
      "claim": "If history and examination disagree, believe the organ.",
-     "to": "diet, occupation and travel raise hypotheses, and the examination settles them; if they disagree, trust the examination"
+     "to": "Examination versus history — diet, occupation and travel raise hypotheses, and the examination settles them; when the two disagree, trust the fundus"
+    },
+    {
+     "claim": "A pale disc is retinitis pigmentosa; a cupped disc is glaucoma.",
+     "to": "Pale disc is retinitis pigmentosa; cupped disc is glaucoma — one descriptive word separates a teenager's genetic degeneration from an older adult's pressure disease"
     },
     {
      "claim": "One word of the funduscopic description separates a teenager's genetic degeneration from an older adult's pressure disease.",
-     "to": "the disc description alone separates a teenager's genetic degeneration from an older adult's pressure disease"
+     "to": "Pale disc is retinitis pigmentosa; cupped disc is glaucoma — one descriptive word separates a teenager's genetic degeneration from an older adult's pressure disease"
     },
     {
      "claim": "Vitamin A deficiency and retinitis pigmentosa share night blindness and split on the front of the eye.",
@@ -269,7 +280,11 @@
    ],
    "new_claims": [
     {
-     "claim": "The fundus outranks the history.",
+     "claim": "Examination versus history — diet, occupation and travel raise hypotheses, and the examination settles them; when the two disagree, trust the fundus",
+     "from": "If history and examination disagree, believe the organ."
+    },
+    {
+     "claim": "Examination versus history — diet, occupation and travel raise hypotheses, and the examination settles them; when the two disagree, trust the fundus",
      "from": "The fundus outranks the history."
     },
     {
@@ -277,19 +292,19 @@
      "from": "Diet, occupation and travel raise hypotheses."
     },
     {
-     "claim": "The examination closes them.",
-     "from": "The examination closes them."
+     "claim": "Examination versus history — diet, occupation and travel raise hypotheses, and the examination settles them; when the two disagree, trust the fundus",
+     "from": "The examination closes the hypotheses."
     },
     {
-     "claim": "If history and examination disagree, believe the organ.",
-     "from": "If history and examination disagree, believe the organ."
+     "claim": "Pale disc is retinitis pigmentosa; cupped disc is glaucoma — one descriptive word separates a teenager's genetic degeneration from an older adult's pressure disease",
+     "from": "A pale disc is retinitis pigmentosa; a cupped disc is glaucoma."
     },
     {
-     "claim": "One word of the funduscopic description separates a teenager's genetic degeneration from an older adult's pressure disease.",
+     "claim": "Pale disc is retinitis pigmentosa; cupped disc is glaucoma — one descriptive word separates a teenager's genetic degeneration from an older adult's pressure disease",
      "from": "One word of the funduscopic description separates a teenager's genetic degeneration from an older adult's pressure disease."
     },
     {
-     "claim": "Vitamin A deficiency and retinitis pigmentosa share night blindness and split on the front of the eye.",
+     "claim": "Vitamin A deficiency and retinitis pigmentosa share night blindness and differ at the front of the eye.",
      "from": "Vitamin A deficiency and retinitis pigmentosa share night blindness and split on the front of the eye."
     }
    ]
@@ -298,54 +313,66 @@
    "op": "replace",
    "brief": "retinitis-pigmentosa",
    "find": "Part I <b>The Red Eye</b>, which owns everything anterior to the lens and therefore owns the neighbourhood of xerophthalmia; and <b>The Vegan Diet</b>, which owns what a plant-only diet actually requires supplementing &mdash; a useful corrective, since that brief&#x27;s answer is B12, not vitamin A. Store the discriminator as a question: <i>is the front of the eye normal, and is the disc pale or cupped?</i> Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> owns vitamin A deficiency itself: is fat being malabsorbed, and are there Bitot spots?",
-   "with": "Part I <b>The Red Eye</b> covers everything anterior to the lens, and therefore the territory of xerophthalmia. <b>The Vegan Diet</b> covers what a plant-only diet actually requires supplementing; that brief&#x27;s answer is B12, not vitamin A. Ask: <i>is the front of the eye normal, and is the disc pale or cupped?</i> Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> covers vitamin A deficiency itself: is fat being malabsorbed, and are there Bitot spots?",
-   "note": "pairs with: owns -> covers, Ask:, remove em dash",
+   "with": "Part I <b>The Red Eye</b> covers everything anterior to the lens, the territory of xerophthalmia. <b>The Vegan Diet</b> covers what a plant-only diet actually requires supplementing; that brief's answer is B12, not vitamin A. Ask: <i>is the front of the eye normal, and is the disc pale or cupped?</i> Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> covers vitamin A deficiency itself (ask: is fat being malabsorbed, and are there Bitot spots?).",
+   "note": "pairs with: owns -> covers, store-as-question -> Ask",
    "claims": [
     {
-     "claim": "The Red Eye covers everything anterior to the lens and therefore the neighbourhood of xerophthalmia.",
-     "to": "Part I The Red Eye covers everything anterior to the lens, and therefore the territory of xerophthalmia."
+     "claim": "The Red Eye covers everything anterior to the lens.",
+     "to": "Part I The Red Eye covers everything anterior to the lens, the territory of xerophthalmia."
+    },
+    {
+     "claim": "The Red Eye therefore covers the neighbourhood of xerophthalmia.",
+     "to": "Part I The Red Eye covers everything anterior to the lens, the territory of xerophthalmia."
     },
     {
      "claim": "The Vegan Diet covers what a plant-only diet actually requires supplementing.",
      "to": "The Vegan Diet covers what a plant-only diet actually requires supplementing; that brief's answer is B12, not vitamin A."
     },
     {
-     "claim": "The Vegan Diet brief's answer is B12, not vitamin A.",
+     "claim": "The Vegan Diet is a useful corrective.",
+     "dropped": "rhetorical comment on the pairing"
+    },
+    {
+     "claim": "That brief's answer is B12, not vitamin A.",
      "to": "The Vegan Diet covers what a plant-only diet actually requires supplementing; that brief's answer is B12, not vitamin A."
     },
     {
-     "claim": "The Vegan Diet brief is a useful corrective.",
-     "dropped": "editorial comment about another brief"
-    },
-    {
-     "claim": "Discriminating question: is the front of the eye normal, and is the disc pale or cupped?",
+     "claim": "Discriminator question: is the front of the eye normal, and is the disc pale or cupped?",
      "to": "Ask: is the front of the eye normal, and is the disc pale or cupped?"
     },
     {
-     "claim": "Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin A deficiency itself: is fat being malabsorbed, and are there Bitot spots?",
-     "to": "Part II Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin A deficiency itself: is fat being malabsorbed, and are there Bitot spots?"
+     "claim": "Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin A deficiency itself.",
+     "to": "Part II Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin A deficiency itself (ask: is fat being malabsorbed, and are there Bitot spots?)."
+    },
+    {
+     "claim": "Its question: is fat being malabsorbed, and are there Bitot spots?",
+     "to": "Part II Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin A deficiency itself (ask: is fat being malabsorbed, and are there Bitot spots?)."
     }
    ],
    "new_claims": [
     {
-     "claim": "The Red Eye covers everything anterior to the lens and therefore the neighbourhood of xerophthalmia.",
-     "from": "The Red Eye covers everything anterior to the lens and therefore the neighbourhood of xerophthalmia."
+     "claim": "The Red Eye covers everything anterior to the lens, the territory of xerophthalmia.",
+     "from": "The Red Eye covers everything anterior to the lens."
     },
     {
      "claim": "The Vegan Diet covers what a plant-only diet actually requires supplementing.",
      "from": "The Vegan Diet covers what a plant-only diet actually requires supplementing."
     },
     {
-     "claim": "The Vegan Diet brief's answer is B12, not vitamin A.",
-     "from": "The Vegan Diet brief's answer is B12, not vitamin A."
+     "claim": "That brief's answer is B12, not vitamin A.",
+     "from": "That brief's answer is B12, not vitamin A."
     },
     {
-     "claim": "Discriminating question: is the front of the eye normal, and is the disc pale or cupped?",
-     "from": "Discriminating question: is the front of the eye normal, and is the disc pale or cupped?"
+     "claim": "Ask: is the front of the eye normal, and is the disc pale or cupped?",
+     "from": "Discriminator question: is the front of the eye normal, and is the disc pale or cupped?"
     },
     {
-     "claim": "Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin A deficiency itself: is fat being malabsorbed, and are there Bitot spots?",
-     "from": "Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin A deficiency itself: is fat being malabsorbed, and are there Bitot spots?"
+     "claim": "Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin A deficiency itself.",
+     "from": "Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin A deficiency itself."
+    },
+    {
+     "claim": "Ask: is fat being malabsorbed, and are there Bitot spots?",
+     "from": "Its question: is fat being malabsorbed, and are there Bitot spots?"
     }
    ]
   },
@@ -353,16 +380,20 @@
    "op": "replace",
    "brief": "retinitis-pigmentosa",
    "find": "A demographic or lifestyle detail is a prior, not a finding. When deliberation has run long and a diet, job or country of origin is the only thing still supporting an option, that option is the decoy &mdash; switch only when a stated finding is incompatible with your current answer.",
-   "with": "A demographic or lifestyle detail sets the pretest probability; it is not a finding. When deliberation has run long and a diet, job or country of origin is the only thing still supporting an option, that option is the decoy. Switch only when a stated finding is incompatible with your current answer.",
-   "note": "rule: remove em dash, plain 'prior'",
+   "with": "A demographic or lifestyle detail is a prior, not a finding. If a diet, job or country of origin is the only thing still supporting an option, that option is the decoy. Switch only when a stated finding is incompatible with your current answer.",
+   "note": "rule: split, remove em dash",
    "claims": [
     {
      "claim": "A demographic or lifestyle detail is a prior, not a finding.",
-     "to": "A demographic or lifestyle detail sets the pretest probability; it is not a finding."
+     "to": "A demographic or lifestyle detail is a prior, not a finding."
     },
     {
-     "claim": "When deliberation has run long and a diet, job or country of origin is the only thing still supporting an option, that option is the decoy.",
-     "to": "When deliberation has run long and a diet, job or country of origin is the only thing still supporting an option, that option is the decoy."
+     "claim": "Deliberation has run long.",
+     "dropped": "framing about test-taking time"
+    },
+    {
+     "claim": "When a diet, job or country of origin is the only thing still supporting an option, that option is the decoy.",
+     "to": "If a diet, job or country of origin is the only thing still supporting an option, that option is the decoy."
     },
     {
      "claim": "Switch only when a stated finding is incompatible with your current answer.",
@@ -375,8 +406,8 @@
      "from": "A demographic or lifestyle detail is a prior, not a finding."
     },
     {
-     "claim": "When deliberation has run long and a diet, job or country of origin is the only thing still supporting an option, that option is the decoy.",
-     "from": "When deliberation has run long and a diet, job or country of origin is the only thing still supporting an option, that option is the decoy."
+     "claim": "If a diet, job or country of origin is the only thing still supporting an option, that option is the decoy.",
+     "from": "When a diet, job or country of origin is the only thing still supporting an option, that option is the decoy."
     },
     {
      "claim": "Switch only when a stated finding is incompatible with your current answer.",
@@ -388,18 +419,18 @@
    "op": "replace",
    "brief": "tics",
    "find": "name the movement before you name the disorder",
-   "with": "Classify the movement before naming the disorder",
-   "note": "sub: slogan",
+   "with": "Classify the movement first",
+   "note": "sub: paired-contrast slogan",
    "claims": [
     {
-     "claim": "Name the movement before you name the disorder.",
-     "to": "Classify the movement before naming the disorder"
+     "claim": "Name the movement before naming the disorder.",
+     "to": "Classify the movement first"
     }
    ],
    "new_claims": [
     {
-     "claim": "Name the movement before you name the disorder.",
-     "from": "Name the movement before you name the disorder."
+     "claim": "Classify the movement first",
+     "from": "Name the movement before naming the disorder."
     }
    ]
   },
@@ -407,8 +438,8 @@
    "op": "replace",
    "brief": "tics",
    "find": "<p>Three of the described behaviours are <b>tics</b>, and naming them as such is the whole question. <b>Head turning and shoulder shrugging</b> are motor tics. <b>Repeating exactly what other children say</b> is echolalia, a <b>vocal</b> tic. The hand-raising with a rationalisation afterward is a motor tic the child covered for, which is exactly how school-age children manage them. Multiple motor tics plus at least one vocal tic, present over a year with onset before 18, is <b>Tourette syndrome</b>. The therapy that targets tics among the offered options is the <b>antidopaminergic</b>: risperidone, a second-generation antipsychotic, preferred over first-generation agents for its adverse-effect profile.</p>",
-   "with": "<p>Three of the described behaviours are <b>tics</b>. <b>Head turning and shoulder shrugging</b> are motor tics. <b>Repeating exactly what other children say</b> is echolalia, a <b>vocal</b> tic. The hand-raising with a rationalisation afterward is a motor tic the child covered for, which is how school-age children manage tics. Multiple motor tics plus at least one vocal tic, present over a year with onset before 18, is <b>Tourette syndrome</b>. Among the offered options, the therapy that targets tics is the <b>antidopaminergic</b> risperidone. Risperidone is a second-generation antipsychotic, preferred over first-generation agents for its adverse-effect profile.</p>",
-   "note": ".dp: remove framing, split last sentence",
+   "with": "<p>Three of the described behaviours are <b>tics</b>. <b>Head turning and shoulder shrugging</b> are motor tics. <b>Repeating exactly what other children say</b> is echolalia, a <b>vocal</b> tic. The hand-raising, explained away afterward, is a motor tic he covered for; this is how school-age children manage tics. Multiple motor tics plus at least one vocal tic, present over a year with onset before 18, is <b>Tourette syndrome</b>. Among the offered options, the therapy that targets tics is the <b>antidopaminergic</b> risperidone. It is a second-generation antipsychotic, preferred over first-generation agents for its adverse-effect profile.</p>",
+   "note": "dp: remove dramatic framing, split",
    "claims": [
     {
      "claim": "Three of the described behaviours are tics.",
@@ -416,7 +447,7 @@
     },
     {
      "claim": "Naming them as tics is the whole question.",
-     "dropped": "framing about the question"
+     "dropped": "dramatic framing about the question"
     },
     {
      "claim": "Head turning and shoulder shrugging are motor tics.",
@@ -428,11 +459,11 @@
     },
     {
      "claim": "The hand-raising with a rationalisation afterward is a motor tic the child covered for.",
-     "to": "The hand-raising with a rationalisation afterward is a motor tic the child covered for, which is how school-age children manage tics."
+     "to": "The hand-raising, explained away afterward, is a motor tic he covered for; this is how school-age children manage tics."
     },
     {
-     "claim": "Covering for tics this way is how school-age children manage them.",
-     "to": "The hand-raising with a rationalisation afterward is a motor tic the child covered for, which is how school-age children manage tics."
+     "claim": "That is how school-age children manage tics.",
+     "to": "The hand-raising, explained away afterward, is a motor tic he covered for; this is how school-age children manage tics."
     },
     {
      "claim": "Multiple motor tics plus at least one vocal tic, present over a year with onset before 18, is Tourette syndrome.",
@@ -444,11 +475,11 @@
     },
     {
      "claim": "Risperidone is a second-generation antipsychotic.",
-     "to": "Risperidone is a second-generation antipsychotic, preferred over first-generation agents for its adverse-effect profile."
+     "to": "It is a second-generation antipsychotic, preferred over first-generation agents for its adverse-effect profile."
     },
     {
-     "claim": "Risperidone is preferred over first-generation agents for its adverse-effect profile.",
-     "to": "Risperidone is a second-generation antipsychotic, preferred over first-generation agents for its adverse-effect profile."
+     "claim": "It is preferred over first-generation agents for its adverse-effect profile.",
+     "to": "It is a second-generation antipsychotic, preferred over first-generation agents for its adverse-effect profile."
     }
    ],
    "new_claims": [
@@ -465,12 +496,12 @@
      "from": "Repeating exactly what other children say is echolalia, a vocal tic."
     },
     {
-     "claim": "The hand-raising with a rationalisation afterward is a motor tic the child covered for.",
+     "claim": "The hand-raising, explained away afterward, is a motor tic he covered for.",
      "from": "The hand-raising with a rationalisation afterward is a motor tic the child covered for."
     },
     {
-     "claim": "Covering for tics this way is how school-age children manage them.",
-     "from": "Covering for tics this way is how school-age children manage them."
+     "claim": "This is how school-age children manage tics.",
+     "from": "That is how school-age children manage tics."
     },
     {
      "claim": "Multiple motor tics plus at least one vocal tic, present over a year with onset before 18, is Tourette syndrome.",
@@ -481,12 +512,12 @@
      "from": "Among the offered options, the therapy that targets tics is the antidopaminergic risperidone."
     },
     {
-     "claim": "Risperidone is a second-generation antipsychotic.",
+     "claim": "It is a second-generation antipsychotic, preferred over first-generation agents for its adverse-effect profile.",
      "from": "Risperidone is a second-generation antipsychotic."
     },
     {
-     "claim": "Risperidone is preferred over first-generation agents for its adverse-effect profile.",
-     "from": "Risperidone is preferred over first-generation agents for its adverse-effect profile."
+     "claim": "It is a second-generation antipsychotic, preferred over first-generation agents for its adverse-effect profile.",
+     "from": "It is preferred over first-generation agents for its adverse-effect profile."
     }
    ]
   },
@@ -494,19 +525,19 @@
    "op": "replace",
    "brief": "tics",
    "find": "Behavioural therapy &mdash; <b>habit reversal training</b> &mdash; is first-line and would be the answer if it were offered; when tics impair function, add an antidopaminergic or an alpha-2 agonist, with clonidine and guanfacine both guideline-supported for tics and ADHD together; guanfacine is often preferred first for its milder sedation profile (clinic ledger, not a guideline ranking). <b>When the guideline first-line is not on the option list, choose the best offered treatment for the diagnosis you made &mdash; do not change the diagnosis to fit an offered drug.</b> That absence is a test of whether your diagnosis is stable.",
-   "with": "Behavioural therapy (<b>habit reversal training</b>) is first-line and would be the answer if it were offered. When tics impair function, add an antidopaminergic or an alpha-2 agonist. Clonidine and guanfacine are both guideline-supported for tics and <b>ADHD</b> (attention deficit hyperactivity disorder) together. Guanfacine is often preferred first for its milder sedation profile (clinical practice, not a guideline ranking). <b>When the guideline first-line is not on the option list, choose the best offered treatment for the diagnosis you made.</b> Do not change the diagnosis to fit an offered drug.",
+   "with": "Behavioural therapy with <b>habit reversal training</b> is first-line and is the choice whenever it is offered. When tics impair function, add an antidopaminergic or an alpha-2 agonist. Clonidine and guanfacine are both guideline-supported for tics and <b>ADHD</b> (attention deficit hyperactivity disorder) together. Guanfacine is often preferred first for its milder sedation profile; this is clinical practice, not a guideline ranking. <b>When the guideline first-line treatment is not on the option list, choose the best offered treatment for the diagnosis you made.</b> Do not change the diagnosis to fit an offered drug.",
    "note": "management: split, remove em dashes and ledger tag, expand ADHD",
    "reworded_bold": [
-    "When the guideline first-line is not on the option list, choose the best offered treatment for the diagnosis you made — do not change the diagnosis to fit an offered drug."
+    "When the guideline first-line is not on the option list, choose the best offered treatment for the diagnosis you made &mdash; do not change the diagnosis to fit an offered drug."
    ],
    "claims": [
     {
      "claim": "Behavioural therapy, habit reversal training, is first-line.",
-     "to": "Behavioural therapy (habit reversal training) is first-line and would be the answer if it were offered."
+     "to": "Behavioural therapy with habit reversal training is first-line and is the choice whenever it is offered."
     },
     {
      "claim": "Habit reversal training would be the answer if it were offered.",
-     "to": "Behavioural therapy (habit reversal training) is first-line and would be the answer if it were offered."
+     "to": "Behavioural therapy with habit reversal training is first-line and is the choice whenever it is offered."
     },
     {
      "claim": "When tics impair function, add an antidopaminergic or an alpha-2 agonist.",
@@ -518,15 +549,15 @@
     },
     {
      "claim": "Guanfacine is often preferred first for its milder sedation profile.",
-     "to": "Guanfacine is often preferred first for its milder sedation profile (clinical practice, not a guideline ranking)."
+     "to": "Guanfacine is often preferred first for its milder sedation profile; this is clinical practice, not a guideline ranking."
     },
     {
-     "claim": "This preference is clinical practice, not a guideline ranking.",
-     "to": "Guanfacine is often preferred first for its milder sedation profile (clinical practice, not a guideline ranking)."
+     "claim": "That preference is not a guideline ranking.",
+     "to": "Guanfacine is often preferred first for its milder sedation profile; this is clinical practice, not a guideline ranking."
     },
     {
      "claim": "When the guideline first-line is not on the option list, choose the best offered treatment for the diagnosis you made.",
-     "to": "When the guideline first-line is not on the option list, choose the best offered treatment for the diagnosis you made."
+     "to": "When the guideline first-line treatment is not on the option list, choose the best offered treatment for the diagnosis you made."
     },
     {
      "claim": "Do not change the diagnosis to fit an offered drug.",
@@ -539,11 +570,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Behavioural therapy, habit reversal training, is first-line.",
+     "claim": "Behavioural therapy with habit reversal training is first-line.",
      "from": "Behavioural therapy, habit reversal training, is first-line."
     },
     {
-     "claim": "Habit reversal training would be the answer if it were offered.",
+     "claim": "Behavioural therapy with habit reversal training is first-line and is the choice whenever it is offered.",
      "from": "Habit reversal training would be the answer if it were offered."
     },
     {
@@ -551,28 +582,28 @@
      "from": "When tics impair function, add an antidopaminergic or an alpha-2 agonist."
     },
     {
-     "claim": "Clonidine and guanfacine are both guideline-supported for tics and ADHD together.",
+     "claim": "Clonidine and guanfacine are both guideline-supported for tics and ADHD (attention deficit hyperactivity disorder) together.",
      "from": "Clonidine and guanfacine are both guideline-supported for tics and ADHD together."
+    },
+    {
+     "claim": "ADHD stands for attention deficit hyperactivity disorder.",
+     "from": "expansion"
     },
     {
      "claim": "Guanfacine is often preferred first for its milder sedation profile.",
      "from": "Guanfacine is often preferred first for its milder sedation profile."
     },
     {
-     "claim": "This preference is clinical practice, not a guideline ranking.",
-     "from": "This preference is clinical practice, not a guideline ranking."
+     "claim": "Guanfacine is often preferred first for its milder sedation profile; this is clinical practice, not a guideline ranking.",
+     "from": "That preference is not a guideline ranking."
     },
     {
-     "claim": "When the guideline first-line is not on the option list, choose the best offered treatment for the diagnosis you made.",
+     "claim": "When the guideline first-line treatment is not on the option list, choose the best offered treatment for the diagnosis you made.",
      "from": "When the guideline first-line is not on the option list, choose the best offered treatment for the diagnosis you made."
     },
     {
      "claim": "Do not change the diagnosis to fit an offered drug.",
      "from": "Do not change the diagnosis to fit an offered drug."
-    },
-    {
-     "claim": "ADHD stands for attention deficit hyperactivity disorder.",
-     "from": "expansion"
     }
    ]
   },
@@ -580,96 +611,134 @@
    "op": "replace",
    "brief": "tics",
    "find": "<b>Family history of obsessive-compulsive disorder in the father</b> is the highest-leverage decoy in the stem, and it is true in a way that makes it worse: OCD and Tourette really are comorbid and co-heritable, so the detail is consistent with the right answer while pointing at the wrong one. The child&#x27;s own sentence describes the involuntariness of a tic, not the anxiety-relief of a compulsion.",
-   "with": "<b>Family history of obsessive-compulsive disorder in the father</b> is the strongest decoy, and its truth makes it more misleading. Obsessive-compulsive disorder and Tourette really are comorbid and co-heritable. The detail is therefore consistent with Tourette while pointing toward obsessive-compulsive disorder. The child&#x27;s own words describe the involuntariness of a tic, not the anxiety relief of a compulsion.",
-   "note": "decoy note: split, remove meta about answer",
+   "with": "<b>Family history of obsessive-compulsive disorder in the father</b> is the strongest decoy. It is true in a way that makes it worse: obsessive-compulsive disorder and Tourette syndrome are comorbid and co-heritable. So this history is consistent with Tourette syndrome while pointing toward obsessive-compulsive disorder. The child's own words describe the involuntariness of a tic, not the anxiety relief of a compulsion.",
+   "note": "decoy note: split; spell out OCD instead of acronym",
    "claims": [
     {
-     "claim": "Family history of OCD in the father is the highest-leverage decoy.",
-     "to": "Family history of obsessive-compulsive disorder in the father is the strongest decoy, and its truth makes it more misleading."
+     "claim": "The father's OCD is the highest-leverage decoy.",
+     "to": "Family history of obsessive-compulsive disorder in the father is the strongest decoy."
     },
     {
      "claim": "It is true in a way that makes it worse.",
-     "to": "Family history of obsessive-compulsive disorder in the father is the strongest decoy, and its truth makes it more misleading."
+     "to": "It is true in a way that makes it worse: obsessive-compulsive disorder and Tourette syndrome are comorbid and co-heritable."
     },
     {
-     "claim": "OCD and Tourette really are comorbid and co-heritable.",
-     "to": "Obsessive-compulsive disorder and Tourette really are comorbid and co-heritable."
+     "claim": "OCD and Tourette are comorbid and co-heritable.",
+     "to": "It is true in a way that makes it worse: obsessive-compulsive disorder and Tourette syndrome are comorbid and co-heritable."
     },
     {
      "claim": "The detail is consistent with the right answer while pointing at the wrong one.",
-     "to": "The detail is therefore consistent with Tourette while pointing toward obsessive-compulsive disorder."
+     "to": "So this history is consistent with Tourette syndrome while pointing toward obsessive-compulsive disorder."
     },
     {
-     "claim": "The child's own sentence describes the involuntariness of a tic, not the anxiety-relief of a compulsion.",
+     "claim": "The child's own sentence describes the involuntariness of a tic, not the anxiety relief of a compulsion.",
      "to": "The child's own words describe the involuntariness of a tic, not the anxiety relief of a compulsion."
     }
    ],
    "new_claims": [
     {
-     "claim": "Family history of OCD in the father is the highest-leverage decoy.",
-     "from": "Family history of OCD in the father is the highest-leverage decoy."
+     "claim": "Family history of obsessive-compulsive disorder in the father is the strongest decoy.",
+     "from": "The father's OCD is the highest-leverage decoy."
     },
     {
      "claim": "It is true in a way that makes it worse.",
      "from": "It is true in a way that makes it worse."
     },
     {
-     "claim": "OCD and Tourette really are comorbid and co-heritable.",
-     "from": "OCD and Tourette really are comorbid and co-heritable."
+     "claim": "Obsessive-compulsive disorder and Tourette syndrome are comorbid and co-heritable.",
+     "from": "OCD and Tourette are comorbid and co-heritable."
     },
     {
-     "claim": "The detail is consistent with the right answer while pointing at the wrong one.",
+     "claim": "This history is consistent with Tourette syndrome while pointing toward obsessive-compulsive disorder.",
      "from": "The detail is consistent with the right answer while pointing at the wrong one."
     },
     {
-     "claim": "The child's own sentence describes the involuntariness of a tic, not the anxiety-relief of a compulsion.",
-     "from": "The child's own sentence describes the involuntariness of a tic, not the anxiety-relief of a compulsion."
+     "claim": "The child's own words describe the involuntariness of a tic, not the anxiety relief of a compulsion.",
+     "from": "The child's own sentence describes the involuntariness of a tic, not the anxiety relief of a compulsion."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "tics",
-   "find": "<b>Describe the movement before you name the disorder</b> &mdash; nothing about a family history changes what a movement is &middot; <b>A compulsion requires an obsession</b>; with no obsessional thought, a repetitive behaviour is a tic and exposure therapy is the wrong tool &middot; <b>Echolalia is a vocal tic</b>, and it is what upgrades a chronic motor tic disorder to Tourette &mdash; the criterion most often missed, because it does not sound like a sound &middot; tics <b>wax and wane</b>, so a behaviour that stopped last year and was replaced by a new one is natural history, not improvement &middot; stimulants for comorbid ADHD are <b>not</b> contraindicated in Tourette &#9888;&#65038;, despite older teaching",
-   "with": "<b>Describe the movement before you name the disorder</b> &mdash; a family history does not change what a movement is &middot; <b>A compulsion requires an obsession</b>; with no obsessional thought, a repetitive behaviour is a tic and exposure therapy is the wrong tool &middot; <b>Echolalia is a vocal tic</b>, and it upgrades a chronic motor tic disorder to Tourette. It is the criterion most often missed, because repeated words do not seem like a vocal sound &middot; tics <b>wax and wane</b>, so a behaviour that stopped last year and was replaced by a new one is natural history, not improvement &middot; stimulants for comorbid <b>ADHD</b> (attention deficit hyperactivity disorder) are not contraindicated in Tourette &#9888;&#65038;, despite older teaching",
-   "note": "pearls: remove prose em dash and emphasis bold, expand ADHD",
+   "find": "<b>Describe the movement before you name the disorder</b> &mdash; nothing about a family history changes what a movement is &middot;",
+   "with": "<b>Describe the movement before you name the disorder</b> &mdash; a family history does not change what a movement is &middot;",
+   "note": "pearls seg 1: plainer wording",
+   "claims": [
+    {
+     "claim": "Nothing about a family history changes what a movement is.",
+     "to": "Describe the movement before you name the disorder — a family history does not change what a movement is"
+    },
+    {
+     "claim": "Describe the movement before you name the disorder.",
+     "to": "Describe the movement before you name the disorder — a family history does not change what a movement is"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Describe the movement before you name the disorder.",
+     "from": "Describe the movement before you name the disorder."
+    },
+    {
+     "claim": "A family history does not change what a movement is.",
+     "from": "Nothing about a family history changes what a movement is."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "<b>Echolalia is a vocal tic</b>, and it is what upgrades a chronic motor tic disorder to Tourette &mdash; the criterion most often missed, because it does not sound like a sound &middot;",
+   "with": "<b>Echolalia is a vocal tic</b>, and it upgrades a chronic motor tic disorder to Tourette syndrome. It is the criterion most often missed, because repeating words does not seem like a vocal tic &middot;",
+   "note": "pearls seg 3: remove prose em dash and wordplay",
+   "claims": [
+    {
+     "claim": "Echolalia is a vocal tic.",
+     "to": "Echolalia is a vocal tic, and it upgrades a chronic motor tic disorder to Tourette syndrome."
+    },
+    {
+     "claim": "Echolalia upgrades a chronic motor tic disorder to Tourette.",
+     "to": "Echolalia is a vocal tic, and it upgrades a chronic motor tic disorder to Tourette syndrome."
+    },
+    {
+     "claim": "It is the criterion most often missed, because it does not sound like a sound.",
+     "to": "It is the criterion most often missed, because repeating words does not seem like a vocal tic"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Echolalia is a vocal tic.",
+     "from": "Echolalia is a vocal tic."
+    },
+    {
+     "claim": "Echolalia is a vocal tic, and it upgrades a chronic motor tic disorder to Tourette syndrome.",
+     "from": "Echolalia upgrades a chronic motor tic disorder to Tourette."
+    },
+    {
+     "claim": "It is the criterion most often missed, because repeating words does not seem like a vocal tic.",
+     "from": "It is the criterion most often missed, because it does not sound like a sound."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "stimulants for comorbid ADHD are <b>not</b> contraindicated in Tourette",
+   "with": "stimulants for comorbid <b>ADHD</b> (attention deficit hyperactivity disorder) are not contraindicated in Tourette",
+   "note": "pearls seg 5: expand ADHD, remove emphasis bold",
    "reworded_bold": [
     "not"
    ],
    "claims": [
     {
-     "claim": "Nothing about a family history changes what a movement is.",
-     "to": "a family history does not change what a movement is"
-    },
-    {
-     "claim": "Echolalia is a vocal tic and upgrades a chronic motor tic disorder to Tourette.",
-     "to": "Echolalia is a vocal tic, and it upgrades a chronic motor tic disorder to Tourette."
-    },
-    {
-     "claim": "Echolalia is the criterion most often missed, because it does not sound like a sound.",
-     "to": "It is the criterion most often missed, because repeated words do not seem like a vocal sound"
-    },
-    {
-     "claim": "Stimulants for comorbid ADHD are not contraindicated in Tourette, despite older teaching (flagged unverified).",
+     "claim": "Stimulants for comorbid ADHD are not contraindicated in Tourette.",
      "to": "stimulants for comorbid ADHD (attention deficit hyperactivity disorder) are not contraindicated in Tourette"
     }
    ],
    "new_claims": [
     {
-     "claim": "Nothing about a family history changes what a movement is.",
-     "from": "Nothing about a family history changes what a movement is."
-    },
-    {
-     "claim": "Echolalia is a vocal tic and upgrades a chronic motor tic disorder to Tourette.",
-     "from": "Echolalia is a vocal tic and upgrades a chronic motor tic disorder to Tourette."
-    },
-    {
-     "claim": "Echolalia is the criterion most often missed, because it does not sound like a sound.",
-     "from": "Echolalia is the criterion most often missed, because it does not sound like a sound."
-    },
-    {
-     "claim": "Stimulants for comorbid ADHD are not contraindicated in Tourette, despite older teaching (flagged unverified).",
-     "from": "Stimulants for comorbid ADHD are not contraindicated in Tourette, despite older teaching (flagged unverified)."
+     "claim": "stimulants for comorbid ADHD (attention deficit hyperactivity disorder) are not contraindicated in Tourette",
+     "from": "Stimulants for comorbid ADHD are not contraindicated in Tourette."
     },
     {
      "claim": "ADHD stands for attention deficit hyperactivity disorder.",
@@ -681,8 +750,8 @@
    "op": "replace",
    "brief": "tics",
    "find": "Part II <b>Specific Learning Disorder</b> is the nearest relative &mdash; same referral route, a school behaviour complaint, with the opposite resolution: there the private interview reveals a learning disorder, here the examination reveals tics. Store the discriminator as a question: <i>what exactly is the child doing, and is it involuntary?</i>",
-   "with": "Part II <b>Specific Learning Disorder</b> is the nearest relative. It shares the referral route, a school behaviour complaint, but resolves the opposite way. There the private interview reveals a learning disorder; here the examination reveals tics. Ask: <i>what exactly is the child doing, and is it involuntary?</i>",
-   "note": "pairs with: split, Ask:",
+   "with": "Part II <b>Specific Learning Disorder</b> is the nearest relative. It shares the same referral route, a school behaviour complaint. The resolution is opposite: there the private interview reveals a learning disorder, and here the examination reveals tics. Ask: <i>what exactly is the child doing, and is it involuntary?</i>",
+   "note": "pairs with: remove em dash; store-as-question -> Ask",
    "claims": [
     {
      "claim": "Specific Learning Disorder is the nearest relative.",
@@ -690,18 +759,14 @@
     },
     {
      "claim": "It has the same referral route, a school behaviour complaint.",
-     "to": "It shares the referral route, a school behaviour complaint, but resolves the opposite way."
+     "to": "It shares the same referral route, a school behaviour complaint."
     },
     {
-     "claim": "It has the opposite resolution.",
-     "to": "It shares the referral route, a school behaviour complaint, but resolves the opposite way."
+     "claim": "It has the opposite resolution: there the private interview reveals a learning disorder, here the examination reveals tics.",
+     "to": "The resolution is opposite: there the private interview reveals a learning disorder, and here the examination reveals tics."
     },
     {
-     "claim": "There the private interview reveals a learning disorder; here the examination reveals tics.",
-     "to": "There the private interview reveals a learning disorder; here the examination reveals tics."
-    },
-    {
-     "claim": "Discriminating question: what exactly is the child doing, and is it involuntary?",
+     "claim": "Discriminator question: what exactly is the child doing, and is it involuntary?",
      "to": "Ask: what exactly is the child doing, and is it involuntary?"
     }
    ],
@@ -711,20 +776,16 @@
      "from": "Specific Learning Disorder is the nearest relative."
     },
     {
-     "claim": "It has the same referral route, a school behaviour complaint.",
+     "claim": "It shares the same referral route, a school behaviour complaint.",
      "from": "It has the same referral route, a school behaviour complaint."
     },
     {
-     "claim": "It has the opposite resolution.",
-     "from": "It has the opposite resolution."
+     "claim": "There the private interview reveals a learning disorder, and here the examination reveals tics.",
+     "from": "It has the opposite resolution: there the private interview reveals a learning disorder, here the examination reveals tics."
     },
     {
-     "claim": "There the private interview reveals a learning disorder; here the examination reveals tics.",
-     "from": "There the private interview reveals a learning disorder; here the examination reveals tics."
-    },
-    {
-     "claim": "Discriminating question: what exactly is the child doing, and is it involuntary?",
-     "from": "Discriminating question: what exactly is the child doing, and is it involuntary?"
+     "claim": "Ask: what exactly is the child doing, and is it involuntary?",
+     "from": "Discriminator question: what exactly is the child doing, and is it involuntary?"
     }
    ]
   },
@@ -732,29 +793,29 @@
    "op": "replace",
    "brief": "tics",
    "find": "A family history raises a prior; the phenomenology decides. When a stem supplies a relative&#x27;s diagnosis and a child&#x27;s behaviour, describe the behaviour in neutral terms first &mdash; if it is involuntary and stereotyped it is a tic, whatever the family carries.",
-   "with": "A family history raises the pretest probability; the behaviour itself decides the diagnosis. When a relative has a diagnosis, describe the child&#x27;s behaviour in neutral terms first. If it is involuntary and stereotyped, it is a tic, whatever the family history.",
-   "note": "rule: remove aphorism and em dash",
+   "with": "A family history raises the prior probability, but the phenomenology decides. When a relative's diagnosis and a child's behaviour are both given, first describe the behaviour in neutral terms. If the behaviour is involuntary and stereotyped, it is a tic, whatever the family carries.",
+   "note": "rule: split, remove em dash",
    "claims": [
     {
      "claim": "A family history raises a prior.",
-     "to": "A family history raises the pretest probability; the behaviour itself decides the diagnosis."
+     "to": "A family history raises the prior probability, but the phenomenology decides."
     },
     {
      "claim": "The phenomenology decides.",
-     "to": "A family history raises the pretest probability; the behaviour itself decides the diagnosis."
+     "to": "A family history raises the prior probability, but the phenomenology decides."
     },
     {
-     "claim": "When a relative's diagnosis and a child's behaviour are given, describe the behaviour in neutral terms first.",
-     "to": "When a relative has a diagnosis, describe the child's behaviour in neutral terms first."
+     "claim": "When given a relative's diagnosis and a child's behaviour, describe the behaviour in neutral terms first.",
+     "to": "When a relative's diagnosis and a child's behaviour are both given, first describe the behaviour in neutral terms."
     },
     {
      "claim": "If it is involuntary and stereotyped it is a tic, whatever the family carries.",
-     "to": "If it is involuntary and stereotyped, it is a tic, whatever the family history."
+     "to": "If the behaviour is involuntary and stereotyped, it is a tic, whatever the family carries."
     }
    ],
    "new_claims": [
     {
-     "claim": "A family history raises a prior.",
+     "claim": "A family history raises the prior probability.",
      "from": "A family history raises a prior."
     },
     {
@@ -762,11 +823,11 @@
      "from": "The phenomenology decides."
     },
     {
-     "claim": "When a relative's diagnosis and a child's behaviour are given, describe the behaviour in neutral terms first.",
-     "from": "When a relative's diagnosis and a child's behaviour are given, describe the behaviour in neutral terms first."
+     "claim": "When a relative's diagnosis and a child's behaviour are both given, first describe the behaviour in neutral terms.",
+     "from": "When given a relative's diagnosis and a child's behaviour, describe the behaviour in neutral terms first."
     },
     {
-     "claim": "If it is involuntary and stereotyped it is a tic, whatever the family carries.",
+     "claim": "If the behaviour is involuntary and stereotyped, it is a tic, whatever the family carries.",
      "from": "If it is involuntary and stereotyped it is a tic, whatever the family carries."
     }
    ]
@@ -775,36 +836,41 @@
    "op": "replace",
    "brief": "bs-tethered",
    "find": "<p><b>1+ reflexes</b> is the entire question. Hyporeflexia is a lower motor neuron sign, which localises at or below the anterior horn cell and <b>eliminates spastic diplegia outright</b>, since cerebral palsy is by definition an upper motor neuron disorder. Three findings then pick the lesion: <b>bladder involvement</b>, because muscle and peripheral nerve diseases spare the bladder; <b>back pain</b>, which points at a structural spinal lesion; and <b>pes cavus</b>, which is chronic denervation of the intrinsic foot muscles.</p>\n<p>One lesion sits upstream of all four systems: a tethered cord from closed spinal dysraphism, stretched by two months of growth.</p>",
-   "with": "<p><b>1+ reflexes</b> are hyporeflexia, a lower motor neuron sign that localises at or below the anterior horn cell. Hyporeflexia <b>eliminates spastic diplegia outright</b>, since cerebral palsy is by definition an upper motor neuron disorder. Three findings then pick the lesion: <b>bladder involvement</b>, <b>back pain</b> and <b>pes cavus</b>. Muscle and peripheral nerve diseases spare the bladder. Back pain points at a structural spinal lesion. Pes cavus is chronic denervation of the intrinsic foot muscles.</p>\n<p>One lesion accounts for all four findings: a tethered cord from closed spinal dysraphism, stretched by two months of growth.</p>",
-   "note": ".dp: remove framing, split list sentence",
+   "with": "<p><b>1+ reflexes</b> are the key finding. Hyporeflexia is a lower motor neuron sign that localises at or below the anterior horn cell. It <b>eliminates spastic diplegia outright</b>, since cerebral palsy is by definition an upper motor neuron disorder. Three findings then pick the lesion. <b>Bladder involvement</b> counts because muscle and peripheral nerve diseases spare the bladder. <b>Back pain</b> points at a structural spinal lesion. <b>Pes cavus</b> is chronic denervation of the intrinsic foot muscles.</p>\n<p>One lesion explains all four findings: a tethered cord from closed spinal dysraphism, stretched by two months of growth.</p>",
+   "note": "dp: remove dramatic opener, one idea per sentence",
+   "reworded_bold": [
+    "bladder involvement",
+    "back pain",
+    "pes cavus"
+   ],
    "claims": [
     {
-     "claim": "1+ reflexes are the deciding finding.",
-     "to": "1+ reflexes are hyporeflexia, a lower motor neuron sign that localises at or below the anterior horn cell."
+     "claim": "1+ reflexes is the entire question.",
+     "to": "1+ reflexes are the key finding."
     },
     {
      "claim": "Hyporeflexia is a lower motor neuron sign.",
-     "to": "1+ reflexes are hyporeflexia, a lower motor neuron sign that localises at or below the anterior horn cell."
+     "to": "Hyporeflexia is a lower motor neuron sign that localises at or below the anterior horn cell."
     },
     {
      "claim": "It localises at or below the anterior horn cell.",
-     "to": "1+ reflexes are hyporeflexia, a lower motor neuron sign that localises at or below the anterior horn cell."
+     "to": "Hyporeflexia is a lower motor neuron sign that localises at or below the anterior horn cell."
     },
     {
      "claim": "Hyporeflexia eliminates spastic diplegia outright.",
-     "to": "Hyporeflexia eliminates spastic diplegia outright, since cerebral palsy is by definition an upper motor neuron disorder."
+     "to": "It eliminates spastic diplegia outright, since cerebral palsy is by definition an upper motor neuron disorder."
     },
     {
      "claim": "Cerebral palsy is by definition an upper motor neuron disorder.",
-     "to": "Hyporeflexia eliminates spastic diplegia outright, since cerebral palsy is by definition an upper motor neuron disorder."
+     "to": "It eliminates spastic diplegia outright, since cerebral palsy is by definition an upper motor neuron disorder."
     },
     {
-     "claim": "Three findings then pick the lesion: bladder involvement, back pain and pes cavus.",
-     "to": "Three findings then pick the lesion: bladder involvement, back pain and pes cavus."
+     "claim": "Three findings then pick the lesion.",
+     "to": "Three findings then pick the lesion."
     },
     {
-     "claim": "Muscle and peripheral nerve diseases spare the bladder.",
-     "to": "Muscle and peripheral nerve diseases spare the bladder."
+     "claim": "Bladder involvement picks the lesion because muscle and peripheral nerve diseases spare the bladder.",
+     "to": "Bladder involvement counts because muscle and peripheral nerve diseases spare the bladder."
     },
     {
      "claim": "Back pain points at a structural spinal lesion.",
@@ -816,28 +882,24 @@
     },
     {
      "claim": "One lesion sits upstream of all four systems.",
-     "to": "One lesion accounts for all four findings: a tethered cord from closed spinal dysraphism, stretched by two months of growth."
+     "to": "One lesion explains all four findings: a tethered cord from closed spinal dysraphism, stretched by two months of growth."
     },
     {
-     "claim": "That lesion is a tethered cord from closed spinal dysraphism, stretched by two months of growth.",
-     "to": "One lesion accounts for all four findings: a tethered cord from closed spinal dysraphism, stretched by two months of growth."
+     "claim": "The lesion is a tethered cord from closed spinal dysraphism, stretched by two months of growth.",
+     "to": "One lesion explains all four findings: a tethered cord from closed spinal dysraphism, stretched by two months of growth."
     }
    ],
    "new_claims": [
     {
-     "claim": "1+ reflexes are the deciding finding.",
-     "from": "1+ reflexes are the deciding finding."
+     "claim": "1+ reflexes are the key finding.",
+     "from": "1+ reflexes is the entire question."
     },
     {
-     "claim": "Hyporeflexia is a lower motor neuron sign.",
+     "claim": "Hyporeflexia is a lower motor neuron sign that localises at or below the anterior horn cell.",
      "from": "Hyporeflexia is a lower motor neuron sign."
     },
     {
-     "claim": "It localises at or below the anterior horn cell.",
-     "from": "It localises at or below the anterior horn cell."
-    },
-    {
-     "claim": "Hyporeflexia eliminates spastic diplegia outright.",
+     "claim": "It eliminates spastic diplegia outright, since cerebral palsy is by definition an upper motor neuron disorder.",
      "from": "Hyporeflexia eliminates spastic diplegia outright."
     },
     {
@@ -845,12 +907,12 @@
      "from": "Cerebral palsy is by definition an upper motor neuron disorder."
     },
     {
-     "claim": "Three findings then pick the lesion: bladder involvement, back pain and pes cavus.",
-     "from": "Three findings then pick the lesion: bladder involvement, back pain and pes cavus."
+     "claim": "Three findings then pick the lesion.",
+     "from": "Three findings then pick the lesion."
     },
     {
-     "claim": "Muscle and peripheral nerve diseases spare the bladder.",
-     "from": "Muscle and peripheral nerve diseases spare the bladder."
+     "claim": "Bladder involvement counts because muscle and peripheral nerve diseases spare the bladder.",
+     "from": "Bladder involvement picks the lesion because muscle and peripheral nerve diseases spare the bladder."
     },
     {
      "claim": "Back pain points at a structural spinal lesion.",
@@ -861,21 +923,21 @@
      "from": "Pes cavus is chronic denervation of the intrinsic foot muscles."
     },
     {
-     "claim": "One lesion sits upstream of all four systems.",
+     "claim": "One lesion explains all four findings.",
      "from": "One lesion sits upstream of all four systems."
     },
     {
-     "claim": "That lesion is a tethered cord from closed spinal dysraphism, stretched by two months of growth.",
-     "from": "That lesion is a tethered cord from closed spinal dysraphism, stretched by two months of growth."
+     "claim": "One lesion explains all four findings: a tethered cord from closed spinal dysraphism, stretched by two months of growth.",
+     "from": "The lesion is a tethered cord from closed spinal dysraphism, stretched by two months of growth."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "bs-tethered",
-   "find": "Cutaneous stigmata are common but not universal, and their absence is the intended trap. Look for a hair tuft, lipoma, hemangioma, sacral appendage, or a dimple <b>above</b> the gluteal cleft; a simple dimple within the cleft with a visible base is benign. Image with <b>ultrasound before about 3 months</b>, while the posterior elements are cartilaginous, and MRI after.",
-   "with": "Cutaneous stigmata are common but not universal. Look for a hair tuft, lipoma, hemangioma, sacral appendage, or a dimple <b>above</b> the gluteal cleft. A simple dimple within the cleft with a visible base is benign. Image with <b>ultrasound before about 3 months</b>, while the posterior elements are cartilaginous, and with MRI after.",
-   "note": "occulta danger: remove trap framing, split",
+   "find": "Cutaneous stigmata are common but not universal, and their absence is the intended trap.",
+   "with": "Cutaneous stigmata are common but not universal.",
+   "note": "occulta: remove framing",
    "claims": [
     {
      "claim": "Cutaneous stigmata are common but not universal.",
@@ -883,37 +945,13 @@
     },
     {
      "claim": "Their absence is the intended trap.",
-     "carried_by": "A normal-looking back does not exclude dysraphism."
-    },
-    {
-     "claim": "Look for a hair tuft, lipoma, hemangioma, sacral appendage, or a dimple above the gluteal cleft.",
-     "to": "Look for a hair tuft, lipoma, hemangioma, sacral appendage, or a dimple above the gluteal cleft."
-    },
-    {
-     "claim": "A simple dimple within the cleft with a visible base is benign.",
-     "to": "A simple dimple within the cleft with a visible base is benign."
-    },
-    {
-     "claim": "Image with ultrasound before about 3 months, while the posterior elements are cartilaginous, and MRI after.",
-     "to": "Image with ultrasound before about 3 months, while the posterior elements are cartilaginous, and with MRI after."
+     "dropped": "framing about the question; the bold sentence before it states that a normal back does not exclude dysraphism"
     }
    ],
    "new_claims": [
     {
      "claim": "Cutaneous stigmata are common but not universal.",
      "from": "Cutaneous stigmata are common but not universal."
-    },
-    {
-     "claim": "Look for a hair tuft, lipoma, hemangioma, sacral appendage, or a dimple above the gluteal cleft.",
-     "from": "Look for a hair tuft, lipoma, hemangioma, sacral appendage, or a dimple above the gluteal cleft."
-    },
-    {
-     "claim": "A simple dimple within the cleft with a visible base is benign.",
-     "from": "A simple dimple within the cleft with a visible base is benign."
-    },
-    {
-     "claim": "Image with ultrasound before about 3 months, while the posterior elements are cartilaginous, and MRI after.",
-     "from": "Image with ultrasound before about 3 months, while the posterior elements are cartilaginous, and MRI after."
     }
    ]
   },
@@ -940,54 +978,50 @@
    "op": "replace",
    "brief": "bs-tethered",
    "find": "Part I <b>Nocturnal Enuresis</b> is the mirror twin: shared complaint of a school-age child wetting, and the classification flips from functional to neurologic. Store the discriminator as a question: was the child ever dry, and is anything else abnormal? Part I <b>Constipation in a Child</b> screens for this brief on every perineal examination &mdash; a sacral dimple or hair tuft is what converts constipation into imaging.",
-   "with": "Part I <b>Nocturnal Enuresis</b> is the mirror twin. It shares the complaint of a school-age child wetting, but there the classification is functional and here it is neurologic. Ask: was the child ever dry, and is anything else abnormal? Part I <b>Constipation in a Child</b> screens for this condition on every perineal examination. A sacral dimple or hair tuft in a child with constipation calls for imaging.",
-   "note": "pairs with: Ask:, remove em dash",
+   "with": "Part I <b>Nocturnal Enuresis</b> is the mirror twin: it shares the complaint of a school-age child wetting, and the classification flips from functional to neurologic. Ask: was the child ever dry, and is anything else abnormal? Part I <b>Constipation in a Child</b> screens for this condition on every perineal examination; a sacral dimple or hair tuft converts constipation into imaging.",
+   "note": "pairs with: store-as-question -> Ask, remove em dash",
    "claims": [
     {
      "claim": "Nocturnal Enuresis is the mirror twin.",
-     "to": "Part I Nocturnal Enuresis is the mirror twin."
+     "to": "Part I Nocturnal Enuresis is the mirror twin: it shares the complaint of a school-age child wetting, and the classification flips from functional to neurologic."
     },
     {
-     "claim": "It shares the complaint of a school-age child wetting.",
-     "to": "It shares the complaint of a school-age child wetting, but there the classification is functional and here it is neurologic."
+     "claim": "They share the complaint of a school-age child wetting.",
+     "to": "Part I Nocturnal Enuresis is the mirror twin: it shares the complaint of a school-age child wetting, and the classification flips from functional to neurologic."
     },
     {
      "claim": "The classification flips from functional to neurologic.",
-     "to": "It shares the complaint of a school-age child wetting, but there the classification is functional and here it is neurologic."
+     "to": "Part I Nocturnal Enuresis is the mirror twin: it shares the complaint of a school-age child wetting, and the classification flips from functional to neurologic."
     },
     {
-     "claim": "Discriminating question: was the child ever dry, and is anything else abnormal?",
+     "claim": "Discriminator question: was the child ever dry, and is anything else abnormal?",
      "to": "Ask: was the child ever dry, and is anything else abnormal?"
     },
     {
-     "claim": "Constipation in a Child screens for this condition on every perineal examination.",
-     "to": "Part I Constipation in a Child screens for this condition on every perineal examination."
+     "claim": "Constipation in a Child screens for this brief on every perineal examination.",
+     "to": "Part I Constipation in a Child screens for this condition on every perineal examination; a sacral dimple or hair tuft converts constipation into imaging."
     },
     {
      "claim": "A sacral dimple or hair tuft converts constipation into imaging.",
-     "to": "A sacral dimple or hair tuft in a child with constipation calls for imaging."
+     "to": "Part I Constipation in a Child screens for this condition on every perineal examination; a sacral dimple or hair tuft converts constipation into imaging."
     }
    ],
    "new_claims": [
     {
-     "claim": "Nocturnal Enuresis is the mirror twin.",
+     "claim": "Part I Nocturnal Enuresis is the mirror twin: it shares the complaint of a school-age child wetting, and the classification flips from functional to neurologic.",
      "from": "Nocturnal Enuresis is the mirror twin."
-    },
-    {
-     "claim": "It shares the complaint of a school-age child wetting.",
-     "from": "It shares the complaint of a school-age child wetting."
     },
     {
      "claim": "The classification flips from functional to neurologic.",
      "from": "The classification flips from functional to neurologic."
     },
     {
-     "claim": "Discriminating question: was the child ever dry, and is anything else abnormal?",
-     "from": "Discriminating question: was the child ever dry, and is anything else abnormal?"
+     "claim": "Ask: was the child ever dry, and is anything else abnormal?",
+     "from": "Discriminator question: was the child ever dry, and is anything else abnormal?"
     },
     {
      "claim": "Constipation in a Child screens for this condition on every perineal examination.",
-     "from": "Constipation in a Child screens for this condition on every perineal examination."
+     "from": "Constipation in a Child screens for this brief on every perineal examination."
     },
     {
      "claim": "A sacral dimple or hair tuft converts constipation into imaging.",
@@ -999,8 +1033,8 @@
    "op": "replace",
    "brief": "bs-tethered",
    "find": "Grade the reflexes before you name the disease, because hyperreflexia and hyporeflexia split the weakness differential into halves that share no members, and that split survives every compelling history the stem can offer.",
-   "with": "Grade the reflexes before you name the disease. Hyperreflexia and hyporeflexia split the weakness differential into two halves that share no members. No history, however compelling, overrides that split.",
-   "note": "rule: split long sentence",
+   "with": "Grade the reflexes before you name the disease. Hyperreflexia and hyporeflexia split the weakness differential into halves that share no members. That split holds however compelling the history.",
+   "note": "rule: split, remove dramatic closer",
    "claims": [
     {
      "claim": "Grade the reflexes before you name the disease.",
@@ -1008,11 +1042,11 @@
     },
     {
      "claim": "Hyperreflexia and hyporeflexia split the weakness differential into halves that share no members.",
-     "to": "Hyperreflexia and hyporeflexia split the weakness differential into two halves that share no members."
+     "to": "Hyperreflexia and hyporeflexia split the weakness differential into halves that share no members."
     },
     {
-     "claim": "That split survives every compelling history.",
-     "to": "No history, however compelling, overrides that split."
+     "claim": "That split survives every compelling history the stem can offer.",
+     "to": "That split holds however compelling the history."
     }
    ],
    "new_claims": [
@@ -1025,36 +1059,36 @@
      "from": "Hyperreflexia and hyporeflexia split the weakness differential into halves that share no members."
     },
     {
-     "claim": "That split survives every compelling history.",
-     "from": "That split survives every compelling history."
+     "claim": "That split holds however compelling the history.",
+     "from": "That split survives every compelling history the stem can offer."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "bs-tethered",
-   "find": "Duchenne is the right age and sex with proximal weakness, flat feet and no bladder involvement.",
-   "with": "Duchenne muscular dystrophy: the right age and sex, with proximal weakness, flat feet and no bladder involvement.",
-   "note": "trap line: Option: why format",
+   "find": "<span class=\"trapwhy\">Duchenne is the right age and sex with proximal weakness, flat feet and no bladder involvement.</span>",
+   "with": "<span class=\"trapwhy\">Duchenne: the right age and sex, with proximal weakness, flat feet and no bladder involvement.</span>",
+   "note": "trap: Option: why",
    "claims": [
     {
-     "claim": "Duchenne is the right age and sex, with proximal weakness, flat feet and no bladder involvement.",
-     "to": "Duchenne muscular dystrophy: the right age and sex, with proximal weakness, flat feet and no bladder involvement."
+     "claim": "Duchenne is the right age and sex with proximal weakness, flat feet and no bladder involvement.",
+     "to": "Duchenne: the right age and sex, with proximal weakness, flat feet and no bladder involvement."
     }
    ],
    "new_claims": [
     {
-     "claim": "Duchenne is the right age and sex, with proximal weakness, flat feet and no bladder involvement.",
-     "from": "Duchenne is the right age and sex, with proximal weakness, flat feet and no bladder involvement."
+     "claim": "Duchenne: the right age and sex, with proximal weakness, flat feet and no bladder involvement.",
+     "from": "Duchenne is the right age and sex with proximal weakness, flat feet and no bladder involvement."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "bs-tethered",
-   "find": "Spastic diplegia is the upper motor neuron version of the same complaint.",
-   "with": "Spastic diplegia: the upper motor neuron version of the same complaint.",
-   "note": "trap line: Option: why format",
+   "find": "<span class=\"trapwhy\">Spastic diplegia is the upper motor neuron version of the same complaint.</span>",
+   "with": "<span class=\"trapwhy\">Spastic diplegia: the upper motor neuron version of the same complaint.</span>",
+   "note": "trap: Option: why",
    "claims": [
     {
      "claim": "Spastic diplegia is the upper motor neuron version of the same complaint.",
@@ -1063,7 +1097,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Spastic diplegia is the upper motor neuron version of the same complaint.",
+     "claim": "Spastic diplegia: the upper motor neuron version of the same complaint.",
      "from": "Spastic diplegia is the upper motor neuron version of the same complaint."
     }
    ]
@@ -1071,9 +1105,9 @@
   {
    "op": "replace",
    "brief": "bs-tethered",
-   "find": "Transverse myelitis is a real cord syndrome on the wrong timeline.",
-   "with": "Transverse myelitis: a real cord syndrome on the wrong timeline.",
-   "note": "trap line: Option: why format",
+   "find": "<span class=\"trapwhy\">Transverse myelitis is a real cord syndrome on the wrong timeline.</span>",
+   "with": "<span class=\"trapwhy\">Transverse myelitis: a real cord syndrome on the wrong timeline.</span>",
+   "note": "trap: Option: why",
    "claims": [
     {
      "claim": "Transverse myelitis is a real cord syndrome on the wrong timeline.",
@@ -1082,7 +1116,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Transverse myelitis is a real cord syndrome on the wrong timeline.",
+     "claim": "Transverse myelitis: a real cord syndrome on the wrong timeline.",
      "from": "Transverse myelitis is a real cord syndrome on the wrong timeline."
     }
    ]
@@ -1091,17 +1125,17 @@
    "op": "replace",
    "brief": "bs-reye",
    "find": "The question asks what caused the <i>edema</i>, not what caused the illness",
-   "with": "Cause of the cerebral <i>edema</i> in Reye syndrome, not the cause of the illness",
+   "with": "Cause of the cerebral <i>edema</i>, not of the illness",
    "note": "sub: remove framing about the question",
    "claims": [
     {
      "claim": "The question asks what caused the edema, not what caused the illness.",
-     "to": "Cause of the cerebral edema in Reye syndrome, not the cause of the illness"
+     "to": "Cause of the cerebral edema, not of the illness"
     }
    ],
    "new_claims": [
     {
-     "claim": "The question asks what caused the edema, not what caused the illness.",
+     "claim": "Cause of the cerebral edema, not of the illness",
      "from": "The question asks what caused the edema, not what caused the illness."
     }
    ]
@@ -1110,121 +1144,101 @@
    "op": "replace",
    "brief": "bs-reye",
    "find": "<p>The stem hands you Reye syndrome and then <b>refuses to offer it as an answer</b>. Viral prodrome → <b>\"over-the-counter medications\"</b> (the aspirin, never named) → a <b>biphasic course</b> (better, then vomiting and lethargy) → <b>hepatomegaly without splenomegaly</b> → cerebral edema. But the question asks for the cause of <b>the imaging finding</b>, so it steps one level down, to mechanism.</p>\n<p><b>Every option can cloud consciousness. Only one causes edema.</b> Ammonia entering astrocytes is combined with glutamate into <b>glutamine</b> by glutamine synthetase. Glutamine is <b>osmotically active</b> and cannot leave — water follows, astrocytes swell, and you get <b>cytotoxic cerebral edema</b>. Hypoglycemia, uremia and adrenal crisis produce encephalopathy by other routes and leave the brain the same size.</p>",
-   "with": "<p>This is Reye syndrome: a viral prodrome, then <b>\"over-the-counter medications\"</b> (the aspirin, never named), then a <b>biphasic course</b> (better, then vomiting and lethargy). The child then has <b>hepatomegaly without splenomegaly</b> and cerebral edema. Reye syndrome is not offered as an answer, so identify the mechanism of <b>the imaging finding</b>.</p>\n<p><b>Every option can cloud consciousness, but only one causes edema.</b> Ammonia entering astrocytes is combined with glutamate into <b>glutamine</b> by glutamine synthetase. Glutamine is <b>osmotically active</b> and cannot leave, so water follows and astrocytes swell. The result is <b>cytotoxic cerebral edema</b>. Hypoglycemia, uremia and adrenal crisis produce encephalopathy by other routes and leave the brain the same size.</p>",
-   "note": ".dp: split arrow chain, remove em dash and framing",
+   "with": "<p>The sequence is a viral prodrome, then <b>\"over-the-counter medications\"</b> (the aspirin, never named). A <b>biphasic course</b> follows (better, then vomiting and lethargy). Then come <b>hepatomegaly without splenomegaly</b> and cerebral edema. This is Reye syndrome. The cause of <b>the imaging finding</b> lies one level down, at the mechanism.</p>\n<p><b>Hyperammonemia, hypoglycemia, uremia, adrenal insufficiency and hypothyroidism can all cloud consciousness, but only hyperammonemia causes edema.</b> In astrocytes, glutamine synthetase combines ammonia with glutamate to form <b>glutamine</b>. Glutamine is <b>osmotically active</b> and cannot leave. Water follows, and the astrocytes swell, causing <b>cytotoxic cerebral edema</b>. Hypoglycemia, uremia and adrenal crisis produce encephalopathy by other routes and leave the brain the same size.</p>",
+   "note": "dp: split arrow chain, remove framing and em dash",
    "reworded_bold": [
     "refuses to offer it as an answer",
     "Every option can cloud consciousness. Only one causes edema."
    ],
    "claims": [
     {
-     "claim": "The stem presents Reye syndrome.",
-     "to": "This is Reye syndrome: a viral prodrome, then \"over-the-counter medications\" (the aspirin, never named), then a biphasic course (better, then vomiting and lethargy)."
+     "claim": "The presentation is Reye syndrome.",
+     "to": "This is Reye syndrome."
     },
     {
      "claim": "Reye syndrome is not offered as an answer.",
-     "to": "Reye syndrome is not offered as an answer, so identify the mechanism of the imaging finding."
+     "dropped": "framing about the option list; conflicts with the vignette's option list"
     },
     {
-     "claim": "The sequence starts with a viral prodrome.",
-     "to": "This is Reye syndrome: a viral prodrome, then \"over-the-counter medications\" (the aspirin, never named), then a biphasic course (better, then vomiting and lethargy)."
+     "claim": "The course starts with a viral prodrome, then over-the-counter medications.",
+     "to": "The sequence is a viral prodrome, then \"over-the-counter medications\" (the aspirin, never named)."
     },
     {
-     "claim": "Over-the-counter medications follow; this is the aspirin, never named.",
-     "to": "This is Reye syndrome: a viral prodrome, then \"over-the-counter medications\" (the aspirin, never named), then a biphasic course (better, then vomiting and lethargy)."
+     "claim": "The over-the-counter medication is aspirin, never named.",
+     "to": "The sequence is a viral prodrome, then \"over-the-counter medications\" (the aspirin, never named)."
     },
     {
      "claim": "A biphasic course follows: better, then vomiting and lethargy.",
-     "to": "This is Reye syndrome: a viral prodrome, then \"over-the-counter medications\" (the aspirin, never named), then a biphasic course (better, then vomiting and lethargy)."
+     "to": "A biphasic course follows (better, then vomiting and lethargy)."
     },
     {
-     "claim": "Hepatomegaly without splenomegaly follows.",
-     "to": "The child then has hepatomegaly without splenomegaly and cerebral edema."
+     "claim": "Then hepatomegaly without splenomegaly, then cerebral edema.",
+     "to": "Then come hepatomegaly without splenomegaly and cerebral edema."
     },
     {
-     "claim": "Cerebral edema follows.",
-     "to": "The child then has hepatomegaly without splenomegaly and cerebral edema."
-    },
-    {
-     "claim": "The question asks for the cause of the imaging finding, so it steps down to mechanism.",
-     "to": "Reye syndrome is not offered as an answer, so identify the mechanism of the imaging finding."
+     "claim": "The question asks for the cause of the imaging finding, one level down, at mechanism.",
+     "to": "The cause of the imaging finding lies one level down, at the mechanism."
     },
     {
      "claim": "Every option can cloud consciousness.",
-     "to": "Every option can cloud consciousness, but only one causes edema."
+     "to": "Hyperammonemia, hypoglycemia, uremia, adrenal insufficiency and hypothyroidism can all cloud consciousness, but only hyperammonemia causes edema."
     },
     {
      "claim": "Only one option causes edema.",
-     "to": "Every option can cloud consciousness, but only one causes edema."
+     "to": "Hyperammonemia, hypoglycemia, uremia, adrenal insufficiency and hypothyroidism can all cloud consciousness, but only hyperammonemia causes edema."
     },
     {
      "claim": "Ammonia entering astrocytes is combined with glutamate into glutamine by glutamine synthetase.",
-     "to": "Ammonia entering astrocytes is combined with glutamate into glutamine by glutamine synthetase."
+     "to": "In astrocytes, glutamine synthetase combines ammonia with glutamate to form glutamine."
     },
     {
      "claim": "Glutamine is osmotically active and cannot leave.",
-     "to": "Glutamine is osmotically active and cannot leave, so water follows and astrocytes swell."
+     "to": "Glutamine is osmotically active and cannot leave."
     },
     {
-     "claim": "Water follows and astrocytes swell.",
-     "to": "Glutamine is osmotically active and cannot leave, so water follows and astrocytes swell."
+     "claim": "Water follows, astrocytes swell, and cytotoxic cerebral edema results.",
+     "to": "Water follows, and the astrocytes swell, causing cytotoxic cerebral edema."
     },
     {
-     "claim": "The result is cytotoxic cerebral edema.",
-     "to": "The result is cytotoxic cerebral edema."
-    },
-    {
-     "claim": "Hypoglycemia, uremia and adrenal crisis produce encephalopathy by other routes.",
-     "to": "Hypoglycemia, uremia and adrenal crisis produce encephalopathy by other routes and leave the brain the same size."
-    },
-    {
-     "claim": "They leave the brain the same size.",
+     "claim": "Hypoglycemia, uremia and adrenal crisis produce encephalopathy by other routes and leave the brain the same size.",
      "to": "Hypoglycemia, uremia and adrenal crisis produce encephalopathy by other routes and leave the brain the same size."
     }
    ],
    "new_claims": [
     {
-     "claim": "The stem presents Reye syndrome.",
-     "from": "The stem presents Reye syndrome."
+     "claim": "The sequence is a viral prodrome, then \"over-the-counter medications\" (the aspirin, never named).",
+     "from": "The course starts with a viral prodrome, then over-the-counter medications."
     },
     {
-     "claim": "Reye syndrome is not offered as an answer.",
-     "from": "Reye syndrome is not offered as an answer."
+     "claim": "The sequence is a viral prodrome, then \"over-the-counter medications\" (the aspirin, never named).",
+     "from": "The over-the-counter medication is aspirin, never named."
     },
     {
-     "claim": "The sequence starts with a viral prodrome.",
-     "from": "The sequence starts with a viral prodrome."
-    },
-    {
-     "claim": "Over-the-counter medications follow; this is the aspirin, never named.",
-     "from": "Over-the-counter medications follow; this is the aspirin, never named."
-    },
-    {
-     "claim": "A biphasic course follows: better, then vomiting and lethargy.",
+     "claim": "A biphasic course follows (better, then vomiting and lethargy).",
      "from": "A biphasic course follows: better, then vomiting and lethargy."
     },
     {
-     "claim": "Hepatomegaly without splenomegaly follows.",
-     "from": "Hepatomegaly without splenomegaly follows."
+     "claim": "Then come hepatomegaly without splenomegaly and cerebral edema.",
+     "from": "Then hepatomegaly without splenomegaly, then cerebral edema."
     },
     {
-     "claim": "Cerebral edema follows.",
-     "from": "Cerebral edema follows."
+     "claim": "This is Reye syndrome.",
+     "from": "The presentation is Reye syndrome."
     },
     {
-     "claim": "The question asks for the cause of the imaging finding, so it steps down to mechanism.",
-     "from": "The question asks for the cause of the imaging finding, so it steps down to mechanism."
+     "claim": "The cause of the imaging finding lies one level down, at the mechanism.",
+     "from": "The question asks for the cause of the imaging finding, one level down, at mechanism."
     },
     {
-     "claim": "Every option can cloud consciousness.",
+     "claim": "Hyperammonemia, hypoglycemia, uremia, adrenal insufficiency and hypothyroidism can all cloud consciousness, but only hyperammonemia causes edema.",
      "from": "Every option can cloud consciousness."
     },
     {
-     "claim": "Only one option causes edema.",
+     "claim": "Hyperammonemia, hypoglycemia, uremia, adrenal insufficiency and hypothyroidism can all cloud consciousness, but only hyperammonemia causes edema.",
      "from": "Only one option causes edema."
     },
     {
-     "claim": "Ammonia entering astrocytes is combined with glutamate into glutamine by glutamine synthetase.",
+     "claim": "In astrocytes, glutamine synthetase combines ammonia with glutamate to form glutamine.",
      "from": "Ammonia entering astrocytes is combined with glutamate into glutamine by glutamine synthetase."
     },
     {
@@ -1232,20 +1246,12 @@
      "from": "Glutamine is osmotically active and cannot leave."
     },
     {
-     "claim": "Water follows and astrocytes swell.",
-     "from": "Water follows and astrocytes swell."
+     "claim": "Water follows, and the astrocytes swell, causing cytotoxic cerebral edema.",
+     "from": "Water follows, astrocytes swell, and cytotoxic cerebral edema results."
     },
     {
-     "claim": "The result is cytotoxic cerebral edema.",
-     "from": "The result is cytotoxic cerebral edema."
-    },
-    {
-     "claim": "Hypoglycemia, uremia and adrenal crisis produce encephalopathy by other routes.",
-     "from": "Hypoglycemia, uremia and adrenal crisis produce encephalopathy by other routes."
-    },
-    {
-     "claim": "They leave the brain the same size.",
-     "from": "They leave the brain the same size."
+     "claim": "Hypoglycemia, uremia and adrenal crisis produce encephalopathy by other routes and leave the brain the same size.",
+     "from": "Hypoglycemia, uremia and adrenal crisis produce encephalopathy by other routes and leave the brain the same size."
     }
    ]
   },
@@ -1253,41 +1259,41 @@
    "op": "replace",
    "brief": "bs-reye",
    "find": "<b>BP 98/60 (normal)</b> — kills adrenal crisis, which is a hypotension diagnosis · <b>pulse 110, temp 36.8</b> — kills myxedema coma, which runs slow and cold · <b>no hypertension, no peripheral edema</b> — kills uremia · <b>hepatomegaly with a normal spleen</b> — points at acute hepatic steatosis, not congestion or storage disease.",
-   "with": "<b>BP 98/60 (normal)</b> — excludes adrenal crisis, which is a hypotension diagnosis · <b>pulse 110, temp 36.8</b> — excludes myxedema coma, which is bradycardic and hypothermic · <b>no hypertension, no peripheral edema</b> — excludes uremia · <b>hepatomegaly with a normal spleen</b> — points at acute hepatic steatosis, not congestion or storage disease.",
-   "note": "vitals pearls: 'kills' and 'runs slow and cold' to plain terms",
+   "with": "<b>BP 98/60 (normal)</b> — excludes adrenal crisis, which is a hypotension diagnosis · <b>pulse 110, temp 36.8</b> — excludes myxedema coma, which is slow and cold · <b>no hypertension, no peripheral edema</b> — excludes uremia · <b>hepatomegaly with a normal spleen</b> — points to acute hepatic steatosis, not congestion or storage disease.",
+   "note": "vitals pearls: kills -> excludes",
    "claims": [
     {
-     "claim": "BP 98/60 (normal) kills adrenal crisis, which is a hypotension diagnosis.",
-     "to": "excludes adrenal crisis, which is a hypotension diagnosis"
+     "claim": "BP 98/60 is normal and excludes adrenal crisis, which is a hypotension diagnosis.",
+     "to": "BP 98/60 (normal) — excludes adrenal crisis, which is a hypotension diagnosis"
     },
     {
-     "claim": "Pulse 110, temp 36.8 kills myxedema coma, which runs slow and cold.",
-     "to": "excludes myxedema coma, which is bradycardic and hypothermic"
+     "claim": "Pulse 110 and temp 36.8 exclude myxedema coma, which runs slow and cold.",
+     "to": "pulse 110, temp 36.8 — excludes myxedema coma, which is slow and cold"
     },
     {
-     "claim": "No hypertension, no peripheral edema kills uremia.",
-     "to": "excludes uremia"
+     "claim": "No hypertension and no peripheral edema exclude uremia.",
+     "to": "no hypertension, no peripheral edema — excludes uremia"
     },
     {
      "claim": "Hepatomegaly with a normal spleen points at acute hepatic steatosis, not congestion or storage disease.",
-     "to": "points at acute hepatic steatosis, not congestion or storage disease."
+     "to": "hepatomegaly with a normal spleen — points to acute hepatic steatosis, not congestion or storage disease"
     }
    ],
    "new_claims": [
     {
-     "claim": "BP 98/60 (normal) kills adrenal crisis, which is a hypotension diagnosis.",
-     "from": "BP 98/60 (normal) kills adrenal crisis, which is a hypotension diagnosis."
+     "claim": "BP 98/60 (normal) — excludes adrenal crisis, which is a hypotension diagnosis",
+     "from": "BP 98/60 is normal and excludes adrenal crisis, which is a hypotension diagnosis."
     },
     {
-     "claim": "Pulse 110, temp 36.8 kills myxedema coma, which runs slow and cold.",
-     "from": "Pulse 110, temp 36.8 kills myxedema coma, which runs slow and cold."
+     "claim": "pulse 110, temp 36.8 — excludes myxedema coma, which is slow and cold",
+     "from": "Pulse 110 and temp 36.8 exclude myxedema coma, which runs slow and cold."
     },
     {
-     "claim": "No hypertension, no peripheral edema kills uremia.",
-     "from": "No hypertension, no peripheral edema kills uremia."
+     "claim": "no hypertension, no peripheral edema — excludes uremia",
+     "from": "No hypertension and no peripheral edema exclude uremia."
     },
     {
-     "claim": "Hepatomegaly with a normal spleen points at acute hepatic steatosis, not congestion or storage disease.",
+     "claim": "hepatomegaly with a normal spleen — points to acute hepatic steatosis, not congestion or storage disease",
      "from": "Hepatomegaly with a normal spleen points at acute hepatic steatosis, not congestion or storage disease."
     }
    ]
@@ -1296,43 +1302,47 @@
    "op": "replace",
    "brief": "bs-reye",
    "find": "<b>Hypoglycemia</b>: the sharpest trap in the set, because it is <b>true</b>: Reye does cause hypoglycemia through failing hepatic gluconeogenesis. It simply is not what swells the brain. A fact can belong to the disease and still not answer the question. <b>Uremia</b>: correctly identified as a neurotoxin, then applied to the wrong organ story; nothing here suggests renal failure. <b>Adrenal insufficiency</b>: plausible until you read the blood pressure. <b>Hypothyroidism</b>: nobody fell for it, because the pulse and temperature contradict it in the same line.",
-   "with": "<b>Hypoglycemia</b>: the sharpest trap, because Reye does cause hypoglycemia through failing hepatic gluconeogenesis, but hypoglycemia does not swell the brain. <b>Uremia</b>: a true neurotoxin, but nothing here suggests renal failure. <b>Adrenal insufficiency</b>: plausible until you read the normal blood pressure. <b>Hypothyroidism</b>: the pulse and temperature contradict it.",
-   "note": "distractors: one colon per line, remove aphorism and emphasis bold",
+   "with": "<b>Hypoglycemia</b>: the sharpest trap in the set, because it is true; Reye does cause hypoglycemia through failing hepatic gluconeogenesis. It simply is not what swells the brain. <b>Uremia</b>: a neurotoxin, but nothing here suggests renal failure. <b>Adrenal insufficiency</b>: plausible until you read the blood pressure. <b>Hypothyroidism</b>: the pulse and temperature contradict it.",
+   "note": "distractors: one colon per line, remove aphorism and response-data comment, remove emphasis bold",
    "reworded_bold": [
     "true"
    ],
    "claims": [
     {
      "claim": "Hypoglycemia is the sharpest trap in the set because it is true.",
-     "to": "Hypoglycemia: the sharpest trap, because Reye does cause hypoglycemia through failing hepatic gluconeogenesis, but hypoglycemia does not swell the brain."
+     "to": "Hypoglycemia: the sharpest trap in the set, because it is true; Reye does cause hypoglycemia through failing hepatic gluconeogenesis."
     },
     {
      "claim": "Reye does cause hypoglycemia through failing hepatic gluconeogenesis.",
-     "to": "Hypoglycemia: the sharpest trap, because Reye does cause hypoglycemia through failing hepatic gluconeogenesis, but hypoglycemia does not swell the brain."
+     "to": "Hypoglycemia: the sharpest trap in the set, because it is true; Reye does cause hypoglycemia through failing hepatic gluconeogenesis."
     },
     {
      "claim": "Hypoglycemia is not what swells the brain.",
-     "to": "Hypoglycemia: the sharpest trap, because Reye does cause hypoglycemia through failing hepatic gluconeogenesis, but hypoglycemia does not swell the brain."
+     "to": "It simply is not what swells the brain."
     },
     {
      "claim": "A fact can belong to the disease and still not answer the question.",
-     "carried_by": "Options that are true of the disease but cannot produce the named finding are the intended traps."
+     "dropped": "aphorism about the question; the hypoglycemia line already states the point"
     },
     {
-     "claim": "Uremia is correctly identified as a neurotoxin but applied to the wrong organ story.",
-     "to": "Uremia: a true neurotoxin, but nothing here suggests renal failure."
+     "claim": "Uremia is a neurotoxin.",
+     "to": "Uremia: a neurotoxin, but nothing here suggests renal failure."
+    },
+    {
+     "claim": "Uremia is applied to the wrong organ story.",
+     "to": "Uremia: a neurotoxin, but nothing here suggests renal failure."
     },
     {
      "claim": "Nothing here suggests renal failure.",
-     "to": "Uremia: a true neurotoxin, but nothing here suggests renal failure."
+     "to": "Uremia: a neurotoxin, but nothing here suggests renal failure."
     },
     {
      "claim": "Adrenal insufficiency is plausible until you read the blood pressure.",
-     "to": "Adrenal insufficiency: plausible until you read the normal blood pressure."
+     "to": "Adrenal insufficiency: plausible until you read the blood pressure."
     },
     {
-     "claim": "Nobody fell for hypothyroidism.",
-     "dropped": "response data about test-takers, not a clinical claim"
+     "claim": "Nobody chose hypothyroidism.",
+     "dropped": "response-pattern comment, not clinical"
     },
     {
      "claim": "The pulse and temperature contradict hypothyroidism in the same line.",
@@ -1341,7 +1351,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Hypoglycemia is the sharpest trap in the set because it is true.",
+     "claim": "Hypoglycemia: the sharpest trap in the set, because it is true; Reye does cause hypoglycemia through failing hepatic gluconeogenesis.",
      "from": "Hypoglycemia is the sharpest trap in the set because it is true."
     },
     {
@@ -1349,23 +1359,19 @@
      "from": "Reye does cause hypoglycemia through failing hepatic gluconeogenesis."
     },
     {
-     "claim": "Hypoglycemia is not what swells the brain.",
+     "claim": "It simply is not what swells the brain.",
      "from": "Hypoglycemia is not what swells the brain."
     },
     {
-     "claim": "Uremia is correctly identified as a neurotoxin but applied to the wrong organ story.",
-     "from": "Uremia is correctly identified as a neurotoxin but applied to the wrong organ story."
+     "claim": "Uremia: a neurotoxin, but nothing here suggests renal failure.",
+     "from": "Uremia is a neurotoxin."
     },
     {
-     "claim": "Nothing here suggests renal failure.",
-     "from": "Nothing here suggests renal failure."
-    },
-    {
-     "claim": "Adrenal insufficiency is plausible until you read the blood pressure.",
+     "claim": "Adrenal insufficiency: plausible until you read the blood pressure.",
      "from": "Adrenal insufficiency is plausible until you read the blood pressure."
     },
     {
-     "claim": "The pulse and temperature contradict hypothyroidism in the same line.",
+     "claim": "Hypothyroidism: the pulse and temperature contradict it.",
      "from": "The pulse and temperature contradict hypothyroidism in the same line."
     }
    ]
@@ -1374,8 +1380,8 @@
    "op": "replace",
    "brief": "bs-reye",
    "find": "<b>Aspirin is contraindicated in children</b> except for <b>Kawasaki disease</b> and rheumatologic disease such as JIA — and Kawasaki is the reason the exception exists · the mechanism is <b>mitochondrial injury</b> → impaired β-oxidation → <b>microvesicular</b> steatosis, which is why the liver is big but not scarred · treatment is <b>supportive</b>; there is no antidote · <b>hyperammonemia without hepatomegaly in a neonate</b> is a urea cycle defect, not Reye — same neurotoxin, different tree.",
-   "with": "<b>Aspirin is contraindicated in children</b> except for <b>Kawasaki disease</b> and rheumatologic disease such as <b>JIA</b> (juvenile idiopathic arthritis); Kawasaki is the reason the exception exists · the mechanism is <b>mitochondrial injury</b> with impaired β-oxidation → <b>microvesicular</b> steatosis, which is why the liver is big but not scarred · treatment is <b>supportive</b>; there is no antidote · <b>hyperammonemia without hepatomegaly in a neonate</b> is a urea cycle defect, not Reye, although the neurotoxin is the same.",
-   "note": "paired pearls: remove em dashes and slogan, one arrow, expand JIA",
+   "with": "<b>Aspirin is contraindicated in children</b> except for <b>Kawasaki disease</b> and rheumatologic disease such as <b>JIA</b> (juvenile idiopathic arthritis); Kawasaki is the reason the exception exists · the mechanism is <b>mitochondrial injury</b> → impaired β-oxidation. This causes <b>microvesicular</b> steatosis, which is why the liver is big but not scarred · treatment is <b>supportive</b>; there is no antidote · <b>hyperammonemia without hepatomegaly in a neonate</b> is a urea cycle defect, not Reye; the neurotoxin is the same, but the disease is different.",
+   "note": "paired pearls: remove prose em dashes, one arrow per sentence, expand JIA",
    "claims": [
     {
      "claim": "Aspirin is contraindicated in children except for Kawasaki disease and rheumatologic disease such as JIA.",
@@ -1386,20 +1392,28 @@
      "to": "Aspirin is contraindicated in children except for Kawasaki disease and rheumatologic disease such as JIA (juvenile idiopathic arthritis); Kawasaki is the reason the exception exists"
     },
     {
-     "claim": "The mechanism is mitochondrial injury, impaired beta-oxidation and microvesicular steatosis.",
-     "to": "the mechanism is mitochondrial injury with impaired β-oxidation → microvesicular steatosis, which is why the liver is big but not scarred"
+     "claim": "The mechanism is mitochondrial injury, then impaired beta-oxidation.",
+     "to": "the mechanism is mitochondrial injury → impaired β-oxidation"
     },
     {
-     "claim": "This is why the liver is big but not scarred.",
-     "to": "the mechanism is mitochondrial injury with impaired β-oxidation → microvesicular steatosis, which is why the liver is big but not scarred"
+     "claim": "Impaired beta-oxidation leads to microvesicular steatosis.",
+     "to": "This causes microvesicular steatosis, which is why the liver is big but not scarred"
+    },
+    {
+     "claim": "That is why the liver is big but not scarred.",
+     "to": "This causes microvesicular steatosis, which is why the liver is big but not scarred"
+    },
+    {
+     "claim": "Treatment is supportive; there is no antidote.",
+     "carried_by": "treatment is supportive; there is no antidote"
     },
     {
      "claim": "Hyperammonemia without hepatomegaly in a neonate is a urea cycle defect, not Reye.",
-     "to": "hyperammonemia without hepatomegaly in a neonate is a urea cycle defect, not Reye, although the neurotoxin is the same."
+     "to": "hyperammonemia without hepatomegaly in a neonate is a urea cycle defect, not Reye; the neurotoxin is the same, but the disease is different."
     },
     {
-     "claim": "It is the same neurotoxin in a different tree.",
-     "to": "hyperammonemia without hepatomegaly in a neonate is a urea cycle defect, not Reye, although the neurotoxin is the same."
+     "claim": "Same neurotoxin, different tree.",
+     "to": "hyperammonemia without hepatomegaly in a neonate is a urea cycle defect, not Reye; the neurotoxin is the same, but the disease is different."
     }
    ],
    "new_claims": [
@@ -1408,28 +1422,32 @@
      "from": "Aspirin is contraindicated in children except for Kawasaki disease and rheumatologic disease such as JIA."
     },
     {
+     "claim": "JIA stands for juvenile idiopathic arthritis.",
+     "from": "expansion"
+    },
+    {
      "claim": "Kawasaki is the reason the exception exists.",
      "from": "Kawasaki is the reason the exception exists."
     },
     {
-     "claim": "The mechanism is mitochondrial injury, impaired beta-oxidation and microvesicular steatosis.",
-     "from": "The mechanism is mitochondrial injury, impaired beta-oxidation and microvesicular steatosis."
+     "claim": "the mechanism is mitochondrial injury → impaired β-oxidation",
+     "from": "The mechanism is mitochondrial injury, then impaired beta-oxidation."
     },
     {
-     "claim": "This is why the liver is big but not scarred.",
-     "from": "This is why the liver is big but not scarred."
+     "claim": "This causes microvesicular steatosis.",
+     "from": "Impaired beta-oxidation leads to microvesicular steatosis."
+    },
+    {
+     "claim": "This causes microvesicular steatosis, which is why the liver is big but not scarred",
+     "from": "That is why the liver is big but not scarred."
     },
     {
      "claim": "Hyperammonemia without hepatomegaly in a neonate is a urea cycle defect, not Reye.",
      "from": "Hyperammonemia without hepatomegaly in a neonate is a urea cycle defect, not Reye."
     },
     {
-     "claim": "It is the same neurotoxin in a different tree.",
-     "from": "It is the same neurotoxin in a different tree."
-    },
-    {
-     "claim": "JIA stands for juvenile idiopathic arthritis.",
-     "from": "expansion"
+     "claim": "The neurotoxin is the same, but the disease is different.",
+     "from": "Same neurotoxin, different tree."
     }
    ]
   },
@@ -1437,46 +1455,46 @@
    "op": "replace",
    "brief": "bs-reye",
    "find": "<b>Diabetes: the Annual Care Bundle</b>, which turns on reading the outcome noun — <i>morbidity</i> versus <i>mortality</i>. Same discipline: this stem says <b>\"cause of this patient's imaging findings,\"</b> not \"cause of this patient's presentation.\" Store the discriminator as a question: <b>\"which effect am I being asked to explain?\"</b>",
-   "with": "<b>Diabetes: the Annual Care Bundle</b> also turns on reading the outcome noun, <i>morbidity</i> versus <i>mortality</i>. This stem says <b>\"cause of this patient's imaging findings,\"</b> not \"cause of this patient's presentation.\" Ask: <b>\"which effect am I being asked to explain?\"</b>",
-   "note": "pairs with: remove em dash, Ask:",
+   "with": "<b>Diabetes: the Annual Care Bundle</b> also turns on reading the outcome noun (<i>morbidity</i> versus <i>mortality</i>). Here this stem says <b>\"cause of this patient's imaging findings,\"</b> not \"cause of this patient's presentation.\" Ask: <b>\"which effect am I being asked to explain?\"</b>",
+   "note": "pairs with: remove em dash; store-as-question -> Ask",
    "claims": [
     {
      "claim": "Diabetes: the Annual Care Bundle turns on reading the outcome noun, morbidity versus mortality.",
-     "to": "Diabetes: the Annual Care Bundle also turns on reading the outcome noun, morbidity versus mortality."
+     "to": "Diabetes: the Annual Care Bundle also turns on reading the outcome noun (morbidity versus mortality)."
     },
     {
-     "claim": "Same discipline applies here.",
-     "to": "Diabetes: the Annual Care Bundle also turns on reading the outcome noun, morbidity versus mortality."
+     "claim": "The same discipline applies here.",
+     "to": "Diabetes: the Annual Care Bundle also turns on reading the outcome noun (morbidity versus mortality)."
     },
     {
      "claim": "This stem says cause of this patient's imaging findings, not cause of this patient's presentation.",
-     "carried_by": "This stem says \"cause of this patient's imaging findings,\" not \"cause of this patient's presentation.\""
+     "to": "Here this stem says \"cause of this patient's imaging findings,\" not \"cause of this patient's presentation.\""
     },
     {
-     "claim": "Discriminating question: which effect am I being asked to explain?",
+     "claim": "Discriminator question: which effect am I being asked to explain?",
      "to": "Ask: \"which effect am I being asked to explain?\""
     }
    ],
    "new_claims": [
     {
-     "claim": "Diabetes: the Annual Care Bundle turns on reading the outcome noun, morbidity versus mortality.",
+     "claim": "Diabetes: the Annual Care Bundle also turns on reading the outcome noun (morbidity versus mortality).",
      "from": "Diabetes: the Annual Care Bundle turns on reading the outcome noun, morbidity versus mortality."
     },
     {
-     "claim": "Same discipline applies here.",
-     "from": "Same discipline applies here."
+     "claim": "Here this stem says \"cause of this patient's imaging findings,\" not \"cause of this patient's presentation.\"",
+     "from": "This stem says cause of this patient's imaging findings, not cause of this patient's presentation."
     },
     {
-     "claim": "Discriminating question: which effect am I being asked to explain?",
-     "from": "Discriminating question: which effect am I being asked to explain?"
+     "claim": "Ask: \"which effect am I being asked to explain?\"",
+     "from": "Discriminator question: which effect am I being asked to explain?"
     }
    ]
   },
   {
    "op": "replace",
    "brief": "bs-reye",
-   "find": "the answer must explain <i>that finding</i> — not the illness. Options that are true of the disease but cannot produce the named finding are the intended traps, and they are the hardest to reject precisely because they are true.",
-   "with": "the answer must explain <i>that finding</i>, not the illness. Options that are true of the disease but cannot produce the named finding are the intended traps. They are the hardest to reject because they are true.",
+   "find": "When a stem names a <b>specific finding</b> and asks what caused it, the answer must explain <i>that finding</i> — not the illness. Options that are true of the disease but cannot produce the named finding are the intended traps, and they are the hardest to reject precisely because they are true.",
+   "with": "When a stem names a <b>specific finding</b> and asks what caused it, the answer must explain <i>that finding</i>, not the illness. Options that are true of the disease but cannot produce the named finding are the intended traps. They are the hardest to reject precisely because they are true.",
    "note": "rule: remove em dash, split",
    "claims": [
     {
@@ -1484,12 +1502,12 @@
      "to": "When a stem names a specific finding and asks what caused it, the answer must explain that finding, not the illness."
     },
     {
-     "claim": "Options that are true of the disease but cannot produce the named finding are the intended traps.",
+     "claim": "Options true of the disease that cannot produce the named finding are the intended traps.",
      "to": "Options that are true of the disease but cannot produce the named finding are the intended traps."
     },
     {
      "claim": "They are the hardest to reject precisely because they are true.",
-     "to": "They are the hardest to reject because they are true."
+     "to": "They are the hardest to reject precisely because they are true."
     }
    ],
    "new_claims": [
@@ -1499,7 +1517,7 @@
     },
     {
      "claim": "Options that are true of the disease but cannot produce the named finding are the intended traps.",
-     "from": "Options that are true of the disease but cannot produce the named finding are the intended traps."
+     "from": "Options true of the disease that cannot produce the named finding are the intended traps."
     },
     {
      "claim": "They are the hardest to reject precisely because they are true.",
@@ -1511,19 +1529,23 @@
    "op": "replace",
    "brief": "bs-peds-stroke",
    "find": "<p>A stroke in a teenager is never \"just a stroke\": the question is <b>what made the artery fail</b>. Two findings decide it here. <b>Weeks of fever, weight loss and aches</b> say systemic inflammation. <b>Unequal pulses or arm pressures</b> say several large arteries are narrowed at once. Inflammation plus multiple fixed large-artery stenoses is a <b>large-vessel vasculitis</b>, and in an adolescent that is <b>Takayasu arteritis</b>.</p>\n<p><b>The exception is endocarditis.</b> It also brings fever and stroke, but emboli occlude one vessel at a time and never narrow the aorta's branches, so the pulses stay equal. Look for the murmur and the embolic skin findings instead.</p>",
-   "with": "<p>In a teenager with a stroke, always ask <b>what made the artery fail</b>. Two findings decide it here. <b>Weeks of fever, weight loss and aches</b> indicate systemic inflammation. <b>Unequal pulses or arm pressures</b> indicate that several large arteries are narrowed at once. Inflammation plus multiple fixed large-artery stenoses is a <b>large-vessel vasculitis</b>; in an adolescent, that is <b>Takayasu arteritis</b>.</p>\n<p><b>Endocarditis</b> is the exception; it also brings fever and stroke. But emboli occlude one vessel at a time and never narrow the aorta's branches, so the pulses stay equal. Look for the murmur and the embolic skin findings instead.</p>",
-   "note": ".dp: remove dramatic opener, plain verbs",
+   "with": "<p>A stroke in a teenager is never \"just a stroke\"; find <b>what made the artery fail</b>. <b>Weeks of fever, weight loss and aches</b> indicate systemic inflammation. <b>Unequal pulses or arm pressures</b> indicate that several large arteries are narrowed at once. Inflammation plus multiple fixed large-artery stenoses is a <b>large-vessel vasculitis</b>; in an adolescent, that is <b>Takayasu arteritis</b>.</p>\n<p><b>Endocarditis</b> is the exception. It also brings fever and stroke, but emboli occlude one vessel at a time and never narrow the aorta's branches, so the pulses stay equal. Look for the murmur and the embolic skin findings instead.</p>",
+   "note": "dp: remove framing and personification",
    "reworded_bold": [
     "The exception is endocarditis."
    ],
    "claims": [
     {
-     "claim": "A stroke in a teenager is never just a stroke; the question is what made the artery fail.",
-     "to": "In a teenager with a stroke, always ask what made the artery fail."
+     "claim": "A stroke in a teenager is never just a stroke.",
+     "to": "A stroke in a teenager is never \"just a stroke\"; find what made the artery fail."
+    },
+    {
+     "claim": "The question is what made the artery fail.",
+     "to": "A stroke in a teenager is never \"just a stroke\"; find what made the artery fail."
     },
     {
      "claim": "Two findings decide it here.",
-     "to": "Two findings decide it here."
+     "dropped": "framing; the two findings are stated in the next two sentences"
     },
     {
      "claim": "Weeks of fever, weight loss and aches say systemic inflammation.",
@@ -1543,15 +1565,15 @@
     },
     {
      "claim": "The exception is endocarditis.",
-     "to": "Endocarditis is the exception; it also brings fever and stroke."
+     "to": "Endocarditis is the exception."
     },
     {
      "claim": "Endocarditis also brings fever and stroke.",
-     "to": "Endocarditis is the exception; it also brings fever and stroke."
+     "to": "It also brings fever and stroke, but emboli occlude one vessel at a time and never narrow the aorta's branches, so the pulses stay equal."
     },
     {
      "claim": "Emboli occlude one vessel at a time and never narrow the aorta's branches, so the pulses stay equal.",
-     "to": "But emboli occlude one vessel at a time and never narrow the aorta's branches, so the pulses stay equal."
+     "to": "It also brings fever and stroke, but emboli occlude one vessel at a time and never narrow the aorta's branches, so the pulses stay equal."
     },
     {
      "claim": "Look for the murmur and the embolic skin findings instead.",
@@ -1560,19 +1582,19 @@
    ],
    "new_claims": [
     {
-     "claim": "A stroke in a teenager is never just a stroke; the question is what made the artery fail.",
-     "from": "A stroke in a teenager is never just a stroke; the question is what made the artery fail."
+     "claim": "A stroke in a teenager is never \"just a stroke\"; find what made the artery fail.",
+     "from": "A stroke in a teenager is never just a stroke."
     },
     {
-     "claim": "Two findings decide it here.",
-     "from": "Two findings decide it here."
+     "claim": "Find what made the artery fail.",
+     "from": "The question is what made the artery fail."
     },
     {
-     "claim": "Weeks of fever, weight loss and aches say systemic inflammation.",
+     "claim": "Weeks of fever, weight loss and aches indicate systemic inflammation.",
      "from": "Weeks of fever, weight loss and aches say systemic inflammation."
     },
     {
-     "claim": "Unequal pulses or arm pressures say several large arteries are narrowed at once.",
+     "claim": "Unequal pulses or arm pressures indicate that several large arteries are narrowed at once.",
      "from": "Unequal pulses or arm pressures say several large arteries are narrowed at once."
     },
     {
@@ -1580,15 +1602,15 @@
      "from": "Inflammation plus multiple fixed large-artery stenoses is a large-vessel vasculitis."
     },
     {
-     "claim": "In an adolescent that is Takayasu arteritis.",
+     "claim": "In an adolescent, that is Takayasu arteritis.",
      "from": "In an adolescent that is Takayasu arteritis."
     },
     {
-     "claim": "The exception is endocarditis.",
+     "claim": "Endocarditis is the exception.",
      "from": "The exception is endocarditis."
     },
     {
-     "claim": "Endocarditis also brings fever and stroke.",
+     "claim": "It also brings fever and stroke, but emboli occlude one vessel at a time and never narrow the aorta's branches, so the pulses stay equal.",
      "from": "Endocarditis also brings fever and stroke."
     },
     {
@@ -1606,76 +1628,125 @@
    "brief": "bs-peds-stroke",
    "find": "Part I <b>Polymyalgia Rheumatica</b>, whose giant cell arteritis row is the same vasculitis in patients over 50. Part I <b>Secondary Hypertension</b> owns fibromuscular dysplasia and the abdominal bruit, the noninflammatory twin. Part II <b>Sickle Cell Trait versus Disease</b> owns the sickle cell stroke and its exchange transfusion.",
    "with": "Part I <b>Polymyalgia Rheumatica</b> has a giant cell arteritis row, the same vasculitis in patients over 50. Part I <b>Secondary Hypertension</b> covers fibromuscular dysplasia and the abdominal bruit, the noninflammatory twin. Part II <b>Sickle Cell Trait versus Disease</b> covers the sickle cell stroke and its exchange transfusion.",
-   "note": "pairs with: owns -> covers, full sentence",
+   "note": "pairs with: owns -> covers, fix fragment",
    "claims": [
     {
-     "claim": "Polymyalgia Rheumatica's giant cell arteritis row is the same vasculitis in patients over 50.",
+     "claim": "Polymyalgia Rheumatica has a giant cell arteritis row that is the same vasculitis in patients over 50.",
      "to": "Part I Polymyalgia Rheumatica has a giant cell arteritis row, the same vasculitis in patients over 50."
     },
     {
-     "claim": "Secondary Hypertension covers fibromuscular dysplasia and the abdominal bruit, the noninflammatory twin.",
+     "claim": "Secondary Hypertension owns fibromuscular dysplasia and the abdominal bruit, the noninflammatory twin.",
      "to": "Part I Secondary Hypertension covers fibromuscular dysplasia and the abdominal bruit, the noninflammatory twin."
     },
     {
-     "claim": "Sickle Cell Trait versus Disease covers the sickle cell stroke and its exchange transfusion.",
+     "claim": "Sickle Cell Trait versus Disease owns the sickle cell stroke and its exchange transfusion.",
      "to": "Part II Sickle Cell Trait versus Disease covers the sickle cell stroke and its exchange transfusion."
     }
    ],
    "new_claims": [
     {
-     "claim": "Polymyalgia Rheumatica's giant cell arteritis row is the same vasculitis in patients over 50.",
-     "from": "Polymyalgia Rheumatica's giant cell arteritis row is the same vasculitis in patients over 50."
+     "claim": "Part I Polymyalgia Rheumatica has a giant cell arteritis row, the same vasculitis in patients over 50.",
+     "from": "Polymyalgia Rheumatica has a giant cell arteritis row that is the same vasculitis in patients over 50."
     },
     {
      "claim": "Secondary Hypertension covers fibromuscular dysplasia and the abdominal bruit, the noninflammatory twin.",
-     "from": "Secondary Hypertension covers fibromuscular dysplasia and the abdominal bruit, the noninflammatory twin."
+     "from": "Secondary Hypertension owns fibromuscular dysplasia and the abdominal bruit, the noninflammatory twin."
     },
     {
      "claim": "Sickle Cell Trait versus Disease covers the sickle cell stroke and its exchange transfusion.",
-     "from": "Sickle Cell Trait versus Disease covers the sickle cell stroke and its exchange transfusion."
+     "from": "Sickle Cell Trait versus Disease owns the sickle cell stroke and its exchange transfusion."
     }
    ]
   },
   {
    "op": "replace",
-   "brief": "bs-peds-stroke",
-   "find": "Systemic inflammation with unequal pulses is vasculitis; fever with a murmur is an embolus; neck strain with Horner syndrome is a dissection; a string of beads with no inflammation is fibromuscular dysplasia.",
-   "with": "Systemic inflammation with unequal pulses is vasculitis &middot; fever with a murmur is an embolus &middot; neck strain with Horner syndrome is a dissection &middot; a string of beads with no inflammation is fibromuscular dysplasia.",
-   "note": "rule: parallel items as row list",
+   "brief": "tics",
+   "find": "sustained attention, which argues against ADHD despite the classroom referral",
+   "with": "sustained attention, which argues against <b>ADHD</b> (attention deficit hyperactivity disorder) despite the classroom referral",
+   "note": "acronym expansion at first use in block",
    "claims": [
     {
-     "claim": "Systemic inflammation with unequal pulses is vasculitis.",
-     "to": "Systemic inflammation with unequal pulses is vasculitis"
-    },
-    {
-     "claim": "Fever with a murmur is an embolus.",
-     "to": "fever with a murmur is an embolus"
-    },
-    {
-     "claim": "Neck strain with Horner syndrome is a dissection.",
-     "to": "neck strain with Horner syndrome is a dissection"
-    },
-    {
-     "claim": "A string of beads with no inflammation is fibromuscular dysplasia.",
-     "to": "a string of beads with no inflammation is fibromuscular dysplasia."
+     "claim": "Sustained attention argues against ADHD despite the classroom referral.",
+     "to": "sustained attention, which argues against ADHD (attention deficit hyperactivity disorder) despite the classroom referral"
     }
    ],
    "new_claims": [
     {
-     "claim": "Systemic inflammation with unequal pulses is vasculitis.",
-     "from": "Systemic inflammation with unequal pulses is vasculitis."
+     "claim": "sustained attention, which argues against ADHD (attention deficit hyperactivity disorder) despite the classroom referral",
+     "from": "Sustained attention argues against ADHD despite the classroom referral."
     },
     {
-     "claim": "Fever with a murmur is an embolus.",
-     "from": "Fever with a murmur is an embolus."
+     "claim": "ADHD stands for attention deficit hyperactivity disorder.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "closes OCD, and with it both exposure therapy and fluoxetine",
+   "with": "closes <b>OCD</b> (obsessive-compulsive disorder), and with it both exposure therapy and fluoxetine",
+   "note": "acronym expansion at first use in block",
+   "claims": [
+    {
+     "claim": "No obsessional thoughts closes OCD, and with it both exposure therapy and fluoxetine.",
+     "to": "closes OCD (obsessive-compulsive disorder), and with it both exposure therapy and fluoxetine"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "closes OCD (obsessive-compulsive disorder), and with it both exposure therapy and fluoxetine",
+     "from": "No obsessional thoughts closes OCD, and with it both exposure therapy and fluoxetine."
     },
     {
-     "claim": "Neck strain with Horner syndrome is a dissection.",
-     "from": "Neck strain with Horner syndrome is a dissection."
+     "claim": "OCD stands for obsessive-compulsive disorder.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "No, so not OCD, and the exposure therapy and fluoxetine options fall",
+   "with": "No, so not <b>OCD</b> (obsessive-compulsive disorder), and the exposure therapy and fluoxetine options fall",
+   "note": "acronym expansion at first use in block",
+   "claims": [
+    {
+     "claim": "No behaviour neutralises an obsession, so not OCD, and the exposure therapy and fluoxetine options fall.",
+     "to": "No, so not OCD (obsessive-compulsive disorder), and the exposure therapy and fluoxetine options fall"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "No, so not OCD (obsessive-compulsive disorder), and the exposure therapy and fluoxetine options fall",
+     "from": "No behaviour neutralises an obsession, so not OCD, and the exposure therapy and fluoxetine options fall."
     },
     {
-     "claim": "A string of beads with no inflammation is fibromuscular dysplasia.",
-     "from": "A string of beads with no inflammation is fibromuscular dysplasia."
+     "claim": "OCD stands for obsessive-compulsive disorder.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "Books and puzzles, so not ADHD, and the stimulants fall",
+   "with": "Books and puzzles, so not <b>ADHD</b> (attention deficit hyperactivity disorder), and the stimulants fall",
+   "note": "acronym expansion at first use in block",
+   "claims": [
+    {
+     "claim": "He sustains attention on books and puzzles, so not ADHD, and the stimulants fall.",
+     "to": "Books and puzzles, so not ADHD (attention deficit hyperactivity disorder), and the stimulants fall"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Books and puzzles, so not ADHD (attention deficit hyperactivity disorder), and the stimulants fall",
+     "from": "He sustains attention on books and puzzles, so not ADHD, and the stimulants fall."
+    },
+    {
+     "claim": "ADHD stands for attention deficit hyperactivity disorder.",
+     "from": "expansion"
     }
    ]
   }

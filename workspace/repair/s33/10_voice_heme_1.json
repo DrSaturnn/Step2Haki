@@ -5,7 +5,7 @@
    "brief": "anemia-thrombocytopenia",
    "find": "the smear, the Coombs and the coags name the process",
    "with": "Smear, Coombs test and coagulation studies identify the process",
-   "note": "sub first segment: plain voice",
+   "note": "subtitle: remove personification",
    "claims": [
     {
      "claim": "The smear, the Coombs test and the coagulation studies identify the process.",
@@ -14,7 +14,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Smear, Coombs test and coagulation studies identify the process.",
+     "claim": "Smear, Coombs test and coagulation studies identify the process",
      "from": "The smear, the Coombs test and the coagulation studies identify the process."
     }
    ]
@@ -23,12 +23,12 @@
    "op": "replace",
    "brief": "anemia-thrombocytopenia",
    "find": "<p>The stem hands you two legs of a three-legged syndrome and asks for the third. <b>Scleral icterus</b> with fatigue is hemolytic anemia; <b>anuria for 24 hours with pedal edema</b> is acute kidney injury; and the missing leg of <b>hemolytic uremic syndrome</b> is <b>thrombocytopenia</b>. The mechanism supplies it: Shiga toxin damages endothelium, platelets are consumed into microthrombi, and red cells are sheared as they pass — so the platelet count falls <i>because</i> of the same process that produces the schistocytes and the bilirubin. The bloody diarrhea a week ago, in a cluster of people who ate together and recovered, is the exposure that starts the clock.</p>",
-   "with": "<p><b>Scleral icterus</b> with fatigue is hemolytic anemia, and <b>anuria for 24 hours with pedal edema</b> is acute kidney injury. The third feature of <b>hemolytic uremic syndrome</b> is <b>thrombocytopenia</b>. Shiga toxin damages endothelium, platelets are consumed into microthrombi, and red cells are sheared as they pass. The platelet count therefore falls <i>because</i> of the same process that produces the schistocytes and the bilirubin. The triggering exposure was bloody diarrhea a week ago, in a cluster of people who ate together and recovered.</p>",
-   "note": ".dp: remove stem framing and metaphor; split sentences",
+   "with": "<p><b>Scleral icterus</b> with fatigue is hemolytic anemia, and <b>anuria for 24 hours with pedal edema</b> is acute kidney injury. The third feature of <b>hemolytic uremic syndrome</b> is <b>thrombocytopenia</b>. Shiga toxin damages endothelium, platelets are consumed into microthrombi, and red cells are sheared as they pass. The platelet count falls <i>because</i> of the same process that produces the schistocytes and the bilirubin. The exposure is bloody diarrhea a week ago, in a cluster of people who ate together and recovered.</p>",
+   "note": ".dp: remove framing, split long sentence",
    "claims": [
     {
-     "claim": "The stem gives two features of a three-feature syndrome and asks for the third.",
-     "dropped": "framing about the stem; the three features are stated in the new text"
+     "claim": "The case gives two features of a three-feature syndrome and asks for the third.",
+     "to": "The third feature of hemolytic uremic syndrome is thrombocytopenia."
     },
     {
      "claim": "Scleral icterus with fatigue is hemolytic anemia.",
@@ -39,7 +39,7 @@
      "to": "Scleral icterus with fatigue is hemolytic anemia, and anuria for 24 hours with pedal edema is acute kidney injury."
     },
     {
-     "claim": "The missing third feature of hemolytic uremic syndrome is thrombocytopenia.",
+     "claim": "The missing feature of hemolytic uremic syndrome is thrombocytopenia.",
      "to": "The third feature of hemolytic uremic syndrome is thrombocytopenia."
     },
     {
@@ -56,14 +56,22 @@
     },
     {
      "claim": "The platelet count falls because of the same process that produces the schistocytes and the bilirubin.",
-     "to": "The platelet count therefore falls because of the same process that produces the schistocytes and the bilirubin."
+     "to": "The platelet count falls because of the same process that produces the schistocytes and the bilirubin."
     },
     {
-     "claim": "The bloody diarrhea a week ago, in a cluster of people who ate together and recovered, is the triggering exposure.",
-     "to": "The triggering exposure was bloody diarrhea a week ago, in a cluster of people who ate together and recovered."
+     "claim": "The bloody diarrhea a week ago, in a cluster of people who ate together and recovered, is the exposure.",
+     "to": "The exposure is bloody diarrhea a week ago, in a cluster of people who ate together and recovered."
+    },
+    {
+     "claim": "The exposure starts the clock for the syndrome a week later.",
+     "to": "The exposure is bloody diarrhea a week ago, in a cluster of people who ate together and recovered."
     }
    ],
    "new_claims": [
+    {
+     "claim": "The third feature of hemolytic uremic syndrome is thrombocytopenia.",
+     "from": "The case gives two features of a three-feature syndrome and asks for the third."
+    },
     {
      "claim": "Scleral icterus with fatigue is hemolytic anemia.",
      "from": "Scleral icterus with fatigue is hemolytic anemia."
@@ -74,110 +82,154 @@
     },
     {
      "claim": "The third feature of hemolytic uremic syndrome is thrombocytopenia.",
-     "from": "The missing third feature of hemolytic uremic syndrome is thrombocytopenia."
+     "from": "The missing feature of hemolytic uremic syndrome is thrombocytopenia."
     },
     {
-     "claim": "Shiga toxin damages endothelium, platelets are consumed into microthrombi, and red cells are sheared as they pass.",
+     "claim": "Shiga toxin damages endothelium.",
      "from": "Shiga toxin damages endothelium."
+    },
+    {
+     "claim": "Platelets are consumed into microthrombi.",
+     "from": "Platelets are consumed into microthrombi."
+    },
+    {
+     "claim": "Red cells are sheared as they pass.",
+     "from": "Red cells are sheared as they pass."
     },
     {
      "claim": "The platelet count falls because of the same process that produces the schistocytes and the bilirubin.",
      "from": "The platelet count falls because of the same process that produces the schistocytes and the bilirubin."
     },
     {
-     "claim": "The triggering exposure was bloody diarrhea a week ago, in a cluster of people who ate together and recovered.",
-     "from": "The bloody diarrhea a week ago, in a cluster of people who ate together and recovered, is the triggering exposure."
+     "claim": "The exposure is bloody diarrhea a week ago, in a cluster of people who ate together and recovered.",
+     "from": "The bloody diarrhea a week ago, in a cluster of people who ate together and recovered, is the exposure."
+    },
+    {
+     "claim": "The exposure is bloody diarrhea a week ago, in a cluster of people who ate together and recovered.",
+     "from": "The exposure starts the clock for the syndrome a week later."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "anemia-thrombocytopenia",
-   "find": "<b>Bloody diarrhea one week ago</b> &mdash; Shiga toxin colitis; the one-week latency between the diarrhea and the syndrome is the concept's signature &middot; <b>Shared meal with relatives who recovered</b> &mdash; a point-source exposure that confirms the organism and explains nothing about the labs; most infected people never develop HUS ⚠︎ &middot; <b>Anuria for 24 hours with normal intake, plus 2+ pedal edema</b> &mdash; acute kidney injury with volume overload, the third leg &middot; <b>Scleral icterus</b> &mdash; indirect hyperbilirubinemia from hemolysis, the first leg &middot; <b>Fatigue and refusing to get out of bed</b> &mdash; symptomatic anemia rather than ongoing volume loss; the diarrhea has resolved &middot; <b>No bruising or petechiae described</b> &mdash; consumptive thrombocytopenia in HUS is often not severe enough to bleed; its absence never argues against the diagnosis &middot; <b>No fever or neurologic change</b> &mdash; argues away from the TTP end of the family and from sepsis-driven DIC ⚠︎",
-   "with": "<b>Bloody diarrhea one week ago</b> &mdash; Shiga toxin colitis; the one-week latency between the diarrhea and the syndrome is characteristic &middot; <b>Shared meal with relatives who recovered</b> &mdash; a point-source exposure that confirms the organism but explains nothing about the labs. Most infected people never develop <b>HUS</b> (hemolytic uremic syndrome) ⚠︎ &middot; <b>Anuria for 24 hours with normal intake, plus 2+ pedal edema</b> &mdash; acute kidney injury with volume overload, the third component of the triad &middot; <b>Scleral icterus</b> &mdash; indirect hyperbilirubinemia from hemolysis, the first component of the triad &middot; <b>Fatigue and refusing to get out of bed</b> &mdash; symptomatic anemia rather than ongoing volume loss; the diarrhea has resolved &middot; <b>No bruising or petechiae described</b> &mdash; consumptive thrombocytopenia in HUS is often not severe enough to bleed; its absence never argues against the diagnosis &middot; <b>No fever or neurologic change</b> &mdash; argues against <b>TTP</b> (thrombotic thrombocytopenic purpura) and against sepsis-driven <b>DIC</b> (disseminated intravascular coagulation) ⚠︎",
-   "note": "pertinents: remove metaphor (legs, end of the family), expand acronyms",
+   "find": "the one-week latency between the diarrhea and the syndrome is the concept's signature",
+   "with": "the one-week latency between the diarrhea and the syndrome is characteristic",
+   "note": "pertinent row: remove meta phrase",
    "claims": [
     {
-     "claim": "Bloody diarrhea one week ago is Shiga toxin colitis.",
-     "to": "Bloody diarrhea one week ago — Shiga toxin colitis; the one-week latency between the diarrhea and the syndrome is characteristic"
-    },
-    {
-     "claim": "The one-week latency between the diarrhea and the syndrome is the signature of the concept.",
-     "to": "Bloody diarrhea one week ago — Shiga toxin colitis; the one-week latency between the diarrhea and the syndrome is characteristic"
-    },
-    {
-     "claim": "A shared meal with relatives who recovered is a point-source exposure that confirms the organism.",
-     "to": "Shared meal with relatives who recovered — a point-source exposure that confirms the organism but explains nothing about the labs."
-    },
-    {
-     "claim": "The shared meal explains nothing about the labs.",
-     "to": "Shared meal with relatives who recovered — a point-source exposure that confirms the organism but explains nothing about the labs."
-    },
-    {
-     "claim": "Most infected people never develop HUS (flagged).",
-     "to": "Shared meal with relatives who recovered — a point-source exposure that confirms the organism but explains nothing about the labs."
-    },
-    {
-     "claim": "Anuria for 24 hours with normal intake plus 2+ pedal edema is acute kidney injury with volume overload, the third leg of the triad.",
-     "to": "Anuria for 24 hours with normal intake, plus 2+ pedal edema — acute kidney injury with volume overload, the third component of the triad"
-    },
-    {
-     "claim": "Scleral icterus is indirect hyperbilirubinemia from hemolysis, the first leg of the triad.",
-     "to": "Scleral icterus — indirect hyperbilirubinemia from hemolysis, the first component of the triad"
-    },
-    {
-     "claim": "Fatigue and refusing to get out of bed is symptomatic anemia rather than ongoing volume loss; the diarrhea has resolved.",
-     "to": "Fatigue and refusing to get out of bed — symptomatic anemia rather than ongoing volume loss; the diarrhea has resolved"
-    },
-    {
-     "claim": "Consumptive thrombocytopenia in HUS is often not severe enough to bleed; absence of bruising or petechiae never argues against the diagnosis.",
-     "to": "No bruising or petechiae described — consumptive thrombocytopenia in HUS is often not severe enough to bleed; its absence never argues against the diagnosis"
-    },
-    {
-     "claim": "No fever or neurologic change argues away from TTP and from sepsis-driven DIC (flagged).",
-     "to": "No bruising or petechiae described — consumptive thrombocytopenia in HUS is often not severe enough to bleed; its absence never argues against the diagnosis"
+     "claim": "The one-week latency between the diarrhea and the syndrome is the signature finding.",
+     "to": "the one-week latency between the diarrhea and the syndrome is characteristic"
     }
    ],
    "new_claims": [
     {
-     "claim": "Bloody diarrhea one week ago is Shiga toxin colitis.",
-     "from": "Bloody diarrhea one week ago is Shiga toxin colitis."
+     "claim": "the one-week latency between the diarrhea and the syndrome is characteristic",
+     "from": "The one-week latency between the diarrhea and the syndrome is the signature finding."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "a point-source exposure that confirms the organism and explains nothing about the labs; most infected people never develop HUS ⚠︎",
+   "with": "a point-source exposure that confirms the organism but does not explain the labs; most infected people never develop <b>HUS</b> (hemolytic uremic syndrome) ⚠︎",
+   "note": "pertinent row: plain wording, expand HUS at first use in block",
+   "claims": [
+    {
+     "claim": "The shared meal is a point-source exposure that confirms the organism.",
+     "to": "a point-source exposure that confirms the organism but does not explain the labs"
     },
     {
-     "claim": "The one-week latency between the diarrhea and the syndrome is characteristic.",
-     "from": "The one-week latency between the diarrhea and the syndrome is the signature of the concept."
+     "claim": "The shared meal explains nothing about the labs.",
+     "to": "a point-source exposure that confirms the organism but does not explain the labs"
     },
     {
-     "claim": "The shared meal is a point-source exposure that confirms the organism but explains nothing about the labs.",
-     "from": "A shared meal with relatives who recovered is a point-source exposure that confirms the organism."
+     "claim": "Most infected people never develop HUS.",
+     "to": "most infected people never develop HUS (hemolytic uremic syndrome) ⚠︎"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "a point-source exposure that confirms the organism but does not explain the labs",
+     "from": "The shared meal is a point-source exposure that confirms the organism."
     },
     {
-     "claim": "Most infected people never develop HUS (flagged).",
-     "from": "Most infected people never develop HUS (flagged)."
+     "claim": "a point-source exposure that confirms the organism but does not explain the labs",
+     "from": "The shared meal explains nothing about the labs."
+    },
+    {
+     "claim": "Most infected people never develop HUS.",
+     "from": "Most infected people never develop HUS."
     },
     {
      "claim": "HUS stands for hemolytic uremic syndrome.",
      "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "acute kidney injury with volume overload, the third leg",
+   "with": "acute kidney injury with volume overload, the renal feature of the triad",
+   "note": "pertinent row: replace metaphor",
+   "claims": [
+    {
+     "claim": "Anuria with pedal edema is acute kidney injury with volume overload, one leg of the triad.",
+     "to": "acute kidney injury with volume overload, the renal feature of the triad"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "acute kidney injury with volume overload, the renal feature of the triad",
+     "from": "Anuria with pedal edema is acute kidney injury with volume overload, one leg of the triad."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "indirect hyperbilirubinemia from hemolysis, the first leg",
+   "with": "indirect hyperbilirubinemia from hemolysis, the hemolytic feature of the triad",
+   "note": "pertinent row: replace metaphor",
+   "claims": [
+    {
+     "claim": "Scleral icterus is indirect hyperbilirubinemia from hemolysis, one leg of the triad.",
+     "to": "indirect hyperbilirubinemia from hemolysis, the hemolytic feature of the triad"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "indirect hyperbilirubinemia from hemolysis, the hemolytic feature of the triad",
+     "from": "Scleral icterus is indirect hyperbilirubinemia from hemolysis, one leg of the triad."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "argues away from the TTP end of the family and from sepsis-driven DIC ⚠︎",
+   "with": "argues against <b>TTP</b> (thrombotic thrombocytopenic purpura) and against sepsis-driven <b>DIC</b> (disseminated intravascular coagulation) ⚠︎",
+   "note": "pertinent row: remove metaphor, expand acronyms",
+   "claims": [
+    {
+     "claim": "No fever or neurologic change argues away from TTP.",
+     "to": "argues against TTP (thrombotic thrombocytopenic purpura)"
     },
     {
-     "claim": "Anuria for 24 hours with normal intake plus 2+ pedal edema is acute kidney injury with volume overload, the third component of the triad.",
-     "from": "Anuria for 24 hours with normal intake plus 2+ pedal edema is acute kidney injury with volume overload, the third leg of the triad."
+     "claim": "No fever or neurologic change argues away from sepsis-driven DIC.",
+     "to": "and against sepsis-driven DIC (disseminated intravascular coagulation) ⚠︎"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "argues against TTP (thrombotic thrombocytopenic purpura)",
+     "from": "No fever or neurologic change argues away from TTP."
     },
     {
-     "claim": "Scleral icterus is indirect hyperbilirubinemia from hemolysis, the first component of the triad.",
-     "from": "Scleral icterus is indirect hyperbilirubinemia from hemolysis, the first leg of the triad."
-    },
-    {
-     "claim": "Fatigue and refusing to get out of bed is symptomatic anemia rather than ongoing volume loss; the diarrhea has resolved.",
-     "from": "Fatigue and refusing to get out of bed is symptomatic anemia rather than ongoing volume loss; the diarrhea has resolved."
-    },
-    {
-     "claim": "Consumptive thrombocytopenia in HUS is often not severe enough to bleed; its absence never argues against the diagnosis.",
-     "from": "Consumptive thrombocytopenia in HUS is often not severe enough to bleed; absence of bruising or petechiae never argues against the diagnosis."
-    },
-    {
-     "claim": "No fever or neurologic change argues against TTP and sepsis-driven DIC (flagged).",
-     "from": "No fever or neurologic change argues away from TTP and from sepsis-driven DIC (flagged)."
+     "claim": "and against sepsis-driven DIC (disseminated intravascular coagulation) ⚠︎",
+     "from": "No fever or neurologic change argues away from sepsis-driven DIC."
     },
     {
      "claim": "TTP stands for thrombotic thrombocytopenic purpura.",
@@ -193,79 +245,60 @@
    "op": "replace",
    "brief": "anemia-thrombocytopenia",
    "find": "Management is not this question's fork, so in one sentence: HUS is treated <b>supportively</b> — fluid and electrolyte management, transfusion, and dialysis when needed — with antibiotics and antimotility agents withheld in suspected Shiga toxin infection ⚠︎.",
-   "with": "<b>HUS</b> (hemolytic uremic syndrome) is treated <b>supportively</b> with fluid and electrolyte management, transfusion, and dialysis when needed. Antibiotics and antimotility agents are withheld in suspected Shiga toxin infection ⚠︎.",
-   "note": "management: remove question framing, split, expand HUS",
+   "with": "<b>HUS</b> (hemolytic uremic syndrome) is treated <b>supportively</b> with fluid and electrolyte management, transfusion, and dialysis when needed. Withhold antibiotics and antimotility agents in suspected Shiga toxin infection ⚠︎.",
+   "note": ".danger: remove framing and em dashes",
    "claims": [
     {
-     "claim": "Management is not the fork in this question.",
+     "claim": "Management is not what this question turns on.",
      "dropped": "framing about the question"
     },
     {
-     "claim": "HUS is treated supportively: fluid and electrolyte management, transfusion, and dialysis when needed.",
+     "claim": "HUS is treated supportively.",
      "to": "HUS (hemolytic uremic syndrome) is treated supportively with fluid and electrolyte management, transfusion, and dialysis when needed."
     },
     {
-     "claim": "Antibiotics and antimotility agents are withheld in suspected Shiga toxin infection (flagged).",
-     "to": "Antibiotics and antimotility agents are withheld in suspected Shiga toxin infection ⚠︎."
+     "claim": "Supportive care is fluid and electrolyte management, transfusion, and dialysis when needed.",
+     "to": "HUS (hemolytic uremic syndrome) is treated supportively with fluid and electrolyte management, transfusion, and dialysis when needed."
+    },
+    {
+     "claim": "Antibiotics and antimotility agents are withheld in suspected Shiga toxin infection.",
+     "to": "Withhold antibiotics and antimotility agents in suspected Shiga toxin infection ⚠︎."
     }
    ],
    "new_claims": [
     {
+     "claim": "HUS (hemolytic uremic syndrome) is treated supportively with fluid and electrolyte management, transfusion, and dialysis when needed.",
+     "from": "HUS is treated supportively."
+    },
+    {
+     "claim": "HUS (hemolytic uremic syndrome) is treated supportively with fluid and electrolyte management, transfusion, and dialysis when needed.",
+     "from": "Supportive care is fluid and electrolyte management, transfusion, and dialysis when needed."
+    },
+    {
+     "claim": "Withhold antibiotics and antimotility agents in suspected Shiga toxin infection ⚠︎.",
+     "from": "Antibiotics and antimotility agents are withheld in suspected Shiga toxin infection."
+    },
+    {
      "claim": "HUS stands for hemolytic uremic syndrome.",
      "from": "expansion"
-    },
-    {
-     "claim": "HUS is treated supportively with fluid and electrolyte management, transfusion, and dialysis when needed.",
-     "from": "HUS is treated supportively: fluid and electrolyte management, transfusion, and dialysis when needed."
-    },
-    {
-     "claim": "Antibiotics and antimotility agents are withheld in suspected Shiga toxin infection (flagged).",
-     "from": "Antibiotics and antimotility agents are withheld in suspected Shiga toxin infection (flagged)."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "anemia-thrombocytopenia",
-   "find": "<b>How many cell lines are down?</b> &mdash; Anemia plus a consumed platelet count → the microangiopathy family, not a single-lineage problem &middot; <b>Is the hemolysis mechanical or immune?</b> &mdash; Schistocytes with a negative Coombs → mechanical shearing &middot; <b>Are the coagulation studies normal?</b> &mdash; Yes → HUS or TTP, not DIC &middot; <b>Which organ, and what came first?</b> &mdash; Kidney, after bloody diarrhea in a child → HUS &middot; <b>Now read each marker off the mechanism</b> &mdash; haptoglobin consumed and falling, reticulocytes rising, indirect bilirubin rising, Coombs negative",
-   "with": "<b>How many cell lines are down?</b> &mdash; Anemia plus a consumed platelet count → the microangiopathy family, not a single-lineage problem &middot; <b>Is the hemolysis mechanical or immune?</b> &mdash; Schistocytes with a negative Coombs → mechanical shearing &middot; <b>Are the coagulation studies normal?</b> &mdash; Yes → <b>HUS</b> (hemolytic uremic syndrome) or <b>TTP</b> (thrombotic thrombocytopenic purpura), not <b>DIC</b> (disseminated intravascular coagulation) &middot; <b>Which organ, and what came first?</b> &mdash; Kidney, after bloody diarrhea in a child → HUS &middot; <b>Marker directions from the mechanism</b> &mdash; haptoglobin consumed and falling, reticulocytes rising, indirect bilirubin rising, Coombs negative",
-   "note": "decision spine: reword rhetorical bold label, expand acronyms",
-   "reworded_bold": [
-    "Now read each marker off the mechanism"
-   ],
+   "find": "<b>Are the coagulation studies normal?</b> &mdash; Yes → HUS or TTP, not DIC",
+   "with": "<b>Are the coagulation studies normal?</b> &mdash; Yes → <b>HUS</b> (hemolytic uremic syndrome) or <b>TTP</b> (thrombotic thrombocytopenic purpura), not <b>DIC</b> (disseminated intravascular coagulation)",
+   "note": "decision spine: expand acronyms at first use",
    "claims": [
     {
-     "claim": "Anemia plus a consumed platelet count points to the microangiopathy family, not a single-lineage problem.",
-     "to": "How many cell lines are down? — Anemia plus a consumed platelet count → the microangiopathy family, not a single-lineage problem"
-    },
-    {
-     "claim": "Schistocytes with a negative Coombs point to mechanical shearing.",
-     "to": "Is the hemolysis mechanical or immune? — Schistocytes with a negative Coombs → mechanical shearing"
-    },
-    {
      "claim": "Normal coagulation studies point to HUS or TTP, not DIC.",
-     "to": "Are the coagulation studies normal? — Yes → HUS (hemolytic uremic syndrome) or TTP (thrombotic thrombocytopenic purpura), not DIC (disseminated intravascular coagulation)"
-    },
-    {
-     "claim": "Kidney involvement after bloody diarrhea in a child points to HUS.",
-     "to": "Which organ, and what came first? — Kidney, after bloody diarrhea in a child → HUS"
-    },
-    {
-     "claim": "Read each marker off the mechanism: haptoglobin consumed and falling, reticulocytes rising, indirect bilirubin rising, Coombs negative.",
-     "to": "Marker directions from the mechanism — haptoglobin consumed and falling, reticulocytes rising, indirect bilirubin rising, Coombs negative"
+     "to": "Yes → HUS (hemolytic uremic syndrome) or TTP (thrombotic thrombocytopenic purpura), not DIC (disseminated intravascular coagulation)"
     }
    ],
    "new_claims": [
     {
-     "claim": "Anemia plus a consumed platelet count points to the microangiopathy family, not a single-lineage problem.",
-     "from": "Anemia plus a consumed platelet count points to the microangiopathy family, not a single-lineage problem."
-    },
-    {
-     "claim": "Schistocytes with a negative Coombs point to mechanical shearing.",
-     "from": "Schistocytes with a negative Coombs point to mechanical shearing."
-    },
-    {
-     "claim": "Normal coagulation studies point to HUS or TTP, not DIC.",
+     "claim": "Yes → HUS (hemolytic uremic syndrome) or TTP (thrombotic thrombocytopenic purpura), not DIC (disseminated intravascular coagulation)",
      "from": "Normal coagulation studies point to HUS or TTP, not DIC."
     },
     {
@@ -279,14 +312,28 @@
     {
      "claim": "DIC stands for disseminated intravascular coagulation.",
      "from": "expansion"
-    },
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "<b>Now read each marker off the mechanism</b>",
+   "with": "<b>Marker directions from the mechanism</b>",
+   "note": "decision spine: rhetorical bold label reworded",
+   "reworded_bold": [
+    "Now read each marker off the mechanism"
+   ],
+   "claims": [
     {
-     "claim": "Kidney involvement after bloody diarrhea in a child points to HUS.",
-     "from": "Kidney involvement after bloody diarrhea in a child points to HUS."
-    },
+     "claim": "Each marker is read off the mechanism.",
+     "to": "Marker directions from the mechanism — haptoglobin consumed and falling, reticulocytes rising, indirect bilirubin rising, Coombs negative"
+    }
+   ],
+   "new_claims": [
     {
-     "claim": "Marker directions from the mechanism: haptoglobin consumed and falling, reticulocytes rising, indirect bilirubin rising, Coombs negative.",
-     "from": "Read each marker off the mechanism: haptoglobin consumed and falling, reticulocytes rising, indirect bilirubin rising, Coombs negative."
+     "claim": "Marker directions from the mechanism — haptoglobin consumed and falling, reticulocytes rising, indirect bilirubin rising, Coombs negative",
+     "from": "Each marker is read off the mechanism."
     }
    ]
   },
@@ -294,12 +341,12 @@
    "op": "replace",
    "brief": "anemia-thrombocytopenia",
    "find": "<b>TTP pentad</b> &mdash; microangiopathic hemolytic anemia, thrombocytopenia, fever, neurologic signs, renal injury; most patients do not have all five, and anemia with schistocytes plus low platelets is enough to act",
-   "with": "<b>TTP pentad</b> (thrombotic thrombocytopenic purpura): microangiopathic hemolytic anemia, thrombocytopenia, fever, neurologic signs and renal injury. Most patients do not have all five; anemia with schistocytes plus low platelets is enough to act.",
-   "note": "mnemonic: prose em dash to colon, expand TTP, split",
+   "with": "<b>TTP pentad</b> (thrombotic thrombocytopenic purpura): microangiopathic hemolytic anemia, thrombocytopenia, fever, neurologic signs, renal injury. Most patients do not have all five; anemia with schistocytes plus low platelets is enough to act.",
+   "note": "mnemonic: no middot rows, so em dash becomes colon; expand TTP",
    "claims": [
     {
-     "claim": "The TTP pentad is microangiopathic hemolytic anemia, thrombocytopenia, fever, neurologic signs, renal injury.",
-     "to": "TTP pentad (thrombotic thrombocytopenic purpura): microangiopathic hemolytic anemia, thrombocytopenia, fever, neurologic signs and renal injury."
+     "claim": "The TTP pentad is microangiopathic hemolytic anemia, thrombocytopenia, fever, neurologic signs and renal injury.",
+     "to": "TTP pentad (thrombotic thrombocytopenic purpura): microangiopathic hemolytic anemia, thrombocytopenia, fever, neurologic signs, renal injury."
     },
     {
      "claim": "Most patients do not have all five.",
@@ -312,12 +359,8 @@
    ],
    "new_claims": [
     {
-     "claim": "TTP stands for thrombotic thrombocytopenic purpura.",
-     "from": "expansion"
-    },
-    {
-     "claim": "The TTP pentad is microangiopathic hemolytic anemia, thrombocytopenia, fever, neurologic signs and renal injury.",
-     "from": "The TTP pentad is microangiopathic hemolytic anemia, thrombocytopenia, fever, neurologic signs, renal injury."
+     "claim": "TTP pentad (thrombotic thrombocytopenic purpura): microangiopathic hemolytic anemia, thrombocytopenia, fever, neurologic signs, renal injury.",
+     "from": "The TTP pentad is microangiopathic hemolytic anemia, thrombocytopenia, fever, neurologic signs and renal injury."
     },
     {
      "claim": "Most patients do not have all five.",
@@ -326,6 +369,10 @@
     {
      "claim": "Anemia with schistocytes plus low platelets is enough to act.",
      "from": "Anemia with schistocytes plus low platelets is enough to act."
+    },
+    {
+     "claim": "TTP stands for thrombotic thrombocytopenic purpura.",
+     "from": "expansion"
     }
    ]
   },
@@ -333,31 +380,31 @@
    "op": "replace",
    "brief": "anemia-thrombocytopenia",
    "find": "The cookout and the recovered relatives are epidemiology, not pathophysiology — they confirm a point-source Shiga toxin exposure and settle no laboratory value. \"Significant blood in his stool, which has since resolved\" is the sharpest bait: it invites an iron-deficiency answer for bleeding that stopped days ago and was never chronic. And the absence of bruising or petechiae quietly tempts you away from the platelet answer, when consumptive thrombocytopenia in HUS frequently produces no bleeding at all.",
-   "with": "The cookout and the relatives who recovered are epidemiology. They confirm a point-source Shiga toxin exposure but settle no laboratory value. The &ldquo;significant blood in his stool&rdquo; does not support iron deficiency. That bleeding has since resolved, stopped days ago and was never chronic. The absence of bruising or petechiae does not argue against a low platelet count. Consumptive thrombocytopenia in <b>HUS</b> (hemolytic uremic syndrome) frequently produces no bleeding at all.",
-   "note": "decoy note: remove bait/tempt framing and em dash",
+   "with": "The cookout and the recovered relatives are epidemiology: they confirm a point-source Shiga toxin exposure but settle no laboratory value. The stool blood \"has since resolved\"; it stopped days ago and was never chronic, so it does not support iron deficiency. The absence of bruising or petechiae does not argue against a low platelet count. Consumptive thrombocytopenia in <b>HUS</b> (hemolytic uremic syndrome) frequently produces no bleeding at all.",
+   "note": "decoy note: remove rhetorical framing and em dash",
    "claims": [
     {
      "claim": "The cookout and the recovered relatives are epidemiology, not pathophysiology.",
-     "to": "The cookout and the relatives who recovered are epidemiology."
+     "to": "The cookout and the recovered relatives are epidemiology: they confirm a point-source Shiga toxin exposure but settle no laboratory value."
     },
     {
-     "claim": "They confirm a point-source Shiga toxin exposure and settle no laboratory value.",
-     "to": "They confirm a point-source Shiga toxin exposure but settle no laboratory value."
+     "claim": "They confirm a point-source Shiga toxin exposure.",
+     "to": "The cookout and the recovered relatives are epidemiology: they confirm a point-source Shiga toxin exposure but settle no laboratory value."
     },
     {
-     "claim": "The resolved blood in the stool invites an iron-deficiency answer.",
-     "to": "The “significant blood in his stool” does not support iron deficiency."
-    },
-    {
-     "claim": "That bleeding stopped days ago and was never chronic.",
-     "to": "That bleeding has since resolved, stopped days ago and was never chronic."
+     "claim": "They settle no laboratory value.",
+     "to": "The cookout and the recovered relatives are epidemiology: they confirm a point-source Shiga toxin exposure but settle no laboratory value."
     },
     {
      "claim": "The resolved stool blood is the sharpest bait.",
-     "dropped": "rhetorical framing; the bleeding detail and why it misleads are kept"
+     "dropped": "rhetorical framing; why it misleads is stated in the same place"
     },
     {
-     "claim": "The absence of bruising or petechiae tempts away from the platelet answer.",
+     "claim": "The stool blood has since resolved, stopped days ago and was never chronic, so an iron-deficiency answer is wrong.",
+     "to": "The stool blood \"has since resolved\"; it stopped days ago and was never chronic, so it does not support iron deficiency."
+    },
+    {
+     "claim": "The absence of bruising or petechiae tempts away from the low platelet count.",
      "to": "The absence of bruising or petechiae does not argue against a low platelet count."
     },
     {
@@ -367,32 +414,32 @@
    ],
    "new_claims": [
     {
-     "claim": "The cookout and the relatives who recovered are epidemiology.",
+     "claim": "The cookout and the recovered relatives are epidemiology: they confirm a point-source Shiga toxin exposure but settle no laboratory value.",
      "from": "The cookout and the recovered relatives are epidemiology, not pathophysiology."
     },
     {
-     "claim": "They confirm a point-source Shiga toxin exposure but settle no laboratory value.",
-     "from": "They confirm a point-source Shiga toxin exposure and settle no laboratory value."
+     "claim": "They confirm a point-source Shiga toxin exposure.",
+     "from": "They confirm a point-source Shiga toxin exposure."
     },
     {
-     "claim": "The resolved stool blood does not support iron deficiency.",
-     "from": "The resolved blood in the stool invites an iron-deficiency answer."
+     "claim": "The cookout and the recovered relatives are epidemiology: they confirm a point-source Shiga toxin exposure but settle no laboratory value.",
+     "from": "They settle no laboratory value."
     },
     {
-     "claim": "That bleeding has since resolved, stopped days ago and was never chronic.",
-     "from": "That bleeding stopped days ago and was never chronic."
+     "claim": "The stool blood \"has since resolved\"; it stopped days ago and was never chronic, so it does not support iron deficiency.",
+     "from": "The stool blood has since resolved, stopped days ago and was never chronic, so an iron-deficiency answer is wrong."
     },
     {
      "claim": "The absence of bruising or petechiae does not argue against a low platelet count.",
-     "from": "The absence of bruising or petechiae tempts away from the platelet answer."
+     "from": "The absence of bruising or petechiae tempts away from the low platelet count."
+    },
+    {
+     "claim": "Consumptive thrombocytopenia in HUS (hemolytic uremic syndrome) frequently produces no bleeding at all.",
+     "from": "Consumptive thrombocytopenia in HUS frequently produces no bleeding at all."
     },
     {
      "claim": "HUS stands for hemolytic uremic syndrome.",
      "from": "expansion"
-    },
-    {
-     "claim": "Consumptive thrombocytopenia in HUS frequently produces no bleeding at all.",
-     "from": "Consumptive thrombocytopenia in HUS frequently produces no bleeding at all."
     }
    ]
   },
@@ -400,20 +447,24 @@
    "op": "replace",
    "brief": "anemia-thrombocytopenia",
    "find": "Bloody diarrhea a week ago plus anuria and jaundice is HUS: schistocytes, low platelets, rising creatinine, and a negative Coombs. &middot; Two cytopenias with schistocytes means mechanical destruction, and mechanical destruction means the Coombs is <b>negative</b> by definition — nothing is antibody-coated. &middot; Haptoglobin is consumed in hemolysis while ferritin and other acute-phase reactants rise; a marker's direction follows from whether the process uses it up or the liver makes more of it. &middot; Reticulocytes rise in hemolysis and fall in marrow failure — a <i>falling</i> reticulocyte count in a known hemolytic patient is aplastic crisis until proven otherwise ⚠︎. &middot; Normal coagulation studies separate HUS and TTP from DIC; the kidney after bloody diarrhea in a child is HUS, the brain without diarrhea in an adult is TTP ⚠︎. &middot; The two transfusions to withhold: platelets in TTP, which feed the microthrombi ⚠︎, and antibiotics in suspected Shiga toxin colitis, which may increase toxin release ⚠︎.",
-   "with": "Bloody diarrhea a week ago plus anuria and jaundice is <b>HUS</b> (hemolytic uremic syndrome): schistocytes, low platelets, rising creatinine, and a negative Coombs. &middot; Two cytopenias with schistocytes mean mechanical destruction. In mechanical destruction the Coombs is <b>negative</b> by definition, because nothing is antibody-coated. &middot; Haptoglobin is consumed in hemolysis, while ferritin and other acute-phase reactants rise. A marker's direction follows from whether the process uses it up or the liver makes more of it. &middot; Reticulocytes rise in hemolysis and fall in marrow failure. A <i>falling</i> reticulocyte count in a known hemolytic patient is aplastic crisis until proven otherwise ⚠︎. &middot; Normal coagulation studies separate HUS and <b>TTP</b> (thrombotic thrombocytopenic purpura) from <b>DIC</b> (disseminated intravascular coagulation). Kidney involvement after bloody diarrhea in a child is HUS; brain involvement without diarrhea in an adult is TTP ⚠︎. &middot; Withhold platelet transfusion in TTP, because platelets feed the microthrombi ⚠︎. Withhold antibiotics in suspected Shiga toxin colitis, because they may increase toxin release ⚠︎.",
-   "note": "pearls: remove prose em dashes, split, expand acronyms",
+   "with": "Bloody diarrhea a week ago plus anuria and jaundice is <b>HUS</b> (hemolytic uremic syndrome): schistocytes, low platelets, rising creatinine and a negative Coombs test. &middot; Two cytopenias with schistocytes mean mechanical destruction. In mechanical destruction the Coombs test is by definition <b>negative</b>, because no cell is antibody-coated. &middot; Haptoglobin is consumed in hemolysis, while ferritin and other acute-phase reactants rise. A marker falls if the process uses it up and rises if the liver makes more of it. &middot; Reticulocytes rise in hemolysis and fall in marrow failure. A <i>falling</i> reticulocyte count in a known hemolytic patient is aplastic crisis until proven otherwise ⚠︎. &middot; Normal coagulation studies separate HUS and <b>TTP</b> (thrombotic thrombocytopenic purpura) from <b>DIC</b> (disseminated intravascular coagulation). Kidney injury after bloody diarrhea in a child is HUS; brain involvement without diarrhea in an adult is TTP ⚠︎. &middot; Withhold platelet transfusion in TTP, because platelets feed the microthrombi ⚠︎. Withhold antibiotics in suspected Shiga toxin colitis, because they may increase toxin release ⚠︎.",
+   "note": "pearls: split chains, remove em dashes, expand acronyms, fix \"two transfusions\" wording",
    "claims": [
     {
-     "claim": "Bloody diarrhea a week ago plus anuria and jaundice is HUS: schistocytes, low platelets, rising creatinine, and a negative Coombs.",
-     "to": "Bloody diarrhea a week ago plus anuria and jaundice is HUS (hemolytic uremic syndrome): schistocytes, low platelets, rising creatinine, and a negative Coombs."
+     "claim": "Bloody diarrhea a week ago plus anuria and jaundice is HUS.",
+     "to": "Bloody diarrhea a week ago plus anuria and jaundice is HUS (hemolytic uremic syndrome): schistocytes, low platelets, rising creatinine and a negative Coombs test."
+    },
+    {
+     "claim": "HUS shows schistocytes, low platelets, rising creatinine and a negative Coombs.",
+     "to": "Bloody diarrhea a week ago plus anuria and jaundice is HUS (hemolytic uremic syndrome): schistocytes, low platelets, rising creatinine and a negative Coombs test."
     },
     {
      "claim": "Two cytopenias with schistocytes means mechanical destruction.",
      "to": "Two cytopenias with schistocytes mean mechanical destruction."
     },
     {
-     "claim": "In mechanical destruction the Coombs is negative by definition; nothing is antibody-coated.",
-     "to": "In mechanical destruction the Coombs is negative by definition, because nothing is antibody-coated."
+     "claim": "Mechanical destruction means the Coombs is negative by definition, since nothing is antibody-coated.",
+     "to": "In mechanical destruction the Coombs test is by definition negative, because no cell is antibody-coated."
     },
     {
      "claim": "Haptoglobin is consumed in hemolysis while ferritin and other acute-phase reactants rise.",
@@ -421,14 +472,14 @@
     },
     {
      "claim": "A marker's direction follows from whether the process uses it up or the liver makes more of it.",
-     "to": "A marker's direction follows from whether the process uses it up or the liver makes more of it."
+     "to": "A marker falls if the process uses it up and rises if the liver makes more of it."
     },
     {
      "claim": "Reticulocytes rise in hemolysis and fall in marrow failure.",
      "to": "Reticulocytes rise in hemolysis and fall in marrow failure."
     },
     {
-     "claim": "A falling reticulocyte count in a known hemolytic patient is aplastic crisis until proven otherwise (flagged).",
+     "claim": "A falling reticulocyte count in a known hemolytic patient is aplastic crisis until proven otherwise.",
      "to": "A falling reticulocyte count in a known hemolytic patient is aplastic crisis until proven otherwise ⚠︎."
     },
     {
@@ -436,41 +487,45 @@
      "to": "Normal coagulation studies separate HUS and TTP (thrombotic thrombocytopenic purpura) from DIC (disseminated intravascular coagulation)."
     },
     {
-     "claim": "The kidney after bloody diarrhea in a child is HUS; the brain without diarrhea in an adult is TTP (flagged).",
-     "to": "Kidney involvement after bloody diarrhea in a child is HUS; brain involvement without diarrhea in an adult is TTP ⚠︎."
+     "claim": "The kidney after bloody diarrhea in a child is HUS.",
+     "to": "Kidney injury after bloody diarrhea in a child is HUS; brain involvement without diarrhea in an adult is TTP ⚠︎."
     },
     {
-     "claim": "Withhold platelets in TTP, which feed the microthrombi (flagged).",
+     "claim": "The brain without diarrhea in an adult is TTP.",
+     "to": "Kidney injury after bloody diarrhea in a child is HUS; brain involvement without diarrhea in an adult is TTP ⚠︎."
+    },
+    {
+     "claim": "Platelets are withheld in TTP because they feed the microthrombi.",
      "to": "Withhold platelet transfusion in TTP, because platelets feed the microthrombi ⚠︎."
     },
     {
-     "claim": "Withhold antibiotics in suspected Shiga toxin colitis, which may increase toxin release (flagged).",
+     "claim": "Antibiotics are withheld in suspected Shiga toxin colitis because they may increase toxin release.",
      "to": "Withhold antibiotics in suspected Shiga toxin colitis, because they may increase toxin release ⚠︎."
     }
    ],
    "new_claims": [
     {
-     "claim": "HUS stands for hemolytic uremic syndrome.",
-     "from": "expansion"
+     "claim": "Bloody diarrhea a week ago plus anuria and jaundice is HUS.",
+     "from": "Bloody diarrhea a week ago plus anuria and jaundice is HUS."
     },
     {
-     "claim": "Bloody diarrhea a week ago plus anuria and jaundice is HUS: schistocytes, low platelets, rising creatinine, and a negative Coombs.",
-     "from": "Bloody diarrhea a week ago plus anuria and jaundice is HUS: schistocytes, low platelets, rising creatinine, and a negative Coombs."
+     "claim": "Bloody diarrhea a week ago plus anuria and jaundice is HUS (hemolytic uremic syndrome): schistocytes, low platelets, rising creatinine and a negative Coombs test.",
+     "from": "HUS shows schistocytes, low platelets, rising creatinine and a negative Coombs."
     },
     {
      "claim": "Two cytopenias with schistocytes mean mechanical destruction.",
      "from": "Two cytopenias with schistocytes means mechanical destruction."
     },
     {
-     "claim": "In mechanical destruction the Coombs is negative by definition, because nothing is antibody-coated.",
-     "from": "In mechanical destruction the Coombs is negative by definition; nothing is antibody-coated."
+     "claim": "In mechanical destruction the Coombs test is by definition negative, because no cell is antibody-coated.",
+     "from": "Mechanical destruction means the Coombs is negative by definition, since nothing is antibody-coated."
     },
     {
-     "claim": "Haptoglobin is consumed in hemolysis while ferritin and other acute-phase reactants rise.",
+     "claim": "Haptoglobin is consumed in hemolysis, while ferritin and other acute-phase reactants rise.",
      "from": "Haptoglobin is consumed in hemolysis while ferritin and other acute-phase reactants rise."
     },
     {
-     "claim": "A marker's direction follows from whether the process uses it up or the liver makes more of it.",
+     "claim": "A marker falls if the process uses it up and rises if the liver makes more of it.",
      "from": "A marker's direction follows from whether the process uses it up or the liver makes more of it."
     },
     {
@@ -478,12 +533,32 @@
      "from": "Reticulocytes rise in hemolysis and fall in marrow failure."
     },
     {
-     "claim": "A falling reticulocyte count in a known hemolytic patient is aplastic crisis until proven otherwise (flagged).",
-     "from": "A falling reticulocyte count in a known hemolytic patient is aplastic crisis until proven otherwise (flagged)."
+     "claim": "A falling reticulocyte count in a known hemolytic patient is aplastic crisis until proven otherwise.",
+     "from": "A falling reticulocyte count in a known hemolytic patient is aplastic crisis until proven otherwise."
     },
     {
      "claim": "Normal coagulation studies separate HUS and TTP from DIC.",
      "from": "Normal coagulation studies separate HUS and TTP from DIC."
+    },
+    {
+     "claim": "Kidney injury after bloody diarrhea in a child is HUS; brain involvement without diarrhea in an adult is TTP ⚠︎.",
+     "from": "The kidney after bloody diarrhea in a child is HUS."
+    },
+    {
+     "claim": "Kidney injury after bloody diarrhea in a child is HUS; brain involvement without diarrhea in an adult is TTP ⚠︎.",
+     "from": "The brain without diarrhea in an adult is TTP."
+    },
+    {
+     "claim": "Withhold platelet transfusion in TTP, because platelets feed the microthrombi ⚠︎.",
+     "from": "Platelets are withheld in TTP because they feed the microthrombi."
+    },
+    {
+     "claim": "Withhold antibiotics in suspected Shiga toxin colitis, because they may increase toxin release ⚠︎.",
+     "from": "Antibiotics are withheld in suspected Shiga toxin colitis because they may increase toxin release."
+    },
+    {
+     "claim": "HUS stands for hemolytic uremic syndrome.",
+     "from": "expansion"
     },
     {
      "claim": "TTP stands for thrombotic thrombocytopenic purpura.",
@@ -492,18 +567,6 @@
     {
      "claim": "DIC stands for disseminated intravascular coagulation.",
      "from": "expansion"
-    },
-    {
-     "claim": "Kidney involvement after bloody diarrhea in a child is HUS; brain involvement without diarrhea in an adult is TTP (flagged).",
-     "from": "The kidney after bloody diarrhea in a child is HUS; the brain without diarrhea in an adult is TTP (flagged)."
-    },
-    {
-     "claim": "Withhold platelet transfusion in TTP, because platelets feed the microthrombi (flagged).",
-     "from": "Withhold platelets in TTP, which feed the microthrombi (flagged)."
-    },
-    {
-     "claim": "Withhold antibiotics in suspected Shiga toxin colitis, because they may increase toxin release (flagged).",
-     "from": "Withhold antibiotics in suspected Shiga toxin colitis, which may increase toxin release (flagged)."
     }
    ]
   },
@@ -511,28 +574,32 @@
    "op": "replace",
    "brief": "anemia-thrombocytopenia",
    "find": "Verified: Part II <b>NSAID Prerenal AKI in a Child</b> owns the acute-kidney-injury compartments and carries the HUS row from the renal side, and Part II <b>Hereditary Spherocytosis</b> owns the Coombs-negative hemolysis fork when the platelets and kidneys are normal. This brief owns the case where both cell lines fall together. Store the discriminator as a question: <i>is a second cell line down, and is the smear sheared or spherocytic?</i> Part I <b>Drug-Induced Immune Hemolysis</b> owns the other side of the platelet count, where hemolysis arrives with a normal platelet count and an antibody rather than a clot. Aquifer <b>Bruising and Purpura in a Child</b> starts one step earlier, from the bruise, and sorts it by the platelet count.",
-   "with": "Part II <b>NSAID Prerenal AKI in a Child</b> covers acute kidney injury and carries the HUS (hemolytic uremic syndrome) row from the renal side. Part II <b>Hereditary Spherocytosis</b> covers the Coombs-negative hemolysis fork when the platelets and kidneys are normal. This brief covers the case where both cell lines fall together. Ask: <i>is a second cell line down, and is the smear sheared or spherocytic?</i> Part I <b>Drug-Induced Immune Hemolysis</b> covers hemolysis that arrives with a normal platelet count and an antibody rather than a clot. Aquifer <b>Bruising and Purpura in a Child</b> starts one step earlier, from the bruise, and sorts it by the platelet count.",
-   "note": "pairs with: strip Verified, owns->covers, discriminator as Ask",
+   "with": "Part II <b>NSAID Prerenal AKI in a Child</b> covers the acute-kidney-injury compartments and carries the hemolytic uremic syndrome row from the renal side. Part II <b>Hereditary Spherocytosis</b> covers Coombs-negative hemolysis when the platelets and kidneys are normal. This brief covers the case where both cell lines fall together. Ask: <i>is a second cell line down, and is the smear sheared or spherocytic?</i> Part I <b>Drug-Induced Immune Hemolysis</b> covers hemolysis with a normal platelet count and an antibody rather than a clot. Aquifer <b>Bruising and Purpura in a Child</b> starts one step earlier, from the bruise, and sorts it by the platelet count.",
+   "note": "pairs with: strip Verified, owns -> covers, discriminator as Ask",
    "claims": [
     {
-     "claim": "NSAID Prerenal AKI in a Child covers acute kidney injury and carries the HUS row from the renal side.",
-     "to": "Part II NSAID Prerenal AKI in a Child covers acute kidney injury and carries the HUS (hemolytic uremic syndrome) row from the renal side."
+     "claim": "Verified.",
+     "dropped": "internal workflow tag"
     },
     {
-     "claim": "Hereditary Spherocytosis covers the Coombs-negative hemolysis fork when platelets and kidneys are normal.",
-     "to": "Part II Hereditary Spherocytosis covers the Coombs-negative hemolysis fork when the platelets and kidneys are normal."
+     "claim": "NSAID Prerenal AKI in a Child owns the acute-kidney-injury compartments and carries the HUS row from the renal side.",
+     "to": "Part II NSAID Prerenal AKI in a Child covers the acute-kidney-injury compartments and carries the hemolytic uremic syndrome row from the renal side."
     },
     {
-     "claim": "This brief covers the case where both cell lines fall together.",
+     "claim": "Hereditary Spherocytosis owns the Coombs-negative hemolysis fork when the platelets and kidneys are normal.",
+     "to": "Part II Hereditary Spherocytosis covers Coombs-negative hemolysis when the platelets and kidneys are normal."
+    },
+    {
+     "claim": "This brief owns the case where both cell lines fall together.",
      "to": "This brief covers the case where both cell lines fall together."
     },
     {
-     "claim": "Discriminator: is a second cell line down, and is the smear sheared or spherocytic?",
+     "claim": "The discriminator: is a second cell line down, and is the smear sheared or spherocytic?",
      "to": "Ask: is a second cell line down, and is the smear sheared or spherocytic?"
     },
     {
-     "claim": "Drug-Induced Immune Hemolysis covers hemolysis with a normal platelet count and an antibody rather than a clot.",
-     "to": "Part I Drug-Induced Immune Hemolysis covers hemolysis that arrives with a normal platelet count and an antibody rather than a clot."
+     "claim": "Drug-Induced Immune Hemolysis owns the other side of the platelet count: hemolysis with a normal platelet count and an antibody rather than a clot.",
+     "to": "Part I Drug-Induced Immune Hemolysis covers hemolysis with a normal platelet count and an antibody rather than a clot."
     },
     {
      "claim": "Bruising and Purpura in a Child starts one step earlier, from the bruise, and sorts it by the platelet count.",
@@ -541,28 +608,24 @@
    ],
    "new_claims": [
     {
-     "claim": "HUS stands for hemolytic uremic syndrome.",
-     "from": "expansion"
+     "claim": "Part II NSAID Prerenal AKI in a Child covers the acute-kidney-injury compartments and carries the hemolytic uremic syndrome row from the renal side.",
+     "from": "NSAID Prerenal AKI in a Child owns the acute-kidney-injury compartments and carries the HUS row from the renal side."
     },
     {
-     "claim": "NSAID Prerenal AKI in a Child covers acute kidney injury and carries the HUS row from the renal side.",
-     "from": "NSAID Prerenal AKI in a Child covers acute kidney injury and carries the HUS row from the renal side."
-    },
-    {
-     "claim": "Hereditary Spherocytosis covers the Coombs-negative hemolysis fork when platelets and kidneys are normal.",
-     "from": "Hereditary Spherocytosis covers the Coombs-negative hemolysis fork when platelets and kidneys are normal."
+     "claim": "Part II Hereditary Spherocytosis covers Coombs-negative hemolysis when the platelets and kidneys are normal.",
+     "from": "Hereditary Spherocytosis owns the Coombs-negative hemolysis fork when the platelets and kidneys are normal."
     },
     {
      "claim": "This brief covers the case where both cell lines fall together.",
-     "from": "This brief covers the case where both cell lines fall together."
+     "from": "This brief owns the case where both cell lines fall together."
     },
     {
      "claim": "Ask: is a second cell line down, and is the smear sheared or spherocytic?",
-     "from": "Discriminator: is a second cell line down, and is the smear sheared or spherocytic?"
+     "from": "The discriminator: is a second cell line down, and is the smear sheared or spherocytic?"
     },
     {
-     "claim": "Drug-Induced Immune Hemolysis covers hemolysis with a normal platelet count and an antibody rather than a clot.",
-     "from": "Drug-Induced Immune Hemolysis covers hemolysis with a normal platelet count and an antibody rather than a clot."
+     "claim": "Part I Drug-Induced Immune Hemolysis covers hemolysis with a normal platelet count and an antibody rather than a clot.",
+     "from": "Drug-Induced Immune Hemolysis owns the other side of the platelet count: hemolysis with a normal platelet count and an antibody rather than a clot."
     },
     {
      "claim": "Bruising and Purpura in a Child starts one step earlier, from the bruise, and sorts it by the platelet count.",
@@ -574,37 +637,33 @@
    "op": "replace",
    "brief": "anemia-thrombocytopenia",
    "find": "When a question asks which laboratory abnormality is \"associated,\" it is testing the <b>direction</b> each marker moves under a stated mechanism, not whether you can name the marker — so derive direction from the mechanism (consumed or produced, mechanical or immune), and when the findings assemble a named syndrome, enumerate its triad rather than re-deriving each leg.",
-   "with": "To predict which laboratory abnormality is associated, derive the <b>direction</b> each marker moves from the stated mechanism: consumed or produced, mechanical or immune. When the findings assemble a named syndrome, enumerate its triad rather than re-deriving each component.",
-   "note": "rule: remove question framing and em dash",
+   "with": "For a laboratory abnormality \"associated\" with a stated mechanism, what matters is the <b>direction</b> each marker moves, not the marker's name. Derive the direction from the mechanism: consumed or produced, mechanical or immune. When the findings form a named syndrome, list its triad rather than re-deriving each component.",
+   "note": "rule: split long sentence, remove em dash",
    "claims": [
     {
-     "claim": "An \"associated\" laboratory abnormality is about the direction each marker moves under a stated mechanism.",
-     "to": "To predict which laboratory abnormality is associated, derive the direction each marker moves from the stated mechanism: consumed or produced, mechanical or immune."
+     "claim": "Asking which laboratory abnormality is \"associated\" tests the direction each marker moves under a stated mechanism, not whether the marker can be named.",
+     "to": "For a laboratory abnormality \"associated\" with a stated mechanism, what matters is the direction each marker moves, not the marker's name."
     },
     {
-     "claim": "It is not about naming the marker.",
-     "dropped": "framing about what the question tests"
-    },
-    {
-     "claim": "Derive direction from the mechanism: consumed or produced, mechanical or immune.",
-     "to": "To predict which laboratory abnormality is associated, derive the direction each marker moves from the stated mechanism: consumed or produced, mechanical or immune."
+     "claim": "Derive direction from the mechanism (consumed or produced, mechanical or immune).",
+     "to": "Derive the direction from the mechanism: consumed or produced, mechanical or immune."
     },
     {
      "claim": "When the findings assemble a named syndrome, enumerate its triad rather than re-deriving each leg.",
-     "to": "When the findings assemble a named syndrome, enumerate its triad rather than re-deriving each component."
+     "to": "When the findings form a named syndrome, list its triad rather than re-deriving each component."
     }
    ],
    "new_claims": [
     {
-     "claim": "Derive the direction each marker moves from the stated mechanism: consumed or produced, mechanical or immune.",
-     "from": "Derive direction from the mechanism: consumed or produced, mechanical or immune."
+     "claim": "For a laboratory abnormality \"associated\" with a stated mechanism, what matters is the direction each marker moves, not the marker's name.",
+     "from": "Asking which laboratory abnormality is \"associated\" tests the direction each marker moves under a stated mechanism, not whether the marker can be named."
     },
     {
-     "claim": "To predict an associated laboratory abnormality, use the marker direction under the stated mechanism.",
-     "from": "An \"associated\" laboratory abnormality is about the direction each marker moves under a stated mechanism."
+     "claim": "Derive the direction from the mechanism: consumed or produced, mechanical or immune.",
+     "from": "Derive direction from the mechanism (consumed or produced, mechanical or immune)."
     },
     {
-     "claim": "When the findings assemble a named syndrome, enumerate its triad rather than re-deriving each component.",
+     "claim": "When the findings form a named syndrome, list its triad rather than re-deriving each component.",
      "from": "When the findings assemble a named syndrome, enumerate its triad rather than re-deriving each leg."
     }
    ]
@@ -612,89 +671,81 @@
   {
    "op": "replace",
    "brief": "anemia-thrombocytopenia",
-   "find": "Increased serum haptoglobin: The direction is inverted — haptoglobin binds free hemoglobin and is <b>consumed</b>, so it falls in hemolysis",
-   "with": "Increased serum haptoglobin: Haptoglobin binds free hemoglobin and is <b>consumed</b>, so it falls rather than rises in hemolysis",
-   "note": "trap: remove em dash",
+   "find": "The direction is inverted — haptoglobin binds free hemoglobin and is <b>consumed</b>, so it falls in hemolysis",
+   "with": "Haptoglobin binds free hemoglobin and is <b>consumed</b>, so it falls in hemolysis",
+   "note": "trap: remove em dash and framing",
    "claims": [
     {
-     "claim": "Increased haptoglobin has the direction inverted.",
-     "to": "Increased serum haptoglobin: Haptoglobin binds free hemoglobin and is consumed, so it falls rather than rises in hemolysis"
+     "claim": "Haptoglobin moves in the opposite direction: it falls rather than rises.",
+     "to": "Increased serum haptoglobin: Haptoglobin binds free hemoglobin and is consumed, so it falls in hemolysis"
     },
     {
      "claim": "Haptoglobin binds free hemoglobin and is consumed, so it falls in hemolysis.",
-     "to": "Increased serum haptoglobin: Haptoglobin binds free hemoglobin and is consumed, so it falls rather than rises in hemolysis"
+     "to": "Haptoglobin binds free hemoglobin and is consumed, so it falls in hemolysis"
     }
    ],
    "new_claims": [
     {
-     "claim": "Haptoglobin binds free hemoglobin and is consumed, so it falls rather than rises in hemolysis.",
-     "from": "Haptoglobin binds free hemoglobin and is consumed, so it falls in hemolysis."
+     "claim": "Increased serum haptoglobin: Haptoglobin binds free hemoglobin and is consumed, so it falls in hemolysis",
+     "from": "Haptoglobin moves in the opposite direction: it falls rather than rises."
     },
     {
-     "claim": "Increased haptoglobin is the inverted direction.",
-     "from": "Increased haptoglobin has the direction inverted."
+     "claim": "Haptoglobin binds free hemoglobin and is consumed, so it falls in hemolysis.",
+     "from": "Haptoglobin binds free hemoglobin and is consumed, so it falls in hemolysis."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "anemia-thrombocytopenia",
-   "find": "Coombs detects antibody-coated cells; HUS destroys red cells <b>mechanically</b>, so it is negative — and antibody hemolysis would not cause anuria and edema",
-   "with": "Coombs detects antibody-coated cells; <b>HUS</b> (hemolytic uremic syndrome) destroys red cells <b>mechanically</b>, so it is negative. Antibody hemolysis would also not cause anuria and edema",
-   "note": "trap: remove em dash, expand HUS",
+   "find": "HUS destroys red cells <b>mechanically</b>, so it is negative — and antibody hemolysis would not cause anuria and edema",
+   "with": "<b>HUS</b> (hemolytic uremic syndrome) destroys red cells <b>mechanically</b>, so the test is negative. Antibody hemolysis would not cause anuria and edema",
+   "note": "trap: remove em dash, expand HUS at first use in block",
    "claims": [
     {
-     "claim": "Coombs detects antibody-coated cells.",
-     "to": "Coombs detects antibody-coated cells; HUS (hemolytic uremic syndrome) destroys red cells mechanically, so it is negative."
-    },
-    {
-     "claim": "HUS destroys red cells mechanically, so the Coombs is negative.",
-     "to": "Coombs detects antibody-coated cells; HUS (hemolytic uremic syndrome) destroys red cells mechanically, so it is negative."
+     "claim": "HUS destroys red cells mechanically, so the Coombs test is negative.",
+     "to": "HUS (hemolytic uremic syndrome) destroys red cells mechanically, so the test is negative."
     },
     {
      "claim": "Antibody hemolysis would not cause anuria and edema.",
-     "to": "Antibody hemolysis would also not cause anuria and edema"
+     "to": "Antibody hemolysis would not cause anuria and edema"
     }
    ],
    "new_claims": [
     {
+     "claim": "HUS (hemolytic uremic syndrome) destroys red cells mechanically, so the test is negative.",
+     "from": "HUS destroys red cells mechanically, so the Coombs test is negative."
+    },
+    {
+     "claim": "Antibody hemolysis would not cause anuria and edema.",
+     "from": "Antibody hemolysis would not cause anuria and edema."
+    },
+    {
      "claim": "HUS stands for hemolytic uremic syndrome.",
      "from": "expansion"
-    },
-    {
-     "claim": "Coombs detects antibody-coated cells.",
-     "from": "Coombs detects antibody-coated cells."
-    },
-    {
-     "claim": "HUS destroys red cells mechanically, so the Coombs is negative.",
-     "from": "HUS destroys red cells mechanically, so the Coombs is negative."
-    },
-    {
-     "claim": "Antibody hemolysis would also not cause anuria and edema.",
-     "from": "Antibody hemolysis would not cause anuria and edema."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "anemia-thrombocytopenia",
-   "find": "Increased PT: DIC also consumes clotting factors",
-   "with": "Increased PT: <b>DIC</b> (disseminated intravascular coagulation) also consumes clotting factors",
-   "note": "trap: expand DIC",
+   "find": "DIC also consumes clotting factors",
+   "with": "<b>DIC</b> (disseminated intravascular coagulation) also consumes clotting factors",
+   "note": "trap: expand DIC at first use in block",
    "claims": [
     {
      "claim": "DIC also consumes clotting factors.",
-     "to": "Increased PT: DIC (disseminated intravascular coagulation) also consumes clotting factors"
+     "to": "DIC (disseminated intravascular coagulation) also consumes clotting factors"
     }
    ],
    "new_claims": [
     {
-     "claim": "DIC stands for disseminated intravascular coagulation.",
-     "from": "expansion"
-    },
-    {
      "claim": "DIC also consumes clotting factors.",
      "from": "DIC also consumes clotting factors."
+    },
+    {
+     "claim": "DIC stands for disseminated intravascular coagulation.",
+     "from": "expansion"
     }
    ]
   },
@@ -703,17 +754,17 @@
    "brief": "drug-hemolysis",
    "find": "exposure and latency name the mechanism",
    "with": "Drug exposure and latency identify the mechanism",
-   "note": "sub first segment: plain voice",
+   "note": "subtitle: remove personification",
    "claims": [
     {
-     "claim": "Exposure and latency identify the mechanism.",
+     "claim": "The exposure and the latency identify the mechanism.",
      "to": "Drug exposure and latency identify the mechanism"
     }
    ],
    "new_claims": [
     {
-     "claim": "Drug exposure and latency identify the mechanism.",
-     "from": "Exposure and latency identify the mechanism."
+     "claim": "Drug exposure and latency identify the mechanism",
+     "from": "The exposure and the latency identify the mechanism."
     }
    ]
   },
@@ -721,55 +772,59 @@
    "op": "replace",
    "brief": "drug-hemolysis",
    "find": "<p>Three numbers close this, and none of them is the hemoglobin. <b>Platelets 285,000</b> is normal, which kills disseminated intravascular coagulation and makes the fibrinogen pointless, because that is a consumptive process and cannot spare the platelet count. <b>Alkaline phosphatase 66 with AST 42 and ALT 28</b> are all normal, which kills biliary obstruction and makes both abdominal images pointless; the bilirubin of 2.3 is therefore unconjugated, from red-cell breakdown rather than from a blocked duct. What is left is hemolysis, and the discrimination is between its two drug mechanisms — and here the stem is unusually generous, because it gives both discriminating attributes. The <b>drug</b> is a cephalosporin, which hemolyses by <b>coating the erythrocyte as a hapten</b> so IgG attaches and splenic macrophages destroy it. The <b>latency</b> is one hour, while oxidative hemolysis from G6PD deficiency arrives <b>2 to 4 days</b> after exposure, and neither ceftriaxone nor azithromycin is a typical oxidant in the first place. Immune hemolysis is diagnosed by detecting IgG or C3 on the red cell — the <b>direct antiglobulin test</b>.</p>",
-   "with": "<p><b>Platelets 285,000</b> is a normal count. That excludes disseminated intravascular coagulation, a consumptive process that cannot spare the platelet count, so a fibrinogen level adds nothing. <b>Alkaline phosphatase 66 with AST 42 and ALT 28</b> (aspartate and alanine aminotransferase) are all normal. That excludes biliary obstruction, so neither abdominal imaging study adds anything. The bilirubin of 2.3 is therefore unconjugated, from red-cell breakdown rather than from a blocked duct. What is left is hemolysis, from one of two drug mechanisms, and the history gives both attributes that separate them. The <b>drug</b> is a cephalosporin, which hemolyses by <b>coating the erythrocyte as a hapten</b>; IgG attaches and splenic macrophages destroy the cell. The <b>latency</b> is one hour. Oxidative hemolysis from <b>G6PD</b> (glucose-6-phosphate dehydrogenase) deficiency arrives <b>2 to 4 days</b> after exposure. Neither ceftriaxone nor azithromycin is a typical oxidant. Immune hemolysis is diagnosed by detecting IgG or C3 on the red cell with the <b>direct antiglobulin test</b>.</p>",
-   "note": ".dp: remove framing (kills, pointless, generous stem), split, expand acronyms",
+   "with": "<p><b>Platelets 285,000</b> is a normal count, which excludes disseminated intravascular coagulation. That consumptive process cannot spare the platelet count, so a fibrinogen level adds nothing. <b>Alkaline phosphatase 66 with AST 42 and ALT 28</b> are all normal, which excludes biliary obstruction, so neither abdominal imaging study is needed. The bilirubin of 2.3 is therefore unconjugated, from red-cell breakdown rather than a blocked duct. That leaves hemolysis from one of its two drug mechanisms. The <b>drug</b> is a cephalosporin, which hemolyses by <b>coating the erythrocyte as a hapten</b>; IgG attaches and splenic macrophages destroy the cell. The <b>latency</b> is one hour. Oxidative hemolysis from <b>G6PD</b> (glucose-6-phosphate dehydrogenase) deficiency arrives <b>2 to 4 days</b> after exposure, and neither ceftriaxone nor azithromycin is a typical oxidant. Immune hemolysis is diagnosed by detecting IgG or C3 on the red cell with the <b>direct antiglobulin test</b>.</p>",
+   "note": ".dp: remove framing and slang (\"kills\", \"pointless\"), split sentences, expand G6PD",
    "claims": [
     {
-     "claim": "Three numbers close this, and none of them is the hemoglobin.",
-     "dropped": "framing about the question; each deciding value is stated in the new text"
+     "claim": "The opening line says which values settle the question.",
+     "dropped": "framing about the question; each deciding value is stated next"
     },
     {
      "claim": "Platelets 285,000 is normal.",
-     "to": "Platelets 285,000 is a normal count."
+     "to": "Platelets 285,000 is a normal count, which excludes disseminated intravascular coagulation."
     },
     {
-     "claim": "A normal platelet count excludes disseminated intravascular coagulation.",
-     "to": "That excludes disseminated intravascular coagulation, a consumptive process that cannot spare the platelet count, so a fibrinogen level adds nothing."
+     "claim": "A normal platelet count kills disseminated intravascular coagulation.",
+     "to": "Platelets 285,000 is a normal count, which excludes disseminated intravascular coagulation."
     },
     {
-     "claim": "DIC is a consumptive process and cannot spare the platelet count.",
-     "to": "That excludes disseminated intravascular coagulation, a consumptive process that cannot spare the platelet count, so a fibrinogen level adds nothing."
+     "claim": "Disseminated intravascular coagulation is a consumptive process and cannot spare the platelet count.",
+     "to": "That consumptive process cannot spare the platelet count, so a fibrinogen level adds nothing."
     },
     {
-     "claim": "The fibrinogen is therefore pointless.",
-     "to": "That excludes disseminated intravascular coagulation, a consumptive process that cannot spare the platelet count, so a fibrinogen level adds nothing."
+     "claim": "The normal platelet count makes the fibrinogen pointless.",
+     "to": "That consumptive process cannot spare the platelet count, so a fibrinogen level adds nothing."
     },
     {
      "claim": "Alkaline phosphatase 66 with AST 42 and ALT 28 are all normal.",
-     "to": "Alkaline phosphatase 66 with AST 42 and ALT 28 (aspartate and alanine aminotransferase) are all normal."
+     "to": "Alkaline phosphatase 66 with AST 42 and ALT 28 are all normal, which excludes biliary obstruction, so neither abdominal imaging study is needed."
     },
     {
-     "claim": "Normal liver enzymes exclude biliary obstruction.",
-     "to": "That excludes biliary obstruction, so neither abdominal imaging study adds anything."
+     "claim": "Normal liver enzymes kill biliary obstruction.",
+     "to": "Alkaline phosphatase 66 with AST 42 and ALT 28 are all normal, which excludes biliary obstruction, so neither abdominal imaging study is needed."
     },
     {
-     "claim": "Both abdominal images are pointless.",
-     "to": "That excludes biliary obstruction, so neither abdominal imaging study adds anything."
+     "claim": "Normal liver enzymes make both abdominal images pointless.",
+     "to": "Alkaline phosphatase 66 with AST 42 and ALT 28 are all normal, which excludes biliary obstruction, so neither abdominal imaging study is needed."
     },
     {
      "claim": "The bilirubin of 2.3 is therefore unconjugated, from red-cell breakdown rather than from a blocked duct.",
-     "to": "The bilirubin of 2.3 is therefore unconjugated, from red-cell breakdown rather than from a blocked duct."
+     "to": "The bilirubin of 2.3 is therefore unconjugated, from red-cell breakdown rather than a blocked duct."
     },
     {
      "claim": "What is left is hemolysis, and the choice is between its two drug mechanisms.",
-     "to": "What is left is hemolysis, from one of two drug mechanisms, and the history gives both attributes that separate them."
+     "to": "That leaves hemolysis from one of its two drug mechanisms."
     },
     {
      "claim": "The stem gives both discriminating attributes.",
-     "to": "What is left is hemolysis, from one of two drug mechanisms, and the history gives both attributes that separate them."
+     "dropped": "framing about the stem; both attributes are stated next"
     },
     {
-     "claim": "The drug is a cephalosporin, which hemolyses by coating the erythrocyte as a hapten so IgG attaches and splenic macrophages destroy it.",
+     "claim": "The drug is a cephalosporin.",
+     "to": "The drug is a cephalosporin, which hemolyses by coating the erythrocyte as a hapten; IgG attaches and splenic macrophages destroy the cell."
+    },
+    {
+     "claim": "A cephalosporin hemolyses by coating the erythrocyte as a hapten so IgG attaches and splenic macrophages destroy it.",
      "to": "The drug is a cephalosporin, which hemolyses by coating the erythrocyte as a hapten; IgG attaches and splenic macrophages destroy the cell."
     },
     {
@@ -778,11 +833,11 @@
     },
     {
      "claim": "Oxidative hemolysis from G6PD deficiency arrives 2 to 4 days after exposure.",
-     "to": "Oxidative hemolysis from G6PD (glucose-6-phosphate dehydrogenase) deficiency arrives 2 to 4 days after exposure."
+     "to": "Oxidative hemolysis from G6PD (glucose-6-phosphate dehydrogenase) deficiency arrives 2 to 4 days after exposure, and neither ceftriaxone nor azithromycin is a typical oxidant."
     },
     {
      "claim": "Neither ceftriaxone nor azithromycin is a typical oxidant.",
-     "to": "Neither ceftriaxone nor azithromycin is a typical oxidant."
+     "to": "Oxidative hemolysis from G6PD (glucose-6-phosphate dehydrogenase) deficiency arrives 2 to 4 days after exposure, and neither ceftriaxone nor azithromycin is a typical oxidant."
     },
     {
      "claim": "Immune hemolysis is diagnosed by detecting IgG or C3 on the red cell with the direct antiglobulin test.",
@@ -791,63 +846,55 @@
    ],
    "new_claims": [
     {
-     "claim": "Platelets 285,000 is a normal count.",
+     "claim": "Platelets 285,000 is a normal count, which excludes disseminated intravascular coagulation.",
      "from": "Platelets 285,000 is normal."
     },
     {
-     "claim": "That excludes disseminated intravascular coagulation.",
-     "from": "A normal platelet count excludes disseminated intravascular coagulation."
+     "claim": "Platelets 285,000 is a normal count, which excludes disseminated intravascular coagulation.",
+     "from": "A normal platelet count kills disseminated intravascular coagulation."
     },
     {
-     "claim": "DIC is a consumptive process that cannot spare the platelet count.",
-     "from": "DIC is a consumptive process and cannot spare the platelet count."
+     "claim": "That consumptive process cannot spare the platelet count, so a fibrinogen level adds nothing.",
+     "from": "Disseminated intravascular coagulation is a consumptive process and cannot spare the platelet count."
     },
     {
-     "claim": "A fibrinogen level adds nothing.",
-     "from": "The fibrinogen is therefore pointless."
+     "claim": "That consumptive process cannot spare the platelet count, so a fibrinogen level adds nothing.",
+     "from": "The normal platelet count makes the fibrinogen pointless."
     },
     {
      "claim": "Alkaline phosphatase 66 with AST 42 and ALT 28 are all normal.",
      "from": "Alkaline phosphatase 66 with AST 42 and ALT 28 are all normal."
     },
     {
-     "claim": "AST and ALT stand for aspartate and alanine aminotransferase.",
-     "from": "expansion"
+     "claim": "Alkaline phosphatase 66 with AST 42 and ALT 28 are all normal, which excludes biliary obstruction, so neither abdominal imaging study is needed.",
+     "from": "Normal liver enzymes kill biliary obstruction."
     },
     {
-     "claim": "That excludes biliary obstruction.",
-     "from": "Normal liver enzymes exclude biliary obstruction."
+     "claim": "Alkaline phosphatase 66 with AST 42 and ALT 28 are all normal, which excludes biliary obstruction, so neither abdominal imaging study is needed.",
+     "from": "Normal liver enzymes make both abdominal images pointless."
     },
     {
-     "claim": "Neither abdominal imaging study adds anything.",
-     "from": "Both abdominal images are pointless."
-    },
-    {
-     "claim": "The bilirubin of 2.3 is therefore unconjugated, from red-cell breakdown rather than from a blocked duct.",
+     "claim": "The bilirubin of 2.3 is therefore unconjugated, from red-cell breakdown rather than a blocked duct.",
      "from": "The bilirubin of 2.3 is therefore unconjugated, from red-cell breakdown rather than from a blocked duct."
     },
     {
-     "claim": "What is left is hemolysis, from one of two drug mechanisms.",
+     "claim": "That leaves hemolysis from one of its two drug mechanisms.",
      "from": "What is left is hemolysis, and the choice is between its two drug mechanisms."
     },
     {
-     "claim": "The history gives both attributes that separate them.",
-     "from": "The stem gives both discriminating attributes."
+     "claim": "The drug is a cephalosporin.",
+     "from": "The drug is a cephalosporin."
     },
     {
      "claim": "The drug is a cephalosporin, which hemolyses by coating the erythrocyte as a hapten; IgG attaches and splenic macrophages destroy the cell.",
-     "from": "The drug is a cephalosporin, which hemolyses by coating the erythrocyte as a hapten so IgG attaches and splenic macrophages destroy it."
+     "from": "A cephalosporin hemolyses by coating the erythrocyte as a hapten so IgG attaches and splenic macrophages destroy it."
     },
     {
      "claim": "The latency is one hour.",
      "from": "The latency is one hour."
     },
     {
-     "claim": "G6PD stands for glucose-6-phosphate dehydrogenase.",
-     "from": "expansion"
-    },
-    {
-     "claim": "Oxidative hemolysis from G6PD deficiency arrives 2 to 4 days after exposure.",
+     "claim": "Oxidative hemolysis from G6PD (glucose-6-phosphate dehydrogenase) deficiency arrives 2 to 4 days after exposure, and neither ceftriaxone nor azithromycin is a typical oxidant.",
      "from": "Oxidative hemolysis from G6PD deficiency arrives 2 to 4 days after exposure."
     },
     {
@@ -857,6 +904,10 @@
     {
      "claim": "Immune hemolysis is diagnosed by detecting IgG or C3 on the red cell with the direct antiglobulin test.",
      "from": "Immune hemolysis is diagnosed by detecting IgG or C3 on the red cell with the direct antiglobulin test."
+    },
+    {
+     "claim": "G6PD stands for glucose-6-phosphate dehydrogenase.",
+     "from": "expansion"
     }
    ]
   },
@@ -865,20 +916,20 @@
    "brief": "drug-hemolysis",
    "find": "a named hapten-type trigger, and the single most important word in the stem",
    "with": "a named hapten-type trigger",
-   "note": "pertinents: remove meta phrase about the stem",
+   "note": "pertinent row: remove meta phrase",
    "claims": [
     {
      "claim": "Ceftriaxone is a named hapten-type trigger.",
-     "to": "a named hapten-type trigger"
+     "to": "Ceftriaxone — a named hapten-type trigger"
     },
     {
-     "claim": "Ceftriaxone is the single most important word in the stem.",
-     "dropped": "framing about the stem; the drug and its mechanism are kept"
+     "claim": "It is the most important word in the stem.",
+     "dropped": "framing about the stem"
     }
    ],
    "new_claims": [
     {
-     "claim": "Ceftriaxone is a named hapten-type trigger.",
+     "claim": "Ceftriaxone — a named hapten-type trigger",
      "from": "Ceftriaxone is a named hapten-type trigger."
     }
    ]
@@ -887,29 +938,25 @@
    "op": "replace",
    "brief": "drug-hemolysis",
    "find": "excludes biliary obstruction, and both imaging options die here rather than on clinical judgment",
-   "with": "alkaline phosphatase, aspartate aminotransferase and alanine aminotransferase are normal, which excludes biliary obstruction; these values, rather than clinical judgment, remove both imaging options",
-   "note": "pertinents: remove dramatic verb, expand ALP/AST/ALT",
+   "with": "excludes biliary obstruction, so neither imaging study is needed",
+   "note": "pertinent row: remove slang and framing",
    "claims": [
     {
-     "claim": "ALP 66, AST 42 and ALT 28 exclude biliary obstruction.",
-     "to": "alkaline phosphatase, aspartate aminotransferase and alanine aminotransferase are normal, which excludes biliary obstruction; these values, rather than clinical judgment, remove both imaging options"
+     "claim": "ALP 66, AST 42, ALT 28 exclude biliary obstruction.",
+     "to": "excludes biliary obstruction, so neither imaging study is needed"
     },
     {
      "claim": "Both imaging options are eliminated by these values rather than by clinical judgment.",
-     "to": "alkaline phosphatase, aspartate aminotransferase and alanine aminotransferase are normal, which excludes biliary obstruction; these values, rather than clinical judgment, remove both imaging options"
+     "to": "excludes biliary obstruction, so neither imaging study is needed"
     }
    ],
    "new_claims": [
     {
-     "claim": "ALP, AST and ALT stand for alkaline phosphatase, aspartate aminotransferase and alanine aminotransferase.",
-     "from": "expansion"
+     "claim": "excludes biliary obstruction, so neither imaging study is needed",
+     "from": "ALP 66, AST 42, ALT 28 exclude biliary obstruction."
     },
     {
-     "claim": "Normal ALP, AST and ALT exclude biliary obstruction.",
-     "from": "ALP 66, AST 42 and ALT 28 exclude biliary obstruction."
-    },
-    {
-     "claim": "These values, rather than clinical judgment, remove both imaging options.",
+     "claim": "excludes biliary obstruction, so neither imaging study is needed",
      "from": "Both imaging options are eliminated by these values rather than by clinical judgment."
     }
    ]
@@ -918,42 +965,50 @@
    "op": "replace",
    "brief": "drug-hemolysis",
    "find": "Management is two sentences, because this stem asked only for the test: <b>discontinue the offending drug</b>, which usually resolves the hemolysis within hours to days, and <b>transfuse if the anemia is severe</b>, with glucocorticoids and IVIG reserved for severe cases.",
-   "with": "Treatment is to <b>discontinue the offending drug</b>, which usually resolves the hemolysis within hours to days, and to <b>transfuse if the anemia is severe</b>. Glucocorticoids and <b>IVIG</b> (intravenous immunoglobulin) are reserved for severe cases.",
-   "note": "management: remove question framing, split, expand IVIG",
+   "with": "Management is to <b>discontinue the offending drug</b>, which usually resolves the hemolysis within hours to days, and to <b>transfuse if the anemia is severe</b>. Reserve glucocorticoids and <b>IVIG</b> (intravenous immunoglobulin) for severe cases.",
+   "note": ".danger: remove framing about the stem, expand IVIG",
    "claims": [
     {
-     "claim": "The question focuses elsewhere, so management is brief.",
+     "claim": "The block notes that management is secondary in this case.",
      "dropped": "framing about the question"
     },
     {
-     "claim": "Discontinue the offending drug, which usually resolves the hemolysis within hours to days.",
-     "to": "Treatment is to discontinue the offending drug, which usually resolves the hemolysis within hours to days, and to transfuse if the anemia is severe."
+     "claim": "Discontinue the offending drug.",
+     "to": "Management is to discontinue the offending drug, which usually resolves the hemolysis within hours to days, and to transfuse if the anemia is severe."
+    },
+    {
+     "claim": "Discontinuing the drug usually resolves the hemolysis within hours to days.",
+     "to": "Management is to discontinue the offending drug, which usually resolves the hemolysis within hours to days, and to transfuse if the anemia is severe."
     },
     {
      "claim": "Transfuse if the anemia is severe.",
-     "to": "Treatment is to discontinue the offending drug, which usually resolves the hemolysis within hours to days, and to transfuse if the anemia is severe."
+     "to": "Management is to discontinue the offending drug, which usually resolves the hemolysis within hours to days, and to transfuse if the anemia is severe."
     },
     {
      "claim": "Glucocorticoids and IVIG are reserved for severe cases.",
-     "to": "Glucocorticoids and IVIG (intravenous immunoglobulin) are reserved for severe cases."
+     "to": "Reserve glucocorticoids and IVIG (intravenous immunoglobulin) for severe cases."
     }
    ],
    "new_claims": [
     {
-     "claim": "Discontinue the offending drug, which usually resolves the hemolysis within hours to days.",
-     "from": "Discontinue the offending drug, which usually resolves the hemolysis within hours to days."
+     "claim": "Discontinue the offending drug.",
+     "from": "Discontinue the offending drug."
+    },
+    {
+     "claim": "Management is to discontinue the offending drug, which usually resolves the hemolysis within hours to days, and to transfuse if the anemia is severe.",
+     "from": "Discontinuing the drug usually resolves the hemolysis within hours to days."
     },
     {
      "claim": "Transfuse if the anemia is severe.",
      "from": "Transfuse if the anemia is severe."
     },
     {
-     "claim": "IVIG stands for intravenous immunoglobulin.",
-     "from": "expansion"
+     "claim": "Reserve glucocorticoids and IVIG (intravenous immunoglobulin) for severe cases.",
+     "from": "Glucocorticoids and IVIG are reserved for severe cases."
     },
     {
-     "claim": "Glucocorticoids and IVIG are reserved for severe cases.",
-     "from": "Glucocorticoids and IVIG are reserved for severe cases."
+     "claim": "IVIG stands for intravenous immunoglobulin.",
+     "from": "expansion"
     }
    ]
   },
@@ -961,25 +1016,25 @@
    "op": "replace",
    "brief": "drug-hemolysis",
    "find": "285,000 → the consumptive causes are gone, and so is the fibrinogen option",
-   "with": "285,000 → consumptive causes excluded; fibrinogen not needed",
-   "note": "decision spine: remove option talk",
+   "with": "285,000 → the consumptive causes are excluded, so fibrinogen is not needed",
+   "note": "decision spine: plain wording",
    "claims": [
     {
      "claim": "Platelets 285,000 exclude the consumptive causes.",
-     "to": "285,000 → consumptive causes excluded; fibrinogen not needed"
+     "to": "285,000 → the consumptive causes are excluded, so fibrinogen is not needed"
     },
     {
      "claim": "The fibrinogen option is eliminated.",
-     "to": "285,000 → consumptive causes excluded; fibrinogen not needed"
+     "to": "285,000 → the consumptive causes are excluded, so fibrinogen is not needed"
     }
    ],
    "new_claims": [
     {
-     "claim": "Platelets 285,000 exclude consumptive causes.",
+     "claim": "285,000 → the consumptive causes are excluded, so fibrinogen is not needed",
      "from": "Platelets 285,000 exclude the consumptive causes."
     },
     {
-     "claim": "Fibrinogen is not needed.",
+     "claim": "285,000 → the consumptive causes are excluded, so fibrinogen is not needed",
      "from": "The fibrinogen option is eliminated."
     }
    ]
@@ -988,18 +1043,18 @@
    "op": "replace",
    "brief": "drug-hemolysis",
    "find": "Alkaline phosphatase and transaminases normal → both abdominal images are gone",
-   "with": "Alkaline phosphatase and transaminases normal → no abdominal imaging needed",
-   "note": "decision spine: remove option talk",
+   "with": "Alkaline phosphatase and transaminases normal → abdominal imaging is not needed",
+   "note": "decision spine: plain wording",
    "claims": [
     {
-     "claim": "Normal alkaline phosphatase and transaminases eliminate both abdominal images.",
-     "to": "Alkaline phosphatase and transaminases normal → no abdominal imaging needed"
+     "claim": "Normal alkaline phosphatase and transaminases eliminate both abdominal imaging options.",
+     "to": "Alkaline phosphatase and transaminases normal → abdominal imaging is not needed"
     }
    ],
    "new_claims": [
     {
-     "claim": "Normal alkaline phosphatase and transaminases mean no abdominal imaging is needed.",
-     "from": "Normal alkaline phosphatase and transaminases eliminate both abdominal images."
+     "claim": "Alkaline phosphatase and transaminases normal → abdominal imaging is not needed",
+     "from": "Normal alkaline phosphatase and transaminases eliminate both abdominal imaging options."
     }
    ]
   },
@@ -1007,23 +1062,23 @@
    "op": "replace",
    "brief": "drug-hemolysis",
    "find": "The stem's abdominal findings do almost all of the misdirection. Upper abdominal discomfort, mild upper abdominal tenderness and a bilirubin of 2.3 assemble into a biliary picture for anyone who reads symptoms before chemistry, and two of the five options are abdominal imaging, which validates the impulse. But the actual reason for the pain is not the gallbladder: <b>severe hemolysis causes abdominal or back pain</b> from red-cell destruction in the vertebral bodies, liver and spleen. The other quiet detail is <b>azithromycin</b>, present to make you think of <i>Mycoplasma</i> and its cold agglutinins — a real cause of hemolysis in a child with pneumonia, and one that would give a C3-positive test rather than a negative one, so it still routes to the same answer.",
-   "with": "Upper abdominal discomfort, mild upper abdominal tenderness and a bilirubin of 2.3 suggest a biliary picture if symptoms are read before chemistry. Two of the five options are abdominal imaging. The pain is not from the gallbladder: <b>severe hemolysis causes abdominal or back pain</b> from red-cell destruction in the vertebral bodies, liver and spleen. The <b>azithromycin</b> may suggest <i>Mycoplasma</i> and its cold agglutinins. <i>Mycoplasma</i> is a real cause of hemolysis in a child with pneumonia. It would give a C3-positive test rather than a negative one, so it still leads to the same test.",
-   "note": "decoy note: remove misdirection framing and em dash; split",
+   "with": "Upper abdominal discomfort, mild upper abdominal tenderness and a bilirubin of 2.3 suggest a biliary cause when symptoms are read before chemistry. Two of the five options are abdominal imaging, which reinforces that impression. The pain is not from the gallbladder: <b>severe hemolysis causes abdominal or back pain</b> from red-cell destruction in the vertebral bodies, liver and spleen. The <b>azithromycin</b> points toward <i>Mycoplasma</i> and its cold agglutinins, a real cause of hemolysis in a child with pneumonia. That hemolysis would give a C3-positive direct antiglobulin test rather than a negative one, so the direct antiglobulin test is still the right test.",
+   "note": "decoy note: remove framing and em dash",
    "claims": [
     {
-     "claim": "The stem's abdominal findings do almost all of the misdirection.",
-     "dropped": "framing about the stem; the misleading findings are listed next"
+     "claim": "The abdominal findings do almost all of the misdirection.",
+     "dropped": "framing; the misleading findings are listed next"
     },
     {
-     "claim": "Upper abdominal discomfort, mild tenderness and a bilirubin of 2.3 assemble into a biliary picture for anyone who reads symptoms before chemistry.",
-     "to": "Upper abdominal discomfort, mild upper abdominal tenderness and a bilirubin of 2.3 suggest a biliary picture if symptoms are read before chemistry."
+     "claim": "Upper abdominal discomfort, mild upper abdominal tenderness and a bilirubin of 2.3 assemble into a biliary picture for anyone who reads symptoms before chemistry.",
+     "to": "Upper abdominal discomfort, mild upper abdominal tenderness and a bilirubin of 2.3 suggest a biliary cause when symptoms are read before chemistry."
     },
     {
      "claim": "Two of the five options are abdominal imaging, which validates the impulse.",
-     "to": "Two of the five options are abdominal imaging."
+     "to": "Two of the five options are abdominal imaging, which reinforces that impression."
     },
     {
-     "claim": "The pain is not from the gallbladder.",
+     "claim": "The actual reason for the pain is not the gallbladder.",
      "to": "The pain is not from the gallbladder: severe hemolysis causes abdominal or back pain from red-cell destruction in the vertebral bodies, liver and spleen."
     },
     {
@@ -1032,164 +1087,122 @@
     },
     {
      "claim": "Azithromycin is present to suggest Mycoplasma and its cold agglutinins.",
-     "to": "The azithromycin may suggest Mycoplasma and its cold agglutinins."
+     "to": "The azithromycin points toward Mycoplasma and its cold agglutinins, a real cause of hemolysis in a child with pneumonia."
     },
     {
-     "claim": "Mycoplasma is a real cause of hemolysis in a child with pneumonia.",
-     "to": "Mycoplasma is a real cause of hemolysis in a child with pneumonia."
+     "claim": "Mycoplasma cold agglutinins are a real cause of hemolysis in a child with pneumonia.",
+     "to": "The azithromycin points toward Mycoplasma and its cold agglutinins, a real cause of hemolysis in a child with pneumonia."
     },
     {
-     "claim": "Mycoplasma would give a C3-positive test rather than a negative one, so it still routes to the same answer.",
-     "to": "It would give a C3-positive test rather than a negative one, so it still leads to the same test."
+     "claim": "Cold agglutinin hemolysis would give a C3-positive test rather than a negative one.",
+     "to": "That hemolysis would give a C3-positive direct antiglobulin test rather than a negative one, so the direct antiglobulin test is still the right test."
+    },
+    {
+     "claim": "So it still routes to the same answer, the direct antiglobulin test.",
+     "to": "That hemolysis would give a C3-positive direct antiglobulin test rather than a negative one, so the direct antiglobulin test is still the right test."
     }
    ],
    "new_claims": [
     {
-     "claim": "Upper abdominal discomfort, mild tenderness and a bilirubin of 2.3 suggest a biliary picture if symptoms are read before chemistry.",
-     "from": "Upper abdominal discomfort, mild tenderness and a bilirubin of 2.3 assemble into a biliary picture for anyone who reads symptoms before chemistry."
+     "claim": "Upper abdominal discomfort, mild upper abdominal tenderness and a bilirubin of 2.3 suggest a biliary cause when symptoms are read before chemistry.",
+     "from": "Upper abdominal discomfort, mild upper abdominal tenderness and a bilirubin of 2.3 assemble into a biliary picture for anyone who reads symptoms before chemistry."
     },
     {
-     "claim": "Two of the five options are abdominal imaging.",
+     "claim": "Two of the five options are abdominal imaging, which reinforces that impression.",
      "from": "Two of the five options are abdominal imaging, which validates the impulse."
     },
     {
-     "claim": "The pain is not from the gallbladder.",
-     "from": "The pain is not from the gallbladder."
+     "claim": "The pain is not from the gallbladder: severe hemolysis causes abdominal or back pain from red-cell destruction in the vertebral bodies, liver and spleen.",
+     "from": "The actual reason for the pain is not the gallbladder."
     },
     {
      "claim": "Severe hemolysis causes abdominal or back pain from red-cell destruction in the vertebral bodies, liver and spleen.",
      "from": "Severe hemolysis causes abdominal or back pain from red-cell destruction in the vertebral bodies, liver and spleen."
     },
     {
-     "claim": "The azithromycin may suggest Mycoplasma and its cold agglutinins.",
+     "claim": "The azithromycin points toward Mycoplasma and its cold agglutinins, a real cause of hemolysis in a child with pneumonia.",
      "from": "Azithromycin is present to suggest Mycoplasma and its cold agglutinins."
     },
     {
-     "claim": "Mycoplasma is a real cause of hemolysis in a child with pneumonia.",
-     "from": "Mycoplasma is a real cause of hemolysis in a child with pneumonia."
+     "claim": "The azithromycin points toward Mycoplasma and its cold agglutinins, a real cause of hemolysis in a child with pneumonia.",
+     "from": "Mycoplasma cold agglutinins are a real cause of hemolysis in a child with pneumonia."
     },
     {
-     "claim": "Mycoplasma would give a C3-positive test rather than a negative one, so it still leads to the same test.",
-     "from": "Mycoplasma would give a C3-positive test rather than a negative one, so it still routes to the same answer."
+     "claim": "That hemolysis would give a C3-positive direct antiglobulin test rather than a negative one, so the direct antiglobulin test is still the right test.",
+     "from": "Cold agglutinin hemolysis would give a C3-positive test rather than a negative one."
+    },
+    {
+     "claim": "That hemolysis would give a C3-positive direct antiglobulin test rather than a negative one, so the direct antiglobulin test is still the right test.",
+     "from": "So it still routes to the same answer, the direct antiglobulin test."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "drug-hemolysis",
-   "find": "Hemolysis within hours of a cephalosporin or penicillin is hapten-mediated and IgG-coated, so the direct antiglobulin test is what reveals it. &middot; <b>Latency is a diagnostic variable.</b> Immune drug hemolysis arrives in hours, oxidative hemolysis in 2 to 4 days, and cold agglutinin hemolysis a week or two into the pneumonia that caused it ⚠︎. &middot; Penicillins and cephalosporins hemolyse by <b>hapten adsorption</b> with IgG and splenic clearance — extravascular, spherocytes, positive direct antiglobulin test. &middot; <b>A normal platelet count excludes the consumptive causes.</b> Disseminated intravascular coagulation, thrombotic thrombocytopenic purpura and hemolytic uremic syndrome all destroy platelets, and drug-induced immune hemolysis does not touch them. &middot; <b>Normal alkaline phosphatase and transaminases with a raised bilirubin means hemolysis</b> rather than obstruction — the enzymes separate the two, not the pain. &middot; The direct antiglobulin test distinguishes what is stuck to the cell: <b>IgG</b> for warm and hapten-mediated disease, <b>C3</b> for complement-fixing IgM such as cold agglutinins ⚠︎. &middot; The treatment is <b>stopping the drug</b>; steroids and IVIG are for severe cases, and continuing the drug while treating the hemolysis is the error the bank tests.",
-   "with": "Hemolysis within hours of a cephalosporin or penicillin is hapten-mediated and IgG-coated, so the direct antiglobulin test reveals it. &middot; <b>Latency is a diagnostic variable.</b> Immune drug hemolysis arrives in hours and oxidative hemolysis in 2 to 4 days. Cold agglutinin hemolysis arrives a week or two into the pneumonia that caused it ⚠︎. &middot; Penicillins and cephalosporins hemolyse by <b>hapten adsorption</b> with IgG and splenic clearance. This causes extravascular hemolysis, spherocytes and a positive direct antiglobulin test. &middot; <b>A normal platelet count excludes the consumptive causes.</b> Disseminated intravascular coagulation, thrombotic thrombocytopenic purpura and hemolytic uremic syndrome all destroy platelets, and drug-induced immune hemolysis does not touch them. &middot; <b>Normal alkaline phosphatase and transaminases with a raised bilirubin means hemolysis</b> rather than obstruction. The enzymes separate the two, not the pain. &middot; The direct antiglobulin test distinguishes what is stuck to the cell: <b>IgG</b> for warm and hapten-mediated disease, <b>C3</b> for complement-fixing IgM such as cold agglutinins ⚠︎. &middot; The treatment is <b>stopping the drug</b>; steroids and <b>IVIG</b> (intravenous immunoglobulin) are for severe cases. Continuing the drug while treating the hemolysis is an error.",
-   "note": "pearls: remove prose em dashes and bank meta phrase; expand IVIG",
+   "find": "with IgG and splenic clearance — extravascular, spherocytes, positive direct antiglobulin test.",
+   "with": "with IgG and splenic clearance. The hemolysis is extravascular, with spherocytes and a positive direct antiglobulin test.",
+   "note": "pearls: remove em dash",
    "claims": [
     {
-     "claim": "Hemolysis within hours of a cephalosporin or penicillin is hapten-mediated and IgG-coated, so the direct antiglobulin test reveals it.",
-     "to": "Hemolysis within hours of a cephalosporin or penicillin is hapten-mediated and IgG-coated, so the direct antiglobulin test reveals it."
-    },
-    {
-     "claim": "Latency is a diagnostic variable.",
-     "to": "Latency is a diagnostic variable."
-    },
-    {
-     "claim": "Immune drug hemolysis arrives in hours, oxidative in 2 to 4 days.",
-     "to": "Immune drug hemolysis arrives in hours and oxidative hemolysis in 2 to 4 days."
-    },
-    {
-     "claim": "Cold agglutinin hemolysis arrives a week or two into the pneumonia (flagged).",
-     "to": "Cold agglutinin hemolysis arrives a week or two into the pneumonia that caused it ⚠︎."
-    },
-    {
-     "claim": "Penicillins and cephalosporins hemolyse by hapten adsorption with IgG and splenic clearance.",
-     "to": "Penicillins and cephalosporins hemolyse by hapten adsorption with IgG and splenic clearance."
-    },
-    {
-     "claim": "This is extravascular, with spherocytes and a positive direct antiglobulin test.",
-     "to": "This causes extravascular hemolysis, spherocytes and a positive direct antiglobulin test."
-    },
-    {
-     "claim": "A normal platelet count excludes the consumptive causes.",
-     "to": "A normal platelet count excludes the consumptive causes."
-    },
-    {
-     "claim": "DIC, TTP and HUS all destroy platelets, and drug-induced immune hemolysis does not touch them.",
-     "to": "Disseminated intravascular coagulation, thrombotic thrombocytopenic purpura and hemolytic uremic syndrome all destroy platelets, and drug-induced immune hemolysis does not touch them."
-    },
-    {
-     "claim": "Normal alkaline phosphatase and transaminases with a raised bilirubin means hemolysis rather than obstruction.",
-     "to": "Normal alkaline phosphatase and transaminases with a raised bilirubin means hemolysis rather than obstruction."
-    },
-    {
-     "claim": "The enzymes separate the two, not the pain.",
-     "to": "The enzymes separate the two, not the pain."
-    },
-    {
-     "claim": "The direct antiglobulin test shows IgG for warm and hapten-mediated disease, C3 for complement-fixing IgM such as cold agglutinins (flagged).",
-     "to": "The direct antiglobulin test distinguishes what is stuck to the cell: IgG for warm and hapten-mediated disease, C3 for complement-fixing IgM such as cold agglutinins ⚠︎."
-    },
-    {
-     "claim": "The treatment is stopping the drug; steroids and IVIG are for severe cases.",
-     "to": "The treatment is stopping the drug; steroids and IVIG (intravenous immunoglobulin) are for severe cases."
-    },
-    {
-     "claim": "Continuing the drug while treating the hemolysis is the error the bank tests.",
-     "to": "Continuing the drug while treating the hemolysis is an error."
+     "claim": "Hapten hemolysis is extravascular, with spherocytes and a positive direct antiglobulin test.",
+     "to": "The hemolysis is extravascular, with spherocytes and a positive direct antiglobulin test."
     }
    ],
    "new_claims": [
     {
-     "claim": "Hemolysis within hours of a cephalosporin or penicillin is hapten-mediated and IgG-coated, so the direct antiglobulin test reveals it.",
-     "from": "Hemolysis within hours of a cephalosporin or penicillin is hapten-mediated and IgG-coated, so the direct antiglobulin test reveals it."
+     "claim": "The hemolysis is extravascular, with spherocytes and a positive direct antiglobulin test.",
+     "from": "Hapten hemolysis is extravascular, with spherocytes and a positive direct antiglobulin test."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "drug-hemolysis",
+   "find": "rather than obstruction — the enzymes separate the two, not the pain.",
+   "with": "rather than obstruction; the enzymes separate the two, not the pain.",
+   "note": "pearls: remove em dash",
+   "claims": [
+    {
+     "claim": "The enzymes separate hemolysis from obstruction, not the pain.",
+     "to": "rather than obstruction; the enzymes separate the two, not the pain."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "rather than obstruction; the enzymes separate the two, not the pain.",
+     "from": "The enzymes separate hemolysis from obstruction, not the pain."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "drug-hemolysis",
+   "find": "steroids and IVIG are for severe cases, and continuing the drug while treating the hemolysis is the error the bank tests.",
+   "with": "steroids and <b>IVIG</b> (intravenous immunoglobulin) are for severe cases. Do not continue the drug while treating the hemolysis.",
+   "note": "pearls: remove meta about the bank, expand IVIG",
+   "claims": [
+    {
+     "claim": "Steroids and IVIG are for severe cases.",
+     "to": "steroids and IVIG (intravenous immunoglobulin) are for severe cases."
     },
     {
-     "claim": "Latency is a diagnostic variable.",
-     "from": "Latency is a diagnostic variable."
+     "claim": "Continuing the drug while treating the hemolysis is an error.",
+     "to": "Do not continue the drug while treating the hemolysis."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "steroids and IVIG (intravenous immunoglobulin) are for severe cases.",
+     "from": "Steroids and IVIG are for severe cases."
     },
     {
-     "claim": "Immune drug hemolysis arrives in hours, oxidative in 2 to 4 days.",
-     "from": "Immune drug hemolysis arrives in hours, oxidative in 2 to 4 days."
-    },
-    {
-     "claim": "Cold agglutinin hemolysis arrives a week or two into the pneumonia (flagged).",
-     "from": "Cold agglutinin hemolysis arrives a week or two into the pneumonia (flagged)."
-    },
-    {
-     "claim": "Penicillins and cephalosporins hemolyse by hapten adsorption with IgG and splenic clearance.",
-     "from": "Penicillins and cephalosporins hemolyse by hapten adsorption with IgG and splenic clearance."
-    },
-    {
-     "claim": "This causes extravascular hemolysis, spherocytes and a positive direct antiglobulin test.",
-     "from": "This is extravascular, with spherocytes and a positive direct antiglobulin test."
-    },
-    {
-     "claim": "A normal platelet count excludes the consumptive causes.",
-     "from": "A normal platelet count excludes the consumptive causes."
-    },
-    {
-     "claim": "DIC, TTP and HUS all destroy platelets, and drug-induced immune hemolysis does not touch them.",
-     "from": "DIC, TTP and HUS all destroy platelets, and drug-induced immune hemolysis does not touch them."
-    },
-    {
-     "claim": "Normal alkaline phosphatase and transaminases with a raised bilirubin means hemolysis rather than obstruction.",
-     "from": "Normal alkaline phosphatase and transaminases with a raised bilirubin means hemolysis rather than obstruction."
-    },
-    {
-     "claim": "The enzymes separate the two, not the pain.",
-     "from": "The enzymes separate the two, not the pain."
-    },
-    {
-     "claim": "The direct antiglobulin test shows IgG for warm and hapten-mediated disease, C3 for complement-fixing IgM such as cold agglutinins (flagged).",
-     "from": "The direct antiglobulin test shows IgG for warm and hapten-mediated disease, C3 for complement-fixing IgM such as cold agglutinins (flagged)."
+     "claim": "Do not continue the drug while treating the hemolysis.",
+     "from": "Continuing the drug while treating the hemolysis is an error."
     },
     {
      "claim": "IVIG stands for intravenous immunoglobulin.",
      "from": "expansion"
-    },
-    {
-     "claim": "The treatment is stopping the drug; steroids and IVIG are for severe cases.",
-     "from": "The treatment is stopping the drug; steroids and IVIG are for severe cases."
-    },
-    {
-     "claim": "Continuing the drug while treating the hemolysis is an error.",
-     "from": "Continuing the drug while treating the hemolysis is the error the bank tests."
     }
    ]
   },
@@ -1197,19 +1210,23 @@
    "op": "replace",
    "brief": "drug-hemolysis",
    "find": "Verified: Part I <b>Anemia with Thrombocytopenia</b> owns the seam on the other side of the platelet count, where hemolysis arriving <i>with</i> thrombocytopenia means the smear and the coagulation studies name a different process. Part II <b>Hereditary Spherocytosis</b> owns the Coombs-negative spherocytic anemia that mirrors this brief's Coombs-positive one, and Part I <b>Pediatric Community-Acquired Pneumonia</b> carries the <i>Mycoplasma</i> cold-agglutinin association. Store the discriminator as a question: which drug, how many hours, and is the platelet count normal?",
-   "with": "Part I <b>Anemia with Thrombocytopenia</b> covers the other side of the platelet count, where hemolysis arrives <i>with</i> thrombocytopenia. There the smear and the coagulation studies identify a different process. Part II <b>Hereditary Spherocytosis</b> covers the Coombs-negative spherocytic anemia that mirrors this brief's Coombs-positive one. Part I <b>Pediatric Community-Acquired Pneumonia</b> carries the <i>Mycoplasma</i> cold-agglutinin association. Ask: which drug, how many hours, and is the platelet count normal?",
-   "note": "pairs with: strip Verified, owns->covers, discriminator as Ask",
+   "with": "Part I <b>Anemia with Thrombocytopenia</b> covers hemolysis <i>with</i> thrombocytopenia. There the smear and the coagulation studies identify a different process. Part II <b>Hereditary Spherocytosis</b> covers the Coombs-negative spherocytic anemia that mirrors this brief's Coombs-positive one. Part I <b>Pediatric Community-Acquired Pneumonia</b> carries the <i>Mycoplasma</i> cold-agglutinin association. Ask: which drug, how many hours, and is the platelet count normal?",
+   "note": "pairs with: strip Verified, owns -> covers, discriminator as Ask",
    "claims": [
     {
-     "claim": "Anemia with Thrombocytopenia covers hemolysis arriving with thrombocytopenia.",
-     "to": "Part I Anemia with Thrombocytopenia covers the other side of the platelet count, where hemolysis arrives with thrombocytopenia."
+     "claim": "Verified.",
+     "dropped": "internal workflow tag"
     },
     {
-     "claim": "With thrombocytopenia, the smear and the coagulation studies identify a different process.",
+     "claim": "Anemia with Thrombocytopenia owns the other side of the platelet count, hemolysis with thrombocytopenia.",
+     "to": "Part I Anemia with Thrombocytopenia covers hemolysis with thrombocytopenia."
+    },
+    {
+     "claim": "In hemolysis with thrombocytopenia the smear and coagulation studies name a different process.",
      "to": "There the smear and the coagulation studies identify a different process."
     },
     {
-     "claim": "Hereditary Spherocytosis covers the Coombs-negative spherocytic anemia that mirrors this brief's Coombs-positive one.",
+     "claim": "Hereditary Spherocytosis owns the Coombs-negative spherocytic anemia that mirrors this brief's Coombs-positive one.",
      "to": "Part II Hereditary Spherocytosis covers the Coombs-negative spherocytic anemia that mirrors this brief's Coombs-positive one."
     },
     {
@@ -1217,22 +1234,22 @@
      "to": "Part I Pediatric Community-Acquired Pneumonia carries the Mycoplasma cold-agglutinin association."
     },
     {
-     "claim": "Discriminator: which drug, how many hours, and is the platelet count normal?",
+     "claim": "The discriminator: which drug, how many hours, and is the platelet count normal?",
      "to": "Ask: which drug, how many hours, and is the platelet count normal?"
     }
    ],
    "new_claims": [
     {
-     "claim": "Anemia with Thrombocytopenia covers hemolysis arriving with thrombocytopenia.",
-     "from": "Anemia with Thrombocytopenia covers hemolysis arriving with thrombocytopenia."
+     "claim": "Part I Anemia with Thrombocytopenia covers hemolysis with thrombocytopenia.",
+     "from": "Anemia with Thrombocytopenia owns the other side of the platelet count, hemolysis with thrombocytopenia."
     },
     {
      "claim": "There the smear and the coagulation studies identify a different process.",
-     "from": "With thrombocytopenia, the smear and the coagulation studies identify a different process."
+     "from": "In hemolysis with thrombocytopenia the smear and coagulation studies name a different process."
     },
     {
-     "claim": "Hereditary Spherocytosis covers the Coombs-negative spherocytic anemia that mirrors this brief's Coombs-positive one.",
-     "from": "Hereditary Spherocytosis covers the Coombs-negative spherocytic anemia that mirrors this brief's Coombs-positive one."
+     "claim": "Part II Hereditary Spherocytosis covers the Coombs-negative spherocytic anemia that mirrors this brief's Coombs-positive one.",
+     "from": "Hereditary Spherocytosis owns the Coombs-negative spherocytic anemia that mirrors this brief's Coombs-positive one."
     },
     {
      "claim": "Pediatric Community-Acquired Pneumonia carries the Mycoplasma cold-agglutinin association.",
@@ -1240,7 +1257,7 @@
     },
     {
      "claim": "Ask: which drug, how many hours, and is the platelet count normal?",
-     "from": "Discriminator: which drug, how many hours, and is the platelet count normal?"
+     "from": "The discriminator: which drug, how many hours, and is the platelet count normal?"
     }
    ]
   },
@@ -1248,16 +1265,16 @@
    "op": "replace",
    "brief": "drug-hemolysis",
    "find": "When two options are two mechanisms of the same syndrome, the stem has almost always supplied the attribute that separates them, usually an exposure and an interval, and the test you choose is downstream of the mechanism rather than of the syndrome. Spherocytes with a normal platelet count means an antibody; schistocytes with a low platelet count means a clot. --- <i>Batch 5, brief 05 · 2026-09-10.</i>",
-   "with": "When two mechanisms can cause the same syndrome, the history almost always supplies the attribute that separates them, usually an exposure and an interval. Choose the test from the mechanism rather than from the syndrome. Spherocytes with a normal platelet count mean an antibody; schistocytes with a low platelet count mean a clot.",
-   "note": "rule: remove option/stem framing and batch note",
+   "with": "When two mechanisms can produce the same syndrome, the case almost always supplies the attribute that separates them, usually an exposure and an interval. Choose the test for the mechanism rather than for the syndrome. Spherocytes with a normal platelet count mean an antibody; schistocytes with a low platelet count mean a clot.",
+   "note": "rule: split long sentence, delete batch note",
    "claims": [
     {
-     "claim": "When two options are two mechanisms of the same syndrome, the stem almost always supplies the attribute that separates them, usually an exposure and an interval.",
-     "to": "When two mechanisms can cause the same syndrome, the history almost always supplies the attribute that separates them, usually an exposure and an interval."
+     "claim": "When two options are two mechanisms of the same syndrome, the stem has almost always supplied the attribute that separates them, usually an exposure and an interval.",
+     "to": "When two mechanisms can produce the same syndrome, the case almost always supplies the attribute that separates them, usually an exposure and an interval."
     },
     {
-     "claim": "The test is downstream of the mechanism rather than of the syndrome.",
-     "to": "Choose the test from the mechanism rather than from the syndrome."
+     "claim": "The test chosen is downstream of the mechanism rather than of the syndrome.",
+     "to": "Choose the test for the mechanism rather than for the syndrome."
     },
     {
      "claim": "Spherocytes with a normal platelet count means an antibody.",
@@ -1266,23 +1283,27 @@
     {
      "claim": "Schistocytes with a low platelet count means a clot.",
      "to": "Spherocytes with a normal platelet count mean an antibody; schistocytes with a low platelet count mean a clot."
+    },
+    {
+     "claim": "Batch note.",
+     "dropped": "internal workflow note"
     }
    ],
    "new_claims": [
     {
-     "claim": "When two mechanisms can cause the same syndrome, the history almost always supplies the attribute that separates them, usually an exposure and an interval.",
-     "from": "When two options are two mechanisms of the same syndrome, the stem almost always supplies the attribute that separates them, usually an exposure and an interval."
+     "claim": "When two mechanisms can produce the same syndrome, the case almost always supplies the attribute that separates them, usually an exposure and an interval.",
+     "from": "When two options are two mechanisms of the same syndrome, the stem has almost always supplied the attribute that separates them, usually an exposure and an interval."
     },
     {
-     "claim": "Choose the test from the mechanism rather than from the syndrome.",
-     "from": "The test is downstream of the mechanism rather than of the syndrome."
+     "claim": "Choose the test for the mechanism rather than for the syndrome.",
+     "from": "The test chosen is downstream of the mechanism rather than of the syndrome."
     },
     {
-     "claim": "Spherocytes with a normal platelet count mean an antibody.",
+     "claim": "Spherocytes with a normal platelet count mean an antibody; schistocytes with a low platelet count mean a clot.",
      "from": "Spherocytes with a normal platelet count means an antibody."
     },
     {
-     "claim": "Schistocytes with a low platelet count mean a clot.",
+     "claim": "Spherocytes with a normal platelet count mean an antibody; schistocytes with a low platelet count mean a clot.",
      "from": "Schistocytes with a low platelet count means a clot."
     }
    ]
@@ -1291,26 +1312,34 @@
    "op": "replace",
    "brief": "drug-hemolysis",
    "find": "Retroperitoneal hemorrhage does cause back pain with acute anemia, but it follows trauma or a coagulopathy &mdash; a normal PT and aPTT with no injury retires it.",
-   "with": "Retroperitoneal hemorrhage: It does cause back pain with acute anemia, but it follows trauma or a coagulopathy. A normal <b>PT</b> (prothrombin time) and <b>aPTT</b> (activated partial thromboplastin time) with no injury excludes it.",
-   "note": "trap: Option: why; remove em dash; expand PT/aPTT",
+   "with": "Retroperitoneal hemorrhage: it causes back pain with acute anemia, but it follows trauma or a coagulopathy. A normal <b>PT</b> (prothrombin time) and <b>aPTT</b> (activated partial thromboplastin time) with no injury exclude it.",
+   "note": "trap: Option: why, remove em dash",
    "claims": [
     {
      "claim": "Retroperitoneal hemorrhage does cause back pain with acute anemia.",
-     "to": "Retroperitoneal hemorrhage: It does cause back pain with acute anemia, but it follows trauma or a coagulopathy."
+     "to": "Retroperitoneal hemorrhage: it causes back pain with acute anemia, but it follows trauma or a coagulopathy."
     },
     {
      "claim": "Retroperitoneal hemorrhage follows trauma or a coagulopathy.",
-     "to": "Retroperitoneal hemorrhage: It does cause back pain with acute anemia, but it follows trauma or a coagulopathy."
+     "to": "Retroperitoneal hemorrhage: it causes back pain with acute anemia, but it follows trauma or a coagulopathy."
     },
     {
-     "claim": "A normal PT and aPTT with no injury excludes it.",
-     "to": "A normal PT (prothrombin time) and aPTT (activated partial thromboplastin time) with no injury excludes it."
+     "claim": "A normal PT and aPTT with no injury retires it.",
+     "to": "A normal PT (prothrombin time) and aPTT (activated partial thromboplastin time) with no injury exclude it."
     }
    ],
    "new_claims": [
     {
-     "claim": "Retroperitoneal hemorrhage does cause back pain with acute anemia, but it follows trauma or a coagulopathy.",
+     "claim": "Retroperitoneal hemorrhage: it causes back pain with acute anemia, but it follows trauma or a coagulopathy.",
      "from": "Retroperitoneal hemorrhage does cause back pain with acute anemia."
+    },
+    {
+     "claim": "Retroperitoneal hemorrhage: it causes back pain with acute anemia, but it follows trauma or a coagulopathy.",
+     "from": "Retroperitoneal hemorrhage follows trauma or a coagulopathy."
+    },
+    {
+     "claim": "A normal PT (prothrombin time) and aPTT (activated partial thromboplastin time) with no injury exclude it.",
+     "from": "A normal PT and aPTT with no injury retires it."
     },
     {
      "claim": "PT stands for prothrombin time.",
@@ -1319,10 +1348,6 @@
     {
      "claim": "aPTT stands for activated partial thromboplastin time.",
      "from": "expansion"
-    },
-    {
-     "claim": "A normal PT and aPTT with no injury excludes it.",
-     "from": "A normal PT and aPTT with no injury excludes it."
     }
    ]
   },
@@ -1330,48 +1355,56 @@
    "op": "replace",
    "brief": "drug-hemolysis",
    "find": "Anaphylaxis to a beta-lactam is real, but it arrives within seconds to minutes with rash and edema, and it does not cause anemia.",
-   "with": "Anaphylaxis to a beta-lactam: It is real, but it arrives within seconds to minutes with rash and edema, and it does not cause anemia.",
+   "with": "Anaphylaxis to a beta-lactam: it is real, but it arrives within seconds to minutes with rash and edema and does not cause anemia.",
    "note": "trap: Option: why",
    "claims": [
     {
      "claim": "Anaphylaxis to a beta-lactam is real.",
-     "to": "Anaphylaxis to a beta-lactam: It is real, but it arrives within seconds to minutes with rash and edema, and it does not cause anemia."
+     "to": "Anaphylaxis to a beta-lactam: it is real, but it arrives within seconds to minutes with rash and edema and does not cause anemia."
     },
     {
      "claim": "It arrives within seconds to minutes with rash and edema.",
-     "to": "Anaphylaxis to a beta-lactam: It is real, but it arrives within seconds to minutes with rash and edema, and it does not cause anemia."
+     "to": "Anaphylaxis to a beta-lactam: it is real, but it arrives within seconds to minutes with rash and edema and does not cause anemia."
     },
     {
      "claim": "It does not cause anemia.",
-     "to": "Anaphylaxis to a beta-lactam: It is real, but it arrives within seconds to minutes with rash and edema, and it does not cause anemia."
+     "to": "Anaphylaxis to a beta-lactam: it is real, but it arrives within seconds to minutes with rash and edema and does not cause anemia."
     }
    ],
    "new_claims": [
     {
-     "claim": "Anaphylaxis to a beta-lactam is real, arrives within seconds to minutes with rash and edema, and does not cause anemia.",
+     "claim": "Anaphylaxis to a beta-lactam: it is real, but it arrives within seconds to minutes with rash and edema and does not cause anemia.",
      "from": "Anaphylaxis to a beta-lactam is real."
+    },
+    {
+     "claim": "It arrives within seconds to minutes with rash and edema.",
+     "from": "It arrives within seconds to minutes with rash and edema."
+    },
+    {
+     "claim": "Anaphylaxis to a beta-lactam: it is real, but it arrives within seconds to minutes with rash and edema and does not cause anemia.",
+     "from": "It does not cause anemia."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "drug-hemolysis",
-   "find": "Liver ultrasonography: The same failure as the CT, and it cannot explain a hemoglobin of 6.3",
-   "with": "Liver ultrasonography: Like the CT, it looks for an obstruction that the normal enzymes exclude, and it cannot explain a hemoglobin of 6.3",
-   "note": "trap: remove personification",
+   "find": "The same failure as the CT, and it cannot explain a hemoglobin of 6.3",
+   "with": "Like the CT, it looks for an obstruction that the normal enzymes and mild pain exclude, and it cannot explain a hemoglobin of 6.3",
+   "note": "trap: spell out the shared reason",
    "claims": [
     {
      "claim": "Liver ultrasonography fails for the same reason as the CT.",
-     "to": "Liver ultrasonography: Like the CT, it looks for an obstruction that the normal enzymes exclude, and it cannot explain a hemoglobin of 6.3"
+     "to": "Liver ultrasonography: Like the CT, it looks for an obstruction that the normal enzymes and mild pain exclude, and it cannot explain a hemoglobin of 6.3"
     },
     {
      "claim": "It cannot explain a hemoglobin of 6.3.",
-     "to": "Liver ultrasonography: Like the CT, it looks for an obstruction that the normal enzymes exclude, and it cannot explain a hemoglobin of 6.3"
+     "to": "Liver ultrasonography: Like the CT, it looks for an obstruction that the normal enzymes and mild pain exclude, and it cannot explain a hemoglobin of 6.3"
     }
    ],
    "new_claims": [
     {
-     "claim": "Like the CT, liver ultrasonography looks for an obstruction that the normal enzymes exclude.",
+     "claim": "Liver ultrasonography: Like the CT, it looks for an obstruction that the normal enzymes and mild pain exclude, and it cannot explain a hemoglobin of 6.3",
      "from": "Liver ultrasonography fails for the same reason as the CT."
     },
     {
@@ -1383,19 +1416,1243 @@
   {
    "op": "replace",
    "brief": "drug-hemolysis",
-   "find": "Serum fibrinogen level: That disease is <b>consumptive</b>",
-   "with": "Serum fibrinogen level: Disseminated intravascular coagulation is <b>consumptive</b>",
-   "note": "trap: name the disease the fibrinogen tests for",
+   "find": "That disease is <b>consumptive</b> and requires",
+   "with": "Disseminated intravascular coagulation is <b>consumptive</b> and requires",
+   "note": "trap: name the disease instead of \"that disease\"",
    "claims": [
     {
-     "claim": "That disease is consumptive and requires severe thrombocytopenia with prolonged coagulation times.",
-     "to": "Serum fibrinogen level: Disseminated intravascular coagulation is consumptive"
+     "claim": "The disease a fibrinogen level looks for, disseminated intravascular coagulation, is consumptive and requires severe thrombocytopenia with prolonged coagulation times.",
+     "to": "Serum fibrinogen level: Disseminated intravascular coagulation is consumptive and requires severe thrombocytopenia with prolonged coagulation times; platelets are 285,000"
     }
    ],
    "new_claims": [
     {
-     "claim": "Disseminated intravascular coagulation is consumptive and requires severe thrombocytopenia with prolonged coagulation times.",
-     "from": "That disease is consumptive and requires severe thrombocytopenia with prolonged coagulation times."
+     "claim": "Serum fibrinogen level: Disseminated intravascular coagulation is consumptive and requires severe thrombocytopenia with prolonged coagulation times; platelets are 285,000",
+     "from": "The disease a fibrinogen level looks for, disseminated intravascular coagulation, is consumptive and requires severe thrombocytopenia with prolonged coagulation times."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "<p>The urine dipstick detects the <b>heme moiety</b> &mdash; it cannot distinguish hemoglobin from myoglobin from intact red blood cells. When the dipstick is positive but the microscope shows <b>0&ndash;2 RBC/hpf</b>, free hemoglobin or myoglobin is in the urine, not blood. This patient has a mechanical valve, schistocytes, elevated LDH, and low haptoglobin &mdash; textbook <b>intravascular hemolysis</b> &mdash; so the free pigment is hemoglobin released from sheared red cells passing through the prosthetic valve.</p>\n<p>The miss: focusing on dark urine as gross hematuria rather than stopping at the mismatch. The dipstick said yes; the microscope said no. That contradiction is the entire question.</p>",
+   "with": "<p>The urine dipstick detects the <b>heme moiety</b>; it cannot distinguish hemoglobin, myoglobin and intact red blood cells. When the dipstick is positive but microscopy shows <b>0&ndash;2 RBC/hpf</b> (red blood cells per high-power field), the urine contains free hemoglobin or myoglobin, not blood. This patient has a mechanical valve, schistocytes, elevated <b>LDH</b> (lactate dehydrogenase) and low haptoglobin, the classic picture of <b>intravascular hemolysis</b>. The free pigment is hemoglobin released from red cells sheared as they pass through the prosthetic valve.</p>\n<p>Do not read the dark urine as gross hematuria when the dipstick is positive and microscopy is not.</p>",
+   "note": ".dp: remove em dashes, personification and framing; expand acronyms",
+   "claims": [
+    {
+     "claim": "The urine dipstick detects the heme moiety.",
+     "to": "The urine dipstick detects the heme moiety; it cannot distinguish hemoglobin, myoglobin and intact red blood cells."
+    },
+    {
+     "claim": "The dipstick cannot distinguish hemoglobin from myoglobin from intact red blood cells.",
+     "to": "The urine dipstick detects the heme moiety; it cannot distinguish hemoglobin, myoglobin and intact red blood cells."
+    },
+    {
+     "claim": "A positive dipstick with 0–2 RBC/hpf on microscopy means free hemoglobin or myoglobin in the urine, not blood.",
+     "to": "When the dipstick is positive but microscopy shows 0–2 RBC/hpf (red blood cells per high-power field), the urine contains free hemoglobin or myoglobin, not blood."
+    },
+    {
+     "claim": "This patient has a mechanical valve, schistocytes, elevated LDH and low haptoglobin.",
+     "to": "This patient has a mechanical valve, schistocytes, elevated LDH (lactate dehydrogenase) and low haptoglobin, the classic picture of intravascular hemolysis."
+    },
+    {
+     "claim": "These findings are textbook intravascular hemolysis.",
+     "to": "This patient has a mechanical valve, schistocytes, elevated LDH (lactate dehydrogenase) and low haptoglobin, the classic picture of intravascular hemolysis."
+    },
+    {
+     "claim": "The free pigment is hemoglobin released from sheared red cells passing through the prosthetic valve.",
+     "to": "The free pigment is hemoglobin released from red cells sheared as they pass through the prosthetic valve."
+    },
+    {
+     "claim": "The miss is reading the dark urine as gross hematuria rather than stopping at the mismatch.",
+     "to": "Do not read the dark urine as gross hematuria when the dipstick is positive and microscopy is not."
+    },
+    {
+     "claim": "The dipstick was positive and the microscopy was negative.",
+     "to": "Do not read the dark urine as gross hematuria when the dipstick is positive and microscopy is not."
+    },
+    {
+     "claim": "That contradiction is the entire question.",
+     "dropped": "framing about the question"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The urine dipstick detects the heme moiety.",
+     "from": "The urine dipstick detects the heme moiety."
+    },
+    {
+     "claim": "The urine dipstick detects the heme moiety; it cannot distinguish hemoglobin, myoglobin and intact red blood cells.",
+     "from": "The dipstick cannot distinguish hemoglobin from myoglobin from intact red blood cells."
+    },
+    {
+     "claim": "When the dipstick is positive but microscopy shows 0–2 RBC/hpf (red blood cells per high-power field), the urine contains free hemoglobin or myoglobin, not blood.",
+     "from": "A positive dipstick with 0–2 RBC/hpf on microscopy means free hemoglobin or myoglobin in the urine, not blood."
+    },
+    {
+     "claim": "This patient has a mechanical valve, schistocytes, elevated LDH (lactate dehydrogenase) and low haptoglobin, the classic picture of intravascular hemolysis.",
+     "from": "This patient has a mechanical valve, schistocytes, elevated LDH and low haptoglobin."
+    },
+    {
+     "claim": "This patient has a mechanical valve, schistocytes, elevated LDH (lactate dehydrogenase) and low haptoglobin, the classic picture of intravascular hemolysis.",
+     "from": "These findings are textbook intravascular hemolysis."
+    },
+    {
+     "claim": "The free pigment is hemoglobin released from red cells sheared as they pass through the prosthetic valve.",
+     "from": "The free pigment is hemoglobin released from sheared red cells passing through the prosthetic valve."
+    },
+    {
+     "claim": "Do not read the dark urine as gross hematuria when the dipstick is positive and microscopy is not.",
+     "from": "The miss is reading the dark urine as gross hematuria rather than stopping at the mismatch."
+    },
+    {
+     "claim": "Do not read the dark urine as gross hematuria when the dipstick is positive and microscopy is not.",
+     "from": "The dipstick was positive and the microscopy was negative."
+    },
+    {
+     "claim": "RBC stands for red blood cell.",
+     "from": "expansion"
+    },
+    {
+     "claim": "hpf stands for high-power field.",
+     "from": "expansion"
+    },
+    {
+     "claim": "LDH stands for lactate dehydrogenase.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "The dipstick-microscopy mismatch is the entire question: dipstick detects heme, not cells; positive dipstick + no RBCs = free pigment",
+   "with": "The dipstick detects heme, not cells; a positive dipstick with no <b>RBCs</b> (red blood cells) means free pigment",
+   "note": "pearls: remove framing, expand RBC",
+   "claims": [
+    {
+     "claim": "The dipstick-microscopy mismatch is the entire question.",
+     "dropped": "framing about the question"
+    },
+    {
+     "claim": "The dipstick detects heme, not cells.",
+     "to": "The dipstick detects heme, not cells; a positive dipstick with no RBCs (red blood cells) means free pigment"
+    },
+    {
+     "claim": "A positive dipstick with no RBCs means free pigment.",
+     "to": "The dipstick detects heme, not cells; a positive dipstick with no RBCs (red blood cells) means free pigment"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The dipstick detects heme, not cells.",
+     "from": "The dipstick detects heme, not cells."
+    },
+    {
+     "claim": "The dipstick detects heme, not cells; a positive dipstick with no RBCs (red blood cells) means free pigment",
+     "from": "A positive dipstick with no RBCs means free pigment."
+    },
+    {
+     "claim": "RBC stands for red blood cell.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "CK is the separator; CK &gt;10,000 with muscle symptoms = myoglobin; normal CK with hemolysis markers = hemoglobin",
+   "with": "<b>CK</b> (creatine kinase) separates them: CK &gt;10,000 with muscle symptoms means myoglobin, and normal CK with hemolysis markers means hemoglobin",
+   "note": "pearls: plain wording, expand CK",
+   "claims": [
+    {
+     "claim": "CK separates hemoglobin from myoglobin.",
+     "to": "CK (creatine kinase) separates them: CK >10,000 with muscle symptoms means myoglobin, and normal CK with hemolysis markers means hemoglobin"
+    },
+    {
+     "claim": "CK >10,000 with muscle symptoms means myoglobin.",
+     "to": "CK (creatine kinase) separates them: CK >10,000 with muscle symptoms means myoglobin, and normal CK with hemolysis markers means hemoglobin"
+    },
+    {
+     "claim": "Normal CK with hemolysis markers means hemoglobin.",
+     "to": "CK (creatine kinase) separates them: CK >10,000 with muscle symptoms means myoglobin, and normal CK with hemolysis markers means hemoglobin"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CK (creatine kinase) separates them: CK >10,000 with muscle symptoms means myoglobin, and normal CK with hemolysis markers means hemoglobin",
+     "from": "CK separates hemoglobin from myoglobin."
+    },
+    {
+     "claim": "CK >10,000 with muscle symptoms means myoglobin.",
+     "from": "CK >10,000 with muscle symptoms means myoglobin."
+    },
+    {
+     "claim": "Normal CK with hemolysis markers means hemoglobin.",
+     "from": "Normal CK with hemolysis markers means hemoglobin."
+    },
+    {
+     "claim": "CK stands for creatine kinase.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "worsening anemia or rising LDH suggests paravalvular leak &rarr; echo &rarr; possible reoperation",
+   "with": "worsening anemia or rising <b>LDH</b> (lactate dehydrogenase) suggests paravalvular leak &rarr; echocardiography, then possible reoperation",
+   "note": "pearls: one arrow per sentence, expand LDH",
+   "claims": [
+    {
+     "claim": "Worsening anemia or rising LDH suggests paravalvular leak.",
+     "to": "worsening anemia or rising LDH (lactate dehydrogenase) suggests paravalvular leak → echocardiography, then possible reoperation"
+    },
+    {
+     "claim": "Suspected paravalvular leak leads to echocardiography and possible reoperation.",
+     "to": "worsening anemia or rising LDH (lactate dehydrogenase) suggests paravalvular leak → echocardiography, then possible reoperation"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "worsening anemia or rising LDH (lactate dehydrogenase) suggests paravalvular leak → echocardiography, then possible reoperation",
+     "from": "Worsening anemia or rising LDH suggests paravalvular leak."
+    },
+    {
+     "claim": "worsening anemia or rising LDH (lactate dehydrogenase) suggests paravalvular leak → echocardiography, then possible reoperation",
+     "from": "Suspected paravalvular leak leads to echocardiography and possible reoperation."
+    },
+    {
+     "claim": "LDH stands for lactate dehydrogenase.",
+     "from": "expansion"
+    },
+    {
+     "claim": "echo stands for echocardiography.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "Schistocytes confirm mechanical fragmentation &mdash; they tie hemolysis to the valve rather than autoimmune or drug cause",
+   "with": "Schistocytes confirm mechanical fragmentation and tie the hemolysis to the valve rather than to an autoimmune or drug cause",
+   "note": "pearls: remove em dash",
+   "claims": [
+    {
+     "claim": "Schistocytes confirm mechanical fragmentation.",
+     "to": "Schistocytes confirm mechanical fragmentation and tie the hemolysis to the valve rather than to an autoimmune or drug cause"
+    },
+    {
+     "claim": "Schistocytes tie hemolysis to the valve rather than to an autoimmune or drug cause.",
+     "to": "Schistocytes confirm mechanical fragmentation and tie the hemolysis to the valve rather than to an autoimmune or drug cause"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Schistocytes confirm mechanical fragmentation.",
+     "from": "Schistocytes confirm mechanical fragmentation."
+    },
+    {
+     "claim": "Schistocytes confirm mechanical fragmentation and tie the hemolysis to the valve rather than to an autoimmune or drug cause",
+     "from": "Schistocytes tie hemolysis to the valve rather than to an autoimmune or drug cause."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "<b>Drug-Induced Immune Hemolysis</b> &mdash; shared finding: intravascular hemolysis with schistocytes; discriminator: is there a mechanical source?",
+   "with": "<b>Drug-Induced Immune Hemolysis</b> shares the finding of intravascular hemolysis with schistocytes. Ask: is there a mechanical source?",
+   "note": "pairs with: no middot rows, so no em dash; discriminator as Ask",
+   "claims": [
+    {
+     "claim": "Drug-Induced Immune Hemolysis shares the finding of intravascular hemolysis with schistocytes.",
+     "to": "Drug-Induced Immune Hemolysis shares the finding of intravascular hemolysis with schistocytes. Ask: is there a mechanical source?"
+    },
+    {
+     "claim": "The discriminator is whether there is a mechanical source.",
+     "to": "Drug-Induced Immune Hemolysis shares the finding of intravascular hemolysis with schistocytes. Ask: is there a mechanical source?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Drug-Induced Immune Hemolysis shares the finding of intravascular hemolysis with schistocytes.",
+     "from": "Drug-Induced Immune Hemolysis shares the finding of intravascular hemolysis with schistocytes."
+    },
+    {
+     "claim": "Drug-Induced Immune Hemolysis shares the finding of intravascular hemolysis with schistocytes. Ask: is there a mechanical source?",
+     "from": "The discriminator is whether there is a mechanical source."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "When the dipstick says blood and the microscope says no, the question is not &ldquo;where is the bleeding&rdquo; but &ldquo;where is the free pigment coming from&rdquo; &mdash; and CK separates muscle from red cell, while the clinical context names the mechanism.",
+   "with": "When the dipstick is positive for blood but microscopy shows no red cells, look for the source of free pigment, not a bleeding site. <b>CK</b> (creatine kinase) separates muscle from red cell, and the clinical context identifies the mechanism.",
+   "note": "rule: remove personification and em dash, expand CK",
+   "claims": [
+    {
+     "claim": "When the dipstick says blood and the microscope says no, the question is where the free pigment is coming from, not where the bleeding is.",
+     "to": "When the dipstick is positive for blood but microscopy shows no red cells, look for the source of free pigment, not a bleeding site."
+    },
+    {
+     "claim": "CK separates muscle from red cell.",
+     "to": "CK (creatine kinase) separates muscle from red cell, and the clinical context identifies the mechanism."
+    },
+    {
+     "claim": "The clinical context names the mechanism.",
+     "to": "CK (creatine kinase) separates muscle from red cell, and the clinical context identifies the mechanism."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When the dipstick is positive for blood but microscopy shows no red cells, look for the source of free pigment, not a bleeding site.",
+     "from": "When the dipstick says blood and the microscope says no, the question is where the free pigment is coming from, not where the bleeding is."
+    },
+    {
+     "claim": "CK (creatine kinase) separates muscle from red cell, and the clinical context identifies the mechanism.",
+     "from": "CK separates muscle from red cell."
+    },
+    {
+     "claim": "CK (creatine kinase) separates muscle from red cell, and the clinical context identifies the mechanism.",
+     "from": "The clinical context names the mechanism."
+    },
+    {
+     "claim": "CK stands for creatine kinase.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "Anticoagulant hematuria tempts because the patient is on warfarin, but the RBC count on microscopy was not checked.",
+   "with": "Anticoagulant hematuria: the patient is on warfarin, but urine microscopy shows almost no <b>RBCs</b> (red blood cells).",
+   "note": "trap: Option: why; state the microscopy finding",
+   "claims": [
+    {
+     "claim": "Anticoagulant hematuria tempts because the patient is on warfarin.",
+     "to": "Anticoagulant hematuria: the patient is on warfarin, but urine microscopy shows almost no RBCs (red blood cells)."
+    },
+    {
+     "claim": "The RBC count on microscopy, which was overlooked, rules it out.",
+     "to": "Anticoagulant hematuria: the patient is on warfarin, but urine microscopy shows almost no RBCs (red blood cells)."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Anticoagulant hematuria: the patient is on warfarin, but urine microscopy shows almost no RBCs (red blood cells).",
+     "from": "Anticoagulant hematuria tempts because the patient is on warfarin."
+    },
+    {
+     "claim": "Anticoagulant hematuria: the patient is on warfarin, but urine microscopy shows almost no RBCs (red blood cells).",
+     "from": "The RBC count on microscopy, which was overlooked, rules it out."
+    },
+    {
+     "claim": "RBC stands for red blood cell.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "Endocarditis tempts because there is a prosthetic valve, but there is no fever or systemic infection.",
+   "with": "Endocarditis: there is a prosthetic valve, but no fever or systemic infection.",
+   "note": "trap: Option: why",
+   "claims": [
+    {
+     "claim": "Endocarditis tempts because there is a prosthetic valve.",
+     "to": "Endocarditis: there is a prosthetic valve, but no fever or systemic infection."
+    },
+    {
+     "claim": "There is no fever or systemic infection.",
+     "to": "Endocarditis: there is a prosthetic valve, but no fever or systemic infection."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Endocarditis: there is a prosthetic valve, but no fever or systemic infection.",
+     "from": "Endocarditis tempts because there is a prosthetic valve."
+    },
+    {
+     "claim": "Endocarditis: there is a prosthetic valve, but no fever or systemic infection.",
+     "from": "There is no fever or systemic infection."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "Rhabdomyolysis also causes dipstick+/RBC&minus; mismatch, but there are no muscle symptoms and no CK elevation.",
+   "with": "Rhabdomyolysis: it also causes a positive dipstick with no RBCs, but there are no muscle symptoms and no <b>CK</b> (creatine kinase) elevation.",
+   "note": "trap: Option: why, expand CK",
+   "claims": [
+    {
+     "claim": "Rhabdomyolysis also causes a dipstick-positive, RBC-negative mismatch.",
+     "to": "Rhabdomyolysis: it also causes a positive dipstick with no RBCs, but there are no muscle symptoms and no CK (creatine kinase) elevation."
+    },
+    {
+     "claim": "There are no muscle symptoms and no CK elevation.",
+     "to": "Rhabdomyolysis: it also causes a positive dipstick with no RBCs, but there are no muscle symptoms and no CK (creatine kinase) elevation."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Rhabdomyolysis: it also causes a positive dipstick with no RBCs, but there are no muscle symptoms and no CK (creatine kinase) elevation.",
+     "from": "Rhabdomyolysis also causes a dipstick-positive, RBC-negative mismatch."
+    },
+    {
+     "claim": "Rhabdomyolysis: it also causes a positive dipstick with no RBCs, but there are no muscle symptoms and no CK (creatine kinase) elevation.",
+     "from": "There are no muscle symptoms and no CK elevation."
+    },
+    {
+     "claim": "CK stands for creatine kinase.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "<p>Both iron deficiency anemia and beta-thalassemia trait produce a low MCV. The reflex is to order hemoglobin electrophoresis, but <b>iron deficiency lowers HbA2</b>, the very marker electrophoresis uses to diagnose beta-thalassemia trait. If you run electrophoresis on an iron-deficient patient, a falsely normal HbA2 will <b>mask coexisting thalassemia</b>. The rule: <b>iron studies first, correct the iron, then electrophoresis</b>.</p>\n<p>This is not a knowledge gap about the diseases; it is a sequencing rule about the tests.</p>",
+   "with": "<p>Both iron deficiency anemia and beta-thalassemia trait produce a low <b>MCV</b> (mean corpuscular volume). Hemoglobin electrophoresis is not the first test, because <b>iron deficiency lowers HbA2</b> (hemoglobin A2), the marker electrophoresis uses to diagnose beta-thalassemia trait. In an iron-deficient patient, a falsely normal HbA2 on electrophoresis will <b>mask coexisting thalassemia</b>. Order <b>iron studies first, correct the iron, then electrophoresis</b>.</p>",
+   "note": ".dp: remove framing paragraph and \"The rule:\" label, expand acronyms",
+   "claims": [
+    {
+     "claim": "Both iron deficiency anemia and beta-thalassemia trait produce a low MCV.",
+     "to": "Both iron deficiency anemia and beta-thalassemia trait produce a low MCV (mean corpuscular volume)."
+    },
+    {
+     "claim": "The reflex is to order hemoglobin electrophoresis.",
+     "to": "Hemoglobin electrophoresis is not the first test, because iron deficiency lowers HbA2 (hemoglobin A2), the marker electrophoresis uses to diagnose beta-thalassemia trait."
+    },
+    {
+     "claim": "Iron deficiency lowers HbA2.",
+     "to": "Hemoglobin electrophoresis is not the first test, because iron deficiency lowers HbA2 (hemoglobin A2), the marker electrophoresis uses to diagnose beta-thalassemia trait."
+    },
+    {
+     "claim": "HbA2 is the marker electrophoresis uses to diagnose beta-thalassemia trait.",
+     "to": "Hemoglobin electrophoresis is not the first test, because iron deficiency lowers HbA2 (hemoglobin A2), the marker electrophoresis uses to diagnose beta-thalassemia trait."
+    },
+    {
+     "claim": "Electrophoresis in an iron-deficient patient gives a falsely normal HbA2 that will mask coexisting thalassemia.",
+     "to": "In an iron-deficient patient, a falsely normal HbA2 on electrophoresis will mask coexisting thalassemia."
+    },
+    {
+     "claim": "Iron studies first, correct the iron, then electrophoresis.",
+     "to": "Order iron studies first, correct the iron, then electrophoresis."
+    },
+    {
+     "claim": "This is a sequencing rule about the tests rather than a knowledge gap about the diseases.",
+     "dropped": "framing about the question; the order itself is stated in the previous sentence"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Both iron deficiency anemia and beta-thalassemia trait produce a low MCV.",
+     "from": "Both iron deficiency anemia and beta-thalassemia trait produce a low MCV."
+    },
+    {
+     "claim": "Hemoglobin electrophoresis is not the first test, because iron deficiency lowers HbA2 (hemoglobin A2), the marker electrophoresis uses to diagnose beta-thalassemia trait.",
+     "from": "The reflex is to order hemoglobin electrophoresis."
+    },
+    {
+     "claim": "Iron deficiency lowers HbA2.",
+     "from": "Iron deficiency lowers HbA2."
+    },
+    {
+     "claim": "Hemoglobin electrophoresis is not the first test, because iron deficiency lowers HbA2 (hemoglobin A2), the marker electrophoresis uses to diagnose beta-thalassemia trait.",
+     "from": "HbA2 is the marker electrophoresis uses to diagnose beta-thalassemia trait."
+    },
+    {
+     "claim": "In an iron-deficient patient, a falsely normal HbA2 on electrophoresis will mask coexisting thalassemia.",
+     "from": "Electrophoresis in an iron-deficient patient gives a falsely normal HbA2 that will mask coexisting thalassemia."
+    },
+    {
+     "claim": "Iron studies first, correct the iron, then electrophoresis.",
+     "from": "Iron studies first, correct the iron, then electrophoresis."
+    },
+    {
+     "claim": "MCV stands for mean corpuscular volume.",
+     "from": "expansion"
+    },
+    {
+     "claim": "HbA2 stands for hemoglobin A2.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "a sequencing rule, not a preference; the reason is biological: iron deficiency suppresses delta-globin chain production, lowering HbA2 into the normal range",
+   "with": "a required order, not a preference, because iron deficiency suppresses delta-globin chain production, lowering <b>HbA2</b> (hemoglobin A2) into the normal range",
+   "note": "pearls: remove filler, expand HbA2",
+   "claims": [
+    {
+     "claim": "Iron studies then electrophoresis is a sequencing rule, not a preference.",
+     "to": "Iron studies → then electrophoresis: a required order, not a preference, because iron deficiency suppresses delta-globin chain production, lowering HbA2 (hemoglobin A2) into the normal range"
+    },
+    {
+     "claim": "Iron deficiency suppresses delta-globin chain production, lowering HbA2 into the normal range.",
+     "to": "Iron studies → then electrophoresis: a required order, not a preference, because iron deficiency suppresses delta-globin chain production, lowering HbA2 (hemoglobin A2) into the normal range"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Iron studies → then electrophoresis: a required order, not a preference, because iron deficiency suppresses delta-globin chain production, lowering HbA2 (hemoglobin A2) into the normal range",
+     "from": "Iron studies then electrophoresis is a sequencing rule, not a preference."
+    },
+    {
+     "claim": "Iron studies → then electrophoresis: a required order, not a preference, because iron deficiency suppresses delta-globin chain production, lowering HbA2 (hemoglobin A2) into the normal range",
+     "from": "Iron deficiency suppresses delta-globin chain production, lowering HbA2 into the normal range."
+    },
+    {
+     "claim": "HbA2 stands for hemoglobin A2.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "TIBC and transferrin saturation add sensitivity",
+   "with": "<b>TIBC</b> (total iron-binding capacity) and transferrin saturation add sensitivity",
+   "note": "pearls: expand TIBC",
+   "claims": [
+    {
+     "claim": "TIBC and transferrin saturation add sensitivity when ferritin is borderline.",
+     "to": "TIBC (total iron-binding capacity) and transferrin saturation add sensitivity when ferritin is borderline"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "TIBC (total iron-binding capacity) and transferrin saturation add sensitivity when ferritin is borderline",
+     "from": "TIBC and transferrin saturation add sensitivity when ferritin is borderline."
+    },
+    {
+     "claim": "TIBC stands for total iron-binding capacity.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "Alpha-thalassemia minor has a normal electrophoresis &mdash; it is a diagnosis of exclusion or gene testing; the one microcytic anemia that electrophoresis cannot diagnose",
+   "with": "Alpha-thalassemia minor has a normal electrophoresis. It is diagnosed by exclusion or gene testing and is the one microcytic anemia that electrophoresis cannot diagnose",
+   "note": "pearls: remove em dash",
+   "claims": [
+    {
+     "claim": "Alpha-thalassemia minor has a normal electrophoresis.",
+     "to": "Alpha-thalassemia minor has a normal electrophoresis. It is diagnosed by exclusion or gene testing and is the one microcytic anemia that electrophoresis cannot diagnose"
+    },
+    {
+     "claim": "It is a diagnosis of exclusion or gene testing.",
+     "to": "Alpha-thalassemia minor has a normal electrophoresis. It is diagnosed by exclusion or gene testing and is the one microcytic anemia that electrophoresis cannot diagnose"
+    },
+    {
+     "claim": "It is the one microcytic anemia that electrophoresis cannot diagnose.",
+     "to": "Alpha-thalassemia minor has a normal electrophoresis. It is diagnosed by exclusion or gene testing and is the one microcytic anemia that electrophoresis cannot diagnose"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Alpha-thalassemia minor has a normal electrophoresis.",
+     "from": "Alpha-thalassemia minor has a normal electrophoresis."
+    },
+    {
+     "claim": "Alpha-thalassemia minor has a normal electrophoresis. It is diagnosed by exclusion or gene testing and is the one microcytic anemia that electrophoresis cannot diagnose",
+     "from": "It is a diagnosis of exclusion or gene testing."
+    },
+    {
+     "claim": "Alpha-thalassemia minor has a normal electrophoresis. It is diagnosed by exclusion or gene testing and is the one microcytic anemia that electrophoresis cannot diagnose",
+     "from": "It is the one microcytic anemia that electrophoresis cannot diagnose."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "The Mentzer index (MCV/RBC) is a screening heuristic: &lt;13 suggests thalassemia, &gt;13 suggests IDA; it is not diagnostic and never the answer to &ldquo;most appropriate test&rdquo;",
+   "with": "The Mentzer index is <b>MCV</b> (mean corpuscular volume) divided by <b>RBC</b> (red blood cell count). It is a screening heuristic: under 13 suggests thalassemia and over 13 suggests <b>IDA</b> (iron deficiency anemia). It is not diagnostic and is never the most appropriate test",
+   "note": "pearls: expand acronyms, remove quoted framing",
+   "claims": [
+    {
+     "claim": "The Mentzer index is MCV/RBC.",
+     "to": "The Mentzer index is MCV (mean corpuscular volume) divided by RBC (red blood cell count)."
+    },
+    {
+     "claim": "The Mentzer index is a screening heuristic.",
+     "to": "It is a screening heuristic: under 13 suggests thalassemia and over 13 suggests IDA (iron deficiency anemia)."
+    },
+    {
+     "claim": "A Mentzer index below 13 suggests thalassemia.",
+     "to": "It is a screening heuristic: under 13 suggests thalassemia and over 13 suggests IDA (iron deficiency anemia)."
+    },
+    {
+     "claim": "A Mentzer index above 13 suggests IDA.",
+     "to": "It is a screening heuristic: under 13 suggests thalassemia and over 13 suggests IDA (iron deficiency anemia)."
+    },
+    {
+     "claim": "It is not diagnostic and never the answer to \"most appropriate test\".",
+     "to": "It is not diagnostic and is never the most appropriate test"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The Mentzer index is MCV (mean corpuscular volume) divided by RBC (red blood cell count).",
+     "from": "The Mentzer index is MCV/RBC."
+    },
+    {
+     "claim": "It is a screening heuristic: under 13 suggests thalassemia and over 13 suggests IDA (iron deficiency anemia).",
+     "from": "The Mentzer index is a screening heuristic."
+    },
+    {
+     "claim": "It is a screening heuristic: under 13 suggests thalassemia and over 13 suggests IDA (iron deficiency anemia).",
+     "from": "A Mentzer index below 13 suggests thalassemia."
+    },
+    {
+     "claim": "It is a screening heuristic: under 13 suggests thalassemia and over 13 suggests IDA (iron deficiency anemia).",
+     "from": "A Mentzer index above 13 suggests IDA."
+    },
+    {
+     "claim": "It is not diagnostic and is never the most appropriate test",
+     "from": "It is not diagnostic and never the answer to \"most appropriate test\"."
+    },
+    {
+     "claim": "MCV stands for mean corpuscular volume.",
+     "from": "expansion"
+    },
+    {
+     "claim": "RBC stands for red blood cell count.",
+     "from": "expansion"
+    },
+    {
+     "claim": "IDA stands for iron deficiency anemia.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "In a patient whose anemia does not correct with iron, the next question is whether there is a second cause &mdash; that is when electrophoresis earns its place",
+   "with": "If the anemia does not correct with iron, look for a second cause; that is when to order electrophoresis",
+   "note": "pearls: remove em dash and figurative phrase",
+   "claims": [
+    {
+     "claim": "If anemia does not correct with iron, the next question is whether there is a second cause.",
+     "to": "If the anemia does not correct with iron, look for a second cause; that is when to order electrophoresis"
+    },
+    {
+     "claim": "That is when electrophoresis is indicated.",
+     "to": "If the anemia does not correct with iron, look for a second cause; that is when to order electrophoresis"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "If the anemia does not correct with iron, look for a second cause; that is when to order electrophoresis",
+     "from": "If anemia does not correct with iron, the next question is whether there is a second cause."
+    },
+    {
+     "claim": "If the anemia does not correct with iron, look for a second cause; that is when to order electrophoresis",
+     "from": "That is when electrophoresis is indicated."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "<b>Sickle Cell Trait versus Disease</b> &mdash; shared tool: hemoglobin electrophoresis; discriminator: is the electrophoresis interpretable, or must iron be corrected first?",
+   "with": "<b>Sickle Cell Trait versus Disease</b> also uses hemoglobin electrophoresis. Ask: is the electrophoresis interpretable, or must iron be corrected first?",
+   "note": "pairs with: no middot rows, so no em dash; discriminator as Ask",
+   "claims": [
+    {
+     "claim": "Sickle Cell Trait versus Disease shares hemoglobin electrophoresis as a tool.",
+     "to": "Sickle Cell Trait versus Disease also uses hemoglobin electrophoresis. Ask: is the electrophoresis interpretable, or must iron be corrected first?"
+    },
+    {
+     "claim": "The discriminator: is the electrophoresis interpretable, or must iron be corrected first?",
+     "to": "Sickle Cell Trait versus Disease also uses hemoglobin electrophoresis. Ask: is the electrophoresis interpretable, or must iron be corrected first?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Sickle Cell Trait versus Disease also uses hemoglobin electrophoresis. Ask: is the electrophoresis interpretable, or must iron be corrected first?",
+     "from": "Sickle Cell Trait versus Disease shares hemoglobin electrophoresis as a tool."
+    },
+    {
+     "claim": "Sickle Cell Trait versus Disease also uses hemoglobin electrophoresis. Ask: is the electrophoresis interpretable, or must iron be corrected first?",
+     "from": "The discriminator: is the electrophoresis interpretable, or must iron be corrected first?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "When two diseases share a lab value and one disease suppresses the marker used to diagnose the other, the order of testing is not a preference &mdash; it is a dependency. Correct the confounder first, then run the definitive test.",
+   "with": "When two diseases share a lab value and one suppresses the marker used to diagnose the other, testing order is a dependency, not a preference. Correct the confounder first, then run the definitive test.",
+   "note": "rule: remove em dash",
+   "claims": [
+    {
+     "claim": "When two diseases share a lab value and one suppresses the marker used to diagnose the other, testing order is a dependency, not a preference.",
+     "to": "When two diseases share a lab value and one suppresses the marker used to diagnose the other, testing order is a dependency, not a preference."
+    },
+    {
+     "claim": "Correct the confounder first, then run the definitive test.",
+     "to": "Correct the confounder first, then run the definitive test."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When two diseases share a lab value and one suppresses the marker used to diagnose the other, testing order is a dependency, not a preference.",
+     "from": "When two diseases share a lab value and one suppresses the marker used to diagnose the other, testing order is a dependency, not a preference."
+    },
+    {
+     "claim": "Correct the confounder first, then run the definitive test.",
+     "from": "Correct the confounder first, then run the definitive test."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "Hemoglobin electrophoresis tempts because it &ldquo;checks for thalassemia,&rdquo; but iron deficiency makes it uninterpretable.",
+   "with": "Hemoglobin electrophoresis: it checks for thalassemia, but iron deficiency makes it uninterpretable.",
+   "note": "trap: Option: why",
+   "claims": [
+    {
+     "claim": "Hemoglobin electrophoresis tempts because it checks for thalassemia.",
+     "to": "Hemoglobin electrophoresis: it checks for thalassemia, but iron deficiency makes it uninterpretable."
+    },
+    {
+     "claim": "Iron deficiency makes it uninterpretable.",
+     "to": "Hemoglobin electrophoresis: it checks for thalassemia, but iron deficiency makes it uninterpretable."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hemoglobin electrophoresis: it checks for thalassemia, but iron deficiency makes it uninterpretable.",
+     "from": "Hemoglobin electrophoresis tempts because it checks for thalassemia."
+    },
+    {
+     "claim": "Iron deficiency makes it uninterpretable.",
+     "from": "Iron deficiency makes it uninterpretable."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "Bone marrow biopsy tempts as the definitive heme test, but it is invasive and unnecessary when a dietary cause is obvious.",
+   "with": "Bone marrow biopsy: it can look like the definitive hematology test, but it is invasive and unnecessary when a dietary cause is obvious.",
+   "note": "trap: Option: why",
+   "claims": [
+    {
+     "claim": "Bone marrow biopsy tempts as the definitive hematology test.",
+     "to": "Bone marrow biopsy: it can look like the definitive hematology test, but it is invasive and unnecessary when a dietary cause is obvious."
+    },
+    {
+     "claim": "It is invasive and unnecessary when a dietary cause is obvious.",
+     "to": "Bone marrow biopsy: it can look like the definitive hematology test, but it is invasive and unnecessary when a dietary cause is obvious."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Bone marrow biopsy: it can look like the definitive hematology test, but it is invasive and unnecessary when a dietary cause is obvious.",
+     "from": "Bone marrow biopsy tempts as the definitive hematology test."
+    },
+    {
+     "claim": "It is invasive and unnecessary when a dietary cause is obvious.",
+     "from": "It is invasive and unnecessary when a dietary cause is obvious."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "<p>A patient with known severe hemophilia A on factor VIII replacement has bleeding that <b>does not respond to increased dosing</b>. The aPTT is 112 seconds &mdash; massively prolonged despite daily infusions that should be correcting it. The infused factor VIII is being <b>neutralized by alloantibodies</b>. This is <b>inhibitor development</b>, occurring in ~25% of patients with severe hemophilia A.</p>\n<p>The aPTT at 112 on replacement therapy is the entire question: the intrinsic pathway is uncorrected despite receiving the missing factor. Platelets are 150K and PT is normal, eliminating every platelet and common-pathway option. The miss was a 47-minute doubt loop landing on platelet dysfunction &mdash; a knowledge gap compounded by exhaustive cycling.</p>",
+   "with": "<p>A patient with known severe hemophilia A on factor VIII replacement has bleeding that <b>does not respond to increased dosing</b>. The <b>aPTT</b> (activated partial thromboplastin time) is 112 seconds, massively prolonged despite daily infusions that should be correcting it. The infused factor VIII is being <b>neutralized by alloantibodies</b>. This is <b>inhibitor development</b>, which occurs in ~25% of patients with severe hemophilia A.</p>\n<p>An aPTT of 112 on replacement therapy means the intrinsic pathway remains uncorrected even though the missing factor is being given. Platelets of 150K and a normal <b>PT</b> (prothrombin time) exclude every platelet and common-pathway cause. The original miss was a 47-minute doubt loop that landed on platelet dysfunction, a knowledge gap compounded by exhaustive cycling.</p>",
+   "note": ".dp: remove em dash and slogan, expand acronyms",
+   "claims": [
+    {
+     "claim": "A patient with known severe hemophilia A on factor VIII replacement has bleeding that does not respond to increased dosing.",
+     "to": "A patient with known severe hemophilia A on factor VIII replacement has bleeding that does not respond to increased dosing."
+    },
+    {
+     "claim": "The aPTT is 112 seconds.",
+     "to": "The aPTT (activated partial thromboplastin time) is 112 seconds, massively prolonged despite daily infusions that should be correcting it."
+    },
+    {
+     "claim": "The aPTT is massively prolonged despite daily infusions that should be correcting it.",
+     "to": "The aPTT (activated partial thromboplastin time) is 112 seconds, massively prolonged despite daily infusions that should be correcting it."
+    },
+    {
+     "claim": "The infused factor VIII is being neutralized by alloantibodies.",
+     "to": "The infused factor VIII is being neutralized by alloantibodies."
+    },
+    {
+     "claim": "This is inhibitor development.",
+     "to": "This is inhibitor development, which occurs in ~25% of patients with severe hemophilia A."
+    },
+    {
+     "claim": "Inhibitor development occurs in ~25% of patients with severe hemophilia A.",
+     "to": "This is inhibitor development, which occurs in ~25% of patients with severe hemophilia A."
+    },
+    {
+     "claim": "The aPTT at 112 on replacement therapy is the key finding.",
+     "to": "An aPTT of 112 on replacement therapy means the intrinsic pathway remains uncorrected even though the missing factor is being given."
+    },
+    {
+     "claim": "The intrinsic pathway is uncorrected despite receiving the missing factor.",
+     "to": "An aPTT of 112 on replacement therapy means the intrinsic pathway remains uncorrected even though the missing factor is being given."
+    },
+    {
+     "claim": "Platelets are 150K and PT is normal.",
+     "to": "Platelets of 150K and a normal PT (prothrombin time) exclude every platelet and common-pathway cause."
+    },
+    {
+     "claim": "This eliminates every platelet and common-pathway option.",
+     "to": "Platelets of 150K and a normal PT (prothrombin time) exclude every platelet and common-pathway cause."
+    },
+    {
+     "claim": "The miss was a 47-minute doubt loop landing on platelet dysfunction, a knowledge gap compounded by exhaustive cycling.",
+     "to": "The original miss was a 47-minute doubt loop that landed on platelet dysfunction, a knowledge gap compounded by exhaustive cycling."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A patient with known severe hemophilia A on factor VIII replacement has bleeding that does not respond to increased dosing.",
+     "from": "A patient with known severe hemophilia A on factor VIII replacement has bleeding that does not respond to increased dosing."
+    },
+    {
+     "claim": "The aPTT is 112 seconds.",
+     "from": "The aPTT is 112 seconds."
+    },
+    {
+     "claim": "The aPTT (activated partial thromboplastin time) is 112 seconds, massively prolonged despite daily infusions that should be correcting it.",
+     "from": "The aPTT is massively prolonged despite daily infusions that should be correcting it."
+    },
+    {
+     "claim": "The infused factor VIII is being neutralized by alloantibodies.",
+     "from": "The infused factor VIII is being neutralized by alloantibodies."
+    },
+    {
+     "claim": "This is inhibitor development.",
+     "from": "This is inhibitor development."
+    },
+    {
+     "claim": "This is inhibitor development, which occurs in ~25% of patients with severe hemophilia A.",
+     "from": "Inhibitor development occurs in ~25% of patients with severe hemophilia A."
+    },
+    {
+     "claim": "An aPTT of 112 on replacement therapy means the intrinsic pathway remains uncorrected even though the missing factor is being given.",
+     "from": "The aPTT at 112 on replacement therapy is the key finding."
+    },
+    {
+     "claim": "An aPTT of 112 on replacement therapy means the intrinsic pathway remains uncorrected even though the missing factor is being given.",
+     "from": "The intrinsic pathway is uncorrected despite receiving the missing factor."
+    },
+    {
+     "claim": "Platelets of 150K and a normal PT (prothrombin time) exclude every platelet and common-pathway cause.",
+     "from": "Platelets are 150K and PT is normal."
+    },
+    {
+     "claim": "Platelets of 150K and a normal PT (prothrombin time) exclude every platelet and common-pathway cause.",
+     "from": "This eliminates every platelet and common-pathway option."
+    },
+    {
+     "claim": "The original miss was a 47-minute doubt loop that landed on platelet dysfunction, a knowledge gap compounded by exhaustive cycling.",
+     "from": "The miss was a 47-minute doubt loop landing on platelet dysfunction, a knowledge gap compounded by exhaustive cycling."
+    },
+    {
+     "claim": "aPTT stands for activated partial thromboplastin time.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PT stands for prothrombin time.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "<span class=\"lbl\">Hemophilic arthropathy: where the bleeding meets the joint</span>",
+   "with": "<span class=\"lbl\">Hemophilic arthropathy</span>",
+   "note": "label: remove slogan",
+   "reworded_label": [
+    "Hemophilic arthropathy: where the bleeding meets the joint"
+   ],
+   "claims": [
+    {
+     "claim": "The block is about where the bleeding meets the joint.",
+     "dropped": "rhetorical label; the block content is unchanged"
+    }
+   ],
+   "new_claims": []
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "mix patient plasma 1:1 with normal plasma: if aPTT corrects &rarr; factor deficiency; if it does not correct &rarr; inhibitor; factor VIII inhibitor is time- and temperature-dependent",
+   "with": "mix patient plasma 1:1 with normal plasma. Correction of the <b>aPTT</b> (activated partial thromboplastin time) means factor deficiency; no correction means an inhibitor. A factor VIII inhibitor is time- and temperature-dependent",
+   "note": "pearls: one arrow per sentence, expand aPTT",
+   "claims": [
+    {
+     "claim": "The mixing study mixes patient plasma 1:1 with normal plasma.",
+     "to": "mix patient plasma 1:1 with normal plasma. Correction of the aPTT (activated partial thromboplastin time) means factor deficiency; no correction means an inhibitor. A factor VIII inhibitor is time- and temperature-dependent"
+    },
+    {
+     "claim": "If the aPTT corrects, it is a factor deficiency.",
+     "to": "mix patient plasma 1:1 with normal plasma. Correction of the aPTT (activated partial thromboplastin time) means factor deficiency; no correction means an inhibitor. A factor VIII inhibitor is time- and temperature-dependent"
+    },
+    {
+     "claim": "If it does not correct, it is an inhibitor.",
+     "to": "mix patient plasma 1:1 with normal plasma. Correction of the aPTT (activated partial thromboplastin time) means factor deficiency; no correction means an inhibitor. A factor VIII inhibitor is time- and temperature-dependent"
+    },
+    {
+     "claim": "A factor VIII inhibitor is time- and temperature-dependent.",
+     "to": "mix patient plasma 1:1 with normal plasma. Correction of the aPTT (activated partial thromboplastin time) means factor deficiency; no correction means an inhibitor. A factor VIII inhibitor is time- and temperature-dependent"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "mix patient plasma 1:1 with normal plasma. Correction of the aPTT (activated partial thromboplastin time) means factor deficiency; no correction means an inhibitor. A factor VIII inhibitor is time- and temperature-dependent",
+     "from": "The mixing study mixes patient plasma 1:1 with normal plasma."
+    },
+    {
+     "claim": "mix patient plasma 1:1 with normal plasma. Correction of the aPTT (activated partial thromboplastin time) means factor deficiency; no correction means an inhibitor. A factor VIII inhibitor is time- and temperature-dependent",
+     "from": "If the aPTT corrects, it is a factor deficiency."
+    },
+    {
+     "claim": "mix patient plasma 1:1 with normal plasma. Correction of the aPTT (activated partial thromboplastin time) means factor deficiency; no correction means an inhibitor. A factor VIII inhibitor is time- and temperature-dependent",
+     "from": "If it does not correct, it is an inhibitor."
+    },
+    {
+     "claim": "A factor VIII inhibitor is time- and temperature-dependent.",
+     "from": "A factor VIII inhibitor is time- and temperature-dependent."
+    },
+    {
+     "claim": "aPTT stands for activated partial thromboplastin time.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "high-titer (&ge;5 BU) requires bypassing agents (rFVIIa or activated PCC)",
+   "with": "high-titer (&ge;5 BU) requires bypassing agents: <b>rFVIIa</b> (recombinant activated factor VII) or activated <b>PCC</b> (prothrombin complex concentrate)",
+   "note": "pearls: expand acronyms",
+   "claims": [
+    {
+     "claim": "High-titer (≥5 BU) inhibitors require bypassing agents, rFVIIa or activated PCC.",
+     "to": "high-titer (≥5 BU) requires bypassing agents: rFVIIa (recombinant activated factor VII) or activated PCC (prothrombin complex concentrate)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "high-titer (≥5 BU) requires bypassing agents: rFVIIa (recombinant activated factor VII) or activated PCC (prothrombin complex concentrate)",
+     "from": "High-titer (≥5 BU) inhibitors require bypassing agents, rFVIIa or activated PCC."
+    },
+    {
+     "claim": "rFVIIa stands for recombinant activated factor VII.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PCC stands for prothrombin complex concentrate.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "<b>Hemarthrosis = factor problem; petechiae = platelet problem</b> &mdash; this division answers most hematology stems before any lab is read",
+   "with": "<b>Hemarthrosis versus petechiae</b> &mdash; hemarthrosis indicates a factor problem and petechiae a platelet problem; this division sorts most bleeding disorders before any lab is read",
+   "note": "pearls: slogan bold reworded, remove meta about stems",
+   "reworded_bold": [
+    "Hemarthrosis = factor problem; petechiae = platelet problem"
+   ],
+   "claims": [
+    {
+     "claim": "Hemarthrosis means a factor problem.",
+     "to": "Hemarthrosis versus petechiae — hemarthrosis indicates a factor problem and petechiae a platelet problem; this division sorts most bleeding disorders before any lab is read"
+    },
+    {
+     "claim": "Petechiae mean a platelet problem.",
+     "to": "Hemarthrosis versus petechiae — hemarthrosis indicates a factor problem and petechiae a platelet problem; this division sorts most bleeding disorders before any lab is read"
+    },
+    {
+     "claim": "This division answers most hematology questions before any lab is read.",
+     "to": "Hemarthrosis versus petechiae — hemarthrosis indicates a factor problem and petechiae a platelet problem; this division sorts most bleeding disorders before any lab is read"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hemarthrosis versus petechiae — hemarthrosis indicates a factor problem and petechiae a platelet problem; this division sorts most bleeding disorders before any lab is read",
+     "from": "Hemarthrosis means a factor problem."
+    },
+    {
+     "claim": "Hemarthrosis versus petechiae — hemarthrosis indicates a factor problem and petechiae a platelet problem; this division sorts most bleeding disorders before any lab is read",
+     "from": "Petechiae mean a platelet problem."
+    },
+    {
+     "claim": "Hemarthrosis versus petechiae — hemarthrosis indicates a factor problem and petechiae a platelet problem; this division sorts most bleeding disorders before any lab is read",
+     "from": "This division answers most hematology questions before any lab is read."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "<b>Anemia with Thrombocytopenia</b> &mdash; shared domain: coagulation workup; discriminator: aPTT correction on mixing. Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> owns vitamin K deficiency: is the PT long first, and is factor V normal (vitamin K) or low (liver)?",
+   "with": "<b>Anemia with Thrombocytopenia</b> also uses the coagulation workup. Ask: does the aPTT (activated partial thromboplastin time) correct on mixing? Part II <b>Fat-Soluble Vitamin Deficiency and Toxicity</b> covers vitamin K deficiency. Ask: is the PT (prothrombin time) long first, and is factor V normal (vitamin K) or low (liver)?",
+   "note": "pairs with: no middot rows, so no em dash; owns -> covers; discriminators as Ask",
+   "claims": [
+    {
+     "claim": "Anemia with Thrombocytopenia shares the coagulation workup domain.",
+     "to": "Anemia with Thrombocytopenia also uses the coagulation workup."
+    },
+    {
+     "claim": "The discriminator is aPTT correction on mixing.",
+     "to": "Ask: does the aPTT (activated partial thromboplastin time) correct on mixing?"
+    },
+    {
+     "claim": "Fat-Soluble Vitamin Deficiency and Toxicity owns vitamin K deficiency.",
+     "to": "Part II Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin K deficiency."
+    },
+    {
+     "claim": "Its question: is the PT long first, and is factor V normal (vitamin K) or low (liver)?",
+     "to": "Ask: is the PT (prothrombin time) long first, and is factor V normal (vitamin K) or low (liver)?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Anemia with Thrombocytopenia also uses the coagulation workup.",
+     "from": "Anemia with Thrombocytopenia shares the coagulation workup domain."
+    },
+    {
+     "claim": "Ask: does the aPTT (activated partial thromboplastin time) correct on mixing?",
+     "from": "The discriminator is aPTT correction on mixing."
+    },
+    {
+     "claim": "Part II Fat-Soluble Vitamin Deficiency and Toxicity covers vitamin K deficiency.",
+     "from": "Fat-Soluble Vitamin Deficiency and Toxicity owns vitamin K deficiency."
+    },
+    {
+     "claim": "Ask: is the PT (prothrombin time) long first, and is factor V normal (vitamin K) or low (liver)?",
+     "from": "Its question: is the PT long first, and is factor V normal (vitamin K) or low (liver)?"
+    },
+    {
+     "claim": "aPTT stands for activated partial thromboplastin time.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PT stands for prothrombin time.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "When a patient on factor replacement therapy has bleeding that does not respond to dose escalation and the aPTT remains prolonged despite adequate dosing, the infused factor is being neutralized &mdash; and the mixing study is what proves it.",
+   "with": "Bleeding on factor replacement therapy that does not respond to dose escalation, with an <b>aPTT</b> (activated partial thromboplastin time) still prolonged despite adequate dosing, means the infused factor is being neutralized. The mixing study proves it.",
+   "note": "rule: remove em dash, split",
+   "claims": [
+    {
+     "claim": "When bleeding on factor replacement does not respond to dose escalation and the aPTT remains prolonged despite adequate dosing, the infused factor is being neutralized.",
+     "to": "Bleeding on factor replacement therapy that does not respond to dose escalation, with an aPTT (activated partial thromboplastin time) still prolonged despite adequate dosing, means the infused factor is being neutralized."
+    },
+    {
+     "claim": "The mixing study proves it.",
+     "to": "The mixing study proves it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Bleeding on factor replacement therapy that does not respond to dose escalation, with an aPTT (activated partial thromboplastin time) still prolonged despite adequate dosing, means the infused factor is being neutralized.",
+     "from": "When bleeding on factor replacement does not respond to dose escalation and the aPTT remains prolonged despite adequate dosing, the infused factor is being neutralized."
+    },
+    {
+     "claim": "The mixing study proves it.",
+     "from": "The mixing study proves it."
+    },
+    {
+     "claim": "aPTT stands for activated partial thromboplastin time.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "Platelet dysfunction tempts as a generic &ldquo;bleeding&rdquo; answer, but platelets are normal and the aPTT (not a platelet test) is the abnormal value.",
+   "with": "Platelet dysfunction: platelets are normal, and the abnormal value is the <b>aPTT</b> (activated partial thromboplastin time), which is not a platelet test.",
+   "note": "trap: Option: why, expand aPTT",
+   "claims": [
+    {
+     "claim": "Platelet dysfunction tempts as a generic answer for bleeding.",
+     "dropped": "framing about why the option attracts"
+    },
+    {
+     "claim": "Platelets are normal.",
+     "to": "Platelet dysfunction: platelets are normal, and the abnormal value is the aPTT (activated partial thromboplastin time), which is not a platelet test."
+    },
+    {
+     "claim": "The aPTT, not a platelet test, is the abnormal value.",
+     "to": "Platelet dysfunction: platelets are normal, and the abnormal value is the aPTT (activated partial thromboplastin time), which is not a platelet test."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Platelets are normal.",
+     "from": "Platelets are normal."
+    },
+    {
+     "claim": "Platelet dysfunction: platelets are normal, and the abnormal value is the aPTT (activated partial thromboplastin time), which is not a platelet test.",
+     "from": "The aPTT, not a platelet test, is the abnormal value."
+    },
+    {
+     "claim": "aPTT stands for activated partial thromboplastin time.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "Acquired vWD can lower factor VIII, but presents with mucocutaneous bleeding, not hemarthrosis, and the patient already has a known factor deficiency.",
+   "with": "Acquired <b>vWD</b> (von Willebrand disease): it can lower factor VIII but presents with mucocutaneous bleeding, not hemarthrosis. The patient already has a known factor deficiency.",
+   "note": "trap: Option: why, expand vWD",
+   "claims": [
+    {
+     "claim": "Acquired vWD can lower factor VIII.",
+     "to": "Acquired vWD (von Willebrand disease): it can lower factor VIII but presents with mucocutaneous bleeding, not hemarthrosis."
+    },
+    {
+     "claim": "Acquired vWD presents with mucocutaneous bleeding, not hemarthrosis.",
+     "to": "Acquired vWD (von Willebrand disease): it can lower factor VIII but presents with mucocutaneous bleeding, not hemarthrosis."
+    },
+    {
+     "claim": "The patient already has a known factor deficiency.",
+     "to": "The patient already has a known factor deficiency."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Acquired vWD (von Willebrand disease): it can lower factor VIII but presents with mucocutaneous bleeding, not hemarthrosis.",
+     "from": "Acquired vWD can lower factor VIII."
+    },
+    {
+     "claim": "Acquired vWD (von Willebrand disease): it can lower factor VIII but presents with mucocutaneous bleeding, not hemarthrosis.",
+     "from": "Acquired vWD presents with mucocutaneous bleeding, not hemarthrosis."
+    },
+    {
+     "claim": "The patient already has a known factor deficiency.",
+     "from": "The patient already has a known factor deficiency."
+    },
+    {
+     "claim": "vWD stands for von Willebrand disease.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "Fibrinogen dysfunction tempts as a coagulopathy, but the PT is normal &mdash; fibrinogen (common pathway) would prolong both.",
+   "with": "Fibrinogen dysfunction: the <b>PT</b> (prothrombin time) is normal, and a fibrinogen (common pathway) defect would prolong both the PT and the aPTT.",
+   "note": "trap: Option: why, remove em dash, expand PT",
+   "claims": [
+    {
+     "claim": "Fibrinogen dysfunction tempts as a coagulopathy.",
+     "dropped": "framing about why the option attracts"
+    },
+    {
+     "claim": "The PT is normal.",
+     "to": "Fibrinogen dysfunction: the PT (prothrombin time) is normal, and a fibrinogen (common pathway) defect would prolong both the PT and the aPTT."
+    },
+    {
+     "claim": "A fibrinogen (common pathway) defect would prolong both the PT and aPTT.",
+     "to": "Fibrinogen dysfunction: the PT (prothrombin time) is normal, and a fibrinogen (common pathway) defect would prolong both the PT and the aPTT."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The PT is normal.",
+     "from": "The PT is normal."
+    },
+    {
+     "claim": "Fibrinogen dysfunction: the PT (prothrombin time) is normal, and a fibrinogen (common pathway) defect would prolong both the PT and the aPTT.",
+     "from": "A fibrinogen (common pathway) defect would prolong both the PT and aPTT."
+    },
+    {
+     "claim": "PT stands for prothrombin time.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "<b>Hemoglobin vs myoglobin</b> &mdash; <b>CK</b>",
+   "with": "<b>Hemoglobin vs myoglobin</b>: <b>CK</b>",
+   "note": "s33 fix: prose em dash to colon",
+   "claims": [
+    {
+     "claim": "Hemoglobin vs myoglobin — CK",
+     "to": "Hemoglobin vs myoglobin: CK"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Hemoglobin vs myoglobin: CK",
+     "from": "Hemoglobin vs myoglobin — CK"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "<b>Haptoglobin</b> &mdash; consumed",
+   "with": "<b>Haptoglobin</b>: consumed",
+   "note": "s33 fix: prose em dash to colon",
+   "claims": [
+    {
+     "claim": "Haptoglobin — consumed",
+     "to": "Haptoglobin: consumed"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Haptoglobin: consumed",
+     "from": "Haptoglobin — consumed"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "<b>Iron studies &rarr; then electrophoresis</b> &mdash; a required order",
+   "with": "<b>Iron studies &rarr; then electrophoresis</b>: a required order",
+   "note": "s33 fix: prose em dash to colon",
+   "claims": [
+    {
+     "claim": "Iron studies → then electrophoresis — a required order",
+     "to": "Iron studies → then electrophoresis: a required order"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Iron studies → then electrophoresis: a required order",
+     "from": "Iron studies → then electrophoresis — a required order"
     }
    ]
   }

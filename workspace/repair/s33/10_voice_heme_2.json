@@ -4,25 +4,25 @@
    "op": "replace",
    "brief": "transfusion",
    "find": "timing and company decide, and most need nothing",
-   "with": "Transfusion reactions sorted by timing and accompanying findings; most need nothing",
-   "note": "p.sub first segment: slogan to plain description",
+   "with": "Timing and associated findings classify transfusion reactions; most need nothing",
+   "note": "p.sub first segment: remove slogan",
    "claims": [
     {
-     "claim": "Timing and accompanying findings decide the type of transfusion reaction.",
-     "to": "Transfusion reactions sorted by timing and accompanying findings; most need nothing"
+     "claim": "Timing and the accompanying findings decide the type of transfusion reaction.",
+     "to": "Timing and associated findings classify transfusion reactions; most need nothing"
     },
     {
      "claim": "Most transfusion reactions need nothing.",
-     "to": "Transfusion reactions sorted by timing and accompanying findings; most need nothing"
+     "to": "Timing and associated findings classify transfusion reactions; most need nothing"
     }
    ],
    "new_claims": [
     {
-     "claim": "Transfusion reactions are sorted by timing and accompanying findings.",
-     "from": "Timing and accompanying findings decide the type of transfusion reaction."
+     "claim": "Timing and associated findings classify transfusion reactions.",
+     "from": "Timing and the accompanying findings decide the type of transfusion reaction."
     },
     {
-     "claim": "Most need nothing.",
+     "claim": "Timing and associated findings classify transfusion reactions; most need nothing",
      "from": "Most transfusion reactions need nothing."
     }
    ]
@@ -31,43 +31,51 @@
    "op": "replace",
    "brief": "transfusion",
    "find": "<p>This is <b>isolated urticaria in a haemodynamically stable patient</b>, and the stem spends its last three sentences proving it: normal blood pressure, no wheeze, clear lungs, normal oropharynx, and improvement after an antihistamine with an hour of stable observation. That is an <b>urticarial transfusion reaction</b> &mdash; preformed IgE reacting against a soluble allergen in the donated plasma, or the reverse. Management is exactly what already happened: stop, give an antihistamine, observe. <b>The response is the diagnostic test</b>, and the transfusion may be resumed without additional evaluation. There is nothing left to send.</p>",
-   "with": "<p>Normal blood pressure, no wheeze, clear lungs, a normal oropharynx, and improvement after an antihistamine with an hour of stable observation indicate <b>isolated urticaria in a haemodynamically stable patient</b>. This is an <b>urticarial transfusion reaction</b>: preformed IgE reacting against a soluble allergen in the donated plasma, or the reverse. Manage it by stopping the transfusion, giving an antihistamine and observing. <b>Improvement with the antihistamine confirms the diagnosis</b>, and the transfusion may be resumed without additional evaluation.</p>",
-   "note": ".dp: remove stem framing and slogan bold, em dash",
+   "with": "<p>Blood pressure is normal, there is no wheeze, the lungs are clear and the oropharynx is normal. This is <b>isolated urticaria in a haemodynamically stable patient</b>. The rash improved after an antihistamine, with an hour of stable observation. It is an <b>urticarial transfusion reaction</b>, caused by preformed IgE reacting against a soluble allergen in the donated plasma, or the reverse. Management is what has already been done: stop the transfusion, give an antihistamine and observe. <b>Improvement with the antihistamine confirms the diagnosis</b>, and the transfusion may be resumed without additional evaluation.</p>",
+   "note": ".dp: remove stem framing, split sentences, reword aphoristic bold",
    "reworded_bold": [
     "The response is the diagnostic test"
    ],
    "claims": [
     {
-     "claim": "The presentation is isolated urticaria in a haemodynamically stable patient.",
-     "to": "Normal blood pressure, no wheeze, clear lungs, a normal oropharynx, and improvement after an antihistamine with an hour of stable observation indicate isolated urticaria in a haemodynamically stable patient."
+     "claim": "This is isolated urticaria in a haemodynamically stable patient.",
+     "to": "This is isolated urticaria in a haemodynamically stable patient."
     },
     {
-     "claim": "The stem spends its final sentences proving it.",
-     "dropped": "framing about the stem; the findings themselves are kept in the new first sentence"
+     "claim": "The stem spends its last three sentences proving it.",
+     "dropped": "framing about the stem; the supporting findings are listed in the first sentence"
     },
     {
-     "claim": "Blood pressure is normal, there is no wheeze, the lungs are clear and the oropharynx is normal.",
-     "to": "Normal blood pressure, no wheeze, clear lungs, a normal oropharynx, and improvement after an antihistamine with an hour of stable observation indicate isolated urticaria in a haemodynamically stable patient."
+     "claim": "Blood pressure is normal.",
+     "to": "Blood pressure is normal, there is no wheeze, the lungs are clear and the oropharynx is normal."
     },
     {
-     "claim": "The rash improved after an antihistamine with an hour of stable observation.",
-     "to": "Normal blood pressure, no wheeze, clear lungs, a normal oropharynx, and improvement after an antihistamine with an hour of stable observation indicate isolated urticaria in a haemodynamically stable patient."
+     "claim": "There is no wheeze.",
+     "to": "Blood pressure is normal, there is no wheeze, the lungs are clear and the oropharynx is normal."
     },
     {
-     "claim": "This is an urticarial transfusion reaction.",
-     "to": "This is an urticarial transfusion reaction: preformed IgE reacting against a soluble allergen in the donated plasma, or the reverse."
+     "claim": "The lungs are clear.",
+     "to": "Blood pressure is normal, there is no wheeze, the lungs are clear and the oropharynx is normal."
+    },
+    {
+     "claim": "The oropharynx is normal.",
+     "to": "Blood pressure is normal, there is no wheeze, the lungs are clear and the oropharynx is normal."
+    },
+    {
+     "claim": "It improved after an antihistamine with an hour of stable observation.",
+     "to": "The rash improved after an antihistamine, with an hour of stable observation."
+    },
+    {
+     "claim": "It is an urticarial transfusion reaction.",
+     "to": "It is an urticarial transfusion reaction, caused by preformed IgE reacting against a soluble allergen in the donated plasma, or the reverse."
     },
     {
      "claim": "The mechanism is preformed IgE reacting against a soluble allergen in the donated plasma, or the reverse.",
-     "to": "This is an urticarial transfusion reaction: preformed IgE reacting against a soluble allergen in the donated plasma, or the reverse."
+     "to": "It is an urticarial transfusion reaction, caused by preformed IgE reacting against a soluble allergen in the donated plasma, or the reverse."
     },
     {
-     "claim": "Management is to stop, give an antihistamine and observe.",
-     "to": "Manage it by stopping the transfusion, giving an antihistamine and observing."
-    },
-    {
-     "claim": "Management is exactly what already happened.",
-     "dropped": "framing about the stem narrative; the management steps are stated"
+     "claim": "Management is stop, give an antihistamine, observe, which has already happened.",
+     "to": "Management is what has already been done: stop the transfusion, give an antihistamine and observe."
     },
     {
      "claim": "The response is the diagnostic test.",
@@ -84,28 +92,28 @@
    ],
    "new_claims": [
     {
-     "claim": "Normal blood pressure, no wheeze, clear lungs and a normal oropharynx indicate isolated urticaria in a haemodynamically stable patient.",
-     "from": "Blood pressure is normal, there is no wheeze, the lungs are clear and the oropharynx is normal."
+     "claim": "Blood pressure is normal, there is no wheeze, the lungs are clear and the oropharynx is normal.",
+     "from": "Blood pressure is normal."
     },
     {
-     "claim": "Improvement after an antihistamine with an hour of stable observation is part of the picture.",
-     "from": "The rash improved after an antihistamine with an hour of stable observation."
+     "claim": "This is isolated urticaria in a haemodynamically stable patient.",
+     "from": "This is isolated urticaria in a haemodynamically stable patient."
     },
     {
-     "claim": "The picture is isolated urticaria in a haemodynamically stable patient.",
-     "from": "The presentation is isolated urticaria in a haemodynamically stable patient."
+     "claim": "The rash improved after an antihistamine, with an hour of stable observation.",
+     "from": "It improved after an antihistamine with an hour of stable observation."
     },
     {
-     "claim": "This is an urticarial transfusion reaction.",
-     "from": "This is an urticarial transfusion reaction."
+     "claim": "It is an urticarial transfusion reaction.",
+     "from": "It is an urticarial transfusion reaction."
     },
     {
-     "claim": "Preformed IgE reacts against a soluble allergen in the donated plasma, or the reverse.",
+     "claim": "It is an urticarial transfusion reaction, caused by preformed IgE reacting against a soluble allergen in the donated plasma, or the reverse.",
      "from": "The mechanism is preformed IgE reacting against a soluble allergen in the donated plasma, or the reverse."
     },
     {
-     "claim": "Manage by stopping the transfusion, giving an antihistamine and observing.",
-     "from": "Management is to stop, give an antihistamine and observe."
+     "claim": "Management is what has already been done: stop the transfusion, give an antihistamine and observe.",
+     "from": "Management is stop, give an antihistamine, observe, which has already happened."
     },
     {
      "claim": "Improvement with the antihistamine confirms the diagnosis.",
@@ -120,153 +128,138 @@
   {
    "op": "replace",
    "brief": "transfusion",
-   "find": "<b>BP 110/82, HR 90, saturation 98%</b> &mdash; haemodynamically stable; excludes anaphylaxis, haemolysis and sepsis in one line &middot; <b>Lungs clear, oropharynx normal</b> &mdash; no bronchospasm, no angioedema; the two findings that would make this anaphylaxis &middot; <b>Afebrile at 37.2</b> &mdash; excludes both the febrile and the bacterial-contamination routes &middot; <b>Rash improved with diphenhydramine and stayed stable for an hour</b> &mdash; the diagnostic confirmation; response is the test &middot; <b>Petechiae and bruises were present before the transfusion</b> &mdash; they belong to a platelet count of 7,000 from aplastic anaemia, not to a new consumptive process &middot; <b>No flank pain, no dark urine</b> &mdash; the haemolytic reaction's own findings are absent &middot; <b>It was a platelet transfusion</b> &mdash; the product most associated with bacterial contamination, which is why culture is offered; with no fever the indication never opens",
-   "with": "<b>BP 110/82, HR 90, saturation 98%</b> &mdash; haemodynamically stable; excludes anaphylaxis, haemolysis and sepsis &middot; <b>Lungs clear, oropharynx normal</b> &mdash; no bronchospasm, no angioedema; the two findings that would make this anaphylaxis &middot; <b>Afebrile at 37.2</b> &mdash; excludes both the febrile and the bacterial-contamination reactions &middot; <b>Rash improved with diphenhydramine and stayed stable for an hour</b> &mdash; confirms the diagnosis &middot; <b>Petechiae and bruises were present before the transfusion</b> &mdash; they reflect a platelet count of 7,000 from aplastic anaemia, not a new consumptive process &middot; <b>No flank pain, no dark urine</b> &mdash; the findings of a haemolytic reaction are absent &middot; <b>It was a platelet transfusion</b> &mdash; the product most associated with bacterial contamination; without fever, culture is not indicated",
-   "note": "pertinent pearls: plain wording, drop slogans and personification",
+   "find": "haemodynamically stable; excludes anaphylaxis, haemolysis and sepsis in one line",
+   "with": "haemodynamically stable, which excludes anaphylaxis, haemolysis and sepsis",
+   "note": "pearls P&N: remove 'in one line' framing",
    "claims": [
     {
-     "claim": "BP 110/82, HR 90 and saturation 98% mean the patient is haemodynamically stable.",
-     "to": "BP 110/82, HR 90, saturation 98% — haemodynamically stable; excludes anaphylaxis, haemolysis and sepsis"
+     "claim": "BP 110/82, HR 90, saturation 98% is haemodynamically stable.",
+     "to": "BP 110/82, HR 90, saturation 98% — haemodynamically stable, which excludes anaphylaxis, haemolysis and sepsis"
     },
     {
      "claim": "These vitals exclude anaphylaxis, haemolysis and sepsis in one line.",
-     "to": "BP 110/82, HR 90, saturation 98% — haemodynamically stable; excludes anaphylaxis, haemolysis and sepsis"
-    },
-    {
-     "claim": "Clear lungs and a normal oropharynx mean no bronchospasm and no angioedema.",
-     "to": "Lungs clear, oropharynx normal — no bronchospasm, no angioedema; the two findings that would make this anaphylaxis"
-    },
-    {
-     "claim": "Bronchospasm and angioedema are the two findings that would make this anaphylaxis.",
-     "to": "Lungs clear, oropharynx normal — no bronchospasm, no angioedema; the two findings that would make this anaphylaxis"
-    },
-    {
-     "claim": "Being afebrile at 37.2 excludes both the febrile and the bacterial-contamination routes.",
-     "to": "Afebrile at 37.2 — excludes both the febrile and the bacterial-contamination reactions"
-    },
-    {
-     "claim": "Rash improvement with diphenhydramine and an hour of stability is the diagnostic confirmation.",
-     "to": "Rash improved with diphenhydramine and stayed stable for an hour — confirms the diagnosis"
-    },
-    {
-     "claim": "Response is the test.",
-     "to": "Rash improved with diphenhydramine and stayed stable for an hour — confirms the diagnosis"
-    },
-    {
-     "claim": "Petechiae and bruises present before the transfusion belong to a platelet count of 7,000 from aplastic anaemia, not to a new consumptive process.",
-     "to": "Petechiae and bruises were present before the transfusion — they reflect a platelet count of 7,000 from aplastic anaemia, not a new consumptive process"
-    },
-    {
-     "claim": "No flank pain and no dark urine mean the haemolytic reaction's findings are absent.",
-     "to": "No flank pain, no dark urine — the findings of a haemolytic reaction are absent"
-    },
-    {
-     "claim": "Platelets are the product most associated with bacterial contamination.",
-     "to": "It was a platelet transfusion — the product most associated with bacterial contamination; without fever, culture is not indicated"
-    },
-    {
-     "claim": "That is why this option is offered.",
-     "dropped": "framing about the answer options"
-    },
-    {
-     "claim": "With no fever the indication for culture never opens.",
-     "to": "It was a platelet transfusion — the product most associated with bacterial contamination; without fever, culture is not indicated"
+     "to": "BP 110/82, HR 90, saturation 98% — haemodynamically stable, which excludes anaphylaxis, haemolysis and sepsis"
     }
    ],
    "new_claims": [
     {
-     "claim": "BP 110/82, HR 90, saturation 98% mean haemodynamic stability and exclude anaphylaxis, haemolysis and sepsis.",
+     "claim": "BP 110/82, HR 90, saturation 98% — haemodynamically stable, which excludes anaphylaxis, haemolysis and sepsis",
+     "from": "BP 110/82, HR 90, saturation 98% is haemodynamically stable."
+    },
+    {
+     "claim": "BP 110/82, HR 90, saturation 98% — haemodynamically stable, which excludes anaphylaxis, haemolysis and sepsis",
      "from": "These vitals exclude anaphylaxis, haemolysis and sepsis in one line."
-    },
-    {
-     "claim": "Clear lungs and normal oropharynx: no bronchospasm, no angioedema, the two findings that would make this anaphylaxis.",
-     "from": "Bronchospasm and angioedema are the two findings that would make this anaphylaxis."
-    },
-    {
-     "claim": "Afebrile at 37.2 excludes both the febrile and the bacterial-contamination reactions.",
-     "from": "Being afebrile at 37.2 excludes both the febrile and the bacterial-contamination routes."
-    },
-    {
-     "claim": "Rash improvement with diphenhydramine and an hour of stability confirms the diagnosis.",
-     "from": "Rash improvement with diphenhydramine and an hour of stability is the diagnostic confirmation."
-    },
-    {
-     "claim": "Pre-existing petechiae and bruises reflect a platelet count of 7,000 from aplastic anaemia, not a new consumptive process.",
-     "from": "Petechiae and bruises present before the transfusion belong to a platelet count of 7,000 from aplastic anaemia, not to a new consumptive process."
-    },
-    {
-     "claim": "The findings of a haemolytic reaction are absent.",
-     "from": "No flank pain and no dark urine mean the haemolytic reaction's findings are absent."
-    },
-    {
-     "claim": "Platelets are the product most associated with bacterial contamination.",
-     "from": "Platelets are the product most associated with bacterial contamination."
-    },
-    {
-     "claim": "Without fever, culture is not indicated.",
-     "from": "With no fever the indication for culture never opens."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "transfusion",
-   "find": "<b>What is the blood pressure and the saturation?</b> &mdash; Normal &rarr; the dangerous reactions are out &middot; <b>Is there a fever?</b> &mdash; No &rarr; not haemolytic, not bacterial, not febrile &middot; <b>Wheeze, angioedema or hypotension?</b> &mdash; None &rarr; urticaria is isolated, so not anaphylaxis &middot; <b>How fast did it start?</b> &mdash; Late, not in the first minutes &rarr; urticarial &middot; <b>Did it respond to the antihistamine?</b> &mdash; Yes &rarr; that is the confirmation &middot; <b>So what is needed?</b> &mdash; Nothing further; the transfusion may be resumed",
-   "with": "<b>What is the blood pressure and the saturation?</b> &mdash; Normal &rarr; the dangerous reactions are excluded &middot; <b>Is there a fever?</b> &mdash; No &rarr; not haemolytic, not bacterial, not febrile &middot; <b>Wheeze, angioedema or hypotension?</b> &mdash; None &rarr; urticaria is isolated, so not anaphylaxis &middot; <b>How fast did it start?</b> &mdash; Late, not in the first minutes &rarr; urticarial &middot; <b>Did it respond to the antihistamine?</b> &mdash; Yes &rarr; this confirms the diagnosis &middot; <b>What else is needed?</b> &mdash; Nothing further; the transfusion may be resumed",
-   "note": "decision spine: plain wording",
-   "reworded_bold": [
-    "So what is needed?"
-   ],
+   "find": "excludes both the febrile and the bacterial-contamination routes",
+   "with": "excludes both a febrile reaction and bacterial contamination",
+   "note": "pearls P&N: plain wording",
    "claims": [
     {
-     "claim": "Normal blood pressure and saturation mean the dangerous reactions are out.",
-     "to": "— Normal → the dangerous reactions are excluded"
-    },
-    {
-     "claim": "No fever means not haemolytic, not bacterial, not febrile.",
-     "to": "— No → not haemolytic, not bacterial, not febrile"
-    },
-    {
-     "claim": "No wheeze, angioedema or hypotension means urticaria is isolated, so not anaphylaxis.",
-     "to": "— None → urticaria is isolated, so not anaphylaxis"
-    },
-    {
-     "claim": "Late onset, not in the first minutes, means urticarial.",
-     "to": "— Late, not in the first minutes → urticarial"
-    },
-    {
-     "claim": "Response to the antihistamine is the confirmation.",
-     "to": "— Yes → this confirms the diagnosis"
-    },
-    {
-     "claim": "Nothing further is needed; the transfusion may be resumed.",
-     "to": "— Nothing further; the transfusion may be resumed"
+     "claim": "Being afebrile at 37.2 excludes both the febrile and the bacterial-contamination routes.",
+     "to": "Afebrile at 37.2 — excludes both a febrile reaction and bacterial contamination"
     }
    ],
    "new_claims": [
     {
-     "claim": "Normal blood pressure and saturation: the dangerous reactions are excluded.",
-     "from": "Normal blood pressure and saturation mean the dangerous reactions are out."
+     "claim": "Afebrile at 37.2 — excludes both a febrile reaction and bacterial contamination",
+     "from": "Being afebrile at 37.2 excludes both the febrile and the bacterial-contamination routes."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "the diagnostic confirmation; response is the test",
+   "with": "confirms the diagnosis",
+   "note": "pearls P&N: remove slogan",
+   "claims": [
+    {
+     "claim": "Improvement with diphenhydramine and an hour of stability is the diagnostic confirmation.",
+     "to": "Rash improved with diphenhydramine and stayed stable for an hour — confirms the diagnosis"
     },
     {
-     "claim": "No fever: not haemolytic, not bacterial, not febrile.",
-     "from": "No fever means not haemolytic, not bacterial, not febrile."
+     "claim": "The response is the test.",
+     "to": "Rash improved with diphenhydramine and stayed stable for an hour — confirms the diagnosis"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Rash improved with diphenhydramine and stayed stable for an hour — confirms the diagnosis",
+     "from": "Improvement with diphenhydramine and an hour of stability is the diagnostic confirmation."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "they belong to a platelet count of 7,000 from aplastic anaemia, not to a new consumptive process",
+   "with": "they reflect a platelet count of 7,000 from aplastic anaemia, not a new consumptive process",
+   "note": "pearls P&N: plain wording",
+   "claims": [
+    {
+     "claim": "The pre-existing petechiae and bruises come from a platelet count of 7,000 from aplastic anaemia, not a new consumptive process.",
+     "to": "Petechiae and bruises were present before the transfusion — they reflect a platelet count of 7,000 from aplastic anaemia, not a new consumptive process"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Petechiae and bruises were present before the transfusion — they reflect a platelet count of 7,000 from aplastic anaemia, not a new consumptive process",
+     "from": "The pre-existing petechiae and bruises come from a platelet count of 7,000 from aplastic anaemia, not a new consumptive process."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "the haemolytic reaction's own findings are absent",
+   "with": "the findings of a haemolytic reaction are absent",
+   "note": "pearls P&N: plain wording",
+   "claims": [
+    {
+     "claim": "No flank pain and no dark urine means the haemolytic reaction's findings are absent.",
+     "to": "No flank pain, no dark urine — the findings of a haemolytic reaction are absent"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "No flank pain, no dark urine — the findings of a haemolytic reaction are absent",
+     "from": "No flank pain and no dark urine means the haemolytic reaction's findings are absent."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "the product most associated with bacterial contamination, which is why culture is offered; with no fever the indication never opens",
+   "with": "platelets are the product most associated with bacterial contamination; without fever, culture is not indicated",
+   "note": "pearls P&N: remove option framing and dramatic closer",
+   "claims": [
+    {
+     "claim": "Platelets are the product most associated with bacterial contamination.",
+     "to": "It was a platelet transfusion — platelets are the product most associated with bacterial contamination; without fever, culture is not indicated"
     },
     {
-     "claim": "No wheeze, angioedema or hypotension: urticaria is isolated, so not anaphylaxis.",
-     "from": "No wheeze, angioedema or hypotension means urticaria is isolated, so not anaphylaxis."
+     "claim": "That is why culture is offered as an option.",
+     "to": "It was a platelet transfusion — platelets are the product most associated with bacterial contamination; without fever, culture is not indicated"
     },
     {
-     "claim": "Late onset: urticarial.",
-     "from": "Late onset, not in the first minutes, means urticarial."
+     "claim": "With no fever, culture is not indicated.",
+     "to": "It was a platelet transfusion — platelets are the product most associated with bacterial contamination; without fever, culture is not indicated"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Platelets are the product most associated with bacterial contamination.",
+     "from": "Platelets are the product most associated with bacterial contamination."
     },
     {
-     "claim": "Response to the antihistamine confirms the diagnosis.",
-     "from": "Response to the antihistamine is the confirmation."
-    },
-    {
-     "claim": "Nothing further is needed; the transfusion may be resumed.",
-     "from": "Nothing further is needed; the transfusion may be resumed."
+     "claim": "Without fever, culture is not indicated.",
+     "from": "With no fever, culture is not indicated."
     }
    ]
   },
@@ -274,32 +267,32 @@
    "op": "replace",
    "brief": "transfusion",
    "find": "The petechiae and ecchymoses are the trap and they do double duty &mdash; they look like a new haemorrhagic complication <i>and</i> they sit in the skin examination beside the urticaria, as though they arrived together. The stem says twice that they did not: she had bruising a week ago, and her platelet count is 7,000. <b>A finding documented before the intervention cannot be a reaction to it.</b>",
-   "with": "The petechiae and ecchymoses look like a new haemorrhagic complication, and they are listed in the skin examination beside the urticaria. They predate the transfusion: she had bruising a week ago, and her platelet count is 7,000. <b>A finding documented before the intervention cannot be a reaction to it.</b>",
-   "note": "decoy note: remove trap framing and em dash",
+   "with": "The petechiae and ecchymoses look like a new haemorrhagic complication, and they appear in the skin examination beside the urticaria as though they arrived together. They were present before the transfusion: she had bruising a week ago, and her platelet count is 7,000. <b>A finding documented before the intervention cannot be a reaction to it.</b>",
+   "note": ".danger: remove trap framing and em dash",
    "claims": [
     {
      "claim": "The petechiae and ecchymoses are the trap and do double duty.",
-     "dropped": "framing about the question"
+     "dropped": "framing about the question; the two ways they mislead are stated next"
     },
     {
      "claim": "They look like a new haemorrhagic complication.",
-     "to": "The petechiae and ecchymoses look like a new haemorrhagic complication, and they are listed in the skin examination beside the urticaria."
+     "to": "The petechiae and ecchymoses look like a new haemorrhagic complication, and they appear in the skin examination beside the urticaria as though they arrived together."
     },
     {
      "claim": "They sit in the skin examination beside the urticaria, as though they arrived together.",
-     "to": "The petechiae and ecchymoses look like a new haemorrhagic complication, and they are listed in the skin examination beside the urticaria."
+     "to": "The petechiae and ecchymoses look like a new haemorrhagic complication, and they appear in the skin examination beside the urticaria as though they arrived together."
     },
     {
      "claim": "The stem says twice that they did not arrive together.",
-     "to": "They predate the transfusion: she had bruising a week ago, and her platelet count is 7,000."
+     "to": "They were present before the transfusion: she had bruising a week ago, and her platelet count is 7,000."
     },
     {
      "claim": "She had bruising a week ago.",
-     "to": "They predate the transfusion: she had bruising a week ago, and her platelet count is 7,000."
+     "to": "They were present before the transfusion: she had bruising a week ago, and her platelet count is 7,000."
     },
     {
      "claim": "Her platelet count is 7,000.",
-     "to": "They predate the transfusion: she had bruising a week ago, and her platelet count is 7,000."
+     "to": "They were present before the transfusion: she had bruising a week ago, and her platelet count is 7,000."
     },
     {
      "claim": "A finding documented before the intervention cannot be a reaction to it.",
@@ -312,11 +305,11 @@
      "from": "They look like a new haemorrhagic complication."
     },
     {
-     "claim": "They are listed in the skin examination beside the urticaria.",
+     "claim": "They appear in the skin examination beside the urticaria as though they arrived together.",
      "from": "They sit in the skin examination beside the urticaria, as though they arrived together."
     },
     {
-     "claim": "They predate the transfusion.",
+     "claim": "They were present before the transfusion.",
      "from": "The stem says twice that they did not arrive together."
     },
     {
@@ -332,45 +325,67 @@
   {
    "op": "replace",
    "brief": "transfusion",
-   "find": "<b>The vitals sort transfusion reactions faster than the rash does</b> &mdash; normal blood pressure, no fever and no hypoxia eliminate anaphylaxis, haemolysis, bacterial contamination and TRALI in one pass &middot; Isolated urticaria is the one reaction you may transfuse through: stop, antihistamine, observe, resume the same unit &middot; <b>Timing separates the two allergic reactions</b> &mdash; seconds to minutes with wheeze and hypotension is anaphylaxis; hours with hives alone is urticarial &middot; Anaphylaxis to blood should make you think <b>IgA deficiency</b>, and the durable fix is washed products &middot; <b>Platelets carry the bacterial risk</b> because they are stored at room temperature; fever and rigors during a platelet transfusion is the stem that earns cultures",
-   "with": "<b>The vitals sort transfusion reactions</b>: normal blood pressure, no fever and no hypoxia exclude anaphylaxis, haemolysis, bacterial contamination and <b>TRALI</b> (transfusion-related acute lung injury) &middot; Isolated urticaria is the only reaction you may transfuse through: stop, give an antihistamine, observe, then resume the same unit &middot; <b>Timing separates the two allergic reactions</b>: onset in seconds to minutes with wheeze and hypotension is anaphylaxis; onset over hours with hives alone is urticarial &middot; Anaphylaxis to blood suggests <b>IgA deficiency</b>; the long-term fix is washed products &middot; <b>Platelets carry the bacterial risk</b> because they are stored at room temperature; fever and rigors during a platelet transfusion call for cultures",
-   "note": "pearls: em dashes to colons, slogan bold trimmed, TRALI expanded",
+   "find": "<b>The vitals sort transfusion reactions faster than the rash does</b> &mdash; normal blood pressure, no fever and no hypoxia eliminate anaphylaxis, haemolysis, bacterial contamination and TRALI in one pass",
+   "with": "<b>Vital signs</b>: normal blood pressure, no fever and no hypoxia eliminate anaphylaxis, haemolysis, bacterial contamination and <b>TRALI</b> (transfusion-related acute lung injury)",
+   "note": "pearls: reword slogan bold, expand TRALI",
    "reworded_bold": [
     "The vitals sort transfusion reactions faster than the rash does"
    ],
    "claims": [
     {
-     "claim": "The vitals sort transfusion reactions.",
-     "to": "The vitals sort transfusion reactions: normal blood pressure, no fever and no hypoxia exclude anaphylaxis, haemolysis, bacterial contamination and TRALI (transfusion-related acute lung injury)"
-    },
-    {
-     "claim": "The vitals sort them faster than the rash does.",
+     "claim": "The vitals sort transfusion reactions faster than the rash does.",
      "carried_by": "the vitals sort them faster than the rash does"
     },
     {
      "claim": "Normal blood pressure, no fever and no hypoxia eliminate anaphylaxis, haemolysis, bacterial contamination and TRALI in one pass.",
-     "to": "The vitals sort transfusion reactions: normal blood pressure, no fever and no hypoxia exclude anaphylaxis, haemolysis, bacterial contamination and TRALI (transfusion-related acute lung injury)"
+     "to": "Vital signs: normal blood pressure, no fever and no hypoxia eliminate anaphylaxis, haemolysis, bacterial contamination and TRALI (transfusion-related acute lung injury)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Normal blood pressure, no fever and no hypoxia eliminate anaphylaxis, haemolysis, bacterial contamination and TRALI.",
+     "from": "Normal blood pressure, no fever and no hypoxia eliminate anaphylaxis, haemolysis, bacterial contamination and TRALI in one pass."
     },
+    {
+     "claim": "TRALI stands for transfusion-related acute lung injury.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "Isolated urticaria is the one reaction you may transfuse through: stop, antihistamine, observe, resume the same unit",
+   "with": "Isolated urticaria is the only reaction in which the transfusion may continue: stop, give an antihistamine, observe, then resume the same unit",
+   "note": "pearls: plain wording",
+   "claims": [
     {
      "claim": "Isolated urticaria is the one reaction you may transfuse through.",
-     "to": "Isolated urticaria is the only reaction you may transfuse through: stop, give an antihistamine, observe, then resume the same unit"
+     "to": "Isolated urticaria is the only reaction in which the transfusion may continue: stop, give an antihistamine, observe, then resume the same unit"
     },
     {
-     "claim": "For isolated urticaria: stop, antihistamine, observe, resume the same unit.",
-     "to": "Isolated urticaria is the only reaction you may transfuse through: stop, give an antihistamine, observe, then resume the same unit"
+     "claim": "Its management is stop, antihistamine, observe, resume the same unit.",
+     "to": "Isolated urticaria is the only reaction in which the transfusion may continue: stop, give an antihistamine, observe, then resume the same unit"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Isolated urticaria is the only reaction in which the transfusion may continue.",
+     "from": "Isolated urticaria is the one reaction you may transfuse through."
     },
     {
-     "claim": "Timing separates the two allergic reactions.",
-     "to": "Timing separates the two allergic reactions: onset in seconds to minutes with wheeze and hypotension is anaphylaxis; onset over hours with hives alone is urticarial"
-    },
-    {
-     "claim": "Seconds to minutes with wheeze and hypotension is anaphylaxis.",
-     "to": "Timing separates the two allergic reactions: onset in seconds to minutes with wheeze and hypotension is anaphylaxis; onset over hours with hives alone is urticarial"
-    },
-    {
-     "claim": "Hours with hives alone is urticarial.",
-     "to": "Timing separates the two allergic reactions: onset in seconds to minutes with wheeze and hypotension is anaphylaxis; onset over hours with hives alone is urticarial"
-    },
+     "claim": "Stop, give an antihistamine, observe, then resume the same unit.",
+     "from": "Its management is stop, antihistamine, observe, resume the same unit."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "Anaphylaxis to blood should make you think <b>IgA deficiency</b>, and the durable fix is washed products",
+   "with": "Anaphylaxis to blood suggests <b>IgA deficiency</b>; the long-term fix is washed products",
+   "note": "pearls: plain wording",
+   "claims": [
     {
      "claim": "Anaphylaxis to blood should make you think of IgA deficiency.",
      "to": "Anaphylaxis to blood suggests IgA deficiency; the long-term fix is washed products"
@@ -378,49 +393,9 @@
     {
      "claim": "The durable fix is washed products.",
      "to": "Anaphylaxis to blood suggests IgA deficiency; the long-term fix is washed products"
-    },
-    {
-     "claim": "Platelets carry the bacterial risk because they are stored at room temperature.",
-     "to": "Platelets carry the bacterial risk because they are stored at room temperature; fever and rigors during a platelet transfusion call for cultures"
-    },
-    {
-     "claim": "Fever and rigors during a platelet transfusion earn cultures.",
-     "to": "Platelets carry the bacterial risk because they are stored at room temperature; fever and rigors during a platelet transfusion call for cultures"
     }
    ],
    "new_claims": [
-    {
-     "claim": "The vitals sort transfusion reactions.",
-     "from": "The vitals sort transfusion reactions."
-    },
-    {
-     "claim": "Normal blood pressure, no fever and no hypoxia exclude anaphylaxis, haemolysis, bacterial contamination and TRALI.",
-     "from": "Normal blood pressure, no fever and no hypoxia eliminate anaphylaxis, haemolysis, bacterial contamination and TRALI in one pass."
-    },
-    {
-     "claim": "TRALI stands for transfusion-related acute lung injury.",
-     "from": "expansion"
-    },
-    {
-     "claim": "Isolated urticaria is the only reaction you may transfuse through.",
-     "from": "Isolated urticaria is the one reaction you may transfuse through."
-    },
-    {
-     "claim": "Stop, give an antihistamine, observe, then resume the same unit.",
-     "from": "For isolated urticaria: stop, antihistamine, observe, resume the same unit."
-    },
-    {
-     "claim": "Timing separates the two allergic reactions.",
-     "from": "Timing separates the two allergic reactions."
-    },
-    {
-     "claim": "Onset in seconds to minutes with wheeze and hypotension is anaphylaxis.",
-     "from": "Seconds to minutes with wheeze and hypotension is anaphylaxis."
-    },
-    {
-     "claim": "Onset over hours with hives alone is urticarial.",
-     "from": "Hours with hives alone is urticarial."
-    },
     {
      "claim": "Anaphylaxis to blood suggests IgA deficiency.",
      "from": "Anaphylaxis to blood should make you think of IgA deficiency."
@@ -428,14 +403,25 @@
     {
      "claim": "The long-term fix is washed products.",
      "from": "The durable fix is washed products."
-    },
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "fever and rigors during a platelet transfusion is the stem that earns cultures",
+   "with": "fever and rigors during a platelet transfusion call for cultures",
+   "note": "pearls: remove stem framing",
+   "claims": [
     {
-     "claim": "Platelets carry the bacterial risk because they are stored at room temperature.",
-     "from": "Platelets carry the bacterial risk because they are stored at room temperature."
-    },
+     "claim": "Fever and rigors during a platelet transfusion warrant cultures.",
+     "to": "Platelets carry the bacterial risk because they are stored at room temperature; fever and rigors during a platelet transfusion call for cultures"
+    }
+   ],
+   "new_claims": [
     {
      "claim": "Fever and rigors during a platelet transfusion call for cultures.",
-     "from": "Fever and rigors during a platelet transfusion earn cultures."
+     "from": "Fever and rigors during a platelet transfusion warrant cultures."
     }
    ]
   },
@@ -443,30 +429,26 @@
    "op": "replace",
    "brief": "transfusion",
    "find": "Part I <b>The Immunoglobulin Panel</b>, which owns selective IgA deficiency and already keys washed red cells &mdash; this brief approaches the same intersection from the transfusion side. Store the discriminator as a question: <i>what are the vitals, and what else is on the skin besides hives?</i>",
-   "with": "Part I <b>The Immunoglobulin Panel</b> covers selective IgA deficiency, including washed red cells; this brief covers the same topic from the transfusion side. Ask: <i>what are the vitals, and what else is on the skin besides hives?</i>",
-   "note": "pairs with: owns to covers; discriminator as Ask",
+   "with": "Part I <b>The Immunoglobulin Panel</b> covers selective IgA deficiency and already keys washed red cells; this brief covers the same topic from the transfusion side. Ask: <i>what are the vitals, and what else is on the skin besides hives?</i>",
+   "note": "Pairs with: owns to covers, discriminator as Ask:, remove em dash",
    "claims": [
     {
-     "claim": "The Immunoglobulin Panel owns selective IgA deficiency.",
-     "to": "Part I The Immunoglobulin Panel covers selective IgA deficiency, including washed red cells; this brief covers the same topic from the transfusion side."
-    },
-    {
-     "claim": "It already keys washed red cells.",
-     "to": "Part I The Immunoglobulin Panel covers selective IgA deficiency, including washed red cells; this brief covers the same topic from the transfusion side."
+     "claim": "The Immunoglobulin Panel owns selective IgA deficiency and already keys washed red cells.",
+     "to": "Part I The Immunoglobulin Panel covers selective IgA deficiency and already keys washed red cells; this brief covers the same topic from the transfusion side."
     },
     {
      "claim": "This brief approaches the same intersection from the transfusion side.",
-     "to": "Part I The Immunoglobulin Panel covers selective IgA deficiency, including washed red cells; this brief covers the same topic from the transfusion side."
+     "to": "Part I The Immunoglobulin Panel covers selective IgA deficiency and already keys washed red cells; this brief covers the same topic from the transfusion side."
     },
     {
-     "claim": "The discriminator question is: what are the vitals, and what else is on the skin besides hives?",
+     "claim": "The discriminator: what are the vitals, and what else is on the skin besides hives?",
      "to": "Ask: what are the vitals, and what else is on the skin besides hives?"
     }
    ],
    "new_claims": [
     {
-     "claim": "The Immunoglobulin Panel covers selective IgA deficiency, including washed red cells.",
-     "from": "The Immunoglobulin Panel owns selective IgA deficiency."
+     "claim": "The Immunoglobulin Panel covers selective IgA deficiency and already keys washed red cells.",
+     "from": "The Immunoglobulin Panel owns selective IgA deficiency and already keys washed red cells."
     },
     {
      "claim": "This brief covers the same topic from the transfusion side.",
@@ -474,7 +456,7 @@
     },
     {
      "claim": "Ask: what are the vitals, and what else is on the skin besides hives?",
-     "from": "The discriminator question is: what are the vitals, and what else is on the skin besides hives?"
+     "from": "The discriminator: what are the vitals, and what else is on the skin besides hives?"
     }
    ]
   },
@@ -482,30 +464,34 @@
    "op": "replace",
    "brief": "transfusion",
    "find": "When a stem narrates a treatment already given and then reports the response, the response is the diagnostic test &mdash; and the answer is usually that nothing further is needed. Read the last three sentences before ordering anything.",
-   "with": "When a treatment has already been given and the response is reported, the response is the diagnostic test, and usually nothing further is needed.",
-   "note": "rule: remove stem framing and em dash",
+   "with": "When a treatment has already been given and the response is reported, the response serves as the diagnostic test, and usually nothing further is needed. Check the reported response before ordering anything.",
+   "note": ".rule: remove stem framing and em dash",
    "claims": [
     {
      "claim": "When a treatment already given is followed by a reported response, the response is the diagnostic test.",
-     "to": "When a treatment has already been given and the response is reported, the response is the diagnostic test, and usually nothing further is needed."
+     "to": "When a treatment has already been given and the response is reported, the response serves as the diagnostic test, and usually nothing further is needed."
     },
     {
-     "claim": "The answer is usually that nothing further is needed.",
-     "to": "When a treatment has already been given and the response is reported, the response is the diagnostic test, and usually nothing further is needed."
+     "claim": "Usually nothing further is needed.",
+     "to": "When a treatment has already been given and the response is reported, the response serves as the diagnostic test, and usually nothing further is needed."
     },
     {
-     "claim": "Read the final sentences of the stem before ordering anything.",
-     "dropped": "test-taking advice about reading the stem, not a clinical claim"
+     "claim": "Read the last three sentences before ordering anything.",
+     "to": "Check the reported response before ordering anything."
     }
    ],
    "new_claims": [
     {
-     "claim": "When a treatment has already been given and the response is reported, the response is the diagnostic test.",
+     "claim": "When a treatment has already been given and the response is reported, the response serves as the diagnostic test.",
      "from": "When a treatment already given is followed by a reported response, the response is the diagnostic test."
     },
     {
      "claim": "Usually nothing further is needed.",
-     "from": "The answer is usually that nothing further is needed."
+     "from": "Usually nothing further is needed."
+    },
+    {
+     "claim": "Check the reported response before ordering anything.",
+     "from": "Read the last three sentences before ordering anything."
     }
    ]
   },
@@ -513,8 +499,8 @@
    "op": "replace",
    "brief": "bs-leukemia",
    "find": "<p>Three findings together permit one disease: <b>tri-lineage cytopenia</b>, <b>diaphyseal bone pain</b> and <b>diffuse nontender adenopathy with splenomegaly</b>. That is marrow replacement, and marrow replacement is confirmed in the marrow.</p>\n<p>But read the verb, because the same disease has two right answers. <b>Most useful in making the diagnosis, or initial</b> selects the <b>complete blood count</b> — cheap, fast, and enough to convert a vague illness into an oncologic emergency. <b>Confirms, or diagnostic</b> selects the <b>bone marrow aspirate</b>. The CBC makes you suspect leukemia; the marrow proves it.</p>",
-   "with": "<p>Together, <b>tri-lineage cytopenia</b>, <b>diaphyseal bone pain</b> and <b>diffuse nontender adenopathy with splenomegaly</b> permit one disease. They indicate marrow replacement, which is confirmed in the marrow.</p>\n<p>For the initial or most useful test in making the diagnosis, choose the <b>complete blood count</b>. It is cheap and fast, and enough to convert a vague illness into an oncologic emergency. For the confirmatory or diagnostic test, choose the <b>bone marrow aspirate</b>. The blood count raises suspicion of leukemia; the marrow proves it.</p>",
-   "note": ".dp: remove verb framing, rhetorical bold labels, em dash",
+   "with": "<p>Together, <b>tri-lineage cytopenia</b>, <b>diaphyseal bone pain</b> and <b>diffuse nontender adenopathy with splenomegaly</b> fit only one disease. They indicate marrow replacement, which is confirmed in the marrow.</p>\n<p>The <b>complete blood count</b> is the initial and <b>most useful</b> first test: cheap, fast, and enough to convert a vague illness into an oncologic emergency. It raises the suspicion of leukemia; the <b>bone marrow aspirate</b> is the <b>diagnostic</b> test that confirms it.</p>",
+   "note": ".dp: remove verb framing and em dash; reword question-wording bold labels",
    "reworded_bold": [
     "Most useful in making the diagnosis, or initial",
     "Confirms, or diagnostic"
@@ -522,10 +508,10 @@
    "claims": [
     {
      "claim": "Tri-lineage cytopenia, diaphyseal bone pain and diffuse nontender adenopathy with splenomegaly together permit one disease.",
-     "to": "Together, tri-lineage cytopenia, diaphyseal bone pain and diffuse nontender adenopathy with splenomegaly permit one disease."
+     "to": "Together, tri-lineage cytopenia, diaphyseal bone pain and diffuse nontender adenopathy with splenomegaly fit only one disease."
     },
     {
-     "claim": "That is marrow replacement.",
+     "claim": "That combination is marrow replacement.",
      "to": "They indicate marrow replacement, which is confirmed in the marrow."
     },
     {
@@ -533,50 +519,54 @@
      "to": "They indicate marrow replacement, which is confirmed in the marrow."
     },
     {
-     "claim": "Read the verb, because the same disease has more than one right answer.",
-     "dropped": "framing about the question wording; the test for each purpose is stated next"
+     "claim": "Read the verb, because the same disease has two right answers.",
+     "dropped": "framing about the question wording; the initial and confirmatory tests are stated next"
     },
     {
-     "claim": "A request for the test most useful in making the diagnosis, or the initial test, selects the complete blood count.",
-     "to": "For the initial or most useful test in making the diagnosis, choose the complete blood count."
+     "claim": "For the most useful or initial test, the answer is the complete blood count.",
+     "to": "The complete blood count is the initial and most useful first test: cheap, fast, and enough to convert a vague illness into an oncologic emergency."
     },
     {
      "claim": "The complete blood count is cheap, fast, and enough to convert a vague illness into an oncologic emergency.",
-     "to": "It is cheap and fast, and enough to convert a vague illness into an oncologic emergency."
+     "to": "The complete blood count is the initial and most useful first test: cheap, fast, and enough to convert a vague illness into an oncologic emergency."
     },
     {
-     "claim": "A request for what confirms, or the diagnostic test, selects the bone marrow aspirate.",
-     "to": "For the confirmatory or diagnostic test, choose the bone marrow aspirate."
+     "claim": "For the confirmatory or diagnostic test, the answer is the bone marrow aspirate.",
+     "to": "It raises the suspicion of leukemia; the bone marrow aspirate is the diagnostic test that confirms it."
     },
     {
      "claim": "The CBC makes you suspect leukemia; the marrow proves it.",
-     "to": "The blood count raises suspicion of leukemia; the marrow proves it."
+     "to": "It raises the suspicion of leukemia; the bone marrow aspirate is the diagnostic test that confirms it."
     }
    ],
    "new_claims": [
     {
-     "claim": "Tri-lineage cytopenia, diaphyseal bone pain and diffuse nontender adenopathy with splenomegaly together permit one disease.",
+     "claim": "Together, tri-lineage cytopenia, diaphyseal bone pain and diffuse nontender adenopathy with splenomegaly fit only one disease.",
      "from": "Tri-lineage cytopenia, diaphyseal bone pain and diffuse nontender adenopathy with splenomegaly together permit one disease."
     },
     {
+     "claim": "They indicate marrow replacement.",
+     "from": "That combination is marrow replacement."
+    },
+    {
      "claim": "They indicate marrow replacement, which is confirmed in the marrow.",
-     "from": "That is marrow replacement."
+     "from": "Marrow replacement is confirmed in the marrow."
     },
     {
-     "claim": "For the initial or most useful test in making the diagnosis, choose the complete blood count.",
-     "from": "A request for the test most useful in making the diagnosis, or the initial test, selects the complete blood count."
+     "claim": "The complete blood count is the initial and most useful first test: cheap, fast, and enough to convert a vague illness into an oncologic emergency.",
+     "from": "For the most useful or initial test, the answer is the complete blood count."
     },
     {
-     "claim": "It is cheap and fast, and enough to convert a vague illness into an oncologic emergency.",
+     "claim": "The complete blood count is the initial and most useful first test: cheap, fast, and enough to convert a vague illness into an oncologic emergency.",
      "from": "The complete blood count is cheap, fast, and enough to convert a vague illness into an oncologic emergency."
     },
     {
-     "claim": "For the confirmatory or diagnostic test, choose the bone marrow aspirate.",
-     "from": "A request for what confirms, or the diagnostic test, selects the bone marrow aspirate."
+     "claim": "It raises the suspicion of leukemia; the bone marrow aspirate is the diagnostic test that confirms it.",
+     "from": "The CBC makes you suspect leukemia; the marrow proves it."
     },
     {
-     "claim": "The blood count raises suspicion of leukemia; the marrow proves it.",
-     "from": "The CBC makes you suspect leukemia; the marrow proves it."
+     "claim": "The bone marrow aspirate is the diagnostic test that confirms it.",
+     "from": "For the confirmatory or diagnostic test, the answer is the bone marrow aspirate."
     }
    ]
   },
@@ -584,8 +574,8 @@
    "op": "replace",
    "brief": "bs-leukemia",
    "find": "Corticosteroids partially treat ALL, transiently improving the child while destroying the diagnostic specimen and degrading risk stratification. Systemic JIA and ALL must be separated <b>before</b> treatment, not after. And a <b>normal white count does not exclude ALL</b> — the cytopenias carry the signal, not the blasts.",
-   "with": "Corticosteroids partially treat <b>ALL</b> (acute lymphoblastic leukemia). They transiently improve the child while destroying the diagnostic specimen and degrading risk stratification. Separate systemic <b>JIA</b> (juvenile idiopathic arthritis) and ALL before treatment, not after. A <b>normal white count does not exclude ALL</b>; the cytopenias carry the signal, not the blasts.",
-   "note": "danger: split sentences, em dash, emphasis bold, acronyms",
+   "with": "Corticosteroids partially treat <b>ALL</b> (acute lymphoblastic leukemia). They transiently improve the child while destroying the diagnostic specimen and degrading risk stratification. Separate systemic <b>JIA</b> (juvenile idiopathic arthritis) from ALL before treatment, not after. A <b>normal white count does not exclude ALL</b>; the cytopenias are the clue, not the blasts.",
+   "note": ".danger: split, expand ALL and JIA, remove em dash and emphasis bold",
    "reworded_bold": [
     "before"
    ],
@@ -595,24 +585,20 @@
      "to": "Corticosteroids partially treat ALL (acute lymphoblastic leukemia)."
     },
     {
-     "claim": "Steroids transiently improve the child.",
-     "to": "They transiently improve the child while destroying the diagnostic specimen and degrading risk stratification."
-    },
-    {
-     "claim": "Steroids destroy the diagnostic specimen and degrade risk stratification.",
+     "claim": "Steroids transiently improve the child while destroying the diagnostic specimen and degrading risk stratification.",
      "to": "They transiently improve the child while destroying the diagnostic specimen and degrading risk stratification."
     },
     {
      "claim": "Systemic JIA and ALL must be separated before treatment, not after.",
-     "to": "Separate systemic JIA (juvenile idiopathic arthritis) and ALL before treatment, not after."
+     "to": "Separate systemic JIA (juvenile idiopathic arthritis) from ALL before treatment, not after."
     },
     {
      "claim": "A normal white count does not exclude ALL.",
-     "to": "A normal white count does not exclude ALL; the cytopenias carry the signal, not the blasts."
+     "to": "A normal white count does not exclude ALL; the cytopenias are the clue, not the blasts."
     },
     {
      "claim": "The cytopenias carry the signal, not the blasts.",
-     "to": "A normal white count does not exclude ALL; the cytopenias carry the signal, not the blasts."
+     "to": "A normal white count does not exclude ALL; the cytopenias are the clue, not the blasts."
     }
    ],
    "new_claims": [
@@ -630,15 +616,19 @@
     },
     {
      "claim": "They transiently improve the child while destroying the diagnostic specimen and degrading risk stratification.",
-     "from": "Steroids transiently improve the child."
+     "from": "Steroids transiently improve the child while destroying the diagnostic specimen and degrading risk stratification."
     },
     {
-     "claim": "Separate systemic JIA and ALL before treatment, not after.",
+     "claim": "Separate systemic JIA (juvenile idiopathic arthritis) from ALL before treatment, not after.",
      "from": "Systemic JIA and ALL must be separated before treatment, not after."
     },
     {
-     "claim": "A normal white count does not exclude ALL; the cytopenias carry the signal, not the blasts.",
+     "claim": "A normal white count does not exclude ALL.",
      "from": "A normal white count does not exclude ALL."
+    },
+    {
+     "claim": "The cytopenias are the clue, not the blasts.",
+     "from": "The cytopenias carry the signal, not the blasts."
     }
    ]
   },
@@ -646,44 +636,44 @@
    "op": "replace",
    "brief": "bs-leukemia",
    "find": "<span class=\"lbl\">The fall is the decoy</span>",
-   "with": "<span class=\"lbl\">Bone pain dated to a fall</span>",
-   "note": "danger label: rhetorical label reworded",
+   "with": "<span class=\"lbl\">Leukemic bone pain blamed on a fall</span>",
+   "note": ".danger label: rhetorical label reworded",
    "reworded_label": [
     "The fall is the decoy"
    ],
    "claims": [
     {
-     "claim": "The fall is a decoy for leukemic bone pain.",
-     "to": "The story — families often date leukemic bone pain to a fall; the pain is dull, in the long-bone shafts, worse at night, and the child limps or refuses to walk"
+     "claim": "A reported fall can mislead toward trauma.",
+     "to": "Leukemic bone pain blamed on a fall"
     }
    ],
    "new_claims": [
     {
-     "claim": "The block concerns bone pain that families date to a fall.",
-     "from": "The fall is a decoy for leukemic bone pain."
+     "claim": "Leukemic bone pain blamed on a fall",
+     "from": "A reported fall can mislead toward trauma."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "bs-leukemia",
-   "find": "then lumbar puncture for CNS disease",
-   "with": "then lumbar puncture for <b>CNS</b> (central nervous system) disease",
-   "note": "danger: expand CNS",
+   "find": "then lumbar puncture for CNS disease &middot; <b>Prognosis</b>",
+   "with": "then lumbar puncture for <b>CNS</b> (central nervous system) disease &middot; <b>Prognosis</b>",
+   "note": ".danger: expand CNS",
    "claims": [
     {
-     "claim": "Lumbar puncture then assesses CNS disease.",
+     "claim": "Workup is marrow biopsy with flow cytometry, then lumbar puncture for CNS disease.",
      "to": "Workup — marrow biopsy with flow cytometry (20% or more blasts), then lumbar puncture for CNS (central nervous system) disease"
     }
    ],
    "new_claims": [
     {
-     "claim": "CNS stands for central nervous system.",
-     "from": "expansion"
+     "claim": "Workup — marrow biopsy with flow cytometry (20% or more blasts), then lumbar puncture for CNS (central nervous system) disease",
+     "from": "Workup is marrow biopsy with flow cytometry, then lumbar puncture for CNS disease."
     },
     {
-     "claim": "Lumbar puncture then assesses CNS disease.",
-     "from": "Lumbar puncture then assesses CNS disease."
+     "claim": "CNS stands for central nervous system.",
+     "from": "expansion"
     }
    ]
   },
@@ -691,108 +681,80 @@
    "op": "replace",
    "brief": "bs-leukemia",
    "find": "<span class=\"lbl\">The family history is the decoy</span>",
-   "with": "<span class=\"lbl\">Family history of hemophilia</span>",
-   "note": "danger label: rhetorical label reworded",
+   "with": "<span class=\"lbl\">A paternal family history of hemophilia</span>",
+   "note": ".danger label: rhetorical label reworded",
    "reworded_label": [
     "The family history is the decoy"
    ],
    "claims": [
     {
-     "claim": "The family history is a decoy.",
-     "to": "Paternal uncle with hemophilia — hemophilia A is X-linked recessive, so a boy inherits it through his mother; his father's brother cannot pass it to him"
+     "claim": "The family history can mislead toward hemophilia.",
+     "to": "A paternal family history of hemophilia"
     }
    ],
    "new_claims": [
     {
-     "claim": "The block concerns the family history of hemophilia.",
-     "from": "The family history is a decoy."
+     "claim": "A paternal family history of hemophilia",
+     "from": "The family history can mislead toward hemophilia."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "bs-leukemia",
-   "find": "prolonged PTT, normal counts",
-   "with": "prolonged <b>PTT</b> (partial thromboplastin time), normal counts",
-   "note": "danger: expand PTT",
+   "find": "joint and muscle bleeds after trauma, prolonged PTT, normal counts",
+   "with": "joint and muscle bleeds after trauma, prolonged <b>PTT</b> (partial thromboplastin time), normal counts",
+   "note": ".danger: expand PTT",
    "claims": [
     {
-     "claim": "Hemophilia gives a prolonged PTT with normal counts.",
+     "claim": "Hemophilia gives joint and muscle bleeds after trauma, prolonged PTT, normal counts and no organomegaly.",
      "to": "Hemophilia — joint and muscle bleeds after trauma, prolonged PTT (partial thromboplastin time), normal counts and no organomegaly"
     }
    ],
    "new_claims": [
     {
-     "claim": "PTT stands for partial thromboplastin time.",
-     "from": "expansion"
+     "claim": "Hemophilia — joint and muscle bleeds after trauma, prolonged PTT (partial thromboplastin time), normal counts and no organomegaly",
+     "from": "Hemophilia gives joint and muscle bleeds after trauma, prolonged PTT, normal counts and no organomegaly."
     },
     {
-     "claim": "Hemophilia gives a prolonged PTT with normal counts.",
-     "from": "Hemophilia gives a prolonged PTT with normal counts."
+     "claim": "PTT stands for partial thromboplastin time.",
+     "from": "expansion"
     }
    ]
   },
   {
    "op": "replace",
    "brief": "bs-leukemia",
-   "find": "Leukemia lowers counts, systemic JIA raises them — ferritin, platelets and WBC all rise in sJIA &middot; Neuroblastoma and ALL are confirmed by the same test; periorbital ecchymoses and a midline-crossing mass separate them &middot; A mediastinal mass points to T-cell ALL and can compress the airway or cause <b>superior vena cava syndrome</b>; a normal chest film does not exclude B-cell ALL &middot; About <b>half</b> of children with ALL present with bleeding (petechiae, bruising, gum oozing) from thrombocytopenia &middot; Extramedullary spread also shows as <b>testicular enlargement</b> and as leptomeningeal disease with cranial nerve deficits or meningismus, which is why a lumbar puncture is part of the workup &middot; Inflammatory markers monitor disease, they do not select between diagnoses that all raise them &middot; <b>Tumor lysis</b> — potassium up, phosphate up, uric acid up, calcium down, with acute kidney injury",
-   "with": "Leukemia lowers counts; systemic <b>JIA</b> (juvenile idiopathic arthritis) raises them, with ferritin, platelets and <b>WBC</b> (white blood cell count) all rising in sJIA &middot; Neuroblastoma and <b>ALL</b> (acute lymphoblastic leukemia) are confirmed by the same test; periorbital ecchymoses and a midline-crossing mass separate them &middot; A mediastinal mass points to T-cell ALL and can compress the airway or cause <b>superior vena cava syndrome</b>; a normal chest film does not exclude B-cell ALL &middot; About <b>half</b> of children with ALL present with bleeding (petechiae, bruising, gum oozing) from thrombocytopenia &middot; Extramedullary spread also shows as <b>testicular enlargement</b> and as leptomeningeal disease with cranial nerve deficits or meningismus, so a lumbar puncture is part of the workup &middot; Inflammatory markers monitor disease; they do not distinguish between diagnoses that all raise them &middot; <b>Tumor lysis</b>: potassium up, phosphate up, uric acid up, calcium down, with acute kidney injury",
-   "note": "pearls: em dashes, acronyms",
+   "find": "Leukemia lowers counts, systemic JIA raises them — ferritin, platelets and WBC all rise in sJIA &middot; Neuroblastoma and ALL are confirmed",
+   "with": "Leukemia lowers blood counts; systemic <b>JIA</b> (juvenile idiopathic arthritis) raises them, with ferritin, platelets and <b>WBC</b> (white blood cell count) all rising &middot; Neuroblastoma and <b>ALL</b> (acute lymphoblastic leukemia) are confirmed",
+   "note": "pearls: remove prose em dash, expand JIA, WBC, ALL",
    "claims": [
     {
      "claim": "Leukemia lowers counts.",
-     "to": "Leukemia lowers counts; systemic JIA (juvenile idiopathic arthritis) raises them, with ferritin, platelets and WBC (white blood cell count) all rising in sJIA"
+     "to": "Leukemia lowers blood counts; systemic JIA (juvenile idiopathic arthritis) raises them, with ferritin, platelets and WBC (white blood cell count) all rising"
     },
     {
      "claim": "Systemic JIA raises counts.",
-     "to": "Leukemia lowers counts; systemic JIA (juvenile idiopathic arthritis) raises them, with ferritin, platelets and WBC (white blood cell count) all rising in sJIA"
+     "to": "Leukemia lowers blood counts; systemic JIA (juvenile idiopathic arthritis) raises them, with ferritin, platelets and WBC (white blood cell count) all rising"
     },
     {
      "claim": "Ferritin, platelets and WBC all rise in sJIA.",
-     "to": "Leukemia lowers counts; systemic JIA (juvenile idiopathic arthritis) raises them, with ferritin, platelets and WBC (white blood cell count) all rising in sJIA"
+     "to": "Leukemia lowers blood counts; systemic JIA (juvenile idiopathic arthritis) raises them, with ferritin, platelets and WBC (white blood cell count) all rising"
     },
     {
      "claim": "Neuroblastoma and ALL are confirmed by the same test.",
-     "to": "Neuroblastoma and ALL (acute lymphoblastic leukemia) are confirmed by the same test; periorbital ecchymoses and a midline-crossing mass separate them"
-    },
-    {
-     "claim": "Periorbital ecchymoses and a midline-crossing mass separate them.",
-     "to": "Neuroblastoma and ALL (acute lymphoblastic leukemia) are confirmed by the same test; periorbital ecchymoses and a midline-crossing mass separate them"
-    },
-    {
-     "claim": "A mediastinal mass points to T-cell ALL.",
-     "to": "A mediastinal mass points to T-cell ALL and can compress the airway or cause superior vena cava syndrome; a normal chest film does not exclude B-cell ALL"
-    },
-    {
-     "claim": "A mediastinal mass can compress the airway or cause superior vena cava syndrome.",
-     "to": "A mediastinal mass points to T-cell ALL and can compress the airway or cause superior vena cava syndrome; a normal chest film does not exclude B-cell ALL"
-    },
-    {
-     "claim": "A normal chest film does not exclude B-cell ALL.",
-     "to": "A mediastinal mass points to T-cell ALL and can compress the airway or cause superior vena cava syndrome; a normal chest film does not exclude B-cell ALL"
-    },
-    {
-     "claim": "About half of children with ALL present with bleeding (petechiae, bruising, gum oozing) from thrombocytopenia.",
-     "to": "About half of children with ALL present with bleeding (petechiae, bruising, gum oozing) from thrombocytopenia"
-    },
-    {
-     "claim": "Extramedullary spread also shows as testicular enlargement and as leptomeningeal disease with cranial nerve deficits or meningismus.",
-     "to": "Extramedullary spread also shows as testicular enlargement and as leptomeningeal disease with cranial nerve deficits or meningismus, so a lumbar puncture is part of the workup"
-    },
-    {
-     "claim": "That is why a lumbar puncture is part of the workup.",
-     "to": "Extramedullary spread also shows as testicular enlargement and as leptomeningeal disease with cranial nerve deficits or meningismus, so a lumbar puncture is part of the workup"
-    },
-    {
-     "claim": "Inflammatory markers monitor disease and do not select between diagnoses that all raise them.",
-     "to": "Inflammatory markers monitor disease; they do not distinguish between diagnoses that all raise them"
-    },
-    {
-     "claim": "Tumor lysis: potassium up, phosphate up, uric acid up, calcium down, with acute kidney injury.",
-     "to": "Tumor lysis: potassium up, phosphate up, uric acid up, calcium down, with acute kidney injury"
+     "to": "Neuroblastoma and ALL (acute lymphoblastic leukemia) are confirmed by the same test"
     }
    ],
    "new_claims": [
+    {
+     "claim": "Leukemia lowers blood counts.",
+     "from": "Leukemia lowers counts."
+    },
+    {
+     "claim": "Leukemia lowers blood counts; systemic JIA (juvenile idiopathic arthritis) raises them, with ferritin, platelets and WBC (white blood cell count) all rising",
+     "from": "Ferritin, platelets and WBC all rise in sJIA."
+    },
     {
      "claim": "JIA stands for juvenile idiopathic arthritis.",
      "from": "expansion"
@@ -806,40 +768,57 @@
      "from": "expansion"
     },
     {
-     "claim": "Leukemia lowers counts; systemic JIA raises them.",
-     "from": "Leukemia lowers counts."
-    },
-    {
-     "claim": "Ferritin, platelets and WBC all rise in sJIA.",
-     "from": "Ferritin, platelets and WBC all rise in sJIA."
-    },
-    {
-     "claim": "Neuroblastoma and ALL are confirmed by the same test; periorbital ecchymoses and a midline-crossing mass separate them.",
+     "claim": "Neuroblastoma and ALL (acute lymphoblastic leukemia) are confirmed by the same test",
      "from": "Neuroblastoma and ALL are confirmed by the same test."
-    },
-    {
-     "claim": "A mediastinal mass points to T-cell ALL and can compress the airway or cause superior vena cava syndrome.",
-     "from": "A mediastinal mass points to T-cell ALL."
-    },
-    {
-     "claim": "A normal chest film does not exclude B-cell ALL.",
-     "from": "A normal chest film does not exclude B-cell ALL."
-    },
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "About <b>half</b> of children with ALL",
+   "with": "About half of children with ALL",
+   "note": "pearls: remove emphasis bold on a quantifier",
+   "reworded_bold": [
+    "half"
+   ],
+   "claims": [
     {
      "claim": "About half of children with ALL present with bleeding from thrombocytopenia.",
-     "from": "About half of children with ALL present with bleeding (petechiae, bruising, gum oozing) from thrombocytopenia."
+     "to": "About half of children with ALL present with bleeding (petechiae, bruising, gum oozing) from thrombocytopenia"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "About half of children with ALL present with bleeding (petechiae, bruising, gum oozing) from thrombocytopenia",
+     "from": "About half of children with ALL present with bleeding from thrombocytopenia."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "Inflammatory markers monitor disease, they do not select between diagnoses that all raise them",
+   "with": "Inflammatory markers monitor disease; they do not distinguish between diagnoses that all raise them",
+   "note": "pearls: comma splice",
+   "claims": [
+    {
+     "claim": "Inflammatory markers monitor disease.",
+     "to": "Inflammatory markers monitor disease; they do not distinguish between diagnoses that all raise them"
     },
     {
-     "claim": "Extramedullary spread shows as testicular enlargement and leptomeningeal disease, so a lumbar puncture is part of the workup.",
-     "from": "Extramedullary spread also shows as testicular enlargement and as leptomeningeal disease with cranial nerve deficits or meningismus."
+     "claim": "They do not select between diagnoses that all raise them.",
+     "to": "Inflammatory markers monitor disease; they do not distinguish between diagnoses that all raise them"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Inflammatory markers monitor disease.",
+     "from": "Inflammatory markers monitor disease."
     },
     {
-     "claim": "Inflammatory markers monitor disease; they do not distinguish between diagnoses that all raise them.",
-     "from": "Inflammatory markers monitor disease and do not select between diagnoses that all raise them."
-    },
-    {
-     "claim": "Tumor lysis: potassium up, phosphate up, uric acid up, calcium down, with acute kidney injury.",
-     "from": "Tumor lysis: potassium up, phosphate up, uric acid up, calcium down, with acute kidney injury."
+     "claim": "They do not distinguish between diagnoses that all raise them.",
+     "from": "They do not select between diagnoses that all raise them."
     }
    ]
   },
@@ -847,19 +826,19 @@
    "op": "replace",
    "brief": "bs-leukemia",
    "find": "Part I <b>Systemic Juvenile Idiopathic Arthritis</b> is the mirror twin, and Part I <b>The Limping Child — Master Table</b> shares the presenting complaint. Store the discriminator as a question: are the counts up or down? Part I <b>Benign Limb Pain in a Child</b> owns the benign nocturnal limb pain whose normal examination excludes this diagnosis. Aquifer <b>Bruising and Purpura in a Child</b> places leukemia among the other causes of bruising in a child. Part I <b>Hemophilia A Inhibitor</b> owns the bleeding-pattern-to-lab table: is the PT or the PTT long, and are the platelets normal?",
-   "with": "Part I <b>Systemic Juvenile Idiopathic Arthritis</b> covers the mirror-image mimic, and Part I <b>The Limping Child — Master Table</b> shares the presenting complaint. Ask: are the counts up or down? Part I <b>Benign Limb Pain in a Child</b> covers the benign nocturnal limb pain whose normal examination excludes this diagnosis. Aquifer <b>Bruising and Purpura in a Child</b> places leukemia among the other causes of bruising in a child. Part I <b>Hemophilia A Inhibitor</b> covers the bleeding-pattern-to-lab table: is the <b>PT</b> (prothrombin time) or the <b>PTT</b> (partial thromboplastin time) long, and are the platelets normal?",
-   "note": "pairs with: owns to covers; discriminator as Ask; acronyms",
+   "with": "Part I <b>Juvenile Idiopathic Arthritis</b> is the mirror twin, and Part I <b>The Limping Child — Master Table</b> shares the presenting complaint. Ask: are the counts up or down? Part I <b>Benign Limb Pain in a Child</b> covers the benign nocturnal limb pain whose normal examination excludes this diagnosis. Aquifer <b>Bruising and Purpura in a Child</b> places leukemia among the other causes of bruising in a child. Part I <b>Hemophilia A Inhibitor</b> covers the bleeding-pattern-to-lab table: is the PT (prothrombin time) or the PTT (partial thromboplastin time) long, and are the platelets normal?",
+   "note": "Pairs with: owns to covers, discriminator as Ask:, expand PT and PTT",
    "claims": [
     {
      "claim": "Systemic Juvenile Idiopathic Arthritis is the mirror twin.",
-     "to": "Part I Systemic Juvenile Idiopathic Arthritis covers the mirror-image mimic, and Part I The Limping Child — Master Table shares the presenting complaint."
+     "to": "Part I Juvenile Idiopathic Arthritis is the mirror twin, and Part I The Limping Child — Master Table shares the presenting complaint."
     },
     {
      "claim": "The Limping Child — Master Table shares the presenting complaint.",
-     "to": "Part I Systemic Juvenile Idiopathic Arthritis covers the mirror-image mimic, and Part I The Limping Child — Master Table shares the presenting complaint."
+     "to": "Part I Juvenile Idiopathic Arthritis is the mirror twin, and Part I The Limping Child — Master Table shares the presenting complaint."
     },
     {
-     "claim": "The discriminator question is: are the counts up or down?",
+     "claim": "The discriminator: are the counts up or down?",
      "to": "Ask: are the counts up or down?"
     },
     {
@@ -877,7 +856,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Systemic Juvenile Idiopathic Arthritis covers the mirror-image mimic.",
+     "claim": "Part I Juvenile Idiopathic Arthritis is the mirror twin, and Part I The Limping Child — Master Table shares the presenting complaint.",
      "from": "Systemic Juvenile Idiopathic Arthritis is the mirror twin."
     },
     {
@@ -886,7 +865,7 @@
     },
     {
      "claim": "Ask: are the counts up or down?",
-     "from": "The discriminator question is: are the counts up or down?"
+     "from": "The discriminator: are the counts up or down?"
     },
     {
      "claim": "Benign Limb Pain in a Child covers the benign nocturnal limb pain whose normal examination excludes this diagnosis.",
@@ -897,7 +876,7 @@
      "from": "Bruising and Purpura in a Child places leukemia among the other causes of bruising in a child."
     },
     {
-     "claim": "Hemophilia A Inhibitor covers the bleeding-pattern-to-lab table: is the PT or the PTT long, and are the platelets normal?",
+     "claim": "Part I Hemophilia A Inhibitor covers the bleeding-pattern-to-lab table: is the PT (prothrombin time) or the PTT (partial thromboplastin time) long, and are the platelets normal?",
      "from": "Hemophilia A Inhibitor owns the bleeding-pattern-to-lab table: is the PT or the PTT long, and are the platelets normal?"
     },
     {
@@ -908,39 +887,42 @@
      "claim": "PTT stands for partial thromboplastin time.",
      "from": "expansion"
     }
+   ],
+   "reworded_bold": [
+    "Systemic Juvenile Idiopathic Arthritis"
    ]
   },
   {
    "op": "replace",
    "brief": "bs-leukemia",
    "find": "Sort laboratory options by what a result could change rather than by sophistication, because a test abnormal in every diagnosis on the differential discriminates nothing and a test measuring an uninvolved compartment answers a question nobody asked.",
-   "with": "Choose laboratory tests by what a result could change, not by sophistication. A test abnormal in every diagnosis on the differential discriminates nothing. A test of an uninvolved compartment does not address the clinical problem.",
-   "note": "rule: split long sentence, remove slogan closer",
+   "with": "Choose laboratory tests by what a result could change, not by their sophistication. A test that is abnormal in every diagnosis on the differential discriminates nothing. A test of an uninvolved compartment does not address the clinical question.",
+   "note": ".rule: split long sentence, remove aphorism",
    "claims": [
     {
      "claim": "Sort laboratory options by what a result could change rather than by sophistication.",
-     "to": "Choose laboratory tests by what a result could change, not by sophistication."
+     "to": "Choose laboratory tests by what a result could change, not by their sophistication."
     },
     {
      "claim": "A test abnormal in every diagnosis on the differential discriminates nothing.",
-     "to": "A test abnormal in every diagnosis on the differential discriminates nothing."
+     "to": "A test that is abnormal in every diagnosis on the differential discriminates nothing."
     },
     {
      "claim": "A test measuring an uninvolved compartment answers a question nobody asked.",
-     "to": "A test of an uninvolved compartment does not address the clinical problem."
+     "to": "A test of an uninvolved compartment does not address the clinical question."
     }
    ],
    "new_claims": [
     {
-     "claim": "Choose laboratory tests by what a result could change, not by sophistication.",
+     "claim": "Choose laboratory tests by what a result could change, not by their sophistication.",
      "from": "Sort laboratory options by what a result could change rather than by sophistication."
     },
     {
-     "claim": "A test abnormal in every diagnosis on the differential discriminates nothing.",
+     "claim": "A test that is abnormal in every diagnosis on the differential discriminates nothing.",
      "from": "A test abnormal in every diagnosis on the differential discriminates nothing."
     },
     {
-     "claim": "A test of an uninvolved compartment does not address the clinical problem.",
+     "claim": "A test of an uninvolved compartment does not address the clinical question.",
      "from": "A test measuring an uninvolved compartment answers a question nobody asked."
     }
    ]
@@ -949,109 +931,93 @@
    "op": "replace",
    "brief": "bs-spherocytosis",
    "find": "<p>The word doing the work is <b>spherocytes</b>: on a board smear they have exactly two owners, hereditary spherocytosis and warm autoimmune hemolytic anemia. <b>The negative Coombs settles that fork</b> — antibody-coated cells are excluded, so the spherocytes are a membrane defect. MCHC 38% and the affected father corroborate; neither is the decider.</p>\n<p>The last move is a mapping rather than a diagnosis. The options are tests, so name the disease and then name its assay: <b>eosin-5-maleimide binding</b>, with osmotic fragility as the older equivalent. Choosing CD55/CD59 is a stored-outcome error — Coombs-negative hemolysis retrieved as a conclusion rather than as a question, so the three findings that fail PNH here (normal white cells and platelets, spherocytes, an affected father) were never asked.</p>",
-   "with": "<p>On a board smear, <b>spherocytes</b> have exactly two causes: hereditary spherocytosis and warm autoimmune hemolytic anemia. A <b>negative Coombs</b> test excludes antibody-coated cells, so the spherocytes reflect a membrane defect. <b>MCHC</b> (mean corpuscular hemoglobin concentration) 38% and the affected father support the diagnosis, but neither decides it.</p>\n<p>The confirmatory assay for hereditary spherocytosis is <b>eosin-5-maleimide binding</b>, with osmotic fragility as the older equivalent. CD55/CD59 testing is not indicated: normal white cells and platelets, spherocytes and an affected father do not fit <b>PNH</b> (paroxysmal nocturnal hemoglobinuria).</p>",
-   "note": ".dp: remove framing, slogan bold, em dashes; acronyms",
+   "with": "<p>On a board smear, <b>spherocytes</b> have exactly two causes: hereditary spherocytosis and warm autoimmune hemolytic anemia. <b>A negative Coombs test separates them</b>: it excludes antibody-coated cells, so the spherocytes reflect a membrane defect. <b>MCHC</b> (mean corpuscular hemoglobin concentration) 38% and the affected father support the diagnosis, but neither decides it.</p>\n<p>Confirm hereditary spherocytosis with <b>eosin-5-maleimide binding</b>; osmotic fragility is the older equivalent. Do not choose CD55/CD59 testing just because the hemolysis is Coombs negative. That test is for <b>PNH</b> (paroxysmal nocturnal hemoglobinuria), and three findings here do not fit PNH: normal white cells and platelets, spherocytes, and an affected father.</p>",
+   "note": ".dp: remove personification and meta framing, reword rhetorical bold, expand MCHC and PNH",
    "reworded_bold": [
     "The negative Coombs settles that fork"
    ],
    "claims": [
     {
-     "claim": "The key word is spherocytes.",
+     "claim": "The key finding is spherocytes.",
      "to": "On a board smear, spherocytes have exactly two causes: hereditary spherocytosis and warm autoimmune hemolytic anemia."
     },
     {
-     "claim": "On a board smear spherocytes have exactly two owners, hereditary spherocytosis and warm autoimmune hemolytic anemia.",
+     "claim": "On a board smear, spherocytes have exactly two causes: hereditary spherocytosis and warm autoimmune hemolytic anemia.",
      "to": "On a board smear, spherocytes have exactly two causes: hereditary spherocytosis and warm autoimmune hemolytic anemia."
     },
     {
      "claim": "The negative Coombs settles that fork.",
-     "to": "A negative Coombs test excludes antibody-coated cells, so the spherocytes reflect a membrane defect."
+     "to": "A negative Coombs test separates them: it excludes antibody-coated cells, so the spherocytes reflect a membrane defect."
     },
     {
-     "claim": "Antibody-coated cells are excluded.",
-     "to": "A negative Coombs test excludes antibody-coated cells, so the spherocytes reflect a membrane defect."
+     "claim": "Antibody-coated cells are excluded, so the spherocytes are a membrane defect.",
+     "to": "A negative Coombs test separates them: it excludes antibody-coated cells, so the spherocytes reflect a membrane defect."
     },
     {
-     "claim": "So the spherocytes are a membrane defect.",
-     "to": "A negative Coombs test excludes antibody-coated cells, so the spherocytes reflect a membrane defect."
-    },
-    {
-     "claim": "MCHC 38% and the affected father corroborate.",
-     "to": "MCHC (mean corpuscular hemoglobin concentration) 38% and the affected father support the diagnosis, but neither decides it."
-    },
-    {
-     "claim": "Neither is the decider.",
+     "claim": "MCHC 38% and the affected father corroborate; neither is the decider.",
      "to": "MCHC (mean corpuscular hemoglobin concentration) 38% and the affected father support the diagnosis, but neither decides it."
     },
     {
      "claim": "The last move is a mapping rather than a diagnosis.",
-     "dropped": "framing about the final step of the question"
+     "dropped": "framing about the question; the disease and its assay are stated next"
     },
     {
      "claim": "The options are tests, so name the disease and then name its assay.",
-     "carried_by": "first name the disease from the smear plus one separating test, then choose that disease's assay"
+     "to": "Confirm hereditary spherocytosis with eosin-5-maleimide binding; osmotic fragility is the older equivalent."
     },
     {
-     "claim": "The assay is eosin-5-maleimide binding.",
-     "to": "The confirmatory assay for hereditary spherocytosis is eosin-5-maleimide binding, with osmotic fragility as the older equivalent."
+     "claim": "The assay is eosin-5-maleimide binding, with osmotic fragility as the older equivalent.",
+     "to": "Confirm hereditary spherocytosis with eosin-5-maleimide binding; osmotic fragility is the older equivalent."
     },
     {
-     "claim": "Osmotic fragility is the older equivalent.",
-     "to": "The confirmatory assay for hereditary spherocytosis is eosin-5-maleimide binding, with osmotic fragility as the older equivalent."
+     "claim": "Choosing CD55/CD59 is a stored-outcome error: Coombs-negative hemolysis retrieved as a conclusion rather than as a question.",
+     "to": "Do not choose CD55/CD59 testing just because the hemolysis is Coombs negative."
     },
     {
-     "claim": "Choosing CD55/CD59 is an error.",
-     "to": "CD55/CD59 testing is not indicated: normal white cells and platelets, spherocytes and an affected father do not fit PNH (paroxysmal nocturnal hemoglobinuria)."
-    },
-    {
-     "claim": "The error comes from retrieving a stored conclusion instead of asking a question, so the contrary findings were never asked.",
-     "dropped": "cognitive-error framing about the reasoning process; the findings themselves are kept"
-    },
-    {
-     "claim": "Three findings fail PNH here: normal white cells and platelets, spherocytes, an affected father.",
-     "to": "CD55/CD59 testing is not indicated: normal white cells and platelets, spherocytes and an affected father do not fit PNH (paroxysmal nocturnal hemoglobinuria)."
+     "claim": "Three findings here fail PNH: normal white cells and platelets, spherocytes, an affected father.",
+     "to": "That test is for PNH (paroxysmal nocturnal hemoglobinuria), and three findings here do not fit PNH: normal white cells and platelets, spherocytes, and an affected father."
     }
    ],
    "new_claims": [
     {
      "claim": "On a board smear, spherocytes have exactly two causes: hereditary spherocytosis and warm autoimmune hemolytic anemia.",
-     "from": "On a board smear spherocytes have exactly two owners, hereditary spherocytosis and warm autoimmune hemolytic anemia."
+     "from": "On a board smear, spherocytes have exactly two causes: hereditary spherocytosis and warm autoimmune hemolytic anemia."
     },
     {
-     "claim": "A negative Coombs test excludes antibody-coated cells.",
-     "from": "Antibody-coated cells are excluded."
+     "claim": "A negative Coombs test separates them.",
+     "from": "The negative Coombs settles that fork."
     },
     {
-     "claim": "The spherocytes reflect a membrane defect.",
-     "from": "So the spherocytes are a membrane defect."
+     "claim": "It excludes antibody-coated cells, so the spherocytes reflect a membrane defect.",
+     "from": "Antibody-coated cells are excluded, so the spherocytes are a membrane defect."
+    },
+    {
+     "claim": "MCHC (mean corpuscular hemoglobin concentration) 38% and the affected father support the diagnosis, but neither decides it.",
+     "from": "MCHC 38% and the affected father corroborate; neither is the decider."
     },
     {
      "claim": "MCHC stands for mean corpuscular hemoglobin concentration.",
      "from": "expansion"
     },
     {
-     "claim": "MCHC 38% and the affected father support the diagnosis, but neither decides it.",
-     "from": "MCHC 38% and the affected father corroborate."
+     "claim": "Confirm hereditary spherocytosis with eosin-5-maleimide binding; osmotic fragility is the older equivalent.",
+     "from": "The assay is eosin-5-maleimide binding, with osmotic fragility as the older equivalent."
     },
     {
-     "claim": "The confirmatory assay for hereditary spherocytosis is eosin-5-maleimide binding.",
-     "from": "The assay is eosin-5-maleimide binding."
+     "claim": "Do not choose CD55/CD59 testing just because the hemolysis is Coombs negative.",
+     "from": "Choosing CD55/CD59 is a stored-outcome error: Coombs-negative hemolysis retrieved as a conclusion rather than as a question."
     },
     {
-     "claim": "Osmotic fragility is the older equivalent.",
-     "from": "Osmotic fragility is the older equivalent."
-    },
-    {
-     "claim": "CD55/CD59 testing is not indicated.",
-     "from": "Choosing CD55/CD59 is an error."
-    },
-    {
-     "claim": "Normal white cells and platelets, spherocytes and an affected father do not fit PNH.",
-     "from": "Three findings fail PNH here: normal white cells and platelets, spherocytes, an affected father."
+     "claim": "Do not choose CD55/CD59 testing just because the hemolysis is Coombs negative.",
+     "from": "Choosing CD55/CD59 is a stored-outcome error: Coombs-negative hemolysis retrieved as a conclusion rather than as a question."
     },
     {
      "claim": "PNH stands for paroxysmal nocturnal hemoglobinuria.",
      "from": "expansion"
+    },
+    {
+     "claim": "Three findings here do not fit PNH: normal white cells and platelets, spherocytes, and an affected father.",
+     "from": "Three findings here fail PNH: normal white cells and platelets, spherocytes, an affected father."
     }
    ]
   },
@@ -1059,28 +1025,28 @@
    "op": "replace",
    "brief": "bs-spherocytosis",
    "find": "Folic acid for chronic reticulocytosis, transfusion for aplastic or hemolytic crisis, and <b>splenectomy for moderate to severe disease deferred until age 6 or older</b> &#9888; and preceded by pneumococcal, meningococcal and Hib vaccination, with cholecystectomy if pigment stones are present. Splenectomy stops the hemolysis but not the defect — <b>spherocytes persist and Howell-Jolly bodies appear</b>, and every post-splenectomy fever is treated as sepsis until proven otherwise.",
-   "with": "Manage with folic acid for chronic reticulocytosis, transfusion for aplastic or hemolytic crisis, and <b>splenectomy for moderate to severe disease deferred until age 6 or older</b> &#9888;. Give pneumococcal, meningococcal and <b>Hib</b> (Haemophilus influenzae type b) vaccination before splenectomy, and add cholecystectomy if pigment stones are present. Splenectomy stops the hemolysis but not the defect: <b>spherocytes persist and Howell-Jolly bodies appear</b>. Treat every post-splenectomy fever as sepsis until proven otherwise.",
-   "note": "danger: split long sentences, em dash, Hib expanded",
+   "with": "Give folic acid for chronic reticulocytosis and transfusion for aplastic or hemolytic crisis. Management also includes <b>splenectomy for moderate to severe disease deferred until age 6 or older</b> &#9888;, preceded by pneumococcal, meningococcal and <b>Hib</b> (Haemophilus influenzae type b) vaccination. Add cholecystectomy if pigment stones are present. Splenectomy stops the hemolysis but not the defect: <b>spherocytes persist and Howell-Jolly bodies appear</b>. Treat every post-splenectomy fever as sepsis until proven otherwise.",
+   "note": ".danger: split long sentence, remove em dash, expand Hib",
    "claims": [
     {
      "claim": "Folic acid for chronic reticulocytosis.",
-     "to": "Manage with folic acid for chronic reticulocytosis, transfusion for aplastic or hemolytic crisis, and splenectomy for moderate to severe disease deferred until age 6 or older ⚠."
+     "to": "Give folic acid for chronic reticulocytosis and transfusion for aplastic or hemolytic crisis."
     },
     {
      "claim": "Transfusion for aplastic or hemolytic crisis.",
-     "to": "Manage with folic acid for chronic reticulocytosis, transfusion for aplastic or hemolytic crisis, and splenectomy for moderate to severe disease deferred until age 6 or older ⚠."
+     "to": "Give folic acid for chronic reticulocytosis and transfusion for aplastic or hemolytic crisis."
     },
     {
-     "claim": "Splenectomy for moderate to severe disease, deferred until age 6 or older (flagged unverified).",
-     "to": "Manage with folic acid for chronic reticulocytosis, transfusion for aplastic or hemolytic crisis, and splenectomy for moderate to severe disease deferred until age 6 or older ⚠."
+     "claim": "Splenectomy for moderate to severe disease, deferred until age 6 or older (unverified specific).",
+     "to": "Management also includes splenectomy for moderate to severe disease deferred until age 6 or older ⚠, preceded by pneumococcal, meningococcal and Hib (Haemophilus influenzae type b) vaccination."
     },
     {
      "claim": "Splenectomy is preceded by pneumococcal, meningococcal and Hib vaccination.",
-     "to": "Give pneumococcal, meningococcal and Hib (Haemophilus influenzae type b) vaccination before splenectomy, and add cholecystectomy if pigment stones are present."
+     "to": "Management also includes splenectomy for moderate to severe disease deferred until age 6 or older ⚠, preceded by pneumococcal, meningococcal and Hib (Haemophilus influenzae type b) vaccination."
     },
     {
      "claim": "Cholecystectomy if pigment stones are present.",
-     "to": "Give pneumococcal, meningococcal and Hib (Haemophilus influenzae type b) vaccination before splenectomy, and add cholecystectomy if pigment stones are present."
+     "to": "Add cholecystectomy if pigment stones are present."
     },
     {
      "claim": "Splenectomy stops the hemolysis but not the defect.",
@@ -1097,19 +1063,19 @@
    ],
    "new_claims": [
     {
-     "claim": "Manage with folic acid for chronic reticulocytosis, transfusion for aplastic or hemolytic crisis, and splenectomy for moderate to severe disease deferred until age 6 or older.",
-     "from": "Splenectomy for moderate to severe disease, deferred until age 6 or older (flagged unverified)."
-    },
-    {
-     "claim": "Folic acid treats chronic reticulocytosis.",
+     "claim": "Give folic acid for chronic reticulocytosis.",
      "from": "Folic acid for chronic reticulocytosis."
     },
     {
-     "claim": "Transfusion treats aplastic or hemolytic crisis.",
+     "claim": "Give folic acid for chronic reticulocytosis and transfusion for aplastic or hemolytic crisis.",
      "from": "Transfusion for aplastic or hemolytic crisis."
     },
     {
-     "claim": "Give pneumococcal, meningococcal and Hib vaccination before splenectomy.",
+     "claim": "Management also includes splenectomy for moderate to severe disease deferred until age 6 or older ⚠, preceded by pneumococcal, meningococcal and Hib (Haemophilus influenzae type b) vaccination.",
+     "from": "Splenectomy for moderate to severe disease, deferred until age 6 or older (unverified specific)."
+    },
+    {
+     "claim": "Management also includes splenectomy for moderate to severe disease deferred until age 6 or older ⚠, preceded by pneumococcal, meningococcal and Hib (Haemophilus influenzae type b) vaccination.",
      "from": "Splenectomy is preceded by pneumococcal, meningococcal and Hib vaccination."
     },
     {
@@ -1138,11 +1104,11 @@
    "op": "replace",
    "brief": "bs-spherocytosis",
    "find": "Spherocytes have two owners, hereditary spherocytosis and warm autoimmune hemolytic anemia, and the Coombs test is the entire discrimination; in a newborn add ABO incompatibility as a third &middot; MCHC is the only red-cell index that rises in a common anemia, and RDW rises with it &middot; HS is extravascular with indirect bilirubin, splenomegaly and pigment stones; PNH and severe G6PD hemolysis are intravascular with hemoglobinuria, low haptoglobin and high LDH &middot; A falling hemoglobin with a <b>low</b> reticulocyte count in any chronic hemolytic patient is parvovirus B19 aplastic crisis until proven otherwise &middot; Do not assay G6PD during acute hemolysis, because the surviving young cells carry near-normal enzyme and read falsely normal; repeat weeks later &middot; A normal MCV does not exclude hemolysis, because a 10% reticulocytosis inflates it",
-   "with": "Spherocytes have two causes, hereditary spherocytosis and warm autoimmune hemolytic anemia, and the Coombs test alone separates them; in a newborn, add ABO incompatibility as a third &middot; <b>MCHC</b> (mean corpuscular hemoglobin concentration) is the only red-cell index that rises in a common anemia, and <b>RDW</b> (red cell distribution width) rises with it &middot; <b>HS</b> (hereditary spherocytosis) is extravascular, with indirect bilirubin, splenomegaly and pigment stones. <b>PNH</b> (paroxysmal nocturnal hemoglobinuria) and severe <b>G6PD</b> (glucose-6-phosphate dehydrogenase) hemolysis are intravascular, with hemoglobinuria, low haptoglobin and high <b>LDH</b> (lactate dehydrogenase) &middot; A falling hemoglobin with a <b>low</b> reticulocyte count in any chronic hemolytic patient is parvovirus B19 aplastic crisis until proven otherwise &middot; Do not assay G6PD during acute hemolysis, because the surviving young cells carry near-normal enzyme and read falsely normal; repeat weeks later &middot; A normal <b>MCV</b> (mean corpuscular volume) does not exclude hemolysis, because a 10% reticulocytosis inflates it",
-   "note": "pearls: personification removed, long row split, acronyms",
+   "with": "Spherocytes have two causes, hereditary spherocytosis and warm autoimmune hemolytic anemia, and the Coombs test alone separates them; in a newborn, add ABO incompatibility as a third &middot; The <b>MCHC</b> (mean corpuscular hemoglobin concentration) is the only red-cell index that rises in a common anemia, and the <b>RDW</b> (red cell distribution width) rises with it &middot; Hemolysis in <b>HS</b> (hereditary spherocytosis) is extravascular, with indirect bilirubin, splenomegaly and pigment stones &middot; Hemolysis in <b>PNH</b> (paroxysmal nocturnal hemoglobinuria) and in severe <b>G6PD</b> (glucose-6-phosphate dehydrogenase) deficiency is intravascular, with hemoglobinuria, low haptoglobin and high <b>LDH</b> (lactate dehydrogenase) &middot; A falling hemoglobin with a <b>low</b> reticulocyte count in any chronic hemolytic patient is parvovirus B19 aplastic crisis until proven otherwise &middot; Do not assay G6PD during acute hemolysis, because the surviving young cells carry near-normal enzyme and read falsely normal; repeat weeks later &middot; A normal <b>MCV</b> (mean corpuscular volume) does not exclude hemolysis, because a 10% reticulocytosis inflates it",
+   "note": "pearls: remove personification, split row, expand acronyms",
    "claims": [
     {
-     "claim": "Spherocytes have two owners, hereditary spherocytosis and warm autoimmune hemolytic anemia.",
+     "claim": "Spherocytes have two causes, hereditary spherocytosis and warm autoimmune hemolytic anemia.",
      "to": "Spherocytes have two causes, hereditary spherocytosis and warm autoimmune hemolytic anemia, and the Coombs test alone separates them; in a newborn, add ABO incompatibility as a third"
     },
     {
@@ -1150,31 +1116,35 @@
      "to": "Spherocytes have two causes, hereditary spherocytosis and warm autoimmune hemolytic anemia, and the Coombs test alone separates them; in a newborn, add ABO incompatibility as a third"
     },
     {
-     "claim": "In a newborn add ABO incompatibility as a third.",
+     "claim": "In a newborn, add ABO incompatibility as a third cause.",
      "to": "Spherocytes have two causes, hereditary spherocytosis and warm autoimmune hemolytic anemia, and the Coombs test alone separates them; in a newborn, add ABO incompatibility as a third"
     },
     {
      "claim": "MCHC is the only red-cell index that rises in a common anemia.",
-     "to": "MCHC (mean corpuscular hemoglobin concentration) is the only red-cell index that rises in a common anemia, and RDW (red cell distribution width) rises with it"
+     "to": "The MCHC (mean corpuscular hemoglobin concentration) is the only red-cell index that rises in a common anemia, and the RDW (red cell distribution width) rises with it"
     },
     {
      "claim": "RDW rises with it.",
-     "to": "MCHC (mean corpuscular hemoglobin concentration) is the only red-cell index that rises in a common anemia, and RDW (red cell distribution width) rises with it"
+     "to": "The MCHC (mean corpuscular hemoglobin concentration) is the only red-cell index that rises in a common anemia, and the RDW (red cell distribution width) rises with it"
     },
     {
      "claim": "HS is extravascular with indirect bilirubin, splenomegaly and pigment stones.",
-     "to": "HS (hereditary spherocytosis) is extravascular, with indirect bilirubin, splenomegaly and pigment stones."
+     "to": "Hemolysis in HS (hereditary spherocytosis) is extravascular, with indirect bilirubin, splenomegaly and pigment stones"
     },
     {
      "claim": "PNH and severe G6PD hemolysis are intravascular with hemoglobinuria, low haptoglobin and high LDH.",
-     "to": "PNH (paroxysmal nocturnal hemoglobinuria) and severe G6PD (glucose-6-phosphate dehydrogenase) hemolysis are intravascular, with hemoglobinuria, low haptoglobin and high LDH (lactate dehydrogenase)"
+     "to": "Hemolysis in PNH (paroxysmal nocturnal hemoglobinuria) and in severe G6PD (glucose-6-phosphate dehydrogenase) deficiency is intravascular, with hemoglobinuria, low haptoglobin and high LDH (lactate dehydrogenase)"
     },
     {
      "claim": "A falling hemoglobin with a low reticulocyte count in any chronic hemolytic patient is parvovirus B19 aplastic crisis until proven otherwise.",
      "to": "A falling hemoglobin with a low reticulocyte count in any chronic hemolytic patient is parvovirus B19 aplastic crisis until proven otherwise"
     },
     {
-     "claim": "Do not assay G6PD during acute hemolysis, because surviving young cells carry near-normal enzyme and read falsely normal; repeat weeks later.",
+     "claim": "Do not assay G6PD during acute hemolysis, because the surviving young cells carry near-normal enzyme and read falsely normal.",
+     "to": "Do not assay G6PD during acute hemolysis, because the surviving young cells carry near-normal enzyme and read falsely normal; repeat weeks later"
+    },
+    {
+     "claim": "Repeat the G6PD assay weeks later.",
      "to": "Do not assay G6PD during acute hemolysis, because the surviving young cells carry near-normal enzyme and read falsely normal; repeat weeks later"
     },
     {
@@ -1185,35 +1155,43 @@
    "new_claims": [
     {
      "claim": "Spherocytes have two causes, hereditary spherocytosis and warm autoimmune hemolytic anemia.",
-     "from": "Spherocytes have two owners, hereditary spherocytosis and warm autoimmune hemolytic anemia."
+     "from": "Spherocytes have two causes, hereditary spherocytosis and warm autoimmune hemolytic anemia."
     },
     {
      "claim": "The Coombs test alone separates them.",
      "from": "The Coombs test is the entire discrimination between them."
     },
     {
-     "claim": "In a newborn, add ABO incompatibility as a third.",
-     "from": "In a newborn add ABO incompatibility as a third."
+     "claim": "Spherocytes have two causes, hereditary spherocytosis and warm autoimmune hemolytic anemia, and the Coombs test alone separates them; in a newborn, add ABO incompatibility as a third",
+     "from": "In a newborn, add ABO incompatibility as a third cause."
+    },
+    {
+     "claim": "The MCHC (mean corpuscular hemoglobin concentration) is the only red-cell index that rises in a common anemia, and the RDW (red cell distribution width) rises with it",
+     "from": "MCHC is the only red-cell index that rises in a common anemia."
+    },
+    {
+     "claim": "The MCHC (mean corpuscular hemoglobin concentration) is the only red-cell index that rises in a common anemia, and the RDW (red cell distribution width) rises with it",
+     "from": "RDW rises with it."
     },
     {
      "claim": "MCHC stands for mean corpuscular hemoglobin concentration.",
      "from": "expansion"
     },
     {
-     "claim": "MCHC is the only red-cell index that rises in a common anemia, and RDW rises with it.",
-     "from": "MCHC is the only red-cell index that rises in a common anemia."
-    },
-    {
      "claim": "RDW stands for red cell distribution width.",
      "from": "expansion"
+    },
+    {
+     "claim": "Hemolysis in HS (hereditary spherocytosis) is extravascular, with indirect bilirubin, splenomegaly and pigment stones",
+     "from": "HS is extravascular with indirect bilirubin, splenomegaly and pigment stones."
     },
     {
      "claim": "HS stands for hereditary spherocytosis.",
      "from": "expansion"
     },
     {
-     "claim": "HS is extravascular, with indirect bilirubin, splenomegaly and pigment stones.",
-     "from": "HS is extravascular with indirect bilirubin, splenomegaly and pigment stones."
+     "claim": "Hemolysis in PNH (paroxysmal nocturnal hemoglobinuria) and in severe G6PD (glucose-6-phosphate dehydrogenase) deficiency is intravascular, with hemoglobinuria, low haptoglobin and high LDH (lactate dehydrogenase)",
+     "from": "PNH and severe G6PD hemolysis are intravascular with hemoglobinuria, low haptoglobin and high LDH."
     },
     {
      "claim": "PNH stands for paroxysmal nocturnal hemoglobinuria.",
@@ -1228,24 +1206,24 @@
      "from": "expansion"
     },
     {
-     "claim": "PNH and severe G6PD hemolysis are intravascular, with hemoglobinuria, low haptoglobin and high LDH.",
-     "from": "PNH and severe G6PD hemolysis are intravascular with hemoglobinuria, low haptoglobin and high LDH."
-    },
-    {
      "claim": "A falling hemoglobin with a low reticulocyte count in any chronic hemolytic patient is parvovirus B19 aplastic crisis until proven otherwise.",
      "from": "A falling hemoglobin with a low reticulocyte count in any chronic hemolytic patient is parvovirus B19 aplastic crisis until proven otherwise."
     },
     {
-     "claim": "Do not assay G6PD during acute hemolysis; repeat weeks later.",
-     "from": "Do not assay G6PD during acute hemolysis, because surviving young cells carry near-normal enzyme and read falsely normal; repeat weeks later."
+     "claim": "Do not assay G6PD during acute hemolysis, because the surviving young cells carry near-normal enzyme and read falsely normal.",
+     "from": "Do not assay G6PD during acute hemolysis, because the surviving young cells carry near-normal enzyme and read falsely normal."
     },
     {
-     "claim": "MCV stands for mean corpuscular volume.",
-     "from": "expansion"
+     "claim": "Do not assay G6PD during acute hemolysis, because the surviving young cells carry near-normal enzyme and read falsely normal; repeat weeks later",
+     "from": "Repeat the G6PD assay weeks later."
     },
     {
      "claim": "A normal MCV does not exclude hemolysis, because a 10% reticulocytosis inflates it.",
      "from": "A normal MCV does not exclude hemolysis, because a 10% reticulocytosis inflates it."
+    },
+    {
+     "claim": "MCV stands for mean corpuscular volume.",
+     "from": "expansion"
     }
    ]
   },
@@ -1253,24 +1231,24 @@
    "op": "replace",
    "brief": "bs-spherocytosis",
    "find": "Candidate twin &mdash; confirm: <b>warm autoimmune hemolytic anemia</b>, sharing jaundice, anemia and spherocytes, with the discriminator stored as a question: is the direct Coombs positive? Second candidate: <b>paroxysmal nocturnal hemoglobinuria</b> &mdash; are the white cells and platelets normal? Neither partner brief exists yet, so no reverse links are owed. Part I <b>Anemia with Thrombocytopenia</b> is the seam: an isolated hemolytic anemia is one process, and a hemolytic anemia with thrombocytopenia is another. Part I <b>Drug-Induced Immune Hemolysis</b> is the Coombs-positive mirror of this brief's Coombs-negative spherocytic anemia.",
-   "with": "Related conditions without their own brief: <b>warm autoimmune hemolytic anemia</b>, which shares jaundice, anemia and spherocytes (ask: is the direct Coombs positive?), and <b>paroxysmal nocturnal hemoglobinuria</b> (ask: are the white cells and platelets normal?). Part I <b>Anemia with Thrombocytopenia</b> covers the boundary: an isolated hemolytic anemia is one process, and a hemolytic anemia with thrombocytopenia is another. Part I <b>Drug-Induced Immune Hemolysis</b> covers the Coombs-positive counterpart of this brief's Coombs-negative spherocytic anemia.",
-   "note": "pairs with: candidate-twin workflow text to Related conditions; owns/seam/mirror to covers",
+   "with": "Related conditions without their own brief: <b>warm autoimmune hemolytic anemia</b> (ask: is the direct Coombs positive?) and <b>paroxysmal nocturnal hemoglobinuria</b> (ask: are the white cells and platelets normal?). Warm autoimmune hemolytic anemia shares jaundice, anemia and spherocytes with this disease. Part I <b>Anemia with Thrombocytopenia</b> covers the boundary: an isolated hemolytic anemia is one process, and a hemolytic anemia with thrombocytopenia is another. Part I <b>Drug-Induced Immune Hemolysis</b> is the Coombs-positive mirror of this brief's Coombs-negative spherocytic anemia.",
+   "note": "Pairs with: candidate-twin workflow text converted to 'Related conditions without their own brief', em dashes removed",
    "claims": [
     {
-     "claim": "Warm autoimmune hemolytic anemia is a candidate twin, sharing jaundice, anemia and spherocytes.",
-     "to": "Related conditions without their own brief: warm autoimmune hemolytic anemia, which shares jaundice, anemia and spherocytes (ask: is the direct Coombs positive?), and paroxysmal nocturnal hemoglobinuria (ask: are the white cells and platelets normal?)."
+     "claim": "Warm autoimmune hemolytic anemia shares jaundice, anemia and spherocytes.",
+     "to": "Warm autoimmune hemolytic anemia shares jaundice, anemia and spherocytes with this disease."
     },
     {
-     "claim": "Its discriminator question is: is the direct Coombs positive?",
-     "to": "Related conditions without their own brief: warm autoimmune hemolytic anemia, which shares jaundice, anemia and spherocytes (ask: is the direct Coombs positive?), and paroxysmal nocturnal hemoglobinuria (ask: are the white cells and platelets normal?)."
+     "claim": "Its discriminator: is the direct Coombs positive?",
+     "to": "Related conditions without their own brief: warm autoimmune hemolytic anemia (ask: is the direct Coombs positive?) and paroxysmal nocturnal hemoglobinuria (ask: are the white cells and platelets normal?)."
     },
     {
-     "claim": "Paroxysmal nocturnal hemoglobinuria is a second candidate, with the question: are the white cells and platelets normal?",
-     "to": "Related conditions without their own brief: warm autoimmune hemolytic anemia, which shares jaundice, anemia and spherocytes (ask: is the direct Coombs positive?), and paroxysmal nocturnal hemoglobinuria (ask: are the white cells and platelets normal?)."
+     "claim": "Paroxysmal nocturnal hemoglobinuria discriminator: are the white cells and platelets normal?",
+     "to": "Related conditions without their own brief: warm autoimmune hemolytic anemia (ask: is the direct Coombs positive?) and paroxysmal nocturnal hemoglobinuria (ask: are the white cells and platelets normal?)."
     },
     {
-     "claim": "Neither partner brief exists yet, so no reverse links are owed.",
-     "dropped": "workflow note about the page; the absence of a brief is kept in the new wording"
+     "claim": "Candidate twins need confirming; neither partner brief exists yet, so no reverse links are owed.",
+     "dropped": "workflow note about candidate briefs and links; the conditions are kept as related conditions without their own brief"
     },
     {
      "claim": "Anemia with Thrombocytopenia is the seam: an isolated hemolytic anemia is one process, and a hemolytic anemia with thrombocytopenia is another.",
@@ -1278,24 +1256,28 @@
     },
     {
      "claim": "Drug-Induced Immune Hemolysis is the Coombs-positive mirror of this brief's Coombs-negative spherocytic anemia.",
-     "to": "Part I Drug-Induced Immune Hemolysis covers the Coombs-positive counterpart of this brief's Coombs-negative spherocytic anemia."
+     "to": "Part I Drug-Induced Immune Hemolysis is the Coombs-positive mirror of this brief's Coombs-negative spherocytic anemia."
     }
    ],
    "new_claims": [
     {
-     "claim": "Warm autoimmune hemolytic anemia, without its own brief, shares jaundice, anemia and spherocytes; ask whether the direct Coombs is positive.",
-     "from": "Warm autoimmune hemolytic anemia is a candidate twin, sharing jaundice, anemia and spherocytes."
+     "claim": "Warm autoimmune hemolytic anemia shares jaundice, anemia and spherocytes with this disease.",
+     "from": "Warm autoimmune hemolytic anemia shares jaundice, anemia and spherocytes."
     },
     {
-     "claim": "Paroxysmal nocturnal hemoglobinuria, without its own brief; ask whether the white cells and platelets are normal.",
-     "from": "Paroxysmal nocturnal hemoglobinuria is a second candidate, with the question: are the white cells and platelets normal?"
+     "claim": "Ask: is the direct Coombs positive?",
+     "from": "Its discriminator: is the direct Coombs positive?"
+    },
+    {
+     "claim": "Related conditions without their own brief: warm autoimmune hemolytic anemia (ask: is the direct Coombs positive?) and paroxysmal nocturnal hemoglobinuria (ask: are the white cells and platelets normal?).",
+     "from": "Paroxysmal nocturnal hemoglobinuria discriminator: are the white cells and platelets normal?"
     },
     {
      "claim": "Anemia with Thrombocytopenia covers the boundary: an isolated hemolytic anemia is one process, and a hemolytic anemia with thrombocytopenia is another.",
      "from": "Anemia with Thrombocytopenia is the seam: an isolated hemolytic anemia is one process, and a hemolytic anemia with thrombocytopenia is another."
     },
     {
-     "claim": "Drug-Induced Immune Hemolysis covers the Coombs-positive counterpart of this brief's Coombs-negative spherocytic anemia.",
+     "claim": "Drug-Induced Immune Hemolysis is the Coombs-positive mirror of this brief's Coombs-negative spherocytic anemia.",
      "from": "Drug-Induced Immune Hemolysis is the Coombs-positive mirror of this brief's Coombs-negative spherocytic anemia."
     }
    ]
@@ -1304,30 +1286,61 @@
    "op": "replace",
    "brief": "bs-spherocytosis",
    "find": "When the options are tests the question is still which disease, so name it from the smear plus one separating test and then map disease to assay, because when two diagnoses share a morphologic finding the answer is the test that separates them rather than the finding they share.",
-   "with": "When choosing a test, first name the disease from the smear plus one separating test, then choose that disease's assay. When two diagnoses share a morphologic finding, the useful test is the one that separates them, not the finding they share.",
-   "note": "rule: split long sentence, remove question framing",
+   "with": "When two diagnoses share a morphologic finding, the next step is the test that separates them, not the finding they share. Name the disease from the smear plus that one separating test, then map the disease to its confirmatory assay.",
+   "note": ".rule: split long sentence, remove question framing",
    "claims": [
     {
-     "claim": "When the options are tests the question is still which disease.",
-     "to": "When choosing a test, first name the disease from the smear plus one separating test, then choose that disease's assay."
+     "claim": "When the options are tests, the question is still which disease.",
+     "dropped": "framing about the question; the disease-then-assay step is stated in the second sentence"
     },
     {
-     "claim": "Name the disease from the smear plus one separating test, then map disease to assay.",
-     "to": "When choosing a test, first name the disease from the smear plus one separating test, then choose that disease's assay."
+     "claim": "Name the disease from the smear plus one separating test.",
+     "to": "Name the disease from the smear plus that one separating test, then map the disease to its confirmatory assay."
+    },
+    {
+     "claim": "Then map disease to assay.",
+     "to": "Name the disease from the smear plus that one separating test, then map the disease to its confirmatory assay."
     },
     {
      "claim": "When two diagnoses share a morphologic finding, the answer is the test that separates them rather than the finding they share.",
-     "to": "When two diagnoses share a morphologic finding, the useful test is the one that separates them, not the finding they share."
+     "to": "When two diagnoses share a morphologic finding, the next step is the test that separates them, not the finding they share."
     }
    ],
    "new_claims": [
     {
-     "claim": "When choosing a test, first name the disease from the smear plus one separating test, then choose that disease's assay.",
-     "from": "Name the disease from the smear plus one separating test, then map disease to assay."
+     "claim": "When two diagnoses share a morphologic finding, the next step is the test that separates them, not the finding they share.",
+     "from": "When two diagnoses share a morphologic finding, the answer is the test that separates them rather than the finding they share."
     },
     {
-     "claim": "When two diagnoses share a morphologic finding, the useful test is the one that separates them, not the finding they share.",
-     "from": "When two diagnoses share a morphologic finding, the answer is the test that separates them rather than the finding they share."
+     "claim": "Name the disease from the smear plus that one separating test.",
+     "from": "Name the disease from the smear plus one separating test."
+    },
+    {
+     "claim": "Then map the disease to its confirmatory assay.",
+     "from": "Then map disease to assay."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-spherocytosis",
+   "find": "PNH is the other famous Coombs-negative hemolysis,",
+   "with": "<b>PNH</b> (paroxysmal nocturnal hemoglobinuria) is the other famous Coombs-negative hemolysis,",
+   "note": "traps: expand PNH at first use",
+   "claims": [
+    {
+     "claim": "PNH is the other famous Coombs-negative hemolysis.",
+     "to": "PNH (paroxysmal nocturnal hemoglobinuria) is the other famous Coombs-negative hemolysis, but it means cytopenias, a bland smear and acquired disease."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "PNH (paroxysmal nocturnal hemoglobinuria) is the other famous Coombs-negative hemolysis, but it means cytopenias, a bland smear and acquired disease.",
+     "from": "PNH is the other famous Coombs-negative hemolysis."
+    },
+    {
+     "claim": "PNH stands for paroxysmal nocturnal hemoglobinuria.",
+     "from": "expansion"
     }
    ]
   },
@@ -1335,34 +1348,34 @@
    "op": "replace",
    "brief": "bs-spherocytosis",
    "find": "Boy with jaundice and hemolysis sells G6PD, which needs an oxidant trigger and is not passed father to son.",
-   "with": "<b>G6PD</b> (glucose-6-phosphate dehydrogenase) deficiency: a boy with jaundice and hemolysis suggests it, but it needs an oxidant trigger and is not passed from father to son.",
-   "note": "trap: personification removed; Option: why; G6PD expanded",
+   "with": "<b>G6PD</b> (glucose-6-phosphate dehydrogenase) deficiency: a boy with jaundice and hemolysis suggests it, but it needs an oxidant trigger and is not passed father to son.",
+   "note": "traps: Option: why, remove personification, expand G6PD",
    "claims": [
     {
-     "claim": "A boy with jaundice and hemolysis makes G6PD tempting.",
-     "to": "Salient decoyG6PD (glucose-6-phosphate dehydrogenase) deficiency: a boy with jaundice and hemolysis suggests it, but it needs an oxidant trigger and is not passed from father to son."
+     "claim": "A boy with jaundice and hemolysis suggests G6PD deficiency.",
+     "to": "G6PD (glucose-6-phosphate dehydrogenase) deficiency: a boy with jaundice and hemolysis suggests it, but it needs an oxidant trigger and is not passed father to son."
     },
     {
      "claim": "G6PD deficiency needs an oxidant trigger.",
-     "to": "Salient decoyG6PD (glucose-6-phosphate dehydrogenase) deficiency: a boy with jaundice and hemolysis suggests it, but it needs an oxidant trigger and is not passed from father to son."
+     "to": "G6PD (glucose-6-phosphate dehydrogenase) deficiency: a boy with jaundice and hemolysis suggests it, but it needs an oxidant trigger and is not passed father to son."
     },
     {
      "claim": "G6PD deficiency is not passed father to son.",
-     "to": "Salient decoyG6PD (glucose-6-phosphate dehydrogenase) deficiency: a boy with jaundice and hemolysis suggests it, but it needs an oxidant trigger and is not passed from father to son."
+     "to": "G6PD (glucose-6-phosphate dehydrogenase) deficiency: a boy with jaundice and hemolysis suggests it, but it needs an oxidant trigger and is not passed father to son."
     }
    ],
    "new_claims": [
     {
+     "claim": "G6PD (glucose-6-phosphate dehydrogenase) deficiency: a boy with jaundice and hemolysis suggests it, but it needs an oxidant trigger and is not passed father to son.",
+     "from": "A boy with jaundice and hemolysis suggests G6PD deficiency."
+    },
+    {
+     "claim": "G6PD (glucose-6-phosphate dehydrogenase) deficiency: a boy with jaundice and hemolysis suggests it, but it needs an oxidant trigger and is not passed father to son.",
+     "from": "G6PD deficiency needs an oxidant trigger."
+    },
+    {
      "claim": "G6PD stands for glucose-6-phosphate dehydrogenase.",
      "from": "expansion"
-    },
-    {
-     "claim": "A boy with jaundice and hemolysis suggests G6PD deficiency.",
-     "from": "A boy with jaundice and hemolysis makes G6PD tempting."
-    },
-    {
-     "claim": "G6PD deficiency needs an oxidant trigger and is not passed from father to son.",
-     "from": "G6PD deficiency needs an oxidant trigger."
     }
    ]
   },
@@ -1370,219 +1383,186 @@
    "op": "replace",
    "brief": "bs-sickle-trait",
    "find": "<p><b>HbA 60% with HbS 40% and a stone-normal CBC is trait, not disease.</b> Every wrong option — acute chest, dactylitis, stroke, osteomyelitis — is a genuine complication of sickle cell <b>anemia</b>, and none belongs to a carrier. Five of seven options die to one line of the lab panel.</p>\n<p>Then a second layer catches those who did read it: the stem asks for the <b>most common</b> complication, not one that can occur. Splenic infarction is real in trait, at altitude, uncommonly. Painless hematuria is the common one, because the renal medulla is hypoxic, acidic and hypertonic — the one microenvironment that polymerises HbS at the 40% a carrier has.</p>",
-   "with": "<p><b>HbA</b> (hemoglobin A) 60% with <b>HbS</b> (hemoglobin S) 40% and a completely normal <b>CBC</b> (complete blood count) indicate sickle cell trait, not disease. Acute chest syndrome, dactylitis, stroke and osteomyelitis are genuine complications of sickle cell <b>anemia</b>, and none is a feature of the carrier state.</p>\n<p>Painless hematuria is the <b>most common</b> complication of trait. Splenic infarction does occur in trait, uncommonly and at altitude. Hematuria occurs because the renal medulla is hypoxic, acidic and hypertonic, the one microenvironment that polymerises HbS at the 40% a carrier has.</p>",
-   "note": ".dp: remove option framing, slogan, em dashes; acronyms",
+   "with": "<p><b>HbA 60% with HbS 40% and a completely normal blood count is trait, not disease.</b> Acute chest syndrome, dactylitis, stroke and osteomyelitis are genuine complications of sickle cell <b>anemia</b>, and none belongs to a carrier.</p>\n<p>The <b>most common</b> complication of trait is painless hematuria. Splenic infarction is real in trait, at altitude, but uncommon. Hematuria is common because the renal medulla is hypoxic, acidic and hypertonic. That is the one microenvironment that polymerises HbS at the 40% a carrier has.</p>",
+   "note": ".dp: remove option and stem framing, split sentences, remove em dashes",
    "reworded_bold": [
     "HbA 60% with HbS 40% and a stone-normal CBC is trait, not disease."
    ],
    "claims": [
     {
-     "claim": "HbA 60% with HbS 40% and a stone-normal CBC is trait, not disease.",
-     "to": "HbA (hemoglobin A) 60% with HbS (hemoglobin S) 40% and a completely normal CBC (complete blood count) indicate sickle cell trait, not disease."
+     "claim": "HbA 60% with HbS 40% and a completely normal CBC is trait, not disease.",
+     "to": "HbA 60% with HbS 40% and a completely normal blood count is trait, not disease."
+    },
+    {
+     "claim": "Acute chest, dactylitis, stroke and osteomyelitis are wrong options.",
+     "dropped": "framing about the answer options; the complications themselves are kept in the next sentence"
     },
     {
      "claim": "Acute chest, dactylitis, stroke and osteomyelitis are genuine complications of sickle cell anemia.",
-     "to": "Acute chest syndrome, dactylitis, stroke and osteomyelitis are genuine complications of sickle cell anemia, and none is a feature of the carrier state."
+     "to": "Acute chest syndrome, dactylitis, stroke and osteomyelitis are genuine complications of sickle cell anemia, and none belongs to a carrier."
     },
     {
-     "claim": "None of them belongs to a carrier.",
-     "to": "Acute chest syndrome, dactylitis, stroke and osteomyelitis are genuine complications of sickle cell anemia, and none is a feature of the carrier state."
+     "claim": "None of these belongs to a carrier.",
+     "to": "Acute chest syndrome, dactylitis, stroke and osteomyelitis are genuine complications of sickle cell anemia, and none belongs to a carrier."
     },
     {
-     "claim": "Each of these complications is a wrong option.",
-     "dropped": "framing about the answer options"
+     "claim": "Most of the options are eliminated by one line of the lab panel.",
+     "to": "HbA 60% with HbS 40% and a completely normal blood count is trait, not disease."
     },
     {
-     "claim": "Most options are eliminated by one line of the lab panel.",
-     "dropped": "framing about the answer options"
-    },
-    {
-     "claim": "A second layer catches those who did read the panel.",
+     "claim": "A second layer catches those who did read it.",
      "dropped": "framing about the question"
     },
     {
      "claim": "The stem asks for the most common complication, not one that can occur.",
-     "to": "Painless hematuria is the most common complication of trait."
+     "to": "The most common complication of trait is painless hematuria."
     },
     {
      "claim": "Splenic infarction is real in trait, at altitude, uncommonly.",
-     "to": "Splenic infarction does occur in trait, uncommonly and at altitude."
+     "to": "Splenic infarction is real in trait, at altitude, but uncommon."
     },
     {
      "claim": "Painless hematuria is the common complication.",
-     "to": "Painless hematuria is the most common complication of trait."
+     "to": "The most common complication of trait is painless hematuria."
     },
     {
-     "claim": "This is because the renal medulla is hypoxic, acidic and hypertonic.",
-     "to": "Hematuria occurs because the renal medulla is hypoxic, acidic and hypertonic, the one microenvironment that polymerises HbS at the 40% a carrier has."
+     "claim": "It is common because the renal medulla is hypoxic, acidic and hypertonic.",
+     "to": "Hematuria is common because the renal medulla is hypoxic, acidic and hypertonic."
     },
     {
-     "claim": "That is the one microenvironment that polymerises HbS at the 40% a carrier has.",
-     "to": "Hematuria occurs because the renal medulla is hypoxic, acidic and hypertonic, the one microenvironment that polymerises HbS at the 40% a carrier has."
+     "claim": "The renal medulla is the one microenvironment that polymerises HbS at the 40% a carrier has.",
+     "to": "That is the one microenvironment that polymerises HbS at the 40% a carrier has."
     }
    ],
    "new_claims": [
     {
-     "claim": "HbA stands for hemoglobin A.",
-     "from": "expansion"
-    },
-    {
-     "claim": "HbS stands for hemoglobin S.",
-     "from": "expansion"
-    },
-    {
-     "claim": "CBC stands for complete blood count.",
-     "from": "expansion"
-    },
-    {
-     "claim": "HbA 60% with HbS 40% and a completely normal CBC indicate sickle cell trait, not disease.",
-     "from": "HbA 60% with HbS 40% and a stone-normal CBC is trait, not disease."
+     "claim": "HbA 60% with HbS 40% and a completely normal blood count is trait, not disease.",
+     "from": "HbA 60% with HbS 40% and a completely normal CBC is trait, not disease."
     },
     {
      "claim": "Acute chest syndrome, dactylitis, stroke and osteomyelitis are genuine complications of sickle cell anemia.",
      "from": "Acute chest, dactylitis, stroke and osteomyelitis are genuine complications of sickle cell anemia."
     },
     {
-     "claim": "None is a feature of the carrier state.",
-     "from": "None of them belongs to a carrier."
+     "claim": "None belongs to a carrier.",
+     "from": "None of these belongs to a carrier."
     },
     {
-     "claim": "Painless hematuria is the most common complication of trait.",
+     "claim": "The most common complication of trait is painless hematuria.",
      "from": "Painless hematuria is the common complication."
     },
     {
-     "claim": "Splenic infarction does occur in trait, uncommonly and at altitude.",
+     "claim": "The most common complication of trait is painless hematuria.",
+     "from": "The stem asks for the most common complication, not one that can occur."
+    },
+    {
+     "claim": "Splenic infarction is real in trait, at altitude, but uncommon.",
      "from": "Splenic infarction is real in trait, at altitude, uncommonly."
     },
     {
-     "claim": "Hematuria occurs because the renal medulla is hypoxic, acidic and hypertonic.",
-     "from": "This is because the renal medulla is hypoxic, acidic and hypertonic."
+     "claim": "Hematuria is common because the renal medulla is hypoxic, acidic and hypertonic.",
+     "from": "It is common because the renal medulla is hypoxic, acidic and hypertonic."
     },
     {
      "claim": "That is the one microenvironment that polymerises HbS at the 40% a carrier has.",
-     "from": "That is the one microenvironment that polymerises HbS at the 40% a carrier has."
+     "from": "The renal medulla is the one microenvironment that polymerises HbS at the 40% a carrier has."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "bs-sickle-trait",
-   "find": "The renal medulla is hypoxic, acidic and hypertonic — exactly the conditions that polymerise HbS at the 40% concentration a carrier has.",
-   "with": "The renal medulla is hypoxic, acidic and hypertonic, exactly the conditions that polymerise <b>HbS</b> (hemoglobin S) at the 40% concentration a carrier has.",
-   "note": "danger: em dash; HbS expanded",
+   "find": "The renal medulla is hypoxic, acidic and hypertonic — exactly the conditions that polymerise HbS at the 40% concentration a carrier has. Nowhere else in the body reproduces that microenvironment, which is why a carrier's spleen, lungs and bones are spared and the vasa recta are not.",
+   "with": "The renal medulla is hypoxic, acidic and hypertonic: exactly the conditions that polymerise HbS at the 40% concentration a carrier has. No other site in the body reproduces that microenvironment. That is why a carrier's spleen, lungs and bones are spared and the vasa recta are not.",
+   "note": ".danger: remove em dash, split sentence",
    "claims": [
     {
      "claim": "The renal medulla is hypoxic, acidic and hypertonic.",
-     "to": "The renal medulla is hypoxic, acidic and hypertonic, exactly the conditions that polymerise HbS (hemoglobin S) at the 40% concentration a carrier has."
+     "to": "The renal medulla is hypoxic, acidic and hypertonic: exactly the conditions that polymerise HbS at the 40% concentration a carrier has."
     },
     {
      "claim": "These are exactly the conditions that polymerise HbS at the 40% concentration a carrier has.",
-     "to": "The renal medulla is hypoxic, acidic and hypertonic, exactly the conditions that polymerise HbS (hemoglobin S) at the 40% concentration a carrier has."
+     "to": "The renal medulla is hypoxic, acidic and hypertonic: exactly the conditions that polymerise HbS at the 40% concentration a carrier has."
+    },
+    {
+     "claim": "Nowhere else in the body reproduces that microenvironment.",
+     "to": "No other site in the body reproduces that microenvironment."
+    },
+    {
+     "claim": "So a carrier's spleen, lungs and bones are spared and the vasa recta are not.",
+     "to": "That is why a carrier's spleen, lungs and bones are spared and the vasa recta are not."
     }
    ],
    "new_claims": [
     {
-     "claim": "HbS stands for hemoglobin S.",
-     "from": "expansion"
+     "claim": "The renal medulla is hypoxic, acidic and hypertonic: exactly the conditions that polymerise HbS at the 40% concentration a carrier has.",
+     "from": "These are exactly the conditions that polymerise HbS at the 40% concentration a carrier has."
     },
     {
-     "claim": "The renal medulla is hypoxic, acidic and hypertonic, exactly the conditions that polymerise HbS at the 40% concentration a carrier has.",
-     "from": "These are exactly the conditions that polymerise HbS at the 40% concentration a carrier has."
+     "claim": "No other site in the body reproduces that microenvironment.",
+     "from": "Nowhere else in the body reproduces that microenvironment."
+    },
+    {
+     "claim": "A carrier's spleen, lungs and bones are spared and the vasa recta are not.",
+     "from": "So a carrier's spleen, lungs and bones are spared and the vasa recta are not."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "bs-sickle-trait",
-   "find": "In trait HbA always exceeds HbS, because alpha chains bind normal beta with higher affinity — memorise the inequality, not the numbers &middot; HbF is 0% by 12 months, so a raised HbF later means hydroxyurea or a thalassemia &middot; Renal medullary carcinoma is rare but nearly pathognomonic for trait &middot; Trait carries a real risk of exertional rhabdomyolysis and sudden death under extreme exertion, which is why it matters in athletes and recruits &middot; <b>Pneumococcus</b> &mdash; #1 cause of sepsis in sickle cell despite vaccination (non-vaccine serotypes); <b>Salmonella</b> &mdash; #1 cause of osteomyelitis; the organism changes with the site: blood = pneumococcus, bone = Salmonella",
-   "with": "In trait, <b>HbA</b> (hemoglobin A) always exceeds <b>HbS</b> (hemoglobin S), because alpha chains bind normal beta chains with higher affinity; memorise the inequality, not the numbers &middot; <b>HbF</b> (fetal hemoglobin) is 0% by 12 months, so a raised HbF later means hydroxyurea or a thalassemia &middot; Renal medullary carcinoma is rare but nearly pathognomonic for trait &middot; Trait carries a real risk of exertional rhabdomyolysis and sudden death under extreme exertion, which matters in athletes and recruits &middot; <b>Pneumococcus</b>: #1 cause of sepsis in sickle cell despite vaccination (non-vaccine serotypes); <b>Salmonella</b>: #1 cause of osteomyelitis",
-   "note": "pearls: em dashes to colons, slogan tail removed, acronyms",
+   "find": "In trait HbA always exceeds HbS, because alpha chains bind normal beta with higher affinity — memorise the inequality, not the numbers",
+   "with": "In trait, HbA always exceeds HbS because alpha chains bind normal beta chains with higher affinity; memorise the inequality, not the numbers",
+   "note": "pearls: remove prose em dash",
    "claims": [
     {
      "claim": "In trait HbA always exceeds HbS.",
-     "to": "In trait, HbA (hemoglobin A) always exceeds HbS (hemoglobin S), because alpha chains bind normal beta chains with higher affinity; memorise the inequality, not the numbers"
+     "to": "In trait, HbA always exceeds HbS because alpha chains bind normal beta chains with higher affinity; memorise the inequality, not the numbers"
     },
     {
      "claim": "This is because alpha chains bind normal beta with higher affinity.",
-     "to": "In trait, HbA (hemoglobin A) always exceeds HbS (hemoglobin S), because alpha chains bind normal beta chains with higher affinity; memorise the inequality, not the numbers"
+     "to": "In trait, HbA always exceeds HbS because alpha chains bind normal beta chains with higher affinity; memorise the inequality, not the numbers"
     },
     {
      "claim": "Memorise the inequality, not the numbers.",
-     "to": "In trait, HbA (hemoglobin A) always exceeds HbS (hemoglobin S), because alpha chains bind normal beta chains with higher affinity; memorise the inequality, not the numbers"
-    },
-    {
-     "claim": "HbF is 0% by 12 months.",
-     "to": "HbF (fetal hemoglobin) is 0% by 12 months, so a raised HbF later means hydroxyurea or a thalassemia"
-    },
-    {
-     "claim": "A raised HbF later means hydroxyurea or a thalassemia.",
-     "to": "HbF (fetal hemoglobin) is 0% by 12 months, so a raised HbF later means hydroxyurea or a thalassemia"
-    },
-    {
-     "claim": "Renal medullary carcinoma is rare but nearly pathognomonic for trait.",
-     "to": "Renal medullary carcinoma is rare but nearly pathognomonic for trait"
-    },
-    {
-     "claim": "Trait carries a real risk of exertional rhabdomyolysis and sudden death under extreme exertion.",
-     "to": "Trait carries a real risk of exertional rhabdomyolysis and sudden death under extreme exertion, which matters in athletes and recruits"
-    },
-    {
-     "claim": "That is why it matters in athletes and recruits.",
-     "to": "Trait carries a real risk of exertional rhabdomyolysis and sudden death under extreme exertion, which matters in athletes and recruits"
-    },
-    {
-     "claim": "Pneumococcus is the #1 cause of sepsis in sickle cell despite vaccination (non-vaccine serotypes).",
-     "to": "Pneumococcus: #1 cause of sepsis in sickle cell despite vaccination (non-vaccine serotypes); Salmonella: #1 cause of osteomyelitis"
-    },
-    {
-     "claim": "Salmonella is the #1 cause of osteomyelitis.",
-     "to": "Pneumococcus: #1 cause of sepsis in sickle cell despite vaccination (non-vaccine serotypes); Salmonella: #1 cause of osteomyelitis"
-    },
-    {
-     "claim": "The organism changes with the site: blood = pneumococcus, bone = Salmonella.",
-     "to": "Pneumococcus: #1 cause of sepsis in sickle cell despite vaccination (non-vaccine serotypes); Salmonella: #1 cause of osteomyelitis"
+     "to": "In trait, HbA always exceeds HbS because alpha chains bind normal beta chains with higher affinity; memorise the inequality, not the numbers"
     }
    ],
    "new_claims": [
     {
-     "claim": "HbA stands for hemoglobin A.",
-     "from": "expansion"
-    },
-    {
-     "claim": "HbS stands for hemoglobin S.",
-     "from": "expansion"
-    },
-    {
-     "claim": "HbF stands for fetal hemoglobin.",
-     "from": "expansion"
-    },
-    {
-     "claim": "In trait, HbA always exceeds HbS, because alpha chains bind normal beta chains with higher affinity.",
+     "claim": "In trait, HbA always exceeds HbS.",
      "from": "In trait HbA always exceeds HbS."
+    },
+    {
+     "claim": "Alpha chains bind normal beta chains with higher affinity.",
+     "from": "This is because alpha chains bind normal beta with higher affinity."
     },
     {
      "claim": "Memorise the inequality, not the numbers.",
      "from": "Memorise the inequality, not the numbers."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-sickle-trait",
+   "find": "(non-vaccine serotypes); <b>Salmonella</b> &mdash; #1 cause of osteomyelitis; the organism changes with the site: blood = pneumococcus, bone = Salmonella",
+   "with": "(non-vaccine serotypes) &middot; <b>Salmonella</b>: #1 cause of osteomyelitis in sickle cell",
+   "note": "pearls: give Salmonella its own row so its dash is structural; drop the slogan summary that restates the two rows",
+   "claims": [
+    {
+     "claim": "Salmonella is the #1 cause of osteomyelitis in sickle cell.",
+     "to": "Salmonella: #1 cause of osteomyelitis in sickle cell"
     },
     {
-     "claim": "HbF is 0% by 12 months, so a raised HbF later means hydroxyurea or a thalassemia.",
-     "from": "HbF is 0% by 12 months."
-    },
+     "claim": "The organism changes with the site: blood is pneumococcus, bone is Salmonella.",
+     "carried_by": "Pneumococcus: #1 cause of sepsis in sickle cell despite vaccination (non-vaccine serotypes) · Salmonella: #1 cause of osteomyelitis in sickle cell"
+    }
+   ],
+   "new_claims": [
     {
-     "claim": "Renal medullary carcinoma is rare but nearly pathognomonic for trait.",
-     "from": "Renal medullary carcinoma is rare but nearly pathognomonic for trait."
-    },
-    {
-     "claim": "Trait carries a real risk of exertional rhabdomyolysis and sudden death under extreme exertion, which matters in athletes and recruits.",
-     "from": "Trait carries a real risk of exertional rhabdomyolysis and sudden death under extreme exertion."
-    },
-    {
-     "claim": "Pneumococcus: #1 cause of sepsis in sickle cell despite vaccination (non-vaccine serotypes).",
-     "from": "Pneumococcus is the #1 cause of sepsis in sickle cell despite vaccination (non-vaccine serotypes)."
-    },
-    {
-     "claim": "Salmonella: #1 cause of osteomyelitis.",
-     "from": "Salmonella is the #1 cause of osteomyelitis."
+     "claim": "Salmonella: #1 cause of osteomyelitis in sickle cell",
+     "from": "Salmonella is the #1 cause of osteomyelitis in sickle cell."
     }
    ]
   },
@@ -1590,16 +1570,16 @@
    "op": "replace",
    "brief": "bs-sickle-trait",
    "find": "Part I <b>Hematuria</b> in Renal and GU should gain a sickle trait row; painless hematuria in a carrier is the commonest trait complication. Part I <b>Chronic Dyspnea in Sickle Cell Disease</b> owns the chronic pulmonary sequelae that follow the acute chest syndrome named here. Part II <b>Stroke in a Child or Adolescent</b> places the sickle cell stroke among the other pediatric causes.",
-   "with": "Part I <b>Hematuria</b> in Renal and GU pairs with this brief: painless hematuria in a carrier is the commonest trait complication. Part I <b>Chronic Dyspnea in Sickle Cell Disease</b> covers the chronic pulmonary sequelae that follow the acute chest syndrome named here. Part II <b>Stroke in a Child or Adolescent</b> places the sickle cell stroke among the other pediatric causes.",
-   "note": "pairs with: drop edit proposal; owns to covers",
+   "with": "Part I <b>Hematuria</b> is the related brief for painless hematuria, the commonest trait complication. Part I <b>Chronic Dyspnea in Sickle Cell Disease</b> covers the chronic pulmonary sequelae that follow the acute chest syndrome named here. Part II <b>Stroke in a Child or Adolescent</b> places the sickle cell stroke among the other pediatric causes.",
+   "note": "Pairs with: remove workflow note about adding a row, owns to covers",
    "claims": [
     {
-     "claim": "Hematuria in Renal and GU should gain a sickle trait row.",
-     "dropped": "workflow proposal to edit another brief"
+     "claim": "The Hematuria brief should gain a sickle trait row.",
+     "dropped": "workflow note about editing another brief"
     },
     {
      "claim": "Painless hematuria in a carrier is the commonest trait complication.",
-     "to": "Part I Hematuria in Renal and GU pairs with this brief: painless hematuria in a carrier is the commonest trait complication."
+     "to": "Part I Hematuria is the related brief for painless hematuria, the commonest trait complication."
     },
     {
      "claim": "Chronic Dyspnea in Sickle Cell Disease owns the chronic pulmonary sequelae that follow the acute chest syndrome named here.",
@@ -1612,11 +1592,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Hematuria in Renal and GU pairs with this brief.",
+     "claim": "Part I Hematuria is the related brief for painless hematuria, the commonest trait complication.",
      "from": "Painless hematuria in a carrier is the commonest trait complication."
     },
     {
-     "claim": "Painless hematuria in a carrier is the commonest trait complication.",
+     "claim": "Part I Hematuria is the related brief for painless hematuria, the commonest trait complication.",
      "from": "Painless hematuria in a carrier is the commonest trait complication."
     },
     {
@@ -1633,30 +1613,53 @@
    "op": "replace",
    "brief": "bs-sickle-trait",
    "find": "When a stem supplies a diagnostic lab panel that panel is the assassin, usually eliminating most options in one line, and family history is placed to make you skip it.",
-   "with": "When a diagnostic lab panel is given, it usually excludes most options on its own; do not let the family history lead you past it.",
-   "note": "rule: remove personification",
+   "with": "Read a supplied diagnostic lab panel first; it usually excludes most of the differential in one line. Do not let the family history lead you to skip it.",
+   "note": ".rule: remove personification ('assassin') and stem framing",
    "claims": [
     {
-     "claim": "When a stem supplies a diagnostic lab panel, that panel is decisive.",
-     "to": "When a diagnostic lab panel is given, it usually excludes most options on its own; do not let the family history lead you past it."
+     "claim": "When a diagnostic lab panel is supplied, that panel is decisive.",
+     "to": "Read a supplied diagnostic lab panel first; it usually excludes most of the differential in one line."
     },
     {
-     "claim": "The panel usually eliminates most options in one line.",
-     "to": "When a diagnostic lab panel is given, it usually excludes most options on its own; do not let the family history lead you past it."
+     "claim": "It usually eliminates most options in one line.",
+     "to": "Read a supplied diagnostic lab panel first; it usually excludes most of the differential in one line."
     },
     {
-     "claim": "Family history is placed to make you skip the panel.",
-     "to": "When a diagnostic lab panel is given, it usually excludes most options on its own; do not let the family history lead you past it."
+     "claim": "Family history is placed to make you skip it.",
+     "to": "Do not let the family history lead you to skip it."
     }
    ],
    "new_claims": [
     {
-     "claim": "When a diagnostic lab panel is given, it usually excludes most options on its own.",
-     "from": "The panel usually eliminates most options in one line."
+     "claim": "Read a supplied diagnostic lab panel first.",
+     "from": "When a diagnostic lab panel is supplied, that panel is decisive."
     },
     {
-     "claim": "Do not let the family history lead you past the panel.",
-     "from": "Family history is placed to make you skip the panel."
+     "claim": "It usually excludes most of the differential in one line.",
+     "from": "It usually eliminates most options in one line."
+    },
+    {
+     "claim": "Do not let the family history lead you to skip it.",
+     "from": "Family history is placed to make you skip it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-sickle-trait",
+   "find": "The affected sister sells the whole disease-complication list at once.",
+   "with": "The affected sister makes the whole list of disease complications look plausible at once.",
+   "note": "traps: remove personification",
+   "claims": [
+    {
+     "claim": "The affected sister makes the whole disease-complication list tempting at once.",
+     "to": "The affected sister makes the whole list of disease complications look plausible at once."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The affected sister makes the whole list of disease complications look plausible at once.",
+     "from": "The affected sister makes the whole disease-complication list tempting at once."
     }
    ]
   },
@@ -1664,28 +1667,28 @@
    "op": "replace",
    "brief": "aq-bruising",
    "find": "<p>Bruising is a finding, not a diagnosis. Ask what failed: the <b>vessel wall</b> (IgA vasculitis), the <b>platelets</b> (ITP, leukemia, von Willebrand disease), the <b>clotting factors</b> (hemophilia), or the <b>story</b> (accidental or nonaccidental trauma). Each leaves a different bruise, a different history and a different first test. Check first whether the child needs intervention now; then let the history, the examination and the platelet count remove whole branches at a time. The confirmatory test comes last, once one branch is left.</p>",
-   "with": "<p>For bruising, ask what failed: the <b>vessel wall</b> (IgA vasculitis), the <b>platelets</b> (immune thrombocytopenia, leukemia, von Willebrand disease), the <b>clotting factors</b> (hemophilia), or the <b>story</b> (accidental or nonaccidental trauma). Each leaves a different bruise, a different history and a different first test. First check whether the child needs intervention now. Then let the history, the examination and the platelet count remove whole branches at a time. Order the confirmatory test last, once one branch is left.</p>",
-   "note": ".dp: remove aphorism opener, split sentence",
+   "with": "<p>Bruising is a finding, not a diagnosis. Ask what failed: the <b>vessel wall</b> (IgA vasculitis), the <b>platelets</b> (immune thrombocytopenia, leukemia, von Willebrand disease), the <b>clotting factors</b> (hemophilia), or the <b>story</b> (accidental or nonaccidental trauma). Each leaves a different bruise, history and first test. First check whether the child needs intervention now. Then use the history, the examination and the platelet count to remove whole branches at a time. Order the confirmatory test last, once one branch is left.</p>",
+   "note": ".dp: split sentences, write out ITP",
    "claims": [
     {
      "claim": "Bruising is a finding, not a diagnosis.",
-     "to": "For bruising, ask what failed: the vessel wall (IgA vasculitis), the platelets (immune thrombocytopenia, leukemia, von Willebrand disease), the clotting factors (hemophilia), or the story (accidental or nonaccidental trauma)."
+     "to": "Bruising is a finding, not a diagnosis."
     },
     {
      "claim": "Ask what failed: the vessel wall (IgA vasculitis), the platelets (ITP, leukemia, von Willebrand disease), the clotting factors (hemophilia), or the story (accidental or nonaccidental trauma).",
-     "to": "For bruising, ask what failed: the vessel wall (IgA vasculitis), the platelets (immune thrombocytopenia, leukemia, von Willebrand disease), the clotting factors (hemophilia), or the story (accidental or nonaccidental trauma)."
+     "to": "Ask what failed: the vessel wall (IgA vasculitis), the platelets (immune thrombocytopenia, leukemia, von Willebrand disease), the clotting factors (hemophilia), or the story (accidental or nonaccidental trauma)."
     },
     {
      "claim": "Each leaves a different bruise, a different history and a different first test.",
-     "to": "Each leaves a different bruise, a different history and a different first test."
+     "to": "Each leaves a different bruise, history and first test."
     },
     {
      "claim": "Check first whether the child needs intervention now.",
      "to": "First check whether the child needs intervention now."
     },
     {
-     "claim": "Then let the history, the examination and the platelet count remove whole branches at a time.",
-     "to": "Then let the history, the examination and the platelet count remove whole branches at a time."
+     "claim": "Then the history, the examination and the platelet count remove whole branches at a time.",
+     "to": "Then use the history, the examination and the platelet count to remove whole branches at a time."
     },
     {
      "claim": "The confirmatory test comes last, once one branch is left.",
@@ -1694,11 +1697,15 @@
    ],
    "new_claims": [
     {
-     "claim": "For bruising, ask what failed: the vessel wall (IgA vasculitis), the platelets (immune thrombocytopenia, leukemia, von Willebrand disease), the clotting factors (hemophilia), or the story (accidental or nonaccidental trauma).",
+     "claim": "Bruising is a finding, not a diagnosis.",
+     "from": "Bruising is a finding, not a diagnosis."
+    },
+    {
+     "claim": "Ask what failed: the vessel wall (IgA vasculitis), the platelets (immune thrombocytopenia, leukemia, von Willebrand disease), the clotting factors (hemophilia), or the story (accidental or nonaccidental trauma).",
      "from": "Ask what failed: the vessel wall (IgA vasculitis), the platelets (ITP, leukemia, von Willebrand disease), the clotting factors (hemophilia), or the story (accidental or nonaccidental trauma)."
     },
     {
-     "claim": "Each leaves a different bruise, a different history and a different first test.",
+     "claim": "Each leaves a different bruise, history and first test.",
      "from": "Each leaves a different bruise, a different history and a different first test."
     },
     {
@@ -1706,8 +1713,8 @@
      "from": "Check first whether the child needs intervention now."
     },
     {
-     "claim": "Then let the history, the examination and the platelet count remove whole branches at a time.",
-     "from": "Then let the history, the examination and the platelet count remove whole branches at a time."
+     "claim": "Then use the history, the examination and the platelet count to remove whole branches at a time.",
+     "from": "Then the history, the examination and the platelet count remove whole branches at a time."
     },
     {
      "claim": "Order the confirmatory test last, once one branch is left.",
@@ -1719,12 +1726,12 @@
    "op": "replace",
    "brief": "aq-bruising",
    "find": "Part I <b>Anemia with Thrombocytopenia</b> picks up once two cell lines are down. Part II <b>Pediatric Acute Lymphoblastic Leukemia</b> owns the marrow branch and its confirmatory biopsy. Part I <b>Hematuria</b> owns the glomerular workup that renal IgA vasculitis enters. Part II <b>Suspected Child Abuse: Fractures and the Next Step</b> owns the fracture branch of nonaccidental trauma: does the fracture need a pull or a twist, and does the film show a bone disease?",
-   "with": "Part I <b>Anemia with Thrombocytopenia</b> covers the child once two cell lines are down. Part II <b>Pediatric Acute Lymphoblastic Leukemia</b> covers the marrow branch and its confirmatory biopsy. Part I <b>Hematuria</b> covers the glomerular workup that renal IgA vasculitis enters. Part II <b>Suspected Child Abuse: Fractures and the Next Step</b> covers the fracture branch of nonaccidental trauma: does the fracture need a pull or a twist, and does the film show a bone disease?",
-   "note": "pairs with: picks up/owns to covers",
+   "with": "Part I <b>Anemia with Thrombocytopenia</b> covers the child with two cell lines down. Part II <b>Pediatric Acute Lymphoblastic Leukemia</b> covers the marrow branch and its confirmatory biopsy. Part I <b>Hematuria</b> covers the glomerular workup that renal IgA vasculitis enters. Part II <b>Suspected Child Abuse: Fractures and the Next Step</b> covers the fracture branch of nonaccidental trauma. Ask: does the fracture need a pull or a twist, and does the film show a bone disease?",
+   "note": "Pairs with: owns / picks up to covers",
    "claims": [
     {
      "claim": "Anemia with Thrombocytopenia picks up once two cell lines are down.",
-     "to": "Part I Anemia with Thrombocytopenia covers the child once two cell lines are down."
+     "to": "Part I Anemia with Thrombocytopenia covers the child with two cell lines down."
     },
     {
      "claim": "Pediatric Acute Lymphoblastic Leukemia owns the marrow branch and its confirmatory biopsy.",
@@ -1735,13 +1742,17 @@
      "to": "Part I Hematuria covers the glomerular workup that renal IgA vasculitis enters."
     },
     {
-     "claim": "Suspected Child Abuse: Fractures and the Next Step owns the fracture branch of nonaccidental trauma: pull or twist, and bone disease on the film.",
-     "to": "Part II Suspected Child Abuse: Fractures and the Next Step covers the fracture branch of nonaccidental trauma: does the fracture need a pull or a twist, and does the film show a bone disease?"
+     "claim": "Suspected Child Abuse: Fractures and the Next Step owns the fracture branch of nonaccidental trauma.",
+     "to": "Part II Suspected Child Abuse: Fractures and the Next Step covers the fracture branch of nonaccidental trauma."
+    },
+    {
+     "claim": "Its questions: does the fracture need a pull or a twist, and does the film show a bone disease?",
+     "to": "Ask: does the fracture need a pull or a twist, and does the film show a bone disease?"
     }
    ],
    "new_claims": [
     {
-     "claim": "Anemia with Thrombocytopenia covers the child once two cell lines are down.",
+     "claim": "Anemia with Thrombocytopenia covers the child with two cell lines down.",
      "from": "Anemia with Thrombocytopenia picks up once two cell lines are down."
     },
     {
@@ -1754,7 +1765,11 @@
     },
     {
      "claim": "Suspected Child Abuse: Fractures and the Next Step covers the fracture branch of nonaccidental trauma.",
-     "from": "Suspected Child Abuse: Fractures and the Next Step owns the fracture branch of nonaccidental trauma: pull or twist, and bone disease on the film."
+     "from": "Suspected Child Abuse: Fractures and the Next Step owns the fracture branch of nonaccidental trauma."
+    },
+    {
+     "claim": "Does the fracture need a pull or a twist, and does the film show a bone disease?",
+     "from": "Its questions: does the fracture need a pull or a twist, and does the film show a bone disease?"
     }
    ]
   },
@@ -1763,7 +1778,7 @@
    "brief": "aq-bruising",
    "find": "For bruising in a child, decide whether the vessel, the platelets, the clotting factors or the story failed; the feel of the lesion, the platelet count and the spleen each remove a branch, and the confirmatory test comes only after one branch is left.",
    "with": "For bruising in a child, decide whether the vessel, the platelets, the clotting factors or the story failed. The feel of the lesion, the platelet count and the spleen each remove a branch. Order the confirmatory test only after one branch is left.",
-   "note": "rule: split long sentence",
+   "note": ".rule: split long sentence",
    "claims": [
     {
      "claim": "For bruising in a child, decide whether the vessel, the platelets, the clotting factors or the story failed.",
@@ -1790,6 +1805,63 @@
     {
      "claim": "Order the confirmatory test only after one branch is left.",
      "from": "The confirmatory test comes only after one branch is left."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "<b>Timing separates the two allergic reactions</b> &mdash; seconds",
+   "with": "<b>Timing separates the two allergic reactions</b>: seconds",
+   "note": "s33 fix: prose em dash to colon",
+   "claims": [
+    {
+     "claim": "Timing separates the two allergic reactions — seconds",
+     "to": "Timing separates the two allergic reactions: seconds"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Timing separates the two allergic reactions: seconds",
+     "from": "Timing separates the two allergic reactions — seconds"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "<b>Tumor lysis</b> — potassium up",
+   "with": "<b>Tumor lysis</b>: potassium up",
+   "note": "s33 fix: prose em dash to colon",
+   "claims": [
+    {
+     "claim": "Tumor lysis — potassium up",
+     "to": "Tumor lysis: potassium up"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Tumor lysis: potassium up",
+     "from": "Tumor lysis — potassium up"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-sickle-trait",
+   "find": "<b>Pneumococcus</b> &mdash; #1 cause",
+   "with": "<b>Pneumococcus</b>: #1 cause",
+   "note": "s33 fix: prose em dash to colon",
+   "claims": [
+    {
+     "claim": "Pneumococcus — #1 cause",
+     "to": "Pneumococcus: #1 cause"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Pneumococcus: #1 cause",
+     "from": "Pneumococcus — #1 cause"
     }
    ]
   }

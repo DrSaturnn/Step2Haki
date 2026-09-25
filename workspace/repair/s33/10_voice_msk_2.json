@@ -42,7 +42,7 @@
      "from": "expansion"
     },
     {
-     "claim": "FOOSH with anatomic snuffbox tenderness is a scaphoid fracture until proven otherwise.",
+     "claim": "FOOSH (fall on an outstretched hand) with anatomic snuffbox tenderness is a scaphoid fracture until proven otherwise.",
      "from": "FOOSH plus anatomic snuffbox tenderness is a scaphoid fracture until proven otherwise."
     },
     {
@@ -71,7 +71,7 @@
    "op": "replace",
    "brief": "scaphoid",
    "find": "The scaphoid's blood supply enters <b>distally</b> and runs <b>retrograde</b> to the proximal pole. A missed fracture means <b>avascular necrosis</b> and nonunion. Highest AVN risk = <b>proximal pole</b>. The AVN club worth memorizing: femoral head, <b>scaphoid proximal pole</b>, talus, humeral head — all retrograde or tenuous supply.",
-   "with": "The scaphoid's blood supply enters <b>distally</b> and runs <b>retrograde</b> to the proximal pole. A missed fracture leads to <b>avascular necrosis</b> and nonunion. <b>AVN</b> (avascular necrosis) risk is highest at the <b>proximal pole</b>. The femoral head, <b>scaphoid proximal pole</b>, talus and humeral head are all AVN sites with a retrograde or tenuous blood supply.",
+   "with": "The scaphoid's blood supply enters <b>distally</b> and runs <b>retrograde</b> to the proximal pole. A missed fracture leads to <b>avascular necrosis</b> (AVN) and nonunion. AVN risk is highest at the <b>proximal pole</b>. The femoral head, <b>scaphoid proximal pole</b>, talus and humeral head are all AVN sites with a retrograde or tenuous blood supply.",
    "note": "voice: .danger; '=' and 'AVN club' slogan and em dash removed",
    "claims": [
     {
@@ -80,11 +80,11 @@
     },
     {
      "claim": "A missed fracture means avascular necrosis and nonunion.",
-     "to": "A missed fracture leads to avascular necrosis and nonunion."
+     "to": "A missed fracture leads to avascular necrosis (AVN) and nonunion."
     },
     {
      "claim": "Highest AVN risk is at the proximal pole.",
-     "to": "AVN (avascular necrosis) risk is highest at the proximal pole."
+     "to": "AVN risk is highest at the proximal pole."
     },
     {
      "claim": "The AVN sites worth memorizing are femoral head, scaphoid proximal pole, talus, humeral head.",
@@ -101,7 +101,7 @@
      "from": "The scaphoid's blood supply enters distally and runs retrograde to the proximal pole."
     },
     {
-     "claim": "A missed fracture leads to avascular necrosis and nonunion.",
+     "claim": "A missed fracture leads to avascular necrosis (AVN) and nonunion.",
      "from": "A missed fracture means avascular necrosis and nonunion."
     },
     {
@@ -113,11 +113,11 @@
      "from": "Highest AVN risk is at the proximal pole."
     },
     {
-     "claim": "The femoral head, scaphoid proximal pole, talus and humeral head are AVN sites.",
+     "claim": "The femoral head, scaphoid proximal pole, talus and humeral head are all AVN sites with a retrograde or tenuous blood supply.",
      "from": "The AVN sites worth memorizing are femoral head, scaphoid proximal pole, talus, humeral head."
     },
     {
-     "claim": "These sites have a retrograde or tenuous blood supply.",
+     "claim": "The femoral head, scaphoid proximal pole, talus and humeral head are all AVN sites with a retrograde or tenuous blood supply.",
      "from": "All of these sites have a retrograde or tenuous supply."
     }
    ]
@@ -164,7 +164,7 @@
      "from": "expansion"
     },
     {
-     "claim": "High-probability PE goes to CTA regardless of D-dimer.",
+     "claim": "The same principle applies to D-dimer: high-probability PE (pulmonary embolism) goes to CTA (computed tomography angiography) regardless of D-dimer.",
      "from": "High-probability PE goes to CTA regardless of D-dimer."
     },
     {
@@ -230,11 +230,11 @@
      "from": "Vertebral mets seed the vertebral body first via Batson's valveless venous plexus."
     },
     {
-     "claim": "Pedicle destruction produces the winking owl sign.",
+     "claim": "pedicle destruction produces the \"winking owl\" sign",
      "from": "Pedicle destruction is the winking owl sign."
     },
     {
-     "claim": "Bone-seeking primaries are Breast, Lung, Thyroid, Kidney, Prostate (BLT with a Kosher Pickle).",
+     "claim": "bone-seeking primaries: \"BLT with a Kosher Pickle\" (Breast, Lung, Thyroid, Kidney, Prostate)",
      "from": "Bone-seeking primaries are Breast, Lung, Thyroid, Kidney, Prostate (BLT with a Kosher Pickle)."
     },
     {
@@ -277,7 +277,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Review the PMH before applying the population rule.",
+     "claim": "Review the PMH (past medical history) before applying the population rule.",
      "from": "Scan the PMH before applying the population rule."
     }
    ]
@@ -286,7 +286,7 @@
    "op": "replace",
    "brief": "hippos",
    "find": "Free points, frequently reversed",
-   "with": "Hip fracture versus posterior dislocation: leg positions often reversed",
+   "with": "Hip fracture versus posterior dislocation: leg positions are often confused",
    "note": "voice: p.sub; slogan replaced with plain subtitle",
    "claims": [
     {
@@ -295,12 +295,12 @@
     },
     {
      "claim": "The positions are frequently reversed.",
-     "to": "Hip fracture versus posterior dislocation: leg positions often reversed"
+     "to": "Hip fracture versus posterior dislocation: leg positions are often confused"
     }
    ],
    "new_claims": [
     {
-     "claim": "Hip fracture and posterior dislocation leg positions are often reversed.",
+     "claim": "Hip fracture versus posterior dislocation: leg positions are often confused",
      "from": "The positions are frequently reversed."
     }
    ]
@@ -331,19 +331,19 @@
    ],
    "new_claims": [
     {
-     "claim": "Shortened, internally rotated, adducted, flexed = posterior hip dislocation.",
+     "claim": "Shortened + internally rotated + adducted + flexed = posterior hip dislocation.",
      "from": "Shortened, internally rotated, adducted, flexed = posterior hip dislocation."
     },
     {
-     "claim": "Posterior hip dislocation is the dashboard injury.",
+     "claim": "It is the dashboard injury, accounts for ~90% of hip dislocations, and puts the sciatic nerve at risk.",
      "from": "Posterior hip dislocation is the dashboard injury."
     },
     {
-     "claim": "Posterior dislocation accounts for ~90% of hip dislocations.",
+     "claim": "It is the dashboard injury, accounts for ~90% of hip dislocations, and puts the sciatic nerve at risk.",
      "from": "Posterior dislocation is ~90% of hip dislocations."
     },
     {
-     "claim": "It puts the sciatic nerve at risk.",
+     "claim": "It is the dashboard injury, accounts for ~90% of hip dislocations, and puts the sciatic nerve at risk.",
      "from": "The sciatic nerve is at risk."
     }
    ]
@@ -410,7 +410,7 @@
    "op": "replace",
    "brief": "gtps",
    "find": "<p><b>Point tenderness over the greater trochanter with a normal neurologic exam.</b> Stems plant \"burning,\" which sounds neuropathic and pulls toward meralgia paresthetica — but burning is a <b>quality descriptor</b>, while tenderness and a normal neuro exam are <b>findings</b>. GTPS is a <b>tendinopathy</b>; meralgia is a <b>neuropathy</b>.</p>\n<p><b>The location rule that organizes all hip pain:</b> <b>groin → the joint itself</b> (OA, AVN, fracture, labral tear) · <b>lateral → trochanter and its tendons</b>, or the LFCN · <b>posterior/buttock → spine, SI joint, or piriformis</b>.</p>",
-   "with": "<p><b>Point tenderness over the greater trochanter with a normal neurologic exam.</b> Pain described as \"burning\" sounds neuropathic and pulls toward meralgia paresthetica. However, burning is a <b>quality descriptor</b>, while tenderness and a normal neurologic exam are <b>findings</b>. <b>GTPS</b> (greater trochanteric pain syndrome) is a <b>tendinopathy</b>; meralgia is a <b>neuropathy</b>.</p>\n<p><b>All hip pain sorts by location:</b> <b>groin → the joint itself</b> (<b>OA</b> (osteoarthritis), <b>AVN</b> (avascular necrosis), fracture, labral tear) · <b>lateral → trochanter and its tendons</b>, or the <b>LFCN</b> (lateral femoral cutaneous nerve) · <b>posterior/buttock → spine, SI joint, or piriformis</b>.</p>",
+   "with": "<p><b>Point tenderness over the greater trochanter with a normal neurologic exam.</b> Pain described as \"burning\" sounds neuropathic and pulls toward meralgia paresthetica. However, burning is a <b>quality descriptor</b>, while tenderness and a normal neurologic exam are <b>findings</b>. <b>GTPS</b> (greater trochanteric pain syndrome) is a <b>tendinopathy</b>; meralgia is a <b>neuropathy</b>.</p>\n<p><b>All hip pain sorts by location:</b> <b>groin → the joint itself</b>: osteoarthritis (OA), avascular necrosis (AVN), fracture, labral tear · <b>lateral → trochanter and its tendons</b>, or the <b>LFCN</b> (lateral femoral cutaneous nerve) · <b>posterior/buttock → spine, SI joint, or piriformis</b> (SI, sacroiliac).</p>",
    "note": "voice: .dp; stem framing and em dash removed, rhetorical bold label reworded, acronyms expanded",
    "reworded_bold": [
     "The location rule that organizes all hip pain:"
@@ -442,19 +442,19 @@
     },
     {
      "claim": "A location rule organizes all hip pain.",
-     "to": "All hip pain sorts by location: groin → the joint itself (OA (osteoarthritis), AVN (avascular necrosis), fracture, labral tear) · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis."
+     "to": "All hip pain sorts by location: groin → the joint itself: osteoarthritis (OA), avascular necrosis (AVN), fracture, labral tear · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis (SI, sacroiliac)."
     },
     {
      "claim": "Groin pain points to the joint itself (OA, AVN, fracture, labral tear).",
-     "to": "All hip pain sorts by location: groin → the joint itself (OA (osteoarthritis), AVN (avascular necrosis), fracture, labral tear) · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis."
+     "to": "All hip pain sorts by location: groin → the joint itself: osteoarthritis (OA), avascular necrosis (AVN), fracture, labral tear · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis (SI, sacroiliac)."
     },
     {
      "claim": "Lateral pain points to the trochanter and its tendons, or the LFCN.",
-     "to": "All hip pain sorts by location: groin → the joint itself (OA (osteoarthritis), AVN (avascular necrosis), fracture, labral tear) · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis."
+     "to": "All hip pain sorts by location: groin → the joint itself: osteoarthritis (OA), avascular necrosis (AVN), fracture, labral tear · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis (SI, sacroiliac)."
     },
     {
      "claim": "Posterior/buttock pain points to the spine, SI joint, or piriformis.",
-     "to": "All hip pain sorts by location: groin → the joint itself (OA (osteoarthritis), AVN (avascular necrosis), fracture, labral tear) · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis."
+     "to": "All hip pain sorts by location: groin → the joint itself: osteoarthritis (OA), avascular necrosis (AVN), fracture, labral tear · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis (SI, sacroiliac)."
     }
    ],
    "new_claims": [
@@ -463,7 +463,7 @@
      "from": "The decision point is point tenderness over the greater trochanter with a normal neurologic exam."
     },
     {
-     "claim": "Pain described as burning sounds neuropathic and pulls toward meralgia paresthetica.",
+     "claim": "Pain described as \"burning\" sounds neuropathic and pulls toward meralgia paresthetica.",
      "from": "Burning sounds neuropathic and pulls toward meralgia paresthetica."
     },
     {
@@ -479,7 +479,7 @@
      "from": "expansion"
     },
     {
-     "claim": "GTPS is a tendinopathy; meralgia is a neuropathy.",
+     "claim": "GTPS (greater trochanteric pain syndrome) is a tendinopathy; meralgia is a neuropathy.",
      "from": "GTPS is a tendinopathy; meralgia is a neuropathy."
     },
     {
@@ -487,7 +487,7 @@
      "from": "A location rule organizes all hip pain."
     },
     {
-     "claim": "Groin pain points to the joint itself (OA, AVN, fracture, labral tear).",
+     "claim": "All hip pain sorts by location: groin → the joint itself: osteoarthritis (OA), avascular necrosis (AVN), fracture, labral tear · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis (SI, sacroiliac).",
      "from": "Groin pain points to the joint itself (OA, AVN, fracture, labral tear)."
     },
     {
@@ -499,7 +499,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Lateral pain points to the trochanter and its tendons, or the LFCN.",
+     "claim": "All hip pain sorts by location: groin → the joint itself: osteoarthritis (OA), avascular necrosis (AVN), fracture, labral tear · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis (SI, sacroiliac).",
      "from": "Lateral pain points to the trochanter and its tendons, or the LFCN."
     },
     {
@@ -507,7 +507,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Posterior/buttock pain points to the spine, SI joint, or piriformis.",
+     "claim": "All hip pain sorts by location: groin → the joint itself: osteoarthritis (OA), avascular necrosis (AVN), fracture, labral tear · lateral → trochanter and its tendons, or the LFCN (lateral femoral cutaneous nerve) · posterior/buttock → spine, SI joint, or piriformis (SI, sacroiliac).",
      "from": "Posterior/buttock pain points to the spine, SI joint, or piriformis."
     }
    ]
@@ -554,19 +554,19 @@
      "from": "expansion"
     },
     {
-     "claim": "GTPS is an overuse tendinopathy of the gluteus medius and minimus at the greater trochanter.",
+     "claim": "GTPS (greater trochanteric pain syndrome) is an overuse tendinopathy of the gluteus medius and minimus at the greater trochanter.",
      "from": "GTPS is an overuse tendinopathy of the gluteus medius and minimus at the greater trochanter."
     },
     {
-     "claim": "Trochanteric bursitis is a misnomer, since the bursa usually isn't the source.",
+     "claim": "\"Trochanteric bursitis\" is a misnomer, since the bursa usually isn't the source.",
      "from": "Trochanteric bursitis is a misnomer, since the bursa usually isn't the source."
     },
     {
-     "claim": "Risk factors are age ≥50, women > men, obesity, and lower-limb or low-back disorders.",
+     "claim": "Risk factors: age ≥50, women > men, obesity, and lower-limb or low-back disorders.",
      "from": "Risk factors are age ≥50, women > men, obesity, and lower-limb or low-back disorders."
     },
     {
-     "claim": "GTPS is a clinical diagnosis.",
+     "claim": "Clinical diagnosis; X-ray excludes hip joint disease rather than confirming GTPS.",
      "from": "GTPS is a clinical diagnosis."
     },
     {
@@ -574,7 +574,7 @@
      "from": "X-ray excludes hip joint disease rather than confirming GTPS."
     },
     {
-     "claim": "Treatment is activity modification + NSAIDs + physical therapy (abductor strengthening).",
+     "claim": "Treatment ladder: activity modification + NSAIDs + physical therapy (abductor strengthening) → corticosteroid injection if refractory.",
      "from": "First-line is activity modification + NSAIDs + physical therapy (abductor strengthening)."
     },
     {
@@ -609,11 +609,11 @@
      "from": "When pain quality suggests one mechanism and physical findings suggest another, the findings win."
     },
     {
-     "claim": "Burning and shooting are how patients describe pain.",
+     "claim": "\"Burning\" and \"shooting\" are how patients describe pain; they do not localize a lesion.",
      "from": "Burning and shooting are how patients describe pain."
     },
     {
-     "claim": "Burning and shooting do not localize a lesion.",
+     "claim": "\"Burning\" and \"shooting\" are how patients describe pain; they do not localize a lesion.",
      "from": "Burning and shooting do not localize a lesion."
     }
    ]
@@ -664,19 +664,19 @@
      "from": "Inflammatory back pain is defined by its relationship to rest and activity."
     },
     {
-     "claim": "Defining feature: age <40.",
+     "claim": "Its defining features are age <40, insidious onset >3 months, pain worse at night and with rest, and pain better with movement.",
      "from": "Features: age <40."
     },
     {
-     "claim": "Defining feature: insidious onset >3 months.",
+     "claim": "Its defining features are age <40, insidious onset >3 months, pain worse at night and with rest, and pain better with movement.",
      "from": "Features: insidious onset >3 months."
     },
     {
-     "claim": "Defining feature: pain worse at night and with rest.",
+     "claim": "Its defining features are age <40, insidious onset >3 months, pain worse at night and with rest, and pain better with movement.",
      "from": "Features: worse at night and with rest."
     },
     {
-     "claim": "Defining feature: pain better with movement.",
+     "claim": "Its defining features are age <40, insidious onset >3 months, pain worse at night and with rest, and pain better with movement.",
      "from": "Features: better with movement."
     },
     {
@@ -692,7 +692,7 @@
      "from": "expansion"
     },
     {
-     "claim": "RA instead causes synovitis.",
+     "claim": "RA (rheumatoid arthritis) instead causes synovitis.",
      "from": "This contrasts with RA's synovitis."
     }
    ]
@@ -750,7 +750,7 @@
      "from": "Malignant pain is unrelieved."
     },
     {
-     "claim": "Malignant pain comes with age >50, prior cancer, or weight loss.",
+     "claim": "Malignant pain is unrelieved, and comes with age >50, prior cancer, or weight loss.",
      "from": "Malignant pain comes with age >50, prior cancer, or weight loss."
     }
    ]
@@ -784,7 +784,7 @@
    ],
    "new_claims": [
     {
-     "claim": "All are seronegative: RF is negative.",
+     "claim": "All are seronegative: RF (rheumatoid factor) is negative.",
      "from": "All are seronegative (RF-negative)."
     },
     {
@@ -796,7 +796,7 @@
      "from": "All are HLA-B27-associated."
     },
     {
-     "claim": "They share enthesitis, dactylitis, and uveitis.",
+     "claim": "They are HLA-B27-associated and share enthesitis, dactylitis, and uveitis.",
      "from": "All share enthesitis, dactylitis, and uveitis."
     }
    ]

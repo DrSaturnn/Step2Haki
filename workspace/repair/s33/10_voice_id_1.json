@@ -50,7 +50,7 @@
      "from": "expansion"
     },
     {
-     "claim": "The CXR and symptoms distinguish latent from active TB.",
+     "claim": "No test distinguishes latent from active TB (tuberculosis); the CXR (chest X-ray) and symptoms do.",
      "from": "The CXR and symptoms distinguish latent from active TB."
     },
     {
@@ -58,7 +58,7 @@
      "from": "A positive test with a normal CXR and no symptoms is latent TB."
     },
     {
-     "claim": "Latent TB is treated with monotherapy.",
+     "claim": "A positive test with a normal CXR and no symptoms means latent TB → monotherapy.",
      "from": "Latent TB is treated with monotherapy."
     },
     {
@@ -79,16 +79,16 @@
    "op": "replace",
    "brief": "tb",
    "find": "<b>BCG-vaccinated → IGRA</b> (unaffected by BCG) · <b>anergy</b> = false-negative PPD in HIV, steroids, sarcoid · PPD is a <b>type IV hypersensitivity</b> reaction.",
-   "with": "<b>BCG-vaccinated → IGRA</b>: after <b>BCG</b> (bacille Calmette-Guérin) vaccination, use an <b>IGRA</b> (interferon-gamma release assay), which BCG does not affect · <b>anergy</b> is a false-negative <b>PPD</b> (purified protein derivative) in <b>HIV</b> (human immunodeficiency virus), steroid use or sarcoid · PPD is a <b>type IV hypersensitivity</b> reaction.",
+   "with": "<b>BCG-vaccinated → IGRA</b>: use an <b>IGRA</b> (interferon-gamma release assay), which <b>BCG</b> (bacille Calmette-Guérin) vaccination does not affect · <b>anergy</b> is a false-negative <b>PPD</b> (purified protein derivative) in <b>HIV</b> (human immunodeficiency virus), steroid use or sarcoid · PPD is a <b>type IV hypersensitivity</b> reaction.",
    "note": "voice: Test mechanics pearls; acronyms expanded",
    "claims": [
     {
      "claim": "BCG-vaccinated patients should get an IGRA.",
-     "to": "BCG-vaccinated → IGRA: after BCG (bacille Calmette-Guérin) vaccination, use an IGRA (interferon-gamma release assay), which BCG does not affect"
+     "to": "BCG-vaccinated → IGRA: use an IGRA (interferon-gamma release assay), which BCG (bacille Calmette-Guérin) vaccination does not affect"
     },
     {
      "claim": "IGRA is unaffected by BCG.",
-     "to": "BCG-vaccinated → IGRA: after BCG (bacille Calmette-Guérin) vaccination, use an IGRA (interferon-gamma release assay), which BCG does not affect"
+     "to": "BCG-vaccinated → IGRA: use an IGRA (interferon-gamma release assay), which BCG (bacille Calmette-Guérin) vaccination does not affect"
     },
     {
      "claim": "Anergy is a false-negative PPD in HIV, steroids and sarcoid.",
@@ -101,7 +101,7 @@
    ],
    "new_claims": [
     {
-     "claim": "BCG-vaccinated patients should get an IGRA.",
+     "claim": "BCG-vaccinated → IGRA: use an IGRA (interferon-gamma release assay), which BCG (bacille Calmette-Guérin) vaccination does not affect",
      "from": "BCG-vaccinated patients should get an IGRA."
     },
     {
@@ -113,11 +113,11 @@
      "from": "expansion"
     },
     {
-     "claim": "IGRA is not affected by BCG.",
+     "claim": "BCG-vaccinated → IGRA: use an IGRA (interferon-gamma release assay), which BCG (bacille Calmette-Guérin) vaccination does not affect",
      "from": "IGRA is unaffected by BCG."
     },
     {
-     "claim": "Anergy is a false-negative PPD in HIV, steroid use or sarcoid.",
+     "claim": "anergy is a false-negative PPD (purified protein derivative) in HIV (human immunodeficiency virus), steroid use or sarcoid",
      "from": "Anergy is a false-negative PPD in HIV, steroids and sarcoid."
     },
     {
@@ -152,7 +152,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Read the CSF as a 2×2.",
+     "claim": "Read the CSF (cerebrospinal fluid) as a 2×2: cell type on one axis, glucose on the other.",
      "from": "CSF interpretation reduces to a 2×2."
     },
     {
@@ -160,7 +160,7 @@
      "from": "expansion"
     },
     {
-     "claim": "The axes are cell type and glucose.",
+     "claim": "Read the CSF (cerebrospinal fluid) as a 2×2: cell type on one axis, glucose on the other.",
      "from": "The 2×2 axes are cell type and glucose."
     }
    ]
@@ -169,24 +169,24 @@
    "op": "replace",
    "brief": "meningitis",
    "find": "Encapsulated organisms need <b>opsonization</b> — hit hardest in <b>asplenia/sickle cell</b> (lost filter), <b>complement deficiency</b> (lost MAC → recurrent Neisseria; screen with <b>CH50</b>), and <b>cirrhosis</b> (lost complement synthesis) · <b>lipid A of LOS</b> → TNF/IL-1 → shock, DIC, <b>Waterhouse-Friderichsen</b> · <b>Listeria</b> escapes the phagosome with listeriolysin O and spreads via <b>ActA-driven host actin polymerization</b>; intrinsic cephalosporin resistance · <b>conjugate vaccines</b> convert T-independent polysaccharide into a T-dependent response, which is why they work under age 2.",
-   "with": "Encapsulated organisms need <b>opsonization</b>, so they hit hardest in <b>asplenia/sickle cell</b> (lost filter), <b>complement deficiency</b> and <b>cirrhosis</b> (lost complement synthesis). Complement deficiency means a lost <b>MAC</b> (membrane attack complex), which causes recurrent Neisseria infection; screen with <b>CH50</b> (total hemolytic complement) · <b>lipid A of LOS</b> (lipooligosaccharide) triggers <b>TNF</b> (tumor necrosis factor) and <b>IL-1</b> (interleukin-1) release → shock, <b>DIC</b> (disseminated intravascular coagulation), <b>Waterhouse-Friderichsen</b> · <b>Listeria</b> escapes the phagosome with listeriolysin O and spreads via <b>ActA-driven host actin polymerization</b>; it has intrinsic cephalosporin resistance · <b>conjugate vaccines</b> convert T-independent polysaccharide into a T-dependent response, which is why they work under age 2.",
+   "with": "Encapsulated organisms need <b>opsonization</b>, so they hit hardest in <b>asplenia/sickle cell</b> (lost filter), <b>cirrhosis</b> (lost complement synthesis) and <b>complement deficiency</b>. Complement deficiency means a lost <b>MAC</b> (membrane attack complex), which causes recurrent Neisseria infection; screen with <b>CH50</b> (total hemolytic complement) · <b>lipid A of LOS</b> (lipooligosaccharide) triggers <b>TNF</b> (tumor necrosis factor) and <b>IL-1</b> (interleukin-1) release → shock, <b>DIC</b> (disseminated intravascular coagulation), <b>Waterhouse-Friderichsen</b> · <b>Listeria</b> escapes the phagosome with listeriolysin O and spreads via <b>ActA-driven host actin polymerization</b>; it has intrinsic cephalosporin resistance · <b>conjugate vaccines</b> convert T-independent polysaccharide into a T-dependent response, which is why they work under age 2.",
    "note": "voice: Mechanism pearls; em dash removed, arrow chain split, acronyms expanded",
    "claims": [
     {
      "claim": "Encapsulated organisms need opsonization.",
-     "to": "Encapsulated organisms need opsonization, so they hit hardest in asplenia/sickle cell (lost filter), complement deficiency and cirrhosis (lost complement synthesis)."
+     "to": "Encapsulated organisms need opsonization, so they hit hardest in asplenia/sickle cell (lost filter), cirrhosis (lost complement synthesis) and complement deficiency."
     },
     {
      "claim": "They hit hardest in asplenia/sickle cell (lost filter).",
-     "to": "Encapsulated organisms need opsonization, so they hit hardest in asplenia/sickle cell (lost filter), complement deficiency and cirrhosis (lost complement synthesis)."
+     "to": "Encapsulated organisms need opsonization, so they hit hardest in asplenia/sickle cell (lost filter), cirrhosis (lost complement synthesis) and complement deficiency."
     },
     {
      "claim": "They hit hardest in complement deficiency.",
-     "to": "Encapsulated organisms need opsonization, so they hit hardest in asplenia/sickle cell (lost filter), complement deficiency and cirrhosis (lost complement synthesis)."
+     "to": "Encapsulated organisms need opsonization, so they hit hardest in asplenia/sickle cell (lost filter), cirrhosis (lost complement synthesis) and complement deficiency."
     },
     {
      "claim": "They hit hardest in cirrhosis (lost complement synthesis).",
-     "to": "Encapsulated organisms need opsonization, so they hit hardest in asplenia/sickle cell (lost filter), complement deficiency and cirrhosis (lost complement synthesis)."
+     "to": "Encapsulated organisms need opsonization, so they hit hardest in asplenia/sickle cell (lost filter), cirrhosis (lost complement synthesis) and complement deficiency."
     },
     {
      "claim": "Complement deficiency means lost MAC, causing recurrent Neisseria.",
@@ -227,15 +227,15 @@
      "from": "They hit hardest in asplenia/sickle cell (lost filter)."
     },
     {
-     "claim": "They hit hardest in complement deficiency.",
+     "claim": "Encapsulated organisms need opsonization, so they hit hardest in asplenia/sickle cell (lost filter), cirrhosis (lost complement synthesis) and complement deficiency.",
      "from": "They hit hardest in complement deficiency."
     },
     {
-     "claim": "They hit hardest in cirrhosis (lost complement synthesis).",
+     "claim": "Encapsulated organisms need opsonization, so they hit hardest in asplenia/sickle cell (lost filter), cirrhosis (lost complement synthesis) and complement deficiency.",
      "from": "They hit hardest in cirrhosis (lost complement synthesis)."
     },
     {
-     "claim": "Complement deficiency means a lost MAC, which causes recurrent Neisseria infection.",
+     "claim": "Complement deficiency means a lost MAC (membrane attack complex), which causes recurrent Neisseria infection; screen with CH50 (total hemolytic complement)",
      "from": "Complement deficiency means lost MAC, causing recurrent Neisseria."
     },
     {
@@ -251,7 +251,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Lipid A of LOS triggers TNF and IL-1 release, leading to shock, DIC and Waterhouse-Friderichsen.",
+     "claim": "lipid A of LOS (lipooligosaccharide) triggers TNF (tumor necrosis factor) and IL-1 (interleukin-1) release → shock, DIC (disseminated intravascular coagulation), Waterhouse-Friderichsen",
      "from": "Lipid A of LOS drives TNF/IL-1, leading to shock, DIC and Waterhouse-Friderichsen."
     },
     {
@@ -275,15 +275,15 @@
      "from": "Listeria escapes the phagosome with listeriolysin O."
     },
     {
-     "claim": "Listeria spreads via ActA-driven host actin polymerization.",
+     "claim": "Listeria escapes the phagosome with listeriolysin O and spreads via ActA-driven host actin polymerization; it has intrinsic cephalosporin resistance",
      "from": "Listeria spreads via ActA-driven host actin polymerization."
     },
     {
-     "claim": "Listeria has intrinsic cephalosporin resistance.",
+     "claim": "Listeria escapes the phagosome with listeriolysin O and spreads via ActA-driven host actin polymerization; it has intrinsic cephalosporin resistance",
      "from": "Listeria has intrinsic cephalosporin resistance."
     },
     {
-     "claim": "Conjugate vaccines convert T-independent polysaccharide into a T-dependent response, so they work under age 2.",
+     "claim": "conjugate vaccines convert T-independent polysaccharide into a T-dependent response, which is why they work under age 2.",
      "from": "Conjugate vaccines convert a T-independent polysaccharide into a T-dependent response, so they work under age 2."
     }
    ]
@@ -292,7 +292,7 @@
    "op": "replace",
    "brief": "meningitis",
    "find": "<b>CT before LP</b> only if: papilledema, focal deficit, seizure, immunocompromise, depressed consciousness, age &gt;60 &mdash; <b>an open fontanelle in an infant generally removes the requirement</b>, since it acts as a pop-off valve. <b>Never delay antibiotics</b> — draw cultures and treat. Empiric: <b>vancomycin + ceftriaxone</b> (+ ampicillin for Listeria); neonates get <b>cefotaxime, not ceftriaxone</b> (biliary sludging, bilirubin displacement). <b>Dexamethasone before or with the first antibiotic dose</b> — it blunts the cytokine burst from bacterial lysis.",
-   "with": "Get <b>CT before LP</b> (computed tomography before lumbar puncture) only if there is papilledema, focal deficit, seizure, immunocompromise, depressed consciousness or age &gt;60. However, <b>an open fontanelle in an infant generally removes the requirement</b>, since it acts as a pop-off valve. <b>Never delay antibiotics</b>; draw cultures and treat. Empiric therapy is <b>vancomycin + ceftriaxone</b> (+ ampicillin for Listeria). Neonates get <b>cefotaxime, not ceftriaxone</b> (biliary sludging, bilirubin displacement). <b>Dexamethasone before or with the first antibiotic dose</b> blunts the cytokine burst from bacterial lysis.",
+   "with": "Get <b>CT before LP</b> (computed tomography before lumbar puncture) only if there is papilledema, focal deficit, seizure, immunocompromise, depressed consciousness or age &gt;60. However, <b>an open fontanelle in an infant generally removes the requirement</b>, since it acts as a pop-off valve. <b>Never delay antibiotics</b>; draw cultures and treat. Empiric therapy is <b>vancomycin + ceftriaxone</b> (+ ampicillin for Listeria). Neonates get <b>cefotaxime, not ceftriaxone</b> (biliary sludging, bilirubin displacement). <b>Dexamethasone before or with the first antibiotic dose</b>: give it to blunt the cytokine burst from bacterial lysis.",
    "note": "voice: Sequencing danger; em dashes removed, acronyms expanded",
    "claims": [
     {
@@ -325,16 +325,16 @@
     },
     {
      "claim": "Dexamethasone is given before or with the first antibiotic dose.",
-     "to": "Dexamethasone before or with the first antibiotic dose blunts the cytokine burst from bacterial lysis."
+     "to": "Dexamethasone before or with the first antibiotic dose: give it to blunt the cytokine burst from bacterial lysis."
     },
     {
      "claim": "Dexamethasone blunts the cytokine burst from bacterial lysis.",
-     "to": "Dexamethasone before or with the first antibiotic dose blunts the cytokine burst from bacterial lysis."
+     "to": "Dexamethasone before or with the first antibiotic dose: give it to blunt the cytokine burst from bacterial lysis."
     }
    ],
    "new_claims": [
     {
-     "claim": "CT before LP only if papilledema, focal deficit, seizure, immunocompromise, depressed consciousness or age >60.",
+     "claim": "Get CT before LP (computed tomography before lumbar puncture) only if there is papilledema, focal deficit, seizure, immunocompromise, depressed consciousness or age >60.",
      "from": "CT before LP only if papilledema, focal deficit, seizure, immunocompromise, depressed consciousness, or age >60."
     },
     {
@@ -346,11 +346,11 @@
      "from": "expansion"
     },
     {
-     "claim": "An open fontanelle in an infant generally removes the requirement for CT before LP.",
+     "claim": "However, an open fontanelle in an infant generally removes the requirement, since it acts as a pop-off valve.",
      "from": "An open fontanelle in an infant generally removes the requirement for CT before LP."
     },
     {
-     "claim": "The open fontanelle acts as a pop-off valve.",
+     "claim": "However, an open fontanelle in an infant generally removes the requirement, since it acts as a pop-off valve.",
      "from": "The open fontanelle acts as a pop-off valve."
     },
     {
@@ -362,19 +362,19 @@
      "from": "Draw cultures and treat."
     },
     {
-     "claim": "Empiric therapy is vancomycin + ceftriaxone, plus ampicillin for Listeria.",
+     "claim": "Empiric therapy is vancomycin + ceftriaxone (+ ampicillin for Listeria).",
      "from": "Empiric therapy is vancomycin + ceftriaxone, plus ampicillin for Listeria."
     },
     {
-     "claim": "Neonates get cefotaxime, not ceftriaxone, because of biliary sludging and bilirubin displacement.",
+     "claim": "Neonates get cefotaxime, not ceftriaxone (biliary sludging, bilirubin displacement).",
      "from": "Neonates get cefotaxime, not ceftriaxone, because of biliary sludging and bilirubin displacement."
     },
     {
-     "claim": "Give dexamethasone before or with the first antibiotic dose.",
+     "claim": "Dexamethasone before or with the first antibiotic dose: give it to blunt the cytokine burst from bacterial lysis.",
      "from": "Dexamethasone is given before or with the first antibiotic dose."
     },
     {
-     "claim": "Dexamethasone blunts the cytokine burst from bacterial lysis.",
+     "claim": "Dexamethasone before or with the first antibiotic dose: give it to blunt the cytokine burst from bacterial lysis.",
      "from": "Dexamethasone blunts the cytokine burst from bacterial lysis."
     }
    ]
@@ -429,11 +429,11 @@
      "from": "Check hearing in every survivor."
     },
     {
-     "claim": "Meningococcus prophylaxis is rifampin, cipro or ceftriaxone.",
+     "claim": "prophylaxis for meningococcus is rifampin, cipro or ceftriaxone; for Hib (Haemophilus influenzae type b) it is rifampin",
      "from": "Meningococcus prophylaxis is rifampin, cipro, or ceftriaxone."
     },
     {
-     "claim": "Hib prophylaxis is rifampin.",
+     "claim": "prophylaxis for meningococcus is rifampin, cipro or ceftriaxone; for Hib (Haemophilus influenzae type b) it is rifampin",
      "from": "Hib prophylaxis is rifampin."
     },
     {
@@ -445,7 +445,7 @@
      "from": "Eculizumab blocks C5."
     },
     {
-     "claim": "Meningococcal vaccination is mandatory before eculizumab.",
+     "claim": "eculizumab blocks C5, so meningococcal vaccination is mandatory first.",
      "from": "Meningococcal vaccination is mandatory before eculizumab."
     }
    ]
@@ -472,7 +472,7 @@
      "from": "Seizure with Fever in a Child covers the decision to obtain the fluid."
     },
     {
-     "claim": "This brief covers interpreting the fluid.",
+     "claim": "Part I Seizure with Fever in a Child covers the decision to obtain the fluid; this brief covers interpreting it.",
      "from": "This brief covers interpreting the fluid."
     }
    ]
@@ -537,7 +537,7 @@
    ],
    "new_claims": [
     {
-     "claim": "In HIV, check the CD4 count before giving a live vaccine.",
+     "claim": "In HIV (human immunodeficiency virus), check the CD4 count before giving a live vaccine; HIV alone does not exclude every live vaccine.",
      "from": "In HIV, check the CD4 count."
     },
     {
@@ -561,7 +561,7 @@
      "from": "CD4 <200 contraindicates them."
     },
     {
-     "claim": "Never at any CD4: LAIV (use inactivated influenza), BCG, oral polio.",
+     "claim": "Never at any CD4: LAIV (live attenuated influenza vaccine; use inactivated influenza), BCG (bacille Calmette-Guérin), oral polio.",
      "from": "Never at any CD4: LAIV (use inactivated influenza), BCG, oral polio."
     },
     {
@@ -612,7 +612,7 @@
      "from": "Meningococcal ACWY with boosters every 5 years."
     },
     {
-     "claim": "This schedule is unique to HIV, asplenia and complement deficiency.",
+     "claim": "Meningococcal ACWY with boosters every 5 years, a schedule unique to HIV (human immunodeficiency virus), asplenia and complement deficiency",
      "from": "This is unique to HIV, asplenia, and complement deficiency."
     },
     {
@@ -620,7 +620,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Pneumococcal vaccine regardless of age.",
+     "claim": "pneumococcal regardless of age",
      "from": "Pneumococcal vaccine regardless of age."
     },
     {
@@ -628,7 +628,7 @@
      "from": "Hepatitis A and B unless immune."
     },
     {
-     "claim": "HPV through 26 (consider to 45).",
+     "claim": "HPV (human papillomavirus) through 26 (consider to 45)",
      "from": "HPV through 26 (consider to 45)."
     },
     {
@@ -659,7 +659,7 @@
      "from": "Rejecting a uniform option (\"yes to all four\") needs a specific disqualifying criterion you can name."
     },
     {
-     "claim": "Do not reject it because it seems too easy.",
+     "claim": "Reject a uniform option (\"yes to all four\") only for a specific disqualifying criterion you can name, not because it seems too easy.",
      "from": "A general sense that it is too easy is not enough."
     }
    ]
@@ -682,7 +682,7 @@
    ],
    "new_claims": [
     {
-     "claim": "There are three false contraindications to DTaP.",
+     "claim": "Three false contraindications to DTaP",
      "from": "There are three false contraindications."
     }
    ]
@@ -713,7 +713,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Classify each history as contraindication (never give), precaution (weigh risk vs. benefit) or neither.",
+     "claim": "Classify each history as a contraindication (never give), a precaution (weigh risk vs. benefit) or neither.",
      "from": "Separate contraindication (never give) from precaution (weigh risk vs. benefit) from neither."
     },
     {
@@ -760,7 +760,7 @@
      "from": "If you cannot name the criterion, vaccinate."
     },
     {
-     "claim": "A history that only sounds disqualifying is not a criterion.",
+     "claim": "Vaccinate unless you can name the criterion that makes the patient ineligible; a history that only sounds disqualifying is not one.",
      "from": "An ineligible-sounding history can feel disqualifying without being so."
     }
    ]
@@ -815,7 +815,7 @@
      "from": "Cervicitis is most prevalent in women under 25."
     },
     {
-     "claim": "NAAT for both organisms is sent.",
+     "claim": "NAAT (nucleic acid amplification testing) for both organisms is sent, and empiric ceftriaxone plus doxycycline is given before results return.",
      "from": "NAAT for both organisms is sent."
     },
     {
@@ -827,7 +827,7 @@
      "from": "Empiric ceftriaxone plus doxycycline is given before results return."
     },
     {
-     "claim": "The aim is to interrupt transmission and prevent PID, ectopic pregnancy and infertility.",
+     "claim": "The aim is to interrupt transmission and prevent PID (pelvic inflammatory disease), ectopic pregnancy and infertility.",
      "from": "Treatment aims to interrupt transmission and prevent PID, ectopic pregnancy, and infertility."
     },
     {
@@ -835,7 +835,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Absent CMT does not reassure.",
+     "claim": "Absent CMT (cervical motion tenderness) does not reassure.",
      "from": "The absence of cervical motion tenderness does not reassure."
     },
     {
@@ -847,7 +847,7 @@
      "from": "CMT marks ascent."
     },
     {
-     "claim": "Early or low-burden infection lacks CMT.",
+     "claim": "CMT marks ascent, and early or low-burden infection lacks it.",
      "from": "Early or low-burden infection lacks CMT."
     }
    ]
@@ -894,7 +894,7 @@
      "from": "Azithromycin + doxycycline doubles atypical coverage."
     },
     {
-     "claim": "Azithromycin + doxycycline leaves N gonorrhoeae untreated.",
+     "claim": "Azithromycin + doxycycline doubles atypical coverage and leaves N gonorrhoeae untreated; it is the classic wrong pairing",
      "from": "Azithromycin + doxycycline leaves N gonorrhoeae untreated."
     },
     {
@@ -906,7 +906,7 @@
      "from": "Gonococcus is multidrug-resistant, including to sulfonamides."
     },
     {
-     "claim": "TMP-SMX never treats an STI syndrome.",
+     "claim": "gonococcus is multidrug-resistant, including to sulfonamides, so TMP-SMX (trimethoprim-sulfamethoxazole) never treats an STI (sexually transmitted infection) syndrome",
      "from": "TMP-SMX never treats an STI syndrome."
     },
     {

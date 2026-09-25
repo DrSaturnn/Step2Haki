@@ -38,7 +38,7 @@
      "from": "These findings together indicate atypical pneumonia."
     },
     {
-     "claim": "Atypical pneumonia in a school-aged child is Mycoplasma pneumoniae.",
+     "claim": "This is atypical pneumonia, which in a school-aged child is Mycoplasma pneumoniae.",
      "from": "Atypical pneumonia in a school-aged child is Mycoplasma pneumoniae."
     }
    ]
@@ -87,7 +87,7 @@
      "from": "Pharyngitis plus an interstitial pneumonia is distinctive."
     },
     {
-     "claim": "Upper and lower respiratory tract involvement together applies in adults.",
+     "claim": "In adults, pharyngitis plus an interstitial pneumonia, meaning upper and lower respiratory tract involvement together, is distinctive.",
      "from": "In the adult version, upper and lower respiratory tract involvement together is a second discriminator."
     },
     {
@@ -130,7 +130,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Neonatal pneumonia organisms are GBS, E. coli and Listeria.",
+     "claim": "Neonate = GBS (group B streptococcus) / E. coli / Listeria",
      "from": "Neonatal pneumonia organisms are GBS, E. coli and Listeria."
     },
     {
@@ -138,7 +138,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Under 5, pneumonia is viral: RSV, parainfluenza, adenovirus, hMPV.",
+     "claim": "<5 = viruses: RSV (respiratory syncytial virus), parainfluenza, adenovirus, hMPV (human metapneumovirus)",
      "from": "Under 5, pneumonia is viral: RSV, parainfluenza, adenovirus, hMPV."
     },
     {
@@ -150,11 +150,11 @@
      "from": "expansion"
     },
     {
-     "claim": "At 5 or older, pneumonia is Mycoplasma, Chlamydophila, S. pneumoniae.",
+     "claim": "≥5 = Mycoplasma, Chlamydophila, S. pneumoniae",
      "from": "At 5 or older, pneumonia is Mycoplasma, Chlamydophila, S. pneumoniae."
     },
     {
-     "claim": "At 1–3 months, Chlamydia trachomatis gives staccato cough, afebrile course, conjunctivitis, eosinophilia.",
+     "claim": "1–3 months = Chlamydia trachomatis: staccato cough, afebrile, conjunctivitis, eosinophilia.",
      "from": "At 1–3 months, Chlamydia trachomatis gives staccato cough, afebrile course, conjunctivitis, eosinophilia."
     }
    ]
@@ -173,7 +173,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Mycoplasma causes erythema multiforme / MIRM and is the leading infectious cause of EM after HSV.",
+     "claim": "erythema multiforme / MIRM (Mycoplasma pneumoniae-induced rash and mucositis): the leading infectious cause of erythema multiforme after HSV (herpes simplex virus)",
      "from": "Mycoplasma causes erythema multiforme / MIRM and is the leading infectious cause of EM after HSV."
     },
     {
@@ -208,11 +208,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Part I Drug-Induced Immune Hemolysis covers the cold-agglutinin hemolysis Mycoplasma causes.",
+     "claim": "Part I Drug-Induced Immune Hemolysis covers the cold-agglutinin hemolysis Mycoplasma causes and the direct antiglobulin pattern that identifies it.",
      "from": "Part I Drug-Induced Immune Hemolysis carries the cold-agglutinin hemolysis this organism causes."
     },
     {
-     "claim": "It covers the direct antiglobulin pattern that identifies the hemolysis.",
+     "claim": "Part I Drug-Induced Immune Hemolysis covers the cold-agglutinin hemolysis Mycoplasma causes and the direct antiglobulin pattern that identifies it.",
      "from": "That brief carries the direct antiglobulin pattern that names the hemolysis."
     }
    ]
@@ -252,7 +252,7 @@
    "op": "replace",
    "brief": "uri",
    "find": "<p><b>Purulent or colored discharge does not mean bacterial.</b> Green comes from myeloperoxidase in neutrophils recruited by any inflammation, viral included. Afebrile + well-appearing + 2 days + <b>clear mobile TMs</b> + no exudate + clear lungs → viral URI → <b>supportive care</b>.</p>\n<p>The side comes before the color. <b>Unilateral</b>, foul-smelling, purulent discharge in a <b>well, afebrile</b> toddler is a <b>nasal foreign body</b>: the other naris is normal and nothing is systemic. Bacterial sinusitis is <b>bilateral</b>, usually brings <b>fever and cough</b>, and still has to meet a time or severity door below. Clear bilateral discharge with pale, boggy turbinates is allergic; bilateral obstruction with mouth breathing is adenoidal.</p>",
-   "with": "<p><b>Purulent or colored discharge does not mean bacterial.</b> The green color comes from myeloperoxidase in neutrophils recruited by any inflammation, including viral inflammation. An afebrile, well-appearing child at day 2 with <b>clear mobile TMs</b> (tympanic membranes), no exudate and clear lungs has a viral <b>URI</b> (upper respiratory infection). Treat it with <b>supportive care</b>.</p>\n<p>Assess the side of the discharge before its color. <b>Unilateral</b>, foul-smelling, purulent discharge in a <b>well, afebrile</b> toddler is a <b>nasal foreign body</b>. The other naris is normal, and there are no systemic signs. Bacterial sinusitis is <b>bilateral</b> and usually brings <b>fever and cough</b>. It still has to meet a time or severity door below. Clear bilateral discharge with pale, boggy turbinates is allergic. Bilateral obstruction with mouth breathing is adenoidal.</p>",
+   "with": "<p><b>Purulent or colored discharge does not mean bacterial.</b> The green color comes from myeloperoxidase in neutrophils recruited by any inflammation, including viral inflammation. An afebrile, well-appearing child with 2 days of symptoms, <b>clear mobile TMs</b> (tympanic membranes), no exudate and clear lungs has a viral <b>URI</b> (upper respiratory infection). Treat it with <b>supportive care</b>.</p>\n<p>Assess the side of the discharge before its color. <b>Unilateral</b>, foul-smelling, purulent discharge in a <b>well, afebrile</b> toddler is a <b>nasal foreign body</b>. The other naris is normal, and there are no systemic signs. Bacterial sinusitis is <b>bilateral</b> and usually brings <b>fever and cough</b>. It still has to meet a time or severity door below. Clear bilateral discharge with pale, boggy turbinates is allergic. Bilateral obstruction with mouth breathing is adenoidal.</p>",
    "note": ".dp: split arrow chain, acronyms expanded",
    "claims": [
     {
@@ -265,7 +265,7 @@
     },
     {
      "claim": "Afebrile, well-appearing, 2 days, clear mobile TMs, no exudate and clear lungs indicate a viral URI.",
-     "to": "An afebrile, well-appearing child at day 2 with clear mobile TMs (tympanic membranes), no exudate and clear lungs has a viral URI (upper respiratory infection)."
+     "to": "An afebrile, well-appearing child with 2 days of symptoms, clear mobile TMs (tympanic membranes), no exudate and clear lungs has a viral URI (upper respiratory infection)."
     },
     {
      "claim": "A viral URI gets supportive care.",
@@ -310,7 +310,7 @@
      "from": "Green comes from myeloperoxidase in neutrophils recruited by any inflammation, viral included."
     },
     {
-     "claim": "An afebrile, well-appearing child at day 2 with clear mobile TMs (tympanic membranes), no exudate and clear lungs has a viral URI (upper respiratory infection).",
+     "claim": "An afebrile, well-appearing child with 2 days of symptoms, clear mobile TMs (tympanic membranes), no exudate and clear lungs has a viral URI (upper respiratory infection).",
      "from": "Afebrile, well-appearing, 2 days, clear mobile TMs, no exudate and clear lungs indicate a viral URI."
     },
     {
@@ -424,23 +424,23 @@
      "from": "NBME tests the NAEPP/EPR-3 severity ladder."
     },
     {
-     "claim": "Intermittent is ≤2 days/wk symptoms, ≤2 nights/mo, normal FEV₁ and no activity limits.",
+     "claim": "Intermittent asthma means symptoms ≤2 days/wk, ≤2 nights/mo, normal FEV₁ (forced expiratory volume in 1 second) and no activity limits.",
      "from": "Intermittent is ≤2 days/wk symptoms, ≤2 nights/mo, normal FEV₁ and no activity limits."
     },
     {
-     "claim": "Intermittent gets SABA PRN alone.",
+     "claim": "Treat it with SABA PRN alone (short-acting beta-agonist, as needed).",
      "from": "Intermittent gets SABA PRN alone."
     },
     {
-     "claim": "Mild persistent adds low-dose ICS.",
+     "claim": "Mild persistent → add low-dose ICS (inhaled corticosteroid).",
      "from": "Mild persistent adds low-dose ICS."
     },
     {
-     "claim": "Moderate gets low-dose ICS+LABA or medium ICS.",
+     "claim": "Moderate → low-dose ICS+LABA (long-acting beta-agonist) or medium ICS.",
      "from": "Moderate gets low-dose ICS+LABA or medium ICS."
     },
     {
-     "claim": "Severe gets high-dose ICS+LABA.",
+     "claim": "Severe → high-dose ICS+LABA.",
      "from": "Severe gets high-dose ICS+LABA."
     },
     {
@@ -469,7 +469,7 @@
    "op": "replace",
    "brief": "asthma",
    "find": "<b>GINA now states SABA monotherapy is not supported at any step, any severity, any age</b> — even intermittent asthma gets ICS-containing therapy (as-needed ICS-formoterol, or ICS-SABA combination reliever). Rationale: intermittent symptoms do not mean intermittent inflammation. <b>On the exam, play NAEPP; in clinic, GINA.</b> The tell that a question wants NAEPP is an answer ladder running \"nothing extra / montelukast / low-dose ICS / ICS+LABA.\"",
-   "with": "<b>GINA now states SABA monotherapy is not supported at any step, any severity, any age</b> (GINA, Global Initiative for Asthma; SABA, short-acting beta-agonist). Even intermittent asthma gets therapy containing an <b>ICS</b> (inhaled corticosteroid): as-needed ICS-formoterol, or an ICS-SABA combination reliever. This is because intermittent symptoms do not mean intermittent inflammation. Use <b>NAEPP</b> (National Asthma Education and Prevention Program) on the exam and GINA in clinic. An answer ladder running \"nothing extra / montelukast / low-dose ICS / ICS+<b>LABA</b> (long-acting beta-agonist)\" signals that the question is keyed to NAEPP.",
+   "with": "<b>GINA now states SABA monotherapy is not supported at any step, any severity, any age</b> (GINA, Global Initiative for Asthma; SABA, short-acting beta-agonist). Even intermittent asthma gets therapy containing an <b>ICS</b> (inhaled corticosteroid): as-needed ICS-formoterol, or an ICS-SABA combination reliever. This is because intermittent symptoms do not mean intermittent inflammation. Use <b>NAEPP</b> (National Asthma Education and Prevention Program) on the exam and GINA in clinic. An answer ladder running \"nothing extra / montelukast / low-dose ICS / ICS+LABA\" (<b>LABA</b>, long-acting beta-agonist) signals that the question is keyed to NAEPP.",
    "note": ".danger: slogan bold reworded, em dash removed, acronyms expanded",
    "reworded_bold": [
     "On the exam, play NAEPP; in clinic, GINA."
@@ -493,7 +493,7 @@
     },
     {
      "claim": "An answer ladder running nothing extra / montelukast / low-dose ICS / ICS+LABA signals that a question wants NAEPP.",
-     "to": "An answer ladder running \"nothing extra / montelukast / low-dose ICS / ICS+LABA (long-acting beta-agonist)\" signals that the question is keyed to NAEPP."
+     "to": "An answer ladder running \"nothing extra / montelukast / low-dose ICS / ICS+LABA\" (LABA, long-acting beta-agonist) signals that the question is keyed to NAEPP."
     }
    ],
    "new_claims": [
@@ -502,19 +502,19 @@
      "from": "GINA now states SABA monotherapy is not supported at any step, any severity, any age."
     },
     {
-     "claim": "Even intermittent asthma gets ICS-containing therapy: as-needed ICS-formoterol, or ICS-SABA combination reliever.",
+     "claim": "Even intermittent asthma gets therapy containing an ICS (inhaled corticosteroid): as-needed ICS-formoterol, or an ICS-SABA combination reliever.",
      "from": "Even intermittent asthma gets ICS-containing therapy: as-needed ICS-formoterol, or ICS-SABA combination reliever."
     },
     {
-     "claim": "The rationale is that intermittent symptoms do not mean intermittent inflammation.",
+     "claim": "This is because intermittent symptoms do not mean intermittent inflammation.",
      "from": "The rationale is that intermittent symptoms do not mean intermittent inflammation."
     },
     {
-     "claim": "On the exam use NAEPP; in clinic use GINA.",
+     "claim": "Use NAEPP (National Asthma Education and Prevention Program) on the exam and GINA in clinic.",
      "from": "On the exam use NAEPP; in clinic use GINA."
     },
     {
-     "claim": "An answer ladder running nothing extra / montelukast / low-dose ICS / ICS+LABA signals that a question wants NAEPP.",
+     "claim": "An answer ladder running \"nothing extra / montelukast / low-dose ICS / ICS+LABA\" (LABA, long-acting beta-agonist) signals that the question is keyed to NAEPP.",
      "from": "An answer ladder running nothing extra / montelukast / low-dose ICS / ICS+LABA signals that a question wants NAEPP."
     },
     {
@@ -662,7 +662,7 @@
      "from": "The preterm brainstem has not yet learned to keep breathing, so the infant simply stops."
     },
     {
-     "claim": "It is a central pause.",
+     "claim": "the infant stops breathing: a central pause",
      "from": "It is a central pause."
     }
    ]
@@ -684,7 +684,7 @@
    ],
    "new_claims": [
     {
-     "claim": "The key feature is that the infant is well between episodes.",
+     "claim": "Key feature — the infant is well between episodes",
      "from": "The key sign is that the infant is well between episodes."
     }
    ]
@@ -722,7 +722,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Intraventricular hemorrhage gives lethargy and a tense fontanelle.",
+     "claim": "intraventricular hemorrhage gives lethargy, a tense fontanelle",
      "from": "IVH gives lethargy and a tense fontanelle."
     },
     {
@@ -749,11 +749,11 @@
    ],
    "new_claims": [
     {
-     "claim": "BPD is a lung disease defined by oxygen need at 28 days.",
+     "claim": "bronchopulmonary dysplasia, a lung disease defined by oxygen need at 28 days",
      "from": "BPD is a lung disease defined by oxygen need at 28 days."
     },
     {
-     "claim": "Dexamethasone and albuterol are used for BPD, not for apnea.",
+     "claim": "dexamethasone and albuterol are used for it, not for apnea",
      "from": "Dexamethasone and albuterol belong to BPD, not to apnea."
     },
     {
@@ -776,7 +776,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Add CPAP or high-flow nasal cannula if spells continue.",
+     "claim": "adding CPAP or high-flow nasal cannula (CPAP, continuous positive airway pressure) if spells continue",
      "from": "Add CPAP or high-flow nasal cannula if spells continue."
     },
     {
@@ -823,7 +823,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Caffeine (for apnea of prematurity) and vitamin A each reduce BPD incidence.",
+     "claim": "Caffeine (for apnea of prematurity) and vitamin A each reduce BPD (bronchopulmonary dysplasia) incidence",
      "from": "Caffeine (for apnea of prematurity) and vitamin A each reduce BPD incidence."
     },
     {
@@ -839,11 +839,11 @@
      "from": "Alveoli continue to form over months."
     },
     {
-     "claim": "Complications: pulmonary HTN, systemic HTN, recurrent respiratory infections, neurodevelopmental delay.",
+     "claim": "complications: pulmonary HTN (hypertension), systemic HTN, recurrent respiratory infections, neurodevelopmental delay",
      "from": "Complications: pulmonary HTN, systemic HTN, recurrent respiratory infections, neurodevelopmental delay."
     },
     {
-     "claim": "AAP RSV prophylaxis update: palivizumab discontinued end of 2025; nirsevimab is standard.",
+     "claim": "RSV (respiratory syncytial virus) prophylaxis update from the AAP (American Academy of Pediatrics): palivizumab discontinued end of 2025; nirsevimab is standard.",
      "from": "AAP RSV prophylaxis update: palivizumab discontinued end of 2025; nirsevimab is standard."
     },
     {
@@ -902,7 +902,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Part I Infant Stool Complaints covers the well infant with bloody stool.",
+     "claim": "Infant Stool Complaints: Dyschezia, FPIAP & Secondary Lactase Deficiency covers the well infant with bloody stool; the necrotizing enterocolitis item here covers the ill preterm infant.",
      "from": "Part I Infant Stool Complaints owns the well-infant bloody stool."
     },
     {
@@ -965,7 +965,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Prematurity complications are timed: birth = RDS.",
+     "claim": "Prematurity complications follow a timeline: birth = RDS (respiratory distress syndrome)",
      "from": "Prematurity complications are timed: birth = RDS."
     },
     {
@@ -1024,11 +1024,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Enteral feeds introduced today suggests refeeding syndrome.",
+     "claim": "Refeeding syndrome: \"enteral feeds introduced today\" suggests it, but appropriate weight gain on TPN (total parenteral nutrition) excludes prior malnutrition.",
      "from": "Enteral feeds introduced today baits refeeding syndrome."
     },
     {
-     "claim": "Appropriate weight gain on TPN excludes prior malnutrition.",
+     "claim": "Refeeding syndrome: \"enteral feeds introduced today\" suggests it, but appropriate weight gain on TPN (total parenteral nutrition) excludes prior malnutrition.",
      "from": "Appropriate weight gain on TPN excludes prior malnutrition."
     },
     {
@@ -1055,11 +1055,11 @@
    ],
    "new_claims": [
     {
-     "claim": "PIE is real preterm ventilator pathology.",
+     "claim": "PIE (pulmonary interstitial emphysema): real preterm ventilator pathology, but it occurs in the first days, weeks outside this presentation.",
      "from": "PIE is real preemie ventilator pathology."
     },
     {
-     "claim": "PIE occurs in the first days, weeks outside this presentation.",
+     "claim": "PIE (pulmonary interstitial emphysema): real preterm ventilator pathology, but it occurs in the first days, weeks outside this presentation.",
      "from": "PIE is offered weeks outside its first-days window."
     },
     {
@@ -1188,7 +1188,7 @@
      "from": "Maternal diabetes raises the risk of transient tachypnea and simultaneously delays surfactant maturation."
     },
     {
-     "claim": "An infant of a diabetic mother can develop respiratory distress syndrome at a gestational age that would otherwise be safe.",
+     "claim": "An infant of a diabetic mother can therefore develop respiratory distress syndrome at a gestational age that would otherwise be safe.",
      "from": "An infant of a diabetic mother can develop respiratory distress syndrome at a gestational age that would otherwise be safe."
     }
    ]

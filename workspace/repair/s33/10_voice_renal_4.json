@@ -57,11 +57,11 @@
      "from": "Two classification calls come first."
     },
     {
-     "claim": "The enuresis is primary (never had a dry night).",
+     "claim": "It is primary (\"never had a dry night\") and monosymptomatic (daytime-trained, no daytime symptoms).",
      "from": "The enuresis is primary (never had a dry night)."
     },
     {
-     "claim": "The enuresis is monosymptomatic (daytime-trained, no daytime symptoms).",
+     "claim": "It is primary (\"never had a dry night\") and monosymptomatic (daytime-trained, no daytime symptoms).",
      "from": "The enuresis is monosymptomatic (daytime-trained, no daytime symptoms)."
     },
     {
@@ -69,7 +69,7 @@
      "from": "expansion"
     },
     {
-     "claim": "With a normal exam, normal UA and normal glucose, it is maturational.",
+     "claim": "With a normal exam, normal UA (urinalysis) and normal glucose, it is maturational.",
      "from": "With a normal exam, normal UA and normal glucose, it is maturational."
     },
     {
@@ -143,19 +143,19 @@
    ],
    "new_claims": [
     {
-     "claim": "Age ≥5 is needed to diagnose enuresis.",
+     "claim": "Diagnostic gates: age ≥5 to diagnose · 6 months of prior dryness defines secondary · daytime symptoms define nonmonosymptomatic.",
      "from": "Age ≥5 is needed to diagnose enuresis."
     },
     {
-     "claim": "6 months of prior dryness defines secondary enuresis.",
+     "claim": "Diagnostic gates: age ≥5 to diagnose · 6 months of prior dryness defines secondary · daytime symptoms define nonmonosymptomatic.",
      "from": "6 months of prior dryness defines secondary enuresis."
     },
     {
-     "claim": "Daytime symptoms define nonmonosymptomatic enuresis.",
+     "claim": "Diagnostic gates: age ≥5 to diagnose · 6 months of prior dryness defines secondary · daytime symptoms define nonmonosymptomatic.",
      "from": "Daytime symptoms define nonmonosymptomatic enuresis."
     },
     {
-     "claim": "The escalation gate is 3–6 months of failed tier 1.",
+     "claim": "Escalation gate: 3–6 months of failed tier 1.",
      "from": "The escalation gate is 3–6 months of failed tier 1."
     }
    ]
@@ -210,11 +210,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Daytime symptoms lead to the nonmonosymptomatic pathway (diary, uroflow).",
+     "claim": "Daytime symptoms → nonmonosymptomatic pathway (diary, uroflow; treat constipation, often curative)",
      "from": "Daytime symptoms lead to the nonmonosymptomatic pathway (diary, uroflow)."
     },
     {
-     "claim": "Treating constipation is often curative.",
+     "claim": "Daytime symptoms → nonmonosymptomatic pathway (diary, uroflow; treat constipation, often curative)",
      "from": "Treating constipation is often curative."
     },
     {
@@ -230,19 +230,19 @@
      "from": "expansion"
     },
     {
-     "claim": "Recurrent UTIs lead to renal/bladder US ± VCUG.",
+     "claim": "recurrent UTIs (urinary tract infections) → renal/bladder US (ultrasound) ± VCUG (voiding cystourethrogram)",
      "from": "Recurrent UTIs lead to renal/bladder US ± VCUG."
     },
     {
-     "claim": "Weak stream or dribbling in a boy points to posterior urethral valves.",
+     "claim": "weak stream or dribbling in a boy → posterior urethral valves",
      "from": "Weak stream or dribbling in a boy points to posterior urethral valves."
     },
     {
-     "claim": "Sacral dimple, tuft, abnormal gait point to spinal dysraphism.",
+     "claim": "sacral dimple, tuft, abnormal gait → spinal dysraphism; obtain MRI (magnetic resonance imaging)",
      "from": "Sacral dimple, tuft, abnormal gait point to spinal dysraphism."
     },
     {
-     "claim": "Obtain MRI for spinal dysraphism.",
+     "claim": "sacral dimple, tuft, abnormal gait → spinal dysraphism; obtain MRI (magnetic resonance imaging)",
      "from": "Spinal dysraphism needs MRI."
     },
     {
@@ -258,15 +258,15 @@
      "from": "expansion"
     },
     {
-     "claim": "Polyuria + polydipsia point to DM or DI.",
+     "claim": "polyuria + polydipsia → DM (diabetes mellitus) or DI (diabetes insipidus)",
      "from": "Polyuria + polydipsia point to DM/DI."
     },
     {
-     "claim": "Growth failure or hypertension point to renal disease.",
+     "claim": "growth failure or hypertension → renal disease",
      "from": "Growth failure or hypertension point to renal disease."
     },
     {
-     "claim": "New onset after a stressor calls for screening for abuse.",
+     "claim": "new onset after a stressor → screen for abuse.",
      "from": "New onset after a stressor calls for screening for abuse."
     }
    ]
@@ -320,15 +320,15 @@
    ],
    "new_claims": [
     {
-     "claim": "Desmopressin skips a tier.",
+     "claim": "Desmopressin: skipped tier; it is the correct tier-2 drug, but zero months of tier 1 have been tried.",
      "from": "Desmopressin skips a tier."
     },
     {
-     "claim": "Desmopressin is the correct tier-2 drug but zero months of tier 1 have been tried.",
+     "claim": "Desmopressin: skipped tier; it is the correct tier-2 drug, but zero months of tier 1 have been tried.",
      "from": "Desmopressin is the correct tier-2 drug but zero months of tier 1 have passed."
     },
     {
-     "claim": "Fluid restriction after 2 pm is the wrong parameter; the intervention is real but the hour is wrong.",
+     "claim": "Fluid restriction after 2 pm: wrong parameter; the intervention is real but the hour is wrong.",
      "from": "Fluid restriction after 2 pm is the wrong parameter: real intervention, wrong hour."
     },
     {
@@ -344,7 +344,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Renal US has no indication.",
+     "claim": "Renal US (ultrasound): no indication.",
      "from": "Renal US has no real indication."
     },
     {
@@ -352,11 +352,11 @@
      "from": "expansion"
     },
     {
-     "claim": "Urine culture is redundant workup because the UA is already normal.",
+     "claim": "Urine culture: redundant workup; the UA (urinalysis) is already normal.",
      "from": "Urine culture is redundant workup because the UA is already normal."
     },
     {
-     "claim": "Three siblings dry by age 3 is a parental comparison meant to mislead.",
+     "claim": "Decoy: \"three siblings dry by age 3\" is a parental comparison meant to mislead.",
      "from": "Three siblings dry by age 3 is parental-comparison bait."
     },
     {
@@ -423,15 +423,15 @@
      "from": "The alarm works by conditioning."
     },
     {
-     "claim": "So the alarm's cure survives discontinuation; desmopressin's does not.",
+     "claim": "The alarm works by conditioning, so its cure survives discontinuation; desmopressin's does not.",
      "from": "That is why the alarm's cure survives discontinuation and desmopressin's does not."
     },
     {
-     "claim": "Imipramine kills in overdose via Na⁺-channel blockade causing wide-QRS arrhythmias.",
+     "claim": "Imipramine kills in overdose via Na⁺-channel blockade → wide-QRS arrhythmias (treat with bicarbonate).",
      "from": "Imipramine kills in overdose via Na⁺-channel blockade causing wide-QRS arrhythmias."
     },
     {
-     "claim": "Imipramine overdose is treated with bicarbonate.",
+     "claim": "Imipramine kills in overdose via Na⁺-channel blockade → wide-QRS arrhythmias (treat with bicarbonate).",
      "from": "Imipramine overdose is treated with bicarbonate."
     },
     {
@@ -474,11 +474,11 @@
      "from": "Part I Nocturnal Enuresis is the secondary case."
     },
     {
-     "claim": "Its case is dry ×1 year, now wetting, managed with urinalysis.",
+     "claim": "Part I Nocturnal Enuresis covers secondary enuresis: dry ×1 year, now wetting → urinalysis.",
      "from": "Its case is dry ×1 year, now wetting, managed with urinalysis."
     },
     {
-     "claim": "Ask: ever dry for 6 months?",
+     "claim": "Ask: \"Ever dry for 6 months?\"",
      "from": "The discriminator is: ever dry for 6 months?"
     }
    ]
@@ -619,7 +619,7 @@
      "from": "The disease is self-limited, so plasmapheresis has no role."
     },
     {
-     "claim": "Use an ACE inhibitor with caution because it can raise potassium in AKI.",
+     "claim": "Use an ACE (angiotensin-converting enzyme) inhibitor with caution, because it can raise potassium in AKI (acute kidney injury).",
      "from": "An ACE inhibitor is used with caution because it can raise potassium in AKI."
     },
     {
@@ -650,7 +650,7 @@
    ],
    "new_claims": [
     {
-     "claim": "ACE inhibitors are used only with caution in AKI because of hyperkalemia.",
+     "claim": "ACE (angiotensin-converting enzyme) inhibitors only with caution in AKI (acute kidney injury) because of hyperkalemia",
      "from": "ACE inhibitors are used only with caution in AKI because of hyperkalemia."
     },
     {
@@ -693,7 +693,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Nephritis days after a URI is IgA nephropathy.",
+     "claim": "Nephritis days after a URI (upper respiratory infection) is IgA nephropathy; nephritis weeks after pharyngitis or impetigo is PSGN (poststreptococcal glomerulonephritis)",
      "from": "Days after a URI is IgA nephropathy."
     },
     {
@@ -713,7 +713,7 @@
      "from": "A C3 that has not recovered by 8 weeks is the trigger for biopsy."
     },
     {
-     "claim": "The biopsy looks for MPGN or lupus.",
+     "claim": "A C3 that has not recovered by 8 weeks triggers a biopsy to look for MPGN (membranoproliferative glomerulonephritis) or lupus",
      "from": "The biopsy looks for MPGN or lupus."
     },
     {
@@ -764,7 +764,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Nephrotic Syndrome in a Child covers the contrasting picture: protein without red cells, normal pressure and creatinine.",
+     "claim": "Part I Nephrotic Syndrome in a Child covers the contrasting picture: protein without red cells, with normal pressure and creatinine.",
      "from": "Nephrotic Syndrome in a Child is the mirror: protein without red cells, normal pressure and creatinine."
     },
     {
@@ -827,7 +827,7 @@
    ],
    "new_claims": [
     {
-     "claim": "In a child with AKI, decide whether the kidney needs volume given or removed before choosing a drug.",
+     "claim": "In a child with AKI (acute kidney injury), decide whether the kidney needs volume given or volume removed before choosing a drug.",
      "from": "In a child with AKI, decide whether the kidney needs volume given or removed before choosing a drug."
     },
     {
@@ -862,7 +862,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Plasmapheresis treats antibody-mediated anti-GBM disease.",
+     "claim": "Plasmapheresis treats antibody-mediated anti-GBM (glomerular basement membrane) disease; PSGN (poststreptococcal glomerulonephritis) is immune-complex and self-limited.",
      "from": "Plasmapheresis treats antibody-mediated anti-GBM disease."
     },
     {
@@ -870,7 +870,7 @@
      "from": "expansion"
     },
     {
-     "claim": "PSGN is immune-complex and self-limited.",
+     "claim": "Plasmapheresis treats antibody-mediated anti-GBM (glomerular basement membrane) disease; PSGN (poststreptococcal glomerulonephritis) is immune-complex and self-limited.",
      "from": "PSGN is immune-complex and self-limited."
     },
     {
@@ -956,7 +956,7 @@
      "from": "The hypertension fits Wilms tumor."
     },
     {
-     "claim": "The hypertension comes from renin secretion or compression of the renal vessels.",
+     "claim": "The hypertension fits Wilms tumor and comes from renin secretion or compression of the renal vessels.",
      "from": "The hypertension comes from renin secretion or compression of the renal vessels."
     },
     {
@@ -964,23 +964,23 @@
      "from": "The nearest mimic is neuroblastoma."
     },
     {
-     "claim": "Neuroblastoma also causes hypertension, through catecholamines.",
+     "claim": "Neuroblastoma is the nearest mimic and also causes hypertension, through catecholamines.",
      "from": "Neuroblastoma also causes hypertension, through catecholamines."
     },
     {
-     "claim": "Neuroblastoma arises from neural crest in the adrenal or sympathetic chain.",
+     "claim": "It arises from neural crest in the adrenal or sympathetic chain and displaces the kidney rather than growing inside it.",
      "from": "Neuroblastoma arises from neural crest in the adrenal or sympathetic chain."
     },
     {
-     "claim": "Neuroblastoma displaces the kidney rather than growing inside it.",
+     "claim": "It arises from neural crest in the adrenal or sympathetic chain and displaces the kidney rather than growing inside it.",
      "from": "Neuroblastoma displaces the kidney rather than growing inside it."
     },
     {
-     "claim": "Neuroblastoma usually presents before age 2.",
+     "claim": "It usually presents before age 2 and may cross the midline.",
      "from": "Neuroblastoma usually presents before age 2."
     },
     {
-     "claim": "Neuroblastoma may cross the midline.",
+     "claim": "It usually presents before age 2 and may cross the midline.",
      "from": "Neuroblastoma may cross the midline."
     },
     {
@@ -988,7 +988,7 @@
      "from": "Pheochromocytoma is also adrenal."
     },
     {
-     "claim": "Pheochromocytoma presents with episodes of headache, sweating and palpitations.",
+     "claim": "Pheochromocytoma is also adrenal and presents with episodes of headache, sweating and palpitations.",
      "from": "Pheochromocytoma announces itself with episodes of headache, sweating and palpitations."
     }
    ]
@@ -1094,7 +1094,7 @@
      "from": "Hypertension does not separate the two tumors."
     },
     {
-     "claim": "Wilms raises renin; neuroblastoma releases catecholamines.",
+     "claim": "Hypertension does not separate the two tumors: Wilms raises renin, neuroblastoma releases catecholamines",
      "from": "Wilms raises renin; neuroblastoma releases catecholamines."
     },
     {
@@ -1145,7 +1145,7 @@
      "from": "Posterior Urethral Valves and Potter Sequence owns the neonatal flank mass."
     },
     {
-     "claim": "In the neonatal flank mass, hydronephrosis and multicystic dysplastic kidney come first.",
+     "claim": "Part II Posterior Urethral Valves and Potter Sequence covers the neonatal flank mass, where hydronephrosis and multicystic dysplastic kidney come first.",
      "from": "In the neonatal flank mass, hydronephrosis and multicystic dysplastic kidney come first."
     },
     {
@@ -1180,7 +1180,7 @@
    ],
    "new_claims": [
     {
-     "claim": "For a solid mass in a child, name the organ of origin before naming the tumor.",
+     "claim": "For a solid mass in a child, name the organ it arises from before naming the tumor, then use age to decide among the rest.",
      "from": "For a solid mass in a child, name the organ of origin before naming the tumor."
     },
     {
@@ -1316,7 +1316,7 @@
      "from": "Nephrotic Syndrome in a Child owns the lesion: minimal change disease against membranous and FSGS."
     },
     {
-     "claim": "Nephrotic Syndrome in a Child also covers starting steroids without a biopsy.",
+     "claim": "It also covers starting steroids without a biopsy.",
      "from": "Nephrotic Syndrome in a Child owns starting steroids without a biopsy."
     },
     {
@@ -1324,7 +1324,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Acute Nephritic Syndrome in a Child covers PSGN and its C3 clock.",
+     "claim": "Part II Acute Nephritic Syndrome in a Child covers PSGN (poststreptococcal glomerulonephritis) and its C3 clock.",
      "from": "Acute Nephritic Syndrome in a Child owns PSGN and its C3 clock."
     },
     {
@@ -1375,11 +1375,11 @@
    ],
    "new_claims": [
     {
-     "claim": "For puffy eyes, decide first whether the swelling belongs to the eye or to the whole child.",
+     "claim": "For puffy eyes in a child, decide first whether the swelling belongs to the eye or to the whole child.",
      "from": "For puffy eyes, decide first whether the swelling belongs to the eye or to the whole child."
     },
     {
-     "claim": "If generalized, the urinalysis sorts it.",
+     "claim": "If it is generalized, the urinalysis sorts it: protein alone means nephrotic syndrome, and blood with high blood pressure means nephritis.",
      "from": "If generalized, the urinalysis sorts it."
     },
     {

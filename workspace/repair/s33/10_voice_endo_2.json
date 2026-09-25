@@ -3,9 +3,9 @@
   {
    "op": "replace",
    "brief": "preg-thyroid",
-   "find": "Estrogen raises <b>thyroxine-binding globulin</b>, and β-hCG (which shares an alpha subunit with TSH) stimulates the TSH receptor — so a normal pregnancy makes more thyroxine on its own. A patient with <b>pre-existing hypothyroidism cannot up-regulate</b>, so the answer is proactive: <b>increase levothyroxine ~30% as soon as pregnancy is detected</b>, even with a currently normal TSH. Waiting for the TSH to rise is the tested wrong move.",
-   "with": "Estrogen raises <b>thyroxine-binding globulin</b>. <b>β-hCG</b> (beta human chorionic gonadotropin) shares an alpha subunit with <b>TSH</b> (thyroid-stimulating hormone) and stimulates the TSH receptor. A normal pregnancy therefore makes more thyroxine on its own. A patient with <b>pre-existing hypothyroidism cannot up-regulate</b>, so <b>increase levothyroxine ~30% as soon as pregnancy is detected</b>, even with a currently normal TSH. Do not wait for the TSH to rise.",
-   "note": "dp: split, remove framing, expand acronyms",
+   "find": "<p>Estrogen raises <b>thyroxine-binding globulin</b>, and β-hCG (which shares an alpha subunit with TSH) stimulates the TSH receptor — so a normal pregnancy makes more thyroxine on its own. A patient with <b>pre-existing hypothyroidism cannot up-regulate</b>, so the answer is proactive: <b>increase levothyroxine ~30% as soon as pregnancy is detected</b>, even with a currently normal TSH. Waiting for the TSH to rise is the tested wrong move.</p>",
+   "with": "<p>Estrogen raises <b>thyroxine-binding globulin</b>. <b>β-hCG</b> (beta human chorionic gonadotropin) shares an alpha subunit with <b>TSH</b> (thyroid-stimulating hormone) and stimulates the TSH receptor. As a result, a normal pregnancy makes more thyroxine on its own. A patient with <b>pre-existing hypothyroidism cannot up-regulate</b>, so <b>increase levothyroxine ~30% as soon as pregnancy is detected</b>, even with a currently normal TSH. Do not wait for the TSH to rise.</p>",
+   "note": "round 2 voice: .dp; split sentences, removed em dash and exam framing, expanded acronyms",
    "claims": [
     {
      "claim": "Estrogen raises thyroxine-binding globulin.",
@@ -20,28 +20,28 @@
      "to": "β-hCG (beta human chorionic gonadotropin) shares an alpha subunit with TSH (thyroid-stimulating hormone) and stimulates the TSH receptor."
     },
     {
-     "claim": "So a normal pregnancy makes more thyroxine on its own.",
-     "to": "A normal pregnancy therefore makes more thyroxine on its own."
+     "claim": "A normal pregnancy therefore makes more thyroxine on its own.",
+     "to": "As a result, a normal pregnancy makes more thyroxine on its own."
     },
     {
      "claim": "A patient with pre-existing hypothyroidism cannot up-regulate.",
      "to": "A patient with pre-existing hypothyroidism cannot up-regulate, so increase levothyroxine ~30% as soon as pregnancy is detected, even with a currently normal TSH."
     },
     {
-     "claim": "So the management is proactive.",
+     "claim": "Increase levothyroxine ~30% as soon as pregnancy is detected, proactively.",
      "to": "A patient with pre-existing hypothyroidism cannot up-regulate, so increase levothyroxine ~30% as soon as pregnancy is detected, even with a currently normal TSH."
     },
     {
-     "claim": "Increase levothyroxine ~30% as soon as pregnancy is detected.",
-     "to": "A patient with pre-existing hypothyroidism cannot up-regulate, so increase levothyroxine ~30% as soon as pregnancy is detected, even with a currently normal TSH."
-    },
-    {
-     "claim": "Increase it even with a currently normal TSH.",
+     "claim": "This applies even with a currently normal TSH.",
      "to": "A patient with pre-existing hypothyroidism cannot up-regulate, so increase levothyroxine ~30% as soon as pregnancy is detected, even with a currently normal TSH."
     },
     {
      "claim": "Waiting for the TSH to rise is the wrong move.",
      "to": "Do not wait for the TSH to rise."
+    },
+    {
+     "claim": "The wrong move is the tested one.",
+     "dropped": "framing about the exam; the clinical instruction is kept"
     }
    ],
    "new_claims": [
@@ -58,20 +58,20 @@
      "from": "expansion"
     },
     {
-     "claim": "β-hCG shares an alpha subunit with TSH and stimulates the TSH receptor.",
+     "claim": "β-hCG (beta human chorionic gonadotropin) shares an alpha subunit with TSH (thyroid-stimulating hormone) and stimulates the TSH receptor.",
      "from": "β-hCG shares an alpha subunit with TSH."
     },
     {
-     "claim": "A normal pregnancy therefore makes more thyroxine on its own.",
-     "from": "So a normal pregnancy makes more thyroxine on its own."
+     "claim": "As a result, a normal pregnancy makes more thyroxine on its own.",
+     "from": "A normal pregnancy therefore makes more thyroxine on its own."
     },
     {
-     "claim": "A patient with pre-existing hypothyroidism cannot up-regulate, so increase levothyroxine ~30% as soon as pregnancy is detected.",
-     "from": "Increase levothyroxine ~30% as soon as pregnancy is detected."
+     "claim": "A patient with pre-existing hypothyroidism cannot up-regulate.",
+     "from": "A patient with pre-existing hypothyroidism cannot up-regulate."
     },
     {
-     "claim": "Increase it even with a currently normal TSH.",
-     "from": "Increase it even with a currently normal TSH."
+     "claim": "Increase levothyroxine ~30% as soon as pregnancy is detected, even with a currently normal TSH.",
+     "from": "Increase levothyroxine ~30% as soon as pregnancy is detected, proactively."
     },
     {
      "claim": "Do not wait for the TSH to rise.",
@@ -83,8 +83,8 @@
    "op": "replace",
    "brief": "preg-thyroid",
    "find": "Untreated maternal hypothyroidism risks impaired fetal neurodevelopment — the fetus depends on maternal T4 early · a low TSH with high total T4 in the first trimester is <b>physiology</b>, not Graves — free T4 decides · T3 (liothyronine) is never the pregnancy answer.",
-   "with": "Untreated maternal hypothyroidism risks impaired fetal neurodevelopment, because the fetus depends on maternal <b>T4</b> (thyroxine) early · A low <b>TSH</b> (thyroid-stimulating hormone) with high total T4 in the first trimester is <b>physiology</b>, not Graves disease; free T4 distinguishes them · <b>T3</b> (triiodothyronine), given as liothyronine, is never the right choice in pregnancy.",
-   "note": "pearls: remove prose em dashes, expand acronyms",
+   "with": "Untreated maternal hypothyroidism risks impaired fetal neurodevelopment, because the fetus depends on maternal <b>T4</b> (thyroxine) early · a low <b>TSH</b> (thyroid-stimulating hormone) with high total T4 in the first trimester is <b>physiology</b>, not Graves; free T4 distinguishes the two · <b>T3</b> (triiodothyronine), given as liothyronine, is never the right drug in pregnancy.",
+   "note": "round 2 voice: Pearls; removed em dashes, expanded acronyms",
    "claims": [
     {
      "claim": "Untreated maternal hypothyroidism risks impaired fetal neurodevelopment.",
@@ -96,20 +96,20 @@
     },
     {
      "claim": "A low TSH with high total T4 in the first trimester is physiology, not Graves.",
-     "to": "A low TSH (thyroid-stimulating hormone) with high total T4 in the first trimester is physiology, not Graves disease; free T4 distinguishes them"
+     "to": "a low TSH (thyroid-stimulating hormone) with high total T4 in the first trimester is physiology, not Graves; free T4 distinguishes the two"
     },
     {
      "claim": "Free T4 decides between physiology and Graves.",
-     "to": "A low TSH (thyroid-stimulating hormone) with high total T4 in the first trimester is physiology, not Graves disease; free T4 distinguishes them"
+     "to": "a low TSH (thyroid-stimulating hormone) with high total T4 in the first trimester is physiology, not Graves; free T4 distinguishes the two"
     },
     {
      "claim": "T3 (liothyronine) is never the pregnancy answer.",
-     "to": "T3 (triiodothyronine), given as liothyronine, is never the right choice in pregnancy."
+     "to": "T3 (triiodothyronine), given as liothyronine, is never the right drug in pregnancy."
     }
    ],
    "new_claims": [
     {
-     "claim": "Untreated maternal hypothyroidism risks impaired fetal neurodevelopment because the fetus depends on maternal T4 early.",
+     "claim": "Untreated maternal hypothyroidism risks impaired fetal neurodevelopment, because the fetus depends on maternal T4 (thyroxine) early",
      "from": "Untreated maternal hypothyroidism risks impaired fetal neurodevelopment."
     },
     {
@@ -121,19 +121,19 @@
      "from": "expansion"
     },
     {
-     "claim": "A low TSH with high total T4 in the first trimester is physiology, not Graves disease.",
-     "from": "A low TSH with high total T4 in the first trimester is physiology, not Graves."
-    },
-    {
-     "claim": "Free T4 distinguishes them.",
-     "from": "Free T4 decides between physiology and Graves."
-    },
-    {
      "claim": "T3 stands for triiodothyronine.",
      "from": "expansion"
     },
     {
-     "claim": "T3, given as liothyronine, is never the right choice in pregnancy.",
+     "claim": "A low TSH with high total T4 in the first trimester is physiology, not Graves.",
+     "from": "A low TSH with high total T4 in the first trimester is physiology, not Graves."
+    },
+    {
+     "claim": "a low TSH (thyroid-stimulating hormone) with high total T4 in the first trimester is physiology, not Graves; free T4 distinguishes the two",
+     "from": "Free T4 decides between physiology and Graves."
+    },
+    {
+     "claim": "T3 (triiodothyronine), given as liothyronine, is never the right drug in pregnancy.",
      "from": "T3 (liothyronine) is never the pregnancy answer."
     }
    ]
@@ -142,27 +142,27 @@
    "op": "replace",
    "brief": "preg-thyroid",
    "find": "Part I <b>Levothyroxine Titration</b> — same drug, opposite clock: outside pregnancy you wait 6–8 weeks for the TSH to be trustworthy; at conception you act <b>before</b> the TSH moves. Store the discriminator: <b>\"is she pregnant right now?\"</b>",
-   "with": "Part I <b>Levothyroxine Titration</b>: same drug. Outside pregnancy, wait 6–8 weeks for the <b>TSH</b> (thyroid-stimulating hormone) to be trustworthy; at conception, act before the TSH moves. Ask: <b>\"is she pregnant right now?\"</b>",
-   "note": "pairs with: remove slogan and em dash, Ask:",
+   "with": "Part I <b>Levothyroxine Titration</b> covers the same drug outside pregnancy, where you wait 6–8 weeks for the TSH (thyroid-stimulating hormone) to be trustworthy. At conception, act before the TSH moves. Ask: <b>\"is she pregnant right now?\"</b>",
+   "note": "round 2 voice: Pairs with; removed rhythm contrast and em dash, emphasis bold, 'Store the discriminator'",
    "reworded_bold": [
     "before"
    ],
    "claims": [
     {
-     "claim": "Levothyroxine Titration (Part I) concerns the same drug.",
-     "to": "Part I Levothyroxine Titration: same drug."
+     "claim": "Levothyroxine Titration (Part I) is the same drug.",
+     "to": "Part I Levothyroxine Titration covers the same drug outside pregnancy, where you wait 6–8 weeks for the TSH (thyroid-stimulating hormone) to be trustworthy."
     },
     {
-     "claim": "Opposite clock.",
-     "dropped": "slogan; the two timings are stated in the next sentence"
+     "claim": "The two briefs run on an opposite clock.",
+     "dropped": "rhythmic contrast; the two timings are stated in the next claims"
     },
     {
      "claim": "Outside pregnancy you wait 6–8 weeks for the TSH to be trustworthy.",
-     "to": "Outside pregnancy, wait 6–8 weeks for the TSH (thyroid-stimulating hormone) to be trustworthy; at conception, act before the TSH moves."
+     "to": "Part I Levothyroxine Titration covers the same drug outside pregnancy, where you wait 6–8 weeks for the TSH (thyroid-stimulating hormone) to be trustworthy."
     },
     {
      "claim": "At conception you act before the TSH moves.",
-     "to": "Outside pregnancy, wait 6–8 weeks for the TSH (thyroid-stimulating hormone) to be trustworthy; at conception, act before the TSH moves."
+     "to": "At conception, act before the TSH moves."
     },
     {
      "claim": "The discriminator is: is she pregnant right now?",
@@ -171,15 +171,15 @@
    ],
    "new_claims": [
     {
-     "claim": "Part I Levothyroxine Titration: same drug.",
-     "from": "Levothyroxine Titration (Part I) concerns the same drug."
+     "claim": "Part I Levothyroxine Titration covers the same drug outside pregnancy.",
+     "from": "Levothyroxine Titration (Part I) is the same drug."
     },
     {
      "claim": "TSH stands for thyroid-stimulating hormone.",
      "from": "expansion"
     },
     {
-     "claim": "Outside pregnancy, wait 6–8 weeks for the TSH to be trustworthy.",
+     "claim": "Part I Levothyroxine Titration covers the same drug outside pregnancy, where you wait 6–8 weeks for the TSH (thyroid-stimulating hormone) to be trustworthy.",
      "from": "Outside pregnancy you wait 6–8 weeks for the TSH to be trustworthy."
     },
     {
@@ -187,7 +187,7 @@
      "from": "At conception you act before the TSH moves."
     },
     {
-     "claim": "Ask: is she pregnant right now?",
+     "claim": "Ask: \"is she pregnant right now?\"",
      "from": "The discriminator is: is she pregnant right now?"
     }
    ]
@@ -197,14 +197,18 @@
    "brief": "preg-thyroid",
    "find": "When physiology predictably outruns a fixed drug dose, the exam rewards the pre-emptive adjustment — not the recheck-and-react answer that is correct in every other setting.",
    "with": "When physiology predictably outruns a fixed drug dose, adjust the dose pre-emptively. Do not recheck and react, although that approach is correct in every other setting.",
-   "note": "rule: remove exam framing and em dash",
+   "note": "round 2 voice: rule; removed exam framing and em dash",
    "claims": [
     {
-     "claim": "When physiology predictably outruns a fixed drug dose, the pre-emptive adjustment is correct.",
+     "claim": "When physiology predictably outruns a fixed drug dose, make the pre-emptive adjustment.",
      "to": "When physiology predictably outruns a fixed drug dose, adjust the dose pre-emptively."
     },
     {
-     "claim": "Recheck-and-react is not correct here.",
+     "claim": "The exam rewards this answer.",
+     "dropped": "framing about the exam"
+    },
+    {
+     "claim": "Not the recheck-and-react answer.",
      "to": "Do not recheck and react, although that approach is correct in every other setting."
     },
     {
@@ -215,14 +219,14 @@
    "new_claims": [
     {
      "claim": "When physiology predictably outruns a fixed drug dose, adjust the dose pre-emptively.",
-     "from": "When physiology predictably outruns a fixed drug dose, the pre-emptive adjustment is correct."
+     "from": "When physiology predictably outruns a fixed drug dose, make the pre-emptive adjustment."
     },
     {
-     "claim": "Do not recheck and react.",
-     "from": "Recheck-and-react is not correct here."
+     "claim": "Do not recheck and react, although that approach is correct in every other setting.",
+     "from": "Not the recheck-and-react answer."
     },
     {
-     "claim": "Recheck-and-react is correct in every other setting.",
+     "claim": "Do not recheck and react, although that approach is correct in every other setting.",
      "from": "Recheck-and-react is correct in every other setting."
     }
    ]
@@ -230,20 +234,32 @@
   {
    "op": "replace",
    "brief": "preg-thyroid",
-   "find": "<span class=\"trapwhy\">TSH 0.3 in early pregnancy invites antithyroid workup; β-hCG cross-reactivity is the explanation.</span>",
-   "with": "<span class=\"trapwhy\"><b>TSH</b> (thyroid-stimulating hormone) 0.3 in early pregnancy tempts an antithyroid workup, but <b>β-hCG</b> (beta human chorionic gonadotropin) cross-reactivity explains it.</span>",
-   "note": "trap 1: plain sentence, expand acronyms",
+   "find": "TSH 0.3 in early pregnancy invites antithyroid workup; β-hCG cross-reactivity is the explanation.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">\"Recheck in 6–8 weeks\" is the correct titration rule — placed in the one setting where acting first is right.",
+   "with": "Antithyroid workup for <b>TSH</b> (thyroid-stimulating hormone) 0.3 in early pregnancy: <b>β-hCG</b> (beta human chorionic gonadotropin) cross-reactivity explains the low TSH.</span></div>\n  <div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">\"Recheck in 6–8 weeks\": correct as a titration rule, but pregnancy is the one setting where acting first is right.",
+   "note": "round 2 voice: traps as 'Option: why'; removed em dash, expanded acronyms",
    "claims": [
     {
-     "claim": "TSH 0.3 in early pregnancy invites antithyroid workup.",
-     "to": "TSH (thyroid-stimulating hormone) 0.3 in early pregnancy tempts an antithyroid workup, but β-hCG (beta human chorionic gonadotropin) cross-reactivity explains it."
+     "claim": "TSH 0.3 in early pregnancy invites an antithyroid workup.",
+     "to": "Antithyroid workup for TSH (thyroid-stimulating hormone) 0.3 in early pregnancy: β-hCG (beta human chorionic gonadotropin) cross-reactivity explains the low TSH."
     },
     {
-     "claim": "β-hCG cross-reactivity is the explanation for TSH 0.3.",
-     "to": "TSH (thyroid-stimulating hormone) 0.3 in early pregnancy tempts an antithyroid workup, but β-hCG (beta human chorionic gonadotropin) cross-reactivity explains it."
+     "claim": "β-hCG cross-reactivity is the explanation for the low TSH.",
+     "to": "Antithyroid workup for TSH (thyroid-stimulating hormone) 0.3 in early pregnancy: β-hCG (beta human chorionic gonadotropin) cross-reactivity explains the low TSH."
+    },
+    {
+     "claim": "\"Recheck in 6–8 weeks\" is the correct titration rule.",
+     "to": "\"Recheck in 6–8 weeks\": correct as a titration rule, but pregnancy is the one setting where acting first is right."
+    },
+    {
+     "claim": "Pregnancy is the one setting where acting first is right.",
+     "to": "\"Recheck in 6–8 weeks\": correct as a titration rule, but pregnancy is the one setting where acting first is right."
     }
    ],
    "new_claims": [
+    {
+     "claim": "Antithyroid workup for TSH (thyroid-stimulating hormone) 0.3 in early pregnancy: β-hCG (beta human chorionic gonadotropin) cross-reactivity explains the low TSH.",
+     "from": "TSH 0.3 in early pregnancy invites an antithyroid workup."
+    },
     {
      "claim": "TSH stands for thyroid-stimulating hormone.",
      "from": "expansion"
@@ -253,34 +269,11 @@
      "from": "expansion"
     },
     {
-     "claim": "TSH 0.3 in early pregnancy tempts an antithyroid workup.",
-     "from": "TSH 0.3 in early pregnancy invites antithyroid workup."
+     "claim": "Antithyroid workup for TSH (thyroid-stimulating hormone) 0.3 in early pregnancy: β-hCG (beta human chorionic gonadotropin) cross-reactivity explains the low TSH.",
+     "from": "β-hCG cross-reactivity is the explanation for the low TSH."
     },
     {
-     "claim": "β-hCG cross-reactivity explains it.",
-     "from": "β-hCG cross-reactivity is the explanation for TSH 0.3."
-    }
-   ]
-  },
-  {
-   "op": "replace",
-   "brief": "preg-thyroid",
-   "find": "<span class=\"trapwhy\">\"Recheck in 6–8 weeks\" is the correct titration rule — placed in the one setting where acting first is right.</span>",
-   "with": "<span class=\"trapwhy\">\"Recheck in 6–8 weeks\": correct for titration, but pregnancy is the one setting where acting first is right.</span>",
-   "note": "trap 2: Option: why, no em dash",
-   "claims": [
-    {
-     "claim": "\"Recheck in 6–8 weeks\" is the correct titration rule.",
-     "to": "\"Recheck in 6–8 weeks\": correct for titration, but pregnancy is the one setting where acting first is right."
-    },
-    {
-     "claim": "Pregnancy is the one setting where acting first is right.",
-     "to": "\"Recheck in 6–8 weeks\": correct for titration, but pregnancy is the one setting where acting first is right."
-    }
-   ],
-   "new_claims": [
-    {
-     "claim": "\"Recheck in 6–8 weeks\" is correct for titration.",
+     "claim": "\"Recheck in 6–8 weeks\": correct as a titration rule, but pregnancy is the one setting where acting first is right.",
      "from": "\"Recheck in 6–8 weeks\" is the correct titration rule."
     },
     {
@@ -292,9 +285,9 @@
   {
    "op": "replace",
    "brief": "congenital-hypothyroid",
-   "find": "Two stem facts close the question. <b>TSH 110 with T4 0.6</b> puts the lesion below the pituitary — the feedback loop is intact and screaming, so panhypopituitarism is excluded outright and neonatal Graves (which runs TSH-suppressed with high T4) is excluded in the opposite direction. Among the primary causes, the <b>exam is silent on goiter</b> and the <b>maternal history is clean</b> (balanced diet, prenatal vitamins), which strips the two goitrous mechanisms — dyshormonogenesis and iodine deficiency — of their tell and leaves the default: <b>dysgenesis</b> (agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract). The home birth is not a cause; it explains only why a screen-detected, asymptomatic diagnosis instead presented at one month, as maternal T4 washed out.",
-   "with": "<b>TSH 110 with T4 0.6</b> puts the lesion below the pituitary: the feedback loop is intact and responding strongly. That excludes panhypopituitarism outright. It also excludes neonatal Graves disease, which has the opposite pattern of suppressed <b>TSH</b> (thyroid-stimulating hormone) with high <b>T4</b> (thyroxine). Among the primary causes, the <b>exam is silent on goiter</b> and the <b>maternal history is clean</b> (balanced diet, prenatal vitamins). Dyshormonogenesis and iodine deficiency are both goitrous, so neither has its usual clue here. That leaves the default: <b>dysgenesis</b> (agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract). The home birth is not a cause. It explains only why a diagnosis usually made by screening in an asymptomatic infant instead presented at one month, as maternal T4 washed out.",
-   "note": "dp: remove framing and personification, split, expand acronyms",
+   "find": "<p>Two stem facts close the question. <b>TSH 110 with T4 0.6</b> puts the lesion below the pituitary — the feedback loop is intact and screaming, so panhypopituitarism is excluded outright and neonatal Graves (which runs TSH-suppressed with high T4) is excluded in the opposite direction. Among the primary causes, the <b>exam is silent on goiter</b> and the <b>maternal history is clean</b> (balanced diet, prenatal vitamins), which strips the two goitrous mechanisms — dyshormonogenesis and iodine deficiency — of their tell and leaves the default: <b>dysgenesis</b> (agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract). The home birth is not a cause; it explains only why a screen-detected, asymptomatic diagnosis instead presented at one month, as maternal T4 washed out.</p>",
+   "with": "<p><b>TSH 110 with T4 0.6</b> (TSH, thyroid-stimulating hormone; T4, thyroxine) puts the lesion below the pituitary. The feedback loop is intact, so panhypopituitarism is excluded outright. Neonatal Graves gives a suppressed TSH with high T4, so it is excluded in the opposite direction. Among the primary causes, the <b>exam is silent on goiter</b> and the <b>maternal history is clean</b> (balanced diet, prenatal vitamins). This removes the tell of the two goitrous causes, dyshormonogenesis and iodine deficiency. The default remains: <b>dysgenesis</b> (agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract). The home birth is not a cause. It explains only why a screen-detected, asymptomatic diagnosis instead presented at one month, as maternal T4 washed out.</p>",
+   "note": "round 2 voice: .dp; removed framing opener, personification and em dashes, split sentences, expanded acronyms",
    "claims": [
     {
      "claim": "Two stem facts close the question.",
@@ -302,23 +295,23 @@
     },
     {
      "claim": "TSH 110 with T4 0.6 puts the lesion below the pituitary.",
-     "to": "TSH 110 with T4 0.6 puts the lesion below the pituitary: the feedback loop is intact and responding strongly."
+     "to": "TSH 110 with T4 0.6 (TSH, thyroid-stimulating hormone; T4, thyroxine) puts the lesion below the pituitary."
     },
     {
-     "claim": "The feedback loop is intact and strongly driven.",
-     "to": "TSH 110 with T4 0.6 puts the lesion below the pituitary: the feedback loop is intact and responding strongly."
+     "claim": "The feedback loop is intact and screaming.",
+     "to": "The feedback loop is intact, so panhypopituitarism is excluded outright."
     },
     {
      "claim": "Panhypopituitarism is excluded outright.",
-     "to": "That excludes panhypopituitarism outright."
+     "to": "The feedback loop is intact, so panhypopituitarism is excluded outright."
     },
     {
      "claim": "Neonatal Graves runs TSH-suppressed with high T4.",
-     "to": "It also excludes neonatal Graves disease, which has the opposite pattern of suppressed TSH (thyroid-stimulating hormone) with high T4 (thyroxine)."
+     "to": "Neonatal Graves gives a suppressed TSH with high T4, so it is excluded in the opposite direction."
     },
     {
      "claim": "Neonatal Graves is excluded in the opposite direction.",
-     "to": "It also excludes neonatal Graves disease, which has the opposite pattern of suppressed TSH (thyroid-stimulating hormone) with high T4 (thyroxine)."
+     "to": "Neonatal Graves gives a suppressed TSH with high T4, so it is excluded in the opposite direction."
     },
     {
      "claim": "Among the primary causes, the exam is silent on goiter.",
@@ -329,20 +322,20 @@
      "to": "Among the primary causes, the exam is silent on goiter and the maternal history is clean (balanced diet, prenatal vitamins)."
     },
     {
-     "claim": "Dyshormonogenesis and iodine deficiency are the two goitrous mechanisms.",
-     "to": "Dyshormonogenesis and iodine deficiency are both goitrous, so neither has its usual clue here."
+     "claim": "The two goitrous mechanisms are dyshormonogenesis and iodine deficiency.",
+     "to": "This removes the tell of the two goitrous causes, dyshormonogenesis and iodine deficiency."
     },
     {
-     "claim": "The absent goiter and clean maternal history strip them of their tell.",
-     "to": "Dyshormonogenesis and iodine deficiency are both goitrous, so neither has its usual clue here."
+     "claim": "No goiter and a clean maternal history strip the goitrous mechanisms of their tell.",
+     "to": "This removes the tell of the two goitrous causes, dyshormonogenesis and iodine deficiency."
     },
     {
      "claim": "That leaves the default: dysgenesis.",
-     "to": "That leaves the default: dysgenesis (agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract)."
+     "to": "The default remains: dysgenesis (agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract)."
     },
     {
      "claim": "Dysgenesis is agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract.",
-     "to": "That leaves the default: dysgenesis (agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract)."
+     "to": "The default remains: dysgenesis (agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract)."
     },
     {
      "claim": "The home birth is not a cause.",
@@ -350,33 +343,17 @@
     },
     {
      "claim": "The home birth explains only why a screen-detected, asymptomatic diagnosis instead presented at one month.",
-     "to": "It explains only why a diagnosis usually made by screening in an asymptomatic infant instead presented at one month, as maternal T4 washed out."
+     "to": "It explains only why a screen-detected, asymptomatic diagnosis instead presented at one month, as maternal T4 washed out."
     },
     {
      "claim": "It presented at one month as maternal T4 washed out.",
-     "to": "It explains only why a diagnosis usually made by screening in an asymptomatic infant instead presented at one month, as maternal T4 washed out."
+     "to": "It explains only why a screen-detected, asymptomatic diagnosis instead presented at one month, as maternal T4 washed out."
     }
    ],
    "new_claims": [
     {
      "claim": "TSH 110 with T4 0.6 puts the lesion below the pituitary.",
      "from": "TSH 110 with T4 0.6 puts the lesion below the pituitary."
-    },
-    {
-     "claim": "The feedback loop is intact and responding strongly.",
-     "from": "The feedback loop is intact and strongly driven."
-    },
-    {
-     "claim": "That excludes panhypopituitarism outright.",
-     "from": "Panhypopituitarism is excluded outright."
-    },
-    {
-     "claim": "It also excludes neonatal Graves disease.",
-     "from": "Neonatal Graves is excluded in the opposite direction."
-    },
-    {
-     "claim": "Neonatal Graves disease has the opposite pattern of suppressed TSH with high T4.",
-     "from": "Neonatal Graves runs TSH-suppressed with high T4."
     },
     {
      "claim": "TSH stands for thyroid-stimulating hormone.",
@@ -387,27 +364,35 @@
      "from": "expansion"
     },
     {
-     "claim": "Among the primary causes, the exam is silent on goiter.",
+     "claim": "The feedback loop is intact.",
+     "from": "The feedback loop is intact and screaming."
+    },
+    {
+     "claim": "Panhypopituitarism is excluded outright.",
+     "from": "Panhypopituitarism is excluded outright."
+    },
+    {
+     "claim": "Neonatal Graves gives a suppressed TSH with high T4.",
+     "from": "Neonatal Graves runs TSH-suppressed with high T4."
+    },
+    {
+     "claim": "Neonatal Graves gives a suppressed TSH with high T4, so it is excluded in the opposite direction.",
+     "from": "Neonatal Graves is excluded in the opposite direction."
+    },
+    {
+     "claim": "Among the primary causes, the exam is silent on goiter and the maternal history is clean.",
      "from": "Among the primary causes, the exam is silent on goiter."
     },
     {
-     "claim": "The maternal history is clean (balanced diet, prenatal vitamins).",
-     "from": "The maternal history is clean (balanced diet, prenatal vitamins)."
+     "claim": "This removes the tell of the two goitrous causes, dyshormonogenesis and iodine deficiency.",
+     "from": "No goiter and a clean maternal history strip the goitrous mechanisms of their tell."
     },
     {
-     "claim": "Dyshormonogenesis and iodine deficiency are both goitrous.",
-     "from": "Dyshormonogenesis and iodine deficiency are the two goitrous mechanisms."
-    },
-    {
-     "claim": "Neither has its usual clue here.",
-     "from": "The absent goiter and clean maternal history strip them of their tell."
-    },
-    {
-     "claim": "That leaves the default: dysgenesis.",
+     "claim": "The default remains: dysgenesis (agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract).",
      "from": "That leaves the default: dysgenesis."
     },
     {
-     "claim": "Dysgenesis is agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract.",
+     "claim": "The default remains: dysgenesis (agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract).",
      "from": "Dysgenesis is agenesis, hypoplasia, or an ectopic gland arrested along the thyroglossal tract."
     },
     {
@@ -415,70 +400,71 @@
      "from": "The home birth is not a cause."
     },
     {
-     "claim": "It explains only why a diagnosis usually made by screening in an asymptomatic infant instead presented at one month.",
+     "claim": "It explains only why a screen-detected, asymptomatic diagnosis instead presented at one month, as maternal T4 washed out.",
      "from": "The home birth explains only why a screen-detected, asymptomatic diagnosis instead presented at one month."
-    },
-    {
-     "claim": "It presented at one month as maternal T4 washed out.",
-     "from": "It presented at one month as maternal T4 washed out."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "congenital-hypothyroid",
-   "find": "iodine deficiency is off the table (formula is iodine-supplemented)",
-   "with": "excludes iodine deficiency (formula is iodine-supplemented)",
-   "note": "pertinent: remove idiom",
+   "find": "iodine deficiency is off the table (formula is iodine-supplemented) &middot; <b>Normal tone with decreased activity</b> &mdash; hypometabolism, not a neuromuscular disease; hypotonia may appear later and its absence does not exclude the diagnosis &middot; <b>Symptomatic at 1 month, not at birth</b> &mdash; maternal T4 crossed the placenta and masked the deficit; timing is the concept's signature, not a distractor",
+   "with": "iodine deficiency is excluded (formula is iodine-supplemented) &middot; <b>Normal tone with decreased activity</b> &mdash; hypometabolism, not a neuromuscular disease; hypotonia may appear later and its absence does not exclude the diagnosis &middot; <b>Symptomatic at 1 month, not at birth</b> &mdash; maternal T4 crossed the placenta and masked the deficit; this timing is characteristic of the disease",
+   "note": "round 2 voice: Pertinent positives & negatives; replaced slang and framing (structural rows kept)",
    "claims": [
     {
      "claim": "Iodine deficiency is off the table.",
-     "to": "excludes iodine deficiency (formula is iodine-supplemented)"
+     "to": "iodine deficiency is excluded (formula is iodine-supplemented)"
     },
     {
      "claim": "Formula is iodine-supplemented.",
-     "to": "excludes iodine deficiency (formula is iodine-supplemented)"
-    }
-   ],
-   "new_claims": [
-    {
-     "claim": "The maternal diet and formula feeding exclude iodine deficiency.",
-     "from": "Iodine deficiency is off the table."
+     "to": "iodine deficiency is excluded (formula is iodine-supplemented)"
     },
     {
-     "claim": "Formula is iodine-supplemented.",
-     "from": "Formula is iodine-supplemented."
-    }
-   ]
-  },
-  {
-   "op": "replace",
-   "brief": "congenital-hypothyroid",
-   "find": "maternal T4 crossed the placenta and masked the deficit; timing is the concept's signature, not a distractor",
-   "with": "maternal T4 crossed the placenta and masked the deficit; this delayed onset is characteristic of congenital hypothyroidism",
-   "note": "pertinent: remove framing",
-   "claims": [
+     "claim": "Normal tone with decreased activity is hypometabolism, not a neuromuscular disease.",
+     "to": "hypometabolism, not a neuromuscular disease; hypotonia may appear later and its absence does not exclude the diagnosis"
+    },
+    {
+     "claim": "Hypotonia may appear later and its absence does not exclude the diagnosis.",
+     "to": "hypotonia may appear later and its absence does not exclude the diagnosis"
+    },
     {
      "claim": "Maternal T4 crossed the placenta and masked the deficit.",
-     "to": "maternal T4 crossed the placenta and masked the deficit; this delayed onset is characteristic of congenital hypothyroidism"
+     "to": "maternal T4 crossed the placenta and masked the deficit; this timing is characteristic of the disease"
     },
     {
-     "claim": "The timing is the signature of congenital hypothyroidism.",
-     "to": "maternal T4 crossed the placenta and masked the deficit; this delayed onset is characteristic of congenital hypothyroidism"
+     "claim": "Timing is the concept's signature.",
+     "to": "maternal T4 crossed the placenta and masked the deficit; this timing is characteristic of the disease"
     },
     {
-     "claim": "The timing is not a distractor.",
+     "claim": "Timing is not a distractor.",
      "dropped": "framing about distractors; the timing is stated as characteristic"
     }
    ],
    "new_claims": [
     {
+     "claim": "Iodine deficiency is excluded.",
+     "from": "Iodine deficiency is off the table."
+    },
+    {
+     "claim": "Formula is iodine-supplemented.",
+     "from": "Formula is iodine-supplemented."
+    },
+    {
+     "claim": "hypometabolism, not a neuromuscular disease; hypotonia may appear later and its absence does not exclude the diagnosis",
+     "from": "Normal tone with decreased activity is hypometabolism, not a neuromuscular disease."
+    },
+    {
+     "claim": "Hypotonia may appear later and its absence does not exclude the diagnosis.",
+     "from": "Hypotonia may appear later and its absence does not exclude the diagnosis."
+    },
+    {
      "claim": "Maternal T4 crossed the placenta and masked the deficit.",
      "from": "Maternal T4 crossed the placenta and masked the deficit."
     },
     {
-     "claim": "This delayed onset is characteristic of congenital hypothyroidism.",
-     "from": "The timing is the signature of congenital hypothyroidism."
+     "claim": "This timing is characteristic of the disease.",
+     "from": "Timing is the concept's signature."
     }
    ]
   },
@@ -486,46 +472,46 @@
    "op": "replace",
    "brief": "congenital-hypothyroid",
    "find": "<i>Maternal TSH-receptor <b>blocking</b> antibody is the rare mirror of the last row — transient primary hypothyroidism with high TSH, indistinguishable from dysgenesis until it resolves ⚠︎.</i>",
-   "with": "<i>Maternal <b>TSH</b> (thyroid-stimulating hormone) receptor <b>blocking</b> antibody is rare. It is the mirror image of the stimulating antibody in the last row: transient primary hypothyroidism with high TSH, indistinguishable from dysgenesis until it resolves ⚠︎.</i>",
-   "note": "danger: remove em dash, split",
+   "with": "<i>A maternal <b>blocking</b> antibody against the <b>TSH</b> (thyroid-stimulating hormone) receptor is the rare counterpart of the stimulating antibody. It causes transient primary hypothyroidism with high TSH, indistinguishable from dysgenesis until it resolves ⚠︎.</i>",
+   "note": "round 2 voice: danger; removed table reference and em dash, expanded acronym",
    "claims": [
     {
      "claim": "Maternal TSH-receptor blocking antibody is rare.",
-     "to": "Maternal TSH (thyroid-stimulating hormone) receptor blocking antibody is rare."
+     "to": "A maternal blocking antibody against the TSH (thyroid-stimulating hormone) receptor is the rare counterpart of the stimulating antibody."
     },
     {
-     "claim": "It is the mirror of the last row (stimulating antibody).",
-     "to": "It is the mirror image of the stimulating antibody in the last row: transient primary hypothyroidism with high TSH, indistinguishable from dysgenesis until it resolves ⚠︎."
+     "claim": "It is the mirror of the stimulating antibody in the last row.",
+     "to": "A maternal blocking antibody against the TSH (thyroid-stimulating hormone) receptor is the rare counterpart of the stimulating antibody."
     },
     {
      "claim": "It causes transient primary hypothyroidism with high TSH.",
-     "to": "It is the mirror image of the stimulating antibody in the last row: transient primary hypothyroidism with high TSH, indistinguishable from dysgenesis until it resolves ⚠︎."
+     "to": "It causes transient primary hypothyroidism with high TSH, indistinguishable from dysgenesis until it resolves ⚠︎."
     },
     {
-     "claim": "It is indistinguishable from dysgenesis until it resolves.",
-     "to": "It is the mirror image of the stimulating antibody in the last row: transient primary hypothyroidism with high TSH, indistinguishable from dysgenesis until it resolves ⚠︎."
+     "claim": "It is indistinguishable from dysgenesis until it resolves (unverified).",
+     "to": "It causes transient primary hypothyroidism with high TSH, indistinguishable from dysgenesis until it resolves ⚠︎."
     }
    ],
    "new_claims": [
+    {
+     "claim": "A maternal blocking antibody against the TSH (thyroid-stimulating hormone) receptor is the rare counterpart of the stimulating antibody.",
+     "from": "Maternal TSH-receptor blocking antibody is rare."
+    },
     {
      "claim": "TSH stands for thyroid-stimulating hormone.",
      "from": "expansion"
     },
     {
-     "claim": "Maternal TSH receptor blocking antibody is rare.",
-     "from": "Maternal TSH-receptor blocking antibody is rare."
+     "claim": "A maternal blocking antibody against the TSH (thyroid-stimulating hormone) receptor is the rare counterpart of the stimulating antibody.",
+     "from": "It is the mirror of the stimulating antibody in the last row."
     },
     {
-     "claim": "It is the mirror image of the stimulating antibody in the last row.",
-     "from": "It is the mirror of the last row (stimulating antibody)."
-    },
-    {
-     "claim": "It gives transient primary hypothyroidism with high TSH.",
+     "claim": "It causes transient primary hypothyroidism with high TSH.",
      "from": "It causes transient primary hypothyroidism with high TSH."
     },
     {
-     "claim": "It is indistinguishable from dysgenesis until it resolves.",
-     "from": "It is indistinguishable from dysgenesis until it resolves."
+     "claim": "It causes transient primary hypothyroidism with high TSH, indistinguishable from dysgenesis until it resolves ⚠︎.",
+     "from": "It is indistinguishable from dysgenesis until it resolves (unverified)."
     }
    ]
   },
@@ -534,104 +520,46 @@
    "brief": "congenital-hypothyroid",
    "find": "High → primary; the pituitary options are dead",
    "with": "High → primary; the pituitary causes are excluded",
-   "note": "spine: remove idiom",
+   "note": "round 2 voice: Decision spine; replaced slang",
    "claims": [
     {
-     "claim": "If TSH is high, the pituitary options are dead.",
+     "claim": "High TSH means primary.",
+     "to": "High → primary; the pituitary causes are excluded"
+    },
+    {
+     "claim": "The pituitary options are dead.",
      "to": "High → primary; the pituitary causes are excluded"
     }
    ],
    "new_claims": [
     {
-     "claim": "If TSH is high, the pituitary causes are excluded.",
-     "from": "If TSH is high, the pituitary options are dead."
+     "claim": "High → primary; the pituitary causes are excluded",
+     "from": "High TSH means primary."
+    },
+    {
+     "claim": "The pituitary causes are excluded.",
+     "from": "The pituitary options are dead."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "congenital-hypothyroid",
-   "find": "The <b>home birth</b> is the stem's most conspicuous detail and it is not a cause — it explains the missed newborn screen and therefore the unusual symptomatic presentation. The <b>maternal diet sentence</b> is a negative clue disguised as a positive one: it exists to kill option B. <b>Primigravida, age 24, unremarkable family history</b> are all inert here, though the absent family history does modestly argue against a recessive enzyme defect.",
-   "with": "The <b>home birth</b> is not a cause. It explains the missed newborn screen and therefore the unusual symptomatic presentation. The <b>maternal diet</b> is a negative clue: it excludes iodine deficiency. <b>Primigravida, age 24, unremarkable family history</b> do not point to a cause, though the absent family history modestly argues against a recessive enzyme defect.",
-   "note": "decoy note: remove framing and personification",
-   "reworded_bold": [
-    "maternal diet sentence"
-   ],
-   "claims": [
-    {
-     "claim": "The home birth is the stem's most conspicuous detail.",
-     "dropped": "framing about the stem"
-    },
-    {
-     "claim": "The home birth is not a cause.",
-     "to": "The home birth is not a cause."
-    },
-    {
-     "claim": "It explains the missed newborn screen and therefore the unusual symptomatic presentation.",
-     "to": "It explains the missed newborn screen and therefore the unusual symptomatic presentation."
-    },
-    {
-     "claim": "The maternal diet sentence is a negative clue disguised as a positive one.",
-     "to": "The maternal diet is a negative clue: it excludes iodine deficiency."
-    },
-    {
-     "claim": "It exists to exclude option B (iodine deficiency).",
-     "to": "The maternal diet is a negative clue: it excludes iodine deficiency."
-    },
-    {
-     "claim": "Primigravida, age 24 and unremarkable family history are all inert here.",
-     "to": "Primigravida, age 24, unremarkable family history do not point to a cause, though the absent family history modestly argues against a recessive enzyme defect."
-    },
-    {
-     "claim": "The absent family history does modestly argue against a recessive enzyme defect.",
-     "to": "Primigravida, age 24, unremarkable family history do not point to a cause, though the absent family history modestly argues against a recessive enzyme defect."
-    }
-   ],
-   "new_claims": [
-    {
-     "claim": "The home birth is not a cause.",
-     "from": "The home birth is not a cause."
-    },
-    {
-     "claim": "It explains the missed newborn screen and therefore the unusual symptomatic presentation.",
-     "from": "It explains the missed newborn screen and therefore the unusual symptomatic presentation."
-    },
-    {
-     "claim": "The maternal diet is a negative clue.",
-     "from": "The maternal diet sentence is a negative clue disguised as a positive one."
-    },
-    {
-     "claim": "It excludes iodine deficiency.",
-     "from": "It exists to exclude option B (iodine deficiency)."
-    },
-    {
-     "claim": "Primigravida, age 24, unremarkable family history do not point to a cause.",
-     "from": "Primigravida, age 24 and unremarkable family history are all inert here."
-    },
-    {
-     "claim": "The absent family history modestly argues against a recessive enzyme defect.",
-     "from": "The absent family history does modestly argue against a recessive enzyme defect."
-    }
-   ]
-  },
-  {
-   "op": "replace",
-   "brief": "congenital-hypothyroid",
-   "find": "High TSH, low T4, no goiter is <b>dysgenesis</b>; a goiter means a synthesis defect, and a low TSH means the pituitary. &middot; Symptom onset at weeks-to-months, not at birth, is the fingerprint of congenital hypothyroidism — placental maternal T4 covers the first weeks, so a normal newborn exam never reassures. &middot; Unconjugated jaundice past <b>2 weeks</b> of age earns a thyroid and a galactosemia thought; conjugated jaundice at any age earns a biliary one. &middot; Macroglossia plus hoarse cry equals mucopolysaccharide deposition — the exam's shorthand for hypothyroid soft tissue, distinct from Beckwith-Wiedemann (macroglossia with hemihyperplasia and hypoglycemia ⚠︎). &middot; Treat on the screening result; imaging to name the cause never delays levothyroxine, because the neurodevelopmental window is measured in weeks <i>(in-context: no deficits when treatment begins in the neonatal period)</i>. &middot; A goiter in a hypothyroid newborn reroutes you to a synthesis problem or an iodine problem — dysgenesis has no gland to enlarge.",
-   "with": "High <b>TSH</b> (thyroid-stimulating hormone), low <b>T4</b> (thyroxine), no goiter is <b>dysgenesis</b>; a goiter means a synthesis defect, and a low TSH means the pituitary. &middot; Symptom onset at weeks to months, not at birth, is characteristic of congenital hypothyroidism. Placental maternal T4 covers the first weeks, so a normal newborn exam never reassures. &middot; Unconjugated jaundice past <b>2 weeks</b> of age should prompt consideration of hypothyroidism and galactosemia; conjugated jaundice at any age should prompt consideration of a biliary cause. &middot; Macroglossia plus hoarse cry reflects mucopolysaccharide deposition in hypothyroid soft tissue. This differs from Beckwith-Wiedemann syndrome (macroglossia with hemihyperplasia and hypoglycemia ⚠︎). &middot; Treat on the screening result. Imaging to name the cause never delays levothyroxine, because the neurodevelopmental window is measured in weeks; there are no deficits when treatment begins in the neonatal period. &middot; A goiter in a hypothyroid newborn points to a synthesis problem or an iodine problem; dysgenesis has no gland to enlarge.",
-   "note": "pearls: remove em dashes, idioms, provenance tag; expand acronyms",
+   "find": "High TSH, low T4, no goiter is <b>dysgenesis</b>; a goiter means a synthesis defect, and a low TSH means the pituitary. &middot; Symptom onset at weeks-to-months, not at birth, is the fingerprint of congenital hypothyroidism — placental maternal T4 covers the first weeks, so a normal newborn exam never reassures. &middot; Unconjugated jaundice past <b>2 weeks</b> of age earns a thyroid and a galactosemia thought; conjugated jaundice at any age earns a biliary one. &middot; Macroglossia plus hoarse cry equals mucopolysaccharide deposition — the exam's shorthand for hypothyroid soft tissue, distinct from Beckwith-Wiedemann (macroglossia with hemihyperplasia and hypoglycemia ⚠︎). &middot; Treat on the screening result; imaging to name the cause never delays levothyroxine, because the neurodevelopmental window is measured in weeks <i>(in-context: no deficits when treatment begins in the neonatal period)</i>. &middot; A goiter in a hypothyroid newborn reroutes you to a synthesis problem or an iodine problem — dysgenesis has no gland to enlarge. &middot; In central hypothyroidism, give cortisol before levothyroxine: thyroid hormone accelerates cortisol clearance and can precipitate adrenal crisis ⚠︎.",
+   "with": "High <b>TSH</b> (thyroid-stimulating hormone), low <b>T4</b> (thyroxine) and no goiter mean <b>dysgenesis</b>; a goiter means a synthesis defect, and a low TSH means the pituitary. &middot; Symptom onset at weeks to months, not at birth, is characteristic of congenital hypothyroidism. Placental maternal T4 covers the first weeks, so a normal newborn exam never reassures. &middot; Unconjugated jaundice past <b>2 weeks</b> of age calls for considering thyroid disease and galactosemia; conjugated jaundice at any age calls for considering a biliary cause. &middot; Macroglossia plus hoarse cry is mucopolysaccharide deposition in hypothyroid soft tissue. It is distinct from Beckwith-Wiedemann (macroglossia with hemihyperplasia and hypoglycemia ⚠︎). &middot; Treat on the screening result. Imaging to name the cause never delays levothyroxine, because the neurodevelopmental window is measured in weeks. There are no deficits when treatment begins in the neonatal period. &middot; A goiter in a hypothyroid newborn points to a synthesis problem or an iodine problem; dysgenesis has no gland to enlarge. &middot; In central hypothyroidism, give cortisol before levothyroxine: thyroid hormone accelerates cortisol clearance and can precipitate adrenal crisis ⚠︎.",
+   "note": "round 2 voice: Pearls; removed em dashes, slogans, provenance tag; expanded acronyms",
    "claims": [
     {
      "claim": "High TSH, low T4, no goiter is dysgenesis.",
-     "to": "High TSH (thyroid-stimulating hormone), low T4 (thyroxine), no goiter is dysgenesis; a goiter means a synthesis defect, and a low TSH means the pituitary."
+     "to": "High TSH (thyroid-stimulating hormone), low T4 (thyroxine) and no goiter mean dysgenesis; a goiter means a synthesis defect, and a low TSH means the pituitary."
     },
     {
      "claim": "A goiter means a synthesis defect.",
-     "to": "High TSH (thyroid-stimulating hormone), low T4 (thyroxine), no goiter is dysgenesis; a goiter means a synthesis defect, and a low TSH means the pituitary."
+     "to": "High TSH (thyroid-stimulating hormone), low T4 (thyroxine) and no goiter mean dysgenesis; a goiter means a synthesis defect, and a low TSH means the pituitary."
     },
     {
      "claim": "A low TSH means the pituitary.",
-     "to": "High TSH (thyroid-stimulating hormone), low T4 (thyroxine), no goiter is dysgenesis; a goiter means a synthesis defect, and a low TSH means the pituitary."
+     "to": "High TSH (thyroid-stimulating hormone), low T4 (thyroxine) and no goiter mean dysgenesis; a goiter means a synthesis defect, and a low TSH means the pituitary."
     },
     {
      "claim": "Symptom onset at weeks-to-months, not at birth, is the fingerprint of congenital hypothyroidism.",
@@ -647,23 +575,23 @@
     },
     {
      "claim": "Unconjugated jaundice past 2 weeks of age earns a thyroid and a galactosemia thought.",
-     "to": "Unconjugated jaundice past 2 weeks of age should prompt consideration of hypothyroidism and galactosemia; conjugated jaundice at any age should prompt consideration of a biliary cause."
+     "to": "Unconjugated jaundice past 2 weeks of age calls for considering thyroid disease and galactosemia; conjugated jaundice at any age calls for considering a biliary cause."
     },
     {
      "claim": "Conjugated jaundice at any age earns a biliary thought.",
-     "to": "Unconjugated jaundice past 2 weeks of age should prompt consideration of hypothyroidism and galactosemia; conjugated jaundice at any age should prompt consideration of a biliary cause."
+     "to": "Unconjugated jaundice past 2 weeks of age calls for considering thyroid disease and galactosemia; conjugated jaundice at any age calls for considering a biliary cause."
     },
     {
      "claim": "Macroglossia plus hoarse cry equals mucopolysaccharide deposition.",
-     "to": "Macroglossia plus hoarse cry reflects mucopolysaccharide deposition in hypothyroid soft tissue."
+     "to": "Macroglossia plus hoarse cry is mucopolysaccharide deposition in hypothyroid soft tissue."
     },
     {
-     "claim": "This is the shorthand for hypothyroid soft tissue.",
-     "to": "Macroglossia plus hoarse cry reflects mucopolysaccharide deposition in hypothyroid soft tissue."
+     "claim": "It is the exam's shorthand for hypothyroid soft tissue.",
+     "to": "Macroglossia plus hoarse cry is mucopolysaccharide deposition in hypothyroid soft tissue."
     },
     {
-     "claim": "It is distinct from Beckwith-Wiedemann (macroglossia with hemihyperplasia and hypoglycemia ⚠︎).",
-     "to": "This differs from Beckwith-Wiedemann syndrome (macroglossia with hemihyperplasia and hypoglycemia ⚠︎)."
+     "claim": "It is distinct from Beckwith-Wiedemann (macroglossia with hemihyperplasia and hypoglycemia, unverified).",
+     "to": "It is distinct from Beckwith-Wiedemann (macroglossia with hemihyperplasia and hypoglycemia ⚠︎)."
     },
     {
      "claim": "Treat on the screening result.",
@@ -671,15 +599,15 @@
     },
     {
      "claim": "Imaging to name the cause never delays levothyroxine.",
-     "to": "Imaging to name the cause never delays levothyroxine, because the neurodevelopmental window is measured in weeks; there are no deficits when treatment begins in the neonatal period."
+     "to": "Imaging to name the cause never delays levothyroxine, because the neurodevelopmental window is measured in weeks."
     },
     {
      "claim": "The neurodevelopmental window is measured in weeks.",
-     "to": "Imaging to name the cause never delays levothyroxine, because the neurodevelopmental window is measured in weeks; there are no deficits when treatment begins in the neonatal period."
+     "to": "Imaging to name the cause never delays levothyroxine, because the neurodevelopmental window is measured in weeks."
     },
     {
      "claim": "There are no deficits when treatment begins in the neonatal period.",
-     "to": "Imaging to name the cause never delays levothyroxine, because the neurodevelopmental window is measured in weeks; there are no deficits when treatment begins in the neonatal period."
+     "to": "There are no deficits when treatment begins in the neonatal period."
     },
     {
      "claim": "A goiter in a hypothyroid newborn reroutes you to a synthesis problem or an iodine problem.",
@@ -688,6 +616,14 @@
     {
      "claim": "Dysgenesis has no gland to enlarge.",
      "to": "A goiter in a hypothyroid newborn points to a synthesis problem or an iodine problem; dysgenesis has no gland to enlarge."
+    },
+    {
+     "claim": "In central hypothyroidism, give cortisol before levothyroxine.",
+     "to": "In central hypothyroidism, give cortisol before levothyroxine: thyroid hormone accelerates cortisol clearance and can precipitate adrenal crisis ⚠︎."
+    },
+    {
+     "claim": "Thyroid hormone accelerates cortisol clearance and can precipitate adrenal crisis (unverified).",
+     "to": "In central hypothyroidism, give cortisol before levothyroxine: thyroid hormone accelerates cortisol clearance and can precipitate adrenal crisis ⚠︎."
     }
    ],
    "new_claims": [
@@ -700,7 +636,7 @@
      "from": "expansion"
     },
     {
-     "claim": "High TSH, low T4, no goiter is dysgenesis.",
+     "claim": "High TSH (thyroid-stimulating hormone), low T4 (thyroxine) and no goiter mean dysgenesis; a goiter means a synthesis defect, and a low TSH means the pituitary.",
      "from": "High TSH, low T4, no goiter is dysgenesis."
     },
     {
@@ -724,24 +660,20 @@
      "from": "A normal newborn exam never reassures."
     },
     {
-     "claim": "Unconjugated jaundice past 2 weeks should prompt consideration of hypothyroidism and galactosemia.",
+     "claim": "Unconjugated jaundice past 2 weeks of age calls for considering thyroid disease and galactosemia.",
      "from": "Unconjugated jaundice past 2 weeks of age earns a thyroid and a galactosemia thought."
     },
     {
-     "claim": "Conjugated jaundice at any age should prompt consideration of a biliary cause.",
+     "claim": "Conjugated jaundice at any age calls for considering a biliary cause.",
      "from": "Conjugated jaundice at any age earns a biliary thought."
     },
     {
-     "claim": "Macroglossia plus hoarse cry reflects mucopolysaccharide deposition.",
+     "claim": "Macroglossia plus hoarse cry is mucopolysaccharide deposition in hypothyroid soft tissue.",
      "from": "Macroglossia plus hoarse cry equals mucopolysaccharide deposition."
     },
     {
-     "claim": "The deposition is in hypothyroid soft tissue.",
-     "from": "This is the shorthand for hypothyroid soft tissue."
-    },
-    {
-     "claim": "This differs from Beckwith-Wiedemann syndrome (macroglossia with hemihyperplasia and hypoglycemia ⚠︎).",
-     "from": "It is distinct from Beckwith-Wiedemann (macroglossia with hemihyperplasia and hypoglycemia ⚠︎)."
+     "claim": "It is distinct from Beckwith-Wiedemann (macroglossia with hemihyperplasia and hypoglycemia ⚠︎).",
+     "from": "It is distinct from Beckwith-Wiedemann (macroglossia with hemihyperplasia and hypoglycemia, unverified)."
     },
     {
      "claim": "Treat on the screening result.",
@@ -766,6 +698,14 @@
     {
      "claim": "Dysgenesis has no gland to enlarge.",
      "from": "Dysgenesis has no gland to enlarge."
+    },
+    {
+     "claim": "In central hypothyroidism, give cortisol before levothyroxine.",
+     "from": "In central hypothyroidism, give cortisol before levothyroxine."
+    },
+    {
+     "claim": "In central hypothyroidism, give cortisol before levothyroxine: thyroid hormone accelerates cortisol clearance and can precipitate adrenal crisis ⚠︎.",
+     "from": "Thyroid hormone accelerates cortisol clearance and can precipitate adrenal crisis (unverified)."
     }
    ]
   },
@@ -773,58 +713,74 @@
    "op": "replace",
    "brief": "congenital-hypothyroid",
    "find": "Verified partner: <b>The Sick Jaundiced Neonate with a Positive Screen</b> — shared complaint (jaundiced newborn with an abnormal screen), discriminator as a question: <i>is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?</i> Also pairs with <b>Thyroid Mimics &amp; Discriminators</b> and <b>Levothyroxine Titration</b>, which own the adult version of the same TSH-direction logic and the dosing loop this brief only points at. Part I <b>Hypotonia in an Infant</b> owns the other causes of low tone in infancy and the yearly TSH in Down syndrome.",
-   "with": "<b>The Sick Jaundiced Neonate with a Positive Screen</b> shares the complaint of a jaundiced newborn with an abnormal screen. Ask: <i>is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?</i> <b>Thyroid Mimics &amp; Discriminators</b> and <b>Levothyroxine Titration</b> cover the adult version of the same <b>TSH</b> (thyroid-stimulating hormone) direction logic and the dosing loop, which this brief only mentions. Part I <b>Hypotonia in an Infant</b> covers the other causes of low tone in infancy and the yearly TSH in Down syndrome.",
-   "note": "pairs with: remove Verified, em dash, owns",
+   "with": "<b>The Sick Jaundiced Neonate with a Positive Screen</b> shares the complaint of a jaundiced newborn with an abnormal screen. Ask: <i>is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?</i> <b>Thyroid Mimics &amp; Discriminators</b> and <b>Levothyroxine Titration</b> cover the adult version of the same TSH (thyroid-stimulating hormone) direction logic. They also cover the dosing loop that this brief only points at. Part I <b>Hypotonia in an Infant</b> covers the other causes of low tone in infancy and the yearly TSH in Down syndrome.",
+   "note": "round 2 voice: Pairs with; removed 'Verified', 'owns' -> 'covers', discriminator as 'Ask:', expanded acronym",
    "claims": [
     {
-     "claim": "Verified partner.",
-     "dropped": "workflow verification note"
-    },
-    {
-     "claim": "The Sick Jaundiced Neonate with a Positive Screen shares the complaint (jaundiced newborn with an abnormal screen).",
+     "claim": "The Sick Jaundiced Neonate with a Positive Screen is a partner brief.",
      "to": "The Sick Jaundiced Neonate with a Positive Screen shares the complaint of a jaundiced newborn with an abnormal screen."
     },
     {
-     "claim": "Discriminator: is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?",
+     "claim": "The partner is verified.",
+     "dropped": "workflow text"
+    },
+    {
+     "claim": "The shared complaint is a jaundiced newborn with an abnormal screen.",
+     "to": "The Sick Jaundiced Neonate with a Positive Screen shares the complaint of a jaundiced newborn with an abnormal screen."
+    },
+    {
+     "claim": "The discriminator question: is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?",
      "to": "Ask: is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?"
     },
     {
-     "claim": "Thyroid Mimics & Discriminators and Levothyroxine Titration own the adult version of the same TSH-direction logic and the dosing loop.",
-     "to": "Thyroid Mimics & Discriminators and Levothyroxine Titration cover the adult version of the same TSH (thyroid-stimulating hormone) direction logic and the dosing loop, which this brief only mentions."
+     "claim": "Thyroid Mimics & Discriminators and Levothyroxine Titration also pair with this brief.",
+     "to": "Thyroid Mimics & Discriminators and Levothyroxine Titration cover the adult version of the same TSH (thyroid-stimulating hormone) direction logic."
     },
     {
-     "claim": "This brief only points at the dosing loop.",
-     "to": "Thyroid Mimics & Discriminators and Levothyroxine Titration cover the adult version of the same TSH (thyroid-stimulating hormone) direction logic and the dosing loop, which this brief only mentions."
+     "claim": "They own the adult version of the same TSH-direction logic.",
+     "to": "Thyroid Mimics & Discriminators and Levothyroxine Titration cover the adult version of the same TSH (thyroid-stimulating hormone) direction logic."
     },
     {
-     "claim": "Part I Hypotonia in an Infant owns the other causes of low tone in infancy and the yearly TSH in Down syndrome.",
+     "claim": "They own the dosing loop this brief only points at.",
+     "to": "They also cover the dosing loop that this brief only points at."
+    },
+    {
+     "claim": "Part I Hypotonia in an Infant owns the other causes of low tone in infancy.",
+     "to": "Part I Hypotonia in an Infant covers the other causes of low tone in infancy and the yearly TSH in Down syndrome."
+    },
+    {
+     "claim": "Hypotonia in an Infant owns the yearly TSH in Down syndrome.",
      "to": "Part I Hypotonia in an Infant covers the other causes of low tone in infancy and the yearly TSH in Down syndrome."
     }
    ],
    "new_claims": [
     {
      "claim": "The Sick Jaundiced Neonate with a Positive Screen shares the complaint of a jaundiced newborn with an abnormal screen.",
-     "from": "The Sick Jaundiced Neonate with a Positive Screen shares the complaint (jaundiced newborn with an abnormal screen)."
+     "from": "The shared complaint is a jaundiced newborn with an abnormal screen."
     },
     {
      "claim": "Ask: is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?",
-     "from": "Discriminator: is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?"
-    },
-    {
-     "claim": "Thyroid Mimics & Discriminators and Levothyroxine Titration cover the adult version of the same TSH direction logic and the dosing loop.",
-     "from": "Thyroid Mimics & Discriminators and Levothyroxine Titration own the adult version of the same TSH-direction logic and the dosing loop."
+     "from": "The discriminator question: is the hyperbilirubinemia conjugated, and is the infant ill or merely slow?"
     },
     {
      "claim": "TSH stands for thyroid-stimulating hormone.",
      "from": "expansion"
     },
     {
-     "claim": "This brief only mentions the dosing loop.",
-     "from": "This brief only points at the dosing loop."
+     "claim": "Thyroid Mimics & Discriminators and Levothyroxine Titration cover the adult version of the same TSH (thyroid-stimulating hormone) direction logic.",
+     "from": "They own the adult version of the same TSH-direction logic."
+    },
+    {
+     "claim": "They also cover the dosing loop that this brief only points at.",
+     "from": "They own the dosing loop this brief only points at."
+    },
+    {
+     "claim": "Part I Hypotonia in an Infant covers the other causes of low tone in infancy.",
+     "from": "Part I Hypotonia in an Infant owns the other causes of low tone in infancy."
     },
     {
      "claim": "Part I Hypotonia in an Infant covers the other causes of low tone in infancy and the yearly TSH in Down syndrome.",
-     "from": "Part I Hypotonia in an Infant owns the other causes of low tone in infancy and the yearly TSH in Down syndrome."
+     "from": "Hypotonia in an Infant owns the yearly TSH in Down syndrome."
     }
    ]
   },
@@ -833,7 +789,7 @@
    "brief": "congenital-hypothyroid",
    "find": "In any hormone-deficiency stem, the <b>trophic hormone's direction locates the lesion</b> — high TSH puts it in the gland, low TSH puts it in the pituitary — and once you are in the gland, the <b>presence or absence of an organ</b> (goiter or none) separates a machinery defect from a formation defect.",
    "with": "In any hormone deficiency, the <b>trophic hormone's direction locates the lesion</b>. High <b>TSH</b> (thyroid-stimulating hormone) puts it in the gland; low TSH puts it in the pituitary. Within the gland, the <b>presence or absence of an organ</b> (goiter or none) separates a machinery defect from a formation defect.",
-   "note": "rule: split, remove em dashes",
+   "note": "round 2 voice: rule; split sentence, removed em dashes, expanded acronym",
    "claims": [
     {
      "claim": "In any hormone-deficiency stem, the trophic hormone's direction locates the lesion.",
@@ -848,7 +804,7 @@
      "to": "High TSH (thyroid-stimulating hormone) puts it in the gland; low TSH puts it in the pituitary."
     },
     {
-     "claim": "Within the gland, presence or absence of an organ (goiter or none) separates a machinery defect from a formation defect.",
+     "claim": "Once in the gland, the presence or absence of an organ (goiter or none) separates a machinery defect from a formation defect.",
      "to": "Within the gland, the presence or absence of an organ (goiter or none) separates a machinery defect from a formation defect."
     }
    ],
@@ -871,37 +827,45 @@
     },
     {
      "claim": "Within the gland, the presence or absence of an organ (goiter or none) separates a machinery defect from a formation defect.",
-     "from": "Within the gland, presence or absence of an organ (goiter or none) separates a machinery defect from a formation defect."
+     "from": "Once in the gland, the presence or absence of an organ (goiter or none) separates a machinery defect from a formation defect."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "congenital-hypothyroid",
-   "find": "It causes neonatal <b>Graves</b> — suppressed TSH, high T4, tachycardia and hyperphagia; every value and symptom here is inverted",
-   "with": "It causes neonatal <b>Graves</b> disease, with suppressed TSH, high T4, tachycardia and hyperphagia; every value and symptom here is inverted",
-   "note": "trap: remove em dash",
+   "find": "Transplacental TSH receptor–stimulating antibody: It causes neonatal <b>Graves</b> — suppressed TSH, high T4, tachycardia and hyperphagia; every value and symptom here is inverted",
+   "with": "Transplacental TSH (thyroid-stimulating hormone) receptor–stimulating antibody: It causes neonatal <b>Graves</b>, with suppressed TSH, high T4 (thyroxine), tachycardia and hyperphagia. Every value and symptom here is inverted",
+   "note": "round 2 voice: trap line; removed em dash, split sentence, expanded acronyms",
    "claims": [
     {
      "claim": "Transplacental TSH receptor-stimulating antibody causes neonatal Graves.",
-     "to": "It causes neonatal Graves disease, with suppressed TSH, high T4, tachycardia and hyperphagia; every value and symptom here is inverted"
+     "to": "Transplacental TSH (thyroid-stimulating hormone) receptor–stimulating antibody: It causes neonatal Graves, with suppressed TSH, high T4 (thyroxine), tachycardia and hyperphagia."
     },
     {
      "claim": "Neonatal Graves has suppressed TSH, high T4, tachycardia and hyperphagia.",
-     "to": "It causes neonatal Graves disease, with suppressed TSH, high T4, tachycardia and hyperphagia; every value and symptom here is inverted"
+     "to": "Transplacental TSH (thyroid-stimulating hormone) receptor–stimulating antibody: It causes neonatal Graves, with suppressed TSH, high T4 (thyroxine), tachycardia and hyperphagia."
     },
     {
      "claim": "Every value and symptom here is inverted.",
-     "to": "It causes neonatal Graves disease, with suppressed TSH, high T4, tachycardia and hyperphagia; every value and symptom here is inverted"
+     "to": "Every value and symptom here is inverted"
     }
    ],
    "new_claims": [
     {
-     "claim": "It causes neonatal Graves disease.",
+     "claim": "TSH stands for thyroid-stimulating hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "T4 stands for thyroxine.",
+     "from": "expansion"
+    },
+    {
+     "claim": "It causes neonatal Graves.",
      "from": "Transplacental TSH receptor-stimulating antibody causes neonatal Graves."
     },
     {
-     "claim": "Neonatal Graves disease has suppressed TSH, high T4, tachycardia and hyperphagia.",
+     "claim": "Transplacental TSH (thyroid-stimulating hormone) receptor–stimulating antibody: It causes neonatal Graves, with suppressed TSH, high T4 (thyroxine), tachycardia and hyperphagia.",
      "from": "Neonatal Graves has suppressed TSH, high T4, tachycardia and hyperphagia."
     },
     {
@@ -913,30 +877,1918 @@
   {
    "op": "replace",
    "brief": "congenital-hypothyroid",
-   "find": "Iodine deficiency, endemic goiter: That sentence <b>excludes</b> it: balanced diet plus prenatal vitamins, and all formula contains iodine",
-   "with": "Iodine deficiency, endemic goiter: the balanced maternal diet plus prenatal vitamins excludes it, and all formula contains iodine",
-   "note": "trap: one colon per line; emphasis bold removed",
-   "reworded_bold": [
-    "excludes"
-   ],
+   "find": "That sentence <b>excludes</b> it: balanced diet plus prenatal vitamins, and all formula contains iodine",
+   "with": "The balanced diet plus prenatal vitamins <b>excludes</b> it, and all formula contains iodine",
+   "note": "round 2 voice: trap line; one colon per line",
    "claims": [
     {
-     "claim": "The maternal diet sentence (balanced diet plus prenatal vitamins) excludes iodine deficiency.",
-     "to": "Iodine deficiency, endemic goiter: the balanced maternal diet plus prenatal vitamins excludes it, and all formula contains iodine"
+     "claim": "The maternal diet sentence excludes iodine deficiency.",
+     "to": "The balanced diet plus prenatal vitamins excludes it, and all formula contains iodine"
+    },
+    {
+     "claim": "Balanced diet plus prenatal vitamins.",
+     "to": "The balanced diet plus prenatal vitamins excludes it, and all formula contains iodine"
     },
     {
      "claim": "All formula contains iodine.",
-     "to": "Iodine deficiency, endemic goiter: the balanced maternal diet plus prenatal vitamins excludes it, and all formula contains iodine"
+     "to": "The balanced diet plus prenatal vitamins excludes it, and all formula contains iodine"
     }
    ],
    "new_claims": [
     {
-     "claim": "The balanced maternal diet plus prenatal vitamins excludes iodine deficiency.",
-     "from": "The maternal diet sentence (balanced diet plus prenatal vitamins) excludes iodine deficiency."
+     "claim": "The balanced diet plus prenatal vitamins excludes it, and all formula contains iodine",
+     "from": "The maternal diet sentence excludes iodine deficiency."
     },
     {
      "claim": "All formula contains iodine.",
      "from": "All formula contains iodine."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "The <b>home birth</b> is the stem's most conspicuous detail and it is not a cause — it explains the missed newborn screen and therefore the unusual symptomatic presentation. The <b>maternal diet sentence</b> is a negative clue disguised as a positive one: it exists to kill option B. <b>Primigravida, age 24, unremarkable family history</b> are all inert here, though the absent family history does modestly argue against a recessive enzyme defect.",
+   "with": "The <b>home birth</b> is not a cause. It explains the missed newborn screen and therefore the unusual symptomatic presentation. The balanced <b>maternal diet</b> with prenatal vitamins excludes iodine deficiency. <b>Primigravida, age 24, unremarkable family history</b>: none of these points to a cause, although the absent family history modestly argues against a recessive enzyme defect.",
+   "note": "round 2 voice: Decoy note; removed stem framing and slogans",
+   "reworded_bold": [
+    "maternal diet sentence"
+   ],
+   "claims": [
+    {
+     "claim": "The home birth is the stem's most conspicuous detail.",
+     "dropped": "framing about the stem"
+    },
+    {
+     "claim": "The home birth is not a cause.",
+     "to": "The home birth is not a cause."
+    },
+    {
+     "claim": "It explains the missed newborn screen.",
+     "to": "It explains the missed newborn screen and therefore the unusual symptomatic presentation."
+    },
+    {
+     "claim": "Therefore it explains the unusual symptomatic presentation.",
+     "to": "It explains the missed newborn screen and therefore the unusual symptomatic presentation."
+    },
+    {
+     "claim": "The maternal diet sentence is a negative clue disguised as a positive one.",
+     "dropped": "framing about the stem; what it excludes is stated"
+    },
+    {
+     "claim": "The maternal diet sentence exists to kill option B (iodine deficiency).",
+     "to": "The balanced maternal diet with prenatal vitamins excludes iodine deficiency."
+    },
+    {
+     "claim": "Primigravida, age 24, unremarkable family history are all inert here.",
+     "to": "Primigravida, age 24, unremarkable family history: none of these points to a cause, although the absent family history modestly argues against a recessive enzyme defect."
+    },
+    {
+     "claim": "The absent family history modestly argues against a recessive enzyme defect.",
+     "to": "Primigravida, age 24, unremarkable family history: none of these points to a cause, although the absent family history modestly argues against a recessive enzyme defect."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The home birth is not a cause.",
+     "from": "The home birth is not a cause."
+    },
+    {
+     "claim": "It explains the missed newborn screen and therefore the unusual symptomatic presentation.",
+     "from": "It explains the missed newborn screen."
+    },
+    {
+     "claim": "The balanced maternal diet with prenatal vitamins excludes iodine deficiency.",
+     "from": "The maternal diet sentence exists to kill option B (iodine deficiency)."
+    },
+    {
+     "claim": "Primigravida, age 24, unremarkable family history: none of these points to a cause, although the absent family history modestly argues against a recessive enzyme defect.",
+     "from": "Primigravida, age 24, unremarkable family history are all inert here."
+    },
+    {
+     "claim": "The absent family history modestly argues against a recessive enzyme defect.",
+     "from": "The absent family history modestly argues against a recessive enzyme defect."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "the visible lesion plus the organ pattern settles it",
+   "with": "Identify the syndrome from the visible lesion and the organ pattern",
+   "note": "round 2 voice: subtitle; removed slogan",
+   "claims": [
+    {
+     "claim": "The visible lesion plus the organ pattern settles the diagnosis.",
+     "to": "Identify the syndrome from the visible lesion and the organ pattern"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Identify the syndrome from the visible lesion and the organ pattern.",
+     "from": "The visible lesion plus the organ pattern settles the diagnosis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<p>The stem names the lesion for you: <b>retinal hemangioblastoma</b>, bilateral. That single identification closes the question, because no other option on the list produces one — NF1 gives optic gliomas and Lisch nodules, MEN2B gives conjunctival and corneal neuromas, Sturge-Weber gives a leptomeningeal and choroidal vascular malformation, and Li-Fraumeni gives sarcomas with no characteristic eye finding. The <b>mother's resected adrenal tumor</b> is the second half of the answer rather than a decoy: it reads as a pheochromocytoma transmitted in autosomal dominant fashion, and hemangioblastoma plus adrenal medullary tumor is the <b>von Hippel-Lindau</b> organ pattern, with clear cell renal carcinoma the third member. The facial patch is what the question is actually testing — a single <b>light brown</b> macule is a normal café-au-lait spot, not the multiple macules of NF1 and not a red-purple port-wine stain.</p>\n<p>The same move works on a different lesion. A teenager found confused after an unwitnessed fall, with a <b>fibroma growing from under a toenail</b> and <b>calcified nodules lining the lateral ventricles</b> on CT, has <b>tuberous sclerosis complex</b>: the fall was a seizure, the nodules are subependymal hamartomas, and the nail lesion is a <b>periungual fibroma</b>, which appears in adolescence. NF1 puts neurofibromas on the trunk and a glioma on the optic nerve, ataxia-telangiectasia starts with ataxia in early childhood, and the nail-bed sign of endocarditis is a splinter hemorrhage, not a fibroma.</p>",
+   "with": "<p>Bilateral <b>retinal hemangioblastoma</b> points to von Hippel-Lindau, because no other listed syndrome produces one. <b>NF1</b> (neurofibromatosis type 1) gives optic gliomas and Lisch nodules. <b>MEN2B</b> (multiple endocrine neoplasia type 2B) gives conjunctival and corneal neuromas. Sturge-Weber gives a leptomeningeal and choroidal vascular malformation. Li-Fraumeni gives sarcomas with no characteristic eye finding. The <b>mother's resected adrenal tumor</b> reads as a pheochromocytoma transmitted in autosomal dominant fashion. Hemangioblastoma plus adrenal medullary tumor is the <b>von Hippel-Lindau</b> organ pattern, with clear cell renal carcinoma the third member. A single <b>light brown</b> facial macule is a normal café-au-lait spot. It is not the multiple macules of NF1 and not a red-purple port-wine stain.</p>\n<p>Consider a teenager found confused after an unwitnessed fall. A <b>fibroma growing from under a toenail</b> and <b>calcified nodules lining the lateral ventricles</b> on <b>CT</b> (computed tomography) indicate <b>tuberous sclerosis complex</b>. The fall was a seizure, and the nodules are subependymal hamartomas. The nail lesion is a <b>periungual fibroma</b>, which appears in adolescence. NF1 puts neurofibromas on the trunk and a glioma on the optic nerve. Ataxia-telangiectasia starts with ataxia in early childhood. The nail-bed sign of endocarditis is a splinter hemorrhage, not a fibroma.</p>",
+   "note": "round 2 voice: .dp; removed stem and question framing and em dashes, split sentences, expanded acronyms",
+   "claims": [
+    {
+     "claim": "The stem names the lesion for you.",
+     "dropped": "framing about the stem; the lesion is stated"
+    },
+    {
+     "claim": "The lesion is a bilateral retinal hemangioblastoma.",
+     "to": "Bilateral retinal hemangioblastoma points to von Hippel-Lindau, because no other listed syndrome produces one."
+    },
+    {
+     "claim": "That single identification closes the question, because no other option on the list produces one.",
+     "to": "Bilateral retinal hemangioblastoma points to von Hippel-Lindau, because no other listed syndrome produces one."
+    },
+    {
+     "claim": "NF1 gives optic gliomas and Lisch nodules.",
+     "to": "NF1 (neurofibromatosis type 1) gives optic gliomas and Lisch nodules."
+    },
+    {
+     "claim": "MEN2B gives conjunctival and corneal neuromas.",
+     "to": "MEN2B (multiple endocrine neoplasia type 2B) gives conjunctival and corneal neuromas."
+    },
+    {
+     "claim": "Sturge-Weber gives a leptomeningeal and choroidal vascular malformation.",
+     "to": "Sturge-Weber gives a leptomeningeal and choroidal vascular malformation."
+    },
+    {
+     "claim": "Li-Fraumeni gives sarcomas with no characteristic eye finding.",
+     "to": "Li-Fraumeni gives sarcomas with no characteristic eye finding."
+    },
+    {
+     "claim": "The mother's resected adrenal tumor is the second half of the answer rather than a decoy.",
+     "dropped": "framing about the answer and decoys; its role in the organ pattern is stated"
+    },
+    {
+     "claim": "The mother's tumor reads as a pheochromocytoma transmitted in autosomal dominant fashion.",
+     "to": "The mother's resected adrenal tumor reads as a pheochromocytoma transmitted in autosomal dominant fashion."
+    },
+    {
+     "claim": "Hemangioblastoma plus adrenal medullary tumor is the von Hippel-Lindau organ pattern.",
+     "to": "Hemangioblastoma plus adrenal medullary tumor is the von Hippel-Lindau organ pattern, with clear cell renal carcinoma the third member."
+    },
+    {
+     "claim": "Clear cell renal carcinoma is the third member.",
+     "to": "Hemangioblastoma plus adrenal medullary tumor is the von Hippel-Lindau organ pattern, with clear cell renal carcinoma the third member."
+    },
+    {
+     "claim": "The facial patch is what the question is really about.",
+     "dropped": "framing about the question"
+    },
+    {
+     "claim": "A single light brown macule is a normal café-au-lait spot.",
+     "to": "A single light brown facial macule is a normal café-au-lait spot."
+    },
+    {
+     "claim": "It is not the multiple macules of NF1 and not a red-purple port-wine stain.",
+     "to": "It is not the multiple macules of NF1 and not a red-purple port-wine stain."
+    },
+    {
+     "claim": "The same move works on a different lesion.",
+     "dropped": "filler transition"
+    },
+    {
+     "claim": "A teenager is found confused after an unwitnessed fall.",
+     "to": "Consider a teenager found confused after an unwitnessed fall."
+    },
+    {
+     "claim": "With a fibroma growing from under a toenail and calcified nodules lining the lateral ventricles on CT, the teenager has tuberous sclerosis complex.",
+     "to": "A fibroma growing from under a toenail and calcified nodules lining the lateral ventricles on CT (computed tomography) indicate tuberous sclerosis complex."
+    },
+    {
+     "claim": "The fall was a seizure.",
+     "to": "The fall was a seizure, and the nodules are subependymal hamartomas."
+    },
+    {
+     "claim": "The nodules are subependymal hamartomas.",
+     "to": "The fall was a seizure, and the nodules are subependymal hamartomas."
+    },
+    {
+     "claim": "The nail lesion is a periungual fibroma, which appears in adolescence.",
+     "to": "The nail lesion is a periungual fibroma, which appears in adolescence."
+    },
+    {
+     "claim": "NF1 puts neurofibromas on the trunk and a glioma on the optic nerve.",
+     "to": "NF1 puts neurofibromas on the trunk and a glioma on the optic nerve."
+    },
+    {
+     "claim": "Ataxia-telangiectasia starts with ataxia in early childhood.",
+     "to": "Ataxia-telangiectasia starts with ataxia in early childhood."
+    },
+    {
+     "claim": "The nail-bed sign of endocarditis is a splinter hemorrhage, not a fibroma.",
+     "to": "The nail-bed sign of endocarditis is a splinter hemorrhage, not a fibroma."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Bilateral retinal hemangioblastoma points to von Hippel-Lindau, because no other listed syndrome produces one.",
+     "from": "That single identification closes the question, because no other option on the list produces one."
+    },
+    {
+     "claim": "NF1 stands for neurofibromatosis type 1.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MEN2B stands for multiple endocrine neoplasia type 2B.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CT stands for computed tomography.",
+     "from": "expansion"
+    },
+    {
+     "claim": "NF1 (neurofibromatosis type 1) gives optic gliomas and Lisch nodules.",
+     "from": "NF1 gives optic gliomas and Lisch nodules."
+    },
+    {
+     "claim": "MEN2B (multiple endocrine neoplasia type 2B) gives conjunctival and corneal neuromas.",
+     "from": "MEN2B gives conjunctival and corneal neuromas."
+    },
+    {
+     "claim": "Sturge-Weber gives a leptomeningeal and choroidal vascular malformation.",
+     "from": "Sturge-Weber gives a leptomeningeal and choroidal vascular malformation."
+    },
+    {
+     "claim": "Li-Fraumeni gives sarcomas with no characteristic eye finding.",
+     "from": "Li-Fraumeni gives sarcomas with no characteristic eye finding."
+    },
+    {
+     "claim": "The mother's resected adrenal tumor reads as a pheochromocytoma transmitted in autosomal dominant fashion.",
+     "from": "The mother's tumor reads as a pheochromocytoma transmitted in autosomal dominant fashion."
+    },
+    {
+     "claim": "Hemangioblastoma plus adrenal medullary tumor is the von Hippel-Lindau organ pattern, with clear cell renal carcinoma the third member.",
+     "from": "Hemangioblastoma plus adrenal medullary tumor is the von Hippel-Lindau organ pattern."
+    },
+    {
+     "claim": "A single light brown facial macule is a normal café-au-lait spot.",
+     "from": "A single light brown macule is a normal café-au-lait spot."
+    },
+    {
+     "claim": "It is not the multiple macules of NF1 and not a red-purple port-wine stain.",
+     "from": "It is not the multiple macules of NF1 and not a red-purple port-wine stain."
+    },
+    {
+     "claim": "Consider a teenager found confused after an unwitnessed fall.",
+     "from": "A teenager is found confused after an unwitnessed fall."
+    },
+    {
+     "claim": "A fibroma growing from under a toenail and calcified nodules lining the lateral ventricles on CT (computed tomography) indicate tuberous sclerosis complex.",
+     "from": "With a fibroma growing from under a toenail and calcified nodules lining the lateral ventricles on CT, the teenager has tuberous sclerosis complex."
+    },
+    {
+     "claim": "The fall was a seizure, and the nodules are subependymal hamartomas.",
+     "from": "The fall was a seizure."
+    },
+    {
+     "claim": "The nail lesion is a periungual fibroma, which appears in adolescence.",
+     "from": "The nail lesion is a periungual fibroma, which appears in adolescence."
+    },
+    {
+     "claim": "NF1 puts neurofibromas on the trunk and a glioma on the optic nerve.",
+     "from": "NF1 puts neurofibromas on the trunk and a glioma on the optic nerve."
+    },
+    {
+     "claim": "Ataxia-telangiectasia starts with ataxia in early childhood.",
+     "from": "Ataxia-telangiectasia starts with ataxia in early childhood."
+    },
+    {
+     "claim": "The nail-bed sign of endocarditis is a splinter hemorrhage, not a fibroma.",
+     "from": "The nail-bed sign of endocarditis is a splinter hemorrhage, not a fibroma."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "essentially syndrome-defining; retinal hemangioblastoma may be the first neoplasm of VHL and by itself triggers gene testing &middot; <b>Mother's adrenal tumor removed</b> &mdash; pheochromocytoma in a first-degree relative; autosomal dominant transmission, and the second organ of the VHL pattern &middot; <b>A single light brown 4-cm patch</b> &mdash; one café-au-lait macule, a normal finding; it is neither NF1's multiplicity nor Sturge-Weber's color &middot; <b>Age 16 with painless progressive blurring</b> &mdash; VHL can present at any age but usually declares in early adulthood; vision falls from retinal edema and distortion &middot; <b>BP 110/72 and an otherwise normal examination</b> &mdash; no clinically active pheochromocytoma today, which does not exclude one and is precisely why surveillance exists",
+   "with": "essentially syndrome-defining; retinal hemangioblastoma may be the first neoplasm of <b>VHL</b> (von Hippel-Lindau) and by itself triggers gene testing &middot; <b>Mother's adrenal tumor removed</b> &mdash; pheochromocytoma in a first-degree relative; autosomal dominant transmission, and the second organ of the VHL pattern &middot; <b>A single light brown 4-cm patch</b> &mdash; one café-au-lait macule, a normal finding, lacking the multiplicity of <b>NF1</b> (neurofibromatosis type 1) and the color of Sturge-Weber &middot; <b>Age 16 with painless progressive blurring</b> &mdash; VHL can present at any age but usually presents in early adulthood. Vision falls from retinal edema and distortion &middot; <b>BP 110/72 and an otherwise normal examination</b> &mdash; no clinically active pheochromocytoma today, which does not exclude one and is why surveillance is needed",
+   "note": "round 2 voice: Pertinent positives & negatives; replaced personification and emphasis, expanded acronyms (structural rows kept)",
+   "claims": [
+    {
+     "claim": "Bilateral retinal hemangioblastomas are essentially syndrome-defining.",
+     "to": "essentially syndrome-defining; retinal hemangioblastoma may be the first neoplasm of VHL (von Hippel-Lindau) and by itself triggers gene testing"
+    },
+    {
+     "claim": "Retinal hemangioblastoma may be the first neoplasm of VHL.",
+     "to": "essentially syndrome-defining; retinal hemangioblastoma may be the first neoplasm of VHL (von Hippel-Lindau) and by itself triggers gene testing"
+    },
+    {
+     "claim": "Retinal hemangioblastoma by itself triggers gene testing.",
+     "to": "essentially syndrome-defining; retinal hemangioblastoma may be the first neoplasm of VHL (von Hippel-Lindau) and by itself triggers gene testing"
+    },
+    {
+     "claim": "Mother's adrenal tumor removed means pheochromocytoma in a first-degree relative.",
+     "to": "pheochromocytoma in a first-degree relative; autosomal dominant transmission, and the second organ of the VHL pattern"
+    },
+    {
+     "claim": "It shows autosomal dominant transmission and is the second organ of the VHL pattern.",
+     "to": "pheochromocytoma in a first-degree relative; autosomal dominant transmission, and the second organ of the VHL pattern"
+    },
+    {
+     "claim": "A single light brown 4-cm patch is one café-au-lait macule, a normal finding.",
+     "to": "one café-au-lait macule, a normal finding, lacking the multiplicity of NF1 (neurofibromatosis type 1) and the color of Sturge-Weber"
+    },
+    {
+     "claim": "It is neither NF1's multiplicity nor Sturge-Weber's color.",
+     "to": "one café-au-lait macule, a normal finding, lacking the multiplicity of NF1 (neurofibromatosis type 1) and the color of Sturge-Weber"
+    },
+    {
+     "claim": "VHL can present at any age but usually declares in early adulthood.",
+     "to": "VHL can present at any age but usually presents in early adulthood. Vision falls from retinal edema and distortion"
+    },
+    {
+     "claim": "Vision falls from retinal edema and distortion.",
+     "to": "VHL can present at any age but usually presents in early adulthood. Vision falls from retinal edema and distortion"
+    },
+    {
+     "claim": "BP 110/72 and an otherwise normal examination mean no clinically active pheochromocytoma today.",
+     "to": "no clinically active pheochromocytoma today, which does not exclude one and is why surveillance is needed"
+    },
+    {
+     "claim": "That does not exclude one.",
+     "to": "no clinically active pheochromocytoma today, which does not exclude one and is why surveillance is needed"
+    },
+    {
+     "claim": "That is precisely why surveillance exists.",
+     "to": "no clinically active pheochromocytoma today, which does not exclude one and is why surveillance is needed"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "VHL stands for von Hippel-Lindau.",
+     "from": "expansion"
+    },
+    {
+     "claim": "NF1 stands for neurofibromatosis type 1.",
+     "from": "expansion"
+    },
+    {
+     "claim": "essentially syndrome-defining; retinal hemangioblastoma may be the first neoplasm of VHL (von Hippel-Lindau) and by itself triggers gene testing",
+     "from": "Bilateral retinal hemangioblastomas are essentially syndrome-defining."
+    },
+    {
+     "claim": "essentially syndrome-defining; retinal hemangioblastoma may be the first neoplasm of VHL (von Hippel-Lindau) and by itself triggers gene testing",
+     "from": "Retinal hemangioblastoma may be the first neoplasm of VHL."
+    },
+    {
+     "claim": "pheochromocytoma in a first-degree relative; autosomal dominant transmission, and the second organ of the VHL pattern",
+     "from": "Mother's adrenal tumor removed means pheochromocytoma in a first-degree relative."
+    },
+    {
+     "claim": "one café-au-lait macule, a normal finding, lacking the multiplicity of NF1 (neurofibromatosis type 1) and the color of Sturge-Weber",
+     "from": "A single light brown 4-cm patch is one café-au-lait macule, a normal finding."
+    },
+    {
+     "claim": "one café-au-lait macule, a normal finding, lacking the multiplicity of NF1 (neurofibromatosis type 1) and the color of Sturge-Weber",
+     "from": "It is neither NF1's multiplicity nor Sturge-Weber's color."
+    },
+    {
+     "claim": "VHL can present at any age but usually presents in early adulthood.",
+     "from": "VHL can present at any age but usually declares in early adulthood."
+    },
+    {
+     "claim": "Vision falls from retinal edema and distortion.",
+     "from": "Vision falls from retinal edema and distortion."
+    },
+    {
+     "claim": "No clinically active pheochromocytoma today.",
+     "from": "BP 110/72 and an otherwise normal examination mean no clinically active pheochromocytoma today."
+    },
+    {
+     "claim": "no clinically active pheochromocytoma today, which does not exclude one and is why surveillance is needed",
+     "from": "That does not exclude one."
+    },
+    {
+     "claim": "no clinically active pheochromocytoma today, which does not exclude one and is why surveillance is needed",
+     "from": "That is precisely why surveillance exists."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Management is not this question's fork, so in one sentence: confirm with <b>VHL gene testing</b>, then enter lifelong <b>surveillance</b> — retinal examination, plasma or urine metanephrines, MRI of brain and spine, MRI of abdomen — with resection of tumors as they appear and <b>laser therapy</b> as the preferred treatment for the retinal lesions <i>(all in-context)</i>.",
+   "with": "Confirm with <b>VHL gene testing</b> (VHL: von Hippel-Lindau). Then begin lifelong <b>surveillance</b>: retinal examination, plasma or urine metanephrines, <b>MRI</b> (magnetic resonance imaging) of brain and spine, and MRI of abdomen. Resect tumors as they appear. For the retinal lesions, <b>laser therapy</b> is the preferred treatment.",
+   "note": "round 2 voice: danger; removed framing opener, em dashes and provenance tag, split sentence, expanded acronyms",
+   "claims": [
+    {
+     "claim": "Management is not this question's fork.",
+     "dropped": "framing about the question"
+    },
+    {
+     "claim": "Confirm with VHL gene testing.",
+     "to": "Confirm with VHL gene testing (VHL: von Hippel-Lindau)."
+    },
+    {
+     "claim": "Then enter lifelong surveillance.",
+     "to": "Then begin lifelong surveillance: retinal examination, plasma or urine metanephrines, MRI (magnetic resonance imaging) of brain and spine, and MRI of abdomen."
+    },
+    {
+     "claim": "Surveillance is retinal examination, plasma or urine metanephrines, MRI of brain and spine, MRI of abdomen.",
+     "to": "Then begin lifelong surveillance: retinal examination, plasma or urine metanephrines, MRI (magnetic resonance imaging) of brain and spine, and MRI of abdomen."
+    },
+    {
+     "claim": "Resect tumors as they appear.",
+     "to": "Resect tumors as they appear."
+    },
+    {
+     "claim": "Laser therapy is the preferred treatment for the retinal lesions.",
+     "to": "For the retinal lesions, laser therapy is the preferred treatment."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "VHL stands for von Hippel-Lindau.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MRI stands for magnetic resonance imaging.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Confirm with VHL gene testing.",
+     "from": "Confirm with VHL gene testing."
+    },
+    {
+     "claim": "Then begin lifelong surveillance.",
+     "from": "Then enter lifelong surveillance."
+    },
+    {
+     "claim": "Then begin lifelong surveillance: retinal examination, plasma or urine metanephrines, MRI (magnetic resonance imaging) of brain and spine, and MRI of abdomen.",
+     "from": "Surveillance is retinal examination, plasma or urine metanephrines, MRI of brain and spine, MRI of abdomen."
+    },
+    {
+     "claim": "Resect tumors as they appear.",
+     "from": "Resect tumors as they appear."
+    },
+    {
+     "claim": "For the retinal lesions, laser therapy is the preferred treatment.",
+     "from": "Laser therapy is the preferred treatment for the retinal lesions."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Hemangioblastoma → VHL, and stop reading options &middot; <b>If it is a different eye lesion:</b> &mdash; optic glioma or Lisch nodules → NF1; conjunctival neuromas → MEN2B; glaucoma with a choroidal malformation → Sturge-Weber &middot; <b>Read the skin patch's color.</b> &mdash; Light brown pigmented = café-au-lait; red-purple vascular = port-wine &middot; <b>Count the skin lesions.</b> &mdash; One café-au-lait macule is normal; multiple plus axillary freckling is NF1 &middot; <b>Read the family's tumor for its organ.</b> &mdash; Adrenal medulla with kidney and CNS → VHL; adrenal medulla with thyroid → MEN2",
+   "with": "Hemangioblastoma → <b>VHL</b> (von Hippel-Lindau) &middot; <b>If it is a different eye lesion:</b> &mdash; optic glioma or Lisch nodules point to <b>NF1</b> (neurofibromatosis type 1). Conjunctival neuromas point to <b>MEN2B</b> (multiple endocrine neoplasia type 2B). Glaucoma with a choroidal malformation points to Sturge-Weber &middot; <b>Read the skin patch's color.</b> &mdash; Light brown pigmented = café-au-lait; red-purple vascular = port-wine &middot; <b>Count the skin lesions.</b> &mdash; One café-au-lait macule is normal; multiple plus axillary freckling is NF1 &middot; <b>Read the family's tumor for its organ.</b> &mdash; Adrenal medulla with kidney and <b>CNS</b> (central nervous system) points to VHL. Adrenal medulla with thyroid points to <b>MEN2</b> (multiple endocrine neoplasia type 2)",
+   "note": "round 2 voice: Decision spine; removed 'stop reading options', one arrow per sentence, expanded acronyms (structural rows kept)",
+   "claims": [
+    {
+     "claim": "Hemangioblastoma means VHL.",
+     "to": "Hemangioblastoma → VHL (von Hippel-Lindau)"
+    },
+    {
+     "claim": "Stop reading options.",
+     "dropped": "framing about the options"
+    },
+    {
+     "claim": "Optic glioma or Lisch nodules mean NF1.",
+     "to": "optic glioma or Lisch nodules point to NF1 (neurofibromatosis type 1). Conjunctival neuromas point to MEN2B (multiple endocrine neoplasia type 2B). Glaucoma with a choroidal malformation points to Sturge-Weber"
+    },
+    {
+     "claim": "Conjunctival neuromas mean MEN2B.",
+     "to": "optic glioma or Lisch nodules point to NF1 (neurofibromatosis type 1). Conjunctival neuromas point to MEN2B (multiple endocrine neoplasia type 2B). Glaucoma with a choroidal malformation points to Sturge-Weber"
+    },
+    {
+     "claim": "Glaucoma with a choroidal malformation means Sturge-Weber.",
+     "to": "optic glioma or Lisch nodules point to NF1 (neurofibromatosis type 1). Conjunctival neuromas point to MEN2B (multiple endocrine neoplasia type 2B). Glaucoma with a choroidal malformation points to Sturge-Weber"
+    },
+    {
+     "claim": "Light brown pigmented is café-au-lait; red-purple vascular is port-wine.",
+     "to": "Light brown pigmented = café-au-lait; red-purple vascular = port-wine"
+    },
+    {
+     "claim": "One café-au-lait macule is normal; multiple plus axillary freckling is NF1.",
+     "to": "One café-au-lait macule is normal; multiple plus axillary freckling is NF1"
+    },
+    {
+     "claim": "Adrenal medulla with kidney and CNS means VHL.",
+     "to": "Adrenal medulla with kidney and CNS (central nervous system) points to VHL. Adrenal medulla with thyroid points to MEN2 (multiple endocrine neoplasia type 2)"
+    },
+    {
+     "claim": "Adrenal medulla with thyroid means MEN2.",
+     "to": "Adrenal medulla with kidney and CNS (central nervous system) points to VHL. Adrenal medulla with thyroid points to MEN2 (multiple endocrine neoplasia type 2)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "VHL stands for von Hippel-Lindau.",
+     "from": "expansion"
+    },
+    {
+     "claim": "NF1 stands for neurofibromatosis type 1.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MEN2B stands for multiple endocrine neoplasia type 2B.",
+     "from": "expansion"
+    },
+    {
+     "claim": "CNS stands for central nervous system.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MEN2 stands for multiple endocrine neoplasia type 2.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Hemangioblastoma → VHL (von Hippel-Lindau)",
+     "from": "Hemangioblastoma means VHL."
+    },
+    {
+     "claim": "Optic glioma or Lisch nodules point to NF1.",
+     "from": "Optic glioma or Lisch nodules mean NF1."
+    },
+    {
+     "claim": "Conjunctival neuromas point to MEN2B.",
+     "from": "Conjunctival neuromas mean MEN2B."
+    },
+    {
+     "claim": "Glaucoma with a choroidal malformation points to Sturge-Weber.",
+     "from": "Glaucoma with a choroidal malformation means Sturge-Weber."
+    },
+    {
+     "claim": "Light brown pigmented = café-au-lait; red-purple vascular = port-wine",
+     "from": "Light brown pigmented is café-au-lait; red-purple vascular is port-wine."
+    },
+    {
+     "claim": "One café-au-lait macule is normal; multiple plus axillary freckling is NF1.",
+     "from": "One café-au-lait macule is normal; multiple plus axillary freckling is NF1."
+    },
+    {
+     "claim": "Adrenal medulla with kidney and CNS points to VHL.",
+     "from": "Adrenal medulla with kidney and CNS means VHL."
+    },
+    {
+     "claim": "Adrenal medulla with thyroid points to MEN2.",
+     "from": "Adrenal medulla with thyroid means MEN2."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Retinal hemangioblastoma is von Hippel-Lindau until gene testing says otherwise; the pheochromocytoma and clear cell renal carcinoma follow. &middot; A retinal or cerebellar hemangioblastoma is a referral to genetics by itself — VHL testing follows the lesion, with or without a family history. &middot; Let the eye lesion name the syndrome: hemangioblastoma → VHL · optic glioma with Lisch nodules → NF1 · conjunctival and corneal neuromas → MEN2B · choroidal malformation with glaucoma → Sturge-Weber. &middot; Read a patch's color, not merely its presence: light brown pigmented is café-au-lait, red-purple vascular is port-wine, and they belong to different syndromes. &middot; VHL's organs are its surveillance list — retina, brain and spine, adrenal medulla, kidney — which is why the follow-up is an eye exam, metanephrines, and two MRIs. &middot; Any pheochromocytoma in a young patient or with a family history is syndromic until proven otherwise: VHL, MEN2, NF1, or a hereditary paraganglioma gene ⚠︎. &middot; Before resecting a pheochromocytoma, alpha blockade precedes beta blockade; reversing the order leaves alpha stimulation unopposed ⚠︎.",
+   "with": "Retinal hemangioblastoma is von Hippel-Lindau until gene testing says otherwise; the pheochromocytoma and clear cell renal carcinoma follow. &middot; A retinal or cerebellar hemangioblastoma by itself warrants referral to genetics. <b>VHL</b> (von Hippel-Lindau) testing follows the lesion, with or without a family history. &middot; Eye lesions by syndrome: hemangioblastoma → VHL · optic glioma with Lisch nodules → <b>NF1</b> (neurofibromatosis type 1) · conjunctival and corneal neuromas → <b>MEN2B</b> (multiple endocrine neoplasia type 2B) · choroidal malformation with glaucoma → Sturge-Weber. &middot; Read a patch's color, not merely its presence. Light brown pigmented is café-au-lait, red-purple vascular is port-wine, and they belong to different syndromes. &middot; VHL surveillance covers its organs: retina, brain and spine, adrenal medulla and kidney. The follow-up is therefore an eye exam, metanephrines, and two <b>MRI</b> (magnetic resonance imaging) scans. &middot; Any pheochromocytoma in a young patient or with a family history is syndromic until proven otherwise. The syndromes are VHL, <b>MEN2</b> (multiple endocrine neoplasia type 2), NF1, or a hereditary paraganglioma gene ⚠︎. &middot; Before resecting a pheochromocytoma, alpha blockade precedes beta blockade; reversing the order leaves alpha stimulation unopposed ⚠︎.",
+   "note": "round 2 voice: Pearls; removed em dashes and personification, split sentences, expanded acronyms; How NBME framed it untouched",
+   "claims": [
+    {
+     "claim": "Retinal hemangioblastoma is von Hippel-Lindau until gene testing says otherwise.",
+     "to": "Retinal hemangioblastoma is von Hippel-Lindau until gene testing says otherwise; the pheochromocytoma and clear cell renal carcinoma follow."
+    },
+    {
+     "claim": "The pheochromocytoma and clear cell renal carcinoma follow.",
+     "to": "Retinal hemangioblastoma is von Hippel-Lindau until gene testing says otherwise; the pheochromocytoma and clear cell renal carcinoma follow."
+    },
+    {
+     "claim": "A retinal or cerebellar hemangioblastoma is a referral to genetics by itself.",
+     "to": "A retinal or cerebellar hemangioblastoma by itself warrants referral to genetics."
+    },
+    {
+     "claim": "VHL testing follows the lesion, with or without a family history.",
+     "to": "VHL (von Hippel-Lindau) testing follows the lesion, with or without a family history."
+    },
+    {
+     "claim": "Hemangioblastoma → VHL.",
+     "to": "Eye lesions by syndrome: hemangioblastoma → VHL · optic glioma with Lisch nodules → NF1 (neurofibromatosis type 1) · conjunctival and corneal neuromas → MEN2B (multiple endocrine neoplasia type 2B) · choroidal malformation with glaucoma → Sturge-Weber."
+    },
+    {
+     "claim": "Optic glioma with Lisch nodules → NF1.",
+     "to": "Eye lesions by syndrome: hemangioblastoma → VHL · optic glioma with Lisch nodules → NF1 (neurofibromatosis type 1) · conjunctival and corneal neuromas → MEN2B (multiple endocrine neoplasia type 2B) · choroidal malformation with glaucoma → Sturge-Weber."
+    },
+    {
+     "claim": "Conjunctival and corneal neuromas → MEN2B.",
+     "to": "Eye lesions by syndrome: hemangioblastoma → VHL · optic glioma with Lisch nodules → NF1 (neurofibromatosis type 1) · conjunctival and corneal neuromas → MEN2B (multiple endocrine neoplasia type 2B) · choroidal malformation with glaucoma → Sturge-Weber."
+    },
+    {
+     "claim": "Choroidal malformation with glaucoma → Sturge-Weber.",
+     "to": "Eye lesions by syndrome: hemangioblastoma → VHL · optic glioma with Lisch nodules → NF1 (neurofibromatosis type 1) · conjunctival and corneal neuromas → MEN2B (multiple endocrine neoplasia type 2B) · choroidal malformation with glaucoma → Sturge-Weber."
+    },
+    {
+     "claim": "Let the eye lesion name the syndrome.",
+     "dropped": "personification; the lesion-to-syndrome list is kept"
+    },
+    {
+     "claim": "Read a patch's color, not merely its presence.",
+     "to": "Read a patch's color, not merely its presence."
+    },
+    {
+     "claim": "Light brown pigmented is café-au-lait, red-purple vascular is port-wine, and they belong to different syndromes.",
+     "to": "Light brown pigmented is café-au-lait, red-purple vascular is port-wine, and they belong to different syndromes."
+    },
+    {
+     "claim": "VHL's organs are its surveillance list: retina, brain and spine, adrenal medulla, kidney.",
+     "to": "VHL surveillance covers its organs: retina, brain and spine, adrenal medulla and kidney."
+    },
+    {
+     "claim": "That is why the follow-up is an eye exam, metanephrines, and two MRIs.",
+     "to": "The follow-up is therefore an eye exam, metanephrines, and two MRI (magnetic resonance imaging) scans."
+    },
+    {
+     "claim": "Any pheochromocytoma in a young patient or with a family history is syndromic until proven otherwise.",
+     "to": "Any pheochromocytoma in a young patient or with a family history is syndromic until proven otherwise."
+    },
+    {
+     "claim": "The syndromes are VHL, MEN2, NF1, or a hereditary paraganglioma gene (unverified).",
+     "to": "The syndromes are VHL, MEN2 (multiple endocrine neoplasia type 2), NF1, or a hereditary paraganglioma gene ⚠︎."
+    },
+    {
+     "claim": "Before resecting a pheochromocytoma, alpha blockade precedes beta blockade.",
+     "to": "Before resecting a pheochromocytoma, alpha blockade precedes beta blockade; reversing the order leaves alpha stimulation unopposed ⚠︎."
+    },
+    {
+     "claim": "Reversing the order leaves alpha stimulation unopposed (unverified).",
+     "to": "Before resecting a pheochromocytoma, alpha blockade precedes beta blockade; reversing the order leaves alpha stimulation unopposed ⚠︎."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "VHL stands for von Hippel-Lindau.",
+     "from": "expansion"
+    },
+    {
+     "claim": "NF1 stands for neurofibromatosis type 1.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MEN2B stands for multiple endocrine neoplasia type 2B.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MRI stands for magnetic resonance imaging.",
+     "from": "expansion"
+    },
+    {
+     "claim": "MEN2 stands for multiple endocrine neoplasia type 2.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Retinal hemangioblastoma is von Hippel-Lindau until gene testing says otherwise.",
+     "from": "Retinal hemangioblastoma is von Hippel-Lindau until gene testing says otherwise."
+    },
+    {
+     "claim": "The pheochromocytoma and clear cell renal carcinoma follow.",
+     "from": "The pheochromocytoma and clear cell renal carcinoma follow."
+    },
+    {
+     "claim": "A retinal or cerebellar hemangioblastoma by itself warrants referral to genetics.",
+     "from": "A retinal or cerebellar hemangioblastoma is a referral to genetics by itself."
+    },
+    {
+     "claim": "VHL (von Hippel-Lindau) testing follows the lesion, with or without a family history.",
+     "from": "VHL testing follows the lesion, with or without a family history."
+    },
+    {
+     "claim": "Hemangioblastoma → VHL.",
+     "from": "Hemangioblastoma → VHL."
+    },
+    {
+     "claim": "Optic glioma with Lisch nodules → NF1.",
+     "from": "Optic glioma with Lisch nodules → NF1."
+    },
+    {
+     "claim": "Conjunctival and corneal neuromas → MEN2B.",
+     "from": "Conjunctival and corneal neuromas → MEN2B."
+    },
+    {
+     "claim": "Choroidal malformation with glaucoma → Sturge-Weber.",
+     "from": "Choroidal malformation with glaucoma → Sturge-Weber."
+    },
+    {
+     "claim": "Read a patch's color, not merely its presence.",
+     "from": "Read a patch's color, not merely its presence."
+    },
+    {
+     "claim": "Light brown pigmented is café-au-lait, red-purple vascular is port-wine, and they belong to different syndromes.",
+     "from": "Light brown pigmented is café-au-lait, red-purple vascular is port-wine, and they belong to different syndromes."
+    },
+    {
+     "claim": "VHL surveillance covers its organs: retina, brain and spine, adrenal medulla and kidney.",
+     "from": "VHL's organs are its surveillance list: retina, brain and spine, adrenal medulla, kidney."
+    },
+    {
+     "claim": "The follow-up is therefore an eye exam, metanephrines, and two MRI scans.",
+     "from": "That is why the follow-up is an eye exam, metanephrines, and two MRIs."
+    },
+    {
+     "claim": "Any pheochromocytoma in a young patient or with a family history is syndromic until proven otherwise.",
+     "from": "Any pheochromocytoma in a young patient or with a family history is syndromic until proven otherwise."
+    },
+    {
+     "claim": "The syndromes are VHL, MEN2 (multiple endocrine neoplasia type 2), NF1, or a hereditary paraganglioma gene ⚠︎.",
+     "from": "The syndromes are VHL, MEN2, NF1, or a hereditary paraganglioma gene (unverified)."
+    },
+    {
+     "claim": "Before resecting a pheochromocytoma, alpha blockade precedes beta blockade.",
+     "from": "Before resecting a pheochromocytoma, alpha blockade precedes beta blockade."
+    },
+    {
+     "claim": "Before resecting a pheochromocytoma, alpha blockade precedes beta blockade; reversing the order leaves alpha stimulation unopposed ⚠︎.",
+     "from": "Reversing the order leaves alpha stimulation unopposed (unverified)."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Verified: Part I <b>Secondary Hypertension</b> owns pheochromocytoma from the blood-pressure side — the same tumor reached from a different complaint. Store the discriminator as a question: <i>is the pheochromocytoma isolated, or is it one organ of a syndrome?</i> Candidate twin — confirm: a brief on the neurocutaneous syndromes as a set (NF1, NF2, tuberous sclerosis, Sturge-Weber) does not exist yet; this brief wants it, and would hand off the non-tumor phakomatoses to it. Part I <b>Precocious Puberty</b> supplies the border and distribution attributes of the café-au-lait gate. Part II <b>Abdominal Mass in a Young Child</b> owns the mass itself: is it within the kidney, and is the child older than 2? Part I <b>The Immunoglobulin Panel</b> owns ataxia-telangiectasia and its infections; ask: is the skin lesion vascular, or a fibrous tumor? Part I <b>Sellar and Suprasellar Masses</b> owns optic pathway glioma and craniopharyngioma as masses; ask: does the visual field loss come from the optic nerve or from the sella?",
+   "with": "Part I <b>Secondary Hypertension</b> covers pheochromocytoma from the blood-pressure side, reaching the same tumor from a different complaint. Ask: <i>is the pheochromocytoma isolated, or is it one organ of a syndrome?</i> Related conditions without their own brief: the neurocutaneous syndromes as a set, namely NF1 (neurofibromatosis type 1), NF2 (neurofibromatosis type 2), tuberous sclerosis and Sturge-Weber. Part I <b>Precocious Puberty</b> covers the border and distribution attributes of café-au-lait macules. Part II <b>Abdominal Mass in a Young Child</b> covers the mass itself. Ask: is it within the kidney, and is the child older than 2? Part I <b>The Immunoglobulin Panel</b> covers ataxia-telangiectasia and its infections. Ask: is the skin lesion vascular, or a fibrous tumor? Part I <b>Sellar and Suprasellar Masses</b> covers optic pathway glioma and craniopharyngioma as masses. Ask: does the visual field loss come from the optic nerve or from the sella?",
+   "note": "round 2 voice: Pairs with; removed 'Verified', candidate-twin proposal and em dash, 'owns' -> 'covers'",
+   "claims": [
+    {
+     "claim": "The partner is verified.",
+     "dropped": "workflow text"
+    },
+    {
+     "claim": "Part I Secondary Hypertension owns pheochromocytoma from the blood-pressure side.",
+     "to": "Part I Secondary Hypertension covers pheochromocytoma from the blood-pressure side, reaching the same tumor from a different complaint."
+    },
+    {
+     "claim": "It is the same tumor reached from a different complaint.",
+     "to": "Part I Secondary Hypertension covers pheochromocytoma from the blood-pressure side, reaching the same tumor from a different complaint."
+    },
+    {
+     "claim": "Discriminator: is the pheochromocytoma isolated, or is it one organ of a syndrome?",
+     "to": "Ask: is the pheochromocytoma isolated, or is it one organ of a syndrome?"
+    },
+    {
+     "claim": "A brief on the neurocutaneous syndromes as a set (NF1, NF2, tuberous sclerosis, Sturge-Weber) does not exist yet.",
+     "to": "Related conditions without their own brief: the neurocutaneous syndromes as a set, namely NF1 (neurofibromatosis type 1), NF2 (neurofibromatosis type 2), tuberous sclerosis and Sturge-Weber."
+    },
+    {
+     "claim": "This brief wants the neurocutaneous brief and would hand off the non-tumor phakomatoses to it.",
+     "dropped": "workflow proposal about writing a brief"
+    },
+    {
+     "claim": "Part I Precocious Puberty supplies the border and distribution attributes of the café-au-lait gate.",
+     "to": "Part I Precocious Puberty covers the border and distribution attributes of café-au-lait macules."
+    },
+    {
+     "claim": "Part II Abdominal Mass in a Young Child owns the mass itself.",
+     "to": "Part II Abdominal Mass in a Young Child covers the mass itself."
+    },
+    {
+     "claim": "Ask: is it within the kidney, and is the child older than 2?",
+     "to": "Ask: is it within the kidney, and is the child older than 2?"
+    },
+    {
+     "claim": "Part I The Immunoglobulin Panel owns ataxia-telangiectasia and its infections.",
+     "to": "Part I The Immunoglobulin Panel covers ataxia-telangiectasia and its infections."
+    },
+    {
+     "claim": "Ask: is the skin lesion vascular, or a fibrous tumor?",
+     "to": "Ask: is the skin lesion vascular, or a fibrous tumor?"
+    },
+    {
+     "claim": "Part I Sellar and Suprasellar Masses owns optic pathway glioma and craniopharyngioma as masses.",
+     "to": "Part I Sellar and Suprasellar Masses covers optic pathway glioma and craniopharyngioma as masses."
+    },
+    {
+     "claim": "Ask: does the visual field loss come from the optic nerve or from the sella?",
+     "to": "Ask: does the visual field loss come from the optic nerve or from the sella?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part I Secondary Hypertension covers pheochromocytoma from the blood-pressure side.",
+     "from": "Part I Secondary Hypertension owns pheochromocytoma from the blood-pressure side."
+    },
+    {
+     "claim": "Part I Secondary Hypertension covers pheochromocytoma from the blood-pressure side, reaching the same tumor from a different complaint.",
+     "from": "It is the same tumor reached from a different complaint."
+    },
+    {
+     "claim": "Ask: is the pheochromocytoma isolated, or is it one organ of a syndrome?",
+     "from": "Discriminator: is the pheochromocytoma isolated, or is it one organ of a syndrome?"
+    },
+    {
+     "claim": "NF1 stands for neurofibromatosis type 1.",
+     "from": "expansion"
+    },
+    {
+     "claim": "NF2 stands for neurofibromatosis type 2.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Related conditions without their own brief: the neurocutaneous syndromes as a set, namely NF1 (neurofibromatosis type 1), NF2 (neurofibromatosis type 2), tuberous sclerosis and Sturge-Weber.",
+     "from": "A brief on the neurocutaneous syndromes as a set (NF1, NF2, tuberous sclerosis, Sturge-Weber) does not exist yet."
+    },
+    {
+     "claim": "Part I Precocious Puberty covers the border and distribution attributes of café-au-lait macules.",
+     "from": "Part I Precocious Puberty supplies the border and distribution attributes of the café-au-lait gate."
+    },
+    {
+     "claim": "Part II Abdominal Mass in a Young Child covers the mass itself.",
+     "from": "Part II Abdominal Mass in a Young Child owns the mass itself."
+    },
+    {
+     "claim": "Ask: is it within the kidney, and is the child older than 2?",
+     "from": "Ask: is it within the kidney, and is the child older than 2?"
+    },
+    {
+     "claim": "Part I The Immunoglobulin Panel covers ataxia-telangiectasia and its infections.",
+     "from": "Part I The Immunoglobulin Panel owns ataxia-telangiectasia and its infections."
+    },
+    {
+     "claim": "Ask: is the skin lesion vascular, or a fibrous tumor?",
+     "from": "Ask: is the skin lesion vascular, or a fibrous tumor?"
+    },
+    {
+     "claim": "Part I Sellar and Suprasellar Masses covers optic pathway glioma and craniopharyngioma as masses.",
+     "from": "Part I Sellar and Suprasellar Masses owns optic pathway glioma and craniopharyngioma as masses."
+    },
+    {
+     "claim": "Ask: does the visual field loss come from the optic nerve or from the sella?",
+     "from": "Ask: does the visual field loss come from the optic nerve or from the sella?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "When a syndrome is identified by a visible lesion, the lesion's <b>category</b> is shared across syndromes while its <b>identity</b> is not — so name the tissue and the color before matching, and treat the most conspicuous physical finding as a candidate for being the one that decides nothing.",
+   "with": "When a visible lesion identifies a syndrome, the lesion's <b>category</b> is shared across syndromes, but its <b>identity</b> is not. Name the tissue and the color before matching. The most conspicuous physical finding may be the one that does not discriminate.",
+   "note": "round 2 voice: rule; split sentence, removed em dash and personification",
+   "claims": [
+    {
+     "claim": "When a syndrome is identified by a visible lesion, the lesion's category is shared across syndromes.",
+     "to": "When a visible lesion identifies a syndrome, the lesion's category is shared across syndromes, but its identity is not."
+    },
+    {
+     "claim": "The lesion's identity is not shared across syndromes.",
+     "to": "When a visible lesion identifies a syndrome, the lesion's category is shared across syndromes, but its identity is not."
+    },
+    {
+     "claim": "Name the tissue and the color before matching.",
+     "to": "Name the tissue and the color before matching."
+    },
+    {
+     "claim": "Treat the most conspicuous physical finding as a candidate for being the one that decides nothing.",
+     "to": "The most conspicuous physical finding may be the one that does not discriminate."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a visible lesion identifies a syndrome, the lesion's category is shared across syndromes, but its identity is not.",
+     "from": "When a syndrome is identified by a visible lesion, the lesion's category is shared across syndromes."
+    },
+    {
+     "claim": "When a visible lesion identifies a syndrome, the lesion's category is shared across syndromes, but its identity is not.",
+     "from": "The lesion's identity is not shared across syndromes."
+    },
+    {
+     "claim": "Name the tissue and the color before matching.",
+     "from": "Name the tissue and the color before matching."
+    },
+    {
+     "claim": "The most conspicuous physical finding may be the one that does not discriminate.",
+     "from": "Treat the most conspicuous physical finding as a candidate for being the one that decides nothing."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Nearly two in five readers were captured by one sentence, and it is the skin sentence: the patch pulled 20% toward NF1 and 18% toward Sturge-Weber. Its actual content is a negative — a solitary café-au-lait macule is normal — so the stem's most conspicuous physical finding is the one that decides nothing. The mother's adrenal tumor is the opposite of a decoy: it is half the answer, supplying both the inheritance pattern and the second organ. And the normal blood pressure is inert for the diagnosis while quietly indicating that no pheochromocytoma is active yet.",
+   "with": "The skin patch drew nearly two in five readers: 20% chose <b>NF1</b> (neurofibromatosis type 1) and 18% chose Sturge-Weber. A solitary café-au-lait macule is normal, so this most conspicuous physical finding does not discriminate. The mother's adrenal tumor supplies both the inheritance pattern and the second organ. The normal blood pressure does not help the diagnosis, but it indicates that no pheochromocytoma is active yet.",
+   "note": "round 2 voice: Decoy note; removed personification, em dashes and decoy framing, expanded acronym",
+   "claims": [
+    {
+     "claim": "Nearly two in five readers were captured by the skin sentence.",
+     "to": "The skin patch drew nearly two in five readers: 20% chose NF1 (neurofibromatosis type 1) and 18% chose Sturge-Weber."
+    },
+    {
+     "claim": "The patch pulled 20% toward NF1 and 18% toward Sturge-Weber.",
+     "to": "The skin patch drew nearly two in five readers: 20% chose NF1 (neurofibromatosis type 1) and 18% chose Sturge-Weber."
+    },
+    {
+     "claim": "A solitary café-au-lait macule is normal.",
+     "to": "A solitary café-au-lait macule is normal, so this most conspicuous physical finding does not discriminate."
+    },
+    {
+     "claim": "The stem's most conspicuous physical finding is the one that decides nothing.",
+     "to": "A solitary café-au-lait macule is normal, so this most conspicuous physical finding does not discriminate."
+    },
+    {
+     "claim": "The mother's adrenal tumor is the opposite of a decoy: half the answer.",
+     "dropped": "framing about decoys and the answer; what the tumor supplies is kept"
+    },
+    {
+     "claim": "The mother's adrenal tumor supplies both the inheritance pattern and the second organ.",
+     "to": "The mother's adrenal tumor supplies both the inheritance pattern and the second organ."
+    },
+    {
+     "claim": "The normal blood pressure is inert for the diagnosis.",
+     "to": "The normal blood pressure does not help the diagnosis, but it indicates that no pheochromocytoma is active yet."
+    },
+    {
+     "claim": "The normal blood pressure indicates that no pheochromocytoma is active yet.",
+     "to": "The normal blood pressure does not help the diagnosis, but it indicates that no pheochromocytoma is active yet."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The skin patch drew nearly two in five readers.",
+     "from": "Nearly two in five readers were captured by the skin sentence."
+    },
+    {
+     "claim": "NF1 stands for neurofibromatosis type 1.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The skin patch drew nearly two in five readers: 20% chose NF1 (neurofibromatosis type 1) and 18% chose Sturge-Weber.",
+     "from": "The patch pulled 20% toward NF1 and 18% toward Sturge-Weber."
+    },
+    {
+     "claim": "A solitary café-au-lait macule is normal.",
+     "from": "A solitary café-au-lait macule is normal."
+    },
+    {
+     "claim": "This most conspicuous physical finding does not discriminate.",
+     "from": "The stem's most conspicuous physical finding is the one that decides nothing."
+    },
+    {
+     "claim": "The mother's adrenal tumor supplies both the inheritance pattern and the second organ.",
+     "from": "The mother's adrenal tumor supplies both the inheritance pattern and the second organ."
+    },
+    {
+     "claim": "The normal blood pressure does not help the diagnosis.",
+     "from": "The normal blood pressure is inert for the diagnosis."
+    },
+    {
+     "claim": "It indicates that no pheochromocytoma is active yet.",
+     "from": "The normal blood pressure indicates that no pheochromocytoma is active yet."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "Two café-au-lait macules sit between the isolated-is-normal rule and NF1&rsquo;s six, so a reader carrying only a count rule lands on NF1 &mdash; the border, the segmental distribution and the absent freckling all say otherwise.",
+   "with": "Neurofibromatosis type 1, for two café-au-lait macules: Two macules sit between the isolated-is-normal rule and the six of NF1. A count rule alone therefore lands on NF1. The border, the segmental distribution and the absent freckling all argue against it.",
+   "note": "round 2 voice: trap as 'Option: why'; removed em dash, split sentences, expanded acronym",
+   "claims": [
+    {
+     "claim": "Two café-au-lait macules sit between the isolated-is-normal rule and NF1's six.",
+     "to": "Neurofibromatosis type 1, for two café-au-lait macules: Two macules sit between the isolated-is-normal rule and the six of NF1."
+    },
+    {
+     "claim": "A reader carrying only a count rule lands on NF1.",
+     "to": "A count rule alone therefore lands on NF1."
+    },
+    {
+     "claim": "The border, the segmental distribution and the absent freckling all say otherwise.",
+     "to": "The border, the segmental distribution and the absent freckling all argue against it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Neurofibromatosis type 1, for two café-au-lait macules: Two macules sit between the isolated-is-normal rule and the six of NF1.",
+     "from": "Two café-au-lait macules sit between the isolated-is-normal rule and NF1's six."
+    },
+    {
+     "claim": "A count rule alone therefore lands on NF1.",
+     "from": "A reader carrying only a count rule lands on NF1."
+    },
+    {
+     "claim": "The border, the segmental distribution and the absent freckling all argue against it.",
+     "from": "The border, the segmental distribution and the absent freckling all say otherwise."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "The patch is the wrong <b>kind</b>: port-wine stains are red-purple vascular malformations, this one is light brown and pigmented",
+   "with": "The patch is the wrong kind; port-wine stains are red-purple vascular malformations, and this one is light brown and pigmented",
+   "note": "round 2 voice: trap line; one colon per line, removed emphasis bold",
+   "reworded_bold": [
+    "kind"
+   ],
+   "claims": [
+    {
+     "claim": "Sturge-Weber: the patch is the wrong kind.",
+     "to": "The patch is the wrong kind; port-wine stains are red-purple vascular malformations, and this one is light brown and pigmented"
+    },
+    {
+     "claim": "Port-wine stains are red-purple vascular malformations; this one is light brown and pigmented.",
+     "to": "The patch is the wrong kind; port-wine stains are red-purple vascular malformations, and this one is light brown and pigmented"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The patch is the wrong kind.",
+     "from": "Sturge-Weber: the patch is the wrong kind."
+    },
+    {
+     "claim": "The patch is the wrong kind; port-wine stains are red-purple vascular malformations, and this one is light brown and pigmented",
+     "from": "Port-wine stains are red-purple vascular malformations; this one is light brown and pigmented."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "obstructs CSF flow and causes hydrocephalus, which needs resection &middot; <b>Seizures</b> &mdash; epilepsy in most, often infantile spasms, but the <b>first seizure can come at any age</b>, adolescence included; intellectual disability, autism and behavior disorders &middot; <b>Heart and kidney</b> &mdash; cardiac rhabdomyoma; renal angiomyolipoma &middot; <b>Surveillance</b> &mdash; skin and eye exams, serial MRI of brain and kidneys, baseline echocardiogram and serial ECGs, baseline EEG, and neuropsychiatric screening &middot; <b>Not tuberous sclerosis</b> &mdash; NF1: café-au-lait macules, trunk neurofibromas, optic glioma; VHL: cerebellar and retinal hemangioblastomas",
+   "with": "obstructs <b>CSF</b> (cerebrospinal fluid) flow and causes hydrocephalus, which needs resection &middot; <b>Seizures</b> &mdash; epilepsy in most, often infantile spasms, but the <b>first seizure can come at any age</b>, adolescence included; intellectual disability, autism and behavior disorders &middot; <b>Heart and kidney</b> &mdash; cardiac rhabdomyoma; renal angiomyolipoma &middot; <b>Surveillance</b> &mdash; skin and eye exams, serial MRI of brain and kidneys, baseline echocardiogram and serial <b>ECGs</b> (electrocardiograms), baseline <b>EEG</b> (electroencephalogram), and neuropsychiatric screening &middot; <b>Not tuberous sclerosis</b> &mdash; <b>NF1</b> (neurofibromatosis type 1): café-au-lait macules, trunk neurofibromas, optic glioma; <b>VHL</b> (von Hippel-Lindau): cerebellar and retinal hemangioblastomas",
+   "note": "round 2 voice: Tuberous sclerosis complex pearls; acronym expansions only, no other change",
+   "claims": [
+    {
+     "claim": "A subependymal giant cell astrocytoma obstructs CSF flow and causes hydrocephalus.",
+     "to": "obstructs CSF (cerebrospinal fluid) flow"
+    },
+    {
+     "claim": "Surveillance includes baseline echocardiogram and serial ECGs, baseline EEG.",
+     "to": "serial ECGs (electrocardiograms), baseline EEG (electroencephalogram),"
+    },
+    {
+     "claim": "NF1: café-au-lait macules, trunk neurofibromas, optic glioma.",
+     "to": "NF1 (neurofibromatosis type 1): café-au-lait macules, trunk neurofibromas, optic glioma"
+    },
+    {
+     "claim": "VHL: cerebellar and retinal hemangioblastomas.",
+     "to": "VHL (von Hippel-Lindau): cerebellar and retinal hemangioblastomas"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "CSF stands for cerebrospinal fluid.",
+     "from": "expansion"
+    },
+    {
+     "claim": "ECG stands for electrocardiogram.",
+     "from": "expansion"
+    },
+    {
+     "claim": "EEG stands for electroencephalogram.",
+     "from": "expansion"
+    },
+    {
+     "claim": "NF1 stands for neurofibromatosis type 1.",
+     "from": "expansion"
+    },
+    {
+     "claim": "VHL stands for von Hippel-Lindau.",
+     "from": "expansion"
+    },
+    {
+     "claim": "obstructs CSF (cerebrospinal fluid) flow",
+     "from": "A subependymal giant cell astrocytoma obstructs CSF flow and causes hydrocephalus."
+    },
+    {
+     "claim": "serial ECGs (electrocardiograms), baseline EEG (electroencephalogram),",
+     "from": "Surveillance includes baseline echocardiogram and serial ECGs, baseline EEG."
+    },
+    {
+     "claim": "NF1 (neurofibromatosis type 1): café-au-lait macules, trunk neurofibromas, optic glioma",
+     "from": "NF1: café-au-lait macules, trunk neurofibromas, optic glioma."
+    },
+    {
+     "claim": "VHL (von Hippel-Lindau): cerebellar and retinal hemangioblastomas",
+     "from": "VHL: cerebellar and retinal hemangioblastomas."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "precocious-puberty",
+   "find": "<p>The endocrine half of this stem does not discriminate — <b>breast development plus pubic and axillary hair before age 8</b> establishes precocious puberty and stops there, because both central and peripheral causes produce it. What decides the question is everything that is not endocrine: <b>two large macules with irregular contours confined to the left side</b>, and <b>two long-bone fractures in a 6-year-old</b>. Those are the other two legs of a triad — <b>peripheral precocious puberty, irregular café-au-lait macules, and polyostotic fibrous dysplasia</b> — and they name <b>McCune-Albright syndrome</b>, a somatic <b>GNAS</b> mutation causing constitutive G-protein activation, so the affected tissue secretes without waiting to be told. That is why the precocity is GnRH-independent, and why the same mutation can add thyrotoxicosis, acromegaly or Cushing syndrome depending on which cell line carries it.</p>",
+   "with": "<p>The combination of <b>breast development plus pubic and axillary hair before age 8</b> establishes precocious puberty. It does not identify the cause, because both central and peripheral causes produce it. The non-endocrine findings identify the cause. They are <b>two large macules with irregular contours confined to the left side</b>, and <b>two long-bone fractures in a 6-year-old</b>. With the precocity, they complete a triad: <b>peripheral precocious puberty, irregular café-au-lait macules, and polyostotic fibrous dysplasia</b>. The triad names <b>McCune-Albright syndrome</b>. It is a somatic <b>GNAS</b> mutation causing constitutive G-protein activation, so the affected tissue secretes autonomously. That is why the precocity is independent of <b>GnRH</b> (gonadotropin-releasing hormone). It is also why the same mutation can add thyrotoxicosis, acromegaly or Cushing syndrome, depending on which cell line carries it.</p>",
+   "note": "round 2 voice: .dp; removed stem framing, em dashes and personification, split sentences, expanded acronym",
+   "claims": [
+    {
+     "claim": "The endocrine half of this stem does not discriminate.",
+     "dropped": "framing about the stem; restated clinically in the next claims"
+    },
+    {
+     "claim": "Breast development plus pubic and axillary hair before age 8 establishes precocious puberty.",
+     "to": "The combination of breast development plus pubic and axillary hair before age 8 establishes precocious puberty."
+    },
+    {
+     "claim": "It stops there, because both central and peripheral causes produce it.",
+     "to": "It does not identify the cause, because both central and peripheral causes produce it."
+    },
+    {
+     "claim": "What decides the question is everything that is not endocrine.",
+     "to": "The non-endocrine findings identify the cause."
+    },
+    {
+     "claim": "The non-endocrine findings are two large macules with irregular contours confined to the left side, and two long-bone fractures in a 6-year-old.",
+     "to": "They are two large macules with irregular contours confined to the left side, and two long-bone fractures in a 6-year-old."
+    },
+    {
+     "claim": "Those are the other two legs of a triad.",
+     "to": "With the precocity, they complete a triad: peripheral precocious puberty, irregular café-au-lait macules, and polyostotic fibrous dysplasia."
+    },
+    {
+     "claim": "The triad is peripheral precocious puberty, irregular café-au-lait macules, and polyostotic fibrous dysplasia.",
+     "to": "With the precocity, they complete a triad: peripheral precocious puberty, irregular café-au-lait macules, and polyostotic fibrous dysplasia."
+    },
+    {
+     "claim": "They name McCune-Albright syndrome.",
+     "to": "The triad names McCune-Albright syndrome."
+    },
+    {
+     "claim": "McCune-Albright is a somatic GNAS mutation causing constitutive G-protein activation.",
+     "to": "It is a somatic GNAS mutation causing constitutive G-protein activation, so the affected tissue secretes autonomously."
+    },
+    {
+     "claim": "The affected tissue secretes without waiting to be told.",
+     "to": "It is a somatic GNAS mutation causing constitutive G-protein activation, so the affected tissue secretes autonomously."
+    },
+    {
+     "claim": "That is why the precocity is GnRH-independent.",
+     "to": "That is why the precocity is independent of GnRH (gonadotropin-releasing hormone)."
+    },
+    {
+     "claim": "The same mutation can add thyrotoxicosis, acromegaly or Cushing syndrome depending on which cell line carries it.",
+     "to": "It is also why the same mutation can add thyrotoxicosis, acromegaly or Cushing syndrome, depending on which cell line carries it."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Breast development plus pubic and axillary hair before age 8 establishes precocious puberty.",
+     "from": "Breast development plus pubic and axillary hair before age 8 establishes precocious puberty."
+    },
+    {
+     "claim": "It does not identify the cause, because both central and peripheral causes produce it.",
+     "from": "It stops there, because both central and peripheral causes produce it."
+    },
+    {
+     "claim": "The non-endocrine findings identify the cause.",
+     "from": "What decides the question is everything that is not endocrine."
+    },
+    {
+     "claim": "They are two large macules with irregular contours confined to the left side, and two long-bone fractures in a 6-year-old.",
+     "from": "The non-endocrine findings are two large macules with irregular contours confined to the left side, and two long-bone fractures in a 6-year-old."
+    },
+    {
+     "claim": "With the precocity, they complete a triad.",
+     "from": "Those are the other two legs of a triad."
+    },
+    {
+     "claim": "With the precocity, they complete a triad: peripheral precocious puberty, irregular café-au-lait macules, and polyostotic fibrous dysplasia.",
+     "from": "The triad is peripheral precocious puberty, irregular café-au-lait macules, and polyostotic fibrous dysplasia."
+    },
+    {
+     "claim": "The triad names McCune-Albright syndrome.",
+     "from": "They name McCune-Albright syndrome."
+    },
+    {
+     "claim": "It is a somatic GNAS mutation causing constitutive G-protein activation.",
+     "from": "McCune-Albright is a somatic GNAS mutation causing constitutive G-protein activation."
+    },
+    {
+     "claim": "The affected tissue secretes autonomously.",
+     "from": "The affected tissue secretes without waiting to be told."
+    },
+    {
+     "claim": "GnRH stands for gonadotropin-releasing hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "That is why the precocity is independent of GnRH.",
+     "from": "That is why the precocity is GnRH-independent."
+    },
+    {
+     "claim": "The same mutation can add thyrotoxicosis, acromegaly or Cushing syndrome, depending on which cell line carries it.",
+     "from": "The same mutation can add thyrotoxicosis, acromegaly or Cushing syndrome depending on which cell line carries it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "precocious-puberty",
+   "find": "no mass effect, so the stem is pre-emptively excluding a hypothalamic or pituitary lesion &middot; <b>Two fractures at ages 4 and 5</b> &mdash; polyostotic fibrous dysplasia, because a healthy 6-year-old does not break long bones twice &middot; <b>Macules irregular in contour</b> &mdash; the border is a criterion rather than a description, since NF1's are smooth-edged &middot; <b>Only two macules</b> &mdash; below NF1's threshold of six and above the isolated-macule-is-normal bin, so the count falls between the two rules most readers carry &middot; <b>Confined to the left side</b> &mdash; a segmental distribution, which is what a <b>somatic mosaic</b> mutation looks like on skin &middot; <b>No axillary freckling</b> &mdash; stated as a negative specifically to retire NF1, whose cutaneous signature requires it",
+   "with": "no mass effect, so nothing here points to a hypothalamic or pituitary lesion &middot; <b>Two fractures at ages 4 and 5</b> &mdash; polyostotic fibrous dysplasia, because a healthy 6-year-old does not break long bones twice &middot; <b>Macules irregular in contour</b> &mdash; the border is a criterion rather than a description, since the macules of <b>NF1</b> (neurofibromatosis type 1) are smooth-edged &middot; <b>Only two macules</b> &mdash; below the NF1 threshold of six and above the single normal macule, so count alone does not classify them &middot; <b>Confined to the left side</b> &mdash; a segmental distribution, which is what a <b>somatic mosaic</b> mutation looks like on skin &middot; <b>No axillary freckling</b> &mdash; excludes NF1, whose cutaneous signature requires it",
+   "note": "round 2 voice: Pertinent positives & negatives; removed stem framing, expanded acronym (structural rows kept)",
+   "claims": [
+    {
+     "claim": "No vaginal bleeding, headache, emesis or visual change means no mass effect.",
+     "to": "no mass effect, so nothing here points to a hypothalamic or pituitary lesion"
+    },
+    {
+     "claim": "The stem is pre-emptively excluding a hypothalamic or pituitary lesion.",
+     "to": "no mass effect, so nothing here points to a hypothalamic or pituitary lesion"
+    },
+    {
+     "claim": "Two fractures at ages 4 and 5 mean polyostotic fibrous dysplasia, because a healthy 6-year-old does not break long bones twice.",
+     "to": "polyostotic fibrous dysplasia, because a healthy 6-year-old does not break long bones twice"
+    },
+    {
+     "claim": "Macule border is a criterion rather than a description.",
+     "to": "the border is a criterion rather than a description, since the macules of NF1 (neurofibromatosis type 1) are smooth-edged"
+    },
+    {
+     "claim": "NF1's macules are smooth-edged.",
+     "to": "the border is a criterion rather than a description, since the macules of NF1 (neurofibromatosis type 1) are smooth-edged"
+    },
+    {
+     "claim": "Two macules are below NF1's threshold of six.",
+     "to": "below the NF1 threshold of six and above the single normal macule, so count alone does not classify them"
+    },
+    {
+     "claim": "Two macules are above the isolated-macule-is-normal bin.",
+     "to": "below the NF1 threshold of six and above the single normal macule, so count alone does not classify them"
+    },
+    {
+     "claim": "The count falls between the two rules most readers carry.",
+     "dropped": "framing about readers; the two thresholds are kept"
+    },
+    {
+     "claim": "Confined to the left side is a segmental distribution, what a somatic mosaic mutation looks like on skin.",
+     "to": "a segmental distribution, which is what a somatic mosaic mutation looks like on skin"
+    },
+    {
+     "claim": "No axillary freckling retires NF1.",
+     "to": "excludes NF1, whose cutaneous signature requires it"
+    },
+    {
+     "claim": "NF1's cutaneous signature requires axillary freckling.",
+     "to": "excludes NF1, whose cutaneous signature requires it"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "No mass effect.",
+     "from": "No vaginal bleeding, headache, emesis or visual change means no mass effect."
+    },
+    {
+     "claim": "Nothing here points to a hypothalamic or pituitary lesion.",
+     "from": "The stem is pre-emptively excluding a hypothalamic or pituitary lesion."
+    },
+    {
+     "claim": "polyostotic fibrous dysplasia, because a healthy 6-year-old does not break long bones twice",
+     "from": "Two fractures at ages 4 and 5 mean polyostotic fibrous dysplasia, because a healthy 6-year-old does not break long bones twice."
+    },
+    {
+     "claim": "the border is a criterion rather than a description, since the macules of NF1 (neurofibromatosis type 1) are smooth-edged",
+     "from": "Macule border is a criterion rather than a description."
+    },
+    {
+     "claim": "NF1 stands for neurofibromatosis type 1.",
+     "from": "expansion"
+    },
+    {
+     "claim": "the border is a criterion rather than a description, since the macules of NF1 (neurofibromatosis type 1) are smooth-edged",
+     "from": "NF1's macules are smooth-edged."
+    },
+    {
+     "claim": "below the NF1 threshold of six and above the single normal macule, so count alone does not classify them",
+     "from": "Two macules are below NF1's threshold of six."
+    },
+    {
+     "claim": "below the NF1 threshold of six and above the single normal macule, so count alone does not classify them",
+     "from": "Two macules are above the isolated-macule-is-normal bin."
+    },
+    {
+     "claim": "a segmental distribution, which is what a somatic mosaic mutation looks like on skin",
+     "from": "Confined to the left side is a segmental distribution, what a somatic mosaic mutation looks like on skin."
+    },
+    {
+     "claim": "excludes NF1, whose cutaneous signature requires it",
+     "from": "No axillary freckling retires NF1."
+    },
+    {
+     "claim": "excludes NF1, whose cutaneous signature requires it",
+     "from": "NF1's cutaneous signature requires axillary freckling."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "precocious-puberty",
+   "find": "Management is not this question's fork, so in two sentences: <b>central</b> precocity is suppressed with a <b>GnRH agonist</b>, which works precisely because the axis is being driven from above ⚠︎, while <b>peripheral</b> precocity does not respond to a GnRH agonist and is treated by addressing the source — in McCune-Albright, aromatase inhibitors or oestrogen-receptor blockade ⚠︎. That inversion is the single most testable management point on the topic.",
+   "with": "Suppress <b>central</b> precocity with a <b>GnRH agonist</b> (gonadotropin-releasing hormone agonist), which works because the axis is being driven from above ⚠︎. Treat <b>peripheral</b> precocity by addressing the source, because it does not respond to a GnRH agonist. In McCune-Albright, that means aromatase inhibitors or oestrogen-receptor blockade ⚠︎.",
+   "note": "round 2 voice: danger; removed framing opener and closer and em dash, split sentences, expanded acronym",
+   "claims": [
+    {
+     "claim": "Management is not this question's fork.",
+     "dropped": "framing about the question"
+    },
+    {
+     "claim": "Central precocity is suppressed with a GnRH agonist.",
+     "to": "Suppress central precocity with a GnRH agonist (gonadotropin-releasing hormone agonist), which works because the axis is being driven from above ⚠︎."
+    },
+    {
+     "claim": "The GnRH agonist works precisely because the axis is being driven from above (unverified).",
+     "to": "Suppress central precocity with a GnRH agonist (gonadotropin-releasing hormone agonist), which works because the axis is being driven from above ⚠︎."
+    },
+    {
+     "claim": "Peripheral precocity does not respond to a GnRH agonist.",
+     "to": "Treat peripheral precocity by addressing the source, because it does not respond to a GnRH agonist."
+    },
+    {
+     "claim": "Peripheral precocity is treated by addressing the source.",
+     "to": "Treat peripheral precocity by addressing the source, because it does not respond to a GnRH agonist."
+    },
+    {
+     "claim": "In McCune-Albright, the source is treated with aromatase inhibitors or oestrogen-receptor blockade (unverified).",
+     "to": "In McCune-Albright, that means aromatase inhibitors or oestrogen-receptor blockade ⚠︎."
+    },
+    {
+     "claim": "That inversion is the single most testable management point on the topic.",
+     "dropped": "framing about the exam; the inversion itself is stated"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Suppress central precocity with a GnRH agonist.",
+     "from": "Central precocity is suppressed with a GnRH agonist."
+    },
+    {
+     "claim": "GnRH stands for gonadotropin-releasing hormone.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Suppress central precocity with a GnRH agonist (gonadotropin-releasing hormone agonist), which works because the axis is being driven from above ⚠︎.",
+     "from": "The GnRH agonist works precisely because the axis is being driven from above (unverified)."
+    },
+    {
+     "claim": "Treat peripheral precocity by addressing the source.",
+     "from": "Peripheral precocity is treated by addressing the source."
+    },
+    {
+     "claim": "Treat peripheral precocity by addressing the source, because it does not respond to a GnRH agonist.",
+     "from": "Peripheral precocity does not respond to a GnRH agonist."
+    },
+    {
+     "claim": "In McCune-Albright, that means aromatase inhibitors or oestrogen-receptor blockade ⚠︎.",
+     "from": "In McCune-Albright, the source is treated with aromatase inhibitors or oestrogen-receptor blockade (unverified)."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "precocious-puberty",
+   "find": "Breast and hair, so oestrogen plus androgen, and an androgen-only source is out &middot; <b>Any mass-effect symptoms?</b> &mdash; No headache, emesis or visual change, so the stem is closing the CNS door &middot; <b>What else is on the examination?</b> &mdash; Macules and fractures, which are the discriminating data &middot; <b>Read the patch by its attributes.</b> &mdash; Two, irregular, unilateral, no freckling — not NF1, not tuberous sclerosis, not Sturge-Weber",
+   "with": "Breast and hair, so oestrogen plus androgen, which excludes an androgen-only source &middot; <b>Any mass-effect symptoms?</b> &mdash; No headache, emesis or visual change, so nothing suggests a <b>CNS</b> (central nervous system) lesion &middot; <b>What else is on the examination?</b> &mdash; Macules and fractures, which distinguish the syndromes &middot; <b>Read the patch by its attributes.</b> &mdash; Two, irregular, unilateral, no freckling: not <b>NF1</b> (neurofibromatosis type 1), not tuberous sclerosis, not Sturge-Weber",
+   "note": "round 2 voice: Decision spine; removed stem framing and em dash, expanded acronyms (structural rows kept)",
+   "claims": [
+    {
+     "claim": "Breast and hair mean oestrogen plus androgen.",
+     "to": "Breast and hair, so oestrogen plus androgen, which excludes an androgen-only source"
+    },
+    {
+     "claim": "An androgen-only source is out.",
+     "to": "Breast and hair, so oestrogen plus androgen, which excludes an androgen-only source"
+    },
+    {
+     "claim": "No headache, emesis or visual change: the stem is closing the CNS door.",
+     "to": "No headache, emesis or visual change, so nothing suggests a CNS (central nervous system) lesion"
+    },
+    {
+     "claim": "Macules and fractures are the discriminating data.",
+     "to": "Macules and fractures, which distinguish the syndromes"
+    },
+    {
+     "claim": "Two, irregular, unilateral, no freckling: not NF1, not tuberous sclerosis, not Sturge-Weber.",
+     "to": "Two, irregular, unilateral, no freckling: not NF1 (neurofibromatosis type 1), not tuberous sclerosis, not Sturge-Weber"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Breast and hair, so oestrogen plus androgen, which excludes an androgen-only source",
+     "from": "Breast and hair mean oestrogen plus androgen."
+    },
+    {
+     "claim": "Breast and hair, so oestrogen plus androgen, which excludes an androgen-only source",
+     "from": "An androgen-only source is out."
+    },
+    {
+     "claim": "CNS stands for central nervous system.",
+     "from": "expansion"
+    },
+    {
+     "claim": "No headache, emesis or visual change, so nothing suggests a CNS lesion.",
+     "from": "No headache, emesis or visual change: the stem is closing the CNS door."
+    },
+    {
+     "claim": "Macules and fractures, which distinguish the syndromes",
+     "from": "Macules and fractures are the discriminating data."
+    },
+    {
+     "claim": "NF1 stands for neurofibromatosis type 1.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Two, irregular, unilateral, no freckling: not NF1 (neurofibromatosis type 1), not tuberous sclerosis, not Sturge-Weber",
+     "from": "Two, irregular, unilateral, no freckling: not NF1, not tuberous sclerosis, not Sturge-Weber."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "precocious-puberty",
+   "find": "The stem front-loads the endocrine complaint and buries the discriminators in the examination, which is what makes the wrong axis so easy to commit to. Note the two deliberate negatives: no headaches, emesis or visual disturbances closes the intracranial door before you open it, and <b>no freckling</b> is placed immediately after the macule description for one reason, to retire NF1 explicitly rather than by omission. The fracture history reads as incidental past medical history and is actually a third of the diagnosis; a stem that mentions two long-bone fractures in a preschooler is never making conversation.",
+   "with": "The distinguishing findings are on the examination, not in the endocrine complaint. Nothing suggests an intracranial cause: there are no headaches, emesis or visual disturbances. The examination notes <b>no freckling</b>, which excludes <b>NF1</b> (neurofibromatosis type 1). The fracture history is not incidental: two long-bone fractures in a preschooler are one of the three features of the triad.",
+   "note": "round 2 voice: Decoy note; removed stem framing and slogans, expanded acronym",
+   "claims": [
+    {
+     "claim": "The discriminators are in the examination, after the endocrine complaint.",
+     "to": "The distinguishing findings are on the examination, not in the endocrine complaint."
+    },
+    {
+     "claim": "This is what makes the wrong axis so easy to commit to.",
+     "dropped": "framing about the reader"
+    },
+    {
+     "claim": "No headaches, emesis or visual disturbances closes the intracranial door.",
+     "to": "Nothing suggests an intracranial cause: there are no headaches, emesis or visual disturbances."
+    },
+    {
+     "claim": "No freckling is placed to retire NF1 explicitly.",
+     "to": "The examination notes no freckling, which excludes NF1 (neurofibromatosis type 1)."
+    },
+    {
+     "claim": "The fracture history is not incidental past medical history.",
+     "to": "The fracture history is not incidental: two long-bone fractures in a preschooler are one of the three features of the triad."
+    },
+    {
+     "claim": "The fracture history is a third of the diagnosis.",
+     "to": "The fracture history is not incidental: two long-bone fractures in a preschooler are one of the three features of the triad."
+    },
+    {
+     "claim": "Two long-bone fractures in a preschooler are never incidental.",
+     "to": "The fracture history is not incidental: two long-bone fractures in a preschooler are one of the three features of the triad."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The distinguishing findings are on the examination, not in the endocrine complaint.",
+     "from": "The discriminators are in the examination, after the endocrine complaint."
+    },
+    {
+     "claim": "Nothing suggests an intracranial cause: there are no headaches, emesis or visual disturbances.",
+     "from": "No headaches, emesis or visual disturbances closes the intracranial door."
+    },
+    {
+     "claim": "NF1 stands for neurofibromatosis type 1.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The examination notes no freckling, which excludes NF1 (neurofibromatosis type 1).",
+     "from": "No freckling is placed to retire NF1 explicitly."
+    },
+    {
+     "claim": "The fracture history is not incidental.",
+     "from": "The fracture history is not incidental past medical history."
+    },
+    {
+     "claim": "Two long-bone fractures in a preschooler are one of the three features of the triad.",
+     "from": "The fracture history is a third of the diagnosis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "precocious-puberty",
+   "find": "Precocious puberty is a presenting complaint rather than a diagnosis: sort central from peripheral, then look outside the endocrine system for what names it. &middot; <b>Precocious puberty is a presenting complaint rather than a diagnosis.</b> Sort central from peripheral, then look outside the endocrine system for what names it. &middot; <b>Breast tissue means oestrogen.</b> An androgen-only source gives hair, acne and odour without breast development, and that single asymmetry eliminates a whole column of options. &middot; <b>Read a pigmented patch by four attributes: number, border, distribution and colour.</b> NF1 is six or more, smooth-edged, with freckling; McCune-Albright is few, irregular and segmental; tuberous sclerosis is hypopigmented; Sturge-Weber is vascular red-purple. &middot; <b>A segmental lesion respecting the midline suggests somatic mosaicism</b>, which is why McCune-Albright is not inherited and the family history is silent ⚠︎. &middot; The <i>GNAS</i> mutation is <b>organ-agnostic</b>, so whichever tissue carries it secretes autonomously and thyrotoxicosis, acromegaly or Cushing syndrome can replace or accompany the precocity. &middot; <b>GnRH agonists treat central precocity and do nothing for peripheral precocity</b> — the inversion the exam likes, because the drug name sounds like it should work on anything hormonal ⚠︎.",
+   "with": "<b>Precocious puberty is a presenting complaint rather than a diagnosis.</b> Sort central from peripheral, then look outside the endocrine system for what names it. &middot; <b>Breast tissue means oestrogen.</b> An androgen-only source gives hair, acne and odour without breast development, so breast development excludes it. &middot; <b>Read a pigmented patch by four attributes: number, border, distribution and colour.</b> <b>NF1</b> (neurofibromatosis type 1) is six or more, smooth-edged, with freckling; McCune-Albright is few, irregular and segmental; tuberous sclerosis is hypopigmented; Sturge-Weber is vascular red-purple. &middot; <b>A segmental lesion respecting the midline suggests somatic mosaicism</b>, which is why McCune-Albright is not inherited and the family history is silent ⚠︎. &middot; The <i>GNAS</i> mutation is <b>organ-agnostic</b>, so whichever tissue carries it secretes autonomously. Thyrotoxicosis, acromegaly or Cushing syndrome can replace or accompany the precocity. &middot; <b>GnRH agonists treat central precocity and do nothing for peripheral precocity</b> ⚠︎.",
+   "note": "round 2 voice: Pearls; removed duplicate first pearl, option framing and exam framing, split sentence, expanded acronym",
+   "claims": [
+    {
+     "claim": "Precocious puberty is a presenting complaint rather than a diagnosis (stated twice).",
+     "to": "Precocious puberty is a presenting complaint rather than a diagnosis."
+    },
+    {
+     "claim": "Sort central from peripheral, then look outside the endocrine system for what names it (stated twice).",
+     "to": "Sort central from peripheral, then look outside the endocrine system for what names it."
+    },
+    {
+     "claim": "Breast tissue means oestrogen.",
+     "to": "Breast tissue means oestrogen."
+    },
+    {
+     "claim": "An androgen-only source gives hair, acne and odour without breast development.",
+     "to": "An androgen-only source gives hair, acne and odour without breast development, so breast development excludes it."
+    },
+    {
+     "claim": "That single asymmetry eliminates a whole column of options.",
+     "to": "An androgen-only source gives hair, acne and odour without breast development, so breast development excludes it."
+    },
+    {
+     "claim": "Read a pigmented patch by four attributes: number, border, distribution and colour.",
+     "to": "Read a pigmented patch by four attributes: number, border, distribution and colour."
+    },
+    {
+     "claim": "NF1 is six or more, smooth-edged, with freckling; McCune-Albright is few, irregular and segmental; tuberous sclerosis is hypopigmented; Sturge-Weber is vascular red-purple.",
+     "to": "NF1 (neurofibromatosis type 1) is six or more, smooth-edged, with freckling; McCune-Albright is few, irregular and segmental; tuberous sclerosis is hypopigmented; Sturge-Weber is vascular red-purple."
+    },
+    {
+     "claim": "A segmental lesion respecting the midline suggests somatic mosaicism, which is why McCune-Albright is not inherited and the family history is silent (unverified).",
+     "to": "A segmental lesion respecting the midline suggests somatic mosaicism, which is why McCune-Albright is not inherited and the family history is silent ⚠︎."
+    },
+    {
+     "claim": "The GNAS mutation is organ-agnostic, so whichever tissue carries it secretes autonomously.",
+     "to": "The GNAS mutation is organ-agnostic, so whichever tissue carries it secretes autonomously."
+    },
+    {
+     "claim": "Thyrotoxicosis, acromegaly or Cushing syndrome can replace or accompany the precocity.",
+     "to": "Thyrotoxicosis, acromegaly or Cushing syndrome can replace or accompany the precocity."
+    },
+    {
+     "claim": "GnRH agonists treat central precocity and do nothing for peripheral precocity (unverified).",
+     "to": "GnRH agonists treat central precocity and do nothing for peripheral precocity ⚠︎."
+    },
+    {
+     "claim": "This is the inversion the exam likes, because the drug name sounds like it should work on anything hormonal.",
+     "dropped": "framing about the exam"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Precocious puberty is a presenting complaint rather than a diagnosis.",
+     "from": "Precocious puberty is a presenting complaint rather than a diagnosis (stated twice)."
+    },
+    {
+     "claim": "Sort central from peripheral, then look outside the endocrine system for what names it.",
+     "from": "Sort central from peripheral, then look outside the endocrine system for what names it (stated twice)."
+    },
+    {
+     "claim": "Breast tissue means oestrogen.",
+     "from": "Breast tissue means oestrogen."
+    },
+    {
+     "claim": "An androgen-only source gives hair, acne and odour without breast development.",
+     "from": "An androgen-only source gives hair, acne and odour without breast development."
+    },
+    {
+     "claim": "An androgen-only source gives hair, acne and odour without breast development, so breast development excludes it.",
+     "from": "That single asymmetry eliminates a whole column of options."
+    },
+    {
+     "claim": "Read a pigmented patch by four attributes: number, border, distribution and colour.",
+     "from": "Read a pigmented patch by four attributes: number, border, distribution and colour."
+    },
+    {
+     "claim": "NF1 stands for neurofibromatosis type 1.",
+     "from": "expansion"
+    },
+    {
+     "claim": "NF1 (neurofibromatosis type 1) is six or more, smooth-edged, with freckling; McCune-Albright is few, irregular and segmental; tuberous sclerosis is hypopigmented; Sturge-Weber is vascular red-purple.",
+     "from": "NF1 is six or more, smooth-edged, with freckling; McCune-Albright is few, irregular and segmental; tuberous sclerosis is hypopigmented; Sturge-Weber is vascular red-purple."
+    },
+    {
+     "claim": "A segmental lesion respecting the midline suggests somatic mosaicism, which is why McCune-Albright is not inherited and the family history is silent ⚠︎.",
+     "from": "A segmental lesion respecting the midline suggests somatic mosaicism, which is why McCune-Albright is not inherited and the family history is silent (unverified)."
+    },
+    {
+     "claim": "The GNAS mutation is organ-agnostic, so whichever tissue carries it secretes autonomously.",
+     "from": "The GNAS mutation is organ-agnostic, so whichever tissue carries it secretes autonomously."
+    },
+    {
+     "claim": "Thyrotoxicosis, acromegaly or Cushing syndrome can replace or accompany the precocity.",
+     "from": "Thyrotoxicosis, acromegaly or Cushing syndrome can replace or accompany the precocity."
+    },
+    {
+     "claim": "GnRH agonists treat central precocity and do nothing for peripheral precocity ⚠︎.",
+     "from": "GnRH agonists treat central precocity and do nothing for peripheral precocity (unverified)."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "precocious-puberty",
+   "find": "Verified: Part II <b>Sexual Maturity Rating</b> owns the staging framework and the timing gates and explicitly asked for this partner, and the discriminator between them is whether the stage is merely being described or is wrong for the age. Part I <b>Inherited Tumor Syndromes</b> owns the café-au-lait gate from the tumour side, and this brief supplies the border and distribution attributes that gate is missing. Store the discriminator as a question: which hormones are on board, and what does the skin look like?",
+   "with": "Part II <b>Sexual Maturity Rating</b> covers the staging framework and the timing gates. Ask: is the stage merely being described, or is it wrong for the age? Part I <b>Inherited Tumor Syndromes</b> covers café-au-lait macules from the tumour side; this brief covers their border and distribution attributes. Ask: which hormones are on board, and what does the skin look like?",
+   "note": "round 2 voice: Pairs with; removed 'Verified' and workflow notes, 'owns' -> 'covers', discriminators as 'Ask:'; dropped the claim that the partner's gate is missing these attributes (it now lists them)",
+   "claims": [
+    {
+     "claim": "The partner is verified and explicitly asked for this partner.",
+     "dropped": "workflow text"
+    },
+    {
+     "claim": "Part II Sexual Maturity Rating owns the staging framework and the timing gates.",
+     "to": "Part II Sexual Maturity Rating covers the staging framework and the timing gates."
+    },
+    {
+     "claim": "The discriminator between them is whether the stage is merely being described or is wrong for the age.",
+     "to": "Ask: is the stage merely being described, or is it wrong for the age?"
+    },
+    {
+     "claim": "Part I Inherited Tumor Syndromes owns the café-au-lait gate from the tumour side.",
+     "to": "Part I Inherited Tumor Syndromes covers café-au-lait macules from the tumour side; this brief covers their border and distribution attributes."
+    },
+    {
+     "claim": "This brief supplies the border and distribution attributes.",
+     "to": "Part I Inherited Tumor Syndromes covers café-au-lait macules from the tumour side; this brief covers their border and distribution attributes."
+    },
+    {
+     "claim": "The Inherited Tumor Syndromes gate is missing the border and distribution attributes.",
+     "dropped": "coverage note that no longer matches the page; that brief's criteria already list border and distribution"
+    },
+    {
+     "claim": "Discriminator question: which hormones are on board, and what does the skin look like?",
+     "to": "Ask: which hormones are on board, and what does the skin look like?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Part II Sexual Maturity Rating covers the staging framework and the timing gates.",
+     "from": "Part II Sexual Maturity Rating owns the staging framework and the timing gates."
+    },
+    {
+     "claim": "Ask: is the stage merely being described, or is it wrong for the age?",
+     "from": "The discriminator between them is whether the stage is merely being described or is wrong for the age."
+    },
+    {
+     "claim": "Part I Inherited Tumor Syndromes covers café-au-lait macules from the tumour side.",
+     "from": "Part I Inherited Tumor Syndromes owns the café-au-lait gate from the tumour side."
+    },
+    {
+     "claim": "This brief covers their border and distribution attributes.",
+     "from": "This brief supplies the border and distribution attributes."
+    },
+    {
+     "claim": "Ask: which hormones are on board, and what does the skin look like?",
+     "from": "Discriminator question: which hormones are on board, and what does the skin look like?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "precocious-puberty",
+   "find": "When every option is a named syndrome, the chief complaint is the thing they all share and therefore the thing that cannot decide — the answer lives in whichever physical finding only one syndrome produces. And a patch is described by four attributes for a reason: number, border, distribution and colour are each separately capable of eliminating a diagnosis. --- <i>Batch 6, brief 03 · 2026-09-11.</i>",
+   "with": "When every option is a named syndrome, they all share the chief complaint, so it cannot distinguish them. Look for the physical finding that only one syndrome produces. Describe a patch by four attributes: number, border, distribution and colour. Each can eliminate a diagnosis on its own.",
+   "note": "round 2 voice: rule; removed em dash, personification and batch note, split sentences",
+   "claims": [
+    {
+     "claim": "When every option is a named syndrome, the chief complaint is the thing they all share.",
+     "to": "When every option is a named syndrome, they all share the chief complaint, so it cannot distinguish them."
+    },
+    {
+     "claim": "Therefore the chief complaint cannot decide.",
+     "to": "When every option is a named syndrome, they all share the chief complaint, so it cannot distinguish them."
+    },
+    {
+     "claim": "The answer lives in whichever physical finding only one syndrome produces.",
+     "to": "Look for the physical finding that only one syndrome produces."
+    },
+    {
+     "claim": "A patch is described by four attributes: number, border, distribution and colour.",
+     "to": "Describe a patch by four attributes: number, border, distribution and colour."
+    },
+    {
+     "claim": "Each attribute is separately capable of eliminating a diagnosis.",
+     "to": "Each can eliminate a diagnosis on its own."
+    },
+    {
+     "claim": "Batch note.",
+     "dropped": "workflow text"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When every option is a named syndrome, they all share the chief complaint.",
+     "from": "When every option is a named syndrome, the chief complaint is the thing they all share."
+    },
+    {
+     "claim": "When every option is a named syndrome, they all share the chief complaint, so it cannot distinguish them.",
+     "from": "Therefore the chief complaint cannot decide."
+    },
+    {
+     "claim": "Look for the physical finding that only one syndrome produces.",
+     "from": "The answer lives in whichever physical finding only one syndrome produces."
+    },
+    {
+     "claim": "Describe a patch by four attributes: number, border, distribution and colour.",
+     "from": "A patch is described by four attributes: number, border, distribution and colour."
+    },
+    {
+     "claim": "Each can eliminate a diagnosis on its own.",
+     "from": "Each attribute is separately capable of eliminating a diagnosis."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "homocystinuria",
+   "find": "The fair complexion is a fourth clue &mdash; homocysteine interferes with melanin synthesis. Joint hyperlaxity occurs in both homocystinuria and EDS, but EDS does not produce a Marfanoid body habitus or stroke.</p>\n<p>The miss: locking on joint hyperlaxity and skin hyperelasticity (the two features EDS and homocystinuria share) without asking what EDS does <b>not</b> explain: the Marfanoid proportions, the stroke, the developmental delay, and the fair complexion.</p>",
+   "with": "The fair complexion is a fourth clue, because homocysteine interferes with melanin synthesis. Joint hyperlaxity occurs in both homocystinuria and <b>EDS</b> (Ehlers-Danlos syndrome), but EDS does not produce a Marfanoid body habitus or stroke.</p>\n<p>EDS and homocystinuria share joint hyperlaxity and skin hyperelasticity. EDS does not explain the Marfanoid proportions, the stroke, the developmental delay or the fair complexion.</p>",
+   "note": "round 2 voice: .dp; removed em dash, 'The miss' framing and emphasis bold, expanded acronym",
+   "reworded_bold": [
+    "not"
+   ],
+   "claims": [
+    {
+     "claim": "The fair complexion is a fourth clue.",
+     "to": "The fair complexion is a fourth clue, because homocysteine interferes with melanin synthesis."
+    },
+    {
+     "claim": "Homocysteine interferes with melanin synthesis.",
+     "to": "The fair complexion is a fourth clue, because homocysteine interferes with melanin synthesis."
+    },
+    {
+     "claim": "Joint hyperlaxity occurs in both homocystinuria and EDS.",
+     "to": "Joint hyperlaxity occurs in both homocystinuria and EDS (Ehlers-Danlos syndrome), but EDS does not produce a Marfanoid body habitus or stroke."
+    },
+    {
+     "claim": "EDS does not produce a Marfanoid body habitus or stroke.",
+     "to": "Joint hyperlaxity occurs in both homocystinuria and EDS (Ehlers-Danlos syndrome), but EDS does not produce a Marfanoid body habitus or stroke."
+    },
+    {
+     "claim": "The miss is locking on the shared features without asking what the alternative does not explain.",
+     "dropped": "framing about the reader's error; the clinical content is kept"
+    },
+    {
+     "claim": "Joint hyperlaxity and skin hyperelasticity are the two features EDS and homocystinuria share.",
+     "to": "EDS and homocystinuria share joint hyperlaxity and skin hyperelasticity."
+    },
+    {
+     "claim": "EDS does not explain the Marfanoid proportions, the stroke, the developmental delay, and the fair complexion.",
+     "to": "EDS does not explain the Marfanoid proportions, the stroke, the developmental delay or the fair complexion."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The fair complexion is a fourth clue, because homocysteine interferes with melanin synthesis.",
+     "from": "The fair complexion is a fourth clue."
+    },
+    {
+     "claim": "EDS stands for Ehlers-Danlos syndrome.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Joint hyperlaxity occurs in both homocystinuria and EDS.",
+     "from": "Joint hyperlaxity occurs in both homocystinuria and EDS."
+    },
+    {
+     "claim": "EDS does not produce a Marfanoid body habitus or stroke.",
+     "from": "EDS does not produce a Marfanoid body habitus or stroke."
+    },
+    {
+     "claim": "EDS and homocystinuria share joint hyperlaxity and skin hyperelasticity.",
+     "from": "Joint hyperlaxity and skin hyperelasticity are the two features EDS and homocystinuria share."
+    },
+    {
+     "claim": "EDS does not explain the Marfanoid proportions, the stroke, the developmental delay or the fair complexion.",
+     "from": "EDS does not explain the Marfanoid proportions, the stroke, the developmental delay, and the fair complexion."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "homocystinuria",
+   "find": "Homocystinuria thrombosis mechanism: homocysteine damages vascular endothelium and increases platelet adhesiveness &mdash; stroke, DVT, and PE can occur at any age",
+   "with": "<b>Homocystinuria thrombosis mechanism</b> &mdash; homocysteine damages vascular endothelium and increases platelet adhesiveness; stroke, <b>DVT</b> (deep vein thrombosis) and <b>PE</b> (pulmonary embolism) can occur at any age",
+   "note": "round 2 voice: Pearls; removed prose em dash, expanded acronyms",
+   "claims": [
+    {
+     "claim": "Homocysteine damages vascular endothelium and increases platelet adhesiveness.",
+     "to": "Homocystinuria thrombosis mechanism — homocysteine damages vascular endothelium and increases platelet adhesiveness; stroke, DVT (deep vein thrombosis) and PE (pulmonary embolism) can occur at any age"
+    },
+    {
+     "claim": "Stroke, DVT, and PE can occur at any age.",
+     "to": "Homocystinuria thrombosis mechanism — homocysteine damages vascular endothelium and increases platelet adhesiveness; stroke, DVT (deep vein thrombosis) and PE (pulmonary embolism) can occur at any age"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Homocysteine damages vascular endothelium and increases platelet adhesiveness.",
+     "from": "Homocysteine damages vascular endothelium and increases platelet adhesiveness."
+    },
+    {
+     "claim": "DVT stands for deep vein thrombosis.",
+     "from": "expansion"
+    },
+    {
+     "claim": "PE stands for pulmonary embolism.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Homocystinuria thrombosis mechanism — homocysteine damages vascular endothelium and increases platelet adhesiveness; stroke, DVT (deep vein thrombosis) and PE (pulmonary embolism) can occur at any age",
+     "from": "Stroke, DVT, and PE can occur at any age."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "homocystinuria",
+   "find": "<b>Inherited Tumor Syndromes</b> &mdash; shared domain: genetic syndromes with characteristic physical findings; discriminator: Marfanoid habitus vs caf&eacute;-au-lait macules. Part II <b>Water-Soluble Vitamin Deficiency</b> owns acquired high homocysteine: is the methylmalonic acid also high (B12) or normal (folate)?",
+   "with": "<b>Inherited Tumor Syndromes</b> shares the domain of genetic syndromes with characteristic physical findings. Ask: is there a Marfanoid habitus or caf&eacute;-au-lait macules? Part II <b>Water-Soluble Vitamin Deficiency</b> covers acquired high homocysteine. Ask: is the methylmalonic acid also high (B12) or normal (folate)?",
+   "note": "round 2 voice: Pairs with; prose em dash to sentences, 'owns' -> 'covers', discriminators as 'Ask:'",
+   "claims": [
+    {
+     "claim": "Inherited Tumor Syndromes shares the domain: genetic syndromes with characteristic physical findings.",
+     "to": "Inherited Tumor Syndromes shares the domain of genetic syndromes with characteristic physical findings."
+    },
+    {
+     "claim": "Discriminator: Marfanoid habitus vs café-au-lait macules.",
+     "to": "Ask: is there a Marfanoid habitus or café-au-lait macules?"
+    },
+    {
+     "claim": "Part II Water-Soluble Vitamin Deficiency owns acquired high homocysteine.",
+     "to": "Part II Water-Soluble Vitamin Deficiency covers acquired high homocysteine."
+    },
+    {
+     "claim": "Discriminator: is the methylmalonic acid also high (B12) or normal (folate)?",
+     "to": "Ask: is the methylmalonic acid also high (B12) or normal (folate)?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Inherited Tumor Syndromes shares the domain of genetic syndromes with characteristic physical findings.",
+     "from": "Inherited Tumor Syndromes shares the domain: genetic syndromes with characteristic physical findings."
+    },
+    {
+     "claim": "Ask: is there a Marfanoid habitus or café-au-lait macules?",
+     "from": "Discriminator: Marfanoid habitus vs café-au-lait macules."
+    },
+    {
+     "claim": "Part II Water-Soluble Vitamin Deficiency covers acquired high homocysteine.",
+     "from": "Part II Water-Soluble Vitamin Deficiency owns acquired high homocysteine."
+    },
+    {
+     "claim": "Ask: is the methylmalonic acid also high (B12) or normal (folate)?",
+     "from": "Discriminator: is the methylmalonic acid also high (B12) or normal (folate)?"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "homocystinuria",
+   "find": "When a Marfanoid child has any feature Marfan does not produce &mdash; intellectual disability, thrombosis, or fair complexion &mdash; the diagnosis is homocystinuria until proven otherwise, and the lens direction confirms it: down is homocystinuria, up is Marfan.",
+   "with": "When a Marfanoid child has any feature Marfan does not produce (intellectual disability, thrombosis, or fair complexion), the diagnosis is homocystinuria until proven otherwise. The lens direction confirms it: down is homocystinuria, up is Marfan.",
+   "note": "round 2 voice: rule; em dashes to parentheses, split sentence",
+   "claims": [
+    {
+     "claim": "When a Marfanoid child has any feature Marfan does not produce, the diagnosis is homocystinuria until proven otherwise.",
+     "to": "When a Marfanoid child has any feature Marfan does not produce (intellectual disability, thrombosis, or fair complexion), the diagnosis is homocystinuria until proven otherwise."
+    },
+    {
+     "claim": "Features Marfan does not produce: intellectual disability, thrombosis, or fair complexion.",
+     "to": "When a Marfanoid child has any feature Marfan does not produce (intellectual disability, thrombosis, or fair complexion), the diagnosis is homocystinuria until proven otherwise."
+    },
+    {
+     "claim": "The lens direction confirms it: down is homocystinuria, up is Marfan.",
+     "to": "The lens direction confirms it: down is homocystinuria, up is Marfan."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "When a Marfanoid child has any feature Marfan does not produce (intellectual disability, thrombosis, or fair complexion), the diagnosis is homocystinuria until proven otherwise.",
+     "from": "When a Marfanoid child has any feature Marfan does not produce, the diagnosis is homocystinuria until proven otherwise."
+    },
+    {
+     "claim": "The lens direction confirms it: down is homocystinuria, up is Marfan.",
+     "from": "The lens direction confirms it: down is homocystinuria, up is Marfan."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "homocystinuria",
+   "find": "EDS tempts because joint hyperlaxity and skin hyperelasticity are shared features, but EDS does not produce Marfanoid habitus, stroke, or intellectual disability.</span></div>\n<div class=\"trapline\"><span class=\"pill p-mirror\">Mirror twin</span><span class=\"trapwhy\">Marfan tempts because the Marfanoid habitus is the shared phenotype, but Marfan has normal intellect, no thrombosis, and lens dislocation is upward.",
+   "with": "Ehlers-Danlos syndrome: Joint hyperlaxity and skin hyperelasticity are shared features, but EDS does not produce Marfanoid habitus, stroke, or intellectual disability.</span></div>\n<div class=\"trapline\"><span class=\"pill p-mirror\">Mirror twin</span><span class=\"trapwhy\">Marfan syndrome: The Marfanoid habitus is the shared phenotype, but Marfan has normal intellect, no thrombosis, and lens dislocation is upward.",
+   "note": "round 2 voice: traps as 'Option: why'; removed personification ('tempts'), expanded acronym",
+   "claims": [
+    {
+     "claim": "EDS tempts because joint hyperlaxity and skin hyperelasticity are shared features.",
+     "to": "Ehlers-Danlos syndrome: Joint hyperlaxity and skin hyperelasticity are shared features, but EDS does not produce Marfanoid habitus, stroke, or intellectual disability."
+    },
+    {
+     "claim": "EDS does not produce Marfanoid habitus, stroke, or intellectual disability.",
+     "to": "Ehlers-Danlos syndrome: Joint hyperlaxity and skin hyperelasticity are shared features, but EDS does not produce Marfanoid habitus, stroke, or intellectual disability."
+    },
+    {
+     "claim": "Marfan tempts because the Marfanoid habitus is the shared phenotype.",
+     "to": "Marfan syndrome: The Marfanoid habitus is the shared phenotype, but Marfan has normal intellect, no thrombosis, and lens dislocation is upward."
+    },
+    {
+     "claim": "Marfan has normal intellect, no thrombosis, and lens dislocation is upward.",
+     "to": "Marfan syndrome: The Marfanoid habitus is the shared phenotype, but Marfan has normal intellect, no thrombosis, and lens dislocation is upward."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Ehlers-Danlos syndrome: joint hyperlaxity and skin hyperelasticity are shared features.",
+     "from": "EDS tempts because joint hyperlaxity and skin hyperelasticity are shared features."
+    },
+    {
+     "claim": "EDS does not produce Marfanoid habitus, stroke, or intellectual disability.",
+     "from": "EDS does not produce Marfanoid habitus, stroke, or intellectual disability."
+    },
+    {
+     "claim": "Marfan syndrome: the Marfanoid habitus is the shared phenotype.",
+     "from": "Marfan tempts because the Marfanoid habitus is the shared phenotype."
+    },
+    {
+     "claim": "Marfan has normal intellect, no thrombosis, and lens dislocation is upward.",
+     "from": "Marfan has normal intellect, no thrombosis, and lens dislocation is upward."
     }
    ]
   }

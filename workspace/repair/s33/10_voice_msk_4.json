@@ -78,7 +78,7 @@
      "from": "Quotidian fever spikes once or twice daily."
     },
     {
-     "claim": "Quotidian fever returns to normal or subnormal between spikes.",
+     "claim": "Quotidian fever spikes once or twice daily and returns to normal or subnormal between spikes, so being afebrile in clinic supports sJIA.",
      "from": "Quotidian fever returns to normal or subnormal between spikes."
     },
     {
@@ -98,7 +98,7 @@
      "from": "5 or more joints in the first 6 months is polyarticular."
     },
     {
-     "claim": "4 or fewer joints is oligoarticular.",
+     "claim": "Involvement of 5 or more joints in the first 6 months is polyarticular disease; 4 or fewer is oligoarticular.",
      "from": "4 or fewer joints is oligoarticular."
     },
     {
@@ -106,7 +106,7 @@
      "from": "Neither polyarticular nor oligoarticular has fever or rash."
     },
     {
-     "claim": "Morning stiffness that loosens through the day, with true joint swelling, separates JIA from infection, malignancy and deficiency states.",
+     "claim": "Morning stiffness that loosens through the day, with true joint swelling, separates JIA (juvenile idiopathic arthritis) from infection, malignancy and deficiency states.",
      "from": "Morning stiffness that loosens through the day, with true joint swelling, separates JIA from infection, malignancy and deficiency states."
     },
     {
@@ -184,7 +184,7 @@
      "from": "expansion"
     },
     {
-     "claim": "The ESR paradoxically falls because fibrinogen is consumed.",
+     "claim": "The ESR (erythrocyte sedimentation rate) paradoxically falls because fibrinogen is consumed.",
      "from": "The ESR falls because fibrinogen is consumed."
     },
     {
@@ -231,7 +231,7 @@
      "from": "Oligoarticular JIA has the highest uveitis risk."
     },
     {
-     "claim": "It involves ≤4 joints in young girls who are ANA positive.",
+     "claim": "It involves ≤4 joints in young girls who are ANA (antinuclear antibody) positive.",
      "from": "Oligoarticular JIA involves ≤4 joints, in young girls, ANA positive."
     },
     {
@@ -247,7 +247,7 @@
      "from": "Systemic (Still) JIA has the lowest uveitis risk."
     },
     {
-     "claim": "Enthesitis-related disease, in older boys with HLA-B27, causes acute symptomatic uveitis.",
+     "claim": "Enthesitis-related disease, in older boys with HLA-B27 (human leukocyte antigen B27), causes acute symptomatic uveitis.",
      "from": "Enthesitis-related JIA (HLA-B27, older boys) causes acute symptomatic uveitis."
     },
     {
@@ -270,7 +270,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Dengue's cytopenias are the opposite of this child's leukocytosis with thrombocytosis.",
+     "claim": "the opposite of this child's leukocytosis with thrombocytosis",
      "from": "Dengue's leukopenia and thrombocytopenia are the opposite of this child's leukocytosis with thrombocytosis."
     }
    ]
@@ -301,11 +301,11 @@
    ],
    "new_claims": [
     {
-     "claim": "The travel history suggests malaria and dengue.",
+     "claim": "Malaria and dengue: the travel history suggests them, but both cause cytopenias, and this child has leukocytosis with thrombocytosis.",
      "from": "The travel history suggests malaria and dengue."
     },
     {
-     "claim": "Malaria and dengue both cause cytopenias.",
+     "claim": "Malaria and dengue: the travel history suggests them, but both cause cytopenias, and this child has leukocytosis with thrombocytosis.",
      "from": "Malaria and dengue both cause cytopenias."
     },
     {
@@ -347,7 +347,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Parvovirus B19 does cause fever, rash and joint pain.",
+     "claim": "Parvovirus B19: it does cause fever, rash and joint pain, but the arthropathy is an adult-female pattern and resolves within 3 weeks.",
      "from": "Parvovirus B19 does cause fever, rash and joint pain."
     }
    ]
@@ -381,15 +381,15 @@
    ],
    "new_claims": [
     {
-     "claim": "In the newer Patient Information format, the physical exam section often contains the treatment.",
+     "claim": "In the newer \"Patient Information\" format, the physical exam section often contains the treatment.",
      "from": "In the newer Patient Information format, the treatment is often inside the physical exam section."
     },
     {
-     "claim": "The quoted exam text describes the reduction.",
+     "claim": "The exam line \"When the forearm is supinated and the elbow flexed… she begins to reach for toys 15 minutes later\" describes the reduction and confirms that it worked.",
      "from": "Supinating the forearm and flexing the elbow, then reaching for toys 15 minutes later, is the reduction."
     },
     {
-     "claim": "The quoted exam text confirms the reduction worked.",
+     "claim": "The exam line \"When the forearm is supinated and the elbow flexed… she begins to reach for toys 15 minutes later\" describes the reduction and confirms that it worked.",
      "from": "Reaching for toys 15 minutes later confirms the reduction worked."
     },
     {
@@ -440,7 +440,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Supracondylar humerus fracture occurs at age 5–8 yrs.",
+     "claim": "Supracondylar humerus fracture: age 5–8 yrs, FOOSH (fall on an outstretched hand) hyperextension and a posterior fat pad sign.",
      "from": "Supracondylar humerus fracture occurs at 5–8 yrs."
     },
     {
@@ -448,11 +448,11 @@
      "from": "expansion"
     },
     {
-     "claim": "Supracondylar humerus fracture follows FOOSH hyperextension.",
+     "claim": "Supracondylar humerus fracture: age 5–8 yrs, FOOSH (fall on an outstretched hand) hyperextension and a posterior fat pad sign.",
      "from": "Supracondylar humerus fracture follows FOOSH hyperextension."
     },
     {
-     "claim": "Supracondylar humerus fracture shows a posterior fat pad sign.",
+     "claim": "Supracondylar humerus fracture: age 5–8 yrs, FOOSH (fall on an outstretched hand) hyperextension and a posterior fat pad sign.",
      "from": "Supracondylar humerus fracture shows a posterior fat pad sign."
     },
     {
@@ -481,17 +481,17 @@
    "op": "replace",
    "brief": "scfe",
    "find": "The stereotype that stems are built to defeat",
-   "with": "Patients who do not fit the stereotype",
+   "with": "Not only the obese teenager",
    "note": "voice: p.sub first segment; remove framing about stems",
    "claims": [
     {
      "claim": "SCFE stems deliberately present patients who do not fit the stereotype.",
-     "to": "Patients who do not fit the stereotype"
+     "to": "Not only the obese teenager"
     }
    ],
    "new_claims": [
     {
-     "claim": "Some patients with SCFE do not fit the stereotype.",
+     "claim": "Not only the obese teenager",
      "from": "SCFE stems deliberately present patients who do not fit the stereotype."
     }
    ]
@@ -533,7 +533,7 @@
    ],
    "new_claims": [
     {
-     "claim": "The link between SCFE and obese teenagers is a stereotype, not a rule.",
+     "claim": "The link between SCFE (slipped capital femoral epiphysis) and obese teenagers is a stereotype, not a rule.",
      "from": "SCFE = obese teenager is a stereotype, not a rule."
     },
     {
@@ -553,7 +553,7 @@
      "from": "The discriminators are age at the growth spurt (girls 11–13, boys 13–15), loss of internal rotation and obligate external rotation on passive flexion."
     },
     {
-     "claim": "Body habitus is not a discriminator.",
+     "claim": "The discriminators are age at the growth spurt (girls 11–13, boys 13–15), loss of internal rotation and obligate external rotation on passive flexion, not body habitus.",
      "from": "Body habitus is not a discriminator."
     }
    ]
@@ -592,7 +592,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Runny nose last week suggests transient synovitis after a URI.",
+     "claim": "\"Runny nose last week\" suggests transient synovitis after a URI (upper respiratory infection).",
      "from": "Runny nose last week suggests post-URI transient synovitis."
     },
     {
@@ -604,7 +604,7 @@
      "from": "The age and a 3-week course rule out transient synovitis."
     },
     {
-     "claim": "Fell while skateboarding suggests a fracture.",
+     "claim": "\"Fell while skateboarding\" suggests a fracture.",
      "from": "Fell while skateboarding suggests a fracture."
     },
     {
@@ -635,7 +635,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Part I The Post-Traumatic Limb Mass covers the adolescent thigh mass that dates to a specific injury.",
+     "claim": "covers the adolescent thigh mass that dates to a specific injury.",
      "from": "Part I The Post-Traumatic Limb Mass covers the adolescent thigh mass that dates to a specific injury."
     }
    ]
@@ -745,7 +745,7 @@
      "from": "The biphasic course is the whole diagnosis."
     },
     {
-     "claim": "The course is a contusion, complete resolution over two weeks, then recurrent pain with a mass a week after that.",
+     "claim": "A biphasic course makes the diagnosis: a contusion, complete resolution over two weeks, then recurrent pain with a mass a week after that.",
      "from": "The course is a contusion, complete resolution over two weeks, then recurrent pain with a mass a week after that."
     },
     {
@@ -828,7 +828,7 @@
      "from": "Surgical excision is reserved for lesions that stay symptomatic."
     },
     {
-     "claim": "Delay excision until the bone matures (unverified).",
+     "claim": "Delay excision until the bone matures ⚠︎, because early resection recurs.",
      "from": "Excision is delayed until the bone matures (unverified)."
     },
     {
@@ -841,7 +841,7 @@
    "op": "replace",
    "brief": "myositis-ossificans",
    "find": "The <b>2 cm circumference difference</b> is the most cleverly chosen number in the stem, because it is the measurement taught for deep vein thrombosis and it appears here attached to a completely different process. The stem then removes thrombosis with two quiet clauses: the lower legs are normal and symmetric, and peripheral pulses are normal. Note also what the stem does not say — no fever, no erythema, no night pain, no weight loss. Each omission is doing eliminating work, and a reader hunting for positives rather than reading the negatives will find the mass alarming rather than reassuring.",
-   "with": "A <b>2 cm circumference difference</b> is the measurement taught for deep vein thrombosis, but here it accompanies a completely different process. Normal, symmetric lower legs and normal peripheral pulses exclude thrombosis. The history includes no fever, erythema, night pain or weight loss, and each absence helps exclude a competing diagnosis. Read with these negatives, the mass is reassuring rather than alarming.",
+   "with": "A <b>2 cm circumference difference</b> is the measurement taught for deep vein thrombosis, but here it accompanies a completely different process. Normal, symmetric lower legs and normal peripheral pulses exclude thrombosis. There is no fever, erythema, night pain or weight loss, and each absence helps exclude a competing diagnosis. Read with these negatives, the mass is reassuring rather than alarming.",
    "note": "voice: Decoy note; drop stem framing and em dash",
    "claims": [
     {
@@ -866,11 +866,11 @@
     },
     {
      "claim": "There is no fever, no erythema, no night pain and no weight loss.",
-     "to": "The history includes no fever, erythema, night pain or weight loss, and each absence helps exclude a competing diagnosis."
+     "to": "There is no fever, erythema, night pain or weight loss, and each absence helps exclude a competing diagnosis."
     },
     {
      "claim": "Each omission does eliminating work.",
-     "to": "The history includes no fever, erythema, night pain or weight loss, and each absence helps exclude a competing diagnosis."
+     "to": "There is no fever, erythema, night pain or weight loss, and each absence helps exclude a competing diagnosis."
     },
     {
      "claim": "Reading the negatives, the mass is reassuring rather than alarming.",
@@ -895,7 +895,7 @@
      "from": "Normal and symmetric lower legs exclude thrombosis."
     },
     {
-     "claim": "The history includes no fever, erythema, night pain or weight loss.",
+     "claim": "There is no fever, erythema, night pain or weight loss, and each absence helps exclude a competing diagnosis.",
      "from": "There is no fever, no erythema, no night pain and no weight loss."
     },
     {
@@ -1021,7 +1021,7 @@
      "from": "A bone lesion hurts on weight-bearing and at night but not on stretching the muscle over it."
     },
     {
-     "claim": "Alkaline phosphatase, ESR and CRP are often elevated.",
+     "claim": "Alkaline phosphatase, ESR (erythrocyte sedimentation rate) and CRP (C-reactive protein) are often elevated, so inflammatory markers do not distinguish this from infection.",
      "from": "Alkaline phosphatase, ESR and CRP are often elevated."
     },
     {
@@ -1037,7 +1037,7 @@
      "from": "Inflammatory markers do not distinguish this from infection."
     },
     {
-     "claim": "The skin findings and the tempo of illness distinguish it from infection.",
+     "claim": "The skin findings and the tempo of illness do.",
      "from": "The skin and the tempo distinguish it from infection."
     },
     {
@@ -1049,7 +1049,7 @@
      "from": "Eggshell calcification around a radiolucent centre appears later."
     },
     {
-     "claim": "A negative early film does not exclude it (unverified).",
+     "claim": "Early x-rays are often normal, and eggshell calcification around a radiolucent centre appears later, so a negative early film does not exclude it ⚠︎.",
      "from": "A negative early film does not exclude it (unverified)."
     },
     {
@@ -1266,7 +1266,7 @@
      "from": "The pain is provoked by daytime exertion."
     },
     {
-     "claim": "It is relieved by massage and simple analgesics.",
+     "claim": "It is provoked by daytime exertion and relieved by massage and simple analgesics.",
      "from": "The pain is relieved by massage and simple analgesics."
     },
     {
@@ -1274,7 +1274,7 @@
      "from": "Critically, the child walks, runs and plays without complaint."
     },
     {
-     "claim": "The child has a completely normal examination and gait.",
+     "claim": "The child walks, runs and plays without complaint, with a completely normal examination and gait.",
      "from": "The child has a completely normal examination and gait."
     },
     {
@@ -1282,7 +1282,7 @@
      "from": "That is the full profile of growing pains."
     },
     {
-     "claim": "Growing pains are the commonest cause of musculoskeletal pain in children aged 3 to 12.",
+     "claim": "This is the full profile of growing pains, the commonest cause of musculoskeletal pain in children aged 3 to 12.",
      "from": "Growing pains are the commonest cause of musculoskeletal pain in children aged 3 to 12."
     },
     {
@@ -1325,7 +1325,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Bilateral is the single most important feature.",
+     "claim": "the single most important feature, because unilateral pain changes the entire workup",
      "from": "Bilateral is the single load-bearing feature."
     },
     {
@@ -1338,7 +1338,7 @@
    "op": "replace",
    "brief": "growing-pains",
    "find": "The relieving factors are the trap. Improvement with massage or over-the-counter analgesics reads as reassuring, and it is — but <b>it is not discriminating</b>, because the one benign-looking mimic on the list, osteoid osteoma, is famous for dramatic NSAID relief. A reader who uses analgesic response as evidence of benignity has used a feature both diagnoses share. The stem also offers the detail that pain is more common on days when he runs a lot as if it were a worrying exertional pattern; in this diagnosis it is an expected trigger and belongs on the benign side.",
-   "with": "Improvement with massage or over-the-counter analgesics is reassuring, but <b>it is not discriminating</b>. Osteoid osteoma, the one benign-looking mimic on the list, is famous for dramatic NSAID relief. Analgesic response is a feature both diagnoses share, so it is not evidence of benignity. Pain that is more common on days when he runs a lot can look like a worrying exertional pattern. In growing pains it is an expected trigger and belongs on the benign side.",
+   "with": "Improvement with massage or over-the-counter analgesics is reassuring, but <b>it is not discriminating</b>. Osteoid osteoma, the one benign-looking mimic, is famous for dramatic NSAID relief. Analgesic response is a feature both diagnoses share, so it is not evidence of benignity. Pain that is more common on days when he runs a lot can look like a worrying exertional pattern. In growing pains it is an expected trigger and belongs on the benign side.",
    "note": "voice: Decoy note; drop trap/reader/stem framing and em dash",
    "claims": [
     {
@@ -1355,7 +1355,7 @@
     },
     {
      "claim": "Osteoid osteoma, the one benign-looking mimic on the list, is famous for dramatic NSAID relief.",
-     "to": "Osteoid osteoma, the one benign-looking mimic on the list, is famous for dramatic NSAID relief."
+     "to": "Osteoid osteoma, the one benign-looking mimic, is famous for dramatic NSAID relief."
     },
     {
      "claim": "Analgesic response is a feature both diagnoses share and is not evidence of benignity.",
@@ -1376,7 +1376,7 @@
      "from": "Improvement with massage or over-the-counter analgesics is reassuring."
     },
     {
-     "claim": "Osteoid osteoma, the one benign-looking mimic on the list, is famous for dramatic NSAID relief.",
+     "claim": "Osteoid osteoma, the one benign-looking mimic, is famous for dramatic NSAID relief.",
      "from": "Osteoid osteoma, the one benign-looking mimic on the list, is famous for dramatic NSAID relief."
     },
     {
@@ -1384,7 +1384,7 @@
      "from": "Analgesic response is a feature both diagnoses share and is not evidence of benignity."
     },
     {
-     "claim": "Pain more common on days when he runs a lot can look like a worrying exertional pattern.",
+     "claim": "Pain that is more common on days when he runs a lot can look like a worrying exertional pattern.",
      "from": "Pain more common on days when he runs a lot is offered as if it were a worrying exertional pattern."
     },
     {
@@ -1467,7 +1467,7 @@
      "from": "Episodic bilateral night-time leg pain in a 3-to-12-year-old with a normal examination is growing pains."
     },
     {
-     "claim": "Growing pains are managed with reassurance, massage and analgesia, and no imaging.",
+     "claim": "Episodic bilateral night-time leg pain in a 3-to-12-year-old with a normal examination is growing pains: reassurance, massage and analgesia, and no imaging.",
      "from": "Growing pains are managed with reassurance, massage and analgesia, and no imaging."
     },
     {
@@ -1617,7 +1617,7 @@
      "from": "When a symptom has a frightening reputation, do not treat the symptom itself as the flag."
     },
     {
-     "claim": "Find the feature that separates its benign and sinister forms.",
+     "claim": "Find the feature that actually separates its benign and sinister forms.",
      "from": "Find the feature that separates its benign and sinister forms."
     },
     {

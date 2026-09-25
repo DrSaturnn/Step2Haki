@@ -14,7 +14,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Newborn cyanosis is sorted into lung, heart or airway before any lesion is named.",
+     "claim": "Sort lung, heart or airway before naming a lesion",
      "from": "Newborn cyanosis is sorted into lung, heart or airway before any lesion is named."
     }
    ]
@@ -85,11 +85,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Three bedside facts settle the sort before any lesion is considered.",
+     "claim": "Three bedside findings settle the sort before any lesion is considered.",
      "from": "Three bedside facts settle the sort before any lesion is considered."
     },
     {
-     "claim": "He is working to breathe: grunting, flaring, retracting.",
+     "claim": "He is working to breathe (grunting, flaring and retracting); cyanotic heart disease produces comfortable tachypnea, not distress.",
      "from": "He is working to breathe: grunting, flaring, retracting."
     },
     {
@@ -101,7 +101,7 @@
      "from": "His saturation rises from 65% to 92% on oxygen."
     },
     {
-     "claim": "That rise cannot happen in d-transposition, where systemic flow bypasses the lungs entirely.",
+     "claim": "That cannot happen in d-transposition, where systemic flow bypasses the lungs entirely.",
      "from": "That rise cannot happen in d-transposition, where systemic flow bypasses the lungs entirely."
     },
     {
@@ -117,7 +117,7 @@
      "from": "A 32-week infant with ground-glass opacification and air bronchograms has surfactant deficiency: respiratory distress syndrome."
     },
     {
-     "claim": "When the examination is instead a list of normals (no murmur, symmetric pulses, equal four-extremity pressures, clear lungs, no retractions, no stridor), the sort has already excluded lung and heart.",
+     "claim": "Sometimes the examination is instead a list of normals: no murmur, symmetric pulses, equal four-extremity pressures, clear lungs, no retractions, no stridor. These normals already exclude lung and heart.",
      "from": "When the examination is instead a list of normals (no murmur, symmetric pulses, equal four-extremity pressures, clear lungs, no retractions, no stridor), the sort has already excluded lung and heart."
     },
     {
@@ -125,7 +125,7 @@
      "from": "The remaining finding is temporal."
     },
     {
-     "claim": "What brings the cyanosis on, and what relieves it, is then the whole question.",
+     "claim": "Ask: What brings the cyanosis on, and what relieves it?",
      "from": "What brings the cyanosis on, and what relieves it, is then the whole question."
     },
     {
@@ -156,7 +156,7 @@
    ],
    "new_claims": [
     {
-     "claim": "32 weeks and 1.7 kg set the base rate for surfactant deficiency; RDS incidence is inversely related to gestational age.",
+     "claim": "the base rate for surfactant deficiency; RDS (respiratory distress syndrome) incidence",
      "from": "32 weeks and 1.7 kg set the base rate for surfactant deficiency; RDS incidence is inversely related to gestational age."
     },
     {
@@ -187,11 +187,11 @@
    ],
    "new_claims": [
     {
-     "claim": "A dose of antenatal glucocorticoids lowers the risk.",
+     "claim": "lowers the risk but never excludes the diagnosis",
      "from": "A dose of antenatal glucocorticoids lowers the risk."
     },
     {
-     "claim": "Antenatal glucocorticoids never exclude the diagnosis.",
+     "claim": "lowers the risk but never excludes the diagnosis",
      "from": "Antenatal glucocorticoids never exclude the diagnosis."
     }
    ]
@@ -221,11 +221,11 @@
    ],
    "new_claims": [
     {
-     "claim": "PPROM with intrapartum penicillin sets up group B streptococcal pneumonia.",
+     "claim": "PPROM (preterm prelabor rupture of membranes) with intrapartum penicillin — sets up group B streptococcal pneumonia, whose film is indistinguishable from RDS ⚠︎",
      "from": "PPROM with intrapartum penicillin sets up group B streptococcal pneumonia."
     },
     {
-     "claim": "The group B streptococcal pneumonia film is indistinguishable from RDS (⚠︎).",
+     "claim": "PPROM (preterm prelabor rupture of membranes) with intrapartum penicillin — sets up group B streptococcal pneumonia, whose film is indistinguishable from RDS ⚠︎",
      "from": "The group B streptococcal pneumonia film is indistinguishable from RDS (⚠︎)."
     },
     {
@@ -276,23 +276,23 @@
    ],
    "new_claims": [
     {
-     "claim": "RDS is supported with CPAP.",
+     "claim": "Support RDS (respiratory distress syndrome) with CPAP (continuous positive airway pressure).",
      "from": "RDS is supported with CPAP."
     },
     {
-     "claim": "Mechanical ventilation and exogenous surfactant are reserved for severe or failing cases.",
+     "claim": "Reserve mechanical ventilation and exogenous surfactant for severe or failing cases.",
      "from": "Mechanical ventilation and exogenous surfactant are reserved for severe or failing cases."
     },
     {
-     "claim": "The heart branch would instead be a prostaglandin infusion to hold the duct open.",
+     "claim": "In the heart branch, management is instead a prostaglandin infusion to hold the duct open; in the pulmonary-hypertension branch, it is inhaled nitric oxide ⚠︎.",
      "from": "The heart branch would instead be a prostaglandin infusion to hold the duct open."
     },
     {
-     "claim": "The pulmonary-hypertension branch would be inhaled nitric oxide (⚠︎).",
+     "claim": "In the heart branch, management is instead a prostaglandin infusion to hold the duct open; in the pulmonary-hypertension branch, it is inhaled nitric oxide ⚠︎.",
      "from": "The pulmonary-hypertension branch would be inhaled nitric oxide (⚠︎)."
     },
     {
-     "claim": "The first move for the obstruction is an oral airway with orogastric feeding to bypass the obstruction.",
+     "claim": "For the nasal obstruction, the first step is an oral airway with orogastric feeding to bypass the obstruction, and definitive treatment is surgical repair.",
      "from": "The first move for the obstruction is an oral airway with orogastric feeding to bypass the obstruction."
     },
     {
@@ -323,7 +323,7 @@
    ],
    "new_claims": [
     {
-     "claim": "If every examination finding is normal, the trigger is the finding.",
+     "claim": "sort by the trigger:",
      "from": "If every examination finding is normal, the trigger is the finding."
     }
    ]
@@ -332,7 +332,7 @@
    "op": "replace",
    "brief": "newborn-cyanosis",
    "find": "The dose of antenatal glucocorticoids is the most effective bait here: it is genuinely protective, so it reads as if RDS has been treated away, when it only lowers the risk. The grade 1/6 murmur is the second — soft, non-specific, and in a 30-minute-old almost certainly a physiologically open duct rather than a lesion. PPROM with intrapartum penicillin points at group B streptococcal pneumonia, whose film is indistinguishable from RDS; the exam removed that ambiguity by leaving it off the option list, but a real stem would not ⚠︎. This stem is built almost entirely out of negatives: six normal findings, each of which retires one option, and exactly one positive — the timing. Readers who answer in half a minute are answering from the word \"cyanosis\" and the word \"newborn,\" which together select a cardiac lesion and nothing else. \"Primigravida with an uncomplicated pregnancy and delivery\" and \"voided and passed meconium\" are inert; their only function is to establish that the baby is well, which is itself the precondition for the whole sort.",
-   "with": "Antenatal glucocorticoids are genuinely protective, but they only lower the risk of <b>RDS</b> (respiratory distress syndrome); they do not treat it away. A grade 1/6 murmur is soft and non-specific. In a 30-minute-old it is almost certainly a physiologically open duct rather than a lesion. <b>PPROM</b> (preterm prelabor rupture of membranes) with intrapartum penicillin points to group B streptococcal pneumonia, whose film is indistinguishable from RDS. It was not an option here, but in practice that ambiguity remains ⚠︎. The normal-examination stem is almost entirely negatives: six normal findings each exclude one option, and the only positive finding is the timing. A primigravida with an uncomplicated pregnancy and delivery, and an infant who voided and passed meconium, are inert findings. They only establish that the baby is well, which is the precondition for the sort.",
+   "with": "Antenatal glucocorticoids are genuinely protective, but they only lower the risk of <b>RDS</b> (respiratory distress syndrome); they do not treat it away. A grade 1/6 murmur is soft and non-specific. In a 30-minute-old it is almost certainly a physiologically open duct rather than a lesion. <b>PPROM</b> (preterm prelabor rupture of membranes) with intrapartum penicillin points to group B streptococcal pneumonia, whose film is indistinguishable from RDS. In practice the ambiguity remains ⚠︎. In the normal-examination case, six normal findings each exclude one diagnosis, and the only positive finding is the timing. A primigravida with an uncomplicated pregnancy and delivery, and an infant who voided and passed meconium, are inert findings. They only establish that the baby is well, which is the precondition for the sort.",
    "note": "Decoy note .danger: remove bait/reader framing and em dashes",
    "claims": [
     {
@@ -365,11 +365,11 @@
     },
     {
      "claim": "The exam removed that ambiguity by leaving it off the option list, but a real stem would not (⚠︎).",
-     "to": "It was not an option here, but in practice that ambiguity remains ⚠︎."
+     "to": "In practice the ambiguity remains ⚠︎."
     },
     {
      "claim": "The normal-examination stem is built almost entirely out of negatives: six normal findings, each retiring one option, and exactly one positive, the timing.",
-     "to": "The normal-examination stem is almost entirely negatives: six normal findings each exclude one option, and the only positive finding is the timing."
+     "to": "In the normal-examination case, six normal findings each exclude one diagnosis, and the only positive finding is the timing."
     },
     {
      "claim": "Readers who answer in half a minute answer from the words cyanosis and newborn, which together select a cardiac lesion and nothing else.",
@@ -390,35 +390,35 @@
      "from": "Antenatal glucocorticoids are genuinely protective."
     },
     {
-     "claim": "They read as if RDS has been treated away, when they only lower the risk.",
+     "claim": "Antenatal glucocorticoids are genuinely protective, but they only lower the risk of RDS (respiratory distress syndrome); they do not treat it away.",
      "from": "They read as if RDS has been treated away, when they only lower the risk."
     },
     {
-     "claim": "The grade 1/6 murmur is soft and non-specific.",
+     "claim": "A grade 1/6 murmur is soft and non-specific.",
      "from": "The grade 1/6 murmur is soft and non-specific."
     },
     {
-     "claim": "In a 30-minute-old the murmur is almost certainly a physiologically open duct rather than a lesion.",
+     "claim": "In a 30-minute-old it is almost certainly a physiologically open duct rather than a lesion.",
      "from": "In a 30-minute-old the murmur is almost certainly a physiologically open duct rather than a lesion."
     },
     {
-     "claim": "PPROM with intrapartum penicillin points at group B streptococcal pneumonia, whose film is indistinguishable from RDS.",
+     "claim": "PPROM (preterm prelabor rupture of membranes) with intrapartum penicillin points to group B streptococcal pneumonia, whose film is indistinguishable from RDS.",
      "from": "PPROM with intrapartum penicillin points at group B streptococcal pneumonia, whose film is indistinguishable from RDS."
     },
     {
-     "claim": "The exam removed that ambiguity by leaving it off the option list, but a real stem would not (⚠︎).",
+     "claim": "In practice the ambiguity remains ⚠︎.",
      "from": "The exam removed that ambiguity by leaving it off the option list, but a real stem would not (⚠︎)."
     },
     {
-     "claim": "The normal-examination stem is built almost entirely out of negatives: six normal findings, each retiring one option, and exactly one positive, the timing.",
+     "claim": "In the normal-examination case, six normal findings each exclude one diagnosis, and the only positive finding is the timing.",
      "from": "The normal-examination stem is built almost entirely out of negatives: six normal findings, each retiring one option, and exactly one positive, the timing."
     },
     {
-     "claim": "\"Primigravida with an uncomplicated pregnancy and delivery\" and \"voided and passed meconium\" are inert.",
+     "claim": "A primigravida with an uncomplicated pregnancy and delivery, and an infant who voided and passed meconium, are inert findings.",
      "from": "\"Primigravida with an uncomplicated pregnancy and delivery\" and \"voided and passed meconium\" are inert."
     },
     {
-     "claim": "Their only function is to establish that the baby is well, which is the precondition for the whole sort.",
+     "claim": "They only establish that the baby is well, which is the precondition for the sort.",
      "from": "Their only function is to establish that the baby is well, which is the precondition for the whole sort."
     },
     {
@@ -549,15 +549,15 @@
      "from": "Oxygen is diagnostic and therapeutic: it separates alveolar disease from a fixed shunt and treats RDS."
     },
     {
-     "claim": "Oxygen is occasionally harmful: it constricts the duct a ductal-dependent lesion needs (⚠︎).",
+     "claim": "It is occasionally harmful, because it constricts the duct a ductal-dependent lesion needs ⚠︎.",
      "from": "Oxygen is occasionally harmful: it constricts the duct a ductal-dependent lesion needs (⚠︎)."
     },
     {
-     "claim": "A lesion that depends on the duct declares when the duct closes, from about 12 hours onward.",
+     "claim": "A lesion that depends on the duct presents when the duct closes, from about 12 hours onward.",
      "from": "A lesion that depends on the duct declares when the duct closes, from about 12 hours onward."
     },
     {
-     "claim": "Cyanosis in the delivery room is lung disease, failed transition, or transposition.",
+     "claim": "Cyanosis in the delivery room is lung disease, failed transition or transposition.",
      "from": "Cyanosis in the delivery room is lung disease, failed transition, or transposition."
     },
     {
@@ -573,7 +573,7 @@
      "from": "Collapse causes hypoxia, hypoxia constricts the pulmonary vasculature, and the resulting right-to-left shunt deepens the cyanosis."
     },
     {
-     "claim": "That is why shunt physiology can be present without a shunt lesion.",
+     "claim": "Shunt physiology can therefore be present without a shunt lesion.",
      "from": "That is why shunt physiology can be present without a shunt lesion."
     },
     {
@@ -581,15 +581,15 @@
      "from": "Newborns are obligate nasal breathers."
     },
     {
-     "claim": "So nasal obstruction gives cyanosis that worsens when the mouth is occluded by feeding and improves when it opens with crying.",
+     "claim": "Nasal obstruction therefore gives cyanosis that worsens when the mouth is occluded by feeding and improves when it opens with crying.",
      "from": "So nasal obstruction gives cyanosis that worsens when the mouth is occluded by feeding and improves when it opens with crying."
     },
     {
-     "claim": "The inverse pattern belongs to the tet spell: cyanosis worsening with crying and agitation, relieved by knee-to-chest positioning (⚠︎).",
+     "claim": "The inverse pattern is the tet spell: cyanosis worsens with crying and agitation and is relieved by knee-to-chest positioning ⚠︎.",
      "from": "The inverse pattern belongs to the tet spell: cyanosis worsening with crying and agitation, relieved by knee-to-chest positioning (⚠︎)."
     },
     {
-     "claim": "The bedside test is free: pass a catheter through each naris.",
+     "claim": "Pass a catheter through each naris first.",
      "from": "The bedside test is free: pass a catheter through each naris."
     },
     {
@@ -597,19 +597,19 @@
      "from": "Imaging only confirms what the catheter suggested."
     },
     {
-     "claim": "Choanal atresia may belong to CHARGE: coloboma, heart defects, atresia choanae, retardation of growth, genital and ear abnormalities.",
+     "claim": "Choanal atresia may belong to CHARGE (coloboma, heart defects, atresia choanae, retardation of growth, genital and ear abnormalities).",
      "from": "Choanal atresia may belong to CHARGE: coloboma, heart defects, atresia choanae, retardation of growth, genital and ear abnormalities."
     },
     {
-     "claim": "Unilateral disease often hides until childhood as chronic unilateral nasal discharge.",
+     "claim": "Unilateral disease often goes unrecognized until childhood, when it presents as chronic unilateral nasal discharge.",
      "from": "Unilateral disease often hides until childhood as chronic unilateral nasal discharge."
     },
     {
-     "claim": "Tachypnea is not distress: fast breathing with no flaring, grunting or retractions and clear lungs points at the heart, while work of breathing points at the lung.",
+     "claim": "Tachypnea without distress points to the heart: fast breathing with no flaring, grunting or retractions, and clear lungs. Work of breathing points to the lung.",
      "from": "Tachypnea is not distress: fast breathing with no flaring, grunting or retractions and clear lungs points at the heart, while work of breathing points at the lung."
     },
     {
-     "claim": "A loud single S2 with no murmur is transposition's signature.",
+     "claim": "A loud single S2 with no murmur is characteristic of transposition.",
      "from": "A loud single S2 with no murmur is transposition's signature."
     },
     {
@@ -664,23 +664,23 @@
      "from": "Neonatal Respiratory Distress covers the film-based sort among the parenchymal causes."
     },
     {
-     "claim": "Cyanotic Congenital Heart Disease covers the lesion catalog once the sort points at the heart.",
+     "claim": "Part I Cyanotic Congenital Heart Disease covers the lesion catalog once the sort points to the heart.",
      "from": "Cyanotic Congenital Heart Disease covers the lesion catalog once the sort points at the heart."
     },
     {
-     "claim": "Tracheoesophageal Fistula with Esophageal Atresia covers the newborn clock (which diagnosis belongs at which hour) and carries choanal atresia in its minutes-to-hours bucket.",
+     "claim": "Part II Tracheoesophageal Fistula with Esophageal Atresia covers the newborn clock (which diagnosis belongs at which hour) and includes choanal atresia in its minutes-to-hours group.",
      "from": "Tracheoesophageal Fistula with Esophageal Atresia covers the newborn clock (which diagnosis belongs at which hour) and carries choanal atresia in its minutes-to-hours bucket."
     },
     {
-     "claim": "The discriminating question: is he working to breathe, does oxygen help, do the limbs differ, and does the cyanosis change with what he is doing?",
+     "claim": "Ask: is he working to breathe, does oxygen help, do the limbs differ, and does the cyanosis change with what he is doing?",
      "from": "The discriminating question: is he working to breathe, does oxygen help, do the limbs differ, and does the cyanosis change with what he is doing?"
     },
     {
-     "claim": "Multiple Anomalies in a Newborn picks up where the catheter test ends: choanal atresia found, which syndrome it belongs to.",
+     "claim": "Part I Multiple Anomalies in a Newborn covers the step after a positive catheter test: which syndrome includes the choanal atresia.",
      "from": "Multiple Anomalies in a Newborn picks up where the catheter test ends: choanal atresia found, which syndrome it belongs to."
     },
     {
-     "claim": "Aneuploidy: Reading the Newborn carries acrocyanosis as the decoy beside a trisomy 18 murmur; ask: are the lips and tongue pink?",
+     "claim": "Part I Aneuploidy: Reading the Newborn covers acrocyanosis as the decoy beside a trisomy 18 murmur; ask: are the lips and tongue pink?",
      "from": "Aneuploidy: Reading the Newborn carries acrocyanosis as the decoy beside a trisomy 18 murmur; ask: are the lips and tongue pink?"
     }
    ]
@@ -715,15 +715,15 @@
      "from": "When a finding has both a lung and a heart cause, sort by physiology before naming a disease."
     },
     {
-     "claim": "The bedside triad of work of breathing, oxygen response and a pre-to-postductal difference decides which catalog you may open.",
+     "claim": "The bedside triad of work of breathing, oxygen response and a pre-to-postductal difference decides which group of diagnoses to consider.",
      "from": "The bedside triad of work of breathing, oxygen response and a pre-to-postductal difference decides which catalog you may open."
     },
     {
-     "claim": "When the sort returns nothing abnormal, the pattern in time is the finding.",
+     "claim": "When the sort finds nothing abnormal, the pattern in time is the key finding.",
      "from": "When the sort returns nothing abnormal, the pattern in time is the finding."
     },
     {
-     "claim": "A trigger that runs the wrong way excludes the lesion it resembles.",
+     "claim": "A trigger that runs the opposite way excludes the lesion it resembles.",
      "from": "A trigger that runs the wrong way excludes the lesion it resembles."
     }
    ]
@@ -750,7 +750,7 @@
    ],
    "new_claims": [
     {
-     "claim": "A respiratory rate of 66 reads as distress and leads to CPAP.",
+     "claim": "Continuous positive airway pressure: a respiratory rate of 66 reads as distress, but the stem negates flaring, grunting and retractions and reports clear lungs.",
      "from": "A respiratory rate of 66 reads as distress and leads to CPAP."
     },
     {
@@ -785,11 +785,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Here pulmonary hypertension is a consequence of the atelectasis, not the primary disease.",
+     "claim": "That is a consequence of the atelectasis, not the primary disease; PPHN (persistent pulmonary hypertension of the newborn) gives",
      "from": "Here pulmonary hypertension is a consequence of the atelectasis, not the primary disease."
     },
     {
-     "claim": "PPHN gives a preductal-postductal gradient and a clear film.",
+     "claim": "PPHN (persistent pulmonary hypertension of the newborn) gives",
      "from": "PPHN gives a preductal-postductal gradient and a clear film."
     },
     {
@@ -812,7 +812,7 @@
    ],
    "new_claims": [
     {
-     "claim": "TTN is mild.",
+     "claim": "Transient tachypnea of the newborn: it is mild",
      "from": "TTN is mild."
     }
    ]
@@ -839,7 +839,7 @@
    ],
    "new_claims": [
     {
-     "claim": "The tetralogy trigger is inverted.",
+     "claim": "its trigger is inverted.",
      "from": "The tetralogy trigger is inverted."
     },
     {
@@ -856,7 +856,7 @@
    "op": "replace",
    "brief": "kawasaki",
    "find": "<p>Fever <b>≥5 days</b> + <b>≥4 of 5</b> criteria. <b>IVIG must be given within 10 days of fever onset</b> — this is an act-now answer, not a work-up answer. <b>Sterile pyuria is a feature, not a distractor</b>: KD causes urethritis, giving urinary WBCs with <b>no bacteria</b>.</p>",
-   "with": "<p>Diagnosis: fever <b>≥5 days</b> plus <b>≥4 of 5</b> criteria. <b>IVIG</b> (intravenous immunoglobulin) <b>must be given within 10 days of fever onset</b>. Treat now; do not delay it for a workup. <b>Sterile pyuria is a feature</b> of the disease, not a distractor. Kawasaki disease causes urethritis, giving urinary white blood cells with <b>no bacteria</b>.</p>",
+   "with": "<p>Diagnosis: fever <b>≥5 days</b> plus <b>≥4 of 5</b> criteria. <b>IVIG</b> (intravenous immunoglobulin) <b>must be given within 10 days of fever onset</b>. Treat now; do not delay it for a workup. <b>Sterile pyuria is a feature</b> of Kawasaki disease. Kawasaki disease causes urethritis, giving urinary white blood cells with <b>no bacteria</b>.</p>",
    "note": ".dp: remove em dash and act-now/work-up framing; expand IVIG, KD, WBCs",
    "reworded_bold": [
     "IVIG must be given within 10 days of fever onset",
@@ -877,7 +877,7 @@
     },
     {
      "claim": "Sterile pyuria is a feature, not a distractor.",
-     "to": "Sterile pyuria is a feature of the disease, not a distractor."
+     "to": "Sterile pyuria is a feature of Kawasaki disease."
     },
     {
      "claim": "KD causes urethritis, giving urinary WBCs with no bacteria.",
@@ -886,23 +886,23 @@
    ],
    "new_claims": [
     {
-     "claim": "Diagnosis is fever ≥5 days plus ≥4 of 5 criteria.",
+     "claim": "Diagnosis: fever ≥5 days plus ≥4 of 5 criteria.",
      "from": "Diagnosis is fever ≥5 days plus ≥4 of 5 criteria."
     },
     {
-     "claim": "IVIG must be given within 10 days of fever onset.",
+     "claim": "IVIG (intravenous immunoglobulin) must be given within 10 days of fever onset.",
      "from": "IVIG must be given within 10 days of fever onset."
     },
     {
-     "claim": "This is an act-now answer, not a work-up answer.",
+     "claim": "Treat now; do not delay it for a workup.",
      "from": "This is an act-now answer, not a work-up answer."
     },
     {
-     "claim": "Sterile pyuria is a feature, not a distractor.",
+     "claim": "Sterile pyuria is a feature of Kawasaki disease.",
      "from": "Sterile pyuria is a feature, not a distractor."
     },
     {
-     "claim": "KD causes urethritis, giving urinary WBCs with no bacteria.",
+     "claim": "Kawasaki disease causes urethritis, giving urinary white blood cells with no bacteria.",
      "from": "KD causes urethritis, giving urinary WBCs with no bacteria."
     },
     {
@@ -964,15 +964,15 @@
    ],
    "new_claims": [
     {
-     "claim": "IVIG 2 g/kg within 10 days reduces coronary aneurysm risk from ~20–25% to ~3–5%.",
+     "claim": "IVIG (intravenous immunoglobulin) 2 g/kg within 10 days reduces coronary aneurysm risk from ~20–25% to ~3–5%",
      "from": "IVIG 2 g/kg within 10 days reduces coronary aneurysm risk from ~20–25% to ~3–5%."
     },
     {
-     "claim": "Give high-dose aspirin acutely, then low-dose.",
+     "claim": "high-dose aspirin acutely, then low-dose; Kawasaki is the exception to the rule against aspirin in children",
      "from": "Give high-dose aspirin acutely, then low-dose."
     },
     {
-     "claim": "Kawasaki is the exception to the never-give-children-aspirin rule.",
+     "claim": "high-dose aspirin acutely, then low-dose; Kawasaki is the exception to the rule against aspirin in children",
      "from": "Kawasaki is the exception to the never-give-children-aspirin rule."
     },
     {
@@ -997,12 +997,12 @@
    "op": "replace",
    "brief": "kawasaki",
    "find": "Fever ≥5 days with only 2–3 criteria, especially in <b>infants &lt;6 months</b> — who have the <b>highest</b> aneurysm risk and the most atypical presentations. Use CRP/ESR + supplemental labs + echo, and treat if supportive.",
-   "with": "Incomplete Kawasaki disease is fever ≥5 days with only 2–3 criteria, especially in <b>infants &lt;6 months</b>. These infants have the <b>highest</b> aneurysm risk and the most atypical presentations. Use <b>CRP</b> (C-reactive protein) and <b>ESR</b> (erythrocyte sedimentation rate), supplemental labs and echocardiography, and treat if they are supportive.",
+   "with": "Fever ≥5 days with only 2–3 criteria, especially in <b>infants &lt;6 months</b>. These infants have the <b>highest</b> aneurysm risk and the most atypical presentations. Use <b>CRP</b> (C-reactive protein) and <b>ESR</b> (erythrocyte sedimentation rate), supplemental labs and echocardiography, and treat if they are supportive.",
    "note": "Incomplete KD pearls: remove em dash; expand CRP/ESR, echo",
    "claims": [
     {
      "claim": "Incomplete KD is fever ≥5 days with only 2–3 criteria, especially in infants <6 months.",
-     "to": "Incomplete Kawasaki disease is fever ≥5 days with only 2–3 criteria, especially in infants <6 months."
+     "to": "Fever ≥5 days with only 2–3 criteria, especially in infants <6 months."
     },
     {
      "claim": "Infants <6 months have the highest aneurysm risk and the most atypical presentations.",
@@ -1015,15 +1015,15 @@
    ],
    "new_claims": [
     {
-     "claim": "Incomplete KD is fever ≥5 days with only 2–3 criteria, especially in infants <6 months.",
+     "claim": "Fever ≥5 days with only 2–3 criteria, especially in infants <6 months.",
      "from": "Incomplete KD is fever ≥5 days with only 2–3 criteria, especially in infants <6 months."
     },
     {
-     "claim": "Infants <6 months have the highest aneurysm risk and the most atypical presentations.",
+     "claim": "These infants have the highest aneurysm risk and the most atypical presentations.",
      "from": "Infants <6 months have the highest aneurysm risk and the most atypical presentations."
     },
     {
-     "claim": "Use CRP/ESR, supplemental labs and echo, and treat if supportive.",
+     "claim": "Use CRP (C-reactive protein) and ESR (erythrocyte sedimentation rate), supplemental labs and echocardiography, and treat if they are supportive.",
      "from": "Use CRP/ESR, supplemental labs and echo, and treat if supportive."
     },
     {
@@ -1066,11 +1066,11 @@
      "from": "A candidate diagnosis that explains only a subset of the findings is wrong."
     },
     {
-     "claim": "UTI explains two lines of this stem; Kawasaki explains all of them.",
+     "claim": "A UTI (urinary tract infection) explains two of the findings; Kawasaki explains all of them.",
      "from": "UTI explains two lines of this stem; Kawasaki explains all of them."
     },
     {
-     "claim": "Ask which findings your diagnosis leaves orphaned.",
+     "claim": "Check which findings a diagnosis leaves unexplained.",
      "from": "Ask which findings your diagnosis leaves orphaned."
     },
     {
@@ -1093,7 +1093,7 @@
    ],
    "new_claims": [
     {
-     "claim": "The causal chain beats the vivid detail.",
+     "claim": "The post-streptococcal sequence outweighs a vivid setting detail",
      "from": "The causal chain beats the vivid detail."
     }
    ]
@@ -1131,7 +1131,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Sore throat 2 weeks ago, then migratory large-joint arthritis, then a new holosystolic apical murmur with fever.",
+     "claim": "A sore throat 2 weeks ago was followed by migratory large-joint arthritis and a new holosystolic apical murmur with fever.",
      "from": "Sore throat 2 weeks ago, then migratory large-joint arthritis, then a new holosystolic apical murmur with fever."
     },
     {
@@ -1186,19 +1186,19 @@
    ],
    "new_claims": [
     {
-     "claim": "ARF is type II hypersensitivity via molecular mimicry against M protein.",
+     "claim": "Type II hypersensitivity via molecular mimicry against M protein",
      "from": "ARF is type II hypersensitivity via molecular mimicry against M protein."
     },
     {
-     "claim": "Pathology shows Aschoff bodies and Anitschkow cells.",
+     "claim": "Aschoff bodies and Anitschkow cells on pathology",
      "from": "Pathology shows Aschoff bodies and Anitschkow cells."
     },
     {
-     "claim": "The acute attack hits the mitral valve as regurgitation.",
+     "claim": "the acute attack affects the mitral valve as regurgitation",
      "from": "The acute attack hits the mitral valve as regurgitation."
     },
     {
-     "claim": "Decades later it returns as mitral stenosis.",
+     "claim": "decades later the valve disease presents as mitral stenosis",
      "from": "Decades later it returns as mitral stenosis."
     },
     {
@@ -1206,7 +1206,7 @@
      "from": "Treatment is penicillin plus aspirin, then monthly benzathine penicillin for years."
     },
     {
-     "claim": "Treating the pharyngitis prevents ARF but not PSGN.",
+     "claim": "treating the pharyngitis prevents ARF (acute rheumatic fever) but not PSGN (post-streptococcal glomerulonephritis).",
      "from": "Treating the pharyngitis prevents ARF but not PSGN."
     },
     {
@@ -1260,23 +1260,23 @@
      "from": "Lyme needs erythema migrans."
     },
     {
-     "claim": "Lyme arthritis is late (months) and monoarticular.",
+     "claim": "Its arthritis is late (months) and monoarticular, and its cardiac finding is AV block (atrioventricular block), not a valvular murmur.",
      "from": "Lyme arthritis is late (months) and monoarticular."
     },
     {
-     "claim": "The Lyme cardiac finding is AV block, not a valvular murmur.",
+     "claim": "Its arthritis is late (months) and monoarticular, and its cardiac finding is AV block (atrioventricular block), not a valvular murmur.",
      "from": "The Lyme cardiac finding is AV block, not a valvular murmur."
     },
     {
-     "claim": "RMSF needs headache and a rash involving palms and soles.",
+     "claim": "RMSF (Rocky Mountain spotted fever) needs headache and a rash involving palms and soles; it is a vasculitis, not an arthritis.",
      "from": "RMSF needs headache and a rash involving palms and soles."
     },
     {
-     "claim": "RMSF is a vasculitis, not an arthritis.",
+     "claim": "RMSF (Rocky Mountain spotted fever) needs headache and a rash involving palms and soles; it is a vasculitis, not an arthritis.",
      "from": "RMSF is a vasculitis, not an arthritis."
     },
     {
-     "claim": "JIA needs ≥6 weeks by definition.",
+     "claim": "JIA (juvenile idiopathic arthritis) needs ≥6 weeks by definition.",
      "from": "JIA needs ≥6 weeks by definition."
     },
     {
@@ -1343,23 +1343,23 @@
    ],
    "new_claims": [
     {
-     "claim": "Every respiratory finding here is real and every one of them is downstream.",
+     "claim": "The respiratory findings are real, but every one of them is a consequence of the heart.",
      "from": "Every respiratory finding here is real and every one of them is downstream."
     },
     {
-     "claim": "The deciding findings are cardiac and there are three: a gallop, a new holosystolic murmur at the apex, and 1+ pulses with a blood pressure of 60/40.",
+     "claim": "Three cardiac findings decide the diagnosis: a gallop, a new holosystolic murmur at the apex, and 1+ pulses with a blood pressure of 60/40.",
      "from": "The deciding findings are cardiac and there are three: a gallop, a new holosystolic murmur at the apex, and 1+ pulses with a blood pressure of 60/40."
     },
     {
-     "claim": "A gallop is an S3, a ventricle taking volume it cannot handle.",
+     "claim": "A gallop is an S3, from a ventricle taking volume it cannot handle.",
      "from": "A gallop is an S3, a ventricle taking volume it cannot handle."
     },
     {
-     "claim": "An apical holosystolic murmur in this setting is mitral regurgitation from ventricular dilation, not a primary valve lesion.",
+     "claim": "In this setting, an apical holosystolic murmur is mitral regurgitation from ventricular dilation, not a primary valve lesion.",
      "from": "An apical holosystolic murmur in this setting is mitral regurgitation from ventricular dilation, not a primary valve lesion."
     },
     {
-     "claim": "Weak pulses with hypotension in a 2-year-old is shock.",
+     "claim": "Weak pulses with hypotension in a 2-year-old are shock.",
      "from": "Weak pulses with hypotension in a 2-year-old is shock."
     },
     {
@@ -1375,7 +1375,7 @@
      "from": "The viral prodrome is the cause, not a coincidence."
     },
     {
-     "claim": "Coxsackievirus B and adenovirus are the usual agents.",
+     "claim": "The usual agents are coxsackievirus B and adenovirus.",
      "from": "Coxsackievirus B and adenovirus are the usual agents."
     },
     {
@@ -1398,7 +1398,7 @@
    ],
    "new_claims": [
     {
-     "claim": "BP 60/40 with 1+ pulses is cardiogenic shock, which makes this an emergency rather than a diagnosis.",
+     "claim": "cardiogenic shock, an emergency",
      "from": "BP 60/40 with 1+ pulses is cardiogenic shock, which makes this an emergency rather than a diagnosis."
     }
    ]
@@ -1421,11 +1421,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Decreased urine output is hypoperfusion.",
+     "claim": "hypoperfusion; urine output reflects cardiac output",
      "from": "Decreased urine output is hypoperfusion."
     },
     {
-     "claim": "The kidney is reporting cardiac output.",
+     "claim": "hypoperfusion; urine output reflects cardiac output",
      "from": "The kidney is reporting cardiac output."
     }
    ]
@@ -1463,15 +1463,15 @@
    ],
    "new_claims": [
     {
-     "claim": "Management is supportive: diuresis, afterload reduction and inotropes.",
+     "claim": "Treatment is supportive: diuresis, afterload reduction and inotropes.",
      "from": "Management is supportive: diuresis, afterload reduction and inotropes."
     },
     {
-     "claim": "IVIG is an option that may reduce morbidity (⚠︎).",
+     "claim": "IVIG (intravenous immunoglobulin) is an option that may reduce morbidity ⚠︎.",
      "from": "IVIG is an option that may reduce morbidity (⚠︎)."
     },
     {
-     "claim": "The trap is treating the shock reflexively.",
+     "claim": "Do not treat the shock reflexively.",
      "from": "The trap is treating the shock reflexively."
     },
     {
@@ -1529,11 +1529,11 @@
    ],
    "new_claims": [
     {
-     "claim": "Any child in respiratory distress who has an S3 or a new murmur has heart failure until an echocardiogram says otherwise, however viral the story sounds.",
+     "claim": "S3 or new murmur in any child in respiratory distress — heart failure until an echocardiogram says otherwise, however viral the story sounds",
      "from": "Any child in respiratory distress who has an S3 or a new murmur has heart failure until an echocardiogram says otherwise, however viral the story sounds."
     },
     {
-     "claim": "A new holosystolic murmur at the apex in a failing ventricle is functional mitral regurgitation, a consequence, not a second disease.",
+     "claim": "A new holosystolic murmur at the apex in a failing ventricle is functional mitral regurgitation — a consequence, not a second disease",
      "from": "A new holosystolic murmur at the apex in a failing ventricle is functional mitral regurgitation, a consequence, not a second disease."
     },
     {
@@ -1541,7 +1541,7 @@
      "from": "Hypotension in myocarditis is cardiogenic."
     },
     {
-     "claim": "Fluid-loading it fills the lungs, which is the commonest management error.",
+     "claim": "Hypotension in myocarditis is cardiogenic: fluid loading fills the lungs and is the commonest management error",
      "from": "Fluid-loading it fills the lungs, which is the commonest management error."
     },
     {
@@ -1549,11 +1549,11 @@
      "from": "Rheumatic fever is defined by its interval, 2 to 4 weeks after pharyngitis; a murmur appearing during a viral illness is myocarditis."
     },
     {
-     "claim": "Kawasaki's fever requirement is five days, and it is a gate, not a guideline.",
+     "claim": "Kawasaki's fever requirement is five days, and it is mandatory",
      "from": "Kawasaki's fever requirement is five days, and it is a gate, not a guideline."
     },
     {
-     "claim": "An S3 or new murmur in any child in respiratory distress means heart failure until an echocardiogram says otherwise.",
+     "claim": "S3 or new murmur in any child in respiratory distress — heart failure until an echocardiogram says otherwise, however viral the story sounds",
      "from": "Any child in respiratory distress who has an S3 or a new murmur has heart failure until an echocardiogram says otherwise, however viral the story sounds."
     }
    ]
@@ -1592,11 +1592,11 @@
      "from": "Acute Rheumatic Fever covers Jones and the post-streptococcal interval."
     },
     {
-     "claim": "Kawasaki Disease covers the five-day gate.",
+     "claim": "Kawasaki Disease covers the five-day fever requirement.",
      "from": "Kawasaki Disease covers the five-day gate."
     },
     {
-     "claim": "The discriminating question: is there a gallop or a new murmur, and how long has the fever run?",
+     "claim": "Ask: is there a gallop or a new murmur, and how long has the fever run?",
      "from": "The discriminating question: is there a gallop or a new murmur, and how long has the fever run?"
     }
    ]
@@ -1623,15 +1623,15 @@
    ],
    "new_claims": [
     {
-     "claim": "When a stem's respiratory findings are loud and its cardiac findings are quiet, read the cardiac findings first.",
+     "claim": "When respiratory findings are prominent and cardiac findings are subtle, read the cardiac findings first.",
      "from": "When a stem's respiratory findings are loud and its cardiac findings are quiet, read the cardiac findings first."
     },
     {
-     "claim": "A gallop, a new murmur, or weak pulses reassigns the failing organ.",
+     "claim": "A gallop, a new murmur or weak pulses point to the heart as the failing organ.",
      "from": "A gallop, a new murmur, or weak pulses reassigns the failing organ."
     },
     {
-     "claim": "Every lung sign becomes a consequence rather than a cause.",
+     "claim": "The lung signs are then a consequence rather than a cause.",
      "from": "Every lung sign becomes a consequence rather than a cause."
     }
    ]
@@ -1650,7 +1650,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Oliguria after a URI fits.",
+     "claim": "oliguria after a URI (upper respiratory infection) fits",
      "from": "Oliguria after a URI fits."
     },
     {
@@ -1673,7 +1673,7 @@
    ],
    "new_claims": [
     {
-     "claim": "The cluster is given; name the component it withheld.",
+     "claim": "the syndrome cluster is given; identify the missing component",
      "from": "The cluster is given; name the component it withheld."
     }
    ]
@@ -1682,7 +1682,7 @@
    "op": "replace",
    "brief": "del22q11",
    "find": "<p>The stem is not asking for the diagnosis &mdash; it has already given it. <b>Conotruncal defect plus absent thymus plus cleft palate plus low-set ears and micrognathia</b> is 22q11.2 deletion, and every option on the list is a <i>condition</i>, not a syndrome. So the question is the fourth letter of CATCH: <b>C</b>ardiac outflow anomaly, <b>A</b>nomalous face, <b>T</b>hymic hypoplasia, <b>C</b>left palate, <b>H</b>ypocalcemia from parathyroid hypoplasia. Four of the five are printed in the vignette; the one held back is the answer. And the tell is sitting in the physical examination &mdash; <b>tremulous</b> is neonatal hypocalcemia, which matters because these infants are at real risk of tetany, seizures and arrhythmia.</p>",
-   "with": "<p>The vignette already gives the diagnosis. <b>Conotruncal defect plus absent thymus plus cleft palate plus low-set ears and micrognathia</b> is 22q11.2 deletion. Every answer option is a <i>condition</i>, not a syndrome. CATCH lists the components: <b>C</b>ardiac outflow anomaly, <b>A</b>nomalous face, <b>T</b>hymic hypoplasia, <b>C</b>left palate, <b>H</b>ypocalcemia from parathyroid hypoplasia. Four of the five are printed in the vignette; the one held back, hypocalcemia, is the answer. The clue is in the physical examination: <b>tremulous</b> is neonatal hypocalcemia. This matters because these infants are at real risk of tetany, seizures and arrhythmia.</p>",
+   "with": "<p>The vignette already gives the diagnosis. <b>Conotruncal defect plus absent thymus plus cleft palate plus low-set ears and micrognathia</b> is 22q11.2 deletion. Every answer option is a <i>condition</i>, not a syndrome. CATCH lists the components: <b>C</b>ardiac outflow anomaly, <b>A</b>nomalous face, <b>T</b>hymic hypoplasia, <b>C</b>left palate, <b>H</b>ypocalcemia from parathyroid hypoplasia. Four of the five are printed in the vignette; the missing one is hypocalcemia. The clue is in the physical examination: <b>tremulous</b> is neonatal hypocalcemia. This matters because these infants are at real risk of tetany, seizures and arrhythmia.</p>",
    "note": ".dp: remove em dashes and \"So the question is\" framing; split long sentences",
    "claims": [
     {
@@ -1703,11 +1703,11 @@
     },
     {
      "claim": "The question asks for the fourth letter of CATCH, the H.",
-     "to": "Four of the five are printed in the vignette; the one held back, hypocalcemia, is the answer."
+     "to": "Four of the five are printed in the vignette; the missing one is hypocalcemia."
     },
     {
      "claim": "Four of the five are printed in the vignette; the one held back is the answer.",
-     "to": "Four of the five are printed in the vignette; the one held back, hypocalcemia, is the answer."
+     "to": "Four of the five are printed in the vignette; the missing one is hypocalcemia."
     },
     {
      "claim": "The tell is in the physical examination: tremulous is neonatal hypocalcemia.",
@@ -1720,7 +1720,7 @@
    ],
    "new_claims": [
     {
-     "claim": "The stem has already given the diagnosis.",
+     "claim": "The vignette already gives the diagnosis.",
      "from": "The stem has already given the diagnosis."
     },
     {
@@ -1728,23 +1728,23 @@
      "from": "Conotruncal defect plus absent thymus plus cleft palate plus low-set ears and micrognathia is 22q11.2 deletion."
     },
     {
-     "claim": "Every option on the list is a condition, not a syndrome.",
+     "claim": "Every answer option is a condition, not a syndrome.",
      "from": "Every option on the list is a condition, not a syndrome."
     },
     {
-     "claim": "CATCH: Cardiac outflow anomaly, Anomalous face, Thymic hypoplasia, Cleft palate, Hypocalcemia from parathyroid hypoplasia.",
+     "claim": "CATCH lists the components: Cardiac outflow anomaly, Anomalous face, Thymic hypoplasia, Cleft palate, Hypocalcemia from parathyroid hypoplasia.",
      "from": "CATCH: Cardiac outflow anomaly, Anomalous face, Thymic hypoplasia, Cleft palate, Hypocalcemia from parathyroid hypoplasia."
     },
     {
-     "claim": "The question asks for the fourth letter of CATCH, the H.",
+     "claim": "Four of the five are printed in the vignette; the missing one is hypocalcemia.",
      "from": "The question asks for the fourth letter of CATCH, the H."
     },
     {
-     "claim": "Four of the five are printed in the vignette; the one held back is the answer.",
+     "claim": "Four of the five are printed in the vignette; the missing one is hypocalcemia.",
      "from": "Four of the five are printed in the vignette; the one held back is the answer."
     },
     {
-     "claim": "The tell is in the physical examination: tremulous is neonatal hypocalcemia.",
+     "claim": "The clue is in the physical examination: tremulous is neonatal hypocalcemia.",
      "from": "The tell is in the physical examination: tremulous is neonatal hypocalcemia."
     },
     {
@@ -1771,7 +1771,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Tremulous is neonatal hypocalcemia before it becomes tetany.",
+     "claim": "neonatal hypocalcemia before it becomes tetany",
      "from": "Tremulous is neonatal hypocalcemia before it becomes tetany."
     }
    ]
@@ -1806,7 +1806,7 @@
      "from": "Once 22q11.2 is suspected, send an ionized calcium and get an echocardiogram."
     },
     {
-     "claim": "Confirm with chromosomal microarray or FISH for the deletion.",
+     "claim": "Confirm the deletion with chromosomal microarray or FISH (fluorescence in situ hybridization).",
      "from": "Confirm with chromosomal microarray or FISH for the deletion."
     },
     {
@@ -1814,7 +1814,7 @@
      "from": "Treat symptomatic hypocalcemia with intravenous calcium."
     },
     {
-     "claim": "Until the T-cell count is known these infants get irradiated, leukoreduced blood products and no live vaccines (⚠︎).",
+     "claim": "Until the T-cell count is known, these infants get irradiated, leukoreduced blood products and no live vaccines ⚠︎.",
      "from": "Until the T-cell count is known these infants get irradiated, leukoreduced blood products and no live vaccines (⚠︎)."
     },
     {
@@ -1857,7 +1857,7 @@
      "from": "Tremulous is the bedside sign of both neonatal hypoglycemia and neonatal hypocalcemia."
     },
     {
-     "claim": "The stem quietly closes the hypoglycemia route through an uncomplicated pregnancy in a primigravida with Apgars of 8.",
+     "claim": "An uncomplicated pregnancy in a primigravida with Apgars of 8 closes off the hypoglycemia route.",
      "from": "The stem quietly closes the hypoglycemia route through an uncomplicated pregnancy in a primigravida with Apgars of 8."
     },
     {
@@ -1915,7 +1915,7 @@
    ],
    "new_claims": [
     {
-     "claim": "When a stem builds a syndrome, recite the mnemonic and cross off what is printed.",
+     "claim": "Syndrome with a missing component: when a vignette describes most of a syndrome, recite the mnemonic and cross off what is printed.",
      "from": "When a stem builds a syndrome, recite the mnemonic and cross off what is printed."
     },
     {
@@ -1923,7 +1923,7 @@
      "from": "Answer with the remainder."
     },
     {
-     "claim": "This is how CATCH, JONES and CREST are tested.",
+     "claim": "CATCH, JONES and CREST are tested this way",
      "from": "This is how CATCH, JONES and CREST are tested."
     },
     {
@@ -1935,15 +1935,15 @@
      "from": "Differential cyanosis means ductal or arch pathology; equal pre- and postductal saturations mean a fixed intracardiac shunt, which is what truncus produces."
     },
     {
-     "claim": "DiGeorge takes lymphocytes, so a stem offering neutropenia or anemia is testing which lineage the thymus governs.",
+     "claim": "DiGeorge takes lymphocytes, so an option of neutropenia or anemia tests which lineage the thymus governs",
      "from": "DiGeorge takes lymphocytes, so a stem offering neutropenia or anemia is testing which lineage the thymus governs."
     },
     {
-     "claim": "Until the T-cell count is back these infants need irradiated leukoreduced blood and no live vaccines (⚠︎).",
+     "claim": "Until the T-cell count is back, these infants need irradiated leukoreduced blood and no live vaccines ⚠︎",
      "from": "Until the T-cell count is back these infants need irradiated leukoreduced blood and no live vaccines (⚠︎)."
     },
     {
-     "claim": "Same deletion, two names: thymic involvement makes it DiGeorge, facial abnormality makes it velocardiofacial.",
+     "claim": "The same deletion has two names: thymic involvement makes it DiGeorge, and facial abnormality makes it velocardiofacial",
      "from": "Same deletion, two names: thymic involvement makes it DiGeorge, facial abnormality makes it velocardiofacial."
     }
    ]
@@ -1978,15 +1978,15 @@
    ],
    "new_claims": [
     {
-     "claim": "Cyanotic Congenital Heart Disease covers truncus arteriosus inside the cyanosis differential and the oxygen-refractory shunt logic that gets you there.",
+     "claim": "Part I Cyanotic Congenital Heart Disease covers truncus arteriosus within the cyanosis differential, and the oxygen-refractory shunt logic that leads to it.",
      "from": "Cyanotic Congenital Heart Disease covers truncus arteriosus inside the cyanosis differential and the oxygen-refractory shunt logic that gets you there."
     },
     {
-     "claim": "The Immunoglobulin Panel covers which immunodeficiency the absent thymus produces.",
+     "claim": "The Immunoglobulin Panel covers the downstream question of which immunodeficiency the absent thymus produces.",
      "from": "The Immunoglobulin Panel covers which immunodeficiency the absent thymus produces."
     },
     {
-     "claim": "The discriminating question: is the thymic shadow present, and does the face carry a syndrome?",
+     "claim": "Ask: is the thymic shadow present, and does the face carry a syndrome?",
      "from": "The discriminating question: is the thymic shadow present, and does the face carry a syndrome?"
     },
     {
@@ -1994,7 +1994,7 @@
      "from": "Multiple Anomalies in a Newborn places this syndrome beside CHARGE, VACTERL, trisomy 13 and Fanconi anaemia."
     },
     {
-     "claim": "There the deciding finding is the one on the fewest lists.",
+     "claim": "There, the deciding finding is the one on the fewest lists.",
      "from": "There the deciding finding is the one on the fewest lists."
     }
    ]
@@ -2025,11 +2025,11 @@
      "from": "Read the last sentence before the vignette."
     },
     {
-     "claim": "When a stem assembles a recognisable syndrome, the diagnosis is the premise and the question is the component it withheld.",
+     "claim": "When a vignette assembles a recognisable syndrome, the diagnosis is given, and the question asks for the component it left out.",
      "from": "When a stem assembles a recognisable syndrome, the diagnosis is the premise and the question is the component it withheld."
     },
     {
-     "claim": "The withheld component usually has a one-word bedside tell planted in the physical examination.",
+     "claim": "That component usually has a one-word bedside sign in the physical examination.",
      "from": "The withheld component usually has a one-word bedside tell planted in the physical examination."
     }
    ]

@@ -1,209 +1,560 @@
-{"edits": [
-{"op": "replace", "brief": "bs-murmur-map",
- "find": "<p>Murmur Man puts you on a body part and breathing picks the tenant. <b>Decrescendo diastolic</b> is the <b>right arm</b> — the tail falling away from S2 — and that arm holds exactly two valves, aortic and pulmonic regurgitation. Six options collapse to two. Then <b>increases with inspiration</b> means right heart: <b>pulmonic regurgitation</b>.</p>\n<p>Everything else corroborates. <b>Single S2</b> means a component is gone, here P2, because the pulmonic valve is incompetent. The <b>parasternal heave</b> is the dilated right ventricle carrying the volume load. And the etiology is in the history: repairing tetralogy of Fallot requires enlarging the outflow tract, which disrupts the pulmonic annulus.</p>",
- "with": "<p>Murmur Man places the murmur on a body part, and its change with breathing identifies the valve. <b>Decrescendo diastolic</b> murmurs fall away from S2 and sit on the <b>right arm</b>. The right arm holds exactly two valves: aortic and pulmonic regurgitation. A murmur that <b>increases with inspiration</b> comes from the right heart, so this murmur is <b>pulmonic regurgitation</b>.</p>\n<p><b>Single S2</b> means one component is gone; here P2 is lost because the pulmonic valve is incompetent. The <b>parasternal heave</b> is the dilated right ventricle carrying the volume load. Repair of tetralogy of Fallot is the etiology, because it requires enlarging the outflow tract, which disrupts the pulmonic annulus.</p>",
- "note": "dp: remove personification, em dashes, framing openers",
- "claims": [
-  {"claim": "Murmur Man places the murmur on a body part.", "to": "Murmur Man places the murmur on a body part, and its change with breathing identifies the valve."},
-  {"claim": "Breathing picks which valve on that body part.", "to": "Murmur Man places the murmur on a body part, and its change with breathing identifies the valve."},
-  {"claim": "Decrescendo diastolic is the right arm.", "to": "Decrescendo diastolic murmurs fall away from S2 and sit on the right arm."},
-  {"claim": "The tail falls away from S2.", "to": "Decrescendo diastolic murmurs fall away from S2 and sit on the right arm."},
-  {"claim": "The right arm holds exactly two valves, aortic and pulmonic regurgitation.", "to": "The right arm holds exactly two valves: aortic and pulmonic regurgitation."},
-  {"claim": "Six options collapse to two.", "to": "The right arm holds exactly two valves: aortic and pulmonic regurgitation."},
-  {"claim": "Increases with inspiration means right heart.", "to": "A murmur that increases with inspiration comes from the right heart, so this murmur is pulmonic regurgitation."},
-  {"claim": "The murmur is pulmonic regurgitation.", "to": "A murmur that increases with inspiration comes from the right heart, so this murmur is pulmonic regurgitation."},
-  {"claim": "Everything else corroborates.", "dropped": "framing opener; each corroborating finding is stated in the following sentences"},
-  {"claim": "Single S2 means a component is gone, here P2.", "to": "Single S2 means one component is gone; here P2 is lost because the pulmonic valve is incompetent."},
-  {"claim": "P2 is gone because the pulmonic valve is incompetent.", "to": "Single S2 means one component is gone; here P2 is lost because the pulmonic valve is incompetent."},
-  {"claim": "The parasternal heave is the dilated right ventricle carrying the volume load.", "to": "The parasternal heave is the dilated right ventricle carrying the volume load."},
-  {"claim": "The etiology is in the history (tetralogy of Fallot repair).", "to": "Repair of tetralogy of Fallot is the etiology, because it requires enlarging the outflow tract, which disrupts the pulmonic annulus."},
-  {"claim": "Repairing tetralogy of Fallot requires enlarging the outflow tract, which disrupts the pulmonic annulus.", "to": "Repair of tetralogy of Fallot is the etiology, because it requires enlarging the outflow tract, which disrupts the pulmonic annulus."}
- ],
- "new_claims": [
-  {"claim": "Murmur Man places the murmur on a body part.", "from": "Murmur Man places the murmur on a body part."},
-  {"claim": "Its change with breathing identifies the valve.", "from": "Breathing picks which valve on that body part."},
-  {"claim": "Decrescendo diastolic murmurs fall away from S2 and sit on the right arm.", "from": "Decrescendo diastolic is the right arm."},
-  {"claim": "The right arm holds exactly two valves: aortic and pulmonic regurgitation.", "from": "The right arm holds exactly two valves, aortic and pulmonic regurgitation."},
-  {"claim": "A murmur that increases with inspiration comes from the right heart.", "from": "Increases with inspiration means right heart."},
-  {"claim": "This murmur is pulmonic regurgitation.", "from": "The murmur is pulmonic regurgitation."},
-  {"claim": "Single S2 means one component is gone; here P2.", "from": "Single S2 means a component is gone, here P2."},
-  {"claim": "P2 is lost because the pulmonic valve is incompetent.", "from": "P2 is gone because the pulmonic valve is incompetent."},
-  {"claim": "The parasternal heave is the dilated right ventricle carrying the volume load.", "from": "The parasternal heave is the dilated right ventricle carrying the volume load."},
-  {"claim": "Repair of tetralogy of Fallot is the etiology.", "from": "The etiology is in the history (tetralogy of Fallot repair)."},
-  {"claim": "The repair requires enlarging the outflow tract, which disrupts the pulmonic annulus.", "from": "Repairing tetralogy of Fallot requires enlarging the outflow tract, which disrupts the pulmonic annulus."}
- ]},
-
-{"op": "replace", "brief": "bs-murmur-map",
- "find": "<span class=\"lbl\">Name the operation, then name what it breaks</span>",
- "with": "<span class=\"lbl\">Complications after congenital heart repair</span>",
- "note": "danger: rhetorical label reworded",
- "reworded_label": ["Name the operation, then name what it breaks"],
- "claims": [
-  {"claim": "Name the operation, then the complications it causes.", "to": "Complications after congenital heart repair"}
- ],
- "new_claims": [
-  {"claim": "The block lists complications after congenital heart repair.", "from": "Name the operation, then the complications it causes."}
- ]},
-
-{"op": "replace", "brief": "bs-murmur-map",
- "find": "Inspiration lowers intrathoracic pressure and augments right-heart filling, which is the whole mechanism behind RILE &middot;",
- "with": "Inspiration lowers intrathoracic pressure and augments right-heart filling; this fully explains <b>RILE</b> (right inspiration, left expiration) &middot;",
- "note": "pearls: drop dramatic 'whole', expand RILE",
- "claims": [
-  {"claim": "Inspiration lowers intrathoracic pressure and augments right-heart filling.", "to": "Inspiration lowers intrathoracic pressure and augments right-heart filling; this fully explains RILE (right inspiration, left expiration)"},
-  {"claim": "That is the whole mechanism behind RILE.", "to": "Inspiration lowers intrathoracic pressure and augments right-heart filling; this fully explains RILE (right inspiration, left expiration)"}
- ],
- "new_claims": [
-  {"claim": "Inspiration lowers intrathoracic pressure and augments right-heart filling.", "from": "Inspiration lowers intrathoracic pressure and augments right-heart filling."},
-  {"claim": "This fully explains RILE.", "from": "That is the whole mechanism behind RILE."},
-  {"claim": "RILE stands for right inspiration, left expiration.", "from": "expansion"}
- ]},
-
-{"op": "replace", "brief": "bs-murmur-map",
- "find": "Part II <b>Congenital Shunts and the Transitional Clock</b> owns when a murmur appears and why; this brief owns what the murmur is. Store the discriminator as a question: am I asking what the murmur is, or why it is here now?",
- "with": "Part II <b>Congenital Shunts and the Transitional Clock</b> covers when a murmur appears and why; this brief covers what the murmur is. Ask: what is the murmur, or why is it here now?",
- "note": "pairs with: owns to covers; workflow phrase to Ask:",
- "claims": [
-  {"claim": "Congenital Shunts and the Transitional Clock covers when a murmur appears and why.", "to": "Part II Congenital Shunts and the Transitional Clock covers when a murmur appears and why; this brief covers what the murmur is."},
-  {"claim": "This brief covers what the murmur is.", "to": "Part II Congenital Shunts and the Transitional Clock covers when a murmur appears and why; this brief covers what the murmur is."},
-  {"claim": "The discriminating question is what the murmur is versus why it is here now.", "to": "Ask: what is the murmur, or why is it here now?"}
- ],
- "new_claims": [
-  {"claim": "Congenital Shunts and the Transitional Clock covers when a murmur appears and why; this brief covers what the murmur is.", "from": "Congenital Shunts and the Transitional Clock covers when a murmur appears and why."},
-  {"claim": "Ask what the murmur is, or why it is here now.", "from": "The discriminating question is what the murmur is versus why it is here now."}
- ]},
-
-{"op": "replace", "brief": "bs-murmur-map",
- "find": "A murmur has two coordinates and every distractor gets exactly one of them right, so fix the phase and the side before you name a valve.",
- "with": "A murmur has two coordinates, phase and side. Fix both before you name a valve.",
- "note": "rule: remove framing about distractors",
- "claims": [
-  {"claim": "A murmur has two coordinates.", "to": "A murmur has two coordinates, phase and side."},
-  {"claim": "Each distractor matches only a single coordinate.", "dropped": "framing about the distractors; the trap lines state why each wrong option fails"},
-  {"claim": "Fix the phase and the side before you name a valve.", "to": "Fix both before you name a valve."}
- ],
- "new_claims": [
-  {"claim": "A murmur has two coordinates, phase and side.", "from": "A murmur has two coordinates."},
-  {"claim": "Fix both before you name a valve.", "from": "Fix the phase and the side before you name a valve."}
- ]},
-
-{"op": "replace", "brief": "bs-shunt-timing",
- "find": "<p>A <b>holosystolic murmur at the left lower sternal border</b> in an acyanotic infant is a ventricular septal defect, and a VSD murmur is generated by flow across a pressure gradient. At birth there is no gradient: pulmonary vascular resistance is still near systemic, so almost nothing crosses the defect and the newborn exam is normal.</p>\n<p>Over the following weeks <b>pulmonary vascular resistance falls</b>, the gradient opens, shunt flow rises, and the murmur appears at 2 to 4 weeks. The same falling resistance explains the tachypnea and poor feeding, because increasing left-to-right shunt means pulmonary overcirculation. The normal two-week visit brackets the onset precisely, and the ductus was already closed by then.</p>",
- "with": "<p>A <b>holosystolic murmur at the left lower sternal border</b> in an acyanotic infant is a ventricular septal defect. Its murmur is generated by flow across a pressure gradient. At birth there is no gradient, because pulmonary vascular resistance is still near systemic. Almost nothing crosses the defect, so the newborn exam is normal.</p>\n<p>Over the following weeks <b>pulmonary vascular resistance falls</b>. The gradient opens, shunt flow rises and the murmur appears at 2 to 4 weeks. The same falling resistance explains the tachypnea and poor feeding, because increasing left-to-right shunt means pulmonary overcirculation. A normal two-week visit brackets the onset precisely, and the ductus was already closed by then.</p>",
- "note": "dp: split long sentences, avoid unexpanded VSD",
- "claims": [
-  {"claim": "A holosystolic murmur at the left lower sternal border in an acyanotic infant is a ventricular septal defect.", "to": "A holosystolic murmur at the left lower sternal border in an acyanotic infant is a ventricular septal defect."},
-  {"claim": "A VSD murmur is generated by flow across a pressure gradient.", "to": "Its murmur is generated by flow across a pressure gradient."},
-  {"claim": "At birth there is no gradient.", "to": "At birth there is no gradient, because pulmonary vascular resistance is still near systemic."},
-  {"claim": "At birth pulmonary vascular resistance is still near systemic.", "to": "At birth there is no gradient, because pulmonary vascular resistance is still near systemic."},
-  {"claim": "Almost nothing crosses the defect.", "to": "Almost nothing crosses the defect, so the newborn exam is normal."},
-  {"claim": "The newborn exam is normal.", "to": "Almost nothing crosses the defect, so the newborn exam is normal."},
-  {"claim": "Over the following weeks pulmonary vascular resistance falls.", "to": "Over the following weeks pulmonary vascular resistance falls."},
-  {"claim": "The gradient opens and shunt flow rises.", "to": "The gradient opens, shunt flow rises and the murmur appears at 2 to 4 weeks."},
-  {"claim": "The murmur appears at 2 to 4 weeks.", "to": "The gradient opens, shunt flow rises and the murmur appears at 2 to 4 weeks."},
-  {"claim": "The same falling resistance explains the tachypnea and poor feeding.", "to": "The same falling resistance explains the tachypnea and poor feeding, because increasing left-to-right shunt means pulmonary overcirculation."},
-  {"claim": "Increasing left-to-right shunt means pulmonary overcirculation.", "to": "The same falling resistance explains the tachypnea and poor feeding, because increasing left-to-right shunt means pulmonary overcirculation."},
-  {"claim": "The normal two-week visit brackets the onset precisely.", "to": "A normal two-week visit brackets the onset precisely, and the ductus was already closed by then."},
-  {"claim": "The ductus was already closed by then.", "to": "A normal two-week visit brackets the onset precisely, and the ductus was already closed by then."}
- ],
- "new_claims": [
-  {"claim": "A holosystolic murmur at the left lower sternal border in an acyanotic infant is a ventricular septal defect.", "from": "A holosystolic murmur at the left lower sternal border in an acyanotic infant is a ventricular septal defect."},
-  {"claim": "Its murmur is generated by flow across a pressure gradient.", "from": "A VSD murmur is generated by flow across a pressure gradient."},
-  {"claim": "At birth there is no gradient.", "from": "At birth there is no gradient."},
-  {"claim": "Pulmonary vascular resistance is still near systemic at birth.", "from": "At birth pulmonary vascular resistance is still near systemic."},
-  {"claim": "Almost nothing crosses the defect.", "from": "Almost nothing crosses the defect."},
-  {"claim": "The newborn exam is normal.", "from": "The newborn exam is normal."},
-  {"claim": "Over the following weeks pulmonary vascular resistance falls.", "from": "Over the following weeks pulmonary vascular resistance falls."},
-  {"claim": "The gradient opens and shunt flow rises.", "from": "The gradient opens and shunt flow rises."},
-  {"claim": "The murmur appears at 2 to 4 weeks.", "from": "The murmur appears at 2 to 4 weeks."},
-  {"claim": "The same falling resistance explains the tachypnea and poor feeding.", "from": "The same falling resistance explains the tachypnea and poor feeding."},
-  {"claim": "Increasing left-to-right shunt means pulmonary overcirculation.", "from": "Increasing left-to-right shunt means pulmonary overcirculation."},
-  {"claim": "A normal two-week visit brackets the onset precisely.", "from": "The normal two-week visit brackets the onset precisely."},
-  {"claim": "The ductus was already closed by then.", "from": "The ductus was already closed by then."}
- ]},
-
-{"op": "replace", "brief": "bs-shunt-timing",
- "find": "Which drug you want depends entirely on whether the ductus is the patient's lifeline or their problem. <b>Ductal-dependent lesions</b> — coarctation, pulmonary atresia, transposition, hypoplastic left heart — decompensate when it closes, so you reopen it. A <b>preterm PDA</b> shunting into the lungs is the problem, so you close it. And a <b>softening murmur in an unrepaired large shunt is a warning, not an improvement</b>.",
- "with": "The drug choice depends entirely on whether the patient needs the ductus open or is harmed by it. <b>Ductal-dependent lesions</b> (coarctation, pulmonary atresia, transposition, hypoplastic left heart) decompensate when the ductus closes, so reopen it. A <b>preterm PDA</b> (patent ductus arteriosus) shunting into the lungs is the problem, so close it. A <b>softening murmur in an unrepaired large shunt is a warning, not an improvement</b>.",
- "note": "danger: remove metaphor and em dashes, expand PDA",
- "claims": [
-  {"claim": "The drug choice depends entirely on whether the ductus is the patient's lifeline or their problem.", "to": "The drug choice depends entirely on whether the patient needs the ductus open or is harmed by it."},
-  {"claim": "Ductal-dependent lesions include coarctation, pulmonary atresia, transposition and hypoplastic left heart.", "to": "Ductal-dependent lesions (coarctation, pulmonary atresia, transposition, hypoplastic left heart) decompensate when the ductus closes, so reopen it."},
-  {"claim": "Ductal-dependent lesions decompensate when the ductus closes.", "to": "Ductal-dependent lesions (coarctation, pulmonary atresia, transposition, hypoplastic left heart) decompensate when the ductus closes, so reopen it."},
-  {"claim": "In ductal-dependent lesions you reopen the ductus.", "to": "Ductal-dependent lesions (coarctation, pulmonary atresia, transposition, hypoplastic left heart) decompensate when the ductus closes, so reopen it."},
-  {"claim": "A preterm PDA shunting into the lungs is the problem.", "to": "A preterm PDA (patent ductus arteriosus) shunting into the lungs is the problem, so close it."},
-  {"claim": "A preterm PDA is closed.", "to": "A preterm PDA (patent ductus arteriosus) shunting into the lungs is the problem, so close it."},
-  {"claim": "A softening murmur in an unrepaired large shunt is a warning, not an improvement.", "to": "A softening murmur in an unrepaired large shunt is a warning, not an improvement."}
- ],
- "new_claims": [
-  {"claim": "The drug choice depends entirely on whether the patient needs the ductus open or is harmed by it.", "from": "The drug choice depends entirely on whether the ductus is the patient's lifeline or their problem."},
-  {"claim": "Ductal-dependent lesions include coarctation, pulmonary atresia, transposition and hypoplastic left heart.", "from": "Ductal-dependent lesions include coarctation, pulmonary atresia, transposition and hypoplastic left heart."},
-  {"claim": "Ductal-dependent lesions decompensate when the ductus closes.", "from": "Ductal-dependent lesions decompensate when the ductus closes."},
-  {"claim": "Reopen the ductus in ductal-dependent lesions.", "from": "In ductal-dependent lesions you reopen the ductus."},
-  {"claim": "PDA stands for patent ductus arteriosus.", "from": "expansion"},
-  {"claim": "A preterm PDA shunting into the lungs is the problem.", "from": "A preterm PDA shunting into the lungs is the problem."},
-  {"claim": "Close a preterm PDA.", "from": "A preterm PDA is closed."},
-  {"claim": "A softening murmur in an unrepaired large shunt is a warning, not an improvement.", "from": "A softening murmur in an unrepaired large shunt is a warning, not an improvement."}
- ]},
-
-{"op": "replace", "brief": "bs-shunt-timing",
- "find": "Falling resistance is the clock for left-to-right shunts, ductal closure is the clock for ductal-dependent lesions — weeks versus days &middot; Louder VSD murmur means smaller defect, so murmur intensity runs opposite to severity here &middot; Cyanosis that does not improve on 100% oxygen is a shunt rather than a lung &middot; Failure to thrive is the infant's exercise intolerance, because feeding is their exertion",
- "with": "Left-to-right shunts declare over weeks as resistance falls; ductal-dependent lesions declare over days as the ductus closes &middot; A louder <b>VSD</b> (ventricular septal defect) murmur means a smaller defect, so for this lesion murmur intensity runs opposite to severity &middot; Cyanosis that does not improve on 100% oxygen indicates a shunt rather than lung disease &middot; Failure to thrive is the infant form of exercise intolerance, because feeding is an infant's exertion",
- "note": "pearls: remove clock metaphor and em dash, expand VSD",
- "claims": [
-  {"claim": "Falling resistance times left-to-right shunts, over weeks.", "to": "Left-to-right shunts declare over weeks as resistance falls; ductal-dependent lesions declare over days as the ductus closes"},
-  {"claim": "Ductal closure times ductal-dependent lesions, over days.", "to": "Left-to-right shunts declare over weeks as resistance falls; ductal-dependent lesions declare over days as the ductus closes"},
-  {"claim": "A louder VSD murmur means a smaller defect.", "to": "A louder VSD (ventricular septal defect) murmur means a smaller defect, so for this lesion murmur intensity runs opposite to severity"},
-  {"claim": "For VSD, murmur intensity runs opposite to severity.", "to": "A louder VSD (ventricular septal defect) murmur means a smaller defect, so for this lesion murmur intensity runs opposite to severity"},
-  {"claim": "Cyanosis that does not improve on 100% oxygen is a shunt rather than a lung problem.", "to": "Cyanosis that does not improve on 100% oxygen indicates a shunt rather than lung disease"},
-  {"claim": "Failure to thrive is the infant's exercise intolerance, because feeding is their exertion.", "to": "Failure to thrive is the infant form of exercise intolerance, because feeding is an infant's exertion"}
- ],
- "new_claims": [
-  {"claim": "Left-to-right shunts declare over weeks as resistance falls.", "from": "Falling resistance times left-to-right shunts, over weeks."},
-  {"claim": "Ductal-dependent lesions declare over days as the ductus closes.", "from": "Ductal closure times ductal-dependent lesions, over days."},
-  {"claim": "VSD stands for ventricular septal defect.", "from": "expansion"},
-  {"claim": "A louder VSD murmur means a smaller defect.", "from": "A louder VSD murmur means a smaller defect."},
-  {"claim": "For this lesion murmur intensity runs opposite to severity.", "from": "For VSD, murmur intensity runs opposite to severity."},
-  {"claim": "Cyanosis that does not improve on 100% oxygen indicates a shunt rather than lung disease.", "from": "Cyanosis that does not improve on 100% oxygen is a shunt rather than a lung problem."},
-  {"claim": "Failure to thrive is the infant form of exercise intolerance, because feeding is an infant's exertion.", "from": "Failure to thrive is the infant's exercise intolerance, because feeding is their exertion."}
- ]},
-
-{"op": "replace", "brief": "bs-shunt-timing",
- "find": "Part II <b>Murmur Man and Post-ToF Pulmonic Regurgitation</b> owns murmur shape and location; this brief owns when the murmur appears. Also adjacent to Part II <b>Neonatal Respiratory Distress</b>, where the fork is lung versus heart.",
- "with": "Part II <b>Murmur Man and Post-ToF Pulmonic Regurgitation</b> covers murmur shape and location; this brief covers when the murmur appears. Part II <b>Neonatal Respiratory Distress</b> is related and separates lung from heart causes.",
- "note": "pairs with: owns to covers; plain wording for the fork",
- "claims": [
-  {"claim": "Murmur Man and Post-ToF Pulmonic Regurgitation covers murmur shape and location.", "to": "Part II Murmur Man and Post-ToF Pulmonic Regurgitation covers murmur shape and location; this brief covers when the murmur appears."},
-  {"claim": "This brief covers when the murmur appears.", "to": "Part II Murmur Man and Post-ToF Pulmonic Regurgitation covers murmur shape and location; this brief covers when the murmur appears."},
-  {"claim": "Neonatal Respiratory Distress is adjacent and its fork is lung versus heart.", "to": "Part II Neonatal Respiratory Distress is related and separates lung from heart causes."}
- ],
- "new_claims": [
-  {"claim": "Murmur Man and Post-ToF Pulmonic Regurgitation covers murmur shape and location; this brief covers when the murmur appears.", "from": "Murmur Man and Post-ToF Pulmonic Regurgitation covers murmur shape and location."},
-  {"claim": "Neonatal Respiratory Distress is related and separates lung from heart causes.", "from": "Neonatal Respiratory Distress is adjacent and its fork is lung versus heart."}
- ]},
-
-{"op": "replace", "brief": "bs-shunt-timing",
- "find": "A murmur requires flow across a pressure gradient, so when a stem asks why a murmur appeared or disappeared, ask what changed about the gradient rather than what changed about the heart.",
- "with": "A murmur requires flow across a pressure gradient. When a murmur appears or disappears, ask what changed about the gradient rather than what changed about the heart.",
- "note": "rule: remove stem framing, split sentence",
- "claims": [
-  {"claim": "A murmur requires flow across a pressure gradient.", "to": "A murmur requires flow across a pressure gradient."},
-  {"claim": "When a murmur appears or disappears, ask what changed about the gradient rather than the heart.", "to": "When a murmur appears or disappears, ask what changed about the gradient rather than what changed about the heart."}
- ],
- "new_claims": [
-  {"claim": "A murmur requires flow across a pressure gradient.", "from": "A murmur requires flow across a pressure gradient."},
-  {"claim": "When a murmur appears or disappears, ask what changed about the gradient rather than the heart.", "from": "When a murmur appears or disappears, ask what changed about the gradient rather than the heart."}
- ]},
-
-{"op": "replace", "brief": "bs-adolescent-bp",
- "find": "The 2017 AAP guideline set fixed adult cutoffs",
- "with": "The 2017 <b>AAP</b> (American Academy of Pediatrics) guideline set fixed adult cutoffs",
- "note": "danger: expand AAP at first use in block",
- "claims": [
-  {"claim": "The 2017 AAP guideline set fixed adult cutoffs.", "to": "The 2017 AAP (American Academy of Pediatrics) guideline set fixed adult cutoffs from age 13 and kept percentiles only for children under 13."}
- ],
- "new_claims": [
-  {"claim": "AAP stands for American Academy of Pediatrics.", "from": "expansion"},
-  {"claim": "The 2017 AAP guideline set fixed adult cutoffs.", "from": "The 2017 AAP guideline set fixed adult cutoffs."}
- ]}
-]}
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bs-murmur-map",
+   "find": "<p>Murmur Man puts you on a body part and breathing picks the tenant. <b>Decrescendo diastolic</b> is the <b>right arm</b> — the tail falling away from S2 — and that arm holds exactly two valves, aortic and pulmonic regurgitation. Six options collapse to two. Then <b>increases with inspiration</b> means right heart: <b>pulmonic regurgitation</b>.</p>\n<p>Everything else corroborates. <b>Single S2</b> means a component is gone, here P2, because the pulmonic valve is incompetent. The <b>parasternal heave</b> is the dilated right ventricle carrying the volume load. And the etiology is in the history: repairing tetralogy of Fallot requires enlarging the outflow tract, which disrupts the pulmonic annulus.</p>",
+   "with": "<p>Murmur Man places the murmur on a body part, and its change with breathing identifies the valve. <b>Decrescendo diastolic</b> murmurs fall away from S2 and sit on the <b>right arm</b>. The right arm holds exactly two valves: aortic and pulmonic regurgitation. A murmur that <b>increases with inspiration</b> comes from the right heart, so this murmur is <b>pulmonic regurgitation</b>.</p>\n<p><b>Single S2</b> means one component is gone; here P2 is lost because the pulmonic valve is incompetent. The <b>parasternal heave</b> is the dilated right ventricle carrying the volume load. Repair of tetralogy of Fallot is the etiology, because it requires enlarging the outflow tract, which disrupts the pulmonic annulus.</p>",
+   "note": "dp: remove personification, em dashes, framing openers",
+   "claims": [
+    {
+     "claim": "Murmur Man places the murmur on a body part.",
+     "to": "Murmur Man places the murmur on a body part, and its change with breathing identifies the valve."
+    },
+    {
+     "claim": "Breathing picks which valve on that body part.",
+     "to": "Murmur Man places the murmur on a body part, and its change with breathing identifies the valve."
+    },
+    {
+     "claim": "Decrescendo diastolic is the right arm.",
+     "to": "Decrescendo diastolic murmurs fall away from S2 and sit on the right arm."
+    },
+    {
+     "claim": "The tail falls away from S2.",
+     "to": "Decrescendo diastolic murmurs fall away from S2 and sit on the right arm."
+    },
+    {
+     "claim": "The right arm holds exactly two valves, aortic and pulmonic regurgitation.",
+     "to": "The right arm holds exactly two valves: aortic and pulmonic regurgitation."
+    },
+    {
+     "claim": "Six options collapse to two.",
+     "to": "The right arm holds exactly two valves: aortic and pulmonic regurgitation."
+    },
+    {
+     "claim": "Increases with inspiration means right heart.",
+     "to": "A murmur that increases with inspiration comes from the right heart, so this murmur is pulmonic regurgitation."
+    },
+    {
+     "claim": "The murmur is pulmonic regurgitation.",
+     "to": "A murmur that increases with inspiration comes from the right heart, so this murmur is pulmonic regurgitation."
+    },
+    {
+     "claim": "Everything else corroborates.",
+     "dropped": "framing opener; each corroborating finding is stated in the following sentences"
+    },
+    {
+     "claim": "Single S2 means a component is gone, here P2.",
+     "to": "Single S2 means one component is gone; here P2 is lost because the pulmonic valve is incompetent."
+    },
+    {
+     "claim": "P2 is gone because the pulmonic valve is incompetent.",
+     "to": "Single S2 means one component is gone; here P2 is lost because the pulmonic valve is incompetent."
+    },
+    {
+     "claim": "The parasternal heave is the dilated right ventricle carrying the volume load.",
+     "to": "The parasternal heave is the dilated right ventricle carrying the volume load."
+    },
+    {
+     "claim": "The etiology is in the history (tetralogy of Fallot repair).",
+     "to": "Repair of tetralogy of Fallot is the etiology, because it requires enlarging the outflow tract, which disrupts the pulmonic annulus."
+    },
+    {
+     "claim": "Repairing tetralogy of Fallot requires enlarging the outflow tract, which disrupts the pulmonic annulus.",
+     "to": "Repair of tetralogy of Fallot is the etiology, because it requires enlarging the outflow tract, which disrupts the pulmonic annulus."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Murmur Man places the murmur on a body part.",
+     "from": "Murmur Man places the murmur on a body part."
+    },
+    {
+     "claim": "Its change with breathing identifies the valve.",
+     "from": "Breathing picks which valve on that body part."
+    },
+    {
+     "claim": "Decrescendo diastolic murmurs fall away from S2 and sit on the right arm.",
+     "from": "Decrescendo diastolic is the right arm."
+    },
+    {
+     "claim": "The right arm holds exactly two valves: aortic and pulmonic regurgitation.",
+     "from": "The right arm holds exactly two valves, aortic and pulmonic regurgitation."
+    },
+    {
+     "claim": "A murmur that increases with inspiration comes from the right heart.",
+     "from": "Increases with inspiration means right heart."
+    },
+    {
+     "claim": "This murmur is pulmonic regurgitation.",
+     "from": "The murmur is pulmonic regurgitation."
+    },
+    {
+     "claim": "Single S2 means one component is gone; here P2.",
+     "from": "Single S2 means a component is gone, here P2."
+    },
+    {
+     "claim": "P2 is lost because the pulmonic valve is incompetent.",
+     "from": "P2 is gone because the pulmonic valve is incompetent."
+    },
+    {
+     "claim": "The parasternal heave is the dilated right ventricle carrying the volume load.",
+     "from": "The parasternal heave is the dilated right ventricle carrying the volume load."
+    },
+    {
+     "claim": "Repair of tetralogy of Fallot is the etiology.",
+     "from": "The etiology is in the history (tetralogy of Fallot repair)."
+    },
+    {
+     "claim": "Repair of tetralogy of Fallot is the etiology, because it requires enlarging the outflow tract, which disrupts the pulmonic annulus.",
+     "from": "Repairing tetralogy of Fallot requires enlarging the outflow tract, which disrupts the pulmonic annulus."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-murmur-map",
+   "find": "<span class=\"lbl\">Name the operation, then name what it breaks</span>",
+   "with": "<span class=\"lbl\">Complications after congenital heart repair</span>",
+   "note": "danger: rhetorical label reworded",
+   "reworded_label": [
+    "Name the operation, then name what it breaks"
+   ],
+   "claims": [
+    {
+     "claim": "Name the operation, then the complications it causes.",
+     "to": "Complications after congenital heart repair"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Complications after congenital heart repair",
+     "from": "Name the operation, then the complications it causes."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-murmur-map",
+   "find": "Inspiration lowers intrathoracic pressure and augments right-heart filling, which is the whole mechanism behind RILE &middot;",
+   "with": "Inspiration lowers intrathoracic pressure and augments right-heart filling; this fully explains <b>RILE</b> (right inspiration, left expiration) &middot;",
+   "note": "pearls: drop dramatic 'whole', expand RILE",
+   "claims": [
+    {
+     "claim": "Inspiration lowers intrathoracic pressure and augments right-heart filling.",
+     "to": "Inspiration lowers intrathoracic pressure and augments right-heart filling; this fully explains RILE (right inspiration, left expiration)"
+    },
+    {
+     "claim": "That is the whole mechanism behind RILE.",
+     "to": "Inspiration lowers intrathoracic pressure and augments right-heart filling; this fully explains RILE (right inspiration, left expiration)"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Inspiration lowers intrathoracic pressure and augments right-heart filling.",
+     "from": "Inspiration lowers intrathoracic pressure and augments right-heart filling."
+    },
+    {
+     "claim": "This fully explains RILE.",
+     "from": "That is the whole mechanism behind RILE."
+    },
+    {
+     "claim": "RILE stands for right inspiration, left expiration.",
+     "from": "expansion"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-murmur-map",
+   "find": "Part II <b>Congenital Shunts and the Transitional Clock</b> owns when a murmur appears and why; this brief owns what the murmur is. Store the discriminator as a question: am I asking what the murmur is, or why it is here now?",
+   "with": "Part II <b>Congenital Shunts and the Transitional Clock</b> covers when a murmur appears and why; this brief covers what the murmur is. Ask: what is the murmur, or why is it here now?",
+   "note": "pairs with: owns to covers; workflow phrase to Ask:",
+   "claims": [
+    {
+     "claim": "Congenital Shunts and the Transitional Clock covers when a murmur appears and why.",
+     "to": "Part II Congenital Shunts and the Transitional Clock covers when a murmur appears and why; this brief covers what the murmur is."
+    },
+    {
+     "claim": "This brief covers what the murmur is.",
+     "to": "Part II Congenital Shunts and the Transitional Clock covers when a murmur appears and why; this brief covers what the murmur is."
+    },
+    {
+     "claim": "The discriminating question is what the murmur is versus why it is here now.",
+     "to": "Ask: what is the murmur, or why is it here now?"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Congenital Shunts and the Transitional Clock covers when a murmur appears and why; this brief covers what the murmur is.",
+     "from": "Congenital Shunts and the Transitional Clock covers when a murmur appears and why."
+    },
+    {
+     "claim": "Ask: what is the murmur, or why is it here now?",
+     "from": "The discriminating question is what the murmur is versus why it is here now."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-murmur-map",
+   "find": "A murmur has two coordinates and every distractor gets exactly one of them right, so fix the phase and the side before you name a valve.",
+   "with": "A murmur has two coordinates, phase and side. Fix both before you name a valve.",
+   "note": "rule: remove framing about distractors",
+   "claims": [
+    {
+     "claim": "A murmur has two coordinates.",
+     "to": "A murmur has two coordinates, phase and side."
+    },
+    {
+     "claim": "Each distractor matches only a single coordinate.",
+     "dropped": "framing about the distractors; the trap lines state why each wrong option fails"
+    },
+    {
+     "claim": "Fix the phase and the side before you name a valve.",
+     "to": "Fix both before you name a valve."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A murmur has two coordinates, phase and side.",
+     "from": "A murmur has two coordinates."
+    },
+    {
+     "claim": "Fix both before you name a valve.",
+     "from": "Fix the phase and the side before you name a valve."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shunt-timing",
+   "find": "<p>A <b>holosystolic murmur at the left lower sternal border</b> in an acyanotic infant is a ventricular septal defect, and a VSD murmur is generated by flow across a pressure gradient. At birth there is no gradient: pulmonary vascular resistance is still near systemic, so almost nothing crosses the defect and the newborn exam is normal.</p>\n<p>Over the following weeks <b>pulmonary vascular resistance falls</b>, the gradient opens, shunt flow rises, and the murmur appears at 2 to 4 weeks. The same falling resistance explains the tachypnea and poor feeding, because increasing left-to-right shunt means pulmonary overcirculation. The normal two-week visit brackets the onset precisely, and the ductus was already closed by then.</p>",
+   "with": "<p>A <b>holosystolic murmur at the left lower sternal border</b> in an acyanotic infant is a ventricular septal defect. Its murmur is generated by flow across a pressure gradient. At birth there is no gradient, because pulmonary vascular resistance is still near systemic. Almost nothing crosses the defect, so the newborn exam is normal.</p>\n<p>Over the following weeks <b>pulmonary vascular resistance falls</b>. The gradient opens, shunt flow rises and the murmur appears at 2 to 4 weeks. The same falling resistance explains the tachypnea and poor feeding, because increasing left-to-right shunt means pulmonary overcirculation. A normal two-week visit brackets the onset precisely, and the ductus was already closed by then.</p>",
+   "note": "dp: split long sentences, avoid unexpanded VSD",
+   "claims": [
+    {
+     "claim": "A holosystolic murmur at the left lower sternal border in an acyanotic infant is a ventricular septal defect.",
+     "to": "A holosystolic murmur at the left lower sternal border in an acyanotic infant is a ventricular septal defect."
+    },
+    {
+     "claim": "A VSD murmur is generated by flow across a pressure gradient.",
+     "to": "Its murmur is generated by flow across a pressure gradient."
+    },
+    {
+     "claim": "At birth there is no gradient.",
+     "to": "At birth there is no gradient, because pulmonary vascular resistance is still near systemic."
+    },
+    {
+     "claim": "At birth pulmonary vascular resistance is still near systemic.",
+     "to": "At birth there is no gradient, because pulmonary vascular resistance is still near systemic."
+    },
+    {
+     "claim": "Almost nothing crosses the defect.",
+     "to": "Almost nothing crosses the defect, so the newborn exam is normal."
+    },
+    {
+     "claim": "The newborn exam is normal.",
+     "to": "Almost nothing crosses the defect, so the newborn exam is normal."
+    },
+    {
+     "claim": "Over the following weeks pulmonary vascular resistance falls.",
+     "to": "Over the following weeks pulmonary vascular resistance falls."
+    },
+    {
+     "claim": "The gradient opens and shunt flow rises.",
+     "to": "The gradient opens, shunt flow rises and the murmur appears at 2 to 4 weeks."
+    },
+    {
+     "claim": "The murmur appears at 2 to 4 weeks.",
+     "to": "The gradient opens, shunt flow rises and the murmur appears at 2 to 4 weeks."
+    },
+    {
+     "claim": "The same falling resistance explains the tachypnea and poor feeding.",
+     "to": "The same falling resistance explains the tachypnea and poor feeding, because increasing left-to-right shunt means pulmonary overcirculation."
+    },
+    {
+     "claim": "Increasing left-to-right shunt means pulmonary overcirculation.",
+     "to": "The same falling resistance explains the tachypnea and poor feeding, because increasing left-to-right shunt means pulmonary overcirculation."
+    },
+    {
+     "claim": "The normal two-week visit brackets the onset precisely.",
+     "to": "A normal two-week visit brackets the onset precisely, and the ductus was already closed by then."
+    },
+    {
+     "claim": "The ductus was already closed by then.",
+     "to": "A normal two-week visit brackets the onset precisely, and the ductus was already closed by then."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A holosystolic murmur at the left lower sternal border in an acyanotic infant is a ventricular septal defect.",
+     "from": "A holosystolic murmur at the left lower sternal border in an acyanotic infant is a ventricular septal defect."
+    },
+    {
+     "claim": "Its murmur is generated by flow across a pressure gradient.",
+     "from": "A VSD murmur is generated by flow across a pressure gradient."
+    },
+    {
+     "claim": "At birth there is no gradient.",
+     "from": "At birth there is no gradient."
+    },
+    {
+     "claim": "At birth there is no gradient, because pulmonary vascular resistance is still near systemic.",
+     "from": "At birth pulmonary vascular resistance is still near systemic."
+    },
+    {
+     "claim": "Almost nothing crosses the defect.",
+     "from": "Almost nothing crosses the defect."
+    },
+    {
+     "claim": "The newborn exam is normal.",
+     "from": "The newborn exam is normal."
+    },
+    {
+     "claim": "Over the following weeks pulmonary vascular resistance falls.",
+     "from": "Over the following weeks pulmonary vascular resistance falls."
+    },
+    {
+     "claim": "The gradient opens, shunt flow rises and the murmur appears at 2 to 4 weeks.",
+     "from": "The gradient opens and shunt flow rises."
+    },
+    {
+     "claim": "The murmur appears at 2 to 4 weeks.",
+     "from": "The murmur appears at 2 to 4 weeks."
+    },
+    {
+     "claim": "The same falling resistance explains the tachypnea and poor feeding.",
+     "from": "The same falling resistance explains the tachypnea and poor feeding."
+    },
+    {
+     "claim": "Increasing left-to-right shunt means pulmonary overcirculation.",
+     "from": "Increasing left-to-right shunt means pulmonary overcirculation."
+    },
+    {
+     "claim": "A normal two-week visit brackets the onset precisely.",
+     "from": "The normal two-week visit brackets the onset precisely."
+    },
+    {
+     "claim": "The ductus was already closed by then.",
+     "from": "The ductus was already closed by then."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shunt-timing",
+   "find": "Which drug you want depends entirely on whether the ductus is the patient's lifeline or their problem. <b>Ductal-dependent lesions</b> — coarctation, pulmonary atresia, transposition, hypoplastic left heart — decompensate when it closes, so you reopen it. A <b>preterm PDA</b> shunting into the lungs is the problem, so you close it. And a <b>softening murmur in an unrepaired large shunt is a warning, not an improvement</b>.",
+   "with": "The drug choice depends entirely on whether the patient needs the ductus open or is harmed by it. <b>Ductal-dependent lesions</b> (coarctation, pulmonary atresia, transposition, hypoplastic left heart) decompensate when the ductus closes, so reopen it. A <b>preterm PDA</b> (patent ductus arteriosus) shunting into the lungs is the problem, so close it. A <b>softening murmur in an unrepaired large shunt is a warning, not an improvement</b>.",
+   "note": "danger: remove metaphor and em dashes, expand PDA",
+   "claims": [
+    {
+     "claim": "The drug choice depends entirely on whether the ductus is the patient's lifeline or their problem.",
+     "to": "The drug choice depends entirely on whether the patient needs the ductus open or is harmed by it."
+    },
+    {
+     "claim": "Ductal-dependent lesions include coarctation, pulmonary atresia, transposition and hypoplastic left heart.",
+     "to": "Ductal-dependent lesions (coarctation, pulmonary atresia, transposition, hypoplastic left heart) decompensate when the ductus closes, so reopen it."
+    },
+    {
+     "claim": "Ductal-dependent lesions decompensate when the ductus closes.",
+     "to": "Ductal-dependent lesions (coarctation, pulmonary atresia, transposition, hypoplastic left heart) decompensate when the ductus closes, so reopen it."
+    },
+    {
+     "claim": "In ductal-dependent lesions you reopen the ductus.",
+     "to": "Ductal-dependent lesions (coarctation, pulmonary atresia, transposition, hypoplastic left heart) decompensate when the ductus closes, so reopen it."
+    },
+    {
+     "claim": "A preterm PDA shunting into the lungs is the problem.",
+     "to": "A preterm PDA (patent ductus arteriosus) shunting into the lungs is the problem, so close it."
+    },
+    {
+     "claim": "A preterm PDA is closed.",
+     "to": "A preterm PDA (patent ductus arteriosus) shunting into the lungs is the problem, so close it."
+    },
+    {
+     "claim": "A softening murmur in an unrepaired large shunt is a warning, not an improvement.",
+     "to": "A softening murmur in an unrepaired large shunt is a warning, not an improvement."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "The drug choice depends entirely on whether the patient needs the ductus open or is harmed by it.",
+     "from": "The drug choice depends entirely on whether the ductus is the patient's lifeline or their problem."
+    },
+    {
+     "claim": "Ductal-dependent lesions (coarctation, pulmonary atresia, transposition, hypoplastic left heart) decompensate when the ductus closes, so reopen it.",
+     "from": "Ductal-dependent lesions include coarctation, pulmonary atresia, transposition and hypoplastic left heart."
+    },
+    {
+     "claim": "Ductal-dependent lesions (coarctation, pulmonary atresia, transposition, hypoplastic left heart) decompensate when the ductus closes, so reopen it.",
+     "from": "Ductal-dependent lesions decompensate when the ductus closes."
+    },
+    {
+     "claim": "Ductal-dependent lesions (coarctation, pulmonary atresia, transposition, hypoplastic left heart) decompensate when the ductus closes, so reopen it.",
+     "from": "In ductal-dependent lesions you reopen the ductus."
+    },
+    {
+     "claim": "PDA stands for patent ductus arteriosus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A preterm PDA shunting into the lungs is the problem.",
+     "from": "A preterm PDA shunting into the lungs is the problem."
+    },
+    {
+     "claim": "A preterm PDA (patent ductus arteriosus) shunting into the lungs is the problem, so close it.",
+     "from": "A preterm PDA is closed."
+    },
+    {
+     "claim": "A softening murmur in an unrepaired large shunt is a warning, not an improvement.",
+     "from": "A softening murmur in an unrepaired large shunt is a warning, not an improvement."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shunt-timing",
+   "find": "Falling resistance is the clock for left-to-right shunts, ductal closure is the clock for ductal-dependent lesions — weeks versus days &middot; Louder VSD murmur means smaller defect, so murmur intensity runs opposite to severity here &middot; Cyanosis that does not improve on 100% oxygen is a shunt rather than a lung &middot; Failure to thrive is the infant's exercise intolerance, because feeding is their exertion",
+   "with": "Left-to-right shunts declare over weeks as resistance falls; ductal-dependent lesions declare over days as the ductus closes &middot; A louder <b>VSD</b> (ventricular septal defect) murmur means a smaller defect, so for this lesion murmur intensity runs opposite to severity &middot; Cyanosis that does not improve on 100% oxygen indicates a shunt rather than lung disease &middot; Failure to thrive is the infant form of exercise intolerance, because feeding is an infant's exertion",
+   "note": "pearls: remove clock metaphor and em dash, expand VSD",
+   "claims": [
+    {
+     "claim": "Falling resistance times left-to-right shunts, over weeks.",
+     "to": "Left-to-right shunts declare over weeks as resistance falls; ductal-dependent lesions declare over days as the ductus closes"
+    },
+    {
+     "claim": "Ductal closure times ductal-dependent lesions, over days.",
+     "to": "Left-to-right shunts declare over weeks as resistance falls; ductal-dependent lesions declare over days as the ductus closes"
+    },
+    {
+     "claim": "A louder VSD murmur means a smaller defect.",
+     "to": "A louder VSD (ventricular septal defect) murmur means a smaller defect, so for this lesion murmur intensity runs opposite to severity"
+    },
+    {
+     "claim": "For VSD, murmur intensity runs opposite to severity.",
+     "to": "A louder VSD (ventricular septal defect) murmur means a smaller defect, so for this lesion murmur intensity runs opposite to severity"
+    },
+    {
+     "claim": "Cyanosis that does not improve on 100% oxygen is a shunt rather than a lung problem.",
+     "to": "Cyanosis that does not improve on 100% oxygen indicates a shunt rather than lung disease"
+    },
+    {
+     "claim": "Failure to thrive is the infant's exercise intolerance, because feeding is their exertion.",
+     "to": "Failure to thrive is the infant form of exercise intolerance, because feeding is an infant's exertion"
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Left-to-right shunts declare over weeks as resistance falls.",
+     "from": "Falling resistance times left-to-right shunts, over weeks."
+    },
+    {
+     "claim": "Ductal-dependent lesions declare over days as the ductus closes.",
+     "from": "Ductal closure times ductal-dependent lesions, over days."
+    },
+    {
+     "claim": "VSD stands for ventricular septal defect.",
+     "from": "expansion"
+    },
+    {
+     "claim": "A louder VSD murmur means a smaller defect.",
+     "from": "A louder VSD murmur means a smaller defect."
+    },
+    {
+     "claim": "For this lesion murmur intensity runs opposite to severity.",
+     "from": "For VSD, murmur intensity runs opposite to severity."
+    },
+    {
+     "claim": "Cyanosis that does not improve on 100% oxygen indicates a shunt rather than lung disease.",
+     "from": "Cyanosis that does not improve on 100% oxygen is a shunt rather than a lung problem."
+    },
+    {
+     "claim": "Failure to thrive is the infant form of exercise intolerance, because feeding is an infant's exertion.",
+     "from": "Failure to thrive is the infant's exercise intolerance, because feeding is their exertion."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shunt-timing",
+   "find": "Part II <b>Murmur Man and Post-ToF Pulmonic Regurgitation</b> owns murmur shape and location; this brief owns when the murmur appears. Also adjacent to Part II <b>Neonatal Respiratory Distress</b>, where the fork is lung versus heart.",
+   "with": "Part II <b>Murmur Man and Post-ToF Pulmonic Regurgitation</b> covers murmur shape and location; this brief covers when the murmur appears. Part II <b>Neonatal Respiratory Distress</b> is related and separates lung from heart causes.",
+   "note": "pairs with: owns to covers; plain wording for the fork",
+   "claims": [
+    {
+     "claim": "Murmur Man and Post-ToF Pulmonic Regurgitation covers murmur shape and location.",
+     "to": "Part II Murmur Man and Post-ToF Pulmonic Regurgitation covers murmur shape and location; this brief covers when the murmur appears."
+    },
+    {
+     "claim": "This brief covers when the murmur appears.",
+     "to": "Part II Murmur Man and Post-ToF Pulmonic Regurgitation covers murmur shape and location; this brief covers when the murmur appears."
+    },
+    {
+     "claim": "Neonatal Respiratory Distress is adjacent and its fork is lung versus heart.",
+     "to": "Part II Neonatal Respiratory Distress is related and separates lung from heart causes."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "Murmur Man and Post-ToF Pulmonic Regurgitation covers murmur shape and location; this brief covers when the murmur appears.",
+     "from": "Murmur Man and Post-ToF Pulmonic Regurgitation covers murmur shape and location."
+    },
+    {
+     "claim": "Neonatal Respiratory Distress is related and separates lung from heart causes.",
+     "from": "Neonatal Respiratory Distress is adjacent and its fork is lung versus heart."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shunt-timing",
+   "find": "A murmur requires flow across a pressure gradient, so when a stem asks why a murmur appeared or disappeared, ask what changed about the gradient rather than what changed about the heart.",
+   "with": "A murmur requires flow across a pressure gradient. When a murmur appears or disappears, ask what changed about the gradient rather than what changed about the heart.",
+   "note": "rule: remove stem framing, split sentence",
+   "claims": [
+    {
+     "claim": "A murmur requires flow across a pressure gradient.",
+     "to": "A murmur requires flow across a pressure gradient."
+    },
+    {
+     "claim": "When a murmur appears or disappears, ask what changed about the gradient rather than the heart.",
+     "to": "When a murmur appears or disappears, ask what changed about the gradient rather than what changed about the heart."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "A murmur requires flow across a pressure gradient.",
+     "from": "A murmur requires flow across a pressure gradient."
+    },
+    {
+     "claim": "When a murmur appears or disappears, ask what changed about the gradient rather than what changed about the heart.",
+     "from": "When a murmur appears or disappears, ask what changed about the gradient rather than the heart."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "The 2017 AAP guideline set fixed adult cutoffs",
+   "with": "The 2017 <b>AAP</b> (American Academy of Pediatrics) guideline set fixed adult cutoffs",
+   "note": "danger: expand AAP at first use in block",
+   "claims": [
+    {
+     "claim": "The 2017 AAP guideline set fixed adult cutoffs.",
+     "to": "The 2017 AAP (American Academy of Pediatrics) guideline set fixed adult cutoffs from age 13 and kept percentiles only for children under 13."
+    }
+   ],
+   "new_claims": [
+    {
+     "claim": "AAP stands for American Academy of Pediatrics.",
+     "from": "expansion"
+    },
+    {
+     "claim": "The 2017 AAP (American Academy of Pediatrics) guideline set fixed adult cutoffs from age 13 and kept percentiles only for children under 13.",
+     "from": "The 2017 AAP guideline set fixed adult cutoffs."
+    }
+   ]
+  }
+ ]
+}

@@ -4,18 +4,18 @@
    "op": "replace",
    "brief": "bs-cervical-gate",
    "find": "An eligibility gate, not a risk calculation",
-   "with": "Cervical screening starts by age, whatever the sexual risk",
-   "note": "sub: slogan to plain",
+   "with": "Screening eligibility depends on age, not on individual risk",
+   "note": "sub: slogan to plain statement",
    "claims": [
     {
-     "claim": "Cervical screening start is an age-based eligibility gate, not a risk calculation.",
-     "to": "Cervical screening starts by age, whatever the sexual risk"
+     "claim": "Cervical screening is an eligibility gate, not a risk calculation.",
+     "to": "Screening eligibility depends on age, not on individual risk"
     }
    ],
    "new_claims": [
     {
-     "claim": "Cervical screening starts by age, whatever the sexual risk.",
-     "from": "Cervical screening start is an age-based eligibility gate, not a risk calculation."
+     "claim": "Screening eligibility depends on age, not on individual risk.",
+     "from": "Cervical screening is an eligibility gate, not a risk calculation."
     }
    ]
   },
@@ -23,11 +23,10 @@
    "op": "replace",
    "brief": "bs-cervical-gate",
    "find": "<p>A <b>20-year-old</b> is <b>below the screening floor</b>. Sexual debut at 15, five partners, inconsistent condoms — every one of those raises HPV exposure and <b>none of them lowers the starting age</b>. The answer is <b>no cytology; screening begins at 21</b>.</p>\n<p><b>The rule is deliberately risk-blind.</b> HPV in adolescents is near-universal and <b>clears in ~90% within 2 years</b>; progression to cancer takes a decade-plus. Screening early finds transient infection and produces <b>excisional procedures (LEEP) that raise preterm-birth risk</b> in women who were never going to develop cancer. That's why cervical cancer under 21 is <i>rare</i> — and why screening her would harm without benefit.</p>",
-   "with": "<p>A <b>20-year-old</b> is <b>below the screening floor</b>. Sexual debut at 15, five partners and inconsistent condom use each raise <b>HPV</b> (human papillomavirus) exposure, but <b>none of them lowers the starting age</b>. She needs <b>no cytology; screening begins at 21</b>.</p>\n<p>The age rule deliberately ignores individual risk. HPV in adolescents is near-universal and <b>clears in ~90% within 2 years</b>; progression to cancer takes more than a decade. Early screening finds transient infection. It leads to <b>excisional procedures, LEEP (loop electrosurgical excision procedure), that raise preterm-birth risk</b> in women who were never going to develop cancer. This is why cervical cancer under 21 is <i>rare</i>, and why screening her would cause harm without benefit.</p>",
-   "note": ".dp: plain voice, split sentences, expand HPV and LEEP",
+   "with": "<p>A <b>20-year-old</b> is <b>below the screening floor</b>. Sexual debut at 15, five partners and inconsistent condom use each raise <b>HPV</b> (human papillomavirus) exposure, but <b>none of them lowers the starting age</b>. She needs <b>no cytology; screening begins at 21</b>.</p>\n<p><b>The age floor deliberately ignores individual risk.</b> HPV infection in adolescents is near-universal and <b>clears in ~90% within 2 years</b>. Progression to cancer takes more than a decade. Early screening finds transient infection and leads to <b>excisional procedures (LEEP) that raise preterm-birth risk</b> in women who were never going to develop cancer. Cervical cancer under 21 is therefore <i>rare</i>. Screening her would cause harm without benefit.</p>",
+   "note": ".dp: remove em dashes, slogan bold, framing",
    "reworded_bold": [
-    "The rule is deliberately risk-blind.",
-    "excisional procedures (LEEP) that raise preterm-birth risk"
+    "The rule is deliberately risk-blind."
    ],
    "claims": [
     {
@@ -35,7 +34,7 @@
      "to": "A 20-year-old is below the screening floor."
     },
     {
-     "claim": "Sexual debut at 15, five partners and inconsistent condom use each raise HPV exposure.",
+     "claim": "Sexual debut at 15, five partners and inconsistent condoms each raise HPV exposure.",
      "to": "Sexual debut at 15, five partners and inconsistent condom use each raise HPV (human papillomavirus) exposure, but none of them lowers the starting age."
     },
     {
@@ -47,36 +46,36 @@
      "to": "She needs no cytology; screening begins at 21."
     },
     {
-     "claim": "The age rule is deliberately risk-blind.",
-     "to": "The age rule deliberately ignores individual risk."
+     "claim": "The rule is deliberately risk-blind.",
+     "to": "The age floor deliberately ignores individual risk."
     },
     {
      "claim": "HPV in adolescents is near-universal.",
-     "to": "HPV in adolescents is near-universal and clears in ~90% within 2 years; progression to cancer takes more than a decade."
+     "to": "HPV infection in adolescents is near-universal and clears in ~90% within 2 years."
     },
     {
      "claim": "HPV clears in ~90% within 2 years.",
-     "to": "HPV in adolescents is near-universal and clears in ~90% within 2 years; progression to cancer takes more than a decade."
+     "to": "HPV infection in adolescents is near-universal and clears in ~90% within 2 years."
     },
     {
      "claim": "Progression to cancer takes a decade-plus.",
-     "to": "HPV in adolescents is near-universal and clears in ~90% within 2 years; progression to cancer takes more than a decade."
+     "to": "Progression to cancer takes more than a decade."
     },
     {
      "claim": "Screening early finds transient infection.",
-     "to": "Early screening finds transient infection."
+     "to": "Early screening finds transient infection and leads to excisional procedures (LEEP) that raise preterm-birth risk in women who were never going to develop cancer."
     },
     {
      "claim": "Screening early produces excisional procedures (LEEP) that raise preterm-birth risk in women who were never going to develop cancer.",
-     "to": "It leads to excisional procedures, LEEP (loop electrosurgical excision procedure), that raise preterm-birth risk in women who were never going to develop cancer."
+     "to": "Early screening finds transient infection and leads to excisional procedures (LEEP) that raise preterm-birth risk in women who were never going to develop cancer."
     },
     {
      "claim": "That is why cervical cancer under 21 is rare.",
-     "to": "This is why cervical cancer under 21 is rare, and why screening her would cause harm without benefit."
+     "to": "Cervical cancer under 21 is therefore rare."
     },
     {
-     "claim": "That is why screening her would harm without benefit.",
-     "to": "This is why cervical cancer under 21 is rare, and why screening her would cause harm without benefit."
+     "claim": "Screening her would harm without benefit.",
+     "to": "Screening her would cause harm without benefit."
     }
    ],
    "new_claims": [
@@ -85,8 +84,12 @@
      "from": "A 20-year-old is below the screening floor."
     },
     {
-     "claim": "Sexual debut at 15, five partners and inconsistent condom use each raise HPV exposure.",
-     "from": "Sexual debut at 15, five partners and inconsistent condom use each raise HPV exposure."
+     "claim": "HPV stands for human papillomavirus.",
+     "from": "expansion"
+    },
+    {
+     "claim": "Sexual debut at 15, five partners and inconsistent condom use each raise HPV (human papillomavirus) exposure, but none of them lowers the starting age.",
+     "from": "Sexual debut at 15, five partners and inconsistent condoms each raise HPV exposure."
     },
     {
      "claim": "None of them lowers the starting age.",
@@ -97,19 +100,15 @@
      "from": "The answer is no cytology; screening begins at 21."
     },
     {
-     "claim": "HPV stands for human papillomavirus.",
-     "from": "expansion"
+     "claim": "The age floor deliberately ignores individual risk.",
+     "from": "The rule is deliberately risk-blind."
     },
     {
-     "claim": "The age rule deliberately ignores individual risk.",
-     "from": "The age rule is deliberately risk-blind."
-    },
-    {
-     "claim": "HPV in adolescents is near-universal.",
+     "claim": "HPV infection in adolescents is near-universal.",
      "from": "HPV in adolescents is near-universal."
     },
     {
-     "claim": "HPV clears in ~90% within 2 years.",
+     "claim": "HPV infection in adolescents is near-universal and clears in ~90% within 2 years.",
      "from": "HPV clears in ~90% within 2 years."
     },
     {
@@ -121,20 +120,16 @@
      "from": "Screening early finds transient infection."
     },
     {
-     "claim": "Early screening leads to excisional procedures (LEEP) that raise preterm-birth risk in women who were never going to develop cancer.",
+     "claim": "Early screening finds transient infection and leads to excisional procedures (LEEP) that raise preterm-birth risk in women who were never going to develop cancer.",
      "from": "Screening early produces excisional procedures (LEEP) that raise preterm-birth risk in women who were never going to develop cancer."
     },
     {
-     "claim": "LEEP stands for loop electrosurgical excision procedure.",
-     "from": "expansion"
-    },
-    {
-     "claim": "This is why cervical cancer under 21 is rare.",
+     "claim": "Cervical cancer under 21 is therefore rare.",
      "from": "That is why cervical cancer under 21 is rare."
     },
     {
      "claim": "Screening her would cause harm without benefit.",
-     "from": "That is why screening her would harm without benefit."
+     "from": "Screening her would harm without benefit."
     }
    ]
   },
@@ -142,7 +137,7 @@
    "op": "replace",
    "brief": "bs-cervical-gate",
    "find": "<span class=\"lbl\">⚠︎ Primary HPV start age — the ledgers split</span>\n<b>Exam ledger (bank/USPSTF):</b> primary HPV testing from <b>age 30</b>.<br>\n<b>Clinic ledger (ACS 2020):</b> primary HPV from <b>age 25</b>, q5y, preferred.<br>\nAnswer <b>30</b> on the exam. Know 25 exists so a clinic attending's answer doesn't unseat you.",
-   "with": "<span class=\"lbl\">⚠︎ Primary HPV start age</span>\n<b>Exam answer:</b> the question bank and <b>USPSTF</b> (US Preventive Services Task Force) use primary <b>HPV</b> (human papillomavirus) testing from <b>age 30</b>.<br>\n<b>Clinical practice:</b> the <b>ACS</b> (American Cancer Society) 2020 guidance prefers primary HPV testing from <b>age 25</b>, every 5 years.<br>\nAnswer <b>30</b> on the exam. Know that age 25 exists, so that a clinic attending's answer of 25 does not throw you.",
+   "with": "<span class=\"lbl\">⚠︎ Primary HPV start age</span>\n<b>Exam answer</b>: primary <b>HPV</b> (human papillomavirus) testing from <b>age 30</b>, per question banks and the <b>USPSTF</b> (US Preventive Services Task Force).<br>\n<b>Clinical practice</b>: the 2020 <b>ACS</b> (American Cancer Society) guideline prefers primary HPV testing from <b>age 25</b>, every 5 years.<br>\nAnswer <b>30</b> on the exam.",
    "note": ".danger: ledger wording to exam answer versus clinical practice; expand acronyms",
    "reworded_bold": [
     "Exam ledger (bank/USPSTF):",
@@ -153,26 +148,30 @@
    ],
    "claims": [
     {
-     "claim": "On the exam (bank/USPSTF), primary HPV testing starts at age 30.",
-     "to": "Exam answer: the question bank and USPSTF (US Preventive Services Task Force) use primary HPV (human papillomavirus) testing from age 30."
+     "claim": "Exam (bank/USPSTF): primary HPV testing from age 30.",
+     "to": "Exam answer: primary HPV (human papillomavirus) testing from age 30, per question banks and the USPSTF (US Preventive Services Task Force)."
     },
     {
-     "claim": "In clinic (ACS 2020), primary HPV testing starts at age 25, q5y, and is preferred.",
-     "to": "Clinical practice: the ACS (American Cancer Society) 2020 guidance prefers primary HPV testing from age 25, every 5 years."
+     "claim": "Clinic (ACS 2020): primary HPV from age 25, q5y, preferred.",
+     "to": "Clinical practice: the 2020 ACS (American Cancer Society) guideline prefers primary HPV testing from age 25, every 5 years."
     },
     {
      "claim": "Answer 30 on the exam.",
      "to": "Answer 30 on the exam."
     },
     {
-     "claim": "Know 25 exists so a clinic attending's answer does not unseat you.",
-     "to": "Know that age 25 exists, so that a clinic attending's answer of 25 does not throw you."
+     "claim": "Know that age 25 exists in clinical practice.",
+     "carried_by": "guideline prefers primary HPV testing from age 25, every 5 years"
+    },
+    {
+     "claim": "So a clinic attending's answer does not unseat you.",
+     "dropped": "motivational framing about the attending; the clinical-practice start age is stated in the line above"
     }
    ],
    "new_claims": [
     {
-     "claim": "The question bank and the USPSTF use primary HPV testing from age 30.",
-     "from": "On the exam (bank/USPSTF), primary HPV testing starts at age 30."
+     "claim": "Exam answer: primary HPV (human papillomavirus) testing from age 30, per question banks and the USPSTF (US Preventive Services Task Force).",
+     "from": "Exam (bank/USPSTF): primary HPV testing from age 30."
     },
     {
      "claim": "USPSTF stands for US Preventive Services Task Force.",
@@ -183,8 +182,8 @@
      "from": "expansion"
     },
     {
-     "claim": "The ACS 2020 guidance prefers primary HPV testing from age 25, every 5 years.",
-     "from": "In clinic (ACS 2020), primary HPV testing starts at age 25, q5y, and is preferred."
+     "claim": "Clinical practice: the 2020 ACS (American Cancer Society) guideline prefers primary HPV testing from age 25, every 5 years.",
+     "from": "Clinic (ACS 2020): primary HPV from age 25, q5y, preferred."
     },
     {
      "claim": "ACS stands for American Cancer Society.",
@@ -193,10 +192,6 @@
     {
      "claim": "Answer 30 on the exam.",
      "from": "Answer 30 on the exam."
-    },
-    {
-     "claim": "Know that age 25 exists so a clinic attending's answer of 25 does not throw you.",
-     "from": "Know 25 exists so a clinic attending's answer does not unseat you."
     }
    ]
   },
@@ -204,9 +199,10 @@
    "op": "replace",
    "brief": "bs-cervical-gate",
    "find": "<span class=\"lbl\">Exit ramps — where the age floor genuinely moves</span>\n<b>HIV infection</b> → screen <b>at diagnosis</b> (or within 1 year of sexual debut if younger), then annually × 3, then q3y — <b>this is the one exception that beats age 21</b> · other immunocompromise (transplant, chronic steroids) → same accelerated schedule · <b>in-utero DES exposure</b> → annual · prior <b>CIN2+</b> → surveillance q3y for <b>25 years</b>, including past 65 · <b>hysterectomy with cervix removed for benign disease</b> → stop entirely; cervix retained (supracervical) → keep screening · <b>vaccinated</b> → schedule unchanged.",
-   "with": "<span class=\"lbl\">Special populations</span>\n<b>HIV infection</b> (human immunodeficiency virus) → screen <b>at diagnosis</b> (or within 1 year of sexual debut if younger), then annually × 3, then every 3 years. <b>This is the one exception that starts screening before age 21</b> · other immunocompromise (transplant, chronic steroids) → same accelerated schedule · <b>in-utero DES exposure</b> (diethylstilbestrol) → annual · prior <b>CIN2+</b> (cervical intraepithelial neoplasia grade 2 or worse) → surveillance every 3 years for <b>25 years</b>, including past 65 · <b>hysterectomy with cervix removed for benign disease</b> → stop entirely · cervix retained (supracervical) → keep screening · <b>vaccinated</b> → schedule unchanged.",
-   "note": ".danger: rhetorical label, em dash, q3y, one arrow per row, expand acronyms",
+   "with": "<span class=\"lbl\">Exit ramps: where the age floor moves</span>\n<b>HIV infection</b> → screen <b>at diagnosis</b> (or within 1 year of sexual debut if younger), then annually × 3, then every 3 years. <b>This is the one exception that starts screening before age 21</b> · other immunocompromise (transplant, chronic steroids) → same accelerated schedule · in-utero <b>DES</b> (diethylstilbestrol) exposure → annual · prior <b>CIN2+</b> (cervical intraepithelial neoplasia grade 2 or worse) → surveillance every 3 years for <b>25 years</b>, including past 65 · <b>hysterectomy with cervix removed for benign disease</b> → stop entirely · cervix retained (supracervical) → keep screening · <b>vaccinated</b> → schedule unchanged.",
+   "note": ".danger: remove em dashes, one arrow per row, expand acronyms",
    "reworded_bold": [
+    "in-utero DES exposure",
     "this is the one exception that beats age 21"
    ],
    "reworded_label": [
@@ -214,8 +210,8 @@
    ],
    "claims": [
     {
-     "claim": "HIV infection: screen at diagnosis (or within 1 year of sexual debut if younger), then annually x3, then q3y.",
-     "to": "HIV infection (human immunodeficiency virus) → screen at diagnosis (or within 1 year of sexual debut if younger), then annually × 3, then every 3 years."
+     "claim": "With HIV infection, screen at diagnosis (or within 1 year of sexual debut if younger), then annually × 3, then q3y.",
+     "to": "HIV infection → screen at diagnosis (or within 1 year of sexual debut if younger), then annually × 3, then every 3 years."
     },
     {
      "claim": "HIV is the one exception that beats age 21.",
@@ -227,7 +223,7 @@
     },
     {
      "claim": "In-utero DES exposure: annual screening.",
-     "to": "in-utero DES exposure (diethylstilbestrol) → annual"
+     "to": "in-utero DES (diethylstilbestrol) exposure → annual"
     },
     {
      "claim": "Prior CIN2+: surveillance q3y for 25 years, including past 65.",
@@ -244,27 +240,27 @@
     {
      "claim": "Vaccinated: schedule unchanged.",
      "to": "vaccinated → schedule unchanged."
+    },
+    {
+     "claim": "The age floor genuinely moves here.",
+     "dropped": "label wording; the exceptions are listed in the rows"
     }
    ],
    "new_claims": [
     {
-     "claim": "HIV infection: screen at diagnosis (or within 1 year of sexual debut if younger), then annually x3, then every 3 years.",
-     "from": "HIV infection: screen at diagnosis (or within 1 year of sexual debut if younger), then annually x3, then q3y."
+     "claim": "HIV infection → screen at diagnosis (or within 1 year of sexual debut if younger), then annually × 3, then every 3 years.",
+     "from": "With HIV infection, screen at diagnosis (or within 1 year of sexual debut if younger), then annually × 3, then q3y."
     },
     {
-     "claim": "HIV stands for human immunodeficiency virus.",
-     "from": "expansion"
-    },
-    {
-     "claim": "HIV is the one exception that starts screening before age 21.",
+     "claim": "This is the one exception that starts screening before age 21",
      "from": "HIV is the one exception that beats age 21."
     },
     {
-     "claim": "Other immunocompromise gets the same accelerated schedule.",
+     "claim": "other immunocompromise (transplant, chronic steroids) → same accelerated schedule",
      "from": "Other immunocompromise (transplant, chronic steroids) gets the same accelerated schedule."
     },
     {
-     "claim": "In-utero DES exposure: annual.",
+     "claim": "in-utero DES (diethylstilbestrol) exposure → annual",
      "from": "In-utero DES exposure: annual screening."
     },
     {
@@ -272,7 +268,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Prior CIN2+: surveillance every 3 years for 25 years, including past 65.",
+     "claim": "prior CIN2+ (cervical intraepithelial neoplasia grade 2 or worse) → surveillance every 3 years for 25 years, including past 65",
      "from": "Prior CIN2+: surveillance q3y for 25 years, including past 65."
     },
     {
@@ -280,15 +276,15 @@
      "from": "expansion"
     },
     {
-     "claim": "Hysterectomy with cervix removed for benign disease: stop entirely.",
+     "claim": "hysterectomy with cervix removed for benign disease → stop entirely",
      "from": "Hysterectomy with cervix removed for benign disease: stop entirely."
     },
     {
-     "claim": "Cervix retained (supracervical): keep screening.",
+     "claim": "cervix retained (supracervical) → keep screening",
      "from": "Cervix retained (supracervical): keep screening."
     },
     {
-     "claim": "Vaccinated: schedule unchanged.",
+     "claim": "vaccinated → schedule unchanged.",
      "from": "Vaccinated: schedule unchanged."
     }
    ]
@@ -297,49 +293,45 @@
    "op": "replace",
    "brief": "bs-cervical-gate",
    "find": "The stem's entire risk paragraph is a <b>salient decoy</b> constructed to make \"no screening\" feel negligent. <b>Colposcopy</b> is the sequencing trap — it's for an <i>abnormal</i> result, and she has no result. <b>HPV vaccination counseling</b> is a <b>true-fact-wrong-slot</b>: she's 20, catch-up runs through 26, so it's genuinely indicated — just not what the question asked.",
-   "with": "The stem's entire risk paragraph is a <b>salient decoy</b> that makes \"no screening\" feel negligent.<br>\n<b>Colposcopy</b>: a sequencing trap; colposcopy is for an <i>abnormal</i> result, and she has no result.<br>\n<b>HPV vaccination counseling</b> (human papillomavirus): a <b>true-fact-wrong-slot</b>; she is 20 and catch-up runs through 26. It is indicated but is not what the question asked.",
+   "with": "Her risk history: a <b>salient decoy</b> that makes \"no screening\" feel negligent.<br>\n<b>Colposcopy</b>: a sequencing trap; it is for an <i>abnormal</i> result, and she has no result.<br>\n<b>HPV vaccination counseling</b> (HPV: human papillomavirus): a <b>true-fact-wrong-slot</b>. At 20 she is within catch-up vaccination, which runs through 26, so it is indicated. It does not answer the screening question.",
    "note": "Distractors: Option: why lines, no em dashes",
    "claims": [
     {
-     "claim": "The entire risk paragraph is a salient decoy constructed to make \"no screening\" feel negligent.",
-     "to": "The stem's entire risk paragraph is a salient decoy that makes \"no screening\" feel negligent."
+     "claim": "The risk paragraph is a salient decoy constructed to make no screening feel negligent.",
+     "to": "Her risk history: a salient decoy that makes \"no screening\" feel negligent."
     },
     {
      "claim": "Colposcopy is the sequencing trap.",
-     "to": "Colposcopy: a sequencing trap; colposcopy is for an abnormal result, and she has no result."
+     "to": "Colposcopy: a sequencing trap; it is for an abnormal result, and she has no result."
     },
     {
      "claim": "Colposcopy is for an abnormal result, and she has no result.",
-     "to": "Colposcopy: a sequencing trap; colposcopy is for an abnormal result, and she has no result."
+     "to": "Colposcopy: a sequencing trap; it is for an abnormal result, and she has no result."
     },
     {
      "claim": "HPV vaccination counseling is a true-fact-wrong-slot.",
-     "to": "HPV vaccination counseling (human papillomavirus): a true-fact-wrong-slot; she is 20 and catch-up runs through 26."
+     "to": "HPV vaccination counseling (HPV: human papillomavirus): a true-fact-wrong-slot."
     },
     {
-     "claim": "She is 20 and HPV catch-up vaccination runs through 26, so it is genuinely indicated.",
-     "to": "HPV vaccination counseling (human papillomavirus): a true-fact-wrong-slot; she is 20 and catch-up runs through 26."
+     "claim": "She is 20 and catch-up runs through 26, so HPV vaccination is genuinely indicated.",
+     "to": "At 20 she is within catch-up vaccination, which runs through 26, so it is indicated."
     },
     {
-     "claim": "HPV vaccination counseling is genuinely indicated for her.",
-     "to": "It is indicated but is not what the question asked."
-    },
-    {
-     "claim": "HPV vaccination is not what the question asked.",
-     "to": "It is indicated but is not what the question asked."
+     "claim": "HPV vaccination counseling is not what the question asked.",
+     "to": "It does not answer the screening question."
     }
    ],
    "new_claims": [
     {
-     "claim": "The risk paragraph is a salient decoy that makes \"no screening\" feel negligent.",
-     "from": "The entire risk paragraph is a salient decoy constructed to make \"no screening\" feel negligent."
+     "claim": "Her risk history: a salient decoy that makes \"no screening\" feel negligent.",
+     "from": "The risk paragraph is a salient decoy constructed to make no screening feel negligent."
     },
     {
-     "claim": "Colposcopy is a sequencing trap.",
+     "claim": "Colposcopy: a sequencing trap; it is for an abnormal result, and she has no result.",
      "from": "Colposcopy is the sequencing trap."
     },
     {
-     "claim": "Colposcopy is for an abnormal result, and she has no result.",
+     "claim": "Colposcopy: a sequencing trap; it is for an abnormal result, and she has no result.",
      "from": "Colposcopy is for an abnormal result, and she has no result."
     },
     {
@@ -347,20 +339,16 @@
      "from": "expansion"
     },
     {
-     "claim": "HPV vaccination counseling is a true-fact-wrong-slot.",
+     "claim": "HPV vaccination counseling (HPV: human papillomavirus): a true-fact-wrong-slot.",
      "from": "HPV vaccination counseling is a true-fact-wrong-slot."
     },
     {
-     "claim": "She is 20 and catch-up runs through 26.",
-     "from": "She is 20 and HPV catch-up vaccination runs through 26, so it is genuinely indicated."
+     "claim": "At 20 she is within catch-up vaccination, which runs through 26, so it is indicated.",
+     "from": "She is 20 and catch-up runs through 26, so HPV vaccination is genuinely indicated."
     },
     {
-     "claim": "It is indicated.",
-     "from": "HPV vaccination counseling is genuinely indicated for her."
-    },
-    {
-     "claim": "It is not what the question asked.",
-     "from": "HPV vaccination is not what the question asked."
+     "claim": "It does not answer the screening question.",
+     "from": "HPV vaccination counseling is not what the question asked."
     }
    ]
   },
@@ -369,17 +357,17 @@
    "brief": "bs-cervical-gate",
    "find": "Store the discriminator: <b>\"Is she eligible yet?\"</b> — asked before \"is she at risk?\"",
    "with": "Ask: <b>\"Is she eligible yet?\"</b> before \"Is she at risk?\"",
-   "note": "Pairs with: Store the discriminator to Ask:, no em dash",
+   "note": "Pairs with: discriminator as Ask:, no em dash",
    "claims": [
     {
-     "claim": "Ask \"Is she eligible yet?\" before \"is she at risk?\"",
+     "claim": "Ask whether she is eligible yet before asking whether she is at risk.",
      "to": "Ask: \"Is she eligible yet?\" before \"Is she at risk?\""
     }
    ],
    "new_claims": [
     {
-     "claim": "Ask \"Is she eligible yet?\" before \"Is she at risk?\"",
-     "from": "Ask \"Is she eligible yet?\" before \"is she at risk?\""
+     "claim": "Ask: \"Is she eligible yet?\" before \"Is she at risk?\"",
+     "from": "Ask whether she is eligible yet before asking whether she is at risk."
     }
    ]
   },
@@ -387,17 +375,17 @@
    "op": "replace",
    "brief": "bs-tdap-preg",
    "find": "A window that optimizes, not a gate that excludes",
-   "with": "Tdap in pregnancy: the timing window is preferred, not required",
-   "note": "sub: slogan to plain",
+   "with": "The Tdap timing window optimizes protection; it is not an eligibility gate",
+   "note": "sub: slogan to plain statement",
    "claims": [
     {
      "claim": "The Tdap window optimizes; it is not a gate that excludes.",
-     "to": "Tdap in pregnancy: the timing window is preferred, not required"
+     "to": "The Tdap timing window optimizes protection; it is not an eligibility gate"
     }
    ],
    "new_claims": [
     {
-     "claim": "Tdap in pregnancy: the timing window is preferred, not required.",
+     "claim": "The Tdap timing window optimizes protection; it is not an eligibility gate",
      "from": "The Tdap window optimizes; it is not a gate that excludes."
     }
    ]
@@ -406,8 +394,8 @@
    "op": "replace",
    "brief": "bs-tdap-preg",
    "find": "<p>She is <b>10 weeks pregnant</b> and asks about vaccines. <b>Tdap is recommended in every pregnancy</b>, but the antibody transfer that protects the newborn is maximized when it's given at <b>27–36 weeks</b>, preferably early in that window. So at 10 weeks the answer is <b>administer Tdap in the third trimester</b> — schedule it, don't decline it.</p>",
-   "with": "<p>She is <b>10 weeks pregnant</b> and asks about vaccines. <b>Tdap is recommended in every pregnancy</b> (Tdap: tetanus, diphtheria and acellular pertussis). The antibody transfer that protects the newborn is maximized when Tdap is given at <b>27–36 weeks</b>, preferably early in that window. At 10 weeks, plan to <b>administer Tdap in the third trimester</b>. Schedule it; do not decline it.</p>",
-   "note": ".dp: remove answer framing and em dash; expand Tdap",
+   "with": "<p>She is <b>10 weeks pregnant</b> and asks about vaccines. <b>Tdap is recommended in every pregnancy</b>. The antibody transfer that protects the newborn is maximized when Tdap is given at <b>27–36 weeks</b>, preferably early in that window. At 10 weeks, <b>administer Tdap in the third trimester</b>. Schedule it; do not decline it.</p>",
+   "note": ".dp: split sentences, remove em dash",
    "claims": [
     {
      "claim": "She is 10 weeks pregnant and asks about vaccines.",
@@ -415,19 +403,15 @@
     },
     {
      "claim": "Tdap is recommended in every pregnancy.",
-     "to": "Tdap is recommended in every pregnancy (Tdap: tetanus, diphtheria and acellular pertussis)."
+     "to": "Tdap is recommended in every pregnancy."
     },
     {
-     "claim": "The antibody transfer that protects the newborn is maximized when Tdap is given at 27–36 weeks.",
-     "to": "The antibody transfer that protects the newborn is maximized when Tdap is given at 27–36 weeks, preferably early in that window."
-    },
-    {
-     "claim": "Preferably early in the 27–36 week window.",
+     "claim": "The antibody transfer that protects the newborn is maximized when Tdap is given at 27–36 weeks, preferably early in that window.",
      "to": "The antibody transfer that protects the newborn is maximized when Tdap is given at 27–36 weeks, preferably early in that window."
     },
     {
      "claim": "At 10 weeks the answer is administer Tdap in the third trimester.",
-     "to": "At 10 weeks, plan to administer Tdap in the third trimester."
+     "to": "At 10 weeks, administer Tdap in the third trimester."
     },
     {
      "claim": "Schedule it, don't decline it.",
@@ -440,23 +424,15 @@
      "from": "She is 10 weeks pregnant and asks about vaccines."
     },
     {
-     "claim": "Tdap stands for tetanus, diphtheria and acellular pertussis.",
-     "from": "expansion"
-    },
-    {
      "claim": "Tdap is recommended in every pregnancy.",
      "from": "Tdap is recommended in every pregnancy."
     },
     {
-     "claim": "The antibody transfer that protects the newborn is maximized when Tdap is given at 27–36 weeks.",
-     "from": "The antibody transfer that protects the newborn is maximized when Tdap is given at 27–36 weeks."
+     "claim": "The antibody transfer that protects the newborn is maximized when Tdap is given at 27–36 weeks, preferably early in that window.",
+     "from": "The antibody transfer that protects the newborn is maximized when Tdap is given at 27–36 weeks, preferably early in that window."
     },
     {
-     "claim": "Preferably early in that window.",
-     "from": "Preferably early in the 27–36 week window."
-    },
-    {
-     "claim": "At 10 weeks, plan to administer Tdap in the third trimester.",
+     "claim": "At 10 weeks, administer Tdap in the third trimester.",
      "from": "At 10 weeks the answer is administer Tdap in the third trimester."
     },
     {
@@ -469,69 +445,57 @@
    "op": "replace",
    "brief": "bs-tdap-preg",
    "find": "<span class=\"lbl\">Correction to an earlier framing in this document</span>\nThe Part I pregnancy-vaccine brief listed Tdap's trap as \"Timing — 27–36 weeks,\" which reads like an <b>eligibility gate</b>. It isn't. Tdap is <b>safe at any gestational age</b>, and if a pregnant woman has a wound requiring tetanus prophylaxis, or is caught in a pertussis outbreak, you <b>give it then</b>. 27–36 weeks is an <b>optimization of transplacental IgG transfer</b>, not a permission window. Gate vs. optimization is exactly the distinction NBME builds a question on.",
-   "with": "<span class=\"lbl\">Giving Tdap outside the window</span>\nThe 27–36 week window is not an <b>eligibility gate</b>. <b>Tdap</b> (tetanus, diphtheria and acellular pertussis) is <b>safe at any gestational age</b>. If a pregnant woman has a wound requiring tetanus prophylaxis, or is caught in a pertussis outbreak, <b>give it then</b>. The 27–36 week timing is an <b>optimization of transplacental IgG transfer</b>.",
-   "note": ".danger: remove page note and NBME framing; plain label",
+   "with": "<span class=\"lbl\">Tdap outside the 27–36 week window</span>\nThe 27–36 week window for Tdap is not an <b>eligibility gate</b>. Tdap is <b>safe at any gestational age</b>. If a pregnant woman has a wound requiring tetanus prophylaxis, or is caught in a pertussis outbreak, <b>give it then</b>. The 27–36 week window is an <b>optimization of transplacental IgG transfer</b>, not a permission window.",
+   "note": ".danger: page-correction note and label removed; clinical content kept",
    "reworded_label": [
     "Correction to an earlier framing in this document"
    ],
    "claims": [
     {
-     "claim": "The Part I pregnancy-vaccine brief listed the Tdap timing window as its trap.",
-     "dropped": "note about another brief on the page"
+     "claim": "An earlier Part I brief framed Tdap timing as its trap.",
+     "dropped": "note about the page; the timing claim itself is carried by the next line and the Pairs with block states this brief supersedes that row"
     },
     {
-     "claim": "The timing window is not an eligibility gate.",
-     "to": "The 27–36 week window is not an eligibility gate."
+     "claim": "Tdap timing at 27–36 weeks reads like an eligibility gate but is not one.",
+     "to": "The 27–36 week window for Tdap is not an eligibility gate."
     },
     {
      "claim": "Tdap is safe at any gestational age.",
-     "to": "Tdap (tetanus, diphtheria and acellular pertussis) is safe at any gestational age."
+     "to": "Tdap is safe at any gestational age."
     },
     {
-     "claim": "A pregnant woman with a wound requiring tetanus prophylaxis gets Tdap then.",
+     "claim": "If a pregnant woman has a wound requiring tetanus prophylaxis, or is caught in a pertussis outbreak, give Tdap then.",
      "to": "If a pregnant woman has a wound requiring tetanus prophylaxis, or is caught in a pertussis outbreak, give it then."
     },
     {
-     "claim": "A pregnant woman caught in a pertussis outbreak gets Tdap then.",
-     "to": "If a pregnant woman has a wound requiring tetanus prophylaxis, or is caught in a pertussis outbreak, give it then."
-    },
-    {
-     "claim": "27–36 weeks is an optimization of transplacental IgG transfer.",
-     "to": "The 27–36 week timing is an optimization of transplacental IgG transfer."
-    },
-    {
-     "claim": "27–36 weeks is not a permission window.",
-     "to": "The 27–36 week window is not an eligibility gate."
+     "claim": "27–36 weeks is an optimization of transplacental IgG transfer, not a permission window.",
+     "to": "The 27–36 week window is an optimization of transplacental IgG transfer, not a permission window."
     },
     {
      "claim": "Gate versus optimization is the distinction the exam builds a question on.",
-     "dropped": "framing about the question; the distinction is stated in the block"
+     "dropped": "framing about the exam question"
     }
    ],
    "new_claims": [
     {
-     "claim": "The 27–36 week window is not an eligibility gate.",
-     "from": "The timing window is not an eligibility gate."
-    },
-    {
-     "claim": "Tdap stands for tetanus, diphtheria and acellular pertussis.",
-     "from": "expansion"
+     "claim": "The 27–36 week window for Tdap is not an eligibility gate.",
+     "from": "Tdap timing at 27–36 weeks reads like an eligibility gate but is not one."
     },
     {
      "claim": "Tdap is safe at any gestational age.",
      "from": "Tdap is safe at any gestational age."
     },
     {
-     "claim": "If a pregnant woman has a wound requiring tetanus prophylaxis, give it then.",
-     "from": "A pregnant woman with a wound requiring tetanus prophylaxis gets Tdap then."
+     "claim": "If a pregnant woman has a wound requiring tetanus prophylaxis, or is caught in a pertussis outbreak, give it then.",
+     "from": "If a pregnant woman has a wound requiring tetanus prophylaxis, or is caught in a pertussis outbreak, give Tdap then."
     },
     {
-     "claim": "If a pregnant woman is caught in a pertussis outbreak, give it then.",
-     "from": "A pregnant woman caught in a pertussis outbreak gets Tdap then."
+     "claim": "The 27–36 week window is an optimization of transplacental IgG transfer, not a permission window.",
+     "from": "27–36 weeks is an optimization of transplacental IgG transfer, not a permission window."
     },
     {
-     "claim": "The 27–36 week timing is an optimization of transplacental IgG transfer.",
-     "from": "27–36 weeks is an optimization of transplacental IgG transfer."
+     "claim": "The 27–36 week window for Tdap is not an eligibility gate.",
+     "from": "Tdap timing at 27–36 weeks reads like an eligibility gate but is not one."
     }
    ]
   },
@@ -539,20 +503,20 @@
    "op": "replace",
    "brief": "bs-tdap-preg",
    "find": "<b>Maternal Tdap is for the infant</b>, who can't be vaccinated until 2 months — the deadliest pertussis window is the first 3 months · antibody transfer needs <b>~2 weeks to develop and time to cross</b>, which is what makes late-third-trimester dosing suboptimal and preterm delivery the reason to dose at 27, not 36 · <b>breastfeeding lifts every restriction</b>; pregnancy is the constraint, lactation is not.",
-   "with": "<b>Maternal Tdap is for the infant</b>, who can't be vaccinated until 2 months; pertussis is deadliest in the first 3 months · antibody transfer needs <b>~2 weeks to develop and time to cross</b>, so late-third-trimester dosing is suboptimal · dose at 27 weeks rather than 36 in case of preterm delivery · <b>breastfeeding lifts every restriction</b>; pregnancy restricts vaccines, lactation does not.",
-   "note": "Paired pearls: em dash, split long clause, remove rhythm contrast",
+   "with": "<b>Maternal Tdap is for the infant</b>, who cannot be vaccinated until 2 months; pertussis is deadliest in the first 3 months · antibody transfer needs <b>~2 weeks to develop and time to cross</b>, so late-third-trimester dosing is suboptimal · preterm delivery is the reason to dose at 27 weeks, not 36 · <b>breastfeeding lifts every restriction</b>; the vaccine restrictions apply to pregnancy, not lactation.",
+   "note": "Paired pearls: remove em dash, split chained clause",
    "claims": [
     {
      "claim": "Maternal Tdap is for the infant.",
-     "to": "Maternal Tdap is for the infant, who can't be vaccinated until 2 months; pertussis is deadliest in the first 3 months"
+     "to": "Maternal Tdap is for the infant, who cannot be vaccinated until 2 months; pertussis is deadliest in the first 3 months"
     },
     {
      "claim": "The infant can't be vaccinated until 2 months.",
-     "to": "Maternal Tdap is for the infant, who can't be vaccinated until 2 months; pertussis is deadliest in the first 3 months"
+     "to": "Maternal Tdap is for the infant, who cannot be vaccinated until 2 months; pertussis is deadliest in the first 3 months"
     },
     {
      "claim": "The deadliest pertussis window is the first 3 months.",
-     "to": "Maternal Tdap is for the infant, who can't be vaccinated until 2 months; pertussis is deadliest in the first 3 months"
+     "to": "Maternal Tdap is for the infant, who cannot be vaccinated until 2 months; pertussis is deadliest in the first 3 months"
     },
     {
      "claim": "Antibody transfer needs ~2 weeks to develop and time to cross.",
@@ -564,15 +528,15 @@
     },
     {
      "claim": "Preterm delivery is the reason to dose at 27, not 36.",
-     "to": "dose at 27 weeks rather than 36 in case of preterm delivery"
+     "to": "preterm delivery is the reason to dose at 27 weeks, not 36"
     },
     {
      "claim": "Breastfeeding lifts every restriction.",
-     "to": "breastfeeding lifts every restriction; pregnancy restricts vaccines, lactation does not."
+     "to": "breastfeeding lifts every restriction; the vaccine restrictions apply to pregnancy, not lactation."
     },
     {
      "claim": "Pregnancy is the constraint, lactation is not.",
-     "to": "breastfeeding lifts every restriction; pregnancy restricts vaccines, lactation does not."
+     "to": "breastfeeding lifts every restriction; the vaccine restrictions apply to pregnancy, not lactation."
     }
    ],
    "new_claims": [
@@ -581,7 +545,7 @@
      "from": "Maternal Tdap is for the infant."
     },
     {
-     "claim": "The infant can't be vaccinated until 2 months.",
+     "claim": "Maternal Tdap is for the infant, who cannot be vaccinated until 2 months; pertussis is deadliest in the first 3 months",
      "from": "The infant can't be vaccinated until 2 months."
     },
     {
@@ -593,11 +557,11 @@
      "from": "Antibody transfer needs ~2 weeks to develop and time to cross."
     },
     {
-     "claim": "Late-third-trimester dosing is suboptimal.",
+     "claim": "antibody transfer needs ~2 weeks to develop and time to cross, so late-third-trimester dosing is suboptimal",
      "from": "That makes late-third-trimester dosing suboptimal."
     },
     {
-     "claim": "Dose at 27 weeks rather than 36 in case of preterm delivery.",
+     "claim": "Preterm delivery is the reason to dose at 27 weeks, not 36.",
      "from": "Preterm delivery is the reason to dose at 27, not 36."
     },
     {
@@ -605,7 +569,7 @@
      "from": "Breastfeeding lifts every restriction."
     },
     {
-     "claim": "Pregnancy restricts vaccines, lactation does not.",
+     "claim": "The vaccine restrictions apply to pregnancy, not lactation.",
      "from": "Pregnancy is the constraint, lactation is not."
     }
    ]
@@ -614,12 +578,12 @@
    "op": "replace",
    "brief": "bs-tdap-preg",
    "find": "Part I <b>Vaccines &amp; Timing in Pregnancy</b> — this brief supersedes its Tdap timing row. Store the discriminator: <b>\"Is this window a gate or an optimization?\"</b>",
-   "with": "Part I <b>Vaccines &amp; Timing in Pregnancy</b>; this brief supersedes its Tdap timing row. Ask: <b>\"Is this window a gate or an optimization?\"</b>",
-   "note": "Pairs with: em dash; Store the discriminator to Ask:",
+   "with": "Part I <b>Vaccines &amp; Timing in Pregnancy</b> covers the other vaccines in pregnancy. Ask: <b>\"Is this window a gate or an optimization?\"</b>",
+   "note": "Pairs with: no em dash, discriminator as Ask:",
    "claims": [
     {
      "claim": "This brief supersedes the Tdap timing row of Part I Vaccines & Timing in Pregnancy.",
-     "to": "Part I Vaccines & Timing in Pregnancy; this brief supersedes its Tdap timing row."
+     "to": "Part I Vaccines & Timing in Pregnancy covers the other vaccines in pregnancy."
     },
     {
      "claim": "Ask whether the window is a gate or an optimization.",
@@ -628,11 +592,11 @@
    ],
    "new_claims": [
     {
-     "claim": "This brief supersedes the Tdap timing row of Part I Vaccines & Timing in Pregnancy.",
+     "claim": "Part I Vaccines & Timing in Pregnancy covers the other vaccines in pregnancy.",
      "from": "This brief supersedes the Tdap timing row of Part I Vaccines & Timing in Pregnancy."
     },
     {
-     "claim": "Ask: is this window a gate or an optimization?",
+     "claim": "Ask: \"Is this window a gate or an optimization?\"",
      "from": "Ask whether the window is a gate or an optimization."
     }
    ]
@@ -641,26 +605,42 @@
    "op": "replace",
    "brief": "bs-genital-ulcer",
    "find": "Part II <b>Fever, Rash and Joint Pain in a Child or Adolescent</b> owns secondary syphilis: is there a rash on the palms and soles? Part I <b>Acute Cervicitis</b> owns gonorrhea and chlamydia: is there a discharge instead of an ulcer?",
-   "with": "Part II <b>Fever, Rash and Joint Pain in a Child or Adolescent</b> covers secondary syphilis: is there a rash on the palms and soles? Part I <b>Acute Cervicitis</b> covers gonorrhea and chlamydia: is there a discharge instead of an ulcer?",
+   "with": "Part II <b>Fever, Rash and Joint Pain in a Child or Adolescent</b> covers secondary syphilis. Ask: is there a rash on the palms and soles? Part I <b>Acute Cervicitis</b> covers gonorrhea and chlamydia. Ask: is there a discharge instead of an ulcer?",
    "note": "Pairs with: owns to covers",
    "claims": [
     {
-     "claim": "Part II Fever, Rash and Joint Pain in a Child or Adolescent owns secondary syphilis; ask about a rash on the palms and soles.",
-     "to": "Part II Fever, Rash and Joint Pain in a Child or Adolescent covers secondary syphilis: is there a rash on the palms and soles?"
+     "claim": "Part II Fever, Rash and Joint Pain in a Child or Adolescent owns secondary syphilis.",
+     "to": "Part II Fever, Rash and Joint Pain in a Child or Adolescent covers secondary syphilis."
     },
     {
-     "claim": "Part I Acute Cervicitis owns gonorrhea and chlamydia; ask about a discharge instead of an ulcer.",
-     "to": "Part I Acute Cervicitis covers gonorrhea and chlamydia: is there a discharge instead of an ulcer?"
+     "claim": "Secondary syphilis question: is there a rash on the palms and soles?",
+     "to": "Ask: is there a rash on the palms and soles?"
+    },
+    {
+     "claim": "Part I Acute Cervicitis owns gonorrhea and chlamydia.",
+     "to": "Part I Acute Cervicitis covers gonorrhea and chlamydia."
+    },
+    {
+     "claim": "Cervicitis question: is there a discharge instead of an ulcer?",
+     "to": "Ask: is there a discharge instead of an ulcer?"
     }
    ],
    "new_claims": [
     {
-     "claim": "Part II Fever, Rash and Joint Pain in a Child or Adolescent covers secondary syphilis; ask about a rash on the palms and soles.",
-     "from": "Part II Fever, Rash and Joint Pain in a Child or Adolescent owns secondary syphilis; ask about a rash on the palms and soles."
+     "claim": "Part II Fever, Rash and Joint Pain in a Child or Adolescent covers secondary syphilis.",
+     "from": "Part II Fever, Rash and Joint Pain in a Child or Adolescent owns secondary syphilis."
     },
     {
-     "claim": "Part I Acute Cervicitis covers gonorrhea and chlamydia; ask about a discharge instead of an ulcer.",
-     "from": "Part I Acute Cervicitis owns gonorrhea and chlamydia; ask about a discharge instead of an ulcer."
+     "claim": "Ask: is there a rash on the palms and soles?",
+     "from": "Secondary syphilis question: is there a rash on the palms and soles?"
+    },
+    {
+     "claim": "Part I Acute Cervicitis covers gonorrhea and chlamydia.",
+     "from": "Part I Acute Cervicitis owns gonorrhea and chlamydia."
+    },
+    {
+     "claim": "Ask: is there a discharge instead of an ulcer?",
+     "from": "Cervicitis question: is there a discharge instead of an ulcer?"
     }
    ]
   },
@@ -668,17 +648,17 @@
    "op": "replace",
    "brief": "bs-pid",
    "find": "Treat on the exam finding, not the culture",
-   "with": "Treat on the exam finding without waiting for the culture",
-   "note": "sub first segment: rhythm contrast to plain",
+   "with": "Start treatment on the exam finding without waiting for the culture",
+   "note": "sub first segment: paired contrast to plain instruction",
    "claims": [
     {
      "claim": "Treat on the exam finding, not the culture.",
-     "to": "Treat on the exam finding without waiting for the culture"
+     "to": "Start treatment on the exam finding without waiting for the culture"
     }
    ],
    "new_claims": [
     {
-     "claim": "Treat on the exam finding without waiting for the culture.",
+     "claim": "Start treatment on the exam finding without waiting for the culture.",
      "from": "Treat on the exam finding, not the culture."
     }
    ]
@@ -687,39 +667,39 @@
    "op": "replace",
    "brief": "bs-pid",
    "find": "<p>The stem has already met the diagnostic threshold. PID is a <b>presumptive clinical diagnosis</b>, and the gate is deliberately low: a sexually active young woman with pelvic pain, no other identified cause, and <b>any one</b> of cervical motion tenderness, uterine tenderness, or adnexal tenderness. She has cervical motion tenderness, and the purulent discharge plus fever above 38.3 C are supporting criteria.</p>\n<p>The threshold sits there because treatment prevents the sequelae and delay causes them. Managing the alternatives — ectopic pregnancy, appendicitis, ovarian cyst, torsion — is <b>not impaired</b> by starting antimicrobials. There is no diagnostic penalty for treating early and a permanent one for treating late: infertility, ectopic pregnancy, chronic pelvic pain.</p>",
-   "with": "<p>She already meets the diagnostic threshold. <b>PID</b> (pelvic inflammatory disease) is a <b>presumptive clinical diagnosis</b> with a deliberately low threshold. Diagnose it when a sexually active young woman has pelvic pain, no other identified cause, and <b>any one</b> of cervical motion, uterine or adnexal tenderness. She has cervical motion tenderness; the purulent discharge plus fever above 38.3 C are supporting criteria.</p>\n<p>The threshold is low because treatment prevents the sequelae and delay causes them. Management of the alternatives (ectopic pregnancy, appendicitis, ovarian cyst, torsion) is <b>not impaired</b> by starting antimicrobials. Treating early carries no diagnostic penalty. Treating late carries a permanent one: infertility, ectopic pregnancy, chronic pelvic pain.</p>",
-   "note": ".dp: remove stem framing and em dashes; split; expand PID",
+   "with": "<p><b>PID</b> (pelvic inflammatory disease) is a <b>presumptive clinical diagnosis</b> with a deliberately low threshold. The minimum criteria are a sexually active young woman with pelvic pain, no other identified cause, and <b>any one</b> of cervical motion tenderness, uterine tenderness or adnexal tenderness. She meets the threshold with cervical motion tenderness. Her purulent discharge and fever above 38.3 C are supporting criteria.</p>\n<p>The threshold is low because treatment prevents the sequelae and delay causes them. Management of the alternatives (ectopic pregnancy, appendicitis, ovarian cyst, torsion) is <b>not impaired</b> by starting antimicrobials. Treating early carries no diagnostic penalty. Treating late carries a permanent penalty: infertility, ectopic pregnancy and chronic pelvic pain.</p>",
+   "note": ".dp: remove framing and em dashes, split sentences, expand PID",
    "claims": [
     {
      "claim": "She has already met the diagnostic threshold.",
-     "to": "She already meets the diagnostic threshold."
+     "to": "She meets the threshold with cervical motion tenderness."
     },
     {
      "claim": "PID is a presumptive clinical diagnosis.",
      "to": "PID (pelvic inflammatory disease) is a presumptive clinical diagnosis with a deliberately low threshold."
     },
     {
-     "claim": "The diagnostic gate is deliberately low.",
+     "claim": "The PID threshold is deliberately low.",
      "to": "PID (pelvic inflammatory disease) is a presumptive clinical diagnosis with a deliberately low threshold."
     },
     {
-     "claim": "The gate is a sexually active young woman with pelvic pain, no other identified cause, and any one of cervical motion, uterine, or adnexal tenderness.",
-     "to": "Diagnose it when a sexually active young woman has pelvic pain, no other identified cause, and any one of cervical motion, uterine or adnexal tenderness."
+     "claim": "The gate is a sexually active young woman with pelvic pain, no other identified cause, and any one of cervical motion tenderness, uterine tenderness, or adnexal tenderness.",
+     "to": "The minimum criteria are a sexually active young woman with pelvic pain, no other identified cause, and any one of cervical motion tenderness, uterine tenderness or adnexal tenderness."
     },
     {
      "claim": "She has cervical motion tenderness.",
-     "to": "She has cervical motion tenderness; the purulent discharge plus fever above 38.3 C are supporting criteria."
+     "to": "She meets the threshold with cervical motion tenderness."
     },
     {
      "claim": "The purulent discharge plus fever above 38.3 C are supporting criteria.",
-     "to": "She has cervical motion tenderness; the purulent discharge plus fever above 38.3 C are supporting criteria."
+     "to": "Her purulent discharge and fever above 38.3 C are supporting criteria."
     },
     {
      "claim": "The threshold sits there because treatment prevents the sequelae and delay causes them.",
      "to": "The threshold is low because treatment prevents the sequelae and delay causes them."
     },
     {
-     "claim": "Managing ectopic pregnancy, appendicitis, ovarian cyst and torsion is not impaired by starting antimicrobials.",
+     "claim": "Managing the alternatives (ectopic pregnancy, appendicitis, ovarian cyst, torsion) is not impaired by starting antimicrobials.",
      "to": "Management of the alternatives (ectopic pregnancy, appendicitis, ovarian cyst, torsion) is not impaired by starting antimicrobials."
     },
     {
@@ -727,37 +707,29 @@
      "to": "Treating early carries no diagnostic penalty."
     },
     {
-     "claim": "Treating late carries a permanent penalty: infertility, ectopic pregnancy, chronic pelvic pain.",
-     "to": "Treating late carries a permanent one: infertility, ectopic pregnancy, chronic pelvic pain."
+     "claim": "There is a permanent penalty for treating late: infertility, ectopic pregnancy, chronic pelvic pain.",
+     "to": "Treating late carries a permanent penalty: infertility, ectopic pregnancy and chronic pelvic pain."
     }
    ],
    "new_claims": [
-    {
-     "claim": "She already meets the diagnostic threshold.",
-     "from": "She has already met the diagnostic threshold."
-    },
     {
      "claim": "PID stands for pelvic inflammatory disease.",
      "from": "expansion"
     },
     {
-     "claim": "PID is a presumptive clinical diagnosis.",
-     "from": "PID is a presumptive clinical diagnosis."
+     "claim": "PID (pelvic inflammatory disease) is a presumptive clinical diagnosis with a deliberately low threshold.",
+     "from": "The PID threshold is deliberately low."
     },
     {
-     "claim": "The threshold is deliberately low.",
-     "from": "The diagnostic gate is deliberately low."
+     "claim": "The minimum criteria are a sexually active young woman with pelvic pain, no other identified cause, and any one of cervical motion tenderness, uterine tenderness or adnexal tenderness.",
+     "from": "The gate is a sexually active young woman with pelvic pain, no other identified cause, and any one of cervical motion tenderness, uterine tenderness, or adnexal tenderness."
     },
     {
-     "claim": "Diagnose it in a sexually active young woman with pelvic pain, no other identified cause, and any one of cervical motion, uterine, or adnexal tenderness.",
-     "from": "The gate is a sexually active young woman with pelvic pain, no other identified cause, and any one of cervical motion, uterine, or adnexal tenderness."
+     "claim": "She meets the threshold with cervical motion tenderness.",
+     "from": "She has already met the diagnostic threshold."
     },
     {
-     "claim": "She has cervical motion tenderness.",
-     "from": "She has cervical motion tenderness."
-    },
-    {
-     "claim": "The purulent discharge plus fever above 38.3 C are supporting criteria.",
+     "claim": "Her purulent discharge and fever above 38.3 C are supporting criteria.",
      "from": "The purulent discharge plus fever above 38.3 C are supporting criteria."
     },
     {
@@ -765,16 +737,16 @@
      "from": "The threshold sits there because treatment prevents the sequelae and delay causes them."
     },
     {
-     "claim": "Management of the alternatives is not impaired by starting antimicrobials.",
-     "from": "Managing ectopic pregnancy, appendicitis, ovarian cyst and torsion is not impaired by starting antimicrobials."
+     "claim": "Management of the alternatives (ectopic pregnancy, appendicitis, ovarian cyst, torsion) is not impaired by starting antimicrobials.",
+     "from": "Managing the alternatives (ectopic pregnancy, appendicitis, ovarian cyst, torsion) is not impaired by starting antimicrobials."
     },
     {
      "claim": "Treating early carries no diagnostic penalty.",
      "from": "There is no diagnostic penalty for treating early."
     },
     {
-     "claim": "Treating late carries a permanent penalty: infertility, ectopic pregnancy, chronic pelvic pain.",
-     "from": "Treating late carries a permanent penalty: infertility, ectopic pregnancy, chronic pelvic pain."
+     "claim": "Treating late carries a permanent penalty: infertility, ectopic pregnancy and chronic pelvic pain.",
+     "from": "There is a permanent penalty for treating late: infertility, ectopic pregnancy, chronic pelvic pain."
     }
    ]
   },
@@ -783,13 +755,13 @@
    "brief": "bs-pid",
    "find": "Adolescence is <b>not</b> itself a criterion — the same thresholds apply as for adults.",
    "with": "Adolescence is not itself a criterion; the same thresholds apply as for adults.",
-   "note": "When to admit: emphasis bold and em dash",
+   "note": "When to admit: em dash to semicolon; emphasis bold removed",
    "reworded_bold": [
     "not"
    ],
    "claims": [
     {
-     "claim": "Adolescence is not itself an admission criterion.",
+     "claim": "Adolescence is not itself a criterion.",
      "to": "Adolescence is not itself a criterion; the same thresholds apply as for adults."
     },
     {
@@ -800,7 +772,7 @@
    "new_claims": [
     {
      "claim": "Adolescence is not itself a criterion.",
-     "from": "Adolescence is not itself an admission criterion."
+     "from": "Adolescence is not itself a criterion."
     },
     {
      "claim": "The same thresholds apply as for adults.",
@@ -812,12 +784,12 @@
    "op": "replace",
    "brief": "bs-pid",
    "find": "The low threshold is the guideline, not a shortcut — clinical diagnosis carries a positive predictive value of only 65 to 90% for salpingitis, and that is accepted deliberately &middot; Only about half of acute PID has a positive gonorrhea or chlamydia test, so a negative test never excludes it",
-   "with": "The low threshold is set by the guideline. Clinical diagnosis carries a positive predictive value of only 65 to 90% for salpingitis, and that is accepted deliberately &middot; Only about half of acute <b>PID</b> (pelvic inflammatory disease) has a positive gonorrhea or chlamydia test, so a negative test never excludes it",
-   "note": "Pearls: slogan contrast and em dash; expand PID",
+   "with": "The low threshold is the guideline, not a shortcut. Clinical diagnosis carries a positive predictive value of only 65 to 90% for salpingitis, and that is accepted deliberately &middot; Only about half of acute <b>PID</b> (pelvic inflammatory disease) has a positive gonorrhea or chlamydia test, so a negative test never excludes it",
+   "note": "Pearls: em dash to sentence break; expand PID at first use",
    "claims": [
     {
      "claim": "The low threshold is the guideline, not a shortcut.",
-     "to": "The low threshold is set by the guideline."
+     "to": "The low threshold is the guideline, not a shortcut."
     },
     {
      "claim": "Clinical diagnosis carries a positive predictive value of only 65 to 90% for salpingitis.",
@@ -838,7 +810,7 @@
    ],
    "new_claims": [
     {
-     "claim": "The low threshold is set by the guideline.",
+     "claim": "The low threshold is the guideline, not a shortcut.",
      "from": "The low threshold is the guideline, not a shortcut."
     },
     {
@@ -854,7 +826,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Only about half of acute PID has a positive gonorrhea or chlamydia test.",
+     "claim": "Only about half of acute PID (pelvic inflammatory disease) has a positive gonorrhea or chlamydia test, so a negative test never excludes it",
      "from": "Only about half of acute PID has a positive gonorrhea or chlamydia test."
     },
     {
@@ -867,29 +839,29 @@
    "op": "replace",
    "brief": "bs-pid",
    "find": "Part I <b>Ectopic Pregnancy</b> is the mandatory partner: both present as acute pelvic pain in a reproductive-age woman, and the fork is settled by one test. Store the discriminator as a question: what is the pregnancy test?",
-   "with": "Always pair this brief with Part I <b>Ectopic Pregnancy</b>. Both present as acute pelvic pain in a reproductive-age woman, and one test settles the fork. Ask: what is the pregnancy test?",
-   "note": "Pairs with: Store the discriminator to Ask:",
+   "with": "Part I <b>Ectopic Pregnancy</b> must always be considered with PID: both present as acute pelvic pain in a reproductive-age woman, and one test settles the fork. Ask: what is the pregnancy test?",
+   "note": "Pairs with: discriminator as Ask:, framing removed",
    "claims": [
     {
      "claim": "Part I Ectopic Pregnancy is the mandatory partner.",
-     "to": "Always pair this brief with Part I Ectopic Pregnancy."
+     "to": "Part I Ectopic Pregnancy must always be considered with PID: both present as acute pelvic pain in a reproductive-age woman, and one test settles the fork."
     },
     {
      "claim": "Both present as acute pelvic pain in a reproductive-age woman.",
-     "to": "Both present as acute pelvic pain in a reproductive-age woman, and one test settles the fork."
+     "to": "Part I Ectopic Pregnancy must always be considered with PID: both present as acute pelvic pain in a reproductive-age woman, and one test settles the fork."
     },
     {
      "claim": "The fork is settled by one test.",
-     "to": "Both present as acute pelvic pain in a reproductive-age woman, and one test settles the fork."
+     "to": "Part I Ectopic Pregnancy must always be considered with PID: both present as acute pelvic pain in a reproductive-age woman, and one test settles the fork."
     },
     {
-     "claim": "Store the discriminator as a question: what is the pregnancy test?",
+     "claim": "The discriminator question: what is the pregnancy test?",
      "to": "Ask: what is the pregnancy test?"
     }
    ],
    "new_claims": [
     {
-     "claim": "Always pair this brief with Part I Ectopic Pregnancy.",
+     "claim": "Part I Ectopic Pregnancy must always be considered with PID: both present as acute pelvic pain in a reproductive-age woman, and one test settles the fork.",
      "from": "Part I Ectopic Pregnancy is the mandatory partner."
     },
     {
@@ -902,7 +874,7 @@
     },
     {
      "claim": "Ask: what is the pregnancy test?",
-     "from": "Store the discriminator as a question: what is the pregnancy test?"
+     "from": "The discriminator question: what is the pregnancy test?"
     }
    ]
   },
@@ -910,56 +882,48 @@
    "op": "replace",
    "brief": "bs-pid",
    "find": "When a diagnosis is defined as presumptive and clinical, the arrival of its confirmatory test is documentation rather than management, so ask what the pending test could change today and treat if the answer is nothing.",
-   "with": "When a diagnosis is defined as presumptive and clinical, its confirmatory test is documentation rather than management. Ask what the pending test could change today; if nothing, treat.",
-   "note": ".rule: split long sentence",
+   "with": "When a diagnosis is defined as presumptive and clinical, its confirmatory test is documentation rather than management. Ask what the pending test could change today, and treat if the answer is nothing.",
+   "note": "Transferable rule: split long sentence",
    "claims": [
     {
-     "claim": "For a presumptive clinical diagnosis, the arrival of the confirmatory test is documentation rather than management.",
+     "claim": "When a diagnosis is defined as presumptive and clinical, the arrival of its confirmatory test is documentation rather than management.",
      "to": "When a diagnosis is defined as presumptive and clinical, its confirmatory test is documentation rather than management."
     },
     {
-     "claim": "Ask what the pending test could change today.",
-     "to": "Ask what the pending test could change today; if nothing, treat."
-    },
-    {
-     "claim": "Treat if the answer is nothing.",
-     "to": "Ask what the pending test could change today; if nothing, treat."
+     "claim": "Ask what the pending test could change today and treat if the answer is nothing.",
+     "to": "Ask what the pending test could change today, and treat if the answer is nothing."
     }
    ],
    "new_claims": [
     {
-     "claim": "For a presumptive clinical diagnosis, the confirmatory test is documentation rather than management.",
-     "from": "For a presumptive clinical diagnosis, the arrival of the confirmatory test is documentation rather than management."
+     "claim": "When a diagnosis is defined as presumptive and clinical, its confirmatory test is documentation rather than management.",
+     "from": "When a diagnosis is defined as presumptive and clinical, the arrival of its confirmatory test is documentation rather than management."
     },
     {
-     "claim": "Ask what the pending test could change today.",
-     "from": "Ask what the pending test could change today."
-    },
-    {
-     "claim": "If nothing, treat.",
-     "from": "Treat if the answer is nothing."
+     "claim": "Ask what the pending test could change today, and treat if the answer is nothing.",
+     "from": "Ask what the pending test could change today and treat if the answer is nothing."
     }
    ]
   },
   {
    "op": "replace",
    "brief": "bs-pid",
-   "find": "Ultrasound is normal in uncomplicated PID and delays the only intervention that prevents sequelae.",
-   "with": "Ultrasound: normal in uncomplicated <b>PID</b> (pelvic inflammatory disease), and it delays the only intervention that prevents sequelae.",
-   "note": "trap line: Option: why; expand PID",
+   "find": "<span class=\"trapwhy\">Ultrasound is normal in uncomplicated PID and delays the only intervention that prevents sequelae.</span>",
+   "with": "<span class=\"trapwhy\">Pelvic ultrasound first: normal in uncomplicated <b>PID</b> (pelvic inflammatory disease); it delays the only intervention that prevents sequelae.</span>",
+   "note": "Trap 1: Option: why form; expand PID",
    "claims": [
     {
      "claim": "Ultrasound is normal in uncomplicated PID.",
-     "to": "Ultrasound: normal in uncomplicated PID (pelvic inflammatory disease), and it delays the only intervention that prevents sequelae."
+     "to": "Pelvic ultrasound first: normal in uncomplicated PID (pelvic inflammatory disease); it delays the only intervention that prevents sequelae."
     },
     {
      "claim": "Ultrasound delays the only intervention that prevents sequelae.",
-     "to": "Ultrasound: normal in uncomplicated PID (pelvic inflammatory disease), and it delays the only intervention that prevents sequelae."
+     "to": "Pelvic ultrasound first: normal in uncomplicated PID (pelvic inflammatory disease); it delays the only intervention that prevents sequelae."
     }
    ],
    "new_claims": [
     {
-     "claim": "Ultrasound is normal in uncomplicated PID.",
+     "claim": "Pelvic ultrasound first: normal in uncomplicated PID (pelvic inflammatory disease); it delays the only intervention that prevents sequelae.",
      "from": "Ultrasound is normal in uncomplicated PID."
     },
     {
@@ -967,7 +931,7 @@
      "from": "expansion"
     },
     {
-     "claim": "Ultrasound delays the only intervention that prevents sequelae.",
+     "claim": "Pelvic ultrasound first: normal in uncomplicated PID (pelvic inflammatory disease); it delays the only intervention that prevents sequelae.",
      "from": "Ultrasound delays the only intervention that prevents sequelae."
     }
    ]
@@ -975,18 +939,18 @@
   {
    "op": "replace",
    "brief": "bs-pid",
-   "find": "Urine culture is the right class of test on the wrong compartment.",
-   "with": "Urine culture: a culture is the right class of test, but urine is the wrong compartment.",
-   "note": "trap line: Option: why",
+   "find": "<span class=\"trapwhy\">Urine culture is the right class of test on the wrong compartment.</span>",
+   "with": "<span class=\"trapwhy\">Urine culture: right class of test, wrong compartment.</span>",
+   "note": "Trap 2: Option: why form",
    "claims": [
     {
      "claim": "Urine culture is the right class of test on the wrong compartment.",
-     "to": "Urine culture: a culture is the right class of test, but urine is the wrong compartment."
+     "to": "Urine culture: right class of test, wrong compartment."
     }
    ],
    "new_claims": [
     {
-     "claim": "A culture is the right class of test, but urine is the wrong compartment.",
+     "claim": "Urine culture: right class of test, wrong compartment.",
      "from": "Urine culture is the right class of test on the wrong compartment."
     }
    ]
@@ -994,26 +958,26 @@
   {
    "op": "replace",
    "brief": "bs-pid",
-   "find": "Contraception is appropriate care but is prevention, not treatment of an established infection.",
-   "with": "Contraception: appropriate care, but it is prevention, not treatment of an established infection.",
-   "note": "trap line: Option: why",
+   "find": "<span class=\"trapwhy\">Contraception is appropriate care but is prevention, not treatment of an established infection.</span>",
+   "with": "<span class=\"trapwhy\">Contraception: appropriate care, but prevention rather than treatment of an established infection.</span>",
+   "note": "Trap 3: Option: why form",
    "claims": [
     {
      "claim": "Contraception is appropriate care.",
-     "to": "Contraception: appropriate care, but it is prevention, not treatment of an established infection."
+     "to": "Contraception: appropriate care, but prevention rather than treatment of an established infection."
     },
     {
      "claim": "Contraception is prevention, not treatment of an established infection.",
-     "to": "Contraception: appropriate care, but it is prevention, not treatment of an established infection."
+     "to": "Contraception: appropriate care, but prevention rather than treatment of an established infection."
     }
    ],
    "new_claims": [
     {
-     "claim": "Contraception is appropriate care.",
+     "claim": "Contraception: appropriate care, but prevention rather than treatment of an established infection.",
      "from": "Contraception is appropriate care."
     },
     {
-     "claim": "Contraception is prevention, not treatment of an established infection.",
+     "claim": "Contraception: appropriate care, but prevention rather than treatment of an established infection.",
      "from": "Contraception is prevention, not treatment of an established infection."
     }
    ]

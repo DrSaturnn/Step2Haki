@@ -14,7 +14,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Hypotonia in an Infant covers the methylation workup for Prader-Willi syndrome in a floppy infant.",
+     "claim": "Part I Hypotonia in an Infant covers the methylation workup for Prader-Willi syndrome in a floppy infant.",
      "from": "Hypotonia in an Infant owns the methylation workup for Prader-Willi syndrome in a floppy infant."
     }
    ]
@@ -60,11 +60,11 @@
    ],
    "new_claims": [
     {
-     "claim": "A paternal deletion of the same region causes Prader-Willi syndrome.",
+     "claim": "Chromosome 15 deletion, paternally inherited: deletion of the same region from the paternal chromosome causes Prader-Willi syndrome, with hypotonic infancy, then hyperphagia, obesity and hypogonadism.",
      "from": "A paternally inherited chromosome 15 deletion involves the same region from the other parent."
     },
     {
-     "claim": "Prader-Willi syndrome has hypotonic infancy, then hyperphagia, obesity and hypogonadism.",
+     "claim": "Chromosome 15 deletion, paternally inherited: deletion of the same region from the paternal chromosome causes Prader-Willi syndrome, with hypotonic infancy, then hyperphagia, obesity and hypogonadism.",
      "from": "Prader-Willi syndrome has hypotonic infancy, then hyperphagia, obesity and hypogonadism."
     }
    ]
@@ -83,7 +83,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Mutation of MECP2 causes Rett syndrome, which also affects girls with microcephaly, seizures and repetitive hand movements.",
+     "claim": "Mutation of MECP2 (methyl-CpG binding protein 2): Rett syndrome also affects girls with microcephaly, seizures and repetitive hand movements.",
      "from": "Mutation of MECP2 causes Rett syndrome, which also affects girls with microcephaly, seizures and repetitive hand movements."
     },
     {
@@ -217,7 +217,7 @@
      "from": "Posterior fossa tumours are 54 to 70% of childhood brain tumours."
     },
     {
-     "claim": "In a child, ataxia with raised pressure is infratentorial until imaged.",
+     "claim": "In a child, ataxia with raised pressure is therefore infratentorial until imaged.",
      "from": "In a child, ataxia with raised pressure is infratentorial until imaged."
     }
    ]
@@ -252,7 +252,7 @@
      "from": "Sellar and Suprasellar Masses is the anterior compartment of the same question."
     },
     {
-     "claim": "Ask which region the endocrine or visual sign points to.",
+     "claim": "Ask: which region does the endocrine or visual sign point to?",
      "from": "Its question is which region the endocrine or visual sign names."
     },
     {
@@ -260,7 +260,7 @@
      "from": "Headache in a School-Age Child owns the workup before localization."
     },
     {
-     "claim": "Ask whether the headache is primary or secondary, and whether the fundi show raised pressure.",
+     "claim": "Ask: is the headache primary or secondary, and do the fundi show raised pressure?",
      "from": "Its question is whether the headache is primary or secondary, and whether the fundi show raised pressure."
     }
    ]
@@ -300,7 +300,7 @@
    "op": "replace",
    "brief": "aq-child-headache",
    "find": "<p>Headache is a symptom, not a diagnosis. Ask first whether it is <b>primary</b> (migraine, tension-type headache) or <b>secondary</b>, and if secondary, what caused it: a <b>mass</b> (posterior fossa or supratentorial tumor), <b>pressure without a mass</b> (idiopathic intracranial hypertension), blocked <b>CSF flow</b> (hydrocephalus), <b>infection</b> (meningitis, abscess) or <b>bleeding</b>. Primary headaches come and go; secondary headaches progress. Check the vital signs for Cushing triad and fever first. Then the pattern over time, the fundi and the neurologic exam sort the branches; MRI finds the lesion, and tissue, CSF or the typical story confirms it.</p>",
-   "with": "<p>Ask first whether a headache is <b>primary</b> (migraine, tension-type headache) or <b>secondary</b>. Causes of a secondary headache include a <b>mass</b> (posterior fossa or supratentorial tumor) and <b>pressure without a mass</b> (idiopathic intracranial hypertension). The others are blocked <b>CSF flow</b> (cerebrospinal fluid; hydrocephalus), <b>infection</b> (meningitis, abscess) and <b>bleeding</b>. Primary headaches come and go; secondary headaches progress. Check the vital signs for Cushing triad and fever first. Then use the pattern over time, the fundi and the neurologic exam to sort the causes. <b>MRI</b> (magnetic resonance imaging) finds the lesion. Tissue, CSF or the typical story confirms the diagnosis.</p>",
+   "with": "<p>Ask first whether a headache is <b>primary</b> (migraine, tension-type headache) or <b>secondary</b>. Causes of a secondary headache include a <b>mass</b> (posterior fossa or supratentorial tumor) and <b>pressure without a mass</b> (idiopathic intracranial hypertension). The others are blocked <b>CSF flow</b> (cerebrospinal fluid flow, as in hydrocephalus), <b>infection</b> (meningitis, abscess) and <b>bleeding</b>. Primary headaches come and go; secondary headaches progress. Check the vital signs for Cushing triad and fever first. Then use the pattern over time, the fundi and the neurologic exam to sort the causes. <b>MRI</b> (magnetic resonance imaging) finds the lesion. Tissue, CSF or the typical story confirms the diagnosis.</p>",
    "note": ".dp: drop slogan opener, split long sentences, expand acronyms",
    "claims": [
     {
@@ -317,7 +317,7 @@
     },
     {
      "claim": "If secondary, the cause can also be blocked CSF flow (hydrocephalus), infection (meningitis, abscess) or bleeding.",
-     "to": "The others are blocked CSF flow (cerebrospinal fluid; hydrocephalus), infection (meningitis, abscess) and bleeding."
+     "to": "The others are blocked CSF flow (cerebrospinal fluid flow, as in hydrocephalus), infection (meningitis, abscess) and bleeding."
     },
     {
      "claim": "Primary headaches come and go; secondary headaches progress.",
@@ -350,7 +350,7 @@
      "from": "If secondary, the cause is a mass (posterior fossa or supratentorial tumor) or pressure without a mass (idiopathic intracranial hypertension)."
     },
     {
-     "claim": "The other secondary causes are blocked CSF flow (hydrocephalus), infection (meningitis, abscess) and bleeding.",
+     "claim": "The others are blocked CSF flow (cerebrospinal fluid flow, as in hydrocephalus), infection (meningitis, abscess) and bleeding.",
      "from": "If secondary, the cause can also be blocked CSF flow (hydrocephalus), infection (meningitis, abscess) or bleeding."
     },
     {
@@ -429,7 +429,7 @@
      "from": "Posterior Fossa Localization owns the side-and-structure question and the tap-before-imaging trap."
     },
     {
-     "claim": "Ask which side, and which part of the cerebellum.",
+     "claim": "Ask: which side, and which part of the cerebellum?",
      "from": "Its question is which side, and which part of the cerebellum."
     },
     {
@@ -441,7 +441,7 @@
      "from": "Sellar and Suprasellar Masses owns the supratentorial midline mass."
     },
     {
-     "claim": "Ask whether growth or vision is failing.",
+     "claim": "Ask: is growth or vision failing?",
      "from": "Its question is whether growth or vision is failing."
     },
     {
@@ -511,7 +511,7 @@
    ],
    "new_claims": [
     {
-     "claim": "Medulloblastoma seeds the CSF, so staging requires neuraxis MRI and CSF cytology.",
+     "claim": "Medulloblastoma seeds the CSF (cerebrospinal fluid), so staging requires neuraxis MRI and CSF cytology",
      "from": "Medulloblastoma seeds the CSF, so staging requires neuraxis MRI and CSF cytology."
     },
     {
