@@ -1,0 +1,97 @@
+{
+ "edits": [
+  {
+   "op": "new_brief",
+   "after": "bs-isolated-proteinuria",
+   "html": "<div class=\"brief bs\" id=\"bs-distal-rta\" data-shelf=\"peds\" data-bp=\"renal\">\n<h4>Hypokalemia with Acidosis in a Child</h4>\n<p class=\"sub\">Toddler with poor growth, low potassium and a normal-gap acidosis &middot; Is the urine pH above 5.5 during the acidosis?</p>\n<div class=\"vignette\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 18 mo M with poor linear growth; no vomiting or diarrhea; BP 90/60 &middot; <b>Labs</b> &mdash; Na 138, Cl 112, K 3.1, bicarbonate 16 mEq/L; urine pH 7.6; arterial pH 7.28 and Pco2 26 mm Hg, with normal oxygenation on room air &middot; <b>Q</b> &mdash; the most likely cause of the hypokalemia; options spanned Addison disease, congenital adrenal hyperplasia, hyperparathyroidism, juxtaglomerular cell hyperplasia, pheochromocytoma, primary hyperaldosteronism, pseudohypoaldosteronism, renal artery stenosis and renal tubular acidosis</div>\n<div class=\"dp\"><span class=\"lbl\">The decision point</span>\n<p>Low potassium with a metabolic acidosis narrows the cause to diarrhea or <b>RTA</b> (renal tubular acidosis). The anion gap is 138 minus (112 plus 16), or 10, so the acidosis is <b>normal gap</b> (hyperchloremic). With no diarrhea, the loss is renal. A <b>urine pH above 5.5</b> during systemic acidosis means the distal tubule cannot secrete acid. That is <b>distal (type 1) RTA</b>, which wastes potassium and slows growth in young children.</p>\n<p>Low potassium with <b>alkalosis</b> is a different group, sorted by blood pressure. High blood pressure points to aldosterone or renin excess. Normal blood pressure points to vomiting, diuretics, or Bartter or Gitelman syndrome. High potassium with a normal-gap acidosis points to low aldosterone effect instead.</p>\n</div>\n<div class=\"crit\"><span class=\"lbl\">Defining criteria</span> <b>Normal anion gap</b> &mdash; sodium minus (chloride plus bicarbonate) of about 8 to 12 mEq/L; here it is 10 &middot; <b>Distal renal tubular acidosis</b> &mdash; normal-gap acidosis with urine pH above 5.5, usually with low potassium &middot; <b>Proximal renal tubular acidosis</b> &mdash; normal-gap acidosis with urine pH below 5.5 once bicarbonate has fallen, often with glucose, phosphate and amino acids in the urine &middot; <b>Type 4 renal tubular acidosis</b> &mdash; normal-gap acidosis with high potassium from low aldosterone effect</div>\n<table data-mask=\"3\">\n<caption>Low potassium: sorted by potassium, acid-base and blood pressure<span class=\"cap-sub\">each of the nine NBME options sits in one row</span></caption>\n<thead><tr><th>Pattern</th><th>Causes</th><th>What separates them</th><th>Why less likely here</th></tr></thead>\n<tbody>\n<tr><td><b>Low potassium, normal-gap acidosis, normal blood pressure</b></td><td><b>Distal (type 1) renal tubular acidosis</b>; proximal (type 2) renal tubular acidosis; diarrhea</td><td>Urine pH <b>above 5.5</b> during acidosis is distal; proximal acidifies the urine once bicarbonate is low and often wastes glucose and phosphate; diarrhea shows in the history and gives a negative urine anion gap</td><td>The answer: no diarrhea, and urine pH 7.6 during acidosis</td></tr>\n<tr><td>Low potassium, alkalosis, normal blood pressure</td><td>Bartter syndrome (<b>juxtaglomerular cell hyperplasia</b>); Gitelman syndrome; vomiting; diuretics</td><td><b>High bicarbonate</b>; Bartter raises urine calcium, Gitelman lowers it; vomiting and diuretics come from the history</td><td>Bicarbonate 16: this child is acidotic</td></tr>\n<tr><td>Low potassium, alkalosis, high blood pressure</td><td><b>Primary hyperaldosteronism</b> (renin low); <b>renal artery stenosis</b> (renin high); 11-beta-hydroxylase congenital adrenal hyperplasia</td><td><b>Hypertension</b> with alkalosis; renin separates primary aldosterone excess from renin-driven excess</td><td>Blood pressure 90/60 and an acidosis</td></tr>\n<tr><td>High potassium, acidosis, low or normal blood pressure</td><td><b>Addison disease</b>; salt-wasting (21-hydroxylase) <b>congenital adrenal hyperplasia</b>; <b>type 1 pseudohypoaldosteronism</b>; type 4 renal tubular acidosis</td><td><b>High potassium</b>, often with low sodium; aldosterone is low in Addison disease and 21-hydroxylase deficiency, high in type 1 pseudohypoaldosteronism</td><td>Potassium 3.1 and sodium 138</td></tr>\n<tr><td>Episodic high blood pressure</td><td><b>Pheochromocytoma</b></td><td><b>Paroxysms</b> of headache, sweating and palpitations with hypertension; raised metanephrines</td><td>Normal blood pressure and no episodes</td></tr>\n<tr><td>High calcium, sometimes a mild normal-gap acidosis</td><td><b>Hyperparathyroidism</b></td><td><b>High calcium</b> with a high parathyroid hormone level</td><td>No calcium given, and it does not explain low potassium</td></tr>\n</tbody>\n</table>\n<h5 class=\"authored-hdr\">Scenario bank</h5>\n<ol class=\"bank authored\">\n</ol>\n<div class=\"danger\"><span class=\"lbl\">Management, in one line</span> Treat distal renal tubular acidosis with oral alkali, citrate or bicarbonate, and add potassium when it stays low. Untreated acidosis slows growth in children.</div>\n<div class=\"pearls\"><span class=\"lbl\">Pearls</span> Distal renal tubular acidosis raises urine calcium and lowers urine citrate, so nephrocalcinosis and kidney stones can follow; serum calcium stays normal &middot; The urine anion gap (urine sodium plus potassium minus chloride) is positive in distal renal tubular acidosis and negative in diarrhea &middot; Winter's formula predicts a Pco2 of 1.5 times 16 plus 8, or 32, plus or minus 2 &middot; The measured 26 is below that range, which suggests an added respiratory alkalosis &middot; Juxtaglomerular cell hyperplasia is the kidney lesion of Bartter syndrome, which gives low potassium with alkalosis and a normal blood pressure</div>\n<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The lead-in asked for the cause of the hypokalemia, a secondary finding, although the acid-base values decided the answer. The nine options formed a grid of potassium, acid-base status and blood pressure, and only one option fit this child.</div>\n<div class=\"pearls\"><span class=\"lbl\">Pairs with</span> Part II <b>Faltering Weight</b> covers the first step, electrolytes with a venous blood gas when length is also low; this brief covers reading that panel. Part I <b>Secondary Hypertension</b> covers low potassium with alkalosis and hypertension, where renin separates primary hyperaldosteronism from renal artery stenosis. Part I <b>Polyuria: Water or Solute</b> covers the dilute urine that severe hypokalemia can cause. Part I <b>Hypercalcemia Workup</b> covers hyperparathyroidism; distal renal tubular acidosis raises urine calcium, not serum calcium. Ask: is the child acidotic or alkalotic, and is the blood pressure high?</div>\n<div class=\"rule\"><span class=\"lbl\">Transferable rule</span> Sort low potassium by acid-base status first, then by blood pressure. Low potassium with a normal-gap acidosis and no diarrhea is renal tubular acidosis, and a urine pH above 5.5 makes it distal.</div>\n<div class=\"traps\"><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Addison disease: it causes acidosis with a low-normal blood pressure; potassium would be high and sodium low.</span></div><div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Congenital adrenal hyperplasia: an adrenal disorder that affects growth; the salt-wasting form raises potassium, and the hypertensive forms cause alkalosis with high blood pressure.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Hyperparathyroidism: excess parathyroid hormone can cause a mild normal-gap acidosis; its hallmark is high calcium, and it does not explain low potassium.</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Juxtaglomerular cell hyperplasia: this is Bartter syndrome, the closest mimic, with low potassium, normal blood pressure and poor growth in a young child; Bartter syndrome causes alkalosis, and this child is acidotic.</span></div><div class=\"trapline\"><span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">Pheochromocytoma: an adrenal tumor on a list of hormonal causes; it causes episodic hypertension with headache and sweating, and this child is normotensive.</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Primary hyperaldosteronism: the textbook cause of low potassium; it brings hypertension and alkalosis, and both are absent.</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Pseudohypoaldosteronism: it causes a normal-gap acidosis and poor growth in infants; potassium is high in every form.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Renal artery stenosis: renin excess does cause low potassium; it brings hypertension and alkalosis, and both are absent.</span></div></div>\n</div>",
+   "nav": {
+    "after_link": "bs-isolated-proteinuria",
+    "title": "Hypokalemia with Acidosis"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-distal-rta",
+   "type": "dx",
+   "stem": "18 mo M with poor linear growth and no vomiting or diarrhea; BP 90/60; Na 138, Cl 112, K 3.1, HCO3 16 mEq/L; urine pH 7.6; arterial pH 7.28, Pco2 26 mm Hg",
+   "answer": "Renal tubular acidosis",
+   "companion": "normal-gap acidosis with urine pH above 5.5 is distal (type 1) renal tubular acidosis",
+   "d1": "Juxtaglomerular cell hyperplasia",
+   "d2": "Pseudohypoaldosteronism",
+   "lead_in": "Which of the following is the most likely cause of this patient's hypokalemia?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-distal-rta",
+   "type": "dx",
+   "stem": "2 yo F with poor weight gain and polyuria; no vomiting and no diuretic use; BP 88/54; Na 135, Cl 92, K 2.8, HCO3 32 mEq/L; high urine calcium",
+   "answer": "Bartter syndrome",
+   "companion": "low potassium with alkalosis, normal blood pressure and high urine calcium",
+   "d1": "Gitelman syndrome",
+   "d2": "Distal renal tubular acidosis",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-distal-rta",
+   "type": "dx",
+   "stem": "3 yo M with poor growth and bowed legs; no diarrhea; BP 92/58; Na 138, Cl 113, K 3.2, HCO3 15 mEq/L; normal serum glucose with glucose and phosphate in the urine; urine pH 5.0",
+   "answer": "Proximal (type 2) renal tubular acidosis",
+   "companion": "Fanconi syndrome: the urine acidifies once bicarbonate is low, and glucose and phosphate are wasted",
+   "d1": "Distal (type 1) renal tubular acidosis",
+   "d2": "Nutritional vitamin D deficiency rickets",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-distal-rta",
+   "type": "test",
+   "stem": "20 mo F with length below the 3rd percentile; no vomiting or diarrhea; BP 88/56; Na 139, Cl 113, K 3.0, HCO3 15 mEq/L",
+   "answer": "Urine pH during the acidosis",
+   "companion": "above 5.5 with a normal-gap acidosis indicates distal renal tubular acidosis",
+   "d1": "Plasma renin activity and aldosterone",
+   "d2": "Serum calcium and parathyroid hormone",
+   "lead_in": "Which of the following studies is most likely to identify the cause of the acidosis?",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-distal-rta",
+   "type": "next",
+   "stem": "2 yo M with distal renal tubular acidosis; urine pH 7.0 with HCO3 15 mEq/L and K 3.0 mEq/L; weight and length below the 3rd percentile; nephrocalcinosis on renal ultrasound",
+   "answer": "Oral alkali therapy with citrate or bicarbonate",
+   "companion": "correcting the acidosis lets growth recover and lowers urine calcium",
+   "d1": "Oral potassium chloride supplements alone",
+   "d2": "Oral hydrochlorothiazide with a low-salt diet",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-distal-rta",
+   "type": "mech",
+   "stem": "4 yo F with poor growth and nephrocalcinosis on ultrasound; no diarrhea; normal-gap metabolic acidosis with K 3.0 mEq/L; urine pH 6.8",
+   "answer": "Impaired hydrogen ion secretion in the distal nephron",
+   "companion": "distal (type 1) renal tubular acidosis",
+   "d1": "Impaired bicarbonate reabsorption in the proximal tubule",
+   "d2": "Reduced aldosterone effect on the collecting duct",
+   "lead_in": "Which of the following is the most likely mechanism of this acidosis?",
+   "src": "authored"
+  },
+  {
+   "op": "insert_after",
+   "brief": "bs-ftt",
+   "anchor": "not calorie intake, is the key finding.",
+   "html": " Part II <b>Hypokalemia with Acidosis in a Child</b> covers reading the electrolytes and gas: a normal-gap acidosis with low potassium and urine pH above 5.5 is distal renal tubular acidosis."
+  },
+  {
+   "op": "insert_after",
+   "brief": "secondary-htn",
+   "anchor": "the inflammatory cause of renal artery stenosis in a young patient.",
+   "html": " Part II <b>Hypokalemia with Acidosis in a Child</b> covers low potassium without hypertension, sorted by acid-base status."
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "edits": [
+  {
+   "op": "insert_after",
+   "brief": "precocious-puberty",
+   "anchor": "<td>Adrenal source such as congenital adrenal hyperplasia</td></tr>",
+   "html": "\n<tr><td><b>DHEAS</b> (dehydroepiandrosterone sulfate) with testosterone</td><td>By branch</td><td><b>Markedly high DHEAS</b> with virilization, normal testosterone</td><td>Adrenal androgen source: an adrenal tumor until proven otherwise; a high testosterone with normal DHEAS points to the ovary</td></tr>\n<tr><td>Pelvic ultrasound</td><td>By branch</td><td><b>Adnexal mass</b> with high testosterone</td><td>Androgen-secreting ovarian tumor; normal ovaries with high DHEAS point to the adrenal</td></tr>",
+   "note": "DHEAS versus testosterone localizes the androgen source (NBME Q1)"
+  },
+  {
+   "op": "insert_before",
+   "brief": "precocious-puberty",
+   "anchor": "<div class=\"danger\"><span class=\"lbl\">Management, in one line</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">Virilization in a girl: which source?</span> <b>Clitoral enlargement</b> &mdash; virilization, which normal adrenarche never causes; at age 10, pubic hair alone would be ordinary &middot; <b>Adrenal marker</b> &mdash; <b>DHEAS</b> (dehydroepiandrosterone sulfate) comes almost only from the zona reticularis, the innermost layer of the adrenal cortex; urine 17-ketosteroids rise with it &middot; <b>Ovarian marker</b> &mdash; testosterone in a girl comes mostly from the ovary &middot; <b>High DHEAS, normal testosterone, normal pelvic ultrasound</b> &mdash; adrenal source &middot; <b>High testosterone with an adnexal mass</b> &mdash; androgen-secreting ovarian tumor, such as a Sertoli-Leydig cell tumor &middot; <b>DHEAS far above range in a child</b> &mdash; an adrenal tumor until proven otherwise; many pediatric virilizing adrenal tumors are carcinomas, and histology, not labs, separates adenoma from carcinoma &middot; <b>Nonclassic congenital adrenal hyperplasia</b> &mdash; the commoner adrenal cause, marked by a high 17-hydroxyprogesterone</div>\n",
+   "note": "new angle: localizing an androgen source in a virilized girl"
+  },
+  {
+   "op": "insert_before",
+   "brief": "precocious-puberty",
+   "anchor": "<div class=\"pearls\"><span class=\"lbl\">Pairs with</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The lead-in asks only for a diagnosis, and the decider sits in one sentence of labs with reference ranges: <b>DHEAS</b> (dehydroepiandrosterone sulfate) is high while testosterone is normal. Three options are adenomas at the adrenal, ovary and pituitary, making it a location question; androgen insensitivity and polycystic ovarian syndrome fill the list.</div>\n",
+   "note": "NBME framing for Q1"
+  },
+  {
+   "op": "insert_after",
+   "brief": "precocious-puberty",
+   "anchor": "not large truncal patches, and there is no precocious puberty</span></div>",
+   "html": "<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Androgen insensitivity syndrome: tempts as an androgen disorder in a genital-examination stem; it is a <b>receptor defect</b> in a 46,XY child with <b>no androgen effect</b>, so it cannot cause clitoromegaly or hirsutism</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Ovarian adenoma: tempts as a virilizing tumor in a girl; an androgen-secreting ovarian tumor raises testosterone, and here <b>testosterone is normal</b> and the <b>pelvic ultrasound shows no mass</b></span></div><div class=\"trapline\"><span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">Pituitary adenoma: tempts as the third adenoma and a pituitary cause of precocity; there is <b>no headache or visual field loss</b>, and pituitary adenomas rarely virilize</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Polycystic ovarian syndrome: tempts with hirsutism and acne; <b>testosterone and ovaries are normal</b>, weight is at the 50th percentile, and it does not cause <b>clitoromegaly</b></span></div>",
+   "note": "one trapline per NBME Q1 distractor"
+  },
+  {
+   "op": "add_item",
+   "brief": "precocious-puberty",
+   "type": "dx",
+   "stem": "10 yo girl with 6 months of facial hair and acne, clitoral enlargement, early male-pattern pubic hair, growth at the 50th percentile, high dehydroepiandrosterone sulfate and urine 17-ketosteroids, normal testosterone and a normal pelvic ultrasound",
+   "answer": "Adrenal adenoma",
+   "companion": "A high adrenal androgen with normal testosterone and normal ovaries localizes the source to the adrenal",
+   "d1": "Ovarian adenoma",
+   "d2": "Polycystic ovarian syndrome",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "precocious-puberty",
+   "type": "next",
+   "stem": "6 yo girl with 4 months of pubic hair, acne and clitoral enlargement, no breast development, normal 17-hydroxyprogesterone, markedly high dehydroepiandrosterone sulfate and normal testosterone",
+   "answer": "Computed tomography of the adrenal glands",
+   "companion": "Suspected virilizing adrenal tumor",
+   "d1": "Magnetic resonance imaging of the brain",
+   "d2": "Measure basal LH",
+   "src": "authored"
+  }
+ ]
+}

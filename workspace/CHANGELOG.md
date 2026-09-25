@@ -2,6 +2,37 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-09-25 s35: NBME Peds batch: 12 questions; 3 new briefs (infant vaccines, distal RTA, eyelid lumps), 7 backfills, distractor-design lines, wording guide
+
+```
+Page: 207 briefs, 2019 items -> 210 briefs, 2050 items
+Briefs added (3):
+  - bs-distal-rta: Hypokalemia with Acidosis in a Child (6 items)
+  - bs-eyelid-lump: Eyelid Lumps and Swelling in a Child (6 items)
+  - bs-infant-vax: Vaccines at the Infant Visits (4 items)
+Briefs changed (14):
+  - scfe (Slipped Capital Femoral Epiphysis): 2 items added (q_9777dcb58c677902b75f, q_7b247bb620b6c48be44d); prose edited (+2099 chars)
+  - bs-ftt (Faltering Weight): prose edited (+191 chars)
+  - secondary-htn (Secondary Hypertension): prose edited (+123 chars)
+  - ped-murmur (Innocent vs Pathologic Murmurs): attrs set (q_fb94648142ed51749518 data-nbme); prose edited (+377 chars)
+  - asthma-copd (Asthma vs. COPD): 2 items added (q_ef221864398f38009057, q_62afba1e07c95c8bb96f); prose edited (+1893 chars)
+  - mycoplasma (Pediatric Community-Acquired Pneumonia): 2 items added (q_3f80feff189643e5acb8, q_796b44ec19796e951653); prose edited (+1824 chars)
+  - bs-puv (Posterior Urethral Valves and Potter Sequence): 3 items added (q_5754bf5b284e1769cd62, q_1381ab09fca86d44a63e, q_6136bdea9d7844504d8c); prose edited (+2837 chars)
+  - bs-abdominal-mass (Abdominal Mass in a Young Child): 2 items added (q_bfc284022b65919965b9, q_42896c8b4bbc936c7b15); prose edited (+2679 chars)
+  - precocious-puberty (Precocious Puberty): 2 items added (q_a2533eb69947cf65b1ad, q_4ff187b2c8440f379d9a); prose edited (+3234 chars)
+  - cgd (Recurrent Abscesses and Granulomas): attrs set (q_1f7b49f7314459b8b98f data-nbme); prose edited (+331 chars)
+  - bs-exanthems (Exanthems in a Child): 2 items added (q_23d551c586e63e046a7a, q_6e288e9ba1a8a754195a); prose edited (+2907 chars)
+  - redeye (The Red Eye): prose edited (+244 chars)
+  - abrs-complications (Sinusitis with Intracranial Extension): prose edited (+249 chars)
+  - bs-adolescent-vax (Adolescent Immunization and the Age Platform): prose edited (+102 chars)
+Other page changes (nav, headers, scripts): +4263 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 210 briefs, 2050 items, 4 scripts, 31 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 210 | bankwraps 210 | mcq 2050 (axCheck 2050, reveal-only 0) | malformed 0 | crit gridded 125/126 | vignette gridded 132/132 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (50361 source shingles; page 0.031%)
+```
+
 ## 2026-09-25 s34: NBME Peds batch: FAS, rickets alkaline phosphatase, ITP mechanism; factor-inhibitor cleanup
 
 ```

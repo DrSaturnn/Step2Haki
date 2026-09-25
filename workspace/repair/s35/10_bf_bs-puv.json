@@ -1,0 +1,75 @@
+{
+ "edits": [
+  {
+   "op": "insert_before",
+   "brief": "bs-puv",
+   "anchor": "<div class=\"tw\">",
+   "html": "<table><caption>Prenatal hydronephrosis: the differential by level</caption>\n<thead><tr><th>Diagnosis</th><th>Dilated segments</th><th>Bladder</th><th>The tell</th></tr></thead>\n<tbody>\n<tr><td><b>Posterior urethral valves</b></td><td>Renal pelvis and <b>both ureters</b></td><td><b>Thick-walled</b>, trabeculated</td><td>Boy with a <b>weak, dribbling stream</b></td></tr>\n<tr><td>Neurogenic bladder</td><td>Renal pelvis and both ureters</td><td>Thick-walled, trabeculated</td><td><b>Spinal dysraphism</b> or an abnormal lower-limb neurologic exam</td></tr>\n<tr><td>Vesicoureteral reflux</td><td>Renal pelvis and ureter, one or both sides</td><td>Normal wall</td><td><b>Normal stream</b>; the voiding cystourethrogram shows reflux into the ureters</td></tr>\n<tr><td>Duplicated renal collecting system</td><td>Usually one side, in one of the two moieties</td><td>Normal wall</td><td><b>Two ureters</b> draining one kidney</td></tr>\n<tr><td>Ureteropelvic junction obstruction</td><td><b>Renal pelvis only</b></td><td>Normal</td><td>No hydroureter; the most common obstructive cause of prenatal hydronephrosis</td></tr>\n</tbody>\n</table>\n",
+   "note": "Q2: prenatal hydronephrosis sorted by level (sort.md teaching point 1)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "<b>Dilated posterior urethra</b>, trabeculated bladder",
+   "with": "<b>Dilated, elongated posterior urethra</b>, trabeculated bladder",
+   "note": "Q2 explanation: VCUG shows dilation and elongation"
+  },
+  {
+   "op": "insert_before",
+   "brief": "bs-puv",
+   "anchor": "<div class=\"pearls\"><span class=\"lbl\">Pairs with</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The stem split the level of obstruction across three findings (prenatal image, voiding exam, postnatal image), and normal urine output drew attention away from obstruction. Every option was a congenital urinary tract cause of hydronephrosis, separated only by the level of the lesion.</div>\n",
+   "note": "Q2: framing block"
+  },
+  {
+   "op": "insert_after",
+   "brief": "bs-puv",
+   "anchor": "covers the solid flank mass after infancy.",
+   "html": " Part II <b>Tethered Cord and Closed Spinal Dysraphism</b> covers the neurogenic bladder that mimics valves: is the spine or lower-limb neurologic exam abnormal?",
+   "note": "Q2: neurogenic bladder mimic lives in bs-tethered"
+  },
+  {
+   "op": "insert_after",
+   "brief": "bs-puv",
+   "anchor": "cannot explain a mass or clubfeet.</span></div>",
+   "html": "\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Duplicated renal collecting system: it can cause prenatal hydronephrosis with a dilated ureter; it usually involves one kidney and does not thicken the bladder wall or weaken the stream.</span></div><div class=\"trapline\"><span class=\"pill p-mirror\">Mirror twin</span><span class=\"trapwhy\">Neurogenic bladder: it shares the thick-walled bladder, bilateral hydroureteronephrosis and dribbling; a normal spine and normal neurologic exam leave the urethral outlet as the lesion.</span></div><div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Ureteropelvic junction obstruction: it is the most common obstructive cause of prenatal hydronephrosis; it dilates the renal pelvis only, so dilated ureters and a thick bladder wall exclude it.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Vesicoureteral reflux: it also causes bilateral hydroureteronephrosis; primary reflux leaves the bladder wall and stream normal, and reflux in a boy with valves is secondary to them.</span></div>",
+   "note": "Q2: one trapline per NBME distractor"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-puv",
+   "type": "dx",
+   "stem": "2 do M, hydronephrosis first seen on prenatal ultrasound at 28 weeks, feeding well, normal vital signs, normal urine output but a weak stream that dribbles; ultrasound shows bilateral hydronephrosis and hydroureter with a thick-walled bladder",
+   "answer": "Posterior urethral valves",
+   "companion": "voiding cystourethrogram confirms; endoscopic valve ablation treats",
+   "d1": "Neurogenic bladder",
+   "d2": "Ureteropelvic junction obstruction",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-puv",
+   "type": "dx",
+   "stem": "8 mo M with a repaired lumbosacral myelomeningocele, constant dribbling of urine and recurrent urinary tract infections; ultrasound shows a thick-walled, trabeculated bladder with bilateral hydroureteronephrosis",
+   "answer": "Neurogenic bladder",
+   "companion": "clean intermittent catheterization",
+   "d1": "Posterior urethral valves",
+   "d2": "Vesicoureteral reflux",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-puv",
+   "type": "dx",
+   "stem": "3 wk old M with left hydronephrosis first seen on prenatal ultrasound; ultrasound now shows a dilated left renal pelvis and calyces, a single normal-caliber left ureter, a normal bladder and a strong stream",
+   "answer": "Ureteropelvic junction obstruction",
+   "companion": "the ureter and bladder are spared",
+   "d1": "Duplicated renal collecting system",
+   "d2": "Vesicoureteral reflux",
+   "src": "authored"
+  }
+ ]
+}

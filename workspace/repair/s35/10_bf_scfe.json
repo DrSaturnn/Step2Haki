@@ -1,0 +1,44 @@
+{
+ "edits": [
+  {
+   "op": "insert_before",
+   "brief": "scfe",
+   "anchor": "<div class=\"pearls\"><span class=\"lbl\">Pairs with</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">Management</span> Groin pain, lost internal rotation and a <b>widened, irregular physis</b> mean <b>SCFE</b> (slipped capital femoral epiphysis), even before the epiphysis visibly displaces. Treatment is <b>in situ screw fixation across the physis</b>, with the child non-weight-bearing until surgery. Bracing, casting, traction and physical therapy do not stop the slip. When the slip may be unstable, a cross-table lateral view avoids forcing the hip into the frog-leg position.</div>\n<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The lead-in granted analgesia and weight-loss counseling, and the stem showed only a widened, irregular physis, never naming a slip. The options were a treatment-of-a-mimic menu: bracing and casting treat developmental dysplasia of the hip, traction treats a fracture, and physical therapy treats a strain.</div>\n",
+   "note": "Q6: management of SCFE (pre-slip, in situ fixation, what does not work) and NBME framing"
+  },
+  {
+   "op": "insert_after",
+   "brief": "scfe",
+   "anchor": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "html": "<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Physical therapy: tempting for weeks of hip pain and stiffness in an overweight teenager (limited motion without fever); it treats a strain after an injury, and there was no injury here.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Abduction bracing: tempting as a real hip treatment (limited abduction); it treats developmental dysplasia of the hip in infants, and this is a 13-year-old with a widened physis.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Traction: tempting as a reflex for a painful hip and a limp (a groin injury picture); it restores length after a displaced fracture, and there was no trauma or fracture.</span></div><div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Spica cast immobilization: tempting as another way to hold the hip still (it was once used for this slip); it holds an infant hip reduced for developmental dysplasia, and casting a slip was abandoned because of chondrolysis.</span></div>",
+   "note": "Q6: one trapline per NBME distractor"
+  },
+  {
+   "op": "add_item",
+   "brief": "scfe",
+   "type": "next",
+   "stem": "13-year-old boy above the 97th percentile for BMI with 4 weeks of intermittent left groin pain and a limp, no fever; left hip internal rotation and abduction are limited, and the hip externally rotates on passive flexion; AP and cross-table lateral films show an irregular, widened left femoral physis with mild osteopenia of the femoral head and neck",
+   "answer": "Internal fixation",
+   "companion": "pinning in situ across the physis stops further slipping",
+   "d1": "Spica cast immobilization",
+   "d2": "Physical therapy",
+   "lead_in": "In addition to analgesia and weight-loss counseling, which of the following is the most appropriate next step in management?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "scfe",
+   "type": "avoid",
+   "stem": "12-year-old girl with 3 weeks of thigh pain who now cannot bear weight on the right leg after a minor fall; radiographs show the right femoral epiphysis displaced off the neck",
+   "answer": "Forceful closed reduction of the slip",
+   "companion": "forcing the epiphysis back raises the risk of avascular necrosis; pin it where it lies",
+   "d1": "Urgent in situ screw fixation",
+   "d2": "Radiographs of the opposite hip",
+   "src": "authored"
+  }
+ ]
+}

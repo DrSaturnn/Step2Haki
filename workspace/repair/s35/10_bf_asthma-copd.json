@@ -1,0 +1,21 @@
+{"edits": [
+{"op": "insert_before", "brief": "asthma-copd", "anchor": "<div class=\"tw\">",
+ "html": "<div class=\"pearls\"><span class=\"lbl\">Emphysema in a teenager</span> <b>Barrel chest and severe hyperinflation at 16</b> &mdash; early emphysema in a heavy smoker; emphysema this young suggests alpha-1 antitrypsin deficiency &middot; <b>Mechanism</b> &mdash; too little alpha-1 antitrypsin leaves neutrophil elastase unopposed; emphysema is panlobular and worst at the bases &middot; <b>Liver</b> &mdash; misfolded protein retained in hepatocytes causes neonatal cholestasis and later cirrhosis &middot; <b>Clubbing</b> &mdash; not a feature of <b>COPD</b> (chronic obstructive pulmonary disease) or alpha-1 antitrypsin deficiency; in a child it points to cystic fibrosis or bronchiectasis</div>\n",
+ "note": "Q10 teaching points: emphysema in an adolescent, mechanism, liver, clubbing as a misfit"},
+{"op": "insert_before", "brief": "asthma-copd", "anchor": "<div class=\"rule\">",
+ "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The lead-in asks for a plain diagnosis, but the likeliest one, severe asthma in a smoker, is not offered; the past asthma admissions distract. The options are a family of rare lung disorders with the common answer left out, plus a planted sign, clubbing, that fits Kartagener syndrome better than the key.</div>\n",
+ "note": "Q10 framing: stem hides the answer; construction pattern from sort.md"},
+{"op": "insert_after", "brief": "asthma-copd", "anchor": "<span class=\"pill p-test\">Test-overrides-findings</span>",
+ "html": "<div class=\"trapline\"><span class=\"trapwhy\">Congenital lobar emphysema: tempts with the word emphysema and the hyperinflation; it presents in a newborn or infant as one overinflated lobe, not bilateral hyperinflation at 16.</span></div><div class=\"trapline\"><span class=\"trapwhy\">Kartagener syndrome: tempts with thick yellow sputum and clubbing; there is no situs inversus, chronic sinusitis or lifelong wet cough.</span></div><div class=\"trapline\"><span class=\"trapwhy\">Pulmonary sequestration: tempts as a congenital lung lesion; it causes recurrent pneumonia in one lobe with a mass on the film, and this film shows only hyperinflation.</span></div><div class=\"trapline\"><span class=\"trapwhy\">Sarcoidosis: tempts as a chronic lung disease of young people; the film has no hilar adenopathy or infiltrates.</span></div>",
+ "note": "Q10 one trapline per NBME distractor"},
+{"op": "add_item", "brief": "asthma-copd", "type": "dx",
+ "stem": "16 yo who has smoked 1.5 packs daily for 4 years, with asthma admissions in childhood, now productive cough, barrel chest, mild clubbing, end-expiratory wheeze and severe bilateral hyperinflation as the only chest x-ray finding",
+ "answer": "Alpha-1 antitrypsin deficiency", "companion": "confirm with a serum alpha-1 antitrypsin level",
+ "d1": "Kartagener syndrome", "d2": "Congenital lobar emphysema",
+ "src": "nbme", "attrs": {"data-form": "Pediatrics CMS"}},
+{"op": "add_item", "brief": "asthma-copd", "type": "dx",
+ "stem": "15 yo with a wet cough since infancy, recurrent sinusitis, digital clubbing, weight below the 5th percentile and hyperinflation on chest x-ray",
+ "answer": "Cystic fibrosis", "companion": "sweat chloride test",
+ "d1": "Alpha-1 antitrypsin deficiency", "d2": "Severe persistent asthma",
+ "src": "authored"}
+]}

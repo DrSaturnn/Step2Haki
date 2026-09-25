@@ -1,0 +1,70 @@
+{
+ "edits": [
+  {
+   "op": "new_brief",
+   "after": "bs-adolescent-confid",
+   "html": "<div class=\"brief bs\" id=\"bs-infant-vax\" data-shelf=\"fm peds\" data-bp=\"gen\">\n<h4>Vaccines at the Infant Visits</h4>\n<p class=\"sub\">Well infant, vaccines up to date · which vaccine the age allows at this visit</p>\n<div class=\"vignette\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 4-month-old girl at a well-child visit in October; uncomplicated pregnancy and delivery; immunizations up to date; normal growth, development, vital signs and examination &middot; <b>Q</b> &mdash; immunization against which disease is most appropriate now; options spanned chickenpox, influenza, measles-mumps-rubella, rotavirus and shingles</div>\n<div class=\"dp\"><span class=\"lbl\">The decision point</span>\n<p>At <b>4 months</b>, an infant who is up to date gets the second doses of the 2-month vaccines. These are <b>DTaP</b> (diphtheria and tetanus toxoids and acellular pertussis), <b>Hib</b> (Haemophilus influenzae type b), <b>PCV</b> (pneumococcal conjugate vaccine), <b>IPV</b> (inactivated poliovirus vaccine) and oral <b>rotavirus</b> vaccine. Rotavirus vaccine has fixed age limits: the first dose by <b>14 weeks 6 days</b> and the last dose by <b>8 months 0 days</b>.</p>\n<p>Influenza vaccine starts at <b>6 months</b>, so an October visit does not make a 4-month-old eligible. <b>MMR</b> (measles-mumps-rubella) and <b>varicella</b> vaccines are live vaccines first given at <b>12 to 15 months</b>. Zoster vaccine is an adult vaccine, given from <b>age 50</b>.</p>\n</div>\n<div class=\"crit\"><span class=\"lbl\">Defining criteria: age limits</span> <b>Rotavirus</b> — first dose by 14 weeks 6 days, final dose by 8 months 0 days; 2 doses at 2 and 4 months (RV1, monovalent rotavirus vaccine) or 3 doses at 2, 4 and 6 months (RV5, pentavalent rotavirus vaccine) &middot; <b>Influenza</b> — from 6 months, every season; a child aged 6 months to 8 years with fewer than 2 earlier doses gets 2 doses at least 4 weeks apart &middot; <b>MMR and varicella</b> — first doses at 12 to 15 months, second doses at 4 to 6 years &middot; <b>Recombinant zoster</b> — 2 doses 2 to 6 months apart from age 50, or from age 19 with immunocompromise</div>\n<table data-mask=\"2\">\n<caption>Vaccines due at each infant visit</caption>\n<thead><tr><th>Visit</th><th>Vaccines due</th><th>Age limit that matters here</th></tr></thead>\n<tbody>\n<tr><td><b>2 months</b></td><td>DTaP, Hib, PCV, IPV and rotavirus, first doses; hepatitis B second dose if not given at 1 month</td><td>Rotavirus must start by <b>14 weeks 6 days</b></td></tr>\n<tr><td><b>4 months</b></td><td>DTaP, Hib, PCV, IPV and <b>rotavirus</b>, second doses</td><td>Too young for influenza (6 months) and for MMR and varicella (12 months)</td></tr>\n<tr><td><b>6 months</b></td><td>DTaP and PCV third doses; Hib third dose except with the PedvaxHIB product; rotavirus third dose with RV5 only; IPV and hepatitis B third doses (due 6 to 18 months); <b>influenza</b> in season</td><td>Rotavirus series ends by <b>8 months 0 days</b>; the first influenza season needs 2 doses</td></tr>\n<tr><td><b>12 to 15 months</b></td><td><b>MMR</b> and <b>varicella</b> first doses; hepatitis A first of 2 doses (12 to 23 months); PCV fourth dose; Hib booster</td><td>Routine MMR and varicella start at <b>12 months</b></td></tr>\n</tbody>\n</table>\n<h5 class=\"authored-hdr\">Scenario bank</h5>\n<ol class=\"bank authored\">\n</ol>\n<div class=\"danger\"><span class=\"lbl\">Schedule status, September 2026</span> In January 2026 the CDC (Centers for Disease Control and Prevention) moved childhood rotavirus and influenza vaccines from routine to shared clinical decision-making. A federal court stayed that change in March 2026, and the stay is under appeal. The schedule CDC now posts is the 2025 schedule, which lists both vaccines as routine; check the CDC site for the current schedule. The <b>AAP</b> (American Academy of Pediatrics) schedule also keeps both routine, and this NBME item keys rotavirus as a routine 4-month vaccine.</div>\n<div class=\"pearls\"><span class=\"lbl\">Pearls</span> Rotavirus vaccine is live and oral; do not give it with <b>SCID</b> (severe combined immunodeficiency) or after an intussusception &middot; Up to date at 4 months means the 2-month doses were given, so the second doses are due &middot; Older sources, including this NBME explanation, start zoster vaccine at 60; recombinant zoster vaccine is now given from 50</div>\n<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The October date is a seasonal cue for influenza, but at 4 months she is below its 6-month age limit. The options form an age ladder of live and inactivated vaccines, from rotavirus at 2 months through MMR and varicella at 12 months to zoster at 50.</div>\n<div class=\"pearls\"><span class=\"lbl\">Pairs with</span> Aquifer <b>Adolescent Immunization and the Age Platform</b> covers the 11 to 12 year visit and influenza timing by season. Part I <b>DTaP: Contraindication vs. Precaution</b> covers when a DTaP dose is withheld. Ask: has this child reached the vaccine's age window, and has the window closed?</div>\n<div class=\"rule\"><span class=\"lbl\">Transferable rule</span> Check the child's age against each vaccine's age window before the season or the disease. A vaccine whose window has not opened, or has closed, is not given at this visit.</div>\n<div class=\"traps\"><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Chickenpox: a routine live childhood vaccine; the first varicella dose is not given until 12 months.</span></div><div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Influenza: the October visit falls in influenza vaccine season; she is 4 months old, and influenza vaccine starts at 6 months.</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Measles-mumps-rubella: routine and live, like rotavirus; the first dose is at 12 months.</span></div><div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Shingles: the same virus as chickenpox; zoster vaccine is for adults from age 50.</span></div></div>\n</div>",
+   "nav": {
+    "after_link": "bs-adolescent-confid",
+    "title": "Infant Vaccines"
+   },
+   "note": "NBME peds CMS Q3 (peds-cms-ce7f06). Ages per CDC 2025 child schedule notes (cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-notes.html; by-age page last published 2026-09-15), CDC rotavirus vaccine considerations (cdc.gov/rotavirus/hcp/vaccine-considerations), CDC Shingrix recommendations (cdc.gov/shingles/hcp/vaccine-considerations). 2026 status: CRS R48982 (June 2026)."
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-infant-vax",
+   "type": "screen",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   },
+   "stem": "4-month-old girl at a well-child visit in October, immunizations up to date, normal growth, development and examination",
+   "answer": "Rotavirus",
+   "companion": "second dose of the 2-month set; influenza waits until 6 months",
+   "d1": "Influenza",
+   "d2": "Measles-mumps-rubella",
+   "lead_in": "Immunization against which of the following is most appropriate at this visit?"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-infant-vax",
+   "type": "avoid",
+   "src": "authored",
+   "stem": "17-week-old boy starting his infant vaccines today after moving from another state; he received only the hepatitis B birth dose",
+   "answer": "Rotavirus vaccine",
+   "companion": "the first dose must be given by 14 weeks 6 days",
+   "d1": "DTaP",
+   "d2": "Pneumococcal conjugate vaccine",
+   "lead_in": "Which vaccine should not be given at this visit?"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-infant-vax",
+   "type": "next",
+   "src": "authored",
+   "stem": "7-month-old girl at a well-child visit in November, up to date on her infant vaccines, who has never received influenza vaccine",
+   "answer": "Influenza vaccine today and a second dose in 4 weeks",
+   "companion": "first influenza season under age 9",
+   "d1": "A single influenza vaccine dose today",
+   "d2": "Influenza vaccine at her 12-month visit"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-infant-vax",
+   "type": "screen",
+   "src": "authored",
+   "stem": "12-month-old boy at a well-child visit, up to date on his vaccines, healthy",
+   "answer": "Measles-mumps-rubella and varicella",
+   "companion": "first live injected vaccines at 12 to 15 months",
+   "d1": "Rotavirus",
+   "d2": "Measles-mumps-rubella only",
+   "lead_in": "Which live vaccines are due at this visit?"
+  },
+  {
+   "op": "insert_after",
+   "brief": "bs-adolescent-vax",
+   "anchor": "Ask: is this an age-platform question or a series-mechanics question?",
+   "html": " Part II <b>Vaccines at the Infant Visits</b> covers the infant schedule and the rotavirus age limits."
+  }
+ ]
+}

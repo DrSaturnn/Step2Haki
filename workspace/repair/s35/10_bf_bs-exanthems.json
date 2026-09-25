@@ -1,0 +1,58 @@
+{
+ "edits": [
+  {
+   "op": "insert_after",
+   "brief": "bs-exanthems",
+   "anchor": "Maculopapular, <b>face to trunk</b>, spares palms and soles",
+   "html": "; <b>confluent</b>",
+   "note": "Q12: confluent rash separates measles from rubella"
+  },
+  {
+   "op": "insert_after",
+   "brief": "bs-exanthems",
+   "anchor": "Maculopapular, <b>face first</b>, head to toe, spares palms and soles",
+   "html": "; <b>discrete</b> pink spots",
+   "note": "Q12: discrete spots separate rubella from measles"
+  },
+  {
+   "op": "insert_before",
+   "brief": "bs-exanthems",
+   "anchor": "<div class=\"pearls\"><span class=\"lbl\">Pairs with</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">Which vaccine prevents it</span> <b>Face-first maculopapular rash that spreads down</b> &mdash; measles or rubella; the <b>MMR</b> (measles, mumps and rubella) vaccine prevents both &middot; <b>Schedule</b> &mdash; MMR is a live attenuated vaccine given in 2 doses, at 12 to 15 months and at 4 to 6 years &middot; <b>Itching</b> &mdash; mild itching does not make a rash varicella; varicella needs vesicles in crops</div>\n<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The lead-in asked which vaccine would have prevented the rash, so <b>MMR</b> was the answer whether the illness was measles or rubella. The options listed the routine childhood vaccines plus one travel vaccine, typhoid.</div>\n",
+   "note": "Q12: prevention task; MMR covers measles and rubella; NBME framing"
+  },
+  {
+   "op": "insert_after",
+   "brief": "bs-exanthems",
+   "anchor": "day care and a single vaccine dose explain all the findings.</span></div>",
+   "html": "\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Diphtheria-tetanus-acellular pertussis vaccine: a routine childhood vaccine that a recent immigrant may have missed; diphtheria, tetanus and pertussis do not cause a spreading maculopapular rash.</span></div>\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\"><i>Haemophilus influenzae</i> type b vaccine: another routine vaccine she may have missed; this organism causes epiglottitis, meningitis and pneumonia, not a face-first rash.</span></div>\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Hepatitis B vaccine: a routine infant vaccine she may have missed; acute hepatitis B brings right upper quadrant pain and nausea, and she has no abdominal symptoms.</span></div>\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Inactivated poliovirus vaccine: a routine vaccine she may have missed abroad; polio causes flaccid paralysis, not a rash.</span></div>\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Pneumococcal vaccine: a routine childhood vaccine she may have missed; pneumococcus causes otitis media, pneumonia and meningitis, not a viral exanthem.</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Influenza vaccine: fever, fatigue and a runny nose fit influenza; influenza does not typically cause a rash.</span></div>\n<div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Typhoid vaccine: fever and a rash in a child from Central America suggest typhoid rose spots; she has no abdominal pain or diarrhea, and her rash began on the face and covers the whole body.</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Varicella vaccine: itching and a whole-body rash suggest chickenpox; her lesions are discrete maculopapules with no vesicles.</span></div>",
+   "note": "Q12: one trap line per NBME distractor"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-exanthems",
+   "type": "screen",
+   "stem": "10 yo F who recently immigrated from Central America, vaccine history not given; 5 days of low-grade fever, fatigue, mild itching and a mild runny nose, then 1 day of a rash that began on the face and now covers the body; no abdominal pain or diarrhea; T 37.8 C; discrete maculopapular lesions on the face, trunk, back and limbs; no eye or mouth lesions",
+   "answer": "Measles-mumps-rubella",
+   "companion": "it prevents both measles and rubella; the low fever, discrete spots and absent conjunctivitis fit rubella better than measles",
+   "d1": "Varicella",
+   "d2": "Typhoid",
+   "lead_in": "Which of the following vaccines is most likely to have prevented this patient's condition?",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-exanthems",
+   "type": "dx",
+   "stem": "7 yo F who recently moved from abroad with no vaccine records; 2 days of low-grade fever and a mild runny nose, then pink, discrete maculopapular spots that began on the face and spread to the trunk and limbs within a day; well-appearing; T 37.9 C; tender posterior auricular and suboccipital nodes; eyes and buccal mucosa normal",
+   "answer": "Rubella",
+   "companion": "mild illness with posterior nodes; the MMR vaccine prevents it",
+   "d1": "Measles",
+   "d2": "Erythema infectiosum",
+   "src": "authored"
+  }
+ ]
+}

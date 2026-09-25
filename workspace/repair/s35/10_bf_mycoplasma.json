@@ -1,0 +1,51 @@
+{
+ "edits": [
+  {
+   "op": "insert_before",
+   "brief": "mycoplasma",
+   "anchor": "<div class=\"pearls\"><span class=\"lbl\">Pairs with</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The stem never says atypical; it gives age 10, a gradual 10-day course and a diffuse perihilar film, wording that also fits pulmonary edema. The options pair organism-named pneumonias, separated by age and onset, with an imaging-phrase mimic (congestive heart failure) and tuberculosis.</div>\n",
+   "note": "Q7: How NBME framed it block (lead-in and construction pattern from sort.md)"
+  },
+  {
+   "op": "insert_after",
+   "brief": "mycoplasma",
+   "anchor": "the direct antiglobulin pattern that identifies it.",
+   "html": " Part I <b>Tuberculosis</b> covers the child with a subacute cough and a known contact: is there weight loss, night sweats or hilar adenopathy?",
+   "note": "Q7: Pairs with sentence for the tuberculosis look-alike"
+  },
+  {
+   "op": "insert_after",
+   "brief": "mycoplasma",
+   "anchor": "This immediately separates atypical from typical pneumonia.</div>",
+   "html": "\n<div class=\"traps\"><span class=\"lbl\">Distractors</span>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Pneumonia due to respiratory syncytial virus: it tempts because it is viral and gives diffuse bilateral findings; this virus causes lower respiratory disease with wheeze in infants and children under age 2, not at age 10.</span></div>\n<div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Pneumonia due to Streptococcus pneumoniae: it tempts as the most common bacterial pneumonia; it starts abruptly with high fever and a focal lobar consolidation, not a gradual 10-day course with a diffuse film.</span></div>\n<div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Congestive heart failure: it tempts because a diffuse perihilar infiltrate with bilateral crackles also describes pulmonary edema; in children it usually follows congenital heart disease, and this child was previously healthy and febrile.</span></div>\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Tuberculosis: it tempts because the cough is subacute; there is no exposure, weight loss or night sweats, and the film shows no hilar adenopathy or cavitation.</span></div>\n</div>",
+   "note": "Q7: one trapline per NBME distractor"
+  },
+  {
+   "op": "add_item",
+   "brief": "mycoplasma",
+   "type": "dx",
+   "stem": "Previously healthy 10-year-old boy with 10 days of worsening cough, low-grade fever and mild dyspnea on exertion; diffuse crackles in both lungs; chest x-ray with a diffuse perihilar infiltrate",
+   "answer": "Pneumonia due to Mycoplasma pneumoniae",
+   "companion": "gradual course, low fever and a diffuse bilateral film at school age; treat with a macrolide",
+   "d1": "Pneumonia due to Streptococcus pneumoniae",
+   "d2": "Pneumonia due to respiratory syncytial virus",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "mycoplasma",
+   "type": "next",
+   "stem": "12-year-old girl, well appearing, with 2 weeks of dry cough, headache and temperature of 38.0 C; oxygen saturation 97% on room air; scattered crackles in both lungs; chest x-ray with bilateral interstitial infiltrates",
+   "answer": "Oral azithromycin",
+   "companion": "presumed Mycoplasma pneumonia treated as an outpatient; it lacks a cell wall, so beta-lactams fail",
+   "d1": "Oral amoxicillin",
+   "d2": "Intravenous ceftriaxone",
+   "lead_in": "Which of the following is the most appropriate pharmacotherapy?",
+   "src": "authored"
+  }
+ ]
+}

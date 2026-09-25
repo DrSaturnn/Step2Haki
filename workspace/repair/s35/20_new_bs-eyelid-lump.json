@@ -1,0 +1,96 @@
+{
+ "edits": [
+  {
+   "op": "new_brief",
+   "after": "bs-imprinting",
+   "html": "<div class=\"brief bs\" id=\"bs-eyelid-lump\" data-shelf=\"peds\" data-bp=\"neuro\">\n<h4>Eyelid Lumps and Swelling in a Child</h4>\n<p class=\"sub\">Tender nodule on the lid margin with a red eye and no fever &middot; NBME &middot; where is the swelling, and does it spread beyond the lump?</p>\n<div class=\"vignette\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 10 yo M, 2 days of redness and mild pain in the left eye; afebrile &middot; <b>Exam</b> &mdash; left conjunctiva mildly red, swollen and tender; a 3-mm nodule on the lower lid margin, toward the outer corner; right eye normal &middot; <b>Q</b> &mdash; the most appropriate treatment; options spanned nasolacrimal massage, oral amoxicillin, topical prednisolone, topical tetrahydrozoline and warm compresses</div>\n<div class=\"dp\"><span class=\"lbl\">The decision point</span>\n<p>A tender nodule on the <b>eyelid margin</b>, with local redness and no fever, is a <b>hordeolum</b> (stye). It is an acute infection of an eyelid gland, usually by Staphylococcus aureus. First-line treatment is <b>warm compresses</b> with gentle lid massage several times a day. Heat softens the blocked gland contents so the gland can drain. Conjunctival redness and swelling beside the nodule come from surface irritation and do not make this conjunctivitis.</p>\n<p>Add <b>oral antibiotics</b> only when redness and swelling spread across the lid, which is <b>preseptal cellulitis</b>. A lesion that has not settled after several weeks of compresses goes to ophthalmology for <b>incision and drainage</b>.</p>\n</div>\n<table data-mask=\"3\">\n<caption>Lump or swelling of the eyelid in a child: the differential</caption>\n<thead><tr><th>Diagnosis</th><th>Brief illness script</th><th>Key discriminator</th><th>Why less likely here</th></tr></thead>\n<tbody>\n<tr><td><b>Hordeolum</b> (stye)</td><td>Acute staphylococcal infection of a lash follicle or eyelid gland; warm compresses and lid massage</td><td><b>Tender</b>, red nodule <b>on the lid margin</b>, sometimes with a yellow point</td><td>Fits: 2 days, tender 3-mm nodule on the margin, afebrile</td></tr>\n<tr><td>Chalazion</td><td>Sterile, chronic inflammation of a blocked meibomian gland, sometimes left behind by a hordeolum; compresses, then steroid injection or incision if it persists</td><td><b>Painless</b>, firm nodule in the <b>body of the lid</b>, away from the margin, present for weeks</td><td>This nodule is tender, on the margin and 2 days old</td></tr>\n<tr><td>Dacryocystitis</td><td>Infection of the lacrimal sac behind a blocked nasolacrimal duct; oral antibiotics, with warm compresses as support</td><td>Tender swelling at the <b>inner corner of the eye</b>, beside the nose; pus from the punctum on pressure</td><td>The nodule sits on the lid margin toward the outer corner</td></tr>\n<tr><td>Preseptal cellulitis</td><td>Infection of the lid in front of the orbital septum, from a skin break, hordeolum or dacryocystitis; oral amoxicillin-clavulanate</td><td><b>Diffuse</b> red, warm, swollen lid; eye movements and vision normal, no proptosis</td><td>Redness and swelling stay at the nodule, and there is no fever</td></tr>\n<tr><td>Orbital cellulitis <span class=\"tag t-em\">Can't miss</span></td><td>Infection behind the septum, usually spread from ethmoid sinusitis; computed tomography of the orbits with contrast and intravenous antibiotics</td><td><b>Proptosis, pain with eye movement</b>, limited eye movement or reduced vision</td><td>None of these is described, and he is afebrile</td></tr>\n<tr><td>Blepharitis</td><td>Chronic inflammation of both lid margins, often with seborrheic dermatitis; lid hygiene and warm compresses</td><td><b>Both lids</b> red and crusted along the lash line, worse on waking, with no discrete nodule</td><td>One focal nodule in one eye</td></tr>\n</tbody>\n</table>\n<table>\n<caption>Management ladder: the tender lid nodule</caption>\n<thead><tr><th>Tier</th><th>Intervention</th><th>Escalate when</th></tr></thead>\n<tbody>\n<tr><td>1. Hordeolum</td><td><b>Warm compresses</b> several times a day with gentle lid massage; do not squeeze the lesion</td><td>Redness and swelling spread across the lid; or no improvement after several weeks, when ophthalmology offers incision and drainage</td></tr>\n<tr><td>2. Preseptal cellulitis</td><td><b>Oral antibiotic</b> covering Staphylococcus aureus and streptococci, such as amoxicillin-clavulanate, with close follow-up</td><td>Proptosis, pain with eye movement, limited eye movement or reduced vision; or worsening on oral antibiotics</td></tr>\n<tr><td>3. Orbital cellulitis</td><td>Admission, <b>computed tomography of the orbits with contrast</b>, intravenous antibiotics and ophthalmology consultation</td><td>Abscess on imaging or falling vision: surgical drainage</td></tr>\n</tbody>\n</table>\n<h5 class=\"authored-hdr\">Scenario bank</h5>\n<ol class=\"bank authored\">\n</ol>\n<div class=\"pearls\"><span class=\"lbl\">Pearls</span> Squeezing a hordeolum can spread the infection into the lid &middot; A lump at the inner corner of the eye is the lacrimal sac, not an eyelid gland &middot; Topical steroid drops treat anterior uveitis and are avoided when infection is possible</div>\n<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> The stem opened with a red, sore eye and conjunctival swelling, and it described the lump on the lid margin without ever naming a stye. Each wrong option was the right treatment for a neighboring eye problem: a blocked tear duct, preseptal cellulitis, uveitis or simple redness.</div>\n<div class=\"pearls\"><span class=\"lbl\">Pairs with</span> Part I <b>The Red Eye</b> covers conjunctivitis and the can't-miss red eyes, including uveitis, where topical steroids belong. Ask: does the redness come from the conjunctiva, or from a lump on the lid? Part I <b>Sinusitis with Intracranial Extension</b> covers preseptal versus orbital cellulitis and orbital imaging. Ask: are eye movements painful or limited, and is there proptosis?</div>\n<div class=\"rule\"><span class=\"lbl\">Transferable rule</span> Locate the swelling before treating it. A tender nodule on the lid margin gets warm compresses. Antibiotics start when redness spreads across the lid, and imaging when the eye protrudes or eye movement hurts.</div>\n<div class=\"traps\">\n<div class=\"trapline\"><span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Nasolacrimal massage: it sounds like the lid massage that goes with compresses; it treats a blocked tear duct at the inner corner, and this nodule is on the lid margin toward the outer corner.</span></div>\n<div class=\"trapline\"><span class=\"pill p-seq\">Sequencing trap</span><span class=\"trapwhy\">Oral amoxicillin: the nodule is an infection; there is no fever and no redness spreading across the lid, so there is no cellulitis to treat.</span></div>\n<div class=\"trapline\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Topical prednisolone: the eye is inflamed; steroid drops treat anterior uveitis, and a tender lump on the lid margin is not uveitis; steroids are also avoided when infection is possible.</span></div>\n<div class=\"trapline\"><span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Topical tetrahydrozoline: it clears the redness the stem opens with; this vasoconstrictor acts at alpha-1 and alpha-2 receptors and does nothing for the blocked gland.</span></div>\n</div>\n</div>",
+   "nav": {
+    "after_link": "bs-imprinting",
+    "title": "Eyelid Lumps and Swelling"
+   }
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-eyelid-lump",
+   "type": "next",
+   "stem": "10 yo M with 2 days of redness and mild pain in the left eye; afebrile; mildly red, swollen and tender left conjunctiva; a 3-mm nodule on the lower lid margin toward the outer corner; right eye normal",
+   "answer": "Warm compresses",
+   "companion": "hordeolum; heat helps the blocked gland drain",
+   "d1": "Oral amoxicillin",
+   "d2": "Nasolacrimal massage",
+   "src": "nbme",
+   "attrs": {
+    "data-form": "Pediatrics CMS"
+   },
+   "lead_in": "Which of the following is the most appropriate treatment?"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-eyelid-lump",
+   "type": "next",
+   "stem": "8 yo F with a painless, rubbery 6-mm nodule in the middle of the upper eyelid, away from the margin; it began as a tender red bump 2 months ago and has not shrunk despite warm compresses; no redness, discharge or fever",
+   "answer": "Ophthalmology referral for incision and curettage",
+   "companion": "chalazion; an intralesional steroid injection is the alternative",
+   "d1": "Oral amoxicillin-clavulanate for 10 days",
+   "d2": "Topical erythromycin ointment for 2 weeks",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-eyelid-lump",
+   "type": "next",
+   "stem": "4 yo F with 2 days of a tender, red swelling just below the inner corner of the right eye, beside the nose; pressing on it brings pus from the lower punctum; afebrile; eye movements full and vision normal",
+   "answer": "Oral antibiotics with warm compresses",
+   "companion": "acute dacryocystitis; probing waits until the infection settles",
+   "d1": "Probing of the nasolacrimal duct",
+   "d2": "Warm compresses with lid massage",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-eyelid-lump",
+   "type": "next",
+   "stem": "6 yo M with a stye on the left upper lid 4 days ago, now with diffuse redness, warmth and swelling of both left lids; T 38.2 C; vision normal, eye movements full and painless, no proptosis",
+   "answer": "Oral amoxicillin-clavulanate and close outpatient follow-up",
+   "companion": "preseptal cellulitis spreading from a hordeolum",
+   "d1": "Warm compresses and lid massage alone",
+   "d2": "Computed tomography of the orbits and intravenous antibiotics",
+   "src": "authored"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-eyelid-lump",
+   "type": "avoid",
+   "stem": "12 yo F with 1 day of a tender, red nodule with a yellow point on the upper lid margin; afebrile; no redness beyond the nodule",
+   "answer": "Squeezing the nodule to express the pus",
+   "companion": "squeezing can spread the infection into the lid",
+   "d1": "Warm compresses several times a day",
+   "d2": "Gentle lid massage after each compress",
+   "src": "authored",
+   "lead_in": "Which of the following should be avoided?"
+  },
+  {
+   "op": "add_item",
+   "brief": "bs-eyelid-lump",
+   "type": "dx",
+   "stem": "11 yo M with months of burning, itchy eyes that are worse on waking; both lid margins are red and crusted, with flakes on the lashes and no discrete nodule; scaly patches on the scalp",
+   "answer": "Blepharitis",
+   "companion": "lid hygiene and warm compresses",
+   "d1": "Allergic conjunctivitis",
+   "d2": "Bacterial conjunctivitis",
+   "src": "authored"
+  },
+  {
+   "op": "insert_before",
+   "brief": "redeye",
+   "anchor": "<div class=\"rule\"><span class=\"lbl\">The steroid rule</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">Pairs with</span> Part II <b>Eyelid Lumps and Swelling in a Child</b> covers the red eye that comes from a tender lump on the lid margin, and its lid-swelling mimics. Ask: is there a lump on the lid?</div>\n"
+  },
+  {
+   "op": "insert_before",
+   "brief": "abrs-complications",
+   "anchor": "<div class=\"rule\"><span class=\"lbl\">Transferable rule</span>",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">Pairs with</span> Part II <b>Eyelid Lumps and Swelling in a Child</b> covers the hordeolum and dacryocystitis that can spread into preseptal cellulitis. Ask: is the swelling a focal lump or the whole lid?</div>\n"
+  }
+ ]
+}

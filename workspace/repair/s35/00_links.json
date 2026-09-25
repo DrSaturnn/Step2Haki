@@ -1,0 +1,16 @@
+{
+ "edits": [
+  {
+   "op": "insert_before",
+   "brief": "ped-murmur",
+   "anchor": "<div class=\"rule\">",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> A murmur new on day 3 after a normal birth examination pulls toward a ventricular septal defect or patent ductus arteriosus; its soft grade and spread to the axilla mark peripheral pulmonary stenosis. The options were the five common acyanotic lesions, so the key was the umbrella term, pulmonary stenosis.</div>\n"
+  },
+  {
+   "op": "insert_before",
+   "brief": "cgd",
+   "anchor": "<div class=\"rule\">",
+   "html": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span> No organism or granuloma was named; the clue was a maternal uncle who died of fungal pneumonia, which points to X-linked disease. Four of the five options were steps in leukocyte function, and the key named the killing defect as impaired microbicidal activity.</div>\n"
+  }
+ ]
+}
