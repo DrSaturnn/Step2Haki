@@ -24,6 +24,12 @@ No emojis, no em dashes in prose; plain voice, no slogans; label speculation; âš
 ## Open
 See PENDING_DECISIONS.md (VUR fixes researched not written; thumbnail pilot; retitles; spelling pass; 17 blueprint judgment rows; Aquifer narratives; s23 UWorld text). NBME plan phase 7 (review weighting) not started. Efficiency: worker packet adopted for backfills only (repair/efficiency/RESULTS.md, RUBRIC.md, runs/).
 
+## Peds authoring priority (set 2026-09-28)
+Applies to every new Peds brief until Jonathan changes it. Details: local-only `local/peds_shelf_2026-09-25.md`.
+1. Order: cardiovascular, respiratory, then endocrine + female reproductive, then neuro/MSK; skin last (1-5% of the exam).
+2. Frame by outpatient presentation (clinic chief complaint); ambulatory is 65-70% of the exam.
+3. Weight toward diagnosis: stems describe the finding without naming it; bank items test recognition from history, exam and labs. Management depth stays as is.
+
 ## Tooling (rebuilt 2026-09-24)
 `tools/pagelib.py` (depth-matched parsing, offset splices), `gate.py` (mechanical invariants; `--list` shows them), `render.js` (jsdom smoke render; needs `npm i jsdom@24` in the repo, never v30), `apply_edits.py` / `verify_edits.py` / `EDITS.md`, `idgen.py`, `nbme_match.py`, `session_usage.py`, `ship.sh`; `repair/build.py`; `repair/efficiency/RULES_worker.md`, `RULES_coverage.md`, `make_packet.py`. Pre-existing baseline findings are allowlisted, not fixed: `tools/gate_allowlist.txt` (16), `tools/render_allowlist.txt` (1); fix them in a content pass and delete the lines. Also `tools/vendor_scan.py` (10-word shingle check against local-only sources; `--history` scans every blob), `tools/changelog.py` (commit body), `tools/local_only.txt` (private paths).
 
