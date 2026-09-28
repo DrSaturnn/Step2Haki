@@ -5,3 +5,4 @@ repair/sources/          # vendor question text (UWorld/NBME sNN_questions.md), 
 repair/LEDGER-*          # historical ledgers: quote source stems, vitals and explanation lines (scan: 9 of 27 carry source text, up to 20 shared 10-word shingles; all removed as a class)
 repair/workup/s[0-9]*    # historical per-batch workup drafts: quote source case and explanation text (scan: 14 of 28 carry source text, up to 19 shared; all removed as a class)
 local/                   # history-only local files exported before the history rewrite
+repair/migration/        # migration claim maps and drafts: clue rows paraphrase NBME/UWorld stems
