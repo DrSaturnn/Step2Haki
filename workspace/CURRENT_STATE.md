@@ -20,6 +20,7 @@ Step 2 CK / Peds and FM shelf study page: `workspace/index.html` in the public G
 
 ## Standing rules
 No emojis, no em dashes in prose; plain voice, no slogans; label speculation; ⚠︎ only for memory-sourced or unverified specifics; Step 2 depth; emphasize cutoffs and tells; plain captions ("X: the differential", "Diagnostic workup"). Current guidelines set facts; NBME sets key and framing; then UWorld; then authored. Never delete questions; attribute-only edits use the `set_attr` op in an edits file and ship with `tools/ship.sh sNN "<message>" --attr-only` (runs `gate.py --attr-only HEAD`). The skills' older names map as: ledger / `repair/apply_ledger.py` -> `tools/apply_edits.py`; `gate.py index.html --base 092f98b` -> `gate.py` (base HEAD; the old hash is gone, the restored baseline is commit d233a96).
+Every clue from a UWorld or NBME source stem is used: each finding, value and pertinent negative gets a role (decides, localizes, supports, excludes, decoy) and a place in the brief; none is dropped or called noise (board-brief Step 2a).
 
 ## Open
 See PENDING_DECISIONS.md (VUR fixes researched not written; thumbnail pilot; retitles; spelling pass; 17 blueprint judgment rows; Aquifer narratives; s23 UWorld text). NBME plan phase 7 (review weighting) not started. Efficiency: worker packet adopted for backfills only (repair/efficiency/RESULTS.md, RUBRIC.md, runs/).

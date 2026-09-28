@@ -57,3 +57,7 @@ From the rebuilt sheet's audit against board-brief and study-page-builder (W num
 - **Named scales** [W27]: a named scale owes its components in place (enumerate them); never invent a target.
 - **Calibrated exclusion** [W28]: write "less likely", "not the appropriate next step" or "excluded" as the evidence supports.
 - **Report extras** [W32]: within the 3 to 6 lines, add when present: whether a supported change defeats the fast rule, each ⚠︎ and discrepancy, cue-review fixes, reverse links or candidate twin items, anything unresolved.
+
+
+## Clue ledger (added 2026-09-28)
+Every clue in the source stem (age, timing, history, vitals, each exam finding, each lab and imaging value, every pertinent negative) gets a role: decides, localizes, supports, excludes, or decoy (name the wrong answer it pulls toward). Each lands in the brief with its role stated. Never drop a clue, never call one noise or say it separates nothing. Unclear role: note it outside the brief and keep the clue in a practice stem.
