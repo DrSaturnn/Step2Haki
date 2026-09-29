@@ -4,6 +4,7 @@
   python3 tools/migrate_check.py <old_briefs.html> <new_brief.html> <claim_map.json> [--json]
   python3 tools/migrate_check.py - <new_brief.html> - --topic="septic arthritis,transient synovitis"   (new brief, no migration)
 
+Source-and-scope codes G1-G3, K3 come from tools/content_rules.py (also run by tools/gate.py on every brief).
 Self-test first: python3 tools/test_migrate_check.py (golden brief passes, every known defect fails).
 Rules and codes: tools/MIGRATION_CONTRACT.md.
 
@@ -20,9 +21,14 @@ Exit 1 on any FAIL. WARN lines do not fail.
 """
 import html as H
 import json
+import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import content_rules  # noqa: E402  (G1-G3, K3: shared with tools/gate.py, every brief type)
+
+OUTSIDE = re.compile(r'guideline|statement|\baha\b|\bcdc\b|\bidsa\b|\baap\b|textbook|reference|https?://|first aid|amboss|et al\b|case definition', re.I)
 CLAIM_DISP = {'carried', 'moved', 'merged', 'dropped', 'corrected', 'new'}
 ITEM_DISP = {'carried', 'moved', 'merged', 'archived', 'retired'}
 ROLES = {'decides', 'localizes', 'supports', 'excludes', 'decoy'}
@@ -67,6 +73,32 @@ def QUANT(s):
     if out & NEG or w & NEG:
         out = (out - NEG) | {'(negation)'}
     return out
+
+
+def or_for_and(says, page):
+    """R13: a source condition joined by "and" / "together with" that the page joins by "or". Returns the word pair or None."""
+    st = re.findall(r"[a-z0-9]+", norm(says))
+    pt = re.findall(r"[a-z0-9]+", norm(page))
+    stop = STOP | {'or', 'and', 'with', 'by', 'as', 'raised', 'elevated', 'positive', 'persist', 'persists', 'persistent'}
+    sset = set(st)
+    for i, t in enumerate(pt):
+        if t != 'or' or (i + 1 < len(pt) and pt[i + 1] in ('more', 'less', 'younger', 'older', 'fewer', 'greater', 'higher', 'lower', 'above', 'below', 'longer', 'shorter')):
+            continue
+        left = next((w for w in reversed(pt[max(0, i - 4):i]) if w in sset and w not in stop), None)
+        right = next((w for w in pt[i + 1:i + 5] if w in sset and w not in stop), None)
+        if not left or not right or left == right:
+            continue
+        for a_, b_ in ((left, right), (right, left)):
+            ia = [k for k, w in enumerate(st) if w == a_]
+            ib = [k for k, w in enumerate(st) if w == b_]
+            for x in ia:
+                y = next((y for y in ib if x < y <= x + 40), None)
+                if y is None:
+                    continue
+                seg = ' '.join(st[x + 1:y])
+                if re.search(r'\band\b|together with|\bplus\b|\bboth\b', seg) and not re.search(r'\band/or\b', norm(says)):
+                    return (left, right)
+    return None
 
 
 def item_contract(new, new_items, old_items, cmap, F, W):
@@ -140,6 +172,7 @@ def main():
 
     # ---- claims
     claims = cmap.get('claims', [])
+    old_ids = set(re.findall(r'data-item-id="(q_[0-9a-f]{20})"', old))
     ids = [c.get('id') for c in claims]
     if len(ids) != len(set(ids)):
         F('claim ids are not unique')
@@ -202,6 +235,33 @@ def main():
                 F(f'N1 {cid}: verified number without a source')
         if disp in ('dropped', 'corrected') and not c.get('reason'):
             F(f'{cid}: {disp} without a reason')
+        # Q2 (R13 review): content from an outside source keeps that source's meaning. The row quotes what the source says
+        # (source_says, from a document actually opened); its conditions ("and", "together with") and qualifiers survive in new_text.
+        if disp in ('new', 'corrected') and OUTSIDE.search(c.get('source') or ''):
+            says = (c.get('source_says') or '').strip()
+            if re.fullmatch(r'\s*(standard )?textbooks?\b[^;]*', c.get('source') or '', re.I):
+                F(f'Q2 {cid}: source "{c.get("source")[:40]}" names no document; cite the reference you opened (title, or URL)')
+            if not says:
+                F(f'Q2 {cid}: {disp} row from an outside source needs source_says: what the source itself states, from the document you opened')
+            elif not c.get('qualifier_ok') and or_for_and(says, c.get('new_text', '')):
+                a_, b_ = or_for_and(says, c.get('new_text', ''))
+                F(f'Q2 {cid}: the page joins "{a_}" and "{b_}" with "or", but the source requires both ({says[:70]!r}); '
+                  'keep every condition the source requires, or give qualifier_ok with the reason the meaning is unchanged')
+        # S2 circular basis (R12 review): a question written for this brief, or "this bank", cannot show that the exam tests its content
+        b2 = c.get('step2') or ''
+        newq = [q for q in re.findall(r'q_[0-9a-f]{20}', b2) if q not in old_ids]
+        if newq or re.search(r'\b(?:in|of) this (?:bank|brief)\b|\bthis brief\'s (?:bank|items?)\b', b2, re.I):
+            F(f'S2 {cid}: step2 basis points at this brief\'s own questions ({", ".join(newq) or "this bank"}); name the pasted source, '
+              'an NBME or UWorld explanation, a Step 2 reference you opened, or the template section')
+        # S2 scope: content the pasted material did not supply must say why Step 2 CK tests it (reviewer judges the answer)
+        if disp in ('new', 'corrected') and not re.search(r'nbme|uworld|\bold\b|bank|source explanation|pasted', c.get('source') or '', re.I):
+            basis = (c.get('step2') or '').strip()
+            if not basis:
+                F(f'S2 {cid}: {disp} row from outside the pasted source ({(c.get("source") or "")[:40]!r}) needs "step2": where Step 2 CK tests it '
+                  '(the pasted question, an NBME or UWorld explanation, a standard Step 2 CK reference, or the template section that requires it); '
+                  'content the exam does not test is left out')
+            elif re.fullmatch(r'(yes|relevant|high[- ]yield|important|tested|step 2( relevant)?|standard)\.?', basis, re.I):
+                F(f'S2 {cid}: step2 basis "{basis}" does not say where the exam tests it')
 
     # ---- C1 clue census: every fragment of every old bank stem is covered by a clue row
     old_items = items_of(old)
@@ -473,6 +533,10 @@ def main():
     for sc in re.findall(r'class="scaleref"[^>]*data-scale="([^"]+)"', new):
         if f'id="{sc}"' not in new:
             F(f'K2 scale reference #{sc} has no target in the new brief')
+
+    # ---- G1-G3, K3 source and scope (tools/content_rules.py; the page gate runs the same rules on every brief)
+    for code, key, msg in content_rules.check_brief('new brief', new):
+        F(f'{code} {msg}')
 
     # ---- H1 inbound titles (needs --page=index.html)
     page_arg = next((x[7:] for x in sys.argv[1:] if x.startswith('--page=')), None)

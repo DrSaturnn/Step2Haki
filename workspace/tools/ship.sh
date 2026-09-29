@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # ship.sh sNN "<message>" [--attr-only]
 # One call per batch, from anywhere. Workspace = this script's parent; repo root = Step2Haki.
-#  1. build repair/sNN/*.json onto a scratch copy; gate (base HEAD; --attr-only also asserts
+#  1. build repair/sNN/*.json onto a scratch copy; rules self-tests (test_migrate_check, test_gate_rules);
+#     gate (every brief type, incl. source-and-scope G1-G3, K3; base HEAD; --attr-only also asserts
 #     attribute-only); render; vendor scan (no source text in tracked files, page under limit);
 #     refuse if any local-only path is tracked.       -> any failure aborts before writing anything
 #  2. write workspace/index.html and ../discriminator-briefs-site/index.html (the deployed copy)
@@ -26,6 +27,10 @@ fail(){ echo "ship $B: ABORT at $1 (nothing written)"; [[ -n "${2:-}" ]] && echo
 
 # ---- 1. checks on a scratch copy
 o=$(python3 repair/build.py "$B" --out "$TMP/index.html" 2>&1) || fail build "$o"; echo "$o"
+# rules self-tests: the checks themselves must still catch every known defect, on every brief type
+o=$(python3 tools/test_migrate_check.py 2>&1) || fail rules-selftest "$(echo "$o" | grep -E '^BAD|passed')"
+o2=$(python3 tools/test_gate_rules.py 2>&1) || fail rules-selftest "$(echo "$o2" | grep -E '^BAD|passed')"
+echo "rules: self-test $(echo "$o" | tail -1), all brief types $(echo "$o2" | tail -1)"
 GA=(--base HEAD); [[ "$MODE" == "--attr-only" ]] && GA=(--attr-only HEAD)
 GATE=$(python3 tools/gate.py "$TMP/index.html" "${GA[@]}" 2>&1) || fail gate "$GATE"; GATE=$(echo "$GATE" | head -1); echo "$GATE"
 RENDER=$(node tools/render.js "$TMP/index.html" 2>&1) || fail render "$RENDER"; RENDER=$(echo "$RENDER" | head -1); echo "$RENDER"

@@ -26,6 +26,7 @@ from collections import Counter, defaultdict
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pagelib import (ITEM_ATTRS, OID_RE, QID_RE, STATUSES, TYPES, attrs, briefs, items,  # noqa: E402
                      read_page, text)
+import content_rules  # noqa: E402  (source-and-scope rules shared with migrate_check.py)
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SHELVES = {'fm', 'peds'}
@@ -82,6 +83,15 @@ CATALOG = {
                      'increment data-item-version by 1 on the edited item'),
     'attr-only': ('(--attr-only) text and tag structure identical to REF; identity/option attributes untouched',
                   'revert the non-attribute change, or ship it as a content edit without --attr-only'),
+    # source and scope, every brief type (tools/content_rules.py; tools/MIGRATION_CONTRACT.md "Every brief type")
+    'G1': ('no placeholder or note-to-self on the page ("study gap", "trigger unknown", "TBD", "to be determined")',
+           'write the sourced content, or end the ladder or list where the exam stops ("Top rung"); record the gap locally, never on the page'),
+    'G2': ('no failure trigger without a time or number ("if no improvement", "if no response")',
+           'write the time or number from the pasted or verified source ("no improvement at 48 to 72 hours"), or a named failure'),
+    'G3': ('every management-ladder row has an "Escalate when" cell; only the last row may say "Top rung"',
+           'fill the sourced trigger; the last rung the exam tests says "Top rung"'),
+    'K3': ('every mnemonic names the widely taught source it comes from (data-mn-src)',
+           'add data-mn-src="First Aid" / "AnKing" / "AMBOSS" / "source explanation" / a URL; a mnemonic with no such source is removed, never invented'),
 }
 
 
@@ -314,6 +324,8 @@ def check_page(page, g, page_path):
                     continue
                 if nkey(t) not in h4map:
                     g.fail('pairs-with', '%s:%s' % (b.id, nkey(t).replace(' ', '_')[:60]), '%s Pairs-with <b>%s</b> matches no <h4>' % (b.id, t))
+        for code, key, msg in content_rules.check_brief(b.id, inn):
+            g.fail(code, key, msg)
         if '**' in inn:
             g.fail('residue', b.id + ':md', '%s contains raw markdown **' % b.id)
         if re.search(r'&lt;/?(?:b|i|span|sup|sub|div|p|br|em|strong)\b', inn):
