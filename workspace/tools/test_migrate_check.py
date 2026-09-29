@@ -122,6 +122,34 @@ r = run(LIS[0], GOLD, dict(GMAP, items=[{'id': re.search(r'data-item-id="(q_\w+)
 hit = any(f.startswith('C1') for f in r['fails'])
 print(('ok  ' if hit else 'BAD ') + 'old stem clue without a clue row: expects FAIL C1')
 bad += not hit
-total = len(CASES) + 7
+# K1/K2: a highlighted mnemonic and its scale reference (Jonathan 2026-09-28: CRASH and Burn was flattened into a tile)
+MN_OLD = ('<div class="crit"><b>Diagnosis</b> 4 of 5 <span class="scaleref" data-scale="t-mn">ABC criteria</span></div>'
+          '<h5>ABC Rule</h5><ul class="plain" id="t-mn"><li><b>A</b>lpha &ndash; <b>first</b> thing</li>'
+          '<li><b>B</b>eta &ndash; second</li><li><b>C</b>harlie &ndash; third</li></ul>')
+flat = GOLD.replace('</h4>', '</h4><div class="crit"><b>Alpha:</b> first thing &middot; <b>Beta:</b> second &middot; <b>Charlie:</b> third</div>', 1)
+r = run(MN_OLD, flat, GMAP)
+hit = any(f.startswith('K1') for f in r['fails']) and any(f.startswith('K2') for f in r['fails'])
+print(('ok  ' if hit else 'BAD ') + 'mnemonic flattened and scale reference dropped: expects FAIL K1 and K2')
+bad += not hit
+kept = GOLD.replace('</h4>', '</h4>' + MN_OLD.replace('<ul class="plain"', '<ul class="plain mnem"').replace('<li><b>', '<li><b class="mn">'), 1)
+r = run(MN_OLD, kept, GMAP)
+ok = not any(f[:2] in ('K1', 'K2') for f in r['fails'])
+print(('ok  ' if ok else 'BAD ') + 'mnemonic carried with highlights passes K1 and K2' + ('' if ok else f": {[f for f in r['fails'] if f[:2] in ('K1','K2')]}"))
+bad += not ok
+nob = kept.replace('<b>first</b>', 'first')
+r = run(MN_OLD, nob, GMAP)
+hit = any('highlighted phrases lost' in f for f in r['fails'])
+print(('ok  ' if hit else 'BAD ') + 'mnemonic highlight removed: expects FAIL K1')
+bad += not hit
+plainmn = GOLD.replace('</h4>', '</h4>' + MN_OLD, 1)
+r = run(MN_OLD, plainmn, GMAP)
+hit = any('is not highlighted' in f for f in r['fails'])
+print(('ok  ' if hit else 'BAD ') + 'mnemonic carried without letter highlighting: expects FAIL K1')
+bad += not hit
+r = run('<div class="pearls"><span class="lbl">Mnemonic</span> <b>5 Ts</b> the cyanotic lesions</div>', GOLD, GMAP)
+hit = any('5 ts' in f for f in r['fails'])
+print(('ok  ' if hit else 'BAD ') + 'pearl mnemonic term lost: expects FAIL K1')
+bad += not hit
+total = len(CASES) + 12
 print(f'{total - bad}/{total} passed')
 sys.exit(1 if bad else 0)

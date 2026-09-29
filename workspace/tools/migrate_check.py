@@ -29,7 +29,9 @@ ROLES = {'decides', 'localizes', 'supports', 'excludes', 'decoy'}
 
 
 def norm(s):
-    s = H.unescape(re.sub(r'<[^>]+>', ' ', s or ''))
+    s = re.sub(r'</?(b|i|em|strong|sup|sub)\b[^>]*>', '', s or '')
+    s = H.unescape(re.sub(r'<[^>]+>', ' ', s))
+    s = s.replace('\u2013', '-').replace('\u2265', '>=')
     s = s.replace('→', '->').replace('’', "'")
     return re.sub(r'\s+', ' ', s).strip().lower()
 
@@ -340,6 +342,47 @@ def main():
         shared = shingles(new + ' ' + ' '.join(re.findall(r'data-(?:d1|d2)="([^"]*)"', new))) & shingles(open(src_arg, encoding='utf-8').read())
         if shared:
             F(f'V2 {len(shared)} run(s) of 10 or more words copied from the vendor source, e.g. "{sorted(shared)[0]}"')
+
+    # ---- K1 mnemonics carried and highlighted; K2 scale references resolve
+    def mnems(html_):
+        out = []
+        for mm in re.finditer(r'(?:<h5[^>]*>(.*?)</h5>\s*)?<ul class="(plain(?: mnem)?)"([^>]*)>(.*?)</ul>', html_, re.S):
+            lis = re.findall(r'<li[^>]*>(.*?)</li>', mm.group(4), re.S)
+            heads = [re.match(r'\s*<b(?: class="mn")?>([^<]{1,12})</b>', li) for li in lis]
+            if lis and sum(1 for h in heads if h) >= max(2, len(lis) * 0.7):
+                out.append({'title': norm(mm.group(1) or ''), 'id': (re.search(r'id="([^"]+)"', mm.group(3)) or [None, None])[1],
+                            'initials': [h.group(1) if h else '' for h in heads],
+                            'bolds': [norm(b) for li in lis for b in re.findall(r'<b(?: class="mn")?>(.*?)</b>', li)[1:]],
+                            'hl': 'mnem' in mm.group(2) and all(re.match(r'\s*<b class="mn">', li) for li in lis),
+                            'seps': all(re.search(r'\s[\u2014\u2013]\s|\s&ndash;\s', H.unescape(li)) or re.search(r'\s&ndash;\s', li) for li in lis),
+                            'n': len(lis)})
+        return out
+    newm = mnems(new)
+    for om in mnems(old):
+        match = next((x for x in newm if x['initials'] == om['initials']), None)
+        label = om['title'] or '/'.join(om['initials'])
+        if not match:
+            F(f'K1 mnemonic "{label}" is not carried as a highlighted mnemonic block (ul.plain, each line opening with its bold letter: {"".join(om["initials"])})')
+            continue
+        if not match['hl']:
+            F(f'K1 mnemonic "{label}" is not highlighted: use <ul class="plain mnem"> and open each line with <b class="mn">letter</b>')
+        if om['title'] and om['title'] not in newn:
+            F(f'K1 mnemonic name "{om["title"]}" is missing from the new brief')
+        if not match['seps']:
+            F(f'K1 mnemonic "{label}": every line needs " &ndash; " between the term and its meaning (the page renders it as a masked mnemonic)')
+        lost = [b for b in om['bolds'] if b not in match['bolds']]
+        if lost:
+            F(f'K1 mnemonic "{label}": highlighted phrases lost: {lost[:4]}')
+    for blk in re.findall(r'<div class="[^"]*"><span class="lbl">([^<]*[Mm]nemonic[^<]*)</span>(.*?)</div>', old, re.S):
+        for b in re.findall(r'<b>(.*?)</b>', blk[1]):
+            if norm(b) and not re.search(r'<b[^>]*>\s*' + re.escape(b.strip()) + r'\s*</b>', new):
+                F(f'K1 mnemonic block "{norm(blk[0])}": highlighted term "{norm(b)}" is not carried in bold')
+    for sc in re.findall(r'class="scaleref"[^>]*data-scale="([^"]+)"', old):
+        if f'data-scale="{sc}"' not in new:
+            F(f'K2 scale reference to #{sc} (the criteria tile\'s link to its mnemonic or table) was dropped')
+    for sc in re.findall(r'class="scaleref"[^>]*data-scale="([^"]+)"', new):
+        if f'id="{sc}"' not in new:
+            F(f'K2 scale reference #{sc} has no target in the new brief')
 
     # ---- H1 inbound titles (needs --page=index.html)
     page_arg = next((x[7:] for x in sys.argv[1:] if x.startswith('--page=')), None)

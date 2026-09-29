@@ -2,7 +2,7 @@
 
 One row per rule. A rule is only trusted when it has a mechanical check and a mutation test, or is on the reviewer's list. The golden brief is `tools/tests/migrate/golden_hip.html` (the approved septic hip brief, repaired 2026-09-28: ids, aliases, acronyms).
 
-Before confirming any Type C brief or migration: `python3 tools/test_migrate_check.py` (every case must pass; 42 cases on 2026-09-28), then `tools/migrate_check.py <old> <new> <map> --page=index.html --source=<local source>`, then the reviewer list below. A brief is not reported as done while any of the three fails.
+Before confirming any Type C brief or migration: `python3 tools/test_migrate_check.py` (every case must pass; 47 cases on 2026-09-28), then `tools/migrate_check.py <old> <new> <map> --page=index.html --source=<local source>`, then the reviewer list below. A brief is not reported as done while any of the three fails.
 
 ## Defect to rule (the audit loop)
 When Jonathan or a reviewer finds a defect the checker passed, in the same batch: (1) add the check to `migrate_check.py`, (2) add a mutation to `test_migrate_check.py` that reproduces it, (3) add the rule to the skill that authors it (board-brief, brief-migration or study-page-builder) and a row here, (4) re-run the self-test, then re-check every brief already produced in the batch. The brief is not re-shown until all four are done.
@@ -34,6 +34,8 @@ When Jonathan or a reviewer finds a defect the checker passed, in the same batch
 | voice | No em dash; no "noise" or "separates nothing" | standing rules | em dash; banned wording |
 | markup | Tables in `.tw` with a caption; jump links resolve; replaced ids have alias spans | study-page-builder | table not wrapped; alias missing |
 | M1 | Table masks: Tier tables carry no `data-mask`; Differential `3`; first tests `4`; clue and red-flag tables `none` | study-page-builder "Wrappers and captions"; R4 worker found the golden itself had `data-mask="3"` on its Tier table (golden fixed) | mask on Tier table; differential without mask 3 |
+| K1 | Every mnemonic is carried and highlighted: a mnemonic list stays a `<ul class="plain mnem">` under its named `<h5>`, each line opening with `<b class="mn">letter</b>`, " &ndash; " between term and meaning (the page renders it as a masked mnemonic), and every bolded phrase kept; a pearl labeled Mnemonic keeps its bold terms | Jonathan 2026-09-28 ("save and highlight the mnemonic"); every kawasaki run (C, P, R2 to R5) had flattened or stripped CRASH and Burn | mnemonic flattened; highlight removed; carried without letter highlighting; pearl mnemonic term lost |
+| K2 | The criteria tile keeps its `.scaleref` link to the mnemonic or scale table, and every `.scaleref` has a target | board-brief 5.3 (scale rule) | scale reference dropped |
 | H1 | The new `<h4>` keeps the old title unless every inbound Pairs-with reference and the sidebar link are listed in `inbound_rewrites` and rewritten (run with `--page=index.html`) | study-page-builder xrefs (exact-title links); audit run defect 2026-09-28 | title changed, inbound references break |
 | Q1 | A carried claim keeps its qualifiers (only, especially, usually, never, not, must, most, highest, wrong...) and its "and" (all conditions required) never becomes "or"; a changed qualifier is a sourced `corrected` row, or `qualifier_ok` states why the meaning is the same | pilot M1 (arm C "especially" to "most common"; arm P "is wrong" to "is less likely"); audit run reviewer | qualifier softened; and became or |
 | S1 | A corrected number lists `stale_patterns` (old wordings); none may remain anywhere in the brief, items included | audit run reviewer (old echo schedule reappeared in an item stem) | corrected value left behind; corrected number without stale patterns |
@@ -52,3 +54,6 @@ When Jonathan or a reviewer finds a defect the checker passed, in the same batch
 5. Corrections are right per current guidelines and cited, and no outdated number was carried as `stable`.
 6. A clue role that is the worker's reading, not the source's, is marked ⚠︎ (role inferred) on the page.
 7. Every claim in the worker's report is backed by a check (for example "no inbound references" must match `--page`).
+
+## Page setup this contract needs (one time, before the first Type C ship)
+- Mnemonic highlight: in `mnemonics()` carry the class (`if(ul.classList.contains('mnem')) dl.classList.add('mnem');`) and add CSS `dl.rows.mnem dt b.mn{color:var(--criteria);font-size:1.25em;font-weight:800}`. Shown in the kawasaki preview; not yet on the page.
