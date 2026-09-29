@@ -57,3 +57,4 @@ When Jonathan or a reviewer finds a defect the checker passed, in the same batch
 
 ## Page setup this contract needs (one time, before the first Type C ship)
 - Mnemonic highlight: in `mnemonics()` carry the class (`if(ul.classList.contains('mnem')) dl.classList.add('mnem');`) and add CSS `dl.rows.mnem dt b.mn{color:var(--criteria);font-size:1.25em;font-weight:800}`. Shown in the kawasaki preview; not yet on the page.
+- Section headers (chosen by Jonathan 2026-09-29, option D of four shown): `h5.tsec{font-family:var(--serif);font-size:20px;font-weight:600;text-transform:none;letter-spacing:-.15px;color:var(--ink);line-height:1.2;margin:32px 0 10px;padding:1px 0 1px 11px;border-left:3px solid var(--accent);scroll-margin-top:12px}`. Replaces the pilot rule (serif in all caps with wide spacing, inherited from the page's small h5 label style). Sub-labels such as a mnemonic's name keep the small caps label style.
