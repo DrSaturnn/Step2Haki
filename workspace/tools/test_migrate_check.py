@@ -66,7 +66,7 @@ CASES = [
     ('corrected value left behind', EMPTY, GOLD, dict(GMAP, claims=[{'id': 's1', 'kind': 'number', 'text': 'old', 'disposition': 'corrected', 'new_text': 'Kocher', 'reason': 'src', 'currency': 'verified', 'source': 'src', 'stale_patterns': ['Kocher']}]), 'S1'),
     ('corrected number without stale patterns', EMPTY, GOLD, dict(GMAP, claims=[{'id': 's2', 'kind': 'number', 'text': 'old', 'disposition': 'corrected', 'new_text': 'Kocher', 'reason': 'src', 'currency': 'verified', 'source': 'src'}]), 'S1'),
     ('acronym used before written out', EMPTY, GOLD.replace('</h4>', ' ESR</h4>', 1), GMAP, 'V1'),
-    ('mask on Tier table', EMPTY, GOLD.replace('<table>\n<caption>Management ladder', '<table data-mask="3">\n<caption>Management ladder', 1) if '<table>\n<caption>Management ladder' in GOLD else re.sub(r'<table>(\s*<caption>[^<]*</caption>\s*<thead><tr><th>Tier)', r'<table data-mask="3">\1', GOLD, count=1), GMAP, 'M1'),
+    ('mask on Tier table', EMPTY, re.sub(r'<table( class="[^"]*")?>(\s*<caption>[^<]*</caption>\s*<thead><tr><th>Tier)', r'<table\1 data-mask="3">\2', GOLD, count=1), GMAP, 'M1'),
     ('differential without mask 3', EMPTY, re.sub(r'<table([^>]*) data-mask="3"([^>]*>\s*<caption>[^<]*</caption>\s*<thead><tr><th>Diagnosis)', r'<table\1\2', GOLD, count=1), GMAP, 'M1'),
     ('mixed-case acronym not written out', EMPTY, GOLD.replace('</h4>', ' IgM</h4>', 1), GMAP, 'V1'),
     ('lowercase abbreviation not written out', EMPTY, li_edit(0, lambda x: x.replace('WBC 16,500', '20 white cells/hpf; WBC 16,500')), GMAP, 'V1'),
@@ -75,6 +75,10 @@ CASES = [
     ('inferred role not flagged', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'r2', 'kind': 'clue', 'source': 'NBME stem', 'text': 'afebrile', 'role': 'excludes', 'role_basis': 'inferred', 'disposition': 'carried', 'new_text': 'Well, afebrile, walks with a limp'}]), 'R1'),
     ('stem without objective data', EMPTY, li_edit(0, lambda x: re.sub(r'(data-d2-id="[^"]*"[^>]*>).*?(&rarr;)', r'\1 2-year-old girl who will not stand \2', x, count=1, flags=re.S)), GMAP, 'I8'),
     ('intensity softened in a source clue', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'q3', 'kind': 'claim', 'text': 'in obvious discomfort', 'disposition': 'carried', 'new_text': 'Kocher'}]), 'Q1'),
+    ('script not in a scriptcard', EMPTY, GOLD.replace('<div class="scriptcard multi">', '<div>', 1), GMAP, 'L1'),
+    ('two-disease script without multi', EMPTY, GOLD.replace('<table class="script multi"', '<table class="script"', 1), GMAP, 'L1'),
+    ('tests table not dense', EMPTY, GOLD.replace('<table class="dense" data-mask="4"><caption>First tests', '<table data-mask="4"><caption>First tests', 1), GMAP, 'L3'),
+    ('first step split out of the group', EMPTY, GOLD.replace('<tr><td>Hip ultrasound</td><td>First</td>', '</tbody><tbody><tr><td>Hip ultrasound</td><td>First</td>', 1), GMAP, 'L2'),
     ('number without currency', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'n1', 'kind': 'number', 'text': 'x', 'disposition': 'carried', 'new_text': 'Kocher'}]), 'N1'),
 ]
 # a dx stem that names the topic diagnosis

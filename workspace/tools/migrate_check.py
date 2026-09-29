@@ -286,6 +286,40 @@ def main():
             want = 'none'
         if want and (not mask or mask.group(1) != want):
             F(f'M1 table "{" | ".join(heads[:3])}" needs data-mask="{want}"')
+    # L1-L3 Type C layout (tools/typec/typec.css; chosen 2026-09-29)
+    sec = re.search(r'<h5 class="tsec"[^>]*>Illness script</h5>(.*?)(?=<h5 class="tsec"|$)', new, re.S)
+    if sec:
+        sc = re.search(r'<div class="scriptcard( multi)?">', sec.group(1))
+        st = re.search(r'<table class="script( multi)?"[^>]*>(.*?)</table>', sec.group(1), re.S)
+        if not sc or not st:
+            F('L1 illness script must be <div class="scriptcard"> holding <table class="script"> and the chain')
+        else:
+            ncol = len(re.findall(r'<th[ >]', (re.search(r'<thead>(.*?)</thead>', st.group(2), re.S) or [None, ''])[1] if re.search(r'<thead>', st.group(2)) else ''))
+            multi = ncol > 2
+            if bool(st.group(1)) != multi or bool(sc.group(1)) != multi:
+                F(f'L1 illness script with {ncol} columns: table and scriptcard need class "multi" exactly when it compares 2 or 3 diseases')
+            if '<div class="chainblk">' in sec.group(1) and sec.group(1).find('<div class="chainblk">') < sec.group(1).find('<div class="scriptcard'):
+                F('L1 the chain belongs inside the scriptcard, after the table')
+    for tm in re.finditer(r'<table([^>]*)>(.*?)</table>', new, re.S):
+        heads = [norm(h) for h in re.findall(r'<th[^>]*>(.*?)</th>', tm.group(2))]
+        cls = (re.search(r'class="([^"]*)"', tm.group(1)) or [None, ''])[1].split()
+        kind = 'tests' if heads[:2] == ['test', 'order'] else 'differential' if heads[:2] == ['diagnosis', 'the stem shows'] else 'ladder' if heads[:1] == ['tier'] else None
+        if kind and 'dense' not in cls:
+            F(f'L3 {kind} table needs class "dense" (compact row cards on phones)')
+        if kind == 'tests':
+            bodies = re.findall(r'<tbody([^>]*)>(.*?)</tbody>', tm.group(2), re.S)
+            firsts = []
+            for bi, (battr, body) in enumerate(bodies):
+                for tr in re.findall(r'<tr[^>]*>(.*?)</tr>', body, re.S):
+                    cells = re.findall(r'<td[^>]*>(.*?)</td>', tr, re.S)
+                    if len(cells) > 1 and norm(cells[1]).startswith('first'):
+                        firsts.append((bi, 'first' in battr))
+            if firsts:
+                if any(b != 0 or not ok for b, ok in firsts):
+                    F('L2 every "First" test goes in one <tbody class="first"> at the top of the tests table (done together, in either order)')
+            elif any('first' in battr for battr, _ in bodies):
+                F('L2 <tbody class="first"> holds no "First" test')
+
     tables = len(re.findall(r'<table', new))
     wrapped = len(re.findall(r'<div class="tw">\s*<table', new))
     caps = len(re.findall(r'<table[^>]*>\s*<caption>', new))
