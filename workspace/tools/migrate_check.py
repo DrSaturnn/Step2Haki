@@ -52,7 +52,8 @@ PRIOR_DX = re.compile(r'\b(treated|drained|given|received|after (ivig|surgery|an
 
 QWORDS = {'always', 'never', 'only', 'especially', 'usually', 'rarely', 'most', 'least', 'all', 'none', 'not', 'must',
           'highest', 'lowest', 'wrong', 'excluded', 'required', 'contraindicated', 'unless', 'except',
-          'obvious', 'marked', 'markedly', 'severe', 'mild', 'bilateral', 'unilateral', 'persistent', 'progressive', 'sudden'}
+          'obvious', 'marked', 'markedly', 'severe', 'mild', 'bilateral', 'unilateral', 'persistent', 'progressive', 'sudden',
+          'triggers', 'trigger', 'before', 'after', 'then', 'until'}
 
 
 OBJ = re.compile(r'\bt \d|\bhr \d|\brr \d|\bbp \d|\d[\d,.]*\s*(mm|mg|g/dl|/mm|u/l|%|cm|/min|meq|mmol)|\bafebrile\b|well[ -]appearing|ultrasound shows|radiograph|echocardiogram shows|x-ray shows')
@@ -306,6 +307,28 @@ def main():
                     if len(c_) > 12 and not any(t and (t in c_ or c_ in t) for t in traced):
                         F(f'N2 table cell not traced in the claim map: "{c_[:60]}"')
 
+    # O1 an Order label in the tests table is a claim: changing it needs a corrected row with a clinical reason
+    def orders(h):
+        out = {}
+        for tm in re.finditer(r'<table[^>]*>(.*?)</table>', h, re.S):
+            heads = [norm(x) for x in re.findall(r'<th[^>]*>(.*?)</th>', tm.group(1))]
+            if heads[:2] != ['test', 'order']:
+                continue
+            for tr in re.findall(r'<tr[^>]*>(.*?)</tr>', tm.group(1), re.S):
+                cells = [norm(x) for x in re.findall(r'<td[^>]*>(.*?)</td>', tr, re.S)]
+                if len(cells) > 1 and cells[0]:
+                    out[cells[0]] = cells[1]
+        return out
+    oo, no = orders(old), orders(new)
+    for ot, ov in oo.items():
+        fw = lambda x: (re.findall(r'[a-z0-9]{3,}', x) or [''])[0]
+        nt = next((k for k in no if fw(k) == fw(ot)), None)
+        if nt and no[nt] != ov:
+            ok = any(c.get('disposition') == 'corrected' and ov in norm(c.get('text', '')) and c.get('reason')
+                     and not re.search(r'vocabulary|style|template|type c', c.get('reason', ''), re.I) for c in claims)
+            if not ok:
+                F(f'O1 order of "{nt}" changed from "{ov}" to "{no[nt]}" without a corrected row giving a clinical reason (a vocabulary or style rule is not one)')
+
     # L1-L3 Type C layout (tools/typec/typec.css; chosen 2026-09-29)
     sec = re.search(r'<h5 class="tsec"[^>]*>Illness script</h5>(.*?)(?=<h5 class="tsec"|$)', new, re.S)
     if sec:
@@ -348,7 +371,7 @@ def main():
                             continue
                         for tok in [w for w in re.findall(r'[a-z]{6,}', t) if w not in ('weight', 'bearing', 'protein', 'reactive', 'sedimentation')][:2]:
                             if re.search(r'(triggers?|then|obtain|order|next|:)\s+[^;.]{0,40}\b' + tok, norm(r[-1])):
-                                F(f'L2 grouped first tests route to each other ("{norm(r[-1])[:50]}" sends to {tok}); a test whose use another result decides is By branch; otherwise drop the routing')
+                                F(f'L2 grouped first tests route to each other ("{norm(r[-1])[:50]}" sends to {tok}): move the dependent test out of the group to By branch and keep the routing; never delete a carried sequence to pass this check')
             elif any('first' in battr for battr, _ in bodies):
                 F('L2 <tbody class="first"> holds no "First" test')
 

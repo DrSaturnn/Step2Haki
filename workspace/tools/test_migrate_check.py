@@ -82,6 +82,8 @@ CASES = [
     ('new claim without a source', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'n9', 'kind': 'claim', 'text': 'x', 'disposition': 'new', 'new_text': 'Kocher'}]), 'new claim without a source'),
     ('illness script line untraced', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'n8', 'kind': 'claim', 'text': 'x', 'disposition': 'carried', 'new_text': 'Kocher'}]), 'N2'),
     ('grouped first tests route to each other', EMPTY, GOLD.replace('Gray zone: decide on aspiration by the clinical picture and the ultrasound', 'Gray zone: ultrasound', 1), GMAP, 'L2'),
+    ('sequence word dropped', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'q4', 'kind': 'claim', 'text': 'CRP triggers supplemental labs', 'disposition': 'carried', 'new_text': 'Kocher'}]), 'Q1'),
+    ('order label changed for style', '<table><thead><tr><th>Test</th><th>Order</th></tr></thead><tbody><tr><td>Blood culture</td><td>By branch</td></tr></tbody></table>', GOLD, GMAP, 'O1'),
     ('number without currency', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'n1', 'kind': 'number', 'text': 'x', 'disposition': 'carried', 'new_text': 'Kocher'}]), 'N1'),
 ]
 # a dx stem that names the topic diagnosis
