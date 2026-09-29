@@ -66,6 +66,14 @@ CASES = [
     ('corrected value left behind', EMPTY, GOLD, dict(GMAP, claims=[{'id': 's1', 'kind': 'number', 'text': 'old', 'disposition': 'corrected', 'new_text': 'Kocher', 'reason': 'src', 'currency': 'verified', 'source': 'src', 'stale_patterns': ['Kocher']}]), 'S1'),
     ('corrected number without stale patterns', EMPTY, GOLD, dict(GMAP, claims=[{'id': 's2', 'kind': 'number', 'text': 'old', 'disposition': 'corrected', 'new_text': 'Kocher', 'reason': 'src', 'currency': 'verified', 'source': 'src'}]), 'S1'),
     ('acronym used before written out', EMPTY, GOLD.replace('</h4>', ' ESR</h4>', 1), GMAP, 'V1'),
+    ('mask on Tier table', EMPTY, GOLD.replace('<table>\n<caption>Management ladder', '<table data-mask="3">\n<caption>Management ladder', 1) if '<table>\n<caption>Management ladder' in GOLD else re.sub(r'<table>(\s*<caption>[^<]*</caption>\s*<thead><tr><th>Tier)', r'<table data-mask="3">\1', GOLD, count=1), GMAP, 'M1'),
+    ('differential without mask 3', EMPTY, re.sub(r'<table([^>]*) data-mask="3"([^>]*>\s*<caption>[^<]*</caption>\s*<thead><tr><th>Diagnosis)', r'<table\1\2', GOLD, count=1), GMAP, 'M1'),
+    ('mixed-case acronym not written out', EMPTY, GOLD.replace('</h4>', ' IgM</h4>', 1), GMAP, 'V1'),
+    ('lowercase abbreviation not written out', EMPTY, li_edit(0, lambda x: x.replace('WBC 16,500', '20 white cells/hpf; WBC 16,500')), GMAP, 'V1'),
+    ('and became or', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'q2', 'kind': 'claim', 'text': 'labs and echo supportive', 'disposition': 'carried', 'new_text': 'Kocher or'}]), 'Q1'),
+    ('source clue without role basis', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'r1', 'kind': 'clue', 'source': 'NBME stem', 'text': 'afebrile', 'role': 'excludes', 'disposition': 'carried', 'new_text': 'afebrile'}]), 'R1'),
+    ('inferred role not flagged', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'r2', 'kind': 'clue', 'source': 'NBME stem', 'text': 'afebrile', 'role': 'excludes', 'role_basis': 'inferred', 'disposition': 'carried', 'new_text': 'Well, afebrile, walks with a limp'}]), 'R1'),
+    ('stem without objective data', EMPTY, li_edit(0, lambda x: re.sub(r'(data-d2-id="[^"]*"[^>]*>).*?(&rarr;)', r'\1 2-year-old girl who will not stand \2', x, count=1, flags=re.S)), GMAP, 'I8'),
     ('number without currency', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'n1', 'kind': 'number', 'text': 'x', 'disposition': 'carried', 'new_text': 'Kocher'}]), 'N1'),
 ]
 # a dx stem that names the topic diagnosis
@@ -99,10 +107,21 @@ print(('ok  ' if hit else 'BAD ') + 'Pairs-with partner not on the page: expects
 bad += not hit
 src = os.path.join(tempfile.mkdtemp(), 'src.md')
 open(src, 'w').write('Which of the following is the most likely mechanism of this patient\'s tachypnea?')
-r = run(EMPTY, li_edit(0, lambda x: re.sub(r'data-lead-in="[^"]*"', 'data-lead-in="Which of the following is the most likely mechanism of this patient&#39;s tachypnea?"', x)), GMAP, ('--source=' + src,))
+open(src, 'w').write('A 2-year-old girl is brought to the office because of one day of irritability and she cries whenever her diaper is changed.')
+r = run(EMPTY, li_edit(0, lambda x: x.replace('2-year-old girl with 1 day of irritability', '2-year-old girl is brought to the office because of one day of irritability and she cries whenever her diaper is changed;')), GMAP, ('--source=' + src,))
 hit = any('V2' in f for f in r['fails'])
-print(('ok  ' if hit else 'BAD ') + 'vendor lead-in copied: expects FAIL V2')
+print(('ok  ' if hit else 'BAD ') + 'vendor stem wording copied: expects FAIL V2')
 bad += not hit
-total = len(CASES) + 5
+open(src, 'w').write('Which of the following is the most likely mechanism of this patient\'s tachypnea?')
+r = run(EMPTY, li_edit(0, lambda x: re.sub(r'data-lead-in="[^"]*"', 'data-lead-in="Which of the following is the most likely mechanism of this patient&#39;s tachypnea?"', x)), GMAP, ('--source=' + src,))
+ok = not any('V2' in f for f in r['fails'])
+print(('ok  ' if ok else 'BAD ') + 'exact NBME lead-in allowed (Rule 11): no V2')
+bad += not ok
+# C1: an old stem clue with no clue row (the claim map must census every fragment of every old stem)
+r = run(LIS[0], GOLD, dict(GMAP, items=[{'id': re.search(r'data-item-id="(q_\w+)"', LIS[0]).group(1), 'disposition': 'carried'}]))
+hit = any(f.startswith('C1') for f in r['fails'])
+print(('ok  ' if hit else 'BAD ') + 'old stem clue without a clue row: expects FAIL C1')
+bad += not hit
+total = len(CASES) + 7
 print(f'{total - bad}/{total} passed')
 sys.exit(1 if bad else 0)

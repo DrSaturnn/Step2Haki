@@ -52,6 +52,8 @@ QWORDS = {'always', 'never', 'only', 'especially', 'usually', 'rarely', 'most', 
           'highest', 'lowest', 'wrong', 'excluded', 'required', 'contraindicated', 'unless', 'except'}
 
 
+OBJ = re.compile(r'\bt \d|\bhr \d|\brr \d|\bbp \d|\d[\d,.]*\s*(mm|mg|g/dl|/mm|u/l|%|cm|/min|meq|mmol)|\bafebrile\b|well[ -]appearing|ultrasound shows|radiograph|echocardiogram shows|x-ray shows')
+STOP = {'now', 'then', 'a', 'an', 'the', 'on', 'of', 'in', 'is', 'has', 'had', 'was', 'at', 'to', 'for', 'his', 'her', 'who', 'yo', 'm', 'f'}
 NEG = {'not', 'never', 'none', 'no', 'without', 'absent', 'negative'}
 
 
@@ -89,6 +91,8 @@ def item_contract(new, new_items, old_items, cmap, F, W):
             F(f'I2 {iid}: shorthand in stem ("{SHORTHAND.search(stem).group(0)}"); write age and sex in full, e.g. "4-year-old boy"')
         if not AGE_OPEN.match(stem):
             F(f'I2 {iid}: stem does not open with age and sex ("{stem[:40]}")')
+        if a.get('data-type') in ('dx', 'next', 'test', 'avoid', 'screen', 'stage') and not OBJ.search(stem):
+            F(f'I8 {iid}: stem gives no objective data (a vital sign, a lab or imaging value with units, "afebrile" or "well appearing")')
         if len(parts) < 3 or not parts[2]:
             F(f'I3 {iid}: no companion after the key')
         key = norm(parts[1]) if len(parts) > 1 else ''
@@ -166,6 +170,18 @@ def main():
             lost = QUANT(c['text']) - QUANT(c['new_text'])
             if lost:
                 F(f'Q1 {cid}: qualifier(s) {sorted(lost)} dropped from a carried claim ({c["text"][:50]!r}); keep them, use a sourced corrected row, or give qualifier_ok with the reason the meaning is unchanged')
+        if disp == 'carried' and c.get('text') and c.get('new_text') and not c.get('qualifier_ok'):
+            ot, nt2 = set(re.findall(r'[a-z]+', norm(c['text']))), set(re.findall(r'[a-z]+', norm(c['new_text'])))
+            if 'and' in ot and 'or' not in ot and 'or' in nt2:
+                F(f'Q1 {cid}: "and" became "or" in a carried claim ({c["text"][:50]!r}); conditions that were all required now read as alternatives')
+        if kind == 'clue' and re.search(r'nbme|uworld|source', (c.get('source') or '').lower()):
+            rb = c.get('role_basis')
+            if rb not in ('source', 'inferred'):
+                F(f'R1 {cid}: source clue needs role_basis source|inferred (is the role stated by the source explanation?)')
+            elif rb == 'inferred' and disp == 'carried':
+                row = next((r for r in re.findall(r'<tr>.*?</tr>|<li[^>]*>.*?</li>', new, re.S) if norm(c.get('new_text', '')) in norm(r)), '')
+                if row and not re.search(r'\u26a0|&#x26A0;|&#9888;', row, re.I):
+                    F(f'R1 {cid}: inferred role not marked with the warning flag where it appears')
         if disp == 'corrected' and kind == 'number':
             if not c.get('stale_patterns'):
                 F(f'S1 {cid}: corrected number without stale_patterns (old wordings that must not remain anywhere)')
@@ -181,8 +197,20 @@ def main():
         if disp in ('dropped', 'corrected') and not c.get('reason'):
             F(f'{cid}: {disp} without a reason')
 
-    # ---- items
+    # ---- C1 clue census: every fragment of every old bank stem is covered by a clue row
     old_items = items_of(old)
+    def cn(x):
+        return norm(x).replace('\u00b0', ' ').replace('  ', ' ')
+    clue_texts = [cn(c.get('text', '')) for c in claims if c.get('kind') == 'clue']
+    for iid, (_, body) in old_items.items():
+        stem = cn(body).split('->')[0]
+        for frag in re.split(r'[,;]| and | with ', stem):
+            frag = frag.strip(' .')
+            toks = set(re.findall(r'[a-z0-9./]+', frag)) - STOP
+            if len(frag) > 3 and toks and not any(toks <= set(re.findall(r'[a-z0-9./]+', t)) or (len(t) > 3 and t in frag) for t in clue_texts):
+                F(f'C1 {iid}: stem clue "{frag}" has no clue row in the claim map')
+
+    # ---- items
     new_items = items_of(new)
     inv = {i.get('id'): i for i in cmap.get('items', [])}
     for iid, (attrs, _) in old_items.items():
@@ -237,6 +265,24 @@ def main():
                 F(f'replaced id {rid} has no alias span')
     for t in re.findall(r'<table[^>]*>', new):
         pass
+    # M1 table masks (study-page-builder "Wrappers and captions")
+    for tm in re.finditer(r'<table([^>]*)>(.*?)</table>', new, re.S):
+        mask = re.search(r'data-mask="([^"]*)"', tm.group(1))
+        heads = [norm(h) for h in re.findall(r'<th[^>]*>(.*?)</th>', tm.group(2))]
+        first = heads[0] if heads else ''
+        want = None
+        if first == 'tier':
+            if mask:
+                F(f'M1 Tier table carries data-mask="{mask.group(1)}"; Tier tables carry no data-mask (the transform masks the intervention column)')
+            continue
+        if heads[:2] == ['diagnosis', 'the stem shows']:
+            want = '3'
+        elif heads[:2] == ['test', 'order']:
+            want = '4'
+        elif first in ('clue', 'finding'):
+            want = 'none'
+        if want and (not mask or mask.group(1) != want):
+            F(f'M1 table "{" | ".join(heads[:3])}" needs data-mask="{want}"')
     tables = len(re.findall(r'<table', new))
     wrapped = len(re.findall(r'<div class="tw">\s*<table', new))
     caps = len(re.findall(r'<table[^>]*>\s*<caption>', new))
@@ -252,7 +298,10 @@ def main():
             F(f'banned wording: "{bad}"')
     ACR_OK = {'CRASH', 'ST', 'GI', 'COVID-19', 'SARS', 'II', 'III', 'HR', 'RR', 'BP', 'COVID', 'US', 'IV', 'NBME', 'OK'}
     unexp, late = [], []
-    for a in dict.fromkeys(re.findall(r'\b([A-Z][A-Z0-9]{1,}(?:-[A-Z0-9]+)?)\b', text)):
+    LOWER_ABBR = ['hpf', 'lpf', 'prn']
+    cands = re.findall(r'\b([A-Z][A-Z0-9]{1,}(?:-[A-Z0-9]+)?)\b', text) + re.findall(r'\b((?:Ig|Hb)[A-Z0-9][A-Za-z0-9]*)\b', text) \
+        + [w for w in re.findall(r'\b([a-z]{3})\b', text) if w in LOWER_ABBR]
+    for a in dict.fromkeys(cands):
         if a in ACR_OK or len(a) > 8:
             continue
         m0 = re.search(r'\b' + re.escape(a) + r'\b', text)
@@ -287,7 +336,8 @@ def main():
         def shingles(x):
             w = re.findall(r"[a-z0-9]+", H.unescape(re.sub(r'<[^>]+>', ' ', x)).lower())
             return {' '.join(w[i:i + 10]) for i in range(len(w) - 9)}
-        shared = shingles(new + ' ' + ' '.join(re.findall(r'data-(?:lead-in|d1|d2)="([^"]*)"', new))) & shingles(open(src_arg, encoding='utf-8').read())
+        # NBME lead-ins may be exact (board-brief Rule 11), so the lead-in attribute is not scanned; stems and options are
+        shared = shingles(new + ' ' + ' '.join(re.findall(r'data-(?:d1|d2)="([^"]*)"', new))) & shingles(open(src_arg, encoding='utf-8').read())
         if shared:
             F(f'V2 {len(shared)} run(s) of 10 or more words copied from the vendor source, e.g. "{sorted(shared)[0]}"')
 
