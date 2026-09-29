@@ -23,7 +23,7 @@ import json
 import re
 import sys
 
-CLAIM_DISP = {'carried', 'moved', 'merged', 'dropped', 'corrected'}
+CLAIM_DISP = {'carried', 'moved', 'merged', 'dropped', 'corrected', 'new'}
 ITEM_DISP = {'carried', 'moved', 'merged', 'archived', 'retired'}
 ROLES = {'decides', 'localizes', 'supports', 'excludes', 'decoy'}
 
@@ -155,7 +155,9 @@ def main():
                 F(f'{cid}: clue without a valid role ({c.get("role")!r})')
             if disp == 'dropped':
                 F(f'{cid}: clue dropped: {c.get("text", "")[:70]}')
-        if disp in ('carried', 'corrected'):
+        if disp == 'new' and not c.get('source'):
+            F(f'{cid}: new claim without a source')
+        if disp in ('carried', 'corrected', 'new'):
             nt = norm(c.get('new_text', ''))
             if not nt:
                 F(f'{cid}: {disp} without new_text')
@@ -286,6 +288,16 @@ def main():
             want = 'none'
         if want and (not mask or mask.group(1) != want):
             F(f'M1 table "{" | ".join(heads[:3])}" needs data-mask="{want}"')
+    # N2 every illness-script fact and chain line is traced in the claim map (carried, corrected, or new with a source)
+    sec = re.search(r'<h5 class="tsec"[^>]*>Illness script</h5>(.*?)(?=<h5 class="tsec"|$)', new, re.S)
+    if sec and claims:
+        traced = [norm(c.get('new_text', '')) for c in claims if c.get('disposition') in ('carried', 'corrected', 'new') and c.get('new_text')]
+        facts = [norm(x) for x in re.findall(r'<tr><td>[^<]*</td>(.*?)</tr>', sec.group(1), re.S)]
+        facts += [norm(x).lstrip('-> ').strip() for x in re.findall(r'<p class="ar">(.*?)</p>', sec.group(1), re.S)]
+        for f_ in facts:
+            if len(f_) > 8 and not any(t and (t in f_ or f_ in t) for t in traced):
+                F(f'N2 illness-script line not traced in the claim map: "{f_[:60]}" (carried, corrected, or new with a source)')
+
     # L1-L3 Type C layout (tools/typec/typec.css; chosen 2026-09-29)
     sec = re.search(r'<h5 class="tsec"[^>]*>Illness script</h5>(.*?)(?=<h5 class="tsec"|$)', new, re.S)
     if sec:

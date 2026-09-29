@@ -2,7 +2,7 @@
 
 One row per rule. A rule is only trusted when it has a mechanical check and a mutation test, or is on the reviewer's list. The golden brief is `tools/tests/migrate/golden_hip.html` (the approved septic hip brief, repaired 2026-09-28: ids, aliases, acronyms).
 
-Before confirming any Type C brief or migration: `python3 tools/test_migrate_check.py` (every case must pass; 52 cases on 2026-09-29), then `tools/migrate_check.py <old> <new> <map> --page=index.html --source=<local source>`, then the reviewer list below. A brief is not reported as done while any of the three fails.
+Before confirming any Type C brief or migration: `python3 tools/test_migrate_check.py` (every case must pass; 54 cases on 2026-09-29), then `tools/migrate_check.py <old> <new> <map> --page=index.html --source=<local source>`, then the reviewer list below. A brief is not reported as done while any of the three fails.
 
 ## Defect to rule (the audit loop)
 When Jonathan or a reviewer finds a defect the checker passed, in the same batch: (1) add the check to `migrate_check.py`, (2) add a mutation to `test_migrate_check.py` that reproduces it, (3) add the rule to the skill that authors it (board-brief, brief-migration or study-page-builder) and a row here, (4) re-run the self-test, then re-check every brief already produced in the batch. The brief is not re-shown until all four are done.
@@ -47,6 +47,7 @@ When Jonathan or a reviewer finds a defect the checker passed, in the same batch
 | V2 | No run of 10 or more words in stems or option labels copied from the vendor source (an exact NBME lead-in is allowed, Rule 11) (`--source=repair/sources/...`) | Rule 11 (paraphrase the vendor); R3 copied the NBME lead-in | vendor lead-in copied |
 | C1 | Clue census: every fragment of every old bank stem has a clue row in the claim map | brief-migration step 3 (every clue in every bank stem) | old stem clue without a clue row |
 | R1 | Every clue row from a source stem states `role_basis`: `source` (the explanation states the role) or `inferred`; an inferred role carries the warning flag where it appears | standing rule "label speculation"; R5 reviewer (unmarked inferred role) | source clue without role basis; inferred role not flagged |
+| N2 | Every illness-script fact and chain line is traced in the claim map: carried, corrected, or `new` with a source (new content never sneaks in unsourced, and a carried timing such as "after day 7" cannot silently become "week 2 to 3") | R7 reviewer (script rows had no claim rows; one changed timing) | illness script line untraced; new claim without a source |
 | N1 | Every carried number (dose, schedule, window, threshold) is checked against current guidance: `currency` verified (with source), flagged (⚠︎ on page) or stable | "current guidelines set facts"; audit run defect 2026-09-28 (2004 echo schedule carried) | number without currency |
 
 ## Reviewer list (cannot be checked mechanically; blinded reviewer, CRITICAL if violated)

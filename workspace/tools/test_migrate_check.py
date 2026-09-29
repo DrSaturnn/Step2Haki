@@ -79,6 +79,8 @@ CASES = [
     ('two-disease script without multi', EMPTY, GOLD.replace('<table class="script multi"', '<table class="script"', 1), GMAP, 'L1'),
     ('tests table not dense', EMPTY, GOLD.replace('<table class="dense" data-mask="4"><caption>First tests', '<table data-mask="4"><caption>First tests', 1), GMAP, 'L3'),
     ('first step split out of the group', EMPTY, GOLD.replace('<tr><td>Hip ultrasound</td><td>First</td>', '</tbody><tbody><tr><td>Hip ultrasound</td><td>First</td>', 1), GMAP, 'L2'),
+    ('new claim without a source', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'n9', 'kind': 'claim', 'text': 'x', 'disposition': 'new', 'new_text': 'Kocher'}]), 'new claim without a source'),
+    ('illness script line untraced', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'n8', 'kind': 'claim', 'text': 'x', 'disposition': 'carried', 'new_text': 'Kocher'}]), 'N2'),
     ('number without currency', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'n1', 'kind': 'number', 'text': 'x', 'disposition': 'carried', 'new_text': 'Kocher'}]), 'N1'),
 ]
 # a dx stem that names the topic diagnosis
