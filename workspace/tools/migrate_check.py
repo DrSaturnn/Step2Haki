@@ -297,6 +297,14 @@ def main():
         for f_ in facts:
             if len(f_) > 8 and not any(t and (t in f_ or f_ in t) for t in traced):
                 F(f'N2 illness-script line not traced in the claim map: "{f_[:60]}" (carried, corrected, or new with a source)')
+    if claims:
+        traced = [norm(c.get('new_text', '')) for c in claims if c.get('disposition') in ('carried', 'corrected', 'new') and c.get('new_text')]
+        for tm in re.finditer(r'<table class="dense"[^>]*>(.*?)</table>', new, re.S):
+            for td in re.findall(r'<tbody[^>]*>.*?</tbody>', tm.group(1), re.S):
+                for cell in re.findall(r'<td[^>]*>(.*?)</td>', td, re.S):
+                    c_ = norm(cell)
+                    if len(c_) > 12 and not any(t and (t in c_ or c_ in t) for t in traced):
+                        F(f'N2 table cell not traced in the claim map: "{c_[:60]}"')
 
     # L1-L3 Type C layout (tools/typec/typec.css; chosen 2026-09-29)
     sec = re.search(r'<h5 class="tsec"[^>]*>Illness script</h5>(.*?)(?=<h5 class="tsec"|$)', new, re.S)
@@ -329,6 +337,18 @@ def main():
             if firsts:
                 if any(b != 0 or not ok for b, ok in firsts):
                     F('L2 every "First" test goes in one <tbody class="first"> at the top of the tests table (done together, in either order)')
+                fb = next((body for battr, body in bodies if 'first' in battr), '')
+                rows = [re.findall(r'<td[^>]*>(.*?)</td>', tr, re.S) for tr in re.findall(r'<tr[^>]*>(.*?)</tr>', fb, re.S)]
+                titles = [norm(r[0]) for r in rows if r and norm(r[0])]
+                for r in rows:
+                    if len(r) < 4:
+                        continue
+                    for t in titles:
+                        if t == norm(r[0]):
+                            continue
+                        for tok in [w for w in re.findall(r'[a-z]{6,}', t) if w not in ('weight', 'bearing', 'protein', 'reactive', 'sedimentation')][:2]:
+                            if re.search(r'(triggers?|then|obtain|order|next|:)\s+[^;.]{0,40}\b' + tok, norm(r[-1])):
+                                F(f'L2 grouped first tests route to each other ("{norm(r[-1])[:50]}" sends to {tok}); a test whose use another result decides is By branch; otherwise drop the routing')
             elif any('first' in battr for battr, _ in bodies):
                 F('L2 <tbody class="first"> holds no "First" test')
 
