@@ -58,7 +58,8 @@ When Jonathan or a reviewer finds a defect the checker passed, in the same batch
 4. One best answer; each distractor a real mimic a prepared student would weigh (F1 to F6).
 5. Corrections are right per current guidelines and cited, and no outdated number was carried as `stable`.
 6. A clue role that is the worker's reading, not the source's, is marked ⚠︎ (role inferred) on the page.
-7. Every claim in the worker's report is backed by a check (for example "no inbound references" must match `--page`).
+7. Order labels match the clinical path: a test done at diagnosis in every case is First even if another path also leads to it; a label changed to satisfy a layout check is CRITICAL (R10).
+8. Every claim in the worker's report is backed by a check (for example "no inbound references" must match `--page`).
 
 ## Page setup this contract needs (one time, before the first Type C ship)
 All of it lives in `tools/typec/typec.css` (section headers, mnemonic highlight, compact script, dense cards, first-steps group) plus the one-line transform patch in `tools/typec/transform_patch.md`. `tools/typec/preview.py` renders any brief with this setup without touching index.html. Nothing here is on the live page yet.
