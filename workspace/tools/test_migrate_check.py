@@ -74,6 +74,7 @@ CASES = [
     ('source clue without role basis', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'r1', 'kind': 'clue', 'source': 'NBME stem', 'text': 'afebrile', 'role': 'excludes', 'disposition': 'carried', 'new_text': 'afebrile'}]), 'R1'),
     ('inferred role not flagged', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'r2', 'kind': 'clue', 'source': 'NBME stem', 'text': 'afebrile', 'role': 'excludes', 'role_basis': 'inferred', 'disposition': 'carried', 'new_text': 'Well, afebrile, walks with a limp'}]), 'R1'),
     ('stem without objective data', EMPTY, li_edit(0, lambda x: re.sub(r'(data-d2-id="[^"]*"[^>]*>).*?(&rarr;)', r'\1 2-year-old girl who will not stand \2', x, count=1, flags=re.S)), GMAP, 'I8'),
+    ('intensity softened in a source clue', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'q3', 'kind': 'claim', 'text': 'in obvious discomfort', 'disposition': 'carried', 'new_text': 'Kocher'}]), 'Q1'),
     ('number without currency', EMPTY, GOLD, dict(GMAP, claims=[{'id': 'n1', 'kind': 'number', 'text': 'x', 'disposition': 'carried', 'new_text': 'Kocher'}]), 'N1'),
 ]
 # a dx stem that names the topic diagnosis

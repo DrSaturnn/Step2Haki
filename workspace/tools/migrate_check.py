@@ -51,7 +51,8 @@ PRIOR_DX = re.compile(r'\b(treated|drained|given|received|after (ivig|surgery|an
 
 
 QWORDS = {'always', 'never', 'only', 'especially', 'usually', 'rarely', 'most', 'least', 'all', 'none', 'not', 'must',
-          'highest', 'lowest', 'wrong', 'excluded', 'required', 'contraindicated', 'unless', 'except'}
+          'highest', 'lowest', 'wrong', 'excluded', 'required', 'contraindicated', 'unless', 'except',
+          'obvious', 'marked', 'markedly', 'severe', 'mild', 'bilateral', 'unilateral', 'persistent', 'progressive', 'sudden'}
 
 
 OBJ = re.compile(r'\bt \d|\bhr \d|\brr \d|\bbp \d|\d[\d,.]*\s*(mm|mg|g/dl|/mm|u/l|%|cm|/min|meq|mmol)|\bafebrile\b|well[ -]appearing|ultrasound shows|radiograph|echocardiogram shows|x-ray shows')
