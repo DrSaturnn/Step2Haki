@@ -539,14 +539,14 @@ def main():
         src_items = source_items(open(src_arg, encoding='utf-8').read())
         on_brief = {a.get('data-nbme') for a, _ in new_items.values() if a.get('data-nbme')}
         # a clue row quotes one clue, not the whole stem: rows over 25 words do not count toward C2
-        ctoks = [set(re.findall(r'[a-z0-9./]+', norm(c.get('text', '')))) for c in claims
+        ctoks = [set(re.findall(r'[a-z0-9]+(?:[./][a-z0-9]+)*', norm(c.get('text', '')))) for c in claims
                  if c.get('kind') == 'clue' and len(norm(c.get('text', '')).split()) <= 25]
         for nid in sorted(on_brief):
             if nid not in src_items:
                 F(f'C2 item data-nbme="{nid}" is not in the source file')
                 continue
             for frag in clauses(src_items[nid]['stem']):
-                toks = set(re.findall(r'[a-z0-9./]+', frag)) - STOP - CLAUSE_STOP
+                toks = set(re.findall(r'[a-z0-9]+(?:[./][a-z0-9]+)*', frag)) - STOP - CLAUSE_STOP  # "uncooperative." = "uncooperative" (P2)
                 if toks and not any(toks <= t for t in ctoks):
                     F(f'C2 {nid}: source clause "{frag}" has no clue row quoting it (every clue in the NBME stem is carried with its role)')
         qnum = {v['q']: k for k, v in src_items.items()}
