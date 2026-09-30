@@ -1,0 +1,14 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "var SHELVES=[['step2','Step 2'],['fm','Family Med'],['peds','Pediatrics'],\n             ['im','Medicine',1],['surg','Surgery',1],['obgyn','OB/GYN',1],\n             ['psych','Psychiatry',1],['neurology','Neurology',1]];",
+   "with": "var SHELVES=[['step2','Step 2'],['fm','Family Med'],['peds','Pediatrics'],['psych','Psych'],\n             ['im','Medicine',1],['surg','Surgery',1],['obgyn','OB/GYN',1],\n             ['neurology','Neurology',1]];"
+  },
+  {
+   "op": "replace_global",
+   "find": "   One document, three views.",
+   "with": "   One document, four views."
+  }
+ ]
+}

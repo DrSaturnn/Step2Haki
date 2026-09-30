@@ -244,6 +244,11 @@ def with_key_in_stem(lead):
     return li_edit(dxi, f)
 expect('which-medication item lists the key among the stem\'s drugs (N2: Q1 meperidine)', with_key_in_stem('Which of the following medications is most likely responsible for these findings?'), 'I4', False, text='keyed answer')
 expect('key in the stem of a non-medication item still fails', with_key_in_stem('Which of the following is the most likely cause of these findings?'), 'I4', text='keyed answer')
+# ---- s37 render: criteria tiles must grid (render.js not-gridded)
+CRIT0 = re.search(r'<div class="crit[^"]*"[^>]*>(?:(?!</div>).)*</div>', GOLD, re.S).group(0)
+expect('golden criteria tile grids', GOLD, 'L4', False)
+expect('criteria tile with "<b>Term:</b> definition" items does not grid (s37 psych drafts)', GOLD.replace(CRIT0, '<div class="crit"><span class="lbl">Criteria</span> <b>Fever:</b> 5 days &middot; <b>Rash:</b> present</div>'), 'L4')
+expect('single-item tile does not grid', GOLD.replace(CRIT0, '<div class="crit fu"><span class="lbl">Follow-up</span> <b>Return</b> &ndash; if worse</div>'), 'L4')
 total = len(CASES) + 12 + EXTRA
 print(f'{total - bad}/{total} passed')
 sys.exit(1 if bad else 0)

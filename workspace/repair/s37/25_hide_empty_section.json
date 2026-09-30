@@ -1,0 +1,9 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "    sw.style.display=(total===0||n)?'':'none'; sw.dataset.count=n;",
+   "with": "    /* a system section with no briefs yet stays hidden; front matter (h3 without a count) stays shown */\n    sw.style.display=(n||(total===0&&!sw.querySelector('h3.system .n')))?'':'none'; sw.dataset.count=n;"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "\n<div style=\"margin:70px 0 0;padding:22px 0 0;border-top:2px solid var(--rule)",
+   "with": "\n<!-- =================== PSYCH =================== -->\n<h3 class=\"system\" id=\"psych\">Psychiatry &amp; Behavioral Health <span class=\"n\">0 topics</span></h3>\n<p class=\"system-note\">Mood, anxiety, psychotic, substance use and behavioral topics.</p>\n\n<div style=\"margin:70px 0 0;padding:22px 0 0;border-top:2px solid var(--rule)"
+  },
+  {
+   "op": "replace_global",
+   "find": "    <a class=\"aq\" href=\"#bs-adolescent-vax\">Adolescent Immunization</a>\n  </div>\n</aside>",
+   "with": "    <a class=\"aq\" href=\"#bs-adolescent-vax\">Adolescent Immunization</a>\n    \n    <div class=\"sect\">Psychiatry &amp; Behavioral Health <span class=\"count\">0</span></div>\n  </div>\n</aside>"
+  },
+  {
+   "op": "replace_global",
+   "find": "obgyn:'OBGYN',prev:'PREV',strategy:'START',heme:'HEME'};",
+   "with": "obgyn:'OBGYN',prev:'PREV',strategy:'START',heme:'HEME',psych:'PSYCH'};"
+  }
+ ]
+}

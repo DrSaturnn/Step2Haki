@@ -2,6 +2,30 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-09-29 s37: Psych goes live for review: psych shelf and section, Type C page setup, 9 psych briefs (1 reviewer-accepted, 2 revised awaiting re-review, 6 first drafts with open review findings); Kawasaki migrated to Type C
+
+```
+Page: 210 briefs, 2050 items -> 219 briefs, 2170 items
+Briefs added (9):
+  - psychosis-duration: Psychosis in an Adult: Exclude a Cause, Then Time It Against Mood (16 items)
+  - bipolar-mania: Elevated or Irritable Mood: Mania, Hypomania, and What to Start or Stop (15 items)
+  - sz-psychosocial: Schizophrenia on Treatment: Psychosocial Care and Relapse Prevention (12 items)
+  - delirium: Delirium: Tell It From Dementia and Psychosis, Then Find the Cause (14 items)
+  - panic: Panic Disorder and Its Mimics: Which Anxiety, and How to Treat (16 items)
+  - ssri-effects: SSRI (Selective Serotonin Reuptake Inhibitor) Adverse Effects: Name the Effect, Then Take the Next Step (11 items)
+  - lithium-effects: The Patient on Lithium: Which Complication, and What to Do (12 items)
+  - ipv: Intimate Partner Violence in an Adult: Plan for Safety, Report by Who Is at Risk (12 items)
+  - gppd: Genito-Pelvic Pain/Penetration Disorder (Vaginismus): Exclude a Body Cause, Then Treat (9 items)
+Briefs changed (1):
+  - kawasaki (Kawasaki Disease): 3 items added (q_04918d28cea78d6d6e3f, q_8cb1497234ec678c9c04, q_1f532fe33cf4a10989c4); items edited (q_5c5ebd26ef5fe11337d5, q_0042a68171af5dfcac32, q_b9ce689609a95206a0ec, q_3c83fb8f43705e428d06, q_12be6cdeb54f52f8a101, q_4b45441faba2500fa091, q_c99ce2a03174582f9a18, q_cc99efd4118359b5b9b9, q_495dfa71396b7036d94a, q_e96fadc94a8327131c75); versions bumped (q_5c5ebd26ef5fe11337d5 v1->v2, q_0042a68171af5dfcac32 v1->v2, q_b9ce689609a95206a0ec v1->v2, q_3c83fb8f43705e428d06 v1->v2, q_12be6cdeb54f52f8a101 v1->v2, q_4b45441faba2500fa091 v1->v2, q_c99ce2a03174582f9a18 v1->v2, q_cc99efd4118359b5b9b9 v1->v2, q_495dfa71396b7036d94a v1->v2, q_e96fadc94a8327131c75 v1->v2); attrs set (q_0042a68171af5dfcac32 data-lead-in,data-src; q_b9ce689609a95206a0ec data-lead-in,data-src; q_3c83fb8f43705e428d06 data-d1,data-lead-in,data-src; q_12be6cdeb54f52f8a101 data-lead-in,data-src; q_4b45441faba2500fa091 data-d2,data-d2-id,data-lead-in,data-src; q_c99ce2a03174582f9a18 data-lead-in,data-src; q_cc99efd4118359b5b9b9 data-d2,data-d2-id,data-lead-in,data-src; q_495dfa71396b7036d94a data-lead-in); prose edited (+8720 chars)
+Other page changes (nav, headers, scripts): +10869 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 219 briefs, 2170 items, 4 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 219 | bankwraps 219 | mcq 2170 (axCheck 2170, reveal-only 0) | malformed 0 | crit gridded 130/142 | vignette gridded 132/132 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 12
+  vendor: clean (56601 source shingles; page 0.030%)
+```
+
 ## 2026-09-25 s35: NBME Peds batch: 12 questions; 3 new briefs (infant vaccines, distal RTA, eyelid lumps), 7 backfills, distractor-design lines, wording guide
 
 ```

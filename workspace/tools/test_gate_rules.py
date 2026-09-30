@@ -17,7 +17,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from pagelib import briefs, read_page  # noqa: E402
 
-PAGE = read_page(os.path.join(os.path.dirname(HERE), 'index.html'))
+# ship.sh sets AXBX_PAGE to the page it is about to ship (its coverage rows and allowlist match that page, not the old one)
+PAGE = read_page(os.environ.get('AXBX_PAGE') or os.path.join(os.path.dirname(HERE), 'index.html'))
 
 
 def gate(html):
@@ -31,7 +32,7 @@ def gate(html):
 bad = 0
 rc, out = gate(PAGE)
 ok = rc == 0
-print(('ok  ' if ok else 'BAD ') + 'live page passes the gate (pre-existing findings baselined)' + ('' if ok else '\n' + out[:600]))
+print(('ok  ' if ok else 'BAD ') + ('page to ship' if os.environ.get('AXBX_PAGE') else 'live page') + ' passes the gate (pre-existing findings baselined)' + ('' if ok else '\n' + out[:600]))
 bad += not ok
 
 bl = briefs(PAGE)

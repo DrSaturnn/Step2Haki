@@ -79,7 +79,7 @@ CATALOG = {
     'nbme-coverage': ('every data-nbme id has a row in repair/nbme/coverage.csv and every coverage row id is on the page',
                       'add the coverage row (nbme-intake step 5), or the data-nbme link'),
     'never-delete': ('no brief id or item id present at base is missing now', 'restore it; questions and briefs are never deleted'),
-    'id-immutable': ('an item keeps its data-key-id/d1-id/d2-id and its owning brief id', 'restore the original ids'),
+    'id-immutable': ('an item keeps its data-key-id/d1-id/d2-id and its owning brief id (a label whose meaning changed gets a new id with a version bump)', 'restore the original ids'),
     'version-bump': ('data-item-version never decreases and increases when the key or a distractor label changed vs base',
                      'increment data-item-version by 1 on the edited item'),
     'attr-only': ('(--attr-only) text and tag structure identical to REF; identity/option attributes untouched',
@@ -285,7 +285,8 @@ def check_page(page, g, page_path):
         for m in re.finditer(r'<table\b[^>]*>', inn):
             cap = inn[m.end():].lstrip().startswith('<caption')
             pre = re.sub(r'<div class="tw[^"]*">\s*$', '', inn[:m.start()].rstrip()).rstrip()
-            h5 = pre.endswith('</h5>')
+            # a Type C section header (h5.tsec) opens a section; it is not the table's title
+            h5 = pre.endswith('</h5>') and not re.search(r'<h5[^>]*class="[^"]*\btsec\b[^"]*"[^>]*>(?:(?!<h5).)*</h5>$', pre, re.S)
             tno = len(re.findall(r'<table\b', inn[:m.start()])) + 1
             if cap == h5:
                 g.fail('table-title', '%s:t%d' % (b.id, tno), '%s table %d has %s' % (b.id, tno, 'both a caption and an h5' if cap else 'no title'))
@@ -411,8 +412,15 @@ def check_base(page, ref_html, bl, it, g):
         if c is None:
             g.fail('never-delete', r.id, 'item %s (%s) existed at base and is missing now' % (r.id, r.brief_id))
             continue
+        # metadata contract: a changed option label gets a new option id with a version bump (brief-migration step 4);
+        # an unchanged label keeps its id
+        lab = lambda i, k: (i.key if k == 'data-key-id' else i.attrs.get(k[:-3], '')).strip().lower()
+        try:
+            bumped = int(c.attrs.get('data-item-version', '0')) > int(r.attrs.get('data-item-version', '0'))
+        except ValueError:
+            bumped = False
         for k in ('data-key-id', 'data-d1-id', 'data-d2-id'):
-            if c.attrs.get(k) != r.attrs.get(k):
+            if c.attrs.get(k) != r.attrs.get(k) and not (bumped and lab(c, k) != lab(r, k)):
                 g.fail('id-immutable', r.id + ':' + k, '%s %s changed %s -> %s' % (r.id, k, r.attrs.get(k), c.attrs.get(k)))
         if c.brief_id != r.brief_id:
             g.fail('id-immutable', r.id + ':brief', '%s moved from brief %s to %s' % (r.id, r.brief_id, c.brief_id))

@@ -26,6 +26,10 @@ OPS = {
     'set_attr': ({'target', 'attr', 'value'}, {'note'}),
     'new_brief': ({'after', 'html'}, {'nav', 'note'}),
     'replace_global': ({'find', 'with'}, {'note'}),
+    # migration only (brief-migration step 6): the whole brief is replaced by its Type C version; every old item id
+    # must be carried (same id, version not lower, bumped when the stem changed) unless listed in `retired_items`
+    # with the ledger that accounts for it; the id and data-shelf never change
+    'replace_brief': ({'brief', 'html', 'ledger'}, {'retired_items', 'note'}),
 }
 IDENTITY = {'id', 'data-item-id', 'data-key-id', 'data-d1-id', 'data-d2-id'}
 
@@ -62,7 +66,7 @@ def validate(spec):
                 if k in e and not (isinstance(e[k], list) and all(isinstance(x, str) and x.strip() for x in e[k])):
                     errs.append((n, op, '%s must be a list of the old texts' % k, 'e.g. ["The interval is the finding"]'))
                 continue
-            if k in e and k not in ('attrs', 'nav', 'bold_answer', 'companion') and not isinstance(e[k], str):
+            if k in e and k not in ('attrs', 'nav', 'bold_answer', 'companion', 'retired_items') and not isinstance(e[k], str):
                 errs.append((n, op, 'field %s must be a string' % k, 'quote it'))
         if op == 'add_item':
             if e.get('type') not in TYPES:
@@ -221,6 +225,36 @@ def apply_one(html, e, n, taken, log):
                                 'edit brief content with replace/insert_* (brief-scoped); replace_global is for CSS, scripts and nav')
         html = splice(html, [(at, at + len(needle), e['with'])])
         log.append('replace_global at offset %d' % at)
+        return html
+    if op == 'replace_brief':
+        b = _brief(html, e['brief'], n, op)
+        nb = e['html'].strip()
+        found = briefs(nb)
+        if len(found) != 1 or found[0].start != 0 or found[0].end != len(nb) or found[0].id != b.id:
+            raise EditError(n, op, 'html must be one complete brief with the same id %r' % b.id, 'ids never change (study-page-builder)')
+        old_open, new_open = html[b.start:html.index('>', b.start) + 1], nb[:nb.index('>') + 1]
+        if attrs(old_open).get('data-shelf') != attrs(new_open).get('data-shelf'):
+            raise EditError(n, op, 'data-shelf changed', 'keep the shelf tags; change them with set_attr in a separate op')
+        old_items = {i.id: i for i in items(html[b.start:b.end])}
+        new_items = {i.id: i for i in items(nb)}
+        retired = set(e.get('retired_items', []))
+        for qid, oi in old_items.items():
+            if qid in retired:
+                continue
+            ni = new_items.get(qid)
+            if not ni:
+                raise EditError(n, op, 'old item %s is not carried and not listed in retired_items' % qid,
+                                'carry it with the same id, or list it with its ledger disposition (moved, archived, retired)')
+            ov, nv = int(oi.attrs.get('data-item-version', '1')), int(ni.attrs.get('data-item-version', '1'))
+            if nv < ov or (nv == ov and text(oi.stem) != text(ni.stem)):
+                raise EditError(n, op, 'item %s: version %d -> %d with %s stem' % (qid, ov, nv, 'a changed' if text(oi.stem) != text(ni.stem) else 'the same'),
+                                'a changed stem bumps data-item-version; a version never goes down')
+        clash = [q for q in new_items if q not in old_items and q in taken]
+        if clash:
+            raise EditError(n, op, 'new item id(s) already on the page: %s' % ', '.join(clash), 'mint ids with tools/idgen.py')
+        html = splice(html, [(b.start, b.end, nb)])
+        log.append('replace_brief %s (%d carried, %d new, %d retired; ledger %s)' % (b.id, len(old_items) - len(retired),
+                   len(set(new_items) - set(old_items)), len(retired), e['ledger']))
         return html
     if op == 'new_brief':
         after = _brief(html, e['after'], n, op)

@@ -474,6 +474,17 @@ def main():
             elif any('first' in battr for battr, _ in bodies):
                 F('L2 <tbody class="first"> holds no "First" test')
 
+    # L4 (s37 render): a criteria tile grids and masks only when 60% or more of its items read "<b>Term</b> &ndash;
+    # definition" separated by &middot;; anything else renders as an unmasked fact list (render.js not-gridded)
+    for cm in re.finditer(r'<div class="crit[^"]*"[^>]*>((?:(?!</div>).)*)</div>', new, re.S):
+        body = re.sub(r'<span class="lbl">.*?</span>', '', cm.group(1), flags=re.S)
+        if re.search(r'<(table|ul|ol|dl)\b', body):
+            continue
+        parts = [x for x in re.split(r'&middot;|\u00b7', body) if x.strip()]
+        termish = sum(1 for x in parts if re.match(r'\s*<b>[^<]+</b>', x) and re.search(r'\s(?:&ndash;|&mdash;|\u2013|\u2014)\s', x))
+        if len(parts) < 2 or termish < -(-len(parts) * 6 // 10):
+            F('L4 criteria tile "%s" does not grid: write 2 or more items as <b>Term</b> &ndash; definition, separated by &middot;'
+              % norm(re.search(r'<span class="lbl">(.*?)</span>', cm.group(1), re.S).group(1) if 'lbl' in cm.group(1) else '')[:40])
     tables = len(re.findall(r'<table', new))
     wrapped = len(re.findall(r'<div class="tw">\s*<table', new))
     caps = len(re.findall(r'<table[^>]*>\s*<caption>', new))

@@ -29,7 +29,7 @@ fail(){ echo "ship $B: ABORT at $1 (nothing written)"; [[ -n "${2:-}" ]] && echo
 o=$(python3 repair/build.py "$B" --out "$TMP/index.html" 2>&1) || fail build "$o"; echo "$o"
 # rules self-tests: the checks themselves must still catch every known defect, on every brief type
 o=$(python3 tools/test_migrate_check.py 2>&1) || fail rules-selftest "$(echo "$o" | grep -E '^BAD|passed')"
-o2=$(python3 tools/test_gate_rules.py 2>&1) || fail rules-selftest "$(echo "$o2" | grep -E '^BAD|passed')"
+o2=$(AXBX_PAGE="$TMP/index.html" python3 tools/test_gate_rules.py 2>&1) || fail rules-selftest "$(echo "$o2" | grep -E '^BAD|passed')"
 echo "rules: self-test $(echo "$o" | tail -1), all brief types $(echo "$o2" | tail -1)"
 GA=(--base HEAD); [[ "$MODE" == "--attr-only" ]] && GA=(--attr-only HEAD)
 GATE=$(python3 tools/gate.py "$TMP/index.html" "${GA[@]}" 2>&1) || fail gate "$GATE"; GATE=$(echo "$GATE" | head -1); echo "$GATE"

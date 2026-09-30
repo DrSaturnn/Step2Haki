@@ -53,3 +53,9 @@ The `find` text must occur exactly once in the whole page and lie outside every 
 ```json
 {"op": "replace_global", "find": ".nbmechip{display:inline-block;", "with": ".nbmechip{display:inline-block;"}
 ```
+
+## replace_brief: migration only (brief-migration step 6); orchestrator use, never in worker packets
+Replaces a whole brief with its reviewed Type C version. Same id and data-shelf; every old item id is carried (version never lower, bumped when the stem changed) unless listed in `retired_items`; `ledger` names the claim map that accounts for every claim and item.
+```json
+{"op": "replace_brief", "brief": "kawasaki", "html": "<div class=\"brief\" id=\"kawasaki\" ...>...</div>", "ledger": "repair/migration/kawasaki/claim_map.json (local-only)"}
+```
