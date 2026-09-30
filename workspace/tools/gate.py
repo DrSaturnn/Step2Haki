@@ -78,7 +78,7 @@ CATALOG = {
     'div-balance': ('static body has equal <div> opens and closes', 'close the div the edit opened (or remove the extra </div>)'),
     'nbme-coverage': ('every data-nbme id has a row in repair/nbme/coverage.csv and every coverage row id is on the page',
                       'add the coverage row (nbme-intake step 5), or the data-nbme link'),
-    'never-delete': ('no brief id or item id present at base is missing now', 'restore it; questions and briefs are never deleted'),
+    'never-delete': ('no brief id or item id present at base is missing now, unless retired through tools/retired_items.csv with its HTML archived', 'restore it, or add the ledger row and archive file'),
     'id-immutable': ('an item keeps its data-key-id/d1-id/d2-id and its owning brief id (a label whose meaning changed gets a new id with a version bump)', 'restore the original ids'),
     'version-bump': ('data-item-version never decreases and increases when the key or a distractor label changed vs base',
                      'increment data-item-version by 1 on the edited item'),
@@ -407,10 +407,22 @@ def check_base(page, ref_html, bl, it, g):
         if b.id and b.id not in cur_b:
             g.fail('never-delete', b.id, 'brief %s existed at base and is missing now' % b.id)
     cur = {i.id: i for i in it}
+    # retired items (Jonathan 2026-09-30: psych briefs cut to the tested core): an item leaves the page only through the
+    # tracked ledger tools/retired_items.csv, with its full <li> HTML kept in the archive file the row names
+    led = os.environ.get('AXBX_RETIRED') or os.path.join(os.path.dirname(os.path.abspath(__file__)), 'retired_items.csv')
+    retired = {}
+    if os.path.exists(led):
+        for row in csv.DictReader(open(led, encoding='utf-8')):
+            retired[row['item_id'].strip()] = row
     for r in ri:
         c = cur.get(r.id)
+        if c is None and r.id in retired:
+            arch = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), retired[r.id].get('archive', '').strip())
+            if not retired[r.id].get('reason', '').strip() or not os.path.isfile(arch) or r.id not in open(arch, encoding='utf-8').read():
+                g.fail('never-delete', r.id, 'item %s is in the retired ledger without a reason or an archive file holding its HTML' % r.id)
+            continue
         if c is None:
-            g.fail('never-delete', r.id, 'item %s (%s) existed at base and is missing now' % (r.id, r.brief_id))
+            g.fail('never-delete', r.id, 'item %s (%s) existed at base and is missing now; retire it only through tools/retired_items.csv with an archive' % (r.id, r.brief_id))
             continue
         # metadata contract: a changed option label gets a new option id with a version bump (brief-migration step 4);
         # an unchanged label keeps its id

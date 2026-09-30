@@ -15,7 +15,7 @@ import tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from pagelib import briefs, read_page  # noqa: E402
+from pagelib import items, briefs, read_page  # noqa: E402
 
 # ship.sh sets AXBX_PAGE to the page it is about to ship (its coverage rows and allowlist match that page, not the old one)
 PAGE = read_page(os.environ.get('AXBX_PAGE') or os.path.join(os.path.dirname(HERE), 'index.html'))
@@ -46,6 +46,24 @@ for kind in ('brief', 'bs', 'aq'):
         hit = rc == 1 and ('[%s] %s' % (code, b.id)) in out
         print(('ok  ' if hit else 'BAD ') + '%s in a %s brief (%s): expects gate FAIL %s' % (code, kind, b.id, code))
         bad += not hit
-total = 1 + 9
+# retired items (2026-09-30): removing an item fails never-delete unless the ledger names it and its HTML is archived
+it0 = next(i for i in items(PAGE) if i.brief_id == bl[0].id)
+cut = PAGE[:it0.start] + PAGE[it0.end:]
+d = tempfile.mkdtemp(); ref = os.path.join(d, 'ref.html'); open(ref, 'w', encoding='utf-8').write(PAGE)
+cur = os.path.join(d, 'index.html'); open(cur, 'w', encoding='utf-8').write(cut)
+def gate_base(env):
+    r = subprocess.run([sys.executable, os.path.join(HERE, 'gate.py'), cur, '--base', ref], capture_output=True, text=True, env=dict(os.environ, **env))
+    return r.stdout
+arch = os.path.join(os.path.dirname(HERE), 'repair', 'archive', '_selftest.html')
+os.makedirs(os.path.dirname(arch), exist_ok=True); open(arch, 'w', encoding='utf-8').write(PAGE[it0.start:it0.end])
+led = os.path.join(d, 'led.csv')
+open(led, 'w', encoding='utf-8').write('item_id,brief,date,reason,archive\n')
+hit = ('[never-delete] item ' + it0.id) in gate_base({'AXBX_RETIRED': led})
+print(('ok  ' if hit else 'BAD ') + 'item removed with no ledger row: expects gate FAIL never-delete'); bad += not hit
+open(led, 'a', encoding='utf-8').write('%s,%s,2026-09-30,self-test,repair/archive/_selftest.html\n' % (it0.id, it0.brief_id))
+hit = ('[never-delete] item ' + it0.id) not in gate_base({'AXBX_RETIRED': led})
+print(('ok  ' if hit else 'BAD ') + 'item retired through the ledger with its HTML archived passes'); bad += not hit
+os.remove(arch)
+total = 1 + 9 + 2
 print('%d/%d passed' % (total - bad, total))
 sys.exit(1 if bad else 0)

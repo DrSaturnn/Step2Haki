@@ -2,6 +2,19 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-09-29 s38: psychosis-duration reauthored lean (1,301 to 457 words before the bank; 11 of 16 questions kept, 5 retired to the ledger); gate: retired-items ledger; coverage notes without option text
+
+```
+Page: 219 briefs, 2170 items -> 219 briefs, 2165 items
+Briefs changed (1):
+  - psychosis-duration (Psychosis in an Adult: Rule Out a Cause, Then Time It): ITEMS REMOVED (q_ff7cd239aba8bc48494b, q_695074e8d5332d0ea095, q_72ee5fbedbdc1fefbe82, q_eba4e1309651d19e9c72, q_afb8a32a559bb96e09b0); prose edited (-9907 chars)
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 219 briefs, 2165 items, 4 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 219 | bankwraps 219 | mcq 2165 (axCheck 2165, reveal-only 0) | malformed 0 | crit gridded 131/141 | vignette gridded 132/132 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 10
+  vendor: clean (56601 source shingles; page 0.027%)
+```
+
 ## 2026-09-29 s37: Psych goes live for review: psych shelf and section, Type C page setup, 9 psych briefs (1 reviewer-accepted, 2 revised awaiting re-review, 6 first drafts with open review findings); Kawasaki migrated to Type C
 
 ```

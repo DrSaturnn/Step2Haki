@@ -1,7 +1,6 @@
 # render.js baseline allowlist: pre-existing findings in the NBME-build baseline (commit d233a96).
 # Format: <code> <key>  # reason. Content is not fixed by the toolchain rebuild; fix in a content pass, then delete the line.
 not-gridded bs-umbilical:.crit  # items use "<b>Term</b>: value" (colon), not " — ", so the tile renders as a fact list and its definitions do not mask
-not-gridded psychosis-duration:.crit  # s37 psych draft (live for Jonathan's review): tile items are not "<b>Term</b> &ndash; definition", so it renders as a fact list and does not mask; fix in the psych fix round (migrate_check L4)
 not-gridded bipolar-mania:.crit  # s37 psych draft (live for Jonathan's review): tile items are not "<b>Term</b> &ndash; definition", so it renders as a fact list and does not mask; fix in the psych fix round (migrate_check L4)
 not-gridded sz-psychosocial:.crit  # s37 psych draft (live for Jonathan's review): tile items are not "<b>Term</b> &ndash; definition", so it renders as a fact list and does not mask; fix in the psych fix round (migrate_check L4)
 not-gridded delirium:.crit  # s37 psych draft (live for Jonathan's review): tile items are not "<b>Term</b> &ndash; definition", so it renders as a fact list and does not mask; fix in the psych fix round (migrate_check L4)
