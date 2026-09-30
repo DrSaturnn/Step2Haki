@@ -150,3 +150,9 @@ table:has(tbody.first) caption::after{content:"Shaded rows: first steps, done to
 .vchart .vcap{margin:10px 0 0;font-size:13.5px;line-height:1.4}
 .vtl.psy li{--seg:var(--psy-e)} .vtl.psy li:nth-child(1){--seg:#A8D8CF} .vtl.psy li:nth-child(3){--seg:#2F7F75}
 .vtl li::before{background:#6F7A80}
+/* time arrow on the left edge of a life chart: a labeled line pointing down, so the reading direction is explicit */
+.vchart .keys,.vchart .body{margin-left:24px}
+.vchart .tarrow{position:absolute;left:-24px;top:0;bottom:0;width:16px}
+.vchart .tarrow::before{content:"";position:absolute;left:7px;top:56px;bottom:7px;width:2px;background:var(--muted);border-radius:1px}
+.vchart .tarrow::after{content:"";position:absolute;left:3px;bottom:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid var(--muted)}
+.vchart .tarrow span{position:absolute;left:-2px;top:6px;writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--raised);padding:4px 0}
