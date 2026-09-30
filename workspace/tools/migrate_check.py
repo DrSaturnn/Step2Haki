@@ -62,7 +62,11 @@ QWORDS = {'always', 'never', 'only', 'especially', 'usually', 'rarely', 'most', 
           'triggers', 'trigger', 'before', 'after', 'then', 'until'}
 
 
-OBJ = re.compile(r'\bt \d|\bhr \d|\brr \d|\bbp \d|\d[\d,.]*\s*(mm|mg|g/dl|/mm|u/l|%|cm|/min|meq|mmol)|\bafebrile\b|well[ -]appearing|ultrasound shows|radiograph|echocardiogram shows|x-ray shows')
+OBJ = re.compile(r'\bt \d|\bhr \d|\brr \d|\bbp \d|\d[\d,.]*\s*(mm|mg|g/dl|/mm|u/l|%|cm|/min|meq|mmol)|\bafebrile\b|well[ -]appearing|ultrasound shows|radiograph|echocardiogram shows|x-ray shows'
+                 # psychiatry (2026-09-30): the objective data of a psych stem is the mental status examination and the
+                 # normal vitals, labs or toxicology that exclude a medical cause
+                 r'|vital signs (are )?(within normal limits|normal)|normal vital signs|mental status examination|oriented to (person|place|time)'
+                 r'|toxicology (screening |screen )?(is |was )?negative|laboratory studies (are |show )?(within|normal)')
 STOP = {'now', 'then', 'a', 'an', 'the', 'on', 'of', 'in', 'is', 'has', 'had', 'was', 'at', 'to', 'for', 'his', 'her', 'who', 'yo', 'm', 'f'}
 NEG = {'not', 'never', 'none', 'no', 'without', 'absent', 'negative'}
 

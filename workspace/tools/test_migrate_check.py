@@ -173,6 +173,9 @@ def expect(name, new_, code, want_fail=True, cmap=None, old_=EMPTY, text=None):
     ok = hit if want_fail else not hit
     print(('ok  ' if ok else 'BAD ') + name + (f': expects FAIL {code}' if want_fail else f': no {code}') + ('' if ok else f" {r['fails'][:3]}"))
     bad += not ok
+PSY = li_edit(dxi, lambda x: re.sub(r'(data-item-id="q_\w+"[^>]*>)([^&]*?)(&rarr;)', r'\g<1>24-year-old woman brought in by police after shouting at a rental agent; declares she is fabulously wealthy; speech loud and rapid; urine toxicology screening negative; mental status examination shows grandiose delusions \g<3>', x, count=1))
+expect('psych stem with mental status findings and negative toxicology has objective data', PSY, 'I8', False)
+expect('psych stem with labels only has no objective data', li_edit(dxi, lambda x: re.sub(r'(data-item-id="q_\w+"[^>]*>)([^&]*?)(&rarr;)', r'\g<1>24-year-old woman who seems manic and grandiose \g<3>', x, count=1)), 'I8')
 expect('study gap on the page', GOLD.replace(LAD, '<td>Trigger unknown: study gap</td>'), 'G1')
 expect('TBD on the page', GOLD.replace('</h4>', ' (dosing TBD)</h4>', 1), 'G1')
 expect('hedged failure trigger', GOLD.replace(LAD, '<td>Surgical review if no improvement</td>'), 'G2')
