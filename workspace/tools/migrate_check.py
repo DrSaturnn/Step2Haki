@@ -164,7 +164,9 @@ def item_contract(new, new_items, old_items, cmap, F, W):
         if len(set(opts)) < 3:
             F(f'I5 {iid}: options not distinct')
         typ = a.get('data-type')
-        if key and len(key) > 3 and key in stem and typ in ('dx', 'mech', 'test', 'stage'):
+        # a "which of her medications" item must list the key among the drugs in the stem (N2: NBME Q1, meperidine)
+        med_q = re.search(r'\b(medications?|drugs?|agents?)\b', a.get('data-lead-in', ''), re.I)
+        if key and len(key) > 3 and key in stem and typ in ('dx', 'mech', 'test', 'stage') and not med_q:
             F(f'I4 {iid}: stem contains the keyed answer "{key}"')
         for term in topic:
             if term in stem:
@@ -488,7 +490,8 @@ def main():
     ACR_OK = {'CRASH', 'ST', 'GI', 'COVID-19', 'SARS', 'II', 'III', 'HR', 'RR', 'BP', 'COVID', 'US', 'IV', 'NBME', 'OK'}
     unexp, late = [], []
     LOWER_ABBR = ['hpf', 'lpf', 'prn']
-    cands = re.findall(r'\b([A-Z][A-Z0-9]{1,}(?:-[A-Z0-9]+)?)\b', text) + re.findall(r'\b((?:Ig|Hb)[A-Z0-9][A-Za-z0-9]*)\b', text) \
+    # DSM-5-TR is one acronym (N1 worker)
+    cands = re.findall(r'\b([A-Z][A-Z0-9]{1,}(?:-[A-Z0-9]+)*)\b', text) + re.findall(r'\b((?:Ig|Hb)[A-Z0-9][A-Za-z0-9]*)\b', text) \
         + [w for w in re.findall(r'\b([a-z]{3})\b', text) if w in LOWER_ABBR]
     # a mnemonic's own name (its letters, or the name in its heading) is not an acronym to write out (P2: LMNOP, SILENT)
     mn_names = {''.join(re.findall(r'<li[^>]*>\s*<b class="mn">([^<]{1,12})</b>', u)).upper()
@@ -564,6 +567,7 @@ def main():
         for mm in re.finditer(r'(?:<h5[^>]*>(.*?)</h5>\s*)?<ul class="(plain(?: mnem)?)"([^>]*)>(.*?)</ul>', html_, re.S):
             lis = re.findall(r'<li[^>]*>(.*?)</li>', mm.group(4), re.S)
             heads = [re.match(r'\s*<b(?: class="mn")?>([^<]{1,12})</b>', li) for li in lis]
+            heads = [h if h and not (h.group(1).rstrip().endswith(':') and 'class="mn"' not in h.group(0)) else None for h in heads]
             if lis and sum(1 for h in heads if h) >= max(2, len(lis) * 0.7):
                 out.append({'title': norm(mm.group(1) or ''), 'id': (re.search(r'id="([^"]+)"', mm.group(3)) or [None, None])[1],
                             'initials': [h.group(1) if h else '' for h in heads],

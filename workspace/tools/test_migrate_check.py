@@ -232,6 +232,18 @@ for li in LIS[:10]:
         LONG = LONG.replace(li, li.replace(k.group(0), '&rarr; <b>' + k.group(1) + ' now, with a careful and complete explanation</b>'), 1)
 expect('key is the longest option in most items (P3: 5 of 10)', LONG, 'F7')
 expect('golden option lengths are fine', GOLD, 'F7', False)
+# ---- checker false positives found by the psych workers (2026-09-30)
+expect('bold labels ending in a colon are a labeled list, not a mnemonic (N1, N2)', GOLD.replace('</h4>', '</h4><ul class="plain"><li><b>Acute:</b> one</li><li><b>Chronic:</b> two</li><li><b>Long term:</b> three</li></ul>', 1), 'K3', False)
+expect('DSM-5-TR written out once is one acronym (N1)', GOLD.replace('</h4>', '</h4><p>Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision (DSM-5-TR) criteria; DSM-5-TR again.</p>', 1), 'V1', False)
+expect('DSM-5-TR never written out still fails', GOLD.replace('</h4>', '</h4><p>DSM-5-TR criteria.</p>', 1), 'V1')
+def with_key_in_stem(lead):
+    def f(x):
+        x = re.sub(r'data-lead-in="[^"]*"', 'data-lead-in="' + lead + '"', x).replace('data-type="dx"', 'data-type="mech"')
+        k_ = re.search(r'&rarr; <b>(.*?)</b>', x).group(1)
+        return x.replace(' &rarr; <b>', '; takes ' + k_ + ' daily &rarr; <b>', 1)
+    return li_edit(dxi, f)
+expect('which-medication item lists the key among the stem\'s drugs (N2: Q1 meperidine)', with_key_in_stem('Which of the following medications is most likely responsible for these findings?'), 'I4', False, text='keyed answer')
+expect('key in the stem of a non-medication item still fails', with_key_in_stem('Which of the following is the most likely cause of these findings?'), 'I4', text='keyed answer')
 total = len(CASES) + 12 + EXTRA
 print(f'{total - bad}/{total} passed')
 sys.exit(1 if bad else 0)

@@ -95,6 +95,8 @@ def mnemonic_blocks(inner):
     for mm in re.finditer(r'(?:<h5[^>]*>((?:(?!</?h5).)*)</h5>\s*)?(<ul class="plain(?: mnem)?"[^>]*>)(.*?)</ul>', inner, re.S):
         lis = re.findall(r'<li[^>]*>(.*?)</li>', mm.group(3), re.S)
         heads = [re.match(r'\s*<b(?: class="mn")?>([^<]{1,12})</b>', li) for li in lis]
+        # a bold label ending in a colon ("<b>Acute:</b>") heads a labeled list, not a mnemonic letter (N1, N2 workers)
+        heads = [h if h and not (h.group(1).rstrip().endswith(':') and 'class="mn"' not in h.group(0)) else None for h in heads]
         if lis and sum(1 for h in heads if h) >= max(2, len(lis) * 0.7):
             out.append((_text(mm.group(1) or '') or ''.join(h.group(1) for h in heads if h), mm.group(2)))
     for m in re.finditer(r'(<div class="[^"]*"[^>]*>)\s*<span class="lbl">\s*(Mnemonics?\b[^<]*)</span>', inner):
