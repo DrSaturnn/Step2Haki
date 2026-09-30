@@ -10,7 +10,7 @@ const [file, bid, out, label = bid] = process.argv.slice(2);
   const exe = process.env.PW_CHROME || undefined;
   const browser = await chromium.launch(exe ? { executablePath: exe } : {});
   for (const w of [390, 1280]) {
-    const page = await browser.newPage({ viewport: { width: w, height: 900 }, deviceScaleFactor: 2 });
+    const page = await browser.newPage({ viewport: { width: w, height: 900 }, deviceScaleFactor: Number(process.env.PW_SCALE || 2) });
     await page.goto('file://' + path.resolve(file));
     await page.waitForTimeout(600);
     const el = await page.$('#' + bid);
