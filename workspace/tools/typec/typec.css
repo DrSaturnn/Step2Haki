@@ -127,3 +127,26 @@ table:has(tbody.first) caption::after{content:"Shaded rows: first steps, done to
 .vlanes .heads{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:center}
 .vlanes .vcap{margin:8px 0 0;font-size:13.5px;line-height:1.4}
 @media (max-width:360px){.vlanes{grid-template-columns:1fr}}
+
+/* Vertical life chart (psych, 2026-09-30; after the NIMH Life-Chart Method, turned vertical): time runs down; a center
+   column holds psychosis (hatched teal), depressed mood extends LEFT from center (periwinkle), elevated mood extends
+   RIGHT (apricot); bar width = severity. Red is reserved for danger (hospitalization, suicidality). Colors hold one
+   meaning on every brief: periwinkle = low mood, apricot = high mood, teal = psychosis; a duration line darkens with time. */
+:root{--mlo:#D9E0F8;--mlo-e:#95A6E6;--mhi:#F9DFC8;--mhi-e:#E2A878;--psy:#CFEAE5;--psy-e:#6FB5AA;--dng:#D2574B}
+.vchart{margin:18px 0;padding:14px 14px 12px;border-radius:18px;background:var(--raised);box-shadow:inset 0 0 0 1px var(--hair)}
+.vchart figcaption{font-weight:700;font-size:15px;line-height:1.3;margin:0 0 8px}
+.vchart .keys{display:grid;grid-template-columns:1fr 64px 1fr;gap:6px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:6px}
+.vchart .body{position:relative;display:grid;grid-template-columns:1fr 64px 1fr;gap:6px;height:var(--ht,210px)}
+.vchart .col{position:relative}
+.vchart .col.mid{border-radius:8px;background:rgba(0,0,0,.025)}
+.vchart .col.mid::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--hair)}
+.vchart .col > i{position:absolute;top:var(--t);height:var(--h);border-radius:6px}
+.vchart .lo > i{right:0;width:var(--w,90%);background:var(--mlo);box-shadow:inset 0 0 0 1.5px var(--mlo-e)}
+.vchart .hi > i{left:0;width:var(--w,90%);background:var(--mhi);box-shadow:inset 0 0 0 1.5px var(--mhi-e)}
+.vchart .mid > i{left:8px;right:8px;background:repeating-linear-gradient(135deg,var(--psy-e) 0 3px,var(--psy) 3px 8px);box-shadow:inset 0 0 0 1.5px var(--psy-e)}
+.vchart .mid > i.alone{outline:2px dashed var(--ink);outline-offset:2px}
+.vchart .col > i > em{position:absolute;inset:auto 4px 50% 4px;transform:translateY(50%);font-style:normal;font-size:11.5px;line-height:1.2;text-align:center;color:var(--ink)}
+.vchart .dng{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--dng);box-shadow:0 0 0 3px var(--raised)}
+.vchart .vcap{margin:10px 0 0;font-size:13.5px;line-height:1.4}
+.vtl.psy li{--seg:var(--psy-e)} .vtl.psy li:nth-child(1){--seg:#A8D8CF} .vtl.psy li:nth-child(3){--seg:#2F7F75}
+.vtl li::before{background:#6F7A80}
