@@ -29,7 +29,7 @@ from pagelib import (ITEM_ATTRS, OID_RE, QID_RE, STATUSES, TYPES, attrs, briefs,
 import content_rules  # noqa: E402  (source-and-scope rules shared with migrate_check.py)
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SHELVES = {'fm', 'peds'}
+SHELVES = {'fm', 'peds', 'psych'}
 PROTECTED_ATTR_ONLY = {'id', 'data-item-id', 'data-item-version', 'data-key-id', 'data-d1-id', 'data-d2-id',
                        'data-d1', 'data-d2', 'data-label-answer', 'data-label-d1', 'data-label-d2', 'class'}
 VERDICT_OK_MASK = re.compile(r'^(last|none|\d+)$')
@@ -37,7 +37,8 @@ VERDICT_OK_MASK = re.compile(r'^(last|none|\d+)$')
 CATALOG = {
     'brief-id': ('every .brief has a unique, lowercase [a-z0-9-] id; bs briefs start bs-, aq briefs aq-',
                  'restore the original id (ids are permanent: review progress is keyed on them); new ids: short, lowercase, grep first'),
-    'brief-shelf': ('every brief has data-shelf with tokens from fm/peds', 'add data-shelf="fm", "peds" or "fm peds"'),
+    'brief-shelf': ('every brief has data-shelf with tokens from fm/peds/psych',
+                    'add data-shelf with tokens from fm, peds, psych (e.g. "fm", "peds psych" or "fm peds")'),
     'brief-bp': ('every brief has data-bp; every token is an NBME code from the page OUT.codes map',
                  'add data-bp="<primary> [secondary]" using codes from the NBME script (gen immune heme ...)'),
     'brief-h4': ('every brief has exactly one <h4> title', 'add a short <h4> topic name as the first child'),
