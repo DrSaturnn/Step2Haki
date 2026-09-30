@@ -94,9 +94,10 @@ table:has(tbody.first) caption::after{content:"Shaded rows: first steps, done to
   .tw table.script.multi thead tr{display:flex;gap:14px;padding:6px 0;border-bottom:1.5px solid var(--hair)}
   .tw table.script.multi thead th{display:block;padding:0 0 0 9px;font-size:11px;letter-spacing:.06em;color:var(--ink);font-weight:800}
   .tw table.script.multi thead th:first-child{display:none}
-  .tw table.script.multi thead th:nth-child(2){box-shadow:inset 3px 0 0 var(--accent)} .tw table.script.multi thead th:nth-child(3){box-shadow:inset 3px 0 0 var(--criteria)}
+  .tw table.script.multi thead th:nth-child(2){box-shadow:inset 3px 0 0 var(--accent)} .tw table.script.multi thead th:nth-child(3){box-shadow:inset 3px 0 0 var(--criteria)} .tw table.script.multi thead th:nth-child(4){box-shadow:inset 3px 0 0 var(--board)}
   .tw table.script.multi tbody td:not(:first-child)::before{content:none}
   .tw table.script.multi tbody td:not(:first-child){padding:1px 0 1px 10px}
   .tw table.script.multi tbody td:nth-child(2){box-shadow:inset 3px 0 0 var(--accent)}
   .tw table.script.multi tbody td:nth-child(3){box-shadow:inset 3px 0 0 var(--criteria)}
+  .tw table.script.multi tbody td:nth-child(4){box-shadow:inset 3px 0 0 var(--board)}
 }

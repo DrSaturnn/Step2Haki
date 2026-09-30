@@ -51,6 +51,30 @@ def items_of(block):
 
 
 
+MN_STOP = {'with', 'from', 'that', 'this', 'when', 'into', 'over', 'less', 'more', 'than', 'also'}
+CLAUSE_STOP = {'because', 'he', 'she', 'they', 'him', 'them', 'that', 'this', 'by', 'and', 'with', 'as', 'be', 'been', 'are', 'being',
+               'after', 'but', 'which', 'following', 'there', 'their', 'it', 'its', 'or', 'from', 'says', 'said', 'patient', 'patients'}
+
+
+def source_items(src):
+    """Pasted vendor source (repair/sources/sNN_questions.md): '## Qn <id> ...', a '- Key:' line, then the stem paragraph."""
+    out = {}
+    for m in re.finditer(r'^## Q(\d+) (\S+)[^\n]*\n(.*?)(?=^## Q\d+ |\Z)', src, re.S | re.M):
+        body = re.sub(r'^- [^\n]*\n', '', m.group(3).lstrip(), count=1)
+        body = re.split(r'^\s*[A-J] \.', body, maxsplit=1, flags=re.M)[0]
+        body = re.sub(r'[^.?!\n]*\bof the following\b[^?]*\?', '', body, flags=re.I)
+        # lab table lines (name, tab, value) become one clause each
+        stem = ' '.join(ln.strip().replace('\t', ' ') + (';' if '\t' in ln else '') for ln in body.split('\n') if ln.strip())
+        out[m.group(2)] = {'q': m.group(1), 'stem': stem}
+    return out
+
+
+def clauses(stem):
+    t = norm(stem)
+    parts = re.split(r'[,;:!?"]|\.(?!\d)| and | but | because of | because | after | who | which | whereas ', t)
+    return [p.strip(' .') for p in parts if len(p.strip(' .')) > 3]
+
+
 AGE_OPEN = re.compile(r'^(an? )?(\d+(\.\d+)?-(year|month|week|day|hour)-old|newborn|term newborn|preterm newborn)\b[^;,]{0,12}?\b(boy|girl|man|woman|infant|neonate|newborn|child|adolescent)', re.I)
 SHORTHAND = re.compile(r'\b\d+\s*(yo|y/o|mo|wk|d/o)\b|\b\d+\s*(yo|mo)\s*[MF]\b|\byo [MF]\b', re.I)
 PRIOR_DX = re.compile(r'\b(treated|drained|given|received|after (ivig|surgery|antibiotics|treatment)|diagnosed \w+ \w+ ago|was diagnosed|follow-up|well visit)\b', re.I)
@@ -158,6 +182,15 @@ def item_contract(new, new_items, old_items, cmap, F, W):
                     W(f'I6 {iid}: {k} changed; allowed only when that option label changed meaning')
         if re.search(r'\bt\s*\d+(\.\d+)?\s*(°|deg)?\s*c\b', stem) is None and re.search(r'\bt\s*\d', stem):
             W(f'I7 {iid}: temperature without units')
+    # F7 (P3 review: the key was the longest option in 5 of 10 items): across the bank the key may not be the uniquely
+    # longest option in more than 40% of items (by chance about a third)
+    longest = 0
+    for iid, (a, body) in new_items.items():
+        parts = [x.strip() for x in norm(body).split('->')]
+        k = len(parts[1]) if len(parts) > 1 else 0
+        longest += k > max(len(norm(a.get('data-d1', ''))), len(norm(a.get('data-d2', ''))))
+    if len(new_items) >= 6 and longest / len(new_items) > 0.4:
+        F(f'F7 the key is the longest option in {longest} of {len(new_items)} items (answer-length cue); even out option lengths')
 
 
 def main():
@@ -457,8 +490,12 @@ def main():
     LOWER_ABBR = ['hpf', 'lpf', 'prn']
     cands = re.findall(r'\b([A-Z][A-Z0-9]{1,}(?:-[A-Z0-9]+)?)\b', text) + re.findall(r'\b((?:Ig|Hb)[A-Z0-9][A-Za-z0-9]*)\b', text) \
         + [w for w in re.findall(r'\b([a-z]{3})\b', text) if w in LOWER_ABBR]
+    # a mnemonic's own name (its letters, or the name in its heading) is not an acronym to write out (P2: LMNOP, SILENT)
+    mn_names = {''.join(re.findall(r'<li[^>]*>\s*<b class="mn">([^<]{1,12})</b>', u)).upper()
+                for u in re.findall(r'<ul class="plain mnem"[^>]*>(.*?)</ul>', new, re.S)} | set(re.findall(r'\b[A-Z]{3,}\b', ' '.join(
+        H.unescape(re.sub(r'<[^>]+>', ' ', h)) for h in re.findall(r'<h5[^>]*>(.*?)</h5>\s*<ul class="plain mnem"', new, re.S))))
     for a in dict.fromkeys(cands):
-        if a in ACR_OK or len(a) > 8:
+        if a in ACR_OK or a in mn_names or len(a) > 8:
             continue
         m0 = re.search(r'\b' + re.escape(a) + r'\b', text)
         at_first = re.match(r'\s*\(', text[m0.end():]) or (text[:m0.start()].rstrip().endswith('(') and text[m0.end():].lstrip().startswith(')')) \
@@ -496,6 +533,30 @@ def main():
         shared = shingles(new + ' ' + ' '.join(re.findall(r'data-(?:d1|d2)="([^"]*)"', new))) & shingles(open(src_arg, encoding='utf-8').read())
         if shared:
             F(f'V2 {len(shared)} run(s) of 10 or more words copied from the vendor source, e.g. "{sorted(shared)[0]}"')
+        # C2 and N3 (psych pilots 2026-09-30): a pasted NBME item's stem is split into clauses; every clause needs a clue row
+        # whose text quotes it (P1 lost "because of strange behavior"), and the explanation of an NBME item may source only
+        # the brief that carries that item (P1 sourced delirium rows to another brief's item)
+        src_items = source_items(open(src_arg, encoding='utf-8').read())
+        on_brief = {a.get('data-nbme') for a, _ in new_items.values() if a.get('data-nbme')}
+        # a clue row quotes one clue, not the whole stem: rows over 25 words do not count toward C2
+        ctoks = [set(re.findall(r'[a-z0-9./]+', norm(c.get('text', '')))) for c in claims
+                 if c.get('kind') == 'clue' and len(norm(c.get('text', '')).split()) <= 25]
+        for nid in sorted(on_brief):
+            if nid not in src_items:
+                F(f'C2 item data-nbme="{nid}" is not in the source file')
+                continue
+            for frag in clauses(src_items[nid]['stem']):
+                toks = set(re.findall(r'[a-z0-9./]+', frag)) - STOP - CLAUSE_STOP
+                if toks and not any(toks <= t for t in ctoks):
+                    F(f'C2 {nid}: source clause "{frag}" has no clue row quoting it (every clue in the NBME stem is carried with its role)')
+        qnum = {v['q']: k for k, v in src_items.items()}
+        for c in claims:
+            srcs = c.get('source') or ''
+            for qn in re.findall(r'\bQ(\d+)\b', srcs) if re.search(r'nbme', srcs, re.I) else []:
+                nid = qnum.get(qn)
+                if nid and nid not in on_brief:
+                    F(f'N3 {c.get("id")}: sourced to NBME Q{qn} ({nid}), which is not an item on this brief; an item\'s explanation sources '
+                      'only the brief that carries it (cite a source you opened, or leave the fact to that item\'s brief)')
 
     # ---- K1 mnemonics carried and highlighted; K2 scale references resolve
     def mnems(html_):
@@ -527,6 +588,25 @@ def main():
         lost = [b for b in om['bolds'] if b not in match['bolds']]
         if lost:
             F(f'K1 mnemonic "{label}": highlighted phrases lost: {lost[:4]}')
+    # K4 (P2 review: LMNOP's "L" glossed as "narrow therapeutic index", which its source does not say): a mnemonic that is new
+    # to this brief is written as its source lists it. Claim rows of kind "mnemonic" quote the source's lines in source_says,
+    # and every content word on each page line (term and meaning) must come from them.
+    oldinit = [om['initials'] for om in mnems(old)]
+    mrows = [c for c in claims if c.get('kind') == 'mnemonic']
+    says_w = set(re.findall(r'[a-z0-9]+', ' '.join(norm(c.get('source_says', '')) for c in mrows)))
+    for mm in re.finditer(r'<ul class="plain mnem"[^>]*>(.*?)</ul>', new, re.S):
+        lis = re.findall(r'<li[^>]*>(.*?)</li>', mm.group(1), re.S)
+        init = [(re.match(r'\s*<b(?: class="mn")?>([^<]{1,12})</b>', li) or [None, ''])[1] for li in lis]
+        if init in oldinit:
+            continue
+        if not mrows or not says_w:
+            F(f'K4 mnemonic {"".join(init)} is new to this brief: add claim rows of kind "mnemonic" whose source_says quotes the source\'s lines')
+            continue
+        for li in lis:
+            extra = [w for w in re.findall(r'[a-z]{4,}', norm(li)) if w not in says_w and w not in MN_STOP]
+            if extra:
+                F(f'K4 mnemonic {"".join(init)} line "{norm(li)[:50]}" adds words its source does not list: {extra[:5]} '
+                  '(never stretch a mnemonic to cover extra items; put the extra fact outside it)')
     for blk in re.findall(r'<div class="[^"]*"><span class="lbl">([^<]*[Mm]nemonic[^<]*)</span>(.*?)</div>', old, re.S):
         for b in re.findall(r'<b>(.*?)</b>', blk[1]):
             if norm(b) and not re.search(r'<b[^>]*>\s*' + re.escape(b.strip()) + r'\s*</b>', new):

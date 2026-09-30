@@ -165,10 +165,10 @@ bad += not hit
 LAD = '<td>Still febrile or CRP not falling at 48 to 72 h &#x26A0;&#xFE0E;: MRI, repeat drainage</td>'
 assert LAD in GOLD
 EXTRA = 0
-def expect(name, new_, code, want_fail=True, cmap=None, old_=EMPTY, text=None):
+def expect(name, new_, code, want_fail=True, cmap=None, old_=EMPTY, text=None, extra=()):
     global bad, EXTRA
     EXTRA += 1
-    r = run(old_, new_, cmap or GMAP)
+    r = run(old_, new_, cmap or GMAP, extra)
     hit = any(f.startswith(code) and (text is None or text in f) for f in r['fails'])
     ok = hit if want_fail else not hit
     print(('ok  ' if ok else 'BAD ') + name + (f': expects FAIL {code}' if want_fail else f': no {code}') + ('' if ok else f" {r['fails'][:3]}"))
@@ -207,6 +207,31 @@ expect('"6 months or younger" is not an or-for-and swap', SRC_OK, 'Q2', False, c
 expect('source named only as a textbook (R13)', SRC_OK, 'Q2', cmap=one(dict(GL, source='standard textbook', source_says='Kocher 2')))
 expect('guideline content that keeps the source statement is fine', SRC_OK, 'Q2', False, cmap=one(dict(GL, source_says='Kocher 2')))
 expect('content from the pasted NBME explanation needs no extra basis', SRC_OK, 'S2', False, cmap=one(dict(row, source='NBME Q9 explanation')))
+# ---- psych pilots (2026-09-30): NBME clue census against the pasted source, NBME scope, mnemonic fidelity, answer-length cue
+FSRC = ('--source=' + os.path.join(T, 'fake_source.md'),)
+NB = li_edit(0, lambda x: x.replace('data-src="authored"', 'data-src="nbme" data-nbme="test-form-000001"', 1))
+CL = [{'id': f'z{i}', 'kind': 'clue', 'disposition': 'new', 'text': t, 'new_text': 'Kocher 2', 'source': 'NBME test form Q1 stem',
+       'role': 'supports', 'role_basis': 'source'} for i, t in enumerate(['a 2-year-old girl is brought to the office', 'refusal to walk',
+       'she holds the right leg flexed', 'her temperature is 39.2°c (102.6°f)', 'laboratory studies show', 'leukocyte count 16,500/mm3'])]
+expect('NBME stem clause with no clue row quoting it (P1 lost "because of strange behavior")', NB, 'C2', cmap=dict(GMAP, claims=GMAP['claims'] + CL[1:]), extra=FSRC, text='a 2-year-old girl')
+expect('every NBME stem clause quoted by a clue row is fine', NB, 'C2', False, cmap=dict(GMAP, claims=GMAP['claims'] + CL), extra=FSRC)
+expect('whole stem pasted into one clue row does not count', NB, 'C2', cmap=dict(GMAP, claims=GMAP['claims'] + [dict(CL[0], text=('a 2-year-old girl is brought to the office because of refusal to walk she holds the right leg flexed her temperature is 39.2°c (102.6°f) laboratory studies show leukocyte count 16,500/mm3 ' * 2))]), extra=FSRC)
+expect('row sourced to an NBME item that is on another brief (P1 used Q11 for delirium rows)', NB, 'N3', cmap=dict(GMAP, claims=GMAP['claims'] + CL + [dict(CL[0], id='zz', kind='claim', source='NBME test form Q2 explanation')]), extra=FSRC)
+expect('row sourced to this brief\'s own NBME item is fine', NB, 'N3', False, cmap=dict(GMAP, claims=GMAP['claims'] + CL), extra=FSRC)
+MNS = MNB.format(src=' data-mn-src="Osmosis https://www.osmosis.org/answers/abc"')
+MROW = {'id': 'mn1', 'kind': 'mnemonic', 'disposition': 'new', 'text': 'ABC', 'new_text': 'ABC Rule', 'source': 'Osmosis https://www.osmosis.org/answers/abc',
+        'source_says': 'Alpha - first; Beta - second; Charlie - third', 'step2': 'template: criteria tile'}
+expect('new mnemonic with no mnemonic rows quoting its source', GOLD.replace('</h4>', '</h4>' + MNS, 1), 'K4')
+expect('mnemonic line stretched past its source (P2: LMNOP "L" glossed as narrow therapeutic index)', GOLD.replace('</h4>', '</h4>' + MNS.replace('first</li>', 'first, narrow therapeutic index</li>'), 1), 'K4', cmap=dict(GMAP, claims=GMAP['claims'] + [MROW]))
+expect('mnemonic written as its source lists it is fine', GOLD.replace('</h4>', '</h4>' + MNS, 1), 'K4', False, cmap=dict(GMAP, claims=GMAP['claims'] + [MROW]))
+expect('mnemonic name is not an acronym to write out (P2: LMNOP)', GOLD.replace('</h4>', '</h4>' + MNS.replace('<h5>ABC Rule</h5>', '<h5>ABC</h5>'), 1), 'V1', False, cmap=dict(GMAP, claims=GMAP['claims'] + [MROW]))
+LONG = GOLD
+for li in LIS[:10]:
+    k = re.search(r'&rarr; <b>(.*?)</b>', li)
+    if k:
+        LONG = LONG.replace(li, li.replace(k.group(0), '&rarr; <b>' + k.group(1) + ' now, with a careful and complete explanation</b>'), 1)
+expect('key is the longest option in most items (P3: 5 of 10)', LONG, 'F7')
+expect('golden option lengths are fine', GOLD, 'F7', False)
 total = len(CASES) + 12 + EXTRA
 print(f'{total - bad}/{total} passed')
 sys.exit(1 if bad else 0)

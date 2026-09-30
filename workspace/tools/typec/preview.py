@@ -15,14 +15,19 @@ bid = re.search(r'<div class="brief[^"]*" id="([^"]+)"', new).group(1)
 old = next((x[10:] for x in sys.argv[3:] if x.startswith('--replace=')), bid)
 here = os.path.dirname(os.path.abspath(__file__))
 page = read_page(os.path.join(here, '..', '..', 'index.html'))
-b = brief_by_id(page, old)
+try:
+    b = brief_by_id(page, old)
+except KeyError:  # a new brief (psych pilots): no brief to replace, so it is appended and shown alone
+    b = None
 page = page[:b.start] + new + page[b.end:] if b else page.replace('</main>', new + '</main>', 1)
 css = open(os.path.join(here, 'typec.css'), encoding='utf-8').read()
 css += '\nbody.pilot main > *:not(.masthead){display:none!important}\nbody.pilot main > #pilot-holder{display:block!important}\n'
 T1 = "var dl=document.createElement('dl'); dl.className='rows';"
-k = page.index('function mnemonics(){'); j = page.index(T1, k)
-page = page[:j] + T1 + " if(ul.classList.contains('mnem')) dl.classList.add('mnem');" + page[j + len(T1):]
-page = page.replace('</head>', '<style id="typec-css">' + css + '</style></head>', 1)
+PATCH = " if(ul.classList.contains('mnem')) dl.classList.add('mnem');"
+if PATCH not in page:  # the page already carries the Type C setup once s36 ships; never inject it twice
+    k = page.index('function mnemonics(){'); j = page.index(T1, k)
+    page = page[:j] + T1 + PATCH + page[j + len(T1):]
+page = page.replace('</head>', '<style id="typec-css">' + css + '</style></head>', 1) if 'id="typec-css"' not in page else page.replace('</head>', '<style>' + css[css.index('body.pilot'):] + '</style></head>', 1)
 js = ("<script>window.addEventListener('load',function(){var b=document.getElementById('%s');var h=document.createElement('div');"
       "h.id='pilot-holder';h.className='wrap';var n=document.createElement('p');n.className='system-note';"
       "n.textContent='Preview: this brief rendered by the live page code with the Type C page setup. Not on the live site.';"
