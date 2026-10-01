@@ -1,0 +1,22 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "try{ boardOnly=localStorage.getItem('ax-bsonly')==='1'; }catch(e){}",
+   "with": "/* BOARD-STYLE ONLY starts off on every visit (Jonathan 2026-10-01: a remembered switch hid whole shelves on one device). */\ntry{ localStorage.removeItem('ax-bsonly'); }catch(e){}",
+   "note": "board-style filter no longer remembered"
+  },
+  {
+   "op": "replace_global",
+   "find": "    try{ localStorage.setItem('ax-bsonly',boardOnly?'1':'0'); }catch(e){}\n",
+   "with": "",
+   "note": "board-style filter no longer saved"
+  },
+  {
+   "op": "replace_global",
+   "find": "  /* Board-style only joins the shelf rule in shelfEligible(); it is a per-viewer\n     preference, so it lives in localStorage like the other two switches. */",
+   "with": "  /* Board-style only joins the shelf rule in shelfEligible(); it lasts for this visit only (not saved). */",
+   "note": "comment"
+  }
+ ]
+}

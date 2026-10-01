@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="ax-build" content="s43|2026-10-01">
+<meta name="ax-build" content="s44|2026-10-01">
 <title>Step2Haki — Clinical Board Briefs</title>
 <style>
 :root{
@@ -14632,11 +14632,9 @@ function switches(){
   }
   if(localStorage.getItem('ax-study')==='1') b.classList.add('study');
   if(localStorage.getItem('ax-flat')==='1') b.classList.add('flat');
-  /* Board-style only joins the shelf rule in shelfEligible(); it is a per-viewer
-     preference, so it lives in localStorage like the other two switches. */
+  /* Board-style only joins the shelf rule in shelfEligible(); it lasts for this visit only (not saved). */
   box.querySelector('.bsonly').addEventListener('click',function(){
     boardOnly=!boardOnly;
-    try{ localStorage.setItem('ax-bsonly',boardOnly?'1':'0'); }catch(e){}
     sync(); applyShelf(shelf);
   });
   box.querySelector('.study').addEventListener('click',function(){
@@ -14677,7 +14675,8 @@ var reviewSet=null;   /* fixed brief IDs while an active review is running */
    searchTerm stays empty so applyShelf's composition is unchanged. */
 var searchTerm='';
 var boardOnly=false;
-try{ boardOnly=localStorage.getItem('ax-bsonly')==='1'; }catch(e){}
+/* BOARD-STYLE ONLY starts off on every visit (Jonathan 2026-10-01: a remembered switch hid whole shelves on one device). */
+try{ localStorage.removeItem('ax-bsonly'); }catch(e){}
 
 /* Board-style = the set the title badge calls Board (or UWorld): .brief.bs
    without an Aquifer source, the same split the masthead counts use. */
