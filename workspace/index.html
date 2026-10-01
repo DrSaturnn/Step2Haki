@@ -1103,6 +1103,189 @@ table:has(tbody.first) caption::after{content:"Shaded rows: first steps, done to
   .tw table.script.multi tbody td:nth-child(3){box-shadow:inset 3px 0 0 var(--criteria)}
   .tw table.script.multi tbody td:nth-child(4){box-shadow:inset 3px 0 0 var(--board)}
 }
+
+/* ============ Psych charts v3 (built by tools/typec/lifechart.py; self-test: python3 tools/typec/lifechart.py) ============
+   One visual language on every brief: time runs down; periwinkle = low mood; apricot = high mood; teal = psychosis, deeper
+   the longer it lasts; hatched teal = a delusion only; an outlined psychosis segment = psychosis with no mood episode;
+   red = danger. Names are HTML text with class "mask", so study mode hides them for recall. */
+:root{--mlo:#DCE3F9;--mlo-e:#8B9FE3;--mhi:#FADFC7;--mhi-e:#DB9C62;--psy1:#DCF0EC;--psy2:#A9D8CF;--psy3:#2F7D73;--psy-e:#5FAEA2;--dng:#D2574B;--chart-ink:#2B2F36}
+figure.lcb,figure.lc,figure.lct{margin:18px 0;padding:15px 15px 13px;border-radius:18px;background:var(--raised);box-shadow:inset 0 0 0 1px var(--hair);max-width:480px}
+figure .ttl{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 12px;font-weight:700;font-size:15px;line-height:1.3}
+figure .ttl > span{display:flex;align-items:center}
+figure .ttl small{font-weight:600;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+figure .step{display:inline-grid;place-items:center;flex:none;width:21px;height:21px;margin-right:9px;border-radius:50%;background:var(--chart-ink);color:#fff;font-size:11.5px;font-weight:700}
+.lc-key{display:flex;flex-wrap:wrap;gap:7px 14px;margin:12px 0 0;font-size:12px;line-height:1.3;color:var(--muted)}
+.lc-key span{display:inline-flex;align-items:center;gap:6px}
+.lc-key i{display:inline-block;flex:none;width:15px;height:10px;border-radius:3px}
+.k-lo{background:var(--mlo);box-shadow:inset 0 0 0 1.5px var(--mlo-e)} .k-hi{background:var(--mhi);box-shadow:inset 0 0 0 1.5px var(--mhi-e)}
+.k-ps,.k-only,.k-free{background:repeating-linear-gradient(135deg,var(--psy-e) 0 2px,var(--psy1) 2px 5px);box-shadow:inset 0 0 0 1.5px var(--psy-e)}
+.k-only{background:repeating-linear-gradient(135deg,var(--psy-e) 0 1.5px,#fff 1.5px 4px)}
+.k-free{box-shadow:0 0 0 1.5px var(--chart-ink)}
+.lc-key .k-dng{width:10px;border-radius:50%;background:var(--dng)}
+.lc-key .k-pin{width:auto;height:auto;padding:0 5px;border-radius:9px;background:var(--chart-ink);color:#fff;font-style:normal;font-size:10px;font-weight:700;line-height:16px}
+
+.k-w{width:22px!important;background:linear-gradient(90deg,var(--mhi) 0 42%,transparent 42% 58%,var(--mhi) 58%)} .k-w{box-shadow:none}
+.k-sub{width:8px!important;background:var(--mhi);box-shadow:inset 0 0 0 1.5px var(--mhi-e)}
+figure .note{margin:10px 0 0;font-size:13.5px;line-height:1.42}
+
+/* duration bands */
+.lcb .grid{display:grid;grid-template-columns:62px 1fr 14px;column-gap:9px}
+.lcb .tk{grid-column:1 / 2;align-self:center;text-align:right;font-size:12px;font-weight:700;color:var(--chart-ink);white-space:nowrap;line-height:1}
+.lcb .gate{grid-column:2 / 4;align-self:center;height:0;border-top:1.5px solid var(--chart-ink);opacity:.45}
+.lcb .gnote{grid-column:2 / 4;justify-self:end;align-self:center;margin-right:22px;padding:1px 7px;border-radius:9px;background:var(--raised);box-shadow:inset 0 0 0 1px var(--hair);font-style:normal;font-size:10.5px;font-weight:600;color:var(--muted);white-space:nowrap;position:relative;z-index:1}
+.lcb .spine{grid-column:1 / 2;justify-self:end;position:relative;width:2px;margin-right:4px;background:var(--muted);opacity:.55}
+.lcb .spine.brk::after{content:"";position:absolute;left:-4px;top:calc(50% - 4px);width:10px;height:8px;background:linear-gradient(160deg,transparent 42%,var(--muted) 42% 58%,transparent 58%) 0 0/10px 4px,var(--raised)}
+.lcb .band{grid-column:2 / 3;position:relative;margin:6px 0;padding:11px 12px;border-radius:12px;background:var(--c);min-height:58px}
+.lcb .band .nm{display:block;font-weight:700;font-size:14.5px;line-height:1.3}
+.lcb .band .rl{display:block;font-size:13px;line-height:1.38;margin-top:2px}
+.lcb .band.deep{color:#fff}
+.lcb .band.open{background:linear-gradient(var(--c) 70%,color-mix(in srgb,var(--c) 30%,transparent));padding-bottom:24px}
+.lcb .band.open::after{content:"and longer";position:absolute;left:12px;bottom:6px;font-size:10px;letter-spacing:.07em;text-transform:uppercase;opacity:.8}
+.lcb .inset{display:flex;margin-top:9px;height:20px;border-radius:6px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.55)}
+.lcb .inset span{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;letter-spacing:.02em;white-space:nowrap;overflow:hidden}
+.lcb .inset .soft{background:repeating-linear-gradient(135deg,rgba(255,255,255,.28) 0 3px,rgba(255,255,255,.1) 3px 7px);color:#fff}
+.lcb .inset .act{background:#fff;color:var(--psy3)}
+.lcb .icap{display:block;margin-top:4px;font-size:11.5px;line-height:1.3;opacity:.92}
+.lcb .only{grid-column:3 / 4;margin:6px 0;border-radius:7px;background:repeating-linear-gradient(135deg,var(--psy-e) 0 2px,#fff 2px 6px);box-shadow:inset 0 0 0 1.5px var(--psy-e)}
+.lcb .pin,.lc-key .pin,.cases .pin{display:inline-grid;place-items:center;min-width:24px;height:18px;padding:0 5px;border-radius:9px;background:var(--chart-ink);color:#fff;font-size:10px;font-weight:700;box-shadow:0 0 0 2.5px var(--raised);position:relative;z-index:2}
+.lcb .pin.band{justify-self:end;margin:10px 10px}
+.lcb .pin.only{justify-self:center}
+.lcb .cases{list-style:none;margin:10px 0 0;padding:0;font-size:12.5px;line-height:1.4;color:var(--muted)}
+.lcb .cases li{display:flex;gap:8px;align-items:baseline;margin:4px 0}
+.lcb .cases .pin.inl{flex:none;box-shadow:none}
+
+/* small multiples against mood */
+.lc .lanes-h,.lcs{display:grid;grid-template-columns:20px repeat(var(--n),1fr);column-gap:10px}
+.lc .lanes-h{margin:0 0 4px;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);grid-template-columns:20px repeat(calc(var(--n) * 2),1fr)}
+.lc .lanes-h span:nth-child(even){text-align:left} .lc .lanes-h span:nth-child(odd){text-align:right}
+.lcs .pn{align-self:end;margin-bottom:6px;font-size:12.5px;line-height:1.25;font-weight:700}
+.lcs .axis{position:relative;height:var(--ph)}
+.lcs .axis::before{content:"";position:absolute;left:8px;top:0;bottom:8px;width:2px;border-radius:1px;background:var(--muted);opacity:.7}
+.lcs .axis::after{content:"";position:absolute;left:4px;bottom:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:9px solid var(--muted);opacity:.7}
+.lcs .axis span{position:absolute;left:-1px;top:4px;writing-mode:vertical-rl;transform:rotate(180deg);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--raised);padding:3px 0;white-space:nowrap}
+.lcs .pp{position:relative;height:var(--ph);border-radius:10px;background:linear-gradient(90deg,transparent 0 56%,rgba(21,21,27,.035) 56% 100%)}
+.lcs .gd{position:absolute;left:-4px;right:-4px;top:var(--t);border-top:1px dotted rgba(21,21,27,.28)}
+.lcs .mb{position:absolute;left:4%;width:46%;top:var(--t);height:var(--h);border-radius:7px}
+.lcs .mb.lo{background:var(--mlo);box-shadow:inset 0 0 0 1.5px var(--mlo-e)} .lcs .mb.hi{background:var(--mhi);box-shadow:inset 0 0 0 1.5px var(--mhi-e)}
+.lcs .pb{position:absolute;left:64%;width:28%;top:var(--t);height:var(--h);background:repeating-linear-gradient(135deg,var(--psy-e) 0 3px,var(--psy1) 3px 8px);box-shadow:inset 1.5px 0 0 var(--psy-e),inset -1.5px 0 0 var(--psy-e)}
+.lcs .pb:first-of-type{border-radius:6px 6px 0 0}
+.lcs .pb.free{box-shadow:0 0 0 2px var(--chart-ink);z-index:1}
+.lcs .fl{position:absolute;left:0;width:56%;top:var(--t);height:var(--h);display:flex;align-items:center;justify-content:center;text-align:center;font-style:normal;font-size:10.5px;font-weight:700;line-height:1.2;color:var(--chart-ink)}
+.lcs .mt{margin-top:9px}
+.lcs .mt i{display:block;height:7px;border-radius:4px;background:linear-gradient(90deg,var(--mlo-e) 0 var(--s),var(--recess) var(--s) 100%)}
+.lcs .mt span{display:block;margin-top:4px;font-size:10.5px;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.lcs .dc{margin:6px 0 0;font-size:12px;line-height:1.35;color:var(--chart-ink)}
+
+/* threshold ruler */
+.lct .rul{position:relative;margin-left:4px}
+.lct .ax{position:absolute;left:62px;top:14px;bottom:14px;width:2px;background:var(--muted);opacity:.5}
+.lct .rt{position:absolute;left:0;width:54px;transform:translateY(-50%);text-align:right;font-size:10.5px;font-weight:700;color:var(--muted);white-space:nowrap}
+.lct .rtick{position:absolute;left:58px;width:10px;height:0;border-top:1.5px solid var(--muted);opacity:.6}
+.lct .rl-svg{position:absolute;left:0;top:0;pointer-events:none}
+.lct .rl-svg path{fill:none;stroke:var(--muted);stroke-width:1.2;opacity:.8}
+.lct .rd{position:absolute;left:57px;width:12px;height:12px;margin-top:-6px;border-radius:50%;box-shadow:0 0 0 2.5px var(--raised)}
+.lct .rd.lo{background:var(--mlo-e)} .lct .rd.hi{background:var(--mhi-e)} .lct .rd.ps{background:var(--psy3)} .lct .rd.mix{background:linear-gradient(90deg,var(--mlo-e) 50%,var(--mhi-e) 50%)}
+.lct .rdg{position:absolute;left:73px;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:var(--dng)}
+.lct .rc{position:absolute;left:100px;right:0;box-sizing:border-box;padding:6px 10px;border-radius:10px;display:flex;flex-direction:column;justify-content:center}
+.lct .rc.lo{background:var(--mlo);box-shadow:inset 3px 0 0 var(--mlo-e)} .lct .rc.hi{background:var(--mhi);box-shadow:inset 3px 0 0 var(--mhi-e)}
+.lct .rc.ps{background:var(--psy1);box-shadow:inset 3px 0 0 var(--psy3)} .lct .rc.mix{background:linear-gradient(90deg,var(--mlo) 0 50%,var(--mhi) 50%);box-shadow:inset 3px 0 0 var(--mlo-e)}
+.lct .rc .nm{font-weight:700;font-size:13px;line-height:1.25}
+.lct .rc .rl{font-size:11.5px;line-height:1.3;color:var(--chart-ink)}
+@media (max-width:360px){.lcs .dc{font-size:11.5px}}
+.lcs .mb.split.lo{left:4%;width:22%} .lcs .mb.split.hi{left:28%;width:22%}
+.lcs .mb.mild{width:30%} .lcs .mb.split.mild{width:15%}
+.lcs .mb.sub{width:24%} .lcs .mb.split.sub{width:12%} .lcs .mb.split.hi.sub{left:28%}
+.lcs .mb.opt{background:transparent;box-shadow:none;border:1.5px dashed var(--mlo-e);box-sizing:border-box}
+.lcs .pdg{position:absolute;left:calc(50% - 7px);top:calc(var(--t) - 5px);width:10px;height:10px;border-radius:50%;background:var(--dng);box-shadow:0 0 0 2.5px var(--raised);z-index:2}
+.lcs .mt.none{height:0;margin:0}
+.k-opt{background:transparent;border:1.5px dashed var(--mlo-e);box-sizing:border-box}
+.k-mild{width:9px!important;background:var(--mhi);box-shadow:inset 0 0 0 1.5px var(--mhi-e)}
+.lcb .pin{justify-self:center}
+.lct .ax{bottom:auto}
+.lcs .ph{align-self:end}
+.lcs .ph .pn{display:block;margin-bottom:6px}
+.lcs .lh{display:grid;grid-template-columns:56% 44%;font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.lcs .lh span:first-child{padding-left:4%} .lcs .lh span:last-child{padding-left:12%}
+.lcs .pb.free{box-shadow:0 0 0 1.75px var(--chart-ink)}
+.lcs .mt.chip span{display:inline-block;margin-top:0;padding:2px 7px;border-radius:9px;background:var(--recess);font-size:10.5px;line-height:1.3;color:var(--chart-ink)}
+.lct .rc.mix{background:linear-gradient(135deg,var(--mlo) 0 45%,var(--mhi) 75%)}
+.lcs .lh{font-size:10px;letter-spacing:0;text-transform:none;overflow:hidden;white-space:nowrap}
+.lcs .lh span:last-child{padding-left:14%}
+
+/* ============ Psych charts v4: horizontal rows (lifechart.py window_rows / mood_tracks) ============
+   Time runs left to right on one shared schematic axis. One row per diagnosis: name and window on the left (desktop) or
+   on top (phone), the bar and its requirements beside it. Same palette and meanings as v3. */
+figure.lcw{margin:18px 0;padding:15px 15px 12px;border-radius:18px;background:var(--raised);box-shadow:inset 0 0 0 1px var(--hair)}
+.lcw .wax{display:grid;grid-template-columns:1fr;margin:2px 0 2px}
+.lcw .wsp{display:none}
+.lcw .wt{position:relative;height:16px;font-size:10.5px;font-weight:700;color:var(--muted);letter-spacing:.02em}
+.lcw .wt span{position:absolute;left:var(--x);transform:translateX(-50%);white-space:nowrap}
+.lcw .wt span[style*="--x:0%"]{transform:none}
+.lcw .wt em{position:absolute;right:0;font-style:normal;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase}
+.lcw .wt em::after{content:" \2192"}
+.lcw .wrows{list-style:none;margin:0;padding:0}
+.lcw .wr,.lcw .tr{padding:12px 0 11px;border-top:1px solid var(--hair)}
+.lcw .wg{padding:14px 0 2px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--hair)}
+.lcw .wg + .wr{border-top:0;padding-top:6px}
+.lcw .wh{display:flex;flex-direction:column;gap:2px}
+.lcw .wh .nm{font-weight:700;font-size:14.5px;line-height:1.3;color:var(--chart-ink)}
+.lcw .wh .win{font-weight:700;font-size:13px;line-height:1.3;color:var(--psy3)}
+.lcw .rail{position:relative;height:14px;margin:9px 0 8px;border-radius:7px;background:var(--recess)}
+.lcw .rail .tk{position:absolute;z-index:1;left:var(--x);top:-3px;bottom:-3px;width:1.5px;margin-left:-.75px;background:var(--chart-ink);opacity:.22}
+.lcw .rail .tk[style*="--x:0%"]{display:none}
+.lcw .rail.segs .tk{opacity:.55;background:var(--chart-ink)}
+.lcw .bar{position:absolute;left:var(--a);width:calc(var(--b) - var(--a));top:0;bottom:0;border-radius:7px}
+.lcw .bar.c1{background:var(--psy2)} .lcw .bar.c2{background:color-mix(in srgb,var(--psy2) 45%,var(--psy3))} .lcw .bar.c3{background:var(--psy3)}
+.lcw .bar.only{background:repeating-linear-gradient(135deg,var(--psy-e) 0 2px,#fff 2px 6px);box-shadow:inset 0 0 0 1.5px var(--psy-e)}
+.lcw .bar.exp{background:var(--psy2)}
+.lcw .bar.open{border-radius:7px 0 0 7px;-webkit-mask:linear-gradient(90deg,#000 80%,transparent);mask:linear-gradient(90deg,#000 80%,transparent)}
+.lcw .rail.segs{height:22px;margin-top:-2px;background:transparent}
+.lcw .sg{position:absolute;left:var(--a);width:calc(var(--b) - var(--a));top:0;bottom:0;display:flex;align-items:center;justify-content:flex-start;padding-left:7px;box-sizing:border-box;font-size:10.5px;font-weight:700;white-space:nowrap;overflow:hidden}
+.lcw .sg.soft{background:repeating-linear-gradient(135deg,var(--psy2) 0 3px,var(--psy1) 3px 7px);color:var(--psy3)}
+.lcw .sg.act{background:var(--psy3);color:#fff}
+.lcw .sg:first-of-type{border-radius:6px 0 0 6px} .lcw .sg:last-child{border-radius:0 6px 6px 0}
+.lcw .segcap{margin:-4px 0 6px;font-size:12px;line-height:1.35;color:var(--muted)}
+.lcw .wl{margin:3px 0 0;font-size:13.5px;line-height:1.42;color:var(--chart-ink)}
+.lcw .wl b{margin-right:6px;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.lcw .cue{margin:4px 0 0;font-size:12.5px;line-height:1.38;color:var(--muted)}
+.lcw .cue::before{content:"Cues ";font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+/* mood tracks */
+.lcm .lanes{display:grid;grid-template-columns:64px 1fr;align-items:center;gap:5px 8px;margin:9px 0 2px}
+.lcm .ln{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:right}
+.lcm .lane{position:relative;height:16px;border-radius:5px;background:var(--recess)}
+.lcm .mb,.lcm .pb{position:absolute;left:var(--a);width:calc(var(--b) - var(--a));top:0;bottom:0}
+.lcm .mb{border-radius:5px} .lcm .mb.lo{background:var(--mlo);box-shadow:inset 0 0 0 1.5px var(--mlo-e)} .lcm .mb.hi{background:var(--mhi);box-shadow:inset 0 0 0 1.5px var(--mhi-e)}
+.lcm .pb{background:repeating-linear-gradient(135deg,var(--psy-e) 0 3px,var(--psy1) 3px 8px);box-shadow:inset 0 1.5px 0 var(--psy-e),inset 0 -1.5px 0 var(--psy-e)}
+.lcm .pb.free{box-shadow:0 0 0 2px var(--chart-ink);z-index:1;border-radius:2px}
+.lcm .fls{position:relative;height:15px}
+.lcm .fl{position:absolute;left:var(--a);width:calc(var(--b) - var(--a));text-align:center;font-style:normal;font-size:10.5px;font-weight:700;color:var(--chart-ink);white-space:nowrap}
+@media (min-width:700px){
+  .lcw .wax{grid-template-columns:190px 1fr;column-gap:18px} .lcw .wsp{display:block}
+  .lcw .wr,.lcw .tr{display:grid;grid-template-columns:190px 1fr;column-gap:18px}
+  .lcw .wh{flex-direction:column;gap:3px}
+  .lcw .rail:first-child,.lcm .lanes{margin-top:3px}
+}
+/* workup path: an ordered workup on a vertical line with dots (lifechart.py workup_path) */
+figure.lcp{margin:18px 0;padding:15px 15px 10px;border-radius:18px;background:var(--raised);box-shadow:inset 0 0 0 1px var(--hair)}
+.lcp .path{list-style:none;margin:4px 0 0;padding:0}
+.lcp .pt{position:relative;padding:0 0 18px 28px}
+.lcp .pt::before{content:"";position:absolute;left:3px;top:3px;width:11px;height:11px;border-radius:50%;background:var(--chart-ink);box-shadow:0 0 0 3px var(--raised);z-index:1}
+.lcp .pt::after{content:"";position:absolute;left:8px;top:8px;bottom:-4px;width:2px;background:var(--accent);opacity:.55}
+.lcp .pt.end{padding-bottom:4px} .lcp .pt.end::after{content:none}
+.lcp .when{display:block;margin:0 0 7px;font-size:10.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);line-height:1.4}
+.lcp .pt:first-child .when{color:var(--accent)}
+.lcp .tile{border-radius:14px;padding:11px 14px 12px;background:var(--raised);box-shadow:var(--e2),inset 0 0 0 1px var(--hair)}
+.lcp .tile.first{background:linear-gradient(145deg,#F2F1FA 0%,#EDECF7 60%,#E9E8F4 100%);box-shadow:var(--e2),inset 0 0 0 1.5px rgba(84,74,196,.32)}
+.lcp .plus{display:block;position:relative;height:0;margin:16px -14px 14px;border-top:1.5px dashed rgba(84,74,196,.35)}
+.lcp .plus::after{content:"+";position:absolute;top:-13px;left:50%;transform:translateX(-50%);width:24px;height:24px;border-radius:50%;background:#F7F6FD;color:var(--accent);font:800 16px/24px var(--sans);text-align:center;box-shadow:0 0 0 1.5px rgba(84,74,196,.35)}
+.lcp .tn{margin:0 0 4px;font-family:var(--serif);font-size:16.5px;font-weight:600;line-height:1.3;color:var(--ink)}
+.lcp .wr2{display:grid;grid-template-columns:78px 1fr;gap:8px;margin:3px 0 0;font-size:14.5px;line-height:1.42}
+.lcp .wr2 b{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.lcp .pt-tx{margin:0;font-size:14.5px;line-height:1.45}
+/* bottom line: short paragraphs with indented lists */
+.dp ul.bl{list-style:none;margin:-3px 0 11px 3px;padding:1px 0 1px 13px;border-left:2px solid rgba(84,74,196,.28)}
+.dp ul.bl li{margin:0 0 3px;font-size:15.2px;line-height:1.45}
+.dp ul.bl li:last-child{margin-bottom:0}
 </style>
 </head>
 <body>
@@ -12981,59 +13164,25 @@ The 27–36 week window for Tdap is not an <b>eligibility gate</b>. Tdap is <b>s
 <div class="brief" id="psychosis-duration" data-shelf="psych" data-bp="behav" data-nid="psych-form-085f91 psych-form-56fa9a">
 <h4>Psychosis in an Adult: Rule Out a Cause, Then Time It</h4>
 <p class="sub">How long, and only during mood episodes?</p>
-<nav class="jump"><a href="#pd-cues">Stem cues</a><a href="#pd-dx">Diagnosis</a><a href="#pd-mx">Management</a><a href="#pd-bank">Practice</a></nav>
+<nav class="jump"><a href="#pd-dx">Diagnosis</a><a href="#pd-mx">Management</a><a href="#pd-bank">Practice</a></nav>
 
 <div class="dp"><span class="lbl">Bottom line</span>
-<p>First rule out a drug or medical cause: urine toxicology, chemistry and TSH (thyroid-stimulating hormone). Then time the psychosis against the gates: <b>brief psychotic disorder</b> 1 day to under 1 month, <b>schizophreniform disorder</b> 1 to under 6 months, <b>schizophrenia</b> 6 months or more. Psychosis only during mood episodes is a mood disorder with psychotic features.</p></div>
-
-<h5 class="tsec" id="pd-cues">How it hides in a stem</h5>
-<div class="tw">
-<table class="cluet" data-mask="none"><caption>The clues that decided the two NBME questions</caption>
-<thead><tr><th>Clue</th><th>What it points to</th></tr></thead>
-<tbody>
-<tr><td>Delusion for 6 months</td><td>Too long for brief psychotic disorder</td></tr>
-<tr><td>Denies hearing voices</td><td>No second symptom: not schizophrenia</td></tr>
-<tr><td>No low or high mood; sleeps 6 to 8 hours</td><td>No mood episode: not bipolar</td></tr>
-<tr><td>Delusions and a voice, gone within a week</td><td>Under 1 month: brief psychotic disorder</td></tr>
-<tr><td>Six drinks the night it began</td><td>Alcohol rarely causes psychosis directly</td></tr>
-<tr><td>Fired, walked out by security</td><td>A stressor, not a life-threatening event: not PTSD (posttraumatic stress disorder)</td></tr>
-</tbody>
-</table>
-</div>
+<p>Hospitalize first if dangerous or unable to meet basic needs.</p>
+<p>Then rule out a drug or medical cause:</p>
+<ul class="bl"><li>Urine toxicology</li><li>Chemistry and glucose</li><li>TSH (thyroid-stimulating hormone)</li></ul>
+<p>Then time the psychosis against the gates:</p>
+<ul class="bl"><li><b>Brief psychotic disorder</b> 1 day to under 1 month</li><li><b>Schizophreniform disorder</b> 1 to under 6 months</li><li><b>Schizophrenia</b> 6 months or more</li></ul>
+<p>One delusion for 1 month or more, with Criterion A never met, is delusional disorder.</p>
+<p>Psychosis only during mood episodes is a mood disorder with psychotic features.</p></div>
 
 <h5 class="tsec" id="pd-dx">Diagnosis</h5>
 <div class="crit"><span class="lbl">Criterion A (schizophrenia)</span> <b>Symptoms</b> &ndash; 2 or more of delusions, hallucinations, disorganized speech, disorganized or catatonic behavior, negative symptoms &middot; <b>Core</b> &ndash; at least 1 is delusions, hallucinations or disorganized speech</div>
-<div class="tw">
-<table class="dense" data-mask="none" id="pd-gates"><caption>Timeline gates</caption>
-<thead><tr><th>Disorder</th><th>Needs</th><th>Duration</th><th>Mood episodes</th></tr></thead>
-<tbody>
-<tr><td>Brief psychotic disorder</td><td>1 or more core symptoms; full return to baseline</td><td>1 day to under 1 month</td><td>Not only during them</td></tr>
-<tr><td>Schizophreniform disorder</td><td>Criterion A</td><td>1 to under 6 months</td><td>None, or a minority of the illness</td></tr>
-<tr><td>Schizophrenia</td><td>Criterion A; functional decline</td><td>6 months or more; 1 month active</td><td>None, or a minority of the illness</td></tr>
-<tr><td>Delusional disorder</td><td>A delusion; Criterion A never met; otherwise functioning and behavior intact</td><td>1 month or more</td><td>Brief, if any</td></tr>
-<tr><td>Schizoaffective disorder</td><td>Criterion A with a major mood episode; psychosis 2 weeks or more without one</td><td>One illness</td><td>Most of the illness</td></tr>
-<tr><td>Mood disorder with psychotic features</td><td>Psychosis only in mood episodes</td><td>The episode</td><td>Manic or major depressive</td></tr>
-<tr><td>Substance-induced psychotic disorder</td><td>Delusions or hallucinations tied to a drug</td><td>During or soon after use</td><td>Not a criterion</td></tr>
-</tbody>
-</table>
-</div>
-<div class="tw">
-<table class="dense" data-mask="4"><caption>First tests</caption>
-<thead><tr><th>Test</th><th>Order</th><th>Result</th><th>What it tells you</th></tr></thead>
-<tbody class="first">
-<tr><td>Urine toxicology</td><td>First</td><td>Negative</td><td>Helps exclude intoxication or withdrawal</td></tr>
-<tr><td>Urine toxicology</td><td>First</td><td>Positive</td><td>Exposure, not cause: check the timing</td></tr>
-<tr><td>Chemistry, glucose, TSH</td><td>First</td><td>Normal</td><td>Excludes a metabolic or thyroid mimic</td></tr>
-</tbody>
-<tbody>
-<tr><td>Brain MRI (magnetic resonance imaging)</td><td>By branch</td><td>Lesion</td><td>Only with a neurologic finding</td></tr>
-</tbody>
-</table>
-</div>
+<figure class="lcp"><div class="ttl"><span><b class="step">1</b>Rule out a cause</span></div><ol class="path"><li class="pt"><span class="when">First: together, in either order</span><div class="tile first"><div class="wt2"><p class="tn">Urine toxicology</p><p class="wr2"><b>Negative</b><span class="mask">Lowers suspicion; standard panels miss some drugs</span></p><p class="wr2"><b>Positive</b><span class="mask">Exposure, not cause: check the timing</span></p></div><i class="plus" aria-label="and"></i><div class="wt2"><p class="tn">Chemistry, glucose, TSH</p><p class="wr2"><b>Normal</b><span class="mask">Makes a metabolic or thyroid mimic unlikely</span></p></div></div></li><li class="pt"><span class="when">Only with a neurologic finding</span><div class="tile"><div class="wt2"><p class="tn">Brain MRI (magnetic resonance imaging)</p><p class="wr2"><b>Lesion</b><span class="mask">A structural cause</span></p></div></div></li><li class="pt end"><span class="when">Then</span><p class="pt-tx">No cause found: time the psychosis (step 2), then check it against mood (step 3).</p></li></ol></figure>
+<figure class="lcw"><div class="ttl"><span><b class="step">2</b>Time the psychosis</span><small>not to scale</small></div><div class="wax" aria-hidden="true"><div class="wsp"></div><div class="wt"><span style="--x:0%">Day 1</span><span style="--x:30%">1 month</span><span style="--x:64%">6 months</span><em>Time</em></div></div><ol class="wrows"><li class="wr"><div class="wh"><b class="nm mask">Brief psychotic disorder</b><span class="win">1 day to under 1 month</span></div><div class="wb"><div class="rail" aria-hidden="true"><i class="tk" style="--x:0%"></i><i class="tk" style="--x:30%"></i><i class="tk" style="--x:64%"></i><i class="bar c1" style="--a:0%;--b:30%"></i></div><p class="wl"><b>Needs</b>1 or more core symptoms; full return to baseline</p><p class="wl"><b>Mood episodes</b>Not only during them</p><p class="cue">after a marked stressor; postpartum</p></div></li><li class="wr"><div class="wh"><b class="nm mask">Schizophreniform disorder</b><span class="win">1 to under 6 months</span></div><div class="wb"><div class="rail" aria-hidden="true"><i class="tk" style="--x:0%"></i><i class="tk" style="--x:30%"></i><i class="tk" style="--x:64%"></i><i class="bar c2" style="--a:30%;--b:64%"></i></div><p class="wl"><b>Needs</b>Criterion A</p><p class="wl"><b>Mood episodes</b>None, or a minority of the illness</p></div></li><li class="wr"><div class="wh"><b class="nm mask">Schizophrenia</b><span class="win">6 months or more in all</span></div><div class="wb"><div class="rail" aria-hidden="true"><i class="tk" style="--x:0%"></i><i class="tk" style="--x:30%"></i><i class="tk" style="--x:64%"></i><i class="bar c3 open" style="--a:64%;--b:100%"></i></div><div class="rail segs" aria-hidden="true"><i class="tk" style="--x:0%"></i><i class="tk" style="--x:30%"></i><i class="tk" style="--x:64%"></i><span class="sg soft" style="--a:0%;--b:20%">Prodrome</span><span class="sg act" style="--a:20%;--b:40%">Active</span><span class="sg soft" style="--a:40%;--b:84%">Residual</span></div><p class="segcap">Active symptoms 1 month or more (less if treated); prodrome and residual count toward the 6 months</p><p class="wl"><b>Needs</b>Criterion A; functional decline</p><p class="wl"><b>Mood episodes</b>None, or a minority of the illness</p><p class="cue">family history; early 20s in men</p></div></li><li class="wg">A delusion only: Criterion A never met</li><li class="wr"><div class="wh"><b class="nm mask">Delusional disorder</b><span class="win">1 month or more</span></div><div class="wb"><div class="rail" aria-hidden="true"><i class="tk" style="--x:0%"></i><i class="tk" style="--x:30%"></i><i class="tk" style="--x:64%"></i><i class="bar only open" style="--a:30%;--b:100%"></i></div><p class="wl"><b>Needs</b>A delusion; otherwise functioning and behavior intact</p><p class="wl"><b>Mood episodes</b>Brief, if any</p><p class="cue">onset about 40; isolated, deaf or low vision</p></div></li><li class="wg">Timed to a drug, not a window</li><li class="wr"><div class="wh"><b class="nm mask">Substance-induced psychotic disorder</b><span class="win">During or soon after use</span></div><div class="wb"><div class="rail" aria-hidden="true"><i class="tk" style="--x:0%"></i><i class="tk" style="--x:30%"></i><i class="tk" style="--x:64%"></i><i class="bar exp" style="--a:3%;--b:15%"></i></div><p class="wl"><b>Needs</b>Delusions or hallucinations tied to a drug</p><p class="wl"><b>Mood episodes</b>Not a criterion</p></div></li></ol><p class="note">Every condition in a row is required. These are windows, not stages: when symptoms outlast one, re-time the whole illness.</p></figure><figure class="lcw lcm"><div class="ttl"><span><b class="step">3</b>Check it against mood episodes</span></div><div class="wax" aria-hidden="true"><div class="wsp"></div><div class="wt"><em>Time</em></div></div><ol class="wrows"><li class="tr"><div class="wh"><b class="nm mask">Mood disorder with psychotic features</b><span class="win">Psychosis only inside manic or major depressive episodes</span></div><div class="wb"><div class="lanes" aria-hidden="true"><span class="ln">Mood</span><div class="lane"><i class="mb lo" style="--a:4%;--b:42%"></i><i class="mb lo" style="--a:58%;--b:94%"></i></div><span class="ln">Psychosis</span><div class="lane"><i class="pb" style="--a:12%;--b:34%"></i><i class="pb" style="--a:64%;--b:84%"></i></div></div></div></li><li class="tr"><div class="wh"><b class="nm mask">Schizoaffective disorder</b><span class="win">Criterion A with a major mood episode, psychosis 2 weeks or more alone, and mood most of the illness</span></div><div class="wb"><div class="lanes" aria-hidden="true"><span class="ln">Mood</span><div class="lane"><i class="mb lo" style="--a:4%;--b:40%"></i><i class="mb lo" style="--a:62%;--b:96%"></i></div><span class="ln">Psychosis</span><div class="lane"><i class="pb" style="--a:8%;--b:40%"></i><i class="pb free" style="--a:40%;--b:62%"></i><i class="pb" style="--a:62%;--b:96%"></i></div><span></span><div class="fls"><em class="fl" style="--a:40%;--b:62%">2 wk+ alone</em></div></div></div></li><li class="tr"><div class="wh"><b class="nm mask">Schizophrenia</b><span class="win">Mood episodes, if any, a minority of the illness</span></div><div class="wb"><div class="lanes" aria-hidden="true"><span class="ln">Mood</span><div class="lane"><i class="mb lo" style="--a:44%;--b:60%"></i></div><span class="ln">Psychosis</span><div class="lane"><i class="pb free" style="--a:4%;--b:44%"></i><i class="pb" style="--a:44%;--b:60%"></i><i class="pb free" style="--a:60%;--b:96%"></i></div></div></div></li></ol><div class="lc-key"><span><i class="k-lo"></i>Low mood</span><span><i class="k-ps"></i>Psychosis</span><span><i class="k-free"></i>Psychosis with no mood episode</span></div></figure>
 
 <h5 class="tsec" id="pd-mx">Management and treatment</h5>
 <div class="tw">
-<table class="dense"><caption>Management ladder</caption>
+<table class="dense"><caption>Management ladder: schizophrenia spectrum</caption>
 <thead><tr><th>Tier</th><th>Intervention</th><th>Escalate when</th></tr></thead>
 <tbody>
 <tr><td>First line</td><td>Antipsychotic; hospitalize if dangerous or unable to meet basic needs</td><td>No response after an adequate trial (4 to 6 weeks)</td></tr>
@@ -13043,6 +13192,8 @@ The 27–36 week window for Tdap is not an <b>eligibility gate</b>. Tdap is <b>s
 </table>
 </div>
 
+<div class="crit"><span class="lbl">By diagnosis</span> <b>Brief psychotic disorder</b> &ndash; supervision and support; a short antipsychotic course if needed, and hospitalization by severity &middot; <b>Delusional disorder</b> &ndash; antipsychotic plus psychotherapy</div>
+
 <h5 class="authored-hdr" id="pd-bank">Practice</h5>
 <ol class="bank authored">
 <li data-type="dx" data-src="nbme" data-nbme="psych-form-085f91" data-d1="Schizophrenia" data-d2="Bipolar disorder" data-item-id="q_f0f5f514ad0d6cb6928d" data-item-version="2" data-item-status="ready" data-key-id="o_614fab43136cf810d9ea" data-d1-id="o_89799bac2af85b1601d2" data-d2-id="o_241a1d76b07ec07c58cc" data-lead-in="Which of the following is the most likely diagnosis?">52-year-old man brought to the emergency department by police because of odd behavior, after an arrest for disturbing people living nearby; for 6 months he has been pushing flyers hard to promote a New Age healing business he runs from his home, and he claims special abilities that cure every kind of physical and mental illness; he is extremely upset about the arrest and is convinced that the police and the physician are plotting against him and his business; he insists he truly has special powers and could heal everyone in the waiting room; physical examination normal; mental status examination: denies any past psychiatric problems, depression, elevated mood or hearing voices; sleeps 6 to 8 hours a night; laboratory studies within the reference range &rarr; <b>Delusional disorder</b> &rarr; one delusion for 6 months with no hallucinations, disorganization, negative symptoms or mood episode</li>
@@ -13050,7 +13201,7 @@ The 27–36 week window for Tdap is not an <b>eligibility gate</b>. Tdap is <b>s
 <li data-type="dx" data-src="authored" data-d1="Schizophrenia" data-d2="Delusional disorder" data-item-id="q_825dd34c39a6fefa51c5" data-item-version="2" data-item-status="ready" data-key-id="o_06391f8e4a64f3b53094" data-d1-id="o_bce15023b97d864f5086" data-d2-id="o_7c7534c3c9256f1d1b01" data-lead-in="Which of the following is the most likely diagnosis?">24-year-old man brought by his sister because for 3 months he has believed his neighbors implanted a tracking device in his tooth; he hears voices commenting on everything he does and has stopped attending classes; no episodes of depressed or elevated mood; vital signs within normal limits; urine toxicology negative; mental status examination: flat affect; oriented to person, place and time &rarr; <b>Schizophreniform disorder</b> &rarr; a delusion plus prominent voices for at least 1 month and under 6 months</li>
 <li data-type="dx" data-src="authored" data-d1="Schizophreniform disorder" data-d2="Delusional disorder" data-item-id="q_7dfe8050588133fa1bce" data-item-version="1" data-item-status="ready" data-key-id="o_3d5a24c4b336d3c75465" data-d1-id="o_be8d9277b4373cdfa63a" data-d2-id="o_2f07fee2b8999240eedb" data-lead-in="Which of the following is the most likely diagnosis?">26-year-old man brought by his parents; for 9 months he has heard voices and believed that television hosts send him coded messages; he lost his job, rarely speaks and has stopped bathing; no episodes of depressed or elevated mood; vital signs within normal limits; urine toxicology negative; mental status examination: flat affect, speech sparse &rarr; <b>Schizophrenia</b> &rarr; Criterion A symptoms with functional decline for 6 months or more</li>
 <li data-type="dx" data-src="authored" data-d1="Schizophrenia" data-d2="Schizophreniform disorder" data-item-id="q_b3db6c76ffbbc3d98f8c" data-item-version="2" data-item-status="ready" data-key-id="o_b2427906f161debee2b2" data-d1-id="o_84e0a21c1e76f85cf1ca" data-d2-id="o_ad942bef54bceabb7522" data-lead-in="Which of the following is the most likely diagnosis?">46-year-old woman brought by her employer's human resources officer because for 4 months she has written daily letters to a television news anchor she has never met, certain that he is in love with her; she works full time and runs her household without difficulty; no hallucinations; mood normal; sleeps 7 hours a night; vital signs within normal limits; laboratory studies within the reference range &rarr; <b>Delusional disorder</b> &rarr; an erotomanic delusion for at least 1 month, with functioning intact and no other psychotic or mood symptoms</li>
-<li data-type="dx" data-src="authored" data-d1="Major depressive disorder with psychotic features" data-d2="Schizophrenia" data-item-id="q_84e5c9dd0796f8bbc02d" data-item-version="3" data-item-status="ready" data-key-id="o_2ee2e91a0ba400ecd5b9" data-d1-id="o_2da18438ddbfe143743f" data-d2-id="o_4b8760215eb12d286e04" data-lead-in="Which of the following is the most likely diagnosis?">34-year-old woman with 1 year of hearing voices that insult her and believing that her coworkers are plotting to poison her; the voices and the belief ran through two episodes during that year, each lasting more than 2 weeks, of depressed mood, loss of interest, poor sleep, excessive guilt and poor concentration nearly every day, which together covered most of the year; the voices and the belief have continued for 4 weeks since her mood returned to normal; vital signs within normal limits; urine toxicology negative; mental status examination: euthymic mood; full-range affect; hears insulting voices during the interview; alert and oriented to person, place and time &rarr; <b>Schizoaffective disorder</b> &rarr; Criterion A concurrent with major depressive episodes, 2 weeks or more of delusions and voices without a mood episode, and mood episodes for most of the illness</li>
+<li data-type="dx" data-src="authored" data-d1="Major depressive disorder with psychotic features" data-d2="Schizophrenia" data-item-id="q_84e5c9dd0796f8bbc02d" data-item-version="4" data-item-status="ready" data-key-id="o_2ee2e91a0ba400ecd5b9" data-d1-id="o_2da18438ddbfe143743f" data-d2-id="o_4b8760215eb12d286e04" data-lead-in="Which of the following is the most likely diagnosis?">34-year-old woman with 1 year of hearing voices that insult her and believing that her coworkers are plotting to poison her; the voices and the belief ran through two episodes that year, lasting 4 months and 3 months, of depressed mood, loss of interest, poor sleep, excessive guilt and poor concentration nearly every day; the voices and the belief have continued for 4 weeks since her mood returned to normal; vital signs within normal limits; urine toxicology negative; mental status examination: euthymic mood; full-range affect; hears insulting voices during the interview; alert and oriented to person, place and time &rarr; <b>Schizoaffective disorder</b> &rarr; Criterion A concurrent with major depressive episodes, 2 weeks or more of delusions and voices without a mood episode, and mood episodes for most of the illness</li>
 <li data-type="dx" data-src="authored" data-d1="Schizoaffective disorder, bipolar type" data-d2="Brief psychotic disorder" data-item-id="q_29765c80940704a6c8b7" data-item-version="2" data-item-status="ready" data-key-id="o_c581d70170770189a310" data-d1-id="o_48975a9879554abbdb61" data-d2-id="o_975acec6fb78491e5055" data-lead-in="Which of the following is the most likely diagnosis?">29-year-old man brought by his wife after 1 week of sleeping 2 hours a night, talking rapidly and spending their savings; he says God chose him to rule the world; 2 years ago he had a similar week, and his beliefs stopped when his mood settled; he has had no psychotic symptoms between episodes; vital signs within normal limits; urine toxicology negative; mental status examination: pressured speech; expansive affect; flight of ideas; alert and oriented to person, place and time &rarr; <b>Bipolar disorder with psychotic features</b> &rarr; the psychosis occurs only during the manic episode</li>
 <li data-type="dx" data-src="authored" data-d1="Brief psychotic disorder" data-d2="Bipolar disorder with psychotic features" data-item-id="q_d94a444dc335c58a8169" data-item-version="2" data-item-status="ready" data-key-id="o_37dd07a6d3d0b19ffc64" data-d1-id="o_5ebcefc056dfa3f9d13c" data-d2-id="o_12d7327fb9d0ec34a554" data-lead-in="Which of the following is the most likely diagnosis?">22-year-old man with 2 days of believing that federal agents are following him; he has smoked methamphetamine every day for the past 3 days and has barely slept; no earlier psychiatric history; HR 96/min; BP 128/80 mm Hg; T 37.0 C; alert and oriented to person, place and time &rarr; <b>Substance-induced psychotic disorder</b> &rarr; the delusion began during stimulant intoxication; timing ties it to the drug</li>
 <li data-type="test" data-src="authored" data-d1="MRI of the brain with contrast" data-d2="CT of the head" data-item-id="q_4f7e99d406dda2fff18d" data-item-version="2" data-item-status="ready" data-key-id="o_8974fec9f088fa843ee2" data-d1-id="o_0c8932f2a74b9f39bd35" data-d2-id="o_8c862608c08441cb698a" data-lead-in="Which of the following is the most appropriate next diagnostic study?">31-year-old woman with 5 days of believing that the government has hacked her phone and hearing whispers at night; no past psychiatric history; T 37.0 C; HR 88/min; alert and oriented to person, place and time; neurologic examination normal; serum chemistry panel and TSH normal &rarr; <b>Urine toxicology screen</b> &rarr; it helps exclude intoxication or withdrawal; imaging needs a neurologic finding or history</li>

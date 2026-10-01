@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-01 s39: psychosis brief v7.1: horizontal timelines, workup path, bottom line lists
+
+```
+Page: 219 briefs, 2165 items -> 219 briefs, 2165 items
+Briefs changed (1):
+  - psychosis-duration (Psychosis in an Adult: Rule Out a Cause, Then Time It): items edited (q_84e5c9dd0796f8bbc02d); versions bumped (q_84e5c9dd0796f8bbc02d v3->v4); prose edited (+4469 chars)
+Other page changes (nav, headers, scripts): +18359 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 219 briefs, 2165 items, 4 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 219 | bankwraps 219 | mcq 2165 (axCheck 2165, reveal-only 0) | malformed 0 | crit gridded 132/142 | vignette gridded 132/132 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 10
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-09-29 s38: psychosis-duration reauthored lean (1,301 to 457 words before the bank; 11 of 16 questions kept, 5 retired to the ledger); gate: retired-items ledger; coverage notes without option text
 
 ```
