@@ -303,3 +303,9 @@ figure.lcp{margin:18px 0;padding:15px 15px 10px;border-radius:18px;background:va
 .pearls.nbq .two{margin:4px 0 0;font-size:14.5px;line-height:1.5}
 
 .lcw .wt.low{height:30px} .lcw .wt.low em{top:15px}
+/* mnemonic: the acronym's letters stack in one tinted column and read down as the word on their own, while each
+   word stays whole (Jonathan 2026-10-01) */
+dl.rows.mnem{background:linear-gradient(90deg,rgba(10,84,97,.085) 0 28px,transparent 28px);border-radius:10px 0 0 10px;padding:2px 0}
+dl.rows.mnem > dt{padding:8px 16px 8px 28px;text-indent:-23px;line-height:1.3;white-space:normal}
+dl.rows.mnem > dt b.mn{display:inline-block;min-width:22px;text-indent:0;text-align:right;font-family:var(--serif);font-size:22px;line-height:1;font-weight:700;letter-spacing:0;color:var(--criteria,#0a5461);vertical-align:-2px;margin-right:1px;padding-right:0}
+dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-height:1.42}
