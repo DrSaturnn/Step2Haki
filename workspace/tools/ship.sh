@@ -27,6 +27,15 @@ fail(){ echo "ship $B: ABORT at $1 (nothing written)"; [[ -n "${2:-}" ]] && echo
 
 # ---- 1. checks on a scratch copy
 o=$(python3 repair/build.py "$B" --out "$TMP/index.html" 2>&1) || fail build "$o"; echo "$o"
+# stamp the build for the page's version label and update check (s43): <meta name="ax-build"> now, version.json in step 2
+STAMP_DAY=$(TZ=America/New_York date +%Y-%m-%d)
+python3 - "$TMP/index.html" "$B" "$STAMP_DAY" <<'PY' || fail stamp
+import re, sys
+p, b, d = sys.argv[1:]
+s = open(p, encoding='utf-8').read()
+s = re.sub(r'<meta name="ax-build" content="[^"]*">', '<meta name="ax-build" content="%s|%s">' % (b, d), s, count=1)
+open(p, 'w', encoding='utf-8').write(s)
+PY
 # rules self-tests: the checks themselves must still catch every known defect, on every brief type
 o=$(python3 tools/test_migrate_check.py 2>&1) || fail rules-selftest "$(echo "$o" | grep -E '^BAD|passed')"
 o2=$(AXBX_PAGE="$TMP/index.html" python3 tools/test_gate_rules.py 2>&1) || fail rules-selftest "$(echo "$o2" | grep -E '^BAD|passed')"
@@ -57,11 +66,14 @@ git -C "$ROOT" show HEAD:./workspace/index.html > "$TMP/prev.html" 2>/dev/null |
 cp index.html "$TMP/index.keep.html"; [[ -f "$SITE" ]] && cp "$SITE" "$TMP/site.keep.html"
 cp CHANGELOG.md "$TMP/changelog.keep.md" 2>/dev/null || true
 restore(){ cp "$TMP/index.keep.html" index.html; [[ -f "$TMP/site.keep.html" ]] && cp "$TMP/site.keep.html" "$SITE"
-  [[ -f "$TMP/changelog.keep.md" ]] && cp "$TMP/changelog.keep.md" CHANGELOG.md; git -C "$ROOT" reset -q; }
+  [[ -f "$TMP/changelog.keep.md" ]] && cp "$TMP/changelog.keep.md" CHANGELOG.md
+  [[ -f "$TMP/version.keep.json" ]] && cp "$TMP/version.keep.json" "$(dirname "$SITE")/version.json"; git -C "$ROOT" reset -q; }
 if cmp -s "$TMP/index.html" "$SITE"; then SITELINE="Site: discriminator-briefs-site/index.html unchanged (no deploy)"
 else SITELINE="Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)"; fi
 cp "$TMP/index.html" index.html
 mkdir -p "$(dirname "$SITE")" && cp "$TMP/index.html" "$SITE"
+VERF="$(dirname "$SITE")/version.json"; [[ -f "$VERF" ]] && cp "$VERF" "$TMP/version.keep.json"
+grep -q 'name="ax-build"' "$SITE" && printf '{"build":"%s","date":"%s"}\n' "$B" "$STAMP_DAY" > "$VERF"
 echo "$SITELINE"
 
 # ---- 3. commit body + CHANGELOG entry
@@ -70,6 +82,7 @@ python3 tools/changelog.py "$TMP/prev.html" index.html --site "$SITELINE" --chec
 
 # ---- 4. commit
 git -C "$ROOT" add -A -- workspace "discriminator-briefs-site/index.html" >/dev/null 2>&1
+[[ -f "$ROOT/discriminator-briefs-site/version.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/version.json" >/dev/null 2>&1
 if git -C "$ROOT" diff --cached --quiet; then
   echo "commit: nothing to commit"
 else
