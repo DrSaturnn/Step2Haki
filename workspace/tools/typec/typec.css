@@ -211,3 +211,57 @@ figure .note{margin:10px 0 0;font-size:13.5px;line-height:1.42}
 .lct .rc.mix{background:linear-gradient(135deg,var(--mlo) 0 45%,var(--mhi) 75%)}
 .lcs .lh{font-size:10px;letter-spacing:0;text-transform:none;overflow:hidden;white-space:nowrap}
 .lcs .lh span:last-child{padding-left:14%}
+
+/* ============ Psych charts v4: horizontal rows (lifechart.py window_rows / mood_tracks) ============
+   Time runs left to right on one shared schematic axis. One row per diagnosis: name and window on the left (desktop) or
+   on top (phone), the bar and its requirements beside it. Same palette and meanings as v3. */
+figure.lcw{margin:18px 0;padding:15px 15px 12px;border-radius:18px;background:var(--raised);box-shadow:inset 0 0 0 1px var(--hair)}
+.lcw .wax{display:grid;grid-template-columns:1fr;margin:2px 0 2px}
+.lcw .wsp{display:none}
+.lcw .wt{position:relative;height:16px;font-size:10.5px;font-weight:700;color:var(--muted);letter-spacing:.02em}
+.lcw .wt span{position:absolute;left:var(--x);transform:translateX(-50%);white-space:nowrap}
+.lcw .wt span[style*="--x:0%"]{transform:none}
+.lcw .wt em{position:absolute;right:0;font-style:normal;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase}
+.lcw .wt em::after{content:" \2192"}
+.lcw .wrows{list-style:none;margin:0;padding:0}
+.lcw .wr,.lcw .tr{padding:12px 0 11px;border-top:1px solid var(--hair)}
+.lcw .wg{padding:14px 0 2px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--hair)}
+.lcw .wg + .wr{border-top:0;padding-top:6px}
+.lcw .wh{display:flex;flex-direction:column;gap:2px}
+.lcw .wh .nm{font-weight:700;font-size:14.5px;line-height:1.3;color:var(--chart-ink)}
+.lcw .wh .win{font-weight:700;font-size:13px;line-height:1.3;color:var(--psy3)}
+.lcw .rail{position:relative;height:14px;margin:9px 0 8px;border-radius:7px;background:var(--recess)}
+.lcw .rail .tk{position:absolute;z-index:1;left:var(--x);top:-3px;bottom:-3px;width:1.5px;margin-left:-.75px;background:var(--chart-ink);opacity:.22}
+.lcw .rail .tk[style*="--x:0%"]{display:none}
+.lcw .rail.segs .tk{opacity:.55;background:var(--chart-ink)}
+.lcw .bar{position:absolute;left:var(--a);width:calc(var(--b) - var(--a));top:0;bottom:0;border-radius:7px}
+.lcw .bar.c1{background:var(--psy2)} .lcw .bar.c2{background:color-mix(in srgb,var(--psy2) 45%,var(--psy3))} .lcw .bar.c3{background:var(--psy3)}
+.lcw .bar.only{background:repeating-linear-gradient(135deg,var(--psy-e) 0 2px,#fff 2px 6px);box-shadow:inset 0 0 0 1.5px var(--psy-e)}
+.lcw .bar.exp{background:var(--psy2)}
+.lcw .bar.open{border-radius:7px 0 0 7px;-webkit-mask:linear-gradient(90deg,#000 80%,transparent);mask:linear-gradient(90deg,#000 80%,transparent)}
+.lcw .rail.segs{height:22px;margin-top:-2px;background:transparent}
+.lcw .sg{position:absolute;left:var(--a);width:calc(var(--b) - var(--a));top:0;bottom:0;display:flex;align-items:center;justify-content:flex-start;padding-left:7px;box-sizing:border-box;font-size:10.5px;font-weight:700;white-space:nowrap;overflow:hidden}
+.lcw .sg.soft{background:repeating-linear-gradient(135deg,var(--psy2) 0 3px,var(--psy1) 3px 7px);color:var(--psy3)}
+.lcw .sg.act{background:var(--psy3);color:#fff}
+.lcw .sg:first-of-type{border-radius:6px 0 0 6px} .lcw .sg:last-child{border-radius:0 6px 6px 0}
+.lcw .segcap{margin:-4px 0 6px;font-size:12px;line-height:1.35;color:var(--muted)}
+.lcw .wl{margin:3px 0 0;font-size:13.5px;line-height:1.42;color:var(--chart-ink)}
+.lcw .wl b{margin-right:6px;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.lcw .cue{margin:4px 0 0;font-size:12.5px;line-height:1.38;color:var(--muted)}
+.lcw .cue::before{content:"Cues ";font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+/* mood tracks */
+.lcm .lanes{display:grid;grid-template-columns:64px 1fr;align-items:center;gap:5px 8px;margin:9px 0 2px}
+.lcm .ln{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:right}
+.lcm .lane{position:relative;height:16px;border-radius:5px;background:var(--recess)}
+.lcm .mb,.lcm .pb{position:absolute;left:var(--a);width:calc(var(--b) - var(--a));top:0;bottom:0}
+.lcm .mb{border-radius:5px} .lcm .mb.lo{background:var(--mlo);box-shadow:inset 0 0 0 1.5px var(--mlo-e)} .lcm .mb.hi{background:var(--mhi);box-shadow:inset 0 0 0 1.5px var(--mhi-e)}
+.lcm .pb{background:repeating-linear-gradient(135deg,var(--psy-e) 0 3px,var(--psy1) 3px 8px);box-shadow:inset 0 1.5px 0 var(--psy-e),inset 0 -1.5px 0 var(--psy-e)}
+.lcm .pb.free{box-shadow:0 0 0 2px var(--chart-ink);z-index:1;border-radius:2px}
+.lcm .fls{position:relative;height:15px}
+.lcm .fl{position:absolute;left:var(--a);width:calc(var(--b) - var(--a));text-align:center;font-style:normal;font-size:10.5px;font-weight:700;color:var(--chart-ink);white-space:nowrap}
+@media (min-width:700px){
+  .lcw .wax{grid-template-columns:190px 1fr;column-gap:18px} .lcw .wsp{display:block}
+  .lcw .wr,.lcw .tr{display:grid;grid-template-columns:190px 1fr;column-gap:18px}
+  .lcw .wh{flex-direction:column;gap:3px}
+  .lcw .rail:first-child,.lcm .lanes{margin-top:3px}
+}

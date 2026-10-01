@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """lifechart.py: the psych chart builder for the AxBx study page (styles: tools/typec/typec.css, section "Psych charts v3").
 
-Three chart types, one visual language (time runs down; periwinkle = low mood, apricot = high mood, teal = psychosis and
+Chart types, one visual language (time runs down in v3 charts, left to right in the v4 rows; periwinkle = low mood, apricot = high mood, teal = psychosis and
 deepens as the illness lasts longer, hatched teal = a delusion only, an outlined psychosis segment = psychosis with no mood
 episode, red = danger):
 
@@ -11,6 +11,9 @@ episode, red = danger):
   mood_multiples()  Step "check it against mood": small multiples on one time axis. The builder COMPUTES from the drawn
                     geometry which psychosis falls outside mood episodes (outlined automatically) and the mood share of
                     the illness (the meter), and refuses a panel whose picture contradicts its rule.
+  window_rows()     v4, horizontal: one row per diagnosis on one shared axis; the bar is the window the diagnosis owns,
+                    with its requirements beside it (needs, mood episodes, cues). Bars must end on a tick.
+  mood_tracks()     v4, horizontal: a Mood lane over a Psychosis lane per diagnosis; same geometry checks as mood_multiples().
   threshold_ruler() Minimum-duration clocks on a log time ruler (4 days ... 2 years), labels de-collided with leaders.
 
 Every label is HTML text: study mode masks the names (class "mask"), screen readers read it, and phones wrap it.
@@ -224,6 +227,73 @@ def threshold_ruler(title, marks, step=None, ticks=('1 day', '1 week', '1 month'
             + (key(*keys) if keys else '') + '</figure>')
 
 
+# ---------------------------------------------------------------- v4: horizontal rows (time runs left to right)
+def _pct(x):
+    return f'{x:g}%'
+
+
+def window_rows(title, ticks, rows, step=None, keys=('ps', 'only'), note='', small='not to scale'):
+    """Horizontal duration windows, one row per diagnosis, all on one shared schematic axis.
+    ticks: [(label, x%)] left to right. rows: {name, window, span: (a, b|None), kind: c1|c2|c3|only|exp, needs, mood,
+    cues, segs: [(label, a, b, soft|act)], segcap, group}. A span end must sit on a tick (the picture must agree with the
+    stated window); b=None means open-ended ("and longer"). 'group' starts a labelled group above that row."""
+    xs = {x for _, x in ticks}
+    head = ''.join(f'<span style="--x:{_pct(x)}">{E(l)}</span>' for l, x in ticks)
+    grid = ''.join(f'<i class="tk" style="--x:{_pct(x)}"></i>' for _, x in ticks)
+    out = []
+    for r in rows:
+        a, b = r['span']
+        if r['kind'] != 'exp' and (a not in xs or (b is not None and b not in xs)):
+            raise ChartError(f'{r["name"]}: span {r["span"]} does not sit on the ticks {sorted(xs)}')
+        if r.get('group'):
+            out.append(f'<li class="wg">{r["group"]}</li>')
+        end = 100 if b is None else b
+        bar = f'<i class="bar {r["kind"]}{" open" if b is None else ""}" style="--a:{_pct(a)};--b:{_pct(end)}"></i>'
+        segs = ''
+        if r.get('segs'):
+            for lab, sa, sb, k in r['segs']:
+                segs += f'<span class="sg {k}" style="--a:{_pct(sa)};--b:{_pct(sb)}">{lab}</span>'
+            segs = f'<div class="rail segs" aria-hidden="true">{grid}{segs}</div>'
+            if r.get('segcap'):
+                segs += f'<p class="segcap">{r["segcap"]}</p>'
+        lines = ''.join(f'<p class="wl"><b>{lab}</b>{r[k]}</p>' for k, lab in (('needs', 'Needs'), ('mood', 'Mood episodes')) if r.get(k))
+        cues = f'<p class="cue">{r["cues"]}</p>' if r.get('cues') else ''
+        out.append(f'<li class="wr"><div class="wh"><b class="nm mask">{r["name"]}</b><span class="win">{r["window"]}</span></div>'
+                   f'<div class="wb"><div class="rail" aria-hidden="true">{grid}{bar}</div>{segs}{lines}{cues}</div></li>')
+    return (f'<figure class="lcw">{_title(title, step, small)}'
+            f'<div class="wax" aria-hidden="true"><div class="wsp"></div><div class="wt">{head}<em>Time</em></div></div>'
+            f'<ol class="wrows">{"".join(out)}</ol>' + (key(*keys) if keys else '') + (f'<p class="note">{note}</p>' if note else '') + '</figure>')
+
+
+def mood_tracks(title, panels, step=None, keys=('lo', 'ps', 'free'), note=''):
+    """Horizontal paired tracks: per diagnosis a Mood lane over a Psychosis lane on one time axis (t, h in percent, left
+    to right). Same rules and geometry checks as mood_multiples(): free psychosis is outlined automatically and a picture
+    that contradicts its rule is refused."""
+    out = []
+    for p in panels:
+        free, share = analyse(p)
+        _check(p, free, share)
+        mood = _union([(t, t + h) for t, h, _ in p['mood']])
+        mb = ''.join(f'<i class="mb {k}" style="--a:{_pct(t)};--b:{_pct(t + h)}"></i>' for t, h, k in p['mood'])
+        pb = ''
+        for t, h in p['psy']:
+            cuts = sorted({t, t + h} | {x for a, b in mood for x in (a, b) if t < x < t + h})
+            for a, b in zip(cuts, cuts[1:]):
+                covered = any(ma <= a and b <= mbb for ma, mbb in mood)
+                pb += f'<i class="pb{"" if covered else " free"}" style="--a:{_pct(a)};--b:{_pct(b)}"></i>'
+        fl = ''
+        if free and p.get('free_label'):
+            s, e = max(free, key=lambda z: z[1] - z[0])
+            fl = f'<em class="fl" style="--a:{_pct(s)};--b:{_pct(e)}">{p["free_label"]}</em>'
+        out.append(f'<li class="tr"><div class="wh"><b class="nm mask">{p["name"]}</b><span class="win">{p["decider"]}</span></div>'
+                   f'<div class="wb"><div class="lanes" aria-hidden="true"><span class="ln">Mood</span><div class="lane">{mb}</div>'
+                   f'<span class="ln">Psychosis</span><div class="lane">{pb}</div>' + (f'<span></span><div class="fls">{fl}</div>' if fl else '') + '</div>'
+                   f'</div></li>')
+    return (f'<figure class="lcw lcm">{_title(title, step, "")}'
+            f'<div class="wax" aria-hidden="true"><div class="wsp"></div><div class="wt"><em>Time</em></div></div>'
+            f'<ol class="wrows">{"".join(out)}</ol>{key(*keys)}' + (f'<p class="note">{note}</p>' if note else '') + '</figure>')
+
+
 # ---------------------------------------------------------------- self-test
 if __name__ == '__main__':
     ok = 0
@@ -248,4 +318,9 @@ if __name__ == '__main__':
     tops = [float(x) for x in __import__('re').findall(r'class="rc [a-z]+" style="top:([\d.]+)px', r)]
     assert all(b - a >= 46 for a, b in zip(tops, tops[1:])), tops
     ok += 1; print('ok  ruler cards never overlap', [round(t) for t in tops])
-    print(f'{ok}/6 passed')
+    expect_error(lambda: window_rows('t', [('a', 0), ('b', 30)], [{'name': 'x', 'window': 'x', 'span': (0, 40), 'kind': 'c1'}]), 'a window that ends off its tick')
+    expect_error(lambda: mood_tracks('t', [dict(base, verdict='v', rule='inside', mood=[(0, 40, 'lo')], psy=[(30, 20)])]), 'horizontal: psychosis past a mood episode under "inside"')
+    h = mood_tracks('t', [dict(base, verdict='v', rule='schizoaffective', mood=[(0, 40, 'lo'), (55, 40, 'lo')], psy=[(5, 90)], free_label='2 wk')])
+    assert 'pb free' in h and 'class="fl"' in h
+    ok += 1; print('ok  horizontal tracks outline free psychosis')
+    print(f'{ok}/9 passed')
