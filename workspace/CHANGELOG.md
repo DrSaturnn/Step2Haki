@@ -2,6 +2,21 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-01 s46: timelines: every row carries its own scale under its bars, with a time arrow
+
+```
+Page: 219 briefs, 2161 items -> 219 briefs, 2161 items
+Briefs changed (2):
+  - psychosis-duration (Psychosis in an Adult: Rule Out a Cause, Then Time It): prose edited (+650 chars)
+  - bipolar-mania (Bipolar Disorder: Rule Out a Cause, Time the Episode, Then Treat): prose edited (+738 chars)
+Other page changes (nav, headers, scripts): +581 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 219 briefs, 2161 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 219 | bankwraps 219 | mcq 2161 (axCheck 2161, reveal-only 0) | malformed 0 | crit gridded 133/142 | vignette gridded 132/132 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-01 s45: phones and tablets: Index opens from a tap tab on the left edge; sidebar label Bipolar Disorder
 
 ```

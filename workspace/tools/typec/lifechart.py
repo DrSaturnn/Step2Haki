@@ -240,7 +240,8 @@ def window_rows(title, ticks, rows, step=None, keys=('ps', 'only'), note='', sma
     hi|lo|mix (add ' mild' for hypomania) colour the bar by mood instead of psychosis. A span end must sit on a tick (the picture must agree with the
     stated window); b=None means open-ended ("and longer"). 'group' starts a labelled group above that row."""
     xs = {x for _, x in ticks}
-    head = ''.join(f'<span style="--x:{_pct(x)}">{E(l)}</span>' for l, x in ticks)
+    axl = ''.join(f'<span class="{"a0" if x == 0 else "a1" if x > 85 else ""}" style="--x:{_pct(x)}">{E(l)}</span>' for l, x in ticks)
+    head = ''
     grid = ''.join(f'<i class="tk" style="--x:{_pct(x)}"></i>' for _, x in ticks)
     out = []
     for r in rows:
@@ -258,13 +259,15 @@ def window_rows(title, ticks, rows, step=None, keys=('ps', 'only'), note='', sma
             segs = f'<div class="rail segs" aria-hidden="true">{grid}{segs}</div>'
             if r.get('segcap'):
                 segs += f'<p class="segcap">{r["segcap"]}</p>'
+        rax = f'<div class="rax" aria-hidden="true">{axl}<em>\u2192</em></div>'
+        if segs:
+            segs = segs.replace('</div>', '</div>' + rax, 1) if r.get('segcap') else segs + rax
         pairs = r.get('lines') or [(lab, r[k]) for k, lab in (('needs', 'Needs'), ('mood', 'Mood episodes')) if r.get(k)]
         lines = ''.join(f'<p class="wl"><b>{lab}</b>{txt}</p>' for lab, txt in pairs)
         cues = f'<p class="cue">{r["cues"]}</p>' if r.get('cues') else ''
         out.append(f'<li class="wr"><div class="wh"><b class="nm mask">{r["name"]}</b><span class="win">{r["window"]}</span></div>'
-                   f'<div class="wb"><div class="rail" aria-hidden="true">{grid}{bar}</div>{segs}{lines}{cues}</div></li>')
+                   f'<div class="wb"><div class="rail" aria-hidden="true">{grid}{bar}</div>{"" if segs else rax}{segs}{lines}{cues}</div></li>')
     return (f'<figure class="lcw">{_title(title, step, small)}'
-            f'<div class="wax" aria-hidden="true"><div class="wsp"></div><div class="wt{" low" if max(x for _, x in ticks) > 70 else ""}">{head}<em>Time</em></div></div>'
             f'<ol class="wrows">{"".join(out)}</ol>' + (key(*keys) if keys else '') + (f'<p class="note">{note}</p>' if note else '') + '</figure>')
 
 
@@ -292,8 +295,7 @@ def mood_tracks(title, panels, step=None, keys=('lo', 'ps', 'free'), note=''):
                    f'<div class="wb"><div class="lanes" aria-hidden="true"><span class="ln">Mood</span><div class="lane">{mb}</div>'
                    f'<span class="ln">Psychosis</span><div class="lane">{pb}</div>' + (f'<span></span><div class="fls">{fl}</div>' if fl else '') + '</div>'
                    f'</div></li>')
-    return (f'<figure class="lcw lcm">{_title(title, step, "")}'
-            f'<div class="wax" aria-hidden="true"><div class="wsp"></div><div class="wt"><em>Time</em></div></div>'
+    return (f'<figure class="lcw lcm">{_title(title, step, "time →")}'
             f'<ol class="wrows">{"".join(out)}</ol>{key(*keys)}' + (f'<p class="note">{note}</p>' if note else '') + '</figure>')
 
 
