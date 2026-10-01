@@ -140,6 +140,9 @@ def item_contract(new, new_items, old_items, cmap, F, W):
         F('I9 NBME items must come first in the bank')
     if 'nbme' in order and 'How NBME framed it' not in new:
         F('I9 NBME item without a "How NBME framed it" note')
+    for blk in re.findall(r'<div class="pearls nbq"[^>]*>(.*?)</div>', new, re.S):
+        if 'class="nbstem"' not in blk or 'class="two"' not in blk:
+            F('I10 an NBME question block needs its stem (p.nbstem) and the final two answers (p.two)')
     for iid, (a, body) in new_items.items():
         t = norm(body)
         parts = [x.strip() for x in t.split('->')]
@@ -552,6 +555,8 @@ def main():
         # the brief that carries that item (P1 sourced delirium rows to another brief's item)
         src_items = source_items(open(src_arg, encoding='utf-8').read())
         on_brief = {a.get('data-nbme') for a, _ in new_items.values() if a.get('data-nbme')}
+        # lean briefs (Jonathan 2026-10-01): an NBME question lives in its "How NBME framed it" block, not in the bank
+        on_brief |= set(re.findall(r'<div class="pearls nbq"[^>]*data-nbme="([^"]+)"', new))
         # a clue row quotes one clue, not the whole stem: rows over 25 words do not count toward C2
         ctoks = [set(re.findall(r'[a-z0-9]+(?:[./][a-z0-9]+)*', norm(c.get('text', '')))) for c in claims
                  if c.get('kind') == 'clue' and len(norm(c.get('text', '')).split()) <= 25]

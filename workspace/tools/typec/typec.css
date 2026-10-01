@@ -231,9 +231,9 @@ figure.lcw{margin:18px 0;padding:15px 15px 12px;border-radius:18px;background:va
 .lcw .wh .nm{font-weight:700;font-size:14.5px;line-height:1.3;color:var(--chart-ink)}
 .lcw .wh .win{font-weight:700;font-size:13px;line-height:1.3;color:var(--psy3)}
 .lcw .rail{position:relative;height:14px;margin:9px 0 8px;border-radius:7px;background:var(--recess)}
-.lcw .rail .tk{position:absolute;z-index:1;left:var(--x);top:-3px;bottom:-3px;width:1.5px;margin-left:-.75px;background:var(--chart-ink);opacity:.22}
+.lcw .rail .tk{position:absolute;left:var(--x);top:-3px;bottom:-3px;width:1.5px;margin-left:-.75px;background:var(--chart-ink);opacity:.22}
 .lcw .rail .tk[style*="--x:0%"]{display:none}
-.lcw .rail.segs .tk{opacity:.55;background:var(--chart-ink)}
+.lcw .rail.segs .tk{opacity:.55;background:var(--chart-ink);z-index:1}
 .lcw .bar{position:absolute;left:var(--a);width:calc(var(--b) - var(--a));top:0;bottom:0;border-radius:7px}
 .lcw .bar.c1{background:var(--psy2)} .lcw .bar.c2{background:color-mix(in srgb,var(--psy2) 45%,var(--psy3))} .lcw .bar.c3{background:var(--psy3)}
 .lcw .bar.only{background:repeating-linear-gradient(135deg,var(--psy-e) 0 2px,#fff 2px 6px);box-shadow:inset 0 0 0 1.5px var(--psy-e)}
@@ -286,3 +286,20 @@ figure.lcp{margin:18px 0;padding:15px 15px 10px;border-radius:18px;background:va
 .dp ul.bl{list-style:none;margin:-3px 0 11px 3px;padding:1px 0 1px 13px;border-left:2px solid rgba(84,74,196,.28)}
 .dp ul.bl li{margin:0 0 3px;font-size:15.2px;line-height:1.45}
 .dp ul.bl li:last-child{margin-bottom:0}
+/* v4 mood bars and dashed "optional" pieces (bipolar), NBME question blocks */
+.lcw .bar.hi{background:var(--mhi);box-shadow:inset 0 0 0 1.5px var(--mhi-e)} .lcw .bar.lo{background:var(--mlo);box-shadow:inset 0 0 0 1.5px var(--mlo-e)}
+.lcw .bar.hi.mild{background:color-mix(in srgb,var(--mhi) 55%,#fff)}
+.lcw .bar.mix{background:repeating-linear-gradient(90deg,var(--mhi) 0 10px,var(--mlo) 10px 20px);box-shadow:inset 0 0 0 1.5px var(--mlo-e)}
+.lcw .sg.opt{z-index:2;background:var(--raised);color:var(--chart-ink);border:1.5px dashed var(--mhi-e);box-sizing:border-box;font-weight:600}
+.lcm .mb.mild{background:color-mix(in srgb,var(--mhi) 55%,#fff)}
+.lcm .mb.opt{background:transparent!important;box-shadow:none;border:1.5px dashed var(--mlo-e);box-sizing:border-box}
+.lc-key .k-opt{background:transparent;border:1.5px dashed var(--mlo-e);box-sizing:border-box}
+.lc-key .k-mild{background:color-mix(in srgb,var(--mhi) 55%,#fff);box-shadow:inset 0 0 0 1.5px var(--mhi-e)}
+.pearls.nbq .nbstem{margin:2px 0 6px;font-size:14.5px;line-height:1.5}
+.pearls.nbq .nbask{margin:0 0 10px;font-size:13.5px;font-style:italic;color:var(--muted)}
+.pearls.nbq .nbh{display:block;margin:10px 0 4px;font-size:10px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.pearls.nbq ul{list-style:none;margin:0 0 4px 3px;padding:1px 0 1px 13px;border-left:2px solid rgba(84,74,196,.28)}
+.pearls.nbq li{margin:0 0 5px;font-size:14px;line-height:1.45}
+.pearls.nbq .two{margin:4px 0 0;font-size:14.5px;line-height:1.5}
+
+.lcw .wt.low{height:30px} .lcw .wt.low em{top:15px}
