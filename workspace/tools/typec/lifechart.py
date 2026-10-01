@@ -14,6 +14,7 @@ episode, red = danger):
   window_rows()     v4, horizontal: one row per diagnosis on one shared axis; the bar is the window the diagnosis owns,
                     with its requirements beside it (needs, mood episodes, cues). Bars must end on a tick.
   mood_tracks()     v4, horizontal: a Mood lane over a Psychosis lane per diagnosis; same geometry checks as mood_multiples().
+  workup_path()     v4: an ordered workup on a vertical line with dots; tests done together sit in one shaded tile.
   threshold_ruler() Minimum-duration clocks on a log time ruler (4 days ... 2 years), labels de-collided with leaders.
 
 Every label is HTML text: study mode masks the names (class "mask"), screen readers read it, and phones wrap it.
@@ -292,6 +293,26 @@ def mood_tracks(title, panels, step=None, keys=('lo', 'ps', 'free'), note=''):
     return (f'<figure class="lcw lcm">{_title(title, step, "")}'
             f'<div class="wax" aria-hidden="true"><div class="wsp"></div><div class="wt"><em>Time</em></div></div>'
             f'<ol class="wrows">{"".join(out)}</ol>{key(*keys)}' + (f'<p class="note">{note}</p>' if note else '') + '</figure>')
+
+
+# ---------------------------------------------------------------- v4: workup path (an ordered workup on a vertical line with dots)
+def workup_path(title, steps, step=None):
+    """An ordered workup: a vertical line with one dot per stage, read top to bottom.
+    steps: {when, tests: [(name, [(result, meaning)])], kind: 'first'|'' , text}. A 'first' stage is the shaded tile of
+    tests done together, in either order, joined by '+'. Meanings carry class "mask" so study mode hides them."""
+    out = []
+    for st in steps:
+        body = ''
+        if st.get('tests'):
+            ts = []
+            for name, res in st['tests']:
+                rs = ''.join(f'<p class="wr2"><b>{r}</b><span class="mask">{m}</span></p>' for r, m in res)
+                ts.append(f'<div class="wt2"><p class="tn">{name}</p>{rs}</div>')
+            body = f'<div class="tile{" first" if st.get("kind") == "first" else ""}">' + '<i class="plus" aria-label="and"></i>'.join(ts) + '</div>'
+        if st.get('text'):
+            body += f'<p class="pt-tx">{st["text"]}</p>'
+        out.append(f'<li class="pt{" end" if st.get("kind") == "end" else ""}"><span class="when">{st["when"]}</span>{body}</li>')
+    return f'<figure class="lcp">{_title(title, step)}<ol class="path">{"".join(out)}</ol></figure>'
 
 
 # ---------------------------------------------------------------- self-test
