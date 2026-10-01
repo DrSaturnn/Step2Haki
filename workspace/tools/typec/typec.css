@@ -322,3 +322,17 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
 #nav .brand p.axbuild{margin-top:2px;font-size:10.5px;opacity:.7;letter-spacing:.02em}
 .axupdate{position:fixed;left:0;right:0;margin:0 auto;width:fit-content;top:calc(10px + env(safe-area-inset-top,0px));z-index:9999;display:flex;align-items:center;gap:12px;max-width:calc(100vw - 24px);box-sizing:border-box;padding:10px 12px 10px 16px;border-radius:14px;background:#2B2F36;color:#fff;font:600 13.5px/1.3 var(--sans,system-ui);box-shadow:0 8px 28px rgba(0,0,0,.25)}
 .axupdate button{flex:none;border:0;border-radius:9px;padding:8px 12px;background:var(--accent,#544AC4);color:#fff;font:700 13px/1 var(--sans,system-ui);cursor:pointer;min-height:36px}
+/* index bookmark tab (s45): phones and tablets only; the bottom bar's Index button gives way to it */
+#navtab{display:none}
+@media (max-width:980px){
+  #mbar button[data-act="index"]{display:none}
+  #navtab{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:center;position:fixed;z-index:151;
+    left:env(safe-area-inset-left,0px);top:50%;width:24px;height:88px;margin-top:-44px;border-radius:0 12px 12px 0;cursor:pointer;
+    background:rgba(43,47,54,.88);color:#fff;box-shadow:2px 0 12px rgba(0,0,0,.18);-webkit-tap-highlight-color:transparent;
+    transition:left .24s ease,background .2s}
+  #navtab::after{content:"";position:absolute;left:0;top:-8px;bottom:-8px;width:40px}
+  #navtab span{writing-mode:vertical-rl;transform:rotate(180deg);font:800 10px/1 var(--sans,system-ui);letter-spacing:1.6px;text-transform:uppercase}
+  #navtab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  body.navopen #navtab{left:min(86vw,360px);background:rgba(43,47,54,.96)}
+}
+@media print{ #navtab{display:none!important} }
