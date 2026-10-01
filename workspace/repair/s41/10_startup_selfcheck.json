@@ -1,0 +1,16 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "var BEFORE = document.body ? norm(document.body.innerText) : \"\";",
+   "with": "/* The word-count self-check forces a full layout of the page twice (about 1.7 s on a laptop, longer on a phone),\n   so it runs only under the ship check (jsdom) or with ?axcheck in the URL. */\nvar VERIFY = /jsdom/i.test(navigator.userAgent) || /[?&]axcheck\\b/.test(location.search);\nvar BEFORE = (VERIFY && document.body) ? norm(document.body.innerText) : \"\";",
+   "note": "startup: skip the layout-forcing word-count self-check outside the ship check"
+  },
+  {
+   "op": "replace_global",
+   "find": "var AFTER=norm(document.body.innerText);",
+   "with": "var AFTER=VERIFY?norm(document.body.innerText):\"\";",
+   "note": "startup: same, for the after count"
+  }
+ ]
+}

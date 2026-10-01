@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-01 s41: faster startup: word-count self-check runs only under the ship check
+
+```
+Page: 219 briefs, 2163 items -> 219 briefs, 2163 items
+Other page changes (nav, headers, scripts): +306 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 219 briefs, 2163 items, 4 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 219 | bankwraps 219 | mcq 2163 (axCheck 2163, reveal-only 0) | malformed 0 | crit gridded 133/142 | vignette gridded 132/132 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-01 s40: bipolar brief lean reauthor; NBME question blocks; mnemonic letter column
 
 ```

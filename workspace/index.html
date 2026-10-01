@@ -14501,7 +14501,10 @@ The 27–36 week window for Tdap is not an <b>eligibility gate</b>. Tdap is <b>s
 (function(){
 "use strict";
 
-var BEFORE = document.body ? norm(document.body.innerText) : "";
+/* The word-count self-check forces a full layout of the page twice (about 1.7 s on a laptop, longer on a phone),
+   so it runs only under the ship check (jsdom) or with ?axcheck in the URL. */
+var VERIFY = /jsdom/i.test(navigator.userAgent) || /[?&]axcheck\b/.test(location.search);
+var BEFORE = (VERIFY && document.body) ? norm(document.body.innerText) : "";
 function norm(s){ return (s||"").replace(/\s+/g," ").trim(); }
 
 /* ---------- 0. sidebar mode switches ---------- */
@@ -15936,7 +15939,7 @@ function figures(){
 }
   function run(){
   switches(); mobileNav(); sections(); columnize(); mnemonics(); tables(); masks(); mcq(); accessibilityEnhance(); unavailableInline(); xrefs(); scalepeeks(); figures(); wire(); shelfInit();
-  var AFTER=norm(document.body.innerText);
+  var AFTER=VERIFY?norm(document.body.innerText):"";
   var addedUI=/STUDY MODE|FLAT THEME|REVEAL|From this brief|Distractors are entities/;
   var a=BEFORE.split(' ').filter(Boolean).length;
   var b=AFTER.split(' ').filter(Boolean).length;
