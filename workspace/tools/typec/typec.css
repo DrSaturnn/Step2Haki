@@ -309,3 +309,11 @@ dl.rows.mnem{background:linear-gradient(90deg,rgba(10,84,97,.085) 0 28px,transpa
 dl.rows.mnem > dt{padding:8px 16px 8px 28px;text-indent:-23px;line-height:1.3;white-space:normal}
 dl.rows.mnem > dt b.mn{display:inline-block;min-width:22px;text-indent:0;text-align:right;font-family:var(--serif);font-size:22px;line-height:1;font-weight:700;letter-spacing:0;color:var(--criteria,#0a5461);vertical-align:-2px;margin-right:1px;padding-right:0}
 dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-height:1.42}
+/* question stems in lines (tools/typec/stemfmt.py): a lead line, indented findings on the bottom line's indent rule,
+   plain lines, then a muted data line; the same layout inside NBME question blocks (Jonathan 2026-10-01) */
+.stem .sl,.stem .si,.stem .ss,.stem .sd,.nbstem .sl,.nbstem .si,.nbstem .ss,.nbstem .sd{display:block}
+.stem .si,.nbstem .si{margin:0 0 0 3px;padding:2px 0 2px 12px;border-left:2px solid rgba(84,74,196,.28)}
+.stem .sl + .si,.nbstem .sl + .si{margin-top:4px}
+.stem .si + .ss,.stem .si + .sd,.nbstem .si + .ss,.nbstem .si + .sd{margin-top:5px}
+.stem .ss,.nbstem .ss{margin-top:3px}
+.stem .sd,.nbstem .sd{margin-top:5px;font-size:.86em;font-weight:500;color:var(--muted);letter-spacing:.01em}

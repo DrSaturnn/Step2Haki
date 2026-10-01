@@ -2,6 +2,21 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-01 s42: psychosis and bipolar questions: 30 to 40 words in scannable lines; NBME blocks; adversarial audit fixes
+
+```
+Page: 219 briefs, 2163 items -> 219 briefs, 2161 items
+Briefs changed (2):
+  - psychosis-duration (Psychosis in an Adult: Rule Out a Cause, Then Time It): items edited (q_825dd34c39a6fefa51c5, q_7dfe8050588133fa1bce, q_b3db6c76ffbbc3d98f8c, q_84e5c9dd0796f8bbc02d, q_29765c80940704a6c8b7, q_d94a444dc335c58a8169, q_4f7e99d406dda2fff18d, q_5af4628002a964e1149f, q_733a1cffb70304fef48c); versions bumped (q_825dd34c39a6fefa51c5 v2->v3, q_7dfe8050588133fa1bce v1->v2, q_b3db6c76ffbbc3d98f8c v2->v3, q_84e5c9dd0796f8bbc02d v4->v5, q_29765c80940704a6c8b7 v2->v3, q_d94a444dc335c58a8169 v2->v3, q_4f7e99d406dda2fff18d v2->v3, q_5af4628002a964e1149f v1->v2, q_733a1cffb70304fef48c v2->v3); attrs set (q_b3db6c76ffbbc3d98f8c data-d2,data-d2-id; q_29765c80940704a6c8b7 data-key-id; q_d94a444dc335c58a8169 data-d2,data-d2-id; q_4f7e99d406dda2fff18d data-d2,data-d2-id; q_5af4628002a964e1149f data-d2,data-d2-id); ITEMS REMOVED (q_f0f5f514ad0d6cb6928d, q_88c6314e2d98a8d9bb01); prose edited (+1865 chars)
+  - bipolar-mania (Bipolar Disorder: Rule Out a Cause, Time the Episode, Then Treat): items edited (q_642294f71730fdce3fb8, q_cd2d3326193e35c8ef02, q_50864e4faace903913cf, q_bad56dc6413aaac87c48, q_7dc58d2f1afc9954f4a2, q_875af1ee71c6f2502d97, q_662161d54e6b8e321eef, q_e14998f0caa852bf05de, q_0c3b63b494f28be9d776, q_27f9ad042d7a0119e0e3, q_293aa90f0e5f09f9f42f, q_83176e5864a0d4fdea0c, q_cc8ff30e23e43a1a0d5b); versions bumped (q_642294f71730fdce3fb8 v2->v3, q_cd2d3326193e35c8ef02 v2->v3, q_50864e4faace903913cf v2->v3, q_bad56dc6413aaac87c48 v2->v3, q_7dc58d2f1afc9954f4a2 v2->v3, q_875af1ee71c6f2502d97 v2->v3, q_662161d54e6b8e321eef v2->v3, q_e14998f0caa852bf05de v2->v3, q_0c3b63b494f28be9d776 v2->v3, q_27f9ad042d7a0119e0e3 v2->v3, q_293aa90f0e5f09f9f42f v2->v3, q_83176e5864a0d4fdea0c v2->v3, q_cc8ff30e23e43a1a0d5b v2->v3); attrs set (q_7dc58d2f1afc9954f4a2 data-d2,data-d2-id; q_83176e5864a0d4fdea0c data-d2,data-d2-id); prose edited (+377 chars)
+Other page changes (nav, headers, scripts): +717 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 219 briefs, 2161 items, 4 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 219 | bankwraps 219 | mcq 2161 (axCheck 2161, reveal-only 0) | malformed 0 | crit gridded 133/142 | vignette gridded 132/132 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-01 s41: faster startup: word-count self-check runs only under the ship check
 
 ```
