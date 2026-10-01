@@ -112,3 +112,7 @@ Before authoring any of these: check existing coverage first (board-brief 7.9). 
 ## s37 (2026-09-30): psych live for Jonathan's review
 - Live: psych shelf and section, Type C setup, 9 psych briefs, Kawasaki Type C. Review state: ipv accepted (minor fixes applied); psychosis-duration and lithium-effects v3 await blinded re-review; bipolar-mania, sz-psychosocial, delirium, panic, ssri-effects, gppd are first drafts with open REJECT findings (scratchpad N_reviews_v1.md; local copy to repair/migration/psych when resumed).
 - Backlog: 9 psych criteria tiles render as fact lists (render allowlist; migrate_check L4); elder brief IPV reporting line; Pairs-with titles between psych siblings.
+
+## s38 to s39 (2026-09-30 to 2026-10-01): psychosis reauthored lean, then v7.1
+- s38: psychosis-duration lean v4 (Jonathan: "excess information and fluff"). s39: v7.1, approved by Jonathan: bottom line in short paragraphs with indented lists, workup path (dots on a vertical line, first tests in one tile), horizontal window rows and mood tracks (lifechart v4), calibrated test wording, no NBME markers on rows. 552 words before the bank. Build: repair/migration/psych/P1/lean4/build.py (local).
+- Next: the lean-brief skill (this style); then the 8 remaining psych briefs one at a time, bipolar first.
