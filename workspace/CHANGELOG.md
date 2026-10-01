@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-01 s40: bipolar brief lean reauthor; NBME question blocks; mnemonic letter column
+
+```
+Page: 219 briefs, 2165 items -> 219 briefs, 2163 items
+Briefs changed (1):
+  - bipolar-mania (Bipolar Disorder: Rule Out a Cause, Time the Episode, Then Treat): items edited (q_642294f71730fdce3fb8, q_cd2d3326193e35c8ef02, q_50864e4faace903913cf, q_bad56dc6413aaac87c48, q_7dc58d2f1afc9954f4a2, q_875af1ee71c6f2502d97, q_662161d54e6b8e321eef, q_e14998f0caa852bf05de, q_0c3b63b494f28be9d776, q_27f9ad042d7a0119e0e3, q_293aa90f0e5f09f9f42f, q_83176e5864a0d4fdea0c, q_cc8ff30e23e43a1a0d5b); versions bumped (q_642294f71730fdce3fb8 v1->v2, q_cd2d3326193e35c8ef02 v1->v2, q_50864e4faace903913cf v1->v2, q_bad56dc6413aaac87c48 v1->v2, q_7dc58d2f1afc9954f4a2 v1->v2, q_875af1ee71c6f2502d97 v1->v2, q_662161d54e6b8e321eef v1->v2, q_e14998f0caa852bf05de v1->v2, q_0c3b63b494f28be9d776 v1->v2, q_27f9ad042d7a0119e0e3 v1->v2, q_293aa90f0e5f09f9f42f v1->v2, q_83176e5864a0d4fdea0c v1->v2, q_cc8ff30e23e43a1a0d5b v1->v2); ITEMS REMOVED (q_e20f782cdbb589ed02db, q_56071dee18c65a08d431); prose edited (-3704 chars)
+Other page changes (nav, headers, scripts): +2319 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 219 briefs, 2163 items, 4 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 219 | bankwraps 219 | mcq 2163 (axCheck 2163, reveal-only 0) | malformed 0 | crit gridded 133/142 | vignette gridded 132/132 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.027%)
+```
+
 ## 2026-10-01 s39: psychosis brief v7.1: horizontal timelines, workup path, bottom line lists
 
 ```
