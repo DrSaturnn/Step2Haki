@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-02 s53: Peds MSK: septic arthritis Kocher ladder named as the Kocher criteria, 3 and 4 rows tinted, 99.6% and derivation cite restored
+
+```
+Page: 216 briefs, 2135 items -> 216 briefs, 2135 items
+Briefs changed (1):
+  - septic-hip (Septic Arthritis in a Child: Aspirate, or Treat and Recheck?): prose edited (+242 chars)
+Other page changes (nav, headers, scripts): +0 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 216 briefs, 2135 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 216 | bankwraps 216 | mcq 2135 (axCheck 2135, reveal-only 0) | malformed 0 | crit gridded 143/152 | vignette gridded 128/128 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-02 s52: Peds MSK: growing pains and benign acute childhood myositis merged in the lean style; NBME item moved to its framing block; night-pain (C4) and normal-strength (C6) contradictions fixed
 
 ```

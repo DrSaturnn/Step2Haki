@@ -1,0 +1,11 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "septic-hip",
+   "find": "<table class=\"dense\" id=\"kocher-ladder\"><caption>Predictors present: probability of septic arthritis</caption>\n<thead><tr><th>Count</th><th>Probability</th><th>Action</th></tr></thead>\n<tbody>\n<tr><td>0</td><td>under 0.2%</td><td>Treat as transient synovitis; recheck</td></tr>\n<tr><td>1</td><td>about 3%</td><td>Observe with close follow-up</td></tr>\n<tr><td>2</td><td>about 40%</td><td>Gray zone: 2 alone is below the gate; aspirate if toxic</td></tr>\n<tr><td>3</td><td>about 93%</td><td>Aspirate</td></tr>\n<tr><td>4</td><td>about 99%</td><td>Aspirate; surgical urgency</td></tr>\n</tbody></table>",
+   "with": "<table class=\"dense\" id=\"kocher-ladder\"><caption>Kocher criteria ladder<span class=\"cap-sub\">Probability of septic arthritis by criteria count</span></caption>\n<thead><tr><th>Kocher criteria present</th><th>Probability of septic arthritis</th><th>Action</th></tr></thead>\n<tbody>\n<tr><td>0</td><td>under 0.2%</td><td>Treat as transient synovitis; recheck</td></tr>\n<tr><td>1</td><td>about 3%</td><td>Observe with close follow-up</td></tr>\n<tr><td>2</td><td>about 40%</td><td>Gray zone: 2 alone is below the gate; aspirate if toxic</td></tr>\n<tr class=\"em\"><td><b>3</b></td><td><b>about 93%</b></td><td><b>Arthrocentesis</b></td></tr>\n<tr class=\"em\"><td><b>4</b></td><td><b>about 99.6%</b></td><td><b>Arthrocentesis; surgical urgency</b> <span class=\"ex\">Kocher, J Bone Joint Surg Am 1999 derivation (n=282)</span></td></tr>\n</tbody></table>",
+   "note": "Kocher ladder named as the Kocher criteria, 3 and 4 rows tinted, 99.6% and the derivation cite restored from the pre-s48 brief (Jonathan 2026-10-02)"
+  }
+ ]
+}
