@@ -1,0 +1,17 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#scheuermann\">Scheuermann Kyphosis</a>\n    <a href=\"#bone-tumors\">Bone Tumors</a>\n",
+   "with": "    <a href=\"#scheuermann\">Adolescent Kyphosis</a>\n    <a href=\"#bone-tumors\">Bone Lesion in a Child</a>\n",
+   "note": "sidebar labels for the s54 lean titles"
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "<i>Bone Lesion in a Child</i>",
+   "with": "<i>Bone Lesion in a Child: Where It Sits and What It Does Next</i>",
+   "note": "pairs-with title now that the brief exists"
+  }
+ ]
+}

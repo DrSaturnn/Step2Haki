@@ -2,6 +2,23 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-02 s54: Peds MSK: bone tumors and Scheuermann kyphosis in the lean style; UWorld-tagged items archived and rewritten; Cobb brace range and bracing key corrected
+
+```
+Page: 216 briefs, 2135 items -> 216 briefs, 2132 items
+Briefs changed (4):
+  - myositis-ossificans (Myositis Ossificans: Did the Pain Resolve and Come Back?): prose edited (+37 chars)
+  - bone-tumors (Bone Lesion in a Child: Where It Sits and What It Does Next): 10 items added (q_4f042bb76dcdd1b23ac6, q_15014417bcb8589af99e, q_177d59f0f83da40a3d07, q_5a91f3a8e64b71d10b7f, q_72ed885bcd35d034d6c2, q_f3554e2a2f81c4a2b61b, q_0410f18c21d2947a00ab, q_b8cd77d47bf199b390aa, q_f605a4bdc0172cdea088, q_df659300dd80881cdaf5); items edited (q_cbf97128d38b21671ff4, q_ca9206a2686d8742b3e6, q_06d007897142e41778b7); versions bumped (q_cbf97128d38b21671ff4 v1->v2, q_ca9206a2686d8742b3e6 v1->v2, q_06d007897142e41778b7 v1->v2); attrs set (brief data-nid; q_ca9206a2686d8742b3e6 data-lead-in; q_06d007897142e41778b7 data-lead-in); ITEMS REMOVED (q_05f131195a1d499af5c5, q_fc8a4c70d96070f981bf, q_f82648b5c469af3ad795, q_25c66cd2a65e70d30df9, q_45d3b40a35c32e0e2625, q_a28e60156f3d374cfb79, q_6c42537840ac7172c554, q_9fafc21840a7c64ce3e7, q_947fbc4df7af067f7452, q_f8d69bd8b17167df6bf0, q_0bab8400fb112765766d, q_fd463ef7e471587d0b6f); prose edited (-4067 chars)
+  - scheuermann (Adolescent Kyphosis: Does the Curve Correct?): 1 item added (q_23ffc45b0af9a32bb6c0); items edited (q_39e91d80297b5c47a073, q_89c1da7227f55645a440, q_34ce385549f65801b20e, q_835be697ea175939aede); versions bumped (q_39e91d80297b5c47a073 v1->v2, q_89c1da7227f55645a440 v1->v2, q_34ce385549f65801b20e v2->v3, q_835be697ea175939aede v1->v2); attrs set (q_39e91d80297b5c47a073 data-lead-in,data-src; q_89c1da7227f55645a440 data-lead-in,data-src; q_34ce385549f65801b20e data-d2,data-d2-id,data-src; q_835be697ea175939aede data-lead-in,data-src); ITEMS REMOVED (q_06441347dbbe55a598b0, q_b2761b2f13b45b98bf63); prose edited (-1275 chars)
+  - bs-nat-fracture (Suspected Child Abuse: Fractures and the Next Step): prose edited (+24 chars)
+Other page changes (nav, headers, scripts): +10 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 216 briefs, 2132 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 216 | bankwraps 216 | mcq 2132 (axCheck 2132, reveal-only 0) | malformed 0 | crit gridded 145/154 | vignette gridded 126/126 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-02 s53: Peds MSK: septic arthritis Kocher ladder named as the Kocher criteria, 3 and 4 rows tinted, 99.6% and derivation cite restored
 
 ```
