@@ -2,6 +2,21 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-01 s50: Peds MSK: Child Won't Use the Arm (nursemaid) in the lean style
+
+```
+Page: 217 briefs, 2141 items -> 217 briefs, 2142 items
+Briefs changed (2):
+  - nursemaid (Child Won't Use the Arm: Reduce or Image?): 2 items added (q_6439d0e8c27422ee6bc7, q_64b61b0020de46f9f1c4); items edited (q_24718170482e5e118f19, q_fb622f5f0dc05f8aa6c3, q_a187fb9da9815bdda106, q_2a3ffd6515f3560095ae, q_5ca49edd96a950829343); versions bumped (q_24718170482e5e118f19 v1->v2, q_fb622f5f0dc05f8aa6c3 v1->v2, q_a187fb9da9815bdda106 v1->v2, q_2a3ffd6515f3560095ae v1->v2, q_5ca49edd96a950829343 v1->v2); attrs set (q_24718170482e5e118f19 data-lead-in,data-src; q_fb622f5f0dc05f8aa6c3 data-lead-in,data-src; q_a187fb9da9815bdda106 data-d2,data-d2-id,data-lead-in,data-src; q_2a3ffd6515f3560095ae data-lead-in,data-src; q_5ca49edd96a950829343 data-d2,data-d2-id,data-lead-in,data-src); ITEMS REMOVED (q_010e5b2ce53f59ccad3c); prose edited (+4640 chars)
+  - bs-brachial-plexus (Brachial Plexus Injury at Birth): prose edited (+24 chars)
+Other page changes (nav, headers, scripts): +0 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 217 briefs, 2142 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 217 | bankwraps 217 | mcq 2142 (axCheck 2142, reveal-only 0) | malformed 0 | crit gridded 141/150 | vignette gridded 131/131 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-01 s49: Peds MSK: JIA in the lean style; marrow before steroids when two cell lines are low; ACR 2019 uveitis screening
 
 ```
