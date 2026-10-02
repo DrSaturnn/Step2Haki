@@ -30,6 +30,10 @@ OPS = {
     # must be carried (same id, version not lower, bumped when the stem changed) unless listed in `retired_items`
     # with the ledger that accounts for it; the id and data-shelf never change
     'replace_brief': ({'brief', 'html', 'ledger'}, {'retired_items', 'note'}),
+    # migration of a merged cluster (Peds MSK, 2026-10-01): several briefs replaced in place and others folded in; every
+    # removed id must be kept as an alias span in a new brief that lists it in data-replaces; every old item of the cluster
+    # is carried in some new brief of the cluster (it may move between them) or listed in retired_items
+    'replace_cluster': ({'briefs', 'remove', 'ledger'}, {'retired_items', 'note'}),
 }
 IDENTITY = {'id', 'data-item-id', 'data-key-id', 'data-d1-id', 'data-d2-id'}
 
@@ -65,6 +69,11 @@ def validate(spec):
             if k in ('reworded_bold', 'reworded_label'):
                 if k in e and not (isinstance(e[k], list) and all(isinstance(x, str) and x.strip() for x in e[k])):
                     errs.append((n, op, '%s must be a list of the old texts' % k, 'e.g. ["The interval is the finding"]'))
+                continue
+            if k in ('briefs', 'remove'):
+                ok = isinstance(e.get(k), dict) if k == 'briefs' else isinstance(e.get(k), list)
+                if k in e and not ok:
+                    errs.append((n, op, '%s must be %s' % (k, 'an object {id: html}' if k == 'briefs' else 'a list of brief ids'), 'see tools/EDITS.md replace_cluster'))
                 continue
             if k in e and k not in ('attrs', 'nav', 'bold_answer', 'companion', 'retired_items') and not isinstance(e[k], str):
                 errs.append((n, op, 'field %s must be a string' % k, 'quote it'))
@@ -255,6 +264,50 @@ def apply_one(html, e, n, taken, log):
         html = splice(html, [(b.start, b.end, nb)])
         log.append('replace_brief %s (%d carried, %d new, %d retired; ledger %s)' % (b.id, len(old_items) - len(retired),
                    len(set(new_items) - set(old_items)), len(retired), e['ledger']))
+        return html
+    if op == 'replace_cluster':
+        olds = {bid: _brief(html, bid, n, op) for bid in list(e['briefs']) + list(e['remove'])}
+        old_items = {i.id: i for b in olds.values() for i in items(html[b.start:b.end])}
+        new_items, edits = {}, []
+        for bid, nb in e['briefs'].items():
+            nb = nb.strip(); found = briefs(nb); b = olds[bid]
+            if len(found) != 1 or found[0].start != 0 or found[0].end != len(nb) or found[0].id != bid:
+                raise EditError(n, op, 'briefs[%r] must be one complete brief with that id' % bid, 'ids never change (study-page-builder)')
+            if attrs(html[b.start:html.index('>', b.start) + 1]).get('data-shelf') != attrs(nb[:nb.index('>') + 1]).get('data-shelf'):
+                raise EditError(n, op, 'data-shelf changed on %s' % bid, 'keep the shelf tags; change them with set_attr in a separate op')
+            for i in items(nb):
+                if i.id in new_items:
+                    raise EditError(n, op, 'item %s appears in two new briefs' % i.id, 'carry each item once')
+                new_items[i.id] = i
+            edits.append((b.start, b.end, nb))
+        for rid in e['remove']:
+            if not any(rid in attrs(nb.strip()[:nb.strip().index('>') + 1]).get('data-replaces', '').split()
+                       and '<span class="alias" id="%s"' % rid in nb for nb in e['briefs'].values()):
+                raise EditError(n, op, 'removed brief %s is not kept as an alias' % rid,
+                                'list it in a new brief\'s data-replaces and add <span class="alias" id="%s"></span>' % rid)
+            b = olds[rid]
+            ws = len(html[:b.start]) - len(html[:b.start].rstrip('\n'))
+            edits.append((b.start - ws, b.end, ''))
+        retired = set(e.get('retired_items', []))
+        for qid, oi in old_items.items():
+            if qid in retired:
+                if qid in new_items:
+                    raise EditError(n, op, 'item %s is both retired and carried' % qid, 'pick one')
+                continue
+            ni = new_items.get(qid)
+            if not ni:
+                raise EditError(n, op, 'old item %s is not carried and not listed in retired_items' % qid,
+                                'carry it in one of the cluster briefs, or list it with its ledger disposition')
+            ov, nv = int(oi.attrs.get('data-item-version', '1')), int(ni.attrs.get('data-item-version', '1'))
+            if nv < ov or (nv == ov and text(oi.stem) != text(ni.stem)):
+                raise EditError(n, op, 'item %s: version %d -> %d' % (qid, ov, nv), 'a changed stem bumps data-item-version; a version never goes down')
+        clash = [q for q in new_items if q not in old_items and q in taken]
+        if clash:
+            raise EditError(n, op, 'new item id(s) already on the page: %s' % ', '.join(clash), 'mint ids with tools/idgen.py')
+        html = splice(html, sorted(edits))
+        log.append('replace_cluster %s, removed %s (%d carried, %d new, %d retired; ledger %s)' % (
+            ', '.join(e['briefs']), ', '.join(e['remove']) or 'none', len(old_items) - len(retired),
+            len(set(new_items) - set(old_items)), len(retired), e['ledger']))
         return html
     if op == 'new_brief':
         after = _brief(html, e['after'], n, op)

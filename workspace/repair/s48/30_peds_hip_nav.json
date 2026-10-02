@@ -1,0 +1,22 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#septic-hip\">Septic Arthritis of the Hip</a>\n    <a href=\"#synovitis\">Transient Synovitis</a>\n",
+   "with": "    <a href=\"#septic-hip\">Septic Arthritis in a Child</a>\n",
+   "note": "synovitis merged into septic-hip"
+  },
+  {
+   "op": "replace_global",
+   "find": "    <a class=\"bs\" href=\"#bs-synovitis-mgmt\">Transient Synovitis: Management</a>\n",
+   "with": "",
+   "note": "bs-synovitis-mgmt merged into septic-hip"
+  },
+  {
+   "op": "replace_global",
+   "find": "<div class=\"sect\">Musculoskeletal <span class=\"count\">22</span></div>",
+   "with": "<div class=\"sect\">Musculoskeletal <span class=\"count\">21</span></div>",
+   "note": "one Part I link fewer"
+  }
+ ]
+}

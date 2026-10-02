@@ -1,0 +1,46 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "Part I <b>Slipped Capital Femoral Epiphysis</b> and Part I <b>The Limping Child — Master Table</b> cover",
+   "with": "Part I <b>Slipped Capital Femoral Epiphysis: Keep Off It and Pin It</b> and Part I <b>The Limping Child: Sick or Well, Then Age and Time</b> cover",
+   "note": "inbound Pairs-with title after the Peds MSK merge"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "Part I <b>The Limping Child — Master Table</b> covers the child whose gait",
+   "with": "Part I <b>The Limping Child: Sick or Well, Then Age and Time</b> covers the child whose gait",
+   "note": "inbound Pairs-with title after the Peds MSK merge"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "Part I <b>Slipped Capital Femoral Epiphysis</b> covers the adolescent",
+   "with": "Part I <b>Slipped Capital Femoral Epiphysis: Keep Off It and Pin It</b> covers the adolescent",
+   "note": "inbound Pairs-with title after the Peds MSK merge"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-septic-adult",
+   "find": "Part I <b>Septic Arthritis of the Hip</b>, <b>Transient Synovitis <span class=\"tag t-peds\">Mirror twin</span></b> (pediatric), and",
+   "with": "Part I <b>Septic Arthritis in a Child: Aspirate, or Treat and Recheck?</b> (pediatric, with transient synovitis), and",
+   "note": "inbound Pairs-with title after the Peds MSK merge"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puncture-osteomyelitis",
+   "find": "Part I <b>Septic Arthritis of the Hip</b> lists joint organisms",
+   "with": "Part I <b>Septic Arthritis in a Child: Aspirate, or Treat and Recheck?</b> lists joint organisms",
+   "note": "inbound Pairs-with title after the Peds MSK merge"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "Part I <b>The Limping Child — Master Table</b> shares",
+   "with": "Part I <b>The Limping Child: Sick or Well, Then Age and Time</b> shares",
+   "note": "inbound Pairs-with title after the Peds MSK merge"
+  }
+ ]
+}

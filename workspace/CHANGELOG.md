@@ -2,6 +2,28 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-01 s48: Peds MSK: limping-child cluster in the lean style; septic-hip absorbs transient synovitis and its management brief; limp and scfe reauthored
+
+```
+Page: 219 briefs, 2161 items -> 217 briefs, 2143 items
+Briefs REMOVED (2): synovitis, bs-synovitis-mgmt
+Briefs changed (8):
+  - septic-hip (Septic Arthritis in a Child: Aspirate, or Treat and Recheck?): 4 items added (q_704d82a8b57f71bfefe3, q_2a8d348cbfed5bfe7123, q_23dedfb4a0276563ad3f, q_be3b8b383d754716ae30); items edited (q_14fa267d79fe510e8c81, q_75e2d3b095515e83aa22, q_ed207f159bb65ba98286, q_5fc72e65e76553a39bcc, q_144c6f99900458208ce0, q_34e4d21df9525a569ddb, q_e7e5430c61105202b45d, q_90907b616bed5f629949, q_82f761dc6ed7518eae1b); versions bumped (q_14fa267d79fe510e8c81 v1->v2, q_75e2d3b095515e83aa22 v1->v2, q_ed207f159bb65ba98286 v1->v2, q_5fc72e65e76553a39bcc v1->v2, q_144c6f99900458208ce0 v2->v3, q_34e4d21df9525a569ddb v1->v2, q_e7e5430c61105202b45d v1->v2, q_90907b616bed5f629949 v1->v2, q_82f761dc6ed7518eae1b v1->v2); attrs set (brief data-nid,data-replaces; q_14fa267d79fe510e8c81 data-lead-in,data-src; q_75e2d3b095515e83aa22 data-lead-in,data-src; q_ed207f159bb65ba98286 data-d1,data-d1-id,data-d2,data-d2-id,data-lead-in,data-src; q_5fc72e65e76553a39bcc data-lead-in,data-src; q_144c6f99900458208ce0 data-src; q_34e4d21df9525a569ddb data-lead-in,data-src; q_e7e5430c61105202b45d data-lead-in,data-src; q_90907b616bed5f629949 data-lead-in,data-src; q_82f761dc6ed7518eae1b data-lead-in,data-src); ITEMS REMOVED (q_18e8c3eeafb65030ae6a, q_38058079f43656f9af6d, q_e4d5a5deb5c859c0842d, q_1c5c95ee8ec9588394f5, q_6317a30c6b5d530ca106); prose edited (+5300 chars)
+  - limp (The Limping Child: Sick or Well, Then Age and Time): items edited (q_bdee86ce98775e1e9a3f, q_11abb36f6ad6ea3085a4, q_734cdaa7b585522dbb51, q_f4f48dfd36df5c08b6d9, q_879f0b60f4f452e09820, q_33b90401a72c5bbfba10, q_069c75f1bef557f7b1bb, q_c1f4667f9db45a88bc0d, q_18241f64b48e542aad5c); versions bumped (q_bdee86ce98775e1e9a3f v1->v2, q_11abb36f6ad6ea3085a4 v1->v2, q_734cdaa7b585522dbb51 v1->v2, q_f4f48dfd36df5c08b6d9 v1->v2, q_879f0b60f4f452e09820 v1->v2, q_33b90401a72c5bbfba10 v1->v2, q_069c75f1bef557f7b1bb v1->v2, q_c1f4667f9db45a88bc0d v2->v3, q_18241f64b48e542aad5c v1->v2); attrs set (q_bdee86ce98775e1e9a3f data-lead-in,data-src; q_11abb36f6ad6ea3085a4 data-d2,data-d2-id; q_734cdaa7b585522dbb51 data-lead-in,data-src; q_f4f48dfd36df5c08b6d9 data-lead-in,data-src; q_879f0b60f4f452e09820 data-lead-in,data-src; q_33b90401a72c5bbfba10 data-lead-in,data-src; q_069c75f1bef557f7b1bb data-lead-in,data-src; q_c1f4667f9db45a88bc0d data-src; q_18241f64b48e542aad5c data-lead-in,data-src); ITEMS REMOVED (q_9621c3ac5eac5a3ea86b, q_a73aa8bda21c559fa678, q_b599f8e62f2070a52991); prose edited (+6427 chars)
+  - scfe (Slipped Capital Femoral Epiphysis: Keep Off It and Pin It): 1 item added (q_c4752c99840e5fc84b7a); items edited (q_e04e23db080c508f930f, q_1e0294ade15759f89757, q_0107df0993795069b36a, q_d8aec8c3755f53ca843b, q_619cbce0b95b55c6b403, q_7b247bb620b6c48be44d); versions bumped (q_e04e23db080c508f930f v1->v2, q_1e0294ade15759f89757 v1->v2, q_0107df0993795069b36a v1->v2, q_d8aec8c3755f53ca843b v1->v2, q_619cbce0b95b55c6b403 v1->v2, q_7b247bb620b6c48be44d v1->v2); attrs set (q_e04e23db080c508f930f data-d2,data-d2-id,data-lead-in,data-src; q_1e0294ade15759f89757 data-lead-in,data-src; q_0107df0993795069b36a data-lead-in,data-src; q_d8aec8c3755f53ca843b data-lead-in,data-src; q_619cbce0b95b55c6b403 data-lead-in,data-src; q_7b247bb620b6c48be44d data-d1,data-d1-id,data-lead-in); ITEMS REMOVED (q_d141b8e3707e553eb3f2, q_8979ec9d9d6a5894b815, q_854d7a42ba8559208887, q_8358e863b9a7587cb33d, q_9777dcb58c677902b75f); prose edited (+1279 chars)
+  - myositis-ossificans (The Post-Traumatic Limb Mass): prose edited (+42 chars)
+  - growing-pains (Benign Limb Pain in a Child): prose edited (+42 chars)
+  - bs-septic-adult (The Acute Hot Joint (adult)): prose edited (-13 chars)
+  - bs-puncture-osteomyelitis (Foot Puncture Wound Infection): prose edited (+33 chars)
+  - bs-leukemia (Pediatric Acute Lymphoblastic Leukemia): prose edited (+18 chars)
+Other page changes (nav, headers, scripts): +260 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 217 briefs, 2143 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 217 | bankwraps 217 | mcq 2143 (axCheck 2143, reveal-only 0) | malformed 0 | crit gridded 138/147 | vignette gridded 131/131 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-01 s47: phones and tablets: Index is a frosted pill at the top left that hides while scrolling
 
 ```

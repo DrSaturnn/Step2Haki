@@ -403,8 +403,15 @@ def check_page(page, g, page_path):
 def check_base(page, ref_html, bl, it, g):
     rb, ri = briefs(ref_html), items(ref_html)
     cur_b = {b.id for b in bl}
+    # merged briefs (Peds MSK, 2026-10-01): a brief id may leave the page only as an alias of the brief that replaced it
+    # (data-replaces lists it and an alias span keeps the id); items of a replaced brief may then move to a cluster brief
+    replaced = set()
+    for b in bl:
+        for rid in b.attrs.get('data-replaces', '').split():
+            if '<span class="alias" id="%s"' % rid in page[b.start:b.end]:
+                replaced.add(rid)
     for b in rb:
-        if b.id and b.id not in cur_b:
+        if b.id and b.id not in cur_b and b.id not in replaced:
             g.fail('never-delete', b.id, 'brief %s existed at base and is missing now' % b.id)
     cur = {i.id: i for i in it}
     # retired items (Jonathan 2026-09-30: psych briefs cut to the tested core): an item leaves the page only through the
@@ -434,7 +441,7 @@ def check_base(page, ref_html, bl, it, g):
         for k in ('data-key-id', 'data-d1-id', 'data-d2-id'):
             if c.attrs.get(k) != r.attrs.get(k) and not (bumped and lab(c, k) != lab(r, k)):
                 g.fail('id-immutable', r.id + ':' + k, '%s %s changed %s -> %s' % (r.id, k, r.attrs.get(k), c.attrs.get(k)))
-        if c.brief_id != r.brief_id:
+        if c.brief_id != r.brief_id and r.brief_id not in replaced:
             g.fail('id-immutable', r.id + ':brief', '%s moved from brief %s to %s' % (r.id, r.brief_id, c.brief_id))
         try:
             rv, cv = int(r.attrs.get('data-item-version', '0')), int(c.attrs.get('data-item-version', '0'))

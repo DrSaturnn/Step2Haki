@@ -64,6 +64,29 @@ open(led, 'a', encoding='utf-8').write('%s,%s,2026-09-30,self-test,repair/archiv
 hit = ('[never-delete] item ' + it0.id) not in gate_base({'AXBX_RETIRED': led})
 print(('ok  ' if hit else 'BAD ') + 'item retired through the ledger with its HTML archived passes'); bad += not hit
 os.remove(arch)
-total = 1 + 9 + 2
+# merged briefs (2026-10-01): a brief folded into another through data-replaces with an alias span passes never-delete,
+# and its items may move to a cluster brief; the same removal without the alias fails, and moving an item between two
+# live briefs still fails id-immutable
+b1, b2, b3 = bl[0], bl[1], bl[2]
+mv = next(i for i in items(PAGE) if i.brief_id == b2.id)
+def merged(alias):
+    body = PAGE[b2.inner_start:b2.inner_end].replace(PAGE[mv.start:mv.end], '')
+    open1 = PAGE[b1.start:b1.open_end]
+    head = (open1[:-1] + ' data-replaces="%s">' % b2.id) + ('<span class="alias" id="%s"></span>' % b2.id if alias else '')
+    out = PAGE[:b1.start] + head + PAGE[b1.open_end:b1.inner_end] + body + PAGE[b1.inner_end:b2.start] + PAGE[b2.end:b3.inner_end] + PAGE[mv.start:mv.end] + PAGE[b3.inner_end:]
+    open(cur, 'w', encoding='utf-8').write(out)
+    return gate_base({'AXBX_RETIRED': led})
+o = merged(True)
+hit = ('[never-delete] brief %s ' % b2.id) not in o and ('[id-immutable] %s moved' % mv.id) not in o
+print(('ok  ' if hit else 'BAD ') + 'brief merged through data-replaces with an alias, its item moved to a cluster brief: passes'); bad += not hit
+o = merged(False)
+hit = ('[never-delete] brief %s ' % b2.id) in o
+print(('ok  ' if hit else 'BAD ') + 'brief removed without an alias span: expects gate FAIL never-delete'); bad += not hit
+it3 = next(i for i in items(PAGE) if i.brief_id == b3.id)
+open(cur, 'w', encoding='utf-8').write(PAGE[:b1.inner_end] + PAGE[it3.start:it3.end] + PAGE[b1.inner_end:it3.start] + PAGE[it3.end:])  # b3 sits after b1
+o = gate_base({'AXBX_RETIRED': led})
+hit = ('[id-immutable] %s moved' % it3.id) in o
+print(('ok  ' if hit else 'BAD ') + 'item moved between two live briefs: expects gate FAIL id-immutable'); bad += not hit
+total = 1 + 9 + 2 + 3
 print('%d/%d passed' % (total - bad, total))
 sys.exit(1 if bad else 0)

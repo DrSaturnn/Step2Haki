@@ -59,3 +59,9 @@ Replaces a whole brief with its reviewed Type C version. Same id and data-shelf;
 ```json
 {"op": "replace_brief", "brief": "kawasaki", "html": "<div class=\"brief\" id=\"kawasaki\" ...>...</div>", "ledger": "repair/migration/kawasaki/claim_map.json (local-only)"}
 ```
+
+## replace_cluster: merged migration only (Peds MSK 2026-10-01); orchestrator use, never in worker packets
+Replaces several briefs in place and removes the briefs folded into them. Every removed id stays as `<span class="alias" id="...">` inside a new brief that lists it in `data-replaces` (the gate then lets that id leave the page and its items move to a cluster brief). Every old item of the cluster is carried in one of the new briefs (it may move between them; version never lower, bumped when the stem changed) or listed in `retired_items` (archive + `tools/retired_items.csv`).
+```json
+{"op": "replace_cluster", "briefs": {"septic-hip": "<div class=\"brief\" id=\"septic-hip\" data-replaces=\"synovitis\">...</div>", "limp": "..."}, "remove": ["synovitis"], "retired_items": ["q_..."], "ledger": "repair/migration/peds/hip/... (local-only)"}
+```
