@@ -322,18 +322,20 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
 #nav .brand p.axbuild{margin-top:2px;font-size:10.5px;opacity:.7;letter-spacing:.02em}
 .axupdate{position:fixed;left:0;right:0;margin:0 auto;width:fit-content;top:calc(10px + env(safe-area-inset-top,0px));z-index:9999;display:flex;align-items:center;gap:12px;max-width:calc(100vw - 24px);box-sizing:border-box;padding:10px 12px 10px 16px;border-radius:14px;background:#2B2F36;color:#fff;font:600 13.5px/1.3 var(--sans,system-ui);box-shadow:0 8px 28px rgba(0,0,0,.25)}
 .axupdate button{flex:none;border:0;border-radius:9px;padding:8px 12px;background:var(--accent,#544AC4);color:#fff;font:700 13px/1 var(--sans,system-ui);cursor:pointer;min-height:36px}
-/* index bookmark tab (s45): phones and tablets only; the bottom bar's Index button gives way to it */
+/* index button (s47, Jonathan: frosted pill, top left; hides while the page scrolls, back once it stops).
+   Phones and tablets only; the bottom bar's Index button gives way to it. */
 #navtab{display:none}
 @media (max-width:980px){
   #mbar button[data-act="index"]{display:none}
-  #navtab{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:center;position:fixed;z-index:151;
-    left:env(safe-area-inset-left,0px);top:50%;width:24px;height:88px;margin-top:-44px;border-radius:0 12px 12px 0;cursor:pointer;
-    background:rgba(43,47,54,.88);color:#fff;box-shadow:2px 0 12px rgba(0,0,0,.18);-webkit-tap-highlight-color:transparent;
-    transition:left .24s ease,background .2s}
-  #navtab::after{content:"";position:absolute;left:0;top:-8px;bottom:-8px;width:40px}
-  #navtab span{writing-mode:vertical-rl;transform:rotate(180deg);font:800 10px/1 var(--sans,system-ui);letter-spacing:1.6px;text-transform:uppercase}
+  #navtab{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:8px;position:fixed;z-index:151;
+    left:calc(12px + env(safe-area-inset-left,0px));top:calc(12px + env(safe-area-inset-top,0px));height:40px;padding:0 14px 0 12px;
+    border-radius:999px;cursor:pointer;color:#fff;background:rgba(43,47,54,.82);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    box-shadow:0 6px 18px rgba(0,0,0,.2);-webkit-tap-highlight-color:transparent;transition:opacity .18s ease,transform .18s ease}
+  #navtab::before{content:"";width:14px;height:10px;background:linear-gradient(#fff 0 2px,transparent 2px 4px,#fff 4px 6px,transparent 6px 8px,#fff 8px 10px)}
+  #navtab::after{content:"";position:absolute;inset:-4px}
+  #navtab span{font:800 10.5px/1 var(--sans,system-ui);letter-spacing:1.2px;text-transform:uppercase}
   #navtab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  body.navopen #navtab{left:min(86vw,360px);background:rgba(43,47,54,.96)}
+  #navtab.hid,body.navopen #navtab{opacity:0;transform:translateY(-14px);pointer-events:none}
 }
 @media print{ #navtab{display:none!important} }
 /* per-row scale (Jonathan 2026-10-01): each timeline row carries its own tick labels, right under its bars */
