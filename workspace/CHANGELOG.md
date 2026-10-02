@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-01 s47: phones and tablets: Index is a frosted pill at the top left that hides while scrolling
+
+```
+Page: 219 briefs, 2161 items -> 219 briefs, 2161 items
+Other page changes (nav, headers, scripts): +514 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 219 briefs, 2161 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 219 | bankwraps 219 | mcq 2161 (axCheck 2161, reveal-only 0) | malformed 0 | crit gridded 133/142 | vignette gridded 132/132 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-01 s46: timelines: every row carries its own scale under its bars, with a time arrow
 
 ```
