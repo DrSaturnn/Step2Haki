@@ -634,9 +634,14 @@ def main():
     for sc in re.findall(r'class="scaleref"[^>]*data-scale="([^"]+)"', old):
         if f'data-scale="{sc}"' not in new:
             F(f'K2 scale reference to #{sc} (the criteria tile\'s link to its mnemonic or table) was dropped')
+    # a scale reference may point at a tile in another brief (limp -> septic-hip's Kocher tile): with --page it resolves
+    # page-wide, plus any sibling new brief of the same cluster passed with --with=<brief.html>[,...] (Peds MSK 2026-10-01)
+    _pg = next((x[7:] for x in sys.argv[1:] if x.startswith('--page=')), None)
+    _sib = ''.join(open(f, encoding='utf-8').read() for x in sys.argv[1:] if x.startswith('--with=') for f in x[7:].split(','))
+    _scope = new + _sib + (open(_pg, encoding='utf-8').read() if _pg else '')
     for sc in re.findall(r'class="scaleref"[^>]*data-scale="([^"]+)"', new):
-        if f'id="{sc}"' not in new:
-            F(f'K2 scale reference #{sc} has no target in the new brief')
+        if f'id="{sc}"' not in _scope:
+            F(f'K2 scale reference #{sc} has no target in the new brief, its cluster siblings or the page')
 
     # ---- G1-G3, K3 source and scope (tools/content_rules.py; the page gate runs the same rules on every brief)
     for code, key, msg in content_rules.check_brief('new brief', new):

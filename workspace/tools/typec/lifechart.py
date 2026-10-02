@@ -25,7 +25,8 @@ from html import escape as E
 KEYS = {'lo': ('k-lo', 'Low mood'), 'hi': ('k-hi', 'High mood'), 'ps': ('k-ps', 'Psychosis'), 'free': ('k-free', 'Psychosis with no mood episode'),
         'only': ('k-only', 'A delusion only'), 'dng': ('k-dng', 'Hospitalized'), 'pin': ('k-pin', 'NBME question'),
         'w': ('k-w', 'Wider bar: more severe'), 'sub': ('k-sub', 'Below episode criteria'),
-        'opt': ('k-opt', 'Common, not required'), 'mild': ('k-mild', 'Hypomania: milder')}
+        'opt': ('k-opt', 'Common, not required'), 'mild': ('k-mild', 'Hypomania: milder'),
+        'inf': ('k-inf', 'Infection: act today'), 'ac': ('k-ac', 'Acute: days'), 'chr': ('k-chr', 'Weeks to months')}
 
 
 class ChartError(ValueError):
