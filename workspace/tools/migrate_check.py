@@ -501,7 +501,7 @@ def main():
     for bad in ('separates nothing', 'separate nothing', 'noise'):
         if bad in text.lower():
             F(f'banned wording: "{bad}"')
-    ACR_OK = {'CRASH', 'ST', 'GI', 'COVID-19', 'SARS', 'II', 'III', 'HR', 'RR', 'BP', 'COVID', 'US', 'IV', 'NBME', 'OK'}
+    ACR_OK = {'CRASH', 'ST', 'GI', 'COVID-19', 'SARS', 'II', 'III', 'HR', 'RR', 'BP', 'COVID', 'US', 'IV', 'NBME', 'OK', 'B19'}  # B19: parvovirus strain name, not an acronym (Peds MSK 2026-10-02)
     unexp, late = [], []
     LOWER_ABBR = ['hpf', 'lpf', 'prn']
     # DSM-5-TR is one acronym (N1 worker)
