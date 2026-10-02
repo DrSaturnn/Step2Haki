@@ -2,6 +2,21 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-02 s51: Peds MSK: myositis ossificans in the lean style; untagged UWorld stem archived with its clues carried
+
+```
+Page: 217 briefs, 2142 items -> 217 briefs, 2140 items
+Briefs changed (2):
+  - myositis-ossificans (Myositis Ossificans: Did the Pain Resolve and Come Back?): 1 item added (q_07ecd53e7f8003f1e0ee); items edited (q_178b5428ce1554dfa17d, q_8e6c3c2ffa8758a7910e, q_65ef142520e15e1ea279, q_c153950959465fdfad77, q_d1227a8f9f6d51288261, q_7d00ae33f0525f3b9f24, q_c1e9f75aa54256a592b7); versions bumped (q_178b5428ce1554dfa17d v1->v2, q_8e6c3c2ffa8758a7910e v1->v2, q_65ef142520e15e1ea279 v1->v2, q_c153950959465fdfad77 v1->v2, q_d1227a8f9f6d51288261 v1->v2, q_7d00ae33f0525f3b9f24 v1->v2, q_c1e9f75aa54256a592b7 v1->v2); attrs set (q_178b5428ce1554dfa17d data-lead-in,data-src; q_8e6c3c2ffa8758a7910e data-lead-in,data-src; q_65ef142520e15e1ea279 data-d2,data-d2-id,data-lead-in,data-src; q_c153950959465fdfad77 data-lead-in,data-src; q_d1227a8f9f6d51288261 data-d2,data-d2-id,data-lead-in,data-src; q_7d00ae33f0525f3b9f24 data-lead-in,data-src; q_c1e9f75aa54256a592b7 data-d1,data-d1-id,data-lead-in,data-src); ITEMS REMOVED (q_6d1f3fc9cc1e56b3bd79, q_ef711f1688d35b828e35, q_ef1afb160c6a53dabb70); prose edited (-3823 chars)
+  - bone-tumors (Bone Tumors: Location, Film, Course): prose edited (+28 chars)
+Other page changes (nav, headers, scripts): +0 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 217 briefs, 2140 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 217 | bankwraps 217 | mcq 2140 (axCheck 2140, reveal-only 0) | malformed 0 | crit gridded 142/151 | vignette gridded 130/130 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-01 s50: Peds MSK: Child Won't Use the Arm (nursemaid) in the lean style
 
 ```
