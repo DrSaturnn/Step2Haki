@@ -2,6 +2,24 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-02 s52: Peds MSK: growing pains and benign acute childhood myositis merged in the lean style; NBME item moved to its framing block; night-pain (C4) and normal-strength (C6) contradictions fixed
+
+```
+Page: 217 briefs, 2140 items -> 216 briefs, 2135 items
+Briefs REMOVED (1): bs-acute-myositis
+Briefs changed (4):
+  - limp (The Limping Child: Sick or Well, Then Age and Time): prose edited (+30 chars)
+  - growing-pains (Bilateral Leg Pain in a Child: Is the Examination Normal?): items edited (q_f075f176703357309252, q_f3dc1a58d1a45216880e, q_790ff3a627b65e83b421, q_bcc4863685195098a913, q_6140b09fbc6e5920933e, q_2be9b5858d8d5f0a9395, q_0a1e03e56a43beb4d4ea, q_eee554b97996ff32f98f, q_0dad14c5794f68ff48b6, q_ae7c9f939696360148fe, q_0cd4c5408d7826fced82, q_605ba04e7d17d27321bf, q_466ecbed11f7240a758a); versions bumped (q_f075f176703357309252 v1->v2, q_f3dc1a58d1a45216880e v1->v2, q_790ff3a627b65e83b421 v1->v2, q_bcc4863685195098a913 v1->v2, q_6140b09fbc6e5920933e v1->v2, q_2be9b5858d8d5f0a9395 v1->v2, q_0a1e03e56a43beb4d4ea v1->v2, q_eee554b97996ff32f98f v1->v2, q_0dad14c5794f68ff48b6 v1->v2, q_ae7c9f939696360148fe v1->v2, q_0cd4c5408d7826fced82 v1->v2, q_605ba04e7d17d27321bf v1->v2, q_466ecbed11f7240a758a v1->v2); attrs set (brief data-replaces; q_f075f176703357309252 data-lead-in,data-src; q_f3dc1a58d1a45216880e data-lead-in,data-src; q_790ff3a627b65e83b421 data-lead-in,data-src; q_bcc4863685195098a913 data-lead-in,data-src; q_6140b09fbc6e5920933e data-d2,data-d2-id,data-lead-in,data-src; q_2be9b5858d8d5f0a9395 data-lead-in,data-src; q_eee554b97996ff32f98f data-lead-in; q_0dad14c5794f68ff48b6 data-d1,data-d1-id,data-lead-in; q_0cd4c5408d7826fced82 data-lead-in; q_605ba04e7d17d27321bf data-lead-in; q_466ecbed11f7240a758a data-lead-in); ITEMS REMOVED (q_221ed46f62e95f1cb568, q_9b7f03f4b6c152c59c44, q_403fcdb90cff5998a96a, q_38c7e742eb905a3ea7c1); prose edited (+343 chars)
+  - bone-tumors (Bone Tumors: Location, Film, Course): prose edited (+30 chars)
+  - bs-leukemia (Pediatric Acute Lymphoblastic Leukemia): prose edited (+30 chars)
+Other page changes (nav, headers, scripts): -78 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 216 briefs, 2135 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 216 | bankwraps 216 | mcq 2135 (axCheck 2135, reveal-only 0) | malformed 0 | crit gridded 143/152 | vignette gridded 128/128 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-02 s51: Peds MSK: myositis ossificans in the lean style; untagged UWorld stem archived with its clues carried
 
 ```

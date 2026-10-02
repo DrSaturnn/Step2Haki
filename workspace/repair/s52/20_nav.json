@@ -1,0 +1,16 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#myositis-ossificans\">Post-Traumatic Limb Mass</a>\n    <a href=\"#growing-pains\">Benign Limb Pain in a Child</a>\n",
+   "with": "    <a href=\"#myositis-ossificans\">Myositis Ossificans</a>\n    <a href=\"#growing-pains\">Bilateral Leg Pain in a Child</a>\n",
+   "note": "sidebar labels for the s51 and s52 lean titles"
+  },
+  {
+   "op": "replace_global",
+   "find": "    <a class=\"bs\" href=\"#bs-acute-myositis\">Acute Childhood Myositis</a>\n",
+   "with": "",
+   "note": "bs-acute-myositis merged into growing-pains"
+  }
+ ]
+}
