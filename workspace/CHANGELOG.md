@@ -2,6 +2,21 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-01 s49: Peds MSK: JIA in the lean style; marrow before steroids when two cell lines are low; ACR 2019 uveitis screening
+
+```
+Page: 217 briefs, 2143 items -> 217 briefs, 2141 items
+Briefs changed (2):
+  - sjia (Juvenile Idiopathic Arthritis: Count the Joints, Chart the Fever): 5 items added (q_0f7039a8128a160ee26f, q_5304b137e326cefcec33, q_bb45f716de4a588aa25f, q_ab91a933c728ee27ec93, q_94d37339abbed3d36af3); items edited (q_3ec85d8e49895dc4a6ef, q_c0cb38b7ae515422b0ce, q_74820586b4ee51eebb04, q_8df973d7f65e57c9b4b8, q_3811fdc226a16772e13e, q_263275a6169156bf83a0); versions bumped (q_3ec85d8e49895dc4a6ef v1->v2, q_c0cb38b7ae515422b0ce v1->v2, q_74820586b4ee51eebb04 v1->v2, q_8df973d7f65e57c9b4b8 v1->v2, q_3811fdc226a16772e13e v1->v2, q_263275a6169156bf83a0 v1->v2); attrs set (q_3ec85d8e49895dc4a6ef data-d2,data-d2-id,data-lead-in,data-src; q_c0cb38b7ae515422b0ce data-d1,data-d1-id,data-d2,data-d2-id,data-lead-in,data-src; q_74820586b4ee51eebb04 data-lead-in,data-src; q_8df973d7f65e57c9b4b8 data-lead-in,data-src; q_3811fdc226a16772e13e data-lead-in; q_263275a6169156bf83a0 data-lead-in); ITEMS REMOVED (q_ac99dd9b7ab65669bec0, q_0f7557200bb25f49a751, q_0fb09262014f533ba0e0, q_25275156dd3956f7b1f0, q_956f0e2bffc85690b987, q_dcc21109d541cdb738b2, q_814a1b11d69f739125b9); prose edited (+25 chars)
+  - bs-leukemia (Pediatric Acute Lymphoblastic Leukemia): prose edited (+35 chars)
+Other page changes (nav, headers, scripts): +0 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 217 briefs, 2141 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 217 | bankwraps 217 | mcq 2141 (axCheck 2141, reveal-only 0) | malformed 0 | crit gridded 139/148 | vignette gridded 131/131 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-01 s48: Peds MSK: limping-child cluster in the lean style; septic-hip absorbs transient synovitis and its management brief; limp and scfe reauthored
 
 ```
