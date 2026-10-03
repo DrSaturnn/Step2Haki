@@ -2,6 +2,28 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-03 s71: psych briefs: two-line subtitle; drop stale psych render allowlist lines
+
+```
+Page: 204 briefs, 2105 items -> 204 briefs, 2105 items
+Briefs changed (9):
+  - psychosis-duration (Psychosis): prose edited (+16 chars)
+  - bipolar-mania (Bipolar Disorder): prose edited (+16 chars)
+  - sz-psychosocial (Schizophrenia: Long-Term Care): prose edited (+16 chars)
+  - delirium (Delirium): prose edited (+16 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (+16 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (+16 chars)
+  - lithium-effects (Lithium Therapy): prose edited (+16 chars)
+  - ipv (Intimate Partner Violence): prose edited (+16 chars)
+  - gppd (Genito-Pelvic Pain/Penetration Disorder): prose edited (+16 chars)
+Other page changes (nav, headers, scripts): +0 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 204 briefs, 2105 items, 6 scripts, 35 checks, base HEAD | allowlisted 26 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 204 | bankwraps 204 | mcq 2105 (axCheck 2105, reveal-only 0) | malformed 0 | crit gridded 185/186 | vignette gridded 113/113 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.025%)
+```
+
 ## 2026-10-03 s70: merge batch 3: Low Back Pain in an Adult (backpain + bs-lbp-acute + inflam-back), Abnormal Growth in a Child (bs-short-stature + bs-ftt; now a topic brief, both shelves), Hot Joint or Bursa in an Adult (septic-bursitis + bs-septic-adult); audits to 0 CRITICAL
 
 ```

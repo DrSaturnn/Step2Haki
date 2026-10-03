@@ -1,0 +1,58 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "psychosis-duration",
+   "find": "<p class=\"sub\">Rule out a cause, then time it &middot; How long, and only during mood episodes?</p>",
+   "with": "<p class=\"sub\">rule out a cause, then time it<span class=\"subq\">How long, and only during mood episodes?</span></p>"
+  },
+  {
+   "op": "replace",
+   "brief": "bipolar-mania",
+   "find": "<p class=\"sub\">Rule out a cause, time the episode, then treat &middot; Mania or hypomania, and what to start or stop?</p>",
+   "with": "<p class=\"sub\">rule out a cause, time the episode, then treat<span class=\"subq\">Mania or hypomania, and what to start or stop?</span></p>"
+  },
+  {
+   "op": "replace",
+   "brief": "sz-psychosocial",
+   "find": "<p class=\"sub\">Psychosocial care and relapse prevention &middot; What is driving this relapse or limiting recovery, and which added treatment answers it?</p>",
+   "with": "<p class=\"sub\">psychosocial care and relapse prevention<span class=\"subq\">What is driving this relapse or limiting recovery, and which added treatment answers it?</span></p>"
+  },
+  {
+   "op": "replace",
+   "brief": "delirium",
+   "find": "<p class=\"sub\">Tell it from dementia and psychosis, then find the cause &middot; Did attention fail over hours to days, and which drug or illness caused it?</p>",
+   "with": "<p class=\"sub\">tell it from dementia and psychosis, then find the cause<span class=\"subq\">Did attention fail over hours to days, and which drug or illness caused it?</span></p>"
+  },
+  {
+   "op": "replace",
+   "brief": "panic",
+   "find": "<p class=\"sub\">Which anxiety, and how to treat &middot; Are the attacks unexpected, and have a substance and a medical cause been excluded?</p>",
+   "with": "<p class=\"sub\">which anxiety, and how to treat<span class=\"subq\">Are the attacks unexpected, and have a substance and a medical cause been excluded?</span></p>"
+  },
+  {
+   "op": "replace",
+   "brief": "ssri-effects",
+   "find": "<p class=\"sub\">Name the effect, then take the next step &middot; On the drug or after stopping it, and which phase of sexual response is affected?</p>",
+   "with": "<p class=\"sub\">name the effect, then take the next step<span class=\"subq\">On the drug or after stopping it, and which phase of sexual response is affected?</span></p>"
+  },
+  {
+   "op": "replace",
+   "brief": "lithium-effects",
+   "find": "<p class=\"sub\">Which complication, and what to do &middot; Is this toxicity, diabetes insipidus, hypothyroidism or an expected effect?</p>",
+   "with": "<p class=\"sub\">which complication, and what to do<span class=\"subq\">Is this toxicity, diabetes insipidus, hypothyroidism or an expected effect?</span></p>"
+  },
+  {
+   "op": "replace",
+   "brief": "ipv",
+   "find": "<p class=\"sub\">Plan for safety, report by who is at risk &middot; Is she safe at home, and who decides what happens next?</p>",
+   "with": "<p class=\"sub\">plan for safety, report by who is at risk<span class=\"subq\">Is she safe at home, and who decides what happens next?</span></p>"
+  },
+  {
+   "op": "replace",
+   "brief": "gppd",
+   "find": "<p class=\"sub\">Vaginismus &middot; exclude a body cause, then treat &middot; Is it pelvic floor tightening with fear of pain, or a cause the examination finds?</p>",
+   "with": "<p class=\"sub\">vaginismus &middot; exclude a body cause, then treat<span class=\"subq\">Is it pelvic floor tightening with fear of pain, or a cause the examination finds?</span></p>"
+  }
+ ]
+}
