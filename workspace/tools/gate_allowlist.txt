@@ -15,7 +15,6 @@ pairs-with bs-adolescent-confid:who_holds_decisional_authority_for_this_specific
 # 2026-09-29 source-and-scope baseline (tools/content_rules.py): pre-existing findings on the live page when G1-G3 and K3 were added.
 # Backlog, not approval: each line is fixed in a content pass (source recorded, trigger written, or mnemonic removed), then deleted.
 K3 hippos:mnemonic_and_the_shoulder_mirror  # pre-existing: "Falls outward / Points inward" is not a mnemonic I can trace to a widely taught source (unverified judgment); source it or remove it | hippos mnemonic "Mnemonic and the shoulder mirror" does not name its source: add data-mn-s
-G3 neonatal-maternal-labs:ladder2:row3  # pre-existing legacy ladder row with no Escalate-when cell; write the sourced trigger or mark the top rung | neonatal-maternal-labs ladder row 3 ("3") has no "Escalate when" trigger: write the source
 G3 bs-shock:ladder2:row4  # pre-existing legacy ladder row with no Escalate-when cell; write the sourced trigger or mark the top rung | bs-shock ladder row 4 ("Parallel") has no "Escalate when" trigger: write the sourced trigg
 K3 dvt:mnemonic  # pre-existing: mnemonic has no recorded source; verify it is widely taught (add data-mn-src) or remove it | dvt mnemonic "Mnemonic" does not name its source: add data-mn-src naming the widely taught
 K3 cyanotic-chd:mnemonic  # pre-existing: mnemonic has no recorded source; verify it is widely taught (add data-mn-src) or remove it | cyanotic-chd mnemonic "Mnemonic" does not name its source: add data-mn-src naming the wide
