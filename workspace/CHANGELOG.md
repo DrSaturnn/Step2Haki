@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-03 s59: s59: Psych: panic disorder in the lean style (criteria tile with the STUDENTS FEAR mnemonic, mimic workup path, timing chart of six anxiety disorders by what the fear is about, ladder with benzodiazepine as a short-term bridge only, By situation, follow-up); NBME Q10 moved to its framing block; every panic item meets Criteria A and B; review N_reviews_v1 N5 flags fixed
+
+```
+Page: 216 briefs, 2127 items -> 216 briefs, 2126 items
+Briefs changed (1):
+  - panic (Panic Disorder and Its Mimics: Which Anxiety, and How to Treat): items edited (q_9cb0cb9bbe901f8d82c3, q_0a680a7675773ffea9d5, q_d38874735cc315f53712, q_9882ee4e5ed520e497ed, q_1c1f69ce1e98783124e0, q_2770350e3c6d0c9f10b1, q_e3955a2914959af65ee8, q_0a1dc4c6f646148e90f6, q_b6fe551a76fe31c35481, q_417bf3e7befaa83ad1f7, q_f02353ec90fe1c1d49c2, q_8f56600a122cbeb2b97c, q_a29e571adb123e184e79, q_ce5106b02de93c0f3359, q_25ccc4431464504f2c69); versions bumped (q_9cb0cb9bbe901f8d82c3 v1->v2, q_0a680a7675773ffea9d5 v1->v2, q_d38874735cc315f53712 v1->v2, q_9882ee4e5ed520e497ed v1->v2, q_1c1f69ce1e98783124e0 v1->v2, q_2770350e3c6d0c9f10b1 v1->v2, q_e3955a2914959af65ee8 v1->v2, q_0a1dc4c6f646148e90f6 v1->v2, q_b6fe551a76fe31c35481 v1->v2, q_417bf3e7befaa83ad1f7 v1->v2, q_f02353ec90fe1c1d49c2 v1->v2, q_8f56600a122cbeb2b97c v1->v2, q_a29e571adb123e184e79 v1->v2, q_ce5106b02de93c0f3359 v1->v2, q_25ccc4431464504f2c69 v1->v2); ITEMS REMOVED (q_153eea8de1097e9a3bd3); prose edited (-2386 chars)
+Other page changes (nav, headers, scripts): +0 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 216 briefs, 2126 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 216 | bankwraps 216 | mcq 2126 (axCheck 2126, reveal-only 0) | malformed 0 | crit gridded 151/158 | vignette gridded 121/121 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 7
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-03 s58: s58: Psych: delirium in the lean style (DSM-5-TR criteria tile, workup path with ordered CT, lumbar puncture and EEG branches, delirium/dementia/psychosis timing chart, ladder, By situation, Beers and course); NBME Q1 moved to its framing block; schizophrenia item retired to psychosis-duration; Alzheimer item gets a Lewy body distractor; review N_reviews_v1 flags fixed
 
 ```
