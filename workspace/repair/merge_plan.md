@@ -22,9 +22,9 @@ Rule 14 still applies: where a broader title promises content the brief does not
 | Hot Joint or Bursa in an Adult (shipped s70) | Septic Bursitis (`septic-bursitis`); The Acute Hot Joint (adult) (`bs-septic-adult`) | 14 |
 | Osteoporosis Screening and Treatment (shipped s69) | Osteoporosis Screening (`osteoporosis`); DEXA: When Screening Starts Early (`bs-dexa-highrisk`) | 17 |
 | Abnormal Growth in a Child (shipped s70) | Short Stature and Growth Velocity (`bs-short-stature`); Faltering Weight (`bs-ftt`) | 18 |
-| Maternal Effects in the Newborn | Maternal Carryover in Newborn Labs (`neonatal-maternal-labs`); Maternal Hormone Effects in the Newborn (`newborn-hormone`) | 20 |
-| Genetic Syndromes Recognized at Birth | Aneuploidy: Reading the Newborn (`aneuploidy`); Multiple Anomalies in a Newborn (`malform-syndromes`) | 25 |
-| Feeding an Infant or Toddler | Infant Feeding at Six Months (`bs-infant-feeding`); Toddler Food Refusal (`feeding-refusal`) | 19 |
+| Maternal Effects in the Newborn (shipped s72) | Maternal Carryover in Newborn Labs (`neonatal-maternal-labs`); Maternal Hormone Effects in the Newborn (`newborn-hormone`) | 20 |
+| Genetic Syndromes Recognized at Birth (shipped s72) | Aneuploidy: Reading the Newborn (`aneuploidy`); Multiple Anomalies in a Newborn (`malform-syndromes`) | 25 |
+| Feeding an Infant or Toddler (shipped s72) | Infant Feeding at Six Months (`bs-infant-feeding`); Toddler Food Refusal (`feeding-refusal`) | 19 |
 | Puberty: Normal Staging and Early Puberty | Sexual Maturity Rating (`bs-tanner`); Precocious Puberty (`precocious-puberty`) | 21 |
 | Lipid Screening and Statin Therapy | Statins & the 10-Year ASCVD Risk Assessment (`ascvd`); Lipid Screening & Vaccine Eligibility by Condition (`lipid-screen`) | 12 |
 | Hypertension in an Adult | Hypertension: Workup & Drug Choice (`htn-drugs`); Secondary Hypertension (`secondary-htn`) | 16 |
