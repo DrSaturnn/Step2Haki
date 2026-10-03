@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-03 s63: s63: Psych: genito-pelvic pain/penetration disorder in the lean style (criteria tile, examine-before-labeling workup path, what-else table, multimodal treatment, body-cause treatments); NBME Q7 moved to its framing block; one-or-more criterion A kept in the rule and the workup; GAD and SSD rows sourced; vulvodynia item decider fixed
+
+```
+Page: 216 briefs, 2123 items -> 216 briefs, 2122 items
+Briefs changed (1):
+  - gppd (Genito-Pelvic Pain/Penetration Disorder (Vaginismus): Exclude a Body Cause, Then Treat): items edited (q_b589ce7156cbdcaf0964, q_d42d568cc568fd7b9fd1, q_3a7d844ecc3c3b9fe886, q_0ee19d0739b94cb7627d, q_b0f0c334fd087638797e, q_5dd7c86366ecfd236b41, q_1c3de6f03e7f9fe8f0e9, q_d1aaef1d03d23fe24820); versions bumped (q_b589ce7156cbdcaf0964 v1->v2, q_d42d568cc568fd7b9fd1 v1->v2, q_3a7d844ecc3c3b9fe886 v1->v2, q_0ee19d0739b94cb7627d v1->v2, q_b0f0c334fd087638797e v1->v2, q_5dd7c86366ecfd236b41 v1->v2, q_1c3de6f03e7f9fe8f0e9 v1->v2, q_d1aaef1d03d23fe24820 v1->v2); attrs set (q_3a7d844ecc3c3b9fe886 data-d1,data-d1-id); ITEMS REMOVED (q_ef57823831290143bd7b); prose edited (-3526 chars)
+Other page changes (nav, headers, scripts): +0 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 216 briefs, 2122 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 216 | bankwraps 216 | mcq 2122 (axCheck 2122, reveal-only 0) | malformed 0 | crit gridded 161/163 | vignette gridded 121/121 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 2
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-03 s62: s62: Psych: schizophrenia on treatment in the lean style (danger first, find what changed before changing the drug, expressed emotion tile, match-the-added-treatment table with APA strengths, not-the-answer tile, relapse prevention); NBME Q4 moved to its framing block; step2 bases no longer cite Q4 for content it never mentions; ownership with psychosis-duration stated
 
 ```
