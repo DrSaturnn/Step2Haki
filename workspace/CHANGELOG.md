@@ -2,6 +2,22 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-02 s56: Peds MSK: homocystinuria in the lean style as Marfanoid Habitus: Marfan or Homocystinuria? (C7 fixed: no shared skin hyperelasticity; joints usually stiff); pediatric stroke pointer
+
+```
+Page: 216 briefs, 2130 items -> 216 briefs, 2129 items
+Briefs changed (3):
+  - bs-water-soluble-vitamins (Water-Soluble Vitamin Deficiency): prose edited (+11 chars)
+  - homocystinuria (Marfanoid Habitus: Marfan or Homocystinuria?): items edited (q_c64e62ecc8495b6c96dd, q_c98add1f86775b51a0ed, q_d1782896a6d5534bab5b, q_11fd51fa7c3852118b6a, q_3687b4682d3f5fad9719, q_be932522d631521e85f9); versions bumped (q_c64e62ecc8495b6c96dd v1->v2, q_c98add1f86775b51a0ed v1->v2, q_d1782896a6d5534bab5b v1->v2, q_11fd51fa7c3852118b6a v1->v2, q_3687b4682d3f5fad9719 v2->v3, q_be932522d631521e85f9 v1->v2); attrs set (q_c64e62ecc8495b6c96dd data-lead-in,data-src; q_c98add1f86775b51a0ed data-lead-in,data-src; q_d1782896a6d5534bab5b data-lead-in,data-src; q_11fd51fa7c3852118b6a data-lead-in,data-src; q_3687b4682d3f5fad9719 data-src; q_be932522d631521e85f9 data-lead-in,data-src); ITEMS REMOVED (q_e37d80e3578051e593a8); prose edited (-1589 chars)
+  - bs-peds-stroke (Stroke in a Child or Adolescent): prose edited (+157 chars)
+Other page changes (nav, headers, scripts): +11 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 216 briefs, 2129 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 216 | bankwraps 216 | mcq 2129 (axCheck 2129, reveal-only 0) | malformed 0 | crit gridded 147/156 | vignette gridded 123/123 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-02 s55: Peds MSK: foot puncture infection (C5 fixed; NBME item to its framing block) and torticollis in the lean style; both now topic briefs; every workup path labelled Diagnostic workup with wider result labels
 
 ```
