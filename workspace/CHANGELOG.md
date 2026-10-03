@@ -2,6 +2,33 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-03 s65: s65: clear PENDING live errors: four vignettes rebuilt from their briefs (sellar-mass, peds-headache-imaging, bs-reye, bs-impaction; marked partial); scleritis systemic steroids; HPV early-dose repeat; ACS 2020 co-testing and cytology still acceptable; cervical HIV start age 21 per HHS 2024/ASCCP with CDC STI 2021 conflict labelled; non-HIV immunosuppression start 21; cervical-gate rarity reorder; dipstick Pairs with (spherocytes, DAT); posterior fossa cerebellar wording; exam-meta removed (nephrotic spine, headache pearl, two spine labels); adolescent HPV schedule status after the March 2026 court stay
+
+```
+Page: 216 briefs, 2121 items -> 216 briefs, 2121 items
+Briefs changed (14):
+  - malform-syndromes (Multiple Anomalies in a Newborn): prose edited (-30 chars)
+  - bs-impaction (Fecal Impaction & Overflow Diarrhea): prose edited (+197 chars)
+  - polyuria (Polyuria: Water or Solute): prose edited (-37 chars)
+  - nephrotic-child (Nephrotic Syndrome in a Child): prose edited (-38 chars)
+  - dipstick-mismatch (Hemoglobinuria: the Dipstick-Microscopy Mismatch): prose edited (+74 chars)
+  - redeye (The Red Eye): prose edited (+34 chars)
+  - sellar-mass (Sellar and Suprasellar Masses): prose edited (+354 chars)
+  - peds-headache-imaging (Headache in a Child: What Earns Imaging): prose edited (+208 chars)
+  - bs-reye (Cerebral Edema in a Child — Reye Syndrome): prose edited (+197 chars)
+  - bs-posterior-fossa (Posterior Fossa Localization): prose edited (-26 chars)
+  - cervical (Cervical Cancer Screening): prose edited (+349 chars)
+  - hpv (HPV Vaccination & Series Rules): prose edited (+64 chars)
+  - bs-cervical-gate (Cervical Screening: the Age-21 Floor): prose edited (+238 chars)
+  - bs-adolescent-vax (Adolescent Immunization and the Age Platform): prose edited (+297 chars)
+Other page changes (nav, headers, scripts): +0 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 216 briefs, 2121 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 216 | bankwraps 216 | mcq 2121 (axCheck 2121, reveal-only 0) | malformed 0 | crit gridded 164/165 | vignette gridded 121/121 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-03 s64: s64: Psych: intimate partner violence in the lean style (raise-it tile, every-patient step table, safety plan tile, who-decides and who-must-be-reported table, screening and complications); NBME Q2 moved to its framing block; older or disabled adult reporting kept separate from capacity; step2 bases follow their sources. Psych lean queue complete
 
 ```

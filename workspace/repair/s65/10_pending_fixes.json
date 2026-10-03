@@ -1,0 +1,145 @@
+{
+ "batch": "s65",
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "redeye",
+   "find": "Topical steroids are indicated in uveitis and scleritis. They are catastrophic in",
+   "with": "Steroids are indicated in anterior uveitis (topical) and scleritis (systemic). Topical steroids are catastrophic in",
+   "note": "PENDING s33: scleritis needs systemic therapy. MSD Manual Professional, Scleritis (opened 2026-10-03): \"Initial therapy is usually a systemic corticosteroid\"; \"Rarely, NSAIDs are sufficient for mild cases\"; topical corticosteroids \"have limited efficacy\"."
+  },
+  {
+   "op": "replace",
+   "brief": "hpv",
+   "find": "In every vaccine series, do not restart and do not repeat; after a gap, resume where you left off ·",
+   "with": "An interrupted vaccine series is not restarted; resume where you left off. A dose given 5 or more days before the minimum interval does not count and is repeated ·",
+   "note": "PENDING s33: pearl contradicted the \"Repeat the second dose\" item. CDC General Best Practice, Timing and Spacing (opened 2026-10-03): \"Doses of any vaccine administered >=5 days earlier than the minimum interval or age should not be counted as valid doses and should be repeated\"; \"an interruption in the vaccination schedule does not require restarting the entire series\"."
+  },
+  {
+   "op": "replace",
+   "brief": "cervical",
+   "find": "and is preferred. This removes cytology-alone screening at ages 25–29 entirely.<br>",
+   "with": "and is preferred. Where primary HPV testing is not available, co-testing every 5 years or cytology alone every 3 years remains acceptable.<br>",
+   "note": "PENDING s33: ACS 2020 still accepts cotesting and cytology alone. cancer.org ACS cervical screening guideline (opened 2026-10-03): \"Co-testing, every 5 years\"; \"Pap test alone, every 3 years: If none of the other approaches are an option\"."
+  },
+  {
+   "op": "replace",
+   "brief": "cervical",
+   "find": "<b>HIV</b> — start within 1 year of sexual debut, the one exception to never screening before 21. Screen with cytology annually for 3 years, then every 3 years;",
+   "with": "<b>HIV</b> — start at <b>21</b>, as for everyone else, or at HIV diagnosis if older (<b>HHS</b> (Department of Health and Human Services) 2024 and <b>ASCCP</b> (American Society for Colposcopy and Cervical Pathology)); the CDC (Centers for Disease Control and Prevention) 2021 STI (sexually transmitted infection) guideline instead screens 1 year after sexual debut, no later than 21 ⚠︎. Screen with cytology annually for 3 years, then every 3 years;",
+   "note": "PENDING s33 (check start ages): HHS adult/adolescent OI guideline, HPV (updated 2024-07-09, opened 2026-10-03): under 21 \"No screening recommended\"; \"cervical cancer screening is recommended to start at age 21\"; 21-29 \"Cytology yearly. If normal cytology on 3 consecutive annual tests, adjust to every 3 years\". ASCCP patient resource Feb 2026: people with HIV \"should start screening at age 21 even if they were infected before this age\". CDC STI Treatment Guidelines 2021 (opened 2026-10-03): \"Adolescents with HIV should be screened 1 year after onset of sexual activity but no later than age 21 years.\" Conflict labelled."
+  },
+  {
+   "op": "replace",
+   "brief": "bs-cervical-gate",
+   "find": "Progression to cancer takes more than a decade. Early screening finds transient infection and leads to <b>excisional procedures (LEEP) that raise preterm-birth risk</b> in women who were never going to develop cancer. Cervical cancer under 21 is therefore <i>rare</i>. Screening her would cause harm without benefit.",
+   "with": "Progression to cancer takes more than a decade, so cervical cancer under 21 is <i>rare</i>. Early screening finds transient infection and leads to <b>excisional procedures (LEEP) that raise preterm-birth risk</b> in women who were never going to develop cancer. Screening her would cause harm without benefit.",
+   "note": "PENDING s33: rarity follows clearance and slow progression, not the screening harm. Reorder only; no fact changed."
+  },
+  {
+   "op": "replace",
+   "brief": "bs-cervical-gate",
+   "find": "<span class=\"lbl\">Exit ramps: where the age floor moves</span>\n<b>HIV infection</b> → screen <b>at diagnosis</b> (or within 1 year of sexual debut if younger), then annually × 3, then every 3 years. <b>This is the one exception that starts screening before age 21</b> · other immunocompromise (transplant, chronic steroids) → same accelerated schedule ·",
+   "with": "<span class=\"lbl\">Exit ramps: where the schedule changes</span>\n<b>HIV infection</b> → start at <b>21</b>, or <b>at diagnosis</b> if older, then annually × 3, then every 3 years (<b>HHS</b> (Department of Health and Human Services) 2024, <b>ASCCP</b> (American Society for Colposcopy and Cervical Pathology)). The CDC (Centers for Disease Control and Prevention) 2021 STI guideline instead screens 1 year after sexual debut, no later than 21 ⚠︎ · other immunocompromise (organ or allogeneic stem cell transplant, immunosuppressed inflammatory bowel disease) → start at 21, then the same accelerated schedule ·",
+   "note": "PENDING s33: \"the one exception\" conflicted with the next row; non-HIV start age checked. ASCCP patient resource Feb 2026 (opened 2026-10-03): \"People with an organ transplant, allogeneic hematopoietic stem cell transplant ..., or inflammatory bowel disease on immunosuppressant medications ... should begin cervical cancer screening with the pap test at age 21.\" Moscicki 2019 update (PMC11939099): follow CDC HIV screening guidelines for SOT, ESRD, HSCT, SLE. HIV sources as in the cervical edit. \"chronic steroids\" replaced by the ASCCP-named groups."
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "<b>Drug-Induced Immune Hemolysis</b> shares the finding of intravascular hemolysis with schistocytes. Ask: is there a mechanical source?",
+   "with": "<b>Drug-Induced Immune Hemolysis</b> also brings hemolysis labs and dark urine, but the cause is immune: spherocytes and a positive direct antiglobulin test, not schistocytes. Ask: is there a mechanical source?",
+   "note": "PENDING s33: the partner brief teaches spherocytes and a positive DAT (its Defining criteria); this brief already says schistocytes tie hemolysis to the valve rather than an autoimmune or drug cause."
+  },
+  {
+   "op": "replace",
+   "brief": "bs-posterior-fossa",
+   "find": "<p>Every abnormal finding is on the <b>left</b> and every one is cerebellar.",
+   "with": "<p>Every cerebellar finding is on the <b>left</b>.",
+   "note": "PENDING s33: facial numbness (trigeminal) and papilledema are not cerebellar. Reviewer wording."
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "<b>Read the last sentence.</b> &mdash; \"Additional study\" &rarr; the diagnosis is given &middot; ",
+   "with": "",
+   "note": "PENDING s33: exam meta step dropped; the lesion step below carries the same point."
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "<b>Which lesion?</b> &mdash; The stem already said: membranous",
+   "with": "<b>Which lesion?</b> &mdash; The biopsy shows membranous nephropathy, so the work is finding its cause",
+   "note": "PENDING s33: exam meta reworded to the finding."
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "<b>Which is on the option list?</b> &mdash; Hepatitis B",
+   "with": "<b>Which secondary cause is highest yield to test?</b> &mdash; Hepatitis B",
+   "note": "PENDING s33: exam meta reworded; the decision point already names hepatitis B as the highest-yield cause."
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": " The option \"No additional testing\" is rejected far more often because it feels too easy than because of a stated disqualifying finding. This uniform-answer doubt costs points on every shelf.",
+   "with": "",
+   "note": "PENDING s33: exam meta (verifier-blocked voice fix); non-voice edit. Bold rule kept."
+  },
+  {
+   "op": "replace",
+   "brief": "malform-syndromes",
+   "find": "<span class=\"lbl\">Decision spine: solve the stem in 10 seconds</span>",
+   "with": "<span class=\"lbl\">Decision spine</span>",
+   "note": "PENDING s33: verifier-blocked label; exam meta dropped."
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "<span class=\"lbl\">Decision spine &mdash; solve the stem in 10 seconds</span>",
+   "with": "<span class=\"lbl\">Decision spine</span>",
+   "note": "Same label fix (exam meta, em dash)."
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "<div class=\"vignette\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 12 yo F, 6 months of morning headaches, height crossed the 75th to the 10th percentile with weight at the 60th, Tanner 1, papilledema &middot; <b>Q</b> &mdash; the most appropriate next step; options spanned MRI of the brain with contrast, a hand radiograph for bone age and noncontrast head CT</div>",
+   "with": "<div class=\"vignette\" data-recon=\"partial\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 13 yo F, a year of headaches, now worse; height fell from the 50th to the 5th percentile between ages 11 and 13 while weight held at the 75th; Tanner 1 &middot; <b>Exam</b> &mdash; afebrile, normal blood pressure, supple neck, optic disc edema; normal finger-nose-finger, gait and skin; no focal deficit &middot; <b>Q</b> &mdash; the most likely finding on MRI of the brain; options spanned a cystic, calcified suprasellar mass, subependymal nodules in the lateral ventricles, a tumor in the cerebellar vermis, a parietal lesion with air-fluid levels and a hyperdense rim, and an enhancing lesion in the internal auditory canal</div>",
+   "note": "PENDING s33: the vignette disagreed with the brief prose (growth arrest at 11, Tanner 1 at 13, a year of headaches, 50th to 5th, weight 75th). Rebuilt from the brief own facts (decision point, Defining criteria, Pertinents, Pairs with \"13-year-old girl\"); no source stem on file, marked partial. The 12 yo F scenario item is kept as a separate practice item. Q rebuilt from the trap lines and the decision point (MRI descriptor); BP from the Decoy note. Reviewer fix."
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<div class=\"vignette\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 10 yo M, 1 year of bilateral throbbing headaches with photophobia and vomiting, relieved by sleep, normal examination &middot; <b>Q</b> &mdash; the most appropriate next step; options spanned reassurance with a trigger diary and early-dose ibuprofen, MRI of the brain and daily topiramate prophylaxis</div>",
+   "with": "<div class=\"vignette\" data-recon=\"partial\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 13 yo F, 2 years of similar headaches: unilateral, pulsatile, hours long, worse with activity, with nausea; now monthly instead of every other month, same characteristics; menarche at 12, periods now regular; this one began after a sleepover, she vomited twice and could not finish her homework; intermittent acetaminophen only &middot; <b>Exam</b> &mdash; temperature 37 &deg;C, alert and oriented, pupils equal and reactive, remainder of the neurologic examination normal, no papilledema described &middot; <b>Q</b> &mdash; the most appropriate next step; options spanned no additional testing, CT of the head, a urine toxicology screen, serum electrolytes and lumbar puncture</div>",
+   "note": "PENDING s18/s26/s33: the vignette (10 yo M) disagreed with the brief prose (adolescent girl, menarche at 12, 2 years). Rebuilt from the decision point, Pertinents, Classify-first table and Tier fingerprint; age 13 from the Pairs with on both briefs (\"a 13-year-old girl\", \"same age and sex\"). No source stem on file, marked partial. The 10 yo M scenario item is kept as a separate practice item. Options from the trap lines. Reviewer fix."
+  },
+  {
+   "op": "replace",
+   "brief": "bs-reye",
+   "find": "<div class=\"vignette\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 5 yo F, viral upper respiratory infection treated with an over-the-counter medicine, now vomiting and lethargic with hepatomegaly and cerebral edema &middot; <b>Q</b> &mdash; the most likely diagnosis; options spanned Reye syndrome, acute viral hepatitis and bacterial meningitis</div>",
+   "with": "<div class=\"vignette\" data-recon=\"partial\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 5 yo F, viral illness treated with over-the-counter medications; improved, then vomiting and lethargy; hepatomegaly with a normal spleen; no hypertension, no peripheral edema &middot; <b>Vitals</b> &mdash; T 36.8 &deg;C, pulse 110, BP 98/60 &middot; <b>Imaging</b> &mdash; cerebral edema &middot; <b>Q</b> &mdash; the most likely cause of the imaging findings; options spanned hyperammonemia, hypoglycemia, uremia, adrenal insufficiency and hypothyroidism</div>",
+   "note": "PENDING s33: the vignette said the question asked the diagnosis; the subtitle, decision point, option audit and Pairs with teach \"cause of this patient's imaging findings\" with five metabolic options. Rebuilt from the brief own facts; marked partial."
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "<div class=\"vignette\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 77 yo F, 5 days without a bowel movement, distended abdomen, high-pitched bowel sounds, empty rectal vault, prior laparotomy &middot; <b>Q</b> &mdash; the most likely diagnosis; options spanned adhesive small bowel obstruction, fecal impaction and sigmoid volvulus</div>",
+   "with": "<div class=\"vignette\" data-recon=\"partial\"><span class=\"lbl\">Source vignette</span> <b>Pt</b> &mdash; 77 yo F taking oxybutynin; last bowel movement 5 days ago, and it was loose stool; colonoscopy 3 years ago showed no abnormalities; no hematochezia &middot; <b>Exam</b> &mdash; afebrile, warm dry skin, soft abdomen without distension, diffuse tenderness, firm stool in the rectal vault &middot; <b>Q</b> &mdash; the most likely diagnosis; options spanned fecal impaction, adhesions, colon cancer, diverticulitis, ischemic bowel and volvulus</div>",
+   "note": "PENDING s30 option (a): the vignette described adhesive small bowel obstruction (a distractor variant, item q_3d6cc290365e594cb0a9). Rebuilt from the brief own facts (decision point, Stem findings table, Details that change management); no nid, no source on file, marked partial."
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-vax",
+   "find": "<span class=\"lbl\">A live divergence worth knowing</span> As of January 2026 the <b>CDC schedule specifies one HPV dose at 11 to 12 while the AAP recommends two doses at 9 to 12</b>. On retired exam items, the classic keyed answer remains two doses if initiated before 15 and three if at 15 or older or immunocompromised. Expect the exam answer to lag clinical practice here.",
+   "with": "<span class=\"lbl\">Schedule status, October 2026</span> A January 2026 CDC (Centers for Disease Control and Prevention) revision recommended a <b>single HPV dose</b>. A federal court stayed that revision in March 2026, and the stay is under appeal. The schedule CDC now posts keeps the <b>2-dose series when started at 9 to 14</b>, and the <b>AAP</b> (American Academy of Pediatrics) also recommends two doses, starting at 9 to 12; check the CDC site for the current schedule. On retired exam items, the classic keyed answer remains two doses if initiated before 15 and three if at 15 or older or immunocompromised. The posted schedule and the exam answer currently agree.",
+   "note": "PENDING s35: the \"live divergence\" line was outdated by the court stay. Society of Gynecologic Oncology (opened 2026-10-03): HPV \"now recommended as a single dose\" under the January 2026 schedule. Georgetown CCF 2026-03-31: the court \"stayed the January 2026 Memo revising the CDC childhood immunization schedule\" (2026-03-16). Moreton 2026-09-17: government appealed to the First Circuit. CDC child-adolescent notes (opened 2026-10-03, last updated 2025-07-01): \"2-dose series at 0, 6-12 months\" for initiation at 9-14. AAP two-dose wording carried from the existing line."
+  },
+  {
+   "op": "replace",
+   "brief": "bs-cervical-gate",
+   "find": "<tr><td>Age and HIV status</td><td>First</td><td>Age <b>under 21</b> and HIV negative</td><td>No screening, whatever the sexual history</td></tr>",
+   "with": "<tr><td>Age</td><td>First</td><td>Age <b>under 21</b>, with or without HIV</td><td>No screening, whatever the sexual history</td></tr>",
+   "note": "Reviewer: the HIV-negative qualifier implied HIV under 21 is screened, contradicting HHS 2024/ASCCP. Sources as above."
+  }
+ ]
+}
