@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-03 s58: s58: Psych: delirium in the lean style (DSM-5-TR criteria tile, workup path with ordered CT, lumbar puncture and EEG branches, delirium/dementia/psychosis timing chart, ladder, By situation, Beers and course); NBME Q1 moved to its framing block; schizophrenia item retired to psychosis-duration; Alzheimer item gets a Lewy body distractor; review N_reviews_v1 flags fixed
+
+```
+Page: 216 briefs, 2129 items -> 216 briefs, 2127 items
+Briefs changed (1):
+  - delirium (Delirium: Tell It From Dementia and Psychosis, Then Find the Cause): items edited (q_11cc3578ab34fb7ed536, q_6528f9dbc4a553760f7d, q_7470edf44986934e921d, q_7b50e870883dc73ce0f9, q_9a86fc1b1a583b1c9607, q_9a43cb8744b66244d55b, q_1a09df3a1294e55d5d0d, q_34902597b649d6f0115f, q_0dcaebb0bf5c8466d61c, q_6f2d95529c86c3afb033, q_d86091a6d35ed2c8142e, q_9f31bf83cd5cb26c6178); versions bumped (q_11cc3578ab34fb7ed536 v1->v2, q_6528f9dbc4a553760f7d v1->v2, q_7470edf44986934e921d v1->v2, q_7b50e870883dc73ce0f9 v1->v2, q_9a86fc1b1a583b1c9607 v1->v2, q_9a43cb8744b66244d55b v1->v2, q_1a09df3a1294e55d5d0d v1->v2, q_34902597b649d6f0115f v1->v2, q_0dcaebb0bf5c8466d61c v1->v2, q_6f2d95529c86c3afb033 v1->v2, q_d86091a6d35ed2c8142e v1->v2, q_9f31bf83cd5cb26c6178 v1->v2); attrs set (q_34902597b649d6f0115f data-d2,data-d2-id; q_6f2d95529c86c3afb033 data-d2,data-d2-id; q_9f31bf83cd5cb26c6178 data-d2,data-d2-id); ITEMS REMOVED (q_a15b28dce7109b16b9e7, q_53551c863e1c812b0657); prose edited (-4336 chars)
+Other page changes (nav, headers, scripts): +0 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 216 briefs, 2127 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 216 | bankwraps 216 | mcq 2127 (axCheck 2127, reveal-only 0) | malformed 0 | crit gridded 149/157 | vignette gridded 121/121 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 8
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-02 s57: Peds MSK: fever, rash and joint pain in the lean style (C8 sexual-history rule and C9 rubella clues fixed); two UWorld stems archived and rewritten; DGI knee clue carried; now a topic brief
 
 ```
