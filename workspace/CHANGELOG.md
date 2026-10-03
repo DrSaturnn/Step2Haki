@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-03 s61: s61: Psych: lithium complications in the lean style (act-first dialysis criteria in toxicity, three-pair workup path, LMNOP, which-one table, toxicity ladder, By situation, monitoring); NBME Q5 moved to its framing block; earlier review fixes kept (TSH with free thyroxine, commonly above 1.5 mmol/L, little or no desmopressin response)
+
+```
+Page: 216 briefs, 2125 items -> 216 briefs, 2124 items
+Briefs changed (1):
+  - lithium-effects (The Patient on Lithium: Which Complication, and What to Do): items edited (q_fdf8caeb97e43a815d98, q_182e22e561f6fc45d39e, q_04b1d3c440a7cf52da0a, q_fa69616f74588eaa5d79, q_2ea25399ba45abf02320, q_75b281aa8cbc5a5548c3, q_aa507f9a6ddbea9e1a0c, q_cf8fe6d5b6f2483d69e4, q_d952defc13d2eb0f68b3, q_1b55329353193e01aefd, q_06efe9680e1f6779f32c); versions bumped (q_fdf8caeb97e43a815d98 v1->v2, q_182e22e561f6fc45d39e v1->v2, q_04b1d3c440a7cf52da0a v2->v3, q_fa69616f74588eaa5d79 v1->v2, q_2ea25399ba45abf02320 v1->v2, q_75b281aa8cbc5a5548c3 v1->v2, q_aa507f9a6ddbea9e1a0c v1->v2, q_cf8fe6d5b6f2483d69e4 v2->v3, q_d952defc13d2eb0f68b3 v2->v3, q_1b55329353193e01aefd v1->v2, q_06efe9680e1f6779f32c v1->v2); attrs set (q_fa69616f74588eaa5d79 data-lead-in; q_75b281aa8cbc5a5548c3 data-lead-in); ITEMS REMOVED (q_f68b5a29e435cf4c9058); prose edited (-5816 chars)
+Other page changes (nav, headers, scripts): +0 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 216 briefs, 2124 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 216 | bankwraps 216 | mcq 2124 (axCheck 2124, reveal-only 0) | malformed 0 | crit gridded 155/159 | vignette gridded 121/121 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 4
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-03 s60: s60: Psych: SSRI adverse effects in the lean style (Which effect tile, FINISH, timing chart for serotonin syndrome, NMS, discontinuation and relapse, two ladders, By situation, prevention); NBME Q9 moved to its framing block; NBME hedges kept (commonly, reasonable options, eg); Warner restart option and other-causes-ruled-out step restored; review N_reviews_v1 N4 flags fixed
 
 ```
