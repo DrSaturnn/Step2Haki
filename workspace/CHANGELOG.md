@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-03 s62: s62: Psych: schizophrenia on treatment in the lean style (danger first, find what changed before changing the drug, expressed emotion tile, match-the-added-treatment table with APA strengths, not-the-answer tile, relapse prevention); NBME Q4 moved to its framing block; step2 bases no longer cite Q4 for content it never mentions; ownership with psychosis-duration stated
+
+```
+Page: 216 briefs, 2124 items -> 216 briefs, 2123 items
+Briefs changed (1):
+  - sz-psychosocial (Schizophrenia on Treatment: Psychosocial Care and Relapse Prevention): items edited (q_4c64032d1e4c534c6782, q_acec20862df55cf9786a, q_9bbca9be1aa0ef0942ca, q_4eff7cc0f37692494f18, q_4f51374399c5e2faa634, q_7b50d623d43c9a53c94f, q_5e890413f13e8d4b5abf, q_c85b7eee3da384e60440, q_b50c3ec605ca3faf50ee, q_9fa041c8970b9d3b3fba, q_4a4edd58a7fdd308d09f); versions bumped (q_4c64032d1e4c534c6782 v1->v2, q_acec20862df55cf9786a v1->v2, q_9bbca9be1aa0ef0942ca v1->v2, q_4eff7cc0f37692494f18 v1->v2, q_4f51374399c5e2faa634 v1->v2, q_7b50d623d43c9a53c94f v1->v2, q_5e890413f13e8d4b5abf v1->v2, q_c85b7eee3da384e60440 v1->v2, q_b50c3ec605ca3faf50ee v1->v2, q_9fa041c8970b9d3b3fba v1->v2, q_4a4edd58a7fdd308d09f v1->v2); attrs set (q_9bbca9be1aa0ef0942ca data-d1,data-d1-id; q_9fa041c8970b9d3b3fba data-lead-in); ITEMS REMOVED (q_c1513f868f37ef34aea2); prose edited (-4114 chars)
+Other page changes (nav, headers, scripts): +0 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 216 briefs, 2123 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 216 | bankwraps 216 | mcq 2123 (axCheck 2123, reveal-only 0) | malformed 0 | crit gridded 158/161 | vignette gridded 121/121 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 3
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-03 s61: s61: Psych: lithium complications in the lean style (act-first dialysis criteria in toxicity, three-pair workup path, LMNOP, which-one table, toxicity ladder, By situation, monitoring); NBME Q5 moved to its framing block; earlier review fixes kept (TSH with free thyroxine, commonly above 1.5 mmol/L, little or no desmopressin response)
 
 ```
