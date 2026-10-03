@@ -85,3 +85,16 @@ q_43dfbe3878f05a598285,pyelo,2026-10-03,merge: UWorld-derived item (data-src uwo
 q_5b915fd039d45149af5e,pyelo,2026-10-03,merge: UWorld-derived item (data-src uworld) archived per brief-migration; a new authored item keeps the decision,repair/archive/pyelo.html
 q_68855b91ca5f5bfcb31c,pyelo,2026-10-03,merge: merged into q_38350d6bbf8e58b4b8cf: same decision (still febrile at 72 hours on correct antibiotics: CT for abscess or obstruction); the age and sex (72 yo M) do not decide the item,repair/archive/pyelo.html
 q_ef221864398f38009057,copd,2026-10-03,merge: NBME question moved from the bank into its How NBME framed it block (Jonathan 2026-10-01 rule),repair/archive/copd.html
+q_51678cf558d4534ab9ef,gtps,2026-10-03,"merge: key named two answers (""Piriformis syndrome or lumbar radiculopathy""); replaced with a single-answer item built on the same buttock-pain decision",repair/archive/gtps.html
+q_0bdf22ddb78d55208656,gtps,2026-10-03,"merge: key label carried an em dash (""None; it is a clinical diagnosis""); replaced with a clean key; same decision",repair/archive/gtps.html
+q_49c3284cc3325ac68b0a,osteoporosis,2026-10-03,merge: merged into q_09e7f6e15ab95cbd91c2: duplicate: chronic prednisone means DEXA now regardless of age,repair/archive/osteoporosis.html
+q_08cb900770515d90a6b5,osteoporosis,2026-10-03,merge: merged into q_1032b6713b4050b79ac0: duplicate: never-screened woman over 65 means DEXA now,repair/archive/osteoporosis.html
+q_9f3d98884472530aa877,osteoporosis,2026-10-03,merge: merged into q_2953436ba09957738b08: duplicate: osteopenia means FRAX; treat at 20% or 3%,repair/archive/osteoporosis.html
+q_1209661648d958659d7b,osteoporosis,2026-10-03,merge: merged into q_163bf1460c3bfdcc7fdb: duplicate: premenopausal fragility fracture means Z-score and secondary causes,repair/archive/osteoporosis.html
+q_69d16408bcc95b419c60,osteoporosis,2026-10-03,merge: merged into q_774f59fb6fe759cf9e63: duplicate: vitamin D and calcium before alendronate,repair/archive/osteoporosis.html
+q_dfd6593838d95aa99602,osteoporosis,2026-10-03,merge: merged into q_0263cf8d393f5319a3e7: duplicate: androgen deprivation (or aromatase inhibitor) means DEXA,repair/archive/osteoporosis.html
+q_943117ef576f5c1ca4c3,osteoporosis,2026-10-03,merge: key ran far longer than both distractors (answer cue) and named no Z-score; replaced with a balanced key; same decision,repair/archive/osteoporosis.html
+q_e73613ee3fc7569e9944,osteoporosis,2026-10-03,merge: key was not an action and did not rule out raloxifene; replaced with decline estrogen and start alendronate,repair/archive/osteoporosis.html
+q_e426ee672611563d8bc6,scaphoid,2026-10-03,merge: key used a capital Greek Beta (reads as B2); replaced with beta; same decision,repair/archive/scaphoid.html
+q_9ccc804a8a1e5d4692f6,scaphoid,2026-10-03,"merge: key (""Skip conservative therapy; release it"") named the class of both distractors; replaced with Carpal tunnel release; same decision",repair/archive/scaphoid.html
+q_624102cd28465ae7998e,scaphoid,2026-10-03,merge: merged into q_00b06cea29d55a63a813: same scenario (snuffbox tenderness after a fall with a normal film); the sprain trap survives as the reassurance distractor of q_00b06,repair/archive/scaphoid.html
