@@ -1,0 +1,2521 @@
+{
+ "batch": "s66",
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "backpain",
+   "find": "<h4>Low Back Pain: Red Flags</h4>",
+   "with": "<h4>Low Back Pain in an Adult</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Low Back Pain: Red Flags -> Low Back Pain in an Adult"
+  },
+  {
+   "op": "replace",
+   "brief": "shoulder-rom",
+   "find": "<h4>Shoulder Pain: the Range-of-Motion Rule</h4>",
+   "with": "<h4>Shoulder Pain</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Shoulder Pain: the Range-of-Motion Rule -> Shoulder Pain"
+  },
+  {
+   "op": "replace",
+   "brief": "gtps",
+   "find": "<h4>Pain Around the Hip and Thigh</h4>",
+   "with": "<h4>Hip and Thigh Pain in an Adult</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Pain Around the Hip and Thigh -> Hip and Thigh Pain in an Adult"
+  },
+  {
+   "op": "replace",
+   "brief": "hippos",
+   "find": "<h4>Hip Positioning: Fracture vs. Dislocation</h4>",
+   "with": "<h4>Hip Injury in an Adult</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Hip Positioning: Fracture vs. Dislocation -> Hip Injury in an Adult"
+  },
+  {
+   "op": "replace",
+   "brief": "oa-pharm",
+   "find": "<h4>Osteoarthritis Pharmacotherapy</h4>",
+   "with": "<h4>Osteoarthritis</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Osteoarthritis Pharmacotherapy -> Osteoarthritis"
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "<h4>The Limping Child: Sick or Well, Then Age and Time</h4>\n<p class=\"sub\">",
+   "with": "<h4>The Limping Child</h4>\n<p class=\"sub\">Sick or well, then age and time &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): The Limping Child: Sick or Well, Then Age and Time -> The Limping Child"
+  },
+  {
+   "op": "replace",
+   "brief": "scfe",
+   "find": "<h4>Slipped Capital Femoral Epiphysis: Keep Off It and Pin It</h4>\n<p class=\"sub\">",
+   "with": "<h4>Slipped Capital Femoral Epiphysis</h4>\n<p class=\"sub\">Keep off it and pin it &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Slipped Capital Femoral Epiphysis: Keep Off It and Pin It -> Slipped Capital Femoral Epiphysis"
+  },
+  {
+   "op": "replace",
+   "brief": "sjia",
+   "find": "<h4>Juvenile Idiopathic Arthritis: Count the Joints, Chart the Fever</h4>\n<p class=\"sub\">",
+   "with": "<h4>Juvenile Idiopathic Arthritis</h4>\n<p class=\"sub\">Count the joints, chart the fever &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Juvenile Idiopathic Arthritis: Count the Joints, Chart the Fever -> Juvenile Idiopathic Arthritis"
+  },
+  {
+   "op": "replace",
+   "brief": "nursemaid",
+   "find": "<h4>Child Won't Use the Arm: Reduce or Image?</h4>",
+   "with": "<h4>Arm Injury in a Young Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Child Won't Use the Arm: Reduce or Image? -> Arm Injury in a Young Child"
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "<h4>Myositis Ossificans: Did the Pain Resolve and Come Back?</h4>\n<p class=\"sub\">",
+   "with": "<h4>Muscle Contusion and Myositis Ossificans</h4>\n<p class=\"sub\">Did the pain resolve and come back? &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Myositis Ossificans: Did the Pain Resolve and Come Back? -> Muscle Contusion and Myositis Ossificans"
+  },
+  {
+   "op": "replace",
+   "brief": "bone-tumors",
+   "find": "<h4>Bone Lesion in a Child: Where It Sits and What It Does Next</h4>",
+   "with": "<h4>Bone Lesions in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Bone Lesion in a Child: Where It Sits and What It Does Next -> Bone Lesions in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "scheuermann",
+   "find": "<h4>Adolescent Kyphosis: Does the Curve Correct?</h4>\n<p class=\"sub\">",
+   "with": "<h4>Adolescent Kyphosis</h4>\n<p class=\"sub\">Does the curve correct? &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Adolescent Kyphosis: Does the Curve Correct? -> Adolescent Kyphosis"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puncture-osteomyelitis",
+   "find": "<h4>Foot Puncture Infection: Name the Organism from the Exposure and the Clock</h4>",
+   "with": "<h4>Foot Puncture Wounds and Osteomyelitis</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Foot Puncture Infection: Name the Organism from the Exposure and the Clock -> Foot Puncture Wounds and Osteomyelitis"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torticollis",
+   "find": "<h4>Infant Head Tilt and Flat Head: Which Way Does the Ear Point?</h4>",
+   "with": "<h4>Torticollis and Plagiocephaly in an Infant</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Infant Head Tilt and Flat Head: Which Way Does the Ear Point? -> Torticollis and Plagiocephaly in an Infant"
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "<h4>Growth &amp; Developmental Milestones</h4>",
+   "with": "<h4>Developmental Milestones and Normal Growth</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Growth & Developmental Milestones -> Developmental Milestones and Normal Growth"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-preterm-followup",
+   "find": "<h4>Prematurity Follow-Up and Corrected Age</h4>",
+   "with": "<h4>Follow-Up of the Preterm Infant</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Prematurity Follow-Up and Corrected Age -> Follow-Up of the Preterm Infant"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "<h4>Angelman Syndrome and Its Genetic Look-Alikes</h4>",
+   "with": "<h4>Imprinting Disorders: Angelman and Prader-Willi</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Angelman Syndrome and Its Genetic Look-Alikes -> Imprinting Disorders: Angelman and Prader-Willi"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-learning",
+   "find": "<h4>Specific Learning Disorder</h4>",
+   "with": "<h4>School Difficulty in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Specific Learning Disorder -> School Difficulty in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nat-fracture",
+   "find": "<h4>Suspected Child Abuse: Fractures and the Next Step</h4>",
+   "with": "<h4>Suspected Child Abuse</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Suspected Child Abuse: Fractures and the Next Step -> Suspected Child Abuse"
+  },
+  {
+   "op": "replace",
+   "brief": "chf",
+   "find": "<h4>Heart Failure: Reducing Hospitalization</h4>",
+   "with": "<h4>Heart Failure</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Heart Failure: Reducing Hospitalization -> Heart Failure"
+  },
+  {
+   "op": "replace",
+   "brief": "ascvd",
+   "find": "<h4>Statins &amp; the 10-Year ASCVD Risk Assessment</h4>",
+   "with": "<h4>Lipid Screening and Statin Therapy</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Statins & the 10-Year ASCVD Risk Assessment -> Lipid Screening and Statin Therapy"
+  },
+  {
+   "op": "replace",
+   "brief": "angina",
+   "find": "<h4>Anginal Equivalents &amp; Stress Test Selection</h4>",
+   "with": "<h4>Stable Ischemic Heart Disease</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Anginal Equivalents & Stress Test Selection -> Stable Ischemic Heart Disease"
+  },
+  {
+   "op": "replace",
+   "brief": "htn-drugs",
+   "find": "<h4>Hypertension: Workup &amp; Drug Choice</h4>",
+   "with": "<h4>Hypertension in an Adult</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Hypertension: Workup & Drug Choice -> Hypertension in an Adult"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "<h4>Confirming High Blood Pressure in an Adolescent</h4>",
+   "with": "<h4>High Blood Pressure in a Child or Adolescent</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Confirming High Blood Pressure in an Adolescent -> High Blood Pressure in a Child or Adolescent"
+  },
+  {
+   "op": "replace",
+   "brief": "dvt",
+   "find": "<h4>DVT &amp; Pulmonary Embolism</h4>",
+   "with": "<h4>Venous Thromboembolism</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): DVT & Pulmonary Embolism -> Venous Thromboembolism"
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "<h4>Innocent vs Pathologic Murmurs</h4>",
+   "with": "<h4>Heart Murmurs in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Innocent vs Pathologic Murmurs -> Heart Murmurs in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "myocarditis",
+   "find": "<h4>New Heart Failure in a Child</h4>",
+   "with": "<h4>Heart Failure in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): New Heart Failure in a Child -> Heart Failure in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "copd",
+   "find": "<h4>COPD: Which Interventions Improve Survival</h4>",
+   "with": "<h4>COPD</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): COPD: Which Interventions Improve Survival -> COPD"
+  },
+  {
+   "op": "replace",
+   "brief": "asthma",
+   "find": "<h4>Asthma: Severity Classification</h4>",
+   "with": "<h4>Asthma</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Asthma: Severity Classification -> Asthma"
+  },
+  {
+   "op": "replace",
+   "brief": "rhinitis",
+   "find": "<h4>Allergic Rhinitis</h4>",
+   "with": "<h4>Rhinitis</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Allergic Rhinitis -> Rhinitis"
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "<h4>Mechanisms of Hypoxemia</h4>",
+   "with": "<h4>Hypoxemia</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Mechanisms of Hypoxemia -> Hypoxemia"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-sickle-trait",
+   "find": "<h4>Sickle Cell Trait versus Disease</h4>",
+   "with": "<h4>Sickle Cell Disease and Trait</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Sickle Cell Trait versus Disease -> Sickle Cell Disease and Trait"
+  },
+  {
+   "op": "replace",
+   "brief": "airway",
+   "find": "<h4>Pediatric Airway &amp; Noisy Breathing</h4>",
+   "with": "<h4>Noisy Breathing in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Pediatric Airway & Noisy Breathing -> Noisy Breathing in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "abrs-complications",
+   "find": "<h4>Sinusitis with Intracranial Extension</h4>",
+   "with": "<h4>Sinusitis and Its Complications</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Sinusitis with Intracranial Extension -> Sinusitis and Its Complications"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-pta",
+   "find": "<h4>Peritonsillar Abscess and the Deep Neck Spaces</h4>",
+   "with": "<h4>Deep Neck Infections</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Peritonsillar Abscess and the Deep Neck Spaces -> Deep Neck Infections"
+  },
+  {
+   "op": "replace",
+   "brief": "masld",
+   "find": "<h4>MASLD / Metabolic Fatty Liver</h4>",
+   "with": "<h4>Fatty Liver Disease</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): MASLD / Metabolic Fatty Liver -> Fatty Liver Disease"
+  },
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "<h4>Cholestasis &amp; the LFT Patterns</h4>",
+   "with": "<h4>Abnormal Liver Tests</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Cholestasis & the LFT Patterns -> Abnormal Liver Tests"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "<h4>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</h4>",
+   "with": "<h4>Stool Changes in a Well Infant</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Infant Stool Complaints: Dyschezia, FPIAP & Secondary Lactase Deficiency -> Stool Changes in a Well Infant"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "<h4>Fecal Impaction &amp; Overflow Diarrhea</h4>",
+   "with": "<h4>Constipation and Fecal Impaction in an Adult</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Fecal Impaction & Overflow Diarrhea -> Constipation and Fecal Impaction in an Adult"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "<h4>Cyclic Vomiting Syndrome</h4>",
+   "with": "<h4>Recurrent Vomiting in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Cyclic Vomiting Syndrome -> Recurrent Vomiting in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "<h4>Neonatal Jaundice</h4>",
+   "with": "<h4>Jaundice in a Newborn</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Neonatal Jaundice -> Jaundice in a Newborn"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<h4>Occult GI Bleeding in a Child</h4>",
+   "with": "<h4>GI Bleeding in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Occult GI Bleeding in a Child -> GI Bleeding in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "<h4>Tracheoesophageal Fistula with Esophageal Atresia</h4>",
+   "with": "<h4>Tracheoesophageal Fistula and Esophageal Atresia</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Tracheoesophageal Fistula with Esophageal Atresia -> Tracheoesophageal Fistula and Esophageal Atresia"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "<h4>Wilson Disease: Copper in the Liver, Brain and Eye</h4>",
+   "with": "<h4>Wilson Disease</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Wilson Disease: Copper in the Liver, Brain and Eye -> Wilson Disease"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "<h4>Foodborne Diarrhea: Source and Organism</h4>",
+   "with": "<h4>Infectious Diarrhea</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Foodborne Diarrhea: Source and Organism -> Infectious Diarrhea"
+  },
+  {
+   "op": "replace",
+   "brief": "pyelo",
+   "find": "<h4>Pyelonephritis: Route &amp; Disposition</h4>",
+   "with": "<h4>Pyelonephritis</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Pyelonephritis: Route & Disposition -> Pyelonephritis"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "<h4>Recurrent Urinary Infection in a Child</h4>",
+   "with": "<h4>Urinary Tract Infection in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Recurrent Urinary Infection in a Child -> Urinary Tract Infection in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "enuresis",
+   "find": "<h4>Nocturnal Enuresis</h4>",
+   "with": "<h4>Enuresis</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Nocturnal Enuresis -> Enuresis"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-aki",
+   "find": "<h4>NSAID Prerenal AKI in a Child</h4>",
+   "with": "<h4>Acute Kidney Injury in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): NSAID Prerenal AKI in a Child -> Acute Kidney Injury in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "<h4>Polyuria: Water or Solute</h4>",
+   "with": "<h4>Polyuria</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Polyuria: Water or Solute -> Polyuria"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-distal-rta",
+   "find": "<h4>Hypokalemia with Acidosis in a Child</h4>",
+   "with": "<h4>Hypokalemia and Acid-Base Disorders in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Hypokalemia with Acidosis in a Child -> Hypokalemia and Acid-Base Disorders in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-incontinence",
+   "find": "<h4>Incontinence &amp; the Postvoid Residual</h4>",
+   "with": "<h4>Urinary Incontinence</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Incontinence & the Postvoid Residual -> Urinary Incontinence"
+  },
+  {
+   "op": "replace",
+   "brief": "bph",
+   "find": "<h4>BPH &amp; Acute Urinary Retention</h4>",
+   "with": "<h4>Benign Prostatic Hyperplasia and Urinary Retention</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): BPH & Acute Urinary Retention -> Benign Prostatic Hyperplasia and Urinary Retention"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "<h4>Posterior Urethral Valves and Potter Sequence</h4>",
+   "with": "<h4>Posterior Urethral Valves</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Posterior Urethral Valves and Potter Sequence -> Posterior Urethral Valves"
+  },
+  {
+   "op": "replace",
+   "brief": "scrotum",
+   "find": "<h4>Acute Scrotum &amp; Scrotal Mass</h4>",
+   "with": "<h4>Scrotal Pain and Masses</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Acute Scrotum & Scrotal Mass -> Scrotal Pain and Masses"
+  },
+  {
+   "op": "replace",
+   "brief": "thyroid",
+   "find": "<h4>Thyroid Mimics &amp; Discriminators</h4>",
+   "with": "<h4>Thyroid Disease in an Adult</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Thyroid Mimics & Discriminators -> Thyroid Disease in an Adult"
+  },
+  {
+   "op": "replace",
+   "brief": "hypercalcemia",
+   "find": "<h4>Hypercalcemia Workup</h4>",
+   "with": "<h4>Hypercalcemia</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Hypercalcemia Workup -> Hypercalcemia"
+  },
+  {
+   "op": "replace",
+   "brief": "gynecomastia",
+   "find": "<h4>Gynecomastia vs. Male Breast Cancer</h4>",
+   "with": "<h4>Male Breast Enlargement</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Gynecomastia vs. Male Breast Cancer -> Male Breast Enlargement"
+  },
+  {
+   "op": "replace",
+   "brief": "homocystinuria",
+   "find": "<h4>Marfanoid Habitus: Marfan or Homocystinuria?</h4>",
+   "with": "<h4>Tall Stature and Marfanoid Habitus</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Marfanoid Habitus: Marfan or Homocystinuria? -> Tall Stature and Marfanoid Habitus"
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "<h4>Microcytic Anemia: Iron First</h4>",
+   "with": "<h4>Microcytic Anemia</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Microcytic Anemia: Iron First -> Microcytic Anemia"
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "<h4>Hemoglobinuria: the Dipstick-Microscopy Mismatch</h4>",
+   "with": "<h4>Dark Urine: Hemoglobin, Myoglobin or Blood</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Hemoglobinuria: the Dipstick-Microscopy Mismatch -> Dark Urine: Hemoglobin, Myoglobin or Blood"
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "<h4>Hemophilia A Inhibitor</h4>",
+   "with": "<h4>Hemophilia</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Hemophilia A Inhibitor -> Hemophilia"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "<h4>Pediatric Acute Lymphoblastic Leukemia</h4>",
+   "with": "<h4>Acute Leukemia in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Pediatric Acute Lymphoblastic Leukemia -> Acute Leukemia in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "lymphadenitis",
+   "find": "<h4>Enlarged Lymph Nodes: Reading the Pattern</h4>",
+   "with": "<h4>Lymphadenopathy</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Enlarged Lymph Nodes: Reading the Pattern -> Lymphadenopathy"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-vax",
+   "find": "<h4>Adolescent Immunization and the Age Platform</h4>",
+   "with": "<h4>Adolescent Vaccines</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Adolescent Immunization and the Age Platform -> Adolescent Vaccines"
+  },
+  {
+   "op": "replace",
+   "brief": "preg-vax",
+   "find": "<h4>Vaccines &amp; Timing in Pregnancy</h4>",
+   "with": "<h4>Vaccines in Pregnancy</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Vaccines & Timing in Pregnancy -> Vaccines in Pregnancy"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-genital-ulcer",
+   "find": "<h4>Genital Ulcer: Painless or Painful</h4>",
+   "with": "<h4>Genital Ulcers</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Genital Ulcer: Painless or Painful -> Genital Ulcers"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<h4>Tick-Borne Fever and Rash</h4>",
+   "with": "<h4>Tick-Borne Illness</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Tick-Borne Fever and Rash -> Tick-Borne Illness"
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "<h4>Oral Vesicles in a Child</h4>",
+   "with": "<h4>Oral Lesions in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Oral Vesicles in a Child -> Oral Lesions in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<h4>Congenital CMV and the TORCH Discriminations</h4>",
+   "with": "<h4>Congenital Infections (TORCH)</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Congenital CMV and the TORCH Discriminations -> Congenital Infections (TORCH)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-exanthems",
+   "find": "<h4>Exanthems in a Child</h4>",
+   "with": "<h4>Fever and Rash in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Exanthems in a Child -> Fever and Rash in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "<h4>Anaphylaxis and Its Mimics</h4>",
+   "with": "<h4>Anaphylaxis</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Anaphylaxis and Its Mimics -> Anaphylaxis"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<h4>The Immunoglobulin Panel</h4>",
+   "with": "<h4>Antibody Deficiencies</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): The Immunoglobulin Panel -> Antibody Deficiencies"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<h4>Recurrent Abscesses and Granulomas</h4>",
+   "with": "<h4>Neutrophil Disorders: Number and Function</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Recurrent Abscesses and Granulomas -> Neutrophil Disorders: Number and Function"
+  },
+  {
+   "op": "replace",
+   "brief": "cluster",
+   "find": "<h4>Headache Types &amp; Cluster Headache</h4>",
+   "with": "<h4>Primary Headache in an Adult</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Headache Types & Cluster Headache -> Primary Headache in an Adult"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<h4>Headache in a Child: What Earns Imaging</h4>",
+   "with": "<h4>Headache in a Child: Imaging and Treatment</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Headache in a Child: What Earns Imaging -> Headache in a Child: Imaging and Treatment"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "<h4>Cerebral Palsy and the MRI Pattern</h4>",
+   "with": "<h4>Cerebral Palsy</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Cerebral Palsy and the MRI Pattern -> Cerebral Palsy"
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "<h4>VP Shunt Complications</h4>",
+   "with": "<h4>Hydrocephalus and Shunt Complications</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): VP Shunt Complications -> Hydrocephalus and Shunt Complications"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tethered",
+   "find": "<h4>Tethered Cord and Closed Spinal Dysraphism</h4>",
+   "with": "<h4>Spinal Dysraphism</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Tethered Cord and Closed Spinal Dysraphism -> Spinal Dysraphism"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-reye",
+   "find": "<h4>Cerebral Edema in a Child — Reye Syndrome</h4>",
+   "with": "<h4>Encephalopathy and Cerebral Edema in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Cerebral Edema in a Child — Reye Syndrome -> Encephalopathy and Cerebral Edema in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "<h4>Tics in a School-Age Child</h4>",
+   "with": "<h4>Tics and Tic Disorders</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Tics in a School-Age Child -> Tics and Tic Disorders"
+  },
+  {
+   "op": "replace",
+   "brief": "psoriasis",
+   "find": "<h4>Scaly Rash &amp; Psoriasis</h4>",
+   "with": "<h4>Scaly Rashes</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Scaly Rash & Psoriasis -> Scaly Rashes"
+  },
+  {
+   "op": "replace",
+   "brief": "cellulitis",
+   "find": "<h4>Cellulitis &amp; the Depth Ladder</h4>",
+   "with": "<h4>Skin and Soft Tissue Infection</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Cellulitis & the Depth Ladder -> Skin and Soft Tissue Infection"
+  },
+  {
+   "op": "replace",
+   "brief": "eczemaherp",
+   "find": "<h4>Atopic Dermatitis Complications</h4>",
+   "with": "<h4>Atopic Dermatitis</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Atopic Dermatitis Complications -> Atopic Dermatitis"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "<h4>Patchy Hair Loss in a Child</h4>",
+   "with": "<h4>Hair Loss in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Patchy Hair Loss in a Child -> Hair Loss in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "contraception",
+   "find": "<h4>Contraception &amp; DMPA</h4>",
+   "with": "<h4>Contraception</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Contraception & DMPA -> Contraception"
+  },
+  {
+   "op": "replace",
+   "brief": "smoking",
+   "find": "<h4>Ranking Preventive Interventions</h4>",
+   "with": "<h4>Preventive Care: Ranking Interventions</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Ranking Preventive Interventions -> Preventive Care: Ranking Interventions"
+  },
+  {
+   "op": "replace",
+   "brief": "preop",
+   "find": "<h4>Preoperative Thresholds</h4>",
+   "with": "<h4>Preoperative Evaluation</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Preoperative Thresholds -> Preoperative Evaluation"
+  },
+  {
+   "op": "replace",
+   "brief": "elder",
+   "find": "<h4>Elder Abuse &amp; Mandated Reporting</h4>",
+   "with": "<h4>Elder Abuse</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Elder Abuse & Mandated Reporting -> Elder Abuse"
+  },
+  {
+   "op": "replace",
+   "brief": "ipv",
+   "find": "<h4>Intimate Partner Violence in an Adult: Plan for Safety, Report by Who Is at Risk</h4>\n<p class=\"sub\">",
+   "with": "<h4>Intimate Partner Violence</h4>\n<p class=\"sub\">Plan for safety, report by who is at risk &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Intimate Partner Violence in an Adult: Plan for Safety, Report by Who Is at Risk -> Intimate Partner Violence"
+  },
+  {
+   "op": "replace",
+   "brief": "psychosis-duration",
+   "find": "<h4>Psychosis in an Adult: Rule Out a Cause, Then Time It</h4>\n<p class=\"sub\">",
+   "with": "<h4>Psychosis</h4>\n<p class=\"sub\">Rule out a cause, then time it &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Psychosis in an Adult: Rule Out a Cause, Then Time It -> Psychosis"
+  },
+  {
+   "op": "replace",
+   "brief": "bipolar-mania",
+   "find": "<h4>Bipolar Disorder: Rule Out a Cause, Time the Episode, Then Treat</h4>\n<p class=\"sub\">",
+   "with": "<h4>Bipolar Disorder</h4>\n<p class=\"sub\">Rule out a cause, time the episode, then treat &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Bipolar Disorder: Rule Out a Cause, Time the Episode, Then Treat -> Bipolar Disorder"
+  },
+  {
+   "op": "replace",
+   "brief": "sz-psychosocial",
+   "find": "<h4>Schizophrenia on Treatment: Psychosocial Care and Relapse Prevention</h4>\n<p class=\"sub\">",
+   "with": "<h4>Schizophrenia: Long-Term Care</h4>\n<p class=\"sub\">Psychosocial care and relapse prevention &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Schizophrenia on Treatment: Psychosocial Care and Relapse Prevention -> Schizophrenia: Long-Term Care"
+  },
+  {
+   "op": "replace",
+   "brief": "delirium",
+   "find": "<h4>Delirium: Tell It From Dementia and Psychosis, Then Find the Cause</h4>\n<p class=\"sub\">",
+   "with": "<h4>Delirium</h4>\n<p class=\"sub\">Tell it from dementia and psychosis, then find the cause &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Delirium: Tell It From Dementia and Psychosis, Then Find the Cause -> Delirium"
+  },
+  {
+   "op": "replace",
+   "brief": "panic",
+   "find": "<h4>Panic Disorder and Its Mimics: Which Anxiety, and How to Treat</h4>\n<p class=\"sub\">",
+   "with": "<h4>Panic Disorder and Other Anxiety</h4>\n<p class=\"sub\">Which anxiety, and how to treat &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Panic Disorder and Its Mimics: Which Anxiety, and How to Treat -> Panic Disorder and Other Anxiety"
+  },
+  {
+   "op": "replace",
+   "brief": "ssri-effects",
+   "find": "<h4>SSRI (Selective Serotonin Reuptake Inhibitor) Adverse Effects: Name the Effect, Then Take the Next Step</h4>\n<p class=\"sub\">",
+   "with": "<h4>SSRI Adverse Effects</h4>\n<p class=\"sub\">Name the effect, then take the next step &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): SSRI (Selective Serotonin Reuptake Inhibitor) Adverse Effects: Name the Effect, Then Take the Next Step -> SSRI Adverse Effects"
+  },
+  {
+   "op": "replace",
+   "brief": "lithium-effects",
+   "find": "<h4>The Patient on Lithium: Which Complication, and What to Do</h4>\n<p class=\"sub\">",
+   "with": "<h4>Lithium Therapy</h4>\n<p class=\"sub\">Which complication, and what to do &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): The Patient on Lithium: Which Complication, and What to Do -> Lithium Therapy"
+  },
+  {
+   "op": "replace",
+   "brief": "gppd",
+   "find": "<h4>Genito-Pelvic Pain/Penetration Disorder (Vaginismus): Exclude a Body Cause, Then Treat</h4>\n<p class=\"sub\">",
+   "with": "<h4>Genito-Pelvic Pain/Penetration Disorder</h4>\n<p class=\"sub\">Vaginismus &middot; exclude a body cause, then treat &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Genito-Pelvic Pain/Penetration Disorder (Vaginismus): Exclude a Body Cause, Then Treat -> Genito-Pelvic Pain/Penetration Disorder"
+  },
+  {
+   "op": "replace",
+   "brief": "septic-hip",
+   "find": "<h4>Septic Arthritis in a Child: Aspirate, or Treat and Recheck?</h4>\n<p class=\"sub\">",
+   "with": "<h4>Septic Arthritis and Transient Synovitis in a Child</h4>\n<p class=\"sub\">Aspirate, or treat and recheck? &middot; ",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Septic Arthritis in a Child: Aspirate, or Treat and Recheck? -> Septic Arthritis and Transient Synovitis in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "<h4>Bilateral Leg Pain in a Child: Is the Examination Normal?</h4>",
+   "with": "<h4>Leg Pain in a Child</h4>",
+   "note": "retitle (Jonathan 2026-10-03: generalized titles): Bilateral Leg Pain in a Child: Is the Examination Normal? -> Leg Pain in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "<i>Foot Puncture Infection: Name the Organism from the Exposure and the Clock</i>",
+   "with": "<i>Foot Puncture Wounds and Osteomyelitis</i>",
+   "note": "title reference follows retitle of Foot Puncture Infection: Name the Organism from the Exposure and the Clock"
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "<i>Infant Head Tilt and Flat Head: Which Way Does the Ear Point?</i>",
+   "with": "<i>Torticollis and Plagiocephaly in an Infant</i>",
+   "note": "title reference follows retitle of Infant Head Tilt and Flat Head: Which Way Does the Ear Point?"
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "<i>Suspected Child Abuse: Fractures and the Next Step</i>",
+   "with": "<i>Suspected Child Abuse</i>",
+   "note": "title reference follows retitle of Suspected Child Abuse: Fractures and the Next Step"
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "<i>Bilateral Leg Pain in a Child: Is the Examination Normal?</i>",
+   "with": "<i>Leg Pain in a Child</i>",
+   "note": "title reference follows retitle of Bilateral Leg Pain in a Child: Is the Examination Normal?"
+  },
+  {
+   "op": "replace",
+   "brief": "sjia",
+   "find": "<i>Pediatric Acute Lymphoblastic Leukemia</i>",
+   "with": "<i>Acute Leukemia in a Child</i>",
+   "note": "title reference follows retitle of Pediatric Acute Lymphoblastic Leukemia"
+  },
+  {
+   "op": "replace",
+   "brief": "nursemaid",
+   "find": "<i>Suspected Child Abuse: Fractures and the Next Step</i>",
+   "with": "<i>Suspected Child Abuse</i>",
+   "note": "title reference follows retitle of Suspected Child Abuse: Fractures and the Next Step"
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "<i>Bone Lesion in a Child: Where It Sits and What It Does Next</i>",
+   "with": "<i>Bone Lesions in a Child</i>",
+   "note": "title reference follows retitle of Bone Lesion in a Child: Where It Sits and What It Does Next"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "<i>The Limping Child: Sick or Well, Then Age and Time</i>",
+   "with": "<i>The Limping Child</i>",
+   "note": "title reference follows retitle of The Limping Child: Sick or Well, Then Age and Time"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "<i>Slipped Capital Femoral Epiphysis: Keep Off It and Pin It</i>",
+   "with": "<i>Slipped Capital Femoral Epiphysis</i>",
+   "note": "title reference follows retitle of Slipped Capital Femoral Epiphysis: Keep Off It and Pin It"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "<i>Hemoglobinuria: the Dipstick-Microscopy Mismatch</i>",
+   "with": "<i>Dark Urine: Hemoglobin, Myoglobin or Blood</i>",
+   "note": "title reference follows retitle of Hemoglobinuria: the Dipstick-Microscopy Mismatch"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "<i>Pediatric Acute Lymphoblastic Leukemia</i>",
+   "with": "<i>Acute Leukemia in a Child</i>",
+   "note": "title reference follows retitle of Pediatric Acute Lymphoblastic Leukemia"
+  },
+  {
+   "op": "replace",
+   "brief": "bone-tumors",
+   "find": "<i>The Limping Child: Sick or Well, Then Age and Time</i>",
+   "with": "<i>The Limping Child</i>",
+   "note": "title reference follows retitle of The Limping Child: Sick or Well, Then Age and Time"
+  },
+  {
+   "op": "replace",
+   "brief": "bone-tumors",
+   "find": "<i>Myositis Ossificans: Did the Pain Resolve and Come Back?</i>",
+   "with": "<i>Muscle Contusion and Myositis Ossificans</i>",
+   "note": "title reference follows retitle of Myositis Ossificans: Did the Pain Resolve and Come Back?"
+  },
+  {
+   "op": "replace",
+   "brief": "bone-tumors",
+   "find": "<i>Pediatric Acute Lymphoblastic Leukemia</i>",
+   "with": "<i>Acute Leukemia in a Child</i>",
+   "note": "title reference follows retitle of Pediatric Acute Lymphoblastic Leukemia"
+  },
+  {
+   "op": "replace",
+   "brief": "bone-tumors",
+   "find": "<i>Bilateral Leg Pain in a Child: Is the Examination Normal?</i>",
+   "with": "<i>Leg Pain in a Child</i>",
+   "note": "title reference follows retitle of Bilateral Leg Pain in a Child: Is the Examination Normal?"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-septic-adult",
+   "find": "<b>Septic Arthritis in a Child: Aspirate, or Treat and Recheck?</b>",
+   "with": "<b>Septic Arthritis and Transient Synovitis in a Child</b>",
+   "note": "title reference follows retitle of Septic Arthritis in a Child: Aspirate, or Treat and Recheck?"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-lbp-acute",
+   "find": "<b>Low Back Pain Red Flags</b>",
+   "with": "<b>Low Back Pain in an Adult</b>",
+   "note": "title reference follows retitle of Low Back Pain: Red Flags"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puncture-osteomyelitis",
+   "find": "<i>The Limping Child: Sick or Well, Then Age and Time</i>",
+   "with": "<i>The Limping Child</i>",
+   "note": "title reference follows retitle of The Limping Child: Sick or Well, Then Age and Time"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puncture-osteomyelitis",
+   "find": "<i>Septic Arthritis in a Child: Aspirate, or Treat and Recheck?</i>",
+   "with": "<i>Septic Arthritis and Transient Synovitis in a Child</i>",
+   "note": "title reference follows retitle of Septic Arthritis in a Child: Aspirate, or Treat and Recheck?"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torticollis",
+   "find": "<i>Posterior Urethral Valves and Potter Sequence</i>",
+   "with": "<i>Posterior Urethral Valves</i>",
+   "note": "title reference follows retitle of Posterior Urethral Valves and Potter Sequence"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-brachial-plexus",
+   "find": "<b>Child Won't Use the Arm: Reduce or Image?</b>",
+   "with": "<b>Arm Injury in a Young Child</b>",
+   "note": "title reference follows retitle of Child Won't Use the Arm: Reduce or Image?"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-brachial-plexus",
+   "find": "<b>Infant Head Tilt and Flat Head: Which Way Does the Ear Point?</b>",
+   "with": "<b>Torticollis and Plagiocephaly in an Infant</b>",
+   "note": "title reference follows retitle of Infant Head Tilt and Flat Head: Which Way Does the Ear Point?"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-maternal-labs",
+   "find": "<b>Posterior Urethral Valves and Potter Sequence</b>",
+   "with": "<b>Posterior Urethral Valves</b>",
+   "note": "title reference follows retitle of Posterior Urethral Valves and Potter Sequence"
+  },
+  {
+   "op": "replace",
+   "brief": "aneuploidy",
+   "find": "<b>Angelman Syndrome and Its Genetic Look-Alikes</b>",
+   "with": "<b>Imprinting Disorders: Angelman and Prader-Willi</b>",
+   "note": "title reference follows retitle of Angelman Syndrome and Its Genetic Look-Alikes"
+  },
+  {
+   "op": "replace",
+   "brief": "malform-syndromes",
+   "find": "<b>Tracheoesophageal Fistula with Esophageal Atresia</b>",
+   "with": "<b>Tracheoesophageal Fistula and Esophageal Atresia</b>",
+   "note": "title reference follows retitle of Tracheoesophageal Fistula with Esophageal Atresia"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nat-fracture",
+   "find": "<b>Bone Lesion in a Child: Where It Sits and What It Does Next</b>",
+   "with": "<b>Bone Lesions in a Child</b>",
+   "note": "title reference follows retitle of Bone Lesion in a Child: Where It Sits and What It Does Next"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-infant-feeding",
+   "find": "<b>Growth &amp; Developmental Milestones</b>",
+   "with": "<b>Developmental Milestones and Normal Growth</b>",
+   "note": "title reference follows retitle of Growth & Developmental Milestones"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-infant-feeding",
+   "find": "<b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b>",
+   "with": "<b>Stool Changes in a Well Infant</b>",
+   "note": "title reference follows retitle of Infant Stool Complaints: Dyschezia, FPIAP & Secondary Lactase Deficiency"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tanner",
+   "find": "<b>Growth &amp; Developmental Milestones</b>",
+   "with": "<b>Developmental Milestones and Normal Growth</b>",
+   "note": "title reference follows retitle of Growth & Developmental Milestones"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-ftt",
+   "find": "<b>Prematurity Follow-Up and Corrected Age</b>",
+   "with": "<b>Follow-Up of the Preterm Infant</b>",
+   "note": "title reference follows retitle of Prematurity Follow-Up and Corrected Age"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-ftt",
+   "find": "<b>Hypokalemia with Acidosis in a Child</b>",
+   "with": "<b>Hypokalemia and Acid-Base Disorders in a Child</b>",
+   "note": "title reference follows retitle of Hypokalemia with Acidosis in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-preterm-followup",
+   "find": "<b>Cerebral Palsy and the MRI Pattern</b>",
+   "with": "<b>Cerebral Palsy</b>",
+   "note": "title reference follows retitle of Cerebral Palsy and the MRI Pattern"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "<b>Growth &amp; Developmental Milestones</b>",
+   "with": "<b>Developmental Milestones and Normal Growth</b>",
+   "note": "title reference follows retitle of Growth & Developmental Milestones"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "<b>Cerebral Palsy and the MRI Pattern</b>",
+   "with": "<b>Cerebral Palsy</b>",
+   "note": "title reference follows retitle of Cerebral Palsy and the MRI Pattern"
+  },
+  {
+   "op": "replace",
+   "brief": "secondary-htn",
+   "find": "<b>Hypertension: Workup &amp; Drug Choice</b>",
+   "with": "<b>Hypertension in an Adult</b>",
+   "note": "title reference follows retitle of Hypertension: Workup & Drug Choice"
+  },
+  {
+   "op": "replace",
+   "brief": "secondary-htn",
+   "find": "<b>Hypokalemia with Acidosis in a Child</b>",
+   "with": "<b>Hypokalemia and Acid-Base Disorders in a Child</b>",
+   "note": "title reference follows retitle of Hypokalemia with Acidosis in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "cyanotic-chd",
+   "find": "<b>Innocent vs Pathologic Murmurs</b>",
+   "with": "<b>Heart Murmurs in a Child</b>",
+   "note": "title reference follows retitle of Innocent vs Pathologic Murmurs"
+  },
+  {
+   "op": "replace",
+   "brief": "right-murmurs",
+   "find": "<b>Innocent vs Pathologic Murmurs</b>",
+   "with": "<b>Heart Murmurs in a Child</b>",
+   "note": "title reference follows retitle of Innocent vs Pathologic Murmurs"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "<b>Tracheoesophageal Fistula with Esophageal Atresia</b>",
+   "with": "<b>Tracheoesophageal Fistula and Esophageal Atresia</b>",
+   "note": "title reference follows retitle of Tracheoesophageal Fistula with Esophageal Atresia"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<b>New Heart Failure in a Child</b>",
+   "with": "<b>Heart Failure in a Child</b>",
+   "note": "title reference follows retitle of New Heart Failure in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "del22q11",
+   "find": "<b>The Immunoglobulin Panel</b>",
+   "with": "<b>Antibody Deficiencies</b>",
+   "note": "title reference follows retitle of The Immunoglobulin Panel"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "<b>Hypertension: Workup &amp; Drug Choice</b>",
+   "with": "<b>Hypertension in an Adult</b>",
+   "note": "title reference follows retitle of Hypertension: Workup & Drug Choice"
+  },
+  {
+   "op": "replace",
+   "brief": "sinopulm-structural",
+   "find": "<b>The Immunoglobulin Panel</b>",
+   "with": "<b>Antibody Deficiencies</b>",
+   "note": "title reference follows retitle of The Immunoglobulin Panel"
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "<b>Asthma: Severity Classification</b>",
+   "with": "<b>Asthma</b>",
+   "note": "title reference follows retitle of Asthma: Severity Classification"
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "<b>Sickle Cell Trait versus Disease</b>",
+   "with": "<b>Sickle Cell Disease and Trait</b>",
+   "note": "title reference follows retitle of Sickle Cell Trait versus Disease"
+  },
+  {
+   "op": "replace",
+   "brief": "airway",
+   "find": "<b>Peritonsillar Abscess and the Deep Neck Spaces</b>",
+   "with": "<b>Deep Neck Infections</b>",
+   "note": "title reference follows retitle of Peritonsillar Abscess and the Deep Neck Spaces"
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "<b>Prematurity Follow-Up and Corrected Age</b>",
+   "with": "<b>Follow-Up of the Preterm Infant</b>",
+   "note": "title reference follows retitle of Prematurity Follow-Up and Corrected Age"
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "<b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b>",
+   "with": "<b>Stool Changes in a Well Infant</b>",
+   "note": "title reference follows retitle of Infant Stool Complaints: Dyschezia, FPIAP & Secondary Lactase Deficiency"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nrd",
+   "find": "<b>Mechanisms of Hypoxemia</b>",
+   "with": "<b>Hypoxemia</b>",
+   "note": "title reference follows retitle of Mechanisms of Hypoxemia"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nrd",
+   "find": "<b>Posterior Urethral Valves and Potter Sequence</b>",
+   "with": "<b>Posterior Urethral Valves</b>",
+   "note": "title reference follows retitle of Posterior Urethral Valves and Potter Sequence"
+  },
+  {
+   "op": "replace",
+   "brief": "masld",
+   "find": "<b>Wilson Disease: Copper in the Liver, Brain and Eye</b>",
+   "with": "<b>Wilson Disease</b>",
+   "note": "title reference follows retitle of Wilson Disease: Copper in the Liver, Brain and Eye"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<b>Foodborne Diarrhea: Source and Organism</b>",
+   "with": "<b>Infectious Diarrhea</b>",
+   "note": "title reference follows retitle of Foodborne Diarrhea: Source and Organism"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<b>NSAID Prerenal AKI in a Child</b>",
+   "with": "<b>Acute Kidney Injury in a Child</b>",
+   "note": "title reference follows retitle of NSAID Prerenal AKI in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "<b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b>",
+   "with": "<b>Stool Changes in a Well Infant</b>",
+   "note": "title reference follows retitle of Infant Stool Complaints: Dyschezia, FPIAP & Secondary Lactase Deficiency"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "<b>Fecal Impaction &amp; Overflow Diarrhea</b>",
+   "with": "<b>Constipation and Fecal Impaction in an Adult</b>",
+   "note": "title reference follows retitle of Fecal Impaction & Overflow Diarrhea"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "<b>Tethered Cord and Closed Spinal Dysraphism</b>",
+   "with": "<b>Spinal Dysraphism</b>",
+   "note": "title reference follows retitle of Tethered Cord and Closed Spinal Dysraphism"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "<b>Headache in a Child: What Earns Imaging</b>",
+   "with": "<b>Headache in a Child: Imaging and Treatment</b>",
+   "note": "title reference follows retitle of Headache in a Child: What Earns Imaging"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "<b>Cholestasis &amp; the LFT Patterns</b>",
+   "with": "<b>Abnormal Liver Tests</b>",
+   "note": "title reference follows retitle of Cholestasis & the LFT Patterns"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b>",
+   "with": "<b>Stool Changes in a Well Infant</b>",
+   "note": "title reference follows retitle of Infant Stool Complaints: Dyschezia, FPIAP & Secondary Lactase Deficiency"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<b>Tracheoesophageal Fistula with Esophageal Atresia</b>",
+   "with": "<b>Tracheoesophageal Fistula and Esophageal Atresia</b>",
+   "note": "title reference follows retitle of Tracheoesophageal Fistula with Esophageal Atresia"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<b>Microcytic Anemia: Iron First</b>",
+   "with": "<b>Microcytic Anemia</b>",
+   "note": "title reference follows retitle of Microcytic Anemia: Iron First"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-galactosemia",
+   "find": "<b>Cholestasis &amp; the LFT Patterns</b>",
+   "with": "<b>Abnormal Liver Tests</b>",
+   "note": "title reference follows retitle of Cholestasis & the LFT Patterns"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "<b>Posterior Urethral Valves and Potter Sequence</b>",
+   "with": "<b>Posterior Urethral Valves</b>",
+   "note": "title reference follows retitle of Posterior Urethral Valves and Potter Sequence"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "<b>Tracheoesophageal Fistula with Esophageal Atresia</b>",
+   "with": "<b>Tracheoesophageal Fistula and Esophageal Atresia</b>",
+   "note": "title reference follows retitle of Tracheoesophageal Fistula with Esophageal Atresia"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "<b>Hypercalcemia Workup</b>",
+   "with": "<b>Hypercalcemia</b>",
+   "note": "title reference follows retitle of Hypercalcemia Workup"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "<b>Hemophilia A Inhibitor</b>",
+   "with": "<b>Hemophilia</b>",
+   "note": "title reference follows retitle of Hemophilia A Inhibitor"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "<b>Exanthems in a Child</b>",
+   "with": "<b>Fever and Rash in a Child</b>",
+   "note": "title reference follows retitle of Exanthems in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fat-soluble-vitamins",
+   "find": "<b>Headache in a Child: What Earns Imaging</b>",
+   "with": "<b>Headache in a Child: Imaging and Treatment</b>",
+   "note": "title reference follows retitle of Headache in a Child: What Earns Imaging"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-water-soluble-vitamins",
+   "find": "<b>Marfanoid Habitus: Marfan or Homocystinuria?</b>",
+   "with": "<b>Tall Stature and Marfanoid Habitus</b>",
+   "note": "title reference follows retitle of Marfanoid Habitus: Marfan or Homocystinuria?"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "<b>MASLD / Metabolic Fatty Liver</b>",
+   "with": "<b>Fatty Liver Disease</b>",
+   "note": "title reference follows retitle of MASLD / Metabolic Fatty Liver"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "<b>Cholestasis &amp; the LFT Patterns</b>",
+   "with": "<b>Abnormal Liver Tests</b>",
+   "note": "title reference follows retitle of Cholestasis & the LFT Patterns"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "<b>Tick-Borne Fever and Rash</b>",
+   "with": "<b>Tick-Borne Illness</b>",
+   "note": "title reference follows retitle of Tick-Borne Fever and Rash"
+  },
+  {
+   "op": "replace",
+   "brief": "pyelo",
+   "find": "<b>Recurrent Urinary Infection in a Child</b>",
+   "with": "<b>Urinary Tract Infection in a Child</b>",
+   "note": "title reference follows retitle of Recurrent Urinary Infection in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "hypercalcemia",
+   "find": "<b>Polyuria: Water or Solute</b>",
+   "with": "<b>Polyuria</b>",
+   "note": "title reference follows retitle of Polyuria: Water or Solute"
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "i> Part I <b>Recurrent Urinary Infection in a Child</b> covers em",
+   "with": "i> Part I <b>Urinary Tract Infection in a Child</b> covers em",
+   "note": "title reference follows retitle of Recurrent Urinary Infection in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "<b>Recurrent Urinary Infection in a Child</b>",
+   "with": "<b>Urinary Tract Infection in a Child</b>",
+   "note": "title reference follows retitle of Recurrent Urinary Infection in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "vur",
+   "find": "<b>Posterior Urethral Valves and Potter Sequence</b>",
+   "with": "<b>Posterior Urethral Valves</b>",
+   "note": "title reference follows retitle of Posterior Urethral Valves and Potter Sequence"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "<b>Pyelonephritis: Route &amp; Disposition</b>",
+   "with": "<b>Pyelonephritis</b>",
+   "note": "title reference follows retitle of Pyelonephritis: Route & Disposition"
+  },
+  {
+   "op": "replace",
+   "brief": "enuresis",
+   "find": "<b>Polyuria: Water or Solute</b>",
+   "with": "<b>Polyuria</b>",
+   "note": "title reference follows retitle of Polyuria: Water or Solute"
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "<b>Nocturnal Enuresis</b>",
+   "with": "<b>Enuresis</b>",
+   "note": "title reference follows retitle of Nocturnal Enuresis"
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "<b>Hypercalcemia Workup</b>",
+   "with": "<b>Hypercalcemia</b>",
+   "note": "title reference follows retitle of Hypercalcemia Workup"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "<b>Tracheoesophageal Fistula with Esophageal Atresia</b>",
+   "with": "<b>Tracheoesophageal Fistula and Esophageal Atresia</b>",
+   "note": "title reference follows retitle of Tracheoesophageal Fistula with Esophageal Atresia"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "<b>Tethered Cord and Closed Spinal Dysraphism</b>",
+   "with": "<b>Spinal Dysraphism</b>",
+   "note": "title reference follows retitle of Tethered Cord and Closed Spinal Dysraphism"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-enuresis",
+   "find": "<b>Nocturnal Enuresis</b>",
+   "with": "<b>Enuresis</b>",
+   "note": "title reference follows retitle of Nocturnal Enuresis"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nephritic",
+   "find": "<b>NSAID Prerenal AKI in a Child</b>",
+   "with": "<b>Acute Kidney Injury in a Child</b>",
+   "note": "title reference follows retitle of NSAID Prerenal AKI in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "<b>Posterior Urethral Valves and Potter Sequence</b>",
+   "with": "<b>Posterior Urethral Valves</b>",
+   "note": "title reference follows retitle of Posterior Urethral Valves and Potter Sequence"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "<b>Pediatric Acute Lymphoblastic Leukemia</b>",
+   "with": "<b>Acute Leukemia in a Child</b>",
+   "note": "title reference follows retitle of Pediatric Acute Lymphoblastic Leukemia"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-distal-rta",
+   "find": "<b>Polyuria: Water or Solute</b>",
+   "with": "<b>Polyuria</b>",
+   "note": "title reference follows retitle of Polyuria: Water or Solute"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-distal-rta",
+   "find": "<b>Hypercalcemia Workup</b>",
+   "with": "<b>Hypercalcemia</b>",
+   "note": "title reference follows retitle of Hypercalcemia Workup"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-puffy-eyes",
+   "find": "<b>Sinusitis with Intracranial Extension</b>",
+   "with": "<b>Sinusitis and Its Complications</b>",
+   "note": "title reference follows retitle of Sinusitis with Intracranial Extension"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-puffy-eyes",
+   "find": "<b>Anaphylaxis and Its Mimics</b>",
+   "with": "<b>Anaphylaxis</b>",
+   "note": "title reference follows retitle of Anaphylaxis and Its Mimics"
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "<b>Thyroid Mimics &amp; Discriminators</b>",
+   "with": "<b>Thyroid Disease in an Adult</b>",
+   "note": "title reference follows retitle of Thyroid Mimics & Discriminators"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<b>The Immunoglobulin Panel</b>",
+   "with": "<b>Antibody Deficiencies</b>",
+   "note": "title reference follows retitle of The Immunoglobulin Panel"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-short-stature",
+   "find": "<b>Thyroid Mimics &amp; Discriminators</b>",
+   "with": "<b>Thyroid Disease in an Adult</b>",
+   "note": "title reference follows retitle of Thyroid Mimics & Discriminators"
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "<b>NSAID Prerenal AKI in a Child</b>",
+   "with": "<b>Acute Kidney Injury in a Child</b>",
+   "note": "title reference follows retitle of NSAID Prerenal AKI in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "<b>Sickle Cell Trait versus Disease</b>",
+   "with": "<b>Sickle Cell Disease and Trait</b>",
+   "note": "title reference follows retitle of Sickle Cell Trait versus Disease"
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "<b>The Immunoglobulin Panel</b>",
+   "with": "<b>Antibody Deficiencies</b>",
+   "note": "title reference follows retitle of The Immunoglobulin Panel"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "<b>The Limping Child: Sick or Well, Then Age and Time</b>",
+   "with": "<b>The Limping Child</b>",
+   "note": "title reference follows retitle of The Limping Child: Sick or Well, Then Age and Time"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "<b>Juvenile Idiopathic Arthritis: Count the Joints, Chart the Fever</b>",
+   "with": "<b>Juvenile Idiopathic Arthritis</b>",
+   "note": "title reference follows retitle of Juvenile Idiopathic Arthritis: Count the Joints, Chart the Fever"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "<b>Hemophilia A Inhibitor</b>",
+   "with": "<b>Hemophilia</b>",
+   "note": "title reference follows retitle of Hemophilia A Inhibitor"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "<b>Bilateral Leg Pain in a Child: Is the Examination Normal?</b>",
+   "with": "<b>Leg Pain in a Child</b>",
+   "note": "title reference follows retitle of Bilateral Leg Pain in a Child: Is the Examination Normal?"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-bruising",
+   "find": "<b>Suspected Child Abuse: Fractures and the Next Step</b>",
+   "with": "<b>Suspected Child Abuse</b>",
+   "note": "title reference follows retitle of Suspected Child Abuse: Fractures and the Next Step"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-bruising",
+   "find": "<b>Pediatric Acute Lymphoblastic Leukemia</b>",
+   "with": "<b>Acute Leukemia in a Child</b>",
+   "note": "title reference follows retitle of Pediatric Acute Lymphoblastic Leukemia"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<b>Foodborne Diarrhea: Source and Organism</b>",
+   "with": "<b>Infectious Diarrhea</b>",
+   "note": "title reference follows retitle of Foodborne Diarrhea: Source and Organism"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<b>Recurrent Abscesses and Granulomas</b>",
+   "with": "<b>Neutrophil Disorders: Number and Function</b>",
+   "note": "title reference follows retitle of Recurrent Abscesses and Granulomas"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<b>Exanthems in a Child</b>",
+   "with": "<b>Fever and Rash in a Child</b>",
+   "note": "title reference follows retitle of Exanthems in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<b>Cellulitis &amp; the Depth Ladder</b>",
+   "with": "<b>Skin and Soft Tissue Infection</b>",
+   "note": "title reference follows retitle of Cellulitis & the Depth Ladder"
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "<b>Exanthems in a Child</b>",
+   "with": "<b>Fever and Rash in a Child</b>",
+   "note": "title reference follows retitle of Exanthems in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<b>The Immunoglobulin Panel</b>",
+   "with": "<b>Antibody Deficiencies</b>",
+   "note": "title reference follows retitle of The Immunoglobulin Panel"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<b>Cerebral Palsy and the MRI Pattern</b>",
+   "with": "<b>Cerebral Palsy</b>",
+   "note": "title reference follows retitle of Cerebral Palsy and the MRI Pattern"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fever-rash-arthralgia",
+   "find": "<b>Genital Ulcer: Painless or Painful</b>",
+   "with": "<b>Genital Ulcers</b>",
+   "note": "title reference follows retitle of Genital Ulcer: Painless or Painful"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fever-rash-arthralgia",
+   "find": "<b>Tick-Borne Fever and Rash</b>",
+   "with": "<b>Tick-Borne Illness</b>",
+   "note": "title reference follows retitle of Tick-Borne Fever and Rash"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fever-rash-arthralgia",
+   "find": "<b>Exanthems in a Child</b>",
+   "with": "<b>Fever and Rash in a Child</b>",
+   "note": "title reference follows retitle of Exanthems in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fever-rash-arthralgia",
+   "find": "<b>Anaphylaxis and Its Mimics</b>",
+   "with": "<b>Anaphylaxis</b>",
+   "note": "title reference follows retitle of Anaphylaxis and Its Mimics"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-exanthems",
+   "find": "<b>Vaccines &amp; Timing in Pregnancy</b>",
+   "with": "<b>Vaccines in Pregnancy</b>",
+   "note": "title reference follows retitle of Vaccines & Timing in Pregnancy"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-exanthems",
+   "find": "<b>Oral Vesicles in a Child</b>",
+   "with": "<b>Oral Lesions in a Child</b>",
+   "note": "title reference follows retitle of Oral Vesicles in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-exanthems",
+   "find": "<b>Congenital CMV and the TORCH Discriminations</b>",
+   "with": "<b>Congenital Infections (TORCH)</b>",
+   "note": "title reference follows retitle of Congenital CMV and the TORCH Discriminations"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-exanthems",
+   "find": "<b>Atopic Dermatitis Complications</b>",
+   "with": "<b>Atopic Dermatitis</b>",
+   "note": "title reference follows retitle of Atopic Dermatitis Complications"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "<b>Infant Stool Complaints: Dyschezia, FPIAP &amp; Secondary Lactase Deficiency</b>",
+   "with": "<b>Stool Changes in a Well Infant</b>",
+   "note": "title reference follows retitle of Infant Stool Complaints: Dyschezia, FPIAP & Secondary Lactase Deficiency"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-isolation",
+   "find": "<b>Exanthems in a Child</b>",
+   "with": "<b>Fever and Rash in a Child</b>",
+   "note": "title reference follows retitle of Exanthems in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "<b>Sickle Cell Trait versus Disease</b>",
+   "with": "<b>Sickle Cell Disease and Trait</b>",
+   "note": "title reference follows retitle of Sickle Cell Trait versus Disease"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "<b>The Immunoglobulin Panel</b>",
+   "with": "<b>Antibody Deficiencies</b>",
+   "note": "title reference follows retitle of The Immunoglobulin Panel"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-fever",
+   "find": "<b>Recurrent Urinary Infection in a Child</b>",
+   "with": "<b>Urinary Tract Infection in a Child</b>",
+   "note": "title reference follows retitle of Recurrent Urinary Infection in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-fever",
+   "find": "<b>Exanthems in a Child</b>",
+   "with": "<b>Fever and Rash in a Child</b>",
+   "note": "title reference follows retitle of Exanthems in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "cluster",
+   "find": "<b>Headache in a Child: What Earns Imaging</b>",
+   "with": "<b>Headache in a Child: Imaging and Treatment</b>",
+   "note": "title reference follows retitle of Headache in a Child: What Earns Imaging"
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "<b>Polyuria: Water or Solute</b>",
+   "with": "<b>Polyuria</b>",
+   "note": "title reference follows retitle of Polyuria: Water or Solute"
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "<b>Headache in a Child: What Earns Imaging</b>",
+   "with": "<b>Headache in a Child: Imaging and Treatment</b>",
+   "note": "title reference follows retitle of Headache in a Child: What Earns Imaging"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<b>Low Back Pain: Red Flags</b>",
+   "with": "<b>Low Back Pain in an Adult</b>",
+   "note": "title reference follows retitle of Low Back Pain: Red Flags"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<b>Headache Types &amp; Cluster Headache</b>",
+   "with": "<b>Primary Headache in an Adult</b>",
+   "note": "title reference follows retitle of Headache Types & Cluster Headache"
+  },
+  {
+   "op": "replace",
+   "brief": "cholesteatoma",
+   "find": "<b>Sinusitis with Intracranial Extension</b>",
+   "with": "<b>Sinusitis and Its Complications</b>",
+   "note": "title reference follows retitle of Sinusitis with Intracranial Extension"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "<b>Growth &amp; Developmental Milestones</b>",
+   "with": "<b>Developmental Milestones and Normal Growth</b>",
+   "note": "title reference follows retitle of Growth & Developmental Milestones"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "<b>Prematurity Follow-Up and Corrected Age</b>",
+   "with": "<b>Follow-Up of the Preterm Infant</b>",
+   "note": "title reference follows retitle of Prematurity Follow-Up and Corrected Age"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "<b>Angelman Syndrome and Its Genetic Look-Alikes</b>",
+   "with": "<b>Imprinting Disorders: Angelman and Prader-Willi</b>",
+   "note": "title reference follows retitle of Angelman Syndrome and Its Genetic Look-Alikes"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "<b>Congenital CMV and the TORCH Discriminations</b>",
+   "with": "<b>Congenital Infections (TORCH)</b>",
+   "note": "title reference follows retitle of Congenital CMV and the TORCH Discriminations"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "<b>Tethered Cord and Closed Spinal Dysraphism</b>",
+   "with": "<b>Spinal Dysraphism</b>",
+   "note": "title reference follows retitle of Tethered Cord and Closed Spinal Dysraphism"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "<b>Tics in a School-Age Child</b>",
+   "with": "<b>Tics and Tic Disorders</b>",
+   "note": "title reference follows retitle of Tics in a School-Age Child"
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "<b>Infant Head Tilt and Flat Head: Which Way Does the Ear Point?</b>",
+   "with": "<b>Torticollis and Plagiocephaly in an Infant</b>",
+   "note": "title reference follows retitle of Infant Head Tilt and Flat Head: Which Way Does the Ear Point?"
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "<b>Specific Learning Disorder</b>",
+   "with": "<b>School Difficulty in a Child</b>",
+   "note": "title reference follows retitle of Specific Learning Disorder"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tethered",
+   "find": "<b>Nocturnal Enuresis</b>",
+   "with": "<b>Enuresis</b>",
+   "note": "title reference follows retitle of Nocturnal Enuresis"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-peds-stroke",
+   "find": "<b>Sickle Cell Trait versus Disease</b>",
+   "with": "<b>Sickle Cell Disease and Trait</b>",
+   "note": "title reference follows retitle of Sickle Cell Trait versus Disease"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-peds-stroke",
+   "find": "<b>Marfanoid Habitus: Marfan or Homocystinuria?</b>",
+   "with": "<b>Tall Stature and Marfanoid Habitus</b>",
+   "note": "title reference follows retitle of Marfanoid Habitus: Marfan or Homocystinuria?"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "<b>Cerebral Palsy and the MRI Pattern</b>",
+   "with": "<b>Cerebral Palsy</b>",
+   "note": "title reference follows retitle of Cerebral Palsy and the MRI Pattern"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-eyelid-lump",
+   "find": "<b>Sinusitis with Intracranial Extension</b>",
+   "with": "<b>Sinusitis and Its Complications</b>",
+   "note": "title reference follows retitle of Sinusitis with Intracranial Extension"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-posterior-fossa",
+   "find": "<b>Infant Head Tilt and Flat Head: Which Way Does the Ear Point?</b>",
+   "with": "<b>Torticollis and Plagiocephaly in an Infant</b>",
+   "note": "title reference follows retitle of Infant Head Tilt and Flat Head: Which Way Does the Ear Point?"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-child-headache",
+   "find": "<b>Headache Types &amp; Cluster Headache</b>",
+   "with": "<b>Primary Headache in an Adult</b>",
+   "note": "title reference follows retitle of Headache Types & Cluster Headache"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-child-headache",
+   "find": "<b>Headache in a Child: What Earns Imaging</b>",
+   "with": "<b>Headache in a Child: Imaging and Treatment</b>",
+   "note": "title reference follows retitle of Headache in a Child: What Earns Imaging"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-child-headache",
+   "find": "<b>VP Shunt Complications</b>",
+   "with": "<b>Hydrocephalus and Shunt Complications</b>",
+   "note": "title reference follows retitle of VP Shunt Complications"
+  },
+  {
+   "op": "replace",
+   "brief": "psoriasis",
+   "find": "<b>Patchy Hair Loss in a Child</b>",
+   "with": "<b>Hair Loss in a Child</b>",
+   "note": "title reference follows retitle of Patchy Hair Loss in a Child"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "<b>Scaly Rash &amp; Psoriasis</b>",
+   "with": "<b>Scaly Rashes</b>",
+   "note": "title reference follows retitle of Scaly Rash & Psoriasis"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<b>Posterior Urethral Valves and Potter Sequence</b>",
+   "with": "<b>Posterior Urethral Valves</b>",
+   "note": "title reference follows retitle of Posterior Urethral Valves and Potter Sequence"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tdap-preg",
+   "find": "<b>Vaccines &amp; Timing in Pregnancy</b>",
+   "with": "<b>Vaccines in Pregnancy</b>",
+   "note": "title reference follows retitle of Vaccines & Timing in Pregnancy"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "<b>Elder Abuse &amp; Mandated Reporting</b>",
+   "with": "<b>Elder Abuse</b>",
+   "note": "title reference follows retitle of Elder Abuse & Mandated Reporting"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-infant-vax",
+   "find": "<b>Adolescent Immunization and the Age Platform</b>",
+   "with": "<b>Adolescent Vaccines</b>",
+   "note": "title reference follows retitle of Adolescent Immunization and the Age Platform"
+  },
+  {
+   "op": "replace",
+   "brief": "bipolar-mania",
+   "find": "<b>Thyroid Mimics &amp; Discriminators</b>",
+   "with": "<b>Thyroid Disease in an Adult</b>",
+   "note": "title reference follows retitle of Thyroid Mimics & Discriminators"
+  },
+  {
+   "op": "replace",
+   "brief": "bipolar-mania",
+   "find": "<i>Psychosis in an Adult: Rule Out a Cause, Then Time It</i>",
+   "with": "<i>Psychosis</i>",
+   "note": "title reference follows retitle of Psychosis in an Adult: Rule Out a Cause, Then Time It"
+  },
+  {
+   "op": "replace",
+   "brief": "bipolar-mania",
+   "find": "<i>Delirium: Tell It From Dementia and Psychosis, Then Find the Cause</i>",
+   "with": "<i>Delirium</i>",
+   "note": "title reference follows retitle of Delirium: Tell It From Dementia and Psychosis, Then Find the Cause"
+  },
+  {
+   "op": "replace",
+   "brief": "bipolar-mania",
+   "find": "<i>The Patient on Lithium: Which Complication, and What to Do</i>",
+   "with": "<i>Lithium Therapy</i>",
+   "note": "title reference follows retitle of The Patient on Lithium: Which Complication, and What to Do"
+  },
+  {
+   "op": "replace",
+   "brief": "sz-psychosocial",
+   "find": "<i>Psychosis in an Adult: Rule Out a Cause, Then Time It</i>",
+   "with": "<i>Psychosis</i>",
+   "note": "title reference follows retitle of Psychosis in an Adult: Rule Out a Cause, Then Time It"
+  },
+  {
+   "op": "replace",
+   "brief": "delirium",
+   "find": "<i>Psychosis in an Adult: Rule Out a Cause, Then Time It</i>",
+   "with": "<i>Psychosis</i>",
+   "note": "title reference follows retitle of Psychosis in an Adult: Rule Out a Cause, Then Time It"
+  },
+  {
+   "op": "replace",
+   "brief": "panic",
+   "find": "<i>Thyroid Mimics &amp; Discriminators</i>",
+   "with": "<i>Thyroid Disease in an Adult</i>",
+   "note": "title reference follows retitle of Thyroid Mimics & Discriminators"
+  },
+  {
+   "op": "replace",
+   "brief": "ssri-effects",
+   "find": "<i>Bipolar Disorder: Rule Out a Cause, Time the Episode, Then Treat</i>",
+   "with": "<i>Bipolar Disorder</i>",
+   "note": "title reference follows retitle of Bipolar Disorder: Rule Out a Cause, Time the Episode, Then Treat"
+  },
+  {
+   "op": "replace",
+   "brief": "ssri-effects",
+   "find": "<i>Panic Disorder and Its Mimics: Which Anxiety, and How to Treat</i>",
+   "with": "<i>Panic Disorder and Other Anxiety</i>",
+   "note": "title reference follows retitle of Panic Disorder and Its Mimics: Which Anxiety, and How to Treat"
+  },
+  {
+   "op": "replace",
+   "brief": "lithium-effects",
+   "find": "<i>Polyuria: Water or Solute</i>",
+   "with": "<i>Polyuria</i>",
+   "note": "title reference follows retitle of Polyuria: Water or Solute"
+  },
+  {
+   "op": "replace",
+   "brief": "lithium-effects",
+   "find": "<i>Thyroid Mimics &amp; Discriminators</i>",
+   "with": "<i>Thyroid Disease in an Adult</i>",
+   "note": "title reference follows retitle of Thyroid Mimics & Discriminators"
+  },
+  {
+   "op": "replace",
+   "brief": "ipv",
+   "find": "<i>Suspected Child Abuse: Fractures and the Next Step</i>",
+   "with": "<i>Suspected Child Abuse</i>",
+   "note": "title reference follows retitle of Suspected Child Abuse: Fractures and the Next Step"
+  },
+  {
+   "op": "replace",
+   "brief": "ipv",
+   "find": "<i>Elder Abuse &amp; Mandated Reporting</i>",
+   "with": "<i>Elder Abuse</i>",
+   "note": "title reference follows retitle of Elder Abuse & Mandated Reporting"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#backpain\">Low Back Pain Red Flags</a>",
+   "with": "<a href=\"#backpain\">Low Back Pain in an Adult</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#gtps\">Hip &amp; Thigh Pain</a>",
+   "with": "<a href=\"#gtps\">Hip and Thigh Pain in an Adult</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#hippos\">Hip Positioning: Fracture vs Dislocation</a>",
+   "with": "<a href=\"#hippos\">Hip Injury in an Adult</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#oa-pharm\">Osteoarthritis Pharmacotherapy</a>",
+   "with": "<a href=\"#oa-pharm\">Osteoarthritis</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "\n    <a href=\"#limp\">The Limping Child</a>\n    ",
+   "with": "\n    <a href=\"#limp\">The Limping Child</a>\n    ",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#scfe\">SCFE</a>",
+   "with": "<a href=\"#scfe\">Slipped Capital Femoral Epiphysis</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#sjia\">Juvenile Idiopathic Arthritis</a>",
+   "with": "<a href=\"#sjia\">Juvenile Idiopathic Arthritis</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#nursemaid\">Nursemaid's Elbow</a>",
+   "with": "<a href=\"#nursemaid\">Arm Injury in a Young Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#myositis-ossificans\">Myositis Ossificans</a>",
+   "with": "<a href=\"#myositis-ossificans\">Muscle Contusion and Myositis Ossificans</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#bone-tumors\">Bone Lesion in a Child</a>",
+   "with": "<a href=\"#bone-tumors\">Bone Lesions in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#scheuermann\">Adolescent Kyphosis</a>",
+   "with": "<a href=\"#scheuermann\">Adolescent Kyphosis</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "\n    <a href=\"#bs-puncture-osteomyelitis\">Foot Puncture Infection</a>\n    ",
+   "with": "\n    <a href=\"#bs-puncture-osteomyelitis\">Foot Puncture Wounds and Osteomyelitis</a>\n    ",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#bs-torticollis\">Infant Head Tilt and Flat Head</a>",
+   "with": "<a href=\"#bs-torticollis\">Torticollis and Plagiocephaly in an Infant</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#growth\">Growth &amp; Milestones</a>",
+   "with": "<a href=\"#growth\">Developmental Milestones and Normal Growth</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-imprinting\">Angelman Syndrome &amp; Look-Alikes</a>",
+   "with": "<a class=\"bs\" href=\"#bs-imprinting\">Imprinting Disorders: Angelman and Prader-Willi</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-learning\">Specific Learning Disorder</a>",
+   "with": "<a class=\"bs\" href=\"#bs-learning\">School Difficulty in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-nat-fracture\">Suspected Abuse: Fractures</a>",
+   "with": "<a class=\"bs\" href=\"#bs-nat-fracture\">Suspected Child Abuse</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#chf\">CHF: Reducing Hospitalization</a>",
+   "with": "<a href=\"#chf\">Heart Failure</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#ascvd\">Statins &amp; ASCVD Risk</a>",
+   "with": "<a href=\"#ascvd\">Lipid Screening and Statin Therapy</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#angina\">Anginal Equivalents</a>",
+   "with": "<a href=\"#angina\">Stable Ischemic Heart Disease</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#htn-drugs\">HTN: Workup &amp; Drug Choice</a>",
+   "with": "<a href=\"#htn-drugs\">Hypertension in an Adult</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-adolescent-bp\">High BP in an Adolescent</a>",
+   "with": "<a class=\"bs\" href=\"#bs-adolescent-bp\">High Blood Pressure in a Child or Adolescent</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#dvt\">DVT &amp; PE</a>",
+   "with": "<a href=\"#dvt\">Venous Thromboembolism</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "\n    <a href=\"#ped-murmur\">Innocent vs Pathologic Murmurs</a>\n    ",
+   "with": "\n    <a href=\"#ped-murmur\">Heart Murmurs in a Child</a>\n    ",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#myocarditis\">Myocarditis in Children</a>",
+   "with": "<a href=\"#myocarditis\">Heart Failure in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#copd\">COPD: Survival Interventions</a>",
+   "with": "<a href=\"#copd\">COPD</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#asthma\">Asthma Classification</a>",
+   "with": "<a href=\"#asthma\">Asthma</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#rhinitis\">Allergic Rhinitis</a>",
+   "with": "<a href=\"#rhinitis\">Rhinitis</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#hypoxemia-mech\">Mechanisms of Hypoxemia</a>",
+   "with": "<a href=\"#hypoxemia-mech\">Hypoxemia</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-sickle-trait\">Sickle Trait vs Disease</a>",
+   "with": "<a class=\"bs\" href=\"#bs-sickle-trait\">Sickle Cell Disease and Trait</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#airway\">Pediatric Airway / Stridor</a>",
+   "with": "<a href=\"#airway\">Noisy Breathing in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#abrs-complications\">Sinusitis: Intracranial Extension</a>",
+   "with": "<a href=\"#abrs-complications\">Sinusitis and Its Complications</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-pta\">Peritonsillar Abscess</a>",
+   "with": "<a class=\"bs\" href=\"#bs-pta\">Deep Neck Infections</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#masld\">MASLD / Fatty Liver</a>",
+   "with": "<a href=\"#masld\">Fatty Liver Disease</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#cholestasis\">Cholestasis &amp; the LFT Patterns</a>",
+   "with": "<a href=\"#cholestasis\">Abnormal Liver Tests</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#infant-stool\">Infant Stool Complaints</a>",
+   "with": "<a href=\"#infant-stool\">Stool Changes in a Well Infant</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-impaction\">Fecal Impaction</a>",
+   "with": "<a class=\"bs\" href=\"#bs-impaction\">Constipation and Fecal Impaction in an Adult</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#cyclic-vomiting\">Cyclic Vomiting Syndrome</a>",
+   "with": "<a href=\"#cyclic-vomiting\">Recurrent Vomiting in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#neonatal-jaundice\">Neonatal Jaundice</a>",
+   "with": "<a href=\"#neonatal-jaundice\">Jaundice in a Newborn</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#occult-gi-bleed\">Occult GI Bleeding in a Child</a>",
+   "with": "<a href=\"#occult-gi-bleed\">GI Bleeding in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-tef\">Tracheoesophageal Fistula</a>",
+   "with": "<a class=\"bs\" href=\"#bs-tef\">Tracheoesophageal Fistula and Esophageal Atresia</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-wilson\">Wilson Disease</a>",
+   "with": "<a class=\"bs\" href=\"#bs-wilson\">Wilson Disease</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-foodborne\">Foodborne Diarrhea</a>",
+   "with": "<a class=\"bs\" href=\"#bs-foodborne\">Infectious Diarrhea</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#pyelo\">Pyelonephritis &amp; Disposition</a>",
+   "with": "<a href=\"#pyelo\">Pyelonephritis</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#peds-uti-recurrent\">Recurrent UTI in a Child</a>",
+   "with": "<a href=\"#peds-uti-recurrent\">Urinary Tract Infection in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#enuresis\">Nocturnal Enuresis</a>",
+   "with": "<a href=\"#enuresis\">Enuresis</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#peds-aki\">NSAID Prerenal AKI</a>",
+   "with": "<a href=\"#peds-aki\">Acute Kidney Injury in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#polyuria\">Polyuria: Water or Solute</a>",
+   "with": "<a href=\"#polyuria\">Polyuria</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-distal-rta\">Hypokalemia with Acidosis</a>",
+   "with": "<a class=\"bs\" href=\"#bs-distal-rta\">Hypokalemia and Acid-Base Disorders in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-incontinence\">Incontinence &amp; the PVR</a>",
+   "with": "<a class=\"bs\" href=\"#bs-incontinence\">Urinary Incontinence</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#bph\">BPH &amp; Acute Retention</a>",
+   "with": "<a href=\"#bph\">Benign Prostatic Hyperplasia and Urinary Retention</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-puv\">Posterior Urethral Valves</a>",
+   "with": "<a class=\"bs\" href=\"#bs-puv\">Posterior Urethral Valves</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#scrotum\">Acute Scrotum &amp; Scrotal Mass</a>",
+   "with": "<a href=\"#scrotum\">Scrotal Pain and Masses</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#thyroid\">Thyroid Mimics</a>",
+   "with": "<a href=\"#thyroid\">Thyroid Disease in an Adult</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#hypercalcemia\">Hypercalcemia Workup</a>",
+   "with": "<a href=\"#hypercalcemia\">Hypercalcemia</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#gynecomastia\">Gynecomastia vs Male Breast Ca</a>",
+   "with": "<a href=\"#gynecomastia\">Male Breast Enlargement</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#homocystinuria\">Marfanoid: Marfan or Homocystinuria?</a>",
+   "with": "<a href=\"#homocystinuria\">Tall Stature and Marfanoid Habitus</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#microcytic-anemia\">Microcytic Anemia: Iron First</a>",
+   "with": "<a href=\"#microcytic-anemia\">Microcytic Anemia</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#dipstick-mismatch\">Dipstick-Microscopy Mismatch</a>",
+   "with": "<a href=\"#dipstick-mismatch\">Dark Urine: Hemoglobin, Myoglobin or Blood</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#factor-inhibitor\">Hemophilia A Inhibitor</a>",
+   "with": "<a href=\"#factor-inhibitor\">Hemophilia</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-leukemia\">Pediatric ALL</a>",
+   "with": "<a class=\"bs\" href=\"#bs-leukemia\">Acute Leukemia in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#lymphadenitis\">Enlarged Lymph Nodes</a>",
+   "with": "<a href=\"#lymphadenitis\">Lymphadenopathy</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#preg-vax\">Vaccines &amp; Timing in Pregnancy</a>",
+   "with": "<a href=\"#preg-vax\">Vaccines in Pregnancy</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-genital-ulcer\">Genital Ulcer</a>",
+   "with": "<a class=\"bs\" href=\"#bs-genital-ulcer\">Genital Ulcers</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#rmsf\">Tick-Borne Fever &amp; Rash</a>",
+   "with": "<a href=\"#rmsf\">Tick-Borne Illness</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#herpangina\">Oral Vesicles in a Child</a>",
+   "with": "<a href=\"#herpangina\">Oral Lesions in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-torch\">Congenital CMV / TORCH</a>",
+   "with": "<a class=\"bs\" href=\"#bs-torch\">Congenital Infections (TORCH)</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-exanthems\">Childhood Exanthems</a>",
+   "with": "<a class=\"bs\" href=\"#bs-exanthems\">Fever and Rash in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-anaphylaxis\">Anaphylaxis</a>",
+   "with": "<a class=\"bs\" href=\"#bs-anaphylaxis\">Anaphylaxis</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#ig-panel\">The Immunoglobulin Panel</a>",
+   "with": "<a href=\"#ig-panel\">Antibody Deficiencies</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#cgd\">Abscesses &amp; Granulomas</a>",
+   "with": "<a href=\"#cgd\">Neutrophil Disorders: Number and Function</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#cluster\">Headache Types &amp; Cluster</a>",
+   "with": "<a href=\"#cluster\">Primary Headache in an Adult</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#peds-headache-imaging\">Headache in a Child: Imaging</a>",
+   "with": "<a href=\"#peds-headache-imaging\">Headache in a Child: Imaging and Treatment</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#cerebral-palsy\">Cerebral Palsy &amp; the MRI Pattern</a>",
+   "with": "<a href=\"#cerebral-palsy\">Cerebral Palsy</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#vpshunt\">VP Shunt Complications</a>",
+   "with": "<a href=\"#vpshunt\">Hydrocephalus and Shunt Complications</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-tethered\">Tethered Cord</a>",
+   "with": "<a class=\"bs\" href=\"#bs-tethered\">Spinal Dysraphism</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a class=\"bs\" href=\"#bs-reye\">Cerebral Edema: Reye</a>",
+   "with": "<a class=\"bs\" href=\"#bs-reye\">Encephalopathy and Cerebral Edema in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#tics\">Tics &amp; Tourette Syndrome</a>",
+   "with": "<a href=\"#tics\">Tics and Tic Disorders</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#psoriasis\">Scaly Rash / Psoriasis</a>",
+   "with": "<a href=\"#psoriasis\">Scaly Rashes</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#cellulitis\">Cellulitis &amp; the Depth Ladder</a>",
+   "with": "<a href=\"#cellulitis\">Skin and Soft Tissue Infection</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#eczemaherp\">Atopic Dermatitis Complications</a>",
+   "with": "<a href=\"#eczemaherp\">Atopic Dermatitis</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#peds-alopecia\">Patchy Hair Loss in a Child</a>",
+   "with": "<a href=\"#peds-alopecia\">Hair Loss in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#contraception\">Contraception &amp; DMPA</a>",
+   "with": "<a href=\"#contraception\">Contraception</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#smoking\">Ranking Preventive Interventions</a>",
+   "with": "<a href=\"#smoking\">Preventive Care: Ranking Interventions</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#preop\">Preop Thresholds</a>",
+   "with": "<a href=\"#preop\">Preoperative Evaluation</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#elder\">Elder Abuse Reporting</a>",
+   "with": "<a href=\"#elder\">Elder Abuse</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#ipv\">Intimate Partner Violence in an Adult</a>",
+   "with": "<a href=\"#ipv\">Intimate Partner Violence</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#psychosis-duration\">Psychosis in an Adult</a>",
+   "with": "<a href=\"#psychosis-duration\">Psychosis</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#bipolar-mania\">Bipolar Disorder</a>",
+   "with": "<a href=\"#bipolar-mania\">Bipolar Disorder</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#sz-psychosocial\">Schizophrenia on Treatment</a>",
+   "with": "<a href=\"#sz-psychosocial\">Schizophrenia: Long-Term Care</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#delirium\">Delirium</a>",
+   "with": "<a href=\"#delirium\">Delirium</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#panic\">Panic Disorder and Its Mimics</a>",
+   "with": "<a href=\"#panic\">Panic Disorder and Other Anxiety</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#ssri-effects\">SSRI Adverse Effects</a>",
+   "with": "<a href=\"#ssri-effects\">SSRI Adverse Effects</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#lithium-effects\">The Patient on Lithium</a>",
+   "with": "<a href=\"#lithium-effects\">Lithium Therapy</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#gppd\">Genito-Pelvic Pain/Penetration Disorder</a>",
+   "with": "<a href=\"#gppd\">Genito-Pelvic Pain/Penetration Disorder</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#septic-hip\">Septic Arthritis in a Child</a>",
+   "with": "<a href=\"#septic-hip\">Septic Arthritis and Transient Synovitis in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#growing-pains\">Bilateral Leg Pain in a Child</a>",
+   "with": "<a href=\"#growing-pains\">Leg Pain in a Child</a>",
+   "note": "sidebar label follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#scfe\">Slipped Capital Femoral Epiphysis: Keep Off It and Pin It</a>",
+   "with": "<a href=\"#scfe\">Slipped Capital Femoral Epiphysis</a>",
+   "note": "wording-guide link follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#growth\">Growth &amp; Developmental Milestones</a>",
+   "with": "<a href=\"#growth\">Developmental Milestones and Normal Growth</a>",
+   "note": "wording-guide link follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#bs-imprinting\">Angelman Syndrome and Its Genetic Look-Alikes</a>",
+   "with": "<a href=\"#bs-imprinting\">Imprinting Disorders: Angelman and Prader-Willi</a>",
+   "note": "wording-guide link follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#bs-adolescent-bp\">Confirming High Blood Pressure in an Adolescent</a>",
+   "with": "<a href=\"#bs-adolescent-bp\">High Blood Pressure in a Child or Adolescent</a>",
+   "note": "wording-guide link follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#ped-murmur\">Innocent vs Pathologic Murmurs</a>",
+   "with": "<a href=\"#ped-murmur\">Heart Murmurs in a Child</a>",
+   "note": "wording-guide link follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#bs-distal-rta\">Hypokalemia with Acidosis in a Child</a>",
+   "with": "<a href=\"#bs-distal-rta\">Hypokalemia and Acid-Base Disorders in a Child</a>",
+   "note": "wording-guide link follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#bs-puv\">Posterior Urethral Valves and Potter Sequence</a>",
+   "with": "<a href=\"#bs-puv\">Posterior Urethral Valves</a>",
+   "note": "wording-guide link follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#lymphadenitis\">Enlarged Lymph Nodes: Reading the Pattern</a>",
+   "with": "<a href=\"#lymphadenitis\">Lymphadenopathy</a>",
+   "note": "wording-guide link follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#bs-genital-ulcer\">Genital Ulcer: Painless or Painful</a>",
+   "with": "<a href=\"#bs-genital-ulcer\">Genital Ulcers</a>",
+   "note": "wording-guide link follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#bs-exanthems\">Exanthems in a Child</a>",
+   "with": "<a href=\"#bs-exanthems\">Fever and Rash in a Child</a>",
+   "note": "wording-guide link follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "ould fit. <a href=\"#cgd\">Recurrent Abscesses and Granulomas</a></li>\n    ",
+   "with": "ould fit. <a href=\"#cgd\">Neutrophil Disorders: Number and Function</a></li>\n    ",
+   "note": "wording-guide link follows retitle"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#cgd\">Recurrent Abscesses and Granulomas</a>",
+   "with": "<a href=\"#cgd\">Neutrophil Disorders: Number and Function</a>",
+   "note": "wording-guide link follows retitle"
+  }
+ ]
+}
