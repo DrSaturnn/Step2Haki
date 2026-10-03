@@ -155,7 +155,7 @@ Polymyalgia Rheumatica, Brachial Plexus Injury at Birth, 22q11.2 Deletion Syndro
 
 ## Judgment calls to confirm
 
-- **Aquifer case briefs** (Headache in a School-Age Child, Fever in an Infant, Child with Puffy Eyes, Hypotonia in an Infant, Bruising and Purpura in a Child) keep their own format and are not merged, per the migration rule. That leaves "Headache in a School-Age Child" beside "Headache in a Child: Imaging and Treatment", and "Fever in an Infant" beside "Fever and Sepsis in the Newborn". Say if you want those merged anyway.
+- **Aquifer case briefs (decided 2026-10-03):** the three that overlap a topic brief (Headache in a School-Age Child, Fever in an Infant, Child with Puffy Eyes) fold into it as a collapsed Aquifer case section once each full narrative arrives; Hypotonia in an Infant and Bruising and Purpura in a Child stay separate.
 - **Recent lean briefs kept separate**: The Limping Child, Septic Arthritis and Transient Synovitis in a Child, and Slipped Capital Femoral Epiphysis overlap; they were just rebuilt as separate lean briefs, so I left them apart. Same for the psych briefs (Psychosis and Schizophrenia: Long-Term Care).
 - **Needs content**: "Spinal Curvature in an Adolescent" assumes scoliosis gets written into it (it is on the unwritten list); otherwise the title stays "Adolescent Kyphosis".
 - **Resolves two open questions**: Precocious Puberty folds into "Puberty: Normal Staging and Early Puberty" (the virilization item then fits), and "Hypokalemia and Acid-Base Disorders in a Child" covers the Bartter item.
