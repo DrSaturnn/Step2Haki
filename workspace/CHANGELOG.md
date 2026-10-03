@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-03 s64: s64: Psych: intimate partner violence in the lean style (raise-it tile, every-patient step table, safety plan tile, who-decides and who-must-be-reported table, screening and complications); NBME Q2 moved to its framing block; older or disabled adult reporting kept separate from capacity; step2 bases follow their sources. Psych lean queue complete
+
+```
+Page: 216 briefs, 2122 items -> 216 briefs, 2121 items
+Briefs changed (1):
+  - ipv (Intimate Partner Violence in an Adult: Plan for Safety, Report by Who Is at Risk): items edited (q_08f59bcec2907d1fbe0c, q_40971ac6e38b6d8b7be4, q_18884f761899281f8379, q_ba5b7078420440fa2058, q_9ee31320c880ba278f9a, q_cf19c178e8d4247cf58c, q_94b8689396a90e9cf711, q_bf0703ef66d06d09b871, q_7ce401bb1677c0c9fbb8, q_ab5eb45b397655435f35, q_9afa95fc7fac80545924); versions bumped (q_08f59bcec2907d1fbe0c v1->v2, q_40971ac6e38b6d8b7be4 v1->v2, q_18884f761899281f8379 v1->v2, q_ba5b7078420440fa2058 v1->v2, q_9ee31320c880ba278f9a v1->v2, q_cf19c178e8d4247cf58c v1->v2, q_94b8689396a90e9cf711 v1->v2, q_bf0703ef66d06d09b871 v1->v2, q_7ce401bb1677c0c9fbb8 v1->v2, q_ab5eb45b397655435f35 v1->v2, q_9afa95fc7fac80545924 v1->v2); ITEMS REMOVED (q_8d70e905d154f5399e60); prose edited (-3785 chars)
+Other page changes (nav, headers, scripts): +0 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 216 briefs, 2121 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 216 | bankwraps 216 | mcq 2121 (axCheck 2121, reveal-only 0) | malformed 0 | crit gridded 164/165 | vignette gridded 121/121 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-03 s63: s63: Psych: genito-pelvic pain/penetration disorder in the lean style (criteria tile, examine-before-labeling workup path, what-else table, multimodal treatment, body-cause treatments); NBME Q7 moved to its framing block; one-or-more criterion A kept in the rule and the workup; GAD and SSD rows sourced; vulvodynia item decider fixed
 
 ```
