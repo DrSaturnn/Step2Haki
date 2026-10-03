@@ -1,0 +1,17 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#homocystinuria\">Marfanoid: Homocystinuria</a>\n",
+   "with": "    <a href=\"#homocystinuria\">Marfanoid: Marfan or Homocystinuria?</a>\n",
+   "note": "sidebar label for the lean title"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-peds-stroke",
+   "find": " Part II <b>Sickle Cell Trait versus Disease</b> covers the sickle cell stroke and its exchange transfusion.</div>",
+   "with": " Part II <b>Sickle Cell Trait versus Disease</b> covers the sickle cell stroke and its exchange transfusion. Part I <b>Marfanoid Habitus: Marfan or Homocystinuria?</b> covers thrombotic stroke in a tall, thin child with learning problems: check plasma homocysteine.</div>",
+   "note": "pointer from pediatric stroke to homocystinuria (section map MOVE list)"
+  }
+ ]
+}

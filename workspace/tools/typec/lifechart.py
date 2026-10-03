@@ -317,7 +317,8 @@ def workup_path(title, steps, step=None):
         if st.get('text'):
             body += f'<p class="pt-tx">{st["text"]}</p>'
         out.append(f'<li class="pt{" end" if st.get("kind") == "end" else ""}"><span class="when">{st["when"]}</span>{body}</li>')
-    return f'<figure class="lcp">{_title(title, step)}<ol class="path">{"".join(out)}</ol></figure>'
+    # every workup path is labelled as the diagnostic workup (Jonathan 2026-10-02)
+    return f'<figure class="lcp"><p class="kick">Diagnostic workup</p>{_title(title, step)}<ol class="path">{"".join(out)}</ol></figure>'
 
 
 # ---------------------------------------------------------------- self-test

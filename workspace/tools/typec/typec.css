@@ -282,8 +282,11 @@ figure.lcp{margin:18px 0;padding:15px 15px 10px;border-radius:18px;background:va
 .lcp .plus{display:block;position:relative;height:0;margin:16px -14px 14px;border-top:1.5px dashed rgba(84,74,196,.35)}
 .lcp .plus::after{content:"+";position:absolute;top:-13px;left:50%;transform:translateX(-50%);width:24px;height:24px;border-radius:50%;background:#F7F6FD;color:var(--accent);font:800 16px/24px var(--sans);text-align:center;box-shadow:0 0 0 1.5px rgba(84,74,196,.35)}
 .lcp .tn{margin:0 0 4px;font-family:var(--serif);font-size:16.5px;font-weight:600;line-height:1.3;color:var(--ink)}
-.lcp .wr2{display:grid;grid-template-columns:78px 1fr;gap:8px;margin:3px 0 0;font-size:14.5px;line-height:1.42}
-.lcp .wr2 b{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.lcp .wr2{display:grid;grid-template-columns:minmax(112px,30%) 1fr;gap:4px 14px;margin:8px 0 0;font-size:14.5px;line-height:1.42}
+.lcp .wr2 + .wr2{border-top:1px solid var(--hair);padding-top:8px}
+.lcp .wr2 b{font-size:10.5px;font-weight:700;letter-spacing:.06em;line-height:1.35;text-transform:uppercase;color:var(--muted);padding-top:3px}
+/* "Diagnostic workup" kicker above every workup path (Jonathan 2026-10-02) */
+.lcp .kick{margin:0 0 7px;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
 .lcp .pt-tx{margin:0;font-size:14.5px;line-height:1.45}
 /* bottom line: short paragraphs with indented lists */
 .dp ul.bl{list-style:none;margin:-3px 0 11px 3px;padding:1px 0 1px 13px;border-left:2px solid rgba(84,74,196,.28)}

@@ -27,7 +27,7 @@ PATCH = " if(ul.classList.contains('mnem')) dl.classList.add('mnem');"
 if PATCH not in page:  # the page already carries the Type C setup once s36 ships; never inject it twice
     k = page.index('function mnemonics(){'); j = page.index(T1, k)
     page = page[:j] + T1 + PATCH + page[j + len(T1):]
-page = page.replace('</head>', '<style id="typec-css">' + css + '</style></head>', 1) if 'id="typec-css"' not in page else page.replace('</head>', '<style>' + css[css.index('body.pilot'):] + '</style></head>', 1)
+page = page.replace('</head>', '<style id="typec-css">' + css + '</style></head>', 1) if 'id="typec-css"' not in page else page.replace('</head>', '<style>' + (css if os.environ.get('AXBX_FULLCSS') else css[css.index('body.pilot'):]) + '</style></head>', 1)  # AXBX_FULLCSS=1 previews typec.css edits not yet on the page
 js = ("<script>window.addEventListener('load',function(){var b=document.getElementById('%s');var h=document.createElement('div');"
       "h.id='pilot-holder';h.className='wrap';var n=document.createElement('p');n.className='system-note';"
       "n.textContent='Preview: this brief rendered by the live page code with the Type C page setup. Not on the live site.';"

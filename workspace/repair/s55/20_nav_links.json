@@ -1,0 +1,54 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "    <a class=\"bs\" href=\"#bs-puncture-osteomyelitis\">Foot Puncture Wound Infection</a>\n",
+   "with": "",
+   "note": "puncture brief is now a topic brief"
+  },
+  {
+   "op": "replace_global",
+   "find": "    <a class=\"bs\" href=\"#bs-torticollis\">Torticollis &amp; Plagiocephaly</a>\n",
+   "with": "",
+   "note": "torticollis brief is now a topic brief"
+  },
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#bone-tumors\">Bone Lesion in a Child</a>\n",
+   "with": "    <a href=\"#bone-tumors\">Bone Lesion in a Child</a>\n    <a href=\"#bs-puncture-osteomyelitis\">Foot Puncture Infection</a>\n    <a href=\"#bs-torticollis\">Infant Head Tilt and Flat Head</a>\n",
+   "note": "topic-brief sidebar links"
+  },
+  {
+   "op": "replace_global",
+   "find": "<div class=\"sect\">Musculoskeletal <span class=\"count\">21</span></div>",
+   "with": "<div class=\"sect\">Musculoskeletal <span class=\"count\">23</span></div>",
+   "note": "two Part I links more"
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "No cause yet: match the age (step 2), then time it (step 3).",
+   "with": "No cause yet: match the age (step 2), then time it (step 3). A nail through a shoe weeks ago, little fever: <i>Foot Puncture Infection: Name the Organism from the Exposure and the Clock</i>.",
+   "note": "limp pointer to the puncture brief (section map; audit)"
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "<i>Congenital Muscular Torticollis and Plagiocephaly</i>",
+   "with": "<i>Infant Head Tilt and Flat Head: Which Way Does the Ear Point?</i>",
+   "note": "inbound Pairs-with title"
+  },
+  {
+   "op": "replace_global",
+   "find": "A boy with a red, tender sole 3 weeks after a nail went through his shoe has osteomyelitis, but the word never appears; the question asks only for the organism. <a href=\"#bs-puncture-osteomyelitis\">Foot Puncture Wound Infection</a>",
+   "with": "A boy with a red, tender foot 3 weeks after a nail went through his shoe has osteomyelitis, but the word never appears; the question asks only for the organism. <a href=\"#bs-puncture-osteomyelitis\">Foot Puncture Infection</a>",
+   "note": "patterns page: NBME stem says foot; new title"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#scfe\">Slipped Capital Femoral Epiphysis</a></li>",
+   "with": "<a href=\"#scfe\">Slipped Capital Femoral Epiphysis: Keep Off It and Pin It</a></li>",
+   "note": "patterns page link title after s48"
+  }
+ ]
+}

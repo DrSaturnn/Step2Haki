@@ -1,0 +1,22 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "    <a class=\"bs\" href=\"#bs-fever-rash-arthralgia\">Fever, Rash and Joint Pain</a>\n",
+   "with": "",
+   "note": "fever-rash brief is now a topic brief"
+  },
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#cgd\">Abscesses &amp; Granulomas</a>\n",
+   "with": "    <a href=\"#cgd\">Abscesses &amp; Granulomas</a>\n    <a href=\"#bs-fever-rash-arthralgia\">Fever, Rash and Joint Pain</a>\n",
+   "note": "topic-brief sidebar link"
+  },
+  {
+   "op": "replace_global",
+   "find": "<div class=\"sect\">Infectious Disease <span class=\"count\">10</span></div>",
+   "with": "<div class=\"sect\">Infectious Disease <span class=\"count\">11</span></div>",
+   "note": "one Part I link more"
+  }
+ ]
+}

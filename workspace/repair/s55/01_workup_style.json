@@ -1,0 +1,87 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": ".lcp .wr2{display:grid;grid-template-columns:78px 1fr;gap:8px;margin:3px 0 0;font-size:14.5px;line-height:1.42}\n.lcp .wr2 b{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding-top:3px}",
+   "with": ".lcp .wr2{display:grid;grid-template-columns:minmax(112px,30%) 1fr;gap:4px 14px;margin:8px 0 0;font-size:14.5px;line-height:1.42}\n.lcp .wr2 + .wr2{border-top:1px solid var(--hair);padding-top:8px}\n.lcp .wr2 b{font-size:10.5px;font-weight:700;letter-spacing:.06em;line-height:1.35;text-transform:uppercase;color:var(--muted);padding-top:3px}\n/* \"Diagnostic workup\" kicker above every workup path (Jonathan 2026-10-02) */\n.lcp .kick{margin:0 0 7px;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}",
+   "note": "workup path: wider result labels, rows separated, Diagnostic workup kicker style (Jonathan 2026-10-02)"
+  },
+  {
+   "op": "replace",
+   "brief": "septic-hip",
+   "find": "<figure class=\"lcp\"><div class=\"ttl\">",
+   "with": "<figure class=\"lcp\"><p class=\"kick\">Diagnostic workup</p><div class=\"ttl\">",
+   "note": "Diagnostic workup label (Jonathan 2026-10-02)"
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "<figure class=\"lcp\"><div class=\"ttl\">",
+   "with": "<figure class=\"lcp\"><p class=\"kick\">Diagnostic workup</p><div class=\"ttl\">",
+   "note": "Diagnostic workup label (Jonathan 2026-10-02)"
+  },
+  {
+   "op": "replace",
+   "brief": "sjia",
+   "find": "<figure class=\"lcp\"><div class=\"ttl\">",
+   "with": "<figure class=\"lcp\"><p class=\"kick\">Diagnostic workup</p><div class=\"ttl\">",
+   "note": "Diagnostic workup label (Jonathan 2026-10-02)"
+  },
+  {
+   "op": "replace",
+   "brief": "nursemaid",
+   "find": "<figure class=\"lcp\"><div class=\"ttl\">",
+   "with": "<figure class=\"lcp\"><p class=\"kick\">Diagnostic workup</p><div class=\"ttl\">",
+   "note": "Diagnostic workup label (Jonathan 2026-10-02)"
+  },
+  {
+   "op": "replace",
+   "brief": "scfe",
+   "find": "<figure class=\"lcp\"><div class=\"ttl\">",
+   "with": "<figure class=\"lcp\"><p class=\"kick\">Diagnostic workup</p><div class=\"ttl\">",
+   "note": "Diagnostic workup label (Jonathan 2026-10-02)"
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "<figure class=\"lcp\"><div class=\"ttl\">",
+   "with": "<figure class=\"lcp\"><p class=\"kick\">Diagnostic workup</p><div class=\"ttl\">",
+   "note": "Diagnostic workup label (Jonathan 2026-10-02)"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "<figure class=\"lcp\"><div class=\"ttl\">",
+   "with": "<figure class=\"lcp\"><p class=\"kick\">Diagnostic workup</p><div class=\"ttl\">",
+   "note": "Diagnostic workup label (Jonathan 2026-10-02)"
+  },
+  {
+   "op": "replace",
+   "brief": "bone-tumors",
+   "find": "<figure class=\"lcp\"><div class=\"ttl\">",
+   "with": "<figure class=\"lcp\"><p class=\"kick\">Diagnostic workup</p><div class=\"ttl\">",
+   "note": "Diagnostic workup label (Jonathan 2026-10-02)"
+  },
+  {
+   "op": "replace",
+   "brief": "scheuermann",
+   "find": "<figure class=\"lcp\"><div class=\"ttl\">",
+   "with": "<figure class=\"lcp\"><p class=\"kick\">Diagnostic workup</p><div class=\"ttl\">",
+   "note": "Diagnostic workup label (Jonathan 2026-10-02)"
+  },
+  {
+   "op": "replace",
+   "brief": "psychosis-duration",
+   "find": "<figure class=\"lcp\"><div class=\"ttl\">",
+   "with": "<figure class=\"lcp\"><p class=\"kick\">Diagnostic workup</p><div class=\"ttl\">",
+   "note": "Diagnostic workup label (Jonathan 2026-10-02)"
+  },
+  {
+   "op": "replace",
+   "brief": "bipolar-mania",
+   "find": "<figure class=\"lcp\"><div class=\"ttl\">",
+   "with": "<figure class=\"lcp\"><p class=\"kick\">Diagnostic workup</p><div class=\"ttl\">",
+   "note": "Diagnostic workup label (Jonathan 2026-10-02)"
+  }
+ ]
+}
