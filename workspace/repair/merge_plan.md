@@ -25,9 +25,9 @@ Rule 14 still applies: where a broader title promises content the brief does not
 | Maternal Effects in the Newborn (shipped s72) | Maternal Carryover in Newborn Labs (`neonatal-maternal-labs`); Maternal Hormone Effects in the Newborn (`newborn-hormone`) | 20 |
 | Genetic Syndromes Recognized at Birth (shipped s72) | Aneuploidy: Reading the Newborn (`aneuploidy`); Multiple Anomalies in a Newborn (`malform-syndromes`) | 25 |
 | Feeding an Infant or Toddler (shipped s72) | Infant Feeding at Six Months (`bs-infant-feeding`); Toddler Food Refusal (`feeding-refusal`) | 19 |
-| Puberty: Normal Staging and Early Puberty | Sexual Maturity Rating (`bs-tanner`); Precocious Puberty (`precocious-puberty`) | 21 |
-| Lipid Screening and Statin Therapy | Statins & the 10-Year ASCVD Risk Assessment (`ascvd`); Lipid Screening & Vaccine Eligibility by Condition (`lipid-screen`) | 12 |
-| Hypertension in an Adult | Hypertension: Workup & Drug Choice (`htn-drugs`); Secondary Hypertension (`secondary-htn`) | 16 |
+| Puberty (shipped s73) | Sexual Maturity Rating (`bs-tanner`); Precocious Puberty (`precocious-puberty`) | 21 |
+| Lipid Screening and Statin Therapy (shipped s73; vaccine rows to Vaccines in Special Populations) | Statins & the 10-Year ASCVD Risk Assessment (`ascvd`); Lipid Screening & Vaccine Eligibility by Condition (`lipid-screen`) | 12 |
+| Hypertension in an Adult (shipped s73) | Hypertension: Workup & Drug Choice (`htn-drugs`); Secondary Hypertension (`secondary-htn`) | 16 |
 | Heart Murmurs in an Adult | Right-Sided Murmurs: Pulmonic Stenosis & Tricuspid Regurgitation (`right-murmurs`); Murmur Man and Post-ToF Pulmonic Regurgitation (`bs-murmur-map`) | 19 |
 | Congenital Heart Disease: Cyanotic Lesions and Shunts | Cyanotic Congenital Heart Disease (`cyanotic-chd`); Congenital Shunts and the Transitional Clock (`bs-shunt-timing`) | 21 |
 | Obstructive Lung Disease (shipped s68) | COPD: Which Interventions Improve Survival (`copd`); Asthma vs. COPD (`asthma-copd`) | 17 |

@@ -2,7 +2,27 @@
 
 A running list, updated each pass. Newest at the top of each section. Answer any in a line ("VUR: yes", "thumbnail: go") and I'll act on it.
 
-## Awaiting a yes/no
+## Decided 2026-10-03 (Jonathan: "I trust your decision for the remaining pending decisions")
+
+Already resolved by earlier passes: precocious-puberty title (s73 merge "Puberty", with its own virilization section; the NBME item sits in its framing block); Bartter item (brief retitled "Hypokalemia and Acid-Base Disorders in a Child" in s66; item stays as the contrast case); cgd retitle ("Neutrophil Disorders: Number and Function", s66); "GI Bleeding in a Child" (s66); "The Distended Abdomen in a Newborn or Infant" kept.
+
+Decisions, to be carried out in a "decisions" batch between merge batches (status in OPEN_WORK.md):
+- **HIV cervical screening item:** rekey to "Begin at 21 as usual" (HHS OI guideline 2024 and ASCCP 2026 are the current guidelines; current guidelines set facts). Reissue the item; keep the CDC STI wording only as a labeled note.
+- **HPV distractor:** replace "Complete a three-dose series" with "Restart the series".
+- **Trapline separator:** "Option: why" (colon) page-wide; no em dashes.
+- **"Trap autopsy" label:** "Why the distractors fail" page-wide.
+- **Non-GI internal workflow text:** mechanical pass now: drop "Verified:", "Candidate twin", batch and ledger notes; "Store the discriminator as a question" becomes "Ask:"; "owns" becomes "covers"; resolve "not yet written" (rmsf).
+- **NBME plan defaults:** keep as built.
+- **Blueprint judgment rows (17):** Claude reviews and retags them in the decisions batch, logging each change.
+- **VUR corrections:** yes; write them from AUA and AAP sources opened that day (grade wording, ultrasound-gated VCUG item, prophylaxis and RIVUR).
+- **Thumbnail pilot:** not now; revisit after the merge queue.
+- **Short stature flowchart, precocious branch:** keep standard teaching.
+- **British spelling inside questions:** yes, a spelling-only pass that keeps question ids (keys included only if the tooling can do it without reissuing; otherwise leave keys and fix prose).
+- **Table squeeze at 1000 to 1100 px:** yes, collapse the sidebar at that width.
+- **Hot joint, unstable patient:** add the exception only with a guideline quote (IDSA or equivalent) opened that day; otherwise leave the rule.
+- **Open audit items 10 to 14:** after the merge queue, in that order.
+
+## Earlier questions (decided above; kept for history)
 
 - **Rekey the HIV cervical screening item? (2026-10-03, s65).** bs-cervical-gate item q_259e3ccc6f015dcc8656 (18 yo F newly diagnosed with HIV) keys "Screen now". The HHS adult and adolescent OI guideline (updated July 2024) and ASCCP (Feb 2026) start screening at 21 even with HIV; the CDC 2021 STI guideline still says 1 year after sexual debut, no later than 21. s65 changed the prose to state both. Options: rekey to "Begin at 21 as usual" (its current distractor; version bump), or keep the CDC STI key and label it.
 - **HPV item distractor (2026-10-03, s65 review).** hpv item q_b8bb12655d3f5058984f keys "Repeat the second dose" (second dose 4 months after the first) with "Complete a three-dose series" as a distractor; repeating the dose is a third dose, so the distractor reads as also correct. Suggest replacing that distractor (for example "Restart the series").

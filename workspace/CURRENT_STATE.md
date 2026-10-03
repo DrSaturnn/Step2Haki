@@ -1,9 +1,9 @@
 # AxBx: current state (read this first; one page)
 
-Updated 2026-10-03 (brief consolidation in progress through s72; the live task, merge rules and next steps are in the claude.ai Project "Step2haki" doc STEP2HAKI_HANDOFF.md). Replaces reading OPEN_WORK.md or past transcripts. Open OPEN_WORK.md only for history of a specific pass.
+Updated 2026-10-03 (brief consolidation in progress through s73; the live task, merge rules and next steps are in the claude.ai Project "Step2haki" doc STEP2HAKI_HANDOFF.md). Replaces reading OPEN_WORK.md or past transcripts. Open OPEN_WORK.md only for history of a specific pass.
 
 ## What it is
-Step 2 CK / Peds and FM shelf study page: `workspace/index.html` in the public GitHub repo https://github.com/DrSaturnn/Step2Haki (working copy `/home/claude/Step2Haki/workspace`; `/home/claude/axbx` is retired). The site Vercel deploys is `discriminator-briefs-site/index.html` (Root Directory = discriminator-briefs-site, skipped when that folder is unchanged); `tools/ship.sh` copies the page there. 201 briefs, 2,103 questions (after the s66 to s72 merges), 13 organ-system sections. Brief kinds: topic (`brief`), board-style (`brief bs`), Aquifer workup (`brief aq`). Every brief carries `data-bp` (NBME system). Questions are `<li>` in `ol.bank` with immutable ids from `tools/idgen.py`.
+Step 2 CK / Peds and FM shelf study page: `workspace/index.html` in the public GitHub repo https://github.com/DrSaturnn/Step2Haki (working copy `/home/claude/Step2Haki/workspace`; `/home/claude/axbx` is retired). The site Vercel deploys is `discriminator-briefs-site/index.html` (Root Directory = discriminator-briefs-site, skipped when that folder is unchanged); `tools/ship.sh` copies the page there. 198 briefs, 2,103 questions (after the s66 to s73 merges), 13 organ-system sections. Brief kinds: topic (`brief`), board-style (`brief bs`), Aquifer workup (`brief aq`). Every brief carries `data-bp` (NBME system). Questions are `<li>` in `ol.bank` with immutable ids from `tools/idgen.py`.
 
 ## Start of a session
 1. `git clone https://github.com/DrSaturnn/Step2Haki /home/claude/Step2Haki && cd /home/claude/Step2Haki/workspace && npm i` (jsdom 24 from package.json).
@@ -23,7 +23,7 @@ No emojis, no em dashes in prose; plain voice, no slogans; label speculation; âš
 Every clue from a UWorld or NBME source stem is used: each finding, value and pertinent negative gets a role (decides, localizes, supports, excludes, decoy) and a place in the brief; none is dropped or called noise (board-brief Step 2a).
 
 ## Open
-Current task: merge similar briefs under generalized titles (repair/merge_plan.md; 29 clusters left after s72). See PENDING_DECISIONS.md (VUR fixes researched not written; thumbnail pilot; retitles; spelling pass; 17 blueprint judgment rows; Aquifer narratives; s23 UWorld text). NBME plan phase 7 (review weighting) not started. Efficiency: worker packet adopted for backfills only (repair/efficiency/RESULTS.md, RUBRIC.md, runs/).
+Current task: merge similar briefs under generalized titles (repair/merge_plan.md; 26 clusters left after s73). See PENDING_DECISIONS.md (VUR fixes researched not written; thumbnail pilot; retitles; spelling pass; 17 blueprint judgment rows; Aquifer narratives; s23 UWorld text). NBME plan phase 7 (review weighting) not started. Efficiency: worker packet adopted for backfills only (repair/efficiency/RESULTS.md, RUBRIC.md, runs/).
 
 ## Peds authoring priority (set 2026-09-28)
 Applies to every new Peds brief until Jonathan changes it. Details: local-only `local/peds_shelf_2026-09-25.md`.
