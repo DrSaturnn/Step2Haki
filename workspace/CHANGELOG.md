@@ -2,6 +2,21 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-03 s67: s67: merge pilot: Enuresis + Primary Monosymptomatic Enuresis: Management into one lean brief, Enuresis (bs-enuresis kept as an alias); bare title, two-line subtitle (scope line, italic question), each defined term on its own line; AAFP 2022 settles desmopressin as first-line beside the alarm and the 6-week alarm checkpoint; hyponatremic seizure gets hypertonic saline (MSD); 13 questions (2 duplicates merged, 1 wrong-age key replaced); independent review to 0 critical in 2 rounds
+
+```
+Page: 216 briefs, 2121 items -> 215 briefs, 2119 items
+Briefs REMOVED (1): bs-enuresis
+Briefs changed (1):
+  - enuresis (Enuresis): 1 item added (q_ee4a95940f37e9b9b97a); items edited (q_88b136166b31572fa806, q_2d70c913ab9f5f8a9075, q_d7ab0f6d88c85fc8907e, q_aee72a7d300a55b18d1a, q_76838a88eef25aba9843, q_de4be37a858a5c59ab0c, q_9faa21c84e2e5a39ba66, q_11fc98144a285b0bbd08, q_c774c1e43c8e5995bb32, q_a457a60b9ced565ab9fe, q_051cc928257f5b15ae65, q_2510a432a4295a879318); versions bumped (q_88b136166b31572fa806 v1->v2, q_2d70c913ab9f5f8a9075 v1->v2, q_d7ab0f6d88c85fc8907e v1->v2, q_aee72a7d300a55b18d1a v1->v2, q_76838a88eef25aba9843 v1->v2, q_de4be37a858a5c59ab0c v1->v2, q_9faa21c84e2e5a39ba66 v1->v2, q_11fc98144a285b0bbd08 v2->v3, q_c774c1e43c8e5995bb32 v1->v2, q_a457a60b9ced565ab9fe v1->v2, q_051cc928257f5b15ae65 v1->v2, q_2510a432a4295a879318 v1->v2); attrs set (brief data-replaces; q_88b136166b31572fa806 data-lead-in,data-src; q_2d70c913ab9f5f8a9075 data-lead-in,data-src; q_d7ab0f6d88c85fc8907e data-lead-in,data-src; q_aee72a7d300a55b18d1a data-d2,data-d2-id,data-lead-in,data-src; q_76838a88eef25aba9843 data-lead-in,data-src; q_de4be37a858a5c59ab0c data-lead-in,data-src; q_9faa21c84e2e5a39ba66 data-lead-in,data-src; q_11fc98144a285b0bbd08 data-lead-in,data-src; q_c774c1e43c8e5995bb32 data-lead-in,data-src; q_a457a60b9ced565ab9fe data-lead-in,data-src; q_051cc928257f5b15ae65 data-lead-in,data-src; q_2510a432a4295a879318 data-lead-in,data-src); ITEMS REMOVED (q_df2e8851633e5c7d9b40); prose edited (+2834 chars)
+Other page changes (nav, headers, scripts): -7 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 215 briefs, 2119 items, 6 scripts, 35 checks, base HEAD | allowlisted 27 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 215 | bankwraps 215 | mcq 2119 (axCheck 2119, reveal-only 0) | malformed 0 | crit gridded 165/166 | vignette gridded 120/120 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-03 s66: s66: retitle 100 briefs to their broadest honest topic (Jonathan 2026-10-03: generalized titles); decision clauses moved to the subtitle line; Pairs with, wording-guide links and sidebar labels follow; merge heads retitled only where the head alone fits the new title; merges to follow cluster by cluster
 
 ```

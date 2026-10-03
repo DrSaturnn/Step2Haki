@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="ax-build" content="s66|2026-10-03">
+<meta name="ax-build" content="s67|2026-10-03">
 <title>Step2Haki — Clinical Board Briefs</title>
 <style>
 :root{
@@ -1351,6 +1351,7 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
 .lcw .rax span.a0{transform:none} .lcw .rax span.a1{transform:translateX(-100%)}
 .lcw .rail.segs + .rax{margin-top:2px}
 .lcw .rax em{position:absolute;right:0;top:-1px;font-style:normal;font-size:12px;font-weight:700;color:var(--muted);line-height:1}
+.brief .sub .subq{display:block;margin-top:3px;font-style:italic}
 </style>
 </head>
 <body>
@@ -1493,7 +1494,6 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
     <a class="bs" href="#bs-puv">Posterior Urethral Valves</a>
     <a class="bs" href="#bs-pyelo-organism">Pyelonephritis: Organism</a>
     <a class="bs" href="#bs-incontinence">Urinary Incontinence</a>
-    <a class="bs" href="#bs-enuresis">Primary Enuresis: Management</a>
     <a class="bs" href="#bs-nephritic">Nephritic syndrome (PSGN)</a>
     <a class="bs" href="#bs-abdominal-mass">Abdominal mass (Wilms)</a>
     <a class="bs" href="#bs-isolated-proteinuria">Incidental Proteinuria</a>
@@ -7169,7 +7169,7 @@ Impaction can sit <b>distal to</b> a second lesion, such as a slow-growing tumor
 </div>
 
 <!-- =================== RENAL =================== -->
-<h3 class="system" id="renal">Renal &amp; Genitourinary <span class="n">12 topics <span style="color:#9A5B0E">+ 6 board-style</span> <span style="color:#1F6A7E">+ 1 Aquifer</span></span></h3>
+<h3 class="system" id="renal">Renal &amp; Genitourinary <span class="n">12 topics <span style="color:#9A5B0E">+ 5 board-style</span> <span style="color:#1F6A7E">+ 1 Aquifer</span></span></h3>
 <p class="system-note">Two recurring lessons: normal values are eliminations, and a single discordant test component never overturns a convergent picture.</p>
 
 <div class="brief" id="pyelo" data-shelf="fm" data-nid="1556535179088 1575767268880" data-bp="renal">
@@ -7566,45 +7566,105 @@ It requires a nitrate-reducing organism (<b>Enterococcus, S. saprophyticus, and 
 <div class="traps"><div class="trapline"><span class="pill p-attr">Unchecked attribute</span><span class="trapwhy">Vesicoureteral reflux: Reflux produces recurrent <b>upper</b>-tract disease; this child is afebrile with suprapubic tenderness and no back pain across three episodes</span></div><div class="trapline"><span class="pill p-salient">Salient decoy</span><span class="trapwhy">Sexual abuse: Genitalia are normal, and anal fissures are a <b>common feature of chronic constipation</b>, which the stem has already established</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Inadequate treatment of prior infection: Three days of trimethoprim-sulfamethoxazole is <b>adequate</b> for a paediatric lower-tract infection, and a 6-week symptom-free gap means reinfection rather than relapse</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Primary immunodeficiency: Immunodeficiency presents with <b>severe</b> infections (pyelonephritis rather than cystitis) and with <b>multiple types</b> of infection; the history is otherwise unremarkable</span></div><div class="trapline"><span class="pill p-attr">Unchecked attribute</span><span class="trapwhy">No additional management after a second febrile <b>UTI</b> (urinary tract infection) with a normal ultrasound: right for a first febrile UTI. A second one needs a <b>VCUG</b> (voiding cystourethrogram) because ultrasound cannot show reflux</span></div><div class="trapline"><span class="pill p-seq">Sequencing trap</span><span class="trapwhy">Daily antibiotic prophylaxis: indicated for high-grade reflux, which is not yet known; the VCUG comes first</span></div></div>
 </div>
 
-<div class="brief" id="enuresis" data-shelf="fm peds" data-bp="renal behav">
+<div class="brief" id="enuresis" data-shelf="fm peds" data-bp="renal behav" data-replaces="bs-enuresis">
+<span class="alias" id="bs-enuresis"></span>
 <h4>Enuresis</h4>
-<p class="sub">Primary vs. secondary · both get a urinalysis</p>
-<div class="dp"><span class="lbl">The decision point</span>
-<p>A child who was dry for ≥6 months and is now wetting has <b>secondary</b> enuresis. Primary versus secondary changes the <i>differential</i>, but <b>both get a urinalysis first</b>. This one cheap test screens the entire organic differential. A plausible psychosocial explanation (divorce, new sibling) never substitutes for excluding organic disease.</p></div>
-<div class="crit"><span class="lbl">Defining criteria</span> <b>Secondary enuresis</b> — previously dry ≥6 months, now wetting · <b>First test, either type</b> — urinalysis</div>
-<table><caption>Urinalysis findings → organic causes</caption>
-<thead><tr><th>UA finding</th><th>Diagnosis</th></tr></thead>
-<tbody>
-<tr><td>Leukocyte esterase, nitrites</td><td><b>UTI</b> — can present as new incontinence without dysuria in children</td></tr>
-<tr><td><b>Glucosuria ± ketones</b></td><td>New-onset <b>type 1 diabetes</b> — the can't-miss</td></tr>
-<tr><td>Very low specific gravity</td><td>Diabetes insipidus</td></tr>
-<tr><td>Hematuria / proteinuria</td><td>CKD → metabolic panel, renal ultrasound</td></tr>
-</tbody>
-</table>
+<p class="sub">1&deg; vs 2&deg; &middot; mono- vs nonmonosymptomatic &middot; urinalysis and exam &middot; alarm vs desmopressin<span class="subq">Has the urine been tested, and what has been tried, for how long?</span></p>
+<nav class="jump"><a href="#en-dx">Diagnosis</a><a href="#en-mx">Management</a><a href="#en-bank">Practice</a></nav>
+
+<div class="dp"><span class="lbl">Bottom line</span>
+<p>Involuntary bedwetting at least twice weekly from age 5 is enuresis. Every child gets an examination and a urinalysis first, primary or secondary; a stressor never replaces them.</p>
+<p>Classify on two axes:</p>
+<ul class="bl"><li><b>Primary</b>: never dry for 6 months; usually maturational.</li>
+<li><b>Secondary</b>: dry 6 months or more, now wetting; look for a cause.</li>
+<li><b>Monosymptomatic</b>: bedwetting only.</li>
+<li><b>Nonmonosymptomatic</b>: daytime urgency or holding; treat constipation and daytime symptoms first. A weak stream or dribbling in a boy points to urethral valves.</li></ul>
+<p>Normal workup, nothing tried: education, reassurance and motivational therapy. Then an alarm for a durable cure, or desmopressin for a fast, event-driven effect.</p></div>
+
+<h5 class="tsec" id="en-dx">Diagnosis</h5>
+<div class="crit"><span class="lbl">Defining criteria</span> <b>Enuresis</b> &ndash; involuntary bedwetting at least twice weekly at age 5 or older &middot; <b>Secondary</b> &ndash; 6 months or more of continuous dryness, then wetting again &middot; <b>Nonmonosymptomatic</b> &ndash; daytime lower urinary tract symptoms with the bedwetting</div>
+<figure class="lcp"><p class="kick">Diagnostic workup</p><div class="ttl"><span><b class="step">1</b>Examine and test the urine in every child</span></div><ol class="path"><li class="pt"><span class="when">Every child, primary or secondary</span><div class="tile first"><div class="wt2"><p class="tn">Urinalysis</p><p class="wr2"><b>Glucose, with or without ketones</b><span class="mask">Type 1 diabetes: serum glucose and HbA1c (hemoglobin A1c)</span></p><p class="wr2"><b>Leukocyte esterase and nitrites</b><span class="mask">Urinary infection: culture and treat</span></p><p class="wr2"><b>Very low specific gravity</b><span class="mask">Diabetes insipidus: water deprivation test</span></p><p class="wr2"><b>Blood or protein</b><span class="mask">Kidney disease: metabolic panel, renal ultrasound</span></p></div><i class="plus" aria-label="and"></i><div class="wt2"><p class="tn">Examination and history</p><p class="wr2"><b>Daytime urgency, holding, hard stools</b><span class="mask">Nonmonosymptomatic: diary, treat constipation first</span></p><p class="wr2"><b>Weak stream or dribbling in a boy</b><span class="mask">Posterior urethral valves: ultrasound and VCUG (voiding cystourethrogram)</span></p><p class="wr2"><b>Sacral dimple or tuft, abnormal gait or reflexes</b><span class="mask">Spinal dysraphism: spinal MRI (magnetic resonance imaging)</span></p><p class="wr2"><b>Growth failure or hypertension</b><span class="mask">Kidney disease</span></p></div></div></li><li class="pt"><span class="when">Secondary, workup normal</span><div class="tile"><div class="wt2"><p class="tn">History</p><p class="wr2"><b>New stressor</b><span class="mask">Address it; screen for abuse</span></p><p class="wr2"><b>Snoring or witnessed apneas</b><span class="mask">Obstructive sleep apnea, another cause to exclude</span></p><p class="wr2"><b>Recurrent urinary infections</b><span class="mask">Renal and bladder ultrasound, with or without VCUG</span></p></div></div></li><li class="pt end"><span class="when">Then</span><p class="pt-tx">All normal: enuresis is a clinical diagnosis. Tests only exclude a cause; with no cause found, treat by the ladder.</p></li></ol></figure>
+
+<h5 class="tsec" id="en-mx">Management and treatment</h5>
 <div class="tw">
-<table data-mask="4"><caption>Diagnostic workup</caption>
-<thead><tr><th>Test</th><th>Order</th><th>Result</th><th>What it points to</th></tr></thead>
+<table class="dense"><caption>Management ladder: monosymptomatic enuresis, no cause found</caption>
+<thead><tr><th>Tier</th><th>Intervention</th><th>Escalate when</th></tr></thead>
 <tbody>
-<tr><td>Urinalysis</td><td>First</td><td>Any <b>abnormal</b> finding, in primary or secondary enuresis</td><td>Branch by finding; a normal UA ends the organic search</td></tr>
-<tr><td>Serum glucose and HbA1c</td><td>By branch</td><td>Glucosuria with <b>high</b> serum glucose</td><td>New-onset type 1 diabetes</td></tr>
-<tr><td>Urine culture</td><td>By branch</td><td>LE and nitrites with <b>growth</b></td><td>UTI: treat</td></tr>
-<tr><td>Water deprivation test</td><td>By branch</td><td>Low specific gravity; urine stays <b>dilute</b></td><td>Diabetes insipidus: desmopressin response next</td></tr>
-<tr><td>Metabolic panel and renal ultrasound</td><td>By branch</td><td>Hematuria or proteinuria with <b>high</b> creatinine</td><td>Chronic kidney disease</td></tr>
-<tr><td>None: clinical diagnosis</td><td>Confirms</td><td>Enuresis is <b>clinical</b> once the UA is normal</td><td>Tests only exclude organic causes; then behavioral care, alarm, desmopressin</td></tr>
-</tbody>
-</table>
+<tr><td>1</td><td>Education, reassurance, motivational therapy (reward effort and routine, not dry nights); treat constipation; void every 3 hours while awake and before bed; no drinks 1 to 2 hours before bed, drink well in the morning</td><td>3 to 6 months without improvement, and the child or family is bothered</td></tr>
+<tr><td>2</td><td><b>Alarm</b>: best long-term cure; needs a motivated family; usually offered over age 6; consider stopping after 14 consecutive dry nights, restart on relapse.<br><b>Or desmopressin</b>: works fast, for camp or sleepovers; relapses more; limit evening fluids, none from 1 hour before the dose until 8 hours after (with oral dosing, hyponatremia is rare)</td><td>Alarm without improvement after 6 weeks: add or switch. Failure of both: tier 3</td></tr>
+<tr><td>3</td><td>Imipramine rarely (cardiotoxic in overdose); oxybutynin only with desmopressin or imipramine, not alone; urology referral</td><td>Top rung</td></tr>
+</tbody></table>
 </div>
-<h5 class="authored-hdr">Scenario bank</h5>
+<div class="crit"><span class="lbl">By diagnosis</span> <b>Under 5</b> &ndash; reassure; below the diagnostic age &middot; <b>Secondary</b> &ndash; treat the cause; with no cause found, use the ladder &middot; <b>Desmopressin toxicity</b> &ndash; headache, vomiting, seizure: hyponatremia; stop the drug; any neurologic symptoms: hypertonic saline; no symptoms: strict water restriction &middot; <b>Why the alarm lasts</b> &ndash; conditioning survives stopping it; desmopressin's effect does not</div>
+
+<h5 class="authored-hdr" id="en-bank">Practice</h5>
 <ol class="bank authored">
-<li data-type="dx" data-d1="Primary enuresis" data-d2="Overactive bladder" data-item-id="q_88b136166b31572fa806" data-item-version="1" data-item-status="ready" data-key-id="o_1afc90edf5735cb98a34" data-d1-id="o_0c4fc02134935cf58878" data-d2-id="o_96ee5e47379b50e9b97e">7 yo F dry for 2 years who is now wetting nightly → <b>Secondary enuresis</b> → urinalysis first</li>
-<li data-type="dx" data-d1="Diabetes insipidus" data-d2="Urinary tract infection" data-item-id="q_d7ab0f6d88c85fc8907e" data-item-version="1" data-item-status="ready" data-key-id="o_7a69df72edab5331ad19" data-d1-id="o_9f05c5ece5bc5fa88788" data-d2-id="o_1c629cddc7d652489465">7 yo F with enuresis whose urinalysis shows glucosuria and ketones → <b>New-onset diabetes mellitus</b> → glucose and HbA1c</li>
-<li data-type="dx" data-d1="Diabetes insipidus" data-d2="Behavioural regression" data-item-id="q_aee72a7d300a55b18d1a" data-item-version="1" data-item-status="ready" data-key-id="o_db8e321ef42b583d825e" data-d1-id="o_69f5db02897b5f669133" data-d2-id="o_9397e91f1a605a0d90b2">7 yo F with enuresis whose urinalysis shows leukocyte esterase and nitrites → <b>Urinary tract infection</b> → culture and treat</li>
-<li data-type="dx" data-d1="Urinary tract infection" data-d2="Primary enuresis" data-item-id="q_76838a88eef25aba9843" data-item-version="1" data-item-status="ready" data-key-id="o_f77cbf83978c5f4e99c6" data-d1-id="o_6bebe35571475070a138" data-d2-id="o_6d632f13d66159d4a4c7">7 yo F with enuresis and a very low urine specific gravity → <b>Diabetes insipidus</b> → water deprivation testing</li>
-<li data-type="dx" data-d1="Secondary enuresis" data-d2="Nocturnal polyuria" data-item-id="q_df2e8851633e5c7d9b40" data-item-version="1" data-item-status="ready" data-key-id="o_bb25e4618c2a5b0ebda7" data-d1-id="o_e3e58323488c551c9dd1" data-d2-id="o_92795242b8ae51d68517">5 yo M who has never been dry at night and is otherwise well → <b>Primary enuresis &mdash; below the diagnostic age gate</b> → reassurance</li>
-<li data-type="next" data-d1="Attribute it to stress and observe" data-d2="Refer to psychiatry" data-item-id="q_2d70c913ab9f5f8a9075" data-item-version="1" data-item-status="ready" data-key-id="o_3453a6b09af057e59cdf" data-d1-id="o_23e331d0e6975aa8aaa8" data-d2-id="o_f46fe477a2345600a4a2">7 yo F with enuresis and a plausible psychosocial stressor at home → <b>Obtain the urinalysis first</b></li>
+<li data-type="next" data-d1="Desmopressin" data-d2="Fluid restriction after 2 pm" data-item-id="q_ee4a95940f37e9b9b97a" data-item-version="1" data-item-status="ready" data-key-id="o_63c31258388316d5e58f" data-d1-id="o_1f668a4cf1489b513438" data-d2-id="o_645765c907075c43d61b" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">7-year-old boy wets the bed nightly</span>
+<span class="si">has never had a dry night</span>
+<span class="si">dry by day since age 4, no urgency or dribbling</span>
+<span class="ss">Nothing tried yet; three siblings were dry by age 3</span>
+<span class="sd">Afebrile &middot; examination normal &middot; urinalysis normal &middot; glucose 82 mg/dL</span> &rarr; <b>Education, reassurance and motivational therapy</b> &rarr; primary and monosymptomatic with a normal workup and nothing tried: start on the first rung; desmopressin skips a tier, and 2 pm is the wrong hour (limit the evening, drink well in the morning); siblings dry by 3 is a parental comparison, not a clue, while a family history of enuresis would support a maturational cause</li>
+<li data-type="dx" data-d1="Primary enuresis" data-d2="Overactive bladder" data-item-id="q_88b136166b31572fa806" data-item-version="2" data-item-status="ready" data-key-id="o_1afc90edf5735cb98a34" data-d1-id="o_0c4fc02134935cf58878" data-d2-id="o_96ee5e47379b50e9b97e" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">7-year-old girl has started wetting the bed nightly</span>
+<span class="si">was dry at night for 2 years</span>
+<span class="si">no daytime urgency, dysuria or dribbling</span>
+<span class="ss">Otherwise healthy</span>
+<span class="sd">Afebrile &middot; BP 98/60 mm Hg &middot; examination normal</span> &rarr; <b>Secondary enuresis</b> &rarr; 6 months or more of dryness before the wetting makes it secondary; a cause is sought, and the urinalysis comes first</li>
+<li data-type="next" data-d1="Attribute it to stress and observe" data-d2="Refer to psychiatry" data-item-id="q_2d70c913ab9f5f8a9075" data-item-version="2" data-item-status="ready" data-key-id="o_3453a6b09af057e59cdf" data-d1-id="o_23e331d0e6975aa8aaa8" data-d2-id="o_f46fe477a2345600a4a2" data-src="authored" data-lead-in="Which of the following is the most appropriate next step?"><span class="sl">7-year-old girl has wet the bed for 3 weeks</span>
+<span class="si">was dry at night for a year</span>
+<span class="si">began after her parents separated</span>
+<span class="ss">Parents ask for counseling only</span>
+<span class="sd">Afebrile &middot; BP 100/62 mm Hg &middot; examination normal</span> &rarr; <b>Obtain the urinalysis first</b> &rarr; a plausible stressor never replaces the urinalysis; one cheap test screens the organic causes, then address the stressor</li>
+<li data-type="dx" data-d1="Diabetes insipidus" data-d2="Urinary tract infection" data-item-id="q_d7ab0f6d88c85fc8907e" data-item-version="2" data-item-status="ready" data-key-id="o_7a69df72edab5331ad19" data-d1-id="o_9f05c5ece5bc5fa88788" data-d2-id="o_1c629cddc7d652489465" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">7-year-old girl has wet the bed for 2 weeks after a year dry</span>
+<span class="si">drinking far more than usual</span>
+<span class="si">tired, with 2 kg of weight loss</span>
+<span class="ss">No dysuria</span>
+<span class="sd">Afebrile &middot; urinalysis: glucose 3+, ketones 1+, specific gravity 1.030</span> &rarr; <b>New-onset diabetes mellitus</b> &rarr; glucosuria with ketones in new wetting is type 1 diabetes until proven otherwise: serum glucose and HbA1c (hemoglobin A1c)</li>
+<li data-type="dx" data-d1="Diabetes insipidus" data-d2="Behavioral regression" data-item-id="q_aee72a7d300a55b18d1a" data-item-version="2" data-item-status="ready" data-key-id="o_db8e321ef42b583d825e" data-d1-id="o_69f5db02897b5f669133" data-d2-id="o_42cd9d92e77f39ba947a" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">7-year-old girl has wet the bed for a week after a year dry</span>
+<span class="si">also has new daytime accidents</span>
+<span class="ss">No complaint of burning, and no stressor at home</span>
+<span class="sd">T 37.8 °C &middot; urinalysis: leukocyte esterase positive, nitrites positive, no glucose</span> &rarr; <b>Urinary tract infection</b> &rarr; a urinary infection can present as new wetting without dysuria in a child: urine culture, then treat</li>
+<li data-type="dx" data-d1="Urinary tract infection" data-d2="Primary enuresis" data-item-id="q_76838a88eef25aba9843" data-item-version="2" data-item-status="ready" data-key-id="o_f77cbf83978c5f4e99c6" data-d1-id="o_6bebe35571475070a138" data-d2-id="o_6d632f13d66159d4a4c7" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">7-year-old girl has wet the bed for a month after a year dry</span>
+<span class="si">drinks water through the night</span>
+<span class="si">large pale voids</span>
+<span class="ss">No dysuria</span>
+<span class="sd">Afebrile &middot; urinalysis: specific gravity 1.002, no glucose, no leukocytes</span> &rarr; <b>Diabetes insipidus</b> &rarr; a very low specific gravity in new wetting points to diabetes insipidus: a water deprivation test, then the desmopressin response</li>
+<li data-type="dx" data-d1="Primary monosymptomatic enuresis" data-d2="Secondary enuresis" data-item-id="q_de4be37a858a5c59ab0c" data-item-version="2" data-item-status="ready" data-key-id="o_a1d9921b5a58573a8294" data-d1-id="o_a9f0b178440150309b1a" data-d2-id="o_845a894de34357059976" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">6-year-old girl wets the bed nightly</span>
+<span class="si">has daytime urgency and squats on her heel to hold urine</span>
+<span class="si">stools hard, every 4 days</span>
+<span class="ss">Never dry at night</span>
+<span class="sd">Afebrile &middot; examination: stool palpable in the left lower quadrant</span> &rarr; <b>Nonmonosymptomatic enuresis</b> &rarr; daytime symptoms make it nonmonosymptomatic: bladder diary, and treat the constipation first, which is often curative</li>
+<li data-type="next" data-d1="Desmopressin" data-d2="Continue reward charts and routine" data-item-id="q_9faa21c84e2e5a39ba66" data-item-version="2" data-item-status="ready" data-key-id="o_070c03d55bcc53faa56a" data-d1-id="o_54f818cf689653508534" data-d2-id="o_0d8c08953e475f8f935f" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">7-year-old girl still wets the bed most nights</span>
+<span class="si">8 months of reward charts and a voiding routine</span>
+<span class="si">family distressed and keen to keep trying</span>
+<span class="ss">Dry by day; no constipation</span>
+<span class="sd">Afebrile &middot; examination and urinalysis normal</span> &rarr; <b>Enuresis alarm</b> &rarr; tier 1 has failed past 3 to 6 months in a bothered, motivated family: the alarm gives the most durable cure</li>
+<li data-type="next" data-d1="Enuresis alarm" data-d2="Oxybutynin" data-item-id="q_11fc98144a285b0bbd08" data-item-version="3" data-item-status="ready" data-key-id="o_11931c1b82b35ae9b4a9" data-d1-id="o_a3c80d41355b5af2864a" data-d2-id="o_8cad67b1869b5886830f" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">6-year-old girl who has never been dry at night goes to sleepaway camp next week</span>
+<span class="si">4 months of reward charts have helped only a little</span>
+<span class="ss">Dry by day; no constipation; parents want a quick fix</span>
+<span class="sd">Afebrile &middot; examination and urinalysis normal</span> &rarr; <b>Desmopressin</b> &rarr; event-driven beats durable: desmopressin works within days; the alarm needs weeks; oxybutynin is not used alone</li>
+<li data-type="dx" data-d1="Central diabetes insipidus" data-d2="Urinary tract infection" data-item-id="q_c774c1e43c8e5995bb32" data-item-version="2" data-item-status="ready" data-key-id="o_abee2392041e54a7aa7c" data-d1-id="o_76c8720958c45e36ab45" data-d2-id="o_c6cca2605c865909897f" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">6-year-old girl taking desmopressin for wetting the bed has headache and vomiting</span>
+<span class="si">had a seizure an hour ago</span>
+<span class="si">drank several cups of juice at a party tonight</span>
+<span class="sd">Afebrile &middot; BP 102/64 mm Hg &middot; serum sodium pending</span> &rarr; <b>Hyponatremia</b> &rarr; desmopressin is an ADH (antidiuretic hormone) analog; free-water retention gives both its effect and its hyponatremic seizures: stop it; a seizure needs hypertonic saline</li>
+<li data-type="dx" data-d1="Neurogenic bladder" data-d2="Primary nocturnal enuresis" data-item-id="q_a457a60b9ced565ab9fe" data-item-version="2" data-item-status="ready" data-key-id="o_05c6a796635353fa973c" data-d1-id="o_0319c3320deb579aba97" data-d2-id="o_8d5d45f591ce5bfa917e" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">7-year-old boy wets the bed nightly and dribbles by day</span>
+<span class="si">weak urinary stream</span>
+<span class="si">dribbling after voiding</span>
+<span class="ss">Never dry at night; no constipation or urgency</span>
+<span class="sd">Afebrile &middot; BP 104/66 mm Hg &middot; examination otherwise normal</span> &rarr; <b>Posterior urethral valves</b> &rarr; a weak stream or dribbling in a boy is posterior urethral valves until proven otherwise: renal ultrasound and VCUG (voiding cystourethrogram)</li>
+<li data-type="next" data-d1="Renal ultrasound" data-d2="Reassure and reassess in 6 months" data-item-id="q_051cc928257f5b15ae65" data-item-version="2" data-item-status="ready" data-key-id="o_427c6e74564152c69a82" data-d1-id="o_7810ab8774fd5a048661" data-d2-id="o_4ad0d71159bb5f2fb166" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">6-year-old girl wets the bed nightly and now has daytime accidents</span>
+<span class="si">a tuft of hair over the sacrum</span>
+<span class="si">brisk lower-extremity reflexes</span>
+<span class="ss">Dry by day from age 3 until this year; no constipation</span>
+<span class="sd">Afebrile &middot; BP 100/60 mm Hg &middot; urinalysis normal</span> &rarr; <b>Spinal MRI</b> &rarr; a sacral tuft with abnormal neurology is spinal dysraphism: spinal MRI (magnetic resonance imaging), not reassurance</li>
+<li data-type="next" data-d1="Enuresis alarm" data-d2="Desmopressin" data-item-id="q_2510a432a4295a879318" data-item-version="2" data-item-status="ready" data-key-id="o_ab52e5e5d86552109afb" data-d1-id="o_d4ae325cd1f45e0b9dd9" data-d2-id="o_08604214f7ff536a9799" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">4-year-old boy wets the bed most nights</span>
+<span class="si">dry during the day, no urgency or constipation</span>
+<span class="ss">Parents are worried because his cousin was dry at 3 and ask about medicine</span>
+<span class="sd">Afebrile &middot; growth normal &middot; examination normal</span> &rarr; <b>Reassurance</b> &rarr; enuresis is not diagnosed before age 5: reassure, since many children become dry without treatment</li>
 </ol>
-<div class="pearls"><span class="lbl">After a negative UA</span> First address the stressor. Then use behavioral measures: evening fluid restriction, timed voiding, no caffeine and a voiding diary. Next comes the <b>enuresis alarm</b>, the most effective long-term option, but it is a conditioning device for <i>primary</i> enuresis. Use <b>desmopressin</b> last, for sleepovers and camp; it carries high relapse and hyponatremia risk. Other secondary causes to exclude: <b>constipation</b> (very common), <b>sexual abuse</b> and <b>OSA</b> (obstructive sleep apnea).</div>
-<div class="pearls"><span class="lbl">Pairs with</span> Part I <b>Polyuria</b> covers the next step once a very low specific gravity points to diabetes insipidus. It covers the water deprivation test, what its result means, and the one child in whom it must not be done. Ask: <i>is the serum sodium high, low, or normal?</i></div>
+
+<div class="pearls"><span class="lbl">Pairs with</span> <b>Polyuria</b> covers the next step once a very low specific gravity points to diabetes insipidus: the water deprivation test, what its result means, and the one child in whom it must not be done. Ask: <i>is the serum sodium high, low, or normal?</i></div>
+<div class="rule"><span class="lbl">Transferable rule</span><p>Set the tier by what has been done and for how long: a normal workup means no further testing, and no treatment yet means no escalation. Pick the lowest rung not yet exhausted.</p></div>
+
 </div>
 <div class="brief" id="polyuria" data-shelf="fm peds" data-bp="renal endo">
 <h4>Polyuria</h4>
@@ -8001,52 +8061,6 @@ A positive cough stress test normally means stress incontinence. However, a <b>c
 A high <b>PVR</b> (postvoid residual) establishes that overflow is present, not that it is the only mechanism; <b>mixed incontinence</b> is common. A positive cough test may reflect a real coexisting stress component. A PVR is only interpretable when measured <b>after a normal void</b>. <span class="ex">⚠︎ PVR thresholds: normal under 50, abnormal over 200.</span></div>
 <div class="rule"><span class="lbl">Transferable rule</span> When a <b>quantitative measure of organ function</b> is given, check whether each candidate diagnosis is compatible with that number before weighing symptoms. Exclude a diagnosis the physiology forbids without arguing from symptoms.</div>
 <div class="traps"><span class="pill p-test">Test-overrides-findings</span></div>
-</div>
-
-<div class="brief bs" id="bs-enuresis" data-shelf="fm peds" data-bp="renal behav">
-<h4>Primary Monosymptomatic Enuresis: Management</h4>
-<p class="sub">Classify the enuresis, then choose the lowest treatment tier not yet exhausted</p>
-<div class="vignette" data-recon="partial"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; child with primary nocturnal enuresis, never having had a dry night, daytime-trained with no daytime symptoms; normal examination; nothing tried so far &middot; <b>Labs</b> &mdash; urinalysis normal, glucose normal &middot; <b>Q</b> &mdash; the most appropriate next step; options spanned reassurance with education and motivational therapy, an enuresis alarm and desmopressin</div>
-<div class="dp"><span class="lbl">The decision point</span>
-<p>Classify the enuresis first. It is <b>primary</b> ("never had a dry night") and <b>monosymptomatic</b> (daytime-trained, no daytime symptoms). With a normal exam, normal <b>UA</b> (urinalysis) and normal glucose, it is <b>maturational</b>. Because <b>nothing has been tried yet</b>, the first rung is <b>reassurance + education + motivational therapy</b>.</p></div>
-<table><caption>Classification axes — enuresis</caption>
-<thead><tr><th>Axis</th><th>The stem sentence that settles it</th><th>Consequence</th></tr></thead>
-<tbody>
-<tr><td>Primary vs. secondary</td><td>"<b>never</b> had a dry night"</td><td>Maturational — no cause-hunt needed</td></tr>
-<tr><td>Mono- vs. nonmonosymptomatic</td><td>Daytime-trained ×2 yr, <b>no daytime symptoms</b></td><td>No bladder diary, uroflow, or urology referral</td></tr>
-<tr><td>Organic cause excluded?</td><td><b>Normal UA, glucose 82</b>, normal exam</td><td>Every further-testing option is dead</td></tr>
-<tr><td>Anything tried?</td><td><b>Nothing</b></td><td>Every escalation option is dead</td></tr>
-</tbody>
-</table>
-<table><caption>Management ladder — primary monosymptomatic enuresis</caption>
-<thead><tr><th>Tier</th><th>Intervention</th><th>Escalate when</th></tr></thead>
-<tbody>
-<tr><td><b>1</b></td><td>Education + reassurance + motivational therapy (reward <b>effort and routine</b>, not dry nights) · treat constipation first · void before bed · moderate <b>evening</b> fluids with generous morning intake</td><td><b>3–6 months</b> without improvement <b>and</b> the child/family is bothered</td></tr>
-<tr><td><b>2</b></td><td><b>Enuresis alarm</b> — highest long-term cure, needs a motivated family, works over 2–3 months ⚠︎; continue until <b>14 consecutive dry nights</b> · <b>or desmopressin</b> — rapid onset for camp/sleepovers, high relapse, <b>hyponatremia risk</b></td><td>Failure of both</td></tr>
-<tr><td><b>3</b></td><td>Oxybutynin if detrusor overactivity · imipramine rarely (<b>cardiotoxic in overdose</b>) · urology referral</td><td>—</td></tr>
-</tbody>
-</table>
-<div class="pearls"><span class="lbl">Within-tier fork &amp; gating numbers</span> Choose the <b>alarm</b> for a durable cure in a motivated family; choose <b>desmopressin</b> for a fast, event-driven effect. <b>Diagnostic gates:</b> age <b>≥5</b> to diagnose · <b>6 months</b> of prior dryness defines secondary · daytime symptoms define nonmonosymptomatic. <b>Escalation gate: 3–6 months</b> of failed tier 1. <span class="ex">The 14-dry-nights endpoint is the Cochrane definition of complete response (⚠︎ rendered here as a stopping rule).</span></div>
-<div class="danger"><span class="lbl">Exit ramps</span>
-Daytime symptoms → nonmonosymptomatic pathway (diary, uroflow; <b>treat constipation, often curative</b>) · recurrent <b>UTIs</b> (urinary tract infections) → renal/bladder <b>US</b> (ultrasound) ± <b>VCUG</b> (voiding cystourethrogram) · <b>weak stream or dribbling in a boy</b> → posterior urethral valves · sacral dimple, tuft, abnormal gait → <b>spinal dysraphism</b>; obtain <b>MRI</b> (magnetic resonance imaging) · polyuria + polydipsia → <b>DM</b> (diabetes mellitus) or <b>DI</b> (diabetes insipidus) · growth failure or hypertension → renal disease · new onset after a stressor → screen for abuse.</div>
-<h5>Scenario bank</h5>
-<ol class="bank">
-<li data-type="next" data-d1="Desmopressin" data-d2="Continue reward charts and routine" data-item-id="q_9faa21c84e2e5a39ba66" data-item-version="1" data-item-status="ready" data-key-id="o_070c03d55bcc53faa56a" data-d1-id="o_54f818cf689653508534" data-d2-id="o_0d8c08953e475f8f935f"><b>6 yo F</b>, 8 months of reward charts and voiding routine, family distressed → <b>Enuresis alarm</b></li>
-<li data-type="next" data-d1="Enuresis alarm" data-d2="Oxybutynin" data-item-id="q_11fc98144a285b0bbd08" data-item-version="2" data-item-status="ready" data-key-id="o_11931c1b82b35ae9b4a9" data-d1-id="o_a3c80d41355b5af2864a" data-d2-id="o_8cad67b1869b5886830f"><b>6 yo F</b>, sleepaway <b>camp next week</b> → <b>Desmopressin</b> &rarr;  event-driven beats durable</li>
-<li data-type="dx" data-d1="Primary monosymptomatic enuresis" data-d2="Overactive bladder" data-item-id="q_df08d84df7dd57308445" data-item-version="1" data-item-status="ready" data-key-id="o_757996517ebd519c9551" data-d1-id="o_1113ae43bafe5e89a17e" data-d2-id="o_cd8c7f7dc2d157b585a9"><b>7 yo F</b>, dry ×1 year, <b>now wetting</b> → Secondary enuresis → <b>urinalysis and cause-hunt</b></li>
-<li data-type="dx" data-d1="Primary monosymptomatic enuresis" data-d2="Secondary enuresis" data-item-id="q_de4be37a858a5c59ab0c" data-item-version="1" data-item-status="ready" data-key-id="o_a1d9921b5a58573a8294" data-d1-id="o_a9f0b178440150309b1a" data-d2-id="o_845a894de34357059976"><b>6 yo F</b> with <b>daytime urgency and squatting maneuvers</b> → Nonmonosymptomatic enuresis → bladder diary, <b>treat the constipation first</b></li>
-<li data-type="next" data-d1="Enuresis alarm" data-d2="Desmopressin" data-item-id="q_a98ceb74ac72524cacc2" data-item-version="2" data-item-status="ready" data-key-id="o_01869b055eb55642a920" data-d1-id="o_a096c934bc275c5eb972" data-d2-id="o_a2d25e1a073b574cbf18"><b>6 yo F</b>, UA shows <b>glucosuria</b> → Workup for diabetes mellitus &rarr;  not enuresis management</li>
-<li data-type="dx" data-d1="Central diabetes insipidus" data-d2="Urinary tract infection" data-item-id="q_c774c1e43c8e5995bb32" data-item-version="1" data-item-status="ready" data-key-id="o_abee2392041e54a7aa7c" data-d1-id="o_76c8720958c45e36ab45" data-d2-id="o_c6cca2605c865909897f"><b>6 yo F</b> on desmopressin with <b>headache, vomiting, seizure</b> → <b>Hyponatremia</b> → stop the drug, restrict fluids</li>
-<li data-type="dx" data-d1="Neurogenic bladder" data-d2="Primary nocturnal enuresis" data-item-id="q_a457a60b9ced565ab9fe" data-item-version="1" data-item-status="ready" data-key-id="o_05c6a796635353fa973c" data-d1-id="o_0319c3320deb579aba97" data-d2-id="o_8d5d45f591ce5bfa917e"><b>7 yo M</b> with <b>weak stream and post-void dribbling</b> → Posterior urethral valves → renal US + VCUG</li>
-<li data-type="next" data-d1="Enuresis alarm" data-d2="Desmopressin" data-item-id="q_2510a432a4295a879318" data-item-version="1" data-item-status="ready" data-key-id="o_ab52e5e5d86552109afb" data-d1-id="o_d4ae325cd1f45e0b9dd9" data-d2-id="o_08604214f7ff536a9799"><b>4 yo M</b> bedwetting, worried parents → <b>Reassurance</b> → below the diagnostic age gate of 5 years</li>
-<li data-type="next" data-d1="Renal ultrasound" data-d2="Reassure and reassess in 6 months" data-item-id="q_051cc928257f5b15ae65" data-item-version="1" data-item-status="ready" data-key-id="o_427c6e74564152c69a82" data-d1-id="o_7810ab8774fd5a048661" data-d2-id="o_4ad0d71159bb5f2fb166"><b>6 yo F</b> with a <b>sacral tuft and brisk lower-extremity reflexes</b> → Spinal MRI</li>
-</ol>
-<div class="danger"><span class="lbl">Distractors</span>
-<b>Desmopressin</b>: <b>skipped tier</b>; it is the correct tier-2 drug, but zero months of tier 1 have been tried. <b>Fluid restriction after 2 pm</b>: <b>wrong parameter</b>; the intervention is real but the hour is wrong. Advise evening moderation (~after 5 pm) with morning compensation; restriction from 2 pm risks daytime dehydration. <b>Renal US</b> (ultrasound): <b>no indication</b>. <b>Urine culture</b>: <b>redundant workup</b>; the <b>UA</b> (urinalysis) is already normal. <b>Decoy:</b> "three siblings dry by age 3" is a parental comparison meant to mislead. A family history of enuresis <i>supports</i> the maturational diagnosis.</div>
-<div class="pearls"><span class="lbl">Paired pearls</span> Desmopressin is an <b>ADH (V2) analog</b> (antidiuretic hormone analog). Free-water retention causes both its effect and its <b>hyponatremic seizures</b>. The alarm works by <b>conditioning</b>, so its cure survives discontinuation; desmopressin's does not. Imipramine kills in overdose via <b>Na⁺-channel blockade → wide-QRS arrhythmias</b> (treat with bicarbonate). <b>Constipation</b> mimics bladder dysfunction; a distended rectum triggers detrusor overactivity.</div>
-<div class="pearls"><span class="lbl">Pairs with</span> Part I <b>Enuresis</b> covers secondary enuresis: dry ×1 year, now wetting → urinalysis. Ask: <b>"Ever dry for 6 months?"</b></div>
-<div class="rule"><span class="lbl">Transferable rule</span> Set the tier by <b>what has already been done and for how long</b>. A workup already reported as normal means no further testing, and no treatment so far means no escalation. Classify, find the tier, then pick the <b>lowest rung not yet exhausted</b>.</div>
-<div class="traps"><span class="pill p-seq">Skipped tier</span><span class="pill p-number">Wrong parameter</span><span class="pill p-mirror">Mirror twin</span></div>
 </div>
 
 

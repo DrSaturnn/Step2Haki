@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": ".lcw .rax em{position:absolute;right:0;top:-1px;font-style:normal;font-size:12px;font-weight:700;color:var(--muted);line-height:1}\n</style>",
+   "with": ".lcw .rax em{position:absolute;right:0;top:-1px;font-style:normal;font-size:12px;font-weight:700;color:var(--muted);line-height:1}\n.brief .sub .subq{display:block;margin-top:3px;font-style:italic}\n</style>",
+   "note": "subtitle: scope line then an italic question line (Jonathan 2026-10-03)"
+  }
+ ]
+}
