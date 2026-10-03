@@ -580,7 +580,7 @@ def main():
     # ---- K1 mnemonics carried and highlighted; K2 scale references resolve
     def mnems(html_):
         out = []
-        for mm in re.finditer(r'(?:<h5[^>]*>(.*?)</h5>\s*)?<ul class="(plain(?: mnem)?)"([^>]*)>(.*?)</ul>', html_, re.S):
+        for mm in re.finditer(r'(?:<h5[^>]*>((?:(?!</?h5).)*?)</h5>\s*)?<ul class="(plain(?: mnem)?)"([^>]*)>(.*?)</ul>', html_, re.S):
             lis = re.findall(r'<li[^>]*>(.*?)</li>', mm.group(4), re.S)
             heads = [re.match(r'\s*<b(?: class="mn")?>([^<]{1,12})</b>', li) for li in lis]
             heads = [h if h and not (h.group(1).rstrip().endswith(':') and 'class="mn"' not in h.group(0)) else None for h in heads]
