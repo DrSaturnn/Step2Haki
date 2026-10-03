@@ -2,6 +2,35 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-02 s55: Peds MSK: foot puncture infection (C5 fixed; NBME item to its framing block) and torticollis in the lean style; both now topic briefs; every workup path labelled Diagnostic workup with wider result labels
+
+```
+Page: 216 briefs, 2132 items -> 216 briefs, 2130 items
+Briefs changed (16):
+  - septic-hip (Septic Arthritis in a Child: Aspirate, or Treat and Recheck?): prose edited (+37 chars)
+  - limp (The Limping Child: Sick or Well, Then Age and Time): prose edited (+179 chars)
+  - sjia (Juvenile Idiopathic Arthritis: Count the Joints, Chart the Fever): prose edited (+37 chars)
+  - nursemaid (Child Won't Use the Arm: Reduce or Image?): prose edited (+37 chars)
+  - scfe (Slipped Capital Femoral Epiphysis: Keep Off It and Pin It): prose edited (+37 chars)
+  - myositis-ossificans (Myositis Ossificans: Did the Pain Resolve and Come Back?): prose edited (+37 chars)
+  - growing-pains (Bilateral Leg Pain in a Child: Is the Examination Normal?): prose edited (+37 chars)
+  - bone-tumors (Bone Lesion in a Child: Where It Sits and What It Does Next): prose edited (+37 chars)
+  - scheuermann (Adolescent Kyphosis: Does the Curve Correct?): prose edited (+37 chars)
+  - bs-puncture-osteomyelitis (Foot Puncture Infection: Name the Organism from the Exposure and the Clock): 1 item added (q_de2e508dab3159711357); items edited (q_704d96de81771c775d10, q_7ce0ba2045a93f935d69, q_d5e0eba54097f71a83a0, q_9bee21d9322103ff15d3); versions bumped (q_704d96de81771c775d10 v1->v2, q_7ce0ba2045a93f935d69 v1->v2, q_d5e0eba54097f71a83a0 v1->v2, q_9bee21d9322103ff15d3 v1->v2); attrs set (brief class; q_9bee21d9322103ff15d3 data-lead-in); ITEMS REMOVED (q_a5490882ad76890a739b); prose edited (+2034 chars)
+  - bs-torticollis (Infant Head Tilt and Flat Head: Which Way Does the Ear Point?): 1 item added (q_2785e273f637f0e7cd0b); items edited (q_69f93af9bf4857c7ab54, q_2ddf479cfa3b55f88f4a, q_dcee52bc4c4f56a092a9, q_aec0474cacb25d25a252, q_fa278e2e3e52501580b1, q_d667351ae9a15bde8a37, q_1877179a99655cb584b4); versions bumped (q_69f93af9bf4857c7ab54 v1->v2, q_2ddf479cfa3b55f88f4a v1->v2, q_dcee52bc4c4f56a092a9 v1->v2, q_aec0474cacb25d25a252 v1->v2, q_fa278e2e3e52501580b1 v2->v3, q_d667351ae9a15bde8a37 v1->v2, q_1877179a99655cb584b4 v1->v2); attrs set (brief class; q_69f93af9bf4857c7ab54 data-lead-in; q_2ddf479cfa3b55f88f4a data-lead-in; q_dcee52bc4c4f56a092a9 data-lead-in; q_aec0474cacb25d25a252 data-lead-in; q_d667351ae9a15bde8a37 data-lead-in; q_1877179a99655cb584b4 data-lead-in); ITEMS REMOVED (q_36648710cbec530aa34d, q_6180430f0cf75084baa3, q_e85ad792a91453aca090); prose edited (-1024 chars)
+  - bs-brachial-plexus (Brachial Plexus Injury at Birth): prose edited (+56 chars)
+  - vpshunt (VP Shunt Complications): prose edited (+12 chars)
+  - bs-posterior-fossa (Posterior Fossa Localization): prose edited (+12 chars)
+  - psychosis-duration (Psychosis in an Adult: Rule Out a Cause, Then Time It): prose edited (+37 chars)
+  - bipolar-mania (Bipolar Disorder: Rule Out a Cause, Time the Episode, Then Treat): prose edited (+37 chars)
+Other page changes (nav, headers, scripts): +296 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 216 briefs, 2130 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 216 | bankwraps 216 | mcq 2130 (axCheck 2130, reveal-only 0) | malformed 0 | crit gridded 146/155 | vignette gridded 124/124 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-02 s54: Peds MSK: bone tumors and Scheuermann kyphosis in the lean style; UWorld-tagged items archived and rewritten; Cobb brace range and bracing key corrected
 
 ```
