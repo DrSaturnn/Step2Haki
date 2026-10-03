@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="ax-build" content="s69|2026-10-03">
+<meta name="ax-build" content="s70|2026-10-03">
 <title>Step2Haki — Clinical Board Briefs</title>
 <style>
 :root{
@@ -1365,15 +1365,14 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
   <input id="search" type="search" placeholder="Search topics, findings, drugs…" autocomplete="off">
   <div id="navlinks">
 
-    <div class="sect">Musculoskeletal <span class="count">19</span></div>
+    <div class="sect">Musculoskeletal <span class="count">18</span></div>
     <a href="#pmr">Polymyalgia Rheumatica</a>
     <a href="#scaphoid">Wrist and Hand Pain and Numbness</a>
     <a href="#backpain">Low Back Pain in an Adult</a>
     <a href="#hippos">Hip Injury in an Adult</a>
     <a href="#gtps">Hip and Thigh Pain and Numbness</a>
-    <a href="#inflam-back">Inflammatory Back Pain</a>
     <a href="#oa-pharm">Osteoarthritis</a>
-    <a href="#septic-bursitis">Septic Bursitis</a>
+    <a href="#septic-bursitis">Hot Joint or Bursa in an Adult</a>
     <a href="#septic-hip">Septic Arthritis and Transient Synovitis in a Child</a>
     <a href="#limp">The Limping Child</a>
     <a href="#sjia">Juvenile Idiopathic Arthritis</a>
@@ -1386,8 +1385,6 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
     <a href="#bs-puncture-osteomyelitis">Foot Puncture Wounds and Osteomyelitis</a>
     <a href="#bs-torticollis">Torticollis and Plagiocephaly in an Infant</a>
 <div class="navsub">Board-style</div>
-    <a class="bs" href="#bs-septic-adult">Acute Hot Joint (adult)</a>
-    <a class="bs" href="#bs-lbp-acute">Acute LBP, No Red Flags</a>
     <a class="bs" href="#bs-brachial-plexus">Birth Brachial Plexus Injury</a>
     <div class="navsub aq">Aquifer</div>
     <a class="aq" href="#shoulder-rom">Shoulder Pain: the ROM Rule</a>
@@ -1405,7 +1402,6 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
     <a class="aq" href="#bs-shock">Shock in Children</a>
     <a class="aq" href="#bs-infant-feeding">Infant Feeding at 6 Months</a>
     <a class="aq" href="#bs-tanner">Sexual Maturity Rating</a>
-    <a class="aq" href="#bs-ftt">Faltering Weight</a>
     <a class="aq" href="#bs-preterm-followup">Prematurity Follow-Up</a>
     <a class="aq" href="#aq-infant-hypotonia">Infant with Hypotonia</a>
     
@@ -1495,7 +1491,7 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
     <div class="navsub aq">Aquifer</div>
     <a class="aq" href="#aq-puffy-eyes">Child with Puffy Eyes</a>
     
-    <div class="sect">Endocrine &amp; Bone <span class="count">10</span></div>
+    <div class="sect">Endocrine &amp; Bone <span class="count">11</span></div>
     <a href="#thyroid">Thyroid Disease in an Adult</a>
     <a href="#levo">Levothyroxine Titration</a>
     <a href="#gynecomastia">Male Breast Enlargement</a>
@@ -1506,9 +1502,9 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
     <a href="#tumor-syndromes">Inherited Tumor Syndromes</a>
     <a href="#precocious-puberty">Precocious Puberty</a>
     <a href="#homocystinuria">Tall Stature and Marfanoid Habitus</a>
+    <a href="#bs-short-stature">Abnormal Growth in a Child</a>
     <div class="navsub">Board-style</div>
     <a class="bs" href="#bs-dm-bundle">Diabetes Annual Bundle</a>
-    <a class="bs" href="#bs-short-stature">Short Stature</a>
     
     <div class="sect">Hematology <span class="count">6</span></div>
     <a href="#anemia-thrombocytopenia">Anemia with Thrombocytopenia</a>
@@ -1731,7 +1727,7 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
 <!-- =================== MSK =================== -->
 
 <!-- =================== MSK =================== -->
-<h3 class="system" id="msk">Musculoskeletal &amp; Rheumatology <span class="n">18 topics <span style="color:#9A5B0E">+ 5 board-style</span> <span style="color:#1F6A7E">+ 1 Aquifer</span></span></h3>
+<h3 class="system" id="msk">Musculoskeletal &amp; Rheumatology <span class="n">17 topics <span style="color:#9A5B0E">+ 3 board-style</span> <span style="color:#1F6A7E">+ 1 Aquifer</span></span></h3>
 <p class="system-note">The shelf's densest system. Nearly every stem is decided by a maneuver, a time course, or a red flag hiding in the past medical history.</p>
 
 <div class="brief" id="pmr" data-shelf="fm" data-bp="msk immune">
@@ -1912,49 +1908,164 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
 
 </div>
 
-<div class="brief" id="backpain" data-shelf="fm" data-bp="msk">
+<div class="brief" id="backpain" data-shelf="fm" data-bp="msk immune" data-replaces="bs-lbp-acute inflam-back">
+<span class="alias" id="bs-lbp-acute"></span><span class="alias" id="inflam-back"></span>
 <h4>Low Back Pain in an Adult</h4>
-<p class="sub">When to image · when not to</p>
-<div class="dp"><span class="lbl">The decision point</span>
-<p>Acute low back pain (&lt;4 weeks) needs <b>no imaging</b> unless a red flag is present. Red flags for <b>malignancy do not require a neurologic deficit</b>; early vertebral metastasis is neurologically silent. A negative result lowers probability according to the test's performance. It supports ruling out disease only when the remaining probability is sufficiently low for the decision. Here, a normal neurologic examination does not remove the malignancy concern raised by the <b>past medical history</b>.</p></div>
-<div class="crit"><span class="lbl">Defining criteria</span> <b>Imaging gate</b> — acute low back pain &lt;4 weeks → no imaging unless a red flag fires · <b>Malignancy red flags</b> — do not require a neurologic deficit; early vertebral metastasis is neurologically silent</div>
-<table data-mask="3"><caption>Low back pain — red flags by category</caption>
+<p class="sub">red flags and when to image &middot; acute pain with no red flags &middot; inflammatory back pain and spondyloarthritis<span class="subq">Is there a red flag or a neurologic deficit, and does the pain improve when the patient moves?</span></p>
+<nav class="jump"><a href="#lbp-dx">Diagnosis</a><a href="#lbp-mx">Management</a><a href="#lbp-bank">Practice</a></nav>
+
+<div class="dp"><span class="lbl">Bottom line</span>
+<p>Acute low back pain (under 4 weeks) with no red flag and a normal neurologic exam: no imaging. Treat with an NSAID (nonsteroidal anti-inflammatory drug) and tell the patient to stay active.</p>
+<p>Read the past medical history before the population rule:</p>
+<ul class="bl"><li><b>Prior cancer</b>: MRI (magnetic resonance imaging) with contrast; early vertebral metastasis is neurologically silent, so a normal neurologic exam does not remove the concern.</li>
+<li><b>Urinary retention or saddle anesthesia</b>: emergent MRI and decompression.</li>
+<li><b>Upper motor neuron signs with known or suspected cancer</b> (cord compression): dexamethasone first, then emergent whole-spine MRI.</li></ul>
+<p>Night pain that improves once the patient gets up is inflammatory; night pain unrelieved by moving, with age over 50, prior cancer or weight loss, is malignant.</p></div>
+
+<h5 class="tsec" id="lbp-dx">Diagnosis</h5>
+<div class="tw">
+<table class="dense"><caption>Red flags by category</caption>
 <thead><tr><th>Category</th><th>Red flags</th><th>Imaging</th></tr></thead>
 <tbody>
-<tr><td>Malignancy</td><td><b>Prior cancer</b>, age &gt;50, weight loss, <b>night / rest pain</b>, pain &gt;4–6 wks</td><td><b>MRI with contrast</b>; X-ray + ESR/CRP if suspicion moderate</td></tr>
-<tr><td>Infection</td><td><b>Fever</b>, IVDU, recent bacteremia, immunosuppression, recent spinal procedure</td><td>MRI with contrast + blood cultures</td></tr>
-<tr><td>Fracture</td><td>Age &gt;70, osteoporosis, <b>chronic steroids</b>, trauma</td><td><b>X-ray first</b></td></tr>
-<tr><td>Cauda equina <span class="tag t-em">Emergency</span></td><td><b>Urinary retention</b> (most sensitive), saddle anesthesia, bilateral sciatica, ↓ anal tone</td><td><b>Emergent MRI + decompression</b></td></tr>
-<tr><td>Cord compression <span class="tag t-em">Emergency</span></td><td>UMN signs, hyperreflexia, <b>sensory level</b></td><td><b>Dexamethasone first</b>, then whole-spine MRI</td></tr>
-<tr><td>Inflammatory (AS)</td><td>Age &lt;40, &gt;3 months, <b>better with exercise, worse with rest</b>, HLA-B27</td><td>SI joint X-ray → MRI</td></tr>
-<tr><td>AAA</td><td>Age &gt;60, atherosclerosis, pulsatile mass, tearing pain</td><td>Ultrasound / CTA</td></tr>
-</tbody>
-</table>
-<div class="tw">
-<table data-mask="4"><caption>Diagnostic workup</caption>
-<thead><tr><th>Test</th><th>Order</th><th>Result</th><th>What it points to</th></tr></thead>
-<tbody>
-<tr><td>History and exam for red flags</td><td>Screen</td><td><b>No red flag</b> and pain under 4 weeks</td><td>No imaging; NSAIDs and stay active</td></tr>
-<tr><td>Lumbar radiograph</td><td>By branch</td><td>Vertebral <b>compression fracture</b></td><td>Age over 70, osteoporosis, chronic steroids or trauma</td></tr>
-<tr><td>MRI with contrast, plus blood cultures if febrile</td><td>Confirms</td><td><b>Vertebral body</b> metastasis or discitis-osteomyelitis</td><td>Prior cancer, night pain, fever or injection drug use; a normal neuro exam does not remove the concern</td></tr>
-<tr><td>Emergent whole-spine MRI</td><td>By branch</td><td><b>Cord or cauda equina</b> compression</td><td>Urinary retention, saddle anesthesia or UMN signs; dexamethasone first when cord compression causes deficits</td></tr>
-<tr><td>Abdominal ultrasound or CTA</td><td>By branch</td><td><b>Aortic aneurysm</b></td><td>Age over 60, pulsatile mass; unstable with hypotension goes straight to surgery</td></tr>
-<tr><td>Plain radiograph for suspected metastasis</td><td>Skip</td><td>Often <b>normal</b>; misses 30 to 50% of bone loss</td><td>Prior cancer with back pain goes to MRI with contrast</td></tr>
-</tbody>
-</table>
+<tr><td>Malignancy</td><td>Prior cancer, over 50, weight loss, night or rest pain, pain over 4 to 6 weeks</td><td>MRI with contrast; radiograph plus ESR (erythrocyte sedimentation rate) or CRP (C-reactive protein) if suspicion is moderate</td></tr>
+<tr><td>Infection</td><td>Fever, injection drug use, recent bacteremia, immunosuppression, recent spinal procedure</td><td>MRI with contrast plus blood cultures</td></tr>
+<tr><td>Fracture</td><td>Over 70, osteoporosis, chronic steroids, trauma</td><td>Radiograph first</td></tr>
+<tr><td>Cauda equina (emergency)</td><td>Urinary retention (most sensitive), saddle anesthesia, bilateral sciatica, reduced anal tone</td><td>Emergent MRI and decompression</td></tr>
+<tr><td>Cord compression (emergency)</td><td>Upper motor neuron signs, hyperreflexia, sensory level</td><td>Emergent whole-spine MRI; dexamethasone first only when cancer is known or suspected</td></tr>
+<tr><td>Inflammatory</td><td>Under 40, over 3 months, better with exercise, worse with rest, HLA-B27 (human leukocyte antigen B27)</td><td>Sacroiliac (SI) joint radiograph, then MRI</td></tr>
+<tr><td>Abdominal aortic aneurysm</td><td>Over 60, atherosclerosis, pulsatile mass, tearing pain</td><td>Ultrasound or CT (computed tomography) angiography</td></tr>
+</tbody></table>
 </div>
-<h5 class="authored-hdr">Scenario bank</h5>
+<figure class="lcp"><p class="kick">Diagnostic workup</p><div class="ttl"><span><b class="step">1</b>Red flags first, then pain behavior</span></div><ol class="path"><li class="pt"><span class="when">Every back pain</span><div class="tile first"><div class="wt2"><p class="tn">History and exam for red flags</p><p class="wr2"><b>None, under 4 weeks, neurologic exam normal</b><span class="mask">No imaging: an NSAID and stay active</span></p><p class="wr2"><b>Any red flag</b><span class="mask">Image by category (table above); a normal neurologic exam does not cancel a cancer flag</span></p></div><i class="plus" aria-label="and"></i><div class="wt2"><p class="tn">Response to rest and activity</p><p class="wr2"><b>Better with movement, under 40, over 3 months</b><span class="mask">Inflammatory: sacroiliac joint radiographs</span></p><p class="wr2"><b>Night pain unrelieved by moving, with age over 50, prior cancer or weight loss</b><span class="mask">Malignancy: MRI</span></p></div></div></li><li class="pt end"><span class="when">Then</span><p class="pt-tx">Sacroiliac joint radiographs normal with suspicion still high: MRI of the sacroiliac joints (active sacroiliitis with bone marrow edema). HLA-B27 only supports; it is common in the general population. Skip rheumatoid factor and anti-CCP (cyclic citrullinated peptide): spondyloarthritis is seronegative.</p></li></ol></figure>
+<div class="tw">
+<table class="dense"><caption>Inflammatory versus mechanical</caption>
+<thead><tr><th></th><th>Inflammatory</th><th>Mechanical</th></tr></thead>
+<tbody>
+<tr><td>Onset</td><td>Under 40, insidious, over 3 months</td><td>Any age, often acute after an event</td></tr>
+<tr><td>Night pain</td><td>Second half of the night</td><td>Usually absent</td></tr>
+<tr><td>Morning stiffness</td><td>Over 30 minutes</td><td>Under 30 minutes</td></tr>
+<tr><td>Rest and activity</td><td>Worse with rest, better with movement</td><td>Better with rest, worse with activity</td></tr>
+<tr><td>NSAID response</td><td>Dramatic</td><td>Variable</td></tr>
+</tbody></table>
+</div>
+<div class="crit"><span class="lbl">Defining findings</span> <b>Inflammatory back pain</b> &ndash; enthesitis, where tendons and ligaments insert into bone (rheumatoid arthritis causes synovitis instead) &middot; <b>Spondyloarthritis (PAIR)</b> &ndash; psoriatic, ankylosing spondylitis, inflammatory bowel disease-associated, reactive; seronegative (rheumatoid factor negative), HLA-B27 associated; enthesitis, dactylitis, uveitis &middot; <b>Ankylosing spondylitis</b> &ndash; young men; HLA-B27 in about 90% (supportive, not diagnostic); sacroiliitis first; reduced Schober test and chest expansion, lost lumbar lordosis, late bamboo spine &middot; <b>Its complications</b> &ndash; anterior uveitis (25 to 40%), aortitis with aortic regurgitation, AV (atrioventricular) block, apical pulmonary fibrosis, immunoglobulin A nephropathy, a rigid spine that fractures with minor trauma &middot; <b>Vertebral metastasis</b> &ndash; seeds the vertebral body through the valveless Batson plexus; pedicle loss gives the winking owl sign; bone-seeking primaries &ldquo;BLT (breast, lung, thyroid) with a Kosher (kidney) Pickle (prostate)&rdquo;; plain films miss 30 to 50% of bone loss</div>
+
+<h5 class="tsec" id="lbp-mx">Management and treatment</h5>
+<div class="tw">
+<table class="dense"><caption>Management ladder: acute low back pain</caption>
+<thead><tr><th>Tier</th><th>Intervention</th><th>Escalate when</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>NSAID and stay active, no bed rest; heat or a short muscle relaxant optional</td><td>No better at 4 to 6 weeks, or a red flag appears</td></tr>
+<tr><td>2</td><td>Physical therapy (PT); MRI if radicular symptoms persist</td><td>Radicular symptoms 6 weeks or more</td></tr>
+<tr><td>3</td><td>Epidural steroid injection</td><td>Failed conservative therapy</td></tr>
+<tr><td>4</td><td>Surgical referral</td><td>Progressive deficit, cauda equina, refractory pain</td></tr>
+</tbody></table>
+</div>
+<div class="crit"><span class="lbl">By diagnosis</span> <b>Ankylosing spondylitis</b> &ndash; NSAID and exercise, then a tumor necrosis factor (TNF) or interleukin-17 inhibitor; methotrexate and sulfasalazine help peripheral, not axial, disease; screen for latent tuberculosis before a TNF inhibitor &middot; <b>Malignant cord compression with deficits</b> &ndash; dexamethasone before imaging, the one place treatment precedes diagnosis &middot; <b>Unstable aneurysm</b> &ndash; straight to surgery</div>
+<div class="pearls"><span class="lbl">Why no imaging</span> Early imaging brings more surgery without better outcomes. Asymptomatic disc bulges and degenerative change are near-universal by middle age, so a scan mostly finds incidental lesions that invite intervention. About 90% of acute low back pain and of sciatica resolves within 6 weeks.</div>
+
+<h5 class="authored-hdr" id="lbp-bank">Practice</h5>
 <ol class="bank authored">
-<li data-type="dx" data-d1="Mechanical low back pain" data-d2="Lumbar strain" data-item-id="q_cf0ff7a4070e508fa4cf" data-item-version="1" data-item-status="ready" data-key-id="o_eaec512377c85980b596" data-d1-id="o_bddfb9c5735559df8175" data-d2-id="o_57c52fed036050b1a6eb">58 yo M, back pain, prior prostate cancer, night pain, normal neurologic exam → <b>Malignancy</b> → MRI with contrast</li>
-<li data-type="dx" data-d1="Mechanical low back pain" data-d2="Ankylosing spondylitis" data-item-id="q_eef94f8211e2526ab3f3" data-item-version="1" data-item-status="ready" data-key-id="o_bd5d4b341ebf506d8a89" data-d1-id="o_4f8b8edd1d705bc59422" data-d2-id="o_d890fbf89abe5de3ad0c">34 yo M who injects drugs, back pain with fever and focal spinal tenderness → <b>Vertebral osteomyelitis</b> → MRI plus blood cultures</li>
-<li data-type="dx" data-d1="Malignancy" data-d2="Cauda equina syndrome" data-item-id="q_f985cb5d2b5c5182b518" data-item-version="1" data-item-status="ready" data-key-id="o_2a1d1352e44e5cf4967c" data-d1-id="o_277145c644ab593f9c41" data-d2-id="o_abfda7502a835b189f27">70 yo F on chronic prednisone, acute back pain after a minor fall → <b>Vertebral compression fracture</b> → lumbar X-ray</li>
-<li data-type="dx" data-d1="Lumbar radiculopathy" data-d2="Spinal stenosis" data-item-id="q_e98b2894b8d45d1a818f" data-item-version="1" data-item-status="ready" data-key-id="o_e52e6bb1e29c5ce1a903" data-d1-id="o_844f8fac3da35801a482" data-d2-id="o_b044f3e7f5db5493a7d8">48 yo M, back pain with urinary retention and saddle anesthesia → <b>Cauda equina syndrome</b> → emergent MRI and decompression</li>
-<li data-type="dx" data-d1="Vertebral compression fracture" data-d2="Renal colic" data-item-id="q_dc9cacc2519851899c0f" data-item-version="1" data-item-status="ready" data-key-id="o_9c53daef3324596e8240" data-d1-id="o_0c09409454b95eaca1af" data-d2-id="o_0cc4180df4785e789aa4">72 yo M, back pain with a pulsatile abdominal mass and hypotension → <b>Ruptured abdominal aortic aneurysm</b> → immediate surgical evaluation</li>
-<li data-type="test" data-d1="Lumbar X-ray" data-d2="MRI of the lumbar spine" data-item-id="q_9963f69c4c925c398e69" data-item-version="2" data-item-status="ready" data-key-id="o_6b37d54c3ce45b629db2" data-d1-id="o_fd58ee76b4ee51efb16b" data-d2-id="o_9afeb400f9795b278bd5" data-lead-in="Which of the following is the most appropriate diagnostic study to obtain at this time?">40 yo M, acute low back pain under 4 weeks, no red flags, normal exam → <b>No imaging</b> → NSAIDs and stay active</li>
+<li data-type="test" data-d1="Lumbar radiograph" data-d2="MRI of the lumbar spine" data-item-id="q_9963f69c4c925c398e69" data-item-version="3" data-item-status="ready" data-key-id="o_6b37d54c3ce45b629db2" data-d1-id="o_46ef8ea2c38fc4cebd88" data-d2-id="o_9afeb400f9795b278bd5" data-lead-in="Which of the following is the most appropriate diagnostic study to obtain at this time?" data-src="authored"><span class="sl">40-year-old man has 1 week of low back pain</span>
+<span class="si">began 1 day after moving furniture</span>
+<span class="si">tender over the paraspinal muscles, not the spine</span>
+<span class="ss">No fever, chills, constipation or urinary incontinence</span>
+<span class="sd">Afebrile &middot; reflexes, strength and sensation normal</span> &rarr; <b>No imaging</b> &rarr; acute pain with a mechanical cause and a history full of pertinent negatives needs no imaging: an NSAID (nonsteroidal anti-inflammatory drug) and stay active</li>
+<li data-type="next" data-d1="Oral naproxen" data-d2="Oxycodone as needed for 2 weeks" data-item-id="q_6a5c14438a75598e8d50" data-item-version="2" data-item-status="ready" data-key-id="o_8921dad7db8c53608838" data-d1-id="o_73718e6af8535f4fbde8" data-d2-id="o_8f7d10e3341cfd625eab" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">47-year-old woman has 5 days of low back pain after gardening</span>
+<span class="si">chronic kidney disease, stage 3</span>
+<span class="si">bleeding gastric ulcer last year</span>
+<span class="ss">No fever, weight loss or bladder change</span>
+<span class="sd">Creatinine 1.9 mg/dL &middot; neurologic exam normal</span> &rarr; <b>Acetaminophen or a topical NSAID</b> &rarr; same tier, a different agent: kidney disease and a prior bleed rule out an oral NSAID, so acetaminophen or a topical NSAID</li>
+<li data-type="next" data-d1="Continue conservative care" data-d2="Emergent decompression" data-item-id="q_876de4a7d5c355daaae2" data-item-version="2" data-item-status="ready" data-key-id="o_438d434e8aa2575f8c4d" data-d1-id="o_b0601ac61e135730ba1e" data-d2-id="o_62c6def43f8e57878936" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">47-year-old woman has 8 weeks of low back pain</span>
+<span class="si">pain shoots down the lateral leg to the top of the foot</span>
+<span class="si">no better with an NSAID</span>
+<span class="ss">No bladder change</span>
+<span class="sd">Afebrile &middot; strength normal &middot; left straight-leg raise positive</span> &rarr; <b>MRI, PT, consider epidural</b> &rarr; radicular symptoms past 6 weeks: MRI (magnetic resonance imaging) and physical therapy (PT), with an epidural steroid injection if conservative care keeps failing</li>
+<li data-type="next" data-d1="Continue conservative care" data-d2="Emergent decompression" data-item-id="q_d1be25628a115e579726" data-item-version="3" data-item-status="ready" data-key-id="o_c8036d6b9ca55803be35" data-d1-id="o_8b2becca88a7517b90b0" data-d2-id="o_0aeee48ef202509ab60d" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">47-year-old woman has 3 weeks of low back and left leg pain</span>
+<span class="si">now cannot lift the front of her left foot</span>
+<span class="si">foot slaps on walking</span>
+<span class="ss">No bladder or bowel change</span>
+<span class="sd">Afebrile &middot; left ankle dorsiflexion 3/5 &middot; saddle sensation normal</span> &rarr; <b>Urgent MRI</b> &rarr; a new foot drop is a progressive deficit: urgent MRI, without the bladder or saddle signs that make it an emergency</li>
+<li data-type="next" data-d1="MRI within 2 weeks" data-d2="Continue NSAIDs and reassess" data-item-id="q_9dac1b07b98c5a9ca177" data-item-version="2" data-item-status="ready" data-key-id="o_a174f4726c3b5ccfb984" data-d1-id="o_2745b643729e5723ac04" data-d2-id="o_c418d8fca19a585792e1" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">47-year-old woman has 2 days of low back pain</span>
+<span class="si">now pain down both legs</span>
+<span class="si">cannot pass urine since this morning</span>
+<span class="ss">Numb over the buttocks and inner thighs</span>
+<span class="sd">Afebrile &middot; bladder scan 800 mL &middot; anal tone reduced</span> &rarr; <b>Emergent MRI + decompression</b> &rarr; urinary retention and saddle anesthesia are cauda equina syndrome: emergent MRI and decompression</li>
+<li data-type="next" data-d1="Lumbar X-ray" data-d2="Continue NSAIDs" data-item-id="q_1a7bdc80f9fe56c286ce" data-item-version="2" data-item-status="ready" data-key-id="o_35de3c0288b0516aa91a" data-d1-id="o_40d7322c91e050bab1ff" data-d2-id="o_7c8ee7acdfc55d619524" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">62-year-old woman has 6 weeks of low back pain</span>
+<span class="si">treated for breast cancer 4 years ago</span>
+<span class="si">worse at night, not relieved by rest</span>
+<span class="ss">Neurologic exam normal</span>
+<span class="sd">Afebrile &middot; no weight loss</span> &rarr; <b>MRI for metastasis</b> &rarr; prior cancer with night pain needs MRI with contrast even with a normal neurologic exam; plain films miss 30 to 50% of bone loss</li>
+<li data-type="dx" data-d1="Ankylosing spondylitis" data-d2="Spinal stenosis" data-item-id="q_99df391066545401aefb" data-item-version="2" data-item-status="ready" data-key-id="o_28cd195ceed75b10a268" data-d1-id="o_fdde3997d3fa5770b8c6" data-d2-id="o_7490238d32805b77b86e" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">55-year-old woman has 2 months of back pain that wakes her at night</span>
+<span class="si">not relieved by getting up and moving</span>
+<span class="si">lost 6 kg without trying</span>
+<span class="ss">Treated for breast cancer 3 years ago</span>
+<span class="sd">Afebrile &middot; neurologic exam normal</span> &rarr; <b>Metastasis</b> &rarr; night pain unrelieved by moving, with prior cancer and weight loss, is metastasis, not inflammatory back pain: MRI</li>
+<li data-type="dx" data-d1="Pyelonephritis" data-d2="Vertebral metastasis" data-item-id="q_eef94f8211e2526ab3f3" data-item-version="2" data-item-status="ready" data-key-id="o_bd5d4b341ebf506d8a89" data-d1-id="o_35ca27d14521d32281a8" data-d2-id="o_3b1756ff5d6db2b1e9e7" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">34-year-old man who injects drugs has 1 week of back pain</span>
+<span class="si">fever and chills</span>
+<span class="si">focal tenderness over one lumbar spinous process</span>
+<span class="ss">No leg weakness</span>
+<span class="sd">T 38.9 °C &middot; erythrocyte sedimentation rate 98 mm/h</span> &rarr; <b>Vertebral osteomyelitis</b> &rarr; fever with focal spinal tenderness in injection drug use is vertebral osteomyelitis: MRI with contrast plus blood cultures</li>
+<li data-type="dx" data-d1="Malignancy" data-d2="Cauda equina syndrome" data-item-id="q_f985cb5d2b5c5182b518" data-item-version="2" data-item-status="ready" data-key-id="o_2a1d1352e44e5cf4967c" data-d1-id="o_277145c644ab593f9c41" data-d2-id="o_abfda7502a835b189f27" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">72-year-old woman on chronic prednisone has sudden back pain</span>
+<span class="si">began after a minor fall</span>
+<span class="si">point tenderness over one midline lumbar vertebra</span>
+<span class="ss">No leg pain, numbness or weakness</span>
+<span class="sd">Afebrile &middot; neurologic exam normal</span> &rarr; <b>Vertebral compression fracture</b> &rarr; age over 70, chronic steroids and a minor fall point to a vertebral compression fracture: lumbar radiograph first</li>
+<li data-type="dx" data-d1="Osteoporotic vertebral compression fracture" data-d2="Renal colic" data-item-id="q_dc9cacc2519851899c0f" data-item-version="2" data-item-status="ready" data-key-id="o_9c53daef3324596e8240" data-d1-id="o_327bc28b5d953b105b04" data-d2-id="o_0cc4180df4785e789aa4" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">72-year-old man has 1 hour of sudden severe back pain</span>
+<span class="si">pulsatile, tender mass above the umbilicus</span>
+<span class="si">pale and light-headed</span>
+<span class="ss">Smoker with peripheral arterial disease and hypertension</span>
+<span class="sd">BP 82/50 mm Hg &middot; HR 124/min</span> &rarr; <b>Ruptured abdominal aortic aneurysm</b> &rarr; back pain with a pulsatile mass and hypotension is a ruptured abdominal aortic aneurysm: straight to surgery; do not delay for CT</li>
+<li data-type="dx" data-d1="Lumbar radiculopathy" data-d2="Vascular claudication" data-item-id="q_8a438e4b599d5c2fb7f8" data-item-version="2" data-item-status="ready" data-key-id="o_c67ccc9a980a545f8fe0" data-d1-id="o_64a9840f65ec5b579a2e" data-d2-id="o_9ee4f11ab5195b4f8447" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">68-year-old man has 1 year of buttock and leg pain when walking</span>
+<span class="si">relieved by sitting or leaning forward on a shopping cart</span>
+<span class="si">cycles without pain</span>
+<span class="ss">No back pain at rest</span>
+<span class="sd">Afebrile &middot; pedal pulses normal &middot; strength normal</span> &rarr; <b>Spinal stenosis</b> &rarr; leg pain on walking relieved by flexing forward, with normal pulses, is spinal stenosis</li>
+<li data-type="dx" data-d1="Spinal stenosis" data-d2="Inflammatory back pain" data-item-id="q_9a48f79f67025e958290" data-item-version="2" data-item-status="ready" data-key-id="o_83c4aab60009589e8bf3" data-d1-id="o_907c5f6e063e5986972d" data-d2-id="o_83993bf14eda56fa9949" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">38-year-old man has 2 weeks of low back pain</span>
+<span class="si">pain shoots below the right knee into the foot</span>
+<span class="si">right straight-leg raise positive</span>
+<span class="ss">Began while lifting a sofa</span>
+<span class="sd">Afebrile &middot; strength normal</span> &rarr; <b>Radiculopathy</b> &rarr; pain radiating below the knee with a positive straight-leg raise is radiculopathy</li>
+<li data-type="dx" data-d1="Mechanical low back pain" data-d2="Lumbar radiculopathy" data-item-id="q_9a10b796ea065c8fb05a" data-item-version="2" data-item-status="ready" data-key-id="o_94a4128f1595546d8215" data-d1-id="o_78a9740c59cc568e9331" data-d2-id="o_2395d3d4433152629b07" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">34-year-old man has 4 months of low back pain</span>
+<span class="si">better with activity, worse with rest</span>
+<span class="si">morning stiffness over 30 minutes</span>
+<span class="ss">Wakes in the second half of the night</span>
+<span class="sd">Afebrile &middot; neurologic exam normal</span> &rarr; <b>Inflammatory back pain</b> &rarr; under 40, over 3 months, better with movement: inflammatory back pain; sacroiliac joint radiographs and HLA-B27</li>
+<li data-type="test" data-d1="HLA-B27 testing" data-d2="Repeat X-ray in 3 months" data-item-id="q_3654368792ef5321b73e" data-item-version="3" data-item-status="ready" data-key-id="o_534664a7f7a45fc3a61e" data-d1-id="o_6c688d2184645a06a626" data-d2-id="o_5e73291adbe0520ebd02" data-lead-in="Which of the following is the most appropriate diagnostic study to obtain at this time?" data-src="authored"><span class="sl">26-year-old man has 6 months of low back pain</span>
+<span class="si">improves with exercise, worse after sitting</span>
+<span class="si">morning stiffness for an hour</span>
+<span class="ss">Sacroiliac joint radiographs are normal</span>
+<span class="sd">Afebrile &middot; reduced Schober test &middot; chest expansion reduced</span> &rarr; <b>MRI of the SI joints</b> &rarr; radiographs normal with suspicion still high: MRI of the sacroiliac joints shows active sacroiliitis first; HLA-B27 is supportive only</li>
+<li data-type="dx" data-d1="Conjunctivitis" data-d2="Scleritis" data-item-id="q_a9ef9971b8495e6c81ff" data-item-version="2" data-item-status="ready" data-key-id="o_1ece61ad564d53a3b631" data-d1-id="o_bcfe0bfbabf35edc8915" data-d2-id="o_d1bdb57a9fde57128e36" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">30-year-old man with HLA-B27-positive sacroiliitis has a red, painful left eye</span>
+<span class="si">began yesterday</span>
+<span class="si">photophobia and blurred vision</span>
+<span class="ss">No discharge or itching</span>
+<span class="sd">Afebrile &middot; small left pupil &middot; redness greatest around the cornea</span> &rarr; <b>Anterior uveitis</b> &rarr; the eye complication of spondyloarthritis is anterior uveitis: topical steroid and a cycloplegic</li>
+<li data-type="dx" data-d1="Aortic stenosis from a bicuspid valve" data-d2="Mitral regurgitation from mitral prolapse" data-item-id="q_ccea49171a6b58428c3a" data-item-version="2" data-item-status="ready" data-key-id="o_7c61cd84f2475861bd60" data-d1-id="o_5e203fdb65748c2ce1cd" data-d2-id="o_f31c2b60bd1ed29e8cc0" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">45-year-old man with a fused, bamboo-like spine for 15 years</span>
+<span class="si">new exertional dyspnea</span>
+<span class="si">diastolic murmur at the left sternal border</span>
+<span class="ss">No chest pain or syncope</span>
+<span class="sd">BP 150/50 mm Hg &middot; HR 76/min</span> &rarr; <b>Aortic regurgitation from aortitis</b> &rarr; aortitis widens the aortic root: aortic regurgitation</li>
+<li data-type="dx" data-d1="Cervical disc herniation" data-d2="Mechanical cervical strain" data-item-id="q_c3b4d0f0bb565f99bc3f" data-item-version="3" data-item-status="ready" data-key-id="o_ed9be9a26d71589da5d7" data-d1-id="o_f8486c07d3215fcd85bd" data-d2-id="o_8c1295e6931c5a93ab17" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">52-year-old man with HLA-B27-positive sacroiliitis for 20 years</span>
+<span class="si">new neck pain after a minor fall</span>
+<span class="si">pain on any neck movement</span>
+<span class="ss">Old radiographs show a fused spine</span>
+<span class="sd">Afebrile &middot; strength and sensation normal</span> &rarr; <b>Spinal fracture</b> &rarr; a rigid spine is brittle: fracture after minor trauma, so CT (computed tomography) of the spine</li>
+<li data-type="dx" data-d1="Ankylosing spondylitis" data-d2="Psoriatic arthritis" data-item-id="q_01ebb147b7bb580aa6bd" data-item-version="2" data-item-status="ready" data-key-id="o_5462acf6f3f75449a075" data-d1-id="o_22f36f71b4455e6b9755" data-d2-id="o_9c8a6f872da25730882c" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">24-year-old man has 1 week of a swollen right knee and left ankle</span>
+<span class="si">bloody diarrhea 2 weeks ago</span>
+<span class="si">red eyes and burning on urination</span>
+<span class="ss">No rash or nail changes</span>
+<span class="sd">T 37.8 °C &middot; rheumatoid factor negative</span> &rarr; <b>Reactive arthritis</b> &rarr; asymmetric lower-limb arthritis weeks after dysentery, with conjunctivitis and urethritis, is reactive arthritis</li>
+<li data-type="dx" data-d1="Ankylosing spondylitis" data-d2="Spinal osteoarthritis" data-item-id="q_2eaf853b990a46e6c976" data-item-version="1" data-item-status="ready" data-key-id="o_364226f1dfcf4701aa44" data-d1-id="o_30ed2f280b7d45534b55" data-d2-id="o_88d56c8d9796ae10e006" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">68-year-old man with diabetes has back stiffness</span>
+<span class="si">radiograph: flowing ossification along the front of 4 or more vertebrae</span>
+<span class="si">sacroiliac joints normal</span>
+<span class="ss">No morning stiffness over 30 minutes</span>
+<span class="sd">Afebrile &middot; HLA-B27 negative</span> &rarr; <b>Diffuse idiopathic skeletal hyperostosis</b> &rarr; flowing anterior ossification with spared sacroiliac joints in an older man with diabetes is diffuse idiopathic skeletal hyperostosis, not spondyloarthritis</li>
 </ol>
-<div class="pearls"><span class="lbl">Pearls</span> Vertebral metastases seed the <b>vertebral body first</b> via <b>Batson's valveless venous plexus</b> · pedicle destruction produces the <b>"winking owl" sign</b> · bone-seeking primaries: <b>"BLT with a Kosher Pickle"</b> (Breast, Lung, Thyroid, Kidney, Prostate) · <b>give dexamethasone before imaging</b> when cord compression is suspected with deficits; this is the one place treatment precedes diagnosis · plain films miss 30–50% of bone loss.</div>
-<div class="rule"><span class="lbl">Transferable rule</span> When most patients do not need X, ask whether this patient is the exception, not whether the base rate is low. Review the <b>PMH</b> (past medical history) before applying the population rule.</div>
-<div class="traps"><span class="pill p-test">Test-overrides-findings</span><span class="pill p-slot">True-fact-wrong-slot</span></div>
+
+<div class="pearls"><span class="lbl">Common wrong answers</span> <b>Bed rest</b>: harmful, delays recovery. <b>CT of the lumbosacral spine</b>: not indicated at 1 week, and MRI is the modality for disc and nerve root. <b>Epidural injection</b>: only after 4 to 6 weeks of failed conservative care. <b>Oral prednisone</b>: does not improve acute sciatica.</div>
+<div class="rule"><span class="lbl">Transferable rule</span><p>When most patients do not need a test, ask whether this patient is the exception. A dense list of pertinent negatives supports doing less. When a symptom fits two categories, its behavior separates them: here, what happens when the patient gets up.</p></div>
+
 </div>
 
 <div class="brief" id="hippos" data-shelf="fm" data-bp="msk">
@@ -2110,61 +2221,6 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
 
 </div>
 
-<div class="brief" id="inflam-back" data-shelf="fm" data-bp="msk immune">
-<h4>Inflammatory Back Pain &amp; Spondyloarthritis</h4>
-<p class="sub">Two causes of night pain, opposite behavior</p>
-<div class="dp"><span class="lbl">The decision point</span>
-<p>Inflammatory back pain is defined by its relationship to <b>rest and activity</b>. Its defining features are age <b>&lt;40</b>, insidious onset <b>&gt;3 months</b>, pain <b>worse at night and with rest</b>, and pain <b>better with movement</b>. This pattern is the exact inverse of mechanical pain. The mechanism is <b>enthesitis</b>, inflammation where tendons and ligaments insert into bone. <b>RA</b> (rheumatoid arthritis) instead causes synovitis.</p></div>
-<table data-mask="none"><caption>Inflammatory vs mechanical back pain</caption>
-<thead><tr><th></th><th>Inflammatory</th><th>Mechanical</th></tr></thead>
-<tbody>
-<tr><td>Age of onset</td><td><b>&lt;40</b></td><td>Any</td></tr>
-<tr><td>Onset</td><td><b>Insidious, &gt;3 months</b></td><td>Often acute, identifiable event</td></tr>
-<tr><td>Night pain</td><td><b>Yes — second half of the night</b></td><td>Usually absent</td></tr>
-<tr><td>Morning stiffness</td><td><b>&gt;30 minutes</b></td><td>&lt;30 minutes</td></tr>
-<tr><td>Rest / activity</td><td><b>Worse with rest, better with movement</b></td><td>Better with rest, worse with activity</td></tr>
-<tr><td>NSAID response</td><td><b>Dramatic</b></td><td>Variable</td></tr>
-</tbody>
-</table>
-<div class="danger"><span class="lbl">Night pain: inflammatory versus malignant</span>
-Both <b>inflammatory back pain</b> and <b>malignancy</b> wake patients at night. Response to activity separates them: inflammatory pain <b>improves once you get up and move</b>. Malignant pain is <b>unrelieved</b>, and comes with age &gt;50, prior cancer, or weight loss.</div>
-<div class="pearls"><span class="lbl">The spondyloarthritis family: "PAIR"</span> <b>P</b>soriatic arthritis · <b>A</b>nkylosing spondylitis · <b>I</b>BD-associated · <b>R</b>eactive arthritis. All are <b>seronegative</b>: <b>RF</b> (rheumatoid factor) is negative. They are <b>HLA-B27</b>-associated and share <b>enthesitis, dactylitis, and uveitis</b>.</div>
-<h5>Ankylosing spondylitis</h5>
-<ul class="plain">
-<li>Young men; <b>HLA-B27</b> ~90% (supportive, not diagnostic)</li>
-<li><b>Sacroiliitis is the earliest finding</b> → <b>X-ray of the SI joints first</b>; <b>MRI</b> if the X-ray is normal and suspicion is high</li>
-<li>Exam: reduced <b>Schober test</b>, reduced chest expansion, loss of lumbar lordosis; late <b>bamboo spine</b></li>
-<li>Extra-articular: <b>anterior uveitis</b> (25–40%), <b>aortitis → aortic regurgitation</b>, AV block, apical pulmonary fibrosis, IgA nephropathy, and a <b>rigid spine that fractures with minor trauma</b></li>
-<li>Treatment: <b>NSAIDs + exercise first-line</b> → <b>TNF-α or IL-17 inhibitors</b>. Methotrexate and sulfasalazine work for <b>peripheral</b> disease but not axial. <b>Screen for latent TB before a TNF inhibitor.</b></li>
-</ul>
-<div class="tw">
-<table data-mask="4"><caption>Diagnostic workup</caption>
-<thead><tr><th>Test</th><th>Order</th><th>Result</th><th>What it points to</th></tr></thead>
-<tbody>
-<tr><td>History: onset, duration, response to activity</td><td>Screen</td><td>Age under 40, over 3 months, <b>better with movement</b></td><td>Inflammatory back pain; night pain unrelieved by moving, with prior cancer, goes to MRI for metastasis</td></tr>
-<tr><td>Sacroiliac joint radiographs</td><td>First</td><td><b>Sacroiliitis</b></td><td>Earliest radiographic finding of ankylosing spondylitis</td></tr>
-<tr><td>MRI of the sacroiliac joints</td><td>Confirms</td><td><b>Active sacroiliitis</b> with bone marrow edema</td><td>Axial spondyloarthritis when radiographs are normal and suspicion stays high</td></tr>
-<tr><td>HLA-B27</td><td>Supports</td><td><b>Positive</b> in about 90% of AS</td><td>Supportive only; common in the general population, so it cannot make the diagnosis</td></tr>
-<tr><td>CT of the spine</td><td>By branch</td><td><b>Fracture</b> through a fused spine</td><td>AS with new neck or back pain after minor trauma</td></tr>
-<tr><td>RF and anti-CCP</td><td>Skip</td><td><b>Negative</b> by definition</td><td>Spondyloarthritis is seronegative; a negative RF adds nothing</td></tr>
-</tbody>
-</table>
-</div>
-<h5>Scenario bank</h5>
-<ol class="bank">
-<li data-type="test" data-d1="HLA-B27 testing" data-d2="Repeat X-ray in 3 months" data-item-id="q_3654368792ef5321b73e" data-item-version="2" data-item-status="ready" data-key-id="o_534664a7f7a45fc3a61e" data-d1-id="o_6c688d2184645a06a626" data-d2-id="o_5e73291adbe0520ebd02" data-lead-in="Which of the following is the most appropriate diagnostic study to obtain at this time?">Young adult with inflammatory back pain and normal sacroiliac joint radiographs, suspicion still high → <b>MRI of the SI joints</b></li>
-<li data-type="dx" data-d1="Conjunctivitis" data-d2="Scleritis" data-item-id="q_a9ef9971b8495e6c81ff" data-item-version="1" data-item-status="ready" data-key-id="o_1ece61ad564d53a3b631" data-d1-id="o_bcfe0bfbabf35edc8915" data-d2-id="o_d1bdb57a9fde57128e36">Develops a <b>red painful eye with photophobia</b> → Anterior uveitis → topical steroid + cycloplegic</li>
-<li data-type="dx" data-d1="Aortic stenosis" data-d2="Mitral regurgitation" data-item-id="q_ccea49171a6b58428c3a" data-item-version="1" data-item-status="ready" data-key-id="o_7c61cd84f2475861bd60" data-d1-id="o_7dc91eeb8f195885a9cc" data-d2-id="o_e7b7638f9fdd518a958b">New <b>diastolic murmur</b> → <b>Aortic regurgitation</b> from aortitis</li>
-<li data-type="dx" data-d1="Cervical disc herniation" data-d2="Mechanical cervical strain" data-item-id="q_c3b4d0f0bb565f99bc3f" data-item-version="2" data-item-status="ready" data-key-id="o_ed9be9a26d71589da5d7" data-d1-id="o_f8486c07d3215fcd85bd" data-d2-id="o_8c1295e6931c5a93ab17">Ankylosing spondylitis with new neck pain after a <b>minor fall</b> → <b>Spinal fracture</b> → a rigid spine is brittle; CT</li>
-<li data-type="dx" data-d1="Ankylosing spondylitis" data-d2="Spinal stenosis" data-item-id="q_99df391066545401aefb" data-item-version="1" data-item-status="ready" data-key-id="o_28cd195ceed75b10a268" data-d1-id="o_fdde3997d3fa5770b8c6" data-d2-id="o_7490238d32805b77b86e">Age 55, prior breast cancer, night pain <b>not relieved by moving</b>, weight loss → <b>Metastasis</b> → MRI</li>
-<li data-type="dx" data-d1="Lumbar radiculopathy" data-d2="Vascular claudication" data-item-id="q_3df51a20709852428b05" data-item-version="1" data-item-status="ready" data-key-id="o_82631c4f6e2c59c0b1f0" data-d1-id="o_9dd6b041f62f5697b05e" data-d2-id="o_40058b0fb28e5598a0a7">Age &gt;60, leg pain walking, relieved <b>leaning on a shopping cart</b> → Spinal stenosis</li>
-<li data-type="dx" data-d1="Spinal stenosis" data-d2="Inflammatory back pain" data-item-id="q_9a48f79f67025e958290" data-item-version="1" data-item-status="ready" data-key-id="o_83c4aab60009589e8bf3" data-d1-id="o_907c5f6e063e5986972d" data-d2-id="o_83993bf14eda56fa9949">Radiation below the knee with a <b>positive straight-leg raise</b> → Radiculopathy</li>
-<li data-type="dx" data-d1="Ankylosing spondylitis" data-d2="Psoriatic arthritis" data-item-id="q_01ebb147b7bb580aa6bd" data-item-version="1" data-item-status="ready" data-key-id="o_5462acf6f3f75449a075" data-d1-id="o_22f36f71b4455e6b9755" data-d2-id="o_9c8a6f872da25730882c">Young man 2 weeks after dysentery with asymmetric lower-limb arthritis, conjunctivitis, urethritis → <b>Reactive arthritis</b></li>
-<li data-type="dx" data-d1="Ankylosing spondylitis" data-d2="Spinal osteoarthritis" data-item-id="q_2cb5239b01725fb9bde6" data-item-version="1" data-item-status="ready" data-key-id="o_343fb5eb84995a03aa80" data-d1-id="o_3eeaf36e292a547581dc" data-d2-id="o_34338d4378c15632b612">Older diabetic with <b>flowing anterior spinal ossification and spared SI joints</b> → <b>DISH</b>, not spondyloarthritis</li>
-</ol>
-<div class="rule"><span class="lbl">Transferable rule</span> When a symptom appears in two categories, find the <b>modifier that separates them</b>. Here, it is what happens when the patient gets up. Symptoms rarely discriminate, but <b>symptom behavior</b> does.</div>
-</div>
-
 <div class="brief" id="oa-pharm" data-shelf="fm" data-bp="msk">
 <h4>Osteoarthritis</h4>
 <p class="sub">Class vs. member</p>
@@ -2198,52 +2254,130 @@ The <b>ACR/Arthritis Foundation 2019</b> (ACR: American College of Rheumatology)
 <div class="traps"><span class="pill p-class">Class-vs-member</span></div>
 </div>
 
-<div class="brief" id="septic-bursitis" data-shelf="fm" data-bp="msk">
-<h4>Septic Bursitis</h4>
-<p class="sub">Prepatellar &amp; subacromial · aspirate the bursa, not the joint</p>
-<div class="dp"><span class="lbl">The decision point</span>
-<p><b>Localized bursal swelling with erythema and warmth, but preserved joint range of motion</b>, means the process is extraarticular. This one exam finding separates septic bursitis from septic arthritis and determines whether the bursa or the joint is aspirated. When infection is plausible, <b>aspirate the bursal fluid</b> before any empiric therapy. Infection is plausible with erythema, warmth, fever (~40%), or worsening pain days after an injection. Send the fluid for cell count, Gram stain, culture and crystals.</p></div>
-<div class="crit"><span class="lbl">Defining criteria</span> <b>Bursitis vs arthritis</b> — bursal infection spares the joint: ROM preserved, swelling localized over the bursa · <b>Aspiration gate</b> — erythema/warmth, fever, or post-procedure worsening → bursal fluid analysis · <b>Drainage gate</b> — failure to improve after ~2 days of antibiotics · <b>Timing tell</b> — post-injection steroid flare starts fast and resolves within 48 h; infection worsens over several days</div>
-<table>
-<caption>Septic bursitis — quick reference</caption>
-<thead><tr><th>Axis</th><th>Findings</th></tr></thead>
-<tbody>
-<tr><td>Risk factors</td><td>Local cellulitis, abrasions, penetrating trauma, <b>bursal injection/instrumentation</b>; diabetes and immunocompromise raise risk</td></tr>
-<tr><td>Presentation</td><td>Painful localized bursal swelling with <b>erythema &amp; warmth</b>; fever in ~40%, less prominent age ≥65</td></tr>
-<tr><td>Organisms</td><td>Skin flora — <b>S aureus</b> most common; S pyogenes</td></tr>
-<tr><td>Diagnosis</td><td><b>Bursal fluid aspiration</b> — cell count, Gram stain, culture, crystal analysis; x-ray only for suspected fracture or foreign body</td></tr>
-<tr><td>Treatment</td><td>Systemic antibiotics; <b>drainage if not improving after ~2 days</b></td></tr>
-</tbody>
-</table>
+<div class="brief" id="septic-bursitis" data-shelf="fm" data-bp="msk" data-replaces="bs-septic-adult">
+<span class="alias" id="bs-septic-adult"></span>
+<h4>Hot Joint or Bursa in an Adult</h4>
+<p class="sub">septic arthritis, crystal arthritis and septic bursitis &middot; synovial fluid thresholds &middot; prosthetic joint and gonococcal branches &middot; post-injection flare<span class="subq">Is joint motion preserved, and has the fluid been sampled before any treatment?</span></p>
+<nav class="jump"><a href="#hj-dx">Diagnosis</a><a href="#hj-mx">Management</a><a href="#hj-bank">Practice</a></nav>
+
+<div class="dp"><span class="lbl">Bottom line</span>
+<p>Aspirate before you treat. Nothing on exam excludes infection, and a missed septic joint destroys cartilage in days.</p>
+<p>Passive range of motion picks the space:</p>
+<ul class="bl"><li><b>Preserved</b>, swelling over the bursa: the bursa is aspirated when infection is plausible (redness, warmth, fever, or pain worsening days after an injection).</li>
+<li><b>Pain with any passive motion</b>, diffuse effusion: the joint is aspirated.</li></ul>
+<p>No antibiotics, colchicine, steroid or repeat injection before the fluid is sampled.</p>
+<p>Diabetes and joint space narrowing raise septic risk even when the history suggests gout.</p></div>
+
+<h5 class="tsec" id="hj-dx">Diagnosis</h5>
+<div class="crit"><span class="lbl">Defining findings</span> <b>Septic bursitis</b> &ndash; localized bursal swelling with redness and warmth, joint motion preserved; fever in only about 40% and absent in most patients 65 or older; usually Staphylococcus aureus, also Streptococcus pyogenes &middot; <b>Septic arthritis</b> &ndash; hot, swollen joint, severe pain on passive motion, fever; joint fluid white cells over 50,000 (often over 100,000), neutrophils over 75% &middot; <b>Gout</b> &ndash; negatively birefringent needles (monosodium urate) &middot; <b>Pseudogout</b> &ndash; positively birefringent rhomboids of CPPD (calcium pyrophosphate dihydrate), chondrocalcinosis on radiograph &middot; <b>Post-injection steroid flare</b> &ndash; starts within hours and settles within 48 hours; infection worsens over several days; timing separates them, not severity</div>
+<div class="crit"><span class="lbl">Risk factors</span> <b>Bursa</b> &ndash; cellulitis, abrasions, penetrating trauma, bursal injection or instrumentation; diabetes and immunocompromise &middot; <b>Joint</b> &ndash; diabetes; preexisting joint disease (joint space narrowing on radiograph)</div>
+<figure class="lcp"><p class="kick">Diagnostic workup</p><div class="ttl"><span><b class="step">1</b>Joint or bursa first, then the fluid</span></div><ol class="path"><li class="pt"><span class="when">Every hot joint or bursa</span><div class="tile first"><div class="wt2"><p class="tn">Passive range of motion</p><p class="wr2"><b>Preserved, swelling over the bursa</b><span class="mask">Bursa: aspirate the bursal fluid</span></p><p class="wr2"><b>Pain with any passive motion, diffuse effusion</b><span class="mask">Joint: arthrocentesis</span></p></div><i class="plus" aria-label="and"></i><div class="wt2"><p class="tn">Fluid: cell count and differential, Gram stain, culture, crystals</p><p class="wr2"><b>Joint fluid with white cells over 50,000 and neutrophils over 75%</b><span class="mask">Septic arthritis</span></p><p class="wr2"><b>Needles or rhomboids</b><span class="mask">Gout or pseudogout; with white cells over 50,000, still treated as septic</span></p><p class="wr2"><b>Bursal Gram stain or culture positive</b><span class="mask">Septic bursitis, usually Staphylococcus aureus</span></p><p class="wr2"><b>Bursal crystals, Gram stain and culture negative</b><span class="mask">Crystal bursitis</span></p></div></div></li><li class="pt"><span class="when">Only with a trigger</span><div class="tile"><div class="wt2"><p class="tn">Image-guided aspiration</p><p class="wr2"><b>Deep bursa, pain worsening days after an injection</b><span class="mask">Iatrogenic septic bursitis</span></p></div><i class="plus" aria-label="and"></i><div class="wt2"><p class="tn">Prosthetic joint aspirate</p><p class="wr2"><b>About 3,000 white cells, over 70% neutrophils</b><span class="mask">Prosthetic joint infection</span></p></div><i class="plus" aria-label="and"></i><div class="wt2"><p class="tn">NAAT (nucleic acid amplification test) and cultures of cervix, urethra, pharynx and rectum</p><p class="wr2"><b>Migratory polyarthralgia, tenosynovitis, pustules</b><span class="mask">Disseminated gonococcal infection</span></p></div><i class="plus" aria-label="and"></i><div class="wt2"><p class="tn">Radiograph</p><p class="wr2"><b>Chondrocalcinosis or joint space narrowing</b><span class="mask">Pseudogout, or old joint disease that raises septic risk</span></p><p class="wr2"><b>Fracture or foreign body</b><span class="mask">Only after trauma or a penetrating wound</span></p></div></div></li><li class="pt end"><span class="when">Then</span><p class="pt-tx">Skip serum uric acid: it is often normal during a flare and high in many who never flare, so it neither rules gout in nor infection out.</p></li></ol></figure>
 <div class="tw">
-<table data-mask="4"><caption>Diagnostic workup</caption>
-<thead><tr><th>Test</th><th>Order</th><th>Result</th><th>What it points to</th></tr></thead>
+<table class="dense"><caption>Synovial fluid</caption>
+<thead><tr><th>Fluid</th><th>White cells/mm³</th><th>Neutrophils</th></tr></thead>
 <tbody>
-<tr><td>Passive range of motion of the joint</td><td>Screen</td><td>Motion <b>preserved</b>, swelling localized over the bursa</td><td>Extraarticular process: the bursa gets the needle</td></tr>
-<tr><td>Bursal aspiration: cell count, Gram stain, culture, crystals</td><td>Confirms</td><td><b>Positive Gram stain or culture</b></td><td>Septic bursitis, usually S aureus; crystals point to crystal bursitis instead</td></tr>
-<tr><td>Image-guided bursal aspiration</td><td>By branch</td><td>Infected fluid in a <b>deep</b> bursa</td><td>Subacromial pain worsening days after a steroid injection</td></tr>
-<tr><td>Joint aspiration</td><td>By branch</td><td><b>Septic</b> synovial fluid</td><td>Pain with any passive motion and diffuse effusion: septic arthritis</td></tr>
-<tr><td>Radiograph</td><td>By branch</td><td><b>Fracture or foreign body</b></td><td>Only when trauma or a penetrating wound suggests one</td></tr>
-<tr><td>Serum uric acid</td><td>Skip</td><td>High or normal, <b>neither</b> excludes infection</td><td>Does not replace aspiration; no empiric colchicine or steroid before the fluid</td></tr>
-</tbody>
-</table>
+<tr><td>Noninflammatory (osteoarthritis)</td><td>200 to 2,000 &#9888;&#65038;</td><td>Under 25%</td></tr>
+<tr><td>Inflammatory (crystal, rheumatoid arthritis)</td><td>2,000 to 50,000 &#9888;&#65038;</td><td>Over 50%</td></tr>
+<tr><td>Septic</td><td>Over 50,000, often over 100,000</td><td>Over 75%</td></tr>
+<tr><td>Prosthetic joint infection</td><td>About 3,000</td><td>Over 70%</td></tr>
+</tbody></table>
 </div>
-<h5 class="authored-hdr">Scenario bank</h5>
+
+<h5 class="tsec" id="hj-mx">Management and treatment</h5>
+<div class="tw">
+<table class="dense"><caption>Management ladder: the hot joint</caption>
+<thead><tr><th>Tier</th><th>Intervention</th><th>Escalate when</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Arthrocentesis: cell count and differential, Gram stain, culture, crystals; through clean skin or image-guided, never through cellulitis</td><td>Always, for any acute hot joint</td></tr>
+<tr><td>2</td><td>Empiric intravenous antibiotics after cultures: vancomycin with or without ceftriaxone or cefepime; add Salmonella coverage in sickle cell disease</td><td>Purulent fluid or white cells over 50,000; do not wait for culture</td></tr>
+<tr><td>3</td><td>Joint drainage: serial aspiration, arthroscopic or open washout</td><td>Confirmed septic arthritis</td></tr>
+</tbody></table>
+</div>
+<div class="crit"><span class="lbl">By diagnosis</span> <b>Septic bursitis</b> &ndash; systemic antibiotics; incision and drainage if not improving after about 2 days &middot; <b>Gout</b> &ndash; NSAID (nonsteroidal anti-inflammatory drug) or colchicine, once infection is excluded &middot; <b>Suspected infection</b> &ndash; no corticosteroid injection, into a joint or a bursa &middot; <b>Subacromial bursa</b> &ndash; can communicate with the glenohumeral joint, so its infection can become septic arthritis</div>
+
+<h5 class="authored-hdr" id="hj-bank">Practice</h5>
 <ol class="bank authored">
-<li data-type="next" data-d1="Empiric colchicine" data-d2="Compression wrap and ice" data-item-id="q_ffbf7b1ef5e556b18080" data-item-version="1" data-item-status="ready" data-key-id="o_d81667a9a0dc568c91a3" data-d1-id="o_218314ed490b5bf39311" data-d2-id="o_1f56848b14e85b8fa6f3">45 yo M floor installer, boggy prepatellar swelling, erythema, warmth, knee ROM intact → <b>Aspirate the bursal fluid</b> → infection must be excluded before gout or overuse bursitis is presumed</li>
-<li data-type="dx" data-d1="Septic arthritis of the knee" data-d2="Prepatellar hematoma" data-item-id="q_7adfcf5c7792587295fe" data-item-version="1" data-item-status="ready" data-key-id="o_7a5f05c015a75fd6a1b1" data-d1-id="o_cb10cf126f455f29a3ee" data-d2-id="o_13be7f3a766052ba9fe2">52 yo M, red, hot, tender prepatellar swelling with fever; full painless passive knee motion → <b>Septic prepatellar bursitis</b></li>
-<li data-type="next" data-d1="Repeat corticosteroid injection" data-d2="Shoulder x-ray" data-item-id="q_78a3c8b6bf855e1eb667" data-item-version="1" data-item-status="ready" data-key-id="o_cdf6ba2e25dd533aa123" data-d1-id="o_0f4a0771cef4599980ad" data-d2-id="o_f222dc60ac81531bb3f5">58 yo F, worsening shoulder pain, fever, and myalgias 4 days after a subacromial corticosteroid injection → <b>Image-guided aspiration of the bursa</b> → iatrogenic inoculation of skin flora</li>
-<li data-type="dx" data-d1="Iatrogenic septic bursitis" data-d2="Rotator cuff tear" data-item-id="q_276f13ad3d2c5eb58336" data-item-version="1" data-item-status="ready" data-key-id="o_6d6e967d676f5c5fb26c" data-d1-id="o_84c8775f6a4a5b608025" data-d2-id="o_3018b307643c5023858a">60 yo M, severe shoulder pain 6 hours after a corticosteroid injection, afebrile, resolving by the next day → <b>Post-injection steroid flare</b> → chemical synovitis, self-limited within 48 h</li>
-<li data-type="next" data-d1="Change to colchicine" data-d2="MRI of the knee" data-item-id="q_34f7bef8a5b452278644" data-item-version="1" data-item-status="ready" data-key-id="o_3ad07a250070554f810d" data-d1-id="o_8a2caf5febd653e09ef8" data-d2-id="o_d369543d8bf056468719">49 yo M with septic prepatellar bursitis, no improvement after 3 days of antibiotics → <b>Incision and drainage of the bursa</b></li>
-<li data-type="dx" data-d1="Septic prepatellar bursitis" data-d2="Noninfectious overuse bursitis" data-item-id="q_5f49a689deaf54e6b2e6" data-item-version="1" data-item-status="ready" data-key-id="o_9ee1af62c7cb50b7ba34" data-d1-id="o_cc87781f96e55352b7a5" data-d2-id="o_016d8a6a52525a679053">70 yo M, diffusely swollen knee, severe pain with any passive motion, fever → <b>Septic arthritis</b> → aspirate the joint</li>
+<li data-type="next" data-d1="Naproxen" data-d2="Serum uric acid" data-item-id="q_3880357210c4f9e91736" data-item-version="1" data-item-status="ready" data-key-id="o_86f0fb9a1926b7c97723" data-d1-id="o_e5cbd67be42f2e58731a" data-d2-id="o_412d3a59e186b526f28d" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">54-year-old woman has 1 day of a hot, swollen, red right knee</span>
+<span class="si">severe pain on passive range of motion</span>
+<span class="si">obesity, hypertension and diabetes</span>
+<span class="ss">Radiograph: joint space narrowing</span>
+<span class="sd">T 38.5 °C &middot; HR 102/min &middot; no rash</span> &rarr; <b>Arthrocentesis</b> &rarr; nothing on exam excludes infection, and diabetes and joint space narrowing are risk factors for it: aspirate before any treatment</li>
+<li data-type="dx" data-d1="Gout" data-d2="Calcium pyrophosphate crystal arthritis" data-item-id="q_db112dbdeb5853f19c02" data-item-version="2" data-item-status="ready" data-key-id="o_c8bd53f2f51c5a75be27" data-d1-id="o_75368df5c17c510b941d" data-d2-id="o_4ff1b9b4dce85d41a68b" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">47-year-old woman has 2 days of a hot, swollen left knee</span>
+<span class="si">pain with any passive motion</span>
+<span class="si">aspirate: 68,000 white cells/mm³, 85% neutrophils</span>
+<span class="ss">No crystals seen under polarized light</span>
+<span class="sd">T 38.6 °C &middot; Gram stain pending</span> &rarr; <b>Septic arthritis</b> &rarr; over 50,000 white cells with over 75% neutrophils and no crystals is septic arthritis: vancomycin after cultures, then drainage</li>
+<li data-type="next" data-d1="Treat as a gout flare" data-d2="Treat as pseudogout" data-item-id="q_7a35709ae032564ab654" data-item-version="3" data-item-status="ready" data-key-id="o_24efddff38f25708b213" data-d1-id="o_0edf848f0f59afc076d9" data-d2-id="o_f57a7d49685ac14a5b05" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">47-year-old woman has 2 days of a hot, swollen right knee</span>
+<span class="si">aspirate shows negatively birefringent needle crystals</span>
+<span class="si">and 60,000 white cells/mm³</span>
+<span class="ss">Gram stain shows no organisms</span>
+<span class="sd">T 38.2 °C &middot; culture pending</span> &rarr; <b>Treat as septic</b> &rarr; crystals do not exclude coexisting infection: over 50,000 white cells is treated as septic until culture says otherwise</li>
+<li data-type="dx" data-d1="Septic arthritis" data-d2="Pseudogout" data-item-id="q_d4df14b8a03b5da99d94" data-item-version="2" data-item-status="ready" data-key-id="o_95a57e233d985f458a4e" data-d1-id="o_88b9c5a425655417a613" data-d2-id="o_99bf4f5a049c50d5b8ae" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">55-year-old man woke with severe pain at the base of the big toe</span>
+<span class="si">red, swollen first metatarsophalangeal joint</span>
+<span class="si">began after a steak dinner</span>
+<span class="ss">Aspirate: 12,000 white cells/mm³</span>
+<span class="sd">T 37.6 °C &middot; negatively birefringent needles</span> &rarr; <b>Gout</b> &rarr; an inflammatory count with negatively birefringent needles is gout: an NSAID (nonsteroidal anti-inflammatory drug) or colchicine</li>
+<li data-type="dx" data-d1="Gout" data-d2="Septic arthritis" data-item-id="q_7984452aa8e65077a5bb" data-item-version="2" data-item-status="ready" data-key-id="o_6b2951ae4b6e541d9dd1" data-d1-id="o_35e5066581d8558990d3" data-d2-id="o_f5724123a631582c8a6f" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">72-year-old woman has 1 day of a hot, swollen right knee</span>
+<span class="si">radiograph shows chondrocalcinosis</span>
+<span class="si">aspirate: positively birefringent rhomboid crystals</span>
+<span class="ss">Gram stain shows no organisms</span>
+<span class="sd">T 37.8 °C &middot; aspirate 18,000 white cells/mm³</span> &rarr; <b>Pseudogout</b> &rarr; positively birefringent rhomboids with chondrocalcinosis are calcium pyrophosphate crystals: pseudogout</li>
+<li data-type="dx" data-d1="Aseptic loosening of the prosthesis" data-d2="Gout" data-item-id="q_ca51206d5b6e569ba414" data-item-version="3" data-item-status="ready" data-key-id="o_132e3e03c2b1590a9d2c" data-d1-id="o_4e8bafa9391e940084f9" data-d2-id="o_b30eae8462cd5adbb730" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">68-year-old man has 3 weeks of right knee pain</span>
+<span class="si">had a knee replacement 2 years ago</span>
+<span class="si">aspirate: 3,200 white cells/mm³, 82% neutrophils</span>
+<span class="ss">No crystals seen</span>
+<span class="sd">T 37.4 °C &middot; radiograph: no loosening seen</span> &rarr; <b>Prosthetic joint infection</b> &rarr; around a prosthesis the 50,000 threshold does not apply: about 3,000 white cells with over 70% neutrophils is prosthetic joint infection</li>
+<li data-type="dx" data-d1="Staphylococcal septic arthritis" data-d2="Reactive arthritis" data-item-id="q_616ec4ff50aed8c80a33" data-item-version="1" data-item-status="ready" data-key-id="o_9ff1c0f8fcc3d26b3a4d" data-d1-id="o_cdb0dab0959e67765327" data-d2-id="o_19050d03701d7a127f1f" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">24-year-old woman has 4 days of joint pain moving from knee to wrist</span>
+<span class="si">tenosynovitis over the wrist extensors</span>
+<span class="si">a few pustules on the hands</span>
+<span class="ss">Sexually active, inconsistent condom use</span>
+<span class="sd">T 38.1 °C &middot; no back pain or conjunctivitis</span> &rarr; <b>Disseminated gonococcal infection</b> &rarr; migratory polyarthralgia, tenosynovitis and pustules are disseminated gonococcal infection: NAAT and cultures of cervix, urethra, pharynx and rectum</li>
+<li data-type="avoid" data-d1="Aspiration through an uninvolved approach" data-d2="Image-guided aspiration of the joint" data-item-id="q_c0a039ff412f5571a0b2" data-item-version="2" data-item-status="ready" data-key-id="o_cbdd5426ba0d510f9860" data-d1-id="o_16f80b6917a05f60ba6a" data-d2-id="o_5e6946fb37c0ec63c072" data-src="authored" data-lead-in="Which of the following should be avoided?"><span class="sl">47-year-old woman has a hot, swollen left knee and fever</span>
+<span class="si">red, warm cellulitis over the front of the knee</span>
+<span class="si">the joint must be sampled</span>
+<span class="ss">Diabetes, on metformin</span>
+<span class="sd">T 38.4 °C &middot; pain with passive motion &middot; knee effusion</span> &rarr; <b>Arthrocentesis straight through the cellulitis</b> &rarr; a needle through cellulitis seeds the joint: aspirate through clean skin or under image guidance</li>
+<li data-type="next" data-d1="Add Pseudomonas aeruginosa coverage" data-d2="Vancomycin alone" data-item-id="q_a3a8dd97011752e8a990" data-item-version="2" data-item-status="ready" data-key-id="o_13854baea63357e39775" data-d1-id="o_e352b2e8d6da481ad93b" data-d2-id="o_64ec06b1904156228cdb" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">60-year-old man with sickle cell disease has a hot, swollen left knee</span>
+<span class="si">pain with any passive motion</span>
+<span class="si">aspirate cloudy, cultures drawn</span>
+<span class="ss">Empiric antibiotics are being chosen</span>
+<span class="sd">T 38.7 °C &middot; aspirate 90,000 white cells/mm³</span> &rarr; <b>Add Salmonella to coverage</b> &rarr; sickle cell disease adds Salmonella to the organisms to cover</li>
+<li data-type="dx" data-d1="Septic prepatellar bursitis" data-d2="Noninfectious overuse bursitis" data-item-id="q_5f49a689deaf54e6b2e6" data-item-version="2" data-item-status="ready" data-key-id="o_9ee1af62c7cb50b7ba34" data-d1-id="o_cc87781f96e55352b7a5" data-d2-id="o_016d8a6a52525a679053" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">70-year-old man has 2 days of a diffusely swollen right knee</span>
+<span class="si">severe pain with any passive motion</span>
+<span class="si">fever and chills</span>
+<span class="ss">No swelling localized over the kneecap</span>
+<span class="sd">T 38.8 °C &middot; large knee effusion</span> &rarr; <b>Septic arthritis</b> &rarr; pain with any passive motion and a diffuse effusion is the joint, not the bursa: aspirate the joint</li>
+<li data-type="dx" data-d1="Septic arthritis of the knee" data-d2="Prepatellar hematoma" data-item-id="q_7adfcf5c7792587295fe" data-item-version="2" data-item-status="ready" data-key-id="o_7a5f05c015a75fd6a1b1" data-d1-id="o_cb10cf126f455f29a3ee" data-d2-id="o_13be7f3a766052ba9fe2" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">52-year-old man has a red, hot, tender swelling over the kneecap</span>
+<span class="si">fever since yesterday</span>
+<span class="si">full, painless passive knee motion</span>
+<span class="ss">Kneels on concrete at work</span>
+<span class="sd">T 38.6 °C &middot; no knee effusion</span> &rarr; <b>Septic prepatellar bursitis</b> &rarr; preserved joint motion with swelling over the bursa is extraarticular: septic prepatellar bursitis, aspirate the bursa</li>
+<li data-type="next" data-d1="Empiric colchicine" data-d2="Compression wrap, ice and rest from kneeling" data-item-id="q_ffbf7b1ef5e556b18080" data-item-version="2" data-item-status="ready" data-key-id="o_d81667a9a0dc568c91a3" data-d1-id="o_218314ed490b5bf39311" data-d2-id="o_f2677e65f95c68402186" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">45-year-old man, a floor installer, has 3 days of knee swelling</span>
+<span class="si">boggy swelling over the kneecap, red and warm</span>
+<span class="si">knee range of motion intact</span>
+<span class="ss">Serum uric acid not yet drawn</span>
+<span class="sd">T 37.4 °C &middot; no knee effusion</span> &rarr; <b>Aspirate the bursal fluid</b> &rarr; redness and warmth make infection plausible: aspirate the bursal fluid before presuming crystals or overuse</li>
+<li data-type="next" data-d1="Stop antibiotics and start colchicine" data-d2="MRI (magnetic resonance imaging) of the knee" data-item-id="q_34f7bef8a5b452278644" data-item-version="2" data-item-status="ready" data-key-id="o_3ad07a250070554f810d" data-d1-id="o_b08aae387cd5c91c8230" data-d2-id="o_1a0188ea66223ad782d9" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">49-year-old man was diagnosed with septic prepatellar bursitis</span>
+<span class="si">no improvement after 3 days of antibiotics</span>
+<span class="si">swelling and redness unchanged</span>
+<span class="ss">Culture grew Staphylococcus aureus</span>
+<span class="sd">T 38.0 °C &middot; knee motion still full</span> &rarr; <b>Incision and drainage of the bursa</b> &rarr; failure to improve after about 2 days of antibiotics is the drainage gate: incision and drainage of the bursa</li>
+<li data-type="next" data-d1="Repeat corticosteroid injection" data-d2="Shoulder x-ray" data-item-id="q_78a3c8b6bf855e1eb667" data-item-version="2" data-item-status="ready" data-key-id="o_cdf6ba2e25dd533aa123" data-d1-id="o_0f4a0771cef4599980ad" data-d2-id="o_f222dc60ac81531bb3f5" data-src="authored" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">58-year-old woman has worsening right shoulder pain</span>
+<span class="si">began 4 days after a subacromial corticosteroid injection</span>
+<span class="si">fever and myalgias</span>
+<span class="ss">Pain was mild the day after the injection</span>
+<span class="sd">T 38.4 °C &middot; white cells 14,000/mm³</span> &rarr; <b>Image-guided aspiration of the bursa</b> &rarr; pain worsening days after an injection is iatrogenic inoculation of skin flora: image-guided aspiration of the deep bursa</li>
+<li data-type="dx" data-d1="Iatrogenic septic bursitis" data-d2="Rotator cuff tear" data-item-id="q_276f13ad3d2c5eb58336" data-item-version="2" data-item-status="ready" data-key-id="o_6d6e967d676f5c5fb26c" data-d1-id="o_84c8775f6a4a5b608025" data-d2-id="o_3018b307643c5023858a" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">60-year-old man has severe right shoulder pain</span>
+<span class="si">began 6 hours after a corticosteroid injection</span>
+<span class="si">already easing by the next morning</span>
+<span class="ss">No chills or redness at the injection site</span>
+<span class="sd">Afebrile &middot; white cells normal &middot; no swelling</span> &rarr; <b>Post-injection steroid flare</b> &rarr; pain within hours that settles within 48 hours is a post-injection steroid flare; infection worsens over days</li>
 </ol>
-<div class="pearls"><span class="lbl">Pearls</span> Serum uric acid never rules infection in or out; even a high level cannot replace aspiration · corticosteroid injection is <b>contraindicated</b> when infection is suspected · subacromial bursa can communicate with the glenohumeral joint, so bursal infection may become septic arthritis · fever is absent in most elderly patients with septic bursitis.</div>
-<div class="pearls"><span class="lbl">Pairs with</span> Part II <b>The Acute Hot Joint (adult)</b> applies the same rule in a different space: any hot fluid collection is aspirated before treatment. Ask: <b>"is joint motion preserved?"</b></div>
-<div class="rule"><span class="lbl">Transferable rule</span> Aspirate the space that is infected. Preserved joint motion moves the aspiration from the joint to the bursa. No empiric therapy (antibiotics, colchicine, steroids) comes before the fluid is sampled.</div>
-<div class="traps">
-  <div class="trapline"><span class="pill p-mirror">Mirror twin</span><span class="trapwhy">Post-injection steroid flare: a benign mimic of iatrogenic infection. Timing separates them, not severity.</span></div>
-  <div class="trapline"><span class="pill p-seq">Sequencing trap</span><span class="trapwhy">Antibiotics, colchicine, or a repeat injection offered before the bursal fluid has been sampled.</span></div>
-</div>
+
+<div class="pearls"><span class="lbl">Distractors</span> <b>Naproxen</b>: skips a tier; treats a diagnosis not yet made and delays drainage. <b>Serum uric acid</b>: wrong parameter; neither rules gout in nor infection out.</div>
+<div class="pearls"><span class="lbl">Pairs with</span> <b>Septic Arthritis and Transient Synovitis in a Child</b>: in adults every acute hot joint is aspirated at tier 1; only in children does tier 1 depend on toxicity and inflammatory signs, not on the presence of fluid.</div>
+<div class="rule"><span class="lbl">Transferable rule</span><p>When a test is both diagnostic and therapeutic and the disease it excludes is time-destructive, the test comes before every treatment, even one right for the more likely diagnosis. Aspirate the space that is infected, because infection cannot be excluded.</p></div>
+
 </div>
 
 <div class="brief" id="septic-hip" data-shelf="fm peds" data-bp="msk" data-nid="1488248142696 1553186759564 1539251911861" data-replaces="synovitis bs-synovitis-mgmt">
@@ -3062,107 +3196,6 @@ The <b>ACR/Arthritis Foundation 2019</b> (ACR: American College of Rheumatology)
 
 <div class="bsband"><span class="n">5 briefs</span><span class="lbl">Board-Style &middot; Next-Step Questions</span><p class="t">Musculoskeletal &amp; Rheumatology</p></div>
 
-<div class="brief bs" id="bs-septic-adult" data-shelf="fm" data-bp="msk">
-<h4>The Acute Hot Joint (adult)</h4>
-<p class="sub">Aspirate before you treat</p>
-<div class="vignette" data-recon="partial"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; adult with an acute hot, swollen, erythematous joint, severe pain on passive range of motion, and fever; history of obesity, hypertension and diabetes &middot; <b>Imaging</b> &mdash; radiograph shows joint space narrowing &middot; <b>Q</b> &mdash; the most appropriate next step; options spanned empiric antibiotics, anti-inflammatory therapy and arthrocentesis</div>
-<div class="dp"><span class="lbl">The decision point</span>
-<p>An acute <b>hot, swollen, erythematous</b> joint with <b>severe pain on passive range of motion</b> and fever should be <b>aspirated</b>. <b>Nothing on exam can exclude infection</b>. Gout and septic arthritis overlap completely. A missed septic joint destroys cartilage in days. Aspiration is diagnostic and therapeutic.</p>
-<p>Obesity, hypertension and diabetes may suggest a metabolic cause such as gout, but <b>diabetes is a septic arthritis risk factor</b>. Joint space narrowing on x-ray means <b>preexisting joint disease</b>, another septic arthritis risk factor.</p></div>
-<table><caption>Synovial fluid analysis<span class='cap-sub'>WBC &amp; PMN interpretation</span></caption>
-<thead><tr><th>Synovial fluid</th><th>WBC</th><th>PMN</th><th>Interpretation</th></tr></thead>
-<tbody>
-<tr><td>Non-inflammatory (OA)</td><td>200–2,000 ⚠︎</td><td>&lt;25%</td><td>Degenerative</td></tr>
-<tr><td>Inflammatory (gout, RA)</td><td>2,000–50,000 ⚠︎</td><td>&gt;50%</td><td>Crystal or autoimmune</td></tr>
-<tr><td><b>Septic</b></td><td><b>&gt;50,000</b>, often &gt;100k</td><td>&gt;75%</td><td><b>Drain + IV antibiotics</b></td></tr>
-</tbody>
-</table>
-<div class="pearls"><span class="lbl">Crystals</span> <b>Gout</b>: negatively birefringent <b>needles</b> (monosodium urate). <b>Pseudogout</b>: positively birefringent <b>rhomboids</b> of <b>CPPD</b> (calcium pyrophosphate dihydrate), with <b>chondrocalcinosis</b> on x-ray. <b>Serum uric acid is useless acutely</b>: it is often normal during a flare (urate shifts into the joint) and elevated in many who never flare.</div>
-<table><caption>Management ladder — the acute hot joint</caption>
-<thead><tr><th>Tier</th><th>Intervention</th><th>Escalate when</th></tr></thead>
-<tbody>
-<tr><td><b>1</b></td><td><b>Arthrocentesis</b> — cell count + differential, Gram stain, <b>culture</b>, crystals</td><td>Always, for any acute hot joint</td></tr>
-<tr><td><b>2</b></td><td><b>Empiric IV antibiotics after cultures drawn</b> — vancomycin ± ceftriaxone/cefepime</td><td>Purulent fluid or &gt;50,000 WBC; <b>do not wait for culture</b></td></tr>
-<tr><td><b>3</b></td><td>Joint drainage — serial aspiration, arthroscopic, or open washout</td><td>Confirmed septic arthritis</td></tr>
-</tbody>
-</table>
-<div class="tw">
-<table data-mask="4"><caption>Diagnostic workup</caption>
-<thead><tr><th>Test</th><th>Order</th><th>Result</th><th>What it points to</th></tr></thead>
-<tbody>
-<tr><td>Arthrocentesis: cell count and differential</td><td>First</td><td>WBC <b>over 50,000</b>, over 75% PMN</td><td>Septic arthritis: IV antibiotics after cultures, then drainage</td></tr>
-<tr><td>Gram stain and culture of synovial fluid</td><td>Confirms</td><td><b>Organism</b> identified</td><td>Septic arthritis; narrows empiric vancomycin with or without ceftriaxone</td></tr>
-<tr><td>Polarized microscopy for crystals</td><td>Supports</td><td>Negatively birefringent <b>needles</b> or positive rhomboids</td><td>Gout or pseudogout; crystals with WBC over 50,000 still get treated as septic</td></tr>
-<tr><td>Radiograph</td><td>By branch</td><td><b>Chondrocalcinosis</b> or joint space narrowing</td><td>Pseudogout, or preexisting joint disease that raises septic risk</td></tr>
-<tr><td>Prosthetic joint aspirate</td><td>By branch</td><td>WBC about <b>3,000</b> with over 70% PMN</td><td>Prosthetic joint infection; the 50,000 threshold does not apply</td></tr>
-<tr><td>NAAT and cultures of cervix, urethra, pharynx and rectum</td><td>By branch</td><td><b>Positive</b> gonococcal NAAT</td><td>Migratory polyarthralgia, tenosynovitis, pustules: disseminated gonococcal infection</td></tr>
-<tr><td>Serum uric acid</td><td>Skip</td><td>Often <b>normal</b> during a flare</td><td>Neither rules gout in nor infection out; aspirate instead</td></tr>
-</tbody>
-</table>
-</div>
-<h5>Scenario bank</h5>
-<ol class="bank">
-<li data-type="dx" data-d1="Gout" data-d2="Pseudogout" data-item-id="q_db112dbdeb5853f19c02" data-item-version="1" data-item-status="ready" data-key-id="o_c8bd53f2f51c5a75be27" data-d1-id="o_75368df5c17c510b941d" data-d2-id="o_bd407234d93e55fcb70c"><b>47 yo F</b>, hot knee, aspirate <b>68,000 WBC, 85% PMN, no crystals</b> → Septic arthritis → vancomycin + drainage</li>
-<li data-type="dx" data-d1="Septic arthritis" data-d2="Pseudogout" data-item-id="q_d4df14b8a03b5da99d94" data-item-version="1" data-item-status="ready" data-key-id="o_95a57e233d985f458a4e" data-d1-id="o_88b9c5a425655417a613" data-d2-id="o_99bf4f5a049c50d5b8ae"><b>55 yo M</b>, acute first-MTP pain after a steak dinner, aspirate <b>12,000 WBC, negatively birefringent needles</b> → Gout → NSAID or colchicine</li>
-<li data-type="dx" data-d1="Gout" data-d2="Septic arthritis" data-item-id="q_7984452aa8e65077a5bb" data-item-version="1" data-item-status="ready" data-key-id="o_6b2951ae4b6e541d9dd1" data-d1-id="o_35e5066581d8558990d3" data-d2-id="o_f5724123a631582c8a6f"><b>72 yo F</b>, hot knee, x-ray shows <b>chondrocalcinosis</b>, <b>positively birefringent rhomboids</b> → Pseudogout</li>
-<li data-type="next" data-d1="Gout flare — NSAID or colchicine" data-d2="Pseudogout" data-item-id="q_7a35709ae032564ab654" data-item-version="2" data-item-status="ready" data-key-id="o_24efddff38f25708b213" data-d1-id="o_11419c64c2315a5692cf" data-d2-id="o_99219afe04ed52e7ae47"><b>47 yo F</b>, aspirate shows <b>crystals AND 60,000 WBC</b> → <b>Treat as septic</b> &rarr;  crystals do not exclude coexisting infection</li>
-<li data-type="dx" data-d1="Aseptic loosening" data-d2="Gout" data-item-id="q_ca51206d5b6e569ba414" data-item-version="2" data-item-status="ready" data-key-id="o_132e3e03c2b1590a9d2c" data-d1-id="o_5a765c40117653f19131" data-d2-id="o_b30eae8462cd5adbb730"><b>68 yo M with a knee prosthesis</b>, aspirate <b>3,000 WBC, 70% PMN</b> → <b>Prosthetic joint infection</b> &rarr;  the 50,000 threshold does not apply &mdash; the prosthetic gate is ~3,000/&micro;L with &gt;70% PMN (guideline-verified)</li>
-<li data-type="dx" data-d1="Staphylococcal septic arthritis" data-d2="Reactive arthritis" data-item-id="q_29dc66a1e2f65c7092b2" data-item-version="1" data-item-status="ready" data-key-id="o_461f6956f94e5e3bb629" data-d1-id="o_98a5c7c4eb475f5b95e5" data-d2-id="o_ecd477d1a53c530fa0fe"><b>24 yo F</b>, migratory polyarthralgia, <b>tenosynovitis, pustular rash</b> → Disseminated gonococcal → NAAT + cultures</li>
-<li data-type="avoid" data-d1="Aspiration through an uninvolved approach" data-d2="Blood cultures then empiric intravenous antibiotics" data-item-id="q_c0a039ff412f5571a0b2" data-item-version="1" data-item-status="ready" data-key-id="o_cbdd5426ba0d510f9860" data-d1-id="o_16f80b6917a05f60ba6a" data-d2-id="o_d67d8964e8885e04834a"><b>47 yo F with cellulitis overlying the knee</b> → <b>Arthrocentesis straight through the cellulitis</b> → it seeds the joint; go image-guided or through clean skin</li>
-<li data-type="next" data-d1="Add Pseudomonas coverage" data-d2="Vancomycin alone" data-item-id="q_a3a8dd97011752e8a990" data-item-version="1" data-item-status="ready" data-key-id="o_13854baea63357e39775" data-d1-id="o_aea47f90c4605cc5962d" data-d2-id="o_64ec06b1904156228cdb"><b>60 yo M with sickle cell</b>, hot joint → Add <b>Salmonella</b> to coverage</li>
-</ol>
-<div class="danger"><span class="lbl">Distractors</span>
-<b>Naproxen</b>: skipped tier; treats an unestablished diagnosis and delays drainage. <b>Serum uric acid</b>: wrong parameter; neither rules in nor out. <b>Intra-articular corticosteroid</b>: <b>actively contraindicated</b> into a possibly infected joint. <b>MRI</b>: redundant; the x-ray is done and there's no trauma.</div>
-<div class="pearls"><span class="lbl">Pairs with</span> Part I <b>Septic Arthritis and Transient Synovitis in a Child</b> (pediatric, with transient synovitis), and <b>Septic Bursitis</b>. Septic Bursitis is the extraarticular mimic; preserved joint motion moves the needle from joint to bursa. In adults, every acute hot joint is aspirated at tier 1. Only in children does tier 1 depend on <b>toxicity and inflammatory signs</b>, not on the presence of fluid.</div>
-<div class="rule"><span class="lbl">Transferable rule</span> When a test is both <b>diagnostic and therapeutic</b> and the disease it excludes is <b>time-destructive</b>, the test precedes every treatment option. This holds even for a treatment that would be right for the more likely diagnosis. Aspirate because infection cannot be excluded, not because the joint is probably septic.</div>
-<div class="traps"><span class="pill p-seq">Skipped tier</span><span class="pill p-number">Wrong parameter</span></div>
-</div>
-
-<div class="brief bs" id="bs-lbp-acute" data-shelf="fm" data-bp="msk">
-<h4>Acute Low Back Pain with No Red Flags</h4>
-<p class="sub">Many pertinent negatives permit conservative management</p>
-<div class="vignette" data-recon="partial"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; adult with acute low back pain under 4 to 6 weeks after a clear mechanical trigger; neurologic examination completely normal, and the history systematically negative for red flags &middot; <b>Q</b> &mdash; the most appropriate next step; options spanned imaging, specialist referral, opioids and conservative care</div>
-<div class="dp"><span class="lbl">The decision point</span>
-<p>The back pain is acute (&lt;4–6 weeks), with a <b>clear mechanical trigger</b>, a <b>completely normal neurologic exam</b> and no red flags in the history. Nothing indicates imaging or escalation, so treat with <b>NSAIDs</b> (nonsteroidal anti-inflammatory drugs) and advise the patient to <b>stay active</b>.</p></div>
-<table><caption>Stem findings → options ruled out</caption>
-<thead><tr><th>Stem line</th><th>What it kills</th></tr></thead>
-<tbody>
-<tr><td>"no fever, chills"</td><td>Osteomyelitis, discitis, epidural abscess</td></tr>
-<tr><td>"no constipation or urinary incontinence"</td><td><b>Cauda equina</b></td></tr>
-<tr><td>"<b>no tenderness over the spine</b>" (paraspinal only)</td><td>Fracture, malignancy, infection</td></tr>
-<tr><td>"<b>DTRs normal, strength intact, sensation normal</b>"</td><td>Radiculopathy with objective deficit</td></tr>
-<tr><td>"began 1 day after moving furniture"</td><td>Supplies the mechanical cause</td></tr>
-</tbody>
-</table>
-<table><caption>Management ladder — acute low back pain</caption>
-<thead><tr><th>Tier</th><th>Intervention</th><th>Escalate when</th></tr></thead>
-<tbody>
-<tr><td><b>1</b></td><td><b>NSAIDs + stay active</b> (avoid bed rest); ± heat, ± short muscle relaxant</td><td><b>No improvement at 4–6 weeks</b>, or a red flag appears</td></tr>
-<tr><td><b>2</b></td><td>Physical therapy; <b>MRI</b> if radicular symptoms persist</td><td>Radicular symptoms ≥6 weeks</td></tr>
-<tr><td><b>3</b></td><td><b>Epidural steroid injection</b></td><td>Failed conservative therapy</td></tr>
-<tr><td><b>4</b></td><td>Surgical referral</td><td><b>Progressive deficit</b>, cauda equina, refractory pain</td></tr>
-</tbody>
-</table>
-<div class="danger"><span class="lbl">Distractors</span>
-<b>Bed rest</b>: <b>actively harmful</b>; bed rest delays recovery. It was the old advice and is now wrong. <b>CT lumbosacral spine</b>: not indicated at 1 week, <b>and wrong modality</b>; <b>MRI</b> (magnetic resonance imaging) images disc and nerve root. <b>Epidural injection</b>: needs ≥4–6 weeks of failed conservative care first. <b>Oral prednisone</b>: systemic steroids do not improve outcomes in acute sciatica.</div>
-<div class="pearls"><span class="lbl">Why the no-imaging rule exists</span> <b>Early imaging leads to more surgery without better outcomes.</b> Asymptomatic disc bulges and degenerative change are near-universal by middle age. A scan therefore mostly generates incidental findings that invite intervention. About 90% of acute low back pain and about 90% of sciatica resolve within 6 weeks.</div>
-<h5>Scenario bank</h5>
-<ol class="bank">
-<li data-type="next" data-d1="Continue conservative care" data-d2="Emergent decompression" data-item-id="q_876de4a7d5c355daaae2" data-item-version="1" data-item-status="ready" data-key-id="o_438d434e8aa2575f8c4d" data-d1-id="o_b0601ac61e135730ba1e" data-d2-id="o_62c6def43f8e57878936"><b>47 yo F</b>, same pain now at <b>8 weeks</b> with persistent L5 symptoms, normal strength → <b>MRI</b>, PT, consider epidural</li>
-<li data-type="next" data-d1="MRI within 2 weeks" data-d2="Continue NSAIDs and reassess" data-item-id="q_9dac1b07b98c5a9ca177" data-item-version="1" data-item-status="ready" data-key-id="o_a174f4726c3b5ccfb984" data-d1-id="o_2745b643729e5723ac04" data-d2-id="o_c418d8fca19a585792e1"><b>47 yo F</b>, new <b>urinary retention and saddle anesthesia</b> → <b>Emergent MRI + decompression</b></li>
-<li data-type="next" data-d1="Continue conservative care" data-d2="Emergent decompression" data-item-id="q_d1be25628a115e579726" data-item-version="2" data-item-status="ready" data-key-id="o_c8036d6b9ca55803be35" data-d1-id="o_8b2becca88a7517b90b0" data-d2-id="o_0aeee48ef202509ab60d"><b>47 yo F</b>, new <b>foot drop</b> → Urgent MRI &rarr;  this is a progressive deficit</li>
-<li data-type="next" data-d1="Lumbar X-ray" data-d2="Continue NSAIDs" data-item-id="q_1a7bdc80f9fe56c286ce" data-item-version="1" data-item-status="ready" data-key-id="o_35de3c0288b0516aa91a" data-d1-id="o_40d7322c91e050bab1ff" data-d2-id="o_7c8ee7acdfc55d619524"><b>62 yo F with prior breast cancer</b>, pain <b>worse at night, unrelieved by rest</b> → MRI for metastasis</li>
-<li data-type="dx" data-d1="Mechanical low back pain" data-d2="Lumbar radiculopathy" data-item-id="q_9a10b796ea065c8fb05a" data-item-version="1" data-item-status="ready" data-key-id="o_94a4128f1595546d8215" data-d1-id="o_78a9740c59cc568e9331" data-d2-id="o_2395d3d4433152629b07"><b>34 yo M</b>, 3 months, <b>better with activity, worse with rest</b>, morning stiffness &gt;30 min → Inflammatory back pain → SI joint imaging, HLA-B27</li>
-<li data-type="dx" data-d1="Lumbar radiculopathy" data-d2="Vascular claudication" data-item-id="q_8a438e4b599d5c2fb7f8" data-item-version="1" data-item-status="ready" data-key-id="o_c67ccc9a980a545f8fe0" data-d1-id="o_64a9840f65ec5b579a2e" data-d2-id="o_9ee4f11ab5195b4f8447"><b>68 yo M</b>, leg pain walking, <b>relieved leaning forward</b> → Spinal stenosis</li>
-<li data-type="next" data-d1="Lumbar X-ray" data-d2="Continue NSAIDs" data-item-id="q_ee90338a4e615a4ea477" data-item-version="1" data-item-status="ready" data-key-id="o_019dbbff55b15a06a2ee" data-d1-id="o_aacc836bcd9d565c953b" data-d2-id="o_c5fd7d4ac0785a38a329"><b>28 yo M who injects drugs</b>, back pain with <b>fever</b> and focal spinal tenderness → MRI + blood cultures</li>
-<li data-type="next" data-d1="MRI for disc herniation" data-d2="Continue NSAIDs" data-item-id="q_986b9047c3d7586b9ee2" data-item-version="1" data-item-status="ready" data-key-id="o_b58cb533074459af8f9c" data-d1-id="o_4c1269c9f36b523ab697" data-d2-id="o_1e91316041475481acc4"><b>72 yo F on chronic prednisone</b>, pain after a minor fall → <b>X-ray</b> for compression fracture</li>
-<li data-type="next" data-d1="Oral naproxen" data-d2="Opioid analgesia" data-item-id="q_6a5c14438a75598e8d50" data-item-version="1" data-item-status="ready" data-key-id="o_8921dad7db8c53608838" data-d1-id="o_73718e6af8535f4fbde8" data-d2-id="o_8b4ade89e50d5080850e"><b>47 yo F with CKD and prior GI bleed</b> and acute mechanical low back pain → <b>Acetaminophen or a topical NSAID</b> → same tier, a different agent</li>
-</ol>
-<div class="pearls"><span class="lbl">Pairs with</span> Part I <b>Low Back Pain in an Adult</b> and <b>Inflammatory Back Pain &amp; Spondyloarthritis</b>. This brief is the third of the family and covers back pain with no red flags. Ask: <b>"Any red flag, and is the neuro exam normal?"</b></div>
-<div class="rule"><span class="lbl">Transferable rule</span> When most of the history describes findings the patient does not have, it supports <b>doing less</b>. A dense list of pertinent negatives permits conservative management.</div>
-<div class="traps"><span class="pill p-seq">Skipped tier</span><span class="pill p-class">Class-vs-member</span></div>
-</div>
-
 <div class="brief" id="bs-puncture-osteomyelitis" data-shelf="fm peds" data-bp="msk">
 <h4>Foot Puncture Wounds and Osteomyelitis</h4>
 <p class="sub">A nail through a shoe and a foot still sore weeks later is Pseudomonas</p>
@@ -3456,7 +3489,7 @@ The <b>ACR/Arthritis Foundation 2019</b> (ACR: American College of Rheumatology)
 </div>
 
 <!-- =================== PEDS =================== -->
-<h3 class="system" id="peds">Pediatrics <span class="n">5 topics <span style="color:#9A5B0E">+ 2 board-style</span> <span style="color:#1F6A7E">+ 6 Aquifer</span></span></h3>
+<h3 class="system" id="peds">Pediatrics <span class="n">5 topics <span style="color:#9A5B0E">+ 2 board-style</span> <span style="color:#1F6A7E">+ 5 Aquifer</span></span></h3>
 <p class="system-note">Growth, development and the general-paediatric board questions that belong to no single organ. Everything else paediatric is filed under its organ system and reachable from the <b>Pediatrics</b> shelf — age is a filter here, not a category.</p>
 
 <div class="brief" id="growth" data-shelf="fm peds" data-nid="1489890945884" data-bp="gen">
@@ -3963,60 +3996,6 @@ No social smile by <b>3 mo</b> · no babbling by <b>9 mo</b> · no words by <b>1
 <div class="traps"><div class="trapline"><span class="pill p-mirror">Mirror twin</span><span class="trapwhy">Stage 4 is the adjacent stage defined by the one feature the stem explicitly negates.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Enlarged areolas appear in the stage 2 description but stage 2 hair is straight.</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Stage 5 requires the areola to recede and hair to reach the thighs.</span></div></div>
 </div>
 
-<div class="brief bs" id="bs-ftt" data-shelf="fm peds" data-src="aquifer" data-bp="gen gi">
-<h4>Faltering Weight</h4>
-<p class="sub">The pattern of growth parameters points to the cause · weight, then length, then head</p>
-<div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 15 mo M, weight 2nd percentile, length 30th, head circumference 40th, active and eating well, normal examination &middot; <b>Q</b> &mdash; the most likely cause; options spanned inadequate caloric intake, cystic fibrosis and congenital heart disease</div>
-<div class="dp"><span class="lbl">The decision point</span>
-<p><b>Weight at the 2nd percentile with length at the 30th and head circumference at the 40th</b> is an isolated weight deficit. Linear and brain growth are preserved. This pattern indicates <b>inadequate caloric intake</b>. Malnutrition affects the parameters in order and spares the brain until deprivation is prolonged and severe.</p>
-<p>Inadequate intake is the commonest cause of faltering growth. The commonest reason for inadequate intake is <b>behavioral and psychosocial</b>. Up to 80% of growth failure has no organic disorder behind it. The history confirms it: he is active, keeps up with peers, eats well at daycare, has never been hospitalized, and has a normal examination.</p>
-</div>
-<div class="crit"><span class="lbl">Defining criteria</span> <b>Faltering weight</b> — weight below the 2nd percentile, or crossing two or more major percentile lines downward &middot; <b>Weight alone depressed</b> — inadequate caloric intake, malabsorption, or increased demand &middot; <b>Weight and length depressed together</b> — endocrine or constitutional, with length affected as much or more &middot; <b>All three depressed from the outset</b> — genetic, congenital infection, or intrauterine insult</div>
-<table>
-<caption>Faltering weight — the etiologies</caption>
-<thead><tr><th>Etiology</th><th>Illness script</th><th>The NBME tell</th></tr></thead>
-<tbody>
-<tr><td><b>Psychosocial, inadequate intake</b></td><td>Up to 80% of cases; food insecurity, feeding technique, neglect, caregiver depression</td><td><b>Weight down, length and head preserved</b>; catch-up growth when fed</td></tr>
-<tr><td>Cystic fibrosis</td><td>Malabsorption plus chronic lung disease</td><td><b>Steatorrhea and recurrent respiratory infection</b>, abnormal newborn screen</td></tr>
-<tr><td>Congenital heart disease</td><td>Increased caloric demand, failure with feeds</td><td><b>Sweating and tachypnea with feeding</b>, murmur, hepatomegaly</td></tr>
-<tr><td>Metabolic disease</td><td>Episodic decompensation with catabolic stress</td><td><b>Hypoglycemia, acidosis, regression, prior admissions</b></td></tr>
-<tr><td>Renal tubular acidosis or CKD</td><td>Acidosis and solute loss impair growth</td><td><b>Polyuria and polydipsia</b> with length also affected</td></tr>
-<tr><td>Endocrine</td><td>Growth hormone deficiency, hypothyroidism</td><td><b>Short with preserved or excess weight</b>, the inverse pattern</td></tr>
-</tbody>
-</table>
-<div class="tw">
-<table data-mask="4"><caption>Diagnostic workup</caption>
-<thead><tr><th>Test</th><th>Order</th><th>Result</th><th>What it points to</th></tr></thead>
-<tbody>
-<tr><td>Plot weight, length and head circumference</td><td>First</td><td><b>Weight alone</b> low, length and head preserved</td><td>Inadequate intake, malabsorption or increased demand</td></tr>
-<tr><td>Diet history and observed feeding</td><td>Next</td><td><b>Too few calories</b> offered or taken</td><td>Psychosocial inadequate intake, up to 80% of cases</td></tr>
-<tr><td>Sweat chloride</td><td>By branch</td><td><b>Elevated</b>, with steatorrhea and recurrent pneumonia</td><td>Cystic fibrosis</td></tr>
-<tr><td>Echocardiography</td><td>By branch</td><td><b>Structural defect</b>, with sweating and tachypnea during feeds</td><td>Congenital heart disease raising caloric demand</td></tr>
-<tr><td>Electrolytes with a venous blood gas</td><td>By branch</td><td><b>Normal anion gap</b> metabolic acidosis, length also low</td><td>Renal tubular acidosis</td></tr>
-<tr><td>Caloric supplementation with serial weights</td><td>Confirms</td><td><b>Catch-up growth</b></td><td>Confirms inadequate intake and is the treatment</td></tr>
-<tr><td>Broad laboratory or genetic panel</td><td>Skip</td><td>Very <b>low yield</b> with a normal history and exam</td><td>Test only what a symptom or sign points to</td></tr>
-</tbody>
-</table>
-</div>
-<h5 class="authored-hdr">Scenario bank</h5>
-<ol class="bank authored">
-<li data-type="dx" data-src="aquifer" data-d1="Cystic fibrosis" data-d2="Congenital heart disease" data-item-id="q_3c79dfcb36f358ed928d" data-item-version="1" data-item-status="ready" data-key-id="o_98904bea875d54be8449" data-d1-id="o_150369853aea53efba05" data-d2-id="o_c402a92ecc165289922d">15 mo M with weight at the 2nd percentile, length at the 30th and head circumference at the 40th, active and eating well, with a normal examination &rarr; <b>Inadequate caloric intake from psychosocial causes</b> &rarr; the commonest etiology of faltering weight</li>
-<li data-type="next" data-src="authored" data-d1="Send a broad metabolic and genetic panel" data-d2="Obtain a sweat chloride test" data-item-id="q_2424a8f173d75ccfb219" data-item-version="1" data-item-status="ready" data-key-id="o_fa74159fa6965192ac34" data-d1-id="o_b5a16b01d50058a19d11" data-d2-id="o_3991600ba85c596ca7ea">15 mo M with isolated low weight, preserved length and head circumference, and a normal examination, initial evaluation &rarr; <b>Detailed diet history and observed feeding</b> &rarr; laboratory testing is low-yield here</li>
-<li data-type="dx" data-src="authored" data-d1="Inadequate caloric intake" data-d2="Cystic fibrosis" data-item-id="q_1858059b7d5a5c2d82c7" data-item-version="1" data-item-status="ready" data-key-id="o_59d1283c9625592c87e6" data-d1-id="o_1334ec43750c5a7b834c" data-d2-id="o_f7c60afc85a75ca38e76">4 yo F with height at the 3rd percentile and weight at the 40th percentile, with a normal examination &rarr; <b>An endocrine cause &mdash; growth hormone deficiency or hypothyroidism</b> &rarr; length affected more than weight</li>
-<li data-type="dx" data-src="authored" data-d1="Inadequate caloric intake" data-d2="Growth hormone deficiency" data-item-id="q_cef84dd51e7b5b94a522" data-item-version="1" data-item-status="ready" data-key-id="o_b2519f5693f95c788220" data-d1-id="o_03485b5b171b5d7181fd" data-d2-id="o_7aff0a02917a5bb99da9">8 mo M with weight, length and head circumference all below the 2nd percentile since birth, microcephalic and dysmorphic &rarr; <b>Genetic or intrauterine cause</b> &rarr; symmetric growth restriction</li>
-<li data-type="next" data-src="authored" data-d1="Detailed diet history alone" data-d2="Echocardiography" data-item-id="q_86e47ccade6053d7acd9" data-item-version="1" data-item-status="ready" data-key-id="o_9c14a7e48c08514b9da9" data-d1-id="o_646ebb3c724d57a99dde" data-d2-id="o_57282d90c45d5d019fe0">6 mo F with poor weight gain, bulky greasy stools and two admissions for pneumonia &rarr; <b>Sweat chloride testing</b> &rarr; cystic fibrosis</li>
-<li data-type="next" data-src="authored" data-d1="Sweat chloride testing" data-d2="Caloric supplementation alone" data-item-id="q_51c0e2e474245ec49283" data-item-version="1" data-item-status="ready" data-key-id="o_15dc8b8b4e6555acbd12" data-d1-id="o_dcef8e2228435784a899" data-d2-id="o_cf271a0b3c3a59f29e2f">3 mo M with poor weight gain, sweating and tachypnea during feeds and a harsh murmur &rarr; <b>Echocardiography</b> &rarr; congenital heart disease</li>
-<li data-type="next" data-src="authored" data-d1="Diet history alone" data-d2="Growth hormone stimulation testing" data-item-id="q_c58ffe3da98457e3843f" data-item-version="1" data-item-status="ready" data-key-id="o_9629ed1706b2548e976c" data-d1-id="o_bb2a9602b3b454b783ea" data-d2-id="o_0f8140e5c14b578f9d53">14 mo F with poor weight gain, polyuria, polydipsia and length also at the 3rd percentile &rarr; <b>Serum electrolytes with a venous blood gas</b> &rarr; renal tubular acidosis</li>
-<li data-type="next" data-src="authored" data-d1="Admit for observed feeding" data-d2="Refer for gastrostomy tube placement" data-item-id="q_bd9644cde17a5373a596" data-item-version="1" data-item-status="ready" data-key-id="o_80f54c55d81353aa80fe" data-d1-id="o_5382a24705d95cc887b4" data-d2-id="o_7cff0fd465c759b7be5a">15 mo M with psychosocial faltering weight who is gaining well after caloric supplementation and family support &rarr; <b>Continue outpatient management with close follow-up</b> &rarr; catch-up growth confirms the diagnosis</li>
-<li data-type="dx" data-src="authored" data-d1="Inadequate caloric intake" data-d2="Growth hormone deficiency" data-item-id="q_3699d94b56045cacaae9" data-item-version="1" data-item-status="ready" data-key-id="o_c5549e845c885efa9f0e" data-d1-id="o_2296d905d69555f5b98e" data-d2-id="o_96cdf49c90cc53458ca8">15 mo M with low weight and length, short parents, and a normal growth velocity along his own curve &rarr; <b>Familial short stature</b> &rarr; this is not faltering growth</li>
-</ol>
-<div class="danger"><span class="lbl">Avoid extensive testing</span> In a well-appearing child with a normal history and examination, broad laboratory and genetic testing has a very low yield. Evaluate with a <b>diet history, observed feeding, and attention to the social determinants</b>. <b>Catch-up growth on adequate calories</b> is both the treatment and the confirmation.</div>
-<div class="pearls"><span class="lbl">Pearls</span> Plot all three parameters before naming a cause; the relationship between them points to the diagnosis &middot; Head circumference is spared longest, so a fallen head circumference means prolonged severe deprivation or a non-nutritional diagnosis &middot; Familial short stature and constitutional delay are not faltering growth; the child tracks a low but steady curve &middot; Endocrine causes give the inverse pattern: short stature with preserved or excess weight</div>
-<div class="pearls"><span class="lbl">Pairs with</span> Part II <b>Follow-Up of the Preterm Infant</b> covers the contrasting case, in which the parameters are proportionate and growth is normal. In faltering weight the parameters are disproportionate and growth is pathologic. Ask: are the three parameters together or apart? Part I <b>Toddler Food Refusal</b> covers the case where the refusal pattern, not calorie intake, is the key finding. Part II <b>Hypokalemia and Acid-Base Disorders in a Child</b> covers reading the electrolytes and gas: a normal-gap acidosis with low potassium and urine pH above 5.5 is distal renal tubular acidosis.</div>
-<div class="rule"><span class="lbl">Transferable rule</span> When several growth parameters are given, the pattern among them points to the diagnosis. If one common cause competes with several rare organic ones, choose a rare disease only if a symptom, sign or admission supports it.</div>
-<div class="traps"><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Congenital heart disease limits feeding-related activity; he keeps up with peers.</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Renal causes impair linear growth too, and his length is preserved.</span></div></div>
-</div>
-
 <div class="brief bs" id="bs-preterm-followup" data-shelf="fm peds" data-nid="1517063590444 1513203369207 1519263391528" data-src="aquifer" data-bp="newborn gen">
 <h4>Follow-Up of the Preterm Infant</h4>
 <p class="sub">Correct the age, then read the chart · a percentile is a position, not a pathology</p>
@@ -4077,7 +4056,7 @@ No social smile by <b>3 mo</b> · no babbling by <b>9 mo</b> · no words by <b>1
 <div class="danger"><span class="lbl">Intraventricular hemorrhage</span> <b>Mechanism</b> &mdash; fragile germinal matrix vessels rupture with swings in cerebral perfusion (hypotension, hypoxia, hypo- or hyperventilation), and the blood can extend into the lateral ventricles &middot; <b>Who</b> &mdash; under 32 weeks gestation or under 1500 g &middot; <b>When</b> &mdash; the first few days of life, and often asymptomatic &middot; <b>Symptomatic signs</b> &mdash; lethargy, hypotonia, seizures, apnea, bradycardia, a bulging fontanelle, a rapidly rising head circumference, acute anemia &middot; <b>Diagnosis</b> &mdash; cranial ultrasound, repeated to follow progression; routine screening under 32 weeks &middot; <b>Versus hypoglycemia or hypocalcemia</b> &mdash; lethargy, hypotonia and seizures, but never a growing head &middot; <b>Versus hypoxic ischemic encephalopathy</b> &mdash; needs perinatal asphyxia and acidosis, not a day-3 onset after Apgar scores of 8 and 9 &middot; <b>Versus meningitis</b> &mdash; needs fever or risk factors such as maternal fever or prolonged rupture of membranes</div>
 <div class="danger"><span class="lbl">Anemia of prematurity</span> <b>Mechanism</b> &mdash; oxygenation at birth (breathing, ductus closure) switches off erythropoietin; a preterm infant has also missed the third-trimester shift of erythropoietin production from liver to kidney &middot; <b>Why worse than term</b> &mdash; lower hematocrit at birth, shorter red cell life span, frequent <b>NICU</b> (neonatal intensive care unit) blood draws, iron depletion &middot; <b>Timing</b> &mdash; term physiologic anemia bottoms out at 9 to 11 g/dL at 2 to 3 months; the preterm nadir is deeper (about 7 g/dL) and earlier (1 to 2 months) &middot; <b>Presentation</b> &mdash; often asymptomatic; tachycardia, a flow murmur, apnea, poor weight gain &middot; <b>Labs</b> &mdash; normocytic, normochromic, normal platelets and white count; the absolute reticulocyte count may be normal for age, but there is no reticulocytosis for the degree of anemia &middot; <b>Management</b> &mdash; iron supplementation and fewer blood draws; red cell transfusion if severe or symptomatic &middot; <b>Versus thalassemia</b> &mdash; microcytic and hypochromic with target cells &middot; <b>Versus hemolysis</b> &mdash; erythropoietin rises and the reticulocytes climb &middot; <b>Versus iron deficiency</b> &mdash; microcytic, and unlikely on fortified formula with ferrous sulfate &middot; <b>Versus anemia of chronic disease</b> &mdash; iron trapped in macrophages by chronic inflammation, infection or malignancy, in older children and adults</div>
 <div class="pearls"><span class="lbl">Pearls</span> Head circumference is the parameter that predicts neurodevelopment, so preserved head growth in a former preemie is the most reassuring single measurement &middot; A percentile by itself is not a pathology; the concerning patterns are crossing lines downward and disproportion between parameters &middot; Retinopathy of prematurity and hearing screening are required by gestational age, however well the infant looks &middot; A preterm infant is more vulnerable to vaccine-preventable disease, so the vaccine schedule is never delayed</div>
-<div class="pearls"><span class="lbl">Pairs with</span> Part II <b>Faltering Weight</b> covers the contrasting case. Ask: are the three parameters together or apart? Parameters that are together and steady are normal. Parameters that are apart, with weight lowest, indicate inadequate calories. Part I <b>Cerebral Palsy</b> covers the imaging diagnosis when the delay does not resolve with corrected age. Part I <b>Bronchopulmonary Dysplasia</b> covers apnea of prematurity, the diagnosis for the spells once intraventricular hemorrhage and anemia are excluded. Ask: did the spells start on day 2 to 3 in an infant who is well between episodes?</div>
+<div class="pearls"><span class="lbl">Pairs with</span> Part II <b>Abnormal Growth in a Child</b> covers the contrasting case. Ask: are the three parameters together or apart? Parameters that are together and steady are normal. Parameters that are apart, with weight lowest, indicate inadequate calories. Part I <b>Cerebral Palsy</b> covers the imaging diagnosis when the delay does not resolve with corrected age. Part I <b>Bronchopulmonary Dysplasia</b> covers apnea of prematurity, the diagnosis for the spells once intraventricular hemorrhage and anemia are excluded. Ask: did the spells start on day 2 to 3 in an infant who is well between episodes?</div>
 <div class="rule"><span class="lbl">Transferable rule</span> When a gestational age is given, do the arithmetic before interpreting anything. An option claiming that assessment is impossible is almost always wrong.</div>
 <div class="traps"><div class="trapline"><span class="pill p-uniform">Uniform-answer doubt</span><span class="trapwhy">Declining to assess is not caution; correction exists to make the assessment possible.</span></div><div class="trapline"><span class="pill p-number">Treat-the-number</span><span class="trapwhy">The 15th percentile sounds low only against an unexamined assumption that normal means the 50th.</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Global delay is a valid framework, but here it is judged against chronological rather than corrected age.</span></div></div>
 </div>
@@ -4237,7 +4216,7 @@ No social smile by <b>3 mo</b> · no babbling by <b>9 mo</b> · no words by <b>1
 <li data-type="avoid" data-src="authored" data-d1="Ampicillin" data-d2="Cefotaxime" data-item-id="q_015adc1ccaf1685a6b10" data-item-version="1" data-item-status="ready" data-key-id="o_7308d0a0d595242ed62e" data-d1-id="o_0f16e00c26fa53d0714e" data-d2-id="o_13b01c6712bdc56e5645" data-lead-in="Which of the following medications should be avoided in this patient?">7-week-old boy, well until 3 days ago, now constipated with a weak cry, drooping eyelids, a poor suck and weakness spreading from the face to the arms; afebrile; the team plans empiric antibiotics while cultures are pending &rarr; <b>Gentamicin</b> &rarr; Infant botulism; aminoglycosides worsen neuromuscular blockade; botulism immune globulin</li>
 <li data-type="next" data-src="authored" data-d1="Refer once a delay appears" data-d2="Screen again at 9 months" data-item-id="q_ad9817e3a3f4608fc6a6" data-item-version="1" data-item-status="ready" data-key-id="o_939b3034205a5ea107c7" data-d1-id="o_acdf7b636c4fbf96d39a" data-d2-id="o_4dae9bdc7b167efeb046">2-month-old girl with Down syndrome, lifting her head briefly and smiling socially; the parents ask what they should do now for her development &rarr; <b>Early intervention referral</b> &rarr; Referral at diagnosis, before any delay appears; an IEP follows at school entry</li>
 </ol>
-<div class="pearls"><span class="lbl">Pairs with</span> Part I <b>Aneuploidy: Reading the Newborn</b> covers the trisomy feature map and the prenatal screen. Ask: are the hands clenched or open, and is the tone up or down? Part I <b>Congenital Hypothyroidism</b> covers the floppy infant found on the newborn screen. Part I <b>Multiple Anomalies in a Newborn</b> covers the malformation syndromes without an aneuploidy. Part I <b>Cerebral Palsy</b> covers hypoxic-ischemic injury and its imaging. Part I <b>The Distended Abdomen in a Newborn or Infant</b> covers duodenal atresia and Hirschsprung disease in Down syndrome. Part II <b>Short Stature and Growth Velocity</b> covers Turner syndrome in the short girl. Part I <b>Developmental Milestones and Normal Growth</b> covers the early intervention referral for delay.</div>
+<div class="pearls"><span class="lbl">Pairs with</span> Part I <b>Aneuploidy: Reading the Newborn</b> covers the trisomy feature map and the prenatal screen. Ask: are the hands clenched or open, and is the tone up or down? Part I <b>Congenital Hypothyroidism</b> covers the floppy infant found on the newborn screen. Part I <b>Multiple Anomalies in a Newborn</b> covers the malformation syndromes without an aneuploidy. Part I <b>Cerebral Palsy</b> covers hypoxic-ischemic injury and its imaging. Part I <b>The Distended Abdomen in a Newborn or Infant</b> covers duodenal atresia and Hirschsprung disease in Down syndrome. Part II <b>Abnormal Growth in a Child</b> covers Turner syndrome in the short girl. Part I <b>Developmental Milestones and Normal Growth</b> covers the early intervention referral for delay.</div>
 <div class="rule"><span class="lbl">Transferable rule</span> For a floppy infant, first decide whether the problem is in the brain or the motor unit. An infant who is strong for the tone with normal reflexes has a central cause, often chromosomal. A weak infant with absent reflexes has a peripheral cause. Then send the genetic test for that level.</div>
 <div class="traps"><div class="trapline"><span class="pill p-attr">Unchecked attribute</span><span class="trapwhy">Low tone read as weakness without testing strength and reflexes, which is the step that separates central from peripheral causes.</span></div><div class="trapline"><span class="pill p-salient">Salient decoy</span><span class="trapwhy">A mother under 35 argues against Down syndrome, yet most affected infants are born to younger mothers.</span></div><div class="trapline"><span class="pill p-mirror">Mirror twin</span><span class="trapwhy">Prader-Willi syndrome is as floppy as Down syndrome from birth but has almond-shaped eyes, small genitals and a normal karyotype.</span></div><div class="trapline"><span class="pill p-test">Test-overrides-findings</span><span class="trapwhy">A positive <b>FISH</b> (fluorescence in situ hybridization) taken as the final answer, when only the karyotype shows a translocation that changes the parents&rsquo; recurrence risk.</span></div></div>
 </div>
@@ -6489,7 +6468,7 @@ The 2021 <b>AHA/ACC</b> (American Heart Association/American College of Cardiolo
 </ol>
 <div class="danger"><span class="lbl">Decoy note</span> "Has always been a picky eater" suggests a behavioral cause, but development is normal. Soft daily stools with no diarrhea or vomiting argue against celiac disease and gastroenteritis. The eczema, listed in the past medical history, is supporting evidence for eosinophilic esophagitis and is easy to overlook.</div>
 <div class="pearls"><span class="lbl">Pearls</span> A toddler stuck on purees with eczema and falling weight likely has eosinophilic esophagitis; endoscopic biopsy showing fifteen or more eosinophils confirms it. &middot; The type of refusal localizes the problem: a <b>texture</b> refusal points to the esophagus, a <b>food-group</b> refusal to celiac disease or an IgE allergy, and a poor <b>appetite</b> with normal eating to systemic or metabolic disease. &middot; Presentation varies with age: toddlers refuse solids, school-age children have abdominal pain and vomiting, and adolescents have dysphagia and food impaction. &middot; Atopy accompanies most cases, so eczema, asthma, allergic rhinitis or a known food allergy in a child refusing food is a clue. &middot; The diagnosis rests on the biopsy eosinophil count, not a serology or a skin test; allergy testing guides the elimination diet only after biopsy confirms the diagnosis. &middot; Dietary elimination is first-line, with a proton pump inhibitor or a swallowed topical glucocorticoid as pharmacologic options, and feeding therapy for learned food avoidance.</div>
-<div class="pearls"><span class="lbl">Pairs with</span> Part II <b>Faltering Weight</b> covers the general approach to poor weight gain and reading the growth curve; this brief covers the child who refuses food rather than simply failing to grow. Ask: <i>is he refusing food, and if so, a texture or a food group?</i> Celiac disease appears here only as a distractor; its serology-and-biopsy workup is not covered on this page.</div>
+<div class="pearls"><span class="lbl">Pairs with</span> Part II <b>Abnormal Growth in a Child</b> covers the general approach to poor weight gain and reading the growth curve; this brief covers the child who refuses food rather than simply failing to grow. Ask: <i>is he refusing food, and if so, a texture or a food group?</i> Celiac disease appears here only as a distractor; its serology-and-biopsy workup is not covered on this page.</div>
 <div class="rule"><span class="lbl">Transferable rule</span> In feeding problems, refusal of a texture, refusal of a food group, and loss of appetite point to different diseases; identify which pattern is present before choosing a test.</div>
 <div class="traps"><div class="trapline"><span class="pill p-salient">Salient decoy</span><span class="trapwhy">Tissue transglutaminase antibody: celiac disease causes diarrhea or constipation with pain and distension. Children with it avoid <b>gluten-rich</b> foods, not every solid. This child's stools and abdomen are normal.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Abdominal ultrasonography: a mass causes <b>anorexia</b>, not a preference for purees, and the abdomen is soft, nontender and nondistended.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Thyroid function tests: hyperthyroidism increases appetite and causes tachycardia and goiter; this child refuses food.</span></div><div class="trapline"><span class="pill p-seq">Sequencing trap</span><span class="trapwhy">Allergy skin testing diagnoses IgE-mediated allergy, which presents acutely with urticaria and angioedema. Even in confirmed disease it only guides the diet; establishing the diagnosis comes first.</span></div></div>
 </div>
@@ -8444,7 +8423,7 @@ A high <b>PVR</b> (postvoid residual) establishes that overflow is present, not 
 <div class="danger"><span class="lbl">Management, in one line</span> Treat distal renal tubular acidosis with oral alkali, citrate or bicarbonate, and add potassium when it stays low. Untreated acidosis slows growth in children.</div>
 <div class="pearls"><span class="lbl">Pearls</span> Distal renal tubular acidosis raises urine calcium and lowers urine citrate, so nephrocalcinosis and kidney stones can follow; serum calcium stays normal &middot; The urine anion gap (urine sodium plus potassium minus chloride) is positive in distal renal tubular acidosis and negative in diarrhea &middot; Winter's formula predicts a Pco2 of 1.5 times 16 plus 8, or 32, plus or minus 2 &middot; The measured 26 is below that range, which suggests an added respiratory alkalosis &middot; Juxtaglomerular cell hyperplasia is the kidney lesion of Bartter syndrome, which gives low potassium with alkalosis and a normal blood pressure</div>
 <div class="pearls"><span class="lbl">How NBME framed it</span> The lead-in asked for the cause of the hypokalemia, a secondary finding, although the acid-base values decided the answer. The nine options formed a grid of potassium, acid-base status and blood pressure, and only one option fit this child.</div>
-<div class="pearls"><span class="lbl">Pairs with</span> Part II <b>Faltering Weight</b> covers the first step, electrolytes with a venous blood gas when length is also low; this brief covers reading that panel. Part I <b>Secondary Hypertension</b> covers low potassium with alkalosis and hypertension, where renin separates primary hyperaldosteronism from renal artery stenosis. Part I <b>Polyuria</b> covers the dilute urine that severe hypokalemia can cause. Part I <b>Hypercalcemia</b> covers hyperparathyroidism; distal renal tubular acidosis raises urine calcium, not serum calcium. Ask: is the child acidotic or alkalotic, and is the blood pressure high?</div>
+<div class="pearls"><span class="lbl">Pairs with</span> Part II <b>Abnormal Growth in a Child</b> covers the first step, electrolytes with a venous blood gas when length is also low; this brief covers reading that panel. Part I <b>Secondary Hypertension</b> covers low potassium with alkalosis and hypertension, where renin separates primary hyperaldosteronism from renal artery stenosis. Part I <b>Polyuria</b> covers the dilute urine that severe hypokalemia can cause. Part I <b>Hypercalcemia</b> covers hyperparathyroidism; distal renal tubular acidosis raises urine calcium, not serum calcium. Ask: is the child acidotic or alkalotic, and is the blood pressure high?</div>
 <div class="rule"><span class="lbl">Transferable rule</span> Sort low potassium by acid-base status first, then by blood pressure. Low potassium with a normal-gap acidosis and no diarrhea is renal tubular acidosis, and a urine pH above 5.5 makes it distal.</div>
 <div class="traps"><div class="trapline"><span class="pill p-attr">Unchecked attribute</span><span class="trapwhy">Addison disease: it causes acidosis with a low-normal blood pressure; potassium would be high and sodium low.</span></div><div class="trapline"><span class="pill p-salient">Salient decoy</span><span class="trapwhy">Congenital adrenal hyperplasia: an adrenal disorder that affects growth; the salt-wasting form raises potassium, and the hypertensive forms cause alkalosis with high blood pressure.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Hyperparathyroidism: excess parathyroid hormone can cause a mild normal-gap acidosis; its hallmark is high calcium, and it does not explain low potassium.</span></div><div class="trapline"><span class="pill p-attr">Unchecked attribute</span><span class="trapwhy">Juxtaglomerular cell hyperplasia: this is Bartter syndrome, the closest mimic, with low potassium, normal blood pressure and poor growth in a young child; Bartter syndrome causes alkalosis, and this child is acidotic.</span></div><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Pheochromocytoma: an adrenal tumor on a list of hormonal causes; it causes episodic hypertension with headache and sweating, and this child is normotensive.</span></div><div class="trapline"><span class="pill p-attr">Unchecked attribute</span><span class="trapwhy">Primary hyperaldosteronism: the textbook cause of low potassium; it brings hypertension and alkalosis, and both are absent.</span></div><div class="trapline"><span class="pill p-attr">Unchecked attribute</span><span class="trapwhy">Pseudohypoaldosteronism: it causes a normal-gap acidosis and poor growth in infants; potassium is high in every form.</span></div><div class="trapline"><span class="pill p-slot">True-fact-wrong-slot</span><span class="trapwhy">Renal artery stenosis: renin excess does cause low potassium; it brings hypertension and alkalosis, and both are absent.</span></div></div>
 </div>
@@ -8587,7 +8566,7 @@ A high <b>PVR</b> (postvoid residual) establishes that overflow is present, not 
 </div>
 
 <!-- =================== ENDO =================== -->
-<h3 class="system" id="endo">Endocrine &amp; Bone <span class="n">10 topics <span style="color:#9A5B0E">+ 2 board-style</span></span></h3>
+<h3 class="system" id="endo">Endocrine &amp; Bone <span class="n">11 topics <span style="color:#9A5B0E">+ 1 board-style</span></span></h3>
 <p class="system-note">Two-step algorithms dominate: TSH then RAIU, and PTH then everything else. Know which variable is broken before you titrate to it.</p>
 
 <div class="brief" id="thyroid" data-shelf="fm" data-bp="endo">
@@ -9208,64 +9187,135 @@ For elevated prolactin, first get a <b>pregnancy test</b>, <b>TSH</b> (thyroid-s
 </div>
 
 
-<div class="brief bs" id="bs-short-stature" data-shelf="peds" data-nid="1462038745473" data-bp="endo gen">
-<h4>Short Stature and Growth Velocity</h4>
-<p class="sub">A tired 14-year-old falling off her height curve with weight preserved &middot; is growth velocity normal, which falls first, weight or height, and what is the bone age?</p>
-<div class="vignette"><span class="lbl">Source vignette</span> <b>Pt</b> &mdash; 14 yo F at a well visit; a picky eater who eats 3 meals a day; tired, going to bed right after dinner &middot; <b>Exam</b> &mdash; BP 110/70, HR 52; breasts Tanner 1, pubic hair Tanner 4 &middot; <b>Growth chart</b> &mdash; height crossing down 2 or more major percentiles to the 2nd percentile or below; weight near the 50th &middot; <b>Imaging</b> &mdash; bone age significantly delayed &middot; <b>Q</b> &mdash; the most likely cause of her growth pattern; options spanned adrenal tumor, constitutional growth delay, familial short stature, hypothyroidism and inadequate caloric intake</div>
-<div class="dp"><span class="lbl">The decision point</span>
-<p>Short stature is a height at or below the <b>2nd percentile</b>, but growth <b>velocity</b> matters more than height. A child who tracks a low but steady channel has a normal variant (familial short stature or constitutional delay). A child who <b>crosses 2 or more major percentile lines</b> (for example 25th to 10th to 2nd) has pathologic growth failure. Next, compare <b>weight against height</b>. In malnutrition and gut disease such as celiac disease or <b>IBD</b> (inflammatory bowel disease), <b>weight falls first</b>. In endocrine disease, <b>height falls first with weight preserved</b> or rising; examples are hypothyroidism, <b>GH</b> (growth hormone) deficiency and glucocorticoid excess. <b>Bone age</b> is the first test. A delayed bone age means growth potential remains; an advanced bone age means sex steroid exposure.</p>
-<p>Evaluate in a fixed order. <b>Dysmorphic features</b> come first; they point to a genetic cause (Turner syndrome, Down syndrome, skeletal dysplasia) and a karyotype. Without them, <b>velocity</b> sorts the remaining causes. Impaired velocity with a <b>delayed</b> bone age means endocrine disease, malnutrition or systemic illness (IBD, celiac, kidney disease). An <b>advanced</b> bone age means precocious puberty, in a child who is tall now but ends up short. Normal velocity with <b>delayed puberty and bone age</b> is constitutional delay. Normal velocity with <b>normal puberty and bone age</b> is familial or idiopathic short stature.</p>
-<p>This girl's falling height velocity, preserved weight, delayed bone age, fatigue and <b>bradycardia</b> indicate acquired hypothyroidism. Her puberty shows the <b>thelarche and adrenarche split</b>. Hypothyroidism suppresses gonadotropins, so breasts stay Tanner 1. Adrenal androgens still drive pubic hair to Tanner 4. Constitutional delay shares the delayed bone age and late puberty but keeps a normal velocity and causes no symptoms.</p>
-</div>
-<div class="crit"><span class="lbl">Defining criteria</span> <b>Short stature</b> &mdash; height at or below the <b>2nd percentile</b> for age and sex &middot; <b>Pathologic velocity</b> &mdash; height crossing <b>2 or more major percentile lines</b> downward; exceptions are <b>catch-up growth</b> in a preterm infant and percentile shifts toward genetic potential in the <b>first 2 years</b> &middot; <b>Bone age</b> &mdash; delayed in constitutional delay, endocrine and nutritional causes; equal to chronologic age in familial short stature; advanced with sex steroid excess &middot; <b>Midparental height</b> &mdash; average of the parents' heights, plus 6.5 cm for a boy or minus 6.5 cm for a girl</div>
-<table data-mask="5">
-<caption>Short stature &mdash; the differential</caption>
-<thead><tr><th>Cause</th><th>Height velocity</th><th>Weight vs height</th><th>Bone age</th><th>The NBME tell</th></tr></thead>
-<tbody>
-<tr><td>Familial or idiopathic short stature</td><td><b>Normal</b>; steady low channel</td><td>Proportionate</td><td><b>Normal</b></td><td><b>Short parents</b>; puberty on time; adult height matches midparental height</td></tr>
-<tr><td>Constitutional delay</td><td><b>Normal</b>; steady low channel</td><td>Proportionate</td><td><b>Delayed</b></td><td>Late puberty, a parent who was a <b>late bloomer</b>, catch-up to normal adult height; no symptoms</td></tr>
-<tr><td><b>Hypothyroidism</b> (acquired, usually Hashimoto)</td><td><b>Falls</b></td><td><b>Weight preserved</b></td><td>Delayed</td><td>Fatigue, <b>bradycardia</b>, constipation, cold intolerance, goiter; <b>no breasts but pubic hair present</b></td></tr>
-<tr><td>GH deficiency</td><td><b>Falls</b></td><td>Weight preserved; chubby</td><td>Delayed</td><td><b>Low IGF-1</b>; neonatal hypoglycemia or micropenis; midline defects, cranial irradiation or a sellar mass</td></tr>
-<tr><td>Cushing syndrome or chronic glucocorticoids</td><td><b>Falls</b></td><td><b>Weight rises</b></td><td>Delayed</td><td>Oral steroids for asthma or nephrotic syndrome; central obesity, striae, hypertension</td></tr>
-<tr><td>Malnutrition, celiac disease, IBD, chronic illness</td><td>Falls <b>after weight</b></td><td><b>Weight falls first</b></td><td>Delayed</td><td>Poor intake, diarrhea, abdominal pain, iron deficiency, raised ESR</td></tr>
-<tr><td>Turner syndrome</td><td>Slows through childhood</td><td>Proportionate</td><td>Normal to mildly delayed ⚠︎</td><td><b>Any short girl</b>, even without features; webbed neck, broad chest, <b>absent thelarche with pubic hair</b></td></tr>
-<tr><td>Other genetic syndromes (Down syndrome, skeletal dysplasia such as achondroplasia)</td><td>Low from early childhood</td><td>Skeletal dysplasia: <b>disproportionate</b>, short limbs</td><td>Not the deciding test</td><td><b>Dysmorphic features</b> are the first branch: a genetic diagnosis before endocrine tests</td></tr>
-<tr><td>Precocious puberty or adrenal tumor</td><td><b>Accelerated</b>; tall now, short adult</td><td>Proportionate</td><td><b>Advanced</b></td><td>Early breasts or testes, or <b>virilization</b> (clitoromegaly, acne, voice change) from an adrenal source</td></tr>
-</tbody>
-</table>
+<div class="brief" id="bs-short-stature" data-shelf="fm peds" data-nid="1462038745473" data-bp="endo gen gi" data-replaces="bs-ftt">
+<span class="alias" id="bs-ftt"></span>
+<h4>Abnormal Growth in a Child</h4>
+<p class="sub">short stature and growth velocity &middot; faltering weight &middot; normal variants, endocrine, nutritional and genetic causes<span class="subq">Is velocity normal, which parameter fell first, and what is the bone age?</span></p>
+<nav class="jump"><a href="#gro-dx">Diagnosis</a><a href="#gro-mx">Management</a><a href="#gro-bank">Practice</a></nav>
+
+<div class="dp"><span class="lbl">Bottom line</span>
+<p>Velocity matters more than the percentile. A low, steady channel is a normal variant; height crossing 2 or more major percentile lines downward is growth failure.</p>
+<p>Then ask which parameter fell first:</p>
+<ul class="bl"><li><b>Weight first</b>, length and head preserved: inadequate intake (up to 80%, mostly psychosocial), malabsorption or increased demand.</li>
+<li><b>Height first</b>, weight preserved or rising: endocrine (hypothyroidism, growth hormone deficiency, glucocorticoid excess).</li>
+<li><b>All three from birth</b>: genetic, congenital infection or intrauterine insult.</li></ul>
+<p>Bone age comes first among tests: delayed means growth potential remains; advanced means sex steroid exposure.</p>
+<p>Choose a rare organic cause over inadequate intake only when a symptom, sign or admission supports it.</p></div>
+
+<h5 class="tsec" id="gro-dx">Diagnosis</h5>
+<div class="crit"><span class="lbl">Defining criteria</span> <b>Short stature</b> &ndash; height at or below the 2nd percentile for age and sex &middot; <b>Faltering weight</b> &ndash; weight below the 2nd percentile, or crossing 2 or more major percentile lines downward &middot; <b>Not pathologic</b> &ndash; catch-up growth in a preterm infant; shifts toward genetic potential in the first 2 years &middot; <b>Midparental height</b> &ndash; average of the parents' heights, plus 6.5 cm for a boy or minus 6.5 cm for a girl</div>
+<figure class="lcp"><p class="kick">Diagnostic workup</p><div class="ttl"><span><b class="step">1</b>Plot the parameters, then the bone age</span></div><ol class="path"><li class="pt"><span class="when">Every child with abnormal growth</span><div class="tile first"><div class="wt2"><p class="tn">Weight, length or height and head on a growth chart, with midparental height</p><p class="wr2"><b>Low but steady channel</b><span class="mask">Normal variant: familial or constitutional</span></p><p class="wr2"><b>Weight alone low, length and head preserved</b><span class="mask">Intake, malabsorption or demand: diet history and observed feeding</span></p><p class="wr2"><b>Height falls, weight preserved or rising</b><span class="mask">Endocrine</span></p><p class="wr2"><b>All three low from birth, or dysmorphic</b><span class="mask">Genetic, congenital infection or intrauterine; karyotype if dysmorphic</span></p></div><i class="plus" aria-label="and"></i><div class="wt2"><p class="tn">Bone age (left hand and wrist radiograph)</p><p class="wr2"><b>Equal to age</b><span class="mask">Familial short stature</span></p><p class="wr2"><b>Delayed</b><span class="mask">Constitutional, endocrine or nutritional</span></p><p class="wr2"><b>Advanced</b><span class="mask">Sex steroid exposure</span></p></div></div></li><li class="pt"><span class="when">Only with a pointer</span><div class="tile"><div class="wt2"><p class="tn">TSH (thyroid-stimulating hormone) and free T4 (thyroxine); blood count, ESR (erythrocyte sedimentation rate), metabolic panel; tissue transglutaminase IgA (immunoglobulin A) with total IgA</p><p class="wr2"><b>Falling velocity without a clear cause</b><span class="mask">Hypothyroidism; systemic illness; celiac disease (biopsy confirms)</span></p></div><i class="plus" aria-label="and"></i><div class="wt2"><p class="tn">Late-night salivary or 24-hour urine free cortisol</p><p class="wr2"><b>Cushingoid without exogenous steroids</b><span class="mask">Cushing syndrome</span></p></div><i class="plus" aria-label="and"></i><div class="wt2"><p class="tn">Karyotype</p><p class="wr2"><b>Any short girl without another cause</b><span class="mask">Turner syndrome (45,X or mosaic)</span></p></div><i class="plus" aria-label="and"></i><div class="wt2"><p class="tn">IGF-1 (insulin-like growth factor 1)</p><p class="wr2"><b>Low</b><span class="mask">Growth hormone deficiency: stimulation testing</span></p></div><i class="plus" aria-label="and"></i><div class="wt2"><p class="tn">Sweat chloride; echocardiography; electrolytes with a venous blood gas</p><p class="wr2"><b>Steatorrhea and pneumonias; sweating with feeds; polyuria</b><span class="mask">Cystic fibrosis; heart disease; renal tubular acidosis</span></p></div></div></li><li class="pt end"><span class="when">Then</span><p class="pt-tx">Skip a random growth hormone level (pulsatile secretion; IGF-1 screens) and a broad laboratory or genetic panel in a well child with a normal exam.</p></li></ol></figure>
 <div class="tw">
-<table data-mask="4"><caption>Diagnostic workup</caption>
-<thead><tr><th>Test</th><th>Order</th><th>Result</th><th>What it points to</th></tr></thead>
+<table class="dense"><caption>Short stature: the differential</caption>
+<thead><tr><th>Cause</th><th>Velocity</th><th>Weight</th><th>Bone age</th><th>The tell</th></tr></thead>
 <tbody>
-<tr><td>Serial heights and weights on a growth chart, with midparental height</td><td>Screen</td><td>Velocity; <b>which parameter fell first</b>; target height</td><td>Normal variant versus growth failure; nutritional versus endocrine pattern</td></tr>
-<tr><td>Bone age (left hand and wrist radiograph)</td><td>First</td><td>Delayed, normal or <b>advanced</b></td><td>Normal: familial; delayed: constitutional, endocrine or systemic; advanced: sex steroid excess</td></tr>
-<tr><td>TSH and free T4</td><td>Next</td><td><b>High TSH, low free T4</b></td><td>Primary hypothyroidism</td></tr>
-<tr><td>CBC, ESR, comprehensive metabolic panel</td><td>Next</td><td>Anemia, <b>raised ESR</b>, low albumin, renal dysfunction or acidosis</td><td>IBD, chronic kidney disease or other systemic illness</td></tr>
-<tr><td>Tissue transglutaminase IgA with total IgA</td><td>Next</td><td>Positive</td><td>Celiac disease; biopsy confirms</td></tr>
-<tr><td>Karyotype</td><td>By branch</td><td><b>45,X</b> or mosaic</td><td>Turner syndrome; obtain in <b>every short girl</b> without another cause and in any <b>dysmorphic</b> child</td></tr>
-<tr><td>IGF-1</td><td>By branch</td><td>Low</td><td>GH deficiency; refer for stimulation testing</td></tr>
-<tr><td>Late-night salivary or 24-hour urine free cortisol</td><td>By branch</td><td>High</td><td>Cushing syndrome, when cushingoid without exogenous steroids</td></tr>
-<tr><td>Random growth hormone level</td><td>Skip</td><td>Uninterpretable</td><td>Secretion is pulsatile; IGF-1 screens instead</td></tr>
-</tbody>
-</table>
+<tr><td>Familial or idiopathic</td><td>Normal, low channel</td><td>Proportionate</td><td>Normal</td><td>Short parents; puberty on time</td></tr>
+<tr><td>Constitutional delay</td><td>Normal, low channel</td><td>Proportionate</td><td>Delayed</td><td>Late puberty; a parent who bloomed late; normal adult height</td></tr>
+<tr><td>Hypothyroidism (usually Hashimoto)</td><td>Falls</td><td>Preserved</td><td>Delayed</td><td>Fatigue, bradycardia, constipation, cold intolerance, goiter; no breasts but pubic hair</td></tr>
+<tr><td>Growth hormone deficiency</td><td>Falls</td><td>Preserved, chubby</td><td>Delayed</td><td>Low IGF-1; neonatal hypoglycemia or micropenis; midline defects, cranial irradiation, sellar mass</td></tr>
+<tr><td>Glucocorticoid excess</td><td>Falls</td><td>Rises</td><td>Delayed</td><td>Oral steroids for asthma or nephrotic syndrome; central obesity, striae, hypertension</td></tr>
+<tr><td>Malnutrition, celiac, IBD (inflammatory bowel disease), chronic illness</td><td>Falls after weight</td><td>Falls first</td><td>Delayed</td><td>Poor intake, diarrhea, abdominal pain, iron deficiency, raised ESR</td></tr>
+<tr><td>Turner syndrome</td><td>Slows through childhood</td><td>Proportionate</td><td>Normal to mildly delayed &#9888;&#65038;</td><td>Any short girl, even without features; webbed neck, broad chest, absent breasts with pubic hair</td></tr>
+<tr><td>Skeletal dysplasia (achondroplasia), Down syndrome</td><td>Low from early childhood</td><td>Dysplasia: short limbs</td><td>Not the deciding test</td><td>Dysmorphic features: genetic diagnosis before endocrine tests</td></tr>
+<tr><td>Precocious puberty or adrenal tumor</td><td>Accelerated: tall now, short adult</td><td>Proportionate</td><td>Advanced</td><td>Early breasts or testes, or virilization (clitoromegaly, acne, voice change)</td></tr>
+</tbody></table>
 </div>
-<h5 class="authored-hdr">Scenario bank</h5>
+<div class="crit"><span class="lbl">Faltering weight: the organic causes</span> <b>Cystic fibrosis</b> &ndash; steatorrhea, recurrent respiratory infection, abnormal newborn screen &middot; <b>Congenital heart disease</b> &ndash; sweating and tachypnea with feeds, murmur, hepatomegaly; limits feeding and activity &middot; <b>Metabolic disease</b> &ndash; hypoglycemia, acidosis, regression, prior admissions &middot; <b>Renal tubular acidosis or chronic kidney disease</b> &ndash; polyuria and polydipsia, length also low; normal anion gap acidosis, low potassium, urine pH above 5.5 in distal renal tubular acidosis &middot; <b>Psychosocial</b> &ndash; food insecurity, feeding technique, neglect, caregiver depression &middot; <b>Head circumference</b> &ndash; spared longest; a fallen head means prolonged severe deprivation or a non-nutritional cause</div>
+<div class="crit"><span class="lbl">Breasts versus pubic hair</span> <b>Breasts</b> &ndash; need gonadotropins and ovarian estrogen &middot; <b>Pubic hair</b> &ndash; needs only adrenal androgens &middot; <b>Tanner 1 breasts with pubic hair</b> &ndash; hypothyroidism (suppressed gonadotropins, delayed bone age, bradycardia) or Turner syndrome (ovarian failure, high FSH (follicle-stimulating hormone)); Hashimoto is common in Turner, so both can coexist</div>
+
+<h5 class="tsec" id="gro-mx">Management and treatment</h5>
+<div class="crit"><span class="lbl">By diagnosis</span> <b>Normal variants</b> &ndash; reassurance and serial heights; no hormone treatment &middot; <b>Inadequate intake</b> &ndash; caloric supplementation with serial weights; catch-up growth is the treatment and the confirmation &middot; <b>Hypothyroidism</b> &ndash; levothyroxine; catch-up growth and puberty resume &middot; <b>Growth hormone deficiency, Turner syndrome</b> &ndash; growth hormone through an endocrinologist &middot; <b>Glucocorticoid excess</b> &ndash; lowest effective dose; inhaled rather than oral steroids for asthma</div>
+
+<h5 class="authored-hdr" id="gro-bank">Practice</h5>
 <ol class="bank authored">
-<li data-type="dx" data-src="uworld" data-nid="1462038745473" data-d1="Constitutional growth delay" data-d2="Familial short stature" data-item-id="q_857e920d8681b391823c" data-item-version="1" data-item-status="ready" data-key-id="o_4c457d9d017eaba1f399" data-d1-id="o_1b662a3ff13bac5a9fc5" data-d2-id="o_2235556af487ca38ae27" data-lead-in="Which of the following is the most likely cause of this patient&#x27;s growth pattern?">14 yo F at a well visit; picky eater who eats 3 meals a day; increasingly tired, going to bed right after dinner; BP 110/70, HR 52; breasts Tanner 1, pubic hair Tanner 4; height has crossed down 2 or more major percentile lines to the 2nd percentile or below while weight stays near the 50th; bone age significantly delayed &rarr; <b>Hypothyroidism</b> &rarr; falling velocity with preserved weight and delayed bone age; delayed thelarche with adrenarche intact; check TSH and free T4, then levothyroxine</li>
-<li data-type="test" data-src="authored" data-d1="Serum IGF-1 level" data-d2="MRI of the brain" data-item-id="q_15aa9eb9f03e1c73f0d9" data-item-version="1" data-item-status="ready" data-key-id="o_1b485093ff7159da22b3" data-d1-id="o_32b31360d3d87d530300" data-d2-id="o_b649751108e859d5b499" data-lead-in="Which of the following is the most appropriate initial diagnostic study?">7 yo M whose height has fallen from the 50th to the 10th percentile over 2 years while his weight has stayed at the 50th; no headaches, visual changes, abdominal pain or diarrhea; normal vital signs; prepubertal; normal neurologic examination &rarr; <b>Bone age radiograph</b> &rarr; pathologic velocity with preserved weight suggests an endocrine cause; bone age comes first, then TSH, free T4 and IGF-1</li>
-<li data-type="dx" data-src="authored" data-d1="Constitutional growth delay" data-d2="Growth hormone deficiency" data-item-id="q_58885a47c4afb22e932e" data-item-version="1" data-item-status="ready" data-key-id="o_6ded39d63a4387045ccb" data-d1-id="o_c733e0aee66fe66309ab" data-d2-id="o_28c221c91c7f01c533b8">9 yo M, height at the 3rd percentile, tracking the same channel since age 2; weight at the 10th percentile; mother 152 cm, father 163 cm; well, with a normal examination and prepubertal genitalia; bone age equal to his chronologic age &rarr; <b>Familial short stature</b> &rarr; normal velocity and normal bone age; adult height will match midparental height</li>
-<li data-type="next" data-src="authored" data-d1="Recombinant growth hormone therapy" data-d2="MRI of the brain and pituitary" data-item-id="q_5c13cd513a01ec01d05f" data-item-version="1" data-item-status="ready" data-key-id="o_30e9324b800fd9b8dd29" data-d1-id="o_8b0a773010a95f7719bd" data-d2-id="o_312e597f29ac0417ebbf">14 yo M, height at the 3rd percentile, growing about 5 cm a year along the same channel since early childhood; testes prepubertal; no chronic symptoms; father did not have his growth spurt until 16; normal examination; bone age 11.5 years &rarr; <b>Reassurance and serial height measurements</b> &rarr; constitutional delay: normal velocity, delayed bone age and late puberty with catch-up</li>
-<li data-type="test" data-src="authored" data-d1="Serum IGF-1" data-d2="Serum FSH and LH" data-item-id="q_35418de660dc2d565ea1" data-item-version="1" data-item-status="ready" data-key-id="o_420ceec20c2438aa29df" data-d1-id="o_6a9e94ca45073654af6f" data-d2-id="o_b71b2c0d0d4ecd5a3364" data-lead-in="Which of the following is the most appropriate next diagnostic study?">11 yo F, height below the 2nd percentile with velocity slowing over 3 years; weight at the 25th percentile; mother 165 cm, father 178 cm; breasts Tanner 1, sparse pubic hair; no dysmorphic features noted; TSH, free T4, CBC, ESR and celiac serology normal &rarr; <b>Karyotype</b> &rarr; Turner syndrome is possible in any short girl, even without dysmorphic features</li>
-<li data-type="test" data-src="authored" data-d1="Serum IGF-1 level" data-d2="TSH and free T4 levels" data-item-id="q_b9e018ed3a14f5ae8c20" data-item-version="1" data-item-status="ready" data-key-id="o_82dea9e6f7645dab7938" data-d1-id="o_44b5a33994eefebc5129" data-d2-id="o_ca6d110ee2bf10a69931" data-lead-in="Which of the following is the most appropriate next diagnostic study?">8 yo M whose weight fell from the 50th to the 5th percentile over 18 months, with height falling from the 50th to the 25th in the last 6 months; intermittent abdominal pain and bloating with loose stools; iron deficiency anemia; bone age delayed &rarr; <b>Tissue transglutaminase IgA antibody</b> &rarr; weight falling before height points to malabsorption; celiac disease; send total IgA with it</li>
-<li data-type="mech" data-src="authored" data-d1="Growth hormone deficiency" data-d2="Acquired hypothyroidism" data-item-id="q_2a59e2776d02bcb2e0be" data-item-version="1" data-item-status="ready" data-key-id="o_d1c55386c4368c8655d6" data-d1-id="o_207e4fcc40ba9adad1cb" data-d2-id="o_1cf84e7347b13b7f0d03" data-lead-in="Which of the following is the most likely cause of this patient&#x27;s growth pattern?">9 yo M with severe asthma who has needed 6 courses of oral prednisone in the past year and takes it between courses; height fell from the 50th to the 10th percentile over 2 years while weight rose from the 75th to the 95th; round face, purple abdominal striae, BP at the 95th percentile &rarr; <b>Glucocorticoid excess</b> &rarr; iatrogenic Cushing syndrome: height falls while weight rises</li>
-<li data-type="next" data-src="authored" data-d1="Bone age radiograph" data-d2="TSH and free T4 levels" data-item-id="q_c5d2738c9b729f69755e" data-item-version="1" data-item-status="ready" data-key-id="o_b3b3038321b716c0f823" data-d1-id="o_00cfde3bb12ba970ec68" data-d2-id="o_dcd4f5339f48bbefb68c">15 mo M born at term weighing 4.3 kg to a mother with gestational diabetes; length has drifted from the 90th to the 25th percentile over the first year and has followed the 25th for the last 3 months; weight-for-length at the 50th percentile; mother 157 cm, father 168 cm; meeting milestones; normal examination &rarr; <b>Reassurance and routine growth monitoring</b> &rarr; a percentile shift toward genetic potential in the first 2 years is normal</li>
-<li data-type="dx" data-src="authored" data-d1="Growth hormone deficiency" data-d2="Familial short stature" data-item-id="q_eded3fcb645627eaaeb3" data-item-version="1" data-item-status="ready" data-key-id="o_b9dbe38f710ce61f9c8b" data-d1-id="o_05e3ce21b00abb8196a7" data-d2-id="o_75b8faac1345ec2f20b2">4 yo M with height below the 1st percentile since infancy, growing steadily along that channel; short arms and legs relative to the trunk, large head with frontal bossing and a flat nasal bridge; normal intelligence and development &rarr; <b>Achondroplasia</b> &rarr; a dysmorphic, disproportionate child goes down the genetic branch first</li>
+<li data-type="dx" data-d1="Constitutional growth delay" data-d2="Familial short stature" data-item-id="q_97f1e8ba10bb4034e010" data-item-version="1" data-item-status="ready" data-key-id="o_78f617c1b00a0c73b517" data-d1-id="o_bd2745b696733d9eb5b3" data-d2-id="o_e6595037c8f414f1acd4" data-src="authored" data-lead-in="At this well visit, which of the following is the most likely cause of this patient&#x27;s growth pattern?"><span class="sl">14-year-old girl, increasingly tired, in bed right after dinner</span>
+<span class="si">height down ≥2 major percentiles to the 2nd</span>
+<span class="si">weight near 50th</span>
+<span class="ss">Picky, 3 meals</span>
+<span class="sd">BP 110/70 mm Hg &middot; HR 52/min &middot; breasts Tanner 1, pubic hair Tanner 4 &middot; bone age markedly delayed</span> &rarr; <b>Acquired hypothyroidism</b> &rarr; falling velocity with weight preserved, a delayed bone age, fatigue and bradycardia: acquired hypothyroidism; suppressed gonadotropins keep the breasts at Tanner 1 while adrenal androgens drive pubic hair; check TSH and free T4, then levothyroxine</li>
+<li data-type="test" data-src="authored" data-d1="Serum insulin-like growth factor 1" data-d2="Magnetic resonance imaging of the brain" data-item-id="q_15aa9eb9f03e1c73f0d9" data-item-version="2" data-item-status="ready" data-key-id="o_1b485093ff7159da22b3" data-d1-id="o_a141bc15a1c3d074350c" data-d2-id="o_acd7aedff04ad5401efb" data-lead-in="Which of the following is the most appropriate initial diagnostic study?"><span class="sl">7-year-old boy is seen for slowing growth</span>
+<span class="si">height fell from the 50th to the 10th percentile over 2 years</span>
+<span class="si">weight stayed at the 50th</span>
+<span class="ss">No headaches, visual change, abdominal pain or diarrhea</span>
+<span class="sd">Vital signs normal &middot; prepubertal &middot; neurologic exam normal</span> &rarr; <b>Bone age radiograph</b> &rarr; pathologic velocity with weight preserved suggests an endocrine cause; bone age comes first, then TSH, free T4 and IGF-1</li>
+<li data-type="dx" data-src="authored" data-d1="Constitutional growth delay" data-d2="Growth hormone deficiency" data-item-id="q_58885a47c4afb22e932e" data-item-version="2" data-item-status="ready" data-key-id="o_6ded39d63a4387045ccb" data-d1-id="o_c733e0aee66fe66309ab" data-d2-id="o_28c221c91c7f01c533b8" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">9-year-old boy has height at the 3rd percentile</span>
+<span class="si">same channel since age 2</span>
+<span class="si">weight at the 3rd percentile, also steady since age 2</span>
+<span class="ss">Mother 152 cm, father 163 cm</span>
+<span class="sd">Well, examination normal &middot; prepubertal genitalia &middot; bone age equal to chronologic age</span> &rarr; <b>Familial short stature</b> &rarr; normal velocity and normal bone age with short parents is familial short stature: adult height will match midparental height; not faltering growth</li>
+<li data-type="next" data-src="authored" data-d1="Recombinant human growth hormone injections" data-d2="Magnetic resonance imaging of the pituitary" data-item-id="q_5c13cd513a01ec01d05f" data-item-version="2" data-item-status="ready" data-key-id="o_30e9324b800fd9b8dd29" data-d1-id="o_53cb1f9b6802c4f08447" data-d2-id="o_ee4124b8cdda442747d6" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">14-year-old boy has height at the 3rd percentile</span>
+<span class="si">growing about 5 cm a year, same channel since early childhood</span>
+<span class="si">testes prepubertal</span>
+<span class="ss">His father's growth spurt came at 16; no chronic symptoms</span>
+<span class="sd">Afebrile &middot; examination normal &middot; bone age 11.5 years</span> &rarr; <b>Reassurance and serial height measurements</b> &rarr; normal velocity, delayed bone age and late puberty with a late-blooming parent is constitutional delay: reassurance and serial heights; catch-up follows</li>
+<li data-type="test" data-src="authored" data-d1="Serum IGF-1" data-d2="Serum FSH and luteinizing hormone" data-item-id="q_35418de660dc2d565ea1" data-item-version="2" data-item-status="ready" data-key-id="o_420ceec20c2438aa29df" data-d1-id="o_6a9e94ca45073654af6f" data-d2-id="o_0f7e01c4219c32715734" data-lead-in="Which of the following is the most appropriate next diagnostic study?"><span class="sl">11-year-old girl's height is below the 2nd percentile</span>
+<span class="si">velocity slowing over 3 years</span>
+<span class="si">weight 25th percentile</span>
+<span class="ss">Mother 165 cm, father 178 cm</span>
+<span class="sd">Breasts Tanner 1, sparse pubic hair &middot; no dysmorphic features &middot; thyroid tests, blood count, ESR and celiac serology normal</span> &rarr; <b>Karyotype</b> &rarr; Turner syndrome is possible in any short girl, even without dysmorphic features: karyotype</li>
+<li data-type="test" data-src="authored" data-d1="Serum IGF-1 level" data-d2="Thyroid-stimulating hormone and free thyroxine" data-item-id="q_b9e018ed3a14f5ae8c20" data-item-version="2" data-item-status="ready" data-key-id="o_82dea9e6f7645dab7938" data-d1-id="o_44b5a33994eefebc5129" data-d2-id="o_15eef0be1babd4e4dcd6" data-lead-in="Which of the following is the most appropriate next diagnostic study?"><span class="sl">8-year-old boy's weight fell from the 50th to 5th percentile in 18 months</span>
+<span class="si">height fell from the 50th to 25th in 6 months</span>
+<span class="si">intermittent abdominal pain, bloating, loose stools</span>
+<span class="sd">Hemoglobin 9.8 g/dL, ferritin low &middot; bone age delayed</span> &rarr; <b>Tissue transglutaminase IgA antibody</b> &rarr; weight falling before height points to malabsorption: tissue transglutaminase IgA for celiac disease, sent with total IgA</li>
+<li data-type="mech" data-src="authored" data-d1="Growth hormone deficiency" data-d2="Acquired hypothyroidism" data-item-id="q_2a59e2776d02bcb2e0be" data-item-version="2" data-item-status="ready" data-key-id="o_d1c55386c4368c8655d6" data-d1-id="o_207e4fcc40ba9adad1cb" data-d2-id="o_1cf84e7347b13b7f0d03" data-lead-in="Which of the following is the most likely cause of this patient's growth pattern?"><span class="sl">9-year-old boy with severe asthma: 6 prednisone courses this year</span>
+<span class="si">height fell from the 50th to the 10th over 2 years</span>
+<span class="si">weight rose from the 75th to 95th</span>
+<span class="ss">Takes it between courses</span>
+<span class="sd">Round face, purple abdominal striae &middot; BP 95th percentile</span> &rarr; <b>Glucocorticoid excess</b> &rarr; height falling while weight rises on repeated oral steroids is glucocorticoid excess (iatrogenic Cushing syndrome); use the lowest dose and inhaled steroids</li>
+<li data-type="next" data-src="authored" data-d1="Bone age radiograph" data-d2="Thyroid-stimulating hormone and free thyroxine levels" data-item-id="q_c5d2738c9b729f69755e" data-item-version="2" data-item-status="ready" data-key-id="o_b3b3038321b716c0f823" data-d1-id="o_00cfde3bb12ba970ec68" data-d2-id="o_3feafe165c9c2069cde6" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">15-month-old boy, 4.3 kg at term birth, mother with gestational diabetes</span>
+<span class="si">length drifted from the 90th to the 25th over year 1, then held 3 months</span>
+<span class="ss">Mother 157 cm, father 168 cm</span>
+<span class="sd">Weight-for-length 50th percentile &middot; milestones met &middot; examination normal</span> &rarr; <b>Reassurance and routine growth monitoring</b> &rarr; a percentile shift toward genetic potential in the first 2 years is normal: reassurance and routine growth monitoring</li>
+<li data-type="dx" data-src="authored" data-d1="Growth hormone deficiency" data-d2="Familial short stature" data-item-id="q_eded3fcb645627eaaeb3" data-item-version="2" data-item-status="ready" data-key-id="o_b9dbe38f710ce61f9c8b" data-d1-id="o_05e3ce21b00abb8196a7" data-d2-id="o_75b8faac1345ec2f20b2" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">4-year-old boy has height below the 1st percentile since infancy</span>
+<span class="si">growing steadily along that channel</span>
+<span class="si">short arms and legs relative to the trunk</span>
+<span class="ss">Large head, frontal bossing, flat nasal bridge</span>
+<span class="sd">Afebrile &middot; development and intelligence normal</span> &rarr; <b>Achondroplasia</b> &rarr; a dysmorphic, disproportionate child goes down the genetic branch first: achondroplasia</li>
+<li data-type="dx" data-src="authored" data-d1="Cystic fibrosis" data-d2="Congenital heart disease with a shunt" data-item-id="q_3c79dfcb36f358ed928d" data-item-version="2" data-item-status="ready" data-key-id="o_98904bea875d54be8449" data-d1-id="o_150369853aea53efba05" data-d2-id="o_d4a334c9aa85ad1f5725" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">15-month-old boy has weight at the 2nd percentile</span>
+<span class="si">length at the 30th, head circumference at the 40th</span>
+<span class="si">active, keeps up with peers, eats well at daycare</span>
+<span class="ss">Never hospitalized</span>
+<span class="sd">Afebrile &middot; examination normal</span> &rarr; <b>Inadequate caloric intake from psychosocial causes</b> &rarr; weight alone low with length and head preserved is inadequate intake, most often psychosocial; heart disease would limit feeding and activity</li>
+<li data-type="next" data-src="authored" data-d1="Send a broad metabolic and genetic panel" data-d2="Obtain a sweat chloride test" data-item-id="q_2424a8f173d75ccfb219" data-item-version="2" data-item-status="ready" data-key-id="o_fa74159fa6965192ac34" data-d1-id="o_b5a16b01d50058a19d11" data-d2-id="o_3991600ba85c596ca7ea" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">15-month-old boy is evaluated for poor weight gain</span>
+<span class="si">weight low; length and head circumference preserved</span>
+<span class="si">no diarrhea, cough or sweating with feeds</span>
+<span class="ss">Lives with his mother, who works nights</span>
+<span class="sd">Afebrile &middot; examination normal</span> &rarr; <b>Detailed diet history and observed feeding</b> &rarr; in a well child with a normal exam, broad testing has very low yield: a detailed diet history and observed feeding come first</li>
+<li data-type="dx" data-d1="Inadequate caloric intake" data-d2="Cystic fibrosis with malabsorption" data-item-id="q_850a7d0938d6cfc7e9c8" data-item-version="1" data-item-status="ready" data-key-id="o_6771fa67ec9629fd2057" data-d1-id="o_e4af0f5ec052f59f1070" data-d2-id="o_a7a85b9bedd787a30629" data-src="authored" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">4-year-old girl has height at the 3rd percentile</span>
+<span class="si">weight at the 40th percentile</span>
+<span class="si">height crossed down from the 25th over 2 years</span>
+<span class="ss">Eats well; no diarrhea</span>
+<span class="sd">Afebrile &middot; examination normal &middot; bone age delayed</span> &rarr; <b>Growth hormone deficiency or hypothyroidism</b> &rarr; a short child heavy for height has an endocrine cause until shown otherwise: height falls more than weight, the inverse of malnutrition</li>
+<li data-type="dx" data-src="authored" data-d1="Inadequate caloric intake" data-d2="Isolated growth hormone deficiency" data-item-id="q_cef84dd51e7b5b94a522" data-item-version="2" data-item-status="ready" data-key-id="o_b2519f5693f95c788220" data-d1-id="o_03485b5b171b5d7181fd" data-d2-id="o_d7ba673f5139ea0cbf58" data-lead-in="Which of the following is the most likely diagnosis?"><span class="sl">8-month-old boy has weight, length and head circumference below the 2nd percentile</span>
+<span class="si">small for all three since birth</span>
+<span class="si">microcephaly and dysmorphic features</span>
+<span class="ss">Born small for gestational age at term</span>
+<span class="sd">Afebrile &middot; feeding well, observed intake adequate</span> &rarr; <b>Genetic or intrauterine cause</b> &rarr; all three parameters low from the outset is symmetric restriction: a genetic or intrauterine cause</li>
+<li data-type="next" data-src="authored" data-d1="Detailed diet history alone" data-d2="Echocardiography" data-item-id="q_86e47ccade6053d7acd9" data-item-version="2" data-item-status="ready" data-key-id="o_9c14a7e48c08514b9da9" data-d1-id="o_646ebb3c724d57a99dde" data-d2-id="o_57282d90c45d5d019fe0" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">6-month-old girl has poor weight gain</span>
+<span class="si">bulky, greasy, foul-smelling stools</span>
+<span class="si">two admissions for pneumonia</span>
+<span class="ss">Feeds eagerly, never satisfied</span>
+<span class="sd">T 37.2 °C &middot; respiratory rate 40/min &middot; crackles at both bases &middot; weight below the 2nd percentile</span> &rarr; <b>Sweat chloride testing</b> &rarr; malabsorption with recurrent lung infection is cystic fibrosis: sweat chloride</li>
+<li data-type="next" data-src="authored" data-d1="Sweat chloride testing" data-d2="Caloric supplementation alone" data-item-id="q_51c0e2e474245ec49283" data-item-version="2" data-item-status="ready" data-key-id="o_15dc8b8b4e6555acbd12" data-d1-id="o_dcef8e2228435784a899" data-d2-id="o_cf271a0b3c3a59f29e2f" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">3-month-old boy has poor weight gain</span>
+<span class="si">sweats and breathes fast during feeds</span>
+<span class="si">harsh holosystolic murmur at the left sternal border</span>
+<span class="ss">Tires before finishing a bottle</span>
+<span class="sd">respiratory rate 62/min &middot; liver edge 3 cm below the costal margin</span> &rarr; <b>Echocardiography</b> &rarr; sweating and tachypnea with feeds and a murmur point to congenital heart disease raising caloric demand: echocardiography</li>
+<li data-type="next" data-src="authored" data-d1="Diet history alone" data-d2="Growth hormone stimulation testing and IGF-1" data-item-id="q_c58ffe3da98457e3843f" data-item-version="2" data-item-status="ready" data-key-id="o_9629ed1706b2548e976c" data-d1-id="o_bb2a9602b3b454b783ea" data-d2-id="o_035071ed099878a60c93" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">14-month-old girl has poor weight gain</span>
+<span class="si">drinks constantly and wets many diapers</span>
+<span class="si">length also at the 3rd percentile</span>
+<span class="ss">No vomiting or diarrhea; eats well</span>
+<span class="sd">Afebrile &middot; BP normal &middot; examination otherwise normal &middot; weight below the 2nd percentile</span> &rarr; <b>Serum electrolytes with a venous blood gas</b> &rarr; polyuria with length also low points to renal tubular acidosis: electrolytes with a venous blood gas for a normal anion gap acidosis</li>
+<li data-type="next" data-src="authored" data-d1="Admit for observed feeding" data-d2="Refer for gastrostomy tube placement" data-item-id="q_bd9644cde17a5373a596" data-item-version="2" data-item-status="ready" data-key-id="o_80f54c55d81353aa80fe" data-d1-id="o_5382a24705d95cc887b4" data-d2-id="o_7cff0fd465c759b7be5a" data-lead-in="Which of the following is the most appropriate next step in management?"><span class="sl">15-month-old boy is seen 4 weeks after starting caloric supplementation</span>
+<span class="si">had isolated low weight, normal length and head</span>
+<span class="si">now gaining well with family support</span>
+<span class="ss">Eating eagerly at home and daycare</span>
+<span class="sd">Afebrile &middot; weight up 600 g</span> &rarr; <b>Continue outpatient management with close follow-up</b> &rarr; catch-up growth on adequate calories confirms inadequate intake and is the treatment: continue outpatient care with close follow-up</li>
 </ol>
-<div class="danger"><span class="lbl">Management</span> <b>Normal variants</b> &mdash; reassurance and serial heights; no hormone treatment is needed for familial short stature or constitutional delay &middot; <b>Hypothyroidism</b> &mdash; levothyroxine, with catch-up growth and resumed puberty &middot; <b>GH deficiency and Turner syndrome</b> &mdash; growth hormone through an endocrinologist &middot; <b>Glucocorticoid excess</b> &mdash; lowest effective dose; inhaled rather than oral steroids for asthma</div>
-<div class="pearls"><span class="lbl">Pearls</span> Breast development needs gonadotropins and ovarian estrogen; pubic hair needs only adrenal androgens. <b>Tanner 1 breasts with pubic hair</b> therefore point to a gonadal problem: hypothyroidism (suppressed gonadotropins, delayed bone age, bradycardia) or Turner syndrome (ovarian failure, high FSH, karyotype) &middot; Hashimoto thyroiditis is common in Turner syndrome, so the two can coexist &middot; A short child who is <b>heavy</b> for height has an endocrine cause until shown otherwise; a short child who is <b>thin</b> has a nutritional or gut cause</div>
-<div class="pearls"><span class="lbl">Pairs with</span> Aquifer <b>Sexual Maturity Rating</b> covers staging and pubertal delay (ask: is the bone age delayed in a late bloomer?). Aquifer <b>Faltering Weight</b> covers the infant and toddler pattern (ask: which parameter fell first?). Part I <b>Primary Amenorrhea</b> covers the Turner branch (ask: is there a uterus, and is the FSH high?). Part I <b>Sellar and Suprasellar Masses</b> covers growth failure from a craniopharyngioma (ask: is there headache, papilledema or a visual field defect?). Part I <b>Precocious Puberty</b> covers the advanced bone age (ask: central or peripheral?). Part I <b>Congenital Hypothyroidism</b> covers the newborn screen; Part I <b>Thyroid Disease in an Adult</b> covers Hashimoto thyroiditis in adults.</div>
-<div class="rule"><span class="lbl">Transferable rule</span> Judge a short child by velocity first, then by which parameter fell first, then by bone age. A steady channel is a normal variant. Weight falling before height indicates a nutritional or gut cause. Height falling with weight preserved indicates an endocrine cause. An advanced bone age means sex steroid exposure.</div>
-<div class="traps"><div class="trapline"><span class="pill p-mirror">Mirror twin</span><span class="trapwhy">Constitutional growth delay: the benign twin shares the delayed bone age and late breast development, but its velocity stays normal and it causes no fatigue or bradycardia; she crossed 2 major percentiles.</span></div><div class="trapline"><span class="pill p-salient">Salient decoy</span><span class="trapwhy">Adrenal tumor: pubic hair ahead of breasts looks like androgen excess, but an adrenal tumor virilizes and advances the bone age; her bone age is delayed and her pubic hair is ordinary adrenarche.</span></div><div class="trapline"><span class="pill p-attr">Unchecked attribute</span><span class="trapwhy">Familial short stature: the right family of benign diagnoses, but it keeps a normal velocity, a normal bone age and on-time puberty; all three are abnormal here.</span></div><div class="trapline"><span class="pill p-salient">Salient decoy</span><span class="trapwhy">Inadequate caloric intake: picky eating is planted, but malnutrition drops weight before height; her weight holds at the 50th percentile.</span></div></div>
+
+<div class="pearls"><span class="lbl">Pairs with</span> <b>Sexual Maturity Rating</b>: is the bone age delayed in a late bloomer? <b>Primary Amenorrhea</b>: the Turner branch; is there a uterus, and is the FSH high? <b>Sellar and Suprasellar Masses</b>: growth failure from a craniopharyngioma; headache, papilledema, a visual field defect? <b>Precocious Puberty</b>: the advanced bone age; central or peripheral? <b>Follow-Up of the Preterm Infant</b>: proportionate parameters, normal growth <b>Toddler Food Refusal</b>: the refusal pattern, not calories</div>
+<div class="rule"><span class="lbl">Transferable rule</span><p>Judge a growth problem by velocity first, then by which parameter fell first, then by bone age. When one common cause competes with several rare ones, the rare one needs a symptom, sign or admission behind it.</p></div>
+
 </div>
 
 <!-- =================== HEME =================== -->
