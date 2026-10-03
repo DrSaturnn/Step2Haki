@@ -2,6 +2,23 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-02 s57: Peds MSK: fever, rash and joint pain in the lean style (C8 sexual-history rule and C9 rubella clues fixed); two UWorld stems archived and rewritten; DGI knee clue carried; now a topic brief
+
+```
+Page: 216 briefs, 2129 items -> 216 briefs, 2129 items
+Briefs changed (4):
+  - bs-fever-rash-arthralgia (Fever, Rash and Joint Pain: Name the Rash, Then Date the Exposure): 2 items added (q_b1dd657dad06115ba86e, q_b265dce83e38f49b9dfe); items edited (q_18edf7d26cb5a8ad3e18, q_605646b1eeada5322f53, q_2bdcffda772905c78f3f, q_5413d7739952fa996be1, q_d613f4e6257d5e73b9d2, q_d4e11448e7cb70ea988b); versions bumped (q_18edf7d26cb5a8ad3e18 v1->v2, q_605646b1eeada5322f53 v1->v2, q_2bdcffda772905c78f3f v1->v2, q_5413d7739952fa996be1 v1->v2, q_d613f4e6257d5e73b9d2 v1->v2, q_d4e11448e7cb70ea988b v1->v2); attrs set (brief class; q_18edf7d26cb5a8ad3e18 data-lead-in; q_605646b1eeada5322f53 data-lead-in; q_2bdcffda772905c78f3f data-lead-in; q_5413d7739952fa996be1 data-lead-in; q_d4e11448e7cb70ea988b data-lead-in); ITEMS REMOVED (q_336f9bcf10beebd35742, q_ea5c77c1f0c5c96dd1b4); prose edited (-748 chars)
+  - bs-exanthems (Exanthems in a Child): prose edited (+14 chars)
+  - bs-anaphylaxis (Anaphylaxis and Its Mimics): prose edited (+14 chars)
+  - bs-genital-ulcer (Genital Ulcer: Painless or Painful): prose edited (+14 chars)
+Other page changes (nav, headers, scripts): -11 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 216 briefs, 2129 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 216 | bankwraps 216 | mcq 2129 (axCheck 2129, reveal-only 0) | malformed 0 | crit gridded 147/156 | vignette gridded 121/121 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 9
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-02 s56: Peds MSK: homocystinuria in the lean style as Marfanoid Habitus: Marfan or Homocystinuria? (C7 fixed: no shared skin hyperelasticity; joints usually stiff); pediatric stroke pointer
 
 ```
