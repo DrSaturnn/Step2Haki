@@ -36,6 +36,23 @@ s = open(p, encoding='utf-8').read()
 s = re.sub(r'<meta name="ax-build" content="[^"]*">', '<meta name="ax-build" content="%s|%s">' % (b, d), s, count=1)
 open(p, 'w', encoding='utf-8').write(s)
 PY
+# change log (s74): fill <script id="axlog"> from repair/changelog/axlog.py; every shipped build needs an entry there
+LOGJSON=$(python3 repair/changelog/axlog.py 2>&1) || fail changelog "$LOGJSON"
+AXLOG="$LOGJSON" python3 - "$TMP/index.html" "$B" <<'PY' || fail changelog "add an entry for $B to repair/changelog/axlog.py (reader-facing note; merges as [new title, [old titles]])"
+import json, os, re, sys
+p, b = sys.argv[1], sys.argv[2]
+data = os.environ['AXLOG']; log = json.loads(data)
+n = re.sub(r'^s0*', '', b)
+if not n.isdigit() or int(n) not in [e['v'] for e in log]:
+    sys.exit(1)
+s = open(p, encoding='utf-8').read()
+safe = data.strip().replace('</', '<\\/')
+s, k = re.subn(r'(<script type="application/json" id="axlog">)(.*?)(</script>)', lambda m: m.group(1) + safe + m.group(3), s, count=1, flags=re.S)
+if k != 1:
+    sys.exit(1)
+open(p, 'w', encoding='utf-8').write(s)
+PY
+echo "changelog: $(echo "$LOGJSON" | python3 -c 'import json,sys; print(len(json.load(sys.stdin)))') entries"
 # rules self-tests: the checks themselves must still catch every known defect, on every brief type
 o=$(python3 tools/test_migrate_check.py 2>&1) || fail rules-selftest "$(echo "$o" | grep -E '^BAD|passed')"
 o2=$(AXBX_PAGE="$TMP/index.html" python3 tools/test_gate_rules.py 2>&1) || fail rules-selftest "$(echo "$o2" | grep -E '^BAD|passed')"

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="ax-build" content="s73|2026-10-03">
+<meta name="ax-build" content="s74|2026-10-03">
 <title>Step2Haki — Clinical Board Briefs</title>
 <style>
 :root{
@@ -1329,6 +1329,28 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
 #nav .brand p.axbuild{margin-top:2px;font-size:10.5px;opacity:.7;letter-spacing:.02em}
 .axupdate{position:fixed;left:0;right:0;margin:0 auto;width:fit-content;top:calc(10px + env(safe-area-inset-top,0px));z-index:9999;display:flex;align-items:center;gap:12px;max-width:calc(100vw - 24px);box-sizing:border-box;padding:10px 12px 10px 16px;border-radius:14px;background:#2B2F36;color:#fff;font:600 13.5px/1.3 var(--sans,system-ui);box-shadow:0 8px 28px rgba(0,0,0,.25)}
 .axupdate button{flex:none;border:0;border-radius:9px;padding:8px 12px;background:var(--accent,#544AC4);color:#fff;font:700 13px/1 var(--sans,system-ui);cursor:pointer;min-height:36px}
+.axbuild .axlogbtn{border:0;background:none;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px}
+.axbuild .axlogbtn:hover,.axbuild .axlogbtn:focus-visible{color:var(--accent,#544AC4)}
+.axlog-scrim{position:fixed;inset:0;z-index:10000;background:rgba(43,47,54,.35);display:flex;align-items:flex-start;justify-content:center;padding:calc(24px + env(safe-area-inset-top,0px)) 16px 24px;box-sizing:border-box}
+.axlog{background:#FFFDF8;color:#2B2F36;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.22);width:100%;max-width:640px;max-height:calc(100vh - 48px);display:flex;flex-direction:column;font:14px/1.45 var(--sans,system-ui)}
+.axlog header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px 10px;border-bottom:1px solid #ECE6DA}
+.axlog header h2{margin:0;font-size:16px}
+.axlog header button{border:0;border-radius:9px;background:#EFEAF8;color:#2B2F36;font:600 13px/1 var(--sans,system-ui);padding:8px 12px;min-height:36px;cursor:pointer}
+.axlog .axlog-body{overflow:auto;padding:4px 16px 16px}
+.axlog .axlog-filter{display:flex;gap:8px;padding:10px 16px 0}
+.axlog .axlog-filter button{border:1px solid #DDD5EE;border-radius:999px;background:#fff;padding:6px 12px;font:600 12.5px/1 var(--sans,system-ui);cursor:pointer;color:#2B2F36}
+.axlog .axlog-filter button[aria-pressed="true"]{background:#EFEAF8;border-color:#B9AEE0}
+.axlog .axlog-v{padding:12px 0;border-bottom:1px solid #F1ECE2}
+.axlog .axlog-v:last-child{border-bottom:0}
+.axlog .axlog-h{display:flex;gap:8px;align-items:baseline;font-weight:700}
+.axlog .axlog-h span{font-weight:500;font-size:12.5px;opacity:.65}
+.axlog .axlog-v.cur .axlog-h b{background:#EFEAF8;border-radius:6px;padding:1px 6px}
+.axlog p{margin:4px 0 0}
+.axlog ul{margin:6px 0 0;padding:0;list-style:none}
+.axlog li{margin:6px 0 0;padding:8px 10px;background:#F3F7F1;border-radius:10px}
+.axlog li .new{font-weight:700}
+.axlog li .old{display:block;font-size:13px;opacity:.8;margin-top:2px}
+.axlog li .old a{color:inherit}
 /* index button (s47, Jonathan: frosted pill, top left; hides while the page scrolls, back once it stops).
    Phones and tablets only; the bottom bar's Index button gives way to it. */
 #navtab{display:none}
@@ -18020,6 +18042,7 @@ function run(){ headerCounts(); chips(); blueprint();
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
 })();
 </script>
+<script type="application/json" id="axlog">[{"v":74,"date":"2026-10-03","note":"Tap the version label to open this change log; versions show as numbers.","merges":[]},{"v":73,"date":"2026-10-03","note":"Merge batch 5. Avoid combining a beta-blocker with diltiazem or verapamil; two drugs at stage 2 (2025 AHA/ACC); calcium score 0 exceptions include family history; MMR in HIV needs CD4 200 or more and 15% or more for 6 months.","merges":[{"new":"Puberty","old":["Precocious Puberty","Sexual Maturity Rating"]},{"new":"Hypertension in an Adult","old":["Hypertension: Workup & Drug Choice","Secondary Hypertension"]},{"new":"Lipid Screening and Statin Therapy","old":["Statins & the 10-Year ASCVD Risk Assessment","Lipid Screening & Vaccine Eligibility by Condition (lipid part)"]},{"new":"Vaccines in Special Populations","old":["Vaccines in HIV","Lipid Screening & Vaccine Eligibility by Condition (vaccine part)"]}]},{"v":72,"date":"2026-10-03","note":"Merge batch 4. Heart block from maternal anti-Ro is permanent; cooling question moved inside its 6-hour window; eosinophilic esophagitis therapy per AGA/JTF 2020.","merges":[{"new":"Maternal Effects in the Newborn","old":["Maternal Carryover in Newborn Labs","Maternal Hormone Effects in the Newborn"]},{"new":"Genetic Syndromes Recognized at Birth","old":["Aneuploidy: Reading the Newborn","Multiple Anomalies in a Newborn"]},{"new":"Feeding an Infant or Toddler","old":["Toddler Food Refusal","Infant Feeding at Six Months"]}]},{"v":71,"date":"2026-10-03","note":"Psych briefs get the two-line subtitle (scope, then the guiding question).","merges":[]},{"v":70,"date":"2026-10-03","note":"Merge batch 3.","merges":[{"new":"Low Back Pain in an Adult","old":["Low Back Pain: Red Flags","Acute Low Back Pain with No Red Flags","Inflammatory Back Pain & Spondyloarthritis"]},{"new":"Abnormal Growth in a Child","old":["Short Stature and Growth Velocity","Faltering Weight"]},{"new":"Hot Joint or Bursa in an Adult","old":["Septic Bursitis","The Acute Hot Joint (adult)"]}]},{"v":69,"date":"2026-10-03","note":"Merge batch 2.","merges":[{"new":"Wrist and Hand Pain and Numbness","old":["Scaphoid Fracture","Carpal Tunnel Syndrome","De Quervain Tendinopathy"]},{"new":"Hip and Thigh Pain and Numbness","old":["Pain Around the Hip and Thigh","Meralgia Paresthetica"]},{"new":"Osteoporosis Screening and Treatment","old":["Osteoporosis Screening","DEXA: When Screening Starts Early"]}]},{"v":68,"date":"2026-10-03","note":"Merge batch 1.","merges":[{"new":"Pyelonephritis","old":["Pyelonephritis: Route & Disposition","Pyelonephritis: Naming the Organism"]},{"new":"Shoulder Pain","old":["Shoulder Pain: the Range-of-Motion Rule","Biceps Tendinitis"]},{"new":"Obstructive Lung Disease","old":["COPD: Which Interventions Improve Survival","Asthma vs. COPD"]}]},{"v":67,"date":"2026-10-03","note":"First merge: desmopressin and the alarm as first-line options.","merges":[{"new":"Enuresis","old":["Nocturnal Enuresis","Primary Monosymptomatic Enuresis: Management"]}]},{"v":66,"date":"2026-10-03","note":"100 briefs retitled to their broadest honest topic; the deciding question moved to the subtitle.","merges":[]},{"v":65,"date":"2026-10-03","note":"Live errors fixed: four case vignettes rebuilt; HPV early-dose rule; cervical screening start age in HIV; scleritis treatment.","merges":[]},{"v":64,"date":"2026-10-03","note":"Intimate partner violence rebuilt lean; all 9 psych briefs now lean.","merges":[]},{"v":63,"date":"2026-10-03","note":"Genito-pelvic pain/penetration disorder rebuilt lean.","merges":[]},{"v":62,"date":"2026-10-03","note":"Schizophrenia long-term care rebuilt lean.","merges":[]},{"v":61,"date":"2026-10-03","note":"Lithium therapy rebuilt lean.","merges":[]},{"v":60,"date":"2026-10-03","note":"SSRI adverse effects rebuilt lean.","merges":[]},{"v":59,"date":"2026-10-03","note":"Panic disorder and other anxiety rebuilt lean.","merges":[]},{"v":58,"date":"2026-10-03","note":"Delirium rebuilt lean.","merges":[]},{"v":57,"date":"2026-10-02","note":"Fever, rash and joint pain rebuilt lean.","merges":[]},{"v":56,"date":"2026-10-02","note":"Marfanoid habitus (Marfan or homocystinuria) rebuilt lean.","merges":[]},{"v":55,"date":"2026-10-02","note":"Foot puncture infection and torticollis rebuilt lean.","merges":[]},{"v":54,"date":"2026-10-02","note":"Bone tumors and Scheuermann kyphosis rebuilt lean; brace range corrected.","merges":[]},{"v":53,"date":"2026-10-02","note":"Septic arthritis: Kocher criteria named and tinted.","merges":[]},{"v":52,"date":"2026-10-02","note":"Night-pain and weakness rules corrected.","merges":[{"new":"Leg Pain in a Child","old":["Benign Limb Pain in a Child","Benign Acute Childhood Myositis"]}]},{"v":51,"date":"2026-10-02","note":"Myositis ossificans rebuilt lean.","merges":[]},{"v":50,"date":"2026-10-01","note":"Nursemaid elbow (child will not use the arm) rebuilt lean.","merges":[]},{"v":49,"date":"2026-10-01","note":"Juvenile idiopathic arthritis rebuilt lean; ACR 2019 uveitis screening.","merges":[]},{"v":48,"date":"2026-10-01","note":"Limping child cluster rebuilt lean; slipped capital femoral epiphysis rebuilt.","merges":[{"new":"Septic Arthritis and Transient Synovitis in a Child","old":["Septic Arthritis of the Hip","Transient Synovitis","Transient Synovitis: Management"]}]},{"v":47,"date":"2026-10-01","note":"Phones and tablets: index is a frosted button at the top left.","merges":[]},{"v":46,"date":"2026-10-01","note":"Timelines: every row carries its own scale and a time arrow.","merges":[]},{"v":45,"date":"2026-10-01","note":"Phones and tablets: index opens from a tab on the left edge.","merges":[]},{"v":44,"date":"2026-10-01","note":"Board-style only resets to off on every visit.","merges":[]},{"v":43,"date":"2026-10-01","note":"Version label and update check: the page shows its build and offers a refresh when a newer one is live.","merges":[]},{"v":42,"date":"2026-10-01","note":"Psychosis and bipolar questions rewritten to 30 to 40 words in scannable lines.","merges":[]},{"v":41,"date":"2026-10-01","note":"Faster page startup.","merges":[]},{"v":40,"date":"2026-10-01","note":"Bipolar disorder rebuilt lean; NBME question blocks; mnemonic letter column.","merges":[]},{"v":39,"date":"2026-10-01","note":"Psychosis brief: horizontal timelines, workup path, bottom-line lists.","merges":[]},{"v":38,"date":"2026-09-29","note":"Psychosis brief rebuilt lean (1,301 to 457 words before the questions).","merges":[]},{"v":37,"date":"2026-09-29","note":"Psychiatry shelf and section go live with 9 psych briefs; Kawasaki disease rebuilt.","merges":[]},{"v":35,"date":"2026-09-25","note":"NBME Pediatrics batch: 12 questions; infant vaccines, distal RTA and eyelid lump briefs.","merges":[]},{"v":34,"date":"2026-09-25","note":"NBME Pediatrics: fetal alcohol syndrome, rickets alkaline phosphatase, ITP mechanism.","merges":[]},{"v":33,"date":"2026-09-25","note":"Plain-voice pass on all remaining systems; trap lines use colons.","merges":[]},{"v":32,"date":"2026-09-24","note":"Phone sidebar and full-text search; Board-style only toggle.","merges":[]},{"v":31,"date":"2026-09-24","note":"NBME Pediatrics batch: 27 questions linked; 6 new briefs, 12 extended; NBME wording guide.","merges":[]},{"v":30,"date":"2026-09-24","note":"GI plain-voice pass: shorter sentences, acronyms written out.","merges":[]},{"v":29,"date":"2026-09-24","note":"Badges follow NBME first; GI plain-voice pass (sample).","merges":[]},{"v":28,"date":"2026-09-24","note":"NBME Pediatrics questions (cyclic neutropenia, Rocky Mountain spotted fever); tooling rebuilt; the page now publishes from GitHub.","merges":[]},{"v":27,"date":"2026-09-23","note":"Aquifer workup briefs: infant fever, child headache, infant hypotonia, puffy eyes.","merges":[]},{"v":26,"date":"2026-09-23","note":"Foodborne illness brief; necrotizing enterocolitis, malrotation, biliary atresia, IIH, tuberous sclerosis and CVID questions.","merges":[]},{"v":25,"date":"2026-09-23","note":"Nonaccidental fracture brief; Hirschsprung, choanal atresia, trisomy 18, scarlet fever, leukemia, Lesch-Nyhan and minimal change questions.","merges":[]},{"v":24,"date":"2026-09-23","note":"Meckel diverticulum and bone tumor questions.","merges":[]},{"v":23,"date":"2026-09-23","note":"Apnea of prematurity, galactosemia, hereditary angioedema and short stature questions; Wilson disease brief.","merges":[]},{"v":22,"date":"2026-09-23","note":"Hematuria, airway, urinary tract infection, nasal foreign body and vitamin questions; anaphylaxis, isolation and short stature briefs; mnemonics.","merges":[]},{"v":21,"date":"2026-09-23","note":"Down syndrome hypotonia, cat scratch disease and immunodeficiency questions; fat- and water-soluble vitamin briefs.","merges":[]},{"v":20,"date":"2026-09-23","note":"Viral exanthems brief; neonatal rash, meconium ileus, CVID and parvovirus in pregnancy questions.","merges":[]},{"v":19,"date":"2026-09-23","note":"UWorld batch: 8 briefs extended, 5 new board-style briefs, 62 questions.","merges":[]},{"v":18,"date":"2026-09-23","note":"Diagnostic workup tables added page-wide (119 new, 8 extended).","merges":[]},{"v":17,"date":"2026-09-23","note":"Plain captions for workup tables.","merges":[]},{"v":16,"date":"2026-09-23","note":"Pilot of workups in order (septic hip, congenital hypothyroidism, spherocytosis, secondary hypertension).","merges":[]},{"v":15,"date":"2026-09-23","note":"Test and screening questions use board-style lead-ins (initial, confirmatory, screening).","merges":[]},{"v":14,"date":"2026-09-23","note":"Unneeded flags removed from standard facts; wider label column in short grids.","merges":[]},{"v":13,"date":"2026-09-23","note":"First Aquifer symptom workup brief: bruising (Pediatrics 21).","merges":[]},{"v":12,"date":"2026-09-23","note":"Aquifer case briefs set up: badges, bands and navigation groups.","merges":[]},{"v":11,"date":"2026-09-23","note":"Source tags added to seven questions.","merges":[]},{"v":10,"date":"2026-09-23","note":"Phone index: compact shelf row, grouped list, opens on the current brief.","merges":[]},{"v":9,"date":"2026-09-23","note":"Trap tag descriptions aligned; they stack on phones.","merges":[]},{"v":8,"date":"2026-09-22","note":"Anemia of prematurity, Campylobacter, hemophilic arthropathy and leukemia questions added.","merges":[]},{"v":7,"date":"2026-09-22","note":"Patent ductus arteriosus murmur question; neonatal polycythemia; new pediatric stroke brief (Takayasu).","merges":[]},{"v":6,"date":"2026-09-22","note":"Intraventricular hemorrhage, branchial cleft cyst and hyper-IgE questions added.","merges":[]},{"v":5,"date":"2026-09-22","note":"Meningococcal and febrile seizure questions added.","merges":[]},{"v":4,"date":"2026-09-22","note":"8 questions added for remaining gaps; 22q11 deletion and galactosemia banks fixed.","merges":[]},{"v":3,"date":"2026-09-22","note":"27 next-step, test, avoid, screen and mechanism questions added across 7 briefs.","merges":[]},{"v":2,"date":"2026-09-22","note":"Each brief gained questions keyed to its own diagnosis; three briefs retitled.","merges":[]},{"v":1,"date":"2026-09-22","note":"Adolescent confidentiality exceptions shown as a criteria tile.","merges":[]}]</script>
 <script>
 /* Version label and update check (s43). ship.sh stamps <meta name="ax-build"> and writes version.json beside the page;
    when a newer build is live, a bar offers a refresh, so a phone or a home-screen copy never sits on an old version. */
@@ -18029,14 +18052,48 @@ var meta=document.querySelector('meta[name="ax-build"]'); if(!meta) return;
 var parts=(meta.getAttribute('content')||'').split('|'), BUILD=parts[0]||'', DAY=parts[1]||'';
 function fmt(d){ var m=/^(\d{4})-(\d\d)-(\d\d)$/.exec(d); if(!m) return d;
   return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+m[2]-1]+' '+(+m[3])+', '+m[1]; }
-var label=(DAY?fmt(DAY)+' · ':'')+BUILD;
+var NUM=BUILD.replace(/^s0*/,''), VER=/^\d+$/.test(NUM)?'v'+NUM:BUILD;
+var label=(DAY?fmt(DAY)+' · ':'')+VER;
+function openLog(){
+  if(document.querySelector('.axlog-scrim')) return;
+  var data=[]; try{ data=JSON.parse((document.getElementById('axlog')||{}).textContent||'[]'); }catch(e){}
+  var prev=document.activeElement, scrim=document.createElement('div'); scrim.className='axlog-scrim';
+  var box=document.createElement('div'); box.className='axlog'; box.setAttribute('role','dialog'); box.setAttribute('aria-modal','true'); box.setAttribute('aria-label','Change log');
+  box.innerHTML='<header><h2>Change log</h2><button type="button">Close</button></header><div class="axlog-filter"><button type="button" aria-pressed="false" data-f="all">All versions</button><button type="button" aria-pressed="false" data-f="merges">Merged briefs</button></div><div class="axlog-body"></div>';
+  var body=box.querySelector('.axlog-body');
+  function el(tag,cls,txt){ var x=document.createElement(tag); if(cls) x.className=cls; if(txt!=null) x.textContent=txt; return x; }
+  function render(f){
+    body.innerHTML='';
+    Array.prototype.forEach.call(box.querySelectorAll('.axlog-filter button'),function(b){ b.setAttribute('aria-pressed',b.getAttribute('data-f')===f?'true':'false'); });
+    data.forEach(function(e){
+      if(f==='merges' && !(e.merges&&e.merges.length)) return;
+      var v=el('div','axlog-v'+('v'+e.v===VER?' cur':'')), h=el('div','axlog-h');
+      h.appendChild(el('b',null,'v'+e.v)); h.appendChild(el('span',null,fmt(e.date))); v.appendChild(h);
+      if(e.note) v.appendChild(el('p',null,e.note));
+      if(e.merges&&e.merges.length){ var ul=el('ul');
+        e.merges.forEach(function(m){ var li=el('li'); li.appendChild(el('span','new',m.new));
+          li.appendChild(el('span','old','from: '+m.old.join(' · '))); ul.appendChild(li); });
+        v.appendChild(ul); }
+      body.appendChild(v);
+    });
+    if(!body.firstChild) body.appendChild(el('p',null,'No entries.'));
+  }
+  Array.prototype.forEach.call(box.querySelectorAll('.axlog-filter button'),function(b){ b.addEventListener('click',function(){ render(b.getAttribute('data-f')); }); });
+  function close(){ scrim.remove(); document.removeEventListener('keydown',key); if(prev&&prev.focus) prev.focus(); }
+  function key(ev){ if(ev.key==='Escape') close(); }
+  box.querySelector('header button').addEventListener('click',close);
+  scrim.addEventListener('click',function(ev){ if(ev.target===scrim) close(); });
+  document.addEventListener('keydown',key);
+  scrim.appendChild(box); document.body.appendChild(scrim); render('merges'); box.querySelector('header button').focus();
+}
+function logButton(){ var b=document.createElement('button'); b.type='button'; b.className='axlogbtn'; b.textContent=label; b.title='Open the change log'; b.addEventListener('click',openLog); return b; }
 function show(){
   var mm=document.querySelector('.masthead .meta');
   if(mm){ var sp=Array.prototype.find.call(mm.querySelectorAll('span'),function(x){ return /Last updated/.test(x.textContent); });
     if(!sp){ sp=document.createElement('span'); mm.appendChild(sp); }
-    sp.className='axbuild'; sp.innerHTML='Updated <b></b>'; sp.querySelector('b').textContent=label; }
+    sp.className='axbuild'; sp.textContent='Updated '; sp.appendChild(logButton()); }
   var br=document.querySelector('#nav .brand');
-  if(br && !br.querySelector('.axbuild')){ var p=document.createElement('p'); p.className='axbuild'; p.textContent='Updated '+label; br.appendChild(p); }
+  if(br && !br.querySelector('.axbuild')){ var p=document.createElement('p'); p.className='axbuild'; p.textContent='Updated '; p.appendChild(logButton()); br.appendChild(p); }
 }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',show); else show();
 if(/jsdom/i.test(navigator.userAgent) || !window.fetch || !BUILD || BUILD==='dev') return;
