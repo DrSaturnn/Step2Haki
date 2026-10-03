@@ -17,10 +17,10 @@ Rule 14 still applies: where a broader title promises content the brief does not
 |---|---|---|
 | Low Back Pain in an Adult | Low Back Pain: Red Flags (`backpain`); Acute Low Back Pain with No Red Flags (`bs-lbp-acute`); Inflammatory Back Pain & Spondyloarthritis (`inflam-back`) | 24 |
 | Shoulder Pain (shipped) | Biceps Tendinitis (`biceps`); Shoulder Pain: the Range-of-Motion Rule (`shoulder-rom`) | 13 |
-| Wrist and Hand Pain | Carpal Tunnel Syndrome (`cts`); De Quervain Tendinopathy (`dequervain`); Scaphoid Fracture (`scaphoid`) | 17 |
-| Hip and Thigh Pain in an Adult | Pain Around the Hip and Thigh (`gtps`); Meralgia Paresthetica (`meralgia`) | 16 |
+| Wrist and Hand Pain and Numbness (shipped s69) | Carpal Tunnel Syndrome (`cts`); De Quervain Tendinopathy (`dequervain`); Scaphoid Fracture (`scaphoid`) | 17 |
+| Hip and Thigh Pain and Numbness (shipped s69) | Pain Around the Hip and Thigh (`gtps`); Meralgia Paresthetica (`meralgia`) | 16 |
 | The Hot Joint or Bursa in an Adult | Septic Bursitis (`septic-bursitis`); The Acute Hot Joint (adult) (`bs-septic-adult`) | 14 |
-| Osteoporosis Screening | Osteoporosis Screening (`osteoporosis`); DEXA: When Screening Starts Early (`bs-dexa-highrisk`) | 17 |
+| Osteoporosis Screening and Treatment (shipped s69) | Osteoporosis Screening (`osteoporosis`); DEXA: When Screening Starts Early (`bs-dexa-highrisk`) | 17 |
 | Abnormal Growth in a Child: Height and Weight | Short Stature and Growth Velocity (`bs-short-stature`); Faltering Weight (`bs-ftt`) | 18 |
 | Maternal Effects in the Newborn | Maternal Carryover in Newborn Labs (`neonatal-maternal-labs`); Maternal Hormone Effects in the Newborn (`newborn-hormone`) | 20 |
 | Genetic Syndromes Recognized at Birth | Aneuploidy: Reading the Newborn (`aneuploidy`); Multiple Anomalies in a Newborn (`malform-syndromes`) | 25 |
