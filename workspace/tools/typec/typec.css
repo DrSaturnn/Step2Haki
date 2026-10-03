@@ -350,3 +350,4 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
 .lcw .rax span.a0{transform:none} .lcw .rax span.a1{transform:translateX(-100%)}
 .lcw .rail.segs + .rax{margin-top:2px}
 .lcw .rax em{position:absolute;right:0;top:-1px;font-style:normal;font-size:12px;font-weight:700;color:var(--muted);line-height:1}
+.brief .sub .subq{display:block;margin-top:3px;font-style:italic}
