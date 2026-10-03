@@ -16,7 +16,7 @@ Rule 14 still applies: where a broader title promises content the brief does not
 | New title | Combines | Items |
 |---|---|---|
 | Low Back Pain in an Adult | Low Back Pain: Red Flags (`backpain`); Acute Low Back Pain with No Red Flags (`bs-lbp-acute`); Inflammatory Back Pain & Spondyloarthritis (`inflam-back`) | 24 |
-| Shoulder Pain | Biceps Tendinitis (`biceps`); Shoulder Pain: the Range-of-Motion Rule (`shoulder-rom`) | 13 |
+| Shoulder Pain (shipped) | Biceps Tendinitis (`biceps`); Shoulder Pain: the Range-of-Motion Rule (`shoulder-rom`) | 13 |
 | Wrist and Hand Pain | Carpal Tunnel Syndrome (`cts`); De Quervain Tendinopathy (`dequervain`); Scaphoid Fracture (`scaphoid`) | 17 |
 | Hip and Thigh Pain in an Adult | Pain Around the Hip and Thigh (`gtps`); Meralgia Paresthetica (`meralgia`) | 16 |
 | The Hot Joint or Bursa in an Adult | Septic Bursitis (`septic-bursitis`); The Acute Hot Joint (adult) (`bs-septic-adult`) | 14 |
@@ -30,7 +30,7 @@ Rule 14 still applies: where a broader title promises content the brief does not
 | Hypertension in an Adult | Hypertension: Workup & Drug Choice (`htn-drugs`); Secondary Hypertension (`secondary-htn`) | 16 |
 | Heart Murmurs in an Adult | Right-Sided Murmurs: Pulmonic Stenosis & Tricuspid Regurgitation (`right-murmurs`); Murmur Man and Post-ToF Pulmonic Regurgitation (`bs-murmur-map`) | 19 |
 | Congenital Heart Disease: Cyanotic Lesions and Shunts | Cyanotic Congenital Heart Disease (`cyanotic-chd`); Congenital Shunts and the Transitional Clock (`bs-shunt-timing`) | 21 |
-| COPD | COPD: Which Interventions Improve Survival (`copd`); Asthma vs. COPD (`asthma-copd`) | 17 |
+| Obstructive Lung Disease (shipped s68) | COPD: Which Interventions Improve Survival (`copd`); Asthma vs. COPD (`asthma-copd`) | 17 |
 | Recurrent Respiratory Infection and Structural Lung Disease | Recurrent Sinopulmonary Infection (`sinopulm-structural`); When Antibiotics Fail in a Structural Lung (`abpa`) | 22 |
 | Sickle Cell Disease and Trait | Chronic Dyspnea in Sickle Cell Disease (`scd-dyspnea`); Sickle Cell Trait versus Disease (`bs-sickle-trait`) | 25 |
 | Respiratory Infection in a Child | Pediatric Upper Respiratory Infection (`uri`); Pediatric Community-Acquired Pneumonia (`mycoplasma`) | 23 |
@@ -38,9 +38,9 @@ Rule 14 still applies: where a broader title promises content the brief does not
 | Hereditary Polyposis Syndromes | Familial Adenomatous Polyposis (`fap`); Peutz-Jeghers Syndrome (`peutz-jeghers`) | 15 |
 | Jaundice in a Newborn | Neonatal Jaundice (`neonatal-jaundice`); The Sick Jaundiced Neonate with a Positive Screen (`bs-galactosemia`) | 29 |
 | Vitamins and Nutritional Deficiencies | Fat-Soluble Vitamin Deficiency and Toxicity (`bs-fat-soluble-vitamins`); Water-Soluble Vitamin Deficiency (`bs-water-soluble-vitamins`); The Vegan Diet (`vegan`) | 28 |
-| Pyelonephritis | Pyelonephritis: Route & Disposition (`pyelo`); Pyelonephritis: Naming the Organism (`bs-pyelo-organism`) | 16 |
+| Pyelonephritis (shipped) | Pyelonephritis: Route & Disposition (`pyelo`); Pyelonephritis: Naming the Organism (`bs-pyelo-organism`) | 16 |
 | Urinary Tract Infection in a Child | Vesicoureteral Reflux (`vur`); Recurrent Urinary Infection in a Child (`peds-uti-recurrent`) | 23 |
-| Enuresis | Nocturnal Enuresis (`enuresis`); Primary Monosymptomatic Enuresis: Management (`bs-enuresis`) | 15 |
+| Enuresis (shipped) | Nocturnal Enuresis (`enuresis`); Primary Monosymptomatic Enuresis: Management (`bs-enuresis`) | 15 |
 | Hematuria and Nephritic Syndrome | Hematuria (`hematuria`); Acute Nephritic Syndrome in a Child (`bs-nephritic`) | 16 |
 | Proteinuria and Nephrotic Syndrome in a Child | Nephrotic Syndrome in a Child (`nephrotic-child`); Incidental Proteinuria in a Well Child (`bs-isolated-proteinuria`) | 18 |
 | Diabetes: Complications and Annual Care | Diabetes: the Annual Care Bundle (`bs-dm-bundle`); Diabetic Nephropathy Screening (`nephropathy`); Diabetic Foot Ulcer (`footulcer`) | 21 |
