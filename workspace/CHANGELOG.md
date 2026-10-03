@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-03 s60: s60: Psych: SSRI adverse effects in the lean style (Which effect tile, FINISH, timing chart for serotonin syndrome, NMS, discontinuation and relapse, two ladders, By situation, prevention); NBME Q9 moved to its framing block; NBME hedges kept (commonly, reasonable options, eg); Warner restart option and other-causes-ruled-out step restored; review N_reviews_v1 N4 flags fixed
+
+```
+Page: 216 briefs, 2126 items -> 216 briefs, 2125 items
+Briefs changed (1):
+  - ssri-effects (SSRI (Selective Serotonin Reuptake Inhibitor) Adverse Effects: Name the Effect, Then Take the Next Step): items edited (q_125f388e00badb74a592, q_4c6ee3a2ac28b5d544c1, q_1319671e8b2c93ba6852, q_46efe61956d880fb6584, q_82d710660ff3e8d5c763, q_d825fd2c09edb7908257, q_6f875a3df168eda248ea, q_5568d24b36134cb369b5, q_25d0479945c172a43d22, q_1459fc022ab109ac3695); versions bumped (q_125f388e00badb74a592 v1->v2, q_4c6ee3a2ac28b5d544c1 v1->v2, q_1319671e8b2c93ba6852 v1->v2, q_46efe61956d880fb6584 v1->v2, q_82d710660ff3e8d5c763 v1->v2, q_d825fd2c09edb7908257 v1->v2, q_6f875a3df168eda248ea v1->v2, q_5568d24b36134cb369b5 v1->v2, q_25d0479945c172a43d22 v1->v2, q_1459fc022ab109ac3695 v1->v2); attrs set (q_6f875a3df168eda248ea data-d2,data-d2-id); ITEMS REMOVED (q_bb27f32e9b44fcdc72d4); prose edited (-1370 chars)
+Other page changes (nav, headers, scripts): +0 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 216 briefs, 2125 items, 6 scripts, 35 checks, base HEAD | allowlisted 29 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 216 | bankwraps 216 | mcq 2125 (axCheck 2125, reveal-only 0) | malformed 0 | crit gridded 153/159 | vignette gridded 121/121 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 6
+  vendor: clean (56601 source shingles; page 0.028%)
+```
+
 ## 2026-10-03 s59: s59: Psych: panic disorder in the lean style (criteria tile with the STUDENTS FEAR mnemonic, mimic workup path, timing chart of six anxiety disorders by what the fear is about, ladder with benzodiazepine as a short-term bridge only, By situation, follow-up); NBME Q10 moved to its framing block; every panic item meets Criteria A and B; review N_reviews_v1 N5 flags fixed
 
 ```
