@@ -66,6 +66,7 @@ CATALOG = {
     'no-letters-pct': ('no option letters or vendor selection percentages in .vignette Q lines or .trapline',
                        'drop "(A)", "choice C", "22% chose"; keep labeled clinical probabilities only'),
     'anchor': ('every static href="#x" and .scaleref data-scale resolves to an id', 'point it at an existing id'),
+    'mode-css': ('no CSS selector styles page content through body.flat or body.study (s92: it restyled every brief at once and froze the switches)', 'write the rule as body .axm-flat X, body X.axm-flat (or axm-study); rules on body itself may stay body.flat'),
     'pairs-with': ('each <b> in a "Pairs with" block matches a brief <h4> (quoted/question discriminators exempt)',
                    'use the exact partner <h4> text in <b>, or <i> for a partner that does not exist yet'),
     'vendor-image': ('no <img>/<image>/<picture>/<object>/<embed> and no raster data: URI (figures are redrawn inline SVG)',
@@ -165,6 +166,11 @@ def check_page(page, g, page_path):
     bl = briefs(page)
     it = items(page)
     stats = {'briefs': len(bl), 'items': len(it)}
+
+    # ---- mode CSS (s92): flat/study rules hang on per-region carriers, never on a body class over descendants
+    mcss = page[page.find('<style>'):page.find('</style>')] if '<style>' in page else ''
+    for msel in sorted(set(re.findall(r'body\.(?:flat|study)\b[^{},]*\s[^{},]*(?=[,{])', re.sub(r'/\*.*?\*/', '', mcss, flags=re.S)))):
+        g.fail('mode-css', msel.strip()[:60], 'selector %r styles content through a body mode class' % msel.strip()[:80])
 
     # ---- briefs
     idc = Counter(b.id for b in bl)
