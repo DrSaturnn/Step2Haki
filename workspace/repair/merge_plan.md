@@ -35,9 +35,9 @@ Rule 14 still applies: where a broader title promises content the brief does not
 | Sickle Cell Disease and Trait (shipped s78) | Chronic Dyspnea in Sickle Cell Disease (`scd-dyspnea`); Sickle Cell Trait versus Disease (`bs-sickle-trait`) | 25 |
 | Respiratory Infection in a Child (shipped s78) | Pediatric Upper Respiratory Infection (`uri`); Pediatric Community-Acquired Pneumonia (`mycoplasma`) | 23 |
 | Lung Disease in the Newborn and Preterm Infant (shipped s78) | Bronchopulmonary Dysplasia (`bpd`); Neonatal Respiratory Distress (`bs-nrd`) | 26 |
-| Hereditary Polyposis Syndromes | Familial Adenomatous Polyposis (`fap`); Peutz-Jeghers Syndrome (`peutz-jeghers`) | 15 |
-| Jaundice in a Newborn | Neonatal Jaundice (`neonatal-jaundice`); The Sick Jaundiced Neonate with a Positive Screen (`bs-galactosemia`) | 29 |
-| Vitamins and Nutritional Deficiencies | Fat-Soluble Vitamin Deficiency and Toxicity (`bs-fat-soluble-vitamins`); Water-Soluble Vitamin Deficiency (`bs-water-soluble-vitamins`); The Vegan Diet (`vegan`) | 28 |
+| Hereditary Polyposis Syndromes (shipped s80) | Familial Adenomatous Polyposis (`fap`); Peutz-Jeghers Syndrome (`peutz-jeghers`) | 15 |
+| Jaundice in a Newborn (shipped s80) | Neonatal Jaundice (`neonatal-jaundice`); The Sick Jaundiced Neonate with a Positive Screen (`bs-galactosemia`) | 29 |
+| Vitamins and Nutritional Deficiencies (shipped s80) | Fat-Soluble Vitamin Deficiency and Toxicity (`bs-fat-soluble-vitamins`); Water-Soluble Vitamin Deficiency (`bs-water-soluble-vitamins`); The Vegan Diet (`vegan`) | 28 |
 | Pyelonephritis (shipped) | Pyelonephritis: Route & Disposition (`pyelo`); Pyelonephritis: Naming the Organism (`bs-pyelo-organism`) | 16 |
 | Urinary Tract Infection in a Child | Vesicoureteral Reflux (`vur`); Recurrent Urinary Infection in a Child (`peds-uti-recurrent`) | 23 |
 | Enuresis (shipped) | Nocturnal Enuresis (`enuresis`); Primary Monosymptomatic Enuresis: Management (`bs-enuresis`) | 15 |
