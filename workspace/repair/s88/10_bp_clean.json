@@ -1,0 +1,52 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "#bpview .bpr{display:grid;grid-template-columns:minmax(0,1fr) repeat(6,minmax(58px,auto));gap:4px 12px;",
+   "with": "#bpview .bpr{display:grid;grid-template-columns:minmax(0,1fr) repeat(4,84px);gap:4px 12px;",
+   "note": "fixed columns so header and rows align"
+  },
+  {
+   "op": "replace_global",
+   "find": "#bpview .bptask .bpr{grid-template-columns:minmax(0,1fr) repeat(3,minmax(70px,auto))}",
+   "with": "#bpview .bptask .bpr{grid-template-columns:minmax(0,1fr) repeat(3,84px)}",
+   "note": "task columns"
+  },
+  {
+   "op": "replace_global",
+   "find": "  #bpview .bpr,#bpview .bptask .bpr{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 10px;padding:10px 4px}",
+   "with": "  #bpview .bpr{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px 10px;padding:10px 4px}\n  #bpview .bptask .bpr{grid-template-columns:repeat(3,minmax(0,1fr))}",
+   "note": "phone columns"
+  },
+  {
+   "op": "replace_global",
+   "find": "bpHead(['System',O.share,'Briefs','Also in','Questions','Share here','NBME-linked']);",
+   "with": "bpHead(['System',O.share,'Share here','Questions','Briefs']);",
+   "note": "fewer columns"
+  },
+  {
+   "op": "replace_global",
+   "find": "[[O.share,pct(x.r.r)],['Briefs',x.p||'<b>0</b>'],['Also in',x.s],['Questions',x.q],['Share here',share(x.q)],['NBME-linked',x.n]]",
+   "with": "[[O.share,pct(x.r.r)],['Share here',share(x.q)],['Questions',x.q],['Briefs',x.p||'<b>0</b>']]",
+   "note": "fewer cells"
+  },
+  {
+   "op": "replace_global",
+   "find": "bpHead(['Task',O.share,'Questions','Share here'])",
+   "with": "bpHead(['Task',O.share,'Share here','Questions'])",
+   "note": "task order"
+  },
+  {
+   "op": "replace_global",
+   "find": "[[O.share,pct(x.t.r)],['Questions',x.t.types?x.q:'not tagged'],['Share here',x.t.types?share(x.q):'—']]",
+   "with": "[[O.share,pct(x.t.r)],['Share here',x.t.types?share(x.q):'—'],['Questions',x.t.types?x.q:'not tagged']]",
+   "note": "task cells"
+  },
+  {
+   "op": "replace_global",
+   "find": "[[O.share,'—'],['Questions',tother[k]],['Share here',share(tother[k])]]",
+   "with": "[[O.share,'—'],['Share here',share(tother[k])],['Questions',tother[k]]]",
+   "note": "other task cells"
+  }
+ ]
+}

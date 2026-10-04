@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-04 s88: blueprint panel: fixed column widths so headers align; four shelf-specific columns
+
+```
+Page: 190 briefs, 2138 items -> 190 briefs, 2138 items
+Other page changes (nav, headers, scripts): +154 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 190 briefs, 2138 items, 7 scripts, 36 checks, base HEAD | allowlisted 19 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 190 | bankwraps 190 | mcq 2138 (axCheck 2138, reveal-only 0) | malformed 0 | crit gridded 213/214 | vignette gridded 85/85 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.023%)
+```
+
 ## 2026-10-04 s87: one sans font everywhere: --serif token now resolves to the system sans stack (Jonathan disliked the serif)
 
 ```
