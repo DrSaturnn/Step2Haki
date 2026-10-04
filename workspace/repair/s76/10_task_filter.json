@@ -1,0 +1,34 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": ".bktools button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}",
+   "with": ".bktools button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}\n.bkfilter{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:-4px 0 12px}\n.bkfilter button{all:unset;cursor:pointer;font-size:12px;font-weight:600;padding:6px 11px;border-radius:99px;color:var(--ink-2,#3A3D45);background:#F4F1FA;box-shadow:inset 0 0 0 1px #E2DCF0}\n.bkfilter button span{font-weight:500;opacity:.6;margin-left:5px;font-variant-numeric:tabular-nums}\n.bkfilter button[aria-pressed=\"true\"]{background:#E6E0F6;box-shadow:inset 0 0 0 1.5px #A99BDB;color:#2B2F36}\n.bkfilter button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}\n.bankwrap .mcq[hidden],.bankwrap .rrow[hidden]{display:none}\n@media print{ .bkfilter{display:none} }",
+   "note": "task filter chip styles"
+  },
+  {
+   "op": "replace_global",
+   "find": "function arw(){ var s=document.createElement('span'); s.className='arw'; s.textContent='→'; return s; }",
+   "with": "function arw(){ var s=document.createElement('span'); s.className='arw'; s.textContent='→'; return s; }\n/* Task-type filter (s76): chips by what a question asks (Diagnosis, Workup, Next step, Mechanism), never by its answer.\n   The lead-in already states the task, so a chip reveals nothing. Shown when a bank has 2 or more task groups. */\nvar TASKGROUP={dx:'dx',stage:'dx',test:'wk',screen:'wk',next:'mx',avoid:'mx',mech:'me',claim:'me'};\nvar TASKLABEL=[['dx','Diagnosis'],['wk','Workup'],['mx','Next step'],['me','Mechanism']];\nfunction addFilter(bw){\n  var qs=Array.prototype.slice.call(bw.querySelectorAll('.mcqwrap > .mcq')), rows=Array.prototype.slice.call(bw.querySelectorAll('.reviewwrap > .rrow'));\n  var n={}, tagged=0;\n  qs.forEach(function(q,i){ var qp=q.querySelector('.qp'), g=TASKGROUP[qp?qp.dataset.type:'']||'';\n    q.dataset.task=g; if(rows[i]) rows[i].dataset.task=g; if(g){ n[g]=(n[g]||0)+1; tagged++; } });\n  var groups=TASKLABEL.filter(function(x){ return n[x[0]]; });\n  if(groups.length<2) return;\n  var f=document.createElement('div'); f.className='bkfilter'; f.setAttribute('role','group'); f.setAttribute('aria-label','Filter questions by task');\n  function chip(key,label,count){ var b=document.createElement('button'); b.type='button'; b.dataset.task=key; b.setAttribute('aria-pressed',key==='all'?'true':'false');\n    b.appendChild(document.createTextNode(label)); var c=document.createElement('span'); c.textContent=count; b.appendChild(c); f.appendChild(b); }\n  chip('all','All',qs.length);\n  groups.forEach(function(x){ chip(x[0],x[1],n[x[0]]); });\n  f.addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b) return; var k=b.dataset.task;\n    Array.prototype.forEach.call(f.querySelectorAll('button'),function(x){ x.setAttribute('aria-pressed',x===b?'true':'false'); });\n    qs.concat(rows).forEach(function(el){ el.hidden=!(k==='all'||el.dataset.task===k); });\n    var ba=bw.querySelector('.bkall'); if(ba){ var vis=qs.filter(function(q){ return !q.hidden; });\n      ba.textContent=vis.length&&vis.every(function(q){ return q.classList.contains('done'); })?'Reset all':'Reveal all'; } });\n  var tools=bw.querySelector('.bktools'); tools.parentNode.insertBefore(f,tools.nextSibling);\n}",
+   "note": "task-type filter"
+  },
+  {
+   "op": "replace_global",
+   "find": "bw.appendChild(tools); bw.appendChild(h); bw.appendChild(rw);",
+   "with": "bw.appendChild(tools); bw.appendChild(h); bw.appendChild(rw); addFilter(bw);",
+   "note": "task-type filter on every bank"
+  },
+  {
+   "op": "replace_global",
+   "find": "if(ba){ var bw2=ba.closest('.bankwrap'), qs=Array.prototype.slice.call(bw2.querySelectorAll('.mcq'));",
+   "with": "if(ba){ var bw2=ba.closest('.bankwrap'), qs=Array.prototype.slice.call(bw2.querySelectorAll('.mcq')).filter(function(x){ return !x.hidden; });",
+   "note": "Reveal all acts on the filtered questions"
+  },
+  {
+   "op": "replace_global",
+   "find": "var SX_SKIP=/(^|\\s)(lbl|mask-toggle|k|rv|qp|bktools|",
+   "with": "var SX_SKIP=/(^|\\s)(lbl|mask-toggle|k|rv|qp|bktools|bkfilter|",
+   "note": "study mode never masks the task filter"
+  }
+ ]
+}
