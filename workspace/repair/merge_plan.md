@@ -28,10 +28,10 @@ Rule 14 still applies: where a broader title promises content the brief does not
 | Puberty (shipped s73) | Sexual Maturity Rating (`bs-tanner`); Precocious Puberty (`precocious-puberty`) | 21 |
 | Lipid Screening and Statin Therapy (shipped s73; vaccine rows to Vaccines in Special Populations) | Statins & the 10-Year ASCVD Risk Assessment (`ascvd`); Lipid Screening & Vaccine Eligibility by Condition (`lipid-screen`) | 12 |
 | Hypertension in an Adult (shipped s73) | Hypertension: Workup & Drug Choice (`htn-drugs`); Secondary Hypertension (`secondary-htn`) | 16 |
-| Heart Murmurs in an Adult | Right-Sided Murmurs: Pulmonic Stenosis & Tricuspid Regurgitation (`right-murmurs`); Murmur Man and Post-ToF Pulmonic Regurgitation (`bs-murmur-map`) | 19 |
-| Congenital Heart Disease: Cyanotic Lesions and Shunts | Cyanotic Congenital Heart Disease (`cyanotic-chd`); Congenital Shunts and the Transitional Clock (`bs-shunt-timing`) | 21 |
+| Heart Murmurs in an Adult (shipped s77) | Right-Sided Murmurs: Pulmonic Stenosis & Tricuspid Regurgitation (`right-murmurs`); Murmur Man and Post-ToF Pulmonic Regurgitation (`bs-murmur-map`) | 19 |
+| Congenital Heart Disease (shipped s77) | Cyanotic Congenital Heart Disease (`cyanotic-chd`); Congenital Shunts and the Transitional Clock (`bs-shunt-timing`) | 21 |
 | Obstructive Lung Disease (shipped s68) | COPD: Which Interventions Improve Survival (`copd`); Asthma vs. COPD (`asthma-copd`) | 17 |
-| Recurrent Respiratory Infection and Structural Lung Disease | Recurrent Sinopulmonary Infection (`sinopulm-structural`); When Antibiotics Fail in a Structural Lung (`abpa`) | 22 |
+| Recurrent Respiratory Infection and Structural Lung Disease (shipped s77) | Recurrent Sinopulmonary Infection (`sinopulm-structural`); When Antibiotics Fail in a Structural Lung (`abpa`) | 22 |
 | Sickle Cell Disease and Trait | Chronic Dyspnea in Sickle Cell Disease (`scd-dyspnea`); Sickle Cell Trait versus Disease (`bs-sickle-trait`) | 25 |
 | Respiratory Infection in a Child | Pediatric Upper Respiratory Infection (`uri`); Pediatric Community-Acquired Pneumonia (`mycoplasma`) | 23 |
 | Lung Disease in the Newborn and Preterm Infant | Bronchopulmonary Dysplasia (`bpd`); Neonatal Respiratory Distress (`bs-nrd`) | 26 |
