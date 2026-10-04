@@ -6,6 +6,8 @@ A running list, updated each pass. Newest at the top of each section. Answer any
 
 Already resolved by earlier passes: precocious-puberty title (s73 merge "Puberty", with its own virilization section; the NBME item sits in its framing block); Bartter item (brief retitled "Hypokalemia and Acid-Base Disorders in a Child" in s66; item stays as the contrast case); cgd retitle ("Neutrophil Disorders: Number and Function", s66); "GI Bleeding in a Child" (s66); "The Distended Abdomen in a Newborn or Infant" kept.
 
+Decisions batch shipped in s82 (2026-10-04): HIV rekey, HPV distractor, workflow text, 17 blueprint rows (3 retagged), spelling pass in questions, sidebar at 1100 px; VUR in s81. Traplines and the label needed no change. Still open: thumbnail pilot, hot-joint exception, audit items 10 to 14 (after the merge queue).
+
 Decisions, to be carried out in a "decisions" batch between merge batches (status in OPEN_WORK.md):
 - **HIV cervical screening item:** rekey to "Begin at 21 as usual" (HHS OI guideline 2024 and ASCCP 2026 are the current guidelines; current guidelines set facts). Reissue the item; keep the CDC STI wording only as a labeled note.
 - **HPV distractor:** replace "Complete a three-dose series" with "Restart the series".
