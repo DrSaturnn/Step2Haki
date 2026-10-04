@@ -106,6 +106,7 @@ LOG = [
   [('Sickle Cell Disease and Trait', ['Chronic Dyspnea in Sickle Cell Disease', 'Sickle Cell Disease and Trait']),
    ('Respiratory Infection in a Child', ['Pediatric Upper Respiratory Infection', 'Pediatric Community-Acquired Pneumonia']),
    ('Lung Disease in the Newborn and Preterm Infant', ['Bronchopulmonary Dysplasia', 'Neonatal Respiratory Distress'])]),
+ (79, D3o, 'Psychosis gains schizoaffective disorder (types, treatment, two new questions). Psychosis and Bipolar Disorder each get a look-alike comparison on a life-course axis: schizophrenia, delusional disorder, bipolar I with psychotic features, and schizotypal, schizoid and paranoid personality disorder.', []),
 ]
 if __name__ == '__main__':
     import json, sys

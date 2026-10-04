@@ -2,6 +2,21 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-03 s79: Psychosis: schizoaffective disorder (types, treatment, 2 items); mimic comparison tables in Psychosis and Bipolar Disorder (rows from tools/typec/mimics.py)
+
+```
+Page: 192 briefs, 2101 items -> 192 briefs, 2103 items
+Briefs changed (2):
+  - psychosis-duration (Psychosis): 2 items added (q_2646e702c06eefba5d28, q_20fb01b347baf25d4571); prose edited (+7408 chars)
+  - bipolar-mania (Bipolar Disorder): prose edited (+6511 chars)
+Other page changes (nav, headers, scripts): +2391 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 192 briefs, 2103 items, 6 scripts, 36 checks, base HEAD | allowlisted 24 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 192 | bankwraps 192 | mcq 2103 (axCheck 2103, reveal-only 0) | malformed 0 | crit gridded 200/201 | vignette gridded 96/96 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.024%)
+```
+
 ## 2026-10-03 s78: merge batch 7: Sickle Cell Disease and Trait, Respiratory Infection in a Child, Lung Disease in the Newborn and Preterm Infant
 
 ```
