@@ -96,7 +96,7 @@ LOG = [
    ('Lipid Screening and Statin Therapy', ['Statins & the 10-Year ASCVD Risk Assessment', 'Lipid Screening & Vaccine Eligibility by Condition (lipid part)']),
    ('Vaccines in Special Populations', ['Vaccines in HIV', 'Lipid Screening & Vaccine Eligibility by Condition (vaccine part)'])]),
  (74, D3o, 'Tap the version label to open this change log; versions show as numbers.', []),
- (75, D3o, 'Version numbers now read v0.075 style: v0 while the merge queue runs, then 1.0.', []),
+ (75, D3o, 'Version numbers now read v0.075 style; 1.0 comes when every clerkship is covered.', []),
 ]
 if __name__ == '__main__':
     import json, sys
