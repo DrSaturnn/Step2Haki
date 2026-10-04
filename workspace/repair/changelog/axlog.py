@@ -123,6 +123,10 @@ LOG = [
  (87, '2026-10-04', 'One font everywhere: titles, table captions, ladder rungs and section headings now use the same clean sans font as the text instead of the old serif.', []),
  (88, '2026-10-04', 'Blueprint panel cleaned up: four columns (exam share, share here, questions, briefs) that line up under their headings on every screen size.', []),
  (89, '2026-10-04', 'Blueprint panel: the "Share here" column is now "Bank share", the part of this shelf\'s question bank in each row, next to the exam\'s published share.', []),
+ (90, '2026-10-04', 'Merge batch 10. Pneumococcal vaccine: diabetes is a risk indication at 19 to 49, and every adult 50 or older is vaccinated by age (CDC 2026); SGLT2 inhibitors for type 2 diabetes with kidney disease at an eGFR of 20 or more (ADA 2025, KDIGO 2022); a normal ABI makes arterial disease less likely but cannot exclude it in a diabetic foot (IWGDF 2023). Levothyroxine in pregnancy rises 20 to 30% at detection, with TSH checks per the ATA 2026 schedule; no uptake scan in pregnancy or breastfeeding. G6PD hemolysis follows the trigger by 1 to 3 days; ceftriaxone hemolysis is mainly immune complex (C3), high-dose penicillin the hapten type (IgG).',
+  [('Diabetes Complications and Annual Care', ['Diabetic Nephropathy Screening', 'Diabetes: the Annual Care Bundle', 'Diabetic Foot Ulcer']),
+   ('Thyroid Disease in an Adult', ['Thyroid Disease in an Adult', 'Levothyroxine Titration', 'Levothyroxine in Pregnancy']),
+   ('Hemolytic Anemia', ['Drug-Induced Immune Hemolysis', 'Hereditary Spherocytosis'])]),
 ]
 if __name__ == '__main__':
     import json, sys
