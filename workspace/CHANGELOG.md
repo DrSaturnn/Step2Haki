@@ -2,7 +2,7 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
-## 2026-10-04 s90: s90: merge batch 10: Diabetes Complications and Annual Care, Thyroid Disease in an Adult, Hemolytic Anemia
+## 2026-10-04 s90: merge batch 10: Diabetes Complications and Annual Care, Thyroid Disease in an Adult, Hemolytic Anemia
 
 ```
 Page: 190 briefs, 2138 items -> 185 briefs, 2138 items

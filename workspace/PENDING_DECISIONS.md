@@ -63,3 +63,9 @@ Decisions, to be carried out in a "decisions" batch between merge batches (statu
 12. **RSV isolation wording** (UWorld table says contact only; the library says many respiratory viruses need contact plus droplet).
 13. **Two older weak-distractor items** (angina with LBBB; dipstick mismatch).
 14. **Hot joint: antibiotics before aspiration when unstable?** The merged brief keeps the old rule (no antibiotics before the fluid is sampled). The reviewer suggested an exception for an unstable or septic patient, or delayed aspiration (blood cultures, then antibiotics). Not in the old briefs; needs a source before it is added.
+
+## From s90 (merge batch 10; Claude's notes, your call)
+
+- q_0053 key reads "5 Years after diagnosis" (mid-phrase capital). Lowercasing changes the key text, which migrate_check treats as a new item (stats reset). Leave, or reissue?
+- Thyroid: the PTU-in-first-trimester line is labeled ATA 2017; the 2026 ATA pregnancy guideline (Korevaar, Thyroid 2026;36(5):481-544) antithyroid-drug section (G) could not be opened. Recheck when a full text is available.
+- Diabetes: the retinopathy schedule quotes ADA Standards 2022 section 12 (2024 to 2026 pages returned 403); the USPSTF CKD screening page is marked inactive.

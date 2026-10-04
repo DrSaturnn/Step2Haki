@@ -43,9 +43,9 @@ Rule 14 still applies: where a broader title promises content the brief does not
 | Enuresis (shipped) | Nocturnal Enuresis (`enuresis`); Primary Monosymptomatic Enuresis: Management (`bs-enuresis`) | 15 |
 | Hematuria and Nephritic Syndrome (shipped s81) | Hematuria (`hematuria`); Acute Nephritic Syndrome in a Child (`bs-nephritic`) | 16 |
 | Proteinuria and Nephrotic Syndrome in a Child (shipped s81) | Nephrotic Syndrome in a Child (`nephrotic-child`); Incidental Proteinuria in a Well Child (`bs-isolated-proteinuria`) | 18 |
-| Diabetes: Complications and Annual Care | Diabetes: the Annual Care Bundle (`bs-dm-bundle`); Diabetic Nephropathy Screening (`nephropathy`); Diabetic Foot Ulcer (`footulcer`) | 21 |
-| Thyroid Disease in an Adult | Thyroid Mimics & Discriminators (`thyroid`); Levothyroxine Titration (`levo`); Levothyroxine in Pregnancy (`preg-thyroid`) | 22 |
-| Hemolytic Anemia | Hereditary Spherocytosis (`bs-spherocytosis`); Drug-Induced Immune Hemolysis (`drug-hemolysis`) | 23 |
+| Diabetes Complications and Annual Care (shipped s90) | Diabetes: the Annual Care Bundle (`bs-dm-bundle`); Diabetic Nephropathy Screening (`nephropathy`); Diabetic Foot Ulcer (`footulcer`) | 21 |
+| Thyroid Disease in an Adult (shipped s90) | Thyroid Mimics & Discriminators (`thyroid`); Levothyroxine Titration (`levo`); Levothyroxine in Pregnancy (`preg-thyroid`) | 22 |
+| Hemolytic Anemia (shipped s90) | Hereditary Spherocytosis (`bs-spherocytosis`); Drug-Induced Immune Hemolysis (`drug-hemolysis`) | 23 |
 | Childhood Vaccines: Schedule and Contraindications | Vaccines at the Infant Visits (`bs-infant-vax`); DTaP: Contraindication vs. Precaution (`dtap`) | 10 |
 | Adolescent Vaccines | Adolescent Immunization and the Age Platform (`bs-adolescent-vax`); HPV Vaccination & Series Rules (`hpv`) | 15 |
 | Vaccines in Pregnancy | Vaccines & Timing in Pregnancy (`preg-vax`); Tdap in Pregnancy at 10 Weeks (`bs-tdap-preg`) | 20 |
