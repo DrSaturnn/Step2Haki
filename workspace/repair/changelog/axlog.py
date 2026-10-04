@@ -118,6 +118,7 @@ LOG = [
  (82, '2026-10-04', 'Five new psychiatry briefs: Major Depressive Disorder, Antipsychotic Adverse Effects, Somatic Symptom and Related Disorders, Sleep Problems in a Child, and Substance Intoxication and Withdrawal; Delirium gains a benzodiazepine-withdrawal question. Cervical screening in HIV now starts at 21 as usual (HHS 2024, ASCCP 2026), with its question reissued; an HPV distractor now reads "Restart the series"; American spelling throughout the questions; three briefs retagged to the USMLE outline; the sidebar collapses below 1100 px.', []),
  (83, '2026-10-04', 'Substance Intoxication and Withdrawal: benzodiazepines are first-line for moderate alcohol withdrawal, matching the AFP 2021 wording (one question updated).', []),
  (84, '2026-10-04', 'Study mode switches on and off about ten times faster: briefs far from the screen are no longer restyled on every switch, which had made the page freeze, especially on phones.', []),
+ (85, '2026-10-04', 'The NBME blueprint panel now follows each clerkship: Psychiatry, Pediatrics and Family Medicine show their own subject exam outline (Medicine, Surgery, OB/GYN and Neurology are ready for when those shelves open), and Step 2 shows the USMLE Step 2 CK outline. On phones each row is a labeled card instead of an unlabeled column of numbers.', []),
 ]
 if __name__ == '__main__':
     import json, sys
