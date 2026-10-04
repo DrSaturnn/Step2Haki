@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-04 s83: Substance brief: alcohol-withdrawal benzodiazepine line narrowed to 'moderate' per AFP 2021 p253 (opened 2026-10-04); q_b7cf v2
+
+```
+Page: 190 briefs, 2138 items -> 190 briefs, 2138 items
+Briefs changed (1):
+  - substance (Substance Intoxication and Withdrawal): items edited (q_b7cfc2c40d1542845761); versions bumped (q_b7cfc2c40d1542845761 v1->v2)
+Other page changes (nav, headers, scripts): +207 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 190 briefs, 2138 items, 6 scripts, 36 checks, base HEAD | allowlisted 19 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 190 | bankwraps 190 | mcq 2138 (axCheck 2138, reveal-only 0) | malformed 0 | crit gridded 213/214 | vignette gridded 85/85 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.023%)
+```
+
 ## 2026-10-04 s82: decisions batch (HIV cervical rekey, HPV distractor, workflow text, blueprint retags, American spelling in questions, sidebar collapse at 1100 px) + 5 new psych briefs (Major Depressive Disorder, Antipsychotic Adverse Effects, Somatic Symptom and Related Disorders, Sleep Problems in a Child, Substance Intoxication and Withdrawal) + Delirium benzodiazepine-withdrawal item; authored in the parallel chat, each audited to 0 critical
 
 ```
