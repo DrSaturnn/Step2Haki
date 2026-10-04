@@ -69,3 +69,9 @@ Decisions, to be carried out in a "decisions" batch between merge batches (statu
 - q_0053 key reads "5 Years after diagnosis" (mid-phrase capital). Lowercasing changes the key text, which migrate_check treats as a new item (stats reset). Leave, or reissue?
 - Thyroid: the PTU-in-first-trimester line is labeled ATA 2017; the 2026 ATA pregnancy guideline (Korevaar, Thyroid 2026;36(5):481-544) antithyroid-drug section (G) could not be opened. Recheck when a full text is available.
 - Diabetes: the retinopathy schedule quotes ADA Standards 2022 section 12 (2024 to 2026 pages returned 403); the USPSTF CKD screening page is marked inactive.
+
+## From s91 (merge batch 11; Claude's notes, your call)
+
+- The CDC child schedule status (January 2026 revision stayed March 16, 2026; HHS appeal argued October 6, 2026) decides several HPV and childhood keys (q_06ed, q_652e, q_88f8, q_b8bb). Recheck after the First Circuit rules.
+- Vaccines in Pregnancy: COVID-19 shows a ⚠︎ because CDC's pregnancy table says "No guidance/not applicable" while the 2026-27 COVID guidance recommends vaccine for all adults. The anti-D line "without recent anti-D" also carries ⚠︎ (no source opened).
+- Childhood Vaccine Schedule and Contraindications has 11 questions, below the 12 to 18 aim; add one or two when convenient.
