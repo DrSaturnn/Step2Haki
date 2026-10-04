@@ -32,9 +32,9 @@ Rule 14 still applies: where a broader title promises content the brief does not
 | Congenital Heart Disease (shipped s77) | Cyanotic Congenital Heart Disease (`cyanotic-chd`); Congenital Shunts and the Transitional Clock (`bs-shunt-timing`) | 21 |
 | Obstructive Lung Disease (shipped s68) | COPD: Which Interventions Improve Survival (`copd`); Asthma vs. COPD (`asthma-copd`) | 17 |
 | Recurrent Respiratory Infection and Structural Lung Disease (shipped s77) | Recurrent Sinopulmonary Infection (`sinopulm-structural`); When Antibiotics Fail in a Structural Lung (`abpa`) | 22 |
-| Sickle Cell Disease and Trait | Chronic Dyspnea in Sickle Cell Disease (`scd-dyspnea`); Sickle Cell Trait versus Disease (`bs-sickle-trait`) | 25 |
-| Respiratory Infection in a Child | Pediatric Upper Respiratory Infection (`uri`); Pediatric Community-Acquired Pneumonia (`mycoplasma`) | 23 |
-| Lung Disease in the Newborn and Preterm Infant | Bronchopulmonary Dysplasia (`bpd`); Neonatal Respiratory Distress (`bs-nrd`) | 26 |
+| Sickle Cell Disease and Trait (shipped s78) | Chronic Dyspnea in Sickle Cell Disease (`scd-dyspnea`); Sickle Cell Trait versus Disease (`bs-sickle-trait`) | 25 |
+| Respiratory Infection in a Child (shipped s78) | Pediatric Upper Respiratory Infection (`uri`); Pediatric Community-Acquired Pneumonia (`mycoplasma`) | 23 |
+| Lung Disease in the Newborn and Preterm Infant (shipped s78) | Bronchopulmonary Dysplasia (`bpd`); Neonatal Respiratory Distress (`bs-nrd`) | 26 |
 | Hereditary Polyposis Syndromes | Familial Adenomatous Polyposis (`fap`); Peutz-Jeghers Syndrome (`peutz-jeghers`) | 15 |
 | Jaundice in a Newborn | Neonatal Jaundice (`neonatal-jaundice`); The Sick Jaundiced Neonate with a Positive Screen (`bs-galactosemia`) | 29 |
 | Vitamins and Nutritional Deficiencies | Fat-Soluble Vitamin Deficiency and Toxicity (`bs-fat-soluble-vitamins`); Water-Soluble Vitamin Deficiency (`bs-water-soluble-vitamins`); The Vegan Diet (`vegan`) | 28 |
