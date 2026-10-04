@@ -102,6 +102,10 @@ LOG = [
   [('Heart Murmurs in an Adult', ['Right-Sided Murmurs: Pulmonic Stenosis & Tricuspid Regurgitation', 'Murmur Man and Post-ToF Pulmonic Regurgitation']),
    ('Congenital Heart Disease', ['Cyanotic Congenital Heart Disease', 'Congenital Shunts and the Transitional Clock']),
    ('Recurrent Respiratory Infection and Structural Lung Disease', ['Recurrent Sinopulmonary Infection', 'When Antibiotics Fail in a Structural Lung'])]),
+ (78, D3o, 'Merge batch 7 (merged briefs may now run about 800 words before the questions). RSV prevention follows current CDC guidance (nirsevimab; palivizumab gone after 2025); fetal hemoglobin norms per Labcorp; Histoplasma, Brucella and erythema multiforme distinctions sourced.',
+  [('Sickle Cell Disease and Trait', ['Chronic Dyspnea in Sickle Cell Disease', 'Sickle Cell Disease and Trait']),
+   ('Respiratory Infection in a Child', ['Pediatric Upper Respiratory Infection', 'Pediatric Community-Acquired Pneumonia']),
+   ('Lung Disease in the Newborn and Preterm Infant', ['Bronchopulmonary Dysplasia', 'Neonatal Respiratory Distress'])]),
 ]
 if __name__ == '__main__':
     import json, sys
