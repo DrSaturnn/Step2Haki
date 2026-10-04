@@ -1,0 +1,44 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "   Desktop keeps the fixed sidebar. Below 980px the sidebar is replaced by",
+   "with": "   Desktop keeps the fixed sidebar. Below 1100px the sidebar is replaced by"
+  },
+  {
+   "op": "replace_global",
+   "find": "@media (max-width:980px){\n  main{margin-left:0;padding-bottom:calc(78px",
+   "with": "@media (max-width:1100px){\n  main{margin-left:0;padding-bottom:calc(78px"
+  },
+  {
+   "op": "replace_global",
+   "find": "@media (max-width:980px){\n  .masthead .shelfpick{margin:18px 0 2px}",
+   "with": "@media (max-width:1100px){\n  .masthead .shelfpick{margin:18px 0 2px}"
+  },
+  {
+   "op": "replace_global",
+   "find": "   scrolling body. Below 980px the same sidebar is an off-canvas panel from",
+   "with": "   scrolling body. Below 1100px the same sidebar is an off-canvas panel from"
+  },
+  {
+   "op": "replace_global",
+   "find": "@media (max-width:980px){\n  #nav{\n",
+   "with": "@media (max-width:1100px){\n  #nav{\n"
+  },
+  {
+   "op": "replace_global",
+   "find": "@media (max-width:980px){\n  #mbar button[data-act=\"index\"]{display:none}",
+   "with": "@media (max-width:1100px){\n  #mbar button[data-act=\"index\"]{display:none}"
+  },
+  {
+   "op": "replace_global",
+   "find": "var NAV_NARROW='(max-width:980px)';",
+   "with": "var NAV_NARROW='(max-width:1100px)';"
+  },
+  {
+   "op": "replace_global",
+   "find": "   Desktop keeps the fixed sidebar. Below 980px the same sidebar slides in from",
+   "with": "   Desktop keeps the fixed sidebar. Below 1100px the same sidebar slides in from"
+  }
+ ]
+}

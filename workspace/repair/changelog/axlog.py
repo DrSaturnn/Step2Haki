@@ -115,6 +115,7 @@ LOG = [
   [('Urinary Tract Infection in a Child', ['Urinary Tract Infection in a Child', 'Vesicoureteral Reflux']),
    ('Hematuria and Nephritic Syndrome', ['Hematuria', 'Acute Nephritic Syndrome in a Child']),
    ('Proteinuria and Nephrotic Syndrome in a Child', ['Nephrotic Syndrome in a Child', 'Incidental Proteinuria in a Well Child'])]),
+ (82, '2026-10-04', 'Five new psychiatry briefs: Major Depressive Disorder, Antipsychotic Adverse Effects, Somatic Symptom and Related Disorders, Sleep Problems in a Child, and Substance Intoxication and Withdrawal; Delirium gains a benzodiazepine-withdrawal question. Cervical screening in HIV now starts at 21 as usual (HHS 2024, ASCCP 2026), with its question reissued; an HPV distractor now reads "Restart the series"; American spelling throughout the questions; three briefs retagged to the USMLE outline; the sidebar collapses below 1100 px.', []),
 ]
 if __name__ == '__main__':
     import json, sys

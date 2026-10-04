@@ -2,6 +2,67 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-04 s82: decisions batch (HIV cervical rekey, HPV distractor, workflow text, blueprint retags, American spelling in questions, sidebar collapse at 1100 px) + 5 new psych briefs (Major Depressive Disorder, Antipsychotic Adverse Effects, Somatic Symptom and Related Disorders, Sleep Problems in a Child, Substance Intoxication and Withdrawal) + Delirium benzodiazepine-withdrawal item; authored in the parallel chat, each audited to 0 critical
+
+```
+Page: 185 briefs, 2099 items -> 190 briefs, 2138 items
+Briefs added (5):
+  - peds-sleep: Sleep Problems in a Child (7 items)
+  - substance: Substance Intoxication and Withdrawal (8 items)
+  - mdd: Major Depressive Disorder (7 items)
+  - antipsych-effects: Antipsychotic Adverse Effects (9 items)
+  - somatic: Somatic Symptom and Related Disorders (7 items)
+Briefs changed (42):
+  - sjia (Juvenile Idiopathic Arthritis): items edited (q_ab91a933c728ee27ec93); versions bumped (q_ab91a933c728ee27ec93 v1->v2)
+  - aneuploidy (Genetic Syndromes Recognized at Birth): items edited (q_5ec649f524c7c9011570); versions bumped (q_5ec649f524c7c9011570 v2->v3)
+  - bs-preterm-followup (Follow-Up of the Preterm Infant): items edited (q_fb74d75b250b57149e1b); versions bumped (q_fb74d75b250b57149e1b v1->v2)
+  - arf (Acute Rheumatic Fever): items edited (q_3f6df5ab34e55d0cb772); versions bumped (q_3f6df5ab34e55d0cb772 v2->v3)
+  - myocarditis (Heart Failure in a Child): items edited (q_6db6b67888f05a658bea)
+  - del22q11 (22q11.2 Deletion Syndrome): items edited (q_96039cc9481f5210a978, q_64be248830bc5ff18b97); versions bumped (q_96039cc9481f5210a978 v1->v2, q_64be248830bc5ff18b97 v3->v4); prose edited (-1 chars)
+  - rhinitis (Rhinitis): items edited (q_3e5ec73f32fe5505b1ce); versions bumped (q_3e5ec73f32fe5505b1ce v1->v2)
+  - hypoxemia-mech (Hypoxemia): prose edited (+2 chars)
+  - airway (Noisy Breathing in a Child): items edited (q_f4911f58dd7176f6eabc, q_9267493c56792f3fa288, q_2ae520114eb69bd6d179, q_6c0918663750fe154473); versions bumped (q_f4911f58dd7176f6eabc v1->v2, q_9267493c56792f3fa288 v2->v3, q_2ae520114eb69bd6d179 v1->v2)
+  - bpd (Lung Disease in the Newborn and Preterm Infant): items edited (q_30ca2f614f165e2583dc); versions bumped (q_30ca2f614f165e2583dc v2->v3); prose edited (+10 chars)
+  - cyclic-vomiting (Recurrent Vomiting in a Child): items edited (q_884ed6c3b6e5c3eaefc9, q_5a5d257bed5b813be446); versions bumped (q_5a5d257bed5b813be446 v1->v2)
+  - occult-gi-bleed (GI Bleeding in a Child): items edited (q_2ee63804dd34cb933cbf, q_4ebb2d84a9cdea8f120b, q_a7ed5a40912a683d78c2); versions bumped (q_2ee63804dd34cb933cbf v2->v3, q_4ebb2d84a9cdea8f120b v1->v2, q_4be9f389933a59802b68 v2->v3, q_a7ed5a40912a683d78c2 v1->v2); attrs set (q_4be9f389933a59802b68 data-d2)
+  - polyuria (Polyuria): items edited (q_96a40d042d1160b46913, q_ff967c366b39afa008c9, q_93b91e3f1b94d998f45b, q_e020496af6ed431c4480, q_564b39c3d3443f55063b); versions bumped (q_564b39c3d3443f55063b v2->v3)
+  - bs-abdominal-mass (Abdominal Mass in a Young Child): prose edited (+2 chars)
+  - tumor-syndromes (Inherited Tumor Syndromes): items edited (q_7e8520ea19b801cc8647, q_38fe184e95534fc18064, q_78ffd7c968a5ebb77ae6, q_48e55517cb8d7b4582c2, q_56a70a301f71c204e434, q_086641adf419daa39e0b); versions bumped (q_6ac0ab0e89edb9e8e47c v2->v3, q_38fe184e95534fc18064 v1->v2, q_1aceeac70d44e39d5370 v1->v2, q_78ffd7c968a5ebb77ae6 v1->v2, q_48e55517cb8d7b4582c2 v2->v3, q_56a70a301f71c204e434 v1->v2, q_086641adf419daa39e0b v1->v2); attrs set (q_6ac0ab0e89edb9e8e47c data-d2; q_1aceeac70d44e39d5370 data-d2)
+  - factor-inhibitor (Hemophilia): items edited (q_d391cc31626f590ba33d, q_cac91c1fbe1158269390, q_45337c6d02795dc1b5ee); versions bumped (q_d391cc31626f590ba33d v1->v2, q_cac91c1fbe1158269390 v2->v3, q_45337c6d02795dc1b5ee v1->v2)
+  - transfusion (Transfusion Reactions): items edited (q_a9137ad5a35d53f49623, q_3280615150295f4bacd2, q_606f25b3a18b52dea066); versions bumped (q_a9137ad5a35d53f49623 v1->v2, q_3280615150295f4bacd2 v1->v2, q_46e1642b98cc5454bcfb v1->v2, q_606f25b3a18b52dea066 v1->v2); attrs set (q_3280615150295f4bacd2 data-d2; q_46e1642b98cc5454bcfb data-d2; q_606f25b3a18b52dea066 data-d2)
+  - meningitis (Bacterial Meningitis): items edited (q_e99970aed0f19e61130f, q_5607f0b4e8de498d5545); versions bumped (q_0b7f565ff3be5febb8be v1->v2, q_e99970aed0f19e61130f v1->v2, q_5607f0b4e8de498d5545 v1->v2); attrs set (q_0b7f565ff3be5febb8be data-d2)
+  - hiv-vax (Vaccines in Special Populations): items edited (q_78d078a400a55a4db1d4); versions bumped (q_78d078a400a55a4db1d4 v2->v3)
+  - ig-panel (Antibody Deficiencies): items edited (q_a1a7da417856518da9e5, q_ab48191af5fd5707b2e4); versions bumped (q_a1a7da417856518da9e5 v1->v2, q_ab48191af5fd5707b2e4 v1->v2)
+  - herpangina (Oral Lesions in a Child): items edited (q_3afba78459e1582f981c, q_f41684cb978c587db2fb, q_f4d07ac77e717a65d104); versions bumped (q_3afba78459e1582f981c v1->v2, q_f41684cb978c587db2fb v1->v2, q_f4d07ac77e717a65d104 v1->v2); attrs set (brief data-bp)
+  - cgd (Neutrophil Disorders: Number and Function): items edited (q_aa8c992a25c7529ebba1, q_50cdc12e03ed57e9be17, q_51d19f35cee95325b575, q_630894b404bad34581cd); versions bumped (q_aa8c992a25c7529ebba1 v1->v2, q_ea0c1b219556516eb0b8 v1->v2, q_50cdc12e03ed57e9be17 v1->v2, q_51d19f35cee95325b575 v1->v2, q_f89d48b96d1fe1a99900 v1->v2); attrs set (q_ea0c1b219556516eb0b8 data-d2; q_f89d48b96d1fe1a99900 data-d2)
+  - bs-exanthems (Fever and Rash in a Child): attrs set (brief data-bp)
+  - bs-isolation (Isolation Precautions): attrs set (brief data-bp)
+  - bs-febrile-infant (The Febrile Infant — Finding the Source): items edited (q_f6a06578aaa35a888053); versions bumped (q_f6a06578aaa35a888053 v1->v2)
+  - hearing (Hearing Loss & Otosclerosis): items edited (q_b5ae8b6530155fee9c81); versions bumped (q_b5ae8b6530155fee9c81 v1->v2)
+  - redeye (The Red Eye): items edited (q_290d59171b6164c8fa5c)
+  - sellar-mass (Sellar and Suprasellar Masses): prose edited (+10 chars)
+  - abrs-complications (Sinusitis and Its Complications): items edited (q_527679509b2c51edadf0)
+  - retinitis-pigmentosa (Night Blindness): items edited (q_eb44464fad935823a8d5, q_8fa87f63d1d75997ad00, q_3ac1d1f7be2e5326b484); versions bumped (q_eb44464fad935823a8d5 v1->v2, q_3ac1d1f7be2e5326b484 v2->v3)
+  - tics (Tics and Tic Disorders): items edited (q_7b955ba5483e524c9908); versions bumped (q_c04a5b7c0b9458c5a156 v1->v2); attrs set (q_c04a5b7c0b9458c5a156 data-d2)
+  - bs-posterior-fossa (Posterior Fossa Localization): items edited (q_d90f1801c20853cabc74)
+  - neonatal-rash (Benign Neonatal Rashes): items edited (q_189e45f4140ae64bc6f0); versions bumped (q_189e45f4140ae64bc6f0 v1->v2)
+  - diaper-dermatitis (Diaper Dermatitis): items edited (q_1077b33be37051858588)
+  - cervical (Cervical Cancer Screening): prose edited (+125 chars)
+  - hpv (HPV Vaccination & Series Rules): versions bumped (q_b8bb12655d3f5058984f v1->v2); attrs set (q_b8bb12655d3f5058984f data-d2,data-d2-id)
+  - teratogens (Teratogenic Exposures): versions bumped (q_ffd491a6689c546fbd3e v1->v2); attrs set (q_ffd491a6689c546fbd3e data-d2)
+  - primary-amenorrhea (Primary Amenorrhea): items edited (q_b1c87c76c046508dac5f); versions bumped (q_b1c87c76c046508dac5f v1->v2); attrs set (q_b1c87c76c046508dac5f data-d1)
+  - bs-cervical-gate (Cervical Screening: the Age-21 Floor): 1 item added (q_547d3d7651fe2ed3e10a); ITEMS REMOVED (q_259e3ccc6f015dcc8656); prose edited (+289 chars)
+  - smoking (Preventive Care: Ranking Interventions): items edited (q_7f1a59fb3e9f5f439cf4); versions bumped (q_7f1a59fb3e9f5f439cf4 v1->v2)
+  - sz-psychosocial (Schizophrenia: Long-Term Care): prose edited (+4 chars)
+  - delirium (Delirium): 1 item added (q_6c894b0025d26e66237f)
+Other page changes (nav, headers, scripts): +902 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 190 briefs, 2138 items, 6 scripts, 36 checks, base HEAD | allowlisted 19 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 190 | bankwraps 190 | mcq 2138 (axCheck 2138, reveal-only 0) | malformed 0 | crit gridded 213/214 | vignette gridded 85/85 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.023%)
+```
+
 ## 2026-10-04 s81: merge batch 9: Urinary Tract Infection in a Child (+ Vesicoureteral Reflux), Hematuria and Nephritic Syndrome, Proteinuria and Nephrotic Syndrome in a Child; reflux per AUA/RIVUR, PSGN latency and orthostatic proteinuria per sources; each reviewed to 0 critical in 4 rounds
 
 ```

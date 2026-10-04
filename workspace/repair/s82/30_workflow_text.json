@@ -1,0 +1,52 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "del22q11",
+   "find": "which syndrome owns which finding</caption>",
+   "with": "which syndrome has which finding</caption>"
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "In the preterm infant each complication owns a window: check the timing before the findings.",
+   "with": "In the preterm infant each complication has its own window: check the timing before the findings."
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "<b class=\"step\">2</b>Each preterm complication owns a window</span>",
+   "with": "<b class=\"step\">2</b>Each preterm complication has its own window</span>"
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "the mass would not obstruct CSF flow (partner brief owns this)</td>",
+   "with": "the mass would not obstruct CSF flow (covered in Posterior Fossa Localization)</td>"
+  },
+  {
+   "op": "replace",
+   "brief": "sellar-mass",
+   "find": "<b>Pubertal delay</b> &mdash; the vendor's gate is <b>no breast development by age 12 in girls</b>; the threshold conventionally taught is age 13 ⚠︎ (clinic ledger). Tanner 1 at 13 clears either gate, so the discrepancy does not change this answer — but note which figure you are being scored on",
+   "with": "<b>Pubertal delay</b> &mdash; one teaching source gates it at <b>no breast development by age 12 in girls</b>; the threshold conventionally taught is age 13 ⚠︎. Tanner 1 at 13 clears either gate, so the discrepancy does not change this answer, but note which figure you are being scored on"
+  },
+  {
+   "op": "replace",
+   "brief": "sz-psychosocial",
+   "find": "<i>Psychosis</i> owns which psychotic disorder by duration and the antipsychotic ladder up to clozapine; this brief owns what to add around the drug.",
+   "with": "<i>Psychosis</i> covers which psychotic disorder by duration and the antipsychotic ladder up to clozapine; this brief covers what to add around the drug."
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "earns surveillance ultrasounds, owned by Part I <b>Inherited Tumor Syndromes</b>",
+   "with": "earns surveillance ultrasounds, covered in Part I <b>Inherited Tumor Syndromes</b>"
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "<td>The vendor keys the extreme: collapsed alveoli with zero ventilation</td>",
+   "with": "<td>The question keys the extreme: collapsed alveoli with zero ventilation</td>"
+  }
+ ]
+}

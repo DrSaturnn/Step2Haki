@@ -1,0 +1,17 @@
+{
+ "edits": [
+  {
+   "op": "add_item",
+   "brief": "delirium",
+   "type": "mech",
+   "stem": "<span class=\"sl\">68-year-old woman admitted 2 days ago for pyelonephritis</span>\n<span class=\"si\">nightly alprazolam for years; not ordered here</span>\n<span class=\"si\">since last night: sleepless, tremulous, hallucinating</span>\n<span class=\"ss\">Antibiotic covers the cultured organism</span>\n<span class=\"sd\">T 37.0 °C &middot; BP 166/94 mm Hg &middot; HR 110/min &middot; oriented to name only</span>",
+   "answer": "Benzodiazepine withdrawal",
+   "companion": "a long-term benzodiazepine stopped on admission; withdrawal follows within days, depending on half-life, can be life-threatening and is treated by restarting a benzodiazepine; she is afebrile on an antibiotic that covers the organism",
+   "d1": "Worsening infection",
+   "d2": "Brief psychotic disorder",
+   "lead_in": "Which of the following is the most likely cause of this patient's symptoms?",
+   "src": "authored",
+   "nid": "1572585550864"
+  }
+ ]
+}

@@ -1,9 +1,9 @@
 id,title,page_section,shelf,primary,primary_name,secondary,note
 pmr,Polymyalgia Rheumatica,msk,fm,msk,Musculoskeletal System,immune,
 biceps,Biceps Tendinitis,msk,fm,msk,Musculoskeletal System,,
-cts,Carpal Tunnel Syndrome,msk,fm,msk,Musculoskeletal System,neuro,review: peripheral nerve could be neuro
+cts,Carpal Tunnel Syndrome,msk,fm,msk,Musculoskeletal System,neuro,"reviewed 2026-10-03, kept: peripheral nerve could be neuro"
 dequervain,De Quervain Tendinopathy,msk,fm,msk,Musculoskeletal System,,
-meralgia,Meralgia Paresthetica,msk,fm,neuro,Nervous System & Special Senses,msk,review: peripheral nerve
+meralgia,Meralgia Paresthetica,msk,fm,neuro,Nervous System & Special Senses,msk,"reviewed 2026-10-03, kept: peripheral nerve"
 scaphoid,Scaphoid Fracture,msk,fm,msk,Musculoskeletal System,,
 backpain,Low Back Pain: Red Flags,msk,fm,msk,Musculoskeletal System,,
 hippos,Hip Positioning: Fracture vs. Dislocation,msk,fm,msk,Musculoskeletal System,,
@@ -33,7 +33,7 @@ newborn-hormone,Maternal Hormone Effects in the Newborn,peds,fm peds,newborn,Dis
 aneuploidy,Aneuploidy: Reading the Newborn,peds,peds,newborn,Disorders of the Newborn & Congenital Disorders,,
 malform-syndromes,Multiple Anomalies in a Newborn,peds,peds,newborn,Disorders of the Newborn & Congenital Disorders,,
 bs-learning,Specific Learning Disorder,peds,peds,behav,Behavioral Health,,
-bs-nat-fracture,Suspected Child Abuse: Fractures and the Next Step,peds,fm peds,multi,Multisystem Processes & Disorders,social,review: abuse could be coded behav or social
+bs-nat-fracture,Suspected Child Abuse: Fractures and the Next Step,peds,fm peds,multi,Multisystem Processes & Disorders,social,"reviewed 2026-10-03, kept: abuse could be coded behav or social"
 bs-shock,Shock in Children,peds,peds,multi,Multisystem Processes & Disorders,cv,
 bs-infant-feeding,Infant Feeding at Six Months,peds,fm peds,gen,"General Principles, Normal Age-Related Findings, Care of the Well Patient",gi,
 bs-tanner,Sexual Maturity Rating,peds,fm peds,gen,"General Principles, Normal Age-Related Findings, Care of the Well Patient",endo,
@@ -54,7 +54,7 @@ newborn-cyanosis,Cyanosis in the Newborn,cv,fm peds,newborn,Disorders of the New
 kawasaki,Kawasaki Disease,cv,fm peds,cv,Cardiovascular System,multi,
 arf,Acute Rheumatic Fever,cv,fm peds,cv,Cardiovascular System,immune,
 myocarditis,New Heart Failure in a Child,cv,fm peds,cv,Cardiovascular System,,
-del22q11,22q11.2 Deletion Syndrome,cv,fm peds,newborn,Disorders of the Newborn & Congenital Disorders,immune,review: could be immune primary
+del22q11,22q11.2 Deletion Syndrome,cv,fm peds,newborn,Disorders of the Newborn & Congenital Disorders,immune,"reviewed 2026-10-03, kept: could be immune primary"
 bs-murmur-map,Murmur Man and Post-ToF Pulmonic Regurgitation,cv,fm,cv,Cardiovascular System,,
 bs-shunt-timing,Congenital Shunts and the Transitional Clock,cv,peds,cv,Cardiovascular System,newborn,
 copd,COPD: Which Interventions Improve Survival,pulm,fm,resp,Respiratory System,,
@@ -65,7 +65,7 @@ rhinitis,Allergic Rhinitis,pulm,fm,resp,Respiratory System,immune,
 sinopulm-structural,Recurrent Sinopulmonary Infection,pulm,fm peds,resp,Respiratory System,immune,
 hypoxemia-mech,Mechanisms of Hypoxemia,pulm,fm peds,resp,Respiratory System,,
 abpa,When Antibiotics Fail in a Structural Lung,pulm,fm peds,resp,Respiratory System,immune,
-scd-dyspnea,Chronic Dyspnea in Sickle Cell Disease,pulm,fm peds,resp,Respiratory System,heme,review: could be heme primary
+scd-dyspnea,Chronic Dyspnea in Sickle Cell Disease,pulm,fm peds,resp,Respiratory System,heme,"reviewed 2026-10-03, kept: could be heme primary"
 airway,Pediatric Airway & Noisy Breathing,pulm,fm peds,resp,Respiratory System,,
 mycoplasma,Pediatric Community-Acquired Pneumonia,pulm,fm peds,resp,Respiratory System,,
 uri,Pediatric Upper Respiratory Infection,pulm,fm peds,resp,Respiratory System,,
@@ -79,7 +79,7 @@ zenker,Zenker Diverticulum,gi,fm,gi,Gastrointestinal System,,
 infant-stool,"Infant Stool Complaints: Dyschezia, FPIAP & Secondary Lactase Deficiency",gi,fm peds,gi,Gastrointestinal System,,
 fap,Familial Adenomatous Polyposis,gi,fm,gi,Gastrointestinal System,,
 peutz-jeghers,Peutz-Jeghers Syndrome,gi,peds fm,gi,Gastrointestinal System,,
-feeding-refusal,Toddler Food Refusal,gi,fm peds,gi,Gastrointestinal System,behav,review: could be behav primary
+feeding-refusal,Toddler Food Refusal,gi,fm peds,gi,Gastrointestinal System,behav,"reviewed 2026-10-03, kept: could be behav primary"
 rlq-pain,Right Lower Quadrant Pain,gi,fm peds,gi,Gastrointestinal System,,
 peds-constipation,Constipation in a Child,gi,fm peds,gi,Gastrointestinal System,,
 cyclic-vomiting,Cyclic Vomiting Syndrome,gi,peds,gi,Gastrointestinal System,,
@@ -90,8 +90,8 @@ bs-galactosemia,The Sick Jaundiced Neonate with a Positive Screen,gi,peds,newbor
 bs-impaction,Fecal Impaction & Overflow Diarrhea,gi,fm,gi,Gastrointestinal System,,
 bs-tef,Tracheoesophageal Fistula with Esophageal Atresia,gi,peds,newborn,Disorders of the Newborn & Congenital Disorders,gi,
 bs-umbilical,Umbilical Findings in a Newborn,gi,peds,newborn,Disorders of the Newborn & Congenital Disorders,,
-bs-fat-soluble-vitamins,Fat-Soluble Vitamin Deficiency and Toxicity,gi,fm peds,multi,Multisystem Processes & Disorders,gi,review: nutrition coded as multisystem
-bs-water-soluble-vitamins,Water-Soluble Vitamin Deficiency,gi,fm peds,multi,Multisystem Processes & Disorders,gi,review: nutrition coded as multisystem
+bs-fat-soluble-vitamins,Fat-Soluble Vitamin Deficiency and Toxicity,gi,fm peds,multi,Multisystem Processes & Disorders,gi,"reviewed 2026-10-03, kept: nutrition coded as multisystem"
+bs-water-soluble-vitamins,Water-Soluble Vitamin Deficiency,gi,fm peds,multi,Multisystem Processes & Disorders,gi,"reviewed 2026-10-03, kept: nutrition coded as multisystem"
 bs-wilson,"Wilson Disease: Copper in the Liver, Brain and Eye",gi,fm peds,gi,Gastrointestinal System,neuro,
 pyelo,Pyelonephritis: Route & Disposition,renal,fm,renal,Renal & Urinary System,,
 bph,BPH & Acute Urinary Retention,renal,fm,repro_m,Male Reproductive System,renal,
@@ -114,14 +114,14 @@ bs-abdominal-mass,Abdominal Mass in a Young Child,renal,fm peds,renal,Renal & Ur
 aq-puffy-eyes,Child with Puffy Eyes,renal,fm peds,renal,Renal & Urinary System,,
 thyroid,Thyroid Mimics & Discriminators,endo,fm,endo,Endocrine System,,
 levo,Levothyroxine Titration,endo,fm,endo,Endocrine System,,
-gynecomastia,Gynecomastia vs. Male Breast Cancer,endo,fm,repro_m,Male Reproductive System,endo,review: breast
+gynecomastia,Gynecomastia vs. Male Breast Cancer,endo,fm,repro_m,Male Reproductive System,endo,"reviewed 2026-10-03, kept: breast"
 prolactin,Hyperprolactinemia,endo,fm,endo,Endocrine System,,
 osteoporosis,Osteoporosis Screening,endo,fm,msk,Musculoskeletal System,endo,
 preg-thyroid,Levothyroxine in Pregnancy,endo,fm,preg,"Pregnancy, Childbirth & the Puerperium",endo,
 congenital-hypothyroid,Congenital Hypothyroidism,endo,fm peds,endo,Endocrine System,newborn,
-tumor-syndromes,Inherited Tumor Syndromes,endo,fm peds,multi,Multisystem Processes & Disorders,endo,review: inherited tumor syndromes
+tumor-syndromes,Inherited Tumor Syndromes,endo,fm peds,multi,Multisystem Processes & Disorders,endo,"reviewed 2026-10-03, kept: inherited tumor syndromes"
 precocious-puberty,Precocious Puberty,endo,fm peds,endo,Endocrine System,,
-homocystinuria,Marfanoid Habitus: Homocystinuria,endo,fm peds,multi,Multisystem Processes & Disorders,msk,review: inborn error of metabolism
+homocystinuria,Marfanoid Habitus: Homocystinuria,endo,fm peds,multi,Multisystem Processes & Disorders,msk,"reviewed 2026-10-03, kept: inborn error of metabolism"
 bs-dexa-highrisk,DEXA: When Screening Starts Early,endo,fm,msk,Musculoskeletal System,gen,
 bs-dm-bundle,Diabetes: the Annual Care Bundle,endo,fm,endo,Endocrine System,,
 bs-short-stature,Short Stature and Growth Velocity,endo,peds,endo,Endocrine System,gen,
@@ -142,16 +142,16 @@ dtap,DTaP: Contraindication vs. Precaution,id,fm peds,gen,"General Principles, N
 cervicitis,Acute Cervicitis,id,fm,repro_f,Female Reproductive System & Breast,,
 ig-panel,The Immunoglobulin Panel,id,fm peds,immune,Immune System,,
 rmsf,Tick-Borne Fever and Rash,id,fm peds,multi,Multisystem Processes & Disorders,,
-lymphadenitis,Enlarged Lymph Nodes: Reading the Pattern,id,fm peds,heme,Blood & Lymphoreticular System,multi,review: lymph nodes coded lymphoreticular
-herpangina,Oral Vesicles in a Child,id,fm peds,multi,Multisystem Processes & Disorders,gi,review: oral viral infection
+lymphadenitis,Enlarged Lymph Nodes: Reading the Pattern,id,fm peds,heme,Blood & Lymphoreticular System,multi,"reviewed 2026-10-03, kept: lymph nodes coded lymphoreticular"
+herpangina,Oral Vesicles in a Child,id,fm peds,skin,Skin & Subcutaneous Tissue,multi,retagged 2026-10-03: USMLE outline lists herpangina under Skin viral
 cgd,Recurrent Abscesses and Granulomas,id,fm peds,immune,Immune System,,
 bs-pta,Peritonsillar Abscess and the Deep Neck Spaces,id,fm peds,resp,Respiratory System,,
 bs-torch,Congenital CMV and the TORCH Discriminations,id,peds,newborn,Disorders of the Newborn & Congenital Disorders,multi,
 bs-neonatal-sepsis,Neonatal Sepsis and Its Mimics,id,peds,newborn,Disorders of the Newborn & Congenital Disorders,multi,
 bs-fever-rash-arthralgia,"Fever, Rash and Joint Pain in a Child or Adolescent",id,fm peds,multi,Multisystem Processes & Disorders,msk,
-bs-exanthems,Exanthems in a Child,id,fm peds,multi,Multisystem Processes & Disorders,skin,review: exanthems could be skin
+bs-exanthems,Exanthems in a Child,id,fm peds,skin,Skin & Subcutaneous Tissue,multi,retagged 2026-10-03: USMLE outline lists exanthems under Skin viral
 bs-anaphylaxis,Anaphylaxis and Its Mimics,id,fm peds,immune,Immune System,,
-bs-isolation,Isolation Precautions,id,fm peds,gen,"General Principles, Normal Age-Related Findings, Care of the Well Patient",multi,review: infection control
+bs-isolation,Isolation Precautions,id,fm peds,social,"Social Sciences (ethics, consent, physician-patient relationship)",multi,retagged 2026-10-03: infection prevention under Social Sciences patient safety
 bs-foodborne,Foodborne Diarrhea: Source and Organism,id,fm peds,gi,Gastrointestinal System,multi,
 bs-febrile-infant,The Febrile Infant — Finding the Source,id,peds,multi,Multisystem Processes & Disorders,newborn,
 aq-infant-fever,Fever in an Infant,id,fm peds,multi,Multisystem Processes & Disorders,renal,
@@ -166,7 +166,7 @@ cerebral-palsy,Cerebral Palsy and the MRI Pattern,neuro,fm peds,neuro,Nervous Sy
 abrs-complications,Sinusitis with Intracranial Extension,neuro,fm peds,resp,Respiratory System,neuro,
 vpshunt,VP Shunt Complications,neuro,fm peds,neuro,Nervous System & Special Senses,,
 retinitis-pigmentosa,Night Blindness,neuro,fm peds,neuro,Nervous System & Special Senses,,
-tics,Tics in a School-Age Child,neuro,fm peds,behav,Behavioral Health,neuro,review: tic disorders
+tics,Tics in a School-Age Child,neuro,fm peds,behav,Behavioral Health,neuro,"reviewed 2026-10-03, kept: tic disorders"
 bs-tethered,Tethered Cord and Closed Spinal Dysraphism,neuro,peds,neuro,Nervous System & Special Senses,newborn,
 bs-reye,Cerebral Edema in a Child — Reye Syndrome,neuro,fm peds,neuro,Nervous System & Special Senses,gi,
 bs-peds-stroke,Stroke in a Child or Adolescent,neuro,fm peds,neuro,Nervous System & Special Senses,,
@@ -197,6 +197,6 @@ smoking,Ranking Preventive Interventions,prev,fm,gen,"General Principles, Normal
 lipid-screen,Lipid Screening & Vaccine Eligibility by Condition,prev,fm,gen,"General Principles, Normal Age-Related Findings, Care of the Well Patient",cv,
 preop,Preoperative Thresholds,prev,fm,gen,"General Principles, Normal Age-Related Findings, Care of the Well Patient",,
 elder,Elder Abuse & Mandated Reporting,prev,fm,social,"Social Sciences (ethics, consent, physician-patient relationship)",,
-vegan,The Vegan Diet,prev,fm,multi,Multisystem Processes & Disorders,gen,review: nutrition
+vegan,The Vegan Diet,prev,fm,multi,Multisystem Processes & Disorders,gen,"reviewed 2026-10-03, kept: nutrition"
 bs-adolescent-confid,Adolescent Confidentiality,prev,fm peds,social,"Social Sciences (ethics, consent, physician-patient relationship)",,
 bs-adolescent-vax,Adolescent Immunization and the Age Platform,prev,fm peds,gen,"General Principles, Normal Age-Related Findings, Care of the Well Patient",,

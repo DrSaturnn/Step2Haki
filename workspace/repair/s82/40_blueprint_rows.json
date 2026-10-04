@@ -1,0 +1,22 @@
+{
+ "edits": [
+  {
+   "op": "set_attr",
+   "target": "herpangina",
+   "attr": "data-bp",
+   "value": "skin multi"
+  },
+  {
+   "op": "set_attr",
+   "target": "bs-exanthems",
+   "attr": "data-bp",
+   "value": "skin multi"
+  },
+  {
+   "op": "set_attr",
+   "target": "bs-isolation",
+   "attr": "data-bp",
+   "value": "social multi"
+  }
+ ]
+}
