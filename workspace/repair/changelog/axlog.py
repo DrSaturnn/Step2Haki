@@ -98,6 +98,10 @@ LOG = [
  (74, D3o, 'Tap the version label to open this change log; versions show as numbers.', []),
  (75, D3o, 'Version numbers now read v0.075 style; 1.0 comes when every clerkship is covered.', []),
  (76, D3o, 'Question banks get task filters (Diagnosis, Workup, Next step, Mechanism) with counts; Reveal all acts on the filtered set.', []),
+ (77, D3o, 'Merge batch 6. Eisenmenger wording scoped to septal defects beyond the newborn period; the ductus closes functionally in days; a 2-year-old patent ductus question moved to Heart Murmurs in a Child.',
+  [('Heart Murmurs in an Adult', ['Right-Sided Murmurs: Pulmonic Stenosis & Tricuspid Regurgitation', 'Murmur Man and Post-ToF Pulmonic Regurgitation']),
+   ('Congenital Heart Disease', ['Cyanotic Congenital Heart Disease', 'Congenital Shunts and the Transitional Clock']),
+   ('Recurrent Respiratory Infection and Structural Lung Disease', ['Recurrent Sinopulmonary Infection', 'When Antibiotics Fail in a Structural Lung'])]),
 ]
 if __name__ == '__main__':
     import json, sys

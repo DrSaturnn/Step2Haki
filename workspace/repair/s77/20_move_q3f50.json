@@ -1,0 +1,24 @@
+{
+ "edits": [
+  {
+   "op": "add_item",
+   "brief": "ped-murmur",
+   "type": "dx",
+   "stem": "2 yo with a continuous machine-like murmur below the left clavicle that runs through S2, bounding pulses and a wide pulse pressure",
+   "answer": "Patent ductus arteriosus",
+   "companion": "the machine-like continuous murmur, with a wide pulse pressure",
+   "d1": "Aortic regurgitation",
+   "d2": "Ventricular septal defect",
+   "src": "authored",
+   "after_item": "q_f9b41308a0c054a68995",
+   "note": "moved from right-murmurs (old q_3f503b9a2dee51438e7c, v2) unchanged, round-1 audit of the right-murmurs merge"
+  },
+  {
+   "op": "insert_after",
+   "brief": "ped-murmur",
+   "anchor": "patent ductus arteriosus, machine-like, unchanged by head position or posture",
+   "html": "; runs through S2, with bounding pulses and a wide pulse pressure",
+   "note": "teaching the moved item needs (from bs-murmur-map: Crossing S2 row and item q_3f50)"
+  }
+ ]
+}
