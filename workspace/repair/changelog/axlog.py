@@ -111,6 +111,10 @@ LOG = [
   [('Hereditary Polyposis Syndromes', ['Familial Adenomatous Polyposis', 'Peutz-Jeghers Syndrome']),
    ('Jaundice in a Newborn', ['Neonatal Jaundice', 'The Sick Jaundiced Neonate with a Positive Screen']),
    ('Vitamins and Nutritional Deficiencies', ['The Vegan Diet', 'Fat-Soluble Vitamin Deficiency and Toxicity', 'Water-Soluble Vitamin Deficiency'])]),
+ (81, '2026-10-04', 'Merge batch 9. Reflux grading and prophylaxis follow the international classification, AUA guideline and RIVUR trial; oral empiric antibiotics per AAFP 2020; constipation fissures are midline. Poststreptococcal glomerulonephritis latency is about 2 to 4 weeks after pharyngitis, up to 6 after impetigo; orthostatic proteinuria is common (not the leading cause) in adolescent boys; amyloid A and light chain amyloid separated.',
+  [('Urinary Tract Infection in a Child', ['Urinary Tract Infection in a Child', 'Vesicoureteral Reflux']),
+   ('Hematuria and Nephritic Syndrome', ['Hematuria', 'Acute Nephritic Syndrome in a Child']),
+   ('Proteinuria and Nephrotic Syndrome in a Child', ['Nephrotic Syndrome in a Child', 'Incidental Proteinuria in a Well Child'])]),
 ]
 if __name__ == '__main__':
     import json, sys
