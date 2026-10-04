@@ -132,6 +132,7 @@ LOG = [
    ('Adolescent Vaccines', ['HPV Vaccination & Series Rules', 'Adolescent Vaccines']),
    ('Vaccines in Pregnancy', ['Vaccines in Pregnancy', 'Tdap in Pregnancy at 10 Weeks'])]),
  (92, '2026-10-04', 'Switches no longer freeze the page, on or off. Flat theme and study mode now restyle the briefs on screen at once and the rest a few at a time in the background, instead of restyling every brief in one go; switching starts no animations. Board-style only and the shelf picker keep your place: the brief you were reading stays put, and switching back returns you to it.', []),
+ (93, '2026-10-04', 'The flat and study switches finish restyling the rest of the page even when the browser pauses animation frames (a background tab or a hidden window).', []),
 ]
 if __name__ == '__main__':
     import json, sys

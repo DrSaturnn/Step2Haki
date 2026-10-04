@@ -1,0 +1,22 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "  if(axmQ.length) axmRaf=requestAnimationFrame(axmStep);",
+   "with": "  if(axmQ.length) axmKick();",
+   "note": "s93: carrier queue also advances on a timer when animation frames are paused"
+  },
+  {
+   "op": "replace_global",
+   "find": "axmQ=rest.map(function(x){ return x[1]; }); if(axmQ.length&&!axmRaf) axmRaf=requestAnimationFrame(axmStep);",
+   "with": "axmQ=rest.map(function(x){ return x[1]; }); if(axmQ.length&&!axmRaf) axmKick();",
+   "note": "s93: carrier queue also advances on a timer when animation frames are paused"
+  },
+  {
+   "op": "replace_global",
+   "find": "function axmStep(){\n  axmRaf=0; if(!axmQ.length) return;",
+   "with": "/* next frame, or after 60 ms where frames are paused or throttled, whichever comes first */\nfunction axmKick(){\n  var done=false; axmRaf=1;\n  function go(){ if(done) return; done=true; axmStep(); }\n  requestAnimationFrame(go); setTimeout(go,60);\n}\nfunction axmStep(){\n  axmRaf=0; if(!axmQ.length) return;",
+   "note": "s93: carrier queue also advances on a timer when animation frames are paused"
+  }
+ ]
+}
