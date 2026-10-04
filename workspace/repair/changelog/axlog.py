@@ -107,6 +107,10 @@ LOG = [
    ('Respiratory Infection in a Child', ['Pediatric Upper Respiratory Infection', 'Pediatric Community-Acquired Pneumonia']),
    ('Lung Disease in the Newborn and Preterm Infant', ['Bronchopulmonary Dysplasia', 'Neonatal Respiratory Distress'])]),
  (79, D3o, 'Psychosis gains schizoaffective disorder (types, treatment, two new questions). Psychosis and Bipolar Disorder each get a look-alike comparison on a life-course axis: schizophrenia, delusional disorder, bipolar I with psychotic features, and schizotypal, schizoid and paranoid personality disorder.', []),
+ (80, '2026-10-04', 'Merge batch 8. Peutz-Jeghers cancer risk per GeneReviews (pancreas, breast, ovary, cervix; adenomas drive gut cancers); maple syrup urine disease needs protein-free feeds; vitamin teaching restores give B12 with folate when the cause is unclear, and vegan supplementation applies to an unfortified diet.',
+  [('Hereditary Polyposis Syndromes', ['Familial Adenomatous Polyposis', 'Peutz-Jeghers Syndrome']),
+   ('Jaundice in a Newborn', ['Neonatal Jaundice', 'The Sick Jaundiced Neonate with a Positive Screen']),
+   ('Vitamins and Nutritional Deficiencies', ['The Vegan Diet', 'Fat-Soluble Vitamin Deficiency and Toxicity', 'Water-Soluble Vitamin Deficiency'])]),
 ]
 if __name__ == '__main__':
     import json, sys
