@@ -32,6 +32,12 @@ SOURCES = {
     'sp-pd': 'StatPearls, Personality Disorder, NBK556058: "its onset can be traced back at least to adolescence or early adulthood"',
     'sp-ppd': 'StatPearls, Paranoid Personality Disorder, NBK606107: psychotic disorders "are characterized by a period of persistent '
               'psychotic symptoms (delusions and hallucinations), which are not present in PPD"',
+    'sci-icf': 'Taylor 2004 via ScienceDaily (sciencedaily.com/releases/2004/12/041206193849.htm): "having an imaginary companion is at least as common among school-age children as it is among preschoolers"',
+    'merck-ptsd': 'Merck Manual Professional, PTSD: "PTSD can develop months or even years after the trauma without preceding problems being obvious"',
+    'merck-asd': 'Merck Manual Professional, Acute stress disorder: "\u2265 9 of the following symptoms from any of the 5 categories" ... "for a period of 3 days up to 1 month"',
+    'sp-sza': 'StatPearls, Schizoaffective Disorder, NBK541012: "An uninterrupted duration of illness during which there is a major mood episode (manic or depressive) in addition to criterion A for schizophrenia"',
+    'merck-spd': 'Merck Manual Professional, Schizotypal PD: "unusual perceptional experiences (eg, hearing a voice whispering their name)"',
+    'merck-bpd': 'Merck Manual Professional, Borderline PD: "psychotic-like symptoms (eg, hallucinations, ideas of reference) may be triggered by extreme stress" ... "temporary and usually not severe enough to be considered a separate disorder"',
     'dsm-asd': 'DSM-5 autism criteria via iacc.hhs.gov: A "Persistent deficits in social communication and social interaction"; '
                'B "Restricted, repetitive patterns of behavior, interests, or activities"; C "present in the early developmental period"',
 }
@@ -41,7 +47,7 @@ ROWS = {
     'schizophrenia': dict(
         name='Schizophrenia', window='6 months or more in all',
         lines=['Onset late teens to 20s, often after a prodrome',
-               '2 or more: delusions, voices, disorganization, negative symptoms',
+               '2 or more, at least 1 of delusions, voices or disorganized speech',
                'Functioning falls and stays below baseline'],
         course='chronic', segs=[('pro', 30, 38), ('act', 38, 46), ('res', 46, 100)],
         src=['page:psychosis-duration', 'uw-sz'], status='ready'),
@@ -61,12 +67,12 @@ ROWS = {
         src=['page:psychosis-duration', 'uw-bpd'], status='ready'),
     'schizoaffective': dict(
         name='Schizoaffective disorder', window='Psychosis 2 weeks or more without mood',
-        lines=['Recurrent major mood episodes with Criterion A',
+        lines=['A major mood episode concurrent with Criterion A',
                'Delusions or voices 2 weeks or more with no mood episode',
                'Mood episodes fill most of the illness'],
-        course='chronic', segs=[('lop', 34, 46), ('act', 46, 50), ('lop', 50, 64), ('act', 64, 68), ('lop', 68, 84),
+        course='chronic', segs=[('lop', 40, 50), ('act', 50, 54), ('lop', 54, 66), ('act', 66, 70), ('lop', 70, 84),
                                 ('act', 84, 88), ('lop', 88, 100)],
-        src=['page:psychosis-duration', 'uw-sza'], status='ready'),
+        src=['page:psychosis-duration', 'uw-sza', 'sp-sza'], status='ready'),
     'delusional': dict(
         name='Delusional disorder', window='1 month or more',
         lines=['Often begins around 40',
@@ -83,7 +89,7 @@ ROWS = {
         course='episodic', segs=[('lo', 39, 46), ('lop', 61, 68), ('lo', 81, 88)],
         src=['page:psychosis-duration', 'page:bipolar-mania', 'uw-sza'], status='ready'),
     'bipolar-psychotic': dict(
-        name='Bipolar I disorder with psychotic features', window='Manic episodes 1 week or more',
+        name='Bipolar I disorder with psychotic features', window='Mania 1 week or more, or any length if hospitalized',
         lines=['Discrete manic episodes; depression common',
                'Elated or irritable mood, less sleep, pressured speech',
                'Psychosis only inside a mood episode'],
@@ -108,46 +114,46 @@ ROWS = {
         name='Schizotypal personality disorder', window='Lifelong, from adolescence or early adulthood',
         lines=['Odd beliefs, magical thinking, eccentric dress and speech',
                'Few close relationships; paranoid ideas common',
-               'Beliefs short of delusions; no frank hallucinations'],
+               'Odd perceptions short of frank psychosis, not persistent'],
         course='lifelong', segs=[('odd', 24, 100)],
-        src=['sp-pd', 'uw-spd'], status='ready'),
+        src=['sp-pd', 'uw-spd', 'merck-spd'], status='ready'),
     'borderline-pd': dict(
-        name='Borderline personality disorder', window='Stress psychosis lasts minutes to hours',
+        name='Borderline personality disorder', window='Stress psychosis is brief and transient',
         lines=['Unstable relationships and mood; impulsivity, self-harm',
                'Paranoia or voices under stress',
-               'Clears within hours, under 24'],
+               'Temporary; usually short of a separate disorder'],
         course='lifelong', segs=[('trait', 24, 100)], marks=[44, 66],
-        src=['sp-pd', 'uw-spd', 'uw-bpd'], status='ready'),
+        src=['sp-pd', 'uw-spd', 'uw-bpd', 'merck-bpd'], status='ready'),
     # ---------------- developmental and normal
     'autism': dict(
         name='Autism spectrum disorder', window='From the early developmental period',
         lines=['Persistent deficits in social communication',
                'Restricted, repetitive behaviors or interests',
-               'No hallucinations; no decline from baseline'],
+               'No hallucinations; any skill loss is in early childhood'],
         course='childhood', segs=[('dev', 0, 100)],
         src=['dsm-asd', 'uw-eos'], status='ready'),
     'imaginary-friend': dict(
-        name='Imaginary friend (normal)', window='Usually fades around age 6',
+        name='Imaginary friend (normal)', window='Common in preschool and school age',
         lines=['A companion in early childhood',
                'No withdrawal and no fall in function',
-               'A named voice with decline in a teen is a hallucination'],
-        course='childhood', segs=[('norm', 0, 10)],
-        src=['uw-eos'], status='ready'),
+               'A voice with decline in a teen suggests a hallucination'],
+        course='childhood', segs=[('norm', 0, 18)],
+        src=['uw-eos', 'sci-icf'], status='ready'),
     # ---------------- trauma
     'acute-stress': dict(
         name='Acute stress disorder', window='3 days to 1 month after a trauma',
         lines=['Follows a traumatic event',
-               'Intrusions, avoidance, dissociation, arousal',
-               'Bizarre psychosis is not typical'],
+               '9 or more: intrusion, negative mood, dissociation, avoidance, arousal',
+               'Psychosis is not part of the criteria'],
         course='single', segs=[('stress', 50, 52)],
-        src=['uw-bpd'], status='ready'),
+        src=['uw-bpd', 'merck-asd'], status='ready'),
     'ptsd': dict(
-        name='Posttraumatic stress disorder', window='Over 1 month after a trauma',
+        name='Posttraumatic stress disorder', window='Symptoms last over 1 month; onset can be delayed',
         lines=['Follows a traumatic event',
                'Intrusions, avoidance, negative mood, arousal',
                'Lasts over a month; psychosis is not typical'],
         course='single', segs=[('stress', 50, 62)],
-        src=['uw-bpd'], status='ready'),
+        src=['uw-bpd', 'merck-ptsd'], status='ready'),
     # ---------------- secondary
     'substance-psychosis': dict(
         name='Substance-induced psychotic disorder', window='During or soon after use',
@@ -161,7 +167,7 @@ ROWS = {
         lines=['A drug or illness as the cause',
                'Psychosis with a clouded, fluctuating sensorium',
                'Attention fails over hours to days'],
-        course='single', segs=[('flux', 70, 72)],
+        course='single', segs=[('flux', 90, 92)],
         src=['page:delirium', 'page:psychosis-duration'], status='ready'),
     # ---------------- waiting on a source opened the day they are authored
     'ocd-poor-insight': dict(name='Obsessive-compulsive disorder, poor insight', status='needs_source'),

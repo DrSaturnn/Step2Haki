@@ -1,0 +1,46 @@
+{
+ "edits": [
+  {
+   "op": "insert_after",
+   "brief": "psychosis-duration",
+   "anchor": "<p>Psychosis only during mood episodes is a mood disorder with psychotic features.</p>",
+   "html": "\n<p>Criterion A with a major mood episode, plus delusions or hallucinations 2 weeks or more without one, and mood episodes for most of the illness, is schizoaffective disorder.</p>"
+  },
+  {
+   "op": "insert_before",
+   "brief": "psychosis-duration",
+   "anchor": "<h5 class=\"tsec\" id=\"pd-mx\">",
+   "html": "<div class=\"crit\"><span class=\"lbl\">Schizoaffective disorder types</span> <b>Bipolar type</b> &ndash; a manic episode is part of the illness; major depressive episodes may also occur &middot; <b>Depressive type</b> &ndash; major depressive episodes only &middot; <b>Either type</b> &ndash; a depressive episode must include depressed mood; anhedonia alone does not count, since it is a common negative symptom of schizophrenia</div>\n"
+  },
+  {
+   "op": "replace",
+   "brief": "psychosis-duration",
+   "find": "<b>Delusional disorder</b> &ndash; antipsychotic plus psychotherapy</div>",
+   "with": "<b>Delusional disorder</b> &ndash; antipsychotic plus psychotherapy &middot; <b>Schizoaffective disorder</b> &ndash; a second-generation antipsychotic; for bipolar type, a mood stabilizer (lithium or valproate) may be added; for depressive type, an SSRI (selective serotonin reuptake inhibitor) may be added for persistent depressive symptoms</div>"
+  },
+  {
+   "op": "add_item",
+   "brief": "psychosis-duration",
+   "type": "dx",
+   "src": "authored",
+   "stem": "<span class=\"sl\">35-year-old man with 5 years of recurring major depressive episodes</span>\n<span class=\"si\">each episode brings voices and persecutory beliefs</span>\n<span class=\"si\">voices persisted 3 weeks after his mood recovered</span>\n<span class=\"si\">depressed for most of those 5 years; never manic</span>\n<span class=\"sd\">Afebrile &middot; urine toxicology negative</span>",
+   "answer": "Schizoaffective disorder, depressive type",
+   "companion": "Criterion A with major depressive episodes, voices 2 weeks or more without one, and depression for most of the illness; never manic, so depressive type",
+   "d1": "Schizophrenia",
+   "d2": "Schizoaffective disorder, bipolar type",
+   "lead_in": "Which of the following is the most likely diagnosis?"
+  },
+  {
+   "op": "add_item",
+   "brief": "psychosis-duration",
+   "type": "next",
+   "src": "authored",
+   "stem": "<span class=\"sl\">41-year-old woman newly diagnosed with schizoaffective disorder, depressive type</span>\n<span class=\"si\">hears voices and has felt hopeless for 2 months; denies suicidal ideation</span>\n<span class=\"si\">no history of manic episodes</span>\n<span class=\"sd\">BP 118/76 mm Hg &middot; urine toxicology negative</span>",
+   "answer": "Second-generation antipsychotic plus an SSRI",
+   "companion": "depressive type: an antipsychotic treats the psychosis, and an SSRI may be added for the depression; a mood stabilizer such as lithium is for bipolar type",
+   "d1": "Lithium plus a second-generation antipsychotic",
+   "d2": "An SSRI alone",
+   "lead_in": "Which of the following is the most appropriate pharmacotherapy?"
+  }
+ ]
+}
