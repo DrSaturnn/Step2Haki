@@ -122,6 +122,7 @@ LOG = [
  (86, '2026-10-04', 'Diagnostic workup paths are easier to read: findings are in normal sentence case at reading size instead of small gray capitals, test names use the same clean font as the text, and on phones each finding sits above its result.', []),
  (87, '2026-10-04', 'One font everywhere: titles, table captions, ladder rungs and section headings now use the same clean sans font as the text instead of the old serif.', []),
  (88, '2026-10-04', 'Blueprint panel cleaned up: four columns (exam share, share here, questions, briefs) that line up under their headings on every screen size.', []),
+ (89, '2026-10-04', 'Blueprint panel: the "Share here" column is now "Bank share", the part of this shelf\'s question bank in each row, next to the exam\'s published share.', []),
 ]
 if __name__ == '__main__':
     import json, sys

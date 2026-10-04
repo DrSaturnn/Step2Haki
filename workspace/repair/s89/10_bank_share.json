@@ -1,0 +1,40 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "Exam share is the published range; share here is this shelf’s questions in that row.",
+   "with": "Exam share is the published range; bank share is the part of this shelf’s question bank in that row.",
+   "note": "note wording"
+  },
+  {
+   "op": "replace_global",
+   "find": "bpHead(['System',O.share,'Share here','Questions','Briefs'])",
+   "with": "bpHead(['System',O.share,'Bank share','Questions','Briefs'])",
+   "note": "Share here -> Bank share"
+  },
+  {
+   "op": "replace_global",
+   "find": "['Share here',share(x.q)],['Questions',x.q]",
+   "with": "['Bank share',share(x.q)],['Questions',x.q]",
+   "note": "Share here -> Bank share"
+  },
+  {
+   "op": "replace_global",
+   "find": "bpHead(['Task',O.share,'Share here','Questions'])",
+   "with": "bpHead(['Task',O.share,'Bank share','Questions'])",
+   "note": "Share here -> Bank share"
+  },
+  {
+   "op": "replace_global",
+   "find": "['Share here',x.t.types?share(x.q)",
+   "with": "['Bank share',x.t.types?share(x.q)",
+   "note": "Share here -> Bank share"
+  },
+  {
+   "op": "replace_global",
+   "find": "['Share here',share(tother[k])]",
+   "with": "['Bank share',share(tother[k])]",
+   "note": "Share here -> Bank share"
+  }
+ ]
+}
