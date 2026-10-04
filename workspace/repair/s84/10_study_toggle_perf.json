@@ -1,0 +1,22 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "#rvpanel[hidden]{display:none!important}",
+   "with": "/* s84: off-screen briefs skip style and layout (html.cv, set by script after load), so toggling study mode\n   restyles only what is on screen; it was a whole-page recalculation of about 120,000 elements, felt as a freeze */\nhtml.cv .brief{content-visibility:auto;contain-intrinsic-size:auto 7000px}\n@media print{html.cv .brief{content-visibility:visible}}\n#rvpanel[hidden]{display:none!important}",
+   "note": "content-visibility on briefs (study-mode toggle freeze)"
+  },
+  {
+   "op": "replace_global",
+   "find": "window.__axMaskObserver=new MutationObserver(syncMaskRegions);",
+   "with": "window.__axMaskObserver=new MutationObserver(function(){\n      /* s84: only when study mode itself flips, not on every body class change */\n      var s=document.body.classList.contains('study');\n      if(s===window.__axLastStudy) return; window.__axLastStudy=s; syncMaskRegions();\n    });\n    window.__axLastStudy=document.body.classList.contains('study');",
+   "note": "mask sync only on study change"
+  },
+  {
+   "op": "replace_global",
+   "find": "</body>",
+   "with": "<script>\n/* s84: render only the briefs near the screen (content-visibility). Each brief keeps its measured height as a\n   placeholder so jumps land where they did before; a jump is re-checked once scrolling stops, in case a brief\n   above it changed height on the way. Width changes re-measure. */\n(function(){\n\"use strict\";\nvar root=document.documentElement;\nif(!('contentVisibility' in root.style)) return;\nfunction measure(){\n  root.classList.remove('cv');\n  Array.prototype.forEach.call(document.querySelectorAll('.brief'),function(b){\n    var h=b.offsetHeight; if(h>0) b.style.containIntrinsicSize='auto '+h+'px';\n  });\n  root.classList.add('cv');\n}\nfunction target(){\n  var id=''; try{ id=decodeURIComponent((location.hash||'').slice(1)); }catch(e){ id=(location.hash||'').slice(1); }\n  return id ? document.getElementById(id) : null;\n}\nvar timer=null;\nfunction settle(){\n  clearInterval(timer);\n  var el=target(); if(!el) return;\n  var last=-1, n=0;\n  timer=setInterval(function(){\n    var y=window.pageYOffset||0;\n    if(y===last){\n      clearInterval(timer);\n      if(el.offsetParent===null) return;\n      var top=el.getBoundingClientRect().top;\n      if(top<-4 || top>60) el.scrollIntoView({block:'start'});\n    }\n    last=y; if(++n>40) clearInterval(timer);\n  },120);\n}\nfunction start(){ requestAnimationFrame(function(){ measure(); }); }\nif(document.readyState==='complete') start(); else window.addEventListener('load',start);\nwindow.addEventListener('hashchange',function(){ setTimeout(settle,30); });\nvar w=window.innerWidth, rt=null;\nwindow.addEventListener('resize',function(){\n  if(window.innerWidth===w) return; w=window.innerWidth;\n  clearTimeout(rt); rt=setTimeout(measure,400);\n});\n})();\n</script>\n</body>",
+   "note": "measure brief heights, enable content-visibility, settle hash jumps"
+  }
+ ]
+}
