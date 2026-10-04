@@ -1,0 +1,364 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "\n/* ============ FLAT THEME ============ */\nbody.flat{\n  --e1:0 0 0 1px rgba(24,28,30,.17); --e2:0 0 0 1px rgba(24,28,30,.15);\n  --e3:0 0 0 1px rgba(0,0,0,.55); --ec:0 0 0 1px rgba(24,28,30,.17);\n  --inner:0 0 0 1px rgba(24,28,30,.13); --inner-2:0 0 0 1px rgba(24,28,30,.12);\n  --lip:none; background:var(--canvas-a);\n}",
+   "with": "\n/* ============ FLAT THEME ============ */\nbody.flat{background:var(--canvas-a)}\n.axm-flat{--e1:0 0 0 1px rgba(24,28,30,.17); --e2:0 0 0 1px rgba(24,28,30,.15);\n  --e3:0 0 0 1px rgba(0,0,0,.55); --ec:0 0 0 1px rgba(24,28,30,.17);\n  --inner:0 0 0 1px rgba(24,28,30,.13); --inner-2:0 0 0 1px rgba(24,28,30,.12);\n  --lip:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .brief,body.flat .tw,body.flat .mcq,body.flat .sectcard,body.flat .strat{background:#FBFBFB}",
+   "with": "\nbody .axm-flat .brief, body .brief.axm-flat,body .axm-flat .tw, body .tw.axm-flat,body .axm-flat .mcq, body .mcq.axm-flat,body .axm-flat .sectcard, body .sectcard.axm-flat,body .axm-flat .strat, body .strat.axm-flat{background:#FBFBFB}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .dp,body.flat .pearls,body.flat .danger,body.flat .rule,body.flat .crit,body.flat .vignette{background-image:none}",
+   "with": "\nbody .axm-flat .dp, body .dp.axm-flat,body .axm-flat .pearls, body .pearls.axm-flat,body .axm-flat .danger, body .danger.axm-flat,body .axm-flat .rule, body .rule.axm-flat,body .axm-flat .crit, body .crit.axm-flat,body .axm-flat .vignette, body .vignette.axm-flat{background-image:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .dp{background:var(--accent-bg)}",
+   "with": "\nbody .axm-flat .dp, body .dp.axm-flat{background:var(--accent-bg)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": " body.flat .pearls{background:var(--confirm-bg)}",
+   "with": " body .axm-flat .pearls, body .pearls.axm-flat{background:var(--confirm-bg)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .danger{background:var(--caution-bg)}",
+   "with": "\nbody .axm-flat .danger, body .danger.axm-flat{background:var(--caution-bg)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": " body.flat .rule{background:var(--principle-bg)}",
+   "with": " body .axm-flat .rule, body .rule.axm-flat{background:var(--principle-bg)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .crit{background:var(--criteria-bg)}",
+   "with": "\nbody .axm-flat .crit, body .crit.axm-flat{background:var(--criteria-bg)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .mcq button{background:var(--recess);background-image:none}",
+   "with": "\nbody .axm-flat .mcq button, body .mcq.axm-flat button{background:var(--recess);background-image:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .mcq button .k{background:#FBFBFB;box-shadow:0 0 0 1px rgba(24,28,30,.10)}",
+   "with": "\nbody .axm-flat .mcq button .k, body .mcq.axm-flat button .k{background:#FBFBFB;box-shadow:0 0 0 1px rgba(24,28,30,.10)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .chain .node{background:#FBFBFB;background-image:none;box-shadow:0 0 0 1px rgba(24,40,36,.13)}",
+   "with": "\nbody .axm-flat .chain .node, body .chain.axm-flat .node{background:#FBFBFB;background-image:none;box-shadow:0 0 0 1px rgba(24,40,36,.13)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .pill,body.flat .tag{background-image:none}",
+   "with": "\nbody .axm-flat .pill, body .pill.axm-flat,body .axm-flat .tag, body .tag.axm-flat{background-image:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat #nav{background:#1B1B22}",
+   "with": "\nbody .axm-flat #nav, body #nav.axm-flat{background:#1B1B22}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .bsband{background:var(--board-bg);background-image:none}",
+   "with": "\nbody .axm-flat .bsband, body .bsband.axm-flat{background:var(--board-bg);background-image:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .masthead .meta{background:#FBFBFB;background-image:none}",
+   "with": "\nbody .axm-flat .masthead .meta, body .masthead.axm-flat .meta{background:#FBFBFB;background-image:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .mcq .why{background:var(--confirm-bg);background-image:none}",
+   "with": "\nbody .axm-flat .mcq .why, body .mcq.axm-flat .why{background:var(--confirm-bg);background-image:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .mcq .rv{background:#FBFBFB;background-image:none}",
+   "with": "\nbody .axm-flat .mcq .rv, body .mcq.axm-flat .rv{background:#FBFBFB;background-image:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .mcq button.right{background:var(--confirm-bg)}",
+   "with": "\nbody .axm-flat .mcq button.right, body .mcq.axm-flat button.right{background:var(--confirm-bg)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .mcq button.wrong{background:var(--caution-bg)}",
+   "with": "\nbody .axm-flat .mcq button.wrong, body .mcq.axm-flat button.wrong{background:var(--caution-bg)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat #mbar{background:#FBFBFB;background-image:none}",
+   "with": "\nbody .axm-flat #mbar, body #mbar.axm-flat{background:#FBFBFB;background-image:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .tw tbody tr{background-image:none}",
+   "with": "\nbody .axm-flat .tw tbody tr, body .tw.axm-flat tbody tr{background-image:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": " body.flat .tw tbody tr{background:#FBFBFB}",
+   "with": " body .axm-flat .tw tbody tr, body .tw.axm-flat tbody tr{background:#FBFBFB}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.study #modes .study .track,body.flat #modes .flatt .track{background:var(--accent)}",
+   "with": "\nbody .axm-study #modes .study .track, body #modes.axm-study .study .track,body .axm-flat #modes .flatt .track, body #modes.axm-flat .flatt .track{background:var(--accent)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.study #modes .study .knob,body.flat #modes .flatt .knob{transform:translateX(15px)}",
+   "with": "\nbody .axm-study #modes .study .knob, body #modes.axm-study .study .knob,body .axm-flat #modes .flatt .knob, body #modes.axm-flat .flatt .knob{transform:translateX(15px)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .vignette{background:var(--vign-bg)}",
+   "with": "\nbody .axm-flat .vignette, body .vignette.axm-flat{background:var(--vign-bg)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .figcap,body.flat .figbody{box-shadow:none;border:1px solid var(--hair)}",
+   "with": "\nbody .axm-flat .figcap, body .figcap.axm-flat,body .axm-flat .figbody, body .figbody.axm-flat{box-shadow:none;border:1px solid var(--hair)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .scalepeek{background:#FBFBFB;box-shadow:0 0 0 1px rgba(24,28,30,.13)}",
+   "with": "\nbody .axm-flat .scalepeek, body .scalepeek.axm-flat{background:#FBFBFB;box-shadow:0 0 0 1px rgba(24,28,30,.13)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .fmdrop > summary{background:#FBFBFB;background-image:none}",
+   "with": "\nbody .axm-flat .fmdrop > summary, body .fmdrop.axm-flat > summary{background:#FBFBFB;background-image:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.study .mask{cursor:pointer}",
+   "with": "\nbody .axm-study .mask, body .mask.axm-study{cursor:pointer}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.study .mask-region{filter:blur(5px) saturate(.55);user-select:none;opacity:.86}",
+   "with": "\nbody .axm-study .mask-region, body .mask-region.axm-study{filter:blur(5px) saturate(.55);user-select:none;opacity:.86}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.study .mask.shown .mask-region{filter:none;opacity:1}",
+   "with": "\nbody .axm-study .mask.shown .mask-region, body .mask.shown.axm-study .mask-region{filter:none;opacity:1}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.study .mask-toggle{display:block;position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}",
+   "with": "\nbody .axm-study .mask-toggle, body .mask-toggle.axm-study{display:block;position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.study .mask:focus-within{outline:2px solid var(--accent);outline-offset:3px}",
+   "with": "\nbody .axm-study .mask:focus-within, body .mask:focus-within.axm-study{outline:2px solid var(--accent);outline-offset:3px}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.study dd .mask,body.study td .mask,body.study li .mask{display:inline-block}",
+   "with": "\nbody .axm-study dd .mask, body dd.axm-study .mask,body .axm-study td .mask, body td.axm-study .mask,body .axm-study li .mask, body li.axm-study .mask{display:inline-block}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .rrow{background:#FBFBFB;background-image:none}",
+   "with": "\nbody .axm-flat .rrow, body .rrow.axm-flat{background:#FBFBFB;background-image:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .bktools .bkmode,body.flat .bktools .bkall{background:var(--recess);background-image:none}",
+   "with": "\nbody .axm-flat .bktools .bkmode, body .bktools.axm-flat .bkmode,body .axm-flat .bktools .bkall, body .bktools.axm-flat .bkall{background:var(--recess);background-image:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .bktools .bkmode.on{background:#26262F;color:#fff}",
+   "with": "\nbody .axm-flat .bktools .bkmode.on, body .bktools.axm-flat .bkmode.on{background:#26262F;color:#fff}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\n  body.study .mask,body.study .mask-region{filter:none!important;opacity:1!important}",
+   "with": "\n  body .axm-study .mask, body .mask.axm-study,body .axm-study .mask-region, body .mask-region.axm-study{filter:none!important;opacity:1!important}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\n  /* active Study state uses the same ink as the section tabs, not an accent */\n  body.study #mbar button[data-act=\"study\"]{\n    color:#fff;background:linear-gradient(160deg,#26262F 0%,#141419 60%,#0D0D12 100%);\n  }",
+   "with": "\n  /* active Study state uses the same ink as the section tabs, not an accent */\n  body .axm-study #mbar button[data-act=\"study\"], body #mbar.axm-study button[data-act=\"study\"]{\n    color:#fff;background:linear-gradient(160deg,#26262F 0%,#141419 60%,#0D0D12 100%);\n  }",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .rvmast .rvbtn{box-shadow:inset 0 0 0 1px rgba(154,147,232,.3)}",
+   "with": "\nbody .axm-flat .rvmast .rvbtn, body .rvmast.axm-flat .rvbtn{box-shadow:inset 0 0 0 1px rgba(154,147,232,.3)}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat #rvpanel{background:#FBFBFB}",
+   "with": "\nbody .axm-flat #rvpanel, body #rvpanel.axm-flat{background:#FBFBFB}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat #rvbar{background:#FBFBFB}",
+   "with": "\nbody .axm-flat #rvbar, body #rvbar.axm-flat{background:#FBFBFB}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\n/* study mode must never mask the control that ends the review */\nbody.study .rvmark .q,body.study #rvbar{opacity:1!important}",
+   "with": "\n/* study mode must never mask the control that ends the review */\nbody .axm-study .rvmark .q, body .rvmark.axm-study .q,body .axm-study #rvbar, body #rvbar.axm-study{opacity:1!important}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.flat .aqband{background:var(--aquifer-bg);background-image:none}",
+   "with": "\nbody .axm-flat .aqband, body .aqband.axm-flat{background:var(--aquifer-bg);background-image:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "\nbody.study #sxres .s.sxm{filter:blur(4px);user-select:none}",
+   "with": "\nbody .axm-study #sxres .s.sxm, body #sxres.axm-study .s.sxm{filter:blur(4px);user-select:none}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "      if(typeof syncMaskRegions==='function') syncMaskRegions();\n    });\n    window.__axModeObserver.observe(b,{attributes:true,attributeFilter:['class']});\n  }",
+   "with": "      axmSync(false);\n    });\n    window.__axModeObserver.observe(b,{attributes:true,attributeFilter:['class']});\n  }\n  axmWatch();",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "/* ---------- 0a. shelf selector --------------------------------------",
+   "with": "/* ---------- 0b. mode carriers (s92) ----------------------------------\n   Flat and study styling hangs on per-region classes (axm-flat, axm-study),\n   not on body. A switch restyles the regions on or near the screen at once\n   and the rest four per frame, nearest first. A body-wide class change made\n   the browser restyle every brief at once (about 45,000 elements for flat),\n   which froze Safari and slower machines in both directions.            */\nvar axmQ=[], axmRaf=0, axmLast='';\nfunction axmCarriers(){\n  var out=[];\n  (function walk(el){\n    for(var c=el.firstElementChild;c;c=c.nextElementSibling){\n      if(c.tagName==='SCRIPT'||c.tagName==='STYLE') continue;\n      if(c.classList.contains('brief')||!c.querySelector('.brief')) out.push(c); else walk(c);\n    }\n  })(document.body);\n  return out;\n}\nfunction axmApply(c){\n  var b=document.body, study=false;\n  ['flat','study'].forEach(function(m){\n    var on=b.classList.contains(m);\n    if(c.classList.contains('axm-'+m)!==on){ c.classList.toggle('axm-'+m,on); if(m==='study') study=true; }\n  });\n  if(study) syncMaskRegions(c);\n}\nfunction axmDist(c){\n  var r=c.getBoundingClientRect(), h=window.innerHeight||800;\n  if(!r.width&&!r.height) return 1e9;\n  return r.bottom<0?-r.bottom:(r.top>h?r.top-h:0);\n}\nfunction axmStep(){\n  axmRaf=0; if(!axmQ.length) return;\n  axmQ.splice(0,4).forEach(axmApply);\n  if(axmQ.length) axmRaf=requestAnimationFrame(axmStep);\n}\nfunction axmSync(now){\n  var b=document.body, key=(b.classList.contains('flat')?'f':'')+(b.classList.contains('study')?'s':'');\n  if(!now&&key===axmLast) return; axmLast=key;\n  /* distances are read once, before any class changes, so the queue never forces a layout */\n  var all=axmCarriers(), h=window.innerHeight||800, near=[], rest=[];\n  all.forEach(function(c){ var d=now?0:axmDist(c); if(d<h) near.push(c); else rest.push([d,c]); });\n  near.forEach(axmApply);\n  rest.sort(function(x,y){ return x[0]-y[0]; });\n  axmQ=rest.map(function(x){ return x[1]; }); if(axmQ.length&&!axmRaf) axmRaf=requestAnimationFrame(axmStep);\n}\nfunction axmWatch(){\n  axmSync(true);\n  if(window.__axmChildObserver) return;\n  window.__axmChildObserver=new MutationObserver(function(list){\n    list.forEach(function(r){ Array.prototype.forEach.call(r.addedNodes,function(n){ if(n.nodeType===1&&n.tagName!=='SCRIPT'&&n.tagName!=='STYLE'&&(n.classList.contains('brief')||!n.querySelector('.brief'))) axmApply(n); }); });\n  });\n  window.__axmChildObserver.observe(document.body,{childList:true});\n}\n\n/* ---------- 0a. shelf selector --------------------------------------",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "function syncMaskRegions(){\n  var study=document.body.classList.contains('study');\n  document.querySelectorAll('.mask[data-disclosure]').forEach(function(mask){\n    var btn=mask.querySelector('.mask-toggle'), region=mask.querySelector('.mask-region');\n    if(!btn||!region) return;\n    var open=!study || mask.dataset.revealed==='1';\n    region.hidden=false;\n    region.setAttribute('aria-hidden',open?'false':'true');\n    region.inert=!open;\n    mask.classList.toggle('shown',mask.dataset.revealed==='1');\n    btn.setAttribute('aria-expanded',open?'true':'false');\n    btn.textContent=open?'Hide answer':'Reveal answer';\n  });\n}",
+   "with": "function syncMaskRegions(root){\n  /* s92: scoped to one region when given, and writes only what changed */\n  var study=document.body.classList.contains('study');\n  (root||document).querySelectorAll('.mask[data-disclosure]').forEach(function(mask){\n    var btn=mask.querySelector('.mask-toggle'), region=mask.querySelector('.mask-region');\n    if(!btn||!region) return;\n    var open=!study || mask.dataset.revealed==='1', shown=mask.dataset.revealed==='1';\n    if(region.hidden) region.hidden=false;\n    var ah=open?'false':'true'; if(region.getAttribute('aria-hidden')!==ah) region.setAttribute('aria-hidden',ah);\n    if(region.inert!==!open) region.inert=!open;\n    if(mask.classList.contains('shown')!==shown) mask.classList.toggle('shown',shown);\n    var ae=open?'true':'false'; if(btn.getAttribute('aria-expanded')!==ae) btn.setAttribute('aria-expanded',ae);\n    var tx=open?'Hide answer':'Reveal answer'; if(btn.textContent!==tx) btn.textContent=tx;\n  });\n}",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "mask.dataset.revealed=mask.dataset.revealed==='1'?'0':'1'; syncMaskRegions();",
+   "with": "mask.dataset.revealed=mask.dataset.revealed==='1'?'0':'1'; syncMaskRegions(mask.parentNode);",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "      if(s===window.__axLastStudy) return; window.__axLastStudy=s; syncMaskRegions();",
+   "with": "      /* s92: the mode carriers (axmApply) now resync each region's masks as it switches */\n      if(s===window.__axLastStudy) return; window.__axLastStudy=s;",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "    b.style.display=on?'':'none';\n    b.classList.toggle('pinned',!!(!reviewSet&&b.id===pin&&!eligible));",
+   "with": "    if(b.style.display!==(on?'':'none')) b.style.display=on?'':'none';\n    b.classList.toggle('pinned',!!(!reviewSet&&b.id===pin&&!eligible));",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "    sw.style.display=(n||(total===0&&!sw.querySelector('h3.system .n')))?'':'none'; sw.dataset.count=n;",
+   "with": "    var swd=(n||(total===0&&!sw.querySelector('h3.system .n')))?'':'none'; if(sw.style.display!==swd) sw.style.display=swd; if(sw.dataset.count!==String(n)) sw.dataset.count=n;",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "    a.dataset.eligible=eligible?'1':'0';\n    a.style.display=eligible?'':'none';",
+   "with": "    if(a.dataset.eligible!==(eligible?'1':'0')) a.dataset.eligible=eligible?'1':'0';\n    if(a.style.display!==(eligible?'':'none')) a.style.display=eligible?'':'none';",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "function applyShelf(s){\n  shelf=s;",
+   "with": "/* s92: a filter switch (shelf, Board-style only) keeps the reader's place: the brief at the top of the\n   screen stays where it was, or, if it is filtered out, the next shown brief takes its spot. */\nvar placeMemo=null;\nfunction jump(dy){ if(dy) window.scrollBy({top:dy,left:0,behavior:'instant'}); }\nfunction keepPlace(fn){\n  var all=Array.prototype.slice.call(document.querySelectorAll('.brief')), anchor=null, top=0;\n  for(var i=0;i<all.length;i++){ if(all[i].style.display==='none') continue; var r=all[i].getBoundingClientRect(); if(r.bottom>0){ anchor=i; top=r.top; break; } }\n  /* switching back without scrolling in between returns to the brief you started from */\n  var memo=(placeMemo&&anchor!==null&&all[anchor].id===placeMemo.landed)?placeMemo:null;\n  fn();\n  placeMemo=null;\n  if(anchor===null||window.pageYOffset<1) return;\n  var back=memo&&document.getElementById(memo.id);\n  if(back&&back.style.display!=='none'){ jump(back.getBoundingClientRect().top-memo.top); return; }\n  for(var j=anchor;j<all.length;j++){\n    if(all[j].style.display!=='none'){\n      jump(all[j].getBoundingClientRect().top-(j===anchor?top:Math.max(top,0)));\n      placeMemo={id:(memo?memo.id:all[anchor].id),top:(memo?memo.top:top),landed:all[j].id};\n      return;\n    }\n  }\n}\nfunction applyShelf(s){\n  shelf=s;",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "    sync(); applyShelf(shelf);",
+   "with": "    sync(); keepPlace(function(){ applyShelf(shelf); });",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "    if(!b || b.disabled || shelfPending(b.dataset.shelf)) return;\n    applyShelf(b.dataset.shelf);",
+   "with": "    if(!b || b.disabled || shelfPending(b.dataset.shelf)) return;\n    keepPlace(function(){ applyShelf(b.dataset.shelf); });",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": "    if(shelfPending(sel.value)){ sel.value=shelf; return; }\n    applyShelf(sel.value);",
+   "with": "    if(shelfPending(sel.value)){ sel.value=shelf; return; }\n    keepPlace(function(){ applyShelf(sel.value); });",
+   "note": "s92: switches restyle on-screen regions first (flat/study carriers); filters keep the reader's place"
+  },
+  {
+   "op": "replace_global",
+   "find": ".mask-region{display:inline;transition:filter .22s ease}",
+   "with": ".mask-region{display:inline}\n/* s92: animate a reveal, not a study-mode switch */\n.mask.shown .mask-region{transition:filter .22s ease}",
+   "note": "s92: no transitions fire on a mode switch (they started thousands of animations at once in Safari)"
+  },
+  {
+   "op": "replace_global",
+   "find": ".mcq button{all:unset;cursor:pointer;background:linear-gradient(145deg,#E0E3E3 0%,#E9EBEB 48%,#F2F4F4 100%);border-radius:var(--r-row);padding:12px 14px;font-size:14.4px;display:flex;align-items:flex-start;gap:12px;box-shadow:var(--inner-2);transition:box-shadow .16s,background .16s",
+   "with": ".mcq button{all:unset;cursor:pointer;background:linear-gradient(145deg,#E0E3E3 0%,#E9EBEB 48%,#F2F4F4 100%);border-radius:var(--r-row);padding:12px 14px;font-size:14.4px;display:flex;align-items:flex-start;gap:12px;box-shadow:var(--inner-2);",
+   "note": "s92: no transitions fire on a mode switch (they started thousands of animations at once in Safari)"
+  },
+  {
+   "op": "replace_global",
+   "find": "/* ============ FLAT THEME ============ */\nbody.flat{background",
+   "with": "/* s92: answer buttons animate only under the pointer, so a theme switch starts no transitions */\n.mcq:hover button{transition:box-shadow .16s,background .16s}\n/* ============ FLAT THEME ============ */\nbody.flat{background",
+   "note": "s92: no transitions fire on a mode switch (they started thousands of animations at once in Safari)"
+  }
+ ]
+}

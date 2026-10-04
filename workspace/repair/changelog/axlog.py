@@ -131,6 +131,7 @@ LOG = [
   [('Childhood Vaccine Schedule and Contraindications', ['DTaP: Contraindication vs. Precaution', 'Vaccines at the Infant Visits']),
    ('Adolescent Vaccines', ['HPV Vaccination & Series Rules', 'Adolescent Vaccines']),
    ('Vaccines in Pregnancy', ['Vaccines in Pregnancy', 'Tdap in Pregnancy at 10 Weeks'])]),
+ (92, '2026-10-04', 'Switches no longer freeze the page, on or off. Flat theme and study mode now restyle the briefs on screen at once and the rest a few at a time in the background, instead of restyling every brief in one go; switching starts no animations. Board-style only and the shelf picker keep your place: the brief you were reading stays put, and switching back returns you to it.', []),
 ]
 if __name__ == '__main__':
     import json, sys

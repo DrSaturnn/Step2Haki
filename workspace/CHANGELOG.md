@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-04 s92: switches: flat and study restyle on-screen regions first; no transitions on mode switches; filters keep the reader's place
+
+```
+Page: 182 briefs, 2138 items -> 182 briefs, 2138 items
+Other page changes (nav, headers, scripts): +7005 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 182 briefs, 2138 items, 7 scripts, 36 checks, base HEAD | allowlisted 17 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 182 | bankwraps 182 | mcq 2138 (axCheck 2138, reveal-only 0) | malformed 0 | crit gridded 214/215 | vignette gridded 79/79 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.022%)
+```
+
 ## 2026-10-04 s91: merge batch 11: Childhood Vaccine Schedule and Contraindications, Adolescent Vaccines, Vaccines in Pregnancy
 
 ```
