@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-03 s75: version label reads v0.NNN (v0.075); change log entries follow
+
+```
+Page: 198 briefs, 2103 items -> 198 briefs, 2103 items
+Other page changes (nav, headers, scripts): +212 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 198 briefs, 2103 items, 6 scripts, 35 checks, base HEAD | allowlisted 25 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 198 | bankwraps 198 | mcq 2103 (axCheck 2103, reveal-only 0) | malformed 0 | crit gridded 196/197 | vignette gridded 104/104 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.025%)
+```
+
 ## 2026-10-03 s74: change log: the version label opens a log of every version and the merged briefs; versions show as vNN
 
 ```

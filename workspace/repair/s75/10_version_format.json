@@ -1,0 +1,22 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "var NUM=BUILD.replace(/^s0*/,''), VER=/^\\d+$/.test(NUM)?'v'+NUM:BUILD;",
+   "with": "function vfmt(n){ n=String(n); while(n.length<3) n='0'+n; return 'v0.'+n; }\nvar NUM=BUILD.replace(/^s0*/,''), VER=/^\\d+$/.test(NUM)?vfmt(NUM):BUILD;",
+   "note": "version shows as v0.NNN"
+  },
+  {
+   "op": "replace_global",
+   "find": "var v=el('div','axlog-v'+('v'+e.v===VER?' cur':'')), h=el('div','axlog-h');",
+   "with": "var v=el('div','axlog-v'+(vfmt(e.v)===VER?' cur':'')), h=el('div','axlog-h');",
+   "note": "log entries v0.NNN"
+  },
+  {
+   "op": "replace_global",
+   "find": "h.appendChild(el('b',null,'v'+e.v));",
+   "with": "h.appendChild(el('b',null,vfmt(e.v)));",
+   "note": "log entries v0.NNN"
+  }
+ ]
+}
