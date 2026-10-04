@@ -39,10 +39,10 @@ Rule 14 still applies: where a broader title promises content the brief does not
 | Jaundice in a Newborn (shipped s80) | Neonatal Jaundice (`neonatal-jaundice`); The Sick Jaundiced Neonate with a Positive Screen (`bs-galactosemia`) | 29 |
 | Vitamins and Nutritional Deficiencies (shipped s80) | Fat-Soluble Vitamin Deficiency and Toxicity (`bs-fat-soluble-vitamins`); Water-Soluble Vitamin Deficiency (`bs-water-soluble-vitamins`); The Vegan Diet (`vegan`) | 28 |
 | Pyelonephritis (shipped) | Pyelonephritis: Route & Disposition (`pyelo`); Pyelonephritis: Naming the Organism (`bs-pyelo-organism`) | 16 |
-| Urinary Tract Infection in a Child | Vesicoureteral Reflux (`vur`); Recurrent Urinary Infection in a Child (`peds-uti-recurrent`) | 23 |
+| Urinary Tract Infection in a Child (shipped s81) | Vesicoureteral Reflux (`vur`); Recurrent Urinary Infection in a Child (`peds-uti-recurrent`) | 23 |
 | Enuresis (shipped) | Nocturnal Enuresis (`enuresis`); Primary Monosymptomatic Enuresis: Management (`bs-enuresis`) | 15 |
-| Hematuria and Nephritic Syndrome | Hematuria (`hematuria`); Acute Nephritic Syndrome in a Child (`bs-nephritic`) | 16 |
-| Proteinuria and Nephrotic Syndrome in a Child | Nephrotic Syndrome in a Child (`nephrotic-child`); Incidental Proteinuria in a Well Child (`bs-isolated-proteinuria`) | 18 |
+| Hematuria and Nephritic Syndrome (shipped s81) | Hematuria (`hematuria`); Acute Nephritic Syndrome in a Child (`bs-nephritic`) | 16 |
+| Proteinuria and Nephrotic Syndrome in a Child (shipped s81) | Nephrotic Syndrome in a Child (`nephrotic-child`); Incidental Proteinuria in a Well Child (`bs-isolated-proteinuria`) | 18 |
 | Diabetes: Complications and Annual Care | Diabetes: the Annual Care Bundle (`bs-dm-bundle`); Diabetic Nephropathy Screening (`nephropathy`); Diabetic Foot Ulcer (`footulcer`) | 21 |
 | Thyroid Disease in an Adult | Thyroid Mimics & Discriminators (`thyroid`); Levothyroxine Titration (`levo`); Levothyroxine in Pregnancy (`preg-thyroid`) | 22 |
 | Hemolytic Anemia | Hereditary Spherocytosis (`bs-spherocytosis`); Drug-Induced Immune Hemolysis (`drug-hemolysis`) | 23 |
