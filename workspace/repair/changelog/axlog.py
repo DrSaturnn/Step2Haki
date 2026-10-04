@@ -119,6 +119,7 @@ LOG = [
  (83, '2026-10-04', 'Substance Intoxication and Withdrawal: benzodiazepines are first-line for moderate alcohol withdrawal, matching the AFP 2021 wording (one question updated).', []),
  (84, '2026-10-04', 'Study mode switches on and off about ten times faster: briefs far from the screen are no longer restyled on every switch, which had made the page freeze, especially on phones.', []),
  (85, '2026-10-04', 'The NBME blueprint panel now follows each clerkship: Psychiatry, Pediatrics and Family Medicine show their own subject exam outline (Medicine, Surgery, OB/GYN and Neurology are ready for when those shelves open), and Step 2 shows the USMLE Step 2 CK outline. On phones each row is a labeled card instead of an unlabeled column of numbers.', []),
+ (86, '2026-10-04', 'Diagnostic workup paths are easier to read: findings are in normal sentence case at reading size instead of small gray capitals, test names use the same clean font as the text, and on phones each finding sits above its result.', []),
 ]
 if __name__ == '__main__':
     import json, sys

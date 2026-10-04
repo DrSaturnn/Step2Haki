@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": ".lcp .wr2 b{font-size:10.5px;font-weight:700;letter-spacing:.06em;line-height:1.35;text-transform:uppercase;color:var(--muted);padding-top:3px}",
+   "with": ".lcp .wr2 b{font-size:10.5px;font-weight:700;letter-spacing:.06em;line-height:1.35;text-transform:uppercase;color:var(--muted);padding-top:3px}\n/* s86: legible workup (Jonathan 2026-10-04): findings in sentence case at reading size, sans test names,\n   and on phones each finding sits above its result instead of in a narrow column */\n.lcp .tn{font-family:var(--sans);font-size:16px;font-weight:700;letter-spacing:-.005em}\n.lcp .wr2 b{font-size:13.5px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--ink-2);line-height:1.4;padding-top:1px}\n@media (max-width:640px){\n  .lcp .wr2{grid-template-columns:1fr;gap:2px}\n  .lcp .wr2 b{padding-top:0}\n}",
+   "note": "workup path legibility"
+  }
+ ]
+}
