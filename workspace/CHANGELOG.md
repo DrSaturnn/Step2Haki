@@ -2,6 +2,25 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-04 s91: merge batch 11: Childhood Vaccine Schedule and Contraindications, Adolescent Vaccines, Vaccines in Pregnancy
+
+```
+Page: 185 briefs, 2138 items -> 182 briefs, 2138 items
+Briefs REMOVED (3): bs-tdap-preg, bs-infant-vax, bs-adolescent-vax
+Briefs changed (5):
+  - dtap (Childhood Vaccine Schedule and Contraindications): 7 items added (q_9b2deb3133603d01a654, q_e1f23b1f4fce0efa4085, q_36a8137da4e9355497d0, q_9f4072a5b46ea445aafd, q_83930a6f99d743704ce8, q_d7d9fcd51b14f9dbbe74, q_038db837dcf53578d20d); items edited (q_32119d652e6b24a49a91, q_d6dc8bc8efa78d897bd1, q_4cb03982b4a45c5e934f, q_2c84a1e38db0ded4c7f7); versions bumped (q_32119d652e6b24a49a91 v1->v2, q_d6dc8bc8efa78d897bd1 v1->v2, q_4cb03982b4a45c5e934f v1->v2, q_2c84a1e38db0ded4c7f7 v1->v2); attrs set (brief data-replaces; q_d6dc8bc8efa78d897bd1 data-lead-in; q_4cb03982b4a45c5e934f data-d2,data-d2-id,data-lead-in,data-src); ITEMS REMOVED (q_508361bc706951b68c5f, q_02f61a0424c7543ea384, q_683f156db2755f179257, q_b1c7e02c02c85f70b3d4, q_83b156a4fd375f838715); prose edited (+10482 chars)
+  - bs-anaphylaxis (Anaphylaxis): prose edited (+11 chars)
+  - preg-vax (Vaccines in Pregnancy): 7 items added (q_fc0251b35f1ce2112eb9, q_24ffcfeddd77cd468d16, q_070576c1f992b0104974, q_4ab0fde1abec30dbb16a, q_bb771342a0814c95724c, q_2f9bfdebfb13baa40342, q_08fe84f6140913632e14); items edited (q_c2ef7d11a25c5dc69059, q_309adc060a315308b914, q_326735aa039f5ebc8a92, q_a2777f4f85c45b88b11b, q_eed13df79898593cb06f, q_a2fbd920cdf25385905a, q_fcc9a1766e0355ac9f17, q_f022046703125fcba211, q_af93eb772ee45f158173, q_b630ac47964e5ca28a81, q_2b2db8c3daf65e2784b0, q_4c3c9e63ed4e55b0a236); versions bumped (q_c2ef7d11a25c5dc69059 v2->v3, q_309adc060a315308b914 v1->v2, q_326735aa039f5ebc8a92 v1->v2, q_a2777f4f85c45b88b11b v2->v3, q_eed13df79898593cb06f v1->v2, q_a2fbd920cdf25385905a v1->v2, q_fcc9a1766e0355ac9f17 v1->v2, q_f022046703125fcba211 v1->v2, q_af93eb772ee45f158173 v1->v2, q_b630ac47964e5ca28a81 v1->v2, q_2b2db8c3daf65e2784b0 v1->v2, q_4c3c9e63ed4e55b0a236 v1->v2); attrs set (brief data-replaces; q_c2ef7d11a25c5dc69059 data-lead-in,data-src; q_309adc060a315308b914 data-d2,data-d2-id,data-lead-in,data-src; q_326735aa039f5ebc8a92 data-lead-in,data-src; q_a2777f4f85c45b88b11b data-d1,data-d1-id,data-lead-in,data-src; q_eed13df79898593cb06f data-lead-in,data-src; q_a2fbd920cdf25385905a data-lead-in,data-src; q_fcc9a1766e0355ac9f17 data-d1,data-d1-id,data-lead-in,data-src; q_f022046703125fcba211 data-lead-in,data-src; q_af93eb772ee45f158173 data-lead-in,data-src; q_b630ac47964e5ca28a81 data-lead-in,data-src; q_2b2db8c3daf65e2784b0 data-lead-in,data-src; q_4c3c9e63ed4e55b0a236 data-d2,data-d2-id,data-lead-in,data-src); ITEMS REMOVED (q_984e043e22b45a58bc4d, q_20a5148448175ae08410, q_72513ee1f6ec5f1e8d41, q_f255f175943c5046bf30); prose edited (+8568 chars)
+  - hpv (Adolescent Vaccines): 3 items added (q_88f878d003d55c433414, q_a8b69f8cdab5b9c46e00, q_a0fac42fc87d867be78a); items edited (q_99716f748294537e8362, q_06ed8550a904513a8a75, q_ac882558c52258429c39, q_652ed33569095160abe8, q_af488338c472529ea6cd, q_36e128bc57c75af4aa35, q_41f27a0332c25170bed7, q_b8bb12655d3f5058984f, q_f9dce5a31a3754a580ff, q_77c24e874b005ec684cd, q_816abb5773d354059dc5, q_fcc597ce1eed524a82b8); versions bumped (q_99716f748294537e8362 v1->v2, q_06ed8550a904513a8a75 v1->v2, q_ac882558c52258429c39 v2->v3, q_652ed33569095160abe8 v1->v2, q_af488338c472529ea6cd v1->v2, q_36e128bc57c75af4aa35 v1->v2, q_41f27a0332c25170bed7 v1->v2, q_b8bb12655d3f5058984f v2->v3, q_f9dce5a31a3754a580ff v1->v2, q_77c24e874b005ec684cd v1->v2, q_816abb5773d354059dc5 v1->v2, q_fcc597ce1eed524a82b8 v1->v2); attrs set (brief data-replaces; q_99716f748294537e8362 data-lead-in,data-src; q_06ed8550a904513a8a75 data-lead-in,data-src; q_652ed33569095160abe8 data-lead-in,data-src; q_af488338c472529ea6cd data-lead-in; q_36e128bc57c75af4aa35 data-lead-in,data-src; q_41f27a0332c25170bed7 data-lead-in; q_b8bb12655d3f5058984f data-lead-in,data-src; q_f9dce5a31a3754a580ff data-d2,data-d2-id,data-lead-in; q_77c24e874b005ec684cd data-lead-in,data-src; q_816abb5773d354059dc5 data-lead-in; q_fcc597ce1eed524a82b8 data-lead-in); ITEMS REMOVED (q_b2982c8979ef5d9bab6d); prose edited (+11775 chars)
+  - bs-cervical-gate (Cervical Screening: the Age-21 Floor): prose edited (-15 chars)
+Other page changes (nav, headers, scripts): +996 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 182 briefs, 2138 items, 7 scripts, 36 checks, base HEAD | allowlisted 17 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 182 | bankwraps 182 | mcq 2138 (axCheck 2138, reveal-only 0) | malformed 0 | crit gridded 214/215 | vignette gridded 79/79 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.022%)
+```
+
 ## 2026-10-04 s90: merge batch 10: Diabetes Complications and Annual Care, Thyroid Disease in an Adult, Hemolytic Anemia
 
 ```

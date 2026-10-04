@@ -127,6 +127,10 @@ LOG = [
   [('Diabetes Complications and Annual Care', ['Diabetic Nephropathy Screening', 'Diabetes: the Annual Care Bundle', 'Diabetic Foot Ulcer']),
    ('Thyroid Disease in an Adult', ['Thyroid Disease in an Adult', 'Levothyroxine Titration', 'Levothyroxine in Pregnancy']),
    ('Hemolytic Anemia', ['Drug-Induced Immune Hemolysis', 'Hereditary Spherocytosis'])]),
+ (91, '2026-10-04', 'Merge batch 11. DTaP: fever of 40.5 °C or more, a hypotonic-hyporesponsive episode, a seizure within 3 days and crying for 3 hours or more after a dose are no longer precautions (CDC General Best Practice, Table 4-2), so two questions are rekeyed; DT replaces DTaP only after encephalopathy. Adolescent vaccines follow the posted CDC schedule while the January 2026 revision is stayed (two-dose HPV series before 15); MenACWY boosters every 5 years from age 7 while the risk remains; MenB for high-risk patients excludes HIV. In pregnancy: RSV vaccine at 32 to 36 weeks from September to January and not repeated in a later pregnancy; hepatitis B for every unvaccinated patient; MMR and varicella after delivery only if not immune; VariZIG as soon as possible, within 10 days.',
+  [('Childhood Vaccine Schedule and Contraindications', ['DTaP: Contraindication vs. Precaution', 'Vaccines at the Infant Visits']),
+   ('Adolescent Vaccines', ['HPV Vaccination & Series Rules', 'Adolescent Vaccines']),
+   ('Vaccines in Pregnancy', ['Vaccines in Pregnancy', 'Tdap in Pregnancy at 10 Weeks'])]),
 ]
 if __name__ == '__main__':
     import json, sys
