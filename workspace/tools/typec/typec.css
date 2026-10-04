@@ -351,3 +351,21 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
 .lcw .rail.segs + .rax{margin-top:2px}
 .lcw .rax em{position:absolute;right:0;top:-1px;font-style:normal;font-size:12px;font-weight:700;color:var(--muted);line-height:1}
 .brief .sub .subq{display:block;margin-top:3px;font-style:italic}
+/* ============ Mimic course tables v5 (lifechart.course_table; rows from tools/typec/mimics.py; gate check mimic-row) ============
+   Life-course axis, schematic. Grey = a lifelong trait with no psychosis; teal = psychosis; periwinkle and apricot = mood episodes. */
+:root{--trait:#CDD1D9;--trait-e:#9AA1AE}
+.lcc .cr{padding:12px 0 11px;border-top:1px solid var(--hair)}
+.lcc .wg + .cr{border-top:0;padding-top:6px}
+.lcc .cstrip{overflow:visible}
+.lcc .cs{position:absolute;left:var(--a);width:max(8px,calc(var(--b) - var(--a)));top:0;bottom:0;border-radius:7px;box-sizing:border-box}
+.cs.pro{background:var(--psy1);box-shadow:inset 0 0 0 1.5px var(--psy-e)} .cs.act{background:var(--psy3)} .cs.res{background:var(--psy2)}
+.cs.only{background:repeating-linear-gradient(135deg,var(--psy-e) 0 2px,#fff 2px 6px);box-shadow:inset 0 0 0 1.5px var(--psy-e)}
+.cs.lo{background:var(--mlo);box-shadow:inset 0 0 0 1.5px var(--mlo-e)} .cs.lop{background:linear-gradient(var(--mlo) 0 45%,var(--psy3) 45% 100%);box-shadow:inset 0 0 0 1.5px var(--mlo-e)}
+.cs.hi{background:var(--mhi);box-shadow:inset 0 0 0 1.5px var(--mhi-e)} .cs.hip{background:linear-gradient(var(--mhi) 0 45%,var(--psy3) 45% 100%);box-shadow:inset 0 0 0 1.5px var(--mhi-e)}
+.cs.trait{background:var(--trait)} .cs.odd{background:repeating-linear-gradient(90deg,var(--trait) 0 6px,#fff 6px 9px);box-shadow:inset 0 0 0 1px var(--trait-e)}
+.cs.dev{background:repeating-linear-gradient(135deg,var(--trait) 0 3px,#fff 3px 6px);box-shadow:inset 0 0 0 1px var(--trait-e)} .cs.norm{background:#fff;box-shadow:inset 0 0 0 1.5px var(--trait-e)}
+.cs.stress{background:var(--trait-e)} .cs.sub{background:var(--psy2);box-shadow:inset 0 0 0 1.5px var(--psy3)} .cs.flux{background:linear-gradient(90deg,var(--psy3),var(--psy1))}
+.lcc .cs.mark{left:var(--x);width:6px;margin-left:-3px;top:-3px;bottom:-3px;border-radius:3px;background:var(--psy3)}
+.lcc .lc-key i.cs{position:static;width:15px;height:10px;border-radius:3px}
+.lcc .wl.dec{font-weight:600;color:var(--psy3)}
+.lcc .note a{font-weight:600}

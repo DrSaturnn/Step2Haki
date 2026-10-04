@@ -87,6 +87,25 @@ open(cur, 'w', encoding='utf-8').write(PAGE[:b1.inner_end] + PAGE[it3.start:it3.
 o = gate_base({'AXBX_RETIRED': led})
 hit = ('[id-immutable] %s moved' % it3.id) in o
 print(('ok  ' if hit else 'BAD ') + 'item moved between two live briefs: expects gate FAIL id-immutable'); bad += not hit
-total = 1 + 9 + 2 + 3
+# mimic rows (hub and spoke, 2026-10-03): a row edited by hand, or two copies that differ, fail; a spoke row missing
+# from its hub fails; byte-identical copies pass
+sys.path.insert(0, os.path.join(HERE, 'typec'))
+import lifechart as LC, mimics as MM  # noqa: E402
+hubfig = LC.course_table('Hub', MM.ROWS, MM.AXIS, 'voices', groups=MM.HUBS['voices']['groups'], full=True)
+spk = LC.course_table('Slice', {k: MM.ROWS[k] for k in MM.SPOKES['psychosis-duration']['rows']}, MM.AXIS, 'voices')
+at = bl[0].inner_end
+def with_figs(*figs):
+    return gate(PAGE[:at] + ''.join(figs) + PAGE[at:])[1]
+o = with_figs(hubfig, spk)
+hit = '[mimic-row]' not in o
+print(('ok  ' if hit else 'BAD ') + 'hub and spoke with byte-identical rows pass'); bad += not hit
+o = with_figs(hubfig, spk.replace('Often begins around 40', 'Often begins around 45', 1))
+hit = '[mimic-row] mimic row delusional was edited' in o
+print(('ok  ' if hit else 'BAD ') + 'a hand-edited spoke row: expects gate FAIL mimic-row'); bad += not hit
+import re as _re
+o = with_figs(_re.sub(r'<li class="cr" data-mrow="paranoid-pd".*?</li>', '', hubfig, flags=_re.S), spk)
+hit = '[mimic-row] spoke row paranoid-pd is missing' in o
+print(('ok  ' if hit else 'BAD ') + 'a spoke row missing from its hub: expects gate FAIL mimic-row'); bad += not hit
+total = 1 + 9 + 2 + 3 + 3
 print('%d/%d passed' % (total - bad, total))
 sys.exit(1 if bad else 0)

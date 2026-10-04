@@ -16,6 +16,9 @@ episode, red = danger):
   mood_tracks()     v4, horizontal: a Mood lane over a Psychosis lane per diagnosis; same geometry checks as mood_multiples().
   workup_path()     v4: an ordered workup on a vertical line with dots; tests done together sit in one shaded tile.
   threshold_ruler() Minimum-duration clocks on a log time ruler (4 days ... 2 years), labels de-collided with leaders.
+  course_table()    Mimic comparison (hub and spoke): one row per diagnosis with its course strip on a life-course axis
+                    (childhood to 40s+) above three lines, deciding feature last. Rows come only from tools/typec/mimics.py;
+                    each rendered row carries data-mrow and a hash (data-mrow-v) that tools/gate.py checks page-wide.
 
 Every label is HTML text: study mode masks the names (class "mask"), screen readers read it, and phones wrap it.
 Run this file to self-test (python3 tools/typec/lifechart.py)."""
@@ -321,6 +324,92 @@ def workup_path(title, steps, step=None):
     return f'<figure class="lcp"><p class="kick">Diagnostic workup</p>{_title(title, step)}<ol class="path">{"".join(out)}</ol></figure>'
 
 
+# ---------------------------------------------------------------- v5: mimic course tables (hub and spoke, 2026-10-03)
+COURSE_KINDS = {
+    'pro': 'Prodrome', 'act': 'Active psychosis', 'res': 'Residual', 'only': 'A delusion only',
+    'lo': 'Depressive episode', 'lop': 'Depressive episode with psychosis', 'hi': 'Manic episode', 'hip': 'Manic episode with psychosis',
+    'trait': 'Lifelong trait, no psychosis', 'odd': 'Lifelong odd beliefs, no psychosis', 'dev': 'Developmental, from early childhood',
+    'norm': 'Normal at that age', 'stress': 'Trauma symptoms, no psychosis', 'sub': 'Psychosis tied to a drug',
+    'flux': 'Fluctuating sensorium', 'mark': 'Stress psychosis, minutes to hours'}
+COURSES = ('chronic', 'episodic', 'single', 'lifelong', 'childhood')
+
+
+def _row_check(rid, r, axis_x):
+    if r.get('status') != 'ready':
+        raise ChartError(f'{rid}: status {r.get("status")!r}; only ready rows render (source it first)')
+    if len(r.get('lines', [])) != 3:
+        raise ChartError(f'{rid}: needs exactly 3 lines (pattern, core finding, deciding feature last)')
+    if r.get('course') not in COURSES:
+        raise ChartError(f'{rid}: course {r.get("course")!r} not in {COURSES}')
+    segs = r.get('segs') or []
+    if not segs:
+        raise ChartError(f'{rid}: no course segments')
+    prev = None
+    for k, a, b in segs:
+        if k not in COURSE_KINDS or k == 'mark':
+            raise ChartError(f'{rid}: unknown segment kind {k!r}')
+        if not (0 <= a < b <= 100):
+            raise ChartError(f'{rid}: segment {(k, a, b)} outside 0..100 or empty')
+        if prev is not None and a < prev:
+            raise ChartError(f'{rid}: segments overlap or are out of order at {(k, a, b)}')
+        prev = b
+    c = r['course']
+    gaps = [b1 < a2 for (_, _, b1), (_, a2, _) in zip(segs, segs[1:])]
+    if c == 'chronic' and (segs[-1][2] != 100 or any(gaps)):
+        raise ChartError(f'{rid}: chronic course must run unbroken to the end of the axis')
+    if c == 'episodic' and (len(segs) < 2 or not all(gaps)):
+        raise ChartError(f'{rid}: episodic course needs 2 or more episodes with a gap (baseline) between each')
+    if c == 'single' and (len(segs) != 1 or segs[0][2] >= 100):
+        raise ChartError(f'{rid}: single course is one episode that ends before the axis does')
+    if c == 'lifelong':
+        start = segs[0][1]
+        if len(segs) != 1 or segs[0][2] != 100 or not (axis_x['Teens'] <= start <= axis_x['20s']):
+            raise ChartError(f'{rid}: lifelong pattern must begin by adolescence or early adulthood and run to the end')
+    if c == 'childhood' and segs[0][1] != 0:
+        raise ChartError(f'{rid}: childhood course must start at the left edge')
+    for m in r.get('marks', []):
+        if c != 'lifelong' or not (segs[0][1] < m < segs[0][2]):
+            raise ChartError(f'{rid}: a mark must sit inside a lifelong pattern')
+
+
+def course_row(rid, r, axis):
+    """One mimic row; returns (inner_html, hash). The hash is what gate.py checks on every copy of the row."""
+    import hashlib
+    axis_x = dict(axis)
+    _row_check(rid, r, axis_x)
+    grid = ''.join(f'<i class="tk" style="--x:{_pct(x)}"></i>' for _, x in axis)
+    segs = ''.join(f'<i class="cs {k}" style="--a:{_pct(a)};--b:{_pct(b)}"></i>' for k, a, b in r['segs'])
+    marks = ''.join(f'<i class="cs mark" style="--x:{_pct(m)}"></i>' for m in r.get('marks', []))
+    axl = ''.join(f'<span class="{"a0" if x == 0 else "a1" if x > 80 else ""}" style="--x:{_pct(x)}">{E(l)}</span>' for l, x in axis)
+    l1, l2, l3 = r['lines']
+    inner = (f'<div class="wh"><b class="nm mask">{r["name"]}</b><span class="win">{r["window"]}</span></div>'
+             f'<div class="wb"><div class="rail cstrip" aria-hidden="true">{grid}{segs}{marks}</div>'
+             f'<div class="rax" aria-hidden="true">{axl}</div>'
+             f'<p class="wl">{l1}</p><p class="wl">{l2}</p><p class="wl dec">{l3}</p></div>')
+    return inner, hashlib.sha256(inner.encode('utf-8')).hexdigest()[:12]
+
+
+def course_table(title, rows, axis, hub, groups=None, full=False, hub_href=None, hub_title=None, step=None, note=''):
+    """Mimic comparison on a life-course axis. rows: {id: row} from mimics.ROWS. groups: [(label, [ids])] for a hub;
+    otherwise the order of `rows`. full=True marks the hub copy (data-mimic-full). hub_href links a spoke to its hub."""
+    order = groups or [(None, list(rows))]
+    out, used = [], set()
+    for label, ids in order:
+        if label:
+            out.append(f'<li class="wg">{E(label)}</li>')
+        for rid in ids:
+            inner, h = course_row(rid, rows[rid], axis)
+            used.update(k for k, _, _ in rows[rid]['segs'])
+            if rows[rid].get('marks'):
+                used.add('mark')
+            out.append(f'<li class="cr" data-mrow="{rid}" data-mrow-v="{h}">{inner}</li>')
+    keyhtml = '<div class="lc-key">' + ''.join(f'<span><i class="cs {k}"></i>{COURSE_KINDS[k]}</span>' for k in COURSE_KINDS if k in used) + '</div>'
+    link = f'<p class="note">Every look-alike: <a href="{hub_href}">{E(hub_title or "full comparison")}</a></p>' if hub_href else ''
+    return (f'<figure class="lcw lcc" data-mimic-hub="{E(hub)}"{" data-mimic-full=\"1\"" if full else ""}>'
+            f'{_title(title, step, "not to scale")}<ol class="wrows">{"".join(out)}</ol>{keyhtml}'
+            + (f'<p class="note">{note}</p>' if note else '') + link + '</figure>')
+
+
 # ---------------------------------------------------------------- self-test
 if __name__ == '__main__':
     ok = 0
@@ -350,4 +439,16 @@ if __name__ == '__main__':
     h = mood_tracks('t', [dict(base, verdict='v', rule='schizoaffective', mood=[(0, 40, 'lo'), (55, 40, 'lo')], psy=[(5, 90)], free_label='2 wk')])
     assert 'pb free' in h and 'class="fl"' in h
     ok += 1; print('ok  horizontal tracks outline free psychosis')
-    print(f'{ok}/9 passed')
+    import mimics as M
+    expect_error(lambda: course_table('t', {'x': dict(M.ROWS['schizophrenia'], segs=[('act', 38, 46), ('res', 50, 100)])}, M.AXIS, 'voices'), 'a chronic course with a gap')
+    expect_error(lambda: course_table('t', {'x': dict(M.ROWS['bipolar-psychotic'], segs=[('hi', 36, 56), ('hip', 56, 61)])}, M.AXIS, 'voices'), 'episodes with no baseline between them')
+    expect_error(lambda: course_table('t', {'x': dict(M.ROWS['schizoid-pd'], segs=[('trait', 70, 100)])}, M.AXIS, 'voices'), 'a personality pattern that starts in the 30s')
+    expect_error(lambda: course_table('t', {'x': M.ROWS['lewy-body']}, M.AXIS, 'voices'), 'a needs_source row')
+    hub = M.HUBS['voices']
+    full = course_table('Full', M.ROWS, M.AXIS, 'voices', groups=hub['groups'], full=True)
+    spoke = course_table('Slice', {k: M.ROWS[k] for k in M.SPOKES['psychosis-duration']['rows']}, M.AXIS, 'voices')
+    rx = __import__('re').compile(r'<li class="cr" data-mrow="([^"]+)" data-mrow-v="([^"]+)">(.*?)</li>')
+    fh = {a: (b, c) for a, b, c in rx.findall(full)}
+    assert all(fh[a] == (b, c) for a, b, c in rx.findall(spoke)) and '\u2014' not in full
+    ok += 1; print('ok  a spoke row is byte-identical to its hub row')
+    print(f'{ok}/14 passed')

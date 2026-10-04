@@ -91,6 +91,8 @@ CATALOG = {
            'write the time or number from the pasted or verified source ("no improvement at 48 to 72 hours"), or a named failure'),
     'G3': ('every management-ladder row has an "Escalate when" cell; only the last row may say "Top rung"',
            'fill the sourced trigger; the last rung the exam tests says "Top rung"'),
+    'mimic-row': ('every mimic row (li[data-mrow]) matches its data-mrow-v hash, every copy of a row id is identical, and a spoke row also sits in its hub table when that hub is on the page',
+                  'never hand-edit a mimic row: edit tools/typec/mimics.py, rebuild every brief that uses the row (lifechart.course_table) and ship them together'),
     'K3': ('every mnemonic names the widely taught source it comes from (data-mn-src)',
            'add data-mn-src="First Aid" / "AnKing" / "AMBOSS" / "source explanation" / a URL; a mnemonic with no such source is removed, never invented'),
 }
@@ -397,6 +399,31 @@ def check_page(page, g, page_path):
     for k, v in fp.items():
         if v > 1:
             g.fail('nbme-coverage', 'fp:' + k, 'fingerprint %s repeated without same_as' % k)
+    # ---- mimic rows (hub and spoke; rows come only from tools/typec/mimics.py)
+    import hashlib
+    mrow = re.compile(r'<li class="cr" data-mrow="([^"]+)" data-mrow-v="([^"]+)">(.*?)</li>', re.S)
+    copies = defaultdict(set)
+    for m in mrow.finditer(body):
+        rid, v, inner = m.groups()
+        if hashlib.sha256(inner.encode('utf-8')).hexdigest()[:12] != v:
+            g.fail('mimic-row', rid + '@%d' % m.start(), 'mimic row %s was edited by hand (hash mismatch)' % rid)
+        copies[rid].add(inner)
+    for rid, inners in copies.items():
+        if len(inners) > 1:
+            g.fail('mimic-row', rid, 'mimic row %s has %d different copies on the page' % (rid, len(inners)))
+    fig = re.compile(r'<figure class="lcw lcc" data-mimic-hub="([^"]+)"( data-mimic-full="1")?>(.*?)</figure>', re.S)
+    full, spoke = defaultdict(set), []
+    for m in fig.finditer(body):
+        ids = set(re.findall(r'data-mrow="([^"]+)"', m.group(3)))
+        if m.group(2):
+            full[m.group(1)] |= ids
+        else:
+            spoke.append((m.group(1), ids))
+    for hub, ids in spoke:
+        if hub in full:
+            for rid in sorted(ids - full[hub]):
+                g.fail('mimic-row', '%s:%s' % (hub, rid), 'spoke row %s is missing from the %s hub table' % (rid, hub))
+    stats['mimic_rows'] = sum(1 for _ in mrow.finditer(body))
     return bl, it, stats
 
 
