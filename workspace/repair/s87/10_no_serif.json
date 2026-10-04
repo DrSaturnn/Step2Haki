@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "  --serif:\"Iowan Old Style\",\"Palatino Linotype\",Palatino,Georgia,serif;",
+   "with": "  /* s87: one sans font everywhere (Jonathan 2026-10-04 disliked the serif); --serif kept as a name so every rule follows */\n  --serif:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Inter,Roboto,system-ui,sans-serif;",
+   "note": "serif token -> sans"
+  }
+ ]
+}
