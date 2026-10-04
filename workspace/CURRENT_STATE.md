@@ -1,9 +1,9 @@
 # AxBx: current state (read this first; one page)
 
-Updated 2026-10-03 (brief consolidation in progress through s78; the live task, merge rules and next steps are in the claude.ai Project "Step2haki" doc STEP2HAKI_HANDOFF.md). Replaces reading OPEN_WORK.md or past transcripts. Open OPEN_WORK.md only for history of a specific pass.
+Updated 2026-10-03 (brief consolidation in progress through s79; the live task, merge rules and next steps are in the claude.ai Project "Step2haki" doc STEP2HAKI_HANDOFF.md). Replaces reading OPEN_WORK.md or past transcripts. Open OPEN_WORK.md only for history of a specific pass.
 
 ## What it is
-Step 2 CK / Peds and FM shelf study page: `workspace/index.html` in the public GitHub repo https://github.com/DrSaturnn/Step2Haki (working copy `/home/claude/Step2Haki/workspace`; `/home/claude/axbx` is retired). The site Vercel deploys is `discriminator-briefs-site/index.html` (Root Directory = discriminator-briefs-site, skipped when that folder is unchanged); `tools/ship.sh` copies the page there. 192 briefs, 2,101 questions (after the s66 to s78 merges), 13 organ-system sections. Brief kinds: topic (`brief`), board-style (`brief bs`), Aquifer workup (`brief aq`). Every brief carries `data-bp` (NBME system). Questions are `<li>` in `ol.bank` with immutable ids from `tools/idgen.py`.
+Step 2 CK / Peds and FM shelf study page: `workspace/index.html` in the public GitHub repo https://github.com/DrSaturnn/Step2Haki (working copy `/home/claude/Step2Haki/workspace`; `/home/claude/axbx` is retired). The site Vercel deploys is `discriminator-briefs-site/index.html` (Root Directory = discriminator-briefs-site, skipped when that folder is unchanged); `tools/ship.sh` copies the page there. 192 briefs, 2,103 questions (after the s66 to s78 merges and s79), 13 organ-system sections. Brief kinds: topic (`brief`), board-style (`brief bs`), Aquifer workup (`brief aq`). Every brief carries `data-bp` (NBME system). Questions are `<li>` in `ol.bank` with immutable ids from `tools/idgen.py`.
 
 ## Start of a session
 1. `git clone https://github.com/DrSaturnn/Step2Haki /home/claude/Step2Haki && cd /home/claude/Step2Haki/workspace && npm i` (jsdom 24 from package.json).
@@ -34,6 +34,7 @@ Applies to every new Peds brief until Jonathan changes it. Details: local-only `
 4. Categories missed on both shelf attempts or on shelf plus CMS: pediatric hypertension, glomerular disease, hemolytic and hemoglobin anemias, leukemia, phagocyte defects, congenital endocrine (CAH, hypothyroidism), eye infections, vitamin deficiency, perinatal HIV, renal tubular and electrolyte disorders, upper-airway infections. Backfill these before new topics in the same system.
 
 ## Tooling (rebuilt 2026-09-24)
+Mimic comparison rows (s79) live only in `tools/typec/mimics.py` and render through `lifechart.course_table()`; gate check `mimic-row` fails on a hand-edited or divergent copy. Edit the registry, rebuild every brief that uses the row, ship together.
 `tools/pagelib.py` (depth-matched parsing, offset splices), `gate.py` (mechanical invariants; `--list` shows them), `render.js` (jsdom smoke render; needs `npm i jsdom@24` in the repo, never v30), `apply_edits.py` / `verify_edits.py` / `EDITS.md`, `idgen.py`, `nbme_match.py`, `session_usage.py`, `ship.sh`; `repair/build.py`; `repair/efficiency/RULES_worker.md`, `RULES_coverage.md`, `make_packet.py`. Pre-existing baseline findings are allowlisted, not fixed: `tools/gate_allowlist.txt`, `tools/render_allowlist.txt` (1); fix them in a content pass and delete the lines. Also `tools/vendor_scan.py` (10-word shingle check against local-only sources; `--history` scans every blob), `tools/changelog.py` (commit body), `tools/local_only.txt` (private paths).
 
 ## Chat efficiency (measured 2026-09-24)
