@@ -2,6 +2,26 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-05 s101: source pass 4 on seven briefs; one ambiguous item reissued
+
+```
+Page: 173 briefs, 2137 items -> 173 briefs, 2137 items
+Briefs changed (7):
+  - newborn-cyanosis (Cyanosis in the Newborn): 1 item added (q_ace4b217922a0f045ff5); items edited (q_bdeeb5f0e6f35b0bbc57); versions bumped (q_bdeeb5f0e6f35b0bbc57 v1->v2); ITEMS REMOVED (q_bea2bfb540d55baa8f4d); prose edited (+272 chars)
+  - osteoporosis (Osteoporosis Screening and Treatment): items edited (q_c6114373cc3256e6bda1, q_09e7f6e15ab95cbd91c2, q_0263cf8d393f5319a3e7); versions bumped (q_c6114373cc3256e6bda1 v3->v4, q_09e7f6e15ab95cbd91c2 v2->v3); attrs set (q_09e7f6e15ab95cbd91c2 data-key-id); prose edited (+26 chars)
+  - congenital-hypothyroid (Congenital Hypothyroidism): items edited (q_3e20457c599a58018c77); prose edited (+274 chars)
+  - tumor-syndromes (Inherited Tumor Syndromes): items edited (q_6ac0ab0e89edb9e8e47c, q_1aceeac70d44e39d5370, q_48e55517cb8d7b4582c2); prose edited (+228 chars)
+  - precocious-puberty (Puberty): items edited (q_c83c478ceadb5ec4944f, q_2d5bf40522495fbc9dd5, q_e3db5804506d59b387e7, q_075284879e2f5fecbf15, q_56c14071c0dd5dbcbfae); versions bumped (q_2d5bf40522495fbc9dd5 v2->v3, q_075284879e2f5fecbf15 v2->v3); prose edited (-46 chars)
+  - febrile-seizure (Seizure with Fever in a Child): items edited (q_14bd9a276c385ebd8c97, q_b5c0a59a15599beec987, q_5b8fca21034364e3ec5b); versions bumped (q_14bd9a276c385ebd8c97 v1->v2, q_b5c0a59a15599beec987 v1->v2, q_5b8fca21034364e3ec5b v1->v3); attrs set (q_5b8fca21034364e3ec5b data-d1,data-d1-id); prose edited (+158 chars)
+  - cerebral-palsy (Cerebral Palsy): items edited (q_b166e5b479b23eeb907a); prose edited (+147 chars)
+Other page changes (nav, headers, scripts): +893 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 173 briefs, 2137 items, 7 scripts, 37 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 173 | bankwraps 173 | mcq 2137 (axCheck 2137, reveal-only 0) | malformed 0 | crit gridded 210/211 | vignette gridded 70/70 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.016%)
+```
+
 ## 2026-10-05 s100: source pass 3 on six flag-heavy briefs; one unproven item retired
 
 ```
