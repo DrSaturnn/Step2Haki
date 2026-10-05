@@ -59,10 +59,10 @@ Decisions, to be carried out in a "decisions" batch between merge batches (statu
 
 
 10. **Scope and source audit** of the s18 workup tables: trim specialist rows, flag memory-sourced numbers.
-11. **s18 conflicts:** bs-puv VCUG vs cystoscopy; enuresis age gate; SCFE effusion claim; newborn-cyanosis items; DVT duration; cervical ASC-US; bs-torch confirmation after 3 weeks; empty trap labels; stray ⚠︎.
+11. (done s104; cervical ASC-US in s96) **s18 conflicts:** bs-puv VCUG vs cystoscopy; enuresis age gate; SCFE effusion claim; newborn-cyanosis items; DVT duration; cervical ASC-US; bs-torch confirmation after 3 weeks; empty trap labels; stray ⚠︎.
 12. (done s102) **RSV isolation wording** (UWorld table says contact only; the library says many respiratory viruses need contact plus droplet).
-13. **Two older weak-distractor items** (angina with LBBB; dipstick mismatch).
-14. **Hot joint: antibiotics before aspiration when unstable?** The merged brief keeps the old rule (no antibiotics before the fluid is sampled). The reviewer suggested an exception for an unstable or septic patient, or delayed aspiration (blood cultures, then antibiotics). Not in the old briefs; needs a source before it is added.
+13. (done s104) **Two older weak-distractor items** (angina with LBBB; dipstick mismatch).
+14. (done s104: SSC 2021 'should not delay antibiotics 45 minutes or more' in suspected sepsis; joint-specific guidelines give no exception) **Hot joint: antibiotics before aspiration when unstable?** The merged brief keeps the old rule (no antibiotics before the fluid is sampled). The reviewer suggested an exception for an unstable or septic patient, or delayed aspiration (blood cultures, then antibiotics). Not in the old briefs; needs a source before it is added.
 
 ## From s90 (merge batch 10; Claude's notes, your call)
 
