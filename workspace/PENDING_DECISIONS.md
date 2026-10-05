@@ -99,7 +99,7 @@ Decisions, to be carried out in a "decisions" batch between merge batches (statu
 - rmsf dengue item stem is 52 words (over the 40-word stem rule); not changed.
 - Transfusion items q_1c2e and q_53f5 had no sex in the stem; one was chosen (no fact depends on it), noted in the ledger.
 
-## Audit coverage gaps at the 2026-10-05 pause (Jonathan: fine to leave for now)
+## Audit coverage gaps at the 2026-10-05 pause (closed in s105 except where noted)
 
 - Final fixes not re-audited by a fresh auditor (checked by gate/render/vendor and the diff only): s100 bpd q_0d997 polycythemia clause cut; s102 cervicitis q_4b3b PID dismissal (Merck); s104 sellar-mass "in a girl" pubertal-delay pearl; post-round-2 minor fixes in s99, s101, s102.
 - Audits covered changed and flagged lines only. Known pre-existing issues outside that scope: unexpanded acronyms in untouched briefs; rmsf dengue stem 52 words; sinopulm "never moves the heart" absolutes; sellar-mass "cystic and calcified on MRI" (StatPearls: calcification is seen on CT); the 66 old-format Diagnostic workup tables.
