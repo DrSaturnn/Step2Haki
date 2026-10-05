@@ -66,7 +66,7 @@ Decisions, to be carried out in a "decisions" batch between merge batches (statu
 
 ## From s90 (merge batch 10; Claude's notes, your call)
 
-- q_0053 key reads "5 Years after diagnosis" (mid-phrase capital). Lowercasing changes the key text, which migrate_check treats as a new item (stats reset). Leave, or reissue?
+- (done s99) q_0053 key typo fixed to "5 years after diagnosis"; formatting only, stats kept.
 - Thyroid: the PTU-in-first-trimester line is labeled ATA 2017; the 2026 ATA pregnancy guideline (Korevaar, Thyroid 2026;36(5):481-544) antithyroid-drug section (G) could not be opened. Recheck when a full text is available.
 - Diabetes: the retinopathy schedule quotes ADA Standards 2022 section 12 (2024 to 2026 pages returned 403); the USPSTF CKD screening page is marked inactive.
 
@@ -84,3 +84,9 @@ Decisions, to be carried out in a "decisions" batch between merge batches (statu
 - Several author-written distractor dismissals were cut because no source supported them (preg-vax, adolescent-aub, bs-neonatal-sepsis); the keys are still explained. Add sourced dismissals later if wanted.
 - bs-neonatal-sepsis: the open-fontanelle mechanism sentence in Management is supported only as "not necessary to routinely do CT before lumbar puncture in young children" (Merck); left as is.
 - mdd says "about 6 more months (4 to 9)"; VA/DoD says "at least six months". Kept "about" in both briefs for consistency with the 4 to 9 range.
+
+## From s99 (source pass 2; Claude's notes)
+
+- Medscape is the only source found for two drug-hemolysis lines (Mycoplasma cold agglutinins positive after 7 to 10 days; splenectomy ideally after age 6); StatPearls, Merck and the BSH guideline (blocked) give no timing.
+- Neonatal mastitis rests on two journal abstracts (no tertiary source reachable).
+- ig-panel keeps its `&mdash;` separators: the page script columnize() consumes them (they are not displayed).
