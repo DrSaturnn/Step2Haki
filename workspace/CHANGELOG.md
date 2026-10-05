@@ -2,6 +2,25 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-05 s100: source pass 3 on six flag-heavy briefs; one unproven item retired
+
+```
+Page: 173 briefs, 2138 items -> 173 briefs, 2137 items
+Briefs changed (6):
+  - bpd (Lung Disease in the Newborn and Preterm Infant): items edited (q_7612679f02ebe1094d50, q_6c0a74b2f2c3527a8024, q_f707f133c8221f078d11, q_a85cd8314614578db018, q_30ca2f614f165e2583dc, q_0d997d0544b2faf371d1, q_c4c16f2c389c5f258bb9, q_79b914ef3a4d575bb1ff, q_fcb478db41d751278e39); ITEMS REMOVED (q_15fe535a693d2f196722); prose edited (-16 chars)
+  - peds-constipation (Constipation in a Child): items edited (q_7afe798554085c5c9016, q_0a43b19d7318509f8a4d); prose edited (+226 chars)
+  - hematuria (Hematuria and Nephritic Syndrome): items edited (q_7105b6f6afd2aefcf1c3, q_c5eb45e93f1b56e7926c, q_343db36a6104579499d4, q_b3f27bcf89a45f07a78a, q_9ad1b6b15b54326c09b0, q_aeb588e544ebeb4b9c39, q_55226542a252564eb26a, q_d5afa1c1a30ddcf42914, q_c0198710c88535bb3a01); prose edited (+58 chars)
+  - peds-uti-recurrent (Urinary Tract Infection in a Child): items edited (q_d4bf9cd3940c5399b6f5, q_ed7ec6b44f1a5e95bbee, q_3a2e19898851527e9221, q_babed47b72ef5f319103, q_36029d74aafbaf714f97, q_cad5dbba25a15a80931c, q_5c4fe6fdb79c5c9481fb, q_25a63fbe23175bc5aaf4, q_20e7247d24975c36b3a6); versions bumped (q_d4bf9cd3940c5399b6f5 v2->v3); prose edited (+65 chars)
+  - anemia-thrombocytopenia (Anemia with Thrombocytopenia): items edited (q_5b9db0096be05067b4af, q_dbc8c413d8475b6da168); prose edited (+82 chars)
+  - peds-headache-imaging (Headache in a Child: Imaging and Treatment): items edited (q_cb09b11e0b8c49b3cdb3); versions bumped (q_cb09b11e0b8c49b3cdb3 v1->v2); prose edited (+266 chars)
+Other page changes (nav, headers, scripts): +869 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 173 briefs, 2137 items, 7 scripts, 37 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 173 | bankwraps 173 | mcq 2137 (axCheck 2137, reveal-only 0) | malformed 0 | crit gridded 210/211 | vignette gridded 70/70 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.017%)
+```
+
 ## 2026-10-05 s99: source pass 2 on five flag-heavy briefs, key typo fix
 
 ```
