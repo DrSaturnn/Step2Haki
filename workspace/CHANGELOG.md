@@ -2,6 +2,46 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-05 s102: source pass 5: last flagged lines in 27 briefs
+
+```
+Page: 173 briefs, 2137 items -> 173 briefs, 2137 items
+Briefs changed (27):
+  - gtps (Hip and Thigh Pain and Numbness): prose edited (+3 chars)
+  - septic-bursitis (Hot Joint or Bursa in an Adult): prose edited (-9 chars)
+  - aq-infant-hypotonia (Hypotonia in an Infant): prose edited (+140 chars)
+  - cyanotic-chd (Congenital Heart Disease): items edited (q_b9082f8a5ce55be4b990); prose edited (-29 chars)
+  - right-murmurs (Heart Murmurs in an Adult): items edited (q_208153ecc17e52fd85bf, q_f22cb73d8b5f536d8858)
+  - htn-drugs (Hypertension in an Adult): items edited (q_0d1f2f4227e957be8a88, q_7baa1bf663045ed38943, q_9f89eae8595d5366959e, q_f7b069714be5565aa1f4); versions bumped (q_0d1f2f4227e957be8a88 v2->v3); prose edited (+16 chars)
+  - myocarditis (Heart Failure in a Child): prose edited (+11 chars)
+  - del22q11 (22q11.2 Deletion Syndrome): prose edited (-39 chars)
+  - copd (Obstructive Lung Disease): items edited (q_8ae0956915f654db8cea); prose edited (+81 chars)
+  - hypoxemia-mech (Hypoxemia): items edited (q_50e253ee74175698b00d); versions bumped (q_50e253ee74175698b00d v1->v2); prose edited (+436 chars)
+  - fap (Hereditary Polyposis Syndromes): items edited (q_bc5c6fedeba886107fad); versions bumped (q_bc5c6fedeba886107fad v1->v2); attrs set (q_bc5c6fedeba886107fad data-key-id); prose edited (-48 chars)
+  - feeding-refusal (Feeding an Infant or Toddler): prose edited (-16 chars)
+  - rlq-pain (Right Lower Quadrant Pain): prose edited (-36 chars)
+  - bs-wilson (Wilson Disease): items edited (q_e83055dbd74a4e8a4cb4); versions bumped (q_e83055dbd74a4e8a4cb4 v1->v2); prose edited (+294 chars)
+  - pyelo (Pyelonephritis): prose edited (-23 chars)
+  - bs-incontinence (Urinary Incontinence): prose edited (+75 chars)
+  - bs-short-stature (Abnormal Growth in a Child): prose edited (-16 chars)
+  - transfusion (Transfusion Reactions): items edited (q_a9137ad5a35d53f49623, q_1c2e471dce445178a794, q_53f571d464205cda9996); versions bumped (q_a9137ad5a35d53f49623 v2->v3, q_1c2e471dce445178a794 v1->v3, q_53f571d464205cda9996 v1->v3); prose edited (+193 chars)
+  - cervicitis (Cervicitis and Pelvic Inflammatory Disease): items edited (q_53a9556e629358618d64, q_6248c309fb465ada940f, q_4b3bff444fef514d995a, q_d3537b02c8165b43ac43); versions bumped (q_4b3bff444fef514d995a v2->v3)
+  - rmsf (Tick-Borne Illness): items edited (q_0264081195615e6994c2, q_cc6d2363a48165ac32a6); versions bumped (q_cc6d2363a48165ac32a6 v1->v2); prose edited (+187 chars)
+  - lymphadenitis (Lymphadenopathy): prose edited (-1 chars)
+  - herpangina (Oral Lesions in a Child): prose edited (-38 chars)
+  - bs-anaphylaxis (Anaphylaxis): items edited (q_0211ca53cb00559ea8f4, q_c9f773900496d8f96dd0); prose edited (+127 chars)
+  - bs-isolation (Isolation Precautions): items edited (q_3bf278dd331b6026a6e6, q_4689ce066cabf2f9990b); versions bumped (q_4689ce066cabf2f9990b v1->v2); prose edited (+327 chars)
+  - tics (Tics and Tic Disorders): items edited (q_11071c3e784a5dac9722); prose edited (-34 chars)
+  - peds-alopecia (Hair Loss in a Child): items edited (q_66c5fe32f99d9a8fb5e1); versions bumped (q_66c5fe32f99d9a8fb5e1 v1->v2); prose edited (-66 chars)
+  - cervical (Cervical Cancer Screening): prose edited (+16 chars)
+Other page changes (nav, headers, scripts): +1102 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 173 briefs, 2137 items, 7 scripts, 37 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 173 | bankwraps 173 | mcq 2137 (axCheck 2137, reveal-only 0) | malformed 0 | crit gridded 210/211 | vignette gridded 70/70 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.016%)
+```
+
 ## 2026-10-05 s101: source pass 4 on seven briefs; one ambiguous item reissued
 
 ```
