@@ -66,6 +66,8 @@ CATALOG = {
     'no-letters-pct': ('no option letters or vendor selection percentages in .vignette Q lines or .trapline',
                        'drop "(A)", "choice C", "22% chose"; keep labeled clinical probabilities only'),
     'anchor': ('every static href="#x" and .scaleref data-scale resolves to an id', 'point it at an existing id'),
+    'no-emdash': ('no em dash (U+2014, &mdash;, &#8212;) in visible page text or visible attributes (Jonathan: no em dashes; s103 converted them to spaced en dashes, which columnize() also splits on)',
+                  'use a spaced en dash (&ndash;) or a colon'),
     'mode-css': ('no CSS selector styles page content through body.flat or body.study (s92: it restyled every brief at once and froze the switches)', 'write the rule as body .axm-flat X, body X.axm-flat (or axm-study); rules on body itself may stay body.flat'),
     'pairs-with': ('each <b> in a "Pairs with" block matches a brief <h4> (quoted/question discriminators exempt)',
                    'use the exact partner <h4> text in <b>, or <i> for a partner that does not exist yet'),
@@ -172,6 +174,11 @@ def check_page(page, g, page_path):
     for msel in sorted(set(re.findall(r'body\.(?:flat|study)\b[^{},]*\s[^{},]*(?=[,{])', re.sub(r'/\*.*?\*/', '', mcss, flags=re.S)))):
         g.fail('mode-css', msel.strip()[:60], 'selector %r styles content through a body mode class' % msel.strip()[:80])
 
+    # ---- no em dashes in visible HTML (scripts, styles and comments excluded)
+    vis = re.sub(r'<!--.*?-->|<script\b.*?</script>|<style\b.*?</style>', ' ', page, flags=re.S)
+    vis = re.sub(r'<[^>]*>', lambda m: ' '.join(re.findall(r'(?:data-d1|data-d2|data-lead-in|title|aria-label)="[^"]*"', m.group(0))), vis)
+    for em in list(re.finditer(r'\u2014|&mdash;|&#8212;', vis))[:20]:
+        g.fail('no-emdash', re.sub(r'\s+', ' ', vis[max(0, em.start() - 30):em.end() + 10]), 'em dash in visible text')
     # ---- briefs
     idc = Counter(b.id for b in bl)
     seen_dup = set()

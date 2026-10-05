@@ -330,7 +330,7 @@
   {
    "op": "replace",
    "brief": "bs-isolation",
-   "find": "<p>Choose the precaution by <b>how the organism travels</b>. <b>Droplets</b> are 5 microns or larger and fall within <b>3 to 6 feet</b>, so a <b>surgical mask</b> within that range is enough: <i>N. meningitidis</i>, <i>H. influenzae</i> type b, <i>Mycoplasma pneumoniae</i>, influenza, adenovirus, pertussis. <b>Airborne</b> particles are <b>under 5 microns</b> and stay suspended, so they need an <b>N95 respirator and a negative-pressure room</b>: tuberculosis, <b>measles</b>, <b>varicella</b>, SARS. <b>Contact</b> organisms spread by hands and surfaces and need a <b>gown and gloves</b>: MRSA, VRE, <i>C. difficile</i>, <i>E. coli</i> O157:H7, scabies, RSV. Gram-negative diplococci in CSF are meningococcus, so this infant needs <b>droplet precautions until 24 hours of effective antibiotics</b>.</p>\n<p>Standard precautions apply to <b>every</b> patient and are never the added answer. <b>Neutropenic</b> precautions run the other way: they <b>protect the patient</b> from the environment rather than others from the patient.</p>",
+   "find": "<p>Choose the precaution by <b>how the organism travels</b>. <b>Droplets</b> are 5 microns or larger and fall within <b>3 to 6 feet</b>, so a <b>surgical mask</b> within that range is enough: <i>N. meningitidis</i>, <i>H. influenzae</i> type b, <i>Mycoplasma pneumoniae</i>, influenza, adenovirus, pertussis. <b>Airborne</b> particles are <b>under 5 microns</b> and stay suspended, so they need an <b>N95 respirator and a negative-pressure room</b>: tuberculosis, <b>measles</b>, <b>varicella</b>, SARS. <b>Contact</b> organisms spread by hands and surfaces and need a <b>gown and gloves</b>: MRSA, VRE, <i>C. difficile</i>, scabies, <i>E. coli</i> O157:H7, RSV. Gram-negative diplococci in CSF are meningococcus, so this infant needs <b>droplet precautions until 24 hours of effective antibiotics</b>.</p>\n<p>Standard precautions apply to <b>every</b> patient and are never the added answer. <b>Neutropenic</b> precautions run the other way: they <b>protect the patient</b> from the environment rather than others from the patient.</p>",
    "with": "<p>Choose the precaution by <b>how the organism travels</b>. <b>Droplets</b> are 5 microns or larger and fall within <b>3 to 6 feet</b>, so a <b>surgical mask</b> within that range is enough. Droplet organisms include <i>N. meningitidis</i>, <i>H. influenzae</i> type b, <i>Mycoplasma pneumoniae</i>, influenza, adenovirus and pertussis. <b>Airborne</b> particles are <b>under 5 microns</b> and stay suspended, so they need an <b>N95 respirator and a negative-pressure room</b>. Airborne organisms include tuberculosis, <b>measles</b>, <b>varicella</b> and <b>SARS</b> (severe acute respiratory syndrome). <b>Contact</b> organisms spread by hands and surfaces and need a <b>gown and gloves</b>. They include <b>MRSA</b> (methicillin-resistant <i>Staphylococcus aureus</i>), <b>VRE</b> (vancomycin-resistant enterococci), <i>C. difficile</i>, <i>E. coli</i> O157:H7, scabies and <b>RSV</b> (respiratory syncytial virus). Gram-negative diplococci in the <b>CSF</b> (cerebrospinal fluid) are meningococcus. This infant therefore needs <b>droplet precautions until 24 hours of effective antibiotics</b>.</p>\n<p>Standard precautions apply to every patient, so they are never the added precaution. <b>Neutropenic</b> precautions <b>protect the patient</b> from the environment rather than others from the patient.</p>",
    "note": "voice: .dp; list sentences split, acronyms expanded, meta 'answer' and emphasis bold removed",
    "reworded_bold": [
@@ -370,7 +370,7 @@
      "to": "Contact organisms spread by hands and surfaces and need a gown and gloves."
     },
     {
-     "claim": "Contact organisms: MRSA, VRE, C. difficile, E. coli O157:H7, scabies, RSV.",
+     "claim": "Contact organisms: MRSA, VRE, C. difficile, scabies, E. coli O157:H7, RSV.",
      "to": "They include MRSA (methicillin-resistant Staphylococcus aureus), VRE (vancomycin-resistant enterococci), C. difficile, E. coli O157:H7, scabies and RSV (respiratory syncytial virus)."
     },
     {
@@ -433,7 +433,7 @@
     },
     {
      "claim": "They include MRSA (methicillin-resistant Staphylococcus aureus), VRE (vancomycin-resistant enterococci), C. difficile, E. coli O157:H7, scabies and RSV (respiratory syncytial virus).",
-     "from": "Contact organisms: MRSA, VRE, C. difficile, E. coli O157:H7, scabies, RSV."
+     "from": "Contact organisms: MRSA, VRE, C. difficile, scabies, E. coli O157:H7, RSV."
     },
     {
      "claim": "Gram-negative diplococci in the CSF (cerebrospinal fluid) are meningococcus.",
