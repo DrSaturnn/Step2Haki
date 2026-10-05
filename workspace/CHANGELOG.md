@@ -2,6 +2,25 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-05 s99: source pass 2 on five flag-heavy briefs, key typo fix
+
+```
+Page: 173 briefs, 2138 items -> 173 briefs, 2138 items
+Briefs changed (6):
+  - neonatal-maternal-labs (Maternal Effects in the Newborn): items edited (q_8cd4f23e573251a488b8, q_fcfeb3cb1bea5932a6f2, q_8f4905394e4456458a2a, q_925ae4947871503e8807, q_87f0039848035f1190fd, q_c4ef4b784ada51bcb9ab); prose edited (-167 chars)
+  - sinopulm-structural (Recurrent Respiratory Infection and Structural Lung Disease): items edited (q_4024fba77e315bd4958c, q_487ce2807c3b576d9d85, q_a98644493633501a95fc, q_9f099473d7db5ba0b99b, q_4f76f860dc7750efbfcb); prose edited (-32 chars)
+  - neonatal-jaundice (Jaundice in a Newborn): items edited (q_ca8409261f4b50c7a726, q_66a38fc6f1645f498b16, q_e4a690479dda54b594c8, q_c0dfa7c97c1600f1b04e, q_ea850ed3646b8e8e5167, q_9f0568882aea52bab399, q_e3d808bf1661371049fc, q_f61faf557c39ed95a92a, q_3b3b3b16ecad50c28538, q_5374e158190b467a7a54, q_ecc226444148300c7efa, q_a1c8d07e176b4cce3dd8); versions bumped (q_e4a690479dda54b594c8 v2->v3); attrs set (q_e4a690479dda54b594c8 data-key-id); prose edited (-90 chars)
+  - nephropathy (Diabetes Complications and Annual Care): items edited (q_00534dc55c5a52e0ab14)
+  - drug-hemolysis (Hemolytic Anemia): items edited (q_5a125c456a5d5976b2ef, q_bedad5a521415812946f, q_f2037023f93e50f78735, q_c174aebf99e65a3c9475, q_b6e3c910cb395d6890a3, q_ab680be206195331a8e7, q_0bc132a1547659269817, q_e7fccd79b20c63285d7a, q_a5afc3bb3f9458628a39); prose edited (-29 chars)
+  - ig-panel (Antibody Deficiencies): items edited (q_c9a8d8bf655e576d9ae4, q_e0e19642c72e5277b688); versions bumped (q_c9a8d8bf655e576d9ae4 v1->v2, q_e0e19642c72e5277b688 v1->v2); prose edited (+605 chars)
+Other page changes (nav, headers, scripts): +973 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 173 briefs, 2138 items, 7 scripts, 37 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 173 | bankwraps 173 | mcq 2138 (axCheck 2138, reveal-only 0) | malformed 0 | crit gridded 210/211 | vignette gridded 70/70 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.017%)
+```
+
 ## 2026-10-05 s98: source pass on flagged lines, two vaccine questions, qid carry-over
 
 ```
