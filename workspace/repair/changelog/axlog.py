@@ -137,6 +137,10 @@ LOG = [
   [('Cervicitis and Pelvic Inflammatory Disease', ['Acute Cervicitis', 'Pelvic Inflammatory Disease']),
    ('Fever and Sepsis in the Newborn', ['Neonatal Sepsis and Its Mimics', 'The Febrile Infant \u2014 Finding the Source']),
    ('Fever and Rash in a Child', ['Fever, Rash and Joint Pain: Name the Rash, Then Date the Exposure', 'Fever and Rash in a Child'])]),
+ (95, '2026-10-04', 'Merge batch 13. Sudden hearing loss follows the 2019 AAO-HNS update (audiometry as soon as possible, within 14 days; steroids may be offered); a perforation does not exclude a secondary acquired cholesteatoma. Germinomas usually have negative markers (low beta-hCG possible) and are treated with radiation alone or after chemotherapy (NCI). Newborn rashes: any vesicles first need herpes excluded; miliaria crystallina versus rubra; candidal diaper rash with nystatin, then an azole if needed.',
+  [('Hearing Loss and Chronic Ear Disease', ['Hearing Loss & Otosclerosis', 'Cholesteatoma and Chronic Ear Drainage']),
+   ('Brain Tumors in a Child', ['Sellar and Suprasellar Masses', 'Posterior Fossa Localization']),
+   ('Rashes in the Newborn and Infant', ['Benign Neonatal Rashes', 'Diaper Dermatitis'])]),
 ]
 if __name__ == '__main__':
     import json, sys
