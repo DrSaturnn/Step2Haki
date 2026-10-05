@@ -24,7 +24,7 @@ No emojis, no em dashes in prose; plain voice, no slogans; label speculation; âš
 Every clue from a UWorld or NBME source stem is used: each finding, value and pertinent negative gets a role (decides, localizes, supports, excludes, decoy) and a place in the brief; none is dropped or called noise (board-brief Step 2a).
 
 ## Open
-Current task: merge similar briefs under generalized titles (repair/merge_plan.md; merge queue complete in s96; next: two-line subtitle pass for the remaining briefs). See PENDING_DECISIONS.md (VUR fixes written in s81; thumbnail pilot; retitles; spelling pass; 17 blueprint judgment rows; Aquifer narratives; s23 UWorld text). NBME plan phase 7 (review weighting) not started. Efficiency: worker packet adopted for backfills only (repair/efficiency/RESULTS.md, RUBRIC.md, runs/).
+Current task: merge similar briefs under generalized titles (repair/merge_plan.md; merge queue complete in s96; two-line subtitles on every brief since s97). See PENDING_DECISIONS.md (VUR fixes written in s81; thumbnail pilot; retitles; spelling pass; 17 blueprint judgment rows; Aquifer narratives; s23 UWorld text). NBME plan phase 7 (review weighting) not started. Efficiency: worker packet adopted for backfills only (repair/efficiency/RESULTS.md, RUBRIC.md, runs/).
 
 ## Peds authoring priority (set 2026-09-28)
 Applies to every new Peds brief until Jonathan changes it. Details: local-only `local/peds_shelf_2026-09-25.md`.
