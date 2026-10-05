@@ -133,6 +133,10 @@ LOG = [
    ('Vaccines in Pregnancy', ['Vaccines in Pregnancy', 'Tdap in Pregnancy at 10 Weeks'])]),
  (92, '2026-10-04', 'Switches no longer freeze the page, on or off. Flat theme and study mode now restyle the briefs on screen at once and the rest a few at a time in the background, instead of restyling every brief in one go; switching starts no animations. Board-style only and the shelf picker keep your place: the brief you were reading stays put, and switching back returns you to it.', []),
  (93, '2026-10-04', 'The flat and study switches finish restyling the rest of the page even when the browser pauses animation frames (a background tab or a hidden window).', []),
+ (94, '2026-10-04', 'Merge batch 12. Cervicitis and PID follow the CDC 2021 STI guidelines (ceftriaxone considered for gonorrhea risk; partners referred when an organism is found; doxycycline avoided from the second trimester). Febrile infants 8 to 60 days follow the 2021 AAP guideline band by band, with its should and may wording; ampicillin plus cefotaxime when meningitis is suspected. Exanthems follow CDC: varicella doses at 12 to 15 months and 4 to 6 years, postexposure vaccine within 3 (up to 5) days, VariZIG within 10 days including hospitalized preterm infants.',
+  [('Cervicitis and Pelvic Inflammatory Disease', ['Acute Cervicitis', 'Pelvic Inflammatory Disease']),
+   ('Fever and Sepsis in the Newborn', ['Neonatal Sepsis and Its Mimics', 'The Febrile Infant \u2014 Finding the Source']),
+   ('Fever and Rash in a Child', ['Fever, Rash and Joint Pain: Name the Rash, Then Date the Exposure', 'Fever and Rash in a Child'])]),
 ]
 if __name__ == '__main__':
     import json, sys
