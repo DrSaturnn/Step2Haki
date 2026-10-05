@@ -141,6 +141,9 @@ LOG = [
   [('Hearing Loss and Chronic Ear Disease', ['Hearing Loss & Otosclerosis', 'Cholesteatoma and Chronic Ear Drainage']),
    ('Brain Tumors in a Child', ['Sellar and Suprasellar Masses', 'Posterior Fossa Localization']),
    ('Rashes in the Newborn and Infant', ['Benign Neonatal Rashes', 'Diaper Dermatitis'])]),
+ (96, '2026-10-04', 'Merge batch 14, the last merge. Cervical screening follows USPSTF 2018 (still final; the 2024 draft and HRSA self-collection noted), ASCCP 2019 risk-based management (under 25, repeat cytology at 1 year is preferred after ASC-US) and HHS rules for HIV. Abnormal uterine bleeding: bleeding-disorder screening per ACOG 785, avoid NSAIDs in a bleeding disorder unless hematology advises, and postmenopausal bleeding per ACOG 734 (usually atrophy; ultrasound with 4 mm or less, or biopsy, with sampling first at higher risk).',
+  [('Cervical Cancer Screening', ['Cervical Cancer Screening', 'Cervical Screening: the Age-21 Floor']),
+   ('Abnormal Uterine Bleeding', ['Adolescent Abnormal Uterine Bleeding', 'Uterine Fibroids', 'Postmenopausal Bleeding'])]),
 ]
 if __name__ == '__main__':
     import json, sys

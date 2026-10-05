@@ -2,6 +2,25 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-04 s96: merge batch 14: Cervical Cancer Screening, Abnormal Uterine Bleeding (last merges)
+
+```
+Page: 176 briefs, 2136 items -> 173 briefs, 2136 items
+Briefs REMOVED (3): pmb, fibroids, bs-cervical-gate
+Briefs changed (5):
+  - fap (Hereditary Polyposis Syndromes): prose edited (+2 chars)
+  - cervicitis (Cervicitis and Pelvic Inflammatory Disease): prose edited (-11 chars)
+  - cervical (Cervical Cancer Screening): 6 items added (q_51f3ee8fb45b68e71d8a, q_d3f6b1130d51c45d0851, q_77645b475c61e3d37afb, q_0ed82dcf1e35f012984e, q_34e6ca8b7207edc2d970, q_c15edc05a0c8def8e8cf); items edited (q_4e03aecd840d573fbd70, q_547d3d7651fe2ed3e10a, q_2dee266705935207af71, q_cff4ff6eccf35620aa6c, q_2f2043db62405bd3ac4d, q_e098fae04f9153b19862, q_b05ba7307a165402b4be, q_8174fcd817795ab4b03d, q_726db726ad0c50318b8d, q_4491305e071c52d2960a, q_3901824dc28a55a59f29); versions bumped (q_4e03aecd840d573fbd70 v2->v3, q_547d3d7651fe2ed3e10a v1->v2, q_2dee266705935207af71 v2->v3, q_cff4ff6eccf35620aa6c v2->v3, q_2f2043db62405bd3ac4d v1->v2, q_e098fae04f9153b19862 v1->v2, q_b05ba7307a165402b4be v1->v2, q_8174fcd817795ab4b03d v1->v2, q_726db726ad0c50318b8d v1->v2, q_4491305e071c52d2960a v1->v2, q_3901824dc28a55a59f29 v2->v3); attrs set (brief data-replaces; q_4e03aecd840d573fbd70 data-lead-in,data-src; q_2dee266705935207af71 data-d2,data-d2-id,data-lead-in,data-src; q_cff4ff6eccf35620aa6c data-lead-in,data-src; q_2f2043db62405bd3ac4d data-lead-in,data-src; q_e098fae04f9153b19862 data-lead-in,data-src; q_b05ba7307a165402b4be data-lead-in,data-src; q_8174fcd817795ab4b03d data-lead-in,data-src; q_726db726ad0c50318b8d data-lead-in,data-src; q_4491305e071c52d2960a data-lead-in,data-src; q_3901824dc28a55a59f29 data-lead-in,data-src); ITEMS REMOVED (q_b1919dd3066250d9a7fe, q_a294b28897275a738e1a); prose edited (+5673 chars)
+  - adolescent-aub (Abnormal Uterine Bleeding): 3 items added (q_4860361df0b160245371, q_a70277f771bb7a222c07, q_b3769ce3a4a636763c58); items edited (q_ee241f87099a56409a12, q_02b1e4ab1cef59698047, q_fcd0b19e71265d44ad7b, q_88ae2f5fd8f25ca383a3, q_0a77320703b455268cd2, q_fccfc26db2225f068535, q_ae401766ed105164bf02, q_77c36876105657e2b8f9, q_0c275c0906585e54bc33, q_26354cd5674f5faa8e25, q_30f0cfee7dd15328b5ef, q_d7443c275f2354efac63, q_81b9a4c36c4659c8a85d, q_ff21955c3d0855e28a50, q_c343a843ea7f5c499189, q_54c5aa6315c35c4a931e, q_4ae5360424a352409e7b, q_606e2f38d0a8502aac76, q_d57b2550529d518c8eff, q_a6560aa79f4b58c79a25, q_aea9c043c7ad59288d8e, q_131324264dbc50acae51); versions bumped (q_ee241f87099a56409a12 v1->v2, q_02b1e4ab1cef59698047 v2->v3, q_fcd0b19e71265d44ad7b v2->v3, q_88ae2f5fd8f25ca383a3 v1->v2, q_0a77320703b455268cd2 v1->v2, q_fccfc26db2225f068535 v2->v3, q_ae401766ed105164bf02 v1->v2, q_77c36876105657e2b8f9 v1->v2, q_0c275c0906585e54bc33 v1->v2, q_26354cd5674f5faa8e25 v1->v2, q_30f0cfee7dd15328b5ef v2->v3, q_d7443c275f2354efac63 v1->v2, q_81b9a4c36c4659c8a85d v1->v2, q_ff21955c3d0855e28a50 v1->v2, q_c343a843ea7f5c499189 v2->v3, q_54c5aa6315c35c4a931e v1->v2, q_4ae5360424a352409e7b v1->v2, q_606e2f38d0a8502aac76 v1->v2, q_d57b2550529d518c8eff v1->v2, q_a6560aa79f4b58c79a25 v1->v2, q_aea9c043c7ad59288d8e v1->v2, q_131324264dbc50acae51 v2->v3); attrs set (brief data-replaces; q_ee241f87099a56409a12 data-lead-in,data-src; q_02b1e4ab1cef59698047 data-lead-in,data-src; q_fcd0b19e71265d44ad7b data-lead-in,data-src; q_88ae2f5fd8f25ca383a3 data-lead-in,data-src; q_0a77320703b455268cd2 data-lead-in,data-src; q_fccfc26db2225f068535 data-src; q_ae401766ed105164bf02 data-lead-in,data-src; q_77c36876105657e2b8f9 data-lead-in,data-src; q_0c275c0906585e54bc33 data-lead-in,data-src; q_26354cd5674f5faa8e25 data-d2,data-d2-id,data-lead-in,data-src; q_30f0cfee7dd15328b5ef data-lead-in,data-src; q_d7443c275f2354efac63 data-lead-in,data-src; q_81b9a4c36c4659c8a85d data-lead-in,data-src; q_ff21955c3d0855e28a50 data-lead-in,data-src; q_c343a843ea7f5c499189 data-lead-in,data-src; q_54c5aa6315c35c4a931e data-lead-in,data-src; q_4ae5360424a352409e7b data-lead-in,data-src; q_606e2f38d0a8502aac76 data-lead-in,data-src; q_d57b2550529d518c8eff data-lead-in,data-src; q_a6560aa79f4b58c79a25 data-lead-in,data-src; q_aea9c043c7ad59288d8e data-lead-in,data-src; q_131324264dbc50acae51 data-lead-in,data-src); ITEMS REMOVED (q_700a36bf404858cfa47f); prose edited (+12304 chars)
+  - primary-amenorrhea (Primary Amenorrhea): prose edited (-11 chars)
+Other page changes (nav, headers, scripts): +627 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 173 briefs, 2136 items, 7 scripts, 37 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 173 | bankwraps 173 | mcq 2136 (axCheck 2136, reveal-only 0) | malformed 0 | crit gridded 210/211 | vignette gridded 70/70 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.017%)
+```
+
 ## 2026-10-04 s95: merge batch 13: Hearing Loss and Chronic Ear Disease, Brain Tumors in a Child, Rashes in the Newborn and Infant
 
 ```
