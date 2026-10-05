@@ -55,8 +55,8 @@ Rule 14 still applies: where a broader title promises content the brief does not
 | Hearing Loss and Chronic Ear Disease (shipped s95) | Hearing Loss & Otosclerosis (`hearing`); Cholesteatoma and Chronic Ear Drainage (`cholesteatoma`) | 19 |
 | Brain Tumors in a Child (shipped s95) | Sellar and Suprasellar Masses (`sellar-mass`); Posterior Fossa Localization (`bs-posterior-fossa`) | 19 |
 | Rashes in the Newborn and Infant (shipped s95) | Benign Neonatal Rashes (`neonatal-rash`); Diaper Dermatitis (`diaper-dermatitis`) | 23 |
-| Cervical Cancer Screening | Cervical Cancer Screening (`cervical`); Cervical Screening: the Age-21 Floor (`bs-cervical-gate`) | 17 |
-| Abnormal Uterine Bleeding | Adolescent Abnormal Uterine Bleeding (`adolescent-aub`); Uterine Fibroids (`fibroids`); Postmenopausal Bleeding (`pmb`) | 25 |
+| Cervical Cancer Screening (shipped s96) | Cervical Cancer Screening (`cervical`); Cervical Screening: the Age-21 Floor (`bs-cervical-gate`) | 17 |
+| Abnormal Uterine Bleeding (shipped s96) | Adolescent Abnormal Uterine Bleeding (`adolescent-aub`); Uterine Fibroids (`fibroids`); Postmenopausal Bleeding (`pmb`) | 25 |
 
 ## Retitled in place
 
