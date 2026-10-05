@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """vendor_scan.py: find vendor (source) text outside the local-only sources.
 
-  python3 tools/vendor_scan.py [--repo DIR] [--sources DIR] [--stock DIR] [--history] [--min N] [--index-max PCT] [--run-max N] [--show PATH] [--json]
+  python3 tools/vendor_scan.py [--repo DIR] [--sources DIR] [--stock DIR] [--history] [--min N] [--index-max PCT] [--run-max N] [--show PATH] [--json] [--page NEW.html]
 
 Builds 10-word shingles (tags stripped, entities decoded, lowercase [a-z0-9] words) from every
 file under the sources dir on disk (default <repo>/repair/sources, including aq/) plus, with
@@ -183,9 +183,14 @@ def main(argv):
     # shingles already on the published page (any version of an index.html) are judged by the page
     # limit, not per file: packets and edit files that quote the page carry no new vendor text
     page_sh = set()
-    for s, p in scan:
-        if os.path.basename(p) == 'index.html':
-            page_sh |= shingles(words(texts.get(s, ''))) & src.keys()
+    if opt('--page'):
+        # --page NEW.html: judge edit files against the page about to ship, not HEAD's. An old edit
+        # file whose source run the new wording drops from the page fails now, not one ship later (s103)
+        page_sh = shingles(words(open(opt('--page'), encoding='utf-8').read())) & src.keys()
+    else:
+        for s, p in scan:
+            if os.path.basename(p) == 'index.html':
+                page_sh |= shingles(words(texts.get(s, ''))) & src.keys()
     res = {}
     for s, p in scan:
         t = texts.get(s, '')

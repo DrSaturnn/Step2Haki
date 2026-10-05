@@ -4,7 +4,8 @@
 #  1. build repair/sNN/*.json onto a scratch copy; rules self-tests (test_migrate_check, test_gate_rules);
 #     gate (every brief type, incl. source-and-scope G1-G3, K3; base HEAD; --attr-only also asserts
 #     attribute-only); render; vendor scan (no source text in tracked files, page under limit);
-#     refuse if any local-only path is tracked.       -> any failure aborts before writing anything
+#     refuse if any local-only path is tracked; vendor scan against the NEW page (orphaned source runs);
+#     preflight.py content warnings (advisory, never abort).   -> any failure aborts before writing anything
 #  2. write workspace/index.html and ../discriminator-briefs-site/index.html (the deployed copy)
 #  3. commit body from the page diff (tools/changelog.py), prepended to workspace/CHANGELOG.md
 #  4. commit "<sNN>: <message>" + body + trailers
@@ -77,6 +78,14 @@ o=$(python3 tools/vendor_scan.py 2>&1) || fail vendor-scan "$o"
 VEND="vendor: clean ($(echo "$o" | head -1 | grep -o '[0-9]* source shingles'); page $(echo "$o" | grep '(workspace/index.html)' | grep -o '[0-9.]*%'))"
 if [[ ! -d repair/sources ]]; then VEND="vendor: NOT CHECKED (repair/sources missing: restore axbx-local-only.tar.gz)"; fi
 echo "$VEND"
+# P7 (s105): judge tracked edit files against the page about to ship, so a wording change that
+# orphans a source run in an old sNN json fails this ship instead of the next one (s103)
+if [[ -d repair/sources ]]; then
+  o=$(python3 tools/vendor_scan.py --page "$TMP/index.html" 2>&1) || fail vendor-orphan "$o
+fix: reword or reorder the flagged file's run (git add it), as in s103"
+fi
+# advisory content checks (P1-P6): never abort; settle each line or pass it to the auditor
+python3 tools/preflight.py "$TMP/index.html" --base HEAD 2>&1 | head -40
 
 # ---- 2. write the page and the deployed copy
 git -C "$ROOT" show HEAD:./workspace/index.html > "$TMP/prev.html" 2>/dev/null || cp index.html "$TMP/prev.html"
