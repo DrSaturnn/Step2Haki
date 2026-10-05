@@ -2,6 +2,29 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-05 s104: open audit items 11, 13, 14: sourced conflict fixes
+
+```
+Page: 173 briefs, 2137 items -> 173 briefs, 2137 items
+Briefs changed (10):
+  - septic-bursitis (Hot Joint or Bursa in an Adult): prose edited (+180 chars)
+  - angina (Stable Ischemic Heart Disease): items edited (q_85da28aa7f3258808705, q_d25dc02a7b5a5784856a); versions bumped (q_85da28aa7f3258808705 v2->v3, q_d25dc02a7b5a5784856a v1->v2); attrs set (q_85da28aa7f3258808705 data-d2,data-d2-id); prose edited (+421 chars)
+  - dvt (Venous Thromboembolism): prose edited (+768 chars)
+  - arf (Acute Rheumatic Fever): prose edited (+225 chars)
+  - enuresis (Enuresis): prose edited (+88 chars)
+  - bs-puv (Posterior Urethral Valves): items edited (q_673f589cff4d5d1580c5, q_5754bf5b284e1769cd62); prose edited (-101 chars)
+  - dipstick-mismatch (Dark Urine: Hemoglobin, Myoglobin or Blood): items edited (q_5be8a0da76c457fdb71a, q_6ea06993abbe5bc98b9a, q_1d64b3226c055f9a9f6f, q_62f80a6786485812b47b); versions bumped (q_5be8a0da76c457fdb71a v2->v3, q_6ea06993abbe5bc98b9a v1->v2, q_1d64b3226c055f9a9f6f v1->v2); attrs set (q_5be8a0da76c457fdb71a data-d1,data-d1-id,data-d2,data-d2-id; q_6ea06993abbe5bc98b9a data-d2,data-d2-id); prose edited (+33 chars)
+  - bs-torch (Congenital Infections (TORCH)): prose edited (+315 chars)
+  - sellar-mass (Brain Tumors in a Child): items edited (q_d3def13fcf725f61915c); versions bumped (q_d3def13fcf725f61915c v2->v3); prose edited (+7 chars)
+  - peds-headache-imaging (Headache in a Child: Imaging and Treatment): prose edited (-24 chars)
+Other page changes (nav, headers, scripts): +776 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 173 briefs, 2137 items, 7 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 173 | bankwraps 173 | mcq 2137 (axCheck 2137, reveal-only 0) | malformed 0 | crit gridded 210/211 | vignette gridded 70/70 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.015%)
+```
+
 ## 2026-10-05 s103: em dashes to en dashes page-wide; gate check no-emdash
 
 ```
