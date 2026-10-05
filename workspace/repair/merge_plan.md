@@ -52,9 +52,9 @@ Rule 14 still applies: where a broader title promises content the brief does not
 | Cervicitis and Pelvic Inflammatory Disease (shipped s94) | Acute Cervicitis (`cervicitis`); Pelvic Inflammatory Disease (`bs-pid`) | 16 |
 | Fever and Sepsis in the Newborn (shipped s94) | The Febrile Infant — Finding the Source (`bs-febrile-infant`); Neonatal Sepsis and Its Mimics (`bs-neonatal-sepsis`) | 17 |
 | Fever and Rash in a Child (shipped s94) | Exanthems in a Child (`bs-exanthems`); Fever, Rash and Joint Pain: Name the Rash, Then Date the Exposure (`bs-fever-rash-arthralgia`) | 20 |
-| Hearing Loss and Chronic Ear Disease | Hearing Loss & Otosclerosis (`hearing`); Cholesteatoma and Chronic Ear Drainage (`cholesteatoma`) | 19 |
-| Brain Tumors in a Child | Sellar and Suprasellar Masses (`sellar-mass`); Posterior Fossa Localization (`bs-posterior-fossa`) | 19 |
-| Rashes in the Newborn and Infant | Benign Neonatal Rashes (`neonatal-rash`); Diaper Dermatitis (`diaper-dermatitis`) | 23 |
+| Hearing Loss and Chronic Ear Disease (shipped s95) | Hearing Loss & Otosclerosis (`hearing`); Cholesteatoma and Chronic Ear Drainage (`cholesteatoma`) | 19 |
+| Brain Tumors in a Child (shipped s95) | Sellar and Suprasellar Masses (`sellar-mass`); Posterior Fossa Localization (`bs-posterior-fossa`) | 19 |
+| Rashes in the Newborn and Infant (shipped s95) | Benign Neonatal Rashes (`neonatal-rash`); Diaper Dermatitis (`diaper-dermatitis`) | 23 |
 | Cervical Cancer Screening | Cervical Cancer Screening (`cervical`); Cervical Screening: the Age-21 Floor (`bs-cervical-gate`) | 17 |
 | Abnormal Uterine Bleeding | Adolescent Abnormal Uterine Bleeding (`adolescent-aub`); Uterine Fibroids (`fibroids`); Postmenopausal Bleeding (`pmb`) | 25 |
 
