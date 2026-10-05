@@ -1,0 +1,74 @@
+{
+ "edits": [
+  {
+   "op": "set_attr",
+   "target": "q_275467832fd82bf2a6c4",
+   "attr": "data-nid",
+   "value": "1556535179088 1575767268880",
+   "note": "s98: qid of the archived UWorld item pyelo q_b6d14ad5f412538dbee6 carried onto its authored replacement"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d726b7ef5300f9ba5d26",
+   "attr": "data-nid",
+   "value": "1575767268880",
+   "note": "s98: qid of the archived UWorld item pyelo q_43dfbe3878f05a598285 carried onto its authored replacement"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bc0baad2e2586dc8d5f4",
+   "attr": "data-nid",
+   "value": "1556535179088",
+   "note": "s98: qid of the archived UWorld item pyelo q_5b915fd039d45149af5e carried onto its authored replacement"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f05cf076b497d8b99729",
+   "attr": "data-nid",
+   "value": "1473995736635 1474670598330",
+   "note": "s98: qid of the archived UWorld item vegan q_44ce9acc258dd0603933 carried onto its authored replacement"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_97f1e8ba10bb4034e010",
+   "attr": "data-nid",
+   "value": "1462038745473",
+   "note": "s98: qid of the archived UWorld item bs-short-stature q_857e920d8681b391823c carried onto its authored replacement"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b1dd657dad06115ba86e",
+   "attr": "data-nid",
+   "value": "1487207181602 1487207190223 1517254540516 1556395773720",
+   "note": "s98: qid of the archived UWorld item bs-fever-rash-arthralgia q_336f9bcf10beebd35742 carried onto its authored replacement"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b265dce83e38f49b9dfe",
+   "attr": "data-nid",
+   "value": "1516239291731 1516239548476 1516241020438 1517088257170",
+   "note": "s98: qid of the archived UWorld item bs-fever-rash-arthralgia q_ea5c77c1f0c5c96dd1b4 carried onto its authored replacement"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2785e273f637f0e7cd0b",
+   "attr": "data-nid",
+   "value": "1484017974014 1556534560016",
+   "note": "s98: qid of the archived UWorld item bs-torticollis q_36648710cbec530aa34d carried onto its authored replacement"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bb45f716de4a588aa25f",
+   "attr": "data-nid",
+   "value": "1515539902403 1515540069137 1517249049783",
+   "note": "s98: qid of the archived UWorld item sjia q_dcc21109d541cdb738b2 carried onto its authored replacement"
+  },
+  {
+   "op": "set_attr",
+   "target": "sjia",
+   "attr": "data-nid",
+   "value": "1515539902403 1515540069137 1517249049783",
+   "note": "s98: qids of archived q_dcc21109d541cdb738b2 were lost in the JIA re-author; restored on the brief"
+  }
+ ]
+}

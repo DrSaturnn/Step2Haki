@@ -145,6 +145,7 @@ LOG = [
   [('Cervical Cancer Screening', ['Cervical Cancer Screening', 'Cervical Screening: the Age-21 Floor']),
    ('Abnormal Uterine Bleeding', ['Adolescent Abnormal Uterine Bleeding', 'Uterine Fibroids', 'Postmenopausal Bleeding'])]),
  (97, '2026-10-04', 'Every brief now opens with the same two-line subtitle: what it covers, then the question it trains you to ask (116 briefs updated; the rest already had it).', []),
+ (98, '2026-10-05', 'Source pass. Flagged lines in Vaccines in Pregnancy, Fever and Sepsis in the Newborn, Abnormal Uterine Bleeding, Rashes in the Newborn and Infant and Brain Tumors in a Child were checked against CDC, Merck, StatPearls, AAFP, DermNet and the RhoGAM label: each now matches its source or was removed (COVID-19 in pregnancy stays flagged while CDC pages disagree). Anti-D: a positive screen means alloimmunization only without recent anti-D immunoglobulin. Imaging before a lumbar puncture in a child follows Merck (antibiotics first, tap only if imaging shows it is safe). Diabetic eye referral follows ADA 12.9; antidepressants continue about 6 more months after remission. Childhood Vaccine Schedule gains two questions (a pregnant household contact; spacing of live vaccines). UWorld question ids now sit on the questions rewritten from them.', []),
 ]
 if __name__ == '__main__':
     import json, sys

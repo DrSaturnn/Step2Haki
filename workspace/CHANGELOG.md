@@ -2,6 +2,34 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-05 s98: source pass on flagged lines, two vaccine questions, qid carry-over
+
+```
+Page: 173 briefs, 2136 items -> 173 briefs, 2138 items
+Briefs changed (15):
+  - sjia (Juvenile Idiopathic Arthritis): attrs set (brief data-nid; q_bb45f716de4a588aa25f data-nid)
+  - bs-torticollis (Torticollis and Plagiocephaly in an Infant): attrs set (q_2785e273f637f0e7cd0b data-nid)
+  - pyelo (Pyelonephritis): attrs set (q_275467832fd82bf2a6c4 data-nid; q_d726b7ef5300f9ba5d26 data-nid; q_bc0baad2e2586dc8d5f4 data-nid)
+  - nephropathy (Diabetes Complications and Annual Care): prose edited (+72 chars)
+  - thyroid (Thyroid Disease in an Adult): items edited (q_5b792424dda755df93c3, q_4f013461d721568892bb)
+  - bs-short-stature (Abnormal Growth in a Child): attrs set (q_97f1e8ba10bb4034e010 data-nid)
+  - dtap (Childhood Vaccine Schedule and Contraindications): 2 items added (q_7adc8613bee0c153bb6c, q_4a5f07a84530c42dbe29)
+  - bs-neonatal-sepsis (Fever and Sepsis in the Newborn): items edited (q_d29843599a5f564e932e, q_3eef190b74fc57c089d5, q_7041d6f50eba528cbeb4, q_ea14763c4b2b52bd86e1, q_2a3f80a416795ff0b04b, q_64c870e848915d3ab7dc, q_271dda6abd5a56149a2e); versions bumped (q_64c870e848915d3ab7dc v3->v4); attrs set (q_64c870e848915d3ab7dc data-d2,data-d2-id,data-lead-in); prose edited (-36 chars)
+  - bs-fever-rash-arthralgia (Fever and Rash in a Child): attrs set (q_b1dd657dad06115ba86e data-nid; q_b265dce83e38f49b9dfe data-nid)
+  - sellar-mass (Brain Tumors in a Child): items edited (q_d3def13fcf725f61915c, q_d27751944d79592bbf0a, q_5ac63ee821b45b38b13a); prose edited (-196 chars)
+  - neonatal-rash (Rashes in the Newborn and Infant): items edited (q_c5e61e13bbce537395f5, q_8c635f2df19d6a4291b7); prose edited (-35 chars)
+  - preg-vax (Vaccines in Pregnancy): items edited (q_24ffcfeddd77cd468d16, q_c2ef7d11a25c5dc69059, q_eed13df79898593cb06f, q_a2fbd920cdf25385905a, q_fcc9a1766e0355ac9f17, q_4ab0fde1abec30dbb16a, q_af93eb772ee45f158173, q_2b2db8c3daf65e2784b0, q_4c3c9e63ed4e55b0a236); prose edited (+116 chars)
+  - adolescent-aub (Abnormal Uterine Bleeding): items edited (q_ae401766ed105164bf02, q_a70277f771bb7a222c07, q_ff21955c3d0855e28a50, q_c343a843ea7f5c499189, q_54c5aa6315c35c4a931e, q_4ae5360424a352409e7b, q_a6560aa79f4b58c79a25); prose edited (-74 chars)
+  - vegan (Vitamins and Nutritional Deficiencies): attrs set (q_f05cf076b497d8b99729 data-nid)
+  - ssri-effects (SSRI Adverse Effects): prose edited (+14 chars)
+Other page changes (nav, headers, scripts): +894 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 173 briefs, 2138 items, 7 scripts, 37 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 173 | bankwraps 173 | mcq 2138 (axCheck 2138, reveal-only 0) | malformed 0 | crit gridded 210/211 | vignette gridded 70/70 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.017%)
+```
+
 ## 2026-10-04 s97: two-line subtitles on the remaining 116 briefs
 
 ```
