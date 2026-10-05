@@ -58,7 +58,7 @@ Decisions, to be carried out in a "decisions" batch between merge batches (statu
 ## Open audit items (my list; your call on priority)
 
 
-10. **Scope and source audit** of the s18 workup tables: trim specialist rows, flag memory-sourced numbers.
+10. (deferred 2026-10-05; recommended as lean rewrites of the 66 briefs instead of a table audit) **Scope and source audit** of the s18 workup tables: trim specialist rows, flag memory-sourced numbers.
 11. (done s104; cervical ASC-US in s96) **s18 conflicts:** bs-puv VCUG vs cystoscopy; enuresis age gate; SCFE effusion claim; newborn-cyanosis items; DVT duration; cervical ASC-US; bs-torch confirmation after 3 weeks; empty trap labels; stray ⚠︎.
 12. (done s102) **RSV isolation wording** (UWorld table says contact only; the library says many respiratory viruses need contact plus droplet).
 13. (done s104) **Two older weak-distractor items** (angina with LBBB; dipstick mismatch).
