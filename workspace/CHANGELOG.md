@@ -2,6 +2,36 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-05 s105: amend ledger items 1-7
+
+```
+Page: 173 briefs, 2137 items -> 173 briefs, 2137 items
+Briefs changed (17):
+  - backpain (Low Back Pain in an Adult): markup changed
+  - septic-hip (Septic Arthritis and Transient Synovitis in a Child): markup changed
+  - bone-tumors (Bone Lesions in a Child): markup changed
+  - growth (Developmental Milestones and Normal Growth): markup changed
+  - htn-drugs (Hypertension in an Adult): items edited (q_9f89eae8595d5366959e)
+  - kawasaki (Kawasaki Disease): markup changed
+  - sinopulm-structural (Recurrent Respiratory Infection and Structural Lung Disease): items edited (q_4024fba77e315bd4958c, q_25e903758718b3c1a0bd, q_3525ab628d12506db64a)
+  - neonatal-jaundice (Jaundice in a Newborn): items edited (q_66a38fc6f1645f498b16, q_e3d808bf1661371049fc); versions bumped (q_66a38fc6f1645f498b16 v3->v4); attrs set (q_66a38fc6f1645f498b16 data-lead-in)
+  - enuresis (Enuresis): items edited (q_88b136166b31572fa806); versions bumped (q_88b136166b31572fa806 v2->v3); prose edited (+122 chars)
+  - rmsf (Tick-Borne Illness): items edited (q_cc6d2363a48165ac32a6, q_f71a607ceba6cc5c862c); versions bumped (q_cc6d2363a48165ac32a6 v2->v3, q_f71a607ceba6cc5c862c v1->v2)
+  - bs-torch (Congenital Infections (TORCH)): markup changed
+  - bs-foodborne (Infectious Diarrhea): markup changed
+  - sellar-mass (Brain Tumors in a Child): items edited (q_18fa06e851297f8ed32a, q_67c278677f4257e4bb0f); versions bumped (q_18fa06e851297f8ed32a v1->v2, q_67c278677f4257e4bb0f v2->v3); attrs set (q_18fa06e851297f8ed32a data-lead-in); prose edited (+151 chars)
+  - febrile-seizure (Seizure with Fever in a Child): items edited (q_5b8fca21034364e3ec5b); versions bumped (q_5b8fca21034364e3ec5b v3->v4)
+  - bipolar-mania (Bipolar Disorder): markup changed
+  - lithium-effects (Lithium Therapy): markup changed
+  - ipv (Intimate Partner Violence): markup changed
+Other page changes (nav, headers, scripts): +549 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 173 briefs, 2137 items, 7 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 173 | bankwraps 173 | mcq 2137 (axCheck 2137, reveal-only 0) | malformed 0 | crit gridded 210/211 | vignette gridded 70/70 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.015%)
+```
+
 ## 2026-10-05 s104: open audit items 11, 13, 14: sourced conflict fixes
 
 ```
