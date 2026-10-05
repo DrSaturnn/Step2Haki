@@ -1,0 +1,816 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "pmr",
+   "find": "<p class=\"sub\">Elderly · proximal stiffness · ESR</p>",
+   "with": "<p class=\"sub\">aching with normal strength &middot; sedimentation rate and creatine kinase &middot; giant cell arteritis overlap &middot; prednisone response<span class=\"subq\">Is this pain and stiffness with normal strength after 50, and does low-dose prednisone clear it within days?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "<p class=\"sub\">Sick or well, then age and time &middot; Is the hip hot, how old is the child, and how long has it been?</p>",
+   "with": "<p class=\"sub\">sick or well, then age, then time &middot; Kocher score and aspiration &middot; night pain earns a blood count &middot; examine the hip<span class=\"subq\">Is the hip hot, how old is the child, and how long has the limp lasted?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "<p class=\"sub\">Did the pain resolve and come back? &middot; Heterotopic bone weeks after a contusion; does passive stretch reproduce the pain?</p>",
+   "with": "<p class=\"sub\">heterotopic bone after a contusion &middot; passive stretch &middot; infection and tumor mimics &middot; calcifies at 4 to 8 weeks &middot; no early biopsy<span class=\"subq\">Did the pain clear and come back with a mass, and does passive stretch reproduce it?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puncture-osteomyelitis",
+   "find": "<p class=\"sub\">A nail through a shoe and a foot still sore weeks later is Pseudomonas</p>",
+   "with": "<p class=\"sub\">exposure and clock name the organism &middot; shoe vs fresh or salt water &middot; film, then MRI &middot; debridement and bone culture<span class=\"subq\">Was the puncture through a shoe or in water, and is this the first days or weeks later?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-learning",
+   "find": "<p class=\"sub\">Behavior confined to school · read the child's private interview</p>",
+   "with": "<p class=\"sub\">behavior confined to school &middot; the child's private interview &middot; learning vs behavioral disorders &middot; hearing and vision<span class=\"subq\">Does the behavior stay at school, and what does the child say when interviewed alone?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "<p class=\"sub\">brain, anterior horn cell, neuromuscular junction or muscle</p>",
+   "with": "<p class=\"sub\">brain, anterior horn cell, neuromuscular junction or muscle &middot; strength and reflexes &middot; genetic confirmation &middot; Down syndrome care<span class=\"subq\">Is the infant floppy but strong, or weak with absent reflexes, and which test confirms the level?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "dvt",
+   "find": "<p class=\"sub\">Pretest probability governs the test</p>",
+   "with": "<p class=\"sub\">pretest probability governs the test &middot; D-dimer only rules out &middot; imaging by stability &middot; swollen-leg mimics<span class=\"subq\">How likely is a clot before testing, and is the patient stable enough for CT?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "arf",
+   "find": "<p class=\"sub\">The post-streptococcal sequence outweighs a vivid setting detail</p>",
+   "with": "<p class=\"sub\">Jones criteria &middot; recent strep evidence &middot; carditis on echo &middot; a setting is not a mechanism &middot; penicillin prophylaxis<span class=\"subq\">Did a sore throat come 2 to 4 weeks before, and do the findings meet the Jones criteria?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "cough",
+   "find": "<p class=\"sub\">Failed empiric trials eliminate causes</p>",
+   "with": "<p class=\"sub\">chest film first &middot; postnasal drip, asthma or reflux &middot; ACE inhibitor &middot; empiric trials as tests &middot; cancer flags<span class=\"subq\">Is the chest film normal, and which empiric trials have already failed?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "airway",
+   "find": "<p class=\"sub\">Stridor vs. wheeze · toxic vs. well</p>",
+   "with": "<p class=\"sub\">stridor vs wheeze &middot; toxic vs well &middot; the phase of the noise localizes &middot; airway before imaging<span class=\"subq\">Which phase is the noise in, and is the child toxic or well?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "<p class=\"sub\">Classify, localize, then test for causes</p>",
+   "with": "<p class=\"sub\">hepatocellular vs cholestatic &middot; liver or bone source &middot; ducts on ultrasound &middot; biliary vs sclerosing cholangitis<span class=\"subq\">Which pattern is it, and are the ducts dilated on ultrasound?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "<p class=\"sub\">Exclude alarm signs, then start an oral laxative before any rectal treatment &middot; Is growth normal and the examination benign, and is there stool in the rectum?</p>",
+   "with": "<p class=\"sub\">withholding cycle &middot; alarm signs &middot; impacted or not &middot; oral laxative before any rectal treatment &middot; maintenance for months<span class=\"subq\">Is growth normal and the examination benign, and is there stool in the rectum?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "<p class=\"sub\">Firm stool on rectal exam confirms impaction</p>",
+   "with": "<p class=\"sub\">firm stool in the vault &middot; overflow diarrhea &middot; anticholinergic cause &middot; enema, then manual disimpaction &middot; treat the cause<span class=\"subq\">What does the rectal exam find, and which drug is slowing the colon?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bph",
+   "find": "<p class=\"sub\">Prostatic obstruction presenting as a three-stage history</p>",
+   "with": "<p class=\"sub\">three-stage history &middot; retention, infection and kidney injury as complications &middot; 1+ blood is not a stone &middot; catheter first<span class=\"subq\">Which process came first, and does it explain every other finding?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-aki",
+   "find": "<p class=\"sub\">Gastroenteritis + ibuprofen · the labs assign the compartment</p>",
+   "with": "<p class=\"sub\">the labs assign the compartment &middot; prerenal pattern &middot; ibuprofen with volume loss &middot; sediment &middot; fluids, stop the drug<span class=\"subq\">Is the kidney still concentrating, and what does the sediment show?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-distal-rta",
+   "find": "<p class=\"sub\">Toddler with poor growth, low potassium and a normal-gap acidosis &middot; Is the urine pH above 5.5 during the acidosis?</p>",
+   "with": "<p class=\"sub\">potassium, acid-base, then blood pressure &middot; anion gap &middot; urine pH during acidosis &middot; distal vs proximal vs type 4<span class=\"subq\">Is the gap normal, and is the urine pH above 5.5 during the acidosis?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "<p class=\"sub\">read TSH direction and the neck to locate the defect &middot; is TSH high or low, and is there a goiter?</p>",
+   "with": "<p class=\"sub\">newborn screen &middot; TSH direction locates the defect &middot; goiter or none &middot; dysgenesis as the default &middot; treat before imaging<span class=\"subq\">Is TSH high or low, and is there a goiter?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "<p class=\"sub\">Hematology &middot; heme-positive dipstick with no RBCs &middot; the mismatch names the source</p>",
+   "with": "<p class=\"sub\">heme-positive dipstick, no red cells &middot; hemoglobin vs myoglobin &middot; creatine kinase and hemolysis labs &middot; valve hemolysis<span class=\"subq\">Does microscopy show red cells, and is the pigment hemoglobin or myoglobin?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "<p class=\"sub\">Pancytopenia with bone pain · UWorld and Aquifer · screen versus confirm</p>",
+   "with": "<p class=\"sub\">pancytopenia with bone pain &middot; counts down vs up &middot; screen versus confirm &middot; marrow before steroids<span class=\"subq\">Are two or more cell lines down, and has the marrow been sampled before any steroid?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<p class=\"sub\">which antibody defect, and what it predicts &middot; Are B cells present, and which isotype is preserved or elevated?</p>",
+   "with": "<p class=\"sub\">infection pattern &middot; B-cell count first &middot; isotype panel &middot; class-switch failure &middot; what each defect predicts<span class=\"subq\">Are B cells present, and which isotype is preserved or elevated?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<p class=\"sub\">the organism list identifies the diagnosis &middot; Are there granulomas, and is the infection outside the chest?</p>",
+   "with": "<p class=\"sub\">number vs function &middot; catalase-positive organisms &middot; granulomas and abscesses &middot; oxidative burst test &middot; low counts<span class=\"subq\">Is the neutrophil count low, or are there granulomas with infection outside the chest?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-isolation",
+   "find": "<p class=\"sub\">Gram-negative diplococci in the CSF of a shocked infant &middot; how big is the particle, and who is being protected from whom?</p>",
+   "with": "<p class=\"sub\">particle size &middot; droplet, airborne or contact &middot; gear and room &middot; when it ends &middot; neutropenic precautions<span class=\"subq\">How big is the particle, and who is being protected from whom?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "cluster",
+   "find": "<p class=\"sub\">Migraine · cluster · tension · the autonomic tell</p>",
+   "with": "<p class=\"sub\">migraine, cluster, tension &middot; the autonomic tell &middot; attack length &middot; glaucoma and dissection &middot; oxygen, then verapamil<span class=\"subq\">How long do the attacks last, and are there autonomic signs on the same side?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "abrs-complications",
+   "find": "<p class=\"sub\">A normal neuro exam is a low-sensitivity test</p>",
+   "with": "<p class=\"sub\">double worsening &middot; orbital and intracranial flags &middot; preseptal vs orbital &middot; image before lumbar puncture<span class=\"subq\">Are there orbital or intracranial flags, even with a nonfocal neurologic exam?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tethered",
+   "find": "<p class=\"sub\">Grade the reflexes first · a number outranks a story</p>",
+   "with": "<p class=\"sub\">grade the reflexes first &middot; a number outranks a story &middot; upper vs lower motor neuron &middot; bladder, back, pes cavus<span class=\"subq\">Are the reflexes brisk or diminished, and is the bladder involved?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-eyelid-lump",
+   "find": "<p class=\"sub\">Tender nodule on the lid margin with a red eye and no fever &middot; NBME &middot; where is the swelling, and does it spread beyond the lump?</p>",
+   "with": "<p class=\"sub\">hordeolum vs chalazion &middot; lid margin vs inner corner &middot; preseptal vs orbital &middot; warm compresses, antibiotics if it spreads<span class=\"subq\">Where is the swelling, and does it spread beyond the lump?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "eczemaherp",
+   "find": "<p class=\"sub\">Atopic dermatitis as the precondition for HSV spread</p>",
+   "with": "<p class=\"sub\">vesicles on eczema &middot; punched-out erosions vs honey crust &middot; mucosa and failed antibiotics exclude mimics &middot; acyclovir now<span class=\"subq\">Are these vesicles on eczema, and what do the mucosa and the failed antibiotic exclude?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "contraception",
+   "find": "<p class=\"sub\">A pregnancy test precedes every contraceptive decision</p>",
+   "with": "<p class=\"sub\">pregnancy test first &middot; injection window and fertility &middot; no-estrogen situations &middot; emergency contraception &middot; amenorrhea<span class=\"subq\">Could she be pregnant, and does anything rule out estrogen?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "smoking",
+   "find": "<p class=\"sub\">Most beneficial intervention: rank by magnitude of benefit</p>",
+   "with": "<p class=\"sub\">rank by magnitude of benefit &middot; smoking cessation first &middot; blood pressure, statin, glucose &middot; organ-specific exceptions<span class=\"subq\">Which option has the largest mortality benefit, and is the outcome limited to one organ?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "hippos",
+   "find": "<p class=\"sub\">Hip fracture versus posterior dislocation: leg positions are often confused</p>",
+   "with": "<p class=\"sub\">fracture vs posterior dislocation by leg position &middot; the mnemonic &middot; the shoulder mirror &middot; reduction within about 6 hours<span class=\"subq\">Is the leg externally rotated and abducted, or internally rotated, adducted and flexed?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "sjia",
+   "find": "<p class=\"sub\">Count the joints, chart the fever &middot; Six weeks of arthritis, then joints and fever set the subtype</p>",
+   "with": "<p class=\"sub\">six weeks of arthritis, then joints and fever set the subtype &middot; mimics &middot; the treatment ladder &middot; marrow before steroids<span class=\"subq\">How many joints, does the fever spike daily, and are two or more cell lines low?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "<p class=\"sub\">A normal exam is growing pains; tender calves after influenza are myositis</p>",
+   "with": "<p class=\"sub\">growing pains &middot; myositis after influenza &middot; reflexes separate Guillain-Barr&eacute; &middot; leukemia flags &middot; when to x-ray<span class=\"subq\">Is the exam normal, and if not, are the calves tender, the reflexes gone or the bones tender?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torticollis",
+   "find": "<p class=\"sub\">The tilt names the tight muscle; the ear names the flat head</p>",
+   "with": "<p class=\"sub\">the tilt names the tight muscle; the ear names the flat head &middot; plagiocephaly vs craniosynostosis &middot; hip and foot companions<span class=\"subq\">Which way does the head tilt, and is the ear on the flat side pushed forward or pulled back?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nat-fracture",
+   "find": "<p class=\"sub\">A corner fracture of the distal femur in a toddler &middot; does the fracture need a pull or a twist, and does the film or exam give a bone disease its own sign?</p>",
+   "with": "<p class=\"sub\">fractures that mean abuse &middot; red flags &middot; the bone-disease mimics &middot; a risk factor is not a finding<span class=\"subq\">Does the fracture need a pull, twist or squeeze, and does the film or exam give a bone disease its own sign?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "chf",
+   "find": "<p class=\"sub\">Ranking interventions by outcome</p>",
+   "with": "<p class=\"sub\">ranking interventions by outcome &middot; blood pressure drives decompensation &middot; lipids act over years &middot; statins in heart failure<span class=\"subq\">Which abnormal value drives this outcome, and on what time horizon does treating it pay off?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "<p class=\"sub\">Pediatric murmurs · one pathologic feature buys the echo</p>",
+   "with": "<p class=\"sub\">innocent vs pathologic murmurs &middot; one pathologic feature buys the echo &middot; louder on standing &middot; the continuous murmur by location<span class=\"subq\">Is any single feature pathologic, and does the murmur get louder or softer on standing?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "myocarditis",
+   "find": "<p class=\"sub\">the viral prodrome that is not bronchiolitis &middot; a gallop reassigns the failing organ</p>",
+   "with": "<p class=\"sub\">the viral prodrome that is not bronchiolitis &middot; gallop, apical murmur and weak pulses &middot; cardiogenic shock: cautious fluid<span class=\"subq\">Is there a gallop or a new murmur, and are the pulses weak with a low pressure?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "pneumoconiosis",
+   "find": "<p class=\"sub\">Matching occupational exposure to lung disease</p>",
+   "with": "<p class=\"sub\">matching occupational exposure to lung disease &middot; upper vs lower lobes &middot; pleural plaques &middot; cancer and tuberculosis risk<span class=\"subq\">What did the patient breathe at work, which lobes are involved, and is the pleura involved?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "asthma",
+   "find": "<p class=\"sub\">Exam answer vs. current guideline</p>",
+   "with": "<p class=\"sub\">severity by day and night symptom counts &middot; the step ladder &middot; exam answer vs current guideline<span class=\"subq\">How often are the day and night symptoms, and is the answer ladder keyed to the exam or the current guideline?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "<p class=\"sub\">Regurgitation of undigested food in an old man · the swallow study comes before any scope or tube</p>",
+   "with": "<p class=\"sub\">undigested regurgitation in an older man &middot; the swallow study before any scope or tube &middot; achalasia and cancer &middot; myotomy<span class=\"subq\">Is the regurgitated food undigested, and is the finding in the neck or in the chest?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "<p class=\"sub\">Stereotyped episodes, well in between &middot; the pattern is the diagnosis</p>",
+   "with": "<p class=\"sub\">stereotyped episodes, well in between &middot; the migraine link &middot; dental erosion is not purging &middot; findings that argue against it<span class=\"subq\">Are the episodes identical and self-limited, and is the child well and growing between them?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "<p class=\"sub\">Choking on the first feed · pass a tube before you order a picture</p>",
+   "with": "<p class=\"sub\">choking on the first feed &middot; pass a tube before you order a picture &middot; fistula type by abdominal gas &middot; age at presentation<span class=\"subq\">Did it start with the first feed, and will a nasogastric tube pass?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "scrotum",
+   "find": "<p class=\"sub\">Painful acute scrotum and painless scrotal mass follow separate workups</p>",
+   "with": "<p class=\"sub\">painful scrotum and painless mass: separate workups &middot; torsion vs epididymitis &middot; the two hard pairs &middot; tumor markers<span class=\"subq\">Was the onset sudden or gradual, and does the mass transilluminate or change with Valsalva?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "<p class=\"sub\">One lesion upstream of every finding · count the orphaned findings</p>",
+   "with": "<p class=\"sub\">one upstream lesion behind Potter sequence &middot; a palpable bladder names the cause &middot; mimics orphan a finding &middot; drain, then image<span class=\"subq\">Which single lesion explains every finding, and is there a bladder to feel?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-puffy-eyes",
+   "find": "<p class=\"sub\">swelling local to the eye, or the first sign of edema everywhere</p>",
+   "with": "<p class=\"sub\">local to the eye, or the first sign of edema everywhere &middot; red flags &middot; the dipstick splits the branches &middot; minimal change disease<span class=\"subq\">Does the swelling belong to the eye or to the whole child, and what does the urine dipstick show?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<p class=\"sub\">Identify the syndrome from the visible lesion and the organ pattern &middot; What exactly is the retinal lesion, and what color is the skin patch?</p>",
+   "with": "<p class=\"sub\">the visible lesion and organ pattern name the syndrome &middot; von Hippel-Lindau &middot; neurofibromatosis type 1 &middot; tuberous sclerosis<span class=\"subq\">What exactly is the retinal lesion, what color is the skin patch, and how many patches are there?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "<p class=\"sub\">Hematology &middot; iron studies before electrophoresis &middot; iron deficiency masks thalassemia</p>",
+   "with": "<p class=\"sub\">iron studies before electrophoresis &middot; iron deficiency masks thalassemia trait &middot; lead and chronic disease &middot; the CBC alone<span class=\"subq\">Is the patient iron replete yet, and do the RDW and red cell count fit deficiency or trait?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-bruising",
+   "find": "<p class=\"sub\">vessel, platelets, clotting factors, or trauma</p>",
+   "with": "<p class=\"sub\">vessel, platelets, clotting factors or trauma &middot; red flags &middot; the platelet count removes branches &middot; IgA vasculitis<span class=\"subq\">What failed, and is the platelet count normal in a well child?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<p class=\"sub\">treat suspected rickettsiosis before confirming it &middot; where the rash started, and what the platelets did</p>",
+   "with": "<p class=\"sub\">treat suspected rickettsiosis before confirming it &middot; a rash from the extremities inward &middot; the platelet, sodium and liver triad<span class=\"subq\">Where did the rash start, and what did the platelets, sodium and transaminases do?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-pta",
+   "find": "<p class=\"sub\">Trismus with a deviated uvula · no imaging needed</p>",
+   "with": "<p class=\"sub\">trismus with a deviated uvula needs no imaging &middot; deep neck spaces by age &middot; epiglottitis and Ludwig angina: airway first<span class=\"subq\">How old is the child, and is it trismus, pain on neck extension, or tripoding with stridor?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "<p class=\"sub\">Fever and bloody stools after camp food &middot; what did the patient eat, and does that organism need a blood culture or an antibiotic?</p>",
+   "with": "<p class=\"sub\">timing gates &middot; organism by food source &middot; stool culture, blood culture or neither &middot; who gets an antibiotic<span class=\"subq\">What did the patient eat, how soon did it start, and does that organism need a blood culture or an antibiotic?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<p class=\"sub\">When pediatric headache needs neuroimaging, and when it does not &middot; Is anything abnormal outside the headache history — the examination, the fundus, the growth chart, the vitals?</p>",
+   "with": "<p class=\"sub\">when a child's headache needs imaging &middot; migraine vomiting is not a pressure sign &middot; the treatment ladder &middot; drugs that raise pressure<span class=\"subq\">Is anything abnormal outside the headache history: the examination, the fundus, the growth chart or the vitals?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "<p class=\"sub\">Neurology &middot; shunt in situ changes the entire ICP workup &middot; image first, never LP</p>",
+   "with": "<p class=\"sub\">a shunt changes the raised-pressure workup &middot; image first, never a lumbar puncture &middot; shunt series and tap &middot; the big infant head<span class=\"subq\">Does the child have a shunt, and is there any sign of raised intracranial pressure?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-reye",
+   "find": "<p class=\"sub\">Cause of the cerebral <i>edema</i>, not of the illness</p>",
+   "with": "<p class=\"sub\">cause of the cerebral <i>edema</i>, not of the illness &middot; Reye syndrome &middot; only ammonia swells astrocytes &middot; the vitals eliminate<span class=\"subq\">Which option causes edema rather than only encephalopathy, and do the vitals exclude the rest?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-child-headache",
+   "find": "<p class=\"sub\">primary headache, or a mass, raised pressure, infection or bleeding</p>",
+   "with": "<p class=\"sub\">primary, or a mass, raised pressure, infection or bleeding &middot; red flags &middot; the fundi and cerebellar signs &middot; posterior fossa tumor<span class=\"subq\">Does the headache come and go or progress, and are the fundi or the gait abnormal?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "<p class=\"sub\">The scalp surface and the nodes identify the cause &middot; Is the patch scaly, and are the draining nodes enlarged?</p>",
+   "with": "<p class=\"sub\">the scalp surface and the nodes identify the cause &middot; tinea capitis needs oral therapy &middot; trichotillomania and alopecia areata<span class=\"subq\">Is the patch scaly, and are the draining nodes enlarged?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<p class=\"sub\">Identify the teratogen from the malformation pattern &middot; Which single malformation belongs to only one agent?</p>",
+   "with": "<p class=\"sub\">the teratogen from the malformation pattern &middot; critical periods &middot; phenytoin vs alcohol &middot; anticoagulation in pregnancy<span class=\"subq\">Which single malformation belongs to only one agent, and when in pregnancy was the exposure?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "preop",
+   "find": "<p class=\"sub\">Numbers that gate procedures</p>",
+   "with": "<p class=\"sub\">numbers that gate procedures &middot; platelet thresholds &middot; low counts you do not transfuse &middot; desmopressin treats function, not count<span class=\"subq\">Does the count clear the threshold for this procedure, and is the low count real and worth transfusing?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "oa-pharm",
+   "find": "<p class=\"sub\">Class vs. member</p>",
+   "with": "<p class=\"sub\">pharmacotherapy ladder &middot; class right, member wrong &middot; ketorolac's 5-day maximum &middot; excluding inflammatory arthritis<span class=\"subq\">Is the offered drug the right member of the right class for a chronic condition in this patient?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "nursemaid",
+   "find": "<p class=\"sub\">A pull with a normal elbow is reduced; anything else is imaged</p>",
+   "with": "<p class=\"sub\">pull or fall &middot; reduce or image &middot; hyperpronation vs supination-flexion &middot; the arm unused after reduction &middot; suspecting abuse<span class=\"subq\">Was it a pull with a normal elbow at the right age, and does the child use the arm after reduction?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bone-tumors",
+   "find": "<p class=\"sub\">Name the lesion from its site, age and film, then predict its course</p>",
+   "with": "<p class=\"sub\">childhood bone lesions by site &middot; age and periosteum &middot; what each does next &middot; imaging before biopsy &middot; Ewing or infection<span class=\"subq\">Where does it sit, how old is the child, and is the periosteum quiet or aggressive?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-brachial-plexus",
+   "find": "<p class=\"sub\">Absent grasp with Horner · which of Moro, biceps and grasp is lost?</p>",
+   "with": "<p class=\"sub\">upper vs lower plexus vs fracture &middot; Moro, biceps and grasp by lesion &middot; Horner syndrome rides with T1 &middot; prognosis<span class=\"subq\">Which of Moro, biceps and grasp is lost, and are ptosis, miosis or crepitus present?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shock",
+   "find": "<p class=\"sub\">Shock is classified by mechanism, not appearance · perfusion before pressure</p>",
+   "with": "<p class=\"sub\">four categories by mechanism, not appearance &middot; cold shock in children &middot; perfusion before pressure &middot; septic shock ladder<span class=\"subq\">Is perfusion abnormal, and what is wrong with the circulation rather than with the skin?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "angina",
+   "find": "<p class=\"sub\">The trigger localizes better than the location</p>",
+   "with": "<p class=\"sub\">three angina criteria, not location &middot; anginal equivalents &middot; retired terminology &middot; stress test choice &middot; high-risk findings<span class=\"subq\">What provokes the pain and what relieves it, wherever the patient points?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "<p class=\"sub\">Sort lung, heart or airway before naming a lesion &middot; Is he working to breathe, does oxygen help, and does the cyanosis change with what he is doing?</p>",
+   "with": "<p class=\"sub\">lung, heart or airway before a lesion &middot; work of breathing, oxygen response, two limbs &middot; normal exam: the trigger decides<span class=\"subq\">Is he working to breathe, does oxygen help, and does the cyanosis change with what he is doing?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "del22q11",
+   "find": "<p class=\"sub\">the syndrome cluster is given; identify the missing component &middot; read the last sentence first</p>",
+   "with": "<p class=\"sub\">the syndrome is given; find the missing piece &middot; CATCH &middot; which syndrome has which finding &middot; read the last sentence first<span class=\"subq\">Which component did the vignette leave out, and which bedside sign in the exam shows it?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "rhinitis",
+   "find": "<p class=\"sub\">Step-up therapy in the right order</p>",
+   "with": "<p class=\"sub\">the step-up ladder &middot; nasal steroid after antihistamines fail &middot; start 2 weeks before pollen &middot; immunotherapy is the bait<span class=\"subq\">Which step has the patient already failed, and how far off is the pollen season?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "liver-preg",
+   "find": "<p class=\"sub\">Abnormal liver tests in pregnancy: check the trimester first</p>",
+   "with": "<p class=\"sub\">liver labs in normal pregnancy &middot; liver disease by trimester &middot; alkaline phosphatase &middot; acute fatty liver vs HELLP<span class=\"subq\">Does the gestational age fit a pregnancy-specific liver disease, or is this unrelated to pregnancy?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "<p class=\"sub\">Well-appearing infant with a stool complaint · reassure, eliminate, or work up</p>",
+   "with": "<p class=\"sub\">dyschezia, allergic proctocolitis, secondary lactase deficiency &middot; ill-appearing mimics &middot; reassure, eliminate, or work up<span class=\"subq\">Is the infant well and thriving, and what do the stool and its timing after the trigger show?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<p class=\"sub\">Bilious emesis, bloody stool &middot; the film tells you which one</p>",
+   "with": "<p class=\"sub\">enterocolitis vs volvulus vs atresia &middot; bilious emesis, bloody stool &middot; the film tells you which one &middot; excluding malrotation<span class=\"subq\">Is there air in the wall, air where bowel should be, or no air at all?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "<p class=\"sub\">Skin-covered and reducible · is there skin over it, and how big and how old is it?</p>",
+   "with": "<p class=\"sub\">hernia vs omphalocele vs gastroschisis &middot; skin-covered and reducible: observe &middot; 1.5 cm and age 5 cutoffs &middot; incarceration<span class=\"subq\">Is there skin over it, and how big and how old is it?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "hypercalcemia",
+   "find": "<p class=\"sub\">Check <b>PTH</b> (parathyroid hormone) first in every case of hypercalcemia</p>",
+   "with": "<p class=\"sub\">parathyroid hormone first in every case &middot; calcium and phosphorus patterns &middot; normal labs that rule out alternatives<span class=\"subq\">Is the parathyroid hormone high or suppressed, and which way is the phosphorus going?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-incontinence",
+   "find": "<p class=\"sub\">The postvoid residual splits the differential</p>",
+   "with": "<p class=\"sub\">stress, urge, overflow, fistula &middot; the postvoid residual splits the differential &middot; cough stress test &middot; drug pairings<span class=\"subq\">What is the postvoid residual, and which diagnosis does that number make impossible?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "gynecomastia",
+   "find": "<p class=\"sub\">A known condition raises the prior probability but does not make the diagnosis</p>",
+   "with": "<p class=\"sub\">gynecomastia vs male breast cancer &middot; image first &middot; Klinefelter is the risk factor, not the explanation<span class=\"subq\">Does the mass behave like the known condition, or like something it only made more likely?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "homocystinuria",
+   "find": "<p class=\"sub\">A tall, thin child with a clot or learning problems, especially with fair skin, needs a homocysteine level before Marfan is called</p>",
+   "with": "<p class=\"sub\">homocystinuria vs Marfan vs Ehlers-Danlos &middot; lens down or up and out &middot; homocysteine before Marfan is called &middot; B6 first<span class=\"subq\">What is this child doing that Marfan cannot: clots, learning problems, fair skin or a downward lens?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "<p class=\"sub\">Hematology &middot; refractory bleeding on replacement = alloantibodies &middot; mixing study proves it</p>",
+   "with": "<p class=\"sub\">refractory bleeding on replacement: alloantibodies &middot; the mixing study proves it &middot; bleeding to lab pattern &middot; arthropathy<span class=\"subq\">Is the partial thromboplastin time still long on adequate factor, with normal platelets and prothrombin time?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "tb",
+   "find": "<p class=\"sub\">Screen → sort → treat</p>",
+   "with": "<p class=\"sub\">screen, sort, treat &middot; skin test thresholds &middot; latent vs active by film and symptoms &middot; isolate first &middot; four-drug toxicities<span class=\"subq\">Are there symptoms or an abnormal chest film, and must the patient be isolated before any drug?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "lymphadenitis",
+   "find": "<p class=\"sub\">acute and unilateral is bacterial &middot; tempo and laterality sort every neck node</p>",
+   "with": "<p class=\"sub\">tempo and laterality sort every neck node &middot; acute and unilateral is bacterial &middot; covering staph, strep, anaerobes<span class=\"subq\">How fast did the node appear, on one side or both, and which organisms must the drug cover?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<p class=\"sub\">Periventricular calcifications · organism first, then its signature sequela</p>",
+   "with": "<p class=\"sub\">organism first, then its signature sequela &middot; where calcifications sit &middot; rubella triad &middot; parvovirus &middot; herpes without vesicles<span class=\"subq\">Where are the calcifications, and what is that organism's signature sequela?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-fever",
+   "find": "<p class=\"sub\">urine, blood, meninges, lungs, or a virus</p>",
+   "with": "<p class=\"sub\">urine, blood, meninges, lungs, or a virus &middot; red flags &middot; workup by age, appearance and vaccines &middot; the culture confirms<span class=\"subq\">Does the infant look ill, and if well, how old and how vaccinated is the infant?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "<p class=\"sub\">Benign only inside the age window and without intracranial signs &middot; Is this child inside the febrile-seizure age window, and is any sign of intracranial infection present?</p>",
+   "with": "<p class=\"sub\">benign only inside the age window &middot; intracranial signs &middot; fontanelle and tone, not the neck &middot; when to tap<span class=\"subq\">Is the child inside the febrile-seizure age window, and is any sign of intracranial infection present?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "retinitis-pigmentosa",
+   "find": "<p class=\"sub\">Night blindness: the fundus exam identifies the cause &middot; pale disc or cupped disc, and is the front of the eye normal</p>",
+   "with": "<p class=\"sub\">the fundus exam identifies the cause &middot; pale disc vs cupped disc &middot; the front of the eye &middot; retinitis pigmentosa vs its four mimics<span class=\"subq\">Is the disc pale or cupped, and is the front of the eye normal?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-peds-stroke",
+   "find": "<p class=\"sub\">Find the arteriopathy &middot; constitutional symptoms plus unequal pulses make it inflammatory</p>",
+   "with": "<p class=\"sub\">find the arteriopathy &middot; constitutional symptoms plus unequal pulses make it inflammatory &middot; its mimics<span class=\"subq\">What made the artery fail: constitutional symptoms with unequal pulses, a murmur, or neck strain?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "psoriasis",
+   "find": "<p class=\"sub\">Exam findings outweigh the exposure history</p>",
+   "with": "<p class=\"sub\">psoriasis vs other scaly plaques &middot; extensor vs flexural &middot; the nails &middot; exam findings outweigh the exposure history<span class=\"subq\">Where are the plaques, are the nails involved, and does the exam agree with the history?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-scabies",
+   "find": "<p class=\"sub\">A close contact with the same rash carries more weight than morphology</p>",
+   "with": "<p class=\"sub\">a close contact with the same rash outweighs morphology &middot; permethrin specifics &middot; itch after treatment<span class=\"subq\">Does anyone close have the same rash, and does the drug kill the cause or only treat the itch?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "<p class=\"sub\">uterus present or absent, then read the FSH &middot; Is there a uterus, and if so is the FSH high or low?</p>",
+   "with": "<p class=\"sub\">pelvic ultrasound first &middot; uterus present or absent, then read the FSH &middot; Turner, agenesis, androgen insensitivity<span class=\"subq\">Is there a uterus, and if so is the FSH high or low; if not, is there pubic hair?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "elder",
+   "find": "<p class=\"sub\">Capacity determines whether to report</p>",
+   "with": "<p class=\"sub\">reasonable suspicion is enough &middot; findings that build suspicion &middot; reporting pathways &middot; capacity determines whether to report<span class=\"subq\">Is the suspicion reasonable, and is the victim a competent adult or a cognitively impaired elder?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "septic-hip",
+   "find": "<p class=\"sub\">Aspirate, or treat and recheck? &middot; Count the Kocher criteria before the needle</p>",
+   "with": "<p class=\"sub\">Kocher criteria count &middot; ultrasound for an effusion &middot; aspirate at 3 or more &middot; transient synovitis vs Perthes by the course<span class=\"subq\">How many Kocher criteria are present: aspirate now, or treat with NSAIDs and recheck?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "scfe",
+   "find": "<p class=\"sub\">Keep off it and pin it &middot; Lost internal rotation at the growth spurt, whatever the build</p>",
+   "with": "<p class=\"sub\">lost internal rotation &middot; films of both hips &middot; stable vs unstable &middot; atypical means endocrine &middot; keep off it and pin in situ<span class=\"subq\">Has a child at the growth spurt lost internal rotation, and can the child bear weight?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "scheuermann",
+   "find": "<p class=\"sub\">Does the curve correct? &middot; Run the correction test before naming it postural or Scheuermann</p>",
+   "with": "<p class=\"sub\">correction test &middot; wedging on the lateral film &middot; postural vs Scheuermann &middot; observe, brace or fuse by curve size<span class=\"subq\">Does the curve correct prone or in extension, and if not, is there 5 degrees of wedging in 3 consecutive vertebrae?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "<p class=\"sub\">Normal growth and developmental milestones</p>",
+   "with": "<p class=\"sub\">birth weight rules &middot; four developmental laws &middot; milestones at 2, 4, 6, 9 and 12 months &middot; delay by domain<span class=\"subq\">Do the weight and milestones fit the age, and if not, which domain is delayed?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-preterm-followup",
+   "find": "<p class=\"sub\">Correct the age, then read the chart · a percentile is a position, not a pathology</p>",
+   "with": "<p class=\"sub\">corrected age &middot; milestones at corrected age &middot; growth faltering thresholds &middot; vaccines at chronological age<span class=\"subq\">What is the corrected age, and do growth and milestones fit it?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "ie-ppx",
+   "find": "<p class=\"sub\">Both a high-risk cardiac condition and a high-risk procedure are required</p>",
+   "with": "<p class=\"sub\">high-risk cardiac conditions &middot; high-risk procedures &middot; conditions removed in 2007 &middot; the drug if both gates open<span class=\"subq\">Does the patient have both a high-risk cardiac condition and a high-risk procedure?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<p class=\"sub\">Medium-vessel vasculitis &middot; a 10-day clock &middot; fever for 5 days plus 4 criteria: treat now?</p>",
+   "with": "<p class=\"sub\">CRASH and Burn criteria &middot; incomplete disease &middot; IVIG and aspirin within 10 days &middot; echocardiogram &middot; coronary complications<span class=\"subq\">Has fever lasted 5 days with 4 criteria, and is the child still inside the 10-day window?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "<p class=\"sub\">High automated reading at a sports physical · confirm by auscultation, then stage</p>",
+   "with": "<p class=\"sub\">device vs auscultation &middot; adult cutoffs from age 13 &middot; staging &middot; recheck interval by stage &middot; ambulatory monitoring<span class=\"subq\">Has auscultation confirmed the device reading, and what stage does the averaged value set?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "hypoxemia-mech",
+   "find": "<p class=\"sub\">sort by A-a gradient and the oxygen response &middot; Is the A-a gradient widened, and does the hypoxemia correct when you raise inspired oxygen?</p>",
+   "with": "<p class=\"sub\">five mechanisms &middot; A-a gradient &middot; response to oxygen &middot; shunt vs ventilation-perfusion mismatch &middot; saturation gap<span class=\"subq\">Is the A-a gradient widened, and does the hypoxemia correct when inspired oxygen rises?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "masld",
+   "find": "<p class=\"sub\">Formerly <b>NAFLD</b> (nonalcoholic fatty liver disease) · a diagnosis of exclusion</p>",
+   "with": "<p class=\"sub\">AST:ALT ratio &middot; causes to exclude &middot; fibrosis staging &middot; weight loss first &middot; formerly nonalcoholic fatty liver disease<span class=\"subq\">Is the picture metabolic with ALT above AST, and have the other liver diseases been excluded?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<p class=\"sub\">appendix, ileocecum, or neither &middot; Is there profuse mucoid diarrhea, and is there a sick contact?</p>",
+   "with": "<p class=\"sub\">appendix, ileocecum, or neither &middot; Campylobacter and Yersinia &middot; appendix-sparing imaging &middot; when to treat Campylobacter<span class=\"subq\">Is there profuse mucoid diarrhea, and is there a sick contact?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<p class=\"sub\">Occult <b>GI</b> (gastrointestinal) bleeding after a negative upper endoscopy and colonoscopy &middot; age decides the next study</p>",
+   "with": "<p class=\"sub\">both scopes first &middot; pertechnetate scan in a child &middot; capsule endoscopy in an adult &middot; visible Meckel bleeding<span class=\"subq\">Have both scopes come back negative, and is the patient a child or an adult?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "<p class=\"sub\">A teen with hepatitis, a tremor and brown corneal rings &middot; is the patient young, with brain, eye or red-cell findings, and is the ceruloplasmin low?</p>",
+   "with": "<p class=\"sub\">copper and ATP7B &middot; liver plus brain, eye or red cells &middot; ceruloplasmin, slit lamp, urine copper &middot; chelation or transplant<span class=\"subq\">Is the patient young, with brain, eye or red-cell findings, and is the ceruloplasmin low?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "polyuria",
+   "find": "<p class=\"sub\">the urine osmolality sorts it before any hormone is named &middot; when the water deprivation test is indicated, and when it has already been answered</p>",
+   "with": "<p class=\"sub\">urine osmolality first &middot; solute vs water diuresis &middot; when water deprivation is indicated &middot; desmopressin response<span class=\"subq\">Is the urine dilute, and has the serum sodium already answered what the deprivation test would?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "<p class=\"sub\">Hypertension with a mass inside the kidney &middot; Where does the mass arise, and how old is the child?</p>",
+   "with": "<p class=\"sub\">organ of origin &middot; age &middot; Wilms tumor vs neuroblastoma &middot; cystic newborn masses &middot; ultrasound, then CT or MRI<span class=\"subq\">Where does the mass arise, and how old is the child?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "prolactin",
+   "find": "<p class=\"sub\">Infer the drug from the illness; the prolactin level separates drug effect from prolactinoma</p>",
+   "with": "<p class=\"sub\">inferring the unnamed drug &middot; antipsychotic ranking &middot; causes by category &middot; cheap tests before MRI &middot; cabergoline first<span class=\"subq\">Is the prolactin in the drug range or the prolactinoma range, and which drug is behind it?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "<p class=\"sub\">Smear, Coombs test and coagulation studies identify the process &middot; Are two cell lines down, is the smear sheared, and are the coagulation studies normal?</p>",
+   "with": "<p class=\"sub\">hemolytic uremic syndrome triad &middot; smear &middot; Coombs test &middot; coagulation studies &middot; its four mimics<span class=\"subq\">Are two cell lines down, is the smear sheared, and are the coagulation studies normal?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "<p class=\"sub\">Timing and associated findings classify transfusion reactions; most need nothing &middot; What are the vitals, and what else is on the skin besides hives?</p>",
+   "with": "<p class=\"sub\">onset and company &middot; urticarial vs anaphylactic &middot; hemolytic and bacterial emergencies &middot; when to resume &middot; most need nothing<span class=\"subq\">What are the vitals, and what else is on the skin besides hives?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "<p class=\"sub\">The CSF 2×2</p>",
+   "with": "<p class=\"sub\">cell type by glucose &middot; organism by host &middot; when CT precedes the tap &middot; antibiotics before imaging &middot; when to add ampicillin<span class=\"subq\">Are the cells neutrophils or lymphocytes, and is the glucose low?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "<p class=\"sub\">lesion location identifies the virus &middot; front of the mouth or back</p>",
+   "with": "<p class=\"sub\">vesicles vs exudate &middot; front of the mouth or back &middot; herpangina vs herpetic gingivostomatitis &middot; the palm and sole rash<span class=\"subq\">Are the lesions vesicles or exudate, and do they sit at the front of the mouth or the back?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "<p class=\"sub\">Swollen eyes, a tight throat and cramps half an hour after a new amoxicillin prescription &middot; how many organ systems, and how soon after the exposure?</p>",
+   "with": "<p class=\"sub\">organ-system criteria &middot; hypotension not required &middot; mast cell mechanism &middot; bradykinin angioedema &middot; delayed drug reactions<span class=\"subq\">How many organ systems are involved, and how soon after the exposure?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "redeye",
+   "find": "<p class=\"sub\">Three questions triage every red eye</p>",
+   "with": "<p class=\"sub\">three triage questions &middot; conjunctivitis types &middot; red eyes that cannot be missed &middot; contact lens wearers<span class=\"subq\">Is acuity down, is the pain deep, or is the pupil, cornea or globe abnormal?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "<p class=\"sub\">the MRI pattern names the cause &middot; What does the MRI actually describe, and are the findings unilateral or global?</p>",
+   "with": "<p class=\"sub\">early signs &middot; the MRI pattern names the cause &middot; periventricular leukomalacia &middot; stroke, asphyxia, infection &middot; spinal mimics<span class=\"subq\">What does the MRI actually describe, and are the findings unilateral or global?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "<p class=\"sub\">Classify the movement first &middot; is the behaviour involuntary, or is it neutralising an obsession</p>",
+   "with": "<p class=\"sub\">classify the movement first &middot; motor and vocal tics &middot; Tourette criteria &middot; tic vs compulsion &middot; habit reversal, then medication<span class=\"subq\">Is the behavior involuntary, or is it neutralizing an obsession?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "<p class=\"sub\">Happy, laughing child with seizures, ataxia and no words &middot; NBME &middot; which parent&#39;s chromosome 15 copy is missing?</p>",
+   "with": "<p class=\"sub\">Angelman vs Prader-Willi &middot; maternal vs paternal 15q11-q13 &middot; uniparental disomy &middot; Rett and Williams mimics<span class=\"subq\">Which parent&#39;s copy of chromosome 15 is missing or silent?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "cellulitis",
+   "find": "<p class=\"sub\">Border sharpness reflects the depth of infection</p>",
+   "with": "<p class=\"sub\">border and depth &middot; erysipelas vs cellulitis &middot; purulent vs nonpurulent &middot; necrotizing fasciitis &middot; bilateral mimics<span class=\"subq\">How sharp is the border, is there pus, and is the pain out of proportion?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "ectopic",
+   "find": "<p class=\"sub\">Localize the pregnancy with imaging, not a number</p>",
+   "with": "<p class=\"sub\">transvaginal ultrasound first &middot; discriminatory zone &middot; serial hCG &middot; methotrexate eligibility &middot; unstable means surgery<span class=\"subq\">Where is the pregnancy, and is the patient stable enough to image?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-genital-ulcer",
+   "find": "<p class=\"sub\">Painless genital ulcer with a raised border in a sexually active adolescent &middot; NBME &middot; does the ulcer hurt, and are there vesicles or suppurating nodes?</p>",
+   "with": "<p class=\"sub\">painless vs painful ulcers &middot; syphilis vs herpes vs chancroid &middot; test for syphilis, herpes and HIV &middot; penicillin<span class=\"subq\">Does the ulcer hurt, and are there vesicles or suppurating nodes?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "<p class=\"sub\">Ask what would have to be true to break it</p>",
+   "with": "<p class=\"sub\">the exceptions &middot; services protected without parental consent &middot; CRAFFT and brief counseling &middot; encouraging self-disclosure<span class=\"subq\">What would have to be true to break confidentiality, and is any of it present?</span></p>",
+   "note": "s97: two-line subtitle (scope line, then the guiding question)"
+  }
+ ]
+}
