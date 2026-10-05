@@ -49,9 +49,9 @@ Rule 14 still applies: where a broader title promises content the brief does not
 | Childhood Vaccine Schedule and Contraindications (shipped s91) | Vaccines at the Infant Visits (`bs-infant-vax`); DTaP: Contraindication vs. Precaution (`dtap`) | 10 |
 | Adolescent Vaccines (shipped s91) | Adolescent Immunization and the Age Platform (`bs-adolescent-vax`); HPV Vaccination & Series Rules (`hpv`) | 15 |
 | Vaccines in Pregnancy (shipped s91) | Vaccines & Timing in Pregnancy (`preg-vax`); Tdap in Pregnancy at 10 Weeks (`bs-tdap-preg`) | 20 |
-| Cervicitis and Pelvic Inflammatory Disease | Acute Cervicitis (`cervicitis`); Pelvic Inflammatory Disease (`bs-pid`) | 16 |
-| Fever and Sepsis in the Newborn | The Febrile Infant — Finding the Source (`bs-febrile-infant`); Neonatal Sepsis and Its Mimics (`bs-neonatal-sepsis`) | 17 |
-| Fever and Rash in a Child | Exanthems in a Child (`bs-exanthems`); Fever, Rash and Joint Pain: Name the Rash, Then Date the Exposure (`bs-fever-rash-arthralgia`) | 20 |
+| Cervicitis and Pelvic Inflammatory Disease (shipped s94) | Acute Cervicitis (`cervicitis`); Pelvic Inflammatory Disease (`bs-pid`) | 16 |
+| Fever and Sepsis in the Newborn (shipped s94) | The Febrile Infant — Finding the Source (`bs-febrile-infant`); Neonatal Sepsis and Its Mimics (`bs-neonatal-sepsis`) | 17 |
+| Fever and Rash in a Child (shipped s94) | Exanthems in a Child (`bs-exanthems`); Fever, Rash and Joint Pain: Name the Rash, Then Date the Exposure (`bs-fever-rash-arthralgia`) | 20 |
 | Hearing Loss and Chronic Ear Disease | Hearing Loss & Otosclerosis (`hearing`); Cholesteatoma and Chronic Ear Drainage (`cholesteatoma`) | 19 |
 | Brain Tumors in a Child | Sellar and Suprasellar Masses (`sellar-mass`); Posterior Fossa Localization (`bs-posterior-fossa`) | 19 |
 | Rashes in the Newborn and Infant | Benign Neonatal Rashes (`neonatal-rash`); Diaper Dermatitis (`diaper-dermatitis`) | 23 |
