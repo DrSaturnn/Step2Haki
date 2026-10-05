@@ -75,3 +75,12 @@ Decisions, to be carried out in a "decisions" batch between merge batches (statu
 - The CDC child schedule status (January 2026 revision stayed March 16, 2026; HHS appeal argued October 6, 2026) decides several HPV and childhood keys (q_06ed, q_652e, q_88f8, q_b8bb). Recheck after the First Circuit rules.
 - Vaccines in Pregnancy: COVID-19 shows a ⚠︎ because CDC's pregnancy table says "No guidance/not applicable" while the 2026-27 COVID guidance recommends vaccine for all adults. The anti-D line "without recent anti-D" also carries ⚠︎ (no source opened).
 - Childhood Vaccine Schedule and Contraindications has 11 questions, below the 12 to 18 aim; add one or two when convenient.
+
+## From s98 (source pass; Claude's notes, your call)
+
+- Thyroid PTU line still cites ATA 2017; the 2026 ATA section G remained unreachable (publisher and PMC blocked). Recheck when a full text is available.
+- ADA Standards 2026 section 12 still returns 403; eye-exam lines are proved against ADA 2022 (same wording in a 2024 copy).
+- Vaccines in Pregnancy: COVID-19 stays flagged (CDC pregnancy table: no guidance; CDC 2026-27 adult guidance: all adults; CDC pregnancy page: individual decision making for 2025-26). ACOG pages returned 402.
+- Several author-written distractor dismissals were cut because no source supported them (preg-vax, adolescent-aub, bs-neonatal-sepsis); the keys are still explained. Add sourced dismissals later if wanted.
+- bs-neonatal-sepsis: the open-fontanelle mechanism sentence in Management is supported only as "not necessary to routinely do CT before lumbar puncture in young children" (Merck); left as is.
+- mdd says "about 6 more months (4 to 9)"; VA/DoD says "at least six months". Kept "about" in both briefs for consistency with the 4 to 9 range.
