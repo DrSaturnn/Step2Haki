@@ -60,7 +60,7 @@ Decisions, to be carried out in a "decisions" batch between merge batches (statu
 
 10. **Scope and source audit** of the s18 workup tables: trim specialist rows, flag memory-sourced numbers.
 11. **s18 conflicts:** bs-puv VCUG vs cystoscopy; enuresis age gate; SCFE effusion claim; newborn-cyanosis items; DVT duration; cervical ASC-US; bs-torch confirmation after 3 weeks; empty trap labels; stray ⚠︎.
-12. **RSV isolation wording** (UWorld table says contact only; the library says many respiratory viruses need contact plus droplet).
+12. (done s102) **RSV isolation wording** (UWorld table says contact only; the library says many respiratory viruses need contact plus droplet).
 13. **Two older weak-distractor items** (angina with LBBB; dipstick mismatch).
 14. **Hot joint: antibiotics before aspiration when unstable?** The merged brief keeps the old rule (no antibiotics before the fluid is sampled). The reviewer suggested an exception for an unstable or septic patient, or delayed aspiration (blood cultures, then antibiotics). Not in the old briefs; needs a source before it is added.
 
@@ -90,3 +90,11 @@ Decisions, to be carried out in a "decisions" batch between merge batches (statu
 - Medscape is the only source found for two drug-hemolysis lines (Mycoplasma cold agglutinins positive after 7 to 10 days; splenectomy ideally after age 6); StatPearls, Merck and the BSH guideline (blocked) give no timing.
 - Neonatal mastitis rests on two journal abstracts (no tertiary source reachable).
 - ig-panel keeps its `&mdash;` separators: the page script columnize() consumes them (they are not displayed).
+
+## From s100-s102 (source passes 3-5; Claude's notes)
+
+- Two items retired as unprovable or ambiguous (q_15fe polycythemia mechanism; q_bea2 PPHN screen item, replaced). Both are in tools/retired_items.csv with archives.
+- Some lines rest on a single journal abstract, Medscape, Merck Consumer or a Cureus review where society guidelines were blocked (ledgers say which): neonatal mastitis, GTPS refractory step, Mycoplasma cold-agglutinin timing.
+- Acronym write-outs and em dashes (&mdash; separators, ~1,300 on the page) were found in many briefs by auditors; a page-wide em dash pass follows (s103).
+- rmsf dengue item stem is 52 words (over the 40-word stem rule); not changed.
+- Transfusion items q_1c2e and q_53f5 had no sex in the stem; one was chosen (no fact depends on it), noted in the ledger.
