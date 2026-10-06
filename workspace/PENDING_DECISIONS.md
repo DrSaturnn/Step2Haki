@@ -42,10 +42,10 @@ Decisions, to be carried out in a "decisions" batch between merge batches (statu
 - **Retitle cgd?** "Recurrent Abscesses and Granulomas" now also holds low-neutrophil-count disorders. Option: "Neutrophil Disorders: Number and Function". *s28.*
 0. **Retitled this pass (reversible):** "The Distended Newborn Abdomen" is now "The Distended Abdomen in a Newborn or Infant" (the malrotation question is a 7-month-old). Say "revert" if you prefer the old title. *s26.*
 1. **VUR corrections (researched, not yet written).** Change the grade wording to "mild I–II, dilating III–V" (blunting starts at III, complete at IV; V adds tortuous ureter). Replace the item where a 2-year-old with a normal ultrasound gets a VCUG with a child under 2 whose ultrasound is abnormal. Add the AUA prophylaxis rules and the RIVUR result (prophylaxis halves repeat UTIs, no change in scarring). *Asked s23.*
-2. **Thumbnail pilot.** Build one recreated figure (short stature evaluation flowchart) as a small preview on its tile that opens full size on click, for your review before rolling it out. *Asked s23.*
-3. **Short stature flowchart: precocious puberty branch.** My notes filed it under "impaired velocity + advanced bone age"; the page keeps standard teaching (fast growth now, short adult height). Confirm against the UWorld figure. *Asked s23.*
+2. **Thumbnail pilot: live in s107 for your review.** Abnormal Growth in a Child, first workup tile: a small flowchart that opens full size. Say "thumbnail: go" to plan more figures, or name changes. One question: the chart shows outcomes that study mode masks in the tiles; keep it visible, or hide it in study mode? *Asked s23; built s107.*
+3. **Short stature flowchart: precocious puberty branch.** Resolved s107: the pilot follows the page (accelerated velocity, advanced bone age, tall now, short adult), supported by StatPearls NBK544313 ("Rapid linear growth is a key indicator of early puberty"). The s23 note's "impaired velocity" was a transcription slip. *Asked s23.*
 4. **Rename "Occult GI Bleeding in a Child"** to "GI Bleeding in a Child: Meckel and Mimics", since it now carries visible-bleeding questions. *Asked s24.*
-5. **British spelling inside existing questions** (e.g. "Giant cell tumour of bone", "anaemia"). A spelling-only pass that leaves question tracking unchanged. *Asked s24.*
+5. **British spelling:** questions fixed in s82; the last body-text spellings fixed in s106. *Asked s24.*
 6. **Table squeeze at 1000–1100 px wide.** Proposal: collapse the sidebar at that width. *Asked s18.*
 
 ## Waiting on material from you
