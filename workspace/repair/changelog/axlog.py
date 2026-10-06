@@ -156,6 +156,7 @@ LOG = [
     (106, '2026-10-05', 'Question and wording pass. Five practice questions that followed a UWorld case too closely (trisomy 18, Ewing sarcoma, biliary atresia, minimal change disease, choanal atresia) are now original cases; 15 question stems no longer name their answer; one Ewing sarcoma explanation now dismisses osteomyelitis by site and biopsy. Abbreviations are written out at first use in 94 briefs, and the last British spellings are now American.', []),
     (107, '2026-10-05', 'Pilot: Abnormal Growth in a Child shows a small flowchart of the short stature workup in its first workup tile; tap it to open full size (tap outside or Close to dismiss). Every label comes from the brief.', []),
     (108, '2026-10-06', 'Tics, Sleep Problems in a Child and School Difficulty in a Child now also appear on the Psych shelf. Two psychosis briefs now carry the UWorld questions they cover.', []),
+    (109, '2026-10-06', 'New psychiatry brief: Psychiatric Symptoms from Medical Illness or Medication (also on Family Med). Glucocorticoid psychosis and mania, delirium versus a medication-induced psychosis, Cushing syndrome presenting as depression or anxiety, and the medical workup before a primary diagnosis, with six practice questions.', []),
 ]
 if __name__ == '__main__':
     import json, sys

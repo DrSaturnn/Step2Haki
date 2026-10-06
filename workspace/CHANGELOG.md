@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-06 s109: new brief: Psychiatric Symptoms from Medical Illness or Medication
+
+```
+Page: 173 briefs, 2137 items -> 174 briefs, 2143 items
+Briefs added (1):
+  - psych-medical: Psychiatric Symptoms from Medical Illness or Medication (6 items)
+Other page changes (nav, headers, scripts): +460 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 174 briefs, 2143 items, 7 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 174 | bankwraps 174 | mcq 2143 (axCheck 2143, reveal-only 0) | malformed 0 | crit gridded 212/213 | vignette gridded 70/70 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (59413 source shingles; page 0.015%)
+```
+
 ## 2026-10-06 s108: cross-shelf psych tags; UWorld coverage ids
 
 ```
