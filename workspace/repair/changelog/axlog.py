@@ -157,6 +157,7 @@ LOG = [
     (107, '2026-10-05', 'Pilot: Abnormal Growth in a Child shows a small flowchart of the short stature workup in its first workup tile; tap it to open full size (tap outside or Close to dismiss). Every label comes from the brief.', []),
     (108, '2026-10-06', 'Tics, Sleep Problems in a Child and School Difficulty in a Child now also appear on the Psych shelf. Two psychosis briefs now carry the UWorld questions they cover.', []),
     (109, '2026-10-06', 'New psychiatry brief: Psychiatric Symptoms from Medical Illness or Medication (also on Family Med). Glucocorticoid psychosis and mania, delirium versus a medication-induced psychosis, Cushing syndrome presenting as depression or anxiety, and the medical workup before a primary diagnosis, with six practice questions.', []),
+    (110, '2026-10-06', 'Two new psychiatry briefs: Disruptive Behavior in a Child (also on Pediatrics: oppositional defiant, conduct, intermittent explosive and disruptive mood dysregulation disorders, the antisocial personality age rule, and a language disorder look-alike) and Suicide Risk Assessment (also on Pediatrics and Family Med: screening by age, plan and intent, risk and protective factors, level of care). New questions in Psychosis (brief psychotic disorder versus acute stress disorder; schizoaffective disorder, bipolar type) and Panic Disorder and Other Anxiety (panic versus somatic symptom disorder).', []),
 ]
 if __name__ == '__main__':
     import json, sys

@@ -2,6 +2,24 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-06 s110: new briefs: Disruptive Behavior in a Child, Suicide Risk Assessment; psychosis and panic questions
+
+```
+Page: 174 briefs, 2143 items -> 176 briefs, 2158 items
+Briefs added (2):
+  - disruptive-behavior: Disruptive Behavior in a Child (6 items)
+  - suicide-risk: Suicide Risk Assessment (6 items)
+Briefs changed (2):
+  - psychosis-duration (Psychosis): 2 items added (q_c3ab6df88757aa298544, q_d6b532ef5ba9ee4150cb)
+  - panic (Panic Disorder and Other Anxiety): 1 item added (q_51b7ab044ef43763d0d4)
+Other page changes (nav, headers, scripts): +777 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 176 briefs, 2158 items, 7 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 176 | bankwraps 176 | mcq 2158 (axCheck 2158, reveal-only 0) | malformed 0 | crit gridded 216/217 | vignette gridded 70/70 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (59413 source shingles; page 0.015%)
+```
+
 ## 2026-10-06 s109: new brief: Psychiatric Symptoms from Medical Illness or Medication
 
 ```

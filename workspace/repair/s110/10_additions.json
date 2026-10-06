@@ -1,0 +1,49 @@
+{
+ "edits": [
+  {
+   "op": "add_item",
+   "brief": "psychosis-duration",
+   "after_item": "q_d94a444dc335c58a8169",
+   "type": "dx",
+   "stem": "<span class=\"sl\">27-year-old woman, 6 days after escaping a house fire</span>\n<span class=\"si\">sure neighbors set it to kill her; hears them whispering</span>\n<span class=\"ss\">no nightmares, flashbacks or avoidance; no drug use; fully well 10 days later</span>\n<span class=\"sd\">urine toxicology negative &middot; T 36.8 °C</span>",
+   "answer": "Brief psychotic disorder",
+   "companion": "delusions and hallucinations after a marked stressor, with full return to baseline within a month, are brief psychotic disorder; acute stress disorder brings intrusion, negative mood, dissociation, avoidance and arousal, and she has no flashbacks, nightmares or avoidance; delusional disorder needs a delusion for 1 month or more",
+   "d1": "Acute stress disorder",
+   "d2": "Delusional disorder",
+   "lead_in": "Which of the following is the most likely diagnosis?",
+   "src": "authored",
+   "nid": "1484687007437 1484687009939 1584725462118",
+   "note": "s110: original item from the s108 UWorld set (repair/sources/s108_questions.md)"
+  },
+  {
+   "op": "add_item",
+   "brief": "psychosis-duration",
+   "after_item": "q_7dfe8050588133fa1bce",
+   "type": "dx",
+   "stem": "<span class=\"sl\">41-year-old man at a clinic visit hears voices, feels watched</span>\n<span class=\"si\">mood normal for 2 months</span>\n<span class=\"ss\">manic and depressive episodes most of the past 15 years, each with voices and a persecutory belief</span>\n<span class=\"sd\">urine toxicology negative &middot; T 36.7 °C</span>",
+   "answer": "Schizoaffective disorder, bipolar type",
+   "companion": "voices and a persecutory belief during manic and depressive episodes, voices 2 weeks or more with a normal mood, and mood episodes over most of the illness are schizoaffective disorder, bipolar type; in bipolar I disorder the psychosis occurs only during mood episodes, and in schizophrenia mood episodes fill only a small part of the illness",
+   "d1": "Bipolar I disorder with psychotic features",
+   "d2": "Schizophrenia",
+   "lead_in": "Which of the following is the most likely diagnosis?",
+   "src": "authored",
+   "nid": "1484687016622 1484687018871",
+   "note": "s110: original item from the s108 UWorld set (repair/sources/s108_questions.md)"
+  },
+  {
+   "op": "add_item",
+   "brief": "panic",
+   "after_item": "q_9882ee4e5ed520e497ed",
+   "type": "dx",
+   "stem": "<span class=\"sl\">34-year-old woman, 5 months of unexpected spells: choking, nausea, chills, shaking</span>\n<span class=\"si\">each peaks within minutes and ends; no symptoms between spells</span>\n<span class=\"ss\">dreads the next spell and fears a hidden disease; no drug use</span>\n<span class=\"sd\">HR 74/min &middot; TSH, glucose, ECG, toxicology normal</span>",
+   "answer": "Panic disorder",
+   "companion": "unexpected spells that peak within minutes and clear completely, with worry about further attacks, are panic disorder; in somatic symptom disorder the physical symptoms persist over time, and generalized anxiety disorder needs excessive worry about multiple issues, not only about the attacks",
+   "d1": "Somatic symptom disorder",
+   "d2": "Generalized anxiety disorder",
+   "lead_in": "Which of the following is the most likely diagnosis?",
+   "src": "authored",
+   "nid": "1484966143963 1484966151152 1484966151153",
+   "note": "s110: original item from the s108 UWorld set (repair/sources/s108_questions.md)"
+  }
+ ]
+}
