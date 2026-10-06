@@ -94,8 +94,13 @@ import lifechart as LC, mimics as MM  # noqa: E402
 hubfig = LC.course_table('Hub', MM.ROWS, MM.AXIS, 'voices', groups=MM.HUBS['voices']['groups'], full=True)
 spk = LC.course_table('Slice', {k: MM.ROWS[k] for k in MM.SPOKES['psychosis-duration']['rows']}, MM.AXIS, 'voices')
 at = bl[0].inner_end
+import re as _re0
 def with_figs(*figs):
-    return gate(PAGE[:at] + ''.join(figs) + PAGE[at:])[1]
+    # the page's own mimic figures are stripped first, so the test holds whether or not the page's rows match the current
+    # tools/typec rows (between a registry edit and the ship that rebuilds them) and whether or not a real hub is on the page
+    base = _re0.sub(r'<figure class="lcw lcc".*?</figure>', '', PAGE[:at], flags=_re0.S)
+    rest = _re0.sub(r'<figure class="lcw lcc".*?</figure>', '', PAGE[at:], flags=_re0.S)
+    return gate(base + ''.join(figs) + rest)[1]
 o = with_figs(hubfig, spk)
 hit = '[mimic-row]' not in o
 print(('ok  ' if hit else 'BAD ') + 'hub and spoke with byte-identical rows pass'); bad += not hit
