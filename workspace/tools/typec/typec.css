@@ -364,8 +364,24 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
 .cs.hi{background:var(--mhi);box-shadow:inset 0 0 0 1.5px var(--mhi-e)} .cs.hip{background:linear-gradient(var(--mhi) 0 45%,var(--psy3) 45% 100%);box-shadow:inset 0 0 0 1.5px var(--mhi-e)}
 .cs.trait{background:var(--trait)} .cs.odd{background:repeating-linear-gradient(90deg,var(--trait) 0 6px,#fff 6px 9px);box-shadow:inset 0 0 0 1px var(--trait-e)}
 .cs.dev{background:repeating-linear-gradient(135deg,var(--trait) 0 3px,#fff 3px 6px);box-shadow:inset 0 0 0 1px var(--trait-e)} .cs.norm{background:#fff;box-shadow:inset 0 0 0 1.5px var(--trait-e)}
-.cs.stress{background:var(--trait-e)} .cs.sub{background:var(--psy2);box-shadow:inset 0 0 0 1.5px var(--psy3)} .cs.flux{background:linear-gradient(90deg,var(--psy3),var(--psy1))}
+.cs.stress{background:var(--trait-e)} .cs.sub{background:var(--psy2);box-shadow:inset 0 0 0 1.5px var(--psy3)} .cs.flux{background:linear-gradient(90deg,var(--psy3),var(--psy1))} .cs.ill{background:var(--psy1);box-shadow:inset 0 0 0 1.5px var(--psy3)}
+.brief .cs.sub{margin:0} /* .brief .sub (subtitle) margin collapsed the drug segment */
 .lcc .cs.mark{left:var(--x);width:6px;margin-left:-3px;top:-3px;bottom:-3px;border-radius:3px;background:var(--psy3)}
 .lcc .lc-key i.cs{position:static;width:15px;height:10px;border-radius:3px}
 .lcc .wl.dec{font-weight:600;color:var(--psy3)}
 .lcc .note a{font-weight:600}
+/* ============ Mimic course tables v6 (s111, Jonathan): a key inside every row, hub groups as panels, rows as cards ============ */
+.lcc{--card:#FCFCFC}
+.lcc .wrows{display:flex;flex-direction:column;gap:10px}
+.lcc .wgb{padding:10px 8px 8px;border-radius:14px;background:color-mix(in srgb,var(--recess) 70%,transparent)}
+.lcc .wgb + .wgb{margin-top:8px}
+.lcc .wgb > .wg{margin:2px 6px 9px;padding:0;border:0;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--chart-ink);opacity:.75}
+.lcc .cr,.lcc .wg + .cr{padding:13px 14px 12px;border:1px solid var(--hair);border-radius:12px;background:var(--card);box-shadow:0 1px 2px rgba(24,28,30,.05)}
+.lcc .rk{display:flex;flex-wrap:wrap;gap:4px 12px;margin:3px 0 9px;font-size:11.5px;line-height:1.35;color:var(--muted)}
+.lcc .rk span{display:inline-flex;align-items:center;gap:5px}
+.lcc .rk i.cs{position:static;display:inline-block;flex:none;width:14px;height:9px;margin:0;border-radius:3px}
+.lcc .rk i.cs.mark{width:5px;height:12px;border-radius:2px}
+.lcc .wl{margin:0 0 2px;font-size:13.5px;line-height:1.45}
+.lcc .rax span{opacity:.8}
+@media (max-width:560px){.lcc .wgb{padding:8px 5px 5px;border-radius:12px} .lcc .wgb > .wg{margin:2px 5px 8px} .lcc .cr,.lcc .wg + .cr{padding:12px 11px 11px}}
+/* ============ end v6 ============ */

@@ -329,8 +329,8 @@ COURSE_KINDS = {
     'pro': 'Prodrome', 'act': 'Active psychosis', 'res': 'Residual', 'only': 'A delusion only',
     'lo': 'Depressive episode', 'lop': 'Depressive episode with psychosis', 'hi': 'Manic episode', 'hip': 'Manic episode with psychosis',
     'trait': 'Lifelong trait, no psychosis', 'odd': 'Lifelong odd beliefs, no psychosis', 'dev': 'Developmental, from early childhood',
-    'norm': 'Normal at that age', 'stress': 'Trauma symptoms, no psychosis', 'sub': 'Psychosis tied to a drug',
-    'flux': 'Fluctuating sensorium', 'mark': 'Stress psychosis, minutes to hours'}
+    'norm': 'Normal at that age', 'stress': 'Trauma symptoms, no psychosis', 'sub': 'Psychosis tied to a drug', 'ill': 'Psychosis tied to an illness',
+    'flux': 'Fluctuating attention (delirium)', 'mark': 'Stress psychosis, minutes to hours'}
 COURSES = ('chronic', 'episodic', 'single', 'lifelong', 'childhood')
 
 
@@ -382,9 +382,11 @@ def course_row(rid, r, axis):
     marks = ''.join(f'<i class="cs mark" style="--x:{_pct(m)}"></i>' for m in r.get('marks', []))
     axl = ''.join(f'<span class="{"a0" if x == 0 else "a1" if x > 80 else ""}" style="--x:{_pct(x)}">{E(l)}</span>' for l, x in axis)
     l1, l2, l3 = r['lines']
+    kinds = list(dict.fromkeys([k for k, _, _ in r['segs']] + (['mark'] if r.get('marks') else [])))
+    key = '<p class="rk">' + ''.join(f'<span><i class="cs {k}"></i>{COURSE_KINDS[k]}</span>' for k in kinds) + '</p>' if kinds else ''
     inner = (f'<div class="wh"><b class="nm mask">{r["name"]}</b><span class="win">{r["window"]}</span></div>'
              f'<div class="wb"><div class="rail cstrip" aria-hidden="true">{grid}{segs}{marks}</div>'
-             f'<div class="rax" aria-hidden="true">{axl}</div>'
+             f'<div class="rax" aria-hidden="true">{axl}</div>{key}'
              f'<p class="wl">{l1}</p><p class="wl">{l2}</p><p class="wl dec">{l3}</p></div>')
     return inner, hashlib.sha256(inner.encode('utf-8')).hexdigest()[:12]
 
@@ -392,18 +394,16 @@ def course_row(rid, r, axis):
 def course_table(title, rows, axis, hub, groups=None, full=False, hub_href=None, hub_title=None, step=None, note=''):
     """Mimic comparison on a life-course axis. rows: {id: row} from mimics.ROWS. groups: [(label, [ids])] for a hub;
     otherwise the order of `rows`. full=True marks the hub copy (data-mimic-full). hub_href links a spoke to its hub."""
+    # v6 (s111, Jonathan): each row carries its own key (no table-wide legend); a hub's groups are separate panels
     order = groups or [(None, list(rows))]
-    out, used = [], set()
+    out = []
     for label, ids in order:
-        if label:
-            out.append(f'<li class="wg">{E(label)}</li>')
+        lis = []
         for rid in ids:
             inner, h = course_row(rid, rows[rid], axis)
-            used.update(k for k, _, _ in rows[rid]['segs'])
-            if rows[rid].get('marks'):
-                used.add('mark')
-            out.append(f'<li class="cr" data-mrow="{rid}" data-mrow-v="{h}">{inner}</li>')
-    keyhtml = '<div class="lc-key">' + ''.join(f'<span><i class="cs {k}"></i>{COURSE_KINDS[k]}</span>' for k in COURSE_KINDS if k in used) + '</div>'
+            lis.append(f'<li class="cr" data-mrow="{rid}" data-mrow-v="{h}">{inner}</li>')
+        out.append(f'<li class="wgb"><p class="wg">{E(label)}</p><ol class="wrows">{"".join(lis)}</ol></li>' if label else ''.join(lis))
+    keyhtml = ''
     link = f'<p class="note">Every look-alike: <a href="{hub_href}">{E(hub_title or "full comparison")}</a></p>' if hub_href else ''
     return (f'<figure class="lcw lcc" data-mimic-hub="{E(hub)}"{" data-mimic-full=\"1\"" if full else ""}>'
             f'{_title(title, step, "not to scale")}<ol class="wrows">{"".join(out)}</ol>{keyhtml}'

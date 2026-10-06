@@ -38,6 +38,9 @@ SOURCES = {
     'sp-sza': 'StatPearls, Schizoaffective Disorder, NBK541012: "An uninterrupted duration of illness during which there is a major mood episode (manic or depressive) in addition to criterion A for schizophrenia"',
     'merck-spd': 'Merck Manual Professional, Schizotypal PD: "unusual perceptional experiences (eg, hearing a voice whispering their name)"',
     'merck-bpd': 'Merck Manual Professional, Borderline PD: "psychotic-like symptoms (eg, hallucinations, ideas of reference) may be triggered by extreme stress" ... "temporary and usually not severe enough to be considered a separate disorder"',
+    's108-q7': 'UWorld glucocorticoid psychosis question and explanation (repair/sources/s108_questions.md Q7; pasted 2026-10-04; local only)',
+    's108-q1': 'UWorld brief psychotic disorder question and library entry (repair/sources/s108_questions.md Q1; pasted 2026-10-04; local only)',
+    'merck-amc': 'Merck Manual Professional, Psychotic Disorder Due to Another Medical Condition (2025-07): "they begin and end at the same time"; "treating the general medical condition often reduces the severity of psychotic symptoms"',
     'dsm-asd': 'DSM-5 autism criteria via iacc.hhs.gov: A "Persistent deficits in social communication and social interaction"; '
                'B "Restricted, repetitive patterns of behavior, interests, or activities"; C "present in the early developmental period"',
 }
@@ -63,7 +66,7 @@ ROWS = {
         lines=['Sudden onset, often after a marked stressor',
                '1 or more: delusions, voices, disorganization',
                'Full return to baseline within a month'],
-        course='single', segs=[('act', 44, 46)],
+        course='single', segs=[('act', 70, 72)],
         src=['page:psychosis-duration', 'uw-bpd'], status='ready'),
     'schizoaffective': dict(
         name='Schizoaffective disorder', window='Psychosis 2 weeks or more without mood',
@@ -165,10 +168,24 @@ ROWS = {
     'delirium': dict(
         name='Delirium', window='Hours to days; fluctuates',
         lines=['A drug or illness as the cause',
-               'Psychosis with a clouded, fluctuating sensorium',
+               'Fluctuating attention and disorientation; any psychosis is secondary',
                'Attention fails over hours to days'],
         course='single', segs=[('flux', 90, 92)],
-        src=['page:delirium', 'page:psychosis-duration'], status='ready'),
+        src=['page:delirium', 'page:psychosis-duration', 'page:psych-medical'], status='ready'),
+    'medication-psychosis': dict(
+        name='Medication-induced psychotic disorder', window='Begins with a new medication',
+        lines=['A new medication, eg, high-dose glucocorticoids',
+               'Acute delusions or hallucinations',
+               'Alert and oriented; timing ties it to the drug'],
+        course='single', segs=[('sub', 84, 86)],
+        src=['page:psych-medical', 's108-q7', 's108-q1'], status='ready'),
+    'medical-psychosis': dict(
+        name='Psychotic disorder due to another medical condition', window='Begins and ends with the illness',
+        lines=['A disease known to cause psychosis (eg, brain tumor, thyroid storm)',
+               'History, examination or labs show the disease',
+               'Treating the disease often eases the psychosis'],
+        course='single', segs=[('ill', 88, 90)],
+        src=['page:psych-medical', 's108-q1', 'merck-amc'], status='ready'),
     # ---------------- waiting on a source opened the day they are authored
     'ocd-poor-insight': dict(name='Obsessive-compulsive disorder, poor insight', status='needs_source'),
     'lewy-body': dict(name='Lewy body dementia', status='needs_source'),
@@ -185,13 +202,14 @@ HUBS = {
                 ('Personality: no persistent psychosis', ['paranoid-pd', 'schizoid-pd', 'schizotypal-pd', 'borderline-pd']),
                 ('Developmental and normal', ['autism', 'imaginary-friend']),
                 ('After a trauma', ['acute-stress', 'ptsd']),
-                ('A drug or illness', ['substance-psychosis', 'delirium'])]),
+                ('A drug or illness', ['substance-psychosis', 'medication-psychosis', 'medical-psychosis', 'delirium'])]),
 }
 
 # Spokes: the slice each topic brief carries (most tempting first), with the hub it links to.
 SPOKES = {
-    'psychosis-duration': dict(hub='voices', rows=['schizophrenia', 'delusional', 'bipolar-psychotic', 'schizotypal-pd',
-                                                   'schizoid-pd', 'paranoid-pd']),
-    'bipolar-mania': dict(hub='voices', rows=['bipolar-psychotic', 'schizophrenia', 'delusional', 'schizotypal-pd',
+    'psychosis-duration': dict(hub='voices', rows=['schizophrenia', 'delusional', 'bipolar-psychotic', 'schizoaffective', 'acute-stress',
+                                                   'schizotypal-pd', 'schizoid-pd', 'paranoid-pd']),
+    'bipolar-mania': dict(hub='voices', rows=['bipolar-psychotic', 'schizoaffective', 'schizophrenia', 'delusional', 'schizotypal-pd',
                                               'schizoid-pd', 'paranoid-pd']),
+    'psych-medical': dict(hub='voices', rows=['medication-psychosis', 'medical-psychosis', 'delirium', 'substance-psychosis', 'brief-psychotic']),
 }
