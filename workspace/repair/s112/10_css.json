@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": ".lcc .rax span{opacity:.8}",
+   "with": "figure.lcw.lcc[data-mimic-full]{padding:0;background:none;box-shadow:none} /* s112: hub groups sit on the brief card (3 frames, not 4) */",
+   "note": "s112 (Jonathan picked A): axis labels fully opaque again (worst 1.6:1 to about 4.8:1); hub table frame dropped so group panels sit on the brief card"
+  }
+ ]
+}

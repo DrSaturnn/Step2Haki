@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-06 s112: Legibility: hub axis labels opaque again; hub table frame removed (Jonathan picked option A)
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Other page changes (nav, headers, scripts): +356 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 7 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 216/217 | vignette gridded 70/70 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (59413 source shingles; page 0.015%)
+```
+
 ## 2026-10-06 s111: Psych hub: Hears Voices or Holds Odd Beliefs; spokes in psychosis-duration, bipolar-mania, psych-medical; mimic tables v6 (per-row key, group panels, row cards)
 
 ```
