@@ -1,0 +1,39 @@
+{
+ "edits": [
+  {
+   "op": "set_attr",
+   "target": "tics",
+   "attr": "data-shelf",
+   "value": "fm peds psych",
+   "note": "s108: cross-shelf tag (child psychiatric disorder, DSM-5)"
+  },
+  {
+   "op": "set_attr",
+   "target": "peds-sleep",
+   "attr": "data-shelf",
+   "value": "fm peds psych",
+   "note": "s108: cross-shelf tag (child psychiatric disorder, DSM-5)"
+  },
+  {
+   "op": "set_attr",
+   "target": "bs-learning",
+   "attr": "data-shelf",
+   "value": "peds psych",
+   "note": "s108: cross-shelf tag (child psychiatric disorder, DSM-5)"
+  },
+  {
+   "op": "set_attr",
+   "target": "psychosis-duration",
+   "attr": "data-nid",
+   "value": "psych-form-085f91 psych-form-56fa9a 1484687016622 1484687018871",
+   "note": "s108: UWorld question covered by this brief"
+  },
+  {
+   "op": "set_attr",
+   "target": "sz-psychosocial",
+   "attr": "data-nid",
+   "value": "psych-form-87769b 1661269362443",
+   "note": "s108: UWorld question covered by this brief"
+  }
+ ]
+}

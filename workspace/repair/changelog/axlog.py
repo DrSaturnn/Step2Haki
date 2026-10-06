@@ -155,6 +155,7 @@ LOG = [
  (105, '2026-10-05', 'Small fixes. Every wrong answer is explained again in the coarctation and sulfonamide-jaundice questions; three spotted-fever and febrile-seizure stems trimmed to 40 words; craniopharyngioma calcification is seen mainly on CT (MRI shows the cyst); situs inversus lines hedged (ciliary dysfunction can misplace the heart); enuresis needs 3 months or distress, from age 5; galactosemia is confirmed by red cell enzyme analysis; neighboring questions with the same answer were separated in 12 briefs.', []),
     (106, '2026-10-05', 'Question and wording pass. Five practice questions that followed a UWorld case too closely (trisomy 18, Ewing sarcoma, biliary atresia, minimal change disease, choanal atresia) are now original cases; 15 question stems no longer name their answer; one Ewing sarcoma explanation now dismisses osteomyelitis by site and biopsy. Abbreviations are written out at first use in 94 briefs, and the last British spellings are now American.', []),
     (107, '2026-10-05', 'Pilot: Abnormal Growth in a Child shows a small flowchart of the short stature workup in its first workup tile; tap it to open full size (tap outside or Close to dismiss). Every label comes from the brief.', []),
+    (108, '2026-10-06', 'Tics, Sleep Problems in a Child and School Difficulty in a Child now also appear on the Psych shelf. Two psychosis briefs now carry the UWorld questions they cover.', []),
 ]
 if __name__ == '__main__':
     import json, sys
