@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-05 s107: thumbnail pilot: short stature flowchart on its workup tile
+
+```
+Page: 173 briefs, 2137 items -> 173 briefs, 2137 items
+Briefs changed (1):
+  - bs-short-stature (Abnormal Growth in a Child): prose edited (+9009 chars)
+Other page changes (nav, headers, scripts): +1198 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 173 briefs, 2137 items, 7 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 173 | bankwraps 173 | mcq 2137 (axCheck 2137, reveal-only 0) | malformed 0 | crit gridded 210/211 | vignette gridded 70/70 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (56601 source shingles; page 0.015%)
+```
+
 ## 2026-10-05 s106: amend ledger items 8-10: original stems, giveaway stems, acronyms, American spelling
 
 ```
