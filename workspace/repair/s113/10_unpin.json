@@ -1,0 +1,22 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "function syncShelfUrl(s){",
+   "with": "/* s113: switching shelf releases a pin the new shelf does not include. Without this a stale #brief in the\n   address bar kept that brief, its system section and its sidebar link on every shelf you switched to. */\nfunction unpinOffShelf(s){\n  var id=pinnedId(); if(!id||reviewSet) return;\n  if(shelfEligible(document.getElementById(id),s)) return;\n  try{ var u=new URL(location.href); history.replaceState(null,'',u.pathname+u.search); }catch(e){}\n}\nfunction syncShelfUrl(s){",
+   "note": "s113: unpinOffShelf()"
+  },
+  {
+   "op": "replace_global",
+   "find": "keepPlace(function(){ applyShelf(b.dataset.shelf); });",
+   "with": "unpinOffShelf(b.dataset.shelf); keepPlace(function(){ applyShelf(b.dataset.shelf); });",
+   "note": "s113: shelf buttons release an off-shelf pin"
+  },
+  {
+   "op": "replace_global",
+   "find": "keepPlace(function(){ applyShelf(sel.value); });",
+   "with": "unpinOffShelf(sel.value); keepPlace(function(){ applyShelf(sel.value); });",
+   "note": "s113: shelf select releases an off-shelf pin"
+  }
+ ]
+}
