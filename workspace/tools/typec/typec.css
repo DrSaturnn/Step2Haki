@@ -383,5 +383,10 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
 .lcc .rk i.cs.mark{width:5px;height:12px;border-radius:2px}
 .lcc .wl{margin:0 0 2px;font-size:13.5px;line-height:1.45}
 figure.lcw.lcc[data-mimic-full]{padding:0;background:none;box-shadow:none} /* s112: hub groups sit on the brief card (3 frames, not 4) */
+/* s114 (legibility item 1): text that was below 4.5:1 on its background */
+.brief .lcw .wh .win,.brief .lcc .wl.dec,.brief .lcw .wl.dec{color:#286B63}
+.brief .bkfilter button span{opacity:.78}
+.brief .lcw .sg.soft{color:#1F5A53}
+.brief .danger .lbl{color:#7A4C12}
 @media (max-width:560px){.lcc .wgb{padding:8px 5px 5px;border-radius:12px} .lcc .wgb > .wg{margin:2px 5px 8px} .lcc .cr,.lcc .wg + .cr{padding:12px 11px 11px}}
 /* ============ end v6 ============ */

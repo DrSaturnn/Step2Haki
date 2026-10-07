@@ -1,0 +1,16 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "--muted:#70707E;",
+   "with": "--muted:#5E5E6B;",
+   "note": "s114: secondary grey darkened (was 3.7 to 4.3:1 on wells; now 4.9 to 6.2:1)"
+  },
+  {
+   "op": "replace_global",
+   "find": "figure.lcw.lcc[data-mimic-full]{padding:0;background:none;box-shadow:none} /* s112: hub groups sit on the brief card (3 frames, not 4) */",
+   "with": "figure.lcw.lcc[data-mimic-full]{padding:0;background:none;box-shadow:none} /* s112: hub groups sit on the brief card (3 frames, not 4) */\n/* s114 (legibility item 1): text that was below 4.5:1 on its background */\n.brief .lcw .wh .win,.brief .lcc .wl.dec,.brief .lcw .wl.dec{color:#286B63}\n.brief .bkfilter button span{opacity:.78}\n.brief .lcw .sg.soft{color:#1F5A53}\n.brief .danger .lbl{color:#7A4C12}",
+   "note": "s114: teal window lines, filter counts, timeline segment labels, warning label"
+  }
+ ]
+}

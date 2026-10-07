@@ -161,6 +161,7 @@ LOG = [
     (111, '2026-10-06', 'New psychiatry hub: Hears Voices or Holds Odd Beliefs. One comparison of every look-alike on a life-course axis (primary psychosis, psychosis inside mood episodes, personality traits, normal and developmental, trauma, drugs, medication and medical illness, delirium), each with its own key, grouped in panels, with six practice questions. Psychosis, Bipolar Disorder and Psychiatric Symptoms from Medical Illness or Medication now carry their slice of the comparison with a link to the hub.', []),
     (112, '2026-10-06', 'Easier to read: the age labels under each look-alike bar are solid again, and in Hears Voices or Holds Odd Beliefs the grouped panels sit directly on the page, so each card is wider on a phone.', []),
     (113, '2026-10-06', 'Switching shelves now closes a brief you opened by direct link when it is not on the new shelf. Before, it stayed on screen, with its section and sidebar link, on every shelf you switched to.', []),
+    (114, '2026-10-06', 'Easier to read: grey secondary text (subtitles, vital signs in questions, the question lead-in, table headers, workup labels, chart labels) is darker, and the teal duration lines, question-filter counts and warning labels now meet the readability minimum on every background.', []),
 ]
 if __name__ == '__main__':
     import json, sys
