@@ -108,6 +108,7 @@ def main():
     ap.add_argument('--out', default=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'local', 'legib'))
     ap.add_argument('--views', default='phone,desk'); ap.add_argument('--modes', default='sculpted,flat,study')
     ap.add_argument('--shots', action='store_true', help='also save a normal screenshot of each brief')
+    ap.add_argument('--css', default='', help='a CSS file injected after load, to measure a candidate restyle before it ships')
     a = ap.parse_args()
     bids = a.briefs.split(','); os.makedirs(a.out, exist_ok=True)
     rows = []
@@ -120,6 +121,8 @@ def main():
                                     % ('1' if mode == 'flat' else '0', '1' if mode == 'study' else '0'))
                 pg = ctx.new_page()
                 pg.goto('file://' + os.path.abspath(a.page) + '#' + bids[0]); pg.wait_for_timeout(2500)
+                if a.css:
+                    pg.add_style_tag(content=open(a.css, encoding='utf-8').read()); pg.wait_for_timeout(300)
                 # fixed and sticky chrome (bottom bar, Index pill, update bar) would be painted into tall element screenshots
                 pg.evaluate("() => { for (const e of document.querySelectorAll('body *')) { const p = getComputedStyle(e).position;"
                             " if ((p === 'fixed' || p === 'sticky') && !e.closest('.brief')) e.style.setProperty('visibility', 'hidden', 'important'); } }")
