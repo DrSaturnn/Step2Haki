@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-07 s116: Stacked practice questions site-wide (Stack/List/Review, one-row toolbar, Reveal all in List); tier tags and phone card label alignment site-wide; centered mnemonic letters; MDD: Workup step with the workup tree, SIGECAPS, PHQ-9 form and score bar with the 10+ threshold, specifier and first-drug tables, numbered treatment ladder, smaller grow-from-button drawer
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (1):
+  - mdd (Major Depressive Disorder): prose edited (+3023 chars)
+Other page changes (nav, headers, scripts): +19086 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 9 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 215/216 | vignette gridded 70/70 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (59413 source shingles; page 0.015%)
+```
+
 ## 2026-10-07 s115: MDD rebuilt as the first decision-spine brief (P1 pilot): 8 steps, mimics table, Narrow pivot table, SIGECAPS, PHQ-9 bands, specifiers, raise/switch/add/last tiers, When/Do follow-up, systems panel; hover/tap popovers and linked-brief drawers; sculpted tokens only
 
 ```
