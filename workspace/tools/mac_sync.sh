@@ -89,7 +89,7 @@ for f in sorted(os.listdir(out)):
 cmd = None
 if parts:
     src = ' '.join(parts)
-    cmd = ('cd ~/mnt/Step2Haki && cat %s | tar -xzf - -C local-only && echo extracted '
+    cmd = ('cd ~/mnt/Step2Haki && cat %s | tar --overwrite -xzf - -C local-only && echo extracted '
            '&& (rm -f %s 2>/dev/null || { mkdir -p _to_delete && mv -f %s _to_delete/; echo moved to _to_delete; }) '
            '&& df -h . | tail -1') % (src, src, src)
 plan = {'commit': files, 'then_device_bash': cmd,
