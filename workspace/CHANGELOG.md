@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-09 s126: Sleep stage wheel and table in Sleep Problems; every timeline chart in the card layout with per-row legends (site-wide)
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (1):
+  - peds-sleep (Sleep Problems): prose edited (+1681 chars)
+Other page changes (nav, headers, scripts): +7479 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 12 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 200/201 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (59413 source shingles; page 0.014%)
+```
+
 ## 2026-10-09 s125: Sleep Problems for children and adults on the step format with a night chart; prolonged grief, delusional disorder, dronabinol, screen false positives and Huntington additions; first briefs.json
 
 ```
