@@ -6,7 +6,8 @@
 #     attribute-only); render; vendor scan (no source text in tracked files, page under limit);
 #     refuse if any local-only path is tracked; vendor scan against the NEW page (orphaned source runs);
 #     preflight.py content warnings (advisory, never abort).   -> any failure aborts before writing anything
-#  2. write workspace/index.html and ../discriminator-briefs-site/index.html (the deployed copy)
+#  2. write workspace/index.html and ../discriminator-briefs-site/index.html (the deployed copy),
+#     version.json, and briefs.json (tools/briefs_json.py: the brief index the companion extension reads)
 #  3. commit body from the page diff (tools/changelog.py), prepended to workspace/CHANGELOG.md
 #  4. commit "<sNN>: <message>" + body + trailers
 #  5. push origin main only if /home/claude/.config/axbx/gh_token exists (one-shot extraheader via
@@ -93,13 +94,21 @@ cp index.html "$TMP/index.keep.html"; [[ -f "$SITE" ]] && cp "$SITE" "$TMP/site.
 cp CHANGELOG.md "$TMP/changelog.keep.md" 2>/dev/null || true
 restore(){ cp "$TMP/index.keep.html" index.html; [[ -f "$TMP/site.keep.html" ]] && cp "$TMP/site.keep.html" "$SITE"
   [[ -f "$TMP/changelog.keep.md" ]] && cp "$TMP/changelog.keep.md" CHANGELOG.md
-  [[ -f "$TMP/version.keep.json" ]] && cp "$TMP/version.keep.json" "$(dirname "$SITE")/version.json"; git -C "$ROOT" reset -q; }
+  [[ -f "$TMP/version.keep.json" ]] && cp "$TMP/version.keep.json" "$(dirname "$SITE")/version.json"
+  if [[ -f "$TMP/briefs.keep.json" ]]; then cp "$TMP/briefs.keep.json" "$(dirname "$SITE")/briefs.json"
+  elif [[ -n "${BJ_WRITTEN:-}" ]]; then rm -f "$(dirname "$SITE")/briefs.json"; fi
+  git -C "$ROOT" reset -q; }
 if cmp -s "$TMP/index.html" "$SITE"; then SITELINE="Site: discriminator-briefs-site/index.html unchanged (no deploy)"
 else SITELINE="Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)"; fi
 cp "$TMP/index.html" index.html
 mkdir -p "$(dirname "$SITE")" && cp "$TMP/index.html" "$SITE"
 VERF="$(dirname "$SITE")/version.json"; [[ -f "$VERF" ]] && cp "$VERF" "$TMP/version.keep.json"
 grep -q 'name="ax-build"' "$SITE" && printf '{"build":"%s","date":"%s"}\n' "$B" "$STAMP_DAY" > "$VERF"
+# briefs.json: brief index for the companion extension, regenerated from the page being deployed
+BJF="$(dirname "$SITE")/briefs.json"; [[ -f "$BJF" ]] && cp "$BJF" "$TMP/briefs.keep.json"
+BJ_WRITTEN=1
+BJ=$(python3 tools/briefs_json.py "$SITE" "$B" "$STAMP_DAY" "$BJF" 2>&1) || { restore; fail briefs-json "$BJ"; }
+echo "$BJ"
 echo "$SITELINE"
 
 # ---- 3. commit body + CHANGELOG entry
@@ -109,11 +118,12 @@ python3 tools/changelog.py "$TMP/prev.html" index.html --site "$SITELINE" --chec
 # ---- 4. commit
 git -C "$ROOT" add -A -- workspace "discriminator-briefs-site/index.html" >/dev/null 2>&1
 [[ -f "$ROOT/discriminator-briefs-site/version.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/version.json" >/dev/null 2>&1
+[[ -f "$ROOT/discriminator-briefs-site/briefs.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/briefs.json" >/dev/null 2>&1
 if git -C "$ROOT" diff --cached --quiet; then
   echo "commit: nothing to commit"
 else
   { echo "$B: $MSG"; echo; cat "$TMP/body.txt"; echo; echo "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>";
-    echo "Claude-Session: https://claude.ai/code/session_01AgUUwsL6Nx5TMh8uAEX8Ak"; } > "$TMP/msg.txt"
+    echo "Claude-Session: https://claude.ai/code/session_01AQqAVMYEcNvwH6MgU3fy5n"; } > "$TMP/msg.txt"
   git -C "$ROOT" commit -q -F "$TMP/msg.txt" || { restore; fail commit; }
   echo "commit: $(git -C "$ROOT" log -1 --format='%h %s') ($(git -C "$ROOT" rev-list --count HEAD) commits)"
 fi
