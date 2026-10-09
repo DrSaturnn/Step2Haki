@@ -49,6 +49,8 @@ COLLECT = r"""
   while ((n = w.nextNode())) {
     const t = n.textContent.trim(); if (t.length < 2) continue;
     const el = n.parentElement; if (!el || el.closest('svg')) continue;
+    // sticky brief chrome (s120 bar and rail) moves while a tall element is captured, so it cannot be measured in this shot
+    if (el.closest('.bb-rail, .bb-bar')) continue;
     const cs = getComputedStyle(el);
     if (cs.display === 'none' || cs.visibility === 'hidden') continue;
     let op = 1, depth = 0, frames = 0, comp = '';
