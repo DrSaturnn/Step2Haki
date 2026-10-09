@@ -2,6 +2,23 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-09 s122: Psychosis, Delirium, Panic and Other Anxiety, and Substance Intoxication and Withdrawal on the step format (compact scripts, urgent risks, bold-timeline differentials with drawers, workup with clues and bait, criteria, ladders and situation tables, follow-up)
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (4):
+  - psychosis-duration (Psychosis): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+4433 chars)
+  - delirium (Delirium): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+12669 chars)
+  - substance (Substance Intoxication and Withdrawal): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+18168 chars)
+  - panic (Panic Disorder and Other Anxiety): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+12804 chars)
+Other page changes (nav, headers, scripts): +1006 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 10 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 209/210 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (59413 source shingles; page 0.015%)
+```
+
 ## 2026-10-09 s121: Bipolar Disorder on the decision spine (compact script with a course panel, urgent risks, severity-first differential with drawers, workup, criteria, episode table, ladder, follow-up); MDD compact intro with the by-system panel restored
 
 ```
