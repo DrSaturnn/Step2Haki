@@ -2,6 +2,24 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-09 s123: Somatic Symptom, Genito-Pelvic Pain/Penetration Disorder, and the SSRI, antipsychotic and lithium drug briefs on the step format (drug script, urgent risks, which effect is it by timing, management, monitoring and interactions)
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (5):
+  - ssri-effects (SSRI Adverse Effects): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+13982 chars)
+  - antipsych-effects (Antipsychotic Adverse Effects): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+13295 chars)
+  - lithium-effects (Lithium Therapy): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+13382 chars)
+  - gppd (Genito-Pelvic Pain/Penetration Disorder): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+10871 chars)
+  - somatic (Somatic Symptom and Related Disorders): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+13236 chars)
+Other page changes (nav, headers, scripts): +1263 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 10 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 201/202 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (59413 source shingles; page 0.015%)
+```
+
 ## 2026-10-09 s122: Psychosis, Delirium, Panic and Other Anxiety, and Substance Intoxication and Withdrawal on the step format (compact scripts, urgent risks, bold-timeline differentials with drawers, workup with clues and bait, criteria, ladders and situation tables, follow-up)
 
 ```
