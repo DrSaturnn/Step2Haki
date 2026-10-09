@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "</head>",
+   "with": "<style id=\"ax-s125\">\n/* ============ Night lanes (s125, Jonathan 2026-10-09: a sleep-cycle chart for Sleep Problems) ============\n   Built on the mood-track lanes (.lcm): one lane per sleep stage group across one night, event labels above the lanes,\n   a clock axis below. Tokens only, so flat, study and dark modes follow. */\n.lcn .mb.rem{background:var(--mlo);box-shadow:inset 0 0 0 1.5px var(--mlo-e)}\n.lcn .mb.n3{background:var(--psy3)}\n.lcn .mb.lt{background:var(--psy1);box-shadow:inset 0 0 0 1px var(--psy2)}\n.lcn .lanes .fls{display:flex;justify-content:space-between;align-items:flex-end;gap:4px 12px;height:auto}\n.lcn .fl{position:static;width:auto;white-space:normal;flex:1 1 0;font-style:normal;font-size:10.5px;font-weight:700;line-height:1.25;color:var(--chart-ink)}\n.lcn .fl.r{text-align:right}\n.lcn .lanes .rax{margin:0}\n.lc-key .k-rem{background:var(--mlo);box-shadow:inset 0 0 0 1.5px var(--mlo-e)}\n.lc-key .k-n3{background:var(--psy3)}\n.lc-key .k-lt{background:var(--psy1);box-shadow:inset 0 0 0 1px var(--psy2)}\n</style>\n</head>",
+   "note": "night-lane chart styles"
+  }
+ ]
+}

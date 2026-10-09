@@ -2,6 +2,24 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-09 s125: Sleep Problems for children and adults on the step format with a night chart; prolonged grief, delusional disorder, dronabinol, screen false positives and Huntington additions; first briefs.json
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (5):
+  - peds-sleep (Sleep Problems): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+16688 chars)
+  - psychosis-duration (Psychosis): prose edited (+400 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+768 chars)
+  - mdd (Major Depressive Disorder): prose edited (+351 chars)
+  - antipsych-effects (Antipsychotic Adverse Effects): prose edited (+389 chars)
+Other page changes (nav, headers, scripts): +1945 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 11 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 200/201 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (59413 source shingles; page 0.014%)
+```
+
 ## 2026-10-09 s124: Schizophrenia: Long-Term Care on the step format; sourced fills across the psychiatry step briefs; timeline axis labels no longer collide (site-wide)
 
 ```
