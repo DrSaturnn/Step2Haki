@@ -1,0 +1,16 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "</head>",
+   "with": "<style id=\"ax-s124\">\n/* ============ Timeline axis labels (s124, Jonathan 2026-10-09: \"fix timing charts\") ============\n   Close ticks made their labels run into each other (eg \"Last drink\", \"6 h\", \"12 h\" on a phone). axisfit.js drops a\n   colliding label to a second line (.lo) and, if neither line has room, hides it (.gone; its tick stays). */\n.rax.fit2{height:28px}\n.rax span.lo{top:13px}\n.rax span.gone{visibility:hidden}\n/* the label row sat 3 px under the rail, exactly where the ticks end, so tick lines touched the labels: leave a 5 px gap */\n.lcw .rail + .rax{margin-top:1px}\n</style>\n</head>",
+   "note": "timeline axis label styles"
+  },
+  {
+   "op": "replace_global",
+   "find": "</body>",
+   "with": "<script>\n/* Timeline axis labels (s124). Greedy two-line layout for every .rax: each label stays on line 1 if it clears the label\n   before it (and the end arrow), else drops to line 2, else hides. Re-runs whenever an axis changes width (panels opening,\n   drawers, resizes). Nothing is stored. */\n(function(){\n  'use strict';\n  var GAP = 6;\n  function fit(ax){\n    var w = ax.clientWidth; if(!w) return;\n    var spans = [].slice.call(ax.querySelectorAll(':scope > span'));\n    spans.forEach(function(s){ s.classList.remove('lo', 'gone'); });\n    ax.classList.remove('fit2');\n    var base = ax.getBoundingClientRect().left, em = ax.querySelector(':scope > em');\n    var stop = em ? em.getBoundingClientRect().left - base - GAP : w;\n    var end = [-1e9, -1e9], two = false;\n    spans.forEach(function(s){\n      var r = s.getBoundingClientRect(), L = r.left - base, R = r.right - base;\n      if(L >= end[0] + GAP && R <= stop){ end[0] = R; }\n      else if(L >= end[1] + GAP){ s.classList.add('lo'); end[1] = R; two = true; }\n      else { s.classList.add('gone'); }\n    });\n    if(two) ax.classList.add('fit2');\n  }\n  var ro = ('ResizeObserver' in window) ? new ResizeObserver(function(es){ es.forEach(function(e){ fit(e.target); }); }) : null;\n  var seen = new WeakSet();\n  function watch(root){\n    (root.querySelectorAll ? root.querySelectorAll('.rax') : []).forEach(function(ax){\n      if(seen.has(ax)) return; seen.add(ax);\n      if(ro) ro.observe(ax); else fit(ax);\n    });\n  }\n  function init(){\n    watch(document);\n    new MutationObserver(function(ms){ ms.forEach(function(m){ m.addedNodes.forEach(function(n){ if(n.nodeType === 1) watch(n.matches && n.matches('.rax') ? n.parentNode : n); }); }); })\n      .observe(document.body, {childList: true, subtree: true});\n    if(!ro) window.addEventListener('resize', function(){ document.querySelectorAll('.rax').forEach(fit); });\n  }\n  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();\n})();\n</script>\n</body>",
+   "note": "timeline axis label script"
+  }
+ ]
+}

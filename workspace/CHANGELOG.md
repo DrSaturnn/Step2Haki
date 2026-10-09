@@ -2,6 +2,27 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-09 s124: Schizophrenia: Long-Term Care on the step format; sourced fills across the psychiatry step briefs; timeline axis labels no longer collide (site-wide)
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (8):
+  - psychosis-duration (Psychosis): prose edited (+134 chars)
+  - sz-psychosocial (Schizophrenia: Long-Term Care): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+11906 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+1569 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (+101 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (+240 chars)
+  - antipsych-effects (Antipsychotic Adverse Effects): prose edited (+1176 chars)
+  - lithium-effects (Lithium Therapy): prose edited (+712 chars)
+  - gppd (Genito-Pelvic Pain/Penetration Disorder): prose edited (+287 chars)
+Other page changes (nav, headers, scripts): +3653 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 11 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 198/199 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (59413 source shingles; page 0.014%)
+```
+
 ## 2026-10-09 s123: Somatic Symptom, Genito-Pelvic Pain/Penetration Disorder, and the SSRI, antipsychotic and lithium drug briefs on the step format (drug script, urgent risks, which effect is it by timing, management, monitoring and interactions)
 
 ```
