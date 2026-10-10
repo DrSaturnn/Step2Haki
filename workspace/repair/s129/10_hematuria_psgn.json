@@ -1,0 +1,11 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "hematuria",
+   "find": "about 2 to 4 weeks after pharyngitis",
+   "with": "about 1 to 3 weeks after pharyngitis",
+   "note": "PSGN latency after pharyngitis matches Nephrotic Syndrome in a Child and MSD Manual Professional, Postinfectious Glomerulonephritis: a latency of 6 to 21 days is typical, up to 6 weeks (found by tools/spine/numbers.py)"
+  }
+ ]
+}
