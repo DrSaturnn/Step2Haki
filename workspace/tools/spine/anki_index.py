@@ -13,7 +13,7 @@ card wording. Only that one file counts as vendor text (the exports, index and d
 "shared by 3 or more source files" stock rule cannot cancel card lines.
 
 Per note (one JSON line):
-  deck        export file stem (Psych, Peds, FM)
+  deck        export file stem (Psych, Peds, FM), or the export's deck column when present
   guid        Anki unique identifier (export column 1)
   ankihub_id  AnkiHub note UUID (the last field), when present
   nid         Anki note id (the page's data-nid values), from --db; the plain-text export lacks it
@@ -104,31 +104,35 @@ def read(path):
                 lines.append(line)
     if hdr.get('separator') != 'tab' or hdr.get('html') != 'true':
         sys.exit('%s: export must be tab-separated with HTML included (header: %s)' % (path, hdr))
-    gcol = int(hdr.get('guid column', 0)) - 1
-    tcol = int(hdr.get('tags column', 0)) - 1
-    if gcol < 0 or tcol < 0:
+    cols = {k: int(hdr.get(k + ' column', 0)) - 1 for k in ('guid', 'tags', 'notetype', 'deck')}
+    if cols['guid'] < 0 or cols['tags'] < 0:
         sys.exit('%s: export needs the unique identifier and tags columns' % path)
-    return gcol, tcol, list(csv.reader(lines, delimiter='\t'))
+    return cols, list(csv.reader(lines, delimiter='\t'))
 
 
-def record(deck, row, gcol, tcol, db=None):
-    fields = [c for i, c in enumerate(row) if i not in (gcol, tcol)]
+def record(deck, row, cols, db=None):
+    gcol, tcol = cols['guid'], cols['tags']
+    meta = {v for v in cols.values() if v >= 0}
+    fields = [c for i, c in enumerate(row) if i not in meta]
+    ntname = row[cols['notetype']] if cols['notetype'] >= 0 else ''
+    if cols['deck'] >= 0:
+        deck = row[cols['deck']]
     nid, fn = None, {}
     if db is not None:
         hit = db[0].get(row[gcol])
-        if not hit:
-            sys.exit('%s: note %r is not in the --db collections' % (deck, row[gcol]))
-        nid, mid = hit
-        fn = db[1].get(mid, {})
-        byname = {v: k for k, v in fn.items()}
-        if 'Text' not in byname or 'Extra' not in byname:
-            sys.exit('%s: notetype %s has no Text or Extra field (%s)' % (deck, mid, sorted(byname)))
+        if hit:
+            nid, mid = hit
+            fn = db[1].get(mid, {})
+        elif ntname in db[2]:
+            fn = db[1].get(db[2][ntname], {})
+    byname = {v: k for k, v in fn.items()}
+    if 'Text' in byname and 'Extra' in byname:
         text_html, extra_html = fields[byname['Text']], fields[byname['Extra']]
-        skip = {byname['Text'], byname['Extra']}
-    else:
+        skip, by = {byname['Text'], byname['Extra']}, 'name'
+    else:                       # notetype not in the collections (or no Text/Extra): first two fields
         text_html = fields[0] if fields else ''
         extra_html = fields[1] if len(fields) > 1 else ''
-        skip = {0, 1}
+        skip, by = {0, 1}, 'position'
     ahid = next((c.strip() for c in reversed(fields) if UUID.match(c.strip())), '')
     other = {}
     for i, c in enumerate(fields):
@@ -148,7 +152,7 @@ def record(deck, row, gcol, tcol, db=None):
         if len(p) >= 3 and p[0].startswith('#AK_Step2') and p[1] in ('!Shelf', '#Resources_by_rotation'):
             shelves.add(p[2])
     return {
-        'deck': deck, 'guid': row[gcol], 'ankihub_id': ahid, 'nid': nid,
+        'deck': deck, 'notetype': ntname, 'fields_by': by, 'guid': row[gcol], 'ankihub_id': ahid, 'nid': nid,
         'text': plain(text_html), 'extra': plain(extra_html),
         'text_html': text_html, 'extra_html': extra_html,
         'cloze': [plain(m) for m in CLOZE.findall(text_html)],
@@ -160,14 +164,16 @@ def record(deck, row, gcol, tcol, db=None):
 
 def load_dbs(paths):
     import sqlite3
-    notes, names = {}, {}
+    notes, names, ntids = {}, {}, {}
     for p in paths:
         c = sqlite3.connect(p)
+        for ntid, name in c.execute('select id, name from notetypes'):
+            ntids[name] = ntid
         for ntid, ord_, name in c.execute('select ntid, ord, name from fields'):
             names.setdefault(ntid, {})[ord_] = name
         for nid, guid, mid in c.execute('select id, guid, mid from notes'):
             notes[guid] = (nid, mid)
-    return notes, names
+    return notes, names, ntids
 
 
 def main():
@@ -190,12 +196,12 @@ def main():
     seen, recs, dup = {}, [], 0
     for path in files:
         deck = os.path.splitext(os.path.basename(path))[0]
-        gcol, tcol, rows = read(path)
+        cols, rows = read(path)
         n = 0
         for row in rows:
-            if len(row) <= max(gcol, tcol):
+            if len(row) <= max(cols.values()):
                 continue
-            r = record(deck, row, gcol, tcol, db)
+            r = record(deck, row, cols, db)
             if r['guid'] in seen:          # same note exported under two decks: keep one, list both decks
                 seen[r['guid']]['also'] = sorted(set(seen[r['guid']].get('also', [])) | {deck})
                 dup += 1
@@ -205,7 +211,8 @@ def main():
             n += 1
         print('%s: %d notes' % (deck, n))
     if db is not None:
-        print('note ids and field names from %d collection(s): all %d notes matched' % (len(dbs), len(recs)))
+        print('note ids from %d collection(s): %d of %d notes (the rest need an .apkg or collection covering them); fields by name for %d'
+              % (len(dbs), sum(1 for r in recs if r['nid']), len(recs), sum(1 for r in recs if r['fields_by'] == 'name')))
     os.makedirs(os.path.dirname(out) or '.', exist_ok=True)
     cards = os.path.join(os.path.dirname(out) or '.', 'anki_cards.txt')
     with open(cards + '.tmp', 'w', encoding='utf-8') as f:
