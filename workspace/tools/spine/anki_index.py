@@ -2,12 +2,15 @@
 
   python3 tools/spine/anki_index.py <export.txt> [<export.txt> ...] --out repair/sources/anki/anki_index.jsonl
       [--db <collection.sqlite> ...]   (decompressed collection.anki21b from an .apkg export of the same decks:
-                                         adds note ids and field names)
+                                         adds note ids, field names, and Text/Extra chosen by field name)
 
 Card text is never a page source (standing rule). The index exists to (1) list the concepts a deck marks as
 high yield for each brief, (2) carry each card's identifiers so a claim map can name the exact card it was
-checked from, and (3) link cards to UWorld questions by QID tag. Output lives under repair/sources/
-(local-only: never committed; vendor_scan treats it as the source side, so the 10-word copy check covers it).
+checked from, and (3) link cards to UWorld questions by QID tag. Output lives under repair/sources/anki/
+(local-only: never committed). Besides the index it writes anki_cards.txt, the plain card text (Text, Extra
+and other text fields), which tools/vendor_scan.py reads as vendor source, so the 10-word copy check covers
+card wording. Only that one file counts as vendor text (the exports, index and databases are skipped), so the
+"shared by 3 or more source files" stock rule cannot cancel card lines.
 
 Per note (one JSON line):
   deck        export file stem (Psych, Peds, FM)
@@ -16,7 +19,10 @@ Per note (one JSON line):
   nid         Anki note id (the page's data-nid values), from --db; the plain-text export lacks it
   text, extra plain text with clozes shown (answers in [brackets])
   text_html, extra_html   raw HTML (emphasis and colors live here)
-  hy          the Extra field split into statements (one per line or bullet). The Extra field is the deck's
+  cloze       the cloze answers in Text: the fact the card tests (its anchor)
+  hy          the Extra field split into statements [{id, key, text}]: id = <nid or guid>.<key>, key = first 10 hex
+              of sha1 of the normalized text (stable across re-exports and reordering); a line ending in ":" is a
+              header and is prefixed to the lines under it instead of standing alone. The Extra field is the deck's
               pink text, the high-yield notes (Jonathan 2026-10-09: "the extra"; the AnKingOverhaul notetype CSS
               colors #extra navy, magenta in night mode)
   marks       emphasis spans inside Extra: [{kind: b|u|i|color, color, text}]
@@ -26,6 +32,7 @@ Per note (one JSON line):
   shelves     Step 2 shelf tags (e.g. Psych, Peds, FM) from !Shelf and #Resources_by_rotation
 """
 import csv
+import hashlib
 import html as H
 import json
 import os
@@ -50,12 +57,23 @@ def plain(s):
     return re.sub(r'\n\s*\n+', '\n', s).strip()
 
 
-def statements(h):
-    out = []
+def norm(t):
+    return ' '.join(re.findall(r'[a-z0-9]+', t.lower()))
+
+
+def statements(h, owner):
+    out, head = [], ''
     for line in plain(h).split('\n'):
         t = re.sub(r'^\s*(?:[-\u2022*]|\d+[.)])\s*', '', line).strip()
-        if len(t) >= 4:
-            out.append(t)
+        if len(t) < 4:
+            continue
+        if t.endswith(':') and len(t) <= 80:
+            head = t
+            continue
+        if head:
+            t = head + ' ' + t
+        key = hashlib.sha1(norm(t).encode()).hexdigest()[:10]
+        out.append({'id': '%s.%s' % (owner, key), 'key': key, 'text': t})
     return out
 
 
@@ -93,18 +111,32 @@ def read(path):
     return gcol, tcol, list(csv.reader(lines, delimiter='\t'))
 
 
-def record(deck, row, gcol, tcol):
+def record(deck, row, gcol, tcol, db=None):
     fields = [c for i, c in enumerate(row) if i not in (gcol, tcol)]
-    text_html = fields[0] if fields else ''
-    extra_html = fields[1] if len(fields) > 1 else ''
+    nid, fn = None, {}
+    if db is not None:
+        hit = db[0].get(row[gcol])
+        if not hit:
+            sys.exit('%s: note %r is not in the --db collections' % (deck, row[gcol]))
+        nid, mid = hit
+        fn = db[1].get(mid, {})
+        byname = {v: k for k, v in fn.items()}
+        if 'Text' not in byname or 'Extra' not in byname:
+            sys.exit('%s: notetype %s has no Text or Extra field (%s)' % (deck, mid, sorted(byname)))
+        text_html, extra_html = fields[byname['Text']], fields[byname['Extra']]
+        skip = {byname['Text'], byname['Extra']}
+    else:
+        text_html = fields[0] if fields else ''
+        extra_html = fields[1] if len(fields) > 1 else ''
+        skip = {0, 1}
     ahid = next((c.strip() for c in reversed(fields) if UUID.match(c.strip())), '')
     other = {}
-    for i, c in enumerate(fields[2:], start=3):
-        if c.strip() == ahid:
+    for i, c in enumerate(fields):
+        if i in skip or c.strip() == ahid:
             continue
         t = plain(c)
         if len(t) > 3:
-            other[str(i)] = t
+            other[fn.get(i, str(i + 2))] = t
     tags = row[tcol].split()
     uw = {'step2': [], 'step1': [], 'comlex': []}
     shelves = set()
@@ -116,10 +148,11 @@ def record(deck, row, gcol, tcol):
         if len(p) >= 3 and p[0].startswith('#AK_Step2') and p[1] in ('!Shelf', '#Resources_by_rotation'):
             shelves.add(p[2])
     return {
-        'deck': deck, 'guid': row[gcol], 'ankihub_id': ahid, 'nid': None,
+        'deck': deck, 'guid': row[gcol], 'ankihub_id': ahid, 'nid': nid,
         'text': plain(text_html), 'extra': plain(extra_html),
         'text_html': text_html, 'extra_html': extra_html,
-        'hy': statements(extra_html),
+        'cloze': [plain(m) for m in CLOZE.findall(text_html)],
+        'hy': statements(extra_html, nid or row[gcol]),
         'marks': marks(extra_html), 'other': other, 'tags': tags,
         'uworld': {k: sorted(set(v)) for k, v in uw.items()}, 'shelves': sorted(shelves),
     }
@@ -141,10 +174,19 @@ def main():
     args = sys.argv[1:]
     if '--out' not in args or len(args) < 3:
         sys.exit(__doc__.strip().splitlines()[2].strip())
-    out = args[args.index('--out') + 1]
-    dbs = args[args.index('--db') + 1:] if '--db' in args else []
-    files = [a for a in args[:args.index('--db')] if '--db' in args] if dbs else list(args)
-    files = [a for a in files if a != '--out' and a != out]
+    files, dbs, out, mode = [], [], None, None
+    for a in args:
+        if a in ('--out', '--db'):
+            mode = a
+        elif mode == '--out':
+            out, mode = a, None
+        elif mode == '--db':
+            dbs.append(a)          # every value after --db until the next flag
+        else:
+            files.append(a)
+    if not out or not files:
+        sys.exit(__doc__.strip().splitlines()[2].strip())
+    db = load_dbs(dbs) if dbs else None
     seen, recs, dup = {}, [], 0
     for path in files:
         deck = os.path.splitext(os.path.basename(path))[0]
@@ -153,7 +195,7 @@ def main():
         for row in rows:
             if len(row) <= max(gcol, tcol):
                 continue
-            r = record(deck, row, gcol, tcol)
+            r = record(deck, row, gcol, tcol, db)
             if r['guid'] in seen:          # same note exported under two decks: keep one, list both decks
                 seen[r['guid']]['also'] = sorted(set(seen[r['guid']].get('also', [])) | {deck})
                 dup += 1
@@ -162,19 +204,14 @@ def main():
             recs.append(r)
             n += 1
         print('%s: %d notes' % (deck, n))
-    if dbs:
-        notes, names = load_dbs(dbs)
-        miss = 0
-        for r in recs:
-            hit = notes.get(r['guid'])
-            if not hit:
-                miss += 1
-                continue
-            r['nid'], mid = hit
-            fn = names.get(mid, {})
-            r['other'] = {fn.get(int(k) - 1, k): v for k, v in r['other'].items()}
-        print('note ids: %d of %d notes matched by guid (%d unmatched)' % (len(recs) - miss, len(recs), miss))
+    if db is not None:
+        print('note ids and field names from %d collection(s): all %d notes matched' % (len(dbs), len(recs)))
     os.makedirs(os.path.dirname(out) or '.', exist_ok=True)
+    cards = os.path.join(os.path.dirname(out) or '.', 'anki_cards.txt')
+    with open(cards + '.tmp', 'w', encoding='utf-8') as f:
+        for r in recs:
+            f.write('\n'.join([r['text'], r['extra']] + list(r['other'].values())) + '\n\n')
+    os.replace(cards + '.tmp', cards)
     tmp = out + '.tmp'
     with open(tmp, 'w', encoding='utf-8') as f:
         for r in recs:

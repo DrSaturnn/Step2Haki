@@ -39,7 +39,10 @@ STOCK_DEFAULT = '/root/.claude/skills/synced'
 
 def is_vendor(rel):
     b = os.path.basename(rel)
-    return bool(re.match(r'^s\d+[a-z]?_questions\.md$', b)) or '/aq/' in '/' + rel.replace(os.sep, '/')
+    rel = '/' + rel.replace(os.sep, '/')
+    # AnKing card text: only the plain card file counts (tools/spine/anki_index.py writes it); the exports,
+    # index and databases beside it repeat the same text and would cancel it under the >= 3 files stock rule
+    return bool(re.match(r'^s\d+[a-z]?_questions\.md$', b)) or '/aq/' in rel or rel.endswith('/anki/anki_cards.txt')
 
 
 def git(repo, *a, inp=None):
@@ -151,6 +154,8 @@ def main(argv):
             for f in fs:
                 p = os.path.join(root, f)
                 rel = os.path.relpath(p, src_dir)
+                if not is_vendor(rel) and 'skill' not in f.lower():
+                    continue        # other local-only files are neither vendor nor stock; skip reading them
                 sh = shingles(words(open(p, encoding='utf-8', errors='replace').read()))
                 if is_vendor(rel):
                     for s in sh:
