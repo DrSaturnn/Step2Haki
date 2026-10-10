@@ -51,6 +51,15 @@ Status 2026-10-10:
 - 0.1 FM and peds lens frozen as drafted (Jonathan gave no change); his review of the goldens approves it.
 - 0.2 goldens chosen: nephrotic-child and scfe (peds), copd (FM). Built on the current process next.
 - Next after the goldens: 0.4 to 0.17.
+- Goldens built 2026-10-10 on the current process (Opus authors with scripted retrieval, two Opus audit rounds plus a delta audit on the HIGH fixes, lead adjudication); awaiting Jonathan's approval. Round 1 found 3 HIGH and about 40 MED across the three; round 2 found 2 HIGH (both COPD: the overlap rule still contradicted a bank key, and the NIV threshold) and 14 MED; the delta audit confirmed both HIGH fixed.
+- Defects found while building them, each now a rule or a tool fix:
+  - fetch.py lost index rows when agents fetched in parallel (now one sidecar file per page).
+  - fetch.py cut text after a bare "<" ("FEV1/FVC < 0.70"); it now strips only real tags.
+  - Card dispositions lived only in chat reports, so auditors could not check them; authors now write cards_disposition.json.
+  - Two authors overwrote each other's helper script at a shared scratch path; authors now use their own scratch subfolder.
+  - The Lead sent fixers an adjudication without the audit text; audits are now written to audit_rN.md in the brief's folder and fixers read the file (production step B11 passes paths, never retyped findings).
+  - shots.py skipped the first brief's opening sections before layout settled; it now visits every brief first and retries short segments.
+  - legib_audit reported 44 desktop clashes in flat and study modes on COPD tables that render cleanly in a screenshot; treat as a tool artifact until the audit's clash sampler is checked.
 
 Scripts live in `tools/spine/` (tracked). Packets, caches, outlines and claim maps live under `repair/migration/` or `repair/sources/` (local-only; synced to the Mac by mac_sync). Helpers now in `/tmp/claude-0` (ovl_*.py, shootgen.py, shotcharts.py) move into `tools/spine/` first; they vanish with the container.
 

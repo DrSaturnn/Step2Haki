@@ -43,6 +43,9 @@ def main(argv):
             p.goto('file://' + page)
             p.wait_for_timeout(2500)
             p.evaluate(HIDE_FIXED)
+            for bid in ids:                     # visit every brief once so lazy sections lay out
+                p.evaluate("id=>{const e=document.getElementById(id);if(e)e.scrollIntoView()}", bid)
+                p.wait_for_timeout(800)
             for bid in ids:
                 hs = p.evaluate("id=>[...document.querySelectorAll('#'+id+' h5.sp-h, #'+id+' h5.authored-hdr')].map(h=>h.id)", bid)
                 if not hs:
@@ -57,6 +60,19 @@ def main(argv):
                                    "const B=document.getElementById(bid).getBoundingClientRect();"
                                    "return {x:B.left,y:Math.max(0,A.top-6),width:B.width,height:Math.min(2990,Z.top-A.top+6)}}",
                                    [a, z, bid])
+                    tries = 0
+                    while r['height'] <= 20 and tries < 4:      # first brief of a run: layout not settled yet
+                        tries += 1
+                        p.wait_for_timeout(900)
+                        p.evaluate("id=>document.getElementById(id).scrollIntoView()", a)
+                        p.wait_for_timeout(600)
+                        r = p.evaluate("([a,z,bid])=>{const A=document.getElementById(a).getBoundingClientRect();"
+                                       "const Z=document.getElementById(z).getBoundingClientRect();"
+                                       "const B=document.getElementById(bid).getBoundingClientRect();"
+                                       "return {x:B.left,y:Math.max(0,A.top-6),width:B.width,height:Math.min(2990,Z.top-A.top+6)}}",
+                                       [a, z, bid])
+                    if r['height'] <= 20:
+                        print('skip', bid, k, 'segment too short after retries', r)
                     r['height'] = min(r['height'], 2995 - r['y'])   # keep the clip inside the viewport
                     if r['height'] > 20:
                         f = '%s/%s_%s_step%d.png' % (out, bid, tag, k)
