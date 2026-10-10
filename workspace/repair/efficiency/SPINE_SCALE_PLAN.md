@@ -59,7 +59,7 @@ The plan v2.2 was right; the lead did not follow it. These are the failures, and
 - **Later review rounds\*:**
   - lithium-effects: r3 PASS;
   - six briefs at r2 FAIL, with 1 or 2 MED left each: hematuria, panic, peds-sleep, somatic, sz-psychosocial and tics.
-- **Uncommitted\*:**
+- **Uncommitted\*:** (now parked on git branch wip/s130-unreviewed, commit a4b825c)
   - repair/s130/: 17 spine batches, 20_psgn_hematuria.json and 36_workupbranch.json (a workup branch redesign);
   - three previews under repair/migration/spine/;
   - edits to tools/spine/verify.py, quote_check.py and verify_baseline.txt.
