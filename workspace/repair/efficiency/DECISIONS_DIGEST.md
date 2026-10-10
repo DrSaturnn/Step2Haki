@@ -9,3 +9,4 @@ Source of truth for decisions before 2026-10-10: SPINE_SPEC.md rounds 2 to 4 (ca
 - 2026-10-09 Sleep Problems generalized to child and adult, with an original stage chart (s125).
 - 2026-10-10 Spine-at-scale plan approved; Phase 0 first; caps 1,300 disease, 1,000 drug, 700 hub; pilot arms Sonnet and Haiku; Jonathan reviews every pilot arm blinded.
 - 2026-10-10 Goldens: peds nephrotic-child and scfe (Jonathan: both), FM copd (no preference; the plan's pick). FM and peds lens draft frozen as written (no preference given); Jonathan's review of the goldens is its approval.
+- 2026-10-10 Goldens approved and shipped as s128 (nephrotic-child, scfe, copd). Bank explanation edits approved: PSGN 1 to 3 weeks, SCFE bilateral, COPD methacholine (less likely, not ruled out), first inhalers, DLCO (low in emphysema; bronchitis claim dropped), CF clubbing.
