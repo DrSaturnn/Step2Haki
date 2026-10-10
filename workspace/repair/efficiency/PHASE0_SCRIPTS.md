@@ -26,6 +26,23 @@ has to exist before the pilot. It is ordered so that each milestone is usable on
 
 ## Milestone 1: the authoring loop (needed by everything else)
 
+Status 2026-10-10: built and committed (tools/spine/).
+- outline_render.py: round-trip IDENTICAL on all three goldens.
+- outline_check.py: 14 rules; tools/spine/test_outline_check.py passes 22 mutations (one or more per rule) and the three goldens.
+  - The goldens carry "golden": true, so a missing tempting_because field (D1) is only flagged for them.
+  - Combined-source lines (X1) and paraphrased card statements (K1 Extra) are flags for the auditor (outline_flags.txt), not errors.
+  - Word caps are "about": an error only above 2% over the cap, a flag up to it.
+- verify.py:
+  - --fast takes about 2 s per brief, and the full run about 40 s.
+  - `verify.py --shipped --fast` passes all 17 spine briefs. Each one rebuilds byte-identical to the page.
+  - Known debts of the shipped briefs sit in tools/spine/verify_baseline.txt (V1 acronyms in 11 briefs; MDD's PHQ-9 and the panic mnemonic shingles; MDD's missing old_claims).
+- numbers.py:
+  - Catches hematuria against nephrotic-child (PSGN), the fix shipped as s129.
+  - Catches a seeded SCFE bank (20 to 40%) against the body (18 to 50%), inside one brief.
+  - It also found a third copy that is still open: peds-aki bank "PSGN comes 2–4 weeks after the infection".
+  - Not yet met: the s125 REM chart case. The night chart is a schematic SVG with no machine-readable values, so numbers.py cannot read it until chart specs carry data (item 1's chart specs, plan 0.8).
+  - Page-wide it reports 2 near misses (both the PSGN pair) and 2 containments under --all.
+
 ### 1. outline schema and outline_render.py
 - **What:** a JSON schema for one brief (steps 1 to 8; each component typed; every learner-facing string is {"text", "ids"}; drawers as {"drawer": brief-id}). outline_render.py reads outline.json plus the claim map and facts.json, builds SRC the same way for every brief, and renders through spinelib.
 - **Replaces:** the bespoke SRC plumbing each golden wrote for itself, and the filler role.

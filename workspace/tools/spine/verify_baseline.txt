@@ -1,0 +1,30 @@
+# verify.py baseline: debts of spine briefs shipped before verify existed (2026-10-10). brief | check | token
+# A V1 line names one acronym; "*" accepts the whole check for that brief. Remove a line when its brief is fixed.
+# Each V1 line is a real gap against MIGRATION_CONTRACT V1 (acronym written out at first use), queued for a cleanup batch.
+antipsych-effects | V1 | QT          # QT interval not written out
+bipolar-mania | V1 | ECT             # "electroconvulsive therapy" is written out, but ECT is not tied to it
+copd | V1 | MSD                      # source name inside a hover ("MSD asthma page")
+delirium | V1 | QT
+gppd | V1 | DSM
+lithium-effects | V1 | QT
+mdd | V1 | BDNF
+mdd | V1 | HPA
+mdd | V1 | EEG
+mdd | V1 | REM
+mdd | V1 | CSF
+mdd | V1 | CRH
+mdd | V1 | MAOI
+mdd | V1 | CRP
+mdd | V1 | PHQ
+mdd | V1 | HT2A
+mdd | V1 | HT2C
+mdd | V1 | QRS
+mdd | shingle_check | *          # PHQ-9 item wording: a public instrument, excepted by AUTHOR_SPEC self-check 2
+mdd | claims | *                 # built before spinelib recorded old_claims; no per-section disposition list exists
+nephrotic-child | V1 | DNA          # "anti-double-stranded DNA"; DNA is not on the contract allowlist
+panic | V1 | QT
+panic | shingle_check | *        # the mnemonic's own letters and words from its source (the panic attack mnemonic)
+ssri-effects | V1 | QT
+ssri-effects | V1 | CYP1A2
+tics | V1 | SSRI
+tics | V1 | ECG
