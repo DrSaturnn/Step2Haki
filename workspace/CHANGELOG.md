@@ -2,6 +2,22 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-10 s128: s128: FM and peds model briefs in the step format (nephrotic-child, scfe, copd) with seven practice explanations updated to current sources
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (3):
+  - scfe (Slipped Capital Femoral Epiphysis): items edited (q_c4752c99840e5fc84b7a); attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+12753 chars)
+  - copd (Obstructive Lung Disease): items edited (q_e1d0b562a4195f5aa67d, q_a21c33a11152540783ed, q_cc7315e5e2a450bbacfc, q_62afba1e07c95c8bb96f); attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+16182 chars)
+  - nephrotic-child (Proteinuria and Nephrotic Syndrome in a Child): items edited (q_28550c1e86a98d8c5806, q_3d6b3ae7fa1f6a56168b); attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+13728 chars)
+Other page changes (nav, headers, scripts): +1061 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 13 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 199/200 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.015%)
+```
+
 ## 2026-10-09 s127: Diagnostic workups as headed cards site-wide (stage label as card header, results indented on an accent rule)
 
 ```
