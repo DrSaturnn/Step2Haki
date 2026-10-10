@@ -197,18 +197,32 @@ class Verify:
             else:
                 self.F('tail', 'Practice section differs from the live brief beyond tail_fix; carry it verbatim')
         def item_spans(h):
-            ms = list(re.finditer(r'<li\b[^>]*?data-item-id="([^"]+)"', h))     # from the item's own <li, so its attributes count
-            return {m.group(1): re.sub(r'\s+', ' ', h[m.start():(ms[k + 1].start() if k + 1 < len(ms) else len(h))]) for k, m in enumerate(ms)}
+            # from the item's own <li to its matching </li>, so its attributes count and nothing after the bank does
+            out = {}
+            for m in re.finditer(r'<li\b[^>]*?data-item-id="([^"]+)"', h):
+                depth, end = 0, len(h)
+                for t in re.finditer(r'<li\b|</li>', h[m.start():]):
+                    depth += 1 if t.group(0) != '</li>' else -1
+                    if depth == 0:
+                        end = m.start() + t.end()
+                        break
+                out[m.group(1)] = re.sub(r'\s+', ' ', h[m.start():end])
+            return out
         old_items = dict(re.findall(r'data-item-id="([^"]+)"[^>]*?data-item-version="(\d+)"', live))
         new_items = dict(re.findall(r'data-item-id="([^"]+)"[^>]*?data-item-version="(\d+)"', new))
         lost = [i for i in old_items if i not in new_items]
         down = [i for i in old_items if i in new_items and int(new_items[i]) < int(old_items[i])]
         so, sn = item_spans(live), item_spans(new)
+        def meaning(span):
+            # what an item MEANS (tools/EDITS.md: stem, keyed answer, distractor labels); explanation and formatting
+            # changes need no version bump
+            d = tuple(re.findall(r'data-d[12]="([^"]*)"', span[:span.find('>') + 1]))
+            parts = [re.sub(r'\s+', ' ', x).strip() for x in P.text(span).split('\u2192')]
+            return d + tuple(parts[:2])
         unbumped = [i for i in old_items if i in new_items and so.get(i) and sn.get(i)
-                    and re.sub(r'data-item-version="\d+"', '', so[i]) != re.sub(r'data-item-version="\d+"', '', sn[i])
-                    and int(new_items[i]) <= int(old_items[i])]
+                    and meaning(so[i]) != meaning(sn[i]) and int(new_items[i]) <= int(old_items[i])]
         if lost or down or unbumped:
-            self.F('items', 'lost %s; version lowered %s; changed without a version bump %s' % (lost[:5], down[:5], unbumped[:5]))
+            self.F('items', 'lost %s; version lowered %s; stem, key or distractor changed without a version bump %s' % (lost[:5], down[:5], unbumped[:5]))
         else:
             changed = [i for i in old_items if i in new_items and int(new_items[i]) > int(old_items[i])]
             self.G('items', '%d item(s) carried, %d changed with a version bump' % (len(old_items), len(changed)))
