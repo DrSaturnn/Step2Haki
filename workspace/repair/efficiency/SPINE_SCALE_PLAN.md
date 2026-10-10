@@ -44,6 +44,13 @@ The architect is the only creative Opus pass and now owns every word a learner r
 
 ## 2. Phase 0: one-time setup (each item has an acceptance check)
 
+Status 2026-10-10:
+- Done: 0.3 inventory (`tools/spine/inventory.py`; 177 briefs, 163 to convert, median 585 words above the bank, 5 over 1,300; 75 with a claim map; 88 with resolved cards; one brief, bone-tumors, carries UWorld QIDs in data-nid).
+- Done: 0.6b AnKing index.
+- Done: helpers moved to `tools/spine/` (shingle_check.py, which also reads card text and failed two seeded copies as it should; shots.py, steps and full-resolution chart crops).
+- Drafted: 0.1 FM and peds lens in AUTHOR_SPEC and AUDIT_PROMPT, awaiting Jonathan's approval.
+- Next: 0.2 goldens (picked by Jonathan); 0.4 to 0.17.
+
 Scripts live in `tools/spine/` (tracked). Packets, caches, outlines and claim maps live under `repair/migration/` or `repair/sources/` (local-only; synced to the Mac by mac_sync). Helpers now in `/tmp/claude-0` (ovl_*.py, shootgen.py, shotcharts.py) move into `tools/spine/` first; they vanish with the container.
 
 0.1 Spec for FM and peds. Generalize AUTHOR_SPEC and AUDIT_PROMPT beyond psych: the peds lens (age band filters the differential, non-accidental trauma as a standing can't-miss, caregiver history, growth, development, vaccines, weight-based dosing, age-restricted drugs, consent exceptions that vary by state) and the FM lens (setting and function, time as a test, multimorbidity and deprescribing, refer-when, return precautions). Add per-type word caps. The FM and peds lens lines also go into RULES_architect (0.12). Jonathan approves both. Accept: approved spec, frozen with a hash.
@@ -194,16 +201,19 @@ Each risk is followed by what catches it.
 28. A deck update changes cards mid-batch: the index hash is frozen per batch.
 29. Shadow period: the first 2 production batches also get the full-spec Opus audit on every brief. Adopt fully only if it finds no HIGH that the lean audit missed.
 
-## 7. Decisions for Jonathan
+## 7. Decisions
 
-1. Approve the plan, or change it.
-2. Order: psych hubs and screens on the current process first (they become goldens for those entry types), alongside Phase 0; then the FM and peds goldens; then the pilot.
-3. Per-type word caps (0.1): for example, disease about 1,300 words above the bank, drug about 1,000, presentation about 700.
-4. Pilot arms: Sonnet only, or Sonnet and Haiku (about a third more pilot cost, but it shows whether Haiku can do the transcription).
-5. Your blinded review of 3 pilot briefs from two arms (6 briefs to read).
-6. The source allowlist in 0.6.
-7. Workflow runs need your explicit "use a workflow" each time unless you turn that on for the session.
-8. Settled 2026-10-10: the full AnKing Step Deck .apkg is indexed (anki_index.py reads .sqlite collections directly). Open: 70 page nids do not resolve (cards deleted or merged upstream, or from other decks), and one brief carries a UWorld QID (115741) in data-nid; both go to the inventory as link repairs.
+Decided by Jonathan 2026-10-10:
+1. Plan approved; Phase 0 setup runs first. Psych hubs and screens may run on the current process alongside it; then the FM and peds goldens; then the pilot.
+2. Word caps above the practice bank: disease about 1,300 words, drug about 1,000, presentation hub about 700.
+3. Pilot arms: Sonnet and Haiku fillers (plus arm C).
+4. Jonathan does the blinded pilot review of the 3 new briefs from every arm.
+5. Full AnKing Step Deck indexed (2026-10-10).
+
+Still open:
+6. The source allowlist in 0.6 (default as written unless changed).
+7. Workflow runs need Jonathan's explicit "use a workflow" each time unless he turns that on for the session.
+8. Link repairs: 70 page nids do not resolve, and one brief carries a UWorld QID (115741) in data-nid; both go to the inventory.
 9. Whether card conflicts should be collected for AnkiHub suggestions.
 
 ## 8. Audit log (v1 to v2)
