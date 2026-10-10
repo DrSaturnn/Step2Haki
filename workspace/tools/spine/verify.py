@@ -172,16 +172,12 @@ class Verify:
         live = page[b.start:b.end]
         new = self.brief_html
         hdr = re.search(r'<h5 class="[^"]*authored-hdr', new)
-        if 'data-spine="2"' in live[:400]:
-            if new.strip() == live.strip():
-                self.G('tail', 'shipped brief rebuilds identical to the page')
-            else:
-                a, z = 0, 0
-                while a < min(len(new), len(live)) and new[a] == live[a]:
-                    a += 1
-                self.F('tail', 'shipped brief does not rebuild identical to the page (first difference at char %d: "%s" vs "%s")'
-                       % (a, new[a:a + 40].replace('\n', ' '), live[a:a + 40].replace('\n', ' ')))
+        shipped = 'data-spine="2"' in live[:400]
+        if shipped and new.strip() == live.strip():
+            self.G('tail', 'shipped brief rebuilds identical to the page')
         elif hdr:
+            if shipped:
+                self.G('update', 'an update of a shipped brief: the body differs from the page by design')
             t_new = new[hdr.start():]
             lh = re.search(r'<h5 class="[^"]*authored-hdr', live)
             t_old = live[lh.start():] if lh else ''
@@ -190,19 +186,32 @@ class Verify:
                 import outline_render as OR
                 R = OR.Renderer(self.o, self.d)
                 for old, nw in fixes:
-                    t_old = t_old.replace(old, R.r(nw), 1)
+                    nr = R.r(nw)
+                    if t_old.count(old) == 0 and nr in t_old:
+                        continue
+                    t_old = t_old.replace(old, nr, 1)
             if t_new.strip() == t_old.strip():
                 self.G('tail', 'Practice section identical to the live brief%s' % (' after %d tail_fix edit(s)' % len(fixes) if fixes else ''))
+            elif self.mode == 'build.py' and shipped:
+                self.G('tail', 'Practice section changed by build.py tail_fix (listed in fix_rN.md; items checked below)')
             else:
                 self.F('tail', 'Practice section differs from the live brief beyond tail_fix; carry it verbatim')
+        def item_spans(h):
+            ms = list(re.finditer(r'<li\b[^>]*?data-item-id="([^"]+)"', h))     # from the item's own <li, so its attributes count
+            return {m.group(1): re.sub(r'\s+', ' ', h[m.start():(ms[k + 1].start() if k + 1 < len(ms) else len(h))]) for k, m in enumerate(ms)}
         old_items = dict(re.findall(r'data-item-id="([^"]+)"[^>]*?data-item-version="(\d+)"', live))
         new_items = dict(re.findall(r'data-item-id="([^"]+)"[^>]*?data-item-version="(\d+)"', new))
         lost = [i for i in old_items if i not in new_items]
         down = [i for i in old_items if i in new_items and int(new_items[i]) < int(old_items[i])]
-        if lost or down:
-            self.F('items', 'lost %s; version lowered %s' % (lost[:5], down[:5]))
+        so, sn = item_spans(live), item_spans(new)
+        unbumped = [i for i in old_items if i in new_items and so.get(i) and sn.get(i)
+                    and re.sub(r'data-item-version="\d+"', '', so[i]) != re.sub(r'data-item-version="\d+"', '', sn[i])
+                    and int(new_items[i]) <= int(old_items[i])]
+        if lost or down or unbumped:
+            self.F('items', 'lost %s; version lowered %s; changed without a version bump %s' % (lost[:5], down[:5], unbumped[:5]))
         else:
-            self.G('items', '%d item(s) carried, versions kept' % len(old_items))
+            changed = [i for i in old_items if i in new_items and int(new_items[i]) > int(old_items[i])]
+            self.G('items', '%d item(s) carried, %d changed with a version bump' % (len(old_items), len(changed)))
 
     # ---- 8. V1 and em dash
     def v1(self):

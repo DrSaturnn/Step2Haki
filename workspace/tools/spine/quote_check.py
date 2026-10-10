@@ -8,7 +8,10 @@ facts.json: {"facts": [{"id": "f1", "sha": "<cache sha>" | "url": "<url>" | "loc
 Rules: a quote is a single fragment (no "...", no editorial brackets); it must appear in the cached text
 (whitespace, curly quotes and dashes normalized; case-insensitive). via=relayed (a WebFetch reading of a site that
 blocks scripts) cannot be checked here: it is listed for the auditor, never counted as verified. An AnKing card
-(local: repair/sources/anki/...) is accepted only on kind=mnemonic rows (cards are leads, never citations).
+(local: repair/sources/anki/anki_cards.txt) or a local question explanation (repair/sources/sNN_questions.md) is
+accepted on kind=board rows: evidence of what Step 2 rewards, used where the literature or practice differs from the
+exam or no fetched source covers the exam answer (Jonathan 2026-10-10: follow NBME, then UWorld, then AnKing on such
+disagreements); and on kind=mnemonic rows. Its words never go on the page (shingle_check).
 Exit 1 on any failure.
 """
 import json
@@ -49,8 +52,10 @@ def main(argv):
             continue
         if f.get('local'):
             path = os.path.join(WS, 'repair', 'sources', f['local'].split('repair/sources/')[-1])
-            if '/anki/' in path.replace(os.sep, '/') and f.get('kind') != 'mnemonic':
-                fails.append('%s: an AnKing card cited as a fact source; cards are leads only (mnemonic rows excepted)' % fid)
+            if '/anki/' in path.replace(os.sep, '/') and f.get('kind') not in ('mnemonic', 'board'):
+                fails.append('%s: an AnKing card cited as a fact source; cite it only as kind "board" (what the exam '
+                             'rewards, where the literature or practice differs or no fetched source covers the exam '
+                             'answer) or kind "mnemonic"' % fid)
                 continue
         else:
             sha = f.get('sha') or by_url.get(f.get('url', ''))
