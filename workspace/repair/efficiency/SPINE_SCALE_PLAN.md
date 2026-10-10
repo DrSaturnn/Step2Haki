@@ -1,4 +1,4 @@
-# Spine at scale: agent execution plan (v3, 2026-10-10)
+# Spine at scale: agent execution plan (v4, 2026-10-10)
 
 Goal: move every brief onto decision spine v2, and repair the ones already moved, so that each one teaches the
 Step 2 answer correctly and reads as one whole. The plan does this at a token cost we can sustain:
@@ -31,6 +31,94 @@ The plan v2.2 was right; the lead did not follow it. These are the failures, and
    - What happened: "Jonathan's PSGN umbrella ruling" appears in fix_r1.md files, but not in DECISIONS_DIGEST.md with his words. It was probably given in this chat, in the part the lead can no longer see.
    - Rule that prevents it: the lead writes each decision to DECISIONS_DIGEST.md in the same turn Jonathan gives it, quoting him. A ruling found only in a work file is confirmed with Jonathan before anyone acts on it (rule E7).
 
+## A. Evidence: what this environment actually does (tested 2026-10-10, Claude Code 2.1.296)
+
+Each control in this plan is marked by status, and only TESTED controls may be relied on:
+- PLANNED: written here only.
+- IMPLEMENTED: code exists.
+- TESTED: a recorded test passed in this environment.
+- UNAVAILABLE: the environment cannot do it.
+
+Probe scripts: repair/efficiency/hooks_probe/. Raw hook input from the probes: repair/efficiency/hooks_probe/PROBE_LOG.md.
+
+| Test | Result | Status |
+|---|---|---|
+| T1 A hook file written mid-session (/home/claude/.claude/settings.json) takes effect on the next tool call | Fired on the next Bash call | TESTED |
+| T2 PreToolUse on Agent receives the requested `model` and `subagent_type`, and exit 2 refuses the launch before any token is spent | A launch with no model was refused by agentgate.py | TESTED |
+| T3 Hook input tells the lead from a subagent | Subagent tool calls carry `agent_id` and `agent_type`; the lead's carry neither | TESTED |
+| T4 A subagent's Write outside its lane, and a Bash write into tools/, are refused; an in-lane write is allowed | Both refused, in-lane allowed; checked on disk, not from the agent's report | TESTED |
+| T5 The effective model can be verified after launch | `subagents/agent-<id>.meta.json` records the requested model; every API call in `agent-<id>.jsonl` records the model that served it (claude-haiku-5-5 for the probes) | TESTED (read after the run) |
+| T6 Usage is measurable per agent | Per-call `usage` (input, cache write, cache read, output) is in each agent transcript. The harness's "subagent_tokens" figure is not the processed total: the lane probe showed 68k, while its transcript shows 104k cache write plus 278k cache read | TESTED |
+| T7 Custom role definitions (.claude/agents/*.md) load mid-session, and their model holds against an override | Not run. The tool documents that a launch's `model` overrides a definition's | PLANNED; do not rely on it |
+| T8 A role and lane taken from "Role:" and "Lane:" lines in the launch prompt (read from the agent's transcript) can gate each subagent call | Not run | PLANNED |
+| T9 A per-agent tool-call counter (PreToolUse counts calls by agent_id and refuses past the role's budget) | Not run | PLANNED |
+| T10 Hooks survive a new chat | No. The settings file lives outside the repo, so every new container must install the hooks from the repo copy, then re-run T1 to T4 and T8 to T9 | Known |
+| T11 SubagentStop input and timing (Codex: it fires after the agent responds, without token totals) | Not run; usage comes from transcripts instead (T6) | PLANNED |
+
+## B. Measured cost on 2026-10-10 (from the 65 agent transcripts; replaces the estimates given in chat)
+
+| Agents (count, model) | API calls | Cache write | Cache read | Output |
+|---|---|---|---|---|
+| Fix round 1 (17, Opus) | 2,167 | 11.3M | 360M | 0.92M |
+| Golden authors (3, Opus) | 558 | 6.2M | 146M | 0.37M |
+| Holistic review r1 (18, Opus) | 1,254 | 5.7M | 143M | 0.38M |
+| Holistic r2 and r3 (15, Opus) | 932 | 4.4M | 96M | 0.25M |
+| Golden audits and rounds (6, Opus) | 234 | 1.3M | 26M | 0.15M |
+| Other (6) | about 90 | 0.7M | 7M | 0.04M |
+
+What it teaches:
+- **Cost is API calls times context size.** Each call re-reads the agent's whole context. A fix agent averaged 127 calls and about 21M cache-read tokens. The per-agent figure the harness reports understated that roughly 100-fold. The chat's earlier claim of "about 4.5M tokens" was wrong for the same reason.
+- **Every agent pays a fixed floor.** A Haiku agent that ran one command still wrote about 100k tokens of cache. A small task given to its own agent costs more than a script or the lead doing it. Haiku saves money only on long, high-volume work packed into one agent.
+- **The levers, in order:**
+  1. fewer tool calls (complete packets, scripts doing the plumbing);
+  2. smaller contexts (no screenshots or whole files unless needed);
+  3. fewer agents (batch small tasks into one);
+  4. then a cheaper model.
+
+## C. Adversarial audit of the Codex review of v3 (each point: verdict, then what changes)
+
+1. **Stale handoff and restart prompt.** ACCEPT (verified: line 5 still pointed to the 2026-10-03 merge queue). STEP2HAKI_HANDOFF.md becomes the single running state file, rewritten after every step, not only after ships. The merge-era text moves to claude/archive/HANDOFF_2026-10-03.md. claude/CURRENT_STATE.md (2026-10-03) is marked superseded, and its session-start procedure moves into the handoff.
+2. **"Pinned" in Markdown is not enforcement; the launch model overrides the definition.** ACCEPT, with a stronger remedy than Codex offered:
+   - The gate works on what the launch actually sends (T2): every launch must name a model, and the model must match the role table.
+   - The model is verified after the run from the transcript (T5).
+   - Custom definitions are not relied on until T7 passes.
+3. **H4 against E3 (a correct fixer could never finish).** ACCEPT. Two gates:
+   - G-MECH: `verify --mech` exits 0 when the mechanical checks pass. Workers and hooks use only this.
+   - G-READY: exit 0 needs mechanical plus all current review receipts. Only ship.sh and the lead use it.
+4. **Qualification contradictions.** ACCEPT:
+   - Invented HIGH: none allowed. An unexpected HIGH is first adjudicated against sources. If it is real, the answer key was wrong and is amended (a key miss), and the run is re-scored. If it is not real, the run fails.
+   - No role is "qualified" without recorded runs; the v3 labels for Opus roles are withdrawn.
+   - Development cases (used to tune packets) and held-out cases (used only to qualify) are kept separate.
+   - Three passes are bounded evidence, re-tested by sampling (Q5), not a permanent label.
+   - If Opus fails a role, there is no lower tier to fall to. That item type gets Jonathan's review as its gate until a fixed packet passes.
+5. **Pilot too expensive (30 runs).** ACCEPT, with a guard against the opposite error:
+   - Validation is staged. One budgeted end-to-end case first; then 3 cases; adoption only after 3.
+   - Any claim from fewer than 3 cases is labelled "not proven".
+   - All costs are counted: lead, setup, qualification, reviews, retries, shadow.
+6. **Proceeding after a failed enforcement test; post-run logging is not a limit.** ACCEPT:
+   - A failed required test blocks all agent work that depends on it. The lead may continue alone, or propose each single launch to Jonathan with its role, model and budget.
+   - The hard controls are pre-launch (T2) and per-call (T4, T9): the launch gate reads the measured ledger (T6) before every launch, and the per-call counter caps a runaway agent.
+   - Neither is called a spending cap inside an API call, because there is none.
+7. **Receipts must bind to dependencies, not just the brief hash.** ACCEPT, with a correction:
+   - Codex's version would invalidate every review whenever shared CSS changes.
+   - Each review part gets its own receipt, bound only to what that part judged:
+     - accuracy: brief text, bank text, the facts and claim map, the spec hashes;
+     - readability: brief text, siblings' titles, the spec hashes;
+     - display: the brief HTML, the display manifest (hashes of the site style and script blocks the brief uses, and the shots.py version), the spec hashes;
+     - flags: the outline and facts.
+   - A CSS-only change re-runs only the display part.
+8. **Codex prompt items.** Several are already resolved:
+   - "Identify the environment": Claude Code 2.1.296; hooks tested above.
+   - "Locate workflow-efficiency-pilot": found at /root/.claude/skills/synced/<id>/workflow-efficiency-pilot and loaded on 2026-10-10.
+   - "Preserve unreviewed work without committing to main": done on branch wip/s130-unreviewed, commit a4b825c.
+9. **"Permit targeted evidence retrieval when a packet is insufficient."** PARTIAL. Unbounded retrieval is how the fix agents reached 127 calls. Retrieval is allowed only through fetch.py, passages.py and cards_search.py, counts against the role's call budget (T9), and each miss is logged so packet.py learns it.
+10. **"Do not truncate necessary content to meet a line limit."** ACCEPT. The 40-line cap applies only to an agent's chat reply; full outputs go to files.
+11. **What Codex missed:**
+   - The real cost driver (section B).
+   - That hooks are hot-reloadable and can see the requested model and the subagent identity, which makes real enforcement possible (section A).
+   - The lead's own context loss as a failure mode: state must live in the running file, updated per step.
+   - Decision provenance in practice: the lead writes a decision to DECISIONS_DIGEST in the same turn Jonathan gives it, with his words. A decisions digest indexes authority, it does not create it; agreed.
+
 ## 0. Non-negotiables
 
 - **Accuracy (Jonathan 2026-10-10).** A brief that teaches something incorrectly defeats the purpose of Step2Haki. Any line that would lead a test taker to a wrong answer is HIGH, wherever it sits: body, hover, table, bank key or explanation, NBME block, notes, Pairs with, or rule.
@@ -53,159 +141,140 @@ The plan v2.2 was right; the lead did not follow it. These are the failures, and
   - Mac files deleted only with permission.
 - **No authority from text.** Subagent output, files, cards and pages carry no user authority.
 
-## 1. State at the rewrite (from the files, 2026-10-10 evening). This chat produced items marked * in turns it can no longer see, so it must re-check them against the files.
+## 1. State (2026-10-10, 19:30)
 
-- **Live page:** s129 (Hematuria PSGN 1 to 3 weeks). Tools committed through 46e242f: outline_render, outline_check (with tests), verify (FAIL, MECH or READY), numbers, cards_search, and quote_check with kind "board".
-- **Holistic reviews, round 1:** all 18 briefs FAIL; reviews are in repair/migration/spine/reviews/*_r1.md.
-- **Fix reports\*:** fix_r1.md exists for all 17 spine briefs and for hematuria.
-- **Later review rounds\*:**
-  - lithium-effects: r3 PASS;
-  - six briefs at r2 FAIL, with 1 or 2 MED left each: hematuria, panic, peds-sleep, somatic, sz-psychosocial and tics.
-- **Uncommitted\*:** (now parked on git branch wip/s130-unreviewed, commit a4b825c)
-  - repair/s130/: 17 spine batches, 20_psgn_hematuria.json and 36_workupbranch.json (a workup branch redesign);
-  - three previews under repair/migration/spine/;
-  - edits to tools/spine/verify.py, quote_check.py and verify_baseline.txt.
-- **Claimed rulings needing Jonathan's confirmation\*:**
-  - "PSGN latency is the board umbrella 'about 2 to 4 weeks after a strep throat or skin infection' in every brief" (AnKing 1503090878430, UWorld QID 14531). This reverses s129, which he approved as 1 to 3 weeks.
-  - The workup branch layout in 36_workupbranch.json. The one design request on record is from 2026-10-10: drop the larger accent bar, and show branches another way.
-- **Not started:** Milestones 2 to 4 of PHASE0_SCRIPTS.md, the qualification runs, and the pilot.
+- **Live:** s129 (Hematuria PSGN 1 to 3 weeks).
+- **main:**
+  - tools through 46e242f (outline_render, outline_check with tests, verify with FAIL, MECH and READY, numbers, cards_search, quote_check with kind "board");
+  - plan commits after that.
+- **Branch wip/s130-unreviewed (a4b825c):**
+  - repair/s130: 17 spine batches, the hematuria PSGN edit, and the workup branch layout;
+  - this chat's later edits to verify.py, quote_check.py and verify_baseline.txt.
+  - This chat made all of it, in turns it can no longer see, so it must re-check everything against the files.
+- **Local-only:**
+  - every fix_r1.md;
+  - holistic reviews: r1 for 18 briefs, r2 for 9, r3 for 6;
+  - lithium-effects reads r3 PASS; six briefs read r2 FAIL with 1 or 2 MED left (hematuria, panic, peds-sleep, somatic, sz-psychosocial, tics);
+  - three previews.
+- **Waiting on Jonathan (R1):**
+  - the PSGN figure: a "board umbrella, about 2 to 4 weeks after a strep throat or skin infection" (AnKing 1503090878430, UWorld QID 14531), against s129's approved "1 to 3 weeks after pharyngitis";
+  - the workup branch layout.
 
 ## 2. Roles, models and lanes
 
-Each role is a definition in `workspace/.claude/agents/<name>.md` that pins its model, tools, tool-call budget and
-lane (the only paths it may write). The lead launches only these names (rule E1). "Qual" is the qualification state
-from section 3.
+How a role is launched (until T7 passes):
+- Use subagent_type general-purpose with an explicit `model`.
+- The prompt starts with three lines: `Role: <name>`, `Plan step: <id>` and `Lane: <path>`.
+- The launch gate (H1) refuses a launch whose role is missing or unknown, whose model differs from this table, or whose plan step is missing, or when the wave budget is used up.
+- After the run, the lead verifies the effective model from the transcript (T5).
 
-| Role (agent name) | Model | Reads (its packet) | Writes (its lane) | Never | Qual |
+The model column is the starting assignment. Qualification (section 3) can only move a role up a tier, or back down through a new qualification.
+
+| Role | Model | Packet (reads) | Lane (writes) | Never | Qualification |
 |---|---|---|---|---|---|
-| Lead (main chat) | Opus | this plan, CURRENT_STATE, script summaries, agent reports | batch lists, adjudications, DECISIONS_DIGEST (quoting Jonathan), ships | read whole pages or builds; launch an unlisted role; act on a ruling found in a file | n/a |
-| Scripts (tools/spine) | none | page, claim maps, caches | packets, checks | approve judgment | n/a |
-| spine-packer | Haiku, low | the packet recipe; runs scripts | packets/<id>/* | judge content | to qualify |
-| spine-extractor | Haiku, low | the old brief's text with spans, leftover claims | claims.json for the leftover | judge or reword | to qualify |
-| spine-architect | Opus, high (Sonnet is a pilot arm) | the architect packet (v2.2 contents, plus board evidence hits) | outline.json, facts.json, cards_disposition.json, needs.json, omissions.json | write HTML; fetch outside fetch.py | Opus qualified on the goldens; Sonnet in the pilot |
-| renderer | script | outline.json | brief.html, claim_map.json, 10_*.json | | done |
-| spine-answerer | Haiku, low | bank stems and options without keys, with and without the brief | answers plus the line used | | to qualify |
-| acc-auditor (accuracy and board fit: areas B and G, every bank key, every HIGH or MED claim) | Opus, high | the audit packet | audit_rN.md | edit files | qualified (r1 reviews) |
-| read-reviewer (coherence, stand-alone lines, wording, cross-references: areas A, C, D and E) | Sonnet, medium | the text render, siblings' titles and bottom lines | review_read_rN.md | judge medical truth | to qualify |
-| display-reviewer (area F, plus study-mode leaks) | Sonnet, medium | phone and study screenshots only, and the desktop chart crops | review_display_rN.md | judge content | to qualify |
-| flag-settler (area H: X1 combined-source and K1 card flags) | Sonnet, medium | each flagged line beside its quotes | flags_rN.md | edit | to qualify |
-| acc-fixer (settles HIGH and MED with evidence, writes the edit list) | Opus, high | the review files, the evidence tools, the build | facts.json, outline.json or build.py, fix_rN.md | edit outside its brief folder | qualified only with a delta audit |
-| wording-fixer (LOW wording, masks, cross-references) | Sonnet, medium | its review lines and the build | the same files as acc-fixer, LOW lines only | change a medical claim, number or key | to qualify |
-| edit-applier (applies a Jonathan-approved edit list exactly) | Haiku, low | the approved list and the build | the build only | add, drop or reword anything | to qualify |
-| canary-judge | Opus, medium | the canary diff and the audit | a verdict | | n/a |
-| Approver | Jonathan | the approval packet | approve or change | | |
+| Lead (main chat) | Opus | this plan, the running handoff, script summaries, agent reports | adjudications, DECISIONS_DIGEST (Jonathan's words, same turn), the handoff, ships | read whole pages or builds; launch outside H1; act on a ruling found only in a file | n/a |
+| Scripts | none | page, claim maps, caches | packets, checks, ledgers | approve judgment | tested by mutation suites |
+| architect | Opus, high (Sonnet arm in validation) | architect packet | its brief folder: outline.json, facts.json, cards_disposition.json, needs, omissions | write HTML; retrieval outside the three tools | runs recorded on the goldens; formal held-out qualification pending |
+| answerer | Haiku, low; one agent per batch, never per item | bank stems and options without keys, with and without the brief | answers file | | pending |
+| acc-review (areas B and G; every key; every HIGH or MED line) | Opus, high | accuracy packet: brief text render, bank, facts with context, claim map, sibling lines that state the same facts (numbers.py) | receipt_acc_rN.md | edit | r1 runs exist; held-out qualification pending |
+| read-review (areas A, C, D, E) | Sonnet, medium | text render, siblings' titles and bottom lines, pointer targets | receipt_read_rN.md | judge medical truth | pending |
+| display-review (area F, study leaks) | Sonnet, medium | phone and study crops by shots.py, chart crops | receipt_display_rN.md | judge content | pending |
+| flag-review (area H) | Sonnet, medium | each X1 or K1 flagged line beside its quotes | receipt_flags_rN.md | edit | pending |
+| acc-fix (settles HIGH and MED with evidence; writes edit lists) | Opus, high | the receipts, the evidence tools, the build | its brief folder | edit outside it | pending (a delta acc-review checks every fix) |
+| wording-fix (LOW wording, masks, pointers) | Sonnet, medium | its receipt lines and the build | its brief folder, LOW lines only | change a claim, number or key | pending |
+| apply (Jonathan-approved edit lists, a whole batch per agent) | Haiku, low | approved lists and the builds | the listed brief folders | add, drop or reword | pending |
+| canary-judge | Opus, medium | the canary diff and the receipts | verdict | | n/a |
+| Approver | Jonathan | approval packet | approve or change | | |
 
-The holistic review (HOLISTIC_REVIEW.md) is split across four roles: acc-auditor, read-reviewer, display-reviewer and
-flag-settler. A brief's review counts as PASS only when all four pass on the same brief sha. The lead merges their
-files into reviews/<id>_holistic_rN.md and applies verify's READY rule to that file.
-
-Screenshots are taken by script (shots.py), never by an agent hunting with a browser. Only the display-reviewer reads
-images, and only phone, study-mode and chart crops; reading desktop is optional.
+- **No agent for small work.** Anything under about 20 calls of mechanical work, or reading one file, is done by a script or the lead (section B).
+- **Merging receipts.** A brief's holistic review is the four receipts. The lead merges them into reviews/<id>_holistic_rN.md for verify.
 
 ## 3. Qualification: audit each model until it does not fail
 
-A role runs in production only after its model qualifies on cases with known answers. "Fails" means it misses
-what the answer key holds, or invents a HIGH.
+- **Q1. Cases.** Kept in repair/efficiency/QUAL/, local-only, and never shown to the model under test.
+  - Development set: used to tune packets and rules. It holds the r1 reviews' briefs as frozen pre-fix snapshots; the key is the findings the lead confirms against sources. It also holds the v2.2 seeded defects and today's real ones:
+    - a duplicate pointer;
+    - a stale title;
+    - a hover with no referent;
+    - a study-mode leak;
+    - a key that contradicts the body;
+    - a newer guideline taught over the exam answer (restless legs);
+    - a missing zebra safeguard (Wernicke);
+    - a dialysis rule missing a board criterion (lithium);
+    - an action in a Decides-it cell.
+  - Held-out set: used only to qualify. Briefs and seeded defects the packets were never tuned on, frozen before any qualification run.
+  - Fix and apply roles: edit lists with exact expected diffs.
+  - Answerer: keyed items.
+- **Q2. Pass bar per run:**
+  - 100% of HIGH found;
+  - at least 90% of MED found;
+  - no unconfirmed HIGH. Every unexpected finding is adjudicated against sources first: if real, the key is amended and the run re-scored; if not, a HIGH fails the run, and invented MED and LOW findings are counted and reported.
+  - Mechanical roles: an exact diff (apply), 100% span coverage, answers matching the key.
+- **Q3. Qualifying.** 3 consecutive passing runs on 3 different held-out briefs, including the hardest one. The result is recorded as bounded evidence for that exact role, model, packet version and prompt version. Any change to one of those re-opens qualification at a smaller sample (1 held-out run).
+- **Q4. Failures:**
+  - Fix the packet, rules or prompt, never the bar.
+  - After 3 failed cycles, the role moves up a tier.
+  - If Opus fails, that item type is gated by Jonathan's review until a fixed packet passes.
+  - Jonathan sets the qualification budget, and the runs stop when it is spent, with a report.
+- **Q5. In production:**
+  - First 2 batches (shadow): Opus re-does every cheaper role's work.
+  - Afterwards:
+    - acc-review covers every HIGH and MED line;
+    - Opus re-does a 1-in-5 sample of the cheaper roles' output;
+    - each batch has one rotating canary.
+  - Demotion: a missed HIGH, a missed canary, or a HIGH found after a ship sends the role back to qualification, and it runs a tier up meanwhile.
+- **Q6. Ledger.** repair/efficiency/QUALIFICATION.md records, per run: role, model, packet and prompt versions, case, recall by severity, unconfirmed findings, measured tokens and calls (T6), and the verdict.
 
-**Q1. Answer keys (frozen in repair/efficiency/QUAL/, local-only, never shown to the model being tested):**
-- **Review roles.** Use the 18 round-1 reviews, on frozen pre-fix snapshots of their briefs. The findings the lead confirms against sources become the key; unconfirmed findings are left out. Add the 18 seeded defects from v2.2, plus new ones from today:
-  - a "Pairs with" entry naming a brief twice;
-  - a stale title in "Pairs with";
-  - a hover with no referent;
-  - a masked answer leaked by an unmasked cell;
-  - a bank key that contradicts the body;
-  - a newer guideline taught in place of the exam answer (restless legs);
-  - an omitted zebra safeguard (Wernicke);
-  - a dialysis threshold missing a board criterion (lithium);
-  - an action verb in a Decides-it cell.
-- **Fix and apply roles.** Edit lists with exact expected diffs, taken from the accepted s130 fixes.
-- **Extractor.** Old briefs with their full span maps.
-- **Answerer.** Bank items with their keys.
+## 4. Enforcement: hooks and gates (status per section A)
 
-**Q2. Pass bar per run:**
-- **HIGH recall is 100%.** One missed HIGH fails the run.
-- **MED recall is at least 90%.**
-- **At most 1 invented HIGH per brief.** Invented MED and LOW findings are counted and reported.
-- **Mechanical roles:** verify PASS with an exact diff (applier), 100% span coverage (extractor), and answers matching the key (answerer).
+The hooks are installed at session start from the repo copy into /home/claude/.claude/settings.json, then T1 to T4, T8 and T9 are re-run.
+- **A failed required test blocks all dependent agent work.** The lead may still work alone, or propose each single launch to Jonathan with its role, model and budget.
+- **A git review is extra evidence, never a substitute.**
 
-**Q3. Qualifying.** The role must pass 3 consecutive runs on 3 different briefs, including the hardest one in the set (most items, a chart).
-
-**Q4. When a run fails:**
-1. Fix the packet, the rules sheet or the prompt, never the bar.
-2. Run again on a fresh brief.
-3. After 3 failed fix cycles, the role moves up one tier (Haiku, then Sonnet, then Opus) and that is recorded.
-4. A role may move back down only through a new qualification.
-
-**Q5. In production, the role stays under audit:**
-- **Shadow (first 2 batches).** Opus re-does every qualified role's work. Any HIGH the cheaper role missed sends it back to qualification.
-- **Afterwards:**
-  - acc-auditor re-checks every HIGH and MED line;
-  - a 1-in-5 sample of the cheaper roles' outputs is re-done by Opus;
-  - each batch carries one rotating canary, judged by canary-judge.
-- **Demotion.** A missed HIGH in a sample, a missed canary, or any HIGH found after a ship sends the role back to qualification. Until it requalifies, that role runs at the tier above.
-
-**Q6. Ledger.** repair/efficiency/QUALIFICATION.md records, per role and model: run, brief, recall by severity, invented findings, tokens and the verdict. Jonathan sees it before the pilot.
-
-## 4. Enforcement: definitions, hooks and gates
-
-Each item has a dummy test before it is trusted (record the result in this file).
-
-**Agent definitions.** One file per role in workspace/.claude/agents/ (tracked). Each states:
-- its `model:` (haiku, sonnet or opus) and effort;
-- its allowed tools;
-- its tool-call budget: packer 15, extractor 8, architect 10, answerer 4, acc-auditor 12, read-reviewer 10, display-reviewer 8, flag-settler 10, acc-fixer 25, wording-fixer 15, applier 10;
-- its lane, the paths it may write;
-- one line pointing to its rules sheet, never the whole skill files.
-
-**Hooks (workspace/.claude/settings.json):**
-- **H1, PreToolUse on Agent/Task.** Deny any launch whose subagent_type is not one of the role names in section 2. Also deny it when its prompt lacks a "Plan step:" line naming a step in this plan. Deny the launch when repair/efficiency/WAVE.json shows the wave's agent count or token budget used up. Jonathan sets each wave's budget, or the lead does from the qualification ledger, and every launch is counted against it.
-- **H2, PreToolUse on Write/Edit/Bash for subagents.** Deny writes outside the role's lane. Always deny:
-  - index.html;
-  - tools/;
-  - repair/sNN/;
-  - .claude/;
-  - DECISIONS_DIGEST.md;
-  - SPINE_SCALE_PLAN.md;
-  - verify_baseline.txt and numbers_allow.txt;
+Hooks:
+- **H1, launch gate (PreToolUse on Agent). Mechanism TESTED (T2); full gate IMPLEMENTED in R2.** It refuses a launch:
+  - with no model;
+  - whose model differs from the role table;
+  - with no Role, Plan step or Lane line;
+  - with an unknown role;
+  - when the wave budget in repair/efficiency/WAVE.json is spent. Measured usage comes from the transcripts (T6), so the gate checks real spending before each launch.
+- **H2, lane gate (PreToolUse on Write, Edit and Bash for subagents). TESTED with a fixed lane (T4); a per-agent lane from the Lane line needs T8.** Always refused:
+  - index.html, tools/, repair/sNN/, .claude/;
+  - DECISIONS_DIGEST.md, SPINE_SCALE_PLAN.md, the handoff;
+  - verify_baseline.txt, numbers_allow.txt;
   - another brief's folder.
-- **H3, PreToolUse on Bash for subagents.** Deny git commit and push, ship.sh, mac_sync.sh, and reads of /home/claude/.config.
-- **H4, SubagentStop.**
-  - Append the agent's usage (tokens, tool calls, duration) to repair/efficiency/ledger_spine.csv with its role and brief.
-  - For fixers and the applier, run `verify.py <dir> --fast` and block with the failure list if it fails, at most 3 times.
-- **H5, UserPromptSubmit or Stop on the lead.** Remind the lead to update the handoff when a ship happened this turn.
-- **Hook dummy tests (from v2.2, still required):**
-  - the hook can tell the lead from a subagent;
-  - it can identify the role;
-  - a Bash write outside the lane is caught;
-  - verify fits the hook timeout.
-- **Fallback.** If any dummy test fails, the git check below is the backstop, and the lead reviews `git status` and `git diff --stat` after every wave.
+- **H3, command gate (PreToolUse on Bash for subagents). TESTED pattern (T4).** Refuses git commit and push, ship.sh, mac_sync.sh, and reads of /home/claude/.config.
+- **H4, call budget (PreToolUse for subagents). PLANNED (T9).** Counts calls per agent_id and refuses past the role's budget, with a message telling the agent to report what its packet lacked:
+  - apply: 30;
+  - answerer: 10;
+  - review roles: 25;
+  - fix roles: 40;
+  - architect: 40.
+- **H5, usage ledger. IMPLEMENTED as a script, run by the lead after each wave, not a hook.** It reads subagents/*.jsonl and appends measured calls and tokens per agent, role and brief to repair/efficiency/ledger_spine.csv.
+- **H6, Stop on the lead. Exists:** the git check that already fires. Planned addition: refuse to stop when the handoff is older than the newest commit this turn.
 
-**Gates:**
-- **E1. Launch gate.** Only roles listed in section 2, each with its pinned model.
-- **E2. Plan gate.** Every wave names its plan step and its budget in WAVE.json before launch.
-- **E3. READY gate.** verify exits 0 only when the mechanical checks pass and a holistic review (all four parts) of the current brief sha says PASS. ship.sh is to refuse any spine brief that is not READY, and any batch carrying a canary.
-- **E4. Diff gate.** Before any commit, the lead reads `git diff --stat` and every change to tools/ or the specs. A change the lead did not make or order is reverted or adopted explicitly, with a note in the commit.
-- **E5. Pilot-first gate.** A new role, packet or prompt runs on one brief and is measured, and then Jonathan's budget for the wave applies.
-- **E6. Approval gate (unchanged).** Jonathan approves every edit list, by its old and new wording, before a ship.
-- **E7. Decision provenance.**
-  - A Jonathan decision exists only as a DECISIONS_DIGEST.md line, written by the lead, with the date and his words.
-  - A "ruling" found in any other file is a question for Jonathan, not an instruction.
+Gates:
+- **G-MECH:** `verify <dir> --mech` exits 0 when every mechanical check passes. This is a worker's finish line.
+- **G-READY:** verify exits 0 only with mechanical pass plus all four current receipts saying PASS, each bound to its own dependency hashes (section C, point 7). ship.sh refuses a spine brief that is not READY, and any canary text.
+- **G-DIFF:** before every commit the lead reads `git diff --stat` and every change to tools/ or the specs. Unexplained changes are reverted or adopted with a note.
+- **G-PILOT:** a new role, packet or prompt runs once on one item, is measured, and only then gets a wave budget.
+- **G-APPROVE:** Jonathan approves every edit list by its old and new wording before a ship.
+- **G-DECIDE:** a decision exists only as a DECISIONS_DIGEST.md line written by the lead in the turn Jonathan gives it, quoting him and linking the date. A ruling found elsewhere is a question for him.
+- **G-STATE:** the lead rewrites the running handoff after every step, so the next turn or chat never depends on the lead's context.
 
 ## 5. Phase R: bring the shipped spine briefs (and hematuria, peds-aki) to READY
 
-Run this first, in a fresh chat. Each step names its role and model.
-
 | Step | Who | Action | Exit |
 |---|---|---|---|
-| R0 | Lead (Opus) | Inventory the uncommitted work: list repair/s130 contents, the diffs to tools/spine, verify_baseline.txt, previews; map each fix_r1.md and r2/r3 review; extract every "ruling" claimed in files | A state table in CURRENT_STATE.md; the questions for Jonathan |
-| R1 | Jonathan | Confirm or reject: the PSGN umbrella (2 to 4 weeks vs s129's 1 to 3), the workup branch layout, and any other claimed ruling | DECISIONS_DIGEST lines in his words |
-| R2 | Lead | Build the enforcement in section 4 (agent definitions, hooks H1 to H4, WAVE.json, ship.sh READY gate); dummy-test each | Tests recorded here |
-| R3 | Lead, then acc-auditor (Opus) | Confirm the r1 findings that become qualification keys (Q1), on frozen pre-fix snapshots | QUAL/ keys frozen |
-| R4 | Qualification runs | read-reviewer, display-reviewer, flag-settler, wording-fixer and edit-applier each run against the keys (Q2 to Q4) | QUALIFICATION.md verdicts |
-| R5 | Lead | Check each existing fix_r1.md: every HIGH and MED decision has evidence that quote_check accepts; compare its edits list with the s130 batch file. Jonathan reviews the edit lists (E6) | Approved lists |
-| R6 | edit-applier (Haiku) for approved lists the files do not yet hold; acc-fixer (Opus) only for HIGH or MED still open | Bring each build to the approved text | verify MECH |
-| R7 | The four review roles (Opus and Sonnet, qualified) | Holistic review of every brief at its new sha | READY or findings |
-| R8 | Loop R5 to R7 per brief until READY; then the combined preview, screenshots, Jonathan's approval, ship (s130 or split), and the post-ship steps | All 17 spine briefs plus hematuria and peds-aki READY and live |
+| R0 | Lead alone | Inventory branch wip/s130-unreviewed (repair/s130, tool diffs, baseline), every fix_r1.md, every review round, the previews; list each "ruling" found in files; map the brief roster (17 spine briefs, plus hematuria, peds-aki and aq-puffy-eyes if the PSGN figure changes) | State table in the handoff; R1 questions |
+| R1 | Jonathan | Confirm or reject each ruling (PSGN figure; workup layout; any other) | DECISIONS_DIGEST lines in his words |
+| R2 | Lead alone | Install the hooks from the repo; build H1 (full), H2 per-agent lanes, H4, `verify --mech`, receipts with dependency hashes, the ship.sh READY gate, the ledger script; run T1 to T4, T8, T9 and record the results in section A | Every required test TESTED, or agent work stays blocked |
+| R3 | Lead, then one feasibility case | One brief end to end on the split roles, inside a budget Jonathan sets: adjudicate its open findings, fix, four receipts, verify READY. Measure everything (T6) | A cost and quality report; Jonathan decides whether to expand |
+| R4 | Lead, then qualification runs within budget | Build the development and held-out sets; qualify read-review, display-review, flag-review, wording-fix and apply | QUALIFICATION.md |
+| R5 | Lead, Jonathan | Check each existing fix_r1.md against its evidence (quote_check), reconcile with the branch, assemble edit lists; Jonathan approves (G-APPROVE) | Approved lists |
+| R6 | apply (Haiku, one agent for the batch); acc-fix (Opus) only for open HIGH or MED | Bring each build to the approved text | G-MECH |
+| R7 | The four review roles | Receipts at the new sha | READY or findings |
+| R8 | Lead | Loop R5 to R7 until READY; combined preview, screenshots, Jonathan's approval, ship, post-ship steps, handoff | All of Phase R live and READY |
 
 ## 6. Phase 0 remaining (PHASE0_SCRIPTS.md), reordered
 
@@ -220,63 +289,53 @@ Run this first, in a fresh chat. Each step names its role and model.
 
 Acceptance checks for each item are as written in PHASE0_SCRIPTS.md.
 
-## 7. Phase 1: pilot (unchanged from v2.2, with these additions)
+## 7. Phase 1: staged validation (replaces the 30-run pilot)
 
-- **Arms:**
-  - C, the current process (Opus author, Opus audit, lead fixes);
-  - the Opus architect with the lean packet and scripts;
-  - the Sonnet architect with the same.
-- **Audit in every arm.** The full holistic review, with its four parts, by qualified roles. The acc-auditor is Opus in every arm, and audit cost counts in every arm.
-- **Tasks.** 2 reference tasks (psych spine briefs rebuilt from pre-spine snapshots under quarantine), plus 3 new FM or peds tasks (one with a claim map, one without, one hard). Every task runs twice per arm.
+- **Stage 1.** One new FM or peds brief, end to end, on the lean arm (Opus architect, split reviews), inside Jonathan's budget. Compare it against the s128 goldens' measured cost and audit counts (section B).
+- **Stage 2.** If stage 1 meets quality, 3 briefs: one with a claim map, one without, one hard. Each runs on the lean arm, and the hard one also runs on control C. A Sonnet-architect arm is added only if stage 1 leaves budget and Jonathan agrees.
 - **Acceptance per brief:**
-  - verify READY;
+  - G-READY;
   - zero HIGH;
-  - the HIGH plus MED count no higher than C's;
-  - Jonathan's blinded review of every arm's first run;
+  - HIGH plus MED no higher than C's;
+  - Jonathan's blinded review;
   - answerability no lower than the old brief.
-- **Adoption.** An arm is adopted only if all three hold: acceptance at least C's; no HIGH that C avoided; tokens per accepted brief down at least 25%.
-- **Frozen first.** The rubric is committed before any run, in repair/efficiency/RUBRIC_spine.md. Results go to RESULTS_spine.md, with the not-proven list.
+- **Adoption.** Only after stage 2, by the v2.2 rule: acceptance at least C's, no HIGH that C avoided, measured tokens per accepted brief at least 25% lower with every cost counted. Everything else is reported as not proven.
+- **Frozen first.** The rubric is committed before each stage, in RUBRIC_spine.md; results go to RESULTS_spine.md.
 
 ## 8. Phase 2: production loop per batch (6 to 8 briefs, one cluster, a fresh chat each)
 
 | Step | Who (model) | Action | Exit |
 |---|---|---|---|
 | B0 | Lead (Opus) | Pick a cluster (entry types and lenses with a golden only); write WAVE.json budgets | Batch list |
-| B1 | Scripts, spine-packer (Haiku) | Snapshot old briefs; packets for every role; quarantine assert | Packets under size targets |
-| B2 | Scripts, spine-extractor (Haiku) | claims_map, then the leftover | claims_check 100% span coverage |
+| B1 | Scripts | Snapshot old briefs; packets for every role; quarantine assert | Packets under size targets |
+| B2 | Scripts, then the lead for leftovers | claims_map, then the leftover | claims_check 100% span coverage |
 | B3 | Script | Harvest dropped claims | Count logged |
-| B4 | spine-architect (Opus) | outline.json with final text; facts.json (fetch.py, then board evidence for any literature-vs-exam question, NBME then UWorld then AnKing); cards_disposition.json after facts are saved | outline_check PASS |
+| B4 | architect (Opus) | outline.json with final text; facts.json (fetch.py, then board evidence for any literature-vs-exam question, NBME then UWorld then AnKing); cards_disposition.json after facts are saved | outline_check PASS |
 | B4.5 | Script, Lead, architect | Ownership merge (OWNERS.json); delta passes | No double owner |
 | B5 | Scripts | quote_check, numbers, renderer | PASS |
-| B6 | spine-answerer (Haiku) | Bank with and without the brief | Scores; misses to the audit |
-| B7 | acc-auditor (Opus) and read-reviewer, display-reviewer, flag-settler (Sonnet) | Holistic review, four parts, same sha; one canary brief per batch | Review files |
+| B6 | answerer (Haiku) | Bank with and without the brief | Scores; misses to the audit |
+| B7 | acc-review (Opus) and read-review, display-review, flag-review (Sonnet) | Holistic review, four parts, same sha; one canary brief per batch | Review files |
 | B8 | Lead | Adjudicate every HIGH and MED with evidence; reject what the evidence does not support | Dispositions logged (AMEND_LEDGER) |
-| B9 | acc-fixer (Opus) for HIGH and MED; wording-fixer (Sonnet) for LOW | Edit lists with old and new text | verify MECH |
-| B10 | Review roles again on changed briefs (delta plus 3 lines of context for every HIGH fix) | Loop to READY | verify READY |
+| B9 | acc-fix (Opus) for HIGH and MED; wording-fix (Sonnet) for LOW | Edit lists with old and new text | G-MECH |
+| B10 | Review roles again on changed briefs (delta plus 3 lines of context for every HIGH fix) | Loop to READY | G-READY |
 | B11 | Scripts | Combined preview: gate, render.js, preflight (P1 0), vendor_scan, legib, numbers; canary absent | Clean |
 | B12 | Lead | Approval packet: decisions and edits first (old and new wording), dropped list, new facts with sources, card recall and conflicts, audit counts, then phone and desktop crops | Jonathan approves |
-| B13 | Lead | ship.sh (READY gate), postship (OPEN_WORK, log commit, push, version check, handoff in the project and on the Mac, mac_sync) | Live; clean tree |
+| B13 | Lead | ship.sh (G-READY), postship (OPEN_WORK, log commit, push, version check, handoff in the project and on the Mac, mac_sync) | Live; clean tree |
 | B14 | Lead | Ledger: tokens per role per brief, qualification samples, any post-ship defect becomes a rule (defect to rule) | Ledger row |
 
-## 9. Cost controls (the efficiency skill, applied)
+## 9. Cost controls
 
-- **Load the efficiency skill.** Load workflow-efficiency-pilot before any multi-agent wave. Its pilot, frozen-rubric and adoption method governs every new role or packet.
-- **Fresh chats.** One fresh chat per batch or phase. The lead reads JSON summaries and review counts, never whole briefs.
-- **Packets only.** Workers read their packet, never skill files, the whole page or other briefs, and report a gap instead of browsing.
-- **Screenshots by script.** Only the display-reviewer reads images, and only phone, study and chart crops.
-- **Pinned models and capped effort.**
-  - Models are pinned per role.
-  - Effort is low on Haiku roles, medium on Sonnet roles, and high only for the architect, acc-auditor and acc-fixer.
-  - Schema outputs are capped at 40 lines.
+- **Method.** The workflow-efficiency-pilot skill's method (packets, a verifier, frozen rubric, staged adoption) governs every new role.
+- **Measured, not estimated.** Spending comes from transcripts (T6), never from the harness's per-agent figure.
+- **Levers in order (section B):**
+  1. fewer API calls: complete packets, scripts doing the plumbing, H4 call caps;
+  2. smaller contexts: text renders, crops only for display-review, no whole files;
+  3. fewer agents: batch small tasks, one answerer and one applier per batch;
+  4. the cheapest qualified model.
+- **Fresh chats.** One fresh chat per phase or batch. The lead reads summaries and receipts, never whole briefs.
 - **Budgets.**
-  - Tool-call budgets come from the agent definitions.
-  - Wave token budgets come from WAVE.json. Hitting a budget means the packet is missing something; fix packet.py.
-- **Ledger.** ledger_spine.csv (written by H4) records tokens per role per brief, with the setup and qualification cost separately.
-- **Stop rule.** Tokens per shipped brief, averaged over 2 batches after the shadow period, must sit at least 25% below the s123 to s127 average. If not, stop and revert that role.
-- **Today's baseline, for comparison:**
-  - a holistic review by one Opus agent: about 150k to 205k tokens per brief;
-  - a fix by one Opus agent: about 185k to 245k per brief.
-  - The split review targets under 60k per brief: Opus accuracy about 30k, Sonnet parts about 30k.
+  - Jonathan sets a budget per wave in WAVE.json, and H1 checks it before every launch.
+  - The stop rule from v2.2 stands: tokens per shipped brief, measured, at least 25% below the s123 to s127 baseline after the shadow period, or that role reverts.
 
 ## 10. Quality safeguards (each risk, then what catches it)
 
@@ -284,9 +343,9 @@ Carried from v2.2 (1 to 29) with two amended for the board-evidence rule; new on
 
 1. A claim silently disappears: script pointers, 100% span coverage including hover and chart text, the dropped list shown to the auditor and Jonathan, and the B6 stop rule (old v2.2), now enforced by the claims_check step.
 2. Fabricated, paraphrased or spliced quotes: only fetch.py writes the cache; one verbatim fragment per fact; 300 characters of context for the auditor.
-3. Right quote, wrong population: population and setting per fact; outline_check P1; the acc-auditor checks scope.
+3. Right quote, wrong population: population and setting per fact; outline_check P1; the acc-review checks scope.
 4. Meaning drifts at a handoff: the architect writes every word; the renderer is a script (round-trip identical).
-5. The architect's decisions are wrong and get rendered faithfully: the acc-auditor attacks decisions; answerability with and without the brief; the approval packet shows decisions in words.
+5. The architect's decisions are wrong and get rendered faithfully: the acc-review attacks decisions; answerability with and without the brief; the approval packet shows decisions in words.
 6. Charts carry unsourced or contradicting values: one fact id per datum; numbers.py on chart values (once charts carry data); full-resolution crops.
 7. Lean packets lose context: sibling bottom lines, OWNERS.json and SPINE_SPEC rounds verbatim; drawers for owned diagnoses; the B4.5 merge.
 8. Correlated blind spots (same model family): an omission lens, a rotating canary judged by a second agent, the shadow period, and Jonathan as the last check.
@@ -308,11 +367,11 @@ Carried from v2.2 (1 to 29) with two amended for the board-evidence rule; new on
 24. (Amended) Card text drifts onto the page as fact: cards may now be cited only as kind "board", meaning evidence of what the exam rewards where literature or practice differs or no fetched source covers the exam answer. The page line is always in our words (shingle_check), and card errors go to card_conflicts.md.
 25. Card checklist bloat or silent cuts: anchors over Extra; must and candidate tiers; a cap of 15 candidates with the cut logged; stable hash ids; one owner per item.
 26. Card wording copied onto the page: card text is vendor source for vendor_scan and shingle_check.
-27. (Amended) A card steering a fact: fetched references answer mechanism and numbers first. Board evidence (NBME, then UWorld, then AnKing) settles only what the exam rewards when sources disagree, and the acc-auditor checks every kind "board" citation.
+27. (Amended) A card steering a fact: fetched references answer mechanism and numbers first. Board evidence (NBME, then UWorld, then AnKing) settles only what the exam rewards when sources disagree, and the acc-review checks every kind "board" citation.
 28. A deck update mid-batch: the index hash is frozen per batch.
 29. Shadow period: the first 2 batches get Opus re-dos of every cheaper role.
 30. "Passed" read as quality: verify's three states (FAIL, MECH, READY); READY needs the four-part holistic review on the current sha; ship.sh refuses non-READY.
-31. Audit blind to the page as rendered: the display-reviewer on phone and study crops; the review covers everything from the title to the Transferable rule.
+31. Audit blind to the page as rendered: the display-review on phone and study crops; the review covers everything from the title to the Transferable rule.
 32. Cross-references stale or duplicated: area E, with every pointer checked against the live target title.
 33. Study mode leaks answers or hides non-answers: area F, with masks fixed in the build.
 34. A newer guideline taught over the exam answer: the board-standard rule, with board evidence required for any literature-vs-exam line.
@@ -320,8 +379,16 @@ Carried from v2.2 (1 to 29) with two amended for the board-evidence rule; new on
 36. An unpinned or mass launch: H1 (role list, plan step, wave budget), E5 pilot first.
 37. Shared files changed outside a lane: H2, the E4 diff gate, and lead review of every tools/ or spec change.
 38. A ruling invented or mis-attributed in a work file: E7. Decisions live only in DECISIONS_DIGEST, in Jonathan's words.
-39. Screenshot tooling hides content: shots.py forces layout (no lazy sections, instant scroll), tiles long sections and captures to the brief's end; the display-reviewer reports any slice that looks cut.
+39. Screenshot tooling hides content: shots.py forces layout (no lazy sections, instant scroll), tiles long sections and captures to the brief's end; the display-review reports any slice that looks cut.
 40. Review findings that are themselves wrong: the lead adjudicates every HIGH and MED with evidence before any fix (B8), and fixers record ACCEPT, PARTIAL or REJECT with evidence.
+41. A control believed to work that does not: every control carries a status (section A), and only TESTED controls count.
+42. A launch on the wrong model: H1 refuses a missing or mismatched model before launch; T5 verifies the served model after.
+43. A runaway agent: the H4 per-agent call cap; packets fixed when it trips.
+44. Spending misread: usage is measured from transcripts (T6), and post-run logging is never called a cap.
+45. A receipt outliving what it judged: per-part receipts bound to their own dependency hashes; a dependency change re-opens only that part.
+46. A correct fixer blocked by a release gate: G-MECH for workers, G-READY for shipping.
+47. The lead losing its own work to context loss: G-STATE, with the running handoff rewritten after every step.
+48. A new container without the hooks: install from the repo and re-test at session start; agent work stays blocked until the tests pass.
 
 ## 11. Decisions
 
@@ -378,6 +445,7 @@ Still open:
   - a blind scout;
   - frozen deck hash;
   - a second independent review, with all findings taken.
+- v3 to v4 (2026-10-10): the Codex review of v3, audited adversarially (section C); enforcement probed and partly TESTED (section A); measured cost (section B); the G-MECH and G-READY split; per-part receipts; staged validation; G-STATE with one running handoff.
 - v2.2 to v3 (2026-10-10): the whole-brief failure, and the lead's process failures listed at the top. Changes:
   - roles split by model, with qualification;
   - enforcement by definitions and hooks;
