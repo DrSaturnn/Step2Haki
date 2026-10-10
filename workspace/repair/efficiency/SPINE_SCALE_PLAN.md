@@ -203,7 +203,7 @@ Each risk is followed by what catches it.
 5. Your blinded review of 3 pilot briefs from two arms (6 briefs to read).
 6. The source allowlist in 0.6.
 7. Workflow runs need your explicit "use a workflow" each time unless you turn that on for the session.
-8. Export the other shelf decks (plain text with HTML, tags and unique ids, plus .apkg without scheduling; media optional) (medicine, surgery, OB/GYN, neurology, EM) the same way (plain text plus .apkg) so the remaining 104 briefs get card checklists.
+8. Note ids for the full deck: export the whole AnKing deck as .apkg with scheduling and media unchecked (or grant read access to Anki's data folder) so every brief can link by data-nid.
 9. Whether card conflicts should be collected for AnkiHub suggestions.
 
 ## 8. Audit log (v1 to v2)
