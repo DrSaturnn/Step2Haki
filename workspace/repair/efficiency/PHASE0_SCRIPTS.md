@@ -34,7 +34,19 @@ Status 2026-10-10: built and committed (tools/spine/).
   - Word caps are "about": an error only above 2% over the cap, a flag up to it.
 - verify.py:
   - --fast takes about 2 s per brief, and the full run about 40 s.
-  - `verify.py --shipped --fast` passes all 17 spine briefs. Each one rebuilds byte-identical to the page.
+  - `verify.py --shipped --fast`: all 17 spine briefs pass the MECHANICAL checks, and each rebuilds byte-identical to the page. That is not a quality verdict.
+  - Correction, the same day (Jonathan: "passed" must mean the brief reads as one whole, not that rules are met):
+    - verify now reports three states. FAIL is a mechanical failure. MECH means the mechanical checks pass but the brief is not ready. READY means the newest holistic review (repair/migration/spine/HOLISTIC_REVIEW.md) names the current brief text by its sha and says PASS.
+    - Exit codes: 0 READY, 2 MECH, 1 FAIL.
+  - First holistic reviews (repair/migration/spine/reviews/*_r1.md) all FAIL, with no HIGH findings:
+    - hematuria: 4 MED;
+    - nephrotic-child: 2 MED;
+    - scfe: 3 MED;
+    - copd: 5 MED.
+  - Every one of these had passed the line audits. The line audit's scope stopped at the Practice header, and it never read the page as rendered. None of the 17 spine briefs is READY yet.
+  - The reviews also exposed two tool defects, both fixed:
+    - shots.py measured step bounds before lazy sections laid out, so captures were shifted. It also clipped long sections and never captured the bank. It now forces layout, tiles long sections and captures to the brief's end.
+    - outline_check did not parse candidate cards.
   - Known debts of the shipped briefs sit in tools/spine/verify_baseline.txt (V1 acronyms in 11 briefs; MDD's PHQ-9 and the panic mnemonic shingles; MDD's missing old_claims).
 - numbers.py:
   - Catches hematuria against nephrotic-child (PSGN), the fix shipped as s129.

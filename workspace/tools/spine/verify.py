@@ -11,9 +11,13 @@ its outputs are local-only build products). Runs, in order:
   V1 (an acronym is written out at first use, in the line or a hover) and no em dash,
   and without --fast a preview build in a temp folder: apply the 10_*.json to index.html, then gate, render.js,
   preflight (P1 must be 0), vendor_scan --page and numbers.py --brief.
-Then the temp folders are deleted and git must show no tracked changes. Spec drift: once rules sheets exist
+Then the temp folders are deleted and git must show no tracked change that verify made. Spec drift: once rules sheets exist
 (repair/migration/spine/rules/*.md with a "provenance:" line of spec hashes), a mismatch refuses to run.
-Exit 0 on PASS, 1 with one "FIX <check>: ..." line per problem.
+Passing these checks is MECHANICAL PASS only. READY also needs the newest holistic review of the brief
+(repair/migration/spine/reviews/<id>_holistic_rN.md, written by a reader following HOLISTIC_REVIEW.md) to name the
+current text by its sha and say "Verdict: PASS": rules met is not the same as a brief that reads as one whole.
+Exit 0 READY; 2 mechanical pass, not ready (no review, a stale review, or a review that says FAIL);
+1 with one "FIX <check>: ..." line per mechanical problem.
 """
 import glob
 import hashlib
@@ -265,6 +269,7 @@ class Verify:
                 self.F(name, '\n      '.join(out.splitlines()[-6:]))
 
     def run(self):
+        before = sh(['git', 'status', '--porcelain', '--untracked-files=no'])[1]
         try:
             if not self.drift():
                 return self
@@ -279,9 +284,38 @@ class Verify:
             if not self.keep:
                 shutil.rmtree(self.tmp, ignore_errors=True)
         rc, out = sh(['git', 'status', '--porcelain', '--untracked-files=no'])
-        if out.strip():
-            self.F('git', 'tracked changes after verify: %s' % ' '.join(out.split()[:8]))
+        if out.strip() != before.strip():               # only what verify itself changed
+            self.F('git', 'verify changed tracked files: %s' % ' '.join(sorted(set(out.split()) - set(before.split()))[:8]))
+        self.holistic()
         return self
+
+    # ---- 10. the whole-picture gate: mechanical checks are necessary, never sufficient
+    def holistic(self):
+        """READY needs the newest holistic review (HOLISTIC_REVIEW.md) to be of THIS brief text and to say PASS"""
+        self.ready = 'no review'
+        bid = getattr(self, 'bid', None)
+        if not bid or not getattr(self, 'brief_html', ''):
+            return
+        page = P.read_page(os.path.join(WS, 'index.html'))
+        b = P.brief_by_id(page, bid)
+        shas = {hashlib.sha1(self.brief_html.encode()).hexdigest()[:10]}
+        if b:
+            shas.add(hashlib.sha1(page[b.start:b.end].encode()).hexdigest()[:10])
+        files = sorted(glob.glob(os.path.join(WS, 'repair', 'migration', 'spine', 'reviews', '%s_holistic_r*.md' % bid)),
+                       key=lambda f: int(re.search(r'_r(\d+)\.md$', f).group(1)) if re.search(r'_r(\d+)\.md$', f) else 0)
+        if not files:
+            self.ready = 'no holistic review yet (repair/migration/spine/HOLISTIC_REVIEW.md)'
+            return
+        txt = open(files[-1], encoding='utf-8').read()
+        sha = re.search(r'brief-sha:\s*([0-9a-f]{10})', txt)
+        verdict = re.search(r'Verdict:\s*(PASS|FAIL)', txt)
+        name = os.path.basename(files[-1])
+        if not sha or sha.group(1) not in shas:
+            self.ready = '%s reviewed an older text of the brief: review again' % name
+        elif not verdict or verdict.group(1) != 'PASS':
+            self.ready = '%s says FAIL: fix its findings, then review again' % name
+        else:
+            self.ready = 'READY'
 
 
 def spine_dirs():
@@ -304,22 +338,31 @@ def main(argv):
     if '--shipped' in argv:
         dirs, live = spine_dirs()
         missing = sorted(live - set(dirs))
-        bad, nb = 0, 0
+        bad, nb, ready = 0, 0, 0
         for bid, d in sorted(dirs.items()):
             v = Verify(d, fast, keep).run()
-            print('%-4s %-22s %s' % ('PASS' if not v.fix else 'FAIL', bid, os.path.relpath(d, WS)))
+            state = 'FAIL' if v.fix else ('READY' if v.ready == 'READY' else 'MECH')
+            print('%-5s %-22s %s%s' % (state, bid, os.path.relpath(d, WS), '' if state != 'MECH' else '  (' + v.ready + ')'))
             for f in v.fix:
                 print('     ' + f)
             nb += len(v.base)
+            ready += v.ready == 'READY'
             bad += bool(v.fix)
-        print('verify --shipped: %d brief(s), %d failing, %d baseline debt line(s) (tools/spine/verify_baseline.txt)%s' % (
-            len(dirs), bad, nb, ('; no local folder: ' + ', '.join(missing)) if missing else ''))
+        print('verify --shipped: %d brief(s), %d failing the mechanical checks, %d READY (holistic review PASS on the '
+              'current text), %d baseline debt line(s) (tools/spine/verify_baseline.txt)%s' % (
+                  len(dirs), bad, ready, nb, ('; no local folder: ' + ', '.join(missing)) if missing else ''))
         return 1 if bad else 0
     v = Verify(argv[0], fast, keep).run()
     for line in v.ok + v.base + v.fix:
         print(line)
-    print('verify %s: %s' % (getattr(v, 'bid', argv[0]), 'PASS' if not v.fix else 'FAIL (%d fix(es))' % len(v.fix)))
-    return 1 if v.fix else 0
+    if v.fix:
+        print('verify %s: FAIL (%d fix(es))' % (getattr(v, 'bid', argv[0]), len(v.fix)))
+        return 1
+    if v.ready != 'READY':
+        print('verify %s: MECHANICAL PASS, NOT READY: %s' % (v.bid, v.ready))
+        return 2
+    print('verify %s: READY (mechanical checks pass and the current holistic review says PASS)' % v.bid)
+    return 0
 
 
 if __name__ == '__main__':

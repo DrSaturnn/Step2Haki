@@ -309,13 +309,15 @@ class Check:
         if not os.path.exists(cp):
             self.flag('K1', 'cards', 'no card checklist at %s' % os.path.relpath(cp, WS))
             return
-        items = {}
+        items, cand = {}, set()
         cur = None
         for line in open(cp, encoding='utf-8'):
-            m = re.match(r'## card (\d+)', line)
+            m = re.match(r'## (card|candidate) (\d+)', line)     # must cards and --terms candidates alike
             if m:
-                cur = m.group(1)
+                cur = m.group(2)
                 items[cur] = ''
+                if m.group(1) == 'candidate':
+                    cand.add(cur)
                 continue
             m = re.match(r'- anchor \(cloze\): (.*)', line)
             if m and cur:
@@ -344,7 +346,7 @@ class Check:
                 hit = [w for w in keys if w[:5] in stems]
                 if keys and len(hit) * 2 < len(keys):
                     miss = 'marked covered but the brief lacks %s' % ', '.join(sorted(set(keys) - set(hit)))[:80]
-                    if '.' in i:          # an Extra statement: a paraphrase may cover it, so the auditor looks
+                    if '.' in i or i in cand:   # an Extra statement or a candidate card: a paraphrase may cover it, so a reader settles it
                         self.flag('K1', 'card %s' % i, miss)
                     else:                 # the card's anchor (its cloze answer): the tested fact itself
                         self.err('K1', 'card %s' % i, miss, 'cover it, or change the disposition')
