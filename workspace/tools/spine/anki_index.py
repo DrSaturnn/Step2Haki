@@ -1,6 +1,8 @@
 """anki_index: index AnKing exports (Anki "Notes in Plain Text", HTML and tags included) for the spine pipeline.
 
-  python3 tools/spine/anki_index.py <export.txt> [<export.txt> ...] --out repair/sources/anki/anki_index.jsonl
+  python3 tools/spine/anki_index.py <source> [<source> ...] --out repair/sources/anki/anki_index.jsonl
+      a source is a plain-text export (.txt) or a decompressed .apkg collection (.sqlite, read directly: note ids,
+      fields, tags and deck); the first source holding a note wins, so list the newest first
       [--db <collection.sqlite> ...]   (decompressed collection.anki21b from an .apkg export of the same decks:
                                          adds note ids, field names, and Text/Extra chosen by field name)
 
@@ -176,6 +178,22 @@ def load_dbs(paths):
     return notes, names, ntids
 
 
+def read_sqlite(path):
+    """An .apkg collection read as export rows: [guid, notetype, deck, *fields, tags]."""
+    import sqlite3
+    c = sqlite3.connect(path)
+    nt = dict(c.execute('select id, name from notetypes'))
+    dk = {i: n.replace('\x1f', '::') for i, n in c.execute('select id, name from decks')}
+    did = dict(c.execute('select nid, min(did) from cards group by nid'))
+    rows = []
+    for nid, guid, mid, flds, tags in c.execute('select id, guid, mid, flds, tags from notes order by id'):
+        rows.append([guid, nt.get(mid, ''), dk.get(did.get(nid), '')] + flds.split('\x1f') + [tags.strip()])
+    width = max((len(r) for r in rows), default=4)
+    cols = {'guid': 0, 'notetype': 1, 'deck': 2, 'tags': width - 1}
+    rows = [r[:-1] + [''] * (width - len(r)) + [r[-1]] for r in rows]   # pad short notetypes so tags stay last
+    return cols, rows
+
+
 def main():
     args = sys.argv[1:]
     if '--out' not in args or len(args) < 3:
@@ -196,7 +214,7 @@ def main():
     seen, recs, dup = {}, [], 0
     for path in files:
         deck = os.path.splitext(os.path.basename(path))[0]
-        cols, rows = read(path)
+        cols, rows = read_sqlite(path) if path.endswith('.sqlite') else read(path)
         n = 0
         for row in rows:
             if len(row) <= max(cols.values()):

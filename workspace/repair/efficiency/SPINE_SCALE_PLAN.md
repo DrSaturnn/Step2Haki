@@ -16,7 +16,7 @@ v2 folds in an adversarial self-audit and an independent Opus review of v1 (23 f
 | With a migration claim map (approximate match by id) | about 80; the rest came from board-brief or UWorld backfill with no claim-level sources |
 | Practice items on the page | about 3,140, all carried with ids intact |
 | Subagents in this chat, s118 to s127 | 184; about 760M cached tokens read, 5.4M output |
-| AnKing cards indexed | 27,376 notes (full deck of 2026-07-16 plus October Psych, Peds and FM exports); note ids for 3,282 so far, linking 73 briefs by data-nid; the full-deck note ids would link the rest |
+| AnKing cards indexed | 30,480 notes: the AnKing Step Deck collection of 2026-10-10 (19,718 notes, read directly from its .apkg), the October Psych, Peds and FM exports, and the July full export; note ids for 23,000. 314 of the page's 384 data-nid values resolve, linking 88 of the 97 briefs that carry nids (median 3 cards, 6 statements per brief); 80 briefs carry no nid and get candidates only |
 
 Cost driver: agents re-reading big contexts over many tool calls (up to 80 each), and the lead's own long context. Output is cheap. So the plan cuts reads and calls first, model price second.
 
@@ -203,7 +203,7 @@ Each risk is followed by what catches it.
 5. Your blinded review of 3 pilot briefs from two arms (6 briefs to read).
 6. The source allowlist in 0.6.
 7. Workflow runs need your explicit "use a workflow" each time unless you turn that on for the session.
-8. Note ids for the full deck: export the whole AnKing deck as .apkg with scheduling and media unchecked so every brief can link by data-nid (Anki's own data folder is a protected location this session cannot open, checked 2026-10-09).
+8. Settled 2026-10-10: the full AnKing Step Deck .apkg is indexed (anki_index.py reads .sqlite collections directly). Open: 70 page nids do not resolve (cards deleted or merged upstream, or from other decks), and one brief carries a UWorld QID (115741) in data-nid; both go to the inventory as link repairs.
 9. Whether card conflicts should be collected for AnkiHub suggestions.
 
 ## 8. Audit log (v1 to v2)
