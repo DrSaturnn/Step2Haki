@@ -11,6 +11,9 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from fetch import load_index  # noqa: E402
+
 WS = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
 CACHE = os.path.join(WS, 'repair', 'sources', 'web')
 
@@ -33,7 +36,7 @@ def main(argv):
         shas, terms = [f[:-4] for f in os.listdir(CACHE) if f.endswith('.txt')], args
     else:
         shas, terms = [args[0]], args[1:]
-    ix = json.load(open(os.path.join(CACHE, 'index.json'), encoding='utf-8'))
+    ix = load_index()
     pat = re.compile('|'.join(re.escape(t) for t in terms), re.I)
     shown = 0
     for sha in shas:

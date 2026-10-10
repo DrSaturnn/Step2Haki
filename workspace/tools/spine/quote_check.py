@@ -16,6 +16,9 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from fetch import load_index  # noqa: E402
+
 WS = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
 CACHE = os.path.join(WS, 'repair', 'sources', 'web')
 TRANS = str.maketrans({'‘': "'", '’': "'", '“': '"', '”': '"', '–': '-', '—': '-',
@@ -30,7 +33,7 @@ def main(argv):
     if not argv:
         sys.exit(__doc__.strip().splitlines()[2].strip())
     facts = json.load(open(argv[0], encoding='utf-8'))['facts']
-    ix = json.load(open(os.path.join(CACHE, 'index.json'), encoding='utf-8')) if os.path.exists(os.path.join(CACHE, 'index.json')) else {}
+    ix = load_index()
     by_url = {e['url']: sha for sha, e in ix.items()}
     texts, fails, relayed, ok = {}, [], [], 0
     for f in facts:

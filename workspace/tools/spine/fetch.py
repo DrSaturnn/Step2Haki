@@ -38,21 +38,38 @@ def allowed(host):
 def page_text(raw):
     t = re.sub(r'<(script|style|noscript|svg)\b.*?</\1>', ' ', raw, flags=re.S | re.I)
     t = re.sub(r'<(br|/p|/div|/li|/h[1-6]|/tr|/td|/th|/caption|/section|/article)\b[^>]*>', '\n', t, flags=re.I)
-    t = H.unescape(re.sub(r'<[^>]+>', ' ', t))
+    # strip only real tags: a bare "<" in text ("FEV1/FVC < 0.70") must survive (COPD golden, 2026-10-10)
+    t = H.unescape(re.sub(r'</?[A-Za-z!][^<>]*>', ' ', t))
     lines = [' '.join(l.split()) for l in t.split('\n')]
     return '\n'.join(l for l in lines if l)
 
 
 def load_index():
+    """index.json is rebuilt from one <sha>.json sidecar per page, so parallel fetches cannot drop each
+    other's rows (two goldens lost entries to a read-modify-write race on 2026-10-10)."""
+    ix = {}
     p = os.path.join(CACHE, 'index.json')
-    return json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
+    if os.path.exists(p):
+        try:
+            ix.update(json.load(open(p, encoding='utf-8')))
+        except ValueError:
+            pass
+    if os.path.isdir(CACHE):
+        for f in os.listdir(CACHE):
+            if f.endswith('.json') and f != 'index.json':
+                try:
+                    ix[f[:-5]] = json.load(open(os.path.join(CACHE, f), encoding='utf-8'))
+                except ValueError:
+                    pass
+    return ix
 
 
 def save_index(ix):
     p = os.path.join(CACHE, 'index.json')
-    with open(p + '.tmp', 'w', encoding='utf-8') as f:
+    tmp = '%s.%d.tmp' % (p, os.getpid())
+    with open(tmp, 'w', encoding='utf-8') as f:
         json.dump(ix, f, indent=1, ensure_ascii=False)
-    os.replace(p + '.tmp', p)
+    os.replace(tmp, p)
 
 
 def fetch(url, ix):
@@ -77,6 +94,8 @@ def fetch(url, ix):
     title = (re.search(r'<title[^>]*>(.*?)</title>', raw, re.S | re.I) or [None, ''])[1]
     ix[sha] = {'url': url, 'domain': host, 'title': ' '.join(H.unescape(title).split())[:160],
                'fetched': datetime.date.today().isoformat(), 'chars': len(text)}
+    with open(os.path.join(CACHE, sha + '.json'), 'w', encoding='utf-8') as f:   # the sidecar is the record
+        json.dump(ix[sha], f, ensure_ascii=False)
     return 'OK %s %s %s (%d chars)' % (sha, host, ix[sha]['title'][:70], len(text))
 
 
