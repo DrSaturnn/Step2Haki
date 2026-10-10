@@ -14,8 +14,9 @@ Per note (one JSON line):
   nid         Anki note id: not in a plain-text export; filled later from an .apkg export when available
   text, extra plain text with clozes shown (answers in [brackets])
   text_html, extra_html   raw HTML (emphasis and colors live here)
-  marks       emphasis spans in Extra: [{kind: b|u|i|color, color, text}]  (which kind is the deck's "pink"
-              is decided from the notetype CSS or a confirmed card, never assumed)
+  hy          the Extra field split into statements (one per line or bullet). The Extra field is the deck's
+              pink text, the high-yield notes (Jonathan 2026-10-09: "the extra")
+  marks       emphasis spans inside Extra: [{kind: b|u|i|color, color, text}]
   other       other text fields (non-empty after stripping media), {column: text}
   tags        all tags
   uworld      {"step2": [...], "step1": [...], "comlex": [...]} QIDs from #UWorld tags
@@ -44,6 +45,15 @@ def plain(s):
     s = H.unescape(TAG.sub('', s))
     s = re.sub(r'[ \t\xa0]+', ' ', s)
     return re.sub(r'\n\s*\n+', '\n', s).strip()
+
+
+def statements(h):
+    out = []
+    for line in plain(h).split('\n'):
+        t = re.sub(r'^\s*(?:[-\u2022*]|\d+[.)])\s*', '', line).strip()
+        if len(t) >= 4:
+            out.append(t)
+    return out
 
 
 def marks(h):
@@ -106,6 +116,7 @@ def record(deck, row, gcol, tcol):
         'deck': deck, 'guid': row[gcol], 'ankihub_id': ahid, 'nid': None,
         'text': plain(text_html), 'extra': plain(extra_html),
         'text_html': text_html, 'extra_html': extra_html,
+        'hy': statements(extra_html),
         'marks': marks(extra_html), 'other': other, 'tags': tags,
         'uworld': {k: sorted(set(v)) for k, v in uw.items()}, 'shelves': sorted(shelves),
     }
@@ -141,6 +152,7 @@ def main():
             f.write(json.dumps(r, ensure_ascii=False) + '\n')
     os.replace(tmp, out)
     qids = {q for r in recs for v in r['uworld'].values() for q in v}
+    print('high-yield statements (Extra): %d across %d notes' % (sum(len(r['hy']) for r in recs), sum(1 for r in recs if r['hy'])))
     print('index: %d notes (%d duplicates across decks), %d with AnkiHub id, %d with a UWorld tag, %d distinct QIDs -> %s'
           % (len(recs), dup, sum(1 for r in recs if r['ankihub_id']),
              sum(1 for r in recs if any(r['uworld'].values())), len(qids), out))
