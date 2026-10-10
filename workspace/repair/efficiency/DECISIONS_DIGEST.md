@@ -8,3 +8,4 @@ Source of truth for decisions before 2026-10-10: SPINE_SPEC.md rounds 2 to 4 (ca
 - 2026-10-09 Timeline charts site-wide use the voices-chart legibility (per-row legends, no nested frames; s126).
 - 2026-10-09 Sleep Problems generalized to child and adult, with an original stage chart (s125).
 - 2026-10-10 Spine-at-scale plan approved; Phase 0 first; caps 1,300 disease, 1,000 drug, 700 hub; pilot arms Sonnet and Haiku; Jonathan reviews every pilot arm blinded.
+- 2026-10-10 Goldens: peds nephrotic-child and scfe (Jonathan: both), FM copd (no preference; the plan's pick). FM and peds lens draft frozen as written (no preference given); Jonathan's review of the goldens is its approval.

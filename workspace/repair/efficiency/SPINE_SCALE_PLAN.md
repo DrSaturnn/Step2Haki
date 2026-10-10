@@ -48,8 +48,9 @@ Status 2026-10-10:
 - Done: 0.3 inventory (`tools/spine/inventory.py`; 177 briefs, 163 to convert, median 585 words above the bank, 5 over 1,300; 75 with a claim map; 88 with resolved cards; one brief, bone-tumors, carries UWorld QIDs in data-nid).
 - Done: 0.6b AnKing index.
 - Done: helpers moved to `tools/spine/` (shingle_check.py, which also reads card text and failed two seeded copies as it should; shots.py, steps and full-resolution chart crops).
-- Drafted: 0.1 FM and peds lens in AUTHOR_SPEC and AUDIT_PROMPT, awaiting Jonathan's approval.
-- Next: 0.2 goldens (picked by Jonathan); 0.4 to 0.17.
+- 0.1 FM and peds lens frozen as drafted (Jonathan gave no change); his review of the goldens approves it.
+- 0.2 goldens chosen: nephrotic-child and scfe (peds), copd (FM). Built on the current process next.
+- Next after the goldens: 0.4 to 0.17.
 
 Scripts live in `tools/spine/` (tracked). Packets, caches, outlines and claim maps live under `repair/migration/` or `repair/sources/` (local-only; synced to the Mac by mac_sync). Helpers now in `/tmp/claude-0` (ovl_*.py, shootgen.py, shotcharts.py) move into `tools/spine/` first; they vanish with the container.
 
