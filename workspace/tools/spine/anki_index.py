@@ -1,6 +1,8 @@
 """anki_index: index AnKing exports (Anki "Notes in Plain Text", HTML and tags included) for the spine pipeline.
 
   python3 tools/spine/anki_index.py <export.txt> [<export.txt> ...] --out repair/sources/anki/anki_index.jsonl
+      [--db <collection.sqlite> ...]   (decompressed collection.anki21b from an .apkg export of the same decks:
+                                         adds note ids and field names)
 
 Card text is never a page source (standing rule). The index exists to (1) list the concepts a deck marks as
 high yield for each brief, (2) carry each card's identifiers so a claim map can name the exact card it was
@@ -11,13 +13,14 @@ Per note (one JSON line):
   deck        export file stem (Psych, Peds, FM)
   guid        Anki unique identifier (export column 1)
   ankihub_id  AnkiHub note UUID (the last field), when present
-  nid         Anki note id: not in a plain-text export; filled later from an .apkg export when available
+  nid         Anki note id (the page's data-nid values), from --db; the plain-text export lacks it
   text, extra plain text with clozes shown (answers in [brackets])
   text_html, extra_html   raw HTML (emphasis and colors live here)
   hy          the Extra field split into statements (one per line or bullet). The Extra field is the deck's
-              pink text, the high-yield notes (Jonathan 2026-10-09: "the extra")
+              pink text, the high-yield notes (Jonathan 2026-10-09: "the extra"; the AnKingOverhaul notetype CSS
+              colors #extra navy, magenta in night mode)
   marks       emphasis spans inside Extra: [{kind: b|u|i|color, color, text}]
-  other       other text fields (non-empty after stripping media), {column: text}
+  other       other text fields (non-empty after stripping media), {field name (column number without --db): text}
   tags        all tags
   uworld      {"step2": [...], "step1": [...], "comlex": [...]} QIDs from #UWorld tags
   shelves     Step 2 shelf tags (e.g. Psych, Peds, FM) from !Shelf and #Resources_by_rotation
@@ -122,12 +125,26 @@ def record(deck, row, gcol, tcol):
     }
 
 
+def load_dbs(paths):
+    import sqlite3
+    notes, names = {}, {}
+    for p in paths:
+        c = sqlite3.connect(p)
+        for ntid, ord_, name in c.execute('select ntid, ord, name from fields'):
+            names.setdefault(ntid, {})[ord_] = name
+        for nid, guid, mid in c.execute('select id, guid, mid from notes'):
+            notes[guid] = (nid, mid)
+    return notes, names
+
+
 def main():
     args = sys.argv[1:]
     if '--out' not in args or len(args) < 3:
         sys.exit(__doc__.strip().splitlines()[2].strip())
     out = args[args.index('--out') + 1]
-    files = [a for a in args if a != '--out' and a != out]
+    dbs = args[args.index('--db') + 1:] if '--db' in args else []
+    files = [a for a in args[:args.index('--db')] if '--db' in args] if dbs else list(args)
+    files = [a for a in files if a != '--out' and a != out]
     seen, recs, dup = {}, [], 0
     for path in files:
         deck = os.path.splitext(os.path.basename(path))[0]
@@ -145,6 +162,18 @@ def main():
             recs.append(r)
             n += 1
         print('%s: %d notes' % (deck, n))
+    if dbs:
+        notes, names = load_dbs(dbs)
+        miss = 0
+        for r in recs:
+            hit = notes.get(r['guid'])
+            if not hit:
+                miss += 1
+                continue
+            r['nid'], mid = hit
+            fn = names.get(mid, {})
+            r['other'] = {fn.get(int(k) - 1, k): v for k, v in r['other'].items()}
+        print('note ids: %d of %d notes matched by guid (%d unmatched)' % (len(recs) - miss, len(recs), miss))
     os.makedirs(os.path.dirname(out) or '.', exist_ok=True)
     tmp = out + '.tmp'
     with open(tmp, 'w', encoding='utf-8') as f:
