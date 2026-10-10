@@ -216,7 +216,7 @@ Each risk is followed by what catches it.
 Decided by Jonathan 2026-10-10:
 1. Plan approved; Phase 0 setup runs first. Psych hubs and screens may run on the current process alongside it; then the FM and peds goldens; then the pilot.
 2. Word caps above the practice bank: disease about 1,300 words, drug about 1,000, presentation hub about 700.
-3. Pilot arms: Sonnet and Haiku fillers (plus arm C).
+3. Pilot arms: superseded 2026-10-10 by PHASE0_SCRIPTS.md D1 and D2. A script (outline_render.py) replaces the filler. The arms are C (current Opus author), an Opus architect with the lean packet and scripts, and a Sonnet architect with the same; Opus audits all three. Haiku keeps extraction and the answerability test. The scout folds into the architect, which opens the card list only after its facts are saved.
 4. Jonathan does the blinded pilot review of the 3 new briefs from every arm.
 5. Full AnKing Step Deck indexed (2026-10-10).
 

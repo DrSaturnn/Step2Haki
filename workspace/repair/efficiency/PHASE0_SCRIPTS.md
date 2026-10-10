@@ -157,7 +157,7 @@ has to exist before the pilot. It is ordered so that each milestone is usable on
 
 Link repairs (inventory): one brief (bone-tumors) carries UWorld QIDs in data-nid, and 69 card ids do not resolve. A script lists them and the Lead fixes them in the batch that rebuilds each brief, not as a separate ship.
 
-## Decisions
+## Decisions (both accepted by Jonathan 2026-10-10)
 
 - **D1. Replace the filler with outline_render.py (recommended).**
   - The pilot arms become:
