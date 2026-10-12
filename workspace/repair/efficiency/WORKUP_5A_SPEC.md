@@ -66,7 +66,7 @@ The values are for the 900 px brief width; phone values are in parentheses.
 2. **Desktop meaning cap:** kept. "No, this helps with visual grouping and easier scanability."
    - The 150 px finding column and the 360 px meaning cap stay as designed.
 3. **The last zone's label** is "Diagnostic test" ("both wrong, Diagnostic test is what step 2 usually uses"). This replaces both "Most accurate" and "Confirms".
-   - Not yet settled: whether "both wrong" also covers which tests sit in that zone. Placement still needs a source check.
+   - "Both wrong" referred only to the two labels (Jonathan: "it was a joke"). The tests in this zone stay as designed.
 4. **"By clue" is renamed.** Jonathan delegated the new name.
    - Claude's pick: "By presentation". It is plain, matches the clue column and pairs with "First step" and "Next step". Jonathan can swap it.
 5. **"CT" may stay shortened** ("shortened to CT is fine"). "Contrast CT abdomen" is accepted as the design wrote it.
