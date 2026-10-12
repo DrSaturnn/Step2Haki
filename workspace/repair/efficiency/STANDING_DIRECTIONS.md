@@ -59,14 +59,15 @@ Source keys:
   - before switching, a Raise tier for partial response. [SPEC r2, MDD review]
 - **Severity:** a severity instrument is shown as the instrument itself, then a score bar with bands that name the action. [SPEC r2, MDD review]
 - **Criteria tile:** names are short so they fit on one phone line; duration cutoffs are bold. The tile carries the mnemonic. [SPEC r4, MDD review]
-- **Acronyms:** every acronym is written out at first use or in a hover. [SPEC r4]
+- **Acronyms:** every acronym is written out at first use or in a hover. [SPEC r4] Exception: "CT" may stay shortened in the workup (Jonathan, 2026-10-11: "shortened to CT is fine").
 - **Row drawers:** a differential row whose diagnosis owns a brief is a drawer button. [SPEC migration rule]
 
 ## Display
 - **Diagnostic workup template: layout 5a (2026-10-11).**
   - Each clue and its order sit on one tinted band row: clue, then an arrow, then the order.
   - Below the band, untinted and smaller, each finding branches from a stem and leads to its meaning by a connector and arrowhead.
-  - Zones: First step, By clue, Next step, Most accurate or Confirms, then Skip.
+  - Zones: First step, By presentation (renamed from "By clue"), Next step, Diagnostic test (Step 2's term), then Skip. [DIG 2026-10-11]
+  - Phone: the finding column is a little wider than designed, for less wrapping. Desktop: the meaning cap stays, for grouping and scanning. [DIG 2026-10-11]
   - Spec and design file: claude/design/WORKUP_5A_SPEC.md and claude/design/Workup_5a.html.
   - This supersedes the s127 headed cards, the 2026-10-10 R1 rail removal and the "vertical line with dots"; the s130 numbered and forked layout stays rejected.
   - The build questions in the spec are open until Jonathan answers them. [DIG 2026-10-11]

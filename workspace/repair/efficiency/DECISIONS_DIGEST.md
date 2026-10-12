@@ -18,3 +18,9 @@ Source of truth for decisions before 2026-10-10: SPINE_SPEC.md rounds 2 to 4 (ca
 - 2026-10-10 Workups do not open with a question: the question-led workup was already tried and dropped (s115, 2026-10-07; SPINE_SPEC: "Narrow is a pivot table ... no questions"). Jonathan: "it is starting it off with a question again, a problem we had already encountered, resolved, and set a rule for moving forward." The hematuria workup's "1 Is it glomerular? ..." header is pre-spine legacy and goes when that brief is rebuilt; no mock or build may add one.
 - 2026-10-10 All prior brief decisions and directions belong in the running files ("i thought all my prior brief decisions and directions were recorded in the running .md"): claude/STANDING_DIRECTIONS.md compiles them with sources and is required reading for every chat.
 - 2026-10-11 Workup layout 5a adopted as the diagnostic workup template ("okay here is the new diagnostic work up design template"; made in Claude Design). Layout: a tinted band row of clue, then an arrow, then the order; untinted findings below on a stem, each finding leading to its meaning by a connector and arrowhead; zones First step, By clue, Next step, Most accurate or Confirms, then Skip. It supersedes the 2026-10-10 R1 workup layout and the s127 headed cards. Design file and spec: claude/design/Workup_5a.html and claude/design/WORKUP_5A_SPEC.md. The open build questions are listed in that spec (not decided).
+- 2026-10-11 Workup 5a build answers:
+  - Phone finding column wider, phone only ("on mobile only, this column for this can be pushed slightly for less word wrapping").
+  - Desktop meaning cap kept ("this helps with visual grouping and easier scanability").
+  - The last zone is labeled "Diagnostic test" ("both wrong, Diagnostic test is what step 2 usually uses").
+  - "By clue" is renamed (Jonathan: "rename it"); Claude's pick is "By presentation", swappable.
+  - "Shortened to CT is fine."

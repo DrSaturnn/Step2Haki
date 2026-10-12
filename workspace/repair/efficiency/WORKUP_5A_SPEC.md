@@ -58,24 +58,23 @@ The values are for the 900 px brief width; phone values are in parentheses.
 - **Study mode:** "Hide meaning" blurs meanings by 5 px; "Hide test and meaning" also blurs the orders. Transition .22 s.
 - **Flat theme:** `data-theme` flat on the root turns `--e1` and `--e2` into hairline outlines, and gradients go flat.
 
-## Build notes (Claude's review, 2026-10-11; not decisions)
+## Decided by Jonathan (2026-10-11, answering the build notes)
 
-Each needs Jonathan's call or a source check before the rollout. Nothing ships without his approval.
+1. **Phone finding column:** "on mobile only, this column for this can be pushed slightly for less word wrapping."
+   - Widen the phone finding column a little, from 112 px toward about 130 px; set the exact value at the pilot screenshot.
+   - Desktop is unchanged.
+2. **Desktop meaning cap:** kept. "No, this helps with visual grouping and easier scanability."
+   - The 150 px finding column and the 360 px meaning cap stay as designed.
+3. **The last zone's label** is "Diagnostic test" ("both wrong, Diagnostic test is what step 2 usually uses"). This replaces both "Most accurate" and "Confirms".
+   - Not yet settled: whether "both wrong" also covers which tests sit in that zone. Placement still needs a source check.
+4. **"By clue" is renamed.** Jonathan delegated the new name.
+   - Claude's pick: "By presentation". It is plain, matches the clue column and pairs with "First step" and "Next step". Jonathan can swap it.
+5. **"CT" may stay shortened** ("shortened to CT is fine"). "Contrast CT abdomen" is accepted as the design wrote it.
 
-1. **Phone legibility.**
-   - At 112 px, findings wrap to 3 to 6 lines; "Dipstick blood, 3 or more red cells per high-power field (hpf)" takes 6.
-   - The findings and meanings start on two left edges, against "Phone table cards: every value starts on one left edge".
-   - Option: on a phone, stack the finding above its meaning on one edge.
-2. **Desktop space.** The finding column (150 px) wraps findings to 3 or 4 lines, while the 360 px meaning cap leaves about 250 px empty on the right. Option: a wider finding column, or lift the cap.
-3. **Acronym.**
-   - The design shortened "Contrast computed tomography (CT) of the abdomen" to "Contrast CT abdomen", so CT is no longer written out at first use (the acronym rule).
-   - CBC is not written out either (pre-existing).
-   - Content wording follows the brief, not the mock.
-4. **"Most accurate" zone.**
-   - The default label is "Most accurate", over CT urography with cystoscopy (an adult test, "not a first test in a child") and renal biopsy.
-   - Whether each is the Step 2 "most accurate" answer is unverified; noncontrast CT, the classic most-accurate test for a stone, sits under Next step.
-   - Use "Confirms" until each placement is sourced.
-5. **Zone name "By clue".** A judgment call against the no-cliche rule ("Then, by the clue" was rejected); a plain alternative is "Directed by findings".
-6. **Draft markers.** Dotted underlines and "[indication]" are authoring marks and must not ship. Every indication needs a source; the meatus exam has none, and "Renal injury" has no meaning.
-7. **Connector measured in script.** Live builds must handle resize, study mode and drawers. A CSS-only fallback starts the connector at the finding column's edge.
-8. **Theme hooks.** The site's flat theme is `body.flat` and `.axm-flat`, not `data-theme`, and study mode uses the site's `.mask` spans. Both must map to the existing mechanisms, and the result must pass legib_audit in sculpted, flat and study modes.
+Zones are now: First step, By presentation, Next step, Diagnostic test, then Skip.
+
+## Still open (build, not design)
+
+- **Draft markers.** Dotted underlines and "[indication]" are authoring marks and never ship. Every indication needs a source. The meatus exam has none, and "Renal injury" has no meaning.
+- **Connector lines.** They are measured in script, so a live build must handle resize, study mode and drawers.
+- **Theme hooks.** The flat theme maps to the site's `body.flat` and `.axm-flat`; study mode maps to the site's `.mask` spans. The build must pass legib_audit in sculpted, flat and study modes.
