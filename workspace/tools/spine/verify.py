@@ -18,9 +18,10 @@ Then the temp folders are deleted and git must show no tracked change that verif
 Passing these checks is MECHANICAL PASS only (G-MECH). READY (G-READY) also needs all four review receipts current
 (SPINE_SCALE_PLAN.md section C, point 7): repair/migration/spine/reviews/<id>_<part>_rN.md for part acc, read, display
 and flags, the newest of each saying "Verdict: PASS" on a "deps:" line that matches what that part judged now:
-  acc      brief, bank, facts, claims, specs      read   brief, siblings, specs
-  display  brief, display, specs                  flags  outline, facts
-(brief = the brief HTML; bank = its practice section; facts, claims, outline = the folder's facts.json,
+  acc      brief, live, bank, facts, claims, specs    read   brief, live, siblings, specs
+  display  brief, live, display, specs                flags  outline, facts, live
+(brief = the brief HTML the folder builds; live = the brief as it stands on the page, so any edit to the live
+brief, even a small approval-gated fix, makes all four receipts stale; bank = its practice section; facts, claims, outline = the folder's facts.json,
 claim_map.json, outline.json; siblings = every brief title on the page; display = the page's style and script blocks
 plus shots.py; specs = STANDING_DIRECTIONS.md, WORKUP_5A_SPEC.md, MIGRATION_CONTRACT.md). A change re-opens only the
 parts that depend on it. A legacy merged review (<id>_holistic_rN.md) no longer makes a brief READY.
@@ -307,12 +308,15 @@ class Verify:
         return self
 
     # ---- 10. the whole-picture gate: mechanical checks are necessary, never sufficient
-    PARTS = {'acc': ('brief', 'bank', 'facts', 'claims', 'specs'), 'read': ('brief', 'siblings', 'specs'),
-             'display': ('brief', 'display', 'specs'), 'flags': ('outline', 'facts')}
+    PARTS = {'acc': ('brief', 'live', 'bank', 'facts', 'claims', 'specs'), 'read': ('brief', 'live', 'siblings', 'specs'),
+             'display': ('brief', 'live', 'display', 'specs'), 'flags': ('outline', 'facts', 'live')}
+    PAGE = os.path.join(WS, 'index.html')
     SPECS = ('repair/efficiency/STANDING_DIRECTIONS.md', 'repair/efficiency/WORKUP_5A_SPEC.md', 'tools/MIGRATION_CONTRACT.md')
 
     def deps(self):
-        """the dependency hashes each review part is bound to (10 hex characters each)"""
+        """the dependency hashes each review part is bound to (10 hex characters each). 'live' is the brief as it
+        stands on the page: any edit to the live brief, however small (an approval-gated fix between rebuilds), makes
+        every receipt of that brief stale, so it is reviewed again in R5 or R7 (Jonathan 2026-10-12)."""
         def h(b):
             return hashlib.sha1(b if isinstance(b, bytes) else b.encode('utf-8')).hexdigest()[:10]
 
@@ -320,13 +324,15 @@ class Verify:
             return h(open(p, 'rb').read()) if os.path.exists(p) else 'none'
         html = getattr(self, 'brief_html', '')
         m = re.search(r'<h5 class="[^"]*authored-hdr', html)
-        page = P.read_page(os.path.join(WS, 'index.html'))
+        page = P.read_page(self.PAGE)
+        lb = P.brief_by_id(page, getattr(self, 'bid', ''))
         titles = sorted(re.findall(r'<div class="brief[^"]*" id="[^"]+"[^>]*>\s*<h4[^>]*>(.*?)</h4>', page, re.S))
         chrome = ''.join(re.findall(r'<style[^>]*>.*?</style>|<script[^>]*>.*?</script>', page, re.S))
         return {'brief': h(html), 'bank': h(html[m.start():] if m else ''),
                 'facts': fh(os.path.join(self.d, 'facts.json')), 'claims': fh(os.path.join(self.d, 'claim_map.json')),
                 'outline': fh(os.path.join(self.d, 'outline.json')), 'siblings': h('\n'.join(titles)),
                 'display': h(chrome + open(os.path.join(HERE, 'shots.py'), encoding='utf-8').read()),
+                'live': h(page[lb.start:lb.end]) if lb else 'none',
                 'specs': h(''.join(open(os.path.join(WS, f), encoding='utf-8').read() for f in self.SPECS))}
 
     def deps_line(self, part):

@@ -90,8 +90,9 @@ def present(b, shots):
 
 
 SHIP = re.compile(r'(?<![\w-])ship(?![\w-])', re.I)
-NEG = re.compile(r"\b(don'?t|do not|never|not yet|hold|wait)\b[^.?!\n]{0,30}\bship\b|\bship\b[^.?!\n]{0,15}\?",
-                 re.I)
+# Jonathan approves with the plain word "ship" (2026-10-12), optionally naming the batch: "ship", "Ship.", "ship s132".
+# Anything longer (a sentence that mentions ship, a condition, a question) is not an approval.
+PLAIN = re.compile(r'\s*ship(?:\s+(s\d+[a-z]?))?\s*[.!]?\s*', re.I)
 
 
 def hook():
@@ -105,13 +106,13 @@ def hook():
             pend.append((p, m))
     if not pend or not SHIP.search(prompt):
         return 0
-    if NEG.search(prompt):
-        print('[approval hook] Jonathan\'s message mentions ship in a hold, condition or question; no approval recorded.')
-        C.log_event('approval-skip', why='negated or conditional', quote=prompt[:300])
+    plain = PLAIN.fullmatch(prompt)
+    if not plain:
+        print('[approval hook] The message mentions ship but is not the plain word "ship"; no approval recorded.')
+        C.log_event('approval-skip', why='not the plain word ship', quote=prompt[:300])
         return 0
-    named = set(re.findall(r'\bs(\d+[a-z]?)\b', prompt))
-    if named:
-        pend = [(p, m) for p, m in pend if m['batch'][1:] in named]
+    if plain.group(1):
+        pend = [(p, m) for p, m in pend if m['batch'].lower() == plain.group(1).lower()]
     if len(pend) != 1:
         print('[approval hook] "ship" seen, but %d batches are pending and the message does not name one; no approval '
               'recorded. Ask Jonathan which batch.' % len(pend))

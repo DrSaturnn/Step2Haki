@@ -138,10 +138,11 @@ try:
     chk = lambda: subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'check', TB, page], env=ENV,
                                  capture_output=True, text=True)
     expect('check before approval', (chk().returncode, ''), 1)
-    for msg in ('Looks good, nice work', "Don't ship yet, I have edits", 'Should we ship?'):
+    for msg in ('Looks good, nice work', "Don't ship yet, I have edits", 'Should we ship?',
+                'Screenshots reviewed. ship', 'Noted that I reply with the plain word "ship" to approve', 'ship s999'):
         run('approval.py', {'prompt': msg, 'session_id': 'S'}, 'hook')
         expect('no approval from %r' % msg, (chk().returncode, ''), 1)
-    run('approval.py', {'prompt': 'Screenshots reviewed. ship', 'session_id': 'S'}, 'hook')
+    run('approval.py', {'prompt': ' Ship. ', 'session_id': 'S'}, 'hook')
     expect('approval from "ship"', (chk().returncode, ''), 0)
     open(page, 'a').write('<!-- changed -->')
     expect('check after the page changed', (chk().returncode, ''), 1)
