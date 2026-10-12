@@ -72,6 +72,20 @@ def last(s, n=1):
     return ' | '.join(s.strip().splitlines()[-n:])
 
 
+def item_meaning(span):
+    """what an item MEANS (tools/EDITS.md: stem, keyed answer, distractor labels; plus its lead-in and type, which
+    change what is asked). Explanation and formatting changes need no version bump. The key is the first bold after an
+    arrow, so an arrow written inside the stem does not shift the split."""
+    tag = span[:span.find('>') + 1]
+    d = tuple(re.findall(r'data-(?:d1|d2|lead-in|type)="([^"]*)"', tag))
+    body = span[len(tag):]
+    m = re.search(r'(?:&rarr;|\u2192)\s*<b>(.*?)</b>', body, re.S)
+    if not m:
+        return d + (re.sub(r'\s+', ' ', P.text(body)).strip(),)
+    stem = re.sub(r'\s*(?:\u2192)\s*$', '', re.sub(r'\s+', ' ', P.text(body[:m.start()])).strip())
+    return d + (stem, re.sub(r'\s+', ' ', P.text(m.group(1))).strip())
+
+
 class Verify:
     def __init__(self, d, fast, keep):
         self.d, self.fast, self.keep = os.path.abspath(d), fast, keep
@@ -222,12 +236,7 @@ class Verify:
         lost = [i for i in old_items if i not in new_items]
         down = [i for i in old_items if i in new_items and int(new_items[i]) < int(old_items[i])]
         so, sn = item_spans(live), item_spans(new)
-        def meaning(span):
-            # what an item MEANS (tools/EDITS.md: stem, keyed answer, distractor labels); explanation and formatting
-            # changes need no version bump
-            d = tuple(re.findall(r'data-d[12]="([^"]*)"', span[:span.find('>') + 1]))
-            parts = [re.sub(r'\s+', ' ', x).strip() for x in P.text(span).split('\u2192')]
-            return d + tuple(parts[:2])
+        meaning = item_meaning
         unbumped = [i for i in old_items if i in new_items and so.get(i) and sn.get(i)
                     and meaning(so[i]) != meaning(sn[i]) and int(new_items[i]) <= int(old_items[i])]
         if lost or down or unbumped:

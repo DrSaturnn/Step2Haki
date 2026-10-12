@@ -12,7 +12,8 @@ Rules
                 4 optional); every listed step has its h block (same n and id) and no h block is unlisted
   S2 schema     every block and rich part renders; every cited id is in SRC; a drawer names a brief or alias on
                 the page; a plain string holds markup only (learner words go in {"t", "ids"})
-  C1 cap        words above the Practice header: disease 1,300, drug 1,000, presentation 700
+  C1 cap        words above the Practice header: disease 1,300, drug 1,000, presentation 700 (soft: an overage listed in
+                "cap_overage" {reason, would_go} for Jonathan is a flag, not an error; 2026-10-12)
   C2 counts     bottom line 1 to 3 lines; Insights exactly two lines
   D1 tempting   a differential table (last head "Decides it") gives "tempting": one reason per row (FLAG on goldens)
   D2 decides    a Decides-it cell does not open with an action verb (give, treat, order...): it names what decides
@@ -197,8 +198,13 @@ class Check:
         o = self.o
         words = len(H.unescape(re.sub('<[^>]+>', '', self.html)).split()) if self.html else 0
         cap = CAPS.get(o['entry'])
-        if cap and words > cap * 1.02:          # the caps are "about" (Jonathan 2026-10-10): 2% slack, then an error
-            self.err('C1', 'body', '%d words above the Practice header, cap about %d' % (words, cap), 'cut, or move guideline-only detail into a hover')
+        listed = (o.get('cap_overage') or {}).get('reason')
+        if cap and words > cap * 1.02 and listed:
+            # soft caps (Jonathan 2026-10-12): an overage for board-tested content is allowed when it is listed for him
+            # with its count and what would have to go; the outline names it in "cap_overage": {"reason", "would_go"}
+            self.flag('C1', 'body', '%d words, %d over the cap of about %d; listed overage: %s' % (words, words - cap, cap, listed))
+        elif cap and words > cap * 1.02:          # the caps are "about" (Jonathan 2026-10-10): 2% slack, then an error
+            self.err('C1', 'body', '%d words above the Practice header, cap about %d' % (words, cap), 'cut, move guideline-only detail into a hover, or list the overage for Jonathan in "cap_overage"')
         elif cap and words > cap:
             self.flag('C1', 'body', '%d words, just over the cap of about %d' % (words, cap))
         self.words = words
