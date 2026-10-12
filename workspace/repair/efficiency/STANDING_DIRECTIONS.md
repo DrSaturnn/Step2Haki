@@ -17,6 +17,7 @@ Source keys:
 - [OW] OPEN_WORK.md.
 
 ## Accuracy and sources
+- PSGN latency wording, wherever stated: "weeks, not days: about 1 to 3 weeks after strep throat, up to about 6 weeks after impetigo; often summarized as 2 to 4 weeks." [DIG 2026-10-12]
 - Accuracy is non-negotiable; teaching something incorrectly defeats the purpose of Step2Haki. [DIG 2026-10-10]
 - The standard of correct is what Step 2 rewards. Where literature or clinical practice differs from the boards, follow UWorld's and AnKing's approach (NBME, then UWorld, then AnKing). [DIG 2026-10-10] [MEM]
 - Zebras are taught as safeguards for recognizing rare dangerous diagnoses, never as claims that they are common. [DIG 2026-10-10] [MEM]
@@ -33,7 +34,7 @@ Source keys:
 - Main text is what UWorld and NBME test. Guideline-only details go into hover cards or the collapsed panel, never their own rows or rungs. Contested labels that are not tested are cut, and the tested competitor gets the row (PANDAS cut, Sydenham chorea kept). [SPEC r4]
 - Include only what a Step 2 item could key or use as a distractor; doses only where tested. [SPEC Boundaries]
 - Brief titles are generalized, as wide as is reasonable, to avoid many briefs on similar topics; a brief that truly stands on its own can stay separate. [MEM]
-- Word caps above the practice bank: disease about 1,300, drug about 1,000, presentation hub about 700. [DIG 2026-10-10]
+- Word caps above the practice bank: disease about 1,300, drug about 1,000, presentation hub about 700. [DIG 2026-10-10] They are soft: a brief may exceed its cap for board-tested content, and each overage is listed for Jonathan with its count and what would have to go. [DIG 2026-10-12]
 - A brief may run over its word target because of a mnemonic. [MEM]
 - Peds authoring priority: cardiovascular and respiratory first, then endocrine and female reproductive, then neuro and MSK, skin last; outpatient framing; weighted toward recognizing the diagnosis. [MEM]
 - Peds shelf (2026-09-25) felt more nuanced than covered content, with few derm and many outpatient questions; use this as the guide for upcoming peds briefs. [MEM]
@@ -61,6 +62,7 @@ Source keys:
 - **Criteria tile:** names are short so they fit on one phone line; duration cutoffs are bold. The tile carries the mnemonic. [SPEC r4, MDD review]
 - **Acronyms:** every acronym is written out at first use or in a hover. [SPEC r4] Exception: "CT" may stay shortened in the workup (Jonathan, 2026-10-11: "shortened to CT is fine").
 - **Row drawers:** a differential row whose diagnosis owns a brief is a drawer button. [SPEC migration rule]
+- **Repeated links:** a link may appear more than once in a brief (not a hard rule), but keep clutter down overall. [DIG 2026-10-12]
 
 ## Display
 - **Diagnostic workup template: layout 5a (2026-10-11).**

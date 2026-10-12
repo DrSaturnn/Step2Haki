@@ -26,6 +26,11 @@ if [[ ! "$B" =~ ^s[0-9A-Za-z_-]+$ || -z "$MSG" ]]; then echo 'usage: tools/ship.
 cd "$WS" || exit 2
 TMP="$(mktemp -d /tmp/axbx-ship-XXXXXX)"; trap 'rm -rf "$TMP"' EXIT
 fail(){ echo "ship $B: ABORT at $1 (nothing written)"; [[ -n "${2:-}" ]] && echo "$2"; exit 1; }
+# Commit trailers come from the shipping session, never hardcoded (s131: the old trailer named another chat).
+#   AX_SESSION=https://claude.ai/code/session_<id> tools/ship.sh sNN "..."   (AX_COAUTHOR optional)
+AX_COAUTHOR="${AX_COAUTHOR:-Claude Opus 5.5 <noreply@anthropic.com>}"
+if [[ ! "${AX_SESSION:-}" =~ ^https://claude\.ai/code/session_[A-Za-z0-9]+$ ]]; then
+  fail trailer "set AX_SESSION to this session's https://claude.ai/code/session_<id> URL (the Claude-Session trailer)"; fi
 
 # ---- 1. checks on a scratch copy
 o=$(python3 repair/build.py "$B" --out "$TMP/index.html" 2>&1) || fail build "$o"; echo "$o"
@@ -122,8 +127,8 @@ git -C "$ROOT" add -A -- workspace "discriminator-briefs-site/index.html" >/dev/
 if git -C "$ROOT" diff --cached --quiet; then
   echo "commit: nothing to commit"
 else
-  { echo "$B: $MSG"; echo; cat "$TMP/body.txt"; echo; echo "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>";
-    echo "Claude-Session: https://claude.ai/code/session_01AQqAVMYEcNvwH6MgU3fy5n"; } > "$TMP/msg.txt"
+  { echo "$B: $MSG"; echo; cat "$TMP/body.txt"; echo; echo "Co-Authored-By: $AX_COAUTHOR";
+    echo "Claude-Session: $AX_SESSION"; } > "$TMP/msg.txt"
   git -C "$ROOT" commit -q -F "$TMP/msg.txt" || { restore; fail commit; }
   echo "commit: $(git -C "$ROOT" log -1 --format='%h %s') ($(git -C "$ROOT" rev-list --count HEAD) commits)"
 fi

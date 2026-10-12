@@ -1,0 +1,74 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<td>Time for aneurysms to cause <b>heart failure</b> &#x26A0;&#xFE0E; (role inferred)</td>",
+   "with": "<td>Aneurysms appear after the first week; one can later <b>clot</b> and infarct</td>",
+   "note": "A3: unverified flag resolved with a source opened 2026-10-12."
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<td>The usual <b>age</b>: most cases are under 5 &#x26A0;&#xFE0E; (role inferred)</td>",
+   "with": "<td>The usual <b>age</b>: most cases are under 5</td>",
+   "note": "A3: unverified flag resolved with a source opened 2026-10-12."
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<td>An acute presentation; the symptom asked about: <b>heart or lung</b>? &#x26A0;&#xFE0E; (role inferred)</td>",
+   "with": "<td>Fast breathing: <b>heart failure</b> or lung disease</td>",
+   "note": "A3: unverified flag resolved with a source opened 2026-10-12."
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<td>An <b>ill</b> child; fits low cardiac output &#x26A0;&#xFE0E; (role inferred)</td>",
+   "with": "<td>An <b>ill</b> child; ischemia this young looks nonspecific</td>",
+   "note": "A3: unverified flag resolved with a source opened 2026-10-12."
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<td><b>Low grade</b>: an ill child, not a new Kawasaki fever &#x26A0;&#xFE0E; (role inferred)</td>",
+   "with": "<td><b>Low grade</b>: Kawasaki fever runs high (over 39 C), so not a new episode</td>",
+   "note": "A3: unverified flag resolved with a source opened 2026-10-12."
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<td>Tachycardia, tachypnea: <b>heart failure</b>; tamponade shares them &#x26A0;&#xFE0E; (role inferred)</td>",
+   "with": "<td>Tachycardia, tachypnea: <b>heart failure</b>; tamponade shares the fast pulse</td>",
+   "note": "A3: unverified flag resolved with a source opened 2026-10-12."
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<td><b>Hypotension</b>: low output; tamponade also lowers it &#x26A0;&#xFE0E; (role inferred)</td>",
+   "with": "<td><b>Hypotension</b>: low cardiac output (cardiogenic shock); tamponade also lowers it</td>",
+   "note": "A3: unverified flag resolved with a source opened 2026-10-12."
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<td><b>Ischemia</b> from coronary disease &#x26A0;&#xFE0E; (role inferred)</td>",
+   "with": "<td><b>Ischemia</b> from coronary disease</td>",
+   "note": "A3: unverified flag resolved with a source opened 2026-10-12."
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<td>Ventricular <b>strain</b> in a failing heart &#x26A0;&#xFE0E; (role inferred)</td>",
+   "with": "<td>An abnormal ECG that supports <b>heart failure</b>; past age 1, right-axis deviation is not normal</td>",
+   "note": "A3: unverified flag resolved with a source opened 2026-10-12."
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "in uncomplicated disease &#x26A0;&#xFE0E; (a 2024 guideline update may shorten the first recheck; unverified)",
+   "with": "in uncomplicated disease",
+   "note": "A3: unverified flag resolved with a source opened 2026-10-12."
+  }
+ ]
+}

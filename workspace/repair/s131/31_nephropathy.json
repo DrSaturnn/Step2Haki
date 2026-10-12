@@ -1,0 +1,11 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "nephropathy",
+   "find": "<span class=\"lbl\">&#9888;&#65038; Two problems with the source explanation</span>",
+   "with": "<span class=\"lbl\">Two problems with the source explanation</span>",
+   "note": "A3: both claims verified 2026-10-12 (CDC pneumococcal; ADA Standards 2026 section 6)."
+  }
+ ]
+}

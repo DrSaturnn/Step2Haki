@@ -2,6 +2,28 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-12 s131: Hematuria nephritis workup in layout 5a; PSGN timing (option C) in five briefs; Kawasaki, pregnancy vaccine and diabetes notes sourced; osteoporosis item sourced
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (9):
+  - kawasaki (Kawasaki Disease): prose edited (-245 chars)
+  - nephropathy (Diabetes Complications and Annual Care): prose edited (-16 chars)
+  - hematuria (Hematuria and Nephritic Syndrome): prose edited (+1824 chars)
+  - peds-aki (Acute Kidney Injury in a Child): prose edited (+117 chars)
+  - nephrotic-child (Proteinuria and Nephrotic Syndrome in a Child): prose edited (-12 chars)
+  - aq-puffy-eyes (Child with Puffy Eyes): prose edited (+37 chars)
+  - osteoporosis (Osteoporosis Screening and Treatment): attrs set (q_9d537e5889785e8a9e13 data-item-status)
+  - bs-anaphylaxis (Anaphylaxis): prose edited (+23 chars)
+  - preg-vax (Vaccines in Pregnancy): prose edited (-236 chars)
+Other page changes (nav, headers, scripts): +948 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 14 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 199/200 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.015%)
+```
+
 ## 2026-10-12 s130: Hematuria diagnostic workup in layout 5a; site-wide 5a styles, connectors and progressive study mode
 
 ```

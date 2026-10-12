@@ -1,0 +1,18 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "<b>About 1 to 3 weeks after strep throat; up to about 6 weeks after impetigo</b>",
+   "with": "<b>Weeks, not days: 1 to 3 after strep throat, up to 6 after impetigo</b>",
+   "note": "A2: PSGN option C, short table form."
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "<b>C3 still low after 6 to 8 weeks</b>",
+   "with": "<b>C3 still low after 8 weeks</b>",
+   "note": "A2 related (L2): matches hematuria; C3 returns to normal within 6 to 8 weeks (MSD PIGN; StatPearls PSGN)."
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "aq-puffy-eyes",
+   "find": "<td>High blood pressure; strep 1 to 3 weeks earlier</td>",
+   "with": "<td>High blood pressure; strep throat 1 to 3 weeks earlier, or impetigo up to 6</td>",
+   "note": "A2: PSGN option C."
+  },
+  {
+   "op": "replace",
+   "brief": "aq-puffy-eyes",
+   "find": "<td>Sore throat or skin sores 1 to 3 weeks ago; dark urine</td>",
+   "with": "<td>Sore throat 1 to 3 weeks ago, or skin sores up to 6; dark urine</td>",
+   "note": "A2: PSGN option C."
+  }
+ ]
+}

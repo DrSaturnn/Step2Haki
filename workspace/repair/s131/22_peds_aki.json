@@ -1,0 +1,18 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "peds-aki",
+   "find": "<td>post-streptococcal (2–4 wk) or gross hematuria <b>with</b> upper respiratory infection (URI)</td>",
+   "with": "<td>weeks after strep (1 to 3 after the throat, up to 6 after impetigo) or gross hematuria <b>with</b> upper respiratory infection (URI)</td>",
+   "note": "A2: PSGN option C; en dash removed."
+  },
+  {
+   "op": "replace",
+   "brief": "peds-aki",
+   "find": "PSGN comes 2–4 weeks after the infection with low C3;",
+   "with": "PSGN comes weeks, not days, after the infection (about 1 to 3 weeks after strep throat, up to about 6 after impetigo) with low C3;",
+   "note": "A2: PSGN option C; en dash removed."
+  }
+ ]
+}

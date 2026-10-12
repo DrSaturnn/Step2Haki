@@ -1,0 +1,11 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "preg-vax",
+   "find": "<p><b>COVID-19</b> &#9888;&#65038;: the CDC pregnancy table today gives no guidance, while the CDC 2026-2027 guidance recommends a COVID-19 vaccine for all adults 18 years and older, and the CDC pregnancy page (February 2026) says the 2025-2026 recommendations are based on individual decision making; check the current schedule.</p>",
+   "with": "<p><b>COVID-19</b>: recommended in pregnancy, at any trimester (ACOG 2026 maternal schedule).</p>",
+   "note": "A3: ACOG 2026 maternal schedule (via Healio, opened 2026-10-12); CDC clause dropped (Jonathan 2026-10-12)."
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "<tr><td>Poststreptococcal glomerulonephritis</td><td>Days to weeks after pharyngitis</td>",
+   "with": "<tr><td>Poststreptococcal glomerulonephritis</td><td><b>Weeks</b>, not days, after strep throat or impetigo</td>",
+   "note": "A2: PSGN option C ('weeks, not days')."
+  }
+ ]
+}
