@@ -11,7 +11,7 @@
   "acc-fix",
   "wording-fix"
  ],
- "max_agents": 5,
+ "max_agents": 8,
  "max_calls": 150,
  "max_tokens": 10000000,
  "set_by": "Jonathan 2026-10-12: \"R3 budget approved: up to 5 agents, 150 API calls total, about 10M tokens; stop and report at the cap. R3 starts only after the R2 tests pass.\" Closed until the lead opens R3.",
@@ -22,11 +22,13 @@
   "tokens": 1679577,
   "models": "claude-haiku-5-5"
  },
- "opened": "2026-10-12 (R3.3, four review receipts)",
+ "opened": "2026-10-12 (R3 follow-up review, option 1: four reviewers on changed lines, 10 calls each by instruction)",
  "spent_after_r3_3": {
   "agents": 4,
   "api_calls": 34,
   "tokens": 4198085,
   "note": "closed by the lead after the four receipts; reopen for the fix round"
- }
+ },
+ "cap_note": "agent cap raised from 5 to 8 by Jonathan 2026-10-12 for the follow-up review; calls 150 and tokens 10M unchanged",
+ "note_r2": "closed by the lead after the four follow-up receipts"
 }
