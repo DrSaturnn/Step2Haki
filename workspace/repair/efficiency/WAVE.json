@@ -21,5 +21,12 @@
   "calls": 19,
   "tokens": 1679577,
   "models": "claude-haiku-5-5"
+ },
+ "opened": "2026-10-12 (R3.3, four review receipts)",
+ "spent_after_r3_3": {
+  "agents": 4,
+  "api_calls": 34,
+  "tokens": 4198085,
+  "note": "closed by the lead after the four receipts; reopen for the fix round"
  }
 }
