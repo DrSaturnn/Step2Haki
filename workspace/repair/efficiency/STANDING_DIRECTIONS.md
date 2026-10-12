@@ -70,7 +70,14 @@ Source keys:
   - Phone: the finding column is a little wider than designed, for less wrapping. Desktop: the meaning cap stays, for grouping and scanning. [DIG 2026-10-11]
   - Spec and design file: claude/design/WORKUP_5A_SPEC.md and claude/design/Workup_5a.html.
   - This supersedes the s127 headed cards, the 2026-10-10 R1 rail removal and the "vertical line with dots"; the s130 numbered and forked layout stays rejected.
-  - The build questions in the spec are open until Jonathan answers them. [DIG 2026-10-11]
+  - Phone finding column 120 px. Breaks fall after a slash, never mid-word. [DIG 2026-10-11]
+  - No header line above the zones: the rollout drops all 60 numbered workup header lines (questions and summary lines alike). [DIG 2026-10-11]
+  - Study mode is progressive recall:
+    - the clue stays visible and the test is masked;
+    - that band's findings wait, blurred, until the test is revealed;
+    - each meaning then reveals on its own;
+    - the Skip line is masked. [DIG 2026-10-11]
+  - The build questions in the spec are answered (2026-10-11); see the digest.
 - **Workup display rules (2026-10-10, carried into 5a):**
   - indication and test on one line in the darker tinted band, enlarged, vertically centered, reading left to right;
   - findings below, lighter and smaller;

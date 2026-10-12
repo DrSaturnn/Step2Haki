@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-12 s130: Hematuria diagnostic workup in layout 5a; site-wide 5a styles, connectors and progressive study mode
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (1):
+  - hematuria (Hematuria and Nephritic Syndrome): prose edited (+3358 chars)
+Other page changes (nav, headers, scripts): +6671 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 14 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 199/200 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: NOT CHECKED (repair/sources missing: restore axbx-local-only.tar.gz)
+```
+
 ## 2026-10-10 s129: Hematuria: PSGN latency after pharyngitis is about 1 to 3 weeks, matching Nephrotic Syndrome in a Child and MSD
 
 ```

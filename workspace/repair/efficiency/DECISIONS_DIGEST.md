@@ -24,3 +24,11 @@ Source of truth for decisions before 2026-10-10: SPINE_SPEC.md rounds 2 to 4 (ca
   - The last zone is labeled "Diagnostic test" ("both wrong, Diagnostic test is what step 2 usually uses").
   - "By clue" is renamed (Jonathan: "rename it"); Claude's pick is "By presentation", swappable.
   - "Shortened to CT is fine."
+- 2026-10-11 Workup 5a hematuria pilot (s130), Jonathan's answers:
+  - Edit list approved ("approve").
+  - Meatus exam clue "Meatal irritation" ("yes").
+  - "Renal injury" gets a meaning if one exists ("if there is a meaning, then yes add it"). Added "Stable: managed without surgery, at any grade" from AUA Urotrauma Statement 4 and EAST Pediatric Blunt Renal Trauma (opened 2026-10-11); shown to him before ship.
+  - Phone finding column 120 px ("that works").
+  - The rollout drops all 60 numbered workup header lines ("yes drop").
+  - Study mode: "identify a better method and implement it". Built as progressive recall: the clue stays visible; the test is a mask; that band's findings wait, blurred and inert, until the test is revealed (some findings name the test); then each meaning reveals on its own. It uses the site's mask disclosures.
+- 2026-10-12 s130 approved to ship (Jonathan: "ship"), covering the hematuria 5a workup, the site-wide 5a styles and progressive study mode, and the new "Renal injury" meaning.
