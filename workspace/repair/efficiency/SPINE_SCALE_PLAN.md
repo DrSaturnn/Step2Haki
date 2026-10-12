@@ -31,7 +31,7 @@ The plan v2.2 was right; the lead did not follow it. These are the failures, and
    - What happened: "Jonathan's PSGN umbrella ruling" appears in fix_r1.md files, but not in DECISIONS_DIGEST.md with his words. It was probably given in this chat, in the part the lead can no longer see.
    - Rule that prevents it: the lead writes each decision to DECISIONS_DIGEST.md in the same turn Jonathan gives it, quoting him. A ruling found only in a work file is confirmed with Jonathan before anyone acts on it (rule E7).
 
-## A. Evidence: what this environment actually does (tested 2026-10-10, Claude Code 2.1.296)
+## A. Evidence: what this environment actually does (tested 2026-10-10, re-tested in R2 on 2026-10-12, Claude Code 2.1.296)
 
 Each control in this plan is marked by status, and only TESTED controls may be relied on:
 - PLANNED: written here only.
@@ -43,17 +43,19 @@ Probe scripts: repair/efficiency/hooks_probe/. Raw hook input from the probes: r
 
 | Test | Result | Status |
 |---|---|---|
-| T1 A hook file written mid-session (/home/claude/.claude/settings.json) takes effect on the next tool call | Fired on the next Bash call | TESTED |
-| T2 PreToolUse on Agent receives the requested `model` and `subagent_type`, and exit 2 refuses the launch before any token is spent | A launch with no model was refused by agentgate.py | TESTED |
-| T3 Hook input tells the lead from a subagent | Subagent tool calls carry `agent_id` and `agent_type`; the lead's carry neither | TESTED |
-| T4 A subagent's Write outside its lane, and a Bash write into tools/, are refused; an in-lane write is allowed | Both refused, in-lane allowed; checked on disk, not from the agent's report | TESTED |
+| T1 A hook file written mid-session (/home/claude/.claude/settings.json) takes effect on the next tool call | 2026-10-12 (R2): tools/hooks/install.sh wrote the settings; the very next call (a lead Write into the approvals folder) was refused by callgate.py and nothing was written | TESTED (again 2026-10-12) |
+| T2 PreToolUse on Agent receives the requested `model` and `subagent_type`, and exit 2 refuses the launch before any token is spent | 2026-10-12 (R2), full gate tools/hooks/agentgate.py: refused live a launch with no model, one with the wrong model for its role (probe on opus), one with no Role/Plan step/Lane lines, and one past the wave's agent cap; no agent started for any | TESTED (full H1) |
+| T3 Hook input tells the lead from a subagent | 2026-10-12: subagent calls carry `agent_id` (callgate created agents/<id>.json for each probe); the lead's calls carry none (lead branch, approvals guard only) | TESTED (again 2026-10-12) |
+| T4 A subagent's Write outside its lane, and a Bash write into tools/, are refused; an in-lane write is allowed | 2026-10-12 probe 1: in-lane Write allowed (file on disk), Write to tools/spine/PROBE.txt and `echo > tools/spine/PROBE2.txt` refused (neither on disk). Probe 2 FOUND A HOLE: `git -C <repo> commit` passed the `git commit` pattern and made an empty commit (8f0cbc5, removed by the lead with a soft reset; never pushed). Fixed: agent git is read-only by subcommand, options skipped. Probe 3: `git -C ... commit` and `cd ... && git -c ... commit` refused, `git -C ... log` allowed; no commit on disk | TESTED (after the fix) |
 | T5 The effective model can be verified after launch | `subagents/agent-<id>.meta.json` records the requested model; every API call in `agent-<id>.jsonl` records the model that served it (claude-haiku-5-5 for the probes) | TESTED (read after the run) |
 | T6 Usage is measurable per agent | Per-call `usage` (input, cache write, cache read, output) is in each agent transcript. The harness's "subagent_tokens" figure is not the processed total: the lane probe showed 68k, while its transcript shows 104k cache write plus 278k cache read | TESTED |
 | T7 Custom role definitions (.claude/agents/*.md) load mid-session, and their model holds against an override | Not run. The tool documents that a launch's `model` overrides a definition's | PLANNED; do not rely on it |
-| T8 A role and lane taken from "Role:" and "Lane:" lines in the launch prompt (read from the agent's transcript) can gate each subagent call | Not run | PLANNED |
-| T9 A per-agent tool-call counter (PreToolUse counts calls by agent_id and refuses past the role's budget) | Not run | PLANNED |
+| T8 A role and lane taken from "Role:" and "Lane:" lines in the launch prompt (read from the agent's transcript) can gate each subagent call | 2026-10-12: callgate reads the first user message of subagents/agent-<id>.jsonl, requires a launch recorded by H1 with the same prompt sha, and gated every probe call by the lane it named (agents/<id>.json: role probe, lane lanes/r2probe) | TESTED |
+| T9 A per-agent tool-call counter (PreToolUse counts calls by agent_id and refuses past the role's budget) | 2026-10-12: probe budget 3; probe 1's fourth to sixth calls were refused. Its report tool (SubagentHandback) was refused too, so it could not report; fixed by exempting the report tool. Probe 2: three calls counted, the fourth refused, the report delivered | TESTED (after the fix) |
 | T10 Hooks survive a new chat | No. The settings file lives outside the repo, so every new container must install the hooks from the repo copy, then re-run T1 to T4 and T8 to T9 | Known |
 | T11 SubagentStop input and timing (Codex: it fires after the agent responds, without token totals) | Not run; usage comes from transcripts instead (T6) | PLANNED |
+| T12 UserPromptSubmit sees Jonathan's message, so "ship" in reply to the screenshots can write the approval record (G-APPROVE, Jonathan 2026-10-12) | tools/hooks/approval.py: present, hook, check; offline tests pass (test_hooks.py); ship.sh refused an unapproved test batch at "approval". The live hook test needs Jonathan's next message (events.jsonl logs "prompt-seen") | IMPLEMENTED; live test on his next message |
+| T13 The launch gate measures a wave's spend from the transcripts before each launch | 2026-10-12: usage_ledger.py and the gate read the same transcripts: R2-probe wave 3 agents, 19 calls, 1,679,577 tokens (input + cache write + cache read + output), all served by claude-haiku-5-5 as requested (T5) | TESTED |
 
 ## B. Measured cost on 2026-10-10 (from the 65 agent transcripts; replaces the estimates given in chat)
 
@@ -232,33 +234,33 @@ The hooks are installed at session start from the repo copy into /home/claude/.c
 - **A git review is extra evidence, never a substitute.**
 
 Hooks:
-- **H1, launch gate (PreToolUse on Agent). Mechanism TESTED (T2); full gate IMPLEMENTED in R2.** It refuses a launch:
+- **H1, launch gate (PreToolUse on Agent). TESTED in full (T2, T13; tools/hooks/agentgate.py, 2026-10-12).** It refuses a launch:
   - with no model;
   - whose model differs from the role table;
   - with no Role, Plan step or Lane line;
   - with an unknown role;
   - when the wave budget in repair/efficiency/WAVE.json is spent. Measured usage comes from the transcripts (T6), so the gate checks real spending before each launch.
-- **H2, lane gate (PreToolUse on Write, Edit and Bash for subagents). TESTED with a fixed lane (T4); a per-agent lane from the Lane line needs T8.** Always refused:
+- **H2, lane gate (PreToolUse on Write, Edit and Bash for subagents). TESTED with per-agent lanes from the Lane line (T4, T8; tools/hooks/callgate.py, 2026-10-12).** Always refused:
   - index.html, tools/, repair/sNN/, .claude/;
   - DECISIONS_DIGEST.md, SPINE_SCALE_PLAN.md, the handoff;
   - verify_baseline.txt, numbers_allow.txt;
   - another brief's folder.
-- **H3, command gate (PreToolUse on Bash for subagents). TESTED pattern (T4).** Refuses git commit and push, ship.sh, mac_sync.sh, and reads of /home/claude/.config.
-- **H4, call budget (PreToolUse for subagents). PLANNED (T9).** Counts calls per agent_id and refuses past the role's budget, with a message telling the agent to report what its packet lacked:
+- **H3, command gate (PreToolUse on Bash for subagents). TESTED (T4, after the git -C fix: agent git is read-only by subcommand).** Refuses git commit and push, ship.sh, mac_sync.sh, and reads of /home/claude/.config.
+- **H4, call budget (PreToolUse for subagents). TESTED (T9; the report tool is exempt so a capped agent can still report).** Counts calls per agent_id and refuses past the role's budget, with a message telling the agent to report what its packet lacked:
   - apply: 30;
   - answerer: 10;
   - review roles: 25;
   - fix roles: 40;
   - architect: 40.
-- **H5, usage ledger. IMPLEMENTED as a script, run by the lead after each wave, not a hook.** It reads subagents/*.jsonl and appends measured calls and tokens per agent, role and brief to repair/efficiency/ledger_spine.csv.
+- **H5, usage ledger. IMPLEMENTED and run (tools/hooks/usage_ledger.py; repair/efficiency/ledger_spine.csv), by the lead after each wave, not a hook.** It reads subagents/*.jsonl and appends measured calls and tokens per agent, role and brief to repair/efficiency/ledger_spine.csv.
 - **H6, Stop on the lead. Exists:** the git check that already fires. Planned addition: refuse to stop when the handoff is older than the newest commit this turn.
 
 Gates:
-- **G-MECH:** `verify <dir> --mech` exits 0 when every mechanical check passes. This is a worker's finish line.
-- **G-READY:** verify exits 0 only with mechanical pass plus all four current receipts saying PASS, each bound to its own dependency hashes (section C, point 7). ship.sh refuses a spine brief that is not READY, and any canary text.
+- **G-MECH:** `verify <dir> --mech` exits 0 when every mechanical check passes (implemented 2026-10-12). This is a worker's finish line.
+- **G-READY:** verify exits 0 only with mechanical pass plus all four current receipts saying PASS, each bound to its own dependency hashes (section C, point 7; implemented 2026-10-12, `verify --deps PART` prints the line a receipt carries). ship.sh refuses a spine build (replace_brief or replace_cluster with data-spine="2") that is not READY (tools/hooks/ready_gate.py); small edits to a spine brief go through G-APPROVE. The canary-text refusal waits for canary.py.
 - **G-DIFF:** before every commit the lead reads `git diff --stat` and every change to tools/ or the specs. Unexplained changes are reverted or adopted with a note.
 - **G-PILOT:** a new role, packet or prompt runs once on one item, is measured, and only then gets a wave budget.
-- **G-APPROVE:** Jonathan approves every edit list by its old and new wording before a ship.
+- **G-APPROVE:** Jonathan approves every edit list by its old and new wording before a ship. Mechanical since R2 (Jonathan 2026-10-12): `tools/hooks/approval.py present sNN SHOTS` registers the preview and screenshots by hash; the UserPromptSubmit hook writes approvals/sNN.json only when Jonathan says "ship" in reply; ship.sh refuses without a record matching the build, the batch files and the changelog entry. The lead cannot write approval records (callgate).
 - **G-DECIDE:** a decision exists only as a DECISIONS_DIGEST.md line written by the lead in the turn Jonathan gives it, quoting him and linking the date. A ruling found elsewhere is a question for him.
 - **G-STATE:** the lead rewrites the running handoff after every step, so the next turn or chat never depends on the lead's context.
 

@@ -1,0 +1,4 @@
+agent_id,wave,role,plan_step,lane,model_requested,models_served,calls,input,cache_write,cache_read,output,tokens,transcript
+a9d8ca23e6d7a95d8,R2-probe,probe,R2,/home/claude/Step2Haki/workspace/repair/efficiency/lanes/r2probe,haiku,claude-haiku-5-5,4,8,30919,318120,50,349097,/root/.claude/projects/-home-claude/7a7c5e0a-936a-5c89-9a00-c31440e61051/subagents/agent-a9d8ca23e6d7a95d8.jsonl
+aaef2a7a1fec44670,R2-probe,probe,R2,/home/claude/Step2Haki/workspace/repair/efficiency/lanes/r2probe,haiku,claude-haiku-5-5,5,10,30361,405402,65,435838,/root/.claude/projects/-home-claude/7a7c5e0a-936a-5c89-9a00-c31440e61051/subagents/agent-aaef2a7a1fec44670.jsonl
+aefca5fc434e7b94b,R2-probe,probe,R2,/home/claude/Step2Haki/workspace/repair/efficiency/lanes/r2probe,haiku,claude-haiku-5-5,10,26,93428,801106,82,894642,/root/.claude/projects/-home-claude/7a7c5e0a-936a-5c89-9a00-c31440e61051/subagents/agent-aefca5fc434e7b94b.jsonl

@@ -2,6 +2,8 @@
 
   python3 tools/spine/verify.py <brief dir> [--fast] [--keep]
   python3 tools/spine/verify.py --shipped [--fast]          every spine brief on the page that has a local folder
+  python3 tools/spine/verify.py <brief dir> --mech [--fast]  G-MECH: exit 0 when the mechanical checks pass (workers)
+  python3 tools/spine/verify.py <brief dir> --deps PART      print the deps line a PART receipt must carry
 
 <brief dir> holds outline.json (rendered by outline_render.py into a temp folder) or a legacy build.py (run in place;
 its outputs are local-only build products). Runs, in order:
@@ -13,11 +15,17 @@ its outputs are local-only build products). Runs, in order:
   preflight (P1 must be 0), vendor_scan --page and numbers.py --brief.
 Then the temp folders are deleted and git must show no tracked change that verify made. Spec drift: once rules sheets exist
 (repair/migration/spine/rules/*.md with a "provenance:" line of spec hashes), a mismatch refuses to run.
-Passing these checks is MECHANICAL PASS only. READY also needs the newest holistic review of the brief
-(repair/migration/spine/reviews/<id>_holistic_rN.md, written by a reader following HOLISTIC_REVIEW.md) to name the
-current text by its sha and say "Verdict: PASS": rules met is not the same as a brief that reads as one whole.
-Exit 0 READY; 2 mechanical pass, not ready (no review, a stale review, or a review that says FAIL);
-1 with one "FIX <check>: ..." line per mechanical problem.
+Passing these checks is MECHANICAL PASS only (G-MECH). READY (G-READY) also needs all four review receipts current
+(SPINE_SCALE_PLAN.md section C, point 7): repair/migration/spine/reviews/<id>_<part>_rN.md for part acc, read, display
+and flags, the newest of each saying "Verdict: PASS" on a "deps:" line that matches what that part judged now:
+  acc      brief, bank, facts, claims, specs      read   brief, siblings, specs
+  display  brief, display, specs                  flags  outline, facts
+(brief = the brief HTML; bank = its practice section; facts, claims, outline = the folder's facts.json,
+claim_map.json, outline.json; siblings = every brief title on the page; display = the page's style and script blocks
+plus shots.py; specs = STANDING_DIRECTIONS.md, WORKUP_5A_SPEC.md, MIGRATION_CONTRACT.md). A change re-opens only the
+parts that depend on it. A legacy merged review (<id>_holistic_rN.md) no longer makes a brief READY.
+Exit 0 READY (with --mech: mechanical pass); 2 mechanical pass, not ready; 1 with one "FIX <check>: ..." line per
+mechanical problem.
 """
 import glob
 import hashlib
@@ -299,30 +307,63 @@ class Verify:
         return self
 
     # ---- 10. the whole-picture gate: mechanical checks are necessary, never sufficient
+    PARTS = {'acc': ('brief', 'bank', 'facts', 'claims', 'specs'), 'read': ('brief', 'siblings', 'specs'),
+             'display': ('brief', 'display', 'specs'), 'flags': ('outline', 'facts')}
+    SPECS = ('repair/efficiency/STANDING_DIRECTIONS.md', 'repair/efficiency/WORKUP_5A_SPEC.md', 'tools/MIGRATION_CONTRACT.md')
+
+    def deps(self):
+        """the dependency hashes each review part is bound to (10 hex characters each)"""
+        def h(b):
+            return hashlib.sha1(b if isinstance(b, bytes) else b.encode('utf-8')).hexdigest()[:10]
+
+        def fh(p):
+            return h(open(p, 'rb').read()) if os.path.exists(p) else 'none'
+        html = getattr(self, 'brief_html', '')
+        m = re.search(r'<h5 class="[^"]*authored-hdr', html)
+        page = P.read_page(os.path.join(WS, 'index.html'))
+        titles = sorted(re.findall(r'<div class="brief[^"]*" id="[^"]+"[^>]*>\s*<h4[^>]*>(.*?)</h4>', page, re.S))
+        chrome = ''.join(re.findall(r'<style[^>]*>.*?</style>|<script[^>]*>.*?</script>', page, re.S))
+        return {'brief': h(html), 'bank': h(html[m.start():] if m else ''),
+                'facts': fh(os.path.join(self.d, 'facts.json')), 'claims': fh(os.path.join(self.d, 'claim_map.json')),
+                'outline': fh(os.path.join(self.d, 'outline.json')), 'siblings': h('\n'.join(titles)),
+                'display': h(chrome + open(os.path.join(HERE, 'shots.py'), encoding='utf-8').read()),
+                'specs': h(''.join(open(os.path.join(WS, f), encoding='utf-8').read() for f in self.SPECS))}
+
+    def deps_line(self, part):
+        d = self.deps()
+        return 'deps: ' + ' '.join('%s=%s' % (k, d[k]) for k in self.PARTS[part])
+
     def holistic(self):
-        """READY needs the newest holistic review (HOLISTIC_REVIEW.md) to be of THIS brief text and to say PASS"""
+        """READY needs the four current receipts (acc, read, display, flags) to say PASS on what each judged"""
         self.ready = 'no review'
         bid = getattr(self, 'bid', None)
         if not bid or not getattr(self, 'brief_html', ''):
             return
-        page = P.read_page(os.path.join(WS, 'index.html'))
-        b = P.brief_by_id(page, bid)
-        shas = {hashlib.sha1(self.brief_html.encode()).hexdigest()[:10]}
-        if b:
-            shas.add(hashlib.sha1(page[b.start:b.end].encode()).hexdigest()[:10])
-        files = sorted(glob.glob(os.path.join(WS, 'repair', 'migration', 'spine', 'reviews', '%s_holistic_r*.md' % bid)),
-                       key=lambda f: int(re.search(r'_r(\d+)\.md$', f).group(1)) if re.search(r'_r(\d+)\.md$', f) else 0)
-        if not files:
-            self.ready = 'no holistic review yet (repair/migration/spine/HOLISTIC_REVIEW.md)'
-            return
-        txt = open(files[-1], encoding='utf-8').read()
-        sha = re.search(r'brief-sha:\s*([0-9a-f]{10})', txt)
-        verdict = re.search(r'Verdict:\s*(PASS|FAIL)', txt)
-        name = os.path.basename(files[-1])
-        if not sha or sha.group(1) not in shas:
-            self.ready = '%s reviewed an older text of the brief: review again' % name
-        elif not verdict or verdict.group(1) != 'PASS':
-            self.ready = '%s says FAIL: fix its findings, then review again' % name
+        rdir = os.path.join(WS, 'repair', 'migration', 'spine', 'reviews')
+        want, missing, stale, failing = self.deps(), [], [], []
+        for part, keys in self.PARTS.items():
+            files = sorted(glob.glob(os.path.join(rdir, '%s_%s_r*.md' % (bid, part))),
+                           key=lambda f: int(re.search(r'_r(\d+)\.md$', f).group(1)) if re.search(r'_r(\d+)\.md$', f) else 0)
+            if not files:
+                missing.append(part)
+                continue
+            txt = open(files[-1], encoding='utf-8').read()
+            got = dict(re.findall(r'(\w+)=([0-9a-f]{10}|none)', (re.search(r'^deps:(.*)$', txt, re.M) or [''])[0]))
+            verdict = re.search(r'Verdict:\s*(PASS|FAIL)', txt)
+            if any(got.get(k) != want[k] for k in keys):
+                stale.append('%s (%s)' % (part, ', '.join(k for k in keys if got.get(k) != want[k])))
+            elif not verdict or verdict.group(1) != 'PASS':
+                failing.append(part)
+        if missing or stale or failing:
+            bits = []
+            if missing:
+                bits.append('no receipt for %s' % ', '.join(missing))
+            if stale:
+                bits.append('stale: %s' % '; '.join(stale))
+            if failing:
+                bits.append('FAIL in %s' % ', '.join(failing))
+            legacy = glob.glob(os.path.join(rdir, '%s_holistic_r*.md' % bid))
+            self.ready = '; '.join(bits) + ('; a legacy merged review exists but no longer counts' if legacy else '')
         else:
             self.ready = 'READY'
 
@@ -350,27 +391,41 @@ def main(argv):
         bad, nb, ready = 0, 0, 0
         for bid, d in sorted(dirs.items()):
             v = Verify(d, fast, keep).run()
-            state = 'FAIL' if v.fix else ('READY' if v.ready == 'READY' else 'MECH')
+            state = 'FAIL' if v.fix else ('READY' if v.ready == 'READY' else 'MECH')  # noqa: E501
             print('%-5s %-22s %s%s' % (state, bid, os.path.relpath(d, WS), '' if state != 'MECH' else '  (' + v.ready + ')'))
             for f in v.fix:
                 print('     ' + f)
             nb += len(v.base)
             ready += v.ready == 'READY'
             bad += bool(v.fix)
-        print('verify --shipped: %d brief(s), %d failing the mechanical checks, %d READY (holistic review PASS on the '
-              'current text), %d baseline debt line(s) (tools/spine/verify_baseline.txt)%s' % (
+        print('verify --shipped: %d brief(s), %d failing the mechanical checks, %d READY (all '
+              'four current receipts), %d baseline debt line(s) (tools/spine/verify_baseline.txt)%s' % (
                   len(dirs), bad, ready, nb, ('; no local folder: ' + ', '.join(missing)) if missing else ''))
         return 1 if bad else 0
+    if '--deps' in argv:
+        part = argv[argv.index('--deps') + 1]
+        v = Verify(argv[0], True, keep)
+        try:
+            if not v.render():
+                print('\n'.join(v.fix))
+                return 1
+        finally:
+            shutil.rmtree(v.tmp, ignore_errors=True)
+        print(v.deps_line(part))
+        return 0
     v = Verify(argv[0], fast, keep).run()
     for line in v.ok + v.base + v.fix:
         print(line)
     if v.fix:
         print('verify %s: FAIL (%d fix(es))' % (getattr(v, 'bid', argv[0]), len(v.fix)))
         return 1
+    if '--mech' in argv:
+        print('verify %s: MECHANICAL PASS (G-MECH)%s' % (v.bid, '' if v.ready == 'READY' else '; not READY: ' + v.ready))
+        return 0
     if v.ready != 'READY':
         print('verify %s: MECHANICAL PASS, NOT READY: %s' % (v.bid, v.ready))
         return 2
-    print('verify %s: READY (mechanical checks pass and the current holistic review says PASS)' % v.bid)
+    print('verify %s: READY (mechanical checks pass and all four review receipts are current and PASS)' % v.bid)
     return 0
 
 

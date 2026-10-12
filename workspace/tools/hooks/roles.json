@@ -1,0 +1,72 @@
+{
+ "_doc": "Role table for the hooks (SPINE_SCALE_PLAN.md section 2). model = the Agent tool's model value; budget = tool calls per agent (H4). 'probe' exists only for the R2 hook tests.",
+ "roles": {
+  "architect": {
+   "model": "opus",
+   "budget": 40
+  },
+  "answerer": {
+   "model": "haiku",
+   "budget": 10
+  },
+  "acc-review": {
+   "model": "opus",
+   "budget": 25
+  },
+  "read-review": {
+   "model": "sonnet",
+   "budget": 25
+  },
+  "display-review": {
+   "model": "sonnet",
+   "budget": 25
+  },
+  "flag-review": {
+   "model": "sonnet",
+   "budget": 25
+  },
+  "acc-fix": {
+   "model": "opus",
+   "budget": 40
+  },
+  "wording-fix": {
+   "model": "sonnet",
+   "budget": 40
+  },
+  "apply": {
+   "model": "haiku",
+   "budget": 30
+  },
+  "canary-judge": {
+   "model": "opus",
+   "budget": 25
+  },
+  "probe": {
+   "model": "haiku",
+   "budget": 3
+  }
+ },
+ "lane_roots": [
+  "/home/claude/Step2Haki/workspace/repair/migration/",
+  "/home/claude/Step2Haki/workspace/repair/efficiency/QUAL/runs/",
+  "/home/claude/Step2Haki/workspace/repair/efficiency/lanes/"
+ ],
+ "forbidden": [
+  "/home/claude/Step2Haki/workspace/index.html",
+  "/home/claude/Step2Haki/discriminator-briefs-site/",
+  "/home/claude/Step2Haki/workspace/tools/",
+  "/home/claude/Step2Haki/workspace/repair/changelog/",
+  "/home/claude/Step2Haki/workspace/repair/efficiency/DECISIONS_DIGEST.md",
+  "/home/claude/Step2Haki/workspace/repair/efficiency/SPINE_SCALE_PLAN.md",
+  "/home/claude/Step2Haki/workspace/repair/efficiency/STANDING_DIRECTIONS.md",
+  "/home/claude/Step2Haki/workspace/repair/efficiency/WAVE.json",
+  "/home/claude/Step2Haki/workspace/repair/migration/spine/reviews/",
+  "/home/claude/Step2Haki/.git/",
+  "/home/claude/.claude/",
+  "/home/claude/.config/",
+  "/root/.claude/"
+ ],
+ "forbidden_re": [
+  "^/home/claude/Step2Haki/workspace/repair/s(\\d+[a-z]?|ources)(/|$)"
+ ]
+}

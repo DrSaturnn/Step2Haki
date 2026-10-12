@@ -1,0 +1,25 @@
+{
+ "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
+ "id": "R3-nephrotic-child",
+ "open": false,
+ "plan_step": "R3",
+ "roles": [
+  "acc-review",
+  "read-review",
+  "display-review",
+  "flag-review",
+  "acc-fix",
+  "wording-fix"
+ ],
+ "max_agents": 5,
+ "max_calls": 150,
+ "max_tokens": 10000000,
+ "set_by": "Jonathan 2026-10-12: \"R3 budget approved: up to 5 agents, 150 API calls total, about 10M tokens; stop and report at the cap. R3 starts only after the R2 tests pass.\" Closed until the lead opens R3.",
+ "previous": {
+  "id": "R2-probe",
+  "agents": 3,
+  "calls": 19,
+  "tokens": 1679577,
+  "models": "claude-haiku-5-5"
+ }
+}

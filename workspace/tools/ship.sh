@@ -10,6 +10,7 @@
 #     version.json, and briefs.json (tools/briefs_json.py: the brief index the companion extension reads)
 #  3. commit body from the page diff (tools/changelog.py), prepended to workspace/CHANGELOG.md
 #  4. commit "<sNN>: <message>" + body + trailers
+#  G-APPROVE and G-READY run right after the build (tools/hooks/approval.py, tools/hooks/ready_gate.py).
 #  5. push origin main only if /home/claude/.config/axbx/gh_token exists (one-shot extraheader via
 #     GIT_CONFIG_* env: never in .git/config, argv or output); else "push skipped: no token"
 #  6. /mnt/user-data/outputs: index.html, axbx-repo.bundle, axbx-local-only.tar.gz
@@ -34,6 +35,11 @@ if [[ ! "${AX_SESSION:-}" =~ ^https://claude\.ai/code/session_[A-Za-z0-9]+$ ]]; 
 
 # ---- 1. checks on a scratch copy
 o=$(python3 repair/build.py "$B" --out "$TMP/index.html" 2>&1) || fail build "$o"; echo "$o"
+# G-APPROVE (Jonathan 2026-10-12): an approval record must exist for exactly this build, written by the
+# UserPromptSubmit hook when Jonathan says "ship" in reply to the screenshots (tools/hooks/approval.py)
+o=$(python3 tools/hooks/approval.py check "$B" "$TMP/index.html" 2>&1) || fail approval "$o"; echo "$o"
+# G-READY: a spine build ships only when verify says READY (mechanical checks plus four current receipts)
+o=$(python3 tools/hooks/ready_gate.py "$B" 2>&1) || fail ready "$o"; echo "$o"
 # stamp the build for the page's version label and update check (s43): <meta name="ax-build"> now, version.json in step 2
 STAMP_DAY=$(TZ=America/New_York date +%Y-%m-%d)
 python3 - "$TMP/index.html" "$B" "$STAMP_DAY" <<'PY' || fail stamp
