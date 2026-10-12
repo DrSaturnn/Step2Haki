@@ -144,6 +144,12 @@ try:
         expect('no approval from %r' % msg, (chk().returncode, ''), 1)
     run('approval.py', {'prompt': ' Ship. ', 'session_id': 'S'}, 'hook')
     expect('approval from "ship"', (chk().returncode, ''), 0)
+    bf = os.path.join(TBD, '10_test.json')
+    keep = open(bf).read()
+    open(bf, 'w').write(keep.replace('(test)', '(test, edited after ship)'))
+    expect('check after the batch file changed post-approval', (chk().returncode, ''), 1)
+    open(bf, 'w').write(keep)
+    expect('check with the approved batch restored', (chk().returncode, ''), 0)
     open(page, 'a').write('<!-- changed -->')
     expect('check after the page changed', (chk().returncode, ''), 1)
 finally:

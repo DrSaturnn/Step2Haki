@@ -30,6 +30,9 @@ Blocks (body items): a rich value (rendered as is), or {"type": ...}:
   h {n, title, id} | stepper | bottom {lines} | script2 {rows [[key, [lines]]]} | systems {title, small, rows [[key, finding, why]]}
   rows {rows [{src, finding, chips, commit [cond, choice], extra}]} | table {caption, heads, rows, mask_cols, cls}
   workup {steps [[when, [[name, [[finding, meaning]], extra]]]], end} | ladder {rungs [[n, tag, when, body]]}
+  workup5a {zones [[label, [[clue, [order, ...], [[finding, meaning or null], ...]], ...]] or ["Skip", text]], notes}
+      the diagnostic workup template, layout 5a (repair/efficiency/WORKUP_5A_SPEC.md; zones First step, By
+      presentation, Next step, Diagnostic test, Skip); styles and script are the site-wide s130 ones
   pause {text} | timeline {cells [[bold, rest]]}
 """
 import difflib
@@ -136,6 +139,8 @@ class Renderer:
             steps = [(r(when), [(r(name), [(r(a), r(z)) for a, z in rows], r(extra)) for name, rows, extra in tiles])
                      for when, tiles in b['steps']]
             return S.workup(steps, r(b['end']))
+        if t == 'workup5a':
+            return w5a(b, r)
         if t == 'ladder':
             return S.ladder([S.rung(n, tag, r(when), r(body)) for n, tag, when, body in b['rungs']])
         if t == 'pause':
@@ -143,6 +148,35 @@ class Renderer:
         if t == 'timeline':
             return S.timeline([(r(x), r(y)) for x, y in b['cells']])
         raise ValueError('unknown block type: ' + t)
+
+
+def w5a(b, r):
+    """layout 5a markup (the s130 classes): a tinted band of clue, arrow and order(s), then findings leading to meanings.
+    Orders and meanings sit in the site's .mask spans, so study mode is the progressive recall built in s130."""
+    out = ['<figure class="lcp w5a"><p class="kick">Diagnostic workup</p>']
+    for label, body in b['zones']:
+        if label == 'Skip':
+            out.append('<p class="w5skip"><span class="w5z">Skip</span><span class="mask">%s</span></p>' % r(body))
+            continue
+        out.append('<p class="w5z">%s</p><div class="w5t%s">' % (label, ' first' if label == 'First step' else ''))
+        for clue, orders, findings in body:
+            out.append('<div class="w5b"><div class="w5c">%s</div><span class="w5ar" aria-hidden="true">&rarr;</span>'
+                       '<div class="w5o"><span class="mask w5om">%s</span></div></div>'
+                       % (r(clue), ''.join('<span class="w5ol">%s</span>' % r(o) for o in orders)))
+            if findings:
+                out.append('<div class="w5f">')
+                n = len(findings)
+                for k, (fd, mean) in enumerate(findings):
+                    cls = (' f1' if k == 0 else '') + (' fl' if k == n - 1 else '') + ('' if mean else ' nom')
+                    out.append('<div class="w5fd%s"><span class="t" lang="en">%s</span><span class="ld" aria-hidden="true"></span></div>'
+                               '<span class="w5an%s" aria-hidden="true"></span><div class="w5m%s">%s</div>'
+                               % (cls, r(fd), cls, cls, ('<span class="mask">%s</span>' % r(mean)) if mean else ''))
+                out.append('</div>')
+        out.append('</div>')
+    out.append('</figure>')
+    if b.get('notes'):
+        out.append(r(b['notes']))
+    return ''.join(out)
 
 
 def render(outline_path, outdir=None):
