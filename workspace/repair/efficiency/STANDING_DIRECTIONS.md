@@ -63,12 +63,21 @@ Source keys:
 - **Row drawers:** a differential row whose diagnosis owns a brief is a drawer button. [SPEC migration rule]
 
 ## Display
-- **Diagnostic workup (2026-10-10):**
-  - keep the s127 headed cards as live;
-  - remove only the left-hand accent rail and its dots (redundant beside the header and sub-accent highlights);
-  - the s130 numbered and forked layout was rejected as a regression;
-  - this supersedes the earlier "vertical line with dots" preference. [DIG 2026-10-10] [MEM]
-- **Workup headed cards (s127):** the stage label is the card header; results are indented on an accent rule. [DIG 2026-10-09]
+- **Diagnostic workup template: layout 5a (2026-10-11).**
+  - Each clue and its order sit on one tinted band row: clue, then an arrow, then the order.
+  - Below the band, untinted and smaller, each finding branches from a stem and leads to its meaning by a connector and arrowhead.
+  - Zones: First step, By clue, Next step, Most accurate or Confirms, then Skip.
+  - Spec and design file: claude/design/WORKUP_5A_SPEC.md and claude/design/Workup_5a.html.
+  - This supersedes the s127 headed cards, the 2026-10-10 R1 rail removal and the "vertical line with dots"; the s130 numbered and forked layout stays rejected.
+  - The build questions in the spec are open until Jonathan answers them. [DIG 2026-10-11]
+- **Workup display rules (2026-10-10, carried into 5a):**
+  - indication and test on one line in the darker tinted band, enlarged, vertically centered, reading left to right;
+  - findings below, lighter and smaller;
+  - no accent rule beside results;
+  - clue-directed choices grouped apart from the next step and the most diagnostic test;
+  - low cognitive load;
+  - plain labels;
+  - one aligned left edge. [Jonathan 2026-10-10]
 - **Workup grouping:** first-line tests stay grouped in their own tile. [MEM]
 - **Bottom lines:** split into short paragraphs, with ordered labs on indented lines. [MEM]
 - **Timelines:** horizontal duration timelines (vertical was only a suggestion); for much of the psych content, timelines are authored in addition to the brief. [MEM]
