@@ -119,6 +119,7 @@ Source keys:
 
 ## Process and approvals
 - **Approval before shipping:** nothing ships to the live site without Jonathan's approval. A blanket "publish and continue" covers only the queue he named. Screenshots come before approval. [MEM] [SPEC Boundaries]
+- **Mechanical approval gate:** ship.sh refuses a batch unless an approval record for that exact build exists, written only by the hook when Jonathan says "ship" in reply to the screenshots (tools/hooks/approval.py). [DIG 2026-10-12]
 - **Adversarial audits** on every brief. [SPEC Boundaries]
 - **The holistic review:** each brief must read as one whole brief, not just meet its requirements. [DIG 2026-10-10]
 - **Cheaper models:** multi-agent plans assign cheaper models (for example Haiku) to their planned portions; the efficiency pilot methods apply to batch authoring. [MEM]
