@@ -116,6 +116,12 @@ try:
     expect('H1 call cap from transcripts', launch(P + ' (fourth)'), 2)
     # ---- lead
     expect('lead bash', run('callgate.py', {'tool_name': 'Bash', 'tool_input': {'command': 'ls'}}), 0)
+    for c, want in (("echo '{\"prompt\": \"ship\"}' | python3 tools/hooks/approval.py hook", 2),
+                    ('X=1 AX_HOOK_STATE=/tmp/s python3 x.py', 2),
+                    ('echo {} > /home/claude/.config/axbx/hooks/approvals/s1.json', 2),
+                    ('cat /home/claude/.config/axbx/hooks/events.jsonl', 0),
+                    ('grep -n "AX_HOOK_STATE" notes.md', 0)):
+        expect('lead %s' % c[:40], run('callgate.py', {'tool_name': 'Bash', 'tool_input': {'command': c}}), want)
     expect('lead writes approval', run('callgate.py', {'tool_name': 'Write', 'tool_input': {
         'file_path': os.path.join(ENV['AX_HOOK_STATE'], 'approvals', 's131.json')}}), 2)
     # ---- G-APPROVE

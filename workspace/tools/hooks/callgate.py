@@ -55,8 +55,14 @@ def lead(d):
         if C.inside(p, appr):
             C.refuse('APPROVAL GATE: approval records are written only by the hook, when Jonathan says "ship" in reply '
                      'to the screenshots.')
-    if d.get('tool_name') == 'Bash' and re.search(r'axbx/hooks/approvals|hooks/approvals|AX_HOOK_STATE', ti.get('command', '')):
-        C.refuse('APPROVAL GATE: the lead may not touch approval records or the hook state path by command.')
+    if d.get('tool_name') == 'Bash':
+        cmd = ti.get('command', '')
+        # the lead may read or mention the state, but may not feed the approval hook a message, point the hooks at
+        # another state folder, or write into the approvals folder (G-APPROVE: only Jonathan's own message approves)
+        if (re.search(r'approval\.py["\']?\s+hook\b', cmd) or re.search(r'\bAX_HOOK_STATE\s*=', cmd)
+                or (re.search(r'hooks/approvals', cmd) and re.search(WRITE_OPS, cmd))):
+            C.refuse('APPROVAL GATE: the lead may not run the approval hook, redirect the hook state, or write approval '
+                     'records by command.')
     return 0
 
 
