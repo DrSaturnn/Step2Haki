@@ -74,6 +74,32 @@ def strip_aka(html):
     return re.sub(r'<span class="aka">.*?</span>', ' ', html, flags=re.S)
 
 
+def strip_hover(html):
+    """hover-card bodies (<span class="sp-pop-b">, nested spans included) do not count against the soft cap: hovers keep
+    content without lengthening the brief (Jonathan 2026-10-13). The hover's button label still counts."""
+    out, i = [], 0
+    while True:
+        j = html.find('<span class="sp-pop-b"', i)
+        if j < 0:
+            out.append(html[i:])
+            return ''.join(out)
+        out.append(html[i:j])
+        depth, end = 0, len(html)
+        for m in re.finditer(r'<span\b|</span>', html[j:]):
+            depth += 1 if m.group(0).startswith('<span') else -1
+            if depth == 0:
+                end = j + m.end()
+                break
+        out.append(' ')
+        i = end
+
+
+def strip_collapsed(html):
+    """the collapsed systems panel (<details class="sp-sys">, "What the disease does, by system") does not count against
+    the soft cap, like hovers (Jonathan 2026-10-13); its summary line still counts"""
+    return re.sub(r'(<details class="sp-sys"[^>]*>\s*<summary\b.*?</summary>).*?</details>', r'\1 ', html, flags=re.S)
+
+
 class Check:
     def __init__(self, path, page, cards):
         self.path, self.dir = path, os.path.dirname(os.path.abspath(path))
@@ -201,7 +227,7 @@ class Check:
 
     def c1c2(self):
         o = self.o
-        words = len(H.unescape(re.sub('<[^>]+>', '', strip_aka(self.html))).split()) if self.html else 0
+        words = len(H.unescape(re.sub('<[^>]+>', '', strip_aka(strip_hover(strip_collapsed(self.html))))).split()) if self.html else 0
         cap = CAPS.get(o['entry'])
         listed = (o.get('cap_overage') or {}).get('reason')
         if cap and words > cap * 1.02 and listed:
@@ -209,7 +235,7 @@ class Check:
             # with its count and what would have to go; the outline names it in "cap_overage": {"reason", "would_go"}
             self.flag('C1', 'body', '%d words, %d over the cap of about %d; listed overage: %s' % (words, words - cap, cap, listed))
         elif cap and words > cap * 1.02:          # the caps are "about" (Jonathan 2026-10-10): 2% slack, then an error
-            self.err('C1', 'body', '%d words above the Practice header, cap about %d' % (words, cap), 'cut, move guideline-only detail into a hover, or list the overage for Jonathan in "cap_overage"')
+            self.err('C1', 'body', '%d words above the Practice header, cap about %d' % (words, cap), 'cut, move guideline-only detail into a hover or the systems panel (neither is counted), or list the overage for Jonathan in "cap_overage"')
         elif cap and words > cap:
             self.flag('C1', 'body', '%d words, just over the cap of about %d' % (words, cap))
         self.words = words
