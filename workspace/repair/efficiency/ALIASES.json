@@ -73,7 +73,7 @@
   {
    "name": "IgA vasculitis",
    "aliases": [
-    "Henoch-Schonlein purpura"
+    "Henoch-Schönlein purpura"
    ],
    "sources": [
     {
@@ -95,6 +95,22 @@
     {
      "kind": "dsm",
      "ref": "DSM-5-TR"
+    }
+   ]
+  },
+  {
+   "name": "Focal segmental glomerulosclerosis",
+   "aliases": [
+    "FSGS"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1475363844810
+    },
+    {
+     "kind": "primary",
+     "ref": "MSD Manual Professional, Focal Segmental Glomerulosclerosis"
     }
    ]
   }

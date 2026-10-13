@@ -22,7 +22,7 @@
   "tokens": 1679577,
   "models": "claude-haiku-5-5"
  },
- "opened": "2026-10-12 (R3 follow-up review, option 1: four reviewers on changed lines, 10 calls each by instruction)",
+ "opened": "2026-10-12 (R3 round 3: four reviewers, changed lines only, Budget: 10 enforced by the call gate)",
  "spent_after_r3_3": {
   "agents": 4,
   "api_calls": 34,
@@ -35,5 +35,6 @@
   "agents": 8,
   "api_calls": 55,
   "tokens": 6568804
- }
+ },
+ "note_r3": "closed by the lead after the four round-3 receipts"
 }

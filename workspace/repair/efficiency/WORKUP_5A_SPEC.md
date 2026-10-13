@@ -5,18 +5,19 @@ Jonathan, 2026-10-11: "okay here is the new diagnostic work up design template".
 ## Layout
 
 - One tile per zone: First step, By clue, Next step, Most accurate (or Confirms, a tweak), then a plain Skip line.
-- **Band row (tinted):** clue, then an accent arrow, then the order. On desktop the columns are 200 px, 24 px and the rest; on a phone, 112 px, 20 px and the rest. The order is 17 px (16) at weight 750; several orders stack one per line.
+- **Band row (tinted):** clue, then an accent arrow, then the order. On desktop the columns are 200 px, 24 px and the rest. On a phone (640 px and under) the clue takes the band's full width, and the arrow (20 px column) and the order sit on the next line (Jonathan 2026-10-12: widen, don't shorten). The order is 17 px (16) at weight 750; several orders stack one per line.
 - **Findings rows (untinted, below the band):**
   - a 1.5 px violet stem hangs from the band;
   - an 8 px tick leads to each finding (13 px, `muted`);
   - a connector line and arrowhead lead to its meaning (13.5 px, `ink-2`, bold lead term);
   - the finding column is 75% of the clue column;
-  - meanings are capped at 360 px on desktop.
+  - meanings are capped at 360 px on desktop;
+  - on a phone each finding takes the full width, and its arrow and meaning sit on the next line, indented 20 px; the stem runs down the arrow column and stops at the last arrow (2026-10-12, same rule).
 - **Study mode:** "Hide meaning" blurs meanings by 5 px; "Hide test and meaning" also blurs the orders.
 
 ## Designer's spec (from the file)
 
-The values are for the 900 px brief width; phone values are in parentheses.
+The values are for the 900 px brief width; phone values are in parentheses. The phone grid values are superseded by the 2026-10-12 full-width rule above (decision 6).
 
 **Structure**
 - **Tile:** one tile per zone (first step, by clue, confirm). Each clue is a band row (clue, arrow, order), followed by its findings rows (finding, arrow, meaning).
@@ -39,7 +40,7 @@ The values are for the 900 px brief width; phone values are in parentheses.
 - **Zone label:** 11 px, weight 800, uppercase, tracking .09em, `--muted`.
 - **Clue:** 15.5 px (14.5), weight 750, line height 1.3, text-wrap pretty. Draft clues get a dotted `--muted` underline, offset 3 px.
 - **Order:** 17 px (16), weight 750, line height 1.3, tracking -.005em.
-- **Band arrow:** U+2192, 17 px, weight 700, centered in its column.
+- **Band arrow:** U+2192, 17 px, weight 700, centered in its column (on a phone, aligned to the order's first line).
 - **Finding:** 13 px (12.5), weight 500, line height 1.4.
 - **Meaning:** 13.5 px, weight 400 with a 700 lead term, line height 1.42, text-wrap pretty.
 
@@ -49,9 +50,9 @@ The values are for the 900 px brief width; phone values are in parentheses.
 - **Findings row:** left padding 28 px for the tree, right 6 px. Top 10 px on the first finding, 6 px after; bottom 4 px, 11 px on the last. The meaning uses the same top and bottom padding, so both start on one line.
 
 **Line work**
-- **Stem:** 1.5 px vertical at x = 16 px. It starts at the bottom edge of the band, so it hangs from the clue row, and stops at the last tick.
+- **Stem:** 1.5 px vertical at x = 16 px. It starts at the bottom edge of the band, so it hangs from the clue row, and stops at the last tick (on a phone, at the last arrow).
 - **Tick:** 8 px horizontal from the stem toward the finding, at the center of the first line (row top padding plus 9.5 px).
-- **Connector:** starts 6 px after the end of the finding's first line (measured in script) and runs through the arrow column to the arrowhead. Same weight and color as the stem.
+- **Connector:** starts 6 px after the end of the finding's first line (measured in script) and runs through the arrow column to the arrowhead. Same weight and color as the stem. On a phone the meaning sits under its finding, so the measured connector is hidden and a short arrow leads from the stem to the meaning.
 - **Arrowhead:** a 7 x 7 px box with 1.5 px top and right borders, rotated 45 degrees, stopping 6 px short of the meaning column. Hidden when a finding has no meaning.
 
 **Behavior**
@@ -63,13 +64,15 @@ The values are for the 900 px brief width; phone values are in parentheses.
 1. **Phone finding column:** "on mobile only, this column for this can be pushed slightly for less word wrapping."
    - Widen the phone finding column a little, from 112 px toward about 130 px; set the exact value at the pilot screenshot.
    - Desktop is unchanged.
+   - Superseded on the phone by decision 6 (2026-10-12).
 2. **Desktop meaning cap:** kept. "No, this helps with visual grouping and easier scanability."
    - The 150 px finding column and the 360 px meaning cap stay as designed.
 3. **The last zone's label** is "Diagnostic test" ("both wrong, Diagnostic test is what step 2 usually uses"). This replaces both "Most accurate" and "Confirms".
    - "Both wrong" referred only to the two labels (Jonathan: "it was a joke"). The tests in this zone stay as designed.
 4. **"By clue" is renamed.** Jonathan delegated the new name.
    - Claude's pick: "By presentation". It is plain, matches the clue column and pairs with "First step" and "Next step". Jonathan can swap it.
-5. **"CT" may stay shortened** ("shortened to CT is fine"). "Contrast CT abdomen" is accepted as the design wrote it.
+5. **"CT" may stay shortened** ("shortened to CT is fine"). "Contrast CT abdomen" is accepted as the design wrote it. Widened 2026-10-12 to the shared abbreviation allowlist, repair/efficiency/ABBREV.json (CBC, BUN, US, CT, CT angiography, MRI).
+6. **Widen, don't shorten (2026-10-12):** "text that wraps into a narrow column should be widened. On phone, a 5a clue takes the band's full width." Built in s132 (repair/s132/30_workup5a_phone.json): on a phone the clue and each finding take the full width, with the arrow and order, or the arrow and meaning, on the next line. Desktop is unchanged.
 
 Zones are now: First step, By presentation, Next step, Diagnostic test, then Skip.
 

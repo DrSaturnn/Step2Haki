@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "@media (max-width:640px){\n  .w5a .w5b{grid-template-columns:112px 20px minmax(0,1fr)}\n  .w5a .w5c{font-size:14.5px}\n  .w5a .w5o{font-size:16px}\n  .w5a .w5f{grid-template-columns:var(--w5-phone-find,120px) 20px minmax(0,1fr)}\n  .w5a .w5fd{font-size:12.5px}\n  .w5a .w5m{max-width:none}\n}",
+   "with": "@media (max-width:640px){\n  /* Widen, don't shorten (Jonathan 2026-10-12): on a phone the clue takes the band's full width, with the arrow and\n     the order beneath it; each finding takes the full width, with its arrow and meaning on the next line. */\n  .w5a .w5b{grid-template-columns:20px minmax(0,1fr);row-gap:4px}\n  .w5a .w5c{font-size:14.5px;grid-column:1/-1;padding-right:0}\n  .w5a .w5ar{align-self:start;margin-top:2px}\n  .w5a .w5o{font-size:16px}\n  .w5a .w5f{grid-template-columns:20px minmax(0,1fr)}\n  .w5a .w5fd{font-size:12.5px;grid-column:1/-1;padding-bottom:2px}\n  .w5a .w5fd.fl{padding-bottom:2px}\n  .w5a .w5fd.fl::before,.w5a .w5fd.fl.f1::before{bottom:0;height:auto}\n  .w5a .w5fd > .ld{display:none}\n  .w5a .w5an{grid-column:1;background:linear-gradient(rgba(84,74,196,.42),rgba(84,74,196,.42)) 2px 0/1.5px 100% no-repeat}\n  .w5a .w5an.fl{background-size:1.5px 12px}\n  .w5a .w5an::before,.w5a .w5an.f1::before{left:2px;right:4px;top:11.5px}\n  .w5a .w5an::after,.w5a .w5an.f1::after{right:5px;top:8px}\n  .w5a .w5m,.w5a .w5m.f1{grid-column:2;max-width:none;padding-top:2px}\n  /* Same rule for the label-and-text notes (.pearls): the label sits above its text on a phone. The 980 px rule\n     already sets one column, but dd kept grid-column 2, which made an implicit narrow second column. */\n  .pearls .rows:not(.mnem) > dt,.pearls .rows:not(.mnem) > dd{grid-column:1}\n}",
+   "note": "workup 5a on phone: clue and findings take the full width; arrow and order, or arrow and meaning, on the next line (Jonathan 2026-10-12, widen, do not shorten); .pearls notes stack their label above the text on a phone"
+  }
+ ]
+}
