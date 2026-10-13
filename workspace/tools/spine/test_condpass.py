@@ -66,6 +66,14 @@ expect('about is a hedge', not CP.wording_only('about 1 to 3 weeks', '1 to 3 wee
 expect('a negation change is not', not CP.wording_only('with hematuria', 'without hematuria', T))
 expect('a name change is not', not CP.wording_only('membranous in a child', 'membranous nephropathy in a child', T))
 expect('a test name change is not', not CP.wording_only('imaging first', 'CT first', T))
+# s133 flags replacements 6 and 7: meaning changes the test must catch
+R6O = 'hepatitis B first; also lupus, autoimmune thyroid disease'
+expect('s133 rep 6 is not', not CP.wording_only(R6O, 'usually hepatitis B, lupus or autoimmune thyroid disease', T))
+expect('dropping first is not, even with no hedge', not CP.wording_only(R6O, 'hepatitis B, lupus or autoimmune thyroid disease', T))
+expect('s133 rep 7 adds an exception', not CP.wording_only('Long-term anticoagulation',
+                                                          'Long-term anticoagulation unless an invasive intervention is planned', T))
+expect('adding only is not', not CP.wording_only('in membranous', 'only in membranous', T))
+expect('keeping first is still wording-only', CP.wording_only('hepatitis B first', 'hepatitis B comes first', T))
 
 # ---- undo: backwards replay, forms, ambiguity
 html = '<p>In nephrotic syndrome&rsquo;s course, the organism is usually pneumococcus.</p><p>card 1 above</p>'
