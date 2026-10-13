@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": ".brief.sp .sp-cw{display:block;margin-top:5px;font:700 12.5px/1.35 var(--sans);color:var(--caution)}",
+   "with": ".brief.sp .sp-cw{display:block;margin-top:5px;font:700 12.5px/1.35 var(--sans);color:var(--caution)}\nbody .axm-study .mask:not(.shown) .sp-cw, body .mask.axm-study:not(.shown) .sp-cw{color:var(--ink-2)} /* s134: a masked caution cell stays neutral until revealed (study-mode contrast) */",
+   "note": "s134: masked caution cells (sp-cw) neutral in study mode until revealed; legib_audit contrast"
+  }
+ ]
+}

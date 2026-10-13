@@ -75,6 +75,28 @@ def text_of(brief_html):
     return '\n'.join(l.strip() for l in re.sub(r'[ \t]+', ' ', x).split('\n') if l.strip())
 
 
+def legacy_flags(cm, txt):
+    """flags for a legacy build.py brief (no outline.json): the outline_check X1 rule read from the claim map (a line whose
+    sources are two or more different documents, each shown with its quote) plus every unverified (warning-sign) line"""
+    out = ['# Flagged lines (derived from claim_map.json; legacy build.py brief, no outline_check run)', '']
+    n = 0
+    for c in cm.get('claims', []):
+        srcs = c.get('sources') or []
+        docs = {re.sub(r'\s*\(.*$', '', s.get('source', ''))[:60] for s in srcs}
+        if len(docs) < 2:
+            continue
+        n += 1
+        out.append('X1 %s: "%s"' % (c.get('id', '?'), (c.get('new_text') or c.get('text') or '')[:300]))
+        for s in srcs:
+            out.append('   - [%s] %s: %s' % (s.get('id', ''), s.get('source', '')[:140], (s.get('source_says') or '')[:400]))
+        out.append('')
+    warn = [l.strip() for l in txt.splitlines() if '\u26a0' in l]
+    out.append('Unverified (warning-sign) lines: %d' % len(warn))
+    out += ['   ' + l[:300] for l in warn]
+    out.insert(1, 'X1 lines: %d' % n)
+    return '\n'.join(out) + '\n'
+
+
 def titles(page):
     out = []
     for b in P.briefs(page):
@@ -117,7 +139,11 @@ def main(argv):
     for f in ('facts.json', 'claim_map.json'):
         shutil.copy(os.path.join(d, f), os.path.join(out, 'acc', f))
     shutil.copy(os.path.join(d, 'facts.json'), os.path.join(out, 'flags', 'facts.json'))
-    shutil.copy(os.path.join(d, 'outline_flags.txt'), os.path.join(out, 'flags', 'outline_flags.txt'))
+    of = os.path.join(d, 'outline_flags.txt')
+    if os.path.exists(of):
+        shutil.copy(of, os.path.join(out, 'flags', 'outline_flags.txt'))
+    else:                                   # a legacy build.py folder has no outline_check flags (s134)
+        open(os.path.join(out, 'flags', 'outline_flags.txt'), 'w', encoding='utf-8').write(legacy_flags(v.cm, txt))
     open(os.path.join(out, 'read', 'sibling_titles.txt'), 'w', encoding='utf-8').write('\n'.join(tl) + '\n')
     open(os.path.join(out, 'read', 'drawer_targets.txt'), 'w', encoding='utf-8').write('\n'.join(drawers) + '\n')
     n_items = len(re.findall(r'data-item-id=', brief))

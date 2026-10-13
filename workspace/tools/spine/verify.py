@@ -443,9 +443,12 @@ class Verify:
             return None
         html, ah, ph = CP.undo(getattr(self, 'brief_html', ''), reps, 'html')
         cl = open(os.path.join(self.d, 'claim_map.json'), encoding='utf-8').read()
-        ol = open(os.path.join(self.d, 'outline.json'), encoding='utf-8').read()
+        olp = os.path.join(self.d, 'outline.json')       # a legacy build.py folder has none (s134)
+        ol = open(olp, encoding='utf-8').read() if os.path.exists(olp) else None
         cl, ac, pc = CP.undo(cl, reps, 'json')
-        ol, ao, po = CP.undo(ol, reps, 'json')
+        ao, po = [], []
+        if ol is not None:
+            ol, ao, po = CP.undo(ol, reps, 'json')
         if ph or pc or po:
             return None
         then = self.deps(html=html, claims=cl, outline=ol)
