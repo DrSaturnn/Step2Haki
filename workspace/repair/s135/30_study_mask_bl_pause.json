@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "  document.querySelectorAll('.mask').forEach(makeMaskDisclosure);\n  if(!window.__axMaskClick){",
+   "with": "  document.querySelectorAll('.brief.sp .dp .bl > li, .brief.sp .sp-pause').forEach(function(el){ /* s135: study mode masks the bottom line and the pause point in every spine brief (Jonathan 2026-10-13: \"Mask both\") */\n    if(el.querySelector('.mask')) return;\n    var lead=el.classList.contains('sp-pause')?el.querySelector(':scope > b'):null;\n    var sp=document.createElement('span'); sp.className='mask';\n    Array.prototype.slice.call(el.childNodes).forEach(function(n){ if(n!==lead) sp.appendChild(n); });\n    el.appendChild(sp);\n  });\n  document.querySelectorAll('.mask').forEach(makeMaskDisclosure);\n  if(!window.__axMaskClick){",
+   "note": "s135: study mode masks the bottom line and the pause point in every spine brief (launch decision 2); a pause point that already masks its deciding move keeps its own mask"
+  }
+ ]
+}

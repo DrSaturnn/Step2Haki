@@ -126,6 +126,23 @@
     }
    ],
    "added": "s134"
+  },
+  {
+   "name": "Provisional tic disorder",
+   "aliases": [
+    "transient tic disorder"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1484686685883
+    },
+    {
+     "kind": "dsm",
+     "ref": "DSM-5-TR"
+    }
+   ],
+   "added": "s135"
   }
  ]
 }
