@@ -15,7 +15,8 @@ Rules (enforced here):
   - text only: no markup and no study-mode masks, so neither old nor new may hold <, > or &;
   - no changed numbers; at most 8 replacements per receipt; at most 40 words of new text each;
   - a replacement the receipt itself approved always counts for it; one approved by another part counts only if it is
-    wording-only: the same numbers, negations, hedge words (may, usually, often, can, rarely, about, consider) and
+    wording-only: the same numbers, negations, hedge words (may, usually, often, can, rarely, about, consider),
+    order and condition words (first, then, before, after, only, if, unless, except, until and the like) and
     diagnosis, drug and test names (repair/efficiency/ALIASES.json and ABBREV.json). Otherwise that part needs the
     normal follow-up review.
 Item stems, keys, distractors and lead-ins are protected by verify's item check (a meaning change without a version bump
@@ -31,6 +32,9 @@ WS = os.path.abspath(os.path.join(HERE, '..', '..'))
 MAX_N, MAX_WORDS = 8, 40
 HEDGES = ('may', 'usually', 'often', 'can', 'rarely', 'about', 'consider')
 NEGATIONS = ('no', 'not', 'without', 'never', 'none', 'neither', 'nor', 'cannot')
+# order and condition words carry meaning too (s133 replacement 6 dropped "first"; 7 added an "unless" exception)
+QUALIFIERS = ('first', 'second', 'then', 'before', 'after', 'initial', 'initially', 'last', 'only',
+              'if', 'unless', 'except', 'until')
 NUM = re.compile(r'\d+(?:[.,]\d+)?')
 
 
@@ -100,6 +104,8 @@ def wording_only(old, new, table=None):
     if sorted(w for w in wo if w in NEGATIONS or w.endswith("n't")) != sorted(w for w in wn if w in NEGATIONS or w.endswith("n't")):
         return False
     if sorted(filter(None, map(stem_hedge, wo))) != sorted(filter(None, map(stem_hedge, wn))):
+        return False
+    if sorted(w for w in wo if w in QUALIFIERS) != sorted(w for w in wn if w in QUALIFIERS):
         return False
     return names_in(old, table) == names_in(new, table)
 
