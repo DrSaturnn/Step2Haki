@@ -2,6 +2,21 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-13 s134: s134: Lithium Therapy rebuilt on the decision spine (5a workup, board range 0.6 to 1.2, aspirin and sulindac exceptions, valproate in kidney disease, cap cuts listed); hematuria other names, option C in the bank, mesna prevents, hypercalciuria a major cause; masked caution cells neutral in study mode. Both briefs verify READY.
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (2):
+  - hematuria (Hematuria and Nephritic Syndrome): items edited (q_c5eb45e93f1b56e7926c, q_8426b72b042cdb3b005e, q_343db36a6104579499d4, q_aeb588e544ebeb4b9c39, q_0b147c60495446404cd9, q_3b7389e870885b086d99); prose edited (+272 chars)
+  - lithium-effects (Lithium Therapy): items edited (q_182e22e561f6fc45d39e, q_aa507f9a6ddbea9e1a0c); versions bumped (q_182e22e561f6fc45d39e v2->v3); prose edited (-2922 chars)
+Other page changes (nav, headers, scripts): +736 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 14 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 199/200 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.015%)
+```
+
 ## 2026-10-13 s133: nephrotic-child: Watch for column (renal vein thrombosis after membranous, pulmonary embolism after renal vein thrombosis), membranous causes on one line, conditional PASS wording (replacements 1, 3, 4, 5); four round-4 receipts PASS-IF, verify READY
 
 ```
