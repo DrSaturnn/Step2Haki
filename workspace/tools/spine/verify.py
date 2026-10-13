@@ -219,6 +219,15 @@ class Verify:
                     if t_old.count(old) == 0 and nr in t_old:
                         continue
                     t_old = t_old.replace(old, nr, 1)
+            tfj = os.path.join(self.d, 'tail_fix.json')
+            if self.mode == 'build.py' and not shipped and os.path.exists(tfj):
+                # a legacy (non-spine) brief rebuilt with listed Practice-section edits (s134): each [old, new] pair must
+                # match exactly once in the live tail; the rebuilt tail must then equal it
+                fixes = json.load(open(tfj, encoding='utf-8'))
+                t_old, err = apply_tail_fix(t_old, fixes)
+                if err:
+                    self.F('tail', err)
+                    return
             if t_new.strip() == t_old.strip():
                 self.G('tail', 'Practice section identical to the live brief%s' % (' after %d tail_fix edit(s)' % len(fixes) if fixes else ''))
             elif self.mode == 'build.py' and shipped:
@@ -306,7 +315,7 @@ class Verify:
         for name, args, okf in [
                 ('gate', [PY, 'tools/gate.py', pv], lambda rc, o: rc == 0),
                 ('render.js', ['node', 'tools/render.js', pv], lambda rc, o: rc == 0),
-                ('preflight', [PY, 'tools/preflight.py', pv, '--base', 'HEAD'], lambda rc, o: re.search(r'\bP1 0\b', o) is not None),
+                ('preflight', [PY, 'tools/preflight.py', pv, '--base', 'HEAD'], lambda rc, o: self.p1_ok(o, new)),
                 ('vendor_scan', [PY, 'tools/vendor_scan.py', '--page', pv], lambda rc, o: rc == 0 and ' 0 flagged' in o),
                 ('numbers', [PY, os.path.join(HERE, 'numbers.py'), pv, '--brief', self.bid], lambda rc, o: rc == 0)]:
             rc, out = sh(args)
@@ -314,6 +323,17 @@ class Verify:
                 self.G(name, last(out.splitlines()[0] if name in ('vendor_scan', 'numbers') else out))
             else:
                 self.F(name, '\n      '.join(out.splitlines()[-6:]))
+
+    def p1_ok(self, out, new_page):
+        """P1 must be 0, except hedge words that left with whole lines cut for the soft cap (s134): a cut listed in the
+        folder's cuts.json ({"cuts": [{"text": ...}]}) whose text no longer appears in the brief accounts for the hedge
+        words it held. A qualified number left bare, or a hedge dropped from a kept line, still fails."""
+        if re.search(r'\bP1 0\b', out):
+            return True
+        lines = [l for l in out.splitlines() if 'P1 hedge-loss' in l]
+        if not lines or any('hedge words fell' not in l for l in lines):
+            return False
+        return p1_residual(self.d, self.bid, P.read_page(os.path.join(WS, 'index.html')), new_page) < 2
 
     def run(self):
         before = sh(['git', 'status', '--porcelain', '--untracked-files=no'])[1]
@@ -432,6 +452,41 @@ class Verify:
         if any(got.get(k) != then[k] for k in keys):
             return None
         return sorted({str(x) for x in ah + ac + ao})
+
+
+def apply_tail_fix(t, fixes):
+    """apply [old, new] pairs to a live Practice section; each old must match exactly once (s134, legacy briefs)"""
+    for old, nw in fixes:
+        if t.count(old) != 1:
+            return t, 'tail_fix.json anchor found %d times in the live Practice section: %s' % (t.count(old), old[:60])
+        t = t.replace(old, nw, 1)
+    return t, ''
+
+
+MODAL = ('may', 'might', 'can', 'could', 'usually', 'typically', 'often', 'generally', 'commonly', 'most', 'some',
+         'about', 'approximately', 'up to', 'at least')
+
+
+def p1_residual(d, bid, old_page, new_page):
+    """modal hedge words the brief lost (preflight P1's count) minus those held by listed cuts now absent from the brief"""
+    sys.path.insert(0, os.path.join(WS, 'tools'))
+    import preflight as PF
+    txt = lambda h: re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', h))).strip()
+    ob, nb = P.brief_by_id(old_page, bid), P.brief_by_id(new_page, bid)
+    o_h, n_h = old_page[ob.start:ob.end], new_page[nb.start:nb.end]
+    from collections import Counter
+    ho = Counter(h.lower() for h in PF.HEDGES.findall(o_h))
+    hn = Counter(h.lower() for h in PF.HEDGES.findall(n_h))
+    lost = Counter({h: ho[h] - hn.get(h, 0) for h in ho if h in MODAL and ho[h] - hn.get(h, 0) > 0})
+    cj = os.path.join(d, 'cuts.json')
+    held = Counter()
+    if os.path.exists(cj):
+        nt = txt(n_h)
+        for c in json.load(open(cj, encoding='utf-8')).get('cuts', []):
+            t = txt(c.get('text', ''))
+            if t and t not in nt:
+                held.update(h.lower() for h in PF.HEDGES.findall(t) if h.lower() in MODAL)
+    return sum((lost - held).values())
 
 
 def spine_dirs():

@@ -1,26 +1,28 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s133-conditional-pass",
- "open": false,
- "plan_step": "s133",
+ "id": "s134-r5b1",
+ "open": true,
+ "plan_step": "s134",
  "roles": [
   "acc-review",
   "read-review",
   "display-review",
   "flag-review",
   "acc-fix",
-  "wording-fix"
+  "wording-fix",
+  "apply",
+  "answerer"
  ],
- "max_agents": 8,
- "max_calls": 80,
- "max_tokens": 4000000,
- "set_by": "Jonathan 2026-10-12: \"Budget for the whole batch: 8 agents, 80 API calls, 4M tokens.\"",
+ "max_agents": 16,
+ "max_calls": 120,
+ "max_tokens": 13000000,
+ "set_by": "Jonathan 2026-10-13: \"Budget for the whole batch: 16 agents, 120 API calls, 13M tokens.\"",
  "previous": {
-  "id": "R3-nephrotic-child",
-  "agents": 12,
-  "calls": 79,
-  "tokens": 9185915
+  "id": "s134-probe",
+  "agents": 1,
+  "calls": 5,
+  "tokens": 442515
  },
- "opened": "2026-10-12 s133 conditional PASS trial, round 4 (four roles, Budget: 10)",
- "note": "closed by the lead after the four round-4 receipts (Jonathan stopped the batch for a fresh chat)"
+ "opened": "2026-10-13 s134 (R5 batch 1: hematuria, lithium-effects)",
+ "note": ""
 }
