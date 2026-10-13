@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """H1, launch gate (PreToolUse on Agent and Task). Refuses, before any token is spent, a launch that:
   - comes from a subagent (subagents never launch agents);
-  - names no model, or a model other than its role's (tools/hooks/roles.json);
+  - names no model, or a model other than its role's (tools/hooks/roles.json), or an agent type other than its role's
+    'agent' (the lean reviewer type, s135);
   - lacks the Role:, Plan step: or Lane: line at the top of the prompt, or names an unknown role;
   - has a lane outside the lane roots or overlapping a forbidden path;
   - does not match the open wave (repair/efficiency/WAVE.json: plan step, roles), or would pass the wave's agent, call
@@ -39,6 +40,11 @@ def main():
     want = cfg['roles'][role]['model']
     if model != want:
         C.refuse('LAUNCH GATE: refused: role %s runs on %s, not %s.' % (role, want, model))
+    kind = cfg['roles'][role].get('agent')                    # s135 efficiency item 1: the lean agent type
+    st = ti.get('subagent_type') or ''
+    if kind and st != kind and not st.endswith(':' + kind):  # a plugin agent is named <plugin>:<agent>
+        C.refuse('LAUNCH GATE: refused: role %s runs as agent type %s (tools/hooks/agents/%s.md), not %r.'
+                 % (role, kind, kind, ti.get('subagent_type') or 'general-purpose'))
     bad = C.lane_ok(h['lane'], cfg)
     if bad:
         C.refuse('LAUNCH GATE: refused: %s.' % bad)
@@ -57,7 +63,7 @@ def main():
         C.refuse('LAUNCH GATE: refused: wave %s is at its cap (measured %d calls, %d tokens; caps %s, %s). Stop and report.'
                  % (w['id'], spent['calls'], spent['tokens'], w['max_calls'], w['max_tokens']))
     rec = {'t': time.strftime('%Y-%m-%dT%H:%M:%S'), 'wave': w['id'], 'role': role, 'model': model, 'lane': h['lane'],
-           'plan_step': h['plan_step'], 'prompt_sha': C.sha(ti.get('prompt', '')), 'tool_use_id': d.get('tool_use_id')}
+           'agent_type': ti.get('subagent_type') or '', 'plan_step': h['plan_step'], 'prompt_sha': C.sha(ti.get('prompt', '')), 'tool_use_id': d.get('tool_use_id')}
     with open(C.state('launches.jsonl'), 'a', encoding='utf-8') as f:
         f.write(json.dumps(rec) + '\n')
     return 0

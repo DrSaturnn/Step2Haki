@@ -131,11 +131,18 @@ def agent_transcript(agent_id, hook=None):
     return None
 
 
+CHARS_PER_TOKEN = 3.8   # English prose and JSON, Claude tokenizer; used only for the written-output estimate
+
+
 def usage(path):
     """API calls and tokens of one agent transcript, de-duplicated by message id. Streamed chunks of one message share an
     id, and only the later chunks carry the final output count (the first records 1 to 8 tokens), so each field takes
-    its largest value per message (Jonathan 2026-10-12: fix the output undercount)."""
-    per, models = {}, set()
+    its largest value per message (Jonathan 2026-10-12: fix the output undercount).
+
+    Sonnet transcripts keep only the starting output figure (s134 cost review), so output_est counts what the agent
+    actually wrote (text, thinking and tool-call inputs, each block once) at CHARS_PER_TOKEN, and tokens uses the larger
+    of the measured and estimated output per message (s135 efficiency item 2)."""
+    per, models, wrote = {}, set(), {}
     try:
         for line in open(path, encoding='utf-8'):
             d = json.loads(line)
@@ -151,13 +158,43 @@ def usage(path):
                 cur[k] = max(cur[k], us.get(f, 0) or 0)
             if m.get('model'):
                 models.add(m['model'])
+            seen = wrote.setdefault(mid, {})
+            for b in m.get('content') or []:
+                if not isinstance(b, dict):
+                    continue
+                t = b.get('text') or b.get('thinking') or ''
+                if b.get('type') == 'tool_use':
+                    t = b.get('name', '') + json.dumps(b.get('input') or {}, ensure_ascii=False)
+                if t:
+                    seen[hashlib.sha256(t.encode('utf-8')).hexdigest()] = len(t)
     except (OSError, ValueError):
         pass
     u = {k: sum(v[k] for v in per.values()) for k in ('input', 'cache_write', 'cache_read', 'output')}
+    est = {mid: int(round(sum(wrote.get(mid, {}).values()) / CHARS_PER_TOKEN)) for mid in per}
+    u['output_est'] = sum(max(per[mid]['output'], est[mid]) for mid in per)
     u['calls'] = len(per)
-    u['tokens'] = u['input'] + u['cache_write'] + u['cache_read'] + u['output']
+    u['tokens'] = u['input'] + u['cache_write'] + u['cache_read'] + u['output_est']
     u['models'] = sorted(models)
     return u
+
+
+def first_context(path):
+    """the fixed start-up context of a transcript: input + cache write + cache read of its first API call (system prompt,
+    tool definitions and the first prompt), s135 efficiency item 9"""
+    try:
+        for line in open(path, encoding='utf-8'):
+            d = json.loads(line)
+            u = (d.get('message') or {}).get('usage') if d.get('type') == 'assistant' else None
+            if u:
+                return {'input': u.get('input_tokens', 0) or 0, 'cache_write': u.get('cache_creation_input_tokens', 0) or 0,
+                        'cache_read': u.get('cache_read_input_tokens', 0) or 0}
+    except (OSError, ValueError):
+        pass
+    return None
+
+
+def lead_transcripts():
+    return sorted(glob.glob(os.path.join(PROJECTS, '*', '*.jsonl')), key=os.path.getmtime)
 
 
 def wave():

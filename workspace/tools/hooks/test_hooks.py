@@ -153,6 +153,30 @@ try:
     json.dump({'id': 'TEST', 'open': True, 'plan_step': 'R2', 'max_agents': 9, 'max_calls': 3, 'max_tokens': 100000},
               open(ENV['AX_WAVE'], 'w'))
     expect('H1 call cap from transcripts', launch(P + ' (fourth)'), 2)
+    # ---- s135 efficiency item 1: review roles launch only as the lean agent type (file or plugin name)
+    json.dump({'id': 'TEST2', 'open': True, 'plan_step': 'R2', 'max_agents': 9, 'max_calls': 99, 'max_tokens': 10 ** 9},
+              open(ENV['AX_WAVE'], 'w'))
+    RP = 'Role: read-review\nPlan step: R2\nLane: %s\n\nReview.' % LANE
+    def rlaunch(kind, tag):
+        d = {'hook_event_name': 'PreToolUse', 'tool_name': 'Agent', 'session_id': 'S',
+             'tool_input': {'description': 'x', 'prompt': RP + tag, 'subagent_type': kind, 'model': 'sonnet'}}
+        return run('agentgate.py', d)
+    expect('H1 review role as general-purpose refused', rlaunch('general-purpose', ' 1'), 2)
+    expect('H1 review role with no type refused', rlaunch('', ' 2'), 2)
+    expect('H1 review role as a look-alike type refused', rlaunch('evil-lean-reviewer', ' 3'), 2)
+    expect('H1 review role as lean-reviewer', rlaunch('lean-reviewer', ' 4'), 0)
+    expect('H1 review role as the plugin lean-reviewer', rlaunch('step2haki-tools:lean-reviewer', ' 5'), 0)
+    # ---- s135 efficiency item 2: output estimated from what the agent wrote when the transcript keeps a stub count
+    ep = os.path.join(T, 'usage_est.jsonl')
+    with open(ep, 'w') as f:
+        f.write(json.dumps({'type': 'assistant', 'message': {'id': 'mE', 'model': 'claude-sonnet-5-5', 'content': [
+            {'type': 'text', 'text': 'x' * 380}], 'usage': {'input_tokens': 0, 'cache_creation_input_tokens': 0,
+            'cache_read_input_tokens': 0, 'output_tokens': 1}}}) + '\n')
+        f.write(json.dumps({'type': 'assistant', 'message': {'id': 'mE', 'model': 'claude-sonnet-5-5', 'content': [
+            {'type': 'text', 'text': 'x' * 380}], 'usage': {'output_tokens': 1}}}) + '\n')
+    _e = _C.usage(ep)
+    expect('H5 output estimated from written text, block counted once', (0 if _e['output_est'] == 100 else 1, str(_e)), 0)
+    expect('H5 tokens use the estimate', (0 if _e['tokens'] == 100 else 1, str(_e)), 0)
     # ---- lead
     expect('lead bash', run('callgate.py', {'tool_name': 'Bash', 'tool_input': {'command': 'ls'}}), 0)
     for c, want in (("echo '{\"prompt\": \"ship\"}' | python3 tools/hooks/approval.py hook", 2),

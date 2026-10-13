@@ -1,0 +1,42 @@
+{
+ "_doc": "Extra board_index search terms per brief id (tools/spine/board_index.py terms).",
+ "panic": [
+  "agoraphobia",
+  "anxiety disorder",
+  "generalized anxiety",
+  "panic attack",
+  "panic disorder",
+  "social anxiety",
+  "specific phobia"
+ ],
+ "peds-sleep": [
+  "circadian",
+  "delayed sleep",
+  "insomnia",
+  "narcolepsy",
+  "night terror",
+  "nightmare",
+  "obstructive sleep apnea",
+  "parasomnia",
+  "restless legs",
+  "sleep terror",
+  "sleepwalking",
+  "somnambulism"
+ ],
+ "sz-psychosocial": [
+  "antipsychotic adherence",
+  "assertive community",
+  "clozapine",
+  "long-acting injectable",
+  "negative symptoms",
+  "schizophrenia"
+ ],
+ "tics": [
+  "comprehensive behavioral intervention",
+  "coprolalia",
+  "habit reversal",
+  "tic disorder",
+  "tics",
+  "Tourette"
+ ]
+}

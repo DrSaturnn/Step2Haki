@@ -19,3 +19,6 @@ s['hooks'] = {
 json.dump(s, open(p, 'w'), indent=1)
 print('hooks installed: %s (H1 agentgate, H2-H4 callgate, G-APPROVE approval hook)' % p)
 PY
+mkdir -p /home/claude/.claude/agents
+cp "$H"/agents/*.md /home/claude/.claude/agents/
+echo "agent types installed: $(ls "$H"/agents | tr '\n' ' ')(/home/claude/.claude/agents)"

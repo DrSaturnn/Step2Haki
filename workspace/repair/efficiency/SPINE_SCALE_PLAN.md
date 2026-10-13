@@ -165,7 +165,7 @@ What it teaches:
 ## 2. Roles, models and lanes
 
 How a role is launched (until T7 passes):
-- Use subagent_type general-purpose with an explicit `model`.
+- Review roles (acc, read, display, flags) launch as subagent_type lean-reviewer (the step2haki-tools plugin agent, `step2haki-tools:lean-reviewer`; s135 efficiency item 1; the launch gate refuses any other type for them). Other roles use general-purpose. Every launch names an explicit `model`.
 - The prompt starts with three lines: `Role: <name>`, `Plan step: <id>` and `Lane: <path>`.
 - The launch gate (H1) refuses a launch whose role is missing or unknown, whose model differs from this table, or whose plan step is missing, or when the wave budget is used up.
 - After the run, the lead verifies the effective model from the transcript (T5).

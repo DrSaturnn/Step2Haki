@@ -1,5 +1,5 @@
 {
- "_doc": "Role table for the hooks (SPINE_SCALE_PLAN.md section 2). model = the Agent tool's model value; budget = tool calls per agent (H4). 'probe' exists only for the R2 hook tests.",
+ "_doc": "Role table for the hooks (SPINE_SCALE_PLAN.md section 2). model = the Agent tool's model value; budget = tool calls per agent (H4). 'probe' exists only for the R2 hook tests. agent = the subagent_type the role must launch as (s135 efficiency item 1; tools/hooks/agents/).",
  "roles": {
   "architect": {
    "model": "opus",
@@ -11,19 +11,23 @@
   },
   "acc-review": {
    "model": "opus",
-   "budget": 25
+   "budget": 25,
+   "agent": "lean-reviewer"
   },
   "read-review": {
    "model": "sonnet",
-   "budget": 25
+   "budget": 25,
+   "agent": "lean-reviewer"
   },
   "display-review": {
    "model": "sonnet",
-   "budget": 25
+   "budget": 25,
+   "agent": "lean-reviewer"
   },
   "flag-review": {
    "model": "sonnet",
-   "budget": 25
+   "budget": 25,
+   "agent": "lean-reviewer"
   },
   "acc-fix": {
    "model": "opus",
