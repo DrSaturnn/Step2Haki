@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-13 s133: nephrotic-child: Watch for column (renal vein thrombosis after membranous, pulmonary embolism after renal vein thrombosis), membranous causes on one line, conditional PASS wording (replacements 1, 3, 4, 5); four round-4 receipts PASS-IF, verify READY
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (1):
+  - nephrotic-child (Proteinuria and Nephrotic Syndrome in a Child): prose edited (+85 chars)
+Other page changes (nav, headers, scripts): +501 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 14 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 199/200 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.015%)
+```
+
 ## 2026-10-12 s132: s132: nephrotic-child reviewed end to end (R3 batch, four receipts PASS); phone layout for 5a workups and label-and-text notes; other names and short labels for common tests
 
 ```
