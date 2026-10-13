@@ -93,6 +93,10 @@ SHIP = re.compile(r'(?<![\w-])ship(?![\w-])', re.I)
 # Jonathan approves with the plain word "ship" (2026-10-12), optionally naming the batch: "ship", "Ship.", "ship s132".
 # Anything longer (a sentence that mentions ship, a condition, a question) is not an approval.
 PLAIN = re.compile(r'\s*ship(?:\s+(s\d+[a-z]?))?\s*[.!]?\s*', re.I)
+# The harness puts its own notes (for example the user's local time) at the start of the prompt text, in
+# <system-reminder> blocks (seen 2026-10-12 on Jonathan's "ship" for s132). Only leading blocks are dropped before the
+# plain-word test; what remains must still be exactly the plain word.
+HARNESS = re.compile(r'\A(?:\s*<system-reminder>.*?</system-reminder>)+', re.S)
 
 
 def hook():
@@ -106,7 +110,7 @@ def hook():
             pend.append((p, m))
     if not pend or not SHIP.search(prompt):
         return 0
-    plain = PLAIN.fullmatch(prompt)
+    plain = PLAIN.fullmatch(HARNESS.sub('', prompt))
     if not plain:
         print('[approval hook] The message mentions ship but is not the plain word "ship"; no approval recorded.')
         C.log_event('approval-skip', why='not the plain word ship', quote=prompt[:300])

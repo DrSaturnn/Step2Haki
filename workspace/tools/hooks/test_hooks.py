@@ -157,8 +157,18 @@ try:
                 'Screenshots reviewed. ship', 'Noted that I reply with the plain word "ship" to approve', 'ship s999'):
         run('approval.py', {'prompt': msg, 'session_id': 'S'}, 'hook')
         expect('no approval from %r' % msg, (chk().returncode, ''), 1)
-    run('approval.py', {'prompt': ' Ship. ', 'session_id': 'S'}, 'hook')
-    expect('approval from "ship"', (chk().returncode, ''), 0)
+    TZ = '<system-reminder>The user\'s timezone is America/New_York (UTC-04:00). Message sent at 21:14.</system-reminder>\n'
+    for msg in (TZ + 'Looks good, ship it', TZ + "Don't ship", 'ship\n' + TZ.strip(), TZ + 'ship later',
+                '<system-reminder>ship</system-reminder>\nnot yet'):
+        run('approval.py', {'prompt': msg, 'session_id': 'S'}, 'hook')
+        expect('no approval from %r' % msg[-30:], (chk().returncode, ''), 1)
+    sys.path.insert(0, H)
+    import approval as _A
+    for msg, want in ((' Ship. ', True), ('ship s132', True), (TZ + ' ship!', True), ('Ship it', False), (TZ, False)):
+        got = bool(_A.PLAIN.fullmatch(_A.HARNESS.sub('', msg)))
+        expect('plain-word test %r' % msg[-12:], (0 if got == want else 1, ''), 0)
+    run('approval.py', {'prompt': TZ + 'ship', 'session_id': 'S'}, 'hook')
+    expect('approval from a harness note then "ship"', (chk().returncode, ''), 0)
     bf = os.path.join(TBD, '10_test.json')
     keep = open(bf).read()
     open(bf, 'w').write(keep.replace('(test)', '(test, edited after ship)'))
