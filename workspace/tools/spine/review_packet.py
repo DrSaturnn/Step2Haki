@@ -3,11 +3,12 @@
 into each reviewer's lane. It replaces the lead's hand-built R3 round-1 packets, which dropped every bank item's
 lead-in and type (two false MED findings) and listed only 132 of 177 brief titles (one false MED).
 
-  python3 tools/spine/review_packet.py <brief dir> <review dir> [--page index.html]
+  python3 tools/spine/review_packet.py <brief dir> <review dir> [--page index.html] [--proposals FILE]
 
 Writes <review dir>/<part>/ for part acc, read, display, flags: brief_text.txt (the brief as the learner reads it, each
 bank item shown with its type and lead-in), deps.txt (the receipt's deps line and brief-sha, from verify.py),
-HOLISTIC_REVIEW.md; acc adds facts.json and claim_map.json; read adds sibling_titles.txt (every brief: id and title,
+HOLISTIC_REVIEW.md, RECEIPT_FORMAT.md (PASS, PASS-IF with replacements, FAIL) and, with --proposals, the
+proposed replacements; acc adds facts.json and claim_map.json; read adds sibling_titles.txt (every brief: id and title,
 all of them) and drawer_targets.txt (each drawer or pointer in the brief and whether its target exists); flags adds
 facts.json and outline_flags.txt. Screenshots for display come from shots.py separately.
 """
@@ -24,6 +25,36 @@ sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.dirname(HERE))
 import pagelib as P  # noqa: E402
 import verify as V  # noqa: E402
+
+
+RECEIPT_FORMAT = """# Receipt format (part: %s)
+
+Line 1 `part: <part>`; line 2 the deps line copied exactly from deps.txt; line 3 the brief-sha line from deps.txt;
+line 4 the verdict; then `Findings`, numbered; then, for a PASS-IF, `Replacements:`; then `Checked and fine:`.
+
+Verdicts:
+- `Verdict: PASS`: no findings that need a change, or only LOW findings you do not need fixed.
+- `Verdict: PASS-IF` (conditional PASS, Jonathan 2026-10-12): no HIGH or MED, and every LOW you want fixed comes with an
+  exact replacement. The brief then ships READY with any of your replacements applied and nothing else changed.
+- `Verdict: FAIL`: any HIGH or MED stands.
+
+A PASS-IF lists its replacements like this, the old text copied exactly as it reads in brief_text.txt:
+
+    Replacements:
+    1. old: {{loop diuretic as in rung 1}}
+       new: {{loop diuretic as in card 1 above}}
+
+Rules for a replacement (verify refuses any other):
+- text only: never markup or study-mode masks, so no <, > or & in old or new; the old text must sit inside one line of
+  brief_text.txt and must not cross a bold, a hover or a masked span;
+- no changed numbers; no new facts or citations; never an item's stem, key, distractors or lead-in;
+- at most 8 replacements, at most 40 words of new text each;
+- keep hedge words (may, usually, often, can, rarely, about, consider), negations and diagnosis, drug and test names as
+  they are unless changing them is the point of the finding: a replacement that changes any of these counts only for
+  your own receipt, and the other three parts then need a normal follow-up review.
+If proposed_replacements.md is in your lane, approve each proposal that is in your lane's scope by listing it (you may
+reword it within these rules), and say in Findings why you reject any.
+"""
 
 
 def item_line(m):
@@ -71,6 +102,7 @@ def main(argv):
     drawers = ['%s | %s' % (t, 'exists' if t in ids else 'MISSING (not a brief id; may be a section anchor)')
                for t in sorted({a or b for a, b in targets})]
     txt = text_of(brief)
+    props = argv[argv.index('--proposals') + 1] if '--proposals' in argv else None
     for part in ('acc', 'read', 'display', 'flags'):
         pd = os.path.join(out, part)
         os.makedirs(pd, exist_ok=True)
@@ -79,6 +111,9 @@ def main(argv):
         hr = os.path.join(WS, 'repair', 'migration', 'spine', 'HOLISTIC_REVIEW.md')
         if os.path.exists(hr):
             shutil.copy(hr, os.path.join(pd, 'HOLISTIC_REVIEW.md'))
+        open(os.path.join(pd, 'RECEIPT_FORMAT.md'), 'w', encoding='utf-8').write(RECEIPT_FORMAT % part)
+        if props:
+            shutil.copy(props, os.path.join(pd, 'proposed_replacements.md'))
     for f in ('facts.json', 'claim_map.json'):
         shutil.copy(os.path.join(d, f), os.path.join(out, 'acc', f))
     shutil.copy(os.path.join(d, 'facts.json'), os.path.join(out, 'flags', 'facts.json'))

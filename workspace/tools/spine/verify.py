@@ -44,6 +44,7 @@ WS = os.path.abspath(os.path.join(HERE, '..', '..'))
 sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.dirname(HERE))
 import pagelib as P  # noqa: E402
+import condpass as CP  # noqa: E402
 
 PY = sys.executable
 # MIGRATION_CONTRACT V1 allowlist, plus Roman numerals and clock times
@@ -341,7 +342,7 @@ class Verify:
     PAGE = os.path.join(WS, 'index.html')
     SPECS = ('repair/efficiency/STANDING_DIRECTIONS.md', 'repair/efficiency/WORKUP_5A_SPEC.md', 'tools/MIGRATION_CONTRACT.md')
 
-    def deps(self):
+    def deps(self, html=None, claims=None, outline=None):
         """the dependency hashes each review part is bound to (10 hex characters each). 'live' is the brief as it
         stands on the page: any edit to the live brief, however small (an approval-gated fix between rebuilds), makes
         every receipt of that brief stale, so it is reviewed again in R5 or R7 (Jonathan 2026-10-12)."""
@@ -350,15 +351,17 @@ class Verify:
 
         def fh(p):
             return h(open(p, 'rb').read()) if os.path.exists(p) else 'none'
-        html = getattr(self, 'brief_html', '')
+        html = getattr(self, 'brief_html', '') if html is None else html
         m = re.search(r'<h5 class="[^"]*authored-hdr', html)
         page = P.read_page(self.PAGE)
         lb = P.brief_by_id(page, getattr(self, 'bid', ''))
         titles = sorted(re.findall(r'<div class="brief[^"]*" id="[^"]+"[^>]*>\s*<h4[^>]*>(.*?)</h4>', page, re.S))
         chrome = ''.join(re.findall(r'<style[^>]*>.*?</style>|<script[^>]*>.*?</script>', page, re.S))
         return {'brief': h(html), 'bank': h(html[m.start():] if m else ''),
-                'facts': fh(os.path.join(self.d, 'facts.json')), 'claims': fh(os.path.join(self.d, 'claim_map.json')),
-                'outline': fh(os.path.join(self.d, 'outline.json')), 'siblings': h('\n'.join(titles)),
+                'facts': fh(os.path.join(self.d, 'facts.json')),
+                'claims': h(claims) if claims is not None else fh(os.path.join(self.d, 'claim_map.json')),
+                'outline': h(outline) if outline is not None else fh(os.path.join(self.d, 'outline.json')),
+                'siblings': h('\n'.join(titles)),
                 'display': h(chrome + open(os.path.join(HERE, 'shots.py'), encoding='utf-8').read()),
                 'live': h(page[lb.start:lb.end]) if lb else 'none',
                 'specs': h(''.join(open(os.path.join(WS, f), encoding='utf-8').read() for f in self.SPECS))}
@@ -375,18 +378,29 @@ class Verify:
             return
         rdir = os.path.join(WS, 'repair', 'migration', 'spine', 'reviews')
         want, missing, stale, failing = self.deps(), [], [], []
-        for part, keys in self.PARTS.items():
+        texts, receipts = {}, {}
+        for part in self.PARTS:
             files = sorted(glob.glob(os.path.join(rdir, '%s_%s_r*.md' % (bid, part))),
                            key=lambda f: int(re.search(r'_r(\d+)\.md$', f).group(1)) if re.search(r'_r(\d+)\.md$', f) else 0)
-            if not files:
+            if files:
+                texts[part] = open(files[-1], encoding='utf-8').read()
+                receipts[part] = CP.parse(texts[part])
+        pools = CP.pool(receipts)
+        self.conditional = {}
+        for part, keys in self.PARTS.items():
+            if part not in texts:
                 missing.append(part)
                 continue
-            txt = open(files[-1], encoding='utf-8').read()
+            txt = texts[part]
             got = dict(re.findall(r'(\w+)=([0-9a-f]{10}|none)', (re.search(r'^deps:(.*)$', txt, re.M) or [''])[0]))
-            verdict = re.search(r'Verdict:\s*(PASS|FAIL)', txt)
+            verdict = receipts[part][0]
             if any(got.get(k) != want[k] for k in keys):
-                stale.append('%s (%s)' % (part, ', '.join(k for k in keys if got.get(k) != want[k])))
-            elif not verdict or verdict.group(1) != 'PASS':
+                applied = self.replay(part, keys, got, pools.get(part, []))
+                if applied is None:
+                    stale.append('%s (%s)' % (part, ', '.join(k for k in keys if got.get(k) != want[k])))
+                    continue
+                self.conditional[part] = applied
+            if verdict not in ('PASS', 'PASS-IF'):
                 failing.append(part)
         if missing or stale or failing:
             bits = []
@@ -400,6 +414,24 @@ class Verify:
             self.ready = '; '.join(bits) + ('; a legacy merged review exists but no longer counts' if legacy else '')
         else:
             self.ready = 'READY'
+        self.ready_note = '; '.join('%s accepts %s' % (p, ', '.join(a)) for p, a in sorted(self.conditional.items()) if a)
+
+    def replay(self, part, keys, got, reps):
+        """conditional PASS: undo the approved replacements on the brief, claim map and outline; the receipt is current
+        if the result hashes to what it judged. Returns the applied replacement ids, or None (stale)."""
+        if not reps:
+            return None
+        html, ah, ph = CP.undo(getattr(self, 'brief_html', ''), reps, 'html')
+        cl = open(os.path.join(self.d, 'claim_map.json'), encoding='utf-8').read()
+        ol = open(os.path.join(self.d, 'outline.json'), encoding='utf-8').read()
+        cl, ac, pc = CP.undo(cl, reps, 'json')
+        ol, ao, po = CP.undo(ol, reps, 'json')
+        if ph or pc or po:
+            return None
+        then = self.deps(html=html, claims=cl, outline=ol)
+        if any(got.get(k) != then[k] for k in keys):
+            return None
+        return sorted({str(x) for x in ah + ac + ao})
 
 
 def spine_dirs():
@@ -459,7 +491,9 @@ def main(argv):
     if v.ready != 'READY':
         print('verify %s: MECHANICAL PASS, NOT READY: %s' % (v.bid, v.ready))
         return 2
-    print('verify %s: READY (mechanical checks pass and all four review receipts are current and PASS)' % v.bid)
+    note = getattr(v, 'ready_note', '')
+    print('verify %s: READY (mechanical checks pass and all four review receipts are current and PASS)%s'
+          % (v.bid, ' [conditional PASS replayed: %s]' % note if note else ''))
     return 0
 
 
