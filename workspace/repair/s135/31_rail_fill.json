@@ -1,0 +1,22 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "  function railFit(rec){ rec.rail.style.marginBottom = (-rec.rail.offsetHeight) + 'px'; }\n",
+   "with": "  function railFit(rec){ rec.rail.style.marginBottom = (-rec.rail.offsetHeight) + 'px'; }\n  /* the rail fill ends at the highlighted section's link (Jonathan 2026-10-13, tics rail as the model), not at the\n     brief's scroll height: sections differ in length while the links are evenly spaced, so a height-based fill\n     disagreed with the highlight */\n  function fillTo(rec, cur){\n    var rl = rec.fill.parentNode, r0 = rl.getBoundingClientRect(), a = rec.links[cur];\n    if(!a) return;\n    var off = rec.fill.getBoundingClientRect().top - r0.top;   // the fill starts a few px down its track\n    rec.fill.style.height = Math.max(0, a.getBoundingClientRect().bottom - r0.top - off).toFixed(1) + 'px';\n  }\n",
+   "note": "s135 site fix (Jonathan 2026-10-13: \"it is not updating the lefthand column appropriately\"; \"this is how each side slider should look\", the tics rail): the desktop section rail fill ends at the highlighted section's link instead of following the brief's scroll height"
+  },
+  {
+   "op": "replace_global",
+   "find": "      pick.fill.style.height = 'calc((100% - 8px) * ' + p.toFixed(3) + ')';\n",
+   "with": "      fillTo(pick, cur);\n",
+   "note": "s135 site fix (Jonathan 2026-10-13: \"it is not updating the lefthand column appropriately\"; \"this is how each side slider should look\", the tics rail): the desktop section rail fill ends at the highlighted section's link instead of following the brief's scroll height"
+  },
+  {
+   "op": "replace_global",
+   "find": ".brief .bb-rt{margin:2px 0 10px 12px;font:800 10.5px/1.3 var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);\n    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}",
+   "with": ".brief .bb-rt{margin:2px 0 10px 12px;font:800 10.5px/1.3 var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);overflow-wrap:break-word}",
+   "note": "s135 site fix (Jonathan 2026-10-13: \"wrap long titles instead of cutting them\"): the desktop rail title wraps to as many lines as it needs, no two-line clamp or ellipsis"
+  }
+ ]
+}

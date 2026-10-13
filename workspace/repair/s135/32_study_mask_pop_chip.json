@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "body .axm-study .mask:not(.shown) .sp-cw, body .mask.axm-study:not(.shown) .sp-cw{color:var(--ink-2)} /* s134: a masked caution cell stays neutral until revealed (study-mode contrast) */",
+   "with": "body .axm-study .mask:not(.shown) .sp-cw, body .mask.axm-study:not(.shown) .sp-cw{color:var(--ink-2)} /* s134: a masked caution cell stays neutral until revealed (study-mode contrast) */\nbody .axm-study .mask:not(.shown) .sp-pop, body .mask.axm-study:not(.shown) .sp-pop, body .axm-study .sp-chip .mask:not(.shown), body .sp-chip .mask.axm-study:not(.shown){color:var(--ink-2)} /* s135: a hover button or a chip inside a masked answer stays neutral until revealed (study-mode contrast) */",
+   "note": "s135: hover buttons and chips inside masked answers neutral in study mode until revealed; legib_audit contrast"
+  }
+ ]
+}
