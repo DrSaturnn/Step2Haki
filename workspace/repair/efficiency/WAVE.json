@@ -1,8 +1,8 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "R3-nephrotic-child",
+ "id": "s133-conditional-pass",
  "open": false,
- "plan_step": "R3",
+ "plan_step": "s133",
  "roles": [
   "acc-review",
   "read-review",
@@ -11,30 +11,14 @@
   "acc-fix",
   "wording-fix"
  ],
- "max_agents": 12,
- "max_calls": 150,
- "max_tokens": 10000000,
- "set_by": "Jonathan 2026-10-12: \"R3 budget approved: up to 5 agents, 150 API calls total, about 10M tokens; stop and report at the cap. R3 starts only after the R2 tests pass.\" Closed until the lead opens R3.",
+ "max_agents": 8,
+ "max_calls": 80,
+ "max_tokens": 4000000,
+ "set_by": "Jonathan 2026-10-12: \"Budget for the whole batch: 8 agents, 80 API calls, 4M tokens.\"",
  "previous": {
-  "id": "R2-probe",
-  "agents": 3,
-  "calls": 19,
-  "tokens": 1679577,
-  "models": "claude-haiku-5-5"
- },
- "opened": "2026-10-12 (R3 round 3: four reviewers, changed lines only, Budget: 10 enforced by the call gate)",
- "spent_after_r3_3": {
-  "agents": 4,
-  "api_calls": 34,
-  "tokens": 4198085,
-  "note": "closed by the lead after the four receipts; reopen for the fix round"
- },
- "cap_note": "agent cap raised from 8 to 12 by Jonathan 2026-10-12 for a round-3 review; calls 150 and tokens 10M are the R3 total, unchanged",
- "note_r2": "closed by the lead after the four follow-up receipts",
- "spent_after_r2": {
-  "agents": 8,
-  "api_calls": 55,
-  "tokens": 6568804
- },
- "note_r3": "closed by the lead after the four round-3 receipts"
+  "id": "R3-nephrotic-child",
+  "agents": 12,
+  "calls": 79,
+  "tokens": 9185915
+ }
 }

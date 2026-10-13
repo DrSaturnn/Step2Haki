@@ -175,3 +175,7 @@ Each such message asks one question, multiple choice where possible, with a reco
 - The lead reads summaries, receipts, diffs and script output, never whole briefs or pages.
 - Long outputs go to files in the brief folder; the chat gets counts.
 - The handoff State is rewritten after every step, so the restart line is always enough.
+
+## 8. Closing a batch (Jonathan 2026-10-12)
+
+Closing a batch: the post-ship report ends with the complete launch prompt for the next batch (batch id, briefs, budget, decisions needed), ready to paste into a fresh chat unchanged.
