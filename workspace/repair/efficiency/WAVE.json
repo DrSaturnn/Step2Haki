@@ -13,9 +13,9 @@
   "apply",
   "answerer"
  ],
- "max_agents": 32,
- "max_calls": 240,
- "max_tokens": 26000000,
+ "max_agents": 16,
+ "max_calls": 158,
+ "max_tokens": 21809265,
  "set_by": "Jonathan 2026-10-13: \"Budget for the whole batch: 32 agents, 240 API calls, 26M tokens.\"",
  "previous": {
   "id": "s134-r5b1",
@@ -24,5 +24,16 @@
   "tokens": 9045570
  },
  "opened": "2026-10-13 16:20",
- "note": "written at the s135 launch; opened after the efficiency first step (probe s135-probe: 3 agents, 9 calls, 108,899 tokens, inside the safeguard allowance)"
+ "note": "written at the s135 launch; opened after the efficiency first step (probe s135-probe: 3 agents, 9 calls, 108,899 tokens, inside the safeguard allowance)",
+ "spent_before_this_container": {
+  "agents": 16,
+  "calls": 82,
+  "tokens": 4190735,
+  "note": "s135 round 1 in the chat of 2026-10-13 (lead session_01KDYghNeYtNh5tJM3Wk5kou); a new container measures from 0, so the caps below are the remainder"
+ },
+ "batch_caps": {
+  "agents": 32,
+  "calls": 240,
+  "tokens": 26000000
+ }
 }
