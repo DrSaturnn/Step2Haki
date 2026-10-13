@@ -39,7 +39,9 @@ The lead's first acts:
    - clone the repo;
    - restore local-only by direct staging (nothing written into Documents), for each brief in the batch: its folder under repair/migration/ (parked build, outline, facts, claim map), repair/migration/spine/ (specs and earlier reviews), the web-cache pages its facts cite, and the board sources (question files, Aquifer cases, AnKing index);
    - install the token;
-   - install the hooks and run their tests.
+   - install the hooks and run their tests;
+   - check the start-up context: `python3 tools/hooks/usage_ledger.py --context` (s135 efficiency item 9). A WARNING means a tool list grew; name it in the report;
+   - check that the Agent tool lists `step2haki-tools:lean-reviewer` (the plugin in Jonathan's account; s135 item 1). The launch gate runs the four review roles only as that type, so if it is missing the review steps cannot run (section 6).
 3. Rewrite the handoff State: batch id, briefs, budget, step, spend.
 
 Then run section 2 to the end without asking.
@@ -47,6 +49,7 @@ Then run section 2 to the end without asking.
 ## 2. Steps (each ends with a rewrite of the handoff State)
 
 - **S1. Board evidence first.** For each brief, before any build or fix:
+  - Look the brief up in the board-evidence index first: `python3 tools/spine/board_index.py show <brief>` (question items, page NBME items, coverage rows, AnKing cards, Step 2 first). Add terms with `board_index.py terms <brief> ...` and rebuild (`build`, seconds) when the topic needs them; search the sources by hand only for what the index does not reach (s135 item 5).
   - Search the board sources for the topic:
     - NBME items: the bank's "How NBME framed it" blocks and the nbme-intake log;
     - the local UWorld question files (repair/sources/s*_questions.md);
@@ -85,7 +88,8 @@ Then run section 2 to the end without asking.
   - OPEN_WORK and the log commit;
   - Mac copies;
   - the handoff in the project and on the Mac;
-  - a ledger row.
+  - a ledger row;
+  - keep the start-up files small (s135 item 4): move the batch's history out of the handoff into its batch file, so the handoff keeps only State and the standing sections; fold settled digest lines into STANDING_DIRECTIONS as single rules, archiving the rest.
 
 ## 3. Standing calls (decide, record, disclose; never ask)
 
@@ -151,7 +155,8 @@ In this order:
    - packet errors;
    - what each Sonnet role missed against Opus, and what Opus missed.
 6. **Cost:**
-   - measured per role (usage_ledger.py), against the budget;
+   - measured per role (usage_ledger.py, output estimated from what each agent wrote), against the budget;
+   - the lead's own tokens (`usage_ledger.py --lead`) and start-up context, beside the reviewer cost (s135 item 3);
    - projected cost per brief at scale;
    - a proposed budget for the next batch.
 7. **Screenshots** registered with `approval.py present`: phone and desktop, sculpted and study.
