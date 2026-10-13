@@ -1,7 +1,7 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
  "id": "s135-r5b2",
- "open": false,
+ "open": true,
  "plan_step": "s135",
  "roles": [
   "acc-review",
@@ -23,6 +23,6 @@
   "calls": 83,
   "tokens": 9045570
  },
- "opened": "",
- "note": "written at the s135 launch; opened after the efficiency first step"
+ "opened": "2026-10-13 16:20",
+ "note": "written at the s135 launch; opened after the efficiency first step (probe s135-probe: 3 agents, 9 calls, 108,899 tokens, inside the safeguard allowance)"
 }
