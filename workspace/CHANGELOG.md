@@ -2,6 +2,20 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-12 s132: s132: nephrotic-child reviewed end to end (R3 batch, four receipts PASS); phone layout for 5a workups and label-and-text notes; other names and short labels for common tests
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (1):
+  - nephrotic-child (Proteinuria and Nephrotic Syndrome in a Child): items edited (q_13a1ab902fc7890e3b2f, q_7e894fd940023b0bf69c, q_28550c1e86a98d8c5806, q_d798b86cdf43c4ace86c, q_87706e98b5f63c99cac1, q_1ecfb0a6d850bc8df653, q_3d9618d07cd396c47d27, q_3d6b3ae7fa1f6a56168b); prose edited (+2840 chars)
+Other page changes (nav, headers, scripts): +2054 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 14 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 199/200 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.015%)
+```
+
 ## 2026-10-12 s131: Hematuria nephritis workup in layout 5a; PSGN timing (option C) in five briefs; Kawasaki, pregnancy vaccine and diabetes notes sourced; osteoporosis item sourced
 
 ```
