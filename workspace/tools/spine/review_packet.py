@@ -133,7 +133,10 @@ def main(argv):
         hr = os.path.join(WS, 'repair', 'migration', 'spine', 'HOLISTIC_REVIEW.md')
         if os.path.exists(hr):
             shutil.copy(hr, os.path.join(pd, 'HOLISTIC_REVIEW.md'))
-        open(os.path.join(pd, 'RECEIPT_FORMAT.md'), 'w', encoding='utf-8').write(RECEIPT_FORMAT % part)
+        open(os.path.join(pd, 'RECEIPT_FORMAT.md'), 'w', encoding='utf-8').write(
+            RECEIPT_FORMAT % part + '\nWrite the receipt with the Write tool to the absolute path %s (the lane gate refuses '
+            'a relative path, and a refused write still counts against your call budget; s134).\n'
+            % os.path.join(os.path.abspath(pd), 'receipt.md'))
         if props:
             shutil.copy(props, os.path.join(pd, 'proposed_replacements.md'))
     for f in ('facts.json', 'claim_map.json'):
