@@ -107,6 +107,21 @@ try:
     expect('H4 third call (budget 3)', call('a2', 'Bash', {'command': 'python3 tools/spine/fetch.py --out %s/f.json' % LANE}), 0)
     expect('H4 fourth call refused', call('a2', 'Read', {'file_path': WS + '/index.html'}), 2)
     expect('H4 report still allowed', call('a2', 'SubagentHandback', {'message': 'report'}), 0)
+    # ---- H4 per-launch limit (Jonathan 2026-10-12): a Budget: line lowers the role budget, never raises it
+    for aid, line in (('b1', 'Budget: 1'), ('b2', 'Budget: 99 calls'), ('b3', 'Budget: none')):
+        PB = 'Role: probe\nPlan step: R2\nLane: %s\n%s\n\nprobe %s' % (LANE, line, aid)
+        transcript(aid, PB)
+        with open(os.path.join(ENV['AX_HOOK_STATE'], 'launches.jsonl'), 'a') as f:
+            f.write(json.dumps({'wave': 'TEST', 'prompt_sha': hashlib.sha256(PB.encode()).hexdigest()}) + '\n')
+    expect('H4 Budget 1: first call', call('b1', 'Read', {'file_path': LANE + '/x'}), 0)
+    expect('H4 Budget 1: second call refused', call('b1', 'Read', {'file_path': LANE + '/x'}), 2)
+    expect('H4 Budget 1: report still allowed', call('b1', 'SubagentHandback', {'message': 'report'}), 0)
+    for i in range(3):
+        expect('H4 Budget 99 capped at role budget 3: call %d' % (i + 1), call('b2', 'Read', {'file_path': LANE + '/x'}), 0)
+    expect('H4 Budget 99 capped at role budget 3: fourth refused', call('b2', 'Read', {'file_path': LANE + '/x'}), 2)
+    for i in range(3):
+        expect('H4 non-numeric Budget keeps role budget: call %d' % (i + 1), call('b3', 'Read', {'file_path': LANE + '/x'}), 0)
+    expect('H4 non-numeric Budget keeps role budget: fourth refused', call('b3', 'Read', {'file_path': LANE + '/x'}), 2)
     transcript('a3', 'Role: probe\nPlan step: R2\nLane: %s\n\nnever launched' % LANE)
     expect('T8 not launched through H1', call('a3', 'Read', {'file_path': '/tmp/x'}), 2)
     expect('T8 no transcript', call('zz', 'Read', {'file_path': '/tmp/x'}), 2)

@@ -1,0 +1,58 @@
+{
+ "_doc": "Shared abbreviation allowlist (Jonathan 2026-10-12, DECISIONS_DIGEST): very commonly used labs and imaging are written short; anything not listed is spelled out at first use or in a hover. tools/spine/verify.py (V1) reads this file. New entries are listed in the batch report.",
+ "labs_imaging": {
+  "CBC": "complete blood count",
+  "BUN": "blood urea nitrogen",
+  "US": "ultrasound",
+  "CT": "computed tomography",
+  "MRI": "magnetic resonance imaging"
+ },
+ "_labs_imaging_note": "CT angio and CT angiography are covered by CT (Jonathan's list: CBC, BUN, US for ultrasound, CT, CT angio or CT angiography, MRI). Replaces the 2026-10-11 CT-only exception.",
+ "site_conventions": {
+  "BP": "blood pressure (vignette convention)",
+  "HR": "heart rate (vignette convention)",
+  "RR": "respiratory rate (vignette convention)",
+  "IV": "intravenous",
+  "GI": "gastrointestinal",
+  "NBME": "exam board (site heading)",
+  "COVID": "disease name",
+  "SARS": "virus name",
+  "ST": "ECG segment",
+  "CRASH": "mnemonic",
+  "AM": "clock time",
+  "PM": "clock time"
+ },
+ "_site_conventions_note": "carried from verify.py's MIGRATION_CONTRACT V1 allowlist (before 2026-10-12)",
+ "roman_numerals": [
+  "II",
+  "III",
+  "VI",
+  "VII",
+  "VIII",
+  "IX",
+  "XI",
+  "XII"
+ ],
+ "added": [
+  {
+   "entry": "CBC",
+   "date": "2026-10-12",
+   "by": "Jonathan"
+  },
+  {
+   "entry": "BUN",
+   "date": "2026-10-12",
+   "by": "Jonathan"
+  },
+  {
+   "entry": "CT",
+   "date": "2026-10-12",
+   "by": "Jonathan"
+  },
+  {
+   "entry": "MRI",
+   "date": "2026-10-12",
+   "by": "Jonathan"
+  }
+ ]
+}

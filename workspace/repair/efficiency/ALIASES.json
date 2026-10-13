@@ -1,0 +1,102 @@
+{
+ "_doc": "Shared table of diagnoses with more than one name (Jonathan 2026-10-12, DECISIONS_DIGEST). A brief names the diagnosis with its other names at first mention and in its differential row, in <span class=\"aka\">(...)</span>, which the soft word cap does not count. Every alias carries a board or naming source: AnKing card nid, a local UWorld or NBME item, or DSM-5-TR or ICD. Grow it per batch. Sources are cited by id only (AnKing nid, local UWorld file); vendor wording stays out of the repo.",
+ "entries": [
+  {
+   "name": "Minimal change disease",
+   "aliases": [
+    "lipoid nephrosis"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1475363791450
+    }
+   ]
+  },
+  {
+   "name": "Membranous nephropathy",
+   "aliases": [
+    "membranous glomerulonephritis",
+    "membranous glomerulonephropathy"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1582854828887
+    },
+    {
+     "kind": "anking",
+     "nid": 1475363888352
+    }
+   ]
+  },
+  {
+   "name": "Poststreptococcal glomerulonephritis",
+   "aliases": [
+    "postinfectious glomerulonephritis"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1475376412860
+    },
+    {
+     "kind": "primary",
+     "ref": "MSD Manual Professional, Postinfectious Glomerulonephritis (PIGN)"
+    }
+   ]
+  },
+  {
+   "name": "Membranoproliferative glomerulonephritis",
+   "aliases": [
+    "MPGN"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1475364030028
+    }
+   ]
+  },
+  {
+   "name": "IgA nephropathy",
+   "aliases": [
+    "Berger disease"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1475376633607
+    }
+   ]
+  },
+  {
+   "name": "IgA vasculitis",
+   "aliases": [
+    "Henoch-Schonlein purpura"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1471806659451
+    }
+   ]
+  },
+  {
+   "name": "Conversion disorder",
+   "aliases": [
+    "functional neurological symptom disorder"
+   ],
+   "sources": [
+    {
+     "kind": "uworld",
+     "file": "repair/sources/s108_questions.md"
+    },
+    {
+     "kind": "dsm",
+     "ref": "DSM-5-TR"
+    }
+   ]
+  }
+ ]
+}

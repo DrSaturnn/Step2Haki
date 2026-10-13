@@ -60,7 +60,9 @@ Source keys:
   - before switching, a Raise tier for partial response. [SPEC r2, MDD review]
 - **Severity:** a severity instrument is shown as the instrument itself, then a score bar with bands that name the action. [SPEC r2, MDD review]
 - **Criteria tile:** names are short so they fit on one phone line; duration cutoffs are bold. The tile carries the mnemonic. [SPEC r4, MDD review]
-- **Acronyms:** every acronym is written out at first use or in a hover. [SPEC r4] Exception: "CT" may stay shortened in the workup (Jonathan, 2026-10-11: "shortened to CT is fine").
+- **Abbreviations:** very commonly used labs and imaging are written short (CBC, BUN, US for ultrasound, CT, CT angio or CT angiography, MRI), from one shared allowlist, repair/efficiency/ABBREV.json; less common items are spelled out at first use or in a hover; new allowlist entries are listed in the batch report. Replaces the narrower CT exception of 2026-10-11. [DIG 2026-10-12]
+- **Other names:** a diagnosis with more than one name is named with its other names at first mention and in its differential row, for example "Conversion disorder (functional neurological symptom disorder)", because NBME often uses the less familiar forms; one shared table, repair/efficiency/ALIASES.json, built from AnKing cards, NBME items and DSM-5-TR or ICD names; alias words do not count against the soft word cap. [DIG 2026-10-12]
+- **Widen, don't shorten:** text that wraps into a narrow column is widened, never cut to fit; on phone, a 5a clue takes the band's full width. [DIG 2026-10-12]
 - **Row drawers:** a differential row whose diagnosis owns a brief is a drawer button. [SPEC migration rule]
 - **Repeated links:** a link may appear more than once in a brief (not a hard rule), but keep clutter down overall. [DIG 2026-10-12]
 
@@ -128,6 +130,21 @@ Source keys:
 - **When to ask:** only for a HIGH finding no source settles, a decision not covered by the digest or these directions, a budget overrun, or anything irreversible. [DIG 2026-10-12]
 - **One report per batch:** edit list with screenshots, decisions needed (ideally none), cost; Jonathan replies "ship". [DIG 2026-10-12]
 - **Budgets** are Jonathan's to set; standing allowance for safeguard and hook tests only, up to 2M tokens per round, reported after. [DIG 2026-10-12]
+- **Batch runbook (2026-10-12):** every batch runs under repair/efficiency/BATCH_RUNBOOK.md (project copy claude/BATCH_RUNBOOK.md). Jonathan is asked at launch and at "ship"; everything between is decided under its rules, recorded, and disclosed in the final report. Its standing calls (section 3), decided, recorded and disclosed without asking: [DIG 2026-10-12]
+  - word count over the soft cap: up to 5% of board-tested content or fixes, keep and list; above 5%, cut lines no board source tests (adult-only lines in a peds brief, mechanism hovers) until within 5%, list each cut with its words; recount after the last fix;
+  - a step supported only by a source about another population: keep it only if a board source teaches the step, and label the analogy at the step ("as for ... in ...");
+  - a board answer that differs from a guideline: teach the board answer, the guideline goes in "In practice:"; every age, cutoff, duration, dose and interval checked against board sources;
+  - a claim with no source opened that day: board-tested, label it unverified (⚠︎) and list it; not board-tested, cut it;
+  - a number in a new or changed line with no quote: find the quote or cut the number;
+  - two places deciding the same action: one owner, the other points to it;
+  - a study-mode leak from a repeated table or line: mask the repeat, never delete it;
+  - a parked change or reviewer suggestion that reverses a digest decision: reject it;
+  - reversing the lead's own earlier verdict: allowed with a recorded reason, listed in the report;
+  - a finding caused by the reviewer packet: a packet error with evidence; fix review_packet.py; not counted against the brief;
+  - LOW findings: sorted; none blocks;
+  - a tool or check change a step needs: allowed, with offline tests for the risky cases; the diff goes in the report (G-DIFF);
+  - a display choice the spec does not cover: follow the nearest line in these directions and name it in the report;
+  - abbreviations, other names, and text in a narrow column: per the Abbreviations, Other names and Widen lines under Brief structure.
 - **Adversarial audits** on every brief. [SPEC Boundaries]
 - **The holistic review:** each brief must read as one whole brief, not just meet its requirements. [DIG 2026-10-10]
 - **Cheaper models:** multi-agent plans assign cheaper models (for example Haiku) to their planned portions; the efficiency pilot methods apply to batch authoring. [MEM]

@@ -51,11 +51,12 @@ def sha(text):
 
 
 def header(prompt):
-    """Role:, Plan step: and Lane: lines from the top of a launch prompt (the first 6 non-blank lines)"""
+    """Role:, Plan step:, Lane: and optional Budget: lines from the top of a launch prompt (the first 6 non-blank
+    lines). Budget: may only lower the role's call budget (Jonathan 2026-10-12: a per-launch call limit, enforced)."""
     out = {}
     lines = [l.strip() for l in (prompt or '').splitlines() if l.strip()][:6]
     for l in lines:
-        m = re.match(r'(Role|Plan step|Lane)\s*:\s*(.+)$', l)
+        m = re.match(r'(Role|Plan step|Lane|Budget)\s*:\s*(.+)$', l)
         if m:
             out[m.group(1).lower().replace(' ', '_')] = m.group(2).strip()
     return out

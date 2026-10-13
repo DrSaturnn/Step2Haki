@@ -1,0 +1,896 @@
+{
+"pmr": {
+"B": [
+"MCP",
+"CCP"
+],
+"M": []
+},
+"scaphoid": {
+"B": [
+"IGF",
+"OK"
+],
+"M": []
+},
+"backpain": {
+"B": [],
+"M": []
+},
+"hippos": {
+"B": [],
+"M": []
+},
+"gtps": {
+"B": [],
+"M": []
+},
+"oa-pharm": {
+"B": [
+"CCP",
+"DMARD"
+],
+"M": []
+},
+"septic-bursitis": {
+"B": [],
+"M": []
+},
+"septic-hip": {
+"B": [
+"NSAID"
+],
+"M": []
+},
+"limp": {
+"B": [
+"NSAID"
+],
+"M": []
+},
+"sjia": {
+"B": [],
+"M": []
+},
+"nursemaid": {
+"B": [
+"OK"
+],
+"M": []
+},
+"scfe": {
+"B": [],
+"M": []
+},
+"myositis-ossificans": {
+"B": [],
+"M": []
+},
+"growing-pains": {
+"B": [
+"NSAID"
+],
+"M": []
+},
+"bone-tumors": {
+"B": [
+"NSAID"
+],
+"M": []
+},
+"scheuermann": {
+"B": [],
+"M": []
+},
+"bs-puncture-osteomyelitis": {
+"B": [],
+"M": []
+},
+"bs-torticollis": {
+"B": [],
+"M": []
+},
+"bs-brachial-plexus": {
+"B": [],
+"M": []
+},
+"shoulder-rom": {
+"B": [],
+"M": []
+},
+"growth": {
+"B": [
+"TWO",
+"FOUR",
+"FORE",
+"SIX",
+"NINE",
+"ONE"
+],
+"M": []
+},
+"neonatal-maternal-labs": {
+"B": [],
+"M": []
+},
+"aneuploidy": {
+"B": [],
+"M": []
+},
+"bs-learning": {
+"B": [],
+"M": []
+},
+"bs-nat-fracture": {
+"B": [],
+"M": []
+},
+"bs-shock": {
+"B": [],
+"M": []
+},
+"bs-preterm-followup": {
+"B": [],
+"M": []
+},
+"aq-infant-hypotonia": {
+"B": [
+"DNA",
+"SMN1",
+"DMPK",
+"CTG",
+"CGG",
+"XXY"
+],
+"M": []
+},
+"chf": {
+"B": [],
+"M": []
+},
+"ascvd": {
+"B": [],
+"M": []
+},
+"angina": {
+"B": [],
+"M": []
+},
+"ie-ppx": {
+"B": [
+"AND"
+],
+"M": []
+},
+"dvt": {
+"B": [],
+"M": []
+},
+"ped-murmur": {
+"B": [],
+"M": []
+},
+"cyanotic-chd": {
+"B": [],
+"M": []
+},
+"right-murmurs": {
+"B": [],
+"M": []
+},
+"htn-drugs": {
+"B": [],
+"M": []
+},
+"newborn-cyanosis": {
+"B": [
+"CHARGE"
+],
+"M": []
+},
+"kawasaki": {
+"B": [],
+"M": []
+},
+"arf": {
+"B": [
+"PR"
+],
+"M": []
+},
+"myocarditis": {
+"B": [],
+"M": []
+},
+"del22q11": {
+"B": [
+"CATCH",
+"CHARGE"
+],
+"M": []
+},
+"bs-adolescent-bp": {
+"B": [],
+"M": []
+},
+"copd": {
+"B": [
+"MSD"
+],
+"M": []
+},
+"cough": {
+"B": [],
+"M": []
+},
+"pneumoconiosis": {
+"B": [
+"LOWER",
+"UPPER"
+],
+"M": []
+},
+"rhinitis": {
+"B": [],
+"M": []
+},
+"sinopulm-structural": {
+"B": [],
+"M": []
+},
+"hypoxemia-mech": {
+"B": [],
+"M": []
+},
+"scd-dyspnea": {
+"B": [],
+"M": []
+},
+"airway": {
+"B": [
+"ONLY",
+"PRONE"
+],
+"M": []
+},
+"uri": {
+"B": [],
+"M": [
+"Poststreptococcal glomerulonephritis"
+]
+},
+"asthma": {
+"B": [
+"NAEPP",
+"PRN"
+],
+"M": []
+},
+"bpd": {
+"B": [],
+"M": []
+},
+"liver-preg": {
+"B": [
+"LFT"
+],
+"M": []
+},
+"masld": {
+"B": [],
+"M": []
+},
+"cholestasis": {
+"B": [
+"LKM1",
+"NOT",
+"ANCA"
+],
+"M": []
+},
+"zenker": {
+"B": [],
+"M": []
+},
+"infant-stool": {
+"B": [],
+"M": []
+},
+"fap": {
+"B": [],
+"M": []
+},
+"feeding-refusal": {
+"B": [],
+"M": []
+},
+"rlq-pain": {
+"B": [],
+"M": []
+},
+"peds-constipation": {
+"B": [],
+"M": []
+},
+"cyclic-vomiting": {
+"B": [],
+"M": []
+},
+"neonatal-jaundice": {
+"B": [],
+"M": []
+},
+"neonatal-bowel": {
+"B": [],
+"M": []
+},
+"occult-gi-bleed": {
+"B": [
+"DNA"
+],
+"M": []
+},
+"bs-impaction": {
+"B": [
+"TCA"
+],
+"M": []
+},
+"bs-tef": {
+"B": [],
+"M": []
+},
+"bs-umbilical": {
+"B": [],
+"M": []
+},
+"bs-wilson": {
+"B": [
+"ATP7B",
+"LKM1",
+"HFE"
+],
+"M": []
+},
+"pyelo": {
+"B": [],
+"M": []
+},
+"bph": {
+"B": [],
+"M": []
+},
+"nephropathy": {
+"B": [],
+"M": []
+},
+"hematuria": {
+"B": [],
+"M": [
+"IgA nephropathy",
+"IgA vasculitis"
+]
+},
+"scrotum": {
+"B": [
+"TMP",
+"NSAID"
+],
+"M": []
+},
+"hypercalcemia": {
+"B": [],
+"M": []
+},
+"peds-uti-recurrent": {
+"B": [],
+"M": [
+"Poststreptococcal glomerulonephritis"
+]
+},
+"enuresis": {
+"B": [],
+"M": []
+},
+"polyuria": {
+"B": [
+"AVPR2",
+"AQP2"
+],
+"M": []
+},
+"peds-aki": {
+"B": [],
+"M": [
+"Poststreptococcal glomerulonephritis",
+"IgA nephropathy"
+]
+},
+"nephrotic-child": {
+"B": [
+"DNA"
+],
+"M": [
+"Membranous nephropathy",
+"Poststreptococcal glomerulonephritis",
+"IgA nephropathy",
+"IgA vasculitis"
+]
+},
+"bs-puv": {
+"B": [],
+"M": []
+},
+"bs-incontinence": {
+"B": [
+"HIGH"
+],
+"M": []
+},
+"bs-abdominal-mass": {
+"B": [
+"WAGR"
+],
+"M": []
+},
+"bs-distal-rta": {
+"B": [],
+"M": []
+},
+"aq-puffy-eyes": {
+"B": [],
+"M": [
+"Minimal change disease",
+"Poststreptococcal glomerulonephritis"
+]
+},
+"thyroid": {
+"B": [
+"NSAID"
+],
+"M": []
+},
+"gynecomastia": {
+"B": [
+"BRCA2"
+],
+"M": []
+},
+"prolactin": {
+"B": [],
+"M": []
+},
+"osteoporosis": {
+"B": [],
+"M": []
+},
+"congenital-hypothyroid": {
+"B": [
+"LOW"
+],
+"M": []
+},
+"tumor-syndromes": {
+"B": [
+"RET",
+"ECG"
+],
+"M": []
+},
+"precocious-puberty": {
+"B": [],
+"M": []
+},
+"homocystinuria": {
+"B": [],
+"M": []
+},
+"bs-short-stature": {
+"B": [],
+"M": []
+},
+"anemia-thrombocytopenia": {
+"B": [],
+"M": []
+},
+"drug-hemolysis": {
+"B": [],
+"M": []
+},
+"dipstick-mismatch": {
+"B": [],
+"M": []
+},
+"microcytic-anemia": {
+"B": [],
+"M": []
+},
+"factor-inhibitor": {
+"B": [
+"XIII"
+],
+"M": []
+},
+"transfusion": {
+"B": [],
+"M": []
+},
+"bs-leukemia": {
+"B": [],
+"M": []
+},
+"aq-bruising": {
+"B": [],
+"M": [
+"IgA vasculitis"
+]
+},
+"tb": {
+"B": [
+"RIPE"
+],
+"M": []
+},
+"meningitis": {
+"B": [
+"LOW",
+"NORMAL"
+],
+"M": []
+},
+"hiv-vax": {
+"B": [],
+"M": []
+},
+"dtap": {
+"B": [],
+"M": []
+},
+"cervicitis": {
+"B": [],
+"M": []
+},
+"ig-panel": {
+"B": [
+"ALL",
+"NORMAL",
+"TREC",
+"WATER",
+"FATED",
+"AIRE"
+],
+"M": []
+},
+"rmsf": {
+"B": [
+"CMS"
+],
+"M": []
+},
+"lymphadenitis": {
+"B": [],
+"M": []
+},
+"herpangina": {
+"B": [],
+"M": []
+},
+"cgd": {
+"B": [
+"CMS",
+"ELANE",
+"LYST"
+],
+"M": []
+},
+"bs-pta": {
+"B": [],
+"M": []
+},
+"bs-torch": {
+"B": [],
+"M": []
+},
+"bs-neonatal-sepsis": {
+"B": [],
+"M": []
+},
+"bs-fever-rash-arthralgia": {
+"B": [
+"TMP"
+],
+"M": [
+"IgA vasculitis"
+]
+},
+"bs-anaphylaxis": {
+"B": [],
+"M": [
+"Poststreptococcal glomerulonephritis",
+"IgA vasculitis"
+]
+},
+"bs-isolation": {
+"B": [],
+"M": []
+},
+"bs-foodborne": {
+"B": [],
+"M": []
+},
+"aq-infant-fever": {
+"B": [],
+"M": []
+},
+"hearing": {
+"B": [],
+"M": []
+},
+"redeye": {
+"B": [
+"NSAID"
+],
+"M": []
+},
+"cluster": {
+"B": [],
+"M": []
+},
+"sellar-mass": {
+"B": [
+"IGF"
+],
+"M": []
+},
+"peds-headache-imaging": {
+"B": [],
+"M": []
+},
+"febrile-seizure": {
+"B": [],
+"M": []
+},
+"cerebral-palsy": {
+"B": [],
+"M": []
+},
+"abrs-complications": {
+"B": [
+"CNS"
+],
+"M": []
+},
+"vpshunt": {
+"B": [],
+"M": []
+},
+"retinitis-pigmentosa": {
+"B": [],
+"M": []
+},
+"tics": {
+"B": [
+"SSRI",
+"ECG"
+],
+"M": []
+},
+"peds-sleep": {
+"B": [],
+"M": []
+},
+"bs-tethered": {
+"B": [],
+"M": []
+},
+"bs-reye": {
+"B": [
+"DKA",
+"LFT"
+],
+"M": []
+},
+"bs-peds-stroke": {
+"B": [],
+"M": []
+},
+"bs-imprinting": {
+"B": [
+"DNA"
+],
+"M": []
+},
+"bs-eyelid-lump": {
+"B": [],
+"M": []
+},
+"aq-child-headache": {
+"B": [],
+"M": []
+},
+"psoriasis": {
+"B": [],
+"M": []
+},
+"cellulitis": {
+"B": [
+"TMP"
+],
+"M": []
+},
+"eczemaherp": {
+"B": [
+"TMP",
+"SMX"
+],
+"M": []
+},
+"peds-alopecia": {
+"B": [],
+"M": []
+},
+"neonatal-rash": {
+"B": [],
+"M": []
+},
+"bs-scabies": {
+"B": [],
+"M": []
+},
+"preg-vax": {
+"B": [],
+"M": []
+},
+"cervical": {
+"B": [],
+"M": []
+},
+"ectopic": {
+"B": [],
+"M": []
+},
+"hpv": {
+"B": [],
+"M": []
+},
+"adolescent-aub": {
+"B": [],
+"M": []
+},
+"contraception": {
+"B": [],
+"M": []
+},
+"teratogens": {
+"B": [
+"ARB"
+],
+"M": []
+},
+"primary-amenorrhea": {
+"B": [],
+"M": []
+},
+"bs-genital-ulcer": {
+"B": [
+"DNA"
+],
+"M": []
+},
+"smoking": {
+"B": [],
+"M": []
+},
+"preop": {
+"B": [],
+"M": []
+},
+"elder": {
+"B": [],
+"M": []
+},
+"vegan": {
+"B": [],
+"M": []
+},
+"bs-adolescent-confid": {
+"B": [],
+"M": []
+},
+"psychosis-duration": {
+"B": [],
+"M": []
+},
+"voices": {
+"B": [],
+"M": []
+},
+"bipolar-mania": {
+"B": [
+"ECT"
+],
+"M": []
+},
+"sz-psychosocial": {
+"B": [],
+"M": []
+},
+"delirium": {
+"B": [
+"QT"
+],
+"M": []
+},
+"substance": {
+"B": [],
+"M": []
+},
+"panic": {
+"B": [
+"QT"
+],
+"M": []
+},
+"mdd": {
+"B": [
+"BDNF",
+"HPA",
+"EEG",
+"REM",
+"CSF",
+"CRH",
+"MAOI",
+"CRP",
+"PHQ",
+"HT2A",
+"HT2C",
+"QRS"
+],
+"M": []
+},
+"ssri-effects": {
+"B": [
+"QT",
+"CYP1A2"
+],
+"M": []
+},
+"antipsych-effects": {
+"B": [
+"QT"
+],
+"M": []
+},
+"lithium-effects": {
+"B": [
+"QT"
+],
+"M": []
+},
+"ipv": {
+"B": [],
+"M": []
+},
+"gppd": {
+"B": [
+"DSM"
+],
+"M": []
+},
+"somatic": {
+"B": [],
+"M": []
+},
+"psych-medical": {
+"B": [],
+"M": []
+},
+"disruptive-behavior": {
+"B": [],
+"M": []
+},
+"suicide-risk": {
+"B": [],
+"M": []
+}
+}

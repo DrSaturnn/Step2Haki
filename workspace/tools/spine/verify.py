@@ -49,6 +49,11 @@ PY = sys.executable
 # MIGRATION_CONTRACT V1 allowlist, plus Roman numerals and clock times
 ACR_OK = {'CRASH', 'ST', 'GI', 'COVID', 'SARS', 'II', 'III', 'HR', 'RR', 'BP', 'IV', 'US', 'NBME',
           'VI', 'VII', 'VIII', 'IX', 'XI', 'XII', 'AM', 'PM'}
+# the shared allowlist (Jonathan 2026-10-12): very common labs and imaging written short; everything else spelled out
+ABBREV = os.path.join(HERE, '..', '..', 'repair', 'efficiency', 'ABBREV.json')
+if os.path.exists(ABBREV):
+    _ab = json.load(open(ABBREV, encoding='utf-8'))
+    ACR_OK |= set(_ab.get('labs_imaging', {})) | set(_ab.get('site_conventions', {})) | set(_ab.get('roman_numerals', []))
 BASELINE = os.path.join(HERE, 'verify_baseline.txt')
 
 
