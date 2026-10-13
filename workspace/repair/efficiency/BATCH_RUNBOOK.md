@@ -18,9 +18,11 @@ This runbook sits under DECISIONS_DIGEST, STANDING_DIRECTIONS and the plan (clau
 3. claude/STANDING_DIRECTIONS.md;
 4. claude/DECISIONS_DIGEST.md;
 5. claude/SPINE_SCALE_PLAN.md, sections 0, 2, 4, 5 and 8;
-6. the batch file, claude/pending/<batch>.md;
+6. the batch file, claude/pending/<batch>.md, if one exists (otherwise the handoff State is the batch record);
 7. claude/pending/BRIEF_AMEND_LIST.md;
-8. claude/design/WORKUP_5A_SPEC.md.
+8. claude/SPINE_SPEC.md (decision spine v2: entry types, step names, lenses), before building or reconciling any brief;
+9. claude/design/WORKUP_5A_SPEC.md;
+10. conditional PASS: claude/pending/POST_SHIP_R3.md section 2, with the s133 digest lines (hedge words count as meaning; text-only replacements).
 
 **Restart line**, the same every time; Jonathan pastes it when a chat fills: `Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.`
 
@@ -35,7 +37,7 @@ The lead's first acts:
 1. Write the launch prompt's decisions to DECISIONS_DIGEST in Jonathan's words (G-DECIDE). Write the budget to WAVE.json.
 2. Do the session start from the handoff:
    - clone the repo;
-   - restore local-only by direct staging (nothing written into Documents);
+   - restore local-only by direct staging (nothing written into Documents), for each brief in the batch: its folder under repair/migration/ (parked build, outline, facts, claim map), repair/migration/spine/ (specs and earlier reviews), the web-cache pages its facts cite, and the board sources (question files, Aquifer cases, AnKing index);
    - install the token;
    - install the hooks and run their tests.
 3. Rewrite the handoff State: batch id, briefs, budget, step, spend.
@@ -71,6 +73,7 @@ Then run section 2 to the end without asking.
 - **S7. Follow-up review.**
   - The same four roles, on the changed lines with context, each given its first-round receipt.
   - At most 10 calls each.
+  - A reviewer with only LOW findings returns PASS-IF (conditional PASS) with exact replacements; the lead applies the approved ones, and verify keeps the receipts current without another round.
   - Loop S5 to S7 until READY or the budget is spent.
 - **S8. Final report** (section 5):
   - preview and screenshots;
