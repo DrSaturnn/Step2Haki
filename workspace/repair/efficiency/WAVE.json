@@ -1,8 +1,8 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s134-r5b1",
+ "id": "s135-r5b2",
  "open": false,
- "plan_step": "s134",
+ "plan_step": "s135",
  "roles": [
   "acc-review",
   "read-review",
@@ -13,16 +13,16 @@
   "apply",
   "answerer"
  ],
- "max_agents": 16,
- "max_calls": 120,
- "max_tokens": 13000000,
- "set_by": "Jonathan 2026-10-13: \"Budget for the whole batch: 16 agents, 120 API calls, 13M tokens.\"",
+ "max_agents": 32,
+ "max_calls": 240,
+ "max_tokens": 26000000,
+ "set_by": "Jonathan 2026-10-13: \"Budget for the whole batch: 32 agents, 240 API calls, 26M tokens.\"",
  "previous": {
-  "id": "s134-probe",
-  "agents": 1,
-  "calls": 5,
-  "tokens": 442515
+  "id": "s134-r5b1",
+  "agents": 15,
+  "calls": 83,
+  "tokens": 9045570
  },
- "opened": "2026-10-13 s134 (R5 batch 1: hematuria, lithium-effects)",
- "note": "closed by the lead after lithium-effects and hematuria reached READY (s134 S7)"
+ "opened": "",
+ "note": "written at the s135 launch; opened after the efficiency first step"
 }
