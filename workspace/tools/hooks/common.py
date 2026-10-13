@@ -132,30 +132,31 @@ def agent_transcript(agent_id, hook=None):
 
 
 def usage(path):
-    """API calls and tokens of one agent transcript, de-duplicated by message id (streamed chunks share an id)"""
-    seen, u = set(), {'calls': 0, 'input': 0, 'cache_write': 0, 'cache_read': 0, 'output': 0, 'models': set()}
+    """API calls and tokens of one agent transcript, de-duplicated by message id. Streamed chunks of one message share an
+    id, and only the later chunks carry the final output count (the first records 1 to 8 tokens), so each field takes
+    its largest value per message (Jonathan 2026-10-12: fix the output undercount)."""
+    per, models = {}, set()
     try:
         for line in open(path, encoding='utf-8'):
             d = json.loads(line)
             if d.get('type') != 'assistant':
                 continue
             m = d.get('message') or {}
-            mid = m.get('id') or d.get('uuid')
-            if mid in seen or not m.get('usage'):
+            if not m.get('usage'):
                 continue
-            seen.add(mid)
-            us = m['usage']
-            u['calls'] += 1
-            u['input'] += us.get('input_tokens', 0) or 0
-            u['cache_write'] += us.get('cache_creation_input_tokens', 0) or 0
-            u['cache_read'] += us.get('cache_read_input_tokens', 0) or 0
-            u['output'] += us.get('output_tokens', 0) or 0
+            mid = m.get('id') or d.get('uuid')
+            us, cur = m['usage'], per.setdefault(mid, {'input': 0, 'cache_write': 0, 'cache_read': 0, 'output': 0})
+            for k, f in (('input', 'input_tokens'), ('cache_write', 'cache_creation_input_tokens'),
+                         ('cache_read', 'cache_read_input_tokens'), ('output', 'output_tokens')):
+                cur[k] = max(cur[k], us.get(f, 0) or 0)
             if m.get('model'):
-                u['models'].add(m['model'])
+                models.add(m['model'])
     except (OSError, ValueError):
         pass
+    u = {k: sum(v[k] for v in per.values()) for k in ('input', 'cache_write', 'cache_read', 'output')}
+    u['calls'] = len(per)
     u['tokens'] = u['input'] + u['cache_write'] + u['cache_read'] + u['output']
-    u['models'] = sorted(u['models'])
+    u['models'] = sorted(models)
     return u
 
 

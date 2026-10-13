@@ -30,7 +30,9 @@ def main(b):
     builds = []
     for f in sorted(glob.glob(os.path.join(WS, 'repair', b, '*.json'))):
         for e in json.load(open(f, encoding='utf-8')).get('edits', []):
-            if e.get('op') in ('replace_brief', 'replace_cluster') and 'data-spine="2"' in json.dumps(e):
+            # the raw strings, not json.dumps(e), whose escaped quotes never matched (found at the s132 ship)
+            if e.get('op') in ('replace_brief', 'replace_cluster') and \
+                    any('data-spine="2"' in v for v in e.values() if isinstance(v, str)):
                 builds.append(e.get('brief') or e.get('anchor') or '?')
     if not builds:
         print('ready: no spine builds in %s' % b)

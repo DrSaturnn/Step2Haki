@@ -107,6 +107,30 @@ try:
     expect('H4 third call (budget 3)', call('a2', 'Bash', {'command': 'python3 tools/spine/fetch.py --out %s/f.json' % LANE}), 0)
     expect('H4 fourth call refused', call('a2', 'Read', {'file_path': WS + '/index.html'}), 2)
     expect('H4 report still allowed', call('a2', 'SubagentHandback', {'message': 'report'}), 0)
+    # ---- H5 usage: streamed chunks share a message id; the final output count is the largest (2026-10-12 fix)
+    up = os.path.join(T, 'usage_stream.jsonl')
+    with open(up, 'w') as f:
+        for out in (8, 500):
+            f.write(json.dumps({'type': 'assistant', 'message': {'id': 'mX', 'model': 'm', 'usage': {
+                'input_tokens': 3, 'cache_creation_input_tokens': 10, 'cache_read_input_tokens': 100, 'output_tokens': out}}}) + '\n')
+    sys.path.insert(0, H)
+    import common as _C
+    _u = _C.usage(up)
+    expect('H5 one call per message id', (0 if _u['calls'] == 1 else 1, str(_u)), 0)
+    expect('H5 output takes the final count', (0 if _u['output'] == 500 else 1, str(_u)), 0)
+    expect('H5 input not double counted', (0 if _u['tokens'] == 613 else 1, str(_u)), 0)
+    # ---- G-READY detects a spine build (the escaped-quote miss found at the s132 ship)
+    RB = os.path.join(WS, 'repair', 's0readytest')
+    os.makedirs(RB, exist_ok=True)
+    json.dump({'edits': [{'op': 'replace_brief', 'brief': 'no-such-brief', 'html': '<div class="brief" data-spine="2"></div>'}]},
+              open(os.path.join(RB, '10_x.json'), 'w'))
+    rg = subprocess.run([sys.executable, os.path.join(H, 'ready_gate.py'), 's0readytest'], capture_output=True, text=True, env=ENV)
+    expect('G-READY sees a spine build and refuses without a READY folder', (rg.returncode, rg.stdout + rg.stderr), 1)
+    json.dump({'edits': [{'op': 'replace', 'brief': 'x', 'find': 'a', 'with': 'data-spine="2" mentioned in a small edit'}]},
+              open(os.path.join(RB, '10_x.json'), 'w'))
+    rg = subprocess.run([sys.executable, os.path.join(H, 'ready_gate.py'), 's0readytest'], capture_output=True, text=True, env=ENV)
+    expect('G-READY ignores a small edit', (rg.returncode, rg.stdout + rg.stderr), 0)
+    shutil.rmtree(RB, ignore_errors=True)
     # ---- H4 per-launch limit (Jonathan 2026-10-12): a Budget: line lowers the role budget, never raises it
     for aid, line in (('b1', 'Budget: 1'), ('b2', 'Budget: 99 calls'), ('b3', 'Budget: none')):
         PB = 'Role: probe\nPlan step: R2\nLane: %s\n%s\n\nprobe %s' % (LANE, line, aid)
