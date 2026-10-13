@@ -69,6 +69,11 @@ def rx(s):
     return re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
 
 
+def strip_aka(html):
+    """alias words (a diagnosis's other names, <span class="aka">) do not count against the soft cap (Jonathan 2026-10-12)"""
+    return re.sub(r'<span class="aka">.*?</span>', ' ', html, flags=re.S)
+
+
 class Check:
     def __init__(self, path, page, cards):
         self.path, self.dir = path, os.path.dirname(os.path.abspath(path))
@@ -196,7 +201,7 @@ class Check:
 
     def c1c2(self):
         o = self.o
-        words = len(H.unescape(re.sub('<[^>]+>', '', self.html)).split()) if self.html else 0
+        words = len(H.unescape(re.sub('<[^>]+>', '', strip_aka(self.html))).split()) if self.html else 0
         cap = CAPS.get(o['entry'])
         listed = (o.get('cap_overage') or {}).get('reason')
         if cap and words > cap * 1.02 and listed:

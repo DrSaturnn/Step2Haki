@@ -85,9 +85,15 @@ def agent_record(d):
         C.refuse('CALL GATE: agent %s was not launched through the launch gate; every call is refused.' % aid, agent=aid)
     cfg = C.roles()
     rec = {'agent_id': aid, 'role': h['role'], 'lane': os.path.realpath(h['lane']), 'wave': launched[-1]['wave'],
-           'budget': cfg['roles'].get(h['role'], {}).get('budget', 0), 'count': 0, 'transcript': tr}
+           'budget': budget(cfg['roles'].get(h['role'], {}).get('budget', 0), h.get('budget')), 'count': 0, 'transcript': tr}
     json.dump(rec, open(p, 'w', encoding='utf-8'))
     return p, rec
+
+
+def budget(role_budget, line):
+    """a launch prompt's Budget: line lowers the role's call budget, never raises it (Jonathan 2026-10-12)"""
+    m = re.match(r'\s*(\d+)', line or '')
+    return min(int(role_budget), int(m.group(1))) if m else int(role_budget)
 
 
 def paths_in(cmd):
