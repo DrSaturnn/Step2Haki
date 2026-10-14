@@ -1,28 +1,22 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s135-r5b2",
- "open": false,
- "plan_step": "s135",
+ "id": "s136-layout1",
+ "open": true,
+ "plan_step": "s136",
  "roles": [
-  "acc-review",
-  "read-review",
-  "display-review",
-  "flag-review",
-  "acc-fix",
-  "wording-fix",
-  "apply",
-  "answerer"
+  "display-review"
  ],
- "max_agents": 32,
- "max_calls": 240,
- "max_tokens": 26000000,
- "set_by": "Jonathan 2026-10-13: \"Budget for the whole batch: 32 agents, 240 API calls, 26M tokens.\"",
+ "max_agents": 4,
+ "max_calls": 40,
+ "max_tokens": 3000000,
+ "set_by": "Jonathan 2026-10-14: \"Budget for the whole batch: 4 agents, 40 API calls, 3M tokens (display review only).\"",
  "previous": {
-  "id": "s134-r5b1",
-  "agents": 15,
-  "calls": 83,
-  "tokens": 9045570
+  "id": "s135-r5b2",
+  "agents": 16,
+  "calls": 82,
+  "tokens": 4190735,
+  "note": "s135 round 1 spend from the handoff; s135 still running on wip/s135"
  },
- "opened": "",
- "note": "written at the s135 launch; opened after the efficiency first step"
+ "opened": "2026-10-14",
+ "note": "s136 runs on wip/s136 in parallel with s135; at the merge keep whichever wave is still running"
 }

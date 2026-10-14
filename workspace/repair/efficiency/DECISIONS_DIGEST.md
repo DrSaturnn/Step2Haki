@@ -83,3 +83,20 @@ Source of truth for decisions before 2026-10-10: SPINE_SPEC.md rounds 2 to 4 (ca
   5. A board-evidence topic index built once from the local UWorld files, AnKing and NBME items, so step 1 looks topics up instead of searching again for each brief.
   6. Test staggered reviewer launches (one first, the rest seconds later) in the same probe, to see whether they reuse the cached start-up context.
 - 2026-10-13 Efficiency first step, additions (Jonathan: "okay lets follow your recommendation", after the lead's search of current practice): fold three more items into the s135 efficiency step: (7) the lean reviewer agent excludes the connector tools entirely, not only the general tools; (8) a turn cap in the agent definition itself, as a second limit beside the call gate's Budget: line; (9) check where the lead's context goes at the start of each batch, so a grown tool list shows early. Skip the Message Batches API for now (it runs outside the hooks and gates and only saves money on per-token billing); revisit only if the work moves to per-token API billing.
+- 2026-10-13 Glance layout direction (mockup "Lithium Glance", artifact 5UNkq7ozkp26rjgiqYWPFt v8; plan claude/pending/GLANCE_LAYOUT_PLAN.md). Jonathan's calls, in order:
+  - Wants the site moved to the new version ("Can we easily change step 2 hakis layout to look like this new verision? with some additional caveats").
+  - Hovers stay ("Hover should be kept").
+  - Workup labels must be plain ("diagnostic work up is using cliches which is against the rules"): First step, By presentation, Diagnostic test where a brief has one, Then.
+  - Mnemonics stay vertical ("LMNOP mnemonic and all mnemonics should stay vertical").
+  - Clue table column "Next best step" ("next move should be next best step"; replaces SPINE_SPEC "Next move").
+  - Numbered workup zones adopted ("yes we can adopt"); this reverses the 2026-10-10 rejection of numbering for zones only, not forked branches.
+  - Act now (brown meaning) only where UWorld, AnKing or NBME says so ("act now should be reserved for only when uworkd or anki say so, or nbme"); never Claude's own classification.
+  - Meanings carry color in the words, not dots ("the letters can be the colors i think that was better").
+  - No dark purple number discs ("the dark purple numbers has to go"): workup step numbers are neutral raised discs; the Workup section badge is green like the others.
+  - Sidebar pass-through is acceptable but low value ("side bar passthrough is fine it doesnt do too much tbh").
+  - The side rail's progress bar and the accents take the new accent, not the whole sidebar ("oh i meant literally this bar"); the sidebar stays light glass unless he picks the navy-tinted comparison.
+- 2026-10-14 Accent color: Slate (#3B5B8C) is the default accent ("i actually like the slate"), and the accent becomes a reader setting on the real site ("you can proabably leave the accent setting for the actualy step2haki also, let people choose and maybe change which colors are there"). It replaces purple as the workup accent and the rail fill.
+- 2026-10-14 Begin moving the site to the glance layout ("alright, lets begin the transition of the necessary parts to the actual step 2 haki!").
+- 2026-10-14 Batch s136 launch, site layout Phase 1 (Jonathan, in his words): "Step2Haki: launch batch s136 (site layout Phase 1) per claude/BATCH_RUNBOOK.md and claude/pending/S136.md. No briefs change text; sample briefs for checks: lithium-effects, hematuria, and one non-spine brief of the lead's choice. Build on wip/s136 in parallel with s135; merge main in after s135 ships. Budget for the whole batch: 4 agents, 40 API calls, 3M tokens (display review only)."
+  1. "Fold claude/pending/DIGEST_ADD_glance_2026-10-13.md into DECISIONS_DIGEST, then delete it." Done at launch.
+  2. "Accent setting: Slate default; choices Slate, Indigo, Purple, Navy, Ocean, Plum, Rose, Graphite."
