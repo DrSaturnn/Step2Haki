@@ -22,8 +22,20 @@ WAVE = os.environ.get('AX_WAVE', os.path.join(WS, 'repair', 'efficiency', 'WAVE.
 PROJECTS = os.environ.get('AX_TRANSCRIPTS', '/root/.claude/projects')
 
 
+ROLES_REPO = '/home/claude/Step2Haki'  # the repo path roles.json is written against (project chat container)
+
+
 def roles():
-    return json.load(open(os.path.join(HERE, 'roles.json'), encoding='utf-8'))
+    """roles.json, with its repo paths moved to where this checkout lives (a cloud session clones elsewhere, s138)"""
+    cfg = json.load(open(os.path.join(HERE, 'roles.json'), encoding='utf-8'))
+    if os.path.realpath(REPO) != ROLES_REPO:
+        def mv(p):
+            return REPO + p[len(ROLES_REPO):] if p == ROLES_REPO or p.startswith(ROLES_REPO + '/') else p
+        cfg['lane_roots'] = [mv(p) for p in cfg['lane_roots']]
+        cfg['forbidden'] = [mv(p) for p in cfg['forbidden']]
+        cfg['forbidden_re'] = [r.replace('^' + re.escape(ROLES_REPO), '^' + re.escape(REPO))
+                               .replace('^' + ROLES_REPO, '^' + re.escape(REPO)) for r in cfg.get('forbidden_re', [])]
+    return cfg
 
 
 def state(*parts):
