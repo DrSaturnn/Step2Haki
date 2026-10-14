@@ -167,3 +167,13 @@ figure.lcp .step{background:var(--raised);color:var(--ink);box-shadow:var(--ec),
   .brief .bb-rail{top:80px}
   .brief,.brief h5[id]{scroll-margin-top:80px}
 }
+
+/* Mnemonic key column sized to its widest key (fitMnem in glance.js sets --mnw; s135 panic display r1 MED) */
+:root{--mn-tint:rgba(10,84,97,.085)}
+dl.rows.mnem.mn-wide{background-image:linear-gradient(90deg,var(--mn-tint) 0 var(--mnw),transparent var(--mnw)) !important}
+dl.rows.mnem.mn-wide > dt{padding-left:calc(var(--mnw) + 5px);text-indent:calc(-5px - var(--mnw))}
+dl.rows.mnem.mn-wide > dt b.mn{width:var(--mnw);min-width:var(--mnw)}
+@media (max-width:640px){ dl.rows.mnem.mn-key{grid-template-columns:calc(var(--mnw,28px) + 12px) minmax(0,1fr)} }
+/* Phone table cards: a cell holding only an empty wrapper prints no orphan label (s135 sz-psychosocial display r1 LOW 2;
+   the page's own td:empty rule misses <td><span></span></td>) */
+@media (max-width:640px){ .tw tbody td:has(> span:only-child:empty){display:none} }

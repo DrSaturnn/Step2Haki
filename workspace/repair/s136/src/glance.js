@@ -227,6 +227,23 @@
     }).observe(document.getElementById('navlinks'), { subtree: true, attributes: true, attributeFilter: ['class'] });
   }
 
-  function init(){ setting(); toolbar(); fold(); }
+  /* 5. Mnemonic key column fits its widest key (s135 panic display r1 MED: "FEAR" overran the 28 px column on desktop
+     and pushed phone text into a narrow column). Only a list with a key wider than one letter changes. */
+  function fitMnem(){
+    document.querySelectorAll('dl.rows.mnem').forEach(function(dl){
+      if(dl.classList.contains('mn-wide')) return;
+      var w = 0, n = 0;
+      dl.querySelectorAll('dt b.mn').forEach(function(b){ w = Math.max(w, b.scrollWidth || 0); n = Math.max(n, b.textContent.trim().length); });
+      var keyOnly = Array.prototype.every.call(dl.querySelectorAll(':scope > dt'), function(dt){
+        var b = dt.querySelector('b.mn'); return b && dt.textContent.trim() === b.textContent.trim(); });
+      if(keyOnly) dl.classList.add('mn-key');   // phone: the key column shrinks to the key, the text gets the rest
+      if(n < 2) return;
+      w = Math.max(w, n * 14);
+      dl.style.setProperty('--mnw', (Math.ceil(w) + 16) + 'px');
+      dl.classList.add('mn-wide');
+    });
+  }
+
+  function init(){ setting(); toolbar(); fold(); fitMnem(); window.addEventListener('load', fitMnem); }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

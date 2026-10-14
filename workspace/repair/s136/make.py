@@ -64,7 +64,11 @@ def lighten_for_dark(h):
     hh, l, s = colorsys.rgb_to_hls(*r)
     for k in range(0, 60):
         c = [v * 255 for v in colorsys.hls_to_rgb(hh, min(0.92, l + k * 0.01), s)]
-        if (GD.lum(c) + 0.05) / (GD.lum(dark_card) + 0.05) >= 5.2:
+        # 5.2:1 on the dark card, and 5.0:1 on the lightest tint accent text sits on: the accent's own --accent-bg and
+        # the bottom-line panel in flat mode (#2E353D measured; S3 2026-10-14: slate labels were 4.11:1 there)
+        bgs = [dark_card, [x * 0.82 + y * 0.18 for x, y in zip(dark_canvas, c)], [46, 53, 61]]
+        if (GD.lum(c) + 0.05) / (GD.lum(dark_card) + 0.05) >= 5.2 and \
+                all((GD.lum(c) + 0.05) / (GD.lum(g) + 0.05) >= 5.0 for g in bgs):
             return c
     return c
 

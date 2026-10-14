@@ -13,9 +13,9 @@
   "apply",
   "answerer"
  ],
- "max_agents": 20,
- "max_calls": 198,
- "max_tokens": 24809265,
+ "max_agents": 19,
+ "max_calls": 186,
+ "max_tokens": 24767265,
  "set_by": "Jonathan: s135 \"32 agents, 240 API calls, 26M tokens\" (2026-10-13) and s136 \"4 agents, 40 API calls, 3M tokens (display review only)\" (2026-10-14); s135 folded into s136 2026-10-14 (\"Merge now, finish as one\")",
  "previous": {
   "id": "s134-r5b1",
@@ -24,7 +24,7 @@
   "tokens": 9045570
  },
  "opened": "2026-10-14 01:10",
- "note": "one wave for the combined branch in the s136 container; caps = s135 remainder (16, 158, 21,809,265) + the s136 budget (4, 40, 3,000,000). Report each batch against its own budget: s136 so far 1 agent (display r1-chrome), 12 calls, about 42k tokens",
+ "note": "one wave for the combined branch in the s136 container; caps = s135 remainder (16, 158, 21,809,265) + the s136 budget (4, 40, 3,000,000). Report each batch against its own budget: s136 so far 1 agent (display r1-chrome), 12 calls, about 42k tokens; container 3 (2026-10-14 01:35): caps set to the remainder after the s136 container (19 agents, 186 calls, 24,767,265)",
  "batch_budgets": {
   "s135": {
    "agents": 32,
@@ -39,7 +39,12 @@
   "s136": {
    "agents": 4,
    "calls": 40,
-   "tokens": 3000000
+   "tokens": 3000000,
+   "spent_before_this_container": {
+    "agents": 1,
+    "calls": 12,
+    "tokens": 42000
+   }
   }
  }
 }
