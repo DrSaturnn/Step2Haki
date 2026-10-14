@@ -176,4 +176,4 @@ dl.rows.mnem.mn-wide > dt b.mn{width:var(--mnw);min-width:var(--mnw)}
 @media (max-width:640px){ dl.rows.mnem.mn-key{grid-template-columns:calc(var(--mnw,28px) + 12px) minmax(0,1fr)} }
 /* Phone table cards: a cell holding only an empty wrapper prints no orphan label (s135 sz-psychosocial display r1 LOW 2;
    the page's own td:empty rule misses <td><span></span></td>) */
-@media (max-width:640px){ .tw tbody td:has(> span:only-child:empty){display:none} }
+@media (max-width:640px){ .tw tbody td:has(> span:only-child:empty){display:none !important} }
