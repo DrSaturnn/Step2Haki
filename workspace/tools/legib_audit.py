@@ -111,6 +111,8 @@ def main():
     ap.add_argument('--views', default='phone,desk'); ap.add_argument('--modes', default='sculpted,flat,study')
     ap.add_argument('--shots', action='store_true', help='also save a normal screenshot of each brief')
     ap.add_argument('--css', default='', help='a CSS file injected after load, to measure a candidate restyle before it ships')
+    ap.add_argument('--theme', default='', help='s137: light (default), dark or tinted (the ax-theme setting)')
+    ap.add_argument('--accent', default='', help='s137: an ax-accent key (slate, indigo, purple, navy, ocean, plum, rose, graphite)')
     a = ap.parse_args()
     bids = a.briefs.split(','); os.makedirs(a.out, exist_ok=True)
     rows = []
@@ -121,6 +123,9 @@ def main():
                 ctx = b.new_context(viewport={'width': VIEWS[view], 'height': 900}, device_scale_factor=1)
                 ctx.add_init_script("try{localStorage.setItem('ax-flat','%s');localStorage.setItem('ax-study','%s')}catch(e){}"
                                     % ('1' if mode == 'flat' else '0', '1' if mode == 'study' else '0'))
+                if a.theme or a.accent:
+                    ctx.add_init_script("try{%s%s}catch(e){}" % ("localStorage.setItem('ax-theme','%s');" % a.theme if a.theme else '',
+                                                                 "localStorage.setItem('ax-accent','%s');" % a.accent if a.accent else ''))
                 pg = ctx.new_page()
                 pg.goto('file://' + os.path.abspath(a.page) + '#' + bids[0]); pg.wait_for_timeout(2500)
                 if a.css:

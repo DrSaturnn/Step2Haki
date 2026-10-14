@@ -120,3 +120,65 @@ figure.w5a.ax-w5tab .w5f > *{transition:filter .22s}
   #axrv:not([hidden]){box-shadow:var(--glass-edge-2),0 0 0 100vmax rgba(0,0,0,.32)}
 }
 [data-theme="dark"] figure.w5a > .w5z,[data-theme="dark"] figure.w5a .w5skip .w5z{color:var(--ink)}
+
+/* ---- 6. glance blocks on rebuilt spine briefs: the Timing strip (Differential) and the Follow-up track (Monitoring) ---- */
+.brief.sp figure.sp-on{margin:18px 0 8px;padding:18px 20px 14px;border:0;border-radius:18px;background:var(--raised);box-shadow:var(--inner-2)}
+.brief.sp .sp-on figcaption{margin:0;padding:0;font:700 16px/22px var(--sans);letter-spacing:0;text-transform:none;color:var(--ink)}
+.brief.sp .sp-on-f{position:relative;height:196px;margin-top:8px}
+.brief.sp .sp-on-ax{position:absolute;inset:0;pointer-events:none}
+.brief.sp .sp-on-ax::before{content:"";position:absolute;left:0;right:0;bottom:30px;height:2px;border-radius:2px;background:var(--ink);opacity:.22}
+.brief.sp .sp-on-tk{position:absolute;bottom:0;left:calc(var(--x) * 1%);font:700 13px/18px var(--sans);color:var(--muted);white-space:nowrap}
+.brief.sp .sp-on-tk::before{content:"";position:absolute;bottom:26px;width:2px;height:10px;margin-left:-1px;background:var(--ink);opacity:.3}
+.brief.sp .sp-on-tk.a-l::before{left:0}
+.brief.sp .sp-on-tk.a-c{transform:translateX(-50%)}
+.brief.sp .sp-on-tk.a-c::before{left:50%}
+.brief.sp .sp-on-tk.a-r{transform:translateX(-100%)}
+.brief.sp .sp-on-tk.a-r::before{left:100%}
+.brief.sp ol.sp-on-ev{list-style:none;margin:0;padding:0}
+.brief.sp .sp-on-ev > li{position:absolute;left:calc(var(--x) * 1%);bottom:0;width:0;height:100%;margin:0;padding:0}
+.brief.sp .sp-on-ev > li::before{content:"";position:absolute;bottom:31px;left:-1px;width:2px;height:calc(22px + var(--lv) * 50px);background:var(--ink-2);opacity:.45}
+.brief.sp .sp-on-ev > li::after{content:"";position:absolute;bottom:25px;left:-7px;width:14px;height:14px;border-radius:999px;background:var(--ink-2);box-shadow:0 0 0 3px var(--raised)}
+.brief.sp .sp-on-ev > li > div{position:absolute;left:0;bottom:calc(48px + var(--lv) * 50px);max-width:300px;padding:7px 12px;border-radius:12px;
+  width:max-content;background:var(--card);box-shadow:var(--ec),0 0 0 1px var(--hair);white-space:nowrap;text-align:left}
+.brief.sp .sp-on-ev > li > div > *{white-space:nowrap}
+.brief.sp .sp-on-ev > li.a-l > div{transform:translateX(-14px)}
+.brief.sp .sp-on-ev > li.a-c > div{transform:translateX(-50%)}
+.brief.sp .sp-on-ev > li.a-r > div{transform:translateX(-100%)}
+.brief.sp .sp-on-ev b{display:block;font:700 14px/19px var(--sans);color:var(--ink)}
+.brief.sp .sp-on-ev .mask{display:block;font:450 13px/18px var(--sans);color:var(--muted)}
+
+.brief.sp ol.sp-trk{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:12px;list-style:none;
+  margin:12px 0 14px;padding:18px 20px 16px;border-radius:18px;background:var(--raised);box-shadow:var(--inner-2);font-family:var(--sans)}
+.brief.sp ol.sp-trk::before{content:"";position:absolute;left:10%;right:10%;top:33px;height:3px;border-radius:3px;
+  background:linear-gradient(90deg,var(--confirm),color-mix(in srgb,var(--confirm) 35%,transparent))}
+.brief.sp .sp-trk > li{position:relative;display:flex;flex-direction:column;align-items:center;margin:0;padding:0;text-align:center}
+.brief.sp .sp-trk > li::before{content:"";flex:none;width:32px;height:32px;box-sizing:border-box;border-radius:999px;background:var(--raised);
+  border:3px solid var(--confirm);box-shadow:0 0 0 4px var(--raised)}
+.brief.sp .sp-trk > li.once::before{background:var(--confirm)}
+.brief.sp .sp-trk b{display:block;margin-top:10px;font:700 15px/20px var(--sans);letter-spacing:0;color:var(--ink)}
+.brief.sp .sp-trk .mask{display:block;margin-top:3px;font:450 14px/19px var(--sans);color:var(--muted)}
+
+/* Recall mode blurs a masked line and lowers its opacity, so the muted grey would fall under 4.5:1; masked repeats use ink-2 there */
+.brief.sp :is(.sp-on-ev,.sp-trk) .mask:is(.axm-study *,.axm-study){color:var(--ink-2)}
+
+@media (max-width:640px){
+  /* phone: one shared axis on top, then one row per event with its own track (Widen, don't shorten) */
+  .brief.sp figure.sp-on{padding:14px 16px 10px}
+  .brief.sp .sp-on-f{height:auto}
+  .brief.sp .sp-on-ax{position:relative;height:20px;margin:0 0 2px}
+  .brief.sp .sp-on-ax::before,.brief.sp .sp-on-tk::before{display:none}
+  .brief.sp .sp-on-tk{top:0;bottom:auto;font-size:12px}
+  .brief.sp .sp-on-ev > li{position:relative;left:auto;bottom:auto;width:auto;height:auto;padding:9px 0 24px;border-top:1px solid var(--hair)}
+  .brief.sp .sp-on-ev > li::before{left:0;right:0;bottom:11px;width:auto;height:2px;background:var(--ink);opacity:.22}
+  .brief.sp .sp-on-ev > li::after{bottom:5px;left:calc(var(--x) * 1% - 7px)}
+  .brief.sp .sp-on-ev > li > div,.brief.sp .sp-on-ev > li.a-l > div,.brief.sp .sp-on-ev > li.a-c > div,.brief.sp .sp-on-ev > li.a-r > div{
+    position:static;transform:none;width:auto;max-width:none;padding:0;background:none;box-shadow:none;white-space:normal}
+  .brief.sp .sp-on-ev > li > div > *{white-space:normal}
+  /* phone: the track runs down a rail, each stop's label beside its node */
+  .brief.sp ol.sp-trk{grid-auto-flow:row;grid-template-columns:minmax(0,1fr);gap:0;padding:14px 16px}
+  .brief.sp ol.sp-trk::before{left:30.5px;right:auto;top:30px;bottom:30px;width:3px;height:auto;
+    background:linear-gradient(180deg,var(--confirm),color-mix(in srgb,var(--confirm) 35%,transparent))}
+  .brief.sp .sp-trk > li{display:grid;grid-template-columns:32px minmax(0,1fr);column-gap:12px;align-items:start;padding:6px 0;text-align:left}
+  .brief.sp .sp-trk > li::before{grid-row:1 / span 2}
+  .brief.sp .sp-trk b{margin-top:5px}
+}
