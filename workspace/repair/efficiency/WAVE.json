@@ -1,7 +1,7 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
  "id": "s137",
- "open": true,
+ "open": false,
  "plan_step": "s137",
  "roles": [
   "display-review",
@@ -29,5 +29,6 @@
    "calls": 110,
    "tokens": 9000000
   }
- }
+ },
+ "closed": "2026-10-14 08:45 (s137 shipped, site layer only)"
 }
