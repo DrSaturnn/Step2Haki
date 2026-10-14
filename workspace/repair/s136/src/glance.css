@@ -4,7 +4,7 @@
 /*@TOKENS@*/
 :root{
   --row-tint:rgba(24,28,30,.045);
-  --glass:rgba(250,250,252,.62); --glass-2:rgba(250,250,252,.9);
+  --glass:rgba(250,250,252,.62); --glass-2:rgba(250,250,252,.95);
   --glass-edge:inset 0 1px 0 #FFFFFF,0 0 0 1px rgba(24,28,30,.12),0 12px 36px rgba(0,0,0,.12);
   --glass-edge-2:inset 0 1px 0 rgba(255,255,255,.95),0 0 0 .5px rgba(0,0,0,.08),0 18px 48px rgba(0,0,0,.16);
   --spr:linear(0,.022,.077,.151,.235,.322,.407,.488,.563,.63,.69,.742,.787,.826,.859,.886,.909,.928,.943,.956,.966,.974,.98,.985,.989,.992,.995,.997,.998,.999,1);
@@ -69,7 +69,9 @@ figure.lcp .step{background:var(--raised);color:var(--ink);box-shadow:var(--ec),
   #axbar .axcur{display:inline-flex;align-items:center;gap:8px;min-width:150px;max-width:260px;padding:0 12px 0 4px}
   #axbar .axcn{display:flex;align-items:center;justify-content:center;flex:none;width:24px;height:24px;border-radius:7px;background:var(--confirm);color:#fff;font:800 12px/1 var(--sans);transition:background .4s ease}
   #axbar .axcn.p{background:var(--vign)}
-  #axbar .axcn[hidden],#axbar .axall[hidden]{display:none}
+  #axbar .axcn[hidden],#axbar .axall[hidden],#axbar .axsep[hidden]{display:none}
+  #axbar,#axedge{transition:opacity .25s ease}
+  body:has(> .sp-drawer) #axbar,body:has(> .sp-drawer) #axedge{opacity:0;pointer-events:none}
   #axbar .axcl{font:700 15px/1.2 var(--sans);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   #axbar .axsep{width:1px;height:22px;background:rgba(24,28,30,.14);margin:0 4px;flex:none}
   #axbar .axseg{position:relative;display:flex}
@@ -145,6 +147,9 @@ figure.lcp .step{background:var(--raised);color:var(--ink);box-shadow:var(--ec),
 #nav.axsx #navlinks > .axsx-c{max-height:0;opacity:0;padding-top:0;padding-bottom:0;visibility:hidden;
   transition:max-height .55s var(--spr,ease),opacity .3s ease,padding .55s var(--spr,ease),visibility 0s linear .55s}
 @media (prefers-reduced-motion:reduce){#nav.axsx #navlinks > a,#nav.axsx #navlinks > .navsub,#nav.axsx .sect::before{transition:none}}
+/* the dark theme switch (glance.js adds it after Flat theme) */
+#modes .dark[aria-pressed="true"] .track{background:var(--accent)}
+#modes .dark[aria-pressed="true"] .knob{transform:translateX(15px)}
 /* the accent setting, under the theme switches */
 #modes .axacc{display:grid;grid-template-columns:repeat(8,18px);justify-content:space-between;align-items:center;row-gap:10px;padding:10px 14px 12px;border-radius:18px;background:rgba(118,118,128,.10)}
 #modes .axacc .nm{grid-row:1;grid-column:1/6}

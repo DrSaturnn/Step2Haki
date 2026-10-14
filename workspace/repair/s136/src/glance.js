@@ -1,5 +1,6 @@
 /* s136: site layout Phase 1 (claude/pending/S136.md). Presentation only; never adds or removes brief text.
    1. Accent setting (Jonathan 2026-10-14): a reader choice under the theme switches, stored per viewer; Slate default.
+      Dark theme (Jonathan 2026-10-14): a switch beside Flat theme, stored per viewer (ax-theme), light by default.
    2. Desktop hovers: open on pointer enter, close on leave, stay open once clicked (a second click closes).
    3. Desktop glass toolbar: the current section's number and name, Read and Study, open or close every panel.
    4. Sidebar systems fold and unfold; the system holding the current brief opens itself. */
@@ -18,7 +19,17 @@
      frame, then on the root, the same way the flat and study switches restyle (s92): one root-wide change restyled
      every brief at once. */
   var cur = valid(load()) ? load() : 'slate';
+  var THEME = 'ax-theme', dark = false;
+  try { dark = localStorage.getItem(THEME) === 'dark'; } catch(e){}
   if(cur !== 'slate') root.setAttribute('data-axa', cur);
+  if(dark) root.setAttribute('data-theme', 'dark');
+  /* Each region carries both attributes while a switch walks the page, so the dark accent rule (which needs both on
+     one element or the theme on an ancestor) always matches. */
+  function mark(c){
+    if(cur === 'slate') c.removeAttribute('data-axa'); else c.setAttribute('data-axa', cur);
+    if(dark) c.setAttribute('data-theme', 'dark'); else c.removeAttribute('data-theme');
+  }
+  function markRoot(){ mark(root); }
   var queue = [], busy = false;
   function regions(){
     var out = [];
@@ -37,29 +48,40 @@
   }
   function step(){
     var n = 0;
-    while(queue.length && n < 4){ var c = queue.shift(); if(cur === 'slate') c.removeAttribute('data-axa'); else c.setAttribute('data-axa', cur); n++; }
+    while(queue.length && n < 4){ mark(queue.shift()); n++; }
     if(queue.length){ requestAnimationFrame(step); return; }
-    if(cur === 'slate') root.removeAttribute('data-axa'); else root.setAttribute('data-axa', cur);
-    busy = false;
+    markRoot(); busy = false;
   }
-  function setAccent(k){
-    if(!valid(k) || k === cur) return;
-    cur = k; save(k); paintSetting();
+  function walkAll(){
     var rs = regions(), near = [], far = [];
     rs.forEach(function(c){ (dist(c) === 0 ? near : far).push(c); });
-    near.forEach(function(c){ if(k === 'slate') c.removeAttribute('data-axa'); else c.setAttribute('data-axa', k); });
+    near.forEach(mark);
     far.sort(function(a, b){ return dist(a) - dist(b); });
     queue = far;
     if(!busy){ busy = true; requestAnimationFrame(step); }
   }
-  var box = null;
+  function setAccent(k){
+    if(!valid(k) || k === cur) return;
+    cur = k; save(k); paintSetting(); walkAll();
+  }
+  function setDark(on){
+    if(on === dark) return;
+    dark = on; try { localStorage.setItem(THEME, on ? 'dark' : 'light'); } catch(e){}
+    paintSetting(); walkAll();
+  }
+  var box = null, darkBtn = null;
   function paintSetting(){
     if(!box) return;
     box.querySelectorAll('.axsw').forEach(function(b){ var on = b.getAttribute('data-k') === cur; b.setAttribute('aria-checked', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; });
     var a = valid(cur); box.querySelector('.axan').textContent = a ? a[1] : '';
+    if(darkBtn) darkBtn.setAttribute('aria-pressed', dark ? 'true' : 'false');
   }
   function setting(){
     var modes = document.getElementById('modes'); if(!modes || modes.querySelector('.axacc')) return;
+    darkBtn = document.createElement('button'); darkBtn.type = 'button'; darkBtn.className = 'dark';
+    darkBtn.innerHTML = '<span class="track"><span class="knob"></span></span><span class="nm">DARK THEME</span>';
+    var flat = modes.querySelector('.flatt'); if(flat) flat.after(darkBtn); else modes.appendChild(darkBtn);
+    darkBtn.addEventListener('click', function(){ setDark(!dark); });
     box = document.createElement('div'); box.className = 'axacc'; box.setAttribute('role', 'radiogroup'); box.setAttribute('aria-label', 'Accent color');
     var h = '<span class="nm">ACCENT</span>';
     ACC.forEach(function(a){ h += '<button type="button" class="axsw" role="radio" data-k="' + a[0] + '" title="' + a[1] + '" aria-label="' + a[1] + '" style="--sw:' + a[2] + '"></button>'; });
@@ -128,6 +150,7 @@
     cl.textContent = label || 'Step2Haki';
     var ps = panels(b), all = bar.querySelector('.axall');
     all.hidden = !ps.length;
+    var seps = bar.querySelectorAll('.axsep'); if(seps[1]) seps[1].hidden = !ps.length;
     all.textContent = ps.length && ps.every(function(d){ return d.open; }) ? 'Collapse all' : 'Expand all';
     bar.classList.toggle('st', document.body.classList.contains('study'));
     bar.querySelector('[data-m="read"]').setAttribute('aria-pressed', document.body.classList.contains('study') ? 'false' : 'true');
