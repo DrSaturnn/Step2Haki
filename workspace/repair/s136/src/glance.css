@@ -214,3 +214,5 @@ html[data-theme="dark"][data-glass="tinted"] #mbar{background:color-mix(in srgb,
 /* light theme: the small bottom-line label a shade deeper than the accent, so its 9.5 px capitals hold contrast on the
    accent tint for every accent (legib, container 3: Indigo measured 3.7:1 on panic and backpain) */
 html:not([data-theme="dark"]) .dp > span.lbl{color:color-mix(in srgb,var(--accent) 78%,#000)}
+/* Tinted glass: the sleep wheel's center is solid, so its label does not sit over the arcs (legib 4.1:1, container 3) */
+html[data-theme="dark"][data-glass="tinted"] .sw-pie::after{background:color-mix(in srgb,var(--accent) 9%,#171920)}
