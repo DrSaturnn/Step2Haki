@@ -174,9 +174,16 @@ def dark_css(css):
                 continue
             p, _, v = d.partition(':')
             p = p.strip().lower()
-            if p.startswith('--') or not PROPS.match(p):
-                continue
             v = v.strip()
+            if p.startswith('--'):
+                # a token redefined on a component (figure.lcw{--card:#FCFCFC}) is a color like any other; s136 S3
+                # 2026-10-14: the timeline cards stayed white in dark because their local --card was skipped
+                if p.startswith(('--accent', '--acc-', '--axh-')) or not COLOR.search(v):
+                    continue
+                decls.append('%s:%s' % (p, map_shadow(v) if re.search(r'\dpx', v) else map_colors(v)))
+                continue
+            if not PROPS.match(p):
+                continue
             nv = map_decl(p, v)
             if p == 'background' and 'url(' not in v:
                 # repeat only the color part, so the shorthand does not reset an image, repeat or size set elsewhere
@@ -203,6 +210,9 @@ def test():
         nonlocal ok
         print(('ok   ' if cond else 'FAIL ') + name)
         ok &= bool(cond)
+    _t = dark_css('figure.lcw:not(.lcc){--card:#FCFCFC;--x:0%;padding:0}')
+    chk('a component token holding a color is repeated for dark; other tokens are not',
+        '--card:' in _t and '--x' not in _t and '#FCFCFC' not in _t.upper())
     canvas = invert([239, 240, 240])
     chk('canvas becomes near black', lum(canvas) < 0.02)
     chk('ink becomes light', lum(invert([21, 21, 27])) > 0.7)
