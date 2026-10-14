@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-14, by the s138 lead (s138 SHIPPED, commit 399b3ee; run in Claude Code on the web, no Mac).
+Last updated: 2026-10-14, by the s139 lead (launch, paused before S1; Claude Code on the web, no Mac).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -10,29 +10,30 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
-No batch is open. The next batch starts from the launch prompt below.
+Batch s139 is open (State below).
 
 The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.md) gives the read order, the steps, the standing calls and the one final report.
 
 ## State (rewrite after every step)
 
 - **Plan:** v4 (repair/efficiency/SPINE_SCALE_PLAN.md; project copy claude/SPINE_SCALE_PLAN.md). Glance plan: claude/pending/GLANCE_LAYOUT_PLAN.md.
-- **No batch open.** WAVE.json closed.
-- **Last batch: s138 (R5 batch 3), SHIPPED 2026-10-14** (Jonathan: "ship"). Commit 399b3ee on main. Record: repair/s138/S138.md.
-  READY and live: ssri-effects, antipsych-effects, somatic, gppd, lithium-effects (receipts in local-only spine/reviews:
-  the four at r1/r2, lithium acc_r4, read_r4, flags_r4, display_r6). New site style repair/s138/40_recall_timing.json (Recall
-  lists the Timing strip). Deploy check: step2haki.vercel.app is outside the cloud environment's network policy; Jonathan
-  confirms version.json shows {"build":"s138"} (or allow the host in the environment's Network access).
-- **Open small items:** fold settled digest lines into STANDING_DIRECTIONS (runbook S9, carried again); s138 deferred LOWs
-  (each folder's adjudication.md and the round 2 receipts: somatic rung 4 wording, the ssri NBME block "the explanation
-  says", gppd hover source checks); s134 lithium-effects 6 hover cuts (83 words) restorable; ready_gate's folder glob misses
-  repair/migration/merge/hematuria/s134; hematuria s134 build.py anchor drift; kawasaki CRASH card blank line on phone (LOW);
-  the "Stack" Practice switch measures 1.03 contrast in flat mode on the live page (pre-existing).
-- **Cloud lessons (s138):** follow-up reviewers covering several briefs ran out of their 10 calls (two relaunches and one
-  receipt set saved by the lead from the reviewer's report); give them about 4 calls per brief plus 2. The live hook probe
-  wave was skipped at launch; the gates worked live during the batch (launch gate, per-agent call caps).
-- **Branches:** wip/s135, wip/s136, wip/s137, wip/s138 are merged into main; delete only on Jonathan's yes ("keep for now", s138).
-- **Live:** s138 (399b3ee). **main:** the s138 log commit.
+- **Open batch: s139 (R5 batch 4)**, launched 2026-10-14 in Claude Code on the web. Briefs: psychosis-duration,
+  bipolar-mania, delirium, substance. Budget: 16 agents, 120 API calls, 8M tokens (WAVE.json open). Spend: 0 agents,
+  0 calls (lead only).
+- **Step: launch (section 1), paused before S1.** Done: decisions in the digest (branches: delete; follow-up cap about
+  4 per brief plus 2, runbook S7 updated; the cap is set with each launch prompt's Budget: line, which lowers the role's
+  25); WAVE.json; offline hook tests 80/80; start-up context check with no WARNING (lead 72,327).
+  Blocked in this session by the harness's auto-mode permission check, asked of Jonathan: cloning
+  DrSaturnn/Step2Haki-private (the local-only restore S1 needs) and writing the hooks into /root/.claude/settings.json.
+  The wip branch deletion push got HTTP 403 from GitHub. Not yet checked: the Agent tool listing lean-reviewer under the
+  installed hooks.
+- **Last batch: s138 (R5 batch 3), SHIPPED 2026-10-14**, commit 399b3ee. Record: repair/s138/S138.md.
+- **Open small items:** as in s138 (repair/s138/S138.md): fold settled digest lines into STANDING_DIRECTIONS; s138
+  deferred LOWs; s134 lithium-effects hover cuts restorable; ready_gate glob misses repair/migration/merge/hematuria/s134;
+  hematuria s134 build.py anchor drift; kawasaki CRASH card blank line (LOW); "Stack" switch 1.03 contrast in flat mode.
+- **Branches:** wip/s135 to wip/s138: Jonathan said delete (s139 launch); the delete push was refused (403), so they
+  still exist. wip/s139 holds this batch's launch commits.
+- **Live:** s138 (399b3ee).
 
 ## Next launch prompt (paste into a fresh chat)
 

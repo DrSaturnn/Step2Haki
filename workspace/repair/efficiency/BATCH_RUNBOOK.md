@@ -75,7 +75,7 @@ Then run section 2 to the end without asking.
 - **S6. Lead self-check** (section 4) on every changed line.
 - **S7. Follow-up review.**
   - The same four roles, on the changed lines with context, each given its first-round receipt.
-  - At most 10 calls each.
+  - About 4 calls per brief covered plus 2 (one brief: 10; Jonathan 2026-10-14, s139 launch).
   - A reviewer with only LOW findings returns PASS-IF (conditional PASS) with exact replacements; the lead applies the approved ones, and verify keeps the receipts current without another round.
   - Loop S5 to S7 until READY or the budget is spent.
 - **S8. Final report** (section 5):

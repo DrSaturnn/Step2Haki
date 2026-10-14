@@ -1,8 +1,8 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s138",
- "open": false,
- "plan_step": "s138",
+ "id": "s139",
+ "open": true,
+ "plan_step": "s139",
  "roles": [
   "acc-review",
   "read-review",
@@ -10,22 +10,26 @@
   "flag-review",
   "wording-fix"
  ],
- "max_agents": 20,
- "max_calls": 160,
- "max_tokens": 9500000,
- "set_by": "Jonathan: s138 launch \"Budget for the whole batch: 20 agents, 160 API calls, 9.5M tokens.\"",
+ "max_agents": 16,
+ "max_calls": 120,
+ "max_tokens": 8000000,
+ "set_by": "Jonathan: s139 launch \"Budget for the whole batch: 16 agents, 120 API calls, 8M tokens.\"",
  "previous": {
-  "id": "s137",
-  "note": "closed 2026-10-14 08:45 (s137 shipped, site layer only)"
+  "id": "s138",
+  "note": "closed 2026-10-14 (s138 shipped, commit 399b3ee)"
  },
- "opened": "2026-10-14 15:40 (cloud session)",
- "note": "R5 batch 3: ssri-effects, antipsych-effects, somatic, gppd; lithium-effects S6 to S8 from repair/s137/held",
+ "opened": "2026-10-14 (cloud session)",
+ "note": "R5 batch 4: psychosis-duration, bipolar-mania, delirium, substance",
  "batch_budgets": {
   "s138": {
    "agents": 20,
    "calls": 160,
    "tokens": 9500000
+  },
+  "s139": {
+   "agents": 16,
+   "calls": 120,
+   "tokens": 8000000
   }
- },
- "closed": "2026-10-14 (s138 shipped, commit 399b3ee)"
+ }
 }
