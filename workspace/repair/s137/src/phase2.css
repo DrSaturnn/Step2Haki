@@ -1,0 +1,122 @@
+/* ============ s137: site layout Phase 2, display layer (claude/pending/S137.md; mockup "Lithium Glance" v8) ============
+   Overrides only, appended after the s136 block; theme tokens only, so the dark and tinted themes follow. */
+
+/* ---- 1. the diagnostic workup: numbered zones, each a Test | Result | Means table ---- */
+figure.w5a{counter-reset:axz}
+figure.w5a > .kick{display:flex;align-items:center;gap:8px;margin:0 0 6px;font:650 15px/20px var(--sans);letter-spacing:0;text-transform:none;color:var(--accent)}
+figure.w5a > .kick::before{content:"";flex:none;width:20px;height:20px;background:var(--accent);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M6 1.5h4M6.8 1.5v4.2L3 12.6A1.3 1.3 0 0 0 4.1 14.5h7.8a1.3 1.3 0 0 0 1.1-1.9L9.2 5.7V1.5M4.6 10h6.8' fill='none' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M6 1.5h4M6.8 1.5v4.2L3 12.6A1.3 1.3 0 0 0 4.1 14.5h7.8a1.3 1.3 0 0 0 1.1-1.9L9.2 5.7V1.5M4.6 10h6.8' fill='none' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+figure.w5a > .w5z,figure.w5a .w5skip .w5z{position:relative;counter-increment:axz;margin:30px 0 0 56px;min-height:32px;padding-top:3px;
+  font:700 20px/26px var(--sans);letter-spacing:-.2px;text-transform:none;color:var(--ink)}
+figure.w5a > .kick + .w5z{margin-top:16px}
+figure.w5a > .w5z::before,figure.w5a .w5skip .w5z::before{content:counter(axz);position:absolute;left:-56px;top:0;width:32px;height:32px;border-radius:999px;
+  background:var(--raised);box-shadow:var(--ec),0 0 0 1px rgba(24,28,30,.12);font:800 15px/32px var(--sans);text-align:center;letter-spacing:0;color:var(--ink)}
+figure.w5a .w5skip{margin:30px 0 0;padding-left:56px;font-size:17px;line-height:24px;color:var(--ink)}
+figure.w5a .w5skip .w5z{display:block;margin:0 0 4px}
+
+figure.w5a.ax-w5tab > .w5t,figure.w5a.ax-w5tab > .w5t.first,.axm-flat figure.w5a.ax-w5tab > .w5t,.axm-flat figure.w5a.ax-w5tab > .w5t.first{
+  display:grid;grid-template-columns:minmax(170px,.95fr) minmax(0,1fr) minmax(0,.9fr);margin:12px 0 0 56px;padding:0;
+  border-radius:0;overflow:visible;background:none!important;box-shadow:none!important}
+figure.w5a .ax-w5h{display:contents}
+figure.w5a .ax-w5h > span{padding:0 20px 10px 0;font:700 13px/18px var(--sans);color:var(--muted)}
+figure.w5a .ax-w5h > span:first-child{padding-left:14px}
+/* the test cell spans its findings */
+figure.w5a.ax-w5tab .w5t > .w5b,figure.w5a.ax-w5tab .w5t.first > .w5b{grid-column:1;grid-row:span var(--axn,1);display:block;align-self:stretch;
+  padding:14px 20px 14px 14px;border-radius:12px 0 0 12px;background:none;box-shadow:none}
+figure.w5a.ax-w5tab .w5b.ax-solo{grid-column:1/-1;border-radius:12px}
+figure.w5a.ax-w5tab .w5c{display:block;margin:0 0 3px;padding:0;font:700 13px/18px var(--sans);color:var(--muted)}
+figure.w5a.ax-w5tab .w5ar{display:none}
+figure.w5a.ax-w5tab .w5o{font:700 16px/23px var(--sans);letter-spacing:0;color:var(--ink)}
+figure.w5a.ax-w5tab .w5o .w5ol + .w5ol{margin-top:4px}
+/* findings and meanings become the table's own cells */
+figure.w5a.ax-w5tab .w5t > .w5f{display:contents}
+figure.w5a.ax-w5tab .w5f > .w5an{display:none}
+figure.w5a.ax-w5tab .w5f > .w5fd,figure.w5a.ax-w5tab .w5f > .w5fd.f1,figure.w5a.ax-w5tab .w5f > .w5fd.fl{grid-column:2;margin:0;padding:14px 20px 14px 0;
+  font:450 16px/23px var(--sans);color:var(--ink-2);border-top:1px solid var(--hair)}
+figure.w5a.ax-w5tab .w5f > .w5fd::before,figure.w5a.ax-w5tab .w5f > .w5fd::after,figure.w5a.ax-w5tab .w5f > .w5fd > .ld{display:none}
+figure.w5a.ax-w5tab .w5f > .w5m,figure.w5a.ax-w5tab .w5f > .w5m.f1,figure.w5a.ax-w5tab .w5f > .w5m.fl{grid-column:3;max-width:none;margin:0;padding:14px 14px 14px 0;
+  font:600 16px/23px var(--sans);color:var(--accent);border-top:1px solid var(--hair)}
+figure.w5a.ax-w5tab .w5f > .f1{border-top-color:transparent}
+/* tinted by test group, with rounded ends */
+figure.w5a.ax-w5tab .w5t > .w5b.ax-z,figure.w5a.ax-w5tab .w5t.first > .w5b.ax-z,figure.w5a.ax-w5tab .w5f.ax-z > .w5fd,figure.w5a.ax-w5tab .w5f.ax-z > .w5m{background:var(--row-tint)}
+figure.w5a.ax-w5tab .w5fd > .t{hyphens:manual;overflow-wrap:normal}
+figure.w5a.ax-w5tab .w5f > .w5m.f1{border-top-right-radius:12px}
+figure.w5a.ax-w5tab .w5f > .w5m.fl{border-bottom-right-radius:12px}
+/* progressive recall: the wait blur moves to the cells, since the findings group no longer draws a box */
+body.study figure.w5a.ax-w5tab .w5f.w5-wait > *{filter:blur(5px);pointer-events:none;user-select:none}
+figure.w5a.ax-w5tab .w5f > *{transition:filter .22s}
+
+@media (max-width:640px){
+  figure.w5a > .w5z,figure.w5a .w5skip .w5z{margin-left:44px;font-size:18px;line-height:24px}
+  figure.w5a > .w5z::before,figure.w5a .w5skip .w5z::before{left:-44px;width:30px;height:30px;line-height:30px;font-size:14px}
+  figure.w5a .w5skip{padding-left:44px;font-size:16px;line-height:23px}
+  /* Widen, don't shorten (2026-10-12): each finding takes the full width, its meaning on the next line */
+  figure.w5a.ax-w5tab > .w5t,figure.w5a.ax-w5tab > .w5t.first{grid-template-columns:minmax(0,1fr);margin-left:0}
+  figure.w5a .ax-w5h{display:none}
+  figure.w5a.ax-w5tab .w5t > .w5b,figure.w5a.ax-w5tab .w5t.first > .w5b{grid-column:1;grid-row:auto;margin-top:10px;padding:12px 14px 8px;border-radius:12px 12px 0 0}
+  figure.w5a.ax-w5tab .w5b.ax-solo{border-radius:12px}
+  figure.w5a.ax-w5tab .w5o{font-size:16px;line-height:22px}
+  figure.w5a.ax-w5tab .w5f > .w5fd,figure.w5a.ax-w5tab .w5f > .w5fd.f1,figure.w5a.ax-w5tab .w5f > .w5fd.fl{grid-column:1;padding:10px 14px 2px;font-size:14.5px;line-height:20px}
+  figure.w5a.ax-w5tab .w5f > .w5m,figure.w5a.ax-w5tab .w5f > .w5m.f1,figure.w5a.ax-w5tab .w5f > .w5m.fl{grid-column:1;padding:0 14px 10px 30px;font-size:15px;line-height:21px;border-top:0;border-radius:0}
+  figure.w5a.ax-w5tab .w5f > .w5m::before{content:"\2192\00a0";margin-left:-16px;color:var(--accent)}
+  figure.w5a.ax-w5tab .w5f > .w5m.fl{border-radius:0 0 12px 12px}
+}
+
+/* ---- 3. mnemonics: one card, the acronym on top, the capital centered in a tinted column ---- */
+.brief h5.ax-mnh{margin:18px 0 0;padding:10px 16px;border-radius:16px 16px 0 0;background:var(--row-tint);box-shadow:0 0 0 1px var(--hair);
+  font:800 15px/20px var(--sans);letter-spacing:1px;color:var(--ink)}
+.brief dl.rows.mnem.ax-mn{--mn-tint:var(--confirm-bg);margin-top:0;border-radius:0 0 16px 16px;overflow:hidden;box-shadow:0 0 0 1px var(--hair)}
+.brief dl.rows.mnem.ax-mn.ax-mn-solo{border-radius:16px}
+.brief dl.rows.mnem.ax-mn:not(.mn-wide){--mnw:44px;background-image:linear-gradient(90deg,var(--confirm-bg) 0 44px,transparent 44px)!important}
+.brief dl.rows.mnem.ax-mn.mn-wide{background-image:linear-gradient(90deg,var(--confirm-bg) 0 var(--mnw),transparent var(--mnw))!important}
+.brief dl.rows.mnem.ax-mn:not(.mn-wide) > dt{padding-left:49px;text-indent:-49px}
+.brief dl.rows.mnem.ax-mn:not(.mn-wide) > dt b.mn{width:44px;min-width:44px}
+.brief dl.rows.mnem.ax-mn.mn-key:not(.mn-wide){grid-template-columns:56px minmax(0,1fr)}
+.brief dl.rows.mnem.ax-mn > dt b.mn{color:var(--confirm);text-align:center;font-weight:800;font-size:20px}
+
+/* ---- 4. desktop: the current brief's steps nest under it in the sidebar ---- */
+@media (min-width:1101px){
+  body.ax-nest .brief.bb-r{padding-left:0}
+  body.ax-nest .brief .bb-rail{display:none!important}
+  #navlinks .bb-rail.ax-nr{display:block;position:static;width:auto;margin:2px 0 8px;padding:4px 0 2px 26px}
+  #navlinks .bb-rail .bb-rt{display:none}
+  #navlinks a.axsx-c + .bb-rail.ax-nr{display:none}
+  #navlinks .bb-rl{position:relative;display:grid;gap:2px;padding-left:14px}
+  #navlinks .bb-rl::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:4px;border-radius:4px;background:rgba(24,28,30,.16)}
+  #navlinks .bb-rl .bb-fill{position:absolute;left:0;top:4px;width:4px;height:0;max-height:calc(100% - 8px);border-radius:4px;background:var(--accent);
+    box-shadow:0 0 8px rgba(var(--acc-rgb),.55);transition:height .55s var(--spr,ease)}
+  #navlinks .bb-rl a{display:grid;grid-template-columns:20px minmax(0,1fr);align-items:center;gap:4px;min-height:34px;padding:0 10px;border-radius:11px;
+    text-decoration:none;color:var(--ink);font:500 14px/18px var(--sans);background:none;box-shadow:none}
+  #navlinks .bb-rl a b{font:700 12px/1 var(--sans);color:var(--muted)}
+  #navlinks .bb-rl a:hover{background:var(--row-tint)}
+  #navlinks .bb-rl a.cur{background:rgba(255,255,255,.95);color:var(--ink);font-weight:700;
+    box-shadow:inset 0 0 0 1.5px rgba(var(--acc-rgb),.55),0 4px 16px rgba(var(--acc-rgb),.24);transition:background .3s ease,box-shadow .3s ease}
+  #navlinks .bb-rl a.cur b{color:var(--accent)}
+  #navlinks .bb-rl a.off{opacity:.45;pointer-events:none}
+  #navlinks .bb-rl a:not(:has(b)){grid-template-columns:minmax(0,1fr);padding-left:34px}
+  [data-theme="dark"] #navlinks .bb-rl::before{background:rgba(255,255,255,.16)}
+  [data-theme="dark"] #navlinks .bb-rl a.cur{background:rgba(255,255,255,.10)}
+}
+
+/* ---- 5. Phase 1 items deferred at the s136 ship ---- */
+@media (max-width:640px){
+  /* phone table cards: each label sits above its value, so the value takes the card's full width (Widen, don't shorten) */
+  .tw table.dense tbody:not(.first) td:not(:first-child):not([data-label="Order"]){padding-left:0}
+  .tw table.dense tbody:not(.first) td:not(:first-child):not([data-label="Order"])::before{float:none;width:auto;margin:0 0 2px;padding-top:0}
+  /* the practice filter: labels never wrap inside a segment */
+  .bktools .bkseg.bkfilter{flex-wrap:wrap;row-gap:2px}
+  .bktools .bkseg.bkfilter button{flex:1 1 auto;white-space:nowrap}
+}
+/* urgent-risk findings: a bold finding line keeps normal leading (it was inline in a loosely spaced row) */
+.brief.sp .sp-row > b.sp-f{display:block;line-height:1.42}
+/* the scroll-edge blur under the toolbar: a taller, softer fade in the theme's own canvas color */
+@media (min-width:1101px){
+  #axedge{height:96px;background:linear-gradient(color-mix(in srgb,var(--canvas-a) 90%,transparent),color-mix(in srgb,var(--canvas-a) 0%,transparent));
+    -webkit-mask-image:linear-gradient(#000 30%,rgba(0,0,0,.5) 62%,transparent);mask-image:linear-gradient(#000 30%,rgba(0,0,0,.5) 62%,transparent)}
+}
+/* the phone Review sheet dims the page behind it */
+@media (max-width:900px){
+  #axrv:not([hidden]){box-shadow:var(--glass-edge-2),0 0 0 100vmax rgba(0,0,0,.32)}
+}
+[data-theme="dark"] figure.w5a > .w5z,[data-theme="dark"] figure.w5a .w5skip .w5z{color:var(--ink)}

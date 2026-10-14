@@ -1,50 +1,32 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s135-s136",
+ "id": "s137",
  "open": true,
- "plan_step": "s136",
+ "plan_step": "s137",
  "roles": [
-  "acc-review",
-  "read-review",
   "display-review",
-  "flag-review",
-  "acc-fix",
-  "wording-fix",
-  "apply",
-  "answerer"
+  "read-review",
+  "acc-review",
+  "flag-review"
  ],
- "max_agents": 19,
- "max_calls": 186,
- "max_tokens": 24767265,
- "set_by": "Jonathan: s135 \"32 agents, 240 API calls, 26M tokens\" (2026-10-13) and s136 \"4 agents, 40 API calls, 3M tokens (display review only)\" (2026-10-14); s135 folded into s136 2026-10-14 (\"Merge now, finish as one\")",
+ "max_agents": 6,
+ "max_calls": 60,
+ "max_tokens": 4000000,
+ "set_by": "Jonathan: s137 \"Budget for the whole batch: 6 agents, 60 API calls, 4M tokens (display review only)\" (2026-10-14)",
  "previous": {
-  "id": "s136-probe",
+  "id": "s137-probe",
   "agents": 1,
   "calls": 5,
-  "tokens": 398498
+  "tokens": 396832,
+  "note": "standing allowance: T1 to T4, T8, T9 passed live 2026-10-14"
  },
- "opened": "2026-10-14 01:10",
- "note": "one wave for the combined branch in the s136 container; caps = s135 remainder (16, 158, 21,809,265) + the s136 budget (4, 40, 3,000,000). Report each batch against its own budget: s136 so far 1 agent (display r1-chrome), 12 calls, about 42k tokens; container 3 (2026-10-14 01:35): caps set to the remainder after the s136 container (19 agents, 186 calls, 24,767,265); s136-probe (container 3, standing allowance): T1 to T4, T8, T9 passed live, 1 agent, 5 calls, 398,498 tokens",
+ "opened": "2026-10-14 05:55",
+ "note": "site layout Phase 2 (spine renderer); display review only",
  "batch_budgets": {
-  "s135": {
-   "agents": 32,
-   "calls": 240,
-   "tokens": 26000000,
-   "spent_before_this_container": {
-    "agents": 16,
-    "calls": 82,
-    "tokens": 4190735
-   }
-  },
-  "s136": {
-   "agents": 4,
-   "calls": 40,
-   "tokens": 3000000,
-   "spent_before_this_container": {
-    "agents": 1,
-    "calls": 12,
-    "tokens": 42000
-   }
+  "s137": {
+   "agents": 6,
+   "calls": 60,
+   "tokens": 4000000
   }
  }
 }
