@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "</head>",
+   "with": "<style id=\"ax-s138\">\n/* s138: the Timing strip in Recall. Each dot's place on the axis repeats the masked \"when\" (the Differential's\n   Decides-it timing), so in Recall the strip drops its axis, stems and dots and lists the events, each \"when\" masked\n   (runbook section 3: mask the repeat, never delete it). */\nbody.study .brief.sp .sp-on-ax{display:none}\nbody.study .brief.sp .sp-on-f{height:auto}\nbody.study .brief.sp .sp-on-ev > li{position:static;left:auto;bottom:auto;width:auto;height:auto;padding:8px 0;border-top:1px solid var(--hair)}\nbody.study .brief.sp .sp-on-ev > li:first-child{border-top:0}\nbody.study .brief.sp .sp-on-ev > li::before,body.study .brief.sp .sp-on-ev > li::after{display:none}\nbody.study .brief.sp .sp-on-ev > li > div{position:static;transform:none;max-width:none;padding:0;background:none;box-shadow:none}\nbody.study .brief.sp .sp-on-ev > li > div > *{white-space:normal}\n</style>\n</head>",
+   "note": "s138 Recall: the Timing strip lists its events with each \"when\" masked (display review MED, ssri-effects and antipsych-effects round 1)"
+  }
+ ]
+}

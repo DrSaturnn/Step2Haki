@@ -50,6 +50,8 @@ _nb = CP.parse('Verdict: PASS-IF\nReplacements:\n1. old: salt restriction, which
 expect('brace-less replacements parsed', _nb == ('PASS-IF', [(1, 'salt restriction, which would', 'salt restriction, since a diet would'), (2, 'x y', 'x z')]))
 expect('brace-less: new on a later line only', CP.parse('Verdict: PASS-IF\nReplacements:\n1. old: a b\n\n   new: a c\n')[1] == [])
 expect('braces still win', CP.parse('Verdict: PASS-IF\nReplacements:\n1. old: {{a b}}\n   new: {{a c}}\n')[1] == [(1, 'a b', 'a c')])
+# s138: an ambiguous replacement with a string id (verify's pool ids are 'part.n') reports instead of crashing
+expect('ambiguous with a string id', 'ambiguous' in str(CP.undo('x y x y', [('read.1', 'a', 'x y')], 'html')[2]))
 
 # ---- hard rules: text only, numbers, length
 expect('markup refused', CP.hard_problems('a <b>b</b>', 'a b'))

@@ -138,7 +138,7 @@ def undo(text, reps, kind):
         for fo_new, fo_old in zip(forms(new, kind), forms(old, kind)):
             c = text.count(fo_new)
             if c > 1:
-                return text, applied, 'replacement %d is ambiguous (its new text occurs %d times)' % (n, c)
+                return text, applied, 'replacement %s is ambiguous (its new text occurs %d times)' % (n, c)
             if c == 1:
                 hit = (fo_new, fo_old)
                 break
