@@ -316,6 +316,84 @@
     }
    ],
    "added": "s139"
+  },
+  {
+   "name": "Persistent depressive disorder",
+   "aliases": [
+    "dysthymia"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1484792678762
+    }
+   ],
+   "added": "s140"
+  },
+  {
+   "name": "Prolonged grief disorder",
+   "aliases": [
+    "persistent complex bereavement disorder"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1582314277747
+    }
+   ],
+   "added": "s140"
+  },
+  {
+   "name": "Major depressive disorder with peripartum onset",
+   "aliases": [
+    "postpartum depression"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1484792779139
+    }
+   ],
+   "added": "s140"
+  },
+  {
+   "name": "Major depressive disorder with seasonal pattern",
+   "aliases": [
+    "seasonal affective disorder"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1522180219828
+    }
+   ],
+   "added": "s140"
+  },
+  {
+   "name": "Secondary erythrocytosis",
+   "aliases": [
+    "secondary polycythemia"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1473385295319
+    }
+   ],
+   "added": "s140"
+  },
+  {
+   "name": "Transient synovitis",
+   "aliases": [
+    "toxic synovitis"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1517249029650
+    }
+   ],
+   "added": "s140"
   }
  ]
 }

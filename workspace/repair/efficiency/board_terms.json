@@ -29,6 +29,21 @@
   "mood stabilizer",
   "valproate"
  ],
+ "copd": [
+  "alpha-1 antitrypsin",
+  "asthma",
+  "chronic bronchitis",
+  "chronic obstructive",
+  "COPD",
+  "emphysema",
+  "exacerbation",
+  "FEV1",
+  "home oxygen",
+  "inhaled corticosteroid",
+  "LAMA",
+  "pulmonary rehabilitation",
+  "spirometry"
+ ],
  "delirium": [
   "acute confusional",
   "alcohol withdrawal",
@@ -44,6 +59,22 @@
   "sexual pain",
   "vaginismus",
   "vulvodynia"
+ ],
+ "mdd": [
+  "adjustment disorder",
+  "bereavement",
+  "depression",
+  "depressive episode",
+  "dysthymia",
+  "electroconvulsive",
+  "grief",
+  "major depressive",
+  "peripartum",
+  "persistent depressive",
+  "seasonal pattern",
+  "SIGECAPS",
+  "SSRI",
+  "suicide risk"
  ],
  "panic": [
   "agoraphobia",
@@ -79,6 +110,18 @@
   "schizophrenia",
   "schizophreniform",
   "substance-induced psychotic"
+ ],
+ "scfe": [
+  "frog-leg",
+  "hip pain",
+  "in situ",
+  "knee pain",
+  "Legg-Calve-Perthes",
+  "Perthes",
+  "SCFE",
+  "septic arthritis",
+  "slipped capital",
+  "transient synovitis"
  ],
  "somatic": [
   "conversion disorder",
