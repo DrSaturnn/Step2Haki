@@ -20,7 +20,7 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
 - **Open batch: s140 (R5 batch 5)**, launched 2026-10-14 (cloud session). Briefs: mdd (psych/MDD), copd (fm/COPD), scfe
   (peds/SCFE). Budget: 12 agents, 80 API calls, 5.5M tokens (WAVE.json open). Branch: claude/step2haki-batch-s140-esidy4
   (the session's assigned branch, in place of wip/s140). Record: repair/s140/S140.md.
-- **Step:** S3 done (staged builds repair/s140/10 to 12; all MECHANICAL PASS; legib 0). Next: S4 review round 1.
+- **Step:** S4 running: round 1, 7 lean reviewers (acc-mdd, acc-cs on opus; read x3, flags x3, display per brief on sonnet), lanes repair/efficiency/lanes/s140/r1 (local). Next: S5.
 - **Spend:** 0 agents, 0 calls, 0 tokens.
 - **Launch decisions:** clone and hook install allowed ("Yes"); wip/s135 to wip/s139: "Noted" (Jonathan deletes them on GitHub).
 - **Open small items:** carried from s139 (see repair/s139/S139.md and OPEN_WORK).
