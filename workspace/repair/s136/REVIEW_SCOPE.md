@@ -24,6 +24,17 @@ below. Do not judge clinical content or wording.
 7. **Sidebar:** light glass (not the old dark sidebar) with a visible edge; the selected brief is a white pill;
    systems fold and unfold. The desktop section rail keeps its fill ending at the highlighted step, now in the accent.
 
+8. **Dark theme and Tinted glass** (Jonathan 2026-10-14). A Dark theme switch and, under it, a Tinted glass switch
+   (the dark theme with accent-tinted, translucent cards and glass panels over a deep tinted canvas, like Apple's tinted
+   Liquid Glass). Text must read at least as well as in light; nothing may stay light-on-light or dark-on-dark.
+9. **Review in the status bar** (Jonathan 2026-10-14: "reinvent the brief review and login with pin using the same
+   apple ios 27 stylized look and put it on the top status bar"; 3 recommended briefs, not 5; no total briefs count).
+   The old sidebar Review tile and masthead card are gone. A Review pill sits at the right of the glass toolbar
+   (avatar initials, a due badge only when reviews are due). It opens one glass sheet: who is studying (round avatars;
+   a passcode pad when the name has a PIN), the 3 briefs a session will review, Start review, Quiz me instead. On
+   phone the bar's Review button opens the same sheet from the bottom.
+10. **Study is renamed Recall** (Recall mode hides answers for active recall; Review is the spaced-repetition session).
+
 Out of scope (Phase 2, do not report as missing): workup tables, timelines, vertical mnemonics in the renderer,
 "Next best step" wording, numbered workup zones, MCQ restyle beyond colors, phone layout changes beyond what the CSS
 carries (but do report anything on phone that Phase 1 broke).
