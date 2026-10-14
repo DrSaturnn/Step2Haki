@@ -2,6 +2,23 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-14 s136: s135 + s136: tics, panic, peds-sleep, sz-psychosocial reviewed (READY); site look Phase 1: accent setting, Dark theme and Tinted glass, glass toolbar with the Review sheet (3 briefs a session, passcode pad), Study renamed Recall
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (4):
+  - tics (Tics and Tic Disorders): items edited (q_680ca34e827e516c9a90, q_7b955ba5483e524c9908, q_c04a5b7c0b9458c5a156, q_7f29f6e3d9b55a11837d, q_11071c3e784a5dac9722, q_a94ac1ab85b156bb8084); versions bumped (q_680ca34e827e516c9a90 v1->v2, q_7b955ba5483e524c9908 v1->v2, q_c04a5b7c0b9458c5a156 v2->v3, q_7f29f6e3d9b55a11837d v1->v2, q_11071c3e784a5dac9722 v1->v2, q_a94ac1ab85b156bb8084 v1->v2); attrs set (q_7b955ba5483e524c9908 data-d1; q_c04a5b7c0b9458c5a156 data-d1); prose edited (+2718 chars)
+  - peds-sleep (Sleep Problems): items edited (q_26f8dc21ddf18546e058); versions bumped (q_26f8dc21ddf18546e058 v1->v3, q_78ad3230cd19ba5a4681 v1->v2); prose edited (+3962 chars)
+  - sz-psychosocial (Schizophrenia: Long-Term Care): items edited (q_4c64032d1e4c534c6782, q_b50c3ec605ca3faf50ee, q_4a4edd58a7fdd308d09f); versions bumped (q_b50c3ec605ca3faf50ee v2->v3, q_4a4edd58a7fdd308d09f v2->v3); prose edited (+2955 chars)
+  - panic (Panic Disorder and Other Anxiety): items edited (q_9cb0cb9bbe901f8d82c3, q_9882ee4e5ed520e497ed, q_b6fe551a76fe31c35481, q_417bf3e7befaa83ad1f7, q_a29e571adb123e184e79, q_ce5106b02de93c0f3359); versions bumped (q_9cb0cb9bbe901f8d82c3 v2->v3, q_b6fe551a76fe31c35481 v2->v3); prose edited (+2059 chars)
+Other page changes (nav, headers, scripts): +176100 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 15 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 199/200 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (797449 source shingles; page 0.015%)
+```
+
 ## 2026-10-13 s134: s134: Lithium Therapy rebuilt on the decision spine (5a workup, board range 0.6 to 1.2, aspirin and sulindac exceptions, valproate in kidney disease, cap cuts listed); hematuria other names, option C in the bank, mesna prevents, hypercalciuria a major cause; masked caution cells neutral in study mode. Both briefs verify READY.
 
 ```
