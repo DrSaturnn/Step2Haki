@@ -17,23 +17,17 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
 ## State (rewrite after every step)
 
 - **Plan:** v4 (repair/efficiency/SPINE_SCALE_PLAN.md; project copy claude/SPINE_SCALE_PLAN.md). Glance plan: claude/pending/GLANCE_LAYOUT_PLAN.md.
-- **No batch open.** WAVE.json closed.
-- **Last batch: s139 (R5 batch 4), SHIPPED 2026-10-14** (Jonathan: "ship"). Commit 39d1846 on main. Record:
-  repair/s139/S139.md. READY and live: psychosis-duration, bipolar-mania, delirium, substance (receipts in local-only
-  spine/reviews: bipolar-mania at r1, the other three at r2; all in step2haki-private). Deploy check: Jonathan confirms
-  version.json shows {"build":"s139"}.
-- **Open small items:** fold settled digest lines into STANDING_DIRECTIONS (runbook S9, carried again); s139 deferred
-  LOWs (the note under a 5a workup sits tight against the next heading on phone: a site-style fix that stales display
-  receipts; substance "h" vs "hours"; bipolar-mania DIGFAST "3 hours" not in the claim map); s138 deferred LOWs (each
-  folder's adjudication.md); s134 lithium-effects 6 hover cuts restorable; ready_gate's folder glob misses
-  repair/migration/merge/hematuria/s134; hematuria s134 build.py anchor drift; kawasaki CRASH card blank line (LOW); the
-  "Stack" Practice switch measures 1.03 contrast in flat mode (pre-existing).
+- **Open batch: s140 (R5 batch 5)**, launched 2026-10-14 (cloud session). Briefs: mdd (psych/MDD), copd (fm/COPD), scfe
+  (peds/SCFE). Budget: 12 agents, 80 API calls, 5.5M tokens (WAVE.json open). Branch: claude/step2haki-batch-s140-esidy4
+  (the session's assigned branch, in place of wip/s140). Record: repair/s140/S140.md.
+- **Step:** launch done (private repo cloned and restored; hooks installed, test_hooks 80/80; context 72,647). Next: S1.
+- **Spend:** 0 agents, 0 calls, 0 tokens.
+- **Launch decisions:** clone and hook install allowed ("Yes"); wip/s135 to wip/s139: "Noted" (Jonathan deletes them on GitHub).
+- **Open small items:** carried from s139 (see repair/s139/S139.md and OPEN_WORK).
 - **Cloud lessons (s139):** the session's auto-mode check holds the private-repo clone and the hook install until
   Jonathan allows them (ask at launch); branch deletion pushes are refused (403); round 1 Opus acc reviewers cost about
   1.6M tokens per pair (they read whole claim maps); give display reviewers about 20 images each and the 5a and glance
-  rules (now in RULES.md); never set a follow-up Budget below 4 per brief plus 2 (the s139 flags reviewer ran out at 10).
-- **Branches:** wip/s135 to wip/s139 are merged into main; Jonathan said delete s135 to s138 (s139 launch), but the cloud
-  session cannot delete branches (403): delete them on GitHub.
+  rules (now in RULES.md); never set a follow-up Budget below 4 per brief plus 2.
 - **Live:** s139 (39d1846). **main:** the s139 log commit.
 
 ## Next launch prompt (paste into a fresh chat)
