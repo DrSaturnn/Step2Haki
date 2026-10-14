@@ -190,6 +190,55 @@
     }
    ],
    "added": "s135"
+  },
+  {
+   "name": "Factitious disorder",
+   "aliases": [
+    "Munchausen syndrome"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1484966311023
+    }
+   ],
+   "added": "s138"
+  },
+  {
+   "name": "Factitious disorder imposed on another",
+   "aliases": [
+    "Munchausen syndrome by proxy",
+    "factitious disorder by proxy"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1484966315921
+    }
+   ],
+   "added": "s138"
+  },
+  {
+   "name": "Genito-pelvic pain/penetration disorder",
+   "aliases": [
+    "vaginismus",
+    "dyspareunia"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1541982337918
+    },
+    {
+     "kind": "anking",
+     "nid": 1571704271425
+    },
+    {
+     "kind": "dsm",
+     "ref": "DSM-5-TR"
+    }
+   ],
+   "added": "s138"
   }
  ]
 }

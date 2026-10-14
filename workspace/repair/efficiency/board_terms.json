@@ -1,5 +1,30 @@
 {
  "_doc": "Extra board_index search terms per brief id (tools/spine/board_index.py terms).",
+ "antipsych-effects": [
+  "acute dystonia",
+  "agranulocytosis",
+  "akathisia",
+  "antipsychotic",
+  "antipsychotics",
+  "benztropine",
+  "clozapine",
+  "drug-induced parkinsonism",
+  "dystonic",
+  "haloperidol",
+  "hyperprolactinemia",
+  "metabolic syndrome",
+  "neuroleptic malignant syndrome",
+  "olanzapine",
+  "tardive dyskinesia",
+  "valbenazine"
+ ],
+ "gppd": [
+  "dyspareunia",
+  "female sexual",
+  "sexual pain",
+  "vaginismus",
+  "vulvodynia"
+ ],
  "panic": [
   "agoraphobia",
   "anxiety disorder",
@@ -23,6 +48,30 @@
   "sleep terror",
   "sleepwalking",
   "somnambulism"
+ ],
+ "somatic": [
+  "conversion disorder",
+  "factitious",
+  "functional neurological",
+  "illness anxiety",
+  "malingering",
+  "psychogenic nonepileptic",
+  "somatic symptom disorder"
+ ],
+ "ssri-effects": [
+  "citalopram",
+  "discontinuation syndrome",
+  "escitalopram",
+  "fluoxetine",
+  "fluvoxamine",
+  "paroxetine",
+  "serotonin syndrome",
+  "sertraline",
+  "sexual dysfunction",
+  "SIADH",
+  "SSRI",
+  "SSRIs",
+  "tamoxifen"
  ],
  "sz-psychosocial": [
   "antipsychotic adherence",

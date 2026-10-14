@@ -46,6 +46,10 @@ def parse(txt):
     if blk:
         for m in re.finditer(r'(\d+)\.\s*old:\s*\{\{(.*?)\}\}\s*new:\s*\{\{(.*?)\}\}', blk.group(1), re.S):
             reps.append((int(m.group(1)), m.group(2), m.group(3)))
+        if not reps:  # s138: a receipt that drops the {{ }}: one line each, old and new on consecutive lines
+            for m in re.finditer(r'^\s*(\d+)\.\s*old:[ \t]*(\S[^\n]*?)[ \t]*\n[ \t]*new:[ \t]*(\S[^\n]*?)[ \t]*$',
+                                 blk.group(1), re.M):
+                reps.append((int(m.group(1)), m.group(2), m.group(3)))
     return (v.group(1) if v else None), reps
 
 

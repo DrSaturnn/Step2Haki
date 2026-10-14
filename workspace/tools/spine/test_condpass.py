@@ -45,6 +45,11 @@ expect('verdict PASS-IF parsed', v == 'PASS-IF')
 expect('two replacements parsed', len(reps) == 2 and reps[0][1] == 'loop diuretic as in rung 1')
 expect('section after the block is not swallowed', 'everything' not in reps[-1][2])
 expect('plain PASS parsed', CP.parse('Verdict: PASS\n')[0] == 'PASS')
+# s138: a receipt without {{ }} (one line each) still parses; braces win when both appear; a broken pair does not parse
+_nb = CP.parse('Verdict: PASS-IF\nReplacements:\n1. old: salt restriction, which would\n   new: salt restriction, since a diet would\n2. old: x y\n   new: x z\n\nChecked and fine:\nok\n')
+expect('brace-less replacements parsed', _nb == ('PASS-IF', [(1, 'salt restriction, which would', 'salt restriction, since a diet would'), (2, 'x y', 'x z')]))
+expect('brace-less: new on a later line only', CP.parse('Verdict: PASS-IF\nReplacements:\n1. old: a b\n\n   new: a c\n')[1] == [])
+expect('braces still win', CP.parse('Verdict: PASS-IF\nReplacements:\n1. old: {{a b}}\n   new: {{a c}}\n')[1] == [(1, 'a b', 'a c')])
 
 # ---- hard rules: text only, numbers, length
 expect('markup refused', CP.hard_problems('a <b>b</b>', 'a b'))
