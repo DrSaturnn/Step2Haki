@@ -50,10 +50,6 @@ Already READY: tics, panic, peds-sleep, sz-psychosocial, nephrotic-child, (s138)
 somatic, gppd, lithium-effects, and (s139) psychosis-duration, bipolar-mania, delirium, substance (and hematuria,
 non-spine). s140 is the launch prompt above.
 
-```
-Step2Haki: launch batch s140 (R5 batch 5) per claude/BATCH_RUNBOOK.md. Briefs: mdd, copd, scfe. Budget for the whole batch: 12 agents, 90 API calls, 6M tokens.
-```
-
 After s140 all 17 spine briefs are READY and Phase R ends; the next work is Phase 2 (plan section 8: unconverted briefs by
 cluster), whose first cluster Jonathan picks.
 
