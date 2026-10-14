@@ -2,6 +2,24 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-14 s138: R5 batch 3: ssri-effects, antipsych-effects, somatic, gppd reviewed to READY; lithium-effects glance rebuild; Recall Timing strip
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (5):
+  - ssri-effects (SSRI Adverse Effects): prose edited (-1421 chars)
+  - antipsych-effects (Antipsychotic Adverse Effects): items edited (q_5767bd34d02b3f5c6815, q_88405a87430f4dd7cc33, q_45e139406bc970cec766); versions bumped (q_5767bd34d02b3f5c6815 v1->v2, q_88405a87430f4dd7cc33 v1->v2, q_45e139406bc970cec766 v1->v2); attrs set (q_5767bd34d02b3f5c6815 data-d1,data-d2); prose edited (-2896 chars)
+  - lithium-effects (Lithium Therapy): prose edited (+2004 chars)
+  - gppd (Genito-Pelvic Pain/Penetration Disorder): items edited (q_b589ce7156cbdcaf0964, q_d42d568cc568fd7b9fd1); versions bumped (q_b589ce7156cbdcaf0964 v2->v3, q_d42d568cc568fd7b9fd1 v2->v3, q_d1aaef1d03d23fe24820 v2->v3); prose edited (+3204 chars)
+  - somatic (Somatic Symptom and Related Disorders): items edited (q_3f2655878b250699d54c, q_a9ec8e5d780518bfa4bc); versions bumped (q_3f2655878b250699d54c v1->v2, q_76289d3ca800d14c7d43 v1->v2, q_a9ec8e5d780518bfa4bc v1->v2, q_d544ca14ebedd4a91745 v1->v2); attrs set (q_76289d3ca800d14c7d43 data-d2); prose edited (+5238 chars)
+Other page changes (nav, headers, scripts): +1726 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 16 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 199/200 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.015%)
+```
+
 ## 2026-10-14 s137: site layout Phase 2 display layer: numbered workup tables, Next best step, mnemonic cards, nested sidebar steps, phone label lists and mnemonic rows, deferred Phase 1 fixes
 
 ```
