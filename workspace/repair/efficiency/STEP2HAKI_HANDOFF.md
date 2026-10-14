@@ -20,13 +20,17 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
 - **Open batch: s139 (R5 batch 4)**, launched 2026-10-14 in Claude Code on the web. Briefs: psychosis-duration,
   bipolar-mania, delirium, substance. Budget: 16 agents, 120 API calls, 8M tokens (WAVE.json open). Spend: 0 agents,
   0 calls (lead only).
-- **Step: S1 (board evidence).** Launch done: decisions in the digest (branches: delete, refused by GitHub 403, so
-  they stay; follow-up cap about 4 per brief plus 2, runbook S7 and STANDING_DIRECTIONS updated; set per launch with the
-  Budget: line under the role's 25); WAVE.json open; step2haki-private cloned to /home/user/step2haki-private and
-  local-only restored with cp -rn (Jonathan: "allow clone and hook install"); hooks installed (/home/claude and
-  /root/.claude settings), offline tests 80/80; context check no WARNING (lead 72,327); lean-reviewer listed. Folders:
-  psychosis-duration P1, bipolar-mania N1, delirium N2, substance TOX (psych/<code>/spine; parked fix r1 builds of
-  2026-10-10 after holistic r1 FAIL, never re-reviewed).
+- **Step: S4 (review round 1), launching.** S1 to S3 done (2026-10-14): boards.md, adjudication.md (and cuts.json for
+  P1, TOX) in each psych/<code>/spine folder; board facts added (P1 pbk1-3, N1 bmk1-6, N2 dlk1-2, TOX txk1-8); all four
+  workups converted to 5a; other names (5 new ALIASES entries). Words (build counter): psychosis-duration 1,354,
+  bipolar-mania 1,202, delirium 1,344, substance 1,357 (cap 1,300, 5% limit 1,365). verify full: all four MECHANICAL PASS
+  (gate, render, preflight P1 0, vendor 0, numbers 0). legib_audit 0 below contrast except the live "Stack" switch (flat;
+  pre-existing); fixed the delirium masked caution cell (mask outside sp-cw, s138 pattern) and dropped sp-cw on the
+  substance naltrexone 7-day cell (4.46); desk captures vary run to run (4 runs, no node failed twice). Staged:
+  repair/s139/10 to 13 (copy again after each fix). R1 lanes: repair/efficiency/lanes/s139/r1/A (psychosis-duration,
+  bipolar-mania) and B (delirium, substance); plan: acc, read, flags one per pair (6), display one per brief (4).
+  Earlier launch notes: decisions in the digest; branches delete refused (403); hooks installed (/home/claude and
+  /root/.claude), 80/80; lean-reviewer listed; Python Playwright 1.56.0 installed.
 - **Last batch: s138 (R5 batch 3), SHIPPED 2026-10-14**, commit 399b3ee. Record: repair/s138/S138.md.
 - **Open small items:** as in s138 (repair/s138/S138.md): fold settled digest lines into STANDING_DIRECTIONS; s138
   deferred LOWs; s134 lithium-effects hover cuts restorable; ready_gate glob misses repair/migration/merge/hematuria/s134;
