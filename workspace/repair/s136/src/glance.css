@@ -185,9 +185,10 @@ dl.rows.mnem.mn-wide > dt b.mn{width:var(--mnw);min-width:var(--mnw)}
    kept Dark and added this): the dark theme with accent-tinted, translucent surfaces over a deep tinted canvas, the way
    Apple's tinted Liquid Glass reads. Text tokens stay the dark theme's. */
 [data-theme="dark"][data-glass="tinted"],[data-theme="dark"] [data-glass="tinted"]{
+  --muted:#B7B7C3;
   --canvas-a:color-mix(in srgb,var(--accent) 16%,#0E1016);--canvas-b:color-mix(in srgb,var(--accent) 24%,#12141B);
   --porcelain:color-mix(in srgb,var(--accent) 12%,rgba(24,26,33,.72));
-  --card:color-mix(in srgb,var(--accent) 13%,rgba(30,33,42,.64));--raised:color-mix(in srgb,var(--accent) 11%,rgba(28,31,40,.66));
+  --card:color-mix(in srgb,var(--accent) 10%,rgba(22,24,31,.72));--raised:color-mix(in srgb,var(--accent) 9%,rgba(21,23,30,.74));
   --recess:color-mix(in srgb,var(--accent) 9%,rgba(8,9,13,.42));--recess-2:color-mix(in srgb,var(--accent) 9%,rgba(8,9,13,.50));
   --hair:rgba(255,255,255,.13);--row-tint:rgba(255,255,255,.055);
   --glass:color-mix(in srgb,var(--accent) 20%,rgba(26,29,38,.50));--glass-2:color-mix(in srgb,var(--accent) 16%,rgba(24,27,36,.88));
@@ -196,5 +197,7 @@ dl.rows.mnem.mn-wide > dt b.mn{width:var(--mnw);min-width:var(--mnw)}
 html[data-theme="dark"][data-glass="tinted"]{background:radial-gradient(1200px 700px at 78% -10%,color-mix(in srgb,var(--accent) 30%,transparent),transparent 70%),linear-gradient(160deg,var(--canvas-a),var(--canvas-b)) fixed}
 [data-theme="dark"][data-glass="tinted"] .rvbtn,[data-theme="dark"] [data-glass="tinted"] .rvbtn{background-color:transparent !important}
 html[data-theme="dark"][data-glass="tinted"] body{background:transparent !important}
-html[data-theme="dark"][data-glass="tinted"] .brief{background-image:linear-gradient(145deg,color-mix(in srgb,var(--accent) 15%,rgba(30,33,43,.62)) 0%,color-mix(in srgb,var(--accent) 9%,rgba(22,24,32,.70)) 100%) !important;-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4)}
-html[data-theme="dark"][data-glass="tinted"] .tw tbody tr{background:color-mix(in srgb,var(--accent) 12%,rgba(30,33,42,.66)) !important}
+html[data-theme="dark"][data-glass="tinted"] .brief{background-image:linear-gradient(145deg,color-mix(in srgb,var(--accent) 12%,rgba(24,26,34,.66)) 0%,color-mix(in srgb,var(--accent) 7%,rgba(18,20,27,.74)) 100%) !important;-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4)}
+html[data-theme="dark"][data-glass="tinted"] .tw tbody tr{background:color-mix(in srgb,var(--accent) 10%,rgba(22,24,31,.72)) !important}
+/* light theme: the pause-point label a shade deeper on its tint (legib 4.44:1 on tics, container 3) */
+html:not([data-theme="dark"]) .brief.sp .sp-pause > b:first-child{color:color-mix(in srgb,var(--caution) 86%,#000)}

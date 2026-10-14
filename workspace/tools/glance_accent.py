@@ -24,8 +24,8 @@ import sys
 
 ACCENTS = [  # (key, name, hex): Jonathan 2026-10-14; Slate is the default. Two of his hexes are a little darker here so
     # their labels keep 4.5:1 with margin on the darkest accent tint they sit on (the bottom line's), measured by
-    # legib_audit s136: Indigo #5856D6 -> #504ED4 (was 4.31:1 there), Rose #B0306A -> #AA2E66 (was 4.49:1).
-    ('slate', 'Slate', '#3B5B8C'), ('indigo', 'Indigo', '#504ED4'), ('purple', 'Purple', '#544AC4'),
+    # legib_audit s136: Indigo #5856D6 -> #504ED4 (was 4.31:1 there), then #4A48C6 (container 3: the small bottom-line label on backpain's tint, 3.3:1 measured), Rose #B0306A -> #AA2E66 (was 4.49:1).
+    ('slate', 'Slate', '#3B5B8C'), ('indigo', 'Indigo', '#4A48C6'), ('purple', 'Purple', '#544AC4'),
     ('navy', 'Navy', '#1E3A8A'), ('ocean', 'Ocean', '#1D6A8C'), ('plum', 'Plum', '#7A3B8F'),
     ('rose', 'Rose', '#AA2E66'), ('graphite', 'Graphite', '#4A5060')]
 PURPLE = '#544AC4'
