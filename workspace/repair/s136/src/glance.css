@@ -177,3 +177,6 @@ dl.rows.mnem.mn-wide > dt b.mn{width:var(--mnw);min-width:var(--mnw)}
 /* Phone table cards: a cell holding only an empty wrapper prints no orphan label (s135 sz-psychosocial display r1 LOW 2;
    the page's own td:empty rule misses <td><span></span></td>) */
 @media (max-width:640px){ .tw tbody td:has(> span:only-child:empty){display:none !important} }
+/* Dark theme: the sidebar review card is a dark surface in light mode, so it stays dark (the inverted gradient turned
+   it lavender under light text; S3 2026-10-14) */
+[data-theme="dark"] .rvbtn,[data-theme="dark"] .rvmast .rvbtn[data-due="0"]{background-image:linear-gradient(152deg,rgba(var(--acc-rgb),.34) 0%,rgba(var(--acc-rgb),.20) 58%,rgba(var(--acc-rgb),.14) 100%) !important;background-color:#202121 !important}
