@@ -19,15 +19,17 @@
      frame, then on the root, the same way the flat and study switches restyle (s92): one root-wide change restyled
      every brief at once. */
   var cur = valid(load()) ? load() : 'slate';
-  var THEME = 'ax-theme', dark = false;
-  try { dark = localStorage.getItem(THEME) === 'dark'; } catch(e){}
+  var THEME = 'ax-theme', dark = false, tint = false;
+  try { var tv = localStorage.getItem(THEME); dark = tv === 'dark' || tv === 'tinted'; tint = tv === 'tinted'; } catch(e){}
   if(cur !== 'slate') root.setAttribute('data-axa', cur);
   if(dark) root.setAttribute('data-theme', 'dark');
+  if(tint) root.setAttribute('data-glass', 'tinted');   // tinted glass (Jonathan 2026-10-14): dark plus accent-tinted translucent surfaces
   /* Each region carries both attributes while a switch walks the page, so the dark accent rule (which needs both on
      one element or the theme on an ancestor) always matches. */
   function mark(c){
     if(cur === 'slate') c.removeAttribute('data-axa'); else c.setAttribute('data-axa', cur);
     if(dark) c.setAttribute('data-theme', 'dark'); else c.removeAttribute('data-theme');
+    if(tint) c.setAttribute('data-glass', 'tinted'); else c.removeAttribute('data-glass');
   }
   function markRoot(){ mark(root); }
   var queue = [], busy = false;
@@ -64,17 +66,20 @@
     if(!valid(k) || k === cur) return;
     cur = k; save(k); paintSetting(); walkAll();
   }
-  function setDark(on){
-    if(on === dark) return;
-    dark = on; try { localStorage.setItem(THEME, on ? 'dark' : 'light'); } catch(e){}
+  function setTheme(d, t){
+    t = d && t;
+    if(d === dark && t === tint) return;
+    dark = d; tint = t; try { localStorage.setItem(THEME, t ? 'tinted' : (d ? 'dark' : 'light')); } catch(e){}
     paintSetting(); walkAll();
   }
-  var box = null, darkBtn = null;
+  function setDark(on){ setTheme(on, on && tint); }
+  var box = null, darkBtn = null, tintBtn = null;
   function paintSetting(){
     if(!box) return;
     box.querySelectorAll('.axsw').forEach(function(b){ var on = b.getAttribute('data-k') === cur; b.setAttribute('aria-checked', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; });
     var a = valid(cur); box.querySelector('.axan').textContent = a ? a[1] : '';
     if(darkBtn) darkBtn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    if(tintBtn) tintBtn.setAttribute('aria-pressed', tint ? 'true' : 'false');
   }
   function setting(){
     var modes = document.getElementById('modes'); if(!modes || modes.querySelector('.axacc')) return;
@@ -82,6 +87,10 @@
     darkBtn.innerHTML = '<span class="track"><span class="knob"></span></span><span class="nm">DARK THEME</span>';
     var flat = modes.querySelector('.flatt'); if(flat) flat.after(darkBtn); else modes.appendChild(darkBtn);
     darkBtn.addEventListener('click', function(){ setDark(!dark); });
+    tintBtn = document.createElement('button'); tintBtn.type = 'button'; tintBtn.className = 'dark tint';
+    tintBtn.innerHTML = '<span class="track"><span class="knob"></span></span><span class="nm">TINTED GLASS</span>';
+    darkBtn.after(tintBtn);
+    tintBtn.addEventListener('click', function(){ setTheme(true, !tint); });
     box = document.createElement('div'); box.className = 'axacc'; box.setAttribute('role', 'radiogroup'); box.setAttribute('aria-label', 'Accent color');
     var h = '<span class="nm">ACCENT</span>';
     ACC.forEach(function(a){ h += '<button type="button" class="axsw" role="radio" data-k="' + a[0] + '" title="' + a[1] + '" aria-label="' + a[1] + '" style="--sw:' + a[2] + '"></button>'; });

@@ -166,8 +166,8 @@ def prefix(sel):
 def dark_css(css):
     lines, last = [], None
     for ctx, sel, body in blocks(css):
-        if sel.strip() == ':root' or sel.startswith('@'):
-            continue
+        if sel.strip() == ':root' or sel.startswith('@') or 'data-theme' in sel:
+            continue   # a rule already written for the dark theme is not repeated (s136: tinted glass, review card)
         decls = []
         for d in split_top(body, ';'):
             if ':' not in d:
@@ -211,6 +211,7 @@ def test():
         print(('ok   ' if cond else 'FAIL ') + name)
         ok &= bool(cond)
     _t = dark_css('figure.lcw:not(.lcc){--card:#FCFCFC;--x:0%;padding:0}')
+    chk('a rule already scoped to the dark theme is not repeated', dark_css('[data-theme="dark"] .x{color:#FFFFFF}') == '')
     chk('a component token holding a color is repeated for dark; other tokens are not',
         '--card:' in _t and '--x' not in _t and '#FCFCFC' not in _t.upper())
     canvas = invert([239, 240, 240])

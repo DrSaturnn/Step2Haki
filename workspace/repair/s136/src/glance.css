@@ -180,3 +180,20 @@ dl.rows.mnem.mn-wide > dt b.mn{width:var(--mnw);min-width:var(--mnw)}
 /* Dark theme: the sidebar review card is a dark surface in light mode, so it stays dark (the inverted gradient turned
    it lavender under light text; S3 2026-10-14) */
 [data-theme="dark"] .rvbtn,[data-theme="dark"] .rvmast .rvbtn[data-due="0"]{background-image:linear-gradient(152deg,rgba(var(--acc-rgb),.34) 0%,rgba(var(--acc-rgb),.20) 58%,rgba(var(--acc-rgb),.14) 100%) !important;background-color:#202121 !important}
+
+/* Tinted glass (Jonathan 2026-10-14: "dark mode was supposed to match apples tinted liquid glass rather than dark dark";
+   kept Dark and added this): the dark theme with accent-tinted, translucent surfaces over a deep tinted canvas, the way
+   Apple's tinted Liquid Glass reads. Text tokens stay the dark theme's. */
+[data-theme="dark"][data-glass="tinted"],[data-theme="dark"] [data-glass="tinted"]{
+  --canvas-a:color-mix(in srgb,var(--accent) 16%,#0E1016);--canvas-b:color-mix(in srgb,var(--accent) 24%,#12141B);
+  --porcelain:color-mix(in srgb,var(--accent) 12%,rgba(24,26,33,.72));
+  --card:color-mix(in srgb,var(--accent) 13%,rgba(30,33,42,.64));--raised:color-mix(in srgb,var(--accent) 11%,rgba(28,31,40,.66));
+  --recess:color-mix(in srgb,var(--accent) 9%,rgba(8,9,13,.42));--recess-2:color-mix(in srgb,var(--accent) 9%,rgba(8,9,13,.50));
+  --hair:rgba(255,255,255,.13);--row-tint:rgba(255,255,255,.055);
+  --glass:color-mix(in srgb,var(--accent) 20%,rgba(26,29,38,.50));--glass-2:color-mix(in srgb,var(--accent) 16%,rgba(24,27,36,.88));
+  --glass-edge:inset 0 1px 0 rgba(255,255,255,.16),0 0 0 1px rgba(255,255,255,.12),0 12px 36px rgba(0,0,0,.5);
+  --glass-edge-2:inset 0 1px 0 rgba(255,255,255,.18),0 0 0 .5px rgba(255,255,255,.14),0 18px 48px rgba(0,0,0,.55)}
+html[data-theme="dark"][data-glass="tinted"]{background:radial-gradient(1200px 700px at 78% -10%,color-mix(in srgb,var(--accent) 30%,transparent),transparent 70%),linear-gradient(160deg,var(--canvas-a),var(--canvas-b)) fixed}
+[data-theme="dark"][data-glass="tinted"] .rvbtn,[data-theme="dark"] [data-glass="tinted"] .rvbtn{background-color:transparent !important}
+html[data-theme="dark"][data-glass="tinted"] body{background:transparent !important}
+html[data-theme="dark"][data-glass="tinted"] .brief{background-image:linear-gradient(145deg,color-mix(in srgb,var(--accent) 15%,rgba(30,33,43,.62)) 0%,color-mix(in srgb,var(--accent) 9%,rgba(22,24,32,.70)) 100%) !important;-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4)}
