@@ -208,3 +208,6 @@ html[data-theme="dark"][data-glass="tinted"] .brief :is(.tw,.mcq,.rrow,.rule,.w5
 [data-theme="dark"] #modes .axacc .axsw:not([aria-checked="true"]){box-shadow:inset 0 0 0 1px rgba(255,255,255,.24)}
 /* Tinted glass: the phone brief bar is solid enough that text never runs through it (s136 r2 MED 2) */
 html[data-theme="dark"][data-glass="tinted"] .brief .bb-bar{background:color-mix(in srgb,var(--accent) 12%,#15171E) !important;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+/* Tinted glass: practice answer options and the phone bottom bar take the tint too (s136 r4 MED, LOW) */
+html[data-theme="dark"][data-glass="tinted"] .brief .mcq button{background-image:linear-gradient(145deg,color-mix(in srgb,var(--accent) 12%,rgba(28,30,38,.86)) 0%,color-mix(in srgb,var(--accent) 7%,rgba(22,24,31,.90)) 100%) !important}
+html[data-theme="dark"][data-glass="tinted"] #mbar{background:color-mix(in srgb,var(--accent) 12%,#15171E) !important}
