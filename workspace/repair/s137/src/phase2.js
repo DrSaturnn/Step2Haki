@@ -47,6 +47,10 @@
       var h = dl.previousElementSibling;
       if(h && h.tagName === 'H5' && !h.classList.contains('tsec')) h.classList.add('ax-mnh');
       else dl.classList.add('ax-mn-solo');
+      /* every term is its capital alone (LMNOP): phone keeps letter and description on one row */
+      var bare = true;
+      dl.querySelectorAll(':scope > dt').forEach(function(dt){ var m = dt.querySelector('b.mn'); if(!m || dt.textContent.trim() !== m.textContent.trim()) bare = false; });
+      if(bare) dl.classList.add('ax-mn-bare');
     });
   }
 

@@ -15,11 +15,11 @@
  "max_tokens": 9000000,
  "set_by": "Jonathan: s137 \"6 agents, 60 API calls, 4M tokens (display review only)\", raised 2026-10-14 06:48 for the lithium-effects layout rebuild (\"Layout only\": about 12 agents, 110 calls, 9M)",
  "previous": {
-  "id": "s137-probe",
+  "id": "s137-probe2",
   "agents": 1,
   "calls": 5,
-  "tokens": 396832,
-  "note": "standing allowance: T1 to T4, T8, T9 passed live 2026-10-14"
+  "tokens": 396371,
+  "note": "standing allowance: T1 to T4, T8, T9 passed live again in container 4, 2026-10-14 07:42"
  },
  "opened": "2026-10-14 05:55",
  "note": "site layout Phase 2 display layer plus the lithium-effects glance layout rebuild (live reviewed text only)",

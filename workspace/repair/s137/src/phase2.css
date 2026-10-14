@@ -51,6 +51,7 @@ figure.w5a.ax-w5tab .w5f > *{transition:filter .22s}
   figure.w5a > .w5z,figure.w5a .w5skip .w5z{margin-left:44px;font-size:18px;line-height:24px}
   figure.w5a > .w5z::before,figure.w5a .w5skip .w5z::before{left:-44px;width:30px;height:30px;line-height:30px;font-size:14px}
   figure.w5a .w5skip{padding-left:44px;font-size:16px;line-height:23px}
+  figure.w5a .w5skip .w5z{margin-left:0}   /* the Skip zone's padding already places it (s137 review: it sat 44 px further in) */
   /* Widen, don't shorten (2026-10-12): each finding takes the full width, its meaning on the next line */
   figure.w5a.ax-w5tab > .w5t,figure.w5a.ax-w5tab > .w5t.first{grid-template-columns:minmax(0,1fr);margin-left:0}
   figure.w5a .ax-w5h{display:none}
@@ -74,6 +75,19 @@ figure.w5a.ax-w5tab .w5f > *{transition:filter .22s}
 .brief dl.rows.mnem.ax-mn:not(.mn-wide) > dt b.mn{width:44px;min-width:44px}
 .brief dl.rows.mnem.ax-mn.mn-key:not(.mn-wide){grid-template-columns:56px minmax(0,1fr)}
 .brief dl.rows.mnem.ax-mn > dt b.mn{color:var(--confirm);text-align:center;font-weight:800;font-size:20px}
+
+/* phone: the term row takes the full width (letter in the tinted column, the rest of the word beside it) and its
+   description sits beneath, past the column (Widen, don't shorten; the two-column grid split words, s137 review) */
+@media (max-width:640px){
+  .brief dl.rows.mnem.ax-mn{grid-template-columns:minmax(0,1fr)!important}
+  .brief dl.rows.mnem.ax-mn > dt,.brief dl.rows.mnem.ax-mn:not(.mn-wide) > dt{grid-column:1;padding-left:calc(var(--mnw,44px) + 5px);
+    text-indent:calc(-5px - var(--mnw,44px))}
+  .brief dl.rows.mnem.ax-mn > dt b.mn{width:var(--mnw,44px);min-width:var(--mnw,44px);text-indent:0}
+  .brief dl.rows.mnem.ax-mn > dd{grid-column:1;padding-top:2px;padding-left:calc(var(--mnw,44px) + 5px)}
+  .brief dl.rows.mnem.ax-mn.ax-mn-bare{grid-template-columns:var(--mnw,44px) minmax(0,1fr)!important}
+  .brief dl.rows.mnem.ax-mn.ax-mn-bare > dt{grid-column:1;padding-left:0;text-indent:0}
+  .brief dl.rows.mnem.ax-mn.ax-mn-bare > dd{grid-column:2;padding-top:10px;padding-left:12px}
+}
 
 /* ---- 4. desktop: the current brief's steps nest under it in the sidebar ---- */
 @media (min-width:1101px){
@@ -181,4 +195,18 @@ figure.w5a.ax-w5tab .w5f > *{transition:filter .22s}
   .brief.sp .sp-trk > li{display:grid;grid-template-columns:32px minmax(0,1fr);column-gap:12px;align-items:start;padding:6px 0;text-align:left}
   .brief.sp .sp-trk > li::before{grid-row:1 / span 2}
   .brief.sp .sp-trk b{margin-top:5px}
+}
+
+/* ---- 7. s137 review fixes ---- */
+.brief .ax-nw{white-space:nowrap}   /* keeps a pointer and its parentheses on one line */
+/* a drawer chip under a table row label: clear the label's descenders */
+.brief.sp td > .sp-drw{margin-top:8px}
+/* the treatment ladder card and the table card after it no longer touch */
+.brief.sp .sp-ladder + .sp-dx{margin-top:16px}
+@media (max-width:640px){
+  /* label and value lists (criteria, ladders, follow-up rows): the label sits above its value at full width on phone,
+     as the table cards do (Widen, don't shorten) */
+  .brief dl.rows:not(.mnem){grid-template-columns:minmax(0,1fr)!important}
+  .brief dl.rows:not(.mnem) > dt{grid-column:1;padding-bottom:0}
+  .brief dl.rows:not(.mnem) > dd{grid-column:1;padding-top:3px;border-top:0}
 }
