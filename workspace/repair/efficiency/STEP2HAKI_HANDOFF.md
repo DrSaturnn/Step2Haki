@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-14, by the s139 lead (launch, paused before S1; Claude Code on the web, no Mac).
+Last updated: 2026-10-14, by the s139 lead (s139 SHIPPED, commit 39d1846; Claude Code on the web, no Mac).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -10,40 +10,45 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
-Batch s139 is open (State below).
+No batch is open. The next batch starts from the launch prompt below.
 
 The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.md) gives the read order, the steps, the standing calls and the one final report.
 
 ## State (rewrite after every step)
 
 - **Plan:** v4 (repair/efficiency/SPINE_SCALE_PLAN.md; project copy claude/SPINE_SCALE_PLAN.md). Glance plan: claude/pending/GLANCE_LAYOUT_PLAN.md.
-- **Open batch: s139 (R5 batch 4)**, launched 2026-10-14 in Claude Code on the web. Briefs: psychosis-duration,
-  bipolar-mania, delirium, substance. Budget: 16 agents, 120 API calls, 8M tokens (WAVE.json open). Spend: 0 agents,
-  0 calls (lead only).
-- **Step: S8 presented, waiting for "ship".** All four READY (R1 10 reviewers, R2 5). approval.py present s139: 4 files,
-  156 screenshots, page 685b56e470d9 (the record is in this container; "ship" must come to this chat). Spend: 15 of 16
-  agents, 97 of 120 calls, 6.51M of 8M tokens. Record: repair/s139/S139.md. Next on "ship": ship.sh s139 with AX_SESSION,
-  then S9 (OPEN_WORK, log commit, private repo, handoff, ledger row, fold digest lines).
-- **Last batch: s138 (R5 batch 3), SHIPPED 2026-10-14**, commit 399b3ee. Record: repair/s138/S138.md.
-- **Open small items:** as in s138 (repair/s138/S138.md): fold settled digest lines into STANDING_DIRECTIONS; s138
-  deferred LOWs; s134 lithium-effects hover cuts restorable; ready_gate glob misses repair/migration/merge/hematuria/s134;
-  hematuria s134 build.py anchor drift; kawasaki CRASH card blank line (LOW); "Stack" switch 1.03 contrast in flat mode.
-- **Branches:** wip/s135 to wip/s138: Jonathan said delete (s139 launch); the delete push was refused (403), so they
-  still exist. wip/s139 holds this batch's launch commits.
-- **Live:** s138 (399b3ee).
+- **No batch open.** WAVE.json closed.
+- **Last batch: s139 (R5 batch 4), SHIPPED 2026-10-14** (Jonathan: "ship"). Commit 39d1846 on main. Record:
+  repair/s139/S139.md. READY and live: psychosis-duration, bipolar-mania, delirium, substance (receipts in local-only
+  spine/reviews: bipolar-mania at r1, the other three at r2; all in step2haki-private). Deploy check: Jonathan confirms
+  version.json shows {"build":"s139"}.
+- **Open small items:** fold settled digest lines into STANDING_DIRECTIONS (runbook S9, carried again); s139 deferred
+  LOWs (the note under a 5a workup sits tight against the next heading on phone: a site-style fix that stales display
+  receipts; substance "h" vs "hours"; bipolar-mania DIGFAST "3 hours" not in the claim map); s138 deferred LOWs (each
+  folder's adjudication.md); s134 lithium-effects 6 hover cuts restorable; ready_gate's folder glob misses
+  repair/migration/merge/hematuria/s134; hematuria s134 build.py anchor drift; kawasaki CRASH card blank line (LOW); the
+  "Stack" Practice switch measures 1.03 contrast in flat mode (pre-existing).
+- **Cloud lessons (s139):** the session's auto-mode check holds the private-repo clone and the hook install until
+  Jonathan allows them (ask at launch); branch deletion pushes are refused (403); round 1 Opus acc reviewers cost about
+  1.6M tokens per pair (they read whole claim maps); give display reviewers about 20 images each and the 5a and glance
+  rules (now in RULES.md); never set a follow-up Budget below 4 per brief plus 2 (the s139 flags reviewer ran out at 10).
+- **Branches:** wip/s135 to wip/s139 are merged into main; Jonathan said delete s135 to s138 (s139 launch), but the cloud
+  session cannot delete branches (403): delete them on GitHub.
+- **Live:** s139 (39d1846). **main:** the s139 log commit.
 
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s139 (R5 batch 4) per claude/BATCH_RUNBOOK.md. Briefs: psychosis-duration, bipolar-mania, delirium, substance. Budget for the whole batch: 16 agents, 120 API calls, 8M tokens.
-1. Delete wip/s135, wip/s136, wip/s137 and wip/s138 (merged into main): yes or no.
-2. Follow-up reviewers that cover several briefs get about 4 calls per brief plus 2 instead of a flat 10: yes or no.
+Step2Haki: launch batch s140 (R5 batch 5) per claude/BATCH_RUNBOOK.md. Briefs: mdd, copd, scfe. Budget for the whole batch: 12 agents, 80 API calls, 5.5M tokens.
+1. At launch, allow the private-repo clone and the hook install (the cloud permission check holds both): yes or no.
+2. Delete wip/s139 (merged into main) along with s135 to s138, on GitHub (the cloud session cannot): noted, or keep.
 ```
 
 ## Planned batches after s138 (Phase R: the rest of the 17 spine briefs to READY; lead's proposal 2026-10-14, launch prompts ready)
 
-Already READY: tics, panic, peds-sleep, sz-psychosocial, nephrotic-child, and (s138) ssri-effects, antipsych-effects,
-somatic, gppd, lithium-effects (and hematuria, non-spine). s139 is the launch prompt above.
+Already READY: tics, panic, peds-sleep, sz-psychosocial, nephrotic-child, (s138) ssri-effects, antipsych-effects,
+somatic, gppd, lithium-effects, and (s139) psychosis-duration, bipolar-mania, delirium, substance (and hematuria,
+non-spine). s140 is the launch prompt above.
 
 ```
 Step2Haki: launch batch s140 (R5 batch 5) per claude/BATCH_RUNBOOK.md. Briefs: mdd, copd, scfe. Budget for the whole batch: 12 agents, 90 API calls, 6M tokens.
