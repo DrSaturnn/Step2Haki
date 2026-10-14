@@ -133,7 +133,12 @@
     bar.querySelector('[data-m="read"]').setAttribute('aria-pressed', document.body.classList.contains('study') ? 'false' : 'true');
     bar.querySelector('[data-m="study"]').setAttribute('aria-pressed', document.body.classList.contains('study') ? 'true' : 'false');
   }
-  function kick(){ if(!raf) raf = requestAnimationFrame(paintBar); }
+  var late = 0;
+  function kick(){
+    if(!raf) raf = requestAnimationFrame(paintBar);
+    // the section rail marks its current link in its own frame after a scroll; paint once more after it settles
+    clearTimeout(late); late = setTimeout(paintBar, 160);
+  }
   function toolbar(){
     if(document.getElementById('axbar')) return;
     var edge = document.createElement('div'); edge.id = 'axedge'; edge.setAttribute('aria-hidden', 'true');
