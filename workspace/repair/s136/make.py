@@ -74,12 +74,31 @@ def lighten_for_dark(h):
 
 
 used = sorted(set(re.findall(r'--axh-([0-9A-F]{6})', acc['tokens_css'])))
+# axh tokens the page uses only as text color (S3 2026-10-14); the others are tints, borders and shadows
+TEXT_AXH = {t for t in used if re.search(r'(?<![-a-z])color\s*:[^;{}]*var\(--axh-%s\)' % t, head_css)
+            and not re.search(r'(background|border|shadow|outline)[a-z-]*\s*:[^;{}]*var\(--axh-%s\)' % t, head_css)}
+
+
+def text_for_dark(c, acc_rgb):
+    hh, l, s_ = colorsys.rgb_to_hls(*[v / 255 for v in c])
+    bgs = [dark_card, [x * 0.82 + y * 0.18 for x, y in zip(dark_canvas, acc_rgb)], [46, 53, 61]]
+    for k in range(0, 80):
+        o = [v * 255 for v in colorsys.hls_to_rgb(hh, min(0.95, l + k * 0.01), s_)]
+        if all((GD.lum(o) + 0.05) / (GD.lum(g) + 0.05) >= 5.0 for g in bgs):
+            return o
+    return o
 acc_css = []
 for key, name, h in GA.ACCENTS:
     a = lighten_for_dark(h)
     d = ['--accent:%s' % GD.fmt(a, 1), '--acc-rgb:%d,%d,%d' % tuple(round(v) for v in a),
          '--accent-bg:%s' % GD.fmt([c * 0.82 + x * 0.18 for c, x in zip(dark_canvas, a)], 1)]
-    d += ['--axh-%s:%s' % (t, GD.fmt(GD.invert(GA.rgb(GA.follow('#' + t, h))), 1)) for t in used]
+    for t in used:
+        c = GD.invert(GA.rgb(GA.follow('#' + t, h)))
+        if t in TEXT_AXH and GD.lum(GA.rgb(GA.follow('#' + t, h))) < 0.25:
+            # a dark text color in light mode (S3 2026-10-14: bottom-line bold items were 3.5:1 in dark indigo):
+            # lighten its dark form to the same targets as the accent
+            c = text_for_dark(c, a)
+        d.append('--axh-%s:%s' % (t, GD.fmt(c, 1)))
     sel = '[data-theme="dark"]' if key == 'slate' else '[data-theme="dark"][data-axa="%s"],[data-theme="dark"] [data-axa="%s"]' % (key, key)
     acc_css.append(sel + '{' + ';'.join(d) + '}')
 dark = ('\n/* ---- dark theme (Jonathan 2026-10-14): tokens, then every color rule repeated for dark (tools/glance_dark.py) ---- */\n'

@@ -60,13 +60,20 @@ reword it within these rules), and say in Findings why you reject any.
 def item_line(m):
     a = P.attrs(m.group(1))
     lead = a.get('data-lead-in', '')
-    return '\n[item %s, type %s] Lead-in: %s\n' % (a.get('data-item-id', '?'), a.get('data-type', '?'), lead or '(none)')
+    opts = [a.get(k) for k in ('data-d1', 'data-d2') if a.get(k)]
+    # s135 S5 packet error: the receipts could not check distractors, so the item line names them (the key is the first bold)
+    return '\n[item %s, type %s] Lead-in: %s%s\n' % (a.get('data-item-id', '?'), a.get('data-type', '?'), lead or '(none)',
+                                                    ('; distractors: ' + ' / '.join(opts)) if opts else '')
 
 
 def text_of(brief_html):
     x = re.sub(r'<(script|style)[^>]*>.*?</\1>', '', brief_html, flags=re.S)
     x = re.sub(r'(<li\b[^>]*data-item-id="[^"]+"[^>]*>)', lambda m: item_line(m), x)
     x = re.sub(r'<button[^>]*class="[^"]*sp-pop[^"]*"[^>]*>(.*?)</button>', r'[hover: \1]', x, flags=re.S)
+    # s135 S5 packet error: arrow and operator glyphs are empty role="img" spans, so the text lost them ("decline over the
+    # first 5 years then plateaus" was read without its arrow); write each as the glyph or its label
+    x = re.sub(r'<span[^>]*role="img"[^>]*aria-label="([^"]+)"[^>]*>\s*</span>',
+               lambda m: {'leads to': ' \u2192 ', 'and': ' + ', 'plus': ' + '}.get(m.group(1), ' [%s] ' % m.group(1)), x)
     x = re.sub(r'<span class="mask[^"]*">', '[masked in study mode: ', x)
     x = re.sub(r'</(p|li|div|tr|h\d|figure|caption)>|<br\s*/?>', '\n', x)
     x = re.sub(r'</t[dh]>', ' | ', x)
@@ -88,7 +95,7 @@ def legacy_flags(cm, txt):
         n += 1
         out.append('X1 %s: "%s"' % (c.get('id', '?'), (c.get('new_text') or c.get('text') or '')[:300]))
         for s in srcs:
-            out.append('   - [%s] %s: %s' % (s.get('id', ''), s.get('source', '')[:140], (s.get('source_says') or '')[:400]))
+            out.append('   - [%s] %s: %s' % (s.get('id', ''), s.get('source', '')[:140], (s.get('source_says') or '')[:1500]))   # s135 S5: 400 cut the mszProg quote
         out.append('')
     warn = [l.strip() for l in txt.splitlines() if '\u26a0' in l]
     out.append('Unverified (warning-sign) lines: %d' % len(warn))
