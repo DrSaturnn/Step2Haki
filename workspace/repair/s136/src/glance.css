@@ -211,3 +211,6 @@ html[data-theme="dark"][data-glass="tinted"] .brief .bb-bar{background:color-mix
 /* Tinted glass: practice answer options and the phone bottom bar take the tint too (s136 r4 MED, LOW) */
 html[data-theme="dark"][data-glass="tinted"] .brief .mcq button{background-image:linear-gradient(145deg,color-mix(in srgb,var(--accent) 12%,rgba(28,30,38,.86)) 0%,color-mix(in srgb,var(--accent) 7%,rgba(22,24,31,.90)) 100%) !important}
 html[data-theme="dark"][data-glass="tinted"] #mbar{background:color-mix(in srgb,var(--accent) 12%,#15171E) !important}
+/* light theme: the small bottom-line label a shade deeper than the accent, so its 9.5 px capitals hold contrast on the
+   accent tint for every accent (legib, container 3: Indigo measured 3.7:1 on panic and backpain) */
+html:not([data-theme="dark"]) .dp > span.lbl{color:color-mix(in srgb,var(--accent) 78%,#000)}
