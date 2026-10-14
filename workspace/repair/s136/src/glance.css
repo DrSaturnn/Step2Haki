@@ -191,7 +191,7 @@ dl.rows.mnem.mn-wide > dt b.mn{width:var(--mnw);min-width:var(--mnw)}
   --card:color-mix(in srgb,var(--accent) 10%,rgba(22,24,31,.72));--raised:color-mix(in srgb,var(--accent) 9%,rgba(21,23,30,.74));
   --recess:color-mix(in srgb,var(--accent) 9%,rgba(8,9,13,.42));--recess-2:color-mix(in srgb,var(--accent) 9%,rgba(8,9,13,.50));
   --hair:rgba(255,255,255,.13);--row-tint:rgba(255,255,255,.055);
-  --glass:color-mix(in srgb,var(--accent) 20%,rgba(26,29,38,.50));--glass-2:color-mix(in srgb,var(--accent) 16%,rgba(24,27,36,.88));
+  --glass:color-mix(in srgb,var(--accent) 18%,rgba(22,25,33,.80));--glass-2:color-mix(in srgb,var(--accent) 14%,rgba(22,25,33,.96));
   --glass-edge:inset 0 1px 0 rgba(255,255,255,.16),0 0 0 1px rgba(255,255,255,.12),0 12px 36px rgba(0,0,0,.5);
   --glass-edge-2:inset 0 1px 0 rgba(255,255,255,.18),0 0 0 .5px rgba(255,255,255,.14),0 18px 48px rgba(0,0,0,.55)}
 html[data-theme="dark"][data-glass="tinted"]{background:radial-gradient(1200px 700px at 78% -10%,color-mix(in srgb,var(--accent) 30%,transparent),transparent 70%),linear-gradient(160deg,var(--canvas-a),var(--canvas-b)) fixed}
@@ -201,3 +201,8 @@ html[data-theme="dark"][data-glass="tinted"] .brief{background-image:linear-grad
 html[data-theme="dark"][data-glass="tinted"] .tw tbody tr{background:color-mix(in srgb,var(--accent) 10%,rgba(22,24,31,.72)) !important}
 /* light theme: the pause-point label a shade deeper on its tint (legib 4.44:1 on tics, container 3) */
 html:not([data-theme="dark"]) .brief.sp .sp-pause > b:first-child{color:color-mix(in srgb,var(--caution) 86%,#000)}
+/* Tinted glass: the neutral component cards (tables, practice cards, rule boxes, the first workup band) take the tint
+   too, so Slate and Indigo differ and nothing reads as an opaque neutral block (s136 display r2-desk MED 3) */
+html[data-theme="dark"][data-glass="tinted"] .brief :is(.tw,.mcq,.rrow,.rule,.w5t.first){background-image:linear-gradient(145deg,color-mix(in srgb,var(--accent) 11%,rgba(24,26,34,.74)) 0%,color-mix(in srgb,var(--accent) 6%,rgba(18,20,27,.80)) 100%) !important}
+/* dark themes: every accent swatch keeps a visible edge (Graphite vanished on the tinted sidebar) */
+[data-theme="dark"] #modes .axacc .axsw:not([aria-checked="true"]){box-shadow:inset 0 0 0 1px rgba(255,255,255,.24)}
