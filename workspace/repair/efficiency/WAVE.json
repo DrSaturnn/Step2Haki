@@ -7,12 +7,13 @@
   "display-review",
   "read-review",
   "acc-review",
-  "flag-review"
+  "flag-review",
+  "wording-fix"
  ],
- "max_agents": 6,
- "max_calls": 60,
- "max_tokens": 4000000,
- "set_by": "Jonathan: s137 \"Budget for the whole batch: 6 agents, 60 API calls, 4M tokens (display review only)\" (2026-10-14)",
+ "max_agents": 12,
+ "max_calls": 110,
+ "max_tokens": 9000000,
+ "set_by": "Jonathan: s137 \"6 agents, 60 API calls, 4M tokens (display review only)\", raised 2026-10-14 06:48 for the lithium-effects layout rebuild (\"Layout only\": about 12 agents, 110 calls, 9M)",
  "previous": {
   "id": "s137-probe",
   "agents": 1,
@@ -21,12 +22,12 @@
   "note": "standing allowance: T1 to T4, T8, T9 passed live 2026-10-14"
  },
  "opened": "2026-10-14 05:55",
- "note": "site layout Phase 2 (spine renderer); display review only",
+ "note": "site layout Phase 2 display layer plus the lithium-effects glance layout rebuild (live reviewed text only)",
  "batch_budgets": {
   "s137": {
-   "agents": 6,
-   "calls": 60,
-   "tokens": 4000000
+   "agents": 12,
+   "calls": 110,
+   "tokens": 9000000
   }
  }
 }
