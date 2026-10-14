@@ -197,3 +197,4 @@ html[data-theme="dark"][data-glass="tinted"]{background:radial-gradient(1200px 7
 [data-theme="dark"][data-glass="tinted"] .rvbtn,[data-theme="dark"] [data-glass="tinted"] .rvbtn{background-color:transparent !important}
 html[data-theme="dark"][data-glass="tinted"] body{background:transparent !important}
 html[data-theme="dark"][data-glass="tinted"] .brief{background-image:linear-gradient(145deg,color-mix(in srgb,var(--accent) 15%,rgba(30,33,43,.62)) 0%,color-mix(in srgb,var(--accent) 9%,rgba(22,24,32,.70)) 100%) !important;-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4)}
+html[data-theme="dark"][data-glass="tinted"] .tw tbody tr{background:color-mix(in srgb,var(--accent) 12%,rgba(30,33,42,.66)) !important}

@@ -2,7 +2,7 @@
    1. Accent setting (Jonathan 2026-10-14): a reader choice under the theme switches, stored per viewer; Slate default.
       Dark theme (Jonathan 2026-10-14): a switch beside Flat theme, stored per viewer (ax-theme), light by default.
    2. Desktop hovers: open on pointer enter, close on leave, stay open once clicked (a second click closes).
-   3. Desktop glass toolbar: the current section's number and name, Read and Study, open or close every panel.
+   3. Desktop glass toolbar: the current section's number and name, Read and Recall, open or close every panel.
    4. Sidebar systems fold and unfold; the system holding the current brief opens itself. */
 (function(){
   "use strict";
@@ -176,7 +176,7 @@
     var edge = document.createElement('div'); edge.id = 'axedge'; edge.setAttribute('aria-hidden', 'true');
     bar = document.createElement('div'); bar.id = 'axbar'; bar.setAttribute('role', 'toolbar'); bar.setAttribute('aria-label', 'Brief controls');
     bar.innerHTML = '<span class="axcur" aria-live="polite"><span class="axcn"></span><span class="axcl"></span></span><span class="axsep"></span>' +
-      '<div class="axseg"><span class="axth" aria-hidden="true"></span><button type="button" data-m="read">Read</button><button type="button" data-m="study">Study</button></div>' +
+      '<div class="axseg"><span class="axth" aria-hidden="true"></span><button type="button" data-m="read">Read</button><button type="button" data-m="study">Recall</button></div>' +
       '<span class="axsep"></span><button type="button" class="axall">Expand all</button>';
     document.body.appendChild(edge); document.body.appendChild(bar);
     bar.addEventListener('click', function(e){

@@ -31,6 +31,8 @@ subprocess.run([sys.executable, os.path.join(WS, 'tools', 'glance_accent.py'), p
 acc = json.load(open(tmp))
 css = open(os.path.join(HERE, 'src', 'glance.css')).read().replace('/*@TOKENS@*/', acc['tokens_css'])
 js = open(os.path.join(HERE, 'src', 'glance.js')).read()
+js += '\n' + open(os.path.join(HERE, 'src', 'review.js')).read()
+css += '\n' + open(os.path.join(HERE, 'src', 'review.css')).read()
 
 # the page's head CSS as it will be after the accent rewrites, plus the s136 block itself
 after = page
@@ -107,7 +109,80 @@ dark = ('\n/* ---- dark theme (Jonathan 2026-10-14): tokens, then every color ru
 css = css + dark
 
 note = 's136 site layout Phase 1 (claude/pending/S136.md; Jonathan 2026-10-13 and 14)'
-edits = acc['edits'] + [
+RV = 's136 review in the status bar (Jonathan 2026-10-14)'
+AXRV = '''
+  /* s136: the status-bar Review sheet (repair/s136/src/review.js) drives this scheduler through window.axRv */
+  window.axRv={
+    current:current, nameOf:nameOf, initials:initials,
+    due:function(){ var id=current(); return id?split(id).due.length:0; },   /* scheduled reviews only, never the shelf total (Jonathan 2026-10-14) */
+    pick:function(){ var id=current(); return id?previewPick(id):[]; },
+    people:function(){
+      var mine=mineOnly(), out=[];
+      recents().forEach(function(rid){ var f=mine.filter(function(x){ return x.id===rid; })[0]; if(f) out.push(f); });
+      mine.concat(profiles().filter(function(p){ return p.remote; })).forEach(function(p){
+        if(out.length<6 && !out.some(function(x){ return x.id===p.id; })) out.push(p); });
+      return out.slice(0,6);
+    },
+    refresh:function(then){ syncRoster(function(){ syncPull(current(), function(){ paintChip(); if(then) then(); }); }); },
+    use:function(pid,then){ setActive(pid); paintChip(); syncPull(pid,function(){ paintChip(); if(then) then(); }); },
+    needsPin:function(pid){ var p=profiles().filter(function(x){ return x.id===pid; })[0]; return !!(p && p.hasPin && !p.pin); },
+    tryPin:function(pid,pin,then){
+      setPin(pid,pin);
+      syncPush(pid,function(r){
+        if(r && r.ok) return then(true);
+        setPin(pid,'');
+        then(r && r.needPin ? false : null);
+      });
+    },
+    start:function(){ var w=current(); if(w) startReview(w); },
+    quiz:function(){ var w=current(); if(w) startQuiz(w); },
+    signOut:function(){ signOut(); paintChip(); },
+    add:function(name){ var id=addProfile(name); paintChip(); return id; },
+    open:function(anchor){ openPanel(anchor); }
+  };'''
+PREVIEW = '''/* s136: the sheet shows the briefs a session will review before it starts; buildSession then reviews exactly those */
+var PREPICK=null;
+function previewPick(id){
+  var s=split(id), pick=[], kind=[];
+  var due=s.due.map(function(x){ return x.b; }), fresh=shuffle(s.fresh.slice()), later=s.later.map(function(x){ return x.b; });
+  while(pick.length<PER_SESSION && due.length)   { pick.push(due.shift()); kind.push('due'); }
+  while(pick.length<PER_SESSION && fresh.length) { pick.push(fresh.shift()); kind.push('fresh'); }
+  while(pick.length<PER_SESSION && later.length) { pick.push(later.shift()); kind.push('later'); }
+  PREPICK={id:id, list:pick};
+  return pick.map(function(b,i){ return {id:b.id, title:b.title, kind:kind[i]}; });
+}
+'''
+BS_OLD = '''function buildSession(id){
+  var s=split(id), pick=[];
+  var due=s.due.map(function(x){ return x.b; });
+  var fresh=shuffle(s.fresh.slice());
+  var later=s.later.map(function(x){ return x.b; });
+  while(pick.length<PER_SESSION && due.length)   pick.push(due.shift());
+  while(pick.length<PER_SESSION && fresh.length) pick.push(fresh.shift());
+  while(pick.length<PER_SESSION && later.length) pick.push(later.shift());   /* studying ahead */'''
+BS_NEW = PREVIEW + '''function buildSession(id){
+  var s=split(id), pick=[];
+  var due=s.due.map(function(x){ return x.b; });
+  var fresh=shuffle(s.fresh.slice());
+  var later=s.later.map(function(x){ return x.b; });
+  if(PREPICK && PREPICK.id===id){ pick=PREPICK.list.slice(); PREPICK=null; } else {
+  while(pick.length<PER_SESSION && due.length)   pick.push(due.shift());
+  while(pick.length<PER_SESSION && fresh.length) pick.push(fresh.shift());
+  while(pick.length<PER_SESSION && later.length) pick.push(later.shift());   /* studying ahead */
+  }'''
+BOOT = "  paintChip();\n  try{ syncRoster(function(){ paintChip(); }); }catch(e){ mark('off'); }"
+RVEDITS = [
+    {'op': 'replace_global', 'find': 'var PER_SESSION=5, PER_BRIEF=3;', 'with': 'var PER_SESSION=3, PER_BRIEF=3;   /* 3 briefs a session (Jonathan 2026-10-14) */', 'note': RV + ': 3 briefs a session'},
+    {'op': 'replace_global', 'find': BS_OLD, 'with': BS_NEW, 'note': RV + ': the sheet previews the session it starts'},
+    {'op': 'replace_global', 'find': BOOT, 'with': BOOT + AXRV, 'note': RV + ': window.axRv for the status-bar sheet'},
+    # Study is renamed Recall (Jonathan 2026-10-14: "may need to rename study also since that may cause some confusion"):
+    # Recall mode hides answers for active recall; Review is the spaced-repetition session
+    {'op': 'replace_global', 'find': '<span class="nm">STUDY MODE</span>', 'with': '<span class="nm">RECALL MODE</span>', 'note': RV + ': Study mode is Recall mode'},
+    {'op': 'replace_global', 'find': '\'<button type="button" data-act="study" aria-pressed="false"><span>Study</span></button>\'', 'with': '\'<button type="button" data-act="study" aria-pressed="false"><span>Recall</span></button>\'', 'note': RV + ': Study is Recall on the phone bar'},
+    {'op': 'replace_global', 'find': 'var addedUI=/STUDY MODE|', 'with': 'var addedUI=/STUDY MODE|RECALL MODE|', 'note': RV + ': Recall mode is page chrome'},
+    {'op': 'replace_global', 'find': '<span class="track"><span class="knob"></span></span>Study mode</button>', 'with': '<span class="track"><span class="knob"></span></span>Recall mode</button>', 'note': RV + ': the review bar switch reads Recall mode'},
+]
+edits = RVEDITS + acc['edits'] + [
     {'op': 'replace_global', 'find': '</head>', 'with': '<style id="ax-s136">\n' + css + '</style>\n</head>', 'note': note + ': the glance style block'},
     {'op': 'replace_global', 'find': '</script>\n</body>', 'with': '</script>\n<script>\n' + js + '</script>\n</body>', 'note': note + ': the glance script block'},
 ]

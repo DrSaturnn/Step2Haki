@@ -1,0 +1,106 @@
+/* s136: Review in the status bar (Jonathan 2026-10-14), iOS-style liquid glass. The old sidebar tile and masthead card
+   give way to a pill in the glass toolbar and one sheet; the phone bar's Review button opens the same sheet. */
+#rvlaunch,.rvmast{display:none !important}
+:root{--rv-on:#FFFFFF;--rv-key:rgba(255,255,255,.62);--rv-key-on:rgba(255,255,255,.95);--rv-sep:rgba(24,28,30,.08)}
+[data-theme="dark"][data-theme="dark"]{--rv-on:#0F1116;--rv-key:rgba(255,255,255,.10);--rv-key-on:rgba(255,255,255,.26);--rv-sep:rgba(255,255,255,.08)}
+
+/* the pill */
+#axbar .axrvb{display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 12px 0 4px;border:0;border-radius:999px;cursor:pointer;
+  background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--ink);font:650 13.5px/1 var(--sans);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 0 0 1px color-mix(in srgb,var(--accent) 22%,transparent);
+  transition:background .2s,transform .25s var(--bnc,ease)}
+#axbar .axrvb:hover{background:color-mix(in srgb,var(--accent) 20%,transparent)}
+#axbar .axrvb:active{transform:scale(.96)}
+#axbar .axrvb:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#axbar .axrvb .av{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--rv-on);
+  font:700 10.5px/1 var(--sans);letter-spacing:.02em}
+#axbar .axrvb.anon .av{background:color-mix(in srgb,var(--accent) 30%,transparent)}
+#axbar .axrvb.anon .av::before{content:"";width:11px;height:11px;border-radius:50%;box-shadow:0 0 0 1.6px var(--rv-on);
+  -webkit-mask:radial-gradient(circle at 50% 30%,#000 32%,transparent 33%),radial-gradient(ellipse 60% 45% at 50% 108%,#000 98%,transparent 100%);
+          mask:radial-gradient(circle at 50% 30%,#000 32%,transparent 33%),radial-gradient(ellipse 60% 45% at 50% 108%,#000 98%,transparent 100%);background:var(--rv-on)}
+#axbar .axrvb .bd{min-width:20px;height:20px;padding:0 6px;border-radius:999px;display:grid;place-items:center;background:var(--accent);color:var(--rv-on);font:700 11px/1 var(--sans)}
+
+/* the sheet */
+#axrv{position:fixed;z-index:240;width:368px;max-width:calc(100vw - 24px);max-height:calc(100vh - 96px);overflow:auto;
+  padding:16px;border-radius:30px;color:var(--ink);
+  background:var(--glass-2);-webkit-backdrop-filter:blur(32px) saturate(1.8);backdrop-filter:blur(32px) saturate(1.8);
+  box-shadow:var(--glass-edge-2);animation:axrvIn .38s var(--spr,ease) both;transform-origin:top right}
+#axrv[hidden]{display:none}
+@keyframes axrvIn{from{opacity:0;transform:scale(.94) translateY(-6px)}to{opacity:1;transform:none}}
+#axrv .axrv-grab{display:none}
+#axrv .rvh{display:flex;align-items:center;gap:12px;margin:2px 2px 14px}
+#axrv .rvh.center{flex-direction:column;text-align:center;gap:8px;margin:6px 0 10px}
+#axrv .rvh .av{flex:0 0 auto;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--accent);color:var(--rv-on);
+  font:700 15px/1 var(--sans);box-shadow:inset 0 1px 0 rgba(255,255,255,.3)}
+#axrv .rvh.center .av{width:56px;height:56px;font-size:19px}
+#axrv .who{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:3px}
+#axrv .who b{font:700 17px/1.2 var(--sans);letter-spacing:-.01em}
+#axrv .who small{font:500 13px/1.3 var(--sans);color:var(--muted)}
+#axrv .rvx{flex:0 0 auto;width:30px;height:30px;border:0;border-radius:50%;cursor:pointer;background:var(--rv-key);position:relative}
+#axrv .rvx::before,#axrv .rvx::after{content:"";position:absolute;left:9px;top:14px;width:12px;height:2px;border-radius:1px;background:var(--muted);transform:rotate(45deg)}
+#axrv .rvx::after{transform:rotate(-45deg)}
+#axrv .rvk{margin:0 6px 7px;font:600 12.5px/1 var(--sans);color:var(--muted)}
+#axrv .rvl{list-style:none;margin:0 0 14px;padding:0;border-radius:18px;background:var(--rv-key);overflow:hidden;
+  box-shadow:inset 0 0 0 .5px var(--rv-sep)}
+#axrv .rvl li{display:flex;align-items:center;gap:11px;padding:12px 14px;margin:0;position:relative}
+#axrv .rvl li + li::before{content:"";position:absolute;top:0;left:47px;right:0;height:1px;background:var(--rv-sep)}
+#axrv .rvl .n{flex:0 0 auto;width:23px;height:23px;border-radius:50%;display:grid;place-items:center;font:700 12px/1 var(--sans);
+  color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent)}
+#axrv .rvl .t{flex:1 1 auto;min-width:0;font:600 14.5px/1.3 var(--sans)}
+#axrv .rvl .tg{flex:0 0 auto;padding:4px 8px;border-radius:999px;font:700 10.5px/1 var(--sans);letter-spacing:.03em;color:var(--muted);background:var(--rv-sep)}
+#axrv .rvl .tg.due{color:var(--caution);background:var(--caution-bg)}
+#axrv .rvl .tg.fresh{color:var(--confirm);background:var(--confirm-bg)}
+#axrv .rvgo,#axrv .rvalt{display:block;width:100%;height:48px;margin:0 0 8px;border:0;border-radius:999px;cursor:pointer;
+  font:650 15.5px/1 var(--sans);letter-spacing:-.005em;transition:transform .25s var(--bnc,ease),filter .2s}
+#axrv .rvgo{background:var(--accent);color:var(--rv-on);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 8px 20px -10px color-mix(in srgb,var(--accent) 80%,transparent)}
+#axrv .rvalt{background:color-mix(in srgb,var(--accent) 13%,transparent);color:var(--accent)}
+#axrv .rvgo:hover,#axrv .rvalt:hover{filter:brightness(1.06)}
+#axrv .rvgo:active,#axrv .rvalt:active{transform:scale(.97)}
+#axrv .rvgo[disabled]{opacity:.38;cursor:default;transform:none}
+#axrv .rvgo:focus-visible,#axrv .rvalt:focus-visible,#axrv .k:focus-visible,#axrv .pp:focus-visible,#axrv .rvf button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#axrv .rvf{display:flex;justify-content:space-between;gap:8px;margin:6px 4px 0}
+#axrv .rvf button{border:0;background:none;cursor:pointer;padding:6px 2px;font:600 13px/1 var(--sans);color:var(--accent)}
+#axrv .rvnote{margin:4px 6px 14px;color:var(--muted);font:500 14px/1.4 var(--sans)}
+/* who is studying */
+#axrv .rvpp{display:grid;grid-template-columns:repeat(3,1fr);gap:12px 8px;margin:4px 0 14px}
+#axrv .pp{display:flex;flex-direction:column;align-items:center;gap:7px;border:0;background:none;cursor:pointer;padding:6px 2px;border-radius:18px;color:var(--ink)}
+#axrv .pp:hover{background:var(--rv-key)}
+#axrv .pp .av{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:var(--accent);color:var(--rv-on);
+  font:700 19px/1 var(--sans);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 8px 18px -10px rgba(0,0,0,.5);transition:transform .3s var(--bnc,ease)}
+#axrv .pp:active .av{transform:scale(.92)}
+#axrv .pp.add .av{background:var(--rv-key);color:var(--accent);font-size:26px;font-weight:400}
+#axrv .pp .nm{max-width:100%;font:600 13px/1.2 var(--sans);overflow-wrap:anywhere;text-align:center}
+#axrv .pp.wait .av{animation:axrvPulse 1s ease-in-out infinite}
+@keyframes axrvPulse{50%{transform:scale(.9);opacity:.7}}
+#axrv .rvform{display:flex;flex-direction:column;gap:10px;margin:0 0 6px}
+#axrv .rvform input{height:46px;border:0;border-radius:14px;padding:0 16px;font:500 16px/1 var(--sans);color:var(--ink);background:var(--rv-key);
+  box-shadow:inset 0 0 0 1px var(--rv-sep)}
+#axrv .rvform input:focus{outline:2px solid var(--accent);outline-offset:0}
+/* passcode */
+#axrv .rvdots{display:flex;justify-content:center;gap:14px;margin:6px 0 4px;min-height:16px}
+#axrv .rvdots i{width:13px;height:13px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--ink);transition:background .15s}
+#axrv .rvdots i.on{background:var(--ink)}
+#axrv .rvdots.shake{animation:axrvShake .42s cubic-bezier(.36,.07,.19,.97)}
+@keyframes axrvShake{20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}
+#axrv .rverr{min-height:18px;margin:4px 0 8px;text-align:center;font:600 13px/1.3 var(--sans);color:var(--caution)}
+#axrv .rvpad{display:grid;grid-template-columns:repeat(3,76px);justify-content:center;gap:14px 22px;margin:0 0 16px}
+#axrv .k{width:76px;height:76px;border:0;border-radius:50%;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
+  background:var(--rv-key);color:var(--ink);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),inset 0 0 0 .5px var(--rv-sep);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transition:background .12s}
+#axrv .k:active{background:var(--rv-key-on)}
+#axrv .k b{font:400 30px/1 var(--sans);letter-spacing:-.01em}
+#axrv .k small{font:700 9.5px/1 var(--sans);letter-spacing:.18em;color:var(--muted)}
+#axrv .k.txt{background:none;box-shadow:none;font:600 15px/1 var(--sans);color:var(--ink)}
+#axrv .k.txt:active{background:var(--rv-key)}
+/* phone: a bottom sheet over the bar */
+@media (max-width:900px){
+  #axrv{left:0 !important;right:0;top:auto !important;bottom:0;width:auto;max-width:none;max-height:86vh;border-radius:30px 30px 0 0;
+    padding:10px 18px calc(18px + env(safe-area-inset-bottom));animation-name:axrvUp;transform-origin:bottom center}
+  #axrv .axrv-grab{display:block;width:38px;height:5px;margin:0 auto 12px;border-radius:3px;background:var(--rv-sep)}
+  @keyframes axrvUp{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+  #axrv .rvpad{grid-template-columns:repeat(3,72px);gap:12px 24px}
+  #axrv .k{width:72px;height:72px}
+}
+@media (prefers-reduced-motion:reduce){ #axrv,#axrv .rvdots.shake,#axrv .pp.wait .av{animation:none} }
+@media print{ #axrv{display:none!important} }
+#axbar .axrvb .bd[hidden]{display:none}
