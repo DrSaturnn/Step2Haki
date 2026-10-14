@@ -5,8 +5,8 @@
    4. Sidebar systems fold and unfold; the system holding the current brief opens itself. */
 (function(){
   "use strict";
-  var ACC = [['slate','Slate','#3B5B8C'],['indigo','Indigo','#5856D6'],['purple','Purple','#544AC4'],['navy','Navy','#1E3A8A'],
-             ['ocean','Ocean','#1D6A8C'],['plum','Plum','#7A3B8F'],['rose','Rose','#B0306A'],['graphite','Graphite','#4A5060']];
+  var ACC = [['slate','Slate','#3B5B8C'],['indigo','Indigo','#504ED4'],['purple','Purple','#544AC4'],['navy','Navy','#1E3A8A'],
+             ['ocean','Ocean','#1D6A8C'],['plum','Plum','#7A3B8F'],['rose','Rose','#AA2E66'],['graphite','Graphite','#4A5060']];
   var KEY = 'ax-accent';
   function load(){ try { return localStorage.getItem(KEY) || 'slate'; } catch(e){ return 'slate'; } }
   function save(k){ try { localStorage.setItem(KEY, k); } catch(e){} }
