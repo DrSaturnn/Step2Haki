@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-14 s137: site layout Phase 2 display layer: numbered workup tables, Next best step, mnemonic cards, nested sidebar steps, phone label lists and mnemonic rows, deferred Phase 1 fixes
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Other page changes (nav, headers, scripts): +24980 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 16 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 199/200 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (797449 source shingles; page 0.015%)
+```
+
 ## 2026-10-14 s136: s135 + s136: tics, panic, peds-sleep, sz-psychosocial reviewed (READY); site look Phase 1: accent setting, Dark theme and Tinted glass, glass toolbar with the Review sheet (3 briefs a session, passcode pad), Study renamed Recall
 
 ```
