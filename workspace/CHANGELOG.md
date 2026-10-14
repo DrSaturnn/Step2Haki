@@ -2,6 +2,23 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-14 s139: s139: R5 batch 4: psychosis-duration, bipolar-mania, delirium, substance reviewed to READY; 5a workups, board-tested additions, other names
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (4):
+  - psychosis-duration (Psychosis): items edited (q_4f7e99d406dda2fff18d); versions bumped (q_4f7e99d406dda2fff18d v3->v4); prose edited (+3725 chars)
+  - bipolar-mania (Bipolar Disorder): prose edited (+1104 chars)
+  - delirium (Delirium): items edited (q_0dcaebb0bf5c8466d61c, q_6c894b0025d26e66237f); versions bumped (q_6c894b0025d26e66237f v1->v2); prose edited (+2636 chars)
+  - substance (Substance Intoxication and Withdrawal): items edited (q_1d353a1868a40d61887a, q_7029849bdf14d473e999, q_790007e5c1400c256acf, q_b0154ac9b2095e29366b); versions bumped (q_1d353a1868a40d61887a v1->v2, q_7029849bdf14d473e999 v1->v2, q_790007e5c1400c256acf v1->v2, q_b0154ac9b2095e29366b v1->v2); prose edited (+4171 chars)
+Other page changes (nav, headers, scripts): +918 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 16 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 197/198 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.015%)
+```
+
 ## 2026-10-14 s138: R5 batch 3: ssri-effects, antipsych-effects, somatic, gppd reviewed to READY; lithium-effects glance rebuild; Recall Timing strip
 
 ```
