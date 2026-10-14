@@ -20,17 +20,10 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
 - **Open batch: s139 (R5 batch 4)**, launched 2026-10-14 in Claude Code on the web. Briefs: psychosis-duration,
   bipolar-mania, delirium, substance. Budget: 16 agents, 120 API calls, 8M tokens (WAVE.json open). Spend: 0 agents,
   0 calls (lead only).
-- **Step: S7 (review round 2), running.** R1 (10 lean reviewers, lanes repair/efficiency/lanes/s139/r1/A and B):
-  bipolar-mania READY after R1 (all four PASS, no S5 change). S5 fixes for psychosis-duration (pdk3, pdk7 quotes; "mean
-  onset about 40"), delirium (kDT quote; CT clue comma; Skip line "a focal sign best predicts an abnormal scan"; "In
-  Parkinson disease,"), substance (k01, k03, k14-k16 quotes; txk9; workup meanings for glucose, ECG, acetaminophen;
-  false positives folded into a hover; drawers to the When column; step 2 chip reworded "the reversal agent"; "given
-  quickly"; outpatient taper; "nitrates or an alpha-blocker"; cooling only with a stimulant; step 5 benzodiazepine tile cut
-  as T9). Rejected: progressive-recall MEDs (digest 2026-10-11), absent step 6, Practice-tail edits, repeated links.
-  Packet errors (not counted): display lacked the 5a and glance rules, read lacked the structure rules; review_packet.py
-  now writes RULES.md for both (tests 9/9). Words: 1,355 / 1,202 / 1,346 / 1,359. R1 receipts in spine/reviews as _r1.
-  R2: 5 lean reviewers (acc, read, flags each over three briefs, Budget 10; display substance alone and P1+N2), lanes
-  repair/efficiency/lanes/s139/r2 (delta.md per part). Spend after R1: 10 agents, 75 calls, 6.11M tokens.
+- **Step: S8 presented, waiting for "ship".** All four READY (R1 10 reviewers, R2 5). approval.py present s139: 4 files,
+  156 screenshots, page 685b56e470d9 (the record is in this container; "ship" must come to this chat). Spend: 15 of 16
+  agents, 97 of 120 calls, 6.51M of 8M tokens. Record: repair/s139/S139.md. Next on "ship": ship.sh s139 with AX_SESSION,
+  then S9 (OPEN_WORK, log commit, private repo, handoff, ledger row, fold digest lines).
 - **Last batch: s138 (R5 batch 3), SHIPPED 2026-10-14**, commit 399b3ee. Record: repair/s138/S138.md.
 - **Open small items:** as in s138 (repair/s138/S138.md): fold settled digest lines into STANDING_DIRECTIONS; s138
   deferred LOWs; s134 lithium-effects hover cuts restorable; ready_gate glob misses repair/migration/merge/hematuria/s134;
