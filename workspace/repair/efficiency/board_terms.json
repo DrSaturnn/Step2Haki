@@ -18,6 +18,26 @@
   "tardive dyskinesia",
   "valbenazine"
  ],
+ "bipolar-mania": [
+  "bipolar",
+  "cyclothymic",
+  "hypomania",
+  "hypomanic",
+  "lamotrigine",
+  "mania",
+  "manic",
+  "mood stabilizer",
+  "valproate"
+ ],
+ "delirium": [
+  "acute confusional",
+  "alcohol withdrawal",
+  "delirium",
+  "delirium tremens",
+  "encephalopathy",
+  "sundowning",
+  "wernicke"
+ ],
  "gppd": [
   "dyspareunia",
   "female sexual",
@@ -49,6 +69,17 @@
   "sleepwalking",
   "somnambulism"
  ],
+ "psychosis-duration": [
+  "brief psychotic",
+  "delusional disorder",
+  "delusions",
+  "hallucinations",
+  "psychotic features",
+  "schizoaffective",
+  "schizophrenia",
+  "schizophreniform",
+  "substance-induced psychotic"
+ ],
  "somatic": [
   "conversion disorder",
   "factitious",
@@ -72,6 +103,26 @@
   "SSRI",
   "SSRIs",
   "tamoxifen"
+ ],
+ "substance": [
+  "alcohol withdrawal",
+  "amphetamine",
+  "benzodiazepine withdrawal",
+  "buprenorphine",
+  "cannabis",
+  "cocaine",
+  "hallucinogen",
+  "inhalant",
+  "intoxication",
+  "LSD",
+  "methadone",
+  "methamphetamine",
+  "naloxone",
+  "opioid",
+  "PCP",
+  "phencyclidine",
+  "synthetic cannabinoid",
+  "withdrawal"
  ],
  "sz-psychosocial": [
   "antipsychotic adherence",

@@ -239,6 +239,83 @@
     }
    ],
    "added": "s138"
+  },
+  {
+   "name": "Substance/medication-induced psychotic disorder",
+   "aliases": [
+    "medication-induced psychotic disorder"
+   ],
+   "sources": [
+    {
+     "kind": "uworld",
+     "file": "repair/sources/s108_questions.md"
+    },
+    {
+     "kind": "dsm",
+     "ref": "DSM-5-TR"
+    }
+   ],
+   "added": "s139"
+  },
+  {
+   "name": "Major depressive disorder with psychotic features",
+   "aliases": [
+    "psychotic depression"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1509649627497
+    }
+   ],
+   "added": "s139"
+  },
+  {
+   "name": "Cyclothymic disorder",
+   "aliases": [
+    "cyclothymia"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1484792630685
+    },
+    {
+     "kind": "dsm",
+     "ref": "DSM-5-TR"
+    }
+   ],
+   "added": "s139"
+  },
+  {
+   "name": "Alcohol withdrawal delirium",
+   "aliases": [
+    "delirium tremens"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1485313486079
+    },
+    {
+     "kind": "dsm",
+     "ref": "DSM-5-TR"
+    }
+   ],
+   "added": "s139"
+  },
+  {
+   "name": "Dementia with Lewy bodies",
+   "aliases": [
+    "Lewy body dementia"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1481857888777
+    }
+   ],
+   "added": "s139"
   }
  ]
 }
