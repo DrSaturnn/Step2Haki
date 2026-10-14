@@ -41,3 +41,17 @@ From the session transcript (`tools/session_usage.py`): 399 main-thread calls; 1
 
 Lean arm for the orchestrator: fresh chat seeded with CURRENT_STATE.md; `tools/ship.sh` (one call replaces ~6); summary-only tool output; short agent reports; text over images.
 Frozen test (before/after, not randomized; the orchestrator cannot be run twice on the same batch): the next comparable UWorld batch of 4 to 8 questions in the fresh chat versus s25/s26 (mean 22 calls, 7.1M read). Adopt the fresh-chat routine as standing practice if read tokens per batch fall by at least 60% with the gate, render and blinded quality spot-check unchanged. Confounds: batch difficulty and size differ; report calls and read tokens per question as well as per batch.
+
+## s135 efficiency item 6: lean reviewer type and staggered launches (probe s135-probe, 2026-10-13)
+
+Three read-review agents as `step2haki-tools:lean-reviewer` on Sonnet, each reading a one-line packet and writing a two-line receipt (all three receipts correct; launch gate, call gate and ledger recorded them). a1 launched alone; a2 and a3 launched together after a1 finished.
+
+| Agent | Calls | First call: cache write | First call: cache read | Total tokens |
+|---|---|---|---|---|
+| a1 (alone) | 3 | 10,870 | 0 | 36,317 |
+| a2 (after a1) | 3 | 7,032 | 3,838 | 36,325 |
+| a3 (with a2) | 3 | 7,032 | 3,838 | 36,257 |
+
+- Start-up context of the lean type: about 10.9k tokens, against about 83k for the general agent type (s133, s134).
+- Staggering: a later launch reads about 3.8k of the 10.9k start-up from the cache (the shared system part); the rest (about 7k) is written again per agent. Small gain; launching one reviewer first is worth it only when it costs no wall time.
+- Probe cost: 3 agents, 9 calls, 108,899 tokens, inside the standing 2M safeguard allowance.

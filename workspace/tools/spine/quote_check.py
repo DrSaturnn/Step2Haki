@@ -44,7 +44,8 @@ def main(argv):
         if '...' in q or '…' in q:
             fails.append('%s: joins fragments with "..."; split it into one fact per fragment' % fid)
             continue
-        if re.search(r'\[[^\]]*\]', q):
+        cloze = f.get('kind') == 'board' and '/anki/' in str(f.get('local', '')).replace(os.sep, '/')
+        if re.search(r'\[[^\]]*\]', q) and not cloze:  # s135: an AnKing cloze answer is bracketed in the card text itself
             fails.append('%s: editorial brackets inside the quote; quote the source exactly' % fid)
             continue
         if via == 'relayed':

@@ -126,6 +126,70 @@
     }
    ],
    "added": "s134"
+  },
+  {
+   "name": "Provisional tic disorder",
+   "aliases": [
+    "transient tic disorder"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1484686685883
+    },
+    {
+     "kind": "dsm",
+     "ref": "DSM-5-TR"
+    }
+   ],
+   "added": "s135"
+  },
+  {
+   "name": "Social anxiety disorder",
+   "aliases": [
+    "social phobia"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1527974567974
+    },
+    {
+     "kind": "dsm",
+     "ref": "DSM-5-TR"
+    }
+   ],
+   "added": "s135"
+  },
+  {
+   "name": "Illness anxiety disorder",
+   "aliases": [
+    "hypochondriasis"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1484966338175
+    }
+   ],
+   "added": "s135"
+  },
+  {
+   "name": "Sleep terrors",
+   "aliases": [
+    "night terrors"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1484768563667
+    },
+    {
+     "kind": "anking",
+     "nid": 1485140525572
+    }
+   ],
+   "added": "s135"
   }
  ]
 }

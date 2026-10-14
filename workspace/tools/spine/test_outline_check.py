@@ -86,10 +86,11 @@ def m_decides_dup(o, d):
 
 
 def m_g2(o, d):
-    lad = ladder(o)
-    for r in lad['rungs']:
-        if '2nd' in r[1]:
+    lad = ladder(o)          # s135: the golden's ladder no longer has a "2nd" rung (R3), so take the first escalation rung
+    for r in lad['rungs'][1:]:
+        if OC.ESCALATE.search(r[1]):
             r[2] = {'t': 'some children', 'ids': ['m15']}
+            break
 
 
 def m_g3(o, d):
