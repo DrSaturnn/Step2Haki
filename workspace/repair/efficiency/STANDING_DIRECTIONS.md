@@ -126,7 +126,7 @@ Source keys:
 - **Analogy label:** a step supported only by a source about another population (for example cirrhosis) is labeled as an analogy at the step itself. [DIG 2026-10-12]
 - **Word-cap overage:** up to 5% made of board-tested content or fixes for reviewer findings is approved without asking and listed in the report; ask above 5%. [DIG 2026-10-12]
 - **LOW findings:** the lead sorts them into fixed, deferred (with where each goes) or rejected, without asking. [DIG 2026-10-12]
-- **Follow-up reviews:** always the same four roles, changed lines only, 10 calls each, within the batch budget. [DIG 2026-10-12]
+- **Follow-up reviews:** always the same four roles, changed lines only, within the batch budget; about 4 calls per brief covered plus 2 (one brief: 10). [DIG 2026-10-12, 2026-10-14 s139]
 - **When to ask:** only for a HIGH finding no source settles, a decision not covered by the digest or these directions, a budget overrun, or anything irreversible. [DIG 2026-10-12]
 - **One report per batch:** edit list with screenshots, decisions needed (ideally none), cost; Jonathan replies "ship". [DIG 2026-10-12]
 - **Budgets** are Jonathan's to set; standing allowance for safeguard and hook tests only, up to 2M tokens per round, reported after. [DIG 2026-10-12]

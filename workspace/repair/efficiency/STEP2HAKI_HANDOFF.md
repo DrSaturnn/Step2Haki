@@ -20,13 +20,13 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
 - **Open batch: s139 (R5 batch 4)**, launched 2026-10-14 in Claude Code on the web. Briefs: psychosis-duration,
   bipolar-mania, delirium, substance. Budget: 16 agents, 120 API calls, 8M tokens (WAVE.json open). Spend: 0 agents,
   0 calls (lead only).
-- **Step: launch (section 1), paused before S1.** Done: decisions in the digest (branches: delete; follow-up cap about
-  4 per brief plus 2, runbook S7 updated; the cap is set with each launch prompt's Budget: line, which lowers the role's
-  25); WAVE.json; offline hook tests 80/80; start-up context check with no WARNING (lead 72,327).
-  Blocked in this session by the harness's auto-mode permission check, asked of Jonathan: cloning
-  DrSaturnn/Step2Haki-private (the local-only restore S1 needs) and writing the hooks into /root/.claude/settings.json.
-  The wip branch deletion push got HTTP 403 from GitHub. Not yet checked: the Agent tool listing lean-reviewer under the
-  installed hooks.
+- **Step: S1 (board evidence).** Launch done: decisions in the digest (branches: delete, refused by GitHub 403, so
+  they stay; follow-up cap about 4 per brief plus 2, runbook S7 and STANDING_DIRECTIONS updated; set per launch with the
+  Budget: line under the role's 25); WAVE.json open; step2haki-private cloned to /home/user/step2haki-private and
+  local-only restored with cp -rn (Jonathan: "allow clone and hook install"); hooks installed (/home/claude and
+  /root/.claude settings), offline tests 80/80; context check no WARNING (lead 72,327); lean-reviewer listed. Folders:
+  psychosis-duration P1, bipolar-mania N1, delirium N2, substance TOX (psych/<code>/spine; parked fix r1 builds of
+  2026-10-10 after holistic r1 FAIL, never re-reviewed).
 - **Last batch: s138 (R5 batch 3), SHIPPED 2026-10-14**, commit 399b3ee. Record: repair/s138/S138.md.
 - **Open small items:** as in s138 (repair/s138/S138.md): fold settled digest lines into STANDING_DIRECTIONS; s138
   deferred LOWs; s134 lithium-effects hover cuts restorable; ready_gate glob misses repair/migration/merge/hematuria/s134;
