@@ -112,6 +112,28 @@ def titles(page):
     return out
 
 
+def section(md, title):
+    """one '## title' section of a markdown file, heading included ('' when absent)"""
+    m = re.search(r'^## %s\n.*?(?=^## |\Z)' % re.escape(title), md, re.S | re.M)
+    return m.group(0) if m else ''
+
+
+def part_rules(part):
+    """the standing rules a part judges by (s139 S5 packet errors: display reviewers flagged progressive recall and the
+    5a desktop arrows, and a read reviewer the absent step 6, because the packet lacked these rules)"""
+    eff = os.path.join(WS, 'repair', 'efficiency')
+    sd = open(os.path.join(eff, 'STANDING_DIRECTIONS.md'), encoding='utf-8').read()
+    if part == 'display':
+        spec = open(os.path.join(eff, 'WORKUP_5A_SPEC.md'), encoding='utf-8').read()
+        dg = open(os.path.join(eff, 'DECISIONS_DIGEST.md'), encoding='utf-8').read()
+        glance = '\n'.join(m.group(0) for m in re.finditer(r'^- 2026-10-1[34] (Glance layout direction|s137 route).*?(?=^- |\Z)', dg, re.S | re.M))
+        return ('# Display rules for this review (from STANDING_DIRECTIONS.md, DECISIONS_DIGEST.md and WORKUP_5A_SPEC.md)\n\n'
+                + section(sd, 'Display') + '\n## Later display decisions (digest; these win over the spec)\n\n' + glance + '\n\n' + spec)
+    if part == 'read':
+        return '# Structure rules for this review (from STANDING_DIRECTIONS.md)\n\n' + section(sd, 'Brief structure (decision spine)')
+    return ''
+
+
 def main(argv):
     if len(argv) < 2:
         sys.exit(__doc__.strip().splitlines()[3].strip())
@@ -146,6 +168,9 @@ def main(argv):
             % os.path.join(os.path.abspath(pd), 'receipt.md'))
         if props:
             shutil.copy(props, os.path.join(pd, 'proposed_replacements.md'))
+        rules = part_rules(part)
+        if rules:
+            open(os.path.join(pd, 'RULES.md'), 'w', encoding='utf-8').write(rules)
     for f in ('facts.json', 'claim_map.json'):
         shutil.copy(os.path.join(d, f), os.path.join(out, 'acc', f))
     shutil.copy(os.path.join(d, 'facts.json'), os.path.join(out, 'flags', 'facts.json'))
