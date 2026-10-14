@@ -172,6 +172,9 @@ BS_NEW = PREVIEW + '''function buildSession(id){
   }'''
 BOOT = "  paintChip();\n  try{ syncRoster(function(){ paintChip(); }); }catch(e){ mark('off'); }"
 RVEDITS = [
+    {'op': 'replace_global', 'find': "  if(bdg){ bdg.textContent=d; bdg.setAttribute('data-n', (id&&d)?'1':'0'); }",
+     'with': "  if(bdg){ var rd=id?split(id).due.length:0; bdg.textContent=rd; bdg.setAttribute('data-n', rd?'1':'0'); }   /* scheduled reviews only, never the shelf total (Jonathan 2026-10-14) */",
+     'note': RV + ': the phone Review badge counts scheduled reviews only'},
     {'op': 'replace_global', 'find': 'var PER_SESSION=5, PER_BRIEF=3;', 'with': 'var PER_SESSION=3, PER_BRIEF=3;   /* 3 briefs a session (Jonathan 2026-10-14) */', 'note': RV + ': 3 briefs a session'},
     {'op': 'replace_global', 'find': BS_OLD, 'with': BS_NEW, 'note': RV + ': the sheet previews the session it starts'},
     {'op': 'replace_global', 'find': BOOT, 'with': BOOT + AXRV, 'note': RV + ': window.axRv for the status-bar sheet'},
