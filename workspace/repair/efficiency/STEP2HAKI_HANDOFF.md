@@ -10,13 +10,11 @@ file holds the State and the cloud session start. Restart line: `Step2Haki: cont
   lithium-effects (psych/P2; finish the held s137 glance rebuild, repair/s137/held: S6 to S8; round 1 receipts in
   repair/migration/spine/reviews/lithium-effects_{acc,read,flags}_r3.md, display_r4.md).
 - Budget (whole batch): 20 agents, 160 API calls, 9.5M tokens (WAVE.json, wave s138 open).
-- Step: S4 round 1 running (8 lean reviewers: acc, read, flags, display x drug pair ssri-effects + antipsych-effects
-  and disease pair somatic + gppd; lanes repair/efficiency/lanes/s138/r1/<part>-<pair>/<brief>/). lithium-effects READY
-  (S7 done: receipts acc_r4, read_r4, flags_r4, display_r5; replacements acc.1, read.2 applied).
-- S1 and S2 done for all four (boards.md, adjudication.md, cuts.json in each spine folder, local-only); S3 clean on the
-  combined preview (gate, render, preflight, vendor, numbers; legib 0 except the live page's pre-existing "Stack" button
-  in flat mode). Words: ssri 1,050, antipsych 1,042 (drug cap about 1,000), somatic 1,250, gppd 1,022.
-- Spend before round 1: 4 agents, 20 API calls, 366k tokens.
+- Step: S8 presented (approval.py present s138: 164 screenshots, page e7b3abfa5548); waiting for Jonathan's "ship".
+  All five READY. Next on "ship": AX_SESSION=<this session URL> tools/ship.sh s138 "..." (ship.sh writes
+  /mnt/user-data/outputs and pushes only with the Mac token: in the cloud, push main with the session's GitHub access,
+  then check version.json; copy local-only back to step2haki-private; OPEN_WORK and log commit; ledger row).
+- Spend: 20 of 20 agents, 103 of 160 API calls, 3.16M of 9.5M tokens.
 - Open with Jonathan: wip/s135, wip/s136, wip/s137 kept ("keep for now"); "Recall" name kept (s137 item 2, unanswered).
 
 ## Cloud session start (replaces bootstrap.sh's Mac staging)
