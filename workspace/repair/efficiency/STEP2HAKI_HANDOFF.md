@@ -18,11 +18,12 @@ Batch s144 is open (State below).
   (session_01N8GCnHdWAjLAfoM9W1sXDn). Briefs: asthma, cough, rhinitis, pneumoconiosis, sinopulm-structural. Golden:
   copd. Method: s142 (the lead builds; one lean reviewer per role for all briefs). Branch wip/s144 in both repos.
   Batch file: repair/s144/S144.md.
-- **Budget:** 15 agents, 140 API calls, 5M tokens (WAVE.json, wave s144 open). **Spend:** 0 agents.
-- **Step:** S1 to S3. Done: launch, hook probes (T1 to T4, T8, T9 pass), asthma (MECHANICAL PASS, legib 0; folder
-  repair/migration/fm/AST, saved to private wip/s144). Next: rhinitis, pneumoconiosis, cough (hub), sinopulm-structural,
-  each in repair/migration/fm/<RHI|PNC|CGH>/spine or merge/sinopulm-structural/spine; preview ops go in repair/s144/.
-  Network denies every source host: primary quotes from the 2026-10-10 web cache only (disclosed).
+- **Budget:** 15 agents, 140 API calls, 5M tokens (WAVE.json, wave s144 open). **Spend:** 0 agents before S4 (hook probe outside the budget: 1 agent, 5 calls, 279k).
+- **Step:** S4 review round 1 launched (4 lean reviewers, one per role, all five briefs; lanes
+  repair/efficiency/lanes/s144/r1/<part>/, budgets acc 22, read 20, display 22, flags 20). S1 to S3 done: all five
+  MECHANICAL PASS, legib 0 below contrast (record: repair/s144/S144.md). Spine folders: repair/migration/fm/AST, RHI, PNC,
+  CGH and merge/sinopulm-structural/spine (saved to private wip/s144). Next: copy receipts to
+  repair/migration/spine/reviews/<id>_<part>_r1.md, then S5.
 - **Carried from s143:** brief header still in the old style; deferred LOWs in repair/s141/S141.md and
   repair/s142/S142.md. Deploy check: Jonathan confirms version.json. **Mac:** not linked. **Live:** s143 (392e74b).
 
