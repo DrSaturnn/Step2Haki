@@ -69,6 +69,27 @@ def item_line(m):
                                                     ('; distractors: ' + ' / '.join(opts)) if opts else '')
 
 
+def close_masks(x):
+    """s142 R1 packet error: a mask opened "[masked in study mode: " but its end was never shown, so text after a masked
+    span (a rung note) read as masked; close each mask span with "]" at its own </span>, nested spans included"""
+    out, depth, ends, pos = [], 0, [], 0
+    for m in re.finditer(r'<span\b[^>]*>|</span>', x):
+        out.append(x[pos:m.start()]); pos = m.end()
+        if m.group(0) == '</span>':
+            depth -= 1
+            out.append(']' if ends and ends[-1] == depth else m.group(0))
+            if ends and ends[-1] == depth:
+                ends.pop()
+        else:
+            if re.match(r'<span class="mask[^"]*">', m.group(0)):
+                ends.append(depth); out.append('[masked in study mode: ')
+            else:
+                out.append(m.group(0))
+            depth += 1
+    out.append(x[pos:])
+    return ''.join(out)
+
+
 def text_of(brief_html):
     x = re.sub(r'<(script|style)[^>]*>.*?</\1>', '', brief_html, flags=re.S)
     x = re.sub(r'(<li\b[^>]*data-item-id="[^"]+"[^>]*>)', lambda m: item_line(m), x)
@@ -77,7 +98,7 @@ def text_of(brief_html):
     # first 5 years then plateaus" was read without its arrow); write each as the glyph or its label
     x = re.sub(r'<span[^>]*role="img"[^>]*aria-label="([^"]+)"[^>]*>\s*</span>',
                lambda m: {'leads to': ' \u2192 ', 'and': ' + ', 'plus': ' + '}.get(m.group(1), ' [%s] ' % m.group(1)), x)
-    x = re.sub(r'<span class="mask[^"]*">', '[masked in study mode: ', x)
+    x = close_masks(x)
     x = re.sub(r'</(p|li|div|tr|h\d|figure|caption)>|<br\s*/?>', '\n', x)
     x = re.sub(r'</t[dh]>', ' | ', x)
     x = re.sub(r'<[^>]+>', '', x)

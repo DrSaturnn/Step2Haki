@@ -70,7 +70,7 @@ ROWS = {
         src=['page:psychosis-duration', 'uw-bpd'], status='ready'),
     'schizoaffective': dict(
         name='Schizoaffective disorder', window='Psychosis 2 weeks or more without mood',
-        lines=['A major mood episode concurrent with Criterion A',
+        lines=['A major mood episode at the same time as the active psychosis',
                'Delusions or voices 2 weeks or more with no mood episode',
                'Mood episodes fill most of the illness'],
         course='chronic', segs=[('lop', 40, 50), ('act', 50, 54), ('lop', 54, 66), ('act', 66, 70), ('lop', 70, 84),

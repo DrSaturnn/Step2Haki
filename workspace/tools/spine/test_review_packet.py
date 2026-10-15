@@ -22,4 +22,8 @@ expect('display rules carry the glance and s137 display-layer decisions', 'Numbe
 r = RP.part_rules('read')
 expect('read rules carry absent steps greyed', 'Absent steps stay numbered and greyed' in r and '## Display' not in r)
 expect('acc and flags get no rules file', RP.part_rules('acc') == '' and RP.part_rules('flags') == '')
+# s142 R1 packet error: text after a masked span (a rung note) must not read as masked
+_t = RP.text_of('<div><b class="sp-f"><span class="mask">Move <span class="x">a</span> b</span></b><p class="sp-note">Note</p></div>')
+expect('mask closes at its own span end', '[masked in study mode: Move a b]' in _t and '[masked in study mode: Note' not in _t)
 print('test_review_packet: %d passed, %d failed' % (ok, fail)); sys.exit(1 if fail else 0)
+
