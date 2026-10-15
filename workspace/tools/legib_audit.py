@@ -134,10 +134,24 @@ def main():
                 pg.evaluate("() => { for (const e of document.querySelectorAll('body *')) { const p = getComputedStyle(e).position;"
                             " if ((p === 'fixed' || p === 'sticky') && !e.closest('.brief')) e.style.setProperty('visibility', 'hidden', 'important'); } }")
                 for bid in bids:
+                    # s144: wait out the s143 landing hold (it re-seats the brief for up to 3.5 s after a link), else the
+                    # text-transparent capture is taken mid-scroll and compared with the wrong pixels (false desk failures)
                     pg.evaluate("h => { location.hash = h }", bid); pg.wait_for_timeout(900)
+                    last, steady = None, 0
+                    for _ in range(80):                       # up to 8 s: until the brief's top holds for 0.6 s
+                        y = pg.evaluate("b => Math.round(document.getElementById(b).getBoundingClientRect().top + scrollY) + ':' + Math.round(scrollY)", bid)
+                        steady = steady + 1 if y == last else 0
+                        last = y
+                        if steady >= 6:
+                            break
+                        pg.wait_for_timeout(100)
                     el = pg.locator('#' + bid)
                     if a.shots:
                         el.screenshot(path=os.path.join(a.out, '%s_%s_%s_%s.png' % (a.label, bid, view, mode)))
+                    if not a.shots:
+                        el.screenshot()   # s144: a throwaway capture first; Playwright's scroll-into-view sets off the s143
+                                          # landing hold, and the measured capture must come after it settles
+                        pg.wait_for_timeout(300)
                     data = pg.evaluate(COLLECT, bid)
                     if not data:
                         print('missing brief', bid, file=sys.stderr); continue

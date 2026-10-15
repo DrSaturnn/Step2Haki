@@ -18,6 +18,13 @@
   "tardive dyskinesia",
   "valbenazine"
  ],
+ "asthma": [
+  "asthma exacerbation",
+  "exercise-induced bronchoconstriction",
+  "inhaled corticosteroid",
+  "spirometry",
+  "status asthmaticus"
+ ],
  "bipolar-mania": [
   "bipolar",
   "cyclothymic",
@@ -43,6 +50,14 @@
   "LAMA",
   "pulmonary rehabilitation",
   "spirometry"
+ ],
+ "cough": [
+  "ACE inhibitor cough",
+  "chronic cough",
+  "cough-variant asthma",
+  "methacholine",
+  "postnasal drip",
+  "upper airway cough syndrome"
  ],
  "delirium": [
   "acute confusional",
@@ -115,6 +130,18 @@
   "sleepwalking",
   "somnambulism"
  ],
+ "pneumoconiosis": [
+  "asbestos",
+  "asbestosis",
+  "berylliosis",
+  "byssinosis",
+  "Caplan",
+  "coal workers",
+  "hypersensitivity pneumonitis",
+  "mesothelioma",
+  "pleural plaques",
+  "silicosis"
+ ],
  "psych-medical": [
   "anti-NMDA",
   "Cushing",
@@ -137,6 +164,14 @@
   "schizophreniform",
   "substance-induced psychotic"
  ],
+ "rhinitis": [
+  "allergic rhinitis",
+  "immunotherapy",
+  "intranasal corticosteroid",
+  "oxymetazoline",
+  "rhinitis medicamentosa",
+  "vasomotor rhinitis"
+ ],
  "scfe": [
   "frog-leg",
   "hip pain",
@@ -148,6 +183,18 @@
   "septic arthritis",
   "slipped capital",
   "transient synovitis"
+ ],
+ "sinopulm-structural": [
+  "allergic bronchopulmonary aspergillosis",
+  "bronchiectasis",
+  "congenital pulmonary airway malformation",
+  "cystic fibrosis",
+  "foreign body aspiration",
+  "immunodeficiency",
+  "Kartagener",
+  "primary ciliary dyskinesia",
+  "recurrent pneumonia",
+  "sequestration"
  ],
  "somatic": [
   "conversion disorder",
