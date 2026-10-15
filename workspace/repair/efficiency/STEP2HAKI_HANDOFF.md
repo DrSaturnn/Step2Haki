@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-14, by the s139 lead (s139 SHIPPED, commit 39d1846; Claude Code on the web, no Mac).
+Last updated: 2026-10-15, by the s140 lead (s140 SHIPPED, commit 0cf4b06; Claude Code on the web, no Mac).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -16,36 +16,39 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
 
 ## State (rewrite after every step)
 
-- **Plan:** v4 (repair/efficiency/SPINE_SCALE_PLAN.md; project copy claude/SPINE_SCALE_PLAN.md). Glance plan: claude/pending/GLANCE_LAYOUT_PLAN.md.
-- **Open batch: s140 (R5 batch 5)**, launched 2026-10-14 (cloud session). Briefs: mdd (psych/MDD), copd (fm/COPD), scfe
-  (peds/SCFE). Budget: 12 agents, 80 API calls, 5.5M tokens (WAVE.json open). Branch: claude/step2haki-batch-s140-esidy4
-  (the session's assigned branch, in place of wip/s140). Record: repair/s140/S140.md.
-- **Step:** S8 presented (page bc713e009a85, 120 shots, approval.py present s140); waiting for "ship" in THIS chat (the approval record lives in this container). Then S9 per the runbook.
-- **Spend:** 15 of 15 agents, 58 of 80 calls, 1.71M of 5.5M tokens.
-- **Launch decisions:** clone and hook install allowed ("Yes"); wip/s135 to wip/s139: "Noted" (Jonathan deletes them on GitHub).
-- **Open small items:** carried from s139 (see repair/s139/S139.md and OPEN_WORK).
-- **Cloud lessons (s139):** the session's auto-mode check holds the private-repo clone and the hook install until
-  Jonathan allows them (ask at launch); branch deletion pushes are refused (403); round 1 Opus acc reviewers cost about
-  1.6M tokens per pair (they read whole claim maps); give display reviewers about 20 images each and the 5a and glance
-  rules (now in RULES.md); never set a follow-up Budget below 4 per brief plus 2.
-- **Live:** s139 (39d1846). **main:** the s139 log commit.
+- **Plan:** v4 (repair/efficiency/SPINE_SCALE_PLAN.md). **Phase R is done:** all 17 spine briefs READY after s140.
+- **No batch open.** WAVE.json closed.
+- **Last batch: s140 (R5 batch 5), SHIPPED 2026-10-15** (Jonathan: "ship"). Commit 0cf4b06 on main. Record:
+  repair/s140/S140.md. READY and live: mdd, copd, scfe (receipts r1 to r3 in local-only spine/reviews; in
+  step2haki-private). Deploy check: Jonathan confirms version.json shows {"build":"s140"}.
+- **New standing conventions (Jonathan 2026-10-14/15, digest):** arrows for high and low measured values; bold lab
+  cutoffs with symbols, conditions in a hover; underline-only hovers (no pills). Applied in mdd, copd, scfe only; the
+  rest of the site is the next batch. AnKing card wording may be quoted in the public repo.
+- **Open small items:** carried from s139 (fold settled digest lines into STANDING_DIRECTIONS; s139 and s138 deferred
+  LOWs; s134 hover cuts; ready_gate glob; kawasaki CRASH blank line; "Stack" switch 1.03 in flat); s140 deferred LOWs
+  (note under a 5a figure flush left; spacing before the clue table; a lone arrow on phone in copd 5a; act-now color
+  sources; pseudodementia for the dementia brief; copd: add AnKing 1555373144446 to facts); vendor_scan to exempt AnKing
+  shingles.
+- **Cloud lessons (s140):** the container restarted mid-batch; lanes, receipts and clones survived in /home/user, hooks
+  in /root/.claude/settings.json held. Tell reviewers the deps line format exactly (s140 R2 copied a "brief:" label).
+  Replacements that cross bold or hover markup cannot be counted by condpass: budget a normal follow-up for them.
+  Each image a reviewer reads is one call; give the receipt format and deps lines in the prompt.
+- **Branches:** wip/s135 to wip/s139 merged; Jonathan deletes them on GitHub ("Noted", s140 launch). s140 ran on
+  claude/step2haki-batch-s140-esidy4 (merged to main by the ship).
+- **Live:** s140 (0cf4b06). **main:** the s140 log commit.
 
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s140 (R5 batch 5) per claude/BATCH_RUNBOOK.md. Briefs: mdd, copd, scfe. Budget for the whole batch: 12 agents, 80 API calls, 5.5M tokens.
-1. At launch, allow the private-repo clone and the hook install (the cloud permission check holds both): yes or no.
-2. Delete wip/s139 (merged into main) along with s135 to s138, on GitHub (the cloud session cannot): noted, or keep.
+Step2Haki: launch batch s141 (site rollout of the s140 conventions) per claude/BATCH_RUNBOOK.md. Scope: arrows for high and low measured values, bold lab cutoffs with condition hovers, and underline-only hovers (retire the pill style site-wide), lithium-effects first (hemodialysis cutoffs from the AnKing card, conditions in a hover); then the other 13 READY spine briefs; vendor_scan exempts AnKing wording; the s140 deferred display LOWs. Budget for the whole batch: 16 agents, 90 API calls, 5M tokens.
+1. Non-spine briefs (about 160) get the hover restyle by site CSS only, with arrows and cutoffs left for their own batches: yes or no.
+2. After s141, the first Phase 2 cluster (plan section 8): name it, or "lead's pick".
 ```
 
-## Planned batches after s138 (Phase R: the rest of the 17 spine briefs to READY; lead's proposal 2026-10-14, launch prompts ready)
+## After s141
 
-Already READY: tics, panic, peds-sleep, sz-psychosocial, nephrotic-child, (s138) ssri-effects, antipsych-effects,
-somatic, gppd, lithium-effects, and (s139) psychosis-duration, bipolar-mania, delirium, substance (and hematuria,
-non-spine). s140 is the launch prompt above.
-
-After s140 all 17 spine briefs are READY and Phase R ends; the next work is Phase 2 (plan section 8: unconverted briefs by
-cluster), whose first cluster Jonathan picks.
+Phase R is complete (all 17 spine briefs READY, s140). After the s141 rollout, the next work is Phase 2 (plan section 8:
+unconverted briefs by cluster); Jonathan picks the first cluster in the s141 launch prompt.
 
 ## Docs in this project
 
