@@ -18,7 +18,8 @@ WS = os.path.abspath(os.path.join(HERE, '..', '..'))
 
 def folders():
     out = {}
-    for e in glob.glob(os.path.join(WS, 'repair', 'migration', '*', '*', 'spine', '10_*_spine.json')):
+    # s142: a hub folder sits one level deeper (repair/migration/psych/HUB/voices/spine)
+    for e in glob.glob(os.path.join(WS, 'repair', 'migration', '*', '*', 'spine', '10_*_spine.json')) + glob.glob(os.path.join(WS, 'repair', 'migration', '*', '*', '*', 'spine', '10_*_spine.json')):
         try:
             out[json.load(open(e, encoding='utf-8'))['edits'][0]['brief']] = os.path.dirname(e)
         except (ValueError, KeyError, IndexError):
