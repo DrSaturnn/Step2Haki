@@ -10,10 +10,10 @@
   "flag-review",
   "wording-fix"
  ],
- "max_agents": 24,
+ "max_agents": 26,
  "max_calls": 260,
  "max_tokens": 8000000,
- "set_by": "Jonathan: s141 launch \"Budget for the whole batch: 16 agents, 90 API calls, 5M tokens.\" Raised 2026-10-15 (asked at S4): \"Raise budget (Recommended)\": 24 agents, 260 calls, 8M tokens.",
+ "set_by": "Jonathan: s141 launch \"Budget for the whole batch: 16 agents, 90 API calls, 5M tokens.\" Raised 2026-10-15 (asked at S4): \"Raise budget (Recommended)\": 24 agents, 260 calls, 8M tokens. Raised again 2026-10-15 (asked after S7 round 3): \"Raise to 26 agents (Recommended)\".",
  "previous": {
   "id": "s140",
   "note": "2026-10-15 (s140 shipped, commit 0cf4b06)"
@@ -37,7 +37,7 @@
    "tokens": 5500000
   },
   "s141": {
-   "agents": 24,
+   "agents": 26,
    "calls": 260,
    "tokens": 8000000
   }
