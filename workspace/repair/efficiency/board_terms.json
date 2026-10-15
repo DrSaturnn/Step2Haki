@@ -53,12 +53,27 @@
   "sundowning",
   "wernicke"
  ],
+ "disruptive-behavior": [
+  "conduct disorder",
+  "disruptive mood dysregulation",
+  "intermittent explosive",
+  "oppositional defiant",
+  "parent management training"
+ ],
  "gppd": [
   "dyspareunia",
   "female sexual",
   "sexual pain",
   "vaginismus",
   "vulvodynia"
+ ],
+ "ipv": [
+  "adult protective",
+  "child protective",
+  "domestic violence",
+  "elder abuse",
+  "partner violence",
+  "safety plan"
  ],
  "mdd": [
   "adjustment disorder",
@@ -99,6 +114,17 @@
   "sleep terror",
   "sleepwalking",
   "somnambulism"
+ ],
+ "psych-medical": [
+  "anti-NMDA",
+  "Cushing",
+  "due to another medical condition",
+  "glucocorticoid-induced",
+  "lupus cerebritis",
+  "medication-induced",
+  "steroid psychosis",
+  "substance-induced",
+  "Wilson disease"
  ],
  "psychosis-duration": [
   "brief psychotic",
@@ -167,6 +193,13 @@
   "synthetic cannabinoid",
   "withdrawal"
  ],
+ "suicide-risk": [
+  "involuntary hospitalization",
+  "safety plan",
+  "suicidal ideation",
+  "suicide attempt",
+  "suicide risk"
+ ],
  "sz-psychosocial": [
   "antipsychotic adherence",
   "assertive community",
@@ -182,5 +215,13 @@
   "tic disorder",
   "tics",
   "Tourette"
+ ],
+ "voices": [
+  "delusional disorder",
+  "hallucinations",
+  "paranoid personality",
+  "psychotic",
+  "schizoid",
+  "schizotypal"
  ]
 }
