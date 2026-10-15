@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-15 s143: s143: sidebar and canvas from the Lithium Glance mockup (axnav component, display sheet, landing fix)
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Other page changes (nav, headers, scripts): +30253 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 19 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 188/189 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: NOT CHECKED (repair/sources missing: restore axbx-local-only.tar.gz)
+```
+
 ## 2026-10-15 s142: s142: Phase 2 cluster 1, psychiatry remainder on the decision spine (suicide-risk, disruptive-behavior, psych-medical, ipv; voices as the first presentation hub)
 
 ```
