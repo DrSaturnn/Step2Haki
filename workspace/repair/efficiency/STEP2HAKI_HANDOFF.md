@@ -37,8 +37,15 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
   change. S1 done for panic, peds-sleep, tics (boards.md s141 notes; peds-sleep iron cutoff is board-tested, <75,
   fRlsK2: fix in S2). nephrotic-child: its spine folder (repair/migration/peds/NEPH, per the ledger) is in neither the
   private repo nor the container (only merge/nephrotic-child, the merge-era folder, was pushed), so it cannot be built
-  or verified here; it waits for that folder (lead's call, disclosed). Next: S2/S3 for the other 12 (9 plus panic,
-  peds-sleep, tics), method in repair/s141/S141.md, then the probes and S4. Spend: 0 of 16 batch agents.
+  or verified here; it waits for that folder (lead's call, disclosed).
+  S2/S3 done for 8 (antipsych-effects, delirium, sz-psychosocial, ssri-effects, gppd, psychosis-duration, somatic,
+  substance) plus copd (s140 deferred LOWs); bipolar-mania needs no change; site CSS 30_unpill_css and
+  31_display_lows_css; full preview gate, render, preflight P1 0, vendor 0; legib clean apart from near-threshold
+  clashes listed in repair/s141/S141.md. BLOCKED (asked Jonathan, A or B): panic and tics fail quote_check (web-cache
+  pages never pushed; aafp.org, msdmanuals.com, psychdb.com refused by the cloud network policy); peds-sleep cannot
+  build (repair/migration/site/sleepchart/night.py, Mac only; patches applied); nephrotic-child has no spine folder.
+  A: Jonathan pushes peds/NEPH, site/sleepchart and the web pages to step2haki-private, then one S4 round for all.
+  B: S4 now for the ready ones, the four later. Next after his answer: live hook probes, then S4. Spend: 0 of 16.
 - **Tool change at launch (disclose, G-DIFF):** tools/hooks/common.py defaults the hook state and transcripts paths to
   ~/.config/axbx/hooks and ~/.claude/projects on a Mac with no /home/claude (no effect in the cloud). test_hooks 80/80.
 - **Folders for the four waiting briefs (added 2026-10-15 by a planning session, not the s141 lead):** nephrotic-child,
