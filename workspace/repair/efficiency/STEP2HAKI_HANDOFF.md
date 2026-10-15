@@ -19,8 +19,10 @@ Batch s144 is open (State below).
   copd. Method: s142 (the lead builds; one lean reviewer per role for all briefs). Branch wip/s144 in both repos.
   Batch file: repair/s144/S144.md.
 - **Budget:** 15 agents, 140 API calls, 5M tokens (WAVE.json, wave s144 open). **Spend:** 0 agents.
-- **Step:** launch done (digest line, WAVE.json, local-only restored, hooks installed, test_hooks 80/80, context
-  73,816 no WARNING, lean-reviewer listed). Next: live hook probes, then S1 board evidence for the five briefs.
+- **Step:** S1 to S3. Done: launch, hook probes (T1 to T4, T8, T9 pass), asthma (MECHANICAL PASS, legib 0; folder
+  repair/migration/fm/AST, saved to private wip/s144). Next: rhinitis, pneumoconiosis, cough (hub), sinopulm-structural,
+  each in repair/migration/fm/<RHI|PNC|CGH>/spine or merge/sinopulm-structural/spine; preview ops go in repair/s144/.
+  Network denies every source host: primary quotes from the 2026-10-10 web cache only (disclosed).
 - **Carried from s143:** brief header still in the old style; deferred LOWs in repair/s141/S141.md and
   repair/s142/S142.md. Deploy check: Jonathan confirms version.json. **Mac:** not linked. **Live:** s143 (392e74b).
 
