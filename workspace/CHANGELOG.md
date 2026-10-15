@@ -2,6 +2,33 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-15 s141: s141: site rollout of the s140 conventions (13 spine briefs plus lithium-effects: arrows, bold cutoffs with condition hovers, underline-only hovers; pill retired site-wide); desktop sidebar to the Lithium Glance mockup; s140 deferred display fixes
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (14):
+  - copd (Obstructive Lung Disease): prose edited (+18 chars)
+  - nephrotic-child (Proteinuria and Nephrotic Syndrome in a Child): prose edited (+48 chars)
+  - tics (Tics and Tic Disorders): prose edited (-33 chars)
+  - peds-sleep (Sleep Problems): prose edited (+55 chars)
+  - psychosis-duration (Psychosis): prose edited (-103 chars)
+  - sz-psychosocial (Schizophrenia: Long-Term Care): prose edited (-40 chars)
+  - delirium (Delirium): prose edited (-11 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (-81 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (+16 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (-96 chars)
+  - antipsych-effects (Antipsychotic Adverse Effects): prose edited (-59 chars)
+  - lithium-effects (Lithium Therapy): prose edited (+115 chars)
+  - gppd (Genito-Pelvic Pain/Penetration Disorder): prose edited (-50 chars)
+  - somatic (Somatic Symptom and Related Disorders): prose edited (-14 chars)
+Other page changes (nav, headers, scripts): +8662 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 18 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 197/198 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.015%)
+```
+
 ## 2026-10-15 s140: R5 batch 5: mdd, copd, scfe reviewed to READY; 5a workups, board-tested additions, other names; arrows, bold cutoffs and underline-only hovers in these three briefs
 
 ```
