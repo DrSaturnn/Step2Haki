@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-15, by the s141 lead (s141 open; Claude Code on the web, no Mac).
+Last updated: 2026-10-15, by the s141 lead (s141 SHIPPED, commit bb4caed; Claude Code on the web, no Mac).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -10,65 +10,32 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
-Batch s141 is open (State below). The restart prompt above continues it.
+No batch is open. The next batch starts from the launch prompt below.
 
 The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.md) gives the read order, the steps, the standing calls and the one final report.
 
 ## State (rewrite after every step)
 
-- **Plan:** v4 (repair/efficiency/SPINE_SCALE_PLAN.md). Phase R done (all 17 spine briefs READY after s140).
-- **Open batch: s141** (site rollout of the s140 conventions), launched 2026-10-14 on the Mac desktop app, moved to
-  the cloud the same day (the Mac session hit the weekly plan limit; cloud sessions use the cloud session credits).
-  **Branch wip/s141** (check it out; main does not have the launch records).
-- **Scope:** arrows for high and low measured values, bold lab cutoffs with condition hovers, underline-only hovers
-  (pill retired site-wide); lithium-effects first (hemodialysis cutoffs from the AnKing card, conditions in a hover);
-  then the other 13 READY spine briefs (all spine briefs except mdd, copd, scfe); vendor_scan exempts AnKing wording;
-  the s140 deferred display LOWs. Non-spine briefs: hover restyle by site CSS only ("Yes"). First Phase 2 cluster:
-  "Lead's pick", named in the s141 closing launch prompt.
-- **Budget:** 16 agents, 90 API calls, 5M tokens (WAVE.json s141 open). **Spend:** 0 batch agents (the Mac live hook
-  probes T1 to T4, T8, T9 all passed, outside the budget per the standing hook-test allowance).
-- **Step (2026-10-15, second cloud container, session_01TT7rw3cH8SHGihrjLfz5kH):** session start redone (both repos
-  on wip/s141; private main merged into private wip/s141 for the four folders; local-only restored by cp -r from it;
-  npm i; hooks into /home/claude and /root settings, lean-reviewer in /root/.claude/agents; test_hooks 80/80; context
-  lead 75,249, no WARNING; Playwright 1.56.0). Live hook probes T1 to T4, T8, T9 still to run before S4.
-  Jonathan said "include them": panic, peds-sleep, tics and nephrotic-child join s141 (digest 2026-10-15).
-  lithium-effects: the desk sculpted caution-cell clash does not reproduce (two full legib runs: 0 below contrast and
-  0 clashes in all six cells except the known flat "Stack" switch); the cell is already masked outside sp-cw; no
-  change. S1 done for panic, peds-sleep, tics (boards.md s141 notes; peds-sleep iron cutoff is board-tested, <75,
-  fRlsK2: fix in S2). nephrotic-child: its spine folder (repair/migration/peds/NEPH, per the ledger) is in neither the
-  private repo nor the container (only merge/nephrotic-child, the merge-era folder, was pushed), so it cannot be built
-  or verified here; it waits for that folder (lead's call, disclosed).
-  S2/S3 done for 8 (antipsych-effects, delirium, sz-psychosocial, ssri-effects, gppd, psychosis-duration, somatic,
-  substance) plus copd (s140 deferred LOWs); bipolar-mania needs no change; site CSS 30_unpill_css and
-  31_display_lows_css; full preview gate, render, preflight P1 0, vendor 0; legib clean apart from near-threshold
-  clashes listed in repair/s141/S141.md. Jonathan pushed the four briefs' files (276cf16); panic, tics,
-  peds-sleep and nephrotic-child (S1 boards.md, S2 on outline.json) now verify --mech PASS: S2/S3 done for all 14.
-  Sidebar matched to Jonathan's Lithium Glance mockup (repair/s141/40_sidebar.json; digest 2026-10-15): landing,
-  rail flicker and scroll-spy bugs fixed, gliding lens, mockup geometry.
-  Live hook probes (second container) PASS: T1 approvals write refused; T2 sonnet probe refused; T3/T4/T8/T9 haiku
-  probe: in-lane write ran, tools/ writes refused, 4th call refused (1 agent, 5 calls, 284k tokens, outside budget);
-  wave restored. Budget raised by Jonathan at S4: 24 agents, 260 calls, 8M tokens.
-  S4 to S7 done (four rounds; record in repair/s141/S141.md); all 14 READY. S8 done: presented (page 5e2c019360e1,
-  105 screenshots in local/shots/s141). WAITING for Jonathan's "ship" in this chat (session_01TT7rw3cH8SHGihrjLfz5kH;
-  the approval lives in this container). Then S9: AX_SESSION=https://claude.ai/code/session_01TT7rw3cH8SHGihrjLfz5kH
-  tools/ship.sh s141 "..." (merge main into wip/s141 first), push main by hand if no token, OPEN_WORK, ledger row,
-  next launch prompt (s142 = the plan's s143 psychiatry remainder). Spend: 25 of 26 agents, 142 of 260 calls,
-  2.81M of 8M tokens.
-- **Tool change at launch (disclose, G-DIFF):** tools/hooks/common.py defaults the hook state and transcripts paths to
-  ~/.config/axbx/hooks and ~/.claude/projects on a Mac with no /home/claude (no effect in the cloud). test_hooks 80/80.
-- **Folders for the four waiting briefs (added 2026-10-15 by a planning session, not the s141 lead):** nephrotic-child,
-  panic, peds-sleep and tics now have their folders on step2haki-private main (merge/nephrotic-child, psych/N5,
-  psych/SLEEP, psych/TICS under local-only/repair/migration). Per the s141 lead's call they join s141 only if Jonathan
-  says "include them"; otherwise they are s142. Re-run the cp -rn restore from private main to pick them up.
-- **Open small items:** as at s140 (see the s140 State in git history: 98a9ed7).
-- **Live:** s140 (0cf4b06).
+- **Plan:** v4 (repair/efficiency/SPINE_SCALE_PLAN.md). Phase R done; the s141 rollout put all 17 spine briefs on the
+  s140 conventions (bipolar-mania needed no change; mdd, copd, scfe were done in s140).
+- **Last batch: s141 SHIPPED** (bb4caed, 2026-10-15). Record: repair/s141/S141.md (cloud start, S1 to S9, every ruling).
+  Wave s141 closed (WAVE.json open false). Spend 25 of 26 agents, 142 of 260 calls, 2.81M of 8M tokens.
+- **Deploy check:** step2haki.vercel.app is outside the cloud network policy; Jonathan confirms version.json shows 141.
+- **Mac:** not linked this session: the Mac copies (index.html, axbx-repo.bundle, local-only, this handoff) are owed at
+  the next Mac session; the private repo (wip/s141, then main) holds every local-only change.
+- **Lessons for the next lead:** give each lean reviewer about 3 calls per brief per role plus one per receipt and tell
+  it to write each receipt as soon as that brief is judged (four reviewers in s141 judged everything and wrote
+  nothing); build display packets from the brief's own step headers (shots.py numbers images by section order).
+- **Open small items:** deferred LOWs in repair/s141/S141.md (lithium "level 2.5 or under" words; copd note inset;
+  peds-sleep phone hover row offset; antipsych timing strip clipping); as at s140 otherwise.
+- **Live:** s141 (bb4caed).
 
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s141 (site rollout of the s140 conventions) per claude/BATCH_RUNBOOK.md. Scope: arrows for high and low measured values, bold lab cutoffs with condition hovers, and underline-only hovers (retire the pill style site-wide), lithium-effects first (hemodialysis cutoffs from the AnKing card, conditions in a hover); then the other 13 READY spine briefs; vendor_scan exempts AnKing wording; the s140 deferred display LOWs. Budget for the whole batch: 16 agents, 90 API calls, 5M tokens.
-1. Non-spine briefs (about 160) get the hover restyle by site CSS only, with arrows and cutoffs left for their own batches: yes or no.
-2. After s141, the first Phase 2 cluster (plan section 8): name it, or "lead's pick".
+Step2Haki: launch batch s142 (Phase 2, cluster 1: psychiatry remainder) per claude/BATCH_RUNBOOK.md. Briefs: voices, ipv, psych-medical, disruptive-behavior, suicide-risk (folders: step2haki-private claude/pending/FOLDERS_S142_S160.md, the plan's s143 entry). Budget for the whole batch: 25 agents, 200 API calls, 8M tokens.
+1. The plan file numbers this cluster s143 (its s142, the four waiting briefs, was folded into s141): renumber s144 to s160 down by one: yes or no.
+2. Lean reviewer call caps: about 3 calls per brief per role plus one per receipt (s141 lesson): yes or no.
 ```
 
 ## After s141
