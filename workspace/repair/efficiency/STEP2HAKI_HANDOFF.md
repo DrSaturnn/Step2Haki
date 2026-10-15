@@ -27,9 +27,9 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
   "Lead's pick", named in the s141 closing launch prompt.
 - **Budget:** 16 agents, 90 API calls, 5M tokens (WAVE.json s141 open). **Spend:** 0 batch agents (the Mac live hook
   probes T1 to T4, T8, T9 all passed, outside the budget per the standing hook-test allowance).
-- **Step:** cloud session start done (2026-10-15, session_01Lem3WcZiLiUxNP6yeiu31G; repos at /home/user/step2haki
-  and /home/user/step2haki-private; hooks installed with Jonathan's approval, live tests T1 to T4, T8, T9 passed; record
-  in repair/s141/S141.md). Next: S1 board evidence, lithium-effects first.
+- **Step:** S1 done for the 10 briefs with local folders (record in repair/s141/S141.md). nephrotic-child, panic,
+  peds-sleep, tics have no folder in the cloud (Mac only): lead's call, they wait (disclosed). Next: S2, lithium-effects
+  first; rebuild the s140 conversion helper (s140conv.py sub/unpill, lost with the s140 scratch) under tools/spine.
 - **Tool change at launch (disclose, G-DIFF):** tools/hooks/common.py defaults the hook state and transcripts paths to
   ~/.config/axbx/hooks and ~/.claude/projects on a Mac with no /home/claude (no effect in the cloud). test_hooks 80/80.
 - **Open small items:** as at s140 (see the s140 State in git history: 98a9ed7).
