@@ -48,11 +48,12 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
   Live hook probes (second container) PASS: T1 approvals write refused; T2 sonnet probe refused; T3/T4/T8/T9 haiku
   probe: in-lane write ran, tools/ writes refused, 4th call refused (1 agent, 5 calls, 284k tokens, outside budget);
   wave restored. Budget raised by Jonathan at S4: 24 agents, 260 calls, 8M tokens.
-  S4 round 1 RUNNING: 13 lean reviewers (acc-A..D opus; read-A/B, flags-A/B, display-A..E sonnet), lanes
-  repair/efficiency/lanes/s141/r1/<agent>/<brief>/ (INSTRUCTIONS.md per agent; packets from review_packet.py --diff;
-  display shots of the changed steps from the full preview; sidebar shots in display-A lithium). Budgets total 234
-  calls. Next: copy receipts to repair/migration/spine/reviews/<id>_<part>_r1.md (r numbering continues per brief),
-  S5 adjudicate, S6, S7.
+  S4 to S7 done (four rounds; record in repair/s141/S141.md); all 14 READY. S8 done: presented (page 5e2c019360e1,
+  105 screenshots in local/shots/s141). WAITING for Jonathan's "ship" in this chat (session_01TT7rw3cH8SHGihrjLfz5kH;
+  the approval lives in this container). Then S9: AX_SESSION=https://claude.ai/code/session_01TT7rw3cH8SHGihrjLfz5kH
+  tools/ship.sh s141 "..." (merge main into wip/s141 first), push main by hand if no token, OPEN_WORK, ledger row,
+  next launch prompt (s142 = the plan's s143 psychiatry remainder). Spend: 25 of 26 agents, 142 of 260 calls,
+  2.81M of 8M tokens.
 - **Tool change at launch (disclose, G-DIFF):** tools/hooks/common.py defaults the hook state and transcripts paths to
   ~/.config/axbx/hooks and ~/.claude/projects on a Mac with no /home/claude (no effect in the cloud). test_hooks 80/80.
 - **Folders for the four waiting briefs (added 2026-10-15 by a planning session, not the s141 lead):** nephrotic-child,
