@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-15, by the s140 lead (s140 SHIPPED, commit 0cf4b06; Claude Code on the web, no Mac).
+Last updated: 2026-10-15, by the s141 lead (s141 open; Claude Code on the web, no Mac).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -10,7 +10,7 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
-No batch is open. The next batch starts from the launch prompt below.
+Batch s141 is open (State below). The restart prompt above continues it.
 
 The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.md) gives the read order, the steps, the standing calls and the one final report.
 
@@ -27,11 +27,18 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
   "Lead's pick", named in the s141 closing launch prompt.
 - **Budget:** 16 agents, 90 API calls, 5M tokens (WAVE.json s141 open). **Spend:** 0 batch agents (the Mac live hook
   probes T1 to T4, T8, T9 all passed, outside the budget per the standing hook-test allowance).
-- **Step:** S1 done (10 briefs). S2/S3 lithium-effects: conventions applied, verify --mech PASS, 1,152 words, legib 0
-  except the pre-existing desk sculpted caution-cell clash (fix: mask outside sp-cw, as s140 mdd) and the known flat
-  "Stack" switch. Next: that fix, then S2/S3 for the other 9 (method in repair/s141/S141.md), then S4. Brief-folder work
-  is on step2haki-private branch wip/s141: after the cp -rn restore from main, copy that branch's local-only over it
-  (cp -r) before working. Spend: 0 of 16 batch agents.
+- **Step (2026-10-15, second cloud container, session_01TT7rw3cH8SHGihrjLfz5kH):** session start redone (both repos
+  on wip/s141; private main merged into private wip/s141 for the four folders; local-only restored by cp -r from it;
+  npm i; hooks into /home/claude and /root settings, lean-reviewer in /root/.claude/agents; test_hooks 80/80; context
+  lead 75,249, no WARNING; Playwright 1.56.0). Live hook probes T1 to T4, T8, T9 still to run before S4.
+  Jonathan said "include them": panic, peds-sleep, tics and nephrotic-child join s141 (digest 2026-10-15).
+  lithium-effects: the desk sculpted caution-cell clash does not reproduce (two full legib runs: 0 below contrast and
+  0 clashes in all six cells except the known flat "Stack" switch); the cell is already masked outside sp-cw; no
+  change. S1 done for panic, peds-sleep, tics (boards.md s141 notes; peds-sleep iron cutoff is board-tested, <75,
+  fRlsK2: fix in S2). nephrotic-child: its spine folder (repair/migration/peds/NEPH, per the ledger) is in neither the
+  private repo nor the container (only merge/nephrotic-child, the merge-era folder, was pushed), so it cannot be built
+  or verified here; it waits for that folder (lead's call, disclosed). Next: S2/S3 for the other 12 (9 plus panic,
+  peds-sleep, tics), method in repair/s141/S141.md, then the probes and S4. Spend: 0 of 16 batch agents.
 - **Tool change at launch (disclose, G-DIFF):** tools/hooks/common.py defaults the hook state and transcripts paths to
   ~/.config/axbx/hooks and ~/.claude/projects on a Mac with no /home/claude (no effect in the cloud). test_hooks 80/80.
 - **Folders for the four waiting briefs (added 2026-10-15 by a planning session, not the s141 lead):** nephrotic-child,
