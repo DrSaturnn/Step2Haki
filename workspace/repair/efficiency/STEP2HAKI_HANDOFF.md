@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-15, by the s141 lead (s141 SHIPPED, commit bb4caed; Claude Code on the web, no Mac).
+Last updated: 2026-10-15, by the s143 lead (s143 SHIPPED, commit 392e74b; Claude Code on the web, no Mac).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -10,26 +10,28 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
-Batch s143 is open (site layer: sidebar and canvas), presented and waiting for Jonathan's "ship".
+No batch is open. The next batch starts from the launch prompt below.
 
 ## State (rewrite after every step)
 
-- **Current batch: s143, S8 presented** (2026-10-15, cloud). Launched as pulmonary A; Jonathan redirected it to the
-  sidebar and canvas from the Lithium Glance mockup (digest 2026-10-15). Record: repair/s143/S143.md. Build:
-  repair/s143/40_glance_nav.json (source repair/s143/src, conv.py). Presented: 17 screenshots, local/shots/s143, page
-  2b674758ddf7. Branch claude/step2haki-batch-s143-launch-d5mdc2. No agents used (0 of 15; budget unspent).
-- **Next:** on "ship": AX_SESSION=<session> tools/ship.sh s143 "..." (main merged first), then post-ship. Then pulmonary A
-  (asthma, cough, rhinitis, pneumoconiosis, sinopulm-structural) as s144; later batches shift up by one.
-- **Open decisions:** (1) keep the s142 method for pulmonary A; (2) voices as hub golden (concerns sent: blind review not
-  done, 979 words vs 700 cap, new data-entry "hub", study-mode pattern, link color).
-- **Plan:** v4, Phase 2. **Live:** s142 (4751b28). **Mac:** not linked.
+- **Last batch: s143 SHIPPED** (392e74b, 2026-10-15). Launched as pulmonary A; Jonathan redirected it to the sidebar and
+  canvas from the Lithium Glance mockup (digest 2026-10-15). Record: repair/s143/S143.md. Source of the sidebar
+  component: repair/s143/src (axnav.css, axnav.js, conv.py); later sidebar work edits that component, not the s136 to
+  s141 layers it replaced (they still run on the hidden #navlinks, guarded by window.AXN). No agents used.
+- **Batch numbering:** pulmonary A is now s144; every later batch in the private BATCHES_* and FOLDERS_* files shifts up
+  by one (old s144 is s145, and so on).
+- **Open decisions for s144:** (1) keep the s142 method; (2) voices as hub golden (concerns sent at the s143 launch).
+- **Open small items:** the brief header (title 48 px, subtitle, question) still in the old style (offered as next
+  site-layer work); deferred LOWs in repair/s141/S141.md and repair/s142/S142.md.
+- **Deploy check:** step2haki.vercel.app is outside the cloud network policy; Jonathan confirms version.json shows 143.
+- **Mac:** not linked; Mac copies owed since s141. **Live:** s143 (392e74b).
 
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s143 (Phase 2, pulmonary A) per claude/BATCH_RUNBOOK.md. Briefs: asthma, cough, rhinitis, pneumoconiosis, sinopulm-structural (folders: step2haki-private claude/pending/FOLDERS_S142_S160.md, s143; four have no folder and build from the page and repair/sources). Golden: copd. Budget for the whole batch: 15 agents, 140 API calls, 5M tokens.
+Step2Haki: launch batch s144 (Phase 2, pulmonary A) per claude/BATCH_RUNBOOK.md. Briefs: asthma, cough, rhinitis, pneumoconiosis, sinopulm-structural (folders: step2haki-private claude/pending/FOLDERS_S142_S160.md, listed there as s143; four have no folder and build from the page and repair/sources). Golden: copd. Budget for the whole batch: 15 agents, 140 API calls, 5M tokens.
 1. Keep the s142 method (the lead builds each brief; agents review only, one reviewer per role for all briefs): yes or no.
-2. voices as the hub golden for later hubs (backpain, hippos): approve as is, or name changes.
+2. voices as the hub golden for later hubs (backpain, hippos): approve as is, approve the structure only, or name changes.
 ```
 
 ## After s141
