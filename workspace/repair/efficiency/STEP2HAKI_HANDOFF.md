@@ -10,22 +10,31 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
+No batch is open. The next batch starts from the launch prompt below.
+
 ## State (rewrite after every step)
 
-- **Batch s142 OPEN** (launched 2026-10-15, Claude Code on the web, session_01Ewq5D1zxiHN4jbrN5d1Tqc). Phase 2 cluster 1,
-  psychiatry remainder: voices (repair/migration/psych/HUB/voices), ipv (psych/P3), psych-medical (psych/MED),
-  disruptive-behavior (psych/DBC), suicide-risk (psych/SUI). Branch wip/s142 in both repos. Batch file: repair/s142/S142.md.
-- **Budget:** 25 agents, 200 API calls, 8M tokens (WAVE.json).
-- **Launch decisions** (digest 2026-10-15): plan renumbered (old s143 to s161 now s142 to s160; done on private
-  wip/s142); reviewer caps about 3 calls per brief per role plus one per receipt, each receipt written as soon as that
-  brief is judged.
-- **Step:** S8 presented (page c9215dacf9fe, 162 screenshots in local/shots/s142). All five READY (verify). Waiting for
-  Jonathan's "ship" in this chat (the approval record lives in this container). Then S9: main merged into wip/s142,
-  AX_SESSION=https://claude.ai/code/session_01Ewq5D1zxiHN4jbrN5d1Tqc tools/ship.sh s142, push HEAD to main by hand if no
-  token, OPEN_WORK, wave closed, next launch prompt (s143 pulmonary A). Record: repair/s142/S142.md.
-- **Spend:** 11 of 25 agents, 110 of 200 calls, 3.12M of 8M tokens.
-- **Last batch:** s141 SHIPPED (bb4caed). Open small items: deferred LOWs in repair/s141/S141.md.
-- **Mac:** not linked; Mac copies still owed from s141.
+- **Plan:** v4. Phase 2 under way; the plan's batches were renumbered at the s142 launch (old s143 to s161 are s142 to
+  s160; private claude/pending/BATCHES_*.md, FOLDERS_S142_S160.md).
+- **Last batch: s142 SHIPPED** (4751b28, 2026-10-15). Record: repair/s142/S142.md. suicide-risk, disruptive-behavior,
+  psych-medical, ipv on the spine; voices the first presentation hub (hub golden; Jonathan reviews it blind).
+  Spend 11 of 25 agents, 110 of 200 calls, 3.12M of 8M tokens. Wave s142 closed.
+- **Method that worked (s142):** the lead builds each brief (boards.md, facts.json, spine/build.py from the lean claim
+  map), agents only review: one lean reviewer per role for all briefs, about 3 calls per brief plus 1 per receipt,
+  each receipt written at once. Round 2 and 3 lanes carry changes.md (diff against the previous round's brief).
+- **Deploy check:** step2haki.vercel.app is outside the cloud network policy; Jonathan confirms version.json shows 142.
+- **Mac:** not linked; Mac copies (index.html, axbx-repo.bundle, local-only, this handoff) owed since s141.
+- **Open small items:** deferred LOWs in repair/s141/S141.md and repair/s142/S142.md (disruptive-behavior "remorseful";
+  ipv abbreviations in bank explanations; psych-medical figure link color).
+- **Live:** s142 (4751b28).
+
+## Next launch prompt (paste into a fresh chat)
+
+```
+Step2Haki: launch batch s143 (Phase 2, pulmonary A) per claude/BATCH_RUNBOOK.md. Briefs: asthma, cough, rhinitis, pneumoconiosis, sinopulm-structural (folders: step2haki-private claude/pending/FOLDERS_S142_S160.md, s143; four have no folder and build from the page and repair/sources). Golden: copd. Budget for the whole batch: 15 agents, 140 API calls, 5M tokens.
+1. Keep the s142 method (the lead builds each brief; agents review only, one reviewer per role for all briefs): yes or no.
+2. voices as the hub golden for later hubs (backpain, hippos): approve as is, or name changes.
+```
 
 ## After s141
 
