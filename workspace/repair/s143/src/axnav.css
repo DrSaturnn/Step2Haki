@@ -1,0 +1,128 @@
+/* s143: the Lithium Glance mockup's sidebar and canvas, ported as the site's own components (Jonathan 2026-10-15:
+   "the navigation, scroll behavior, size, tile style etc should be the new step2haki components from this mockup").
+   One component (#nav.axn) replaces the layered s136 to s141 sidebar styling; its script is the s143 axnav block.
+   Values are the mockup's (index.html of Lithium_Glance.zip): brand row, search pill, systems that fold, brief tiles,
+   the nested step rail with its fill and gliding lens, the edge fade, the canvas and the top fade under the toolbar. */
+:root{
+  --axn-spr:linear(0,.022,.077,.151,.235,.322,.407,.488,.563,.63,.69,.742,.787,.826,.859,.886,.909,.928,.943,.956,.966,.974,.98,.985,.989,.992,.995,.997,.998,.999,1);
+  --axn-bnc:linear(0,.03,.104,.203,.314,.426,.533,.629,.715,.787,.847,.896,.934,.963,.984,.999,1.009,1.016,1.019,1.02,1.02,1.018,1.016,1.014,1.012,1.01,1.008,1.006,1.004,1.003,1.002,1.001,1);
+  --axn-ink:#15151B;--axn-mute:#5E5E6B;--axn-tile:rgba(255,255,255,.9);--axn-lens:rgba(255,255,255,.95);
+  --axn-trk:rgba(24,28,30,.16);--axn-hov:rgba(24,28,30,.05);--axn-fld:rgba(118,118,128,.12);--axn-canvas:#EFF0F0;
+}
+[data-theme="dark"]{
+  --axn-ink:var(--ink);--axn-mute:var(--muted);--axn-tile:rgba(255,255,255,.10);--axn-lens:rgba(255,255,255,.12);
+  --axn-trk:rgba(255,255,255,.16);--axn-hov:rgba(255,255,255,.06);--axn-fld:rgba(118,118,128,.24);
+}
+
+/* ---------- the panel's head: brand row and search pill ---------- */
+#nav.axn #navtop{display:block;flex:none;padding:0;border:0;background:none}
+#nav.axn #navtop > .brand{display:none}
+#nav.axn .axn-head{display:flex;align-items:center;gap:12px;padding:18px 18px 12px}
+#nav.axn .axn-mark{width:38px;height:38px;border-radius:11px;background:#15151B;color:#FFFFFF;font:800 15px/1 var(--sans);display:flex;align-items:center;justify-content:center;flex:none}
+#nav.axn .axn-nm{font:700 17px/1.25 var(--sans);letter-spacing:-.2px;color:var(--axn-ink)}
+#nav.axn .axn-sub{font:500 12px/1.3 var(--sans);color:var(--axn-mute);margin-top:1px}
+#nav.axn .axn-tools{margin-left:auto;display:flex;align-items:center;gap:6px}
+#nav.axn .axn-cfg,#nav.axn .navclose{position:static;display:flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;margin:0;border:0;border-radius:999px;background:var(--axn-fld);color:var(--axn-ink);box-shadow:none;cursor:pointer;flex:none}
+#nav.axn .axn-cfg[aria-expanded="true"]{background:var(--axn-tile);box-shadow:inset 0 0 0 1.5px rgba(var(--acc-rgb),.55)}
+@media (min-width:1101px){#nav.axn .navclose{display:none}}
+#nav.axn .axn-head > div:nth-child(2){min-width:0}
+#nav.axn .axn-sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#nav.axn .axn-cfg:focus-visible,#nav.axn .navclose:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#nav.axn .axn-srch{display:flex;align-items:center;gap:8px;height:38px;margin:0 14px 10px;padding:0 12px;border-radius:12px;background:var(--axn-fld);box-sizing:border-box}
+#nav.axn .axn-srch:focus-within{box-shadow:inset 0 0 0 1.5px rgba(var(--acc-rgb),.55)}
+#nav.axn .axn-srch svg{flex:none}
+#nav.axn .axn-srch #search{flex:1 1 auto;min-width:0;width:auto;height:100%;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;outline:none;font:400 15px/1 var(--sans);color:var(--axn-ink);-webkit-appearance:none;appearance:none}
+#nav.axn .axn-srch #search::placeholder{color:var(--axn-mute);opacity:1}
+#nav.axn .axn-srch #search::-webkit-search-cancel-button{-webkit-appearance:none}
+
+/* ---------- the list: one scroll box with faded edges ---------- */
+#nav.axn #navscroll{padding:6px 10px 22px;-webkit-mask-image:linear-gradient(transparent,#000 14px,#000 calc(100% - 22px),transparent);mask-image:linear-gradient(transparent,#000 14px,#000 calc(100% - 22px),transparent)}
+#nav.axn #navlinks,#nav.axn #navscroll > .shelfpick,#nav.axn #navscroll > #modes{display:none!important}
+#nav.axn.sxon #axn{display:none}
+#axn .axn-sys{display:grid;grid-template-columns:14px minmax(0,1fr) auto;align-items:center;gap:8px;width:100%;height:36px;padding:0 10px;margin:0;border:0;border-radius:11px;background:transparent;text-align:left;cursor:pointer;font-family:var(--sans);box-sizing:border-box}
+#axn .axn-sys:hover{background:var(--axn-hov)}
+#axn .axn-sys:focus-visible,#axn a:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+#axn .axn-sys svg{transition:transform .55s var(--axn-bnc)}
+#axn .axn-sys[aria-expanded="true"] svg{transform:rotate(90deg)}
+#axn .axn-sys .nm{font-size:14px;font-weight:700;color:var(--axn-ink)}
+#axn .axn-sys .ct{font-size:12px;font-weight:600;color:var(--axn-mute)}
+#axn .axn-dz{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--axn-spr)}
+#axn .axn-dz.on{grid-template-rows:1fr}
+#axn .axn-dzi{overflow:hidden;min-height:0}
+#axn .axn-dzc{opacity:0;filter:blur(6px);transform:translateY(-8px) scale(.98);transition:opacity .3s ease,filter .35s ease,transform .55s var(--axn-spr)}
+#axn .axn-dz.on .axn-dzc{opacity:1;filter:blur(0);transform:none}
+#axn .axn-dz:not(.on) .axn-dzc{visibility:hidden;transition:opacity .3s ease,filter .35s ease,transform .55s var(--axn-spr),visibility 0s .55s}
+#axn.axn-still .axn-dz,#axn.axn-still .axn-dzc,#axn.axn-still .axn-sys svg,#axn.axn-still .axn-fill,#axn.axn-still .axn-lens{transition:none!important}
+#axn .axn-lbl{font-size:12px;font-weight:600;color:var(--axn-mute);padding:10px 10px 4px 32px}
+#axn a.axn-b{display:flex;align-items:center;min-height:34px;padding:6px 10px 6px 32px;box-sizing:border-box;border-radius:11px;font-size:14px;line-height:19px;font-weight:500;color:var(--axn-ink);text-decoration:none}
+#axn a.axn-b:hover{background:var(--axn-hov)}
+#axn a.axn-b[aria-current="page"]{background:var(--axn-tile);box-shadow:0 1px 3px rgba(0,0,0,.10),inset 0 0 0 1px rgba(24,28,30,.10);font-weight:700}
+#axn [hidden]{display:none!important}
+
+/* ---------- the current brief's step rail ---------- */
+#axn .axn-rail{display:grid;grid-template-columns:4px minmax(0,1fr);gap:8px;padding:6px 0 8px 34px}
+#axn .axn-trk{position:relative;border-radius:4px;background:var(--axn-trk)}
+#axn .axn-fill{position:absolute;left:0;right:0;top:0;height:34px;border-radius:4px;background:var(--accent);box-shadow:0 0 8px rgba(var(--acc-rgb),.55);transition:height .55s var(--axn-spr)}
+#axn .axn-rows{position:relative}
+#axn .axn-lens{position:absolute;left:0;right:0;top:0;height:34px;border-radius:11px;background:var(--axn-lens);box-shadow:inset 0 0 0 1.5px rgba(var(--acc-rgb),.55),0 4px 16px rgba(var(--acc-rgb),.24);transition:transform .7s var(--axn-bnc);pointer-events:none}
+#axn .axn-rl{position:relative;display:flex;flex-direction:column;gap:2px}
+#axn a.axn-s{display:grid;grid-template-columns:20px minmax(0,1fr) auto;align-items:center;gap:4px;height:34px;padding:0 10px;border-radius:11px;color:var(--axn-ink);text-decoration:none;cursor:pointer}
+#axn a.axn-s .n{font-size:12px;font-weight:700;color:var(--axn-mute);transition:color .3s ease}
+#axn a.axn-s .l{font-size:14px;font-weight:500}
+#axn a.axn-s .u{font-size:11px;font-weight:500;color:var(--axn-mute)}
+#axn a.axn-s[aria-current="step"] .n{color:var(--accent)}
+#axn a.axn-s[aria-current="step"] .l{font-weight:700}
+#axn a.axn-s[aria-disabled="true"]{opacity:.5;cursor:default}
+@media (prefers-reduced-motion:reduce){
+  #axn .axn-dz,#axn .axn-dzc,#axn .axn-sys svg,#axn .axn-fill,#axn .axn-lens{transition:none!important}
+}
+
+/* ---------- the display sheet: the switches the mockup's sidebar does not carry ---------- */
+#nav.axn{position:fixed}
+#axdisp{position:absolute;top:70px;left:10px;right:10px;z-index:6;max-height:calc(100% - 78px);overflow-y:auto;box-sizing:border-box;padding:8px;border-radius:22px;
+  background:rgba(250,250,252,.92);-webkit-backdrop-filter:blur(40px) saturate(190%);backdrop-filter:blur(40px) saturate(190%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 0 0 .5px rgba(0,0,0,.08),0 18px 48px rgba(0,0,0,.16);
+  opacity:0;transform:translateY(-6px) scale(.98);transform-origin:top right;pointer-events:none;visibility:hidden;
+  transition:opacity .25s ease,transform .45s var(--axn-spr),visibility 0s .45s}
+#axdisp:focus{outline:none}
+#axdisp.on{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition:opacity .25s ease,transform .45s var(--axn-spr)}
+[data-theme="dark"] #axdisp{background:rgba(40,40,46,.92);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 0 0 .5px rgba(255,255,255,.10),0 18px 48px rgba(0,0,0,.5)}
+#axdisp .axd-h{font:650 13px/1.2 var(--sans);color:var(--axn-mute);padding:10px 12px 6px}
+#axdisp .shelfpick{display:flex!important;flex-direction:row!important;align-items:center;justify-content:space-between;gap:10px;margin:0;padding:4px 12px 8px;border:0;background:none;box-shadow:none;text-align:left}
+#axdisp .shelfpick .lbl{font:600 14px/1.2 var(--sans);color:var(--axn-ink);letter-spacing:0;text-transform:none}
+#axdisp .shelfpick select{width:auto;max-width:60%;height:34px;margin:0;font:600 14px/1.2 var(--sans);color:var(--axn-ink);background-color:var(--axn-fld);border:0!important;outline:none;box-shadow:none!important;border-radius:10px;padding:0 10px}
+#axdisp .shelfpick select:focus-visible{box-shadow:inset 0 0 0 1.5px rgba(var(--acc-rgb),.55)!important}
+#axdisp #modes{display:flex;flex-direction:column;gap:2px;margin:0;padding:0;border:0;background:none}
+#axdisp #modes button{all:unset;display:flex;flex-direction:row-reverse;align-items:center;justify-content:space-between;gap:10px;box-sizing:border-box;width:100%;min-height:42px;padding:0 12px;border-radius:12px;cursor:pointer;background:transparent;box-shadow:none}
+#axdisp #modes button:hover{background:var(--axn-hov)}
+#axdisp #modes button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+#axdisp #modes .nm{font:600 14px/1.2 var(--sans);letter-spacing:0;text-transform:none;color:var(--axn-ink)}
+#axdisp #modes .track{width:42px;height:26px;border-radius:999px;background:rgba(120,120,128,.24);position:relative;flex:none;box-shadow:none;transition:background .25s ease}
+#axdisp #modes .knob{position:absolute;top:2px;left:2px;width:22px;height:22px;border-radius:50%;background:#FFFFFF;box-shadow:0 2px 6px rgba(0,0,0,.18);transition:transform .45s var(--axn-bnc)}
+#axdisp #modes button[aria-pressed="true"] .track{background:var(--accent)}
+#axdisp #modes button[aria-pressed="true"] .knob{transform:translateX(16px)}
+#axdisp #modes .axacc{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 12px 8px;margin:0;border:0;background:none}
+#axdisp #modes .axacc .nm{width:100%}
+#axdisp #modes .axacc .axsw{all:unset;width:22px;height:22px;border-radius:999px;background:var(--sw);box-shadow:0 0 0 1px rgba(24,28,30,.15);cursor:pointer}
+#axdisp #modes .axacc .axsw[aria-checked="true"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px var(--sw)}
+#axdisp #modes .axacc .axsw:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+#axdisp #modes .axacc .axan{font:700 13px/1 var(--sans);color:var(--axn-ink);margin-left:2px}
+#axdisp .axbuild{display:block;margin:4px 0 0;padding:10px 12px 8px;border-top:1px solid rgba(24,28,30,.08);font:500 12px/1.3 var(--sans);color:var(--axn-mute)}
+[data-theme="dark"] #axdisp .axbuild{border-top-color:rgba(255,255,255,.10)}
+
+/* ---------- canvas: the brief sits on the page, not on a slab ---------- */
+html:not([data-theme="dark"]) body{background:linear-gradient(180deg,#EFF0F0 0%,#E9EBEB 100%) fixed;background-color:#EFF0F0}
+main .wrap > .brief{background:none!important;box-shadow:none!important;border-radius:0!important;border:0!important}
+@media (min-width:1101px){
+  main{margin-left:0}
+  main .wrap{box-sizing:content-box;max-width:1040px;margin:0 auto;padding:0 40px 0 384px}
+  main .wrap > .brief{padding:104px 0 0!important;margin:0 0 96px;scroll-margin-top:0}
+  #axtopfade{position:fixed;top:0;left:0;right:0;height:88px;z-index:30;pointer-events:none;
+    background:linear-gradient(rgba(239,240,240,.9),rgba(239,240,240,0));-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+    -webkit-mask-image:linear-gradient(#000 45%,transparent);mask-image:linear-gradient(#000 45%,transparent)}
+  [data-theme="dark"] #axtopfade{display:none}
+}
+@media (max-width:1100px){
+  #axtopfade{display:none}
+  main .wrap > .brief{padding:64px 0 0!important;margin:0 0 72px}
+}
