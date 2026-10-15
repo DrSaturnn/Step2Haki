@@ -3,15 +3,18 @@
 into each reviewer's lane. It replaces the lead's hand-built R3 round-1 packets, which dropped every bank item's
 lead-in and type (two false MED findings) and listed only 132 of 177 brief titles (one false MED).
 
-  python3 tools/spine/review_packet.py <brief dir> <review dir> [--page index.html] [--proposals FILE]
+  python3 tools/spine/review_packet.py <brief dir> <review dir> [--page index.html] [--proposals FILE] [--diff]
 
 Writes <review dir>/<part>/ for part acc, read, display, flags: brief_text.txt (the brief as the learner reads it, each
 bank item shown with its type and lead-in), deps.txt (the receipt's deps line and brief-sha, from verify.py),
 HOLISTIC_REVIEW.md, RECEIPT_FORMAT.md (PASS, PASS-IF with replacements, FAIL) and, with --proposals, the
 proposed replacements; acc adds facts.json and claim_map.json; read adds sibling_titles.txt (every brief: id and title,
 all of them) and drawer_targets.txt (each drawer or pointer in the brief and whether its target exists); flags adds
-facts.json and outline_flags.txt. Screenshots for display come from shots.py separately.
+facts.json and outline_flags.txt. With --diff (s141), every part also gets changes.md: a line diff of the brief as
+the learner reads it, the page's current brief against this build, so a rollout review can find each change without
+comparing two briefs by hand. Screenshots for display come from shots.py separately.
 """
+import difflib
 import hashlib
 import html as H
 import os
@@ -154,6 +157,14 @@ def main(argv):
                for t in sorted({a or b for a, b in targets})]
     txt = text_of(brief)
     props = argv[argv.index('--proposals') + 1] if '--proposals' in argv else None
+    diff = None
+    if '--diff' in argv:
+        live = [b for b in P.briefs(page) if b.id == v.bid]
+        old = text_of(page[live[0].start:live[0].end]).splitlines() if live else []
+        dl = list(difflib.unified_diff(old, txt.splitlines(), 'page now', 'this build', n=1, lineterm=''))
+        diff = ('# Changes in this build (s141 --diff)\n\nLines starting "-" are the page now; "+" this build; others are '
+                'context. %s\n\n' % ('No change.' if not dl else '%d changed line(s).' % sum(
+                    1 for x in dl if x[:1] in '+-' and x[:3] not in ('+++', '---')))) + '\n'.join(dl) + '\n'
     for part in ('acc', 'read', 'display', 'flags'):
         pd = os.path.join(out, part)
         os.makedirs(pd, exist_ok=True)
@@ -168,6 +179,8 @@ def main(argv):
             % os.path.join(os.path.abspath(pd), 'receipt.md'))
         if props:
             shutil.copy(props, os.path.join(pd, 'proposed_replacements.md'))
+        if diff is not None:
+            open(os.path.join(pd, 'changes.md'), 'w', encoding='utf-8').write(diff)
         rules = part_rules(part)
         if rules:
             open(os.path.join(pd, 'RULES.md'), 'w', encoding='utf-8').write(rules)
