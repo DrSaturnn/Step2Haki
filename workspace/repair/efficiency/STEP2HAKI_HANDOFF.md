@@ -41,11 +41,11 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
   S2/S3 done for 8 (antipsych-effects, delirium, sz-psychosocial, ssri-effects, gppd, psychosis-duration, somatic,
   substance) plus copd (s140 deferred LOWs); bipolar-mania needs no change; site CSS 30_unpill_css and
   31_display_lows_css; full preview gate, render, preflight P1 0, vendor 0; legib clean apart from near-threshold
-  clashes listed in repair/s141/S141.md. BLOCKED (asked Jonathan, A or B): panic and tics fail quote_check (web-cache
-  pages never pushed; aafp.org, msdmanuals.com, psychdb.com refused by the cloud network policy); peds-sleep cannot
-  build (repair/migration/site/sleepchart/night.py, Mac only; patches applied); nephrotic-child has no spine folder.
-  A: Jonathan pushes peds/NEPH, site/sleepchart and the web pages to step2haki-private, then one S4 round for all.
-  B: S4 now for the ready ones, the four later. Next after his answer: live hook probes, then S4. Spend: 0 of 16.
+  clashes listed in repair/s141/S141.md. Jonathan pushed the four briefs' files (276cf16); panic, tics,
+  peds-sleep and nephrotic-child (S1 boards.md, S2 on outline.json) now verify --mech PASS: S2/S3 done for all 14.
+  Sidebar matched to Jonathan's Lithium Glance mockup (repair/s141/40_sidebar.json; digest 2026-10-15): landing,
+  rail flicker and scroll-spy bugs fixed, gliding lens, mockup geometry. Next: live hook probes, then S4 for the 14
+  (all four roles; display for every spine brief, as the site CSS changed). Spend: 0 of 16 batch agents.
 - **Tool change at launch (disclose, G-DIFF):** tools/hooks/common.py defaults the hook state and transcripts paths to
   ~/.config/axbx/hooks and ~/.claude/projects on a Mac with no /home/claude (no effect in the cloud). test_hooks 80/80.
 - **Folders for the four waiting briefs (added 2026-10-15 by a planning session, not the s141 lead):** nephrotic-child,
