@@ -19,13 +19,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Launch decisions** (digest 2026-10-15): plan renumbered (old s143 to s161 now s142 to s160; done on private
   wip/s142); reviewer caps about 3 calls per brief per role plus one per receipt, each receipt written as soon as that
   brief is judged.
-- **Step:** S4 review round 1 running (launched 2026-10-15): 4 lean reviewers, one per role for all 5 briefs
-  (acc-A opus; read-A, display-A, flags-A sonnet), lanes repair/efficiency/lanes/s142/r1/<agent>/<brief>/ (receipt.md in
-  each), Budget 21 calls each. S1 to S3 done for all five (records in repair/s142/S142.md; previews 10_*.json in
-  repair/s142/; local folders pushed to private wip/s142). Packets: /tmp review_packet.py output copied into the lanes;
-  display images renamed to real step numbers (step0 is the header). If the chat restarts mid-S4: read the receipts in
-  the lanes, copy each to repair/migration/spine/reviews/<id>_<part>_r1.md, then S5.
-- **Spend:** 4 agents launched (round 1), calls and tokens per usage_ledger.py.
+- **Step:** S8 presented (page c9215dacf9fe, 162 screenshots in local/shots/s142). All five READY (verify). Waiting for
+  Jonathan's "ship" in this chat (the approval record lives in this container). Then S9: main merged into wip/s142,
+  AX_SESSION=https://claude.ai/code/session_01Ewq5D1zxiHN4jbrN5d1Tqc tools/ship.sh s142, push HEAD to main by hand if no
+  token, OPEN_WORK, wave closed, next launch prompt (s143 pulmonary A). Record: repair/s142/S142.md.
+- **Spend:** 11 of 25 agents, 110 of 200 calls, 3.12M of 8M tokens.
 - **Last batch:** s141 SHIPPED (bb4caed). Open small items: deferred LOWs in repair/s141/S141.md.
 - **Mac:** not linked; Mac copies still owed from s141.
 
