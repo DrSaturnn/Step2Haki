@@ -27,7 +27,11 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
   "Lead's pick", named in the s141 closing launch prompt.
 - **Budget:** 16 agents, 90 API calls, 5M tokens (WAVE.json s141 open). **Spend:** 0 batch agents (the Mac live hook
   probes T1 to T4, T8, T9 all passed, outside the budget per the standing hook-test allowance).
-- **Step:** launch done. Next: the cloud session start (handoff Session start 1 to 4; re-run hook tests there), then S1.
+- **Step:** launch done. Cloud session start (2026-10-15, session_01Lem3WcZiLiUxNP6yeiu31G): both repos cloned
+  (/home/user/step2haki, /home/user/step2haki-private), npm i, local-only restored, test_hooks 80/80, --context no
+  WARNING, step2haki-tools:lean-reviewer listed. BLOCKED: writing the hooks into /root/.claude/settings.json was refused
+  by the session's auto-mode classifier (self-modification), so live tests T1 to T4, T8, T9 have not run; asked
+  Jonathan. Next: S1 (lead-only; needs no hooks), hooks before S4.
 - **Tool change at launch (disclose, G-DIFF):** tools/hooks/common.py defaults the hook state and transcripts paths to
   ~/.config/axbx/hooks and ~/.claude/projects on a Mac with no /home/claude (no effect in the cloud). test_hooks 80/80.
 - **Open small items:** as at s140 (see the s140 State in git history: 98a9ed7).
