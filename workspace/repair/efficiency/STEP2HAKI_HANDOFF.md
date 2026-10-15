@@ -20,7 +20,8 @@ No batch is open. The next batch starts from the launch prompt below.
   s141 layers it replaced (they still run on the hidden #navlinks, guarded by window.AXN). No agents used.
 - **Batch numbering:** pulmonary A is now s144; every later batch in the private BATCHES_* and FOLDERS_* files shifts up
   by one (old s144 is s145, and so on).
-- **Open decisions for s144:** (1) keep the s142 method; (2) voices as hub golden (concerns sent at the s143 launch).
+- **Settled (digest 2026-10-15):** the s142 method continues; voices is the hub golden for structure (carried figures
+  exempt from the 700 cap; data-entry "hub" accepted); its study-mode pattern and link color wait for the blind review.
 - **Open small items:** the brief header (title 48 px, subtitle, question) still in the old style (offered as next
   site-layer work); deferred LOWs in repair/s141/S141.md and repair/s142/S142.md.
 - **Deploy check:** step2haki.vercel.app is outside the cloud network policy; Jonathan confirms version.json shows 143.
@@ -29,9 +30,7 @@ No batch is open. The next batch starts from the launch prompt below.
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s144 (Phase 2, pulmonary A) per claude/BATCH_RUNBOOK.md. Briefs: asthma, cough, rhinitis, pneumoconiosis, sinopulm-structural (folders: step2haki-private claude/pending/FOLDERS_S142_S160.md, listed there as s143; four have no folder and build from the page and repair/sources). Golden: copd. Budget for the whole batch: 15 agents, 140 API calls, 5M tokens.
-1. Keep the s142 method (the lead builds each brief; agents review only, one reviewer per role for all briefs): yes or no.
-2. voices as the hub golden for later hubs (backpain, hippos): approve as is, approve the structure only, or name changes.
+Step2Haki: launch batch s144 (Phase 2, pulmonary A) per claude/BATCH_RUNBOOK.md. Briefs: asthma, cough, rhinitis, pneumoconiosis, sinopulm-structural (folders: step2haki-private claude/pending/FOLDERS_S142_S160.md, listed there as s143; four have no folder and build from the page and repair/sources). Golden: copd. Budget for the whole batch: 15 agents, 140 API calls, 5M tokens. Method: s142 (settled 2026-10-15).
 ```
 
 ## After s141
