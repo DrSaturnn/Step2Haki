@@ -2,6 +2,22 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-15 s140: R5 batch 5: mdd, copd, scfe reviewed to READY; 5a workups, board-tested additions, other names; arrows, bold cutoffs and underline-only hovers in these three briefs
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (3):
+  - scfe (Slipped Capital Femoral Epiphysis): items edited (q_1e0294ade15759f89757, q_c4752c99840e5fc84b7a, q_d8aec8c3755f53ca843b); versions bumped (q_1e0294ade15759f89757 v2->v3, q_c4752c99840e5fc84b7a v1->v2, q_d8aec8c3755f53ca843b v2->v3); attrs set (q_d8aec8c3755f53ca843b data-d2); prose edited (+1450 chars)
+  - copd (Obstructive Lung Disease): items edited (q_582f85d59e8652bfba7b, q_d2014e221b4951e78f2d, q_a21c33a11152540783ed, q_fe770bee4e92526681d7, q_412751afcfdc52f6be00, q_cc7315e5e2a450bbacfc); versions bumped (q_582f85d59e8652bfba7b v2->v3, q_d2014e221b4951e78f2d v2->v3, q_a21c33a11152540783ed v2->v3, q_fe770bee4e92526681d7 v2->v3, q_412751afcfdc52f6be00 v2->v3, q_cc7315e5e2a450bbacfc v3->v4); attrs set (q_d2014e221b4951e78f2d data-d1); prose edited (+2658 chars)
+  - mdd (Major Depressive Disorder): items edited (q_ce4c3eab1e36837f52cf, q_2746e75c4067849741f3, q_77b8d7080173cf63a52e); versions bumped (q_ce4c3eab1e36837f52cf v1->v2, q_2746e75c4067849741f3 v1->v2, q_77b8d7080173cf63a52e v1->v2); prose edited (+1518 chars)
+Other page changes (nav, headers, scripts): +762 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 16 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 197/198 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.015%)
+```
+
 ## 2026-10-14 s139: s139: R5 batch 4: psychosis-duration, bipolar-mania, delirium, substance reviewed to READY; 5a workups, board-tested additions, other names
 
 ```
