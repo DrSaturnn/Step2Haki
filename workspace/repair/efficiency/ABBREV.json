@@ -20,7 +20,8 @@
   "ST": "ECG segment",
   "CRASH": "mnemonic",
   "AM": "clock time",
-  "PM": "clock time"
+  "PM": "clock time",
+  "USB": "mnemonic (USB-C, the AnKing upper-lobe pneumoconiosis mnemonic; s144)"
  },
  "_site_conventions_note": "carried from verify.py's MIGRATION_CONTRACT V1 allowlist (before 2026-10-12)",
  "roman_numerals": [
