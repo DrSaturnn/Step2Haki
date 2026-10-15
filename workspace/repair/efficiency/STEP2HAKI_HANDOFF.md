@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-15, by the s143 lead (s143 SHIPPED, commit 392e74b; Claude Code on the web, no Mac).
+Last updated: 2026-10-15, by the s144 lead (s144 open; Claude Code on the web, no Mac).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -10,22 +10,19 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
-No batch is open. The next batch starts from the launch prompt below.
+Batch s144 is open (State below).
 
 ## State (rewrite after every step)
 
-- **Last batch: s143 SHIPPED** (392e74b, 2026-10-15). Launched as pulmonary A; Jonathan redirected it to the sidebar and
-  canvas from the Lithium Glance mockup (digest 2026-10-15). Record: repair/s143/S143.md. Source of the sidebar
-  component: repair/s143/src (axnav.css, axnav.js, conv.py); later sidebar work edits that component, not the s136 to
-  s141 layers it replaced (they still run on the hidden #navlinks, guarded by window.AXN). No agents used.
-- **Batch numbering:** pulmonary A is now s144; every later batch in the private BATCHES_* and FOLDERS_* files shifts up
-  by one (old s144 is s145, and so on).
-- **Settled (digest 2026-10-15):** the s142 method continues; voices is the hub golden for structure (carried figures
-  exempt from the 700 cap; data-entry "hub" accepted); its study-mode pattern and link color wait for the blind review.
-- **Open small items:** the brief header (title 48 px, subtitle, question) still in the old style (offered as next
-  site-layer work); deferred LOWs in repair/s141/S141.md and repair/s142/S142.md.
-- **Deploy check:** step2haki.vercel.app is outside the cloud network policy; Jonathan confirms version.json shows 143.
-- **Mac:** not linked; Mac copies owed since s141. **Live:** s143 (392e74b).
+- **Open batch: s144** (Phase 2, pulmonary A), launched 2026-10-15 in Claude Code on the web
+  (session_01N8GCnHdWAjLAfoM9W1sXDn). Briefs: asthma, cough, rhinitis, pneumoconiosis, sinopulm-structural. Golden:
+  copd. Method: s142 (the lead builds; one lean reviewer per role for all briefs). Branch wip/s144 in both repos.
+  Batch file: repair/s144/S144.md.
+- **Budget:** 15 agents, 140 API calls, 5M tokens (WAVE.json, wave s144 open). **Spend:** 0 agents.
+- **Step:** launch done (digest line, WAVE.json, local-only restored, hooks installed, test_hooks 80/80, context
+  73,816 no WARNING, lean-reviewer listed). Next: live hook probes, then S1 board evidence for the five briefs.
+- **Carried from s143:** brief header still in the old style; deferred LOWs in repair/s141/S141.md and
+  repair/s142/S142.md. Deploy check: Jonathan confirms version.json. **Mac:** not linked. **Live:** s143 (392e74b).
 
 ## Next launch prompt (paste into a fresh chat)
 
