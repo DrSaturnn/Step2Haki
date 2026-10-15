@@ -15,7 +15,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Batch s142 OPEN** (launched 2026-10-15, Claude Code on the web, session_01Ewq5D1zxiHN4jbrN5d1Tqc). Phase 2 cluster 1,
   psychiatry remainder: voices (repair/migration/psych/HUB/voices), ipv (psych/P3), psych-medical (psych/MED),
   disruptive-behavior (psych/DBC), suicide-risk (psych/SUI). Branch wip/s142 in both repos. Batch file: repair/s142/S142.md.
-- **Budget:** 25 agents, 200 API calls, 8M tokens (WAVE.json). Spend: 0 agents, 0 calls.
+- **Budget:** 25 agents, 200 API calls, 8M tokens (WAVE.json).
 - **Launch decisions** (digest 2026-10-15): plan renumbered (old s143 to s161 now s142 to s160; done on private
   wip/s142); reviewer caps about 3 calls per brief per role plus one per receipt, each receipt written as soon as that
   brief is judged.
