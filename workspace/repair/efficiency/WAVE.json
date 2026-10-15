@@ -10,10 +10,10 @@
   "flag-review",
   "wording-fix"
  ],
- "max_agents": 12,
+ "max_agents": 15,
  "max_calls": 80,
  "max_tokens": 5500000,
- "set_by": "Jonathan: s140 launch \"Budget for the whole batch: 12 agents, 80 API calls, 5.5M tokens.\"",
+ "set_by": "Jonathan: s140 launch \"Budget for the whole batch: 12 agents, 80 API calls, 5.5M tokens.\" Raised 2026-10-15: \"Raise to 15 agents (Rec.)\".",
  "previous": {
   "id": "s139",
   "note": "closed 2026-10-14 (s139 shipped, commit 39d1846)"
@@ -32,7 +32,7 @@
    "tokens": 8000000
   },
   "s140": {
-   "agents": 12,
+   "agents": 15,
    "calls": 80,
    "tokens": 5500000
   }
