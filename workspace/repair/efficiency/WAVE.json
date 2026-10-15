@@ -1,8 +1,8 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s140",
- "open": false,
- "plan_step": "s140",
+ "id": "s141",
+ "open": true,
+ "plan_step": "s141",
  "roles": [
   "acc-review",
   "read-review",
@@ -10,16 +10,16 @@
   "flag-review",
   "wording-fix"
  ],
- "max_agents": 15,
- "max_calls": 80,
- "max_tokens": 5500000,
- "set_by": "Jonathan: s140 launch \"Budget for the whole batch: 12 agents, 80 API calls, 5.5M tokens.\" Raised 2026-10-15: \"Raise to 15 agents (Rec.)\".",
+ "max_agents": 16,
+ "max_calls": 90,
+ "max_tokens": 5000000,
+ "set_by": "Jonathan: s141 launch \"Budget for the whole batch: 16 agents, 90 API calls, 5M tokens.\"",
  "previous": {
-  "id": "s139",
-  "note": "closed 2026-10-14 (s139 shipped, commit 39d1846)"
+  "id": "s140",
+  "note": "2026-10-15 (s140 shipped, commit 0cf4b06)"
  },
- "opened": "2026-10-14 (cloud session)",
- "note": "R5 batch 5: mdd, copd, scfe",
+ "opened": "2026-10-14 (Mac desktop session, Claude Code)",
+ "note": "site rollout of the s140 conventions: lithium-effects first, then the other 13 READY spine briefs",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -35,7 +35,11 @@
    "agents": 15,
    "calls": 80,
    "tokens": 5500000
+  },
+  "s141": {
+   "agents": 16,
+   "calls": 90,
+   "tokens": 5000000
   }
- },
- "closed": "2026-10-15 (s140 shipped, commit 0cf4b06)"
+ }
 }

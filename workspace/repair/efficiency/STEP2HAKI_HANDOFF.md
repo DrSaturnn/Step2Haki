@@ -16,26 +16,22 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
 
 ## State (rewrite after every step)
 
-- **Plan:** v4 (repair/efficiency/SPINE_SCALE_PLAN.md). **Phase R is done:** all 17 spine briefs READY after s140.
-- **No batch open.** WAVE.json closed.
-- **Last batch: s140 (R5 batch 5), SHIPPED 2026-10-15** (Jonathan: "ship"). Commit 0cf4b06 on main. Record:
-  repair/s140/S140.md. READY and live: mdd, copd, scfe (receipts r1 to r3 in local-only spine/reviews; in
-  step2haki-private). Deploy check: Jonathan confirms version.json shows {"build":"s140"}.
-- **New standing conventions (Jonathan 2026-10-14/15, digest):** arrows for high and low measured values; bold lab
-  cutoffs with symbols, conditions in a hover; underline-only hovers (no pills). Applied in mdd, copd, scfe only; the
-  rest of the site is the next batch. AnKing card wording may be quoted in the public repo.
-- **Open small items:** carried from s139 (fold settled digest lines into STANDING_DIRECTIONS; s139 and s138 deferred
-  LOWs; s134 hover cuts; ready_gate glob; kawasaki CRASH blank line; "Stack" switch 1.03 in flat); s140 deferred LOWs
-  (note under a 5a figure flush left; spacing before the clue table; a lone arrow on phone in copd 5a; act-now color
-  sources; pseudodementia for the dementia brief; copd: add AnKing 1555373144446 to facts); vendor_scan to exempt AnKing
-  shingles.
-- **Cloud lessons (s140):** the container restarted mid-batch; lanes, receipts and clones survived in /home/user, hooks
-  in /root/.claude/settings.json held. Tell reviewers the deps line format exactly (s140 R2 copied a "brief:" label).
-  Replacements that cross bold or hover markup cannot be counted by condpass: budget a normal follow-up for them.
-  Each image a reviewer reads is one call; give the receipt format and deps lines in the prompt.
-- **Branches:** wip/s135 to wip/s139 merged; Jonathan deletes them on GitHub ("Noted", s140 launch). s140 ran on
-  claude/step2haki-batch-s140-esidy4 (merged to main by the ship).
-- **Live:** s140 (0cf4b06). **main:** the s140 log commit.
+- **Plan:** v4 (repair/efficiency/SPINE_SCALE_PLAN.md). Phase R done (all 17 spine briefs READY after s140).
+- **Open batch: s141** (site rollout of the s140 conventions), launched 2026-10-14 on the Mac desktop app, moved to
+  the cloud the same day (the Mac session hit the weekly plan limit; cloud sessions use the cloud session credits).
+  **Branch wip/s141** (check it out; main does not have the launch records).
+- **Scope:** arrows for high and low measured values, bold lab cutoffs with condition hovers, underline-only hovers
+  (pill retired site-wide); lithium-effects first (hemodialysis cutoffs from the AnKing card, conditions in a hover);
+  then the other 13 READY spine briefs (all spine briefs except mdd, copd, scfe); vendor_scan exempts AnKing wording;
+  the s140 deferred display LOWs. Non-spine briefs: hover restyle by site CSS only ("Yes"). First Phase 2 cluster:
+  "Lead's pick", named in the s141 closing launch prompt.
+- **Budget:** 16 agents, 90 API calls, 5M tokens (WAVE.json s141 open). **Spend:** 0 batch agents (the Mac live hook
+  probes T1 to T4, T8, T9 all passed, outside the budget per the standing hook-test allowance).
+- **Step:** launch done. Next: the cloud session start (handoff Session start 1 to 4; re-run hook tests there), then S1.
+- **Tool change at launch (disclose, G-DIFF):** tools/hooks/common.py defaults the hook state and transcripts paths to
+  ~/.config/axbx/hooks and ~/.claude/projects on a Mac with no /home/claude (no effect in the cloud). test_hooks 80/80.
+- **Open small items:** as at s140 (see the s140 State in git history: 98a9ed7).
+- **Live:** s140 (0cf4b06).
 
 ## Next launch prompt (paste into a fresh chat)
 

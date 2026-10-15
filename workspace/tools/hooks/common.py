@@ -12,14 +12,18 @@ import hashlib
 import json
 import os
 import re
+import sys
 import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WS = os.path.abspath(os.path.join(HERE, '..', '..'))
 REPO = os.path.dirname(WS)
-STATE = os.environ.get('AX_HOOK_STATE', '/home/claude/.config/axbx/hooks')
+MAC = sys.platform == 'darwin' and not os.path.isdir('/home/claude')  # Mac desktop session (s141)
+STATE = os.environ.get('AX_HOOK_STATE', os.path.expanduser('~/.config/axbx/hooks') if MAC
+                       else '/home/claude/.config/axbx/hooks')
 WAVE = os.environ.get('AX_WAVE', os.path.join(WS, 'repair', 'efficiency', 'WAVE.json'))
-PROJECTS = os.environ.get('AX_TRANSCRIPTS', '/root/.claude/projects')
+PROJECTS = os.environ.get('AX_TRANSCRIPTS', os.path.expanduser('~/.claude/projects') if MAC
+                          else '/root/.claude/projects')
 
 
 ROLES_REPO = '/home/claude/Step2Haki'  # the repo path roles.json is written against (project chat container)
