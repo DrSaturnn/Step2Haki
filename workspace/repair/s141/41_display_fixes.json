@@ -1,0 +1,9 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "</body>",
+   "with": "<style>\n/* s141 S5 (round 1 display MEDs, tics and peds-sleep; copd LOW): a row of hovers under the workup figure lines up with\n   the figure text, keeps clear of the next heading, and separates its labels so they do not read as one run */\n.brief.sp figure.w5a + .sp-chips{padding:0 15px;margin:10px 0 18px}\n.brief.sp .sp-chips:has(> .sp-pop){column-gap:22px;row-gap:8px}\n.brief.sp .sp-pop-b + .sp-pop{margin-left:14px}\n</style>\n<script>\n/* s141 S5 (round 1 display MED, lithium-effects; nephrotic-child LOW): an arrow for a high or low value stays on the line\n   of the word it qualifies. Presentation only: the space beside the arrow becomes a no-break space; no text changes. */\n(function(){\n  \"use strict\";\n  var A = /[↑↓]/;\n  function bind(root){\n    var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {acceptNode: function(n){ return A.test(n.nodeValue) ? 1 : 3; }});\n    var ns = []; while(w.nextNode()) ns.push(w.currentNode);\n    ns.forEach(function(n){\n      var v = n.nodeValue\n        .replace(/([↑↓]) (?=\\S)/g, '$1 ')\n        .replace(/(\\S) ([↑↓])(?=$|[\\s,;:.)])/g, '$1 $2');\n      if(/[↑↓] $/.test(v) && n.nextSibling) v = v.slice(0, -1) + ' ';\n      if(v !== n.nodeValue) n.nodeValue = v;\n    });\n  }\n  function all(){ document.querySelectorAll('.brief').forEach(bind); }\n  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', all); else all();\n})();\n</script>\n</body>"
+  }
+ ]
+}
