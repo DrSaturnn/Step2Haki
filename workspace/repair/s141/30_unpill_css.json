@@ -1,0 +1,19 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": ".brief.sp .sp-pop.sp-why{display:flex;width:max-content;max-width:100%;box-sizing:border-box;align-items:center;gap:6px;min-height:32px;margin-top:6px;padding:2px 10px;border:0;border-radius:9px;background:var(--raised);box-shadow:var(--e2);font:750 13px/1.2 var(--sans);color:var(--principle)}\n.brief.sp .sp-pop.sp-why::before{content:\"?\";display:inline-grid;place-items:center;width:17px;height:17px;border-radius:50%;background:var(--principle-bg);font:800 11px/1 var(--sans)}",
+   "with": "/* s141: the pill card is retired site-wide (Jonathan 2026-10-14, \"Underline only\"): a why or in-practice hover is a dotted underline on its words, like every .sp-pop */"
+  },
+  {
+   "op": "replace_global",
+   "find": "[data-theme=\"dark\"] .brief.sp .sp-pop.sp-why{border:0;border-radius:9px;background:var(--raised);box-shadow:var(--e2);color:var(--principle)}",
+   "with": ""
+  },
+  {
+   "op": "replace_global",
+   "find": "[data-theme=\"dark\"] .brief.sp .sp-pop.sp-why::before{border-radius:50%;background:var(--principle-bg)}",
+   "with": ""
+  }
+ ]
+}

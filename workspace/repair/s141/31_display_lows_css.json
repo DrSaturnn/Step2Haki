@@ -1,0 +1,29 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": ".brief.sp .sp-when b{font:800 11.5px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--criteria)}",
+   "with": ".brief.sp .sp-when > b{font:800 11.5px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--criteria)} /* s141: only the rung tag is the uppercase label; a bold cutoff inside the when line stays a cutoff (s140 deferred display LOW) */"
+  },
+  {
+   "op": "replace_global",
+   "find": "[data-theme=\"dark\"] .brief.sp .sp-when b{color:var(--criteria)}",
+   "with": "[data-theme=\"dark\"] .brief.sp .sp-when > b{color:var(--criteria)}"
+  },
+  {
+   "op": "replace_global",
+   "find": "figure.w5a .w5skip .w5z{display:block;margin:0 0 4px}",
+   "with": "figure.w5a .w5skip .w5z{display:block;margin:0 0 4px}\n.brief.sp figure.w5a + p.sp-note{padding-left:15px;padding-right:15px;margin-bottom:14px} /* s141 (s140 deferred display LOWs): the note under the workup aligns with the figure text and keeps its hover off the next heading */"
+  },
+  {
+   "op": "replace_global",
+   "find": "figure.w5a .w5skip{padding-left:44px;font-size:16px;line-height:23px}",
+   "with": "figure.w5a .w5skip{padding-left:0;font-size:16px;line-height:23px} /* s141: on a phone the Skip text takes the full width; its label keeps the disc column */"
+  },
+  {
+   "op": "replace_global",
+   "find": "figure.w5a .w5skip .w5z{margin-left:0}",
+   "with": "figure.w5a .w5skip .w5z{margin-left:44px}"
+  }
+ ]
+}
