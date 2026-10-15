@@ -20,8 +20,8 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
 - **Open batch: s140 (R5 batch 5)**, launched 2026-10-14 (cloud session). Briefs: mdd (psych/MDD), copd (fm/COPD), scfe
   (peds/SCFE). Budget: 12 agents, 80 API calls, 5.5M tokens (WAVE.json open). Branch: claude/step2haki-batch-s140-esidy4
   (the session's assigned branch, in place of wip/s140). Record: repair/s140/S140.md.
-- **Step:** S7 running: round 2, 4 lean reviewers (acc opus; read, flags, display sonnet) on changed lines, lanes repair/efficiency/lanes/s140/r2. Next: S8 report.
-- **Spend:** after R1 7 agents, 26 calls, about 1.13M tokens (usage_ledger).
+- **Step:** S7: mdd and scfe READY; copd acc R3 running (last agent); copd read, flags, display follow-ups need 3 more agents (asked). Then S8.
+- **Spend:** 12 of 12 agents (R3 included), 43+ of 80 calls, about 1.6M of 5.5M tokens.
 - **Launch decisions:** clone and hook install allowed ("Yes"); wip/s135 to wip/s139: "Noted" (Jonathan deletes them on GitHub).
 - **Open small items:** carried from s139 (see repair/s139/S139.md and OPEN_WORK).
 - **Cloud lessons (s139):** the session's auto-mode check holds the private-repo clone and the hook install until
