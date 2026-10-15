@@ -10,23 +10,19 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
-No batch is open. The next batch starts from the launch prompt below.
+Batch s143 is open (site layer: sidebar and canvas), presented and waiting for Jonathan's "ship".
 
 ## State (rewrite after every step)
 
-- **Plan:** v4. Phase 2 under way; the plan's batches were renumbered at the s142 launch (old s143 to s161 are s142 to
-  s160; private claude/pending/BATCHES_*.md, FOLDERS_S142_S160.md).
-- **Last batch: s142 SHIPPED** (4751b28, 2026-10-15). Record: repair/s142/S142.md. suicide-risk, disruptive-behavior,
-  psych-medical, ipv on the spine; voices the first presentation hub (hub golden; Jonathan reviews it blind).
-  Spend 11 of 25 agents, 110 of 200 calls, 3.12M of 8M tokens. Wave s142 closed.
-- **Method that worked (s142):** the lead builds each brief (boards.md, facts.json, spine/build.py from the lean claim
-  map), agents only review: one lean reviewer per role for all briefs, about 3 calls per brief plus 1 per receipt,
-  each receipt written at once. Round 2 and 3 lanes carry changes.md (diff against the previous round's brief).
-- **Deploy check:** step2haki.vercel.app is outside the cloud network policy; Jonathan confirms version.json shows 142.
-- **Mac:** not linked; Mac copies (index.html, axbx-repo.bundle, local-only, this handoff) owed since s141.
-- **Open small items:** deferred LOWs in repair/s141/S141.md and repair/s142/S142.md (disruptive-behavior "remorseful";
-  ipv abbreviations in bank explanations; psych-medical figure link color).
-- **Live:** s142 (4751b28).
+- **Current batch: s143, S8 presented** (2026-10-15, cloud). Launched as pulmonary A; Jonathan redirected it to the
+  sidebar and canvas from the Lithium Glance mockup (digest 2026-10-15). Record: repair/s143/S143.md. Build:
+  repair/s143/40_glance_nav.json (source repair/s143/src, conv.py). Presented: 17 screenshots, local/shots/s143, page
+  2b674758ddf7. Branch claude/step2haki-batch-s143-launch-d5mdc2. No agents used (0 of 15; budget unspent).
+- **Next:** on "ship": AX_SESSION=<session> tools/ship.sh s143 "..." (main merged first), then post-ship. Then pulmonary A
+  (asthma, cough, rhinitis, pneumoconiosis, sinopulm-structural) as s144; later batches shift up by one.
+- **Open decisions:** (1) keep the s142 method for pulmonary A; (2) voices as hub golden (concerns sent: blind review not
+  done, 979 words vs 700 cap, new data-entry "hub", study-mode pattern, link color).
+- **Plan:** v4, Phase 2. **Live:** s142 (4751b28). **Mac:** not linked.
 
 ## Next launch prompt (paste into a fresh chat)
 
