@@ -34,6 +34,10 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
   (cp -r) before working. Spend: 0 of 16 batch agents.
 - **Tool change at launch (disclose, G-DIFF):** tools/hooks/common.py defaults the hook state and transcripts paths to
   ~/.config/axbx/hooks and ~/.claude/projects on a Mac with no /home/claude (no effect in the cloud). test_hooks 80/80.
+- **Folders for the four waiting briefs (added 2026-10-15 by a planning session, not the s141 lead):** nephrotic-child,
+  panic, peds-sleep and tics now have their folders on step2haki-private main (merge/nephrotic-child, psych/N5,
+  psych/SLEEP, psych/TICS under local-only/repair/migration). Per the s141 lead's call they join s141 only if Jonathan
+  says "include them"; otherwise they are s142. Re-run the cp -rn restore from private main to pick them up.
 - **Open small items:** as at s140 (see the s140 State in git history: 98a9ed7).
 - **Live:** s140 (0cf4b06).
 
@@ -48,7 +52,20 @@ Step2Haki: launch batch s141 (site rollout of the s140 conventions) per claude/B
 ## After s141
 
 Phase R is complete (all 17 spine briefs READY, s140). After the s141 rollout, the next work is Phase 2 (plan section 8:
-unconverted briefs by cluster); Jonathan picks the first cluster in the s141 launch prompt.
+unconverted briefs by cluster).
+
+The forward plan lives in the PRIVATE repo (DrSaturnn/Step2Haki-private), under claude/pending/, outside local-only/,
+so the cp restore does not copy it; read it from the clone (/home/user/step2haki-private/claude/pending/):
+- BATCHES_S141_S150.md: s142 (nephrotic-child, panic, peds-sleep, tics) and s143 to s150 (psychiatry remainder,
+  pulmonary A and B, renal and GU A and B, musculoskeletal A to C), with launch prompts, goldens and default budgets.
+- BATCHES_S151_S160.md: s151 to s160 (cardiovascular A and B, GI A and B, infectious disease A and B, newborn and
+  immune, neuro and HEENT A, neuro B, endocrine), same format; 38 briefs remain after s160 (hematology, OB/GYN,
+  dermatology, preventive, pediatrics and genetics) for the s160 report to plan.
+- FOLDERS_S142_S160.md: each brief's local-only folder. All 52 were pushed from the Mac on 2026-10-15; briefs marked
+  "no folder" have no migration work yet and build from the page and repair/sources.
+Roster count (2026-10-15): 177 briefs on the page, 18 converted (17 spine plus hematuria), 159 unconverted (the s141
+to s150 file's 160 still counted hematuria).
+The next batch's launch prompt comes from those files unless the s141 closing report changes it.
 
 ## Docs in this project
 
