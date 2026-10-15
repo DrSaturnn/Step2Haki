@@ -10,33 +10,20 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
-No batch is open. The next batch starts from the launch prompt below.
-
-The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.md) gives the read order, the steps, the standing calls and the one final report.
-
 ## State (rewrite after every step)
 
-- **Plan:** v4 (repair/efficiency/SPINE_SCALE_PLAN.md). Phase R done; the s141 rollout put all 17 spine briefs on the
-  s140 conventions (bipolar-mania needed no change; mdd, copd, scfe were done in s140).
-- **Last batch: s141 SHIPPED** (bb4caed, 2026-10-15). Record: repair/s141/S141.md (cloud start, S1 to S9, every ruling).
-  Wave s141 closed (WAVE.json open false). Spend 25 of 26 agents, 142 of 260 calls, 2.81M of 8M tokens.
-- **Deploy check:** step2haki.vercel.app is outside the cloud network policy; Jonathan confirms version.json shows 141.
-- **Mac:** not linked this session: the Mac copies (index.html, axbx-repo.bundle, local-only, this handoff) are owed at
-  the next Mac session; the private repo (wip/s141, then main) holds every local-only change.
-- **Lessons for the next lead:** give each lean reviewer about 3 calls per brief per role plus one per receipt and tell
-  it to write each receipt as soon as that brief is judged (four reviewers in s141 judged everything and wrote
-  nothing); build display packets from the brief's own step headers (shots.py numbers images by section order).
-- **Open small items:** deferred LOWs in repair/s141/S141.md (lithium "level 2.5 or under" words; copd note inset;
-  peds-sleep phone hover row offset; antipsych timing strip clipping); as at s140 otherwise.
-- **Live:** s141 (bb4caed).
-
-## Next launch prompt (paste into a fresh chat)
-
-```
-Step2Haki: launch batch s142 (Phase 2, cluster 1: psychiatry remainder) per claude/BATCH_RUNBOOK.md. Briefs: voices, ipv, psych-medical, disruptive-behavior, suicide-risk (folders: step2haki-private claude/pending/FOLDERS_S142_S160.md, the plan's s143 entry). Budget for the whole batch: 25 agents, 200 API calls, 8M tokens.
-1. The plan file numbers this cluster s143 (its s142, the four waiting briefs, was folded into s141): renumber s144 to s160 down by one: yes or no.
-2. Lean reviewer call caps: about 3 calls per brief per role plus one per receipt (s141 lesson): yes or no.
-```
+- **Batch s142 OPEN** (launched 2026-10-15, Claude Code on the web, session_01Ewq5D1zxiHN4jbrN5d1Tqc). Phase 2 cluster 1,
+  psychiatry remainder: voices (repair/migration/psych/HUB/voices), ipv (psych/P3), psych-medical (psych/MED),
+  disruptive-behavior (psych/DBC), suicide-risk (psych/SUI). Branch wip/s142 in both repos. Batch file: repair/s142/S142.md.
+- **Budget:** 25 agents, 200 API calls, 8M tokens (WAVE.json). Spend: 0 agents, 0 calls.
+- **Launch decisions** (digest 2026-10-15): plan renumbered (old s143 to s161 now s142 to s160; done on private
+  wip/s142); reviewer caps about 3 calls per brief per role plus one per receipt, each receipt written as soon as that
+  brief is judged.
+- **Step:** session start. Done: both repos cloned, npm i, local-only restored, test_hooks 80/80, context lead 71,793
+  (no WARNING), lean-reviewer type listed. Waiting: hook install into /root/.claude (classifier held it; asked Jonathan),
+  then live tests T1 to T4, T8, T9. Next: S1 board evidence for the five briefs.
+- **Last batch:** s141 SHIPPED (bb4caed). Open small items: deferred LOWs in repair/s141/S141.md.
+- **Mac:** not linked; Mac copies still owed from s141.
 
 ## After s141
 
