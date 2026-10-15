@@ -44,8 +44,15 @@ The runbook (claude/BATCH_RUNBOOK.md; repo copy repair/efficiency/BATCH_RUNBOOK.
   clashes listed in repair/s141/S141.md. Jonathan pushed the four briefs' files (276cf16); panic, tics,
   peds-sleep and nephrotic-child (S1 boards.md, S2 on outline.json) now verify --mech PASS: S2/S3 done for all 14.
   Sidebar matched to Jonathan's Lithium Glance mockup (repair/s141/40_sidebar.json; digest 2026-10-15): landing,
-  rail flicker and scroll-spy bugs fixed, gliding lens, mockup geometry. Next: live hook probes, then S4 for the 14
-  (all four roles; display for every spine brief, as the site CSS changed). Spend: 0 of 16 batch agents.
+  rail flicker and scroll-spy bugs fixed, gliding lens, mockup geometry.
+  Live hook probes (second container) PASS: T1 approvals write refused; T2 sonnet probe refused; T3/T4/T8/T9 haiku
+  probe: in-lane write ran, tools/ writes refused, 4th call refused (1 agent, 5 calls, 284k tokens, outside budget);
+  wave restored. Budget raised by Jonathan at S4: 24 agents, 260 calls, 8M tokens.
+  S4 round 1 RUNNING: 13 lean reviewers (acc-A..D opus; read-A/B, flags-A/B, display-A..E sonnet), lanes
+  repair/efficiency/lanes/s141/r1/<agent>/<brief>/ (INSTRUCTIONS.md per agent; packets from review_packet.py --diff;
+  display shots of the changed steps from the full preview; sidebar shots in display-A lithium). Budgets total 234
+  calls. Next: copy receipts to repair/migration/spine/reviews/<id>_<part>_r1.md (r numbering continues per brief),
+  S5 adjudicate, S6, S7.
 - **Tool change at launch (disclose, G-DIFF):** tools/hooks/common.py defaults the hook state and transcripts paths to
   ~/.config/axbx/hooks and ~/.claude/projects on a Mac with no /home/claude (no effect in the cloud). test_hooks 80/80.
 - **Folders for the four waiting briefs (added 2026-10-15 by a planning session, not the s141 lead):** nephrotic-child,
