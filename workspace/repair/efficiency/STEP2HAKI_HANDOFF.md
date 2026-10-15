@@ -19,13 +19,13 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Launch decisions** (digest 2026-10-15): plan renumbered (old s143 to s161 now s142 to s160; done on private
   wip/s142); reviewer caps about 3 calls per brief per role plus one per receipt, each receipt written as soon as that
   brief is judged.
-- **Step:** S1 to S3 done for suicide-risk (637 words), disruptive-behavior (634) and psych-medical (765): each has
-  boards.md, facts.json, spine/build.py in its local folder (pushed to private wip/s142) and a preview in repair/s142/.
-  verify --mech MECHANICAL PASS, legib 0 failures. Next: ipv (psych/P3; the lean claim map is P3/lean, 291 claims), then
-  voices (hub; no hub golden exists: build it to the hub rules, flag it in the report as the hub golden for Jonathan's
-  blind review), then S4 review round 1 (lean caps: 3 calls per brief per role plus 1 per receipt, 20 per reviewer).
-  Session start done (hooks installed with Jonathan's approval, live tests passed); a new container must redo it.
-  Method notes in repair/s142/S142.md (lead builds, agents review; legib phone flat transient clash).
+- **Step:** S4 review round 1 running (launched 2026-10-15): 4 lean reviewers, one per role for all 5 briefs
+  (acc-A opus; read-A, display-A, flags-A sonnet), lanes repair/efficiency/lanes/s142/r1/<agent>/<brief>/ (receipt.md in
+  each), Budget 21 calls each. S1 to S3 done for all five (records in repair/s142/S142.md; previews 10_*.json in
+  repair/s142/; local folders pushed to private wip/s142). Packets: /tmp review_packet.py output copied into the lanes;
+  display images renamed to real step numbers (step0 is the header). If the chat restarts mid-S4: read the receipts in
+  the lanes, copy each to repair/migration/spine/reviews/<id>_<part>_r1.md, then S5.
+- **Spend:** 4 agents launched (round 1), calls and tokens per usage_ledger.py.
 - **Last batch:** s141 SHIPPED (bb4caed). Open small items: deferred LOWs in repair/s141/S141.md.
 - **Mac:** not linked; Mac copies still owed from s141.
 
