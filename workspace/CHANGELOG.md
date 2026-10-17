@@ -2,6 +2,24 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-17 s145: Phase 2 pulmonary B: hypoxemia-mech, airway, uri, bpd, scd-dyspnea on the decision spine
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (5):
+  - hypoxemia-mech (Hypoxemia): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+2975 chars)
+  - scd-dyspnea (Sickle Cell Disease and Trait): items edited (q_12ed49815d7b51c8aa3b); attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+17537 chars)
+  - airway (Noisy Breathing in a Child): items edited (q_2ae520114eb69bd6d179, q_6c0918663750fe154473); versions bumped (q_2ae520114eb69bd6d179 v2->v3); attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+8561 chars)
+  - uri (Respiratory Infection in a Child): items edited (q_6ff92e8e87605b62ad45, q_796b44ec19796e951653); attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+5248 chars)
+  - bpd (Lung Disease in the Newborn and Preterm Infant): items edited (q_e394bb5a5a2454d98022, q_7252fc398d6557ecaaaf, q_c4c16f2c389c5f258bb9, q_d0ad6c246c755bc995ff); attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+2799 chars)
+Other page changes (nav, headers, scripts): +879 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 19 scripts, 38 checks, base HEAD | allowlisted 13 (1 stale allowlist line(s): K3 airway:mnemonic) | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 180/181 | vignette gridded 68/68 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.015%)
+```
+
 ## 2026-10-17 s144: s144: pulmonary A on the decision spine (asthma, rhinitis, pneumoconiosis, sinopulm-structural; cough as a hub); study-mode workup blur 8 px
 
 ```
