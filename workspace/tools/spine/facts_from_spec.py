@@ -18,6 +18,7 @@ ix = {}
 for l in open(os.path.join(WS, 'repair', 'sources', 'anki', 'anki_index.jsonl'), encoding='utf-8'):
     d = json.loads(l)
     if d.get('nid') in want: ix[d['nid']] = d
+    elif d.get('guid') in want: ix[d['guid']] = d      # s146b: a card with no note id is named by its guid
 bad = []
 for fid, nid, q in spec.get('cards', []):
     d = ix.get(nid)
@@ -28,7 +29,7 @@ for fid, nid, q in spec.get('cards', []):
     parts = (['high-yield line'] if hy else []) + (['UWorld Step ' + ', '.join(map(str, uw))] if uw else [])
     assert fid not in seen, fid; seen.add(fid)
     facts.append(dict(id=fid, local='repair/sources/anki/anki_cards.txt', quote=q, kind='board', nid=nid,
-                      title='AnKing card %d' % nid + (' (%s)' % '; '.join(parts) if parts else ''),
+                      title='AnKing card %s' % nid + (' (%s)' % '; '.join(parts) if parts else ''),
                       population=spec['population'], setting='Step 2 CK board teaching'))
 for w in spec.get('web', []):
     fid, sha, sec, q = w[:4]

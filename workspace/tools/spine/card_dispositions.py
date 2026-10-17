@@ -2,12 +2,12 @@
 """card_dispositions (s146b, Jonathan 2026-10-17): every AnKing card a brief's board terms reach gets a recorded
 disposition, so a skipped board fact is caught mechanically rather than left to the lead's judgment.
 
-  python3 tools/spine/card_dispositions.py make <brief-id> <brief folder> [--cap 40]
+  python3 tools/spine/card_dispositions.py make <brief-id> <brief folder> [--cap 90]
       runs card_checklist.py with the brief's terms from repair/efficiency/board_terms.json (cards linked by note id,
-      plus up to --cap Step 2 candidates) and writes <folder>/cards.md (card text: local-only, never committed)
+      plus up to --cap Step 2 candidates, default 90) and writes <folder>/cards.md (card text: local-only, never committed)
   python3 tools/spine/card_dispositions.py check <brief folder> [--page index.html] [--quiet]
       every card in cards.md needs an entry in <folder>/cards_disposition.json:
-        covered:S012[,S040] <where>  (claim ids from claim_map.json; the card's fact is taught there)
+        covered:S012[,S040] <where>  (claim ids from claim_map.json, or practice item ids q_..., that teach it)
         owner:<brief id>             (a live brief on the page teaches it)
         scope:<reason>               (in the topic but deliberately not taught; the reason is required)
         not-topic[:<reason>]         (the search term matched, the card is about something else)
@@ -73,7 +73,9 @@ def check(folder, page_path, quiet=False):
     page = open(page_path, encoding='utf-8').read()
     live = set(re.findall(r'<div class="brief[^"]*" id="([^"]+)"', page))
     bp = os.path.join(folder, 'brief.html')
-    btxt = H.unescape(re.sub(r'<[^>]+>', ' ', open(bp, encoding='utf-8').read())).lower() if os.path.exists(bp) else ''
+    bhtml = open(bp, encoding='utf-8').read() if os.path.exists(bp) else ''
+    hov = ' '.join(re.findall(r'data-(?:body|title)="([^"]*)"', bhtml))     # hover cards teach too
+    btxt = H.unescape(re.sub(r'<[^>]+>', ' ', bhtml) + ' ' + hov).lower()
     bstems = {w[:6] for w in re.findall(r'[a-z0-9]+', btxt)}
     cards = parse_cards(cp)
     n = {k: 0 for k in KINDS}
@@ -90,11 +92,15 @@ def check(folder, page_path, quiet=False):
         n[kind] += 1
         if kind == 'covered':
             ids = re.findall(r'\bS\d{3}\b', rest)
-            if not ids:
-                errs.append('card %s: covered names no claim id (S###)' % cid)
+            qids = re.findall(r'\bq_[0-9a-f]{20}\b', rest)      # a practice item that teaches it
+            if not ids and not qids:
+                errs.append('card %s: covered names no claim id (S###) or item id (q_...)' % cid)
             for i in ids:
                 if i not in claim_ids:
                     errs.append('card %s: covered claim %s not in claim_map.json' % (cid, i))
+            for q in qids:
+                if 'data-item-id="%s"' % q not in bhtml:
+                    errs.append('card %s: covered item %s not in the brief' % (cid, q))
         elif kind == 'owner':
             o = rest.split()[0] if rest else ''
             if o not in live:
@@ -110,7 +116,7 @@ def check(folder, page_path, quiet=False):
             sk = sd.partition(':')[0].strip()
             if sk not in KINDS:
                 errs.append('statement %s: unknown disposition %r' % (sid, sd[:40]))
-            elif sk == 'covered' and 'photo credit' not in st.lower():
+            elif sk == 'covered' and not re.search(r'photo credit|image\(s\) provided|image licensed|pathoma rules', st.lower()):
                 ws = words(st)
                 miss = [w for w in ws if w[:6] not in bstems]
                 if ws and len(miss) > len(ws) / 2:
@@ -140,7 +146,7 @@ def main(argv):
     if len(argv) < 2 or argv[0] not in ('make', 'check'):
         sys.exit(__doc__)
     if argv[0] == 'make':
-        cap = int(argv[argv.index('--cap') + 1]) if '--cap' in argv else 40
+        cap = int(argv[argv.index('--cap') + 1]) if '--cap' in argv else 90
         sys.exit(make(argv[1], os.path.abspath(argv[2]), cap))
     page = argv[argv.index('--page') + 1] if '--page' in argv else os.path.join(WS, 'index.html')
     errs, _ = check(os.path.abspath(argv[1]), page, '--quiet' in argv)

@@ -14,9 +14,14 @@ No batch is open; launch s147 with the prompt below.
 
 ## State (rewrite after every step)
 
-- **No batch open.** s146 shipped 2026-10-17 (commit a6e5a90, main 468758d; version.json {"build":"s146"} checked in Chrome at 13:29): pyelo, bph,
-  nephropathy (first screen entry), hypercalcemia, polyuria and bs-incontinence (hubs) on the spine; uri and bpd
-  restores. Record repair/s146/S146.md. Spend 20 agents, 150 calls, 5.11M tokens. WAVE.json closed.
+- **Open batch: s146b** (card-checklist patch of the six live s146 briefs; record repair/s146b/S146B.md; branch
+  wip/s146b in both repos). S1 to S3 done: every brief has cards.md and cards_disposition.json (card check passes),
+  carded facts added (polyuria low-protein diet restored; nephropathy neuropathic pain and retinopathy treatment;
+  pyelo asymptomatic bacteriuria in pregnancy, postcoital prophylaxis; hypercalcemia lithium, adenoma; bph urethral
+  stricture; bs-incontinence normal pressure hydrocephalus, spinal cord lesion). Full verify MECHANICAL PASS;
+  preview gate, render, preflight P1 0, vendor 0, legib 0. Next: S4 round 1 in a fresh chat with write-first lanes per
+  the runbook (6 briefs: acc lanes of at most 4 briefs at 7 calls per brief plus 4; read, display, flags at 5 per brief
+  plus 4), lanes repair/efficiency/lanes/s146b/r1. Budget: Jonathan's answer (asked 2026-10-17).
 - **Next:** s147 (launch prompt below). The plan file numbers it s146 (BATCHES_S141_S150.md and FOLDERS_S142_S160.md
   run one behind since s143); read those files' s146 entries for s147.
 - **Mac:** caught up after the s146 ship (2026-10-17 13:35): ~/Step2Haki fast-forwarded to main 468758d and
