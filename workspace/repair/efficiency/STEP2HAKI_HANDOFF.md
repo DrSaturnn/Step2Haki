@@ -21,7 +21,8 @@ No batch is open; launch s147 with the prompt below.
   stricture; bs-incontinence normal pressure hydrocephalus, spinal cord lesion). Full verify MECHANICAL PASS;
   preview gate, render, preflight P1 0, vendor 0, legib 0. Next: S4 round 1 in a fresh chat with write-first lanes per
   the runbook (6 briefs: acc lanes of at most 4 briefs at 7 calls per brief plus 4; read, display, flags at 5 per brief
-  plus 4), lanes repair/efficiency/lanes/s146b/r1. Budget: Jonathan's answer (asked 2026-10-17).
+  plus 4), lanes repair/efficiency/lanes/s146b/r1. Budget (Jonathan): 12 agents, 150 calls, 4M tokens; WAVE.json
+  wave s146b open. Review packets use --diff against the live page (the s146 build) plus the full card dispositions for acc.
 - **Next:** s147 (launch prompt below). The plan file numbers it s146 (BATCHES_S141_S150.md and FOLDERS_S142_S160.md
   run one behind since s143); read those files' s146 entries for s147.
 - **Mac:** caught up after the s146 ship (2026-10-17 13:35): ~/Step2Haki fast-forwarded to main 468758d and
