@@ -24,6 +24,8 @@ This runbook sits under DECISIONS_DIGEST, STANDING_DIRECTIONS and the plan (clau
 9. claude/design/WORKUP_5A_SPEC.md;
 10. conditional PASS: claude/pending/POST_SHIP_R3.md section 2, with the s133 digest lines (hedge words count as meaning; text-only replacements).
 
+**Continuation chats** (Jonathan 2026-10-17): a chat that continues an open batch reads only the handoff State, the batch file, DECISIONS_DIGEST lines from 2026-10-15 on, and the batch's own rows and notes in BRIEF_AMEND_LIST (grep, not the whole file); the full read order above is for launches.
+
 **Restart line**, the same every time; Jonathan pastes it when a chat fills: `Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.`
 
 ## 1. Launch
@@ -175,7 +177,7 @@ If Jonathan names changes:
 - A required hook test fails and agent steps cannot run.
 - The budget runs out before READY. Stop at the cap; report the spend, what remains and the amount needed. Never exceed it.
 - Anything irreversible: deleting Mac files, deleting a branch, force-pushing, rewriting history.
-- The context is full (past about 250k). Rewrite the handoff State and send only: "Context full. Paste into a fresh chat: Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md."
+- The context is full (past about 350k; Jonathan 2026-10-17, was 250k). Rewrite the handoff State and send only: "Context full. Paste into a fresh chat: Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md."
 
 Each such message asks one question, multiple choice where possible, with a recommendation.
 
