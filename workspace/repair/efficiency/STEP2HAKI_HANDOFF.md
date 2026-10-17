@@ -21,14 +21,12 @@ Batch s146 is open; restart with the line above.
   strep pneumonia later in onset and commoner at term, AnKing 1484874519070, UWorld 18960). Goldens copd (FM lens),
   nephrotic-child; voices for the hubs (polyuria, bs-incontinence); suicide-risk or ipv for the screen (nephropathy).
   Budget 16 agents, 130 API calls, 6M tokens. Method s142. Branch wip/s146 in the public repo; record repair/s146/S146.md.
-- **Step:** S1 to S3 done for all eight (full verify --mech MECHANICAL PASS each; preview repair/s146 gate, render,
-  vendor_scan clean; legib_audit 0 below contrast). Hooks installed in this container (Jonathan: "Allow the install
-  (Recommended)"; test_hooks 80/80). S4 round 1 running: 7 lean reviewers (acc-A and acc-B opus; read, display-A,
-  display-B, flags-A, flags-B sonnet; A = pyelo, bph, nephropathy, uri; B = hypercalcemia, polyuria, bs-incontinence,
-  bpd), lanes repair/efficiency/lanes/s146/r1/<agent>/<brief>/ (lane builder /tmp scratch; packets review_packet.py
-  on the preview, uri and bpd --diff against the live page). If a chat restarts mid-S4, read the receipts in the lanes
-  and relaunch only the agents whose receipts are missing. Local-only work: step2haki-private wip/s146.
-- **Spend:** 7 agents launched (S4 round 1); calls and tokens from usage_ledger at the end of the round.
+- **Step:** S1 to S5 done (record repair/s146/S146.md). S7 follow-up review running: 6 lean reviewers in
+  repair/efficiency/lanes/s146/r2/<agent>/<brief>/ (lane builder in /tmp scratch; if a chat restarts, read the r2
+  receipts and relaunch only agents whose receipts are missing, from the same lanes). bph needs no follow-up (all PASS).
+  Then file receipts as repair/migration/spine/reviews/<brief>_<part>_r1/r2.md, verify READY, S8 report. Local-only
+  work: step2haki-private wip/s146.
+- **Spend:** round 1: 7 agents, 56 calls, 2.78M tokens; round 2: 6 agents launched (13 of 16 agents).
 - **Mac:** caught up at launch (both Mac repos at the s145 ship; Documents/Step2Haki local-only, index.html, bundle and
   this file refreshed). A stray transfer file sits at ~/step2haki-private-push/_xfer_pub.bundle.
 - **Runbook rule (Jonathan 2026-10-17):** before any sourcing cut or ⚠︎ label, search the card index (key terms and
