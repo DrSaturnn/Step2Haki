@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s145 lead (s145 shipped; next batch s146).
+Last updated: 2026-10-17, by the s146 lead (s146 launched).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -10,26 +10,24 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
-No batch is open. The next batch starts from the launch prompt below.
+Batch s146 is open; restart with the line above.
 
 ## State (rewrite after every step)
 
-- **No batch is open.** s145 (Phase 2 pulmonary B: hypoxemia-mech, airway, uri, bpd, scd-dyspnea) shipped 2026-10-17,
-  commit 11cb89f (Jonathan: "ship"). Record: repair/s145/S145.md. Wave s145 closed. Spend: 11 of 12 agents, 70 of 100
-  calls, 3.56M of 4M tokens.
-- **Live:** s145 (11cb89f); version.json shows s145 (checked in Chrome 2026-10-17).
-- **Owed to the Mac** (the fifth chat ran without the Mac link): copy the s145 local-only folders (repair/migration/fm/HYP,
-  fm/AIR, merge/uri, merge/bpd, merge/scd-dyspnea spine/, repair/migration/spine/reviews s145 receipts, new web-cache
-  pages) from the private repo into Documents/Step2Haki/local-only (cp -rn), replace index.html and axbx-repo.bundle there,
-  and copy this file as Documents/Step2Haki/STEP2HAKI_HANDOFF.md. The next session linked to the Mac does it first.
-- **Private repo:** wip/s145 merged into main.
+- **Open batch: s146** (Phase 2 renal and GU A). Briefs: pyelo, bph, nephropathy, hypercalcemia, polyuria,
+  bs-incontinence; plus four card-backed restores (uri: Mycoplasma has no cell wall so beta-lactams fail, AnKing
+  1516131575442, UWorld 12256, 19837, in the body hover; bpd: membrane rupture of 18 hours or more for the group B strep
+  row, AnKing 1539182616928, UWorld 4797, 12015; loud P2 for BPD pulmonary hypertension, AnKing 1551057597144; group B
+  strep pneumonia later in onset and commoner at term, AnKing 1484874519070, UWorld 18960). Goldens copd (FM lens),
+  nephrotic-child; voices for the hubs (polyuria, bs-incontinence); suicide-risk or ipv for the screen (nephropathy).
+  Budget 16 agents, 130 API calls, 6M tokens. Method s142. Branch wip/s146 in the public repo; record repair/s146/S146.md.
+- **Step:** launch done (digest, WAVE.json s146 open, hooks 80/80, Mac catch-up done). Next: S1 board evidence, brief
+  by brief (pyelo first), then S2 and S3 per brief, as in s145.
+- **Spend:** 0 agents, 0 calls, 0 tokens.
+- **Mac:** caught up at launch (both Mac repos at the s145 ship; Documents/Step2Haki local-only, index.html, bundle and
+  this file refreshed). A stray transfer file sits at ~/step2haki-private-push/_xfer_pub.bundle.
 - **Runbook rule (Jonathan 2026-10-17):** before any sourcing cut or ⚠︎ label, search the card index (key terms and
   high-yield lines); section 3 and S6 item 13.
-- **Queued for s146** (cut at build time, card-backed; found after the s145 report): uri, Mycoplasma has no cell wall so
-  beta-lactams fail (AnKing 1516131575442, UWorld 12256, 19837, high-yield) in the body hover; bpd, membrane rupture of 18
-  hours or more for the group B strep row (AnKing 1539182616928, UWorld 4797, 12015), loud P2 for BPD pulmonary
-  hypertension (AnKing 1551057597144, Step 1 card), group B strep pneumonia is later in onset and commoner at term (AnKing
-  1484874519070, UWorld 18960, high-yield).
 - **Open small items:** brief header still in the old style (hypoxemia-mech subtitle "five mechanisms"); sinopulm phone
   sticky bar truncates the title; per-agent call caps: set each reviewer's Budget from an explicit call plan with two
   spare (s145 lost receipts three times); deferred LOWs in repair/s141 to s145 batch files.
