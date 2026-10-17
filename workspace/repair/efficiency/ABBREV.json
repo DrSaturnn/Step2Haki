@@ -24,7 +24,8 @@
   "USB": "mnemonic (USB-C, the AnKing upper-lobe pneumoconiosis mnemonic; s144)",
   "SAND": "mnemonic (renal papillary necrosis: sickle cell, acute pyelonephritis, NSAIDs, diabetes; AnKing; s145)",
   "QT": "ECG interval (as ST; s146)",
-  "DRAINS": "mnemonic (drugs behind acute interstitial nephritis; AnKing 1475353706252; s147)"
+  "DRAINS": "mnemonic (drugs behind acute interstitial nephritis; AnKing 1475353706252; s147)",
+  "POTTER": "mnemonic (Potter sequence features; AnKing 1785105072320; s147)"
  },
  "_site_conventions_note": "carried from verify.py's MIGRATION_CONTRACT V1 allowlist (before 2026-10-12)",
  "roman_numerals": [
@@ -65,6 +66,11 @@
   },
   {
    "entry": "DRAINS",
+   "date": "2026-10-17",
+   "by": "lead s147 (runbook section 3: new entry disclosed in the report)"
+  },
+  {
+   "entry": "POTTER",
    "date": "2026-10-17",
    "by": "lead s147 (runbook section 3: new entry disclosed in the report)"
   }

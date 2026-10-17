@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s147 lead (launch).
+Last updated: 2026-10-17, by the s147 lead (continuation chat 2).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -17,10 +17,12 @@ s147 is open; a fresh chat continues it with the line above.
 - **Open batch: s147** (Phase 2 renal and GU B, pediatric), launched 2026-10-17 17:53; branch wip/s147 (public). Briefs:
   peds-uti-recurrent, enuresis, peds-aki, bs-puv (disease), bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum
   (hubs). Golden nephrotic-child (peds lens); voices for hubs. Budget 24 agents, 220 API calls, 9M tokens (WAVE.json).
-- **Step:** S1 to S3, brief by brief. Done: peds-uti-recurrent, enuresis, peds-aki S1 and S2 (all MECHANICAL PASS;
-  918, 1,045, 837 words). Next: bs-puv, then bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum; then S3 for all
-  eight (full verify --mech, preview build, gate, render, preflight, vendor_scan, legib_audit), then the S3 restart.
-  The recipe per brief is in the batch file, repair/s147/S147.md ("Recipe per brief").
+- **Step:** S1 to S3, brief by brief. Done: peds-uti-recurrent, enuresis, peds-aki, bs-puv S1 and S2 (all four
+  MECHANICAL PASS; 918, 1,045, 837, 740 words). Next: the four hubs, bs-abdominal-mass, then bs-distal-rta,
+  aq-puffy-eyes, scrotum (hub pattern: repair/migration/peds/polyuria/spine/build.py; each hub also gets a plain link in
+  the sidebar's Presentations group, runbook S2); then S3 for all eight (full verify --mech, preview build, gate,
+  render, preflight, vendor_scan, legib_audit), then the S3 restart. The recipe per brief is in the batch file,
+  repair/s147/S147.md ("Recipe per brief"); folders for the six non-merge briefs are repair/migration/peds/<id>/spine.
 - **Session start for a continuation chat:** clone the public repo and check out wip/s147; clone the private repo with
   `git clone --depth 1 -b wip/s147 https://github.com/DrSaturnn/Step2Haki-private /home/claude/step2haki-private`
   (the s147 build folders and web cache are there, not on main); npm i; cp -rn local-only; board_index.py build
