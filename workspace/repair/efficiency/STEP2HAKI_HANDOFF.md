@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s146b lead (s146b shipped).
+Last updated: 2026-10-17, by the s146b lead (s146b and s146c shipped).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -30,7 +30,8 @@ No batch is open; launch s147 with the prompt below.
   2 instructions named every file, banned globs, said each parallel read counts, and gave display 7 calls per brief:
   12 of 12 receipts, 16 to 22 calls used per lane. Keep those lines in every lane. Packet gap: read packets lack
   ALIASES.json and ABBREV.json.
-- **s146c (navigation, site layer):** presented 2026-10-17 (repair/s146c/S146C.md); waiting for "ship".
+- **s146c (navigation, site layer):** shipped 2026-10-17 17:38 (commit 5f85e90; repair/s146c/S146C.md). A brief converted to a
+  hub needs a plain link in Presentations (and the count raised); the gate now fails a hub missing from it (runbook S2).
 - **Open small items:** brief header still in the old style (hypoxemia-mech subtitle "five mechanisms"); sinopulm phone
   sticky bar truncates the title; hypercalcemia study mode shows "Bisphosphonates are usually the drugs of choice in
   malignancy" beside the masked rung (display LOW; masking needs markup); polyuria "common" in Pairs with (flags LOW,

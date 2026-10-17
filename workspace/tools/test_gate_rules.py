@@ -135,6 +135,9 @@ p2 = _p[:_e] + '\n    <a href="#%s">x</a>' % h + _p[_e:]
 o = gate(p2)[1]
 hit = '[nav-link] %s has 2 nav links' % h in o
 print(('ok  ' if hit else 'BAD ') + 'a hub with two system links: expects gate FAIL nav-link'); bad += not hit
-total = 1 + 9 + 2 + 3 + 3 + 3
+o = gate(with_pres(hub_ids[1:]))[1]
+hit = '[nav-link] %s is a hub but has no link in Presentations' % hub_ids[0] in o
+print(('ok  ' if hit else 'BAD ') + 'a hub missing from Presentations: expects gate FAIL nav-link'); bad += not hit
+total = 1 + 9 + 2 + 3 + 3 + 4
 print('%d/%d passed' % (total - bad, total))
 sys.exit(1 if bad else 0)

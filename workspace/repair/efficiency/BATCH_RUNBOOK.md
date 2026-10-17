@@ -64,6 +64,8 @@ Then run section 2 to the end without asking.
   - Parked builds: adjudicate every change in the diff against live as ACCEPT, REJECT or PARTIAL, with evidence. Never reverse a digest decision.
   - Convert the workup to 5a (claude/pending/pilot5a), with a clue for every test.
   - Drop header lines and apply the brief's Needs codes from the amendment list.
+  - A brief that becomes a hub (data-entry="hub") also gets a plain link in the sidebar's Presentations group, and that
+    group's count goes up by one (Jonathan 2026-10-17, s146c); the gate fails a hub missing from Presentations.
 - **S3. Mechanical checks.**
   - verify --mech (G-MECH), which includes the card check;
   - legib_audit with 0 failures in sculpted, flat and study, on phone and desktop.

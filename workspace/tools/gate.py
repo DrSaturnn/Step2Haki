@@ -244,6 +244,9 @@ def check_page(page, g, page_path):
                 else:
                     links[a['href'][1:]].append(a.get('class', ''))
         hubs = {b.id for b in bl if b.attrs.get('data-entry') == 'hub'}
+        if '<div class="sect">Presentations' in nav:
+            for bid in sorted(hubs - set(pres)):
+                g.fail('nav-link', bid, '%s is a hub but has no link in Presentations' % bid)
         for bid, cls in pres.items():
             if bid not in hubs:
                 g.fail('nav-link', bid, '%s is in Presentations but is not a hub (data-entry="hub")' % bid)
