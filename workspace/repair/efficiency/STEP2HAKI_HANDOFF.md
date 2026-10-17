@@ -21,14 +21,11 @@ Batch s146 is open; restart with the line above.
   strep pneumonia later in onset and commoner at term, AnKing 1484874519070, UWorld 18960). Goldens copd (FM lens),
   nephrotic-child; voices for the hubs (polyuria, bs-incontinence); suicide-risk or ipv for the screen (nephropathy).
   Budget 16 agents, 130 API calls, 6M tokens. Method s142. Branch wip/s146 in the public repo; record repair/s146/S146.md.
-- **Step:** S1 to S7 round 2 done (record repair/s146/S146.md). READY: pyelo, bph, uri. Stale receipts: nephropathy
-  (acc, read, display), hypercalcemia and polyuria (acc, read, display, flags), bs-incontinence (read, display), bpd
-  (read). Next: round 3 on the changed lines (4 lean reviewers, one per role, lanes repair/efficiency/lanes/s146/r3/,
-  packets --diff against the round-2 preview /tmp-built from the round-2 10_*.json; give each reviewer at least 4
-  calls per brief plus 4 so it can write every receipt), then file receipts r3 (uri and bpd r5), verify READY, S8 report.
-  Budget raised by Jonathan to 18 agents, 155 calls (6M tokens). Round 3 running: 4 lean reviewers in
-  repair/efficiency/lanes/s146/r3/ (acc, read, display, flags); then file receipts r3 (bpd r5) and verify.
-- **Spend:** 13 agents, 103 calls, 4,164,230 tokens of 16, 130, 6M.
+- **Step:** S8: all eight READY; final preview built (repair/s146, 8 ops), screenshots local/shots/s146 registered with
+  approval.py present s146 (page fb32737831de); report sent; waiting for Jonathan's "ship" in this chat (the approval
+  record lives in this container). Then S9 per the runbook: merge main into wip/s146, ship.sh with AX_SESSION, version.json,
+  OPEN_WORK and log commit, private repo merge, Mac copies, handoff in project and Mac, ledger row, next launch prompt.
+- **Spend:** 20 agents, 150 calls, 5,107,002 tokens (budget raised by Jonathan to 20, 155, 6M).
 - **Mac:** caught up at launch (both Mac repos at the s145 ship; Documents/Step2Haki local-only, index.html, bundle and
   this file refreshed). A stray transfer file sits at ~/step2haki-private-push/_xfer_pub.bundle.
 - **Runbook rule (Jonathan 2026-10-17):** before any sourcing cut or ⚠︎ label, search the card index (key terms and
