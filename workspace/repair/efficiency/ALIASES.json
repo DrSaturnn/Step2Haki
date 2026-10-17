@@ -432,6 +432,34 @@
      "ref": "MSD Manual Professional, Urinary Incontinence in Children (s147)"
     }
    ]
+  },
+  {
+   "name": "Wilms tumor",
+   "aliases": [
+    "nephroblastoma"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1475463212199
+    },
+    {
+     "kind": "nbme",
+     "ref": "peds-cms-f627e3 (option \"Nephroblastoma (Wilms tumor)\")"
+    }
+   ]
+  },
+  {
+   "name": "Bartter syndrome",
+   "aliases": [
+    "juxtaglomerular cell hyperplasia"
+   ],
+   "sources": [
+    {
+     "kind": "nbme",
+     "ref": "peds-cms-0354fa (option \"Juxtaglomerular cell hyperplasia\", keyed against the Bartter row)"
+    }
+   ]
   }
  ]
 }
