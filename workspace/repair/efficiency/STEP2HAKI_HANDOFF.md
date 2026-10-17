@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s144 lead (s144 SHIPPED, commit 3f5b744; Claude Code on the web, no Mac).
+Last updated: 2026-10-17, by the s144 lead (s144 SHIPPED, commit 3f5b744; Jonathan: back to the Mac from s145).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -27,12 +27,26 @@ No batch is open. The next batch starts from the launch prompt below.
   LOWs in repair/s141/S141.md, repair/s142/S142.md, repair/s144/S144.md (claim-map citations for rhinitis symptoms,
   SCID and CGD cells; extend sinopulm b22 to the weight-loss clause).
 - **Deploy check:** step2haki.vercel.app is outside the network policy; Jonathan confirms version.json shows 144.
-- **Mac:** not linked; Mac copies owed since s141. **Live:** s144 (3f5b744).
+- **Where work runs (Jonathan 2026-10-17):** back on the Mac desktop app from s145 on; the Mac files
+  (Documents/Step2Haki) are the live working copy again. Cloud sessions are no longer the default. **Live:** s144 (3f5b744).
+- **Mac catch-up (first Mac session, before the s145 launch steps):**
+  1. Repo: in ~/Step2Haki, `git fetch origin && git checkout main && git pull` (main at 4cbccea or later). Delete local
+     wip/s141 to wip/s144 only if Jonathan says so (they are merged; irreversible).
+  2. Private repo: in ~/step2haki-private, `git checkout main && git pull` (main fb95899 or later; origin is
+     https://github.com/DrSaturnn/Step2Haki-private.git after the rename), then copy local-only/ into
+     ~/Step2Haki/workspace/ without overwriting newer Mac files (cp -Rn), so the Mac gets the s141 to s144 folders
+     (psych and peds spine folders, fm/AST RHI PNC CGH, merge/sinopulm-structural/spine, spine/reviews receipts,
+     repair/sources/board_index.json, the s144 board_terms build).
+  3. Documents/Step2Haki: replace index.html with workspace/discriminator-briefs-site/index.html from main, refresh
+     axbx-repo.bundle (git bundle create ... --all), copy local-only changes into Documents/Step2Haki/local-only/, and
+     copy this file there as STEP2HAKI_HANDOFF.md; refresh the project copy too.
+  4. Hooks: bash tools/hooks/install.sh, python3 tools/hooks/test_hooks.py; the Mac's gh login pushes (no token step).
+  5. Check version.json on step2haki.vercel.app shows 144 (not checkable from the cloud).
 
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s145 (Phase 2, pulmonary B) per claude/BATCH_RUNBOOK.md. Briefs: hypoxemia-mech, airway, uri, bpd, scd-dyspnea (folders: step2haki-private claude/pending/FOLDERS_S142_S160.md, listed there as s144; hypoxemia-mech and airway have no folder and build from the page and repair/sources). Goldens: copd, nephrotic-child (peds lens); voices for any hub. Budget for the whole batch: 12 agents, 100 API calls, 4M tokens. Method: s142 (settled 2026-10-15).
+Step2Haki: on the Mac, do the "Mac catch-up" in the handoff State first, then launch batch s145 (Phase 2, pulmonary B) per claude/BATCH_RUNBOOK.md. Briefs: hypoxemia-mech, airway, uri, bpd, scd-dyspnea (folders: claude/pending/FOLDERS_S142_S160.md, listed there as s144; hypoxemia-mech and airway have no folder and build from the page and repair/sources). Goldens: copd, nephrotic-child (peds lens); voices for any hub. Budget for the whole batch: 12 agents, 100 API calls, 4M tokens. Method: s142 (settled 2026-10-15).
 ```
 
 ## After s141
