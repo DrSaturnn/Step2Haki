@@ -26,6 +26,8 @@ OPS = {
     'set_attr': ({'target', 'attr', 'value'}, {'note'}),
     'new_brief': ({'after', 'html'}, {'nav', 'note'}),
     'replace_global': ({'find', 'with'}, {'note'}),
+    # s146c: move a whole brief, byte for byte, to just after another brief (reordering a section); nothing in it changes
+    'move_brief': ({'brief', 'after'}, {'note'}),
     # migration only (brief-migration step 6): the whole brief is replaced by its Type C version; every old item id
     # must be carried (same id, version not lower, bumped when the stem changed) unless listed in `retired_items`
     # with the ledger that accounts for it; the id and data-shelf never change
@@ -234,6 +236,19 @@ def apply_one(html, e, n, taken, log):
                                 'edit brief content with replace/insert_* (brief-scoped); replace_global is for CSS, scripts and nav')
         html = splice(html, [(at, at + len(needle), e['with'])])
         log.append('replace_global at offset %d' % at)
+        return html
+    if op == 'move_brief':
+        b, t = _brief(html, e['brief'], n, op), _brief(html, e['after'], n, op)
+        if b.id == t.id:
+            raise EditError(n, op, 'a brief cannot move after itself', 'name a different brief in "after"')
+        chunk = html[b.start:b.end]
+        cut_end = b.end
+        while cut_end < len(html) and html[cut_end] in ' \t\r\n':
+            cut_end += 1
+        rest = html[:b.start] + html[cut_end:]
+        t2 = _brief(rest, e['after'], n, op)
+        html = rest[:t2.end] + '\n\n' + chunk + rest[t2.end:]
+        log.append('move_brief %s after %s' % (b.id, t.id))
         return html
     if op == 'replace_brief':
         b = _brief(html, e['brief'], n, op)

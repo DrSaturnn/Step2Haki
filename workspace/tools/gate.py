@@ -43,7 +43,7 @@ CATALOG = {
                  'add data-bp="<primary> [secondary]" using codes from the NBME script (gen immune heme ...)'),
     'brief-h4': ('every brief has exactly one <h4> title', 'add a short <h4> topic name as the first child'),
     'dup-id': ('element ids are unique in the static page', 'rename the NEW element id; never rename an existing brief id'),
-    'nav-link': ('every brief has exactly one #navlinks link, class bs (Part II), aq (Aquifer source) or none (topic)',
+    'nav-link': ('every brief has exactly one #navlinks link in its system, class bs (Part II), aq (Aquifer source) or none (topic); a hub also has one plain link in Presentations (s146c)',
                  'add/fix <a href="#id"> under the right .sect group; Part II class="bs", Aquifer-source class="aq"'),
     'nav-count': ('each .sect .count equals its number of topic (unclassed) links', 'update the hand-maintained <span class="count">'),
     'item-attrs': ('every bank <li> carries ' + ' '.join(ITEM_ATTRS), 'add the missing attributes; new ids from tools/idgen.py'),
@@ -232,11 +232,23 @@ def check_page(page, g, page_path):
     else:
         ne = body.find('</aside>', ns)
         nav = body[ns:ne if ne > 0 else ns + 200000]
-        links = defaultdict(list)
+        links, pres = defaultdict(list), defaultdict(list)
+        # s146c: the Presentations group (the first .sect) lists every hub a second time, as a plain link
+        sects = [(m.start(), text(m.group(1))) for m in re.finditer(r'<div class="sect">(.*?)<span class="count">', nav, re.S)]
         for m in re.finditer(r'<a\b([^>]*)>', nav):
             a = attrs(m.group(0))
             if a.get('href', '').startswith('#'):
-                links[a['href'][1:]].append(a.get('class', ''))
+                sect = [nm for at, nm in sects if at < m.start()]
+                if sect and sect[-1] == 'Presentations':
+                    pres[a['href'][1:]].append(a.get('class', ''))
+                else:
+                    links[a['href'][1:]].append(a.get('class', ''))
+        hubs = {b.id for b in bl if b.attrs.get('data-entry') == 'hub'}
+        for bid, cls in pres.items():
+            if bid not in hubs:
+                g.fail('nav-link', bid, '%s is in Presentations but is not a hub (data-entry="hub")' % bid)
+            elif cls != ['']:
+                g.fail('nav-link', bid, '%s needs exactly one plain link in Presentations, has %r' % (bid, cls))
         for b in bl:
             want = 'aq' if (b.kind == 'aq' or b.attrs.get('data-src') == 'aquifer') else ('bs' if b.kind == 'bs' else '')
             got = links.get(b.id, [])

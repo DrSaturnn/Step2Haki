@@ -111,6 +111,30 @@ import re as _re
 o = with_figs(_re.sub(r'<li class="cr" data-mrow="paranoid-pd".*?</li>', '', hubfig, flags=_re.S), spk)
 hit = '[mimic-row] spoke row paranoid-pd is missing' in o
 print(('ok  ' if hit else 'BAD ') + 'a spoke row missing from its hub: expects gate FAIL mimic-row'); bad += not hit
-total = 1 + 9 + 2 + 3 + 3
+# s146c: the Presentations group. A hub may carry one more plain link there; a non-hub may not; a hub may not carry two
+# links in its system section. The page under test is given a Presentations group first if it has none.
+nav0 = PAGE.find('<div id="navlinks">\n')
+hub_ids = [b.id for b in bl if b.attrs.get('data-entry') == 'hub']
+plain_brief = next(b.id for b in bl if b.kind == 'brief' and b.attrs.get('data-entry') != 'hub')
+def with_pres(ids, page=PAGE):
+    p = page
+    if '<div class="sect">Presentations' in p:
+        a = p.find('<div class="sect">Presentations'); z = p.find('<div class="sect">', a + 10)
+        p = p[:a] + p[z:]
+    blk = '<div id="navlinks">\n    <div class="sect">Presentations <span class="count">%d</span></div>\n' % len(ids) + ''.join('    <a href="#%s">x</a>\n' % i for i in ids)
+    return p.replace('<div id="navlinks">\n', blk, 1)
+o = gate(with_pres(hub_ids))[1]
+hit = '[nav-link]' not in o and '[nav-count]' not in o
+print(('ok  ' if hit else 'BAD ') + 'every hub listed again in Presentations passes'); bad += not hit
+o = gate(with_pres(hub_ids + [plain_brief]))[1]
+hit = '[nav-link] %s is in Presentations but is not a hub' % plain_brief in o
+print(('ok  ' if hit else 'BAD ') + 'a non-hub in Presentations: expects gate FAIL nav-link'); bad += not hit
+h = hub_ids[0]
+_p = with_pres(hub_ids); _m = _p.find('<div class="sect">Musculoskeletal'); _e = _p.find('</div>', _m) + 6
+p2 = _p[:_e] + '\n    <a href="#%s">x</a>' % h + _p[_e:]
+o = gate(p2)[1]
+hit = '[nav-link] %s has 2 nav links' % h in o
+print(('ok  ' if hit else 'BAD ') + 'a hub with two system links: expects gate FAIL nav-link'); bad += not hit
+total = 1 + 9 + 2 + 3 + 3 + 3
 print('%d/%d passed' % (total - bad, total))
 sys.exit(1 if bad else 0)
