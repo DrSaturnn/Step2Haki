@@ -19,11 +19,10 @@ Batch s144 is open (State below).
   copd. Method: s142 (the lead builds; one lean reviewer per role for all briefs). Branch wip/s144 in both repos.
   Batch file: repair/s144/S144.md.
 - **Budget:** 15 agents, 140 API calls, 5M tokens (WAVE.json, wave s144 open). **Spend:** 0 agents before S4 (hook probe outside the budget: 1 agent, 5 calls, 279k).
-- **Step:** S4 review round 1 launched (4 lean reviewers, one per role, all five briefs; lanes
-  repair/efficiency/lanes/s144/r1/<part>/, budgets acc 22, read 20, display 22, flags 20). S1 to S3 done: all five
-  MECHANICAL PASS, legib 0 below contrast (record: repair/s144/S144.md). Spine folders: repair/migration/fm/AST, RHI, PNC,
-  CGH and merge/sinopulm-structural/spine (saved to private wip/s144). Next: copy receipts to
-  repair/migration/spine/reviews/<id>_<part>_r1.md, then S5.
+- **Step:** S7 round 2 launched (lanes repair/efficiency/lanes/s144/r2/<part>/; budgets acc 20, read 14, display 14,
+  flags 22). Round 1 done and adjudicated (receipts in repair/migration/spine/reviews/<id>_<part>_r1.md; record in
+  repair/s144/S144.md). Spend after round 1: 4 agents, 28 API calls, 0.89M tokens. Next: file the r2 receipts as _r2,
+  verify each brief for READY, then S8 (preview, screenshots, approval.py present, report).
 - **Carried from s143:** brief header still in the old style; deferred LOWs in repair/s141/S141.md and
   repair/s142/S142.md. Deploy check: Jonathan confirms version.json. **Mac:** not linked. **Live:** s143 (392e74b).
 
