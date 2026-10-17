@@ -21,8 +21,11 @@ Batch s146 is open; restart with the line above.
   strep pneumonia later in onset and commoner at term, AnKing 1484874519070, UWorld 18960). Goldens copd (FM lens),
   nephrotic-child; voices for the hubs (polyuria, bs-incontinence); suicide-risk or ipv for the screen (nephropathy).
   Budget 16 agents, 130 API calls, 6M tokens. Method s142. Branch wip/s146 in the public repo; record repair/s146/S146.md.
-- **Step:** launch done (digest, WAVE.json s146 open, hooks 80/80, Mac catch-up done). Next: S1 board evidence, brief
-  by brief (pyelo first), then S2 and S3 per brief, as in s145.
+- **Step:** launch done; uri and bpd restores built (MECHANICAL PASS, awaiting S7 review); pyelo S1 done (boards.md,
+  facts.json 42/42, live_lines.json in repair/migration/merge/pyelo/spine). Next: pyelo S2 (write spine/build.py from the
+  uri or scd-dyspnea build.py pattern; disease entry, fm lens, golden copd), S3; then bph, nephropathy, hypercalcemia,
+  polyuria, bs-incontinence S1 to S3 (lead tools: tools/spine/dump_lines.py, tools/spine/cards_hy.py). Local-only work is
+  on step2haki-private branch wip/s146 (clone that branch, not main, before the cp restore).
 - **Spend:** 0 agents, 0 calls, 0 tokens.
 - **Mac:** caught up at launch (both Mac repos at the s145 ship; Documents/Step2Haki local-only, index.html, bundle and
   this file refreshed). A stray transfer file sits at ~/step2haki-private-push/_xfer_pub.bundle.

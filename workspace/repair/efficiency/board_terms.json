@@ -1,5 +1,21 @@
 {
  "_doc": "Extra board_index search terms per brief id (tools/spine/board_index.py terms).",
+ "airway": [
+  "stridor",
+  "croup",
+  "epiglottitis",
+  "bacterial tracheitis",
+  "foreign body aspiration",
+  "retropharyngeal abscess",
+  "peritonsillar abscess",
+  "bronchiolitis",
+  "laryngomalacia",
+  "vascular ring",
+  "tracheomalacia",
+  "steeple sign",
+  "racemic epinephrine",
+  "wheezing"
+ ],
  "antipsych-effects": [
   "acute dystonia",
   "agranulocytosis",
@@ -35,6 +51,53 @@
   "manic",
   "mood stabilizer",
   "valproate"
+ ],
+ "bpd": [
+  "respiratory distress syndrome",
+  "surfactant",
+  "transient tachypnea",
+  "meconium aspiration",
+  "apnea of prematurity",
+  "bronchopulmonary dysplasia",
+  "persistent pulmonary hypertension",
+  "neonatal pneumonia",
+  "pneumothorax",
+  "caffeine",
+  "antenatal corticosteroids",
+  "retinopathy of prematurity",
+  "necrotizing enterocolitis",
+  "intraventricular hemorrhage",
+  "congenital diaphragmatic hernia"
+ ],
+ "bph": [
+  "5-alpha reductase",
+  "alpha-1 blocker",
+  "benign prostatic hyperplasia",
+  "bladder outlet obstruction",
+  "finasteride",
+  "lower urinary tract symptoms",
+  "overflow incontinence",
+  "postvoid residual",
+  "prostate-specific antigen",
+  "tamsulosin",
+  "transurethral resection",
+  "urinary retention"
+ ],
+ "bs-incontinence": [
+  "detrusor",
+  "functional incontinence",
+  "Kegel",
+  "mirabegron",
+  "mixed incontinence",
+  "overactive bladder",
+  "overflow incontinence",
+  "oxybutynin",
+  "pelvic floor",
+  "stress incontinence",
+  "urethral hypermobility",
+  "urge incontinence",
+  "urinary incontinence",
+  "vesicovaginal fistula"
  ],
  "copd": [
   "alpha-1 antitrypsin",
@@ -82,6 +145,40 @@
   "vaginismus",
   "vulvodynia"
  ],
+ "hypercalcemia": [
+  "bisphosphonate",
+  "calcitonin",
+  "familial hypocalciuric",
+  "hypercalcemia",
+  "hyperparathyroidism",
+  "milk-alkali",
+  "multiple myeloma",
+  "parathyroid hormone",
+  "parathyroidectomy",
+  "PTHrP",
+  "sarcoidosis",
+  "thiazide",
+  "vitamin D toxicity",
+  "zoledronic"
+ ],
+ "hypoxemia-mech": [
+  "A-a gradient",
+  "alveolar-arterial",
+  "shunt",
+  "ventilation-perfusion",
+  "V/Q mismatch",
+  "hypoventilation",
+  "methemoglobinemia",
+  "methemoglobin",
+  "carbon monoxide",
+  "carboxyhemoglobin",
+  "co-oximetry",
+  "diffusion limitation",
+  "DLCO",
+  "high altitude",
+  "supplemental oxygen",
+  "hypercapnia"
+ ],
  "ipv": [
   "adult protective",
   "child protective",
@@ -105,6 +202,22 @@
   "SIGECAPS",
   "SSRI",
   "suicide risk"
+ ],
+ "nephropathy": [
+  "ACE inhibitor",
+  "albumin-to-creatinine",
+  "albuminuria",
+  "diabetes screening",
+  "diabetic foot",
+  "diabetic kidney disease",
+  "diabetic nephropathy",
+  "diabetic neuropathy",
+  "diabetic retinopathy",
+  "HbA1c",
+  "microalbuminuria",
+  "monofilament",
+  "SGLT2",
+  "statin diabetes"
  ],
  "panic": [
   "agoraphobia",
@@ -142,6 +255,20 @@
   "pleural plaques",
   "silicosis"
  ],
+ "polyuria": [
+  "central diabetes insipidus",
+  "desmopressin",
+  "diabetes insipidus",
+  "hypernatremia",
+  "nephrogenic diabetes insipidus",
+  "nocturia",
+  "polyuria",
+  "primary polydipsia",
+  "psychogenic polydipsia",
+  "urine osmolality",
+  "vasopressin",
+  "water deprivation"
+ ],
  "psych-medical": [
   "anti-NMDA",
   "Cushing",
@@ -164,6 +291,23 @@
   "schizophreniform",
   "substance-induced psychotic"
  ],
+ "pyelo": [
+  "asymptomatic bacteriuria",
+  "costovertebral",
+  "cystitis",
+  "emphysematous pyelonephritis",
+  "nitrite",
+  "nitrofurantoin",
+  "papillary necrosis",
+  "perinephric abscess",
+  "Pyelonephritis",
+  "renal abscess",
+  "Staphylococcus saprophyticus",
+  "struvite",
+  "urease",
+  "urinary tract infection",
+  "xanthogranulomatous"
+ ],
  "rhinitis": [
   "allergic rhinitis",
   "immunotherapy",
@@ -171,6 +315,22 @@
   "oxymetazoline",
   "rhinitis medicamentosa",
   "vasomotor rhinitis"
+ ],
+ "scd-dyspnea": [
+  "sickle cell",
+  "acute chest syndrome",
+  "hemoglobin electrophoresis",
+  "sickle cell trait",
+  "hydroxyurea",
+  "vaso-occlusive",
+  "splenic sequestration",
+  "aplastic crisis",
+  "priapism",
+  "pulmonary hypertension",
+  "exchange transfusion",
+  "functional asplenia",
+  "avascular necrosis",
+  "renal medullary"
  ],
  "scfe": [
   "frog-leg",
@@ -263,48 +423,6 @@
   "tics",
   "Tourette"
  ],
- "voices": [
-  "delusional disorder",
-  "hallucinations",
-  "paranoid personality",
-  "psychotic",
-  "schizoid",
-  "schizotypal"
- ],
- "hypoxemia-mech": [
-  "A-a gradient",
-  "alveolar-arterial",
-  "shunt",
-  "ventilation-perfusion",
-  "V/Q mismatch",
-  "hypoventilation",
-  "methemoglobinemia",
-  "methemoglobin",
-  "carbon monoxide",
-  "carboxyhemoglobin",
-  "co-oximetry",
-  "diffusion limitation",
-  "DLCO",
-  "high altitude",
-  "supplemental oxygen",
-  "hypercapnia"
- ],
- "airway": [
-  "stridor",
-  "croup",
-  "epiglottitis",
-  "bacterial tracheitis",
-  "foreign body aspiration",
-  "retropharyngeal abscess",
-  "peritonsillar abscess",
-  "bronchiolitis",
-  "laryngomalacia",
-  "vascular ring",
-  "tracheomalacia",
-  "steeple sign",
-  "racemic epinephrine",
-  "wheezing"
- ],
  "uri": [
   "upper respiratory infection",
   "common cold",
@@ -322,37 +440,12 @@
   "rhinosinusitis",
   "parapneumonic"
  ],
- "bpd": [
-  "respiratory distress syndrome",
-  "surfactant",
-  "transient tachypnea",
-  "meconium aspiration",
-  "apnea of prematurity",
-  "bronchopulmonary dysplasia",
-  "persistent pulmonary hypertension",
-  "neonatal pneumonia",
-  "pneumothorax",
-  "caffeine",
-  "antenatal corticosteroids",
-  "retinopathy of prematurity",
-  "necrotizing enterocolitis",
-  "intraventricular hemorrhage",
-  "congenital diaphragmatic hernia"
- ],
- "scd-dyspnea": [
-  "sickle cell",
-  "acute chest syndrome",
-  "hemoglobin electrophoresis",
-  "sickle cell trait",
-  "hydroxyurea",
-  "vaso-occlusive",
-  "splenic sequestration",
-  "aplastic crisis",
-  "priapism",
-  "pulmonary hypertension",
-  "exchange transfusion",
-  "functional asplenia",
-  "avascular necrosis",
-  "renal medullary"
+ "voices": [
+  "delusional disorder",
+  "hallucinations",
+  "paranoid personality",
+  "psychotic",
+  "schizoid",
+  "schizotypal"
  ]
 }
