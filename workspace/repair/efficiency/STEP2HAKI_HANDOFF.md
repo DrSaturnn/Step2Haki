@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-15, by the s144 lead (s144 open; Claude Code on the web, no Mac).
+Last updated: 2026-10-17, by the s144 lead (s144 SHIPPED, commit 3f5b744; Claude Code on the web, no Mac).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -10,25 +10,29 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
-Batch s144 is open (State below).
+No batch is open. The next batch starts from the launch prompt below.
 
 ## State (rewrite after every step)
 
-- **Open batch: s144** (Phase 2, pulmonary A), launched 2026-10-15 in Claude Code on the web
-  (session_01N8GCnHdWAjLAfoM9W1sXDn). Briefs: asthma, cough, rhinitis, pneumoconiosis, sinopulm-structural. Golden:
-  copd. Method: s142 (the lead builds; one lean reviewer per role for all briefs). Branch wip/s144 in both repos.
-  Batch file: repair/s144/S144.md.
-- **Budget:** 15 agents, 140 API calls, 5M tokens (WAVE.json, wave s144 open). **Spend:** 10 agents, 61 API calls, 1.76M tokens (hook probe outside the budget: 1 agent, 5 calls, 279k).
-- **Step:** S8 presented (approval.py present s144, page 68f62c679ace, 148 screenshots in local/shots/s144). All five
-  READY. Waiting for Jonathan's "ship" in this chat (the approval record lives in this container). Then S9: ship.sh s144
-  with AX_SESSION, push HEAD to main by hand if no token, OPEN_WORK, wave closed, private wip/s144 to main, handoff.
-- **Carried from s143:** brief header still in the old style; deferred LOWs in repair/s141/S141.md and
-  repair/s142/S142.md. Deploy check: Jonathan confirms version.json. **Mac:** not linked. **Live:** s143 (392e74b).
+- **Last batch: s144 SHIPPED** (3f5b744, 2026-10-17). Phase 2 pulmonary A: asthma, rhinitis, pneumoconiosis,
+  sinopulm-structural on the spine; cough as a presentation hub. Record: repair/s144/S144.md. Spend: 10 agents, 61 API
+  calls, 1.76M tokens (budget 15, 140, 5M). Wave s144 closed.
+- **Network:** this cloud environment's policy denies msdmanuals.com and every other source host (fetch.py and
+  WebFetch both fail); s144 used the 2026-10-10 web cache. Allowing those hosts in the environment's Network access would
+  let later batches re-fetch.
+- **Private repo:** origin now points to https://github.com/DrSaturnn/Step2Haki-private.git (the repo was renamed);
+  a shallow clone needs `git config --add remote.origin.fetch +refs/heads/<branch>:refs/remotes/origin/<branch>` to track
+  a wip branch.
+- **Open small items:** brief header still in the old style; sinopulm phone sticky bar truncates the title; deferred
+  LOWs in repair/s141/S141.md, repair/s142/S142.md, repair/s144/S144.md (claim-map citations for rhinitis symptoms,
+  SCID and CGD cells; extend sinopulm b22 to the weight-loss clause).
+- **Deploy check:** step2haki.vercel.app is outside the network policy; Jonathan confirms version.json shows 144.
+- **Mac:** not linked; Mac copies owed since s141. **Live:** s144 (3f5b744).
 
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s144 (Phase 2, pulmonary A) per claude/BATCH_RUNBOOK.md. Briefs: asthma, cough, rhinitis, pneumoconiosis, sinopulm-structural (folders: step2haki-private claude/pending/FOLDERS_S142_S160.md, listed there as s143; four have no folder and build from the page and repair/sources). Golden: copd. Budget for the whole batch: 15 agents, 140 API calls, 5M tokens. Method: s142 (settled 2026-10-15).
+Step2Haki: launch batch s145 (Phase 2, pulmonary B) per claude/BATCH_RUNBOOK.md. Briefs: hypoxemia-mech, airway, uri, bpd, scd-dyspnea (folders: step2haki-private claude/pending/FOLDERS_S142_S160.md, listed there as s144; hypoxemia-mech and airway have no folder and build from the page and repair/sources). Goldens: copd, nephrotic-child (peds lens); voices for any hub. Budget for the whole batch: 12 agents, 100 API calls, 4M tokens. Method: s142 (settled 2026-10-15).
 ```
 
 ## After s141
