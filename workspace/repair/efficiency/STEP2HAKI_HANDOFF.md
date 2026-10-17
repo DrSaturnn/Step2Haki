@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s146 lead (S3 done; S4 next).
+Last updated: 2026-10-17, by the s146 lead (s146 shipped).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -10,34 +10,31 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
-Batch s146 is open; restart with the line above.
+No batch is open; launch s147 with the prompt below.
 
 ## State (rewrite after every step)
 
-- **Open batch: s146** (Phase 2 renal and GU A). Briefs: pyelo, bph, nephropathy, hypercalcemia, polyuria,
-  bs-incontinence; plus four card-backed restores (uri: Mycoplasma has no cell wall so beta-lactams fail, AnKing
-  1516131575442, UWorld 12256, 19837, in the body hover; bpd: membrane rupture of 18 hours or more for the group B strep
-  row, AnKing 1539182616928, UWorld 4797, 12015; loud P2 for BPD pulmonary hypertension, AnKing 1551057597144; group B
-  strep pneumonia later in onset and commoner at term, AnKing 1484874519070, UWorld 18960). Goldens copd (FM lens),
-  nephrotic-child; voices for the hubs (polyuria, bs-incontinence); suicide-risk or ipv for the screen (nephropathy).
-  Budget 16 agents, 130 API calls, 6M tokens. Method s142. Branch wip/s146 in the public repo; record repair/s146/S146.md.
-- **Step:** S8: all eight READY; final preview built (repair/s146, 8 ops), screenshots local/shots/s146 registered with
-  approval.py present s146 (page fb32737831de); report sent; waiting for Jonathan's "ship" in this chat (the approval
-  record lives in this container). Then S9 per the runbook: merge main into wip/s146, ship.sh with AX_SESSION, version.json,
-  OPEN_WORK and log commit, private repo merge, Mac copies, handoff in project and Mac, ledger row, next launch prompt.
-- **Spend:** 20 agents, 150 calls, 5,107,002 tokens (budget raised by Jonathan to 20, 155, 6M).
-- **Mac:** caught up at launch (both Mac repos at the s145 ship; Documents/Step2Haki local-only, index.html, bundle and
-  this file refreshed). A stray transfer file sits at ~/step2haki-private-push/_xfer_pub.bundle.
-- **Runbook rule (Jonathan 2026-10-17):** before any sourcing cut or ⚠︎ label, search the card index (key terms and
-  high-yield lines); section 3 and S6 item 13.
+- **No batch open.** s146 shipped 2026-10-17 (commit a6e5a90; version.json s146 checked in Chrome): pyelo, bph,
+  nephropathy (first screen entry), hypercalcemia, polyuria and bs-incontinence (hubs) on the spine; uri and bpd
+  restores. Record repair/s146/S146.md. Spend 20 agents, 150 calls, 5.11M tokens. WAVE.json closed.
+- **Next:** s147 (launch prompt below). The plan file numbers it s146 (BATCHES_S141_S150.md and FOLDERS_S142_S160.md
+  run one behind since s143); read those files' s146 entries for s147.
+- **Mac:** both Mac repos, Documents/Step2Haki local-only, index.html, bundle and this file refreshed after the s146
+  ship (or, if the Mac was unreachable, owed: see the s146 record). A stray transfer file sits at
+  ~/step2haki-private-push/_xfer_pub.bundle.
+- **Lessons for lanes (s146):** reviewers that read every brief before writing lose receipts at the cap (six lost in
+  s146); lanes now say "write each brief's receipt before the next" and size Budget at about 5 calls per brief plus 4.
+  RECEIPT_FORMAT.md from review_packet.py carries a stale /tmp receipt-path line when the review dir is outside the lane:
+  strip it, or pass the lane dir.
 - **Open small items:** brief header still in the old style (hypoxemia-mech subtitle "five mechanisms"); sinopulm phone
-  sticky bar truncates the title; per-agent call caps: set each reviewer's Budget from an explicit call plan with two
-  spare (s145 lost receipts three times); deferred LOWs in repair/s141 to s145 batch files.
+  sticky bar truncates the title; hypercalcemia study mode shows "Bisphosphonates are usually the drugs of choice in
+  malignancy" beside the masked rung (display LOW; masking needs markup); polyuria "common" in Pairs with (flags LOW,
+  replacement crosses a bold); deferred LOWs in repair/s141 to s146 batch files.
 
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s146 (Phase 2, renal and GU A) per claude/BATCH_RUNBOOK.md. Briefs: pyelo, bph, nephropathy, hypercalcemia, polyuria, bs-incontinence; plus the four card-backed restores queued in the handoff State (uri: Mycoplasma beta-lactam failure; bpd: membrane rupture 18 hours or more, loud P2, later-onset group B strep pneumonia). Goldens: copd (FM lens), nephrotic-child. Budget for the whole batch: 16 agents, 130 API calls, 6M tokens. Method: s142.
+Step2Haki: launch batch s147 (Phase 2, renal and GU B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: peds-uti-recurrent, enuresis, peds-aki, bs-puv, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum (folders: claude/pending/FOLDERS_S142_S160.md, listed there as s146; peds-uti-recurrent and enuresis have merge folders, the other six build from the page and repair/sources). Golden: nephrotic-child (peds lens); voices for any hub. Budget for the whole batch: 20 agents, 170 API calls, 7M tokens. Method: s142, with write-first review lanes (each reviewer writes a brief's receipt before reading the next; Budget 5 calls per brief plus 4).
 ```
 
 ## After s141
