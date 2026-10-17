@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s145 lead (S1 to S3 done for all five briefs; S3 preview done).
+Last updated: 2026-10-17, by the s145 lead (S4 review round 1 launched).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -19,14 +19,12 @@ No batch is open. The next batch starts from the launch prompt below.
   one lean reviewer per role for all briefs). **Branch wip/s145** in both repos (public: batch records; private: the
   local-only folders built so far). Batch file: repair/s145/S145.md (read it: it lists every step and call so far).
 - **Budget:** 12 agents, 100 API calls, 4M tokens (WAVE.json s145 open). **Spend:** 0 agents (T2 refused launch only).
-- **Step:** S1 to S3 done for all five, all MECHANICAL PASS: hypoxemia-mech (repair/migration/fm/HYP/spine, hub, 599
-  words), airway (fm/AIR/spine, hub, 622), uri (merge/uri/spine, hub, 554), bpd (merge/bpd/spine, hub, 638),
-  scd-dyspnea (merge/scd-dyspnea/spine, disease, 1,189 of 1,300). S3 preview: repair/s145/10_*_spine.json (5 ops),
-  gate, render, vendor_scan pass; legib_audit 0 below contrast in all six views. **Next: S4, review round 1** (four
-  roles, one lean reviewer per role for all five; packets from tools/spine/review_packet.py).
-- **Context:** the fourth chat stopped before S4 at about 227k (start-up 179,783: the Mac link adds the device tools), so
-  S4 to S7 can run in one chat with their spend ledger. Start the next chat without the Mac link if possible (start-up
-  near 130k); the Mac is needed only at S9.
+- **Step:** S1 to S3 done for all five, all MECHANICAL PASS (folders: hypoxemia-mech repair/migration/fm/HYP/spine,
+  airway fm/AIR/spine, uri merge/uri/spine, bpd merge/bpd/spine, scd-dyspnea merge/scd-dyspnea/spine; batch build
+  repair/s145/10_*_spine.json). **S4 launched 2026-10-17 09:45** (fifth chat): four lean reviewers, lanes
+  repair/efficiency/lanes/s145/r1/<part>/<brief>/ (gitignored; receipts land there). If this chat stops before the
+  receipts are read, the next chat checks for the 20 receipts before re-running anything. **Next: S5.**
+- **Context:** fifth chat started without the Mac link.
 - **Session start in a new chat:** clone public on wip/s145 and private (then `git -C step2haki-private fetch origin
   wip/s145 && git checkout wip/s145` before the cp restore, so fm/HYP, fm/AIR, the new web-cache pages and
   board_index.json arrive); install hooks (the permission check holds it: ask, as in s145); T1 and T2 as in S145.md.
