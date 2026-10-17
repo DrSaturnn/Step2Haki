@@ -228,5 +228,13 @@ try:
 finally:
     shutil.rmtree(T, ignore_errors=True)
     shutil.rmtree(TBD, ignore_errors=True)
+# lettered patch batches (s146b): the changelog row is matched exactly, never the parent batch's
+sys.path.insert(0, os.path.join(WS, 'tools', 'hooks'))
+import approval as _AP  # noqa: E402
+_rows = [{'v': 146, 'note': 'a'}, {'v': '146b', 'note': 'b'}, {'v': 147, 'note': 'c'}]
+expect('log row for s146', ((_AP.match_entry(_rows, 's146') or {}).get('note'), ''), 'a')
+expect('log row for s146b is its own', ((_AP.match_entry(_rows, 's146b') or {}).get('note'), ''), 'b')
+expect('no log row for s148', (_AP.match_entry(_rows, 's148'), ''), None)
+expect('no log row for a malformed id', (_AP.match_entry(_rows, 's146bb'), ''), None)
 print('test_hooks: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)

@@ -15,13 +15,10 @@ No batch is open; launch s147 with the prompt below.
 ## State (rewrite after every step)
 
 - **Open batch: s146b** (card-checklist patch of the six live s146 briefs; record repair/s146b/S146B.md; branch
-  wip/s146b in both repos). S4 round 1 and S5 done: receipts filed as reviews/<brief>_<part>_r11.md (18 of 24; six lanes
-  hit their call caps); fixes applied (pyelo pregnancy row and dispositions, bs-incontinence normal pressure
-  hydrocephalus row with cuts C2 and C3, nephropathy pain rung, two PASS-IF swaps). READY: bph, hypercalcemia,
-  polyuria. Not READY: pyelo (follow-up of all four parts), nephropathy and bs-incontinence (first acc, display, flags;
-  read follow-up). Stopped at the budget (8 agents, 94 calls, 3.20M of 12, 150, 4M); asked Jonathan for a raise.
-  Next: S7 round 2 in repair/efficiency/lanes/s146b/r2 (4 lanes: acc opus; read, display, flags sonnet; receipts as
-  _r12.md), with no globs and display Budget sized at 7 per brief plus 4.
+  wip/s146b in both repos). S1 to S7 done: all six READY (receipts _r11 and _r12), ready_gate READY, changelog entry
+  "146b", tool change for lettered batch ids (ship.sh, approval.py, axlog.py; test_hooks 84/84). S8: presented with
+  approval.py present s146b (shots in local/shots/s146b); waiting for Jonathan's "ship" in the presenting chat. Spend
+  12 agents, 138 calls, 5.05M of 16, 200, 6M.
 - **Next:** s147 (launch prompt below). The plan file numbers it s146 (BATCHES_S141_S150.md and FOLDERS_S142_S160.md
   run one behind since s143); read those files' s146 entries for s147.
 - **Mac:** caught up after the s146 ship (2026-10-17 13:35): ~/Step2Haki fast-forwarded to main 468758d and

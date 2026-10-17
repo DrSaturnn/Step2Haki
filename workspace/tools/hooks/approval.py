@@ -50,9 +50,18 @@ def log_entry(b):
         rows = json.loads(out)
     except ValueError:
         return None
-    n = int(re.sub(r'\D', '', b) or 0)
-    hit = [r for r in rows if isinstance(r, dict) and r.get('v') == n]
-    return json.dumps(hit[0], sort_keys=True) if hit else None
+    hit = match_entry(rows, b)
+    return json.dumps(hit, sort_keys=True) if hit else None
+
+
+def match_entry(rows, b):
+    """the changelog row for batch b: s146 matches v 146, a lettered patch batch s146b matches v "146b" (s146b) and
+    never its parent's 146"""
+    n = re.sub(r'^s0*', '', b)
+    if not re.fullmatch(r'\d+[a-z]?', n):
+        return None
+    hit = [r for r in rows if isinstance(r, dict) and str(r.get('v')) == n]
+    return hit[0] if hit else None
 
 
 def build(b):

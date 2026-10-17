@@ -55,8 +55,8 @@ AXLOG="$LOGJSON" python3 - "$TMP/index.html" "$B" <<'PY' || fail changelog "add 
 import json, os, re, sys
 p, b = sys.argv[1], sys.argv[2]
 data = os.environ['AXLOG']; log = json.loads(data)
-n = re.sub(r'^s0*', '', b)
-if not n.isdigit() or int(n) not in [e['v'] for e in log]:
+n = re.sub(r'^s0*', '', b)   # a lettered patch batch (s146b) has its own entry, v "146b"
+if not re.fullmatch(r'\d+[a-z]?', n) or n not in [str(e['v']) for e in log]:
     sys.exit(1)
 s = open(p, encoding='utf-8').read()
 safe = data.strip().replace('</', '<\\/')
