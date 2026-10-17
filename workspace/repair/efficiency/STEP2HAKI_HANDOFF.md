@@ -14,14 +14,16 @@ No batch is open; launch s147 with the prompt below.
 
 ## State (rewrite after every step)
 
-- **No batch open.** s146 shipped 2026-10-17 (commit a6e5a90; version.json s146 checked in Chrome): pyelo, bph,
+- **No batch open.** s146 shipped 2026-10-17 (commit a6e5a90, main 468758d; version.json {"build":"s146"} checked in Chrome at 13:29): pyelo, bph,
   nephropathy (first screen entry), hypercalcemia, polyuria and bs-incontinence (hubs) on the spine; uri and bpd
   restores. Record repair/s146/S146.md. Spend 20 agents, 150 calls, 5.11M tokens. WAVE.json closed.
 - **Next:** s147 (launch prompt below). The plan file numbers it s146 (BATCHES_S141_S150.md and FOLDERS_S142_S160.md
   run one behind since s143); read those files' s146 entries for s147.
-- **Mac:** both Mac repos, Documents/Step2Haki local-only, index.html, bundle and this file refreshed after the s146
-  ship (or, if the Mac was unreachable, owed: see the s146 record). A stray transfer file sits at
-  ~/step2haki-private-push/_xfer_pub.bundle.
+- **Mac:** caught up after the s146 ship (2026-10-17 13:35): ~/Step2Haki fast-forwarded to main 468758d and
+  ~/step2haki-private to main 4e52d97 (by git bundle; the Mac has no GitHub credentials for the private repo);
+  Documents/Step2Haki local-only filled with cp -Rn (3,731 to 4,757 files), index.html replaced from
+  discriminator-briefs-site (s146), axbx-repo.bundle rebuilt (--all, 15.1 MB), this file copied. A stray transfer file
+  sits at ~/step2haki-private-push/_xfer_pub.bundle.
 - **Lessons for lanes (s146):** reviewers that read every brief before writing lose receipts at the cap (six lost in
   s146); lanes now say "write each brief's receipt before the next" and size Budget at about 5 calls per brief plus 4.
   RECEIPT_FORMAT.md from review_packet.py carries a stale /tmp receipt-path line when the review dir is outside the lane:
