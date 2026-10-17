@@ -30,6 +30,9 @@ No batch is open; launch s147 with the prompt below.
   2 instructions named every file, banned globs, said each parallel read counts, and gave display 7 calls per brief:
   12 of 12 receipts, 16 to 22 calls used per lane. Keep those lines in every lane. Packet gap: read packets lack
   ALIASES.json and ABBREV.json.
+- **Queued site work (Jonathan 2026-10-17, digest):** A. Presentations group of hubs in the sidebar (axnav.js must track
+  every tile of a brief id); B. six disorder-family sub-labels in Psychiatry. One site-layer batch, its own display review
+  and "ship"; can ride with or follow s147.
 - **Open small items:** brief header still in the old style (hypoxemia-mech subtitle "five mechanisms"); sinopulm phone
   sticky bar truncates the title; hypercalcemia study mode shows "Bisphosphonates are usually the drugs of choice in
   malignancy" beside the masked rung (display LOW; masking needs markup); polyuria "common" in Pairs with (flags LOW,

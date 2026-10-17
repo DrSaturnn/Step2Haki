@@ -154,7 +154,8 @@ Source keys:
 - **Who works on it:** only Claude works on Step2Haki. Codex and ChatGPT are used only to critique Claude's plans and documents. [MEM]
 - **The handoff:** after each shipped batch, update STEP2HAKI_HANDOFF.md in the project and in Documents/Step2Haki. [Project instructions]
 - **Pacing:** psych briefs are reauthored one at a time, to ensure accuracy. [MEM]
-- **Cross-shelf content:** being weighed, as separate psych-perspective briefs for topics covered by other shelves. [MEM, 2026-10-05]
+- **Cross-shelf content:** no separate psych-perspective briefs. A psych-tagged brief filed under another shelf's section stays one brief with several shelf tags; a line stays when any tagged shelf's board source tests it, and moves only to a live brief that already carries it, with a drawer back; nothing is deleted. [DIG 2026-10-17, settles MEM 2026-10-05]
+- **Two navigation axes:** a Presentations group lists every hub at the top of the sidebar; each hub keeps its home tile in its system section (one brief, two tiles). Psychiatry is subgrouped by disorder family in six groups. psych-medical stays a disease brief. [DIG 2026-10-17]
 
 ## Repo and files
 - **The repo:** public, DrSaturnn/Step2Haki; the site deploys from discriminator-briefs-site. Each ship commits a description of what changed. [MEM]
