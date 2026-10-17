@@ -10,10 +10,10 @@
   "flag-review",
   "wording-fix"
  ],
- "max_agents": 12,
- "max_calls": 150,
- "max_tokens": 4000000,
- "set_by": "Jonathan, s146b (asked at S3): \"12 agents, 150 calls, 4M (Recommended)\"",
+ "max_agents": 16,
+ "max_calls": 200,
+ "max_tokens": 6000000,
+ "set_by": "Jonathan, s146b (asked at S3): \"12 agents, 150 calls, 4M (Recommended)\"; raised at the round-1 budget stop: \"16 agents, 200 calls, 6M (Recommended)\"",
  "previous": {
   "id": "s146",
   "note": "2026-10-17 (s146 shipped, main 3c47070)"
