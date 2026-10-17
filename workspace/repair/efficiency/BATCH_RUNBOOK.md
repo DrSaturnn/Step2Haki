@@ -64,8 +64,13 @@ Then run section 2 to the end without asking.
   - Parked builds: adjudicate every change in the diff against live as ACCEPT, REJECT or PARTIAL, with evidence. Never reverse a digest decision.
   - Convert the workup to 5a (claude/pending/pilot5a), with a clue for every test.
   - Drop header lines and apply the brief's Needs codes from the amendment list.
-  - A brief that becomes a hub (data-entry="hub") also gets a plain link in the sidebar's Presentations group, and that
-    group's count goes up by one (Jonathan 2026-10-17, s146c); the gate fails a hub missing from Presentations.
+  - Sidebar placement (Jonathan 2026-10-17, s146c):
+    - a brief that becomes a hub (data-entry="hub") also gets a plain link in the sidebar's Presentations group, and that
+      group's count goes up by one; the gate fails a hub missing from Presentations;
+    - a new or converted Psychiatry brief goes into one of the six disorder-family groups (Psychosis and mood; Anxiety,
+      somatic and sexual; Cognition, substances and medical causes; Child and adolescent; Medications; Safety and
+      violence), under its sidebar sub-label and in the same page order; briefs are moved with the move_brief edit
+      (tools/apply_edits.py), which never changes a brief's content.
 - **S3. Mechanical checks.**
   - verify --mech (G-MECH), which includes the card check;
   - legib_audit with 0 failures in sculpted, flat and study, on phone and desktop.
@@ -74,7 +79,8 @@ Then run section 2 to the end without asking.
   - The four roles on the models in the plan table.
   - Packets from tools/spine/review_packet.py only.
   - Write-first lanes (Jonathan 2026-10-17, after s146 lost six receipts at the cap): the lane instructions tell each reviewer to read one brief's packet and write that brief's receipt before opening the next brief.
-  - Budget per lane from a call plan: first-round acc 7 calls per brief plus 4; every other part, and acc in follow-up rounds, 5 per brief plus 4; at most 4 briefs per acc lane. The hook caps each reviewer at 25 calls, so split a lane that would need more.
+  - Budget per lane from a call plan: first-round acc 7 calls per brief plus 4; display 7 per brief plus 4 (its screenshots); read, flags, and acc in follow-up rounds, 5 per brief plus 4; at most 4 briefs per acc lane. The hook caps each reviewer at 25 calls, so split a lane that would need more.
+  - Lane instructions (Jonathan 2026-10-17, after s146b round 1 lost six receipts and round 2 lost none): name every file in each brief folder, ban Glob and folder listings, say that every file in a parallel read counts as one call, and tell reviewers to Grep large files rather than read them whole.
   - Each lane's RECEIPT_FORMAT.md names only the lane's receipt paths: strip the line that review_packet.py writes with its own output folder when the packet is built outside the lane (s146 packet error).
 - **S5. Adjudicate and fix.**
   - Every HIGH and MED, with evidence.
@@ -83,7 +89,7 @@ Then run section 2 to the end without asking.
 - **S6. Lead self-check** (section 4) on every changed line.
 - **S7. Follow-up review.**
   - The same four roles, on the changed lines with context, each given its first-round receipt.
-  - Write-first lanes, 5 calls per brief covered plus 4 (Jonathan 2026-10-17; was 4 per brief plus 2, s139). A reviewer that relays a verdict without writing its receipt counts as no receipt: relaunch it on the same lane with the call plan in the prompt.
+  - Write-first lanes, 5 calls per brief covered plus 4, display 7 per brief plus 4, with the same lane instructions as S4 (Jonathan 2026-10-17; was 4 per brief plus 2, s139). A reviewer that relays a verdict without writing its receipt counts as no receipt: relaunch it on the same lane with the call plan in the prompt.
   - A reviewer with only LOW findings returns PASS-IF (conditional PASS) with exact replacements; the lead applies the approved ones, and verify keeps the receipts current without another round.
   - Loop S5 to S7 until READY or the budget is spent.
 - **S8. Final report** (section 5):
@@ -118,6 +124,7 @@ Then run section 2 to the end without asking.
 | A display choice the spec does not cover | Follow the nearest STANDING_DIRECTIONS line and name it in the report. |
 | An abbreviation (Jonathan 2026-10-12) | Very common labs and imaging are written short, from the shared allowlist (repair/efficiency/ABBREV.json; for example CBC, BUN, US, CT, CT angiography, MRI). Anything not on the list is spelled out. A new entry is added to the list and disclosed in the report. |
 | A diagnosis with more than one name (Jonathan 2026-10-12) | Name it with its other names at first mention and in its differential row, for example "Conversion disorder (functional neurological symptom disorder)", because NBME often uses the less familiar name. Names come from the shared table (repair/efficiency/ALIASES.json), built from AnKing cards, NBME items and DSM-5-TR or ICD names. |
+| A psych-tagged brief filed under another shelf's section (today bs-learning, tics, peds-sleep; Jonathan 2026-10-17, decision D) | A line stays when a board source of any shelf the brief is tagged for tests it. A line none of them tests moves only to a live brief that already carries it, and the brief keeps a drawer to it. Nothing is deleted; every move follows the card-search rule. No separate psych-perspective brief. |
 | Text that wraps into a narrow column on phone (Jonathan 2026-10-12) | Widen it (on phone, a 5a clue takes the band's full width); never shorten content to fit a column. |
 
 ## 4. Lead self-check (S6): before the follow-up review, and again before the report
@@ -194,6 +201,21 @@ Each such message asks one question, multiple choice where possible, with a reco
 - Long outputs go to files in the brief folder; the chat gets counts.
 - The handoff State is rewritten after every step, so the restart line is always enough.
 
-## 8. Closing a batch (Jonathan 2026-10-12)
+## 8. Patch and site-layer batches (Jonathan 2026-10-17)
+
+- **Naming:** a patch of shipped briefs or a site-layer batch between numbered batches takes a letter after the last
+  number (s146b, s146c), with its own changelog entry ("146b" in repair/changelog/axlog.py); ship.sh and approval.py
+  match the exact id. Numbered batches keep the plan's numbering.
+- **Site-layer batches** (navigation, layout, scripts or styles; no brief content changes), as in s146c:
+  1. build a pilot from the live page with a script (repair/pilots/<name>/), publish it as a private artifact, and let
+     Jonathan try it; revise until he approves it;
+  2. generate the batch from the live page with the same changes (repair/sNNNx/gen_*.py writing the *.json);
+  3. run the build, gate, render, preflight and vendor checks, legib_audit on the briefs the change touches, and
+     screenshots at the widths it affects; confirm every brief is byte-identical unless the batch moves it;
+  4. a tool or check change it needs follows section 3 (offline tests; the diff in the report);
+  5. present with approval.py, then ship on "ship".
+  No reviewer agents run when no brief content changes; any brief content change makes it a normal batch.
+
+## 9. Closing a batch (Jonathan 2026-10-12)
 
 Closing a batch: the post-ship report ends with the complete launch prompt for the next batch (batch id, briefs, budget, decisions needed), ready to paste into a fresh chat unchanged.
