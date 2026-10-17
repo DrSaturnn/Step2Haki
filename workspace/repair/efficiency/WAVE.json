@@ -10,10 +10,10 @@
   "flag-review",
   "wording-fix"
  ],
- "max_agents": 16,
- "max_calls": 130,
+ "max_agents": 18,
+ "max_calls": 155,
  "max_tokens": 6000000,
- "set_by": "Jonathan: s146 launch \"Budget for the whole batch: 16 agents, 130 API calls, 6M tokens.\"",
+ "set_by": "Jonathan: s146 launch \"Budget for the whole batch: 16 agents, 130 API calls, 6M tokens.\"; raised 2026-10-17 at the S7 budget stop: \"Raise to 18 agents, 155 calls (Recommended)\" (tokens unchanged, 6M)",
  "previous": {
   "id": "s145",
   "note": "2026-10-17 (s145 shipped, commit 11cb89f)"

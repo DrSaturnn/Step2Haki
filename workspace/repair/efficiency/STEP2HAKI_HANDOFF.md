@@ -26,7 +26,8 @@ Batch s146 is open; restart with the line above.
   (read). Next: round 3 on the changed lines (4 lean reviewers, one per role, lanes repair/efficiency/lanes/s146/r3/,
   packets --diff against the round-2 preview /tmp-built from the round-2 10_*.json; give each reviewer at least 4
   calls per brief plus 4 so it can write every receipt), then file receipts r3 (uri and bpd r5), verify READY, S8 report.
-  Waiting on Jonathan: budget raise for round 3.
+  Budget raised by Jonathan to 18 agents, 155 calls (6M tokens). Round 3 running: 4 lean reviewers in
+  repair/efficiency/lanes/s146/r3/ (acc, read, display, flags); then file receipts r3 (bpd r5) and verify.
 - **Spend:** 13 agents, 103 calls, 4,164,230 tokens of 16, 130, 6M.
 - **Mac:** caught up at launch (both Mac repos at the s145 ship; Documents/Step2Haki local-only, index.html, bundle and
   this file refreshed). A stray transfer file sits at ~/step2haki-private-push/_xfer_pub.bundle.
