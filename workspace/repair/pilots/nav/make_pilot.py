@@ -84,7 +84,8 @@ sub("""    cl.textContent = label || 'Step2Haki';""",
     bn.textContent = nm; bn.title = nm; bn.hidden = !nm || nm === label;""")
 css = ('<style id="ax-pilot-nav">#axbar .axcur{max-width:520px}'
        '#axbar .axbn{font:600 14px/1.2 var(--sans);color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:240px;'
-       'padding-right:12px;margin-right:2px;border-right:1px solid var(--hair)}#axbar .axbn[hidden]{display:none}</style>')
+       'padding-right:12px;margin-right:2px;border-right:1px solid var(--hair)}#axbar .axbn[hidden]{display:none}'
+       '@media (min-width:1500px){html{zoom:1.1}}</style>')   # option: 110% on wide desktop windows, 100% below
 s = s.replace('</head>', css + '</head>', 1)
 s = s.replace('<title>', '<title>PILOT (not live): ', 1)
 open(out, 'w', encoding='utf-8').write(s)
