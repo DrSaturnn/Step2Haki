@@ -2,6 +2,24 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-17 s144: s144: pulmonary A on the decision spine (asthma, rhinitis, pneumoconiosis, sinopulm-structural; cough as a hub); study-mode workup blur 8 px
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (5):
+  - cough (Chronic Cough): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+6981 chars)
+  - pneumoconiosis (Occupational Lung Disease): items edited (q_74569fd222d3f50ad3da); attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+8470 chars)
+  - rhinitis (Rhinitis): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+8247 chars)
+  - sinopulm-structural (Recurrent Respiratory Infection and Structural Lung Disease): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+8714 chars)
+  - asthma (Asthma): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+15052 chars)
+Other page changes (nav, headers, scripts): +922 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 19 scripts, 38 checks, base HEAD | allowlisted 14 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 186/187 | vignette gridded 69/69 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.015%)
+```
+
 ## 2026-10-15 s143: s143: sidebar and canvas from the Lithium Glance mockup (axnav component, display sheet, landing fix)
 
 ```
