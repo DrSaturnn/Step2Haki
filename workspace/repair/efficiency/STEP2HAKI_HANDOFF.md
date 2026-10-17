@@ -17,7 +17,7 @@ No batch is open. The next batch starts from the launch prompt below.
 - **No batch is open.** s145 (Phase 2 pulmonary B: hypoxemia-mech, airway, uri, bpd, scd-dyspnea) shipped 2026-10-17,
   commit 11cb89f (Jonathan: "ship"). Record: repair/s145/S145.md. Wave s145 closed. Spend: 11 of 12 agents, 70 of 100
   calls, 3.56M of 4M tokens.
-- **Live:** s145 pushed to main; check version.json (Vercel deploy).
+- **Live:** s145 (11cb89f); version.json shows s145 (checked in Chrome 2026-10-17).
 - **Owed to the Mac** (the fifth chat ran without the Mac link): copy the s145 local-only folders (repair/migration/fm/HYP,
   fm/AIR, merge/uri, merge/bpd, merge/scd-dyspnea spine/, repair/migration/spine/reviews s145 receipts, new web-cache
   pages) from the private repo into Documents/Step2Haki/local-only (cp -rn), replace index.html and axbx-repo.bundle there,
