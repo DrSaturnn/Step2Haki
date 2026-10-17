@@ -21,12 +21,13 @@ Batch s146 is open; restart with the line above.
   strep pneumonia later in onset and commoner at term, AnKing 1484874519070, UWorld 18960). Goldens copd (FM lens),
   nephrotic-child; voices for the hubs (polyuria, bs-incontinence); suicide-risk or ipv for the screen (nephropathy).
   Budget 16 agents, 130 API calls, 6M tokens. Method s142. Branch wip/s146 in the public repo; record repair/s146/S146.md.
-- **Step:** S1 to S5 done (record repair/s146/S146.md). S7 follow-up review running: 6 lean reviewers in
-  repair/efficiency/lanes/s146/r2/<agent>/<brief>/ (lane builder in /tmp scratch; if a chat restarts, read the r2
-  receipts and relaunch only agents whose receipts are missing, from the same lanes). bph needs no follow-up (all PASS).
-  Then file receipts as repair/migration/spine/reviews/<brief>_<part>_r1/r2.md, verify READY, S8 report. Local-only
-  work: step2haki-private wip/s146.
-- **Spend:** round 1: 7 agents, 56 calls, 2.78M tokens; round 2: 6 agents launched (13 of 16 agents).
+- **Step:** S1 to S7 round 2 done (record repair/s146/S146.md). READY: pyelo, bph, uri. Stale receipts: nephropathy
+  (acc, read, display), hypercalcemia and polyuria (acc, read, display, flags), bs-incontinence (read, display), bpd
+  (read). Next: round 3 on the changed lines (4 lean reviewers, one per role, lanes repair/efficiency/lanes/s146/r3/,
+  packets --diff against the round-2 preview /tmp-built from the round-2 10_*.json; give each reviewer at least 4
+  calls per brief plus 4 so it can write every receipt), then file receipts r3 (uri and bpd r5), verify READY, S8 report.
+  Waiting on Jonathan: budget raise for round 3.
+- **Spend:** 13 agents, 103 calls, 4,164,230 tokens of 16, 130, 6M.
 - **Mac:** caught up at launch (both Mac repos at the s145 ship; Documents/Step2Haki local-only, index.html, bundle and
   this file refreshed). A stray transfer file sits at ~/step2haki-private-push/_xfer_pub.bundle.
 - **Runbook rule (Jonathan 2026-10-17):** before any sourcing cut or ⚠︎ label, search the card index (key terms and
