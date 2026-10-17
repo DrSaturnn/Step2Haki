@@ -24,6 +24,9 @@ No batch is open. The next batch starts from the launch prompt below.
   scd-dyspnea (merge/scd-dyspnea/spine, disease, 1,189 of 1,300). S3 preview: repair/s145/10_*_spine.json (5 ops),
   gate, render, vendor_scan pass; legib_audit 0 below contrast in all six views. **Next: S4, review round 1** (four
   roles, one lean reviewer per role for all five; packets from tools/spine/review_packet.py).
+- **Context:** the fourth chat stopped before S4 at about 227k (start-up 179,783: the Mac link adds the device tools), so
+  S4 to S7 can run in one chat with their spend ledger. Start the next chat without the Mac link if possible (start-up
+  near 130k); the Mac is needed only at S9.
 - **Session start in a new chat:** clone public on wip/s145 and private (then `git -C step2haki-private fetch origin
   wip/s145 && git checkout wip/s145` before the cp restore, so fm/HYP, fm/AIR, the new web-cache pages and
   board_index.json arrive); install hooks (the permission check holds it: ask, as in s145); T1 and T2 as in S145.md.
