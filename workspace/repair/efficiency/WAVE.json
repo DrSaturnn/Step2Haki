@@ -1,8 +1,8 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s146b",
+ "id": "s147",
  "open": true,
- "plan_step": "s146b",
+ "plan_step": "s147",
  "roles": [
   "acc-review",
   "read-review",
@@ -10,16 +10,16 @@
   "flag-review",
   "wording-fix"
  ],
- "max_agents": 16,
- "max_calls": 200,
- "max_tokens": 6000000,
- "set_by": "Jonathan, s146b (asked at S3): \"12 agents, 150 calls, 4M (Recommended)\"; raised at the round-1 budget stop: \"16 agents, 200 calls, 6M (Recommended)\"",
+ "max_agents": 24,
+ "max_calls": 220,
+ "max_tokens": 9000000,
+ "set_by": "Jonathan, s147 launch prompt: \"Budget for the whole batch: 24 agents, 220 API calls, 9M tokens.\"",
  "previous": {
-  "id": "s146",
-  "note": "2026-10-17 (s146 shipped, main 3c47070)"
+  "id": "s146b",
+  "note": "2026-10-17 (s146b shipped, main 2c9a52d; s146c site layer shipped 5f85e90, no agents)"
  },
- "opened": "2026-10-17 (card-checklist patch)",
- "note": "Card-checklist patch of the six s146 briefs; write-first lanes per the 2026-10-17 runbook.",
+ "opened": "2026-10-17 17:53 (launch)",
+ "note": "Phase 2 renal and GU B, pediatric (8 briefs); method s142 with write-first review lanes.",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -65,6 +65,11 @@
    "agents": 12,
    "calls": 150,
    "tokens": 4000000
+  },
+  "s147": {
+   "agents": 24,
+   "calls": 220,
+   "tokens": 9000000
   }
  }
 }
