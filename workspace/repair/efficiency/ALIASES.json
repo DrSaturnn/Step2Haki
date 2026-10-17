@@ -407,6 +407,31 @@
     }
    ],
    "added": "s142"
+  },
+  {
+   "name": "Diabetes insipidus",
+   "aliases": [
+    "arginine vasopressin deficiency (central)",
+    "arginine vasopressin resistance (nephrogenic)"
+   ],
+   "sources": [
+    {
+     "kind": "primary",
+     "ref": "MSD Manual Professional, Urinary Incontinence in Children (s147)"
+    }
+   ]
+  },
+  {
+   "name": "Nonmonosymptomatic enuresis",
+   "aliases": [
+    "complex enuresis"
+   ],
+   "sources": [
+    {
+     "kind": "primary",
+     "ref": "MSD Manual Professional, Urinary Incontinence in Children (s147)"
+    }
+   ]
   }
  ]
 }
