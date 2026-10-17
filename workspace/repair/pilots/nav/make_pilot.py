@@ -46,16 +46,46 @@ pres = '\n    <div class="sect">Presentations <span class="count">%d</span></div
 nav = nav.replace('<div id="navlinks">', '<div id="navlinks">\n' + pres + '\n', 1)
 s = s[:j] + nav + s[k:]
 
-# 3. the sidebar component: a brief may have two tiles (Presentations and its system); both mark current
-old = 'g.items.push(it); byId[id] = it;'
-new = 'g.items.push(it); if(byId[id]){ (byId[id].dup = byId[id].dup || []).push(it); } else byId[id] = it;'
-assert s.count(old) == 1; s = s.replace(old, new)
-old = "if(prev && byId[prev]) byId[prev].el.removeAttribute('aria-current');"
-new = "if(prev && byId[prev]){ byId[prev].el.removeAttribute('aria-current'); (byId[prev].dup || []).forEach(function(d){ d.el.removeAttribute('aria-current'); }); }"
-assert s.count(old) == 1; s = s.replace(old, new)
-old = "it.el.setAttribute('aria-current', 'page');"
-new = "it.el.setAttribute('aria-current', 'page'); (it.dup || []).forEach(function(d){ d.el.setAttribute('aria-current', 'page'); });"
-assert s.count(old) == 1; s = s.replace(old, new)
+# 3. the sidebar component: a hub has two tiles (Presentations and its system). The rail follows the row the reader is in:
+#    the tile they clicked, else the tile in the group of the brief they scrolled from, else the system tile.
+def sub(old, new):
+    global s
+    assert s.count(old) == 1, old[:60]
+    s = s.replace(old, new)
+sub('var list, groups = [], byId = {}, cur = {brief: null, step: -1}',
+    'var tiles = {}, pref = null, curIt = null, list, groups = [], byId = {}, cur = {brief: null, step: -1}')
+sub('g.items.push(it); byId[id] = it;', 'g.items.push(it); (tiles[id] = tiles[id] || []).push(it); byId[id] = it;')
+sub("""  function setBrief(id){
+    var it = byId[id], prev = cur.brief;
+    if(prev && byId[prev]) byId[prev].el.removeAttribute('aria-current');
+    cur.brief = id; cur.step = -1;
+    if(!it){ drawRail(null); return; }
+    it.el.setAttribute('aria-current', 'page');""",
+"""  function setBrief(id){
+    var prev = cur.brief, all = tiles[id] || [], it = null;
+    if(prev) (tiles[prev] || []).forEach(function(t){ t.el.removeAttribute('aria-current'); });
+    if(pref && pref.id === id){ it = pref; pref = null; }
+    else if(curIt){ all.forEach(function(t){ if(t.g === curIt.g) it = t; }); }
+    if(!it) it = byId[id];
+    cur.brief = id; cur.step = -1; curIt = it || null;
+    if(!it){ drawRail(null); return; }
+    all.forEach(function(t){ t.el.setAttribute('aria-current', 'page'); });""")
+sub("""    else { go(a.dataset.id); }""",
+"""    else { var id = a.dataset.id; (tiles[id] || []).forEach(function(t){ if(t.el === a) pref = t; });
+      if(cur.brief === id && pref && pref !== curIt){ cur.brief = null; setBrief(id); }
+      go(id); }""")
+
+# 4. option: the desktop top bar names the brief before its step
+sub("""bar.innerHTML = '<span class="axcur" aria-live="polite"><span class="axcn"></span><span class="axcl"></span></span>""",
+    """bar.innerHTML = '<span class="axcur" aria-live="polite"><span class="axbn"></span><span class="axcn"></span><span class="axcl"></span></span>""")
+sub("""    cl.textContent = label || 'Step2Haki';""",
+"""    cl.textContent = label || 'Step2Haki';
+    var bn = bar.querySelector('.axbn'), hh = b ? b.querySelector('h4') : null, nm = hh ? hh.textContent.trim() : '';
+    bn.textContent = nm; bn.title = nm; bn.hidden = !nm || nm === label;""")
+css = ('<style id="ax-pilot-nav">#axbar .axcur{max-width:520px}'
+       '#axbar .axbn{font:600 14px/1.2 var(--sans);color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:240px;'
+       'padding-right:12px;margin-right:2px;border-right:1px solid var(--hair)}#axbar .axbn[hidden]{display:none}</style>')
+s = s.replace('</head>', css + '</head>', 1)
 s = s.replace('<title>', '<title>PILOT (not live): ', 1)
 open(out, 'w', encoding='utf-8').write(s)
 print('hubs', hubs); print('psych order', order)
