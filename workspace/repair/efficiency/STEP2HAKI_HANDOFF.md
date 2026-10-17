@@ -18,11 +18,10 @@ Batch s144 is open (State below).
   (session_01N8GCnHdWAjLAfoM9W1sXDn). Briefs: asthma, cough, rhinitis, pneumoconiosis, sinopulm-structural. Golden:
   copd. Method: s142 (the lead builds; one lean reviewer per role for all briefs). Branch wip/s144 in both repos.
   Batch file: repair/s144/S144.md.
-- **Budget:** 15 agents, 140 API calls, 5M tokens (WAVE.json, wave s144 open). **Spend:** 0 agents before S4 (hook probe outside the budget: 1 agent, 5 calls, 279k).
-- **Step:** S7 round 2 launched (lanes repair/efficiency/lanes/s144/r2/<part>/; budgets acc 20, read 14, display 14,
-  flags 22). Round 1 done and adjudicated (receipts in repair/migration/spine/reviews/<id>_<part>_r1.md; record in
-  repair/s144/S144.md). Spend after round 1: 4 agents, 28 API calls, 0.89M tokens. Next: file the r2 receipts as _r2,
-  verify each brief for READY, then S8 (preview, screenshots, approval.py present, report).
+- **Budget:** 15 agents, 140 API calls, 5M tokens (WAVE.json, wave s144 open). **Spend:** 10 agents, 61 API calls, 1.76M tokens (hook probe outside the budget: 1 agent, 5 calls, 279k).
+- **Step:** S8 presented (approval.py present s144, page 68f62c679ace, 148 screenshots in local/shots/s144). All five
+  READY. Waiting for Jonathan's "ship" in this chat (the approval record lives in this container). Then S9: ship.sh s144
+  with AX_SESSION, push HEAD to main by hand if no token, OPEN_WORK, wave closed, private wip/s144 to main, handoff.
 - **Carried from s143:** brief header still in the old style; deferred LOWs in repair/s141/S141.md and
   repair/s142/S142.md. Deploy check: Jonathan confirms version.json. **Mac:** not linked. **Live:** s143 (392e74b).
 
