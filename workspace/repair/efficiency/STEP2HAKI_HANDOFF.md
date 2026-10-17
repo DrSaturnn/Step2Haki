@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-16, by the s145 lead (s145 launched; Mac catch-up done).
+Last updated: 2026-10-17, by the s145 lead (S1 to S3 done for hypoxemia-mech and airway).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -16,21 +16,21 @@ No batch is open. The next batch starts from the launch prompt below.
 
 - **Open batch: s145** (Phase 2 pulmonary B), launched 2026-10-16. Briefs: hypoxemia-mech, airway, uri, bpd,
   scd-dyspnea. Goldens: copd, nephrotic-child (peds lens); voices for any hub. Method: s142 (the lead builds each brief;
-  one lean reviewer per role for all briefs). **Branch wip/s145** (public repo; check it out, main lacks the launch
-  records). Batch file: repair/s145/S145.md.
-- **Budget:** 12 agents, 100 API calls, 4M tokens (WAVE.json s145 open). **Spend:** 0.
-- **Step:** launch acts done (digest line, wave, batch file); Mac catch-up done (S145.md lists each step). **Next: the
-  session start (hooks, live tests T1 to T4, T8, T9), then S1 for all five briefs.** Folders: uri, bpd, scd-dyspnea in
-  repair/migration/merge/<brief>; hypoxemia-mech and airway build from the page and repair/sources.
-- **Where it runs:** the Mac files (Documents/Step2Haki, ~/Step2Haki, ~/step2haki-private) are the live copy, all on
-  main or later as of 2026-10-16. A cloud session linked to the Mac reaches them only through a Linux shell
-  (device_bash): that shell has no GitHub credentials for the private repo (bring commits over as git bundles written
-  outside Documents, then delete them), cannot install the Mac's Claude hooks, but does reach msdmanuals.com, NCBI and
-  AAFP (HTTP 200), so fresh primary-source fetches can run there. Agents and hooks run where the session runs.
-- **Private repo:** origin https://github.com/DrSaturnn/Step2Haki-private.git (renamed); main fb95899.
+  one lean reviewer per role for all briefs). **Branch wip/s145** in both repos (public: batch records; private: the
+  local-only folders built so far). Batch file: repair/s145/S145.md (read it: it lists every step and call so far).
+- **Budget:** 12 agents, 100 API calls, 4M tokens (WAVE.json s145 open). **Spend:** 0 agents (T2 refused launch only).
+- **Step:** S1 to S3 done for hypoxemia-mech (repair/migration/fm/HYP/spine, hub, 599 words) and airway
+  (repair/migration/fm/AIR/spine, hub, 622 words), both MECHANICAL PASS. **Next: S1 to S3 for uri, bpd, scd-dyspnea**
+  (repair/migration/merge/<brief>; build in a new spine/ subfolder, as sinopulm-structural did in s144), then the S3
+  preview and legib_audit for all five, then S4.
+- **Session start in a new chat:** clone public on wip/s145 and private (then `git -C step2haki-private fetch origin
+  wip/s145 && git checkout wip/s145` before the cp restore, so fm/HYP, fm/AIR, the new web-cache pages and
+  board_index.json arrive); install hooks (the permission check holds it: ask, as in s145); T1 and T2 as in S145.md.
+  This container reached msdmanuals.com directly (fetch.py works); the Mac shell also does.
+- **Private repo:** origin https://github.com/DrSaturnn/Step2Haki-private.git; main fb95899; wip/s145 holds the s145
+  local-only work.
 - **Open small items:** brief header still in the old style; sinopulm phone sticky bar truncates the title; deferred
-  LOWs in repair/s141/S141.md, repair/s142/S142.md, repair/s144/S144.md (claim-map citations for rhinitis symptoms,
-  SCID and CGD cells; extend sinopulm b22 to the weight-loss clause).
+  LOWs in repair/s141/S141.md, repair/s142/S142.md, repair/s144/S144.md.
 - **Live:** s144 (3f5b744); version.json shows s144 (checked 2026-10-16).
 
 ## Next launch prompt (paste into a fresh chat)
