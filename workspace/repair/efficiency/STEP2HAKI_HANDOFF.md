@@ -40,7 +40,7 @@ No batch is open; launch s147 with the prompt below.
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s147 (Phase 2, renal and GU B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: peds-uti-recurrent, enuresis, peds-aki, bs-puv, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum (folders: claude/pending/FOLDERS_S142_S160.md, listed there as s146; peds-uti-recurrent and enuresis have merge folders, the other six build from the page and repair/sources). Golden: nephrotic-child (peds lens); voices for any hub. Budget for the whole batch: 24 agents, 220 API calls, 9M tokens. Method: s142, with write-first review lanes (each reviewer writes a brief's receipt before reading the next; lane instructions name every file and ban globs; Budget 5 calls per brief plus 4, display 7 per brief plus 4).
+Step2Haki: launch batch s147 (Phase 2, renal and GU B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: peds-uti-recurrent, enuresis, peds-aki, bs-puv, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum (folders: claude/pending/FOLDERS_S142_S160.md, listed there as s146; peds-uti-recurrent and enuresis have merge folders, the other six build from the page and repair/sources). Golden: nephrotic-child (peds lens); voices for any hub. Budget for the whole batch: 24 agents, 220 API calls, 9M tokens. Method: s142, with write-first review lanes (each reviewer writes a brief's receipt before reading the next; lane instructions name every file and ban globs; Budget 5 calls per brief plus 4, display 7 per brief plus 4). Setup tool fixes first: review_packet.py adds ALIASES.json and ABBREV.json to the read packets; legib_audit stops counting the dotted underline on pointer links (.xref) as a clash.
 ```
 
 ## After s141
