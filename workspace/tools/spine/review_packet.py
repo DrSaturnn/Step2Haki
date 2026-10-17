@@ -9,7 +9,8 @@ Writes <review dir>/<part>/ for part acc, read, display, flags: brief_text.txt (
 bank item shown with its type and lead-in), deps.txt (the receipt's deps line and brief-sha, from verify.py),
 HOLISTIC_REVIEW.md, RECEIPT_FORMAT.md (PASS, PASS-IF with replacements, FAIL) and, with --proposals, the
 proposed replacements; acc adds facts.json and claim_map.json; read adds sibling_titles.txt (every brief: id and title,
-all of them) and drawer_targets.txt (each drawer or pointer in the brief and whether its target exists); flags adds
+all of them), drawer_targets.txt (each drawer or pointer in the brief and whether its target exists) and the shared
+ALIASES.json and ABBREV.json (s147: the other-names and abbreviation tables the read rules cite); flags adds
 facts.json, outline_flags.txt and line_sources.txt (every line's cited ids, each quote once; s144). With --diff (s141), every part also gets changes.md: a line diff of the brief as
 the learner reads it, the page's current brief against this build, so a rollout review can find each change without
 comparing two briefs by hand. Screenshots for display come from shots.py separately.
@@ -172,7 +173,9 @@ def part_rules(part):
         return ('# Display rules for this review (from STANDING_DIRECTIONS.md, DECISIONS_DIGEST.md and WORKUP_5A_SPEC.md)\n\n'
                 + section(sd, 'Display') + '\n## Later display decisions (digest; these win over the spec)\n\n' + glance + '\n\n' + spec)
     if part == 'read':
-        return '# Structure rules for this review (from STANDING_DIRECTIONS.md)\n\n' + section(sd, 'Brief structure (decision spine)')
+        return ('# Structure rules for this review (from STANDING_DIRECTIONS.md)\n\n' + section(sd, 'Brief structure (decision spine)')
+                + '\n## Tables in your folder (s147)\n\nALIASES.json (other names) and ABBREV.json (the abbreviation allowlist) '
+                'are in your folder. Grep them for the names and abbreviations you check; do not read them whole.\n')
     if part == 'acc':   # s146b: card dispositions (Jonathan 2026-10-17)
         return ('# Card dispositions (acc)\n\nWhen cards.md and cards_disposition.json are in your folder: every AnKing card the '
                 "brief's board terms reach has a disposition (covered:S### claim ids, owner:<brief>, scope:<reason>, "
@@ -180,6 +183,23 @@ def part_rules(part):
                 '"scope" or "not-topic" card the bank or the Step 2 answer needs, is a MED finding. Grep cards.md; do not read '
                 'it whole.\n')
     return ''
+
+
+READ_TABLES = ('ALIASES.json', 'ABBREV.json')   # s147 (Jonathan): the read part judges other names and abbreviations
+
+
+def copy_read_tables(read_dir):
+    """copy the shared other-names and abbreviation tables (repair/efficiency) into the read lane; returns the names
+    copied. s146b packet gap: read reviewers were told to check ALIASES and ABBREV but had neither file."""
+    eff = os.path.join(WS, 'repair', 'efficiency')
+    done = []
+    for f in READ_TABLES:
+        src = os.path.join(eff, f)
+        if not os.path.exists(src):
+            sys.exit('review_packet: missing %s' % src)
+        shutil.copy(src, os.path.join(read_dir, f))
+        done.append(f)
+    return done
 
 
 def main(argv):
@@ -243,6 +263,7 @@ def main(argv):
         open(os.path.join(out, 'flags', 'outline_flags.txt'), 'w', encoding='utf-8').write(legacy_flags(v.cm, txt))
     open(os.path.join(out, 'read', 'sibling_titles.txt'), 'w', encoding='utf-8').write('\n'.join(tl) + '\n')
     open(os.path.join(out, 'read', 'drawer_targets.txt'), 'w', encoding='utf-8').write('\n'.join(drawers) + '\n')
+    copy_read_tables(os.path.join(out, 'read'))
     n_items = len(re.findall(r'data-item-id=', brief))
     n_leads = len(re.findall(r'Lead-in: (?!\(none\))', txt))
     print('review_packet: %s, brief-sha %s, %d items (%d with lead-ins), %d brief titles, %d drawer targets'

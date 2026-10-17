@@ -32,4 +32,13 @@ _ls = RP.line_sources(_cm)
 expect('line_sources lists every claim line with its ids', 'S001: "Chest x-ray first"  <- L09' in _ls and '<- b02, L09' in _ls)
 expect('line_sources lists each quote once', _ls.count('[L09]') == 1 and _ls.count('[b02]') == 1)
 
+# s147: the read packet carries ALIASES.json and ABBREV.json, byte-identical to repair/efficiency
+import tempfile, filecmp  # noqa: E402
+_d = tempfile.mkdtemp()
+_c = RP.copy_read_tables(_d)
+_eff = os.path.join(RP.WS, 'repair', 'efficiency')
+expect('read packet copies ALIASES.json and ABBREV.json', sorted(_c) == ['ABBREV.json', 'ALIASES.json'] and all(
+    filecmp.cmp(os.path.join(_d, f), os.path.join(_eff, f), shallow=False) for f in _c))
+expect('read rules point to the two tables', 'ALIASES.json (other names) and ABBREV.json' in RP.part_rules('read'))
+
 print('test_review_packet: %d passed, %d failed' % (ok, fail)); sys.exit(1 if fail else 0)
