@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s146 lead (s146 shipped).
+Last updated: 2026-10-17, by the s146b lead (s146b shipped).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -14,31 +14,31 @@ No batch is open; launch s147 with the prompt below.
 
 ## State (rewrite after every step)
 
-- **Open batch: s146b** (card-checklist patch of the six live s146 briefs; record repair/s146b/S146B.md; branch
-  wip/s146b in both repos). S1 to S7 done: all six READY (receipts _r11 and _r12), ready_gate READY, changelog entry
-  "146b", tool change for lettered batch ids (ship.sh, approval.py, axlog.py; test_hooks 84/84). S8: presented with
-  approval.py present s146b (shots in local/shots/s146b); waiting for Jonathan's "ship" in the presenting chat. Spend
-  12 agents, 138 calls, 5.05M of 16, 200, 6M.
+- **No batch open.** s146b shipped 2026-10-17 15:30 (commit 2c9a52d, log d98d2ab; version.json s146b checked in
+  Chrome; record repair/s146b/S146B.md). All six s146 briefs now carry card checklists (cards.md,
+  cards_disposition.json).
 - **Next:** s147 (launch prompt below). The plan file numbers it s146 (BATCHES_S141_S150.md and FOLDERS_S142_S160.md
   run one behind since s143); read those files' s146 entries for s147.
-- **Mac:** caught up after the s146 ship (2026-10-17 13:35): ~/Step2Haki fast-forwarded to main 468758d and
-  ~/step2haki-private to main 4e52d97 (by git bundle; the Mac has no GitHub credentials for the private repo);
-  Documents/Step2Haki local-only filled with cp -Rn (3,731 to 4,757 files), index.html replaced from
-  discriminator-briefs-site (s146), axbx-repo.bundle rebuilt (--all, 15.1 MB), this file copied. A stray transfer file
-  sits at ~/step2haki-private-push/_xfer_pub.bundle.
-- **Lessons for lanes (s146):** reviewers that read every brief before writing lose receipts at the cap (six lost in
-  s146); lanes now say "write each brief's receipt before the next" and size Budget at about 5 calls per brief plus 4.
-  RECEIPT_FORMAT.md from review_packet.py carries a stale /tmp receipt-path line when the review dir is outside the lane:
-  strip it, or pass the lane dir.
+- **Mac:** caught up after the s146b ship (2026-10-17 15:45): ~/Step2Haki fast-forwarded to main d98d2ab (fetch from
+  GitHub) and ~/step2haki-private to main b3bee42 (by git bundle, removed after); Documents/Step2Haki local-only filled
+  (4,757 to 4,800 files; the six patched brief folders overwritten), index.html replaced (sha b5460c856e34),
+  axbx-repo.bundle rebuilt (--all, 15.1 MB), this file copied. Deletion was enabled for ~/Step2Haki and
+  ~/step2haki-private this session so git could clear its lock files. The stray ~/step2haki-private-push/_xfer_pub.bundle
+  is still there (not a granted folder).
+- **Lessons for lanes (s146, s146b):** the callgate counts every tool use, each file of a parallel batch included. In
+  s146b round 1, six of eight lanes lost their third brief at the cap (globs, whole-packet reads, card spot-checks). Round
+  2 instructions named every file, banned globs, said each parallel read counts, and gave display 7 calls per brief:
+  12 of 12 receipts, 16 to 22 calls used per lane. Keep those lines in every lane. Packet gap: read packets lack
+  ALIASES.json and ABBREV.json.
 - **Open small items:** brief header still in the old style (hypoxemia-mech subtitle "five mechanisms"); sinopulm phone
   sticky bar truncates the title; hypercalcemia study mode shows "Bisphosphonates are usually the drugs of choice in
   malignancy" beside the masked rung (display LOW; masking needs markup); polyuria "common" in Pairs with (flags LOW,
-  replacement crosses a bold); deferred LOWs in repair/s141 to s146 batch files.
+  replacement crosses a bold); deferred LOWs in repair/s141 to s146b batch files.
 
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s147 (Phase 2, renal and GU B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: peds-uti-recurrent, enuresis, peds-aki, bs-puv, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum (folders: claude/pending/FOLDERS_S142_S160.md, listed there as s146; peds-uti-recurrent and enuresis have merge folders, the other six build from the page and repair/sources). Golden: nephrotic-child (peds lens); voices for any hub. Budget for the whole batch: 20 agents, 170 API calls, 7M tokens. Method: s142, with write-first review lanes (each reviewer writes a brief's receipt before reading the next; Budget 5 calls per brief plus 4).
+Step2Haki: launch batch s147 (Phase 2, renal and GU B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: peds-uti-recurrent, enuresis, peds-aki, bs-puv, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum (folders: claude/pending/FOLDERS_S142_S160.md, listed there as s146; peds-uti-recurrent and enuresis have merge folders, the other six build from the page and repair/sources). Golden: nephrotic-child (peds lens); voices for any hub. Budget for the whole batch: 24 agents, 220 API calls, 9M tokens. Method: s142, with write-first review lanes (each reviewer writes a brief's receipt before reading the next; lane instructions name every file and ban globs; Budget 5 calls per brief plus 4, display 7 per brief plus 4).
 ```
 
 ## After s141
