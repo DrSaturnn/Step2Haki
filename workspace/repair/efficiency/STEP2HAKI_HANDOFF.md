@@ -17,8 +17,14 @@ s147 is open; a fresh chat continues it with the line above.
 - **Open batch: s147** (Phase 2 renal and GU B, pediatric), launched 2026-10-17 17:53; branch wip/s147 (public). Briefs:
   peds-uti-recurrent, enuresis, peds-aki, bs-puv (disease), bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum
   (hubs). Golden nephrotic-child (peds lens); voices for hubs. Budget 24 agents, 220 API calls, 9M tokens (WAVE.json).
-- **Step:** launch and setup tool fixes done (b074a46); S1 to S3 in progress, brief by brief. Batch file:
-  repair/s147/S147.md (every build call is written there).
+- **Step:** S1 to S3, brief by brief. Done: peds-uti-recurrent S1 and S2 (MECHANICAL PASS, 918 words). Next: enuresis
+  (merge/enuresis), then peds-aki, bs-puv, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum; then S3 for all
+  eight (full verify --mech, preview build, gate, render, preflight, vendor_scan, legib_audit), then the S3 restart.
+  The recipe per brief is in the batch file, repair/s147/S147.md ("Recipe per brief").
+- **Session start for a continuation chat:** clone the public repo and check out wip/s147; clone the private repo with
+  `git clone --depth 1 -b wip/s147 https://github.com/DrSaturnn/Step2Haki-private /home/claude/step2haki-private`
+  (the s147 build folders and web cache are there, not on main); npm i; cp -rn local-only; board_index.py build
+  (seconds; the index is local-only and rebuilt from board_terms.json).
 - **Spend:** 0 agents, 0 calls, 0 tokens.
 - **Mac:** caught up at the s146b ship; nothing owed. The stray ~/step2haki-private-push/_xfer_pub.bundle is still there.
 - **Lessons for lanes (s146, s146b):** the callgate counts every tool use, each file of a parallel batch included. Lane
