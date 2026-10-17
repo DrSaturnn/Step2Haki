@@ -24,7 +24,7 @@ This runbook sits under DECISIONS_DIGEST, STANDING_DIRECTIONS and the plan (clau
 9. claude/design/WORKUP_5A_SPEC.md;
 10. conditional PASS: claude/pending/POST_SHIP_R3.md section 2, with the s133 digest lines (hedge words count as meaning; text-only replacements).
 
-**Continuation chats** (Jonathan 2026-10-17): a chat that continues an open batch reads only the handoff State, the batch file, DECISIONS_DIGEST lines from 2026-10-15 on, and the batch's own rows and notes in BRIEF_AMEND_LIST (grep, not the whole file); the full read order above is for launches.
+**Continuation chats** (Jonathan 2026-10-17): a chat that continues an open batch reads only the handoff State, the batch file, DECISIONS_DIGEST lines from 2026-10-15 on, and the batch's own rows and notes in BRIEF_AMEND_LIST (grep, not the whole file); the full read order above is for launches. A chat that starts S4 after the S3 restart also reads, per brief, boards.md, cuts.json and the cards_disposition.json counts (not the cards).
 
 **Restart line**, the same every time; Jonathan pastes it when a chat fills: `Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.`
 
@@ -56,6 +56,7 @@ Then run section 2 to the end without asking.
     - NBME items: the bank's "How NBME framed it" blocks and the nbme-intake log;
     - the local UWorld question files (repair/sources/s*_questions.md);
     - AnKing (tools cards_search.py).
+  - Card checklist (Jonathan 2026-10-17, after s146 dropped a carded fact): `python3 tools/spine/card_dispositions.py make <brief> <folder>` writes cards.md, every AnKing card the brief's board terms reach (cards linked by note id plus up to 40 Step 2 candidates). Before the build is final, give every card a disposition in cards_disposition.json: covered:S### (the claim ids that teach it), owner:<brief>, scope:<reason>, not-topic, or conflict:<fact>. A carded fact the bank tests, or one the old brief carried, is covered unless another live brief owns it. `card_dispositions.py check <folder>` must pass; verify runs it whenever cards.md exists, and the acc reviewer audits the dispositions.
   - Write boards.md in the brief folder: each testable claim, the Step 2 answer, its source and id. Cite these facts as kind "board" in facts.json. No vendor wording reaches the page.
   - Only then go to MSD, guidelines and other primary sources (fetch.py), for mechanism, numbers and support. Where one differs from the board answer, teach the board answer and put the difference in an "In practice:" hover.
   - In the first batch only, report how much the local UWorld files cover (question count, systems).
@@ -64,12 +65,15 @@ Then run section 2 to the end without asking.
   - Convert the workup to 5a (claude/pending/pilot5a), with a clue for every test.
   - Drop header lines and apply the brief's Needs codes from the amendment list.
 - **S3. Mechanical checks.**
-  - verify --mech (G-MECH);
+  - verify --mech (G-MECH), which includes the card check;
   - legib_audit with 0 failures in sculpted, flat and study, on phone and desktop.
+  - Then restart (Jonathan 2026-10-17, s146 cost review): rewrite the handoff State with S3 done and send only "S3 done. Paste into a fresh chat: Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md." The review and ship steps run in a fresh chat, which reads the batch file, each brief's boards.md, cuts.json and claim map before judging findings; so every build call made in S1 to S3 is written down there, not left in the chat.
 - **S4. Review round 1.**
   - The four roles on the models in the plan table.
   - Packets from tools/spine/review_packet.py only.
-  - The hook caps each reviewer at 25 calls.
+  - Write-first lanes (Jonathan 2026-10-17, after s146 lost six receipts at the cap): the lane instructions tell each reviewer to read one brief's packet and write that brief's receipt before opening the next brief.
+  - Budget per lane from a call plan: first-round acc 7 calls per brief plus 4; every other part, and acc in follow-up rounds, 5 per brief plus 4; at most 4 briefs per acc lane. The hook caps each reviewer at 25 calls, so split a lane that would need more.
+  - Each lane's RECEIPT_FORMAT.md names only the lane's receipt paths: strip the line that review_packet.py writes with its own output folder when the packet is built outside the lane (s146 packet error).
 - **S5. Adjudicate and fix.**
   - Every HIGH and MED, with evidence.
   - Every LOW sorted into fixed, deferred (with where it goes) or rejected.
@@ -77,7 +81,7 @@ Then run section 2 to the end without asking.
 - **S6. Lead self-check** (section 4) on every changed line.
 - **S7. Follow-up review.**
   - The same four roles, on the changed lines with context, each given its first-round receipt.
-  - About 4 calls per brief covered plus 2 (one brief: 10; Jonathan 2026-10-14, s139 launch).
+  - Write-first lanes, 5 calls per brief covered plus 4 (Jonathan 2026-10-17; was 4 per brief plus 2, s139). A reviewer that relays a verdict without writing its receipt counts as no receipt: relaunch it on the same lane with the call plan in the prompt.
   - A reviewer with only LOW findings returns PASS-IF (conditional PASS) with exact replacements; the lead applies the approved ones, and verify keeps the receipts current without another round.
   - Loop S5 to S7 until READY or the budget is spent.
 - **S8. Final report** (section 5):
@@ -141,6 +145,7 @@ Then run section 2 to the end without asking.
 11. Abbreviations match the allowlist; every diagnosis with other names shows them.
 12. Phone screenshots: no text squeezed into a narrow column (a few words per line).
 13. Every cut and every removed number was searched in the card index (key terms, high-yield lines) before it was made (Jonathan 2026-10-17); the search terms are in its cuts.json entry.
+14. Every card in cards.md has a disposition and `card_dispositions.py check` passes; each "covered" names the claims that teach it, and no carded fact the old brief or the bank holds was dropped without one (Jonathan 2026-10-17).
 
 ## 5. The final report: one message, the first one to Jonathan since launch (apart from section 6)
 

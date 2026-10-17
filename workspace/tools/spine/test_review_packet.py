@@ -21,7 +21,7 @@ expect('display rules carry progressive recall and the 5a spec', 'progressive re
 expect('display rules carry the glance and s137 display-layer decisions', 'Numbered workup zones adopted' in d and 'Test | Result | Means' in d)
 r = RP.part_rules('read')
 expect('read rules carry absent steps greyed', 'Absent steps stay numbered and greyed' in r and '## Display' not in r)
-expect('acc and flags get no rules file', RP.part_rules('acc') == '' and RP.part_rules('flags') == '')
+expect('acc gets the card-disposition rule (s146b); flags gets no rules file', 'Card dispositions' in RP.part_rules('acc') and RP.part_rules('flags') == '')
 # s142 R1 packet error: text after a masked span (a rung note) must not read as masked
 _t = RP.text_of('<div><b class="sp-f"><span class="mask">Move <span class="x">a</span> b</span></b><p class="sp-note">Note</p></div>')
 expect('mask closes at its own span end', '[masked in study mode: Move a b]' in _t and '[masked in study mode: Note' not in _t)

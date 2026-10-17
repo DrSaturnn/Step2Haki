@@ -190,6 +190,13 @@ class Verify:
             self.F('claims', '%d claim(s) without a source and quote: %s' % (len(bad), ', '.join(bad[:6])))
         else:
             self.G('claims', '%d claims, each with a source and quote' % len(rows))
+        if os.path.exists(os.path.join(self.d, 'cards.md')):   # s146b: every card the board terms reach has a disposition
+            import card_dispositions as CD
+            errs, warns = CD.check(self.d, os.path.join(WS, 'index.html'), quiet=True)
+            if errs:
+                self.F('cards', '%d card disposition error(s): %s' % (len(errs), '; '.join(errs[:4])))
+            else:
+                self.G('cards', 'every card in cards.md has a disposition (%d warning(s))' % len(warns))
         olds = self.cm.get('old_claims', [])
         if not olds:
             self.F('claims', 'no old_claims: every section of the old brief needs a disposition')

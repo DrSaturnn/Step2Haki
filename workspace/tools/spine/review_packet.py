@@ -173,6 +173,12 @@ def part_rules(part):
                 + section(sd, 'Display') + '\n## Later display decisions (digest; these win over the spec)\n\n' + glance + '\n\n' + spec)
     if part == 'read':
         return '# Structure rules for this review (from STANDING_DIRECTIONS.md)\n\n' + section(sd, 'Brief structure (decision spine)')
+    if part == 'acc':   # s146b: card dispositions (Jonathan 2026-10-17)
+        return ('# Card dispositions (acc)\n\nWhen cards.md and cards_disposition.json are in your folder: every AnKing card the '
+                "brief's board terms reach has a disposition (covered:S### claim ids, owner:<brief>, scope:<reason>, "
+                'not-topic, conflict:<fact>). Spot-check them: a "covered" card whose fact the cited claims do not teach, or a '
+                '"scope" or "not-topic" card the bank or the Step 2 answer needs, is a MED finding. Grep cards.md; do not read '
+                'it whole.\n')
     return ''
 
 
@@ -225,6 +231,9 @@ def main(argv):
             open(os.path.join(pd, 'RULES.md'), 'w', encoding='utf-8').write(rules)
     for f in ('facts.json', 'claim_map.json'):
         shutil.copy(os.path.join(d, f), os.path.join(out, 'acc', f))
+    for f in ('cards.md', 'cards_disposition.json'):            # s146b: acc audits the card dispositions
+        if os.path.exists(os.path.join(d, f)):
+            shutil.copy(os.path.join(d, f), os.path.join(out, 'acc', f))
     shutil.copy(os.path.join(d, 'facts.json'), os.path.join(out, 'flags', 'facts.json'))
     open(os.path.join(out, 'flags', 'line_sources.txt'), 'w', encoding='utf-8').write(line_sources(v.cm))
     of = os.path.join(d, 'outline_flags.txt')
