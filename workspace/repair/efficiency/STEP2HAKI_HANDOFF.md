@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s146 lead (s146 launched).
+Last updated: 2026-10-17, by the s146 lead (S3 done; S4 next).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -21,13 +21,14 @@ Batch s146 is open; restart with the line above.
   strep pneumonia later in onset and commoner at term, AnKing 1484874519070, UWorld 18960). Goldens copd (FM lens),
   nephrotic-child; voices for the hubs (polyuria, bs-incontinence); suicide-risk or ipv for the screen (nephropathy).
   Budget 16 agents, 130 API calls, 6M tokens. Method s142. Branch wip/s146 in the public repo; record repair/s146/S146.md.
-- **Step:** S1 and S2 done (MECHANICAL PASS, --fast) for pyelo (merge/pyelo/spine), bph (fm/BPH/spine) and
-  hypercalcemia (fm/HCA/spine), plus the uri and bpd restores. Next: nephropathy (screen entry, golden suicide-risk or
-  ipv; merge/nephropathy), polyuria (hub, voices golden), bs-incontinence (hub) S1 and S2; then S3 (full verify, the
-  repair/s146 preview with all eight 10_*_spine.json, gate, render, legib_audit) and S4. Lead tools:
-  tools/spine/dump_lines.py, cards_hy.py, facts_from_spec.py. Local-only work is on step2haki-private branch wip/s146
-  (clone that branch, not main, before the cp restore). Restart point now about 350k; continuation chats use the short
-  read list (runbook).
+- **Step:** S1 to S3 done for all eight (pyelo, bph, nephropathy, hypercalcemia, polyuria, bs-incontinence; uri and bpd
+  restores): full verify --mech MECHANICAL PASS each; preview repair/s146 (8 ops) gate PASS, render PASS, vendor_scan 0,
+  preflight P1 accounted for by cuts.json; legib_audit 0 below contrast. Folders: merge/pyelo/spine, fm/BPH/spine,
+  merge/nephropathy/spine (entry screen), fm/HCA/spine, peds/polyuria/spine (prefix plu-), fm/INC/spine. Next: S4,
+  review round 1 (four roles, one lean reviewer per role for all eight; packets from review_packet.py). It needs the
+  hooks live in the container: the hook install into /root/.claude and test_hooks were refused by the session's
+  permission check in the continuation chat; Jonathan's answer decides. Local-only work is on step2haki-private branch
+  wip/s146 (clone that branch, not main, before the cp restore).
 - **Spend:** 0 agents, 0 calls, 0 tokens.
 - **Mac:** caught up at launch (both Mac repos at the s145 ship; Documents/Step2Haki local-only, index.html, bundle and
   this file refreshed). A stray transfer file sits at ~/step2haki-private-push/_xfer_pub.bundle.

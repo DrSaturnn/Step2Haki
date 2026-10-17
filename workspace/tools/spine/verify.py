@@ -209,6 +209,8 @@ class Verify:
                 self.G('update', 'an update of a shipped brief: the body differs from the page by design')
             t_new = new[hdr.start():]
             lh = re.search(r'<h5 class="[^"]*authored-hdr', live)
+            if not lh:   # s146: a legacy brief whose bank header is a plain h5 (bs-incontinence): the h5 right before the bank
+                lh = re.search(r'<h5>[^<]*</h5>(?=\s*<ol class="bank)', live)
             t_old = live[lh.start():] if lh else ''
             fixes = (self.o or {}).get('tail_fix', [])
             if self.o and fixes:
