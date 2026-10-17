@@ -17,8 +17,8 @@ s147 is open; a fresh chat continues it with the line above.
 - **Open batch: s147** (Phase 2 renal and GU B, pediatric), launched 2026-10-17 17:53; branch wip/s147 (public). Briefs:
   peds-uti-recurrent, enuresis, peds-aki, bs-puv (disease), bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum
   (hubs). Golden nephrotic-child (peds lens); voices for hubs. Budget 24 agents, 220 API calls, 9M tokens (WAVE.json).
-- **Step:** S1 to S3, brief by brief. Done: peds-uti-recurrent and enuresis S1 and S2 (both MECHANICAL PASS; 918 and
-  1,045 words). Next: peds-aki, then bs-puv, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum; then S3 for all
+- **Step:** S1 to S3, brief by brief. Done: peds-uti-recurrent, enuresis, peds-aki S1 and S2 (all MECHANICAL PASS;
+  918, 1,045, 837 words). Next: bs-puv, then bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum; then S3 for all
   eight (full verify --mech, preview build, gate, render, preflight, vendor_scan, legib_audit), then the S3 restart.
   The recipe per brief is in the batch file, repair/s147/S147.md ("Recipe per brief").
 - **Session start for a continuation chat:** clone the public repo and check out wip/s147; clone the private repo with
