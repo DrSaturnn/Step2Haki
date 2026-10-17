@@ -22,7 +22,8 @@
   "AM": "clock time",
   "PM": "clock time",
   "USB": "mnemonic (USB-C, the AnKing upper-lobe pneumoconiosis mnemonic; s144)",
-  "SAND": "mnemonic (renal papillary necrosis: sickle cell, acute pyelonephritis, NSAIDs, diabetes; AnKing; s145)"
+  "SAND": "mnemonic (renal papillary necrosis: sickle cell, acute pyelonephritis, NSAIDs, diabetes; AnKing; s145)",
+  "QT": "ECG interval (as ST; s146)"
  },
  "_site_conventions_note": "carried from verify.py's MIGRATION_CONTRACT V1 allowlist (before 2026-10-12)",
  "roman_numerals": [

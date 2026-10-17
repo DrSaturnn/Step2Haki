@@ -21,11 +21,13 @@ Batch s146 is open; restart with the line above.
   strep pneumonia later in onset and commoner at term, AnKing 1484874519070, UWorld 18960). Goldens copd (FM lens),
   nephrotic-child; voices for the hubs (polyuria, bs-incontinence); suicide-risk or ipv for the screen (nephropathy).
   Budget 16 agents, 130 API calls, 6M tokens. Method s142. Branch wip/s146 in the public repo; record repair/s146/S146.md.
-- **Step:** launch done; uri and bpd restores built (MECHANICAL PASS, awaiting S7 review); pyelo S1 done (boards.md,
-  facts.json 42/42, live_lines.json in repair/migration/merge/pyelo/spine). Next: pyelo S2 (write spine/build.py from the
-  uri or scd-dyspnea build.py pattern; disease entry, fm lens, golden copd), S3; then bph, nephropathy, hypercalcemia,
-  polyuria, bs-incontinence S1 to S3 (lead tools: tools/spine/dump_lines.py, tools/spine/cards_hy.py). Local-only work is
-  on step2haki-private branch wip/s146 (clone that branch, not main, before the cp restore).
+- **Step:** S1 and S2 done (MECHANICAL PASS, --fast) for pyelo (merge/pyelo/spine), bph (fm/BPH/spine) and
+  hypercalcemia (fm/HCA/spine), plus the uri and bpd restores. Next: nephropathy (screen entry, golden suicide-risk or
+  ipv; merge/nephropathy), polyuria (hub, voices golden), bs-incontinence (hub) S1 and S2; then S3 (full verify, the
+  repair/s146 preview with all eight 10_*_spine.json, gate, render, legib_audit) and S4. Lead tools:
+  tools/spine/dump_lines.py, cards_hy.py, facts_from_spec.py. Local-only work is on step2haki-private branch wip/s146
+  (clone that branch, not main, before the cp restore). Restart point now about 350k; continuation chats use the short
+  read list (runbook).
 - **Spend:** 0 agents, 0 calls, 0 tokens.
 - **Mac:** caught up at launch (both Mac repos at the s145 ship; Documents/Step2Haki local-only, index.html, bundle and
   this file refreshed). A stray transfer file sits at ~/step2haki-private-push/_xfer_pub.bundle.
