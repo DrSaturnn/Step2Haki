@@ -10,7 +10,7 @@ bank item shown with its type and lead-in), deps.txt (the receipt's deps line an
 HOLISTIC_REVIEW.md, RECEIPT_FORMAT.md (PASS, PASS-IF with replacements, FAIL) and, with --proposals, the
 proposed replacements; acc adds facts.json and claim_map.json; read adds sibling_titles.txt (every brief: id and title,
 all of them) and drawer_targets.txt (each drawer or pointer in the brief and whether its target exists); flags adds
-facts.json and outline_flags.txt. With --diff (s141), every part also gets changes.md: a line diff of the brief as
+facts.json, outline_flags.txt and line_sources.txt (every line's cited ids, each quote once; s144). With --diff (s141), every part also gets changes.md: a line diff of the brief as
 the learner reads it, the page's current brief against this build, so a rollout review can find each change without
 comparing two briefs by hand. Screenshots for display come from shots.py separately.
 """
@@ -104,6 +104,24 @@ def text_of(brief_html):
     x = re.sub(r'<[^>]+>', '', x)
     x = H.unescape(x)
     return '\n'.join(l.strip() for l in re.sub(r'[ \t]+', ' ', x).split('\n') if l.strip())
+
+
+def line_sources(cm):
+    """every claim line with the ids it cites, then each cited quote once (s144 packet fix: the flags packet showed only the
+    X1 lines' sources, so lines cited to the old brief's own text read as unsourced and drew false MED findings)"""
+    out = ['# Sources for every line (from claim_map.json): each line, then the ids it cites; each quote is listed once',
+           '# at the end. L ids are the old brief\'s own lines (a valid source for carried content); b ids are board facts;',
+           '# m and a ids are primary pages.', '']
+    quotes = {}
+    for c in cm.get('claims', []):
+        srcs = c.get('sources') or []
+        out.append('%s: "%s"  <- %s' % (c.get('id', '?'), (c.get('new_text') or c.get('text') or '')[:240],
+                                         ', '.join(s.get('id', '') for s in srcs)))
+        for s in srcs:
+            quotes.setdefault(s.get('id', ''), '%s: %s' % (s.get('source', '')[:120], (s.get('source_says') or '')[:600]))
+    out += ['', '## Quotes', '']
+    out += ['[%s] %s' % (k, quotes[k]) for k in sorted(quotes)]
+    return '\n'.join(out) + '\n'
 
 
 def legacy_flags(cm, txt):
@@ -208,6 +226,7 @@ def main(argv):
     for f in ('facts.json', 'claim_map.json'):
         shutil.copy(os.path.join(d, f), os.path.join(out, 'acc', f))
     shutil.copy(os.path.join(d, 'facts.json'), os.path.join(out, 'flags', 'facts.json'))
+    open(os.path.join(out, 'flags', 'line_sources.txt'), 'w', encoding='utf-8').write(line_sources(v.cm))
     of = os.path.join(d, 'outline_flags.txt')
     if os.path.exists(of):
         shutil.copy(of, os.path.join(out, 'flags', 'outline_flags.txt'))

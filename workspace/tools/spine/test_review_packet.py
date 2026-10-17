@@ -25,5 +25,11 @@ expect('acc and flags get no rules file', RP.part_rules('acc') == '' and RP.part
 # s142 R1 packet error: text after a masked span (a rung note) must not read as masked
 _t = RP.text_of('<div><b class="sp-f"><span class="mask">Move <span class="x">a</span> b</span></b><p class="sp-note">Note</p></div>')
 expect('mask closes at its own span end', '[masked in study mode: Move a b]' in _t and '[masked in study mode: Note' not in _t)
-print('test_review_packet: %d passed, %d failed' % (ok, fail)); sys.exit(1 if fail else 0)
+# s144: the flags packet lists every line's sources, so old-brief (L id) citations are visible
+_cm = {'claims': [{'id': 'S001', 'new_text': 'Chest x-ray first', 'sources': [{'id': 'L09', 'source': 'old brief cough', 'source_says': 'Chest x-ray first in all chronic cough'}]},
+                  {'id': 'S002', 'new_text': 'Switch to an ARB', 'sources': [{'id': 'b02', 'source': 'AnKing card', 'source_says': 'Switch to an ARB'}, {'id': 'L09', 'source': 'old brief cough', 'source_says': 'Chest x-ray first in all chronic cough'}]}]}
+_ls = RP.line_sources(_cm)
+expect('line_sources lists every claim line with its ids', 'S001: "Chest x-ray first"  <- L09' in _ls and '<- b02, L09' in _ls)
+expect('line_sources lists each quote once', _ls.count('[L09]') == 1 and _ls.count('[b02]') == 1)
 
+print('test_review_packet: %d passed, %d failed' % (ok, fail)); sys.exit(1 if fail else 0)

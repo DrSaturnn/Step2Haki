@@ -1,0 +1,16 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "body.study figure.w5a.ax-w5tab .w5f.w5-wait > *{filter:blur(5px)",
+   "with": "body.study figure.w5a.ax-w5tab .w5f.w5-wait > *{filter:blur(8px)",
+   "note": "s144: study mode, workup findings that wait for their test stay unreadable (5 px left short results readable on untinted rows; display r1 MED)"
+  },
+  {
+   "op": "replace_global",
+   "find": "body.study .w5a .w5f.w5-wait{filter:blur(5px)",
+   "with": "body.study .w5a .w5f.w5-wait{filter:blur(8px)",
+   "note": "s144: the same for the non-table 5a layout"
+  }
+ ]
+}
