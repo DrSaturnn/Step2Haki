@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-17 s146c: navigation: presentations group, psychiatry groups, rail follows row, brief name in top bar, 110% on wide windows
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Other page changes (nav, headers, scripts): +2485 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 19 scripts, 38 checks, base HEAD | allowlisted 13 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 177/178 | vignette gridded 67/67 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.014%)
+```
+
 ## 2026-10-17 s146b: card-checklist patch: six renal and urology briefs checked against every board card their topics reach
 
 ```
