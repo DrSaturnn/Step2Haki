@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s145 lead (S7 round 2 launched).
+Last updated: 2026-10-17, by the s145 lead (S8 presented; waiting for "ship").
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -21,10 +21,9 @@ No batch is open. The next batch starts from the launch prompt below.
 - **Budget:** 12 agents, 100 API calls, 4M tokens (WAVE.json s145 open). **Spend:** 0 agents (T2 refused launch only).
 - **Step:** S1 to S3 done for all five, all MECHANICAL PASS (folders: hypoxemia-mech repair/migration/fm/HYP/spine,
   airway fm/AIR/spine, uri merge/uri/spine, bpd merge/bpd/spine, scd-dyspnea merge/scd-dyspnea/spine; batch build
-  repair/s145/10_*_spine.json). **S4 and S5 done; S6 done; S7 round 2 launched 2026-10-17** (fifth chat).
-  Lanes repair/efficiency/lanes/s145/r1 and r2 (gitignored; receipts there). Spend after round 1: 4 agents, 36 calls,
-  2.39M tokens. If this chat stops, the next chat reads the r2 receipts before re-running anything. **Next: S7 results,
-  then S8.**
+  repair/s145/10_*_spine.json). **S8 presented 2026-10-17** (fifth chat): all five READY; approval.py present s145
+  (138 screenshots, page a36346511fe0); report sent. **Next: Jonathan's "ship" to this chat** (the approval record lives
+  in this container), then S9 per the runbook. Spend: 11 of 12 agents, 70 of 100 calls, 3.56M of 4M tokens.
 - **Context:** fifth chat started without the Mac link.
 - **Session start in a new chat:** clone public on wip/s145 and private (then `git -C step2haki-private fetch origin
   wip/s145 && git checkout wip/s145` before the cp restore, so fm/HYP, fm/AIR, the new web-cache pages and
