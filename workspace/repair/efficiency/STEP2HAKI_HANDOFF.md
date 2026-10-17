@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s145 lead (S8 presented; waiting for "ship").
+Last updated: 2026-10-17, by the s145 lead (s145 shipped; next batch s146).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -14,30 +14,31 @@ No batch is open. The next batch starts from the launch prompt below.
 
 ## State (rewrite after every step)
 
-- **Open batch: s145** (Phase 2 pulmonary B), launched 2026-10-16. Briefs: hypoxemia-mech, airway, uri, bpd,
-  scd-dyspnea. Goldens: copd, nephrotic-child (peds lens); voices for any hub. Method: s142 (the lead builds each brief;
-  one lean reviewer per role for all briefs). **Branch wip/s145** in both repos (public: batch records; private: the
-  local-only folders built so far). Batch file: repair/s145/S145.md (read it: it lists every step and call so far).
-- **Budget:** 12 agents, 100 API calls, 4M tokens (WAVE.json s145 open). **Spend:** 0 agents (T2 refused launch only).
-- **Step:** S1 to S3 done for all five, all MECHANICAL PASS (folders: hypoxemia-mech repair/migration/fm/HYP/spine,
-  airway fm/AIR/spine, uri merge/uri/spine, bpd merge/bpd/spine, scd-dyspnea merge/scd-dyspnea/spine; batch build
-  repair/s145/10_*_spine.json). **S8 presented 2026-10-17** (fifth chat): all five READY; approval.py present s145
-  (138 screenshots, page a36346511fe0); report sent. **Next: Jonathan's "ship" to this chat** (the approval record lives
-  in this container), then S9 per the runbook. Spend: 11 of 12 agents, 70 of 100 calls, 3.56M of 4M tokens.
-- **Context:** fifth chat started without the Mac link.
-- **Session start in a new chat:** clone public on wip/s145 and private (then `git -C step2haki-private fetch origin
-  wip/s145 && git checkout wip/s145` before the cp restore, so fm/HYP, fm/AIR, the new web-cache pages and
-  board_index.json arrive); install hooks (the permission check holds it: ask, as in s145); T1 and T2 as in S145.md.
-  This container reached msdmanuals.com directly (fetch.py works); the Mac shell also does.
-- **Private repo:** origin https://github.com/DrSaturnn/Step2Haki-private.git; main fb95899; wip/s145 holds the s145
-  local-only work.
-- **Open small items:** brief header still in the old style; sinopulm phone sticky bar truncates the title; deferred
-  LOWs in repair/s141/S141.md, repair/s142/S142.md, repair/s144/S144.md.
-- **Live:** s144 (3f5b744); version.json shows s144 (checked 2026-10-16).
+- **No batch is open.** s145 (Phase 2 pulmonary B: hypoxemia-mech, airway, uri, bpd, scd-dyspnea) shipped 2026-10-17,
+  commit 11cb89f (Jonathan: "ship"). Record: repair/s145/S145.md. Wave s145 closed. Spend: 11 of 12 agents, 70 of 100
+  calls, 3.56M of 4M tokens.
+- **Live:** s145 pushed to main; check version.json (Vercel deploy).
+- **Owed to the Mac** (the fifth chat ran without the Mac link): copy the s145 local-only folders (repair/migration/fm/HYP,
+  fm/AIR, merge/uri, merge/bpd, merge/scd-dyspnea spine/, repair/migration/spine/reviews s145 receipts, new web-cache
+  pages) from the private repo into Documents/Step2Haki/local-only (cp -rn), replace index.html and axbx-repo.bundle there,
+  and copy this file as Documents/Step2Haki/STEP2HAKI_HANDOFF.md. The next session linked to the Mac does it first.
+- **Private repo:** wip/s145 merged into main.
+- **Runbook rule (Jonathan 2026-10-17):** before any sourcing cut or ⚠︎ label, search the card index (key terms and
+  high-yield lines); section 3 and S6 item 13.
+- **Queued for s146** (cut at build time, card-backed; found after the s145 report): uri, Mycoplasma has no cell wall so
+  beta-lactams fail (AnKing 1516131575442, UWorld 12256, 19837, high-yield) in the body hover; bpd, membrane rupture of 18
+  hours or more for the group B strep row (AnKing 1539182616928, UWorld 4797, 12015), loud P2 for BPD pulmonary
+  hypertension (AnKing 1551057597144, Step 1 card), group B strep pneumonia is later in onset and commoner at term (AnKing
+  1484874519070, UWorld 18960, high-yield).
+- **Open small items:** brief header still in the old style (hypoxemia-mech subtitle "five mechanisms"); sinopulm phone
+  sticky bar truncates the title; per-agent call caps: set each reviewer's Budget from an explicit call plan with two
+  spare (s145 lost receipts three times); deferred LOWs in repair/s141 to s145 batch files.
 
 ## Next launch prompt (paste into a fresh chat)
 
-s145 is open: paste the restart line, `Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.`
+```
+Step2Haki: launch batch s146 (Phase 2, renal and GU A) per claude/BATCH_RUNBOOK.md. Briefs: pyelo, bph, nephropathy, hypercalcemia, polyuria, bs-incontinence; plus the four card-backed restores queued in the handoff State (uri: Mycoplasma beta-lactam failure; bpd: membrane rupture 18 hours or more, loud P2, later-onset group B strep pneumonia). Goldens: copd (FM lens), nephrotic-child. Budget for the whole batch: 16 agents, 130 API calls, 6M tokens. Method: s142.
+```
 
 ## After s141
 

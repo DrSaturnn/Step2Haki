@@ -1,7 +1,7 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
  "id": "s145",
- "open": true,
+ "open": false,
  "plan_step": "s145",
  "roles": [
   "acc-review",
@@ -15,8 +15,8 @@
  "max_tokens": 4000000,
  "set_by": "Jonathan: s145 launch \"Budget for the whole batch: 12 agents, 100 API calls, 4M tokens.\"",
  "previous": {
-  "id": "s144",
-  "note": "2026-10-17 (s144 shipped, commit 3f5b744)"
+  "id": "s145",
+  "note": "2026-10-17 (s145 shipped, commit 11cb89f)"
  },
  "opened": "2026-10-16 (cloud session linked to the Mac; Mac files the live copy)",
  "note": "Phase 2 pulmonary B: hypoxemia-mech, airway, uri, bpd, scd-dyspnea. Goldens copd, nephrotic-child (peds lens); voices for any hub. s142 method: the lead builds, one lean reviewer per role for all briefs; reviewer caps about 3 calls per brief per role plus one per receipt.",
