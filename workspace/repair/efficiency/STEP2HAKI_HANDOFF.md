@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s145 lead (S1 to S3 done for hypoxemia-mech, airway, uri and bpd).
+Last updated: 2026-10-17, by the s145 lead (S1 to S3 done for all five briefs; S3 preview done).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -19,12 +19,11 @@ No batch is open. The next batch starts from the launch prompt below.
   one lean reviewer per role for all briefs). **Branch wip/s145** in both repos (public: batch records; private: the
   local-only folders built so far). Batch file: repair/s145/S145.md (read it: it lists every step and call so far).
 - **Budget:** 12 agents, 100 API calls, 4M tokens (WAVE.json s145 open). **Spend:** 0 agents (T2 refused launch only).
-- **Step:** S1 to S3 done for hypoxemia-mech (repair/migration/fm/HYP/spine, hub, 599 words), airway
-  (repair/migration/fm/AIR/spine, hub, 622 words), uri (repair/migration/merge/uri/spine, hub, 554 words) and bpd
-  (repair/migration/merge/bpd/spine, hub, 638 words), all MECHANICAL PASS. **Next: S1 to S3 for scd-dyspnea**
-  (repair/migration/merge/scd-dyspnea; build in a new spine/
-  subfolder; dump the live brief's div blocks too, not only p, li and tr: see S145.md "Lead note"), then the S3 preview
-  and legib_audit for all five, then S4.
+- **Step:** S1 to S3 done for all five, all MECHANICAL PASS: hypoxemia-mech (repair/migration/fm/HYP/spine, hub, 599
+  words), airway (fm/AIR/spine, hub, 622), uri (merge/uri/spine, hub, 554), bpd (merge/bpd/spine, hub, 638),
+  scd-dyspnea (merge/scd-dyspnea/spine, disease, 1,189 of 1,300). S3 preview: repair/s145/10_*_spine.json (5 ops),
+  gate, render, vendor_scan pass; legib_audit 0 below contrast in all six views. **Next: S4, review round 1** (four
+  roles, one lean reviewer per role for all five; packets from tools/spine/review_packet.py).
 - **Session start in a new chat:** clone public on wip/s145 and private (then `git -C step2haki-private fetch origin
   wip/s145 && git checkout wip/s145` before the cp restore, so fm/HYP, fm/AIR, the new web-cache pages and
   board_index.json arrive); install hooks (the permission check holds it: ask, as in s145); T1 and T2 as in S145.md.
