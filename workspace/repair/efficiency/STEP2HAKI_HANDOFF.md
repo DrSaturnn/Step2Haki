@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s147 lead (continuation chat 4, S8 report sent).
+Last updated: 2026-10-17, by the s147 lead (s147 shipped).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -14,34 +14,32 @@ s147 is open; a fresh chat continues it with the line above.
 
 ## State (rewrite after every step)
 
-- **Open batch: s147** (Phase 2 renal and GU B, pediatric), launched 2026-10-17 17:53; branch wip/s147 in both repos.
-  Briefs: peds-uti-recurrent, enuresis, peds-aki, bs-puv (disease), bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes,
-  scrotum (hubs). Golden nephrotic-child (peds lens); voices for hubs. Budget 24 agents, 220 API calls, 9M tokens
-  (WAVE.json).
-- **Step: S8, final report sent (continuation chat 4, 2026-10-17 22:05); waiting for Jonathan's "ship".** Seven briefs
-  READY (full verify): peds-uti-recurrent, enuresis, peds-aki, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum;
-  plus 40_presentations.json (the four hubs join the Presentations group) and 50_zoom_fix.json (hover cards and the
-  profile sheet were off screen at 1500 px and wider since s146c's 110% zoom; Jonathan reported it after the report). bs-puv is carried (Jonathan's condition at the
-  round-5 raise): repair/s147/carry/10_bs_puv_spine.json.carry, not built; owed in the next batch: drop or rewrite its
-  "drain, then image" subtitle, then review all four parts. Presented with approval.py present s147 in this chat; "ship"
-  must come to this chat (the approval record lives in this container).
-- **Decisions in the report:** whether to rewrite wip/s147 history to remove two UWorld phrases the lead put in S147.md
-  (reworded now; vendor_scan 0), and the force-push the lead made over its own private wip commit (disclosed).
-- **Spend:** 30 agents, 281 calls, 11.63M tokens of 30, 300, 15M.
-- **Mac:** caught up at the s146b ship; nothing owed. The stray ~/step2haki-private-push/_xfer_pub.bundle is still there.
-- **Lessons for lanes (s146, s146b, s147):** the callgate counts every tool use, each file of a parallel batch included.
-  Inline the lane instructions in the launch prompt (s147: saves a call per agent). Tokens, not calls, bound s147: about
-  59k tokens per call in round 1.
-- **Open small items:** brief header still in the old style (p.sub subtitles kept on converted briefs, e.g. bs-puv
-  "drain, then image"); sinopulm phone sticky bar truncates the title; hypercalcemia study mode shows "Bisphosphonates are
-  usually the drugs of choice in malignancy" beside the masked rung; polyuria "common" in Pairs with; legib clashes on
-  hover buttons inside table cells and on count buttons; Treatment rung labels (ABLATE, DRAIN, DIALYSIS) stay visible in
-  study mode (site-wide, display LOW); deferred LOWs in repair/s141 to s147 batch files.
+- **No open batch.** s147 shipped 2026-10-17 22:20 (main 070b0e6, version.json s147): peds-uti-recurrent, enuresis,
+  peds-aki, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum on decision spine v2; four hubs in Presentations
+  (12); hover cards and the profile sheet fixed under the 110% zoom (Jonathan reported broken hovers on wide windows).
+  History of the batch: repair/s147/S147.md.
+- **Carried into the next batch:** bs-puv (repair/s147/carry/10_bs_puv_spine.json.carry; folder
+  repair/migration/peds/bs-puv/spine, private main). Owed: drop or rewrite the old p.sub subtitle "drain, then image"
+  (read MED, round 5), then a review in all four parts. Its body already teaches US, then VCUG, drainage alongside.
+- **Open decision:** public branch wip/s147 holds two UWorld phrases in old commits of S147.md (reworded before ship;
+  main got one squashed commit without them). Delete the branch or leave it: Jonathan's call.
+- **Mac:** caught up at the s147 ship (~/Step2Haki and ~/step2haki-private fast-forwarded). The stray
+  ~/step2haki-private-push/_xfer_pub.bundle is still there.
+- **Lessons for lanes (s147):** inline the lane instructions in the launch prompt; tokens, not calls, bound the batch
+  (about 59k tokens per call in round 1); follow-up lanes get changes.md diffed against the reviewer's own last
+  brief_text.txt (review_packet --diff compares with the live page, the whole brief for a new conversion); give display
+  only the changed steps, as phone sheets packed without scaling; plan at most 4 calls per brief plus spares, since
+  lanes that planned 5 or 6 lost their last receipt; a replacement that changes a hedge, negation or order word
+  stales the other parts (condpass), so weigh it before applying.
+- **Open small items:** old-style p.sub subtitles remain on converted briefs (bs-puv's is owed); sinopulm phone sticky
+  bar truncates the title; hypercalcemia study-mode line beside the masked rung; polyuria "common" in Pairs with; legib
+  clashes on count and in-table hover buttons; Treatment rung labels visible in study mode (site-wide); Pearls stay
+  unmasked by convention; deferred LOWs in repair/s141 to s147 batch files.
 
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s147 (Phase 2, renal and GU B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: peds-uti-recurrent, enuresis, peds-aki, bs-puv, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum (folders: claude/pending/FOLDERS_S142_S160.md, listed there as s146; peds-uti-recurrent and enuresis have merge folders, the other six build from the page and repair/sources). Golden: nephrotic-child (peds lens); voices for any hub. Budget for the whole batch: 24 agents, 220 API calls, 9M tokens. Method: s142, with write-first review lanes (each reviewer writes a brief's receipt before reading the next; lane instructions name every file and ban globs; Budget 5 calls per brief plus 4, display 7 per brief plus 4). Setup tool fixes first: review_packet.py adds ALIASES.json and ABBREV.json to the read packets; legib_audit stops counting the dotted underline on pointer links (.xref) as a clash.
+Step2Haki: launch batch s148 (Phase 2, musculoskeletal A, adult) per claude/BATCH_RUNBOOK.md. Briefs: pmr, scaphoid, backpain, hippos, gtps, oa-pharm, septic-bursitis, shoulder-rom (folders: claude/pending/FOLDERS_S142_S160.md, listed there as s147; scaphoid, backpain, gtps, septic-bursitis and shoulder-rom have merge folders, pmr, hippos and oa-pharm build from the page and repair/sources); plus the carried bs-puv (repair/s147/carry: drop or rewrite its "drain, then image" subtitle, then review all four parts). Golden: copd (FM lens); a hub golden first if backpain or hippos needs one; nephrotic-child for bs-puv. Budget for the whole batch: 32 agents, 320 API calls, 14M tokens. Method: s142 with the s147 lane lessons (lane instructions inline; at most 4 calls per brief plus spares; follow-up packets diff against the reviewer's last version; display gets the changed steps only).
 ```
 
 ## After s141
