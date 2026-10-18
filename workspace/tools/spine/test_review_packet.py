@@ -45,4 +45,8 @@ expect('read rules point to the two tables', 'ALIASES.json (other names) and ABB
 _t = RP.text_of('<div class="pearls">Pearls x</div>\n<div class="traps"><span class="pill p-seq">Sequencing trap</span><span class="pill p-number">Treat-the-number</span></div>')
 expect('trap tags labelled and separated', '[trap tags: Sequencing trap · Treat-the-number]' in _t and 'trapTreat' not in _t)
 
+# s148 S7: a trapline keeps its explanation (the tag-list pattern no longer swallows a nested trapline)
+_t = RP.text_of('<div class="traps"><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Wilms explains one finding.</span></div>\n<div class="trapline"><span class="pill p-seq">Sequencing trap</span><span class="trapwhy">Image first.</span></div></div>')
+expect('trapline keeps its explanation', 'Class-vs-member: Wilms explains one finding.' in _t and 'Sequencing trap: Image first.' in _t and '[trap tags' not in _t)
+
 print('test_review_packet: %d passed, %d failed' % (ok, fail)); sys.exit(1 if fail else 0)

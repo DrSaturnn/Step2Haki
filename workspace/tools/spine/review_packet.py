@@ -102,8 +102,12 @@ def text_of(brief_html):
     x = close_masks(x)
     # s148 S5 packet error: the trap tag row (div.traps, pill names only, on 90 briefs) ran together as one fragment
     # ("Sequencing trapTreat-the-number") and drew two false MED findings; show it as a labelled tag list
-    x = re.sub(r'<div class="traps">(.*?)</div>', lambda m: '<div>[trap tags: %s]</div>' % ' · '.join(
+    # s148 S7 packet error: that pattern stopped at a nested trapline's </div> and dropped its explanation; only a
+    # pill-only row (no nested div) becomes the tag list, and a trapline reads "pill: why"
+    x = re.sub(r'<div class="traps">((?:(?!<div).)*?)</div>', lambda m: '<div>[trap tags: %s]</div>' % ' · '.join(
         re.findall(r'<span class="pill[^"]*">(.*?)</span>', m.group(1))), x, flags=re.S)
+    x = re.sub(r'(<div class="trapline">\s*<span class="pill[^"]*">.*?</span>)\s*(<span class="trapwhy">)', r'\1: \2', x,
+               flags=re.S)
     x = re.sub(r'</(p|li|div|tr|h\d|figure|caption)>|<br\s*/?>', '\n', x)
     x = re.sub(r'</t[dh]>', ' | ', x)
     x = re.sub(r'<[^>]+>', '', x)
