@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s147 lead (continuation chat 4, S5 and S6 done).
+Last updated: 2026-10-17, by the s147 lead (continuation chat 4, S7 round 3 done).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -18,19 +18,14 @@ s147 is open; a fresh chat continues it with the line above.
   Briefs: peds-uti-recurrent, enuresis, peds-aki, bs-puv (disease), bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes,
   scrotum (hubs). Golden nephrotic-child (peds lens); voices for hubs. Budget 24 agents, 220 API calls, 9M tokens
   (WAVE.json).
-- **Step: S5 done, S6 done (continuation chat 4, 2026-10-17 21:00); next is S7, follow-up review round 2, after
-  Jonathan answers the budget question** (round 1 used 6.70M of the 9M tokens; round 2 projects about 6M more).
-  Round 1: 10 lanes, 30 of 32 receipts (no flags receipt for aq-puffy-eyes or scrotum: flags-B hit its cap). Every MED
-  adjudicated and fixed or rejected with evidence (repair/s147/S147.md, S5). All eight MECHANICAL PASS (--fast); batch
-  preview build, gate, render PASS; vendor_scan 0; preflight P1 1 (held by cuts); legib 0 below contrast. Words:
-  peds-uti 934, enuresis 1,063, peds-aki 870, bs-puv 800; bs-abdominal-mass 681, bs-distal-rta 734, aq-puffy-eyes 731,
-  scrotum 643.
-- **S7 plan:** packets with review_packet.py --diff (changes.md against the live brief is the whole brief for these new
-  conversions, so give each lane the S5 edit list from S147.md as the scope) plus the r1 receipt; acc A and B (opus, 4
-  briefs, Budget 24), read A and B, flags A (4 changed briefs) and B (bs-abdominal-mass changed; aq-puffy-eyes and scrotum
-  full, flags owed from round 1), display A and B with phone-study images of the changed steps only. Lane builder:
-  /tmp scripts are gone in a new container; rebuild from repair/s147/S147.md (S4 notes).
-- **Spend:** 10 agents, 114 calls, 6.70M tokens (usage_ledger).
+- **Step: S7 round 3 done (continuation chat 4, 2026-10-17 21:45).** Seven briefs READY (verify --fast):
+  peds-uti-recurrent, enuresis, peds-aki, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum. bs-puv: the flags
+  MED on drain-before-imaging was accepted and fixed to the board order (US first, then VCUG; drain and correct
+  electrolytes; cystoscopy ablates; UWorld item q_be3269906b52 keys US); it needs a round-4 review in all four parts
+  (lanes repair/efficiency/lanes/s147/r4, built like r3 from the r3 packets plus a changes.md since round 3).
+  Waiting on Jonathan: 22 of 24 agents used; the question is raise to 26 agents or ship the seven and carry bs-puv.
+  Then S8 (full verify, preview, screenshots, approval.py present, report).
+- **Spend:** 22 agents, 243 calls, 10.88M tokens of 24, 300, 15M (raised by Jonathan after round 1).
 - **Mac:** caught up at the s146b ship; nothing owed. The stray ~/step2haki-private-push/_xfer_pub.bundle is still there.
 - **Lessons for lanes (s146, s146b, s147):** the callgate counts every tool use, each file of a parallel batch included.
   Inline the lane instructions in the launch prompt (s147: saves a call per agent). Tokens, not calls, bound s147: about
