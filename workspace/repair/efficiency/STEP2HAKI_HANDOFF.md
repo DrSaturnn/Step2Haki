@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s147 lead (continuation chat 4, S7 round 3 done).
+Last updated: 2026-10-17, by the s147 lead (continuation chat 4, S8 report sent).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -18,14 +18,15 @@ s147 is open; a fresh chat continues it with the line above.
   Briefs: peds-uti-recurrent, enuresis, peds-aki, bs-puv (disease), bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes,
   scrotum (hubs). Golden nephrotic-child (peds lens); voices for hubs. Budget 24 agents, 220 API calls, 9M tokens
   (WAVE.json).
-- **Step: S7 round 3 done (continuation chat 4, 2026-10-17 21:45).** Seven briefs READY (verify --fast):
-  peds-uti-recurrent, enuresis, peds-aki, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum. bs-puv: the flags
-  MED on drain-before-imaging was accepted and fixed to the board order (US first, then VCUG; drain and correct
-  electrolytes; cystoscopy ablates; UWorld item q_be3269906b52 keys US); it needs a round-4 review in all four parts
-  (lanes repair/efficiency/lanes/s147/r4, built like r3 from the r3 packets plus a changes.md since round 3).
-  Waiting on Jonathan: 22 of 24 agents used; the question is raise to 26 agents or ship the seven and carry bs-puv.
-  Then S8 (full verify, preview, screenshots, approval.py present, report).
-- **Spend:** 22 agents, 243 calls, 10.88M tokens of 24, 300, 15M (raised by Jonathan after round 1).
+- **Step: S8, final report sent (continuation chat 4, 2026-10-17 22:05); waiting for Jonathan's "ship".** Seven briefs
+  READY (full verify): peds-uti-recurrent, enuresis, peds-aki, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum;
+  plus 40_presentations.json (the four hubs join the Presentations group). bs-puv is carried (Jonathan's condition at the
+  round-5 raise): repair/s147/carry/10_bs_puv_spine.json.carry, not built; owed in the next batch: drop or rewrite its
+  "drain, then image" subtitle, then review all four parts. Presented with approval.py present s147 in this chat; "ship"
+  must come to this chat (the approval record lives in this container).
+- **Decisions in the report:** whether to rewrite wip/s147 history to remove two UWorld phrases the lead put in S147.md
+  (reworded now; vendor_scan 0), and the force-push the lead made over its own private wip commit (disclosed).
+- **Spend:** 30 agents, 281 calls, 11.63M tokens of 30, 300, 15M.
 - **Mac:** caught up at the s146b ship; nothing owed. The stray ~/step2haki-private-push/_xfer_pub.bundle is still there.
 - **Lessons for lanes (s146, s146b, s147):** the callgate counts every tool use, each file of a parallel batch included.
   Inline the lane instructions in the launch prompt (s147: saves a call per agent). Tokens, not calls, bound s147: about
