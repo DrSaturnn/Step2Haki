@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s147 lead (s147 shipped).
+Last updated: 2026-10-17, by the s148 lead (launch chat, S1 and S2 in progress).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -10,31 +10,25 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
-s147 is open; a fresh chat continues it with the line above.
+s148 is open; a fresh chat continues it with the line above.
 
 ## State (rewrite after every step)
 
-- **No open batch.** s147 shipped 2026-10-17 22:20 (main 070b0e6, version.json s147): peds-uti-recurrent, enuresis,
-  peds-aki, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum on decision spine v2; four hubs in Presentations
-  (12); hover cards and the profile sheet fixed under the 110% zoom (Jonathan reported broken hovers on wide windows).
-  History of the batch: repair/s147/S147.md.
-- **Carried into the next batch:** bs-puv (repair/s147/carry/10_bs_puv_spine.json.carry; folder
-  repair/migration/peds/bs-puv/spine, private main). Owed: drop or rewrite the old p.sub subtitle "drain, then image"
-  (read MED, round 5), then a review in all four parts. Its body already teaches US, then VCUG, drainage alongside.
-- **Open decision:** public branch wip/s147 holds two UWorld phrases in old commits of S147.md (reworded before ship;
-  main got one squashed commit without them). Delete the branch or leave it: Jonathan's call.
-- **Mac:** caught up at the s147 ship (~/Step2Haki and ~/step2haki-private fast-forwarded). The stray
-  ~/step2haki-private-push/_xfer_pub.bundle is still there.
-- **Lessons for lanes (s147):** inline the lane instructions in the launch prompt; tokens, not calls, bound the batch
-  (about 59k tokens per call in round 1); follow-up lanes get changes.md diffed against the reviewer's own last
-  brief_text.txt (review_packet --diff compares with the live page, the whole brief for a new conversion); give display
-  only the changed steps, as phone sheets packed without scaling; plan at most 4 calls per brief plus spares, since
-  lanes that planned 5 or 6 lost their last receipt; a replacement that changes a hedge, negation or order word
-  stales the other parts (condpass), so weigh it before applying.
-- **Open small items:** old-style p.sub subtitles remain on converted briefs (bs-puv's is owed); sinopulm phone sticky
-  bar truncates the title; hypercalcemia study-mode line beside the masked rung; polyuria "common" in Pairs with; legib
-  clashes on count and in-table hover buttons; Treatment rung labels visible in study mode (site-wide); Pearls stay
-  unmasked by convention; deferred LOWs in repair/s141 to s147 batch files.
+- **Open batch: s148** (Phase 2 musculoskeletal A, adult), launched 2026-10-17 22:34. Briefs: pmr, scaphoid, backpain,
+  hippos, gtps, oa-pharm, septic-bursitis, shoulder-rom, plus the carried bs-puv. Budget 32 agents, 320 API calls, 14M
+  tokens (WAVE.json wave s148). Branch wip/s148 in both repos. Batch file: repair/s148/S148.md (read it first; it has
+  the entry types, folders, the timelines direction and the recipe notes).
+- **Step:** S1 and S2. Done: bs-puv (subtitle rewritten; MECHANICAL PASS; owes a four-part review in S4), pmr
+  (MECHANICAL PASS). Next: oa-pharm, hippos, then the five merge-folder hubs (scaphoid, backpain, gtps,
+  septic-bursitis, shoulder-rom), each by the s147 recipe (S147.md, "Recipe per brief"); then S3; then restart for S4.
+- **Launch decisions in the digest:** the launch prompt, and Jonathan's timelines direction ("ensure the respective
+  timelines are being included as needed"): bold timelines in Decides-it cells and Timing or course strips where a
+  source gives the timing; the report lists them per brief.
+- **Hooks:** test_hooks 84/84 offline; writing them into /root/.claude/settings.json was held by the permission check
+  (as in s141 to s146): do it in the S4 chat (new container) before any agent.
+- **Spend:** 0 agents, 0 calls, 0 tokens.
+- **Carried from s147:** open decision on the public wip/s147 branch (delete or leave; Jonathan's call); the stray
+  ~/step2haki-private-push/_xfer_pub.bundle on the Mac; open small items as listed in S147.md.
 
 ## Next launch prompt (paste into a fresh chat)
 
