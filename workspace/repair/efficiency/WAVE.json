@@ -10,10 +10,10 @@
   "flag-review",
   "wording-fix"
  ],
- "max_agents": 24,
+ "max_agents": 26,
  "max_calls": 300,
  "max_tokens": 15000000,
- "set_by": "Jonathan, s147 launch prompt: \"Budget for the whole batch: 24 agents, 220 API calls, 9M tokens.\" Raised 2026-10-17 after round 1: \"Raise to 300 calls, 15M (Recommended)\" (agents 24).",
+ "set_by": "Jonathan, s147 launch prompt: \"Budget for the whole batch: 24 agents, 220 API calls, 9M tokens.\" Raised 2026-10-17 after round 1: \"Raise to 300 calls, 15M (Recommended)\" (agents 24). Raised 2026-10-17 after round 3: \"Raise to 26 agents (Recommended)\".",
  "previous": {
   "id": "s146b",
   "note": "2026-10-17 (s146b shipped, main 2c9a52d; s146c site layer shipped 5f85e90, no agents)"
@@ -67,7 +67,7 @@
    "tokens": 4000000
   },
   "s147": {
-   "agents": 24,
+   "agents": 26,
    "calls": 300,
    "tokens": 15000000
   }
