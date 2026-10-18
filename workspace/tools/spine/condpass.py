@@ -19,6 +19,10 @@ Rules (enforced here):
     order and condition words (first, then, before, after, only, if, unless, except, until and the like) and
     diagnosis, drug and test names (repair/efficiency/ALIASES.json and ABBREV.json). Otherwise that part needs the
     normal follow-up review.
+  - s148 fix 8 (Jonathan 2026-10-18): a replacement from another part whose only meaning change is ADDED hedge words
+    still counts as wording-only when every added hedge word appears in a quote that the claim map cites for the line
+    the replacement lands in (claim_map.json source_says, facts.json quote). Removing a hedge, or changing a number,
+    a negation, an order or condition word or a name, still needs the normal follow-up review.
 Item stems, keys, distractors and lead-ins are protected by verify's item check (a meaning change without a version bump
 fails), so a replacement that lands there cannot make a brief READY.
 """
@@ -30,7 +34,7 @@ import re
 HERE = os.path.dirname(os.path.abspath(__file__))
 WS = os.path.abspath(os.path.join(HERE, '..', '..'))
 MAX_N, MAX_WORDS = 8, 40
-HEDGES = ('may', 'usually', 'often', 'can', 'rarely', 'about', 'consider')
+HEDGES = ('may', 'usually', 'often', 'can', 'rarely', 'about', 'consider', 'likely', 'typically')  # s148: + likely, typically
 NEGATIONS = ('no', 'not', 'without', 'never', 'none', 'neither', 'nor', 'cannot')
 # order and condition words carry meaning too (s133 replacement 6 dropped "first"; 7 added an "unless" exception)
 QUALIFIERS = ('first', 'second', 'then', 'before', 'after', 'initial', 'initially', 'last', 'only',
@@ -99,19 +103,68 @@ def hard_problems(old, new):
     return bad
 
 
-def wording_only(old, new, table=None):
-    """True when the replacement keeps numbers, negations, hedges and names: it may count for every part"""
-    table = names() if table is None else table
+def _same_but_hedges(old, new, table):
+    """numbers, negations, order and condition words and names unchanged (hedges not compared)"""
     wo, wn = words(old), words(new)
     if sorted(NUM.findall(old)) != sorted(NUM.findall(new)):
         return False
     if sorted(w for w in wo if w in NEGATIONS or w.endswith("n't")) != sorted(w for w in wn if w in NEGATIONS or w.endswith("n't")):
         return False
-    if sorted(filter(None, map(stem_hedge, wo))) != sorted(filter(None, map(stem_hedge, wn))):
-        return False
     if sorted(w for w in wo if w in QUALIFIERS) != sorted(w for w in wn if w in QUALIFIERS):
         return False
     return names_in(old, table) == names_in(new, table)
+
+
+def added_hedges(old, new):
+    """the hedge words new adds over old (a multiset difference), or None when new drops any hedge old had"""
+    from collections import Counter
+    ho, hn = Counter(filter(None, map(stem_hedge, words(old)))), Counter(filter(None, map(stem_hedge, words(new))))
+    if ho - hn:
+        return None
+    return sorted((hn - ho).elements())
+
+
+def wording_only(old, new, table=None, quotes=None):
+    """True when the replacement keeps numbers, negations, hedges and names: it may count for every part.
+    quotes (s148 fix 8): the quotes the claim map cites for the line the replacement lands in; a replacement that only
+    ADDS hedge words is wording-only when every added hedge word appears in one of them."""
+    table = names() if table is None else table
+    if not _same_but_hedges(old, new, table):
+        return False
+    add = added_hedges(old, new)
+    if add is None:
+        return False
+    if not add:
+        return True
+    qw = set(filter(None, map(stem_hedge, words(' '.join(quotes or [])))))
+    return all(h in qw for h in add)
+
+
+def claim_quotes(folder):
+    """a function text -> the quotes cited for every claim whose text holds it (claim_map.json new_text; its sources'
+    source_says and the facts.json quote of each source id)"""
+    try:
+        cm = json.load(open(os.path.join(folder, 'claim_map.json'), encoding='utf-8'))
+    except (OSError, ValueError):
+        return lambda t: []
+    try:
+        fx = {f['id']: f.get('quote', '') for f in json.load(open(os.path.join(folder, 'facts.json'), encoding='utf-8'))['facts']}
+    except (OSError, ValueError, KeyError, TypeError):
+        fx = {}
+    claims = []
+    for c in cm.get('claims', []) if isinstance(cm, dict) else cm:
+        text = c.get('new_text') or c.get('text') or ''
+        qs = []
+        for s in c.get('sources') or []:
+            if isinstance(s, dict):
+                qs += [s.get('source_says') or '', fx.get(s.get('id'), '')]
+        qs += [fx.get(i, '') for i in c.get('derived_from') or [] if isinstance(i, str)]
+        claims.append((H.unescape(text), [q for q in qs if q]))
+
+    def find(t):
+        t = H.unescape(t)
+        return [q for text, qs in claims if t and t in text for q in qs]
+    return find
 
 
 def forms(t, kind):
@@ -148,17 +201,19 @@ def undo(text, reps, kind):
     return text, applied, None
 
 
-def pool(receipts, table=None):
+def pool(receipts, table=None, quotes=None):
     """receipts: {part: (verdict, reps)}. For each part, the replacements that may count for it:
-    its own (passing the hard rules), plus other parts' that pass the hard rules and are wording-only."""
+    its own (passing the hard rules), plus other parts' that pass the hard rules and are wording-only.
+    quotes: text -> cited quotes (claim_quotes); looked up by the replacement's new text, then its old text."""
     table = names() if table is None else table
+    q = quotes or (lambda t: [])
     ok = {p: [(n, o, w) for n, o, w in reps[:MAX_N] if not hard_problems(o, w)]
           for p, (v, reps) in receipts.items() if v == 'PASS-IF'}
     out = {}
     for part in receipts:
         mine = [(('%s.%d' % (part, n)), o, w) for n, o, w in ok.get(part, [])]
         other = [(('%s.%d' % (p, n)), o, w) for p, lst in ok.items() if p != part for n, o, w in lst
-                 if wording_only(o, w, table)]
+                 if wording_only(o, w, table, q(w) or q(o))]
         seen, res = set(), []
         for rid, o, w in mine + other:          # the same edit approved by two parts is one replacement
             if (o, w) not in seen:

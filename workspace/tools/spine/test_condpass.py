@@ -140,5 +140,40 @@ try:
 finally:
     shutil.rmtree(d, ignore_errors=True)
 
+# ---- s148 fix 8: an added hedge backed by the cited quote is wording-only (Jonathan 2026-10-18)
+Q50 = ['NSAIDs may be contraindicated for patients with [renal] insufficiency']
+Q06 = ['Pain may be felt in the inguinal area (likely the most specific area) or greater trochanter']
+expect('fix 8: oa-pharm b50 "which may be contraindicated" passes',
+       CP.wording_only('rather than a systemic NSAID, which is contraindicated',
+                       'rather than a systemic NSAID, which may be contraindicated', T, Q50))
+expect('fix 8: oa-pharm m06 "likely the most specific site" passes',
+       CP.wording_only('Hip pain is felt in the groin (the most specific site)',
+                       'Hip pain is felt in the groin (likely the most specific site)', T, Q06))
+expect('fix 8: a hedge with no quote behind it fails', not CP.wording_only('gives clots', 'may give clots', T, []))
+expect('fix 8: a hedge the quote lacks fails', not CP.wording_only('the most specific site', 'usually the most specific site', T, Q06))
+expect('fix 8: septic-bursitis dropped "after" still fails',
+       not CP.wording_only('aspirate after the skin is checked', 'may aspirate once the skin is checked', T,
+                           ['Aspiration may be needed']))
+expect('fix 8: removing a hedge still fails even when the quote has it',
+       not CP.wording_only('which may be contraindicated', 'which is contraindicated', T, Q50))
+expect('fix 8: a hedge plus a number change still fails', not CP.wording_only('about 2 weeks', 'may be 3 weeks', T, ['may']))
+d8 = tempfile.mkdtemp()
+try:
+    json.dump({'claims': [{'id': 'S1', 'new_text': 'a topical NSAID or acetaminophen rather than a systemic NSAID, which may be contraindicated',
+                           'sources': [{'id': 'b50', 'source_says': Q50[0]}]},
+                          {'id': 'S2', 'new_text': 'a systemic NSAID may cause harm', 'sources': [{'id': 'zz'}]}]},
+              open(os.path.join(d8, 'claim_map.json'), 'w'))
+    json.dump({'facts': [{'id': 'zz', 'quote': 'no hedge here'}]}, open(os.path.join(d8, 'facts.json'), 'w'))
+    qf = CP.claim_quotes(d8)
+    expect('fix 8: claim_quotes finds the quote by the landed text', qf('which may be contraindicated') == Q50)
+    rec8 = {'flags': ('PASS-IF', [(1, 'a systemic NSAID, which is contraindicated', 'a systemic NSAID, which may be contraindicated'),
+                                  (2, 'a systemic NSAID causes harm', 'a systemic NSAID may cause harm')]),
+            'acc': ('PASS', []), 'read': ('PASS', []), 'display': ('PASS', [])}
+    p8 = CP.pool(rec8, T, quotes=qf)
+    expect('fix 8: pool gives acc the quote-backed hedge only', [r for r, _, _ in p8['acc']] == ['flags.1'])
+    expect('fix 8: without quotes the pool gives acc neither', CP.pool(rec8, T)['acc'] == [])
+finally:
+    shutil.rmtree(d8, ignore_errors=True)
+
 print('test_condpass: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)

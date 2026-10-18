@@ -234,10 +234,36 @@ def launches(wave_id=None):
     return out
 
 
-def wave_spend(wave_id):
-    """measured spend of a wave: every subagent transcript whose prompt matches a launch recorded for that wave"""
-    want = {l['prompt_sha'] for l in launches(wave_id)}
+LEDGER = os.environ.get('AX_LEDGER', os.path.join(WS, 'repair', 'efficiency', 'ledger_spine.csv'))
+
+
+def past_spend(wave_id):
+    """spend of a wave's agents that ran in an earlier container (s148 efficiency fix 3): the committed ledger rows of
+    the wave whose agent ids have no transcript here. launches.jsonl and the transcripts live in the container, so
+    without this a new chat would start every wave at zero and the caps would not hold across chats."""
+    import csv
     tot = {'agents': 0, 'calls': 0, 'tokens': 0}
+    if not os.path.exists(LEDGER):
+        return tot
+    here = {os.path.basename(p)[len('agent-'):-len('.jsonl')]
+            for p in glob.glob(os.path.join(PROJECTS, '*', '*', 'subagents', 'agent-*.jsonl'))}
+    try:
+        for r in csv.DictReader(open(LEDGER, encoding='utf-8')):
+            if r.get('wave') != wave_id or not r.get('agent_id') or r['agent_id'] in here:
+                continue
+            tot['agents'] += 1
+            tot['calls'] += int(r.get('calls') or 0)
+            tot['tokens'] += int(r.get('tokens') or 0)
+    except (OSError, ValueError):
+        pass
+    return tot
+
+
+def wave_spend(wave_id):
+    """measured spend of a wave: every subagent transcript whose prompt matches a launch recorded for that wave, plus
+    the ledger rows of the wave's agents from earlier containers (past_spend)"""
+    want = {l['prompt_sha'] for l in launches(wave_id)}
+    tot = past_spend(wave_id)
     for p in glob.glob(os.path.join(PROJECTS, '*', '*', 'subagents', 'agent-*.jsonl')):
         if sha(first_user_text(p)) in want:
             u = usage(p)

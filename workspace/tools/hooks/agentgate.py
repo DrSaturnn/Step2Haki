@@ -55,7 +55,7 @@ def main():
         C.refuse('LAUNCH GATE: refused: plan step %r is not the open wave\'s (%r).' % (h['plan_step'], w['plan_step']))
     if w.get('roles') and role not in w['roles']:
         C.refuse('LAUNCH GATE: refused: role %s is not in wave %s.' % (role, w['id']))
-    n = len(C.launches(w['id']))
+    n = len(C.launches(w['id'])) + C.past_spend(w['id'])['agents']   # s148 fix 3: agents from earlier containers
     if n >= int(w['max_agents']):
         C.refuse('LAUNCH GATE: refused: wave %s has used its %d agent(s). Stop and report.' % (w['id'], n))
     spent = C.wave_spend(w['id'])

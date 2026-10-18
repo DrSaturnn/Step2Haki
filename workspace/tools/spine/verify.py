@@ -95,7 +95,7 @@ def item_meaning(span):
 class Verify:
     def __init__(self, d, fast, keep):
         self.d, self.fast, self.keep = os.path.abspath(d), fast, keep
-        self.fix, self.ok, self.base = [], [], []
+        self.fix, self.ok, self.base, self.warn = [], [], [], []
         self.baseline = load_baseline()
         self.tmp = tempfile.mkdtemp(prefix='verify-')
 
@@ -306,6 +306,16 @@ class Verify:
         else:
             self.G('V1', '%d acronym(s), each written out' % len(seen))
 
+    # ---- 8b. pre-review lint (s148 efficiency fix 6): advisory, never a FIX; the S6 self-check clears each line
+    def lint(self):
+        import lint as LT
+        try:
+            found = LT.lint(self.out, facts_dir=self.d)
+        except Exception as ex:  # noqa: BLE001  advisory: a lint bug never blocks verify
+            found = ['lint error: %s: %s' % (type(ex).__name__, str(ex)[:120])]
+        self.warn += ['warn lint %s' % f for f in found]
+        self.G('lint', '%d advisory warning(s) (tools/spine/lint.py; runbook S6 item 15)' % len(found))
+
     # ---- 9. preview build and page checks
     def preview(self):
         sys.path.insert(0, os.path.join(WS, 'tools'))
@@ -363,6 +373,7 @@ class Verify:
                 self.claims()
                 self.live()
                 self.v1()
+                self.lint()
                 if not self.fast:
                     self.preview()
         finally:
@@ -423,7 +434,7 @@ class Verify:
             if files:
                 texts[part] = open(files[-1], encoding='utf-8').read()
                 receipts[part] = CP.parse(texts[part])
-        pools = CP.pool(receipts)
+        pools = CP.pool(receipts, quotes=CP.claim_quotes(self.d))   # s148 fix 8: hedges from cited quotes
         self.conditional = {}
         for part, keys in self.PARTS.items():
             if part not in texts:
@@ -587,7 +598,7 @@ def main(argv):
         print(v.deps_line(part))
         return 0
     v = Verify(argv[0], fast, keep).run()
-    for line in v.ok + v.base + v.fix:
+    for line in v.ok + v.base + v.warn + v.fix:
         print(line)
     if v.fix:
         print('verify %s: FAIL (%d fix(es))' % (getattr(v, 'bid', argv[0]), len(v.fix)))

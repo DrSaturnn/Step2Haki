@@ -16,7 +16,7 @@ H = os.path.dirname(os.path.abspath(__file__))
 WS = os.path.abspath(os.path.join(H, '..', '..'))
 T = tempfile.mkdtemp(prefix='hooktest-')
 ENV = dict(os.environ, AX_HOOK_STATE=os.path.join(T, 'state'), AX_TRANSCRIPTS=os.path.join(T, 'projects'),
-           AX_WAVE=os.path.join(T, 'WAVE.json'), AX_TEST_LOG='{"v": 0, "note": "test"}')
+           AX_WAVE=os.path.join(T, 'WAVE.json'), AX_LEDGER=os.path.join(T, 'ledger.csv'), AX_TEST_LOG='{"v": 0, "note": "test"}')
 TB = 's0hooktest'                                  # a throwaway batch folder, removed at the end
 TBD = os.path.join(WS, 'repair', TB)
 LANE = os.path.join(WS, 'repair', 'migration', 'peds', 'nephrotic-child', 'spine')
@@ -119,6 +119,26 @@ try:
     expect('race: no hook error in 12 parallel calls', (0 if not any('HOOK ERROR' in o for _, o in _res) else 1, ''), 0)
     expect('race: every call counted', (_rec['count'], ''), 12)
     expect('race: exactly the budget allowed', (sum(1 for c, _ in _res if c == 0), ''), 3)
+    # ---- s148 fix 3: a wave's spend from an earlier container (committed ledger rows) still counts at the gate
+    def ledger(rows):
+        with open(ENV['AX_LEDGER'], 'w') as f:
+            f.write('agent_id,wave,role,calls,tokens\n')
+            for r in rows:
+                f.write(','.join(str(x) for x in r) + '\n')
+    PP = 'Role: probe\nPlan step: PAST\nLane: %s\n\nDo the probe.' % LANE
+    json.dump({'id': 'PAST', 'open': True, 'plan_step': 'PAST', 'max_agents': 3, 'max_calls': 50, 'max_tokens': 10 ** 7},
+              open(ENV['AX_WAVE'], 'w'))
+    ledger([('old1', 'PAST', 'probe', 5, 1000), ('old2', 'PAST', 'probe', 5, 1000), ('old3', 'PAST', 'probe', 5, 1000)])
+    expect('fix 3: past agents fill the agent cap', launch(PP + ' (p1)'), 2)
+    ledger([('old1', 'PAST', 'probe', 30, 1000), ('old2', 'PAST', 'probe', 20, 1000)])
+    expect('fix 3: past calls fill the call cap', launch(PP + ' (p2)'), 2)
+    ledger([('old1', 'PAST', 'probe', 5, 6 * 10 ** 6), ('old2', 'PAST', 'probe', 5, 4 * 10 ** 6)])
+    expect('fix 3: past tokens fill the token cap', launch(PP + ' (p3)'), 2)
+    ledger([('a1', 'PAST', 'probe', 999, 10 ** 8), ('old9', 'OTHER', 'probe', 999, 10 ** 8),
+            ('old1', 'PAST', 'probe', 5, 1000)])
+    expect('fix 3: rows with a transcript here or of another wave are not counted', launch(PP + ' (p4)'), 0)
+    os.remove(ENV['AX_LEDGER'])
+    expect('fix 3: no ledger, no past spend', launch(PP + ' (p5)'), 0)
     # ---- H5 usage: streamed chunks share a message id; the final output count is the largest (2026-10-12 fix)
     up = os.path.join(T, 'usage_stream.jsonl')
     with open(up, 'w') as f:
