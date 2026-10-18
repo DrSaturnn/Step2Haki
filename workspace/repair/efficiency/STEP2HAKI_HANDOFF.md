@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s148 lead (launch chat, S1 and S2 in progress).
+Last updated: 2026-10-18, by the s148 lead (continuation chat 1, S1 and S2 in progress).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -18,9 +18,11 @@ s148 is open; a fresh chat continues it with the line above.
   hippos, gtps, oa-pharm, septic-bursitis, shoulder-rom, plus the carried bs-puv. Budget 32 agents, 320 API calls, 14M
   tokens (WAVE.json wave s148). Branch wip/s148 in both repos. Batch file: repair/s148/S148.md (read it first; it has
   the entry types, folders, the timelines direction and the recipe notes).
-- **Step:** S1 and S2. Done: bs-puv (subtitle rewritten; MECHANICAL PASS; owes a four-part review in S4), pmr
-  (MECHANICAL PASS). Next: oa-pharm, hippos, then the five merge-folder hubs (scaphoid, backpain, gtps,
-  septic-bursitis, shoulder-rom), each by the s147 recipe (S147.md, "Recipe per brief"); then S3; then restart for S4.
+- **Step:** S1 and S2. Done: bs-puv (subtitle rewritten; MECHANICAL PASS; owes a four-part review in S4), pmr,
+  oa-pharm, hippos (MECHANICAL PASS each; batch file sections). Next: the five merge-folder hubs (scaphoid, backpain,
+  gtps, septic-bursitis, shoulder-rom), each by the s147 recipe (S147.md, "Recipe per brief"), in
+  repair/migration/merge/<id>/spine; then S3 (copy each 10_*_spine.json into repair/s148, the Presentations sidebar
+  links for the six hubs as in repair/s147/40_presentations.json, verify --mech, legib_audit); then restart for S4.
 - **Launch decisions in the digest:** the launch prompt, and Jonathan's timelines direction ("ensure the respective
   timelines are being included as needed"): bold timelines in Decides-it cells and Timing or course strips where a
   source gives the timing; the report lists them per brief.
