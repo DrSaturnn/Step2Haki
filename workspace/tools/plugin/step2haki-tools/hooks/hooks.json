@@ -1,0 +1,12 @@
+{
+  "description": "Step2Haki batch gates (SPINE_SCALE_PLAN.md section 4): the launch gate, the per-agent call gate and the ship approval hook. Each runs the repo script only when a Step2Haki checkout is in the container, and does nothing elsewhere.",
+  "hooks": {
+    "PreToolUse": [
+      {"matcher": "Agent|Task", "hooks": [{"type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run.sh\" agentgate.py"}]},
+      {"matcher": "", "hooks": [{"type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run.sh\" callgate.py"}]}
+    ],
+    "UserPromptSubmit": [
+      {"hooks": [{"type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run.sh\" approval.py hook"}]}
+    ]
+  }
+}

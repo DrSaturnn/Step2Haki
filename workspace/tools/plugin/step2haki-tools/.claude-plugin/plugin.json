@@ -1,6 +1,6 @@
 {
   "name": "step2haki-tools",
-  "version": "0.1.0",
-  "description": "Lean reviewer agent for Step2Haki brief reviews: read, write and search tools only, so each review starts without the shell, web and connector tool definitions.",
+  "version": "0.2.0",
+  "description": "Step2Haki batch tools: the lean reviewer agent (read, write and search tools only) and the three batch gates as hooks (launch gate, call gate, ship approval), which run only where a Step2Haki checkout is present.",
   "author": {"name": "Jonathan (DrSaturnn)"}
 }

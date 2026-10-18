@@ -140,6 +140,33 @@ try:
     expect('fix 3: rows with a transcript here or of another wave are not counted', launch(PP + ' (p4)'), 0)
     os.remove(ENV['AX_LEDGER'])
     expect('fix 3: no ledger, no past spend', launch(PP + ' (p5)'), 0)
+    # ---- s148 item 9: the plugin's guarded hook runner (tools/plugin/step2haki-tools/hooks/run.sh)
+    RUN = os.path.join(WS, 'tools', 'plugin', 'step2haki-tools', 'hooks', 'run.sh')
+    HM = os.path.join(T, 'home')
+    os.makedirs(os.path.join(HM, '.claude'), exist_ok=True)
+
+    def plug(script, d, dirs=H, settings=None):
+        sp = os.path.join(HM, '.claude', 'settings.json')
+        if settings is None:
+            if os.path.exists(sp):
+                os.remove(sp)
+        else:
+            open(sp, 'w').write(settings)
+        r = subprocess.run(['sh', RUN, script], input=json.dumps(d), text=True, capture_output=True,
+                           env=dict(ENV, HOME=HM, AX_HOOK_DIRS=dirs))
+        return r.returncode, (r.stdout + r.stderr).strip()
+    NOMODEL = {'hook_event_name': 'PreToolUse', 'tool_name': 'Agent', 'session_id': 'S',
+               'tool_input': {'description': 'x', 'prompt': 'Role: probe\nPlan step: R2\nLane: %s\n' % LANE}}
+    expect('item 9: plugin runs the gate, a launch with no model is refused (exit 2 passes through)', plug('agentgate.py', NOMODEL), 2)
+    expect('item 9: plugin allows a non-Agent call through the launch gate', plug('agentgate.py', dict(NOMODEL, tool_name='Read')), 0)
+    expect('item 9: no checkout here, the plugin does nothing', plug('agentgate.py', NOMODEL, dirs='/nonexistent/x'), 0)
+    expect('item 9: the settings already run the gate, the plugin defers (no double count)',
+           plug('agentgate.py', NOMODEL, settings='{"hooks": "python3 /x/tools/hooks/agentgate.py"}'), 0)
+    expect('item 9: settings for another script do not make it defer',
+           plug('agentgate.py', NOMODEL, settings='{"hooks": "python3 /x/tools/hooks/callgate.py"}'), 2)
+    _hj = json.load(open(os.path.join(os.path.dirname(RUN), 'hooks.json')))['hooks']
+    expect('item 9: hooks.json has the three hooks',
+           (0 if [m['matcher'] for m in _hj['PreToolUse']] == ['Agent|Task', ''] and len(_hj['UserPromptSubmit']) == 1 else 1, ''), 0)
     # ---- s148 fix 7: the lead's row per session in ledger_lead.csv, updated in place on a re-record
     lp = os.path.join(T, 'projects', 'p', 'LEADSESS.jsonl')
     with open(lp, 'w') as f:

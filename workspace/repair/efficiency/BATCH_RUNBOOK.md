@@ -24,7 +24,9 @@ This runbook sits under DECISIONS_DIGEST, STANDING_DIRECTIONS and the plan (clau
 9. claude/design/WORKUP_5A_SPEC.md;
 10. conditional PASS: claude/pending/POST_SHIP_R3.md section 2, with the s133 digest lines (hedge words count as meaning; text-only replacements).
 
-**Continuation chats** (Jonathan 2026-10-17): a chat that continues an open batch reads only the handoff State, the batch file, DECISIONS_DIGEST lines from 2026-10-15 on, and the batch's own rows and notes in BRIEF_AMEND_LIST (grep, not the whole file); the full read order above is for launches. A chat that starts S4 after the S3 restart also reads, per brief, boards.md, cuts.json and the cards_disposition.json counts (not the cards).
+**Continuation chats** (Jonathan 2026-10-17): a chat that continues an open batch reads only the handoff State, the batch file, DECISIONS_DIGEST lines from 2026-10-15 on, and the batch's own rows and notes in BRIEF_AMEND_LIST (grep, not the whole file); the full read order above is for launches. A chat that starts S4 after the S3 restart also reads, per brief, boards.md, cuts.json and the cards_disposition.json counts (not the cards). A chat that starts S8 after the S7 restart reads only the State, the batch file's S5 and S7 sections and each receipt's verdict line (s148 efficiency fix 1).
+
+**Reading and paths** (s148 efficiency fix 4, Jonathan 2026-10-18): do not call register_repo_root (the repos have no CLAUDE.md; each registration re-sends the whole skill list); use absolute paths and never cd into another folder in a command (a working-folder change re-sends the environment and memory context); read docs by Grep or a line range, never whole when the read list allows less.
 
 **Restart line**, the same every time; Jonathan pastes it when a chat fills: `Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.`
 
@@ -43,7 +45,7 @@ The lead's first acts:
    - clone the repo;
    - restore local-only by direct staging (nothing written into Documents), for each brief in the batch: its folder under repair/migration/ (parked build, outline, facts, claim map), repair/migration/spine/ (specs and earlier reviews), the web-cache pages its facts cite, and the board sources (question files, Aquifer cases, AnKing index);
    - install the token;
-   - install the hooks and run their tests;
+   - the hooks: when the step2haki-tools plugin's hooks are live (`python3 tools/hooks/test_hooks.py` passes and a probe Agent launch with no model is refused by the launch gate), skip install.sh; otherwise run `bash tools/hooks/install.sh` (and the /root/.claude copy, handoff Session start 4), asking Jonathan when the permission check holds it; then run the hook tests (s148 item 9);
    - check the start-up context: `python3 tools/hooks/usage_ledger.py --context` (s135 efficiency item 9). A WARNING means a tool list grew; name it in the report;
    - check that the Agent tool lists `step2haki-tools:lean-reviewer` (the plugin in Jonathan's account; s135 item 1). The launch gate runs the four review roles only as that type, so if it is missing the review steps cannot run (section 6).
 3. Rewrite the handoff State: batch id, briefs, budget, step, spend.
@@ -84,18 +86,23 @@ Then run section 2 to the end without asking.
   - Budget per lane from a call plan: first-round acc 7 calls per brief plus 4; display 7 per brief plus 4 (its screenshots); read, flags, and acc in follow-up rounds, 5 per brief plus 4; at most 4 briefs per acc lane. The hook caps each reviewer at 25 calls, so split a lane that would need more.
   - Lane instructions (Jonathan 2026-10-17, after s146b round 1 lost six receipts and round 2 lost none): name every file in each brief folder, ban Glob and folder listings, say that every file in a parallel read counts as one call, and tell reviewers to Grep large files rather than read them whole.
   - Each lane's RECEIPT_FORMAT.md names only the lane's receipt paths: strip the line that review_packet.py writes with its own output folder when the packet is built outside the lane (s146 packet error).
+  - Lane folders and INSTRUCTIONS.md come from `tools/spine/lanes.py <spec.json>` (round, lanes, briefs, budgets, the prior receipts and adjudication notes; s148 fix 5). Its budgets are the call plan above, 2 spare calls per lane at least; the gate counts the batch's earlier containers from the committed ledger (fix 3), so never cut spare calls by hand.
+  - Foreground lanes (s148 fix 2): launch every lane of the round in ONE message with run_in_background false, so all receipts return in one turn and no reviewer wakes the lead on its own. Launch prompts stay short: the Role, Plan step, Lane and Budget lines, then "Read INSTRUCTIONS.md in your lane first".
+  - After the round: `python3 tools/hooks/usage_ledger.py` and commit repair/efficiency/ledger_spine.csv (fix 3), and `usage_ledger.py --lead --record <wave>` (fix 7).
 - **S5. Adjudicate and fix.**
   - Every HIGH and MED, with evidence.
   - Every LOW sorted into fixed, deferred (with where it goes) or rejected.
   - Record which role found or missed what.
 - **S6. Lead self-check** (section 4) on every changed line.
 - **S7. Follow-up review.**
-  - The same four roles, on the changed lines with context, each given its first-round receipt.
+  - The same four roles, on the changed lines with context, each given its last receipt: packets from `review_packet.py --since <the reviewer's last brief_text.txt>` (changes.md; it prints the changed steps for the display sheets, `sheets.py --steps`), lanes from lanes.py, launched in the foreground as in S4, the ledger committed after the round.
   - Write-first lanes, 5 calls per brief covered plus 4, display 7 per brief plus 4, with the same lane instructions as S4 (Jonathan 2026-10-17; was 4 per brief plus 2, s139). A reviewer that relays a verdict without writing its receipt counts as no receipt: relaunch it on the same lane with the call plan in the prompt.
-  - A reviewer with only LOW findings returns PASS-IF (conditional PASS) with exact replacements; the lead applies the approved ones, and verify keeps the receipts current without another round.
+  - A reviewer with only LOW findings returns PASS-IF (conditional PASS) with exact replacements; the lead applies the approved ones (`tools/spine/reps.py <brief dir> <receipt> --only N,...`), and verify keeps the receipts current without another round. A replacement that only adds a hedge word found in the quote its line cites counts as wording-only for the other parts (s148 fix 8, Jonathan 2026-10-18).
   - Loop S5 to S7 until READY or the budget is spent.
+  - Restart point (s148 fix 1, Jonathan 2026-10-18): when the last follow-up round leaves every brief READY (or the budget stops it), rewrite the handoff State ("S7 done: all READY") and send only "S7 done. Paste into a fresh chat:" with the restart line alone in its own code block. S8 and S9 run in the fresh chat (approval records live in the presenting container).
 - **S8. Final report** (section 5):
-  - preview and screenshots;
+  - `python3 tools/spine/verify_all.py <brief dirs>` (three at a time; all READY);
+  - preview and screenshots: `tools/spine/shots_all.py` (phone, phone-study, desktop, desktop-study in one sequential run), then `sheets.py --approval`;
   - register them with `approval.py present`;
   - send the report and wait for "ship".
 - **S9. Ship and post-ship**, per the handoff:
@@ -157,6 +164,7 @@ Then run section 2 to the end without asking.
 12. Phone screenshots: no text squeezed into a narrow column (a few words per line).
 13. Every cut and every removed number was searched in the card index (key terms, high-yield lines) before it was made (Jonathan 2026-10-17); the search terms are in its cuts.json entry.
 14. Every card in cards.md has a disposition and `card_dispositions.py check` passes; each "covered" names the claims that teach it, and no carded fact the old brief or the bank holds was dropped without one (Jonathan 2026-10-17).
+15. Every "warn lint" line from verify (tools/spine/lint.py: next-step cells with no action, missing other names, a hedge dropped from the cited quote, one decision with two thresholds, a number no quote holds) is fixed or answered in the batch file before the reviewers run (s148 fix 6). The lint is advisory: an answered warning may stand.
 
 ## 5. The final report: one message, the first one to Jonathan since launch (apart from section 6)
 
@@ -175,7 +183,7 @@ In this order:
    - what each Sonnet role missed against Opus, and what Opus missed.
 6. **Cost:**
    - measured per role (usage_ledger.py, output estimated from what each agent wrote), against the budget;
-   - the lead's own tokens (`usage_ledger.py --lead`) and start-up context, beside the reviewer cost (s135 item 3);
+   - the lead's own tokens (`usage_ledger.py --lead --record <wave>`, one row per chat in repair/efficiency/ledger_lead.csv) and start-up context, beside the reviewer cost (s135 item 3); the batch total is the reviewers plus every lead row of the wave, against the budget, and against WAVE.json's max_lead_tokens when the launch prompt names one (shown only; the gate enforces the reviewer caps); s148 fix 7;
    - projected cost per brief at scale;
    - a proposed budget for the next batch.
 7. **Screenshots** registered with `approval.py present`: phone and desktop, sculpted and study.
