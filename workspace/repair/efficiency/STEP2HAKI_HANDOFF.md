@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-18, by the s148 lead (continuation chat 2, S3 done).
+Last updated: 2026-10-18, by the s148 lead (continuation chat 3, S4 running).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -17,11 +17,9 @@ s148 is open; a fresh chat continues it with the line above.
 - **Open batch: s148** (Phase 2 musculoskeletal A, adult), launched 2026-10-17 22:34. Briefs: pmr, scaphoid, backpain,
   hippos, gtps, oa-pharm, septic-bursitis, shoulder-rom, plus the carried bs-puv. Budget 32 agents, 320 API calls, 14M
   tokens (WAVE.json wave s148). Branch wip/s148 in both repos. Batch file: repair/s148/S148.md (read it first).
-- **Step:** S3 done (2026-10-18, continuation chat 2): all nine MECHANICAL PASS (full verify --mech); build, gate,
-  render, vendor_scan, preflight and legib_audit as recorded in S148.md "S3 mechanical checks". Jonathan's UWorld
-  sources were applied to shoulder-rom and hippos before S3. **Next: S4 review round 1** in a fresh chat: session
-  start, hooks into /root/.claude/settings.json and the lean-reviewer check before any agent; then packets from
-  review_packet.py, write-first lanes (runbook S4 call plan; bs-puv owes all four parts).
+- **Step:** S4 review round 1 running (continuation chat 3, 2026-10-18): hooks installed (Jonathan allowed the held
+  install), 12 lanes launched in repair/efficiency/lanes/s148/r1 (acc, read, display, flags x groups A to C; see
+  S148.md "S4 round 1"). Next: collect receipts into repair/migration/spine/reviews (bs-puv as _r6), then S5.
 - **Report items already known:** backpain 812 words against the hub cap of about 700 (16% over, all lines
   board-tested; Needs C: list the overage); shoulder-rom 729 (4% over, UWorld content, kept); no live brief owns gout
   (septic-bursitis keyed the gout pharmacology cards scope: queue a gout brief); verify.py P1 tool change (G-DIFF);
