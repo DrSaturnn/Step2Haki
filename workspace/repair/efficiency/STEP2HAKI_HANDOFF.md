@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-18, by the s148 lead (continuation chat 3, S6 done).
+Last updated: 2026-10-18, by the s148 lead (continuation chat 4, S8 presented).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -17,24 +17,14 @@ s148 is open; a fresh chat continues it with the line above.
 - **Open batch: s148** (Phase 2 musculoskeletal A, adult), launched 2026-10-17 22:34. Briefs: pmr, scaphoid, backpain,
   hippos, gtps, oa-pharm, septic-bursitis, shoulder-rom, plus the carried bs-puv. Budget 32 agents, 320 API calls, 14M
   tokens (WAVE.json wave s148). Branch wip/s148 in both repos. Batch file: repair/s148/S148.md (read it first).
-- **Step:** S6 done (continuation chat 3, 2026-10-18). Round 1: 12 lanes, 36 of 36 receipts (filed as reviews/<brief>_<part>_r1.md,
-  bs-puv _r6); S5 fixed all nine (S148.md "S5 adjudication (round 1)", per brief); Jonathan: hub treatment "Keep them
-  in Workup" (digest); S6 checks pass (S148.md "S6"). **Next: S7 follow-up review round 2** in a fresh chat: session
-  start (hooks into /root/.claude/settings.json, likely held again; ask), rebuild /tmp page, review_packet.py --diff
-  per brief (changes against the round-1 build: build the round-1 page from private wip/s148 commit a432677's folders,
-  or diff each brief_text.txt against repair/efficiency/lanes/s148/r1/<lane>/<brief>/brief_text.txt), lanes
-  with the round-1 receipt in each brief folder, write-first, 5 calls per brief plus 4 (display 7 plus 4, changed
-  steps only); receipts _r2 (bs-puv _r7).
-- **Report items already known:** backpain 834 words against the hub cap of about 700 (19% over, all lines
-  board-tested; Needs C: list the overage); shoulder-rom 735 (5% over after cut C6, kept); site-layer queue: sticky
-  rail truncates step names with long titles (gtps display r1), Practice Distractors panel unmasked in study mode; no live brief owns gout
-  (septic-bursitis keyed the gout pharmacology cards scope: queue a gout brief); verify.py P1 tool change (G-DIFF);
-  remove the stale K3 hippos allowlist line at the ship.
-- **Lead helpers** (scratch, recreate if needed): sync.sh (folder to private local-only, commit, push wip/s148),
-  hand_disp.py (hand dispositions by claim-text snippet, then statement keys), remap_disp.py (covered ids by claim
-  text from an old claim map).
-- **Hooks:** test_hooks 84/84 offline at launch; the S4 chat installs them (new container).
-- **Spend:** 12 agents, 132 calls, 6.62M tokens of 32, 320, 14M (round 1).
+- **Step:** S8 presented (continuation chat 4, 2026-10-18): all nine READY after review rounds 2 and 3; approval.py
+  present s148 (76 screenshots, local/shots/s148) in this chat's container; the report is sent. **Next:** Jonathan's
+  "ship" (to this chat; a fresh chat must present again), then S9 per the runbook, and at the close the hooks-by-plugin
+  update (digest 2026-10-18: step2haki-tools 0.2.0 with hooks/hooks.json, guarded; runbook session start then probes).
+- **Spend:** 30 agents, 289 calls, 12.22M tokens of 32, 320, 14M.
+- **Ship notes:** remove the stale K3 hippos allowlist line; merge main into wip/s148 first; OPEN_WORK items: sticky rail
+  truncates long step names, Practice Distractors panel unmasked in study mode, desktop chip wrap (hippos clue row), a
+  gout brief (no live owner), queued item-stem fixes (bs-puv "2 do", scaphoid CTS and CMC, shoulder-rom C5-C6).
 - **Carried from s147:** open decision on the public wip/s147 branch (delete or leave; Jonathan's call); the stray
   ~/step2haki-private-push/_xfer_pub.bundle on the Mac; open small items as listed in S147.md.
 
