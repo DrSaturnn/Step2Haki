@@ -5,6 +5,9 @@ calls and tokens per agent, with its role, wave, requested model (agent-<id>.met
 
   python3 tools/hooks/usage_ledger.py [--wave ID]     print the table (and the wave total) and update the CSV
   python3 tools/hooks/usage_ledger.py --lead           the lead's own calls and tokens per session transcript (item 3)
+  python3 tools/hooks/usage_ledger.py --lead --record W  also append or update this session's row for wave W in
+                                                       repair/efficiency/ledger_lead.csv and print the wave's batch
+                                                       total, reviewers plus every lead row (s148 efficiency fix 7)
   python3 tools/hooks/usage_ledger.py --context        start-up context of the lead and of each agent, against
                                                        repair/efficiency/context_baseline.json (item 9; run at batch start)
 """
@@ -49,12 +52,58 @@ def rows():
 BASE = os.path.join(C.WS, 'repair', 'efficiency', 'context_baseline.json')
 
 
+LEAD = os.environ.get('AX_LEDGER_LEAD', os.path.join(C.WS, 'repair', 'efficiency', 'ledger_lead.csv'))
+LEAD_COLS = ['session', 'wave', 'calls', 'input', 'cache_write', 'cache_read', 'output_est', 'tokens', 'startup', 'updated']
+
+
+def record_lead(wave, transcripts=None):
+    """append or update one row per lead session transcript in ledger_lead.csv for wave (keyed by session id, so a
+    re-record in the same chat updates its row); returns all rows of the wave"""
+    old = []
+    if os.path.exists(LEAD):
+        old = list(csv.DictReader(open(LEAD, encoding='utf-8')))
+    by = {(r['session'], r['wave']): r for r in old}
+    for p in (C.lead_transcripts() if transcripts is None else transcripts):
+        u, f = C.usage(p), C.first_context(p) or {}
+        sid = os.path.basename(p)[:-len('.jsonl')]
+        by[(sid, wave)] = {'session': sid, 'wave': wave, 'calls': u['calls'], 'input': u['input'],
+                           'cache_write': u['cache_write'], 'cache_read': u['cache_read'], 'output_est': u['output_est'],
+                           'tokens': u['tokens'], 'startup': sum(f.values()), 'updated': time.strftime('%Y-%m-%dT%H:%M')}
+    with open(LEAD, 'w', newline='', encoding='utf-8') as fh:
+        w = csv.DictWriter(fh, LEAD_COLS)
+        w.writeheader()
+        for k in sorted(by):
+            w.writerow({c: by[k].get(c, '') for c in LEAD_COLS})
+    return [r for (s, wv), r in sorted(by.items()) if wv == wave]
+
+
+def batch_total(wave):
+    """reviewers (the committed agent ledger plus this container's transcripts, as the gate counts them) plus every lead
+    row of the wave"""
+    rev = C.wave_spend(wave)
+    leads = [r for r in csv.DictReader(open(LEAD, encoding='utf-8'))] if os.path.exists(LEAD) else []
+    leads = [r for r in leads if r['wave'] == wave]
+    lt = sum(int(r['tokens'] or 0) for r in leads)
+    return rev, leads, lt
+
+
 def lead(argv):
     for p in C.lead_transcripts():
         u, f = C.usage(p), C.first_context(p) or {}
         print('lead %s calls=%d tokens=%d (input %d, cache write %d, cache read %d, output est %d); start-up context %d'
               % (os.path.basename(p)[:8], u['calls'], u['tokens'], u['input'], u['cache_write'], u['cache_read'],
                  u['output_est'], sum(f.values())))
+    if '--record' in argv:
+        wave = argv[argv.index('--record') + 1]
+        record_lead(wave)
+        rev, leads, lt = batch_total(wave)
+        w = C.wave() or {}
+        cap = w.get('max_lead_tokens') if w.get('id') == wave else None
+        print('batch %s: reviewers %d agents, %d calls, %d tokens; lead %d session row(s), %d tokens%s; total %d tokens%s'
+              % (wave, rev['agents'], rev['calls'], rev['tokens'], len(leads), lt,
+                 ' (lead cap %s, shown only; the gate enforces reviewer caps)' % cap if cap else '',
+                 rev['tokens'] + lt, ' (the wave budget, %s tokens, caps the reviewers)' % w.get('max_tokens') if w.get('id') == wave else ''))
+        print('ledger: %s' % os.path.relpath(LEAD, C.WS))
     return 0
 
 

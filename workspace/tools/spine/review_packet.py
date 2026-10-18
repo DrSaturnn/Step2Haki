@@ -4,6 +4,7 @@ into each reviewer's lane. It replaces the lead's hand-built R3 round-1 packets,
 lead-in and type (two false MED findings) and listed only 132 of 177 brief titles (one false MED).
 
   python3 tools/spine/review_packet.py <brief dir> <review dir> [--page index.html] [--proposals FILE] [--diff]
+                                         [--since <old brief_text.txt>]
 
 Writes <review dir>/<part>/ for part acc, read, display, flags: brief_text.txt (the brief as the learner reads it, each
 bank item shown with its type and lead-in), deps.txt (the receipt's deps line and brief-sha, from verify.py),
@@ -13,7 +14,9 @@ all of them), drawer_targets.txt (each drawer or pointer in the brief and whethe
 ALIASES.json and ABBREV.json (s147: the other-names and abbreviation tables the read rules cite); flags adds
 facts.json, outline_flags.txt and line_sources.txt (every line's cited ids, each quote once; s144). With --diff (s141), every part also gets changes.md: a line diff of the brief as
 the learner reads it, the page's current brief against this build, so a rollout review can find each change without
-comparing two briefs by hand. Screenshots for display come from shots.py separately.
+comparing two briefs by hand. With --since <old brief_text.txt> (s148 efficiency fix 5; replaces the s148 diffs.py),
+changes.md diffs against the version the reviewer last judged (a follow-up round), and the changed step numbers are
+printed for the display sheets (sheets.py --steps). Screenshots for display come from shots.py separately.
 """
 import difflib
 import hashlib
@@ -210,6 +213,35 @@ def copy_read_tables(read_dir):
     return done
 
 
+STEP_HDR = re.compile(r'^(\d)(Illness script|Presentation|Urgent risks|Differential|Workup|Diagnostic criteria|Severity|'
+                      r'Treatment|Follow-up)$|^(Practice)$')
+
+
+def changed_steps(old, new):
+    """the step numbers (and 'header' above step 1, 'practice' for the bank) whose lines differ between two brief texts"""
+    heads = []
+    for i, l in enumerate(new):
+        m = STEP_HDR.match(l)
+        if m:
+            heads.append((i, m.group(1) or 'practice'))
+    out = set()
+    for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(None, old, new, autojunk=False).get_opcodes():
+        if tag == 'equal':
+            continue
+        for j in range(j1, max(j2, j1 + 1)):
+            h = [k for i, k in heads if i <= j]
+            out.add(h[-1] if h else 'header')
+    order = {'header': -1, 'practice': 99}
+    return sorted(out, key=lambda k: order.get(k, int(k) if k.isdigit() else 50))
+
+
+def since_diff(old, new):
+    dl = list(difflib.unified_diff(old, new, 'your last review', 'this build', n=2, lineterm=''))
+    n = sum(1 for x in dl if x[:1] in '+-' and x[:3] not in ('+++', '---'))
+    return ('# Changes since your last review\n\nLines starting "-" are the version you last reviewed; "+" this build; '
+            'others are context. %s\n\n' % ('No change.' if not dl else '%d changed line(s).' % n)) + '\n'.join(dl) + '\n'
+
+
 def main(argv):
     if len(argv) < 2:
         sys.exit(__doc__.strip().splitlines()[3].strip())
@@ -238,6 +270,10 @@ def main(argv):
         diff = ('# Changes in this build (s141 --diff)\n\nLines starting "-" are the page now; "+" this build; others are '
                 'context. %s\n\n' % ('No change.' if not dl else '%d changed line(s).' % sum(
                     1 for x in dl if x[:1] in '+-' and x[:3] not in ('+++', '---')))) + '\n'.join(dl) + '\n'
+    steps = None
+    if '--since' in argv:
+        old = open(argv[argv.index('--since') + 1], encoding='utf-8').read().splitlines()
+        diff, steps = since_diff(old, txt.splitlines()), changed_steps(old, txt.splitlines())
     for part in ('acc', 'read', 'display', 'flags'):
         pd = os.path.join(out, part)
         os.makedirs(pd, exist_ok=True)
@@ -276,6 +312,8 @@ def main(argv):
     n_leads = len(re.findall(r'Lead-in: (?!\(none\))', txt))
     print('review_packet: %s, brief-sha %s, %d items (%d with lead-ins), %d brief titles, %d drawer targets'
           % (v.bid, bsha, n_items, n_leads, len(tl), len(drawers)))
+    if steps is not None:
+        print('changed steps: %s' % (','.join(steps) if steps else 'none'))
     return 0
 
 

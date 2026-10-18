@@ -16,7 +16,8 @@ H = os.path.dirname(os.path.abspath(__file__))
 WS = os.path.abspath(os.path.join(H, '..', '..'))
 T = tempfile.mkdtemp(prefix='hooktest-')
 ENV = dict(os.environ, AX_HOOK_STATE=os.path.join(T, 'state'), AX_TRANSCRIPTS=os.path.join(T, 'projects'),
-           AX_WAVE=os.path.join(T, 'WAVE.json'), AX_LEDGER=os.path.join(T, 'ledger.csv'), AX_TEST_LOG='{"v": 0, "note": "test"}')
+           AX_WAVE=os.path.join(T, 'WAVE.json'), AX_LEDGER=os.path.join(T, 'ledger.csv'),
+           AX_LEDGER_LEAD=os.path.join(T, 'ledger_lead.csv'), AX_TEST_LOG='{"v": 0, "note": "test"}')
 TB = 's0hooktest'                                  # a throwaway batch folder, removed at the end
 TBD = os.path.join(WS, 'repair', TB)
 LANE = os.path.join(WS, 'repair', 'migration', 'peds', 'nephrotic-child', 'spine')
@@ -139,6 +140,21 @@ try:
     expect('fix 3: rows with a transcript here or of another wave are not counted', launch(PP + ' (p4)'), 0)
     os.remove(ENV['AX_LEDGER'])
     expect('fix 3: no ledger, no past spend', launch(PP + ' (p5)'), 0)
+    # ---- s148 fix 7: the lead's row per session in ledger_lead.csv, updated in place on a re-record
+    lp = os.path.join(T, 'projects', 'p', 'LEADSESS.jsonl')
+    with open(lp, 'w') as f:
+        for i, out in enumerate((100, 200)):
+            f.write(json.dumps({'type': 'assistant', 'message': {'id': 'L%d' % i, 'model': 'm', 'usage': {
+                'input_tokens': 5, 'cache_creation_input_tokens': 50, 'cache_read_input_tokens': 1000, 'output_tokens': out}}}) + '\n')
+    json.dump({'id': 'LEADW', 'open': True, 'max_agents': 1, 'max_calls': 1, 'max_tokens': 10 ** 6, 'max_lead_tokens': 5000},
+              open(ENV['AX_WAVE'], 'w'))
+    for _ in range(2):
+        rc_, out_ = run('usage_ledger.py', {}, '--lead', '--record', 'LEADW')
+    import csv as _csv
+    _rows = list(_csv.DictReader(open(ENV['AX_LEDGER_LEAD'])))
+    expect('fix 7: one lead row per session, updated in place', (len(_rows), out_), 1)
+    expect('fix 7: lead row tokens', (int(_rows[0]['tokens']) if _rows else -1, out_), 10 + 100 + 2000 + 300)
+    expect('fix 7: batch total printed with the lead cap', (0 if 'lead cap 5000' in out_ and 'total' in out_ else 1, out_), 0)
     # ---- H5 usage: streamed chunks share a message id; the final output count is the largest (2026-10-12 fix)
     up = os.path.join(T, 'usage_stream.jsonl')
     with open(up, 'w') as f:
