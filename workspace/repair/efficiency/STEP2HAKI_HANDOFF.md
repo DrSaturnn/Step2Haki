@@ -18,11 +18,15 @@ s148 is open; a fresh chat continues it with the line above.
   hippos, gtps, oa-pharm, septic-bursitis, shoulder-rom, plus the carried bs-puv. Budget 32 agents, 320 API calls, 14M
   tokens (WAVE.json wave s148). Branch wip/s148 in both repos. Batch file: repair/s148/S148.md (read it first; it has
   the entry types, folders, the timelines direction and the recipe notes).
-- **Step:** S1 and S2. Done: bs-puv (subtitle rewritten; MECHANICAL PASS; owes a four-part review in S4), pmr,
-  oa-pharm, hippos (MECHANICAL PASS each; batch file sections). Next: the five merge-folder hubs (scaphoid, backpain,
-  gtps, septic-bursitis, shoulder-rom), each by the s147 recipe (S147.md, "Recipe per brief"), in
-  repair/migration/merge/<id>/spine; then S3 (copy each 10_*_spine.json into repair/s148, the Presentations sidebar
-  links for the six hubs as in repair/s147/40_presentations.json, verify --mech, legib_audit); then restart for S4.
+- **Step:** S1 and S2. Done (MECHANICAL PASS each; batch file sections): bs-puv (subtitle rewritten; owes a four-part
+  review in S4), pmr, oa-pharm, hippos, scaphoid, shoulder-rom. Next: backpain, gtps, septic-bursitis, each by the s147
+  recipe (S147.md, "Recipe per brief") in repair/migration/merge/<id>/spine, following the scaphoid and shoulder-rom
+  builds (hub, live ids and bank header kept; the merge claim maps have no sources, so re-source or cut every number);
+  then S3 (copy each 10_*_spine.json into repair/s148, the Presentations sidebar links for the six hubs as in
+  repair/s147/40_presentations.json, verify --mech, legib_audit); then restart for S4.
+- **Lead helpers** (scratch, recreate if needed): sync of a brief folder to the private repo (cp the folder and new
+  repair/sources/web files into local-only, commit, push wip/s148); card_dispositions statement warnings keyed as scope
+  in bulk after the card-level dispositions.
 - **Launch decisions in the digest:** the launch prompt, and Jonathan's timelines direction ("ensure the respective
   timelines are being included as needed"): bold timelines in Decides-it cells and Timing or course strips where a
   source gives the timing; the report lists them per brief.
