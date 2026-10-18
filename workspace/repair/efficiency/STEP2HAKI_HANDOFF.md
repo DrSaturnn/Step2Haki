@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-17, by the s147 lead (continuation chat 3, S3 done).
+Last updated: 2026-10-17, by the s147 lead (continuation chat 4, S5 and S6 done).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -18,36 +18,28 @@ s147 is open; a fresh chat continues it with the line above.
   Briefs: peds-uti-recurrent, enuresis, peds-aki, bs-puv (disease), bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes,
   scrotum (hubs). Golden nephrotic-child (peds lens); voices for hubs. Budget 24 agents, 220 API calls, 9M tokens
   (WAVE.json).
-- **Step: S3 done (continuation chat 3, 2026-10-17); next is S4, review round 1, in a fresh chat.** All eight MECHANICAL
-  PASS (full verify --mech); batch preview build OK, gate PASS, render PASS, vendor_scan 0 flagged, preflight P1 1 (held by
-  peds-uti-recurrent cuts.json); legib_audit 0 below contrast in all six cells. Words: peds-uti-recurrent 918,
-  enuresis 1,054, peds-aki 837, bs-puv 779 (disease cap 1,300); bs-abdominal-mass 681, bs-distal-rta 730, aq-puffy-eyes
-  733, scrotum 635 (hub cap 700; the two over it are within 5%, listed). Batch files: workspace/repair/s147/10_*_spine.json
-  and 40_presentations.json (Presentations 8 to 12). Every S1 to S3 call is in the batch file repair/s147/S147.md.
-- **S4 chat reads** (runbook continuation list): this State, repair/s147/S147.md, digest lines from 2026-10-15 on, the
-  batch's BRIEF_AMEND_LIST rows, and per brief boards.md, cuts.json and the cards_disposition.json counts. Folders:
-  repair/migration/merge/<id>/spine for peds-uti-recurrent and enuresis, repair/migration/peds/<id>/spine for the other six
-  (private repo wip/s147, local-only/...).
-- **Session start for the S4 chat:** clone the public repo and check out wip/s147; clone the private repo with
-  `git clone --depth 1 -b wip/s147 https://github.com/DrSaturnn/Step2Haki-private /home/claude/step2haki-private`; npm i;
-  cp -rn local-only; board_index.py build; install the hooks into /root/.claude (install.sh, then the three hooks into
-  /root/.claude/settings.json and lean-reviewer into /root/.claude/agents), test_hooks, usage_ledger --context, check the
-  Agent tool lists step2haki-tools:lean-reviewer, and run the live probe tests T1 to T4, T8, T9 before any agent work.
-- **S4 plan (runbook):** packets from tools/spine/review_packet.py only; write-first lanes; first-round acc 7 calls per
-  brief plus 4 (at most 4 briefs per lane), display 7 per brief plus 4, read and flags 5 per brief plus 4; lane
-  instructions name every file, ban globs, count each parallel read. Flags for acc: enuresis bank item q_11fc98144a28
-  (a 6-year-old, key desmopressin) against "usually from age 7"; bs-puv bank item q_259789d8f22f (ureterocele in a girl)
-  has no card or body row.
-- **Spend:** 0 agents, 0 calls, 0 tokens.
+- **Step: S5 done, S6 done (continuation chat 4, 2026-10-17 21:00); next is S7, follow-up review round 2, after
+  Jonathan answers the budget question** (round 1 used 6.70M of the 9M tokens; round 2 projects about 6M more).
+  Round 1: 10 lanes, 30 of 32 receipts (no flags receipt for aq-puffy-eyes or scrotum: flags-B hit its cap). Every MED
+  adjudicated and fixed or rejected with evidence (repair/s147/S147.md, S5). All eight MECHANICAL PASS (--fast); batch
+  preview build, gate, render PASS; vendor_scan 0; preflight P1 1 (held by cuts); legib 0 below contrast. Words:
+  peds-uti 934, enuresis 1,063, peds-aki 870, bs-puv 800; bs-abdominal-mass 681, bs-distal-rta 734, aq-puffy-eyes 731,
+  scrotum 643.
+- **S7 plan:** packets with review_packet.py --diff (changes.md against the live brief is the whole brief for these new
+  conversions, so give each lane the S5 edit list from S147.md as the scope) plus the r1 receipt; acc A and B (opus, 4
+  briefs, Budget 24), read A and B, flags A (4 changed briefs) and B (bs-abdominal-mass changed; aq-puffy-eyes and scrotum
+  full, flags owed from round 1), display A and B with phone-study images of the changed steps only. Lane builder:
+  /tmp scripts are gone in a new container; rebuild from repair/s147/S147.md (S4 notes).
+- **Spend:** 10 agents, 114 calls, 6.70M tokens (usage_ledger).
 - **Mac:** caught up at the s146b ship; nothing owed. The stray ~/step2haki-private-push/_xfer_pub.bundle is still there.
-- **Lessons for lanes (s146, s146b):** the callgate counts every tool use, each file of a parallel batch included. Lane
-  instructions name every file, ban globs, say each parallel read counts; display 7 calls per brief plus 4; acc round 1
-  7 per brief plus 4. Read packets carry ALIASES.json and ABBREV.json (s147).
-- **Open small items:** brief header still in the old style (hypoxemia-mech subtitle "five mechanisms"); sinopulm phone
-  sticky bar truncates the title; hypercalcemia study mode shows "Bisphosphonates are usually the drugs of choice in
-  malignancy" beside the masked rung (display LOW; masking needs markup); polyuria "common" in Pairs with (flags LOW,
-  replacement crosses a bold); legib clashes on hover buttons inside table cells (aq-puffy-eyes Course, Bradykinin) and on
-  count buttons; deferred LOWs in repair/s141 to s146b batch files.
+- **Lessons for lanes (s146, s146b, s147):** the callgate counts every tool use, each file of a parallel batch included.
+  Inline the lane instructions in the launch prompt (s147: saves a call per agent). Tokens, not calls, bound s147: about
+  59k tokens per call in round 1.
+- **Open small items:** brief header still in the old style (p.sub subtitles kept on converted briefs, e.g. bs-puv
+  "drain, then image"); sinopulm phone sticky bar truncates the title; hypercalcemia study mode shows "Bisphosphonates are
+  usually the drugs of choice in malignancy" beside the masked rung; polyuria "common" in Pairs with; legib clashes on
+  hover buttons inside table cells and on count buttons; Treatment rung labels (ABLATE, DRAIN, DIALYSIS) stay visible in
+  study mode (site-wide, display LOW); deferred LOWs in repair/s141 to s147 batch files.
 
 ## Next launch prompt (paste into a fresh chat)
 
