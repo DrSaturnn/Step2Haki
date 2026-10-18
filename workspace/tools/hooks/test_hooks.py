@@ -107,6 +107,18 @@ try:
     expect('H4 third call (budget 3)', call('a2', 'Bash', {'command': 'python3 tools/spine/fetch.py --out %s/f.json' % LANE}), 0)
     expect('H4 fourth call refused', call('a2', 'Read', {'file_path': WS + '/index.html'}), 2)
     expect('H4 report still allowed', call('a2', 'SubagentHandback', {'message': 'report'}), 0)
+    # ---- s148 S7: parallel calls from one agent never race on its count file (one read it empty: hook error)
+    PR = P + ' (race)'
+    transcript('r1', PR)
+    with open(os.path.join(ENV['AX_HOOK_STATE'], 'launches.jsonl'), 'a') as f:
+        f.write(json.dumps({'wave': 'TEST', 'prompt_sha': hashlib.sha256(PR.encode()).hexdigest()}) + '\n')
+    import concurrent.futures as _cf
+    with _cf.ThreadPoolExecutor(12) as _ex:
+        _res = list(_ex.map(lambda i: call('r1', 'Read', {'file_path': LANE + '/facts.json'}), range(12)))
+    _rec = json.load(open(os.path.join(ENV['AX_HOOK_STATE'], 'agents', 'r1.json')))
+    expect('race: no hook error in 12 parallel calls', (0 if not any('HOOK ERROR' in o for _, o in _res) else 1, ''), 0)
+    expect('race: every call counted', (_rec['count'], ''), 12)
+    expect('race: exactly the budget allowed', (sum(1 for c, _ in _res if c == 0), ''), 3)
     # ---- H5 usage: streamed chunks share a message id; the final output count is the largest (2026-10-12 fix)
     up = os.path.join(T, 'usage_stream.jsonl')
     with open(up, 'w') as f:

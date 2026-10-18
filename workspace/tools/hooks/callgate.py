@@ -9,6 +9,7 @@ UserPromptSubmit hook alone). Subagent calls:
       may not name a forbidden path except as the script it runs, and its redirect or tee targets must be in the lane
       or /tmp. (A pattern gate: it stops plain writes, not a determined evasion; the lead's diff review backs it.)
 """
+import fcntl
 import json
 import os
 import re
@@ -66,6 +67,21 @@ def lead(d):
     return 0
 
 
+def save(p, rec):
+    """atomic write (s148 S7): a parallel call's hook never reads a half-written record"""
+    tmp = '%s.%d.tmp' % (p, os.getpid())
+    json.dump(rec, open(tmp, 'w', encoding='utf-8'))
+    os.replace(tmp, p)
+
+
+def lock(aid):
+    """one hook at a time per agent (s148 S7: two parallel Greps raced on the count file; one read it empty, the hook
+    errored and refused a valid call). The lock is released when the hook process exits."""
+    f = open(C.state('agents', '%s.lock' % aid), 'a')
+    fcntl.flock(f, fcntl.LOCK_EX)
+    return f
+
+
 def agent_record(d):
     aid = d['agent_id']
     p = C.state('agents', '%s.json' % aid)
@@ -86,7 +102,7 @@ def agent_record(d):
     cfg = C.roles()
     rec = {'agent_id': aid, 'role': h['role'], 'lane': os.path.realpath(h['lane']), 'wave': launched[-1]['wave'],
            'budget': budget(cfg['roles'].get(h['role'], {}).get('budget', 0), h.get('budget')), 'count': 0, 'transcript': tr}
-    json.dump(rec, open(p, 'w', encoding='utf-8'))
+    save(p, rec)
     return p, rec
 
 
@@ -117,11 +133,12 @@ REPORT_TOOLS = {'SubagentHandback'}      # an agent must always be able to repor
 
 
 def subagent(d):
+    _held = lock(d['agent_id'])  # noqa: F841  held until this hook exits
     p, rec = agent_record(d)
     if d.get('tool_name') in REPORT_TOOLS:
         return 0
     rec['count'] += 1
-    json.dump(rec, open(p, 'w', encoding='utf-8'))
+    save(p, rec)
     who = '%s agent %s' % (rec['role'], d['agent_id'])
     if rec['count'] > rec['budget']:
         C.refuse('CALL BUDGET: %s has used its %d calls. Stop now and report what your packet lacked.'
