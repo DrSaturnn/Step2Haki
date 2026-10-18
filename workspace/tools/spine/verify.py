@@ -318,6 +318,7 @@ class Verify:
         except Exception as ex:  # noqa: BLE001
             self.F('build', '%s: %s' % (type(ex).__name__, str(ex)[:200]))
             return
+        new = presentations_link(new, self.bid)   # s147: a new hub's Presentations link (the batch nav edit adds it)
         pv = os.path.join(self.tmp, 'preview.html')
         P.write_page(pv, new)
         self.G('build', 'preview %+d chars' % (len(new) - len(page)))
@@ -477,6 +478,23 @@ def apply_tail_fix(t, fixes):
 
 MODAL = ('may', 'might', 'can', 'could', 'usually', 'typically', 'often', 'generally', 'commonly', 'most', 'some',
          'about', 'approximately', 'up to', 'at least')
+
+
+def presentations_link(page, bid):
+    """s147 (G-DIFF): a brief that becomes a hub needs a plain link in the sidebar's Presentations group (runbook S2;
+    gate nav-link). The batch adds it in its own nav edit (repair/<batch>/40_*.json), which a one-brief preview does not
+    apply, so the preview adds the link itself: after the group's last link, count up by one. Unchanged when the brief
+    is not a hub, the page has no Presentations group, or the link is already there."""
+    m = re.search(r'<div class="brief[^"]*" id="%s"[^>]*>' % re.escape(bid), page)
+    if not m or 'data-entry="hub"' not in m.group(0):
+        return page
+    g = re.search(r'(    <div class="sect">Presentations <span class="count">)(\d+)(</span></div>\n)((?:    <a [^\n]*\n)*)', page)
+    if not g or ('href="#%s"' % bid) in g.group(4):
+        return page
+    h4 = re.search(r'<h4[^>]*>(.*?)</h4>', page[m.end():m.end() + 20000], re.S)
+    title = re.sub(r'<[^>]+>', '', h4.group(1)).strip() if h4 else bid
+    new = g.group(1) + str(int(g.group(2)) + 1) + g.group(3) + g.group(4) + '    <a href="#%s">%s</a>\n' % (bid, title)
+    return page[:g.start()] + new + page[g.end():]
 
 
 def p1_residual(d, bid, old_page, new_page):

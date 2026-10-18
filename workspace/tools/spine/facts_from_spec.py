@@ -2,10 +2,11 @@
 """facts_from_spec (lead tool, s146): build a brief folder's facts.json from a short spec, checking every quote.
   python3 tools/spine/facts_from_spec.py <spec.json> [--append]
 spec: {"out": "<facts.json path>", "population": "...", "cards": [[id, nid, quote], ...],
-       "web": [[id, sha, section, quote, population?], ...]}
+       "web": [[id, sha, section, quote, population?], ...],
+       "local": [[id, file under repair/sources, title, quote], ...]}   (s147: a local UWorld question file)
 Card quotes must appear in the card's text or extra (whitespace-normalized, as quote_check reads them); the title
 carries "high-yield line" when the quote is (part of) a pink line, and the card's Step 2 UWorld ids. Web quotes must
-appear in repair/sources/web/<sha>.txt. --append keeps the facts already in the file (ids must not repeat)."""
+appear in repair/sources/web/<sha>.txt; local quotes in their file (kind board). --append keeps the facts already in the file (ids must not repeat)."""
 import json, os, sys
 WS = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
 norm = lambda s: ' '.join(s.split())
@@ -39,6 +40,13 @@ for w in spec.get('web', []):
     assert fid not in seen, fid; seen.add(fid)
     facts.append(dict(id=fid, sha=sha, quote=q, section=sec, population=w[4] if len(w) > 4 else spec['population'],
                       setting='clinical reference', via='fetch'))
+for fid, f, title, q in spec.get('local', []):      # s147: UWorld question files, as the AIR and COPD facts cite them
+    assert f.startswith('repair/sources/'), f
+    if norm(q) not in norm(open(os.path.join(WS, f), encoding='utf-8').read()):
+        bad.append((fid, q[:60])); continue
+    assert fid not in seen, fid; seen.add(fid)
+    facts.append(dict(id=fid, local=f, quote=q, kind='board', title=title, population=spec['population'],
+                      setting='Step 2 CK board teaching'))
 if bad:
     sys.exit('not found: %s' % bad)
 json.dump({'facts': facts}, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

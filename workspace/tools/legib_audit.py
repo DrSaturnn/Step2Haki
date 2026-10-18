@@ -76,6 +76,15 @@ COLLECT = r"""
 """ % json.dumps(COMPONENTS)
 
 HIDE = "#%s, #%s *, #%s *::before, #%s *::after{color:transparent!important;-webkit-text-fill-color:transparent!important;text-shadow:none!important}"
+# s147 (Jonathan): the dotted underline on pointer links (.xref) has its own decoration color, so it stayed painted in the
+# text-transparent capture and read as an edge running through the link's own text (a false clash on every pointer link).
+# The underline is part of the link, not its background: hide it in the capture as well.
+HIDE_XREF = "#%s .xref, #%s .xref *{text-decoration-color:transparent!important}"
+
+
+def hide_css(bid):
+    """the style injected for the background capture: every text node and every pointer-link underline transparent"""
+    return HIDE % (bid, bid, bid, bid) + HIDE_XREF % (bid, bid)
 
 
 def lum(rgb):
@@ -155,7 +164,7 @@ def main():
                     data = pg.evaluate(COLLECT, bid)
                     if not data:
                         print('missing brief', bid, file=sys.stderr); continue
-                    tag = pg.add_style_tag(content=HIDE % (bid, bid, bid, bid))
+                    tag = pg.add_style_tag(content=hide_css(bid))
                     img = np.array(Image.open(io.BytesIO(el.screenshot())).convert('RGB'))
                     tag.evaluate("e => e.remove()")
                     for it in data['items']:

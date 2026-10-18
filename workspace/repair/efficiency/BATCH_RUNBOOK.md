@@ -28,6 +28,8 @@ This runbook sits under DECISIONS_DIGEST, STANDING_DIRECTIONS and the plan (clau
 
 **Restart line**, the same every time; Jonathan pastes it when a chat fills: `Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.`
 
+**The paste step** (Jonathan 2026-10-17: "always give me the paste step"): every message that stops a chat for a restart ends with the exact line to paste, alone in its own code block, so it can be copied in one tap; the same holds for the next launch prompt at a batch close.
+
 ## 1. Launch
 
 The launch prompt names:
