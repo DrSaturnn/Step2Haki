@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-18, by the s148 lead (continuation chat 1, S1 and S2 in progress).
+Last updated: 2026-10-18, by the s148 lead (continuation chat 2, S3 done).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -16,22 +16,20 @@ s148 is open; a fresh chat continues it with the line above.
 
 - **Open batch: s148** (Phase 2 musculoskeletal A, adult), launched 2026-10-17 22:34. Briefs: pmr, scaphoid, backpain,
   hippos, gtps, oa-pharm, septic-bursitis, shoulder-rom, plus the carried bs-puv. Budget 32 agents, 320 API calls, 14M
-  tokens (WAVE.json wave s148). Branch wip/s148 in both repos. Batch file: repair/s148/S148.md (read it first; it has
-  the entry types, folders, the timelines direction and the recipe notes).
-- **Step:** S1 and S2. Done (MECHANICAL PASS each; batch file sections): bs-puv (subtitle rewritten; owes a four-part
-  review in S4), pmr, oa-pharm, hippos, scaphoid, shoulder-rom. Next: backpain, gtps, septic-bursitis, each by the s147
-  recipe (S147.md, "Recipe per brief") in repair/migration/merge/<id>/spine, following the scaphoid and shoulder-rom
-  builds (hub, live ids and bank header kept; the merge claim maps have no sources, so re-source or cut every number);
-  then S3 (copy each 10_*_spine.json into repair/s148, the Presentations sidebar links for the six hubs as in
-  repair/s147/40_presentations.json, verify --mech, legib_audit); then restart for S4.
-- **Lead helpers** (scratch, recreate if needed): sync of a brief folder to the private repo (cp the folder and new
-  repair/sources/web files into local-only, commit, push wip/s148); card_dispositions statement warnings keyed as scope
-  in bulk after the card-level dispositions.
-- **Launch decisions in the digest:** the launch prompt, and Jonathan's timelines direction ("ensure the respective
-  timelines are being included as needed"): bold timelines in Decides-it cells and Timing or course strips where a
-  source gives the timing; the report lists them per brief.
-- **Hooks:** test_hooks 84/84 offline; writing them into /root/.claude/settings.json was held by the permission check
-  (as in s141 to s146): do it in the S4 chat (new container) before any agent.
+  tokens (WAVE.json wave s148). Branch wip/s148 in both repos. Batch file: repair/s148/S148.md (read it first).
+- **Step:** S3 done (2026-10-18, continuation chat 2): all nine MECHANICAL PASS (full verify --mech); build, gate,
+  render, vendor_scan, preflight and legib_audit as recorded in S148.md "S3 mechanical checks". Jonathan's UWorld
+  sources were applied to shoulder-rom and hippos before S3. **Next: S4 review round 1** in a fresh chat: session
+  start, hooks into /root/.claude/settings.json and the lean-reviewer check before any agent; then packets from
+  review_packet.py, write-first lanes (runbook S4 call plan; bs-puv owes all four parts).
+- **Report items already known:** backpain 812 words against the hub cap of about 700 (16% over, all lines
+  board-tested; Needs C: list the overage); shoulder-rom 729 (4% over, UWorld content, kept); no live brief owns gout
+  (septic-bursitis keyed the gout pharmacology cards scope: queue a gout brief); verify.py P1 tool change (G-DIFF);
+  remove the stale K3 hippos allowlist line at the ship.
+- **Lead helpers** (scratch, recreate if needed): sync.sh (folder to private local-only, commit, push wip/s148),
+  hand_disp.py (hand dispositions by claim-text snippet, then statement keys), remap_disp.py (covered ids by claim
+  text from an old claim map).
+- **Hooks:** test_hooks 84/84 offline at launch; the S4 chat installs them (new container).
 - **Spend:** 0 agents, 0 calls, 0 tokens.
 - **Carried from s147:** open decision on the public wip/s147 branch (delete or leave; Jonathan's call); the stray
   ~/step2haki-private-push/_xfer_pub.bundle on the Mac; open small items as listed in S147.md.
