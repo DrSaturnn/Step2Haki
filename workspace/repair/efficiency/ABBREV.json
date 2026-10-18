@@ -25,7 +25,8 @@
   "SAND": "mnemonic (renal papillary necrosis: sickle cell, acute pyelonephritis, NSAIDs, diabetes; AnKing; s145)",
   "QT": "ECG interval (as ST; s146)",
   "DRAINS": "mnemonic (drugs behind acute interstitial nephritis; AnKing 1475353706252; s147)",
-  "POTTER": "mnemonic (Potter sequence features; AnKing 1785105072320; s147)"
+  "POTTER": "mnemonic (Potter sequence features; AnKing 1785105072320; s147)",
+  "LOSS": "mnemonic (osteoarthritis radiograph: loss of joint space, osteophytes, subchondral sclerosis, subchondral cysts; AnKing 1488247907982; s148)"
  },
  "_site_conventions_note": "carried from verify.py's MIGRATION_CONTRACT V1 allowlist (before 2026-10-12)",
  "roman_numerals": [

@@ -472,6 +472,30 @@
      "nid": 1546013155047
     }
    ]
+  },
+  {
+   "name": "Osteoarthritis",
+   "aliases": [
+    "degenerative joint disease"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1488247853332
+    }
+   ]
+  },
+  {
+   "name": "Pseudogout",
+   "aliases": [
+    "calcium pyrophosphate dihydrate crystal deposition disease"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "guid": "i[mK~Jk5JX"
+    }
+   ]
   }
  ]
 }
