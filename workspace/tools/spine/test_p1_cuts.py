@@ -74,5 +74,26 @@ tcase('one fix', 'a give mesna b', [['give mesna', 'mesna prevents']], 'a mesna 
 tcase('missing anchor', 'a b', [['give mesna', 'x']], None, True)
 tcase('double anchor', 'mesna mesna', [['mesna', 'x']], None, True)
 tcase('chained', 'abc', [['a', 'x'], ['xb', 'y']], 'yc', False)
+
+# s148: qualified_held: a qualified number cut with its line (listed, text gone) is held; bare stems elsewhere do not matter
+def qcase(name, new_body, cuts, tok, want):
+    global ok, bad
+    d = tempfile.mkdtemp()
+    if cuts is not None:
+        json.dump({'cuts': [{'text': c} for c in cuts]}, open(os.path.join(d, 'cuts.json'), 'w'))
+    got = V.qualified_held(d, 'zz-test', page(new_body), tok)
+    if got == want:
+        ok += 1
+    else:
+        bad += 1
+        print('FAIL', name, got)
+
+
+STEM = '<p>A man has 2 days of knee swelling.</p>'
+qcase('qualified cut listed, gone', STEM, ['drainage if not improving after about 2 days'], '2 days', True)
+qcase('qualified cut not listed', STEM, None, '2 days', False)
+qcase('listed cut still on the page', STEM + '<p>drainage if not improving after about 2 days</p>',
+      ['drainage if not improving after about 2 days'], '2 days', False)
+qcase('listed cut holds another number', STEM, ['about 20% of users'], '2 days', False)
 print('test_p1_cuts: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)

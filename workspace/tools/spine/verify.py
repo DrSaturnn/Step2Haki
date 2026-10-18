@@ -341,8 +341,16 @@ class Verify:
         if re.search(r'\bP1 0\b', out):
             return True
         lines = [l for l in out.splitlines() if 'P1 hedge-loss' in l]
-        if not lines or any('hedge words fell' not in l for l in lines):
+        if not lines:
             return False
+        # s148: a qualified number whose only qualified lines left with a cut listed in cuts.json (text gone from the
+        # brief, the number in it) is held by that cut; bare uses elsewhere (eg item stems) are not the old claim
+        for l in [l for l in lines if 'hedge words fell' not in l]:
+            m = re.search(r'"([^"]+)" was qualified', l)
+            if not (m and qualified_held(self.d, self.bid, new_page, m.group(1))):
+                return False
+        if not any('hedge words fell' in l for l in lines):
+            return True
         return p1_residual(self.d, self.bid, P.read_page(os.path.join(WS, 'index.html')), new_page) < 2
 
     def run(self):
@@ -495,6 +503,20 @@ def presentations_link(page, bid):
     title = re.sub(r'<[^>]+>', '', h4.group(1)).strip() if h4 else bid
     new = g.group(1) + str(int(g.group(2)) + 1) + g.group(3) + g.group(4) + '    <a href="#%s">%s</a>\n' % (bid, title)
     return page[:g.start()] + new + page[g.end():]
+
+
+def qualified_held(d, bid, new_page, tok):
+    """s148: True when a cut listed in <d>/cuts.json holds the number tok and its text is gone from the new brief"""
+    cj = os.path.join(d, 'cuts.json')
+    if not os.path.exists(cj):
+        return False
+    nb = P.brief_by_id(new_page, bid)
+    nt = ' '.join(H.unescape(re.sub('<[^>]+>', ' ', new_page[nb.start:nb.end])).split()).lower()
+    for c in json.load(open(cj, encoding='utf-8')).get('cuts', []):
+        t = ' '.join(c.get('text', '').split()).lower()
+        if t and tok.lower() in t and t not in nt:
+            return True
+    return False
 
 
 def p1_residual(d, bid, old_page, new_page):
