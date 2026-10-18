@@ -20,7 +20,8 @@ s147 is open; a fresh chat continues it with the line above.
   (WAVE.json).
 - **Step: S8, final report sent (continuation chat 4, 2026-10-17 22:05); waiting for Jonathan's "ship".** Seven briefs
   READY (full verify): peds-uti-recurrent, enuresis, peds-aki, bs-abdominal-mass, bs-distal-rta, aq-puffy-eyes, scrotum;
-  plus 40_presentations.json (the four hubs join the Presentations group). bs-puv is carried (Jonathan's condition at the
+  plus 40_presentations.json (the four hubs join the Presentations group) and 50_zoom_fix.json (hover cards and the
+  profile sheet were off screen at 1500 px and wider since s146c's 110% zoom; Jonathan reported it after the report). bs-puv is carried (Jonathan's condition at the
   round-5 raise): repair/s147/carry/10_bs_puv_spine.json.carry, not built; owed in the next batch: drop or rewrite its
   "drain, then image" subtitle, then review all four parts. Presented with approval.py present s147 in this chat; "ship"
   must come to this chat (the approval record lives in this container).
