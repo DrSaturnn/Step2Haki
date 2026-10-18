@@ -100,6 +100,10 @@ def text_of(brief_html):
     x = re.sub(r'<span[^>]*role="img"[^>]*aria-label="([^"]+)"[^>]*>\s*</span>',
                lambda m: {'leads to': ' \u2192 ', 'and': ' + ', 'plus': ' + '}.get(m.group(1), ' [%s] ' % m.group(1)), x)
     x = close_masks(x)
+    # s148 S5 packet error: the trap tag row (div.traps, pill names only, on 90 briefs) ran together as one fragment
+    # ("Sequencing trapTreat-the-number") and drew two false MED findings; show it as a labelled tag list
+    x = re.sub(r'<div class="traps">(.*?)</div>', lambda m: '<div>[trap tags: %s]</div>' % ' · '.join(
+        re.findall(r'<span class="pill[^"]*">(.*?)</span>', m.group(1))), x, flags=re.S)
     x = re.sub(r'</(p|li|div|tr|h\d|figure|caption)>|<br\s*/?>', '\n', x)
     x = re.sub(r'</t[dh]>', ' | ', x)
     x = re.sub(r'<[^>]+>', '', x)

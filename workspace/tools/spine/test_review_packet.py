@@ -41,4 +41,8 @@ expect('read packet copies ALIASES.json and ABBREV.json', sorted(_c) == ['ABBREV
     filecmp.cmp(os.path.join(_d, f), os.path.join(_eff, f), shallow=False) for f in _c))
 expect('read rules point to the two tables', 'ALIASES.json (other names) and ABBREV.json' in RP.part_rules('read'))
 
+# s148: the trap tag row reads as a labelled tag list, not a run-on fragment
+_t = RP.text_of('<div class="pearls">Pearls x</div>\n<div class="traps"><span class="pill p-seq">Sequencing trap</span><span class="pill p-number">Treat-the-number</span></div>')
+expect('trap tags labelled and separated', '[trap tags: Sequencing trap · Treat-the-number]' in _t and 'trapTreat' not in _t)
+
 print('test_review_packet: %d passed, %d failed' % (ok, fail)); sys.exit(1 if fail else 0)
