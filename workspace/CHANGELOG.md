@@ -2,6 +2,26 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-17 s147: s147: seven pediatric renal and GU briefs on the decision spine; four hubs join Presentations; hover cards placed correctly under the 110% zoom
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (7):
+  - scrotum (Scrotal Pain and Masses): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+7131 chars)
+  - peds-uti-recurrent (Urinary Tract Infection in a Child): items edited (q_5f9cda6238fd5460ac32); attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+9471 chars)
+  - enuresis (Enuresis): items edited (q_11fc98144a285b0bbd08, q_c774c1e43c8e5995bb32); versions bumped (q_11fc98144a285b0bbd08 v3->v4, q_c774c1e43c8e5995bb32 v2->v3); attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+15009 chars)
+  - peds-aki (Acute Kidney Injury in a Child): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+13343 chars)
+  - bs-abdominal-mass (Abdominal Mass in a Young Child): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+8833 chars)
+  - bs-distal-rta (Hypokalemia and Acid-Base Disorders in a Child): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+8921 chars)
+  - aq-puffy-eyes (Child with Puffy Eyes): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+3958 chars)
+Other page changes (nav, headers, scripts): +1415 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 19 scripts, 38 checks, base HEAD | allowlisted 13 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 173/174 | vignette gridded 65/65 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.014%)
+```
+
 ## 2026-10-17 s146c: navigation: presentations group, psychiatry groups, rail follows row, brief name in top bar, 110% on wide windows
 
 ```
