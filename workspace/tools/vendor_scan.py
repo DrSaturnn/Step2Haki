@@ -130,6 +130,15 @@ def longest_run(t, hits):
     return best
 
 
+
+def file_hits(hit, src):
+    """s147 (G-DIFF): in a repo file other than a page, a shingle whose only source is the AnKing card file is not
+    flagged. AnKing card text may be quoted in the public repo (DECISIONS_DIGEST 2026-10-15); UWorld, NBME and Aquifer
+    text may not. Pages (index.html) still count AnKing runs toward their limit, and shingle_check still keeps card
+    runs out of new brief text. Without this, an old edit file that quoted a card fails as soon as a rewrite drops the
+    card run from the page (s147: s103/10_dashes.json and s106/20_content.json after the scrotum rewrite)."""
+    return {h for h in hit if any(not f.replace(os.sep, '/').endswith('anki/anki_cards.txt') for f in src[h])}
+
 def main(argv):
     opt = lambda k, d=None: argv[argv.index(k) + 1] if k in argv else d  # noqa: E731
     repo = os.path.abspath(opt('--repo', os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
@@ -204,7 +213,7 @@ def main(argv):
         sh = shingles(words(t))
         hit = sh & src.keys()
         if os.path.basename(p) != 'index.html':
-            hit = hit - page_sh
+            hit = file_hits(hit - page_sh, src)
         key = p
         prev = res.get(key)
         if prev is None or len(hit) > prev['shared']:
