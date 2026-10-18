@@ -460,6 +460,18 @@
      "ref": "peds-cms-0354fa (option \"Juxtaglomerular cell hyperplasia\", keyed against the Bartter row)"
     }
    ]
+  },
+  {
+   "name": "Primary monosymptomatic enuresis",
+   "aliases": [
+    "primary nocturnal enuresis"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1546013155047
+    }
+   ]
   }
  ]
 }
