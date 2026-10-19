@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-19, by the s148d lead chat 1 (s148d open).
+Last updated: 2026-10-19, by the s148d lead chat 2 (S3 done; restart for S4).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -17,28 +17,17 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   tics TICS/spine, psych-medical MED/spine. Proposals repair/sources/intake/<brief>_2026-10-18.md. Batch file
   repair/s148d/S148D.md. Branch wip/s148d in both repos. Budget: reviewers 20 agents, 240 calls, 9M tokens; lead 150M
   (WAVE.json s148d). Method: s148c (patch: S1 to S3, one review round on changed lines, S8, S9).
-- **Step:** S1 and S2 done for psych-medical, tics, peds-sleep, panic (records in the batch file, S148D.md; folders
-  synced to the private repo wip/s148d; psych-medical also took panic's belongs-elsewhere row). Jonathan's 2026-10-19
-  decisions (digest, last four lines; STANDING_DIRECTIONS "Layers, not totals" and "Clinical terms, no AI prose";
-  runbook section 3 word-count row) change the rest of s148d. Next (lead chat 2):
-  1. Rework the four done briefs under the new rules: peds-sleep: the sleep terror "new stressor, CBT not indicated"
-     contrast back to a visible clue row (C6), the stage chart caption "Sleep stages" with a schematic EEG trace per
-     stage (awake, N1, N2, N3, REM; facts from the stage table's sources), and an age-window timeline (sleep terrors 2
-     to 12, child apnea 2 to 8, teen delayed phase, older adult, older man RBD) now that the cap no longer blocks it;
-     restore the MDD sleep-study clause only if it reads better visible (judgment, one owner is the night chart).
-     panic: undo the insight 2 shortening if the full line scans; keep the two guideline-only hovers. psych-medical:
-     "Chase the medical cause" and any other figure-of-speech cells to concrete actions; break the first-step test list
-     into short lines. tics: check captions and cells against the prose rule. Remap card dispositions after edits.
-  2. S1 and S2 for somatic, then substance, under the new rules (board-keyed facts visible, split only with Jonathan).
-  3. S3 for all six. Site-layer items (question tiles, hover animation, Pairs with links, muted tints, shading, zone 2
-     "Targeted tests", prose lint) are NOT in s148d: claude/pending/SITE_UI_R2.md (private repo; project copy), own
-     batch after s148d.
-  Continuation reads: this State, S148D.md, digest lines from 2026-10-15, STANDING_DIRECTIONS (the two new lines), the
-  two proposals and SOMA/spine, TOX/spine build.py. Method notes: edit build.py with T()/pop(); facts in facts.json
-  with quotes checked by script against the intake file; cards via card_dispositions.py make/check (remap_disp.py
-  after any row insert, old claim map from the private repo); verify.py <folder> --mech --fast; private sync by
-  copying the folder into local-only/ and committing wip/s148d.
-- **Spend:** reviewers 0 agents, 0 calls; lead chat 1 37.4M (ledger_lead.csv), of 150M.
+- **Step:** S3 done (lead chat 2): S1 and S2 for all six, the rework of panic, psych-medical, tics and peds-sleep under
+  Jonathan's 2026-10-19 rules, verify --mech full PASS x6, legib_audit 0 below (substance desk tick labels: known
+  mid-reflow false failure, computed cross-check 0). Record: repair/s148d/S148D.md (chat 2 sections). Next (lead chat
+  3): S4, one review round on changed lines (patch method as s148c: lanes.py follow-up template with a stub prior
+  receipt and changes.md from review_packet.py --since each brief's live text; spec in repair/s148d/lanes/, never the
+  top level; sheets.py --page for display; write-first lanes, all in one foreground message), then S5 to S7 and the
+  restart. Batch jsons to copy into repair/s148d/ at S8: the six 10_*_spine.json (05_sleep_eeg_css.json is already
+  there and must ship with them).
+- **Spend:** reviewers 0 agents, 0 calls (of 20, 240, 9M); lead chat 1 37.4M, chat 2 56.7M: 94.0M of 150M
+  (ledger_lead.csv). The project copy of this handoff is now refreshed at each restart too (chat 2 started from a stale
+  project copy that said no batch was open).
 - **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into
   /root/.claude/settings.json (chat 4: no permission hold). On a two-core container, legib_audit and shots need
   Playwright default timeouts of 240000 ms (a scratch wrapper; batch file S3). Keep lane specs out of the top level of
