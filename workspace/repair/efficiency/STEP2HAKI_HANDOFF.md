@@ -1,41 +1,37 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-18 21:40, by the s148b lead (launch). Before that: 2026-10-18, by the s148 lead (continuation chat 5: s148 shipped with the efficiency patch); next launch prompt re-pointed to s148b the same evening by the psych intake chat (Jonathan's ship order, claude/pending/SHIP_ORDER_PSYCH.md).
+Last updated: 2026-10-19 07:30, by the s148b lead (s148b shipped; next launch s148c).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
 ## Restart prompt (the only current one)
 
-Batch s148b is open. In a fresh chat: `Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.`
+No batch is open. The next batch starts with the launch prompt below in a fresh chat.
 
 ## State (rewrite after every step)
 
-- **Open batch: s148b** (site layer: brief body restyle to the Lithium Glance mockup; SITE_BODY_GLANCE.md items 1 and 4),
-  launched 2026-10-18 21:00. Budget 10 agents, 80 calls, 5M tokens; lead 30M. Record: repair/s148b/S148B.md.
-- **Step:** S8 presented 2026-10-19 00:15 (approval.py present s148b, page 406cfe0fd5b2, 54 sheets in /tmp/s148b_final
-  of the presenting container; pilot artifact 5CQ3fQeTAcoqNYjyS4a4pK). Waiting for Jonathan's "ship" in that chat; a
-  "ship" sent elsewhere approves nothing (re-run build, shots and present there). Spend: reviewers 0; lead 54.9M (over
-  the 30M lead figure; disclosed in the report).
-- **Last shipped: s148** 2026-10-18 (main 40e8667). Open small items: OPEN_WORK s148 row. Carried from s147: the public
-  wip/s147 branch decision; the stray ~/step2haki-private-push/_xfer_pub.bundle on the Mac.
-- **Hooks:** the step2haki-tools plugin synced in the cloud container is still 0.1.0 (no hooks); install.sh was used.
+- **Last batch: s148b** (site layer: brief body restyle to the Lithium Glance mockup) SHIPPED 2026-10-19 07:17
+  (Jonathan: "ship"; main 7fcc9f9; version.json s148b confirmed by fetch). All 177 briefs byte-identical. Record:
+  repair/s148b/S148B.md. Reviewers 0; lead about 62M against a 30M lead figure (disclosed).
+- **Remaining from SITE_BODY_GLANCE.md:** item 2 (First step split per order: outline_render.py and data) and item 3
+  (Timing card in Differential, reusing the fixed onset component); not yet scheduled; s148c reviews the psych briefs in
+  the new look.
+- **Fix before the next display-heavy batch:** legib_audit's tall-element capture can catch the page mid-reflow (it
+  narrows below 1100 px, the sticky brief bar shows), giving whole-brief false failures in some theme and accent runs;
+  repair/s148b/contrast_computed.py is the screenshot-free cross-check meanwhile.
+- **Hooks:** the step2haki-tools plugin synced in the cloud container was still 0.1.0 (no hooks) on 2026-10-18;
+  install.sh ran without a permission hold. Check again at the next launch.
+- **Open small items:** OPEN_WORK s148 row. Carried from s147: the public wip/s147 branch decision; the stray
+  ~/step2haki-private-push/_xfer_pub.bundle on the Mac.
 
 ## Next launch prompt (paste into a fresh chat)
 
-Order from here (Jonathan, 2026-10-18; claude/pending/SHIP_ORDER_PSYCH.md, private repo claude/pending/ and the project):
-s148b site restyle, then s148c and s148d psych patches (the 2026-10-18 intake proposals and Jonathan's rulings),
-then s148e new psych briefs (titles to confirm first), then s149 as below. Lettered ids keep s149 to s160 unchanged.
-Standing direction added the same day: timelines wherever they help in every brief a batch authors or reauthors
-(STANDING_DIRECTIONS, "Timelines in every reauthored brief").
+Order (Jonathan, 2026-10-18; claude/pending/SHIP_ORDER_PSYCH.md): s148c, s148d, s148e (titles to confirm first), then
+s149 as in BATCHES_S141_S150.md. Proposed budget for s148c below (7 briefs, patch method, one follow-up round); Jonathan
+sets it at launch.
 
 ```
-Step2Haki: launch batch s148b (site restyle to the Lithium Glance mockup) per claude/BATCH_RUNBOOK.md. Plan: claude/pending/SITE_BODY_GLANCE.md (Decided A to D; work plan items 1 and 4 in this batch: type scale, one flat tile with no tint or heading glow, labels, table text and headers, hover cards, font stack, onset timeline cards that fit their text with computed placement; item 2 First step split and item 3 Timing card may follow as their own batch if they need renderer and data work). Site-wide CSS for all 177 briefs plus the onset timeline layout script; no text changes. Also mirror the 2026-10-18 timeline line of the project STANDING_DIRECTIONS into the repo copy if missing. Budget for the whole batch: Jonathan sets at launch. Method: s148 with the efficiency patch.
-```
-
-After s148b, s148c to s148e use the prompts in claude/pending/SHIP_ORDER_PSYCH.md. Then:
-
-```
-Step2Haki: launch batch s149 (Phase 2, musculoskeletal B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors (folders: claude/pending/FOLDERS_S142_S160.md, listed there as s148). Golden: scfe. Budget for the whole batch: 22 agents, 220 API calls, 10M tokens; lead 35M tokens (max_lead_tokens, shown in the report). Method: s148 with the efficiency patch (lanes.py, foreground lanes, lint before review, restarts after S3 and S7).
+Step2Haki: launch batch s148c (psych patch, mood and psychosis) per claude/BATCH_RUNBOOK.md and claude/pending/SHIP_ORDER_PSYCH.md. Briefs: mdd, bipolar-mania, psychosis-duration, sz-psychosocial, voices, suicide-risk, antipsych-effects. Apply each brief's 2026-10-18 proposal (rulings first, then edits, then comb additions after verifying the MED and LOW items), add timelines where they help, one review round on changed lines. Budget for the whole batch: 22 agents, 200 API calls, 10M tokens; lead 30M tokens. Method: s148 with the efficiency patch.
 ```
 
 ## After s141
