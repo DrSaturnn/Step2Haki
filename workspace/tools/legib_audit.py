@@ -145,6 +145,11 @@ def main():
                 pg.goto('file://' + os.path.abspath(a.page) + '#' + bids[0]); pg.wait_for_timeout(2500)
                 if a.css:
                     pg.add_style_tag(content=open(a.css, encoding='utf-8').read()); pg.wait_for_timeout(300)
+                # s148b: render every lazy section up front (as shots.py does since s125); with content-visibility:auto, a
+                # tall element capture laid out briefs above the target mid-capture and shifted the whole image (random
+                # whole-brief failures, one brief and mode per run)
+                pg.add_style_tag(content='*{content-visibility:visible!important}html,body{scroll-behavior:auto!important}')
+                pg.wait_for_timeout(300)
                 # fixed and sticky chrome (bottom bar, Index pill, update bar) would be painted into tall element screenshots
                 pg.evaluate("() => { for (const e of document.querySelectorAll('body *')) { const p = getComputedStyle(e).position;"
                             " if ((p === 'fixed' || p === 'sticky') && !e.closest('.brief')) e.style.setProperty('visibility', 'hidden', 'important'); } }")
