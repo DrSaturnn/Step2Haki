@@ -59,10 +59,11 @@
     return tiers;
   }
   function place(f){
-    reset(f);
     var W = f.clientWidth;
+    if(!W) return;                 // not laid out (hidden, or mid-capture): keep the last placement
+    reset(f);
     f._w = W;
-    if(!W || phone.matches || document.body.classList.contains('study')) return;
+    if(phone.matches || document.body.classList.contains('study')) return;
     var fig = f.closest('figure.sp-on'), tiers = null, items = [];
     for(var m = 0; !tiers && m < WIDTHS.length; m++){   // narrower cards, more lines, before giving up the chart
       f.style.setProperty('--cmw', WIDTHS[m] + 'px');
@@ -92,13 +93,12 @@
   }
   function all(root){ (root || document).querySelectorAll('.sp-on-f').forEach(place); }
   var ro = window.ResizeObserver ? new ResizeObserver(function(es){
-    es.forEach(function(e){ var f = e.target; if(f.clientWidth !== f._w) place(f); });
+    es.forEach(function(e){ var f = e.target; if(f.clientWidth && f.clientWidth !== f._w) place(f); });
   }) : null;
   function watch(root){ (root || document).querySelectorAll('.sp-on-f').forEach(function(f){ if(ro && !f._ro){ f._ro = 1; ro.observe(f); } }); }
   function start(){
     all(); watch();
     if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ all(); });
-    if(phone.addEventListener) phone.addEventListener('change', function(){ all(); });
     var study = document.body.classList.contains('study');
     new MutationObserver(function(){     // study mode on or off (a class on body only)
       var s = document.body.classList.contains('study');

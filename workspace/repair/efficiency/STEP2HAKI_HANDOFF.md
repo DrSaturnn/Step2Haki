@@ -12,9 +12,10 @@ Batch s148b is open. In a fresh chat: `Step2Haki: continue the current batch per
 
 - **Open batch: s148b** (site layer: brief body restyle to the Lithium Glance mockup; SITE_BODY_GLANCE.md items 1 and 4),
   launched 2026-10-18 21:00. Budget 10 agents, 80 calls, 5M tokens; lead 30M. Record: repair/s148b/S148B.md.
-- **Step:** built (repair/s148b/40_glance_body.json from gen_glance.py); build, gate, render, preflight, vendor and the
-  onset sweep pass; legib_audit runs (light, dark, tinted, eight accents) in progress; then screenshots, the pilot
-  artifact and approval.py present. No reviewer agents (no brief content changes). Spend: 0 agents, 0 calls.
+- **Step:** S8 presented 2026-10-19 00:15 (approval.py present s148b, page 406cfe0fd5b2, 54 sheets in /tmp/s148b_final
+  of the presenting container; pilot artifact 5CQ3fQeTAcoqNYjyS4a4pK). Waiting for Jonathan's "ship" in that chat; a
+  "ship" sent elsewhere approves nothing (re-run build, shots and present there). Spend: reviewers 0; lead 54.9M (over
+  the 30M lead figure; disclosed in the report).
 - **Last shipped: s148** 2026-10-18 (main 40e8667). Open small items: OPEN_WORK s148 row. Carried from s147: the public
   wip/s147 branch decision; the stray ~/step2haki-private-push/_xfer_pub.bundle on the Mac.
 - **Hooks:** the step2haki-tools plugin synced in the cloud container is still 0.1.0 (no hooks); install.sh was used.
