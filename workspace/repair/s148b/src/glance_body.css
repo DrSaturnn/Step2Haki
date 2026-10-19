@@ -57,6 +57,9 @@ html:is([data-theme],:not([data-theme])) body .brief table th{font-size:13px;lin
 html:is([data-theme],:not([data-theme])) body .brief .tw td{font-size:16px;line-height:23px;font-weight:450}
 html:is([data-theme],:not([data-theme])) body .brief .tw td:first-child{font-weight:700}
 
+/* a table cell's source line (td .ex) on a study-mode mask band: ink-2 so it holds 4.5:1 (was 3.8 on live, septic-hip) */
+html:is([data-theme],:not([data-theme])) body.study .brief td .ex{color:var(--ink-2)}
+
 /* hover cards: 15/21 weight 500 text, 13 px weight 650 grey label */
 html:is([data-theme],:not([data-theme])) body .sp-card,html:is([data-theme],:not([data-theme])) body .brief.sp .sp-pop-b{font-size:15px;line-height:21px;font-weight:500}
 html:is([data-theme],:not([data-theme])) body .sp-card{max-width:360px;padding:14px 16px;border-radius:20px}
