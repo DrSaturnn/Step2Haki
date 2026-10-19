@@ -17,14 +17,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   Briefs and folders (repair/migration/psych/...): mdd MDD/spine, bipolar-mania N1/spine, psychosis-duration P1/spine,
   sz-psychosocial N3/spine, voices HUB/voices/spine, suicide-risk SUI/spine, antipsych-effects APAE/spine.
   Proposals: repair/sources/intake/<brief>_2026-10-18.md. Batch file: repair/s148c/S148C.md. Branch wip/s148c (both repos).
-- **Budget:** 22 agents, 200 calls, 10M reviewer tokens; lead 30M (WAVE.json s148c open).
+- **Budget:** 22 agents, 200 calls, 10M reviewer tokens; lead 90M (raised from 30M by Jonathan 2026-10-19, "a"; WAVE.json s148c open).
 - **Step:** S1 and S2 done for six briefs (suicide-risk, sz-psychosocial, voices, psychosis-duration, bipolar-mania,
   antipsych-effects), each MECHANICAL PASS on verify --mech --fast with its card dispositions; record per brief in
   repair/s148c/S148C.md. Next: mdd S1 and S2 (proposal repair/sources/intake/mdd_2026-10-18.md; rulings K1 first;
   its cards.md is made, 93 cards), then S3 for all seven (verify --mech full, legib_audit, the antipsych-effects onset
   chart recheck), then the S3 restart.
 - **Spend:** reviewers 0 agents, 0 calls. Lead chat 1 (e07dfc62): 132 calls, 41.6M tokens (cache reads 41.2M) against
-  the 30M lead figure; paused for Jonathan's call on the lead budget (asked at this restart).
+  the 90M lead figure (Jonathan raised it from 30M). Next chat: continue at mdd S1 and S2.
 - **Carried:** SITE_BODY_GLANCE items 2 and 3 unscheduled; legib_audit mid-reflow false failures (use
   repair/s148b/contrast_computed.py as cross-check); OPEN_WORK s148 row; public wip/s147 branch; stray Mac bundle.
 

@@ -13,7 +13,7 @@
  "max_agents": 22,
  "max_calls": 200,
  "max_tokens": 10000000,
- "set_by": "Jonathan, s148c launch prompt: \"Budget for the whole batch: 22 agents, 200 API calls, 10M tokens; lead 30M tokens.\"",
+ "set_by": "Jonathan, s148c launch prompt: \"Budget for the whole batch: 22 agents, 200 API calls, 10M tokens; lead 30M tokens.\" Lead figure raised to 90M by Jonathan 2026-10-19 (\"a\").",
  "previous": {
   "id": "s148b",
   "note": "2026-10-19 (s148b shipped, main 7fcc9f9)"
@@ -86,8 +86,8 @@
    "agents": 22,
    "calls": 200,
    "tokens": 10000000,
-   "lead_tokens": 30000000
+   "lead_tokens": 90000000
   }
  },
- "max_lead_tokens": 30000000
+ "max_lead_tokens": 90000000
 }
