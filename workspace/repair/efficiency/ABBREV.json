@@ -27,7 +27,8 @@
   "DRAINS": "mnemonic (drugs behind acute interstitial nephritis; AnKing 1475353706252; s147)",
   "POTTER": "mnemonic (Potter sequence features; AnKing 1785105072320; s147)",
   "LOSS": "mnemonic (osteoarthritis radiograph: loss of joint space, osteophytes, subchondral sclerosis, subchondral cysts; AnKing 1488247907982; s148)",
-  "HARD": "mnemonic (Pressing Down HARD: carpal tunnel causes; AnKing 1496352237286; s148)"
+  "HARD": "mnemonic (Pressing Down HARD: carpal tunnel causes; AnKing 1496352237286; s148)",
+  "QRS": "ECG complex (s148d; like ST)"
  },
  "_site_conventions_note": "carried from verify.py's MIGRATION_CONTRACT V1 allowlist (before 2026-10-12)",
  "roman_numerals": [
@@ -75,6 +76,11 @@
    "entry": "POTTER",
    "date": "2026-10-17",
    "by": "lead s147 (runbook section 3: new entry disclosed in the report)"
+  },
+  {
+   "entry": "QRS",
+   "date": "2026-10-19",
+   "by": "lead s148d (runbook section 3: new entry disclosed in the report)"
   }
  ]
 }
