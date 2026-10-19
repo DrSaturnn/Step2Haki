@@ -2,6 +2,26 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-19 s148c: s148c: psych patch, mood and psychosis (mdd, bipolar-mania, psychosis-duration, sz-psychosocial, voices, suicide-risk, antipsych-effects)
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (7):
+  - psychosis-duration (Psychosis): prose edited (+3962 chars)
+  - voices (Hears Voices or Holds Odd Beliefs): prose edited (+1428 chars)
+  - sz-psychosocial (Schizophrenia: Long-Term Care): prose edited (+1629 chars)
+  - bipolar-mania (Bipolar Disorder): items edited (q_293aa90f0e5f09f9f42f); versions bumped (q_293aa90f0e5f09f9f42f v3->v4); prose edited (+3532 chars)
+  - mdd (Major Depressive Disorder): prose edited (+5677 chars)
+  - antipsych-effects (Antipsychotic Adverse Effects): items edited (q_88405a87430f4dd7cc33); versions bumped (q_88405a87430f4dd7cc33 v2->v3); prose edited (+3505 chars)
+  - suicide-risk (Suicide Risk Assessment): prose edited (+719 chars)
+Other page changes (nav, headers, scripts): +1007 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 20 scripts, 38 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 162/163 | vignette gridded 65/65 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.014%)
+```
+
 ## 2026-10-19 s148b: s148b: brief body restyle to the Lithium Glance mockup (type scale, one flat raised card, no tint or heading glow, sentence-case labels and table headers, hover cards, font stack) and onset timeline cards that fit their text with computed placement; site layer, every brief byte-identical
 
 ```
