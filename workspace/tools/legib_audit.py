@@ -51,6 +51,12 @@ COLLECT = r"""
     const el = n.parentElement; if (!el || el.closest('svg')) continue;
     // sticky brief chrome (s120 bar and rail) moves while a tall element is captured, so it cannot be measured in this shot
     if (el.closest('.bb-rail, .bb-bar')) continue;
+    // s148b: text in a closed <details> panel is not rendered; its rects are not where it would draw, so measuring them
+    // compared the text with unrelated pixels (a false "Gut" failure on lithium-effects once the page above it grew)
+    let shut = false;
+    for (let d = el.closest('details'); d; d = d.parentElement && d.parentElement.closest('details'))
+      if (!d.open && !(el.closest('summary') && el.closest('summary').parentElement === d)) { shut = true; break; }
+    if (shut) continue;
     const cs = getComputedStyle(el);
     if (cs.display === 'none' || cs.visibility === 'hidden') continue;
     let op = 1, depth = 0, frames = 0, comp = '';

@@ -1,28 +1,23 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-18, by the s148 lead (continuation chat 5: s148 shipped with the efficiency patch); next launch prompt re-pointed to s148b the same evening by the psych intake chat (Jonathan's ship order, claude/pending/SHIP_ORDER_PSYCH.md).
+Last updated: 2026-10-18 21:40, by the s148b lead (launch). Before that: 2026-10-18, by the s148 lead (continuation chat 5: s148 shipped with the efficiency patch); next launch prompt re-pointed to s148b the same evening by the psych intake chat (Jonathan's ship order, claude/pending/SHIP_ORDER_PSYCH.md).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
 ## Restart prompt (the only current one)
 
-No batch is open. The next batch starts with the launch prompt below in a fresh chat.
+Batch s148b is open. In a fresh chat: `Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.`
 
 ## State (rewrite after every step)
 
-- **Last batch: s148** (Phase 2 musculoskeletal A, adult) SHIPPED 2026-10-18 (Jonathan: "ship"; commit 40e8667 on main):
-  pmr, oa-pharm (disease); backpain, hippos, gtps, septic-bursitis, shoulder-rom, scaphoid (hubs); the carried bs-puv.
-  Record: repair/s148/S148.md. Reviewer spend 30 agents, 289 calls, 12.22M of 32, 320, 14M; lead chat 5 in
-  repair/efficiency/ledger_lead.csv (chats 1 to 4 unrecorded).
-- **Shipped with it:** the s148 efficiency patch (repair/s148/EFFICIENCY_PATCH.md, all eight fixes) and plugin
-  step2haki-tools 0.2.0 (hooks). Runbook updated (repo and project copies).
-- **First check in the next chat:** whether the plugin's hooks load on their own (runbook session start: test_hooks
-  passes and a probe Agent launch with no model is refused). If they do, skip install.sh; if not, install and ask, and
-  note it for Jonathan.
-- **Open small items:** OPEN_WORK s148 row (sticky rail truncation, Practice Distractors panel unmasked in study mode,
-  hippos chip wrap, a gout brief, queued item-stem fixes, scaphoid P3 distractor explanation).
-- **Carried from s147:** open decision on the public wip/s147 branch (delete or leave; Jonathan's call); the stray
-  ~/step2haki-private-push/_xfer_pub.bundle on the Mac.
+- **Open batch: s148b** (site layer: brief body restyle to the Lithium Glance mockup; SITE_BODY_GLANCE.md items 1 and 4),
+  launched 2026-10-18 21:00. Budget 10 agents, 80 calls, 5M tokens; lead 30M. Record: repair/s148b/S148B.md.
+- **Step:** built (repair/s148b/40_glance_body.json from gen_glance.py); build, gate, render, preflight, vendor and the
+  onset sweep pass; legib_audit runs (light, dark, tinted, eight accents) in progress; then screenshots, the pilot
+  artifact and approval.py present. No reviewer agents (no brief content changes). Spend: 0 agents, 0 calls.
+- **Last shipped: s148** 2026-10-18 (main 40e8667). Open small items: OPEN_WORK s148 row. Carried from s147: the public
+  wip/s147 branch decision; the stray ~/step2haki-private-push/_xfer_pub.bundle on the Mac.
+- **Hooks:** the step2haki-tools plugin synced in the cloud container is still 0.1.0 (no hooks); install.sh was used.
 
 ## Next launch prompt (paste into a fresh chat)
 

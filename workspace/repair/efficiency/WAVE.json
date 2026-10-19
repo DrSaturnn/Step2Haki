@@ -1,8 +1,8 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s148",
- "open": false,
- "plan_step": "s148",
+ "id": "s148b",
+ "open": true,
+ "plan_step": "s148b",
  "roles": [
   "acc-review",
   "read-review",
@@ -10,16 +10,16 @@
   "flag-review",
   "wording-fix"
  ],
- "max_agents": 32,
- "max_calls": 320,
- "max_tokens": 14000000,
- "set_by": "Jonathan, s148 launch prompt: \"Budget for the whole batch: 32 agents, 320 API calls, 14M tokens.\"",
+ "max_agents": 10,
+ "max_calls": 80,
+ "max_tokens": 5000000,
+ "set_by": "Jonathan, s148b launch prompt: \"Budget for the whole batch: 10 agents, 80 API calls, 5M tokens; lead 30M tokens.\"",
  "previous": {
-  "id": "s147",
-  "note": "2026-10-17 (s147 shipped, main 070b0e6; bs-puv carried)"
+  "id": "s148",
+  "note": "2026-10-18 (s148 shipped, main 40e8667)"
  },
- "opened": "2026-10-17 22:34 (launch)",
- "note": "Phase 2 musculoskeletal A, adult (8 briefs) plus the carried bs-puv; method s142 with the s147 lane lessons. Closed 2026-10-18 at the ship (main 40e8667): 30 agents, 289 calls, 12,223,579 tokens.",
+ "opened": "2026-10-18 21:00 (launch)",
+ "note": "Site layer (BATCH_RUNBOOK section 8): Lithium Glance restyle, work plan items 1 and 4 of claude/pending/SITE_BODY_GLANCE.md; no brief content changes, so no reviewer agents are planned.",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -75,6 +75,13 @@
    "agents": 32,
    "calls": 320,
    "tokens": 14000000
+  },
+  "s148b": {
+   "agents": 10,
+   "calls": 80,
+   "tokens": 5000000,
+   "lead_tokens": 30000000
   }
- }
+ },
+ "max_lead_tokens": 30000000
 }
