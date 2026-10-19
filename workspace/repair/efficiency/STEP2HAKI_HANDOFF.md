@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-18, by the s148 lead (continuation chat 4, S8 presented; efficiency patch adopted).
+Last updated: 2026-10-18, by the s148 lead (continuation chat 5, efficiency patch built, S8 re-presented).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -17,13 +17,13 @@ s148 is open; a fresh chat continues it with the line above.
 - **Open batch: s148** (Phase 2 musculoskeletal A, adult), launched 2026-10-17 22:34. Briefs: pmr, scaphoid, backpain,
   hippos, gtps, oa-pharm, septic-bursitis, shoulder-rom, plus the carried bs-puv. Budget 32 agents, 320 API calls, 14M
   tokens (WAVE.json wave s148). Branch wip/s148 in both repos. Batch file: repair/s148/S148.md (read it first).
-- **Step:** S8 presented in continuation chat 4 (all nine READY; report sent), then Jonathan adopted the eight
-  efficiency fixes to ship with s148 (digest 2026-10-18; spec repair/s148/EFFICIENCY_PATCH.md, read it first). Chat 4
-  stopped for context (about 470k). **Next, in a fresh chat:** session start (do not call register_repo_root; the hooks
-  install will be held once more: ask), build the eight fixes and the plugin item 9 with tests, then re-present s148
-  (verify --all, batch checks, screenshots, approval.py present s148: the chat-4 presentation lives in a dead
-  container), a short report of the tool changes, wait for "ship", S9.
-- **Spend:** 30 agents, 289 calls, 12.22M tokens of 32, 320, 14M.
+- **Step:** S8 re-presented in continuation chat 5 (2026-10-18): the eight efficiency fixes and plugin 0.2.0 built and
+  tested (batch file section "Efficiency patch and re-present"); all nine READY; approval.py present s148 (54 sheets,
+  page b4d4e9a1ca1c) in the chat-5 container. **Next:** Jonathan's "ship" in chat 5, then S9. If chat 5 is gone, a fresh
+  chat re-presents (verify_all, batch checks, shots_all, sheets --approval, present) before any ship. S9 extras: the
+  STANDING_DIRECTIONS conditional PASS line for fix 8 (post-ship: it would stale every receipt before), the project
+  copies of the handoff and digest, the lead ledger row (usage_ledger --lead --record s148).
+- **Spend:** 30 agents, 289 calls, 12.22M tokens of 32, 320, 14M (reviewers); lead chat 5 in ledger_lead.csv.
 - **Ship notes:** remove the stale K3 hippos allowlist line; merge main into wip/s148 first; OPEN_WORK items: sticky rail
   truncates long step names, Practice Distractors panel unmasked in study mode, desktop chip wrap (hippos clue row), a
   gout brief (no live owner), queued item-stem fixes (bs-puv "2 do", scaphoid CTS and CMC, shoulder-rom C5-C6).

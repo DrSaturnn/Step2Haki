@@ -118,6 +118,15 @@ try:
     expect('sheets: --steps 3,practice', SH.pick(fs, ['3', 'practice']) == ['b_phone_step3a.png', 'b_phone_step3b.png', 'b_phone_step9.png'])
     expect('sheets: header is step 0', SH.pick(fs, ['header']) == ['b_phone_step0.png'])
     expect('sheets: no --steps keeps all', SH.pick(fs, None) == fs)
+    import subprocess
+    sd = os.path.join(T, 'shots')
+    os.makedirs(sd)
+    for k in (0, 1):
+        SH.Image.new('RGB', (390, 1600 + 400 * k), 'white').save(os.path.join(sd, 'b_phone_step%d.png' % k))
+    r = subprocess.run([sys.executable, os.path.join(HERE, 'sheets.py'), sd, os.path.join(T, 'out'), 'b', '--approval'],
+                       capture_output=True, text=True)
+    expect('sheets: runs as a script and opens PNGs (no numbers.py shadowing)',
+           r.returncode == 0 and os.path.exists(os.path.join(T, 'out', 'b_phone_sheet1.png')))
 
     # ---- verify_all verdicts (verify exits 1 FAIL, 2 not READY, 0 READY or mechanical pass)
     import verify_all as VA

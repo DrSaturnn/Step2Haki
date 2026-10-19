@@ -17,7 +17,13 @@ import os
 import re
 import sys
 
-from PIL import Image
+# tools/spine/numbers.py shadows the standard numbers module that PIL's PNG plugin imports (via fractions, decimal), so
+# this folder leaves the import path before PIL loads (s148 chat 5: the first approval run failed on it)
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path[:] = [p for p in sys.path if os.path.abspath(p or os.curdir) != _HERE]
+from PIL import Image  # noqa: E402
+import PIL.PngImagePlugin  # noqa: E402,F401  load the PNG plugin now, while the path is clean
+sys.path.append(_HERE)
 
 H, COLS, GAP, BAR = 1500, 5, 14, 6
 
