@@ -2,6 +2,28 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-18 s148: Phase 2 musculoskeletal A: eight adult briefs on the decision spine, the carried bs-puv; efficiency patch tools
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (9):
+  - pmr (Polymyalgia Rheumatica): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+12620 chars)
+  - scaphoid (Wrist and Hand Pain and Numbness): items edited (q_00b06cea29d55a63a813); versions bumped (q_00b06cea29d55a63a813 v2->v3); attrs set (brief class,data-entry,data-lens,data-spine; q_00b06cea29d55a63a813 data-d1); prose edited (+8083 chars)
+  - backpain (Low Back Pain in an Adult): items edited (q_1a7bdc80f9fe56c286ce, q_9a10b796ea065c8fb05a); attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+9843 chars)
+  - hippos (Hip Injury in an Adult): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+11454 chars)
+  - gtps (Hip and Thigh Pain and Numbness): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+6179 chars)
+  - oa-pharm (Osteoarthritis): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+16674 chars)
+  - septic-bursitis (Hot Joint or Bursa in an Adult): items edited (q_ca51206d5b6e569ba414, q_34f7bef8a5b452278644); attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+6646 chars)
+  - shoulder-rom (Shoulder Pain): items edited (q_a10db1e08e775eaaa505); attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+9039 chars)
+  - bs-puv (Posterior Urethral Valves): attrs set (brief class,data-entry,data-lens,data-spine); prose edited (+10494 chars)
+Other page changes (nav, headers, scripts): +1212 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 19 scripts, 38 checks, base HEAD | allowlisted 12 (1 stale allowlist line(s): K3 hippos:mnemonic_and_the_shoulder_mirror) | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 162/163 | vignette gridded 65/65 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.014%)
+```
+
 ## 2026-10-17 s147: s147: seven pediatric renal and GU briefs on the decision spine; four hubs join Presentations; hover cards placed correctly under the 110% zoom
 
 ```
