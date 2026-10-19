@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "</head>",
+   "with": "<style id=\"ax-s148d\">\n/* s148d (Jonathan 2026-10-19): Sleep stages tile, a schematic EEG line beside each stage in the legend (peds-sleep) */\n.sw .sw-leg.eeg li{grid-template-columns:16px minmax(4.4em,auto) 2.6em 120px;gap:10px}\n.sw .sw-wk{background:transparent;box-shadow:inset 0 0 0 1px var(--hair)}\n.sw .sw-eeg{display:block;width:120px;height:22px;color:var(--chart-ink);opacity:.78}\n@media (max-width:420px){.sw .sw-leg.eeg li{grid-template-columns:14px 4.4em 2.4em minmax(0,120px);gap:8px}.sw .sw-eeg{width:100%}}\n</style>\n</head>",
+   "note": "s148d: Sleep stages tile EEG legend styles (peds-sleep only)"
+  }
+ ]
+}
