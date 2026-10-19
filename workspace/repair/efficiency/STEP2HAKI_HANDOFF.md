@@ -13,7 +13,7 @@ No batch is open. Launch the next batch with the prompt under "Next launch promp
 - **No batch open.** s148c (psych patch, mood and psychosis: mdd, bipolar-mania, psychosis-duration, sz-psychosocial,
   voices, suicide-risk, antipsych-effects) shipped 2026-10-19 16:59: main 77afd16, page 2e611ff60890; record
   repair/s148c/S148C.md (S1 to S9); OPEN_WORK s148c row. Spend: reviewers 21 agents, 217 calls, 7.85M of 22, 260, 10M;
-  lead about 161M of the 170M figure (ledger_lead.csv). WAVE.json s148c is closed at the next launch (the lead writes the
+  lead 166.4M of the 170M figure (ledger_lead.csv). WAVE.json s148c is closed at the next launch (the lead writes the
   new wave).
 - **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into
   /root/.claude/settings.json (chat 4: no permission hold). On a two-core container, legib_audit and shots need
