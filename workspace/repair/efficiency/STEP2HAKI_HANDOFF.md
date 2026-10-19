@@ -26,6 +26,10 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   make/check (remap_disp.py after any later row insert), verify.py <folder> --mech --fast, private sync by copying the
   folder into local-only/ and committing wip/s148d. Belongs-elsewhere items owned by somatic or substance from the
   other proposals: check them when building those two.
+- **New decisions (2026-10-19, five digest lines):** layers not word caps; prose rules; sleep stages tile with EEG
+  traces; adjunct timelines; site items planned as s148f after s148d (private repo claude/pending/SITE_S148F.md). Chat 2
+  applies the s148d part first (batch file, "Jonathan's 2026-10-19 decisions"), then somatic and substance under the new
+  rules, then S3.
 - **Spend:** reviewers 0 agents, 0 calls; lead chat 1 37.4M (ledger_lead.csv), of 150M.
 - **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into
   /root/.claude/settings.json (chat 4: no permission hold). On a two-core container, legib_audit and shots need
