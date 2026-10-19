@@ -6,33 +6,27 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 
 ## Restart prompt (the only current one)
 
-No batch is open. The next batch starts with the launch prompt below in a fresh chat.
+Batch s148c is open. If this chat fills, paste into a fresh chat:
+```
+Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
+```
 
 ## State (rewrite after every step)
 
-- **Last batch: s148b** (site layer: brief body restyle to the Lithium Glance mockup) SHIPPED 2026-10-19 07:17
-  (Jonathan: "ship"; main 7fcc9f9; version.json s148b confirmed by fetch). All 177 briefs byte-identical. Record:
-  repair/s148b/S148B.md. Reviewers 0; lead about 62M against a 30M lead figure (disclosed).
-- **Remaining from SITE_BODY_GLANCE.md:** item 2 (First step split per order: outline_render.py and data) and item 3
-  (Timing card in Differential, reusing the fixed onset component); not yet scheduled; s148c reviews the psych briefs in
-  the new look.
-- **Fix before the next display-heavy batch:** legib_audit's tall-element capture can catch the page mid-reflow (it
-  narrows below 1100 px, the sticky brief bar shows), giving whole-brief false failures in some theme and accent runs;
-  repair/s148b/contrast_computed.py is the screenshot-free cross-check meanwhile.
-- **Hooks:** the step2haki-tools plugin synced in the cloud container was still 0.1.0 (no hooks) on 2026-10-18;
-  install.sh ran without a permission hold. Check again at the next launch.
-- **Open small items:** OPEN_WORK s148 row. Carried from s147: the public wip/s147 branch decision; the stray
-  ~/step2haki-private-push/_xfer_pub.bundle on the Mac.
+- **Open batch: s148c** (psych patch, mood and psychosis; claude/pending/SHIP_ORDER_PSYCH.md), launched 2026-10-19 07:25.
+  Briefs and folders (repair/migration/psych/...): mdd MDD/spine, bipolar-mania N1/spine, psychosis-duration P1/spine,
+  sz-psychosocial N3/spine, voices HUB/voices/spine, suicide-risk SUI/spine, antipsych-effects APAE/spine.
+  Proposals: repair/sources/intake/<brief>_2026-10-18.md. Batch file: repair/s148c/S148C.md. Branch wip/s148c (both repos).
+- **Budget:** 22 agents, 200 calls, 10M reviewer tokens; lead 30M (WAVE.json s148c open).
+- **Step:** launch done (digest line, wave, hooks installed by install.sh plus /root/.claude copy; test_hooks 101/101;
+  probe refused by the launch gate; lead start-up context 188,537, 45% over baseline). Next: S1 and S2 per brief.
+- **Spend:** reviewers 0 agents, 0 calls; lead in progress.
+- **Carried:** SITE_BODY_GLANCE items 2 and 3 unscheduled; legib_audit mid-reflow false failures (use
+  repair/s148b/contrast_computed.py as cross-check); OPEN_WORK s148 row; public wip/s147 branch; stray Mac bundle.
 
-## Next launch prompt (paste into a fresh chat)
+## Next launch prompt (after s148c ships)
 
-Order (Jonathan, 2026-10-18; claude/pending/SHIP_ORDER_PSYCH.md): s148c, s148d, s148e (titles to confirm first), then
-s149 as in BATCHES_S141_S150.md. Proposed budget for s148c below (7 briefs, patch method, one follow-up round); Jonathan
-sets it at launch.
-
-```
-Step2Haki: launch batch s148c (psych patch, mood and psychosis) per claude/BATCH_RUNBOOK.md and claude/pending/SHIP_ORDER_PSYCH.md. Briefs: mdd, bipolar-mania, psychosis-duration, sz-psychosocial, voices, suicide-risk, antipsych-effects. Apply each brief's 2026-10-18 proposal (rulings first, then edits, then comb additions after verifying the MED and LOW items), add timelines where they help, one review round on changed lines. Budget for the whole batch: 22 agents, 200 API calls, 10M tokens; lead 30M tokens. Method: s148 with the efficiency patch.
-```
+s148d per claude/pending/SHIP_ORDER_PSYCH.md (budget set at launch).
 
 ## After s141
 
