@@ -1,39 +1,33 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-18, by the s148 lead (continuation chat 5, efficiency patch built, S8 re-presented).
+Last updated: 2026-10-18, by the s148 lead (continuation chat 5: s148 shipped with the efficiency patch).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
 ## Restart prompt (the only current one)
 
-```
-Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
-```
-
-s148 is open; a fresh chat continues it with the line above.
+No batch is open. The next batch starts with the launch prompt below in a fresh chat.
 
 ## State (rewrite after every step)
 
-- **Open batch: s148** (Phase 2 musculoskeletal A, adult), launched 2026-10-17 22:34. Briefs: pmr, scaphoid, backpain,
-  hippos, gtps, oa-pharm, septic-bursitis, shoulder-rom, plus the carried bs-puv. Budget 32 agents, 320 API calls, 14M
-  tokens (WAVE.json wave s148). Branch wip/s148 in both repos. Batch file: repair/s148/S148.md (read it first).
-- **Step:** S8 re-presented in continuation chat 5 (2026-10-18): the eight efficiency fixes and plugin 0.2.0 built and
-  tested (batch file section "Efficiency patch and re-present"); all nine READY; approval.py present s148 (54 sheets,
-  page b4d4e9a1ca1c) in the chat-5 container. **Next:** Jonathan's "ship" in chat 5, then S9. If chat 5 is gone, a fresh
-  chat re-presents (verify_all, batch checks, shots_all, sheets --approval, present) before any ship. S9 extras: the
-  STANDING_DIRECTIONS conditional PASS line for fix 8 (post-ship: it would stale every receipt before), the project
-  copies of the handoff and digest, the lead ledger row (usage_ledger --lead --record s148).
-- **Spend:** 30 agents, 289 calls, 12.22M tokens of 32, 320, 14M (reviewers); lead chat 5 in ledger_lead.csv.
-- **Ship notes:** remove the stale K3 hippos allowlist line; merge main into wip/s148 first; OPEN_WORK items: sticky rail
-  truncates long step names, Practice Distractors panel unmasked in study mode, desktop chip wrap (hippos clue row), a
-  gout brief (no live owner), queued item-stem fixes (bs-puv "2 do", scaphoid CTS and CMC, shoulder-rom C5-C6).
+- **Last batch: s148** (Phase 2 musculoskeletal A, adult) SHIPPED 2026-10-18 (Jonathan: "ship"; commit 40e8667 on main):
+  pmr, oa-pharm (disease); backpain, hippos, gtps, septic-bursitis, shoulder-rom, scaphoid (hubs); the carried bs-puv.
+  Record: repair/s148/S148.md. Reviewer spend 30 agents, 289 calls, 12.22M of 32, 320, 14M; lead chat 5 in
+  repair/efficiency/ledger_lead.csv (chats 1 to 4 unrecorded).
+- **Shipped with it:** the s148 efficiency patch (repair/s148/EFFICIENCY_PATCH.md, all eight fixes) and plugin
+  step2haki-tools 0.2.0 (hooks). Runbook updated (repo and project copies).
+- **First check in the next chat:** whether the plugin's hooks load on their own (runbook session start: test_hooks
+  passes and a probe Agent launch with no model is refused). If they do, skip install.sh; if not, install and ask, and
+  note it for Jonathan.
+- **Open small items:** OPEN_WORK s148 row (sticky rail truncation, Practice Distractors panel unmasked in study mode,
+  hippos chip wrap, a gout brief, queued item-stem fixes, scaphoid P3 distractor explanation).
 - **Carried from s147:** open decision on the public wip/s147 branch (delete or leave; Jonathan's call); the stray
-  ~/step2haki-private-push/_xfer_pub.bundle on the Mac; open small items as listed in S147.md.
+  ~/step2haki-private-push/_xfer_pub.bundle on the Mac.
 
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s148 (Phase 2, musculoskeletal A, adult) per claude/BATCH_RUNBOOK.md. Briefs: pmr, scaphoid, backpain, hippos, gtps, oa-pharm, septic-bursitis, shoulder-rom (folders: claude/pending/FOLDERS_S142_S160.md, listed there as s147; scaphoid, backpain, gtps, septic-bursitis and shoulder-rom have merge folders, pmr, hippos and oa-pharm build from the page and repair/sources); plus the carried bs-puv (repair/s147/carry: drop or rewrite its "drain, then image" subtitle, then review all four parts). Golden: copd (FM lens); a hub golden first if backpain or hippos needs one; nephrotic-child for bs-puv. Budget for the whole batch: 32 agents, 320 API calls, 14M tokens. Method: s142 with the s147 lane lessons (lane instructions inline; at most 4 calls per brief plus spares; follow-up packets diff against the reviewer's last version; display gets the changed steps only).
+Step2Haki: launch batch s149 (Phase 2, musculoskeletal B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors (folders: claude/pending/FOLDERS_S142_S160.md, listed there as s148). Golden: scfe. Budget for the whole batch: 22 agents, 220 API calls, 10M tokens; lead 35M tokens (max_lead_tokens, shown in the report). Method: s148 with the efficiency patch (lanes.py, foreground lanes, lint before review, restarts after S3 and S7).
 ```
 
 ## After s141
@@ -82,7 +76,7 @@ The next batch's launch prompt comes from those files unless the s141 closing re
 2. Pushing: with the repos attached, `git push origin HEAD:<branch>` works without the token (checked 2026-10-14). ship.sh
    pushes only when /home/claude/.config/axbx/gh_token exists; without it, it prints "push skipped: no token": then push
    HEAD to main by hand. The Mac's gh_token (fine-grained, Step2Haki only) is the fallback; never store it in a repo or doc.
-3. Install the hooks: `bash tools/hooks/install.sh`, then `python3 tools/hooks/test_hooks.py` (80 checks), `python3 tools/hooks/usage_ledger.py --context`, and check the Agent tool lists `step2haki-tools:lean-reviewer` (install.sh also installs a local `lean-reviewer`; either passes the launch gate). Re-run the live tests T1 to T4, T8, T9 with one probe wave before any agent work (a temporary probe wave in WAVE.json, then restore the batch wave). A new container has no hooks (T10).
+3. Install the hooks (skip when the plugin's hooks are live: runbook section 1): `bash tools/hooks/install.sh`, then `python3 tools/hooks/test_hooks.py` (80 checks), `python3 tools/hooks/usage_ledger.py --context`, and check the Agent tool lists `step2haki-tools:lean-reviewer` (install.sh also installs a local `lean-reviewer`; either passes the launch gate). Re-run the live tests T1 to T4, T8, T9 with one probe wave before any agent work (a temporary probe wave in WAVE.json, then restore the batch wave). A new container has no hooks (T10).
 4. Claude Code on the web (s138): the repo clones to /home/user/Step2Haki and the private repo to /home/user/step2haki-private; common.py maps roles.json's /home/claude paths onto the checkout. install.sh writes /home/claude/.claude/settings.json, which this harness does not read: write the same three hooks into /root/.claude/settings.json and `mkdir -p /home/claude/.config/axbx/hooks`. Install Python Playwright 1.56.0 (matches /opt/pw-browsers chromium-1194) for shots.py. step2haki.vercel.app is outside the default network policy: Jonathan checks version.json, or allows the host in the environment's Network access.
 5. Do not edit tracked files while `verify.py` runs in the background: its git check reports any tracked change made during the run.
 
