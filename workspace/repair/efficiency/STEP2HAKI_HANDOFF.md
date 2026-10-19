@@ -17,9 +17,16 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   tics TICS/spine, psych-medical MED/spine. Proposals repair/sources/intake/<brief>_2026-10-18.md. Batch file
   repair/s148d/S148D.md. Branch wip/s148d in both repos. Budget: reviewers 20 agents, 240 calls, 9M tokens; lead 150M
   (WAVE.json s148d). Method: s148c (patch: S1 to S3, one review round on changed lines, S8, S9).
-- **Step:** S1 and S2 done for psych-medical, tics, peds-sleep (records in the batch file; folders synced to the private
-  repo wip/s148d). Next: S1 and S2 for panic, somatic, substance (in that order), then S3 for all six.
-- **Spend:** reviewers 0 agents, 0 calls; lead chat 1 running.
+- **Step:** S1 and S2 done for psych-medical, tics, peds-sleep, panic (records in the batch file, S148D.md; folders
+  synced to the private repo wip/s148d; psych-medical also took panic's belongs-elsewhere row). Next (lead chat 2): S1
+  and S2 for somatic, then substance, then S3 for all six. Continuation reads: this State, S148D.md, digest lines from
+  2026-10-15, the two proposals (repair/sources/intake/somatic_2026-10-18.md, substance_2026-10-18.md) and SOMA/spine,
+  TOX/spine build.py. Method notes from chat 1: edit build.py with T()/pop() (hover buttons on existing words cost the
+  least), facts in facts.json (quotes verified by script against the intake file), cards via card_dispositions.py
+  make/check (remap_disp.py after any later row insert), verify.py <folder> --mech --fast, private sync by copying the
+  folder into local-only/ and committing wip/s148d. Belongs-elsewhere items owned by somatic or substance from the
+  other proposals: check them when building those two.
+- **Spend:** reviewers 0 agents, 0 calls; lead chat 1 37.4M (ledger_lead.csv), of 150M.
 - **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into
   /root/.claude/settings.json (chat 4: no permission hold). On a two-core container, legib_audit and shots need
   Playwright default timeouts of 240000 ms (a scratch wrapper; batch file S3). Keep lane specs out of the top level of
