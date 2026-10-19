@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-19 s148b: s148b: brief body restyle to the Lithium Glance mockup (type scale, one flat raised card, no tint or heading glow, sentence-case labels and table headers, hover cards, font stack) and onset timeline cards that fit their text with computed placement; site layer, every brief byte-identical
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Other page changes (nav, headers, scripts): +19375 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 20 scripts, 38 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 162/163 | vignette gridded 65/65 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.014%)
+```
+
 ## 2026-10-18 s148: Phase 2 musculoskeletal A: eight adult briefs on the decision spine, the carried bs-puv; efficiency patch tools
 
 ```
