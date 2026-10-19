@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-18, by the s148 lead (continuation chat 5: s148 shipped with the efficiency patch).
+Last updated: 2026-10-18, by the s148 lead (continuation chat 5: s148 shipped with the efficiency patch); next launch prompt re-pointed to s148b the same evening by the psych intake chat (Jonathan's ship order, claude/pending/SHIP_ORDER_PSYCH.md).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -25,6 +25,18 @@ No batch is open. The next batch starts with the launch prompt below in a fresh 
   ~/step2haki-private-push/_xfer_pub.bundle on the Mac.
 
 ## Next launch prompt (paste into a fresh chat)
+
+Order from here (Jonathan, 2026-10-18; claude/pending/SHIP_ORDER_PSYCH.md, private repo claude/pending/ and the project):
+s148b site restyle, then s148c and s148d psych patches (the 2026-10-18 intake proposals and Jonathan's rulings),
+then s148e new psych briefs (titles to confirm first), then s149 as below. Lettered ids keep s149 to s160 unchanged.
+Standing direction added the same day: timelines wherever they help in every brief a batch authors or reauthors
+(STANDING_DIRECTIONS, "Timelines in every reauthored brief").
+
+```
+Step2Haki: launch batch s148b (site restyle to the Lithium Glance mockup) per claude/BATCH_RUNBOOK.md. Plan: claude/pending/SITE_BODY_GLANCE.md (Decided A to D; work plan items 1 and 4 in this batch: type scale, one flat tile with no tint or heading glow, labels, table text and headers, hover cards, font stack, onset timeline cards that fit their text with computed placement; item 2 First step split and item 3 Timing card may follow as their own batch if they need renderer and data work). Site-wide CSS for all 177 briefs plus the onset timeline layout script; no text changes. Also mirror the 2026-10-18 timeline line of the project STANDING_DIRECTIONS into the repo copy if missing. Budget for the whole batch: Jonathan sets at launch. Method: s148 with the efficiency patch.
+```
+
+After s148b, s148c to s148e use the prompts in claude/pending/SHIP_ORDER_PSYCH.md. Then:
 
 ```
 Step2Haki: launch batch s149 (Phase 2, musculoskeletal B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors (folders: claude/pending/FOLDERS_S142_S160.md, listed there as s148). Golden: scfe. Budget for the whole batch: 22 agents, 220 API calls, 10M tokens; lead 35M tokens (max_lead_tokens, shown in the report). Method: s148 with the efficiency patch (lanes.py, foreground lanes, lint before review, restarts after S3 and S7).

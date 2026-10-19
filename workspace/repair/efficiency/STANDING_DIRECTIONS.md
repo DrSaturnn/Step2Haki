@@ -93,6 +93,7 @@ Source keys:
 - **Workup grouping:** first-line tests stay grouped in their own tile. [MEM]
 - **Bottom lines:** split into short paragraphs, with ordered labs on indented lines. [MEM]
 - **Timelines:** horizontal duration timelines (vertical was only a suggestion); for much of the psych content, timelines are authored in addition to the brief. [MEM]
+- **Timelines in every reauthored brief (2026-10-18):** a timeline is added wherever it helps, in any brief a batch authors or reauthors, not only hubs or psych. It helps when the answer turns on timing: onset after a drug start, stop or dose change; withdrawal or toxicity windows; duration criteria; latency after an exposure or infection; age windows; the order in which findings appear. Each event and window comes from the brief's board sources (same rules as any number); no timeline only for decoration. It uses the site's timeline components (onset timeline, window rows, mood tracks), whose cards fit their text with no overlap (claude/pending/SITE_BODY_GLANCE.md). Briefs already shipped get theirs at their next batch. [Jonathan 2026-10-18]
 - **Timeline ticks:** tick labels repeat on every timeline row, placed where they best line up with that row's bars. [MEM]
 - **Chart and timeline colors:** a softer, pastel-leaning palette that still matches the app's theme. [MEM] [HO]
 - **Timeline legibility:** charts use the voices-chart style site-wide (per-row legends, no nested frames). [DIG 2026-10-09]
