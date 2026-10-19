@@ -1,43 +1,36 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-19, by the s148c lead chat 4 (S8 presented; waiting for "ship").
+Last updated: 2026-10-19, by the s148c lead chat 4 (s148c shipped; no batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
 ## Restart prompt (the only current one)
 
-Batch s148c is open. If this chat fills, paste into a fresh chat:
-```
-Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
-```
+No batch is open. Launch the next batch with the prompt under "Next launch prompt".
 
 ## State (rewrite after every step)
 
-- **Open batch: s148c** (psych patch, mood and psychosis; claude/pending/SHIP_ORDER_PSYCH.md), launched 2026-10-19 07:25.
-  Briefs and folders (repair/migration/psych/...): mdd MDD/spine, bipolar-mania N1/spine, psychosis-duration P1/spine,
-  sz-psychosocial N3/spine, voices HUB/voices/spine, suicide-risk SUI/spine, antipsych-effects APAE/spine.
-  Proposals: repair/sources/intake/<brief>_2026-10-18.md. Batch file: repair/s148c/S148C.md. Branch wip/s148c (both repos).
-- **Budget:** 22 agents, 260 calls (raised from 200 at S5, Jonathan 2026-10-19, "Calls 200 to 260 (Recommended)"), 10M
-  reviewer tokens; lead 170M (raised from 30M to 90M, then to 170M at the S3 restart; WAVE.json s148c open).
-- **Step: S8 presented; waiting for Jonathan's "ship".** verify_all: all seven READY. Batch preview (repair/s148c/
-  10_*.json, lane specs moved to repair/s148c/lanes/): gate, render, preflight, vendor_scan clean. 56 approval sheets
-  local/shots/s148c/approval/, approval.py present s148c (page 2e611ff60890) in lead chat 4's container; changelog
-  entry 148c added. "ship" must go to the chat that presented; if that chat is gone, re-present in a fresh chat (the
-  shots and sheets regenerate from the preview: batch file S8) before S9.
-- **Spend:** reviewers 21 agents, 217 calls, 7.85M tokens of 22, 260, 10M. Lead rows: chat 1 41.6M, chat 2 45.8M,
-  chat 3 56.3M, chat 4 17.1M: 160.8M of the 170M figure (ledger_lead.csv); S9 has about 9M.
-- **Session start note (chat 3):** the cp restore ran without a hold; the /root/.claude/settings.json hook copy was
-  held until Jonathan allowed it. legib_audit and shots need longer Playwright timeouts on a two-core container: a
-  wrapper that sets the default timeouts to 240000 ms (batch file, S3).
+- **No batch open.** s148c (psych patch, mood and psychosis: mdd, bipolar-mania, psychosis-duration, sz-psychosocial,
+  voices, suicide-risk, antipsych-effects) shipped 2026-10-19 16:59: main 77afd16, page 2e611ff60890; record
+  repair/s148c/S148C.md (S1 to S9); OPEN_WORK s148c row. Spend: reviewers 21 agents, 217 calls, 7.85M of 22, 260, 10M;
+  lead about 161M of the 170M figure (ledger_lead.csv). WAVE.json s148c is closed at the next launch (the lead writes the
+  new wave).
+- **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into
+  /root/.claude/settings.json (chat 4: no permission hold). On a two-core container, legib_audit and shots need
+  Playwright default timeouts of 240000 ms (a scratch wrapper; batch file S3). Keep lane specs out of the top level of
+  repair/sNN/ (build.py and ship.sh apply every top-level json there): use repair/sNN/lanes/.
 - **Carried:** SITE_BODY_GLANCE items 2 and 3 unscheduled; legib_audit mid-reflow false failures (use
-  repair/s148b/contrast_computed.py as cross-check); OPEN_WORK s148 row; public wip/s147 branch; stray Mac bundle;
-  mdd duration-window timeline offered as a follow-up (batch file, mdd); for the next site batch: .sp-spec td:first-child nowrap
-  (mdd works around it with <br>) and the DIGFAST and figure title rows touching the phone edge; deferred LOWs:
-  sz-psychosocial nonadherence wording, psychosis-duration "non-bizarre" definition (each brief's adj_s148c.md).
+  repair/s148b/contrast_computed.py as cross-check); public wip/s147 branch; stray Mac bundle; mdd duration-window
+  timeline offered as a follow-up; for the next site batch: .sp-spec td:first-child nowrap (mdd works around it with
+  <br>) and the DIGFAST and figure title rows touching the phone edge; deferred LOWs: sz-psychosocial nonadherence
+  wording, psychosis-duration "non-bizarre" definition (each brief's adj_s148c.md); ae20 (AnKing ADAPT) saved as the
+  card stem only: add its answer text at the next antipsych-effects intake.
 
-## Next launch prompt (after s148c ships)
+## Next launch prompt (paste into a fresh chat)
 
-s148d per claude/pending/SHIP_ORDER_PSYCH.md (budget set at launch).
+```
+Step2Haki: launch batch s148d (psych patch, anxiety, somatic, substance, sleep, tics) per claude/BATCH_RUNBOOK.md and claude/pending/SHIP_ORDER_PSYCH.md. Briefs: panic, somatic, substance, peds-sleep, tics, psych-medical. Apply each brief's 2026-10-18 proposal (rulings first, then edits, then comb additions after verifying the MED and LOW items), add timelines where they help, one review round on changed lines. Budget for the whole batch: 20 agents, 240 API calls, 9M tokens; lead 150M tokens. Method: s148c (patch, with the efficiency patch).
+```
 
 ## After s141
 
