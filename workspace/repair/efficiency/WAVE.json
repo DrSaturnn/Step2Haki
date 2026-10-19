@@ -1,8 +1,8 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s148c",
+ "id": "s148d",
  "open": true,
- "plan_step": "s148c",
+ "plan_step": "s148d",
  "roles": [
   "acc-review",
   "read-review",
@@ -10,16 +10,16 @@
   "flag-review",
   "wording-fix"
  ],
- "max_agents": 22,
- "max_calls": 260,
- "max_tokens": 10000000,
- "set_by": "Jonathan, s148c launch prompt: \"Budget for the whole batch: 22 agents, 200 API calls, 10M tokens; lead 30M tokens.\" Lead figure raised to 90M by Jonathan 2026-10-19 (\"a\"), then to 170M at the S3 restart (\"a\"). Reviewer call cap raised from 200 to 260 by Jonathan 2026-10-19 at S5 for the follow-up round (\"Calls 200 to 260 (Recommended)\"); agents and tokens unchanged.",
+ "max_agents": 20,
+ "max_calls": 240,
+ "max_tokens": 9000000,
+ "set_by": "Jonathan, s148d launch prompt: \"Budget for the whole batch: 20 agents, 240 API calls, 9M tokens; lead 150M tokens.\"",
  "previous": {
-  "id": "s148b",
-  "note": "2026-10-19 (s148b shipped, main 7fcc9f9)"
+  "id": "s148c",
+  "note": "2026-10-19 (s148c shipped 16:59, main 77afd16)"
  },
- "opened": "2026-10-19 07:25 (launch)",
- "note": "Psych patch, mood and psychosis (SHIP_ORDER_PSYCH.md): seven shipped spine briefs take their 2026-10-18 intake proposals; one review round on changed lines.",
+ "opened": "2026-10-19 17:12 (launch)",
+ "note": "Psych patch, anxiety, somatic, substance, sleep, tics (SHIP_ORDER_PSYCH.md): panic, somatic, substance, peds-sleep, tics, psych-medical take their 2026-10-18 intake proposals; one review round on changed lines.",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -84,10 +84,16 @@
   },
   "s148c": {
    "agents": 22,
-   "calls": 200,
+   "calls": 260,
    "tokens": 10000000,
-   "lead_tokens": 90000000
+   "lead_tokens": 170000000
+  },
+  "s148d": {
+   "agents": 20,
+   "calls": 240,
+   "tokens": 9000000,
+   "lead_tokens": 150000000
   }
  },
- "max_lead_tokens": 170000000
+ "max_lead_tokens": 150000000
 }

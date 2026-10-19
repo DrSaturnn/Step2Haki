@@ -1,20 +1,26 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-19, by the s148c lead chat 4 (s148c shipped; no batch open).
+Last updated: 2026-10-19, by the s148d lead chat 1 (s148d open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
 ## Restart prompt (the only current one)
 
-No batch is open. Launch the next batch with the prompt under "Next launch prompt".
+```
+Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
+```
 
 ## State (rewrite after every step)
 
-- **No batch open.** s148c (psych patch, mood and psychosis: mdd, bipolar-mania, psychosis-duration, sz-psychosocial,
-  voices, suicide-risk, antipsych-effects) shipped 2026-10-19 16:59: main 77afd16, page 2e611ff60890; record
-  repair/s148c/S148C.md (S1 to S9); OPEN_WORK s148c row. Spend: reviewers 21 agents, 217 calls, 7.85M of 22, 260, 10M;
-  lead 166.4M of the 170M figure (ledger_lead.csv). WAVE.json s148c is closed at the next launch (the lead writes the
-  new wave).
+- **Batch s148d open** (psych patch, anxiety, somatic, substance, sleep, tics; launched 2026-10-19 17:12). Briefs and
+  folders (repair/migration/psych/): panic N5/spine, somatic SOMA/spine, substance TOX/spine, peds-sleep SLEEP/spine,
+  tics TICS/spine, psych-medical MED/spine. Proposals repair/sources/intake/<brief>_2026-10-18.md. Batch file
+  repair/s148d/S148D.md. Branch wip/s148d in both repos. Budget: reviewers 20 agents, 240 calls, 9M tokens; lead 150M
+  (WAVE.json s148d). Method: s148c (patch: S1 to S3, one review round on changed lines, S8, S9).
+- **Step:** launch done (digest line, WAVE.json, hooks: install.sh plus /root/.claude copy, test_hooks 101/101, gate
+  refused an unlabeled probe, start-up context 127,654). Next: S1 and S2 brief by brief (psych-medical, tics,
+  peds-sleep, panic, somatic, substance); each brief's record goes in the batch file as it finishes.
+- **Spend:** reviewers 0 agents, 0 calls; lead chat 1 running.
 - **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into
   /root/.claude/settings.json (chat 4: no permission hold). On a two-core container, legib_audit and shots need
   Playwright default timeouts of 240000 ms (a scratch wrapper; batch file S3). Keep lane specs out of the top level of
