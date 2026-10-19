@@ -98,7 +98,6 @@
   function start(){
     all(); watch();
     if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ all(); });
-    window.addEventListener('resize', function(){ all(); });
     if(phone.addEventListener) phone.addEventListener('change', function(){ all(); });
     var study = document.body.classList.contains('study');
     new MutationObserver(function(){     // study mode on or off (a class on body only)
