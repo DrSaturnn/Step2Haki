@@ -17,9 +17,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   tics TICS/spine, psych-medical MED/spine. Proposals repair/sources/intake/<brief>_2026-10-18.md. Batch file
   repair/s148d/S148D.md. Branch wip/s148d in both repos. Budget: reviewers 20 agents, 240 calls, 9M tokens; lead 150M
   (WAVE.json s148d). Method: s148c (patch: S1 to S3, one review round on changed lines, S8, S9).
-- **Step:** launch done (digest line, WAVE.json, hooks: install.sh plus /root/.claude copy, test_hooks 101/101, gate
-  refused an unlabeled probe, start-up context 127,654). Next: S1 and S2 brief by brief (psych-medical, tics,
-  peds-sleep, panic, somatic, substance); each brief's record goes in the batch file as it finishes.
+- **Step:** S1 and S2 done for psych-medical, tics, peds-sleep (records in the batch file; folders synced to the private
+  repo wip/s148d). Next: S1 and S2 for panic, somatic, substance (in that order), then S3 for all six.
 - **Spend:** reviewers 0 agents, 0 calls; lead chat 1 running.
 - **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into
   /root/.claude/settings.json (chat 4: no permission hold). On a two-core container, legib_audit and shots need
