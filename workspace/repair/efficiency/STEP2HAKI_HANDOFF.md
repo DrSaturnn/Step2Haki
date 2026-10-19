@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-19, by the s148c lead (S3 done, all seven briefs).
+Last updated: 2026-10-19, by the s148c lead chat 3 (S5 done; follow-up round next).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -17,20 +17,23 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   Briefs and folders (repair/migration/psych/...): mdd MDD/spine, bipolar-mania N1/spine, psychosis-duration P1/spine,
   sz-psychosocial N3/spine, voices HUB/voices/spine, suicide-risk SUI/spine, antipsych-effects APAE/spine.
   Proposals: repair/sources/intake/<brief>_2026-10-18.md. Batch file: repair/s148c/S148C.md. Branch wip/s148c (both repos).
-- **Budget:** 22 agents, 200 calls, 10M reviewer tokens; lead 170M (raised from 30M to 90M, then to 170M at the S3 restart, Jonathan 2026-10-19, "a" both times; WAVE.json s148c open).
-- **Step: S3 done** for all seven (S1 and S2 per brief and S3 recorded in the batch file): verify --mech full PASS x7;
-  legib_audit 0 below contrast x7 (phone, desk; sculpted, flat, study); onset sweep 0 failures. Next: S4, review
-  round 1 on the changed lines (patch method: one round), in a fresh chat that reads the State, the batch file, each
-  brief's boards.md, cuts.json and cards_disposition.json counts.
-- **Spend:** reviewers 0 agents, 0 calls. Lead: chat 1 (e07dfc62) 41.6M, chat 2 (16f37cac) 45.8M: 87.4M of the 170M
-  lead figure (ledger_lead.csv); about 82M left for the review round (S4 to S7) and S8 and S9.
-- **Session start note (chat 2):** the cp of private local-only files into the public clone's git-ignored folders was
-  refused by the automatic safety check until Jonathan authorized it in chat; ask for that at the start of the next chat.
-  legib_audit needs longer Playwright timeouts on a two-core container (the page loads in about 28 s): run each brief
-  alone through a wrapper that sets set_default_timeout(240000) (batch file, S3).
+- **Budget:** 22 agents, 260 calls (raised from 200 at S5, Jonathan 2026-10-19, "Calls 200 to 260 (Recommended)"), 10M
+  reviewer tokens; lead 170M (raised from 30M to 90M, then to 170M at the S3 restart; WAVE.json s148c open).
+- **Step: S5 done; S6 and S7 (follow-up round) next.** S4 round 1 and the make-up lanes gave 28 receipts
+  (reviews/<brief>_<part>_r5.md); S5 adjudication per brief in each folder's adj_s148c.md (local-only) and summarized in
+  the batch file; verify --mech full PASS on the six changed briefs. sz-psychosocial is READY (condpass). The follow-up
+  round: spec repair/s148c/lanes_r2.json (8 lanes, 149 lane calls; packets repair/migration/spine/packets/s148c-r2,
+  diffed since round 1); display sheets need sheets.py --page (s148c packet-error fix) from local/shots/s148c-r2.
+- **Spend:** reviewers 13 agents, 144 calls, 5.59M tokens. Lead: chat 1 41.6M, chat 2 45.8M, chat 3 (7f636bd0) under
+  way (16.0M at the round-1 record); ledger_lead.csv.
+- **Session start note (chat 3):** the cp restore ran without a hold; the /root/.claude/settings.json hook copy was
+  held until Jonathan allowed it. legib_audit and shots need longer Playwright timeouts on a two-core container: a
+  wrapper that sets the default timeouts to 240000 ms (batch file, S3).
 - **Carried:** SITE_BODY_GLANCE items 2 and 3 unscheduled; legib_audit mid-reflow false failures (use
   repair/s148b/contrast_computed.py as cross-check); OPEN_WORK s148 row; public wip/s147 branch; stray Mac bundle;
-  mdd duration-window timeline offered as a follow-up (batch file, mdd).
+  mdd duration-window timeline offered as a follow-up (batch file, mdd); for the next site batch: .sp-spec td:first-child nowrap
+  (mdd works around it with <br>) and the DIGFAST and figure title rows touching the phone edge; deferred LOWs:
+  sz-psychosocial nonadherence wording, psychosis-duration "non-bizarre" definition (each brief's adj_s148c.md).
 
 ## Next launch prompt (after s148c ships)
 

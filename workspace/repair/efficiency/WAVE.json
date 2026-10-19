@@ -11,9 +11,9 @@
   "wording-fix"
  ],
  "max_agents": 22,
- "max_calls": 200,
+ "max_calls": 260,
  "max_tokens": 10000000,
- "set_by": "Jonathan, s148c launch prompt: \"Budget for the whole batch: 22 agents, 200 API calls, 10M tokens; lead 30M tokens.\" Lead figure raised to 90M by Jonathan 2026-10-19 (\"a\"), then to 170M at the S3 restart (\"a\").",
+ "set_by": "Jonathan, s148c launch prompt: \"Budget for the whole batch: 22 agents, 200 API calls, 10M tokens; lead 30M tokens.\" Lead figure raised to 90M by Jonathan 2026-10-19 (\"a\"), then to 170M at the S3 restart (\"a\"). Reviewer call cap raised from 200 to 260 by Jonathan 2026-10-19 at S5 for the follow-up round (\"Calls 200 to 260 (Recommended)\"); agents and tokens unchanged.",
  "previous": {
   "id": "s148b",
   "note": "2026-10-19 (s148b shipped, main 7fcc9f9)"

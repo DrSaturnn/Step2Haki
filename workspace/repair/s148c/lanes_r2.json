@@ -1,0 +1,131 @@
+{
+ "batch": "s148c",
+ "plan_step": "s148c",
+ "round": 3,
+ "context": "batch s148c, a patch: seven shipped psychiatry spine briefs take their 2026-10-18 intake proposals; round 1 reviewed the changes since the live version, the lead fixed or answered every finding, and this follow-up reviews those fixes",
+ "out": "repair/efficiency/lanes/s148c/r2",
+ "packets": "repair/migration/spine/packets/s148c-r2",
+ "sheets": "local/shots/s148c-r2/sheets",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "antipsych-effects",
+    "psychosis-duration",
+    "suicide-risk"
+   ]
+  },
+  {
+   "part": "acc",
+   "group": "B",
+   "briefs": [
+    "mdd",
+    "bipolar-mania",
+    "voices"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "antipsych-effects",
+    "psychosis-duration",
+    "suicide-risk"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "B",
+   "briefs": [
+    "mdd",
+    "bipolar-mania",
+    "voices"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "antipsych-effects",
+    "psychosis-duration",
+    "suicide-risk"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "A",
+   "briefs": [
+    "mdd",
+    "bipolar-mania"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "B",
+   "briefs": [
+    "psychosis-duration",
+    "antipsych-effects"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "C",
+   "briefs": [
+    "voices",
+    "suicide-risk"
+   ]
+  }
+ ],
+ "types": {
+  "voices": "presentation hub (steps 5 to 8 greyed)"
+ },
+ "steps": {},
+ "prior": {
+  "acc": {
+   "mdd": "repair/migration/spine/reviews/mdd_acc_r5.md",
+   "bipolar-mania": "repair/migration/spine/reviews/bipolar-mania_acc_r5.md",
+   "psychosis-duration": "repair/migration/spine/reviews/psychosis-duration_acc_r5.md",
+   "voices": "repair/migration/spine/reviews/voices_acc_r5.md",
+   "suicide-risk": "repair/migration/spine/reviews/suicide-risk_acc_r5.md",
+   "antipsych-effects": "repair/migration/spine/reviews/antipsych-effects_acc_r5.md"
+  },
+  "read": {
+   "mdd": "repair/migration/spine/reviews/mdd_read_r5.md",
+   "bipolar-mania": "repair/migration/spine/reviews/bipolar-mania_read_r5.md",
+   "psychosis-duration": "repair/migration/spine/reviews/psychosis-duration_read_r5.md",
+   "voices": "repair/migration/spine/reviews/voices_read_r5.md",
+   "suicide-risk": "repair/migration/spine/reviews/suicide-risk_read_r5.md",
+   "antipsych-effects": "repair/migration/spine/reviews/antipsych-effects_read_r5.md"
+  },
+  "display": {
+   "mdd": "repair/migration/spine/reviews/mdd_display_r5.md",
+   "bipolar-mania": "repair/migration/spine/reviews/bipolar-mania_display_r5.md",
+   "psychosis-duration": "repair/migration/spine/reviews/psychosis-duration_display_r5.md",
+   "voices": "repair/migration/spine/reviews/voices_display_r5.md",
+   "suicide-risk": "repair/migration/spine/reviews/suicide-risk_display_r5.md",
+   "antipsych-effects": "repair/migration/spine/reviews/antipsych-effects_display_r5.md"
+  },
+  "flags": {
+   "mdd": "repair/migration/spine/reviews/mdd_flags_r5.md",
+   "bipolar-mania": "repair/migration/spine/reviews/bipolar-mania_flags_r5.md",
+   "psychosis-duration": "repair/migration/spine/reviews/psychosis-duration_flags_r5.md",
+   "voices": "repair/migration/spine/reviews/voices_flags_r5.md",
+   "suicide-risk": "repair/migration/spine/reviews/suicide-risk_flags_r5.md",
+   "antipsych-effects": "repair/migration/spine/reviews/antipsych-effects_flags_r5.md"
+  }
+ },
+ "adjudication": {
+  "mdd": "repair/migration/psych/MDD/spine/adj_s148c.md",
+  "bipolar-mania": "repair/migration/psych/N1/spine/adj_s148c.md",
+  "psychosis-duration": "repair/migration/psych/P1/spine/adj_s148c.md",
+  "voices": "repair/migration/psych/HUB/voices/spine/adj_s148c.md",
+  "suicide-risk": "repair/migration/psych/SUI/spine/adj_s148c.md",
+  "antipsych-effects": "repair/migration/psych/APAE/spine/adj_s148c.md"
+ },
+ "notes": {
+  "acc": [
+   "Jonathan's 2026-10-18 rulings stand: akathisia 'Typically within 4 weeks; overall range hours to months' (C1) and quetiapine in the top metabolic tier (C3); judge their support, not the decision."
+  ]
+ }
+}

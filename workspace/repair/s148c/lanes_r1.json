@@ -1,0 +1,148 @@
+{
+ "batch": "s148c",
+ "plan_step": "s148c",
+ "round": 2,
+ "context": "batch s148c, a patch: seven shipped psychiatry spine briefs take their 2026-10-18 intake proposals (rulings, edits, verified comb additions, timelines where they help); this is the batch's single review round, on the changes since the live shipped version",
+ "out": "repair/efficiency/lanes/s148c/r1",
+ "packets": "repair/migration/spine/packets/s148c",
+ "sheets": "local/shots/s148c-r1/sheets",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "mdd",
+    "bipolar-mania",
+    "psychosis-duration",
+    "antipsych-effects"
+   ]
+  },
+  {
+   "part": "acc",
+   "group": "B",
+   "briefs": [
+    "sz-psychosocial",
+    "voices",
+    "suicide-risk"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "mdd",
+    "bipolar-mania",
+    "psychosis-duration",
+    "antipsych-effects"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "B",
+   "briefs": [
+    "sz-psychosocial",
+    "voices",
+    "suicide-risk"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "mdd",
+    "bipolar-mania",
+    "psychosis-duration",
+    "antipsych-effects"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "B",
+   "briefs": [
+    "sz-psychosocial",
+    "voices",
+    "suicide-risk"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "A",
+   "briefs": [
+    "mdd",
+    "bipolar-mania",
+    "psychosis-duration"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "B",
+   "briefs": [
+    "sz-psychosocial",
+    "antipsych-effects"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "C",
+   "briefs": [
+    "voices",
+    "suicide-risk"
+   ]
+  }
+ ],
+ "types": {
+  "voices": "presentation hub (steps 5 to 8 greyed)"
+ },
+ "steps": {
+  "mdd": "1, 3, 4, 6 and 7",
+  "bipolar-mania": "1, 3, 4, 5 and 7",
+  "psychosis-duration": "1, 3, 4, 5 and 7",
+  "sz-psychosocial": "1, 2, 3, 7 and 8",
+  "voices": "3 and 4",
+  "suicide-risk": "1 and 8",
+  "antipsych-effects": "header, 2, 3, 7 and 8 (Practice changed too: text only, in brief_text.txt)"
+ },
+ "prior": {
+  "acc": {
+   "mdd": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "bipolar-mania": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "psychosis-duration": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "sz-psychosocial": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "voices": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "suicide-risk": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "antipsych-effects": "repair/migration/spine/packets/s148c/_prior_shipped.md"
+  },
+  "read": {
+   "mdd": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "bipolar-mania": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "psychosis-duration": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "sz-psychosocial": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "voices": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "suicide-risk": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "antipsych-effects": "repair/migration/spine/packets/s148c/_prior_shipped.md"
+  },
+  "display": {
+   "mdd": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "bipolar-mania": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "psychosis-duration": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "sz-psychosocial": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "voices": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "suicide-risk": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "antipsych-effects": "repair/migration/spine/packets/s148c/_prior_shipped.md"
+  },
+  "flags": {
+   "mdd": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "bipolar-mania": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "psychosis-duration": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "sz-psychosocial": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "voices": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "suicide-risk": "repair/migration/spine/packets/s148c/_prior_shipped.md",
+   "antipsych-effects": "repair/migration/spine/packets/s148c/_prior_shipped.md"
+  }
+ },
+ "notes": {
+  "acc": [
+   "bipolar-mania card 1540659491637 is disposed conflict:m19: the UWorld library keys quetiapine or lurasidone alone first for bipolar depression; the AnKing lamotrigine pairing sits in the In practice hover (UWorld outranks AnKing)."
+  ]
+ }
+}

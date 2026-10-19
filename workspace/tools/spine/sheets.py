@@ -2,13 +2,18 @@
 """sheets: pack shots.py step images into review or approval sheets (s148 efficiency fix 5; from the s147 and s148
 scratch sheets.py).
 
-  python3 tools/spine/sheets.py <shots dir> <out dir> <brief>[,<brief>...] [--steps 1,3,4] [--approval]
+  python3 tools/spine/sheets.py <shots dir> <out dir> <brief>[,<brief>...] [--steps 1,3,4] [--page <html>] [--approval]
 
 Review mode (default), per brief: the phone and phone-study steps are stacked (a 6 px red bar between steps), cut into
 1,500 px columns and packed without scaling, up to 5 columns per sheet (<brief>_phone_sheetN.png,
 <brief>_phone-study_sheetN.png); the desktop Workup step (step4, step4a, step4b ...) is packed the same way
 (<brief>_desktop_workup.png). --steps keeps only those steps in the phone sheets: numbers as shots.py names them
 (0 or "header" for the part above step 1, "practice" for the last segment), as review_packet.py --since prints them.
+shots.py numbers segments by position (each h5 step header in page order), so a brief with an absent step (a greyed
+step has no header) shifts every later number: with --page <the html the shots were taken from>, --steps and the
+desktop Workup are read as spine step numbers and mapped to positions through the brief's headers (s148c packet error:
+sz-psychosocial, suicide-risk, antipsych-effects and psychosis-duration got the wrong steps). Without --page, numbers are
+positions, as before.
 Approval mode (--approval): every step in all four modes, phone, phone-study, desk (1280) and desk-study
 (<brief>_<mode>_sheetN.png), for approval.py present. Prints one line per sheet written.
 """
@@ -31,6 +36,34 @@ H, COLS, GAP, BAR = 1500, 5, 14, 6
 def stepkey(f):
     m = re.search(r'_step(\d+)([a-z]?)\.png$', f)
     return (int(m.group(1)), m.group(2))
+
+
+HDR = re.compile(r'<h5\b[^>]*class="[^"]*\b(?:sp-h|authored-hdr)\b[^"]*"[^>]*>(.*?)</h5>', re.S)
+
+
+def positions(page_html, bid):
+    """{spine step number (str) or 'practice': shots.py segment position} for one brief, from its h5 headers"""
+    sys.path.insert(0, os.path.dirname(_HERE))
+    import pagelib as P
+    for b in P.briefs(page_html):
+        if b.id == bid:
+            out = {'header': 0, '0': 0}
+            for k, m in enumerate(HDR.finditer(page_html[b.start:b.end]), 1):
+                t = re.sub(r'<[^>]+>', '', m.group(1)).strip()
+                n = re.match(r'(\d)', t)
+                out[n.group(1) if n else 'practice' if t.startswith('Practice') else t] = k
+            return out
+    raise SystemExit('sheets: no brief %s in the page' % bid)
+
+
+def map_steps(steps, pos):
+    """spine step numbers to segment positions; a step the brief does not show is an error, not a silent skip"""
+    out = []
+    for s in steps:
+        if s not in pos:
+            raise SystemExit('sheets: step %s has no header in this brief (headers: %s)' % (s, sorted(pos)))
+        out.append(str(pos[s]))
+    return out
 
 
 def pick(files, steps):
@@ -89,8 +122,12 @@ def main(argv):
         sys.exit(__doc__.strip().splitlines()[3].strip())
     src, out, ids = argv[0], argv[1], argv[2].split(',')
     steps = argv[argv.index('--steps') + 1].split(',') if '--steps' in argv else None
+    page = open(argv[argv.index('--page') + 1], encoding='utf-8').read() if '--page' in argv else None
     os.makedirs(out, exist_ok=True)
     for b in ids:
+        pos = positions(page, b) if page else None
+        bsteps = map_steps(steps, pos) if (pos and steps) else steps
+        wk = pos.get('4') if pos else 4
         def shots(tag):
             return sorted(glob.glob(os.path.join(src, '%s_%s_step*.png' % (b, tag))), key=stepkey)
         if '--approval' in argv:
@@ -98,8 +135,9 @@ def main(argv):
                 write(shots(tag), out, '%s_%s' % (b, name))
             continue
         for tag in ('phone', 'phone-study'):
-            write(pick(shots(tag), steps), out, '%s_%s' % (b, tag))
-        files = sorted(glob.glob(os.path.join(src, '%s_1280_step4*.png' % b)), key=stepkey)
+            write(pick(shots(tag), bsteps), out, '%s_%s' % (b, tag))
+        files = [f for f in sorted(glob.glob(os.path.join(src, '%s_1280_step*.png' % b)), key=stepkey)
+                 if wk is not None and stepkey(f)[0] == wk]
         if files:
             p = os.path.join(out, '%s_desktop_workup.png' % b)
             sheet(columns(stack(files))).save(p, optimize=True)
