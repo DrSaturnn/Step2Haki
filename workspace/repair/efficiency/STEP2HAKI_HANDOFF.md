@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-19, by the s148c lead (S1 and S2, six of seven briefs).
+Last updated: 2026-10-19, by the s148c lead (S3 done, all seven briefs).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -18,15 +18,20 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   sz-psychosocial N3/spine, voices HUB/voices/spine, suicide-risk SUI/spine, antipsych-effects APAE/spine.
   Proposals: repair/sources/intake/<brief>_2026-10-18.md. Batch file: repair/s148c/S148C.md. Branch wip/s148c (both repos).
 - **Budget:** 22 agents, 200 calls, 10M reviewer tokens; lead 90M (raised from 30M by Jonathan 2026-10-19, "a"; WAVE.json s148c open).
-- **Step:** S1 and S2 done for six briefs (suicide-risk, sz-psychosocial, voices, psychosis-duration, bipolar-mania,
-  antipsych-effects), each MECHANICAL PASS on verify --mech --fast with its card dispositions; record per brief in
-  repair/s148c/S148C.md. Next: mdd S1 and S2 (proposal repair/sources/intake/mdd_2026-10-18.md; rulings K1 first;
-  its cards.md is made, 93 cards), then S3 for all seven (verify --mech full, legib_audit, the antipsych-effects onset
-  chart recheck), then the S3 restart.
-- **Spend:** reviewers 0 agents, 0 calls. Lead chat 1 (e07dfc62): 132 calls, 41.6M tokens (cache reads 41.2M) against
-  the 90M lead figure (Jonathan raised it from 30M). Next chat: continue at mdd S1 and S2.
+- **Step: S3 done** for all seven (S1 and S2 per brief and S3 recorded in the batch file): verify --mech full PASS x7;
+  legib_audit 0 below contrast x7 (phone, desk; sculpted, flat, study); onset sweep 0 failures. Next: S4, review
+  round 1 on the changed lines (patch method: one round), in a fresh chat that reads the State, the batch file, each
+  brief's boards.md, cuts.json and cards_disposition.json counts.
+- **Spend:** reviewers 0 agents, 0 calls. Lead: chat 1 (e07dfc62) 41.6M, chat 2 (16f37cac) 45.8M: 87.4M of the 90M
+  lead figure (ledger_lead.csv). The review round, S8 and the ship need more lead tokens: raised with Jonathan at
+  this restart.
+- **Session start note (chat 2):** the cp of private local-only files into the public clone's git-ignored folders was
+  refused by the automatic safety check until Jonathan authorized it in chat; ask for that at the start of the next chat.
+  legib_audit needs longer Playwright timeouts on a two-core container (the page loads in about 28 s): run each brief
+  alone through a wrapper that sets set_default_timeout(240000) (batch file, S3).
 - **Carried:** SITE_BODY_GLANCE items 2 and 3 unscheduled; legib_audit mid-reflow false failures (use
-  repair/s148b/contrast_computed.py as cross-check); OPEN_WORK s148 row; public wip/s147 branch; stray Mac bundle.
+  repair/s148b/contrast_computed.py as cross-check); OPEN_WORK s148 row; public wip/s147 branch; stray Mac bundle;
+  mdd duration-window timeline offered as a follow-up (batch file, mdd).
 
 ## Next launch prompt (after s148c ships)
 
