@@ -17,14 +17,13 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   Briefs and folders (repair/migration/psych/...): mdd MDD/spine, bipolar-mania N1/spine, psychosis-duration P1/spine,
   sz-psychosocial N3/spine, voices HUB/voices/spine, suicide-risk SUI/spine, antipsych-effects APAE/spine.
   Proposals: repair/sources/intake/<brief>_2026-10-18.md. Batch file: repair/s148c/S148C.md. Branch wip/s148c (both repos).
-- **Budget:** 22 agents, 200 calls, 10M reviewer tokens; lead 90M (raised from 30M by Jonathan 2026-10-19, "a"; WAVE.json s148c open).
+- **Budget:** 22 agents, 200 calls, 10M reviewer tokens; lead 170M (raised from 30M to 90M, then to 170M at the S3 restart, Jonathan 2026-10-19, "a" both times; WAVE.json s148c open).
 - **Step: S3 done** for all seven (S1 and S2 per brief and S3 recorded in the batch file): verify --mech full PASS x7;
   legib_audit 0 below contrast x7 (phone, desk; sculpted, flat, study); onset sweep 0 failures. Next: S4, review
   round 1 on the changed lines (patch method: one round), in a fresh chat that reads the State, the batch file, each
   brief's boards.md, cuts.json and cards_disposition.json counts.
-- **Spend:** reviewers 0 agents, 0 calls. Lead: chat 1 (e07dfc62) 41.6M, chat 2 (16f37cac) 45.8M: 87.4M of the 90M
-  lead figure (ledger_lead.csv). The review round, S8 and the ship need more lead tokens: raised with Jonathan at
-  this restart.
+- **Spend:** reviewers 0 agents, 0 calls. Lead: chat 1 (e07dfc62) 41.6M, chat 2 (16f37cac) 45.8M: 87.4M of the 170M
+  lead figure (ledger_lead.csv); about 82M left for the review round (S4 to S7) and S8 and S9.
 - **Session start note (chat 2):** the cp of private local-only files into the public clone's git-ignored folders was
   refused by the automatic safety check until Jonathan authorized it in chat; ask for that at the start of the next chat.
   legib_audit needs longer Playwright timeouts on a two-core container (the page loads in about 28 s): run each brief
