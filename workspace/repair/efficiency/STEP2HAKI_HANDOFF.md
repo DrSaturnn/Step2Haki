@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-19 07:30, by the s148b lead (s148b shipped; next launch s148c).
+Last updated: 2026-10-19, by the s148c lead (S1 and S2, six of seven briefs).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -18,9 +18,13 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   sz-psychosocial N3/spine, voices HUB/voices/spine, suicide-risk SUI/spine, antipsych-effects APAE/spine.
   Proposals: repair/sources/intake/<brief>_2026-10-18.md. Batch file: repair/s148c/S148C.md. Branch wip/s148c (both repos).
 - **Budget:** 22 agents, 200 calls, 10M reviewer tokens; lead 30M (WAVE.json s148c open).
-- **Step:** launch done (digest line, wave, hooks installed by install.sh plus /root/.claude copy; test_hooks 101/101;
-  probe refused by the launch gate; lead start-up context 188,537, 45% over baseline). Next: S1 and S2 per brief.
-- **Spend:** reviewers 0 agents, 0 calls; lead in progress.
+- **Step:** S1 and S2 done for six briefs (suicide-risk, sz-psychosocial, voices, psychosis-duration, bipolar-mania,
+  antipsych-effects), each MECHANICAL PASS on verify --mech --fast with its card dispositions; record per brief in
+  repair/s148c/S148C.md. Next: mdd S1 and S2 (proposal repair/sources/intake/mdd_2026-10-18.md; rulings K1 first;
+  its cards.md is made, 93 cards), then S3 for all seven (verify --mech full, legib_audit, the antipsych-effects onset
+  chart recheck), then the S3 restart.
+- **Spend:** reviewers 0 agents, 0 calls. Lead chat 1 (e07dfc62): 132 calls, 41.6M tokens (cache reads 41.2M) against
+  the 30M lead figure; paused for Jonathan's call on the lead budget (asked at this restart).
 - **Carried:** SITE_BODY_GLANCE items 2 and 3 unscheduled; legib_audit mid-reflow false failures (use
   repair/s148b/contrast_computed.py as cross-check); OPEN_WORK s148 row; public wip/s147 branch; stray Mac bundle.
 
