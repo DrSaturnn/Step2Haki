@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-19, by the s148c lead chat 3 (S5 done; follow-up round next).
+Last updated: 2026-10-19, by the s148c lead chat 3 (S7 done: all READY).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -19,13 +19,15 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   Proposals: repair/sources/intake/<brief>_2026-10-18.md. Batch file: repair/s148c/S148C.md. Branch wip/s148c (both repos).
 - **Budget:** 22 agents, 260 calls (raised from 200 at S5, Jonathan 2026-10-19, "Calls 200 to 260 (Recommended)"), 10M
   reviewer tokens; lead 170M (raised from 30M to 90M, then to 170M at the S3 restart; WAVE.json s148c open).
-- **Step: S5 done; S6 and S7 (follow-up round) next.** S4 round 1 and the make-up lanes gave 28 receipts
-  (reviews/<brief>_<part>_r5.md); S5 adjudication per brief in each folder's adj_s148c.md (local-only) and summarized in
-  the batch file; verify --mech full PASS on the six changed briefs. sz-psychosocial is READY (condpass). The follow-up
-  round: spec repair/s148c/lanes_r2.json (8 lanes, 149 lane calls; packets repair/migration/spine/packets/s148c-r2,
-  diffed since round 1); display sheets need sheets.py --page (s148c packet-error fix) from local/shots/s148c-r2.
-- **Spend:** reviewers 13 agents, 144 calls, 5.59M tokens. Lead: chat 1 41.6M, chat 2 45.8M, chat 3 (7f636bd0) under
-  way (16.0M at the round-1 record); ledger_lead.csv.
+- **Step: S7 done: all READY.** All seven briefs pass verify (READY; condpass for bipolar-mania, sz-psychosocial,
+  suicide-risk, antipsych-effects). Round 1 receipts reviews/*_r5.md, follow-up reviews/*_r6.md; adjudication per brief
+  in each folder's adj_s148c.md; batch file S4 to S7. Next: S8 (verify_all, shots_all, sheets.py --approval,
+  approval.py present s148c, the report) and S9 in a fresh chat. Build the preview from the live index.html plus the
+  seven 10_*.json in brief order (mdd, bipolar-mania, psychosis-duration, sz-psychosocial, voices, suicide-risk,
+  antipsych-effects); copy them into repair/s148c/ for ship.sh. Report items: sheets.py --page and its tests (G-DIFF),
+  the patch-round method (follow-up template with a stub prior), the call-cap raise, the mdd word-cap rejection.
+- **Spend:** reviewers 21 agents, 217 calls, 7.85M tokens of 22, 260, 10M. Lead rows: chat 1 41.6M, chat 2 45.8M,
+  chat 3 about 56M: 143.7M of the 170M figure (ledger_lead.csv); about 26M left for S8 and S9.
 - **Session start note (chat 3):** the cp restore ran without a hold; the /root/.claude/settings.json hook copy was
   held until Jonathan allowed it. legib_audit and shots need longer Playwright timeouts on a two-core container: a
   wrapper that sets the default timeouts to 240000 ms (batch file, S3).
