@@ -118,7 +118,7 @@ Then run section 2 to the end without asking.
 
 | Situation | Call |
 |---|---|
-| Word count over the soft cap | Up to 5% over, made of board-tested content or fixes for findings: keep it and list it. More than 5%: cut lines no board source tests (adult-only lines in a peds brief, mechanism hovers) until within 5%, and list each cut with its words so Jonathan can restore it. Recount after the last fix. |
+| Word count over the soft cap | Superseded 2026-10-19 by "Layers, not totals" (STANDING_DIRECTIONS): keep board-keyed facts visible, move only supporting or guideline-only detail into hovers, cut nothing for length, split a two-disease brief (Jonathan decides the split), report the count. |
 | A step supported only by a source about another population | Keep it only if a board source teaches the step, and label the analogy at the step itself ("as for ... in ..."). |
 | A board answer differs from a guideline | Teach the board answer; the guideline goes in "In practice:". Every age, cutoff, duration, dose and interval is checked against board sources. |
 | A claim with no source opened that day | Before any cut or ⚠︎ (Jonathan 2026-10-17): search the card index for the claim's two or three key terms (`cards_search.py`, plus `board_index.py show <brief>`), and for each card found read its high-yield (pink) lines, the `hy` field in repair/sources/anki/anki_index.jsonl. A card that states the claim is cited as kind "board" and the line stays. Only with no card: board-tested, label it unverified (⚠︎) and list it; not board-tested, cut it. Each cuts.json entry records the terms searched. |

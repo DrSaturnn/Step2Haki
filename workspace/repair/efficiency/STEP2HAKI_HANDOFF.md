@@ -18,18 +18,26 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   repair/s148d/S148D.md. Branch wip/s148d in both repos. Budget: reviewers 20 agents, 240 calls, 9M tokens; lead 150M
   (WAVE.json s148d). Method: s148c (patch: S1 to S3, one review round on changed lines, S8, S9).
 - **Step:** S1 and S2 done for psych-medical, tics, peds-sleep, panic (records in the batch file, S148D.md; folders
-  synced to the private repo wip/s148d; psych-medical also took panic's belongs-elsewhere row). Next (lead chat 2): S1
-  and S2 for somatic, then substance, then S3 for all six. Continuation reads: this State, S148D.md, digest lines from
-  2026-10-15, the two proposals (repair/sources/intake/somatic_2026-10-18.md, substance_2026-10-18.md) and SOMA/spine,
-  TOX/spine build.py. Method notes from chat 1: edit build.py with T()/pop() (hover buttons on existing words cost the
-  least), facts in facts.json (quotes verified by script against the intake file), cards via card_dispositions.py
-  make/check (remap_disp.py after any later row insert), verify.py <folder> --mech --fast, private sync by copying the
-  folder into local-only/ and committing wip/s148d. Belongs-elsewhere items owned by somatic or substance from the
-  other proposals: check them when building those two.
-- **New decisions (2026-10-19, five digest lines):** layers not word caps; prose rules; sleep stages tile with EEG
-  traces; adjunct timelines; site items planned as s148f after s148d (private repo claude/pending/SITE_S148F.md). Chat 2
-  applies the s148d part first (batch file, "Jonathan's 2026-10-19 decisions"), then somatic and substance under the new
-  rules, then S3.
+  synced to the private repo wip/s148d; psych-medical also took panic's belongs-elsewhere row). Jonathan's 2026-10-19
+  decisions (digest, last four lines; STANDING_DIRECTIONS "Layers, not totals" and "Clinical terms, no AI prose";
+  runbook section 3 word-count row) change the rest of s148d. Next (lead chat 2):
+  1. Rework the four done briefs under the new rules: peds-sleep: the sleep terror "new stressor, CBT not indicated"
+     contrast back to a visible clue row (C6), the stage chart caption "Sleep stages" with a schematic EEG trace per
+     stage (awake, N1, N2, N3, REM; facts from the stage table's sources), and an age-window timeline (sleep terrors 2
+     to 12, child apnea 2 to 8, teen delayed phase, older adult, older man RBD) now that the cap no longer blocks it;
+     restore the MDD sleep-study clause only if it reads better visible (judgment, one owner is the night chart).
+     panic: undo the insight 2 shortening if the full line scans; keep the two guideline-only hovers. psych-medical:
+     "Chase the medical cause" and any other figure-of-speech cells to concrete actions; break the first-step test list
+     into short lines. tics: check captions and cells against the prose rule. Remap card dispositions after edits.
+  2. S1 and S2 for somatic, then substance, under the new rules (board-keyed facts visible, split only with Jonathan).
+  3. S3 for all six. Site-layer items (question tiles, hover animation, Pairs with links, muted tints, shading, zone 2
+     "Targeted tests", prose lint) are NOT in s148d: claude/pending/SITE_UI_R2.md (private repo; project copy), own
+     batch after s148d.
+  Continuation reads: this State, S148D.md, digest lines from 2026-10-15, STANDING_DIRECTIONS (the two new lines), the
+  two proposals and SOMA/spine, TOX/spine build.py. Method notes: edit build.py with T()/pop(); facts in facts.json
+  with quotes checked by script against the intake file; cards via card_dispositions.py make/check (remap_disp.py
+  after any row insert, old claim map from the private repo); verify.py <folder> --mech --fast; private sync by
+  copying the folder into local-only/ and committing wip/s148d.
 - **Spend:** reviewers 0 agents, 0 calls; lead chat 1 37.4M (ledger_lead.csv), of 150M.
 - **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into
   /root/.claude/settings.json (chat 4: no permission hold). On a two-core container, legib_audit and shots need

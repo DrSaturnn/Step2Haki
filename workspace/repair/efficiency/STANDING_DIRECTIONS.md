@@ -35,6 +35,7 @@ Source keys:
 - Include only what a Step 2 item could key or use as a distractor; doses only where tested. [SPEC Boundaries]
 - Brief titles are generalized, as wide as is reasonable, to avoid many briefs on similar topics; a brief that truly stands on its own can stay separate. [MEM]
 - Word caps above the practice bank: disease about 1,300, drug about 1,000, presentation hub about 700. [DIG 2026-10-10] They are soft: a brief may exceed its cap for board-tested content, and each overage is listed for Jonathan with its count and what would have to go. [DIG 2026-10-12]
+- **Layers, not totals (2026-10-19, supersedes the 5% overage call):** the scan layer (bottom line, table cells, rungs) stays short by per-cell and per-step limits; hovers and the collapsed panel are uncapped; a fact a board item keys (answer or distractor-decider) stays visible; only supporting or guideline-only detail moves into a hover; nothing is cut for length; a brief covering two diseases is split, not squeezed; length is judged by how the phone sheets scan. The word totals above stay as targets to report, not limits. [DIG 2026-10-19]
 - A brief may run over its word target because of a mnemonic. [MEM]
 - Peds authoring priority: cardiovascular and respiratory first, then endocrine and female reproductive, then neuro and MSK, skin last; outpatient framing; weighted toward recognizing the diagnosis. [MEM]
 - Peds shelf (2026-09-25) felt more nuanced than covered content, with few derm and many outpatient questions; use this as the guide for upcoming peds briefs. [MEM]
@@ -54,6 +55,7 @@ Source keys:
 - **The Narrow or clue table:** Clue | Points to | Next move, with NO questions and no in or out chips. [SPEC, MDD pilot review 2026-10-07]
 - **Workups are not question-led.** s115 (question-led workups) was dropped on 2026-10-07, and Jonathan re-stated the rule on 2026-10-10: a workup must not open with a question. [SPEC status] [Jonathan 2026-10-10]
 - **Captions and headers** are plain labels, never catchy phrases. [SPEC r2] [OW s17]
+- **Clinical terms, no AI prose (2026-10-19):** captions, labels and cells use the term clinicians use ("Sleep stages", not "A night by stage"); next-move and meaning cells name the concrete action or test ("Order X", "Treat the hyperthyroidism"), never a figure of speech ("Chase the medical cause"). Long test lists in a workup band are broken into short lines. [DIG 2026-10-19]
 - **The workup caption** is "Diagnostic workup". [OW s18]
 - **Treatment:**
   - one ladder panel; numbered rungs joined by a rail; each rung reads tag, when (the trigger), then the move; the last rung is caution-colored;
@@ -70,7 +72,7 @@ Source keys:
 - **Diagnostic workup template: layout 5a (2026-10-11).**
   - Each clue and its order sit on one tinted band row: clue, then an arrow, then the order.
   - Below the band, untinted and smaller, each finding branches from a stem and leads to its meaning by a connector and arrowhead.
-  - Zones: First step, By presentation (renamed from "By clue"), Next step, Diagnostic test (Step 2's term), then Skip. [DIG 2026-10-11]
+  - Zones: First step, Targeted tests (renamed 2026-10-19 from "By presentation", itself renamed from "By clue"), Next step, Diagnostic test (Step 2's term), then Skip. [DIG 2026-10-11, 2026-10-19]
   - Phone: the finding column is a little wider than designed, for less wrapping. Desktop: the meaning cap stays, for grouping and scanning. [DIG 2026-10-11]
   - Spec and design file: claude/design/WORKUP_5A_SPEC.md and claude/design/Workup_5a.html.
   - This supersedes the s127 headed cards, the 2026-10-10 R1 rail removal and the "vertical line with dots"; the s130 numbered and forked layout stays rejected.
