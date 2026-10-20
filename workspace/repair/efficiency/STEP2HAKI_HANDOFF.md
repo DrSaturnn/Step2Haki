@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-20, by the s148e lead chat 2 (S7 done: all READY).
+Last updated: 2026-10-20, by the s148e lead chat 3 (S8: presented, waiting for "ship").
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -16,17 +16,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   repair/s148e/S148E.md). Briefs (folders under repair/migration/psych/): toxidrome hub "Suspected Overdose or
   Toxidrome" (TOXHUB/spine), drug brief "Anticholinergic and Tricyclic Toxicity" (tca-tox; TCA/spine), "Cluster B
   Personality Disorders" (cluster-b; PDB/spine); plus changed lines in substance (TOX/spine) and voices (HUB/voices/spine).
-- **Step: S7 done (2026-10-20, chat 2): all five READY** (verify_all). Next: S8 in a fresh chat: verify_all (three at a
-  time), shots_all, sheets.py --approval, approval.py present s148e, the final report (runbook section 5), then wait for
-  "ship". Read: this State, the batch file's S5 and S7 sections, each receipt's verdict line, and each brief's
-  adj_s148e.md (local-only). The report owes: the calls listed in the batch file (onset strips kept as the Timing strip;
-  substance pointer row reversal; tca-tox Manage by table retired; cluster-b step 2 and step 8 comorbidity rows removed;
-  borrowed bm: lines), the 43-card MDD allocation proposal, the salicylate and acetaminophen treatment gap.
-- **Hooks:** installed in chat 2 with no permission hold (install.sh, mirrored into /root/.claude/settings.json); a new
-  container needs them again before any agent work (none is planned for S8).
+- **Step: S8 presented (2026-10-20 16:18, chat 3):** verify_all all five READY; changelog 148e; 36 approval sheets in
+  local/shots/s148e/approval; approval.py present s148e (page f233376713fd); report sent. Next: on Jonathan's "ship"
+  in chat 3, S9 (ship.sh s148e with AX_SESSION, version.json, OPEN_WORK, Mac copies, handoff, ledger). A "ship" sent
+  to another chat approves nothing: that chat re-runs S8 (shots, sheets, present) first.
+- **Hooks:** live in chat 3 (install.sh; the /root/.claude/settings.json mirror was held by the permission check and
+  approved by Jonathan); a new container needs them again, including the approval hook before any "ship".
 - **Budget:** reviewers 18 agents, 200 calls, 9M tokens; lead 180M. **Spend:** reviewers 15 agents, 156 calls, 6.45M;
-  lead 152.0M (chats 1 and 2, ledger_lead.csv). S8 and S9 have used about 25M to 45M in earlier batches, so the lead figure
-  may need raising: say so in the report's cost section.
+  lead 166.5M of 180M (chats 1 to 3, ledger_lead.csv); S9 adds about 10M to 15M.
 - **Session start notes:** start-up context lead 189,518 (WARNING: 45% above the 130,263 baseline). On a two-core
   container, legib_audit and shots need Playwright default timeouts of 240000 ms (a wrapper around the tool, as
   scratchpad pw240.py in chat 2: it patches new_page timeouts and runs the script with runpy). Keep lane specs in
