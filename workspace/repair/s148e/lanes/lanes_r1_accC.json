@@ -1,0 +1,41 @@
+{
+ "batch": "s148e",
+ "plan_step": "s148e",
+ "round": 1,
+ "context": "batch s148e builds three new psychiatry spine briefs (tca-tox, toxidrome, cluster-b) in full, and changes a few lines in two shipped briefs (substance, voices) that now point to them; this is review round 1",
+ "out": "repair/efficiency/lanes/s148e/r1",
+ "packets": "repair/migration/spine/packets/s148e",
+ "sheets": "local/shots/s148e-r1/sheets",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "C",
+   "briefs": [
+    "substance"
+   ],
+   "budget": 10
+  }
+ ],
+ "types": {
+  "tca-tox": "new drug brief (entry type drug), psych lens; steps 1, 2, 3, 4, 7 and 8; review in full",
+  "toxidrome": "new presentation hub (data-entry hub), psych lens; steps 1 to 4, steps 5 to 8 greyed; golden voices; review in full",
+  "cluster-b": "new disease brief, psych lens; steps 1 to 5, 7 and 8; review in full",
+  "substance": "shipped brief, CHANGED LINES ONLY: judge only the lines in changes.md (in its folder) in their context",
+  "voices": "shipped hub, CHANGED LINE ONLY: the Borderline personality disorder differential row now opens a drawer to cluster-b (a link change; the text is unchanged, so changes.md is empty); judge only that row and its drawer target"
+ },
+ "steps": {
+  "substance": "3 and 7",
+  "voices": "3"
+ },
+ "notes": {
+  "acc": [
+   "Word counts are not judged (2026-10-19 layers rule)."
+  ]
+ },
+ "extra_judge": {
+  "acc": [
+   "Relaunch (acc-A reviewed substance but hit its cap before writing the receipt): substance only, changed lines only (changes.md in its folder). Check: (1) everything the two removed step 7 rows taught is now taught visibly in tca-tox (Grep tca-tox_brief_text.txt in the substance folder for physostigmine, bicarbonate, charcoal, QRS); (2) the pointer row and the changed Culprits hover are accurate; (3) the seven card dispositions this batch remapped, each only a claim-id shift after the removed rows: 1528728168422 S252->S246, 1485313544183 S242->S236, 1484950415236 S246->S240, 1485313542115 S249->S243, 1485313550723 S252->S246, 1484950433581 S223->S217, feZ?qxliB: S252->S246; confirm each new id in claim_map.json carries the text its disposition names (Grep the id).",
+   "cards_disposition.json values are \"covered:S### <short label>\" keyed by card id; card text is in cards.md."
+  ]
+ }
+}
