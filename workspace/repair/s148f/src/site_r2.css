@@ -24,7 +24,7 @@ html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .stem .si{font-size
 html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .stem .sd{margin-top:10px;padding:8px 12px;border-radius:12px;background:var(--vign-bg);color:var(--qx-vit-ink);
   font-size:14px;line-height:20px;font-weight:500;letter-spacing:0}
 html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .qp{margin:12px 0 0;font-size:15px;line-height:21px;font-weight:700;font-style:normal;color:var(--ink)}
-html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .opts{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .opts{display:flex;flex-direction:column;gap:8px;margin-top:auto;padding-top:14px}
 html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .opts button{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) 18px;align-items:center;gap:10px;
   min-height:44px;padding:8px 14px;border-radius:14px;background:var(--qx-opt);background-image:none;box-shadow:var(--ec),0 0 0 1px var(--qx-ring);
   color:var(--ink);font:550 15px/20px var(--sans);text-align:left;transition:background .3s ease,box-shadow .3s ease,opacity .3s ease}
@@ -50,11 +50,17 @@ html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .why .chain > .arw{
 html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .why .chain > .node{display:inline;padding:0;margin:0;background:none;box-shadow:none;border:0;font:inherit;color:inherit}
 html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .why .chain > .node.dx,html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .why .chain > .node.dx b{font-weight:700;color:var(--confirm)}
 html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .why .chain > .node.dx + .arw + .node.act::before{content:": ";color:var(--ink-2)}
-html:is([data-theme],:not([data-theme])) body .bankwrap .mcq:not(.done) .why{display:none}
+/* the answer opens inside a row that grows from 0 (the mockup's spring); with the choices anchored to the bottom, the
+   choices slide up into the free space above them while the answer opens below, so the tile keeps its size */
+html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .qx-dz{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--spr,ease-out)}
+html:is([data-theme],:not([data-theme])) body .bankwrap .mcq.done .qx-dz{grid-template-rows:1fr}
+html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .qx-dzi{min-height:0;overflow:hidden;visibility:hidden;transition:visibility 0s linear .55s}
+html:is([data-theme],:not([data-theme])) body .bankwrap .mcq.done .qx-dzi{visibility:visible;transition:none}
+html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .qx-dz .why,html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .qx-dz .why[hidden]{display:block!important}
 html:is([data-theme],:not([data-theme])) body .bankwrap .mcq.done .why:not([hidden]){animation:qxin .55s var(--spr,ease-out) both}
 @keyframes qxin{from{opacity:0;filter:blur(6px);transform:translateY(-8px) scale(.98)}to{opacity:1;filter:none;transform:none}}
 /* one tile size: the script sets --qx-h (tallest closed card) and --qx-ho (tallest card with its answer open) per bank */
-html:is([data-theme],:not([data-theme])) body .bankwrap.stack .mcqwrap > .mcq.sk-cur{min-height:var(--qx-ho,0)}
+html:is([data-theme],:not([data-theme])) body .bankwrap.stack .mcqwrap > .mcq.sk-cur{display:flex;min-height:var(--qx-ho,0)}
 /* option (pilot switch): unanswered cards one size, the answer panel grows the card when it opens */
 html:is([data-theme],:not([data-theme])) body.qx-grow .bankwrap.stack .mcqwrap > .mcq.sk-cur{min-height:var(--qx-h,0)}
 html:is([data-theme],:not([data-theme])) body .bankwrap:not(.stack):not(.review) .mcqwrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:stretch}
@@ -65,8 +71,9 @@ html:is([data-theme],:not([data-theme])) body .bankwrap:not(.stack):not(.review)
 /* measuring pass: every card laid out off-screen at the bank's width */
 .bankwrap .mcqwrap.qx-measure{position:relative}
 .bankwrap .mcqwrap.qx-measure > .mcq{display:flex!important;visibility:hidden!important;position:absolute!important;left:0;right:0;top:0;animation:none!important;min-height:0!important}
-.bankwrap .mcqwrap.qx-measure.qx-open > .mcq .why{display:block!important}
-.bankwrap .mcqwrap.qx-measure.qx-open > .mcq .why[hidden]{display:block!important}
+.bankwrap .mcqwrap.qx-measure > .mcq .qx-dz{grid-template-rows:0fr!important;transition:none!important}
+.bankwrap .mcqwrap.qx-measure.qx-open > .mcq .qx-dz{grid-template-rows:1fr!important}
+.bankwrap .mcqwrap.qx-measure > .mcq .opts{margin-top:0!important}
 
 /* Review: grouped by result (proposal) */
 html:is([data-theme],:not([data-theme])) body .bankwrap.review .reviewwrap{display:none}
@@ -122,7 +129,7 @@ html:is([data-theme],:not([data-theme])) body .brief.sp .sp-tray > .sp-pop-b:not
 html:is([data-theme],:not([data-theme])) body .brief.sp td .sp-pop-b:not([hidden]){animation:qxin .55s var(--spr,ease-out) both}
 @media (prefers-reduced-motion:reduce){
   html:is([data-theme],:not([data-theme])) body .sp-card,html:is([data-theme],:not([data-theme])) body .sp-card.qx-out,
-  html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .why:not([hidden]),html:is([data-theme],:not([data-theme])) body .brief.sp .sp-pop-b:not([hidden]),
+  html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .why:not([hidden]),html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .qx-dz,html:is([data-theme],:not([data-theme])) body .brief.sp .sp-pop-b:not([hidden]),
   .qx-pv{animation:none!important}}
 
 /* ---------- 3. linked briefs: a quiet link with an open icon; a preview on hover (desktop) or first tap (phone) ---------- */
@@ -228,3 +235,4 @@ html:is([data-theme],:not([data-theme])) body .brief.sp td .sp-drw:not(.qx-pair)
   html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure .ttl{padding-left:16px;padding-right:16px;box-sizing:border-box}
 }
 html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw > .ttl{padding-left:18px;padding-right:18px}
+@media (prefers-reduced-motion:reduce){html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .qx-dz{transition:none!important}}

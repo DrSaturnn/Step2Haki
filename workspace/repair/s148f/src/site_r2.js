@@ -11,6 +11,13 @@
   function key(s){ return norm(s).toLowerCase().replace(/[^a-z0-9 ]/g, ''); }
 
   /* ---------- 1. question tiles ---------- */
+  // banks are measured when they first come near the screen (and again on width change), not all at load
+  var io = window.IntersectionObserver ? new IntersectionObserver(function(es){ es.forEach(function(en){
+    if(en.isIntersecting){ var t = en.target; t._qxSeen = 1; io.unobserve(t);
+      // a lazily rendered brief may still be laying out: measure now and again shortly after, until two runs agree
+      (function again(n){ var w = t.querySelector('.mcqwrap'), before = w ? w.style.getPropertyValue('--qx-ho') : '';
+        measure(t); var after = w ? w.style.getPropertyValue('--qx-ho') : '';
+        if(n > 0 && (!after || after !== before)) setTimeout(function(){ again(n - 1); }, 250); })(8); } }); }, { rootMargin: '600px 0px' }) : null;
   function decorate(bw){
     if(bw._qx) return; bw._qx = 1;
     var qs = Array.prototype.slice.call(bw.querySelectorAll('.mcqwrap > .mcq'));
@@ -25,13 +32,24 @@
       meta.appendChild(no); top.appendChild(chip); top.appendChild(meta);
       q.insertBefore(top, q.firstChild);
       q.dataset.qxN = i + 1;
+      // the answer panel sits in a row that can grow smoothly (a hidden element cannot be animated open)
+      // the answer line reads "key: reason"; the chain's padding spaces around the key would sit before the colon
+      Array.prototype.forEach.call(q.querySelectorAll('.why .chain > .node.dx, .why .chain > .node.act'), function(n){
+        var a = n.firstChild, z = n.lastChild;
+        if(a && a.nodeType === 3) a.nodeValue = a.nodeValue.replace(/^\s+/, '');
+        if(z && z.nodeType === 3) z.nodeValue = z.nodeValue.replace(/\s+$/, '');
+      });
+      var why = q.querySelector(':scope > .why');
+      if(why){ var dz = document.createElement('div'), dzi = document.createElement('div'); dz.className = 'qx-dz'; dzi.className = 'qx-dzi';
+        why.parentNode.insertBefore(dz, why); dzi.appendChild(why); dz.appendChild(dzi); }
     });
     var rvw = document.createElement('div'); rvw.className = 'qx-review'; bw.appendChild(rvw);
     // measured when the bank first nears the screen (section wiring) and again when its width changes
     if(window.ResizeObserver){
       var lastW = 0;
       new ResizeObserver(function(){ var w = bw.clientWidth; if(bw._qxSeen && Math.abs(w - lastW) > 1){ lastW = w; measure(bw); } }).observe(bw);
-    } else measure(bw);
+    }
+    if(io) io.observe(bw); else { bw._qxSeen = 1; measure(bw); }
     if(bw.classList.contains('review')) renderReview(bw);
   }
   // the tallest card closed (--qx-h) and with its answer open (--qx-ho), measured at the bank's current width
@@ -51,6 +69,7 @@
     qs.forEach(function(q){ q.style.width = ''; });
     if(h) wrap.style.setProperty('--qx-h', h + 'px');
     if(ho) wrap.style.setProperty('--qx-ho', ho + 'px');
+    if(h > 40) bw._qxM = 1;
     return h > 40;
   }
 
@@ -246,12 +265,18 @@
     Array.prototype.forEach.call((root || document).querySelectorAll('.bankwrap'), decorate);
     Array.prototype.forEach.call((root || document).querySelectorAll('.brief .pearls'), pairs);
   }
+  // a bank reached by a jump (the section rail, a link) may be touched before its first measurement has run
+  document.addEventListener('pointerdown', function(e){
+    var bw = e.target.closest && e.target.closest('.bankwrap'); if(bw && !bw._qxM){ bw._qxSeen = 1; measure(bw); }
+  }, true);
   document.addEventListener('click', function(e){
     var o = e.target.closest && e.target.closest('.mcq .opts button');
     if(o){ var q = o.closest('.mcq'); if(!q.classList.contains('done') && !o.disabled) q.dataset.qxPick = o.dataset.optionId || '1'; }
     var rv = e.target.closest && e.target.closest('.mcq .rv');
-    if(rv){ var q2 = rv.closest('.mcq'); if(q2.classList.contains('done')) delete q2.dataset.qxPick;
-      setTimeout(function(){ rv.textContent = q2.classList.contains('done') ? 'Reset' : 'Reveal'; }, 0); }
+    if(rv){ var q2 = rv.closest('.mcq'); if(q2.classList.contains('done')) delete q2.dataset.qxPick; }
+    // the bank script writes REVEAL or RESET after any answer or reveal: keep the chip row's sentence case
+    var q3 = e.target.closest && e.target.closest('.mcq');
+    if(q3) setTimeout(function(){ var r3 = q3.querySelector('.qx-top .rv'); if(r3) r3.textContent = q3.classList.contains('done') ? 'Reset' : 'Reveal'; }, 0);
     var ba = e.target.closest && e.target.closest('.bkall');
     if(ba){ var b0 = ba.closest('.bankwrap'); setTimeout(function(){ Array.prototype.forEach.call(b0.querySelectorAll('.mcq'), function(x){
       if(!x.classList.contains('done')) delete x.dataset.qxPick; var r2 = x.querySelector('.qx-top .rv'); if(r2) r2.textContent = x.classList.contains('done') ? 'Reset' : 'Reveal'; }); }, 0); }
@@ -268,9 +293,4 @@
     for(var i = 0; i < ms.length; i++){ var a = ms[i].addedNodes;
       for(var j = 0; j < a.length; j++){ var n = a[j]; if(n.nodeType === 1 && (n.matches('.bankwrap, .sp-drawer, .brief') || n.querySelector && n.querySelector('.bankwrap, .pearls'))) { scan(n.parentNode || document); } } }
   }).observe(document.body, { childList: true, subtree: true });
-  // a bank that was hidden when measured (a collapsed brief) is measured when it first shows
-  if(window.IntersectionObserver){
-    var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target._qxSeen = 1; if(measure(en.target)) io.unobserve(en.target); } }); }, { rootMargin: '600px 0px' });
-    setTimeout(function(){ Array.prototype.forEach.call(document.querySelectorAll('.bankwrap'), function(b){ io.observe(b); }); }, 300);
-  } else Array.prototype.forEach.call(document.querySelectorAll('.bankwrap'), function(b){ b._qxSeen = 1; measure(b); });
 })();
