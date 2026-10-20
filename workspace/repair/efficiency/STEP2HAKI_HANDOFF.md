@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-20, by the s148e lead chat 3 (s148e shipped; s148g planned; no batch open).
+Last updated: 2026-10-20, by the s148g lead chat 1 (s148g pilot v1 published; awaiting approval).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,12 +12,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **No batch open.** s148e shipped 2026-10-20 16:26 (Jonathan: "ship"; main c341858, page f233376713fd, version.json
-  s148e confirmed in Chrome): three new psych briefs (toxidrome hub, tca-tox, cluster-b) plus changed lines in substance
-  and voices. Record repair/s148e/S148E.md; OPEN_WORK row. The psych ship order (SHIP_ORDER_PSYCH.md) is complete. Next (Jonathan 2026-10-20, three digest lines: per-choice
-  reasons, question card space, bold key words): s148g site layer, then s148h psych per-choice reasons, then s149
-  (pediatric musculoskeletal B: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors; BATCHES_S141_S150.md and
-  FOLDERS_S142_S160.md list it under the old number s148). Plan: claude/pending/SITE_S148G.md (private repo).
+- **Batch s148g open** (site layer; launched 2026-10-20 17:32; WAVE.json s148g: 0 agents, lead 120M). Record:
+  repair/s148g/S148G.md. Branch wip/s148g. Step: pilot v1 published as private artifact DQYxrkuAG219PmG1tSv5Hh
+  (repair/pilots/s148g/build_pilot.py); waiting on Jonathan's approval or changes. Next after approval: bold lists for
+  the other 52 briefs (repair/s148g/data/bold_bl.json), tool changes (render.js, gate, vendor_scan, verify lint,
+  review_packet, newspine), checks, present, ship.
+  Earlier: s148e shipped 2026-10-20 16:26 (main c341858).
 - **Spend (s148e, closed):** reviewers 15 agents, 156 calls, 6.45M of 9M; lead about 170M of 180M (3 rows,
   ledger_lead.csv).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the

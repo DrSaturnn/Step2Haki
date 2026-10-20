@@ -1,0 +1,7 @@
+{
+ "_doc": "s148g bold key words in bottom lines (Jonathan 2026-10-20). Phrases per brief: see repair/s148g/blbold.py. Bold only; the gen script checks that removing the new <b> gives back the old text.",
+ "tics": ["2 or more motor tics", "1 or more vocal tics", "at least 1 year", "onset before 18", "Tourette syndrome", "no obsession behind it", "[[a tic]], not a compulsion", "explain and watch", "CBIT", "tetrabenazine", "alpha-2 agonist"],
+ "cluster-b": ["A lifelong pattern", "early adulthood", "episodes with a start and an end", "points to a [[mood disorder]]", "Borderline", "abandonment fear", "self-harm", "minutes to hours", "dialectical behavior therapy", "Antisocial", "age 18 or older", "conduct disorder before 15", "under 18"],
+ "toxidrome": ["Stabilize first", "fingerstick glucose", "an [[ECG]] (", "naloxone", "pinpoint pupils", "acetaminophen and salicylate levels", "more than one substance", "name the toxidrome", "the [[pupils]], the", "the [[skin]], the", "the [[bowel sounds]] and", "the [[muscle tone]]"],
+ "tca-tox": ["an [[ECG]] (", "QRS over 100 ms", "sodium bicarbonate", "benzodiazepine", "No haloperidol", "no physostigmine", "QRS width", "predicts seizures and arrhythmia"]
+}

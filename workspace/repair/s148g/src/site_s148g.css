@@ -1,0 +1,86 @@
+/* ============ s148g: site layer (Jonathan 2026-10-20; claude/pending/SITE_S148G.md, DECISIONS_DIGEST 2026-10-20).
+   1 per-choice reasons  2 same size until answered  3 hover cards on touch  4 linked-brief panel  5 First step split
+   6 timeline tile. Rules lead with the s148b prefix so they outrank the earlier and dark layers; colors are theme tokens. ============ */
+
+/* ---------- 1. per-choice reasons: one line under each choice once the answer is revealed ---------- */
+html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .opts button .qx-rsn{display:none}
+html:is([data-theme],:not([data-theme])) body .bankwrap .mcq.qx-hr .opts button{grid-template-columns:minmax(0,1fr) 18px;row-gap:3px}
+html:is([data-theme],:not([data-theme])) body .bankwrap .mcq.qx-hr .opts button::after{grid-column:2;grid-row:1}
+html:is([data-theme],:not([data-theme])) body .bankwrap .mcq.qx-hr.done .opts button .qx-rsn{display:block;grid-column:1;grid-row:2;
+  font:500 14px/20px var(--sans);color:var(--ink-2);text-wrap:pretty;animation:qxin .55s var(--spr,ease-out) both}
+/* with reasons, every choice stays readable after the answer: the key and the pick keep their marks, the others go quiet */
+html:is([data-theme],:not([data-theme])) body .bankwrap .mcq.qx-hr.done .opts button{opacity:1;padding-top:10px;padding-bottom:10px}
+html:is([data-theme],:not([data-theme])) body .bankwrap .mcq.qx-hr.done .opts button:not(.right):not(.wrong){background:transparent;box-shadow:0 0 0 1px var(--qx-ring);color:var(--ink-2);font-weight:550}
+html:is([data-theme],:not([data-theme])) body .bankwrap .mcq.qx-hr.done .opts button.right .qx-rsn,
+html:is([data-theme],:not([data-theme])) body .bankwrap .mcq.qx-hr.done .opts button.wrong .qx-rsn{font-weight:500;color:var(--ink)}
+/* the measuring pass keeps the reasons out of the closed height */
+.bankwrap .mcqwrap.qx-measure > .mcq .qx-rsn{display:none!important}
+/* Review rows: the three choices with their reasons */
+.qx-review .qx-rch{display:grid;gap:6px;margin-top:10px;padding:10px 12px;border-radius:14px;box-shadow:var(--inner-2)}
+.qx-review .qx-rco{display:grid;grid-template-columns:16px minmax(0,1fr);column-gap:8px;font:500 14px/20px var(--sans);color:var(--ink-2)}
+.qx-review .qx-rco > i{font-style:normal;font-weight:800;font-size:12px;line-height:20px;text-align:center;color:var(--muted)}
+.qx-review .qx-rco > span > b{display:block;font-weight:650;color:var(--ink)}
+.qx-review .qx-rco.k > i,.qx-review .qx-rco.k > span > b{color:var(--confirm)}
+.qx-review .qx-rco.p > i,.qx-review .qx-rco.p > span > b{color:var(--caution)}
+/* the review session (Review button): reasons after the answer */
+#rvsession .opts button .qx-ol{display:block}
+#rvsession .opts button .qx-rsn{display:none}
+#rvsession .opts button[disabled] .qx-rsn{display:block;margin-top:3px;font-size:13.5px;line-height:1.4;font-weight:500;color:var(--ink-2)}
+
+/* ---------- 2. card space: same size until answered (replaces "the tallest card with its answer open") ----------
+   Every unanswered card in a set takes the height of the tallest unanswered card (--qx-h, measured closed); no space is
+   kept for the answer, so the card grows when the answer opens, and Next and the set footer move with it. */
+html:is([data-theme],:not([data-theme])) body .bankwrap.stack .mcqwrap > .mcq.sk-cur{min-height:var(--qx-h,0)}
+html:is([data-theme],:not([data-theme])) body .bankwrap:not(.stack):not(.review) .mcqwrap > .mcq{min-height:var(--qx-h,0)}
+
+/* ---------- 3. hover cards on touch: the desktop card, anchored to the term, over the text ---------- */
+html:is([data-theme],:not([data-theme])) body .sp-card.qx-tc{position:absolute;z-index:80;max-height:min(70vh,520px);overflow:auto;overscroll-behavior:contain}
+html:is([data-theme],:not([data-theme])) body .brief.sp .sp-pop.qx-on{color:var(--accent)}
+body:has(> .sp-drawer) .sp-card{z-index:80}
+
+/* ---------- 4. linked briefs: Open brief on the preview's top row; the brief opens as a panel grown from its link ---------- */
+.qx-pv .qx-ph{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 6px}
+.qx-pv .qx-ph .qx-pk{margin:0}
+.qx-pv .qx-ph .qx-po{margin-top:0;flex:none}
+/* desktop: anchored under its link (the script sets the place before the panel is built), wider than the old 520 px */
+@media (min-width:641px){
+  html:is([data-theme],:not([data-theme])) body:not(.qx-rhp) > aside.sp-drawer{top:var(--qx-dt,24px);left:var(--qx-dl,auto);right:auto;bottom:auto;
+    width:var(--qx-dw,min(720px,90vw));height:var(--qx-dh,calc(100vh - 48px));max-height:none;border-radius:24px}
+}
+/* phone: a near-full-screen sheet grown from the tapped link */
+@media (max-width:640px){
+  html:is([data-theme],:not([data-theme])) body:not(.qx-rhp) > aside.sp-drawer{top:calc(env(safe-area-inset-top,0px) + 10px);left:8px;right:8px;
+    bottom:calc(8px + env(safe-area-inset-bottom,0px));width:auto;height:auto;max-height:none;border-radius:24px;padding:12px 10px 20px}
+}
+/* above the phone bar (140), the index button (151) and the open sidebar (150); its hover cards above it */
+html:is([data-theme],:not([data-theme])) body:not(.qx-rhp) > aside.sp-drawer{z-index:160}
+html:is([data-theme],:not([data-theme])) body:not(.qx-rhp):has(> .sp-drawer) > .sp-scrim{z-index:159}
+html:is([data-theme],:not([data-theme])) body:not(.qx-rhp):has(> .sp-drawer) .sp-card{z-index:161}
+html:is([data-theme],:not([data-theme])) body > aside.sp-drawer.qx-g{transition:transform .46s cubic-bezier(.2,.9,.24,1.06),border-radius .46s ease,opacity .3s ease}
+html:is([data-theme],:not([data-theme])) body > aside.sp-drawer.qx-g > *{transition:opacity .22s ease .14s}
+html:is([data-theme],:not([data-theme])) body > aside.sp-drawer.qx-g0 > *{opacity:0}
+/* the link stays marked while its brief is open */
+html:is([data-theme],:not([data-theme])) body .brief.sp .sp-drw.qx-lk{background:color-mix(in srgb,var(--principle) 12%,transparent);text-decoration-color:var(--principle)}
+@media (prefers-reduced-motion:reduce){html:is([data-theme],:not([data-theme])) body > aside.sp-drawer.qx-g{transition:none}}
+
+/* ---------- 5. First step split: one row group per order, each spanning only its own results ----------
+   A band whose orders are paired with their results renders as several test rows (repair/s148g; outline_render "pair");
+   the band's clue heads the first. Nothing changes for an unpaired band. */
+html:is([data-theme],:not([data-theme])) body figure.w5a.ax-w5tab .w5t.first > .w5b.w5k{padding-top:14px}
+@media (min-width:641px){
+  html:is([data-theme],:not([data-theme])) body figure.w5a.ax-w5tab .w5t.first > .w5b + .w5f + .w5b.w5k{box-shadow:inset 0 1px 0 var(--hair)}
+}
+
+/* ---------- 6. timeline tile: rows on the tile surface with dividers; title and caption inside the padding ---------- */
+html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw{padding:20px 22px 18px}
+html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw > .ttl{margin:0 0 6px;padding:0}
+html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw .wrows{display:block;margin:0;padding:0;background:none;background-image:none;box-shadow:none;border-radius:0}
+html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw .wrows > :is(li.wr,li.tr){margin:0;padding:14px 0 13px;background:none;background-image:none;box-shadow:none;border-radius:0;border:0;border-top:1px solid var(--hair)}
+html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw .wrows > :is(li.wr,li.tr):first-child{border-top:0;padding-top:8px}
+html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw .wrows > li.wg{margin:0;padding:16px 0 2px;border:0;border-top:1px solid var(--hair)}
+html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw .wrows > li.wg + :is(li.wr,li.tr){border-top:0;padding-top:6px}
+html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw > :is(.note,.lc-key){margin:4px 0 0;padding:12px 0 0;border-top:1px solid var(--hair)}
+@media (max-width:640px){
+  html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw{padding:16px 16px 14px}
+  html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw > .ttl{padding:0}
+}

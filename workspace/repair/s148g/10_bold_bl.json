@@ -1,0 +1,32 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "cluster-b",
+   "find": "<div class=\"dp\"><span class=\"lbl\">Bottom line</span><ul class=\"bl\"><li>A lifelong pattern, present by early adulthood and generally stable across settings; instability that comes in episodes with a start and an end points to a mood disorder</li><li>Borderline: abandonment fear, unstable relationships and self-image, self-harm, and transient stress-related paranoia lasting minutes to hours; first-line treatment is psychotherapy, with the best evidence for dialectical behavior therapy</li><li>Antisocial needs age 18 or older and conduct disorder before 15; under 18, antisocial personality disorder cannot be diagnosed; consider conduct disorder</li></ul></div>",
+   "with": "<div class=\"dp\"><span class=\"lbl\">Bottom line</span><ul class=\"bl\"><li><b>A lifelong pattern</b>, present by <b>early adulthood</b> and generally stable across settings; instability that comes in <b>episodes with a start and an end</b> points to a <b>mood disorder</b></li><li><b>Borderline</b>: <b>abandonment fear</b>, unstable relationships and self-image, <b>self-harm</b>, and transient stress-related paranoia lasting <b>minutes to hours</b>; first-line treatment is psychotherapy, with the best evidence for <b>dialectical behavior therapy</b></li><li><b>Antisocial</b> needs <b>age 18 or older</b> and <b>conduct disorder before 15</b>; <b>under 18</b>, antisocial personality disorder cannot be diagnosed; consider conduct disorder</li></ul></div>",
+   "note": "s148g (site layer, Jonathan 2026-10-20): bottom line key words bold (bold only)"
+  },
+  {
+   "op": "replace",
+   "brief": "tca-tox",
+   "find": "<div class=\"dp\"><span class=\"lbl\">Bottom line</span><ul class=\"bl\"><li>Anticholinergic signs or any tricyclic overdose: an ECG (electrocardiogram) first; a QRS over 100 ms, a ventricular arrhythmia or hypotension calls for sodium bicarbonate</li><li>Agitation or seizures: a benzodiazepine. No haloperidol; no physostigmine once a tricyclic is involved</li><li>QRS width, not pupil size, bowel sounds or a drug level, predicts seizures and arrhythmia</li></ul></div>",
+   "with": "<div class=\"dp\"><span class=\"lbl\">Bottom line</span><ul class=\"bl\"><li>Anticholinergic signs or any tricyclic overdose: an <b>ECG</b> (electrocardiogram) first; a <b>QRS over 100 ms</b>, a ventricular arrhythmia or hypotension calls for <b>sodium bicarbonate</b></li><li>Agitation or seizures: a <b>benzodiazepine</b>. <b>No haloperidol</b>; <b>no physostigmine</b> once a tricyclic is involved</li><li><b>QRS width</b>, not pupil size, bowel sounds or a drug level, <b>predicts seizures and arrhythmia</b></li></ul></div>",
+   "note": "s148g (site layer, Jonathan 2026-10-20): bottom line key words bold (bold only)"
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "<div class=\"dp\"><span class=\"lbl\">Bottom line</span><ul class=\"bl\"><li>2 or more motor tics <span class=\"op op-p\" role=\"img\" aria-label=\"and\"></span> 1 or more vocal tics, at least 1 year, onset before 18 <span class=\"op op-a\" role=\"img\" aria-label=\"leads to\"></span> Tourette syndrome; echolalia counts as vocal</li><li>Repeated act <span class=\"op op-p\" role=\"img\" aria-label=\"and\"></span> no obsession behind it <span class=\"op op-a\" role=\"img\" aria-label=\"leads to\"></span> a tic, not a compulsion</li><li>No impairment <span class=\"op op-a\" role=\"img\" aria-label=\"leads to\"></span> explain and watch. Impairment <span class=\"op op-a\" role=\"img\" aria-label=\"leads to\"></span> CBIT (comprehensive behavioral intervention for tics) <span class=\"op op-a\" role=\"img\" aria-label=\"leads to\"></span> medication: a VMAT2 (vesicular monoamine transporter type 2) inhibitor such as tetrabenazine first, or an antipsychotic; an alpha-2 agonist for milder tics, especially with ADHD (attention-deficit/hyperactivity disorder)</li></ul></div>",
+   "with": "<div class=\"dp\"><span class=\"lbl\">Bottom line</span><ul class=\"bl\"><li><b>2 or more motor tics</b> <span class=\"op op-p\" role=\"img\" aria-label=\"and\"></span> <b>1 or more vocal tics</b>, <b>at least 1 year</b>, <b>onset before 18</b> <span class=\"op op-a\" role=\"img\" aria-label=\"leads to\"></span> <b>Tourette syndrome</b>; echolalia counts as vocal</li><li>Repeated act <span class=\"op op-p\" role=\"img\" aria-label=\"and\"></span> <b>no obsession behind it</b> <span class=\"op op-a\" role=\"img\" aria-label=\"leads to\"></span> <b>a tic</b>, not a compulsion</li><li>No impairment <span class=\"op op-a\" role=\"img\" aria-label=\"leads to\"></span> <b>explain and watch</b>. Impairment <span class=\"op op-a\" role=\"img\" aria-label=\"leads to\"></span> <b>CBIT</b> (comprehensive behavioral intervention for tics) <span class=\"op op-a\" role=\"img\" aria-label=\"leads to\"></span> medication: a VMAT2 (vesicular monoamine transporter type 2) inhibitor such as <b>tetrabenazine</b> first, or an antipsychotic; an <b>alpha-2 agonist</b> for milder tics, especially with ADHD (attention-deficit/hyperactivity disorder)</li></ul></div>",
+   "note": "s148g (site layer, Jonathan 2026-10-20): bottom line key words bold (bold only)"
+  },
+  {
+   "op": "replace",
+   "brief": "toxidrome",
+   "find": "<div class=\"dp\"><span class=\"lbl\">Bottom line</span><ul class=\"bl\"><li>Stabilize first: airway and breathing, a fingerstick glucose and an ECG (electrocardiogram); naloxone for slow breathing with pinpoint pupils</li><li>In every intentional overdose, check acetaminophen and salicylate levels, and suspect more than one substance</li><li>Then name the toxidrome from the pupils, the skin, the bowel sounds and the muscle tone</li></ul></div>",
+   "with": "<div class=\"dp\"><span class=\"lbl\">Bottom line</span><ul class=\"bl\"><li><b>Stabilize first</b>: airway and breathing, a <b>fingerstick glucose</b> and an <b>ECG</b> (electrocardiogram); <b>naloxone</b> for slow breathing with <b>pinpoint pupils</b></li><li>In every intentional overdose, check <b>acetaminophen and salicylate levels</b>, and suspect <b>more than one substance</b></li><li>Then <b>name the toxidrome</b> from the <b>pupils</b>, the <b>skin</b>, the <b>bowel sounds</b> and the <b>muscle tone</b></li></ul></div>",
+   "note": "s148g (site layer, Jonathan 2026-10-20): bottom line key words bold (bold only)"
+  }
+ ]
+}

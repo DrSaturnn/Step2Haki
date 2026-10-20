@@ -155,6 +155,22 @@ class Renderer:
 ZONE_NAMES = {'By presentation': 'Targeted tests'}
 
 
+def split_band(band):
+    """First step split (Jonathan 2026-10-20; s148g): a band [clue, orders, findings, pair] whose optional pair lists, for
+    each finding in order, the 1-based number of the order it belongs to renders as one row group per order, each spanning
+    only its own results; the band's clue heads the first group (later groups carry class w5k and no clue). A band with
+    no pair, or with one order, renders as one group, exactly as before. Yields (clue or None, orders, findings)."""
+    clue, orders, findings = band[0], band[1], band[2]
+    pair = band[3] if len(band) > 3 else None
+    if not pair or len(orders) < 2:
+        yield clue, orders, findings
+        return
+    if len(pair) != len(findings) or any(not isinstance(p, int) or p < 1 or p > len(orders) for p in pair):
+        raise ValueError('w5a pair: one order number (1..%d) per finding, got %r for %d findings' % (len(orders), pair, len(findings)))
+    for k, o in enumerate(orders):
+        yield (clue if k == 0 else None), [o], [f for f, p in zip(findings, pair) if p == k + 1]
+
+
 def w5a(b, r):
     """layout 5a markup (the s130 classes): a tinted band of clue, arrow and order(s), then findings leading to meanings.
     Orders and meanings sit in the site's .mask spans, so study mode is the progressive recall built in s130."""
@@ -165,19 +181,21 @@ def w5a(b, r):
             out.append('<p class="w5skip"><span class="w5z">Skip</span><span class="mask">%s</span></p>' % r(body))
             continue
         out.append('<p class="w5z">%s</p><div class="w5t%s">' % (label, ' first' if label == 'First step' else ''))
-        for clue, orders, findings in body:
-            out.append('<div class="w5b"><div class="w5c">%s</div><span class="w5ar" aria-hidden="true">&rarr;</span>'
-                       '<div class="w5o"><span class="mask w5om">%s</span></div></div>'
-                       % (r(clue), ''.join('<span class="w5ol">%s</span>' % r(o) for o in orders)))
-            if findings:
-                out.append('<div class="w5f">')
-                n = len(findings)
-                for k, (fd, mean) in enumerate(findings):
-                    cls = (' f1' if k == 0 else '') + (' fl' if k == n - 1 else '') + ('' if mean else ' nom')
-                    out.append('<div class="w5fd%s"><span class="t" lang="en">%s</span><span class="ld" aria-hidden="true"></span></div>'
-                               '<span class="w5an%s" aria-hidden="true"></span><div class="w5m%s">%s</div>'
-                               % (cls, r(fd), cls, cls, ('<span class="mask">%s</span>' % r(mean)) if mean else ''))
-                out.append('</div>')
+        for band in body:
+            for clue, orders, findings in split_band(band):
+                head = '<div class="w5c">%s</div>' % r(clue) if clue is not None else ''
+                out.append('<div class="w5b%s">%s<span class="w5ar" aria-hidden="true">&rarr;</span>'
+                           '<div class="w5o"><span class="mask w5om">%s</span></div></div>'
+                           % ('' if clue is not None else ' w5k', head, ''.join('<span class="w5ol">%s</span>' % r(o) for o in orders)))
+                if findings:
+                    out.append('<div class="w5f">')
+                    n = len(findings)
+                    for k, (fd, mean) in enumerate(findings):
+                        cls = (' f1' if k == 0 else '') + (' fl' if k == n - 1 else '') + ('' if mean else ' nom')
+                        out.append('<div class="w5fd%s"><span class="t" lang="en">%s</span><span class="ld" aria-hidden="true"></span></div>'
+                                   '<span class="w5an%s" aria-hidden="true"></span><div class="w5m%s">%s</div>'
+                                   % (cls, r(fd), cls, cls, ('<span class="mask">%s</span>' % r(mean)) if mean else ''))
+                    out.append('</div>')
         out.append('</div>')
     out.append('</figure>')
     if b.get('notes'):
