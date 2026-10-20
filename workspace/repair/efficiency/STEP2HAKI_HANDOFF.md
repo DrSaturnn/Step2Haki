@@ -13,11 +13,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ## State (rewrite after every step)
 
 - **Batch s148f open** (site layer after s148d; runbook section 8; record repair/s148f/S148F.md; branch wip/s148f).
-  Step: pilot published 2026-10-20 as private artifact 3UxBZ3bzJSaq2Xsf4VS6Ci (v1), waiting for Jonathan's approval
+  Step: pilot v2 published 2026-10-20 (private artifact 3UxBZ3bzJSaq2Xsf4VS6Ci; edge clipping and full Review stems fixed), waiting for Jonathan's approval
   or changes. Next after approval: regenerate (repair/s148f/gen_site_r2.py), build, gate, render, preflight, vendor,
   legib_audit on the touched briefs, shots, approval.py present s148f (install the hooks first in the presenting
   container), then "ship". Then s148e (new psych briefs; launch conditions in SHIP_ORDER_PSYCH.md need Jonathan).
-- **Spend (s148f):** lead 49.5M of 120M (chat 1 to the pilot); reviewers none (0 agents).
+- **Spend (s148f):** lead 61.6M of 120M (chat 1, pilot v2); reviewers none (0 agents).
 - **Spend (s148d, closed):** reviewers 25 agents, 233 calls, 8.63M tokens (of 25, 300, 11M); lead 164.3M of 200M before
   the ship turn (ledger_lead.csv).
 - **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into

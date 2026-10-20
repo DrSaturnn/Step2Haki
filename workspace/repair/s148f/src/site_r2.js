@@ -79,11 +79,6 @@
       var list = G[g[0]]; if(!list.length) return;
       var box = document.createElement('section'); box.className = 'qx-rg ' + g[0];
       var h = document.createElement('div'); h.className = 'qx-rgh'; h.innerHTML = g[1] + ' <span>' + list.length + '</span>';
-      if(g[0] === 'open'){
-        var t = document.createElement('button'); t.type = 'button'; t.className = 'qx-rgt'; t.textContent = 'Show answers';
-        t.addEventListener('click', function(){ var on = box.classList.toggle('qx-show'); t.textContent = on ? 'Hide answers' : 'Show answers'; });
-        h.appendChild(t);
-      }
       box.appendChild(h);
       list.forEach(function(q){
         var r = document.createElement('button'); r.type = 'button'; r.className = 'qx-rr';
@@ -94,11 +89,13 @@
         var picked = q.querySelector('.opts button.wrong'); var pk = picked ? picked.querySelector('.k') : null;
         var mk = { miss:'✕', ok:'✓', seen:'•', open:'' }[g[0]];
         var html = '<span class="qx-mk" aria-hidden="true">' + mk + '</span><span class="qx-rb"><span class="qx-rt"><span class="qx-chip"></span><span class="qx-no"></span></span>' +
-          '<span class="qx-rl"></span><span class="qx-ra"><b></b></span>' + (picked ? '<span class="qx-rc"></span>' : '') + '</span>';
+          '<span class="stem qx-rstem"></span><span class="qx-ra"><b></b></span>' + (picked ? '<span class="qx-rc"></span>' : '') + '</span>';
         r.innerHTML = html;
         r.querySelector('.qx-chip').textContent = txt(q.querySelector('.qx-chip'));
         r.querySelector('.qx-no').textContent = 'Question ' + q.dataset.qxN;
-        r.querySelector('.qx-rl').textContent = txt(q.querySelector('.stem .sl')) || txt(q.querySelector('.stem')).slice(0, 120);
+        // the whole question, as the live Review shows it: lead line, findings (with the accent bar), vitals and labs
+        var st = q.querySelector('.top .stem'), rs = r.querySelector('.qx-rstem');
+        if(st) Array.prototype.forEach.call(st.childNodes, function(n){ rs.appendChild(n.cloneNode(true)); });
         r.querySelector('.qx-ra b').textContent = ans;
         if(why){ r.querySelector('.qx-ra').appendChild(document.createTextNode(': ' + txt(why))); }
         if(picked) r.querySelector('.qx-rc').textContent = 'You chose: ' + (pk ? norm(picked.textContent.slice(pk.textContent.length)) : txt(picked));

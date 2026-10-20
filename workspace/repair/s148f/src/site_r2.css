@@ -95,16 +95,15 @@ html:is([data-theme],:not([data-theme])) body .bankwrap.review .qx-review{displa
 .qx-review .qx-rt{display:flex;align-items:center;gap:8px;margin-bottom:4px}
 .qx-review .qx-rt .qx-chip{padding:2px 9px;border-radius:999px;background:var(--vign-bg);color:var(--vign);font:700 11.5px/17px var(--sans)}
 .qx-review .qx-rt .qx-no{font:600 12px/17px var(--sans);color:var(--muted)}
-.qx-review .qx-rl{display:block;font:700 15px/21px var(--sans);color:var(--ink)}
-.qx-review .qx-ra{display:block;margin-top:4px;font:500 15px/21px var(--sans);color:var(--ink-2)}
+.qx-review .qx-rstem{display:block;margin:0;font:500 15px/21px var(--sans);color:var(--ink)}
+.qx-review .qx-rstem .sl{font-size:16px;line-height:22px;font-weight:700}
+.qx-review .qx-rstem .sd{margin-top:8px;padding:7px 12px;border-radius:12px;background:var(--vign-bg);color:var(--qx-vit-ink);font-size:14px;line-height:20px;font-weight:500;letter-spacing:0}
+.qx-review .qx-ra{display:block;margin-top:10px;font:500 15px/21px var(--sans);color:var(--ink-2)}
 .qx-review .qx-ra b{font-weight:700;color:var(--confirm)}
 .qx-review .qx-rc{display:block;margin-top:2px;font:600 14px/20px var(--sans);color:var(--caution)}
 .qx-review .qx-rr::after{content:"";width:7px;height:11px;margin-top:6px;background:var(--muted);
   -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'%3E%3Cpath d='M2 2l5 5-5 5' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
   mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'%3E%3Cpath d='M2 2l5 5-5 5' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
-.qx-review .qx-rg.open .qx-ra{display:none}
-.qx-review .qx-rg.open.qx-show .qx-ra{display:block}
-.qx-review .qx-rgt{all:unset;cursor:pointer;margin-left:auto;font:700 12.5px/18px var(--sans);color:var(--accent)}
 
 /* ---------- 2. hover cards: the mockup's motion, in and out ---------- */
 html:is([data-theme],:not([data-theme])) body .sp-card{transform-origin:16px 0;
@@ -208,6 +207,10 @@ html:is([data-theme],:not([data-theme])) body .lcp .tile,html:is([data-theme],:n
 html:is([data-theme],:not([data-theme])) body .lcp .tile > :first-child:is(.th,.tt,.tile-h,header,b,span,p){background:transparent;background-image:none}
 
 /* ---------- 6. carried fixes ---------- */
+/* every brief renders lazily (content-visibility:auto), which clips its painting to its own box: the shadows of cards
+   that reach the brief's edge were cut off in a hard vertical line (Jonathan 2026-10-20). Let the clip reach past the box
+   far enough for the deepest card shadow (var(--e1): 24 + 10 px); layout and the lazy rendering are unchanged. */
+html.cv .brief{overflow-clip-margin:40px}
 /* .sp-spec first column: may wrap (mdd's <br> workaround no longer needed); kept from being squeezed */
 html:is([data-theme],:not([data-theme])) body .brief.sp .sp-spec td:first-child{white-space:normal;min-width:9em}
 /* phone: hover buttons inside a cell flow with the sentence instead of stacking as blocks (tics) */
