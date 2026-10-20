@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-20, by the s148f lead chat 1 (pilot published; waiting for approval).
+Last updated: 2026-10-20, by the s148f lead chat 1 (s148f shipped; no batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,34 +12,33 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch s148f open** (site layer after s148d; runbook section 8; record repair/s148f/S148F.md; branch wip/s148f).
-  Pilot approved 2026-10-20 10:11 (tints on; the v3 tile). Step: presented 2026-10-20 11:02 (approval.py present s148f,
-  37 screenshots in local/shots/s148f-sheets, page 25b34a8dd2d3), waiting for Jonathan's "ship" in the presenting chat.
-  On "ship": merge main into wip/s148f, AX_SESSION=... tools/ship.sh s148f "message", version.json in Chrome, OPEN_WORK,
-  private and Mac copies, handoff. Then s148e (launch conditions in SHIP_ORDER_PSYCH.md need Jonathan).
-- **Spend (s148f):** lead 93.0M of 120M (chat 1 to the presentation); reviewers none (0 agents).
-- **Spend (s148d, closed):** reviewers 25 agents, 233 calls, 8.63M tokens (of 25, 300, 11M); lead 164.3M of 200M before
-  the ship turn (ledger_lead.csv).
+- **No batch open.** s148f shipped 2026-10-20 12:08 (Jonathan: "ship"; main a960639, page 25b34a8dd2d3, live index
+  sha256 427716c4401b, version.json s148f confirmed in Chrome): the site layer after s148d. Record repair/s148f/S148F.md;
+  OPEN_WORK row. Next: s148e (new psych briefs); its launch needs Jonathan's titles (SHIP_ORDER_PSYCH.md launch
+  conditions): the next launch prompt below carries the proposed titles.
+- **Spend (s148f, closed):** reviewers 0; lead 101.2M of 120M (ledger_lead.csv).
 - **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into
   /root/.claude/settings.json (chat 4: no permission hold). On a two-core container, legib_audit and shots need
   Playwright default timeouts of 240000 ms (a scratch wrapper; batch file S3). Keep lane specs out of the top level of
   repair/sNN/ (build.py and ship.sh apply every top-level json there): use repair/sNN/lanes/.
 - **Carried:** SITE_BODY_GLANCE items 2 and 3 unscheduled; legib_audit mid-reflow false failures (use
-  repair/s148b/contrast_computed.py as cross-check); public wip/s147 branch; stray Mac bundle; mdd duration-window
-  timeline offered as a follow-up; for the next site batch: .sp-spec td:first-child nowrap (mdd works around it with
-  <br>) and the DIGFAST and figure title rows touching the phone edge; deferred LOWs: sz-psychosocial nonadherence
-  wording, psychosis-duration "non-bizarre" definition (each brief's adj_s148c.md); ae20 (AnKing ADAPT) saved as the
-  card stem only: add its answer text at the next antipsych-effects intake.
-  From s148d: substance "Not disulfiram: abstinent patients only" names the supervised row's masked answer (next
-  substance touch); review_packet.py omits long quotes from line_sources.txt (packet error, fix with tests); for s148f:
-  the somatic "Appearance" hover label renders as a heading after a drawer chip, the tics "Tics impair, no ADHD" Choose
-  cell wraps its two hovers as blocks on phone, and substance's tinted-theme contrast (25 computed failures in the
-  pre-existing tinted classes); peds-sleep parasomnia age-window chart offered as a follow-up.
+  repair/s148b/contrast_computed.py as cross-check; for the tinted theme use repair/s148f/tinted_pixels.py, the computed
+  tool cannot read it); public wip/s147 and wip/s148f branches; stray Mac bundle; mdd duration-window timeline offered as
+  a follow-up; deferred LOWs: sz-psychosocial nonadherence wording, psychosis-duration "non-bizarre" definition (each
+  brief's adj_s148c.md); ae20 (AnKing ADAPT) saved as the card stem only: add its answer text at the next
+  antipsych-effects intake. From s148d: substance "Not disulfiram: abstinent patients only" names the supervised row's
+  masked answer (next substance touch); review_packet.py omits long quotes from line_sources.txt (packet error, fix with
+  tests); peds-sleep parasomnia age-window chart offered as a follow-up. From s148f: the prose sweep
+  (repair/s148f/prose_sweep.md: "Chase the medical cause" psychosis-duration, "a culprit exposure" mdd, "The tell"
+  headers in about 20 unconverted briefs, "What it looks like" captions) goes to each brief's next batch; Review rows
+  could link to the step that teaches each item once items carry a step id; the legib track-label false positive
+  (lithium "Before starting", "Day 7": the audit samples the dot above the label).
 
 ## Next launch prompt (paste into a fresh chat)
 
+Titles are the proposals in SHIP_ORDER_PSYCH.md; edit them before pasting if they should change.
 ```
-Step2Haki: launch batch s148f (site layer after s148d) per claude/BATCH_RUNBOOK.md section 8, claude/pending/SITE_UI_R2.md and claude/pending/SITE_S148F.md (both in the private repo; one batch). Items: same-size question tiles in the Lithium mockup format with the current accent bar, the List view kept, a Review view proposal; the smoother Lithium hover animation; linked briefs as a quiet link with a short preview and open icon (Pairs with pattern); muted tints where they help; one shading rule; "By presentation" renamed "Targeted tests"; the prose rule added to lint.py as warnings with a site sweep list; plus the site items carried in the handoff (somatic "Appearance" hover label, tics hover wrap on phone, tinted-theme contrast, .sp-spec td:first-child nowrap, DIGFAST and figure title rows at the phone edge). Pilot first as a private artifact for my approval. No brief content changes, so no reviewer agents. Budget: lead 120M tokens.
+Step2Haki: launch batch s148e (new psych briefs) per claude/BATCH_RUNBOOK.md and claude/pending/SHIP_ORDER_PSYCH.md. Briefs: the toxidrome hub "Suspected Overdose or Toxidrome", the drug brief "Anticholinergic and Tricyclic Toxicity", and "Cluster B Personality Disorders". Medication toxicities are kept in both the hub and the drug brief; illicit drugs stay in substance; UWorld 20444 and 3126 move from substance to the new briefs (all QIDs kept). Allocation of the 44 extra AnKing cards from the 31 generic MDD-card QIDs: the lead proposes it in the batch file. Hub golden first if none exists for psych. Budget for the whole batch: 18 agents, 200 API calls, 9M tokens; lead 180M tokens. Method: s148 with the efficiency patch.
 ```
 
 ## After s141
