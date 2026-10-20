@@ -2,6 +2,63 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-20 s148f: s148f: site layer after s148d: same-size practice tiles with anchored choices, Review by result, quiet linked-brief links with previews, Pairs with list, muted tints, one shading rule, uncut card shadows, Targeted tests
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (44):
+  - pmr (Polymyalgia Rheumatica): prose edited (-1 chars)
+  - scaphoid (Wrist and Hand Pain and Numbness): prose edited (-1 chars)
+  - backpain (Low Back Pain in an Adult): prose edited (-1 chars)
+  - hippos (Hip Injury in an Adult): prose edited (-1 chars)
+  - gtps (Hip and Thigh Pain and Numbness): prose edited (-1 chars)
+  - oa-pharm (Osteoarthritis): prose edited (-1 chars)
+  - septic-bursitis (Hot Joint or Bursa in an Adult): prose edited (-1 chars)
+  - scfe (Slipped Capital Femoral Epiphysis): prose edited (-1 chars)
+  - shoulder-rom (Shoulder Pain): prose edited (-1 chars)
+  - copd (Obstructive Lung Disease): prose edited (-1 chars)
+  - cough (Chronic Cough): prose edited (-1 chars)
+  - pneumoconiosis (Occupational Lung Disease): prose edited (-1 chars)
+  - rhinitis (Rhinitis): prose edited (-1 chars)
+  - sinopulm-structural (Recurrent Respiratory Infection and Structural Lung Disease): prose edited (-1 chars)
+  - hypoxemia-mech (Hypoxemia): prose edited (-1 chars)
+  - scd-dyspnea (Sickle Cell Disease and Trait): prose edited (-2 chars)
+  - airway (Noisy Breathing in a Child): prose edited (-1 chars)
+  - uri (Respiratory Infection in a Child): prose edited (-1 chars)
+  - asthma (Asthma): prose edited (-1 chars)
+  - bpd (Lung Disease in the Newborn and Preterm Infant): prose edited (-1 chars)
+  - pyelo (Pyelonephritis): prose edited (-1 chars)
+  - bph (Benign Prostatic Hyperplasia and Urinary Retention): prose edited (-1 chars)
+  - nephropathy (Diabetes Complications and Annual Care): prose edited (-2 chars)
+  - hematuria (Hematuria and Nephritic Syndrome): prose edited (-1 chars)
+  - scrotum (Scrotal Pain and Masses): prose edited (-1 chars)
+  - hypercalcemia (Hypercalcemia): prose edited (-1 chars)
+  - peds-uti-recurrent (Urinary Tract Infection in a Child): prose edited (-1 chars)
+  - enuresis (Enuresis): prose edited (-1 chars)
+  - peds-aki (Acute Kidney Injury in a Child): prose edited (-1 chars)
+  - nephrotic-child (Proteinuria and Nephrotic Syndrome in a Child): prose edited (-1 chars)
+  - bs-puv (Posterior Urethral Valves): prose edited (-1 chars)
+  - bs-incontinence (Urinary Incontinence): prose edited (-1 chars)
+  - bs-abdominal-mass (Abdominal Mass in a Young Child): prose edited (-1 chars)
+  - peds-sleep (Sleep Problems): prose edited (-1 chars)
+  - psychosis-duration (Psychosis): prose edited (-1 chars)
+  - bipolar-mania (Bipolar Disorder): prose edited (-1 chars)
+  - mdd (Major Depressive Disorder): prose edited (-1 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (-1 chars)
+  - somatic (Somatic Symptom and Related Disorders): prose edited (-1 chars)
+  - gppd (Genito-Pelvic Pain/Penetration Disorder): prose edited (-1 chars)
+  - delirium (Delirium): prose edited (-1 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (-1 chars)
+  - psych-medical (Psychiatric Symptoms from Medical Illness or Medication): prose edited (-1 chars)
+  - lithium-effects (Lithium Therapy): prose edited (-1 chars)
+Other page changes (nav, headers, scripts): +48791 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 21 scripts, 38 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 162/163 | vignette gridded 65/65 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.014%)
+```
+
 ## 2026-10-19 s148d: s148d: six psychiatry briefs patched (panic, somatic, substance, peds-sleep, tics, psych-medical)
 
 ```
