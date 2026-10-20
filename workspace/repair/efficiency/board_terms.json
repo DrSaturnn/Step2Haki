@@ -761,5 +761,49 @@
   "supraspinatus",
   "teres minor",
   "winged scapula"
+ ],
+ "tca-tox": [
+  "anticholinergic toxicity",
+  "antimuscarinic",
+  "amitriptyline",
+  "clomipramine",
+  "desipramine",
+  "diphenhydramine",
+  "doxepin",
+  "imipramine",
+  "jimson",
+  "nortriptyline",
+  "physostigmine",
+  "QRS",
+  "sodium bicarbonate",
+  "TCA",
+  "tricyclic"
+ ],
+ "toxidrome": [
+  "acetaminophen overdose",
+  "acetaminophen toxicity",
+  "activated charcoal",
+  "anticholinergic toxicity",
+  "aspirin toxicity",
+  "cholinergic toxicity",
+  "co-ingest",
+  "neuroleptic malignant",
+  "opioid overdose",
+  "organophosphate",
+  "overdose",
+  "pralidoxime",
+  "salicylate",
+  "serotonin syndrome",
+  "toxidrome"
+ ],
+ "cluster-b": [
+  "antisocial personality",
+  "borderline personality",
+  "cluster B",
+  "dialectical",
+  "histrionic",
+  "narcissistic",
+  "personality disorder",
+  "splitting"
  ]
 }
