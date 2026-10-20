@@ -2,6 +2,25 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-20 s148e: Three new psychiatry briefs: Suspected Overdose or Toxidrome (hub), Anticholinergic and Tricyclic Toxicity, Cluster B Personality Disorders; substance and voices hand off to them
+
+```
+Page: 177 briefs, 2164 items -> 180 briefs, 2182 items
+Briefs added (3):
+  - cluster-b: Cluster B Personality Disorders (6 items)
+  - toxidrome: Suspected Overdose or Toxidrome (6 items)
+  - tca-tox: Anticholinergic and Tricyclic Toxicity (6 items)
+Briefs changed (2):
+  - voices (Hears Voices or Holds Odd Beliefs): prose edited (+69 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (-627 chars)
+Other page changes (nav, headers, scripts): +1568 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 180 briefs, 2182 items, 21 scripts, 38 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 180 | bankwraps 180 | mcq 2182 (axCheck 2182, reveal-only 0) | malformed 0 | crit gridded 163/164 | vignette gridded 65/65 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.014%)
+```
+
 ## 2026-10-20 s148f: s148f: site layer after s148d: same-size practice tiles with anchored choices, Review by result, quiet linked-brief links with previews, Pairs with list, muted tints, one shading rule, uncut card shadows, Targeted tests
 
 ```
