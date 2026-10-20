@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-20, by the s148e lead chat 1 (launch done; S1 next).
+Last updated: 2026-10-20, by the s148e lead chat 1 (S3 done; S4 next in a fresh chat).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -13,21 +13,32 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ## State (rewrite after every step)
 
 - **Batch s148e open** (new psych briefs; launched 2026-10-20 12:22; branch wip/s148e in both repos; batch file
-  repair/s148e/S148E.md). Briefs: toxidrome hub "Suspected Overdose or Toxidrome" (id toxidrome), drug brief
-  "Anticholinergic and Tricyclic Toxicity" (id tca-tox), "Cluster B Personality Disorders" (id cluster-b). Goldens
-  exist (hub voices, drug lithium-effects and antipsych-effects, disease mdd), so no hub golden is built first.
-- **Step:** launch done; S1 (board evidence) next. Hooks NOT installed: install.sh was refused by the session's
-  permission check (Self-Modification); owed before S4 in the review chat (no agent work runs before S4).
-- **Budget:** reviewers 18 agents, 200 calls, 9M tokens; lead 180M. **Spend:** reviewers 0; lead chat 1 in progress.
-- **Session start notes:** start-up context lead 189,130 (WARNING: 45% above the 130,263 baseline; the memory and
-  skills lists grew). On a two-core container, legib_audit and shots need Playwright default timeouts of 240000 ms.
-  Keep lane specs in repair/s148e/lanes/.
-- **Carried:** SITE_BODY_GLANCE items 2 and 3 unscheduled; legib_audit mid-reflow false failures (use
-  repair/s148b/contrast_computed.py as cross-check; tinted theme repair/s148f/tinted_pixels.py); public wip/s147 and
-  wip/s148f branches; stray Mac bundle; mdd duration-window timeline offered; deferred LOWs (sz-psychosocial
-  nonadherence wording, psychosis-duration "non-bizarre"); ae20 answer text at the next antipsych-effects intake;
-  substance "Not disulfiram" masked-answer leak; review_packet.py omits long quotes from line_sources.txt; peds-sleep
-  age-window chart offered; s148f prose sweep list (repair/s148f/prose_sweep.md); legib track-label false positive.
+  repair/s148e/S148E.md). Briefs (folders under repair/migration/psych/): toxidrome hub "Suspected Overdose or
+  Toxidrome" (TOXHUB/spine), drug brief "Anticholinergic and Tricyclic Toxicity" (tca-tox; TCA/spine), "Cluster B
+  Personality Disorders" (cluster-b; PDB/spine); plus changed lines in substance (TOX/spine: drawer and one pointer
+  row to tca-tox) and voices (HUB/voices/spine: borderline row drawer to cluster-b). Goldens: voices (hub),
+  lithium-effects and antipsych-effects (drug), mdd (disease); no hub golden built (one exists).
+- **Step: S3 done (2026-10-20, chat 1); next S4** (review round 1): the three new briefs in full (four roles), substance
+  and voices on their changed lines. New briefs build on a base page (tools/spine/basepage.py: the working page plus
+  every pending 05_<id>_new.json shell); review_packet.py needs `--page` with that base page for the new briefs
+  (`python3 tools/spine/basepage.py <folder> <out.html>` writes it). G-MECH: all five PASS; gate, render, preflight
+  (P1 0), vendor_scan, numbers clean; legib 0 on the new briefs (substance and voices only the known false failures).
+- **Hooks NOT installed in chat 1**: install.sh was refused by the session's permission check (Self-Modification).
+  The S4 chat installs them first (runbook section 1) and mirrors them into /root/.claude/settings.json; no agent
+  work before that.
+- **Budget:** reviewers 18 agents, 200 calls, 9M tokens; lead 180M. **Spend:** reviewers 0; lead 102.2M (chat 1,
+  ledger_lead.csv). The lead figure is tight for S4 to S9 (s148d used about 200M): raise it with Jonathan at the S7
+  restart if the review rounds need it.
+- **Session start notes:** start-up context lead 189,130 (WARNING: 45% above the 130,263 baseline). On a two-core
+  container, legib_audit and shots need Playwright default timeouts of 240000 ms (a wrapper around the tool). Keep lane
+  specs in repair/s148e/lanes/.
+- **Carried:** SITE_BODY_GLANCE items 2 and 3 unscheduled; legib_audit mid-reflow false failures (cross-check with
+  repair/s148b/contrast_computed.py; tinted theme repair/s148f/tinted_pixels.py); public wip/s147 and wip/s148f
+  branches; stray Mac bundle; mdd duration-window timeline offered; deferred LOWs (sz-psychosocial nonadherence wording,
+  psychosis-duration "non-bizarre"); ae20 answer text at the next antipsych-effects intake; substance "Not disulfiram"
+  masked-answer leak; review_packet.py omits long quotes from line_sources.txt; peds-sleep age-window chart offered;
+  s148f prose sweep list (repair/s148f/prose_sweep.md); legib track-label false positive; the 43 generic MDD-card
+  allocation proposal (batch file) for Jonathan at the report; salicylate and acetaminophen treatment has no owner brief.
 
 ## Next launch prompt (paste into a fresh chat)
 
