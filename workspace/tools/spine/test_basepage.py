@@ -41,8 +41,14 @@ def main():
     tmp = tempfile.mkdtemp(prefix='bp-')
     try:
         live = P.read_page(BP.PAGE)
-        ok(BP.base_page(tmp) == live, 'no shell: the base page is the working page')
-        ok(BP.base_page_path(tmp, tmp) == BP.PAGE, 'no shell: base_page_path is the working page path')
+        pend = BP.pending(tmp)
+        bp0 = BP.base_page(tmp)
+        ok(all(has(bp0, BP._new_id(json.load(open(f)))) for f in pend), 'every pending shell from the migration folders is applied')
+        ok((bp0 == live) == (not pend), 'with nothing pending the base page is the working page')
+        on = next(b.id for b in P.briefs(live))
+        sk = os.path.join(tmp, 'sk'); os.makedirs(sk)
+        spec = shell(on); json.dump(spec, open(os.path.join(sk, '05_on_new.json'), 'w'))
+        ok(BP.pending(sk) == pend, 'a shell whose brief is already on the page is skipped (after the ship)')
         json.dump(shell('zz-shell-test'), open(os.path.join(tmp, '05_zz_shell_test_new.json'), 'w'))
         bp = BP.base_page(tmp)
         ok(has(bp, 'zz-shell-test') and not has(live, 'zz-shell-test'),

@@ -8,8 +8,10 @@ spine build second (10_<id>_spine.json, replace_brief), so the READY gate (tools
 spine body. The shell copy in the folder is what lets verify, the card checklist, the review packet and spinelib build
 and check the new brief exactly as they do a shipped one.
 
-  base_page(folder)            the working page (index.html) with the folder's shell edits applied; unchanged when the
-                               folder has none
+  base_page(folder)            the working page (index.html) with every pending shell applied: the folder's own, and
+                               any other brief folder's shell whose brief is not on the working page yet (the batch's
+                               other new briefs, so drawers between new briefs resolve); after the ship the briefs are
+                               on the page and their shells are skipped; unchanged when nothing is pending
   base_page_path(folder, tmp)  the same page written to <tmp>/base.html (the working page path when there is no shell)
   shells(folder)               the folder's 05_*_new.json files
   check_shell(spec)            errors for a shell spec: one new_brief op, no data-spine="2" in its html
@@ -31,6 +33,29 @@ def shells(folder):
     return sorted(glob.glob(os.path.join(folder, '05_*_new.json'))) if folder else []
 
 
+def _new_id(spec):
+    import re
+    m = re.search(r'id="([^"]+)"', (spec.get('edits') or [{}])[0].get('html') or '')
+    return m.group(1) if m else None
+
+
+def pending(folder=None, page=None):
+    """shell files to apply: the folder's own plus every migration folder's shell whose brief is not on the page"""
+    page = P.read_page(PAGE) if page is None else page
+    on = {b.id for b in P.briefs(page)}
+    found = glob.glob(os.path.join(WS, 'repair', 'migration', '**', 'spine', '05_*_new.json'), recursive=True)
+    out, seen = [], set()
+    for f in shells(folder) + sorted(found):
+        try:
+            bid = _new_id(json.load(open(f, encoding='utf-8')))
+        except (OSError, ValueError):
+            continue
+        if bid and bid not in on and bid not in seen:
+            seen.add(bid)
+            out.append(f)
+    return out
+
+
 def check_shell(spec):
     errs = []
     eds = spec.get('edits', [])
@@ -44,7 +69,7 @@ def check_shell(spec):
 
 def base_page(folder=None, page_path=PAGE):
     page = P.read_page(page_path)
-    sh = shells(folder)
+    sh = pending(folder, page)
     if not sh:
         return page
     import apply_edits
@@ -58,7 +83,7 @@ def base_page(folder=None, page_path=PAGE):
 
 
 def base_page_path(folder, tmp):
-    if not shells(folder):
+    if not pending(folder):
         return PAGE
     os.makedirs(tmp, exist_ok=True)
     p = os.path.join(tmp, 'base.html')
