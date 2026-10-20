@@ -150,11 +150,17 @@ class Renderer:
         raise ValueError('unknown block type: ' + t)
 
 
+# zone 2 was "By presentation" (2026-10-11); renamed "Targeted tests" site-wide (digest 2026-10-19, s148f), so outlines
+# written before the rename render the new name
+ZONE_NAMES = {'By presentation': 'Targeted tests'}
+
+
 def w5a(b, r):
     """layout 5a markup (the s130 classes): a tinted band of clue, arrow and order(s), then findings leading to meanings.
     Orders and meanings sit in the site's .mask spans, so study mode is the progressive recall built in s130."""
     out = ['<figure class="lcp w5a"><p class="kick">Diagnostic workup</p>']
     for label, body in b['zones']:
+        label = ZONE_NAMES.get(label, label)
         if label == 'Skip':
             out.append('<p class="w5skip"><span class="w5z">Skip</span><span class="mask">%s</span></p>' % r(body))
             continue

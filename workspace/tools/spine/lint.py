@@ -10,8 +10,12 @@ item 15) before any reviewer runs. It catches the categories that drew most s148
   threshold   one decision with two thresholds: the same "past/after/within/under/over N unit" phrase with values that
               overlap but differ (backpain "past 4 to 6 weeks" against "past 6 weeks")
   number      a number in a claim that none of its cited quotes holds
+  prose       (s148f, Jonathan 2026-10-19) a figure of speech in a next-move, meaning or action cell ("Chase the medical
+              cause"), or a caption, label or zone name that is not the term a clinician or textbook uses ("A night by
+              stage", "By presentation"); the clinical term or the concrete action replaces it
 
   python3 tools/spine/lint.py <brief dir> [--quiet]     one "lint <check>: ..." line per finding; exit 0 always
+  python3 tools/spine/lint.py --page <index.html> [--check prose] [--md OUT]   the same checks over every brief of a page
 """
 import html as H
 import json
@@ -204,12 +208,78 @@ def lint_threshold(brief_html):
     return sorted(set(out))
 
 
+# ---- prose (s148f)
+FIGURE = [  # (pattern, what it is); matched on whole words, case-insensitive
+    (r'\bchase(?:s|d)?\b(?! (?:the )?(?:ball|dog))', 'figure of speech "chase"'), (r'\bhunt(?:s|ing)? (?:for|down)\b', 'figure of speech "hunt for"'),
+    (r'\bunmask(?:s|ed|ing)?\b', 'figure of speech "unmask"'), (r'\bcrack(?:s|ing)? (?:the|it)\b', 'figure of speech "crack"'),
+    (r'\bnail(?:s|ing)? (?:it|down|the)\b', 'figure of speech "nail"'), (r'\bzero(?:es)? in\b', 'figure of speech "zero in"'),
+    (r'\btease(?:s|d)? (?:out|apart)\b', 'figure of speech "tease out"'), (r'\bsmoking gun\b', 'figure of speech "smoking gun"'),
+    (r'\bculprit\b', 'figure of speech "culprit"'), (r'\bred herring\b', 'figure of speech "red herring"'),
+    (r'\btell-?tale\b', 'figure of speech "telltale"'), (r'\bgiveaway\b', 'figure of speech "giveaway"'),
+    (r'\bgame[- ]changer\b', 'figure of speech "game changer"'), (r'\bworkhorse\b', 'figure of speech "workhorse"'),
+    (r'\brule of thumb\b', 'figure of speech "rule of thumb"'), (r'\bclose the loop\b', 'figure of speech "close the loop"'),
+    (r'\btip(?:s)? the (?:scale|balance)\b', 'figure of speech "tip the scales"'), (r'\bpull(?:s)? the trigger\b', 'figure of speech "pull the trigger"'),
+    (r'\bon the table\b', 'figure of speech "on the table"'), (r'\bsits? on the fence\b', 'figure of speech'),
+    (r'\bthe (?:whole )?story\b', 'figure of speech "the story"'), (r'\bdetective\b', 'figure of speech "detective"'),
+    (r'\bsherlock\b', 'figure of speech'), (r'\bsilver bullet\b', 'figure of speech "silver bullet"'),
+    (r'\bbread and butter\b', 'figure of speech'), (r'\bin the driver.s seat\b', 'figure of speech'),
+    (r'\bthe tells?\b', 'figure of speech "the tell"'), (r'\b(?:its|their|the) tells\b', 'figure of speech "tells"'),
+    (r'\bdeclares?\b', 'figure of speech "declares"'), (r'\b(?:read|reading) the clock\b', 'figure of speech "the clock"'),
+    (r'\bthe (?:\w+ )?clock\b', 'figure of speech "the clock"'), (r'\bthe move\b', 'figure of speech "the move"'),
+    (r'\bwhat it does next\b', 'figurative label'), (r'\b(?:name|names) (?:it|the cause|each)\b', 'figure of speech "names it"'),
+    (r'\bby the picture\b', 'figure of speech "the picture"'), (r'\bthe gates?\b', 'figure of speech "the gate"'),
+]
+CAPTION_ODD = [
+    (r'^(?:a|an|the)\s+\w+\s+by\s+\w+$', 'caption "<a noun> by <noun>" (say the clinical term, e.g. "Sleep stages")'),
+    (r'^by presentation$', 'zone name "By presentation" (renamed "Targeted tests", 2026-10-19)'),
+    (r'\bat a glance\b', '"at a glance"'), (r'\b(?:journey|playbook|toolkit|cheat sheet|roadmap|game plan)\b', 'not a clinical term'),
+    (r'\bthe (?:shape|anatomy|map) of\b', 'figurative caption'), (r'\bwhat .+ looks like\b', 'figurative caption'),
+    (r'\bhow .+ plays out\b', 'figurative caption'), (r'\bin a nutshell\b', '"in a nutshell"'),
+]
+ACTION_HEADS = ('next best step', 'next step', 'do', 'means', 'choose', 'then', 'action', 'next move', 'what to do')
+
+
+def _cells_under(t, names):
+    heads = [text(x).lower() for x in re.findall(r'<th[^>]*>(.*?)</th>', t, re.S)]
+    cols = [i for i, h in enumerate(heads) if h in names]
+    out = []
+    for row in re.findall(r'<tr[^>]*>(.*?)</tr>', t, re.S):
+        cells = re.findall(r'<td[^>]*>(.*?)</td>', row, re.S)
+        out += [(heads[i], text(cells[i])) for i in cols if i < len(cells)]
+    return out
+
+
+def lint_prose(brief_html):
+    b = body(brief_html)
+    out = []
+    spots = []
+    for t in re.findall(r'<table[^>]*>.*?</table>', b, re.S):
+        spots += [('cell "%s"' % h, c) for h, c in _cells_under(t, ACTION_HEADS)]
+    spots += [('commit line', text(x)) for x in re.findall(r'<p class="sp-commit">(.*?)</p>', b, re.S)]
+    spots += [('workup step', text(x)) for x in re.findall(r'<div class="w5(?:o|m|fd)[^"]*">(.*?)</div>', b, re.S)]
+    for where, c in spots:
+        for pat, what in FIGURE:
+            if re.search(pat, c, re.I):
+                out.append('prose: %s "%s": %s; name the action or test' % (where, c[:70], what))
+                break
+    labels = re.findall(r'<caption>(.*?)</caption>', b, re.S) + re.findall(r'<figcaption>(.*?)</figcaption>', b, re.S) \
+        + re.findall(r'<p class="w5z">(.*?)</p>', b, re.S) + re.findall(r'<span class="lbl">(.*?)</span>', b, re.S) \
+        + re.findall(r'<div class="ttl"><span>(.*?)</span>', b, re.S) + re.findall(r'<th[^>]*>(.*?)</th>', b, re.S)
+    for l in labels:
+        lt = text(l)
+        for pat, what in CAPTION_ODD + FIGURE:
+            if re.search(pat, lt, re.I):
+                out.append('prose: label "%s": %s' % (lt[:70], what))
+                break
+    return sorted(set(out))
+
+
 def lint(folder, facts_dir=None):
     out = []
     bh = os.path.join(folder, 'brief.html')
     if os.path.exists(bh):
         brief_html = open(bh, encoding='utf-8').read()
-        out += lint_next_step(brief_html) + lint_alias(brief_html) + lint_threshold(brief_html)
+        out += lint_next_step(brief_html) + lint_alias(brief_html) + lint_threshold(brief_html) + lint_prose(brief_html)
     try:
         cm = json.load(open(os.path.join(folder, 'claim_map.json'), encoding='utf-8'))
     except (OSError, ValueError):
@@ -222,7 +292,36 @@ def lint(folder, facts_dir=None):
     return out + lint_hedge(rows) + lint_number(rows)
 
 
+def page_sweep(argv):
+    sys.path.insert(0, os.path.join(WS, 'tools'))
+    from pagelib import read_page, briefs
+    page = argv[argv.index('--page') + 1]
+    check = argv[argv.index('--check') + 1] if '--check' in argv else 'prose'
+    fn = {'prose': lint_prose, 'next-step': lint_next_step, 'threshold': lint_threshold, 'alias': lint_alias}[check]
+    html = read_page(page)
+    rows = []
+    for b in briefs(html):
+        for f in fn(html[b.start:b.end]):
+            rows.append((b.id, f))
+    for bid, f in rows:
+        print('lint %s %s' % (bid, f))
+    print('lint page %s: %d warning(s) in %d brief(s)' % (check, len(rows), len({r[0] for r in rows})))
+    if '--md' in argv:
+        md = argv[argv.index('--md') + 1]
+        with open(md, 'w', encoding='utf-8') as fh:
+            fh.write('# %s sweep of %s (lint.py --page; advisory)\n\n' % (check, os.path.basename(page)))
+            fh.write('%d warning(s) in %d brief(s). Each line: brief, then the warning. Content fixes go to each brief\'s next batch.\n\n' % (len(rows), len({r[0] for r in rows})))
+            last = None
+            for bid, f in rows:
+                if bid != last:
+                    fh.write('\n## %s\n' % bid); last = bid
+                fh.write('- %s\n' % f)
+    return 0
+
+
 def main(argv):
+    if '--page' in argv:
+        return page_sweep(argv)
     if not argv:
         sys.exit(__doc__.strip().splitlines()[-1].strip())
     found = lint(argv[0])

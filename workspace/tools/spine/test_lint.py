@@ -97,6 +97,20 @@ expect('number: a number word in the quote counts',
        L.lint_number([('S5', 'Repeat films in 2 weeks', ['repeat radiographs in two weeks'])]) == [])
 expect('number: 50,000 matches 50,000', L.lint_number([('S6', 'over 50,000 cells', ['WBC > 50,000/mcL'])]) == [])
 
+# ---- prose (s148f; Jonathan 2026-10-19: "chase the medical cause is an ai euphemism", "A night by stage", "by presentation")
+w5 = '<figure class="lcp w5a"><p class="w5z">%s</p><div class="w5t"><div class="w5b"><div class="w5c">Clue</div><div class="w5o"><span class="mask w5om"><span class="w5ol">%s</span></span></div></div></div></figure>'
+expect('prose: "Chase the medical cause" in a workup step', len(L.lint_prose(w5 % ('Next step', 'Chase the medical cause'))) == 1)
+expect('prose: a concrete test passes', L.lint_prose(w5 % ('Next step', 'TSH, CBC, metabolic panel')) == [])
+expect('prose: zone "By presentation" flagged', any('By presentation' in x for x in L.lint_prose(w5 % ('By presentation', 'ECG'))))
+expect('prose: zone "Targeted tests" passes', L.lint_prose(w5 % ('Targeted tests', 'ECG')) == [])
+cap = '<div class="sp-dx"><table class="dense"><caption>%s</caption><thead><tr><th>Stage</th><th>Means</th></tr></thead><tbody><tr><td>N3</td><td>%s</td></tr></tbody></table></div>'
+expect('prose: caption "A night by stage" flagged', len(L.lint_prose(cap % ('A night by stage', 'Delta waves'))) == 1)
+expect('prose: caption "Sleep stages" passes', L.lint_prose(cap % ('Sleep stages', 'Delta waves')) == [])
+expect('prose: "Look-alikes, most tempting first" passes', L.lint_prose(cap % ('Look-alikes, most tempting first', 'Order a TSH')) == [])
+expect('prose: a "Means" cell with a figure flagged', len(L.lint_prose(cap % ('Sleep stages', 'The smoking gun for narcolepsy'))) == 1)
+expect('prose: header "The tell" flagged', len(L.lint_prose('<table><thead><tr><th>Dx</th><th>The tell</th></tr></thead><tbody><tr><td>a</td><td>b</td></tr></tbody></table>')) == 1)
+expect('prose: practice bank not swept', L.lint_prose('<h5 class="tsec authored-hdr">Practice</h5>' + (w5 % ('Next step', 'Chase it'))) == [])
+
 # ---- whole folder: brief.html plus claim map and facts
 d = tempfile.mkdtemp()
 try:

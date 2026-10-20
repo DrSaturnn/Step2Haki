@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-19, by the s148d lead chat 4 (s148d shipped; no batch open).
+Last updated: 2026-10-20, by the s148f lead chat 1 (pilot published; waiting for approval).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,10 +12,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **No batch open.** s148d shipped 2026-10-19 21:41 (Jonathan: "ship"; main 41ecc26, page e9bc6a33998c): panic, somatic,
-  substance, peds-sleep, tics, psych-medical. Record repair/s148d/S148D.md; OPEN_WORK row. Next: s148f, the site layer
-  (claude/pending/SITE_UI_R2.md and SITE_S148F.md in the private repo; runbook section 8), then s148e (new psych briefs; its launch
-  conditions in SHIP_ORDER_PSYCH.md need Jonathan: hub and drug-brief titles, the Cluster B title).
+- **Batch s148f open** (site layer after s148d; runbook section 8; record repair/s148f/S148F.md; branch wip/s148f).
+  Step: pilot published 2026-10-20 as private artifact 3UxBZ3bzJSaq2Xsf4VS6Ci (v1), waiting for Jonathan's approval
+  or changes. Next after approval: regenerate (repair/s148f/gen_site_r2.py), build, gate, render, preflight, vendor,
+  legib_audit on the touched briefs, shots, approval.py present s148f (install the hooks first in the presenting
+  container), then "ship". Then s148e (new psych briefs; launch conditions in SHIP_ORDER_PSYCH.md need Jonathan).
+- **Spend (s148f):** lead 49.5M of 120M (chat 1 to the pilot); reviewers none (0 agents).
 - **Spend (s148d, closed):** reviewers 25 agents, 233 calls, 8.63M tokens (of 25, 300, 11M); lead 164.3M of 200M before
   the ship turn (ledger_lead.csv).
 - **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into
