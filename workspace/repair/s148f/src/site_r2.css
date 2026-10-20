@@ -61,8 +61,6 @@ html:is([data-theme],:not([data-theme])) body .bankwrap .mcq.done .why:not([hidd
 @keyframes qxin{from{opacity:0;filter:blur(6px);transform:translateY(-8px) scale(.98)}to{opacity:1;filter:none;transform:none}}
 /* one tile size: the script sets --qx-h (tallest closed card) and --qx-ho (tallest card with its answer open) per bank */
 html:is([data-theme],:not([data-theme])) body .bankwrap.stack .mcqwrap > .mcq.sk-cur{display:flex;min-height:var(--qx-ho,0)}
-/* option (pilot switch): unanswered cards one size, the answer panel grows the card when it opens */
-html:is([data-theme],:not([data-theme])) body.qx-grow .bankwrap.stack .mcqwrap > .mcq.sk-cur{min-height:var(--qx-h,0)}
 html:is([data-theme],:not([data-theme])) body .bankwrap:not(.stack):not(.review) .mcqwrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:stretch}
 html:is([data-theme],:not([data-theme])) body .bankwrap:not(.stack):not(.review) .mcqwrap > .mcq{margin:0;min-height:var(--qx-h,0)}
 html:is([data-theme],:not([data-theme])) body .bankwrap:not(.stack):not(.review) .mcqwrap > .mcq[hidden]{display:none}
