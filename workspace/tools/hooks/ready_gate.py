@@ -32,6 +32,11 @@ def main(b):
     for f in sorted(glob.glob(os.path.join(WS, 'repair', b, '*.json'))):
         for e in json.load(open(f, encoding='utf-8')).get('edits', []):
             # the raw strings, not json.dumps(e), whose escaped quotes never matched (found at the s132 ship)
+            if e.get('op') == 'new_brief' and 'data-spine="2"' in (e.get('html') or ''):
+                # s148e: a new brief enters as a plain shell (05_<id>_new.json) and gets its spine body by replace_brief,
+                # so a spine body can never skip this gate by arriving inside a new_brief op
+                builds.append('%s (spine body inside new_brief: ship it as a shell plus a replace_brief)' % (e.get('html') or '?')[:60])
+                continue
             if e.get('op') in ('replace_brief', 'replace_cluster') and \
                     any('data-spine="2"' in v for v in e.values() if isinstance(v, str)):
                 builds.append(e.get('brief') or e.get('anchor') or '?')

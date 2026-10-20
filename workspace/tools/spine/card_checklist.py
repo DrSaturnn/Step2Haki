@@ -29,7 +29,8 @@ def main(argv):
         sys.exit(__doc__.strip().splitlines()[2].strip())
     bid = argv[0]
     out = argv[argv.index('--out') + 1] if '--out' in argv else os.path.join(WS, 'repair', 'migration', 'spine', 'packets', bid, 'cards.md')
-    b = P.brief_by_id(P.read_page(os.path.join(WS, 'index.html')), bid)
+    page = argv[argv.index('--page') + 1] if '--page' in argv else os.path.join(WS, 'index.html')   # s148e: a new brief's base page
+    b = P.brief_by_id(P.read_page(page), bid)
     toks = set(b.attrs.get('data-nid', '').split())
     for g in re.findall(r'data-nid="([^"]*)"', b.inner):
         toks |= set(g.split())

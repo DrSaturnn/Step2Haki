@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+"""basepage (s148e): the page a spine brief folder is built and checked against.
+
+A brief that is new in its batch has no place on the working page yet. Its folder then holds one shell edit,
+05_<id>_new.json: a single new_brief op whose brief is the plain shell (title, subtitle, Practice header, bank,
+Pairs with, rule), carrying no data-spine="2". The batch applies the shell first (repair/sNN/05_<id>_new.json) and the
+spine build second (10_<id>_spine.json, replace_brief), so the READY gate (tools/hooks/ready_gate.py) still covers the
+spine body. The shell copy in the folder is what lets verify, the card checklist, the review packet and spinelib build
+and check the new brief exactly as they do a shipped one.
+
+  base_page(folder)            the working page (index.html) with the folder's shell edits applied; unchanged when the
+                               folder has none
+  base_page_path(folder, tmp)  the same page written to <tmp>/base.html (the working page path when there is no shell)
+  shells(folder)               the folder's 05_*_new.json files
+  check_shell(spec)            errors for a shell spec: one new_brief op, no data-spine="2" in its html
+"""
+import glob
+import json
+import os
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+WS = os.path.abspath(os.path.join(HERE, '..', '..'))
+sys.path.insert(0, os.path.join(WS, 'tools'))
+import pagelib as P  # noqa: E402
+
+PAGE = os.path.join(WS, 'index.html')
+
+
+def shells(folder):
+    return sorted(glob.glob(os.path.join(folder, '05_*_new.json'))) if folder else []
+
+
+def check_shell(spec):
+    errs = []
+    eds = spec.get('edits', [])
+    if len(eds) != 1 or eds[0].get('op') != 'new_brief':
+        errs.append('a shell file holds exactly one new_brief op')
+    for e in eds:
+        if 'data-spine="2"' in (e.get('html') or ''):
+            errs.append('a shell carries no data-spine="2": the spine body arrives by replace_brief, under the READY gate')
+    return errs
+
+
+def base_page(folder=None, page_path=PAGE):
+    page = P.read_page(page_path)
+    sh = shells(folder)
+    if not sh:
+        return page
+    import apply_edits
+    for f in sh:
+        spec = json.load(open(f, encoding='utf-8'))
+        errs = check_shell(spec)
+        if errs:
+            raise ValueError('%s: %s' % (os.path.basename(f), '; '.join(errs)))
+        page, _ = apply_edits.apply(page, spec)
+    return page
+
+
+def base_page_path(folder, tmp):
+    if not shells(folder):
+        return PAGE
+    os.makedirs(tmp, exist_ok=True)
+    p = os.path.join(tmp, 'base.html')
+    P.write_page(p, base_page(folder))
+    return p
+
+
+if __name__ == '__main__':
+    if len(sys.argv) < 3:
+        sys.exit('usage: basepage.py <brief folder> <out.html>')
+    P.write_page(sys.argv[2], base_page(os.path.abspath(sys.argv[1])))
+    print('base page written: %s (%d shell edit file(s))' % (sys.argv[2], len(shells(os.path.abspath(sys.argv[1])))))

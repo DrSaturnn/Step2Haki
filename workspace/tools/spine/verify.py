@@ -45,6 +45,7 @@ sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.dirname(HERE))
 import pagelib as P  # noqa: E402
 import condpass as CP  # noqa: E402
+import basepage as BP  # noqa: E402  (s148e: a brief new in its batch is checked against the working page plus its shell)
 
 PY = sys.executable
 # MIGRATION_CONTRACT V1 allowlist, plus Roman numerals and clock times
@@ -192,7 +193,7 @@ class Verify:
             self.G('claims', '%d claims, each with a source and quote' % len(rows))
         if os.path.exists(os.path.join(self.d, 'cards.md')):   # s146b: every card the board terms reach has a disposition
             import card_dispositions as CD
-            errs, warns = CD.check(self.d, os.path.join(WS, 'index.html'), quiet=True)
+            errs, warns = CD.check(self.d, BP.base_page_path(self.d, self.tmp), quiet=True)
             if errs:
                 self.F('cards', '%d card disposition error(s): %s' % (len(errs), '; '.join(errs[:4])))
             else:
@@ -203,7 +204,7 @@ class Verify:
 
     # ---- 6, 7: tail and items against the live page
     def live(self):
-        page = P.read_page(os.path.join(WS, 'index.html'))
+        page = BP.base_page(self.d)
         b = P.brief_by_id(page, self.bid)
         live = page[b.start:b.end]
         new = self.brief_html
@@ -320,7 +321,7 @@ class Verify:
     def preview(self):
         sys.path.insert(0, os.path.join(WS, 'tools'))
         import apply_edits
-        page = P.read_page(os.path.join(WS, 'index.html'))
+        page = BP.base_page(self.d)
         new = page
         try:
             for e in self.edits:
@@ -361,7 +362,7 @@ class Verify:
                 return False
         if not any('hedge words fell' in l for l in lines):
             return True
-        return p1_residual(self.d, self.bid, P.read_page(os.path.join(WS, 'index.html')), new_page) < 2
+        return p1_residual(self.d, self.bid, BP.base_page(self.d), new_page) < 2
 
     def run(self):
         before = sh(['git', 'status', '--porcelain', '--untracked-files=no'])[1]
@@ -402,7 +403,7 @@ class Verify:
             return h(open(p, 'rb').read()) if os.path.exists(p) else 'none'
         html = getattr(self, 'brief_html', '') if html is None else html
         m = re.search(r'<h5 class="[^"]*authored-hdr', html)
-        page = P.read_page(self.PAGE)
+        page = BP.base_page(getattr(self, 'd', None), self.PAGE)
         lb = P.brief_by_id(page, getattr(self, 'bid', ''))
         titles = sorted(re.findall(r'<div class="brief[^"]*" id="[^"]+"[^>]*>\s*<h4[^>]*>(.*?)</h4>', page, re.S))
         chrome = ''.join(re.findall(r'<style[^>]*>.*?</style>|<script[^>]*>.*?</script>', page, re.S))

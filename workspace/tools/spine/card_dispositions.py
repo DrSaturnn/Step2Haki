@@ -21,6 +21,7 @@ import json
 import os
 import re
 import subprocess
+import tempfile
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -137,6 +138,9 @@ def make(bid, folder, cap):
             '--out', os.path.join(folder, 'cards.md')]
     if terms:
         args[3:3] = ['--terms', ','.join(terms)]
+    import basepage as BP   # s148e: a brief new in its batch has its shell in the folder (05_*_new.json)
+    if BP.shells(folder):
+        args += ['--page', BP.base_page_path(folder, tempfile.mkdtemp(prefix='cards-'))]
     r = subprocess.run(args, capture_output=True, text=True, cwd=WS)
     print((r.stdout + r.stderr).strip())
     return r.returncode
