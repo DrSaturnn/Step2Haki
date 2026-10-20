@@ -1,0 +1,66 @@
+{
+ "batch": "s148e",
+ "plan_step": "s148e",
+ "round": 2,
+ "context": "batch s148e builds three new psychiatry spine briefs (tca-tox, toxidrome, cluster-b) and changes a few lines in two shipped briefs (substance, voices) that point to them; this is follow-up round 2, on the lines changed since round 1",
+ "out": "repair/efficiency/lanes/s148e/r2",
+ "packets": "repair/migration/spine/packets/s148e-r2",
+ "sheets": "local/shots/s148e-r2/sheets",
+ "lanes": [
+  {
+   "part": "display",
+   "group": "A",
+   "briefs": [
+    "tca-tox",
+    "toxidrome"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "B",
+   "briefs": [
+    "cluster-b",
+    "substance"
+   ]
+  }
+ ],
+ "types": {
+  "tca-tox": "new drug brief (entry type drug), psych lens; steps 1, 2, 3, 4, 7 and 8; review in full",
+  "toxidrome": "new presentation hub (data-entry hub), psych lens; steps 1 to 4, steps 5 to 8 greyed; golden voices; review in full",
+  "cluster-b": "new disease brief, psych lens; steps 1 to 5, 7 and 8; review in full",
+  "substance": "shipped brief, CHANGED LINES ONLY (changes.md): the step 7 anticholinergic and tricyclic row",
+  "voices": "shipped hub; text unchanged in this batch (only the Borderline row's drawer target, a link); flags refresh only"
+ },
+ "prior": {
+  "display": {
+   "tca-tox": "repair/efficiency/lanes/s148e/r1/display-A/tca-tox/receipt.md",
+   "toxidrome": "repair/efficiency/lanes/s148e/r1/display-A/toxidrome/receipt.md",
+   "cluster-b": "repair/efficiency/lanes/s148e/r1/display-B/cluster-b/receipt.md",
+   "substance": "repair/efficiency/lanes/s148e/r1/display-A/substance/receipt.md"
+  }
+ },
+ "adjudication": {
+  "tca-tox": "repair/migration/psych/TCA/spine/adj_s148e.md",
+  "toxidrome": "repair/migration/psych/TOXHUB/spine/adj_s148e.md",
+  "cluster-b": "repair/migration/psych/PDB/spine/adj_s148e.md",
+  "substance": "repair/migration/psych/TOX/spine/adj_s148e.md"
+ },
+ "notes": {
+  "display": [
+   "Drawer and Pairs with styling, tile tints and the question-tile format are the s148f site layer (shipped 2026-10-20), not this batch.",
+   "A hub's greyed steps 5 to 8 (\"Not used\") are the hub golden's pattern."
+  ]
+ },
+ "extra_judge": {
+  "display": [
+   "Layers rule (Jonathan 2026-10-19): the visible layer must scan on the phone; judge the changed steps for legibility at phone width and the masks in study mode (every repeated answer masked).",
+   "cluster-b: three wording replacements were applied after these screenshots (a comma after \"under 18\"; \"borderline personality disorder\" spelled out in the brief psychotic disorder row; the Pairs with wording); they are in brief_text.txt, not in the images, and change no layout."
+  ]
+ },
+ "steps": {
+  "tca-tox": "1, 2, 3, 4 and 7",
+  "toxidrome": "3 and 4",
+  "cluster-b": "1, 3, 4, 5, 7 and 8",
+  "substance": "7"
+ }
+}
