@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-19, by the s148d lead chat 4 (S8 presented; waiting for "ship").
+Last updated: 2026-10-19, by the s148d lead chat 4 (s148d shipped; no batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,18 +12,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch s148d open** (psych patch, anxiety, somatic, substance, sleep, tics; launched 2026-10-19 17:12). Briefs and
-  folders (repair/migration/psych/): panic N5/spine, somatic SOMA/spine, substance TOX/spine, peds-sleep SLEEP/spine,
-  tics TICS/spine, psych-medical MED/spine. Proposals repair/sources/intake/<brief>_2026-10-18.md. Batch file
-  repair/s148d/S148D.md. Branch wip/s148d in both repos. Budget: reviewers 25 agents, 300 calls, 11M tokens; lead 200M
-  (WAVE.json s148d; raised twice 2026-10-19). Method: s148c (patch: S1 to S3, one review round on changed lines, S8, S9).
-- **Step:** S8 presented (lead chat 4): verify_all READY x6; the six 10_*_spine.json in repair/s148d/ beside
-  05_sleep_eeg_css.json; changelog 148d; build, gate, render, vendor, preflight clean; 54 approval sheets in
-  local/shots/s148d/approval/; approval.py present s148d (page e9bc6a33998c). The report went to Jonathan. Next: on
-  "ship" in the presenting chat, S9 per the runbook. A "ship" sent to another chat approves nothing: that chat
-  re-runs S8 (verify_all, build, shots_all, sheets, present) and presents again.
-- **Spend:** reviewers 25 agents, 233 calls, 8.63M tokens (of 25, 300, 11M); lead chats 1 to 4: 164.3M of 200M
-  (ledger_lead.csv). The project copy of this handoff is refreshed at each restart.
+- **No batch open.** s148d shipped 2026-10-19 21:41 (Jonathan: "ship"; main 41ecc26, page e9bc6a33998c): panic, somatic,
+  substance, peds-sleep, tics, psych-medical. Record repair/s148d/S148D.md; OPEN_WORK row. Next: s148f, the site layer
+  (claude/pending/SITE_S148F.md in the private repo; runbook section 8), then s148e (new psych briefs; its launch
+  conditions in SHIP_ORDER_PSYCH.md need Jonathan: hub and drug-brief titles, the Cluster B title).
+- **Spend (s148d, closed):** reviewers 25 agents, 233 calls, 8.63M tokens (of 25, 300, 11M); lead 164.3M of 200M before
+  the ship turn (ledger_lead.csv).
 - **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into
   /root/.claude/settings.json (chat 4: no permission hold). On a two-core container, legib_audit and shots need
   Playwright default timeouts of 240000 ms (a scratch wrapper; batch file S3). Keep lane specs out of the top level of
@@ -34,11 +28,16 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   <br>) and the DIGFAST and figure title rows touching the phone edge; deferred LOWs: sz-psychosocial nonadherence
   wording, psychosis-duration "non-bizarre" definition (each brief's adj_s148c.md); ae20 (AnKing ADAPT) saved as the
   card stem only: add its answer text at the next antipsych-effects intake.
+  From s148d: substance "Not disulfiram: abstinent patients only" names the supervised row's masked answer (next
+  substance touch); review_packet.py omits long quotes from line_sources.txt (packet error, fix with tests); for s148f:
+  the somatic "Appearance" hover label renders as a heading after a drawer chip, the tics "Tics impair, no ADHD" Choose
+  cell wraps its two hovers as blocks on phone, and substance's tinted-theme contrast (25 computed failures in the
+  pre-existing tinted classes); peds-sleep parasomnia age-window chart offered as a follow-up.
 
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s148d (psych patch, anxiety, somatic, substance, sleep, tics) per claude/BATCH_RUNBOOK.md and claude/pending/SHIP_ORDER_PSYCH.md. Briefs: panic, somatic, substance, peds-sleep, tics, psych-medical. Apply each brief's 2026-10-18 proposal (rulings first, then edits, then comb additions after verifying the MED and LOW items), add timelines where they help, one review round on changed lines. Budget for the whole batch: 20 agents, 240 API calls, 9M tokens; lead 150M tokens. Method: s148c (patch, with the efficiency patch).
+Step2Haki: launch batch s148f (site layer after s148d) per claude/BATCH_RUNBOOK.md section 8 and claude/pending/SITE_S148F.md. Work items 1 to 5 (linked-brief previews, fixed-size question tiles and Review view, one shading rule, the "By presentation" rename, the prose sweep) plus the site items carried in the handoff (somatic "Appearance" hover label, tics hover wrap on phone, tinted-theme contrast, .sp-spec td:first-child nowrap, DIGFAST and figure title rows at the phone edge). Pilot first as a private artifact for my approval. No brief content changes, so no reviewer agents. Budget: lead 120M tokens.
 ```
 
 ## After s141
