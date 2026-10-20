@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-19, by the s148d lead chat 3 (S7 done; restart for S8).
+Last updated: 2026-10-19, by the s148d lead chat 4 (S8 presented; waiting for "ship").
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -17,15 +17,13 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   tics TICS/spine, psych-medical MED/spine. Proposals repair/sources/intake/<brief>_2026-10-18.md. Batch file
   repair/s148d/S148D.md. Branch wip/s148d in both repos. Budget: reviewers 25 agents, 300 calls, 11M tokens; lead 200M
   (WAVE.json s148d; raised twice 2026-10-19). Method: s148c (patch: S1 to S3, one review round on changed lines, S8, S9).
-- **Step:** S7 done: all READY (lead chat 3). Four review rounds (9, 9, 6 and 1 lanes); verify --fast READY x6.
-  Record: repair/s148d/S148D.md (S4 to S7 sections); adjudications in each brief folder's adj_s148d.md (local-only,
-  pushed to the private repo's wip/s148d). Next (lead chat 4): S8 per runbook section 5: verify_all.py on the six folders
-  (three at a time), copy the six 10_*_spine.json into repair/s148d/ beside 05_sleep_eeg_css.json (keep lane specs in
-  repair/s148d/lanes/), changelog entry 148d, shots_all (240 s wrapper) and sheets.py --approval --page, approval.py
-  present s148d, the report, then S9 on "ship". Report items already decided: deferred substance "Not disulfiram" leak
-  (live before), somatic "Appearance" label and tics hover wrap (s148f).
-- **Spend:** reviewers 25 agents, 233 calls, 8.63M tokens (of 25, 300, 11M, raised twice by Jonathan 2026-10-19); lead
-  chats 1 to 3: 152.7M of 200M (ledger_lead.csv). The project copy of this handoff is refreshed at each restart.
+- **Step:** S8 presented (lead chat 4): verify_all READY x6; the six 10_*_spine.json in repair/s148d/ beside
+  05_sleep_eeg_css.json; changelog 148d; build, gate, render, vendor, preflight clean; 54 approval sheets in
+  local/shots/s148d/approval/; approval.py present s148d (page e9bc6a33998c). The report went to Jonathan. Next: on
+  "ship" in the presenting chat, S9 per the runbook. A "ship" sent to another chat approves nothing: that chat
+  re-runs S8 (verify_all, build, shots_all, sheets, present) and presents again.
+- **Spend:** reviewers 25 agents, 233 calls, 8.63M tokens (of 25, 300, 11M); lead chats 1 to 4: 164.3M of 200M
+  (ledger_lead.csv). The project copy of this handoff is refreshed at each restart.
 - **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into
   /root/.claude/settings.json (chat 4: no permission hold). On a two-core container, legib_audit and shots need
   Playwright default timeouts of 240000 ms (a scratch wrapper; batch file S3). Keep lane specs out of the top level of
