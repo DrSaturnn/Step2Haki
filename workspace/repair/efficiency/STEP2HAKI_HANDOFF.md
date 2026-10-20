@@ -13,7 +13,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ## State (rewrite after every step)
 
 - **Batch s148f open** (site layer after s148d; runbook section 8; record repair/s148f/S148F.md; branch wip/s148f).
-  Step: pilot v2 published 2026-10-20 (private artifact 3UxBZ3bzJSaq2Xsf4VS6Ci; edge clipping and full Review stems fixed), waiting for Jonathan's approval
+  Step: pilot v3 published 2026-10-20 (private artifact 3UxBZ3bzJSaq2Xsf4VS6Ci; v2 edges and Review stems, v3 choices anchored to the bottom), waiting for Jonathan's approval
   or changes. Next after approval: regenerate (repair/s148f/gen_site_r2.py), build, gate, render, preflight, vendor,
   legib_audit on the touched briefs, shots, approval.py present s148f (install the hooks first in the presenting
   container), then "ship". Then s148e (new psych briefs; launch conditions in SHIP_ORDER_PSYCH.md need Jonathan).
