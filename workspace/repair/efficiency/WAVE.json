@@ -10,10 +10,10 @@
   "flag-review",
   "wording-fix"
  ],
- "max_agents": 24,
+ "max_agents": 25,
  "max_calls": 300,
  "max_tokens": 11000000,
- "set_by": "Jonathan, s148d launch prompt: \"Budget for the whole batch: 20 agents, 240 API calls, 9M tokens; lead 150M tokens.\" Raised 2026-10-19 (chat 3, Jonathan: \"Raise, full round (Recommended)\"): 24 agents, 300 calls, 11M tokens; lead 200M.",
+ "set_by": "Jonathan, s148d launch prompt: \"Budget for the whole batch: 20 agents, 240 API calls, 9M tokens; lead 150M tokens.\" Raised 2026-10-19 (chat 3, Jonathan: \"Raise, full round (Recommended)\"): 24 agents, 300 calls, 11M tokens; lead 200M. Raised 2026-10-19 (chat 3, Jonathan: \"Allow 25th agent (Recommended)\"): 25 agents.",
  "previous": {
   "id": "s148c",
   "note": "2026-10-19 (s148c shipped 16:59, main 77afd16)"
