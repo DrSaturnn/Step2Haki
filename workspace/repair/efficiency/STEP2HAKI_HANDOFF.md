@@ -14,7 +14,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **No batch open.** s148d shipped 2026-10-19 21:41 (Jonathan: "ship"; main 41ecc26, page e9bc6a33998c): panic, somatic,
   substance, peds-sleep, tics, psych-medical. Record repair/s148d/S148D.md; OPEN_WORK row. Next: s148f, the site layer
-  (claude/pending/SITE_S148F.md in the private repo; runbook section 8), then s148e (new psych briefs; its launch
+  (claude/pending/SITE_UI_R2.md and SITE_S148F.md in the private repo; runbook section 8), then s148e (new psych briefs; its launch
   conditions in SHIP_ORDER_PSYCH.md need Jonathan: hub and drug-brief titles, the Cluster B title).
 - **Spend (s148d, closed):** reviewers 25 agents, 233 calls, 8.63M tokens (of 25, 300, 11M); lead 164.3M of 200M before
   the ship turn (ledger_lead.csv).
@@ -37,7 +37,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s148f (site layer after s148d) per claude/BATCH_RUNBOOK.md section 8 and claude/pending/SITE_S148F.md. Work items 1 to 5 (linked-brief previews, fixed-size question tiles and Review view, one shading rule, the "By presentation" rename, the prose sweep) plus the site items carried in the handoff (somatic "Appearance" hover label, tics hover wrap on phone, tinted-theme contrast, .sp-spec td:first-child nowrap, DIGFAST and figure title rows at the phone edge). Pilot first as a private artifact for my approval. No brief content changes, so no reviewer agents. Budget: lead 120M tokens.
+Step2Haki: launch batch s148f (site layer after s148d) per claude/BATCH_RUNBOOK.md section 8, claude/pending/SITE_UI_R2.md and claude/pending/SITE_S148F.md (both in the private repo; one batch). Items: same-size question tiles in the Lithium mockup format with the current accent bar, the List view kept, a Review view proposal; the smoother Lithium hover animation; linked briefs as a quiet link with a short preview and open icon (Pairs with pattern); muted tints where they help; one shading rule; "By presentation" renamed "Targeted tests"; the prose rule added to lint.py as warnings with a site sweep list; plus the site items carried in the handoff (somatic "Appearance" hover label, tics hover wrap on phone, tinted-theme contrast, .sp-spec td:first-child nowrap, DIGFAST and figure title rows at the phone edge). Pilot first as a private artifact for my approval. No brief content changes, so no reviewer agents. Budget: lead 120M tokens.
 ```
 
 ## After s141
