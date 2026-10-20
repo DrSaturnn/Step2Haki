@@ -1,0 +1,116 @@
+{
+ "batch": "s148e",
+ "plan_step": "s148e",
+ "round": 2,
+ "context": "batch s148e builds three new psychiatry spine briefs (tca-tox, toxidrome, cluster-b) and changes a few lines in two shipped briefs (substance, voices) that point to them; this is follow-up round 2, on the lines changed since round 1",
+ "out": "repair/efficiency/lanes/s148e/r2",
+ "packets": "repair/migration/spine/packets/s148e-r2",
+ "sheets": "local/shots/s148e-r2/sheets",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "tca-tox",
+    "toxidrome",
+    "cluster-b",
+    "substance"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "tca-tox",
+    "toxidrome",
+    "cluster-b",
+    "substance"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "tca-tox",
+    "toxidrome",
+    "cluster-b",
+    "substance",
+    "voices"
+   ],
+   "budget": 25
+  }
+ ],
+ "types": {
+  "tca-tox": "new drug brief (entry type drug), psych lens; steps 1, 2, 3, 4, 7 and 8; review in full",
+  "toxidrome": "new presentation hub (data-entry hub), psych lens; steps 1 to 4, steps 5 to 8 greyed; golden voices; review in full",
+  "cluster-b": "new disease brief, psych lens; steps 1 to 5, 7 and 8; review in full",
+  "substance": "shipped brief, CHANGED LINES ONLY (changes.md): the step 7 anticholinergic and tricyclic row",
+  "voices": "shipped hub; text unchanged in this batch (only the Borderline row's drawer target, a link); flags refresh only"
+ },
+ "prior": {
+  "acc": {
+   "tca-tox": "repair/efficiency/lanes/s148e/r1/acc-A/tca-tox/receipt.md",
+   "toxidrome": "repair/efficiency/lanes/s148e/r1/acc-A/toxidrome/receipt.md",
+   "cluster-b": "repair/efficiency/lanes/s148e/r1/acc-B/cluster-b/receipt.md",
+   "substance": "repair/efficiency/lanes/s148e/r1/acc-C/substance/receipt.md"
+  },
+  "read": {
+   "tca-tox": "repair/efficiency/lanes/s148e/r1/read-A/tca-tox/receipt.md",
+   "toxidrome": "repair/efficiency/lanes/s148e/r1/read-A/toxidrome/receipt.md",
+   "cluster-b": "repair/efficiency/lanes/s148e/r1/read-A/cluster-b/receipt.md",
+   "substance": "repair/efficiency/lanes/s148e/r1/read-A/substance/receipt.md"
+  },
+  "flags": {
+   "tca-tox": "repair/efficiency/lanes/s148e/r1/flags-A/tca-tox/receipt.md",
+   "toxidrome": "repair/efficiency/lanes/s148e/r1/flags-A/toxidrome/receipt.md",
+   "cluster-b": "repair/efficiency/lanes/s148e/r1/flags-A/cluster-b/receipt.md",
+   "substance": "repair/efficiency/lanes/s148e/r1/flags-A/substance/receipt.md",
+   "voices": "repair/migration/spine/reviews/voices_flags_r5.md"
+  },
+  "display": {
+   "tca-tox": "repair/efficiency/lanes/s148e/r1/display-A/tca-tox/receipt.md",
+   "toxidrome": "repair/efficiency/lanes/s148e/r1/display-A/toxidrome/receipt.md",
+   "cluster-b": "repair/efficiency/lanes/s148e/r1/display-B/cluster-b/receipt.md",
+   "substance": "repair/efficiency/lanes/s148e/r1/display-A/substance/receipt.md"
+  }
+ },
+ "adjudication": {
+  "tca-tox": "repair/migration/psych/TCA/spine/adj_s148e.md",
+  "toxidrome": "repair/migration/psych/TOXHUB/spine/adj_s148e.md",
+  "cluster-b": "repair/migration/psych/PDB/spine/adj_s148e.md",
+  "substance": "repair/migration/psych/TOX/spine/adj_s148e.md"
+ },
+ "notes": {
+  "acc": [
+   "Medication toxicities are kept in BOTH the hub (toxidrome) and the drug brief (tca-tox), and illicit drugs stay in substance (Jonathan's launch decision 2026-10-20): repetition between them is intended.",
+   "A hub may carry treatment no other live brief owns inside step 4 Workup, after the workup tree; steps 5 to 8 stay greyed (Jonathan 2026-10-18).",
+   "Antisocial personality disorder treatment: UWorld (psychotherapy not shown effective; treat comorbid conditions) is taught over AnKing 1484686664957; the conflict is recorded in cards_disposition.json (board order: UWorld first).",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length)."
+  ],
+  "read": [
+   "Repetition between toxidrome, tca-tox and substance is intended (launch decision 2026-10-20).",
+   "The 5a workup zone names (First step, Targeted tests, Next step, Diagnostic test, Skip), the caption \"Diagnostic workup\" and the pause point's \"The bait:\" label are site conventions.",
+   "Not to report: brief length or word count (2026-10-19 layers rule)."
+  ],
+  "flags": [
+   "Word counts are not judged (2026-10-19 layers rule).",
+   "Borrowed lines in toxidrome cite sibling claim-map keys (ss:, ap:, li:) from ssri-effects, antipsych-effects and lithium-effects; their facts are in facts.json under those keys."
+  ],
+  "display": [
+   "Drawer and Pairs with styling, tile tints and the question-tile format are the s148f site layer (shipped 2026-10-20), not this batch.",
+   "A hub's greyed steps 5 to 8 (\"Not used\") are the hub golden's pattern."
+  ]
+ },
+ "extra_judge": {
+  "acc": [
+   "Layers rule (Jonathan 2026-10-19): a fact a board item keys (the answer, or the clue that rules out a distractor) must stay visible, not only in a hover. Report a keyed fact found only in a hover."
+  ],
+  "read": [
+   "Prose rules (Jonathan 2026-10-19): captions, labels, zone names and cells use the term a clinician or textbook uses, never a euphemism or figurative phrasing; a list of tests is broken up, one test or one group per line.",
+   "Diagnoses with other names show them at first mention and in their differential row (ALIASES.json); abbreviations follow ABBREV.json."
+  ],
+  "flags": [
+   "voices: its text has not changed since its last flags receipt (changes.md shows no change; this batch changed only the Borderline row's drawer target, a link). Confirm the drawer to cluster-b and write the receipt: 2 or 3 calls."
+  ]
+ }
+}
