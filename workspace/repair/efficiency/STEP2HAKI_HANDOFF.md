@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-19, by the s148d lead chat 2 (S3 done; restart for S4).
+Last updated: 2026-10-19, by the s148d lead chat 3 (S7, held on a budget question).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -17,17 +17,17 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   tics TICS/spine, psych-medical MED/spine. Proposals repair/sources/intake/<brief>_2026-10-18.md. Batch file
   repair/s148d/S148D.md. Branch wip/s148d in both repos. Budget: reviewers 20 agents, 240 calls, 9M tokens; lead 150M
   (WAVE.json s148d). Method: s148c (patch: S1 to S3, one review round on changed lines, S8, S9).
-- **Step:** S3 done (lead chat 2): S1 and S2 for all six, the rework of panic, psych-medical, tics and peds-sleep under
-  Jonathan's 2026-10-19 rules, verify --mech full PASS x6, legib_audit 0 below (substance desk tick labels: known
-  mid-reflow false failure, computed cross-check 0). Record: repair/s148d/S148D.md (chat 2 sections). Next (lead chat
-  3): S4, one review round on changed lines (patch method as s148c: lanes.py follow-up template with a stub prior
-  receipt and changes.md from review_packet.py --since each brief's live text; spec in repair/s148d/lanes/, never the
-  top level; sheets.py --page for display; write-first lanes, all in one foreground message), then S5 to S7 and the
-  restart. Batch jsons to copy into repair/s148d/ at S8: the six 10_*_spine.json (05_sleep_eeg_css.json is already
-  there and must ship with them).
-- **Spend:** reviewers 0 agents, 0 calls (of 20, 240, 9M); lead chat 1 37.4M, chat 2 56.7M: 94.0M of 150M
-  (ledger_lead.csv). The project copy of this handoff is now refreshed at each restart too (chat 2 started from a stale
-  project copy that said no batch was open).
+- **Step:** S7 in progress, held on a budget question to Jonathan (lead chat 3). Round 1 (9 lanes) and one follow-up
+  round (9 lanes) ran; every round-1 MED is resolved. Now READY: somatic and peds-sleep. Fixed after the follow-up, need
+  one more round: substance (flags MED fixed: all four parts stale) and tics (acc MED fixed: all four parts stale).
+  Stale after PASS-IF replacements that are not wording-only: panic (acc, display), psych-medical (read, display).
+  Deferred, Jonathan's call: peds-sleep e16 ("acute insomnia under 3 months: sleep hygiene education") was cut from a
+  step 4 hover and has no step 7 home (no card or item keys it). Record: repair/s148d/S148D.md (S4 to S7 sections);
+  adjudications in each brief folder's adj_s148d.md; specs repair/s148d/lanes/; packets packets/s148d and s148d-r2.
+  Next: on Jonathan's budget answer, a last round on the stale parts (lanes.py follow-up spec with each part's latest
+  receipt and adj_s148d.md; packets --since packets/s148d-r2/<brief>/acc/brief_text.txt), then the S7 restart.
+- **Spend:** reviewers 18 agents, 189 calls, 7.49M tokens (of 20, 240, 9M); lead chats 1 to 3: 137.3M of 150M
+  (ledger_lead.csv). The project copy of this handoff is refreshed at each restart.
 - **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into
   /root/.claude/settings.json (chat 4: no permission hold). On a two-core container, legib_audit and shots need
   Playwright default timeouts of 240000 ms (a scratch wrapper; batch file S3). Keep lane specs out of the top level of
