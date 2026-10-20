@@ -2,6 +2,25 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-19 s148d: s148d: six psychiatry briefs patched (panic, somatic, substance, peds-sleep, tics, psych-medical)
+
+```
+Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
+Briefs changed (6):
+  - tics (Tics and Tic Disorders): items edited (q_11071c3e784a5dac9722); versions bumped (q_11071c3e784a5dac9722 v2->v3); prose edited (+3698 chars)
+  - peds-sleep (Sleep Problems): prose edited (+22338 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (+4322 chars)
+  - somatic (Somatic Symptom and Related Disorders): prose edited (+8911 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+5403 chars)
+  - psych-medical (Psychiatric Symptoms from Medical Illness or Medication): prose edited (+2236 chars)
+Other page changes (nav, headers, scripts): +2186 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 177 briefs, 2164 items, 20 scripts, 38 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 177 | bankwraps 177 | mcq 2164 (axCheck 2164, reveal-only 0) | malformed 0 | crit gridded 162/163 | vignette gridded 65/65 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.014%)
+```
+
 ## 2026-10-19 s148c: s148c: psych patch, mood and psychosis (mdd, bipolar-mania, psychosis-duration, sz-psychosocial, voices, suicide-risk, antipsych-effects)
 
 ```
