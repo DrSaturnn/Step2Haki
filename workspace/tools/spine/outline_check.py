@@ -14,7 +14,7 @@ Rules
                 the page; a plain string holds markup only (learner words go in {"t", "ids"})
   C1 cap        words above the Practice header: disease 1,300, drug 1,000, presentation 700 (soft: an overage listed in
                 "cap_overage" {reason, would_go} for Jonathan is a flag, not an error; 2026-10-12)
-  C2 counts     bottom line 1 to 3 lines; Insights exactly two lines
+  C2 counts     bottom line 1 to 3 lines, flagged when its key words are not bold (s148g); Insights exactly two lines
   D1 tempting   a differential table (last head "Decides it") gives "tempting": one reason per row (FLAG on goldens)
   D2 decides    a Decides-it cell does not open with an action verb (give, treat, order...): it names what decides
   D3 decides    no two Decides-it cells in one table say the same thing
@@ -242,6 +242,8 @@ class Check:
         for k, b in enumerate(o['body']):
             if isinstance(b, dict) and b.get('type') == 'bottom' and not 1 <= len(b['lines']) <= 3:
                 self.err('C2', 'body[%d]:bottom' % k, '%d bottom-line lines' % len(b['lines']), 'keep 1 to 3')
+            if isinstance(b, dict) and b.get('type') == 'bottom' and '"b":' not in json.dumps(b['lines']) and '<b>' not in json.dumps(b['lines']):
+                self.flag('C2', 'body[%d]:bottom' % k, 'bottom line has no bold: bold its key words and criteria with {"b": ...} (s148g, Jonathan 2026-10-20)')
             if isinstance(b, dict) and b.get('type') == 'script2':
                 ins = [lines for key, lines in b['rows'] if key == 'Insights']
                 if len(ins) != 1 or len(ins[0]) != 2:

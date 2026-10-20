@@ -102,8 +102,8 @@ Source keys:
 - **Timeline legibility:** charts use the voices-chart style site-wide (per-row legends, no nested frames). [DIG 2026-10-09]
 - **Theme tokens:** every spine surface is a theme token; no raw colors; must pass legib_audit in sculpted, flat and study modes. [SPEC MDD review]
 - **Phone table cards:** every value starts on one left edge. [SPEC MDD review]
-- **Drawers:** a 520 px floating panel on desktop, a bottom sheet on phones; drawers show the whole linked brief minus its practice questions; they never nest. [SPEC r2, MDD review]
-- **Inline explanations:** hover or click cards on desktop; on touch they open inline. [SPEC MDD review]
+- **Drawers:** a panel anchored under its link on desktop, a near-full-screen sheet grown from the link on phones (s148g; was a 520 px right-hand panel and a bottom sheet); drawers show the whole linked brief minus its practice questions; they never nest. [SPEC r2, MDD review]
+- **Inline explanations:** hover or click cards on desktop; on touch a tap opens the same floating card (s148g; was "open inline"). [SPEC MDD review]
 - **Mnemonics:**
   - the capital is centered in the tinted column; [SPEC r2]
   - the typography is legible, so the acronym's letters read down on their own. [MEM]
@@ -172,19 +172,22 @@ Source keys:
 - **A Step2Haki companion Chrome extension:** started 2026-10-09. [MEM]
 - **PSGN latency figure:** an open R1 question. [handoff State]
 
-## Decisions of 2026-10-20 (DECISIONS_DIGEST 2026-10-20; display items take effect when s148g ships)
+## Decisions of 2026-10-20 (DECISIONS_DIGEST 2026-10-20; display items in force since the s148g ship)
 - **Per-choice reasons:** every practice item shows one short reason under each of its 3 choices once answered (the
-  choice's defining features, or the fact that rules it out here). Psych briefs in s148h; every brief merged or
+  choice's defining features, or the fact that rules it out here; data-key-why, data-d1-why, data-d2-why; gate item-why,
+  lint "reasons"). Psych briefs in s148h; every brief merged or
   rewritten from s149 on; no full backfill of the others for now. Items keep 3 choices.
 - **Question card space:** unanswered cards in a set share the height of the tallest unanswered card; the card grows
   when the answer opens. (Replaces the s148f "tallest card with its answer open".)
-- **Bold key words:** bottom lines bold their key words and criteria; verify lints a bottom line with no bold.
+- **Bold key words:** bottom lines bold their key words and criteria; verify lints a bottom line with no bold
+  (tools/spine/lint.py "bold"; outline_check flags it; s148g bolded the 56 that had none, bold only).
 - **Hover cards on touch:** a tap opens the same floating card and animation as desktop hover; no inline drop-down that
   shifts text. (Replaces "on touch they open inline".)
-- **Linked-brief preview and panel (pending pilot approval):** Open brief sits at the top of the preview card; the full
-  brief grows from the link as an anchored panel instead of the right-hand 520 px panel; never nested.
+- **Linked-brief preview and panel (approved in the s148g pilot):** Open brief sits at the top of the preview card; the
+  full brief grows from the link (or its preview) as a panel anchored under the link on desktop, a near-full-screen
+  sheet on phone, replacing the right-hand 520 px panel; Close shrinks it back; never nested.
 - **First step split:** a First step band with several orders shows one row group per order, each with only its own
-  results.
+  results (outline_render band "pair"; repair/s148g/w5split.py for live bands).
 - **Timeline tile:** no white inner row cards; the chart title and closing caption sit inside the tile with standard
   padding.
 - **Recording rule:** every display or content decision is written here and in the runbook S2 checklist, with a check

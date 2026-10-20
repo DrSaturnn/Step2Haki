@@ -138,6 +138,16 @@ print(('ok  ' if hit else 'BAD ') + 'a hub with two system links: expects gate F
 o = gate(with_pres(hub_ids[1:]))[1]
 hit = '[nav-link] %s is a hub but has no link in Presentations' % hub_ids[0] in o
 print(('ok  ' if hit else 'BAD ') + 'a hub missing from Presentations: expects gate FAIL nav-link'); bad += not hit
-total = 1 + 9 + 2 + 3 + 3 + 4
+# s148g per-choice reasons: all three or none
+_it = items(PAGE)[0]
+_tag = PAGE[_it.start:PAGE.index('>', _it.start)]
+_two = _tag + ' data-key-why="a" data-d1-why="b"'
+o = gate(PAGE.replace(_tag, _two, 1))[1]
+hit = '[item-why]' in o
+print(('ok  ' if hit else 'BAD ') + 'an item with two of its three reasons: expects gate FAIL item-why'); bad += not hit
+o = gate(PAGE.replace(_tag, _two + ' data-d2-why="c"', 1))[1]
+hit = '[item-why]' not in o and '(1 with reasons)' in o
+print(('ok  ' if hit else 'BAD ') + 'an item with all three reasons: no item-why, counted'); bad += not hit
+total = 1 + 9 + 2 + 3 + 3 + 4 + 2
 print('%d/%d passed' % (total - bad, total))
 sys.exit(1 if bad else 0)

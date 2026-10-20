@@ -13,6 +13,10 @@ item 15) before any reviewer runs. It catches the categories that drew most s148
   prose       (s148f, Jonathan 2026-10-19) a figure of speech in a next-move, meaning or action cell ("Chase the medical
               cause"), or a caption, label or zone name that is not the term a clinician or textbook uses ("A night by
               stage", "By presentation"); the clinical term or the concrete action replaces it
+  bold        (s148g, Jonathan 2026-10-20) a bottom line with no bold: it bolds its key words and criteria (the deciding
+              counts, durations, ages and cutoffs, the diagnosis named, the action chosen); hover text does not count
+  reasons     (s148g, Jonathan 2026-10-20) a practice item without its three per-choice reasons (data-key-why,
+              data-d1-why, data-d2-why); every brief merged or rewritten from s149 on writes them in its own S2
 
   python3 tools/spine/lint.py <brief dir> [--quiet]     one "lint <check>: ..." line per finding; exit 0 always
   python3 tools/spine/lint.py --page <index.html> [--check prose] [--md OUT]   the same checks over every brief of a page
@@ -274,12 +278,44 @@ def lint_prose(brief_html):
     return sorted(set(out))
 
 
+def lint_bold(brief_html):
+    """The bottom line (.dp labelled Bottom line) carries at least one <b> outside hover cards and hover labels."""
+    i = brief_html.find('<div class="dp"><span class="lbl">Bottom line</span>')
+    if i < 0:
+        return []
+    depth, j = 0, len(brief_html)
+    for m in re.finditer(r'<(/?)div\b[^>]*>', brief_html[i:]):
+        depth += -1 if m.group(1) else 1
+        if depth == 0:
+            j = i + m.end()
+            break
+    seg = brief_html[i:j]
+    seg = re.sub(r'<span class="sp-pop-b"[^>]*>.*?</span>(?=\s*</)', ' ', seg, flags=re.S)
+    seg = re.sub(r'<button[^>]*>.*?</button>', ' ', seg, flags=re.S)
+    if re.search(r'<b[ >]', seg):
+        return []
+    return ['bold: bottom line has no bold; bold its key words and criteria (counts, durations, ages, cutoffs, the diagnosis, the action)']
+
+
+def lint_reasons(brief_html):
+    i = brief_html.find('<ol class="bank')
+    if i < 0:
+        return []
+    items = re.findall(r'<li\b[^>]*\bdata-item-id="([^"]+)"[^>]*>', brief_html[i:])
+    tags = re.findall(r'<li\b[^>]*\bdata-item-id="[^"]+"[^>]*>', brief_html[i:])
+    miss = [iid for iid, t in zip(items, tags) if not all(('data-%s-why="' % k) in t for k in ('key', 'd1', 'd2'))]
+    if not miss:
+        return []
+    return ['reasons: %d of %d practice items lack data-key-why/data-d1-why/data-d2-why (%s)' % (len(miss), len(items), ', '.join(miss[:4]) + (' ...' if len(miss) > 4 else ''))]
+
+
 def lint(folder, facts_dir=None):
     out = []
     bh = os.path.join(folder, 'brief.html')
     if os.path.exists(bh):
         brief_html = open(bh, encoding='utf-8').read()
-        out += lint_next_step(brief_html) + lint_alias(brief_html) + lint_threshold(brief_html) + lint_prose(brief_html)
+        out += lint_next_step(brief_html) + lint_alias(brief_html) + lint_threshold(brief_html) + lint_prose(brief_html) \
+            + lint_bold(brief_html) + lint_reasons(brief_html)
     try:
         cm = json.load(open(os.path.join(folder, 'claim_map.json'), encoding='utf-8'))
     except (OSError, ValueError):
@@ -297,7 +333,8 @@ def page_sweep(argv):
     from pagelib import read_page, briefs
     page = argv[argv.index('--page') + 1]
     check = argv[argv.index('--check') + 1] if '--check' in argv else 'prose'
-    fn = {'prose': lint_prose, 'next-step': lint_next_step, 'threshold': lint_threshold, 'alias': lint_alias}[check]
+    fn = {'prose': lint_prose, 'next-step': lint_next_step, 'threshold': lint_threshold, 'alias': lint_alias,
+          'bold': lint_bold, 'reasons': lint_reasons}[check]
     html = read_page(page)
     rows = []
     for b in briefs(html):

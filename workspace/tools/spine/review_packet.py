@@ -69,8 +69,11 @@ def item_line(m):
     lead = a.get('data-lead-in', '')
     opts = [a.get(k) for k in ('data-d1', 'data-d2') if a.get(k)]
     # s135 S5 packet error: the receipts could not check distractors, so the item line names them (the key is the first bold)
-    return '\n[item %s, type %s] Lead-in: %s%s\n' % (a.get('data-item-id', '?'), a.get('data-type', '?'), lead or '(none)',
-                                                    ('; distractors: ' + ' / '.join(opts)) if opts else '')
+    # s148g per-choice reasons: the reviewers check each reason like any claim
+    why = [a.get(k) for k in ('data-key-why', 'data-d1-why', 'data-d2-why')]
+    rs = ('; reasons: key: %s | d1: %s | d2: %s' % tuple(w or '(none)' for w in why)) if any(why) else ''
+    return '\n[item %s, type %s] Lead-in: %s%s%s\n' % (a.get('data-item-id', '?'), a.get('data-type', '?'), lead or '(none)',
+                                                      ('; distractors: ' + ' / '.join(opts)) if opts else '', rs)
 
 
 def close_masks(x):

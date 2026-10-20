@@ -64,9 +64,10 @@ function check() {
   const ax = w.__axCheck || null;
   if (!ax) F('axcheck', '*', 'window.__axCheck missing: the transform did not finish', 'read the first error below; node --check every script');
   let malformed = 0;
+  const withWhy = mcqs.filter(m => m.querySelectorAll('.opts > button > .qx-rsn').length === 3).length;   // s148g per-choice reasons
   mcqs.forEach(m => {
     const btn = m.querySelectorAll('.opts > button');
-    const labels = Array.from(btn).map(b => { const c = b.cloneNode(true); const k = c.querySelector('.k'); if (k) k.remove(); return c.textContent.replace(/\s+/g, ' ').trim().toLowerCase(); });
+    const labels = Array.from(btn).map(b => { const c = b.cloneNode(true); c.querySelectorAll('.k, .qx-rsn').forEach(n => n.remove()); return c.textContent.replace(/\s+/g, ' ').trim().toLowerCase(); });
     const correct = Array.from(btn).filter(b => b.dataset.correct === '1').length;
     let why = '';
     if (btn.length !== 3) why = btn.length + ' option buttons';
@@ -92,10 +93,10 @@ function check() {
 
   const real = fails.filter(f => !allow.has(f.code + ' ' + f.key));
   const allowed = fails.length - real.length;
-  const summary = `render: ${real.length ? 'FAIL' : 'PASS'} jsdom ${ver} | briefs ${briefs} | bankwraps ${bankwraps} | mcq ${mcqs.length}` +
+  const summary = `render: ${real.length ? 'FAIL' : 'PASS'} jsdom ${ver} | briefs ${briefs} | bankwraps ${bankwraps} | mcq ${mcqs.length} (reasons ${withWhy})` +
     `${ax ? ' (axCheck ' + ax.mcq + ', reveal-only ' + ax.reveal + ')' : ''} | malformed ${malformed} | crit gridded ${crit[0]}/${crit[1]} | vignette gridded ${vig[0]}/${vig[1]}` +
     ` | vignette masks ${vmask.length} | dead anchors ${dead} | js errors ${errors.length}` + (allowed ? ` | allowlisted ${allowed}` : '') + (real.length ? ` | ${real.length} failure(s)` : '');
-  if (asJson) console.log(JSON.stringify({ briefs, bankwraps, mcq: mcqs.length, ax, malformed, crit, vig, vmask: vmask.length, dead, errors, fails: real, allowed }));
+  if (asJson) console.log(JSON.stringify({ briefs, bankwraps, mcq: mcqs.length, reasons: withWhy, ax, malformed, crit, vig, vmask: vmask.length, dead, errors, fails: real, allowed }));
   else { console.log(summary); real.slice(0, 60).forEach(f => console.log(`  [${f.code}] ${f.msg}\n      fix: ${f.fix}`)); if (real.length > 60) console.log(`  ... ${real.length - 60} more`); }
   clearTimeout(killer);
   w.close();

@@ -1,7 +1,523 @@
 {
  "_doc": "s148g bold key words in bottom lines (Jonathan 2026-10-20). Phrases per brief: see repair/s148g/blbold.py. Bold only; the gen script checks that removing the new <b> gives back the old text.",
- "tics": ["2 or more motor tics", "1 or more vocal tics", "at least 1 year", "onset before 18", "Tourette syndrome", "no obsession behind it", "[[a tic]], not a compulsion", "explain and watch", "CBIT", "tetrabenazine", "alpha-2 agonist"],
- "cluster-b": ["A lifelong pattern", "early adulthood", "episodes with a start and an end", "points to a [[mood disorder]]", "Borderline", "abandonment fear", "self-harm", "minutes to hours", "dialectical behavior therapy", "Antisocial", "age 18 or older", "conduct disorder before 15", "under 18"],
- "toxidrome": ["Stabilize first", "fingerstick glucose", "an [[ECG]] (", "naloxone", "pinpoint pupils", "acetaminophen and salicylate levels", "more than one substance", "name the toxidrome", "the [[pupils]], the", "the [[skin]], the", "the [[bowel sounds]] and", "the [[muscle tone]]"],
- "tca-tox": ["an [[ECG]] (", "QRS over 100 ms", "sodium bicarbonate", "benzodiazepine", "No haloperidol", "no physostigmine", "QRS width", "predicts seizures and arrhythmia"]
+ "tics": [
+  "2 or more motor tics",
+  "1 or more vocal tics",
+  "at least 1 year",
+  "onset before 18",
+  "Tourette syndrome",
+  "no obsession behind it",
+  "[[a tic]], not a compulsion",
+  "explain and watch",
+  "CBIT",
+  "tetrabenazine",
+  "alpha-2 agonist"
+ ],
+ "cluster-b": [
+  "A lifelong pattern",
+  "early adulthood",
+  "episodes with a start and an end",
+  "points to a [[mood disorder]]",
+  "Borderline",
+  "abandonment fear",
+  "self-harm",
+  "minutes to hours",
+  "dialectical behavior therapy",
+  "Antisocial",
+  "age 18 or older",
+  "conduct disorder before 15",
+  "under 18"
+ ],
+ "toxidrome": [
+  "Stabilize first",
+  "fingerstick glucose",
+  "an [[ECG]] (",
+  "naloxone",
+  "pinpoint pupils",
+  "acetaminophen and salicylate levels",
+  "more than one substance",
+  "name the toxidrome",
+  "the [[pupils]], the",
+  "the [[skin]], the",
+  "the [[bowel sounds]] and",
+  "the [[muscle tone]]"
+ ],
+ "tca-tox": [
+  "an [[ECG]] (",
+  "QRS over 100 ms",
+  "sodium bicarbonate",
+  "benzodiazepine",
+  "No haloperidol",
+  "no physostigmine",
+  "QRS width",
+  "predicts seizures and arrhythmia"
+ ],
+ "pmr": [
+  "Over 50",
+  "morning stiffness",
+  "normal strength",
+  "high erythrocyte sedimentation rate (ESR)",
+  "polymyalgia rheumatica",
+  "15 to 20 mg",
+  "dramatic response within days",
+  "giant cell arteritis",
+  "high-dose glucocorticoids now"
+ ],
+ "scaphoid": [
+  "Snuffbox tenderness",
+  "scaphoid fracture",
+  "a normal film does not clear it",
+  "a thumb spica now",
+  "repeat films in about 2 weeks",
+  "carpal tunnel syndrome",
+  "Finkelstein test",
+  "de Quervain tenosynovitis"
+ ],
+ "backpain": [
+  "no red flag",
+  "no imaging",
+  "stay active",
+  "A history of cancer, fever or injection drug use",
+  "a bladder or saddle change",
+  "means imaging",
+  "eases on getting up is inflammatory",
+  "points to malignancy"
+ ],
+ "hippos": [
+  "hip fracture",
+  "shortened, abducted and externally rotated",
+  "within 72 hours",
+  "posterior dislocation",
+  "flexed, adducted and internally rotated",
+  "within 6 hours",
+  "MRI"
+ ],
+ "gtps": [
+  "the groin is the joint",
+  "greater trochanteric pain syndrome (GTPS)",
+  "Point tenderness over the greater trochanter",
+  "meralgia paresthetica",
+  "the diagnosis is clinical"
+ ],
+ "oa-pharm": [
+  "morning stiffness under 30 minutes",
+  "osteoarthritis",
+  "Exercise and weight loss first",
+  "a topical nonsteroidal anti-inflammatory drug (NSAID)",
+  "an oral NSAID next",
+  "ketorolac stops at 5 days",
+  "no role for oral glucocorticoids"
+ ],
+ "septic-bursitis": [
+  "Aspirate before you treat",
+  "Passive motion picks the space",
+  "is bursitis",
+  "pain with any passive motion",
+  "Nothing goes in before the sample",
+  "unless the patient is septic"
+ ],
+ "septic-hip": [
+  "surgical emergency",
+  "aspirate before antibiotics",
+  "3 or more",
+  "0 or 1",
+  "transient synovitis; NSAIDs",
+  "effusions in both hips favor transient synovitis",
+  "over 50,000",
+  "surgical drainage plus IV antibiotics"
+ ],
+ "limp": [
+  "Sick first",
+  "aspirating at 3 or more",
+  "CBC (complete blood count) with smear",
+  "toddler",
+  "examine and image the hip"
+ ],
+ "sjia": [
+  "Arthritis for 6 weeks or more",
+  "before age 16",
+  "daily fever spikes for 2 weeks or more",
+  "5 or more joints",
+  "4 or fewer",
+  "an NSAID (nonsteroidal anti-inflammatory drug) first",
+  "weekly methotrexate",
+  "Slit lamp every 3 months",
+  "bone marrow before any steroid"
+ ],
+ "nursemaid": [
+  "1 to 4 years",
+  "arm held extended and pronated",
+  "radial head subluxation",
+  "Reduce without imaging",
+  "Hyperpronation",
+  "Uses the arm within minutes",
+  "suspect abuse",
+  "skeletal survey under 2 years"
+ ],
+ "scfe": [
+  "Age 10 to 16",
+  "films of both hips",
+  "cross-table lateral",
+  "off the leg now",
+  "urgent in situ screw fixation",
+  "never force it back",
+  "Under 8, underweight or short"
+ ],
+ "myositis-ossificans": [
+  "myositis ossificans",
+  "firm, mobile intramuscular mass",
+  "Pain on passive stretch",
+  "Strength and sensation intact",
+  "about 4 to 8 weeks",
+  "Never biopsy an early lesion",
+  "range of motion and an NSAID"
+ ],
+ "growing-pains": [
+  "examine before you test",
+  "growing pains",
+  "no labs or films",
+  "benign acute childhood myositis",
+  "reflexes are preserved",
+  "absent reflexes",
+  "CBC (complete blood count) with smear for leukemia",
+  "One side, a focal tender spot or a mass",
+  "preserved reflexes do"
+ ],
+ "bone-tumors": [
+  "osteochondroma",
+  "Observe; no biopsy",
+  "osteoid osteoma",
+  "unicameral bone cyst",
+  "Sunburst periosteum",
+  "Codman triangle",
+  "Onion skin",
+  "fever: [[Ewing sarcoma]]",
+  "points to malignancy",
+  "MRI (magnetic resonance imaging) before biopsy"
+ ],
+ "scheuermann": [
+  "Corrects fully",
+  "postural kyphosis",
+  "Stays rigid",
+  "standing lateral film",
+  "5 degrees or more in 3 or more consecutive vertebrae",
+  "Scheuermann disease",
+  "brace a moderate curve",
+  "fuse a severe curve"
+ ],
+ "bs-puncture-osteomyelitis": [
+  "First 1 to 4 days",
+  "Staphylococcus aureus or streptococci",
+  "Nail through a shoe",
+  "a week or more",
+  "Pseudomonas aeruginosa",
+  "fresh water",
+  "Aeromonas hydrophila",
+  "Salt water",
+  "Vibrio vulnificus",
+  "A normal film does not exclude bone infection"
+ ],
+ "bs-torticollis": [
+  "congenital muscular torticollis",
+  "stretching, repositioning, tummy time and physical therapy",
+  "parallelogram",
+  "positional plagiocephaly",
+  "Reposition; no imaging",
+  "trapezoid",
+  "lambdoid craniosynostosis",
+  "examine the hips and feet",
+  "posterior fossa tumor"
+ ],
+ "shoulder-rom": [
+  "active lost with passive kept is a tendon",
+  "both lost is the joint",
+  "referred pain",
+  "Cuff tendinopathy is clinical",
+  "rest and an NSAID",
+  "MRI for weakness or failed therapy",
+  "prolonged immobilization",
+  "adhesive capsulitis"
+ ],
+ "cough": [
+  "Cough over 8 weeks",
+  "a chest x-ray first",
+  "ACE (angiotensin-converting enzyme) inhibitor",
+  "upper airway cough syndrome, asthma or reflux",
+  "excludes postnasal drip"
+ ],
+ "pneumoconiosis": [
+  "The job names the dust",
+  "asbestos at the bases",
+  "pleural plaques",
+  "silica, coal and beryllium at the apices",
+  "bronchogenic carcinoma",
+  "tuberculosis risk",
+  "granulomas like sarcoidosis"
+ ],
+ "rhinitis": [
+  "an intranasal corticosteroid",
+  "about 2 weeks before pollen season",
+  "Immunotherapy only after drug therapy fails",
+  "past 3 days",
+  "rebound congestion"
+ ],
+ "sinopulm-structural": [
+  "up to 12 self-limited colds a year is normal",
+  "situs inversus",
+  "primary ciliary dyskinesia (PCD)",
+  "cystic fibrosis, sweat chloride",
+  "eosinophils and IgE",
+  "allergic bronchopulmonary aspergillosis (ABPA)"
+ ],
+ "hypoxemia-mech": [
+  "an arterial blood gas first",
+  "the hemoglobin is the problem",
+  "the A-a (alveolar-arterial) gradient",
+  "normal means hypoventilation or low inspired oxygen",
+  "V/Q mismatch; stays low",
+  "shunt: recruit the alveoli"
+ ],
+ "scd-dyspnea": [
+  "normal complete blood count (CBC)",
+  "trait; no HbA",
+  "sickle-beta-plus",
+  "cultures and ceftriaxone now",
+  "acute chest syndrome: antibiotics, oxygen, transfusion",
+  "spirometry for asthma",
+  "echocardiogram or chest CT"
+ ],
+ "airway": [
+  "Stridor is the upper airway, wheeze the lower",
+  "inspiratory",
+  "expiratory",
+  "biphasic",
+  "epiglottitis: secure the airway in the operating room",
+  "foreign body, rigid bronchoscopy",
+  "croup, dexamethasone",
+  "racemic epinephrine"
+ ],
+ "uri": [
+  "pus alone is not bacterial",
+  "nasal foreign body",
+  "test before treating",
+  "penicillin prevents rheumatic fever",
+  "pneumococcus, amoxicillin",
+  "a macrolide"
+ ],
+ "bpd": [
+  "Time it first",
+  "transient tachypnea",
+  "respiratory distress syndrome (RDS), surfactant",
+  "apnea from day 2 or 3",
+  "caffeine",
+  "oxygen still needed at 28 days",
+  "bronchopulmonary dysplasia (BPD)"
+ ],
+ "pyelo": [
+  "clinical diagnosis",
+  "needs no imaging",
+  "oral fluoroquinolone",
+  "admit for IV (intravenous) ceftriaxone",
+  "No better after 48 to 72 hours",
+  "CT for an abscess or obstruction",
+  "ultrasound"
+ ],
+ "bph": [
+  "hesitancy, weak stream and nocturia",
+  "catheter first",
+  "tamsulosin",
+  "5-alpha-reductase inhibitor",
+  "over 10",
+  "biopsy"
+ ],
+ "nephropathy": [
+  "morbidity",
+  "mortality",
+  "smoking cessation",
+  "spot urine albumin-to-creatinine ratio (UACR)",
+  "at diagnosis in type 2, 5 years after it in type 1",
+  "neuropathic",
+  "ankle-brachial index (ABI)"
+ ],
+ "scrotum": [
+  "no cremasteric reflex is torsion",
+  "straight to surgery",
+  "epididymitis, diagnosed clinically",
+  "treat without imaging",
+  "transillumination, position and Valsalva",
+  "a firm mass on the testis is a tumor",
+  "inguinal orchiectomy"
+ ],
+ "hypercalcemia": [
+  "PTH (parathyroid hormone) first",
+  "suppressed",
+  "primary hyperparathyroidism, surgery",
+  "under 1%",
+  "FHH, no surgery",
+  "isotonic saline first",
+  "bisphosphonate"
+ ],
+ "peds-uti-recurrent": [
+  "Afebrile recurrent cystitis",
+  "long-term laxative",
+  "reflux",
+  "under 2 years",
+  "renal and bladder US",
+  "voiding cystourethrogram (VCUG) at any age",
+  "under 5 years",
+  "surgery for breakthrough"
+ ],
+ "enuresis": [
+  "5 or older",
+  "an examination and a urinalysis first",
+  "treat constipation and the daytime symptoms first",
+  "an alarm",
+  "desmopressin",
+  "from age 7"
+ ],
+ "polyuria": [
+  "Urine osmolality first",
+  "under 300",
+  "600 or more",
+  "AVP (arginine vasopressin) disorder",
+  "primary polydipsia",
+  "only a normal sodium needs water deprivation",
+  "AVP deficiency",
+  "AVP resistance"
+ ],
+ "peds-aki": [
+  "before blaming the drug",
+  "BUN:creatinine over 20:1",
+  "specific gravity over 1.020",
+  "a bland sediment are prerenal",
+  "isotonic fluids and stop the NSAID",
+  "hemolytic uremic syndrome (HUS): supportive care, no antibiotics"
+ ],
+ "nephrotic-child": [
+  "first-morning protein-to-creatinine ratio",
+  "0.2 or less",
+  "reassure",
+  "Child age 1 to under 12",
+  "presumed minimal change",
+  "prednisone, no biopsy",
+  "Biopsy for steroid failure or atypical features",
+  "hepatitis B first"
+ ],
+ "bs-puv": [
+  "Potter sequence",
+  "palpable suprapubic bladder",
+  "posterior urethral valves",
+  "Renal and bladder US first",
+  "voiding cystourethrogram (VCUG)",
+  "temporary catheter",
+  "cystoscopy confirms the valves and ablates them"
+ ],
+ "bs-incontinence": [
+  "postvoid residual (PVR)",
+  "under 50 mL",
+  "a high residual means [[overflow]]",
+  "800 mL",
+  "Oxybutynin",
+  "worsens overflow"
+ ],
+ "bs-abdominal-mass": [
+  "which organ",
+  "how old the child is",
+  "2 to 5",
+  "Wilms tumor",
+  "usually under 2",
+  "neuroblastoma",
+  "Ultrasound first",
+  "excision"
+ ],
+ "bs-distal-rta": [
+  "potassium and the acid-base state first",
+  "then by [[blood pressure]]",
+  "normal-gap acidosis",
+  "diarrhea or RTA",
+  "urine pH above 5.5",
+  "distal (type 1) RTA",
+  "urine chloride and blood pressure decide"
+ ],
+ "aq-puffy-eyes": [
+  "the eye",
+  "the whole child",
+  "the airway and the orbit",
+  "allergy or infection",
+  "nephrotic syndrome",
+  "glomerulonephritis"
+ ],
+ "homocystinuria": [
+  "what Marfan does not do",
+  "Intellectual disability, a thrombotic stroke or clot",
+  "lens dislocated down: homocystinuria",
+  "Plasma homocysteine and methionine are both high",
+  "lens up and out, aortic root dilation: Marfan syndrome",
+  "Ehlers-Danlos syndrome",
+  "pyridoxine (B6) first",
+  "Never nitrous oxide"
+ ],
+ "peds-sleep": [
+  "early, unresponsive, no memory",
+  "arousal: [[sleep terror]] ",
+  "sleepwalking",
+  "late, alert, recalls a dream",
+  "nightmare",
+  "home test",
+  "nap test",
+  "iron studies",
+  "behavioral treatment first",
+  "delayed sleep phase",
+  "morning bright light"
+ ],
+ "voices": [
+  "a drug or a medical illness",
+  "delirium",
+  "does the psychosis [[persist]]",
+  "only inside mood episodes",
+  "a personality disorder"
+ ],
+ "sz-psychosocial": [
+  "Danger to himself or others",
+  "hospitalize",
+  "Antipsychotic continues",
+  "psychosocial treatment",
+  "family therapy first"
+ ],
+ "mdd": [
+  "Ever manic or hypomanic?",
+  "bipolar",
+  "4 to 6 weeks",
+  "optimize the dose first",
+  "about 6 more months"
+ ],
+ "psych-medical": [
+  "Rule out a drug or a medical illness",
+  "high-dose glucocorticoids",
+  "medication-induced psychotic disorder",
+  "Fluctuating attention",
+  "delirium"
+ ],
+ "disruptive-behavior": [
+  "what the child does",
+  "the mood between episodes",
+  "oppositional defiant",
+  "conduct",
+  "intermittent explosive",
+  "disruptive mood dysregulation"
+ ],
+ "suicide-risk": [
+  "Ask directly",
+  "Plan with intent",
+  "hospitalize",
+  "Thoughts without plan or intent",
+  "safety plan"
+ ],
+ "ipv": [
+  "Injuries that do not fit the story",
+  "ask her alone whether she feels safe",
+  "an emergency safety plan",
+  "report on suspicion",
+  "not the first step"
+ ]
 }

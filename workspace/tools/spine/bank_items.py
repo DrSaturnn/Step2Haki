@@ -16,3 +16,4 @@ for m in re.finditer(r'<li([^>]*data-item-id[^>]*)>(.*?)</li>', t[i:], re.S):
     body=pl(m.group(2)); km=re.search(r'&rarr;\s*<b>(.*?)</b>',m.group(2)); key=pl(km.group(1)) if km else '?'
     if len(sys.argv)>3: print('-',g('data-item-id')[:14],'KEY:',key[:80]); continue
     print('-',g('data-item-id')[:14],g('data-type'),'|',g('data-d1')[:28],'/',g('data-d2')[:28],'|',g('data-lead-in')[:60],'|',body[:int(sys.argv[2]) if len(sys.argv)>2 else 160])
+    if g('data-key-why'): print('    why:',g('data-key-why'),'|',g('data-d1-why'),'|',g('data-d2-why'))   # s148g per-choice reasons

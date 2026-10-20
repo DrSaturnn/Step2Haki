@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-20, by the s148g lead chat 1 (s148g pilot v1 published; awaiting approval).
+Last updated: 2026-10-20, by the s148g lead chat 1 (s148g presented; awaiting "ship").
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -13,10 +13,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ## State (rewrite after every step)
 
 - **Batch s148g open** (site layer; launched 2026-10-20 17:32; WAVE.json s148g: 0 agents, lead 120M). Record:
-  repair/s148g/S148G.md. Branch wip/s148g. Step: pilot v1 published as private artifact DQYxrkuAG219PmG1tSv5Hh
-  (repair/pilots/s148g/build_pilot.py); waiting on Jonathan's approval or changes. Next after approval: bold lists for
-  the other 52 briefs (repair/s148g/data/bold_bl.json), tool changes (render.js, gate, vendor_scan, verify lint,
-  review_packet, newspine), checks, present, ship.
+  repair/s148g/S148G.md. Branch wip/s148g. Step S8: pilot approved ("approve", 18:24); batch generated (56 bottom
+  lines bold, lithium First step split, 7 script patches + layer), all checks pass, presented with approval.py
+  (15 screenshots, page 24f26a077e7d) in chat 1's container. Waiting for "ship" (must go to that chat). After ship: S9
+  per the handoff, commit spinelib.py (local-only) to the private repo, STANDING_DIRECTIONS 2026-10-20 already edited
+  on the branch. Lead 76.5M of 120M.
   Earlier: s148e shipped 2026-10-20 16:26 (main c341858).
 - **Spend (s148e, closed):** reviewers 15 agents, 156 calls, 6.45M of 9M; lead about 170M of 180M (3 rows,
   ledger_lead.csv).

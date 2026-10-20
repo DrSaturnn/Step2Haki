@@ -30,7 +30,9 @@ Blocks (body items): a rich value (rendered as is), or {"type": ...}:
   h {n, title, id} | stepper | bottom {lines} | script2 {rows [[key, [lines]]]} | systems {title, small, rows [[key, finding, why]]}
   rows {rows [{src, finding, chips, commit [cond, choice], extra}]} | table {caption, heads, rows, mask_cols, cls}
   workup {steps [[when, [[name, [[finding, meaning]], extra]]]], end} | ladder {rungs [[n, tag, when, body]]}
-  workup5a {zones [[label, [[clue, [order, ...], [[finding, meaning or null], ...]], ...]] or ["Skip", text]], notes}
+  workup5a {zones [[label, [[clue, [order, ...], [[finding, meaning or null], ...], pair?], ...]] or ["Skip", text]], notes}
+      pair (optional, s148g First step split): the order number (1-based) of each finding, in order; the band then
+      renders one row group per order, each spanning only its own results (a First step band with several orders pairs them)
       the diagnostic workup template, layout 5a (repair/efficiency/WORKUP_5A_SPEC.md; zones First step, By
       presentation, Next step, Diagnostic test, Skip); styles and script are the site-wide s130 ones
   pause {text} | timeline {cells [[bold, rest]]}

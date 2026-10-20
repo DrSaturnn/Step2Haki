@@ -25,7 +25,8 @@ K = 10
 
 def words(txt):
     t = re.sub(r'<script\b.*?</script>|<style\b.*?</style>', ' ', txt, flags=re.S | re.I)
-    t = re.sub(r'<[^>]+>', ' ', t)
+    # the per-choice reasons (s148g) live in attributes on the bank items: their text is scanned like any visible text
+    t = re.sub(r'<[^>]+>', lambda m: ' ' + ' '.join(re.findall(r'data-(?:key|d1|d2)-why="([^"]*)"', m.group(0))) + ' ', t)
     t = H.unescape(t).lower()
     return re.findall(r'[a-z0-9]+', t)
 

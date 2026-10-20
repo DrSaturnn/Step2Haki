@@ -112,6 +112,17 @@ expect('prose: header "The tell" flagged', len(L.lint_prose('<table><thead><tr><
 expect('prose: practice bank not swept', L.lint_prose('<h5 class="tsec authored-hdr">Practice</h5>' + (w5 % ('Next step', 'Chase it'))) == [])
 
 # ---- whole folder: brief.html plus claim map and facts
+# s148g bold and reasons (Jonathan 2026-10-20)
+BL = '<div class="brief sp" id="x"><div class="dp"><span class="lbl">Bottom line</span><ul class="bl"><li>%s</li></ul></div><div class="sp-script">%s</div>'
+expect('bold: tics bottom line with no bold flagged', len(L.lint_bold(BL % ('2 or more motor tics, at least 1 year', '<b>Script bold</b>'))) == 1)
+expect('bold: bold in a hover card does not count', len(L.lint_bold(BL % ('Tics <button type="button" class="sp-pop">Why</button><span class="sp-pop-b" hidden><b>x</b></span>', ''))) == 1)
+expect('bold: bolded key words pass', L.lint_bold(BL % ('<b>2 or more motor tics</b>, <b>at least 1 year</b>', '')) == [])
+expect('bold: no bottom line, no finding', L.lint_bold('<div class="brief"><p>x</p></div>') == [])
+BK = '<ol class="bank"><li data-type="dx" data-item-id="q_1"%s>a &rarr; <b>b</b></li></ol>'
+expect('reasons: item without reasons flagged', len(L.lint_reasons(BK % '')) == 1)
+expect('reasons: two of three still flagged', len(L.lint_reasons(BK % ' data-key-why="a" data-d1-why="b"')) == 1)
+expect('reasons: all three pass', L.lint_reasons(BK % ' data-key-why="a" data-d1-why="b" data-d2-why="c"') == [])
+
 d = tempfile.mkdtemp()
 try:
     open(os.path.join(d, 'brief.html'), 'w').write(clue_table([('clue', 'dx', 'Not valves')]))

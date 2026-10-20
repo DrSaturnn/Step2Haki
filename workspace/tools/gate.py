@@ -55,6 +55,7 @@ CATALOG = {
     'item-outside-bank': ('every identified item sits inside an ol.bank of a .brief', 'move it into the owning brief\'s ol.bank'),
     'item-chain': ('every item has a direct-child arrow, non-empty stem and keyed segment 2',
                    'write "stem → answer [→ companion]" with the arrows outside nested tags'),
+    'item-why': ('an item with per-choice reasons carries all three (data-key-why, data-d1-why, data-d2-why), each non-empty', 'add the missing reason or remove all three'),
     'item-options': ('key, data-d1, data-d2 (or data-label-*) are non-empty and distinct', 'author two distinct same-task distractors'),
     'item-leadin': ('data-lead-in, when present, is non-empty', 'remove the empty attribute or write the exact lead-in'),
     'table-title': ('every brief table has exactly one title: <caption> first child XOR <h5> immediately above',
@@ -167,7 +168,7 @@ def check_page(page, g, page_path):
     body = page[:body_end if body_end >= 0 else len(page)]
     bl = briefs(page)
     it = items(page)
-    stats = {'briefs': len(bl), 'items': len(it)}
+    stats = {'briefs': len(bl), 'items': len(it), 'items_with_reasons': 0}
 
     # ---- mode CSS (s92): flat/study rules hang on per-region carriers, never on a body class over descendants
     mcss = page[page.find('<style>'):page.find('</style>')] if '<style>' in page else ''
@@ -176,7 +177,7 @@ def check_page(page, g, page_path):
 
     # ---- no em dashes in visible HTML (scripts, styles and comments excluded)
     vis = re.sub(r'<!--.*?-->|<script\b.*?</script>|<style\b.*?</style>', ' ', page, flags=re.S)
-    vis = re.sub(r'<[^>]*>', lambda m: ' '.join(re.findall(r'(?:data-d1|data-d2|data-lead-in|title|aria-label)="[^"]*"', m.group(0))), vis)
+    vis = re.sub(r'<[^>]*>', lambda m: ' '.join(re.findall(r'(?:data-d1|data-d2|data-lead-in|data-key-why|data-d1-why|data-d2-why|title|aria-label)="[^"]*"', m.group(0))), vis)
     for em in list(re.finditer(r'\u2014|&mdash;|&#8212;', vis))[:20]:
         g.fail('no-emdash', re.sub(r'\s+', ' ', vis[max(0, em.start() - 30):em.end() + 10]), 'em dash in visible text')
     # ---- briefs
@@ -304,6 +305,13 @@ def check_page(page, g, page_path):
                 g.fail('item-options', iid, '%s (%s): key/d1/d2 empty or not distinct: %r / %r / %r' % (iid, i.brief_id, k, d1, d2))
         if 'data-lead-in' in a and not norm(a['data-lead-in']):
             g.fail('item-leadin', iid, '%s has an empty data-lead-in' % iid)
+        # s148g per-choice reasons (Jonathan 2026-10-20): all three or none, each one non-empty line
+        why = [a.get(k) for k in ('data-key-why', 'data-d1-why', 'data-d2-why')]
+        if any(w is not None for w in why):
+            if not all(w is not None and norm(w) for w in why):
+                g.fail('item-why', iid, '%s (%s): reasons need all three of data-key-why, data-d1-why, data-d2-why, each non-empty' % (iid, i.brief_id))
+            else:
+                stats['items_with_reasons'] = stats.get('items_with_reasons', 0) + 1
     for m in re.finditer(r'<li\b[^>]*\bdata-type="[^"]*"[^>]*>', body):
         if 'data-item-id=' not in m.group(0):
             g.fail('item-typed-no-id', 'offset%d' % m.start(), 'typed <li> without data-item-id at offset %d: %s' % (m.start(), m.group(0)[:90]))
@@ -572,8 +580,8 @@ def main(argv):
     if attr_ref:
         n_attr = check_attr_only(page, load_ref(attr_ref), g)
     stale = sorted(set(g.allow) - g.used)
-    summary = 'gate: %s %d briefs, %d items, %d scripts, %d checks, base %s%s | allowlisted %d%s | %d failure(s)' % (
-        'FAIL' if g.fails else 'PASS', st['briefs'], st['items'], st['scripts'], len(CATALOG),
+    summary = 'gate: %s %d briefs, %d items (%d with reasons), %d scripts, %d checks, base %s%s | allowlisted %d%s | %d failure(s)' % (
+        'FAIL' if g.fails else 'PASS', st['briefs'], st['items'], st.get('items_with_reasons', 0), st['scripts'], len(CATALOG),
         base if ref_html is not None else 'none',
         (' | attr-only vs %s: %d tag(s) changed' % (attr_ref, n_attr)) if attr_ref else '',
         len(g.allowed), (' (%d stale allowlist line(s): %s)' % (len(stale), '; '.join(stale)[:200])) if stale else '',

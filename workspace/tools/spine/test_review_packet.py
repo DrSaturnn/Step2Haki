@@ -16,6 +16,8 @@ t = RP.text_of('<ol class="bank"><li data-type="next" data-d1="Fluoxetine" data-
 expect('distractors named on the item line', 'distractors: Fluoxetine / Parent management training' in t)
 t = RP.text_of('<ol class="bank"><li data-type="dx" data-item-id="q_2">stem</li></ol>')
 expect('no distractor clause without d1/d2', '[item q_2, type dx] Lead-in: (none)' in t and 'distractors' not in t)
+t = RP.text_of('<ol class="bank"><li data-type="next" data-d1="Fluoxetine" data-d2="PMT" data-item-id="q_3" data-key-why="Alpha-2 agonist for tics" data-d1-why="Treats OCD, not tics" data-d2-why="For oppositional behavior">stem &rarr; <b>Guanfacine</b></li></ol>')
+expect('s148g reasons named on the item line', 'reasons: key: Alpha-2 agonist for tics | d1: Treats OCD, not tics | d2: For oppositional behavior' in t)
 d = RP.part_rules('display')
 expect('display rules carry progressive recall and the 5a spec', 'progressive recall' in d and 'Diagnostic workup template: layout 5a' in d)
 expect('display rules carry the glance and s137 display-layer decisions', 'Numbered workup zones adopted' in d and 'Test | Result | Means' in d)
