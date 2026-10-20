@@ -1,0 +1,122 @@
+{
+ "batch": "s148e",
+ "plan_step": "s148e",
+ "round": 1,
+ "context": "batch s148e builds three new psychiatry spine briefs (tca-tox, toxidrome, cluster-b) in full, and changes a few lines in two shipped briefs (substance, voices) that now point to them; this is review round 1",
+ "out": "repair/efficiency/lanes/s148e/r1",
+ "packets": "repair/migration/spine/packets/s148e",
+ "sheets": "local/shots/s148e-r1/sheets",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "tca-tox",
+    "toxidrome",
+    "substance"
+   ],
+   "budget": 23
+  },
+  {
+   "part": "acc",
+   "group": "B",
+   "briefs": [
+    "cluster-b",
+    "voices"
+   ],
+   "budget": 15
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "tca-tox",
+    "toxidrome",
+    "cluster-b",
+    "substance",
+    "voices"
+   ],
+   "budget": 25
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "tca-tox",
+    "toxidrome",
+    "cluster-b",
+    "substance"
+   ],
+   "budget": 23
+  },
+  {
+   "part": "display",
+   "group": "A",
+   "briefs": [
+    "tca-tox",
+    "toxidrome",
+    "substance"
+   ],
+   "budget": 23
+  },
+  {
+   "part": "display",
+   "group": "B",
+   "briefs": [
+    "cluster-b",
+    "voices"
+   ],
+   "budget": 15
+  }
+ ],
+ "types": {
+  "tca-tox": "new drug brief (entry type drug), psych lens; steps 1, 2, 3, 4, 7 and 8; review in full",
+  "toxidrome": "new presentation hub (data-entry hub), psych lens; steps 1 to 4, steps 5 to 8 greyed; golden voices; review in full",
+  "cluster-b": "new disease brief, psych lens; steps 1 to 5, 7 and 8; review in full",
+  "substance": "shipped brief, CHANGED LINES ONLY: judge only the lines in changes.md (in its folder) in their context",
+  "voices": "shipped hub, CHANGED LINE ONLY: the Borderline personality disorder differential row now opens a drawer to cluster-b (a link change; the text is unchanged, so changes.md is empty); judge only that row and its drawer target"
+ },
+ "steps": {
+  "substance": "3 and 7",
+  "voices": "3"
+ },
+ "notes": {
+  "acc": [
+   "Medication toxicities are kept in BOTH the hub (toxidrome) and the drug brief (tca-tox), and illicit drugs stay in substance (Jonathan's launch decision 2026-10-20): repetition between them is intended.",
+   "A hub may carry treatment no other live brief owns inside step 4 Workup, after the workup tree; steps 5 to 8 stay greyed (Jonathan 2026-10-18).",
+   "Antisocial personality disorder treatment: UWorld (psychotherapy not shown effective; treat comorbid conditions) is taught over AnKing 1484686664957; the conflict is recorded in cards_disposition.json (board order: UWorld first).",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length)."
+  ],
+  "read": [
+   "Repetition between toxidrome, tca-tox and substance is intended (launch decision 2026-10-20).",
+   "The 5a workup zone names (First step, Targeted tests, Next step, Diagnostic test, Skip), the caption \"Diagnostic workup\" and the pause point's \"The bait:\" label are site conventions.",
+   "Not to report: brief length or word count (2026-10-19 layers rule)."
+  ],
+  "flags": [
+   "Word counts are not judged (2026-10-19 layers rule).",
+   "Borrowed lines in toxidrome cite sibling claim-map keys (ss:, ap:, li:) from ssri-effects, antipsych-effects and lithium-effects; their facts are in facts.json under those keys."
+  ],
+  "display": [
+   "Drawer and Pairs with styling, tile tints and the question-tile format are the s148f site layer (shipped 2026-10-20), not this batch.",
+   "A hub's greyed steps 5 to 8 (\"Not used\") are the hub golden's pattern."
+  ]
+ },
+ "extra_judge": {
+  "acc": [
+   "Layers rule (Jonathan 2026-10-19): a fact a board item keys (the answer, or the clue that rules out a distractor) must stay visible, not only in a hover. Report a keyed fact found only in a hover.",
+   "For substance (changed lines): the two removed step 7 rows' content must now be taught in tca-tox (Grep the tca-tox brief_text.txt in this lane), and the remaining pointer row and hover must be accurate; check the substance card dispositions that the change remapped. For voices: confirm the Borderline row's drawer target (cluster-b) teaches what the row claims (Grep the cluster-b brief_text.txt in this lane). Neither brief's unchanged lines are in scope."
+  ],
+  "read": [
+   "Prose rules (Jonathan 2026-10-19): captions, labels, zone names and cells use the term a clinician or textbook uses, never a euphemism or figurative phrasing; a list of tests is broken up, one test or one group per line.",
+   "Diagnoses with other names show them at first mention and in their differential row (ALIASES.json); abbreviations follow ABBREV.json.",
+   "substance and voices: changed lines only (substance: changes.md; voices: the Borderline row's drawer, drawer_targets.txt)."
+  ],
+  "flags": [
+   "substance: changed lines only (changes.md in its folder): judge that each changed line still has a source in line_sources.txt that supports it."
+  ],
+  "display": [
+   "Layers rule (Jonathan 2026-10-19): the visible layer must scan on the phone: short cells, nothing buried, no text squeezed into a narrow column. Judge the new timelines (toxidrome onset timeline, cluster-b age-window timeline) and each 5a workup for legibility at phone width.",
+   "substance (steps 3 and 7 shown) and voices (step 3 shown): judge only the changed rows (substance: the Anticholinergic toxicity differential row and the step 7 pointer row; voices: the Borderline personality disorder row)."
+  ]
+ }
+}
