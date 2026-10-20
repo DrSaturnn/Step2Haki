@@ -1,0 +1,170 @@
+{
+ "batch": "s148d",
+ "plan_step": "s148d",
+ "round": 3,
+ "context": "batch s148d, a patch: six shipped psychiatry spine briefs (panic, somatic, substance, peds-sleep, tics, psych-medical) take their 2026-10-18 intake proposals (rulings, edits, verified comb additions) plus Jonathan's 2026-10-19 layers and prose rules and timelines where they help; this is the follow-up round on the lead's fixes after round 1",
+ "out": "repair/efficiency/lanes/s148d/r2",
+ "packets": "repair/migration/spine/packets/s148d-r2",
+ "sheets": "local/shots/s148d-r2/sheets",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "panic",
+    "somatic",
+    "psych-medical"
+   ]
+  },
+  {
+   "part": "acc",
+   "group": "B",
+   "briefs": [
+    "substance",
+    "peds-sleep",
+    "tics"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "panic",
+    "somatic",
+    "psych-medical"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "B",
+   "briefs": [
+    "substance",
+    "peds-sleep",
+    "tics"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "panic",
+    "somatic",
+    "psych-medical"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "B",
+   "briefs": [
+    "substance",
+    "peds-sleep",
+    "tics"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "A",
+   "briefs": [
+    "panic",
+    "somatic"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "B",
+   "briefs": [
+    "substance",
+    "peds-sleep"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "C",
+   "briefs": [
+    "tics",
+    "psych-medical"
+   ]
+  }
+ ],
+ "steps": {
+  "panic": "1, 3, 4, 7 and 8",
+  "somatic": "1, 3, 4 and 7",
+  "substance": "3, 4, 5, 7 and 8",
+  "peds-sleep": "1, 3, 4, 7 and 8",
+  "tics": "1, 3, 5, 7 and Practice (one bank item)",
+  "psych-medical": "4"
+ },
+ "prior": {
+  "acc": {
+   "panic": "repair/migration/spine/reviews/panic_acc_r2.md",
+   "somatic": "repair/migration/spine/reviews/somatic_acc_r4.md",
+   "psych-medical": "repair/migration/spine/reviews/psych-medical_acc_r3.md",
+   "substance": "repair/migration/spine/reviews/substance_acc_r4.md",
+   "peds-sleep": "repair/migration/spine/reviews/peds-sleep_acc_r4.md",
+   "tics": "repair/migration/spine/reviews/tics_acc_r2.md"
+  },
+  "read": {
+   "panic": "repair/migration/spine/reviews/panic_read_r2.md",
+   "somatic": "repair/migration/spine/reviews/somatic_read_r4.md",
+   "psych-medical": "repair/migration/spine/reviews/psych-medical_read_r3.md",
+   "substance": "repair/migration/spine/reviews/substance_read_r4.md",
+   "peds-sleep": "repair/migration/spine/reviews/peds-sleep_read_r3.md",
+   "tics": "repair/migration/spine/reviews/tics_read_r2.md"
+  },
+  "display": {
+   "panic": "repair/migration/spine/reviews/panic_display_r3.md",
+   "somatic": "repair/migration/spine/reviews/somatic_display_r5.md",
+   "psych-medical": "repair/migration/spine/reviews/psych-medical_display_r3.md",
+   "substance": "repair/migration/spine/reviews/substance_display_r5.md",
+   "peds-sleep": "repair/migration/spine/reviews/peds-sleep_display_r4.md",
+   "tics": "repair/migration/spine/reviews/tics_display_r3.md"
+  },
+  "flags": {
+   "panic": "repair/migration/spine/reviews/panic_flags_r2.md",
+   "somatic": "repair/migration/spine/reviews/somatic_flags_r4.md",
+   "psych-medical": "repair/migration/spine/reviews/psych-medical_flags_r3.md",
+   "substance": "repair/migration/spine/reviews/substance_flags_r4.md",
+   "peds-sleep": "repair/migration/spine/reviews/peds-sleep_flags_r2.md",
+   "tics": "repair/migration/spine/reviews/tics_flags_r2.md"
+  }
+ },
+ "notes": {
+  "acc": [
+   "Lines carrying Jonathan's 2026-10-18 conflict rulings (each brief's intake proposal) are his calls: report one only if the brief misstates the ruling, not to reargue it.",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length; a fact a board item keys stays visible, supporting detail may sit in a hover).",
+   "tics item q_11071c3e784a5dac9722 now follows Jonathan's K1 ruling (alpha-2 agonist first; the stem says guanfacine was tried)."
+  ],
+  "read": [
+   "Not to report (site-wide conventions, scheduled for the s148f site batch): the pause point's \"The bait:\" label, the caption \"Look-alikes, most tempting first\", and the 5a zone name \"By presentation\".",
+   "Not to report: brief length or word count (2026-10-19 layers rule).",
+   "tics bank items show \"Lead-in: (none)\" on the live page too; unchanged in this batch, not a finding.",
+   "\"In practice\" hover labels stay (runbook section 3 convention for a source that differs from the board answer); judge only their bodies."
+  ],
+  "flags": [
+   "Word counts are not judged (2026-10-19 layers rule)."
+  ],
+  "display": [
+   "Not to report (scheduled for the s148f site batch): tile tint and shading choices, the large linked-brief drawer tiles, and the tinted theme.",
+   "peds-sleep's EEG lines in the Sleep stages legend are schematic by design (the tile says so)."
+  ]
+ },
+ "extra_judge": {
+  "read": [
+   "Prose rules (Jonathan 2026-10-19): captions, labels, zone names and cells use the term a clinician or textbook uses, never a euphemism or figurative phrasing; a list of tests is broken up, one test or one group per line. Judge every changed caption and cell against this."
+  ],
+  "display": [
+   "Layers rule (Jonathan 2026-10-19): the visible layer must scan on the phone: short cells, nothing buried, no text squeezed into a narrow column. Judge the new timelines (panic Antidepressant course, peds-sleep Typical age) and the Sleep stages tile for legibility at phone width."
+  ],
+  "acc": [
+   "Layers rule (Jonathan 2026-10-19): a fact a board item keys (the answer, or the clue that rules out a distractor) must stay visible, not only in a hover. Report a keyed fact found only in a hover."
+  ]
+ },
+ "adjudication": {
+  "panic": "repair/migration/psych/N5/spine/adj_s148d.md",
+  "somatic": "repair/migration/psych/SOMA/spine/adj_s148d.md",
+  "psych-medical": "repair/migration/psych/MED/spine/adj_s148d.md",
+  "substance": "repair/migration/psych/TOX/spine/adj_s148d.md",
+  "peds-sleep": "repair/migration/psych/SLEEP/spine/adj_s148d.md",
+  "tics": "repair/migration/psych/TICS/spine/adj_s148d.md"
+ }
+}
