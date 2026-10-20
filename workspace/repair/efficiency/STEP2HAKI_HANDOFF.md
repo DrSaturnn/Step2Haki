@@ -41,7 +41,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s148g (site layer: per-choice reasons renderer, question card space, bold key words in bottom lines) per claude/BATCH_RUNBOOK.md section 8 and claude/pending/SITE_S148G.md (private repo). Pilot first as a private artifact (tics, tca-tox, cluster-b), then generate from the live page. Bold only in bottom lines, no wording change. Budget: reviewers 0; lead 120M tokens.
+Step2Haki: launch batch s148g (site layer: per-choice reasons renderer, question card space, bold key words in bottom lines, touch hover cards, linked-brief panel, First step split renderer, timeline tile) per claude/BATCH_RUNBOOK.md section 8 and claude/pending/SITE_S148G.md (private repo). Pilot first as a private artifact (tics, tca-tox, cluster-b, psychosis-duration, toxidrome), then generate from the live page. Bold only in bottom lines, no wording change. Budget: reviewers 0; lead 120M tokens.
 ```
 
 After s148g ships: s148h (psych per-choice reasons; SITE_S148G.md; proposed 14 agents, 160 API calls, 7M tokens, lead

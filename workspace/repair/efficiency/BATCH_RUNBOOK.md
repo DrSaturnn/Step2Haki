@@ -75,6 +75,16 @@ Then run section 2 to the end without asking.
       somatic and sexual; Cognition, substances and medical causes; Child and adolescent; Medications; Safety and
       violence), under its sidebar sub-label and in the same page order; briefs are moved with the move_brief edit
       (tools/apply_edits.py), which never changes a brief's content.
+- **Brief set rules of 2026-10-20** (Jonathan: "each new brief set automatically includes them"; DECISIONS_DIGEST
+  2026-10-20), for every brief a batch merges, builds or rewrites, from s149 on (the psych briefs get them in s148h):
+  - every practice item carries one short reason per choice (data-key-why, data-d1-why, data-d2-why): the choice's
+    defining features or the fact that rules it out; a distractor that is a differential row reuses that row's wording;
+    items keep 3 choices;
+  - the bottom line bolds its key words and criteria (the deciding counts, durations, ages and cutoffs, the diagnosis
+    named, the action chosen); verify's lint flags a bottom line with no bold;
+  - a First step band with several orders pairs each order with its own results (one row group per order);
+  - the display rules (question card sizing, hover cards on touch, linked-brief panel, timeline tile) are site-wide in
+    the page script and styles, so a brief gets them by being on the page; nothing per brief.
 - **S3. Mechanical checks.**
   - verify --mech (G-MECH), which includes the card check;
   - legib_audit with 0 failures in sculpted, flat and study, on phone and desktop.

@@ -171,3 +171,22 @@ Source keys:
 - **A Cluster A personality disorder brief:** on hold, to revisit later. [MEM]
 - **A Step2Haki companion Chrome extension:** started 2026-10-09. [MEM]
 - **PSGN latency figure:** an open R1 question. [handoff State]
+
+## Decisions of 2026-10-20 (DECISIONS_DIGEST 2026-10-20; display items take effect when s148g ships)
+- **Per-choice reasons:** every practice item shows one short reason under each of its 3 choices once answered (the
+  choice's defining features, or the fact that rules it out here). Psych briefs in s148h; every brief merged or
+  rewritten from s149 on; no full backfill of the others for now. Items keep 3 choices.
+- **Question card space:** unanswered cards in a set share the height of the tallest unanswered card; the card grows
+  when the answer opens. (Replaces the s148f "tallest card with its answer open".)
+- **Bold key words:** bottom lines bold their key words and criteria; verify lints a bottom line with no bold.
+- **Hover cards on touch:** a tap opens the same floating card and animation as desktop hover; no inline drop-down that
+  shifts text. (Replaces "on touch they open inline".)
+- **Linked-brief preview and panel (pending pilot approval):** Open brief sits at the top of the preview card; the full
+  brief grows from the link as an anchored panel instead of the right-hand 520 px panel; never nested.
+- **First step split:** a First step band with several orders shows one row group per order, each with only its own
+  results.
+- **Timeline tile:** no white inner row cards; the chart title and closing caption sit inside the tile with standard
+  padding.
+- **Recording rule:** every display or content decision is written here and in the runbook S2 checklist, with a check
+  where one can be automated, so later batches include it without being asked.
+
