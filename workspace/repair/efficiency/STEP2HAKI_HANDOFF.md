@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-20, by the s148e lead chat 3 (s148e shipped; no batch open).
+Last updated: 2026-10-20, by the s148e lead chat 3 (s148e shipped; s148g planned; no batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -14,10 +14,10 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **No batch open.** s148e shipped 2026-10-20 16:26 (Jonathan: "ship"; main c341858, page f233376713fd, version.json
   s148e confirmed in Chrome): three new psych briefs (toxidrome hub, tca-tox, cluster-b) plus changed lines in substance
-  and voices. Record repair/s148e/S148E.md; OPEN_WORK row. The psych ship order (SHIP_ORDER_PSYCH.md) is complete. Next:
-  s149, the pediatric musculoskeletal batch (BATCHES_S141_S150.md section "s148" under the old numbering: septic-hip,
-  limp, sjia, nursemaid, growing-pains, bone-tumors; folders in FOLDERS_S142_S160.md section "s148"); the file's "s149"
-  (myositis-ossificans, scheuermann, bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus) becomes s150.
+  and voices. Record repair/s148e/S148E.md; OPEN_WORK row. The psych ship order (SHIP_ORDER_PSYCH.md) is complete. Next (Jonathan 2026-10-20, three digest lines: per-choice
+  reasons, question card space, bold key words): s148g site layer, then s148h psych per-choice reasons, then s149
+  (pediatric musculoskeletal B: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors; BATCHES_S141_S150.md and
+  FOLDERS_S142_S160.md list it under the old number s148). Plan: claude/pending/SITE_S148G.md (private repo).
 - **Spend (s148e, closed):** reviewers 15 agents, 156 calls, 6.45M of 9M; lead about 170M of 180M (3 rows,
   ledger_lead.csv).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
@@ -41,8 +41,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s149 (Phase 2, musculoskeletal B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors (BATCHES_S141_S150.md and FOLDERS_S142_S160.md list them under the old number s148). Golden: scfe; hub golden first if limp, growing-pains, nursemaid or bone-tumors needs one. Budget for the whole batch: 30 agents, 240 API calls, 15M tokens; lead 180M tokens. Method: s148 with the efficiency patch.
+Step2Haki: launch batch s148g (site layer: per-choice reasons renderer, question card space, bold key words in bottom lines) per claude/BATCH_RUNBOOK.md section 8 and claude/pending/SITE_S148G.md (private repo). Pilot first as a private artifact (tics, tca-tox, cluster-b), then generate from the live page. Bold only in bottom lines, no wording change. Budget: reviewers 0; lead 120M tokens.
 ```
+
+After s148g ships: s148h (psych per-choice reasons; SITE_S148G.md; proposed 14 agents, 160 API calls, 7M tokens, lead
+180M), then s149 (prompt in SITE_S148G.md's order: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors; golden
+scfe; proposed 30 agents, 240 API calls, 15M tokens, lead 180M).
 
 ## After s141
 
