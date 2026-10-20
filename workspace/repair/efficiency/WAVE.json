@@ -1,19 +1,25 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s148f",
- "open": false,
- "plan_step": "s148f",
- "roles": [],
- "max_agents": 0,
- "max_calls": 0,
- "max_tokens": 0,
- "set_by": "Jonathan, s148f launch prompt: \"No brief content changes, so no reviewer agents. Budget: lead 120M tokens.\"",
+ "id": "s148e",
+ "open": true,
+ "plan_step": "s148e",
+ "roles": [
+  "acc-review",
+  "read-review",
+  "display-review",
+  "flag-review",
+  "wording-fix"
+ ],
+ "max_agents": 18,
+ "max_calls": 200,
+ "max_tokens": 9000000,
+ "set_by": "Jonathan, s148e launch prompt: \"Budget for the whole batch: 18 agents, 200 API calls, 9M tokens; lead 180M tokens.\"",
  "previous": {
-  "id": "s148d",
-  "note": "2026-10-19 (s148d shipped 21:41, main 41ecc26)"
+  "id": "s148f",
+  "note": "2026-10-20 (s148f shipped 12:08, main a960639)"
  },
- "opened": "2026-10-20 07:12 (launch)",
- "note": "Site layer after s148d (runbook section 8; claude/pending/SITE_UI_R2.md and SITE_S148F.md): question tiles, hover animation, linked briefs as Pairs with links, muted tints, one shading rule, Targeted tests rename, prose lint warnings, carried site items. Pilot first as a private artifact. Shipped 2026-10-20 (main a960639).",
+ "opened": "2026-10-20 12:30 (launch)",
+ "note": "New psych briefs (SHIP_ORDER_PSYCH.md): toxidrome hub 'Suspected Overdose or Toxidrome', drug brief 'Anticholinergic and Tricyclic Toxicity', 'Cluster B Personality Disorders'; hub golden first; full method (s148 with the efficiency patch).",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -93,7 +99,13 @@
    "calls": 0,
    "tokens": 0,
    "lead_tokens": 120000000
+  },
+  "s148e": {
+   "agents": 18,
+   "calls": 200,
+   "tokens": 9000000,
+   "lead_tokens": 180000000
   }
  },
- "max_lead_tokens": 120000000
+ "max_lead_tokens": 180000000
 }

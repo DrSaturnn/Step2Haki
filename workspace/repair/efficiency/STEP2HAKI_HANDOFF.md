@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-20, by the s148f lead chat 1 (s148f shipped; no batch open).
+Last updated: 2026-10-20, by the s148e lead chat 1 (launch done; S1 next).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,27 +12,22 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **No batch open.** s148f shipped 2026-10-20 12:08 (Jonathan: "ship"; main a960639, page 25b34a8dd2d3, live index
-  sha256 427716c4401b, version.json s148f confirmed in Chrome): the site layer after s148d. Record repair/s148f/S148F.md;
-  OPEN_WORK row. Next: s148e (new psych briefs); its launch needs Jonathan's titles (SHIP_ORDER_PSYCH.md launch
-  conditions): the next launch prompt below carries the proposed titles.
-- **Spend (s148f, closed):** reviewers 0; lead 101.2M of 120M (ledger_lead.csv).
-- **Session start notes:** the step2haki-tools plugin still ships no hooks: run install.sh and mirror the hooks into
-  /root/.claude/settings.json (chat 4: no permission hold). On a two-core container, legib_audit and shots need
-  Playwright default timeouts of 240000 ms (a scratch wrapper; batch file S3). Keep lane specs out of the top level of
-  repair/sNN/ (build.py and ship.sh apply every top-level json there): use repair/sNN/lanes/.
+- **Batch s148e open** (new psych briefs; launched 2026-10-20 12:22; branch wip/s148e in both repos; batch file
+  repair/s148e/S148E.md). Briefs: toxidrome hub "Suspected Overdose or Toxidrome" (id toxidrome), drug brief
+  "Anticholinergic and Tricyclic Toxicity" (id tca-tox), "Cluster B Personality Disorders" (id cluster-b). Goldens
+  exist (hub voices, drug lithium-effects and antipsych-effects, disease mdd), so no hub golden is built first.
+- **Step:** launch done; S1 (board evidence) next. Hooks NOT installed: install.sh was refused by the session's
+  permission check (Self-Modification); owed before S4 in the review chat (no agent work runs before S4).
+- **Budget:** reviewers 18 agents, 200 calls, 9M tokens; lead 180M. **Spend:** reviewers 0; lead chat 1 in progress.
+- **Session start notes:** start-up context lead 189,130 (WARNING: 45% above the 130,263 baseline; the memory and
+  skills lists grew). On a two-core container, legib_audit and shots need Playwright default timeouts of 240000 ms.
+  Keep lane specs in repair/s148e/lanes/.
 - **Carried:** SITE_BODY_GLANCE items 2 and 3 unscheduled; legib_audit mid-reflow false failures (use
-  repair/s148b/contrast_computed.py as cross-check; for the tinted theme use repair/s148f/tinted_pixels.py, the computed
-  tool cannot read it); public wip/s147 and wip/s148f branches; stray Mac bundle; mdd duration-window timeline offered as
-  a follow-up; deferred LOWs: sz-psychosocial nonadherence wording, psychosis-duration "non-bizarre" definition (each
-  brief's adj_s148c.md); ae20 (AnKing ADAPT) saved as the card stem only: add its answer text at the next
-  antipsych-effects intake. From s148d: substance "Not disulfiram: abstinent patients only" names the supervised row's
-  masked answer (next substance touch); review_packet.py omits long quotes from line_sources.txt (packet error, fix with
-  tests); peds-sleep parasomnia age-window chart offered as a follow-up. From s148f: the prose sweep
-  (repair/s148f/prose_sweep.md: "Chase the medical cause" psychosis-duration, "a culprit exposure" mdd, "The tell"
-  headers in about 20 unconverted briefs, "What it looks like" captions) goes to each brief's next batch; Review rows
-  could link to the step that teaches each item once items carry a step id; the legib track-label false positive
-  (lithium "Before starting", "Day 7": the audit samples the dot above the label).
+  repair/s148b/contrast_computed.py as cross-check; tinted theme repair/s148f/tinted_pixels.py); public wip/s147 and
+  wip/s148f branches; stray Mac bundle; mdd duration-window timeline offered; deferred LOWs (sz-psychosocial
+  nonadherence wording, psychosis-duration "non-bizarre"); ae20 answer text at the next antipsych-effects intake;
+  substance "Not disulfiram" masked-answer leak; review_packet.py omits long quotes from line_sources.txt; peds-sleep
+  age-window chart offered; s148f prose sweep list (repair/s148f/prose_sweep.md); legib track-label false positive.
 
 ## Next launch prompt (paste into a fresh chat)
 
