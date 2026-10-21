@@ -9,6 +9,7 @@ in tools/gate_allowlist.txt).
   python3 tools/test_gate_rules.py        exit 1 if any case misbehaves
 """
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -139,14 +140,17 @@ o = gate(with_pres(hub_ids[1:]))[1]
 hit = '[nav-link] %s is a hub but has no link in Presentations' % hub_ids[0] in o
 print(('ok  ' if hit else 'BAD ') + 'a hub missing from Presentations: expects gate FAIL nav-link'); bad += not hit
 # s148g per-choice reasons: all three or none
-_it = items(PAGE)[0]
+# s148h: the page may already carry reasons, so take an item without them and expect the page's own count plus one
+_it = next(i for i in items(PAGE) if 'data-key-why=' not in PAGE[i.start:PAGE.index('>', i.start)])
 _tag = PAGE[_it.start:PAGE.index('>', _it.start)]
+_m = re.search(r'\((\d+) with reasons\)', gate(PAGE)[1])
+_base = int(_m.group(1)) if _m else 0
 _two = _tag + ' data-key-why="a" data-d1-why="b"'
 o = gate(PAGE.replace(_tag, _two, 1))[1]
 hit = '[item-why]' in o
 print(('ok  ' if hit else 'BAD ') + 'an item with two of its three reasons: expects gate FAIL item-why'); bad += not hit
 o = gate(PAGE.replace(_tag, _two + ' data-d2-why="c"', 1))[1]
-hit = '[item-why]' not in o and '(1 with reasons)' in o
+hit = '[item-why]' not in o and '(%d with reasons)' % (_base + 1) in o
 print(('ok  ' if hit else 'BAD ') + 'an item with all three reasons: no item-why, counted'); bad += not hit
 total = 1 + 9 + 2 + 3 + 3 + 4 + 2
 print('%d/%d passed' % (total - bad, total))
