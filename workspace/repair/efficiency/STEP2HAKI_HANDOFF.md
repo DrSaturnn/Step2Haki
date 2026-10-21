@@ -15,9 +15,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Batch s149 open** (launched 2026-10-21 08:20; branch wip/s149): Phase 2, musculoskeletal B, pediatric. Briefs:
   septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors. Golden: scfe. Brief set rules of 2026-10-20 apply.
   Budget: 30 agents, 240 calls, 15M tokens; lead 180M. Digest line and WAVE.json s149 written.
-- **Step:** launch, session start. Public repo cloned, hook tests 101 passed, lean-reviewer listed. Blocked before S1:
-  the private repo (local-only files, board index, migration folders) was not attached (the session's permission check
-  refused add_repo for DrSaturnn/Step2Haki-private); waiting on Jonathan for the private repo or the Mac route.
+- **Step:** launch done; S1 started. Both repos attached and cloned (Jonathan approved the private repo on the second
+  ask), local-only restored, hook tests 101 passed, lean-reviewer listed (the no-model probe runs in the S4 chat).
+  Board terms for all six briefs added and the index rebuilt; septic-hip spine folder started (live lines, board index
+  view, cards.md). Next: septic-hip S1 (boards.md, facts, card dispositions), then S2; the open accuracy checks are in
+  the batch file (repair/s149/S149.md, "S1 setup").
 - **s149 spend:** reviewers 0 agents, 0 calls; lead chat 1 in progress. Start-up context 192,867 (WARNING: 48% above
   the 130,263 baseline; the linked-Mac and plugin tool lists).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
