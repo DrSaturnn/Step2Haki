@@ -21,7 +21,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   bone-tumors; S3 (verify --mech and legib_audit for all six) after the last build. Restore: clone both repos on
   wip/s149 (private: fetch wip/s149, cp -rn its local-only/ after main's; it holds the septic-hip spine folder, the
   rebuilt board index and the 2026-10-21 web cache).
-- **s149 spend:** reviewers 0 agents, 0 calls; lead chat 1 8.39M of 180M (launch and S1 setup); chat 2 about 0.33M (septic-hip S1, S2). Start-up context 192,867 (WARNING: 48% above
+- **s149 spend:** reviewers 0 agents, 0 calls; lead chat 1 8.39M of 180M (launch and S1 setup); chat 2 31.9M (septic-hip S1, S2); batch lead 40.3M of 180M. Start-up context 192,867 (WARNING: 48% above
   the 130,263 baseline; the linked-Mac and plugin tool lists).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json (and /root/.claude/agents) may be held by the permission check: ask Jonathan.
