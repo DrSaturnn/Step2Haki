@@ -15,8 +15,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Batch s149 open** (launched 2026-10-21 08:20; branch wip/s149): Phase 2, musculoskeletal B, pediatric. Briefs:
   septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors. Golden: scfe. Brief set rules of 2026-10-20 apply.
   Budget: 30 agents, 240 calls, 15M tokens; lead 260M (raised from 180M, chat 6). Digest lines and WAVE.json s149 written.
-- **Lead:** Claude, chat 8 (lock taken 2026-10-21 after 17:35; Codex never took the lock and ran no step, CODEX_AUDIT
-  item 1). Open again for Codex only when this line says so.
+- **Lead:** Claude, since 2026-10-21 18:05, chat 9 (took the lock from chat 8, which stopped at context; Codex never took
+  the lock and ran no step, CODEX_AUDIT item 1). Open again for Codex only when this line says so.
 - **Step:** S5 in progress (chat 8 stopped at context). S4 round 1 done: 9 agents, 103 calls, 5.60M tokens; 24 receipts
   (reviews/<brief>_<part>_r1.md); 4 PASS-IF, the rest FAIL; 2 HIGH (nursemaid acc accepted, septic-hip flags rejected).
   S5 done for septic-hip and nursemaid (adj_s149.md in each spine folder). Next: S5 for limp, sjia, growing-pains,
