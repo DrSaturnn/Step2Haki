@@ -17,11 +17,9 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   Budget: 30 agents, 240 calls, 15M tokens; lead 260M (raised from 180M, chat 6). Digest lines and WAVE.json s149 written.
 - **Lead:** Claude, chat 8 (lock taken 2026-10-21 after 17:35; Codex never took the lock and ran no step, CODEX_AUDIT
   item 1). Open again for Codex only when this line says so.
-- **Step:** S3 done (chat 7). S1 and S2 for all six (chats 2 to 7; calls per brief in repair/s149/S149.md); repair/s149
-  holds the six 10_*_spine.json and 40_presentations.json (four hubs to Presentations, count 19 to 23); build s149 OK,
-  gate PASS; verify --mech MECHANICAL PASS for all six; legib_audit phone 0, desktop only the known mid-reflow false
-  failures (computed light and dark 0; tinted site-wide readings carried to the report). Next: S4 review round 1 in a
-  fresh chat (runbook S4: probe launch first, lanes.py, foreground lanes; s148h's packets.py note under Carried).
+- **Step:** S4 round 1 running (chat 8): 8 lanes launched (repair/efficiency/lanes/s149/r1; spec
+  repair/s149/lanes/lanes_r1.json; packets repair/migration/spine/packets/s149; shots local/shots/s149-r1). Next: file
+  receipts, usage_ledger, then S5. S1 to S3 record in repair/s149/S149.md.
   Restore: clone both repos on wip/s149 (private: clone -b wip/s149, cp -rn its local-only/).
 - **s149 spend:** reviewers 0 agents, 0 calls; lead chat 1 8.39M, chat 2 31.9M, chat 3 20.3M, chat 4 26.7M, chat 5
   24.1M, chat 6 30.0M, chat 7 23.3M; batch lead 164.8M of 260M (raised from 180M by Jonathan in chat 6, digest
