@@ -1,7 +1,7 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
  "id": "s148h",
- "open": true,
+ "open": false,
  "plan_step": "s148h",
  "roles": [
   "acc-review",
@@ -19,7 +19,7 @@
   "note": "2026-10-20 (s148g shipped 20:34, main b11cd33); closed"
  },
  "opened": "2026-10-20 21:16 (launch)",
- "note": "2026-10-20 s148h open (psych per-choice reasons and First step pairing)",
+ "note": "2026-10-21 (s148h shipped 08:08, main bd9eba5); closed",
  "batch_budgets": {
   "s138": {
    "agents": 20,

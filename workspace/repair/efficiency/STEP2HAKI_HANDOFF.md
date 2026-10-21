@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-21, by the s148h lead chat 3 (s148h presented, waiting for "ship").
+Last updated: 2026-10-21, by the s148h lead chat 3 (s148h shipped; no batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,43 +12,42 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch s148h open** (launched 2026-10-20 21:16): psych per-choice reasons and First step pairing. Briefs: the 23 of
-  SITE_S148G.md (the 20 in the Psychiatry sidebar groups in sidebar order, then the psych-tagged tics, peds-sleep and
-  bs-learning; 203 items); First step pairing for bipolar-mania, delirium, gppd, ipv, mdd, panic, psych-medical,
-  psychosis-duration, substance, tca-tox, toxidrome, voices. Batch file repair/s148h/S148H.md. Branch wip/s148h.
-- **Budget:** reviewers 14 agents, 160 calls, 7M tokens; lead 180M (WAVE.json s148h).
-- **Step:** S8 done (chat 3, 2026-10-21): presented with approval.py (84 sheets, page 6c5296e2e418; the record
-  lives in this chat's container, so "ship" must go to chat 3). Changelog entry 148h committed (a124973). Next: S9 on
-  "ship" in chat 3. If chat 3 is gone: restore at wip/s148h, re-run shots (local/shots/s148h-approval, commands in
-  S148H.md "S8") and present again before any ship.
-- **Spend:** reviewers 12 of 14 agents, 83 of 160 calls, 4.70M of 7M; lead 87.0M of 180M (chat 1 37.9M, chat 2 33.1M,
-  chat 3 16.1M).
+- **No batch open.** s148h shipped 2026-10-21 08:08 (Jonathan: "ship"; main bd9eba5, page 6c5296e2e418,
+  version.json s148h checked in Chrome): 609 per-choice reasons on the 203 items of the 23 psych-tagged briefs, First
+  step paired per order in 8 bands. Record repair/s148h/S148H.md; OPEN_WORK line. WAVE.json s148h closed.
+- **s148h spend:** reviewers 12 of 14 agents, 83 of 160 calls, 4.70M of 7M; lead 94.9M of 180M (chat 1 37.9M, chat 2
+  33.1M, chat 3 24.0M with the ship).
+- **Next:** launch s149 with the prompt below (a fresh chat runs the full read order).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
-  mirror into /root/.claude/settings.json may be held by the permission check: ask Jonathan.
+  mirror into /root/.claude/settings.json (and /root/.claude/agents) may be held by the permission check: ask Jonathan.
   The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default
   timeouts of 240000 ms (scratch wrapper: patch Browser.new_page and BrowserContext.new_page, run the tool with runpy).
   Keep lane specs in repair/sNN/lanes/. A shallow clone of a wip branch needs its refspec added before git status
-  shows the upstream.
-- **Carried:** SITE_BODY_GLANCE items 2 and 3 unscheduled; legib_audit mid-reflow false failures (cross-check with
-  repair/s148b/contrast_computed.py; tinted theme repair/s148f/tinted_pixels.py); public wip/s147, wip/s148f and
-  wip/s148e branches; stray Mac bundle; mdd duration-window timeline offered; deferred LOWs (sz-psychosocial
+  shows the upstream; fetch main with --depth 50 before checking the merge base. usage_ledger --context reads 0 in the
+  claude.ai harness (no start-up figure).
+- **Carried:** SITE_BODY_GLANCE item 3 unscheduled; legib_audit mid-reflow false failures (cross-check with
+  repair/s148b/contrast_computed.py; tinted theme repair/s148f/tinted_pixels.py); public wip/s147, wip/s148f, wip/s148e
+  and wip/s148h branches; stray Mac bundle; mdd duration-window timeline offered; deferred LOWs (sz-psychosocial
   nonadherence wording, psychosis-duration "non-bizarre"); ae20 answer text at the next antipsych-effects intake;
-  review_packet.py omits long quotes from line_sources.txt (packet error, fix with tests); peds-sleep age-window chart
-  offered; s148f prose sweep list (repair/s148f/prose_sweep.md); legib track-label false positive. From s148e: the 14 MDD
-  gap cards (mdd's next batch) and the psych-medical Parkinson card (S148E.md Proposal; not yet in BRIEF_AMEND_LIST);
-  a later "Salicylate and Acetaminophen Poisoning" brief for the salicylate treatment gap (Jonathan's call when it is
-  scheduled); site list: 5a Targeted tests rows with empty Result and Means cells on desktop, ladder "when" followed by
-  a capital, tca-tox Insights mask could run to the line end; the flags lane has no link file (do not ask flags to
-  confirm drawers).
+  review_packet.py omits long quotes from line_sources.txt and renders the folder build (no reasons; s148h used
+  repair/s148h/packets.py; fix with tests); peds-sleep age-window chart offered; s148f prose sweep list
+  (repair/s148f/prose_sweep.md); legib track-label false positive. From s148e: the 14 MDD gap cards (mdd's next batch)
+  and the psych-medical Parkinson card (S148E.md Proposal; not yet in BRIEF_AMEND_LIST); a later "Salicylate and
+  Acetaminophen Poisoning" brief (Jonathan's call). From s148h: folder builds lag live (reasons in
+  repair/s148h/data/reasons.json, pairings in data/pairs.json, s148g bold; the next rebuild of each brief carries them);
+  N1 and APAE folder build.py fail against live; antipsych-effects q_45e13940 explanation wording; psychosis-duration
+  S153 hedge; P5 key-in-stem warnings (7). Site list: 5a Targeted tests rows with empty Result and Means cells on
+  desktop, ladder "when" followed by a capital, tca-tox Insights mask could run to the line end; the flags lane has no
+  link file (do not ask flags to confirm drawers).
 
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s148h (psych per-choice reasons and First step pairing) per claude/BATCH_RUNBOOK.md and claude/pending/SITE_S148G.md (private repo). Briefs: every brief in the Psychiatry sidebar groups, in sidebar order; three reasons per item (data-key-why, data-d1-why, data-d2-why), a distractor that is a differential row reusing that row's wording; First step pairing for the 12 psych briefs with multi-order bands still unsplit (lithium-effects shipped in s148g). The s148g pilot's drafted reasons (repair/pilots/s148g/pilot_reasons.json) are an unreviewed starting draft only. Budget for the whole batch: 14 agents, 160 API calls, 7M tokens; lead 180M tokens. Method: s148 with the efficiency patch.
+Step2Haki: launch batch s149 (Phase 2, musculoskeletal B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors. Golden: scfe. Brief set rules of 2026-10-20 apply (three reasons per item, bold bottom line, First step pairing). Budget for the whole batch: 30 agents, 240 API calls, 15M tokens; lead 180M tokens. Method: s148 with the efficiency patch.
 ```
 
-After s148h ships: s149 (prompt in SITE_S148G.md's order: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors; golden
-scfe; proposed 30 agents, 240 API calls, 15M tokens, lead 180M).
+After s149: BATCHES_S141_S150.md's "s149" (musculoskeletal C, pediatric) is next in the plan; its batch number is set at
+its launch (the plan's numbers shifted by one after s147).
 
 ## After s141
 
