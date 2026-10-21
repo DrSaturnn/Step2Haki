@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-21, by the s149 lead chat 7 (bone-tumors S1 and S2; S3 next).
+Last updated: 2026-10-21, by the s149 lead chat 7 (S3 done; S4 next).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -15,13 +15,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Batch s149 open** (launched 2026-10-21 08:20; branch wip/s149): Phase 2, musculoskeletal B, pediatric. Briefs:
   septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors. Golden: scfe. Brief set rules of 2026-10-20 apply.
   Budget: 30 agents, 240 calls, 15M tokens; lead 260M (raised from 180M, chat 6). Digest lines and WAVE.json s149 written.
-- **Step:** S1 and S2 done for all six. septic-hip (chat 2), limp (chat 3), sjia (chat 4), nursemaid (chats 4 and 5),
-  growing-pains (chat 6) and bone-tumors (chat 7): boards.md, facts, card dispositions, build, verify --mech MECHANICAL
-  PASS each; calls in the batch file (repair/s149/S149.md, one section per brief). Next: one 40_presentations.json for
-  the four hubs (limp, nursemaid, growing-pains, bone-tumors: Presentations links, count +4, msk order), then S3
-  (verify --mech and legib_audit for all six), then the S3 restart. Restore: clone both repos on wip/s149 (private:
-  clone -b wip/s149, cp -rn its local-only/; it holds the six spine folders, the rebuilt board index and the
-  2026-10-21 web cache).
+- **Step:** S3 done (chat 7). S1 and S2 for all six (chats 2 to 7; calls per brief in repair/s149/S149.md); repair/s149
+  holds the six 10_*_spine.json and 40_presentations.json (four hubs to Presentations, count 19 to 23); build s149 OK,
+  gate PASS; verify --mech MECHANICAL PASS for all six; legib_audit phone 0, desktop only the known mid-reflow false
+  failures (computed light and dark 0; tinted site-wide readings carried to the report). Next: S4 review round 1 in a
+  fresh chat (runbook S4: probe launch first, lanes.py, foreground lanes; s148h's packets.py note under Carried).
+  Restore: clone both repos on wip/s149 (private: clone -b wip/s149, cp -rn its local-only/).
 - **s149 spend:** reviewers 0 agents, 0 calls; lead chat 1 8.39M, chat 2 31.9M, chat 3 20.3M, chat 4 26.7M, chat 5
   24.1M, chat 6 30.0M, chat 7 23.3M; batch lead 164.8M of 260M (raised from 180M by Jonathan in chat 6, digest
   2026-10-21; WAVE.json max_lead_tokens). Start-up context 130,562 (chat 7 189,624 with the linked-Mac tool lists).
