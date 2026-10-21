@@ -1,0 +1,69 @@
+{
+ "batch": "s149",
+ "plan_step": "s149",
+ "round": 1,
+ "context": "batch s149 (Phase 2, musculoskeletal B, pediatric) converts six live briefs to decision spine v2 (golden scfe): septic-hip and sjia as disease briefs, limp, nursemaid, growing-pains and bone-tumors as presentation hubs; this is review round 1, on each whole brief",
+ "out": "repair/efficiency/lanes/s149/r1",
+ "packets": "repair/migration/spine/packets/s149",
+ "sheets": "local/shots/s149-r1/sheets",
+ "lanes": [
+  {
+   "part": "read",
+   "group": "C",
+   "briefs": [
+    "sjia"
+   ],
+   "budget": 11
+  }
+ ],
+ "types": {
+  "septic-hip": "disease brief (septic arthritis of the hip against transient synovitis), peds lens; golden scfe; review in full",
+  "limp": "presentation hub (data-entry hub), peds lens; steps 5 to 8 greyed; treatment by cause inside step 4; review in full",
+  "sjia": "disease brief (systemic juvenile idiopathic arthritis), peds lens; golden scfe; review in full",
+  "nursemaid": "presentation hub (data-entry hub; the pulled elbow and the injured elbow), peds lens; steps 5 to 8 greyed; treatment by cause inside step 4; review in full",
+  "growing-pains": "presentation hub (data-entry hub; leg pain in a child), peds lens; steps 5 to 8 greyed; treatment by cause inside step 4; review in full",
+  "bone-tumors": "presentation hub (data-entry hub; a bone lesion in a child), peds lens; steps 5 to 8 greyed; treatment by cause inside step 4; review in full"
+ },
+ "notes": {
+  "acc": [
+   "A hub may carry treatment no other live brief owns inside step 4 Workup, after the workup tree; steps 5 to 8 stay greyed (Jonathan 2026-10-18).",
+   "Where a board source (AnKing card, UWorld, NBME) and a guideline differ, the brief teaches the board answer and puts the guideline in an \"In practice:\" hover (runbook section 3): the hover is intended, not a finding.",
+   "septic-hip: the Kocher probabilities and the 38.5 C cutoff sit in a hover labeled as the 1999 derivation because no board source states them (lead call); judge the hover's accuracy, not its placement.",
+   "growing-pains: \"keep usual activity, no braces\" carries the unverified mark on purpose (no source opened that day states the advice; a bank item keys it).",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length)."
+  ],
+  "read": [
+   "The 5a workup zone names (First step, Targeted tests, Next step, Diagnostic test, Skip), the caption \"Diagnostic workup\", the caption \"Look-alikes, most tempting first\" and the pause point's \"The bait:\" label are site conventions.",
+   "Not to report: brief length or word count (2026-10-19 layers rule).",
+   "Relaunch of the sjia read receipt (read-A hit its cap before writing it). Call plan: 1 Read of brief_text.txt, at most 1 Grep each of sibling_titles.txt, ALIASES.json and ABBREV.json, at most 2 more Greps, then the Write of the receipt. Write the receipt before any further reading once 8 calls are used."
+  ],
+  "flags": [
+   "line_sources.txt cuts each quote at 600 characters (a known packet limit); facts.json in the same folder holds every quote whole. Before reporting that a quote does not support a line, Grep facts.json for the fact id.",
+   "Word counts are not judged (2026-10-19 layers rule)."
+  ],
+  "display": [
+   "Drawer and Pairs with styling, tile tints and the question-tile format are the site layer (s148f and s148g, shipped), not this batch.",
+   "A hub's greyed steps 5 to 8 (\"Not used\") are the hub golden's pattern.",
+   "Known site-wide items carried to a site batch, not to report: 5a Targeted tests rows with an empty Result or Means cell on desktop; a ladder \"when\" followed by a capital letter."
+  ]
+ },
+ "extra_judge": {
+  "acc": [
+   "Layers rule (Jonathan 2026-10-19): a fact a board item keys (the answer, or the clue that rules out a distractor) must stay visible, not only in a hover. Report a keyed fact found only in a hover.",
+   "Brief set rules (Jonathan 2026-10-20): every practice item carries three reasons (\"reasons: key | d1 | d2\" on its item line), each the choice's defining feature or the fact in the stem that rules it out; a distractor that is a differential row reuses that row's wording. Judge each reason for Step 2 truth on that stem and agreement with the body and the item's explanation.",
+   "Every age, cutoff, duration and interval against the cited quote and the board sources in facts.json (kind board first)."
+  ],
+  "read": [
+   "Prose rules (Jonathan 2026-10-19): captions, labels, zone names and cells use the term a clinician or textbook uses, never a euphemism or figurative phrasing; a list of tests is broken up, one test or one group per line.",
+   "Diagnoses with other names show them at first mention and in their differential row (ALIASES.json); abbreviations follow ABBREV.json.",
+   "Each item's three reasons stand alone under their choice after an answer and read as a parallel set."
+  ],
+  "flags": [
+   "The per-choice reasons on each item line count as lines: a reason stating a number, an age, or an absolute word (always, never, only, must) its item's claims and quotes do not support is a finding."
+  ],
+  "display": [
+   "Layers rule (Jonathan 2026-10-19): the visible layer must scan on the phone: short cells, nothing buried, no text squeezed into a narrow column (widen, never shorten). Judge each timeline and course tile (septic-hip and sjia Time course, growing-pains Time course, nursemaid After reduction, bone-tumors What each lesion does next) and the bone-tumors Site and age lookup table at phone width.",
+   "First step pairing (Jonathan 2026-10-20): in each First step band, each order heads only its own results (one row group per order); on phone the order and its results span the full width; in study mode the answers and only the answers are hidden."
+  ]
+ }
+}

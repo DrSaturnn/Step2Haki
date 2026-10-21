@@ -17,14 +17,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   Budget: 30 agents, 240 calls, 15M tokens; lead 260M (raised from 180M, chat 6). Digest lines and WAVE.json s149 written.
 - **Lead:** Claude, chat 8 (lock taken 2026-10-21 after 17:35; Codex never took the lock and ran no step, CODEX_AUDIT
   item 1). Open again for Codex only when this line says so.
-- **Step:** S4 round 1 running (chat 8): 8 lanes launched (repair/efficiency/lanes/s149/r1; spec
-  repair/s149/lanes/lanes_r1.json; packets repair/migration/spine/packets/s149; shots local/shots/s149-r1). Next: file
-  receipts, usage_ledger, then S5. S1 to S3 record in repair/s149/S149.md.
-  Restore: clone both repos on wip/s149 (private: clone -b wip/s149, cp -rn its local-only/).
-- **s149 spend:** reviewers 0 agents, 0 calls; lead chat 1 8.39M, chat 2 31.9M, chat 3 20.3M, chat 4 26.7M, chat 5
-  24.1M, chat 6 30.0M, chat 7 23.3M; batch lead 164.8M of 260M (raised from 180M by Jonathan in chat 6, digest
-  2026-10-21; WAVE.json max_lead_tokens). Start-up context 130,562 (chat 7 189,624 with the linked-Mac tool lists).
-  One brief per chat fits under the 350k mark.
+- **Step:** S5 in progress (chat 8 stopped at context). S4 round 1 done: 9 agents, 103 calls, 5.60M tokens; 24 receipts
+  (reviews/<brief>_<part>_r1.md); 4 PASS-IF, the rest FAIL; 2 HIGH (nursemaid acc accepted, septic-hip flags rejected).
+  S5 done for septic-hip and nursemaid (adj_s149.md in each spine folder). Next: S5 for limp, sjia, growing-pains,
+  bone-tumors (notes in repair/s149/S149.md, "S5 adjudication, round 1"), then S6, S7 (lanes.py follow-up spec).
+  Restore: clone both repos on wip/s149 (private: clone -b wip/s149, cp -rn its local-only/); hooks: install.sh and the
+  /root/.claude mirror (the plugin carries no hooks), then the no-model probe.
+- **s149 spend:** reviewers 9 of 30 agents, 103 of 240 calls, 5.60M of 15M; lead chats 1 to 7 164.8M, chat 8 30.8M;
+  batch lead 195.5M of 260M. Projection: about 90M more for S5 to S9; ask Jonathan for the lead figure at the next stop.
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json (and /root/.claude/agents) may be held by the permission check: ask Jonathan.
   The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default
