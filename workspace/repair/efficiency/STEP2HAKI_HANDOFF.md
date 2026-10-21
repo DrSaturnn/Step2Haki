@@ -15,13 +15,13 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Batch s149 open** (launched 2026-10-21 08:20; branch wip/s149): Phase 2, musculoskeletal B, pediatric. Briefs:
   septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors. Golden: scfe. Brief set rules of 2026-10-20 apply.
   Budget: 30 agents, 240 calls, 15M tokens; lead 180M. Digest line and WAVE.json s149 written.
-- **Step:** launch done; S1 started. Both repos attached and cloned (Jonathan approved the private repo on the second
-  ask), local-only restored, hook tests 101 passed, lean-reviewer listed (the no-model probe runs in the S4 chat).
-  Board terms for all six briefs added and the index rebuilt; septic-hip spine folder started (live lines, board index
-  view, cards.md). Next: septic-hip S1 (boards.md, facts, card dispositions), then S2; the open accuracy checks are in
-  the batch file (repair/s149/S149.md, "S1 setup"). Restore: clone both repos on wip/s149 (private: fetch
-  wip/s149 and cp -rn its local-only/ after main's; it holds the septic-hip folder and the rebuilt board index).
-- **s149 spend:** reviewers 0 agents, 0 calls; lead chat 1 8.39M of 180M (launch and S1 setup). Start-up context 192,867 (WARNING: 48% above
+- **Step:** S1 and S2 in progress. septic-hip S1 and S2 done (continuation chat 2): boards.md, facts (76/76 quotes),
+  card dispositions, build (1,013 words, 136 claims), verify --mech MECHANICAL PASS; calls in the batch file
+  (repair/s149/S149.md, "septic-hip S1 and S2"). Next: limp (hub; golden scrotum), then sjia, nursemaid, growing-pains,
+  bone-tumors; S3 (verify --mech and legib_audit for all six) after the last build. Restore: clone both repos on
+  wip/s149 (private: fetch wip/s149, cp -rn its local-only/ after main's; it holds the septic-hip spine folder, the
+  rebuilt board index and the 2026-10-21 web cache).
+- **s149 spend:** reviewers 0 agents, 0 calls; lead chat 1 8.39M of 180M (launch and S1 setup); chat 2 about 0.33M (septic-hip S1, S2). Start-up context 192,867 (WARNING: 48% above
   the 130,263 baseline; the linked-Mac and plugin tool lists).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json (and /root/.claude/agents) may be held by the permission check: ask Jonathan.
