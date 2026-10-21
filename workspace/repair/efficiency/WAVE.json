@@ -19,7 +19,7 @@
   "note": "2026-10-21 (s148h shipped 08:08, main bd9eba5); closed"
  },
  "opened": "2026-10-21 08:20 (launch)",
- "note": "2026-10-21 chat 6: lead figure raised 180M to 260M (Jonathan, \"Raise to 260M (Recommended)\"); reviewer budget unchanged.",
+ "note": "2026-10-21 chat 6: lead figure raised 180M to 260M (Jonathan, \"Raise to 260M (Recommended)\"); reviewer budget unchanged. 2026-10-21 chat 9: lead figure raised 260M to 300M (Jonathan, \"Raise to 300M (Recommended)\").",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -122,8 +122,8 @@
    "agents": 30,
    "calls": 240,
    "tokens": 15000000,
-   "lead_tokens": 260000000
+   "lead_tokens": 300000000
   }
  },
- "max_lead_tokens": 260000000
+ "max_lead_tokens": 300000000
 }
