@@ -31,7 +31,7 @@
    "item": "q_29765c80940704a6c8b7",
    "attr": "data-d2-why",
    "choice": "Brief psychotic disorder",
-   "reason": "1 or more core symptoms after a stressor; a manic episode explains these",
+   "reason": "1 or more core symptoms, often after a stressor; a manic episode explains these",
    "row": "Brief psychotic disorder 1 or more core symptoms, often after a stressor 1 day to under 1 month ; full return to baseline",
    "words_not_in_row": [
     "episode",
@@ -49,6 +49,19 @@
    "words_not_in_row": [
     "cause",
     "drug"
+   ]
+  },
+  {
+   "brief": "psychosis-duration",
+   "item": "q_d94a444dc335c58a8169",
+   "attr": "data-d2-why",
+   "choice": "Bipolar I disorder with psychotic features",
+   "reason": "Needs mania 1 week or more (any length if hospitalized); drug timing explains it",
+   "row": "Bipolar I disorder with psychotic features Delusions with euphoric mood and less sleep Mania 1 week or more (any length if hospitalized); psychosis only inside mood episodes",
+   "words_not_in_row": [
+    "drug",
+    "explain",
+    "tim"
    ]
   },
   {
@@ -75,6 +88,17 @@
     "fill",
     "part",
     "small"
+   ]
+  },
+  {
+   "brief": "cluster-b",
+   "item": "q_1fe65106a3cd14dc257a",
+   "attr": "data-d1-why",
+   "choice": "Conduct disorder",
+   "reason": "Conduct disorder is considered under 18; he is 22",
+   "row": "Conduct disorder Lying, truancy, theft, fighting Under 18 : antisocial personality disorder needs age 18 or older and conduct disorder before 15",
+   "words_not_in_row": [
+    "consider"
    ]
   },
   {
@@ -158,6 +182,17 @@
    ]
   },
   {
+   "brief": "somatic",
+   "item": "q_d53df36636d49fbb457e",
+   "attr": "data-d2-why",
+   "choice": "Somatic symptom disorder",
+   "reason": "Somatic symptoms are not feigned; he limps only when watched",
+   "row": "Somatic symptom disorder Distressing symptom with outsized worry and time spent on it Typically over 6 months ; a distressing symptom is present; not deceiving",
+   "words_not_in_row": [
+    "feign"
+   ]
+  },
+  {
    "brief": "delirium",
    "item": "q_6528f9dbc4a553760f7d",
    "attr": "data-d1-why",
@@ -177,6 +212,19 @@
    "row": "Dementia with Lewy bodies (Lewy body dementia) Fluctuating cognition, visual hallucinations, parkinsonism, REM (rapid eye movement) sleep behavior disorder Swings usually span days to weeks , within a chronic dementia",
    "words_not_in_row": [
     "fever"
+   ]
+  },
+  {
+   "brief": "toxidrome",
+   "item": "q_8f48c9780eb3e49fdd97",
+   "attr": "data-d1-why",
+   "choice": "Serotonin syndrome",
+   "reason": "Clonus, hyperreflexia after a serotonergic drug; tinnitus and fast breathing fit aspirin",
+   "row": "Serotonin syndrome Clonus, hyperreflexia, sweating, increased bowel sounds Minutes to hours after a serotonergic drug is added or raised; clonus",
+   "words_not_in_row": [
+    "aspirin",
+    "fit",
+    "tinnitu"
    ]
   },
   {
@@ -209,10 +257,25 @@
    "item": "q_cb685ea3f2d528ec3d2f",
    "attr": "data-d1-why",
    "choice": "Conduct disorder",
-   "reason": "Needs 3 or more in 12 months; she shows none",
+   "reason": "Needs 3 or more conduct behaviors in 12 months; she shows none",
    "row": "Conduct disorder Aggression, destruction, theft, truancy; lies for gain or to avoid consequences 3 or more in 12 months ; violates others' basic rights or major rules",
    "words_not_in_row": [
+    "behavior",
     "show"
+   ]
+  },
+  {
+   "brief": "disruptive-behavior",
+   "item": "q_563f384ee76cd7574ae0",
+   "attr": "data-d1-why",
+   "choice": "Conduct disorder",
+   "reason": "Adds deceit, theft or truancy; his outbursts are impulsive, not planned",
+   "row": "Conduct disorder Aggression, destruction, theft, truancy; lies for gain or to avoid consequences 3 or more in 12 months ; violates others' basic rights or major rules",
+   "words_not_in_row": [
+    "adds",
+    "deceit",
+    "impulsive",
+    "plann"
    ]
   },
   {
@@ -231,7 +294,7 @@
    "item": "q_579779965ffaf731d62c",
    "attr": "data-d1-why",
    "choice": "Oppositional defiant disorder",
-   "reason": "When disruptive mood dysregulation disorder is met, not also diagnosed",
+   "reason": "Not also diagnosed when disruptive mood dysregulation disorder is met",
    "row": "Oppositional defiant disorder Argues, defies, vindictive; deliberately annoys and blames others 6 months or more ; no stealing or violation of others' rights",
    "words_not_in_row": [
     "diagnos",
@@ -246,10 +309,11 @@
    "item": "q_579779965ffaf731d62c",
    "attr": "data-d2-why",
    "choice": "Intermittent explosive disorder",
-   "reason": "Needs appropriate behavior between outbursts; he is irritable",
+   "reason": "Usually appropriate behavior between outbursts; he is irritable",
    "row": "Intermittent explosive disorder Impulsive outbursts out of proportion, not planned; may feel remorse after Age 6 or older ; appropriate behavior between outbursts",
    "words_not_in_row": [
-    "irritable"
+    "irritable",
+    "usually"
    ]
   },
   {
@@ -272,6 +336,17 @@
    "row": "Serotonin syndrome Mental status change, autonomic hyperactivity, clonus, hyperreflexia, mydriasis, increased bowel sounds Minutes to hours after adding or raising a serotonergic drug; about 60% within 6 hours",
    "words_not_in_row": [
     "point"
+   ]
+  },
+  {
+   "brief": "ssri-effects",
+   "item": "q_1459fc022ab109ac3695",
+   "attr": "data-d1-why",
+   "choice": "Neuroleptic malignant syndrome",
+   "reason": "Builds over 1 to 3 days or longer; slow reflexes, rigidity",
+   "row": "Neuroleptic malignant syndrome (antipsychotic) On an antipsychotic: fever, rigidity, altered mental status, autonomic instability, ↑ CK (creatine kinase) Days to weeks after an antipsychotic change ; builds over 1 to 3 days; slow reflexes, rigidity",
+   "words_not_in_row": [
+    "longer"
    ]
   },
   {
@@ -341,9 +416,18 @@
   },
   {
    "brief": "sz-psychosocial",
+   "item": "q_9bbca9be1aa0ef0942ca",
+   "attr": "data-d1-why",
+   "reason": "A sibling at home is not criticism, hostility or overinvolvement",
+   "words_not_in_brief": [
+    "sibl"
+   ]
+  },
+  {
+   "brief": "sz-psychosocial",
    "item": "q_4f51374399c5e2faa634",
    "attr": "data-d2-why",
-   "reason": "Poor adherence, not a failed drug; a switch fixes neither",
+   "reason": "Poor adherence, not a failed drug; a switch does not fix missed doses",
    "words_not_in_brief": [
     "fix"
    ]
@@ -358,20 +442,12 @@
    ]
   },
   {
-   "brief": "sz-psychosocial",
-   "item": "q_4a4edd58a7fdd308d09f",
-   "attr": "data-d2-why",
-   "reason": "Any reduction now risks relapse; continue the full dose",
-   "words_not_in_brief": [
-    "reduction"
-   ]
-  },
-  {
    "brief": "bipolar-mania",
    "item": "q_27f9ad042d7a0119e0e3",
    "attr": "data-d1-why",
-   "reason": "Maintenance runs for years, possibly lifelong",
+   "reason": "Even a slow taper ends maintenance that runs for years",
    "words_not_in_brief": [
+    "ends",
     "runs"
    ]
   },
@@ -388,7 +464,7 @@
    "brief": "bipolar-mania",
    "item": "q_875af1ee71c6f2502d97",
    "attr": "data-d1-why",
-   "reason": "Unsafe: he walked a roof claiming he can fly",
+   "reason": "Unsafe: he was found on a roof claiming he can fly",
    "words_not_in_brief": [
     "claim",
     "unsafe"
@@ -416,11 +492,30 @@
   },
   {
    "brief": "bipolar-mania",
+   "item": "q_83176e5864a0d4fdea0c",
+   "attr": "data-d1-why",
+   "reason": "Hopeless and burdensome: suicide risk comes before any drug change",
+   "words_not_in_brief": [
+    "burdensome",
+    "hopeles"
+   ]
+  },
+  {
+   "brief": "bipolar-mania",
    "item": "q_cc8ff30e23e43a1a0d5b",
    "attr": "data-d1-why",
    "reason": "Toxicology already negative; thyroid signs point elsewhere",
    "words_not_in_brief": [
     "elsewhere"
+   ]
+  },
+  {
+   "brief": "mdd",
+   "item": "q_ce4c3eab1e36837f52cf",
+   "attr": "data-key-why",
+   "reason": "5 of 9 including depressed mood or loss of interest, for 2 weeks, impaired",
+   "words_not_in_brief": [
+    "impair"
    ]
   },
   {
@@ -435,17 +530,17 @@
   {
    "brief": "mdd",
    "item": "q_3af979baebdb16dec288",
-   "attr": "data-d2-why",
-   "reason": "Too early to call failure; trial not yet adequate",
+   "attr": "data-d1-why",
+   "reason": "A higher dose is premature before an adequate trial",
    "words_not_in_brief": [
-    "call"
+    "premature"
    ]
   },
   {
    "brief": "mdd",
-   "item": "q_77b8d7080173cf63a52e",
-   "attr": "data-d1-why",
-   "reason": "Too slow; not eating calls for ECT, the rapid response",
+   "item": "q_3af979baebdb16dec288",
+   "attr": "data-d2-why",
+   "reason": "Too early to call failure; trial not yet adequate",
    "words_not_in_brief": [
     "call"
    ]
@@ -457,6 +552,15 @@
    "reason": "Severe hypertension in the episodes; not this picture",
    "words_not_in_brief": [
     "picture"
+   ]
+  },
+  {
+   "brief": "panic",
+   "item": "q_0a1dc4c6f646148e90f6",
+   "attr": "data-d1-why",
+   "reason": "Episodic headache, sweating, severe hypertension; none described here",
+   "words_not_in_brief": [
+    "describ"
    ]
   },
   {
@@ -481,7 +585,7 @@
    "brief": "panic",
    "item": "q_25ccc4431464504f2c69",
    "attr": "data-d2-why",
-   "reason": "Too soon: continue 12 months, then taper",
+   "reason": "Stopping today is too soon; continue 12 months, then taper",
    "words_not_in_brief": [
     "soon"
    ]
@@ -497,29 +601,11 @@
   },
   {
    "brief": "somatic",
-   "item": "q_acdd1fb9d2d6b78fe890",
-   "attr": "data-d2-why",
-   "reason": "Findings exist only in her reports; the child is not the source",
-   "words_not_in_brief": [
-    "source"
-   ]
-  },
-  {
-   "brief": "somatic",
    "item": "q_d544ca14ebedd4a91745",
    "attr": "data-d2-why",
    "reason": "Visits driven by symptoms reinforce the cycle",
    "words_not_in_brief": [
     "reinforce"
-   ]
-  },
-  {
-   "brief": "delirium",
-   "item": "q_7b50e870883dc73ce0f9",
-   "attr": "data-d2-why",
-   "reason": "Highly anticholinergic, a Beers delirium class; not serotonergic",
-   "words_not_in_brief": [
-    "serotonergic"
    ]
   },
   {
@@ -559,21 +645,21 @@
    ]
   },
   {
-   "brief": "psych-medical",
-   "item": "q_b1424d843d94f4450147",
-   "attr": "data-d1-why",
-   "reason": "Prevention option with more side effects; lower the dose first",
+   "brief": "disruptive-behavior",
+   "item": "q_579779965ffaf731d62c",
+   "attr": "data-d2-why",
+   "reason": "Usually appropriate behavior between outbursts; he is irritable",
    "words_not_in_brief": [
-    "option"
+    "usually"
    ]
   },
   {
    "brief": "ssri-effects",
    "item": "q_82d710660ff3e8d5c763",
    "attr": "data-d2-why",
-   "reason": "Fluoxetine also means fewer binges and less vomiting in bulimia",
+   "reason": "Fluoxetine can also reduce binges and vomiting in bulimia",
    "words_not_in_brief": [
-    "mean"
+    "reduce"
    ]
   },
   {
@@ -583,6 +669,15 @@
    "reason": "He prefers to stay off; restarting is optional",
    "words_not_in_brief": [
     "optional"
+   ]
+  },
+  {
+   "brief": "ssri-effects",
+   "item": "q_6f875a3df168eda248ea",
+   "attr": "data-d2-why",
+   "reason": "Treats presumed relapse; symptoms 3 days after a stop are discontinuation",
+   "words_not_in_brief": [
+    "treat"
    ]
   },
   {
@@ -614,12 +709,40 @@
    ]
   },
   {
+   "brief": "antipsych-effects",
+   "item": "q_5767bd34d02b3f5c6815",
+   "attr": "data-key-why",
+   "reason": "Metoclopramide caused acute dystonia: a parenteral anticholinergic relieves it",
+   "words_not_in_brief": [
+    "reliev"
+   ]
+  },
+  {
+   "brief": "antipsych-effects",
+   "item": "q_5767bd34d02b3f5c6815",
+   "attr": "data-d1-why",
+   "reason": "Hypocalcemia brings paresthesia and hyperreflexia, plus a cause such as neck surgery",
+   "words_not_in_brief": [
+    "bring",
+    "plus"
+   ]
+  },
+  {
+   "brief": "antipsych-effects",
+   "item": "q_45e139406bc970cec766",
+   "attr": "data-d1-why",
+   "reason": "Risperidone explains it; no headache or field cut of a large adenoma",
+   "words_not_in_brief": [
+    "cut"
+   ]
+  },
+  {
    "brief": "lithium-effects",
    "item": "q_fdf8caeb97e43a815d98",
    "attr": "data-d2-why",
-   "reason": "Recent large ingestion; he took his usual dose",
+   "reason": "Needs a recent large ingestion; none is described",
    "words_not_in_brief": [
-    "usual"
+    "describ"
    ]
   },
   {
@@ -629,6 +752,15 @@
    "reason": "Dialysis criteria met: fluids alone are not enough",
    "words_not_in_brief": [
     "enough"
+   ]
+  },
+  {
+   "brief": "lithium-effects",
+   "item": "q_fa69616f74588eaa5d79",
+   "attr": "data-d2-why",
+   "reason": "Dose stable for years; the thiazide acts on renal reabsorption",
+   "words_not_in_brief": [
+    "acts"
    ]
   },
   {
@@ -644,7 +776,7 @@
    "brief": "lithium-effects",
    "item": "q_1b55329353193e01aefd",
    "attr": "data-d1-why",
-   "reason": "Not part of lithium monitoring",
+   "reason": "Blood count and liver enzymes are not part of lithium monitoring",
    "words_not_in_brief": [
     "part"
    ]
@@ -653,7 +785,7 @@
    "brief": "lithium-effects",
    "item": "q_1b55329353193e01aefd",
    "attr": "data-d2-why",
-   "reason": "Not part of lithium monitoring",
+   "reason": "Hemoglobin A1c and lipid panel are not part of lithium monitoring",
    "words_not_in_brief": [
     "part"
    ]
@@ -686,14 +818,21 @@
    ]
   },
   {
+   "brief": "ipv",
+   "item": "q_9afa95fc7fac80545924",
+   "attr": "data-d2-why",
+   "reason": "Reproductive age, not pregnancy, triggers screening; she qualifies now",
+   "words_not_in_brief": [
+    "qualifi"
+   ]
+  },
+  {
    "brief": "tics",
    "item": "q_c04a5b7c0b9458c5a156",
    "attr": "data-d2-why",
-   "reason": "Excessive worry about a number of events; no compulsion",
+   "reason": "Contamination thoughts relieved by handwashing are obsessions, not general worry",
    "words_not_in_brief": [
-    "event",
-    "excessive",
-    "number",
+    "general",
     "worry"
    ]
   },
@@ -705,6 +844,34 @@
    "words_not_in_brief": [
     "leav",
     "untreat"
+   ]
+  },
+  {
+   "brief": "peds-sleep",
+   "item": "q_653afa182ed6d47b1ee6",
+   "attr": "data-d2-why",
+   "reason": "Usually arise early in the night from NREM sleep, with no memory",
+   "words_not_in_brief": [
+    "arise"
+   ]
+  },
+  {
+   "brief": "peds-sleep",
+   "item": "q_26f8dc21ddf18546e058",
+   "attr": "data-d1-why",
+   "reason": "Increase total sleep time; do not shorten it",
+   "words_not_in_brief": [
+    "increase"
+   ]
+  },
+  {
+   "brief": "bs-learning",
+   "item": "q_332bfce4d26f50f38937",
+   "attr": "data-d1-why",
+   "reason": "A stimulant treats ADHD; this behavior tracks an academic deficit",
+   "words_not_in_brief": [
+    "track",
+    "treat"
    ]
   },
   {
@@ -722,12 +889,13 @@
    "brief": "bs-learning",
    "item": "q_561337b4d8d754aa9ede",
    "attr": "data-d2-why",
-   "reason": "Mania: episodes with a start and an end, not chronic anger",
+   "reason": "Mania is a distinct period of elevated mood, not chronic anger",
    "words_not_in_brief": [
     "anger",
-    "end",
-    "episod",
-    "mania"
+    "distinct",
+    "elevat",
+    "mania",
+    "period"
    ]
   },
   {

@@ -65,9 +65,9 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "Needs psychosis 2 weeks or more without a mood episode"
   - best line (100%, table T1): Schizoaffective disorder | Criterion A with major mood episodes at the same time | Psychosis 2 weeks or more without a mood episode; mood most of the illness Bipolar type includes a manic episode; depressive type, only m
   - claims: S054 "Criterion A with a major mood episode (a depressive one must include depressed mood), psyc"; S073 "Criterion A with a mood episode  psychosis 2 weeks or more without one  mood most of the i"; S103 "Psychosis 2 weeks or more without a mood episode; mood most of the illness"
-- d2 why: "1 or more core symptoms after a stressor; a manic episode explains these"
-  - best line (62%, table T1): Brief psychotic disorder | 1 or more core symptoms, often after a stressor | 1 day to under 1 month ; full return to baseline
-  - claims: S096 "1 or more core symptoms, often after a stressor"; S024 "1 or more core symptoms; full return to baseline"; S160 "The bait: one fixed delusion for months offered as schizophrenia (it needs a second Criter"
+- d2 why: "1 or more core symptoms, often after a stressor; a manic episode explains these"
+  - best line (67%, table T1): Brief psychotic disorder | 1 or more core symptoms, often after a stressor | 1 day to under 1 month ; full return to baseline
+  - claims: S096 "1 or more core symptoms, often after a stressor"
 
 ## q_d94a444d  key: Substance-induced psychotic disorder | d1: Brief psychotic disorder | d2: Bipolar I disorder with psychotic features
 - key why: "Delusion began during stimulant intoxication"
@@ -76,14 +76,14 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "1 or more core symptoms, often after a stressor; no drug cause"
   - best line (75%, table T1): Brief psychotic disorder | 1 or more core symptoms, often after a stressor | 1 day to under 1 month ; full return to baseline
   - claims: S096 "1 or more core symptoms, often after a stressor"; S024 "1 or more core symptoms; full return to baseline"; S160 "The bait: one fixed delusion for months offered as schizophrenia (it needs a second Criter"
-- d2 why: "Needs mania 1 week or more (any length if hospitalized)"
-  - best line (100%, table T1): Bipolar I disorder with psychotic features | Delusions with euphoric mood and less sleep | Mania 1 week or more (any length if hospitalized); psychosis only inside mood episodes
+- d2 why: "Needs mania 1 week or more (any length if hospitalized); drug timing explains it"
+  - best line (67%, table T1): Bipolar I disorder with psychotic features | Delusions with euphoric mood and less sleep | Mania 1 week or more (any length if hospitalized); psychosis only inside mood episodes
   - claims: S107 "Mania 1 week or more (any length if hospitalized); psychosis only inside mood episodes"
 
 ## q_d6b532ef  key: Brief psychotic disorder | d1: Acute stress disorder | d2: Delusional disorder
-- key why: "1 or more core symptoms after a stressor; full return to baseline"
-  - best line (100%, table T1): Brief psychotic disorder | 1 or more core symptoms, often after a stressor | 1 day to under 1 month ; full return to baseline
-  - claims: S024 "1 or more core symptoms; full return to baseline"; S075 "1 day to under 1 month, then full return to baseline; specifiers: with marked stressor; wi"; S096 "1 or more core symptoms, often after a stressor"
+- key why: "Core symptoms after a marked stressor; full return to baseline within a month"
+  - best line (80%, table T1): Brief psychotic disorder | 1 or more core symptoms, often after a stressor | 1 day to under 1 month ; full return to baseline
+  - claims: S075 "1 day to under 1 month, then full return to baseline; specifiers: with marked stressor; wi"; S024 "1 or more core symptoms; full return to baseline"; S160 "The bait: one fixed delusion for months offered as schizophrenia (it needs a second Criter"
 - d1 why: "Needs intrusive re-experiencing and avoidance, 3 days to 1 month after a trauma"
   - best line (60%, table T1): Acute stress disorder | Trauma symptoms soon after the event | 3 days to 1 month after a trauma
   - claims: S119 "Intrusive re-experiencing with hyperarousal, dissociation and avoidance, for up to 1 month"; S121 "3 days to 1 month after a trauma"; S116 "More than 1 month; trauma that threatens death or injury; intrusions and avoidance"
@@ -132,8 +132,8 @@ Each reason: its best brief line (share of its content words found there) and up
   - claims: S104 "Bipolar type includes a manic episode; depressive type, only major depressive episodes"
 
 ## q_20fb01b3  key: Second-generation antipsychotic plus an SSRI | d1: Lithium plus a second-generation antipsychotic | d2: An SSRI alone
-- key why: "An antipsychotic for the psychosis; an SSRI added for the depression"
-  - best line (100%, item explanation): depressive type: an antipsychotic treats the psychosis, and an SSRI may be added for the depression; a mood stabilizer such as lithium is for bipolar type
+- key why: "An antipsychotic for the psychosis; an SSRI added if the depression needs it"
+  - best line (83%, table T3): Schizoaffective disorder, depressive type | A second-generation antipsychotic first | Add an antidepressant if the depression needs treatment; SSRIs (selective serotonin reuptake inhibitors) preferred for safety
   - claims: S203 "Add an antidepressant if the depression needs treatment; SSRIs (selective serotonin reupta"
 - d1 why: "A mood stabilizer such as lithium is for bipolar type"
   - best line (100%, item explanation): depressive type: an antipsychotic treats the psychosis, and an SSRI may be added for the depression; a mood stabilizer such as lithium is for bipolar type

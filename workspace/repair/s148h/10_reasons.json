@@ -123,7 +123,7 @@
    "op": "set_attr",
    "target": "q_29765c80940704a6c8b7",
    "attr": "data-d2-why",
-   "value": "1 or more core symptoms after a stressor; a manic episode explains these",
+   "value": "1 or more core symptoms, often after a stressor; a manic episode explains these",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -144,14 +144,14 @@
    "op": "set_attr",
    "target": "q_d94a444dc335c58a8169",
    "attr": "data-d2-why",
-   "value": "Needs mania 1 week or more (any length if hospitalized)",
+   "value": "Needs mania 1 week or more (any length if hospitalized); drug timing explains it",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_d6b532ef5ba9ee4150cb",
    "attr": "data-key-why",
-   "value": "1 or more core symptoms after a stressor; full return to baseline",
+   "value": "Core symptoms after a marked stressor; full return to baseline within a month",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -256,7 +256,7 @@
    "op": "set_attr",
    "target": "q_20fb01b347baf25d4571",
    "attr": "data-key-why",
-   "value": "An antipsychotic for the psychosis; an SSRI added for the depression",
+   "value": "An antipsychotic for the psychosis; an SSRI added if the depression needs it",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -417,7 +417,7 @@
    "op": "set_attr",
    "target": "q_4c64032d1e4c534c6782",
    "attr": "data-d2-why",
-   "value": "A danger to others now; a dose change cannot wait a week",
+   "value": "Danger to others now cannot wait a week for a dose change",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -452,7 +452,7 @@
    "op": "set_attr",
    "target": "q_9bbca9be1aa0ef0942ca",
    "attr": "data-d1-why",
-   "value": "Not criticism, hostility or overinvolvement",
+   "value": "A sibling at home is not criticism, hostility or overinvolvement",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -501,7 +501,7 @@
    "op": "set_attr",
    "target": "q_4f51374399c5e2faa634",
    "attr": "data-d2-why",
-   "value": "Poor adherence, not a failed drug; a switch fixes neither",
+   "value": "Poor adherence, not a failed drug; a switch does not fix missed doses",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -620,14 +620,14 @@
    "op": "set_attr",
    "target": "q_4a4edd58a7fdd308d09f",
    "attr": "data-d1-why",
-   "value": "Off it, 65% to 80% relapse within 12 months",
+   "value": "Off it after a first episode, 65% to 80% relapse within 12 months",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_4a4edd58a7fdd308d09f",
    "attr": "data-d2-why",
-   "value": "Any reduction now risks relapse; continue the full dose",
+   "value": "Improved on this dose; continue it rather than cut it now",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -662,7 +662,7 @@
    "op": "set_attr",
    "target": "q_642294f71730fdce3fb8",
    "attr": "data-d1-why",
-   "value": "Marked impairment, psychosis or hospitalization; 1 week or more",
+   "value": "Marked impairment, psychosis or hospitalization; 1 week or more unless hospitalized",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -683,7 +683,7 @@
    "op": "set_attr",
    "target": "q_27f9ad042d7a0119e0e3",
    "attr": "data-d1-why",
-   "value": "Maintenance runs for years, possibly lifelong",
+   "value": "Even a slow taper ends maintenance that runs for years",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -725,7 +725,7 @@
    "op": "set_attr",
    "target": "q_7dc58d2f1afc9954f4a2",
    "attr": "data-d1-why",
-   "value": "Not \"continue it and add a mood stabilizer\"",
+   "value": "Sertraline must stop in mania; adding quetiapine is not enough",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -746,7 +746,7 @@
    "op": "set_attr",
    "target": "q_875af1ee71c6f2502d97",
    "attr": "data-d1-why",
-   "value": "Unsafe: he walked a roof claiming he can fly",
+   "value": "Unsafe: he was found on a roof claiming he can fly",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -788,7 +788,7 @@
    "op": "set_attr",
    "target": "q_e14998f0caa852bf05de",
    "attr": "data-d1-why",
-   "value": "No improvement after 2 weeks at therapeutic levels: act now",
+   "value": "No improvement after 2 weeks at therapeutic levels: check adherence, then change",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -844,7 +844,7 @@
    "op": "set_attr",
    "target": "q_293aa90f0e5f09f9f42f",
    "attr": "data-key-why",
-   "value": "No antidepressant alone: risks a switch to mania",
+   "value": "No antidepressant alone in most patients: risks a switch to mania",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -872,7 +872,7 @@
    "op": "set_attr",
    "target": "q_83176e5864a0d4fdea0c",
    "attr": "data-d1-why",
-   "value": "Suicide risk comes first; and no antidepressant alone",
+   "value": "Hopeless and burdensome: suicide risk comes before any drug change",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -907,7 +907,7 @@
    "op": "set_attr",
    "target": "q_ce4c3eab1e36837f52cf",
    "attr": "data-key-why",
-   "value": "5 of 9 symptoms for 2 weeks, with impairment",
+   "value": "5 of 9 including depressed mood or loss of interest, for 2 weeks, impaired",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -928,14 +928,14 @@
    "op": "set_attr",
    "target": "q_3af979baebdb16dec288",
    "attr": "data-key-why",
-   "value": "2 weeks is not an adequate trial (4 to 6 weeks)",
+   "value": "2 weeks is not an adequate trial (generally 4 to 6 weeks)",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_3af979baebdb16dec288",
    "attr": "data-d1-why",
-   "value": "A higher dose only adds adverse effects",
+   "value": "A higher dose is premature before an adequate trial",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -977,7 +977,7 @@
    "op": "set_attr",
    "target": "q_0c602886aa66bac8c79b",
    "attr": "data-d1-why",
-   "value": "In bulimia, fluoxetine: fewer binges, less vomiting",
+   "value": "In bulimia, fluoxetine can reduce binges and vomiting",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1040,14 +1040,14 @@
    "op": "set_attr",
    "target": "q_77b8d7080173cf63a52e",
    "attr": "data-d1-why",
-   "value": "Too slow; not eating calls for ECT, the rapid response",
+   "value": "Adding lithium is too slow when he is not eating",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_77b8d7080173cf63a52e",
    "attr": "data-d2-why",
-   "value": "Too slow; psychotic depression not eating needs ECT",
+   "value": "Switching is too slow; psychotic depression not eating may need ECT",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1082,7 +1082,7 @@
    "op": "set_attr",
    "target": "q_1fe65106a3cd14dc257a",
    "attr": "data-d1-why",
-   "value": "Under 18; he is 22",
+   "value": "Conduct disorder is considered under 18; he is 22",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1285,7 +1285,7 @@
    "op": "set_attr",
    "target": "q_1c1f69ce1e98783124e0",
    "attr": "data-key-why",
-   "value": "Preoccupation with a serious illness, at least 6 months; mild symptoms",
+   "value": "Preoccupation with a serious illness, at least 6 months; mild or no symptoms",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1341,7 +1341,7 @@
    "op": "set_attr",
    "target": "q_e3955a2914959af65ee8",
    "attr": "data-d2-why",
-   "value": "No test makes the panic diagnosis; no standardized criteria",
+   "value": "No test makes the panic diagnosis; lactate has no standardized criteria",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1355,14 +1355,14 @@
    "op": "set_attr",
    "target": "q_0a1dc4c6f646148e90f6",
    "attr": "data-d1-why",
-   "value": "Severe hypertension in the episodes; BP normal here",
+   "value": "Episodic headache, sweating, severe hypertension; none described here",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_0a1dc4c6f646148e90f6",
    "attr": "data-d2-why",
-   "value": "No test makes the panic diagnosis; no standardized criteria",
+   "value": "No test makes the panic diagnosis; lactate has no standardized criteria",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1376,7 +1376,7 @@
    "op": "set_attr",
    "target": "q_b6fe551a76fe31c35481",
    "attr": "data-d1-why",
-   "value": "No test makes the diagnosis; no standardized criteria",
+   "value": "No test makes the diagnosis; lactate has no standardized criteria",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1411,7 +1411,7 @@
    "op": "set_attr",
    "target": "q_f02353ec90fe1c1d49c2",
    "attr": "data-key-why",
-   "value": "Early activation: half the usual dose, raise about every 7 days",
+   "value": "Early activation: half the usual dose for most, raise about every 7 days",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1446,7 +1446,7 @@
    "op": "set_attr",
    "target": "q_8f56600a122cbeb2b97c",
    "attr": "data-d2-why",
-   "value": "Benzodiazepine short term only; not as the only treatment",
+   "value": "Benzodiazepine only as a short-term bridge, never long term",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1460,7 +1460,7 @@
    "op": "set_attr",
    "target": "q_a29e571adb123e184e79",
    "attr": "data-d1-why",
-   "value": "Half the usual dose; raise about every 7 days",
+   "value": "Half the usual dose for most; raise about every 7 days",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1509,7 +1509,7 @@
    "op": "set_attr",
    "target": "q_25ccc4431464504f2c69",
    "attr": "data-d2-why",
-   "value": "Too soon: continue 12 months, then taper",
+   "value": "Stopping today is too soon; continue 12 months, then taper",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1614,7 +1614,7 @@
    "op": "set_attr",
    "target": "q_d53df36636d49fbb457e",
    "attr": "data-d2-why",
-   "value": "Not deceiving; he limps only when watched",
+   "value": "Somatic symptoms are not feigned; he limps only when watched",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1635,7 +1635,7 @@
    "op": "set_attr",
    "target": "q_acdd1fb9d2d6b78fe890",
    "attr": "data-d2-why",
-   "value": "Findings exist only in her reports; the child is not the source",
+   "value": "Needs a distressing symptom in the child; findings exist only in her reports",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1719,14 +1719,14 @@
    "op": "set_attr",
    "target": "q_3a7d844ecc3c3b9fe886",
    "attr": "data-d2-why",
-   "value": "Only after nonsurgical options fail, pain at the vestibule",
+   "value": "May help vestibular pain after nonsurgical options fail; her swab is painless",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_0ee19d0739b94cb7627d",
    "attr": "data-key-why",
-   "value": "Levator ani contracts on attempted penetration",
+   "value": "Levator ani typically contracts on attempted penetration",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1908,14 +1908,14 @@
    "op": "set_attr",
    "target": "q_7b50e870883dc73ce0f9",
    "attr": "data-d2-why",
-   "value": "Highly anticholinergic, a Beers delirium class; not serotonergic",
+   "value": "Diphenhydramine confuses through its anticholinergic effect, not serotonin excess",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_9a86fc1b1a583b1c9607",
    "attr": "data-key-why",
-   "value": "Look for the medical cause first",
+   "value": "No new drugs, nonfocal examination: look for the medical cause first",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2118,7 +2118,7 @@
    "op": "set_attr",
    "target": "q_cc182d77d4694cbcd721",
    "attr": "data-d2-why",
-   "value": "Hot, dry, flushed skin; ileus; she sweats with active bowel",
+   "value": "Hot, dry, flushed skin; ileus; she sweats and has active bowel sounds",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2195,7 +2195,7 @@
    "op": "set_attr",
    "target": "q_8f48c9780eb3e49fdd97",
    "attr": "data-d1-why",
-   "value": "Clonus, hyperreflexia, sweating; no clonus here",
+   "value": "Clonus, hyperreflexia after a serotonergic drug; tinnitus and fast breathing fit aspirin",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2230,7 +2230,7 @@
    "op": "set_attr",
    "target": "q_5190130a1c2a676a0776",
    "attr": "data-key-why",
-   "value": "Nystagmus in any direction, vertical included, with violence: PCP",
+   "value": "Vertical nystagmus with violence: PCP; a benzodiazepine is the preferred sedative",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2370,14 +2370,14 @@
    "op": "set_attr",
    "target": "q_28f20c32a3b6cf8ca9fe",
    "attr": "data-d2-why",
-   "value": "Not the standard treatment for opioid withdrawal",
+   "value": "A benzodiazepine treats alcohol or sedative withdrawal, not opioid withdrawal",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_81bec42c97ebe9c64dc2",
    "attr": "data-key-why",
-   "value": "Cyclical vomiting usually eased by warm showers, daily cannabis",
+   "value": "Cyclical vomiting usually eased by hot showers, daily cannabis",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2489,7 +2489,7 @@
    "op": "set_attr",
    "target": "q_b1424d843d94f4450147",
    "attr": "data-d1-why",
-   "value": "Prevention option with more side effects; lower the dose first",
+   "value": "Described for prevention, with more side effects; lower the dose first",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2552,7 +2552,7 @@
    "op": "set_attr",
    "target": "q_cb685ea3f2d528ec3d2f",
    "attr": "data-d1-why",
-   "value": "Needs 3 or more in 12 months; she shows none",
+   "value": "Needs 3 or more conduct behaviors in 12 months; she shows none",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2573,7 +2573,7 @@
    "op": "set_attr",
    "target": "q_563f384ee76cd7574ae0",
    "attr": "data-d1-why",
-   "value": "Lies for gain, theft or truancy; none here",
+   "value": "Adds deceit, theft or truancy; his outbursts are impulsive, not planned",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2594,14 +2594,14 @@
    "op": "set_attr",
    "target": "q_579779965ffaf731d62c",
    "attr": "data-d1-why",
-   "value": "When disruptive mood dysregulation disorder is met, not also diagnosed",
+   "value": "Not also diagnosed when disruptive mood dysregulation disorder is met",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_579779965ffaf731d62c",
    "attr": "data-d2-why",
-   "value": "Needs appropriate behavior between outbursts; he is irritable",
+   "value": "Usually appropriate behavior between outbursts; he is irritable",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2643,7 +2643,7 @@
    "op": "set_attr",
    "target": "q_57d0b14df6a8bb180e75",
    "attr": "data-d2-why",
-   "value": "Age 6 or older",
+   "value": "Needs age 6 or older; he is 5",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2748,7 +2748,7 @@
    "op": "set_attr",
    "target": "q_82d710660ff3e8d5c763",
    "attr": "data-d2-why",
-   "value": "Fluoxetine also means fewer binges and less vomiting in bulimia",
+   "value": "Fluoxetine can also reduce binges and vomiting in bulimia",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2790,7 +2790,7 @@
    "op": "set_attr",
    "target": "q_6f875a3df168eda248ea",
    "attr": "data-d2-why",
-   "value": "A new antidepressant for presumed relapse",
+   "value": "Treats presumed relapse; symptoms 3 days after a stop are discontinuation",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2811,7 +2811,7 @@
    "op": "set_attr",
    "target": "q_5568d24b36134cb369b5",
    "attr": "data-d2-why",
-   "value": "Fluoxetine is for a slow taper that is poorly tolerated",
+   "value": "Fluoxetine may replace a drug whose slow taper is poorly tolerated",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2846,7 +2846,7 @@
    "op": "set_attr",
    "target": "q_1459fc022ab109ac3695",
    "attr": "data-d1-why",
-   "value": "Builds over 1 to 3 days; slow reflexes, rigidity",
+   "value": "Builds over 1 to 3 days or longer; slow reflexes, rigidity",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2881,14 +2881,14 @@
    "op": "set_attr",
    "target": "q_5767bd34d02b3f5c6815",
    "attr": "data-key-why",
-   "value": "Antiemetics such as metoclopramide can cause acute dystonia",
+   "value": "Metoclopramide caused acute dystonia: a parenteral anticholinergic relieves it",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_5767bd34d02b3f5c6815",
    "attr": "data-d1-why",
-   "value": "Needs paresthesia, hyperreflexia and a cause such as neck surgery",
+   "value": "Hypocalcemia brings paresthesia and hyperreflexia, plus a cause such as neck surgery",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3035,7 +3035,7 @@
    "op": "set_attr",
    "target": "q_45e139406bc970cec766",
    "attr": "data-d1-why",
-   "value": "No headache, full visual fields: no mass effect",
+   "value": "Risperidone explains it; no headache or field cut of a large adenoma",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3077,21 +3077,21 @@
    "op": "set_attr",
    "target": "q_fdf8caeb97e43a815d98",
    "attr": "data-d1-why",
-   "value": "Needs high sodium with dilute urine; urine 520",
+   "value": "Needs dilute urine; urine osmolality 520 is concentrated",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_fdf8caeb97e43a815d98",
    "attr": "data-d2-why",
-   "value": "Recent large ingestion; he took his usual dose",
+   "value": "Needs a recent large ingestion; none is described",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_182e22e561f6fc45d39e",
    "attr": "data-key-why",
-   "value": "Alert, kidneys working, level under 2.5: no dialysis criterion",
+   "value": "Alert, kidneys working, level 2.5 or under: no dialysis criterion",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3147,14 +3147,14 @@
    "op": "set_attr",
    "target": "q_fa69616f74588eaa5d79",
    "attr": "data-d2-why",
-   "value": "The kidney is its only real exit; not absorption",
+   "value": "Dose stable for years; the thiazide acts on renal reabsorption",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_2ea25399ba45abf02320",
    "attr": "data-key-why",
-   "value": "NSAIDs raise the lithium level",
+   "value": "NSAIDs other than aspirin or sulindac raise the lithium level",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3252,7 +3252,7 @@
    "op": "set_attr",
    "target": "q_d952defc13d2eb0f68b3",
    "attr": "data-d2-why",
-   "value": "Needs high sodium with dilute urine; urine 480",
+   "value": "Needs dilute urine; urine osmolality 480 is concentrated",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3266,14 +3266,14 @@
    "op": "set_attr",
    "target": "q_1b55329353193e01aefd",
    "attr": "data-d1-why",
-   "value": "Not part of lithium monitoring",
+   "value": "Blood count and liver enzymes are not part of lithium monitoring",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_1b55329353193e01aefd",
    "attr": "data-d2-why",
-   "value": "Not part of lithium monitoring",
+   "value": "Hemoglobin A1c and lipid panel are not part of lithium monitoring",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3343,7 +3343,7 @@
    "op": "set_attr",
    "target": "q_f7a62d4005d61c28b69f",
    "attr": "data-key-why",
-   "value": "Contraindicated once a tricyclic is involved: worsens cardiotoxicity",
+   "value": "Contraindicated once a tricyclic is involved: can worsen cardiotoxicity",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3455,14 +3455,14 @@
    "op": "set_attr",
    "target": "q_3c2b005ba754026b8eb1",
    "attr": "data-d1-why",
-   "value": "Any discharge leaves an imminent plan untreated",
+   "value": "A crisis line number leaves an imminent plan untreated",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_3c2b005ba754026b8eb1",
    "attr": "data-d2-why",
-   "value": "Any discharge leaves an imminent plan untreated",
+   "value": "Outpatient care tomorrow leaves an imminent plan untreated",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3693,7 +3693,7 @@
    "op": "set_attr",
    "target": "q_bf0703ef66d06d09b871",
    "attr": "data-d2-why",
-   "value": "Platelets normal; no bleeding disorder",
+   "value": "Lower-abdominal bruises in pregnancy point to abuse, not a bleeding disorder",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3756,7 +3756,7 @@
    "op": "set_attr",
    "target": "q_9afa95fc7fac80545924",
    "attr": "data-d2-why",
-   "value": "Screening is for every woman of reproductive age",
+   "value": "Reproductive age, not pregnancy, triggers screening; she qualifies now",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3777,7 +3777,7 @@
    "op": "set_attr",
    "target": "q_680ca34e827e516c9a90",
    "attr": "data-d2-why",
-   "value": "Treats the ADHD; tics can emerge or worsen on it",
+   "value": "No ADHD here; a stimulant does not treat tics",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3819,7 +3819,7 @@
    "op": "set_attr",
    "target": "q_c04a5b7c0b9458c5a156",
    "attr": "data-d2-why",
-   "value": "Excessive worry about a number of events; no compulsion",
+   "value": "Contamination thoughts relieved by handwashing are obsessions, not general worry",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3896,7 +3896,7 @@
    "op": "set_attr",
    "target": "q_6c20bd3174595d3d82b0",
    "attr": "data-d1-why",
-   "value": "Alpha-2 agonist first for milder tics",
+   "value": "Alpha-2 agonist for milder tics, especially with ADHD",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3945,14 +3945,14 @@
    "op": "set_attr",
    "target": "q_653afa182ed6d47b1ee6",
    "attr": "data-d2-why",
-   "value": "Come early from NREM sleep, with no memory",
+   "value": "Usually arise early in the night from NREM sleep, with no memory",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
    "op": "set_attr",
    "target": "q_a4d9e5d05f69aada32fb",
    "attr": "data-key-why",
-   "value": "Usually the first half; terror with an autonomic surge, not comforted",
+   "value": "Usually the first half; terror, often with an autonomic surge, not comforted",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -4001,7 +4001,7 @@
    "op": "set_attr",
    "target": "q_26f8dc21ddf18546e058",
    "attr": "data-d1-why",
-   "value": "Never shorten sleep",
+   "value": "Increase total sleep time; do not shorten it",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -4106,7 +4106,7 @@
    "op": "set_attr",
    "target": "q_332bfce4d26f50f38937",
    "attr": "data-d1-why",
-   "value": "Behavior is downstream of an academic problem",
+   "value": "A stimulant treats ADHD; this behavior tracks an academic deficit",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -4176,7 +4176,7 @@
    "op": "set_attr",
    "target": "q_561337b4d8d754aa9ede",
    "attr": "data-d2-why",
-   "value": "Mania: episodes with a start and an end, not chronic anger",
+   "value": "Mania is a distinct period of elevated mood, not chronic anger",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {

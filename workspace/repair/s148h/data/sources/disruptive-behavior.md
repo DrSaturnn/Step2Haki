@@ -18,8 +18,8 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Argues, defies, vindictive; 6 months or more"
   - best line (100%, table T1): Oppositional defiant disorder | Argues, defies, vindictive; deliberately annoys and blames others | 6 months or more ; no stealing or violation of others' rights
   - claims: S013 "Argues, defies, vindictive; deliberately annoys and blames others"; S014 "6 months or more; no stealing or violation of others' rights"; S038 "Defies adults, vindictive"
-- d1 why: "Needs 3 or more in 12 months; she shows none"
-  - best line (75%, table T1): Conduct disorder | Aggression, destruction, theft, truancy; lies for gain or to avoid consequences | 3 or more in 12 months ; violates others' basic rights or major rules
+- d1 why: "Needs 3 or more conduct behaviors in 12 months; she shows none"
+  - best line (67%, table T1): Conduct disorder | Aggression, destruction, theft, truancy; lies for gain or to avoid consequences | 3 or more in 12 months ; violates others' basic rights or major rules
   - claims: S017 "3 or more in 12 months; violates others' basic rights or major rules"; S075 "3 or more in 12 months, from aggression, destruction, deceit or theft, serious rule violat"; S077 "Verbal aggression on average twice a week for 3 months, or 3 destructive outbursts in 12 m"
 - d2 why: "Needs severe outbursts, 3 or more a week"
   - best line (100%, table T1): Disruptive mood dysregulation disorder | Severe outbursts, 3 or more a week | Onset before 10, diagnosed 6 to 18 ; irritable or angry between outbursts
@@ -29,9 +29,9 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Impulsive outbursts, not planned; appropriate behavior between"
   - best line (100%, table T1): Intermittent explosive disorder | Impulsive outbursts out of proportion, not planned; may feel remorse after | Age 6 or older ; appropriate behavior between outbursts
   - claims: S020 "Age 6 or older; appropriate behavior between outbursts"; S019 "Impulsive outbursts out of proportion, not planned; may feel remorse after"
-- d1 why: "Lies for gain, theft or truancy; none here"
-  - best line (100%, table T1): Conduct disorder | Aggression, destruction, theft, truancy; lies for gain or to avoid consequences | 3 or more in 12 months ; violates others' basic rights or major rules
-  - claims: S016 "Aggression, destruction, theft, truancy; lies for gain or to avoid consequences"; S040 "Aggression, theft, destruction, truancy"
+- d1 why: "Adds deceit, theft or truancy; his outbursts are impulsive, not planned"
+  - best line (86%, item explanation): impulsive outbursts out of proportion and not premeditated, with calm between them: intermittent explosive disorder; conduct disorder adds deceit, theft or truancy, and disruptive mood dysregulation disorder needs persis
+  - claims: S019 "Impulsive outbursts out of proportion, not planned; may feel remorse after"
 - d2 why: "Needs irritability between outbursts and onset before 10"
   - best line (100%, item explanation): impulsive outbursts out of proportion and not premeditated, with calm between them: intermittent explosive disorder; conduct disorder adds deceit, theft or truancy, and disruptive mood dysregulation disorder needs persis
   - claims: S023 "Onset before 10, diagnosed 6 to 18; irritable or angry between outbursts"; S007 "Early onset: conduct disorder before 10 carries a poorer prognosis"; S096 "Conduct disorder, onset before 10"
@@ -40,11 +40,11 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Outbursts 3 or more a week, irritable between; onset before 10"
   - best line (100%, table T1): Disruptive mood dysregulation disorder | Severe outbursts, 3 or more a week | Onset before 10, diagnosed 6 to 18 ; irritable or angry between outbursts
   - claims: S023 "Onset before 10, diagnosed 6 to 18; irritable or angry between outbursts"; S079 "Outbursts 3 or more a week, irritable between, in 2 or more settings, 12 months or more wi"; S003 "Outbursts with calm between  intermittent explosive; irritable between  disruptive mood dy"
-- d1 why: "When disruptive mood dysregulation disorder is met, not also diagnosed"
+- d1 why: "Not also diagnosed when disruptive mood dysregulation disorder is met"
   - best line (100%, item explanation): severe outbursts 3 or more times a week with irritable mood between them for over 12 months, starting before age 10: disruptive mood dysregulation disorder; when its criteria are met, oppositional defiant disorder and in
   - claims: S062 "Criteria met for both disruptive mood dysregulation and oppositional defiant disorder"; S081 "When disruptive mood dysregulation disorder is met, do not also diagnose oppositional defi"; S010 "Irritable or angry mood between outbursts belongs only to disruptive mood dysregulation di"
-- d2 why: "Needs appropriate behavior between outbursts; he is irritable"
-  - best line (80%, table T1): Intermittent explosive disorder | Impulsive outbursts out of proportion, not planned; may feel remorse after | Age 6 or older ; appropriate behavior between outbursts
+- d2 why: "Usually appropriate behavior between outbursts; he is irritable"
+  - best line (67%, table T1): Intermittent explosive disorder | Impulsive outbursts out of proportion, not planned; may feel remorse after | Age 6 or older ; appropriate behavior between outbursts
   - claims: S020 "Age 6 or older; appropriate behavior between outbursts"; S003 "Outbursts with calm between  intermittent explosive; irritable between  disruptive mood dy"; S010 "Irritable or angry mood between outbursts belongs only to disruptive mood dysregulation di"
 
 ## q_4f4af8e2  key: Parent management training | d1: Risperidone | d2: Multisystemic therapy
@@ -65,7 +65,7 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "Not diagnosed before age 6"
   - best line (100%, item explanation): at 5, children speak in full sentences, count to 10 and name letters; aggression from not being understood points to a language disorder when other milestones are on target, and neither disruptive mood dysregulation diso
   - claims: S023 "Onset before 10, diagnosed 6 to 18; irritable or angry between outbursts"; S020 "Age 6 or older; appropriate behavior between outbursts"; S058 "No test makes these diagnoses; the behavior, the mood between episodes and the age gates d"
-- d2 why: "Age 6 or older"
-  - best line (100%, table T1): Intermittent explosive disorder | Impulsive outbursts out of proportion, not planned; may feel remorse after | Age 6 or older ; appropriate behavior between outbursts
-  - claims: S020 "Age 6 or older; appropriate behavior between outbursts"; S077 "Verbal aggression on average twice a week for 3 months, or 3 destructive outbursts in 12 m"; S054 "Age 18 or older"
+- d2 why: "Needs age 6 or older; he is 5"
+  - best line (75%, table T1): Intermittent explosive disorder | Impulsive outbursts out of proportion, not planned; may feel remorse after | Age 6 or older ; appropriate behavior between outbursts
+  - claims: S020 "Age 6 or older; appropriate behavior between outbursts"; S073 "4 or more symptoms for 6 months, with someone other than a sibling; under 5 most days, 5 o"; S077 "Verbal aggression on average twice a week for 3 months, or 3 destructive outbursts in 12 m"
 

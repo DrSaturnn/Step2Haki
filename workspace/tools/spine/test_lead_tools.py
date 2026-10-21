@@ -116,6 +116,9 @@ try:
     insD = open(os.path.join(ld, 'INSTRUCTIONS.md')).read()
     expect('custom: only the matching sheets copied to the lane root',
            sorted(os.listdir(ld)) == ['INSTRUCTIONS.md', 'cards_sheet1.png', 'cards_sheet2.png'] and 'cards_sheet2.png' in insD)
+    specF = dict(specC, round=2, lanes=[specC['lanes'][0]], out=os.path.join(T, 'lanesF'))
+    insFF = LN.lane_text(specF, specF['lanes'][0], 8)[1]
+    expect('custom text in a follow-up round has no FOLLOW block', 'Judge numbers.' in insFF and 'follow-up round 2 (S7)' not in insFF)
     expect('custom: files override copies only the named file',
            sorted(os.listdir(os.path.join(la, 'x'))) == ['reasons.md'] and 'receipt %sx/receipt.md' % la in
            open(os.path.join(la, 'INSTRUCTIONS.md')).read())

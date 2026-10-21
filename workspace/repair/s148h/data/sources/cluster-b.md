@@ -18,9 +18,9 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Age 18 or older, no remorse, conduct disorder before 15"
   - best line (88%, table T1): Conduct disorder | Lying, truancy, theft, fighting | Under 18 : antisocial personality disorder needs age 18 or older and conduct disorder before 15
   - claims: S084 "Antisocial – unlawful acts, deceit, impulsivity, aggression, no remorse; age 18 or older w"; S003 "Antisocial needs age 18 or older and conduct disorder before 15; under 18, antisocial pers"; S040 "Under 18: antisocial personality disorder needs age 18 or older and conduct disorder befor"
-- d1 why: "Under 18; he is 22"
-  - best line (50%, table T1): Conduct disorder | Lying, truancy, theft, fighting | Under 18 : antisocial personality disorder needs age 18 or older and conduct disorder before 15
-  - claims: S003 "Antisocial needs age 18 or older and conduct disorder before 15; under 18, antisocial pers"; S040 "Under 18: antisocial personality disorder needs age 18 or older and conduct disorder befor"; S048 "Age 18 or older"
+- d1 why: "Conduct disorder is considered under 18; he is 22"
+  - best line (60%, table T1): Conduct disorder | Lying, truancy, theft, fighting | Under 18 : antisocial personality disorder needs age 18 or older and conduct disorder before 15
+  - claims: S003 "Antisocial needs age 18 or older and conduct disorder before 15; under 18, antisocial pers"; S040 "Under 18: antisocial personality disorder needs age 18 or older and conduct disorder befor"; S084 "Antisocial – unlawful acts, deceit, impulsivity, aggression, no remorse; age 18 or older w"
 - d2 why: "Grandiosity and need for admiration, not lawbreaking"
   - best line (67%, item explanation): an adult with fraud, aggression and no remorse, and conduct problems before 15: antisocial personality disorder; antisocial personality disorder cannot be diagnosed under 18, and narcissism centers on grandiosity rather 
   - claims: S087 "Narcissistic – grandiosity, entitlement, need for admiration, exploits others, lacks empat"; S121 "an adult with fraud, aggression and no remorse, and conduct problems before 15: antisocial"; S124 "years of theatrical, shifting emotion, seductiveness and attention seeking with normal sle"

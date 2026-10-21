@@ -1,0 +1,18 @@
+# s148h S5 round 1 findings closed without a reason change: brief	finding	decision	reason
+psychosis-duration	display S1 MED (and the 8 other split briefs)	REJECT, packet error	study mode masks a whole First step band, results included, by site convention: the live page does the same on the unsplit psychosis-duration band and on the lithium-effects split shipped in s148g (captured 2026-10-20); the lead's display lane text wrongly said result labels stay readable
+toxidrome	display 2 MED; read 1 MED (Salicylate level order heads no result)	ACCEPT, band 1 left unsplit	the live band has no salicylate result; adding one would be new content (the salicylate gap is a later brief, Jonathan's call); same rule as lead call 4: a pairing needs every order to head a result
+ipv	acc-D 3 LOW (Not possible or not offered under See her alone)	ACCEPT, band 0 left unsplit	the split left "Ask, tactfully, whether she feels safe" heading no result; same rule
+lithium-effects	flags-B 1 MED (calcium yearly unsupported)	REJECT	the item's own explanation (shipped, reviewed s148c to s148e) states "calcium yearly"; the flags packet showed only the matched claims
+gppd	flags-A 1 MED (6 months, 3 of 6 unsupported)	REJECT	the item's own explanation states "at least 3 of the 6 interest and arousal symptoms for 6 months with distress"
+psychosis-duration	flags-A 3 LOW (MRI only with a neurologic finding)	REJECT	the reason matches the brief's own line (claim S153, "only"); the hedge in quote c125 is a question for that line, deferred to the brief's next content batch
+bs-learning	acc-D 1 MED (conduct disorder: aggression, destruction, theft)	REJECT, board card	AnKing nid 1484675538023 (Psych): "aggression to people and animals, destruction of property, theft" (card-search rule)
+bs-learning	acc-D 3 MED (panic: recurrent unexpected attacks)	REJECT, board card	AnKing Step 2 (Cheesy Dorian) cards: "Diagnosis of panic disorder requires recurrent & unexpected panic attacks"
+ssri-effects	flags-B open point (q_46ef d1 propranolol)	CLOSED	the item explanation states "propranolol is unlikely to help"
+suicide-risk	flags-B open point (q_950b d1 ages 8 to 11)	CLOSED	the item explanation states "screening only when indicated applies to ages 8 to 11"
+ipv	flags-B open point (q_bf07 d1 second injury visit)	CLOSED	the stem states "second injury visit in 2 months"
+sz-psychosocial	flags-A 2 note (8 months)	CLOSED	the stem states "no psychotic symptoms for 8 months"
+voices	flags-A 1 note (no matched claim)	CLOSED	no change asked; both reasons restate the stem and the explanation
+all	read note (abbreviations SSRI, ECT, CBT, ECG, TSH, ADHD, OCD, PCP, NREM, FINISH)	CLOSED	each is spelled out in its own brief (lead check of the 23 briefs on the batch page)
+substance	read note (lines above Breathing and vital signs)	CLOSED	acc-B judged the substance split correct; the result lines under it are breathing and vital signs
+all	display: 11 briefs with no image	BY DESIGN	the display lane judged a sample (6 briefs' answered cards, the 9 split bands); the reasons render the same way on every brief
+delirium, toxidrome, substance	flags-A NOT REVIEWED	OPEN	the lane's 8 calls ran out (one Glob, three receipt writes); reviewed in the follow-up flags lane

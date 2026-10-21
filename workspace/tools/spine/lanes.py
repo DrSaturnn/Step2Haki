@@ -28,6 +28,7 @@ custom (s148h, a review narrower than a whole brief, e.g. the per-choice reasons
              boundaries; the lane then needs no brief folders;
   "images"   glob patterns under "sheets" copied into the lane root (display sheets that span briefs);
   "receipt"  "lane": one receipt for the whole lane at <lane>/receipt.md, a section per brief.
+A custom part with its own text in a follow-up round gets no FOLLOW block (its text says what the round covers).
 
 Round 1 copies each part's packet files; a follow-up round copies them too and writes review.md (acc, read, flags: the
 last receipt, the adjudication, then changes.md from review_packet.py --since) or round1.md (display: the last receipt
@@ -210,7 +211,7 @@ def lane_text(spec, ln, b):
                 spec['batch'], rnd, '' if rnd == 1 else ' (follow-up)', part, len(briefs), ', '.join(briefs),
                 'One receipt covers the whole lane (%sreceipt.md).' % lane if cu.get('receipt') == 'lane' else
                 'Each brief has its own folder in your lane (%s<brief>/) and gets its own receipt.' % lane), '',
-            COMMON % {'budget': b, 'context': spec['context']} + ('' if rnd == 1 else FOLLOW % {'round': rnd}),
+            COMMON % {'budget': b, 'context': spec['context']} + ('' if rnd == 1 or cu.get('text') else FOLLOW % {'round': rnd}),
             body + notes, 'Briefs (in this order):']
     for br in briefs:
         deps = open(os.path.join(ab(spec['packets']), br, part, 'deps.txt'), encoding='utf-8').read().splitlines()

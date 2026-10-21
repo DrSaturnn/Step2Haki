@@ -48,8 +48,8 @@ Each reason: its best brief line (share of its content words found there) and up
 ## q_b1424d84  key: Taper the prednisone dose | d1: Add lithium to the current dose | d2: Brain MRI
 - key why: "Steroid-induced mania: dose reduction comes first"
   - best line (83%, item explanation): severe glucocorticoid-induced mania: dose reduction comes first, toward under 40 mg/day of prednisone or the lowest dose possible while the colitis allows; lithium has been described for prevention and has more side effe
-- d1 why: "Prevention option with more side effects; lower the dose first"
-  - best line (67%, item explanation): severe glucocorticoid-induced mania: dose reduction comes first, toward under 40 mg/day of prednisone or the lowest dose possible while the colitis allows; lithium has been described for prevention and has more side effe
+- d1 why: "Described for prevention, with more side effects; lower the dose first"
+  - best line (83%, item explanation): severe glucocorticoid-induced mania: dose reduction comes first, toward under 40 mg/day of prednisone or the lowest dose possible while the colitis allows; lithium has been described for prevention and has more side effe
   - claims: S110 "Case reports only; lithium has been described for prevention, with more side effects."
 - d2 why: "Imaging is for a focal or cognitive finding"
   - best line (100%, item explanation): severe glucocorticoid-induced mania: dose reduction comes first, toward under 40 mg/day of prednisone or the lowest dose possible while the colitis allows; lithium has been described for prevention and has more side effe

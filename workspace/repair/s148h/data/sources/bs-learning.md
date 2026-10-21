@@ -14,8 +14,8 @@ Each reason: its best brief line (share of its content words found there) and up
 ## q_332bfce4  key: Educational testing plus hearing and vision screening | d1: Start a stimulant trial | d2: Refer for cognitive behavioral therapy
 - key why: "Psychoeducational testing confirms; screen hearing and vision first"
   - best line (50%, table T2): Hearing and vision screening | Next | Abnormal screen | Sensory barrier, not a learning disorder: audiology or eye referral
-- d1 why: "Behavior is downstream of an academic problem"
-  - best line (100%, table T2): Private interview with the child | First | Child names the deficit : slow reading, counting on fingers | Behavior is downstream of an academic problem
+- d1 why: "A stimulant treats ADHD; this behavior tracks an academic deficit"
+  - best line (43%, table T1): Specific learning disorder | Behavior downstream of an academic skill deficit | The child names the deficit himself when interviewed privately
 - d2 why: "Behavior is downstream of an academic problem"
   - best line (100%, table T2): Private interview with the child | First | Child names the deficit : slow reading, counting on fingers | Behavior is downstream of an academic problem
 
@@ -40,8 +40,8 @@ Each reason: its best brief line (share of its content words found there) and up
   - best line (100%, table T1): Disruptive mood dysregulation | Chronic angry mood between frequent outbursts | Outbursts three times weekly for a year ; explains no academic decline
 - d1 why: "Defiance toward authority, without severe outbursts"
   - best line (60%, table T1): Oppositional defiant disorder | Defiance toward authority | Argumentative and vindictive , not avoidant
-- d2 why: "Mania: episodes with a start and an end, not chronic anger"
-  - best line (17%, table T1): Disruptive mood dysregulation | Chronic angry mood between frequent outbursts | Outbursts three times weekly for a year ; explains no academic decline
+- d2 why: "Mania is a distinct period of elevated mood, not chronic anger"
+  - best line (29%, table T1): Disruptive mood dysregulation | Chronic angry mood between frequent outbursts | Outbursts three times weekly for a year ; explains no academic decline
 
 ## q_ad04c5ea  key: Social anxiety disorder | d1: Selective mutism | d2: Panic disorder
 - key why: "Fear of eating, speaking or performing anywhere"

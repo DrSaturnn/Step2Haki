@@ -1,11 +1,11 @@
 q_06efe968 | ACE inhibitor raises the level; coarse tremor and nausea | Coarse tremor after a new ACE inhibitor needs a level now | The thyroid explains neither the tremor nor the nausea
-q_fdf8caeb | Long-term user, dehydration; neurologic findings lead | Needs high sodium with dilute urine; urine 520 | Recent large ingestion; he took his usual dose
-q_182e22e5 | Alert, kidneys working, level under 2.5: no dialysis criterion | Lithium does not bind charcoal | No dialysis criterion is met
+q_fdf8caeb | Long-term user, dehydration; neurologic findings lead | Needs dilute urine; urine osmolality 520 is concentrated | Needs a recent large ingestion; none is described
+q_182e22e5 | Alert, kidneys working, level 2.5 or under: no dialysis criterion | Lithium does not bind charcoal | No dialysis criterion is met
 q_04b1d3c4 | Decreased consciousness, or level over 4.0 with impaired kidneys | Dialysis criteria met: fluids alone are not enough | Lithium does not bind charcoal
-q_fa69616f | Thiazide increases renal reabsorption; lithium is handled like sodium | The kidney is its only real exit | The kidney is its only real exit; not absorption
-q_2ea25399 | NSAIDs raise the lithium level | Acetaminophen does not raise the level | Physical therapy does not raise the level
+q_fa69616f | Thiazide increases renal reabsorption; lithium is handled like sodium | The kidney is its only real exit | Dose stable for years; the thiazide acts on renal reabsorption
+q_2ea25399 | NSAIDs other than aspirin or sulindac raise the lithium level | Acetaminophen does not raise the level | Physical therapy does not raise the level
 q_75b281aa | Lithium blocks the ADH signal; little desmopressin response | Central diabetes insipidus: desmopressin clearly raises urine osmolality | Glucose 94: not a glucose diuresis
 q_aa507f9a | Water loss with confusion: replace volume, check the level | A thiazide raises the lithium level | Nephrogenic diabetes insipidus: little or no desmopressin response
 q_cf8fe6d5 | Hypothyroidism: add levothyroxine; continue lithium | Thyroid changes are not a reason to stop lithium | Treat once free thyroxine falls or TSH over 10
-q_d952defc | Fine tremor, polyuria, mildly high TSH; all else normal | Needs high TSH with low free thyroxine, or TSH over 10 | Needs high sodium with dilute urine; urine 480
-q_1b553293 | Level, creatinine, TSH every 6 to 12 months; calcium yearly | Not part of lithium monitoring | Not part of lithium monitoring
+q_d952defc | Fine tremor, polyuria, mildly high TSH; all else normal | Needs high TSH with low free thyroxine, or TSH over 10 | Needs dilute urine; urine osmolality 480 is concentrated
+q_1b553293 | Level, creatinine, TSH every 6 to 12 months; calcium yearly | Blood count and liver enzymes are not part of lithium monitoring | Hemoglobin A1c and lipid panel are not part of lithium monitoring

@@ -4,9 +4,9 @@ Folder: repair/migration/psych/TOX/spine
 Each reason: its best brief line (share of its content words found there) and up to 3 claim ids.
 
 ## q_5190130a  key: Intravenous lorazepam | d1: Acidify the urine to speed clearance | d2: Naloxone
-- key why: "Nystagmus in any direction, vertical included, with violence: PCP"
-  - best line (100%, table T1): PCP | Violence, hallucinations, delusions, hypertension | Nystagmus in any direction, vertical included Other features
-  - claims: S131 "Nystagmus in any direction, vertical included"; S155 "Vertical or rotary nystagmus with violence"
+- key why: "Vertical nystagmus with violence: PCP; a benzodiazepine is the preferred sedative"
+  - best line (71%, table T2): Vertical or rotary nystagmus with violence | PCP | Intravenous or intramuscular benzodiazepine
+  - claims: S155 "Vertical or rotary nystagmus with violence"
 - d1 why: "No urinary acidification: acidosis, myoglobin in the kidney"
   - best line (100%, table T3): PCP agitation | Benzodiazepine; a rapid-acting antipsychotic second line | No urinary acidification: acidosis, myoglobin in the kidney
   - claims: S192 "No urinary acidification: acidosis, myoglobin in the kidney"; S188 "Flumazenil in a long-term user; urinary acidification for PCP; beta-blockers in cocaine to"
@@ -75,14 +75,14 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "Not naloxone: it treats overdose"
   - best line (100%, table T3): Opioid withdrawal | Buprenorphine or methadone | Not naloxone: it treats overdose
   - claims: S195 "Not naloxone: it treats overdose"; S162 "The bait: naloxone for any altered patient, a beta-blocker for cocaine chest pain, halluci"
-- d2 why: "Not the standard treatment for opioid withdrawal"
-  - best line (75%, table T5): Opioid | Buprenorphine or methadone maintenance, the standard of care over withdrawal management alone | Lowers relapse and fatal overdose
-  - claims: S021 "Stimulant (sweating), anticholinergic drug (dry skin), or opioid withdrawal"; S076 "Dilated pupils with autonomic overactivity fit a stimulant and opioid withdrawal alike; ya"; S077 "Alcohol and benzodiazepine withdrawal can kill; a spontaneous opioid stop is distressing, "
+- d2 why: "A benzodiazepine treats alcohol or sedative withdrawal, not opioid withdrawal"
+  - best line (50%, table T1): Benzodiazepine withdrawal | Like alcohol withdrawal; potentially life-threatening | 1 to 2 days (short-acting) or several days to a week (long-acting) after stopping
+  - claims: S077 "Alcohol and benzodiazepine withdrawal can kill; a spontaneous opioid stop is distressing, "; S186 "Can ease autonomic signs, such as blood pressure, in opioid withdrawal; in alcohol withdra"; S027 "Stimulant or PCP, or alcohol or sedative withdrawal (check time since last use)"
 
 ## q_81bec42c  key: Cannabinoid hyperemesis syndrome | d1: Cyclic vomiting syndrome | d2: Gastroparesis
-- key why: "Cyclical vomiting usually eased by warm showers, daily cannabis"
-  - best line (88%, table T1): Cannabis Prescription cannabinoid: dronabinol | Fast pulse, red conjunctivae, hunger, dry mouth, slowed time | Red conjunctivae with hunger; hyperemesis (cyclical vomiting usually eased by warm showers) is a separate pic
-  - claims: S148 "Red conjunctivae with hunger; hyperemesis (cyclical vomiting usually eased by warm showers"; S204 "Warm showers usually relieve it"
+- key why: "Cyclical vomiting usually eased by hot showers, daily cannabis"
+  - best line (75%, table T1): Cannabis Prescription cannabinoid: dronabinol | Fast pulse, red conjunctivae, hunger, dry mouth, slowed time | Red conjunctivae with hunger; hyperemesis (cyclical vomiting usually eased by warm showers) is a separate pic
+  - claims: S148 "Red conjunctivae with hunger; hyperemesis (cyclical vomiting usually eased by warm showers"
 - d1 why: "Ignores the daily cannabis use, the deciding clue"
   - best line (67%, item explanation): cyclical vomiting relieved with warm showers in daily cannabis use, which resolves with cessation; the cannabis use is the clue the other labels ignore
 - d2 why: "Not cyclical bouts eased by hot showers"

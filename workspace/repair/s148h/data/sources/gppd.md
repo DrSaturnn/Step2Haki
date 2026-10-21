@@ -32,14 +32,14 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "For postmenopausal pale, dry tissue; hers is normal"
   - best line (83%, table T1): Genitourinary syndrome of menopause | Postmenopausal burning and dryness | May show pale, dry tissue (may look normal in early menopause)
   - claims: S076 "May show pale, dry tissue (may look normal in early menopause)"; S101 "Postmenopausal; pale, dry tissue"
-- d2 why: "Only after nonsurgical options fail, pain at the vestibule"
-  - best line (100%, table T3): Vulvodynia | Gentle vulvar care, pelvic floor physical therapy, topical lidocaine; amitriptyline or gabapentin may help | Vestibulectomy first: only after nonsurgical options fail, pain localized to the vestibule
+- d2 why: "May help vestibular pain after nonsurgical options fail; her swab is painless"
+  - best line (70%, table T3): Vulvodynia | Gentle vulvar care, pelvic floor physical therapy, topical lidocaine; amitriptyline or gabapentin may help | Vestibulectomy first: only after nonsurgical options fail, pain localized to the vestibule
   - claims: S138 "Vestibulectomy first: only after nonsurgical options fail, pain localized to the vestibule"
 
 ## q_0ee19d07  key: Involuntary contraction of the pelvic floor muscles | d1: Thinning of the vaginal lining from low estrogen | d2: Swollen, inflamed vaginal mucosa from yeast infection
-- key why: "Levator ani contracts on attempted penetration"
+- key why: "Levator ani typically contracts on attempted penetration"
   - best line (100%, item explanation): symptoms typically result from levator ani dysfunction: it contracts on attempted penetration; the tissue itself is normal
-  - claims: S034 "One or more of: penetration difficulty, pain, fear of pain, pelvic floor tightening on the"; S036 "Typically levator ani (pelvic floor) dysfunction  involuntary contraction when a finger is"; S037 "Merck Manual notes that, because symptoms typically come from levator ani dysfunction, the"
+  - claims: S036 "Typically levator ani (pelvic floor) dysfunction  involuntary contraction when a finger is"; S037 "Merck Manual notes that, because symptoms typically come from levator ani dysfunction, the"; S055 "NBME's explanation describes the spontaneous form: vulvar, not vaginal, pain that penetrat"
 - d1 why: "Postmenopausal pale, dry tissue; hers is normal"
   - best line (83%, table T1): Genitourinary syndrome of menopause | Postmenopausal burning and dryness | May show pale, dry tissue (may look normal in early menopause)
   - claims: S076 "May show pale, dry tissue (may look normal in early menopause)"; S101 "Postmenopausal; pale, dry tissue"

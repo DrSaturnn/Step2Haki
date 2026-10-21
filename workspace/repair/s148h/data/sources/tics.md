@@ -10,9 +10,9 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "Targets compulsions; a tic neutralizes no obsession"
   - best line (100%, table T5): Tics with OCD | Cognitive-behavioral therapy (exposure and response prevention), with or without an SSRI, for the OCD; treat the tics as above | Exposure and response prevention targets compulsions; a tic neutralizes no 
   - claims: S163 "Exposure and response prevention targets compulsions; a tic neutralizes no obsession. SSRI"; S008 "Repeated act  no obsession behind it  a tic, not a compulsion"; S046 "A named obsession; a tic neutralizes none. The two often coexist"
-- d2 why: "Treats the ADHD; tics can emerge or worsen on it"
-  - best line (83%, table T5): The ADHD is what impairs | An alpha-2 agonist (guanfacine or clonidine) first; may switch to a stimulant if the ADHD improves little | On a stimulant, tics can emerge or worsen in some: watch closely; tics do not rule on
-  - claims: S160 "On a stimulant, tics can emerge or worsen in some: watch closely; tics do not rule one out"; S030 "A stimulant can bring out or worsen tics in some children, yet tics do not rule one out"; S031 "in trials of children with tics and ADHD, methylphenidate did not worsen tics on average"
+- d2 why: "No ADHD here; a stimulant does not treat tics"
+  - best line (60%, table T4): ADHD or OCD that impairs | Treat it too; it often impairs more than the tics
+  - claims: S020 "Tics  ADHD  an alpha-2 agonist first; a stimulant if the ADHD improves little, watching fo"; S009 "No impairment  explain and watch. Impairment  CBIT (comprehensive behavioral intervention "; S019 "ADHD  OCD (obsessive-compulsive disorder) often impair more than the tics  screen every pa"
 
 ## q_7b955ba5  key: Reassurance and education about the natural history | d1: Habit reversal training | d2: Guanfacine
 - key why: "No functional impairment: explain the natural history; watch"
@@ -32,8 +32,8 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "A tic disorder alone has no obsession"
   - best line (100%, item explanation): a tic disorder alone has no obsession behind the act; contamination thoughts relieved by handwashing are an obsession and a compulsion, treated with exposure and response prevention
   - claims: S008 "Repeated act  no obsession behind it  a tic, not a compulsion"; S046 "A named obsession; a tic neutralizes none. The two often coexist"; S053 "Persistent (chronic) tic disorder"
-- d2 why: "Excessive worry about a number of events; no compulsion"
-  - best line (17%, table T5): Tics with OCD | Cognitive-behavioral therapy (exposure and response prevention), with or without an SSRI, for the OCD; treat the tics as above | Exposure and response prevention targets compulsions; a tic neutralizes no 
+- d2 why: "Contamination thoughts relieved by handwashing are obsessions, not general worry"
+  - best line (71%, item explanation): a tic disorder alone has no obsession behind the act; contamination thoughts relieved by handwashing are an obsession and a compulsion, treated with exposure and response prevention
 
 ## q_7f29f6e3  key: Provisional tic disorder | d1: Tourette syndrome | d2: Chronic motor tic disorder
 - key why: "Under 1 year"
@@ -72,9 +72,9 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "SSRIs play no primary role in the tics"
   - best line (100%, table T5): Tics with OCD | Cognitive-behavioral therapy (exposure and response prevention), with or without an SSRI, for the OCD; treat the tics as above | Exposure and response prevention targets compulsions; a tic neutralizes no 
   - claims: S163 "Exposure and response prevention targets compulsions; a tic neutralizes no obsession. SSRI"; S104 "The bait: a 7-year-old referred from school for behavior, whose father has OCD. OCD is com"; S162 "Cognitive-behavioral therapy (exposure and response prevention), with or without an SSRI, "
-- d1 why: "Alpha-2 agonist first for milder tics"
-  - best line (100%, table T5): Tics impair, no ADHD | CBIT; then a VMAT2 inhibitor (preferred) or an antipsychotic ; for milder tics, an alpha-2 agonist first ; if it fails and tics still impair, step up to a VMAT2 inhibitor (depletes dopamine) or an 
-  - claims: S009 "No impairment  explain and watch. Impairment  CBIT (comprehensive behavioral intervention "; S134 "Milder tics, especially with ADHD: an alpha-2 agonist,"; S151 "for milder tics, an alpha-2 agonist first"
+- d1 why: "Alpha-2 agonist for milder tics, especially with ADHD"
+  - best line (86%, table T5): Tics impair, no ADHD | CBIT; then a VMAT2 inhibitor (preferred) or an antipsychotic ; for milder tics, an alpha-2 agonist first ; if it fails and tics still impair, step up to a VMAT2 inhibitor (depletes dopamine) or an 
+  - claims: S009 "No impairment  explain and watch. Impairment  CBIT (comprehensive behavioral intervention "; S134 "Milder tics, especially with ADHD: an alpha-2 agonist,"; S020 "Tics  ADHD  an alpha-2 agonist first; a stimulant if the ADHD improves little, watching fo"
 - d2 why: "Behavioral therapy (CBIT) first for impairing tics"
   - best line (80%, table T4): Tics that significantly interfere with activities or self-image | Treat the tics: behavioral therapy (CBIT) first
   - claims: S121 "Treat the tics: behavioral therapy (CBIT) first"; S001 "Comprehensive behavioral intervention for tics: cognitive-behavioral therapy built around "; S009 "No impairment  explain and watch. Impairment  CBIT (comprehensive behavioral intervention "

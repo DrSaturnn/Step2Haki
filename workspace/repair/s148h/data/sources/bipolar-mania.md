@@ -18,7 +18,7 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Hypomania 4 days or more, plus a major depressive episode"
   - best line (100%, table T1): Bipolar II disorder | Hypomania plus a major depressive episode | No marked impairment, psychosis or hospitalization; 4 days or more ; never mania
   - claims: S049 "Hypomania plus a major depressive episode; never mania"; S094 "Hypomania plus a major depressive episode"; S162 "Full mania or hypomania plus 3 or more depressive symptoms most days"
-- d1 why: "Marked impairment, psychosis or hospitalization; 1 week or more"
+- d1 why: "Marked impairment, psychosis or hospitalization; 1 week or more unless hospitalized"
   - best line (100%, table T1): Bipolar I disorder | Elevated or irritable mood with DIGFAST symptoms (step 5) | Marked impairment, psychosis or hospitalization; 1 week or more unless hospitalized
   - claims: S092 "Marked impairment, psychosis or hospitalization; 1 week or more unless hospitalized"; S156 "1 week or more or hospitalized; marked impairment, hospitalization or psychosis"; S031 "Marked impairment, hospitalization or psychosis"
 - d2 why: "2 years or more; never a full episode"
@@ -29,9 +29,8 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Continuous maintenance for years, possibly lifelong"
   - best line (100%, table T5): After remission | Continuous maintenance for years, possibly lifelong; not intermittent
   - claims: S189 "Continuous maintenance for years, possibly lifelong; not intermittent"; S076 "; most need maintenance for many years, possibly lifelong"
-- d1 why: "Maintenance runs for years, possibly lifelong"
-  - best line (80%, table T5): After remission | Continuous maintenance for years, possibly lifelong; not intermittent
-  - claims: S076 "; most need maintenance for many years, possibly lifelong"; S189 "Continuous maintenance for years, possibly lifelong; not intermittent"
+- d1 why: "Even a slow taper ends maintenance that runs for years"
+  - best line (29%, table T5): After remission | Continuous maintenance for years, possibly lifelong; not intermittent
 - d2 why: "Continuous maintenance, not intermittent"
   - best line (100%, table T5): After remission | Continuous maintenance for years, possibly lifelong; not intermittent
   - claims: S189 "Continuous maintenance for years, possibly lifelong; not intermittent"; S077 "continuous rather than intermittent treatment"
@@ -51,9 +50,8 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Mania on an antidepressant: stop it; start a first-line agent"
   - best line (100%, table T4): Mania that started on an antidepressant | Stop the antidepressant; start a first-line agent | Not "continue it and add a mood stabilizer"
   - claims: S185 "Stop the antidepressant; start a first-line agent"; S057 "Stop any antidepressant; start lithium, valproate (not in anyone who could become pregnant"; S184 "Mania that started on an antidepressant"
-- d1 why: "Not "continue it and add a mood stabilizer""
-  - best line (100%, table T4): Mania that started on an antidepressant | Stop the antidepressant; start a first-line agent | Not "continue it and add a mood stabilizer"
-  - claims: S186 "Not "continue it and add a mood stabilizer""
+- d1 why: "Sertraline must stop in mania; adding quetiapine is not enough"
+  - best line (43%, table T4): Bipolar I depression | Quetiapine or lurasidone first; partial response: add lithium or valproate; not tolerated or not working: switch to valproate alone or olanzapine plus fluoxetine. In practice | No antidepressant al
 - d2 why: "Stop the antidepressant, not swap it; start a first-line agent"
   - best line (83%, table T4): Mania that started on an antidepressant | Stop the antidepressant; start a first-line agent | Not "continue it and add a mood stabilizer"
   - claims: S185 "Stop the antidepressant; start a first-line agent"; S057 "Stop any antidepressant; start lithium, valproate (not in anyone who could become pregnant"
@@ -61,8 +59,8 @@ Each reason: its best brief line (share of its content words found there) and up
 ## q_875af1ee  key: Inpatient psychiatric admission | d1: Start lithium and see him in clinic in 1 week | d2: Lorazepam in the emergency department, then discharge home
 - key why: "Mania is an emergency; admission prevents harm to himself"
   - best line (83%, item explanation): hospitalization is needed to prevent harm to himself; mania is an emergency; involuntarily if he refuses and no less restrictive option is safe
-- d1 why: "Unsafe: he walked a roof claiming he can fly"
-  - best line (50%, item stem): 33-year-old man found on his apartment roof at night announcing that he can fly 9 days of almost no sleep gave away his car; talks nonstop Refuses admission, saying he has never felt better Expansive mood · toxicology ne
+- d1 why: "Unsafe: he was found on a roof claiming he can fly"
+  - best line (67%, item stem): 33-year-old man found on his apartment roof at night announcing that he can fly 9 days of almost no sleep gave away his car; talks nonstop Refuses admission, saying he has never felt better Expansive mood · toxicology ne
 - d2 why: "Sedation does not remove the danger; he needs admission"
   - best line (20%, item stem): 33-year-old man found on his apartment roof at night announcing that he can fly 9 days of almost no sleep gave away his car; talks nonstop Refuses admission, saying he has never felt better Expansive mood · toxicology ne
 
@@ -80,8 +78,8 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "No improvement after 2 weeks at therapeutic levels: add on"
   - best line (86%, item explanation): no improvement after 2 weeks at therapeutic doses with adherence and substance use checked: add on or switch
   - claims: S169 "no better after 2 weeks at therapeutic doses"
-- d1 why: "No improvement after 2 weeks at therapeutic levels: act now"
-  - best line (71%, item explanation): no improvement after 2 weeks at therapeutic doses with adherence and substance use checked: add on or switch
+- d1 why: "No improvement after 2 weeks at therapeutic levels: check adherence, then change"
+  - best line (78%, item explanation): no improvement after 2 weeks at therapeutic doses with adherence and substance use checked: add on or switch
   - claims: S169 "no better after 2 weeks at therapeutic doses"
 - d2 why: "No response at 2 weeks: add on or switch first"
   - best line (80%, item explanation): no improvement after 2 weeks at therapeutic doses with adherence and substance use checked: add on or switch
@@ -109,9 +107,9 @@ Each reason: its best brief line (share of its content words found there) and up
   - claims: S115 "The timing of use explains the episode"
 
 ## q_293aa90f  key: Sertraline monotherapy | d1: Quetiapine monotherapy | d2: Lamotrigine monotherapy
-- key why: "No antidepressant alone: risks a switch to mania"
-  - best line (100%, table T4): Bipolar I depression | Quetiapine or lurasidone first; partial response: add lithium or valproate; not tolerated or not working: switch to valproate alone or olanzapine plus fluoxetine. In practice | No antidepressant al
-  - claims: S079 "In bipolar depression, an antidepressant alone risks a switch to mania or mood instability"; S183 "No antidepressant alone: risks a switch to mania"; S080 "Mania with risk of harm to self or others"
+- key why: "No antidepressant alone in most patients: risks a switch to mania"
+  - best line (83%, table T4): Bipolar I depression | Quetiapine or lurasidone first; partial response: add lithium or valproate; not tolerated or not working: switch to valproate alone or olanzapine plus fluoxetine. In practice | No antidepressant al
+  - claims: S079 "In bipolar depression, an antidepressant alone risks a switch to mania or mood instability"; S183 "No antidepressant alone: risks a switch to mania"
 - d1 why: "Quetiapine or lurasidone first in bipolar I depression"
   - best line (100%, table T4): Bipolar I depression | Quetiapine or lurasidone first; partial response: add lithium or valproate; not tolerated or not working: switch to valproate alone or olanzapine plus fluoxetine. In practice | No antidepressant al
   - claims: S058 "At least 1 manic episode  bipolar I; depression common, not required"; S108 "Never mania or hypomania; mania makes it bipolar I, hypomania with depression bipolar II"; S179 "Bipolar I depression"
@@ -123,9 +121,8 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Most suicide deaths in bipolar disorder occur in depression"
   - best line (83%, item explanation): most suicide deaths in bipolar disorder occur in the depressive phase, so suicide risk comes first
   - claims: S068 "Most suicide deaths occur in the depressive phase"; S078 "Most suicide deaths occur in the depressive phase; suicide rate about 20 to 30 times the g"
-- d1 why: "Suicide risk comes first; and no antidepressant alone"
-  - best line (60%, table T4): Bipolar I depression | Quetiapine or lurasidone first; partial response: add lithium or valproate; not tolerated or not working: switch to valproate alone or olanzapine plus fluoxetine. In practice | No antidepressant al
-  - claims: S079 "In bipolar depression, an antidepressant alone risks a switch to mania or mood instability"; S183 "No antidepressant alone: risks a switch to mania"; S089 "suicide risk assessment first"
+- d1 why: "Hopeless and burdensome: suicide risk comes before any drug change"
+  - best line (38%, item explanation): most suicide deaths in bipolar disorder occur in the depressive phase, so suicide risk comes first
 - d2 why: "Says family better off without him: assess suicide risk now"
   - best line (57%, item stem): 45-year-old man on lithium for 6 years after two admissions for euphoria, grandiosity and no sleep 2 weeks of depressed mood, insomnia, poor appetite, slowed movements, hopelessness says his family would be better off wi
 

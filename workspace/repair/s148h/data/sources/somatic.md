@@ -52,8 +52,9 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "No obvious external reward; here opioids and court"
   - best line (60%, table T1): Factitious disorder (Munchausen syndrome) | Falsified or self-induced illness | Deception about one's own illness; no obvious external reward
   - claims: S039 "Illness feared, with little or nothing felt  illness anxiety (hypochondriasis), 6 months o"; S061 "deception even with no obvious external reward"; S073 "Factitious disorder imposed on another; no obvious external reward"
-- d2 why: "Not deceiving; he limps only when watched"
-  - best line (67%, item stem): 45-year-old man in police custody asks for oxycodone for back pain pain started at the arrest; limps only when watched court date next week straight-leg raise negative seated and supine · strength and reflexes normal · B
+- d2 why: "Somatic symptoms are not feigned; he limps only when watched"
+  - best line (60%, table T5): Throughout care | Watch for suicidal threats , loss of function and harm from tests, all more common in somatic symptom disorder
+  - claims: S006 "Somatic symptom disorder"; S015 "Treat it; somatic symptom disorder can still coexist"; S017 "Somatic symptom disorder when it lasts, typically over 6 months"
 
 ## q_acdd1fb9  key: Factitious disorder imposed on another (mother) | d1: Malingering by the mother | d2: Somatic symptom disorder in the child
 - key why: "Caregiver falsifies illness in a child; no obvious external reward"
@@ -62,9 +63,8 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "Needs an external incentive; no custody or benefit claim"
   - best line (60%, item stem): 4-year-old boy with a 2nd admission this year for blood in his urine bleeding seen only by his mother; no custody or benefit claim repeated urinalyses normal when nurses collect them T 36.9 °C · BP 96/60 mm Hg · creatini
   - claims: S063 "for an external incentive"; S095 "An external incentive"; S141 "Deception to obtain an external incentive"
-- d2 why: "Findings exist only in her reports; the child is not the source"
-  - best line (80%, item explanation): a caregiver falsifies illness in a child without external incentives; the findings exist only in her reports and vanish under observation
-  - claims: S075 "reporting the suspicion to child protective services (adult protective services for a depe"; S190 "Report the suspicion to child protective services (adult protective services for a depende"
+- d2 why: "Needs a distressing symptom in the child; findings exist only in her reports"
+  - best line (67%, item explanation): a caregiver falsifies illness in a child without external incentives; the findings exist only in her reports and vanish under observation
 
 ## q_d544ca14  key: Regular scheduled brief visits | d1: Another abdominal scan | d2: Visits only when symptoms worsen
 - key why: "Regular, time-limited visits on a schedule"

@@ -1,0 +1,206 @@
+{
+ "batch": "s148h",
+ "plan_step": "s148h",
+ "round": 2,
+ "context": "batch s148h adds a one-line reason under every choice of the practice items of 23 psychiatry-tagged briefs and splits the First step bands of 7 of them so each order heads only its own results (review round 2, follow-up)",
+ "out": "repair/efficiency/lanes/s148h/r2",
+ "packets": "repair/migration/spine/packets/s148h-r2",
+ "sheets": "local/shots/s148h-r2/sheets",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "psychosis-duration",
+    "voices",
+    "sz-psychosocial",
+    "bipolar-mania",
+    "mdd",
+    "cluster-b",
+    "panic",
+    "somatic",
+    "gppd",
+    "delirium",
+    "toxidrome",
+    "substance",
+    "psych-medical",
+    "disruptive-behavior",
+    "ssri-effects",
+    "antipsych-effects",
+    "lithium-effects",
+    "tca-tox",
+    "suicide-risk",
+    "ipv",
+    "tics",
+    "peds-sleep",
+    "bs-learning"
+   ],
+   "budget": 7
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "psychosis-duration",
+    "voices",
+    "sz-psychosocial",
+    "bipolar-mania",
+    "mdd",
+    "cluster-b",
+    "panic",
+    "somatic",
+    "gppd",
+    "delirium",
+    "toxidrome",
+    "substance",
+    "psych-medical",
+    "disruptive-behavior",
+    "ssri-effects",
+    "antipsych-effects",
+    "lithium-effects",
+    "tca-tox",
+    "suicide-risk",
+    "ipv",
+    "tics",
+    "peds-sleep",
+    "bs-learning"
+   ],
+   "budget": 8
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "psychosis-duration",
+    "voices",
+    "sz-psychosocial",
+    "bipolar-mania",
+    "mdd",
+    "cluster-b",
+    "panic",
+    "somatic",
+    "gppd",
+    "delirium",
+    "toxidrome",
+    "substance",
+    "psych-medical",
+    "disruptive-behavior",
+    "ssri-effects",
+    "antipsych-effects",
+    "lithium-effects",
+    "tca-tox",
+    "suicide-risk",
+    "ipv",
+    "tics",
+    "peds-sleep",
+    "bs-learning"
+   ],
+   "budget": 6
+  },
+  {
+   "part": "display",
+   "group": "A",
+   "briefs": [
+    "toxidrome",
+    "ipv"
+   ],
+   "budget": 7
+  }
+ ],
+ "types": {
+  "psychosis-duration": "per-choice reasons",
+  "voices": "per-choice reasons",
+  "sz-psychosocial": "per-choice reasons",
+  "bipolar-mania": "per-choice reasons",
+  "mdd": "per-choice reasons",
+  "cluster-b": "per-choice reasons",
+  "panic": "per-choice reasons",
+  "somatic": "per-choice reasons",
+  "gppd": "per-choice reasons",
+  "delirium": "per-choice reasons",
+  "toxidrome": "per-choice reasons",
+  "substance": "per-choice reasons",
+  "psych-medical": "per-choice reasons",
+  "disruptive-behavior": "per-choice reasons",
+  "ssri-effects": "per-choice reasons",
+  "antipsych-effects": "per-choice reasons",
+  "lithium-effects": "per-choice reasons",
+  "tca-tox": "per-choice reasons",
+  "suicide-risk": "per-choice reasons",
+  "ipv": "per-choice reasons",
+  "tics": "per-choice reasons",
+  "peds-sleep": "per-choice reasons",
+  "bs-learning": "per-choice reasons"
+ },
+ "notes": {
+  "acc": [
+   "Items keep 3 choices; every item gets three reasons (data-key-why, data-d1-why, data-d2-why), 3 to 14 words, no dashes, arrows, ampersands or markup (Jonathan 2026-10-20).",
+   "A distractor that is a differential row reuses that row's wording; a few words added from the stem or the item explanation to fit the item are allowed when they are true for the stem (Jonathan 2026-10-20; lead call 6).",
+   "No item version bump for adding reasons (not a meaning change; the stem, key and choices are unchanged).",
+   "Reasons show only after an answer, under every choice, the others staying readable (s148g, approved by Jonathan).",
+   "Psychosis-duration \"Chase the medical cause\" became \"Treat the medical cause\" and mdd \"Abnormal TSH or a culprit exposure\" became \"Abnormal TSH or a causative drug or substance\" (prose rule 2026-10-19; lead call 5): judge the new wording, not the change itself.",
+   "Left unsplit by design, because a result reads across several orders, the band has no results, or one order would head no result: psych-medical band 1, voices band 0, tca-tox band 1, toxidrome band 1, ipv band 0 (lead calls 4 and S5)."
+  ],
+  "flags": [
+   "Items keep 3 choices; every item gets three reasons (data-key-why, data-d1-why, data-d2-why), 3 to 14 words, no dashes, arrows, ampersands or markup (Jonathan 2026-10-20).",
+   "A distractor that is a differential row reuses that row's wording; a few words added from the stem or the item explanation to fit the item are allowed when they are true for the stem (Jonathan 2026-10-20; lead call 6).",
+   "No item version bump for adding reasons (not a meaning change; the stem, key and choices are unchanged).",
+   "Reasons show only after an answer, under every choice, the others staying readable (s148g, approved by Jonathan).",
+   "Psychosis-duration \"Chase the medical cause\" became \"Treat the medical cause\" and mdd \"Abnormal TSH or a culprit exposure\" became \"Abnormal TSH or a causative drug or substance\" (prose rule 2026-10-19; lead call 5): judge the new wording, not the change itself.",
+   "Left unsplit by design, because a result reads across several orders, the band has no results, or one order would head no result: psych-medical band 1, voices band 0, tca-tox band 1, toxidrome band 1, ipv band 0 (lead calls 4 and S5)."
+  ],
+  "read": [
+   "Items keep 3 choices; every item gets three reasons (data-key-why, data-d1-why, data-d2-why), 3 to 14 words, no dashes, arrows, ampersands or markup (Jonathan 2026-10-20).",
+   "A distractor that is a differential row reuses that row's wording; a few words added from the stem or the item explanation to fit the item are allowed when they are true for the stem (Jonathan 2026-10-20; lead call 6).",
+   "No item version bump for adding reasons (not a meaning change; the stem, key and choices are unchanged).",
+   "Reasons show only after an answer, under every choice, the others staying readable (s148g, approved by Jonathan).",
+   "Psychosis-duration \"Chase the medical cause\" became \"Treat the medical cause\" and mdd \"Abnormal TSH or a culprit exposure\" became \"Abnormal TSH or a causative drug or substance\" (prose rule 2026-10-19; lead call 5): judge the new wording, not the change itself.",
+   "Left unsplit by design, because a result reads across several orders, the band has no results, or one order would head no result: psych-medical band 1, voices band 0, tca-tox band 1, toxidrome band 1, ipv band 0 (lead calls 4 and S5)."
+  ],
+  "display": [
+   "Items keep 3 choices; every item gets three reasons (data-key-why, data-d1-why, data-d2-why), 3 to 14 words, no dashes, arrows, ampersands or markup (Jonathan 2026-10-20).",
+   "A distractor that is a differential row reuses that row's wording; a few words added from the stem or the item explanation to fit the item are allowed when they are true for the stem (Jonathan 2026-10-20; lead call 6).",
+   "No item version bump for adding reasons (not a meaning change; the stem, key and choices are unchanged).",
+   "Reasons show only after an answer, under every choice, the others staying readable (s148g, approved by Jonathan).",
+   "Psychosis-duration \"Chase the medical cause\" became \"Treat the medical cause\" and mdd \"Abnormal TSH or a culprit exposure\" became \"Abnormal TSH or a causative drug or substance\" (prose rule 2026-10-19; lead call 5): judge the new wording, not the change itself.",
+   "Left unsplit by design, because a result reads across several orders, the band has no results, or one order would head no result: psych-medical band 1, voices band 0, tca-tox band 1, toxidrome band 1, ipv band 0 (lead calls 4 and S5)."
+  ]
+ },
+ "custom": {
+  "acc": {
+   "text": "This is follow-up round 2 (S7). Round 1 reviewed every reason of 203 items in 23 briefs; the lead applied 77 reason changes, restored two First step bands to the live grouping (toxidrome band 1, ipv band 0: a pairing left one order heading no result) and closed the other findings with reasons. Each brief's section in your packet files has: \"Lead decisions on round 1\" (every fix, old and new wording and the finding it answers; every finding closed without a change and why), then \"Changed items as they now read\". Scope: (1) every changed reason and changed band, judged by your part's rules in the item's context; (2) each round-1 finding of your part: resolved, or still open (say why); a closed finding stays closed unless the new text makes it wrong in a new way. Reasons that did not change are out of scope.\nCalls: read INSTRUCTIONS.md (done), then each packet file once in order, then write the lane receipt ONCE at the end. Never use Glob or list folders; never write an interim receipt; every extra call comes out of the reads you need.\nPart acc: each changed reason is correct for Step 2 CK and true for its stem (the key's reason gives what makes the key right here; a distractor's reason gives that choice's defining feature or the stem fact that rules it out); agrees with the brief, the item explanation and the cited claims and keeps their hedges; adds no fact they do not support. A reason that would teach a wrong rule is HIGH; unsupported or contradicting the brief MED; wording LOW with a replacement. The board cards cited for bs-learning (no folder) are AnKing cards named in the decisions.\nCall plan: %(plan)s.\n%(extra)sIn the receipt, each brief's section adds `Earlier findings` (each acc finding of round 1 for that brief: resolved, closed, or open with the reason) before `Findings` (new ones). A PASS-IF replacement's old text is a reason copied exactly from the packet; new text 3 to 14 words, no dashes, arrows, ampersands or markup.",
+   "plan": "1 Read per packet file, in order, then 1 Write of the lane receipt",
+   "combine": [
+    "review.md",
+    60000
+   ],
+   "receipt": "lane"
+  },
+  "flags": {
+   "text": "This is follow-up round 2 (S7). Round 1 reviewed every reason of 203 items in 23 briefs; the lead applied 77 reason changes, restored two First step bands to the live grouping (toxidrome band 1, ipv band 0: a pairing left one order heading no result) and closed the other findings with reasons. Each brief's section in your packet files has: \"Lead decisions on round 1\" (every fix, old and new wording and the finding it answers; every finding closed without a change and why), then \"Changed items as they now read\". Scope: (1) every changed reason and changed band, judged by your part's rules in the item's context; (2) each round-1 finding of your part: resolved, or still open (say why); a closed finding stays closed unless the new text makes it wrong in a new way. Reasons that did not change are out of scope.\nCalls: read INSTRUCTIONS.md (done), then each packet file once in order, then write the lane receipt ONCE at the end. Never use Glob or list folders; never write an interim receipt; every extra call comes out of the reads you need.\nPart flags: for each changed reason, and for every reason in the full flags packets of delirium, toxidrome and substance (round 1 did not reach them), does the reason state more than its claims, quotes and item explanation support (a number, age, duration, dose or cutoff none gives; \"always\", \"never\", \"only\" or \"must\" where the source hedges; \"can\" or \"some\" turned into a rule), or drop a condition that changes the answer? HIGH teaches a wrong exam answer; MED a number or rule its sources do not support; LOW a lost hedge that changes nothing on the exam. A reason with no matched claim is judged against its item explanation (the stem line).\nCall plan: %(plan)s.\n%(extra)sIn the receipt, each brief's section adds `Earlier findings` (each flags finding of round 1 for that brief: resolved, closed, or open with the reason) before `Findings`. A PASS-IF replacement's old text is a reason copied exactly from the packet; new text 3 to 14 words, no dashes, arrows, ampersands or markup.",
+   "plan": "1 Read per packet file, in order, then 1 Write of the lane receipt",
+   "combine": [
+    "review.md",
+    60000
+   ],
+   "receipt": "lane"
+  },
+  "read": {
+   "text": "This is follow-up round 2 (S7). Round 1 reviewed every reason of 203 items in 23 briefs; the lead applied 77 reason changes, restored two First step bands to the live grouping (toxidrome band 1, ipv band 0: a pairing left one order heading no result) and closed the other findings with reasons. Each brief's section in your packet files has: \"Lead decisions on round 1\" (every fix, old and new wording and the finding it answers; every finding closed without a change and why), then \"Changed items as they now read\". Scope: (1) every changed reason and changed band, judged by your part's rules in the item's context; (2) each round-1 finding of your part: resolved, or still open (say why); a closed finding stays closed unless the new text makes it wrong in a new way. Reasons that did not change are out of scope.\nCalls: read INSTRUCTIONS.md (done), then each packet file once in order, then write the lane receipt ONCE at the end. Never use Glob or list folders; never write an interim receipt; every extra call comes out of the reads you need.\nPart read: each changed reason reads on its own under its choice (no fragment, no \"this\" or \"it\" without a referent, no author shorthand), with sound grammar and punctuation, and the three reasons of an item read as a set, each about its own choice; the two restored bands read in order. Abbreviations: every one in these reasons is spelled out in its own brief (the lead checked); not a finding.\nCall plan: %(plan)s.\n%(extra)sIn the receipt, each brief's section adds `Earlier findings` (each read finding of round 1 for that brief: resolved, closed, or open with the reason) before `Findings`. A PASS-IF replacement's old text is a reason copied exactly from the packet; new text 3 to 14 words, wording only.",
+   "plan": "1 Read per packet file, in order, then 1 Write of the lane receipt",
+   "combine": [
+    "review.md",
+    60000
+   ],
+   "receipt": "lane"
+  },
+  "display": {
+   "text": "This is follow-up round 2 (S7) for display. Round 1 (your part) found: S1, result labels masked in study mode in the 9 split bands (MED): REJECTED as a packet error: study mode masks a whole First step band, results included, by site convention (the live page does the same on unsplit bands and on the lithium-effects split shipped in s148g); the round-1 lane text wrongly said labels stay readable. Toxidrome \"Salicylate level\" heading no result (MED): ACCEPTED: toxidrome band 1 and ipv band 0 are restored to the live grouping (all orders on top, results below), because a pairing left one order heading no result. The reason text changes do not change how reasons render.\nImages in your lane root: bands_phone_sheet1.png, bands_phone-study_sheet1.png, bands_desktop_sheet1.png: the First step panels of toxidrome and ipv at 390 px phone, phone in study mode, and 1280 desktop.\nJudge: the two panels read in order with nothing clipped, overlapping or squeezed; on phone full width; in study mode the panel is masked as the site convention above; desktop shows the same grouping. Then close your round-1 findings (`Earlier findings`: S1 closed as a packet error unless you see a new problem; the Salicylate finding resolved or open with the reason).\nCall plan: %(plan)s. Never use Glob or list folders; write the receipt once at the end.\n%(extra)s",
+   "plan": "1 Read per image (3), then 1 Write of the lane receipt",
+   "images": [
+    "bands_*_sheet*.png"
+   ],
+   "receipt": "lane"
+  }
+ }
+}

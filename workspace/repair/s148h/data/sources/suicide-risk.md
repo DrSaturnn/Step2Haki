@@ -29,12 +29,11 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Intent to act now, refuses admission: involuntary hospitalization"
   - best line (83%, table T3): High (imminent) | Frequent thoughts, specific plan, intent to act now, rehearsal, few protective factors | Inpatient hospitalization; involuntary if he refuses
   - claims: S004 "Plan with intent to act, or uncertain whether he will act  hospitalize, involuntarily if h"; S076 "Inpatient hospitalization; involuntary if he refuses"
-- d1 why: "Any discharge leaves an imminent plan untreated"
-  - best line (100%, item explanation): high, imminent risk with a rehearsed method and ongoing intent: if he refuses hospitalization, pursue involuntary admission under local law; any discharge leaves an imminent plan untreated
-  - claims: S080 "specific plan with imminent intent, rehearsal or preparation, or uncertain whether he will"
-- d2 why: "Any discharge leaves an imminent plan untreated"
-  - best line (100%, item explanation): high, imminent risk with a rehearsed method and ongoing intent: if he refuses hospitalization, pursue involuntary admission under local law; any discharge leaves an imminent plan untreated
-  - claims: S080 "specific plan with imminent intent, rehearsal or preparation, or uncertain whether he will"
+- d1 why: "A crisis line number leaves an imminent plan untreated"
+  - best line (57%, item explanation): high, imminent risk with a rehearsed method and ongoing intent: if he refuses hospitalization, pursue involuntary admission under local law; any discharge leaves an imminent plan untreated
+- d2 why: "Outpatient care tomorrow leaves an imminent plan untreated"
+  - best line (57%, item explanation): high, imminent risk with a rehearsed method and ongoing intent: if he refuses hospitalization, pursue involuntary admission under local law; any discharge leaves an imminent plan untreated
+  - claims: S036 "No plan and no intent; outpatient care, not admission"
 
 ## q_4bb51ed9  key: Safety plan and follow-up | d1: Inpatient hospitalization | d2: A signed no-suicide contract
 - key why: "No plan and no intent, protective factors: outpatient care"

@@ -37,7 +37,7 @@ Each reason: its best brief line (share of its content words found there) and up
   - claims: S126 "a QRS over 100 ms with hypotension in tricyclic poisoning calls for sodium bicarbonate; ph"; S003 "QRS width, not pupil size, bowel sounds or a drug level, predicts seizures and arrhythmia"; S125 "in tricyclic poisoning the QRS width predicts seizures and ventricular arrhythmia; drug le"
 
 ## q_f7a62d40  key: Physostigmine | d1: Sodium bicarbonate | d2: Benzodiazepine
-- key why: "Contraindicated once a tricyclic is involved: worsens cardiotoxicity"
+- key why: "Contraindicated once a tricyclic is involved: can worsen cardiotoxicity"
   - best line (100%, item explanation): physostigmine is contraindicated once a tricyclic is involved, because it can worsen cardiotoxicity; the wide QRS calls for bicarbonate and the agitation for a benzodiazepine
   - claims: S127 "physostigmine is contraindicated once a tricyclic is involved, because it can worsen cardi"; S025 "Physostigmine, a cholinesterase inhibitor, reverses anticholinergic toxicity, yet it is co"; S105 "Contraindicated with any sign of a tricyclic or a wide QRS, as it can worsen cardiotoxicit"
 - d1 why: "Indicated: QRS over 100 ms"

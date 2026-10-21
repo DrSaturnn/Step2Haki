@@ -1,0 +1,78 @@
+# s148h S5 round 1 reason fixes: brief	item prefix	slot	old	new	finding (lane, number, severity; A accept, P partial with the lead's wording)
+bipolar-mania	q_83176e58	d1	Suicide risk comes first; and no antidepressant alone	Hopeless and burdensome: suicide risk comes before any drug change	acc-A 1 HIGH A; flags-A 1 MED
+bipolar-mania	q_642294f7	d1	Marked impairment, psychosis or hospitalization; 1 week or more	Marked impairment, psychosis or hospitalization; 1 week or more unless hospitalized	acc-A 2 MED A; flags-A 2
+bipolar-mania	q_7dc58d2f	d1	Not "continue it and add a mood stabilizer"	Sertraline must stop in mania; adding quetiapine is not enough	acc-A 3, read 3 LOW P
+bipolar-mania	q_875af1ee	d1	Unsafe: he walked a roof claiming he can fly	Unsafe: he was found on a roof claiming he can fly	read 1 LOW A
+bipolar-mania	q_27f9ad04	d1	Maintenance runs for years, possibly lifelong	Even a slow taper ends maintenance that runs for years	read 2 LOW A
+bipolar-mania	q_e14998f0	d1	No improvement after 2 weeks at therapeutic levels: act now	No improvement after 2 weeks at therapeutic levels: check adherence, then change	flags-A 3 LOW A
+bipolar-mania	q_293aa90f	key	No antidepressant alone: risks a switch to mania	No antidepressant alone in most patients: risks a switch to mania	flags-A 4 LOW A
+psychosis-duration	q_29765c80	d2	1 or more core symptoms after a stressor; a manic episode explains these	1 or more core symptoms, often after a stressor; a manic episode explains these	acc-A 1 MED A; flags-A 2
+psychosis-duration	q_d6b532ef	key	1 or more core symptoms after a stressor; full return to baseline	Core symptoms after a marked stressor; full return to baseline within a month	acc-A 2 LOW A; flags-A 1 MED
+psychosis-duration	q_d94a444d	d2	Needs mania 1 week or more (any length if hospitalized)	Needs mania 1 week or more (any length if hospitalized); drug timing explains it	acc-A 3 LOW A
+psychosis-duration	q_20fb01b3	key	An antipsychotic for the psychosis; an SSRI added for the depression	An antipsychotic for the psychosis; an SSRI added if the depression needs it	flags-A 4 LOW A
+sz-psychosocial	q_4a4edd58	d2	Any reduction now risks relapse; continue the full dose	Improved on this dose; continue it rather than cut it now	acc-A 1 MED A
+sz-psychosocial	q_4a4edd58	d1	Off it, 65% to 80% relapse within 12 months	Off it after a first episode, 65% to 80% relapse within 12 months	flags-A 1 LOW A
+sz-psychosocial	q_4c64032d	d2	A danger to others now; a dose change cannot wait a week	Danger to others now cannot wait a week for a dose change	acc-A 2 LOW A
+sz-psychosocial	q_9bbca9be	d1	Not criticism, hostility or overinvolvement	A sibling at home is not criticism, hostility or overinvolvement	acc-A 3 LOW A
+sz-psychosocial	q_4f513743	d2	Poor adherence, not a failed drug; a switch fixes neither	Poor adherence, not a failed drug; a switch does not fix missed doses	acc-A 4, read 1 LOW A (read wording)
+cluster-b	q_1fe65106	d1	Under 18; he is 22	Conduct disorder is considered under 18; he is 22	read 1, flags-A 1 LOW A (flags wording)
+mdd	q_ce4c3eab	key	5 of 9 symptoms for 2 weeks, with impairment	5 of 9 including depressed mood or loss of interest, for 2 weeks, impaired	flags-A 1 LOW A
+mdd	q_3af979ba	key	2 weeks is not an adequate trial (4 to 6 weeks)	2 weeks is not an adequate trial (generally 4 to 6 weeks)	flags-A 2 LOW A
+mdd	q_3af979ba	d1	A higher dose only adds adverse effects	A higher dose is premature before an adequate trial	flags-A 3 LOW A
+mdd	q_0c602886	d1	In bulimia, fluoxetine: fewer binges, less vomiting	In bulimia, fluoxetine can reduce binges and vomiting	flags-A 4 LOW A
+mdd	q_77b8d708	d1	Too slow; not eating calls for ECT, the rapid response	Adding lithium is too slow when he is not eating	read 1 LOW A
+mdd	q_77b8d708	d2	Too slow; psychotic depression not eating needs ECT	Switching is too slow; psychotic depression not eating may need ECT	read 1, flags-A 5 LOW A (merged)
+panic	q_0a1dc4c6	d1	Severe hypertension in the episodes; BP normal here	Episodic headache, sweating, severe hypertension; none described here	acc-B 1 MED A
+panic	q_8f56600a	d2	Benzodiazepine short term only; not as the only treatment	Benzodiazepine only as a short-term bridge, never long term	acc-B 2 LOW A
+panic	q_25ccc443	d2	Too soon: continue 12 months, then taper	Stopping today is too soon; continue 12 months, then taper	read 1 LOW A
+panic	q_1c1f69ce	key	Preoccupation with a serious illness, at least 6 months; mild symptoms	Preoccupation with a serious illness, at least 6 months; mild or no symptoms	flags-A 1 LOW A
+panic	q_e3955a29	d2	No test makes the panic diagnosis; no standardized criteria	No test makes the panic diagnosis; lactate has no standardized criteria	flags-A 2 LOW A
+panic	q_0a1dc4c6	d2	No test makes the panic diagnosis; no standardized criteria	No test makes the panic diagnosis; lactate has no standardized criteria	flags-A 2 LOW A
+panic	q_b6fe551a	d1	No test makes the diagnosis; no standardized criteria	No test makes the diagnosis; lactate has no standardized criteria	flags-A 2 LOW A
+panic	q_f02353ec	key	Early activation: half the usual dose, raise about every 7 days	Early activation: half the usual dose for most, raise about every 7 days	flags-A 3 LOW A
+panic	q_a29e571a	d1	Half the usual dose; raise about every 7 days	Half the usual dose for most; raise about every 7 days	flags-A 4 LOW A
+somatic	q_acdd1fb9	d2	Findings exist only in her reports; the child is not the source	Needs a distressing symptom in the child; findings exist only in her reports	acc-B 1 LOW A
+somatic	q_d53df366	d2	Not deceiving; he limps only when watched	Somatic symptoms are not feigned; he limps only when watched	flags-A 1 note P
+gppd	q_3a7d844e	d2	Only after nonsurgical options fail, pain at the vestibule	May help vestibular pain after nonsurgical options fail; her swab is painless	acc-B 1, read 1, flags-A 2 LOW P (merged)
+gppd	q_0ee19d07	key	Levator ani contracts on attempted penetration	Levator ani typically contracts on attempted penetration	flags-A 3 LOW A
+delirium	q_7b50e870	d2	Highly anticholinergic, a Beers delirium class; not serotonergic	Diphenhydramine confuses through its anticholinergic effect, not serotonin excess	acc-B 1 MED P
+delirium	q_9a86fc1b	key	Look for the medical cause first	No new drugs, nonfocal examination: look for the medical cause first	acc-B 2 LOW A
+toxidrome	q_8f48c978	d1	Clonus, hyperreflexia, sweating; no clonus here	Clonus, hyperreflexia after a serotonergic drug; tinnitus and fast breathing fit aspirin	acc-B 1 LOW A
+toxidrome	q_cc182d77	d2	Hot, dry, flushed skin; ileus; she sweats with active bowel	Hot, dry, flushed skin; ileus; she sweats and has active bowel sounds	read 2 LOW A
+substance	q_5190130a	key	Nystagmus in any direction, vertical included, with violence: PCP	Vertical nystagmus with violence: PCP; a benzodiazepine is the preferred sedative	acc-B 1 LOW A
+substance	q_28f20c32	d2	Not the standard treatment for opioid withdrawal	A benzodiazepine treats alcohol or sedative withdrawal, not opioid withdrawal	acc-B 2 LOW A
+substance	q_81bec42c	key	Cyclical vomiting usually eased by warm showers, daily cannabis	Cyclical vomiting usually eased by hot showers, daily cannabis	read 1 LOW A
+psych-medical	*	*	Prevention option with more side effects; lower the dose first	Described for prevention, with more side effects; lower the dose first	acc-C 1 LOW P
+disruptive-behavior	*	*	Lies for gain, theft or truancy; none here	Adds deceit, theft or truancy; his outbursts are impulsive, not planned	acc-C 1 LOW A
+disruptive-behavior	*	*	Age 6 or older	Needs age 6 or older; he is 5	acc-C 2 LOW A
+disruptive-behavior	q_57977996	d1	When disruptive mood dysregulation disorder is met, not also diagnosed	Not also diagnosed when disruptive mood dysregulation disorder is met	read 1 LOW A
+disruptive-behavior	q_57977996	d2	Needs appropriate behavior between outbursts; he is irritable	Usually appropriate behavior between outbursts; he is irritable	flags-B 1 LOW P
+disruptive-behavior	q_cb685ea3	d1	Needs 3 or more in 12 months; she shows none	Needs 3 or more conduct behaviors in 12 months; she shows none	read 2 LOW P (behaviors, not categories: DSM counts 3 of 15 behaviors)
+ssri-effects	*	*	A new antidepressant for presumed relapse	Treats presumed relapse; symptoms 3 days after a stop are discontinuation	acc-C 1 LOW A
+ssri-effects	q_82d7	*	Fluoxetine also means fewer binges and less vomiting in bulimia	Fluoxetine can also reduce binges and vomiting in bulimia	flags-B 1 LOW A
+ssri-effects	q_5568	*	Fluoxetine is for a slow taper that is poorly tolerated	Fluoxetine may replace a drug whose slow taper is poorly tolerated	flags-B 2 LOW A
+ssri-effects	q_1459	*	Builds over 1 to 3 days; slow reflexes, rigidity	Builds over 1 to 3 days or longer; slow reflexes, rigidity	flags-B 3 LOW A
+antipsych-effects	q_45e13940	d1	No headache, full visual fields: no mass effect	Risperidone explains it; no headache or field cut of a large adenoma	acc-C 1 HIGH A
+antipsych-effects	q_5767bd34	key	Antiemetics such as metoclopramide can cause acute dystonia	Metoclopramide caused acute dystonia: a parenteral anticholinergic relieves it	acc-C 2 LOW A
+antipsych-effects	q_5767	d1	Needs paresthesia, hyperreflexia and a cause such as neck surgery	Hypocalcemia brings paresthesia and hyperreflexia, plus a cause such as neck surgery	flags-B 1 LOW A
+lithium-effects	q_1b553293	d1	Not part of lithium monitoring	Blood count and liver enzymes are not part of lithium monitoring	acc-C 1, read 1 LOW A (read wording)
+lithium-effects	q_1b553293	d2	Not part of lithium monitoring	Hemoglobin A1c and lipid panel are not part of lithium monitoring	acc-C 1, read 1 LOW A (read wording)
+lithium-effects	q_fa69616f	d2	The kidney is its only real exit; not absorption	Dose stable for years; the thiazide acts on renal reabsorption	acc-C 2 LOW A
+lithium-effects	*	*	Needs high sodium with dilute urine; urine 520	Needs dilute urine; urine osmolality 520 is concentrated	acc-C 3, read 3 LOW A (acc wording)
+lithium-effects	*	*	Needs high sodium with dilute urine; urine 480	Needs dilute urine; urine osmolality 480 is concentrated	acc-C 3 LOW A
+lithium-effects	*	*	Recent large ingestion; he took his usual dose	Needs a recent large ingestion; none is described	read 4 LOW A
+lithium-effects	q_2ea2	key	NSAIDs raise the lithium level	NSAIDs other than aspirin or sulindac raise the lithium level	flags-B 2 LOW A
+lithium-effects	q_182e	key	Alert, kidneys working, level under 2.5: no dialysis criterion	Alert, kidneys working, level 2.5 or under: no dialysis criterion	flags-B 3 LOW A
+tca-tox	q_f7a6	key	Contraindicated once a tricyclic is involved: worsens cardiotoxicity	Contraindicated once a tricyclic is involved: can worsen cardiotoxicity	flags-B 1 LOW A
+suicide-risk	q_3c2b005b	d1	Any discharge leaves an imminent plan untreated	A crisis line number leaves an imminent plan untreated	acc-D 1, read 1 LOW A (read wording)
+suicide-risk	q_3c2b005b	d2	Any discharge leaves an imminent plan untreated	Outpatient care tomorrow leaves an imminent plan untreated	acc-D 1, read 1 LOW A (read wording)
+ipv	q_bf0703ef	d2	Platelets normal; no bleeding disorder	Lower-abdominal bruises in pregnancy point to abuse, not a bleeding disorder	acc-D 1 HIGH P (no platelet rule)
+ipv	q_9afa95fc	d2	Screening is for every woman of reproductive age	Reproductive age, not pregnancy, triggers screening; she qualifies now	acc-D 2 LOW A
+tics	q_680ca34e	d2	Treats the ADHD; tics can emerge or worsen on it	No ADHD here; a stimulant does not treat tics	acc-D 1 MED A; read 1 LOW
+tics	q_c04a5b7c	d2	Excessive worry about a number of events; no compulsion	Contamination thoughts relieved by handwashing are obsessions, not general worry	acc-D 2 MED P
+tics	q_6c20bd31	d1	Alpha-2 agonist first for milder tics	Alpha-2 agonist for milder tics, especially with ADHD	flags-B 1 LOW A
+peds-sleep	q_653afa18	d2	Come early from NREM sleep, with no memory	Usually arise early in the night from NREM sleep, with no memory	read 1, flags-B 1 LOW A (merged)
+peds-sleep	q_a4d9	key	Usually the first half; terror with an autonomic surge, not comforted	Usually the first half; terror, often with an autonomic surge, not comforted	flags-B 2 LOW A
+peds-sleep	q_26f8	d1	Never shorten sleep	Increase total sleep time; do not shorten it	flags-B 3 LOW A
+bs-learning	q_561337b4	d2	Mania: episodes with a start and an end, not chronic anger	Mania is a distinct period of elevated mood, not chronic anger	acc-D 2 MED P (AnKing nid 1484792509579 "a distinct period")
+bs-learning	q_332bfce4	d1	Behavior is downstream of an academic problem	A stimulant treats ADHD; this behavior tracks an academic deficit	acc-D 4 LOW A

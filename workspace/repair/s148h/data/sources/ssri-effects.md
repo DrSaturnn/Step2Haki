@@ -52,8 +52,8 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "Mirtazapine: fewer sexual adverse effects than SSRIs"
   - best line (100%, table T2): A switch is needed, but bulimia or seizure risk | Mirtazapine: fewer sexual adverse effects than SSRIs (watch appetite and weight gain) | Bupropion: contraindicated
   - claims: S092 "Mirtazapine: fewer sexual adverse effects than SSRIs (watch appetite and weight gain)"; S004 "Fewer sexual adverse effects than SSRIs; drowsiness, a bigger appetite and weight gain."
-- d2 why: "Fluoxetine also means fewer binges and less vomiting in bulimia"
-  - best line (33%, table T2): A switch is needed, but bulimia or seizure risk | Mirtazapine: fewer sexual adverse effects than SSRIs (watch appetite and weight gain) | Bupropion: contraindicated
+- d2 why: "Fluoxetine can also reduce binges and vomiting in bulimia"
+  - best line (33%, item stem): 24-year-old woman with bulimia nervosa one depressive episode, in remission on fluoxetine after a dose reduction, desire still low and distressing wants to stay on an antidepressant BMI (body mass index) 21 kg/m² · HR 66
   - claims: S024 "Bulimia nervosa: fluoxetine cuts binges and vomiting"
 
 ## q_d825fd2c  key: SSRI discontinuation syndrome | d1: Relapse of major depressive disorder | d2: Serotonin syndrome
@@ -74,9 +74,9 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "He prefers to stay off; restarting is optional"
   - best line (40%, item explanation): with other serious causes unlikely (afebrile, normal reflexes, no clonus), discontinuation symptoms after an abrupt stop: begin with reassurance that they are reversible and run their course in 1 to 2 weeks; restarting w
   - claims: S112 "Then consider a restart with a slow taper, or support if the patient prefers not to restar"
-- d2 why: "A new antidepressant for presumed relapse"
-  - best line (100%, table T2): FINISH symptoms days after a stop | Exclude other serious causes, then reassure (ladder below) | A new antidepressant for presumed relapse
-  - claims: S096 "A new antidepressant for presumed relapse"; S081 "The bait: FINISH symptoms 2 days after a stop offered as relapse, so a new antidepressant "; S054 "New suicidal thoughts or clinical worsening on an antidepressant"
+- d2 why: "Treats presumed relapse; symptoms 3 days after a stop are discontinuation"
+  - best line (67%, table T1): Discontinuation syndrome | FINISH symptoms, electric-shock sensations after a stop, taper or missed dose | Typically within 3 days ; gone in 1 to 2 weeks; clonus or hyperreflexia point to serotonin syndrome instead
+  - claims: S015 "FINISH symptoms typically within 3 days of a stop or taper  discontinuation; relapse typic"; S081 "The bait: FINISH symptoms 2 days after a stop offered as relapse, so a new antidepressant "; S042 "Discontinuation typically within 3 days, over in 1 to 2 weeks; relapse typically 2 to 3 we"
 
 ## q_5568d24b  key: Resume 40 mg and taper more slowly | d1: Stop the remaining paroxetine now | d2: Substitute fluoxetine for paroxetine
 - key why: "Symptoms during a taper: restart the dose, taper more slowly"
@@ -85,9 +85,9 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "An SSRI is tapered, not stopped abruptly"
   - best line (50%, table T3): Remission of a first episode | Continue about 6 more months at the dose that brought remission, then taper gradually, typically over 6 to 8 weeks (about 2 months) | Lowering or stopping sooner raises the risk of relapse 
   - claims: S105 "Consider stopping, by taper"; S106 "Taper gradually, typically over 6 to 8 weeks; never stop abruptly."
-- d2 why: "Fluoxetine is for a slow taper that is poorly tolerated"
-  - best line (100%, item explanation): symptoms during a taper: consider restarting the original dose and tapering more slowly; fluoxetine is for a slow taper that is poorly tolerated
-  - claims: S116 "a slow taper is poorly tolerated"; S038 "Shorter half-life  more withdrawal: paroxetine most, fluoxetine least  fluoxetine may repl"; S112 "Then consider a restart with a slow taper, or support if the patient prefers not to restar"
+- d2 why: "Fluoxetine may replace a drug whose slow taper is poorly tolerated"
+  - best line (56%, item explanation): symptoms during a taper: consider restarting the original dose and tapering more slowly; fluoxetine is for a slow taper that is poorly tolerated
+  - claims: S038 "Shorter half-life  more withdrawal: paroxetine most, fluoxetine least  fluoxetine may repl"; S116 "a slow taper is poorly tolerated"
 
 ## q_25d04799  key: Switch to fluoxetine, then stop | d1: Stop paroxetine abruptly | d2: Repeat the 8-week paroxetine taper
 - key why: "Slow taper poorly tolerated: fluoxetine's long half-life"
@@ -104,8 +104,8 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Clonus, hyperreflexia, mydriasis within hours of adding tramadol"
   - best line (100%, item explanation): tramadol added to an SSRI, then clonus, hyperreflexia and mydriasis within hours; neuroleptic malignant syndrome builds over days with lead-pipe rigidity and slow reflexes
   - claims: S014 "Clonus  hyperreflexia  mydriasis within hours of adding or raising a serotonergic drug  se"; S052 "clonus and hyperreflexia appear within hours of adding or raising a serotonergic drug"; S136 "Watch for clonus and hyperreflexia within hours of the change; avoid St John's wort"
-- d1 why: "Builds over 1 to 3 days; slow reflexes, rigidity"
-  - best line (100%, table T1): Neuroleptic malignant syndrome (antipsychotic) | On an antipsychotic: fever, rigidity, altered mental status, autonomic instability, ↑ CK (creatine kinase) | Days to weeks after an antipsychotic change ; builds over 1 to
+- d1 why: "Builds over 1 to 3 days or longer; slow reflexes, rigidity"
+  - best line (88%, table T1): Neuroleptic malignant syndrome (antipsychotic) | On an antipsychotic: fever, rigidity, altered mental status, autonomic instability, ↑ CK (creatine kinase) | Days to weeks after an antipsychotic change ; builds over 1 to
   - claims: S074 "Days to weeks after an antipsychotic change; builds over 1 to 3 days; slow reflexes, rigid"; S009 "Typically within 3 days of a stop; gone in 1 to 2 weeks"; S037 "Reflexes split the two toxic syndromes: clonus and hyperreflexia in serotonin syndrome; sl"
 - d2 why: "Clonus or hyperreflexia point to serotonin syndrome instead"
   - best line (100%, table T1): Discontinuation syndrome | FINISH symptoms, electric-shock sensations after a stop, taper or missed dose | Typically within 3 days ; gone in 1 to 2 weeks; clonus or hyperreflexia point to serotonin syndrome instead

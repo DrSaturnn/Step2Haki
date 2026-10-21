@@ -42,13 +42,13 @@ Each reason: its best brief line (share of its content words found there) and up
   - claims: S050 "Review every drug first (anticholinergic, opioid, benzodiazepine; meperidine and tramadol "; S121 "A highly anticholinergic drug"
 - d1 why: "Highly anticholinergic: that effect, not histamine block, confuses"
   - best line (33%, table T2): A new first-generation antihistamine for sleep | A highly anticholinergic drug | Stop it
-- d2 why: "Highly anticholinergic, a Beers delirium class; not serotonergic"
-  - best line (83%, item explanation): first-generation antihistamines are highly anticholinergic, a Beers delirium class
+- d2 why: "Diphenhydramine confuses through its anticholinergic effect, not serotonin excess"
+  - best line (29%, item stem): 81-year-old woman in the hospital for cellulitis given diphenhydramine for sleep last evening, her first dose overnight: confused, picks at the air T 37.4 °C · HR 104/min · BP 136/80 · inattentive · oriented to person on
 
 ## q_9a86fc1b  key: CBC, metabolic panel and urinalysis | d1: CT of the head without contrast | d2: Electroencephalography
-- key why: "Look for the medical cause first"
-  - best line (100%, item explanation): look for the medical cause first; imaging is not routine without focal signs
-  - claims: S042 "Almost never impaired; altered consciousness suggests a medical cause"; S043 "Disorientation suggests a medical cause"; S054 "A physiological cause: medical illness, medication, substance intoxication or withdrawal, "
+- key why: "No new drugs, nonfocal examination: look for the medical cause first"
+  - best line (43%, table T1): Delirium | Inattention, disorientation, visual hallucinations or delusions | Hours to a few days , fluctuating through the day; evidence of a medical, drug or withdrawal cause
+  - claims: S092 "Hours to a few days, fluctuating through the day; evidence of a medical, drug or withdrawa"; S096 "brief psychotic disorder starts suddenly, but a medical or drug cause rules it out"
 - d1 why: "Imaging not routine without focal signs"
   - best line (100%, item explanation): look for the medical cause first; imaging is not routine without focal signs
   - claims: S028 "Routine head CT: order it only for the indications above; a focal sign best predicts an ab"; S014 "New focal sign, head trauma, suspected subarachnoid hemorrhage, no cause found, or no impr"; S084 "New focal sign or head trauma"

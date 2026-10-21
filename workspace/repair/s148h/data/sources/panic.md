@@ -59,7 +59,7 @@ Each reason: its best brief line (share of its content words found there) and up
   - claims: S100 "Excessive worry about a number of events, hard to control"; S052 "Recurrent unexpected attacks  worry about more of them or avoidance of their triggers"; S062 "Worry about the next attack "
 
 ## q_1c1f69ce  key: Illness anxiety disorder | d1: Panic disorder | d2: Generalized anxiety disorder
-- key why: "Preoccupation with a serious illness, at least 6 months; mild symptoms"
+- key why: "Preoccupation with a serious illness, at least 6 months; mild or no symptoms"
   - best line (100%, table T1): Illness anxiety disorder (hypochondriasis) | Preoccupation with having or getting a serious illness; mild or no symptoms | At least 6 months ; persistent, while panic is typically acute and episodic
   - claims: S105 "Preoccupation with having or getting a serious illness; mild or no symptoms"; S072 "Most relapse even after a symptom-free period; only about 60% remit within 6 months"; S101 "Often presents in primary care with fatigue, muscle tension with pain (headache; neck, sho"
 - d1 why: "Needs recurrent unexpected attacks; panic is acute and episodic"
@@ -86,27 +86,27 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "Regular, abrupt on and off; ECG for arrhythmia"
   - best line (100%, table T1): SVT (supraventricular tachycardia) or another arrhythmia | Regular fast palpitations; abrupt start, abrupt stop | Regular, abrupt on and off; ECG ideally during an episode; Holter or event monitoring may be needed
   - claims: S121 "Regular, abrupt on and off; ECG ideally during an episode; Holter or event monitoring may "; S074 "Regular, abrupt on and off: SVT (supraventricular tachycardia) may be misread as panic"; S120 "Regular fast palpitations; abrupt start, abrupt stop"
-- d2 why: "No test makes the panic diagnosis; no standardized criteria"
-  - best line (17%, table T1): Panic disorder | Recurrent unexpected attacks peaking within minutes | 1 month or more of worry about more attacks or a behavior change
-  - claims: S021 "No test makes the diagnosis. Sodium lactate can provoke attacks, but the test has no stand"; S050 "Recurrent unexpected attacks  1 month or more of worry or behavior change  panic disorder;"; S066 "Lactate can provoke attacks in panic disorder more often than in healthy people, but with "
+- d2 why: "No test makes the panic diagnosis; lactate has no standardized criteria"
+  - best line (14%, table T1): Panic disorder | Recurrent unexpected attacks peaking within minutes | 1 month or more of worry about more attacks or a behavior change
+  - claims: S021 "No test makes the diagnosis. Sodium lactate can provoke attacks, but the test has no stand"; S066 "Lactate can provoke attacks in panic disorder more often than in healthy people, but with "; S134 "The bait: a lactate challenge offered to confirm panic disorder; no test confirms it, and "
 
 ## q_0a1dc4c6  key: Electrocardiogram | d1: Plasma free metanephrines | d2: Sodium lactate infusion challenge
 - key why: "Abrupt start, abrupt stop: ECG before calling them panic attacks"
   - best line (88%, table T2): Palpitations that start and stop abruptly, regular and fast | SVT or preexcitation | ECG before calling them panic attacks
   - claims: S130 "ECG before calling them panic attacks"; S120 "Regular fast palpitations; abrupt start, abrupt stop"; S136 "recurrent unexpected panic attacks; each an abrupt surge of intense fear or discomfort, pe"
-- d1 why: "Severe hypertension in the episodes; BP normal here"
-  - best line (60%, table T1): Pheochromocytoma | Episodic headache, sweating, racing heart | Severe hypertension in the episodes; ↑ plasma free metanephrines
-  - claims: S017 "Severe hypertension during the episodes"; S078 "Severe hypertension during the episodes"; S118 "Severe hypertension in the episodes; ↑ plasma free metanephrines"
-- d2 why: "No test makes the panic diagnosis; no standardized criteria"
-  - best line (17%, table T1): Panic disorder | Recurrent unexpected attacks peaking within minutes | 1 month or more of worry about more attacks or a behavior change
-  - claims: S021 "No test makes the diagnosis. Sodium lactate can provoke attacks, but the test has no stand"; S050 "Recurrent unexpected attacks  1 month or more of worry or behavior change  panic disorder;"; S066 "Lactate can provoke attacks in panic disorder more often than in healthy people, but with "
+- d1 why: "Episodic headache, sweating, severe hypertension; none described here"
+  - best line (83%, table T1): Pheochromocytoma | Episodic headache, sweating, racing heart | Severe hypertension in the episodes; ↑ plasma free metanephrines
+  - claims: S125 "Severe hypertension with headache and sweating in spells"; S117 "Episodic headache, sweating, racing heart"
+- d2 why: "No test makes the panic diagnosis; lactate has no standardized criteria"
+  - best line (14%, table T1): Panic disorder | Recurrent unexpected attacks peaking within minutes | 1 month or more of worry about more attacks or a behavior change
+  - claims: S021 "No test makes the diagnosis. Sodium lactate can provoke attacks, but the test has no stand"; S066 "Lactate can provoke attacks in panic disorder more often than in healthy people, but with "; S134 "The bait: a lactate challenge offered to confirm panic disorder; no test confirms it, and "
 
 ## q_b6fe551a  key: Sertraline at a low starting dose and CBT | d1: Referral for a sodium lactate infusion challenge | d2: 24-hour Holter monitoring
 - key why: "Criteria met, mimics excluded: SSRI at half dose, with CBT"
   - best line (50%, item explanation): criteria are met and the mimics are excluded; no test makes the diagnosis, and a lactate challenge has no standardized criteria
-- d1 why: "No test makes the diagnosis; no standardized criteria"
+- d1 why: "No test makes the diagnosis; lactate has no standardized criteria"
   - best line (100%, item explanation): criteria are met and the mimics are excluded; no test makes the diagnosis, and a lactate challenge has no standardized criteria
-  - claims: S021 "No test makes the diagnosis. Sodium lactate can provoke attacks, but the test has no stand"; S050 "Recurrent unexpected attacks  1 month or more of worry or behavior change  panic disorder;"; S066 "Lactate can provoke attacks in panic disorder more often than in healthy people, but with "
+  - claims: S021 "No test makes the diagnosis. Sodium lactate can provoke attacks, but the test has no stand"; S066 "Lactate can provoke attacks in panic disorder more often than in healthy people, but with "; S134 "The bait: a lactate challenge offered to confirm panic disorder; no test confirms it, and "
 - d2 why: "ECG already normal; no test makes the diagnosis"
   - best line (50%, item explanation): criteria are met and the mimics are excluded; no test makes the diagnosis, and a lactate challenge has no standardized criteria
   - claims: S021 "No test makes the diagnosis. Sodium lactate can provoke attacks, but the test has no stand"; S050 "Recurrent unexpected attacks  1 month or more of worry or behavior change  panic disorder;"
@@ -123,7 +123,7 @@ Each reason: its best brief line (share of its content words found there) and up
   - claims: S172 "Propranolol is not recommended for panic disorder"; S023 "Panic disorder"; S031 "meets panic disorder too? Give both diagnoses"
 
 ## q_f02353ec  key: Lower the dose, then raise it slowly | d1: Stop sertraline and start buspirone | d2: Add propranolol and continue the dose
-- key why: "Early activation: half the usual dose, raise about every 7 days"
+- key why: "Early activation: half the usual dose for most, raise about every 7 days"
   - best line (100%, table T3): Starting the SSRI | For most, half the usual depression starting dose; raise about every 7 days | Early activation makes many patients stop it
   - claims: S159 "For most, half the usual depression starting dose; raise about every 7 days"
 - d1 why: "Buspirone does not appear effective for panic disorder"
@@ -140,15 +140,15 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "Too early to switch: 2 weeks at a low dose"
   - best line (57%, table T4): Little change after 2 weeks at a low dose | Raise the dose; not ineffective until at least 4 weeks at the high end of the range
   - claims: S189 "Little change after 2 weeks at a low dose"
-- d2 why: "Benzodiazepine short term only; not as the only treatment"
-  - best line (100%, table T3): Severe symptoms before the SSRI works | A longer-acting benzodiazepine such as clonazepam as a bridge | Short term only; not as the only treatment
-  - claims: S051 "CBT (cognitive behavioral therapy) with exposure, an SSRI (selective serotonin reuptake in"; S154 "The Canadian guideline lists benzodiazepines as second line. On the exam, use one only as "; S162 "A benzodiazepine, short term"
+- d2 why: "Benzodiazepine only as a short-term bridge, never long term"
+  - best line (67%, table T3): Acute attack or acute distress | A benzodiazepine, short term | Then an SSRI with CBT for the long term
+  - claims: S154 "The Canadian guideline lists benzodiazepines as second line. On the exam, use one only as "; S051 "CBT (cognitive behavioral therapy) with exposure, an SSRI (selective serotonin reuptake in"; S162 "A benzodiazepine, short term"
 
 ## q_a29e571a  key: A benzodiazepine for the first weeks | d1: Double the sertraline dose today | d2: Buspirone added to sertraline
 - key why: "Severe symptoms before the SSRI works: longer-acting benzodiazepine bridge"
   - best line (100%, table T3): Severe symptoms before the SSRI works | A longer-acting benzodiazepine such as clonazepam as a bridge | Short term only; not as the only treatment
   - claims: S164 "Severe symptoms before the SSRI works"; S145 "acute distress, or severe, disabling symptoms before the antidepressant works"; S165 "A longer-acting benzodiazepine such as clonazepam as a bridge"
-- d1 why: "Half the usual dose; raise about every 7 days"
+- d1 why: "Half the usual dose for most; raise about every 7 days"
   - best line (100%, table T3): Starting the SSRI | For most, half the usual depression starting dose; raise about every 7 days | Early activation makes many patients stop it
   - claims: S159 "For most, half the usual depression starting dose; raise about every 7 days"
 - d2 why: "Buspirone does not appear effective for panic disorder"
@@ -173,7 +173,7 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "Too soon: continue 12 months before tapering"
   - best line (71%, item explanation): once symptoms improve, continue the drug for 12 months before tapering to limit relapse
   - claims: S192 "Continue the drug for 12 months, then taper, to limit relapse; most have a recurrence even"
-- d2 why: "Too soon: continue 12 months, then taper"
-  - best line (67%, table T4): Symptoms improved | Continue the drug for 12 months, then taper, to limit relapse; most have a recurrence even after a symptom-free period
+- d2 why: "Stopping today is too soon; continue 12 months, then taper"
+  - best line (50%, table T4): Symptoms improved | Continue the drug for 12 months, then taper, to limit relapse; most have a recurrence even after a symptom-free period
   - claims: S192 "Continue the drug for 12 months, then taper, to limit relapse; most have a recurrence even"
 

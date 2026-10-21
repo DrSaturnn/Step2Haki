@@ -18,15 +18,15 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Long-term user, dehydration; neurologic findings lead"
   - best line (100%, table T1): Chronic toxicity | Long-term user; new thiazide, NSAID, ACE inhibitor or ARB, or dehydration | Neurologic findings lead ; ↑ level (after a thiazide it usually rises within 10 days)
   - claims: S070 "Long-term user; new thiazide, NSAID, ACE inhibitor or ARB, or dehydration"; S071 "Neurologic findings lead; ↑ level (after a thiazide it usually rises within 10 days)"
-- d1 why: "Needs high sodium with dilute urine; urine 520"
-  - best line (60%, table T1): Nephrogenic diabetes insipidus | Thirst, polyuria; confusion with dehydration | Years of use ; ↑ sodium with dilute urine; little or no desmopressin response
-  - claims: S007 "Sodium ↑, urine dilute"; S022 "↑ sodium  dilute urine after years of use  nephrogenic diabetes insipidus: restore volume;"; S054 "sodium is ↑ and the urine dilute"
-- d2 why: "Recent large ingestion; he took his usual dose"
-  - best line (50%, table T1): Acute toxicity | Recent large ingestion | Soon after ingestion : nausea, vomiting, diarrhea often come first; ↑ level
-  - claims: S048 "Recent large ingestion; alert, kidneys working, level ≤2.5 mmol/L"; S073 "Recent large ingestion"
+- d1 why: "Needs dilute urine; urine osmolality 520 is concentrated"
+  - best line (60%, table T1): Primary polydipsia | Polyuria with dilute urine; especially common in psychiatric patients | Sodium usually ↓, not ↑ ; urine concentrates >600 mOsm/kg after water deprivation
+  - claims: S003 "Serum sodium and urine osmolality"; S007 "Sodium ↑, urine dilute"; S019 "Urine osmolality rises little (usually <50 mOsm/kg) or not at all"
+- d2 why: "Needs a recent large ingestion; none is described"
+  - best line (75%, table T1): Acute toxicity | Recent large ingestion | Soon after ingestion : nausea, vomiting, diarrhea often come first; ↑ level
+  - claims: S048 "Recent large ingestion; alert, kidneys working, level ≤2.5 mmol/L"; S073 "Recent large ingestion"; S088 "Soon after a large ingestion"
 
 ## q_182e22e5  key: IV isotonic fluids and serial lithium levels | d1: Activated charcoal and serial lithium levels | d2: Urgent hemodialysis
-- key why: "Alert, kidneys working, level under 2.5: no dialysis criterion"
+- key why: "Alert, kidneys working, level 2.5 or under: no dialysis criterion"
   - best line (100%, item explanation): alert, kidneys working and level under 2.5 mmol/L: no dialysis criterion is met; lithium does not bind charcoal
   - claims: S048 "Recent large ingestion; alert, kidneys working, level ≤2.5 mmol/L"; S104 "toxicity with nausea, diarrhea, a coarse tremor, ataxia, slurred speech or an unsteady gai"; S044 ">4.0 mmol/L with impaired kidney function (creatinine >2.0 mg/dL); >2.5 mmol/L with promin"
 - d1 why: "Lithium does not bind charcoal"
@@ -53,12 +53,11 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "The kidney is its only real exit"
   - best line (100%, item explanation): a thiazide increases renal reabsorption of lithium, which is handled like sodium; the kidney is its only real exit
   - claims: S025 "Handled like sodium; the kidney is its only real exit"
-- d2 why: "The kidney is its only real exit; not absorption"
-  - best line (75%, item explanation): a thiazide increases renal reabsorption of lithium, which is handled like sodium; the kidney is its only real exit
-  - claims: S025 "Handled like sodium; the kidney is its only real exit"
+- d2 why: "Dose stable for years; the thiazide acts on renal reabsorption"
+  - best line (43%, item explanation): a thiazide increases renal reabsorption of lithium, which is handled like sodium; the kidney is its only real exit
 
 ## q_2ea25399  key: Oral naproxen, taken daily | d1: Oral acetaminophen, as needed | d2: Supervised physical therapy
-- key why: "NSAIDs raise the lithium level"
+- key why: "NSAIDs other than aspirin or sulindac raise the lithium level"
   - best line (100%, table T3): Nephrogenic diabetes insipidus | Stop lithium if possible, then restrict salt. If lithium must continue, amiloride may be used instead of salt restriction, since a low-sodium diet would raise the level | A thiazide, or a
   - claims: S110 "A thiazide, or an NSAID other than aspirin or sulindac, without close levels: both raise t"; S026 "Thiazide, NSAID (nonsteroidal anti-inflammatory drug), ACE (angiotensin-converting enzyme)"; S109 "Stop lithium if possible, then restrict salt. If lithium must continue, amiloride may be u"
 - d1 why: "Acetaminophen does not raise the level"
@@ -108,16 +107,16 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "Needs high TSH with low free thyroxine, or TSH over 10"
   - best line (67%, table T1): Hypothyroidism | Tiredness, cold intolerance, mental fogginess | Usually within 1 to 2 years ; ↑ TSH with ↓ free thyroxine, or TSH >10 μU/mL
   - claims: S065 "Usually within 1 to 2 years; ↑ TSH with ↓ free thyroxine, or TSH >10 μU/mL"; S138 "Recheck in 4 to 6 months; add levothyroxine once free thyroxine falls or TSH >10 μU/mL; a "; S004 "TSH and free thyroxine"
-- d2 why: "Needs high sodium with dilute urine; urine 480"
-  - best line (60%, table T1): Nephrogenic diabetes insipidus | Thirst, polyuria; confusion with dehydration | Years of use ; ↑ sodium with dilute urine; little or no desmopressin response
-  - claims: S007 "Sodium ↑, urine dilute"; S022 "↑ sodium  dilute urine after years of use  nephrogenic diabetes insipidus: restore volume;"; S054 "sodium is ↑ and the urine dilute"
+- d2 why: "Needs dilute urine; urine osmolality 480 is concentrated"
+  - best line (60%, table T1): Primary polydipsia | Polyuria with dilute urine; especially common in psychiatric patients | Sodium usually ↓, not ↑ ; urine concentrates >600 mOsm/kg after water deprivation
+  - claims: S003 "Serum sodium and urine osmolality"; S007 "Sodium ↑, urine dilute"; S019 "Urine osmolality rises little (usually <50 mOsm/kg) or not at all"
 
 ## q_1b553293  key: Lithium level, creatinine, TSH and calcium | d1: Complete blood count and liver enzymes | d2: Hemoglobin A1c and lipid panel
 - key why: "Level, creatinine, TSH every 6 to 12 months; calcium yearly"
   - best line (100%, item explanation): level, electrolytes, creatinine and TSH every 6 to 12 months; calcium yearly
   - claims: S120 "Every 6 to 12 months"; S131 "Every 6 to 12 months"
-- d1 why: "Not part of lithium monitoring"
-  - best line (33%, table T1): Hyperparathyroidism, hypercalcemia | ↑ calcium on routine labs | Years of lithium ; ↑ calcium on the yearly check, then ↑ PTH (parathyroid hormone)
-- d2 why: "Not part of lithium monitoring"
-  - best line (33%, table T1): Hyperparathyroidism, hypercalcemia | ↑ calcium on routine labs | Years of lithium ; ↑ calcium on the yearly check, then ↑ PTH (parathyroid hormone)
+- d1 why: "Blood count and liver enzymes are not part of lithium monitoring"
+  - best line (14%, table T1): Hyperparathyroidism, hypercalcemia | ↑ calcium on routine labs | Years of lithium ; ↑ calcium on the yearly check, then ↑ PTH (parathyroid hormone)
+- d2 why: "Hemoglobin A1c and lipid panel are not part of lithium monitoring"
+  - best line (14%, table T1): Hyperparathyroidism, hypercalcemia | ↑ calcium on routine labs | Years of lithium ; ↑ calcium on the yearly check, then ↑ PTH (parathyroid hormone)
 

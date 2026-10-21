@@ -85,8 +85,9 @@ Each reason: its best brief line (share of its content words found there) and up
   - claims: S059 "Lower-abdominal bruises in pregnancy"
 - d1 why: "Story does not fit; second injury visit in 2 months"
   - best line (62%, item stem): 23-year-old woman, 20 weeks, unplanned pregnancy lower-abdominal bruises; says she walked into a table second injury visit in 2 months partner answers for her No alcohol or drug use HR 88/min · platelets 250,000/mm³ · fe
-- d2 why: "Platelets normal; no bleeding disorder"
-  - best line (25%, item stem): 23-year-old woman, 20 weeks, unplanned pregnancy lower-abdominal bruises; says she walked into a table second injury visit in 2 months partner answers for her No alcohol or drug use HR 88/min · platelets 250,000/mm³ · fe
+- d2 why: "Lower-abdominal bruises in pregnancy point to abuse, not a bleeding disorder"
+  - best line (50%, table T2): Lower-abdominal bruises in pregnancy | Partner violence, which often begins or increases in pregnancy | Ask her alone about safety
+  - claims: S059 "Lower-abdominal bruises in pregnancy"
 
 ## q_7ce401bb  key: Raising the arms to shield the face and torso | d1: Landing on outstretched hands in a fall | d2: Striking furniture while falling
 - key why: "Forearm bruises: defensive movements during an attack"
@@ -116,7 +117,7 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "Screening is for every woman of reproductive age"
   - best line (60%, item explanation): the USPSTF recommends screening women of reproductive age (grade B); screening often uses a brief questionnaire, asked in a private and safe setting
   - claims: S051 "Woman of reproductive age, including pregnancy and after delivery"
-- d2 why: "Screening is for every woman of reproductive age"
-  - best line (60%, item explanation): the USPSTF recommends screening women of reproductive age (grade B); screening often uses a brief questionnaire, asked in a private and safe setting
+- d2 why: "Reproductive age, not pregnancy, triggers screening; she qualifies now"
+  - best line (50%, item explanation): the USPSTF recommends screening women of reproductive age (grade B); screening often uses a brief questionnaire, asked in a private and safe setting
   - claims: S051 "Woman of reproductive age, including pregnancy and after delivery"
 

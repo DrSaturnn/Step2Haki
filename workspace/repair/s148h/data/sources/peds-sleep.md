@@ -10,14 +10,14 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "Usually the first half; not comforted; no memory"
   - best line (100%, table T2): Sleep terrors (night terrors) | Sits up screaming; no memory | Usually the first half, most often the first third ; terror, often with an autonomic surge, not comforted Seen at ages 2 to 12, peak at 5 to 7
   - claims: S089 "Usually the first half, NREM  confused or terrified, may sweat with a fast pulse, unrespon"; S111 "Usually the first half, most often the first third; terror, often with an autonomic surge,"; S119 "Confusional arousals: eyes open or closed, no memory; usually the first half of the night;"
-- d2 why: "Come early from NREM sleep, with no memory"
-  - best line (100%, item explanation): late in the night, fully awake, recalls the dream and can be comforted: REM nightmares; sleep terrors and confusional arousals come early from NREM sleep with no memory
+- d2 why: "Usually arise early in the night from NREM sleep, with no memory"
+  - best line (71%, item explanation): late in the night, fully awake, recalls the dream and can be comforted: REM nightmares; sleep terrors and confusional arousals come early from NREM sleep with no memory
   - claims: S082 "Usually early, unresponsive, no memory  NREM (non-rapid eye movement) arousal: sleep terro"; S003 "Cycles of about 90 minutes, 4 to 6 a night; deep sleep early, REM periods lengthen toward "; S010 "REM comes sooner and fills more of the night; less deep sleep; wakes early"
 
 ## q_a4d9e5d0  key: Sleep terrors | d1: Nightmares | d2: Nocturnal seizures
-- key why: "Usually the first half; terror with an autonomic surge, not comforted"
+- key why: "Usually the first half; terror, often with an autonomic surge, not comforted"
   - best line (100%, table T2): Sleep terrors (night terrors) | Sits up screaming; no memory | Usually the first half, most often the first third ; terror, often with an autonomic surge, not comforted Seen at ages 2 to 12, peak at 5 to 7
-  - claims: S111 "Usually the first half, most often the first third; terror, often with an autonomic surge,"
+  - claims: S111 "Usually the first half, most often the first third; terror, often with an autonomic surge,"; S120 "Usually the first half, most often the first third; leaves the bed"
 - d1 why: "Mostly the second half; recalls the dream"
   - best line (100%, table T2): Nightmares | Frightening dream | Mostly the second half ; wakes oriented and alert; recalls the dream
   - claims: S090 "Mostly the second half, REM  nightmare  wakes oriented, recalls the dream"; S116 "Mostly the second half; wakes oriented and alert; recalls the dream"; S082 "Usually early, unresponsive, no memory  NREM (non-rapid eye movement) arousal: sleep terro"
@@ -40,9 +40,9 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Persist despite reassurance: scheduled awakenings before the episode"
   - best line (100%, table T7): Sleep terrors persist despite reassurance and safety | Scheduled awakenings before the usual episode time; if still frequent or impairing: a low-dose benzodiazepine can be considered
   - claims: S255 "Scheduled awakenings before the usual episode time; if still frequent or impairing:"; S254 "Sleep terrors persist despite reassurance and safety"
-- d1 why: "Never shorten sleep"
-  - best line (100%, table T6): Sleep terrors | Reassure and educate ; keep the child safe; more total sleep | Never shorten sleep
-  - claims: S210 "Never shorten sleep"; S261 "Trazodone: a sleep aid at low doses; may cause morning drowsiness; more effective with coe"
+- d1 why: "Increase total sleep time; do not shorten it"
+  - best line (50%, table T6): Sleep terrors | Reassure and educate ; keep the child safe; more total sleep | Never shorten sleep
+  - claims: S022 "total sleep time"; S261 "Trazodone: a sleep aid at low doses; may cause morning drowsiness; more effective with coe"
 - d2 why: "For suspected apnea, dream enactment or narcolepsy"
   - best line (100%, item explanation): scheduled awakenings, before the expected episode, are a listed treatment; total sleep should be increased, not shortened; polysomnography is for suspected apnea, dream enactment or narcolepsy, and she does not snore
   - claims: S183 "The bait: a sleep study or EEG for a classic sleep terror, or a stimulant for a snoring ch"; S008 "Nightmares; dream enactment"; S091 "REM without atonia  dream enactment: REM sleep behavior disorder"

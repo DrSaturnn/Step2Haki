@@ -4,9 +4,9 @@ Folder: repair/migration/psych/MDD/spine
 Each reason: its best brief line (share of its content words found there) and up to 3 claim ids.
 
 ## q_ce4c3eab  key: Major depressive disorder | d1: Bipolar II disorder | d2: Hypothyroidism
-- key why: "5 of 9 symptoms for 2 weeks, with impairment"
-  - best line (100%, table T1): Major depressive disorder | 5 of 9 symptoms for 2 weeks, with impairment | Never manic or hypomanic; no cause found
-  - claims: S042 "5 of 9 symptoms for 2 weeks, with impairment"; S014 "5 of 9, one being depressed mood or loss of interest  2 weeks or more  impairment"; S107 "5 or more of 9, most of the day, nearly every day, for at least 2 weeks; at least one is d"
+- key why: "5 of 9 including depressed mood or loss of interest, for 2 weeks, impaired"
+  - best line (70%, item explanation): six symptoms, including depressed mood and loss of interest, most days for 2 weeks or more, with impairment; full criteria are met, so not adjustment disorder despite the job loss; no hypomania ever, so not bipolar II; a
+  - claims: S014 "5 of 9, one being depressed mood or loss of interest  2 weeks or more  impairment"; S107 "5 or more of 9, most of the day, nearly every day, for at least 2 weeks; at least one is d"; S078 "Depressed mood or loss of interest, 2 weeks or more"
 - d1 why: "Any past manic or hypomanic episode; never had one"
   - best line (67%, table T1): Bipolar disorder must not miss | Depressed now, manic or hypomanic before | Any past manic or hypomanic episode
   - claims: S047 "Any past manic or hypomanic episode"; S109 "not due to a substance, a medication or a medical condition (eg, hypothyroidism); never a "; S015 "Never manic or hypomanic  no substance or medical cause"
@@ -15,11 +15,11 @@ Each reason: its best brief line (share of its content words found there) and up
   - claims: S083 "Abnormal TSH or a culprit exposure"
 
 ## q_3af979ba  key: Keep the current citalopram dose | d1: Increase the citalopram dose | d2: Switch from citalopram to venlafaxine
-- key why: "2 weeks is not an adequate trial (4 to 6 weeks)"
-  - best line (100%, item explanation): 2 weeks is not an adequate trial (at least 4 to 6 weeks at a therapeutic dose); a few low days, partly from stress, do not mean failure, and a higher dose only adds adverse effects
+- key why: "2 weeks is not an adequate trial (generally 4 to 6 weeks)"
+  - best line (86%, item explanation): 2 weeks is not an adequate trial (at least 4 to 6 weeks at a therapeutic dose); a few low days, partly from stress, do not mean failure, and a higher dose only adds adverse effects
   - claims: S021 "Benefit can lag up to 6 weeks, so judge a drug only after an adequate trial"; S012 "Partial response after at least 4 to 6 weeks at a therapeutic dose  optimize the dose firs"; S198 "Under 4 to 6 weeks at a therapeutic dose:"
-- d1 why: "A higher dose only adds adverse effects"
-  - best line (100%, item explanation): 2 weeks is not an adequate trial (at least 4 to 6 weeks at a therapeutic dose); a few low days, partly from stress, do not mean failure, and a higher dose only adds adverse effects
+- d1 why: "A higher dose is premature before an adequate trial"
+  - best line (67%, item explanation): 2 weeks is not an adequate trial (at least 4 to 6 weeks at a therapeutic dose); a few low days, partly from stress, do not mean failure, and a higher dose only adds adverse effects
 - d2 why: "Too early to call failure; trial not yet adequate"
   - best line (50%, item explanation): 2 weeks is not an adequate trial (at least 4 to 6 weeks at a therapeutic dose); a few low days, partly from stress, do not mean failure, and a higher dose only adds adverse effects
 
@@ -37,8 +37,8 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Bupropion lowers the seizure threshold; not in bulimia"
   - best line (100%, table T4): Bulimia, anorexia or seizures | Not bupropion; in bulimia, fluoxetine (fewer binges, less vomiting) | Bupropion lowers the seizure threshold
   - claims: S218 "Bupropion lowers the seizure threshold"; S004 "a lower seizure threshold."; S217 "Not bupropion; in bulimia, fluoxetine (fewer binges, less vomiting)"
-- d1 why: "In bulimia, fluoxetine: fewer binges, less vomiting"
-  - best line (100%, table T4): Bulimia, anorexia or seizures | Not bupropion; in bulimia, fluoxetine (fewer binges, less vomiting) | Bupropion lowers the seizure threshold
+- d1 why: "In bulimia, fluoxetine can reduce binges and vomiting"
+  - best line (83%, item explanation): low potassium and chloride point to self-induced vomiting; bupropion is contraindicated with bulimia or anorexia nervosa (seizure risk); fluoxetine can also reduce binge eating and vomiting; mirtazapine is a poor fit (ap
   - claims: S217 "Not bupropion; in bulimia, fluoxetine (fewer binges, less vomiting)"
 - d2 why: "Poor fit (appetite, drowsiness) but not contraindicated"
   - best line (100%, item explanation): low potassium and chloride point to self-induced vomiting; bupropion is contraindicated with bulimia or anorexia nervosa (seizure risk); fluoxetine can also reduce binge eating and vomiting; mirtazapine is a poor fit (ap
@@ -69,10 +69,10 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "ECT is the clear pick when severe (not eating)"
   - best line (100%, table T3): Psychotic features | Delusions or hallucinations inside the depressive episode | An antidepressant plus an antipsychotic, or electroconvulsive therapy (ECT); either is first line. ECT is the clear pick when severe (not e
   - claims: S153 "An antidepressant plus an antipsychotic, or electroconvulsive therapy (ECT); either is fir"; S186 "Very severe depression needing a rapid response: persistent suicidality, or refusal to eat"; S214 "Poor tolerability and safety limit tricyclics and MAOIs. ECT comes first when the depressi"
-- d1 why: "Too slow; not eating calls for ECT, the rapid response"
-  - best line (43%, item explanation): psychotic depression with refusal to eat and weight loss needs a rapid response, which electroconvulsive therapy gives; an antidepressant plus an antipsychotic suits a patient who is eating and not acutely suicidal
-  - claims: S186 "Very severe depression needing a rapid response: persistent suicidality, or refusal to eat"
-- d2 why: "Too slow; psychotic depression not eating needs ECT"
-  - best line (50%, table T3): Psychotic features | Delusions or hallucinations inside the depressive episode | An antidepressant plus an antipsychotic, or electroconvulsive therapy (ECT); either is first line. ECT is the clear pick when severe (not e
+- d1 why: "Adding lithium is too slow when he is not eating"
+  - best line (20%, table T3): Psychotic features | Delusions or hallucinations inside the depressive episode | An antidepressant plus an antipsychotic, or electroconvulsive therapy (ECT); either is first line. ECT is the clear pick when severe (not e
+  - claims: S208 "Antipsychotic side effects include akathisia, sedation and weight gain. In unipolar depres"
+- d2 why: "Switching is too slow; psychotic depression not eating may need ECT"
+  - best line (38%, table T3): Psychotic features | Delusions or hallucinations inside the depressive episode | An antidepressant plus an antipsychotic, or electroconvulsive therapy (ECT); either is first line. ECT is the clear pick when severe (not e
   - claims: S186 "Very severe depression needing a rapid response: persistent suicidality, or refusal to eat"
 

@@ -9,7 +9,7 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "Safety comes before family therapy"
   - best line (100%, item explanation): a command to harm his father and a hidden knife make him a danger to others; he refuses, so admission is involuntary; safety comes before family therapy
   - claims: S029 "hospitalization, involuntary if necessary; safety before family therapy"; S090 "The bait: a higher dose, clozapine or lithium for voices that rose after a family argument"; S038 "Conflict just before the worsening; family therapy first, as an outpatient, then a dose ch"
-- d2 why: "A danger to others now; a dose change cannot wait a week"
+- d2 why: "Danger to others now cannot wait a week for a dose change"
   - best line (29%, table T1): Family conflict or high expressed emotion | Criticism, hostility or overinvolvement; he takes his doses | Conflict just before the worsening ; family therapy first, as an outpatient, then a dose change
 
 ## q_acec2086  key: Increase the haloperidol dose or frequency | d1: Stop haloperidol and begin clozapine instead | d2: Add lorazepam to his regimen
@@ -27,8 +27,8 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Criticism, hostility or overinvolvement means more frequent relapses"
   - best line (100%, item explanation): high expressed emotion in the family: criticism, hostility or overinvolvement means more frequent relapses; family intervention answers it
   - claims: S037 "Criticism, hostility or overinvolvement; he takes his doses"
-- d1 why: "Not criticism, hostility or overinvolvement"
-  - best line (100%, table T1): Family conflict or high expressed emotion | Criticism, hostility or overinvolvement; he takes his doses | Conflict just before the worsening ; family therapy first, as an outpatient, then a dose change
+- d1 why: "A sibling at home is not criticism, hostility or overinvolvement"
+  - best line (60%, table T1): Family conflict or high expressed emotion | Criticism, hostility or overinvolvement; he takes his doses | Conflict just before the worsening ; family therapy first, as an outpatient, then a dose change
   - claims: S037 "Criticism, hostility or overinvolvement; he takes his doses"
 - d2 why: "Living with family is not high expressed emotion"
   - best line (80%, table T1): Family conflict or high expressed emotion | Criticism, hostility or overinvolvement; he takes his doses | Conflict just before the worsening ; family therapy first, as an outpatient, then a dose change
@@ -49,9 +49,9 @@ Each reason: its best brief line (share of its content words found there) and up
   - claims: S041 "Poor or uncertain adherence, not a failed drug; long-acting injectable"; S003 "American Psychiatric Association 2020: recommended for continuing the antipsychotic, psych"; S066 "Long-acting injectable"
 - d1 why: "A higher dose does not help missed pills"
   - best line (17%, table T1): Family conflict or high expressed emotion | Criticism, hostility or overinvolvement; he takes his doses | Conflict just before the worsening ; family therapy first, as an outpatient, then a dose change
-- d2 why: "Poor adherence, not a failed drug; a switch fixes neither"
-  - best line (57%, table T1): Nonadherence | Missed or forgotten oral doses or refills; poor insight ("I don't have an illness") or stopping the drug over side effects such as weight gain; well on the drug in hospital, then relapsing within months of
-  - claims: S041 "Poor or uncertain adherence, not a failed drug; long-acting injectable"
+- d2 why: "Poor adherence, not a failed drug; a switch does not fix missed doses"
+  - best line (67%, table T1): Nonadherence | Missed or forgotten oral doses or refills; poor insight ("I don't have an illness") or stopping the drug over side effects such as weight gain; well on the drug in hospital, then relapsing within months of
+  - claims: S040 "Missed or forgotten oral doses or refills; poor insight ("I don't have an illness") or sto"; S041 "Poor or uncertain adherence, not a failed drug; long-acting injectable"
 
 ## q_7b50d623  key: Assertive community treatment | d1: Referral to a partial hospital program | d2: Switch to clozapine
 - key why: "Missed injections with frequent relapse and homelessness"
@@ -111,9 +111,9 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Improved on an antipsychotic: continue it indefinitely"
   - best line (100%, table T4): Improved on an antipsychotic | Continue it indefinitely , even after a first episode; off it, 65% to 80% relapse within 12 months of a first episode
   - claims: S092 "Continue the antipsychotic"; S126 "Improved on an antipsychotic"; S127 "Continue it indefinitely"
-- d1 why: "Off it, 65% to 80% relapse within 12 months"
+- d1 why: "Off it after a first episode, 65% to 80% relapse within 12 months"
   - best line (100%, table T4): Improved on an antipsychotic | Continue it indefinitely , even after a first episode; off it, 65% to 80% relapse within 12 months of a first episode
   - claims: S130 ", even after a first episode; off it, 65% to 80% relapse within 12 months of a first episo"; S010 "Stopping the antipsychotic (most relapse within 12 months of a first episode)"
-- d2 why: "Any reduction now risks relapse; continue the full dose"
-  - best line (33%, table T4): Improved on an antipsychotic | Continue it indefinitely , even after a first episode; off it, 65% to 80% relapse within 12 months of a first episode
+- d2 why: "Improved on this dose; continue it rather than cut it now"
+  - best line (40%, table T4): Improved on an antipsychotic | Continue it indefinitely , even after a first episode; off it, 65% to 80% relapse within 12 months of a first episode
 

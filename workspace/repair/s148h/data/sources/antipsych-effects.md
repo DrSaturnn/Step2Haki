@@ -14,12 +14,11 @@ Each reason: its best brief line (share of its content words found there) and up
   - best line (100%, item explanation): acute dystonia within hours of a dopamine blocker: an anticholinergic such as benztropine gives rapid relief; dantrolene belongs to neuroleptic malignant syndrome and propranolol to akathisia
 
 ## q_5767bd34  key: Diphenhydramine | d1: Intravenous calcium gluconate | d2: Intramuscular epinephrine
-- key why: "Antiemetics such as metoclopramide can cause acute dystonia"
-  - best line (100%, table T1): Acute dystonia | Sustained, painful spasm of neck, jaw, eyes or tongue; mind clear; antiemetics such as metoclopramide can cause it | Within hours to days of a start or increase; half by 48 hours, 90% by day 5
-  - claims: S072 " of neck, jaw, eyes or tongue; mind clear; antiemetics such as metoclopramide can cause it"; S035 "Acute dystonia, usually within hours to days of the first dose; an emergency department an"; S019 "Dopamine receptor blockers: antipsychotics  antiemetics such as metoclopramide and prochlo"
-- d1 why: "Needs paresthesia, hyperreflexia and a cause such as neck surgery"
-  - best line (100%, table T1): Hypocalcemia | Facial muscle spasm | Paresthesia, hyperreflexia and a cause such as neck surgery
-  - claims: S090 "Paresthesia, hyperreflexia and a cause such as neck surgery"; S072 " of neck, jaw, eyes or tongue; mind clear; antiemetics such as metoclopramide can cause it"
+- key why: "Metoclopramide caused acute dystonia: a parenteral anticholinergic relieves it"
+  - best line (71%, item explanation): an antiemetic dopamine blocker caused acute dystonia: a parenteral anticholinergic such as diphenhydramine usually works within 30 minutes; with no lip or tongue swelling this is spasm, not angioedema, so epinephrine is 
+- d1 why: "Hypocalcemia brings paresthesia and hyperreflexia, plus a cause such as neck surgery"
+  - best line (78%, table T1): Hypocalcemia | Facial muscle spasm | Paresthesia, hyperreflexia and a cause such as neck surgery
+  - claims: S090 "Paresthesia, hyperreflexia and a cause such as neck surgery"
 - d2 why: "Swelling, not spasm; no lip or tongue swelling"
   - best line (100%, item explanation): an antiemetic dopamine blocker caused acute dystonia: a parenteral anticholinergic such as diphenhydramine usually works within 30 minutes; with no lip or tongue swelling this is spasm, not angioedema, so epinephrine is 
   - claims: S083 "Lip smacking, tongue darting, cheek puffing, jaw movements"; S102 "Swelling, not spasm"
@@ -93,8 +92,8 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Risperidone commonly raises prolactin: amenorrhea, galactorrhea"
   - best line (100%, table T3): Missed periods or nipple discharge Hyperprolactinemia | Whether the patient takes a drug that commonly raises prolactin (any first-generation drug, risperidone) | Dopamine D2 block in the tuberoinfundibular tract raises 
   - claims: S164 "Whether the patient takes a drug that commonly raises prolactin (any first-generation drug"; S165 "Dopamine D2 block in the tuberoinfundibular tract raises prolactin: galactorrhea, amenorrh"
-- d1 why: "No headache, full visual fields: no mass effect"
-  - best line (100%, item explanation): risperidone, like any first-generation drug, commonly raises prolactin, causing amenorrhea and galactorrhea; a normal TSH argues against hypothyroidism, and with no headache and full visual fields nothing suggests the ma
+- d1 why: "Risperidone explains it; no headache or field cut of a large adenoma"
+  - best line (71%, item explanation): risperidone, like any first-generation drug, commonly raises prolactin, causing amenorrhea and galactorrhea; a normal TSH argues against hypothyroidism, and with no headache and full visual fields nothing suggests the ma
 - d2 why: "A normal TSH argues against hypothyroidism"
   - best line (100%, item explanation): risperidone, like any first-generation drug, commonly raises prolactin, causing amenorrhea and galactorrhea; a normal TSH argues against hypothyroidism, and with no headache and full visual fields nothing suggests the ma
 

@@ -10,9 +10,9 @@ Each reason: its best brief line (share of its content words found there) and up
 - d1 why: "Builds over 1 to 3 days on a dopamine blocker; rigid, slow reflexes"
   - best line (100%, table T1): Neuroleptic malignant syndrome | Fever, lead-pipe rigidity, confusion, unstable vital signs | Builds over 1 to 3 days after a dopamine blocker is started or raised; rigid, with slow reflexes
   - claims: S038 "Builds over 1 to 3 days after a dopamine blocker is started or raised; rigid, with slow re"; S061 "Builds over 1 to 3 days"
-- d2 why: "Hot, dry, flushed skin; ileus; she sweats with active bowel"
-  - best line (62%, table T1): Anticholinergic (tricyclic, antihistamine, clozapine) | Big pupils; hot, dry, flushed skin; ileus; urinary retention; delirium Mnemonic | Dry skin with normal tone; a tricyclic may add a wide QRS
-  - claims: S027 "Big pupils; hot, dry, flushed skin; ileus; urinary retention; delirium"; S126 "within a day of adding tramadol to an SSRI, clonus, hyperreflexia, sweating and active bow"; S028 "Hot as a hare (fever), dry as a bone (no sweating), red as a beet (flushing), blind as a b"
+- d2 why: "Hot, dry, flushed skin; ileus; she sweats and has active bowel sounds"
+  - best line (67%, item explanation): within a day of adding tramadol to an SSRI, clonus, hyperreflexia, sweating and active bowel sounds mean serotonin syndrome; neuroleptic malignant syndrome brings lead-pipe rigidity over days on a dopamine blocker, and a
+  - claims: S126 "within a day of adding tramadol to an SSRI, clonus, hyperreflexia, sweating and active bow"; S027 "Big pupils; hot, dry, flushed skin; ileus; urinary retention; delirium"; S028 "Hot as a hare (fever), dry as a bone (no sweating), red as a beet (flushing), blind as a b"
 
 ## q_0564f671  key: Serum acetaminophen level | d1: Psychiatric admission now | d2: No further testing
 - key why: "Early acetaminophen poisoning is often silent; the antidote prevents liver injury"
@@ -51,9 +51,9 @@ Each reason: its best brief line (share of its content words found there) and up
 - key why: "Fever, tinnitus, fast breathing after an overdose"
   - best line (100%, item explanation): fever, tinnitus and fast breathing after an overdose point to aspirin, with respiratory alkalosis early and metabolic acidosis later; a salicylate level confirms it
   - claims: S130 "fever, tinnitus and fast breathing after an overdose point to aspirin, with respiratory al"; S052 "Fever, tinnitus, fast breathing"; S083 "Fever, tinnitus and fast breathing"
-- d1 why: "Clonus, hyperreflexia, sweating; no clonus here"
-  - best line (100%, table T1): Serotonin syndrome | Clonus, hyperreflexia, sweating, increased bowel sounds | Minutes to hours after a serotonergic drug is added or raised; clonus
-  - claims: S034 "Clonus, hyperreflexia, sweating, increased bowel sounds"; S126 "within a day of adding tramadol to an SSRI, clonus, hyperreflexia, sweating and active bow"; S095 "Clonus, hyperreflexia"
+- d1 why: "Clonus, hyperreflexia after a serotonergic drug; tinnitus and fast breathing fit aspirin"
+  - best line (50%, table T1): Serotonin syndrome | Clonus, hyperreflexia, sweating, increased bowel sounds | Minutes to hours after a serotonergic drug is added or raised; clonus
+  - claims: S130 "fever, tinnitus and fast breathing after an overdose point to aspirin, with respiratory al"; S035 "Minutes to hours after a serotonergic drug is added or raised; clonus"
 - d2 why: "Big pupils; hot, dry, flushed skin"
   - best line (100%, table T1): Anticholinergic (tricyclic, antihistamine, clozapine) | Big pupils; hot, dry, flushed skin; ileus; urinary retention; delirium Mnemonic | Dry skin with normal tone; a tricyclic may add a wide QRS
   - claims: S027 "Big pupils; hot, dry, flushed skin; ileus; urinary retention; delirium"; S028 "Hot as a hare (fever), dry as a bone (no sweating), red as a beet (flushing), blind as a b"; S091 "Big pupils, dry skin"
