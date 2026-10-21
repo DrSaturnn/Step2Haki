@@ -1,0 +1,859 @@
+{
+ "row_reuse": [
+  {
+   "brief": "psychosis-duration",
+   "item": "q_c3ab6df88757aa298544",
+   "attr": "data-d2-why",
+   "choice": "Schizophrenia",
+   "reason": "Criterion A with functional decline; mood episodes fill only a small part",
+   "row": "Schizophrenia Criterion A with functional decline 6 months or more , at least 1 month active",
+   "words_not_in_row": [
+    "fill",
+    "part",
+    "small"
+   ]
+  },
+  {
+   "brief": "psychosis-duration",
+   "item": "q_84e5c9dd0796f8bbc02d",
+   "attr": "data-d2-why",
+   "choice": "Schizophrenia",
+   "reason": "Criterion A with functional decline; mood episodes fill only a small part",
+   "row": "Schizophrenia Criterion A with functional decline 6 months or more , at least 1 month active",
+   "words_not_in_row": [
+    "fill",
+    "part",
+    "small"
+   ]
+  },
+  {
+   "brief": "psychosis-duration",
+   "item": "q_29765c80940704a6c8b7",
+   "attr": "data-d2-why",
+   "choice": "Brief psychotic disorder",
+   "reason": "1 or more core symptoms after a stressor; a manic episode explains these",
+   "row": "Brief psychotic disorder 1 or more core symptoms, often after a stressor 1 day to under 1 month ; full return to baseline",
+   "words_not_in_row": [
+    "episode",
+    "explain",
+    "manic"
+   ]
+  },
+  {
+   "brief": "psychosis-duration",
+   "item": "q_d94a444dc335c58a8169",
+   "attr": "data-d1-why",
+   "choice": "Brief psychotic disorder",
+   "reason": "1 or more core symptoms, often after a stressor; no drug cause",
+   "row": "Brief psychotic disorder 1 or more core symptoms, often after a stressor 1 day to under 1 month ; full return to baseline",
+   "words_not_in_row": [
+    "cause",
+    "drug"
+   ]
+  },
+  {
+   "brief": "psychosis-duration",
+   "item": "q_d6b532ef5ba9ee4150cb",
+   "attr": "data-d1-why",
+   "choice": "Acute stress disorder",
+   "reason": "Needs intrusive re-experiencing and avoidance, 3 days to 1 month after a trauma",
+   "row": "Acute stress disorder Trauma symptoms soon after the event 3 days to 1 month after a trauma",
+   "words_not_in_row": [
+    "experienc",
+    "intrusive",
+    "re"
+   ]
+  },
+  {
+   "brief": "psychosis-duration",
+   "item": "q_2646e702c06eefba5d28",
+   "attr": "data-d1-why",
+   "choice": "Schizophrenia",
+   "reason": "Criterion A with functional decline; mood episodes fill only a small part",
+   "row": "Schizophrenia Criterion A with functional decline 6 months or more , at least 1 month active",
+   "words_not_in_row": [
+    "fill",
+    "part",
+    "small"
+   ]
+  },
+  {
+   "brief": "panic",
+   "item": "q_51b7ab044ef43763d0d4",
+   "attr": "data-d1-why",
+   "choice": "Somatic symptom disorder",
+   "reason": "Typically more than 6 months symptomatic; her spells clear",
+   "row": "Somatic symptom disorder Distressing body symptoms with disproportionate thoughts, high health anxiety or excessive time spent Typically more than 6 months symptomatic; panic anxiety is typically acute and episodic",
+   "words_not_in_row": [
+    "clear"
+   ]
+  },
+  {
+   "brief": "panic",
+   "item": "q_1c1f69ce1e98783124e0",
+   "attr": "data-d1-why",
+   "choice": "Panic disorder",
+   "reason": "Needs recurrent unexpected attacks; panic is acute and episodic",
+   "row": "Panic disorder Recurrent unexpected attacks peaking within minutes 1 month or more of worry about more attacks or a behavior change",
+   "words_not_in_row": [
+    "acute",
+    "episodic"
+   ]
+  },
+  {
+   "brief": "panic",
+   "item": "q_1c1f69ce1e98783124e0",
+   "attr": "data-d2-why",
+   "choice": "Generalized anxiety disorder",
+   "reason": "Excessive worry about a number of events, not one illness",
+   "row": "Generalized anxiety disorder Excessive worry about a number of events, hard to control At least 6 months , more days than not; 3 or more of 6 symptoms (1 in children) No unexpected attacks",
+   "words_not_in_row": [
+    "illnes"
+   ]
+  },
+  {
+   "brief": "somatic",
+   "item": "q_3f2655878b250699d54c",
+   "attr": "data-d1-why",
+   "choice": "Illness anxiety disorder",
+   "reason": "Symptoms absent or only mild; her pain is distressing",
+   "row": "Illness anxiety disorder (hypochondriasis) Fear of having or getting a serious illness; body checking or avoiding care 6 months or more ; symptoms absent or only mild",
+   "words_not_in_row": [
+    "distress"
+   ]
+  },
+  {
+   "brief": "somatic",
+   "item": "q_3f2655878b250699d54c",
+   "attr": "data-d2-why",
+   "choice": "Malingering",
+   "reason": "Needs an external incentive; nothing is faked",
+   "row": "Malingering Faked or exaggerated symptoms An external incentive",
+   "words_not_in_row": [
+    "noth"
+   ]
+  },
+  {
+   "brief": "somatic",
+   "item": "q_9ece10baac4dcae7f2b6",
+   "attr": "data-d2-why",
+   "choice": "Somatic symptom disorder",
+   "reason": "Not deceiving; here a syringe shows self-induction",
+   "row": "Somatic symptom disorder Distressing symptom with outsized worry and time spent on it Typically over 6 months ; a distressing symptom is present; not deceiving",
+   "words_not_in_row": [
+    "induction",
+    "self",
+    "show"
+   ]
+  },
+  {
+   "brief": "somatic",
+   "item": "q_d53df36636d49fbb457e",
+   "attr": "data-d1-why",
+   "choice": "Factitious disorder",
+   "reason": "No obvious external reward; here opioids and court",
+   "row": "Factitious disorder (Munchausen syndrome) Falsified or self-induced illness Deception about one's own illness; no obvious external reward",
+   "words_not_in_row": [
+    "opioid"
+   ]
+  },
+  {
+   "brief": "delirium",
+   "item": "q_6528f9dbc4a553760f7d",
+   "attr": "data-d1-why",
+   "choice": "Delirium",
+   "reason": "Hours to a few days, fluctuating; she is attentive",
+   "row": "Delirium Inattention, disorientation, visual hallucinations or delusions Hours to a few days , fluctuating through the day; evidence of a medical, drug or withdrawal cause",
+   "words_not_in_row": [
+    "attentive"
+   ]
+  },
+  {
+   "brief": "delirium",
+   "item": "q_9f31bf83cd5cb26c6178",
+   "attr": "data-d2-why",
+   "choice": "Dementia with Lewy bodies",
+   "reason": "Swings usually span days to weeks; no fever",
+   "row": "Dementia with Lewy bodies (Lewy body dementia) Fluctuating cognition, visual hallucinations, parkinsonism, REM (rapid eye movement) sleep behavior disorder Swings usually span days to weeks , within a chronic dementia",
+   "words_not_in_row": [
+    "fever"
+   ]
+  },
+  {
+   "brief": "substance",
+   "item": "q_b0154ac9b2095e29366b",
+   "attr": "data-d2-why",
+   "choice": "Opioid withdrawal",
+   "reason": "Dilated pupils, yawning, runny nose; not disorientation with fever",
+   "row": "Opioid withdrawal Dilated pupils, autonomic overactivity From 4 h after heroin , slower after methadone; yawning, runny nose, goose flesh, diarrhea",
+   "words_not_in_row": [
+    "disorientation",
+    "fever"
+   ]
+  },
+  {
+   "brief": "psych-medical",
+   "item": "q_dab772dbb67ddd261aa7",
+   "attr": "data-d1-why",
+   "choice": "Medication-induced psychotic disorder",
+   "reason": "Needs an alert, oriented patient; attention fails here",
+   "row": "Medication-induced psychotic disorder (substance/medication-induced psychotic disorder) Acute delusions or hallucinations after a new medication; alert, oriented Begins with the new drug ; steroids: typically in the first week",
+   "words_not_in_row": [
+    "attention",
+    "fail",
+    "patient"
+   ]
+  },
+  {
+   "brief": "disruptive-behavior",
+   "item": "q_cb685ea3f2d528ec3d2f",
+   "attr": "data-d1-why",
+   "choice": "Conduct disorder",
+   "reason": "Needs 3 or more in 12 months; she shows none",
+   "row": "Conduct disorder Aggression, destruction, theft, truancy; lies for gain or to avoid consequences 3 or more in 12 months ; violates others' basic rights or major rules",
+   "words_not_in_row": [
+    "show"
+   ]
+  },
+  {
+   "brief": "disruptive-behavior",
+   "item": "q_563f384ee76cd7574ae0",
+   "attr": "data-d2-why",
+   "choice": "Disruptive mood dysregulation disorder",
+   "reason": "Needs irritability between outbursts and onset before 10",
+   "row": "Disruptive mood dysregulation disorder Severe outbursts, 3 or more a week Onset before 10, diagnosed 6 to 18 ; irritable or angry between outbursts",
+   "words_not_in_row": [
+    "irritability"
+   ]
+  },
+  {
+   "brief": "disruptive-behavior",
+   "item": "q_579779965ffaf731d62c",
+   "attr": "data-d1-why",
+   "choice": "Oppositional defiant disorder",
+   "reason": "When disruptive mood dysregulation disorder is met, not also diagnosed",
+   "row": "Oppositional defiant disorder Argues, defies, vindictive; deliberately annoys and blames others 6 months or more ; no stealing or violation of others' rights",
+   "words_not_in_row": [
+    "diagnos",
+    "disruptive",
+    "dysregulation",
+    "met",
+    "mood"
+   ]
+  },
+  {
+   "brief": "disruptive-behavior",
+   "item": "q_579779965ffaf731d62c",
+   "attr": "data-d2-why",
+   "choice": "Intermittent explosive disorder",
+   "reason": "Needs appropriate behavior between outbursts; he is irritable",
+   "row": "Intermittent explosive disorder Impulsive outbursts out of proportion, not planned; may feel remorse after Age 6 or older ; appropriate behavior between outbursts",
+   "words_not_in_row": [
+    "irritable"
+   ]
+  },
+  {
+   "brief": "disruptive-behavior",
+   "item": "q_57d0b14df6a8bb180e75",
+   "attr": "data-d1-why",
+   "choice": "Disruptive mood dysregulation disorder",
+   "reason": "Not diagnosed before age 6",
+   "row": "Disruptive mood dysregulation disorder Severe outbursts, 3 or more a week Onset before 10, diagnosed 6 to 18 ; irritable or angry between outbursts",
+   "words_not_in_row": [
+    "age"
+   ]
+  },
+  {
+   "brief": "ssri-effects",
+   "item": "q_d825fd2c09edb7908257",
+   "attr": "data-d2-why",
+   "choice": "Serotonin syndrome",
+   "reason": "Clonus or hyperreflexia point to serotonin syndrome; none here",
+   "row": "Serotonin syndrome Mental status change, autonomic hyperactivity, clonus, hyperreflexia, mydriasis, increased bowel sounds Minutes to hours after adding or raising a serotonergic drug; about 60% within 6 hours",
+   "words_not_in_row": [
+    "point"
+   ]
+  },
+  {
+   "brief": "antipsych-effects",
+   "item": "q_3f7ba89e4eaf592c7aab",
+   "attr": "data-d1-why",
+   "choice": "Tardive dyskinesia",
+   "reason": "Months to years of treatment; orofacial movements",
+   "row": "Tardive dyskinesia Lip smacking, tongue darting, cheek puffing, jaw movements Months to years of treatment, usually past 6 months",
+   "words_not_in_row": [
+    "orofacial"
+   ]
+  },
+  {
+   "brief": "bs-learning",
+   "item": "q_9761c2286e8e554e8e6c",
+   "attr": "data-d2-why",
+   "choice": "Specific learning disorder",
+   "reason": "Brief lapses many times daily, not a skill deficit",
+   "row": "Specific learning disorder Behavior downstream of an academic skill deficit The child names the deficit himself when interviewed privately",
+   "words_not_in_row": [
+    "laps"
+   ]
+  },
+  {
+   "brief": "bs-learning",
+   "item": "q_cab063e423b3513ea2f4",
+   "attr": "data-d2-why",
+   "choice": "Specific learning disorder",
+   "reason": "Sensory barrier, not a learning disorder",
+   "row": "Specific learning disorder Behavior downstream of an academic skill deficit The child names the deficit himself when interviewed privately",
+   "words_not_in_row": [
+    "barrier",
+    "sensory"
+   ]
+  }
+ ],
+ "wording": [
+  {
+   "brief": "psychosis-duration",
+   "item": "q_5af4628002a964e1149f",
+   "attr": "data-d1-why",
+   "reason": "Unsafe: likely harm to others needs admission",
+   "words_not_in_brief": [
+    "admission",
+    "unsafe"
+   ]
+  },
+  {
+   "brief": "psychosis-duration",
+   "item": "q_5af4628002a964e1149f",
+   "attr": "data-d2-why",
+   "reason": "Family observation cannot contain likely harm to others",
+   "words_not_in_brief": [
+    "contain"
+   ]
+  },
+  {
+   "brief": "psychosis-duration",
+   "item": "q_20fb01b347baf25d4571",
+   "attr": "data-d2-why",
+   "reason": "Leaves the psychosis untreated; antipsychotic first",
+   "words_not_in_brief": [
+    "leav",
+    "untreat"
+   ]
+  },
+  {
+   "brief": "sz-psychosocial",
+   "item": "q_4f51374399c5e2faa634",
+   "attr": "data-d2-why",
+   "reason": "Poor adherence, not a failed drug; a switch fixes neither",
+   "words_not_in_brief": [
+    "fix"
+   ]
+  },
+  {
+   "brief": "sz-psychosocial",
+   "item": "q_5e890413f13e8d4b5abf",
+   "attr": "data-d2-why",
+   "reason": "Her goal is a job; supported employment places her directly",
+   "words_not_in_brief": [
+    "directly"
+   ]
+  },
+  {
+   "brief": "sz-psychosocial",
+   "item": "q_4a4edd58a7fdd308d09f",
+   "attr": "data-d2-why",
+   "reason": "Any reduction now risks relapse; continue the full dose",
+   "words_not_in_brief": [
+    "reduction"
+   ]
+  },
+  {
+   "brief": "bipolar-mania",
+   "item": "q_27f9ad042d7a0119e0e3",
+   "attr": "data-d1-why",
+   "reason": "Maintenance runs for years, possibly lifelong",
+   "words_not_in_brief": [
+    "runs"
+   ]
+  },
+  {
+   "brief": "bipolar-mania",
+   "item": "q_7dc58d2f1afc9954f4a2",
+   "attr": "data-d2-why",
+   "reason": "Stop the antidepressant, not swap it; start a first-line agent",
+   "words_not_in_brief": [
+    "swap"
+   ]
+  },
+  {
+   "brief": "bipolar-mania",
+   "item": "q_875af1ee71c6f2502d97",
+   "attr": "data-d1-why",
+   "reason": "Unsafe: he walked a roof claiming he can fly",
+   "words_not_in_brief": [
+    "claim",
+    "unsafe"
+   ]
+  },
+  {
+   "brief": "bipolar-mania",
+   "item": "q_875af1ee71c6f2502d97",
+   "attr": "data-d2-why",
+   "reason": "Sedation does not remove the danger; he needs admission",
+   "words_not_in_brief": [
+    "does",
+    "remove",
+    "sedation"
+   ]
+  },
+  {
+   "brief": "bipolar-mania",
+   "item": "q_662161d54e6b8e321eef",
+   "attr": "data-d2-why",
+   "reason": "Effective for mania, but rapid behavioral control comes first",
+   "words_not_in_brief": [
+    "effective"
+   ]
+  },
+  {
+   "brief": "bipolar-mania",
+   "item": "q_cc8ff30e23e43a1a0d5b",
+   "attr": "data-d1-why",
+   "reason": "Toxicology already negative; thyroid signs point elsewhere",
+   "words_not_in_brief": [
+    "elsewhere"
+   ]
+  },
+  {
+   "brief": "mdd",
+   "item": "q_ce4c3eab1e36837f52cf",
+   "attr": "data-d2-why",
+   "reason": "Abnormal TSH would show it; TSH normal",
+   "words_not_in_brief": [
+    "show"
+   ]
+  },
+  {
+   "brief": "mdd",
+   "item": "q_3af979baebdb16dec288",
+   "attr": "data-d2-why",
+   "reason": "Too early to call failure; trial not yet adequate",
+   "words_not_in_brief": [
+    "call"
+   ]
+  },
+  {
+   "brief": "mdd",
+   "item": "q_77b8d7080173cf63a52e",
+   "attr": "data-d1-why",
+   "reason": "Too slow; not eating calls for ECT, the rapid response",
+   "words_not_in_brief": [
+    "call"
+   ]
+  },
+  {
+   "brief": "panic",
+   "item": "q_2770350e3c6d0c9f10b1",
+   "attr": "data-d2-why",
+   "reason": "Severe hypertension in the episodes; not this picture",
+   "words_not_in_brief": [
+    "picture"
+   ]
+  },
+  {
+   "brief": "panic",
+   "item": "q_b6fe551a76fe31c35481",
+   "attr": "data-d2-why",
+   "reason": "ECG already normal; no test makes the diagnosis",
+   "words_not_in_brief": [
+    "already"
+   ]
+  },
+  {
+   "brief": "panic",
+   "item": "q_25ccc4431464504f2c69",
+   "attr": "data-d1-why",
+   "reason": "Too soon: continue 12 months before tapering",
+   "words_not_in_brief": [
+    "soon"
+   ]
+  },
+  {
+   "brief": "panic",
+   "item": "q_25ccc4431464504f2c69",
+   "attr": "data-d2-why",
+   "reason": "Too soon: continue 12 months, then taper",
+   "words_not_in_brief": [
+    "soon"
+   ]
+  },
+  {
+   "brief": "somatic",
+   "item": "q_d53df36636d49fbb457e",
+   "attr": "data-d1-why",
+   "reason": "No obvious external reward; here opioids and court",
+   "words_not_in_brief": [
+    "opioid"
+   ]
+  },
+  {
+   "brief": "somatic",
+   "item": "q_acdd1fb9d2d6b78fe890",
+   "attr": "data-d2-why",
+   "reason": "Findings exist only in her reports; the child is not the source",
+   "words_not_in_brief": [
+    "source"
+   ]
+  },
+  {
+   "brief": "somatic",
+   "item": "q_d544ca14ebedd4a91745",
+   "attr": "data-d2-why",
+   "reason": "Visits driven by symptoms reinforce the cycle",
+   "words_not_in_brief": [
+    "reinforce"
+   ]
+  },
+  {
+   "brief": "delirium",
+   "item": "q_7b50e870883dc73ce0f9",
+   "attr": "data-d2-why",
+   "reason": "Highly anticholinergic, a Beers delirium class; not serotonergic",
+   "words_not_in_brief": [
+    "serotonergic"
+   ]
+  },
+  {
+   "brief": "delirium",
+   "item": "q_34902597b649d6f0115f",
+   "attr": "data-d2-why",
+   "reason": "Already failed: he hits a nurse despite reorientation",
+   "words_not_in_brief": [
+    "already"
+   ]
+  },
+  {
+   "brief": "delirium",
+   "item": "q_6f2d95529c86c3afb033",
+   "attr": "data-d1-why",
+   "reason": "Frequent reorientation helps",
+   "words_not_in_brief": [
+    "help"
+   ]
+  },
+  {
+   "brief": "toxidrome",
+   "item": "q_3d4f3bb449249b384e19",
+   "attr": "data-d2-why",
+   "reason": "Confusion points to a coingestant still unchecked",
+   "words_not_in_brief": [
+    "uncheck"
+   ]
+  },
+  {
+   "brief": "substance",
+   "item": "q_81bec42c97ebe9c64dc2",
+   "attr": "data-d1-why",
+   "reason": "Ignores the daily cannabis use, the deciding clue",
+   "words_not_in_brief": [
+    "ignor"
+   ]
+  },
+  {
+   "brief": "psych-medical",
+   "item": "q_b1424d843d94f4450147",
+   "attr": "data-d1-why",
+   "reason": "Prevention option with more side effects; lower the dose first",
+   "words_not_in_brief": [
+    "option"
+   ]
+  },
+  {
+   "brief": "ssri-effects",
+   "item": "q_82d710660ff3e8d5c763",
+   "attr": "data-d2-why",
+   "reason": "Fluoxetine also means fewer binges and less vomiting in bulimia",
+   "words_not_in_brief": [
+    "mean"
+   ]
+  },
+  {
+   "brief": "ssri-effects",
+   "item": "q_6f875a3df168eda248ea",
+   "attr": "data-d1-why",
+   "reason": "He prefers to stay off; restarting is optional",
+   "words_not_in_brief": [
+    "optional"
+   ]
+  },
+  {
+   "brief": "ssri-effects",
+   "item": "q_25d0479945c172a43d22",
+   "attr": "data-key-why",
+   "reason": "Slow taper poorly tolerated: fluoxetine's long half-life",
+   "words_not_in_brief": [
+    "fluoxetine'"
+   ]
+  },
+  {
+   "brief": "ssri-effects",
+   "item": "q_25d0479945c172a43d22",
+   "attr": "data-d1-why",
+   "reason": "An abrupt stop brings more discontinuation symptoms",
+   "words_not_in_brief": [
+    "bring"
+   ]
+  },
+  {
+   "brief": "ssri-effects",
+   "item": "q_25d0479945c172a43d22",
+   "attr": "data-d2-why",
+   "reason": "Failed twice; a third slow taper is poorly tolerated",
+   "words_not_in_brief": [
+    "third",
+    "twice"
+   ]
+  },
+  {
+   "brief": "lithium-effects",
+   "item": "q_fdf8caeb97e43a815d98",
+   "attr": "data-d2-why",
+   "reason": "Recent large ingestion; he took his usual dose",
+   "words_not_in_brief": [
+    "usual"
+   ]
+  },
+  {
+   "brief": "lithium-effects",
+   "item": "q_04b1d3c440a7cf52da0a",
+   "attr": "data-d1-why",
+   "reason": "Dialysis criteria met: fluids alone are not enough",
+   "words_not_in_brief": [
+    "enough"
+   ]
+  },
+  {
+   "brief": "lithium-effects",
+   "item": "q_d952defc13d2eb0f68b3",
+   "attr": "data-key-why",
+   "reason": "Fine tremor, polyuria, mildly high TSH; all else normal",
+   "words_not_in_brief": [
+    "else"
+   ]
+  },
+  {
+   "brief": "lithium-effects",
+   "item": "q_1b55329353193e01aefd",
+   "attr": "data-d1-why",
+   "reason": "Not part of lithium monitoring",
+   "words_not_in_brief": [
+    "part"
+   ]
+  },
+  {
+   "brief": "lithium-effects",
+   "item": "q_1b55329353193e01aefd",
+   "attr": "data-d2-why",
+   "reason": "Not part of lithium monitoring",
+   "words_not_in_brief": [
+    "part"
+   ]
+  },
+  {
+   "brief": "tca-tox",
+   "item": "q_f7a62d4005d61c28b69f",
+   "attr": "data-d1-why",
+   "reason": "Indicated: QRS over 100 ms",
+   "words_not_in_brief": [
+    "indicat"
+   ]
+  },
+  {
+   "brief": "tca-tox",
+   "item": "q_f7a62d4005d61c28b69f",
+   "attr": "data-d2-why",
+   "reason": "Indicated for the agitation",
+   "words_not_in_brief": [
+    "indicat"
+   ]
+  },
+  {
+   "brief": "ipv",
+   "item": "q_ab5eb45b397655435f35",
+   "attr": "data-d2-why",
+   "reason": "Risk of immediate harm is reassessed every visit, injured or not",
+   "words_not_in_brief": [
+    "reassess"
+   ]
+  },
+  {
+   "brief": "tics",
+   "item": "q_c04a5b7c0b9458c5a156",
+   "attr": "data-d2-why",
+   "reason": "Excessive worry about a number of events; no compulsion",
+   "words_not_in_brief": [
+    "event",
+    "excessive",
+    "number",
+    "worry"
+   ]
+  },
+  {
+   "brief": "tics",
+   "item": "q_11071c3e784a5dac9722",
+   "attr": "data-d1-why",
+   "reason": "Leaves the impairing ADHD untreated",
+   "words_not_in_brief": [
+    "leav",
+    "untreat"
+   ]
+  },
+  {
+   "brief": "bs-learning",
+   "item": "q_1d16f5c8e5e45c909c71",
+   "attr": "data-d2-why",
+   "reason": "Needs aggression, destruction, theft or truancy",
+   "words_not_in_brief": [
+    "aggression",
+    "destruction",
+    "theft"
+   ]
+  },
+  {
+   "brief": "bs-learning",
+   "item": "q_561337b4d8d754aa9ede",
+   "attr": "data-d2-why",
+   "reason": "Mania: episodes with a start and an end, not chronic anger",
+   "words_not_in_brief": [
+    "anger",
+    "end",
+    "episod",
+    "mania"
+   ]
+  },
+  {
+   "brief": "bs-learning",
+   "item": "q_ad04c5ea9aff5ce2a367",
+   "attr": "data-d1-why",
+   "reason": "Talks at home, refuses to speak in specific social settings",
+   "words_not_in_brief": [
+    "refus",
+    "talk"
+   ]
+  },
+  {
+   "brief": "bs-learning",
+   "item": "q_ad04c5ea9aff5ce2a367",
+   "attr": "data-d2-why",
+   "reason": "Recurrent unexpected attacks, not fear of scrutiny",
+   "words_not_in_brief": [
+    "attack",
+    "recurrent",
+    "unexpect"
+   ]
+  },
+  {
+   "brief": "bs-learning",
+   "item": "q_6973b7f5edde538f905b",
+   "attr": "data-d1-why",
+   "reason": "A serious rule violation, as in conduct disorder; he has stomachaches",
+   "words_not_in_brief": [
+    "seriou",
+    "violation"
+   ]
+  }
+ ],
+ "counts": {
+  "psychosis-duration": {
+   "items": 13,
+   "distractor_rows": 18
+  },
+  "voices": {
+   "items": 6,
+   "distractor_rows": 2
+  },
+  "sz-psychosocial": {
+   "items": 11,
+   "distractor_rows": 0
+  },
+  "bipolar-mania": {
+   "items": 13,
+   "distractor_rows": 6
+  },
+  "mdd": {
+   "items": 7,
+   "distractor_rows": 0
+  },
+  "cluster-b": {
+   "items": 6,
+   "distractor_rows": 2
+  },
+  "panic": {
+   "items": 16,
+   "distractor_rows": 11
+  },
+  "somatic": {
+   "items": 7,
+   "distractor_rows": 9
+  },
+  "gppd": {
+   "items": 8,
+   "distractor_rows": 2
+  },
+  "delirium": {
+   "items": 13,
+   "distractor_rows": 4
+  },
+  "toxidrome": {
+   "items": 6,
+   "distractor_rows": 2
+  },
+  "substance": {
+   "items": 8,
+   "distractor_rows": 2
+  },
+  "psych-medical": {
+   "items": 6,
+   "distractor_rows": 2
+  },
+  "disruptive-behavior": {
+   "items": 6,
+   "distractor_rows": 10
+  },
+  "ssri-effects": {
+   "items": 10,
+   "distractor_rows": 2
+  },
+  "antipsych-effects": {
+   "items": 9,
+   "distractor_rows": 4
+  },
+  "lithium-effects": {
+   "items": 11,
+   "distractor_rows": 0
+  },
+  "tca-tox": {
+   "items": 6,
+   "distractor_rows": 2
+  },
+  "suicide-risk": {
+   "items": 6,
+   "distractor_rows": 0
+  },
+  "ipv": {
+   "items": 11,
+   "distractor_rows": 0
+  },
+  "tics": {
+   "items": 8,
+   "distractor_rows": 1
+  },
+  "peds-sleep": {
+   "items": 7,
+   "distractor_rows": 3
+  },
+  "bs-learning": {
+   "items": 9,
+   "distractor_rows": 7
+  }
+ }
+}

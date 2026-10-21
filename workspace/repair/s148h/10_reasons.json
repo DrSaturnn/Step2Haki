@@ -1,0 +1,4267 @@
+{
+ "edits": [
+  {
+   "op": "set_attr",
+   "target": "q_825dd34c39a6fefa51c5",
+   "attr": "data-key-why",
+   "value": "Criterion A for 1 to under 6 months",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_825dd34c39a6fefa51c5",
+   "attr": "data-d1-why",
+   "value": "Needs 6 months or more, at least 1 month active",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_825dd34c39a6fefa51c5",
+   "attr": "data-d2-why",
+   "value": "Hallucinations, if any, not prominent; no second Criterion A symptom",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7dfe8050588133fa1bce",
+   "attr": "data-key-why",
+   "value": "Criterion A with functional decline for 6 months or more",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7dfe8050588133fa1bce",
+   "attr": "data-d1-why",
+   "value": "1 to under 6 months; functional decline not required",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7dfe8050588133fa1bce",
+   "attr": "data-d2-why",
+   "value": "1 or more delusions; no second Criterion A symptom",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_c3ab6df88757aa298544",
+   "attr": "data-key-why",
+   "value": "Psychosis 2 weeks or more without a mood episode; mood most of the illness",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_c3ab6df88757aa298544",
+   "attr": "data-d1-why",
+   "value": "Psychosis only inside mood episodes",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_c3ab6df88757aa298544",
+   "attr": "data-d2-why",
+   "value": "Criterion A with functional decline; mood episodes fill only a small part",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b3db6c76ffbbc3d98f8c",
+   "attr": "data-key-why",
+   "value": "1 or more delusions for 1 month or more; functioning intact",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b3db6c76ffbbc3d98f8c",
+   "attr": "data-d1-why",
+   "value": "Needs Criterion A with functional decline",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b3db6c76ffbbc3d98f8c",
+   "attr": "data-d2-why",
+   "value": "Delusions with euphoric mood and less sleep",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_84e5c9dd0796f8bbc02d",
+   "attr": "data-key-why",
+   "value": "Psychosis 2 weeks or more without a mood episode; mood most of the illness",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_84e5c9dd0796f8bbc02d",
+   "attr": "data-d1-why",
+   "value": "Psychosis only inside the depressive episodes",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_84e5c9dd0796f8bbc02d",
+   "attr": "data-d2-why",
+   "value": "Criterion A with functional decline; mood episodes fill only a small part",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_29765c80940704a6c8b7",
+   "attr": "data-key-why",
+   "value": "Delusions with euphoric mood and less sleep; psychosis only inside mood episodes",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_29765c80940704a6c8b7",
+   "attr": "data-d1-why",
+   "value": "Needs psychosis 2 weeks or more without a mood episode",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_29765c80940704a6c8b7",
+   "attr": "data-d2-why",
+   "value": "1 or more core symptoms after a stressor; a manic episode explains these",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d94a444dc335c58a8169",
+   "attr": "data-key-why",
+   "value": "Delusion began during stimulant intoxication",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d94a444dc335c58a8169",
+   "attr": "data-d1-why",
+   "value": "1 or more core symptoms, often after a stressor; no drug cause",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d94a444dc335c58a8169",
+   "attr": "data-d2-why",
+   "value": "Needs mania 1 week or more (any length if hospitalized)",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d6b532ef5ba9ee4150cb",
+   "attr": "data-key-why",
+   "value": "1 or more core symptoms after a stressor; full return to baseline",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d6b532ef5ba9ee4150cb",
+   "attr": "data-d1-why",
+   "value": "Needs intrusive re-experiencing and avoidance, 3 days to 1 month after a trauma",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d6b532ef5ba9ee4150cb",
+   "attr": "data-d2-why",
+   "value": "Needs 1 month or more; no second Criterion A symptom",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4f7e99d406dda2fff18d",
+   "attr": "data-key-why",
+   "value": "First-line test for a drug cause, still missing",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4f7e99d406dda2fff18d",
+   "attr": "data-d1-why",
+   "value": "MRI only with a neurologic finding or history",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4f7e99d406dda2fff18d",
+   "attr": "data-d2-why",
+   "value": "Needs fever, meningismus or delirium",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5af4628002a964e1149f",
+   "attr": "data-key-why",
+   "value": "Likely harm to others: admit first, whatever the duration",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5af4628002a964e1149f",
+   "attr": "data-d1-why",
+   "value": "Unsafe: likely harm to others needs admission",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5af4628002a964e1149f",
+   "attr": "data-d2-why",
+   "value": "Family observation cannot contain likely harm to others",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_733a1cffb70304fef48c",
+   "attr": "data-key-why",
+   "value": "2 or more failed adequate trials with documented adherence",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_733a1cffb70304fef48c",
+   "attr": "data-d1-why",
+   "value": "Another standard antipsychotic; treatment resistance calls for clozapine",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_733a1cffb70304fef48c",
+   "attr": "data-d2-why",
+   "value": "Fixes nonadherence; his adherence is confirmed",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2646e702c06eefba5d28",
+   "attr": "data-key-why",
+   "value": "Psychosis 2 weeks or more without a mood episode; never manic",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2646e702c06eefba5d28",
+   "attr": "data-d1-why",
+   "value": "Criterion A with functional decline; mood episodes fill only a small part",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2646e702c06eefba5d28",
+   "attr": "data-d2-why",
+   "value": "Bipolar type includes a manic episode; he was never manic",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_20fb01b347baf25d4571",
+   "attr": "data-key-why",
+   "value": "An antipsychotic for the psychosis; an SSRI added for the depression",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_20fb01b347baf25d4571",
+   "attr": "data-d1-why",
+   "value": "A mood stabilizer such as lithium is for bipolar type",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_20fb01b347baf25d4571",
+   "attr": "data-d2-why",
+   "value": "Leaves the psychosis untreated; antipsychotic first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_e997d08bdbede2325ba6",
+   "attr": "data-key-why",
+   "value": "Voice and persecutory belief over 6 months; function fell",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_e997d08bdbede2325ba6",
+   "attr": "data-d1-why",
+   "value": "No withdrawal or fall in function",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_e997d08bdbede2325ba6",
+   "attr": "data-d2-why",
+   "value": "Autism has no hallucinations; begins in early development",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_28f93eaeabb48af3e64d",
+   "attr": "data-key-why",
+   "value": "Odd beliefs, magical thinking, few friends; no persistent psychosis",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_28f93eaeabb48af3e64d",
+   "attr": "data-d1-why",
+   "value": "Paranoid: distrust, without odd beliefs",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_28f93eaeabb48af3e64d",
+   "attr": "data-d2-why",
+   "value": "Needs persistent psychosis with a fall in function",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2d2d510ddaadd15be536",
+   "attr": "data-key-why",
+   "value": "Lifelong distrust; no persistent delusion or voices",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2d2d510ddaadd15be536",
+   "attr": "data-d1-why",
+   "value": "Needs one or more delusions for 1 month or more",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2d2d510ddaadd15be536",
+   "attr": "data-d2-why",
+   "value": "Schizotypal adds odd beliefs and magical thinking",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_125ed48015246d7ea9ad",
+   "attr": "data-key-why",
+   "value": "Lifelong detachment, little emotion; no odd beliefs",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_125ed48015246d7ea9ad",
+   "attr": "data-d1-why",
+   "value": "Schizotypal: odd beliefs, magical thinking",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_125ed48015246d7ea9ad",
+   "attr": "data-d2-why",
+   "value": "Starts in early development, with restricted, repetitive behaviors",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ee645dd4049c56c98a42",
+   "attr": "data-key-why",
+   "value": "Delusion and disorganized speech over 6 months; function fell",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ee645dd4049c56c98a42",
+   "attr": "data-d1-why",
+   "value": "Psychosis only inside a mood episode; mood even here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ee645dd4049c56c98a42",
+   "attr": "data-d2-why",
+   "value": "No prominent voices or disorganization",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_96f08a5f0ee0a06d44f4",
+   "attr": "data-key-why",
+   "value": "Voices under stress, under 24 hours; unstable relationships and mood, self-harm",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_96f08a5f0ee0a06d44f4",
+   "attr": "data-d1-why",
+   "value": "Needs at least 1 day",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_96f08a5f0ee0a06d44f4",
+   "attr": "data-d2-why",
+   "value": "Needs 1 to under 6 months",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4c64032d1e4c534c6782",
+   "attr": "data-key-why",
+   "value": "Command to stab his father, hidden knife, refuses admission",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4c64032d1e4c534c6782",
+   "attr": "data-d1-why",
+   "value": "Safety comes before family therapy",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4c64032d1e4c534c6782",
+   "attr": "data-d2-why",
+   "value": "A danger to others now; a dose change cannot wait a week",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_acec20862df55cf9786a",
+   "attr": "data-key-why",
+   "value": "Stressor treated, voices still up: higher dose or frequency",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_acec20862df55cf9786a",
+   "attr": "data-d1-why",
+   "value": "2 or more adequate trials fail first; not necessary yet",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_acec20862df55cf9786a",
+   "attr": "data-d2-why",
+   "value": "Treats neither the psychosis nor its cause",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9bbca9be1aa0ef0942ca",
+   "attr": "data-key-why",
+   "value": "Criticism, hostility or overinvolvement means more frequent relapses",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9bbca9be1aa0ef0942ca",
+   "attr": "data-d1-why",
+   "value": "Not criticism, hostility or overinvolvement",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9bbca9be1aa0ef0942ca",
+   "attr": "data-d2-why",
+   "value": "Living with family is not high expressed emotion",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4eff7cc0f37692494f18",
+   "attr": "data-key-why",
+   "value": "Ongoing contact with family; psychoeducation for every patient",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4eff7cc0f37692494f18",
+   "attr": "data-d1-why",
+   "value": "Leaves out the family he lives with",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4eff7cc0f37692494f18",
+   "attr": "data-d2-why",
+   "value": "Stable on his dose; continue it, do not raise it",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4f51374399c5e2faa634",
+   "attr": "data-key-why",
+   "value": "Poor or uncertain adherence, not a failed drug; long-acting injectable",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4f51374399c5e2faa634",
+   "attr": "data-d1-why",
+   "value": "A higher dose does not help missed pills",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4f51374399c5e2faa634",
+   "attr": "data-d2-why",
+   "value": "Poor adherence, not a failed drug; a switch fixes neither",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7b50d623d43c9a53c94f",
+   "attr": "data-key-why",
+   "value": "Missed injections with frequent relapse and homelessness",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7b50d623d43c9a53c94f",
+   "attr": "data-d1-why",
+   "value": "Needs a clinic he cannot reach; a team brings care to him",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7b50d623d43c9a53c94f",
+   "attr": "data-d2-why",
+   "value": "Needs 2 or more failed adequate trials, adherence documented",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5e890413f13e8d4b5abf",
+   "attr": "data-key-why",
+   "value": "Wants competitive paid work: a competitive job with an on-site coach",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5e890413f13e8d4b5abf",
+   "attr": "data-d1-why",
+   "value": "She wants competitive work now; no need to wait",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5e890413f13e8d4b5abf",
+   "attr": "data-d2-why",
+   "value": "Her goal is a job; supported employment places her directly",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_c85b7eee3da384e60440",
+   "attr": "data-key-why",
+   "value": "Goal of getting along better with others",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_c85b7eee3da384e60440",
+   "attr": "data-d1-why",
+   "value": "Not for a patient who keeps his visits and doses",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_c85b7eee3da384e60440",
+   "attr": "data-d2-why",
+   "value": "No psychotic symptoms for 8 months; dose is working",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b50c3ec605ca3faf50ee",
+   "attr": "data-key-why",
+   "value": "Improved on an adequate trial, adherent, but voices persist",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b50c3ec605ca3faf50ee",
+   "attr": "data-d1-why",
+   "value": "Treats neither the psychosis nor its cause",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b50c3ec605ca3faf50ee",
+   "attr": "data-d2-why",
+   "value": "Needs 2 or more failed adequate trials, adherence documented",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9fa041c8970b9d3b3fba",
+   "attr": "data-key-why",
+   "value": "Never a manic or depressive episode: lithium unhelpful in schizophrenia",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9fa041c8970b9d3b3fba",
+   "attr": "data-d1-why",
+   "value": "Helps residual voices alongside the drug",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9fa041c8970b9d3b3fba",
+   "attr": "data-d2-why",
+   "value": "Psychoeducation is recommended for every patient",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4a4edd58a7fdd308d09f",
+   "attr": "data-key-why",
+   "value": "Improved on an antipsychotic: continue it indefinitely",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4a4edd58a7fdd308d09f",
+   "attr": "data-d1-why",
+   "value": "Off it, 65% to 80% relapse within 12 months",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4a4edd58a7fdd308d09f",
+   "attr": "data-d2-why",
+   "value": "Any reduction now risks relapse; continue the full dose",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_50864e4faace903913cf",
+   "attr": "data-key-why",
+   "value": "Psychotic features make the episode manic, even while working",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_50864e4faace903913cf",
+   "attr": "data-d1-why",
+   "value": "No marked impairment, psychosis or hospitalization; never mania",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_50864e4faace903913cf",
+   "attr": "data-d2-why",
+   "value": "Delusion without mania or other symptoms",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_642294f71730fdce3fb8",
+   "attr": "data-key-why",
+   "value": "Hypomania 4 days or more, plus a major depressive episode",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_642294f71730fdce3fb8",
+   "attr": "data-d1-why",
+   "value": "Marked impairment, psychosis or hospitalization; 1 week or more",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_642294f71730fdce3fb8",
+   "attr": "data-d2-why",
+   "value": "2 years or more; never a full episode",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_27f9ad042d7a0119e0e3",
+   "attr": "data-key-why",
+   "value": "Continuous maintenance for years, possibly lifelong",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_27f9ad042d7a0119e0e3",
+   "attr": "data-d1-why",
+   "value": "Maintenance runs for years, possibly lifelong",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_27f9ad042d7a0119e0e3",
+   "attr": "data-d2-why",
+   "value": "Continuous maintenance, not intermittent",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bad56dc6413aaac87c48",
+   "attr": "data-key-why",
+   "value": "Mania with marked impairment plus 3 or more depressive symptoms",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bad56dc6413aaac87c48",
+   "attr": "data-d1-why",
+   "value": "Never mania or hypomania; past admission for elevated mood",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bad56dc6413aaac87c48",
+   "attr": "data-d2-why",
+   "value": "Hypomania has no marked impairment; she stopped working",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7dc58d2f1afc9954f4a2",
+   "attr": "data-key-why",
+   "value": "Mania on an antidepressant: stop it; start a first-line agent",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7dc58d2f1afc9954f4a2",
+   "attr": "data-d1-why",
+   "value": "Not \"continue it and add a mood stabilizer\"",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7dc58d2f1afc9954f4a2",
+   "attr": "data-d2-why",
+   "value": "Stop the antidepressant, not swap it; start a first-line agent",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_875af1ee71c6f2502d97",
+   "attr": "data-key-why",
+   "value": "Mania is an emergency; admission prevents harm to himself",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_875af1ee71c6f2502d97",
+   "attr": "data-d1-why",
+   "value": "Unsafe: he walked a roof claiming he can fly",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_875af1ee71c6f2502d97",
+   "attr": "data-d2-why",
+   "value": "Sedation does not remove the danger; he needs admission",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_662161d54e6b8e321eef",
+   "attr": "data-key-why",
+   "value": "Severe manic psychosis compromising safety: rapid behavioral control",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_662161d54e6b8e321eef",
+   "attr": "data-d1-why",
+   "value": "Lithium takes 4 to 10 days",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_662161d54e6b8e321eef",
+   "attr": "data-d2-why",
+   "value": "Effective for mania, but rapid behavioral control comes first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_e14998f0caa852bf05de",
+   "attr": "data-key-why",
+   "value": "No improvement after 2 weeks at therapeutic levels: add on",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_e14998f0caa852bf05de",
+   "attr": "data-d1-why",
+   "value": "No improvement after 2 weeks at therapeutic levels: act now",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_e14998f0caa852bf05de",
+   "attr": "data-d2-why",
+   "value": "No response at 2 weeks: add on or switch first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0c3b63b494f28be9d776",
+   "attr": "data-key-why",
+   "value": "Valproate: teratogenic, impaired intellectual development",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0c3b63b494f28be9d776",
+   "attr": "data-d1-why",
+   "value": "Lithium is first line for her",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0c3b63b494f28be9d776",
+   "attr": "data-d2-why",
+   "value": "A first-line antipsychotic for her",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cd2d3326193e35c8ef02",
+   "attr": "data-key-why",
+   "value": "Hospitalization satisfies duration and severity: 3 days is enough",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cd2d3326193e35c8ef02",
+   "attr": "data-d1-why",
+   "value": "No marked impairment, psychosis or hospitalization",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cd2d3326193e35c8ef02",
+   "attr": "data-d2-why",
+   "value": "Toxicology negative; no use explains the episode",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_293aa90f0e5f09f9f42f",
+   "attr": "data-key-why",
+   "value": "No antidepressant alone: risks a switch to mania",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_293aa90f0e5f09f9f42f",
+   "attr": "data-d1-why",
+   "value": "Quetiapine or lurasidone first in bipolar I depression",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_293aa90f0e5f09f9f42f",
+   "attr": "data-d2-why",
+   "value": "Lamotrigine is listed for bipolar depression",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_83176e5864a0d4fdea0c",
+   "attr": "data-key-why",
+   "value": "Most suicide deaths in bipolar disorder occur in depression",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_83176e5864a0d4fdea0c",
+   "attr": "data-d1-why",
+   "value": "Suicide risk comes first; and no antidepressant alone",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_83176e5864a0d4fdea0c",
+   "attr": "data-d2-why",
+   "value": "Says family better off without him: assess suicide risk now",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cc8ff30e23e43a1a0d5b",
+   "attr": "data-key-why",
+   "value": "Weight loss, heat intolerance, tachycardia, tremor: hyperthyroidism",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cc8ff30e23e43a1a0d5b",
+   "attr": "data-d1-why",
+   "value": "Toxicology already negative; thyroid signs point elsewhere",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cc8ff30e23e43a1a0d5b",
+   "attr": "data-d2-why",
+   "value": "Image the brain for neurologic findings; none here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ce4c3eab1e36837f52cf",
+   "attr": "data-key-why",
+   "value": "5 of 9 symptoms for 2 weeks, with impairment",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ce4c3eab1e36837f52cf",
+   "attr": "data-d1-why",
+   "value": "Any past manic or hypomanic episode; never had one",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ce4c3eab1e36837f52cf",
+   "attr": "data-d2-why",
+   "value": "Abnormal TSH would show it; TSH normal",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3af979baebdb16dec288",
+   "attr": "data-key-why",
+   "value": "2 weeks is not an adequate trial (4 to 6 weeks)",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3af979baebdb16dec288",
+   "attr": "data-d1-why",
+   "value": "A higher dose only adds adverse effects",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3af979baebdb16dec288",
+   "attr": "data-d2-why",
+   "value": "Too early to call failure; trial not yet adequate",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_770e24d11071883b993b",
+   "attr": "data-key-why",
+   "value": "8 weeks at maximum dose: switch to another first-line drug",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_770e24d11071883b993b",
+   "attr": "data-d1-why",
+   "value": "Not bupropion with prior anorexia nervosa",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_770e24d11071883b993b",
+   "attr": "data-d2-why",
+   "value": "8 weeks at maximum dose is already adequate",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0c602886aa66bac8c79b",
+   "attr": "data-key-why",
+   "value": "Bupropion lowers the seizure threshold; not in bulimia",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0c602886aa66bac8c79b",
+   "attr": "data-d1-why",
+   "value": "In bulimia, fluoxetine: fewer binges, less vomiting",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0c602886aa66bac8c79b",
+   "attr": "data-d2-why",
+   "value": "Poor fit (appetite, drowsiness) but not contraindicated",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2746e75c4067849741f3",
+   "attr": "data-key-why",
+   "value": "Same dose about 6 more months: holds remission",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2746e75c4067849741f3",
+   "attr": "data-d1-why",
+   "value": "Continuation first; taper only after about 6 months",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2746e75c4067849741f3",
+   "attr": "data-d2-why",
+   "value": "The dose that brought remission is the dose that holds it",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7c471fde44047898709e",
+   "attr": "data-key-why",
+   "value": "3 or more episodes: maintenance, often indefinite",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7c471fde44047898709e",
+   "attr": "data-d1-why",
+   "value": "3 or more episodes; each followed stopping",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7c471fde44047898709e",
+   "attr": "data-d2-why",
+   "value": "Taper after continuation only when relapse risk is not high",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_77b8d7080173cf63a52e",
+   "attr": "data-key-why",
+   "value": "ECT is the clear pick when severe (not eating)",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_77b8d7080173cf63a52e",
+   "attr": "data-d1-why",
+   "value": "Too slow; not eating calls for ECT, the rapid response",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_77b8d7080173cf63a52e",
+   "attr": "data-d2-why",
+   "value": "Too slow; psychotic depression not eating needs ECT",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_12fd7e26de5eb429d402",
+   "attr": "data-key-why",
+   "value": "Mood shifts within hours, abandonment fear, self-injury, emptiness",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_12fd7e26de5eb429d402",
+   "attr": "data-d1-why",
+   "value": "Hypomania 4 days or more: episodes with a start and an end",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_12fd7e26de5eb429d402",
+   "attr": "data-d2-why",
+   "value": "2 weeks or more of sustained symptoms; her mood reacts to each stressor",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1fe65106a3cd14dc257a",
+   "attr": "data-key-why",
+   "value": "Age 18 or older, no remorse, conduct disorder before 15",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1fe65106a3cd14dc257a",
+   "attr": "data-d1-why",
+   "value": "Under 18; he is 22",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1fe65106a3cd14dc257a",
+   "attr": "data-d2-why",
+   "value": "Grandiosity and need for admiration, not lawbreaking",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b5b3d2d48170f2690f97",
+   "attr": "data-key-why",
+   "value": "Lying, truancy, theft, fighting, under 18",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b5b3d2d48170f2690f97",
+   "attr": "data-d1-why",
+   "value": "Needs age 18 or older",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b5b3d2d48170f2690f97",
+   "attr": "data-d2-why",
+   "value": "No aggression, cruelty or property violations",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_37976a2b6c3cbf952640",
+   "attr": "data-key-why",
+   "value": "Dialectical behavior therapy: best evidence for borderline",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_37976a2b6c3cbf952640",
+   "attr": "data-d1-why",
+   "value": "Medication only an adjunct, for transient paranoia",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_37976a2b6c3cbf952640",
+   "attr": "data-d2-why",
+   "value": "Medication only an adjunct; no bipolar disorder here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_62499936c58ac677b46a",
+   "attr": "data-key-why",
+   "value": "Seductive, theatrical, attention seeking since her teens",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_62499936c58ac677b46a",
+   "attr": "data-d1-why",
+   "value": "Mania 1 week or more: an episode with less sleep, rapid speech",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_62499936c58ac677b46a",
+   "attr": "data-d2-why",
+   "value": "Grandiose, entitled; seeks admiration",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6d7d62f9f280e4c403e3",
+   "attr": "data-key-why",
+   "value": "Childhood trauma is often found in borderline",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6d7d62f9f280e4c403e3",
+   "attr": "data-d1-why",
+   "value": "Points to a psychotic disorder, not borderline",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6d7d62f9f280e4c403e3",
+   "attr": "data-d2-why",
+   "value": "Manic episodes are not part of borderline",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9cb0cb9bbe901f8d82c3",
+   "attr": "data-key-why",
+   "value": "Unexpected attacks plus 2 or more of 5 situations: give both",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9cb0cb9bbe901f8d82c3",
+   "attr": "data-d1-why",
+   "value": "Recurrent unexpected attacks also present: give both",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9cb0cb9bbe901f8d82c3",
+   "attr": "data-d2-why",
+   "value": "Fear of negative evaluation, not of the attacks",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0a680a7675773ffea9d5",
+   "attr": "data-key-why",
+   "value": "Excessive worry about a number of events, at least 6 months",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0a680a7675773ffea9d5",
+   "attr": "data-d1-why",
+   "value": "Recurrent unexpected attacks peaking within minutes; none here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0a680a7675773ffea9d5",
+   "attr": "data-d2-why",
+   "value": "Preoccupation with having or getting a serious illness",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d38874735cc315f53712",
+   "attr": "data-key-why",
+   "value": "Attacks only in social situations; fear of negative evaluation",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d38874735cc315f53712",
+   "attr": "data-d1-why",
+   "value": "Needs recurrent unexpected attacks",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d38874735cc315f53712",
+   "attr": "data-d2-why",
+   "value": "Excessive worry about a number of events, hard to control",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9882ee4e5ed520e497ed",
+   "attr": "data-key-why",
+   "value": "One feared trigger, almost always immediate fear",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9882ee4e5ed520e497ed",
+   "attr": "data-d1-why",
+   "value": "Needs 2 or more of 5 situations",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9882ee4e5ed520e497ed",
+   "attr": "data-d2-why",
+   "value": "Attacks only in social situations with possible scrutiny",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_51b7ab044ef43763d0d4",
+   "attr": "data-key-why",
+   "value": "Unexpected spells peaking within minutes; worry about more attacks",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_51b7ab044ef43763d0d4",
+   "attr": "data-d1-why",
+   "value": "Typically more than 6 months symptomatic; her spells clear",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_51b7ab044ef43763d0d4",
+   "attr": "data-d2-why",
+   "value": "Excessive worry about a number of events; not only attacks",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1c1f69ce1e98783124e0",
+   "attr": "data-key-why",
+   "value": "Preoccupation with a serious illness, at least 6 months; mild symptoms",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1c1f69ce1e98783124e0",
+   "attr": "data-d1-why",
+   "value": "Needs recurrent unexpected attacks; panic is acute and episodic",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1c1f69ce1e98783124e0",
+   "attr": "data-d2-why",
+   "value": "Excessive worry about a number of events, not one illness",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2770350e3c6d0c9f10b1",
+   "attr": "data-key-why",
+   "value": "Weight loss, heat intolerance, resting tachycardia: low TSH screens",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2770350e3c6d0c9f10b1",
+   "attr": "data-d1-why",
+   "value": "No stimulant use suggested; thyroid signs lead",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2770350e3c6d0c9f10b1",
+   "attr": "data-d2-why",
+   "value": "Severe hypertension in the episodes; not this picture",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_e3955a2914959af65ee8",
+   "attr": "data-key-why",
+   "value": "Severe hypertension with headache and sweating in spells",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_e3955a2914959af65ee8",
+   "attr": "data-d1-why",
+   "value": "Regular, abrupt on and off; ECG for arrhythmia",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_e3955a2914959af65ee8",
+   "attr": "data-d2-why",
+   "value": "No test makes the panic diagnosis; no standardized criteria",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0a1dc4c6f646148e90f6",
+   "attr": "data-key-why",
+   "value": "Abrupt start, abrupt stop: ECG before calling them panic attacks",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0a1dc4c6f646148e90f6",
+   "attr": "data-d1-why",
+   "value": "Severe hypertension in the episodes; BP normal here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0a1dc4c6f646148e90f6",
+   "attr": "data-d2-why",
+   "value": "No test makes the panic diagnosis; no standardized criteria",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b6fe551a76fe31c35481",
+   "attr": "data-key-why",
+   "value": "Criteria met, mimics excluded: SSRI at half dose, with CBT",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b6fe551a76fe31c35481",
+   "attr": "data-d1-why",
+   "value": "No test makes the diagnosis; no standardized criteria",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b6fe551a76fe31c35481",
+   "attr": "data-d2-why",
+   "value": "ECG already normal; no test makes the diagnosis",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_417bf3e7befaa83ad1f7",
+   "attr": "data-key-why",
+   "value": "An SSRI is first line, started low",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_417bf3e7befaa83ad1f7",
+   "attr": "data-d1-why",
+   "value": "Benzodiazepine short term only; not as the only treatment",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_417bf3e7befaa83ad1f7",
+   "attr": "data-d2-why",
+   "value": "Propranolol is not recommended for panic disorder",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f02353ec90fe1c1d49c2",
+   "attr": "data-key-why",
+   "value": "Early activation: half the usual dose, raise about every 7 days",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f02353ec90fe1c1d49c2",
+   "attr": "data-d1-why",
+   "value": "Buspirone does not appear effective for panic disorder",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f02353ec90fe1c1d49c2",
+   "attr": "data-d2-why",
+   "value": "Propranolol is not recommended for panic disorder",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_8f56600a122cbeb2b97c",
+   "attr": "data-key-why",
+   "value": "Not ineffective until at least 4 weeks at the high end",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_8f56600a122cbeb2b97c",
+   "attr": "data-d1-why",
+   "value": "Too early to switch: 2 weeks at a low dose",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_8f56600a122cbeb2b97c",
+   "attr": "data-d2-why",
+   "value": "Benzodiazepine short term only; not as the only treatment",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a29e571adb123e184e79",
+   "attr": "data-key-why",
+   "value": "Severe symptoms before the SSRI works: longer-acting benzodiazepine bridge",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a29e571adb123e184e79",
+   "attr": "data-d1-why",
+   "value": "Half the usual dose; raise about every 7 days",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a29e571adb123e184e79",
+   "attr": "data-d2-why",
+   "value": "Buspirone does not appear effective for panic disorder",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ce5106b02de93c0f3359",
+   "attr": "data-key-why",
+   "value": "History of substance use: benzodiazepine misuse and dependence",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ce5106b02de93c0f3359",
+   "attr": "data-d1-why",
+   "value": "An SSRI with CBT remains first line",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ce5106b02de93c0f3359",
+   "attr": "data-d2-why",
+   "value": "CBT with an SSRI remains first line",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_25ccc4431464504f2c69",
+   "attr": "data-key-why",
+   "value": "Continue the drug 12 months, then taper, to limit relapse",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_25ccc4431464504f2c69",
+   "attr": "data-d1-why",
+   "value": "Too soon: continue 12 months before tapering",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_25ccc4431464504f2c69",
+   "attr": "data-d2-why",
+   "value": "Too soon: continue 12 months, then taper",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3f2655878b250699d54c",
+   "attr": "data-key-why",
+   "value": "Distressing symptom with outsized worry and time spent on it",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3f2655878b250699d54c",
+   "attr": "data-d1-why",
+   "value": "Symptoms absent or only mild; her pain is distressing",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3f2655878b250699d54c",
+   "attr": "data-d2-why",
+   "value": "Needs an external incentive; nothing is faked",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_76289d3ca800d14c7d43",
+   "attr": "data-key-why",
+   "value": "Fear of a serious illness, 6 months or more; symptoms absent",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_76289d3ca800d14c7d43",
+   "attr": "data-d1-why",
+   "value": "Needs a distressing symptom; he has none",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_76289d3ca800d14c7d43",
+   "attr": "data-d2-why",
+   "value": "Needs a change in movement or sensation; no weakness",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a9ec8e5d780518bfa4bc",
+   "attr": "data-key-why",
+   "value": "Findings incompatible with neurologic disease (Hoover sign)",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a9ec8e5d780518bfa4bc",
+   "attr": "data-d1-why",
+   "value": "Falsified or self-induced illness; no deception here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a9ec8e5d780518bfa4bc",
+   "attr": "data-d2-why",
+   "value": "Normal reflexes and MRI argue against a stroke",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9ece10baac4dcae7f2b6",
+   "attr": "data-key-why",
+   "value": "Self-induced illness, deception, no obvious external reward",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9ece10baac4dcae7f2b6",
+   "attr": "data-d1-why",
+   "value": "Needs an external incentive; no lawsuit or claim",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9ece10baac4dcae7f2b6",
+   "attr": "data-d2-why",
+   "value": "Not deceiving; here a syringe shows self-induction",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d53df36636d49fbb457e",
+   "attr": "data-key-why",
+   "value": "Faked or exaggerated symptoms for an external incentive",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d53df36636d49fbb457e",
+   "attr": "data-d1-why",
+   "value": "No obvious external reward; here opioids and court",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d53df36636d49fbb457e",
+   "attr": "data-d2-why",
+   "value": "Not deceiving; he limps only when watched",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_acdd1fb9d2d6b78fe890",
+   "attr": "data-key-why",
+   "value": "Caregiver falsifies illness in a child; no obvious external reward",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_acdd1fb9d2d6b78fe890",
+   "attr": "data-d1-why",
+   "value": "Needs an external incentive; no custody or benefit claim",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_acdd1fb9d2d6b78fe890",
+   "attr": "data-d2-why",
+   "value": "Findings exist only in her reports; the child is not the source",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d544ca14ebedd4a91745",
+   "attr": "data-key-why",
+   "value": "Regular, time-limited visits on a schedule",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d544ca14ebedd4a91745",
+   "attr": "data-d1-why",
+   "value": "More testing can feed the cycle",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d544ca14ebedd4a91745",
+   "attr": "data-d2-why",
+   "value": "Visits driven by symptoms reinforce the cycle",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b589ce7156cbdcaf0964",
+   "attr": "data-key-why",
+   "value": "Entry pain is examined first: inspection, swab, one finger",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b589ce7156cbdcaf0964",
+   "attr": "data-d1-why",
+   "value": "Entry pain needs the vulvar examination first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b589ce7156cbdcaf0964",
+   "attr": "data-d2-why",
+   "value": "Deep pain with painful periods; hers is at entry",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d42d568cc568fd7b9fd1",
+   "attr": "data-key-why",
+   "value": "Fear and pelvic floor tightening; painless swab; microscopy clear",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d42d568cc568fd7b9fd1",
+   "attr": "data-d1-why",
+   "value": "Thick white discharge; organisms on microscopy; here clear",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d42d568cc568fd7b9fd1",
+   "attr": "data-d2-why",
+   "value": "The cotton swab reproduces the pain; here painless",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3a7d844ecc3c3b9fe886",
+   "attr": "data-key-why",
+   "value": "Pelvic floor physical therapy with CBT",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3a7d844ecc3c3b9fe886",
+   "attr": "data-d1-why",
+   "value": "For postmenopausal pale, dry tissue; hers is normal",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3a7d844ecc3c3b9fe886",
+   "attr": "data-d2-why",
+   "value": "Only after nonsurgical options fail, pain at the vestibule",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0ee19d0739b94cb7627d",
+   "attr": "data-key-why",
+   "value": "Levator ani contracts on attempted penetration",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0ee19d0739b94cb7627d",
+   "attr": "data-d1-why",
+   "value": "Postmenopausal pale, dry tissue; hers is normal",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0ee19d0739b94cb7627d",
+   "attr": "data-d2-why",
+   "value": "Red, swollen vulva and vagina; hers is normal",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b0f0c334fd087638797e",
+   "attr": "data-key-why",
+   "value": "Vulvar burning 3 months or more; swab reproduces it; no cause",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b0f0c334fd087638797e",
+   "attr": "data-d1-why",
+   "value": "Swab painless and pelvic floor contracts on one finger",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b0f0c334fd087638797e",
+   "attr": "data-d2-why",
+   "value": "Visible skin changes; her skin is normal",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5dd7c86366ecfd236b41",
+   "attr": "data-key-why",
+   "value": "Red, swollen vulva and vagina; thick white discharge",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5dd7c86366ecfd236b41",
+   "attr": "data-d1-why",
+   "value": "Needs about 6 months; 4 days here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5dd7c86366ecfd236b41",
+   "attr": "data-d2-why",
+   "value": "Needs 3 months or more with no identifiable cause",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1c3de6f03e7f9fe8f0e9",
+   "attr": "data-key-why",
+   "value": "Little interest or arousal; no pain; 6 months, 3 of 6",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1c3de6f03e7f9fe8f0e9",
+   "attr": "data-d1-why",
+   "value": "No pain or fear with penetration",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1c3de6f03e7f9fe8f0e9",
+   "attr": "data-d2-why",
+   "value": "Low mood or anhedonia beyond sex; she enjoys work",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d1aaef1d03d23fe24820",
+   "attr": "data-key-why",
+   "value": "Low-dose vaginal estrogen, the most effective, for moderate to severe",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d1aaef1d03d23fe24820",
+   "attr": "data-d1-why",
+   "value": "Pelvic floor relaxed, nontender",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d1aaef1d03d23fe24820",
+   "attr": "data-d2-why",
+   "value": "No fear of penetration; the tissue is the problem",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_11cc3578ab34fb7ed536",
+   "attr": "data-key-why",
+   "value": "Acute, fluctuating inattention with visual hallucinations after surgery",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_11cc3578ab34fb7ed536",
+   "attr": "data-d1-why",
+   "value": "A medical or drug cause rules it out; inattention here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_11cc3578ab34fb7ed536",
+   "attr": "data-d2-why",
+   "value": "Slow, uncertain start; attention spared until severe",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6528f9dbc4a553760f7d",
+   "attr": "data-key-why",
+   "value": "Slow onset over years, memory lost first, attention spared",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6528f9dbc4a553760f7d",
+   "attr": "data-d1-why",
+   "value": "Hours to a few days, fluctuating; she is attentive",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6528f9dbc4a553760f7d",
+   "attr": "data-d2-why",
+   "value": "Needs depressed mood or lost interest; memory loss leads",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7470edf44986934e921d",
+   "attr": "data-key-why",
+   "value": "Somnolent and inattentive, an acute change from last week",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7470edf44986934e921d",
+   "attr": "data-d1-why",
+   "value": "An acute change with inattention is hypoactive delirium instead",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7470edf44986934e921d",
+   "attr": "data-d2-why",
+   "value": "Slow, uncertain start; she was sharp last week",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7b50e870883dc73ce0f9",
+   "attr": "data-key-why",
+   "value": "First-generation antihistamines are highly anticholinergic",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7b50e870883dc73ce0f9",
+   "attr": "data-d1-why",
+   "value": "Highly anticholinergic: that effect, not histamine block, confuses",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7b50e870883dc73ce0f9",
+   "attr": "data-d2-why",
+   "value": "Highly anticholinergic, a Beers delirium class; not serotonergic",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9a86fc1b1a583b1c9607",
+   "attr": "data-key-why",
+   "value": "Look for the medical cause first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9a86fc1b1a583b1c9607",
+   "attr": "data-d1-why",
+   "value": "Imaging not routine without focal signs",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9a86fc1b1a583b1c9607",
+   "attr": "data-d2-why",
+   "value": "Not a first test for an acute medical cause",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9a43cb8744b66244d55b",
+   "attr": "data-key-why",
+   "value": "Focal sign after head trauma on an anticoagulant",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9a43cb8744b66244d55b",
+   "attr": "data-d1-why",
+   "value": "A focal sign best predicts an abnormal scan; CT first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9a43cb8744b66244d55b",
+   "attr": "data-d2-why",
+   "value": "Head trauma with a focal sign needs a CT first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1a09df3a1294e55d5d0d",
+   "attr": "data-key-why",
+   "value": "Normeperidine builds up when the kidneys clear it poorly",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1a09df3a1294e55d5d0d",
+   "attr": "data-d1-why",
+   "value": "Antipsychotic only if safety is threatened",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1a09df3a1294e55d5d0d",
+   "attr": "data-d2-why",
+   "value": "No benzodiazepine for the delirium itself",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_34902597b649d6f0115f",
+   "attr": "data-key-why",
+   "value": "Severe agitation threatening safety: low-dose antipsychotic",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_34902597b649d6f0115f",
+   "attr": "data-d1-why",
+   "value": "Benzodiazepines bring more confusion and sedation",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_34902597b649d6f0115f",
+   "attr": "data-d2-why",
+   "value": "Already failed: he hits a nurse despite reorientation",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0dcaebb0bf5c8466d61c",
+   "attr": "data-key-why",
+   "value": "Delirium tremens: IV benzodiazepine, the drug of choice",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0dcaebb0bf5c8466d61c",
+   "attr": "data-d1-why",
+   "value": "No haloperidol at first: may lower the seizure threshold",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0dcaebb0bf5c8466d61c",
+   "attr": "data-d2-why",
+   "value": "Withdrawal delirium needs an IV benzodiazepine",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6f2d95529c86c3afb033",
+   "attr": "data-key-why",
+   "value": "Benzodiazepines bring more confusion and sedation",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6f2d95529c86c3afb033",
+   "attr": "data-d1-why",
+   "value": "Frequent reorientation helps",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6f2d95529c86c3afb033",
+   "attr": "data-d2-why",
+   "value": "Treat the cause: keep treating the infection",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d86091a6d35ed2c8142e",
+   "attr": "data-key-why",
+   "value": "Fewer disturbances, protect sleep, reorientation, mobility",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d86091a6d35ed2c8142e",
+   "attr": "data-d1-why",
+   "value": "No antipsychotic to prevent it",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d86091a6d35ed2c8142e",
+   "attr": "data-d2-why",
+   "value": "Zolpidem is on the Beers delirium list",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9f31bf83cd5cb26c6178",
+   "attr": "data-key-why",
+   "value": "Acute change from her baseline with fever and dysuria",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9f31bf83cd5cb26c6178",
+   "attr": "data-d1-why",
+   "value": "Progression is slow, not a 1-day change with fever",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9f31bf83cd5cb26c6178",
+   "attr": "data-d2-why",
+   "value": "Swings usually span days to weeks; no fever",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6c894b0025d26e66237f",
+   "attr": "data-key-why",
+   "value": "Benzodiazepine stopped on admission: withdrawal within days",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6c894b0025d26e66237f",
+   "attr": "data-d1-why",
+   "value": "Afebrile on an antibiotic that covers the organism",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6c894b0025d26e66237f",
+   "attr": "data-d2-why",
+   "value": "A medical or drug cause rules it out",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cc182d77d4694cbcd721",
+   "attr": "data-key-why",
+   "value": "Clonus, hyperreflexia, sweating, hours after tramadol was added",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cc182d77d4694cbcd721",
+   "attr": "data-d1-why",
+   "value": "Builds over 1 to 3 days on a dopamine blocker; rigid, slow reflexes",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cc182d77d4694cbcd721",
+   "attr": "data-d2-why",
+   "value": "Hot, dry, flushed skin; ileus; she sweats with active bowel",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0564f671fc7cbee2a9a1",
+   "attr": "data-key-why",
+   "value": "Early acetaminophen poisoning is often silent; the antidote prevents liver injury",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0564f671fc7cbee2a9a1",
+   "attr": "data-d1-why",
+   "value": "Suicide risk is assessed once she is medically clear",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0564f671fc7cbee2a9a1",
+   "attr": "data-d2-why",
+   "value": "Misses a silent acetaminophen ingestion",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_c5662dbd795e002baaa4",
+   "attr": "data-key-why",
+   "value": "Pinpoint pupils with slow breathing: opioid toxicity",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_c5662dbd795e002baaa4",
+   "attr": "data-d1-why",
+   "value": "Intubation only if no quick response to naloxone",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_c5662dbd795e002baaa4",
+   "attr": "data-d2-why",
+   "value": "Sedation with normal-sized pupils; his are pinpoint",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bc6605f71caccfec26b3",
+   "attr": "data-key-why",
+   "value": "Pinpoint pupils, secretions everywhere, bronchospasm, bradycardia",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bc6605f71caccfec26b3",
+   "attr": "data-d1-why",
+   "value": "Pinpoint pupils, slow breathing, sedation; no secretions",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bc6605f71caccfec26b3",
+   "attr": "data-d2-why",
+   "value": "Big pupils; hot, dry, flushed skin",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_8f48c9780eb3e49fdd97",
+   "attr": "data-key-why",
+   "value": "Fever, tinnitus, fast breathing after an overdose",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_8f48c9780eb3e49fdd97",
+   "attr": "data-d1-why",
+   "value": "Clonus, hyperreflexia, sweating; no clonus here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_8f48c9780eb3e49fdd97",
+   "attr": "data-d2-why",
+   "value": "Big pupils; hot, dry, flushed skin",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3d4f3bb449249b384e19",
+   "attr": "data-key-why",
+   "value": "An SSRI alone is usually well tolerated: look for a coingestant",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3d4f3bb449249b384e19",
+   "attr": "data-d1-why",
+   "value": "For refractory serotonin syndrome; no clonus here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3d4f3bb449249b384e19",
+   "attr": "data-d2-why",
+   "value": "Confusion points to a coingestant still unchecked",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5190130a1c2a676a0776",
+   "attr": "data-key-why",
+   "value": "Nystagmus in any direction, vertical included, with violence: PCP",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5190130a1c2a676a0776",
+   "attr": "data-d1-why",
+   "value": "No urinary acidification: acidosis, myoglobin in the kidney",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5190130a1c2a676a0776",
+   "attr": "data-d2-why",
+   "value": "Normal breathing with midsize pupils is not an opioid picture",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1d353a1868a40d61887a",
+   "attr": "data-key-why",
+   "value": "Dilated pupils, hypertension, sweating; can bring coronary ischemia",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1d353a1868a40d61887a",
+   "attr": "data-d1-why",
+   "value": "Pinpoint pupils with slow breathing",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1d353a1868a40d61887a",
+   "attr": "data-d2-why",
+   "value": "Red conjunctivae with hunger; not sweating with dilated pupils",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7029849bdf14d473e999",
+   "attr": "data-key-why",
+   "value": "Benzodiazepines first line for cocaine agitation and chest pain",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7029849bdf14d473e999",
+   "attr": "data-d1-why",
+   "value": "Beta-blockers leave alpha stimulation unopposed in cocaine toxicity",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7029849bdf14d473e999",
+   "attr": "data-d2-why",
+   "value": "Naloxone treats opioid overdose, not a stimulant",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_790007e5c1400c256acf",
+   "attr": "data-key-why",
+   "value": "Pinpoint pupils with slow breathing; reverses with naloxone",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_790007e5c1400c256acf",
+   "attr": "data-d1-why",
+   "value": "Reverses benzodiazepines, not opioids; can provoke seizures",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_790007e5c1400c256acf",
+   "attr": "data-d2-why",
+   "value": "Would deepen the respiratory depression",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b0154ac9b2095e29366b",
+   "attr": "data-key-why",
+   "value": "Usually 48 to 96 h; disorientation with autonomic instability",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b0154ac9b2095e29366b",
+   "attr": "data-d1-why",
+   "value": "Usually 12 to 48 h; clear sensorium, autonomic signs usually absent",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b0154ac9b2095e29366b",
+   "attr": "data-d2-why",
+   "value": "Dilated pupils, yawning, runny nose; not disorientation with fever",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b7cfc2c40d1542845761",
+   "attr": "data-key-why",
+   "value": "Benzodiazepine first line; thiamine before any glucose",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b7cfc2c40d1542845761",
+   "attr": "data-d1-why",
+   "value": "Glucose first risks Wernicke encephalopathy",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b7cfc2c40d1542845761",
+   "attr": "data-d2-why",
+   "value": "Clonidine is only an adjunct to a benzodiazepine",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_28f20c32a3b6cf8ca9fe",
+   "attr": "data-key-why",
+   "value": "Opioid withdrawal: buprenorphine or methadone",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_28f20c32a3b6cf8ca9fe",
+   "attr": "data-d1-why",
+   "value": "Not naloxone: it treats overdose",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_28f20c32a3b6cf8ca9fe",
+   "attr": "data-d2-why",
+   "value": "Not the standard treatment for opioid withdrawal",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_81bec42c97ebe9c64dc2",
+   "attr": "data-key-why",
+   "value": "Cyclical vomiting usually eased by warm showers, daily cannabis",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_81bec42c97ebe9c64dc2",
+   "attr": "data-d1-why",
+   "value": "Ignores the daily cannabis use, the deciding clue",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_81bec42c97ebe9c64dc2",
+   "attr": "data-d2-why",
+   "value": "Not cyclical bouts eased by hot showers",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d6ee18090fd5bcec6af1",
+   "attr": "data-key-why",
+   "value": "Acute delusions after a new medication; alert, oriented",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d6ee18090fd5bcec6af1",
+   "attr": "data-d1-why",
+   "value": "Fluctuating attention and disorientation; she is attentive",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d6ee18090fd5bcec6af1",
+   "attr": "data-d2-why",
+   "value": "Excluded when a medication better explains the symptoms",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2181cd72a54ed15f6d7e",
+   "attr": "data-key-why",
+   "value": "Onset after 40 with a speech or motor deficit: image the brain",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2181cd72a54ed15f6d7e",
+   "attr": "data-d1-why",
+   "value": "Image the brain before an antipsychotic",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2181cd72a54ed15f6d7e",
+   "attr": "data-d2-why",
+   "value": "Electroencephalography is for suspected seizure activity",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_dab772dbb67ddd261aa7",
+   "attr": "data-key-why",
+   "value": "Fluctuating attention and disorientation; psychosis secondary",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_dab772dbb67ddd261aa7",
+   "attr": "data-d1-why",
+   "value": "Needs an alert, oriented patient; attention fails here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_dab772dbb67ddd261aa7",
+   "attr": "data-d2-why",
+   "value": "Excluded when a medication or illness better explains it",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bdc4a98163f28eb587cc",
+   "attr": "data-key-why",
+   "value": "Cushing features: test for hypercortisolism before an antidepressant",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bdc4a98163f28eb587cc",
+   "attr": "data-d1-why",
+   "value": "Rule out the medical cause before an SSRI",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bdc4a98163f28eb587cc",
+   "attr": "data-d2-why",
+   "value": "Screens for acromegaly, which enlarges the jaw, hands and feet",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b1424d843d94f4450147",
+   "attr": "data-key-why",
+   "value": "Steroid-induced mania: dose reduction comes first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b1424d843d94f4450147",
+   "attr": "data-d1-why",
+   "value": "Prevention option with more side effects; lower the dose first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_b1424d843d94f4450147",
+   "attr": "data-d2-why",
+   "value": "Imaging is for a focal or cognitive finding",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2b65f73ed04191f51f42",
+   "attr": "data-key-why",
+   "value": "Psychosis with dysarthria, ataxia and abnormal liver tests: Wilson",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2b65f73ed04191f51f42",
+   "attr": "data-d1-why",
+   "value": "Rule out Wilson disease before an antipsychotic",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2b65f73ed04191f51f42",
+   "attr": "data-d2-why",
+   "value": "Dysarthria with abnormal liver tests is the Wilson pattern",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_054898495fa0c4c9a513",
+   "attr": "data-key-why",
+   "value": "Aggression, destruction, theft, truancy; violates others' basic rights",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_054898495fa0c4c9a513",
+   "attr": "data-d1-why",
+   "value": "No stealing or violation of others' rights",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_054898495fa0c4c9a513",
+   "attr": "data-d2-why",
+   "value": "18 or older, conduct disorder before 15",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cb685ea3f2d528ec3d2f",
+   "attr": "data-key-why",
+   "value": "Argues, defies, vindictive; 6 months or more",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cb685ea3f2d528ec3d2f",
+   "attr": "data-d1-why",
+   "value": "Needs 3 or more in 12 months; she shows none",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cb685ea3f2d528ec3d2f",
+   "attr": "data-d2-why",
+   "value": "Needs severe outbursts, 3 or more a week",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_563f384ee76cd7574ae0",
+   "attr": "data-key-why",
+   "value": "Impulsive outbursts, not planned; appropriate behavior between",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_563f384ee76cd7574ae0",
+   "attr": "data-d1-why",
+   "value": "Lies for gain, theft or truancy; none here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_563f384ee76cd7574ae0",
+   "attr": "data-d2-why",
+   "value": "Needs irritability between outbursts and onset before 10",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_579779965ffaf731d62c",
+   "attr": "data-key-why",
+   "value": "Outbursts 3 or more a week, irritable between; onset before 10",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_579779965ffaf731d62c",
+   "attr": "data-d1-why",
+   "value": "When disruptive mood dysregulation disorder is met, not also diagnosed",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_579779965ffaf731d62c",
+   "attr": "data-d2-why",
+   "value": "Needs appropriate behavior between outbursts; he is irritable",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4f4af8e282c8c34049f2",
+   "attr": "data-key-why",
+   "value": "Conduct disorder: psychosocial care, parent management training first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4f4af8e282c8c34049f2",
+   "attr": "data-d1-why",
+   "value": "Reserved for severe aggression unresponsive to psychosocial care",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4f4af8e282c8c34049f2",
+   "attr": "data-d2-why",
+   "value": "For adolescents with more severe symptoms",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_57d0b14df6a8bb180e75",
+   "attr": "data-key-why",
+   "value": "Other milestones on target; language behind",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_57d0b14df6a8bb180e75",
+   "attr": "data-d1-why",
+   "value": "Not diagnosed before age 6",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_57d0b14df6a8bb180e75",
+   "attr": "data-d2-why",
+   "value": "Age 6 or older",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_125f388e00badb74a592",
+   "attr": "data-key-why",
+   "value": "Low desire, persistent and distressing: lower the dose first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_125f388e00badb74a592",
+   "attr": "data-d1-why",
+   "value": "Another SSRI such as citalopram carries a similar risk",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_125f388e00badb74a592",
+   "attr": "data-d2-why",
+   "value": "Interfere with the antidepressant effect",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4c6ee3a2ac28b5d544c1",
+   "attr": "data-key-why",
+   "value": "Lower dose failed; one episode in remission allows a taper",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4c6ee3a2ac28b5d544c1",
+   "attr": "data-d1-why",
+   "value": "An SSRI is tapered, not stopped abruptly",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4c6ee3a2ac28b5d544c1",
+   "attr": "data-d2-why",
+   "value": "Another SSRI such as citalopram carries a similar risk",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1319671e8b2c93ba6852",
+   "attr": "data-key-why",
+   "value": "Lower dose failed, stays on medication: add bupropion",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1319671e8b2c93ba6852",
+   "attr": "data-d1-why",
+   "value": "The same drug for low desire: no effect shown",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1319671e8b2c93ba6852",
+   "attr": "data-d2-why",
+   "value": "She wants to stay on an antidepressant",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_46efe61956d880fb6584",
+   "attr": "data-key-why",
+   "value": "Arousal problems: sildenafil can help",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_46efe61956d880fb6584",
+   "attr": "data-d1-why",
+   "value": "Propranolol is unlikely to help",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_46efe61956d880fb6584",
+   "attr": "data-d2-why",
+   "value": "Another SSRI such as citalopram carries a similar risk",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_82d710660ff3e8d5c763",
+   "attr": "data-key-why",
+   "value": "Bupropion: contraindicated in bulimia",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_82d710660ff3e8d5c763",
+   "attr": "data-d1-why",
+   "value": "Mirtazapine: fewer sexual adverse effects than SSRIs",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_82d710660ff3e8d5c763",
+   "attr": "data-d2-why",
+   "value": "Fluoxetine also means fewer binges and less vomiting in bulimia",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d825fd2c09edb7908257",
+   "attr": "data-key-why",
+   "value": "FINISH symptoms typically within 3 days of a stop",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d825fd2c09edb7908257",
+   "attr": "data-d1-why",
+   "value": "Typically 2 to 3 weeks or longer after stopping",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d825fd2c09edb7908257",
+   "attr": "data-d2-why",
+   "value": "Clonus or hyperreflexia point to serotonin syndrome; none here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6f875a3df168eda248ea",
+   "attr": "data-key-why",
+   "value": "Exclude other serious causes, then reassure: 1 to 2 weeks",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6f875a3df168eda248ea",
+   "attr": "data-d1-why",
+   "value": "He prefers to stay off; restarting is optional",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6f875a3df168eda248ea",
+   "attr": "data-d2-why",
+   "value": "A new antidepressant for presumed relapse",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5568d24b36134cb369b5",
+   "attr": "data-key-why",
+   "value": "Symptoms during a taper: restart the dose, taper more slowly",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5568d24b36134cb369b5",
+   "attr": "data-d1-why",
+   "value": "An SSRI is tapered, not stopped abruptly",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5568d24b36134cb369b5",
+   "attr": "data-d2-why",
+   "value": "Fluoxetine is for a slow taper that is poorly tolerated",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_25d0479945c172a43d22",
+   "attr": "data-key-why",
+   "value": "Slow taper poorly tolerated: fluoxetine's long half-life",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_25d0479945c172a43d22",
+   "attr": "data-d1-why",
+   "value": "An abrupt stop brings more discontinuation symptoms",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_25d0479945c172a43d22",
+   "attr": "data-d2-why",
+   "value": "Failed twice; a third slow taper is poorly tolerated",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1459fc022ab109ac3695",
+   "attr": "data-key-why",
+   "value": "Clonus, hyperreflexia, mydriasis within hours of adding tramadol",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1459fc022ab109ac3695",
+   "attr": "data-d1-why",
+   "value": "Builds over 1 to 3 days; slow reflexes, rigidity",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1459fc022ab109ac3695",
+   "attr": "data-d2-why",
+   "value": "Clonus or hyperreflexia point to serotonin syndrome instead",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7ecf9270b9fbc20072e9",
+   "attr": "data-key-why",
+   "value": "Acute dystonia within hours: a parenteral anticholinergic",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7ecf9270b9fbc20072e9",
+   "attr": "data-d1-why",
+   "value": "Dantrolene belongs to neuroleptic malignant syndrome",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7ecf9270b9fbc20072e9",
+   "attr": "data-d2-why",
+   "value": "Propranolol belongs to akathisia",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5767bd34d02b3f5c6815",
+   "attr": "data-key-why",
+   "value": "Antiemetics such as metoclopramide can cause acute dystonia",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5767bd34d02b3f5c6815",
+   "attr": "data-d1-why",
+   "value": "Needs paresthesia, hyperreflexia and a cause such as neck surgery",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_5767bd34d02b3f5c6815",
+   "attr": "data-d2-why",
+   "value": "Swelling, not spasm; no lip or tongue swelling",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f9613aee5d59b93839e4",
+   "attr": "data-key-why",
+   "value": "Akathisia, dose cannot be lowered: propranolol",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f9613aee5d59b93839e4",
+   "attr": "data-d1-why",
+   "value": "Akathisia is dose dependent; raising it worsens it",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f9613aee5d59b93839e4",
+   "attr": "data-d2-why",
+   "value": "Valbenazine is for tardive dyskinesia",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3f7ba89e4eaf592c7aab",
+   "attr": "data-key-why",
+   "value": "Tremor, rigidity, slow movement, masked face, within weeks",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3f7ba89e4eaf592c7aab",
+   "attr": "data-d1-why",
+   "value": "Months to years of treatment; orofacial movements",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3f7ba89e4eaf592c7aab",
+   "attr": "data-d2-why",
+   "value": "Fever, lead-pipe rigidity, confusion; none here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_32d77d62cc7b4a97b814",
+   "attr": "data-key-why",
+   "value": "Tardive dyskinesia: stop anticholinergics; a VMAT2 inhibitor",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_32d77d62cc7b4a97b814",
+   "attr": "data-d1-why",
+   "value": "Anticholinergics may worsen it",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_32d77d62cc7b4a97b814",
+   "attr": "data-d2-why",
+   "value": "Propranolol belongs to akathisia",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_747584e82d3efba44ca3",
+   "attr": "data-key-why",
+   "value": "Fever, lead-pipe rigidity, confusion, autonomic instability, high CK",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_747584e82d3efba44ca3",
+   "attr": "data-d1-why",
+   "value": "Within hours of a serotonergic change; clonus, not rigidity",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_747584e82d3efba44ca3",
+   "attr": "data-d2-why",
+   "value": "Sustained spasm of neck, jaw, eyes or tongue; mind clear",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_fb59306c6b71c61b874e",
+   "attr": "data-key-why",
+   "value": "Stop the antipsychotic, then cool and correct fluids",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_fb59306c6b71c61b874e",
+   "attr": "data-d1-why",
+   "value": "Every class can cause neuroleptic malignant syndrome",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_fb59306c6b71c61b874e",
+   "attr": "data-d2-why",
+   "value": "An anticholinergic does not treat it",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_88405a87430f4dd7cc33",
+   "attr": "data-key-why",
+   "value": "Aripiprazole, ziprasidone or lurasidone carry the least",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_88405a87430f4dd7cc33",
+   "attr": "data-d1-why",
+   "value": "Clozapine, olanzapine and quetiapine carry the most",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_88405a87430f4dd7cc33",
+   "attr": "data-d2-why",
+   "value": "Clozapine, olanzapine and quetiapine carry the most",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_45e139406bc970cec766",
+   "attr": "data-key-why",
+   "value": "Risperidone commonly raises prolactin: amenorrhea, galactorrhea",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_45e139406bc970cec766",
+   "attr": "data-d1-why",
+   "value": "No headache, full visual fields: no mass effect",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_45e139406bc970cec766",
+   "attr": "data-d2-why",
+   "value": "A normal TSH argues against hypothyroidism",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_06efe9680e1f6779f32c",
+   "attr": "data-key-why",
+   "value": "ACE inhibitor raises the level; coarse tremor and nausea",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_06efe9680e1f6779f32c",
+   "attr": "data-d1-why",
+   "value": "Coarse tremor after a new ACE inhibitor needs a level now",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_06efe9680e1f6779f32c",
+   "attr": "data-d2-why",
+   "value": "The thyroid explains neither the tremor nor the nausea",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_fdf8caeb97e43a815d98",
+   "attr": "data-key-why",
+   "value": "Long-term user, dehydration; neurologic findings lead",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_fdf8caeb97e43a815d98",
+   "attr": "data-d1-why",
+   "value": "Needs high sodium with dilute urine; urine 520",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_fdf8caeb97e43a815d98",
+   "attr": "data-d2-why",
+   "value": "Recent large ingestion; he took his usual dose",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_182e22e561f6fc45d39e",
+   "attr": "data-key-why",
+   "value": "Alert, kidneys working, level under 2.5: no dialysis criterion",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_182e22e561f6fc45d39e",
+   "attr": "data-d1-why",
+   "value": "Lithium does not bind charcoal",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_182e22e561f6fc45d39e",
+   "attr": "data-d2-why",
+   "value": "No dialysis criterion is met",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_04b1d3c440a7cf52da0a",
+   "attr": "data-key-why",
+   "value": "Decreased consciousness, or level over 4.0 with impaired kidneys",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_04b1d3c440a7cf52da0a",
+   "attr": "data-d1-why",
+   "value": "Dialysis criteria met: fluids alone are not enough",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_04b1d3c440a7cf52da0a",
+   "attr": "data-d2-why",
+   "value": "Lithium does not bind charcoal",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_fa69616f74588eaa5d79",
+   "attr": "data-key-why",
+   "value": "Thiazide increases renal reabsorption; lithium is handled like sodium",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_fa69616f74588eaa5d79",
+   "attr": "data-d1-why",
+   "value": "The kidney is its only real exit",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_fa69616f74588eaa5d79",
+   "attr": "data-d2-why",
+   "value": "The kidney is its only real exit; not absorption",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2ea25399ba45abf02320",
+   "attr": "data-key-why",
+   "value": "NSAIDs raise the lithium level",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2ea25399ba45abf02320",
+   "attr": "data-d1-why",
+   "value": "Acetaminophen does not raise the level",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_2ea25399ba45abf02320",
+   "attr": "data-d2-why",
+   "value": "Physical therapy does not raise the level",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_75b281aa8cbc5a5548c3",
+   "attr": "data-key-why",
+   "value": "Lithium blocks the ADH signal; little desmopressin response",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_75b281aa8cbc5a5548c3",
+   "attr": "data-d1-why",
+   "value": "Central diabetes insipidus: desmopressin clearly raises urine osmolality",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_75b281aa8cbc5a5548c3",
+   "attr": "data-d2-why",
+   "value": "Glucose 94: not a glucose diuresis",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_aa507f9a6ddbea9e1a0c",
+   "attr": "data-key-why",
+   "value": "Water loss with confusion: replace volume, check the level",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_aa507f9a6ddbea9e1a0c",
+   "attr": "data-d1-why",
+   "value": "A thiazide raises the lithium level",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_aa507f9a6ddbea9e1a0c",
+   "attr": "data-d2-why",
+   "value": "Nephrogenic diabetes insipidus: little or no desmopressin response",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cf8fe6d5b6f2483d69e4",
+   "attr": "data-key-why",
+   "value": "Hypothyroidism: add levothyroxine; continue lithium",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cf8fe6d5b6f2483d69e4",
+   "attr": "data-d1-why",
+   "value": "Thyroid changes are not a reason to stop lithium",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cf8fe6d5b6f2483d69e4",
+   "attr": "data-d2-why",
+   "value": "Treat once free thyroxine falls or TSH over 10",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d952defc13d2eb0f68b3",
+   "attr": "data-key-why",
+   "value": "Fine tremor, polyuria, mildly high TSH; all else normal",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d952defc13d2eb0f68b3",
+   "attr": "data-d1-why",
+   "value": "Needs high TSH with low free thyroxine, or TSH over 10",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_d952defc13d2eb0f68b3",
+   "attr": "data-d2-why",
+   "value": "Needs high sodium with dilute urine; urine 480",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1b55329353193e01aefd",
+   "attr": "data-key-why",
+   "value": "Level, creatinine, TSH every 6 to 12 months; calcium yearly",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1b55329353193e01aefd",
+   "attr": "data-d1-why",
+   "value": "Not part of lithium monitoring",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1b55329353193e01aefd",
+   "attr": "data-d2-why",
+   "value": "Not part of lithium monitoring",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_86cee7a24272810f29cb",
+   "attr": "data-key-why",
+   "value": "Tricyclic on board may widen the QRS: ECG first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_86cee7a24272810f29cb",
+   "attr": "data-d1-why",
+   "value": "Haloperidol can worsen anticholinergic toxicity",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_86cee7a24272810f29cb",
+   "attr": "data-d2-why",
+   "value": "Normal tone makes neuroleptic malignant syndrome unlikely",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_dd578b9f5d822990ef0a",
+   "attr": "data-key-why",
+   "value": "QRS width predicts seizures and ventricular arrhythmia",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_dd578b9f5d822990ef0a",
+   "attr": "data-d1-why",
+   "value": "Levels come late and do not track toxicity",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_dd578b9f5d822990ef0a",
+   "attr": "data-d2-why",
+   "value": "Big pupils have no prognostic value",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0de77a520f5322ce8227",
+   "attr": "data-key-why",
+   "value": "QRS over 100 ms with hypotension: sodium bicarbonate",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0de77a520f5322ce8227",
+   "attr": "data-d1-why",
+   "value": "Contraindicated: can worsen tricyclic cardiotoxicity",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_0de77a520f5322ce8227",
+   "attr": "data-d2-why",
+   "value": "A drug level does not guide treatment",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f7a62d4005d61c28b69f",
+   "attr": "data-key-why",
+   "value": "Contraindicated once a tricyclic is involved: worsens cardiotoxicity",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f7a62d4005d61c28b69f",
+   "attr": "data-d1-why",
+   "value": "Indicated: QRS over 100 ms",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f7a62d4005d61c28b69f",
+   "attr": "data-d2-why",
+   "value": "Indicated for the agitation",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_77be58aec1d909e6dcbd",
+   "attr": "data-key-why",
+   "value": "Anticholinergic toxicity, no tricyclic, narrow QRS",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_77be58aec1d909e6dcbd",
+   "attr": "data-d1-why",
+   "value": "Haloperidol can worsen anticholinergic toxicity",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_77be58aec1d909e6dcbd",
+   "attr": "data-d2-why",
+   "value": "For a QRS over 100 ms; this one is 88",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_173bf52e87b18bc8001a",
+   "attr": "data-key-why",
+   "value": "Dry, hot skin, big pupils, retention, quiet bowel; normal tone",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_173bf52e87b18bc8001a",
+   "attr": "data-d1-why",
+   "value": "Sweating, clonus, hyperreflexia, increased bowel sounds",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_173bf52e87b18bc8001a",
+   "attr": "data-d2-why",
+   "value": "Lead-pipe rigidity; normal tone makes it unlikely",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_029a2cefa13a1d812ad7",
+   "attr": "data-key-why",
+   "value": "A prior attempt is the most predictive risk factor",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_029a2cefa13a1d812ad7",
+   "attr": "data-d1-why",
+   "value": "Firearm access is a real but lesser, modifiable risk",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_029a2cefa13a1d812ad7",
+   "attr": "data-d2-why",
+   "value": "Alcohol use is a real but lesser, modifiable risk",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4f1eb6af6547eefdab16",
+   "attr": "data-key-why",
+   "value": "Specific plan, intent to act now, preparation: high risk",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4f1eb6af6547eefdab16",
+   "attr": "data-d1-why",
+   "value": "Outpatient safety planning is for low risk",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4f1eb6af6547eefdab16",
+   "attr": "data-d2-why",
+   "value": "No-suicide contracts do not prevent suicide",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3c2b005ba754026b8eb1",
+   "attr": "data-key-why",
+   "value": "Intent to act now, refuses admission: involuntary hospitalization",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3c2b005ba754026b8eb1",
+   "attr": "data-d1-why",
+   "value": "Any discharge leaves an imminent plan untreated",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_3c2b005ba754026b8eb1",
+   "attr": "data-d2-why",
+   "value": "Any discharge leaves an imminent plan untreated",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4bb51ed936b0a5a5189f",
+   "attr": "data-key-why",
+   "value": "No plan and no intent, protective factors: outpatient care",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4bb51ed936b0a5a5189f",
+   "attr": "data-d1-why",
+   "value": "No plan and no intent: outpatient care, not admission",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_4bb51ed936b0a5a5189f",
+   "attr": "data-d2-why",
+   "value": "No-suicide contracts are not effective",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_950b702bceddaec62d51",
+   "attr": "data-key-why",
+   "value": "Age 12 or older, routine visit: universal screening",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_950b702bceddaec62d51",
+   "attr": "data-d1-why",
+   "value": "Screening only when indicated applies to ages 8 to 11",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_950b702bceddaec62d51",
+   "attr": "data-d2-why",
+   "value": "Universal screening starts at age 12",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bad8ef3040455c33737a",
+   "attr": "data-key-why",
+   "value": "Intoxication: assessment not yet valid; close observation until sober",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bad8ef3040455c33737a",
+   "attr": "data-d1-why",
+   "value": "Cognition impaired; the assessment is not yet valid",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bad8ef3040455c33737a",
+   "attr": "data-d2-why",
+   "value": "A steady gait does not replace the assessment",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_18884f761899281f8379",
+   "attr": "data-key-why",
+   "value": "Competent adult: she decides; safety plan with her",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_18884f761899281f8379",
+   "attr": "data-d1-why",
+   "value": "Danger from her home situation, not a mental illness",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_18884f761899281f8379",
+   "attr": "data-d2-why",
+   "value": "A competent adult decides what to do and when",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_08f59bcec2907d1fbe0c",
+   "attr": "data-key-why",
+   "value": "Partner answers for her: see her alone first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_08f59bcec2907d1fbe0c",
+   "attr": "data-d1-why",
+   "value": "Intimidation: the partner is present",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_08f59bcec2907d1fbe0c",
+   "attr": "data-d2-why",
+   "value": "The abuser may find written materials",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_40971ac6e38b6d8b7be4",
+   "attr": "data-key-why",
+   "value": "Not ready to leave: the plan protects her until she is",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_40971ac6e38b6d8b7be4",
+   "attr": "data-d1-why",
+   "value": "She decides what to do and when",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_40971ac6e38b6d8b7be4",
+   "attr": "data-d2-why",
+   "value": "Not conclusively shown to lower the risk of violence",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ab5eb45b397655435f35",
+   "attr": "data-key-why",
+   "value": "Reassess her risk of immediate harm at every visit",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ab5eb45b397655435f35",
+   "attr": "data-d1-why",
+   "value": "Reassess at every later visit, privately",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ab5eb45b397655435f35",
+   "attr": "data-d2-why",
+   "value": "Risk of immediate harm is reassessed every visit, injured or not",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9ee31320c880ba278f9a",
+   "attr": "data-key-why",
+   "value": "Suspected child abuse: report on suspicion to child protective services",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9ee31320c880ba278f9a",
+   "attr": "data-d1-why",
+   "value": "Child abuse is reported on suspicion",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9ee31320c880ba278f9a",
+   "attr": "data-d2-why",
+   "value": "They serve adults who cannot protect themselves",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cf19c178e8d4247cf58c",
+   "attr": "data-key-why",
+   "value": "Cannot decide for herself: report; most states require it",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cf19c178e8d4247cf58c",
+   "attr": "data-d1-why",
+   "value": "She cannot decide for herself",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cf19c178e8d4247cf58c",
+   "attr": "data-d2-why",
+   "value": "Waiting leaves her with the suspected abuser",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_94b8689396a90e9cf711",
+   "attr": "data-key-why",
+   "value": "The abuser may find written materials",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_94b8689396a90e9cf711",
+   "attr": "data-d1-why",
+   "value": "Safety plan: an emergency kit stored outside the home",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_94b8689396a90e9cf711",
+   "attr": "data-d2-why",
+   "value": "Safety plan: code words that tell neighbors to call for help",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bf0703ef66d06d09b871",
+   "attr": "data-key-why",
+   "value": "Lower-abdominal bruises in pregnancy; partner answers for her",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bf0703ef66d06d09b871",
+   "attr": "data-d1-why",
+   "value": "Story does not fit; second injury visit in 2 months",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_bf0703ef66d06d09b871",
+   "attr": "data-d2-why",
+   "value": "Platelets normal; no bleeding disorder",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7ce401bb1677c0c9fbb8",
+   "attr": "data-key-why",
+   "value": "Forearm bruises: defensive movements during an attack",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7ce401bb1677c0c9fbb8",
+   "attr": "data-d1-why",
+   "value": "Bruises along both forearms fit defensive movements, not a fall",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7ce401bb1677c0c9fbb8",
+   "attr": "data-d2-why",
+   "value": "Third injury visit this year; the story does not fit",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ba5b7078420440fa2058",
+   "attr": "data-key-why",
+   "value": "Competent adult: safety plan, no report as the first step",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ba5b7078420440fa2058",
+   "attr": "data-d1-why",
+   "value": "Involving police now can make the violence worse",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ba5b7078420440fa2058",
+   "attr": "data-d2-why",
+   "value": "They serve adults who cannot protect themselves",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9afa95fc7fac80545924",
+   "attr": "data-key-why",
+   "value": "Screen women of reproductive age, privately, with a brief questionnaire",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9afa95fc7fac80545924",
+   "attr": "data-d1-why",
+   "value": "Screening is for every woman of reproductive age",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9afa95fc7fac80545924",
+   "attr": "data-d2-why",
+   "value": "Screening is for every woman of reproductive age",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_680ca34e827e516c9a90",
+   "attr": "data-key-why",
+   "value": "Impairing Tourette syndrome; an antipsychotic blocks dopamine receptors",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_680ca34e827e516c9a90",
+   "attr": "data-d1-why",
+   "value": "Targets compulsions; a tic neutralizes no obsession",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_680ca34e827e516c9a90",
+   "attr": "data-d2-why",
+   "value": "Treats the ADHD; tics can emerge or worsen on it",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7b955ba5483e524c9908",
+   "attr": "data-key-why",
+   "value": "No functional impairment: explain the natural history; watch",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7b955ba5483e524c9908",
+   "attr": "data-d1-why",
+   "value": "Behavioral therapy waits until tics interfere",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7b955ba5483e524c9908",
+   "attr": "data-d2-why",
+   "value": "Medication only for tics that impair",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_c04a5b7c0b9458c5a156",
+   "attr": "data-key-why",
+   "value": "A named obsession; a tic neutralizes none",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_c04a5b7c0b9458c5a156",
+   "attr": "data-d1-why",
+   "value": "A tic disorder alone has no obsession",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_c04a5b7c0b9458c5a156",
+   "attr": "data-d2-why",
+   "value": "Excessive worry about a number of events; no compulsion",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7f29f6e3d9b55a11837d",
+   "attr": "data-key-why",
+   "value": "Under 1 year",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7f29f6e3d9b55a11837d",
+   "attr": "data-d1-why",
+   "value": "1 year or more; both motor and vocal tics",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7f29f6e3d9b55a11837d",
+   "attr": "data-d2-why",
+   "value": "1 year or more, only one type",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f9b8abcdb1605c38a9dc",
+   "attr": "data-key-why",
+   "value": "An antipsychotic blocks dopamine receptors",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f9b8abcdb1605c38a9dc",
+   "attr": "data-d1-why",
+   "value": "SSRIs treat the OCD; no primary role in tics",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f9b8abcdb1605c38a9dc",
+   "attr": "data-d2-why",
+   "value": "Alpha-2 agonists act on adrenergic receptors, not dopamine",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_11071c3e784a5dac9722",
+   "attr": "data-key-why",
+   "value": "ADHD improves little on an alpha-2 agonist: switch to a stimulant",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_11071c3e784a5dac9722",
+   "attr": "data-d1-why",
+   "value": "Leaves the impairing ADHD untreated",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_11071c3e784a5dac9722",
+   "attr": "data-d2-why",
+   "value": "SSRIs treat the OCD or depression, not ADHD",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6c20bd3174595d3d82b0",
+   "attr": "data-key-why",
+   "value": "SSRIs play no primary role in the tics",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6c20bd3174595d3d82b0",
+   "attr": "data-d1-why",
+   "value": "Alpha-2 agonist first for milder tics",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6c20bd3174595d3d82b0",
+   "attr": "data-d2-why",
+   "value": "Behavioral therapy (CBIT) first for impairing tics",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a94ac1ab85b156bb8084",
+   "attr": "data-key-why",
+   "value": "Alpha-2 agonist: accepted tic medication, fewer extrapyramidal effects",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a94ac1ab85b156bb8084",
+   "attr": "data-d1-why",
+   "value": "SSRIs play no primary role in the tics",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a94ac1ab85b156bb8084",
+   "attr": "data-d2-why",
+   "value": "For oppositional behavior, not tics",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_653afa182ed6d47b1ee6",
+   "attr": "data-key-why",
+   "value": "Mostly the second half; wakes oriented and alert; recalls the dream",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_653afa182ed6d47b1ee6",
+   "attr": "data-d1-why",
+   "value": "Usually the first half; not comforted; no memory",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_653afa182ed6d47b1ee6",
+   "attr": "data-d2-why",
+   "value": "Come early from NREM sleep, with no memory",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a4d9e5d05f69aada32fb",
+   "attr": "data-key-why",
+   "value": "Usually the first half; terror with an autonomic surge, not comforted",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a4d9e5d05f69aada32fb",
+   "attr": "data-d1-why",
+   "value": "Mostly the second half; recalls the dream",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a4d9e5d05f69aada32fb",
+   "attr": "data-d2-why",
+   "value": "Repetitive and stereotyped",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7fb189bb1fdb8d693581",
+   "attr": "data-key-why",
+   "value": "Sleep terrors: reassure and educate; keep the child safe",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7fb189bb1fdb8d693581",
+   "attr": "data-d1-why",
+   "value": "For snoring or suspected apnea; no snoring",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_7fb189bb1fdb8d693581",
+   "attr": "data-d2-why",
+   "value": "For repetitive, stereotyped movements; none here",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_26f8dc21ddf18546e058",
+   "attr": "data-key-why",
+   "value": "Persist despite reassurance: scheduled awakenings before the episode",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_26f8dc21ddf18546e058",
+   "attr": "data-d1-why",
+   "value": "Never shorten sleep",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_26f8dc21ddf18546e058",
+   "attr": "data-d2-why",
+   "value": "For suspected apnea, dream enactment or narcolepsy",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_fa43ff66ac7e47a6168f",
+   "attr": "data-key-why",
+   "value": "Child snores and cannot pay attention: polysomnography",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_fa43ff66ac7e47a6168f",
+   "attr": "data-d1-why",
+   "value": "Diagnose by polysomnography first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_fa43ff66ac7e47a6168f",
+   "attr": "data-d2-why",
+   "value": "Attention problems are a feature of the apnea; test first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9cf7f38bf3254ac1fa9e",
+   "attr": "data-key-why",
+   "value": "Falls asleep only with set conditions from a parent: behavioral interventions",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9cf7f38bf3254ac1fa9e",
+   "attr": "data-d1-why",
+   "value": "Hypnotics are not recommended for behavioral insomnia",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9cf7f38bf3254ac1fa9e",
+   "attr": "data-d2-why",
+   "value": "No snoring: polysomnography not indicated",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_78ad3230cd19ba5a4681",
+   "attr": "data-key-why",
+   "value": "Sleepwalking: lock windows and outer doors",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_78ad3230cd19ba5a4681",
+   "attr": "data-d1-why",
+   "value": "No snoring: a sleep study is not indicated",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_78ad3230cd19ba5a4681",
+   "attr": "data-d2-why",
+   "value": "No stereotyped movements: no seizure workup",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f8be47793aab50ee9a2f",
+   "attr": "data-key-why",
+   "value": "Behavior downstream of an academic skill deficit",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f8be47793aab50ee9a2f",
+   "attr": "data-d1-why",
+   "value": "School and home both complain; home is normal",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_f8be47793aab50ee9a2f",
+   "attr": "data-d2-why",
+   "value": "Fear of scrutiny generally, not only where a weakness shows",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_332bfce4d26f50f38937",
+   "attr": "data-key-why",
+   "value": "Psychoeducational testing confirms; screen hearing and vision first",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_332bfce4d26f50f38937",
+   "attr": "data-d1-why",
+   "value": "Behavior is downstream of an academic problem",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_332bfce4d26f50f38937",
+   "attr": "data-d2-why",
+   "value": "Behavior is downstream of an academic problem",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a56f635d2ffd59fd9d73",
+   "attr": "data-key-why",
+   "value": "Inattention and hyperactivity carried everywhere",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a56f635d2ffd59fd9d73",
+   "attr": "data-d1-why",
+   "value": "Behavior downstream of an academic skill deficit",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_a56f635d2ffd59fd9d73",
+   "attr": "data-d2-why",
+   "value": "Argumentative and vindictive, not inattentive",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1d16f5c8e5e45c909c71",
+   "attr": "data-key-why",
+   "value": "Argumentative and vindictive with all adults",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1d16f5c8e5e45c909c71",
+   "attr": "data-d1-why",
+   "value": "Needs outbursts three times weekly for a year",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_1d16f5c8e5e45c909c71",
+   "attr": "data-d2-why",
+   "value": "Needs aggression, destruction, theft or truancy",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_561337b4d8d754aa9ede",
+   "attr": "data-key-why",
+   "value": "Outbursts three times weekly for a year; angry between",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_561337b4d8d754aa9ede",
+   "attr": "data-d1-why",
+   "value": "Defiance toward authority, without severe outbursts",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_561337b4d8d754aa9ede",
+   "attr": "data-d2-why",
+   "value": "Mania: episodes with a start and an end, not chronic anger",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ad04c5ea9aff5ce2a367",
+   "attr": "data-key-why",
+   "value": "Fear of eating, speaking or performing anywhere",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ad04c5ea9aff5ce2a367",
+   "attr": "data-d1-why",
+   "value": "Talks at home, refuses to speak in specific social settings",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_ad04c5ea9aff5ce2a367",
+   "attr": "data-d2-why",
+   "value": "Recurrent unexpected attacks, not fear of scrutiny",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9761c2286e8e554e8e6c",
+   "attr": "data-key-why",
+   "value": "Staring spells provoked by hyperventilation",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9761c2286e8e554e8e6c",
+   "attr": "data-d1-why",
+   "value": "Hyperventilation-provoked staring points to seizures",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_9761c2286e8e554e8e6c",
+   "attr": "data-d2-why",
+   "value": "Brief lapses many times daily, not a skill deficit",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cab063e423b3513ea2f4",
+   "attr": "data-key-why",
+   "value": "Sits close, turns the head, mishears",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cab063e423b3513ea2f4",
+   "attr": "data-d1-why",
+   "value": "Sensory barrier misread as inattention",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_cab063e423b3513ea2f4",
+   "attr": "data-d2-why",
+   "value": "Sensory barrier, not a learning disorder",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6973b7f5edde538f905b",
+   "attr": "data-key-why",
+   "value": "Stays home with stomachaches on school mornings only",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6973b7f5edde538f905b",
+   "attr": "data-d1-why",
+   "value": "A serious rule violation, as in conduct disorder; he has stomachaches",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  },
+  {
+   "op": "set_attr",
+   "target": "q_6973b7f5edde538f905b",
+   "attr": "data-d2-why",
+   "value": "Fear of eating, speaking or performing anywhere",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
+  }
+ ]
+}

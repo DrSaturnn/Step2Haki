@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-20, by the s148g lead chat 1 (s148g shipped; no batch open).
+Last updated: 2026-10-20, by the s148h lead chat 1 (s148h open, S1 to S2).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,14 +12,15 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **No batch open.** s148g shipped 2026-10-20 20:34 (Jonathan: "ship"; main b11cd33, page 24f26a077e7d, version.json
-  s148g confirmed in Chrome): per-choice reasons renderer, cards same size until answered, 56 bottom lines bold, touch
-  hover cards, linked brief as an anchored panel, First step split (lithium-effects), timeline tile. Record
-  repair/s148g/S148G.md; OPEN_WORK row. Next: s148h (psych per-choice reasons and First step pairing; launch prompt
-  below), then s149 (SITE_S148G.md order: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors; golden scfe).
-- **Spend (s148g, closed):** reviewers 0; lead 84.1M of 120M (1 row, ledger_lead.csv).
+- **Batch s148h open** (launched 2026-10-20 21:16): psych per-choice reasons and First step pairing. Briefs: the 23 of
+  SITE_S148G.md (the 20 in the Psychiatry sidebar groups in sidebar order, then the psych-tagged tics, peds-sleep and
+  bs-learning; 203 items); First step pairing for bipolar-mania, delirium, gppd, ipv, mdd, panic, psych-medical,
+  psychosis-duration, substance, tca-tox, toxidrome, voices. Batch file repair/s148h/S148H.md. Branch wip/s148h.
+- **Budget:** reviewers 14 agents, 160 calls, 7M tokens; lead 180M (WAVE.json s148h).
+- **Step:** launch done; S1 to S2 (reasons and pairings) in progress, chat 1.
+- **Spend:** reviewers 0; lead chat 1 running.
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
-  mirror into /root/.claude/settings.json may be held by the permission check: ask Jonathan (s148e chat 3: approved).
+  mirror into /root/.claude/settings.json may be held by the permission check: ask Jonathan.
   The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default
   timeouts of 240000 ms (scratch wrapper: patch Browser.new_page and BrowserContext.new_page, run the tool with runpy).
   Keep lane specs in repair/sNN/lanes/. A shallow clone of a wip branch needs its refspec added before git status

@@ -1,0 +1,18 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "psychosis-duration",
+   "find": ">Chase the medical cause<",
+   "with": ">Treat the medical cause<",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split); prose rule 2026-10-19"
+  },
+  {
+   "op": "replace",
+   "brief": "mdd",
+   "find": ">Abnormal TSH or a culprit exposure<",
+   "with": ">Abnormal TSH or a causative drug or substance<",
+   "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split); prose rule 2026-10-19"
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "_doc": "s148h First step split (DECISIONS_DIGEST 2026-10-20): brief -> [[band (0-based .w5b in the First step), [order number per finding]]]. Not split, because a result there belongs to several orders or the band has no results: psych-medical band 1 (\"Other result suggesting a medical cause\" and \"Normal\" read across orders 1, 2, 3 and 5), voices band 0 (both results read across both orders), tca-tox band 1 (three orders, no results).",
+ "psychosis-duration": [[0, [1, 1, 2, 3]]],
+ "bipolar-mania": [[0, [1, 1, 2, 3]]],
+ "mdd": [[0, [1, 2]]],
+ "panic": [[0, [1, 2, 3]]],
+ "gppd": [[0, [1, 1, 2, 2, 3]]],
+ "delirium": [[0, [1, 2, 3, 4]]],
+ "toxidrome": [[0, [1, 2]], [1, [1, 3]]],
+ "substance": [[0, [1, 1, 1, 2, 2]]],
+ "ipv": [[0, [1, 1]]]
+}
