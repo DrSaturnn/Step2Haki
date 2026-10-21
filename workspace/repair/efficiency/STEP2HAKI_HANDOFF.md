@@ -17,14 +17,13 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   Budget: 30 agents, 240 calls, 15M tokens; lead 260M (raised from 180M, chat 6). Digest lines and WAVE.json s149 written.
 - **Lead:** Claude, since 2026-10-21 18:05, chat 9 (took the lock from chat 8, which stopped at context; Codex never took
   the lock and ran no step, CODEX_AUDIT item 1). Open again for Codex only when this line says so.
-- **Step:** S5 in progress (chat 8 stopped at context). S4 round 1 done: 9 agents, 103 calls, 5.60M tokens; 24 receipts
-  (reviews/<brief>_<part>_r1.md); 4 PASS-IF, the rest FAIL; 2 HIGH (nursemaid acc accepted, septic-hip flags rejected).
-  S5 done for septic-hip and nursemaid (adj_s149.md in each spine folder). Next: S5 for limp, sjia, growing-pains,
-  bone-tumors (notes in repair/s149/S149.md, "S5 adjudication, round 1"), then S6, S7 (lanes.py follow-up spec).
+- **Step:** S5 done (chat 9): adj_s149.md in all six spine folders; repair/s149/10_*_spine.json carry every rebuild;
+  build s149 OK, gate PASS 180 briefs, render PASS. Next: S6 self-check on the changed lines (chat 9), then S7 follow-up
+  round (review_packet.py --since each reviewer's last brief_text.txt, lanes.py spec repair/s149/lanes/lanes_r2.json).
   Restore: clone both repos on wip/s149 (private: clone -b wip/s149, cp -rn its local-only/); hooks: install.sh and the
-  /root/.claude mirror (the plugin carries no hooks), then the no-model probe.
-- **s149 spend:** reviewers 9 of 30 agents, 103 of 240 calls, 5.60M of 15M; lead chats 1 to 7 164.8M, chat 8 30.8M;
-  batch lead 195.5M of 260M. Projection: about 90M more for S5 to S9; ask Jonathan for the lead figure at the next stop.
+  /root/.claude mirror, then the no-model probe.
+- **s149 spend:** reviewers 9 of 30 agents, 103 of 240 calls, 5.60M of 15M; lead chats 1 to 8 195.5M, chat 9 30.7M at S5
+  done; batch lead 226.2M of 300M (raised from 260M, chat 9).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json (and /root/.claude/agents) may be held by the permission check: ask Jonathan.
   The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default
