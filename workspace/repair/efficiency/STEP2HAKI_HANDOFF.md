@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-20, by the s148h lead chat 2 (s148h open, S7 done: all READY).
+Last updated: 2026-10-21, by the s148h lead chat 3 (s148h presented, waiting for "ship").
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -17,13 +17,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   bs-learning; 203 items); First step pairing for bipolar-mania, delirium, gppd, ipv, mdd, panic, psych-medical,
   psychosis-duration, substance, tca-tox, toxidrome, voices. Batch file repair/s148h/S148H.md. Branch wip/s148h.
 - **Budget:** reviewers 14 agents, 160 calls, 7M tokens; lead 180M (WAVE.json s148h).
-- **Step:** S7 done: all READY (chat 2). Round 1: 8 lanes; S5: 77 reason fixes and two bands restored (toxidrome band
-  1, ipv band 0); round 2: 4 lanes, no HIGH or MED, 19 PASS-IF replacements applied. Next: S8 in a fresh chat
-  (verify_all does not apply: no spine rebuild; the batch file "S7" and "Notes for the report" sections hold the record;
-  approval shots with shots_s148h.py plus shots_all on the 8 split briefs, then approval.py present s148h).
-  Restore: clone public and private at branch wip/s148h (public 83fe127 onward; the patch series is gone), then the
-  usual cp -rn of local-only (it now carries repair/efficiency/lanes/s148h with every receipt, and the packets).
-- **Spend:** reviewers 12 of 14 agents, 83 of 160 calls, 4.70M of 7M; lead 70.9M of 180M (chat 1 37.9M, chat 2 33.1M).
+- **Step:** S8 done (chat 3, 2026-10-21): presented with approval.py (84 sheets, page 6c5296e2e418; the record
+  lives in this chat's container, so "ship" must go to chat 3). Changelog entry 148h committed (a124973). Next: S9 on
+  "ship" in chat 3. If chat 3 is gone: restore at wip/s148h, re-run shots (local/shots/s148h-approval, commands in
+  S148H.md "S8") and present again before any ship.
+- **Spend:** reviewers 12 of 14 agents, 83 of 160 calls, 4.70M of 7M; lead 87.0M of 180M (chat 1 37.9M, chat 2 33.1M,
+  chat 3 16.1M).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json may be held by the permission check: ask Jonathan.
   The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default
