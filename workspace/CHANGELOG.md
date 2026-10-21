@@ -2,6 +2,76 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-20 s148g: s148g: site layer: per-choice reasons renderer, cards same size until answered, bold key words in 56 bottom lines, touch hover cards, linked brief as an anchored panel, First step split (lithium-effects), timeline tile
+
+```
+Page: 180 briefs, 2182 items -> 180 briefs, 2182 items
+Briefs changed (57):
+  - pmr (Polymyalgia Rheumatica): prose edited (+63 chars)
+  - scaphoid (Wrist and Hand Pain and Numbness): prose edited (+56 chars)
+  - backpain (Low Back Pain in an Adult): prose edited (+56 chars)
+  - hippos (Hip Injury in an Adult): prose edited (+49 chars)
+  - gtps (Hip and Thigh Pain and Numbness): prose edited (+35 chars)
+  - oa-pharm (Osteoarthritis): prose edited (+49 chars)
+  - septic-bursitis (Hot Joint or Bursa in an Adult): prose edited (+42 chars)
+  - septic-hip (Septic Arthritis and Transient Synovitis in a Child): prose edited (+56 chars)
+  - limp (The Limping Child): prose edited (+35 chars)
+  - sjia (Juvenile Idiopathic Arthritis): prose edited (+63 chars)
+  - nursemaid (Arm Injury in a Young Child): prose edited (+56 chars)
+  - scfe (Slipped Capital Femoral Epiphysis): prose edited (+49 chars)
+  - myositis-ossificans (Muscle Contusion and Myositis Ossificans): prose edited (+49 chars)
+  - growing-pains (Leg Pain in a Child): prose edited (+63 chars)
+  - bone-tumors (Bone Lesions in a Child): prose edited (+70 chars)
+  - scheuermann (Adolescent Kyphosis): prose edited (+56 chars)
+  - bs-puncture-osteomyelitis (Foot Puncture Wounds and Osteomyelitis): prose edited (+70 chars)
+  - bs-torticollis (Torticollis and Plagiocephaly in an Infant): prose edited (+63 chars)
+  - shoulder-rom (Shoulder Pain): prose edited (+56 chars)
+  - cough (Chronic Cough): prose edited (+35 chars)
+  - pneumoconiosis (Occupational Lung Disease): prose edited (+49 chars)
+  - rhinitis (Rhinitis): prose edited (+35 chars)
+  - sinopulm-structural (Recurrent Respiratory Infection and Structural Lung Disease): prose edited (+42 chars)
+  - hypoxemia-mech (Hypoxemia): prose edited (+42 chars)
+  - scd-dyspnea (Sickle Cell Disease and Trait): prose edited (+49 chars)
+  - airway (Noisy Breathing in a Child): prose edited (+56 chars)
+  - uri (Respiratory Infection in a Child): prose edited (+42 chars)
+  - bpd (Lung Disease in the Newborn and Preterm Infant): prose edited (+49 chars)
+  - pyelo (Pyelonephritis): prose edited (+49 chars)
+  - bph (Benign Prostatic Hyperplasia and Urinary Retention): prose edited (+42 chars)
+  - nephropathy (Diabetes Complications and Annual Care): prose edited (+49 chars)
+  - scrotum (Scrotal Pain and Masses): prose edited (+49 chars)
+  - hypercalcemia (Hypercalcemia): prose edited (+49 chars)
+  - peds-uti-recurrent (Urinary Tract Infection in a Child): prose edited (+56 chars)
+  - enuresis (Enuresis): prose edited (+42 chars)
+  - polyuria (Polyuria): prose edited (+56 chars)
+  - peds-aki (Acute Kidney Injury in a Child): prose edited (+42 chars)
+  - nephrotic-child (Proteinuria and Nephrotic Syndrome in a Child): prose edited (+56 chars)
+  - bs-puv (Posterior Urethral Valves): prose edited (+49 chars)
+  - bs-incontinence (Urinary Incontinence): prose edited (+42 chars)
+  - bs-abdominal-mass (Abdominal Mass in a Young Child): prose edited (+56 chars)
+  - bs-distal-rta (Hypokalemia and Acid-Base Disorders in a Child): prose edited (+49 chars)
+  - aq-puffy-eyes (Child with Puffy Eyes): prose edited (+42 chars)
+  - homocystinuria (Tall Stature and Marfanoid Habitus): prose edited (+56 chars)
+  - tics (Tics and Tic Disorders): prose edited (+77 chars)
+  - peds-sleep (Sleep Problems): prose edited (+77 chars)
+  - voices (Hears Voices or Holds Odd Beliefs): prose edited (+35 chars)
+  - sz-psychosocial (Schizophrenia: Long-Term Care): prose edited (+35 chars)
+  - mdd (Major Depressive Disorder): prose edited (+35 chars)
+  - cluster-b (Cluster B Personality Disorders): prose edited (+91 chars)
+  - toxidrome (Suspected Overdose or Toxidrome): prose edited (+84 chars)
+  - psych-medical (Psychiatric Symptoms from Medical Illness or Medication): prose edited (+35 chars)
+  - disruptive-behavior (Disruptive Behavior in a Child): prose edited (+42 chars)
+  - lithium-effects (Lithium Therapy): prose edited (+346 chars)
+  - tca-tox (Anticholinergic and Tricyclic Toxicity): prose edited (+56 chars)
+  - suicide-risk (Suicide Risk Assessment): prose edited (+35 chars)
+  - ipv (Intimate Partner Violence): prose edited (+35 chars)
+Other page changes (nav, headers, scripts): +19376 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 180 briefs, 2182 items (0 with reasons), 22 scripts, 39 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 180 | bankwraps 180 | mcq 2182 (reasons 0) (axCheck 2182, reveal-only 0) | malformed 0 | crit gridded 163/164 | vignette gridded 65/65 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.013%)
+```
+
 ## 2026-10-20 s148e: Three new psychiatry briefs: Suspected Overdose or Toxidrome (hub), Anticholinergic and Tricyclic Toxicity, Cluster B Personality Disorders; substance and voices hand off to them
 
 ```
