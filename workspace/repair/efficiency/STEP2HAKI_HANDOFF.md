@@ -21,6 +21,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   1, ipv band 0); round 2: 4 lanes, no HIGH or MED, 19 PASS-IF replacements applied. Next: S8 in a fresh chat
   (verify_all does not apply: no spine rebuild; the batch file "S7" and "Notes for the report" sections hold the record;
   approval shots with shots_s148h.py plus shots_all on the 8 split briefs, then approval.py present s148h).
+  Restore: clone public and private at branch wip/s148h (public 83fe127 onward; the patch series is gone), then the
+  usual cp -rn of local-only (it now carries repair/efficiency/lanes/s148h with every receipt, and the packets).
 - **Spend:** reviewers 12 of 14 agents, 83 of 160 calls, 4.70M of 7M; lead 70.9M of 180M (chat 1 37.9M, chat 2 33.1M).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json may be held by the permission check: ask Jonathan.
