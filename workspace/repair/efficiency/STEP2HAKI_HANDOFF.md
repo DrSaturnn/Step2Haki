@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-20, by the s148h lead chat 1 (s148h open, S3 done).
+Last updated: 2026-10-20, by the s148h lead chat 2 (s148h open, S4 round 1 launched).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -17,10 +17,10 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   bs-learning; 203 items); First step pairing for bipolar-mania, delirium, gppd, ipv, mdd, panic, psych-medical,
   psychosis-duration, substance, tca-tox, toxidrome, voices. Batch file repair/s148h/S148H.md. Branch wip/s148h.
 - **Budget:** reviewers 14 agents, 160 calls, 7M tokens; lead 180M (WAVE.json s148h).
-- **Step:** S3 done (chat 1). Next: S4 review round 1 in a fresh chat, per the batch file's "S4 plan" (install the
-  hooks and probe first; build packets from the rebuilt batch page). The public repo could not be attached in chat 1:
-  the WIP is a patch series on the private repo's branch wip/s148h (claude/pending/s148h_wip/README.md: git am onto
-  public b4f541a), then push public wip/s148h once attached.
+- **Step:** S4 round 1 launched (chat 2): 8 lanes, 103 calls (repair/s148h/lanes/lanes_r1.json; lanes in
+  repair/efficiency/lanes/s148h/r1; packets from repair/s148h/packets.py, images from shots_s148h.py; batch file "S4
+  review round 1"). Public wip/s148h now pushed (the patch series in the private repo is superseded). If this chat
+  stops before the receipts are in: check each lane for receipt.md; relaunch only lanes without one.
 - **Spend:** reviewers 0 of 14 agents, 160 calls, 7M; lead chat 1 37.9M of 180M (ledger_lead.csv row 3c3712c4).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json may be held by the permission check: ask Jonathan.

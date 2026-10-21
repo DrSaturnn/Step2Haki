@@ -16,7 +16,18 @@ Spec (paths relative to workspace/ or absolute):
    "prior": {"acc": {"x": "<last receipt path>"}, ...},  follow-up: each part's last receipt per brief
    "adjudication": {"x": "<lead adjudication path>"},   follow-up: the lead's S5 notes per brief
    "notes": {"read": ["a decision the reviewer must not report"]},
-   "extra_judge": {"acc": ["Timelines (Jonathan ...): ..."]}}
+   "extra_judge": {"acc": ["Timelines (Jonathan ...): ..."]},
+   "custom": {"flags": {...}}}                          s148h: a part reviewed by a batch-specific scope (below)
+
+custom (s148h, a review narrower than a whole brief, e.g. the per-choice reasons): per part, any of
+  "text"     replaces the part's judging text (%(plan)s, %(extra)s and %(budget)d are filled in);
+  "plan"     the call plan sentence put in place of %(plan)s (default: the part's per-brief plan);
+  "files"    the per-brief packet files copied into each brief folder (default: the part's usual files);
+  "combine"  [file, chunk chars]: each brief's packet <file> joined, in lane order, into lane-root files
+             <part>_packet_<k>.md of at most chunk chars each (one Read can take about 25k tokens), split at brief
+             boundaries; the lane then needs no brief folders;
+  "images"   glob patterns under "sheets" copied into the lane root (display sheets that span briefs);
+  "receipt"  "lane": one receipt for the whole lane at <lane>/receipt.md, a section per brief.
 
 Round 1 copies each part's packet files; a follow-up round copies them too and writes review.md (acc, read, flags: the
 last receipt, the adjudication, then changes.md from review_packet.py --since) or round1.md (display: the last receipt
@@ -154,32 +165,86 @@ def plan_text(part, rnd, n, b):
     return '%d for %d brief(s), plus the 1 Read of these instructions: %d of your %d, %d spare' % (per * n, n, use, b, b - use)
 
 
+RECEIPT_LANE = """Receipt format (one receipt for the lane): write it with the Write tool to %(path)s. Line 1 `part: %(part)s`; line 2 `lane: %(lane)s`; then one section per brief, in the order above: `## <brief>`, its deps line and its brief-sha line copied exactly from the list above, `Verdict: PASS`, `Verdict: PASS-IF` or `Verdict: FAIL`, then `Findings` (numbered, each with severity HIGH, MED or LOW, the exact text and where it is (item id and which reason, or the step and row), the problem and a concrete fix), then for a PASS-IF `Replacements:`, then `Checked and fine:` (one line). A brief with nothing to report still gets its section with `Verdict: PASS`.
+Verdicts: PASS = no findings that need a change; PASS-IF = no HIGH or MED, and every LOW you want fixed comes with an exact replacement; FAIL = any HIGH or MED stands (HIGH wrong or misleading for the exam; MED contradiction, unsupported or uninterpretable line, display defect that hides content; LOW wording).
+A PASS-IF replacement is written
+    1. old: {text copied exactly from the packet}
+       new: {replacement}
+text only (no <, > or &), inside one line; no changed numbers, no new facts; never an item's stem, key, distractors or lead-in (a reason may be replaced); keep hedge words, negations and diagnosis, drug and test names unless changing them is the point.
+Final message: per brief, the verdict and the counts of findings by severity.
+"""
+
+
+def custom(spec, part):
+    return (spec.get('custom') or {}).get(part) or {}
+
+
+def chunks(spec, ln):
+    """[(file name, text)] for a "combine" lane: the briefs' packet files joined in lane order, split at brief
+    boundaries so no chunk passes the size limit (a brief larger than the limit gets a chunk of its own)."""
+    cu = custom(spec, ln['part'])
+    name, cap = cu['combine'][0], int(cu['combine'][1])
+    out, cur = [], ''
+    for br in ln['briefs']:
+        t = open(os.path.join(ab(spec['packets']), br, ln['part'], name), encoding='utf-8').read().rstrip() + '\n\n'
+        if cur and len(cur) + len(t) > cap:
+            out.append(cur)
+            cur = ''
+        cur += t
+    if cur:
+        out.append(cur)
+    return [('%s_packet_%d.md' % (ln['part'], k), t) for k, t in enumerate(out, 1)]
+
+
 def lane_text(spec, ln, b):
     part, rnd, briefs = ln['part'], int(spec['round']), ln['briefs']
     lane = os.path.join(ab(spec['out']), '%s-%s' % (part, ln['group'])) + '/'
+    cu = custom(spec, part)
     extra = ''.join('- %s\n' % x if part != 'display' and part != 'flags' else '%s\n' % x
                     for x in (spec.get('extra_judge') or {}).get(part, []))
     notes = ''.join('Not a finding (decided): %s\n' % x for x in (spec.get('notes') or {}).get(part, []))
-    tmpl = (PART1 if rnd == 1 else PART2)[part]
-    body = tmpl % {'plan': plan_text(part, rnd, len(briefs), b), 'extra': extra}
+    tmpl = cu.get('text') or (PART1 if rnd == 1 else PART2)[part]
+    body = tmpl % {'plan': cu.get('plan') or plan_text(part, rnd, len(briefs), b), 'extra': extra, 'budget': b}
     head = ['Role: %s' % ROLE[part], 'Plan step: %s' % spec['plan_step'], 'Lane: %s' % lane, 'Budget: %d' % b, '',
-            'Step2Haki %s, review round %d%s, part %s, for %d brief(s): %s. Each brief has its own folder in your lane '
-            '(%s<brief>/) and gets its own receipt.' % (spec['batch'], rnd, '' if rnd == 1 else ' (follow-up)', part,
-                                                        len(briefs), ', '.join(briefs), lane), '',
+            'Step2Haki %s, review round %d%s, part %s, for %d brief(s): %s. %s' % (
+                spec['batch'], rnd, '' if rnd == 1 else ' (follow-up)', part, len(briefs), ', '.join(briefs),
+                'One receipt covers the whole lane (%sreceipt.md).' % lane if cu.get('receipt') == 'lane' else
+                'Each brief has its own folder in your lane (%s<brief>/) and gets its own receipt.' % lane), '',
             COMMON % {'budget': b, 'context': spec['context']} + ('' if rnd == 1 else FOLLOW % {'round': rnd}),
             body + notes, 'Briefs (in this order):']
     for br in briefs:
         deps = open(os.path.join(ab(spec['packets']), br, part, 'deps.txt'), encoding='utf-8').read().splitlines()
         extra_b = ''
-        if part == 'display' and spec.get('sheets'):
+        if part == 'display' and spec.get('sheets') and not cu.get('images'):
             imgs = sorted(os.path.basename(f) for f in glob.glob(os.path.join(ab(spec['sheets']), '%s_*.png' % br)))
             shown = (spec.get('steps') or {}).get(br)
             extra_b = '%s; images: %s' % ('; steps shown: %s' % shown if shown and rnd > 1 else '', ', '.join(imgs))
+        if cu.get('receipt') == 'lane':
+            head.append('- %s (%s): deps line: %s; brief-sha line: %s' % (
+                br, (spec.get('types') or {}).get(br, 'spine brief'), deps[0], deps[1]))
+            continue
         head.append('- %s (%s): receipt %s%s/receipt.md; line 2: %s; line 3: %s%s' % (
             br, (spec.get('types') or {}).get(br, 'spine brief'), lane, br, deps[0], deps[1], extra_b))
-    head += ['', RECEIPT % {'part': part, 'earlier': '' if rnd == 1 else '`Earlier findings` (each number from your '
-                            'last receipt: resolved, closed, or open with the reason); then ', 'new': '' if rnd == 1 else ' (new ones)'}]
+    if cu.get('combine'):
+        head += ['', 'Packet files in your lane root, in this order (one Read each): %s.' % ', '.join(
+            lane + f for f, _ in chunks(spec, ln))]
+    if cu.get('images'):
+        head += ['', 'Images in your lane root (one Read each): %s.' % ', '.join(
+            lane + os.path.basename(f) for f in lane_images(spec, part))]
+    if cu.get('receipt') == 'lane':
+        head += ['', RECEIPT_LANE % {'path': lane + 'receipt.md', 'part': part, 'lane': lane}]
+    else:
+        head += ['', RECEIPT % {'part': part, 'earlier': '' if rnd == 1 else '`Earlier findings` (each number from '
+                                'your last receipt: resolved, closed, or open with the reason); then ',
+                                'new': '' if rnd == 1 else ' (new ones)'}]
     return lane, '\n'.join(head)
+
+
+def lane_images(spec, part):
+    out = []
+    for g in custom(spec, part).get('images', []):
+        out += sorted(glob.glob(os.path.join(ab(spec['sheets']), g)))
+    return out
 
 
 def build(spec, dry=False):
@@ -194,14 +259,23 @@ def build(spec, dry=False):
         out.append((lane, b, len(txt)))
         if dry:
             continue
+        cu = custom(spec, part)
+        os.makedirs(lane, exist_ok=True)
+        if cu.get('combine'):
+            for f, t in chunks(spec, ln):
+                open(os.path.join(lane, f), 'w', encoding='utf-8').write(t)
+        for f in lane_images(spec, part):
+            shutil.copy(f, os.path.join(lane, os.path.basename(f)))
         for br in ln['briefs']:
+            if cu.get('combine') or (cu.get('receipt') == 'lane' and not cu.get('files')):
+                continue
             bd = os.path.join(lane, br)
             os.makedirs(bd, exist_ok=True)
             src = os.path.join(ab(spec['packets']), br, part)
-            for f in FILES[part]:
+            for f in cu.get('files') or FILES[part]:
                 if os.path.exists(os.path.join(src, f)):
                     shutil.copy(os.path.join(src, f), os.path.join(bd, f))
-            if part == 'display' and spec.get('sheets'):
+            if part == 'display' and spec.get('sheets') and not cu.get('images'):
                 for f in sorted(glob.glob(os.path.join(ab(spec['sheets']), '%s_*.png' % br))):
                     shutil.copy(f, os.path.join(bd, os.path.basename(f)))
             if rnd > 1:

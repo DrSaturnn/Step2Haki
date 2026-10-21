@@ -1,0 +1,254 @@
+{
+ "batch": "s148h",
+ "plan_step": "s148h",
+ "round": 1,
+ "context": "batch s148h adds a one-line reason under every choice of the practice items of 23 psychiatry-tagged briefs (203 items, 609 reasons) and splits the First step bands of 9 of them so each order heads only its own results; nothing else in the briefs changed (review round 1)",
+ "out": "repair/efficiency/lanes/s148h/r1",
+ "packets": "repair/migration/spine/packets/s148h",
+ "sheets": "local/shots/s148h-r1/sheets",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "psychosis-duration",
+    "voices",
+    "sz-psychosocial",
+    "bipolar-mania",
+    "mdd",
+    "cluster-b"
+   ],
+   "budget": 16
+  },
+  {
+   "part": "acc",
+   "group": "B",
+   "briefs": [
+    "panic",
+    "somatic",
+    "gppd",
+    "delirium",
+    "toxidrome",
+    "substance"
+   ],
+   "budget": 16
+  },
+  {
+   "part": "acc",
+   "group": "C",
+   "briefs": [
+    "psych-medical",
+    "disruptive-behavior",
+    "ssri-effects",
+    "antipsych-effects",
+    "lithium-effects",
+    "tca-tox"
+   ],
+   "budget": 16
+  },
+  {
+   "part": "acc",
+   "group": "D",
+   "briefs": [
+    "suicide-risk",
+    "ipv",
+    "tics",
+    "peds-sleep",
+    "bs-learning"
+   ],
+   "budget": 14
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "psychosis-duration",
+    "voices",
+    "sz-psychosocial",
+    "bipolar-mania",
+    "mdd",
+    "cluster-b",
+    "panic",
+    "somatic",
+    "gppd",
+    "delirium",
+    "toxidrome",
+    "substance"
+   ],
+   "budget": 8
+  },
+  {
+   "part": "flags",
+   "group": "B",
+   "briefs": [
+    "psych-medical",
+    "disruptive-behavior",
+    "ssri-effects",
+    "antipsych-effects",
+    "lithium-effects",
+    "tca-tox",
+    "suicide-risk",
+    "ipv",
+    "tics",
+    "peds-sleep",
+    "bs-learning"
+   ],
+   "budget": 8
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "psychosis-duration",
+    "voices",
+    "sz-psychosocial",
+    "bipolar-mania",
+    "mdd",
+    "cluster-b",
+    "panic",
+    "somatic",
+    "gppd",
+    "delirium",
+    "toxidrome",
+    "substance",
+    "psych-medical",
+    "disruptive-behavior",
+    "ssri-effects",
+    "antipsych-effects",
+    "lithium-effects",
+    "tca-tox",
+    "suicide-risk",
+    "ipv",
+    "tics",
+    "peds-sleep",
+    "bs-learning"
+   ],
+   "budget": 7
+  },
+  {
+   "part": "display",
+   "group": "A",
+   "briefs": [
+    "psychosis-duration",
+    "voices",
+    "sz-psychosocial",
+    "bipolar-mania",
+    "mdd",
+    "cluster-b",
+    "panic",
+    "somatic",
+    "gppd",
+    "delirium",
+    "toxidrome",
+    "substance",
+    "psych-medical",
+    "disruptive-behavior",
+    "ssri-effects",
+    "antipsych-effects",
+    "lithium-effects",
+    "tca-tox",
+    "suicide-risk",
+    "ipv",
+    "tics",
+    "peds-sleep",
+    "bs-learning"
+   ],
+   "budget": 18
+  }
+ ],
+ "types": {
+  "psychosis-duration": "13 practice items: their per-choice reasons; First step split and one prose line",
+  "voices": "6 practice items: their per-choice reasons",
+  "sz-psychosocial": "11 practice items: their per-choice reasons",
+  "bipolar-mania": "13 practice items: their per-choice reasons; First step split",
+  "mdd": "7 practice items: their per-choice reasons; First step split and one prose line",
+  "cluster-b": "6 practice items: their per-choice reasons",
+  "panic": "16 practice items: their per-choice reasons; First step split",
+  "somatic": "7 practice items: their per-choice reasons",
+  "gppd": "8 practice items: their per-choice reasons; First step split",
+  "delirium": "13 practice items: their per-choice reasons; First step split",
+  "toxidrome": "6 practice items: their per-choice reasons; First step split",
+  "substance": "8 practice items: their per-choice reasons; First step split",
+  "psych-medical": "6 practice items: their per-choice reasons",
+  "disruptive-behavior": "6 practice items: their per-choice reasons",
+  "ssri-effects": "10 practice items: their per-choice reasons",
+  "antipsych-effects": "9 practice items: their per-choice reasons",
+  "lithium-effects": "11 practice items: their per-choice reasons",
+  "tca-tox": "6 practice items: their per-choice reasons",
+  "suicide-risk": "6 practice items: their per-choice reasons",
+  "ipv": "11 practice items: their per-choice reasons; First step split",
+  "tics": "8 practice items: their per-choice reasons",
+  "peds-sleep": "7 practice items: their per-choice reasons",
+  "bs-learning": "9 practice items: their per-choice reasons (non-spine brief; no folder)"
+ },
+ "notes": {
+  "acc": [
+   "Items keep 3 choices; every item gets three reasons (data-key-why, data-d1-why, data-d2-why), 3 to 14 words, no dashes, arrows, ampersands or markup (Jonathan 2026-10-20).",
+   "A distractor that is a differential row reuses that row's wording; a few words added from the stem or the item explanation to fit the item are allowed when they are true for the stem (Jonathan 2026-10-20; lead call 6).",
+   "No item version bump for adding reasons (not a meaning change; the stem, key and choices are unchanged).",
+   "Left unsplit by design, because a result there reads across several orders or the band has no results: psych-medical band 1, voices band 0, tca-tox band 1 (lead call 4).",
+   "Reasons show only after an answer, under every choice, the others staying readable (s148g, approved by Jonathan).",
+   "Psychosis-duration \"Chase the medical cause\" became \"Treat the medical cause\" and mdd \"Abnormal TSH or a culprit exposure\" became \"Abnormal TSH or a causative drug or substance\" (prose rule 2026-10-19; lead call 5): judge the new wording, not the change itself."
+  ],
+  "flags": [
+   "Items keep 3 choices; every item gets three reasons (data-key-why, data-d1-why, data-d2-why), 3 to 14 words, no dashes, arrows, ampersands or markup (Jonathan 2026-10-20).",
+   "A distractor that is a differential row reuses that row's wording; a few words added from the stem or the item explanation to fit the item are allowed when they are true for the stem (Jonathan 2026-10-20; lead call 6).",
+   "No item version bump for adding reasons (not a meaning change; the stem, key and choices are unchanged).",
+   "Left unsplit by design, because a result there reads across several orders or the band has no results: psych-medical band 1, voices band 0, tca-tox band 1 (lead call 4).",
+   "Reasons show only after an answer, under every choice, the others staying readable (s148g, approved by Jonathan).",
+   "Psychosis-duration \"Chase the medical cause\" became \"Treat the medical cause\" and mdd \"Abnormal TSH or a culprit exposure\" became \"Abnormal TSH or a causative drug or substance\" (prose rule 2026-10-19; lead call 5): judge the new wording, not the change itself."
+  ],
+  "read": [
+   "Items keep 3 choices; every item gets three reasons (data-key-why, data-d1-why, data-d2-why), 3 to 14 words, no dashes, arrows, ampersands or markup (Jonathan 2026-10-20).",
+   "A distractor that is a differential row reuses that row's wording; a few words added from the stem or the item explanation to fit the item are allowed when they are true for the stem (Jonathan 2026-10-20; lead call 6).",
+   "No item version bump for adding reasons (not a meaning change; the stem, key and choices are unchanged).",
+   "Left unsplit by design, because a result there reads across several orders or the band has no results: psych-medical band 1, voices band 0, tca-tox band 1 (lead call 4).",
+   "Reasons show only after an answer, under every choice, the others staying readable (s148g, approved by Jonathan).",
+   "Psychosis-duration \"Chase the medical cause\" became \"Treat the medical cause\" and mdd \"Abnormal TSH or a culprit exposure\" became \"Abnormal TSH or a causative drug or substance\" (prose rule 2026-10-19; lead call 5): judge the new wording, not the change itself."
+  ],
+  "display": [
+   "Items keep 3 choices; every item gets three reasons (data-key-why, data-d1-why, data-d2-why), 3 to 14 words, no dashes, arrows, ampersands or markup (Jonathan 2026-10-20).",
+   "A distractor that is a differential row reuses that row's wording; a few words added from the stem or the item explanation to fit the item are allowed when they are true for the stem (Jonathan 2026-10-20; lead call 6).",
+   "No item version bump for adding reasons (not a meaning change; the stem, key and choices are unchanged).",
+   "Left unsplit by design, because a result there reads across several orders or the band has no results: psych-medical band 1, voices band 0, tca-tox band 1 (lead call 4).",
+   "Reasons show only after an answer, under every choice, the others staying readable (s148g, approved by Jonathan).",
+   "Psychosis-duration \"Chase the medical cause\" became \"Treat the medical cause\" and mdd \"Abnormal TSH or a culprit exposure\" became \"Abnormal TSH or a causative drug or substance\" (prose rule 2026-10-19; lead call 5): judge the new wording, not the change itself."
+  ]
+ },
+ "custom": {
+  "acc": {
+   "text": "Part acc (correctness and board fit of the reasons; you do not judge style or display). Scope: the per-choice reasons of every item, and in the briefs marked \"First step split\" the changed lines in the \"Changes besides the reasons\" section (each order now heads only its own results). Nothing else in the brief changed and nothing else is in scope.\n\nEach brief folder holds one file, reasons.md: the changes besides the reasons (live page against this build), then every item as the learner reads it ([item id, type], lead-in, distractors, \"reasons: key | d1 | d2\", then the stem, the answer and the explanation chain), and under each reason its source map: the brief line that best matches it (with the share of the reason's content words found there), up to 2 claims (S### ids, text, cited fact ids) with the cited quotes cut to the sentence that best matches, and the lead's checks (words added beyond a reused differential row; words found nowhere in the brief). Full quotes are in the brief's folder facts.json (path in the file's Folder line, under /home/claude/Step2Haki/workspace/); Grep it only when an excerpt is not enough to decide.\n\nCall plan: %(plan)s.\n\nJudge each reason:\n- Correct for Step 2 CK and true for this stem: the key's reason gives the feature(s) that make the key right here; each distractor's reason gives that choice's defining feature or the fact in the stem that rules it out. A reason true in general but wrong for this stem, or one that would steer a test taker to a wrong rule on another question, is HIGH.\n- Agrees with the brief: the reason does not contradict the body, the item's explanation or the cited claims, and keeps their hedges (a brief that says \"can\" or \"in some\" stated as a rule is MED; a lost hedge that changes nothing on the exam is LOW). A reason that adds a fact the brief, the explanation and the quotes do not support is MED (two new board facts are cited in the batch: selective mutism, AnKing \"verbal and talkative at home but refuses to speak in specific social settings\"; truancy as a serious rule violation of conduct disorder, UWorld).\n- Specific: a key reason that only restates the key's name, or a distractor reason that would fit any wrong choice, is LOW with a replacement.\n- First step split: each result sits under the order that produces it; a result under the wrong order is MED.\n%(extra)sStandard of correct: what Step 2 CK rewards (NBME keys, then UWorld, then AnKing). Not your scope: style, display, word count.\nA PASS-IF replacement's old text is a reason (or a changed First step line) copied exactly from reasons.md; its new text keeps the reason rules (3 to 14 words; no dashes, arrows, ampersands or markup).",
+   "plan": "per brief 1 Read of reasons.md and 1 Write of its receipt (write it before opening the next brief); a Grep of facts.json only when an excerpt cannot settle a reason, taken from your spare calls",
+   "files": [
+    "reasons.md"
+   ]
+  },
+  "flags": {
+   "text": "Part flags (area H, the reasons' numbers, hedges and absolute words against their sources). Your packet files hold, per brief, the reasons that state a number, a hedge or an absolute word (may, can, usually, often, most, some, likely, rarely, always, never, only, all, none, must, every), or that state no hedge while a cited quote does; each reason follows its item line ([item id], distractors, all three reasons) and the stem line, with the claims it rests on (S### ids, text, cited fact ids) and each cited quote cut to the sentence that best matches the reason. A reason marked \"no claim matched\" is judged against its item's explanation (in the stem line).\n\nCall plan: %(plan)s.\n\nJudge each listed reason: does it state more than its claims and quotes together support (a number, age, duration, dose, interval or cutoff no quote or claim gives; \"always\", \"never\", \"only\" or \"must\" where the source hedges; \"can\" or \"some\" turned into a rule)? Does it drop a condition (population, setting, threshold) that changes the answer? A reason that would teach a wrong exam answer is HIGH; a number or rule its sources do not support is MED; a lost hedge or condition that changes nothing on the exam is LOW. List only the reasons that fail, each with the fix; then per brief the count checked and fine.\n%(extra)sA PASS-IF replacement's old text is the reason copied exactly from the packet; its new text keeps the reason rules (3 to 14 words; no dashes, arrows, ampersands or markup).",
+   "plan": "1 Read per packet file, in order, then 1 Write of the lane receipt",
+   "combine": [
+    "reasons.md",
+    60000
+   ],
+   "receipt": "lane"
+  },
+  "read": {
+   "text": "Part read (areas C and D for the reasons; areas A and C for the First step changes; you do not judge medical truth). Your packet files hold, per brief, 3 sample items (the ones the lead's checks flag most) with all three reasons each (\"reasons: key | d1 | d2\" on the item line; the stem and explanation chain on the next line), then, for briefs with a First step split or a prose fix, the changed lines with context (\"-\" the live page, \"+\" this build).\n\nCall plan: %(plan)s. The shared tables are at /home/claude/Step2Haki/workspace/repair/efficiency/ABBREV.json (abbreviations written short) and ALIASES.json (other names); Grep them only for a name you doubt.\n\nJudge each reason as it reads under its choice after an answer:\n- C. Stands alone: interpretable with only the stem and its choice; no fragment that cannot be parsed, no \"this\" or \"it\" without a referent, no author shorthand, no abbreviation outside ABBREV.json unless the brief spells it out.\n- D. Syntax and voice: grammar, punctuation, plain words; the three reasons of one item read as a set (parallel in form, each about its own choice); no em dashes, arrows or ampersands.\nFirst step changes: each order heads its own results and the band still reads in order (A); the changed lines stand alone (C).\n%(extra)sA PASS-IF replacement's old text is the reason or line copied exactly from the packet; a reason's new text keeps the reason rules (3 to 14 words; no dashes, arrows, ampersands or markup) and changes wording only, never what it claims.",
+   "plan": "1 Read per packet file, then 1 Write of the lane receipt",
+   "combine": [
+    "sample.md",
+    60000
+   ],
+   "receipt": "lane"
+  },
+  "display": {
+   "text": "Part display (area F; you do not judge content). The images in your lane root, from the batch page:\n- cards_sheet1.png to cards_sheet8.png: answered practice cards at 390 px phone, normal mode, for toxidrome, psychosis-duration, voices, peds-sleep, panic and lithium-effects (the briefs with the longest reasons). Each brief starts with <brief>_card0_stack_phone (the default Stack view, its current card answered, with the tab row and the Back and Next bar), then <brief>_card1 to card3 (List view, the items with the longest reasons, each answered with its keyed choice). A red label heads each image; images are packed into columns.\n- bands_phone_sheet1-2.png, bands_phone-study_sheet1-2.png, bands_desktop_sheet1-2.png: the First step panel of the 9 briefs whose bands were split (psychosis-duration, bipolar-mania, mdd, panic, gppd, delirium, toxidrome, substance, ipv) at 390 px phone, phone in study mode (masks on), and 1280 px desktop.\n\nCall plan: %(plan)s.\n\nJudge in the images: each reason sits under its own choice, legible, not clipped, not overlapping the choice label or the check mark; the keyed choice is marked; the explanation below the choices is not crowded by the reasons; no text squeezed into a narrow column (a few words per line: \"widen, don't shorten\"); the Stack card's controls are not covered. First step: each order heads its own results; on phone the order and its results span the full width; in study mode the answers (orders and the meanings of results) and only the answers are hidden, the result labels readable; desktop shows the same grouping.\nKnown capture artifacts, not to report: the grey gutters and red labels of the sheets; a card cut at a column foot is the packing.\n%(extra)s",
+   "plan": "1 Read per image (14), then 1 Write of the lane receipt",
+   "images": [
+    "cards_sheet*.png",
+    "bands_*_sheet*.png"
+   ],
+   "receipt": "lane"
+  }
+ }
+}

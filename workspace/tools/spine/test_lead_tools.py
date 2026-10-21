@@ -80,6 +80,46 @@ try:
     ins1 = LN.lane_text(spec1, spec1['lanes'][0], 9)[1]
     expect('round 1 text has no follow-up block', 'follow-up' not in ins1 and 'Earlier findings' not in ins1)
 
+    # ---- lanes custom parts (s148h): combined chunk files, lane images, one receipt per lane, files override
+    for b, n in (('x', 30), ('y', 50), ('z', 30)):
+        for part in ('flags', 'display', 'acc'):
+            dd = os.path.join(pk, b, part)
+            os.makedirs(dd, exist_ok=True)
+            open(os.path.join(dd, 'deps.txt'), 'w').write('deps: page %s\nbrief-sha: %s9\n' % (b, b))
+            open(os.path.join(dd, 'reasons.md'), 'w').write('# %s\n' % b + 'r' * n)
+    sh = os.path.join(T, 'sheets')
+    os.makedirs(sh)
+    for f in ('cards_sheet1.png', 'cards_sheet2.png', 'other.png'):
+        open(os.path.join(sh, f), 'wb').write(b'png')
+    specC = {'batch': 'sT', 'plan_step': 'sT', 'round': 1, 'context': 'reasons only', 'out': os.path.join(T, 'lanesC'),
+             'packets': pk, 'sheets': sh,
+             'lanes': [{'part': 'flags', 'group': 'A', 'briefs': ['x', 'y', 'z'], 'budget': 8},
+                       {'part': 'display', 'group': 'A', 'briefs': ['x', 'y'], 'budget': 6},
+                       {'part': 'acc', 'group': 'A', 'briefs': ['x', 'z'], 'budget': 8}],
+             'custom': {'flags': {'text': 'Judge numbers. Plan: %(plan)s. Cap %(budget)d.\n', 'plan': '1 Read per packet file',
+                                  'combine': ['reasons.md', 90], 'receipt': 'lane'},
+                        'display': {'text': 'Judge images.\n', 'images': ['cards_sheet*.png'], 'receipt': 'lane'},
+                        'acc': {'text': 'Judge reasons. %(plan)s\n', 'plan': '2 per brief', 'files': ['reasons.md']}}}
+    rows = LN.build(specC)
+    lf, ld, la = (r[0] for r in rows)
+    insF = open(os.path.join(lf, 'INSTRUCTIONS.md')).read()
+    expect('custom: text and plan filled in', 'Judge numbers. Plan: 1 Read per packet file. Cap 8.' in insF)
+    expect('custom: chunks split at brief boundaries under the cap',
+           sorted(os.listdir(lf)) == ['INSTRUCTIONS.md', 'flags_packet_1.md', 'flags_packet_2.md', 'flags_packet_3.md'])
+    p1 = open(os.path.join(lf, 'flags_packet_1.md')).read()
+    expect('custom: a chunk holds whole briefs only', p1.startswith('# x') and '# y' not in p1)
+    expect('custom: chunk files named in order', insF.index('flags_packet_1.md') < insF.index('flags_packet_2.md'))
+    expect('custom: lane receipt path and per-brief deps lines',
+           'One receipt covers the whole lane (%sreceipt.md)' % lf in insF and 'deps line: deps: page y; brief-sha line: brief-sha: y9' in insF
+           and '`## <brief>`' in insF and 'receipt %sx/receipt.md' % lf not in insF)
+    expect('custom: header still parses for the launch gate', HC.header(insF).get('budget') == '8')
+    insD = open(os.path.join(ld, 'INSTRUCTIONS.md')).read()
+    expect('custom: only the matching sheets copied to the lane root',
+           sorted(os.listdir(ld)) == ['INSTRUCTIONS.md', 'cards_sheet1.png', 'cards_sheet2.png'] and 'cards_sheet2.png' in insD)
+    expect('custom: files override copies only the named file',
+           sorted(os.listdir(os.path.join(la, 'x'))) == ['reasons.md'] and 'receipt %sx/receipt.md' % la in
+           open(os.path.join(la, 'INSTRUCTIONS.md')).read())
+
     # ---- reps: exactly once across build.py, tail_fix.json, head_fix.json
     d = os.path.join(T, 'brief')
     os.makedirs(d)
