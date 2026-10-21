@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-20, by the s148g lead chat 1 (s148g presented; awaiting "ship").
+Last updated: 2026-10-20, by the s148g lead chat 1 (s148g shipped; no batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,15 +12,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch s148g open** (site layer; launched 2026-10-20 17:32; WAVE.json s148g: 0 agents, lead 120M). Record:
-  repair/s148g/S148G.md. Branch wip/s148g. Step S8: pilot approved ("approve", 18:24); batch generated (56 bottom
-  lines bold, lithium First step split, 7 script patches + layer), all checks pass, presented with approval.py
-  (15 screenshots, page 24f26a077e7d) in chat 1's container. Waiting for "ship" (must go to that chat). After ship: S9
-  per the handoff, commit spinelib.py (local-only) to the private repo, STANDING_DIRECTIONS 2026-10-20 already edited
-  on the branch. Lead 76.5M of 120M.
-  Earlier: s148e shipped 2026-10-20 16:26 (main c341858).
-- **Spend (s148e, closed):** reviewers 15 agents, 156 calls, 6.45M of 9M; lead about 170M of 180M (3 rows,
-  ledger_lead.csv).
+- **No batch open.** s148g shipped 2026-10-20 20:34 (Jonathan: "ship"; main b11cd33, page 24f26a077e7d, version.json
+  s148g confirmed in Chrome): per-choice reasons renderer, cards same size until answered, 56 bottom lines bold, touch
+  hover cards, linked brief as an anchored panel, First step split (lithium-effects), timeline tile. Record
+  repair/s148g/S148G.md; OPEN_WORK row. Next: s148h (psych per-choice reasons and First step pairing; launch prompt
+  below), then s149 (SITE_S148G.md order: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors; golden scfe).
+- **Spend (s148g, closed):** reviewers 0; lead 84.1M of 120M (1 row, ledger_lead.csv).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json may be held by the permission check: ask Jonathan (s148e chat 3: approved).
   The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default
@@ -42,11 +39,10 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s148g (site layer: per-choice reasons renderer, question card space, bold key words in bottom lines, touch hover cards, linked-brief panel, First step split renderer, timeline tile) per claude/BATCH_RUNBOOK.md section 8 and claude/pending/SITE_S148G.md (private repo). Pilot first as a private artifact (tics, tca-tox, cluster-b, psychosis-duration, toxidrome), then generate from the live page. Bold only in bottom lines, no wording change. Budget: reviewers 0; lead 120M tokens.
+Step2Haki: launch batch s148h (psych per-choice reasons and First step pairing) per claude/BATCH_RUNBOOK.md and claude/pending/SITE_S148G.md (private repo). Briefs: every brief in the Psychiatry sidebar groups, in sidebar order; three reasons per item (data-key-why, data-d1-why, data-d2-why), a distractor that is a differential row reusing that row's wording; First step pairing for the 12 psych briefs with multi-order bands still unsplit (lithium-effects shipped in s148g). The s148g pilot's drafted reasons (repair/pilots/s148g/pilot_reasons.json) are an unreviewed starting draft only. Budget for the whole batch: 14 agents, 160 API calls, 7M tokens; lead 180M tokens. Method: s148 with the efficiency patch.
 ```
 
-After s148g ships: s148h (psych per-choice reasons; SITE_S148G.md; proposed 14 agents, 160 API calls, 7M tokens, lead
-180M), then s149 (prompt in SITE_S148G.md's order: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors; golden
+After s148h ships: s149 (prompt in SITE_S148G.md's order: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors; golden
 scfe; proposed 30 agents, 240 API calls, 15M tokens, lead 180M).
 
 ## After s141
