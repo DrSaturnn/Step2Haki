@@ -15,15 +15,16 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Batch s149 open** (launched 2026-10-21 08:20; branch wip/s149): Phase 2, musculoskeletal B, pediatric. Briefs:
   septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors. Golden: scfe. Brief set rules of 2026-10-20 apply.
   Budget: 30 agents, 240 calls, 15M tokens; lead 260M (raised from 180M, chat 6). Digest lines and WAVE.json s149 written.
-- **Lead:** Claude, since 2026-10-21 18:05, chat 9 (took the lock from chat 8, which stopped at context; Codex never took
+- **Lead:** Claude, since 2026-10-21 18:05, chat 9, stopped at context (took the lock from chat 8; Codex never took
   the lock and ran no step, CODEX_AUDIT item 1). Open again for Codex only when this line says so.
-- **Step:** S5 done (chat 9): adj_s149.md in all six spine folders; repair/s149/10_*_spine.json carry every rebuild;
-  build s149 OK, gate PASS 180 briefs, render PASS. Next: S6 self-check on the changed lines (chat 9), then S7 follow-up
-  round (review_packet.py --since each reviewer's last brief_text.txt, lanes.py spec repair/s149/lanes/lanes_r2.json).
+- **Step:** S7 in progress (chat 9 stopped at context). Round 2 done (24 receipts; septic-hip read FAIL fixed, PASS-IF
+  replacements applied); bone-tumors READY; flags current on all six. Next: round 3 for acc, read and display on
+  septic-hip, limp, sjia, nursemaid, growing-pains, per repair/s149/S149.md "S7 follow-up round 2" (Next): shots of the
+  five, sheets, lanes_r3.json, 6 lanes, 109 calls; then the S7 restart point (all READY) and S8 in a fresh chat.
   Restore: clone both repos on wip/s149 (private: clone -b wip/s149, cp -rn its local-only/); hooks: install.sh and the
   /root/.claude mirror, then the no-model probe.
-- **s149 spend:** reviewers 9 of 30 agents, 103 of 240 calls, 5.60M of 15M; lead chats 1 to 8 195.5M, chat 9 30.7M at S5
-  done; batch lead 226.2M of 300M (raised from 260M, chat 9).
+- **s149 spend:** reviewers 17 of 30 agents, 177 of 300 calls (raised from 240, chat 9), 8.86M of 15M; lead chats 1 to 8
+  195.5M, chat 9 52.0M; batch lead 247.5M of 300M (raised from 260M, chat 9).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json (and /root/.claude/agents) may be held by the permission check: ask Jonathan.
   The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default
