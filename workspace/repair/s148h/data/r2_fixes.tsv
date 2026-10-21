@@ -1,0 +1,20 @@
+# s148h S7 round 2 PASS-IF replacements: brief	item prefix	slot	old	new	finding (round 2; A approved, P the lead's merge)
+bipolar-mania	q_e14998f0	d1	No improvement after 2 weeks at therapeutic levels: check adherence, then change	No improvement after 2 weeks at therapeutic levels, adherence confirmed: change now	acc r2 1 A (read r2 1 not taken: acc owns correctness)
+bipolar-mania	q_83176e58	d1	Hopeless and burdensome: suicide risk comes before any drug change	Hopeless, feels a burden: suicide risk comes before any drug change	acc r2 2 A
+bipolar-mania	q_7dc58d2f	d1	Sertraline must stop in mania; adding quetiapine is not enough	Sertraline must stop in mania, not continue beside quetiapine	flags r2 A
+bs-learning	q_561337b4	d2	Mania is a distinct period of elevated mood, not chronic anger	Mania is a distinct period of elevated or irritable mood, not chronic anger	acc r2 3, flags r2 A (card nid 1484792509579)
+bs-learning	q_332bfce4	d1	A stimulant treats ADHD; this behavior tracks an academic deficit	A stimulant treats ADHD; the suspected diagnosis is a learning disorder	read r2 A
+sz-psychosocial	q_4a4edd58	d1	Off it after a first episode, 65% to 80% relapse within 12 months	Stopping an antipsychotic after a first episode: 65% to 80% relapse within 12 months	read r2 A
+mdd	q_ce4c3eab	key	5 of 9 including depressed mood or loss of interest, for 2 weeks, impaired	5 of 9 including depressed mood or loss of interest, 2 weeks, with impairment	read r2 A
+disruptive-behavior	*	*	Adds deceit, theft or truancy; his outbursts are impulsive, not planned	Conduct disorder adds deceit, theft or truancy; his outbursts are impulsive, not planned	read r2 A
+ssri-effects	*	*	Treats presumed relapse; symptoms 3 days after a stop are discontinuation	Treats presumed relapse; symptoms 3 days after a stop typically mean discontinuation	flags r2 A; read r2 P (its added subject would make 15 words, over the 14-word rule)
+panic	q_8f56600a	d2	Benzodiazepine only as a short-term bridge, never long term	Benzodiazepine only as a short-term bridge, not long-term treatment on its own	flags r2 A
+delirium	q_34902597	d1	Benzodiazepines bring more confusion and sedation	Benzodiazepines can worsen confusion and sedation	flags r2 A
+delirium	q_6f2d9552	key	Benzodiazepines bring more confusion and sedation	Benzodiazepines can worsen confusion and sedation	flags r2 A
+toxidrome	*	*	Builds over 1 to 3 days on a dopamine blocker; rigid, slow reflexes	Builds over 1 to 3 days or longer on dopamine blockers; rigid, slow reflexes	flags r2 A
+toxidrome	*	*	Early acetaminophen poisoning is often silent; the antidote prevents liver injury	Early acetaminophen poisoning is often silent; the antidote can prevent liver injury	flags r2 A
+substance	q_28f20c32	d2	A benzodiazepine treats alcohol or sedative withdrawal, not opioid withdrawal	A benzodiazepine suits alcohol withdrawal; opioid withdrawal is distressing, not life-threatening	flags r2 A (the item explanation and the brief's Insights line)
+substance	*	*	Would deepen the respiratory depression	Can deepen the respiratory depression	flags r2 A
+antipsych-effects	*	*	Metoclopramide caused acute dystonia: a parenteral anticholinergic relieves it	Metoclopramide caused acute dystonia: a parenteral anticholinergic usually relieves it	flags r2 A
+ipv	*	*	Reproductive age, not pregnancy, triggers screening; she qualifies now	Reproductive age triggers screening, pregnancy not required; she qualifies now	flags r2 A
+tics	*	*	No ADHD here; a stimulant does not treat tics	No ADHD here; a stimulant is a treatment for ADHD	flags r2 A

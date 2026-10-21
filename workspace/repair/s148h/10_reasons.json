@@ -620,7 +620,7 @@
    "op": "set_attr",
    "target": "q_4a4edd58a7fdd308d09f",
    "attr": "data-d1-why",
-   "value": "Off it after a first episode, 65% to 80% relapse within 12 months",
+   "value": "Stopping an antipsychotic after a first episode: 65% to 80% relapse within 12 months",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -725,7 +725,7 @@
    "op": "set_attr",
    "target": "q_7dc58d2f1afc9954f4a2",
    "attr": "data-d1-why",
-   "value": "Sertraline must stop in mania; adding quetiapine is not enough",
+   "value": "Sertraline must stop in mania, not continue beside quetiapine",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -788,7 +788,7 @@
    "op": "set_attr",
    "target": "q_e14998f0caa852bf05de",
    "attr": "data-d1-why",
-   "value": "No improvement after 2 weeks at therapeutic levels: check adherence, then change",
+   "value": "No improvement after 2 weeks at therapeutic levels, adherence confirmed: change now",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -872,7 +872,7 @@
    "op": "set_attr",
    "target": "q_83176e5864a0d4fdea0c",
    "attr": "data-d1-why",
-   "value": "Hopeless and burdensome: suicide risk comes before any drug change",
+   "value": "Hopeless, feels a burden: suicide risk comes before any drug change",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -907,7 +907,7 @@
    "op": "set_attr",
    "target": "q_ce4c3eab1e36837f52cf",
    "attr": "data-key-why",
-   "value": "5 of 9 including depressed mood or loss of interest, for 2 weeks, impaired",
+   "value": "5 of 9 including depressed mood or loss of interest, 2 weeks, with impairment",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1446,7 +1446,7 @@
    "op": "set_attr",
    "target": "q_8f56600a122cbeb2b97c",
    "attr": "data-d2-why",
-   "value": "Benzodiazepine only as a short-term bridge, never long term",
+   "value": "Benzodiazepine only as a short-term bridge, not long-term treatment on its own",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -1985,7 +1985,7 @@
    "op": "set_attr",
    "target": "q_34902597b649d6f0115f",
    "attr": "data-d1-why",
-   "value": "Benzodiazepines bring more confusion and sedation",
+   "value": "Benzodiazepines can worsen confusion and sedation",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2020,7 +2020,7 @@
    "op": "set_attr",
    "target": "q_6f2d95529c86c3afb033",
    "attr": "data-key-why",
-   "value": "Benzodiazepines bring more confusion and sedation",
+   "value": "Benzodiazepines can worsen confusion and sedation",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2111,7 +2111,7 @@
    "op": "set_attr",
    "target": "q_cc182d77d4694cbcd721",
    "attr": "data-d1-why",
-   "value": "Builds over 1 to 3 days on a dopamine blocker; rigid, slow reflexes",
+   "value": "Builds over 1 to 3 days or longer on dopamine blockers; rigid, slow reflexes",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2125,7 +2125,7 @@
    "op": "set_attr",
    "target": "q_0564f671fc7cbee2a9a1",
    "attr": "data-key-why",
-   "value": "Early acetaminophen poisoning is often silent; the antidote prevents liver injury",
+   "value": "Early acetaminophen poisoning is often silent; the antidote can prevent liver injury",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2307,7 +2307,7 @@
    "op": "set_attr",
    "target": "q_790007e5c1400c256acf",
    "attr": "data-d2-why",
-   "value": "Would deepen the respiratory depression",
+   "value": "Can deepen the respiratory depression",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2370,7 +2370,7 @@
    "op": "set_attr",
    "target": "q_28f20c32a3b6cf8ca9fe",
    "attr": "data-d2-why",
-   "value": "A benzodiazepine treats alcohol or sedative withdrawal, not opioid withdrawal",
+   "value": "A benzodiazepine suits alcohol withdrawal; opioid withdrawal is distressing, not life-threatening",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2573,7 +2573,7 @@
    "op": "set_attr",
    "target": "q_563f384ee76cd7574ae0",
    "attr": "data-d1-why",
-   "value": "Adds deceit, theft or truancy; his outbursts are impulsive, not planned",
+   "value": "Conduct disorder adds deceit, theft or truancy; his outbursts are impulsive, not planned",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2790,7 +2790,7 @@
    "op": "set_attr",
    "target": "q_6f875a3df168eda248ea",
    "attr": "data-d2-why",
-   "value": "Treats presumed relapse; symptoms 3 days after a stop are discontinuation",
+   "value": "Treats presumed relapse; symptoms 3 days after a stop typically mean discontinuation",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -2881,7 +2881,7 @@
    "op": "set_attr",
    "target": "q_5767bd34d02b3f5c6815",
    "attr": "data-key-why",
-   "value": "Metoclopramide caused acute dystonia: a parenteral anticholinergic relieves it",
+   "value": "Metoclopramide caused acute dystonia: a parenteral anticholinergic usually relieves it",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3756,7 +3756,7 @@
    "op": "set_attr",
    "target": "q_9afa95fc7fac80545924",
    "attr": "data-d2-why",
-   "value": "Reproductive age, not pregnancy, triggers screening; she qualifies now",
+   "value": "Reproductive age triggers screening, pregnancy not required; she qualifies now",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -3777,7 +3777,7 @@
    "op": "set_attr",
    "target": "q_680ca34e827e516c9a90",
    "attr": "data-d2-why",
-   "value": "No ADHD here; a stimulant does not treat tics",
+   "value": "No ADHD here; a stimulant is a treatment for ADHD",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -4106,7 +4106,7 @@
    "op": "set_attr",
    "target": "q_332bfce4d26f50f38937",
    "attr": "data-d1-why",
-   "value": "A stimulant treats ADHD; this behavior tracks an academic deficit",
+   "value": "A stimulant treats ADHD; the suspected diagnosis is a learning disorder",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {
@@ -4176,7 +4176,7 @@
    "op": "set_attr",
    "target": "q_561337b4d8d754aa9ede",
    "attr": "data-d2-why",
-   "value": "Mania is a distinct period of elevated mood, not chronic anger",
+   "value": "Mania is a distinct period of elevated or irritable mood, not chronic anger",
    "note": "s148h (Jonathan 2026-10-20: per-choice reasons; First step split)"
   },
   {

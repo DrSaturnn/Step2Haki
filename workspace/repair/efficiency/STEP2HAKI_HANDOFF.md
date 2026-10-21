@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-20, by the s148h lead chat 2 (s148h open, S7 round 2 launched).
+Last updated: 2026-10-20, by the s148h lead chat 2 (s148h open, S7 done: all READY).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -17,11 +17,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   bs-learning; 203 items); First step pairing for bipolar-mania, delirium, gppd, ipv, mdd, panic, psych-medical,
   psychosis-duration, substance, tca-tox, toxidrome, voices. Batch file repair/s148h/S148H.md. Branch wip/s148h.
 - **Budget:** reviewers 14 agents, 160 calls, 7M tokens; lead 180M (WAVE.json s148h).
-- **Step:** S7 follow-up round 2 launched (chat 2): 4 lanes, 28 calls (repair/s148h/lanes/lanes_r2.json; lanes in
-  repair/efficiency/lanes/s148h/r2). Round 1 and S5 to S6 are in the batch file (77 reason fixes, data/r1_fixes.tsv;
-  closures, data/r1_closed.tsv; toxidrome band 1 and ipv band 0 restored). If this chat stops before the receipts are
-  in: check each r2 lane for receipt.md; relaunch only lanes without one. Then S7 done -> restart -> S8.
-- **Spend:** reviewers round 1: 8 of 14 agents, 61 calls, 3.58M of 7M (ledger_spine.csv); lead chat 1 37.9M of 180M.
+- **Step:** S7 done: all READY (chat 2). Round 1: 8 lanes; S5: 77 reason fixes and two bands restored (toxidrome band
+  1, ipv band 0); round 2: 4 lanes, no HIGH or MED, 19 PASS-IF replacements applied. Next: S8 in a fresh chat
+  (verify_all does not apply: no spine rebuild; the batch file "S7" and "Notes for the report" sections hold the record;
+  approval shots with shots_s148h.py plus shots_all on the 8 split briefs, then approval.py present s148h).
+- **Spend:** reviewers 12 of 14 agents, 83 of 160 calls, 4.70M of 7M; lead 70.9M of 180M (chat 1 37.9M, chat 2 33.1M).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json may be held by the permission check: ask Jonathan.
   The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default

@@ -152,7 +152,7 @@
   ],
   "q_4a4edd58a7fdd308d09f": [
    "Improved on an antipsychotic: continue it indefinitely",
-   "Off it after a first episode, 65% to 80% relapse within 12 months",
+   "Stopping an antipsychotic after a first episode: 65% to 80% relapse within 12 months",
    "Improved on this dose; continue it rather than cut it now"
   ]
  },
@@ -179,7 +179,7 @@
   ],
   "q_7dc58d2f1afc9954f4a2": [
    "Mania on an antidepressant: stop it; start a first-line agent",
-   "Sertraline must stop in mania; adding quetiapine is not enough",
+   "Sertraline must stop in mania, not continue beside quetiapine",
    "Stop the antidepressant, not swap it; start a first-line agent"
   ],
   "q_875af1ee71c6f2502d97": [
@@ -194,7 +194,7 @@
   ],
   "q_e14998f0caa852bf05de": [
    "No improvement after 2 weeks at therapeutic levels: add on",
-   "No improvement after 2 weeks at therapeutic levels: check adherence, then change",
+   "No improvement after 2 weeks at therapeutic levels, adherence confirmed: change now",
    "No response at 2 weeks: add on or switch first"
   ],
   "q_0c3b63b494f28be9d776": [
@@ -214,7 +214,7 @@
   ],
   "q_83176e5864a0d4fdea0c": [
    "Most suicide deaths in bipolar disorder occur in depression",
-   "Hopeless and burdensome: suicide risk comes before any drug change",
+   "Hopeless, feels a burden: suicide risk comes before any drug change",
    "Says family better off without him: assess suicide risk now"
   ],
   "q_cc8ff30e23e43a1a0d5b": [
@@ -225,7 +225,7 @@
  },
  "mdd": {
   "q_ce4c3eab1e36837f52cf": [
-   "5 of 9 including depressed mood or loss of interest, for 2 weeks, impaired",
+   "5 of 9 including depressed mood or loss of interest, 2 weeks, with impairment",
    "Any past manic or hypomanic episode; never had one",
    "Abnormal TSH would show it; TSH normal"
   ],
@@ -356,7 +356,7 @@
   "q_8f56600a122cbeb2b97c": [
    "Not ineffective until at least 4 weeks at the high end",
    "Too early to switch: 2 weeks at a low dose",
-   "Benzodiazepine only as a short-term bridge, never long term"
+   "Benzodiazepine only as a short-term bridge, not long-term treatment on its own"
   ],
   "q_a29e571adb123e184e79": [
    "Severe symptoms before the SSRI works: longer-acting benzodiazepine bridge",
@@ -491,7 +491,7 @@
   ],
   "q_34902597b649d6f0115f": [
    "Severe agitation threatening safety: low-dose antipsychotic",
-   "Benzodiazepines bring more confusion and sedation",
+   "Benzodiazepines can worsen confusion and sedation",
    "Already failed: he hits a nurse despite reorientation"
   ],
   "q_0dcaebb0bf5c8466d61c": [
@@ -500,7 +500,7 @@
    "Withdrawal delirium needs an IV benzodiazepine"
   ],
   "q_6f2d95529c86c3afb033": [
-   "Benzodiazepines bring more confusion and sedation",
+   "Benzodiazepines can worsen confusion and sedation",
    "Frequent reorientation helps",
    "Treat the cause: keep treating the infection"
   ],
@@ -523,11 +523,11 @@
  "toxidrome": {
   "q_cc182d77d4694cbcd721": [
    "Clonus, hyperreflexia, sweating, hours after tramadol was added",
-   "Builds over 1 to 3 days on a dopamine blocker; rigid, slow reflexes",
+   "Builds over 1 to 3 days or longer on dopamine blockers; rigid, slow reflexes",
    "Hot, dry, flushed skin; ileus; she sweats and has active bowel sounds"
   ],
   "q_0564f671fc7cbee2a9a1": [
-   "Early acetaminophen poisoning is often silent; the antidote prevents liver injury",
+   "Early acetaminophen poisoning is often silent; the antidote can prevent liver injury",
    "Suicide risk is assessed once she is medically clear",
    "Misses a silent acetaminophen ingestion"
   ],
@@ -571,7 +571,7 @@
   "q_790007e5c1400c256acf": [
    "Pinpoint pupils with slow breathing; reverses with naloxone",
    "Reverses benzodiazepines, not opioids; can provoke seizures",
-   "Would deepen the respiratory depression"
+   "Can deepen the respiratory depression"
   ],
   "q_b0154ac9b2095e29366b": [
    "Usually 48 to 96 h; disorientation with autonomic instability",
@@ -586,7 +586,7 @@
   "q_28f20c32a3b6cf8ca9fe": [
    "Opioid withdrawal: buprenorphine or methadone",
    "Not naloxone: it treats overdose",
-   "A benzodiazepine treats alcohol or sedative withdrawal, not opioid withdrawal"
+   "A benzodiazepine suits alcohol withdrawal; opioid withdrawal is distressing, not life-threatening"
   ],
   "q_81bec42c97ebe9c64dc2": [
    "Cyclical vomiting usually eased by hot showers, daily cannabis",
@@ -639,7 +639,7 @@
   ],
   "q_563f384ee76cd7574ae0": [
    "Impulsive outbursts, not planned; appropriate behavior between",
-   "Adds deceit, theft or truancy; his outbursts are impulsive, not planned",
+   "Conduct disorder adds deceit, theft or truancy; his outbursts are impulsive, not planned",
    "Needs irritability between outbursts and onset before 10"
   ],
   "q_579779965ffaf731d62c": [
@@ -692,7 +692,7 @@
   "q_6f875a3df168eda248ea": [
    "Exclude other serious causes, then reassure: 1 to 2 weeks",
    "He prefers to stay off; restarting is optional",
-   "Treats presumed relapse; symptoms 3 days after a stop are discontinuation"
+   "Treats presumed relapse; symptoms 3 days after a stop typically mean discontinuation"
   ],
   "q_5568d24b36134cb369b5": [
    "Symptoms during a taper: restart the dose, taper more slowly",
@@ -717,7 +717,7 @@
    "Propranolol belongs to akathisia"
   ],
   "q_5767bd34d02b3f5c6815": [
-   "Metoclopramide caused acute dystonia: a parenteral anticholinergic relieves it",
+   "Metoclopramide caused acute dystonia: a parenteral anticholinergic usually relieves it",
    "Hypocalcemia brings paresthesia and hyperreflexia, plus a cause such as neck surgery",
    "Swelling, not spasm; no lip or tongue swelling"
   ],
@@ -932,14 +932,14 @@
   "q_9afa95fc7fac80545924": [
    "Screen women of reproductive age, privately, with a brief questionnaire",
    "Screening is for every woman of reproductive age",
-   "Reproductive age, not pregnancy, triggers screening; she qualifies now"
+   "Reproductive age triggers screening, pregnancy not required; she qualifies now"
   ]
  },
  "tics": {
   "q_680ca34e827e516c9a90": [
    "Impairing Tourette syndrome; an antipsychotic blocks dopamine receptors",
    "Targets compulsions; a tic neutralizes no obsession",
-   "No ADHD here; a stimulant does not treat tics"
+   "No ADHD here; a stimulant is a treatment for ADHD"
   ],
   "q_7b955ba5483e524c9908": [
    "No functional impairment: explain the natural history; watch",
@@ -1022,7 +1022,7 @@
   ],
   "q_332bfce4d26f50f38937": [
    "Psychoeducational testing confirms; screen hearing and vision first",
-   "A stimulant treats ADHD; this behavior tracks an academic deficit",
+   "A stimulant treats ADHD; the suspected diagnosis is a learning disorder",
    "Behavior is downstream of an academic problem"
   ],
   "q_a56f635d2ffd59fd9d73": [
@@ -1038,7 +1038,7 @@
   "q_561337b4d8d754aa9ede": [
    "Outbursts three times weekly for a year; angry between",
    "Defiance toward authority, without severe outbursts",
-   "Mania is a distinct period of elevated mood, not chronic anger"
+   "Mania is a distinct period of elevated or irritable mood, not chronic anger"
   ],
   "q_ad04c5ea9aff5ce2a367": [
    "Fear of eating, speaking or performing anywhere",

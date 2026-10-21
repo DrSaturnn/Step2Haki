@@ -216,6 +216,17 @@
   },
   {
    "brief": "toxidrome",
+   "item": "q_cc182d77d4694cbcd721",
+   "attr": "data-d1-why",
+   "choice": "Neuroleptic malignant syndrome",
+   "reason": "Builds over 1 to 3 days or longer on dopamine blockers; rigid, slow reflexes",
+   "row": "Neuroleptic malignant syndrome Fever, lead-pipe rigidity, confusion, unstable vital signs Builds over 1 to 3 days after a dopamine blocker is started or raised; rigid, with slow reflexes",
+   "words_not_in_row": [
+    "longer"
+   ]
+  },
+  {
+   "brief": "toxidrome",
    "item": "q_8f48c9780eb3e49fdd97",
    "attr": "data-d1-why",
    "choice": "Serotonin syndrome",
@@ -269,7 +280,7 @@
    "item": "q_563f384ee76cd7574ae0",
    "attr": "data-d1-why",
    "choice": "Conduct disorder",
-   "reason": "Adds deceit, theft or truancy; his outbursts are impulsive, not planned",
+   "reason": "Conduct disorder adds deceit, theft or truancy; his outbursts are impulsive, not planned",
    "row": "Conduct disorder Aggression, destruction, theft, truancy; lies for gain or to avoid consequences 3 or more in 12 months ; violates others' basic rights or major rules",
    "words_not_in_row": [
     "adds",
@@ -454,6 +465,15 @@
   {
    "brief": "bipolar-mania",
    "item": "q_7dc58d2f1afc9954f4a2",
+   "attr": "data-d1-why",
+   "reason": "Sertraline must stop in mania, not continue beside quetiapine",
+   "words_not_in_brief": [
+    "beside"
+   ]
+  },
+  {
+   "brief": "bipolar-mania",
+   "item": "q_7dc58d2f1afc9954f4a2",
    "attr": "data-d2-why",
    "reason": "Stop the antidepressant, not swap it; start a first-line agent",
    "words_not_in_brief": [
@@ -494,9 +514,9 @@
    "brief": "bipolar-mania",
    "item": "q_83176e5864a0d4fdea0c",
    "attr": "data-d1-why",
-   "reason": "Hopeless and burdensome: suicide risk comes before any drug change",
+   "reason": "Hopeless, feels a burden: suicide risk comes before any drug change",
    "words_not_in_brief": [
-    "burdensome",
+    "burden",
     "hopeles"
    ]
   },
@@ -507,15 +527,6 @@
    "reason": "Toxicology already negative; thyroid signs point elsewhere",
    "words_not_in_brief": [
     "elsewhere"
-   ]
-  },
-  {
-   "brief": "mdd",
-   "item": "q_ce4c3eab1e36837f52cf",
-   "attr": "data-key-why",
-   "reason": "5 of 9 including depressed mood or loss of interest, for 2 weeks, impaired",
-   "words_not_in_brief": [
-    "impair"
    ]
   },
   {
@@ -628,11 +639,29 @@
   },
   {
    "brief": "toxidrome",
+   "item": "q_cc182d77d4694cbcd721",
+   "attr": "data-d1-why",
+   "reason": "Builds over 1 to 3 days or longer on dopamine blockers; rigid, slow reflexes",
+   "words_not_in_brief": [
+    "longer"
+   ]
+  },
+  {
+   "brief": "toxidrome",
    "item": "q_3d4f3bb449249b384e19",
    "attr": "data-d2-why",
    "reason": "Confusion points to a coingestant still unchecked",
    "words_not_in_brief": [
     "uncheck"
+   ]
+  },
+  {
+   "brief": "substance",
+   "item": "q_28f20c32a3b6cf8ca9fe",
+   "attr": "data-d2-why",
+   "reason": "A benzodiazepine suits alcohol withdrawal; opioid withdrawal is distressing, not life-threatening",
+   "words_not_in_brief": [
+    "suit"
    ]
   },
   {
@@ -675,8 +704,9 @@
    "brief": "ssri-effects",
    "item": "q_6f875a3df168eda248ea",
    "attr": "data-d2-why",
-   "reason": "Treats presumed relapse; symptoms 3 days after a stop are discontinuation",
+   "reason": "Treats presumed relapse; symptoms 3 days after a stop typically mean discontinuation",
    "words_not_in_brief": [
+    "mean",
     "treat"
    ]
   },
@@ -712,7 +742,7 @@
    "brief": "antipsych-effects",
    "item": "q_5767bd34d02b3f5c6815",
    "attr": "data-key-why",
-   "reason": "Metoclopramide caused acute dystonia: a parenteral anticholinergic relieves it",
+   "reason": "Metoclopramide caused acute dystonia: a parenteral anticholinergic usually relieves it",
    "words_not_in_brief": [
     "reliev"
    ]
@@ -821,7 +851,7 @@
    "brief": "ipv",
    "item": "q_9afa95fc7fac80545924",
    "attr": "data-d2-why",
-   "reason": "Reproductive age, not pregnancy, triggers screening; she qualifies now",
+   "reason": "Reproductive age triggers screening, pregnancy not required; she qualifies now",
    "words_not_in_brief": [
     "qualifi"
    ]
@@ -868,9 +898,8 @@
    "brief": "bs-learning",
    "item": "q_332bfce4d26f50f38937",
    "attr": "data-d1-why",
-   "reason": "A stimulant treats ADHD; this behavior tracks an academic deficit",
+   "reason": "A stimulant treats ADHD; the suspected diagnosis is a learning disorder",
    "words_not_in_brief": [
-    "track",
     "treat"
    ]
   },
@@ -889,7 +918,7 @@
    "brief": "bs-learning",
    "item": "q_561337b4d8d754aa9ede",
    "attr": "data-d2-why",
-   "reason": "Mania is a distinct period of elevated mood, not chronic anger",
+   "reason": "Mania is a distinct period of elevated or irritable mood, not chronic anger",
    "words_not_in_brief": [
     "anger",
     "distinct",
