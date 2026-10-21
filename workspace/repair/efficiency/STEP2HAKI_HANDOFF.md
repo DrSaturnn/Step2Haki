@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-21, by the s148h lead chat 3 (s148h shipped; no batch open).
+Last updated: 2026-10-21, by the s149 lead chat 1 (launch).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,12 +12,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **No batch open.** s148h shipped 2026-10-21 08:08 (Jonathan: "ship"; main bd9eba5, page 6c5296e2e418,
-  version.json s148h checked in Chrome): 609 per-choice reasons on the 203 items of the 23 psych-tagged briefs, First
-  step paired per order in 8 bands. Record repair/s148h/S148H.md; OPEN_WORK line. WAVE.json s148h closed.
-- **s148h spend:** reviewers 12 of 14 agents, 83 of 160 calls, 4.70M of 7M; lead 94.9M of 180M (chat 1 37.9M, chat 2
-  33.1M, chat 3 24.0M with the ship).
-- **Next:** launch s149 with the prompt below (a fresh chat runs the full read order).
+- **Batch s149 open** (launched 2026-10-21 08:20; branch wip/s149): Phase 2, musculoskeletal B, pediatric. Briefs:
+  septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors. Golden: scfe. Brief set rules of 2026-10-20 apply.
+  Budget: 30 agents, 240 calls, 15M tokens; lead 180M. Digest line and WAVE.json s149 written.
+- **Step:** launch, session start. Public repo cloned, hook tests 101 passed, lean-reviewer listed. Blocked before S1:
+  the private repo (local-only files, board index, migration folders) was not attached (the session's permission check
+  refused add_repo for DrSaturnn/Step2Haki-private); waiting on Jonathan for the private repo or the Mac route.
+- **s149 spend:** reviewers 0 agents, 0 calls; lead chat 1 in progress. Start-up context 192,867 (WARNING: 48% above
+  the 130,263 baseline; the linked-Mac and plugin tool lists).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json (and /root/.claude/agents) may be held by the permission check: ask Jonathan.
   The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default
