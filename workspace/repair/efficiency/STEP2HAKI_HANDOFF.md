@@ -21,7 +21,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   view, cards.md). Next: septic-hip S1 (boards.md, facts, card dispositions), then S2; the open accuracy checks are in
   the batch file (repair/s149/S149.md, "S1 setup"). Restore: clone both repos on wip/s149 (private: fetch
   wip/s149 and cp -rn its local-only/ after main's; it holds the septic-hip folder and the rebuilt board index).
-- **s149 spend:** reviewers 0 agents, 0 calls; lead chat 1 in progress. Start-up context 192,867 (WARNING: 48% above
+- **s149 spend:** reviewers 0 agents, 0 calls; lead chat 1 8.39M of 180M (launch and S1 setup). Start-up context 192,867 (WARNING: 48% above
   the 130,263 baseline; the linked-Mac and plugin tool lists).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json (and /root/.claude/agents) may be held by the permission check: ask Jonathan.
