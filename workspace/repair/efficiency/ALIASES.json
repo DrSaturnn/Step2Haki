@@ -556,6 +556,34 @@
      "nid": 1515724231621
     }
    ]
+  },
+  {
+   "name": "Giant cell tumor of bone",
+   "aliases": [
+    "osteoclastoma"
+   ],
+   "sources": [
+    {
+     "kind": "anking",
+     "nid": 1488158677710
+    },
+    {
+     "kind": "anking",
+     "nid": 1488158666195
+    }
+   ]
+  },
+  {
+   "name": "Unicameral bone cyst",
+   "aliases": [
+    "simple bone cyst"
+   ],
+   "sources": [
+    {
+     "kind": "primary",
+     "ref": "MSD Manual Professional, Benign Bone Tumors and Cysts"
+    }
+   ]
   }
  ]
 }
