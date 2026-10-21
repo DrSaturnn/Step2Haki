@@ -1,0 +1,191 @@
+{
+ "batch": "s149",
+ "plan_step": "s149",
+ "round": 2,
+ "context": "batch s149 (Phase 2, musculoskeletal B, pediatric) converts six live briefs to decision spine v2 (golden scfe); this is follow-up round 2, on the lines changed since your round 1 receipt, read in context",
+ "out": "repair/efficiency/lanes/s149/r2",
+ "packets": "repair/migration/spine/packets/s149r2",
+ "sheets": "local/shots/s149-r2/sheets",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "septic-hip",
+    "limp",
+    "sjia"
+   ]
+  },
+  {
+   "part": "acc",
+   "group": "B",
+   "briefs": [
+    "nursemaid",
+    "growing-pains",
+    "bone-tumors"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "septic-hip",
+    "limp",
+    "sjia"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "B",
+   "briefs": [
+    "nursemaid",
+    "growing-pains",
+    "bone-tumors"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "septic-hip",
+    "limp",
+    "sjia"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "B",
+   "briefs": [
+    "nursemaid",
+    "growing-pains",
+    "bone-tumors"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "A",
+   "briefs": [
+    "septic-hip",
+    "limp",
+    "sjia"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "B",
+   "briefs": [
+    "nursemaid",
+    "growing-pains",
+    "bone-tumors"
+   ]
+  }
+ ],
+ "types": {
+  "septic-hip": "disease brief (septic arthritis of the hip against transient synovitis), peds lens; golden scfe; review in full",
+  "limp": "presentation hub (data-entry hub), peds lens; steps 5 to 8 greyed; treatment by cause inside step 4; review in full",
+  "sjia": "disease brief (systemic juvenile idiopathic arthritis), peds lens; golden scfe; review in full",
+  "nursemaid": "presentation hub (data-entry hub; the pulled elbow and the injured elbow), peds lens; steps 5 to 8 greyed; treatment by cause inside step 4; review in full",
+  "growing-pains": "presentation hub (data-entry hub; leg pain in a child), peds lens; steps 5 to 8 greyed; treatment by cause inside step 4; review in full",
+  "bone-tumors": "presentation hub (data-entry hub; a bone lesion in a child), peds lens; steps 5 to 8 greyed; treatment by cause inside step 4; review in full"
+ },
+ "notes": {
+  "acc": [
+   "A hub may carry treatment no other live brief owns inside step 4 Workup, after the workup tree; steps 5 to 8 stay greyed (Jonathan 2026-10-18).",
+   "Where a board source (AnKing card, UWorld, NBME) and a guideline differ, the brief teaches the board answer and puts the guideline in an \"In practice:\" hover (runbook section 3): the hover is intended, not a finding.",
+   "septic-hip: the Kocher probabilities and the 38.5 C cutoff sit in a hover labeled as the 1999 derivation because no board source states them (lead call); judge the hover's accuracy, not its placement.",
+   "growing-pains: \"keep usual activity, no braces\" carries the unverified mark on purpose (no source opened that day states the advice; a bank item keys it).",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length).",
+   "A rejected finding in the adjudication file stays rejected unless the changed lines create a new problem; do not re-report it.",
+   "growing-pains: rhabdomyolysis \"admit\" in Treatment by cause now also carries the unverified mark on purpose (no source opened states admission; a bank item keys it; cuts.json C5)."
+  ],
+  "read": [
+   "The 5a workup zone names (First step, Targeted tests, Next step, Diagnostic test, Skip), the caption \"Diagnostic workup\", the caption \"Look-alikes, most tempting first\" and the pause point's \"The bait:\" label are site conventions.",
+   "Not to report: brief length or word count (2026-10-19 layers rule).",
+   "The clue table header written \"Next move\" renders as \"Next best step\" (display confirmed); captions carry a topic prefix before \"most tempting first\" (67 shipped); Pairs with lines are plain titles on every brief; the shipped crit card separates label and value with an en dash. None of these is a finding.",
+   "A rejected finding in the adjudication file stays rejected unless the changed lines create a new problem; do not re-report it."
+  ],
+  "flags": [
+   "line_sources.txt cuts each quote at 600 characters (a known packet limit); facts.json in the same folder holds every quote whole. Before reporting that a quote does not support a line, Grep facts.json for the fact id.",
+   "Word counts are not judged (2026-10-19 layers rule).",
+   "A rejected finding in the adjudication file stays rejected unless the changed lines create a new problem; do not re-report it."
+  ],
+  "display": [
+   "Drawer and Pairs with styling, tile tints and the question-tile format are the site layer (s148f and s148g, shipped), not this batch.",
+   "A hub's greyed steps 5 to 8 (\"Not used\") are the hub golden's pattern.",
+   "Known site-wide items carried to a site batch, not to report: 5a Targeted tests rows with an empty Result or Means cell on desktop; a ladder \"when\" followed by a capital letter.",
+   "Cross-brief calls of round 1 (batch file), not findings: a timeline or course tile masks each row name in study mode and leaves the course and extra lines visible (every shipped tile, the golden scfe included); only a visible line that names another masked answer is masked.",
+   "5a workup study mode is progressive recall: the clue stays visible, the order is masked and the band findings and meanings are blurred until revealed; a blurred Result line is the design, not a finding.",
+   "The NBME block shows \"Down to two\" with both finalists and masks the verdict on all 29 blocks; not a leak.",
+   "Tile bar colors (dark teal) are the shipped site palette (site list); the sticky step rail over content in a capture is the known capture artifact."
+  ]
+ },
+ "extra_judge": {
+  "acc": [
+   "Layers rule (Jonathan 2026-10-19): a fact a board item keys (the answer, or the clue that rules out a distractor) must stay visible, not only in a hover. Report a keyed fact found only in a hover.",
+   "Brief set rules (Jonathan 2026-10-20): every practice item carries three reasons (\"reasons: key | d1 | d2\" on its item line), each the choice's defining feature or the fact in the stem that rules it out; a distractor that is a differential row reuses that row's wording. Judge each reason for Step 2 truth on that stem and agreement with the body and the item's explanation.",
+   "Every age, cutoff, duration and interval against the cited quote and the board sources in facts.json (kind board first)."
+  ],
+  "read": [
+   "Prose rules (Jonathan 2026-10-19): captions, labels, zone names and cells use the term a clinician or textbook uses, never a euphemism or figurative phrasing; a list of tests is broken up, one test or one group per line.",
+   "Diagnoses with other names show them at first mention and in their differential row (ALIASES.json); abbreviations follow ABBREV.json.",
+   "Each item's three reasons stand alone under their choice after an answer and read as a parallel set."
+  ],
+  "flags": [
+   "The per-choice reasons on each item line count as lines: a reason stating a number, an age, or an absolute word (always, never, only, must) its item's claims and quotes do not support is a finding."
+  ],
+  "display": [
+   "Layers rule (Jonathan 2026-10-19): the visible layer must scan on the phone: short cells, nothing buried, no text squeezed into a narrow column (widen, never shorten). Judge each timeline and course tile (septic-hip and sjia Time course, growing-pains Time course, nursemaid After reduction, bone-tumors What each lesion does next) and the bone-tumors Site and age lookup table at phone width.",
+   "First step pairing (Jonathan 2026-10-20): in each First step band, each order heads only its own results (one row group per order); on phone the order and its results span the full width; in study mode the answers and only the answers are hidden."
+  ]
+ },
+ "steps": {
+  "septic-hip": "1, 2, 3, 4, 5, 6, 7 and Practice",
+  "limp": "header, 1, 3, 4 and Practice",
+  "sjia": "header, 1, 2, 3, 4, 5, 8 and Practice",
+  "nursemaid": "1, 3, 4 and Practice",
+  "growing-pains": "header, 1, 2, 3, 4 and Practice",
+  "bone-tumors": "header, 1, 2, 3, 4 and Practice"
+ },
+ "prior": {
+  "acc": {
+   "septic-hip": "repair/migration/spine/reviews/septic-hip_acc_r1.md",
+   "limp": "repair/migration/spine/reviews/limp_acc_r1.md",
+   "sjia": "repair/migration/spine/reviews/sjia_acc_r1.md",
+   "nursemaid": "repair/migration/spine/reviews/nursemaid_acc_r1.md",
+   "growing-pains": "repair/migration/spine/reviews/growing-pains_acc_r1.md",
+   "bone-tumors": "repair/migration/spine/reviews/bone-tumors_acc_r1.md"
+  },
+  "read": {
+   "septic-hip": "repair/migration/spine/reviews/septic-hip_read_r1.md",
+   "limp": "repair/migration/spine/reviews/limp_read_r1.md",
+   "sjia": "repair/migration/spine/reviews/sjia_read_r1.md",
+   "nursemaid": "repair/migration/spine/reviews/nursemaid_read_r1.md",
+   "growing-pains": "repair/migration/spine/reviews/growing-pains_read_r1.md",
+   "bone-tumors": "repair/migration/spine/reviews/bone-tumors_read_r1.md"
+  },
+  "flags": {
+   "septic-hip": "repair/migration/spine/reviews/septic-hip_flags_r1.md",
+   "limp": "repair/migration/spine/reviews/limp_flags_r1.md",
+   "sjia": "repair/migration/spine/reviews/sjia_flags_r1.md",
+   "nursemaid": "repair/migration/spine/reviews/nursemaid_flags_r1.md",
+   "growing-pains": "repair/migration/spine/reviews/growing-pains_flags_r1.md",
+   "bone-tumors": "repair/migration/spine/reviews/bone-tumors_flags_r1.md"
+  },
+  "display": {
+   "septic-hip": "repair/migration/spine/reviews/septic-hip_display_r1.md",
+   "limp": "repair/migration/spine/reviews/limp_display_r1.md",
+   "sjia": "repair/migration/spine/reviews/sjia_display_r1.md",
+   "nursemaid": "repair/migration/spine/reviews/nursemaid_display_r1.md",
+   "growing-pains": "repair/migration/spine/reviews/growing-pains_display_r1.md",
+   "bone-tumors": "repair/migration/spine/reviews/bone-tumors_display_r1.md"
+  }
+ },
+ "adjudication": {
+  "septic-hip": "repair/migration/peds/hip/septic-hip/spine/adj_s149.md",
+  "limp": "repair/migration/peds/hip/limp/spine/adj_s149.md",
+  "sjia": "repair/migration/peds/sjia/spine/adj_s149.md",
+  "nursemaid": "repair/migration/peds/nursemaid/spine/adj_s149.md",
+  "growing-pains": "repair/migration/peds/growing-pains/spine/adj_s149.md",
+  "bone-tumors": "repair/migration/peds/bone-tumors/spine/adj_s149.md"
+ }
+}

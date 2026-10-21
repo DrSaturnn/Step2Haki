@@ -11,7 +11,7 @@
   "wording-fix"
  ],
  "max_agents": 30,
- "max_calls": 240,
+ "max_calls": 300,
  "max_tokens": 15000000,
  "set_by": "Jonathan, s149 launch prompt: \"Budget for the whole batch: 30 agents, 240 API calls, 15M tokens; lead 180M tokens.\"",
  "previous": {
@@ -19,7 +19,7 @@
   "note": "2026-10-21 (s148h shipped 08:08, main bd9eba5); closed"
  },
  "opened": "2026-10-21 08:20 (launch)",
- "note": "2026-10-21 chat 6: lead figure raised 180M to 260M (Jonathan, \"Raise to 260M (Recommended)\"); reviewer budget unchanged. 2026-10-21 chat 9: lead figure raised 260M to 300M (Jonathan, \"Raise to 300M (Recommended)\").",
+ "note": "2026-10-21 chat 6: lead figure raised 180M to 260M (Jonathan, \"Raise to 260M (Recommended)\"); reviewer budget unchanged. 2026-10-21 chat 9: lead figure raised 260M to 300M (Jonathan, \"Raise to 300M (Recommended)\"). 2026-10-21 chat 9: reviewer calls 240 to 300 for S7 (Jonathan, \"Calls 240 to 300 (Recommended)\").",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -120,7 +120,7 @@
   },
   "s149": {
    "agents": 30,
-   "calls": 240,
+   "calls": 300,
    "tokens": 15000000,
    "lead_tokens": 300000000
   }
