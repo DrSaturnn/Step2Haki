@@ -15,8 +15,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Batch s149 open** (launched 2026-10-21 08:20; branch wip/s149): Phase 2, musculoskeletal B, pediatric. Briefs:
   septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors. Golden: scfe. Brief set rules of 2026-10-20 apply.
   Budget: 30 agents, 240 calls, 15M tokens; lead 260M (raised from 180M, chat 6). Digest lines and WAVE.json s149 written.
-- **Lead:** Claude, chat 7, until 2026-10-21 17:30; open for Codex (GPT-6.1 Sol) per CODEX_LEAD.md (digest 2026-10-21):
-  the next lead takes the lock by rewriting this line and pushing it alone before any work.
+- **Lead:** Claude, chat 8 (lock taken 2026-10-21 after 17:35; Codex never took the lock and ran no step, CODEX_AUDIT
+  item 1). Open again for Codex only when this line says so.
 - **Step:** S3 done (chat 7). S1 and S2 for all six (chats 2 to 7; calls per brief in repair/s149/S149.md); repair/s149
   holds the six 10_*_spine.json and 40_presentations.json (four hubs to Presentations, count 19 to 23); build s149 OK,
   gate PASS; verify --mech MECHANICAL PASS for all six; legib_audit phone 0, desktop only the known mid-reflow false
