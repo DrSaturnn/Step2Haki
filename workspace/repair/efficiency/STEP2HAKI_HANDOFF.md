@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-21, by the s149 lead chat 4 (sjia S1 and S2; nursemaid S1 started; stopped for context).
+Last updated: 2026-10-21, by the s149 lead chat 5 (nursemaid S1 and S2 done).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -15,16 +15,17 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Batch s149 open** (launched 2026-10-21 08:20; branch wip/s149): Phase 2, musculoskeletal B, pediatric. Briefs:
   septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors. Golden: scfe. Brief set rules of 2026-10-20 apply.
   Budget: 30 agents, 240 calls, 15M tokens; lead 180M. Digest line and WAVE.json s149 written.
-- **Step:** S1 and S2 in progress. septic-hip (chat 2), limp (chat 3) and sjia (chat 4) S1 and S2 done: boards.md,
-  facts, card dispositions, build, verify --mech MECHANICAL PASS each; calls in the batch file (repair/s149/S149.md,
-  "septic-hip S1 and S2", "limp S1 and S2", "sjia S1 and S2"). nursemaid S1 started in chat 4 (folder, live lines,
-  board index, cards.md, two MSD pages; what is still needed and the differences found are in S149.md "nursemaid S1
-  started"). Next: finish nursemaid S1 and S2 (hub; the limp build is the model), then growing-pains, bone-tumors;
-  then one 40_presentations.json for the four hubs and S3 (verify --mech and legib_audit for all six). Restore: clone
-  both repos on wip/s149 (private: clone -b wip/s149, cp -rn its local-only/; it holds the septic-hip, limp, sjia and
-  nursemaid spine folders, the rebuilt board index and the 2026-10-21 web cache).
-- **s149 spend:** reviewers 0 agents, 0 calls; lead chat 1 8.39M, chat 2 31.9M, chat 3 20.3M, chat 4 26.7M; batch
-  lead 87.3M of 180M. Start-up context 130,570 (chat 4). One brief per chat fits under the 350k mark.
+- **Step:** S1 and S2 in progress. septic-hip (chat 2), limp (chat 3), sjia (chat 4) and nursemaid (chats 4 and 5) S1
+  and S2 done: boards.md, facts, card dispositions, build, verify --mech MECHANICAL PASS each; calls in the batch file
+  (repair/s149/S149.md, "septic-hip S1 and S2", "limp S1 and S2", "sjia S1 and S2", "nursemaid S1 and S2"). Next:
+  growing-pains S1 and S2 (hub; the limp and nursemaid builds are the models), then bone-tumors; then one
+  40_presentations.json for the four hubs and S3 (verify --mech and legib_audit for all six). Restore: clone both repos
+  on wip/s149 (private: clone -b wip/s149, cp -rn its local-only/; it holds the septic-hip, limp, sjia and nursemaid
+  spine folders, the rebuilt board index and the 2026-10-21 web cache).
+- **s149 spend:** reviewers 0 agents, 0 calls; lead chat 1 8.39M, chat 2 31.9M, chat 3 20.3M, chat 4 26.7M, chat 5
+  24.1M; batch lead 111.4M of 180M. Start-up context 130,562 (chat 5). One brief per chat fits under the 350k mark. At
+  about 25M per chat, growing-pains, bone-tumors and S3 bring the lead near 165M before S4: the S3 restart message
+  names the lead figure needed for S4 to S9 (runbook section 6, budget).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json (and /root/.claude/agents) may be held by the permission check: ask Jonathan.
   The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default
