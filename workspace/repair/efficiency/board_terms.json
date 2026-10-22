@@ -155,6 +155,12 @@
   "WAGR",
   "Wilms tumor"
  ],
+ "bs-brachial-plexus": [
+  "brachial plexus",
+  "Erb palsy",
+  "Erb-Duchenne",
+  "Klumpke"
+ ],
  "bs-distal-rta": [
   "Bartter syndrome",
   "distal renal tubular acidosis",
@@ -186,6 +192,12 @@
   "urinary incontinence",
   "vesicovaginal fistula"
  ],
+ "bs-puncture-osteomyelitis": [
+  "osteomyelitis",
+  "Pseudomonas osteomyelitis",
+  "puncture wound",
+  "puncture wounds"
+ ],
  "bs-puv": [
   "bladder outlet obstruction",
   "hydronephrosis",
@@ -196,6 +208,11 @@
   "pulmonary hypoplasia",
   "urethral valves",
   "voiding cystourethrogram"
+ ],
+ "bs-torticollis": [
+  "craniosynostosis",
+  "plagiocephaly",
+  "torticollis"
  ],
  "cluster-b": [
   "antisocial personality",
@@ -390,6 +407,11 @@
   "SIGECAPS",
   "SSRI",
   "suicide risk"
+ ],
+ "myositis-ossificans": [
+  "muscle contusion",
+  "myositis ossificans",
+  "quadriceps contusion"
  ],
  "nephropathy": [
   "ACE inhibitor",
@@ -644,6 +666,11 @@
   "septic arthritis",
   "slipped capital",
   "transient synovitis"
+ ],
+ "scheuermann": [
+  "kyphosis",
+  "postural kyphosis",
+  "Scheuermann"
  ],
  "scrotum": [
   "appendix testis",

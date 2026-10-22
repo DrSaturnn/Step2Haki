@@ -14,7 +14,9 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **Batch:** s150 open, Phase 2 musculoskeletal C, pediatric: myositis-ossificans, scheuermann,
   bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden scfe; all five disease, peds lens.
-- **Step:** Launch complete; next S1 board evidence for each brief, then S2 and S3. No brief content changed yet.
+- **Step:** S1 complete (2026-10-22, chat 1): board index, complete card high-yield lines, source questions,
+  boards.md, live lines and 99 verified board quotes across five folders. Next S2 source-supported builds, then S3.
+  No brief content changed yet; card dispositions wait for final S2 claim ids. See repair/s150/S150.md S1.
 - **Budget/spend:** 25 reviewer agents, 220 calls, 10M tokens; lead 230M. Used: reviewers 0 agents, 0 calls, 0 tokens;
   lead unknown (Codex usage display unavailable; ledger_codex.csv). Never estimate silently.
 - **Lead:** Codex, since 2026-10-22 12:52 UTC, chat 1. Lock public bc5cd1288547, committed and pushed alone.
