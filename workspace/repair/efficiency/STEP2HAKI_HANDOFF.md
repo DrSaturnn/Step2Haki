@@ -17,13 +17,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   Budget: 30 agents, 240 calls, 15M tokens; lead 260M (raised from 180M, chat 6). Digest lines and WAVE.json s149 written.
 - **Lead:** Claude, chat 11, since 2026-10-21 22:20 (took the lock from chat 10; Codex never took the lock and ran no
   step, CODEX_AUDIT item 1). Open again for Codex only when this line says so.
-- **Step:** S7 done: all READY (verify_all, six of six). Round 3 (15 receipts) and a limp round 4 (read, display) after
-  the limp acc PASS-IF; condpass tool fix for item-reason replacements (repair/s149/S149.md "S7 follow-up rounds 3 and
-  4"). Next: S8 in a fresh chat: verify_all (three at a time), shots_all, sheets.py --approval, approval.py present s149,
-  the section 5 report. Restore: clone both repos on wip/s149 (private: clone -b wip/s149, cp -rn its local-only/);
-  hooks: install.sh and the /root/.claude mirror (ask Jonathan when held), then the no-model probe.
-- **s149 spend:** reviewers 24 of 30 agents, 221 of 300 calls, 10.09M of 15M; lead chats 1 to 9 247.5M, chat 10 14.1M;
-  batch lead 262.1M of 300M.
+- **Step:** S8 presented (chat 11): verify_all six READY; 46 approval sheets; approval.py present s149 (page
+  eb266519ba12); report sent 2026-10-21. Waiting for Jonathan's "ship" in chat 11 (the approval record lives in that
+  container). If chat 11 is gone, a fresh Claude chat restores the workspace, rebuilds, re-runs shots_all and sheets,
+  presents again and asks for "ship". Then S9 per the runbook.
+- **s149 spend:** reviewers 24 of 30 agents, 221 of 300 calls, 10.09M of 15M; lead chats 1 to 10 262.1M, chat 11 13.6M;
+  batch lead 275.7M of 300M.
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json (and /root/.claude/agents) may be held by the permission check: ask Jonathan.
   The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default
