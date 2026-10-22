@@ -16,9 +16,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   s149 checked in Chrome): septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors on the decision spine; the four
   hubs in Presentations (19 to 23). Record repair/s149/S149.md; OPEN_WORK line. WAVE.json s149 closed.
 - **s149 spend:** reviewers 24 of 30 agents, 221 of 300 calls, 10.09M of 15M; lead 280.9M of 300M (11 chats).
-- **Lead:** none; open for Codex (Jonathan 2026-10-22: Codex leads s150). Codex takes the lock per
-  repair/efficiency/CODEX_LEAD.md section 0 and launches per section 2 item 4 (creates wip/s150 in both repos). Ship
-  stays behind a Claude chat, which runs CODEX_AUDIT.md (now with the consistency comparison) before presenting.
+- **Lead:** Codex, since 2026-10-22 12:48 UTC, chat 1 (s150 launch authorized by Jonathan 2026-10-22).
+  Lead lock taken before batch work. Ship stays behind a Claude chat and CODEX_AUDIT.md.
 - **Owed:** Mac copies in Documents/Step2Haki (this file, index.html, axbx-repo.bundle) when the Mac is linked with
   that folder (chat 11: Documents/Step2Haki not linked, then the Mac went offline).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
