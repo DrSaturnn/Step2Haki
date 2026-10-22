@@ -1,8 +1,8 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s149",
- "open": false,
- "plan_step": "s149",
+ "id": "s150",
+ "open": true,
+ "plan_step": "s150",
  "roles": [
   "acc-review",
   "read-review",
@@ -10,16 +10,16 @@
   "flag-review",
   "wording-fix"
  ],
- "max_agents": 30,
- "max_calls": 300,
- "max_tokens": 15000000,
- "set_by": "Jonathan, s149 launch prompt: \"Budget for the whole batch: 30 agents, 240 API calls, 15M tokens; lead 180M tokens.\"",
+ "max_agents": 25,
+ "max_calls": 220,
+ "max_tokens": 10000000,
+ "set_by": "Jonathan, s150 launch prompt 2026-10-22",
  "previous": {
-  "id": "s148h",
-  "note": "2026-10-21 (s148h shipped 08:08, main bd9eba5); closed"
+  "id": "s149",
+  "note": "s149 closed after ship 2026-10-22; main 9b56c79, page eb266519ba12"
  },
- "opened": "2026-10-21 08:20 (launch)",
- "note": "2026-10-21 chat 6: lead figure raised 180M to 260M (Jonathan, \"Raise to 260M (Recommended)\"); reviewer budget unchanged. 2026-10-21 chat 9: lead figure raised 260M to 300M (Jonathan, \"Raise to 300M (Recommended)\"). 2026-10-21 chat 9: reviewer calls 240 to 300 for S7 (Jonathan, \"Calls 240 to 300 (Recommended)\"). 2026-10-22: s149 shipped (main 9b56c79, page eb266519ba12, version.json s149); wave closed.",
+ "opened": "2026-10-22 12:52 UTC",
+ "note": "Codex leads; independent Codex review lanes; stop at S8 for Claude audit and ship.",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -123,7 +123,13 @@
    "calls": 300,
    "tokens": 15000000,
    "lead_tokens": 300000000
+  },
+  "s150": {
+   "agents": 25,
+   "calls": 220,
+   "tokens": 10000000,
+   "lead_tokens": 230000000
   }
  },
- "max_lead_tokens": 300000000
+ "max_lead_tokens": 230000000
 }

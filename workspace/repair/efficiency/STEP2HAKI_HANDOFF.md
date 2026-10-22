@@ -12,21 +12,21 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **No batch open.** s149 shipped 2026-10-22 07:27 (Jonathan: "ship"; main 9b56c79, page eb266519ba12, version.json
-  s149 checked in Chrome): septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors on the decision spine; the four
-  hubs in Presentations (19 to 23). Record repair/s149/S149.md; OPEN_WORK line. WAVE.json s149 closed.
-- **s149 spend:** reviewers 24 of 30 agents, 221 of 300 calls, 10.09M of 15M; lead 280.9M of 300M (11 chats).
-- **Lead:** Codex, since 2026-10-22 12:48 UTC, chat 1 (s150 launch authorized by Jonathan 2026-10-22).
-  Lead lock taken before batch work. Ship stays behind a Claude chat and CODEX_AUDIT.md.
-- **Owed:** Mac copies in Documents/Step2Haki (this file, index.html, axbx-repo.bundle) when the Mac is linked with
-  that folder (chat 11: Documents/Step2Haki not linked, then the Mac went offline).
-- **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
-  mirror into /root/.claude/settings.json (and /root/.claude/agents) may be held by the permission check: ask Jonathan.
-  The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default
-  timeouts of 240000 ms (scratch wrapper: patch Browser.new_page and BrowserContext.new_page, run the tool with runpy).
-  Keep lane specs in repair/sNN/lanes/. A shallow clone of a wip branch needs its refspec added before git status
-  shows the upstream; fetch main with --depth 50 before checking the merge base. usage_ledger --context reads 0 in the
-  claude.ai harness (no start-up figure).
+- **Batch:** s150 open, Phase 2 musculoskeletal C, pediatric: myositis-ossificans, scheuermann,
+  bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden scfe; all five disease, peds lens.
+- **Step:** Launch complete; next S1 board evidence for each brief, then S2 and S3. No brief content changed yet.
+- **Budget/spend:** 25 reviewer agents, 220 calls, 10M tokens; lead 230M. Used: reviewers 0 agents, 0 calls, 0 tokens;
+  lead unknown (Codex usage display unavailable; ledger_codex.csv). Never estimate silently.
+- **Lead:** Codex, since 2026-10-22 12:52 UTC, chat 1. Lock public bc5cd1288547, committed and pushed alone.
+- **Branches:** wip/s150 in both repos. Local public /Users/jmontsfit/Documents/Step2Haki/s150-public;
+  private /Users/jmontsfit/Documents/Step2Haki/s150-evidence (selective checkout; contains claude mirrors and selected
+  local-only evidence). Sources restored only into gitignored workspace paths. Record repair/s150/S150.md.
+- **Resume:** current s149 disease builds are the code pattern (septic-hip and sjia); scfe structure and voice.
+  Create bs-brachial-plexus/spine from the live page. No hooks in Codex; manual budgets and clean checkpoints.
+  Required fresh-chat restart after S3 and S7. Codex stops at S8, writes repair/s150/REPORT.md;
+  Claude runs CODEX_AUDIT.md, re-presents, and ships only after Jonathan's approval.
+- **Owed:** s149 Mac catch-up (handoff, live index.html and repo bundle), retained until Claude's audit/ship.
+
 - **Carried:** From s149: growing-pains unverified marks (rhabdomyolysis "admit", "no braces"); q_bcc4 explanation no
   longer addresses "Restrict running" (preflight P3); lanes.py single-brief path wording; review_packet drawer_targets
   lists in-page anchors; tinted-theme contrast on site-wide elements (not a required mode). SITE_BODY_GLANCE item 3 unscheduled; legib_audit mid-reflow false failures (cross-check with
