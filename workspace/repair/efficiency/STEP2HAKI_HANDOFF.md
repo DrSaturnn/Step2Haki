@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-22, by Codex, s150 lead chat 1 (S3 checks complete; final checkpoint blocked by disk space).
+Last updated: 2026-10-22, by Codex, s150 lead chat 1 (S3 done; fresh chat starts S4).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -14,14 +14,15 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **Batch:** s150 open, Phase 2 musculoskeletal C, pediatric: myositis-ossificans, scheuermann,
   bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden scfe; all five disease, peds lens.
-- **Step:** S3 checks complete (2026-10-22, chat 1), but the final commit/push checkpoint is BLOCKED by local
-  disk space. Private git add fails with No space left on device (APFS reports about 120 MiB available). Do not start
-  S4 until final source changes and the private screenshots are committed and pushed. Tests: all five full --mech
-  pass; combined gate/render/vendor pass; legibility cleared with raw control capture flags retained and direct
-  computed/RGB evidence (repair/s150/AUDIT.md). No check or allowlist changed. All working files and accepted
-  screenshots are saved locally; 60 MiB of private audit evidence awaits staging. No Mac files were deleted.
-  Last pushed checkpoint public 1be52f0/private ff77547; verify current HEADs before continuing. Source limitations
-  and S4 file-only runtime notes remain in S150.md/private s150-support. Reviews/READY/accuracy approval: none.
+- **Step:** S3 done (2026-10-22, chat 1). Next: S4 in a fresh chat, with independent review lanes and packets.
+  All five full --mech checks pass; combined gate/render/vendor pass; legibility cleared with raw control capture
+  flags retained and direct computed/RGB evidence (repair/s150/AUDIT.md). No check or allowlist changed.
+  Final sources and audit evidence are committed and pushed: public build checkpoint a515fb1;
+  private ad552a5 (includes source checkpoint 04fcb9e). This State update follows in the public branch.
+  The disk-space interruption is resolved (6.9 GiB available at resume); no Mac files were deleted.
+  S4 must resolve residual live-only clinical provenance listed in S150.md before accuracy PASS/READY.
+  File-only reviewer runtime notes are private migration/spine/s150-support/S4_RUNTIME.md.
+  Reviews/READY/accuracy approval: none. Read S150.md and required per-brief records before launching S4.
 - **Budget/spend:** 25 reviewer agents, 220 calls, 10M tokens; lead 230M. Used: reviewers 0 agents, 0 calls, 0 tokens;
   lead unknown (Codex usage display unavailable; ledger_codex.csv). Never estimate silently.
 - **Lead:** Codex, since 2026-10-22 12:52 UTC, chat 1. Lock public bc5cd1288547, committed and pushed alone.
