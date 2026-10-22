@@ -25,7 +25,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   Reviews/READY/accuracy approval: none. Read S150.md and required per-brief records before launching S4.
 - **Budget/spend:** 25 reviewer agents, 220 calls, 10M tokens; lead 230M. Used: reviewers 0 agents, 0 calls, 0 tokens;
   lead unknown (Codex usage display unavailable; ledger_codex.csv). Never estimate silently.
-- **Lead:** Codex, since 2026-10-22 12:52 UTC, chat 1. Lock public bc5cd1288547, committed and pushed alone.
+- **Lead:** Codex, since 2026-10-22, chat 2 (S4 continuation). Original lock bc5cd1288547; continuation lock committed and pushed alone before review work.
 - **Branches:** wip/s150 in both repos. Local public /Users/jmontsfit/Documents/Step2Haki/s150-public;
   private /Users/jmontsfit/Documents/Step2Haki/s150-evidence (selective checkout; contains claude mirrors and selected
   local-only evidence). Sources restored only into gitignored workspace paths. Record repair/s150/S150.md.
