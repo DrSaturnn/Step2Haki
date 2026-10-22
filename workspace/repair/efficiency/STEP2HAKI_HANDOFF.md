@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-22, by Codex, s150 lead chat 1 (S2 complete; S3 next).
+Last updated: 2026-10-22, by Codex, s150 lead chat 1 (S3 in progress; all mechanical checks pass).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -14,11 +14,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **Batch:** s150 open, Phase 2 musculoskeletal C, pediatric: myositis-ossificans, scheuermann,
   bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden scfe; all five disease, peds lens.
-- **Step:** S2 complete (2026-10-22, chat 1). Five drafts and payloads built; all 32 item ids retained and
-  96 choice reasons added. 193 quote-checked facts, 489 claims; live-only provenance is explicitly listed in private
-  adj_s150.md and remains an independent accuracy-review focus. No READY claims or reviews. Next S3: full
-  verify --mech plus legib in sculpted/flat/study on phone/desktop; then the required fresh-chat restart for S4.
-  See repair/s150/S150.md S2, numbered calls 6-16, cuts and exact tail pairs. No shipping or page replacement.
+- **Step:** S3 in progress (2026-10-22, chat 1). All five full verify --mech checks pass. Phone inspection
+  found narrow timing strips; replaced them with full-width shipped lcw rows. Visual audits are still completing
+  desktop captures in light/dark, sculpted/flat/study; do not call S3 complete yet. Processes and final labels are
+  recorded in repair/s150/S150.md; no reviewers started, no READY or accuracy approval. Fresh-chat S4 follows S3.
+  Source limits are explicit in private adj_s150.md and the S3 batch notes. No shipping or live-page replacement.
 - **Budget/spend:** 25 reviewer agents, 220 calls, 10M tokens; lead 230M. Used: reviewers 0 agents, 0 calls, 0 tokens;
   lead unknown (Codex usage display unavailable; ledger_codex.csv). Never estimate silently.
 - **Lead:** Codex, since 2026-10-22 12:52 UTC, chat 1. Lock public bc5cd1288547, committed and pushed alone.
