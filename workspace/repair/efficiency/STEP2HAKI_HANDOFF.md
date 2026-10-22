@@ -15,8 +15,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Batch s149 open** (launched 2026-10-21 08:20; branch wip/s149): Phase 2, musculoskeletal B, pediatric. Briefs:
   septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors. Golden: scfe. Brief set rules of 2026-10-20 apply.
   Budget: 30 agents, 240 calls, 15M tokens; lead 260M (raised from 180M, chat 6). Digest lines and WAVE.json s149 written.
-- **Lead:** Claude, chat 10, since 2026-10-21 21:20, stopped at the S7 restart point (Codex never took the lock and ran
-  no step, CODEX_AUDIT item 1). Open again for Codex only when this line says so.
+- **Lead:** Claude, chat 11, since 2026-10-21 22:20 (took the lock from chat 10; Codex never took the lock and ran no
+  step, CODEX_AUDIT item 1). Open again for Codex only when this line says so.
 - **Step:** S7 done: all READY (verify_all, six of six). Round 3 (15 receipts) and a limp round 4 (read, display) after
   the limp acc PASS-IF; condpass tool fix for item-reason replacements (repair/s149/S149.md "S7 follow-up rounds 3 and
   4"). Next: S8 in a fresh chat: verify_all (three at a time), shots_all, sheets.py --approval, approval.py present s149,
