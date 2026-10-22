@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-22, by the s149 lead chat 11 (s149 shipped; no batch open).
+Last updated: 2026-10-22, by Codex, s150 lead chat 1 (S2 complete; S3 next).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -14,9 +14,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **Batch:** s150 open, Phase 2 musculoskeletal C, pediatric: myositis-ossificans, scheuermann,
   bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden scfe; all five disease, peds lens.
-- **Step:** S1 complete (2026-10-22, chat 1): board index, complete card high-yield lines, source questions,
-  boards.md, live lines and 99 verified board quotes across five folders. Next S2 source-supported builds, then S3.
-  No brief content changed yet; card dispositions wait for final S2 claim ids. See repair/s150/S150.md S1.
+- **Step:** S2 complete (2026-10-22, chat 1). Five drafts and payloads built; all 32 item ids retained and
+  96 choice reasons added. 193 quote-checked facts, 489 claims; live-only provenance is explicitly listed in private
+  adj_s150.md and remains an independent accuracy-review focus. No READY claims or reviews. Next S3: full
+  verify --mech plus legib in sculpted/flat/study on phone/desktop; then the required fresh-chat restart for S4.
+  See repair/s150/S150.md S2, numbered calls 6-16, cuts and exact tail pairs. No shipping or page replacement.
 - **Budget/spend:** 25 reviewer agents, 220 calls, 10M tokens; lead 230M. Used: reviewers 0 agents, 0 calls, 0 tokens;
   lead unknown (Codex usage display unavailable; ledger_codex.csv). Never estimate silently.
 - **Lead:** Codex, since 2026-10-22 12:52 UTC, chat 1. Lock public bc5cd1288547, committed and pushed alone.
@@ -24,7 +26,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   private /Users/jmontsfit/Documents/Step2Haki/s150-evidence (selective checkout; contains claude mirrors and selected
   local-only evidence). Sources restored only into gitignored workspace paths. Record repair/s150/S150.md.
 - **Resume:** current s149 disease builds are the code pattern (septic-hip and sjia); scfe structure and voice.
-  Create bs-brachial-plexus/spine from the live page. No hooks in Codex; manual budgets and clean checkpoints.
+  Brachial folder now exists, built from the live page. No hooks in Codex; manual budgets and clean checkpoints.
   Required fresh-chat restart after S3 and S7. Codex stops at S8, writes repair/s150/REPORT.md;
   Claude runs CODEX_AUDIT.md, re-presents, and ships only after Jonathan's approval.
 - **Owed:** s149 Mac catch-up (handoff, live index.html and repo bundle), retained until Claude's audit/ship.
