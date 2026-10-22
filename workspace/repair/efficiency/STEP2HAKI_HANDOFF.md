@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-22, by Codex, s150 lead chat 1 (S3 in progress; all mechanical checks pass).
+Last updated: 2026-10-22, by Codex, s150 lead chat 1 (S3 checks complete; final checkpoint blocked by disk space).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -14,11 +14,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **Batch:** s150 open, Phase 2 musculoskeletal C, pediatric: myositis-ossificans, scheuermann,
   bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden scfe; all five disease, peds lens.
-- **Step:** S3 in progress (2026-10-22, chat 1). All five full verify --mech checks pass. Phone inspection
-  found narrow timing strips; replaced them with full-width shipped lcw rows. Visual audits are still completing
-  desktop captures in light/dark, sculpted/flat/study; do not call S3 complete yet. Processes and final labels are
-  recorded in repair/s150/S150.md; no reviewers started, no READY or accuracy approval. Fresh-chat S4 follows S3.
-  Source limits are explicit in private adj_s150.md and the S3 batch notes. No shipping or live-page replacement.
+- **Step:** S3 checks complete (2026-10-22, chat 1), but the final commit/push checkpoint is BLOCKED by local
+  disk space. Private git add fails with No space left on device (APFS reports about 120 MiB available). Do not start
+  S4 until final source changes and the private screenshots are committed and pushed. Tests: all five full --mech
+  pass; combined gate/render/vendor pass; legibility cleared with raw control capture flags retained and direct
+  computed/RGB evidence (repair/s150/AUDIT.md). No check or allowlist changed. All working files and accepted
+  screenshots are saved locally; 60 MiB of private audit evidence awaits staging. No Mac files were deleted.
+  Last pushed checkpoint public 1be52f0/private ff77547; verify current HEADs before continuing. Source limitations
+  and S4 file-only runtime notes remain in S150.md/private s150-support. Reviews/READY/accuracy approval: none.
 - **Budget/spend:** 25 reviewer agents, 220 calls, 10M tokens; lead 230M. Used: reviewers 0 agents, 0 calls, 0 tokens;
   lead unknown (Codex usage display unavailable; ledger_codex.csv). Never estimate silently.
 - **Lead:** Codex, since 2026-10-22 12:52 UTC, chat 1. Lock public bc5cd1288547, committed and pushed alone.
