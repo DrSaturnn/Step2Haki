@@ -19,8 +19,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Lead:** none (no batch open). Next batch s150 is Codex's (Jonathan 2026-10-21: Codex takes over once s149 is
   complete, starting a fresh batch): Codex takes the lock per repair/efficiency/CODEX_LEAD.md section 0 at launch.
   Ship stays behind a Claude chat (CODEX_LEAD section 5; CODEX_AUDIT.md on return).
-- **Owed:** the Mac copy of this file in Documents/Step2Haki when that folder is linked (chat 11 had only
-  ~/Step2Haki and the private clones linked).
+- **Owed:** Mac copies in Documents/Step2Haki (this file, index.html, axbx-repo.bundle) when the Mac is linked with
+  that folder (chat 11: Documents/Step2Haki not linked, then the Mac went offline).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json (and /root/.claude/agents) may be held by the permission check: ask Jonathan.
   The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default
