@@ -175,5 +175,19 @@ try:
 finally:
     shutil.rmtree(d8, ignore_errors=True)
 
+# s149: item-reason replacements are written "d1: ..." in receipts but live label-free in data-d1-why
+li = '<li data-d1-why="Days after a cold; his limp began" data-d2-why="Fever &amp; malaise">x</li>'
+t9, ap9, pr9 = CP.undo(li, [(1, 'd1: Follows a cold, but his limp began', 'd1: Days after a cold; his limp began')], 'html')
+expect('s149: labeled reason undone in its attribute', ap9 == [1] and 'data-d1-why="Follows a cold, but his limp began"' in t9 and pr9 is None)
+t9, ap9, pr9 = CP.undo(li, [(2, 'd2: Fever and chills', 'd2: Fever & malaise')], 'html')
+expect('s149: labeled reason with an escaped ampersand', ap9 == [2] and 'Fever and chills' in t9)
+t9, ap9, pr9 = CP.undo(li, [(3, 'Follows a cold', 'd1: Days after a cold; his limp began')], 'html')
+expect('s149: label only on one side is not stripped', ap9 == [])
+t9, ap9, pr9 = CP.undo(li, [(4, 'd2: Follows a cold, but his limp began', 'd1: Days after a cold; his limp began')], 'html')
+expect('s149: mismatched labels are not stripped', ap9 == [])
+lj = json.dumps({'x': li})
+t9, ap9, pr9 = CP.undo(lj, [(5, 'd1: Follows a cold, but his limp began', 'd1: Days after a cold; his limp began')], 'json')
+expect('s149: labeled reason undone in json', ap9 == [5] and 'Follows a cold, but' in t9)
+
 print('test_condpass: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)

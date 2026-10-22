@@ -40,6 +40,7 @@ NEGATIONS = ('no', 'not', 'without', 'never', 'none', 'neither', 'nor', 'cannot'
 QUALIFIERS = ('first', 'second', 'then', 'before', 'after', 'initial', 'initially', 'last', 'only',
               'if', 'unless', 'except', 'until')
 NUM = re.compile(r'\d+(?:[.,]\d+)?')
+REASON = re.compile(r'^\s*(key|d1|d2)\s*:\s*', re.I)   # s149: item-reason labels in receipts
 
 
 def parse(txt):
@@ -188,7 +189,14 @@ def undo(text, reps, kind):
     applied = []
     for n, old, new in reps:
         hit = None
-        for fo_new, fo_old in zip(forms(new, kind), forms(old, kind)):
+        pairs = list(zip(forms(new, kind), forms(old, kind)))
+        m_new, m_old = REASON.match(new), REASON.match(old)
+        if m_new and m_old and m_new.group(1).lower() == m_old.group(1).lower():
+            # s149: an item reason quoted as "d1: ..." lives in data-d1-why without its label; quote-escaped there
+            bn, bo = new[m_new.end():], old[m_old.end():]
+            pairs += list(zip(forms(bn, kind), forms(bo, kind)))
+            pairs += [(H.escape(bn, quote=True), H.escape(bo, quote=True))]
+        for fo_new, fo_old in pairs:
             c = text.count(fo_new)
             if c > 1:
                 return text, applied, 'replacement %s is ambiguous (its new text occurs %d times)' % (n, c)

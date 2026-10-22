@@ -15,16 +15,15 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Batch s149 open** (launched 2026-10-21 08:20; branch wip/s149): Phase 2, musculoskeletal B, pediatric. Briefs:
   septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors. Golden: scfe. Brief set rules of 2026-10-20 apply.
   Budget: 30 agents, 240 calls, 15M tokens; lead 260M (raised from 180M, chat 6). Digest lines and WAVE.json s149 written.
-- **Lead:** Claude, chat 10, since 2026-10-21 21:20 (took the lock from chat 9; Codex never took the lock and ran no
-  step, CODEX_AUDIT item 1). Open again for Codex only when this line says so.
-- **Step:** S7 in progress (chat 9 stopped at context). Round 2 done (24 receipts; septic-hip read FAIL fixed, PASS-IF
-  replacements applied); bone-tumors READY; flags current on all six. Next: round 3 for acc, read and display on
-  septic-hip, limp, sjia, nursemaid, growing-pains, per repair/s149/S149.md "S7 follow-up round 2" (Next): shots of the
-  five, sheets, lanes_r3.json, 6 lanes, 109 calls; then the S7 restart point (all READY) and S8 in a fresh chat.
-  Restore: clone both repos on wip/s149 (private: clone -b wip/s149, cp -rn its local-only/); hooks: install.sh and the
-  /root/.claude mirror, then the no-model probe.
-- **s149 spend:** reviewers 17 of 30 agents, 177 of 300 calls (raised from 240, chat 9), 8.86M of 15M; lead chats 1 to 8
-  195.5M, chat 9 52.0M; batch lead 247.5M of 300M (raised from 260M, chat 9).
+- **Lead:** Claude, chat 10, since 2026-10-21 21:20, stopped at the S7 restart point (Codex never took the lock and ran
+  no step, CODEX_AUDIT item 1). Open again for Codex only when this line says so.
+- **Step:** S7 done: all READY (verify_all, six of six). Round 3 (15 receipts) and a limp round 4 (read, display) after
+  the limp acc PASS-IF; condpass tool fix for item-reason replacements (repair/s149/S149.md "S7 follow-up rounds 3 and
+  4"). Next: S8 in a fresh chat: verify_all (three at a time), shots_all, sheets.py --approval, approval.py present s149,
+  the section 5 report. Restore: clone both repos on wip/s149 (private: clone -b wip/s149, cp -rn its local-only/);
+  hooks: install.sh and the /root/.claude mirror (ask Jonathan when held), then the no-model probe.
+- **s149 spend:** reviewers 24 of 30 agents, 221 of 300 calls, 10.09M of 15M; lead chats 1 to 9 247.5M, chat 10 14.1M;
+  batch lead 262.1M of 300M.
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json (and /root/.claude/agents) may be held by the permission check: ask Jonathan.
   The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default
