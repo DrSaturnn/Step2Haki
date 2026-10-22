@@ -1,0 +1,105 @@
+{
+ "batch": "s150",
+ "plan_step": "s150",
+ "round": 1,
+ "context": "s150 converts five pediatric musculoskeletal disease briefs; golden SCFE, three reasons per item, bold bottom line, First step pairing. No reviewers may author the briefs.",
+ "out": "repair/efficiency/lanes/s150/r1",
+ "packets": "repair/migration/spine/packets/s150/r1",
+ "sheets": "local/sheets/s150-r1",
+ "types": {
+  "myositis-ossificans": "disease, pediatric lens",
+  "scheuermann": "disease, pediatric lens",
+  "bs-puncture-osteomyelitis": "disease, pediatric lens",
+  "bs-torticollis": "disease, pediatric lens",
+  "bs-brachial-plexus": "disease, pediatric lens"
+ },
+ "notes": {
+  "acc": [
+   "File-only runtime: use functions.exec to discover tools.mcp__node_repl__js (ALL_TOOLS name/description), then call it there. In its code: var fs = await import(\"node:fs/promises\"); nodeRepl.write(await fs.readFile(\"/absolute/named/file\",\"utf8\")); search by filtering the named file or parsing its JSON, returning relevant records. Write receipts with fs.writeFile. No subprocess, shell, web, connector, folder listing or files outside this lane. Each named file read/search/write counts one call, even batched; metadata discovery itself counts one tool call. You may inspect named images with tools.view_image via functions.exec and image(result.image_url). Record exact counted total in receipt final Checked and fine line. Read this instruction once, then write one brief receipt before opening the next brief. Receipt formatting is supplied in this INSTRUCTIONS.md; a separate RECEIPT_FORMAT.md mirrors it and need not be read.",
+   "Packet limits: line_sources.txt clips quotes at 600 characters, so search facts.json for full quote before declaring unsupported. Drawer targets can list in-page anchors (na-, lg-, bo-, *-bank) as missing; those are not broken brief links. Single-brief lane root wording is a known path typo; all brief-specific files live in its named subfolder. Live L facts provide inherited provenance, not independent medical confirmation; inspect residual live-only clinical support, especially myositis S008,S014-S015,S042-S044,S092-S093,S102-S103 and torticollis S028,S040; do not grant accuracy PASS while clinical support remains unresolved. NIH TBI source was fetched but is not assigned as broader neurogenic/therapy support."
+  ],
+  "read": [
+   "File-only runtime: use functions.exec to discover tools.mcp__node_repl__js (ALL_TOOLS name/description), then call it there. In its code: var fs = await import(\"node:fs/promises\"); nodeRepl.write(await fs.readFile(\"/absolute/named/file\",\"utf8\")); search by filtering the named file or parsing its JSON, returning relevant records. Write receipts with fs.writeFile. No subprocess, shell, web, connector, folder listing or files outside this lane. Each named file read/search/write counts one call, even batched; metadata discovery itself counts one tool call. You may inspect named images with tools.view_image via functions.exec and image(result.image_url). Record exact counted total in receipt final Checked and fine line. Read this instruction once, then write one brief receipt before opening the next brief. Receipt formatting is supplied in this INSTRUCTIONS.md; a separate RECEIPT_FORMAT.md mirrors it and need not be read.",
+   "Packet limits: line_sources.txt clips quotes at 600 characters, so search facts.json for full quote before declaring unsupported. Drawer targets can list in-page anchors (na-, lg-, bo-, *-bank) as missing; those are not broken brief links. Single-brief lane root wording is a known path typo; all brief-specific files live in its named subfolder. Live L facts provide inherited provenance, not independent medical confirmation; inspect residual live-only clinical support, especially myositis S008,S014-S015,S042-S044,S092-S093,S102-S103 and torticollis S028,S040; do not grant accuracy PASS while clinical support remains unresolved. NIH TBI source was fetched but is not assigned as broader neurogenic/therapy support."
+  ],
+  "display": [
+   "File-only runtime: use functions.exec to discover tools.mcp__node_repl__js (ALL_TOOLS name/description), then call it there. In its code: var fs = await import(\"node:fs/promises\"); nodeRepl.write(await fs.readFile(\"/absolute/named/file\",\"utf8\")); search by filtering the named file or parsing its JSON, returning relevant records. Write receipts with fs.writeFile. No subprocess, shell, web, connector, folder listing or files outside this lane. Each named file read/search/write counts one call, even batched; metadata discovery itself counts one tool call. You may inspect named images with tools.view_image via functions.exec and image(result.image_url). Record exact counted total in receipt final Checked and fine line. Read this instruction once, then write one brief receipt before opening the next brief. Receipt formatting is supplied in this INSTRUCTIONS.md; a separate RECEIPT_FORMAT.md mirrors it and need not be read.",
+   "Packet limits: line_sources.txt clips quotes at 600 characters, so search facts.json for full quote before declaring unsupported. Drawer targets can list in-page anchors (na-, lg-, bo-, *-bank) as missing; those are not broken brief links. Single-brief lane root wording is a known path typo; all brief-specific files live in its named subfolder. Live L facts provide inherited provenance, not independent medical confirmation; inspect residual live-only clinical support, especially myositis S008,S014-S015,S042-S044,S092-S093,S102-S103 and torticollis S028,S040; do not grant accuracy PASS while clinical support remains unresolved. NIH TBI source was fetched but is not assigned as broader neurogenic/therapy support.",
+   "Settled display calls: workup 5a is progressive recall (findings blurred until test is revealed). Timeline timing/course and extra lines stay visible; mask diagnosis names only except another masked answer. Both NBME finalists remain shown. Teal bars are shipped tile palette. Current chronology uses shipped lcw rows for full-width prose, not the five-column sp-tl helper. Red sheet bars/column breaks are packing artifacts. S3 lead already observed posterior-fossa diagnosis/pointer adjacency in torticollis; assess spacing, recording origin as lead observation rather than reviewer discovery."
+  ],
+  "flags": [
+   "File-only runtime: use functions.exec to discover tools.mcp__node_repl__js (ALL_TOOLS name/description), then call it there. In its code: var fs = await import(\"node:fs/promises\"); nodeRepl.write(await fs.readFile(\"/absolute/named/file\",\"utf8\")); search by filtering the named file or parsing its JSON, returning relevant records. Write receipts with fs.writeFile. No subprocess, shell, web, connector, folder listing or files outside this lane. Each named file read/search/write counts one call, even batched; metadata discovery itself counts one tool call. You may inspect named images with tools.view_image via functions.exec and image(result.image_url). Record exact counted total in receipt final Checked and fine line. Read this instruction once, then write one brief receipt before opening the next brief. Receipt formatting is supplied in this INSTRUCTIONS.md; a separate RECEIPT_FORMAT.md mirrors it and need not be read.",
+   "Packet limits: line_sources.txt clips quotes at 600 characters, so search facts.json for full quote before declaring unsupported. Drawer targets can list in-page anchors (na-, lg-, bo-, *-bank) as missing; those are not broken brief links. Single-brief lane root wording is a known path typo; all brief-specific files live in its named subfolder. Live L facts provide inherited provenance, not independent medical confirmation; inspect residual live-only clinical support, especially myositis S008,S014-S015,S042-S044,S092-S093,S102-S103 and torticollis S028,S040; do not grant accuracy PASS while clinical support remains unresolved. NIH TBI source was fetched but is not assigned as broader neurogenic/therapy support."
+  ]
+ },
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "myositis-ossificans",
+    "scheuermann",
+    "bs-puncture-osteomyelitis"
+   ]
+  },
+  {
+   "part": "acc",
+   "group": "B",
+   "briefs": [
+    "bs-torticollis",
+    "bs-brachial-plexus"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "myositis-ossificans",
+    "scheuermann",
+    "bs-puncture-osteomyelitis"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "B",
+   "briefs": [
+    "bs-torticollis",
+    "bs-brachial-plexus"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "A",
+   "briefs": [
+    "myositis-ossificans",
+    "scheuermann",
+    "bs-puncture-osteomyelitis"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "B",
+   "briefs": [
+    "bs-torticollis",
+    "bs-brachial-plexus"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "myositis-ossificans",
+    "scheuermann",
+    "bs-puncture-osteomyelitis"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "B",
+   "briefs": [
+    "bs-torticollis",
+    "bs-brachial-plexus"
+   ]
+  }
+ ]
+}
