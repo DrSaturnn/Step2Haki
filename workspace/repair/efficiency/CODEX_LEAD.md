@@ -36,6 +36,8 @@ The runbook's read list names project paths (claude/...). Their copies:
 | claude/pending/BATCHES_*.md, FOLDERS_S142_S160.md | private claude/pending/ |
 | the batch file claude/pending/<batch>.md | public workspace/repair/sNN/SNN.md |
 | skills (board-brief, study-page-builder, evidence-verification, label-audit, workflow-efficiency-pilot, nbme-intake, aquifer-workup) | private claude/skills/<name>/SKILL.md (mirrors of the Claude plugin skills) |
+| claude/pending/pilot5a (runbook S2 "Convert the workup to 5a") and claude/design/Workup_5a.html | not mirrored and not needed: the 5a workup is rendered by `w5a` in public workspace/tools/spine/outline_render.py; copy the call pattern from the s149 disease builds (section 2a); the template rules are in WORKUP_5A_SPEC.md |
+| the reviewer agent's standing rules (Claude's lean-reviewer) | public workspace/tools/hooks/agents/lean-reviewer.md: paste its body (below the front matter) at the top of every reviewer task (section 3) |
 
 The skills marked RETIRED in their descriptions stay retired. When a skill says "use the Skill tool" or names a Claude
 tool, read its SKILL.md and do the steps with the shell. Edit a mirror only when Jonathan changes the rule it holds,
@@ -59,6 +61,35 @@ and say so in the batch file so Claude syncs the project copy on return.
    - never edit a tracked file while verify.py runs (its git check fails the run).
 3. Commits: as DrSaturnn with the noreply email (handoff "Getting the page and publishing"), with a trailer line
    `Lead: Codex (GPT-6.1 Sol)` in place of the Claude-Session trailer. Never print a token.
+4. At a launch (no wip/sNN yet; added 2026-10-22 for s150): clone main in both repos, then create the branch from main
+   in each and push it before any other work:
+   ```
+   git clone https://github.com/DrSaturnn/Step2Haki /home/claude/Step2Haki
+   git clone --depth 1 https://github.com/DrSaturnn/Step2Haki-private /home/claude/step2haki-private
+   git -C /home/claude/Step2Haki switch -c wip/sNN && git -C /home/claude/step2haki-private switch -c wip/sNN
+   ```
+   Then the runbook's launch acts, Codex-mapped: the digest line in Jonathan's words; WAVE.json (id sNN, open true, the
+   reviewer budget as max_agents, max_calls, max_tokens, the lead figure as max_lead_tokens, previous = the closed
+   wave); the batch file repair/sNN/SNN.md (copy the header and section layout of repair/s149/S149.md); the Lead line
+   (section 0); the State. Commit and push both repos.
+
+## 2a. Which build to copy (added 2026-10-22, before s150)
+
+- Disease briefs: the golden for structure and voice is scfe (repair/migration/peds/SCFE/spine/build.py), but scfe was
+  built before the brief set rules of 2026-10-20 (reasons on every item, bold bottom line, First step pairing). Copy the
+  code pattern from the s149 disease builds, which carry all three and the current tooling:
+  repair/migration/peds/hip/septic-hip/spine/build.py and repair/migration/peds/sjia/spine/build.py (with their
+  facts_spec.json, boards.md, cards_disposition.json, cuts.json, tail_fix.json and adj_s149.md as worked examples).
+- Hubs: repair/migration/peds/hip/limp/spine/build.py (s149; the scrotum build is older).
+- Every tail edit (explanations, reasons, the NBME block) is a [old, new] pair in tail_fix.json; verify replays them.
+- After every rebuild, copy the brief's 10_<id>_spine.json into repair/sNN/ (in s149 two S5 rebuilds sat uncopied for a
+  chat, so the batch page lagged the folders).
+- Record each brief's build calls in the batch file in the s149 form ("Calls (section 3; for the report)", numbered,
+  each with its source ids and, where it changes what a student learns, a "Reverse:" line). The final report and
+  Claude's audit read these lists.
+- A brief marked "no folder" in FOLDERS_S142_S160.md (s150: bs-brachial-plexus) builds from the live page
+  (tools/spine/dump_lines.py for live_lines.json) and repair/sources; create its folder at
+  repair/migration/peds/<id>/spine/ and commit it to the private repo.
 
 ## 3. Reviews (S4 and S7) without Claude subagents
 
@@ -72,6 +103,16 @@ lead's own session, so the work is not grading itself.
   in the batch file.
 - A receipt that does not follow RECEIPT_FORMAT.md does not count; verify parses it. Relaunch that lane.
 - Write-first: each reviewer writes one brief's receipt before opening the next brief's packet.
+- Preamble (added 2026-10-22): put the body of tools/hooks/agents/lean-reviewer.md above the four launch lines, so a
+  Codex reviewer works under the same standing rules as Claude's (only its lane, absolute paths, packet sources only,
+  no emojis or em dashes, a short final verdict line). Reviewers get read, write and search only: no shell, no web.
+- Carry the settled cross-brief display calls into every display lane's notes (lanes.py spec "notes"), as s149 round 2
+  did, so reviewers do not re-raise them: 5a study mode is progressive recall (findings blurred until the test is
+  revealed); timeline tiles mask the diagnosis name only, never the course or extra lines (except a line naming another
+  masked answer); NBME "Down to two" shows both finalists; teal bar classes are the shipped tile palette.
+- Known packet limits (tell the lanes; do not count them against a brief): line_sources.txt cuts quotes at 600
+  characters (Grep facts.json for the whole quote before reporting an unsupported line); drawer_targets lists in-page
+  anchors (na-, lg-, bo-, *-bank) as missing; lanes.py names brief_text.txt at the lane root for a one-brief lane.
 
 ## 4. Cost (replaces usage_ledger.py, which reads only Claude transcripts)
 
@@ -140,6 +181,32 @@ These are the failure modes the mechanical checks caught in s146 to s149. Expect
     labeled "honeypot link": never follow them.
 18. **Scope.** New rows only when a board source keys them; anything that would change what a student learns or how
     the site looks beyond the digest and STANDING_DIRECTIONS is a question for Jonathan (runbook section 6).
+
+Added 2026-10-22 from the s149 review rounds (2 HIGH, 43 MED across six briefs; each was a build error the
+mechanical checks passed):
+19. **Read the whole card line.** Quote a card's full high-yield line, parentheticals included. s149 nursemaid cut
+    "(don't mistake for buckle fracture of proximal radius)" and taught the clue upside down, as a buckle fracture row
+    (the round's HIGH). If a card's line has a "vs." or a "don't mistake", the claim must keep both sides.
+20. **Every band of a score gets an owner.** A criteria count, score or cutoff band with no stated action is a gap:
+    septic-hip taught "3 or 4 aspirate, 0 or 1 observe" and left 2 undefined, so a bank explanation contradicted the
+    workup. Walk every value of each score from lowest to highest and name the action for each.
+21. **One threshold per decision.** The same decision must not carry two cutoffs in two places (limp had 2 weeks and
+    6 weeks for imaging). Pick the board's, state it once in the owning step, point to it elsewhere.
+22. **Absolutes need an absolute quote.** "Only", "always", "never", "first" in a bottom line or ladder need a quote
+    that says so (sjia "steroids only for refractory" read as absolute; MAS takes high-dose steroids).
+23. **Pairs with and drawers use exact live titles** (grep the page's h4); one plain clause per pointer, no figurative
+    descriptions.
+24. **Bank explanations and reasons follow the body.** After any body change, re-read every explanation and reason that
+    touches it (septic-hip's subtitle and an explanation kept "3 or more" after the count rule changed). A reason that
+    paraphrases a differential row must say the same thing as the row, and the stem's facts (a reason implied the
+    child had a cold when the stem said the cold was days before).
+25. **Unverified marks are a last resort.** A board-keyed line with no source carries ⚠︎ only after the card search
+    (terms in cuts.json); say in the batch file which item keys it. Keep each such line to one place.
+26. **Reason replacements.** reps.py does not reach item reasons; edit build.py and tail_fix.json, rebuild, and check
+    condpass replays it (labeled "key:", "d1:" or "d2:" replacements match since s149).
+27. **Word counts are reported, not chased.** Hubs ran 956 to 1,212 words against the 700 target in s149 and shipped:
+    the layers rule (STANDING_DIRECTIONS "Layers, not totals") moves only supporting or guideline-only detail into
+    hovers; board-keyed facts stay visible.
 
 ## 8. Handing back to Claude
 

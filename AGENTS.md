@@ -14,6 +14,8 @@ Before anything else, read in this order:
 Restart line (Jonathan pastes it to continue an open batch):
 `Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.`
 For Codex it means: take the lock per CODEX_LEAD.md section 0, then follow the runbook from the State's step.
+A launch prompt (a new batch id) means: CODEX_LEAD.md section 2 item 4 (create wip/sNN in both repos), then section 2a
+(which build to copy) and section 7 (failure modes, read before S1).
 
 Hard rules, always:
 - Accuracy over speed. Every fact comes from a board source (NBME, UWorld, AnKing) or a primary source fetched that day
