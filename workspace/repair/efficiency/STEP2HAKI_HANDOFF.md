@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-21, by the s149 lead chat 7 (S3 done; S4 next; Codex lead files written).
+Last updated: 2026-10-22, by the s149 lead chat 11 (s149 shipped; no batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,17 +12,15 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch s149 open** (launched 2026-10-21 08:20; branch wip/s149): Phase 2, musculoskeletal B, pediatric. Briefs:
-  septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors. Golden: scfe. Brief set rules of 2026-10-20 apply.
-  Budget: 30 agents, 240 calls, 15M tokens; lead 260M (raised from 180M, chat 6). Digest lines and WAVE.json s149 written.
-- **Lead:** Claude, chat 11, since 2026-10-21 22:20 (took the lock from chat 10; Codex never took the lock and ran no
-  step, CODEX_AUDIT item 1). Open again for Codex only when this line says so.
-- **Step:** S8 presented (chat 11): verify_all six READY; 46 approval sheets; approval.py present s149 (page
-  eb266519ba12); report sent 2026-10-21. Waiting for Jonathan's "ship" in chat 11 (the approval record lives in that
-  container). If chat 11 is gone, a fresh Claude chat restores the workspace, rebuilds, re-runs shots_all and sheets,
-  presents again and asks for "ship". Then S9 per the runbook.
-- **s149 spend:** reviewers 24 of 30 agents, 221 of 300 calls, 10.09M of 15M; lead chats 1 to 10 262.1M, chat 11 13.6M;
-  batch lead 275.7M of 300M.
+- **No batch open.** s149 shipped 2026-10-22 07:27 (Jonathan: "ship"; main 9b56c79, page eb266519ba12, version.json
+  s149 checked in Chrome): septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors on the decision spine; the four
+  hubs in Presentations (19 to 23). Record repair/s149/S149.md; OPEN_WORK line. WAVE.json s149 closed.
+- **s149 spend:** reviewers 24 of 30 agents, 221 of 300 calls, 10.09M of 15M; lead 280.9M of 300M (11 chats).
+- **Lead:** none (no batch open). Next batch s150 is Codex's (Jonathan 2026-10-21: Codex takes over once s149 is
+  complete, starting a fresh batch): Codex takes the lock per repair/efficiency/CODEX_LEAD.md section 0 at launch.
+  Ship stays behind a Claude chat (CODEX_LEAD section 5; CODEX_AUDIT.md on return).
+- **Owed:** the Mac copy of this file in Documents/Step2Haki when that folder is linked (chat 11 had only
+  ~/Step2Haki and the private clones linked).
 - **Session start notes:** install.sh writes /home/claude/.claude/settings.json, which this harness does not read; the
   mirror into /root/.claude/settings.json (and /root/.claude/agents) may be held by the permission check: ask Jonathan.
   The approval hook must be live before "ship". On a two-core container, legib_audit and shots need Playwright default
@@ -30,7 +28,9 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   Keep lane specs in repair/sNN/lanes/. A shallow clone of a wip branch needs its refspec added before git status
   shows the upstream; fetch main with --depth 50 before checking the merge base. usage_ledger --context reads 0 in the
   claude.ai harness (no start-up figure).
-- **Carried:** SITE_BODY_GLANCE item 3 unscheduled; legib_audit mid-reflow false failures (cross-check with
+- **Carried:** From s149: growing-pains unverified marks (rhabdomyolysis "admit", "no braces"); q_bcc4 explanation no
+  longer addresses "Restrict running" (preflight P3); lanes.py single-brief path wording; review_packet drawer_targets
+  lists in-page anchors; tinted-theme contrast on site-wide elements (not a required mode). SITE_BODY_GLANCE item 3 unscheduled; legib_audit mid-reflow false failures (cross-check with
   repair/s148b/contrast_computed.py; tinted theme repair/s148f/tinted_pixels.py); public wip/s147, wip/s148f, wip/s148e
   and wip/s148h branches; stray Mac bundle; mdd duration-window timeline offered; deferred LOWs (sz-psychosocial
   nonadherence wording, psychosis-duration "non-bizarre"); ae20 answer text at the next antipsych-effects intake;
@@ -48,11 +48,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ## Next launch prompt (paste into a fresh chat)
 
 ```
-Step2Haki: launch batch s149 (Phase 2, musculoskeletal B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors. Golden: scfe. Brief set rules of 2026-10-20 apply (three reasons per item, bold bottom line, First step pairing). Budget for the whole batch: 30 agents, 240 API calls, 15M tokens; lead 180M tokens. Method: s148 with the efficiency patch.
+Step2Haki: launch batch s150 (Phase 2, musculoskeletal C, pediatric) per claude/BATCH_RUNBOOK.md, Codex leading per repair/efficiency/CODEX_LEAD.md. Briefs: myositis-ossificans, scheuermann, bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden: scfe. Brief set rules of 2026-10-20 apply (three reasons per item, bold bottom line, First step pairing). Budget for the whole batch: 25 agents, 220 API calls, 10M tokens; lead 230M tokens. Method: s148 with the efficiency patch; Codex stops at S8 and a Claude chat audits and ships.
 ```
 
-After s149: BATCHES_S141_S150.md's "s149" (musculoskeletal C, pediatric) is next in the plan; its batch number is set at
-its launch (the plan's numbers shifted by one after s147).
+Budget basis (s149 measured): reviewers about 4 agents, 37 calls, 1.7M tokens per brief; lead about 47M per brief.
+After s150: the plan's remaining 107 unconverted briefs (BATCHES_S151_S160.md, private repo); its batch numbers
+shift by one.
 
 ## After s141
 
