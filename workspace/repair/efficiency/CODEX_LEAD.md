@@ -34,8 +34,15 @@ The runbook's read list names project paths (claude/...). Their copies:
 | claude/SPINE_SPEC.md | private claude/SPINE_SPEC.md (mirror) |
 | claude/pending/BRIEF_AMEND_LIST.md | private claude/pending/BRIEF_AMEND_LIST.md (mirror) |
 | claude/pending/BATCHES_*.md, FOLDERS_S142_S160.md | private claude/pending/ |
+| claude/pending/POST_SHIP_R3.md | private claude/pending/POST_SHIP_R3.md (mirror; conditional PASS rules) |
+| claude/design/Workup_5a.html | private claude/design/Workup_5a.html (mirror; the visual 5a template) |
+| claude/pending/SITE_*.md, SHIP_ORDER_PSYCH.md | private claude/pending/ |
 | the batch file claude/pending/<batch>.md | public workspace/repair/sNN/SNN.md |
 | skills (board-brief, study-page-builder, evidence-verification, label-audit, workflow-efficiency-pilot, nbme-intake, aquifer-workup) | private claude/skills/<name>/SKILL.md (mirrors of the Claude plugin skills) |
+
+Not mirrored, because a batch does not need them: the pilot5a scripts (the live 5a renderer is w5a in
+tools/spine/outline_render.py), past batch records S134, S136 and S136_RECORD (their outcomes are in the digest,
+STANDING_DIRECTIONS and OPEN_WORK; S137 is in the public repo at repair/s137/), and the merge-era and archive docs.
 
 The skills marked RETIRED in their descriptions stay retired. When a skill says "use the Skill tool" or names a Claude
 tool, read its SKILL.md and do the steps with the shell. Edit a mirror only when Jonathan changes the rule it holds,
