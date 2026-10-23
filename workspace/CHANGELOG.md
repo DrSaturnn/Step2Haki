@@ -2,6 +2,24 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-23 s150: Five pediatric musculoskeletal briefs on the decision spine, audited and reviewed
+
+```
+Page: 180 briefs, 2182 items -> 180 briefs, 2182 items
+Briefs changed (5):
+  - myositis-ossificans (Muscle Contusion and Myositis Ossificans): items edited (q_07ecd53e7f8003f1e0ee, q_178b5428ce1554dfa17d, q_8e6c3c2ffa8758a7910e, q_c153950959465fdfad77, q_d1227a8f9f6d51288261, q_7d00ae33f0525f3b9f24, q_c1e9f75aa54256a592b7); versions bumped (q_8e6c3c2ffa8758a7910e v2->v3); attrs set (brief class,data-entry,data-lens,data-spine; q_07ecd53e7f8003f1e0ee data-d1-why,data-d2-why,data-key-why; q_178b5428ce1554dfa17d data-d1-why,data-d2-why,data-key-why; q_8e6c3c2ffa8758a7910e data-d1-why,data-d2-why,data-key-id,data-key-why; q_65ef142520e15e1ea279 data-d1-why,data-d2-why,data-key-why; q_c153950959465fdfad77 data-d1-why,data-d2-why,data-key-why; q_d1227a8f9f6d51288261 data-d1-why,data-d2-why,data-key-why; q_7d00ae33f0525f3b9f24 data-d1-why,data-d2-why,data-key-why; q_c1e9f75aa54256a592b7 data-d1-why,data-d2-why,data-key-why); prose edited (+9777 chars)
+  - scheuermann (Adolescent Kyphosis): items edited (q_39e91d80297b5c47a073, q_89c1da7227f55645a440, q_34ce385549f65801b20e, q_23ffc45b0af9a32bb6c0, q_835be697ea175939aede); attrs set (brief class,data-entry,data-lens,data-spine; q_39e91d80297b5c47a073 data-d1-why,data-d2-why,data-key-why; q_89c1da7227f55645a440 data-d1-why,data-d2-why,data-key-why; q_34ce385549f65801b20e data-d1-why,data-d2-why,data-key-why; q_23ffc45b0af9a32bb6c0 data-d1-why,data-d2-why,data-key-why; q_835be697ea175939aede data-d1-why,data-d2-why,data-key-why); prose edited (+9547 chars)
+  - bs-puncture-osteomyelitis (Foot Puncture Wounds and Osteomyelitis): items edited (q_de2e508dab3159711357, q_704d96de81771c775d10); versions bumped (q_de2e508dab3159711357 v1->v2); attrs set (brief class,data-entry,data-lens,data-spine; q_de2e508dab3159711357 data-d1-why,data-d2-why,data-key-why; q_704d96de81771c775d10 data-d1-why,data-d2-why,data-key-why; q_7ce0ba2045a93f935d69 data-d1-why,data-d2-why,data-key-why; q_d5e0eba54097f71a83a0 data-d1-why,data-d2-why,data-key-why; q_9bee21d9322103ff15d3 data-d1-why,data-d2-why,data-key-why); prose edited (+8947 chars)
+  - bs-torticollis (Torticollis and Plagiocephaly in an Infant): items edited (q_dcee52bc4c4f56a092a9, q_aec0474cacb25d25a252, q_fa278e2e3e52501580b1, q_1877179a99655cb584b4); attrs set (brief class,data-entry,data-lens,data-spine; q_2785e273f637f0e7cd0b data-d1-why,data-d2-why,data-key-why; q_69f93af9bf4857c7ab54 data-d1-why,data-d2-why,data-key-why; q_2ddf479cfa3b55f88f4a data-d1-why,data-d2-why,data-key-why; q_dcee52bc4c4f56a092a9 data-d1-why,data-d2-why,data-key-why; q_aec0474cacb25d25a252 data-d1-why,data-d2-why,data-key-why; q_fa278e2e3e52501580b1 data-d1-why,data-d2-why,data-key-why; q_d667351ae9a15bde8a37 data-d1-why,data-d2-why,data-key-why; q_1877179a99655cb584b4 data-d1-why,data-d2-why,data-key-why); prose edited (+10370 chars)
+  - bs-brachial-plexus (Brachial Plexus Injury at Birth): items edited (q_5c7410c2aba481102b30); versions bumped (q_5c7410c2aba481102b30 v1->v2); attrs set (brief class,data-entry,data-lens,data-spine; q_5c7410c2aba481102b30 data-d1-why,data-d2-why,data-key-why,data-origin-src,data-src; q_a2c94fb74bd2132d0f78 data-d1-why,data-d2-why,data-key-why; q_0b3955e4f3e485961792 data-d1-why,data-d2-why,data-key-why; q_c2aa96ee2992585154ed data-d1-why,data-d2-why,data-key-why; q_6c34d18211ae7b1abe80 data-d1-why,data-d2-why,data-key-why; q_ebae8079dfd8ebc8d733 data-d1-why,data-d2-why,data-key-why); prose edited (+13317 chars)
+Other page changes (nav, headers, scripts): +1195 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 180 briefs, 2182 items (301 with reasons), 22 scripts, 39 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 180 | bankwraps 180 | mcq 2182 (reasons 301) (axCheck 2182, reveal-only 0) | malformed 0 | crit gridded 147/148 | vignette gridded 64/64 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.013%)
+```
+
 ## 2026-10-22 s149: pediatric musculoskeletal B: septic-hip, limp, sjia, nursemaid, growing-pains, bone-tumors on the decision spine
 
 ```
