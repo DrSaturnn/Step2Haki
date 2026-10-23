@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-22, by Codex, s150 lead chat 3 (S8 presented; Claude audit and approval pending).
+Last updated: 2026-10-23, by Codex, s150 lead chat 4 (Mac checks complete; local presentation registered).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -14,28 +14,30 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **Batch:** s150 open, Phase 2 musculoskeletal C, pediatric: myositis-ossificans, scheuermann,
   bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden scfe; all five disease, peds lens.
-- **Step:** S8 done; audited by Claude (2026-10-22, S150.md "Codex audit"; report repair/s150/audit/REPORT_AUDIT.md).
-  All five READY; final page sha256 1b2c138e1bc5. Jonathan 2026-10-23: Codex ships. Next (Codex, on the Mac, per
-  CODEX_LEAD.md section 5): take the lock; restore local-only (cp -rn; the 34 approval sheets are in
-  local/sheets/s150-approval); main has not moved since the branch (no merge needed; check again); rebuild s150 and
-  confirm the page sha 1b2c138e1bc5; skip the S8 audit task (Claude's audit stands); approval.py present s150 with the
-  34 sheets; send Jonathan REPORT_AUDIT.md and the sheets; on his plain "ship", relay it and run
-  AX_LEAD=codex tools/ship.sh s150; then S9. Claude's own presentation in its container is void.
+- **Step:** S8 audited by Claude; Mac release preparation complete. Final rebuilt page exactly matches the
+  audited page SHA-256 1b2c138e1bc5b54094c8fdbd25ce4ca3c6f9aac06df4486e24c5d38436fdc6da.
+  Fresh full verify_all: all five READY. Gate 39 PASS, render PASS, vendor PASS; 28 previously answered
+  preflight advisories. Lint now reports 24 advisories (3/3/9/4/5); brachial S112's number and hedge flags
+  are answered in Claude's audit notes. No new clinical or display edits. All 34 audited sheets restored,
+  hash-matched and image-verified; the lead inspected all 20 phone/phone-study sheets. Claude's audit stands.
+  approval.py present registered s150 on this Mac with the same 34 sheets and exact audited page.
+  Jonathan: "its already aproved no need to re report it". No report repeated. The local approval recorder
+  has no approval yet; it requires his plain "ship" in this chat. No prior message was relayed and no
+  approval record was created by hand. Nothing shipped.
 - **Budget/spend:** caps 26 agents, 405 calls, 10M tokens. Codex 20 agents, 289 calls (tokens unknown); Claude 6
   agents, 73 calls, 2.70M tokens. Batch 26 of 26 agents, 362 of 405 calls. Claude lead 44.1M (ledger_lead.csv).
 - **Lead:** Codex, since 2026-10-23 00:50 EDT, chat 4 (audited s150 release on the Mac). Claude audit stands; no new content work.
 - **Branches:** wip/s150 in both repos. Local public /Users/jmontsfit/Documents/Step2Haki/s150-public;
   private /Users/jmontsfit/Documents/Step2Haki/s150-evidence (selective checkout; contains claude mirrors and selected
   local-only evidence). Sources restored only into gitignored workspace paths. Record repair/s150/S150.md.
-- **Next:** Claude takes the lock, runs repair/efficiency/CODEX_AUDIT.md (including author-consistency review),
-  resolves the S8 LOW, obtains any additional accuracy-review budget, re-presents with approval.py present,
-  and ships only after Jonathan approves in that Claude chat. The 11 remaining reviewer calls cannot fit
-  all five required accuracy re-reviews. REPORT.md proposes 50 additional calls (max 350), with no increase
-  to the agent cap; this is not approved. No Claude approval-hook record was created by Codex.
-- **Resume:** current s149 disease builds are the code pattern (septic-hip and sjia); scfe structure and voice.
-  Brachial folder now exists, built from the live page. No hooks in Codex; manual budgets and clean checkpoints.
-  Required fresh-chat restart after S3 and S7. Codex stops at S8, writes repair/s150/REPORT.md;
-  Claude runs CODEX_AUDIT.md, re-presents, and ships only after Jonathan's approval.
+- **Next:** On Jonathan's plain "ship", relay that latest message verbatim to approval.py hook, then
+  AX_LEAD=codex tools/ship.sh s150 using the existing evidence runtime, push main and wip/s150, confirm the
+  deploy, and finish S9. Both origin/main branches were fetched and are ancestors; no merge was needed.
+- **Resume:** Existing runtime /private/tmp/step2haki-s150-python supplies evidence dependencies (default
+  python3 lacks requests). For ship.sh, put a python3 wrapper to that runtime first on PATH. Current checks
+  and the initial environment-only failure are preserved privately in local-only/local/checks/s150-release/.
+  No fresh audit task, review agents, content edits or screenshot regeneration are required for this
+  identical audited page. Claude's earlier container presentation is void; the Mac pending record is current.
 - **Owed:** s149 Mac catch-up (handoff, live index.html and repo bundle), retained until Claude's audit/ship.
 
 - **Carried:** From s149: growing-pains unverified marks (rhabdomyolysis "admit", "no braces"); q_bcc4 explanation no
