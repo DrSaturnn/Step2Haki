@@ -1,0 +1,42 @@
+{
+ "batch": "s150",
+ "plan_step": "s150",
+ "round": 2,
+ "context": "Claude audit of Codex-led batch s150, follow-up round after the audit fixes (myositis, puncture, brachial; pediatric musculoskeletal disease briefs, golden SCFE)",
+ "types": {
+  "myositis-ossificans": "disease, pediatric lens",
+  "bs-puncture-osteomyelitis": "disease, pediatric lens",
+  "bs-brachial-plexus": "disease, pediatric lens"
+ },
+ "adjudication": {
+  "myositis-ossificans": "repair/s150/audit/adj_myositis-ossificans.md",
+  "bs-puncture-osteomyelitis": "repair/s150/audit/adj_bs-puncture-osteomyelitis.md",
+  "bs-brachial-plexus": "repair/s150/audit/adj_bs-brachial-plexus.md"
+ },
+ "out": "repair/efficiency/lanes/s150/ca2a",
+ "packets": "repair/migration/spine/packets/s150/ca2-acc",
+ "sheets": "local/sheets/s150-ca2",
+ "prior": {
+  "acc": {
+   "myositis-ossificans": "repair/migration/spine/reviews/myositis-ossificans_acc_r4.md",
+   "bs-puncture-osteomyelitis": "repair/migration/spine/reviews/bs-puncture-osteomyelitis_acc_r3.md",
+   "bs-brachial-plexus": "repair/migration/spine/reviews/bs-brachial-plexus_acc_r3.md"
+  }
+ },
+ "notes": {
+  "acc": [
+   "Facts with ids L## are the old live brief's lines: valid for content carried unchanged; a changed clinical claim cited only to L facts is a finding unless a board or reference fact also states it."
+  ]
+ },
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "myositis-ossificans",
+    "bs-puncture-osteomyelitis",
+    "bs-brachial-plexus"
+   ]
+  }
+ ]
+}
