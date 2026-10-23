@@ -14,20 +14,15 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **Batch:** s150 open, Phase 2 musculoskeletal C, pediatric: myositis-ossificans, scheuermann,
   bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden scfe; all five disease, peds lens.
-- **Step:** S8 presented by Codex; ship waits for a Claude chat. Fresh full verify_all reports all five READY,
-  with four current independent PASS receipts per brief. The built page exactly matches final S7
-  (SHA-256 357d9e44ae58c8ba90cb24a467059d944e551605bd758772576ea6937613160e).
-  Gate/render/vendor checks pass; 23 lint and 28 preflight advisories remain answered, not raw zero.
-  Fresh shots_all completed all 240 captures; sheets.py --approval produced 34 sheets in all four modes.
-  Public report: repair/s150/REPORT.md. Private package: local-only/repair/migration/spine/s150-support/s8/
-  (gallery, manifest, exact old/new evidence appendix, checks and screenshots). All 297 listed file hashes and gallery links verify.
-  One S8 lead LOW is deferred to Claude consistency audit: brachial upper-trunk In practice label touches C5-C6;
-  resolve the spacing before re-presentation. No clinical or display content changed in S8.
-  All-mode computed contrast remains complete at zero; unfinished supplemental pixel audits remain disclosed
-  in S7_VISUAL.md and REPORT.md. No incomplete audit is called passed. Nothing shipped.
-- **Budget/spend:** 25 reviewer agents, 300 calls, 10M tokens; lead 230M. Used 20 agents and 289 calls;
-  11 calls and 5 agents remain. Reviewer and lead tokens unknown (usage display unavailable), recorded in
-  ledger_codex.csv. Every lane's full cap fit actual remaining unreserved budget; no spares reduced.
+- **Step:** S8 Codex audit by Claude (CODEX_AUDIT.md), chat 1. Items 2, 3, 4, 5 and 8 done; item 6 (Claude acc,
+  2 Opus agents, 30 calls) found 1 MED and 4 LOW that Codex's three rounds passed; audit also fixed 3 attached "In
+  practice" buttons, a broken myositis Pairs with card, a hedge and two rung wordings. Scheuermann and torticollis
+  READY; myositis, puncture and brachial MECH PASS, in follow-up round ca2 (lanes repair/efficiency/lanes/s150/ca2a
+  and ca2; specs repair/s150/audit/ca2_*.json; adjudications repair/s150/audit/adj_*.md). Record: S150.md "Codex
+  audit". Rule proposals: repair/s150/audit/RULES_PROPOSED.md (for the report). Then shots_all on all five, sheets
+  --approval, approval.py present, report.
+- **Budget/spend:** caps now 26 agents, 405 calls, 10M tokens (Jonathan approved +50 then +1/+55 calls). Codex 20
+  agents, 289 calls; Claude 2 agents, 30 calls, 1.27M tokens; ca2 round planned 4 agents, 82 calls.
 - **Lead:** Claude, since 2026-10-22 23:05 EDT, chat 1 (S8 audit per CODEX_AUDIT.md; Jonathan: "Take the lead lock").
   Codex lock (chat 3, S8) released by this takeover.
 - **Branches:** wip/s150 in both repos. Local public /Users/jmontsfit/Documents/Step2Haki/s150-public;
