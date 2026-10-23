@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-22, by Codex, s150 lead chat 2 (S6 complete; S7 round 2 starting).
+Last updated: 2026-10-22, by Codex, s150 lead chat 2 (S7 complete; all five READY; mandatory restart before S8).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -14,19 +14,26 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **Batch:** s150 open, Phase 2 musculoskeletal C, pediatric: myositis-ossificans, scheuermann,
   bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden scfe; all five disease, peds lens.
-- **Step:** S6 self-check complete; S7 round 2 complete; 18 PASS and 2 MED findings, preparing corrections.
-  All five full mechanical checks and combined gate/render/vendor checks pass. Current computed contrast is zero
-  across all 12 required combinations, and current phone/study captures are readable. The extra full-page pixel
-  audit is still active; assess its raw output before closing S7, without claiming an in-progress check passed.
-  Jonathan approved the source publishers and 300 calls. Three clinical source gaps now have direct references;
-  S7 independently judges scope, including the torticollis orthopedic-reassessment inference. No brief READY.
-- **Budget/spend:** 25 reviewer agents, 300 calls, 10M tokens; lead 230M. Used reviewers 16 agents, 247 calls;
-  reviewer and lead tokens unknown (Codex usage display unavailable). R2 has 18 PASS and 2 MED findings accepted for correction;
-  53 calls remain. Launch future lane caps only when they fit the actual remaining budget. ledger_codex.csv records actual per-lane counts and unknown tokens.
+- **Step:** S7 done: all five READY (2026-10-22, chat 2). Final full verify_all passed all five;
+  all four latest independent receipts per brief are current and PASS. R2's two MED findings were corrected;
+  R3 has eight PASS receipts. Three source gaps resolved with approved directly fetched references.
+  Final evidence/receipts/captures are private; S150.md S5/S7 records the decisions, source-domain approval,
+  reviewer findings/misses, original failed git-guard run and successful frozen-file rerun.
+  Current computed contrast is zero in all 12 required configurations. Current completed phone pixels also pass;
+  supplemental raw desktop/flat-dark/study-dark attempts did not complete and are not claimed passed.
+  See private s150-support/S7_VISUAL.md and S7_VISUAL_MANIFEST.json; current reviewed screenshots and original
+  S3 raw artifacts are preserved. No check/threshold, shared style/script, approval or shipping gate changed.
+- **Budget/spend:** 25 reviewer agents, 300 calls, 10M tokens; lead 230M. Used 20 agents and 289 calls;
+  11 calls and 5 agents remain. Reviewer and lead tokens unknown (usage display unavailable), recorded in
+  ledger_codex.csv. Every lane's full cap fit actual remaining unreserved budget; no spares reduced.
 - **Lead:** Codex, since 2026-10-22, chat 2 (S4 continuation). Original lock bc5cd1288547; continuation lock committed and pushed alone before review work.
 - **Branches:** wip/s150 in both repos. Local public /Users/jmontsfit/Documents/Step2Haki/s150-public;
   private /Users/jmontsfit/Documents/Step2Haki/s150-evidence (selective checkout; contains claude mirrors and selected
   local-only evidence). Sources restored only into gitignored workspace paths. Record repair/s150/S150.md.
+- **Next:** Mandatory S7 restart. The fresh chat starts S8; read this State, S150.md S5/S7 and each latest
+  receipt verdict line per the continuation rule. Run S8 in full, prepare REPORT.md and approval sheets; Claude
+  audits and ships only after Jonathan approves. Use private S7_VISUAL.md to distinguish the completed all-mode contrast verification from supplemental
+  unfinished pixel captures.
 - **Resume:** current s149 disease builds are the code pattern (septic-hip and sjia); scfe structure and voice.
   Brachial folder now exists, built from the live page. No hooks in Codex; manual budgets and clean checkpoints.
   Required fresh-chat restart after S3 and S7. Codex stops at S8, writes repair/s150/REPORT.md;
