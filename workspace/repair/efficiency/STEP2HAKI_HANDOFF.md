@@ -12,11 +12,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch:** s150b open, launch complete; S1 next. New pms-pmdd and parkinson disease briefs; targeted somatic and psych-medical amendments; pointers only in mdd, bipolar-mania, ssri-effects, antipsych-effects, delirium.
+- **Batch:** s150b open, S1 and S2 complete; S3 final pixel checks/screenshots running. New pms-pmdd and parkinson disease briefs; targeted somatic and psych-medical amendments; pointers only in mdd, bipolar-mania, ssri-effects, antipsych-effects, delirium.
 - **Lead:** Codex, since 2026-10-23 17:59 EDT, lead chat 1. Lock 8166b75.
 - **Branches:** public and private wip/s150b, fetched from current main (3f07da6 / 225cf14), pushed.
 - **Budget:** 30 reviewer agents / 380 calls / 13M tokens; lead 220M. Spend 0 reviewer agents / 0 calls; lead usage unknown. Fresh S8 audit and follow-up included.
-- **Record:** repair/s150b/S150B.md. Method s148 with efficiency patch; restart after S3 and S7. New briefs reviewed full, seven existing briefs changed lines/context. Four independent roles.
+- **Record:** repair/s150b/S150B.md. Public checkout /Users/jmontsfit/Documents/Step2Haki/s150-public (workspace/); private /Users/jmontsfit/Documents/Step2Haki/s150-evidence. Method s148 with efficiency patch; restart after S3 and S7. New briefs reviewed full, seven existing briefs changed lines/context. Four independent roles.
 - **Approval:** no presentation and no ship authorization. Codex follows CODEX_LEAD sections 5 and 9.
 - **Prior:** s150 closed and shipped 2026-10-23, main de2d1dc. Prior carried items remain in its completed batch and earlier handoff history. Other 2026-10-23 intake amendments remain queued.
 
