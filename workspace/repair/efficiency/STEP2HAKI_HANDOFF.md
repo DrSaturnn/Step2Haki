@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-22, by Codex, s150 lead chat 2 (S5 source revisions done; S6 visuals running).
+Last updated: 2026-10-22, by Codex, s150 lead chat 2 (S6 complete; S7 round 2 starting).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -14,14 +14,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **Batch:** s150 open, Phase 2 musculoskeletal C, pediatric: myositis-ossificans, scheuermann,
   bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden scfe; all five disease, peds lens.
-- **Step:** S5 revisions/source resolution done (2026-10-22, chat 2). S6 visual validation in progress;
-  then S7 independent follow-up on all five and all four roles. All 20 original receipts preserved.
-  Puncture HIGH corrected; clue tables, referral ownership, study masks, pointer spacing and wording revised.
-  Jonathan approved new professional-society source domains and the 300-call cap in this chat. New AAOS/AAPMR/
-  POSNA references fetched and assigned; three temporary marks removed. Referral wording is an assessment
-  inference from the independent resistant-contracture escalation indication; S7 must judge it.
-  All five full mechanical checks and final source builds pass. No brief READY and no shipping approval.
-  Final visual audit/capture processes are active; do not mistake an in-progress check for clearance.
+- **Step:** S6 self-check complete; starting S7 round 2 on final source-resolved builds.
+  All five full mechanical checks and combined gate/render/vendor checks pass. Current computed contrast is zero
+  across all 12 required combinations, and current phone/study captures are readable. The extra full-page pixel
+  audit is still active; assess its raw output before closing S7, without claiming an in-progress check passed.
+  Jonathan approved the source publishers and 300 calls. Three clinical source gaps now have direct references;
+  S7 independently judges scope, including the torticollis orthopedic-reassessment inference. No brief READY.
 - **Budget/spend:** 25 reviewer agents, 300 calls, 10M tokens; lead 230M. Used reviewers 8 agents, 136 calls;
   reviewer and lead tokens unknown (Codex usage display unavailable). S7's prescribed 8 lanes plan 142 calls;
   164 calls remain. ledger_codex.csv records actual per-lane counts and unknown tokens.

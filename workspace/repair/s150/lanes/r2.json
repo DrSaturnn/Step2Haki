@@ -1,0 +1,149 @@
+{
+ "batch": "s150",
+ "plan_step": "s150",
+ "round": 2,
+ "context": "s150 converts five pediatric musculoskeletal disease briefs; golden SCFE, three reasons per item, bold bottom line, First step pairing. No reviewers may author the briefs.",
+ "out": "repair/efficiency/lanes/s150/r2",
+ "packets": "repair/migration/spine/packets/s150/r2",
+ "sheets": "local/sheets/s150-r2-review",
+ "types": {
+  "myositis-ossificans": "disease, pediatric lens",
+  "scheuermann": "disease, pediatric lens",
+  "bs-puncture-osteomyelitis": "disease, pediatric lens",
+  "bs-torticollis": "disease, pediatric lens",
+  "bs-brachial-plexus": "disease, pediatric lens"
+ },
+ "notes": {
+  "acc": [
+   "File-only host: use tools.mcp__node_repl__js through functions.exec. Its arguments are {code: string, title: string}. In code: var fs = await import(\"node:fs/promises\"); nodeRepl.write(await fs.readFile(\"/absolute/named/file\",\"utf8\")); search a named file by filtering its lines or parsing JSON. Write with fs.writeFile. No subprocess, shell, web, connector, folder listing or outside-lane files. Each file read/search/write counts one call, even batched. tools.view_image through functions.exec, followed by image(result.image_url), opens named image files. Record exact counted total in your final receipt. Do not reread instructions. Format is in INSTRUCTIONS.md; separate RECEIPT_FORMAT.md mirrors it and need not be read.",
+   "Packet limits: line_sources.txt clips quotes at 600 characters; search facts.json for the full quote before declaring a line unsupported. Drawer targets may list in-page anchors as missing; these are not broken brief links. One-brief root-path wording is a known packet typo. Live L facts are inherited provenance, not independent medical confirmation. Read the superseding source-resolution section at the end of adjudication notes: the old open labels preserve history and do not describe final evidence. New source quotes must actually support the changed claims and their scope; the lead does not grant medical PASS."
+  ],
+  "read": [
+   "File-only host: use tools.mcp__node_repl__js through functions.exec. Its arguments are {code: string, title: string}. In code: var fs = await import(\"node:fs/promises\"); nodeRepl.write(await fs.readFile(\"/absolute/named/file\",\"utf8\")); search a named file by filtering its lines or parsing JSON. Write with fs.writeFile. No subprocess, shell, web, connector, folder listing or outside-lane files. Each file read/search/write counts one call, even batched. tools.view_image through functions.exec, followed by image(result.image_url), opens named image files. Record exact counted total in your final receipt. Do not reread instructions. Format is in INSTRUCTIONS.md; separate RECEIPT_FORMAT.md mirrors it and need not be read.",
+   "Packet limits: line_sources.txt clips quotes at 600 characters; search facts.json for the full quote before declaring a line unsupported. Drawer targets may list in-page anchors as missing; these are not broken brief links. One-brief root-path wording is a known packet typo. Live L facts are inherited provenance, not independent medical confirmation. Read the superseding source-resolution section at the end of adjudication notes: the old open labels preserve history and do not describe final evidence. New source quotes must actually support the changed claims and their scope; the lead does not grant medical PASS."
+  ],
+  "display": [
+   "File-only host: use tools.mcp__node_repl__js through functions.exec. Its arguments are {code: string, title: string}. In code: var fs = await import(\"node:fs/promises\"); nodeRepl.write(await fs.readFile(\"/absolute/named/file\",\"utf8\")); search a named file by filtering its lines or parsing JSON. Write with fs.writeFile. No subprocess, shell, web, connector, folder listing or outside-lane files. Each file read/search/write counts one call, even batched. tools.view_image through functions.exec, followed by image(result.image_url), opens named image files. Record exact counted total in your final receipt. Do not reread instructions. Format is in INSTRUCTIONS.md; separate RECEIPT_FORMAT.md mirrors it and need not be read.",
+   "Packet limits: line_sources.txt clips quotes at 600 characters; search facts.json for the full quote before declaring a line unsupported. Drawer targets may list in-page anchors as missing; these are not broken brief links. One-brief root-path wording is a known packet typo. Live L facts are inherited provenance, not independent medical confirmation. Read the superseding source-resolution section at the end of adjudication notes: the old open labels preserve history and do not describe final evidence. New source quotes must actually support the changed claims and their scope; the lead does not grant medical PASS.",
+   "Settled display calls: workup 5a is progressive recall (findings blurred until test is revealed). Timeline timing/course and extra lines stay visible; mask diagnosis names only except another masked answer. Both NBME finalists remain shown. Teal bars are shipped tile palette. Current chronology uses shipped lcw rows for full-width prose, not the five-column sp-tl helper. Red sheet bars/column breaks are packing artifacts. S3 lead already observed posterior-fossa diagnosis/pointer adjacency in torticollis; assess spacing, recording origin as lead observation rather than reviewer discovery. This round also masks repeated brachial Insights and footer answers; inspect those in the supplied changed-step sheets."
+  ],
+  "flags": [
+   "File-only host: use tools.mcp__node_repl__js through functions.exec. Its arguments are {code: string, title: string}. In code: var fs = await import(\"node:fs/promises\"); nodeRepl.write(await fs.readFile(\"/absolute/named/file\",\"utf8\")); search a named file by filtering its lines or parsing JSON. Write with fs.writeFile. No subprocess, shell, web, connector, folder listing or outside-lane files. Each file read/search/write counts one call, even batched. tools.view_image through functions.exec, followed by image(result.image_url), opens named image files. Record exact counted total in your final receipt. Do not reread instructions. Format is in INSTRUCTIONS.md; separate RECEIPT_FORMAT.md mirrors it and need not be read.",
+   "Packet limits: line_sources.txt clips quotes at 600 characters; search facts.json for the full quote before declaring a line unsupported. Drawer targets may list in-page anchors as missing; these are not broken brief links. One-brief root-path wording is a known packet typo. Live L facts are inherited provenance, not independent medical confirmation. Read the superseding source-resolution section at the end of adjudication notes: the old open labels preserve history and do not describe final evidence. New source quotes must actually support the changed claims and their scope; the lead does not grant medical PASS."
+  ]
+ },
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "myositis-ossificans",
+    "scheuermann",
+    "bs-puncture-osteomyelitis"
+   ]
+  },
+  {
+   "part": "acc",
+   "group": "B",
+   "briefs": [
+    "bs-torticollis",
+    "bs-brachial-plexus"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "myositis-ossificans",
+    "scheuermann",
+    "bs-puncture-osteomyelitis"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "B",
+   "briefs": [
+    "bs-torticollis",
+    "bs-brachial-plexus"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "A",
+   "briefs": [
+    "myositis-ossificans",
+    "scheuermann",
+    "bs-puncture-osteomyelitis"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "B",
+   "briefs": [
+    "bs-torticollis",
+    "bs-brachial-plexus"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "myositis-ossificans",
+    "scheuermann",
+    "bs-puncture-osteomyelitis"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "B",
+   "briefs": [
+    "bs-torticollis",
+    "bs-brachial-plexus"
+   ]
+  }
+ ],
+ "prior": {
+  "acc": {
+   "myositis-ossificans": "repair/migration/spine/reviews/myositis-ossificans_acc_r1.md",
+   "scheuermann": "repair/migration/spine/reviews/scheuermann_acc_r1.md",
+   "bs-puncture-osteomyelitis": "repair/migration/spine/reviews/bs-puncture-osteomyelitis_acc_r1.md",
+   "bs-torticollis": "repair/migration/spine/reviews/bs-torticollis_acc_r1.md",
+   "bs-brachial-plexus": "repair/migration/spine/reviews/bs-brachial-plexus_acc_r1.md"
+  },
+  "read": {
+   "myositis-ossificans": "repair/migration/spine/reviews/myositis-ossificans_read_r1.md",
+   "scheuermann": "repair/migration/spine/reviews/scheuermann_read_r1.md",
+   "bs-puncture-osteomyelitis": "repair/migration/spine/reviews/bs-puncture-osteomyelitis_read_r1.md",
+   "bs-torticollis": "repair/migration/spine/reviews/bs-torticollis_read_r1.md",
+   "bs-brachial-plexus": "repair/migration/spine/reviews/bs-brachial-plexus_read_r1.md"
+  },
+  "flags": {
+   "myositis-ossificans": "repair/migration/spine/reviews/myositis-ossificans_flags_r1.md",
+   "scheuermann": "repair/migration/spine/reviews/scheuermann_flags_r1.md",
+   "bs-puncture-osteomyelitis": "repair/migration/spine/reviews/bs-puncture-osteomyelitis_flags_r1.md",
+   "bs-torticollis": "repair/migration/spine/reviews/bs-torticollis_flags_r1.md",
+   "bs-brachial-plexus": "repair/migration/spine/reviews/bs-brachial-plexus_flags_r1.md"
+  },
+  "display": {
+   "myositis-ossificans": "repair/migration/spine/reviews/myositis-ossificans_display_r1.md",
+   "scheuermann": "repair/migration/spine/reviews/scheuermann_display_r1.md",
+   "bs-puncture-osteomyelitis": "repair/migration/spine/reviews/bs-puncture-osteomyelitis_display_r1.md",
+   "bs-torticollis": "repair/migration/spine/reviews/bs-torticollis_display_r1.md",
+   "bs-brachial-plexus": "repair/migration/spine/reviews/bs-brachial-plexus_display_r1.md"
+  }
+ },
+ "adjudication": {
+  "myositis-ossificans": "repair/migration/peds/myositis-ossificans/spine/s5_adjudication.md",
+  "scheuermann": "repair/migration/peds/scheuermann/spine/s5_adjudication.md",
+  "bs-puncture-osteomyelitis": "repair/migration/peds/bs-puncture-osteomyelitis/spine/s5_adjudication.md",
+  "bs-torticollis": "repair/migration/peds/bs-torticollis/spine/s5_adjudication.md",
+  "bs-brachial-plexus": "repair/migration/peds/bs-brachial-plexus/spine/s5_adjudication.md"
+ },
+ "steps": {
+  "myositis-ossificans": "1,3,4,7,practice",
+  "scheuermann": "1,4,7,practice",
+  "bs-puncture-osteomyelitis": "1,3,4,practice",
+  "bs-torticollis": "2,3,4,6,7,8,practice",
+  "bs-brachial-plexus": "1,3,4,8,practice"
+ }
+}
