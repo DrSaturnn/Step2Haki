@@ -1,0 +1,92 @@
+{
+ "batch": "s150",
+ "plan_step": "s150",
+ "round": 3,
+ "context": "s150 converts five pediatric musculoskeletal disease briefs; golden SCFE, three reasons per item, bold bottom line, First step pairing. No reviewers may author the briefs.",
+ "out": "repair/efficiency/lanes/s150/r3",
+ "packets": "repair/migration/spine/packets/s150/r3",
+ "sheets": "local/sheets/s150-r3-review",
+ "types": {
+  "myositis-ossificans": "disease, pediatric lens",
+  "scheuermann": "disease, pediatric lens"
+ },
+ "notes": {
+  "acc": [
+   "File-only host: use tools.mcp__node_repl__js through functions.exec. Its arguments are {code: string, title: string}. In code: var fs = await import(\"node:fs/promises\"); nodeRepl.write(await fs.readFile(\"/absolute/named/file\",\"utf8\")); search a named file by filtering its lines or parsing JSON. Write with fs.writeFile. No subprocess, shell, web, connector, folder listing or outside-lane files. Each file read/search/write counts one call, even batched. tools.view_image through functions.exec, followed by image(result.image_url), opens named image files. Record exact counted total in your final receipt. Do not reread instructions. Format is in INSTRUCTIONS.md; separate RECEIPT_FORMAT.md mirrors it and need not be read.",
+   "R3 scope is the one changed line in each brief and any prior finding. Complete quotes and exact R2 receipts are provided. No lead medical PASS. For the myositis stage correction, h01/h02 explicitly name early heterotopic ossification. For Scheuermann, independently judge the new concrete flexible-curve action against a03; do not treat this lead note as approval."
+  ],
+  "read": [
+   "File-only host: use tools.mcp__node_repl__js through functions.exec. Its arguments are {code: string, title: string}. In code: var fs = await import(\"node:fs/promises\"); nodeRepl.write(await fs.readFile(\"/absolute/named/file\",\"utf8\")); search a named file by filtering its lines or parsing JSON. Write with fs.writeFile. No subprocess, shell, web, connector, folder listing or outside-lane files. Each file read/search/write counts one call, even batched. tools.view_image through functions.exec, followed by image(result.image_url), opens named image files. Record exact counted total in your final receipt. Do not reread instructions. Format is in INSTRUCTIONS.md; separate RECEIPT_FORMAT.md mirrors it and need not be read.",
+   "R3 scope is the one changed line in each brief and any prior finding. Complete quotes and exact R2 receipts are provided. No lead medical PASS. For the myositis stage correction, h01/h02 explicitly name early heterotopic ossification. For Scheuermann, independently judge the new concrete flexible-curve action against a03; do not treat this lead note as approval."
+  ],
+  "display": [
+   "File-only host: use tools.mcp__node_repl__js through functions.exec. Its arguments are {code: string, title: string}. In code: var fs = await import(\"node:fs/promises\"); nodeRepl.write(await fs.readFile(\"/absolute/named/file\",\"utf8\")); search a named file by filtering its lines or parsing JSON. Write with fs.writeFile. No subprocess, shell, web, connector, folder listing or outside-lane files. Each file read/search/write counts one call, even batched. tools.view_image through functions.exec, followed by image(result.image_url), opens named image files. Record exact counted total in your final receipt. Do not reread instructions. Format is in INSTRUCTIONS.md; separate RECEIPT_FORMAT.md mirrors it and need not be read.",
+   "R3 scope is the one changed line in each brief and any prior finding. Complete quotes and exact R2 receipts are provided. No lead medical PASS. For the myositis stage correction, h01/h02 explicitly name early heterotopic ossification. For Scheuermann, independently judge the new concrete flexible-curve action against a03; do not treat this lead note as approval.",
+   "Settled display calls: workup 5a is progressive recall (findings blurred until test is revealed). Timeline timing/course and extra lines stay visible; mask diagnosis names only except another masked answer. Both NBME finalists remain shown. Teal bars are shipped tile palette. Current chronology uses shipped lcw rows for full-width prose, not the five-column sp-tl helper. Red sheet bars/column breaks are packing artifacts. S3 lead already observed posterior-fossa diagnosis/pointer adjacency in torticollis; assess spacing, recording origin as lead observation rather than reviewer discovery. This round also masks repeated brachial Insights and footer answers; inspect those in the supplied changed-step sheets."
+  ],
+  "flags": [
+   "File-only host: use tools.mcp__node_repl__js through functions.exec. Its arguments are {code: string, title: string}. In code: var fs = await import(\"node:fs/promises\"); nodeRepl.write(await fs.readFile(\"/absolute/named/file\",\"utf8\")); search a named file by filtering its lines or parsing JSON. Write with fs.writeFile. No subprocess, shell, web, connector, folder listing or outside-lane files. Each file read/search/write counts one call, even batched. tools.view_image through functions.exec, followed by image(result.image_url), opens named image files. Record exact counted total in your final receipt. Do not reread instructions. Format is in INSTRUCTIONS.md; separate RECEIPT_FORMAT.md mirrors it and need not be read.",
+   "R3 scope is the one changed line in each brief and any prior finding. Complete quotes and exact R2 receipts are provided. No lead medical PASS. For the myositis stage correction, h01/h02 explicitly name early heterotopic ossification. For Scheuermann, independently judge the new concrete flexible-curve action against a03; do not treat this lead note as approval."
+  ]
+ },
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "myositis-ossificans",
+    "scheuermann"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "myositis-ossificans",
+    "scheuermann"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "A",
+   "briefs": [
+    "myositis-ossificans",
+    "scheuermann"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "myositis-ossificans",
+    "scheuermann"
+   ]
+  }
+ ],
+ "prior": {
+  "acc": {
+   "myositis-ossificans": "repair/migration/spine/reviews/myositis-ossificans_acc_r2.md",
+   "scheuermann": "repair/migration/spine/reviews/scheuermann_acc_r2.md"
+  },
+  "read": {
+   "myositis-ossificans": "repair/migration/spine/reviews/myositis-ossificans_read_r2.md",
+   "scheuermann": "repair/migration/spine/reviews/scheuermann_read_r2.md"
+  },
+  "display": {
+   "myositis-ossificans": "repair/migration/spine/reviews/myositis-ossificans_display_r2.md",
+   "scheuermann": "repair/migration/spine/reviews/scheuermann_display_r2.md"
+  },
+  "flags": {
+   "myositis-ossificans": "repair/migration/spine/reviews/myositis-ossificans_flags_r2.md",
+   "scheuermann": "repair/migration/spine/reviews/scheuermann_flags_r2.md"
+  }
+ },
+ "adjudication": {
+  "myositis-ossificans": "repair/migration/peds/myositis-ossificans/spine/r2_adjudication.md",
+  "scheuermann": "repair/migration/peds/scheuermann/spine/r2_adjudication.md"
+ },
+ "steps": {
+  "myositis-ossificans": "1",
+  "scheuermann": "4"
+ }
+}
