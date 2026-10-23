@@ -26,7 +26,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Budget/spend:** 25 reviewer agents, 300 calls, 10M tokens; lead 230M. Used 20 agents and 289 calls;
   11 calls and 5 agents remain. Reviewer and lead tokens unknown (usage display unavailable), recorded in
   ledger_codex.csv. Every lane's full cap fit actual remaining unreserved budget; no spares reduced.
-- **Lead:** Codex, since 2026-10-22, chat 2 (S4 continuation). Original lock bc5cd1288547; continuation lock committed and pushed alone before review work.
+- **Lead:** Codex, since 2026-10-22 20:39 EDT, chat 3 (S8 continuation). Original lock bc5cd1288547; S8 continuation lock committed and pushed alone before final checks.
 - **Branches:** wip/s150 in both repos. Local public /Users/jmontsfit/Documents/Step2Haki/s150-public;
   private /Users/jmontsfit/Documents/Step2Haki/s150-evidence (selective checkout; contains claude mirrors and selected
   local-only evidence). Sources restored only into gitignored workspace paths. Record repair/s150/S150.md.
