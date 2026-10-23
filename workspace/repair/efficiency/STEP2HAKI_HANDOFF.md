@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-23 07:32 EDT, by Codex, s150 lead chat 4 (s150 shipped; no batch open).
+Last updated: 2026-10-23 19:37 EDT, by Codex, s150b lead chat 1 (S1/S2 and mechanical checks complete; final pixel audits pending).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,7 +12,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch:** s150b open, S1 and S2 complete; S3 final pixel checks/screenshots running. New pms-pmdd and parkinson disease briefs; targeted somatic and psych-medical amendments; pointers only in mdd, bipolar-mania, ssri-effects, antipsych-effects, delirium.
+- **Batch:** s150b open, S1 and S2 complete; S3 all nine full G-MECH passes; final pixel audits running. New pms-pmdd and parkinson disease briefs; targeted somatic and psych-medical amendments; pointers only in mdd, bipolar-mania, ssri-effects, antipsych-effects, delirium.
 - **Lead:** Codex, since 2026-10-23 17:59 EDT, lead chat 1. Lock 8166b75.
 - **Branches:** public and private wip/s150b, fetched from current main (3f07da6 / 225cf14), pushed.
 - **Budget:** 30 reviewer agents / 380 calls / 13M tokens; lead 220M. Spend 0 reviewer agents / 0 calls; lead usage unknown. Fresh S8 audit and follow-up included.
