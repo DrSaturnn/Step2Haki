@@ -23,7 +23,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   AX_LEAD=codex tools/ship.sh s150; then S9. Claude's own presentation in its container is void.
 - **Budget/spend:** caps 26 agents, 405 calls, 10M tokens. Codex 20 agents, 289 calls (tokens unknown); Claude 6
   agents, 73 calls, 2.70M tokens. Batch 26 of 26 agents, 362 of 405 calls. Claude lead 44.1M (ledger_lead.csv).
-- **Lead:** none; open for Codex (Jonathan 2026-10-23: "ill have codex ship"). Claude's audit lock released.
+- **Lead:** Codex, since 2026-10-23 00:50 EDT, chat 4 (audited s150 release on the Mac). Claude audit stands; no new content work.
 - **Branches:** wip/s150 in both repos. Local public /Users/jmontsfit/Documents/Step2Haki/s150-public;
   private /Users/jmontsfit/Documents/Step2Haki/s150-evidence (selective checkout; contains claude mirrors and selected
   local-only evidence). Sources restored only into gitignored workspace paths. Record repair/s150/S150.md.
