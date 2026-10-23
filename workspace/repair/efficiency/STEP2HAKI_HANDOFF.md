@@ -12,39 +12,13 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **No batch open.** s150 shipped 2026-10-23 07:32 EDT (Jonathan: "ship", recorded by approval.py hook on this Mac).
-  Public main ship de2d1dc; live version.json confirms s150 dated 2026-10-23. Published page SHA-256
-  0a34eaad68aa21c80afeeb95df2ec8438945e7b3734bf6686447a8d0cf99fc31. Record repair/s150/S150.md; audit repair/s150/audit/REPORT_AUDIT.md.
-  Five pediatric musculoskeletal disease briefs: myositis-ossificans, scheuermann, bs-puncture-osteomyelitis,
-  bs-torticollis, bs-brachial-plexus. All five READY; audited content unchanged. Approved preview SHA-256
-  1b2c138e1bc5b54094c8fdbd25ce4ca3c6f9aac06df4486e24c5d38436fdc6da; ship stamps the build and changelog.
-- **Closed spend:** 26/26 reviewer agents, 362/405 calls. Codex 20 agents/289 calls, tokens unknown;
-  Claude audit 6 agents/73 calls, 2.70M reviewer tokens, 44.1M lead tokens. Codex lead tokens unknown.
-  No new reviewer or content work at the Mac release. WAVE.json closed.
-- **Lead:** Codex, since 2026-10-23 09:00 EDT, s150b lead chat 1. Jonathan explicitly launched s150b; both repositories fetched from main and wip/s150b pushed. s150 remains closed.
-- **Next:** new psych questions can go through intake first (prompt below); do not build unapproved new briefs.
-  Otherwise s151 cardiovascular A, using the full launch prompt below. Codex now authors and ships per
-  CODEX_LEAD.md sections 5 and 9; a fresh audit task is budgeted in each future batch.
-- **Mac catch-up:** s150 live index.html, the current public repository bundle and this handoff replace the
-  stale s149 copies in ~/Documents/Step2Haki/. Batch local-only evidence copied into its local-only/ tree.
-- **Owed:** the claude.ai project handoff copy is unreachable from Codex; Claude or Jonathan uploads this file.
-
-- **Carried:** From s149: growing-pains unverified marks (rhabdomyolysis "admit", "no braces"); q_bcc4 explanation no
-  longer addresses "Restrict running" (preflight P3); lanes.py single-brief path wording; review_packet drawer_targets
-  lists in-page anchors; tinted-theme contrast on site-wide elements (not a required mode). SITE_BODY_GLANCE item 3 unscheduled; legib_audit mid-reflow false failures (cross-check with
-  repair/s148b/contrast_computed.py; tinted theme repair/s148f/tinted_pixels.py); public wip/s147, wip/s148f, wip/s148e
-  and wip/s148h branches; stray Mac bundle; mdd duration-window timeline offered; deferred LOWs (sz-psychosocial
-  nonadherence wording, psychosis-duration "non-bizarre"); ae20 answer text at the next antipsych-effects intake;
-  review_packet.py omits long quotes from line_sources.txt and renders the folder build (no reasons; s148h used
-  repair/s148h/packets.py; fix with tests); peds-sleep age-window chart offered; s148f prose sweep list
-  (repair/s148f/prose_sweep.md); legib track-label false positive. From s148e: the 14 MDD gap cards (mdd's next batch)
-  and the psych-medical Parkinson card (S148E.md Proposal; not yet in BRIEF_AMEND_LIST); a later "Salicylate and
-  Acetaminophen Poisoning" brief (Jonathan's call). From s148h: folder builds lag live (reasons in
-  repair/s148h/data/reasons.json, pairings in data/pairs.json, s148g bold; the next rebuild of each brief carries them);
-  N1 and APAE folder build.py fail against live; antipsych-effects q_45e13940 explanation wording; psychosis-duration
-  S153 hedge; P5 key-in-stem warnings (7). Site list: 5a Targeted tests rows with empty Result and Means cells on
-  desktop, ladder "when" followed by a capital, tca-tox Insights mask could run to the line end; the flags lane has no
-  link file (do not ask flags to confirm drawers).
+- **Batch:** s150b open, launch complete; S1 next. New pms-pmdd and parkinson disease briefs; targeted somatic and psych-medical amendments; pointers only in mdd, bipolar-mania, ssri-effects, antipsych-effects, delirium.
+- **Lead:** Codex, since 2026-10-23 17:59 EDT, lead chat 1. Lock 8166b75.
+- **Branches:** public and private wip/s150b, fetched from current main (3f07da6 / 225cf14), pushed.
+- **Budget:** 30 reviewer agents / 380 calls / 13M tokens; lead 220M. Spend 0 reviewer agents / 0 calls; lead usage unknown. Fresh S8 audit and follow-up included.
+- **Record:** repair/s150b/S150B.md. Method s148 with efficiency patch; restart after S3 and S7. New briefs reviewed full, seven existing briefs changed lines/context. Four independent roles.
+- **Approval:** no presentation and no ship authorization. Codex follows CODEX_LEAD sections 5 and 9.
+- **Prior:** s150 closed and shipped 2026-10-23, main de2d1dc. Prior carried items remain in its completed batch and earlier handoff history. Other 2026-10-23 intake amendments remain queued.
 
 ## Next launch prompt (paste into a fresh chat)
 

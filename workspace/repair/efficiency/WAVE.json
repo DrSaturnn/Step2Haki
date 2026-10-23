@@ -1,136 +1,141 @@
 {
- "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s150",
- "open": false,
- "plan_step": "s150",
- "roles": [
-  "acc-review",
-  "read-review",
-  "display-review",
-  "flag-review",
-  "wording-fix"
- ],
- "max_agents": 26,
- "max_calls": 405,
- "max_tokens": 10000000,
- "set_by": "Jonathan, s150 launch prompt 2026-10-22",
- "previous": {
-  "id": "s149",
-  "note": "s149 closed after ship 2026-10-22; main 9b56c79, page eb266519ba12"
- },
- "opened": "2026-10-22 12:52 UTC",
- "note": "Codex leads; independent Codex review lanes; stop at S8 for Claude audit and ship. Jonathan approved reviewer calls 220 to 300 and the prepared AAOS/OrthoInfo, AAPMR and POSNA reference-domain patch on 2026-10-22. Claude audit (2026-10-22 23:10 EDT): Jonathan approved +50 reviewer calls (300 to 350) for the CODEX_AUDIT item 6 accuracy re-review; agents 25 and tokens 10M unchanged. Codex used 20 agents and 289 calls (ledger_codex.csv, not counted by the gate). Claude audit follow-up (2026-10-22): Jonathan approved +1 agent and +55 calls (26 agents, 405 calls; tokens 10M unchanged) for one follow-up round on myositis, puncture and brachial. Closed after audited s150 ship 2026-10-23: main de2d1dc, live version.json s150, 26 agents/362 calls; no remaining work in this batch.",
- "batch_budgets": {
-  "s138": {
-   "agents": 20,
-   "calls": 160,
-   "tokens": 9500000
+  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
+  "id": "s150b",
+  "open": true,
+  "plan_step": "s150b",
+  "roles": [
+    "acc-review",
+    "read-review",
+    "display-review",
+    "flag-review",
+    "wording-fix"
+  ],
+  "max_agents": 30,
+  "max_calls": 380,
+  "max_tokens": 13000000,
+  "set_by": "Jonathan, s150b launch prompt 2026-10-23",
+  "previous": {
+    "id": "s150",
+    "note": "Closed 2026-10-23; public ship de2d1dc"
   },
-  "s139": {
-   "agents": 16,
-   "calls": 120,
-   "tokens": 8000000
+  "opened": "2026-10-23 17:59 EDT",
+  "note": "Two new disease briefs plus seven targeted existing briefs. Includes fresh S8 audit and follow-up. All four independent roles; new briefs full and existing changed lines. Stop at applicable cap; unavailable usage unknown.",
+  "batch_budgets": {
+    "s138": {
+      "agents": 20,
+      "calls": 160,
+      "tokens": 9500000
+    },
+    "s139": {
+      "agents": 16,
+      "calls": 120,
+      "tokens": 8000000
+    },
+    "s140": {
+      "agents": 15,
+      "calls": 80,
+      "tokens": 5500000
+    },
+    "s141": {
+      "agents": 26,
+      "calls": 260,
+      "tokens": 8000000
+    },
+    "s142": {
+      "agents": 25,
+      "calls": 200,
+      "tokens": 8000000
+    },
+    "s144": {
+      "agents": 15,
+      "calls": 140,
+      "tokens": 5000000
+    },
+    "s145": {
+      "agents": 12,
+      "calls": 100,
+      "tokens": 4000000
+    },
+    "s146": {
+      "agents": 20,
+      "calls": 155,
+      "tokens": 6000000
+    },
+    "s146b": {
+      "agents": 12,
+      "calls": 150,
+      "tokens": 4000000
+    },
+    "s147": {
+      "agents": 30,
+      "calls": 300,
+      "tokens": 15000000
+    },
+    "s148": {
+      "agents": 32,
+      "calls": 320,
+      "tokens": 14000000
+    },
+    "s148b": {
+      "agents": 10,
+      "calls": 80,
+      "tokens": 5000000,
+      "lead_tokens": 30000000
+    },
+    "s148c": {
+      "agents": 22,
+      "calls": 260,
+      "tokens": 10000000,
+      "lead_tokens": 170000000
+    },
+    "s148d": {
+      "agents": 20,
+      "calls": 240,
+      "tokens": 9000000,
+      "lead_tokens": 150000000
+    },
+    "s148f": {
+      "agents": 0,
+      "calls": 0,
+      "tokens": 0,
+      "lead_tokens": 120000000
+    },
+    "s148e": {
+      "agents": 18,
+      "calls": 200,
+      "tokens": 9000000,
+      "lead_tokens": 180000000
+    },
+    "s148g": {
+      "agents": 0,
+      "calls": 0,
+      "tokens": 0,
+      "lead_tokens": 120000000
+    },
+    "s148h": {
+      "agents": 14,
+      "calls": 160,
+      "tokens": 7000000,
+      "lead_tokens": 180000000
+    },
+    "s149": {
+      "agents": 30,
+      "calls": 300,
+      "tokens": 15000000,
+      "lead_tokens": 300000000
+    },
+    "s150": {
+      "agents": 25,
+      "calls": 300,
+      "tokens": 10000000,
+      "lead_tokens": 230000000
+    },
+    "s150b": {
+      "agents": 30,
+      "calls": 380,
+      "tokens": 13000000,
+      "lead_tokens": 220000000
+    }
   },
-  "s140": {
-   "agents": 15,
-   "calls": 80,
-   "tokens": 5500000
-  },
-  "s141": {
-   "agents": 26,
-   "calls": 260,
-   "tokens": 8000000
-  },
-  "s142": {
-   "agents": 25,
-   "calls": 200,
-   "tokens": 8000000
-  },
-  "s144": {
-   "agents": 15,
-   "calls": 140,
-   "tokens": 5000000
-  },
-  "s145": {
-   "agents": 12,
-   "calls": 100,
-   "tokens": 4000000
-  },
-  "s146": {
-   "agents": 20,
-   "calls": 155,
-   "tokens": 6000000
-  },
-  "s146b": {
-   "agents": 12,
-   "calls": 150,
-   "tokens": 4000000
-  },
-  "s147": {
-   "agents": 30,
-   "calls": 300,
-   "tokens": 15000000
-  },
-  "s148": {
-   "agents": 32,
-   "calls": 320,
-   "tokens": 14000000
-  },
-  "s148b": {
-   "agents": 10,
-   "calls": 80,
-   "tokens": 5000000,
-   "lead_tokens": 30000000
-  },
-  "s148c": {
-   "agents": 22,
-   "calls": 260,
-   "tokens": 10000000,
-   "lead_tokens": 170000000
-  },
-  "s148d": {
-   "agents": 20,
-   "calls": 240,
-   "tokens": 9000000,
-   "lead_tokens": 150000000
-  },
-  "s148f": {
-   "agents": 0,
-   "calls": 0,
-   "tokens": 0,
-   "lead_tokens": 120000000
-  },
-  "s148e": {
-   "agents": 18,
-   "calls": 200,
-   "tokens": 9000000,
-   "lead_tokens": 180000000
-  },
-  "s148g": {
-   "agents": 0,
-   "calls": 0,
-   "tokens": 0,
-   "lead_tokens": 120000000
-  },
-  "s148h": {
-   "agents": 14,
-   "calls": 160,
-   "tokens": 7000000,
-   "lead_tokens": 180000000
-  },
-  "s149": {
-   "agents": 30,
-   "calls": 300,
-   "tokens": 15000000,
-   "lead_tokens": 300000000
-  },
-  "s150": {
-   "agents": 25,
-   "calls": 300,
-   "tokens": 10000000,
-   "lead_tokens": 230000000
-  }
- },
- "max_lead_tokens": 230000000,
- "closed": "2026-10-23 07:32 EDT"
+  "max_lead_tokens": 220000000
 }
