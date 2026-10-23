@@ -14,15 +14,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **Batch:** s150 open, Phase 2 musculoskeletal C, pediatric: myositis-ossificans, scheuermann,
   bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden scfe; all five disease, peds lens.
-- **Step:** S8 Codex audit by Claude (CODEX_AUDIT.md), chat 1. Items 2, 3, 4, 5 and 8 done; item 6 (Claude acc,
-  2 Opus agents, 30 calls) found 1 MED and 4 LOW that Codex's three rounds passed; audit also fixed 3 attached "In
-  practice" buttons, a broken myositis Pairs with card, a hedge and two rung wordings. Scheuermann and torticollis
-  READY; myositis, puncture and brachial MECH PASS, in follow-up round ca2 (lanes repair/efficiency/lanes/s150/ca2a
-  and ca2; specs repair/s150/audit/ca2_*.json; adjudications repair/s150/audit/adj_*.md). Record: S150.md "Codex
-  audit". Rule proposals: repair/s150/audit/RULES_PROPOSED.md (for the report). Then shots_all on all five, sheets
-  --approval, approval.py present, report.
-- **Budget/spend:** caps now 26 agents, 405 calls, 10M tokens (Jonathan approved +50 then +1/+55 calls). Codex 20
-  agents, 289 calls; Claude 2 agents, 30 calls, 1.27M tokens; ca2 round planned 4 agents, 82 calls.
+- **Step:** S8 re-presented by Claude after the Codex audit (chat 1, 2026-10-22): all five READY; approval.py present
+  s150 (34 sheets, local/sheets/s150-approval; page sha 1b2c138e1bc5). Waiting for Jonathan's "ship" IN THIS CHAT (the
+  approval record lives in this container). Audit record: S150.md "Codex audit"; rule proposals
+  repair/s150/audit/RULES_PROPOSED.md (Jonathan to choose before Codex's next launch). Changelog entry 150 added.
+- **Budget/spend:** caps 26 agents, 405 calls, 10M tokens. Codex 20 agents, 289 calls (tokens unknown); Claude 6
+  agents, 73 calls, 2.70M tokens. Batch 26 of 26 agents, 362 of 405 calls. Claude lead 44.1M (ledger_lead.csv).
 - **Lead:** Claude, since 2026-10-22 23:05 EDT, chat 1 (S8 audit per CODEX_AUDIT.md; Jonathan: "Take the lead lock").
   Codex lock (chat 3, S8) released by this takeover.
 - **Branches:** wip/s150 in both repos. Local public /Users/jmontsfit/Documents/Step2Haki/s150-public;
