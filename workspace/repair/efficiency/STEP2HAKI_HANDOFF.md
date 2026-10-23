@@ -21,7 +21,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Closed spend:** 26/26 reviewer agents, 362/405 calls. Codex 20 agents/289 calls, tokens unknown;
   Claude audit 6 agents/73 calls, 2.70M reviewer tokens, 44.1M lead tokens. Codex lead tokens unknown.
   No new reviewer or content work at the Mac release. WAVE.json closed.
-- **Lead:** none; s150 closed. Public and private main and wip/s150 carry the completed batch.
+- **Lead:** Codex, since 2026-10-23 09:00 EDT, s150b lead chat 1. Jonathan explicitly launched s150b; both repositories fetched from main and wip/s150b pushed. s150 remains closed.
 - **Next:** new psych questions can go through intake first (prompt below); do not build unapproved new briefs.
   Otherwise s151 cardiovascular A, using the full launch prompt below. Codex now authors and ships per
   CODEX_LEAD.md sections 5 and 9; a fresh audit task is budgeted in each future batch.
