@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-22, by Codex, s150 lead chat 2 (S4 done; next S5).
+Last updated: 2026-10-22, by Codex, s150 lead chat 2 (S5 source revisions done; S6 visuals running).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -14,13 +14,17 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **Batch:** s150 open, Phase 2 musculoskeletal C, pediatric: myositis-ossificans, scheuermann,
   bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden scfe; all five disease, peds lens.
-- **Step:** S4 done (2026-10-22, chat 2). Next S5 adjudication and fixes, then S6 and independent S7.
-  Twenty receipts from eight fresh-context lanes: 1 HIGH, 33 MED, 8 LOW (overlapping reports included).
-  HIGH is puncture's unqualified early-organism rule; board evidence settles the exposure exception.
-  No brief READY. Private packets/receipts/images archived; public lane spec repair/s150/lanes/r1.json.
-  Source gaps and all other findings remain for S5; do not infer approval from S3 mechanics.
-- **Budget/spend:** 25 reviewer agents, 220 calls, 10M tokens; lead 230M. Used: reviewers 8 agents, 136 calls, tokens unknown;
-  lead unknown (Codex usage display unavailable; ledger_codex.csv). Never estimate silently.
+- **Step:** S5 revisions/source resolution done (2026-10-22, chat 2). S6 visual validation in progress;
+  then S7 independent follow-up on all five and all four roles. All 20 original receipts preserved.
+  Puncture HIGH corrected; clue tables, referral ownership, study masks, pointer spacing and wording revised.
+  Jonathan approved new professional-society source domains and the 300-call cap in this chat. New AAOS/AAPMR/
+  POSNA references fetched and assigned; three temporary marks removed. Referral wording is an assessment
+  inference from the independent resistant-contracture escalation indication; S7 must judge it.
+  All five full mechanical checks and final source builds pass. No brief READY and no shipping approval.
+  Final visual audit/capture processes are active; do not mistake an in-progress check for clearance.
+- **Budget/spend:** 25 reviewer agents, 300 calls, 10M tokens; lead 230M. Used reviewers 8 agents, 136 calls;
+  reviewer and lead tokens unknown (Codex usage display unavailable). S7's prescribed 8 lanes plan 142 calls;
+  164 calls remain. ledger_codex.csv records actual per-lane counts and unknown tokens.
 - **Lead:** Codex, since 2026-10-22, chat 2 (S4 continuation). Original lock bc5cd1288547; continuation lock committed and pushed alone before review work.
 - **Branches:** wip/s150 in both repos. Local public /Users/jmontsfit/Documents/Step2Haki/s150-public;
   private /Users/jmontsfit/Documents/Step2Haki/s150-evidence (selective checkout; contains claude mirrors and selected

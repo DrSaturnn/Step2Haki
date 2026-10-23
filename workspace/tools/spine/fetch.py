@@ -24,7 +24,7 @@ import requests
 
 WS = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
 CACHE = os.path.join(WS, 'repair', 'sources', 'web')
-ALLOW = ('msdmanuals.com', 'merckmanuals.com', 'uspreventiveservicestaskforce.org', 'aafp.org', 'psychdb.com',
+ALLOW = ('aaos.org', 'orthoinfo.org', 'aapmr.org', 'posna.org', 'msdmanuals.com', 'merckmanuals.com', 'uspreventiveservicestaskforce.org', 'aafp.org', 'psychdb.com',
          'dailymed.nlm.nih.gov', 'accessdata.fda.gov', 'fda.gov', 'aap.org', 'publications.aap.org', 'acog.org',
          'ahajournals.org', 'acc.org', 'idsociety.org', 'diabetesjournals.org', 'goldcopd.org', 'nih.gov',
          'niaaa.nih.gov', 'nida.nih.gov', 'ncbi.nlm.nih.gov', 'cdc.gov', 'who.int', 'kdigo.org', 'heart.org')
