@@ -20,7 +20,7 @@ WS="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 ROOT="$(git -C "$WS" rev-parse --show-toplevel)"
 git -C "$ROOT" config user.email 297481111+DrSaturnn@users.noreply.github.com; git -C "$ROOT" config user.name DrSaturnn  # GitHub blocks pushes exposing a private email
 SITE="$ROOT/discriminator-briefs-site/index.html"
-OUT=/mnt/user-data/outputs
+OUT="${AX_OUT:-/mnt/user-data/outputs}"   # Codex on the Mac: AX_OUT=<a scratch folder outside Documents>
 TOKF=/home/claude/.config/axbx/gh_token
 B="${1:-}"; MSG="${2:-}"; MODE="${3:-}"
 if [[ ! "$B" =~ ^s[0-9A-Za-z_-]+$ || -z "$MSG" ]]; then echo 'usage: tools/ship.sh sNN "<message>" [--attr-only]'; exit 2; fi
@@ -29,9 +29,16 @@ TMP="$(mktemp -d /tmp/axbx-ship-XXXXXX)"; trap 'rm -rf "$TMP"' EXIT
 fail(){ echo "ship $B: ABORT at $1 (nothing written)"; [[ -n "${2:-}" ]] && echo "$2"; exit 1; }
 # Commit trailers come from the shipping session, never hardcoded (s131: the old trailer named another chat).
 #   AX_SESSION=https://claude.ai/code/session_<id> tools/ship.sh sNN "..."   (AX_COAUTHOR optional)
+#   Codex lead (Jonathan 2026-10-23, CODEX_LEAD.md section 5): AX_LEAD=codex tools/ship.sh sNN "..."; the trailer is
+#   "Lead: Codex (GPT-6.1 Sol)" and no Claude trailer is written. The approval and READY gates are the same.
 AX_COAUTHOR="${AX_COAUTHOR:-Claude Opus 5.5 <noreply@anthropic.com>}"
-if [[ ! "${AX_SESSION:-}" =~ ^https://claude\.ai/code/session_[A-Za-z0-9]+$ ]]; then
-  fail trailer "set AX_SESSION to this session's https://claude.ai/code/session_<id> URL (the Claude-Session trailer)"; fi
+if [[ "${AX_LEAD:-}" == codex ]]; then
+  TRAILER="Lead: Codex (GPT-6.1 Sol)"
+elif [[ "${AX_SESSION:-}" =~ ^https://claude\.ai/code/session_[A-Za-z0-9]+$ ]]; then
+  TRAILER="Co-Authored-By: $AX_COAUTHOR
+Claude-Session: $AX_SESSION"
+else
+  fail trailer "set AX_SESSION to this session's https://claude.ai/code/session_<id> URL (the Claude-Session trailer), or AX_LEAD=codex for a Codex lead"; fi
 
 # ---- 1. checks on a scratch copy
 o=$(python3 repair/build.py "$B" --out "$TMP/index.html" 2>&1) || fail build "$o"; echo "$o"
@@ -133,8 +140,7 @@ git -C "$ROOT" add -A -- workspace "discriminator-briefs-site/index.html" >/dev/
 if git -C "$ROOT" diff --cached --quiet; then
   echo "commit: nothing to commit"
 else
-  { echo "$B: $MSG"; echo; cat "$TMP/body.txt"; echo; echo "Co-Authored-By: $AX_COAUTHOR";
-    echo "Claude-Session: $AX_SESSION"; } > "$TMP/msg.txt"
+  { echo "$B: $MSG"; echo; cat "$TMP/body.txt"; echo; echo "$TRAILER"; } > "$TMP/msg.txt"
   git -C "$ROOT" commit -q -F "$TMP/msg.txt" || { restore; fail commit; }
   echo "commit: $(git -C "$ROOT" log -1 --format='%h %s') ($(git -C "$ROOT" rev-list --count HEAD) commits)"
 fi
@@ -158,7 +164,8 @@ else
 fi
 
 # ---- 6. outputs
-mkdir -p "$OUT"
+if ! mkdir -p "$OUT" 2>/dev/null || [[ ! -w "$OUT" ]]; then
+  echo "outputs skipped: $OUT is not writable (set AX_OUT; the ship itself is complete)"; exit $PUSHRC; fi
 cp index.html "$OUT/index.html.tmp" && mv "$OUT/index.html.tmp" "$OUT/index.html"
 git -C "$ROOT" bundle create "$TMP/repo.bundle" --all >/dev/null 2>&1 && mv "$TMP/repo.bundle" "$OUT/axbx-repo.bundle" || echo "outputs: bundle FAILED"
 LOCAL=$(python3 - "$WS" <<'PY'
@@ -177,5 +184,6 @@ if [[ -n "$LOCAL" ]]; then
   echo "$LOCAL" | tar -czf "$TMP/local.tgz" -C "$WS" -T - && mv "$TMP/local.tgz" "$OUT/axbx-local-only.tar.gz"
   LT="axbx-local-only.tar.gz $(tar -tzf "$OUT/axbx-local-only.tar.gz" | grep -vc '/$') files"
 else LT="axbx-local-only.tar.gz skipped (no local-only files on disk)"; fi
-echo "outputs: index.html sha256 $(sha256sum "$OUT/index.html" | cut -c1-12), axbx-repo.bundle $(du -h "$OUT/axbx-repo.bundle" | cut -f1), $LT"
+SHA256="sha256sum"; command -v sha256sum >/dev/null 2>&1 || SHA256="shasum -a 256"   # the Mac has shasum only
+echo "outputs: index.html sha256 $($SHA256 "$OUT/index.html" | cut -c1-12), axbx-repo.bundle $(du -h "$OUT/axbx-repo.bundle" | cut -f1), $LT"
 exit $PUSHRC

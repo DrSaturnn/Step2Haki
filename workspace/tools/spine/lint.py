@@ -17,6 +17,10 @@ item 15) before any reviewer runs. It catches the categories that drew most s148
               counts, durations, ages and cutoffs, the diagnosis named, the action chosen); hover text does not count
   reasons     (s148g, Jonathan 2026-10-20) a practice item without its three per-choice reasons (data-key-why,
               data-d1-why, data-d2-why); every brief merged or rewritten from s149 on writes them in its own S2
+  spacing     (s150 audit, 2026-10-23) a hover button (sp-pop) glued to the word before it: text or a closing tag
+              runs straight into the button, so the page reads "symptomsIn practice"; write +' '+ before the pop
+  pairs       (s150 audit, 2026-10-23) a Pairs with clause naming two titles ("<i>A</i> and <i>B</i>: ..."): the card
+              renderer makes a card for A whose description reads "And"; one title per clause
 
   python3 tools/spine/lint.py <brief dir> [--quiet]     one "lint <check>: ..." line per finding; exit 0 always
   python3 tools/spine/lint.py --page <index.html> [--check prose] [--md OUT]   the same checks over every brief of a page
@@ -309,13 +313,34 @@ def lint_reasons(brief_html):
     return ['reasons: %d of %d practice items lack data-key-why/data-d1-why/data-d2-why (%s)' % (len(miss), len(items), ', '.join(miss[:4]) + (' ...' if len(miss) > 4 else ''))]
 
 
+def lint_spacing(brief_html):
+    """a sp-pop button whose preceding visible character is not whitespace, with only closing tags in between"""
+    out = []
+    for m in re.finditer(r'<button type="button" class="sp-pop', brief_html):
+        tail = re.search(r'([^<>]*)((?:</[a-z0-9]+>)*)\Z', brief_html[max(0, m.start() - 400):m.start()])
+        if not tail or re.search(r'</(p|div|li|td|th|tr|table|ol|ul|figure|h[1-6])>', tail.group(2)):
+            continue   # after a closed block element the button starts its own line
+        txt = H.unescape(tail.group(1))
+        if txt and not txt[-1].isspace():
+            out.append('spacing: a hover button follows "%s" with no space; write +\' \'+ before it' % txt[-30:].strip())
+    return out
+
+
+def lint_pairs(brief_html):
+    m = re.search(r'<span class="lbl">Pairs with</span>(.*?)</div>', brief_html, re.S)
+    if not m:
+        return []
+    hits = re.findall(r'<i>([^<]+)</i>\s*(?:and|,|&amp;)\s*<i>([^<]+)</i>', m.group(1))
+    return ['pairs: one Pairs with clause names two titles (%s and %s); give each title its own clause' % h for h in hits]
+
+
 def lint(folder, facts_dir=None):
     out = []
     bh = os.path.join(folder, 'brief.html')
     if os.path.exists(bh):
         brief_html = open(bh, encoding='utf-8').read()
         out += lint_next_step(brief_html) + lint_alias(brief_html) + lint_threshold(brief_html) + lint_prose(brief_html) \
-            + lint_bold(brief_html) + lint_reasons(brief_html)
+            + lint_bold(brief_html) + lint_reasons(brief_html) + lint_spacing(brief_html) + lint_pairs(brief_html)
     try:
         cm = json.load(open(os.path.join(folder, 'claim_map.json'), encoding='utf-8'))
     except (OSError, ValueError):

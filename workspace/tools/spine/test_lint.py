@@ -136,5 +136,15 @@ try:
 finally:
     shutil.rmtree(d, ignore_errors=True)
 
+# ---- spacing and pairs (s150 audit, 2026-10-23)
+POP = '<button type="button" class="sp-pop" aria-expanded="false" aria-controls="x-pop-1">In practice</button>'
+expect('spacing: glued after a closing tag', len(L.lint_spacing('<b class="sp-f">an NSAID for symptoms</b>' + POP)) == 1)
+expect('spacing: glued after text', len(L.lint_spacing('flexed wrist; C5-C6' + POP)) == 1)
+expect('spacing: a space passes', L.lint_spacing('<b class="sp-f">an NSAID for symptoms</b> ' + POP) == [])
+expect('spacing: a button opening its cell passes', L.lint_spacing('<td>' + POP) == [])
+expect('spacing: after a closed figure passes', L.lint_spacing('awake play.</span></p></figure>\n' + POP) == [])
+PW = '<div class="pearls"><span class="lbl">Pairs with</span> %s</div>'
+expect('pairs: two titles in one clause', len(L.lint_pairs(PW % '<i>Slipped Capital Femoral Epiphysis</i> and <i>The Limping Child</i>: hips.')) == 1)
+expect('pairs: one title per clause passes', L.lint_pairs(PW % '<i>A</i>: one. <i>B</i>: two.') == [])
 print('test_lint: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)

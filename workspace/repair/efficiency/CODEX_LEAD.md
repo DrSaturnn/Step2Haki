@@ -4,6 +4,11 @@ Jonathan, 2026-10-21 (DECISIONS_DIGEST): "i want chatgpt to temporarily take ove
 usage with claude. So i want it able to reproduce the a whole brief on its own, of which you can audit and create
 specific intructions for chatgpt to follow." Model: GPT-6.1 Sol in Codex.
 
+Jonathan, 2026-10-23 (DECISIONS_DIGEST), after Claude's audit of s150: "ill have codex ship. make the needed changes for
+codex to ensure for the remaining batches. additionally ensure codex is able to author a new brief, as we will pick up
+with new psych questions to cover as well." From s150 on, Codex ships (section 5), runs the S8 audit itself in a fresh
+task (section 5 and CODEX_AUDIT.md), and authors new briefs (section 9). Claude audits only when Jonathan asks.
+
 This file lists only what differs when Codex leads. Everything else is the runbook (repair/efficiency/BATCH_RUNBOOK.md),
 unchanged: the steps S1 to S9, the standing calls (section 3), the self-check (section 4), the report (section 5), the
 reasons to stop and ask (section 6). Precedence is the runbook's: a dated DECISIONS_DIGEST line, then
@@ -121,24 +126,63 @@ Keep repair/efficiency/ledger_codex.csv, one row per Codex task:
 budget in WAVE.json applies to the sum of reviewer rows; the lead's rows are shown against max_lead_tokens. If you
 cannot read a task's tokens, write "unknown" and say so in the report; never estimate silently.
 
-## 5. Shipping (S8 and S9)
+## 5. S8 and S9: audit, present, ship (rewritten 2026-10-23: Codex ships)
 
-ship.sh needs a Claude session URL and an approval record that only the Claude approval hook writes when Jonathan
-says "ship" in a Claude chat. Codex does not change ship.sh, approval.py or any gate.
-- Codex runs S8 in full: verify_all.py (all READY), shots_all.py, sheets.py --approval, and the report (runbook
-  section 5) written to repair/sNN/REPORT.md, with the sheets committed beside it (public repo only if they carry no
-  vendor text; otherwise private repo). Send Jonathan the report.
-- Then rewrite State: "S8 presented by Codex; ship waits for a Claude chat." A Claude chat runs CODEX_AUDIT.md,
-  re-presents with approval.py present, and ships on Jonathan's "ship".
-- Changes Jonathan names after the report: apply, re-run S3 and S6 (and S7 if accuracy changes), update REPORT.md.
+S8, in this order:
+1. **Merge main first.** In both repos: `git fetch origin main` and merge origin/main into wip/sNN (rebuild the batch
+   and re-run verify_all if main changed the page). Do this before presenting: a merge after approval changes the
+   built page and voids the approval.
+2. **Audit in a fresh task.** A separate Codex task (GPT-6.1 Sol, xhigh), never the lead's own session, runs
+   repair/efficiency/CODEX_AUDIT.md on every brief of the batch and writes repair/sNN/AUDIT.md. The lead fixes each
+   defect it finds; a fix to brief text makes that brief's receipts stale, so the changed briefs get one follow-up
+   round (S7 rules) before present. Budget the audit task and that round in WAVE.json at launch (s150: the Claude
+   audit found 1 MED, 4 LOW and 4 display defects that three review rounds had passed).
+3. verify_all.py: all READY. Batch build, gate, render, vendor_scan, preflight (answered advisories only).
+4. shots_all.py on the final page, then sheets.py --approval --page <that page>. Read every phone sheet yourself
+   (rule 35). Commit the sheets to the private repo (local-only/local/sheets/sNN-approval/), never the public one.
+5. The changelog entry (repair/changelog/axlog.py; reader-facing; the s149 and s150 entries are the model).
+6. `python3 tools/hooks/approval.py present sNN <every approval sheet>`: it builds the page and binds the batch files,
+   the changelog entry, the page and the sheets (state in ~/.config/axbx/hooks on the Mac).
+7. Send Jonathan the report (runbook section 5, with the audit section) and the sheets, ending with: Reply "ship" to
+   publish, or name what to change. Rewrite State: "S8 presented by Codex; waiting for ship."
+
+Recording the approval (Codex has no prompt hook):
+- Only Jonathan's own reply approves. When his latest message to you is the plain word "ship" (optionally "ship sNN"),
+  relay that message verbatim through the same recorder Claude's hook uses:
+  ```
+  python3 -c 'import json,sys; print(json.dumps({"prompt": sys.argv[1], "session_id": "codex"}))' "<his reply, verbatim>" \
+    | python3 tools/hooks/approval.py hook
+  ```
+  It records the approval only under the hook's own test (a pending presentation, the plain word, the batch named if
+  several are pending) and prints "[approval hook] Approval recorded for sNN". Anything else ("ship it", "looks good",
+  "ship after X", a question) records nothing: apply the changes he names, re-run S3 and S6 (S7 if accuracy changed),
+  present again, and wait.
+- Never feed the recorder a message Jonathan did not send, never relay an older message, never relay for a batch you
+  did not present on this machine, and never create or edit files under ~/.config/axbx/hooks/approvals by hand.
+
+S9:
+1. `AX_LEAD=codex AX_OUT=<a scratch folder outside Documents> tools/ship.sh sNN "<message>"`. The trailer becomes
+   "Lead: Codex (GPT-6.1 Sol)"; the approval and READY gates are unchanged and must pass as they are. Never edit
+   ship.sh, approval.py, ready_gate.py or the gate to get past one: stop and report instead.
+2. ship.sh commits on the batch branch. With no token file it prints "push skipped: no token": then push with your
+   own credentials, `git push origin HEAD:main`, and push wip/sNN.
+3. Confirm the deploy: `curl -s "https://step2haki.vercel.app/version.json?t=$(date +%s)"` shows sNN (allow a few
+   minutes); if the network refuses, ask Jonathan to check.
+4. Private repo: commit the batch's local-only changes on wip/sNN, merge it into main, push both.
+5. The log commit: OPEN_WORK.md line, the batch file's S9 section, ledger_codex.csv rows, WAVE.json closed, the
+   handoff State ("No batch open", the ship commit and page sha) and the next launch prompt (runbook section 9).
+6. Mac copies, as the handoff lists them: STEP2HAKI_HANDOFF.md, index.html and axbx-repo.bundle into
+   ~/Documents/Step2Haki/ (`git bundle create ... --all`). No scratch files, tarballs or work folders in Documents.
+7. The claude.ai project's handoff copy is out of Codex's reach: list it as owed in the State (Claude or Jonathan
+   uploads it).
+8. Clean trees in both repos, then the closing message with the next launch prompt in its own code block.
 
 ## 6. Other Claude-only pieces
 
 - Site-layer pilots (runbook section 8 step 1) are private claude.ai artifacts: write the pilot as an HTML file under
   repair/pilots/<name>/ and tell Jonathan where it is (he opens it locally or from the branch).
-- Mac copies (handoff and Documents/Step2Haki): Codex has no Mac link; list them as owed in the State; Claude or
-  Jonathan does them.
-- The claude.ai project's handoff copy: Claude refreshes it on return.
+- Mac copies: Codex runs on the Mac and makes them at S9 (section 5). The claude.ai project's handoff copy stays owed
+  to Claude or Jonathan.
 - Questions to Jonathan follow runbook section 6: one question, multiple choice, with a recommendation.
 
 ## 7. Authoring: what has gone wrong before (read before S1 and S2)
@@ -208,7 +252,87 @@ mechanical checks passed):
     the layers rule (STANDING_DIRECTIONS "Layers, not totals") moves only supporting or guideline-only detail into
     hovers; board-keyed facts stay visible.
 
+Added 2026-10-23 from Claude's audit of s150 (1 MED, 4 LOW and 4 display defects that three Codex review rounds
+passed):
+28. **A space before every hover button.** Text or a closing tag followed directly by pop() or why() renders as
+    "symptomsIn practice". Write `+' '+POP`. s150: myositis rung 1, puncture rung 1, the brachial Erb row. lint now
+    flags it ("spacing").
+29. **One title per Pairs with clause.** The card renderer reads "<i>A</i> and <i>B</i>: text" as a card for A whose
+    description is "And". Carried tail lines count. s150: myositis. lint now flags it ("pairs").
+30. **A carried line follows the rebuilt body.** When the rebuild drops a drug, number or test from the body, every
+    carried line that still names it (explanations, reasons, tail) is re-sourced or reduced to the body's wording.
+    s150: a myositis explanation kept "an NSAID such as indomethacin" from the old brief after step 7 dropped the
+    agent; no fact or card supported it (the audit's MED).
+31. **Fact id letters follow the packet key.** Reviewers read b, u and v as board sources; give reference pages other
+    letters. s150: Scheuermann's b01, b02 and v01 to v09 were AFP and MSD pages.
+32. **A modifiability tag needs support.** Mark a trigger non-modifiable only when it is fixed (age, sex, delivery
+    events). s150: brachial "Maternal diabetes ... (non-modifiable)".
+33. **Bottom-line hedges.** The bottom line keeps the source's "about", "usually" or "may" on a number. s150: myositis
+    "after 2 to 4 weeks" for "about two to four weeks after injury".
+34. **Plain rung text.** A ladder rung states the action and its condition once, with no meta clause. s150: "Consider
+    surgical excision; persistent lesions may be considered after ..."; "... earlier referral is separate from the
+    timing of repair".
+35. **Read the sheets yourself before present.** The display reviewer reads crops; the lead looks at every phone sheet
+    for glued buttons, broken Pairs with cards, squeezed columns and study-mode leaks (the s150 defects were visible
+    on the sheets).
+
+## 7a. Open options (Jonathan has not decided)
+
+Found in the s150 consistency comparison (repair/s150/audit/RULES_PROPOSED.md items 35 to 38). Both ways are allowed
+today. Until Jonathan decides, build new and rebuilt briefs the way the s149 Claude builds do, and do not reopen a
+shipped brief for these alone:
+- Time course: plotted horizontal duration bars when the sources give durations (his standing preference for
+  horizontal duration timelines), text rows only when they do not. s150 used text rows throughout.
+- Clue table: caption "Clues that change the answer" (59 live briefs; s150 used "the next step"), column "Next best
+  step" (digest 2026-10-13; 49 older tables still say "Next move").
+- Links: a differential row whose diagnosis has a live brief carries a drawer to it, and a disease brief ends with Pairs
+  with (Scheuermann has neither).
+- Legacy tail blocks (Management and prognosis, Pearls, rule panels; 14 spine briefs keep them): leave them in place.
+
 ## 8. Handing back to Claude
 
 At every step end the State is current, the batch file holds every call, and both repos are pushed. Claude resumes
-with the restart line and reads repair/efficiency/CODEX_AUDIT.md before shipping anything Codex built or reviewed.
+with the restart line when Jonathan asks for it; since 2026-10-23 Codex ships its own batches (section 5).
+
+## 9. Authoring a new brief (added 2026-10-23; new psych questions)
+
+A new brief exists only when Jonathan names it (title, entry type, placement) in a launch prompt. Codex proposes; it
+never creates a brief he did not name, and never merges or retires one (runbook section 6).
+
+1. **Intake.** New board questions go through the board-brief skill (private claude/skills/board-brief/SKILL.md; run
+   its steps with the shell). Each question is saved to its owner's intake file, or, when no live brief owns it, to
+   repair/sources/s-intake__new_questions.md with a queue row (repair/intake/queue.csv) giving the proposed title,
+   entry type (disease, drug or hub), system, lens and psych family group. Keep every UWorld QID the AnKing cards
+   point to. Report the proposals: a general title covering as wide a topic as is reasonable (STANDING_DIRECTIONS,
+   brief titles), and the live briefs that would point to it. Amendments to live briefs wait for their next batch.
+2. **Launch** (section 2 item 4) with the briefs Jonathan names. Budget the S8 audit task and its follow-up round.
+3. **The worked example is s148e** (three new psych briefs): repair/s148e/S148E.md, and the private folders
+   repair/migration/psych/TCA/spine (drug), TOXHUB/spine (hub) and PDB/spine (disease). Goldens by entry type: disease
+   mdd; drug lithium-effects or antipsych-effects; hub voices. Copy the current code pattern (reasons, bold bottom
+   line, First step pairing) from the s149 and s150 builds (section 2a).
+4. **Folder:** repair/migration/psych/<NEW CODE>/spine/ (a code not used under psych/), committed to the private repo.
+5. **S1 by hand.** board_index.py reaches only briefs on the page: add the brief's terms to
+   repair/efficiency/board_terms.json (narrow ones; "toxicity" alone pulled 146 cards in s148e), rebuild the index,
+   then search the local UWorld files, the NBME forms, the intake files and cards_search.py yourself. boards.md lists
+   every testable claim with its Step 2 answer and source; cards.md and cards_disposition.json as usual
+   (card_dispositions.py reads the base page below).
+6. **S2 build.** build.py writes the shell first, then the spine (repair/migration/spine/newspine.py):
+   - newspine.Bank: authored items only, 30 to 40 words in scannable lines, original (never a retold UWorld
+     vignette), three choices from the differential, `why=(key, d1, d2)` on every item (Bank.check() fails without
+     them); item ids come from tools/idgen.py (never reuse or invent one);
+   - newspine.shell(...) and write_shell(here, bid, html, after, nav_after, nav_title) write 05_<id>_new.json, one
+     new_brief op (tools/EDITS.md) placed in page order after the brief it follows, its sidebar link in the right
+     psych family group (Psychosis and mood; Anxiety, somatic and sexual; Cognition, substances and medical causes;
+     Child and adolescent; Medications; Safety and violence), the section count rising by one; a hub also gets its
+     Presentations link (40_presentations.json, count plus one; the gate fails a hub missing from Presentations);
+   - Spine.finish builds the body on the working page plus every pending shell (tools/spine/basepage.py) and writes
+     10_<id>_spine.json (replace_brief). The READY gate refuses a spine body inside a new_brief op.
+   - Copy both json files into repair/sNN/ (05 sorts before 10, so the shell applies first).
+7. **Live briefs that point to it.** A live row, hover or drawer that the new brief now owns becomes a drawer to it
+   (one owner; nothing deleted; runbook section 3, decision D). Those briefs are edited in the same batch and reviewed
+   on their changed lines only (review_packet.py --since their live text). Move the QIDs and intake records to the new
+   owner in queue.csv and misses.csv.
+8. **Reviews.** New briefs in full, with packets built against the batch build (review_packet.py --page <the batch
+   build>); the four roles as usual (section 3).
+9. **Report and changelog.** The changelog entry names each new brief as new. The report lists each new brief's title,
+   entry type, placement, word and claim counts, and every live brief changed to point to it.

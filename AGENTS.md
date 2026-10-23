@@ -23,7 +23,9 @@ Restart line (Jonathan pastes it to continue an open batch):
 `Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.`
 For Codex it means: take the lock per CODEX_LEAD.md section 0, then follow the runbook from the State's step.
 A launch prompt (a new batch id) means: CODEX_LEAD.md section 2 item 4 (create wip/sNN in both repos), then section 2a
-(which build to copy) and section 7 (failure modes, read before S1).
+(which build to copy) and section 7 (failure modes, read before S1); a launch that names new briefs also follows
+section 9. New board questions with no batch open go through the board-brief skill (intake only; it never edits the
+page).
 
 Hard rules, always:
 - Accuracy over speed. Every fact comes from a board source (NBME, UWorld, AnKing) or a primary source fetched that day
@@ -31,8 +33,10 @@ Hard rules, always:
 - No vendor text (UWorld, NBME, AnKing wording) in this public repo. The private repo DrSaturnn/Step2Haki-private holds
   the sources and must never be copied into this one.
 - No emojis, no em dashes. Commit as DrSaturnn with the noreply email. Never print a token.
-- Never change ship.sh, the gate, approval.py or any check to make work pass. Codex does not ship (CODEX_LEAD.md
-  section 5).
+- Never change ship.sh, the gate, approval.py or any check to make work pass. Since 2026-10-23 Codex ships its own
+  batches, and only after Jonathan replies with the plain word "ship" to the presented screenshots (CODEX_LEAD.md
+  section 5: S8 audit in a fresh task, present, relay his reply verbatim, `AX_LEAD=codex tools/ship.sh`).
+- A new brief is authored only when Jonathan names it in a launch prompt (CODEX_LEAD.md section 9).
 - Stop and ask Jonathan only for the reasons in the runbook's section 6.
 
 ## Project map (added 2026-10-22)
@@ -40,7 +44,7 @@ Hard rules, always:
 Public repo (DrSaturnn/Step2Haki):
 - `workspace/index.html`: the working page; `discriminator-briefs-site/index.html`: the deployed copy (ship.sh writes
   both). Briefs are `<div class="brief" id="<brief id>">` blocks; the practice bank is `ol.bank` inside each.
-- `workspace/tools/`: page tooling. `ship.sh` (Claude only), `gate.py`, `render.js`, `preflight.py`,
+- `workspace/tools/`: page tooling. `ship.sh` (Claude, or Codex with AX_LEAD=codex), `gate.py`, `render.js`, `preflight.py`,
   `vendor_scan.py`, `legib_audit.py`, `apply_edits.py` (edits files; see `tools/EDITS.md`).
 - `workspace/tools/spine/`: the brief pipeline. Build: `outline_render.py` (rendering, incl. the 5a workup `w5a`),
   `dump_lines.py` (live lines), `facts_from_spec.py`, `quote_check.py`, `fetch.py` (the only way to open a web

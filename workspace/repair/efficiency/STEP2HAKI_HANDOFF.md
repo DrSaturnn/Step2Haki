@@ -14,14 +14,16 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **Batch:** s150 open, Phase 2 musculoskeletal C, pediatric: myositis-ossificans, scheuermann,
   bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden scfe; all five disease, peds lens.
-- **Step:** S8 re-presented by Claude after the Codex audit (chat 1, 2026-10-22): all five READY; approval.py present
-  s150 (34 sheets, local/sheets/s150-approval; page sha 1b2c138e1bc5). Waiting for Jonathan's "ship" IN THIS CHAT (the
-  approval record lives in this container). Audit record: S150.md "Codex audit"; rule proposals
-  repair/s150/audit/RULES_PROPOSED.md (Jonathan to choose before Codex's next launch). Changelog entry 150 added.
+- **Step:** S8 done; audited by Claude (2026-10-22, S150.md "Codex audit"; report repair/s150/audit/REPORT_AUDIT.md).
+  All five READY; final page sha256 1b2c138e1bc5. Jonathan 2026-10-23: Codex ships. Next (Codex, on the Mac, per
+  CODEX_LEAD.md section 5): take the lock; restore local-only (cp -rn; the 34 approval sheets are in
+  local/sheets/s150-approval); main has not moved since the branch (no merge needed; check again); rebuild s150 and
+  confirm the page sha 1b2c138e1bc5; skip the S8 audit task (Claude's audit stands); approval.py present s150 with the
+  34 sheets; send Jonathan REPORT_AUDIT.md and the sheets; on his plain "ship", relay it and run
+  AX_LEAD=codex tools/ship.sh s150; then S9. Claude's own presentation in its container is void.
 - **Budget/spend:** caps 26 agents, 405 calls, 10M tokens. Codex 20 agents, 289 calls (tokens unknown); Claude 6
   agents, 73 calls, 2.70M tokens. Batch 26 of 26 agents, 362 of 405 calls. Claude lead 44.1M (ledger_lead.csv).
-- **Lead:** Claude, since 2026-10-22 23:05 EDT, chat 1 (S8 audit per CODEX_AUDIT.md; Jonathan: "Take the lead lock").
-  Codex lock (chat 3, S8) released by this takeover.
+- **Lead:** none; open for Codex (Jonathan 2026-10-23: "ill have codex ship"). Claude's audit lock released.
 - **Branches:** wip/s150 in both repos. Local public /Users/jmontsfit/Documents/Step2Haki/s150-public;
   private /Users/jmontsfit/Documents/Step2Haki/s150-evidence (selective checkout; contains claude mirrors and selected
   local-only evidence). Sources restored only into gitignored workspace paths. Record repair/s150/S150.md.
@@ -55,13 +57,18 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## Next launch prompt (paste into a fresh chat)
 
+New psych questions first (no batch needed; intake only, CODEX_LEAD.md section 9 step 1):
 ```
-Step2Haki: launch batch s150 (Phase 2, musculoskeletal C, pediatric) per claude/BATCH_RUNBOOK.md, Codex leading per repair/efficiency/CODEX_LEAD.md. Briefs: myositis-ossificans, scheuermann, bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden: scfe. Brief set rules of 2026-10-20 apply (three reasons per item, bold bottom line, First step pairing). Budget for the whole batch: 25 agents, 220 API calls, 10M tokens; lead 230M tokens. Method: s148 with the efficiency patch; Codex stops at S8 and a Claude chat audits and ships.
+Step2Haki: intake these board questions per the board-brief skill and CODEX_LEAD.md section 9 (propose new briefs; do not build).
 ```
 
-Budget basis (s149 measured): reviewers about 4 agents, 37 calls, 1.7M tokens per brief; lead about 47M per brief.
-After s150: the plan's remaining 107 unconverted briefs (BATCHES_S151_S160.md, private repo); its batch numbers
-shift by one.
+Then the next numbered batch from the plan (BATCHES_S151_S160.md, private), or a new-brief batch naming the briefs
+Jonathan chose from the intake proposals (title, entry type, placement):
+```
+Step2Haki: launch batch s151 (Phase 2, cardiovascular A) per claude/BATCH_RUNBOOK.md, Codex leading and shipping per repair/efficiency/CODEX_LEAD.md. Briefs: chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. Brief set rules of 2026-10-20 apply (three reasons per item, bold bottom line, First step pairing). Budget for the whole batch, the S8 audit task and its follow-up round included: 37 agents, 480 API calls, 17.5M tokens; lead 330M tokens. Method: s148 with the efficiency patch; Codex audits at S8 in a fresh task and ships on "ship".
+```
+Budget basis: Codex s150 reviewers 4 agents and 58 calls per brief; the audit task plus a follow-up round about 2
+agents and 40 calls per batch (s150: Claude 6 agents, 73 calls). Tokens unmeasured for Codex; Jonathan sets them.
 
 ## After s141
 

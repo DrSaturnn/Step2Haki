@@ -1,11 +1,19 @@
-# Claude's audit of Codex-led work (run on return, before any ship)
+# The S8 audit of Codex-led work (before any ship)
 
-Written 2026-10-21 with CODEX_LEAD.md. Accuracy is non-negotiable (Jonathan): nothing Codex built or reviewed ships
-until this audit passes. Record every finding in the batch file under "Codex audit", by kind, so CODEX_LEAD.md section
-7 can be tightened.
+Written 2026-10-21 with CODEX_LEAD.md; run by Claude for s150 (2026-10-22, record in repair/s150/S150.md "Codex
+audit"). Since 2026-10-23 (Jonathan: "ill have codex ship") it is run at S8 by a fresh Codex audit task (GPT-6.1 Sol,
+xhigh), never the lead's own session, before approval.py present (CODEX_LEAD.md section 5). Claude runs it only when
+Jonathan asks. Accuracy is non-negotiable (Jonathan): nothing ships until this audit passes. The auditor writes
+repair/sNN/AUDIT.md with every finding by kind; the lead fixes or answers each one and copies the summary into the
+batch file under "Audit", so CODEX_LEAD.md section 7 can be tightened.
 
-1. **Lock and state.** Read the State and the Lead line; take the lock (rewrite the Lead line, push alone). Check both
-   repos are pushed and the batch file records every step Codex ran.
+What the s150 audit caught that three review rounds passed (look for these first): a carried explanation naming a drug
+the rebuilt body dropped (MED); a modifiability tag the quote did not support; an explanation implying the commonest
+organism was only a skin pathogen; a bottom line that dropped the source's "about"; hover buttons glued to the word
+before them; a Pairs with card reading "And"; meta-worded ladder rungs.
+
+1. **State.** Read the State and the batch file. Check both repos are pushed and the batch file records every step the
+   lead ran. (A Claude auditor also takes the lock: rewrite the Lead line, push alone.)
 2. **Mechanical, from scratch.** For every brief Codex built or changed: rebuild (build.py), facts_from_spec.py,
    quote_check.py (100% verified, 0 relayed unless disclosed), card_dispositions.py check, verify --mech, the batch build
    and gate. Any difference from what Codex recorded is a finding.
@@ -17,8 +25,9 @@ until this audit passes. Record every finding in the batch file under "Codex aud
    honest (spot-check 10 "covered" against the claim text and every "scope").
 5. **Bank.** ids unchanged; version bumps where a key or choice changed; reasons on every item and none contradicting
    the body.
-6. **Reviews.** If Codex ran S4 or S7, re-run the acc lane with the Claude lean-reviewer on each brief Codex built
-   (budget permitting; ask Jonathan when it does not fit), and compare: what Codex's reviewers missed is a finding.
+6. **Reviews.** Read each brief's latest acc receipt against the brief: any claim the auditor finds unsupported that
+   the receipt passed is a finding against the review, recorded by role. (A Claude auditor, when Jonathan asks for one,
+   instead re-runs the acc lane with the Claude lean-reviewer on each brief, budget permitting.)
 7. **Display.** shots_all.py and the phone sheets: no squeezed columns, masks intact in study mode.
 8. **Consistency across authors** (Jonathan 2026-10-22: Claude evaluates Codex's final briefs "for any additional
    considerations regarding specific Codex rules in order to maintain consistency across brief authorships"). Compare
@@ -42,5 +51,6 @@ until this audit passes. Record every finding in the batch file under "Codex aud
    fixed one way, into a proposed numbered addition to CODEX_LEAD.md section 7 (the s149 items 19 to 27 are the
    model: the rule, then the case that showed it). Present them to Jonathan in the report as options with a
    recommendation; write the ones he approves into CODEX_LEAD.md and a digest line, before Codex's next launch.
-10. **Report.** Re-present with approval.py present only after 1 to 8 pass; the report adds a "Codex audit" section
-   (findings by kind, what was fixed, the consistency comparison, the proposed rules). Then ship on "ship".
+10. **Report.** Present with approval.py present only after 1 to 8 pass and every fix has had its follow-up round; the
+   report adds an "Audit" section (findings by kind, what was fixed, the consistency comparison, the proposed rules).
+   Then ship on Jonathan's plain "ship" (CODEX_LEAD.md section 5).
