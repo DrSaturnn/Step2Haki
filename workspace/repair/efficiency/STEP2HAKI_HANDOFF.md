@@ -14,15 +14,15 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **Batch:** s150 open, Phase 2 musculoskeletal C, pediatric: myositis-ossificans, scheuermann,
   bs-puncture-osteomyelitis, bs-torticollis, bs-brachial-plexus. Golden scfe; all five disease, peds lens.
-- **Step:** S6 self-check complete; starting S7 round 2 on final source-resolved builds.
+- **Step:** S6 self-check complete; S7 round 2 complete; 18 PASS and 2 MED findings, preparing corrections.
   All five full mechanical checks and combined gate/render/vendor checks pass. Current computed contrast is zero
   across all 12 required combinations, and current phone/study captures are readable. The extra full-page pixel
   audit is still active; assess its raw output before closing S7, without claiming an in-progress check passed.
   Jonathan approved the source publishers and 300 calls. Three clinical source gaps now have direct references;
   S7 independently judges scope, including the torticollis orthopedic-reassessment inference. No brief READY.
-- **Budget/spend:** 25 reviewer agents, 300 calls, 10M tokens; lead 230M. Used reviewers 8 agents, 136 calls;
-  reviewer and lead tokens unknown (Codex usage display unavailable). S7's prescribed 8 lanes plan 142 calls;
-  164 calls remain. ledger_codex.csv records actual per-lane counts and unknown tokens.
+- **Budget/spend:** 25 reviewer agents, 300 calls, 10M tokens; lead 230M. Used reviewers 16 agents, 247 calls;
+  reviewer and lead tokens unknown (Codex usage display unavailable). R2 has 18 PASS and 2 MED findings accepted for correction;
+  53 calls remain. Launch future lane caps only when they fit the actual remaining budget. ledger_codex.csv records actual per-lane counts and unknown tokens.
 - **Lead:** Codex, since 2026-10-22, chat 2 (S4 continuation). Original lock bc5cd1288547; continuation lock committed and pushed alone before review work.
 - **Branches:** wip/s150 in both repos. Local public /Users/jmontsfit/Documents/Step2Haki/s150-public;
   private /Users/jmontsfit/Documents/Step2Haki/s150-evidence (selective checkout; contains claude mirrors and selected

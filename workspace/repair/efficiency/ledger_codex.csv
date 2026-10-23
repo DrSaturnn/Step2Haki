@@ -8,3 +8,11 @@ date,wave,task,role,model,reasoning,input_tokens,output_tokens,note
 2026-10-22,s150,r1-flags-B,flags,GPT-6.1 Sol,high,unknown,unknown,Fresh context; 11 counted calls; receipts saved; usage not exposed
 2026-10-22,s150,r1-display-A,display,GPT-6.1 Sol,medium,unknown,unknown,Fresh context; 23 counted calls; receipts saved; usage not exposed
 2026-10-22,s150,r1-display-B,display,GPT-6.1 Sol,medium,unknown,unknown,Fresh context; 16 counted calls; receipts saved; usage not exposed
+2026-10-22,s150,r2-acc-A,acc,GPT-6.1 Sol,xhigh,unknown,unknown,Fresh context; 19 counted calls; receipts saved; usage not exposed
+2026-10-22,s150,r2-acc-B,acc,GPT-6.1 Sol,xhigh,unknown,unknown,Fresh context; 12 counted calls; receipts saved; usage not exposed
+2026-10-22,s150,r2-read-A,read,GPT-6.1 Sol,high,unknown,unknown,Fresh context; 11 counted calls; receipts saved; usage not exposed
+2026-10-22,s150,r2-read-B,read,GPT-6.1 Sol,high,unknown,unknown,Fresh context; 9 counted calls; receipts saved; usage not exposed
+2026-10-22,s150,r2-flags-A,flags,GPT-6.1 Sol,high,unknown,unknown,Fresh context; 14 counted calls; receipts saved; usage not exposed
+2026-10-22,s150,r2-flags-B,flags,GPT-6.1 Sol,high,unknown,unknown,Fresh context; 11 counted calls; receipts saved; usage not exposed
+2026-10-22,s150,r2-display-A,display,GPT-6.1 Sol,medium,unknown,unknown,Fresh context; 20 counted calls; receipts saved; usage not exposed
+2026-10-22,s150,r2-display-B,display,GPT-6.1 Sol,medium,unknown,unknown,Fresh context; 15 counted calls; receipts saved; usage not exposed
