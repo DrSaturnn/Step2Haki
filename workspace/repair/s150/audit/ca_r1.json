@@ -1,0 +1,41 @@
+{
+ "batch": "s150",
+ "plan_step": "s150",
+ "round": 1,
+ "context": "Claude audit of Codex-led batch s150 (CODEX_AUDIT item 6): an independent accuracy review of five pediatric musculoskeletal disease briefs Codex built (golden SCFE; three reasons per item, bold bottom line, First step pairing). Judge the brief as built; do not assume an earlier review was right",
+ "out": "repair/efficiency/lanes/s150/ca",
+ "packets": "repair/migration/spine/packets/s150/ca",
+ "sheets": "local/sheets/s150-r1",
+ "types": {
+  "myositis-ossificans": "disease, pediatric lens",
+  "scheuermann": "disease, pediatric lens",
+  "bs-puncture-osteomyelitis": "disease, pediatric lens",
+  "bs-torticollis": "disease, pediatric lens",
+  "bs-brachial-plexus": "disease, pediatric lens"
+ },
+ "notes": {
+  "acc": [
+   "Packet limits: search facts.json for a fact's full quote before calling a claim unsupported (line_sources-style clipping can shorten quotes). Facts with ids L## are the old live brief's lines: valid for content carried unchanged; a new or changed clinical claim (a number, a threshold, a next step, a treatment line) cited only to L facts is a finding unless a board or reference fact also states it.",
+   "Scheuermann has no disease-specific board source; its claims rest on fetched references. Where a reference differs from what Step 2 rewards, the brief must teach the board answer and put the difference in an In practice hover."
+  ]
+ },
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "myositis-ossificans",
+    "scheuermann",
+    "bs-puncture-osteomyelitis"
+   ]
+  },
+  {
+   "part": "acc",
+   "group": "B",
+   "briefs": [
+    "bs-torticollis",
+    "bs-brachial-plexus"
+   ]
+  }
+ ]
+}

@@ -11,7 +11,7 @@
   "wording-fix"
  ],
  "max_agents": 25,
- "max_calls": 300,
+ "max_calls": 350,
  "max_tokens": 10000000,
  "set_by": "Jonathan, s150 launch prompt 2026-10-22",
  "previous": {
@@ -19,7 +19,7 @@
   "note": "s149 closed after ship 2026-10-22; main 9b56c79, page eb266519ba12"
  },
  "opened": "2026-10-22 12:52 UTC",
- "note": "Codex leads; independent Codex review lanes; stop at S8 for Claude audit and ship. Jonathan approved reviewer calls 220 to 300 and the prepared AAOS/OrthoInfo, AAPMR and POSNA reference-domain patch on 2026-10-22.",
+ "note": "Codex leads; independent Codex review lanes; stop at S8 for Claude audit and ship. Jonathan approved reviewer calls 220 to 300 and the prepared AAOS/OrthoInfo, AAPMR and POSNA reference-domain patch on 2026-10-22. Claude audit (2026-10-22 23:10 EDT): Jonathan approved +50 reviewer calls (300 to 350) for the CODEX_AUDIT item 6 accuracy re-review; agents 25 and tokens 10M unchanged. Codex used 20 agents and 289 calls (ledger_codex.csv, not counted by the gate).",
  "batch_budgets": {
   "s138": {
    "agents": 20,
