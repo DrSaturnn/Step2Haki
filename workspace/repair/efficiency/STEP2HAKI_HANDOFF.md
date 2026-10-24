@@ -16,11 +16,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   (hub, after delirium), Eating Disorders (disease) and Defense Mechanisms (lookup), both in Anxiety, somatic and
   sexual. Additions: suicide-risk (CSF 5-HIAA), substance (alcohol use disorder recognition), disruptive-behavior
   (reactive attachment). Record: repair/s150c/S150C.md. Evidence: 2026-10-23b intake (private).
-- **Step:** S7 done: all READY (chat 3, 2026-10-24). All eight briefs READY (verify_all). Rounds: r1 32 receipts,
-  r2 20 (dementia, eating-disorders, defense-mechanisms, disruptive-behavior, substance), r3 4 (defense-mechanisms).
-  Next: S8 in a fresh chat: the independent S8 audit (in the launch budget) and its follow-up, then verify_all,
-  shots_all and sheets --approval, approval.py present, the report (batch file S4 to S7 sections hold every call,
-  finding and reviewer miss). s151 merges: whichever ships second merges main and re-verifies.
+- **Step:** S8 in progress (chat 4, 2026-10-24). Done: merge check (main unchanged), from-scratch reproduction (facts and
+  builds identical twice), verify_all 8 READY, running-page pointer check (34 drawers, all Pairs with blocks), gate,
+  render, vendor, preflight (2 answered P3). Independent audit: three fresh Opus acc lanes (repair/efficiency/lanes/
+  s150c/audit); C (three amended) PASS; A (dementia) and B (eating-disorders, defense-mechanisms) running. Then any
+  fixes and a follow-up round, shots_all, sheets --approval, approval.py present, the report. Record: S150C.md S8.
 - **Budget/spend:** 30 agents, 400 calls, 15M reviewer tokens; lead 250M. Spent 22 agents, 208 calls, 8.19M after S7 (8 agents, 192 calls left).
 - **Lead:** Claude, since 2026-10-24 02:25, chat 4 (S8). Chat 3 (from 2026-10-24 01:10) finished at S7. Chat 4 attached the public
   repo; attaching DrSaturnn/Step2Haki-private was refused by the session's permission check, so S8 waits on it. Hooks reinstalled in
