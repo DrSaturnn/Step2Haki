@@ -2,6 +2,21 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-24 s151b: s151b: new briefs Obsessive-Compulsive and Related Disorders; Decision-Making Capacity and Informed Consent
+
+```
+Page: 185 briefs, 2217 items -> 187 briefs, 2230 items
+Briefs added (2):
+  - capacity: Decision-Making Capacity and Informed Consent (6 items)
+  - ocd: Obsessive-Compulsive and Related Disorders (7 items)
+Other page changes (nav, headers, scripts): +873 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 187 briefs, 2230 items (349 with reasons), 22 scripts, 39 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 187 | bankwraps 187 | mcq 2230 (reasons 349) (axCheck 2230, reveal-only 0) | malformed 0 | crit gridded 156/157 | vignette gridded 64/64 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.013%)
+```
+
 ## 2026-10-24 s150e: s150e: six psych briefs patched from new board questions (sz-psychosocial, cluster-b, substance, peds-sleep, ssri-effects, panic)
 
 ```
