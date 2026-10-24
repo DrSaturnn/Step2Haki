@@ -2,6 +2,26 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-24 s150d: psych-medical renamed and tile removed; disruptive-behavior time frames table
+
+```
+Page: 185 briefs, 2217 items -> 185 briefs, 2217 items
+Briefs changed (7):
+  - parkinson (Parkinson Disease and Parkinsonism): prose edited (-6 chars)
+  - psychosis-duration (Psychosis): prose edited (-2 chars)
+  - voices (Hears Voices or Holds Odd Beliefs): prose edited (-6 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (-2 chars)
+  - somatic (Somatic Symptom and Related Disorders): prose edited (-2 chars)
+  - psych-medical (Medication- and Illness-Induced Psychiatric Disorders): prose edited (-5372 chars)
+  - disruptive-behavior (Disruptive Behavior in a Child): prose edited (+1137 chars)
+Other page changes (nav, headers, scripts): +526 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 185 briefs, 2217 items (336 with reasons), 22 scripts, 39 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 185 | bankwraps 185 | mcq 2217 (reasons 336) (axCheck 2217, reveal-only 0) | malformed 0 | crit gridded 154/155 | vignette gridded 64/64 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.013%)
+```
+
 ## 2026-10-24 s150c: s150c: dementia hub, eating disorders, defense mechanisms; suicide-risk, substance, disruptive-behavior additions
 
 ```
