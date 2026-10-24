@@ -18,7 +18,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   s150e). Batch file repair/s150e/S150E.md. Branch wip/s150e in both repos (private: main plus wip/s150c merged).
 - **Step: S3 done** (all six MECHANICAL PASS; batch page gate PASS; squeeze 0; vendor 0). Next: S4 round 1, changed
   lines only (acc, read, flags; no display). Packets with --since <folder>/baseline_brief_text_s150e.txt; plan in the
-  batch file's last section. Spend: reviewers 0 of 12 agents, 0 of 220 calls; lead chat 1 not yet recorded.
+  batch file's last section. Spend: reviewers 0 of 12 agents, 0 of 220 calls; lead chat 1 24.3M of 150M (ledger_lead.csv).
 - **Restore for s150e:** clone both repos, check out wip/s150e in each, cp -rn the private local-only into workspace,
   rebuild the batch page with `python3 repair/build.py s150e --out local/s150e/index.html`.
 - **Token rules (2026-10-24):** no screenshots in content batches (approval binds the report, batch and page; READY
