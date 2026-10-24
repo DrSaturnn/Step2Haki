@@ -2,6 +2,25 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-24 s150e: s150e: six psych briefs patched from new board questions (sz-psychosocial, cluster-b, substance, peds-sleep, ssri-effects, panic)
+
+```
+Page: 185 briefs, 2217 items -> 185 briefs, 2217 items
+Briefs changed (6):
+  - peds-sleep (Sleep Problems): prose edited (+242 chars)
+  - sz-psychosocial (Schizophrenia: Long-Term Care): prose edited (+207 chars)
+  - cluster-b (Cluster B Personality Disorders): prose edited (+132 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (+813 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+373 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (+538 chars)
+Other page changes (nav, headers, scripts): +834 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 185 briefs, 2217 items (336 with reasons), 22 scripts, 39 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 185 | bankwraps 185 | mcq 2217 (reasons 336) (axCheck 2217, reveal-only 0) | malformed 0 | crit gridded 154/155 | vignette gridded 64/64 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.013%)
+```
+
 ## 2026-10-24 s150d: psych-medical renamed and tile removed; disruptive-behavior time frames table
 
 ```
