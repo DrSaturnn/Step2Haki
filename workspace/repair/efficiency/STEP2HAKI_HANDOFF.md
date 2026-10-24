@@ -12,13 +12,16 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **s151b OPEN (Claude lead), step S1.** Two new briefs: Obsessive-Compulsive and Related Disorders (disease; Psychiatry,
-  Anxiety, somatic and sexual) and Decision-Making Capacity and Informed Consent (lookup; Preventive & Ethics after
-  Adolescent Confidentiality; tags fm psych). Launch decisions in DECISIONS_DIGEST 2026-10-24 s151b. Budget (whole
-  batch, independent S8 audit included): 16 reviewer agents, 240 calls, 10M tokens; lead 120M (WAVE.json s151b).
-  Branch wip/s151b in both repos (public from a6006ac, private from 98ea73a). Batch file repair/s151b/S151B.md.
-  Spend: reviewers 0; lead chat 1 in progress. Hooks live (test_hooks 104/104; no-model probe refused); start-up
-  context 128,562.
+- **s151b OPEN (Claude lead): S3 done; next S4 (review round 1) in a fresh chat** with the restart line. Two new
+  briefs: ocd, Obsessive-Compulsive and Related Disorders (disease; after panic in Anxiety, somatic and sexual; folder
+  repair/migration/psych/OCD/spine) and capacity, Decision-Making Capacity and Informed Consent (lookup; Preventive &
+  Ethics after Adolescent Confidentiality; folder repair/migration/fm/CAP/spine). Launch decisions in DECISIONS_DIGEST
+  2026-10-24 s151b. Batch file repair/s151b/S151B.md (S1 to S3, calls 1 to 12, S4 notes). Budget (whole batch,
+  independent S8 audit included): 16 reviewer agents, 240 calls, 10M tokens; lead 120M (WAVE.json s151b). Branch
+  wip/s151b in both repos (public from a6006ac; private 1047b97 holds the brief folders and web cache). Spend:
+  reviewers 0; lead chat 1 31.1M (ledger_lead.csv). Both briefs MECHANICAL PASS; batch page gate, render, preflight,
+  vendor, squeeze and pointer checks clean. Card dispositions: rerun repair/migration/spine/set_dispositions_s151b.py
+  after any build change.
 - **s150e shipped** 2026-10-24 13:45 EDT on Jonathan's "ship": db03746 (main, pushed by hand; no
   token here), page sha256 43a61f6532c1. Six psych briefs patched from the 2026-10-23 and 2026-10-24 intake proposals;
   record repair/s150e/S150E.md. First batch on the patch pipeline: reviewers 6 of 12 agents, 20 of 220 calls, 0.46M of
