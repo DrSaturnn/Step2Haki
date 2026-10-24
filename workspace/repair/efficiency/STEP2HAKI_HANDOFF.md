@@ -12,6 +12,10 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
+- **Token rules (2026-10-24):** no screenshots in content batches (approval binds the report, batch and page; READY
+  needs acc, read, flags); small additions reviewed on changed lines only; one batch per chat. Runbook "Token rules".
+  Owed by Jonathan: turn off Figma, Vercel and the healthcare plugin for this project (start-up context 193K against a
+  130K baseline).
 - **s150d shipped** 2026-10-24 11:05 EDT on Jonathan's "ship": commit 0fa5d5f (main, by hand). psych-medical is now
   "Medication- and Illness-Induced Psychiatric Disorders" (tile removed); disruptive-behavior has a Time frames table.
   Record repair/s150d/S150D.md. Its private folder changes join the owed files below.

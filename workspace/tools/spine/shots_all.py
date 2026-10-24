@@ -20,6 +20,20 @@ def main(argv):
     if len(argv) < 3:
         sys.exit(__doc__.strip().splitlines()[3].strip())
     import shots
+    # s150c: shots.py's default 30 s Playwright timeout killed tall desktop captures; every page opened here gets 240 s.
+    # Patched here, not in shots.py (Jonathan 2026-10-24: no scratch wrappers)
+    from playwright.sync_api._generated import Browser, BrowserContext
+    for cls in (Browser, BrowserContext):
+        if getattr(cls.new_page, '_ax240', False):
+            continue
+        orig = cls.new_page
+
+        def np(self, *a, _o=orig, **k):
+            pg = _o(self, *a, **k)
+            pg.set_default_timeout(240000)
+            return pg
+        np._ax240 = True
+        cls.new_page = np
     base = [a for a in argv if a not in ('--phone', '--study', '--dark')]
     for flags, name in MODES:
         print('shots_all: %s' % name, flush=True)

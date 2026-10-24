@@ -142,6 +142,7 @@ def main():
                     ctx.add_init_script("try{%s%s}catch(e){}" % ("localStorage.setItem('ax-theme','%s');" % a.theme if a.theme else '',
                                                                  "localStorage.setItem('ax-accent','%s');" % a.accent if a.accent else ''))
                 pg = ctx.new_page()
+                pg.set_default_timeout(240000)   # s150c: 30 s screenshot timeouts on tall pages (Jonathan 2026-10-24: no wrappers)
                 pg.goto('file://' + os.path.abspath(a.page) + '#' + bids[0]); pg.wait_for_timeout(2500)
                 if a.css:
                     pg.add_style_tag(content=open(a.css, encoding='utf-8').read()); pg.wait_for_timeout(300)

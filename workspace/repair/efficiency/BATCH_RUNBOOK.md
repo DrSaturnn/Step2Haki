@@ -32,6 +32,21 @@ This runbook sits under DECISIONS_DIGEST, STANDING_DIRECTIONS and the plan (clau
 
 **The paste step** (Jonathan 2026-10-17: "always give me the paste step"): every message that stops a chat for a restart ends with the exact line to paste, alone in its own code block, so it can be copied in one tap; the same holds for the next launch prompt at a batch close.
 
+**Token rules** (Jonathan 2026-10-24: "no screenshots remove the bind needing screenshots"; "for briefs with small
+additions, no need to recheck/reprove the whole brief just the changes"):
+- No screenshots in a content batch: no display reviewer, no legib_audit, no approval sheets. Jonathan checks the live
+  site after the ship. Screenshots, the display part and legib_audit run only in a batch that changes styles, scripts
+  or layout or adds a new display pattern (section 8). Study-mode leaks are judged from text (the read part, area F, and
+  lint mask-leak); squeezed phone text from the DOM (`tools/spine/squeeze_check.py`).
+- Small additions to a live brief (a row, a line, a table, a rename): board evidence, build and review cover the changed
+  lines only, with the targeted replay on the live brief (the latest repair/migration/spine/sNNN_delta.py) and packets
+  from `review_packet.py --since` the live brief's text. Never re-prove, regenerate cards.md or re-review the rest.
+- One batch per chat: after a ship and its post-ship steps the chat ends; the next batch or patch starts in a fresh chat
+  with its launch prompt. S8 and S9 stay in one chat (the approval record lives in the container that presented).
+- Find, don't search: `tools/spine/folder_of.py <brief>` gives a brief's spine folder; `tools/spine/pointer_check.py`
+  checks drawers and Pairs with in a running page; shots_all and legib_audit carry a 240 s timeout. Write no scratch
+  wrappers for these.
+
 ## 1. Launch
 
 The launch prompt names:
@@ -87,10 +102,12 @@ Then run section 2 to the end without asking.
     the page script and styles, so a brief gets them by being on the page; nothing per brief.
 - **S3. Mechanical checks.**
   - verify --mech (G-MECH), which includes the card check;
-  - legib_audit with 0 failures in sculpted, flat and study, on phone and desktop.
+  - `tools/spine/squeeze_check.py <page> <changed briefs>` (0 squeezed) and, when pointers or titles changed,
+    `tools/spine/pointer_check.py <page> <briefs>`; legib_audit only in a layout batch (token rules).
   - Then restart (Jonathan 2026-10-17, s146 cost review): rewrite the handoff State with S3 done and send only "S3 done. Paste into a fresh chat: Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md." The review and ship steps run in a fresh chat, which reads the batch file, each brief's boards.md, cuts.json and claim map before judging findings; so every build call made in S1 to S3 is written down there, not left in the chat.
 - **S4. Review round 1.**
-  - The four roles on the models in the plan table.
+  - Three roles (acc, read, flags) on the models in the plan table; display only in a layout batch (token rules). For a
+    brief with small additions, round 1 already reviews only the changed lines (`review_packet.py --since` the live text).
   - Packets from tools/spine/review_packet.py only.
   - Write-first lanes (Jonathan 2026-10-17, after s146 lost six receipts at the cap): the lane instructions tell each reviewer to read one brief's packet and write that brief's receipt before opening the next brief.
   - Budget per lane from a call plan: first-round acc 7 calls per brief plus 4; display 7 per brief plus 4 (its screenshots); read, flags, and acc in follow-up rounds, 5 per brief plus 4; at most 4 briefs per acc lane. The hook caps each reviewer at 25 calls, so split a lane that would need more.
@@ -105,19 +122,19 @@ Then run section 2 to the end without asking.
   - Record which role found or missed what.
 - **S6. Lead self-check** (section 4) on every changed line.
 - **S7. Follow-up review.**
-  - The same four roles, on the changed lines with context, each given its last receipt: packets from `review_packet.py --since <the reviewer's last brief_text.txt>` (changes.md; it prints the changed steps for the display sheets, `sheets.py --steps`), lanes from lanes.py, launched in the foreground as in S4, the ledger committed after the round.
+  - The same roles, on the changed lines with context, each given its last receipt: packets from `review_packet.py --since <the reviewer's last brief_text.txt>` (changes.md; it prints the changed steps for the display sheets, `sheets.py --steps`), lanes from lanes.py, launched in the foreground as in S4, the ledger committed after the round.
   - Write-first lanes, 5 calls per brief covered plus 4, display 7 per brief plus 4, with the same lane instructions as S4 (Jonathan 2026-10-17; was 4 per brief plus 2, s139). A reviewer that relays a verdict without writing its receipt counts as no receipt: relaunch it on the same lane with the call plan in the prompt.
   - A reviewer with only LOW findings returns PASS-IF (conditional PASS) with exact replacements; the lead applies the approved ones (`tools/spine/reps.py <brief dir> <receipt> --only N,...`), and verify keeps the receipts current without another round. A replacement that only adds a hedge word found in the quote its line cites counts as wording-only for the other parts (s148 fix 8, Jonathan 2026-10-18).
   - Loop S5 to S7 until READY or the budget is spent.
   - Restart point (s148 fix 1, Jonathan 2026-10-18): when the last follow-up round leaves every brief READY (or the budget stops it), rewrite the handoff State ("S7 done: all READY") and send only "S7 done. Paste into a fresh chat:" with the restart line alone in its own code block. S8 and S9 run in the fresh chat (approval records live in the presenting container).
 - **S8. Final report** (section 5):
   - `python3 tools/spine/verify_all.py <brief dirs>` (three at a time; all READY);
-  - preview and screenshots: `tools/spine/shots_all.py` (phone, phone-study, desktop, desktop-study in one sequential run), then `sheets.py --approval`;
-  - register them with `approval.py present`;
+  - register the batch with `approval.py present sNN` (no screenshots: it binds the batch files, the changelog entry
+    and the built page; a layout batch may still add sheets);
   - send the report and wait for "ship".
 - **S9. Ship and post-ship**, per the handoff:
   - ship.sh with AX_SESSION;
-  - check version.json in Chrome;
+  - check version.json in Chrome; Jonathan checks the live site;
   - OPEN_WORK and the log commit;
   - Mac copies;
   - the handoff in the project and on the Mac;
@@ -158,7 +175,7 @@ Then run section 2 to the end without asking.
 5. One owner per decision.
 6. Masks:
    - every answer is masked where it repeats;
-   - contrast shows 0 failures in every mode.
+   - no label or first cell gives away a masked answer (lint mask-leak answered); contrast only in a layout batch.
 7. Bank:
    - lead-ins and keys agree with the body;
    - versions are bumped per the item rule.
@@ -171,7 +188,7 @@ Then run section 2 to the end without asking.
 9. The word count is taken again after the last change.
 10. Reviewer misses are recorded per role, for R4.
 11. Abbreviations match the allowlist; every diagnosis with other names shows them.
-12. Phone screenshots: no text squeezed into a narrow column (a few words per line).
+12. squeeze_check.py reports 0 squeezed blocks on the changed briefs (phone, a few words per line).
 13. Every cut and every removed number was searched in the card index (key terms, high-yield lines) before it was made (Jonathan 2026-10-17); the search terms are in its cuts.json entry.
 14. Every card in cards.md has a disposition and `card_dispositions.py check` passes; each "covered" names the claims that teach it, and no carded fact the old brief or the bank holds was dropped without one (Jonathan 2026-10-17).
 15. Every "warn lint" line from verify (tools/spine/lint.py: next-step cells with no action, missing other names, a hedge dropped from the cited quote, one decision with two thresholds, a number no quote holds) is fixed or answered in the batch file before the reviewers run (s148 fix 6). The lint is advisory: an answered warning may stand.
@@ -196,8 +213,7 @@ In this order:
    - the lead's own tokens (`usage_ledger.py --lead --record <wave>`, one row per chat in repair/efficiency/ledger_lead.csv) and start-up context, beside the reviewer cost (s135 item 3); the batch total is the reviewers plus every lead row of the wave, against the budget, and against WAVE.json's max_lead_tokens when the launch prompt names one (shown only; the gate enforces the reviewer caps); s148 fix 7;
    - projected cost per brief at scale;
    - a proposed budget for the next batch.
-7. **Screenshots** registered with `approval.py present`: phone and desktop, sculpted and study.
-8. **The closing line:** Reply "ship" to publish, or name what to change.
+7. **The closing line:** Reply "ship" to publish, or name what to change.
 
 If Jonathan names changes:
 - apply them;
