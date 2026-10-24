@@ -2,6 +2,29 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-23 s150b: Add PMS/PMDD and Parkinson briefs with targeted psychiatry corrections
+
+```
+Page: 180 briefs, 2182 items -> 182 briefs, 2197 items
+Briefs added (2):
+  - parkinson: Parkinson Disease and Parkinsonism (9 items)
+  - pms-pmdd: Premenstrual Syndrome and Premenstrual Dysphoric Disorder (6 items)
+Briefs changed (7):
+  - bipolar-mania (Bipolar Disorder): prose edited (+134 chars)
+  - mdd (Major Depressive Disorder): prose edited (+207 chars)
+  - somatic (Somatic Symptom and Related Disorders): prose edited (+54 chars)
+  - delirium (Delirium): prose edited (+217 chars)
+  - psych-medical (Psychiatric Symptoms from Medical Illness or Medication): prose edited (+985 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (+121 chars)
+  - antipsych-effects (Antipsychotic Adverse Effects): prose edited (+191 chars)
+Other page changes (nav, headers, scripts): +991 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 182 briefs, 2197 items (316 with reasons), 22 scripts, 39 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 182 | bankwraps 182 | mcq 2197 (reasons 316) (axCheck 2197, reveal-only 0) | malformed 0 | crit gridded 150/151 | vignette gridded 64/64 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.013%)
+```
+
 ## 2026-10-23 s150: Five pediatric musculoskeletal briefs on the decision spine, audited and reviewed
 
 ```
