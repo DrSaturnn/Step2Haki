@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 08:10 EDT, by Claude (s150c shipped; no Claude batch open).
+Last updated: 2026-10-24 11:10 EDT, by Claude (s150c and s150d shipped; no Claude batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,12 +12,9 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch:** s150d open (Claude lead, chat 1, since 2026-10-24 10:40 EDT; lock on wip/s150d, public only: the private
-  repo is read-only in this chat). Patch: psych-medical renamed "Medication- and Illness-Induced Psychiatric Disorders"
-  and its timeline tile removed; a How often | How long table in disruptive-behavior step 5; the title updated in the
-  links of parkinson, psychosis-duration, voices, panic, somatic and the sidebar. Budget 6 agents, 80 calls, 3M.
-  Record: repair/s150d/S150D.md. Step: S8 presented (page 89e0ba3faf52, 12 sheets); waiting for Jonathan's "ship"
-  in this chat. Spend 5/6 agents, 42/80 calls, 1.26M/3M.
+- **s150d shipped** 2026-10-24 11:05 EDT on Jonathan's "ship": commit 0fa5d5f (main, by hand). psych-medical is now
+  "Medication- and Illness-Induced Psychiatric Disorders" (tile removed); disruptive-behavior has a Time frames table.
+  Record repair/s150d/S150D.md. Its private folder changes join the owed files below.
 - **No Claude batch open.** s150c shipped by Claude 2026-10-24 08:05 EDT on Jonathan's plain "ship" (approval hook in
   this container). Production ship dfacd00 (main, pushed by hand: no token here); live version.json confirms s150c;
   built page sha256 starts 200be105e2c6 (presented candidate f4d236d75c4d). Record: repair/s150c/S150C.md (S8, S9).
@@ -28,8 +25,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Private files owed (important):** the s150c brief-folder changes after S7 (DEM, EAT, DEF facts_spec, facts,
   build.py, disp_manual, cards_disposition, adj_s150c.md; audit and round 4 receipts in repair/migration/spine/reviews;
   packets s150c-audit and s150c-r4; sheets s150c-approval) were never pushed: this chat had the private repo
-  read-only, and the Mac bridge dropped before they could be copied there. They were sent to Jonathan in the s150c
-  chat as s150c_private_owed.tar.gz (396 files, 41 MB, paths relative to local-only/; raw shots left out, retakeable).
+  read-only, and the Mac bridge dropped before they could be copied there. They (with s150d's) were sent to Jonathan in the
+  s150c chat as s150cd_private_owed.tar.gz (507 files, 50 MB, paths relative to local-only/; raw shots left out).
   The next session with push access extracts it into the private clone's local-only/, commits on wip/s150c and merges
   to main. Until then a fresh cloud chat restoring from the private repo gets the S7 versions of those files.
 - **s151 (Codex, wip/s151):** s150c shipped first, so s151 merges main into wip/s151 and re-verifies before
@@ -52,7 +49,7 @@ S8 and S9 with the restart line, in a chat with push access to both repos:
 ```
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
-First in that chat: commit the owed s150c private files from s150c_private_owed.tar.gz (State, Private files owed),
+First in that chat: commit the owed s150c and s150d private files from s150cd_private_owed.tar.gz (State, Private files owed),
 then refresh the Mac copies.
 
 New board questions, any time (intake only; the skill never edits the page):
