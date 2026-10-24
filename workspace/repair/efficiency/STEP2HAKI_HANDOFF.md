@@ -16,12 +16,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   (hub, after delirium), Eating Disorders (disease) and Defense Mechanisms (lookup), both in Anxiety, somatic and
   sexual. Additions: suicide-risk (CSF 5-HIAA), substance (alcohol use disorder recognition), disruptive-behavior
   (reactive attachment). Record: repair/s150c/S150C.md. Evidence: 2026-10-23b intake (private).
-- **Step:** S8 in progress (chat 4). Audit done: lane C PASS; A and B FAIL (9 MED, 6 LOW), all accepted and fixed in
-  dementia, eating-disorders and defense-mechanisms (S150C.md S8). Next: follow-up round 4 on those three (spec
-  repair/s150c/lanes/r4.json; shots local/shots/s150c-r4), then verify_all, shots_all, sheets --approval, present.
-  Private brief-folder changes (facts, build.py, dispositions, receipts) are only in this container: the private repo
-  is attached read-only here, so they need a push from a session with access before S9.
-- **Budget/spend:** 30 agents, 400 calls, 15M reviewer tokens; lead 250M. Spent 22 agents, 208 calls, 8.19M after S7 (8 agents, 192 calls left).
+- **Step:** S8 in progress (chat 4). Audit and round 4 done; all eight READY (verify_all); final page sha f4d236d7
+  passes gate, render, vendor, preflight and the pointer check; changelog 150c written. Left: approval screenshots
+  (local/shots/s150c-final, desktop-study rerunning), sheets --approval, approval.py present, the report.
+  Private brief-folder changes are only in this container (private repo read-only here): push before S9.
+- **Budget/spend:** 30 agents, 400 calls, 15M reviewer tokens; lead 250M. Spent 30 agents, 291 calls, 11.72M after the S8 audit and round 4 (no reviewer agents left).
 - **Lead:** Claude, since 2026-10-24 02:25, chat 4 (S8). Chat 3 (from 2026-10-24 01:10) finished at S7. Chat 4 attached the public
   repo; attaching DrSaturnn/Step2Haki-private was refused by the session's permission check, so S8 waits on it. Hooks reinstalled in
   this container (install.sh, mirrored to /root/.claude): test_hooks 101/101, no-model probe refused.
