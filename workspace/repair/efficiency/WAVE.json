@@ -1,7 +1,7 @@
 {
   "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
   "id": "s150c",
-  "open": true,
+  "open": false,
   "plan_step": "s150c",
   "roles": [
     "acc-review",
@@ -19,7 +19,7 @@
     "note": "s150b shipped 059f954; live confirmed; 27 reviewers / 378 calls; tokens unknown; no batch open"
   },
   "opened": "2026-10-23 23:15 EDT",
-  "note": "s150c open (Claude lead): 3 new psych briefs plus suicide-risk, substance and disruptive-behavior additions; runs in parallel with s151 (Codex)",
+  "note": "s150c shipped dfacd00 2026-10-24 (Claude lead); live version.json s150c; reviewers 30/30 agents, 291/400 calls, 11.72M/15M tokens; lead 106.3M recorded of 250M; no Claude batch open (s151 runs under Codex on wip/s151)",
   "batch_budgets": {
     "s138": {
       "agents": 20,

@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 02:25 EDT (s150c chat 4 takes the lock for S8; blocked on the private repo attach). Earlier: 2026-10-24 01:10 EDT (s150c chat 3 takes the lock). Earlier: 2026-10-23 23:20 EDT, by Claude, s150c lead chat 1 (launch done; S1 next).
+Last updated: 2026-10-24 08:10 EDT, by Claude (s150c shipped; no Claude batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,41 +12,49 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch:** s150c open (Claude lead), launched 2026-10-23 23:15 EDT. New: Cognitive Decline and Dementia in an Adult
-  (hub, after delirium), Eating Disorders (disease) and Defense Mechanisms (lookup), both in Anxiety, somatic and
-  sexual. Additions: suicide-risk (CSF 5-HIAA), substance (alcohol use disorder recognition), disruptive-behavior
-  (reactive attachment). Record: repair/s150c/S150C.md. Evidence: 2026-10-23b intake (private).
-- **Step:** S8 presented by Claude (chat 4, 2026-10-24); waiting for Jonathan's "ship" in this same chat (the
-  approval record lives in this container). Final page sha f4d236d75c4d; 58 approval sheets (local/sheets/
-  s150c-approval). S9 also needs push access to the private repo (read-only in this chat) for the brief-folder changes.
-- **Budget/spend:** 30 agents, 400 calls, 15M reviewer tokens; lead 250M. Spent 30 agents, 291 calls, 11.72M after the S8 audit and round 4 (no reviewer agents left).
-- **Lead:** Claude, since 2026-10-24 02:25, chat 4 (S8). Chat 3 (from 2026-10-24 01:10) finished at S7. Chat 4 attached the public
-  repo; attaching DrSaturnn/Step2Haki-private was refused by the session's permission check, so S8 waits on it. Hooks reinstalled in
-  this container (install.sh, mirrored to /root/.claude): test_hooks 101/101, no-model probe refused.
-- **Branches:** wip/s150c in both repos (public from 6d42644, private from 77fe548). s151 runs in parallel under
-  Codex on wip/s151; whichever ships second merges main and re-verifies before presenting.
-- **Parallel note:** WAVE.json, DECISIONS_DIGEST.md, OPEN_WORK.md, queue.csv and this file will conflict at merge;
-  keep both batches' lines.
-- **Carried:** MPTP chemical-name LOW; s150b legibility advisories; four s150b audit proposals (not rules); other
-  2026-10-23 psychiatry amendments queued. Mac copies of the 2026-10-23b intake files owed (Mac workspace down).
+- **No Claude batch open.** s150c shipped by Claude 2026-10-24 08:05 EDT on Jonathan's plain "ship" (approval hook in
+  this container). Production ship dfacd00 (main, pushed by hand: no token here); live version.json confirms s150c;
+  built page sha256 starts 200be105e2c6 (presented candidate f4d236d75c4d). Record: repair/s150c/S150C.md (S8, S9).
+- **Completed (s150c):** new Cognitive Decline and Dementia in an Adult (hub, after delirium; Presentations link),
+  Eating Disorders (after somatic) and Defense Mechanisms (first lookup brief, last in Anxiety, somatic and sexual);
+  additions to suicide-risk, substance and disruptive-behavior; pointers in mdd and ssri-effects. All eight READY.
+  Independent S8 audit (fresh Opus acc lanes) found 9 MED and 6 LOW in the new briefs; all fixed; round 4 READY.
+- **Private files owed (important):** the s150c brief-folder changes after S7 (DEM, EAT, DEF facts_spec, facts,
+  build.py, disp_manual, cards_disposition, adj_s150c.md; audit and round 4 receipts in repair/migration/spine/reviews;
+  packets s150c-audit and s150c-r4; shots and sheets s150c-r4, s150c-final, s150c-approval) were never pushed: this
+  chat had the private repo read-only. They were copied to the Mac (~/Documents/Step2Haki/local-only/, same tree) at
+  the ship; the next session with push access commits them from there to DrSaturnn/Step2Haki-private wip/s150c and
+  merges it to main. Until then a fresh cloud chat restoring from the private repo gets the S7 versions of those files.
+- **s151 (Codex, wip/s151):** s150c shipped first, so s151 merges main into wip/s151 and re-verifies before
+  presenting (the 2026-10-23 parallel rule). Codex holds S1 to S7 and releases S8 and S9 to Claude at "S7 done: all
+  READY; Lead: released to Claude for S8 and S9".
+- **Lead:** Claude. No lock held. The next Claude chat for s151 S8 takes the lock on wip/s151 after Codex releases it.
+- **Carried:** deferred LOWs from s150c round 4 (dementia Korsakoff item reason d1 "none are present here" would read
+  better as "gait and eye movements are normal here"; eating-disorders "another step 2 criterion" and "any step 2
+  criterion" would read better as "admission criterion (Urgent risks)"); the defense-mechanisms intro clause naming
+  suppression stays unmasked in study mode (intro lines are not masked); no reverse pointers to dementia or
+  defense-mechanisms from delirium, parkinson or cluster-b (outside the s150c scope); MPTP chemical-name LOW; s150b
+  legibility advisories; the four s150b audit proposals (not rules); the other 2026-10-23 psychiatry amendments queued.
+- **Mac:** handoff and index.html refreshed at the ship; axbx-repo.bundle NOT replaced (this session's clone is
+  shallow, so its bundle would drop history).
 
 ## Next launch prompt (paste into a fresh chat)
 
-New board questions first, if any (no batch needed; intake only; the skill never edits the page):
+When Codex releases s151 (its State reads "S7 done: all READY; Lead: released to Claude for S8 and S9"), Claude runs
+S8 and S9 with the restart line, in a chat with push access to both repos:
+```
+Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
+```
+First in that chat: commit the owed s150c private files from the Mac copy (State, Private files owed).
+
+New board questions, any time (intake only; the skill never edits the page):
 ```
 Step2Haki: intake these board questions per the board-brief skill (propose new briefs; do not build).
 ```
 
-The next numbered batch, only when Jonathan asks for it (plan: private claude/pending/BATCHES_S151_S160.md, where it is
-still numbered s150 after the 2026-10-15 renumbering):
-```
-Step2Haki: launch batch s151 (Phase 2, cardiovascular A, adult) per claude/BATCH_RUNBOOK.md, Claude leading. Briefs: chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. Golden: copd (FM lens); B0 confirms it fits cardiology; voices for any hub. Brief set rules of 2026-10-20 apply (three reasons per item, bold bottom line, First step pairing). Budget for the whole batch: 35 agents, 300 API calls, 15M tokens; lead 330M tokens. Method: s148 with the efficiency patch.
-```
-Budget basis (a proposal; Jonathan sets it): s149, the last Claude-led batch (6 briefs), spent 24 agents, 221 calls,
-10.09M reviewer tokens and 275.7M lead; scaled to 7 briefs that is about 28 agents, 258 calls, 11.8M and 322M, so the
-prompt adds spare. To also run an independent fresh-chat S8 audit (the s150 and s150b practice), add to the prompt
-"Include an independent S8 audit and its follow-up round" and about 3 agents and 100 calls (s150b: audit 35 calls,
-follow-up 65).
+The next Claude-led authoring batch, only when Jonathan asks for it: the queued 2026-10-23 psychiatry amendments
+(repair/intake/queue.csv). Proposed budget, from s150c (3 new briefs plus additions with an S8 audit): 32 agents,
+380 calls, 14M reviewer tokens; lead 250M.
 
 ## After s141
 
