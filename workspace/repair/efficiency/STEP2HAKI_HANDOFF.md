@@ -23,9 +23,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   Seven old banks unchanged. All nine READY. The independent audit's initial FAIL (4 MED groups), every repair and the
   14 follow-up PASS receipts are in repair/s150b/AUDIT.md, AUDIT_RESOLUTION.md and S150B.md; source quotes and
   screenshots stay private. Closed spend 27/30 reviewers, 378/380 calls; tokens unknown. WAVE.json closed.
-- **Lead:** Claude, from 2026-10-23 (Jonathan: "I’m transitioning back to Claude as lead"). No branch lock held while
-  no batch is open; the next launch chat writes "Claude, since <date time>, chat 1" here on wip/sNN before any work.
-  CODEX_LEAD.md and the Codex lines of AGENTS.md are dormant until Jonathan assigns Codex again.
+- **Lead:** Codex, since 2026-10-23 22:34 EDT, chat 1; Jonathan assigned wip/s151 through S7 only. Claude remains standing lead and resumes S8 and S9 after release. No S8, present, approval recording or ship is authorized to Codex for this batch.
 - **Workflow:** BATCH_RUNBOOK.md as written (S1 to S9), Claude hooks (step2haki-tools plugin, or install.sh plus the
   /root/.claude copy), lean-reviewer lanes from lanes.py, `approval.py present` then Jonathan's "ship" in that same chat,
   `AX_SESSION=... tools/ship.sh sNN` (no AX_LEAD). The Codex-only S8 audit task is not a runbook step; include it only
