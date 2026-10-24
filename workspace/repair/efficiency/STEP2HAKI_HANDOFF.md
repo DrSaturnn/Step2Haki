@@ -16,10 +16,9 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   (hub, after delirium), Eating Disorders (disease) and Defense Mechanisms (lookup), both in Anxiety, somatic and
   sexual. Additions: suicide-risk (CSF 5-HIAA), substance (alcohol use disorder recognition), disruptive-behavior
   (reactive attachment). Record: repair/s150c/S150C.md. Evidence: 2026-10-23b intake (private).
-- **Step:** S8 in progress (chat 4). Audit and round 4 done; all eight READY (verify_all); final page sha f4d236d7
-  passes gate, render, vendor, preflight and the pointer check; changelog 150c written. Left: approval screenshots
-  (local/shots/s150c-final, desktop-study rerunning), sheets --approval, approval.py present, the report.
-  Private brief-folder changes are only in this container (private repo read-only here): push before S9.
+- **Step:** S8 presented by Claude (chat 4, 2026-10-24); waiting for Jonathan's "ship" in this same chat (the
+  approval record lives in this container). Final page sha f4d236d75c4d; 58 approval sheets (local/sheets/
+  s150c-approval). S9 also needs push access to the private repo (read-only in this chat) for the brief-folder changes.
 - **Budget/spend:** 30 agents, 400 calls, 15M reviewer tokens; lead 250M. Spent 30 agents, 291 calls, 11.72M after the S8 audit and round 4 (no reviewer agents left).
 - **Lead:** Claude, since 2026-10-24 02:25, chat 4 (S8). Chat 3 (from 2026-10-24 01:10) finished at S7. Chat 4 attached the public
   repo; attaching DrSaturnn/Step2Haki-private was refused by the session's permission check, so S8 waits on it. Hooks reinstalled in
