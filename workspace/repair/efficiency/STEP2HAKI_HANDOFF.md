@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-23 22:35 EDT, by Claude (lead returned to Claude after the s150b ship; no batch open).
+Last updated: 2026-10-23 23:20 EDT, by Claude, s150c lead chat 1 (launch done; S1 next).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,35 +12,19 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **No batch open.** s150b shipped by Codex 2026-10-23 22:17 EDT on Jonathan's plain "ship" (approval.py hook on the
-  Mac). Production ship 059f954; live version.json confirms s150b; live page SHA-256
-  e7c065681f2d37e5e70cf56d6d2772aceb30b84f9c11dfa2db59a9f5cc0507c1. Do not resume or rebuild s150b.
-- **Completed (s150b):** two new disease owners: pms-pmdd (Premenstrual Syndrome and Premenstrual Dysphoric Disorder;
-  Psychiatry, Psychosis and mood, after mdd; 6 original items) and parkinson (Parkinson Disease and Parkinsonism;
-  Neurology after bs-wilson, fm lens with psych coverage; 9 original items). Parkinson depression recognition and
-  treatment stay in psych-medical, linked both ways. Targeted somatic (inconsistency versus feigning) and psych-medical
-  (Parkinson depression) amendments; pointers only in mdd, bipolar-mania, ssri-effects, antipsych-effects and delirium.
-  Seven old banks unchanged. All nine READY. The independent audit's initial FAIL (4 MED groups), every repair and the
-  14 follow-up PASS receipts are in repair/s150b/AUDIT.md, AUDIT_RESOLUTION.md and S150B.md; source quotes and
-  screenshots stay private. Closed spend 27/30 reviewers, 378/380 calls; tokens unknown. WAVE.json closed.
-- **Lead:** Claude, from 2026-10-23 (Jonathan: "I’m transitioning back to Claude as lead"). No branch lock held while
-  no batch is open; the next launch chat writes "Claude, since <date time>, chat 1" here on wip/sNN before any work.
-  CODEX_LEAD.md and the Codex lines of AGENTS.md are dormant until Jonathan assigns Codex again.
-- **Workflow:** BATCH_RUNBOOK.md as written (S1 to S9), Claude hooks (step2haki-tools plugin, or install.sh plus the
-  /root/.claude copy), lean-reviewer lanes from lanes.py, `approval.py present` then Jonathan's "ship" in that same chat,
-  `AX_SESSION=... tools/ship.sh sNN` (no AX_LEAD). The Codex-only S8 audit task is not a runbook step; include it only
-  if the launch prompt asks.
-- **Sync (2026-10-23 22:30, Claude cloud session):** public main 3b2dd1e and private main c080d1b cloned; local-only
-  restored with cp -rn into gitignored workspace paths (sources, migration folders, local/). The claude.ai project docs
-  were refreshed from the repo copies at this handoff.
-- **Next:** new board questions may go through intake; the other 2026-10-23 psychiatry intake amendments stay queued
-  (repair/intake/queue.csv). s151 cardiovascular A is planned but launches only when Jonathan requests it (prompt below).
-- **Carried:** deferred MPTP chemical-name LOW (carded name retained); native contrast/reflow and small-label baseline
-  advisories (private local/s150b/LEGIBILITY_S3.md). The four s150b audit process proposals (double regeneration,
-  action-verb entailment, every card child checked, activate each new owner pointer) are proposals only: Jonathan's
-  "ship" approved publication, not new standing rules. Earlier carried items stay in the batch files (s149 and before).
-- **Mac:** Codex refreshed ~/Documents/Step2Haki (index.html, axbx-repo.bundle, handoff, s150b local-only) at the ship;
-  the handoff copy there is replaced with this version when the Mac is reachable.
+- **Batch:** s150c open (Claude lead), launched 2026-10-23 23:15 EDT. New: Cognitive Decline and Dementia in an Adult
+  (hub, after delirium), Eating Disorders (disease) and Defense Mechanisms (lookup), both in Anxiety, somatic and
+  sexual. Additions: suicide-risk (CSF 5-HIAA), substance (alcohol use disorder recognition), disruptive-behavior
+  (reactive attachment). Record: repair/s150c/S150C.md. Evidence: 2026-10-23b intake (private).
+- **Step:** launch done (digest, WAVE, hooks installed and probed, branches). Next: S1 board evidence.
+- **Budget/spend:** 30 agents, 400 calls, 15M reviewer tokens; lead 250M. Spent 0 batch agents (1 safeguard probe).
+- **Lead:** Claude, since 2026-10-23 23:15, chat 1.
+- **Branches:** wip/s150c in both repos (public from 6d42644, private from 77fe548). s151 runs in parallel under
+  Codex on wip/s151; whichever ships second merges main and re-verifies before presenting.
+- **Parallel note:** WAVE.json, DECISIONS_DIGEST.md, OPEN_WORK.md, queue.csv and this file will conflict at merge;
+  keep both batches' lines.
+- **Carried:** MPTP chemical-name LOW; s150b legibility advisories; four s150b audit proposals (not rules); other
+  2026-10-23 psychiatry amendments queued. Mac copies of the 2026-10-23b intake files owed (Mac workspace down).
 
 ## Next launch prompt (paste into a fresh chat)
 
