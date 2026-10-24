@@ -16,9 +16,10 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   (hub, after delirium), Eating Disorders (disease) and Defense Mechanisms (lookup), both in Anxiety, somatic and
   sexual. Additions: suicide-risk (CSF 5-HIAA), substance (alcohol use disorder recognition), disruptive-behavior
   (reactive attachment). Record: repair/s150c/S150C.md. Evidence: 2026-10-23b intake (private).
-- **Step:** launch done (digest, WAVE, hooks installed and probed, branches). Next: S1 board evidence.
+- **Step:** launch done (digest, WAVE, hooks installed and probed, branches). S1 board evidence in progress (chat 2).
 - **Budget/spend:** 30 agents, 400 calls, 15M reviewer tokens; lead 250M. Spent 0 batch agents (1 safeguard probe).
-- **Lead:** Claude, since 2026-10-23 23:15, chat 1.
+- **Lead:** Claude, since 2026-10-23 23:27, chat 2 (restart line pasted; chat 1 launched). Hooks reinstalled in
+  this container: test_hooks 101/101, no-model probe refused.
 - **Branches:** wip/s150c in both repos (public from 6d42644, private from 77fe548). s151 runs in parallel under
   Codex on wip/s151; whichever ships second merges main and re-verifies before presenting.
 - **Parallel note:** WAVE.json, DECISIONS_DIGEST.md, OPEN_WORK.md, queue.csv and this file will conflict at merge;
