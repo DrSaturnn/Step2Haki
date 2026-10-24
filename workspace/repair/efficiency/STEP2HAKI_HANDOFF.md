@@ -21,10 +21,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   Independent S8 audit (fresh Opus acc lanes) found 9 MED and 6 LOW in the new briefs; all fixed; round 4 READY.
 - **Private files owed (important):** the s150c brief-folder changes after S7 (DEM, EAT, DEF facts_spec, facts,
   build.py, disp_manual, cards_disposition, adj_s150c.md; audit and round 4 receipts in repair/migration/spine/reviews;
-  packets s150c-audit and s150c-r4; shots and sheets s150c-r4, s150c-final, s150c-approval) were never pushed: this
-  chat had the private repo read-only. They were copied to the Mac (~/Documents/Step2Haki/local-only/, same tree) at
-  the ship; the next session with push access commits them from there to DrSaturnn/Step2Haki-private wip/s150c and
-  merges it to main. Until then a fresh cloud chat restoring from the private repo gets the S7 versions of those files.
+  packets s150c-audit and s150c-r4; sheets s150c-approval) were never pushed: this chat had the private repo
+  read-only, and the Mac bridge dropped before they could be copied there. They were sent to Jonathan in the s150c
+  chat as s150c_private_owed.tar.gz (396 files, 41 MB, paths relative to local-only/; raw shots left out, retakeable).
+  The next session with push access extracts it into the private clone's local-only/, commits on wip/s150c and merges
+  to main. Until then a fresh cloud chat restoring from the private repo gets the S7 versions of those files.
 - **s151 (Codex, wip/s151):** s150c shipped first, so s151 merges main into wip/s151 and re-verifies before
   presenting (the 2026-10-23 parallel rule). Codex holds S1 to S7 and releases S8 and S9 to Claude at "S7 done: all
   READY; Lead: released to Claude for S8 and S9".
@@ -35,8 +36,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   suppression stays unmasked in study mode (intro lines are not masked); no reverse pointers to dementia or
   defense-mechanisms from delirium, parkinson or cluster-b (outside the s150c scope); MPTP chemical-name LOW; s150b
   legibility advisories; the four s150b audit proposals (not rules); the other 2026-10-23 psychiatry amendments queued.
-- **Mac:** handoff and index.html refreshed at the ship; axbx-repo.bundle NOT replaced (this session's clone is
-  shallow, so its bundle would drop history).
+- **Mac:** NOT refreshed (the bridge dropped at post-ship): the handoff copy and index.html there are the s150b ones;
+  axbx-repo.bundle must not come from a shallow clone. The project handoff copy was refreshed.
 
 ## Next launch prompt (paste into a fresh chat)
 
@@ -45,7 +46,8 @@ S8 and S9 with the restart line, in a chat with push access to both repos:
 ```
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
-First in that chat: commit the owed s150c private files from the Mac copy (State, Private files owed).
+First in that chat: commit the owed s150c private files from s150c_private_owed.tar.gz (State, Private files owed),
+then refresh the Mac copies.
 
 New board questions, any time (intake only; the skill never edits the page):
 ```
