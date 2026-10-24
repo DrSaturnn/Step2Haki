@@ -12,6 +12,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
+- **Batch:** s150d open (Claude lead, chat 1, since 2026-10-24 10:40 EDT; lock on wip/s150d, public only: the private
+  repo is read-only in this chat). Patch: psych-medical renamed "Medication- and Illness-Induced Psychiatric Disorders"
+  and its timeline tile removed; a How often | How long table in disruptive-behavior step 5; the title updated in the
+  links of parkinson, psychosis-duration, voices, panic, somatic and the sidebar. Budget 6 agents, 80 calls, 3M.
+  Record: repair/s150d/S150D.md. Step: S3 (legib running), then S4 review on changed lines (spec
+  repair/s150d/lanes_r1.json), S8 present, S9 ship.
 - **No Claude batch open.** s150c shipped by Claude 2026-10-24 08:05 EDT on Jonathan's plain "ship" (approval hook in
   this container). Production ship dfacd00 (main, pushed by hand: no token here); live version.json confirms s150c;
   built page sha256 starts 200be105e2c6 (presented candidate f4d236d75c4d). Record: repair/s150c/S150C.md (S8, S9).
