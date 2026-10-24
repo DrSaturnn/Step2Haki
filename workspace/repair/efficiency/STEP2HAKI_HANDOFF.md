@@ -13,7 +13,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ## State (rewrite after every step)
 
 - **Batch:** s150b open, S1 and S2 complete; S3 done: all nine full G-MECH passes, pixel checks resolved with documented unchanged-baseline advisories; S4 next in a fresh chat. New pms-pmdd and parkinson disease briefs; targeted somatic and psych-medical amendments; pointers only in mdd, bipolar-mania, ssri-effects, antipsych-effects, delirium.
-- **Lead:** Codex, since 2026-10-23 17:59 EDT, lead chat 1. Lock 8166b75.
+- **Lead:** Codex, since 2026-10-23 20:19 EDT, lead chat 2 (S4 continuation; prior lock 8166b75).
 - **Branches:** public and private wip/s150b, fetched from current main (3f07da6 / 225cf14), pushed.
 - **Budget:** 30 reviewer agents / 380 calls / 13M tokens; lead 220M. Spend 0 reviewer agents / 0 calls; lead usage unknown. Fresh S8 audit and follow-up included.
 - **Evidence:** final page local/s150b/final-s3.html, sha256 d34cb0384ae6296224620a63496d319d276775ee052e21e0d0324f6a1a29b86c. Nine source folders, final native/focused pixel reports, 408 crops and 47 review sheets saved privately. Read local/s150b/LEGIBILITY_S3.md before display lanes. Runtime workspace/local/s150b/runtime/bin/python; adapter local/s150b/run_browser.py; no tooling/check changes.
