@@ -1,0 +1,39 @@
+{
+ "batch": "s151b",
+ "plan_step": "s151b",
+ "round": 1,
+ "context": "batch s151b builds two new briefs on decision spine v2: ocd (Obsessive-Compulsive and Related Disorders, a psychiatry disease brief) and capacity (Decision-Making Capacity and Informed Consent, a Preventive & Ethics lookup brief); this is review round 1, on each whole brief",
+ "out": "repair/efficiency/lanes/s151b/r1",
+ "packets": "repair/migration/spine/packets/s151b",
+ "lanes": [
+  {"part": "acc", "group": "A", "briefs": ["ocd", "capacity"]},
+  {"part": "read", "group": "A", "briefs": ["ocd", "capacity"]},
+  {"part": "flags", "group": "A", "briefs": ["ocd", "capacity"]}
+ ],
+ "types": {
+  "ocd": "disease brief (obsessive-compulsive disorder with the related disorders BDD, hoarding, trichotillomania and excoriation), psych lens; new brief; review in full",
+  "capacity": "lookup brief (decision-making capacity, informed consent, surrogates), fm lens; new brief; a lookup brief carries tables and a commitment rule instead of the eight spine steps (model: defense-mechanisms, s150c); review in full"
+ },
+ "notes": {
+  "acc": [
+   "Where a board source (AnKing card, UWorld, NBME) and a guideline differ, the brief teaches the board answer and puts the guideline in an \"In practice:\" hover (runbook section 3): the hover is intended, not a finding.",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length).",
+   "Settled by Jonathan at launch (do not report): tics keeps tic-related OCD and its ERP lines and peds-alopecia keeps trichotillomania, with ocd pointing to both; ocd carries an OCPD contrast row (no drawer: a cluster C brief is on hold); minors' consent stays with Adolescent Confidentiality; capacity was built without its missing UWorld QID.",
+   "ocd lead calls (judge accuracy, not the choice): onset ages are not taught (no board item keys one); PANDAS cards are scoped out (contested label, STANDING_DIRECTIONS); step 6 is a Measure and specify table with no Y-BOCS score bar because no source gives score bands.",
+   "capacity lint answered: S057, S060 and S077 drop \"may\" from \"The brother may act as a surrogate ... only if\": that \"may\" grants permission and is not a hedge; the claims keep the condition. Judge whether the claim still matches the quote.",
+   "The cached AAFP 2018 capacity article is truncated after a few sentences per paragraph; only complete sentences are cited. Audit cards_disposition.json against cards.md: every covered entry must name claim ids that teach the card."
+  ],
+  "read": [
+   "The 5a workup zone names (First step, Targeted tests, Next step, Diagnostic test, Skip), the caption \"Diagnostic workup\", the caption \"Look-alikes, most tempting first\" and the pause point's \"The bait:\" label are site conventions.",
+   "Not to report: brief length or word count (2026-10-19 layers rule).",
+   "ocd's intro line after the bottom line (DSM-5 lists OCD separately from the anxiety disorders) is Jonathan's launch direction, in the lookup-brief intro style; judge its wording only.",
+   "drawer_targets.txt lists in-page anchors (ocd-s1 to ocd-s8, ocd-bank) as MISSING: those are section anchors, not broken brief links.",
+   "Settled by Jonathan at launch (do not report): ocd points to tics (tic-related OCD) and peds-alopecia (trichotillomania); the OCPD row has no drawer (cluster C brief on hold); capacity sends minors' consent to Adolescent Confidentiality."
+  ],
+  "flags": [
+   "line_sources.txt cuts each quote at 600 characters (a known packet limit); facts.json in the same folder holds every quote whole. Before reporting that a quote does not support a line, Grep facts.json for the fact id.",
+   "Word counts are not judged (2026-10-19 layers rule).",
+   "capacity lint answered: S057, S060 and S077 drop a permission \"may\" (\"The brother may act as a surrogate ... only if\"), not a hedge; report it only if the condition itself is lost."
+  ]
+ }
+}

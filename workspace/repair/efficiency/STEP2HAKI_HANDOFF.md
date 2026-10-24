@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 13:50 EDT, by Claude (s150e shipped; no Claude batch open).
+Last updated: 2026-10-24 15:40 EDT, by Claude (s151b S4 round 1 running, lead chat 2).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,7 +12,9 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **s151b OPEN (Claude lead): S3 done; next S4 (review round 1) in a fresh chat** with the restart line. Two new
+- **s151b OPEN (Claude lead): S4 round 1 launched in lead chat 2** (3 lanes, acc opus 18, read and flags sonnet 14
+  each; spec repair/s151b/lanes_r1.json); if this chat stops, a fresh chat files the receipts that exist and relaunches
+  any lane without one. Two new
   briefs: ocd, Obsessive-Compulsive and Related Disorders (disease; after panic in Anxiety, somatic and sexual; folder
   repair/migration/psych/OCD/spine) and capacity, Decision-Making Capacity and Informed Consent (lookup; Preventive &
   Ethics after Adolescent Confidentiality; folder repair/migration/fm/CAP/spine). Launch decisions in DECISIONS_DIGEST
