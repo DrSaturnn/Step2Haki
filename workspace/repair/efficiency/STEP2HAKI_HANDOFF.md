@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-23 21:56 EDT, by Codex, s150b lead chat 3 (S8 presented; waiting for ship).
+Last updated: 2026-10-23 22:17 EDT, by Codex, s150b lead chat 3 (shipped; no batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,15 +12,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch:** s150b open. S1-S8 checks complete; nine full READY. S8 presented by Codex; waiting for ship. Official presentation binds 11 batch files, 72 sheets and final candidate SHA. No publication authorized.
-- **Lead:** Codex, lead chat 3, fresh S8 continuation; lock aafd4b7. No other lead active. Await Jonathan's plain ship after presentation.
-- **Branches:** public /Users/jmontsfit/Documents/Step2Haki/s150-public and private /Users/jmontsfit/Documents/Step2Haki/s150-evidence, wip/s150b. Current main merged before audit; already up to date. Main remains shipped s150.
-- **Budget:** spent 27/30 reviewers, 378/380 calls; 3 reviewers / 2 calls remain. Reviewer and lead tokens unknown; caps 13M reviewer / 220M lead. Audit 35 operations; six follow-up lanes 65. No more reviewer work required for this candidate.
-- **Audit:** AUDIT.md preserves initial FAIL (four MED groups); AUDIT_RESOLUTION.md and S150B.md record every repair. Fourteen fresh PASS receipts. All 14 PMS and 86 PD child statements checked explicitly; source generation/build deterministic across two runs, no gate/tool changes. One carried LOW: MPTP chemical name unexpanded, board-keyed name retained.
-- **Final candidate:** local/s150b/s8/final-fixed.html, SHA-256 779952d9ce547a9e793eeb8ec23edf9b1dfd495696ce1e0eda6d02f19ece2121. Full READY-FINAL.txt: 9 READY / 0 not READY. Gate 39/39, render clean, preflight 0 warnings, vendor pass. Seven old banks and all 15 new item meanings unchanged; shared style/script unchanged. PMS 781 words / 126 claims; Parkinson 984 / 186.
-- **Presentation assets:** local/s150b/s8/APPROVAL_REPORT.md, EDIT_EVIDENCE_APPENDIX.md and APPROVAL_GALLERY.html; 72 sheets in local/sheets/s150b-approval, 332 captures. All phone normal/study sheets inspected. Native baseline advisories remain disclosed. Opened SOMA phone hover and four-mode live new-owner activation proof saved.
-- **Approval:** official approval.py present succeeded on this Mac, page 779952d9ce54, 72 sheets. Await Jonathan's latest plain ship reply to this presentation in this chat. Never relay an older message or fabricate approval. S9 remains unperformed.
-- **Next after ship:** CODEX_LEAD section 5 S9, then next numbered launch s151 (cardiovascular A) or new intake Jonathan supplies. Auditor's four process-rule recommendations remain proposals, not new standing rules.
+- **No batch open.** s150b shipped 2026-10-23 22:17 EDT, Jonathan's exact ship reply recorded through approval.py hook on this Mac. Production ship 059f954; live version.json confirms s150b dated 2026-10-23. Live page SHA-256 e7c065681f2d37e5e70cf56d6d2772aceb30b84f9c11dfa2db59a9f5cc0507c1.
+- **Completed:** two new disease owners, pms-pmdd and parkinson; targeted somatic and psych-medical amendments; pointers in mdd, bipolar-mania, ssri-effects, antipsych-effects and delirium. Fifteen original practice questions; seven old banks unchanged. All nine READY before release. Original audit FAIL, four MED groups and every repair preserved in repair/s150b/AUDIT.md, AUDIT_RESOLUTION.md and S150B.md; 14 follow-up PASS receipts. Approved candidate SHA-256 779952d9ce547a9e793eeb8ec23edf9b1dfd495696ce1e0eda6d02f19ece2121; release changes stamp and changelog only.
+- **Closed spend:** 27/30 reviewers, 378/380 calls (audit 35, audit follow-up 65). Reviewer and lead tokens unknown, never estimated; no new release reviewers. WAVE.json closed. All evidence stays private.
+- **Lead:** none; s150b closed. Public and private main and wip/s150b carry the completed batch. Current clones: /Users/jmontsfit/Documents/Step2Haki/s150-public and s150-evidence.
+- **Next:** new board questions may go through intake; other 2026-10-23 psychiatry amendments remain queued. Otherwise s151 cardiovascular A, full launch prompt below. No new unapproved brief or next batch built.
+- **Carried:** deferred MPTP chemical-name expansion (retain carded name); native contrast/reflow and small-label baseline advisories remain in private local/s150b/LEGIBILITY_S3.md. Four audit process-rule recommendations remain proposals pending explicit approval; no standing-rule change inferred from ship. Earlier carried work remains in prior batch history.
+- **Mac catch-up:** live index.html, public axbx-repo.bundle, this handoff and changed s150b local-only evidence refreshed under ~/Documents/Step2Haki/.
+- **Owed:** claude.ai project handoff copy is unreachable from Codex; Claude or Jonathan uploads this file.
 
 ## Next launch prompt (paste into a fresh chat)
 
