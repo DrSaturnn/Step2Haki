@@ -13,7 +13,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ## State (rewrite after every step)
 
 - **Batch:** s150b open. S1-S7 complete; all nine READY. New pms-pmdd and parkinson disease briefs; targeted somatic and psych-medical amendments; pointers in mdd, bipolar-mania, ssri-effects, antipsych-effects, delirium. Fresh S8 audit/report next, per CODEX_LEAD section 5 and CODEX_AUDIT.md.
-- **Lead:** Codex, since 2026-10-23 20:19 EDT, lead chat 2. Continuation lock 8ff2674. No other lead active; prescribed S7 restart.
+- **Lead:** Codex, since 2026-10-23, lead chat 3 (fresh S8 continuation). Prior lock 8ff2674; S7 checkpoint 023c8eb. No other lead active.
 - **Branches:** public /Users/jmontsfit/Documents/Step2Haki/s150-public and private /Users/jmontsfit/Documents/Step2Haki/s150-evidence, both wip/s150b, committed/pushed through this checkpoint. S8 merges current main before audit/presentation.
 - **Budget:** 30 reviewers / 380 calls / 13M reviewer tokens; lead 220M. Spend 20 reviewers / 278 calls. Remaining 10 reviewers / 102 calls, including the reserved fresh S8 audit (planning 25) and follow-up (56). Reviewer and lead tokens unknown, never estimated. Two review rounds completed.
 - **Evidence:** final review page local/s150b/review/final-r2.html, SHA-256 8f3c09f90edcf766698531d147303f306af4fa7abb97fb7c5ddce8f2090f34ff. READY-r2.txt confirms 9 READY (fast receipt/source check after full S6 mechanical passes for the five affected briefs). S6_PROOF.json, final packets/receipts, 150 fresh captures and scoped sheets saved privately. S3 native raw/baseline advisories remain in local/s150b/LEGIBILITY_S3.md. Runtime local/s150b/runtime/bin/python; browser adapter local/s150b/run_browser.py. No check/tool changes.
