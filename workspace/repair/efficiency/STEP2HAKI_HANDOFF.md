@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24, by Claude (s152 S1/S2 checkpoint).
+Last updated: 2026-10-24, by Claude (s152 S1/S2 checkpoint 2: five briefs built; mid-S2 restart).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -15,14 +15,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **s152 open** (Claude lead), launched 2026-10-24 18:40 EDT on wip/s152 in both repos. Briefs: ped-murmur,
   cyanotic-chd, newborn-cyanosis, kawasaki, arf, myocarditis, del22q11, bs-adolescent-bp. Budget 28 agents, 370
   calls, 14M reviewer tokens; lead 160M (WAVE.json s152, open). Record repair/s152/S152.md.
-- **Step:** S1 and S2 in progress. Done to G-MECH (verify --mech --fast): arf, kawasaki, del22q11, bs-adolescent-bp.
-  Next: cyanotic-chd, newborn-cyanosis, ped-murmur, myocarditis (the three hubs then need 40_presentations.json,
-  count +3), then S3 (patch.py-style full verify --mech per folder, batch page, gate, render, preflight, vendor,
+- **Step:** S1 and S2 in progress. Done to G-MECH (verify --mech --fast): arf, kawasaki, del22q11, bs-adolescent-bp, myocarditis.
+  Next: cyanotic-chd, newborn-cyanosis, ped-murmur (read S152.md "Build notes" first; the three hubs then need
+  repair/s152/40_presentations.json, count 25 to 28), then S3 (patch.py-style full verify --mech per folder, batch page, gate, render, preflight, vendor,
   squeeze) and the S3 restart.
 - **How the builds run:** repair/migration/peds/s152build.py <brief> (author.py -> facts_from_spec -> outline_render
   -> disp.py), helpers in repair/migration/peds/s152lib.py; live lines in local/s152/live/. Folders
   repair/migration/peds/<brief>/spine (private; synced to the private repo at checkpoints).
-- **Spend:** reviewers 0 agents, 0 calls. Lead: this chat only (measure at S3 with usage_ledger.py --lead).
+- **Spend:** reviewers 0 agents, 0 calls. Lead: chat 1 (4e576059) 47.5M over 139 calls (ledger_lead.csv); 112M of the 160M lead budget remains.
 - **Lead:** Claude, since 2026-10-24 18:40 EDT (s152).
 
 ## Next launch prompt (paste into a fresh chat)
