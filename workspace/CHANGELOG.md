@@ -2,6 +2,28 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-24 s150c: s150c: dementia hub, eating disorders, defense mechanisms; suicide-risk, substance, disruptive-behavior additions
+
+```
+Page: 182 briefs, 2197 items -> 185 briefs, 2217 items
+Briefs added (3):
+  - eating-disorders: Eating Disorders (7 items)
+  - defense-mechanisms: Defense Mechanisms (5 items)
+  - dementia: Cognitive Decline and Dementia in an Adult (8 items)
+Briefs changed (5):
+  - mdd (Major Depressive Disorder): prose edited (+120 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+658 chars)
+  - disruptive-behavior (Disruptive Behavior in a Child): prose edited (+770 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (+93 chars)
+  - suicide-risk (Suicide Risk Assessment): prose edited (+135 chars)
+Other page changes (nav, headers, scripts): +1550 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 185 briefs, 2217 items (336 with reasons), 22 scripts, 39 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 185 | bankwraps 185 | mcq 2217 (reasons 336) (axCheck 2217, reveal-only 0) | malformed 0 | crit gridded 154/155 | vignette gridded 64/64 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.013%)
+```
+
 ## 2026-10-23 s150b: Add PMS/PMDD and Parkinson briefs with targeted psychiatry corrections
 
 ```
