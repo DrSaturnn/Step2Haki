@@ -2,9 +2,9 @@
  "edits": [
   {
    "op": "replace_global",
-   "find": "    <div class=\"sect\">Presentations <span class=\"count\">23</span></div>\n",
-   "with": "    <div class=\"sect\">Presentations <span class=\"count\">24</span></div>\n    <a href=\"#right-murmurs\">Heart Murmurs in an Adult</a>\n",
-   "note": "s151: adult murmur hub gains its required Presentations link; count +1, cardiovascular first"
+   "find": "    <div class=\"sect\">Presentations <span class=\"count\">24</span></div>\n",
+   "with": "    <div class=\"sect\">Presentations <span class=\"count\">25</span></div>\n    <a href=\"#right-murmurs\">Heart Murmurs in an Adult</a>\n",
+   "note": "s151: adult murmur hub gains its required Presentations link; count +1, cardiovascular first; reconciled at S8 after the main merge (s150c dementia hub made it 24 -> 25)"
   }
  ]
 }

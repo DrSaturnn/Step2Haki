@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 16:35 EDT, by Claude (s151b shipped; post-ship).
+Last updated: 2026-10-24 18:40 EDT, by Claude (s151 S8 presented; awaiting "ship").
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -11,6 +11,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
 ## State (rewrite after every step)
+
+- **s151 S8 (Claude):** presented 2026-10-24 for approval (approval.py present s151; page abea2cb4fafb; record in this
+  container). Main merged into wip/s151 in both repos (public 64400e3, private 8528097); Presentations count reconciled
+  24 to 25; read round 5 (sibling titles only) PASS; all seven READY on full verify_all. Waiting for Jonathan's "ship"
+  in the S8 chat; then S9 per the runbook. Record repair/s151/S151.md (S8).
 
 - **s151b shipped** 2026-10-24 16:30 EDT on Jonathan's "ship": 69121d9 (main, pushed by hand; no token here), live
   version.json reads s151b, page sha256 5c6c53fd243a. New ocd (Obsessive-Compulsive and Related Disorders) and capacity
@@ -28,8 +33,6 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   needs acc, read, flags); small additions reviewed on changed lines only; one batch per chat. Runbook "Token rules".
   Owed by Jonathan: turn off Figma, Vercel and the healthcare plugin for this project (start-up context 193K against a
   130K baseline; s150e start-up measured 128,376).
-- **s151 (Codex):** S7 done, all seven READY, released to Claude for S8 and S9 (wip/s151, cardiovascular; no brief shared
-  with s150e). Whichever of s150e and s151 ships second merges main first (the 2026-10-23 parallel rule).
 - **s150d shipped** 2026-10-24 11:05 EDT on Jonathan's "ship": commit 0fa5d5f (main, by hand). psych-medical is now
   "Medication- and Illness-Induced Psychiatric Disorders" (tile removed); disruptive-behavior has a Time frames table.
   Record repair/s150d/S150D.md. Its private folder changes join the owed files below.
@@ -47,7 +50,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   s150c chat as s150cd_private_owed.tar.gz (507 files, 50 MB, paths relative to local-only/; raw shots left out).
   The next session with push access extracts it into the private clone's local-only/, commits on wip/s150c and merges
   to main. Until then a fresh cloud chat restoring from the private repo gets the S7 versions of those files.
-- **Lead:** Claude. No lock held. s151 S8 and S9 run in a separate Claude chat, which takes the lock on wip/s151 and merges main (now with s150e and s151b) first; s151's changelog entry '151' goes before '151b' in axlog.py.
+- **Lead:** Claude holds the lock on wip/s151 (both repos) for S8 and S9; s151's changelog entry '151' is in, before '151b'.
 - **Carried:** deferred LOWs from s150c round 4 (dementia Korsakoff item reason d1 "none are present here" would read
   better as "gait and eye movements are normal here"; eating-disorders "another step 2 criterion" and "any step 2
   criterion" would read better as "admission criterion (Urgent risks)"); the defense-mechanisms intro clause naming
