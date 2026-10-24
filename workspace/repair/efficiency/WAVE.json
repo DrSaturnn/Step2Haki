@@ -1,8 +1,8 @@
 {
   "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
-  "id": "s151",
-  "open": false,
-  "plan_step": "s151",
+  "id": "s152",
+  "open": true,
+  "plan_step": "s152",
   "roles": [
     "acc-review",
     "read-review",
@@ -11,16 +11,16 @@
     "patch-review",
     "patch-review-opus"
   ],
-  "max_agents": 32,
-  "max_calls": 440,
-  "max_tokens": 15000000,
-  "set_by": "Jonathan, s151 launch prompt 2026-10-23",
+  "max_agents": 28,
+  "max_calls": 370,
+  "max_tokens": 14000000,
+  "set_by": "Jonathan, s152 launch prompt 2026-10-24",
   "previous": {
-    "id": "s151b",
-    "note": "s151b shipped 69121d9 2026-10-24 (Claude lead); reviewers 15/16 agents, 125/240 calls, 4.58M/10M tokens; lead 69.3M/120M"
+    "id": "s151",
+    "note": "s151 shipped b1d9e69 2026-10-24 (Codex S1-S7, Claude S8-S9); reviewers 27/32 agents, 396/440 calls; tokens: Codex unmeasured, S8 0.10M; lead (Claude) 18.2M; no batch open"
   },
-  "opened": "2026-10-23 22:36 EDT",
-  "note": "s151 shipped b1d9e69 2026-10-24 (Codex S1-S7, Claude S8-S9); reviewers 27/32 agents, 396/440 calls; tokens: Codex unmeasured, S8 0.10M; lead (Claude) 18.2M; no batch open",
+  "opened": "2026-10-24 18:40 EDT",
+  "note": "s152 open (Claude lead): cardiovascular B, pediatric",
   "batch_budgets": {
     "s138": {
       "agents": 20,
@@ -165,9 +165,15 @@
       "calls": 440,
       "tokens": 15000000,
       "lead_tokens": 300000000
+    },
+    "s152": {
+      "agents": 28,
+      "calls": 370,
+      "tokens": 14000000,
+      "lead_tokens": 160000000
     }
   },
-  "max_lead_tokens": 300000000,
-  "spent_agents": 27,
-  "spent_calls": 396
+  "max_lead_tokens": 160000000,
+  "spent_agents": 0,
+  "spent_calls": 0
 }

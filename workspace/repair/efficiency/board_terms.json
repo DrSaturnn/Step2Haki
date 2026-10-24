@@ -1054,5 +1054,90 @@
   "antihypertensive",
   "blood pressure",
   "primary aldosteronism"
+ ],
+ "ped-murmur": [
+  "innocent murmur",
+  "Still murmur",
+  "venous hum",
+  "pathologic murmur",
+  "heart murmur",
+  "pulmonary flow murmur",
+  "peripheral pulmonic stenosis",
+  "hypertrophic cardiomyopathy"
+ ],
+ "cyanotic-chd": [
+  "congenital heart disease",
+  "tetralogy of Fallot",
+  "transposition of the great arteries",
+  "truncus arteriosus",
+  "tricuspid atresia",
+  "anomalous pulmonary venous",
+  "Ebstein",
+  "ventricular septal defect",
+  "atrial septal defect",
+  "patent ductus arteriosus",
+  "coarctation",
+  "hypoplastic left heart",
+  "Eisenmenger",
+  "tet spell",
+  "prostaglandin E1",
+  "indomethacin"
+ ],
+ "newborn-cyanosis": [
+  "cyanosis",
+  "respiratory distress syndrome",
+  "transient tachypnea",
+  "persistent pulmonary hypertension",
+  "choanal atresia",
+  "acrocyanosis",
+  "methemoglobinemia",
+  "hyperoxia",
+  "pulse oximetry screening",
+  "surfactant"
+ ],
+ "kawasaki": [
+  "Kawasaki",
+  "intravenous immunoglobulin",
+  "IVIG",
+  "coronary aneurysm",
+  "coronary artery aneurysm",
+  "MIS-C",
+  "multisystem inflammatory syndrome"
+ ],
+ "arf": [
+  "rheumatic fever",
+  "Jones criteria",
+  "rheumatic heart disease",
+  "Sydenham chorea",
+  "erythema marginatum",
+  "benzathine penicillin",
+  "antistreptolysin"
+ ],
+ "myocarditis": [
+  "myocarditis",
+  "coxsackievirus",
+  "dilated cardiomyopathy",
+  "cardiogenic shock",
+  "bronchiolitis"
+ ],
+ "del22q11": [
+  "DiGeorge",
+  "22q11",
+  "velocardiofacial",
+  "CATCH-22",
+  "thymic hypoplasia",
+  "thymic aplasia",
+  "hypoparathyroidism",
+  "conotruncal"
+ ],
+ "bs-adolescent-bp": [
+  "pediatric hypertension",
+  "hypertension in children",
+  "elevated blood pressure",
+  "ambulatory blood pressure",
+  "oscillometric",
+  "auscultat",
+  "blood pressure percentile",
+  "secondary hypertension"
  ]
 }

@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 18:45 EDT, by Claude (s151 shipped; post-ship).
+Last updated: 2026-10-24, by Claude (s152 S1/S2 checkpoint).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,35 +12,18 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **s151 shipped** 2026-10-24 18:35 EDT on Jonathan's "ship": b1d9e69 (main, pushed by hand; no token here), live
-  version.json reads s151, page sha256 0b9393eae317 (approved candidate abea2cb4fafb). Seven cardiovascular briefs on
-  the decision spine (chf, ascvd, angina, ie-ppx, dvt, right-murmurs hub, htn-drugs). Codex led S1 to S7; Claude merged
-  main, re-verified (read round 5, sibling titles only) and ran S8 and S9. Reviewers 27/32 agents, 396/440 calls;
-  tokens: Codex unmeasured, S8 0.10M; lead (Claude) 18.2M. Private wip/s151 fast-forwarded to private main 5b95cae.
-  Record repair/s151/S151.md. No batch open; no lock held.
-- **Earlier ships today** (s150c, s150d, s150e, s151b): see their records under repair/sNNN/ and OPEN_WORK.
-- **Patch pipeline (2026-10-24):** patches run in one chat with tools/spine/patch.py, delta-ready intake and one
-  combined reviewer per lane (BATCH_RUNBOOK 8b; DECISIONS_DIGEST "patch efficiency").
-- **Token rules (2026-10-24):** no screenshots in content batches (approval binds the report, batch and page; READY
-  needs acc, read, flags); small additions reviewed on changed lines only; one batch per chat. Runbook "Token rules".
-  Owed by Jonathan: turn off Figma, Vercel and the healthcare plugin for this project (start-up context 193K against a
-  130K baseline; s150e start-up measured 128,376).
-- **Private files owed (important):** the s150c brief-folder changes after S7 (DEM, EAT, DEF facts_spec, facts,
-  build.py, disp_manual, cards_disposition, adj_s150c.md; audit and round 4 receipts in repair/migration/spine/reviews;
-  packets s150c-audit and s150c-r4; sheets s150c-approval) were never pushed: this chat had the private repo
-  read-only, and the Mac bridge dropped before they could be copied there. They (with s150d's) were sent to Jonathan in the
-  s150c chat as s150cd_private_owed.tar.gz (507 files, 50 MB, paths relative to local-only/; raw shots left out).
-  The next session with push access extracts it into the private clone's local-only/, commits on wip/s150c and merges
-  to main. Until then a fresh cloud chat restoring from the private repo gets the S7 versions of those files.
-- **Carried:** deferred LOWs from s150c round 4 (dementia Korsakoff item reason d1 "none are present here" would read
-  better as "gait and eye movements are normal here"; eating-disorders "another step 2 criterion" and "any step 2
-  criterion" would read better as "admission criterion (Urgent risks)"); the defense-mechanisms intro clause naming
-  suppression stays unmasked in study mode (intro lines are not masked); no reverse pointers to dementia or
-  defense-mechanisms from delirium, parkinson or cluster-b (outside the s150c scope); MPTP chemical-name LOW; s150b
-  legibility advisories; the four s150b audit proposals (not rules); queue.csv open row 59 (prolactin); row 66 picked up by s151b with its QID to link later.
-- **Mac:** index.html and STEP2HAKI_HANDOFF.md in Documents/Step2Haki refreshed at the s151 ship. Not refreshed:
-  axbx-repo.bundle (this chat's clone is shallow; the bundle must not come from one) and local-only/ (the private repo
-  is current; pull it on the Mac when needed). s150cd_private_owed.tar.gz was not found in Documents/Step2Haki.
+- **s152 open** (Claude lead), launched 2026-10-24 18:40 EDT on wip/s152 in both repos. Briefs: ped-murmur,
+  cyanotic-chd, newborn-cyanosis, kawasaki, arf, myocarditis, del22q11, bs-adolescent-bp. Budget 28 agents, 370
+  calls, 14M reviewer tokens; lead 160M (WAVE.json s152, open). Record repair/s152/S152.md.
+- **Step:** S1 and S2 in progress. Done to G-MECH (verify --mech --fast): arf, kawasaki, del22q11, bs-adolescent-bp.
+  Next: cyanotic-chd, newborn-cyanosis, ped-murmur, myocarditis (the three hubs then need 40_presentations.json,
+  count +3), then S3 (patch.py-style full verify --mech per folder, batch page, gate, render, preflight, vendor,
+  squeeze) and the S3 restart.
+- **How the builds run:** repair/migration/peds/s152build.py <brief> (author.py -> facts_from_spec -> outline_render
+  -> disp.py), helpers in repair/migration/peds/s152lib.py; live lines in local/s152/live/. Folders
+  repair/migration/peds/<brief>/spine (private; synced to the private repo at checkpoints).
+- **Spend:** reviewers 0 agents, 0 calls. Lead: this chat only (measure at S3 with usage_ledger.py --lead).
+- **Lead:** Claude, since 2026-10-24 18:40 EDT (s152).
 
 ## Next launch prompt (paste into a fresh chat)
 
