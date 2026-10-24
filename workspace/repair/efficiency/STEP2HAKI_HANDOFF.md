@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 13:20 EDT, by Claude (s150e open: S8 presented).
+Last updated: 2026-10-24 13:50 EDT, by Claude (s150e shipped; no Claude batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,16 +12,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: s150e** (Claude lead, patch of shipped briefs, section 8), launched 2026-10-24 12:27 EDT. Briefs:
-  sz-psychosocial (N3), cluster-b (PDB), substance (TOX), peds-sleep (SLEEP), ssri-effects (N4), panic (N5): the queued
-  intake proposals of 2026-10-23 and 2026-10-24. Budget 12 agents, 220 calls, 6M reviewer tokens; lead 150M (WAVE.json
-  s150e). Batch file repair/s150e/S150E.md. Branch wip/s150e in both repos (private: main plus wip/s150c merged).
-- **Step: S8 presented, awaiting "ship"** (approval.py present s150e in this container, page 808cc30e6b9e). All six READY
-  after four combined review rounds (BATCH_RUNBOOK 8b, adopted mid-batch). Spend: reviewers 6 of 12 agents, 20 of 220
-  calls, 0.46M of 6M tokens; lead 40.0M of 150M (one chat). "ship" must go to this chat (the approval record lives in
-  this container); then ship.sh, post-ship, patch.py sync, handoff copies.
-- **Restore for s150e:** clone both repos, check out wip/s150e in each, cp -rn the private local-only into workspace,
-  rebuild the batch page with `python3 repair/build.py s150e --out local/s150e/index.html`.
+- **No Claude batch open.** s150e shipped 2026-10-24 13:45 EDT on Jonathan's "ship": db03746 (main, pushed by hand; no
+  token here), page sha256 43a61f6532c1. Six psych briefs patched from the 2026-10-23 and 2026-10-24 intake proposals;
+  record repair/s150e/S150E.md. First batch on the patch pipeline: reviewers 6 of 12 agents, 20 of 220 calls, 0.46M of
+  6M tokens; lead one chat (ledger_lead.csv). Private folders on wip/s150e of the private repo (pushed); merge to main
+  with the owed s150c/s150d files.
 - **Patch pipeline (2026-10-24):** patches run in one chat with tools/spine/patch.py, delta-ready intake and one
   combined reviewer per lane (BATCH_RUNBOOK 8b; DECISIONS_DIGEST "patch efficiency").
 - **Token rules (2026-10-24):** no screenshots in content batches (approval binds the report, batch and page; READY
@@ -47,14 +42,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   s150c chat as s150cd_private_owed.tar.gz (507 files, 50 MB, paths relative to local-only/; raw shots left out).
   The next session with push access extracts it into the private clone's local-only/, commits on wip/s150c and merges
   to main. Until then a fresh cloud chat restoring from the private repo gets the S7 versions of those files.
-- **Lead:** Claude holds s150e (wip/s150e). s151 S8 and S9 run in a separate Claude chat, which takes the lock on wip/s151.
+- **Lead:** Claude. No lock held. s151 S8 and S9 run in a separate Claude chat, which takes the lock on wip/s151 and merges main (now with s150e) first.
 - **Carried:** deferred LOWs from s150c round 4 (dementia Korsakoff item reason d1 "none are present here" would read
   better as "gait and eye movements are normal here"; eating-disorders "another step 2 criterion" and "any step 2
   criterion" would read better as "admission criterion (Urgent risks)"); the defense-mechanisms intro clause naming
   suppression stays unmasked in study mode (intro lines are not masked); no reverse pointers to dementia or
   defense-mechanisms from delirium, parkinson or cluster-b (outside the s150c scope); MPTP chemical-name LOW; s150b
-  legibility advisories; the four s150b audit proposals (not rules); the other 2026-10-23 psychiatry amendments queued.
-- **Mac:** NOT refreshed (the bridge dropped at post-ship): the handoff copy and index.html there are the s150b ones;
+  legibility advisories; the four s150b audit proposals (not rules); queue.csv open rows 59 (prolactin), 66 (capacity on a hold, new) and 67 (OCD, new).
+- **Mac:** NOT refreshed (s150e chat had only the old clone folders, not Documents/Step2Haki): the handoff copy and index.html there are the s150b ones;
   axbx-repo.bundle must not come from a shallow clone. The project handoff copy was refreshed.
 
 ## Next launch prompt (paste into a fresh chat)
@@ -72,9 +67,11 @@ New board questions, any time (intake only; the skill never edits the page):
 Step2Haki: intake these board questions per the board-brief skill (propose new briefs; do not build).
 ```
 
-The next Claude-led authoring batch, only when Jonathan asks for it: the queued 2026-10-23 psychiatry amendments
-(repair/intake/queue.csv). Proposed budget, from s150c (3 new briefs plus additions with an S8 audit): 32 agents,
-380 calls, 14M reviewer tokens; lead 250M.
+The next patch of shipped briefs, when new intake proposals queue up (runbook 8b; one chat; budget from s150e: 8 agents,
+60 calls, 1.5M reviewer tokens; lead 40M):
+```
+Step2Haki: run the queued intake amendments as a patch batch per claude/BATCH_RUNBOOK.md section 8b.
+```
 
 ## After s141
 
