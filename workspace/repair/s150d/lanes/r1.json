@@ -1,0 +1,102 @@
+{
+ "batch": "s150d",
+ "plan_step": "s150d",
+ "round": 1,
+ "context": "batch s150d, a patch of two live psychiatry briefs (Jonathan 2026-10-24: \"no need to review the whole brief just edit these sections\"); review only the changed lines in changes.md, judged in their context",
+ "out": "repair/efficiency/lanes/s150d/r1",
+ "packets": "repair/migration/spine/packets/s150d",
+ "sheets": "local/shots/s150d/sheets",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "psych-medical",
+    "disruptive-behavior"
+   ],
+   "budget": 14
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "psych-medical",
+    "disruptive-behavior"
+   ],
+   "budget": 14
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "psych-medical",
+    "disruptive-behavior"
+   ],
+   "budget": 14
+  },
+  {
+   "part": "display",
+   "group": "A",
+   "briefs": [
+    "psych-medical",
+    "disruptive-behavior"
+   ],
+   "budget": 20
+  }
+ ],
+ "types": {
+  "psych-medical": "disease brief (live; psychiatry); s150d changes: the title renamed (Jonathan: \"Medication- and Illness-Induced Psychiatric Disorders\") and the timeline tile \"A drug, an illness, or a primary psychosis?\" removed (Jonathan: not relevant to this brief; the same rows stay in the voices hub). Review only the lines changes.md shows, in context",
+  "disruptive-behavior": "disease brief (live; psychiatry and pediatrics); s150d change: a \"Time frames\" table (Disorder | How often | How long) added under the Defining rules table in step 5, restating the same criteria (Jonathan: \"add a time frame table for the diagnostic criteria\"). Review only the lines changes.md shows, in context"
+ },
+ "notes": {
+  "acc": [
+   "Jonathan decided the title, the removal and the table form (DECISIONS_DIGEST 2026-10-24 s150d); judge accuracy of the changed lines, not the decisions.",
+   "The new table's claims reuse the sources of the Defining rules rows they restate (S073, S075, S077, S079): judge each cell against those quotes.",
+   "Removing the tile is not a finding unless it removes the only place a fact the bank keys is taught."
+  ],
+  "read": [
+   "The title and the removal are Jonathan's decisions; judge whether the changed lines read clearly and whether anything left behind now refers to the removed tile.",
+   "The renamed title also changed in links in five other briefs and the sidebar; those were checked mechanically (every link opens the right brief) and are out of scope."
+  ],
+  "flags": [
+   "The new table restates the Defining rules rows; each cell's numbers must match its quote (line_sources.txt, facts in the claim map)."
+  ],
+  "display": [
+   "Judge the step 5 Time frames table on phone and desktop: three columns must scan at phone width without squeezing, and in study mode the How often and How long cells, and only they, are masked. For psych-medical, judge that step 3 ends cleanly where the tile was removed."
+  ]
+ },
+ "custom": {
+  "acc": {
+   "files": [
+    "brief_text.txt",
+    "facts.json",
+    "claim_map.json",
+    "changes.md"
+   ]
+  },
+  "read": {
+   "files": [
+    "brief_text.txt",
+    "sibling_titles.txt",
+    "drawer_targets.txt",
+    "ALIASES.json",
+    "ABBREV.json",
+    "changes.md"
+   ]
+  },
+  "flags": {
+   "files": [
+    "brief_text.txt",
+    "line_sources.txt",
+    "facts.json",
+    "changes.md"
+   ]
+  },
+  "display": {
+   "files": [
+    "brief_text.txt",
+    "changes.md"
+   ]
+  }
+ }
+}

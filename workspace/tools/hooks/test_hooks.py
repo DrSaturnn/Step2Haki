@@ -298,6 +298,12 @@ try:
     expect('check after the batch file changed post-approval', (chk().returncode, ''), 1)
     open(bf, 'w').write(keep)
     expect('check with the approved batch restored', (chk().returncode, ''), 0)
+    # 2026-10-24 (Jonathan): no screenshots; present binds the batch, changelog and page alone
+    r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', TB], env=ENV, capture_output=True, text=True)
+    expect('present with no screenshots', (r.returncode, r.stdout + r.stderr), 0)
+    expect('check after a new presentation, before ship', (chk().returncode, ''), 1)
+    run('approval.py', {'prompt': 'ship', 'session_id': 'S'}, 'hook')
+    expect('approval of a presentation with no screenshots', (chk().returncode, ''), 0)
     open(page, 'a').write('<!-- changed -->')
     expect('check after the page changed', (chk().returncode, ''), 1)
 finally:

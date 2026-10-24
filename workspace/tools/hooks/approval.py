@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """G-APPROVE, made mechanical (Jonathan 2026-10-12): ship.sh refuses a batch unless an approval record exists, and the
-record is written only after Jonathan says "ship" in reply to the screenshots.
+record is written only after Jonathan says "ship" in reply to the presented report (screenshots optional since
+2026-10-24: Jonathan checks the live site; the record binds the batch files, the changelog entry and the built page).
 
-  approval.py present sNN SHOT [SHOT ...]   lead: after the preview and screenshots are built, register them (pending)
+  approval.py present sNN [SHOT ...]         lead: after the report is ready, register the batch (pending); screenshots
+                                            are optional (a layout batch may still bind them)
   approval.py hook                          UserPromptSubmit hook: Jonathan's message; "ship" approves the pending batch
   approval.py check sNN PAGE                ship.sh: PAGE is the batch built by repair/build.py; exit 0 only if approved
   approval.py status                        print pending and approved batches
 
-The manifest binds the batch files, its changelog entry, the built page and every screenshot by sha256. The hook writes
+The manifest binds the batch files, its changelog entry, the built page and any screenshot by sha256. The hook writes
 approvals/sNN.json only when a pending manifest exists and the message says ship (not "don't ship" or a question), and
 names that batch when more than one is pending. Any later change to the batch, the changelog entry or the built page
 breaks the match, so ship.sh refuses and the batch must be presented again. The lead cannot write approvals/ (callgate).
@@ -75,8 +77,6 @@ def build(b):
 
 
 def present(b, shots):
-    if not shots:
-        sys.exit('approval present: name the screenshot files Jonathan will review')
     missing = [s for s in shots if not os.path.isfile(s)]
     if missing:
         sys.exit('approval present: missing screenshot(s): %s' % ', '.join(missing))
@@ -93,7 +93,7 @@ def present(b, shots):
     old = C.state('approvals', '%s.json' % b)
     if os.path.exists(old):
         os.remove(old)              # a new presentation voids any earlier approval of this batch
-    print('approval: %s presented (%d files, %d screenshot(s), page %s). Send the screenshots; ship.sh will run only '
+    print('approval: %s presented (%d files, %d screenshot(s), page %s). Send the report; ship.sh will run only '
           'after Jonathan replies "ship".' % (b, len(files), len(shots), m['page_sha'][:12]))
     return 0
 
@@ -144,7 +144,7 @@ def hook():
 def check(b, page):
     p = os.path.join(C.STATE, 'approvals', '%s.json' % b)
     if not os.path.exists(p):
-        print('approval: no approval record for %s. Present it (approval.py present %s SHOTS), send the screenshots, and '
+        print('approval: no approval record for %s. Present it (approval.py present %s), send the report, and '
               'wait for Jonathan to reply "ship".' % (b, b))
         return 1
     a = json.load(open(p, encoding='utf-8'))

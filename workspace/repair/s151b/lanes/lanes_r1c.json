@@ -1,0 +1,30 @@
+{
+ "batch": "s151b",
+ "plan_step": "s151b",
+ "round": 1,
+ "context": "batch s151b builds two new briefs on decision spine v2: ocd (Obsessive-Compulsive and Related Disorders, a psychiatry disease brief) and capacity (Decision-Making Capacity and Informed Consent, a Preventive & Ethics lookup brief); this is review round 1, on each whole brief",
+ "out": "repair/efficiency/lanes/s151b/r1c",
+ "packets": "repair/migration/spine/packets/s151b",
+ "lanes": [
+  {
+   "part": "read",
+   "group": "C",
+   "briefs": [
+    "capacity"
+   ]
+  }
+ ],
+ "types": {
+  "capacity": "lookup brief (decision-making capacity, informed consent, surrogates), fm lens; new brief; a lookup brief carries tables and a commitment rule instead of the eight spine steps (model: defense-mechanisms, s150c); review in full"
+ },
+ "notes": {
+  "read": [
+   "The 5a workup zone names (First step, Targeted tests, Next step, Diagnostic test, Skip), the caption \"Diagnostic workup\", the caption \"Look-alikes, most tempting first\" and the pause point's \"The bait:\" label are site conventions.",
+   "Not to report: brief length or word count (2026-10-19 layers rule).",
+   "Settled by Jonathan at launch (do not report): ocd points to tics (tic-related OCD) and peds-alopecia (trichotillomania); the OCPD row has no drawer (cluster C brief on hold); capacity sends minors' consent to Adolescent Confidentiality.",
+   "Relaunch of read-A for capacity only (read-A spent its calls before writing this receipt): read brief_text.txt, then at most one Grep each of ABBREV.json and ALIASES.json, then write the receipt.",
+   "ABBREV.json is a dict whose lists labs_imaging, site_conventions and roman_numerals are the allowlist; a term absent from them is spelled out. ALIASES.json holds the other-names table under entries.",
+   "A lookup brief's pause point is one plain sentence after \"Pause point.\" with no \"The bait:\" label (the shipped defense-mechanisms brief does the same)."
+  ]
+ }
+}

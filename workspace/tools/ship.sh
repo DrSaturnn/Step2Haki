@@ -43,7 +43,7 @@ else
 # ---- 1. checks on a scratch copy
 o=$(python3 repair/build.py "$B" --out "$TMP/index.html" 2>&1) || fail build "$o"; echo "$o"
 # G-APPROVE (Jonathan 2026-10-12): an approval record must exist for exactly this build, written by the
-# UserPromptSubmit hook when Jonathan says "ship" in reply to the screenshots (tools/hooks/approval.py)
+# UserPromptSubmit hook when Jonathan says "ship" in reply to the presented report (tools/hooks/approval.py)
 o=$(python3 tools/hooks/approval.py check "$B" "$TMP/index.html" 2>&1) || fail approval "$o"; echo "$o"
 # G-READY: a spine build ships only when verify says READY (mechanical checks plus four current receipts)
 o=$(python3 tools/hooks/ready_gate.py "$B" 2>&1) || fail ready "$o"; echo "$o"

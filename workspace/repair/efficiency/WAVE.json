@@ -6,20 +6,21 @@
   "roles": [
     "acc-review",
     "read-review",
-    "display-review",
     "flag-review",
-    "wording-fix"
+    "wording-fix",
+    "patch-review",
+    "patch-review-opus"
   ],
   "max_agents": 32,
   "max_calls": 440,
   "max_tokens": 15000000,
   "set_by": "Jonathan, s151 launch prompt 2026-10-23",
   "previous": {
-    "id": "s150b",
-    "note": "Closed; 27 agents, 378 calls, tokens unknown"
+    "id": "s151b",
+    "note": "s151b shipped 69121d9 2026-10-24 (Claude lead); reviewers 15/16 agents, 125/240 calls, 4.58M/10M tokens; lead 69.3M/120M"
   },
   "opened": "2026-10-23 22:36 EDT",
-  "note": "S7 done: all READY; Lead: released to Claude for S8 and S9. 26 reviewers/391 calls, tokens unknown; WAVE stays open for Claude. Approved 2026-10-24 Token rules; no new display lane.",
+  "note": "S8 (Claude): main merged into wip/s151 in both repos 2026-10-24; re-verification and presentation by Claude. S1-S7 (Codex): 26 reviewers/391 calls, tokens unknown.",
   "batch_budgets": {
     "s138": {
       "agents": 20,
@@ -135,6 +136,29 @@
       "calls": 380,
       "tokens": 13000000,
       "lead_tokens": 220000000
+    },
+    "s150c": {
+      "agents": 30,
+      "calls": 400,
+      "tokens": 15000000,
+      "lead_tokens": 250000000
+    },
+    "s150d": {
+      "agents": 6,
+      "calls": 80,
+      "tokens": 3000000
+    },
+    "s150e": {
+      "agents": 12,
+      "calls": 220,
+      "tokens": 6000000,
+      "lead_tokens": 150000000
+    },
+    "s151b": {
+      "agents": 16,
+      "calls": 240,
+      "tokens": 10000000,
+      "lead_tokens": 120000000
     },
     "s151": {
       "agents": 32,

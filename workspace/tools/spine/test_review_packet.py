@@ -51,4 +51,8 @@ expect('trap tags labelled and separated', '[trap tags: Sequencing trap · Treat
 _t = RP.text_of('<div class="traps"><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Wilms explains one finding.</span></div>\n<div class="trapline"><span class="pill p-seq">Sequencing trap</span><span class="trapwhy">Image first.</span></div></div>')
 expect('trapline keeps its explanation', 'Class-vs-member: Wilms explains one finding.' in _t and 'Sequencing trap: Image first.' in _t and '[trap tags' not in _t)
 
+# s151b S5: the intro line after the bottom line is labelled (a reviewer counted it as a fourth bottom-line line)
+_t = RP.text_of('<div class="sp-bl"><p>one</p></div><p class="sp-intro">DSM-5 groups it</p>')
+expect('intro line labelled', '[intro line, not part of the Bottom line] DSM-5 groups it' in _t)
+
 print('test_review_packet: %d passed, %d failed' % (ok, fail)); sys.exit(1 if fail else 0)

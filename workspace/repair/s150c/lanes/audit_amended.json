@@ -1,0 +1,50 @@
+{
+ "batch": "s150c",
+ "plan_step": "s150c",
+ "round": 1,
+ "context": "batch s150c, independent S8 audit of three targeted additions to live, already-reviewed briefs: suicide-risk (low CSF 5-HIAA as the serotonergic marker of suicidal behavior), substance (recognizing alcohol use disorder: drinking pattern, waking during the night, macrocytosis, AST at least twice ALT) and disruptive-behavior (a reactive attachment disorder differential row and clue row). Scope: only the lines changes.md shows as added or changed, judged in their context; unchanged lines are out of scope",
+ "out": "repair/efficiency/lanes/s150c/audit",
+ "packets": "repair/migration/spine/packets/s150c-audit",
+ "sheets": "local/shots/s150c-r2/sheets",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "C",
+   "briefs": [
+    "suicide-risk",
+    "substance",
+    "disruptive-behavior"
+   ],
+   "budget": 21
+  }
+ ],
+ "types": {
+  "suicide-risk": "disease brief (live; one added Driver line); audit the changed lines only",
+  "substance": "disease brief (live; one added clue row with a hover); audit the changed lines only",
+  "disruptive-behavior": "disease brief (live; one added differential row and one clue row); audit the changed lines only"
+ },
+ "notes": {
+  "acc": [
+   "Where a board source and a guideline differ, the brief teaches the board answer and puts the guideline in an \"In practice:\" hover: intended, not a finding.",
+   "AST and ALT are on the abbreviation allowlist.",
+   "The addition cards (5-HIAA, alcohol use disorder, reactive attachment disorder) are recorded in the batch file, not in these briefs' cards_disposition.json (the shipped card lists were not regenerated): not a finding."
+  ]
+ },
+ "extra_judge": {
+  "acc": [
+   "This is the independent S8 audit (the launch budget names it). You have not seen any earlier receipt or the lead's adjudication: judge the brief cold, as a fresh accuracy reviewer would.",
+   "Claim-level entailment (the s150b audit's MED C class): for every claim, each action, test, drug, threshold or recommendation the line states must be stated by one of its cited facts (claim_map.json ids, quotes in facts.json); a fact about the same topic is not enough. Report a stated action no cited quote states.",
+   "Every age, cutoff, duration and number in a changed line against the cited quote."
+  ]
+ },
+ "custom": {
+  "acc": {
+   "files": [
+    "brief_text.txt",
+    "changes.md",
+    "facts.json",
+    "claim_map.json"
+   ]
+  }
+ }
+}

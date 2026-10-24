@@ -102,6 +102,9 @@ and say so in the batch file so Claude syncs the project copy on return.
 
 ## 3. Reviews (S4 and S7) without Claude subagents
 
+For a patch of shipped briefs, BATCH_RUNBOOK section 8b applies instead (2026-10-24): tools/spine/patch.py builds one
+lane per model and each lane is one Codex task writing one receipt.md, which `patch.py file` splits; one chat (one
+Codex task for the lead) from launch to ship. Otherwise:
 The four roles (acc, read, display, flags) stay; each lane is a separate Codex task with a fresh context, never the
 lead's own session, so the work is not grading itself.
 - Packets and lanes exactly as the runbook says (review_packet.py, lanes.py; the lane folder's INSTRUCTIONS.md and

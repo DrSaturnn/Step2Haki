@@ -1,0 +1,73 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "parkinson",
+   "find": "drome <button type=\"button\" class=\"sp-drw\" data-brief=\"psych-medical\">Psychiatric Symptoms from Medical Illness or Medication",
+   "with": "drome <button type=\"button\" class=\"sp-drw\" data-brief=\"psych-medical\">Medication- and Illness-Induced Psychiatric Disorders",
+   "note": "s150d (Jonathan 2026-10-24): psych-medical renamed"
+  },
+  {
+   "op": "replace",
+   "brief": "parkinson",
+   "find": ", see <button type=\"button\" class=\"sp-drw\" data-brief=\"psych-medical\">Psychiatric Symptoms from Medical Illness or Medication",
+   "with": ", see <button type=\"button\" class=\"sp-drw\" data-brief=\"psych-medical\">Medication- and Illness-Induced Psychiatric Disorders",
+   "note": "s150d (Jonathan 2026-10-24): psych-medical renamed"
+  },
+  {
+   "op": "replace",
+   "brief": "parkinson",
+   "find": "/span> <i>Psychiatric Symptoms from Medical Illness or Medication",
+   "with": "/span> <i>Medication- and Illness-Induced Psychiatric Disorders",
+   "note": "s150d (Jonathan 2026-10-24): psych-medical renamed"
+  },
+  {
+   "op": "replace",
+   "brief": "psychosis-duration",
+   "find": "/span> <i>Psychiatric Symptoms from Medical Illness or Medication",
+   "with": "/span> <i>Medication- and Illness-Induced Psychiatric Disorders",
+   "note": "s150d (Jonathan 2026-10-24): psych-medical renamed"
+  },
+  {
+   "op": "replace",
+   "brief": "voices",
+   "find": " disease: Psychiatric Symptoms from Medical Illness or Medication",
+   "with": " disease: Medication- and Illness-Induced Psychiatric Disorders",
+   "note": "s150d (Jonathan 2026-10-24): psych-medical renamed"
+  },
+  {
+   "op": "replace",
+   "brief": "voices",
+   "find": "-medical\">Psychiatric Symptoms from Medical Illness or Medication",
+   "with": "-medical\">Medication- and Illness-Induced Psychiatric Disorders",
+   "note": "s150d (Jonathan 2026-10-24): psych-medical renamed"
+  },
+  {
+   "op": "replace",
+   "brief": "voices",
+   "find": "isode? <b>Psychiatric Symptoms from Medical Illness or Medication",
+   "with": "isode? <b>Medication- and Illness-Induced Psychiatric Disorders",
+   "note": "s150d (Jonathan 2026-10-24): psych-medical renamed"
+  },
+  {
+   "op": "replace",
+   "brief": "panic",
+   "find": "g causes: Psychiatric Symptoms from Medical Illness or Medication",
+   "with": "g causes: Medication- and Illness-Induced Psychiatric Disorders",
+   "note": "s150d (Jonathan 2026-10-24): psych-medical renamed"
+  },
+  {
+   "op": "replace",
+   "brief": "somatic",
+   "find": "-medical\">Psychiatric Symptoms from Medical Illness or Medication",
+   "with": "-medical\">Medication- and Illness-Induced Psychiatric Disorders",
+   "note": "s150d (Jonathan 2026-10-24): psych-medical renamed"
+  },
+  {
+   "op": "replace_global",
+   "find": "<a href=\"#psych-medical\">Psychiatric Symptoms from Medical Illness or Medication</a>",
+   "with": "<a href=\"#psych-medical\">Medication- and Illness-Induced Psychiatric Disorders</a>",
+   "note": "s150d: sidebar link renamed"
+  }
+ ]
+}

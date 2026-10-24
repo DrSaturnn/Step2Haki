@@ -106,6 +106,9 @@ def text_of(brief_html):
     x = re.sub(r'<span[^>]*role="img"[^>]*aria-label="([^"]+)"[^>]*>\s*</span>',
                lambda m: {'leads to': ' \u2192 ', 'and': ' + ', 'plus': ' + '}.get(m.group(1), ' [%s] ' % m.group(1)), x)
     x = close_masks(x)
+    # s151b S5 packet error: a lookup or disease brief's intro line (p.sp-intro) follows the bottom line with no label,
+    # so a reviewer counted it as a fourth bottom-line line (false MED); label it
+    x = re.sub(r'(<p\b[^>]*class="[^"]*\bsp-intro\b[^"]*"[^>]*>)', r'\1[intro line, not part of the Bottom line] ', x)
     # s148 S5 packet error: the trap tag row (div.traps, pill names only, on 90 briefs) ran together as one fragment
     # ("Sequencing trapTreat-the-number") and drew two false MED findings; show it as a labelled tag list
     # s148 S7 packet error: that pattern stopped at a nested trapline's </div> and dropped its explanation; only a

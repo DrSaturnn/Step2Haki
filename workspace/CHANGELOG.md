@@ -2,6 +2,82 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-24 s151b: s151b: new briefs Obsessive-Compulsive and Related Disorders; Decision-Making Capacity and Informed Consent
+
+```
+Page: 185 briefs, 2217 items -> 187 briefs, 2230 items
+Briefs added (2):
+  - capacity: Decision-Making Capacity and Informed Consent (6 items)
+  - ocd: Obsessive-Compulsive and Related Disorders (7 items)
+Other page changes (nav, headers, scripts): +873 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 187 briefs, 2230 items (349 with reasons), 22 scripts, 39 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 187 | bankwraps 187 | mcq 2230 (reasons 349) (axCheck 2230, reveal-only 0) | malformed 0 | crit gridded 156/157 | vignette gridded 64/64 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.013%)
+```
+
+## 2026-10-24 s150e: s150e: six psych briefs patched from new board questions (sz-psychosocial, cluster-b, substance, peds-sleep, ssri-effects, panic)
+
+```
+Page: 185 briefs, 2217 items -> 185 briefs, 2217 items
+Briefs changed (6):
+  - peds-sleep (Sleep Problems): prose edited (+242 chars)
+  - sz-psychosocial (Schizophrenia: Long-Term Care): prose edited (+207 chars)
+  - cluster-b (Cluster B Personality Disorders): prose edited (+132 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (+813 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+373 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (+538 chars)
+Other page changes (nav, headers, scripts): +834 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 185 briefs, 2217 items (336 with reasons), 22 scripts, 39 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 185 | bankwraps 185 | mcq 2217 (reasons 336) (axCheck 2217, reveal-only 0) | malformed 0 | crit gridded 154/155 | vignette gridded 64/64 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.013%)
+```
+
+## 2026-10-24 s150d: psych-medical renamed and tile removed; disruptive-behavior time frames table
+
+```
+Page: 185 briefs, 2217 items -> 185 briefs, 2217 items
+Briefs changed (7):
+  - parkinson (Parkinson Disease and Parkinsonism): prose edited (-6 chars)
+  - psychosis-duration (Psychosis): prose edited (-2 chars)
+  - voices (Hears Voices or Holds Odd Beliefs): prose edited (-6 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (-2 chars)
+  - somatic (Somatic Symptom and Related Disorders): prose edited (-2 chars)
+  - psych-medical (Medication- and Illness-Induced Psychiatric Disorders): prose edited (-5372 chars)
+  - disruptive-behavior (Disruptive Behavior in a Child): prose edited (+1137 chars)
+Other page changes (nav, headers, scripts): +526 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 185 briefs, 2217 items (336 with reasons), 22 scripts, 39 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 185 | bankwraps 185 | mcq 2217 (reasons 336) (axCheck 2217, reveal-only 0) | malformed 0 | crit gridded 154/155 | vignette gridded 64/64 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.013%)
+```
+
+## 2026-10-24 s150c: s150c: dementia hub, eating disorders, defense mechanisms; suicide-risk, substance, disruptive-behavior additions
+
+```
+Page: 182 briefs, 2197 items -> 185 briefs, 2217 items
+Briefs added (3):
+  - eating-disorders: Eating Disorders (7 items)
+  - defense-mechanisms: Defense Mechanisms (5 items)
+  - dementia: Cognitive Decline and Dementia in an Adult (8 items)
+Briefs changed (5):
+  - mdd (Major Depressive Disorder): prose edited (+120 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+658 chars)
+  - disruptive-behavior (Disruptive Behavior in a Child): prose edited (+770 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (+93 chars)
+  - suicide-risk (Suicide Risk Assessment): prose edited (+135 chars)
+Other page changes (nav, headers, scripts): +1550 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 185 briefs, 2217 items (336 with reasons), 22 scripts, 39 checks, base HEAD | allowlisted 12 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 185 | bankwraps 185 | mcq 2217 (reasons 336) (axCheck 2217, reveal-only 0) | malformed 0 | crit gridded 154/155 | vignette gridded 64/64 | vignette masks 0 | dead anchors 0 | js errors 0 | allowlisted 1
+  vendor: clean (808703 source shingles; page 0.013%)
+```
+
 ## 2026-10-23 s150b: Add PMS/PMDD and Parkinson briefs with targeted psychiatry corrections
 
 ```

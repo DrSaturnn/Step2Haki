@@ -1,0 +1,56 @@
+{
+ "batch": "s150c",
+ "plan_step": "s150c",
+ "round": 1,
+ "context": "batch s150c, independent S8 audit: three new psychiatry briefs built on decision spine v2 from the 2026-10-23b board intake: dementia (a presentation hub), eating-disorders (a disease brief) and defense-mechanisms (the page's first lookup brief), each audited whole",
+ "out": "repair/efficiency/lanes/s150c/audit",
+ "packets": "repair/migration/spine/packets/s150c-audit",
+ "sheets": "local/shots/s150c-r2/sheets",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "dementia"
+   ],
+   "budget": 18
+  },
+  {
+   "part": "acc",
+   "group": "B",
+   "briefs": [
+    "eating-disorders",
+    "defense-mechanisms"
+   ],
+   "budget": 22
+  }
+ ],
+ "types": {
+  "dementia": "presentation hub (data-entry hub; cognitive decline in an adult: DLB, Alzheimer, vascular, frontotemporal, CJD, Korsakoff and reversible causes), psychiatry; steps 5 to 8 greyed; treatment by cause inside step 4; review in full",
+  "eating-disorders": "disease brief (anorexia nervosa, bulimia nervosa, binge eating disorder, ARFID; diabetic gastroparesis as the medical mimic), psychiatry; review in full",
+  "defense-mechanisms": "lookup brief (SPINE_SPEC entry type: tables plus one commitment rule, no spine): bottom line, intro line, immature and mature tables (names masked in study mode), a commonly-confused-pairs table and one commitment rule as the pause point; no stepper or numbered steps by design; review in full"
+ },
+ "notes": {
+  "acc": [
+   "A hub may carry treatment no other live brief owns inside step 4 Workup, after the workup tree; steps 5 to 8 stay greyed (Jonathan 2026-10-18).",
+   "Where a board source (AnKing card, UWorld, NBME) and a guideline differ, the brief teaches the board answer and puts the guideline in an \"In practice:\" hover (runbook section 3): the hover is intended, not a finding.",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length).",
+   "dementia, frontotemporal dementia: one UWorld explanation mentions impaired memory, the UWorld DLB library page says memory and visuospatial function are spared early; the brief teaches early sparing (lead call 3). Judge whether the line as written is accurate for Step 2.",
+   "eating-disorders: only the adult BMI cutoff (under 18.5) is taught because the cards disagree on the percentile for patients 20 or younger (5th versus 10th); the omission is a recorded scope call (lead call 4), not a finding.",
+   "dementia, CJD: 14-3-3 is taught as supportive and nonspecific, RT-QuIC as the confirmatory test (lead call 5).",
+   "eating-disorders: gastroparesis treatment is the last rung of the treatment ladder because the mimic has no owner brief (lead call 8).",
+   "defense-mechanisms: having no steps, workup or treatment is the lookup entry type, not a finding."
+  ]
+ },
+ "extra_judge": {
+  "acc": [
+   "This is the independent S8 audit (the launch budget names it). You have not seen any earlier receipt or the lead's adjudication: judge the brief cold, as a fresh accuracy reviewer would.",
+   "Claim-level entailment (the s150b audit's MED C class): for every claim, each action, test, drug, threshold or recommendation the line states must be stated by one of its cited facts (claim_map.json ids, quotes in facts.json); a fact about the same topic is not enough. Report a stated action no cited quote states.",
+   "Card child coverage (the s150b audit's MED D class): for each card marked covered:S### in cards_disposition.json, read the card's high-yield lines in cards.md and check that the named claims teach each high-yield statement, including a child statement inherited from its parent card; report a covered card whose named claims teach a different part of the card.",
+   "Layers rule (Jonathan 2026-10-19): a fact a board item keys (the answer, or the clue that rules out a distractor) must stay visible, not only in a hover. Report a keyed fact found only in a hover.",
+   "Brief set rules (Jonathan 2026-10-20): every practice item carries three reasons (\"reasons: key | d1 | d2\" on its item line), each the choice's defining feature or the fact in the stem that rules it out; a distractor that is a differential row reuses that row's wording. Judge each reason for Step 2 truth on that stem and agreement with the body and the item's explanation.",
+   "Every age, cutoff, duration and interval against the cited quote and the board sources in facts.json (kind board first).",
+   "Card dispositions: spot-check that each \"covered\" card's fact is taught by the claims it names, and that no carded fact the bank tests is marked scope or not-topic."
+  ]
+ }
+}

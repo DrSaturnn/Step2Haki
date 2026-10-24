@@ -1,0 +1,115 @@
+{
+ "batch": "s150c",
+ "plan_step": "s150c",
+ "round": 3,
+ "context": "batch s150c: follow-up round 3 on defense-mechanisms only (the page's first lookup brief): five approved wording replacements from round 2 (read and flags) are now in the brief; review those changed lines",
+ "out": "repair/efficiency/lanes/s150c/r3",
+ "packets": "repair/migration/spine/packets/s150c",
+ "sheets": "local/shots/s150c-r3/sheets",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "defense-mechanisms"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "defense-mechanisms"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "defense-mechanisms"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "A",
+   "briefs": [
+    "defense-mechanisms"
+   ]
+  }
+ ],
+ "types": {
+  "defense-mechanisms": "lookup brief (SPINE_SPEC entry type: tables plus one commitment rule, no spine): bottom line, intro line, immature and mature tables (names masked in study mode), a commonly-confused-pairs table and one commitment rule as the pause point; no stepper or numbered steps by design; review in full"
+ },
+ "steps": {
+  "defense-mechanisms": "the pairs table and the practice reasons"
+ },
+ "prior": {
+  "acc": {
+   "defense-mechanisms": "repair/migration/spine/reviews/defense-mechanisms_acc_r2.md"
+  },
+  "read": {
+   "defense-mechanisms": "repair/migration/spine/reviews/defense-mechanisms_read_r2.md"
+  },
+  "flags": {
+   "defense-mechanisms": "repair/migration/spine/reviews/defense-mechanisms_flags_r2.md"
+  },
+  "display": {
+   "defense-mechanisms": "repair/migration/spine/reviews/defense-mechanisms_display_r2.md"
+  }
+ },
+ "adjudication": {
+  "defense-mechanisms": "repair/migration/psych/DEF/spine/adj_s150c.md"
+ },
+ "notes": {
+  "acc": [
+   "A hub may carry treatment no other live brief owns inside step 4 Workup, after the workup tree; steps 5 to 8 stay greyed (Jonathan 2026-10-18).",
+   "Where a board source (AnKing card, UWorld, NBME) and a guideline differ, the brief teaches the board answer and puts the guideline in an \"In practice:\" hover (runbook section 3): the hover is intended, not a finding.",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length).",
+   "dementia, frontotemporal dementia: one UWorld explanation mentions impaired memory, the UWorld DLB library page says memory and visuospatial function are spared early; the brief teaches early sparing (lead call 3). Judge whether the line as written is accurate for Step 2.",
+   "eating-disorders: only the adult BMI cutoff (under 18.5) is taught because the cards disagree on the percentile for patients 20 or younger (5th versus 10th); the omission is a recorded scope call (lead call 4), not a finding.",
+   "dementia, CJD: 14-3-3 is taught as supportive and nonspecific, RT-QuIC as the confirmatory test (lead call 5).",
+   "eating-disorders: gastroparesis treatment is the last rung of the treatment ladder because the mimic has no owner brief (lead call 8).",
+   "defense-mechanisms: having no steps, workup or treatment is the lookup entry type, not a finding.",
+   "dementia: the bottom line now gates brain MRI on an unclear cause, matching step 4 (lead PARTIAL on acc r1 finding 4; reason in the adjudication)."
+  ],
+  "read": [
+   "The 5a workup zone names (First step, Targeted tests, Next step, Diagnostic test, Skip), the caption \"Diagnostic workup\", the caption \"Look-alikes, most tempting first\" and the pause point's \"The bait:\" label are site conventions.",
+   "defense-mechanisms is a lookup brief: no stepper or steps by design.",
+   "Not to report: brief length or word count (2026-10-19 layers rule).",
+   "AST and ALT were added to ABBREV.json in this round (lead call, disclosed in the report); do not report them unexpanded.",
+   "The clue table header \"Next move\" is the site convention (49 briefs); not a finding."
+  ],
+  "flags": [
+   "line_sources.txt cuts each quote at 600 characters (a known packet limit); facts.json in the same folder holds every quote whole. Before reporting that a quote does not support a line, Grep facts.json for the fact id.",
+   "defense-mechanisms: the hedge in the SASH line (\"may be remembered\") belongs to the mnemonic, not to the claim; the lint advisory was answered by the lead.",
+   "Word counts are not judged (2026-10-19 layers rule)."
+  ],
+  "display": [
+   "Drawer and Pairs with styling, tile tints and the question-tile format are the site layer (s148f and s148g, shipped), not this batch.",
+   "A hub's greyed steps 5 to 8 (\"Not used\") are the hub golden's pattern.",
+   "defense-mechanisms is the first lookup brief: tables and one commitment rule with no stepper is the intended layout; judge whether the tables scan on phone and whether study mode masks the defense names and only them.",
+   "Known shared-component advisories, not this batch's (S3 legib, desktop raw capture): the active bank toggle, a drawer chip, the timeline axis label, Clues table headers and a criteria tile term; shared styles and scripts are unchanged by this batch.",
+   "Known site-wide items carried to a site batch, not to report: 5a Targeted tests rows with an empty Result or Means cell on desktop; a ladder \"when\" followed by a capital letter."
+  ]
+ },
+ "extra_judge": {
+  "acc": [
+   "Layers rule (Jonathan 2026-10-19): a fact a board item keys (the answer, or the clue that rules out a distractor) must stay visible, not only in a hover. Report a keyed fact found only in a hover.",
+   "Brief set rules (Jonathan 2026-10-20): every practice item carries three reasons (\"reasons: key | d1 | d2\" on its item line), each the choice's defining feature or the fact in the stem that rules it out; a distractor that is a differential row reuses that row's wording. Judge each reason for Step 2 truth on that stem and agreement with the body and the item's explanation.",
+   "Every age, cutoff, duration and interval against the cited quote and the board sources in facts.json (kind board first).",
+   "Card dispositions: spot-check that each \"covered\" card's fact is taught by the claims it names, and that no carded fact the bank tests is marked scope or not-topic."
+  ],
+  "read": [
+   "Prose rules (Jonathan 2026-10-19): captions, labels, zone names and cells use the term a clinician or textbook uses, never a euphemism or figurative phrasing; a list of tests is broken up, one test or one group per line.",
+   "Diagnoses with other names show them at first mention and in their differential row (ALIASES.json); abbreviations follow ABBREV.json.",
+   "Each item's three reasons stand alone under their choice after an answer and read as a parallel set.",
+   "Drawers: each drawer or pointer target exists (drawer_targets.txt), including the dementia drawers to parkinson, substance and delirium."
+  ],
+  "flags": [
+   "The per-choice reasons on each item line count as lines: a reason stating a number, an age, or an absolute word (always, never, only, must) its item's claims and quotes do not support is a finding."
+  ],
+  "display": [
+   "Layers rule (Jonathan 2026-10-19): the visible layer must scan on the phone: short cells, nothing buried, no text squeezed into a narrow column (widen, never shorten). Judge the dementia differential (11 rows with a Timeline column) and its tempo timeline, the eating-disorders criteria tiles and ladder, and the defense-mechanisms tables at phone width.",
+   "First step pairing (Jonathan 2026-10-20): in each First step band, each order heads only its own results (one row group per order); on phone the order and its results span the full width; in study mode the answers and only the answers are hidden."
+  ]
+ }
+}

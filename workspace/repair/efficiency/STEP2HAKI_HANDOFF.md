@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24, by Codex (chat 3; S7 all READY; released to Claude for S8 and S9).
+Last updated: 2026-10-24 16:35 EDT, by Claude (s151b shipped; post-ship).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,21 +12,71 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-S7 done: all READY; Lead: released to Claude for S8 and S9
+- **s151b shipped** 2026-10-24 16:30 EDT on Jonathan's "ship": 69121d9 (main, pushed by hand; no token here), live
+  version.json reads s151b, page sha256 5c6c53fd243a. New ocd (Obsessive-Compulsive and Related Disorders) and capacity
+  (Decision-Making Capacity and Informed Consent; QID to link later, queue row 66). Record repair/s151b/S151B.md.
+  Reviewers 15/16 agents, 125/240 calls, 4.58M/10M; lead 69.3M/120M over three chats. Private folders on private
+  wip/s151b, fast-forwarded to private main. No Claude batch open.
+- **s150e shipped** 2026-10-24 13:45 EDT on Jonathan's "ship": db03746 (main, pushed by hand; no
+  token here), page sha256 43a61f6532c1. Six psych briefs patched from the 2026-10-23 and 2026-10-24 intake proposals;
+  record repair/s150e/S150E.md. First batch on the patch pipeline: reviewers 6 of 12 agents, 20 of 220 calls, 0.46M of
+  6M tokens; lead one chat (ledger_lead.csv). Private folders on wip/s150e of the private repo (pushed); merge to main
+  with the owed s150c/s150d files.
+- **Patch pipeline (2026-10-24):** patches run in one chat with tools/spine/patch.py, delta-ready intake and one
+  combined reviewer per lane (BATCH_RUNBOOK 8b; DECISIONS_DIGEST "patch efficiency").
+- **Token rules (2026-10-24):** no screenshots in content batches (approval binds the report, batch and page; READY
+  needs acc, read, flags); small additions reviewed on changed lines only; one batch per chat. Runbook "Token rules".
+  Owed by Jonathan: turn off Figma, Vercel and the healthcare plugin for this project (start-up context 193K against a
+  130K baseline; s150e start-up measured 128,376).
+- **s151 (Codex):** S7 done, all seven READY, released to Claude for S8 and S9 (wip/s151, cardiovascular; no brief shared
+  with s150e). Whichever of s150e and s151 ships second merges main first (the 2026-10-23 parallel rule).
+- **s150d shipped** 2026-10-24 11:05 EDT on Jonathan's "ship": commit 0fa5d5f (main, by hand). psych-medical is now
+  "Medication- and Illness-Induced Psychiatric Disorders" (tile removed); disruptive-behavior has a Time frames table.
+  Record repair/s150d/S150D.md. Its private folder changes join the owed files below.
+- **s150c:** s150c shipped by Claude 2026-10-24 08:05 EDT on Jonathan's plain "ship" (approval hook in
+  this container). Production ship dfacd00 (main, pushed by hand: no token here); live version.json confirms s150c;
+  built page sha256 starts 200be105e2c6 (presented candidate f4d236d75c4d). Record: repair/s150c/S150C.md (S8, S9).
+- **Completed (s150c):** new Cognitive Decline and Dementia in an Adult (hub, after delirium; Presentations link),
+  Eating Disorders (after somatic) and Defense Mechanisms (first lookup brief, last in Anxiety, somatic and sexual);
+  additions to suicide-risk, substance and disruptive-behavior; pointers in mdd and ssri-effects. All eight READY.
+  Independent S8 audit (fresh Opus acc lanes) found 9 MED and 6 LOW in the new briefs; all fixed; round 4 READY.
+- **Private files owed (important):** the s150c brief-folder changes after S7 (DEM, EAT, DEF facts_spec, facts,
+  build.py, disp_manual, cards_disposition, adj_s150c.md; audit and round 4 receipts in repair/migration/spine/reviews;
+  packets s150c-audit and s150c-r4; sheets s150c-approval) were never pushed: this chat had the private repo
+  read-only, and the Mac bridge dropped before they could be copied there. They (with s150d's) were sent to Jonathan in the
+  s150c chat as s150cd_private_owed.tar.gz (507 files, 50 MB, paths relative to local-only/; raw shots left out).
+  The next session with push access extracts it into the private clone's local-only/, commits on wip/s150c and merges
+  to main. Until then a fresh cloud chat restoring from the private repo gets the S7 versions of those files.
+- **Lead:** Claude. No lock held. s151 S8 and S9 run in a separate Claude chat, which takes the lock on wip/s151 and merges main (now with s150e and s151b) first; s151's changelog entry '151' goes before '151b' in axlog.py.
+- **Carried:** deferred LOWs from s150c round 4 (dementia Korsakoff item reason d1 "none are present here" would read
+  better as "gait and eye movements are normal here"; eating-disorders "another step 2 criterion" and "any step 2
+  criterion" would read better as "admission criterion (Urgent risks)"); the defense-mechanisms intro clause naming
+  suppression stays unmasked in study mode (intro lines are not masked); no reverse pointers to dementia or
+  defense-mechanisms from delirium, parkinson or cluster-b (outside the s150c scope); MPTP chemical-name LOW; s150b
+  legibility advisories; the four s150b audit proposals (not rules); queue.csv open row 59 (prolactin); row 66 picked up by s151b with its QID to link later.
+- **Mac:** NOT refreshed (s150e and s151b chats had only the clone folders; access to Documents/Step2Haki was refused in s151b): the handoff copy and index.html there are the s150b ones;
+  axbx-repo.bundle must not come from a shallow clone. The project handoff copy was refreshed.
 
-- **Batch:** s151, adult cardiovascular A: chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. All seven READY on full final verification.
-- **Lead:** Claude. Codex S1-S7 assignment complete and branch lock released; Codex stops here. No S8, presentation, approval recording or ship run.
-- **Budget:** 26 agents / 391 reviewer file calls of 32 / 440; reviewer tokens and lead tokens unknown. WAVE remains open for Claude. Exact per-lane spend and every receipt are saved.
-- **Rules:** Jonathan's approved 2026-10-24 Token rules from main 8a2e505 apply: content READY requires acc/read/flags; read area F judges answer leaks from text; phone DOM and pointer checks replace screenshots. No new display lane or completed desktop screenshot audit is claimed. S7 tooling selectively adopted from the approved commit; main was not merged and approval/shipping tools were untouched.
-- **Checkouts:** /Users/jmontsfit/Documents/Step2Haki/s151-public and s151-evidence, branch wip/s151. Final candidate local/s151/final-s7-r4.html; SHA-256 3af4d55d906c012d0cc529fdb5deab6996d4698adc90ccf507bc7d74b63183ef. Authoritative outlines/facts, card dispositions, decisions and final logs are private. Do not rerun launch scaffolds or one-time repair scripts.
-- **Verified:** 235 source quotes, no relays/failures; all 65 original stems and all page item ids retained; exactly three original key/version corrections; seven changed briefs and 175 unchanged; shared styles/scripts unchanged. Final gate/render/vendor/preflight PASS. Phone squeeze 0; 11 pointers/0 problems. Current lint advisories have source-specific final answers and independent review.
-- **Intake:** refreshed immediately before the final round from public main 8a2e505/private main 77fe548. Complete queue/misses and relevant sources reread; no unincorporated late question. Post-S1 hypertension allocation included in S5 as b20. Both branch CSV originals unchanged.
-- **Next (Claude S8/S9):** merge main in both repos first (s150c/s150d ships and the complete approved Token-rule tools), rebuild and reconcile the Presentations count if needed, rerun READY verification, then follow the current runbook. A changed sibling-title list can stale read receipts and requires targeted follow-up. S7 READY is for the saved pre-merge candidate; no publication approval is recorded.
-- **Carried:** prior MPTP/native baseline advisories and four unadopted s150b process proposals remain in earlier records. No content was cut for length.
+## Next launch prompt (paste into a fresh chat)
 
-## Next launch
+When Codex releases s151 (its State reads "S7 done: all READY; Lead: released to Claude for S8 and S9"), Claude runs
+S8 and S9 with the restart line, in a chat with push access to both repos:
+```
+Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
+```
+First in that chat: commit the owed s150c and s150d private files from s150cd_private_owed.tar.gz (State, Private files owed),
+then refresh the Mac copies.
 
-Batch s151 is open. Use the Restart prompt above. Codex stops after the authorized S7 release to Claude. A later numbered launch waits for the current batch to close and Jonathan to request it.
+New board questions, any time (intake only; the skill never edits the page):
+```
+Step2Haki: intake these board questions per the board-brief skill (propose new briefs; do not build).
+```
+
+The next patch of shipped briefs, when new intake proposals queue up (runbook 8b; one chat; budget from s150e: 8 agents,
+60 calls, 1.5M reviewer tokens; lead 40M):
+```
+Step2Haki: run the queued intake amendments as a patch batch per claude/BATCH_RUNBOOK.md section 8b.
+```
 
 ## After s141
 

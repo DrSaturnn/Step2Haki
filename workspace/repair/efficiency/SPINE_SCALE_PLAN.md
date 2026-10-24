@@ -166,6 +166,7 @@ What it teaches:
 
 How a role is launched (until T7 passes):
 - Review roles (acc, read, display, flags) launch as subagent_type lean-reviewer (the step2haki-tools plugin agent, `step2haki-tools:lean-reviewer`; s135 efficiency item 1; the launch gate refuses any other type for them). Other roles use general-purpose. Every launch names an explicit `model`.
+- Patches (2026-10-24, BATCH_RUNBOOK 8b): roles patch-review (sonnet) and patch-review-opus (opus) also launch as lean-reviewer; one reviewer per lane judges the acc, read and flags parts of the changed lines and writes one receipt.md that tools/spine/patch.py splits into the three receipts.
 - The prompt starts with three lines: `Role: <name>`, `Plan step: <id>` and `Lane: <path>`.
 - The launch gate (H1) refuses a launch whose role is missing or unknown, whose model differs from this table, or whose plan step is missing, or when the wave budget is used up.
 - After the run, the lead verifies the effective model from the transcript (T5).
