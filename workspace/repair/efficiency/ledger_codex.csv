@@ -45,3 +45,11 @@ date,wave,task,role,model,reasoning,input_tokens,output_tokens,note
 2026-10-23,s150b,r2-flags-B,flags,GPT-6.1 Sol,high,unknown,unknown,Fresh context; 6 counted file/image operations; current receipt saved; tokens unavailable
 2026-10-23,s150b,r2-read-A,read,GPT-6.1 Sol,high,unknown,unknown,Fresh context; 12 counted file/image operations; current receipt saved; tokens unavailable
 2026-10-23,s150b,lead-chat-2,lead,GPT-6.1 Sol,inherited,unknown,unknown,S4-S7 continuation; both rounds and fixes complete; nine READY; S8 reserved for fresh chat; usage unavailable
+2026-10-23,s150b,s8-audit,audit,GPT-6.1 Sol,xhigh,unknown,unknown,Fresh independent audit; 35 counted evidence operations; initial 4 MED groups retained; repaired with follow-up
+2026-10-23,s150b,audit-followup-acc-A,acc,GPT-6.1 Sol,xhigh,unknown,unknown,23 counted operations; scoped fresh follow-up PASS; usage saved privately
+2026-10-23,s150b,audit-followup-acc-M,acc,GPT-6.1 Sol,xhigh,unknown,unknown,6 counted operations; scoped fresh follow-up PASS; usage saved privately
+2026-10-23,s150b,audit-followup-flags-A,flags,GPT-6.1 Sol,high,unknown,unknown,15 counted operations; scoped fresh follow-up PASS; usage saved privately
+2026-10-23,s150b,audit-followup-flags-M,flags,GPT-6.1 Sol,high,unknown,unknown,6 counted operations; scoped fresh follow-up PASS; usage saved privately
+2026-10-23,s150b,audit-followup-read-A,read,GPT-6.1 Sol,high,unknown,unknown,7 counted operations; scoped fresh follow-up PASS; usage saved privately
+2026-10-23,s150b,audit-followup-display-A,display,GPT-6.1 Sol,medium,unknown,unknown,8 counted operations; scoped fresh follow-up PASS; usage saved privately
+2026-10-23,s150b,lead-chat-3,lead,GPT-6.1 Sol,inherited,unknown,unknown,S8 audit and fixes complete; nine full READY; final 72 approval sheets; pending explicit ship; usage unavailable
