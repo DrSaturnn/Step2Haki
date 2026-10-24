@@ -16,12 +16,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   (hub, after delirium), Eating Disorders (disease) and Defense Mechanisms (lookup), both in Anxiety, somatic and
   sexual. Additions: suicide-risk (CSF 5-HIAA), substance (alcohol use disorder recognition), disruptive-behavior
   (reactive attachment). Record: repair/s150c/S150C.md. Evidence: 2026-10-23b intake (private).
-- **Step:** S3 done (chat 2, 2026-10-24): G-MECH passes for all eight folders, gate PASS, legib_audit on the three new
-  briefs (narrowed by Jonathan; desktop raw flags are shared-component advisories as in s150b). Next: S4 review round
-  1 in a fresh chat (continuation read list; per brief boards.md, cuts.json and cards_disposition.json counts).
-  Packets: new briefs in full; suicide-risk, substance, disruptive-behavior, mdd and ssri-effects with --since their
-  baseline_text_s150c.txt. Batch page: python3 repair/build.py s150c --out <tmp>/index.html.
-- **Budget/spend:** 30 agents, 400 calls, 15M reviewer tokens; lead 250M. Spent 0 batch agents (1 safeguard probe).
+- **Step:** S4 done (chat 3, 2026-10-24): round 1 receipts 32 of 32 filed (reviews/, new briefs r1, amended at
+  next serial); FAIL parts: dementia acc, flags, display; eating-disorders read, display; defense-mechanisms read,
+  display; disruptive-behavior acc, flags. suicide-risk, mdd, ssri-effects PASS. Next: S5 adjudication (batch file
+  S4 section lists every MED). Packets repair/migration/spine/packets/s150c; lane specs repair/s150c/lanes.
+- **Budget/spend:** 30 agents, 400 calls, 15M reviewer tokens; lead 250M. Spent 10 agents, 120 calls, 5.26M after round 1.
 - **Lead:** Claude, since 2026-10-24 01:10, chat 3 (restart line pasted; chats 1 and 2 done). Hooks reinstalled in
   this container (install.sh, mirrored to /root/.claude): test_hooks 101/101, no-model probe refused.
 - **Branches:** wip/s150c in both repos (public from 6d42644, private from 77fe548). s151 runs in parallel under
