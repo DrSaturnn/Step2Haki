@@ -5,7 +5,9 @@
   "BUN": "blood urea nitrogen",
   "US": "ultrasound",
   "CT": "computed tomography",
-  "MRI": "magnetic resonance imaging"
+  "MRI": "magnetic resonance imaging",
+  "AST": "aspartate aminotransferase",
+  "ALT": "alanine aminotransferase"
  },
  "_labs_imaging_note": "CT angio and CT angiography are covered by CT (Jonathan's list: CBC, BUN, US for ultrasound, CT, CT angio or CT angiography, MRI). Replaces the 2026-10-11 CT-only exception.",
  "site_conventions": {
