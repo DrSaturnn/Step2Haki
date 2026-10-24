@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 01:10 EDT (s150c chat 3 takes the lock). Earlier: 2026-10-23 23:20 EDT, by Claude, s150c lead chat 1 (launch done; S1 next).
+Last updated: 2026-10-24 02:25 EDT (s150c chat 4 takes the lock for S8; blocked on the private repo attach). Earlier: 2026-10-24 01:10 EDT (s150c chat 3 takes the lock). Earlier: 2026-10-23 23:20 EDT, by Claude, s150c lead chat 1 (launch done; S1 next).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -22,7 +22,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   shots_all and sheets --approval, approval.py present, the report (batch file S4 to S7 sections hold every call,
   finding and reviewer miss). s151 merges: whichever ships second merges main and re-verifies.
 - **Budget/spend:** 30 agents, 400 calls, 15M reviewer tokens; lead 250M. Spent 22 agents, 208 calls, 8.19M after S7 (8 agents, 192 calls left).
-- **Lead:** Claude; chat 3 (from 2026-10-24 01:10) finished at S7; the next chat takes the lock as chat 4. Hooks reinstalled in
+- **Lead:** Claude, since 2026-10-24 02:25, chat 4 (S8). Chat 3 (from 2026-10-24 01:10) finished at S7. Chat 4 attached the public
+  repo; attaching DrSaturnn/Step2Haki-private was refused by the session's permission check, so S8 waits on it. Hooks reinstalled in
   this container (install.sh, mirrored to /root/.claude): test_hooks 101/101, no-model probe refused.
 - **Branches:** wip/s150c in both repos (public from 6d42644, private from 77fe548). s151 runs in parallel under
   Codex on wip/s151; whichever ships second merges main and re-verifies before presenting.
