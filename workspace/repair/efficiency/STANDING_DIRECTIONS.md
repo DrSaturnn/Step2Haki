@@ -161,10 +161,6 @@ Source keys:
 - **Cross-shelf content:** no separate psych-perspective briefs. A psych-tagged brief filed under another shelf's section stays one brief with several shelf tags; a line stays when any tagged shelf's board source tests it, and moves only to a live brief that already carries it, with a drawer back; nothing is deleted. [DIG 2026-10-17, settles MEM 2026-10-05]
 - **Two navigation axes:** a Presentations group lists every hub at the top of the sidebar; each hub keeps its home tile in its system section (one brief, two tiles). Psychiatry is subgrouped by disorder family in six groups. psych-medical stays a disease brief. [DIG 2026-10-17]
 
-- **Patch batches (2026-10-24):** a patch of shipped briefs runs in one chat with tools/spine/patch.py, delta-ready
-  intake proposals and one combined reviewer per lane (patch-review, or patch-review-opus for a changed number, dose
-  or next step); READY still needs current acc, read and flags receipts. BATCH_RUNBOOK section 8b. [DIG 2026-10-24]
-
 ## Repo and files
 - **The repo:** public, DrSaturnn/Step2Haki; the site deploys from discriminator-briefs-site. Each ship commits a description of what changed. [MEM]
 - **The Mac folder:** Step2Haki lives in Documents/Step2Haki, its own folder, separate from AxBx iOS. [MEM]

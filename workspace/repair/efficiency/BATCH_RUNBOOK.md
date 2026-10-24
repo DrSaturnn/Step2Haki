@@ -295,6 +295,11 @@ A patch is any batch of small additions to shipped briefs (rows, lines, hovers, 
 
 Measured, s150e (six briefs): reviewers 6 agents, 20 calls, 0.46M tokens across four rounds.
 
+Where these rules live: here and in DECISIONS_DIGEST only. STANDING_DIRECTIONS.md, WORKUP_5A_SPEC.md and
+MIGRATION_CONTRACT.md are hashed into every acc and read receipt ("specs", tools/spine/verify.py), so any edit to them
+makes every shipped brief's receipts stale (found at the s150e ship). Process-only rules never go into those files;
+brief-content rules do, and are edited only in a batch that re-reviews.
+
 ## 9. Closing a batch (Jonathan 2026-10-12)
 
 Closing a batch: the post-ship report ends with the complete launch prompt for the next batch (batch id, briefs, budget, decisions needed), ready to paste into a fresh chat unchanged.
