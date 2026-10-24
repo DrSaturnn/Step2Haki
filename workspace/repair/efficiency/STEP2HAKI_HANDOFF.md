@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 18:40 EDT, by Claude (s151 S8 presented; awaiting "ship").
+Last updated: 2026-10-24 18:45 EDT, by Claude (s151 shipped; post-ship).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,37 +12,19 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **s151 S8 (Claude):** presented 2026-10-24 for approval (approval.py present s151; page abea2cb4fafb; record in this
-  container). Main merged into wip/s151 in both repos (public 64400e3, private 8528097); Presentations count reconciled
-  24 to 25; read round 5 (sibling titles only) PASS; all seven READY on full verify_all. Waiting for Jonathan's "ship"
-  in the S8 chat; then S9 per the runbook. Record repair/s151/S151.md (S8).
-
-- **s151b shipped** 2026-10-24 16:30 EDT on Jonathan's "ship": 69121d9 (main, pushed by hand; no token here), live
-  version.json reads s151b, page sha256 5c6c53fd243a. New ocd (Obsessive-Compulsive and Related Disorders) and capacity
-  (Decision-Making Capacity and Informed Consent; QID to link later, queue row 66). Record repair/s151b/S151B.md.
-  Reviewers 15/16 agents, 125/240 calls, 4.58M/10M; lead 69.3M/120M over three chats. Private folders on private
-  wip/s151b, fast-forwarded to private main. No Claude batch open.
-- **s150e shipped** 2026-10-24 13:45 EDT on Jonathan's "ship": db03746 (main, pushed by hand; no
-  token here), page sha256 43a61f6532c1. Six psych briefs patched from the 2026-10-23 and 2026-10-24 intake proposals;
-  record repair/s150e/S150E.md. First batch on the patch pipeline: reviewers 6 of 12 agents, 20 of 220 calls, 0.46M of
-  6M tokens; lead one chat (ledger_lead.csv). Private folders on wip/s150e of the private repo (pushed); merge to main
-  with the owed s150c/s150d files.
+- **s151 shipped** 2026-10-24 18:35 EDT on Jonathan's "ship": b1d9e69 (main, pushed by hand; no token here), live
+  version.json reads s151, page sha256 0b9393eae317 (approved candidate abea2cb4fafb). Seven cardiovascular briefs on
+  the decision spine (chf, ascvd, angina, ie-ppx, dvt, right-murmurs hub, htn-drugs). Codex led S1 to S7; Claude merged
+  main, re-verified (read round 5, sibling titles only) and ran S8 and S9. Reviewers 27/32 agents, 396/440 calls;
+  tokens: Codex unmeasured, S8 0.10M; lead (Claude) 18.2M. Private wip/s151 fast-forwarded to private main 5b95cae.
+  Record repair/s151/S151.md. No batch open; no lock held.
+- **Earlier ships today** (s150c, s150d, s150e, s151b): see their records under repair/sNNN/ and OPEN_WORK.
 - **Patch pipeline (2026-10-24):** patches run in one chat with tools/spine/patch.py, delta-ready intake and one
   combined reviewer per lane (BATCH_RUNBOOK 8b; DECISIONS_DIGEST "patch efficiency").
 - **Token rules (2026-10-24):** no screenshots in content batches (approval binds the report, batch and page; READY
   needs acc, read, flags); small additions reviewed on changed lines only; one batch per chat. Runbook "Token rules".
   Owed by Jonathan: turn off Figma, Vercel and the healthcare plugin for this project (start-up context 193K against a
   130K baseline; s150e start-up measured 128,376).
-- **s150d shipped** 2026-10-24 11:05 EDT on Jonathan's "ship": commit 0fa5d5f (main, by hand). psych-medical is now
-  "Medication- and Illness-Induced Psychiatric Disorders" (tile removed); disruptive-behavior has a Time frames table.
-  Record repair/s150d/S150D.md. Its private folder changes join the owed files below.
-- **s150c:** s150c shipped by Claude 2026-10-24 08:05 EDT on Jonathan's plain "ship" (approval hook in
-  this container). Production ship dfacd00 (main, pushed by hand: no token here); live version.json confirms s150c;
-  built page sha256 starts 200be105e2c6 (presented candidate f4d236d75c4d). Record: repair/s150c/S150C.md (S8, S9).
-- **Completed (s150c):** new Cognitive Decline and Dementia in an Adult (hub, after delirium; Presentations link),
-  Eating Disorders (after somatic) and Defense Mechanisms (first lookup brief, last in Anxiety, somatic and sexual);
-  additions to suicide-risk, substance and disruptive-behavior; pointers in mdd and ssri-effects. All eight READY.
-  Independent S8 audit (fresh Opus acc lanes) found 9 MED and 6 LOW in the new briefs; all fixed; round 4 READY.
 - **Private files owed (important):** the s150c brief-folder changes after S7 (DEM, EAT, DEF facts_spec, facts,
   build.py, disp_manual, cards_disposition, adj_s150c.md; audit and round 4 receipts in repair/migration/spine/reviews;
   packets s150c-audit and s150c-r4; sheets s150c-approval) were never pushed: this chat had the private repo
@@ -50,25 +32,23 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   s150c chat as s150cd_private_owed.tar.gz (507 files, 50 MB, paths relative to local-only/; raw shots left out).
   The next session with push access extracts it into the private clone's local-only/, commits on wip/s150c and merges
   to main. Until then a fresh cloud chat restoring from the private repo gets the S7 versions of those files.
-- **Lead:** Claude holds the lock on wip/s151 (both repos) for S8 and S9; s151's changelog entry '151' is in, before '151b'.
 - **Carried:** deferred LOWs from s150c round 4 (dementia Korsakoff item reason d1 "none are present here" would read
   better as "gait and eye movements are normal here"; eating-disorders "another step 2 criterion" and "any step 2
   criterion" would read better as "admission criterion (Urgent risks)"); the defense-mechanisms intro clause naming
   suppression stays unmasked in study mode (intro lines are not masked); no reverse pointers to dementia or
   defense-mechanisms from delirium, parkinson or cluster-b (outside the s150c scope); MPTP chemical-name LOW; s150b
   legibility advisories; the four s150b audit proposals (not rules); queue.csv open row 59 (prolactin); row 66 picked up by s151b with its QID to link later.
-- **Mac:** NOT refreshed (s150e and s151b chats had only the clone folders; access to Documents/Step2Haki was refused in s151b): the handoff copy and index.html there are the s150b ones;
-  axbx-repo.bundle must not come from a shallow clone. The project handoff copy was refreshed.
+- **Mac:** index.html and STEP2HAKI_HANDOFF.md in Documents/Step2Haki refreshed at the s151 ship. Not refreshed:
+  axbx-repo.bundle (this chat's clone is shallow; the bundle must not come from one) and local-only/ (the private repo
+  is current; pull it on the Mac when needed). s150cd_private_owed.tar.gz was not found in Documents/Step2Haki.
 
 ## Next launch prompt (paste into a fresh chat)
 
-When Codex releases s151 (its State reads "S7 done: all READY; Lead: released to Claude for S8 and S9"), Claude runs
-S8 and S9 with the restart line, in a chat with push access to both repos:
+The next numbered batch (claude/pending/BATCHES_S151_S160.md, whose numbering runs one behind since s150 was split;
+its "s151" is this s152). Budget is Claude's estimate scaled from s151 under the token rules, not a measurement:
 ```
-Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
+Step2Haki: launch batch s152 (Phase 2, cardiovascular B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: ped-murmur, cyanotic-chd, newborn-cyanosis, kawasaki, arf, myocarditis, del22q11, bs-adolescent-bp. Goldens: nephrotic-child, scfe; hub golden first if ped-murmur or newborn-cyanosis needs one. Budget: 28 agents, 370 calls, 14M reviewer tokens; lead 160M.
 ```
-First in that chat: commit the owed s150c and s150d private files from s150cd_private_owed.tar.gz (State, Private files owed),
-then refresh the Mac copies.
 
 New board questions, any time (intake only; the skill never edits the page):
 ```

@@ -1,7 +1,7 @@
 {
   "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
   "id": "s151",
-  "open": true,
+  "open": false,
   "plan_step": "s151",
   "roles": [
     "acc-review",
@@ -20,7 +20,7 @@
     "note": "s151b shipped 69121d9 2026-10-24 (Claude lead); reviewers 15/16 agents, 125/240 calls, 4.58M/10M tokens; lead 69.3M/120M"
   },
   "opened": "2026-10-23 22:36 EDT",
-  "note": "S8 (Claude): main merged into wip/s151 in both repos 2026-10-24; re-verification and presentation by Claude. S1-S7 (Codex): 26 reviewers/391 calls, tokens unknown.",
+  "note": "s151 shipped b1d9e69 2026-10-24 (Codex S1-S7, Claude S8-S9); reviewers 27/32 agents, 396/440 calls; tokens: Codex unmeasured, S8 0.10M; lead (Claude) 18.2M; no batch open",
   "batch_budgets": {
     "s138": {
       "agents": 20,
@@ -168,6 +168,6 @@
     }
   },
   "max_lead_tokens": 300000000,
-  "spent_agents": 26,
-  "spent_calls": 391
+  "spent_agents": 27,
+  "spent_calls": 396
 }
