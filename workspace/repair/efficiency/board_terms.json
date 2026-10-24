@@ -925,5 +925,49 @@
   "Lewy body",
   "supranuclear palsy",
   "multiple system atrophy"
+ ],
+ "chf": [
+  "heart failure",
+  "HFrEF",
+  "HFpEF",
+  "ejection fraction",
+  "cardiomyopathy"
+ ],
+ "ascvd": [
+  "statin",
+  "lipid screening",
+  "hypercholesterolemia",
+  "ASCVD"
+ ],
+ "angina": [
+  "stable angina",
+  "unstable angina",
+  "acute coronary syndrome",
+  "chest pain",
+  "vasospastic angina"
+ ],
+ "ie-ppx": [
+  "endocarditis prophylaxis",
+  "dental prophylaxis",
+  "prosthetic valve"
+ ],
+ "dvt": [
+  "deep vein thrombosis",
+  "pulmonary embolism",
+  "venous thromboembolism",
+  "DVT"
+ ],
+ "right-murmurs": [
+  "heart murmur",
+  "aortic stenosis",
+  "mitral regurgitation",
+  "tricuspid regurgitation",
+  "hypertrophic cardiomyopathy"
+ ],
+ "htn-drugs": [
+  "hypertension",
+  "antihypertensive",
+  "blood pressure",
+  "primary aldosteronism"
  ]
 }

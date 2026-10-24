@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-23 22:35 EDT, by Claude (lead returned to Claude after the s150b ship; no batch open).
+Last updated: 2026-10-24 00:35 EDT, by Codex (s151, assigned S1 to S7 only).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,14 +12,15 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch:** s151, Phase 2 cardiovascular A, adult; chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. Launch and B0 done; S1 next.
+- **Batch:** s151, Phase 2 cardiovascular A, adult; chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. S1/S2 done; S3 full mechanical checks pass, visual checks in progress.
 - **Lead:** Codex, since 2026-10-23 22:36 EDT, chat 1; assigned S1 to S7 only. Claude remains standing lead and receives S8 and S9 after release. Lock held on wip/s151 only.
-- **Budget S1 to S7:** 32 agents, 440 reviewer calls, 15M reviewer tokens; lead 300M. Spend 0 agents, 0 reviewer calls; tokens unknown. WAVE.json open.
-- **Scope:** copd FM golden, voices for hub; brief set rules of 2026-10-20. Four live-page starts and three parked merge folders. No new brief, S8, present, approval recording or ship authorized.
-- **Intake:** Claude working on main in parallel. Do not edit repair/intake/queue.csv or repair/nbme/misses.csv on wip/s151. Before final S7 round fetch main, reread intake and open queue rows for all seven briefs, incorporate questions added after S1 as board evidence.
-- **Checkouts:** /Users/jmontsfit/Documents/Step2Haki/s151-public and s151-evidence. Public base c7488a4, private base 9a12c98; lock-only commit 5ead07a pushed. Details: repair/s151/S151.md. Required restart after S3.
-- **Next:** S1 board_index, cards and boards.md, then S2 builds; no reviewers before S3.
-- **Carried:** s150b closed, do not rebuild. Deferred MPTP terminology LOW and native legibility advisories remain in prior records. Four audit process proposals remain proposals only.
+- **Budget S1 to S7:** 32 agents, 440 reviewer calls, 15M reviewer tokens; lead 300M. Spend 0 agents, 0 reviewer calls; tokens unknown. WAVE.json open. S4/S7 allocation proposal in S151.md, not spent.
+- **Scope:** seven briefs only; 65 existing stems/item ids retained, exactly three key/version corrections. 217 source quotes verified. No S8, presentation, approval recording or ship authorized.
+- **Intake:** Claude on main in parallel. Original queue.csv and misses.csv unchanged. S1 found the substance-to-htn-drugs card allocation and included s108 Q10. Before final S7 round fetch main in both repos, reread complete intake files plus all relevant open cross-brief rows and newly added sources, compare S1 snapshots and incorporate later questions as board evidence. Do not edit intake CSVs on this branch.
+- **Checkouts:** /Users/jmontsfit/Documents/Step2Haki/s151-public and s151-evidence, branch wip/s151. Baseline public c7488a4, private 9a12c98. Full details repair/s151/S151.md. Authoritative outline sources, facts, cards, board/cut/parked/tail decisions and logs are private under local-only/repair/migration; review page local/s151/s3.html.
+- **Next:** finish S3 native legibility and review captures, inspect phone sheets, commit/push both, then the required fresh-chat boundary before S4. No reviewers launched. Do not rerun author scaffolds over the outlines. All seven are MECHANICAL PASS, not READY.
+- **Release at S7 only:** after all seven READY set State exactly "S7 done: all READY; Lead: released to Claude for S8 and S9", release the lock, push both branches and stop.
+- **Carried:** s150b closed; deferred MPTP LOW/native baseline advisories and four process proposals remain in prior records.
 
 ## Next launch prompt (paste into a fresh chat)
 
