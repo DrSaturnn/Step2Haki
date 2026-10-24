@@ -24,3 +24,16 @@ date,wave,task,role,model,reasoning,input_tokens,output_tokens,note
 2026-10-22,s150,lead-chat-3,lead,GPT-6.1 Sol,inherited,unknown,unknown,S8 full verification five READY; 240 captures and 34 approval sheets; report and private evidence; one LOW deferred to Claude audit; usage unavailable
 2026-10-23,s150,lead-chat4,lead,GPT-6.1 Sol,unknown,unknown,unknown,"S8-S9 complete: exact ship approval recorded; five READY; published de2d1dc; live s150 confirmed; backups refreshed; no reviewers; usage unavailable"
 2026-10-23,s150b,lead-chat-1,lead,GPT-6.1 Sol,inherited,unknown,unknown,S1-S3 complete; nine G-MECH passes; final pixel evidence and baseline advisories saved; 0 reviewers; usage unavailable
+2026-10-23,s150b,r1-acc-A,acc,GPT-6.1 Sol,xhigh,unknown,unknown,Fresh context; 14 counted file/image operations; receipts saved; tokens unavailable
+2026-10-23,s150b,r1-acc-B,acc,GPT-6.1 Sol,xhigh,unknown,unknown,Fresh context; 17 counted file/image operations; receipts saved; tokens unavailable
+2026-10-23,s150b,r1-acc-C,acc,GPT-6.1 Sol,xhigh,unknown,unknown,Fresh context; 19 counted file/image operations; receipts saved; tokens unavailable
+2026-10-23,s150b,r1-display-A,display,GPT-6.1 Sol,medium,unknown,unknown,Fresh context; 14 counted file/image operations; receipts saved; tokens unavailable
+2026-10-23,s150b,r1-display-B,display,GPT-6.1 Sol,medium,unknown,unknown,Fresh context; 19 counted file/image operations; receipts saved; tokens unavailable
+2026-10-23,s150b,r1-display-C,display,GPT-6.1 Sol,medium,unknown,unknown,Fresh context; 11 counted file/image operations; receipts saved; tokens unavailable
+2026-10-23,s150b,r1-display-D,display,GPT-6.1 Sol,medium,unknown,unknown,Fresh context; 11 counted file/image operations; receipts saved; tokens unavailable
+2026-10-23,s150b,r1-flags-A,flags,GPT-6.1 Sol,high,unknown,unknown,Fresh context; 11 counted file/image operations; receipts saved; tokens unavailable
+2026-10-23,s150b,r1-flags-B,flags,GPT-6.1 Sol,high,unknown,unknown,Fresh context; 16 counted file/image operations; receipts saved; tokens unavailable
+2026-10-23,s150b,r1-flags-C,flags,GPT-6.1 Sol,high,unknown,unknown,Fresh context; 15 counted file/image operations; receipts saved; tokens unavailable
+2026-10-23,s150b,r1-read-A,read,GPT-6.1 Sol,high,unknown,unknown,Fresh context; 14 counted file/image operations; receipts saved; tokens unavailable
+2026-10-23,s150b,r1-read-B,read,GPT-6.1 Sol,high,unknown,unknown,Fresh context; 14 counted file/image operations; receipts saved; tokens unavailable
+2026-10-23,s150b,r1-read-C,read,GPT-6.1 Sol,high,unknown,unknown,Fresh context; 18 counted file/image operations; receipts saved; tokens unavailable

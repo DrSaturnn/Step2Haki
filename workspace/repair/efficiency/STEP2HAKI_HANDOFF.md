@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-23 20:15 EDT, by Codex, s150b lead chat 1 (S3 done; S4 next in a fresh chat).
+Last updated: 2026-10-23 20:29 EDT, by Codex, s150b lead chat 2 (S4 complete; S5/S6 next).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,10 +12,10 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch:** s150b open, S1 and S2 complete; S3 done: all nine full G-MECH passes, pixel checks resolved with documented unchanged-baseline advisories; S4 next in a fresh chat. New pms-pmdd and parkinson disease briefs; targeted somatic and psych-medical amendments; pointers only in mdd, bipolar-mania, ssri-effects, antipsych-effects, delirium.
+- **Batch:** s150b open, S1-S4 complete. Round 1: 36 receipts; 0 HIGH, 9 MED, 4 LOW. S5 fixes and S6 self-check next, followed by independent S7. New pms-pmdd and parkinson disease briefs; targeted somatic and psych-medical amendments; pointers only in mdd, bipolar-mania, ssri-effects, antipsych-effects, delirium.
 - **Lead:** Codex, since 2026-10-23 20:19 EDT, lead chat 2 (S4 continuation; prior lock 8166b75).
 - **Branches:** public and private wip/s150b, fetched from current main (3f07da6 / 225cf14), pushed.
-- **Budget:** 30 reviewer agents / 380 calls / 13M tokens; lead 220M. Spend 0 reviewer agents / 0 calls; lead usage unknown. Fresh S8 audit and follow-up included.
+- **Budget:** 30 reviewer agents / 380 calls / 13M tokens; lead 220M. Spend 13 reviewer agents / 193 calls; reviewer and lead tokens unknown. Fresh S8 audit and follow-up included.
 - **Evidence:** final page local/s150b/final-s3.html, sha256 d34cb0384ae6296224620a63496d319d276775ee052e21e0d0324f6a1a29b86c. Nine source folders, final native/focused pixel reports, 408 crops and 47 review sheets saved privately. Read local/s150b/LEGIBILITY_S3.md before display lanes. Runtime workspace/local/s150b/runtime/bin/python; adapter local/s150b/run_browser.py; no tooling/check changes.
 - **Record:** repair/s150b/S150B.md. Public checkout /Users/jmontsfit/Documents/Step2Haki/s150-public (workspace/); private /Users/jmontsfit/Documents/Step2Haki/s150-evidence. Method s148 with efficiency patch; restart after S3 and S7. New briefs reviewed full, seven existing briefs changed lines/context. Four independent roles.
 - **Approval:** no presentation and no ship authorization. Codex follows CODEX_LEAD sections 5 and 9.
