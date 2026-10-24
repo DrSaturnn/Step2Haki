@@ -42,10 +42,17 @@
    "group": "A",
    "briefs": [
     "dementia",
-    "eating-disorders",
+    "eating-disorders"
+   ],
+   "budget": 20
+  },
+  {
+   "part": "display",
+   "group": "B",
+   "briefs": [
     "defense-mechanisms"
    ],
-   "budget": 27
+   "budget": 13
   }
  ],
  "types": {
