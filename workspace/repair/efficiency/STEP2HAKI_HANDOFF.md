@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 00:35 EDT, by Codex (s151, assigned S1 to S7 only).
+Last updated: 2026-10-24 01:11 EDT, by Codex (s151 S3 checkpoint; assigned S1 to S7 only).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,33 +12,20 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch:** s151, Phase 2 cardiovascular A, adult; chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. S1/S2 done; S3 full mechanical checks pass, visual checks in progress.
+- **Batch:** s151, Phase 2 cardiovascular A, adult; chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. S3 done; S4 next in a fresh chat. All seven MECHANICAL PASS; independent reviews pending.
 - **Lead:** Codex, since 2026-10-23 22:36 EDT, chat 1; assigned S1 to S7 only. Claude remains standing lead and receives S8 and S9 after release. Lock held on wip/s151 only.
 - **Budget S1 to S7:** 32 agents, 440 reviewer calls, 15M reviewer tokens; lead 300M. Spend 0 agents, 0 reviewer calls; tokens unknown. WAVE.json open. S4/S7 allocation proposal in S151.md, not spent.
 - **Scope:** seven briefs only; 65 existing stems/item ids retained, exactly three key/version corrections. 217 source quotes verified. No S8, presentation, approval recording or ship authorized.
 - **Intake:** Claude on main in parallel. Original queue.csv and misses.csv unchanged. S1 found the substance-to-htn-drugs card allocation and included s108 Q10. Before final S7 round fetch main in both repos, reread complete intake files plus all relevant open cross-brief rows and newly added sources, compare S1 snapshots and incorporate later questions as board evidence. Do not edit intake CSVs on this branch.
-- **Checkouts:** /Users/jmontsfit/Documents/Step2Haki/s151-public and s151-evidence, branch wip/s151. Baseline public c7488a4, private 9a12c98. Full details repair/s151/S151.md. Authoritative outline sources, facts, cards, board/cut/parked/tail decisions and logs are private under local-only/repair/migration; review page local/s151/s3.html.
-- **Next:** finish S3 native legibility and review captures, inspect phone sheets, commit/push both, then the required fresh-chat boundary before S4. No reviewers launched. Do not rerun author scaffolds over the outlines. All seven are MECHANICAL PASS, not READY.
+- **Checkouts:** /Users/jmontsfit/Documents/Step2Haki/s151-public and s151-evidence, branch wip/s151. Baseline public c7488a4, private 9a12c98. Full details repair/s151/S151.md. Authoritative outline sources, facts, cards, board/cut/parked/tail decisions and logs are private under local-only/repair/migration; review page local/s151/final-s3.html (SHA-256 107caa91bd5024be830ba991efe96f916c94f339fe0d0dfbf217fcc7583988d7).
+- **S3 evidence:** native 42 brief/view/mode combinations, zero below contrast; fresh computed light/dark cross-check zero below. Inherited small-label/count-gradient advisories proven against baseline; focused new-header/Chain checks clean. Private local/s151/LEGIBILITY_S3.md and README_S3.md give limits, hashes and review images.
+- **Next:** S4 in a fresh chat. Read S151.md, each boards.md/cuts.json, card-disposition counts and claim map. Generate all four role packets with --page final-s3.html. Inspect accuracy scope calls/post-bank changes and display recall/masks/ownership independently; macro image inspection is not a receipt. Do not rerun author scaffolds. No reviewers launched; none READY.
 - **Release at S7 only:** after all seven READY set State exactly "S7 done: all READY; Lead: released to Claude for S8 and S9", release the lock, push both branches and stop.
 - **Carried:** s150b closed; deferred MPTP LOW/native baseline advisories and four process proposals remain in prior records.
 
-## Next launch prompt (paste into a fresh chat)
+## Next launch
 
-New board questions first, if any (no batch needed; intake only; the skill never edits the page):
-```
-Step2Haki: intake these board questions per the board-brief skill (propose new briefs; do not build).
-```
-
-The next numbered batch, only when Jonathan asks for it (plan: private claude/pending/BATCHES_S151_S160.md, where it is
-still numbered s150 after the 2026-10-15 renumbering):
-```
-Step2Haki: launch batch s151 (Phase 2, cardiovascular A, adult) per claude/BATCH_RUNBOOK.md, Claude leading. Briefs: chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. Golden: copd (FM lens); B0 confirms it fits cardiology; voices for any hub. Brief set rules of 2026-10-20 apply (three reasons per item, bold bottom line, First step pairing). Budget for the whole batch: 35 agents, 300 API calls, 15M tokens; lead 330M tokens. Method: s148 with the efficiency patch.
-```
-Budget basis (a proposal; Jonathan sets it): s149, the last Claude-led batch (6 briefs), spent 24 agents, 221 calls,
-10.09M reviewer tokens and 275.7M lead; scaled to 7 briefs that is about 28 agents, 258 calls, 11.8M and 322M, so the
-prompt adds spare. To also run an independent fresh-chat S8 audit (the s150 and s150b practice), add to the prompt
-"Include an independent S8 audit and its follow-up round" and about 3 agents and 100 calls (s150b: audit 35 calls,
-follow-up 65).
+Batch s151 is open. Use the Restart prompt above. Codex stops after the authorized S7 release to Claude. A later numbered launch waits for the current batch to close and Jonathan to request it.
 
 ## After s141
 
