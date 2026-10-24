@@ -1,0 +1,52 @@
+{
+ "batch": "s151b",
+ "plan_step": "s151b",
+ "round": 1,
+ "context": "batch s151b, independent S8 audit: two new briefs, ocd (Obsessive-Compulsive and Related Disorders, a psychiatry disease brief on decision spine v2) and capacity (Decision-Making Capacity and Informed Consent, a Preventive & Ethics lookup brief), each audited whole",
+ "out": "repair/efficiency/lanes/s151b/audit",
+ "packets": "repair/migration/spine/packets/s151b-audit",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "ocd"
+   ],
+   "budget": 18
+  },
+  {
+   "part": "acc",
+   "group": "B",
+   "briefs": [
+    "capacity"
+   ],
+   "budget": 16
+  }
+ ],
+ "types": {
+  "ocd": "disease brief (obsessive-compulsive disorder with the related disorders: body dysmorphic, hoarding, trichotillomania, excoriation; OCPD, GAD, illness anxiety, tics, psychosis and postpartum psychosis as look-alikes), psychiatry; an intro line after the bottom line (DSM-5 lists OCD separately from the anxiety disorders); review in full",
+  "capacity": "lookup brief (decision-making capacity, informed consent, surrogates), fm lens; new brief; a lookup brief carries tables and a commitment rule instead of the eight spine steps (model: defense-mechanisms, s150c); review in full"
+ },
+ "notes": {
+  "acc": [
+   "Where a board source (AnKing card, UWorld, NBME) and a guideline differ, the brief teaches the board answer and puts the guideline in an \"In practice:\" hover (runbook section 3): the hover is intended, not a finding.",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length).",
+   "Settled by Jonathan at launch (do not report): tics keeps tic-related OCD and its ERP lines and peds-alopecia keeps trichotillomania, with ocd pointing to both; ocd carries an OCPD contrast row (no drawer: a cluster C brief is on hold); minors' consent stays with Adolescent Confidentiality; capacity was built without its missing UWorld QID.",
+   "ocd lead calls (judge accuracy, not the choice): onset ages are not taught (no board item keys one); PANDAS cards are scoped out (contested label, STANDING_DIRECTIONS); step 6 is a Measure and specify table with no Y-BOCS score bar because no source gives score bands.",
+   "capacity lint answered: S057, S060 and S077 drop \"may\" from \"The brother may act as a surrogate ... only if\": that \"may\" grants permission and is not a hedge; the claims keep the condition. Judge whether the claim still matches the quote.",
+   "The cached AAFP 2018 capacity article is truncated after a few sentences per paragraph; only complete sentences are cited. Audit cards_disposition.json against cards.md: every covered entry must name claim ids that teach the card.",
+   "New primary facts h01 to h05 (capacity) come from the UW Department of Bioethics and Humanities page, fetched 2026-10-24; judge whether the new therapeutic-privilege lines match those quotes."
+  ]
+ },
+ "extra_judge": {
+  "acc": [
+   "This is the independent S8 audit (the launch budget names it). You have not seen any earlier receipt or the lead's adjudication: judge the brief cold, as a fresh accuracy reviewer would.",
+   "Claim-level entailment (the s150b audit's MED C class): for every claim, each action, test, drug, threshold or recommendation the line states must be stated by one of its cited facts (claim_map.json ids, quotes in facts.json); a fact about the same topic is not enough. Report a stated action no cited quote states.",
+   "Card child coverage (the s150b audit's MED D class): for each card marked covered:S### in cards_disposition.json, read the card's high-yield lines in cards.md and check that the named claims teach each high-yield statement, including a child statement inherited from its parent card; report a covered card whose named claims teach a different part of the card.",
+   "Layers rule (Jonathan 2026-10-19): a fact a board item keys (the answer, or the clue that rules out a distractor) must stay visible, not only in a hover. Report a keyed fact found only in a hover.",
+   "Brief set rules (Jonathan 2026-10-20): every practice item carries three reasons (\"reasons: key | d1 | d2\" on its item line), each the choice's defining feature or the fact in the stem that rules it out; a distractor that is a differential row reuses that row's wording. Judge each reason for Step 2 truth on that stem and agreement with the body and the item's explanation.",
+   "Every age, cutoff, duration and interval against the cited quote and the board sources in facts.json (kind board first).",
+   "Card dispositions: spot-check that each \"covered\" card's fact is taught by the claims it names, and that no carded fact the bank tests is marked scope or not-topic."
+  ]
+ }
+}
