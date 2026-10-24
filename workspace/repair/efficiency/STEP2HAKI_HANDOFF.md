@@ -12,14 +12,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch:** s151, Phase 2 cardiovascular A, adult; chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. S3 done; S4 next in a fresh chat. All seven MECHANICAL PASS; independent reviews pending.
-- **Lead:** Codex, since 2026-10-23 22:36 EDT, chat 1; assigned S1 to S7 only. Claude remains standing lead and receives S8 and S9 after release. Lock held on wip/s151 only.
-- **Budget S1 to S7:** 32 agents, 440 reviewer calls, 15M reviewer tokens; lead 300M. Spend 0 agents, 0 reviewer calls; tokens unknown. WAVE.json open. S4/S7 allocation proposal in S151.md, not spent.
+- **Batch:** s151, Phase 2 cardiovascular A, adult; chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. S4 round 1 done; S5 fixes next. All 28 independent receipts saved; all seven not READY.
+- **Lead:** Codex, since 2026-10-23 22:36 EDT, chat 2; assigned S1 to S7 only. Claude remains standing lead and receives S8 and S9 after release. Lock held on wip/s151 only.
+- **Budget S1 to S7:** 32 agents, 440 reviewer calls, 15M reviewer tokens; lead 300M. Spend 12 agents, 174 reviewer file operations; tokens unknown. WAVE.json open. S4/S7 allocation proposal in S151.md, not spent.
 - **Scope:** seven briefs only; 65 existing stems/item ids retained, exactly three key/version corrections. 217 source quotes verified. No S8, presentation, approval recording or ship authorized.
 - **Intake:** Claude on main in parallel. Original queue.csv and misses.csv unchanged. S1 found the substance-to-htn-drugs card allocation and included s108 Q10. Before final S7 round fetch main in both repos, reread complete intake files plus all relevant open cross-brief rows and newly added sources, compare S1 snapshots and incorporate later questions as board evidence. Do not edit intake CSVs on this branch.
 - **Checkouts:** /Users/jmontsfit/Documents/Step2Haki/s151-public and s151-evidence, branch wip/s151. Baseline public c7488a4, private 9a12c98. Full details repair/s151/S151.md. Authoritative outline sources, facts, cards, board/cut/parked/tail decisions and logs are private under local-only/repair/migration; review page local/s151/final-s3.html (SHA-256 107caa91bd5024be830ba991efe96f916c94f339fe0d0dfbf217fcc7583988d7).
 - **S3 evidence:** native 42 brief/view/mode combinations, zero below contrast; fresh computed light/dark cross-check zero below. Inherited small-label/count-gradient advisories proven against baseline; focused new-header/Chain checks clean. Private local/s151/LEGIBILITY_S3.md and README_S3.md give limits, hashes and review images.
-- **Next:** S4 in a fresh chat. Read S151.md, each boards.md/cuts.json, card-disposition counts and claim map. Generate all four role packets with --page final-s3.html. Inspect accuracy scope calls/post-bank changes and display recall/masks/ownership independently; macro image inspection is not a receipt. Do not rerun author scaffolds. No reviewers launched; none READY.
+- **Next:** adjudicate 1 HIGH, 50 MED, 6 LOW (overlapping role counts). Save exact evidence and decisions privately, fix source/coverage gaps, Recall leaks, wording/links, and the later hypertension alcohol-risk allocation before S6/S7. Review snapshot and spend: local/s151/reviews/r1/. Do not rerun author scaffolds. Before final S7 fetch main again and finish intake refresh; an initial refresh is saved privately.
 - **Release at S7 only:** after all seven READY set State exactly "S7 done: all READY; Lead: released to Claude for S8 and S9", release the lock, push both branches and stop.
 - **Carried:** s150b closed; deferred MPTP LOW/native baseline advisories and four process proposals remain in prior records.
 
