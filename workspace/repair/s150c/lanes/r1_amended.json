@@ -1,0 +1,125 @@
+{
+ "batch": "s150c",
+ "plan_step": "s150c",
+ "round": 2,
+ "context": "batch s150c makes targeted additions to five shipped briefs: suicide-risk (a second Driver line, low CSF 5-HIAA), substance (one clue row recognizing alcohol use disorder), disruptive-behavior (a reactive attachment disorder differential row and clue row) and one-line pointers to the new Eating Disorders brief in mdd and ssri-effects; your part's last receipt judged the shipped brief, review.md shows only what changed since then; this is the batch's first review of these changes",
+ "out": "repair/efficiency/lanes/s150c/r1b",
+ "packets": "repair/migration/spine/packets/s150c",
+ "sheets": "local/shots/s150c-r1/sheets",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "B",
+   "briefs": [
+    "suicide-risk",
+    "substance",
+    "disruptive-behavior",
+    "mdd",
+    "ssri-effects"
+   ],
+   "budget": 25
+  },
+  {
+   "part": "read",
+   "group": "B",
+   "briefs": [
+    "suicide-risk",
+    "substance",
+    "disruptive-behavior",
+    "mdd",
+    "ssri-effects"
+   ],
+   "budget": 25
+  },
+  {
+   "part": "flags",
+   "group": "B",
+   "briefs": [
+    "suicide-risk",
+    "substance",
+    "disruptive-behavior",
+    "mdd",
+    "ssri-effects"
+   ],
+   "budget": 25
+  },
+  {
+   "part": "display",
+   "group": "B",
+   "briefs": [
+    "suicide-risk",
+    "substance",
+    "disruptive-behavior"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "C",
+   "briefs": [
+    "mdd",
+    "ssri-effects"
+   ]
+  }
+ ],
+ "types": {
+  "suicide-risk": "live amended brief; review only the changed lines in review.md, with brief_text.txt for context; earlier content was approved in its last batch",
+  "substance": "live amended brief; review only the changed lines in review.md, with brief_text.txt for context; earlier content was approved in its last batch",
+  "disruptive-behavior": "live amended brief; review only the changed lines in review.md, with brief_text.txt for context; earlier content was approved in its last batch",
+  "mdd": "live amended brief; review only the changed lines in review.md, with brief_text.txt for context; earlier content was approved in its last batch",
+  "ssri-effects": "live amended brief; review only the changed lines in review.md, with brief_text.txt for context; earlier content was approved in its last batch"
+ },
+ "steps": {
+  "suicide-risk": "1",
+  "substance": "4",
+  "disruptive-behavior": "3 and 4",
+  "mdd": "7",
+  "ssri-effects": "the header"
+ },
+ "prior": {
+  "acc": {
+   "suicide-risk": "repair/migration/spine/reviews/suicide-risk_acc_r6.md",
+   "substance": "repair/migration/spine/reviews/substance_acc_r8.md",
+   "disruptive-behavior": "repair/migration/spine/reviews/disruptive-behavior_acc_r2.md",
+   "mdd": "repair/migration/spine/reviews/mdd_acc_r8.md",
+   "ssri-effects": "repair/migration/spine/reviews/ssri-effects_acc_r5.md"
+  },
+  "read": {
+   "suicide-risk": "repair/migration/spine/reviews/suicide-risk_read_r6.md",
+   "substance": "repair/migration/spine/reviews/substance_read_r8.md",
+   "disruptive-behavior": "repair/migration/spine/reviews/disruptive-behavior_read_r2.md",
+   "mdd": "repair/migration/spine/reviews/mdd_read_r7.md",
+   "ssri-effects": "repair/migration/spine/reviews/ssri-effects_read_r5.md"
+  },
+  "flags": {
+   "suicide-risk": "repair/migration/spine/reviews/suicide-risk_flags_r6.md",
+   "substance": "repair/migration/spine/reviews/substance_flags_r8.md",
+   "disruptive-behavior": "repair/migration/spine/reviews/disruptive-behavior_flags_r2.md",
+   "mdd": "repair/migration/spine/reviews/mdd_flags_r8.md",
+   "ssri-effects": "repair/migration/spine/reviews/ssri-effects_flags_r5.md"
+  },
+  "display": {
+   "suicide-risk": "repair/migration/spine/reviews/suicide-risk_display_r6.md",
+   "substance": "repair/migration/spine/reviews/substance_display_r10.md",
+   "disruptive-behavior": "repair/migration/spine/reviews/disruptive-behavior_display_r3.md",
+   "mdd": "repair/migration/spine/reviews/mdd_display_r7.md",
+   "ssri-effects": "repair/migration/spine/reviews/ssri-effects_display_r5.md"
+  }
+ },
+ "notes": {
+  "acc": [
+   "Where a board source (AnKing card, UWorld, NBME) and a guideline differ, the brief teaches the board answer and puts the guideline in an \"In practice:\" hover (runbook section 3): the hover is intended, not a finding.",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length).",
+   "The addition cards (5-HIAA, alcohol use disorder, reactive attachment disorder) are recorded in the batch file, not in these briefs' cards.md (lead call 7); do not report them missing from cards_disposition.json.",
+   "The mdd and ssri-effects changes are pointers to the new eating-disorders brief: judge that the line they replace or join stays true and the pointer names the right brief."
+  ],
+  "read": [
+   "Not to report: brief length or word count (2026-10-19 layers rule)."
+  ],
+  "flags": [
+   "line_sources.txt cuts each quote at 600 characters; facts.json holds every quote whole. Grep facts.json for the fact id before reporting a quote that does not support a line."
+  ],
+  "display": [
+   "Only the changed steps are shown; judge them at phone width and in study mode (the new row or line masked where the step masks answers)."
+  ]
+ }
+}
