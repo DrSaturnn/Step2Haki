@@ -16,10 +16,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   (hub, after delirium), Eating Disorders (disease) and Defense Mechanisms (lookup), both in Anxiety, somatic and
   sexual. Additions: suicide-risk (CSF 5-HIAA), substance (alcohol use disorder recognition), disruptive-behavior
   (reactive attachment). Record: repair/s150c/S150C.md. Evidence: 2026-10-23b intake (private).
-- **Step:** S1 and S2 done (chat 2; repair/s150c/S150C.md). S3: G-MECH passes for all eight folders (dementia,
-  eating-disorders, defense-mechanisms, suicide-risk, substance, disruptive-behavior, mdd and ssri-effects pointers);
-  batch build gate PASS (185 briefs, 2217 items, 0 failures); legib_audit on the batch page in progress. Next: finish
-  the legib_audit (0 failures in sculpted, flat and study, phone and desktop), then the S3 restart and S4.
+- **Step:** S3 done (chat 2, 2026-10-24): G-MECH passes for all eight folders, gate PASS, legib_audit on the three new
+  briefs (narrowed by Jonathan; desktop raw flags are shared-component advisories as in s150b). Next: S4 review round
+  1 in a fresh chat (continuation read list; per brief boards.md, cuts.json and cards_disposition.json counts).
+  Packets: new briefs in full; suicide-risk, substance, disruptive-behavior, mdd and ssri-effects with --since their
+  baseline_text_s150c.txt. Batch page: python3 repair/build.py s150c --out <tmp>/index.html.
 - **Budget/spend:** 30 agents, 400 calls, 15M reviewer tokens; lead 250M. Spent 0 batch agents (1 safeguard probe).
 - **Lead:** Claude, since 2026-10-23 23:27, chat 2 (restart line pasted; chat 1 launched). Hooks reinstalled in
   this container: test_hooks 101/101, no-model probe refused.
