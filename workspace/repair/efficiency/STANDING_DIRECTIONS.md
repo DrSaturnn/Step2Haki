@@ -155,7 +155,7 @@ Source keys:
 - **The holistic review:** each brief must read as one whole brief, not just meet its requirements. [DIG 2026-10-10]
 - **Cheaper models:** multi-agent plans assign cheaper models (for example Haiku) to their planned portions; the efficiency pilot methods apply to batch authoring. [MEM]
 - **Assessing past work:** judge prior work against the git push record and the in-page changelog. [DIG 2026-10-10] [MEM]
-- **Who works on it:** only Claude works on Step2Haki. Codex and ChatGPT are used only to critique Claude's plans and documents. [MEM]
+- **Who works on it:** Claude leads Step2Haki. Codex led and shipped s150 and s150b in an interim (2026-10-21 to 2026-10-23, CODEX_LEAD.md); Jonathan returned the lead to Claude on 2026-10-23 ("I’m transitioning back to Claude as lead"). Codex works on it only when Jonathan assigns it. [MEM] [DIG 2026-10-21, 2026-10-23]
 - **The handoff:** after each shipped batch, update STEP2HAKI_HANDOFF.md in the project and in Documents/Step2Haki. [Project instructions]
 - **Pacing:** psych briefs are reauthored one at a time, to ensure accuracy. [MEM]
 - **Cross-shelf content:** no separate psych-perspective briefs. A psych-tagged brief filed under another shelf's section stays one brief with several shelf tags; a line stays when any tagged shelf's board source tests it, and moves only to a live brief that already carries it, with a drawer back; nothing is deleted. [DIG 2026-10-17, settles MEM 2026-10-05]

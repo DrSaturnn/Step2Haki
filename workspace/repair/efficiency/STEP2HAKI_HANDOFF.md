@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-23 22:17 EDT, by Codex, s150b lead chat 3 (shipped; no batch open).
+Last updated: 2026-10-23 22:35 EDT, by Claude (lead returned to Claude after the s150b ship; no batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,29 +12,53 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **No batch open.** s150b shipped 2026-10-23 22:17 EDT, Jonathan's exact ship reply recorded through approval.py hook on this Mac. Production ship 059f954; live version.json confirms s150b dated 2026-10-23. Live page SHA-256 e7c065681f2d37e5e70cf56d6d2772aceb30b84f9c11dfa2db59a9f5cc0507c1.
-- **Completed:** two new disease owners, pms-pmdd and parkinson; targeted somatic and psych-medical amendments; pointers in mdd, bipolar-mania, ssri-effects, antipsych-effects and delirium. Fifteen original practice questions; seven old banks unchanged. All nine READY before release. Original audit FAIL, four MED groups and every repair preserved in repair/s150b/AUDIT.md, AUDIT_RESOLUTION.md and S150B.md; 14 follow-up PASS receipts. Approved candidate SHA-256 779952d9ce547a9e793eeb8ec23edf9b1dfd495696ce1e0eda6d02f19ece2121; release changes stamp and changelog only.
-- **Closed spend:** 27/30 reviewers, 378/380 calls (audit 35, audit follow-up 65). Reviewer and lead tokens unknown, never estimated; no new release reviewers. WAVE.json closed. All evidence stays private.
-- **Lead:** none; s150b closed. Public and private main and wip/s150b carry the completed batch. Current clones: /Users/jmontsfit/Documents/Step2Haki/s150-public and s150-evidence.
-- **Next:** new board questions may go through intake; other 2026-10-23 psychiatry amendments remain queued. Otherwise s151 cardiovascular A, full launch prompt below. No new unapproved brief or next batch built.
-- **Carried:** deferred MPTP chemical-name expansion (retain carded name); native contrast/reflow and small-label baseline advisories remain in private local/s150b/LEGIBILITY_S3.md. Four audit process-rule recommendations remain proposals pending explicit approval; no standing-rule change inferred from ship. Earlier carried work remains in prior batch history.
-- **Mac catch-up:** live index.html, public axbx-repo.bundle, this handoff and changed s150b local-only evidence refreshed under ~/Documents/Step2Haki/.
-- **Owed:** claude.ai project handoff copy is unreachable from Codex; Claude or Jonathan uploads this file.
+- **No batch open.** s150b shipped by Codex 2026-10-23 22:17 EDT on Jonathan's plain "ship" (approval.py hook on the
+  Mac). Production ship 059f954; live version.json confirms s150b; live page SHA-256
+  e7c065681f2d37e5e70cf56d6d2772aceb30b84f9c11dfa2db59a9f5cc0507c1. Do not resume or rebuild s150b.
+- **Completed (s150b):** two new disease owners: pms-pmdd (Premenstrual Syndrome and Premenstrual Dysphoric Disorder;
+  Psychiatry, Psychosis and mood, after mdd; 6 original items) and parkinson (Parkinson Disease and Parkinsonism;
+  Neurology after bs-wilson, fm lens with psych coverage; 9 original items). Parkinson depression recognition and
+  treatment stay in psych-medical, linked both ways. Targeted somatic (inconsistency versus feigning) and psych-medical
+  (Parkinson depression) amendments; pointers only in mdd, bipolar-mania, ssri-effects, antipsych-effects and delirium.
+  Seven old banks unchanged. All nine READY. The independent audit's initial FAIL (4 MED groups), every repair and the
+  14 follow-up PASS receipts are in repair/s150b/AUDIT.md, AUDIT_RESOLUTION.md and S150B.md; source quotes and
+  screenshots stay private. Closed spend 27/30 reviewers, 378/380 calls; tokens unknown. WAVE.json closed.
+- **Lead:** Claude, from 2026-10-23 (Jonathan: "I’m transitioning back to Claude as lead"). No branch lock held while
+  no batch is open; the next launch chat writes "Claude, since <date time>, chat 1" here on wip/sNN before any work.
+  CODEX_LEAD.md and the Codex lines of AGENTS.md are dormant until Jonathan assigns Codex again.
+- **Workflow:** BATCH_RUNBOOK.md as written (S1 to S9), Claude hooks (step2haki-tools plugin, or install.sh plus the
+  /root/.claude copy), lean-reviewer lanes from lanes.py, `approval.py present` then Jonathan's "ship" in that same chat,
+  `AX_SESSION=... tools/ship.sh sNN` (no AX_LEAD). The Codex-only S8 audit task is not a runbook step; include it only
+  if the launch prompt asks.
+- **Sync (2026-10-23 22:30, Claude cloud session):** public main 3b2dd1e and private main c080d1b cloned; local-only
+  restored with cp -rn into gitignored workspace paths (sources, migration folders, local/). The claude.ai project docs
+  were refreshed from the repo copies at this handoff.
+- **Next:** new board questions may go through intake; the other 2026-10-23 psychiatry intake amendments stay queued
+  (repair/intake/queue.csv). s151 cardiovascular A is planned but launches only when Jonathan requests it (prompt below).
+- **Carried:** deferred MPTP chemical-name LOW (carded name retained); native contrast/reflow and small-label baseline
+  advisories (private local/s150b/LEGIBILITY_S3.md). The four s150b audit process proposals (double regeneration,
+  action-verb entailment, every card child checked, activate each new owner pointer) are proposals only: Jonathan's
+  "ship" approved publication, not new standing rules. Earlier carried items stay in the batch files (s149 and before).
+- **Mac:** Codex refreshed ~/Documents/Step2Haki (index.html, axbx-repo.bundle, handoff, s150b local-only) at the ship;
+  the handoff copy there is replaced with this version when the Mac is reachable.
 
 ## Next launch prompt (paste into a fresh chat)
 
-New psych questions first (no batch needed; intake only, CODEX_LEAD.md section 9 step 1):
+New board questions first, if any (no batch needed; intake only; the skill never edits the page):
 ```
-Step2Haki: intake these board questions per the board-brief skill and CODEX_LEAD.md section 9 (propose new briefs; do not build).
+Step2Haki: intake these board questions per the board-brief skill (propose new briefs; do not build).
 ```
 
-Then the next numbered batch from the plan (BATCHES_S151_S160.md, private), or a new-brief batch naming the briefs
-Jonathan chose from the intake proposals (title, entry type, placement):
+The next numbered batch, only when Jonathan asks for it (plan: private claude/pending/BATCHES_S151_S160.md, where it is
+still numbered s150 after the 2026-10-15 renumbering):
 ```
-Step2Haki: launch batch s151 (Phase 2, cardiovascular A) per claude/BATCH_RUNBOOK.md, Codex leading and shipping per repair/efficiency/CODEX_LEAD.md. Briefs: chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. Brief set rules of 2026-10-20 apply (three reasons per item, bold bottom line, First step pairing). Budget for the whole batch, the S8 audit task and its follow-up round included: 37 agents, 480 API calls, 17.5M tokens; lead 330M tokens. Method: s148 with the efficiency patch; Codex audits at S8 in a fresh task and ships on "ship".
+Step2Haki: launch batch s151 (Phase 2, cardiovascular A, adult) per claude/BATCH_RUNBOOK.md, Claude leading. Briefs: chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. Golden: copd (FM lens); B0 confirms it fits cardiology; voices for any hub. Brief set rules of 2026-10-20 apply (three reasons per item, bold bottom line, First step pairing). Budget for the whole batch: 35 agents, 300 API calls, 15M tokens; lead 330M tokens. Method: s148 with the efficiency patch.
 ```
-Budget basis: Codex s150 reviewers 4 agents and 58 calls per brief; the audit task plus a follow-up round about 2
-agents and 40 calls per batch (s150: Claude 6 agents, 73 calls). Tokens unmeasured for Codex; Jonathan sets them.
+Budget basis (a proposal; Jonathan sets it): s149, the last Claude-led batch (6 briefs), spent 24 agents, 221 calls,
+10.09M reviewer tokens and 275.7M lead; scaled to 7 briefs that is about 28 agents, 258 calls, 11.8M and 322M, so the
+prompt adds spare. To also run an independent fresh-chat S8 audit (the s150 and s150b practice), add to the prompt
+"Include an independent S8 audit and its follow-up round" and about 3 agents and 100 calls (s150b: audit 35 calls,
+follow-up 65).
 
 ## After s141
 
@@ -42,7 +66,7 @@ Phase R is complete (all 17 spine briefs READY, s140). After the s141 rollout, t
 unconverted briefs by cluster).
 
 The forward plan lives in the PRIVATE repo (DrSaturnn/Step2Haki-private), under claude/pending/, outside local-only/,
-so the cp restore does not copy it; read it from the clone (/home/user/step2haki-private/claude/pending/):
+so the cp restore does not copy it; read it from the clone (/home/claude/step2haki-private/claude/pending/):
 - BATCHES_S141_S150.md: s142 (nephrotic-child, panic, peds-sleep, tics) and s143 to s150 (psychiatry remainder,
   pulmonary A and B, renal and GU A and B, musculoskeletal A to C), with launch prompts, goldens and default budgets.
 - BATCHES_S151_S160.md: s151 to s160 (cardiovascular A and B, GI A and B, infectious disease A and B, newborn and

@@ -4,6 +4,10 @@ Step2Haki is a Step 2 CK study page (workspace/index.html, deployed from discrim
 briefs are built in batches by a lead agent under a runbook. Since 2026-10-21 Codex (GPT-6.1 Sol) may lead batches in
 the interim while Claude's usage is limited (DECISIONS_DIGEST 2026-10-21).
 
+**Status 2026-10-23: Claude leads again** (Jonathan: "I’m transitioning back to Claude as lead"; DECISIONS_DIGEST
+2026-10-23). Codex does not take the lead lock or launch, build or ship a batch unless Jonathan assigns it again in
+writing; CODEX_LEAD.md is dormant until then.
+
 Who it is for: Jonathan, a third-year medical student, studying for USMLE Step 2 CK. Each brief is one topic (a
 disease, or a presentation hub that sorts a complaint into its diagnoses) built on the "decision spine": numbered steps
 from the presentation to treatment, a differential, a diagnostic workup, practice questions with a reason under every

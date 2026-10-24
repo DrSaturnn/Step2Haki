@@ -4,6 +4,10 @@ Jonathan, 2026-10-21 (DECISIONS_DIGEST): "i want chatgpt to temporarily take ove
 usage with claude. So i want it able to reproduce the a whole brief on its own, of which you can audit and create
 specific intructions for chatgpt to follow." Model: GPT-6.1 Sol in Codex.
 
+**Dormant since 2026-10-23 (after the s150b ship).** Jonathan: "I’m transitioning back to Claude as lead." Claude leads
+from s151 under BATCH_RUNBOOK.md with its own hooks, reviewer lanes, approval hook and ship.sh (no AX_LEAD). This file
+applies again only when Jonathan assigns Codex; until then Codex does not take the lock (section 0).
+
 Jonathan, 2026-10-23 (DECISIONS_DIGEST), after Claude's audit of s150: "ill have codex ship. make the needed changes for
 codex to ensure for the remaining batches. additionally ensure codex is able to author a new brief, as we will pick up
 with new psych questions to cover as well." From s150 on, Codex ships (section 5), runs the S8 audit itself in a fresh
