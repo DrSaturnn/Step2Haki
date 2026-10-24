@@ -16,12 +16,13 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   (hub, after delirium), Eating Disorders (disease) and Defense Mechanisms (lookup), both in Anxiety, somatic and
   sexual. Additions: suicide-risk (CSF 5-HIAA), substance (alcohol use disorder recognition), disruptive-behavior
   (reactive attachment). Record: repair/s150c/S150C.md. Evidence: 2026-10-23b intake (private).
-- **Step:** S4 done (chat 3, 2026-10-24): round 1 receipts 32 of 32 filed (reviews/, new briefs r1, amended at
-  next serial); FAIL parts: dementia acc, flags, display; eating-disorders read, display; defense-mechanisms read,
-  display; disruptive-behavior acc, flags. suicide-risk, mdd, ssri-effects PASS. Next: S5 adjudication (batch file
-  S4 section lists every MED). Packets repair/migration/spine/packets/s150c; lane specs repair/s150c/lanes.
-- **Budget/spend:** 30 agents, 400 calls, 15M reviewer tokens; lead 250M. Spent 10 agents, 120 calls, 5.26M after round 1.
-- **Lead:** Claude, since 2026-10-24 01:10, chat 3 (restart line pasted; chats 1 and 2 done). Hooks reinstalled in
+- **Step:** S7 done: all READY (chat 3, 2026-10-24). All eight briefs READY (verify_all). Rounds: r1 32 receipts,
+  r2 20 (dementia, eating-disorders, defense-mechanisms, disruptive-behavior, substance), r3 4 (defense-mechanisms).
+  Next: S8 in a fresh chat: the independent S8 audit (in the launch budget) and its follow-up, then verify_all,
+  shots_all and sheets --approval, approval.py present, the report (batch file S4 to S7 sections hold every call,
+  finding and reviewer miss). s151 merges: whichever ships second merges main and re-verifies.
+- **Budget/spend:** 30 agents, 400 calls, 15M reviewer tokens; lead 250M. Spent 22 agents, 208 calls, 8.19M after S7 (8 agents, 192 calls left).
+- **Lead:** Claude; chat 3 (from 2026-10-24 01:10) finished at S7; the next chat takes the lock as chat 4. Hooks reinstalled in
   this container (install.sh, mirrored to /root/.claude): test_hooks 101/101, no-model probe refused.
 - **Branches:** wip/s150c in both repos (public from 6d42644, private from 77fe548). s151 runs in parallel under
   Codex on wip/s151; whichever ships second merges main and re-verifies before presenting.
