@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 01:11 EDT, by Codex (s151 S3 checkpoint; assigned S1 to S7 only).
+Last updated: 2026-10-24, by Codex (chat 2; S5 checkpoint; S6 blocked by disk space).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,14 +12,15 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch:** s151, Phase 2 cardiovascular A, adult; chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. S5 fixes applied and all 57 findings adjudicated; S6 full verification next, then S7 follow-up. All seven not READY.
+- **Batch:** s151, Phase 2 cardiovascular A, adult; chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. S5 fixes applied and all 57 findings adjudicated. S6 full verification blocked by disk space (Errno 28 at preview write); S7 not launched. All seven not READY.
 - **Lead:** Codex, since 2026-10-23 22:36 EDT, chat 2; assigned S1 to S7 only. Claude remains standing lead and receives S8 and S9 after release. Lock held on wip/s151 only.
 - **Budget S1 to S7:** 32 agents, 440 reviewer calls, 15M reviewer tokens; lead 300M. Spend 12 agents, 174 reviewer file operations; tokens unknown. WAVE.json open. S4/S7 allocation proposal in S151.md, not spent.
 - **Scope:** seven briefs only; 65 existing stems/item ids retained, exactly three key/version corrections. 235 source quotes in the revised evidence set. No S8, presentation, approval recording or ship authorized.
 - **Intake:** Claude on main in parallel. Original queue.csv and misses.csv unchanged. S1 found the substance-to-htn-drugs card allocation and included s108 Q10. Before final S7 round fetch main in both repos, reread complete intake files plus all relevant open cross-brief rows and newly added sources, compare S1 snapshots and incorporate later questions as board evidence. Do not edit intake CSVs on this branch.
 - **Checkouts:** /Users/jmontsfit/Documents/Step2Haki/s151-public and s151-evidence, branch wip/s151. Baseline public c7488a4, private 9a12c98. Full details repair/s151/S151.md. Authoritative outline sources, facts, cards, board/cut/parked/tail decisions and logs are private under local-only/repair/migration; review page local/s151/final-s3.html (SHA-256 107caa91bd5024be830ba991efe96f916c94f339fe0d0dfbf217fcc7583988d7).
 - **S3 evidence:** native 42 brief/view/mode combinations, zero below contrast; fresh computed light/dark cross-check zero below. Inherited small-label/count-gradient advisories proven against baseline; focused new-header/Chain checks clean. Private local/s151/LEGIBILITY_S3.md and README_S3.md give limits, hashes and review images.
-- **Next:** S6 full mechanical and visual checks on final-s5.html; then fetch main in both repos again, complete intake refresh and generate S7 packets with --since r1 brief_text.txt. New outlines/facts and per-finding adjudication are authoritative. Do not rerun author scaffolds or S5 one-time repair scripts. All four roles must review changed lines and their last receipts. No S8/present/ship.
+- **Resource block:** Mac disk is full. All seven full verification attempts fail while writing temporary preview HTML (OSError Errno 28); this is not a mechanical PASS. Small metadata writes sometimes succeed. User asked to free at least 1 GB. Do not delete personal files or rerun checks until space is available. Public S5 aa73a18, private S5 2fea61c6.
+- **Next:** after space is freed, S6 full mechanical and visual checks on final-s5.html; then fetch main in both repos again, complete intake refresh and generate S7 packets with --since r1 brief_text.txt. New outlines/facts and per-finding adjudication are authoritative. Do not rerun author scaffolds or S5 one-time repair scripts. All four roles must review changed lines and their last receipts. No S8/present/ship.
 - **Release at S7 only:** after all seven READY set State exactly "S7 done: all READY; Lead: released to Claude for S8 and S9", release the lock, push both branches and stop.
 - **Carried:** s150b closed; deferred MPTP LOW/native baseline advisories and four process proposals remain in prior records.
 
