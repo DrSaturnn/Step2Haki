@@ -1,25 +1,24 @@
 {
   "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
-  "id": "s150d",
-  "open": false,
-  "plan_step": "s150d",
+  "id": "s150e",
+  "open": true,
+  "plan_step": "s150e",
   "roles": [
     "acc-review",
     "read-review",
-    "display-review",
     "flag-review",
     "wording-fix"
   ],
-  "max_agents": 6,
-  "max_calls": 80,
-  "max_tokens": 3000000,
-  "set_by": "Jonathan, s150d answers 2026-10-24",
+  "max_agents": 12,
+  "max_calls": 220,
+  "max_tokens": 6000000,
+  "set_by": "Jonathan, s150e launch answer 2026-10-24",
   "previous": {
-    "id": "s150c",
-    "note": "s150c shipped dfacd00 2026-10-24 (Claude lead); live version.json s150c; reviewers 30/30 agents, 291/400 calls, 11.72M/15M tokens; lead 106.3M recorded of 250M; no Claude batch open (s151 runs under Codex on wip/s151)"
+    "id": "s150d",
+    "note": "s150d shipped 0fa5d5f 2026-10-24 (Claude lead); reviewers 5/6 agents, 42/80 calls, 1.26M/3M tokens; no Claude batch open (s151 under Codex)"
   },
-  "opened": "2026-10-24 10:40 EDT",
-  "note": "s150d shipped 0fa5d5f 2026-10-24 (Claude lead); reviewers 5/6 agents, 42/80 calls, 1.26M/3M tokens; no Claude batch open (s151 under Codex)",
+  "opened": "2026-10-24 12:40 EDT",
+  "note": "s150e patch (Claude lead): intake amendments on six shipped psych briefs; changed-line review only",
   "batch_budgets": {
     "s138": {
       "agents": 20,
@@ -146,7 +145,13 @@
       "agents": 6,
       "calls": 80,
       "tokens": 3000000
+    },
+    "s150e": {
+      "agents": 12,
+      "calls": 220,
+      "tokens": 6000000,
+      "lead_tokens": 150000000
     }
   },
-  "max_lead_tokens": 250000000
+  "max_lead_tokens": 150000000
 }

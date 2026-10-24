@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 11:10 EDT, by Claude (s150c and s150d shipped; no Claude batch open).
+Last updated: 2026-10-24 13:30 EDT, by Claude (s150e open: S3 done).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,14 +12,25 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
+- **Open batch: s150e** (Claude lead, patch of shipped briefs, section 8), launched 2026-10-24 12:27 EDT. Briefs:
+  sz-psychosocial (N3), cluster-b (PDB), substance (TOX), peds-sleep (SLEEP), ssri-effects (N4), panic (N5): the queued
+  intake proposals of 2026-10-23 and 2026-10-24. Budget 12 agents, 220 calls, 6M reviewer tokens; lead 150M (WAVE.json
+  s150e). Batch file repair/s150e/S150E.md. Branch wip/s150e in both repos (private: main plus wip/s150c merged).
+- **Step: S3 done** (all six MECHANICAL PASS; batch page gate PASS; squeeze 0; vendor 0). Next: S4 round 1, changed
+  lines only (acc, read, flags; no display). Packets with --since <folder>/baseline_brief_text_s150e.txt; plan in the
+  batch file's last section. Spend: reviewers 0 of 12 agents, 0 of 220 calls; lead chat 1 not yet recorded.
+- **Restore for s150e:** clone both repos, check out wip/s150e in each, cp -rn the private local-only into workspace,
+  rebuild the batch page with `python3 repair/build.py s150e --out local/s150e/index.html`.
 - **Token rules (2026-10-24):** no screenshots in content batches (approval binds the report, batch and page; READY
   needs acc, read, flags); small additions reviewed on changed lines only; one batch per chat. Runbook "Token rules".
   Owed by Jonathan: turn off Figma, Vercel and the healthcare plugin for this project (start-up context 193K against a
-  130K baseline).
+  130K baseline; s150e start-up measured 128,376).
+- **s151 (Codex):** S7 done, all seven READY, released to Claude for S8 and S9 (wip/s151, cardiovascular; no brief shared
+  with s150e). Whichever of s150e and s151 ships second merges main first (the 2026-10-23 parallel rule).
 - **s150d shipped** 2026-10-24 11:05 EDT on Jonathan's "ship": commit 0fa5d5f (main, by hand). psych-medical is now
   "Medication- and Illness-Induced Psychiatric Disorders" (tile removed); disruptive-behavior has a Time frames table.
   Record repair/s150d/S150D.md. Its private folder changes join the owed files below.
-- **No Claude batch open.** s150c shipped by Claude 2026-10-24 08:05 EDT on Jonathan's plain "ship" (approval hook in
+- **s150c:** s150c shipped by Claude 2026-10-24 08:05 EDT on Jonathan's plain "ship" (approval hook in
   this container). Production ship dfacd00 (main, pushed by hand: no token here); live version.json confirms s150c;
   built page sha256 starts 200be105e2c6 (presented candidate f4d236d75c4d). Record: repair/s150c/S150C.md (S8, S9).
 - **Completed (s150c):** new Cognitive Decline and Dementia in an Adult (hub, after delirium; Presentations link),
@@ -33,10 +44,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   s150c chat as s150cd_private_owed.tar.gz (507 files, 50 MB, paths relative to local-only/; raw shots left out).
   The next session with push access extracts it into the private clone's local-only/, commits on wip/s150c and merges
   to main. Until then a fresh cloud chat restoring from the private repo gets the S7 versions of those files.
-- **s151 (Codex, wip/s151):** s150c shipped first, so s151 merges main into wip/s151 and re-verifies before
-  presenting (the 2026-10-23 parallel rule). Codex holds S1 to S7 and releases S8 and S9 to Claude at "S7 done: all
-  READY; Lead: released to Claude for S8 and S9".
-- **Lead:** Claude. No lock held. The next Claude chat for s151 S8 takes the lock on wip/s151 after Codex releases it.
+- **Lead:** Claude holds s150e (wip/s150e). s151 S8 and S9 run in a separate Claude chat, which takes the lock on wip/s151.
 - **Carried:** deferred LOWs from s150c round 4 (dementia Korsakoff item reason d1 "none are present here" would read
   better as "gait and eye movements are normal here"; eating-disorders "another step 2 criterion" and "any step 2
   criterion" would read better as "admission criterion (Urgent risks)"); the defense-mechanisms intro clause naming
