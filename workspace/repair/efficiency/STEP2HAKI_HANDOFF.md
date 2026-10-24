@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 16:40 EDT, by Claude (s151b S8 done, report sent; lead chat 3).
+Last updated: 2026-10-24 16:35 EDT, by Claude (s151b shipped; post-ship).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,14 +12,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **s151b OPEN (Claude lead): S8 done, report sent, waiting for Jonathan's "ship"** (approval record in lead chat 3's
-  container; "ship" must go to that chat). Two new briefs, ocd (Anxiety, somatic and sexual, after panic; folder
-  repair/migration/psych/OCD/spine) and capacity (Preventive & Ethics after Adolescent Confidentiality; folder
-  repair/migration/fm/CAP/spine). Batch file repair/s151b/S151B.md (S8 section). Independent audit found 7 MED, 3 LOW;
-  fixed; round 4 READY. Page sha 18d53f1ac0ea. Spend: reviewers 15 of 16 agents, 125 of 240 calls, 4.58M of 10M;
-  lead 64.8M of 120M. Branch wip/s151b in both repos. Card dispositions: rerun
-  repair/migration/spine/set_dispositions_s151b.py after any build change, and copy the folder's 05_* and 10_* into
-  repair/s151b after any rebuild.
+- **s151b shipped** 2026-10-24 16:30 EDT on Jonathan's "ship": 69121d9 (main, pushed by hand; no token here), live
+  version.json reads s151b, page sha256 5c6c53fd243a. New ocd (Obsessive-Compulsive and Related Disorders) and capacity
+  (Decision-Making Capacity and Informed Consent; QID to link later, queue row 66). Record repair/s151b/S151B.md.
+  Reviewers 15/16 agents, 125/240 calls, 4.58M/10M; lead 69.3M/120M over three chats. Private folders on private
+  wip/s151b, fast-forwarded to private main. No Claude batch open.
 - **s150e shipped** 2026-10-24 13:45 EDT on Jonathan's "ship": db03746 (main, pushed by hand; no
   token here), page sha256 43a61f6532c1. Six psych briefs patched from the 2026-10-23 and 2026-10-24 intake proposals;
   record repair/s150e/S150E.md. First batch on the patch pipeline: reviewers 6 of 12 agents, 20 of 220 calls, 0.46M of
@@ -50,14 +47,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   s150c chat as s150cd_private_owed.tar.gz (507 files, 50 MB, paths relative to local-only/; raw shots left out).
   The next session with push access extracts it into the private clone's local-only/, commits on wip/s150c and merges
   to main. Until then a fresh cloud chat restoring from the private repo gets the S7 versions of those files.
-- **Lead:** Claude. No lock held. s151 S8 and S9 run in a separate Claude chat, which takes the lock on wip/s151 and merges main (now with s150e) first.
+- **Lead:** Claude. No lock held. s151 S8 and S9 run in a separate Claude chat, which takes the lock on wip/s151 and merges main (now with s150e and s151b) first; s151's changelog entry '151' goes before '151b' in axlog.py.
 - **Carried:** deferred LOWs from s150c round 4 (dementia Korsakoff item reason d1 "none are present here" would read
   better as "gait and eye movements are normal here"; eating-disorders "another step 2 criterion" and "any step 2
   criterion" would read better as "admission criterion (Urgent risks)"); the defense-mechanisms intro clause naming
   suppression stays unmasked in study mode (intro lines are not masked); no reverse pointers to dementia or
   defense-mechanisms from delirium, parkinson or cluster-b (outside the s150c scope); MPTP chemical-name LOW; s150b
-  legibility advisories; the four s150b audit proposals (not rules); queue.csv open rows 59 (prolactin), 66 (capacity on a hold, new) and 67 (OCD, new).
-- **Mac:** NOT refreshed (s150e chat had only the old clone folders, not Documents/Step2Haki): the handoff copy and index.html there are the s150b ones;
+  legibility advisories; the four s150b audit proposals (not rules); queue.csv open row 59 (prolactin); row 66 picked up by s151b with its QID to link later.
+- **Mac:** NOT refreshed (s150e and s151b chats had only the clone folders; access to Documents/Step2Haki was refused in s151b): the handoff copy and index.html there are the s150b ones;
   axbx-repo.bundle must not come from a shallow clone. The project handoff copy was refreshed.
 
 ## Next launch prompt (paste into a fresh chat)
