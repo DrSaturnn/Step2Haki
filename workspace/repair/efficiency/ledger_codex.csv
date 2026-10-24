@@ -68,3 +68,18 @@ date,wave,task,role,model,reasoning,input_tokens,output_tokens,note
 2026-10-24,s151,r1_flags-A,flags,gpt-6.1-sol,high,unknown,unknown,S4; 20 file operations; receipts saved; cap 24
 2026-10-24,s151,r1_flags-B,flags,gpt-6.1-sol,high,unknown,unknown,S4; 16 file operations; receipts saved; cap 19
 2026-10-24,s151,lead-chat-2,lead,inherited,inherited,unknown,unknown,S4 12 agents/174 calls; S5 applied and pushed; S6 resource failure Errno 28; S7 not launched
+2026-10-24,s151,r2_acc-A,acc,gpt-6.1-sol,xhigh,unknown,unknown,S7 R2; 24 file operations; receipts saved; no screenshot reviewers under later Token rules
+2026-10-24,s151,r2_acc-B,acc,gpt-6.1-sol,xhigh,unknown,unknown,S7 R2; 19 file operations; receipts saved; no screenshot reviewers under later Token rules
+2026-10-24,s151,r2_read-A,read,gpt-6.1-sol,high,unknown,unknown,S7 R2; 14 file operations; receipts saved; no screenshot reviewers under later Token rules
+2026-10-24,s151,r2_read-B,read,gpt-6.1-sol,high,unknown,unknown,S7 R2; 11 file operations; receipts saved; no screenshot reviewers under later Token rules
+2026-10-24,s151,r2_flags-A,flags,gpt-6.1-sol,high,unknown,unknown,S7 R2; 17 file operations; receipts saved; no screenshot reviewers under later Token rules
+2026-10-24,s151,r2_flags-B,flags,gpt-6.1-sol,high,unknown,unknown,S7 R2; 13 file operations; receipts saved; no screenshot reviewers under later Token rules
+2026-10-24,s151,r3_acc-A,acc,gpt-6.1-sol,xhigh,unknown,unknown,S7 R3; 23 file operations; source and text-mask review; receipts saved
+2026-10-24,s151,r3_read-A,read,gpt-6.1-sol,high,unknown,unknown,S7 R3; 12 file operations; source and text-mask review; receipts saved
+2026-10-24,s151,r3_read-B,read,gpt-6.1-sol,high,unknown,unknown,S7 R3; 12 file operations; source and text-mask review; receipts saved
+2026-10-24,s151,r3_flags-A,flags,gpt-6.1-sol,high,unknown,unknown,S7 R3; 16 file operations; source and text-mask review; receipts saved
+2026-10-24,s151,r4_acc-A,acc,gpt-6.1-sol,xhigh,unknown,unknown,S7 R4; 21 file operations; PASS receipts saved
+2026-10-24,s151,r4_acc-B,acc,gpt-6.1-sol,xhigh,unknown,unknown,S7 R4; 8 file operations; PASS receipts saved
+2026-10-24,s151,r4_read-A,read,gpt-6.1-sol,high,unknown,unknown,S7 R4; 12 file operations; PASS receipts saved
+2026-10-24,s151,r4_flags-A,flags,gpt-6.1-sol,high,unknown,unknown,S7 R4; 15 file operations; PASS receipts saved
+2026-10-24,s151,lead-chat-3,lead,inherited,inherited,unknown,unknown,Resolved disk block; adopted approved Token rules; S7 all seven READY; 26 agents/391 calls total; lock released to Claude; no S8/present/ship

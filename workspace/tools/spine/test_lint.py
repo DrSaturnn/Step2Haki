@@ -146,5 +146,13 @@ expect('spacing: after a closed figure passes', L.lint_spacing('awake play.</spa
 PW = '<div class="pearls"><span class="lbl">Pairs with</span> %s</div>'
 expect('pairs: two titles in one clause', len(L.lint_pairs(PW % '<i>Slipped Capital Femoral Epiphysis</i> and <i>The Limping Child</i>: hips.')) == 1)
 expect('pairs: one title per clause passes', L.lint_pairs(PW % '<i>A</i>: one. <i>B</i>: two.') == [])
+# ---- mask-leak (Jonathan 2026-10-24, no screenshots)
+CARD = '<div class="sp-row"><span class="sp-src">%s</span><b class="sp-f">Alcohol use with confusion</b><p class="sp-commit"><b>If</b> x, <b>choose</b> <span class="mask">%s</span>.</p></div>'
+expect('mask-leak: card label repeats the short answer', len(L.lint_maskleak(CARD % ('Thiamine', 'Thiamine first'))) == 1)
+expect('mask-leak: a neutral label passes', L.lint_maskleak(CARD % ('Alcohol or malnutrition', 'Thiamine first')) == [])
+expect('mask-leak: a long answer is skipped', L.lint_maskleak(CARD % ('Thiamine', 'thiamine; glucose without thiamine can precipitate it')) == [])
+ROW = '<table><tbody><tr><td>%s</td><td><span><span class="mask">%s</span></span></td></tr></tbody></table>'
+expect('mask-leak: first cell repeats the answer', len(L.lint_maskleak(ROW % ('Tobacco smoking', 'Smoking'))) == 1)
+expect('mask-leak: first cell without the answer passes', L.lint_maskleak(ROW % ('Gait, incontinence, apathy', 'Normal pressure hydrocephalus')) == [])
 print('test_lint: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)

@@ -19,7 +19,7 @@
     "note": "Closed; 27 agents, 378 calls, tokens unknown"
   },
   "opened": "2026-10-23 22:36 EDT",
-  "note": "S1 to S7 only; Claude standing lead; S8/S9 excluded",
+  "note": "S7 done: all READY; Lead: released to Claude for S8 and S9. 26 reviewers/391 calls, tokens unknown; WAVE stays open for Claude. Approved 2026-10-24 Token rules; no new display lane.",
   "batch_budgets": {
     "s138": {
       "agents": 20,
@@ -144,6 +144,6 @@
     }
   },
   "max_lead_tokens": 300000000,
-  "spent_agents": 12,
-  "spent_calls": 174
+  "spent_agents": 26,
+  "spent_calls": 391
 }

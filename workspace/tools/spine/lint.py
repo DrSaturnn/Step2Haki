@@ -21,6 +21,9 @@ item 15) before any reviewer runs. It catches the categories that drew most s148
               runs straight into the button, so the page reads "symptomsIn practice"; write +' '+ before the pop
   pairs       (s150 audit, 2026-10-23) a Pairs with clause naming two titles ("<i>A</i> and <i>B</i>: ..."): the card
               renderer makes a card for A whose description reads "And"; one title per clause
+  mask-leak   (Jonathan 2026-10-24, no screenshots) a short study-mode answer (4 words or fewer) given away by its own
+              card label or row's first cell: the answer's head word (first content word of 5 letters or more) is in
+              the label ("Thiamine" labeling a card whose masked answer is "thiamine"); relabel or mask the repeat
 
   python3 tools/spine/lint.py <brief dir> [--quiet]     one "lint <check>: ..." line per finding; exit 0 always
   python3 tools/spine/lint.py --page <index.html> [--check prose] [--md OUT]   the same checks over every brief of a page
@@ -334,13 +337,39 @@ def lint_pairs(brief_html):
     return ['pairs: one Pairs with clause names two titles (%s and %s); give each title its own clause' % h for h in hits]
 
 
+MASK_STOP = set('''avoid check choose start treat order first second third these those which their there where about
+after before other rather still every within under above below usually often never always might could would should
+being given based patients patient treatment diagnosis'''.split())
+
+
+def lint_maskleak(brief_html):
+    """a short masked answer (4 words or fewer) whose head word shows in the label of its own card (span.sp-src) or in
+    the first cell of its own table row; the answer is then readable in study mode"""
+    b = body(brief_html)
+    units = [(m.group(1), m.group(0)) for m in re.finditer(r'<div class="sp-row"><span class="sp-src">(.*?)</span>.*?</p></div>', b, re.S)]
+    units += [(m.group(1), m.group(0)) for m in re.finditer(r'<tr><td>(.*?)</td>.*?</tr>', b, re.S)]
+    out, seen = [], set()
+    for label, u in units:
+        lab = set(words(text(re.sub(r'<span class="mask">.*?</span>', ' ', label, flags=re.S))))
+        for m in re.findall(r'<span class="mask">(.*?)</span>', u, re.S):
+            ans = text(m)
+            if len(words(ans)) > 4:
+                continue
+            head = next((w for w in words(ans) if len(w) >= 5 and w not in MASK_STOP), None)
+            if head and head in lab and (head, ans) not in seen:
+                seen.add((head, ans))
+                out.append('mask-leak: the label "%s" gives away its masked answer "%s"; relabel or mask the repeat'
+                           % (text(label)[:50], ans[:60]))
+    return out
+
 def lint(folder, facts_dir=None):
     out = []
     bh = os.path.join(folder, 'brief.html')
     if os.path.exists(bh):
         brief_html = open(bh, encoding='utf-8').read()
         out += lint_next_step(brief_html) + lint_alias(brief_html) + lint_threshold(brief_html) + lint_prose(brief_html) \
-            + lint_bold(brief_html) + lint_reasons(brief_html) + lint_spacing(brief_html) + lint_pairs(brief_html)
+            + lint_bold(brief_html) + lint_reasons(brief_html) + lint_spacing(brief_html) + lint_pairs(brief_html) \
+            + lint_maskleak(brief_html)
     try:
         cm = json.load(open(os.path.join(folder, 'claim_map.json'), encoding='utf-8'))
     except (OSError, ValueError):
@@ -359,7 +388,7 @@ def page_sweep(argv):
     page = argv[argv.index('--page') + 1]
     check = argv[argv.index('--check') + 1] if '--check' in argv else 'prose'
     fn = {'prose': lint_prose, 'next-step': lint_next_step, 'threshold': lint_threshold, 'alias': lint_alias,
-          'bold': lint_bold, 'reasons': lint_reasons}[check]
+          'bold': lint_bold, 'reasons': lint_reasons, 'mask-leak': lint_maskleak}[check]
     html = read_page(page)
     rows = []
     for b in briefs(html):

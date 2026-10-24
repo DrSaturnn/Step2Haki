@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24, by Codex (chat 3; S6 mechanical checks passed; visual checks and S7 text lanes running).
+Last updated: 2026-10-24, by Codex (chat 3; S7 all READY; released to Claude for S8 and S9).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,17 +12,17 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **Batch:** s151, Phase 2 cardiovascular A, adult; chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. S5 fixes applied and all 57 findings adjudicated. S6 full mechanical checks PASS for all seven; visual checks running. S7 text roles started against the frozen candidate; display waits for fresh images. All seven not READY.
-- **Lead:** Codex, since 2026-10-23 22:36 EDT, chat 3; assigned S1 to S7 only. Claude remains standing lead and receives S8 and S9 after release. Lock held on wip/s151 only.
-- **Budget S1 to S7:** 32 agents, 440 reviewer calls, 15M reviewer tokens; lead 300M. Spend 12 agents, 174 reviewer file operations; tokens unknown. WAVE.json open. S4/S7 allocation proposal in S151.md, not spent.
-- **Scope:** seven briefs only; 65 existing stems/item ids retained, exactly three key/version corrections. 235 source quotes in the revised evidence set. No S8, presentation, approval recording or ship authorized.
-- **Intake:** Claude on main in parallel. Original queue.csv and misses.csv unchanged. S1 found the substance-to-htn-drugs card allocation and included s108 Q10. Before final S7 round fetch main in both repos, reread complete intake files plus all relevant open cross-brief rows and newly added sources, compare S1 snapshots and incorporate later questions as board evidence. Do not edit intake CSVs on this branch.
-- **Checkouts:** /Users/jmontsfit/Documents/Step2Haki/s151-public and s151-evidence, branch wip/s151. Baseline public c7488a4, private 9a12c98. Full details repair/s151/S151.md. Authoritative outline sources, facts, cards, board/cut/parked/tail decisions and logs are private under local-only/repair/migration; review page local/s151/final-s3.html (SHA-256 107caa91bd5024be830ba991efe96f916c94f339fe0d0dfbf217fcc7583988d7).
-- **S3 evidence:** native 42 brief/view/mode combinations, zero below contrast; fresh computed light/dark cross-check zero below. Inherited small-label/count-gradient advisories proven against baseline; focused new-header/Chain checks clean. Private local/s151/LEGIBILITY_S3.md and README_S3.md give limits, hashes and review images.
-- **Resources:** prior disk block resolved; about 2.9 GB free. All seven full verification logs now pass. Native phone contrast is zero below in all modes; desktop/computed/focused checks and review captures still running. No personal files deleted.
-- **Next:** finish visual S6 checks, collect S7 r2 text receipts, create display lanes from fresh sheets, then adjudicate and loop within budget to all READY. Intake refreshed from public main c546aa1/private main 77fe548: the only post-S1 hypertension card allocation was already included in S5; no additional direct question. Original CSVs unchanged. Do not rerun launch or one-time S5 scripts. No S8/present/ship.
-- **Release at S7 only:** after all seven READY set State exactly "S7 done: all READY; Lead: released to Claude for S8 and S9", release the lock, push both branches and stop.
-- **Carried:** s150b closed; deferred MPTP LOW/native baseline advisories and four process proposals remain in prior records.
+S7 done: all READY; Lead: released to Claude for S8 and S9
+
+- **Batch:** s151, adult cardiovascular A: chf, ascvd, angina, ie-ppx, dvt, right-murmurs, htn-drugs. All seven READY on full final verification.
+- **Lead:** Claude. Codex S1-S7 assignment complete and branch lock released; Codex stops here. No S8, presentation, approval recording or ship run.
+- **Budget:** 26 agents / 391 reviewer file calls of 32 / 440; reviewer tokens and lead tokens unknown. WAVE remains open for Claude. Exact per-lane spend and every receipt are saved.
+- **Rules:** Jonathan's approved 2026-10-24 Token rules from main 8a2e505 apply: content READY requires acc/read/flags; read area F judges answer leaks from text; phone DOM and pointer checks replace screenshots. No new display lane or completed desktop screenshot audit is claimed. S7 tooling selectively adopted from the approved commit; main was not merged and approval/shipping tools were untouched.
+- **Checkouts:** /Users/jmontsfit/Documents/Step2Haki/s151-public and s151-evidence, branch wip/s151. Final candidate local/s151/final-s7-r4.html; SHA-256 3af4d55d906c012d0cc529fdb5deab6996d4698adc90ccf507bc7d74b63183ef. Authoritative outlines/facts, card dispositions, decisions and final logs are private. Do not rerun launch scaffolds or one-time repair scripts.
+- **Verified:** 235 source quotes, no relays/failures; all 65 original stems and all page item ids retained; exactly three original key/version corrections; seven changed briefs and 175 unchanged; shared styles/scripts unchanged. Final gate/render/vendor/preflight PASS. Phone squeeze 0; 11 pointers/0 problems. Current lint advisories have source-specific final answers and independent review.
+- **Intake:** refreshed immediately before the final round from public main 8a2e505/private main 77fe548. Complete queue/misses and relevant sources reread; no unincorporated late question. Post-S1 hypertension allocation included in S5 as b20. Both branch CSV originals unchanged.
+- **Next (Claude S8/S9):** merge main in both repos first (s150c/s150d ships and the complete approved Token-rule tools), rebuild and reconcile the Presentations count if needed, rerun READY verification, then follow the current runbook. A changed sibling-title list can stale read receipts and requires targeted follow-up. S7 READY is for the saved pre-merge candidate; no publication approval is recorded.
+- **Carried:** prior MPTP/native baseline advisories and four unadopted s150b process proposals remain in earlier records. No content was cut for length.
 
 ## Next launch
 

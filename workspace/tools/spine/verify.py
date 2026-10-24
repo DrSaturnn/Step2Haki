@@ -15,7 +15,7 @@ its outputs are local-only build products). Runs, in order:
   preflight (P1 must be 0), vendor_scan --page and numbers.py --brief.
 Then the temp folders are deleted and git must show no tracked change that verify made. Spec drift: once rules sheets exist
 (repair/migration/spine/rules/*.md with a "provenance:" line of spec hashes), a mismatch refuses to run.
-Passing these checks is MECHANICAL PASS only (G-MECH). READY (G-READY) also needs all four review receipts current
+Passing these checks is MECHANICAL PASS only (G-MECH). READY (G-READY) also needs the acc, read and flags review receipts current (display only when current; 2026-10-24)
 (SPINE_SCALE_PLAN.md section C, point 7): repair/migration/spine/reviews/<id>_<part>_rN.md for part acc, read, display
 and flags, the newest of each saying "Verdict: PASS" on a "deps:" line that matches what that part judged now:
   acc      brief, live, bank, facts, claims, specs    read   brief, live, siblings, specs
@@ -389,6 +389,9 @@ class Verify:
     # ---- 10. the whole-picture gate: mechanical checks are necessary, never sufficient
     PARTS = {'acc': ('brief', 'live', 'bank', 'facts', 'claims', 'specs'), 'read': ('brief', 'live', 'siblings', 'specs'),
              'display': ('brief', 'live', 'display', 'specs'), 'flags': ('outline', 'facts', 'live')}
+    # Jonathan 2026-10-24 (no screenshots): READY needs acc, read and flags; a display receipt counts only when it is
+    # current (a layout or new display-pattern batch still runs the display part, and its FAIL still blocks)
+    OPTIONAL = ('display',)
     PAGE = os.path.join(WS, 'index.html')
     SPECS = ('repair/efficiency/STANDING_DIRECTIONS.md', 'repair/efficiency/WORKUP_5A_SPEC.md', 'tools/MIGRATION_CONTRACT.md')
 
@@ -421,7 +424,8 @@ class Verify:
         return 'deps: ' + ' '.join('%s=%s' % (k, d[k]) for k in self.PARTS[part])
 
     def holistic(self):
-        """READY needs the four current receipts (acc, read, display, flags) to say PASS on what each judged"""
+        """READY needs the current acc, read and flags receipts to say PASS on what each judged; display counts only when
+        its receipt is current (Jonathan 2026-10-24: no screenshots)"""
         self.ready = 'no review'
         bid = getattr(self, 'bid', None)
         if not bid or not getattr(self, 'brief_html', ''):
@@ -439,7 +443,8 @@ class Verify:
         self.conditional = {}
         for part, keys in self.PARTS.items():
             if part not in texts:
-                missing.append(part)
+                if part not in self.OPTIONAL:
+                    missing.append(part)
                 continue
             txt = texts[part]
             got = dict(re.findall(r'(\w+)=([0-9a-f]{10}|none)', (re.search(r'^deps:(.*)$', txt, re.M) or [''])[0]))
@@ -447,7 +452,8 @@ class Verify:
             if any(got.get(k) != want[k] for k in keys):
                 applied = self.replay(part, keys, got, pools.get(part, []))
                 if applied is None:
-                    stale.append('%s (%s)' % (part, ', '.join(k for k in keys if got.get(k) != want[k])))
+                    if part not in self.OPTIONAL:
+                        stale.append('%s (%s)' % (part, ', '.join(k for k in keys if got.get(k) != want[k])))
                     continue
                 self.conditional[part] = applied
             if verdict not in ('PASS', 'PASS-IF'):
@@ -611,7 +617,7 @@ def main(argv):
         print('verify %s: MECHANICAL PASS, NOT READY: %s' % (v.bid, v.ready))
         return 2
     note = getattr(v, 'ready_note', '')
-    print('verify %s: READY (mechanical checks pass and all four review receipts are current and PASS)%s'
+    print('verify %s: READY (mechanical checks pass and the acc, read and flags receipts are current and PASS)%s'
           % (v.bid, ' [conditional PASS replayed: %s]' % note if note else ''))
     return 0
 
