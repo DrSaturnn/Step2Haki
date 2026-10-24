@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 17:05 EDT, by Claude (s151b S7 done: all READY, lead chat 2).
+Last updated: 2026-10-24 16:40 EDT, by Claude (s151b S8 done, report sent; lead chat 3).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,15 +12,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **s151b OPEN (Claude lead): S7 done: all READY; next S8 (independent audit, then the report) in a fresh chat** with
-  the restart line. Two new briefs: ocd, Obsessive-Compulsive and Related Disorders (disease; after panic in Anxiety,
-  somatic and sexual; folder repair/migration/psych/OCD/spine) and capacity, Decision-Making Capacity and Informed
-  Consent (lookup; Preventive & Ethics after Adolescent Confidentiality; folder repair/migration/fm/CAP/spine). Launch
-  decisions in DECISIONS_DIGEST 2026-10-24 s151b. Batch file repair/s151b/S151B.md (S4 to S7 and "Notes for S8"); per
-  brief adjudication adj_s151b.md in each folder. Rounds: r1 (3 lanes plus a read relaunch), r2 (4 lanes), r3
-  (capacity acc and read). Budget (whole batch, S8 audit included): 16 reviewer agents, 240 calls, 10M tokens; lead
-  120M. Spend: reviewers 10 agents, 85 calls, 3.13M; lead 55.0M over two chats (ledger_lead.csv). Branch wip/s151b in
-  both repos. Card dispositions: rerun repair/migration/spine/set_dispositions_s151b.py after any build change.
+- **s151b OPEN (Claude lead): S8 done, report sent, waiting for Jonathan's "ship"** (approval record in lead chat 3's
+  container; "ship" must go to that chat). Two new briefs, ocd (Anxiety, somatic and sexual, after panic; folder
+  repair/migration/psych/OCD/spine) and capacity (Preventive & Ethics after Adolescent Confidentiality; folder
+  repair/migration/fm/CAP/spine). Batch file repair/s151b/S151B.md (S8 section). Independent audit found 7 MED, 3 LOW;
+  fixed; round 4 READY. Page sha 18d53f1ac0ea. Spend: reviewers 15 of 16 agents, 125 of 240 calls, 4.58M of 10M;
+  lead 64.8M of 120M. Branch wip/s151b in both repos. Card dispositions: rerun
+  repair/migration/spine/set_dispositions_s151b.py after any build change, and copy the folder's 05_* and 10_* into
+  repair/s151b after any rebuild.
 - **s150e shipped** 2026-10-24 13:45 EDT on Jonathan's "ship": db03746 (main, pushed by hand; no
   token here), page sha256 43a61f6532c1. Six psych briefs patched from the 2026-10-23 and 2026-10-24 intake proposals;
   record repair/s150e/S150E.md. First batch on the patch pipeline: reviewers 6 of 12 agents, 20 of 220 calls, 0.46M of
