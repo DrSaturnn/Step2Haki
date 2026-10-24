@@ -48,6 +48,16 @@
   "probe": {
    "model": "haiku",
    "budget": 3
+  },
+  "patch-review": {
+   "model": "sonnet",
+   "budget": 25,
+   "agent": "lean-reviewer"
+  },
+  "patch-review-opus": {
+   "model": "opus",
+   "budget": 25,
+   "agent": "lean-reviewer"
   }
  },
  "lane_roots": [

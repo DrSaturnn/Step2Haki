@@ -43,6 +43,9 @@ additions, no need to recheck/reprove the whole brief just the changes"):
   from `review_packet.py --since` the live brief's text. Never re-prove, regenerate cards.md or re-review the rest.
 - One batch per chat: after a ship and its post-ship steps the chat ends; the next batch or patch starts in a fresh chat
   with its launch prompt. S8 and S9 stay in one chat (the approval record lives in the container that presented).
+- Patches (Jonathan 2026-10-24: "we need to be even more token efficient with the whole process"): section 8b.
+  One chat from launch to ship (no S3 or S7 restart), tools/spine/patch.py for every mechanical step, delta-ready
+  intake, and one combined reviewer per lane.
 - Find, don't search: `tools/spine/folder_of.py <brief>` gives a brief's spine folder; `tools/spine/pointer_check.py`
   checks drawers and Pairs with in a running page; shots_all and legib_audit carry a 240 s timeout. Write no scratch
   wrappers for these.
@@ -104,7 +107,7 @@ Then run section 2 to the end without asking.
   - verify --mech (G-MECH), which includes the card check;
   - `tools/spine/squeeze_check.py <page> <changed briefs>` (0 squeezed) and, when pointers or titles changed,
     `tools/spine/pointer_check.py <page> <briefs>`; legib_audit only in a layout batch (token rules).
-  - Then restart (Jonathan 2026-10-17, s146 cost review): rewrite the handoff State with S3 done and send only "S3 done. Paste into a fresh chat: Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md." The review and ship steps run in a fresh chat, which reads the batch file, each brief's boards.md, cuts.json and claim map before judging findings; so every build call made in S1 to S3 is written down there, not left in the chat.
+  - Then restart, except in a patch (section 8b) (Jonathan 2026-10-17, s146 cost review): rewrite the handoff State with S3 done and send only "S3 done. Paste into a fresh chat: Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md." The review and ship steps run in a fresh chat, which reads the batch file, each brief's boards.md, cuts.json and claim map before judging findings; so every build call made in S1 to S3 is written down there, not left in the chat.
 - **S4. Review round 1.**
   - Three roles (acc, read, flags) on the models in the plan table; display only in a layout batch (token rules). For a
     brief with small additions, round 1 already reviews only the changed lines (`review_packet.py --since` the live text).
@@ -126,7 +129,7 @@ Then run section 2 to the end without asking.
   - Write-first lanes, 5 calls per brief covered plus 4, display 7 per brief plus 4, with the same lane instructions as S4 (Jonathan 2026-10-17; was 4 per brief plus 2, s139). A reviewer that relays a verdict without writing its receipt counts as no receipt: relaunch it on the same lane with the call plan in the prompt.
   - A reviewer with only LOW findings returns PASS-IF (conditional PASS) with exact replacements; the lead applies the approved ones (`tools/spine/reps.py <brief dir> <receipt> --only N,...`), and verify keeps the receipts current without another round. A replacement that only adds a hedge word found in the quote its line cites counts as wording-only for the other parts (s148 fix 8, Jonathan 2026-10-18).
   - Loop S5 to S7 until READY or the budget is spent.
-  - Restart point (s148 fix 1, Jonathan 2026-10-18): when the last follow-up round leaves every brief READY (or the budget stops it), rewrite the handoff State ("S7 done: all READY") and send only "S7 done. Paste into a fresh chat:" with the restart line alone in its own code block. S8 and S9 run in the fresh chat (approval records live in the presenting container).
+  - Restart point, except in a patch (section 8b) (s148 fix 1, Jonathan 2026-10-18): when the last follow-up round leaves every brief READY (or the budget stops it), rewrite the handoff State ("S7 done: all READY") and send only "S7 done. Paste into a fresh chat:" with the restart line alone in its own code block. S8 and S9 run in the fresh chat (approval records live in the presenting container).
 - **S8. Final report** (section 5):
   - `python3 tools/spine/verify_all.py <brief dirs>` (three at a time; all READY);
   - register the batch with `approval.py present sNN` (no screenshots: it binds the batch files, the changelog entry
@@ -251,6 +254,46 @@ Each such message asks one question, multiple choice where possible, with a reco
   4. a tool or check change it needs follows section 3 (offline tests; the diff in the report);
   5. present with approval.py, then ship on "ship".
   No reviewer agents run when no brief content changes; any brief content change makes it a normal batch.
+
+## 8b. Patch pipeline (Jonathan 2026-10-24)
+
+Jonathan, 2026-10-24: "we need to be even more token efficient with the whole process". The lead is about 90% of a
+batch's cost and nearly all of it is the conversation re-read on every call, so a patch keeps lead calls few and short.
+Adopted: pipeline scripts, delta-ready intake, no restarts in patches, one reviewer per lane (DECISIONS_DIGEST).
+A patch is any batch of small additions to shipped briefs (rows, lines, hovers, renames; no new brief).
+
+1. **Intake is delta-ready.** The board-brief skill writes each change proposal with, per edit, the exact old HTML on
+   the live brief, the new HTML, and the facts_spec rows (fact id, source file under repair/sources, title, verbatim
+   quote; AnKing cards by note id). The patch lead copies them into the folder's facts_spec_<batch>.json and
+   delta_<batch>.json without re-scoping. Every ship marks its queue.csv rows "picked up sNNN", so the next launch
+   reads open rows only.
+2. **Folder layout** (as s150e): baseline_<batch>.html (the live brief), baseline_brief_text_<batch>.txt
+   (review_packet.text_of of it), claims_before_ and facts_before_<batch>.json, facts_spec_ and facts_<batch>.json,
+   delta_<batch>.json, and build.py calling repair/migration/spine/<batch>_delta.py (copy the latest one and rename).
+   A restated shipped line carries its old claim's fact ids in the delta's ids, so its shipped wording stays sourced.
+3. **One chat, these commands** (the lead reads their one-line outputs; logs go to local/<batch>/):
+   - launch: digest line, WAVE.json, branch wip/<batch> in both repos (private from main), restore, then
+     `patch.py setup <batch>` (hooks, /root copy, tests, start-up context);
+   - `patch.py s3 <batch> <folders>`: facts, builds, verify --mech, batch page, gate, render, preflight, vendor, squeeze;
+   - `patch.py review <batch> <round> --opus <folders> --sonnet <folders> [--since-round K]`: packets, one lane per
+     model, INSTRUCTIONS.md and LANE_PACKET.md, and the launch prompts; launch the lanes in one message, foreground;
+   - `patch.py file <batch> <round>`: splits each lane's receipt.md into the acc, read and flags receipts and prints
+     each brief's verify state;
+   - `patch.py reps <batch> <folder> <receipt> [--only N]`: applies a PASS-IF's replacements to the delta and rebuilds
+     (reps.py does not reach delta-built folders). A replacement adding a hedge word not in the quote makes read stale:
+     review that brief once more;
+   - verify_all, ready_gate, approval.py present, the report, ship.sh on "ship";
+   - `patch.py sync <batch> "<message>" <folders>`: copies the folders, delta tool, packets, reviews and logs into the
+     private clone and commits and pushes both repos.
+4. **Review: one reviewer per lane.** Role patch-review (Sonnet), or patch-review-opus (Opus) for a lane holding a
+   changed number, dose or next step; agent type lean-reviewer, as the gate requires. The reviewer judges the acc, read
+   and flags parts of the changed lines and writes one receipt.md with a section per brief and part; READY is
+   unchanged (acc, read and flags receipts current and PASS). Budget per lane: 3 calls plus 1 per brief plus 2 spare.
+   A follow-up round covers only the briefs not READY (--since-round the previous round). No display part, no
+   screenshots (token rules).
+5. **Report and post-ship** as sections 5 and 2 S9, in the same chat; the report's cost line names the lead calls.
+
+Measured, s150e (six briefs): reviewers 6 agents, 20 calls, 0.46M tokens across four rounds.
 
 ## 9. Closing a batch (Jonathan 2026-10-12)
 

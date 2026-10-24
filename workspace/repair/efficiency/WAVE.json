@@ -4,6 +4,8 @@
   "open": true,
   "plan_step": "s150e",
   "roles": [
+    "patch-review",
+    "patch-review-opus",
     "acc-review",
     "read-review",
     "flag-review",

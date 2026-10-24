@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 13:30 EDT, by Claude (s150e open: S3 done).
+Last updated: 2026-10-24 13:20 EDT, by Claude (s150e open: S8 presented).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -16,11 +16,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   sz-psychosocial (N3), cluster-b (PDB), substance (TOX), peds-sleep (SLEEP), ssri-effects (N4), panic (N5): the queued
   intake proposals of 2026-10-23 and 2026-10-24. Budget 12 agents, 220 calls, 6M reviewer tokens; lead 150M (WAVE.json
   s150e). Batch file repair/s150e/S150E.md. Branch wip/s150e in both repos (private: main plus wip/s150c merged).
-- **Step: S3 done** (all six MECHANICAL PASS; batch page gate PASS; squeeze 0; vendor 0). Next: S4 round 1, changed
-  lines only (acc, read, flags; no display). Packets with --since <folder>/baseline_brief_text_s150e.txt; plan in the
-  batch file's last section. Spend: reviewers 0 of 12 agents, 0 of 220 calls; lead chat 1 24.3M of 150M (ledger_lead.csv).
+- **Step: S8 presented, awaiting "ship"** (approval.py present s150e in this container, page 808cc30e6b9e). All six READY
+  after four combined review rounds (BATCH_RUNBOOK 8b, adopted mid-batch). Spend: reviewers 6 of 12 agents, 20 of 220
+  calls, 0.46M of 6M tokens; lead 40.0M of 150M (one chat). "ship" must go to this chat (the approval record lives in
+  this container); then ship.sh, post-ship, patch.py sync, handoff copies.
 - **Restore for s150e:** clone both repos, check out wip/s150e in each, cp -rn the private local-only into workspace,
   rebuild the batch page with `python3 repair/build.py s150e --out local/s150e/index.html`.
+- **Patch pipeline (2026-10-24):** patches run in one chat with tools/spine/patch.py, delta-ready intake and one
+  combined reviewer per lane (BATCH_RUNBOOK 8b; DECISIONS_DIGEST "patch efficiency").
 - **Token rules (2026-10-24):** no screenshots in content batches (approval binds the report, batch and page; READY
   needs acc, read, flags); small additions reviewed on changed lines only; one batch per chat. Runbook "Token rules".
   Owed by Jonathan: turn off Figma, Vercel and the healthcare plugin for this project (start-up context 193K against a
