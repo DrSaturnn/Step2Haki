@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-23 23:20 EDT, by Claude, s150c lead chat 1 (launch done; S1 next).
+Last updated: 2026-10-24 01:10 EDT (s150c chat 3 takes the lock). Earlier: 2026-10-23 23:20 EDT, by Claude, s150c lead chat 1 (launch done; S1 next).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -22,8 +22,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   Packets: new briefs in full; suicide-risk, substance, disruptive-behavior, mdd and ssri-effects with --since their
   baseline_text_s150c.txt. Batch page: python3 repair/build.py s150c --out <tmp>/index.html.
 - **Budget/spend:** 30 agents, 400 calls, 15M reviewer tokens; lead 250M. Spent 0 batch agents (1 safeguard probe).
-- **Lead:** Claude, since 2026-10-23 23:27, chat 2 (restart line pasted; chat 1 launched). Hooks reinstalled in
-  this container: test_hooks 101/101, no-model probe refused.
+- **Lead:** Claude, since 2026-10-24 01:10, chat 3 (restart line pasted; chats 1 and 2 done). Hooks reinstalled in
+  this container (install.sh, mirrored to /root/.claude): test_hooks 101/101, no-model probe refused.
 - **Branches:** wip/s150c in both repos (public from 6d42644, private from 77fe548). s151 runs in parallel under
   Codex on wip/s151; whichever ships second merges main and re-verifies before presenting.
 - **Parallel note:** WAVE.json, DECISIONS_DIGEST.md, OPEN_WORK.md, queue.csv and this file will conflict at merge;
