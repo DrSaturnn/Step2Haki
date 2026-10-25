@@ -17,14 +17,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   calls, 14M reviewer tokens; lead 160M (WAVE.json s152, open). Record repair/s152/S152.md.
 - **Step: S4 done** (2026-10-24 21:20 EDT, chat 3). Round 1 receipts filed in repair/efficiency/lanes/s152/r1/
   (24 receipts: kawasaki acc PASS, del22q11 flags PASS, bs-adolescent-bp flags PASS-IF, the rest FAIL; about 2 HIGH,
-  45 MED, 90 LOW). Reviewers 7 agents, 111 calls, 6.29M (ledger committed). Next: S5 adjudicate and fix. Held for
-  Jonathan's answer on the lead budget (runbook section 6): S5 to S9 project past the 32.7M lead left.
+  45 MED, 90 LOW). Reviewers 7 agents, 111 calls, 6.29M (ledger committed). Next: S5 adjudicate and fix. Lead raised
+  to 230M (Jonathan, DIGEST 2026-10-24 s152 S4).
 - **How the builds run:** repair/migration/peds/s152build.py <brief> (author.py -> facts_from_spec -> outline_render
   -> disp.py), helpers in repair/migration/peds/s152lib.py (now with pairs_fix); live lines in local/s152/live/.
   After any rebuild, copy the folder's 10_*_spine.json into repair/s152/. Folders repair/migration/peds/<brief>/spine
   (private; synced to the private repo, wip/s152).
 - **Spend:** reviewers 7 agents, 111 calls, 6.29M (round 1). Lead: chat 1 (4e576059) 47.5M, chat 2 (0dc673f7) 79.8M; 127.3M of the
-  160M lead figure used before chat 3; chat 3 (000b07ff) 8.1M to S4 end, so about 24.6M left for S5 to S9.
+  160M lead figure used before chat 3; chat 3 (000b07ff) 8.1M to S4 end, lead figure raised to 230M by Jonathan at S4 (DIGEST), so about 94.6M left for S5 to S9.
 - **For the report (calls so far):** S152.md per-brief entries: items rewritten with a version bump (cyanotic-chd
   q_d78b7bf3e231 v3, newborn-cyanosis q_ace4b217922a v2); pulse oximetry screen taught with "repeat checks" (MSD text
   vs AAP 2020); PPS "under 1 year" (AAFP); the newborn figure carried; Pairs with labels dropped; two jaundice items in

@@ -20,7 +20,7 @@
     "note": "s151 shipped b1d9e69 2026-10-24 (Codex S1-S7, Claude S8-S9); reviewers 27/32 agents, 396/440 calls; tokens: Codex unmeasured, S8 0.10M; lead (Claude) 18.2M; no batch open"
   },
   "opened": "2026-10-24 18:40 EDT",
-  "note": "s152 open (Claude lead): cardiovascular B, pediatric",
+  "note": "s152 open (Claude lead): cardiovascular B, pediatric; lead raised to 230M by Jonathan at S4 (2026-10-24)",
   "batch_budgets": {
     "s138": {
       "agents": 20,
@@ -170,10 +170,10 @@
       "agents": 28,
       "calls": 370,
       "tokens": 14000000,
-      "lead_tokens": 160000000
+      "lead_tokens": 230000000
     }
   },
-  "max_lead_tokens": 160000000,
+  "max_lead_tokens": 230000000,
   "spent_agents": 0,
   "spent_calls": 0
 }
