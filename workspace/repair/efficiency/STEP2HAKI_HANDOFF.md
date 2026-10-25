@@ -18,12 +18,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   47M); lead 100M. S3 done; S4 round 1 done (2 HIGH, 30 MED). **S5 and S6 done (chat 3)**: every HIGH and MED fixed or
   answered with evidence (adj_s154_r1.md and s5r1.py per folder; all seven MECHANICAL PASS; batch page gate, render,
   squeeze and pointer checks pass); the builders' web cache (26 pages) restored with the same shas and pushed to the
-  private repo. Record: repair/s154/S154.md "S5 adjudicate and fix". **S7 round 2 lanes built** (repair/efficiency/
-  lanes/s154/r2 from repair/s154/lanes/lanes_r2.json, 7 lanes, 133 calls planned; packets s154r2). Next: launch the
-  seven lanes in one message, foreground (launch prompt: the Role, Plan step, Lane and Budget lines at the head of each
-  INSTRUCTIONS.md, then "Read INSTRUCTIONS.md in your lane first"), then the ledger, then S5 round 2. Spend before
-  round 2: wave 14 agents, 539 calls, 55.34M of 60M; left 18 agents, 461 calls, 4.66M. Lead 24.0M of 100M before
-  chat 3.
+  private repo. Record: repair/s154/S154.md "S5 adjudicate and fix". **S7 round 2 done** (7 agents, 69 calls, 2.77M): bs-tef, infant-stool, rlq-pain, cyclic-vomiting, bs-umbilical READY;
+  peds-constipation and feeding-refusal fixed after one MED each (adj_s154_r2.md). **S7 round 3 lanes built**
+  (repair/efficiency/lanes/s154/r3, acc, read and flags, both briefs, 42 calls). Next: launch the three lanes in one
+  message, foreground, then the ledger, file receipts as reviews/<brief>_<part>_r3.md, verify; then S8. Spend: wave 21
+  agents, 608 calls, 58.11M of 60M; left 11 agents, 392 calls, 1.89M. Record repair/s154/S154.md.
 - **s153 shipped** (Claude lead, 2026-10-25): 7b301ef, live version s153, page 7c376718303a. Eight GI and hepatology A
   briefs on the spine; cholestasis and occult-gi-bleed are hubs (Presentations 30). Record repair/s153/S153.md; history
   in OPEN_WORK. Jonathan's "ship" took the report defaults (DIGEST 2026-10-25 s153 ship): S1 to S3 by builder agents

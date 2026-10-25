@@ -1,0 +1,97 @@
+{
+ "batch": "s154",
+ "plan_step": "s154",
+ "round": 3,
+ "context": "batch s154 (Phase 2, GI B, pediatric) converts seven live briefs to decision spine v2: one disease brief (bs-tef) and six presentation hubs (infant-stool, rlq-pain, peds-constipation, cyclic-vomiting, feeding-refusal, bs-umbilical); this is follow-up review round 3 (two briefs), on the lines changed since round 2 (changes.md), with each brief's round 2 receipt and the lead's adjudication",
+ "out": "repair/efficiency/lanes/s154/r3",
+ "packets": "repair/migration/spine/packets/s154r3",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "peds-constipation",
+    "feeding-refusal"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "peds-constipation",
+    "feeding-refusal"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "peds-constipation",
+    "feeding-refusal"
+   ]
+  }
+ ],
+ "types": {
+  "peds-constipation": "presentation hub \"Constipation in a Child\", peds lens, steps 1 to 4 then hand off by drawer, treatment by cause (including the laxative ladder) inside Workup; converted from the live brief; review in full; round 3 reviews the changed lines",
+  "feeding-refusal": "presentation hub \"Feeding an Infant or Toddler\" (the age-gated feeding ladder, the child who refuses food, eosinophilic esophagitis), peds lens, steps 1 to 4 then hand off by drawer, treatment by cause inside Workup; converted from the live brief (merged folder); review in full; round 3 reviews the changed lines"
+ },
+ "notes": {
+  "acc": [
+   "Where a board source (AnKing card, UWorld, NBME) and a guideline differ, the brief teaches the board answer and puts the guideline in an \"In practice:\" hover (runbook section 3): the hover is intended, not a finding.",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length).",
+   "Hubs (all but bs-tef) stop after Workup and hand off by drawer; treatment by cause sits inside Workup step 4 (s148 hub rule). Steps 5 to 8 absent in a hub is not a finding.",
+   "L facts (the old brief's own lines) are a valid source for carried content; judge whether the carried claim is correct for Step 2.",
+   "Lead calls (judge accuracy, not the choice): bs-tef teaches feeding with the head elevated (board key) with MSD's prone, 30 to 40 degrees in an In practice hover; infant-stool teaches FPIES reactions as hours later, typically over 2 hours (MSD Food Allergy; no board source gives a range), celiac disease in place of IBD as a brush-border cause (AnKing), and labels the anal fissure row an analogy from an adult card; cyclic-vomiting teaches bouts at about the same time each month (AnKing) with MSD's varying intervals in a hover, and adds cannabinoid hyperemesis (AnKing) with a drawer to substance; peds-constipation keeps anorectal manometry for refractory constipation (live line and bank key) with MSD's abdominal radiograph in a hover, and teaches milk below 24 oz a day; bs-umbilical teaches repair at about age 5 if persistent (UWorld, AnKing) with MSD's elective repair of very large defects after age 2 in a hover, and adds antibiotics to delivery-room care of exposed bowel (AnKing); rlq-pain teaches imaging before surgery for suspected appendicitis (AnKing) and ultrasound first in a child (MSD), with MSD's clinical diagnosis of the classic picture in a hover.",
+   "feeding-refusal carries six numbers from the live brief's own lines (L facts) because AAP and CDC pages refused the fetch: iron 1 mg/kg from 4 months, fetal iron stores lasting 4 to 6 months, one new food every 3 to 5 days, finger foods at 8 to 9 months, the 16 oz lower bound of the cow's milk range, reduced-fat milk at age 2. Judge each for Step 2 accuracy and report any you believe a board answer contradicts. It gives no pincer grasp age (AnKing decks disagree: 12 vs 9 months) and teaches vitamin D for any breast milk intake (live line and bank) where MSD says exclusively breastfed: judge both.",
+   "Scope calls in the report (not findings): rlq-pain covers the adolescent right lower quadrant (adnexal torsion, appendiceal abscess, ectopic pregnancy by drawer) and, with no live brief owning appendicitis or Crohn disease, scopes out eponymous signs, carcinoid and fecalith cards and gives no Crohn treatment line; feeding-refusal names ARFID with no drawer (no owner) and holds eosinophilic esophagitis treatment in step 4 (no owner).",
+   "Items rewritten with a version bump (original stems in place of stems that retold a source vignette; data-src keeps the item's origin): bs-tef q_cc6bbef9bb48 v2, infant-stool q_36b6849a9020 v2, cyclic-vomiting q_1973afbf6f9e v2, rlq-pain q_2084b43af50a v2, q_c4e6b08e6f86 v3, q_a16d32168d82 v3, q_313f717cd948 v2. Judge each as an item.",
+   "Lint answered (not findings unless the claim no longer matches its quote): peds-constipation hedge S019 (the card's \"may\"; the board key makes the laxative the answer; restatement in cuts.json); rlq-pain hedges S001 and S103 (\"do not discriminate\" carries no hedge); cyclic-vomiting next-step on the factitious row (its action is owned by the Treatment by cause row).",
+   "Audit cards_disposition.json against cards.md: every covered entry must name claim ids that teach the card.",
+   "Round 2 lead calls (judge accuracy, not the choice): trap pill labels (Redundant workup, True-fact-wrong-slot, Sequencing trap, Salient decoy, Class-vs-member, Unchecked attribute, Uniform-answer doubt, Mirror twin, Test-overrides-findings) are the site trap pattern and render as pills, so they stay; carried tail blocks (Pearls, Decoys, Decoy note, Pairs with, Transferable rule, How NBME framed it) are live text fixed through tail_fix and are not in claim_map, so check them against the body and the adjudication's cited sources.",
+   "One milk rule in peds-constipation and feeding-refusal: cow's milk under 24 oz a day (AnKing \"< 24 oz\"); at exactly 24 oz, trim it, never stop it. feeding-refusal q_edd2fd0fae1e is now version 3 (key \"Whole cow's milk, under 24 oz daily\").",
+   "Pairs with blocks are now one sentence per brief (\"<b>Title</b> covers ...\"), each written from that brief's live content; titles not in drawer_targets.txt link on the page by title (pointer_check, 0 problems).",
+   "The s154 builders' web cache was restored this round with the same text shas; new facts this round: infant-stool k05 (MSD NEC supportive care), e06 (full MSD food-allergy sentence); rlq-pain c30 (AnKing puppies, Campylobacter), t06, t07 (MSD Adnexal Torsion); cyclic-vomiting a19 (AnKing Step 2: IBD diagnostic test colonoscopy); feeding-refusal x01, x02 (MSD Esophageal Foreign Bodies)."
+  ],
+  "read": [
+   "The 5a workup zone names (First step, Targeted tests, Next step, Diagnostic test, Skip), the caption \"Diagnostic workup\", the caption \"Look-alikes, most tempting first\" and the pause point's \"The bait:\" label are site conventions.",
+   "Not to report: brief length or word count (2026-10-19 layers rule).",
+   "drawer_targets.txt lists in-page anchors (<prefix>-s1 to -s8, <prefix>-bank) as MISSING: those are section anchors, not broken brief links.",
+   "Lead calls (do not report the choice; judge wording): bs-tef and bs-umbilical keep their source vignette verbatim above the stepper (Part II brief rule, as bs-puv); bank items carried from the live briefs keep their live stem format; Pairs with blocks use sentence form (\"<b>Title</b> covers ...\") because the page script splits a middot list before the Pairs with parser runs; rewritten items keep data-src (the item's origin).",
+   "Already in the batch report (not to report): peds-constipation q_2ef7953bc86d explanation keeps \"TSH\" (the abbreviation check covers text above the bank only); bs-umbilical aliases patent urachus (urachal fistula), patent omphalomesenteric duct (vitelline fistula) and Wilms tumor (nephroblastoma) are shown in the brief but not yet in ALIASES.json; feeding-refusal ARFID has no drawer (no owner brief).",
+   "Hub scope (rlq-pain widened to the adolescent right lower quadrant; feeding-refusal holds eosinophilic esophagitis treatment) is the lead's call in the report: judge wording.",
+   "Round 2 lead calls (judge accuracy, not the choice): trap pill labels (Redundant workup, True-fact-wrong-slot, Sequencing trap, Salient decoy, Class-vs-member, Unchecked attribute, Uniform-answer doubt, Mirror twin, Test-overrides-findings) are the site trap pattern and render as pills, so they stay; carried tail blocks (Pearls, Decoys, Decoy note, Pairs with, Transferable rule, How NBME framed it) are live text fixed through tail_fix and are not in claim_map, so check them against the body and the adjudication's cited sources.",
+   "One milk rule in peds-constipation and feeding-refusal: cow's milk under 24 oz a day (AnKing \"< 24 oz\"); at exactly 24 oz, trim it, never stop it. feeding-refusal q_edd2fd0fae1e is now version 3 (key \"Whole cow's milk, under 24 oz daily\").",
+   "Pairs with blocks are now one sentence per brief (\"<b>Title</b> covers ...\"), each written from that brief's live content; titles not in drawer_targets.txt link on the page by title (pointer_check, 0 problems).",
+   "The s154 builders' web cache was restored this round with the same text shas; new facts this round: infant-stool k05 (MSD NEC supportive care), e06 (full MSD food-allergy sentence); rlq-pain c30 (AnKing puppies, Campylobacter), t06, t07 (MSD Adnexal Torsion); cyclic-vomiting a19 (AnKing Step 2: IBD diagnostic test colonoscopy); feeding-refusal x01, x02 (MSD Esophageal Foreign Bodies).",
+   "feeding-refusal: the bottom line is three items; the iron line after it is a separate paragraph (brief_text.txt flattens blocks), so a four-line bottom line is not a finding."
+  ],
+  "flags": [
+   "line_sources.txt cuts each quote at 600 characters (a known packet limit); facts.json in the same folder holds every quote whole. Before reporting that a quote does not support a line, Grep facts.json for the fact id.",
+   "Word counts are not judged (2026-10-19 layers rule).",
+   "Lint answered (report only if the claim no longer matches its quote): peds-constipation hedge S019; rlq-pain hedges S001 and S103; cyclic-vomiting next-step on the factitious row. cuts.json in each folder records restated live lines whose hedge words left with them (feeding-refusal has no cuts).",
+   "feeding-refusal's six live-line numbers (iron 1 mg/kg from 4 months, stores 4 to 6 months, a new food every 3 to 5 days, finger foods 8 to 9 months, 16 oz lower bound, reduced-fat milk at 2) and bs-tef's \"24 hours or later\" rest on L facts (the old brief's lines) with primary sources refused; judge whether each line's cited L fact states the number, not whether a primary source was found.",
+   "Round 2 lead calls (judge accuracy, not the choice): trap pill labels (Redundant workup, True-fact-wrong-slot, Sequencing trap, Salient decoy, Class-vs-member, Unchecked attribute, Uniform-answer doubt, Mirror twin, Test-overrides-findings) are the site trap pattern and render as pills, so they stay; carried tail blocks (Pearls, Decoys, Decoy note, Pairs with, Transferable rule, How NBME framed it) are live text fixed through tail_fix and are not in claim_map, so check them against the body and the adjudication's cited sources.",
+   "One milk rule in peds-constipation and feeding-refusal: cow's milk under 24 oz a day (AnKing \"< 24 oz\"); at exactly 24 oz, trim it, never stop it. feeding-refusal q_edd2fd0fae1e is now version 3 (key \"Whole cow's milk, under 24 oz daily\").",
+   "Pairs with blocks are now one sentence per brief (\"<b>Title</b> covers ...\"), each written from that brief's live content; titles not in drawer_targets.txt link on the page by title (pointer_check, 0 problems).",
+   "The s154 builders' web cache was restored this round with the same text shas; new facts this round: infant-stool k05 (MSD NEC supportive care), e06 (full MSD food-allergy sentence); rlq-pain c30 (AnKing puppies, Campylobacter), t06, t07 (MSD Adnexal Torsion); cyclic-vomiting a19 (AnKing Step 2: IBD diagnostic test colonoscopy); feeding-refusal x01, x02 (MSD Esophageal Foreign Bodies)."
+  ]
+ },
+ "prior": {
+  "acc": {
+   "peds-constipation": "repair/efficiency/lanes/s154/r2/acc-C/peds-constipation/receipt.md",
+   "feeding-refusal": "repair/efficiency/lanes/s154/r2/acc-C/feeding-refusal/receipt.md"
+  },
+  "read": {
+   "peds-constipation": "repair/efficiency/lanes/s154/r2/read-B/peds-constipation/receipt.md",
+   "feeding-refusal": "repair/efficiency/lanes/s154/r2/read-A/feeding-refusal/receipt.md"
+  },
+  "flags": {
+   "peds-constipation": "repair/efficiency/lanes/s154/r2/flags-B/peds-constipation/receipt.md",
+   "feeding-refusal": "repair/efficiency/lanes/s154/r2/flags-A/feeding-refusal/receipt.md"
+  }
+ },
+ "adjudication": {
+  "peds-constipation": "repair/migration/gi/peds-constipation/spine/adj_s154_r2.md",
+  "feeding-refusal": "repair/migration/gi/feeding-refusal/spine/adj_s154_r2.md"
+ }
+}
