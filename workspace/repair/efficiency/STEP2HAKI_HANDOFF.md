@@ -15,16 +15,18 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **s152 open** (Claude lead), launched 2026-10-24 18:40 EDT on wip/s152 in both repos. Briefs: ped-murmur,
   cyanotic-chd, newborn-cyanosis, kawasaki, arf, myocarditis, del22q11, bs-adolescent-bp. Budget 28 agents, 370
   calls, 14M reviewer tokens; lead 160M (WAVE.json s152, open). Record repair/s152/S152.md.
-- **Step: S4 done** (2026-10-24 21:20 EDT, chat 3). Round 1 receipts filed in repair/efficiency/lanes/s152/r1/
-  (24 receipts: kawasaki acc PASS, del22q11 flags PASS, bs-adolescent-bp flags PASS-IF, the rest FAIL; about 2 HIGH,
-  45 MED, 90 LOW). Reviewers 7 agents, 111 calls, 6.29M (ledger committed). Next: S5 adjudicate and fix. Lead raised
-  to 230M (Jonathan, DIGEST 2026-10-24 s152 S4).
+- **Step: S6 done** (2026-10-24 21:45 EDT, chat 3; restart for context). S5 fixes on all eight (each folder's
+  adj_s152_r1.md; S152.md "S5 and S6"); S6 checks all pass. Next: S7 follow-up round 2 in a fresh chat: packets with
+  `review_packet.py <folder> repair/migration/spine/packets/s152r2/<brief> --page local/s152/index.html --since
+  repair/efficiency/lanes/s152/r1/<lane>/<brief>/brief_text.txt` per part, lanes.py spec repair/s152/lanes/lanes_r2.json
+  (round 2, same lane split, prior = r1 receipts, adjudication = adj_s152_r1.md), foreground launch, ledger commit.
+  Rebuild local/s152/index.html first (python3 repair/build.py s152 --out local/s152/index.html).
 - **How the builds run:** repair/migration/peds/s152build.py <brief> (author.py -> facts_from_spec -> outline_render
   -> disp.py), helpers in repair/migration/peds/s152lib.py (now with pairs_fix); live lines in local/s152/live/.
   After any rebuild, copy the folder's 10_*_spine.json into repair/s152/. Folders repair/migration/peds/<brief>/spine
   (private; synced to the private repo, wip/s152).
-- **Spend:** reviewers 7 agents, 111 calls, 6.29M (round 1). Lead: chat 1 (4e576059) 47.5M, chat 2 (0dc673f7) 79.8M; 127.3M of the
-  160M lead figure used before chat 3; chat 3 (000b07ff) 8.1M to S4 end, lead figure raised to 230M by Jonathan at S4 (DIGEST), so about 94.6M left for S5 to S9.
+- **Spend:** reviewers 7 agents, 111 calls, 6.29M (round 1 of 28, 370, 14M). Lead: chat 1 (4e576059) 47.5M, chat 2 (0dc673f7) 79.8M; 127.3M of the
+  160M lead figure used before chat 3; chat 3 (000b07ff) about 50M to S6 end; lead figure raised to 230M by Jonathan at S4 (DIGEST), so about 52M left for S7 to S9.
 - **For the report (calls so far):** S152.md per-brief entries: items rewritten with a version bump (cyanotic-chd
   q_d78b7bf3e231 v3, newborn-cyanosis q_ace4b217922a v2); pulse oximetry screen taught with "repeat checks" (MSD text
   vs AAP 2020); PPS "under 1 year" (AAFP); the newborn figure carried; Pairs with labels dropped; two jaundice items in
