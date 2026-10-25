@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-25 13:50 EDT, by Claude (s153 S7 done: all eight READY; next chat runs S8 and S9).
+Last updated: 2026-10-25 14:30 EDT, by Claude (s153 S8 presented in chat 8; waiting for "ship" in that chat).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -19,12 +19,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   (7 agents, 72 calls, 2.32M) PASS on every part, two PASS-IFs settled (bs-impaction's 3 applied and replayed; fap's
   "should prompt" rejected). Spend: wave reviewers 29 agents, 752 calls, 65.61M of 74M; lead 93.5M of 120M (five rows).
   Batch file repair/s153/S153.md "S5 round 2, S6, S7 round 3" holds every call.
-- **Next chat: S8 and S9** (one chat). Session start with both clones on wip/s153 (private `--branch wip/s153`),
-  restore, `patch.py setup s153`. Read only the State, S153.md's S5 sections and each r3 receipt's verdict line
-  (repair/migration/spine/reviews/<brief>_<part>_r3.md, already filed). Then `python3 tools/spine/batch.py s8 s153
-  liver-preg masld cholestasis occult-gi-bleed bs-wilson zenker fap bs-impaction`, the report (runbook section 5),
-  wait for "ship", then `batch.py ship` and `batch.py post`; drop gate allowlist lines K3 liver-preg:mnemonic and
-  K3 dvt:mnemonic at ship.
+- **S8 presented** (chat 8, 2026-10-25): changelog entry 153 added (6134d6c); `batch.py s8` all PASS (8 of 8 READY,
+  gate, render, squeeze 0, pointer 0 problems), `approval.py present s153` (page f7fac5a475f7). "ship" must go to chat 8
+  (the approval record lives in its container). On "ship": drop gate allowlist lines K3 liver-preg:mnemonic and K3
+  dvt:mnemonic, then `batch.py ship` and `batch.py post`. If chat 8 is lost, a fresh chat re-runs `batch.py s8` and
+  presents again.
   Items for the report (none blocks): liver-preg five conditions in one disease brief (split or hub, Jonathan);
   fap two-disease merge kept; bs-impaction key change q_5663 v2 (laxatives before PAMORA); zenker q_cbb8 key now
   "Cricopharyngeal myotomy with a pouch procedure" (v2); cholestasis alpha-1 cell names level and genotype or
