@@ -15,12 +15,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **s152 open** (Claude lead), launched 2026-10-24 18:40 EDT on wip/s152 in both repos. Briefs: ped-murmur,
   cyanotic-chd, newborn-cyanosis, kawasaki, arf, myocarditis, del22q11, bs-adolescent-bp. Budget 28 agents, 370
   calls, 14M reviewer tokens; lead 160M (WAVE.json s152, open). Record repair/s152/S152.md.
-- **Step: S6 done** (2026-10-24 21:45 EDT, chat 3; restart for context). S5 fixes on all eight (each folder's
-  adj_s152_r1.md; S152.md "S5 and S6"); S6 checks all pass. Next: S7 follow-up round 2 in a fresh chat: packets with
-  `review_packet.py <folder> repair/migration/spine/packets/s152r2/<brief> --page local/s152/index.html --since
-  repair/efficiency/lanes/s152/r1/<lane>/<brief>/brief_text.txt` per part, lanes.py spec repair/s152/lanes/lanes_r2.json
-  (round 2, same lane split, prior = r1 receipts, adjudication = adj_s152_r1.md), foreground launch, ledger commit.
-  Rebuild local/s152/index.html first (python3 repair/build.py s152 --out local/s152/index.html).
+- **Step: S7 round 2 launched** (2026-10-24, chat 4, session 01EahgBZ). Hooks installed locally (plugin gate was not
+  live: one ungated probe agent ran, about 11K tokens, disclosed). Packets repair/migration/spine/packets/s152r2 (since
+  the r1 brief_text.txt), lanes repair/efficiency/lanes/s152/r2 from repair/s152/lanes/lanes_r2.json: 7 lanes, 148
+  calls, all eight briefs on acc, read, flags (r1 receipts were never filed to reviews/; file r1 and r2 there after the
+  round). Next: file receipts (reviews/<id>_<part>_r1.md and _r2.md), ledger commit, S5 for round 2.
 - **How the builds run:** repair/migration/peds/s152build.py <brief> (author.py -> facts_from_spec -> outline_render
   -> disp.py), helpers in repair/migration/peds/s152lib.py (now with pairs_fix); live lines in local/s152/live/.
   After any rebuild, copy the folder's 10_*_spine.json into repair/s152/. Folders repair/migration/peds/<brief>/spine
