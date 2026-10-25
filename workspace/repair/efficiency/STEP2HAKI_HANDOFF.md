@@ -15,10 +15,10 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **s153 open** (Claude lead, 2026-10-25): Phase 2, GI and hepatology A, on wip/s153 in both repos. Briefs liver-preg,
   masld, cholestasis (hub), bs-wilson, zenker, fap, occult-gi-bleed (hub), bs-impaction. Budget 38 agents, 1270 calls,
   74M agent tokens (reviewers 28, 370, 14M; builders 10, 900, 60M); lead 120M. Batch file repair/s153/S153.md.
-- **Step:** launch and B0 done; builder lanes ready. Pilot blocked twice (08:15 and 08:36): the Agent tool lists no
-  lean-builder type. The plugin source (tools/plugin/step2haki-tools) is now 0.3.0 with agents/lean-builder.md; Jonathan
-  uploads step2haki-tools-0.3.0.zip to his account plugin, then a fresh chat continues. Spend: 0 agents ran (refused
-  launch records stay in each old container and do not carry over).
+- **Step:** launch and B0 done. Pilot pair (liver-preg, cholestasis) running since 09:23 as lean-builder: the type loaded
+  in the continuation chat from the /root/.claude/agents copy that `patch.py setup` makes (some minutes after the copy).
+  Plugin 0.3.0 (with lean-builder) is built in the repo for upload. A chat that restarts mid-pilot relaunches each lane
+  whose BUILD_RECEIPT.md is missing or INCOMPLETE, same prompt (the notes carry the work).
 - **Next chat (continuation):** session start as below, but clone the private repo on wip/s153
   (`git clone --depth 1 --branch wip/s153 ...`) and check out wip/s153 in the public clone; the cp restore brings the
   lanes (repair/migration/gi/<id>/spine, with the lead notes in each INSTRUCTIONS.md) and local/s153/ (build_spec.json,

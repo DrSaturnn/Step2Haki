@@ -16,6 +16,13 @@
   "racemic epinephrine",
   "wheezing"
  ],
+ "angina": [
+  "stable angina",
+  "unstable angina",
+  "acute coronary syndrome",
+  "chest pain",
+  "vasospastic angina"
+ ],
  "antipsych-effects": [
   "acute dystonia",
   "agranulocytosis",
@@ -45,6 +52,21 @@
   "poststreptococcal glomerulonephritis",
   "preseptal cellulitis",
   "proteinuria"
+ ],
+ "arf": [
+  "rheumatic fever",
+  "Jones criteria",
+  "rheumatic heart disease",
+  "Sydenham chorea",
+  "erythema marginatum",
+  "benzathine penicillin",
+  "antistreptolysin"
+ ],
+ "ascvd": [
+  "statin",
+  "lipid screening",
+  "hypercholesterolemia",
+  "ASCVD"
  ],
  "asthma": [
   "asthma exacerbation",
@@ -155,6 +177,16 @@
   "WAGR",
   "Wilms tumor"
  ],
+ "bs-adolescent-bp": [
+  "pediatric hypertension",
+  "hypertension in children",
+  "elevated blood pressure",
+  "ambulatory blood pressure",
+  "oscillometric",
+  "auscultat",
+  "blood pressure percentile",
+  "secondary hypertension"
+ ],
  "bs-brachial-plexus": [
   "brachial plexus",
   "Erb palsy",
@@ -214,6 +246,55 @@
   "plagiocephaly",
   "torticollis"
  ],
+ "capacity": [
+  "decision-making capacity",
+  "decision making capacity",
+  "informed consent",
+  "surrogate",
+  "advance directive",
+  "living will",
+  "healthcare proxy",
+  "health care proxy",
+  "power of attorney",
+  "competence",
+  "competent",
+  "incompetence",
+  "therapeutic privilege",
+  "two-physician consent",
+  "substituted judgment",
+  "best interest"
+ ],
+ "chf": [
+  "heart failure",
+  "HFrEF",
+  "HFpEF",
+  "ejection fraction",
+  "cardiomyopathy"
+ ],
+ "cholestasis": [
+  "alkaline phosphatase",
+  "aminotransferase",
+  "antimitochondrial",
+  "AST:ALT",
+  "beads on a string",
+  "choledocholithiasis",
+  "cholestasis",
+  "Crigler-Najjar",
+  "Dubin-Johnson",
+  "elevated liver enzymes",
+  "ERCP",
+  "GGT",
+  "Gilbert",
+  "hyperbilirubinemia",
+  "MRCP",
+  "nucleotidase",
+  "p-ANCA",
+  "primary biliary cholangitis",
+  "primary sclerosing cholangitis",
+  "Rotor",
+  "transaminases",
+  "ursodeoxycholic"
+ ],
  "cluster-b": [
   "antisocial personality",
   "borderline personality",
@@ -247,6 +328,53 @@
   "postnasal drip",
   "upper airway cough syndrome"
  ],
+ "cyanotic-chd": [
+  "congenital heart disease",
+  "tetralogy of Fallot",
+  "transposition of the great arteries",
+  "truncus arteriosus",
+  "tricuspid atresia",
+  "anomalous pulmonary venous",
+  "Ebstein",
+  "ventricular septal defect",
+  "atrial septal defect",
+  "patent ductus arteriosus",
+  "coarctation",
+  "hypoplastic left heart",
+  "Eisenmenger",
+  "tet spell",
+  "prostaglandin E1",
+  "indomethacin"
+ ],
+ "defense-mechanisms": [
+  "defense mechanism",
+  "displacement",
+  "sublimation",
+  "reaction formation",
+  "passive aggression",
+  "acting out",
+  "intellectualization",
+  "rationalization",
+  "splitting",
+  "projection",
+  "suppression",
+  "altruism",
+  "isolation of affect",
+  "identification",
+  "undoing",
+  "repression",
+  "denial"
+ ],
+ "del22q11": [
+  "DiGeorge",
+  "22q11",
+  "velocardiofacial",
+  "CATCH-22",
+  "thymic hypoplasia",
+  "thymic aplasia",
+  "hypoparathyroidism",
+  "conotruncal"
+ ],
  "delirium": [
   "acute confusional",
   "alcohol withdrawal",
@@ -256,12 +384,49 @@
   "sundowning",
   "wernicke"
  ],
+ "dementia": [
+  "dementia",
+  "neurocognitive disorder",
+  "Lewy body",
+  "Creutzfeldt",
+  "prion",
+  "Korsakoff",
+  "Alzheimer",
+  "frontotemporal",
+  "normal pressure hydrocephalus",
+  "pseudodementia",
+  "vascular dementia",
+  "mild cognitive impairment",
+  "cholinesterase inhibitor",
+  "donepezil",
+  "memantine",
+  "14-3-3",
+  "RT-QuIC"
+ ],
  "disruptive-behavior": [
   "conduct disorder",
   "disruptive mood dysregulation",
   "intermittent explosive",
   "oppositional defiant",
   "parent management training"
+ ],
+ "dvt": [
+  "deep vein thrombosis",
+  "pulmonary embolism",
+  "venous thromboembolism",
+  "DVT"
+ ],
+ "eating-disorders": [
+  "anorexia nervosa",
+  "bulimia nervosa",
+  "binge eating",
+  "refeeding",
+  "avoidant/restrictive",
+  "ARFID",
+  "gastroparesis",
+  "lanugo",
+  "purging",
+  "eating disorder"
  ],
  "enuresis": [
   "bed-wetting",
@@ -339,6 +504,12 @@
   "shortened and internally rotated",
   "total hip arthroplasty"
  ],
+ "htn-drugs": [
+  "hypertension",
+  "antihypertensive",
+  "blood pressure",
+  "primary aldosteronism"
+ ],
  "hypercalcemia": [
   "bisphosphonate",
   "calcitonin",
@@ -373,6 +544,11 @@
   "supplemental oxygen",
   "hypercapnia"
  ],
+ "ie-ppx": [
+  "endocarditis prophylaxis",
+  "dental prophylaxis",
+  "prosthetic valve"
+ ],
  "ipv": [
   "adult protective",
   "child protective",
@@ -380,6 +556,15 @@
   "elder abuse",
   "partner violence",
   "safety plan"
+ ],
+ "kawasaki": [
+  "Kawasaki",
+  "intravenous immunoglobulin",
+  "IVIG",
+  "coronary aneurysm",
+  "coronary artery aneurysm",
+  "MIS-C",
+  "multisystem inflammatory syndrome"
  ],
  "limp": [
   "antalgic gait",
@@ -391,6 +576,18 @@
   "septic arthritis",
   "toddler's fracture",
   "transient synovitis"
+ ],
+ "liver-preg": [
+  "acute fatty liver of pregnancy",
+  "alkaline phosphatase pregnancy",
+  "bile acids",
+  "cholestasis of pregnancy",
+  "fatty liver of pregnancy",
+  "HELLP",
+  "hyperemesis gravidarum",
+  "intrahepatic cholestasis of pregnancy",
+  "pruritus in pregnancy",
+  "ursodeoxycholic acid"
  ],
  "mdd": [
   "adjustment disorder",
@@ -407,6 +604,13 @@
   "SIGECAPS",
   "SSRI",
   "suicide risk"
+ ],
+ "myocarditis": [
+  "myocarditis",
+  "coxsackievirus",
+  "dilated cardiomyopathy",
+  "cardiogenic shock",
+  "bronchiolitis"
  ],
  "myositis-ossificans": [
   "muscle contusion",
@@ -428,6 +632,18 @@
   "monofilament",
   "SGLT2",
   "statin diabetes"
+ ],
+ "newborn-cyanosis": [
+  "cyanosis",
+  "respiratory distress syndrome",
+  "transient tachypnea",
+  "persistent pulmonary hypertension",
+  "choanal atresia",
+  "acrocyanosis",
+  "methemoglobinemia",
+  "hyperoxia",
+  "pulse oximetry screening",
+  "surfactant"
  ],
  "nursemaid": [
   "annular ligament",
@@ -460,6 +676,23 @@
   "topical NSAID",
   "tramadol"
  ],
+ "ocd": [
+  "obsessive-compulsive",
+  "obsessions",
+  "compulsions",
+  "OCD",
+  "OCPD",
+  "exposure and response prevention",
+  "clomipramine",
+  "body dysmorphic",
+  "hoarding",
+  "trichotillomania",
+  "excoriation",
+  "skin picking",
+  "hair pulling",
+  "egodystonic",
+  "ego-dystonic"
+ ],
  "panic": [
   "agoraphobia",
   "anxiety disorder",
@@ -468,6 +701,30 @@
   "panic disorder",
   "social anxiety",
   "specific phobia"
+ ],
+ "parkinson": [
+  "Parkinson disease",
+  "parkinsonism",
+  "levodopa",
+  "carbidopa",
+  "entacapone",
+  "selegiline",
+  "rasagiline",
+  "pramipexole",
+  "ropinirole",
+  "Lewy body",
+  "supranuclear palsy",
+  "multiple system atrophy"
+ ],
+ "ped-murmur": [
+  "innocent murmur",
+  "Still murmur",
+  "venous hum",
+  "pathologic murmur",
+  "heart murmur",
+  "pulmonary flow murmur",
+  "peripheral pulmonic stenosis",
+  "hypertrophic cardiomyopathy"
  ],
  "peds-aki": [
   "acute interstitial nephritis",
@@ -529,6 +786,12 @@
   "statin myopathy",
   "temporal arteritis",
   "temporal artery biopsy"
+ ],
+ "pms-pmdd": [
+  "premenstrual syndrome",
+  "premenstrual dysphoric",
+  "PMDD",
+  "PMS"
  ],
  "pneumoconiosis": [
   "asbestos",
@@ -602,6 +865,13 @@
   "oxymetazoline",
   "rhinitis medicamentosa",
   "vasomotor rhinitis"
+ ],
+ "right-murmurs": [
+  "heart murmur",
+  "aortic stenosis",
+  "mitral regurgitation",
+  "tricuspid regurgitation",
+  "hypertrophic cardiomyopathy"
  ],
  "scaphoid": [
   "Colles",
@@ -905,239 +1175,5 @@
   "psychotic",
   "schizoid",
   "schizotypal"
- ],
- "pms-pmdd": [
-  "premenstrual syndrome",
-  "premenstrual dysphoric",
-  "PMDD",
-  "PMS"
- ],
- "parkinson": [
-  "Parkinson disease",
-  "parkinsonism",
-  "levodopa",
-  "carbidopa",
-  "entacapone",
-  "selegiline",
-  "rasagiline",
-  "pramipexole",
-  "ropinirole",
-  "Lewy body",
-  "supranuclear palsy",
-  "multiple system atrophy"
- ],
- "dementia": [
-  "dementia",
-  "neurocognitive disorder",
-  "Lewy body",
-  "Creutzfeldt",
-  "prion",
-  "Korsakoff",
-  "Alzheimer",
-  "frontotemporal",
-  "normal pressure hydrocephalus",
-  "pseudodementia",
-  "vascular dementia",
-  "mild cognitive impairment",
-  "cholinesterase inhibitor",
-  "donepezil",
-  "memantine",
-  "14-3-3",
-  "RT-QuIC"
- ],
- "eating-disorders": [
-  "anorexia nervosa",
-  "bulimia nervosa",
-  "binge eating",
-  "refeeding",
-  "avoidant/restrictive",
-  "ARFID",
-  "gastroparesis",
-  "lanugo",
-  "purging",
-  "eating disorder"
- ],
- "defense-mechanisms": [
-  "defense mechanism",
-  "displacement",
-  "sublimation",
-  "reaction formation",
-  "passive aggression",
-  "acting out",
-  "intellectualization",
-  "rationalization",
-  "splitting",
-  "projection",
-  "suppression",
-  "altruism",
-  "isolation of affect",
-  "identification",
-  "undoing",
-  "repression",
-  "denial"
- ],
- "ocd": [
-  "obsessive-compulsive",
-  "obsessions",
-  "compulsions",
-  "OCD",
-  "OCPD",
-  "exposure and response prevention",
-  "clomipramine",
-  "body dysmorphic",
-  "hoarding",
-  "trichotillomania",
-  "excoriation",
-  "skin picking",
-  "hair pulling",
-  "egodystonic",
-  "ego-dystonic"
- ],
- "capacity": [
-  "decision-making capacity",
-  "decision making capacity",
-  "informed consent",
-  "surrogate",
-  "advance directive",
-  "living will",
-  "healthcare proxy",
-  "health care proxy",
-  "power of attorney",
-  "competence",
-  "competent",
-  "incompetence",
-  "therapeutic privilege",
-  "two-physician consent",
-  "substituted judgment",
-  "best interest"
- ],
- "chf": [
-  "heart failure",
-  "HFrEF",
-  "HFpEF",
-  "ejection fraction",
-  "cardiomyopathy"
- ],
- "ascvd": [
-  "statin",
-  "lipid screening",
-  "hypercholesterolemia",
-  "ASCVD"
- ],
- "angina": [
-  "stable angina",
-  "unstable angina",
-  "acute coronary syndrome",
-  "chest pain",
-  "vasospastic angina"
- ],
- "ie-ppx": [
-  "endocarditis prophylaxis",
-  "dental prophylaxis",
-  "prosthetic valve"
- ],
- "dvt": [
-  "deep vein thrombosis",
-  "pulmonary embolism",
-  "venous thromboembolism",
-  "DVT"
- ],
- "right-murmurs": [
-  "heart murmur",
-  "aortic stenosis",
-  "mitral regurgitation",
-  "tricuspid regurgitation",
-  "hypertrophic cardiomyopathy"
- ],
- "htn-drugs": [
-  "hypertension",
-  "antihypertensive",
-  "blood pressure",
-  "primary aldosteronism"
- ],
- "ped-murmur": [
-  "innocent murmur",
-  "Still murmur",
-  "venous hum",
-  "pathologic murmur",
-  "heart murmur",
-  "pulmonary flow murmur",
-  "peripheral pulmonic stenosis",
-  "hypertrophic cardiomyopathy"
- ],
- "cyanotic-chd": [
-  "congenital heart disease",
-  "tetralogy of Fallot",
-  "transposition of the great arteries",
-  "truncus arteriosus",
-  "tricuspid atresia",
-  "anomalous pulmonary venous",
-  "Ebstein",
-  "ventricular septal defect",
-  "atrial septal defect",
-  "patent ductus arteriosus",
-  "coarctation",
-  "hypoplastic left heart",
-  "Eisenmenger",
-  "tet spell",
-  "prostaglandin E1",
-  "indomethacin"
- ],
- "newborn-cyanosis": [
-  "cyanosis",
-  "respiratory distress syndrome",
-  "transient tachypnea",
-  "persistent pulmonary hypertension",
-  "choanal atresia",
-  "acrocyanosis",
-  "methemoglobinemia",
-  "hyperoxia",
-  "pulse oximetry screening",
-  "surfactant"
- ],
- "kawasaki": [
-  "Kawasaki",
-  "intravenous immunoglobulin",
-  "IVIG",
-  "coronary aneurysm",
-  "coronary artery aneurysm",
-  "MIS-C",
-  "multisystem inflammatory syndrome"
- ],
- "arf": [
-  "rheumatic fever",
-  "Jones criteria",
-  "rheumatic heart disease",
-  "Sydenham chorea",
-  "erythema marginatum",
-  "benzathine penicillin",
-  "antistreptolysin"
- ],
- "myocarditis": [
-  "myocarditis",
-  "coxsackievirus",
-  "dilated cardiomyopathy",
-  "cardiogenic shock",
-  "bronchiolitis"
- ],
- "del22q11": [
-  "DiGeorge",
-  "22q11",
-  "velocardiofacial",
-  "CATCH-22",
-  "thymic hypoplasia",
-  "thymic aplasia",
-  "hypoparathyroidism",
-  "conotruncal"
- ],
- "bs-adolescent-bp": [
-  "pediatric hypertension",
-  "hypertension in children",
-  "elevated blood pressure",
-  "ambulatory blood pressure",
-  "oscillometric",
-  "auscultat",
-  "blood pressure percentile",
-  "secondary hypertension"
  ]
 }
