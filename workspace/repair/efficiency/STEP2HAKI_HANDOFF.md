@@ -14,20 +14,18 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **s152 open** (Claude lead), launched 2026-10-24 18:40 EDT on wip/s152 in both repos. Briefs: ped-murmur,
   cyanotic-chd, newborn-cyanosis, kawasaki, arf, myocarditis, del22q11, bs-adolescent-bp. Budget 28 agents, 370
-  calls, 14M reviewer tokens; lead 160M (WAVE.json s152, open). Record repair/s152/S152.md.
-- **Step: S7 round 3 launched** (2026-10-24, chat 4, session 01EahgBZ). Round 2 (7 agents, 91 calls, 4.46M): READY
-  after S5 r2 fixes: arf, kawasaki, del22q11 (conditional PASS replayed). Round 3 (repair/s152/lanes/lanes_r3.json,
-  packets s152r3, lanes repair/efficiency/lanes/s152/r3): acc, read, flags on cyanotic-chd, newborn-cyanosis,
-  ped-murmur (since r2) and flags on myocarditis, bs-adolescent-bp (r2 flags receipts never written; since r1); 4
-  lanes, 71 calls. S5 r2 notes in each folder's adj_s152_r2.md. Receipts are filed by copying each lane receipt to
-  repair/migration/spine/reviews/<id>_<part>_rN.md. Hooks installed locally this chat (plugin gate not live; one
-  ungated probe agent ran, 11K tokens). After round 3: file receipts, ledger, S5 or S8.
+  calls, 14M reviewer tokens; lead 230M (raised from 160M at S4; WAVE.json s152, open). Record repair/s152/S152.md.
+- **Step: S7 done: all READY** (2026-10-24, chat 4). Rounds 2 to 4 ran (S152.md "S7 rounds 2 to 4"); verify_all 8 of
+  8 READY; receipts filed in repair/migration/spine/reviews (<id>_<part>_r1 to r4). Next, in a fresh chat: S8 (rebuild
+  local/s152/index.html; verify_all three at a time; batch page checks; changelog entry 152 in
+  repair/changelog/axlog.py; `approval.py present s152`; the report per runbook section 5, with the deferred LOW list
+  and the two newborn-cyanosis jaundice items as the decision for Jonathan), then S9 on "ship".
 - **How the builds run:** repair/migration/peds/s152build.py <brief> (author.py -> facts_from_spec -> outline_render
   -> disp.py), helpers in repair/migration/peds/s152lib.py (now with pairs_fix); live lines in local/s152/live/.
   After any rebuild, copy the folder's 10_*_spine.json into repair/s152/. Folders repair/migration/peds/<brief>/spine
   (private; synced to the private repo, wip/s152).
-- **Spend:** reviewers 14 agents, 202 calls, 10.74M after round 2 (of 28, 370, 14M; round 1 111 calls 6.29M, round 2 91 calls 4.46M). Lead: chat 1 (4e576059) 47.5M, chat 2 (0dc673f7) 79.8M; 127.3M of the
-  160M lead figure used before chat 3; chat 3 (000b07ff) about 50M to S6 end; lead figure raised to 230M by Jonathan at S4 (DIGEST), so about 52M left for S7 to S9.
+- **Spend:** reviewers 22 agents, 266 calls, 12.57M of 28, 370, 14M (rounds 1 to 4); lead 199.0M of the 230M figure
+  (ledger_lead.csv, four chat rows); about 31M left for S8 and S9.
 - **For the report (calls so far):** S152.md per-brief entries: items rewritten with a version bump (cyanotic-chd
   q_d78b7bf3e231 v3, newborn-cyanosis q_ace4b217922a v2); pulse oximetry screen taught with "repeat checks" (MSD text
   vs AAP 2020); PPS "under 1 year" (AAFP); the newborn figure carried; Pairs with labels dropped; two jaundice items in
