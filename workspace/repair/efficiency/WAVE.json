@@ -1,9 +1,10 @@
 {
   "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
-  "id": "s152",
-  "open": false,
-  "plan_step": "s152",
+  "id": "s153",
+  "open": true,
+  "plan_step": "s153",
   "roles": [
+    "brief-build",
     "acc-review",
     "read-review",
     "flag-review",
@@ -11,16 +12,16 @@
     "patch-review",
     "patch-review-opus"
   ],
-  "max_agents": 28,
-  "max_calls": 370,
-  "max_tokens": 14000000,
-  "set_by": "Jonathan, s152 launch prompt 2026-10-24",
+  "max_agents": 38,
+  "max_calls": 1270,
+  "max_tokens": 74000000,
+  "set_by": "Jonathan, s153 launch prompt 2026-10-25",
   "previous": {
-    "id": "s151",
-    "note": "s151 shipped b1d9e69 2026-10-24 (Codex S1-S7, Claude S8-S9); reviewers 27/32 agents, 396/440 calls; tokens: Codex unmeasured, S8 0.10M; lead (Claude) 18.2M; no batch open"
+    "id": "s152",
+    "note": "s152 shipped 42347a0 2026-10-24 (Claude lead); reviewers 22/28 agents, 266/370 calls, 12.57M/14M; lead about 207M of 230M (five chats); no batch open"
   },
-  "opened": "2026-10-24 18:40 EDT",
-  "note": "s152 open (Claude lead): cardiovascular B, pediatric; lead raised to 230M by Jonathan at S4 (2026-10-24)",
+  "opened": "2026-10-25 07:55 EDT",
+  "note": "s153 open (Claude lead): GI and hepatology A; builder-agent pilot for S1 to S3. Split: reviewers 28 agents, 370 calls, 14M; builders 10 agents, 900 calls, 60M; lead 120M",
   "batch_budgets": {
     "s138": {
       "agents": 20,
@@ -171,9 +172,25 @@
       "calls": 370,
       "tokens": 14000000,
       "lead_tokens": 230000000
+    },
+    "s153": {
+      "agents": 38,
+      "calls": 1270,
+      "tokens": 74000000,
+      "lead_tokens": 120000000,
+      "reviewers": {
+        "agents": 28,
+        "calls": 370,
+        "tokens": 14000000
+      },
+      "builders": {
+        "agents": 10,
+        "calls": 900,
+        "tokens": 60000000
+      }
     }
   },
-  "max_lead_tokens": 230000000,
+  "max_lead_tokens": 120000000,
   "spent_agents": 0,
   "spent_calls": 0
 }

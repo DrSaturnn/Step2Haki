@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-25 01:30 EDT, by Claude (s152 shipped; lead token levers adopted).
+Last updated: 2026-10-25 08:05 EDT, by Claude (s153 launched; builder pilot next).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,28 +12,22 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **s152 shipped** 2026-10-24 on Jonathan's "ship": 42347a0 (main, pushed by hand; no token here), page sha256
-  02e4ea195996 (approved candidate af78d432c3c5). Eight pediatric heart briefs on the decision spine (ped-murmur,
-  newborn-cyanosis and myocarditis hubs, Presentations 28; cyanotic-chd, kawasaki, arf, del22q11, bs-adolescent-bp).
-  Reviewers 22/28 agents, 266/370 calls, 12.57M/14M; lead about 207M of 230M (five chats). Record repair/s152/S152.md.
-  No batch open; no lock held.
-- **Lead token levers (2026-10-25, DIGEST):** builder agents for S1 to S3 (pilot in s153: tools/spine/build_lanes.py,
-  BUILD_CONTRACT.md, agent type lean-builder, role brief-build), restart at about 225k, tools/spine/batch.py for S8 and
-  S9, mentions sheet before review. Runbook token rules, section 2 "S1 to S3 by builder agents", sections 4 and 6.
+- **s153 open** (Claude lead, 2026-10-25): Phase 2, GI and hepatology A, on wip/s153 in both repos. Briefs liver-preg,
+  masld, cholestasis (hub), bs-wilson, zenker, fap, occult-gi-bleed (hub), bs-impaction. Budget 38 agents, 1270 calls,
+  74M agent tokens (reviewers 28, 370, 14M; builders 10, 900, 60M); lead 120M. Batch file repair/s153/S153.md.
+- **Step:** launch and B0 done; builder lanes ready (local/s153/build_spec.json, repair/migration/gi/<id>/spine); pilot
+  builders liver-preg and cholestasis next. Spend so far: 0 agents.
 - **Owed from s152:** the two newborn-cyanosis jaundice items (q_30529e70c634, q_4ee70a03ddd6) move to neonatal-jaundice
-  when that brief is converted (DIGEST 2026-10-24 s152 ship); deferred LOWs listed in S152.md "S7"; Kawasaki AHA 2024
-  In practice hover unsourced (AHA sites 403); Mac copies of index.html and this file in Documents/Step2Haki (the s152
-  chat's folder request was refused).
-- **Earlier ships today** (s150c to s151): records under repair/sNNN/ and OPEN_WORK.
-- **Patch pipeline and token rules (2026-10-24):** BATCH_RUNBOOK 8b and "Token rules". Owed by Jonathan: turn off
-  Figma, Vercel and the healthcare plugin for this project.
+  when that brief is converted; deferred LOWs in repair/s152/S152.md "S7"; Kawasaki AHA 2024 In practice hover
+  unsourced; Mac copies of index.html and this file in Documents/Step2Haki.
 - **Private files owed (important):** s150cd_private_owed.tar.gz (s150c and s150d brief-folder changes after S7) was
   sent to Jonathan in the s150c chat and never pushed; the next session with push access and the file extracts it into
   the private clone's local-only/, commits on wip/s150c and merges to main.
 - **Carried:** s150c round 4 deferred LOWs (dementia Korsakoff reason d1; eating-disorders "step 2 criterion"
   wording); defense-mechanisms intro clause unmasked; no reverse pointers to dementia or defense-mechanisms from
   delirium, parkinson or cluster-b; MPTP chemical-name LOW; s150b legibility advisories; the four s150b audit proposals;
-  queue.csv open row 59 (prolactin); row 66 QID to link; gate's stale allowlist line K3 dvt:mnemonic (s151).
+  queue.csv open row 59 (prolactin); row 66 QID to link; gate's stale allowlist line K3 dvt:mnemonic (s151). Owed by
+  Jonathan: turn off Figma, Vercel and the healthcare plugin for this project.
 
 ## Next launch prompt (paste into a fresh chat)
 
