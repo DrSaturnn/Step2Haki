@@ -1,5 +1,9 @@
 # step2haki-tools
 
+## Builder agent (0.3.0, s153)
+
+The runbook's S1 to S3 builder pilot (2026-10-25) launches role brief-build as agent type `lean-builder` on Opus (tools/hooks/roles.json). This harness reads agent types only from the account plugin, not from /root/.claude/agents or /home/claude/.claude/agents copied in mid-session (checked s153, 2026-10-25), so 0.3.0 adds agents/lean-builder.md. Source of truth: tools/hooks/agents/lean-builder.md.
+
 One agent, `lean-reviewer`, for the Step2Haki batch runbook's review rounds (s135 efficiency item 1). It has only Read, Write, Grep and Glob, a short system prompt and a 27-turn cap (item 8), so a reviewer no longer starts with every shell, web and connector tool definition (about 83k tokens of fixed context in s133 and s134). The launch gate (tools/hooks/agentgate.py, roles.json "agent") requires the review roles to launch as this type.
 
 Source of truth: tools/hooks/agents/lean-reviewer.md in the Step2Haki repo; this plugin carries the same body.
