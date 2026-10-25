@@ -14,8 +14,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 - **s154 open** (Claude lead, 2026-10-25): Phase 2 GI B, pediatric, on wip/s154 (both repos). Briefs bs-tef (disease),
   infant-stool, rlq-pain, peds-constipation, cyclic-vomiting, feeding-refusal, bs-umbilical (hubs). Budget 32 agents,
-  1000 calls, 60M (reviewers 23, 350, 13M; builders 9, 650, 47M); lead 100M. Step: S1 to S3, builder pilot (bs-tef,
-  infant-stool). Lanes repair/migration/gi/<id>/spine; record repair/s154/S154.md. Spend: 0.
+  1000 calls, 60M (reviewers 23, 350, 13M; builders 9, 650, 47M); lead 100M. Step: S1 to S3; pilot passed (bs-tef,
+  infant-stool BUILT, MECHANICAL PASS); five builders running. Lanes repair/migration/gi/<id>/spine; record repair/s154/S154.md. Spend: builders 2 agents, 157 calls, 0.36M.
 - **s153 shipped** (Claude lead, 2026-10-25): 7b301ef, live version s153, page 7c376718303a. Eight GI and hepatology A
   briefs on the spine; cholestasis and occult-gi-bleed are hubs (Presentations 30). Record repair/s153/S153.md; history
   in OPEN_WORK. Jonathan's "ship" took the report defaults (DIGEST 2026-10-25 s153 ship): S1 to S3 by builder agents

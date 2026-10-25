@@ -267,6 +267,21 @@
   "plagiocephaly",
   "torticollis"
  ],
+ "bs-umbilical": [
+  "abdominal wall defect",
+  "Beckwith",
+  "gastroschisis",
+  "omphalocele",
+  "omphalomesenteric",
+  "silver nitrate",
+  "umbilical cord",
+  "umbilical granuloma",
+  "umbilical hernia",
+  "umbilicus",
+  "urachal",
+  "urachus",
+  "vitelline"
+ ],
  "bs-wilson": [
   "ATP7B",
   "ceruloplasmin",
@@ -376,6 +391,17 @@
   "prostaglandin E1",
   "indomethacin"
  ],
+ "cyclic-vomiting": [
+  "abdominal migraine",
+  "bilious vomiting",
+  "cannabinoid hyperemesis",
+  "CVS",
+  "cyclic vomiting",
+  "dental erosion",
+  "enamel erosion",
+  "factitious disorder imposed on another",
+  "recurrent vomiting"
+ ],
  "defense-mechanisms": [
   "defense mechanism",
   "displacement",
@@ -481,6 +507,24 @@
   "proctocolectomy",
   "STK11",
   "Turcot"
+ ],
+ "feeding-refusal": [
+  "breastfed",
+  "complementary foods",
+  "cow's milk",
+  "eosinophilic esophagitis",
+  "extrusion reflex",
+  "feeding disorder",
+  "fruit juice",
+  "honey",
+  "infant botulism",
+  "iron supplementation",
+  "milk anemia",
+  "peanut",
+  "pincer grasp",
+  "solid foods",
+  "vitamin D supplementation",
+  "whole milk"
  ],
  "gppd": [
   "dyspareunia",
@@ -825,6 +869,19 @@
   "prerenal",
   "rhabdomyolysis"
  ],
+ "peds-constipation": [
+  "anal fissure",
+  "constipation",
+  "disimpaction",
+  "encopresis",
+  "fecal impaction",
+  "functional constipation",
+  "Hirschsprung",
+  "overflow incontinence",
+  "polyethylene glycol",
+  "toilet training",
+  "withholding"
+ ],
  "peds-sleep": [
   "circadian",
   "delayed sleep",
@@ -956,6 +1013,15 @@
   "mitral regurgitation",
   "tricuspid regurgitation",
   "hypertrophic cardiomyopathy"
+ ],
+ "rlq-pain": [
+  "appendicitis",
+  "Campylobacter",
+  "ileocecitis",
+  "mesenteric adenitis",
+  "pseudoappendicitis",
+  "terminal ileitis",
+  "Yersinia"
  ],
  "scaphoid": [
   "Colles",
