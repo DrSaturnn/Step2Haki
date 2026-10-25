@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24 23:20 EDT, by Claude (s152 shipped; post-ship).
+Last updated: 2026-10-25 01:30 EDT, by Claude (s152 shipped; lead token levers adopted).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -17,6 +17,9 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   newborn-cyanosis and myocarditis hubs, Presentations 28; cyanotic-chd, kawasaki, arf, del22q11, bs-adolescent-bp).
   Reviewers 22/28 agents, 266/370 calls, 12.57M/14M; lead about 207M of 230M (five chats). Record repair/s152/S152.md.
   No batch open; no lock held.
+- **Lead token levers (2026-10-25, DIGEST):** builder agents for S1 to S3 (pilot in s153: tools/spine/build_lanes.py,
+  BUILD_CONTRACT.md, agent type lean-builder, role brief-build), restart at about 225k, tools/spine/batch.py for S8 and
+  S9, mentions sheet before review. Runbook token rules, section 2 "S1 to S3 by builder agents", sections 4 and 6.
 - **Owed from s152:** the two newborn-cyanosis jaundice items (q_30529e70c634, q_4ee70a03ddd6) move to neonatal-jaundice
   when that brief is converted (DIGEST 2026-10-24 s152 ship); deferred LOWs listed in S152.md "S7"; Kawasaki AHA 2024
   In practice hover unsourced (AHA sites 403); Mac copies of index.html and this file in Documents/Step2Haki (the s152
@@ -36,9 +39,10 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 The next numbered batch (claude/pending/BATCHES_S151_S160.md, whose numbering runs one behind since s150 was split;
 its "s152" GI and hepatology A is this s153). Budget scaled from s152's measurement (8 briefs: reviewers 22 agents, 266
-calls, 12.6M; lead 207M across five chats):
+calls, 12.6M; lead 211M across five chats; builders and lead figure are Claude's estimates for the pilot, not
+measurements):
 ```
-Step2Haki: launch batch s153 (Phase 2, GI and hepatology A) per claude/BATCH_RUNBOOK.md. Briefs: liver-preg, masld, cholestasis, bs-wilson, zenker, fap, occult-gi-bleed, bs-impaction. Goldens: copd (FM lens), nephrotic-child (peds lens); B0 confirms they fit GI. Budget: 28 agents, 370 calls, 14M reviewer tokens; lead 230M.
+Step2Haki: launch batch s153 (Phase 2, GI and hepatology A) per claude/BATCH_RUNBOOK.md. Briefs: liver-preg, masld, cholestasis, bs-wilson, zenker, fap, occult-gi-bleed, bs-impaction. Goldens: copd (FM lens), nephrotic-child (peds lens); B0 confirms they fit GI. S1 to S3 by builder agents, pilot gate on the first two (runbook section 2). Budget: 38 agents, 1270 calls, 74M agent tokens (reviewers 28, 370, 14M; builders 10, 900, 60M); lead 120M.
 ```
 
 New board questions, any time (intake only; the skill never edits the page):
@@ -136,4 +140,4 @@ The next batch's launch prompt comes from those files unless the s141 closing re
 - Mnemonics only if widely accepted. Pastel colors; horizontal timelines.
 - Vendor text never enters the public repo. Commit as DrSaturnn with the noreply email. Never print the token.
 - Hover-card text and the collapsed systems panel do not count against the word cap (2026-10-13); they are the place for guideline-only detail.
-- Start a fresh chat when the context passes about 350k (Jonathan 2026-10-17; a chat starts at about 122k to 130k). Continuation chats use the short read list in the runbook.
+- Start a fresh chat when the context passes about 225k (Jonathan 2026-10-25, was 350k; a chat starts at about 122k to 130k). Continuation chats use the short read list in the runbook.

@@ -241,6 +241,18 @@ try:
     expect('H1 review role as a look-alike type refused', rlaunch('evil-lean-reviewer', ' 3'), 2)
     expect('H1 review role as lean-reviewer', rlaunch('lean-reviewer', ' 4'), 0)
     expect('H1 review role as the plugin lean-reviewer', rlaunch('step2haki-tools:lean-reviewer', ' 5'), 0)
+    # ---- s152 close (2026-10-25): the brief-build role launches only as lean-builder on opus
+    BP = 'Role: brief-build\nPlan step: R2\nLane: %s\n\nBuild.' % LANE
+    def blaunch(kind, model, tag):
+        d = {'hook_event_name': 'PreToolUse', 'tool_name': 'Agent', 'session_id': 'S',
+             'tool_input': {'description': 'x', 'prompt': BP + tag, 'subagent_type': kind, 'model': model}}
+        return run('agentgate.py', d)
+    expect('H1 build role as general-purpose refused', blaunch('general-purpose', 'opus', ' 1'), 2)
+    expect('H1 build role on sonnet refused', blaunch('lean-builder', 'sonnet', ' 2'), 2)
+    expect('H1 build role as lean-builder on opus', blaunch('lean-builder', 'opus', ' 3'), 0)
+    rj = json.load(open(os.path.join(H, 'roles.json')))['roles']
+    nofile = [r for r, v in rj.items() if v.get('agent') and not os.path.exists(os.path.join(H, 'agents', v['agent'] + '.md'))]
+    expect('roles: every agent type has its file in tools/hooks/agents', (1 if nofile else 0, str(nofile)), 0)
     # ---- s135 efficiency item 2: output estimated from what the agent wrote when the transcript keeps a stub count
     ep = os.path.join(T, 'usage_est.jsonl')
     with open(ep, 'w') as f:

@@ -100,7 +100,16 @@ def rx(terms):
     return [(t, re.compile(r'\b' + re.escape(t), re.I)) for t in terms]
 
 
+def _lock():
+    """one writer at a time (s152 close: builder agents run in parallel and share board_terms.json and the index)"""
+    import fcntl
+    fh = open('/tmp/ax_board_terms.lock', 'w')
+    fcntl.flock(fh, fcntl.LOCK_EX)
+    return fh
+
+
 def build(argv):
+    lk = _lock()  # noqa: F841 (held until the process exits)
     t0 = time.time()
     html = P.read_page(os.path.join(WS, 'index.html'))
     extra = json.load(open(TERMS, encoding='utf-8')) if os.path.exists(TERMS) else {}
@@ -176,6 +185,7 @@ def show(argv):
 
 
 def terms(argv):
+    lk = _lock()  # noqa: F841
     bid, add = argv[0], argv[1:]
     t = json.load(open(TERMS, encoding='utf-8')) if os.path.exists(TERMS) else {
         '_doc': 'Extra board_index search terms per brief id (tools/spine/board_index.py terms).'}

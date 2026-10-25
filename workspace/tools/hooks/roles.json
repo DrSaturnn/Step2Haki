@@ -58,6 +58,11 @@
    "model": "opus",
    "budget": 25,
    "agent": "lean-reviewer"
+  },
+  "brief-build": {
+   "model": "opus",
+   "budget": 90,
+   "agent": "lean-builder"
   }
  },
  "lane_roots": [

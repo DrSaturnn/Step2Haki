@@ -49,6 +49,12 @@ additions, no need to recheck/reprove the whole brief just the changes"):
 - Find, don't search: `tools/spine/folder_of.py <brief>` gives a brief's spine folder; `tools/spine/pointer_check.py`
   checks drawers and Pairs with in a running page; shots_all and legib_audit carry a 240 s timeout. Write no scratch
   wrappers for these.
+- Lead context and builders (Jonathan 2026-10-25: "lets follow your recommendations", on the s152 cost review; the
+  lead was 94% of s152, 211M of 224M, and a call costs about its whole context):
+  - restart at about 225k context (was 350k), and at brief boundaries in long build steps;
+  - S1 to S3 run in builder agents, one per brief (section 2, "S1 to S3 by builder agents"), first as a pilot;
+  - S8 and S9 run through `tools/spine/batch.py` (s8, ship, post); the lead writes only the report and the docs;
+  - every built or changed brief gets a mentions sheet read (`tools/spine/mentions.py`) before review (S3, section 4).
 
 ## 1. Launch
 
@@ -71,6 +77,26 @@ The lead's first acts:
 Then run section 2 to the end without asking.
 
 ## 2. Steps (each ends with a rewrite of the handoff State)
+
+- **S1 to S3 by builder agents** (2026-10-25; a pilot from s153 until Jonathan adopts or drops it at a batch report):
+  - The lead writes local/<batch>/build_spec.json (batch, plan_step, budget 90, and per brief its id, folder, entry
+    type, structure golden and a worked-example folder built on author_lib; never under repair/<batch>/, which build.py
+    reads) and runs `python3 tools/spine/build_lanes.py local/<batch>/build_spec.json`: per brief the folder, the live
+    lines (local/<batch>/live), board_index.txt, cards.md, amend_rows.md, INSTRUCTIONS.md (from
+    tools/spine/BUILD_CONTRACT.md, which carries S1 to S3 below for one brief) and the launch prompt.
+  - WAVE.json lists the brief-build role and its caps cover the builders (90 calls each) besides the reviewers.
+    Builders run as agent type lean-builder on Opus (tools/hooks/roles.json brief-build).
+  - Pilot gate: launch two builders first (a disease brief and a hub when the batch has one), in one message,
+    foreground. Each writes BUILD_NOTES.md and BUILD_RECEIPT.md in its folder. The lead reads the receipts, runs
+    `verify.py <folder> --mech` itself, and reads the mentions sheet groups the receipt says it fixed. Both MECHANICAL
+    PASS with no unsettled HIGH: launch the rest in one message, foreground, at most six at once. A failed pilot: the
+    lead builds the rest as before and reports why.
+  - A builder that stops INCOMPLETE is relaunched on the same lane with the same prompt (its notes carry its work).
+  - The lead then copies each folder's 10_*_spine.json into repair/<batch>/, adds the Presentations json for hubs,
+    answers or forwards each receipt's "For the lead" items (section 6 decides which reach Jonathan), records every
+    receipt's calls in the batch file, and runs S3's page checks.
+  - For the report: lead and builder tokens for S1 to S3 per brief against s152 (lead 127.3M for eight briefs), round 1
+    MEDs per brief against s152 (about 45 for eight), and how many fixes the lead had to make after the builders.
 
 - **S1. Board evidence first.** For each brief, before any build or fix:
   - Look the brief up in the board-evidence index first: `python3 tools/spine/board_index.py show <brief>` (question items, page NBME items, coverage rows, AnKing cards, Step 2 first). Add terms with `board_index.py terms <brief> ...` and rebuild (`build`, seconds) when the topic needs them; search the sources by hand only for what the index does not reach (s135 item 5).
@@ -105,7 +131,9 @@ Then run section 2 to the end without asking.
     the page script and styles, so a brief gets them by being on the page; nothing per brief.
 - **S3. Mechanical checks.**
   - verify --mech (G-MECH), which includes the card check;
-  - `tools/spine/squeeze_check.py <page> <changed briefs>` (0 squeezed) and, when pointers or titles changed,
+  - `tools/spine/mentions.py <folder>` and a read of mentions.md: every line naming the same diagnosis or finding agrees
+    on site, side, timing, age, maneuver and next step, body and bank alike (s152: most round-1 MEDs were such drift);
+  - `tools/spine/squeeze_check.py <page> <changed briefs>` (0 squeezed; the briefs as one comma list) and, when pointers or titles changed,
     `tools/spine/pointer_check.py <page> <briefs>`; legib_audit only in a layout batch (token rules).
   - Then restart, except in a patch (section 8b) (Jonathan 2026-10-17, s146 cost review): rewrite the handoff State with S3 done and send only "S3 done. Paste into a fresh chat: Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md." The review and ship steps run in a fresh chat, which reads the batch file, each brief's boards.md, cuts.json and claim map before judging findings; so every build call made in S1 to S3 is written down there, not left in the chat.
 - **S4. Review round 1.**
@@ -130,12 +158,16 @@ Then run section 2 to the end without asking.
   - A reviewer with only LOW findings returns PASS-IF (conditional PASS) with exact replacements; the lead applies the approved ones (`tools/spine/reps.py <brief dir> <receipt> --only N,...`), and verify keeps the receipts current without another round. A replacement that only adds a hedge word found in the quote its line cites counts as wording-only for the other parts (s148 fix 8, Jonathan 2026-10-18).
   - Loop S5 to S7 until READY or the budget is spent.
   - Restart point, except in a patch (section 8b) (s148 fix 1, Jonathan 2026-10-18): when the last follow-up round leaves every brief READY (or the budget stops it), rewrite the handoff State ("S7 done: all READY") and send only "S7 done. Paste into a fresh chat:" with the restart line alone in its own code block. S8 and S9 run in the fresh chat (approval records live in the presenting container).
-- **S8. Final report** (section 5):
+- **S8. Final report** (section 5). `python3 tools/spine/batch.py s8 <batch> <brief ids>` runs the first two bullets and
+  writes local/<batch>/s8_facts.md (counts, titles, words, spend) for the report (2026-10-25):
   - `python3 tools/spine/verify_all.py <brief dirs>` (three at a time; all READY);
   - register the batch with `approval.py present sNN` (no screenshots: it binds the batch files, the changelog entry
     and the built page; a layout batch may still add sheets);
   - send the report and wait for "ship".
-- **S9. Ship and post-ship**, per the handoff:
+- **S9. Ship and post-ship**, per the handoff. `batch.py ship <batch> "<message>"` (ship.sh, then the push to main by
+  hand when there is no token); the lead writes OPEN_WORK, the batch file's S9, the DIGEST line and the handoff State;
+  then `batch.py post <batch> "<commit message>" <brief ids>` closes the wave, records the lead row, syncs the private
+  repo and fast-forwards both mains (2026-10-25). The steps:
   - ship.sh with AX_SESSION;
   - check version.json in Chrome; Jonathan checks the live site;
   - OPEN_WORK and the log commit;
@@ -195,6 +227,8 @@ Then run section 2 to the end without asking.
 13. Every cut and every removed number was searched in the card index (key terms, high-yield lines) before it was made (Jonathan 2026-10-17); the search terms are in its cuts.json entry.
 14. Every card in cards.md has a disposition and `card_dispositions.py check` passes; each "covered" names the claims that teach it, and no carded fact the old brief or the bank holds was dropped without one (Jonathan 2026-10-17).
 15. Every "warn lint" line from verify (tools/spine/lint.py: next-step cells with no action, missing other names, a hedge dropped from the cited quote, one decision with two thresholds, a number no quote holds) is fixed or answered in the batch file before the reviewers run (s148 fix 6). The lint is advisory: an answered warning may stand.
+16. The mentions sheet (`tools/spine/mentions.py <folder>`) of every changed brief is read and its groups agree
+    (2026-10-25).
 
 ## 5. The final report: one message, the first one to Jonathan since launch (apart from section 6)
 
@@ -230,7 +264,7 @@ If Jonathan names changes:
 - A required hook test fails and agent steps cannot run.
 - The budget runs out before READY. Stop at the cap; report the spend, what remains and the amount needed. Never exceed it.
 - Anything irreversible: deleting Mac files, deleting a branch, force-pushing, rewriting history.
-- The context is full (past about 350k; Jonathan 2026-10-17, was 250k). Rewrite the handoff State and send only: "Context full. Paste into a fresh chat: Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md."
+- The context is full (past about 225k; Jonathan 2026-10-25, was 350k). Rewrite the handoff State and send only: "Context full. Paste into a fresh chat: Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md."
 
 Each such message asks one question, multiple choice where possible, with a recommendation.
 
