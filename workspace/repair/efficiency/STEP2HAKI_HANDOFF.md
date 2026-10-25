@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-25 11:20 EDT, by Claude (s153 S4 round 1 done; next chat starts S5).
+Last updated: 2026-10-25 12:40 EDT, by Claude (s153 S5: four of eight briefs done; next chat continues S5).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -15,24 +15,32 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **s153 open** (Claude lead, 2026-10-25): Phase 2, GI and hepatology A, on wip/s153 in both repos. Briefs liver-preg,
   masld, cholestasis (hub), bs-wilson, zenker, fap, occult-gi-bleed (hub), bs-impaction. Budget 38 agents, 1270 calls,
   74M agent tokens (reviewers 28, 370, 14M; builders 10, 900, 60M); lead 120M. Batch file repair/s153/S153.md.
-- **Step:** S4 round 1 done (2026-10-25 11:20). 7 reviewer agents, 120 calls, 6.69M; wave to date 15 agents, 600
-  calls, 59.41M of 74M agent tokens (14.6M left for later rounds); lead 33.2M of 120M (two rows). Every brief needs S5
-  (2 HIGH, 48 MED): the tally, the cross-brief patterns and the shared findings are in repair/s153/S153.md "S4 round 1".
-  Receipts: repair/efficiency/lanes/s153/r1/<lane>/<brief>/receipt.md (pushed to the private repo, local-only/, with the
-  packets repair/migration/spine/packets/s153 and local/s153/index.html).
-- **Next chat: S5 adjudicate and fix**, brief by brief. Session start as below with both clones on wip/s153 (private:
-  `--branch wip/s153`), restore, `patch.py setup s153`. Read only the State, repair/s153/S153.md from "S4 round 1", and
-  per brief its three receipts and BUILD_RECEIPT.md (Grep, not whole). Per brief: every HIGH and MED with evidence and
-  every LOW sorted, written to the folder's adj_s153_r1.md; fixes through author.py (tail lines through tail_fix), then
-  build, verify --mech, mentions.md. The two HIGHs need sources opened that day (occult-gi-bleed: resuscitate, then
-  upper endoscopy for hematemesis or melena; cholestasis: serum alpha-1 antitrypsin level first). Restart at about 225k
-  at a brief boundary, recording progress here. Then S6 and S7 (lanes.py round 2, --since round 1).
+- **Step:** S5 in progress (2026-10-25, chat 5): cholestasis, occult-gi-bleed, liver-preg, masld adjudicated and fixed
+  (both HIGHs fixed with sources read today; all four MECHANICAL PASS; adj_s153_r1.md and fix3.py in each folder;
+  updated 10_*_spine.json copied into repair/s153/). Left: bs-wilson, zenker, fap, bs-impaction. Spend: wave reviewers
+  15 agents, 600 calls, 59.41M of 74M (14.6M left for later rounds); lead 52.0M of 120M (three rows; this chat 18.8M).
+  Progress table and calls in repair/s153/S153.md "S5 adjudicate and fix".
+- **Next chat: S5 continued**, brief by brief: bs-wilson, zenker, fap, bs-impaction. Session start as below with both
+  clones on wip/s153 (private: `--branch wip/s153`), restore, `patch.py setup s153`. Read only the State,
+  repair/s153/S153.md from "S4 round 1", one done folder's adj_s153_r1.md and fix3.py as the pattern (cholestasis), and
+  per brief its three receipts (repair/efficiency/lanes/s153/r1/<lane>/<brief>/receipt.md; lanes: acc-A fap, zenker,
+  masld; acc-B liver-preg, cholestasis, bs-impaction; acc-C bs-wilson, occult-gi-bleed; read-B and flags-B fap, zenker,
+  bs-wilson, bs-impaction). Per brief: a fix3.py of exact replacements on author.py (tail lines as TAIL [old, new]
+  pairs added to tail_fix; item stem changes bump data-item-version), build_brief --verify, mentions.md, adj file;
+  copy the 10_*_spine.json into repair/s153/; `patch.py sync s153 "<msg>" gi/<brief>/spine ...` (folder paths relative
+  to repair/migration). Shared fixes from round 1: zenker step 6/7 pouch procedure conditional; bs-impaction
+  colonoscopy trigger; "The bait is" to "The bait:" (zenker, bs-impaction); fap pause point needs a bait. Then S6
+  (section 4 on every changed line) and S7 (lanes.py round 2, --since round 1). Restart at about 225k at a brief
+  boundary.
   Items for the report (none blocks review): liver-preg five conditions in one disease brief (split or hub, Jonathan);
   fap two-disease merge kept; bs-impaction key change q_5663 v2 (laxatives before PAMORA); unverified marks on fap
-  triggers (bleeding, polyp over 1 cm) and zenker blind-instrument perforation; hub word counts cholestasis 836 (cap
-  700), occult-gi-bleed 692; bank stems in arrow format on cholestasis and liver-preg; drop gate allowlist line K3
-  liver-preg:mnemonic at ship; tool notes (build_brief needs AX_BATCH; verify sh() hides a killed render.js); carried
-  tail blocks are not in claim_map (round 1 pattern 1).
+  triggers (bleeding, polyp over 1 cm) and zenker blind-instrument perforation; hub word counts cholestasis 855 (cap
+  700), occult-gi-bleed 738; occult-gi-bleed title (adult branch) and a treatment-by-cause table (Jonathan); masld
+  gallstones-in-pregnancy Pearls clause kept on its card, candidate move to liver-preg; hub step 3 columns kept
+  beside the tree (cholestasis read 4); bank stems in arrow format on cholestasis and liver-preg; drop gate allowlist
+  line K3 liver-preg:mnemonic at ship; tool notes (build_brief needs AX_BATCH; verify sh() hides a killed render.js;
+  patch.py sync takes folders relative to repair/migration); carried tail blocks are not in claim_map (round 1
+  pattern 1).
 - **Owed from s152:** the two newborn-cyanosis jaundice items (q_30529e70c634, q_4ee70a03ddd6) move to neonatal-jaundice
   when that brief is converted; deferred LOWs in repair/s152/S152.md "S7"; Kawasaki AHA 2024 In practice hover
   unsourced; Mac copies of index.html and this file in Documents/Step2Haki.
