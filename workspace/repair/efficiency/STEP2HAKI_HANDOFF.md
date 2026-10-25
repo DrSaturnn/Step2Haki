@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-25 14:40 EDT, by Claude (s153 S7 round 2 done; next chat runs S5 round 2).
+Last updated: 2026-10-25 13:50 EDT, by Claude (s153 S7 done: all eight READY; next chat runs S8 and S9).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -15,31 +15,28 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **s153 open** (Claude lead, 2026-10-25): Phase 2, GI and hepatology A, on wip/s153 in both repos. Briefs liver-preg,
   masld, cholestasis (hub), bs-wilson, zenker, fap, occult-gi-bleed (hub), bs-impaction. Budget 38 agents, 1270 calls,
   74M agent tokens (reviewers 28, 370, 14M; builders 10, 900, 60M); lead 120M. Batch file repair/s153/S153.md.
-- **Step:** S7 round 2 done, S5 round 2 next (2026-10-25, chat 6 ended at context). Round 2: 7 agents, 80 calls,
-  3.88M; READY candidates none yet; acc-C PASS bs-wilson and occult-gi-bleed; FAIL lanes: acc fap, cholestasis; read
-  liver-preg, occult-gi-bleed, zenker, fap, bs-impaction; the rest PASS-IF or PASS. Spend: wave 22 agents, 680 calls,
-  63.29M of 74M (10.7M left for round 3); lead 73.2M of 120M (four rows; chat 6 not yet recorded separately).
-- **Next chat: S5 round 2**, all eight briefs, from the plan table in repair/s153/S153.md "S5 continued" (last table:
-  one line per brief with every fix and its source). Session start as below with both clones on wip/s153 (private:
-  `--branch wip/s153`), restore, `patch.py setup s153`. Read only the State and repair/s153/S153.md from "S5
-  continued"; open a round 2 receipt (repair/efficiency/lanes/s153/r2/<lane>/<brief>/receipt.md) only to copy an exact
-  replacement the table names. Per brief: fix4.py of exact replacements on author.py (cholestasis adds fact w64),
-  `AX_BATCH=s153 python3 tools/spine/build_brief.py <folder> --verify`, re-point any disposition phrase the build
-  reports unresolved (disp.py), mentions.md, adj_s153_r2.md; copy the 10_*_spine.json into repair/s153/; then
-  `patch.py sync s153 "<msg>" gi/<brief>/spine ...`. Then batch page, gate, squeeze, pointer_check, S6, and round 3
-  (lanes_r3.json from lanes_r2.json, packets s153r3 --since the r2 packet's acc/brief_text.txt; only the parts not PASS,
-  plus parts whose lines changed; budget from 10.7M left), usage_ledger, restart at "S7 done".
-  Items for the report (none blocks review): liver-preg five conditions in one disease brief (split or hub, Jonathan);
-  fap two-disease merge kept; bs-impaction key change q_5663 v2 (laxatives before PAMORA); unverified marks on fap
-  triggers (bleeding, polyp over 1 cm) and zenker blind-instrument perforation; hub word counts cholestasis 855 (cap
-  700), occult-gi-bleed 738; occult-gi-bleed title (adult branch) and a treatment-by-cause table (Jonathan); masld
-  gallstones-in-pregnancy Pearls clause kept on its card, candidate move to liver-preg; hub step 3 columns kept
-  beside the tree (cholestasis read 4); bank stems in arrow format on cholestasis and liver-preg; drop gate allowlist
-  line K3 liver-preg:mnemonic at ship; tool notes (build_brief needs AX_BATCH; verify sh() hides a killed render.js;
-  patch.py sync takes folders relative to repair/migration); carried tail blocks are not in claim_map (round 1
-  pattern 1).
-  Chat 6 calls: trap pill labels kept site-wide; zenker pouch procedure one teaching (myotomy plus, size picks it);
-  fap Next step zone added; bs-impaction trap line filled; volvulus Step 2 card has no note id.
+- **Step:** S7 done: all READY (2026-10-25, chat 7). S5 round 2 fixed all eight (fix4.py, adj_s153_r2.md); round 3
+  (7 agents, 72 calls, 2.32M) PASS on every part, two PASS-IFs settled (bs-impaction's 3 applied and replayed; fap's
+  "should prompt" rejected). Spend: wave reviewers 29 agents, 752 calls, 65.61M of 74M; lead 93.5M of 120M (five rows).
+  Batch file repair/s153/S153.md "S5 round 2, S6, S7 round 3" holds every call.
+- **Next chat: S8 and S9** (one chat). Session start with both clones on wip/s153 (private `--branch wip/s153`),
+  restore, `patch.py setup s153`. Read only the State, S153.md's S5 sections and each r3 receipt's verdict line
+  (repair/migration/spine/reviews/<brief>_<part>_r3.md, already filed). Then `python3 tools/spine/batch.py s8 s153
+  liver-preg masld cholestasis occult-gi-bleed bs-wilson zenker fap bs-impaction`, the report (runbook section 5),
+  wait for "ship", then `batch.py ship` and `batch.py post`; drop gate allowlist lines K3 liver-preg:mnemonic and
+  K3 dvt:mnemonic at ship.
+  Items for the report (none blocks): liver-preg five conditions in one disease brief (split or hub, Jonathan);
+  fap two-disease merge kept; bs-impaction key change q_5663 v2 (laxatives before PAMORA); zenker q_cbb8 key now
+  "Cricopharyngeal myotomy with a pouch procedure" (v2); cholestasis alpha-1 cell names level and genotype or
+  phenotype without ranking (MSD orders them both ways); unverified marks on fap triggers (bleeding, polyp over 1 cm)
+  and zenker blind-instrument perforation; hub word counts cholestasis 858 (cap 700), occult-gi-bleed 742;
+  occult-gi-bleed title (adult branch) and a treatment-by-cause table (Jonathan); masld gallstones-in-pregnancy Pearls
+  clause kept on its card, candidate move to liver-preg; hub step 3 columns kept beside the tree (cholestasis read 4);
+  bank stems in arrow format on cholestasis and liver-preg; tool notes (build_brief needs AX_BATCH; verify sh() hides
+  a killed render.js; patch.py sync takes folders relative to repair/migration; reps.py does not reach author.py
+  builds, so PASS-IF replacements are applied in fixN.py and must not cross markup to replay); carried tail blocks are
+  not in claim_map (round 1 pattern 1). Chat 6 calls: trap pill labels kept site-wide; zenker pouch procedure one
+  teaching; fap Next step zone added; bs-impaction trap line filled; volvulus Step 2 card has no note id.
 - **Owed from s152:** the two newborn-cyanosis jaundice items (q_30529e70c634, q_4ee70a03ddd6) move to neonatal-jaundice
   when that brief is converted; deferred LOWs in repair/s152/S152.md "S7"; Kawasaki AHA 2024 In practice hover
   unsourced; Mac copies of index.html and this file in Documents/Step2Haki.

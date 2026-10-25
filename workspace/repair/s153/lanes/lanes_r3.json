@@ -1,0 +1,164 @@
+{
+ "batch": "s153",
+ "plan_step": "s153",
+ "round": 3,
+ "context": "batch s153 (Phase 2, GI and hepatology A) converts eight live briefs to decision spine v2: six disease briefs (liver-preg, masld, bs-wilson, zenker, fap, bs-impaction) and two presentation hubs (cholestasis, occult-gi-bleed); this is follow-up review round 3, on the lines changed since round 2 (changes.md), with each brief's round 2 receipt and the lead's adjudication",
+ "out": "repair/efficiency/lanes/s153/r3",
+ "packets": "repair/migration/spine/packets/s153r3",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "fap",
+    "zenker",
+    "masld"
+   ]
+  },
+  {
+   "part": "acc",
+   "group": "B",
+   "briefs": [
+    "liver-preg",
+    "cholestasis",
+    "bs-impaction"
+   ]
+  },
+  {
+   "part": "acc",
+   "group": "C",
+   "briefs": [
+    "bs-wilson",
+    "occult-gi-bleed"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "cholestasis",
+    "occult-gi-bleed",
+    "liver-preg",
+    "masld"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "B",
+   "briefs": [
+    "fap",
+    "zenker",
+    "bs-wilson",
+    "bs-impaction"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "cholestasis",
+    "occult-gi-bleed",
+    "liver-preg",
+    "masld"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "B",
+   "briefs": [
+    "fap",
+    "zenker",
+    "bs-wilson",
+    "bs-impaction"
+   ]
+  }
+ ],
+ "types": {
+  "liver-preg": "disease brief \"Liver Disease in Pregnancy\" (five conditions: physiologic alkaline phosphatase, hyperemesis gravidarum, intrahepatic cholestasis, HELLP, acute fatty liver), FM lens, steps 1 to 8; converted from the live brief; round 3 reviews the changed lines",
+  "masld": "disease brief \"Fatty Liver Disease\" (MASLD, formerly NAFLD), FM lens, steps 1 to 8; converted from the live brief; round 3 reviews the changed lines",
+  "cholestasis": "presentation hub \"Abnormal Liver Tests\" (brief id cholestasis), FM lens, steps 1 to 4 then hand off by drawer, treatment by cause inside Workup; converted from the live brief; round 3 reviews the changed lines",
+  "occult-gi-bleed": "presentation hub \"GI Bleeding in a Child\" (brief id occult-gi-bleed), peds lens, steps 1 to 4 then hand off by drawer, treatment by cause inside Workup; converted from the live brief; round 3 reviews the changed lines",
+  "bs-wilson": "disease brief (Wilson disease), peds lens, steps 1 to 8; a Part II brief that keeps its source vignette above the stepper (as bs-puv); converted from the live brief; round 3 reviews the changed lines",
+  "zenker": "disease brief (Zenker diverticulum), FM lens, steps 1 to 8; converted from the live brief; round 3 reviews the changed lines",
+  "fap": "disease-family brief \"Hereditary Polyposis Syndromes\" (familial adenomatous polyposis and Peutz-Jeghers), peds lens, steps 1 to 8; converted from the live brief; round 3 reviews the changed lines",
+  "bs-impaction": "disease brief (constipation and fecal impaction in an adult), FM lens, steps 1 to 8; a Part II brief that keeps its source vignette above the stepper (as bs-puv); converted from the live brief; round 3 reviews the changed lines"
+ },
+ "notes": {
+  "acc": [
+   "Where a board source (AnKing card, UWorld, NBME) and a guideline differ, the brief teaches the board answer and puts the guideline in an \"In practice:\" hover (runbook section 3): the hover is intended, not a finding.",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length).",
+   "Hubs (cholestasis, occult-gi-bleed) stop after Workup and hand off by drawer; treatment by cause sits inside Workup (s148 hub rule). Steps 5 to 8 absent in a hub is not a finding.",
+   "L facts (the old brief's own lines) are a valid source for carried content.",
+   "Lines carried with the unverified mark because they are board-tested and no source opened today states them (judge their accuracy for Step 2, not the marking choice): fap any-age colectomy triggers \"bleeding\" and \"a polyp larger than 1 cm\" (live L06, L25; bank q_a07d, q_da6e, q_a6d9); zenker \"a blind scope or nasogastric tube can perforate the pouch\" (live L05, L21; bank q_899c, q_0761; MSD Esophageal Diverticula is silent).",
+   "Lead calls (judge accuracy, not the choice): liver-preg teaches intrahepatic cholestasis delivery at 37 weeks (AnKing) with 36 weeks at bile acids 100 micromol/L or more in In practice (MSD, ACOG/SMFM), and writes MSD's platelets under 100 x 10^9/L as 100,000 per microliter; masld teaches the diagnosis as one of exclusion (board) with the 2023 positive criteria and pioglitazone, vitamin E and metformin in In practice hovers; cholestasis teaches PSC as men, young to middle-aged, with inflammatory bowel disease (AnKing) and PBC second line as \"a second agent if the response is poor\"; fap teaches prophylactic proctocolectomy in the teens to early 20s unless a trigger is met (AnKing) and post-colectomy upper endoscopy at periodic intervals (MSD) with the ACG ages in a hover; bs-impaction ischemic colitis row rests on live L12.",
+   "Item rewritten with a version bump: bs-impaction q_56636eea25ad v2, key changed from \"Disimpaction + methylnaltrexone or naloxegol\" to \"Disimpaction, then a scheduled stimulant or osmotic laxative\" (AnKing high-yield line: first-line therapy is a scheduled osmotic or stimulant laxative; MSD keeps PAMORAs for constipation that does not resolve with other measures; the stem names no failed laxative). Judge it as an item.",
+   "Lint answered (not findings unless the claim no longer matches its quote): liver-preg hedges S012, S015, S023, S026, S027, S044, S058, S071, S123 (cuts.json records the restated lines) and numbers S042, S052, S083, S132 (100,000 per microliter); masld S122 (\"type 2 diabetes\" is a name); cholestasis S022 (the card's \"often\" qualifies \"asymptomatic\", not the hilar nodes).",
+   "Not to report (Jonathan's calls, in the report): liver-preg holds five conditions in one disease brief (split or hub later); fap keeps the FAP and Peutz-Jeghers merge.",
+   "Audit cards_disposition.json against cards.md: every covered entry must name claim ids that teach the card.",
+   "Round 2 lead calls (judge accuracy, not the choice): trap pill labels (Sequencing trap, Salient decoy, Class-vs-member, Unchecked attribute) are the site trap pattern and stay; carried tail blocks (Pearls, Distractors, Exceptions, Management, Pairs with, Transferable rule) are live text fixed through tail_fix and are not in claim_map, so check them against the body and the adjudication's cited sources.",
+   "zenker now teaches myotomy plus a pouch procedure for every symptomatic pouch, the defect size choosing the procedure (board answer, card 1682272001684); fap teaches Turcot as medulloblastoma with FAP or glioma with Lynch (c11 c12).",
+   "Round 3 lead calls (judge accuracy, not the choice): cholestasis alpha-1 cell names the serum level with genotype or phenotype testing without ranking which confirms, because the cited MSD page orders them both ways in different sections (adj_s153_r2.md); bs-wilson step 7 rung 5 now takes acute (fulminant) liver failure or severe liver failure despite drugs to transplant (m28), and the cirrhosis row points there; zenker q_cbb8 key is \"Cricopharyngeal myotomy with a pouch procedure\" (stays v2, bumped in this unshipped batch).",
+   "Lint answered in round 3: bs-wilson S107 and S122 (indication lines from m28 without its \"may\", which qualifies the outcome); fap S029 (\"rectal bleeding, visible or occult\": m07's \"typically occult\" is frequency, not the trigger)."
+  ],
+  "read": [
+   "The 5a workup zone names (First step, Targeted tests, Next step, Diagnostic test, Skip), the caption \"Diagnostic workup\", the caption \"Look-alikes, most tempting first\" and the pause point's \"The bait:\" label are site conventions.",
+   "Not to report: brief length or word count (2026-10-19 layers rule).",
+   "drawer_targets.txt lists in-page anchors (<prefix>-s1 to -s8, <prefix>-bank) as MISSING: those are section anchors, not broken brief links.",
+   "Lead calls (do not report the choice; judge wording): bs-wilson and bs-impaction keep their source vignette verbatim above the stepper (Part II brief rule, as bs-puv); bank items carried from the live briefs whose stems are arrow lines (cholestasis, liver-preg) keep the live format; zenker's tail block is labeled \"The decision point\" (an existing page label); a drawer inside a differential Diagnosis cell (bs-wilson) and a systems panel per condition (liver-preg) are existing page patterns.",
+   "Not to report (Jonathan's calls, in the report): liver-preg holds five conditions in one disease brief; fap keeps the FAP and Peutz-Jeghers merge.",
+   "The unverified mark on fap's bleeding and polyp-over-1-cm triggers and on zenker's blind-instrument perforation line is intended.",
+   "Trap pill labels are the site trap pattern (not author shorthand). Full-sentence cells ending in a period are not a finding.",
+   "A 5a result that points to another zone (\"(Diagnostic test)\", \"(Next step)\") is the lead's one-owner fix for a decision stated in two zones (round 1)."
+  ],
+  "flags": [
+   "line_sources.txt cuts each quote at 600 characters (a known packet limit); facts.json in the same folder holds every quote whole. Before reporting that a quote does not support a line, Grep facts.json for the fact id.",
+   "Word counts are not judged (2026-10-19 layers rule).",
+   "Lint answered (report only if the claim no longer matches its quote): liver-preg hedges S012, S015, S023, S026, S027, S044, S058, S071, S123 and numbers S042, S052, S083, S132; masld S122; cholestasis S022. cuts.json in each folder records restated live lines whose hedge words left with them.",
+   "Lines that carry the unverified mark (fap bleeding and polyp-over-1-cm triggers; zenker blind-instrument perforation) are board-tested with no source opened today, by design; judge only whether the mark is present wherever the claim is stated.",
+   "bs-impaction S091 (overflow diarrhea criterion without \"may\") is an answered lint warning: the row defines overflow diarrhea.",
+   "Lint answered in round 3 (report only if the claim no longer matches its quote): bs-wilson S107, S122; fap S029; cholestasis Dubin-Johnson next-step lint (\"No further testing\" is the decision; step 4 owns reassurance)."
+  ]
+ },
+ "prior": {
+  "acc": {
+   "fap": "repair/efficiency/lanes/s153/r2/acc-A/fap/receipt.md",
+   "zenker": "repair/efficiency/lanes/s153/r2/acc-A/zenker/receipt.md",
+   "masld": "repair/efficiency/lanes/s153/r2/acc-A/masld/receipt.md",
+   "liver-preg": "repair/efficiency/lanes/s153/r2/acc-B/liver-preg/receipt.md",
+   "cholestasis": "repair/efficiency/lanes/s153/r2/acc-B/cholestasis/receipt.md",
+   "bs-impaction": "repair/efficiency/lanes/s153/r2/acc-B/bs-impaction/receipt.md",
+   "bs-wilson": "repair/efficiency/lanes/s153/r2/acc-C/bs-wilson/receipt.md",
+   "occult-gi-bleed": "repair/efficiency/lanes/s153/r2/acc-C/occult-gi-bleed/receipt.md"
+  },
+  "read": {
+   "cholestasis": "repair/efficiency/lanes/s153/r2/read-A/cholestasis/receipt.md",
+   "occult-gi-bleed": "repair/efficiency/lanes/s153/r2/read-A/occult-gi-bleed/receipt.md",
+   "liver-preg": "repair/efficiency/lanes/s153/r2/read-A/liver-preg/receipt.md",
+   "masld": "repair/efficiency/lanes/s153/r2/read-A/masld/receipt.md",
+   "fap": "repair/efficiency/lanes/s153/r2/read-B/fap/receipt.md",
+   "zenker": "repair/efficiency/lanes/s153/r2/read-B/zenker/receipt.md",
+   "bs-wilson": "repair/efficiency/lanes/s153/r2/read-B/bs-wilson/receipt.md",
+   "bs-impaction": "repair/efficiency/lanes/s153/r2/read-B/bs-impaction/receipt.md"
+  },
+  "flags": {
+   "cholestasis": "repair/efficiency/lanes/s153/r2/flags-A/cholestasis/receipt.md",
+   "occult-gi-bleed": "repair/efficiency/lanes/s153/r2/flags-A/occult-gi-bleed/receipt.md",
+   "liver-preg": "repair/efficiency/lanes/s153/r2/flags-A/liver-preg/receipt.md",
+   "masld": "repair/efficiency/lanes/s153/r2/flags-A/masld/receipt.md",
+   "fap": "repair/efficiency/lanes/s153/r2/flags-B/fap/receipt.md",
+   "zenker": "repair/efficiency/lanes/s153/r2/flags-B/zenker/receipt.md",
+   "bs-wilson": "repair/efficiency/lanes/s153/r2/flags-B/bs-wilson/receipt.md",
+   "bs-impaction": "repair/efficiency/lanes/s153/r2/flags-B/bs-impaction/receipt.md"
+  }
+ },
+ "adjudication": {
+  "liver-preg": "repair/migration/gi/liver-preg/spine/adj_s153_r2.md",
+  "masld": "repair/migration/gi/masld/spine/adj_s153_r2.md",
+  "cholestasis": "repair/migration/gi/cholestasis/spine/adj_s153_r2.md",
+  "occult-gi-bleed": "repair/migration/gi/occult-gi-bleed/spine/adj_s153_r2.md",
+  "bs-wilson": "repair/migration/gi/bs-wilson/spine/adj_s153_r2.md",
+  "zenker": "repair/migration/gi/zenker/spine/adj_s153_r2.md",
+  "fap": "repair/migration/gi/fap/spine/adj_s153_r2.md",
+  "bs-impaction": "repair/migration/gi/bs-impaction/spine/adj_s153_r2.md"
+ }
+}
