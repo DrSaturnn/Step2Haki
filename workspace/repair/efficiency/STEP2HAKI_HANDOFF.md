@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24, by Claude (s152 S3 done).
+Last updated: 2026-10-24 23:20 EDT, by Claude (s152 shipped; post-ship).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,30 +12,33 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **s152 open** (Claude lead), launched 2026-10-24 18:40 EDT on wip/s152 in both repos. Briefs: ped-murmur,
-  cyanotic-chd, newborn-cyanosis, kawasaki, arf, myocarditis, del22q11, bs-adolescent-bp. Budget 28 agents, 370
-  calls, 14M reviewer tokens; lead 230M (raised from 160M at S4; WAVE.json s152, open). Record repair/s152/S152.md.
-- **Step: S8 done: presented** (2026-10-24, chat 5). verify_all 8 of 8 READY; batch page checks pass (S152.md "S8");
-  changelog 152; `approval.py present s152` (page af78d432c3c5). The approval record lives in chat 5's container: "ship"
-  must go to that chat. If that chat is lost, a fresh chat re-runs S8 (present again) before S9.
-- **How the builds run:** repair/migration/peds/s152build.py <brief> (author.py -> facts_from_spec -> outline_render
-  -> disp.py), helpers in repair/migration/peds/s152lib.py (now with pairs_fix); live lines in local/s152/live/.
-  After any rebuild, copy the folder's 10_*_spine.json into repair/s152/. Folders repair/migration/peds/<brief>/spine
-  (private; synced to the private repo, wip/s152).
-- **Spend:** reviewers 22 agents, 266 calls, 12.57M of 28, 370, 14M (rounds 1 to 4); lead 206.3M of the 230M figure
-  (ledger_lead.csv, five chat rows); about 24M left for S9.
-- **For the report (calls so far):** S152.md per-brief entries: items rewritten with a version bump (cyanotic-chd
-  q_d78b7bf3e231 v3, newborn-cyanosis q_ace4b217922a v2); pulse oximetry screen taught with "repeat checks" (MSD text
-  vs AAP 2020); PPS "under 1 year" (AAFP); the newborn figure carried; Pairs with labels dropped; two jaundice items in
-  newborn-cyanosis proposed to move to neonatal-jaundice (not done).
-- **Lead:** Claude, since 2026-10-24 18:40 EDT (s152).
+- **s152 shipped** 2026-10-24 on Jonathan's "ship": 42347a0 (main, pushed by hand; no token here), page sha256
+  02e4ea195996 (approved candidate af78d432c3c5). Eight pediatric heart briefs on the decision spine (ped-murmur,
+  newborn-cyanosis and myocarditis hubs, Presentations 28; cyanotic-chd, kawasaki, arf, del22q11, bs-adolescent-bp).
+  Reviewers 22/28 agents, 266/370 calls, 12.57M/14M; lead about 207M of 230M (five chats). Record repair/s152/S152.md.
+  No batch open; no lock held.
+- **Owed from s152:** the two newborn-cyanosis jaundice items (q_30529e70c634, q_4ee70a03ddd6) move to neonatal-jaundice
+  when that brief is converted (DIGEST 2026-10-24 s152 ship); deferred LOWs listed in S152.md "S7"; Kawasaki AHA 2024
+  In practice hover unsourced (AHA sites 403); Mac copies of index.html and this file in Documents/Step2Haki (the s152
+  chat's folder request was refused).
+- **Earlier ships today** (s150c to s151): records under repair/sNNN/ and OPEN_WORK.
+- **Patch pipeline and token rules (2026-10-24):** BATCH_RUNBOOK 8b and "Token rules". Owed by Jonathan: turn off
+  Figma, Vercel and the healthcare plugin for this project.
+- **Private files owed (important):** s150cd_private_owed.tar.gz (s150c and s150d brief-folder changes after S7) was
+  sent to Jonathan in the s150c chat and never pushed; the next session with push access and the file extracts it into
+  the private clone's local-only/, commits on wip/s150c and merges to main.
+- **Carried:** s150c round 4 deferred LOWs (dementia Korsakoff reason d1; eating-disorders "step 2 criterion"
+  wording); defense-mechanisms intro clause unmasked; no reverse pointers to dementia or defense-mechanisms from
+  delirium, parkinson or cluster-b; MPTP chemical-name LOW; s150b legibility advisories; the four s150b audit proposals;
+  queue.csv open row 59 (prolactin); row 66 QID to link; gate's stale allowlist line K3 dvt:mnemonic (s151).
 
 ## Next launch prompt (paste into a fresh chat)
 
 The next numbered batch (claude/pending/BATCHES_S151_S160.md, whose numbering runs one behind since s150 was split;
-its "s151" is this s152). Budget is Claude's estimate scaled from s151 under the token rules, not a measurement:
+its "s152" GI and hepatology A is this s153). Budget scaled from s152's measurement (8 briefs: reviewers 22 agents, 266
+calls, 12.6M; lead 207M across five chats):
 ```
-Step2Haki: launch batch s152 (Phase 2, cardiovascular B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: ped-murmur, cyanotic-chd, newborn-cyanosis, kawasaki, arf, myocarditis, del22q11, bs-adolescent-bp. Goldens: nephrotic-child, scfe; hub golden first if ped-murmur or newborn-cyanosis needs one. Budget: 28 agents, 370 calls, 14M reviewer tokens; lead 160M.
+Step2Haki: launch batch s153 (Phase 2, GI and hepatology A) per claude/BATCH_RUNBOOK.md. Briefs: liver-preg, masld, cholestasis, bs-wilson, zenker, fap, occult-gi-bleed, bs-impaction. Goldens: copd (FM lens), nephrotic-child (peds lens); B0 confirms they fit GI. Budget: 28 agents, 370 calls, 14M reviewer tokens; lead 230M.
 ```
 
 New board questions, any time (intake only; the skill never edits the page):
