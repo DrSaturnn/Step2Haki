@@ -15,12 +15,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **s154 open** (Claude lead, 2026-10-25): Phase 2 GI B, pediatric, on wip/s154 (both repos). Briefs bs-tef (disease),
   infant-stool, rlq-pain, peds-constipation, cyclic-vomiting, feeding-refusal, bs-umbilical (hubs; Presentations 36 via
   repair/s154/40_presentations.json). Budget 32 agents, 1000 calls, 60M (reviewers 23, 350, 13M; builders 9, 650,
-  47M); lead 100M. **S3 done**: all seven built by builder agents and MECHANICAL PASS (lead verify); batch page gate,
-  render, vendor 0, squeeze 0, pointer 30/0. Lanes repair/migration/gi/<id>/spine; record repair/s154/S154.md (S3
-  section lists every builder call and the report items). **Next: S4 round 1** (acc on Opus, read and flags on
-  Sonnet; no display). Spend: builders 7 agents, 435 calls, 50.29M (3.29M over the builder split); wave left 25 agents,
-  565 calls, **9.71M tokens** for all review rounds (s153 used 6.69M, 3.88M, 2.32M for eight briefs). S4 plans lanes to
-  that: if round 2 cannot fit, stop at the cap and report (runbook section 6). Lead 16.5M (one row).
+  47M); lead 100M. S3 done (all seven MECHANICAL PASS, batch page checks pass). **S4 round 1 done** (7 lanes, 104
+  calls, 5.05M): 2 HIGH (rlq-pain q_82ce reason d1 Campylobacter fever; cyclic-vomiting upper endoscopy for IBD), 30
+  MED; only bs-umbilical is PASS-IF on all three parts. Results table and S5 patterns in repair/s154/S154.md "S4 round
+  1"; receipts repair/efficiency/lanes/s154/r1/<lane>/<brief>/receipt.md (also in the private clone's local-only).
+  **Next: S5** (adjudicate every HIGH and MED with evidence, sort LOWs, fix; adj_s154_r1.md per folder), then S6, S7
+  round 2. Spend: wave 14 agents, 539 calls, 55.34M of 60M; **left 18 agents, 461 calls, 4.66M** for follow-up rounds
+  (s153 round 2 used 3.88M for eight briefs): plan round 2 lanes to fit, PASS-IF where only LOWs remain; if a round
+  cannot fit, stop at the cap and report (runbook section 6). Lead 24.0M of 100M (two rows).
 - **s153 shipped** (Claude lead, 2026-10-25): 7b301ef, live version s153, page 7c376718303a. Eight GI and hepatology A
   briefs on the spine; cholestasis and occult-gi-bleed are hubs (Presentations 30). Record repair/s153/S153.md; history
   in OPEN_WORK. Jonathan's "ship" took the report defaults (DIGEST 2026-10-25 s153 ship): S1 to S3 by builder agents
