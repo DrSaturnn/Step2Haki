@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-25 08:40 EDT, by Claude (s153 pilot blocked again; plugin 0.3.0 with lean-builder built for upload).
+Last updated: 2026-10-25 10:50 EDT, by Claude (s153 S3 done by builder agents; next chat starts S4).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -15,17 +15,21 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **s153 open** (Claude lead, 2026-10-25): Phase 2, GI and hepatology A, on wip/s153 in both repos. Briefs liver-preg,
   masld, cholestasis (hub), bs-wilson, zenker, fap, occult-gi-bleed (hub), bs-impaction. Budget 38 agents, 1270 calls,
   74M agent tokens (reviewers 28, 370, 14M; builders 10, 900, 60M); lead 120M. Batch file repair/s153/S153.md.
-- **Step:** pilot gate passed (liver-preg 78 calls, cholestasis 61; both MECHANICAL PASS). The other six builders
-  (masld, bs-wilson, zenker, fap, occult-gi-bleed, bs-impaction) launched 09:50 as step2haki-tools:lean-builder (plugin
-  0.3.0 now live). Then: lead checks each receipt, copies 10_*_spine.json into repair/s153/, Presentations for the hubs,
-  S3 page checks, restart. A restarted chat relaunches each lane whose BUILD_RECEIPT.md is missing or INCOMPLETE.
-- **Next chat (continuation):** session start as below, but clone the private repo on wip/s153
-  (`git clone --depth 1 --branch wip/s153 ...`) and check out wip/s153 in the public clone; the cp restore brings the
-  lanes (repair/migration/gi/<id>/spine, with the lead notes in each INSTRUCTIONS.md) and local/s153/ (build_spec.json,
-  live/, build_prompts/). Run `python3 tools/spine/patch.py setup s153` and the no-model probe; confirm the Agent tool
-  lists step2haki-tools:lean-builder; then launch the pilot pair, liver-preg and cholestasis, from
-  local/s153/build_prompts/<id>.txt, subagent_type step2haki-tools:lean-builder, model opus, one message, foreground
-  (runbook section 2). If the type is still missing, stop and tell Jonathan.
+- **Step:** S3 done (2026-10-25 10:50). All eight briefs built by lean-builder agents (pilot adopted for this batch),
+  each MECHANICAL PASS on the lead's own verify --mech; repair/s153/ holds the eight spine files and
+  40_presentations.json (two GI hubs, count 30); batch page gate, render, vendor (0), squeeze (0) and pointer (0) pass.
+  Lead fixes and calls are in repair/s153/S153.md "S3 page checks". Spend: builders 8 agents, 480 calls, 52.7M; lead
+  25.6M (one row). Reviewer room left under the 74M agent cap: 21.3M (budgeted 14M).
+- **Next chat: S4 review round 1.** Session start as below with both clones on wip/s153 (private: `--branch wip/s153`;
+  its local-only/ now carries the built lanes repair/migration/gi/<id>/spine, the new web cache pages and local/s153).
+  `patch.py setup s153`, confirm step2haki-tools:lean-reviewer (and lean-builder) listed. Read per brief boards.md,
+  cuts.json and the cards_disposition.json counts, and each BUILD_RECEIPT.md "For the lead". Then S4: acc, read, flags
+  lanes from lanes.py (no display part: content batch), packets from review_packet.py, foreground in one message.
+  Items for the report (none blocks review): liver-preg five conditions in one disease brief (split or hub, Jonathan);
+  fap two-disease merge kept; bs-impaction key change q_5663 v2 (laxatives before PAMORA); unverified marks on fap
+  triggers (bleeding, polyp over 1 cm) and zenker blind-instrument perforation; hub word counts cholestasis 836 (cap
+  700), occult-gi-bleed 692; bank stems in arrow format on cholestasis and liver-preg; drop gate allowlist line K3
+  liver-preg:mnemonic at ship; tool notes (build_brief needs AX_BATCH; verify sh() hides a killed render.js).
 - **Owed from s152:** the two newborn-cyanosis jaundice items (q_30529e70c634, q_4ee70a03ddd6) move to neonatal-jaundice
   when that brief is converted; deferred LOWs in repair/s152/S152.md "S7"; Kawasaki AHA 2024 In practice hover
   unsourced; Mac copies of index.html and this file in Documents/Step2Haki.
