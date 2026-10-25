@@ -1,0 +1,16 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "    <div class=\"sect\">Presentations <span class=\"count\">30</span></div>\n",
+   "with": "    <div class=\"sect\">Presentations <span class=\"count\">36</span></div>\n",
+   "note": "s154: six pediatric GI and newborn hubs join Presentations; count 30 -> 36"
+  },
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#cholestasis\">Abnormal Liver Tests</a>\n    <a href=\"#occult-gi-bleed\">GI Bleeding in a Child</a>\n    <a href=\"#scrotum\">",
+   "with": "    <a href=\"#cholestasis\">Abnormal Liver Tests</a>\n    <a href=\"#infant-stool\">Stool Changes in a Well Infant</a>\n    <a href=\"#feeding-refusal\">Feeding an Infant or Toddler</a>\n    <a href=\"#rlq-pain\">Right Lower Quadrant Pain</a>\n    <a href=\"#peds-constipation\">Constipation in a Child</a>\n    <a href=\"#cyclic-vomiting\">Recurrent Vomiting in a Child</a>\n    <a href=\"#occult-gi-bleed\">GI Bleeding in a Child</a>\n    <a href=\"#bs-umbilical\">Newborn Umbilical Findings</a>\n    <a href=\"#scrotum\">",
+   "note": "s154: the six hubs join in page order after cholestasis, before scrotum"
+  }
+ ]
+}

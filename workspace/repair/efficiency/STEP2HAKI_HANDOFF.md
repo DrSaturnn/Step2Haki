@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-25 16:50 EDT, by Claude (s154 launched; S1 to S3 by builder agents).
+Last updated: 2026-10-25 18:30 EDT, by Claude (s154 S3 done; S4 next in a fresh chat).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -13,9 +13,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ## State (rewrite after ev## State (rewrite after every step)
 
 - **s154 open** (Claude lead, 2026-10-25): Phase 2 GI B, pediatric, on wip/s154 (both repos). Briefs bs-tef (disease),
-  infant-stool, rlq-pain, peds-constipation, cyclic-vomiting, feeding-refusal, bs-umbilical (hubs). Budget 32 agents,
-  1000 calls, 60M (reviewers 23, 350, 13M; builders 9, 650, 47M); lead 100M. Step: S1 to S3; pilot passed (bs-tef,
-  infant-stool BUILT, MECHANICAL PASS); five builders running. Lanes repair/migration/gi/<id>/spine; record repair/s154/S154.md. Spend: builders 2 agents, 157 calls, 0.36M.
+  infant-stool, rlq-pain, peds-constipation, cyclic-vomiting, feeding-refusal, bs-umbilical (hubs; Presentations 36 via
+  repair/s154/40_presentations.json). Budget 32 agents, 1000 calls, 60M (reviewers 23, 350, 13M; builders 9, 650,
+  47M); lead 100M. **S3 done**: all seven built by builder agents and MECHANICAL PASS (lead verify); batch page gate,
+  render, vendor 0, squeeze 0, pointer 30/0. Lanes repair/migration/gi/<id>/spine; record repair/s154/S154.md (S3
+  section lists every builder call and the report items). **Next: S4 round 1** (acc on Opus, read and flags on
+  Sonnet; no display). Spend: builders 7 agents, 435 calls, 50.29M (3.29M over the builder split); wave left 25 agents,
+  565 calls, **9.71M tokens** for all review rounds (s153 used 6.69M, 3.88M, 2.32M for eight briefs). S4 plans lanes to
+  that: if round 2 cannot fit, stop at the cap and report (runbook section 6). Lead 16.5M (one row).
 - **s153 shipped** (Claude lead, 2026-10-25): 7b301ef, live version s153, page 7c376718303a. Eight GI and hepatology A
   briefs on the spine; cholestasis and occult-gi-bleed are hubs (Presentations 30). Record repair/s153/S153.md; history
   in OPEN_WORK. Jonathan's "ship" took the report defaults (DIGEST 2026-10-25 s153 ship): S1 to S3 by builder agents
