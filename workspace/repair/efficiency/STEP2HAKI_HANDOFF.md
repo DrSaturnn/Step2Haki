@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-25 14:30 EDT, by Claude (s153 S8 presented in chat 8; waiting for "ship" in that chat).
+Last updated: 2026-10-25 15:20 EDT, by Claude (s153 shipped 7b301ef; next is s154).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -10,52 +10,37 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
-## State (rewrite after every step)
+## State (rewrite after ev## State (rewrite after every step)
 
-- **s153 open** (Claude lead, 2026-10-25): Phase 2, GI and hepatology A, on wip/s153 in both repos. Briefs liver-preg,
-  masld, cholestasis (hub), bs-wilson, zenker, fap, occult-gi-bleed (hub), bs-impaction. Budget 38 agents, 1270 calls,
-  74M agent tokens (reviewers 28, 370, 14M; builders 10, 900, 60M); lead 120M. Batch file repair/s153/S153.md.
-- **Step:** S7 done: all READY (2026-10-25, chat 7). S5 round 2 fixed all eight (fix4.py, adj_s153_r2.md); round 3
-  (7 agents, 72 calls, 2.32M) PASS on every part, two PASS-IFs settled (bs-impaction's 3 applied and replayed; fap's
-  "should prompt" rejected). Spend: wave reviewers 29 agents, 752 calls, 65.61M of 74M; lead 93.5M of 120M (five rows).
-  Batch file repair/s153/S153.md "S5 round 2, S6, S7 round 3" holds every call.
-- **S8 presented** (chat 8, 2026-10-25): changelog entry 153 added (6134d6c); `batch.py s8` all PASS (8 of 8 READY,
-  gate, render, squeeze 0, pointer 0 problems), `approval.py present s153` (page f7fac5a475f7). "ship" must go to chat 8
-  (the approval record lives in its container). On "ship": drop gate allowlist lines K3 liver-preg:mnemonic and K3
-  dvt:mnemonic, then `batch.py ship` and `batch.py post`. If chat 8 is lost, a fresh chat re-runs `batch.py s8` and
-  presents again.
-  Items for the report (none blocks): liver-preg five conditions in one disease brief (split or hub, Jonathan);
-  fap two-disease merge kept; bs-impaction key change q_5663 v2 (laxatives before PAMORA); zenker q_cbb8 key now
-  "Cricopharyngeal myotomy with a pouch procedure" (v2); cholestasis alpha-1 cell names level and genotype or
-  phenotype without ranking (MSD orders them both ways); unverified marks on fap triggers (bleeding, polyp over 1 cm)
-  and zenker blind-instrument perforation; hub word counts cholestasis 858 (cap 700), occult-gi-bleed 742;
-  occult-gi-bleed title (adult branch) and a treatment-by-cause table (Jonathan); masld gallstones-in-pregnancy Pearls
-  clause kept on its card, candidate move to liver-preg; hub step 3 columns kept beside the tree (cholestasis read 4);
-  bank stems in arrow format on cholestasis and liver-preg; tool notes (build_brief needs AX_BATCH; verify sh() hides
-  a killed render.js; patch.py sync takes folders relative to repair/migration; reps.py does not reach author.py
-  builds, so PASS-IF replacements are applied in fixN.py and must not cross markup to replay); carried tail blocks are
-  not in claim_map (round 1 pattern 1). Chat 6 calls: trap pill labels kept site-wide; zenker pouch procedure one
-  teaching; fap Next step zone added; bs-impaction trap line filled; volvulus Step 2 card has no note id.
+- **s153 shipped** (Claude lead, 2026-10-25): 7b301ef, live version s153, page 7c376718303a. Eight GI and hepatology A
+  briefs on the spine; cholestasis and occult-gi-bleed are hubs (Presentations 30). Record repair/s153/S153.md; history
+  in OPEN_WORK. Jonathan's "ship" took the report defaults (DIGEST 2026-10-25 s153 ship): S1 to S3 by builder agents
+  adopted; liver-preg, fap, occult-gi-bleed and masld kept as built. Spend: agents 29 of 38, 752 of 1270 calls, 65.61M
+  of 74M; lead about 104M of 120M (six rows).
+- **Open from s153 (none blocks):** MASLD entry for ALIASES.json; lens "preg" not in SPINE_SPEC; bs-wilson bank stems
+  carry INR and IgG unexpanded; cholestasis hub 858 words (cap 700); fap 1379 words above the bank; tool notes
+  (build_brief needs AX_BATCH; verify sh() can hide a killed render.js; reps.py does not reach author.py builds; drop a
+  stale gate allowlist line for a batch brief only after ship); carried tail blocks are not in claim_map; volvulus
+  Step 2 card has no note id; Mac copies of index.html and this file (computer not reachable at the s153 ship).
 - **Owed from s152:** the two newborn-cyanosis jaundice items (q_30529e70c634, q_4ee70a03ddd6) move to neonatal-jaundice
   when that brief is converted; deferred LOWs in repair/s152/S152.md "S7"; Kawasaki AHA 2024 In practice hover
-  unsourced; Mac copies of index.html and this file in Documents/Step2Haki.
+  unsourced.
 - **Private files owed (important):** s150cd_private_owed.tar.gz (s150c and s150d brief-folder changes after S7) was
   sent to Jonathan in the s150c chat and never pushed; the next session with push access and the file extracts it into
   the private clone's local-only/, commits on wip/s150c and merges to main.
 - **Carried:** s150c round 4 deferred LOWs (dementia Korsakoff reason d1; eating-disorders "step 2 criterion"
   wording); defense-mechanisms intro clause unmasked; no reverse pointers to dementia or defense-mechanisms from
   delirium, parkinson or cluster-b; MPTP chemical-name LOW; s150b legibility advisories; the four s150b audit proposals;
-  queue.csv open row 59 (prolactin); row 66 QID to link; gate's stale allowlist line K3 dvt:mnemonic (s151). Owed by
-  Jonathan: turn off Figma, Vercel and the healthcare plugin for this project.
+  queue.csv open row 59 (prolactin); row 66 QID to link. Owed by Jonathan: turn off Figma, Vercel and the healthcare
+  plugin for this project.
 
 ## Next launch prompt (paste into a fresh chat)
 
-The next numbered batch (claude/pending/BATCHES_S151_S160.md, whose numbering runs one behind since s150 was split;
-its "s152" GI and hepatology A is this s153). Budget scaled from s152's measurement (8 briefs: reviewers 22 agents, 266
-calls, 12.6M; lead 211M across five chats; builders and lead figure are Claude's estimates for the pilot, not
-measurements):
+The next numbered batch (claude/pending/BATCHES_S151_S160.md, whose numbering runs one behind; its "s153" GI B,
+pediatric, is this s154). Budget scaled from s153's measurement (8 briefs: builders 8 agents, 480 calls, 52.7M;
+reviewers 21, 272, 12.9M; lead about 104M), for 7 briefs:
 ```
-Step2Haki: launch batch s153 (Phase 2, GI and hepatology A) per claude/BATCH_RUNBOOK.md. Briefs: liver-preg, masld, cholestasis, bs-wilson, zenker, fap, occult-gi-bleed, bs-impaction. Goldens: copd (FM lens), nephrotic-child (peds lens); B0 confirms they fit GI. S1 to S3 by builder agents, pilot gate on the first two (runbook section 2). Budget: 38 agents, 1270 calls, 74M agent tokens (reviewers 28, 370, 14M; builders 10, 900, 60M); lead 120M.
+Step2Haki: launch batch s154 (Phase 2, GI B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: infant-stool, feeding-refusal, rlq-pain, peds-constipation, cyclic-vomiting, bs-tef, bs-umbilical. Goldens: nephrotic-child, scfe; hub golden first if rlq-pain or infant-stool needs one. S1 to S3 by builder agents (adopted s153). Budget: 32 agents, 1000 calls, 60M agent tokens (reviewers 23, 350, 13M; builders 9, 650, 47M); lead 100M.
 ```
 
 New board questions, any time (intake only; the skill never edits the page):
@@ -69,9 +54,7 @@ The next patch of shipped briefs, when new intake proposals queue up (runbook 8b
 Step2Haki: run the queued intake amendments as a patch batch per claude/BATCH_RUNBOOK.md section 8b.
 ```
 
-## After s141
-
-Phase R is complete (all 17 spine briefs READY, s140). After the s141 rollout, the next work is Phase 2 (plan section 8:
+complete (all 17 spine briefs READY, s140). After the s141 rollout, the next work is Phase 2 (plan section 8:
 unconverted briefs by cluster).
 
 The forward plan lives in the PRIVATE repo (DrSaturnn/Step2Haki-private), under claude/pending/, outside local-only/,
