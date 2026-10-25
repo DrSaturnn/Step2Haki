@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-25 14:00 EDT, by Claude (s153 S7 round 2 running; chat 6).
+Last updated: 2026-10-25 14:40 EDT, by Claude (s153 S7 round 2 done; next chat runs S5 round 2).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -15,15 +15,20 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **s153 open** (Claude lead, 2026-10-25): Phase 2, GI and hepatology A, on wip/s153 in both repos. Briefs liver-preg,
   masld, cholestasis (hub), bs-wilson, zenker, fap, occult-gi-bleed (hub), bs-impaction. Budget 38 agents, 1270 calls,
   74M agent tokens (reviewers 28, 370, 14M; builders 10, 900, 60M); lead 120M. Batch file repair/s153/S153.md.
-- **Step:** S7 round 2 running (2026-10-25, chat 6): S5 finished for all eight (adj_s153_r1.md and fix3.py in each
-  folder; all MECHANICAL PASS; bs-impaction 1 answered warn); S6 done (batch file "S5 continued"); round 2 lanes
-  repair/efficiency/lanes/s153/r2 (7 lanes, 148 calls, spec repair/s153/lanes/lanes_r2.json, packets s153r2). acc-C
-  returned PASS for bs-wilson and occult-gi-bleed.
-- **Next chat** (if this one stops before the round is filed): read the State, repair/s153/S153.md from "S5 continued",
-  and each r2 receipt's verdict line (repair/efficiency/lanes/s153/r2/<lane>/<brief>/receipt.md); relaunch only a lane
-  whose receipts are missing (same prompt: Role, Plan step, Lane, Budget, "Read INSTRUCTIONS.md in your lane first");
-  then usage_ledger.py, commit the ledger, S5 round 2 on FAIL briefs, PASS-IF via reps.py, round 3 if needed, restart
-  at "S7 done".
+- **Step:** S7 round 2 done, S5 round 2 next (2026-10-25, chat 6 ended at context). Round 2: 7 agents, 80 calls,
+  3.88M; READY candidates none yet; acc-C PASS bs-wilson and occult-gi-bleed; FAIL lanes: acc fap, cholestasis; read
+  liver-preg, occult-gi-bleed, zenker, fap, bs-impaction; the rest PASS-IF or PASS. Spend: wave 22 agents, 680 calls,
+  63.29M of 74M (10.7M left for round 3); lead 73.2M of 120M (four rows; chat 6 not yet recorded separately).
+- **Next chat: S5 round 2**, all eight briefs, from the plan table in repair/s153/S153.md "S5 continued" (last table:
+  one line per brief with every fix and its source). Session start as below with both clones on wip/s153 (private:
+  `--branch wip/s153`), restore, `patch.py setup s153`. Read only the State and repair/s153/S153.md from "S5
+  continued"; open a round 2 receipt (repair/efficiency/lanes/s153/r2/<lane>/<brief>/receipt.md) only to copy an exact
+  replacement the table names. Per brief: fix4.py of exact replacements on author.py (cholestasis adds fact w64),
+  `AX_BATCH=s153 python3 tools/spine/build_brief.py <folder> --verify`, re-point any disposition phrase the build
+  reports unresolved (disp.py), mentions.md, adj_s153_r2.md; copy the 10_*_spine.json into repair/s153/; then
+  `patch.py sync s153 "<msg>" gi/<brief>/spine ...`. Then batch page, gate, squeeze, pointer_check, S6, and round 3
+  (lanes_r3.json from lanes_r2.json, packets s153r3 --since the r2 packet's acc/brief_text.txt; only the parts not PASS,
+  plus parts whose lines changed; budget from 10.7M left), usage_ledger, restart at "S7 done".
   Items for the report (none blocks review): liver-preg five conditions in one disease brief (split or hub, Jonathan);
   fap two-disease merge kept; bs-impaction key change q_5663 v2 (laxatives before PAMORA); unverified marks on fap
   triggers (bleeding, polyp over 1 cm) and zenker blind-instrument perforation; hub word counts cholestasis 855 (cap
