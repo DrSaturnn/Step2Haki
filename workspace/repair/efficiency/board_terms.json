@@ -208,6 +208,21 @@
   "renal tubular acidosis",
   "urine anion gap"
  ],
+ "bs-impaction": [
+  "disimpaction",
+  "encopresis",
+  "enema",
+  "fecal impaction",
+  "fecal incontinence",
+  "lactulose",
+  "laxative",
+  "obstipation",
+  "opioid-induced",
+  "overflow",
+  "oxybutynin",
+  "polyethylene glycol",
+  "stool softener"
+ ],
  "bs-incontinence": [
   "detrusor",
   "functional incontinence",
@@ -1222,5 +1237,14 @@
   "psychotic",
   "schizoid",
   "schizotypal"
+ ],
+ "zenker": [
+  "cricopharyngeal",
+  "cricopharyngeus",
+  "Killian",
+  "oropharyngeal dysphagia",
+  "pharyngoesophageal diverticulum",
+  "pulsion diverticulum",
+  "Zenker"
  ]
 }
