@@ -1,0 +1,16 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "    <div class=\"sect\">Presentations <span class=\"count\">28</span></div>\n",
+   "with": "    <div class=\"sect\">Presentations <span class=\"count\">30</span></div>\n",
+   "note": "s153: two GI hubs join Presentations; count 28 -> 30"
+  },
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#newborn-cyanosis\">Cyanosis in the Newborn</a>\n    <a href=\"#scrotum\">",
+   "with": "    <a href=\"#newborn-cyanosis\">Cyanosis in the Newborn</a>\n    <a href=\"#cholestasis\">Abnormal Liver Tests</a>\n    <a href=\"#occult-gi-bleed\">GI Bleeding in a Child</a>\n    <a href=\"#scrotum\">",
+   "note": "s153: the cholestasis and occult GI bleeding hubs, in page order after the newborn hubs and before scrotum"
+  }
+ ]
+}
