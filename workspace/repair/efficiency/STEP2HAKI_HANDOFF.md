@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-24, by Claude (s152 S1/S2 checkpoint 2: five briefs built; mid-S2 restart).
+Last updated: 2026-10-24, by Claude (s152 S3 done).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -15,14 +15,20 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **s152 open** (Claude lead), launched 2026-10-24 18:40 EDT on wip/s152 in both repos. Briefs: ped-murmur,
   cyanotic-chd, newborn-cyanosis, kawasaki, arf, myocarditis, del22q11, bs-adolescent-bp. Budget 28 agents, 370
   calls, 14M reviewer tokens; lead 160M (WAVE.json s152, open). Record repair/s152/S152.md.
-- **Step:** S1 and S2 in progress. Done to G-MECH (verify --mech --fast): arf, kawasaki, del22q11, bs-adolescent-bp, myocarditis.
-  Next: cyanotic-chd, newborn-cyanosis, ped-murmur (read S152.md "Build notes" first; the three hubs then need
-  repair/s152/40_presentations.json, count 25 to 28), then S3 (patch.py-style full verify --mech per folder, batch page, gate, render, preflight, vendor,
-  squeeze) and the S3 restart.
+- **Step: S3 done** (2026-10-24, chat 2). All eight built and MECHANICAL PASS on full verify --mech; batch page
+  gate, render, preflight, vendor, squeeze and pointer_check all pass (S152.md "S3"). Next: S4 review round 1 in a
+  fresh chat (acc, read, flags; no display; lanes.py and review_packet.py; foreground lanes in one message). Read per
+  brief boards.md, cuts.json and the cards_disposition.json counts, and S152.md.
 - **How the builds run:** repair/migration/peds/s152build.py <brief> (author.py -> facts_from_spec -> outline_render
-  -> disp.py), helpers in repair/migration/peds/s152lib.py; live lines in local/s152/live/. Folders
-  repair/migration/peds/<brief>/spine (private; synced to the private repo at checkpoints).
-- **Spend:** reviewers 0 agents, 0 calls. Lead: chat 1 (4e576059) 47.5M over 139 calls (ledger_lead.csv); 112M of the 160M lead budget remains.
+  -> disp.py), helpers in repair/migration/peds/s152lib.py (now with pairs_fix); live lines in local/s152/live/.
+  After any rebuild, copy the folder's 10_*_spine.json into repair/s152/. Folders repair/migration/peds/<brief>/spine
+  (private; synced to the private repo, wip/s152).
+- **Spend:** reviewers 0 agents, 0 calls. Lead: chat 1 (4e576059) 47.5M, chat 2 (0dc673f7) 79.8M; 127.3M of the
+  160M lead figure used, 32.7M left for S4 to S9 (the next chat raises it with Jonathan if S4 projects over).
+- **For the report (calls so far):** S152.md per-brief entries: items rewritten with a version bump (cyanotic-chd
+  q_d78b7bf3e231 v3, newborn-cyanosis q_ace4b217922a v2); pulse oximetry screen taught with "repeat checks" (MSD text
+  vs AAP 2020); PPS "under 1 year" (AAFP); the newborn figure carried; Pairs with labels dropped; two jaundice items in
+  newborn-cyanosis proposed to move to neonatal-jaundice (not done).
 - **Lead:** Claude, since 2026-10-24 18:40 EDT (s152).
 
 ## Next launch prompt (paste into a fresh chat)

@@ -1,0 +1,16 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "    <div class=\"sect\">Presentations <span class=\"count\">25</span></div>\n    <a href=\"#right-murmurs\">Heart Murmurs in an Adult</a>\n",
+   "with": "    <div class=\"sect\">Presentations <span class=\"count\">28</span></div>\n    <a href=\"#right-murmurs\">Heart Murmurs in an Adult</a>\n    <a href=\"#ped-murmur\">Heart Murmurs in a Child</a>\n    <a href=\"#myocarditis\">Heart Failure in a Child</a>\n",
+   "note": "s152: two cardiovascular hubs gain their required Presentations links after the adult murmur hub; count 25 -> 28 with newborn-cyanosis"
+  },
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#bpd\">Lung Disease in the Newborn and Preterm Infant</a>\n    <a href=\"#scrotum\">",
+   "with": "    <a href=\"#bpd\">Lung Disease in the Newborn and Preterm Infant</a>\n    <a href=\"#newborn-cyanosis\">Cyanosis in the Newborn</a>\n    <a href=\"#scrotum\">",
+   "note": "s152: the newborn cyanosis hub joins Presentations beside the other newborn hub (bpd)"
+  }
+ ]
+}
