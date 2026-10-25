@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-25 08:05 EDT, by Claude (s153 launched; builder pilot next).
+Last updated: 2026-10-25 08:20 EDT, by Claude (s153 launched; pilot waits for lean-builder in the plugin).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -15,8 +15,17 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **s153 open** (Claude lead, 2026-10-25): Phase 2, GI and hepatology A, on wip/s153 in both repos. Briefs liver-preg,
   masld, cholestasis (hub), bs-wilson, zenker, fap, occult-gi-bleed (hub), bs-impaction. Budget 38 agents, 1270 calls,
   74M agent tokens (reviewers 28, 370, 14M; builders 10, 900, 60M); lead 120M. Batch file repair/s153/S153.md.
-- **Step:** launch and B0 done; builder lanes ready (local/s153/build_spec.json, repair/migration/gi/<id>/spine); pilot
-  builders liver-preg and cholestasis next. Spend so far: 0 agents.
+- **Step:** launch and B0 done; builder lanes ready. The pilot did not start: the Agent tool has no lean-builder type in
+  this session (DIGEST 2026-10-25 "s153 builder agent type"). Jonathan adds tools/hooks/agents/lean-builder.md to the
+  step2haki-tools plugin; then a fresh chat continues. Spend: 0 agents ran (two refused launch records stayed in the
+  old container's launches.jsonl and do not carry over).
+- **Next chat (continuation):** session start as below, but clone the private repo on wip/s153
+  (`git clone --depth 1 --branch wip/s153 ...`) and check out wip/s153 in the public clone; the cp restore brings the
+  lanes (repair/migration/gi/<id>/spine, with the lead notes in each INSTRUCTIONS.md) and local/s153/ (build_spec.json,
+  live/, build_prompts/). Run `python3 tools/spine/patch.py setup s153` and the no-model probe; confirm the Agent tool
+  lists step2haki-tools:lean-builder; then launch the pilot pair, liver-preg and cholestasis, from
+  local/s153/build_prompts/<id>.txt, subagent_type step2haki-tools:lean-builder, model opus, one message, foreground
+  (runbook section 2). If the type is still missing, stop and tell Jonathan.
 - **Owed from s152:** the two newborn-cyanosis jaundice items (q_30529e70c634, q_4ee70a03ddd6) move to neonatal-jaundice
   when that brief is converted; deferred LOWs in repair/s152/S152.md "S7"; Kawasaki AHA 2024 In practice hover
   unsourced; Mac copies of index.html and this file in Documents/Step2Haki.
