@@ -1,0 +1,52 @@
+{
+ "batch": "s152",
+ "plan_step": "s152",
+ "round": 1,
+ "context": "batch s152 (Phase 2, cardiovascular B, pediatric) converts eight live briefs to decision spine v2: four disease briefs (cyanotic-chd, kawasaki, arf, del22q11), three presentation hubs (ped-murmur, newborn-cyanosis, myocarditis) and one screen entry (bs-adolescent-bp); this is review round 1, on each whole brief",
+ "out": "repair/efficiency/lanes/s152/r1",
+ "packets": "repair/migration/spine/packets/s152",
+ "lanes": [
+  {"part": "acc", "group": "A", "briefs": ["cyanotic-chd", "bs-adolescent-bp"]},
+  {"part": "acc", "group": "B", "briefs": ["newborn-cyanosis", "ped-murmur", "del22q11"]},
+  {"part": "acc", "group": "C", "briefs": ["kawasaki", "arf", "myocarditis"]},
+  {"part": "read", "group": "A", "briefs": ["cyanotic-chd", "newborn-cyanosis", "ped-murmur", "myocarditis"]},
+  {"part": "read", "group": "B", "briefs": ["kawasaki", "arf", "del22q11", "bs-adolescent-bp"]},
+  {"part": "flags", "group": "A", "briefs": ["cyanotic-chd", "newborn-cyanosis", "ped-murmur", "myocarditis"]},
+  {"part": "flags", "group": "B", "briefs": ["kawasaki", "arf", "del22q11", "bs-adolescent-bp"]}
+ ],
+ "types": {
+  "cyanotic-chd": "disease-family brief \"Congenital Heart Disease\" (14 lesions, cyanotic and acyanotic), peds lens, steps 1 to 8; converted from the live brief; review in full",
+  "newborn-cyanosis": "presentation hub \"Cyanosis in the Newborn\", peds lens, steps 1 to 4 then hand off by drawer, treatment by cause inside Workup; converted from the live brief; review in full",
+  "ped-murmur": "presentation hub \"Heart Murmurs in a Child\", peds lens, steps 1 to 4 then hand off by drawer; converted from the live brief; review in full",
+  "myocarditis": "presentation hub \"Heart Failure in a Child\" (brief id myocarditis), peds lens, steps 1 to 4 then hand off by drawer, treatment by cause inside Workup; converted from the live brief; review in full",
+  "kawasaki": "disease brief (Kawasaki disease), peds lens, steps 1 to 8; converted from the live brief; review in full",
+  "arf": "disease brief (acute rheumatic fever), peds lens, steps 1 to 8; converted from the live brief; review in full",
+  "del22q11": "disease brief (22q11.2 deletion syndrome, DiGeorge), peds lens, steps 1 to 8; converted from the live brief; review in full",
+  "bs-adolescent-bp": "screen entry (elevated blood pressure in an adolescent), peds lens, steps 1, 5, 6 and 8 only (screen pattern, model ascvd); a Part II brief that keeps its source vignette above the stepper (as bs-puv); converted from the live brief; review in full"
+ },
+ "notes": {
+  "acc": [
+   "Where a board source (AnKing card, UWorld, NBME) and a guideline differ, the brief teaches the board answer and puts the guideline in an \"In practice:\" hover (runbook section 3): the hover is intended, not a finding.",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length).",
+   "Hubs (ped-murmur, newborn-cyanosis, myocarditis) stop after Workup and hand off by drawer; treatment by cause sits inside Workup (right-murmurs precedent, s148 hub rule). Steps 5 to 8 absent in a hub is not a finding.",
+   "L facts (the old brief's own lines) are a valid source for carried content. Lines carried from the live brief with currency flagged, because the guideline site refused the fetch today: kawasaki IVIG resistance at 36 h, the infant (under 6 months, fever 7 days) incomplete-Kawasaki rule, and echo timing (AHA 2017); bs-adolescent-bp recheck intervals by stage (AAP 2017, whose cutoffs are cited from AAFP 2018). Judge their accuracy for Step 2, not the sourcing choice.",
+   "Lead calls (judge accuracy, not the choice): arf and myocarditis teach rheumatic latency as about 2 to 3 weeks (MSD); kawasaki aneurysm figures and the aspirin step-down follow MSD; cyanotic-chd ductal closure about 24 to 72 hours and VSD murmur by 2 to 3 weeks with failure by 4 to 6 weeks (MSD); the newborn pulse oximetry screen says \"repeat checks 1 hour apart\" with no count (MSD text and AAP 2020 differ on the count); ped-murmur places peripheral pulmonary stenosis under 1 year (AAFP); bs-adolescent-bp does not teach the NBME explanation's older 95th percentile definition (AAP 2017 cutoffs taught).",
+   "Items rewritten with a version bump: cyanotic-chd q_d78b7bf3e231 v3 (complete atrioventricular septal defect: single loud S2, failure by 4 to 6 weeks), newborn-cyanosis q_ace4b217922a v2 (gap on two repeat checks, key echocardiography). Judge them as items.",
+   "Lint answered (not findings unless the claim no longer matches its quote): arf S052, S054, S078 drop \"often\" where the claim is an order name or \"does not exclude\"; cyanotic-chd S034, S117, S176, S181 (finding cell; the \"may\" belongs to right atrial enlargement; standard therapy; a size cutoff); newborn-cyanosis S022, S032.",
+   "Audit cards_disposition.json against cards.md: every covered entry must name claim ids that teach the card; bs-adolescent-bp's five cards are owner:htn-drugs (adult secondary causes)."
+  ],
+  "read": [
+   "The 5a workup zone names (First step, Targeted tests, Next step, Diagnostic test, Skip), the caption \"Diagnostic workup\", the caption \"Look-alikes, most tempting first\" and the pause point's \"The bait:\" label are site conventions.",
+   "Not to report: brief length or word count (2026-10-19 layers rule).",
+   "drawer_targets.txt lists in-page anchors (<prefix>-s1 to -s8, <prefix>-bank) as MISSING: those are section anchors, not broken brief links.",
+   "Lead calls (do not report the choice; judge wording): Pairs with blocks lost their \"Part I\"/\"Part II\" labels and \"Ask:\" questions so they render as owner lists; newborn-cyanosis carries the live figure (Approach to neonatal cyanosis) unchanged into step 4 and keeps the PP STRAP list in a hover without teaching it as a mnemonic; bs-adolescent-bp keeps its source vignette verbatim above the stepper (Part II brief rule, as bs-puv).",
+   "Proposed to Jonathan, not to report: newborn-cyanosis holds two jaundice items (q_30529e70c634, q_4ee70a03ddd6) that may move to neonatal-jaundice later; they stay here in this batch."
+  ],
+  "flags": [
+   "line_sources.txt cuts each quote at 600 characters (a known packet limit); facts.json in the same folder holds every quote whole. Before reporting that a quote does not support a line, Grep facts.json for the fact id.",
+   "Word counts are not judged (2026-10-19 layers rule).",
+   "Lint answered (report only if the claim no longer matches its quote): arf S052, S054, S078; cyanotic-chd S034, S117, S176, S181; newborn-cyanosis S022, S032 (hedge words dropped where the claim is an order name, a finding cell, a standard therapy or a cutoff). cuts.json in cyanotic-chd, kawasaki, myocarditis, newborn-cyanosis and del22q11 records restructured live lines whose hedge words left with them.",
+   "Lines carried from the live brief with currency flagged (kawasaki AHA 2017 timing lines; bs-adolescent-bp recheck intervals) cite L facts by design; the guideline sites refused the fetch today."
+  ]
+ }
+}

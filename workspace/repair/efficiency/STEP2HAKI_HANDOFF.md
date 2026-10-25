@@ -15,10 +15,10 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **s152 open** (Claude lead), launched 2026-10-24 18:40 EDT on wip/s152 in both repos. Briefs: ped-murmur,
   cyanotic-chd, newborn-cyanosis, kawasaki, arf, myocarditis, del22q11, bs-adolescent-bp. Budget 28 agents, 370
   calls, 14M reviewer tokens; lead 160M (WAVE.json s152, open). Record repair/s152/S152.md.
-- **Step: S3 done** (2026-10-24, chat 2). All eight built and MECHANICAL PASS on full verify --mech; batch page
-  gate, render, preflight, vendor, squeeze and pointer_check all pass (S152.md "S3"). Next: S4 review round 1 in a
-  fresh chat (acc, read, flags; no display; lanes.py and review_packet.py; foreground lanes in one message). Read per
-  brief boards.md, cuts.json and the cards_disposition.json counts, and S152.md.
+- **Step: S4 round 1 launched** (2026-10-24 20:50 EDT, chat 3). Packets repair/migration/spine/packets/s152 (from
+  local/s152/index.html), lanes repair/efficiency/lanes/s152/r1 from repair/s152/lanes_r1.json: 7 lanes (acc A, B, C
+  on Opus; read A, B and flags A, B on Sonnet), 164 calls planned. If this chat stops before the receipts are filed,
+  the next chat checks each lane's receipts (missing ones relaunch on the same lane) and then runs S5.
 - **How the builds run:** repair/migration/peds/s152build.py <brief> (author.py -> facts_from_spec -> outline_render
   -> disp.py), helpers in repair/migration/peds/s152lib.py (now with pairs_fix); live lines in local/s152/live/.
   After any rebuild, copy the folder's 10_*_spine.json into repair/s152/. Folders repair/migration/peds/<brief>/spine
