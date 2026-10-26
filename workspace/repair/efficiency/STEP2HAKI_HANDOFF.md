@@ -17,7 +17,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   findings, the chunk table C1 to C4 and the calls made. Branch wip/s154f in both repos; WAVE.json open (10 agents, 120
   calls, 4M; lead 120M); hooks set up in chat 1 (a new container re-runs `patch.py setup s154f`). Step: chat 1 done
   (launch and scoping; stopped at 257k context). Next: chunk C1 (tool change, 1a and 1b on 9 briefs). Spend: reviewers 0;
-  lead about 3M (chat 1). Continuation chats read this State, repair/s154f/S154F.md, DIGEST from 2026-10-26 s154f, and
+  lead 9.79M (chat 1, recorded). Continuation chats read this State, repair/s154f/S154F.md, DIGEST from 2026-10-26 s154f, and
   the scratch in the private repo local-only/local/s154f/ (restored by the session-start cp).
 
 - **NBME intake 2026-10-26 (no batch, log-only):** 16 Psychiatry CMS items (form 6 inferred from AnKing Form_06 tags;
