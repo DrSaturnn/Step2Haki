@@ -2,6 +2,27 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-26 s154b: s154b: eight psychiatry briefs updated from the 2026-10-25 board questions (patch)
+
+```
+Page: 187 briefs, 2230 items -> 187 briefs, 2230 items
+Briefs changed (8):
+  - peds-sleep (Sleep Problems): prose edited (+507 chars)
+  - mdd (Major Depressive Disorder): prose edited (+478 chars)
+  - somatic (Somatic Symptom and Related Disorders): prose edited (+334 chars)
+  - eating-disorders (Eating Disorders): prose edited (+916 chars)
+  - dementia (Cognitive Decline and Dementia in an Adult): prose edited (+968 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+2049 chars)
+  - psych-medical (Medication- and Illness-Induced Psychiatric Disorders): prose edited (+618 chars)
+  - lithium-effects (Lithium Therapy): prose edited (+347 chars)
+Other page changes (nav, headers, scripts): +1199 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 187 briefs, 2230 items (660 with reasons), 22 scripts, 39 checks, base HEAD | allowlisted 10 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 187 | bankwraps 187 | mcq 2230 (reasons 660) (axCheck 2230, reveal-only 0) | malformed 0 | crit gridded 127/127 | vignette gridded 54/54 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808703 source shingles; page 0.012%)
+```
+
 ## 2026-10-25 s154: s154: seven pediatric GI briefs on the decision spine (six hubs, Presentations 36)
 
 ```
