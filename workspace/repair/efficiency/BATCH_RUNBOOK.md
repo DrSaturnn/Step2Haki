@@ -127,6 +127,9 @@ Then run section 2 to the end without asking.
   - the bottom line bolds its key words and criteria (the deciding counts, durations, ages and cutoffs, the diagnosis
     named, the action chosen); verify's lint flags a bottom line with no bold;
   - a First step band with several orders pairs each order with its own results (one row group per order);
+  - the pause point is question-style blocks (STANDING_DIRECTIONS "Pause point format", 2026-10-26, s154c): a setup line,
+    an "Offered as" line with the baits, a masked deciding line, an arrow to the masked answer; no visible line names a
+    masked answer; gate and lint "pause-format";
   - the display rules (question card sizing, hover cards on touch, linked-brief panel, timeline tile) are site-wide in
     the page script and styles, so a brief gets them by being on the page; nothing per brief.
 - **S3. Mechanical checks.**

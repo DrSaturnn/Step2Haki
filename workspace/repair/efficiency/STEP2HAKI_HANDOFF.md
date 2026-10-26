@@ -12,10 +12,10 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after ev## State (rewrite after every step)
 
-- **s154c OPEN** (Claude lead, 2026-10-26, launched 10:00 EDT; one chat, runbook 8 and 8b; batch file repair/s154c/S154C.md):
-  pause point rollout on all 105 spine briefs. Budget 12 agents, 180 calls, 5M reviewer tokens; lead 80M. Branch wip/s154c
-  (public). Done: site layer (repair/s154c/40_site.json), pause-format lint+gate, 105 deltas (local/s154c/splits.py,
-  gen.py), 105 MECHANICAL PASS (--fast), batch page checks pass. Step: S4 round 1 (7 Sonnet lanes of 15).
+- **s154c OPEN, S8 presented, waiting for "ship"** (Claude lead, 2026-10-26; one chat, runbook 8 and 8b; record
+  repair/s154c/S154C.md): pause point rollout on all 105 spine briefs. verify_all 105 READY; page checks pass;
+  approval.py present s154c. Spend: reviewers 11 agents, 51 calls, 2.47M of 5M; lead 33.6M of 80M. Branch wip/s154c
+  (public). Post-ship owes: private sync (this session had read-only access to the private repo).
 - **Queued 2026-10-26 (no batch open):** intake of 24 UWorld questions and 11 library articles; 11 delta-ready proposals
   in repair/sources/intake/*_2026-10-26.md (psychosis-duration, bipolar-mania, substance, psych-medical, mdd, eating-disorders,
   somatic, delirium, antipsych-effects, ssri-effects; the patch prompt below takes them). Decisions (DIGEST 2026-10-26): pointers
