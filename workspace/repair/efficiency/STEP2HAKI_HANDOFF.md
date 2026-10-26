@@ -16,8 +16,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   question-style blocks (STANDING_DIRECTIONS "Pause point format"; gate and lint "pause-format"; builders use spinelib
   pause_blocks or a golden's div.sp-pause). Record repair/s154c/S154C.md. Spend: reviewers 11 agents, 51 calls, 2.47M of
   5M; lead about 36M of 80M. No batch open.
-- **Open from s154c (none blocks):** private sync owed: s154c_private_owed.tar.gz (sent to Jonathan) extracts into the
-  private clone's local-only/ (commit on wip/s154c, merge to main); 33 folders keep outline_before_s154c.json (a later
+- **Open from s154c (none blocks):** private repo synced (main 883ad34d);
+  33 folders keep outline_before_s154c.json (a later
   rebuild from outline must first fold in the s154c delta); the s154c tool notes (ready_gate AX_READY_JOBS=2 for big
   batches; a background command stops at 2 h).
 - **Queued 2026-10-26 (no batch open):** intake of 24 UWorld questions and 11 library articles; 11 delta-ready proposals
