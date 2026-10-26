@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-26, by Claude (NBME intake of 16 Psychiatry CMS items and the NBME versus UWorld analysis; no batch open).
+Last updated: 2026-10-26, by Claude (s154f launched; chat 1 scoped it and stopped at the context limit).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -11,6 +11,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
 ## State (rewrite after every step)
+
+- **s154f OPEN** (Claude lead, launched 2026-10-26 18:33; psych format patch plus the NBME layer; runbook 8b, multi-chat
+  by the context rule). Batch file repair/s154f/S154F.md (project copy claude/pending/S154F.md): scope (20 briefs),
+  findings, the chunk table C1 to C4 and the calls made. Branch wip/s154f in both repos; WAVE.json open (10 agents, 120
+  calls, 4M; lead 120M); hooks set up in chat 1 (a new container re-runs `patch.py setup s154f`). Step: chat 1 done
+  (launch and scoping; stopped at 257k context). Next: chunk C1 (tool change, 1a and 1b on 9 briefs). Spend: reviewers 0;
+  lead about 3M (chat 1). Continuation chats read this State, repair/s154f/S154F.md, DIGEST from 2026-10-26 s154f, and
+  the scratch in the private repo local-only/local/s154f/ (restored by the session-start cp).
 
 - **NBME intake 2026-10-26 (no batch, log-only):** 16 Psychiatry CMS items (form 6 inferred from AnKing Form_06 tags;
   Jonathan to confirm; no item numbers; NBME platform Q IDs 749759 to 749782) saved to their owners' s-intake files
