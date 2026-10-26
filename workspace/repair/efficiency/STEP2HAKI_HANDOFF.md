@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-26, by Claude (s154d shipped 1dd87de; no batch open; next launch s155 or the population mockup).
+Last updated: 2026-10-26, by Claude (s154e shipped 5bfeaa8: pause point tint; no batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,6 +12,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after ev## State (rewrite after every step)
 
+- **s154e shipped** (Claude lead, 2026-10-26, site layer): 5bfeaa8, page 0a73166d7c32. The pause point has the muted
+  caution tint again (ax-s154e; var(--caution-bg)). Record repair/s154e/S154E.md. No batch open.
 - **s154d shipped** (Claude lead, 2026-10-26, patch): 1dd87de, page 00f49879e28d. Ten psych briefs amended from the
   2026-10-26 intake. Record repair/s154d/S154D.md. Spend: reviewers 4 agents, 15 calls, 0.57M of 1M; lead about 20M of
   30M. No batch open.
