@@ -12,9 +12,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after ev## State (rewrite after every step)
 
-- **s154b presented** (Claude lead, 2026-10-26, patch per runbook 8b): eight psych briefs from the 2026-10-25 intake, all
-  READY, approval.py present s154b (page feef32c8eb40) in this chat; waiting for "ship". Record repair/s154b/S154B.md.
-  Spend: reviewers 4 agents, 14 calls, 0.42M of 1.5M; lead 17.9M of 40M. Private main lacks wip/s150c and wip/s150e.
+- **s154b shipped** (Claude lead, 2026-10-26, patch): 707bd07, live version s154b, page 82a09c3e0aee. Eight psych briefs
+  amended from the 2026-10-25 intake. Record repair/s154b/S154B.md. Spend: reviewers 4 agents, 14 calls, 0.42M of 1.5M;
+  lead about 20M of 40M. No batch open.
+- **Open from s154b (none blocks):** private main lacks wip/s150c and wip/s150e (MDD, SLEEP, TOX, DEM, EAT folders now
+  on private main via the s154b sync); s150cd tarball still owed; patch.py reps misses text held by two chained changes;
+  queue.csv open: stillbirth new-brief row (64468a8fef), row 59 prolactin.
 - **s154 shipped** (Claude lead, 2026-10-25): 78bb0a2, live version s154, page f6bfe9e7dae1. Seven pediatric GI briefs on the
   spine; infant-stool, feeding-refusal, rlq-pain, peds-constipation, cyclic-vomiting and bs-umbilical are hubs (Presentations
   36); bs-tef disease. Record repair/s154/S154.md; history in OPEN_WORK. "ship" took the report defaults (DIGEST 2026-10-25
