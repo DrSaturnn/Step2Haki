@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-25 20:10 EDT, by Claude (s154 S7 done, all seven READY; S8 next in a fresh chat).
+Last updated: 2026-10-25 20:40 EDT, by Claude (s154 S8 presented; awaiting "ship").
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,14 +12,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after ev## State (rewrite after every step)
 
-- **s154 open, S7 done: all READY** (Claude lead, 2026-10-25): Phase 2 GI B, pediatric, on wip/s154 (both repos). Briefs
+- **s154 open, S8 presented** (Claude lead, 2026-10-25): Phase 2 GI B, pediatric, on wip/s154 (both repos). Briefs
   bs-tef (disease), infant-stool, rlq-pain, peds-constipation, cyclic-vomiting, feeding-refusal, bs-umbilical (hubs;
-  Presentations 36 via repair/s154/40_presentations.json). All seven verify READY after three review rounds (2 HIGH and
-  30 MED in round 1, 2 MED in round 2, none in round 3). **Next: S8** in a fresh chat (`batch.py s8 s154 <ids>`, the
-  report per runbook section 5, approval.py present), then "ship" and S9. Report inputs: repair/s154/S154.md (S5 tables,
-  calls, deferred LOWs in repair/s154/adj_r2_passif.md, packet error, web-cache restore, one milk rule, hub words over
-  700, cyclic-vomiting prophylaxis deferred). Spend: wave 24 agents, 633 calls, 58.77M of 60M; lead 84.2M of 100M
-  (three rows in ledger_lead.csv).
+  Presentations 36). `batch.py s8` OK: 7 of 7 READY, gate, render, vendor, squeeze, pointer PASS; approval.py presented
+  (page 27d6a16d1774, chat session_013Q8GTi2zj6LCsqr3Za3WLB). Changelog entry 154 written. Found at S8: feeding-refusal
+  x01 x02 web page (MSD Esophageal Foreign Bodies) never pushed; refetched, same sha, committed private. **Next:** Jonathan's
+  "ship" in the presenting chat, then S9 (`batch.py ship`, OPEN_WORK, S9 section, DIGEST, State, `batch.py post`). A "ship"
+  sent to another chat approves nothing: re-run `batch.py s8` there to present again. Spend: wave 24 agents, 633 calls,
+  58.77M of 60M; lead 84.2M plus this chat.
 - **s153 shipped** (Claude lead, 2026-10-25): 7b301ef, live version s153, page 7c376718303a. Eight GI and hepatology A
   briefs on the spine; cholestasis and occult-gi-bleed are hubs (Presentations 30). Record repair/s153/S153.md; history
   in OPEN_WORK. Jonathan's "ship" took the report defaults (DIGEST 2026-10-25 s153 ship): S1 to S3 by builder agents
