@@ -19,8 +19,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Open from s154c (none blocks):** private repo synced (main 883ad34d);
   33 folders keep outline_before_s154c.json (a later
   rebuild from outline must first fold in the s154c delta); the s154c tool notes (ready_gate AX_READY_JOBS=2 for big
-  batches; a background command stops at 2 h). Owed to STANDING_DIRECTIONS at the next re-reviewing batch: the
-  word-cap line adds "the pause point does not count" (DIGEST 2026-10-26; tools already exclude it).
+  batches; a background command stops at 2 h). The "pause point does not count" rule lives in DIGEST
+  2026-10-26 and the tools only: do not edit STANDING_DIRECTIONS for it (Jonathan 2026-10-26: "definitely dont need to re
+  review every brief"); fold it in only in a batch that already re-reviews every brief.
+- **Next chat (Jonathan 2026-10-26):** the queued intake patch (prompt below). The 2026-10-26 proposals that touch a pause
+  point (mdd bereavement bait, attribution traps) were written as paragraphs before s154c: the patch writes them as
+  question-style blocks (a new pp-b block, masked deciding line and answer; gate "pause-format").
 - **Queued 2026-10-26 (no batch open):** intake of 24 UWorld questions and 11 library articles; 11 delta-ready proposals
   in repair/sources/intake/*_2026-10-26.md (psychosis-duration, bipolar-mania, substance, psych-medical, mdd, eating-disorders,
   somatic, delirium, antipsych-effects, ssri-effects; the patch prompt below takes them). Decisions (DIGEST 2026-10-26): pointers
