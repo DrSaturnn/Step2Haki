@@ -18,7 +18,9 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   calls, 4M; lead 120M); hooks set up in chat 1 (a new container re-runs `patch.py setup s154f`). Step: chat 1 done
   (launch and scoping; stopped at 257k context). Next: chunk C1 (tool change, 1a and 1b on 9 briefs). Spend: reviewers 0;
   lead 9.79M (chat 1, recorded). Continuation chats read this State, repair/s154f/S154F.md, DIGEST from 2026-10-26 s154f, and
-  the scratch in the private repo local-only/local/s154f/ (restored by the session-start cp).
+  the scratch in the private repo local-only/local/s154f/. Session start for s154f: clone both repos, then check out
+  wip/s154f in each (public `git fetch origin wip/s154f && git checkout wip/s154f`; private the same with `--depth 1`)
+  before the npm i and the local-only cp, so the scratch and the batch file come along.
 
 - **NBME intake 2026-10-26 (no batch, log-only):** 16 Psychiatry CMS items (form 6 inferred from AnKing Form_06 tags;
   Jonathan to confirm; no item numbers; NBME platform Q IDs 749759 to 749782) saved to their owners' s-intake files
