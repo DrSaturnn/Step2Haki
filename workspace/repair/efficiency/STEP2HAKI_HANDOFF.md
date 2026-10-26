@@ -101,7 +101,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 NBME presentation layer mockup (no batch; Jonathan 2026-10-26: cross-domain question types first, then how NBME
 describes symptoms):
 ```
-Step2Haki: mock up the NBME presentation layer per claude/pending/NBME_PRESENTATION_SPEC.md (cross-domain X1 and X2 first, then phrasing hovers B and view C; private artifact for review; no batch, no ship).
+Step2Haki: mock up the NBME presentation layer per claude/pending/NBME_PRESENTATION_SPEC.md and DECISIONS_DIGEST 2026-10-26 (cross-domain, both kinds: X1 tags and filter, X2 urgent-risk rows; then NBME behavior descriptions visible in table rows with extras in hovers, and view C; psychosis-duration and bipolar-mania; private artifact for review; no batch, no ship).
 ```
 
 The patch of the 2026-10-26n NBME proposals (runbook 8b; eight files; Jonathan confirms or corrects the inferred
