@@ -1,22 +1,22 @@
 {
   "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
-  "id": "s154c",
-  "open": false,
-  "plan_step": "s154c",
+  "id": "s154d",
+  "open": true,
+  "plan_step": "s154d",
   "roles": [
     "patch-review",
     "patch-review-opus"
   ],
-  "max_agents": 12,
-  "max_calls": 180,
-  "max_tokens": 5000000,
-  "set_by": "Jonathan, s154c launch 2026-10-26 (\"Budget: 12 agents, 180 calls, 5M reviewer tokens; lead 80M.\")",
+  "max_agents": 6,
+  "max_calls": 30,
+  "max_tokens": 1000000,
+  "set_by": "Jonathan, s154d launch 2026-10-26 (\"Step2Haki: run the queued intake amendments as a patch batch per claude/BATCH_RUNBOOK.md section 8b.\"); budget from the handoff patch prompt: 6 agents, 30 calls, 1M reviewer tokens; lead 30M",
   "previous": {
-    "id": "s154b",
-    "note": "s154b shipped 707bd07 2026-10-26 (Claude lead); reviewers 4 agents, 14 calls, 0.42M of 1.5M; lead about 20M of 40M"
+    "id": "s154c",
+    "note": "s154c shipped b002059 2026-10-26 (Claude lead); reviewers 11 agents, 51 calls, 2.47M of 5M; lead about 36M of 80M"
   },
-  "opened": "2026-10-26 10:05 EDT",
-  "note": "s154c open (Claude lead): pause point rollout, question-style blocks on all 105 spine briefs (claude/pending/PAUSE_POINT_ROLLOUT.md; runbook 8 and 8b)",
+  "opened": "2026-10-26 14:15 EDT",
+  "note": "s154d open (Claude lead): patch of the 2026-10-26 intake proposals (repair/sources/intake/*_2026-10-26.md; runbook 8b)",
   "batch_budgets": {
     "s138": {
       "agents": 20,
@@ -210,9 +210,15 @@
       "calls": 180,
       "tokens": 5000000,
       "lead_tokens": 80000000
+    },
+    "s154d": {
+      "agents": 6,
+      "calls": 30,
+      "tokens": 1000000,
+      "lead_tokens": 30000000
     }
   },
-  "max_lead_tokens": 80000000,
+  "max_lead_tokens": 30000000,
   "spent_agents": 0,
   "spent_calls": 0
 }
