@@ -1,27 +1,22 @@
 {
   "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
-  "id": "s154",
-  "open": false,
-  "plan_step": "s154",
+  "id": "s154b",
+  "open": true,
+  "plan_step": "s154b",
   "roles": [
-    "brief-build",
-    "acc-review",
-    "read-review",
-    "flag-review",
-    "wording-fix",
     "patch-review",
     "patch-review-opus"
   ],
-  "max_agents": 32,
-  "max_calls": 1000,
-  "max_tokens": 60000000,
-  "set_by": "Jonathan, s154 launch prompt 2026-10-25",
+  "max_agents": 8,
+  "max_calls": 60,
+  "max_tokens": 1500000,
+  "set_by": "Jonathan, s154b patch launch 2026-10-25 (budget from the handoff patch prompt: 8 agents, 60 calls, 1.5M; lead 40M)",
   "previous": {
-    "id": "s153",
-    "note": "s153 shipped 7b301ef 2026-10-25 (Claude lead); reviewers and builders 29/38 agents, 752/1270 calls, 65.61M/74M; lead about 104M of 120M (six rows); no batch open"
+    "id": "s154",
+    "note": "s154 shipped 78bb0a2 2026-10-25 (Claude lead); 24 agents, 633 calls, 58.77M of 60M; lead about 90M of 100M; no batch open"
   },
-  "opened": "2026-10-25 16:40 EDT",
-  "note": "s154 open (Claude lead): GI B, pediatric; S1 to S3 by builder agents (adopted s153). Split: reviewers 23 agents, 350 calls, 13M; builders 9 agents, 650 calls, 47M; lead 100M",
+  "opened": "2026-10-25 23:20 EDT",
+  "note": "s154b open (Claude lead): patch of six shipped psych briefs from the 2026-10-25 intake (runbook 8b)",
   "batch_budgets": {
     "s138": {
       "agents": 20,
@@ -204,9 +199,14 @@
         "calls": 650,
         "tokens": 47000000
       }
+    },
+    "s154b": {
+      "agents": 8,
+      "calls": 60,
+      "tokens": 1500000
     }
   },
-  "max_lead_tokens": 100000000,
+  "max_lead_tokens": 40000000,
   "spent_agents": 0,
   "spent_calls": 0
 }
