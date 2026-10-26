@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-26, by Claude (s154e shipped 5bfeaa8: pause point tint; no batch open).
+Last updated: 2026-10-26, by Claude (NBME intake of 16 Psychiatry CMS items and the NBME versus UWorld analysis; no batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -10,7 +10,21 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 ```
 
-## State (rewrite after ev## State (rewrite after every step)
+## State (rewrite after every step)
+
+- **NBME intake 2026-10-26 (no batch, log-only):** 16 Psychiatry CMS items (form 6 inferred from AnKing Form_06 tags;
+  Jonathan to confirm; no item numbers; NBME platform Q IDs 749759 to 749782) saved to their owners' s-intake files
+  (private main 6fea4834); queue.csv and misses.csv rows dated 2026-10-26, source nbme. 7 correct, 9 incorrect; his
+  picks were not in the paste, so every bait is inferred (each proposal says which distractor to swap if his pick
+  differs). Eight delta-ready proposals, repair/sources/intake/<brief>_2026-10-26n.md (the "n" suffix because the
+  same-date files shipped in s154d): panic (alprazolam rebound row; GAD bait item), psychosis-duration (older adult
+  with chronic psychosis row; alcohol pause point block; negative-symptom bait item), lithium-effects, toxidrome and
+  substance (bait items), capacity (comfort care row), bipolar-mania (valproate pancreatitis), somatic (optokinetic
+  nystagmus row). Two new-brief rows (adjustment disorder with anxiety; PTSD in a neglected child) await the trauma
+  home (NEW_BRIEFS_2026-10-26.md section 3). Analysis: claude/pending/NBME_VS_UWORLD.md (project and private repo).
+  nbme-intake confirmed stale (retired 2026-10-13 but its description never said so); a card retiring it and
+  updating board-brief was offered in the chat (form inference from tags, the platform Q ID, pp-b pause blocks,
+  proposal file suffix).
 
 - **s154e shipped** (Claude lead, 2026-10-26, site layer): 5bfeaa8, page 0a73166d7c32. The pause point has the muted
   caution tint again (ax-s154e; var(--caution-bg)). Record repair/s154e/S154E.md. No batch open.
@@ -31,9 +45,9 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   batches; a background command stops at 2 h). The "pause point does not count" rule lives in DIGEST
   2026-10-26 and the tools only: do not edit STANDING_DIRECTIONS for it (Jonathan 2026-10-26: "definitely dont need to re
   review every brief"); fold it in only in a batch that already re-reviews every brief.
-- **Next chat (Jonathan 2026-10-26, after the s154d ship):** "before either of these, i want to intake actual NBME questions for the next chat, and have it analyze syntax, structural differences between how uworld tests vs how actual retired NBME questions test." So the next chat is NBME intake (board-brief and nbme-intake skills; intake only, no page edits) plus a written comparison of NBME and UWorld item style (prompt below); s155 and the population mockup follow. The 2026-10-26 proposals that touch a pause
-  point (mdd bereavement bait, attribution traps) were written as paragraphs before s154c: the patch writes them as
-  question-style blocks (a new pp-b block, masked deciding line and answer; gate "pause-format").
+- **Next chat:** the patch of the 2026-10-26n NBME proposals (runbook 8b; confirm Jonathan's picks first, see
+  each proposal's Edit note), or s155, or the population mockup (prompts below). The 2026-10-26 proposals that touch a
+  pause point were written as question-style blocks (pp-b; gate "pause-format").
 - **Queued 2026-10-26 (no batch open):** intake of 24 UWorld questions and 11 library articles; 11 delta-ready proposals
   in repair/sources/intake/*_2026-10-26.md (psychosis-duration, bipolar-mania, substance, psych-medical, mdd, eating-disorders,
   somatic, delirium, antipsych-effects, ssri-effects; the patch prompt below takes them). Decisions (DIGEST 2026-10-26): pointers
@@ -81,9 +95,10 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## Next launch prompt (paste into a fresh chat)
 
-NBME intake and NBME versus UWorld style analysis (no batch):
+The patch of the 2026-10-26n NBME proposals (runbook 8b; eight files; Jonathan confirms or corrects the inferred
+baits first):
 ```
-Step2Haki: intake these NBME questions per the board-brief and nbme-intake skills (sort, link, log, queue proposals; do not build), then compare how they test against UWorld (stem syntax, structure, lead-ins, distractor design, how the deciding clue is placed) using the local UWorld question files, and write the analysis to claude/pending/NBME_VS_UWORLD.md.
+Step2Haki: run the queued intake amendments (repair/sources/intake/*_2026-10-26n.md) as a patch batch per claude/BATCH_RUNBOOK.md section 8b.
 ```
 
 Population entry type mockup (no batch):
