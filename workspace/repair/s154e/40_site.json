@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "</body>",
+   "with": "<style id=\"ax-s154e\">\n/* ============ s154e: the pause point keeps a muted caution tint (Jonathan 2026-10-26: \"the yellow tinted background\n   helped distinguish it\"), like the s148f muted tiles (How NBME framed it, Transferable rule, Principle). */\nhtml:is([data-theme],:not([data-theme])) body:not(.qx-notint) :is(.brief.sp,.brief) .sp-pause{background:var(--caution-bg);background-image:none}\n</style>\n</body>",
+   "note": "s154e (site layer, Jonathan 2026-10-26): muted caution tint on the pause point"
+  }
+ ]
+}
