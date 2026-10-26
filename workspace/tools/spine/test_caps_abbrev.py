@@ -8,7 +8,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from outline_check import strip_aka, strip_collapsed, strip_hover  # noqa: E402
+from outline_check import strip_aka, strip_collapsed, strip_hover, strip_pause  # noqa: E402
 from verify import ACR_OK  # noqa: E402
 
 ok = bad = 0
@@ -49,5 +49,10 @@ expect('systems panel body dropped', 'gone4' not in strip_collapsed(sy) and 'gon
 expect('summary line and text around it kept', all(w in strip_collapsed(sy) for w in ('What tics do', 'keep3', 'keep4')))
 expect('other details kept', 'x' in strip_collapsed('<details class="other"><summary>s</summary>x</details>'))
 
+# ---- s154c: the pause point is not counted (Jonathan 2026-10-26)
+pp = 'keep5 <div class="sp-pause"><b class="pp-t">Pause point</b>\n<div class="pp-b">\n<span class="sl">gone6</span>\n<span class="pp-a">&rarr; <span class="mask">gone7</span></span>\n</div>\n<p class="pp-x">gone8</p>\n</div> keep6'
+expect('pause point blocks dropped, nested divs included', all(w not in strip_pause(pp) for w in ('gone6', 'gone7', 'gone8', 'Pause point')))
+expect('text around the pause point kept', all(w in strip_pause(pp) for w in ('keep5', 'keep6')))
+expect('legacy paragraph pause point dropped', 'gone9' not in strip_pause('a <p class="sp-pause"><b>Pause point.</b> gone9</p> b'))
 print('test_caps_abbrev: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)

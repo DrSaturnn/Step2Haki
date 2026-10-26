@@ -32,8 +32,10 @@ PRESENT = re.compile(r'\b(pain|cough|fever|murmur|cyanosis|vomiting|diarrhea|sto
 
 
 def words_above(inner):
+    # s154c (Jonathan 2026-10-26): the pause point is not counted (outline_check.strip_pause)
+    from outline_check import strip_pause
     m = BANK.search(inner)
-    return len(P.text(inner[:m.start()] if m else inner).split())
+    return len(P.text(strip_pause(inner[:m.start()] if m else inner)).split())
 
 
 def fmt(b):

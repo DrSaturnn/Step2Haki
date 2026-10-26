@@ -100,6 +100,27 @@ def strip_collapsed(html):
     return re.sub(r'(<details class="sp-sys"[^>]*>\s*<summary\b.*?</summary>).*?</details>', r'\1 ', html, flags=re.S)
 
 
+def strip_pause(html):
+    """the pause point (div.sp-pause, s154c question-style blocks; or a legacy p.sp-pause) does not count against the
+    soft cap, like hovers (Jonathan 2026-10-26: "these pause points wont be counted in the overall word count either")"""
+    html = re.sub(r'<p class="sp-pause">.*?</p>', ' ', html, flags=re.S)
+    out, i = [], 0
+    while True:
+        j = html.find('<div class="sp-pause">', i)
+        if j < 0:
+            out.append(html[i:])
+            return ''.join(out)
+        out.append(html[i:j])
+        depth, end = 0, len(html)
+        for m in re.finditer(r'<div\b|</div>', html[j:]):
+            depth += 1 if m.group(0).startswith('<div') else -1
+            if depth == 0:
+                end = j + m.end()
+                break
+        out.append(' ')
+        i = end
+
+
 class Check:
     def __init__(self, path, page, cards):
         self.path, self.dir = path, os.path.dirname(os.path.abspath(path))
@@ -227,7 +248,7 @@ class Check:
 
     def c1c2(self):
         o = self.o
-        words = len(H.unescape(re.sub('<[^>]+>', '', strip_aka(strip_hover(strip_collapsed(self.html))))).split()) if self.html else 0
+        words = len(H.unescape(re.sub('<[^>]+>', '', strip_aka(strip_hover(strip_collapsed(strip_pause(self.html)))))).split()) if self.html else 0
         cap = CAPS.get(o['entry'])
         listed = (o.get('cap_overage') or {}).get('reason')
         if cap and words > cap * 1.02 and listed:

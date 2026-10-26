@@ -19,7 +19,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Open from s154c (none blocks):** private repo synced (main 883ad34d);
   33 folders keep outline_before_s154c.json (a later
   rebuild from outline must first fold in the s154c delta); the s154c tool notes (ready_gate AX_READY_JOBS=2 for big
-  batches; a background command stops at 2 h).
+  batches; a background command stops at 2 h). Owed to STANDING_DIRECTIONS at the next re-reviewing batch: the
+  word-cap line adds "the pause point does not count" (DIGEST 2026-10-26; tools already exclude it).
 - **Queued 2026-10-26 (no batch open):** intake of 24 UWorld questions and 11 library articles; 11 delta-ready proposals
   in repair/sources/intake/*_2026-10-26.md (psychosis-duration, bipolar-mania, substance, psych-medical, mdd, eating-disorders,
   somatic, delirium, antipsych-effects, ssri-effects; the patch prompt below takes them). Decisions (DIGEST 2026-10-26): pointers
@@ -171,5 +172,5 @@ The next batch's launch prompt comes from those files unless the s141 closing re
 - Content comes from the old briefs or from a source opened that day, with a verbatim quote. Board sources first.
 - Mnemonics only if widely accepted. Pastel colors; horizontal timelines.
 - Vendor text never enters the public repo. Commit as DrSaturnn with the noreply email. Never print the token.
-- Hover-card text and the collapsed systems panel do not count against the word cap (2026-10-13); they are the place for guideline-only detail.
+- Hover-card text, the collapsed systems panel and the pause point do not count against the word cap (2026-10-13; pause point 2026-10-26); hovers and the panel are the place for guideline-only detail.
 - Start a fresh chat when the context passes about 225k (Jonathan 2026-10-25, was 350k; a chat starts at about 122k to 130k). Continuation chats use the short read list in the runbook.
