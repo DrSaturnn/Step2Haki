@@ -44,15 +44,29 @@ def main(b):
         print('ready: no spine builds in %s' % b)
         return 0
     have, bad = folders(), []
+    todo = []
     for bid in builds:
         d = have.get(bid)
         if not d:
             bad.append('%s: no local spine folder' % bid)
             continue
+        todo.append(d)
+
+    def one(d):
         r = subprocess.run([sys.executable, os.path.join(WS, 'tools', 'spine', 'verify.py'), d], capture_output=True,
                            text=True, cwd=WS)
-        last = (r.stdout.strip().splitlines() or ['?'])[-1]
-        if r.returncode != 0:
+        return r.returncode, (r.stdout.strip().splitlines() or ['?'])[-1]
+    # s154c (105 briefs, about 95 s each): AX_READY_JOBS runs the same full verify on several folders at once; the
+    # check per brief is unchanged and the default stays one at a time
+    jobs = max(1, int(os.environ.get('AX_READY_JOBS', '1') or 1))
+    if jobs > 1:
+        from concurrent.futures import ThreadPoolExecutor
+        with ThreadPoolExecutor(jobs) as ex:
+            results = list(ex.map(one, todo))
+    else:
+        results = [one(d) for d in todo]
+    for rc, last in results:
+        if rc != 0:
             bad.append(last)
     if bad:
         print('ready: NOT READY: ' + ' | '.join(bad))
