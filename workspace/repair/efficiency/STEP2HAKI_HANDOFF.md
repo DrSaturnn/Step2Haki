@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-25 21:30 EDT, by Claude (s154 shipped; next launch s155).
+Last updated: 2026-10-26 07:30 EDT, by Claude (s154b shipped; next launch s155).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -63,8 +63,8 @@ New board questions, any time (intake only; the skill never edits the page):
 Step2Haki: intake these board questions per the board-brief skill (propose new briefs; do not build).
 ```
 
-The next patch of shipped briefs, when new intake proposals queue up (runbook 8b; one chat; budget from s150e: 8 agents,
-60 calls, 1.5M reviewer tokens; lead 40M):
+The next patch of shipped briefs, when new intake proposals queue up (runbook 8b; one chat; budget from s154b (used 4 agents, 14 calls, 0.42M; lead about 20M): 6 agents,
+30 calls, 1M reviewer tokens; lead 30M):
 ```
 Step2Haki: run the queued intake amendments as a patch batch per claude/BATCH_RUNBOOK.md section 8b.
 ```
