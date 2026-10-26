@@ -53,6 +53,10 @@ practice or a guideline differs from the board answer, teach the board answer an
    teach the board answer and add the "In practice:" hover.
 
 ## S2. Build
+Pause point (s154c, STANDING_DIRECTIONS "Pause point format"): question-style blocks, never a paragraph: one
+`div.pp-b` per bait (bold setup, "Offered as" with the baits in `<em>`, masked deciding line, arrow to the masked answer),
+at most one `p.pp-x`; copy a live golden's `div.sp-pause` or use spinelib `pause_blocks`. Gate and lint "pause-format".
+
 1. Write `{folder}/author.py` on author_lib, with this import:
    `import os, sys; sys.path.insert(0, os.path.join(os.path.abspath(__file__).split('/repair/')[0], 'tools', 'spine'))`
    then `from author_lib import *`. Write `{folder}/disp.py` the same way for the card dispositions.

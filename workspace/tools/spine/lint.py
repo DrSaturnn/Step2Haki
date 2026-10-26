@@ -21,6 +21,7 @@ item 15) before any reviewer runs. It catches the categories that drew most s148
               runs straight into the button, so the page reads "symptomsIn practice"; write +' '+ before the pop
   pairs       (s150 audit, 2026-10-23) a Pairs with clause naming two titles ("<i>A</i> and <i>B</i>: ..."): the card
               renderer makes a card for A whose description reads "And"; one title per clause
+  pause-format (s154c, Jonathan 2026-10-26) the pause point is question-style blocks (div.sp-pause, pp-b, masked answer)
   mask-leak   (Jonathan 2026-10-24, no screenshots) a short study-mode answer (4 words or fewer) given away by its own
               card label or row's first cell: the answer's head word (first content word of 5 letters or more) is in
               the label ("Thiamine" labeling a card whose masked answer is "thiamine"); relabel or mask the repeat
@@ -362,6 +363,56 @@ def lint_maskleak(brief_html):
                            % (text(label)[:50], ans[:60]))
     return out
 
+
+def pause_format(brief_html):
+    """s154c (Jonathan 2026-10-26: "let's go with the recommended type for pause points. let's apply to all of them."):
+    a spine brief's pause point is div.sp-pause with the label b.pp-t, then one div.pp-b per bait (span.sl setup first,
+    an optional span.si.pp-off with the baits in <em>, an optional deciding span.si wholly masked, and span.pp-a whose
+    answer is masked), then at most one p.pp-x. Returns the problems (gate.py fails on them; lint warns)."""
+    if 'data-spine="2"' not in brief_html[:400]:
+        return []
+    out = []
+    if re.search(r'<p class="sp-pause"', brief_html):
+        out.append('pause-format: the pause point is a paragraph (p.sp-pause); use the question-style blocks')
+    i = brief_html.find('<div class="sp-pause">')
+    if i < 0:
+        return out or ['pause-format: no div.sp-pause pause point']
+    depth, j = 0, len(brief_html)
+    for t in re.finditer(r'<(/?)div\b[^>]*>', brief_html[i:]):
+        depth += -1 if t.group(1) else 1
+        if depth == 0:
+            j = i + t.start()
+            break
+    inner = brief_html[i + len('<div class="sp-pause">'):j].rstrip('\n')
+    if len(re.findall(r'class="sp-pause"', brief_html)) != 1:
+        out.append('pause-format: more than one pause point')
+    if not inner.startswith('<b class="pp-t">Pause point</b>'):
+        out.append('pause-format: the pause point does not open with <b class="pp-t">Pause point</b>')
+    blocks = re.findall(r'<div class="pp-b">\n(.*?)\n</div>', inner, re.S)
+    if not blocks:
+        out.append('pause-format: no pp-b block')
+    for i, b in enumerate(blocks, 1):
+        lines = b.split('\n')
+        if not lines[0].startswith('<span class="sl">'):
+            out.append('pause-format: block %d does not open with its setup line (span.sl)' % i)
+        if not lines[-1].startswith('<span class="pp-a">&rarr; <span class="mask">'):
+            out.append('pause-format: block %d does not end with a masked answer (span.pp-a)' % i)
+        for ln in lines[1:-1]:
+            if ln.startswith('<span class="si pp-off">'):
+                if '<em>' not in ln:
+                    out.append('pause-format: block %d offered-as line has no underlined bait (<em>)' % i)
+            elif not ln.startswith('<span class="si"><span class="mask">'):
+                out.append('pause-format: block %d has a line that is neither offered-as nor a masked deciding line' % i)
+    rest = re.sub(r'<div class="pp-b">\n.*?\n</div>', '', inner, flags=re.S)
+    if len(re.findall(r'<p class="pp-x">', rest)) > 1:
+        out.append('pause-format: more than one extra line (p.pp-x)')
+    return out
+
+
+def lint_pausefmt(brief_html):
+    return pause_format(brief_html)
+
+
 def lint(folder, facts_dir=None):
     out = []
     bh = os.path.join(folder, 'brief.html')
@@ -369,7 +420,7 @@ def lint(folder, facts_dir=None):
         brief_html = open(bh, encoding='utf-8').read()
         out += lint_next_step(brief_html) + lint_alias(brief_html) + lint_threshold(brief_html) + lint_prose(brief_html) \
             + lint_bold(brief_html) + lint_reasons(brief_html) + lint_spacing(brief_html) + lint_pairs(brief_html) \
-            + lint_maskleak(brief_html)
+            + lint_maskleak(brief_html) + lint_pausefmt(brief_html)
     try:
         cm = json.load(open(os.path.join(folder, 'claim_map.json'), encoding='utf-8'))
     except (OSError, ValueError):
@@ -388,7 +439,8 @@ def page_sweep(argv):
     page = argv[argv.index('--page') + 1]
     check = argv[argv.index('--check') + 1] if '--check' in argv else 'prose'
     fn = {'prose': lint_prose, 'next-step': lint_next_step, 'threshold': lint_threshold, 'alias': lint_alias,
-          'bold': lint_bold, 'reasons': lint_reasons, 'mask-leak': lint_maskleak}[check]
+          'bold': lint_bold, 'reasons': lint_reasons, 'mask-leak': lint_maskleak,
+          'pause-format': lint_pausefmt}[check]
     html = read_page(page)
     rows = []
     for b in briefs(html):

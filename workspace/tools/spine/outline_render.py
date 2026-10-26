@@ -35,7 +35,7 @@ Blocks (body items): a rich value (rendered as is), or {"type": ...}:
       renders one row group per order, each spanning only its own results (a First step band with several orders pairs them)
       the diagnostic workup template, layout 5a (repair/efficiency/WORKUP_5A_SPEC.md; zones First step, By
       presentation, Next step, Diagnostic test, Skip); styles and script are the site-wide s130 ones
-  pause {text} | timeline {cells [[bold, rest]]}
+  pause {text} or {blocks [{setup, offered, deciding, answer}], extra} (s154c: blocks; text is legacy) | timeline {cells [[bold, rest]]}
 """
 import difflib
 import json
@@ -145,7 +145,9 @@ class Renderer:
             return w5a(b, r)
         if t == 'ladder':
             return S.ladder([S.rung(n, tag, r(when), r(body)) for n, tag, when, body in b['rungs']])
-        if t == 'pause':
+        if t == 'pause':   # s154c: {blocks: [{setup, offered, deciding, answer}], extra} renders question-style blocks
+            if b.get('blocks'):
+                return S.pause_blocks([{k: r(v) for k, v in x.items() if v} for x in b['blocks']], r(b['extra']) if b.get('extra') else None)
             return S.pause(r(b['text']))
         if t == 'timeline':
             return S.timeline([(r(x), r(y)) for x, y in b['cells']])

@@ -6,6 +6,7 @@ whole process"; runbook section 8b). The lead runs these and reads only their on
   python3 tools/spine/patch.py s3 <batch> <folder>...         facts_from_spec + build + copy 10_*.json, verify --mech,
                                                               batch page, gate, render, preflight, vendor, squeeze
   python3 tools/spine/patch.py review <batch> <round> --opus <folder,...> --sonnet <folder,...> [--since-round K]
+                                 [--per-lane N] [--note FILE]   (s154c: lanes of at most N briefs; FILE appended to INSTRUCTIONS.md)
                                                               packets (--since), one combined lane per model,
                                                               INSTRUCTIONS.md and LANE_PACKET.md; prints launch prompts
   python3 tools/spine/patch.py file <batch> <round>           split each lane's receipt.md into the acc, read and flags
@@ -189,7 +190,7 @@ def text_window(bt, changed, pad=6):
     return '\n'.join(out)
 
 
-def review(batch, rnd, opus, sonnet, since_round=None):
+def review(batch, rnd, opus, sonnet, since_round=None, per_lane=0, note=None):
     root = os.path.join(WS, 'repair', 'efficiency', 'lanes', batch, 'r%d' % rnd)
     pk = os.path.join(WS, 'repair', 'migration', 'spine', 'packets', '%s-r%d' % (batch, rnd))
     page = os.path.join(logdir(batch), 'index.html')
@@ -200,10 +201,19 @@ def review(batch, rnd, opus, sonnet, since_round=None):
             keys += list(v) if isinstance(v, (dict, list)) else []
     allow = ', '.join(sorted({str(x) for x in keys}))
     prompts = []
+    # s154c (105 briefs): --per-lane N splits each model's briefs into lanes of at most N (lane_<model>_<k>)
+    groups = []
     for model, group in (('opus', opus), ('sonnet', sonnet)):
         if not group:
             continue
-        lane = os.path.join(root, 'lane_%s' % model)
+        if per_lane and len(group) > per_lane:
+            k = -(-len(group) // per_lane)
+            size = -(-len(group) // k)
+            groups += [(model, '%s_%d' % (model, i + 1), group[i * size:(i + 1) * size]) for i in range(k)]
+        else:
+            groups.append((model, model, group))
+    for model, lname, group in groups:
+        lane = os.path.join(root, 'lane_%s' % lname)
         if os.path.isdir(lane):
             shutil.rmtree(lane)
         os.makedirs(lane)
@@ -228,10 +238,21 @@ def review(batch, rnd, opus, sonnet, since_round=None):
             new = json.load(open(os.path.join(f, 'facts_%s.json' % batch)))['facts'] \
                 if os.path.exists(os.path.join(f, 'facts_%s.json' % batch)) else []
             fid = {x['id'] for x in new}
+            # s154c: a restated claim (new_text changed against claims_before_<batch>.json, no new fact) is a changed
+            # line's claim too; its quotes come from facts.json, or from the claim's own sources when there is none
+            cb = os.path.join(f, 'claims_before_%s.json' % batch)
+            before = {c['id']: c.get('new_text') for c in json.load(open(cb))['claims']} if os.path.exists(cb) else {}
             claims = [c for c in json.load(open(os.path.join(f, 'claim_map.json')))['claims']
-                      if set(c.get('derived_from', [])) & fid]
+                      if set(c.get('derived_from', [])) & fid or (before and before.get(c['id']) != c.get('new_text'))]
             cited = {i for c in claims for i in c.get('derived_from', [])}
-            facts = [x for x in json.load(open(os.path.join(f, 'facts.json')))['facts'] if x['id'] in cited]
+            fj = os.path.join(f, 'facts.json')
+            facts = [x for x in json.load(open(fj))['facts'] if x['id'] in cited] if os.path.exists(fj) else []
+            have = {x['id'] for x in facts}
+            for c in claims:
+                for sx in c.get('sources', []):
+                    if sx.get('id') and sx['id'] not in have:
+                        have.add(sx['id'])
+                        facts.append({'id': sx['id'], 'kind': 'claim source', 'title': sx.get('source', '')[:80], 'quote': sx.get('source_says', '')})
             packet.append('\n## Brief: %s\n' % b)
             for p in PARTS:
                 packet.append('%s receipt lines:\n%s' % (p, open(os.path.join(out, p, 'deps.txt')).read().strip()))
@@ -244,9 +265,9 @@ def review(batch, rnd, opus, sonnet, since_round=None):
         open(os.path.join(lane, 'LANE_PACKET.md'), 'w').write('\n'.join(packet) + '\n')
         n = len(group)
         budget = min(25, 3 + n + 2)
-        open(os.path.join(lane, 'INSTRUCTIONS.md'), 'w').write(RULES % {
+        open(os.path.join(lane, 'INSTRUCTIONS.md'), 'w').write((RULES % {
             'aliases': os.path.join(WS, 'repair', 'efficiency', 'ALIASES.json'), 'abbrev': allow,
-            'receipt': os.path.join(lane, 'receipt.md'), 'budget': budget})
+            'receipt': os.path.join(lane, 'receipt.md'), 'budget': budget}) + (open(note).read() if note else ''))
         role = 'patch-review-opus' if model == 'opus' else 'patch-review'
         prompts.append('Role: %s\nPlan step: %s\nLane: %s\nBudget: %d\nRead INSTRUCTIONS.md in your lane first, then '
                        'LANE_PACKET.md; write one receipt.md.' % (role, batch, lane, budget))
@@ -351,7 +372,8 @@ def main(a):
         rnd = int(a[2])
         opt = {k: v for k, v in zip(a[3::2], a[4::2])}
         sp = lambda k: [x for x in opt.get(k, '').split(',') if x]
-        review(batch, rnd, sp('--opus'), sp('--sonnet'), int(opt['--since-round']) if '--since-round' in opt else None)
+        review(batch, rnd, sp('--opus'), sp('--sonnet'), int(opt['--since-round']) if '--since-round' in opt else None,
+               int(opt.get('--per-lane', 0)), opt.get('--note'))
     elif cmd == 'file':
         file_receipts(batch, int(a[2]))
     elif cmd == 'reps':

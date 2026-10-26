@@ -97,9 +97,19 @@ CATALOG = {
            'fill the sourced trigger; the last rung the exam tests says "Top rung"'),
     'mimic-row': ('every mimic row (li[data-mrow]) matches its data-mrow-v hash, every copy of a row id is identical, and a spoke row also sits in its hub table when that hub is on the page',
                   'never hand-edit a mimic row: edit tools/typec/mimics.py, rebuild every brief that uses the row (lifechart.course_table) and ship them together'),
+    'pause-format': ('every spine brief\'s pause point is question-style blocks (s154c; tools/spine/lint.py pause_format)',
+                     'div.sp-pause > b.pp-t, then one div.pp-b per bait (span.sl, optional span.si.pp-off with <em> baits, optional masked span.si, span.pp-a with a masked answer), at most one p.pp-x'),
     'K3': ('every mnemonic names the widely taught source it comes from (data-mn-src)',
            'add data-mn-src="First Aid" / "AnKing" / "AMBOSS" / "source explanation" / a URL; a mnemonic with no such source is removed, never invented'),
 }
+
+
+def _pause_format(brief_html):
+    import importlib.util
+    sp = importlib.util.spec_from_file_location('spine_lint', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'spine', 'lint.py'))
+    m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
+    globals()['_pause_format'] = m.pause_format
+    return m.pause_format(brief_html)
 
 
 class Gate:
@@ -196,6 +206,13 @@ def check_page(page, g, page_path):
                 continue
             seen_dup.add(b.id)
             g.fail('brief-id', b.id, 'brief id %s occurs %d times' % (b.id, idc[b.id]))
+        # ---- s154c: every spine brief's pause point is question-style blocks (tools/spine/lint.py pause_format)
+        # a paragraph pause point fails only once the s154c site layer is on the page (per-brief builds of the batch
+        # replace one brief on a pre-s154c base page); a malformed block pause point always fails
+        for prob in _pause_format(page[b.start:b.end]):
+            if 'paragraph (p.sp-pause)' in prob and '<style id="ax-s154c">' not in page:
+                continue
+            g.fail('pause-format', b.id, prob)
         if not re.match(r'^[a-z0-9][a-z0-9-]*$', b.id):
             g.fail('brief-id', b.id, 'brief id %r is not lowercase [a-z0-9-]' % b.id)
         if b.kind == 'bs' and not b.id.startswith('bs-'):

@@ -154,5 +154,19 @@ expect('mask-leak: a long answer is skipped', L.lint_maskleak(CARD % ('Thiamine'
 ROW = '<table><tbody><tr><td>%s</td><td><span><span class="mask">%s</span></span></td></tr></tbody></table>'
 expect('mask-leak: first cell repeats the answer', len(L.lint_maskleak(ROW % ('Tobacco smoking', 'Smoking'))) == 1)
 expect('mask-leak: first cell without the answer passes', L.lint_maskleak(ROW % ('Gait, incontinence, apathy', 'Normal pressure hydrocephalus')) == [])
+# ---- pause-format (s154c, Jonathan 2026-10-26: question-style pause points)
+PPOK = ('<div class="brief sp" id="x" data-spine="2"><div class="sp-pause"><b class="pp-t">Pause point</b>\n'
+        '<div class="pp-b">\n<span class="sl">Setup</span>\n<span class="si pp-off">Offered as <em>bait</em></span>\n'
+        '<span class="si"><span class="mask">Decider</span></span>\n<span class="pp-a">&rarr; <span class="mask">Answer</span></span>\n'
+        '</div>\n<p class="pp-x">Extra.</p>\n</div></div>')
+expect('pause-format: the block format passes', L.pause_format(PPOK) == [])
+expect('pause-format: a paragraph fails', any('paragraph' in x for x in L.pause_format(
+    '<div class="brief sp" id="x" data-spine="2"><p class="sp-pause"><b>Pause point.</b> The bait.</p></div>')))
+expect('pause-format: an unmasked answer fails', any('masked answer' in x for x in L.pause_format(PPOK.replace('<span class="mask">Answer</span>', 'Answer'))))
+expect('pause-format: offered-as without <em> fails', any('underlined bait' in x for x in L.pause_format(PPOK.replace('<em>bait</em>', 'bait'))))
+expect('pause-format: an unmasked deciding line fails', any('neither' in x for x in L.pause_format(PPOK.replace('<span class="si"><span class="mask">Decider</span></span>', '<span class="si">Decider</span>'))))
+expect('pause-format: two extra lines fail', any('extra line' in x for x in L.pause_format(PPOK.replace('<p class="pp-x">Extra.</p>', '<p class="pp-x">A.</p>\n<p class="pp-x">B.</p>'))))
+expect('pause-format: a non-spine brief is skipped', L.pause_format(PPOK.replace('data-spine="2"', '')) == [])
 print('test_lint: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)
+

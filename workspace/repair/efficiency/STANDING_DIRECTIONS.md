@@ -52,6 +52,7 @@ Source keys:
   - discriminator tables give each diagnosis's timeline, and are repeated in every topic brief they pertain to, because readers review one brief at a time and these are the most heavily tested contrasts. [SPEC r4] [MEM]
 - **Psych tables:** they keep the duration column, because NBME tests long duration windows (for example 2 years); the long timelines are clarified. [MEM]
 - **Step 4 Workup:** the diagnostic workup tree, then the clue table, then the pause point. [SPEC r2]
+- **Pause point format (2026-10-26, s154c):** question-style blocks, one per bait: a bold setup line in vignette words (not the answer); an "Offered as" line in caution with the tempting wrong answers underlined; the deciding line on the accent rule; an arrow to the answer in accent; at most one muted extra line for a contrast that is not a bait. The deciding line and the answer are masked in study mode. Wording comes from the brief's own claims; a hover sits on the line it explains. Lint and gate "pause-format". [Jonathan 2026-10-26: "let's go with the recommended type for pause points. let's apply to all of them."]
 - **The Narrow or clue table:** Clue | Points to | Next move, with NO questions and no in or out chips. [SPEC, MDD pilot review 2026-10-07]
 - **Workups are not question-led.** s115 (question-led workups) was dropped on 2026-10-07, and Jonathan re-stated the rule on 2026-10-10: a workup must not open with a question. [SPEC status] [Jonathan 2026-10-10]
 - **Captions and headers** are plain labels, never catchy phrases. [SPEC r2] [OW s17]
@@ -168,7 +169,6 @@ Source keys:
 - **Commits and the token:** commit as DrSaturnn with the noreply email; never print the token; keep a clean tree at the end of every turn. [HO]
 
 ## On hold or pending
-- **A Cluster A personality disorder brief:** on hold, to revisit later. [MEM]
 - **A Step2Haki companion Chrome extension:** started 2026-10-09. [MEM]
 - **PSGN latency figure:** an open R1 question. [handoff State]
 
@@ -179,6 +179,7 @@ Source keys:
   rewritten from s149 on; no full backfill of the others for now. Items keep 3 choices.
 - **Question card space:** unanswered cards in a set share the height of the tallest unanswered card; the card grows
   when the answer opens. (Replaces the s148f "tallest card with its answer open".)
+- **A Cluster A personality disorder brief:** the hold of 2026-10-03 is lifted; one brief per cluster (claude/pending/NEW_BRIEFS_2026-10-26.md). [Jonathan 2026-10-26: "cluster a can be lifted yes"]
 - **Bold key words:** bottom lines bold their key words and criteria; verify lints a bottom line with no bold
   (tools/spine/lint.py "bold"; outline_check flags it; s148g bolded the 56 that had none, bold only).
 - **Hover cards on touch:** a tap opens the same floating card and animation as desktop hover; no inline drop-down that

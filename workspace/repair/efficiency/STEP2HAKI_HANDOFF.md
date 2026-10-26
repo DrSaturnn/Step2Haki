@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-26 09:25 EDT, by Claude (2026-10-26 intake and decisions; nothing shipped; next launch s155, s154c or the patch).
+Last updated: 2026-10-26, by Claude (s154c open, S4 round 1).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,6 +12,10 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after ev## State (rewrite after every step)
 
+- **s154c OPEN** (Claude lead, 2026-10-26, launched 10:00 EDT; one chat, runbook 8 and 8b; batch file repair/s154c/S154C.md):
+  pause point rollout on all 105 spine briefs. Budget 12 agents, 180 calls, 5M reviewer tokens; lead 80M. Branch wip/s154c
+  (public). Done: site layer (repair/s154c/40_site.json), pause-format lint+gate, 105 deltas (local/s154c/splits.py,
+  gen.py), 105 MECHANICAL PASS (--fast), batch page checks pass. Step: S4 round 1 (7 Sonnet lanes of 15).
 - **Queued 2026-10-26 (no batch open):** intake of 24 UWorld questions and 11 library articles; 11 delta-ready proposals
   in repair/sources/intake/*_2026-10-26.md (psychosis-duration, bipolar-mania, substance, psych-medical, mdd, eating-disorders,
   somatic, delirium, antipsych-effects, ssri-effects; the patch prompt below takes them). Decisions (DIGEST 2026-10-26): pointers
