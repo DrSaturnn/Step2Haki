@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-25 20:40 EDT, by Claude (s154 S8 presented; awaiting "ship").
+Last updated: 2026-10-25 21:30 EDT, by Claude (s154 shipped; next launch s155).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,14 +12,15 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after ev## State (rewrite after every step)
 
-- **s154 open, S8 presented** (Claude lead, 2026-10-25): Phase 2 GI B, pediatric, on wip/s154 (both repos). Briefs
-  bs-tef (disease), infant-stool, rlq-pain, peds-constipation, cyclic-vomiting, feeding-refusal, bs-umbilical (hubs;
-  Presentations 36). `batch.py s8` OK: 7 of 7 READY, gate, render, vendor, squeeze, pointer PASS; approval.py presented
-  (page 27d6a16d1774, chat session_013Q8GTi2zj6LCsqr3Za3WLB). Changelog entry 154 written. Found at S8: feeding-refusal
-  x01 x02 web page (MSD Esophageal Foreign Bodies) never pushed; refetched, same sha, committed private. **Next:** Jonathan's
-  "ship" in the presenting chat, then S9 (`batch.py ship`, OPEN_WORK, S9 section, DIGEST, State, `batch.py post`). A "ship"
-  sent to another chat approves nothing: re-run `batch.py s8` there to present again. Spend: wave 24 agents, 633 calls,
-  58.77M of 60M; lead 84.2M plus this chat.
+- **s154 shipped** (Claude lead, 2026-10-25): 78bb0a2, live version s154, page f6bfe9e7dae1. Seven pediatric GI briefs on the
+  spine; infant-stool, feeding-refusal, rlq-pain, peds-constipation, cyclic-vomiting and bs-umbilical are hubs (Presentations
+  36); bs-tef disease. Record repair/s154/S154.md; history in OPEN_WORK. "ship" took the report defaults (DIGEST 2026-10-25
+  s154 ship). Spend: wave 24 agents, 633 calls, 58.77M of 60M; lead about 90M of 100M (four rows). No batch open.
+- **Open from s154 (none blocks):** six deferred LOWs (repair/s154/adj_r2_passif.md; peds-constipation trap comma;
+  feeding-refusal Wilms alias); ALIASES.json: patent urachus, patent omphalomesenteric duct, Wilms tumor (nephroblastoma);
+  no brief owns appendicitis or Crohn disease; cyclic-vomiting prophylaxis (no board source); review_packet flattens blocks
+  (packet error); builder lanes must sync their web cache; batch.py ship needs main fetched before its moved-main check;
+  Mac copies of index.html and this file.
 - **s153 shipped** (Claude lead, 2026-10-25): 7b301ef, live version s153, page 7c376718303a. Eight GI and hepatology A
   briefs on the spine; cholestasis and occult-gi-bleed are hubs (Presentations 30). Record repair/s153/S153.md; history
   in OPEN_WORK. Jonathan's "ship" took the report defaults (DIGEST 2026-10-25 s153 ship): S1 to S3 by builder agents
@@ -44,11 +45,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## Next launch prompt (paste into a fresh chat)
 
-The next numbered batch (claude/pending/BATCHES_S151_S160.md, whose numbering runs one behind; its "s153" GI B,
-pediatric, is this s154). Budget scaled from s153's measurement (8 briefs: builders 8 agents, 480 calls, 52.7M;
-reviewers 21, 272, 12.9M; lead about 104M), for 7 briefs:
+The next numbered batch (claude/pending/BATCHES_S151_S160.md, whose numbering runs one behind; its "s154", infectious
+disease A, is this s155). Budget scaled from s154 (7 briefs: builders 7 agents, 435 calls, 50.3M; reviewers 17, 198,
+8.5M; lead about 90M):
 ```
-Step2Haki: launch batch s154 (Phase 2, GI B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: infant-stool, feeding-refusal, rlq-pain, peds-constipation, cyclic-vomiting, bs-tef, bs-umbilical. Goldens: nephrotic-child, scfe; hub golden first if rlq-pain or infant-stool needs one. S1 to S3 by builder agents (adopted s153). Budget: 32 agents, 1000 calls, 60M agent tokens (reviewers 23, 350, 13M; builders 9, 650, 47M); lead 100M.
+Step2Haki: launch batch s155 (Phase 2, infectious disease A) per claude/BATCH_RUNBOOK.md. Briefs: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis, bs-isolation, bs-foodborne. Goldens: copd (FM lens), nephrotic-child (peds lens); B0 confirms they fit infectious disease, hub golden voices for any hub. S1 to S3 by builder agents. Budget: 32 agents, 950 calls, 65M agent tokens (reviewers 23, 330, 11M; builders 9, 620, 54M); lead 100M.
 ```
 
 New board questions, any time (intake only; the skill never edits the page):
