@@ -31,7 +31,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   batches; a background command stops at 2 h). The "pause point does not count" rule lives in DIGEST
   2026-10-26 and the tools only: do not edit STANDING_DIRECTIONS for it (Jonathan 2026-10-26: "definitely dont need to re
   review every brief"); fold it in only in a batch that already re-reviews every brief.
-- **Next chat (Jonathan 2026-10-26):** the queued intake patch shipped as s154d; next is s155 or the population mockup (prompts below). The 2026-10-26 proposals that touch a pause
+- **Next chat (Jonathan 2026-10-26, after the s154d ship):** "before either of these, i want to intake actual NBME questions for the next chat, and have it analyze syntax, structural differences between how uworld tests vs how actual retired NBME questions test." So the next chat is NBME intake (board-brief and nbme-intake skills; intake only, no page edits) plus a written comparison of NBME and UWorld item style (prompt below); s155 and the population mockup follow. The 2026-10-26 proposals that touch a pause
   point (mdd bereavement bait, attribution traps) were written as paragraphs before s154c: the patch writes them as
   question-style blocks (a new pp-b block, masked deciding line and answer; gate "pause-format").
 - **Queued 2026-10-26 (no batch open):** intake of 24 UWorld questions and 11 library articles; 11 delta-ready proposals
@@ -80,6 +80,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   plugin for this project.
 
 ## Next launch prompt (paste into a fresh chat)
+
+NBME intake and NBME versus UWorld style analysis (no batch):
+```
+Step2Haki: intake these NBME questions per the board-brief and nbme-intake skills (sort, link, log, queue proposals; do not build), then compare how they test against UWorld (stem syntax, structure, lead-ins, distractor design, how the deciding clue is placed) using the local UWorld question files, and write the analysis to claude/pending/NBME_VS_UWORLD.md.
+```
 
 Population entry type mockup (no batch):
 ```
