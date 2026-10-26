@@ -1,12 +1,12 @@
 <title>Pause Point Formats</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <style>
-/* Layout: one column of four variants of the same pause point, picked by brief; site tokens copied from the live page (default accent). */
+/* Layout: one column; each pause point shown as shipped, then in the question-stem line style the practice items use. Site tokens copied from the live page (default accent). */
 :root{
   --canvas:#EFF0F0; --card:#EDEEEE; --raised:#F4F5F5; --hair:rgba(24,28,30,.10);
   --ink:#15151B; --ink-2:#33333E; --muted:#5E5E6B;
-  --accent:#544AC4; --accent-bg:#E7E7F1; --mark:rgba(84,74,196,.16);
-  --caution:#8E5A16; --caution-bg:#EFEBE1; --caution-line:rgba(142,90,22,.75);
+  --accent:#544AC4; --acc-rule:rgba(84,74,196,.30); --accent-bg:#E7E7F1;
+  --caution:#8E5A16; --caution-bg:#EFEBE1; --caution-line:rgba(142,90,22,.7);
   --mask:#D9DADF;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,system-ui,sans-serif;
   --r-sub:16px;
@@ -14,17 +14,17 @@
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --canvas:#1A1B1B; --card:#202121; --raised:#252626; --hair:rgba(255,255,255,.09);
   --ink:#E3E3E9; --ink-2:#D2D2DA; --muted:#A4A4AF;
-  --accent:#A6A5E3; --accent-bg:#373743; --mark:rgba(166,165,227,.22);
+  --accent:#A6A5E3; --acc-rule:rgba(166,165,227,.35); --accent-bg:#373743;
   --caution:#EDC38B; --caution-bg:#2A271E; --caution-line:rgba(237,195,139,.7);
   --mask:#3A3B40; color-scheme:dark}}
 :root[data-theme="dark"]{
   --canvas:#1A1B1B; --card:#202121; --raised:#252626; --hair:rgba(255,255,255,.09);
   --ink:#E3E3E9; --ink-2:#D2D2DA; --muted:#A4A4AF;
-  --accent:#A6A5E3; --accent-bg:#373743; --mark:rgba(166,165,227,.22);
+  --accent:#A6A5E3; --acc-rule:rgba(166,165,227,.35); --accent-bg:#373743;
   --caution:#EDC38B; --caution-bg:#2A271E; --caution-line:rgba(237,195,139,.7);
   --mask:#3A3B40; color-scheme:dark}
 body{background:var(--canvas);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5}
-.wrap{max-width:760px;margin:0 auto;padding-block:28px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:22px}
+.wrap{max-width:720px;margin:0 auto;padding-block:28px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:22px}
 h1{font-size:28px;line-height:1.2;margin:0;text-wrap:balance}
 .lede{color:var(--muted);margin:6px 0 0;max-width:62ch}
 .controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
@@ -37,40 +37,48 @@ h1{font-size:28px;line-height:1.2;margin:0;text-wrap:balance}
 .vh{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .vh b{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .vh span{font-size:13.5px;color:var(--muted)}
+.brief-name{font-size:13px;color:var(--muted);margin:0}
 .card{background:var(--card);border:1px solid var(--hair);border-radius:var(--r-sub);padding:14px 16px}
-.brief-name{font-size:13px;color:var(--muted);margin:0 0 4px}
 
-/* the pause point as it ships today */
+/* pause point container, as on the page */
 .pp{margin:0;padding:12px 15px;border-radius:0 var(--r-sub) var(--r-sub) 0;border-left:3px solid var(--caution);background:var(--caution-bg);font-size:14.5px;line-height:1.55}
-.pp > b:first-child,.pp .pp-hd b{color:var(--caution)}
+.pp > b:first-child{color:var(--caution)}
+.pp-t{font-weight:700;color:var(--caution);font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
 
-/* option A: emphasis in place */
-.bait{text-decoration:underline wavy var(--caution-line);text-decoration-thickness:1.25px;text-underline-offset:4px;text-decoration-skip-ink:none}
-.dec{font-weight:650}
-.rule{background:linear-gradient(transparent 52%,var(--mark) 52%);padding:0 2px;border-radius:2px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+/* recommended: one block per bait, in the practice-question line style */
+.bait-blk{display:flex;flex-direction:column}
+.bait-blk + .bait-blk{margin-top:12px;padding-top:12px;border-top:1px solid var(--hair)}
+.sl{font-size:15.5px;font-weight:700;line-height:1.35}
+.si{margin:0 0 0 3px;padding:2px 0 2px 12px;border-left:2px solid var(--acc-rule)}
+.sl + .si{margin-top:5px}
+.off{color:var(--caution)}
+.off em{font-style:normal;text-decoration:underline wavy var(--caution-line);text-decoration-thickness:1.25px;text-underline-offset:4px;text-decoration-skip-ink:none}
+.ans{margin-top:6px;font-weight:700}
+.ans .arr{color:var(--accent);margin-right:6px}
+.ans .key{color:var(--accent)}
+.sd{margin-top:8px;font-size:.88em;color:var(--muted)}
 
-/* option B and C: two labeled lines */
-.pp-hd{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
-.tag{font-size:11.5px;letter-spacing:.04em;padding:1px 8px;border-radius:999px;border:1px solid var(--caution-line);color:var(--caution)}
-.tags-off .tag{display:none}
-.ln{display:grid;grid-template-columns:86px minmax(0,1fr);gap:4px 10px;padding:6px 0}
-.ln + .ln{border-top:1px solid var(--hair)}
-.lab{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:2px}
-@media (max-width:440px){.ln{grid-template-columns:1fr}.lab{padding-top:0}}
+/* compact alternative: one row per bait */
+.row{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;padding:6px 0}
+.row + .row{border-top:1px solid var(--hair)}
+.row .who{font-weight:700}
+.row .pair{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.row .x{color:var(--caution);text-decoration:line-through;text-decoration-color:var(--caution-line)}
+.row .ok{font-weight:700;color:var(--accent)}
 
-/* option C: study mode masks the deciding line until tapped */
+/* study mode: the answer line is masked until tapped, like a practice item */
 .m{border-radius:4px;cursor:pointer}
 .study .m:not(.open){background:var(--mask);color:transparent}
-.study .m:not(.open) *{color:transparent;background:none;text-decoration:none}
-.note{font-size:13.5px;color:var(--muted);max-width:66ch}
-.note p{margin:0 0 6px}
+.study .m:not(.open) *{color:transparent}
+.note{font-size:13.5px;color:var(--muted)}
+.note p{margin:0 0 6px;max-width:66ch}
 @media (prefers-reduced-motion:no-preference){.m{transition:background .2s,color .2s}}
 </style>
 
 <div class="wrap">
   <header>
     <h1>Pause point formats</h1>
-    <p class="lede">The same live pause point in four treatments. The words are unchanged in every option; only emphasis and layout differ. Pick a brief to compare.</p>
+    <p class="lede">The live pause point, then the same content broken into lines the way practice questions are: a bold setup line, indented lines on the accent rule, and an arrow to the answer.</p>
   </header>
 
   <div class="controls">
@@ -81,61 +89,71 @@ h1{font-size:28px;line-height:1.2;margin:0;text-wrap:balance}
       <button type="button" data-ex="tox" aria-pressed="false">Toxidrome</button>
       <button type="button" data-ex="ssri" aria-pressed="false">SSRI effects</button>
     </div>
-    <label class="tog"><input type="checkbox" id="tags" checked> Trap type tag</label>
-    <label class="tog"><input type="checkbox" id="study" checked> Study mode in C</label>
+    <label class="tog"><input type="checkbox" id="study"> Study mode (mask the answers)</label>
   </div>
 
   <main id="out"></main>
 
   <section class="note card">
-    <p><b>Current.</b> One caution-tinted paragraph; only the label is colored.</p>
-    <p><b>A. Emphasis in place.</b> The bait gets a wavy caution underline, the deciding findings are bold, and the closing rule gets an accent highlight. Same paragraph, so every brief keeps its length.</p>
-    <p><b>B. Two labeled lines.</b> "Bait" and "Decides it" (the differential's own column name), with the same emphasis. An optional tag names the trap type.</p>
-    <p><b>C. B in study mode.</b> The bait stays visible; the deciding line is masked until tapped, like the workup's progressive recall.</p>
+    <p><b>Recommended: question style.</b> Each bait gets its own block: the setup in bold, then two indented lines on the accent rule (what it is offered as, in caution; then the deciding feature), then an arrow to the answer. Anything else goes in one muted line underneath. In study mode the answer is masked like a practice item's key.</p>
+    <p><b>Compact rows.</b> The shortest form: one row per bait with the wrong answer struck and the right one beside it. Fastest to scan, but the deciding feature drops out, so it teaches less.</p>
+    <p>Either way the wording is split into lines, so a rollout re-reviews every pause point's text (about 105 briefs).</p>
   </section>
 </div>
 
 <script>
-// Each example: live text split into bait and deciding parts. Markup: [[x]] bold deciding finding, {{x}} highlighted rule, <<x>> bait.
+// Each bait: setup line, what it is offered as (words in <em> get the caution underline), the deciding feature, the answer.
 const EX={
- mdd:{brief:"Major Depressive Disorder (with the proposed 2026-10-26 grief bait)",tag:"Attribution trap",
-  bait:"<<a depressed patient who hears voices, offered as schizophrenia or schizoaffective disorder>>. Or <<a recent death offered as the explanation>>.",
-  dec:"[[Psychosis only inside the depressive episode]] is MDD with psychotic features. [[Psychosis for 2 weeks or more with no mood episode]], while mood episodes fill most of the illness, is schizoaffective disorder. Prolonged grief disorder needs [[at least 12 months]] in adults and is [[not associated with psychotic features]], so {{mood-congruent delusions in a full depressive episode after a loss are still MDD with psychotic features}}."},
- ap:{brief:"Antipsychotic Adverse Effects",tag:"Look-alike trap",
-  bait:"<<NMS offered as serotonin syndrome from a drug interaction, or as malignant hyperthermia, and dystonia offered as hypocalcemia or as agitation needing more haloperidol>>.",
-  dec:"{{[[Rigidity and fever building over days]] on a dopamine blocker is NMS}}; {{a [[spasm within hours]] in an [[alert]] patient is dystonia, and an anticholinergic treats it}}."},
- pm:{brief:"Medication- and Illness-Induced Psychiatric Disorders",tag:"Attribution trap",
-  bait:"<<starting risperidone or an antidepressant for new symptoms in a patient whose drug, dose or disease began first>>.",
-  dec:"{{Find the cause before naming a primary disorder}}; once a [[known disease explains the depression]] (eg, multiple sclerosis), treat the depression too."},
- tox:{brief:"Suspected Overdose or Toxidrome",tag:"Wrong-move trap",
-  bait:"<<haloperidol for an agitated, febrile patient on psychiatric drugs, or a negative urine screen read as no poisoning>>.",
-  dec:"[[Screens miss many drugs]]; {{name the toxidrome from the exam and check the acetaminophen level anyway}}."},
- ssri:{brief:"SSRI Adverse Effects",tag:"Clock trap",
-  bait:"<<FINISH symptoms 2 days after a stop offered as relapse, so a new antidepressant is started>>.",
-  dec:"{{That timing is discontinuation}}; relapse typically arrives [[weeks later]] and [[builds slowly]]."}
+ mdd:{brief:"Major Depressive Disorder (with the proposed grief bait)",
+  shipped:"<b>Pause point.</b> The bait: a depressed patient who hears voices, offered as schizophrenia or schizoaffective disorder. Psychosis only inside the depressive episode is MDD with psychotic features. Psychosis for 2 weeks or more with no mood episode, while mood episodes fill most of the illness, is schizoaffective disorder. Or a recent death offered as the explanation: prolonged grief disorder needs at least 12 months in adults and is not associated with psychotic features, so mood-congruent delusions in a full depressive episode after a loss are still MDD with psychotic features.",
+  baits:[
+   {set:"Depressed patient who hears voices",off:"Offered as <em>schizophrenia</em> or <em>schizoaffective disorder</em>",dec:"Psychosis only inside the depressive episode",ans:"MDD with psychotic features",x:"Schizophrenia"},
+   {set:"Delusions in a full depressive episode after a death",off:"Offered as <em>prolonged grief disorder</em>",dec:"Grief disorder needs at least 12 months and is not associated with psychosis",ans:"MDD with psychotic features",x:"Prolonged grief disorder"}],
+  extra:"Schizoaffective disorder: psychosis for 2 weeks or more with no mood episode, while mood episodes fill most of the illness."},
+ ap:{brief:"Antipsychotic Adverse Effects",
+  shipped:"<b>Pause point.</b> The bait: NMS offered as serotonin syndrome from a drug interaction, or as malignant hyperthermia, and dystonia offered as hypocalcemia or as agitation needing more haloperidol. Rigidity and fever building over days on a dopamine blocker is NMS; a spasm within hours in an alert patient is dystonia, and an anticholinergic treats it.",
+  baits:[
+   {set:"Fever and rigidity on a dopamine blocker",off:"Offered as <em>serotonin syndrome</em> or <em>malignant hyperthermia</em>",dec:"Rigidity and fever building over days",ans:"NMS",x:"Serotonin syndrome"},
+   {set:"Spasm within hours in an alert patient",off:"Offered as <em>hypocalcemia</em> or agitation needing <em>more haloperidol</em>",dec:"Within hours of the drug; mental status clear",ans:"Acute dystonia: give an anticholinergic",x:"Hypocalcemia"}],
+  extra:""},
+ pm:{brief:"Medication- and Illness-Induced Psychiatric Disorders",
+  shipped:"<b>Pause point.</b> The bait: starting risperidone or an antidepressant for new symptoms in a patient whose drug, dose or disease began first. Find the cause before naming a primary disorder; once a known disease explains the depression (eg, multiple sclerosis), treat the depression too.",
+  baits:[
+   {set:"New symptoms after a drug, dose or disease began",off:"Offered as a primary disorder: <em>start risperidone or an antidepressant</em>",dec:"The drug, dose or disease came first",ans:"Find the cause before naming a primary disorder",x:"Start risperidone"}],
+  extra:"Once a known disease explains the depression (eg, multiple sclerosis), treat the depression too."},
+ tox:{brief:"Suspected Overdose or Toxidrome",
+  shipped:"<b>Pause point.</b> The bait: haloperidol for an agitated, febrile patient on psychiatric drugs, or a negative urine screen read as no poisoning. Screens miss many drugs; name the toxidrome from the exam and check the acetaminophen level anyway.",
+  baits:[
+   {set:"Agitated, febrile patient on psychiatric drugs",off:"Offered: <em>haloperidol</em>",dec:"The exam names the toxidrome",ans:"Name the toxidrome from the exam",x:"Haloperidol"},
+   {set:"Negative urine drug screen",off:"Read as <em>no poisoning</em>",dec:"Screens miss many drugs",ans:"Check the acetaminophen level anyway",x:"No poisoning"}],
+  extra:""},
+ ssri:{brief:"SSRI Adverse Effects",
+  shipped:"<b>Pause point.</b> The bait: FINISH symptoms 2 days after a stop offered as relapse, so a new antidepressant is started. That timing is discontinuation; relapse typically arrives weeks later and builds slowly.",
+  baits:[
+   {set:"FINISH symptoms 2 days after a stop",off:"Offered as <em>relapse</em>, so a new antidepressant is started",dec:"Relapse typically arrives weeks later and builds slowly",ans:"Discontinuation syndrome",x:"Relapse"}],
+  extra:""}
 };
-const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-function fmt(s,on){ // on=false strips emphasis to plain text
-  s=esc(s).replace(/&lt;&lt;/g,"\u0001").replace(/&gt;&gt;/g,"\u0002");
-  return s.replace(/\u0001(.*?)\u0002/g,on?'<span class="bait">$1</span>':'$1')
-          .replace(/\{\{(.*?)\}\}/g,on?'<span class="rule">$1</span>':'$1')
-          .replace(/\[\[(.*?)\]\]/g,on?'<span class="dec">$1</span>':'$1');
-}
+function mkMask(html,study){return `<span class="m"${study?' tabindex="0" role="button" aria-label="Reveal the answer"':''}>${html}</span>`}
 function render(k){
-  const e=EX[k],tags=document.getElementById('tags').checked,study=document.getElementById('study').checked;
-  const cur=`<p class="pp"><b>Pause point.</b> The bait: ${fmt(e.bait,false)} ${fmt(e.dec,false)}</p>`;
-  const a=`<p class="pp"><b>Pause point.</b> The bait: ${fmt(e.bait,true)} ${fmt(e.dec,true)}</p>`;
-  const two=(st)=>`<div class="pp ${tags?'':'tags-off'} ${st?'study':''}"><div class="pp-hd"><b>Pause point</b><span class="tag">${e.tag}</span></div>
-    <div class="ln"><span class="lab">Bait</span><span>${fmt(e.bait,true)}</span></div>
-    <div class="ln"><span class="lab">Decides it</span><span class="m" tabindex="0" role="button" aria-label="Reveal the deciding line">${fmt(e.dec,true)}</span></div></div>`;
+  const e=EX[k],study=document.getElementById('study').checked;
+  const shipped=`<p class="pp">${e.shipped}</p>`;
+  const blocks=e.baits.map(b=>`<div class="bait-blk">
+      <div class="sl">${b.set}</div>
+      <div class="si off">${b.off}</div>
+      <div class="si">${mkMask(b.dec,study)}</div>
+      <div class="ans">${mkMask(`<span class="arr">&rarr;</span><span class="key">${b.ans}</span>`,study)}</div>
+    </div>`).join('');
+  const rec=`<div class="pp ${study?'study':''}"><div class="pp-t">Pause point</div>${blocks}${e.extra?`<div class="sd">${e.extra}</div>`:''}</div>`;
+  const rows=e.baits.map(b=>`<div class="row"><span class="who">${b.set}</span><span class="pair"><span class="x">${b.x}</span><span class="ok">${mkMask('&rarr; '+b.ans,study)}</span></span></div>`).join('');
+  const compact=`<div class="pp ${study?'study':''}"><div class="pp-t">Pause point</div>${rows}</div>`;
   const v=(t,sub,body)=>`<section class="variant"><div class="vh"><b>${t}</b><span>${sub}</span></div>${body}</section>`;
-  document.getElementById('out').innerHTML=`<p class="brief-name">${e.brief}</p><div style="display:flex;flex-direction:column;gap:22px">`+
-    v('Current','as shipped',cur)+v('Option A','emphasis in place',a)+v('Option B','two labeled lines',two(false))+v('Option C','B in study mode (tap the mask)',two(study))+`</div>`;
-  document.querySelectorAll('.m').forEach(m=>{const t=()=>m.classList.toggle('open');m.addEventListener('click',t);m.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();t()}})});
+  document.getElementById('out').innerHTML=`<div style="display:flex;flex-direction:column;gap:22px"><p class="brief-name">${e.brief}</p>`+
+    v('Current','as shipped',shipped)+v('Recommended','question style',rec)+v('Alternative','compact rows',compact)+`</div>`;
+  document.querySelectorAll('.study .m').forEach(m=>{const t=()=>m.classList.toggle('open');m.addEventListener('click',t);m.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();t()}})});
 }
 let cur='mdd';
 document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{
   document.querySelectorAll('.seg button').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));cur=b.dataset.ex;render(cur)}));
-['tags','study'].forEach(id=>document.getElementById(id).addEventListener('change',()=>render(cur)));
+document.getElementById('study').addEventListener('change',()=>render(cur));
 render(cur);
 </script>
