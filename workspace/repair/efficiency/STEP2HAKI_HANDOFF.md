@@ -45,7 +45,10 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   batches; a background command stops at 2 h). The "pause point does not count" rule lives in DIGEST
   2026-10-26 and the tools only: do not edit STANDING_DIRECTIONS for it (Jonathan 2026-10-26: "definitely dont need to re
   review every brief"); fold it in only in a batch that already re-reviews every brief.
-- **Next chat:** the patch of the 2026-10-26n NBME proposals (runbook 8b; confirm Jonathan's picks first, see
+- **Decision 2026-10-26 (DIGEST):** NBME wording in authored items held (older form); first work is cross-domain
+  question types, then the NBME phrasing layer. Spec draft claude/pending/NBME_PRESENTATION_SPEC.md (project and private
+  repo); the mockup prompt is below.
+- **Next chat:** the NBME presentation mockup, or the patch of the 2026-10-26n NBME proposals (runbook 8b; confirm Jonathan's picks first, see
   each proposal's Edit note), or s155, or the population mockup (prompts below). The 2026-10-26 proposals that touch a
   pause point were written as question-style blocks (pp-b; gate "pause-format").
 - **Queued 2026-10-26 (no batch open):** intake of 24 UWorld questions and 11 library articles; 11 delta-ready proposals
@@ -94,6 +97,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   plugin for this project.
 
 ## Next launch prompt (paste into a fresh chat)
+
+NBME presentation layer mockup (no batch; Jonathan 2026-10-26: cross-domain question types first, then how NBME
+describes symptoms):
+```
+Step2Haki: mock up the NBME presentation layer per claude/pending/NBME_PRESENTATION_SPEC.md (cross-domain X1 and X2 first, then phrasing hovers B and view C; private artifact for review; no batch, no ship).
+```
 
 The patch of the 2026-10-26n NBME proposals (runbook 8b; eight files; Jonathan confirms or corrects the inferred
 baits first):
