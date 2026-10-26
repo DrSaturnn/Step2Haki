@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-26, by Claude (s154d patch presented, page 9a12fe090d68; waiting for "ship" in the presenting chat).
+Last updated: 2026-10-26, by Claude (s154d shipped 1dd87de; no batch open; next launch s155 or the population mockup).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,12 +12,13 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after ev## State (rewrite after every step)
 
-- **s154d presented** (Claude lead, 2026-10-26, patch, runbook 8b; branch wip/s154d in both repos): the 2026-10-26
-  intake amendments on ten psych briefs (antipsych-effects, bipolar-mania, delirium, eating-disorders, mdd, psych-medical,
-  psychosis-duration, somatic, ssri-effects, substance); 10 of 10 READY after two review rounds; approval.py present
-  s154d page 9a12fe090d68. Step: S8 report sent; waiting for "ship" (must go to the presenting chat). Record
-  repair/s154d/S154D.md. Spend: reviewers 4 agents, 15 calls, 0.57M of 1M; lead 18.3M of 30M. After "ship": batch.py
-  ship s154d, then post (queue.csv rows of 2026-10-26 marked "picked up s154d"; patch.py sync).
+- **s154d shipped** (Claude lead, 2026-10-26, patch): 1dd87de, page 00f49879e28d. Ten psych briefs amended from the
+  2026-10-26 intake. Record repair/s154d/S154D.md. Spend: reviewers 4 agents, 15 calls, 0.57M of 1M; lead about 20M of
+  30M. No batch open.
+- **Open from s154d (none blocks):** functional tremor management has no home (somatic treatment step); psych-medical
+  claim S903 says "often" where the line says "usually" (both within the quote); queue.csv open 2026-10-26 rows are the
+  six new-brief rows (homes await Jonathan: trauma and dissociative, the first response in the interview, abnormal
+  movements hub, Cluster A).
 - **s154c shipped** (Claude lead, 2026-10-26): b002059, page 3c9ccb59ba04. Every spine brief's pause point (105) is
   question-style blocks (STANDING_DIRECTIONS "Pause point format"; gate and lint "pause-format"; builders use spinelib
   pause_blocks or a golden's div.sp-pause). Record repair/s154c/S154C.md. Spend: reviewers 11 agents, 51 calls, 2.47M of
@@ -28,7 +29,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   batches; a background command stops at 2 h). The "pause point does not count" rule lives in DIGEST
   2026-10-26 and the tools only: do not edit STANDING_DIRECTIONS for it (Jonathan 2026-10-26: "definitely dont need to re
   review every brief"); fold it in only in a batch that already re-reviews every brief.
-- **Next chat (Jonathan 2026-10-26):** the queued intake patch (now s154d, presented). The 2026-10-26 proposals that touch a pause
+- **Next chat (Jonathan 2026-10-26):** the queued intake patch shipped as s154d; next is s155 or the population mockup (prompts below). The 2026-10-26 proposals that touch a pause
   point (mdd bereavement bait, attribution traps) were written as paragraphs before s154c: the patch writes them as
   question-style blocks (a new pp-b block, masked deciding line and answer; gate "pause-format").
 - **Queued 2026-10-26 (no batch open):** intake of 24 UWorld questions and 11 library articles; 11 delta-ready proposals
