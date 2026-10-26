@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-26 07:30 EDT, by Claude (s154b shipped; next launch s155).
+Last updated: 2026-10-26 09:25 EDT, by Claude (2026-10-26 intake and decisions; nothing shipped; next launch s155, s154c or the patch).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,6 +12,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after ev## State (rewrite after every step)
 
+- **Queued 2026-10-26 (no batch open):** intake of 24 UWorld questions and 11 library articles; 11 delta-ready proposals
+  in repair/sources/intake/*_2026-10-26.md (psychosis-duration, bipolar-mania, substance, psych-medical, mdd, eating-disorders,
+  somatic, delirium, antipsych-effects, ssri-effects; the patch prompt below takes them). Decisions (DIGEST 2026-10-26): pointers
+  to the owning brief; attribution traps in pause points; one bait-built practice item per covered miss; pause points
+  become question-style blocks on all 105 briefs (s154c, claude/pending/PAUSE_POINT_ROLLOUT.md, private repo); a new
+  population entry type (mock up Perinatal Psychiatry first) and the Cluster A hold lifted (claude/pending/NEW_BRIEFS_2026-10-26.md).
+  Three homes await Jonathan (trauma and dissociative; the first response in the interview; abnormal movements hub).
+  Board-brief skill update proposed as a card (bait items, pointers, pause point baits); its private copy is updated.
 - **s154b shipped** (Claude lead, 2026-10-26, patch): 707bd07, live version s154b, page 82a09c3e0aee. Eight psych briefs
   amended from the 2026-10-25 intake. Record repair/s154b/S154B.md. Spend: reviewers 4 agents, 14 calls, 0.42M of 1.5M;
   lead about 20M of 40M. No batch open.
@@ -50,6 +58,16 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   plugin for this project.
 
 ## Next launch prompt (paste into a fresh chat)
+
+Pause point rollout (site layer plus wording; after or before s155, Jonathan chooses):
+```
+Step2Haki: launch batch s154c (pause point rollout, question-style blocks on all 105 spine briefs) per claude/BATCH_RUNBOOK.md and claude/pending/PAUSE_POINT_ROLLOUT.md. Budget: 12 agents, 180 calls, 5M reviewer tokens; lead 80M.
+```
+
+Population entry type mockup (no batch):
+```
+Step2Haki: mock up the population entry type with Perinatal Psychiatry per claude/pending/NEW_BRIEFS_2026-10-26.md section 1 (private artifact for review; no batch, no ship).
+```
 
 The next numbered batch (claude/pending/BATCHES_S151_S160.md, whose numbering runs one behind; its "s154", infectious
 disease A, is this s155). Budget scaled from s154 (7 briefs: builders 7 agents, 435 calls, 50.3M; reviewers 17, 198,
