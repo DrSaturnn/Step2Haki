@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-26 s154e: s154e: muted caution tint on the pause point (site layer)
+
+```
+Page: 187 briefs, 2233 items -> 187 briefs, 2233 items
+Other page changes (nav, headers, scripts): +587 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 187 briefs, 2233 items (663 with reasons), 22 scripts, 40 checks, base HEAD | allowlisted 10 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 187 | bankwraps 187 | mcq 2233 (reasons 663) (axCheck 2233, reveal-only 0) | malformed 0 | crit gridded 127/127 | vignette gridded 54/54 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808703 source shingles; page 0.012%)
+```
+
 ## 2026-10-26 s154d: s154d: ten psychiatry briefs updated from the 2026-10-26 board questions
 
 ```
