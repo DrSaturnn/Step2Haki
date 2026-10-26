@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-26, by Claude (s154c open, S4 round 1).
+Last updated: 2026-10-26, by Claude (s154c shipped b002059; no batch open; next launch s155, the patch or the population mockup).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,15 +12,19 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after ev## State (rewrite after every step)
 
-- **s154c OPEN, S8 presented, waiting for "ship"** (Claude lead, 2026-10-26; one chat, runbook 8 and 8b; record
-  repair/s154c/S154C.md): pause point rollout on all 105 spine briefs. verify_all 105 READY; page checks pass;
-  approval.py present s154c. Spend: reviewers 11 agents, 51 calls, 2.47M of 5M; lead 33.6M of 80M. Branch wip/s154c
-  (public). Post-ship owes: private sync (this session had read-only access to the private repo).
+- **s154c shipped** (Claude lead, 2026-10-26): b002059, page 3c9ccb59ba04. Every spine brief's pause point (105) is
+  question-style blocks (STANDING_DIRECTIONS "Pause point format"; gate and lint "pause-format"; builders use spinelib
+  pause_blocks or a golden's div.sp-pause). Record repair/s154c/S154C.md. Spend: reviewers 11 agents, 51 calls, 2.47M of
+  5M; lead about 36M of 80M. No batch open.
+- **Open from s154c (none blocks):** private sync owed: s154c_private_owed.tar.gz (sent to Jonathan) extracts into the
+  private clone's local-only/ (commit on wip/s154c, merge to main); 33 folders keep outline_before_s154c.json (a later
+  rebuild from outline must first fold in the s154c delta); the s154c tool notes (ready_gate AX_READY_JOBS=2 for big
+  batches; a background command stops at 2 h).
 - **Queued 2026-10-26 (no batch open):** intake of 24 UWorld questions and 11 library articles; 11 delta-ready proposals
   in repair/sources/intake/*_2026-10-26.md (psychosis-duration, bipolar-mania, substance, psych-medical, mdd, eating-disorders,
   somatic, delirium, antipsych-effects, ssri-effects; the patch prompt below takes them). Decisions (DIGEST 2026-10-26): pointers
   to the owning brief; attribution traps in pause points; one bait-built practice item per covered miss; pause points
-  become question-style blocks on all 105 briefs (s154c, claude/pending/PAUSE_POINT_ROLLOUT.md, private repo); a new
+  became question-style blocks (s154c, shipped); a new
   population entry type (mock up Perinatal Psychiatry first) and the Cluster A hold lifted (claude/pending/NEW_BRIEFS_2026-10-26.md).
   Three homes await Jonathan (trauma and dissociative; the first response in the interview; abnormal movements hub).
   Board-brief skill update proposed as a card (bait items, pointers, pause point baits); its private copy is updated.
@@ -62,11 +66,6 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   plugin for this project.
 
 ## Next launch prompt (paste into a fresh chat)
-
-Pause point rollout (site layer plus wording; after or before s155, Jonathan chooses):
-```
-Step2Haki: launch batch s154c (pause point rollout, question-style blocks on all 105 spine briefs) per claude/BATCH_RUNBOOK.md and claude/pending/PAUSE_POINT_ROLLOUT.md. Budget: 12 agents, 180 calls, 5M reviewer tokens; lead 80M.
-```
 
 Population entry type mockup (no batch):
 ```
