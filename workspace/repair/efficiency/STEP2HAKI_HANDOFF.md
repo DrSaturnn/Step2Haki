@@ -12,17 +12,14 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after ev## State (rewrite after every step)
 
-- **s154 open** (Claude lead, 2026-10-25): Phase 2 GI B, pediatric, on wip/s154 (both repos). Briefs bs-tef (disease),
-  infant-stool, rlq-pain, peds-constipation, cyclic-vomiting, feeding-refusal, bs-umbilical (hubs; Presentations 36 via
-  repair/s154/40_presentations.json). Budget 32 agents, 1000 calls, 60M (reviewers 23, 350, 13M; builders 9, 650,
-  47M); lead 100M. S3 done; S4 round 1 done (2 HIGH, 30 MED). **S5 and S6 done (chat 3)**: every HIGH and MED fixed or
-  answered with evidence (adj_s154_r1.md and s5r1.py per folder; all seven MECHANICAL PASS; batch page gate, render,
-  squeeze and pointer checks pass); the builders' web cache (26 pages) restored with the same shas and pushed to the
-  private repo. Record: repair/s154/S154.md "S5 adjudicate and fix". **S7 round 2 done** (7 agents, 69 calls, 2.77M): bs-tef, infant-stool, rlq-pain, cyclic-vomiting, bs-umbilical READY;
-  peds-constipation and feeding-refusal fixed after one MED each (adj_s154_r2.md). **S7 round 3 lanes built**
-  (repair/efficiency/lanes/s154/r3, acc, read and flags, both briefs, 42 calls). Next: launch the three lanes in one
-  message, foreground, then the ledger, file receipts as reviews/<brief>_<part>_r3.md, verify; then S8. Spend: wave 21
-  agents, 608 calls, 58.11M of 60M; left 11 agents, 392 calls, 1.89M. Record repair/s154/S154.md.
+- **s154 open, S7 done: all READY** (Claude lead, 2026-10-25): Phase 2 GI B, pediatric, on wip/s154 (both repos). Briefs
+  bs-tef (disease), infant-stool, rlq-pain, peds-constipation, cyclic-vomiting, feeding-refusal, bs-umbilical (hubs;
+  Presentations 36 via repair/s154/40_presentations.json). All seven verify READY after three review rounds (2 HIGH and
+  30 MED in round 1, 2 MED in round 2, none in round 3). **Next: S8** in a fresh chat (`batch.py s8 s154 <ids>`, the
+  report per runbook section 5, approval.py present), then "ship" and S9. Report inputs: repair/s154/S154.md (S5 tables,
+  calls, deferred LOWs in repair/s154/adj_r2_passif.md, packet error, web-cache restore, one milk rule, hub words over
+  700, cyclic-vomiting prophylaxis deferred). Spend: wave 24 agents, 633 calls, 58.77M of 60M; lead 84.2M of 100M
+  (three rows in ledger_lead.csv).
 - **s153 shipped** (Claude lead, 2026-10-25): 7b301ef, live version s153, page 7c376718303a. Eight GI and hepatology A
   briefs on the spine; cholestasis and occult-gi-bleed are hubs (Presentations 30). Record repair/s153/S153.md; history
   in OPEN_WORK. Jonathan's "ship" took the report defaults (DIGEST 2026-10-25 s153 ship): S1 to S3 by builder agents
