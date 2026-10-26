@@ -2,6 +2,29 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-26 s154d: s154d: ten psychiatry briefs updated from the 2026-10-26 board questions
+
+```
+Page: 187 briefs, 2230 items -> 187 briefs, 2233 items
+Briefs changed (10):
+  - psychosis-duration (Psychosis): prose edited (+1081 chars)
+  - bipolar-mania (Bipolar Disorder): prose edited (+1069 chars)
+  - mdd (Major Depressive Disorder): 1 item added (q_554be69095061c114975); prose edited (+1048 chars)
+  - somatic (Somatic Symptom and Related Disorders): prose edited (+865 chars)
+  - eating-disorders (Eating Disorders): prose edited (+730 chars)
+  - delirium (Delirium): prose edited (+714 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+966 chars)
+  - psych-medical (Medication- and Illness-Induced Psychiatric Disorders): prose edited (+1225 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (+603 chars)
+  - antipsych-effects (Antipsychotic Adverse Effects): 2 items added (q_89f7e627729eebfb4ae8, q_ef959ed5ac07c2ece39b)
+Other page changes (nav, headers, scripts): +1460 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 187 briefs, 2233 items (663 with reasons), 22 scripts, 40 checks, base HEAD | allowlisted 10 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 187 | bankwraps 187 | mcq 2233 (reasons 663) (axCheck 2233, reveal-only 0) | malformed 0 | crit gridded 127/127 | vignette gridded 54/54 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808703 source shingles; page 0.012%)
+```
+
 ## 2026-10-26 s154c: s154c: question-style pause points on all 105 spine briefs (site layer + restated wording); pause-format lint and gate
 
 ```
