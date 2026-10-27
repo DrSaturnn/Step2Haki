@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-26, by Claude (s154f chat 2: scope cut to the format patch; C1 done).
+Last updated: 2026-10-26, by Claude (s154f chat 3: C2 design notes; context full before any edit).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -17,11 +17,12 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   patch); the NBME layer (C3) becomes batch s154g with its own launch after s154f ships. Budget unchanged."). Batch file
   repair/s154f/S154F.md (project copy claude/pending/S154F.md): scope, the chunk table, the C1 record and the calls made.
   Branch wip/s154f in both repos; WAVE.json open (10 agents, 120 calls, 4M; lead 120M); a new container re-runs
-  `patch.py setup s154f`. Step: C1 DONE in chat 2 (lint pp-b data-nbme change; 1a and 1b on 9 briefs; all 9 mech PASS;
-  batch page gate, render, vendor, squeeze pass). Next: chunk C2 in chat 3 (1c, 2a, 2b, 2g, 2h, 2l, 2n, 2o on 14 briefs;
-  add the edits in local/s154f/gen.py c2() and run `python3 local/s154f/gen.py all`, then `patch.py s3` on every changed
-  folder), then C4 (mentions read, review rounds, report, ship) in chat 4. Spend: reviewers 0; lead chat 1 9.79M, chat 2
-  13.53M (23.32M of 120M; ledger_lead.csv). Continuation chats read this State, repair/s154f/S154F.md, DIGEST from 2026-10-26 s154f, and
+  `patch.py setup s154f`. Step: C1 DONE in chat 2 (all 9 mech PASS; batch page checks pass). Chat 3 hit the context
+  limit (start-up 129k plus the survey) before writing c2(): no brief changed; its decisions are in S154F.md "C2 design
+  notes (chat 3)" (1c, 2a row by row, 2b, the 2g/2h house style and every band as shipped) with helpers
+  local/s154f/w5lib.py and w5peek.py. Next: chunk C2 in chat 4 from those notes (survey only 2l, 2n, 2o; write c2() in
+  local/s154f/gen.py, run `python3 local/s154f/gen.py all`, then `patch.py s3` on every changed folder), then C4 in
+  chat 5. Spend: reviewers 0; lead chat 1 9.79M, chat 2 13.53M, chat 3 7.59M (30.91M of 120M; ledger_lead.csv). Continuation chats read this State, repair/s154f/S154F.md, DIGEST from 2026-10-26 s154f, and
   the scratch in the private repo local-only/local/s154f/. Session start for s154f: clone both repos on wip/s154f
   (`git clone --depth 50 -b wip/s154f ...` public; `--depth 1 -b wip/s154f` private), then npm i and the local-only cp.
 - **s154g queued** (the NBME layer, moved out of s154f): its scoping is S154F.md section C3; Jonathan launches it after
