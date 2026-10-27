@@ -12,14 +12,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **s154f OPEN** (Claude lead, launched 2026-10-26; psych format patch, C1 and C2; C3 moved to s154g). Batch file
-  repair/s154f/S154F.md (project copy claude/pending/S154F.md). Branch wip/s154f in both repos; a new container re-runs
-  `patch.py setup s154f`. Step: C4 review DONE in chat 6: rounds 1 to 3 (10 reviewer agents, 44 calls, 1.96M of 4M),
-  all 20 briefs READY; changelog '154f' added; S8 run 2 (`batch.py s8 s154f <20 ids>`, local/s154f/s8_run2.log).
-  Next: if S8 presented, send the S8 report and wait for "ship"; then S9 (`batch.py ship`, OPEN_WORK, DIGEST, handoff in
-  the project and on the Mac, `batch.py post`). Fixes live in local/s154f/gen.py (R1, R1_IDS, IPV1; `gen.py all`
-  regenerates every delta). Lead spend 55.8M of 120M (4 rows in ledger_lead.csv). Continuation chats follow
-  claude/RESUME.md.
+- **No batch open.** s154f SHIPPED 2026-10-27 (Claude lead; psych format patch, 20 briefs): commit 6c004d5, page
+  c01f18a2e48e; reviewers 10 agents, 44 calls, 1.96M of 4M; lead about 56M of 120M. Record in repair/s154f/S154F.md
+  (S9 section). Next: s154g, the NBME presentation layer (S154F.md "C3", claude/pending/NBME_PRESENTATION_SPEC.md "Mockup
+  v1"), launched by its own prompt per the runbook's full read order (a launch is not a continuation).
 
 - **NBME intake 2026-10-26 (no batch, log-only):** 16 Psychiatry CMS items (form 6 inferred from AnKing Form_06 tags;
   Jonathan to confirm; no item numbers; NBME platform Q IDs 749759 to 749782) saved to their owners' s-intake files
