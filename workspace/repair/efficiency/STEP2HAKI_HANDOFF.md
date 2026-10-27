@@ -17,12 +17,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   patch); the NBME layer (C3) becomes batch s154g with its own launch after s154f ships. Budget unchanged."). Batch file
   repair/s154f/S154F.md (project copy claude/pending/S154F.md): scope, the chunk table, the C1 record and the calls made.
   Branch wip/s154f in both repos; WAVE.json open (10 agents, 120 calls, 4M; lead 120M); a new container re-runs
-  `patch.py setup s154f`. Step: C1 DONE in chat 2 (all 9 mech PASS; batch page checks pass). Chat 3 hit the context
-  limit (start-up 129k plus the survey) before writing c2(): no brief changed; its decisions are in S154F.md "C2 design
-  notes (chat 3)" (1c, 2a row by row, 2b, the 2g/2h house style and every band as shipped) with helpers
-  local/s154f/w5lib.py and w5peek.py. Next: chunk C2 in chat 4 from those notes (survey only 2l, 2n, 2o; write c2() in
-  local/s154f/gen.py, run `python3 local/s154f/gen.py all`, then `patch.py s3` on every changed folder), then C4 in
-  chat 5. Spend: reviewers 0; lead chat 1 9.79M, chat 2 13.53M, chat 3 14.84M, of which 7.25M the restart-discipline fix (38.16M of 120M; ledger_lead.csv). Continuation chats follow claude/RESUME.md (resume.py prints what to read). Session start for s154f: clone both repos on wip/s154f
+  `patch.py setup s154f`. Step: C1 DONE in chat 2; C2 DONE in chat 4 except 2l (gen.py c2(); deltas written for all 20 briefs; s3 run on the 14 changed folders, record in S154F.md "C2 record (chat 4)"). Next, chat 5: 2l gppd Pairs with (the record names the steps), s3 on psych/N6/spine, confirm every mech log PASS, re-verify pms-pmdd on a clean tree (its only FAIL was the dirty-tree git check), then C4 (review rounds, S5 fixes, S8 report, ship). Spend: reviewers 0; lead chat 1 9.79M, chat 2 13.53M, chat 3 14.84M, of which 7.25M the restart-discipline fix (38.16M of 120M; ledger_lead.csv). Continuation chats follow claude/RESUME.md (resume.py prints what to read). Session start for s154f: clone both repos on wip/s154f
   (`git clone --depth 50 -b wip/s154f ...` public; `--depth 1 -b wip/s154f` private), then npm i and the local-only cp.
 - **s154g queued** (the NBME layer, moved out of s154f): its scoping is S154F.md section C3; Jonathan launches it after
   s154f ships (prompt below).
