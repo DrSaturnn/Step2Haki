@@ -2,6 +2,39 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-27 s154f: s154f: psych format patch, 20 briefs (NBME framing blocks into pause points, one test per line, next-move columns, relabels)
+
+```
+Page: 187 briefs, 2233 items -> 187 briefs, 2233 items
+Briefs changed (20):
+  - psychosis-duration (Psychosis): prose edited (-675 chars)
+  - voices (Hears Voices or Holds Odd Beliefs): prose edited (+1074 chars)
+  - sz-psychosocial (Schizophrenia: Long-Term Care): prose edited (-733 chars)
+  - bipolar-mania (Bipolar Disorder): prose edited (-942 chars)
+  - mdd (Major Depressive Disorder): prose edited (-15 chars)
+  - pms-pmdd (Premenstrual Syndrome and Premenstrual Dysphoric Disorder): prose edited (+15 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (-610 chars)
+  - somatic (Somatic Symptom and Related Disorders): prose edited (+1653 chars)
+  - gppd (Genito-Pelvic Pain/Penetration Disorder): prose edited (+110 chars)
+  - delirium (Delirium): prose edited (+126 chars)
+  - dementia (Cognitive Decline and Dementia in an Adult): prose edited (+728 chars)
+  - toxidrome (Suspected Overdose or Toxidrome): prose edited (+314 chars)
+  - psych-medical (Medication- and Illness-Induced Psychiatric Disorders): prose edited (+557 chars)
+  - disruptive-behavior (Disruptive Behavior in a Child): prose edited (+5 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (-88 chars)
+  - antipsych-effects (Antipsychotic Adverse Effects): prose edited (-2 chars)
+  - lithium-effects (Lithium Therapy): prose edited (-763 chars)
+  - tca-tox (Anticholinergic and Tricyclic Toxicity): prose edited (+283 chars)
+  - suicide-risk (Suicide Risk Assessment): prose edited (+5 chars)
+  - ipv (Intimate Partner Violence): prose edited (-1892 chars)
+Other page changes (nav, headers, scripts): +945 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 187 briefs, 2233 items (663 with reasons), 22 scripts, 40 checks, base HEAD | allowlisted 10 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 187 | bankwraps 187 | mcq 2233 (reasons 663) (axCheck 2233, reveal-only 0) | malformed 0 | crit gridded 127/127 | vignette gridded 54/54 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808703 source shingles; page 0.012%)
+```
+
 ## 2026-10-26 s154e: s154e: muted caution tint on the pause point (site layer)
 
 ```
