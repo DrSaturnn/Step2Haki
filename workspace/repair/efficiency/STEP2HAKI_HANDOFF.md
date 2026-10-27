@@ -12,15 +12,14 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **s154f OPEN** (Claude lead, launched 2026-10-26 18:33; psych format patch; runbook 8b, multi-chat by the context
-  rule). Scope cut in chat 2 (DIGEST 2026-10-26 s154f scope split, Jonathan: "s154f ships chunks C1 and C2 only (format
-  patch); the NBME layer (C3) becomes batch s154g with its own launch after s154f ships. Budget unchanged."). Batch file
-  repair/s154f/S154F.md (project copy claude/pending/S154F.md): scope, the chunk table, the C1 record and the calls made.
-  Branch wip/s154f in both repos; WAVE.json open (10 agents, 120 calls, 4M; lead 120M); a new container re-runs
-  `patch.py setup s154f`. Step: C1 DONE in chat 2; C2 DONE in chat 4 except 2l (gen.py c2(); deltas written for all 20 briefs; s3 run on the 14 changed folders, record in S154F.md "C2 record (chat 4)"). C2 DONE in chat 5 (2l Pairs with to somatic; the C2 s3 outputs chat 4 never committed were rebuilt: s3 on all 14 C2 folders, 14 of 14 mech PASS, gate/render/preflight/vendor/squeeze ok; record in S154F.md "C2 record"). C4 step 1 (mentions, all 20 incl. TCA) done in chat 5; H6 rebased (DIGEST 2026-10-27); round 1 packets built in chat 5 (`patch.py review s154f 1 --opus <10> --sonnet <10> --per-lane 5`: lanes repair/efficiency/lanes/s154f/r1/lane_opus_1, _2, lane_sonnet_1, _2). Next, chat 6: launch the 4 r1 lanes in one message, foreground, with the prompts patch.py printed (re-run the same review command to reprint them; folders in S154F.md C4 entry), then `patch.py file s154f 1` (then review round 1, S5 fixes, round 2, S8 report, S9 ship). Spend: reviewers 0; lead chat 1 9.79M, chat 2 13.53M, chat 3 14.84M, of which 7.25M the restart-discipline fix (38.16M of 120M; ledger_lead.csv). Continuation chats follow claude/RESUME.md (resume.py prints what to read). Session start for s154f: clone both repos on wip/s154f
-  (`git clone --depth 50 -b wip/s154f ...` public; `--depth 1 -b wip/s154f` private), then npm i and the local-only cp.
-- **s154g queued** (the NBME layer, moved out of s154f): its scoping is S154F.md section C3; Jonathan launches it after
-  s154f ships (prompt below).
+- **s154f OPEN** (Claude lead, launched 2026-10-26; psych format patch, C1 and C2; C3 moved to s154g). Batch file
+  repair/s154f/S154F.md (project copy claude/pending/S154F.md). Branch wip/s154f in both repos; a new container re-runs
+  `patch.py setup s154f`. Step: C4 review DONE in chat 6: rounds 1 to 3 (10 reviewer agents, 44 calls, 1.96M of 4M),
+  all 20 briefs READY; changelog '154f' added; S8 run 2 (`batch.py s8 s154f <20 ids>`, local/s154f/s8_run2.log).
+  Next: if S8 presented, send the S8 report and wait for "ship"; then S9 (`batch.py ship`, OPEN_WORK, DIGEST, handoff in
+  the project and on the Mac, `batch.py post`). Fixes live in local/s154f/gen.py (R1, R1_IDS, IPV1; `gen.py all`
+  regenerates every delta). Lead spend 55.8M of 120M (4 rows in ledger_lead.csv). Continuation chats follow
+  claude/RESUME.md.
 
 - **NBME intake 2026-10-26 (no batch, log-only):** 16 Psychiatry CMS items (form 6 inferred from AnKing Form_06 tags;
   Jonathan to confirm; no item numbers; NBME platform Q IDs 749759 to 749782) saved to their owners' s-intake files
