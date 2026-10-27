@@ -67,6 +67,26 @@ def call(aid, tool, ti, cwd=WS):
     return run('callgate.py', d)
 
 
+# H6 contextgate (2026-10-26): silent below the warning, one warning per session, a stop notice past the restart point
+def _ctx(n, sid, sub=False):
+    d = os.path.join(T, 'ctxt', 'subagents' if sub else 'lead')
+    os.makedirs(d, exist_ok=True)
+    p = os.path.join(d, '%s.jsonl' % sid)
+    with open(p, 'w') as f:
+        f.write(json.dumps({'type': 'assistant', 'message': {'id': 'm1', 'usage': {'input_tokens': 5, 'cache_creation_input_tokens': 1000, 'cache_read_input_tokens': 9000}}}) + '\n')
+        f.write(json.dumps({'type': 'assistant', 'message': {'id': 'm2', 'usage': {'input_tokens': 5, 'cache_creation_input_tokens': 1000, 'cache_read_input_tokens': n - 1005}}}) + '\n')
+    return run('contextgate.py', {'session_id': sid, 'transcript_path': p, 'tool_name': 'Bash'})
+
+
+expect('context 150k silent', _ctx(150000, 'c1'), 0)
+expect('context 205k warns', _ctx(205000, 'c2'), 2)
+expect('context 210k, already warned: silent', _ctx(210000, 'c2'), 0)
+expect('context 230k stops', _ctx(230000, 'c2'), 2)
+expect('context 240k stops again', _ctx(240000, 'c2'), 2)
+expect('a subagent at 240k: silent', _ctx(240000, 'c3', sub=True), 0)
+expect('no transcript: silent', run('contextgate.py', {'session_id': 'c4', 'tool_name': 'Bash'}), 0)
+
+
 try:
     P = 'Role: probe\nPlan step: R2\nLane: %s\n\nDo the probe.' % LANE
     # ---- H1 (T2 logic)

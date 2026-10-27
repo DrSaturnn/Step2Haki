@@ -24,11 +24,16 @@ This runbook sits under DECISIONS_DIGEST, STANDING_DIRECTIONS and the plan (clau
 9. claude/design/WORKUP_5A_SPEC.md;
 10. conditional PASS: claude/pending/POST_SHIP_R3.md section 2, with the s133 digest lines (hedge words count as meaning; text-only replacements).
 
-**Continuation chats** (Jonathan 2026-10-17): a chat that continues an open batch reads only the handoff State, the batch file, DECISIONS_DIGEST lines from 2026-10-15 on, and the batch's own rows and notes in BRIEF_AMEND_LIST (grep, not the whole file); the full read order above is for launches. A chat that starts S4 after the S3 restart also reads, per brief, boards.md, cuts.json and the cards_disposition.json counts (not the cards). A chat that starts S8 after the S7 restart reads only the State, the batch file's S5 and S7 sections and each receipt's verdict line (s148 efficiency fix 1).
+**Continuation chats** (Jonathan 2026-10-26: "Add whatever is needed so this issue does not happen again"): the
+restart line points to claude/RESUME.md (repo copy repair/efficiency/RESUME.md), four steps: clone the open batch's
+branch, `patch.py setup`, `tools/spine/resume.py` (the State, the batch file's sections with line ranges, the DIGEST lines
+naming the batch, the reading rules), then the one section the State names. A continuation chat never opens this file,
+the handoff, STANDING_DIRECTIONS or DIGEST whole (the project tool loads a doc whole); it greps them for the topic of
+the edit in hand. The list below is what resume.py prints. Earlier rule (Jonathan 2026-10-17): a chat that continues an open batch reads only the handoff State, the batch file, DECISIONS_DIGEST lines from 2026-10-15 on, and the batch's own rows and notes in BRIEF_AMEND_LIST (grep, not the whole file); the full read order above is for launches. A chat that starts S4 after the S3 restart also reads, per brief, boards.md, cuts.json and the cards_disposition.json counts (not the cards). A chat that starts S8 after the S7 restart reads only the State, the batch file's S5 and S7 sections and each receipt's verdict line (s148 efficiency fix 1).
 
 **Reading and paths** (s148 efficiency fix 4, Jonathan 2026-10-18): do not call register_repo_root (the repos have no CLAUDE.md; each registration re-sends the whole skill list); use absolute paths and never cd into another folder in a command (a working-folder change re-sends the environment and memory context); read docs by Grep or a line range, never whole when the read list allows less.
 
-**Restart line**, the same every time; Jonathan pastes it when a chat fills: `Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.`
+**Restart line**, the same every time; Jonathan pastes it when a chat fills: `Step2Haki: continue the current batch per claude/RESUME.md.`
 
 **The paste step** (Jonathan 2026-10-17: "always give me the paste step"): every message that stops a chat for a restart ends with the exact line to paste, alone in its own code block, so it can be copied in one tap; the same holds for the next launch prompt at a batch close.
 
@@ -138,7 +143,7 @@ Then run section 2 to the end without asking.
     on site, side, timing, age, maneuver and next step, body and bank alike (s152: most round-1 MEDs were such drift);
   - `tools/spine/squeeze_check.py <page> <changed briefs>` (0 squeezed; the briefs as one comma list) and, when pointers or titles changed,
     `tools/spine/pointer_check.py <page> <briefs>`; legib_audit only in a layout batch (token rules).
-  - Then restart, except in a patch (section 8b) (Jonathan 2026-10-17, s146 cost review): rewrite the handoff State with S3 done and send only "S3 done. Paste into a fresh chat: Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md." The review and ship steps run in a fresh chat, which reads the batch file, each brief's boards.md, cuts.json and claim map before judging findings; so every build call made in S1 to S3 is written down there, not left in the chat.
+  - Then restart, except in a patch (section 8b) (Jonathan 2026-10-17, s146 cost review): rewrite the handoff State with S3 done and send only "S3 done. Paste into a fresh chat: Step2Haki: continue the current batch per claude/RESUME.md." The review and ship steps run in a fresh chat, which reads the batch file, each brief's boards.md, cuts.json and claim map before judging findings; so every build call made in S1 to S3 is written down there, not left in the chat.
 - **S4. Review round 1.**
   - Three roles (acc, read, flags) on the models in the plan table; display only in a layout batch (token rules). For a
     brief with small additions, round 1 already reviews only the changed lines (`review_packet.py --since` the live text).
@@ -267,12 +272,21 @@ If Jonathan names changes:
 - A required hook test fails and agent steps cannot run.
 - The budget runs out before READY. Stop at the cap; report the spend, what remains and the amount needed. Never exceed it.
 - Anything irreversible: deleting Mac files, deleting a branch, force-pushing, rewriting history.
-- The context is full (past about 225k; Jonathan 2026-10-25, was 350k). Rewrite the handoff State and send only: "Context full. Paste into a fresh chat: Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md."
+- The context is full (past about 225k; Jonathan 2026-10-25, was 350k). Rewrite the handoff State and send only: "Context full. Paste into a fresh chat: Step2Haki: continue the current batch per claude/RESUME.md."
 
 Each such message asks one question, multiple choice where possible, with a recommendation.
 
 ## 7. Context discipline
 
+- The context alarm (hook H6, tools/hooks/contextgate.py, installed by install.sh and `patch.py setup`; 2026-10-26)
+  measures the lead's context after every tool call: one warning at 200k (finish the step in hand), then a stop notice
+  after every call from 225k (write State, commit, push, send only the restart message). It replaces judging context by
+  eye, which let s154f chat 3 reach about 280k.
+- Surveys never print into the chat: a script writes them to local/<batch>/survey_<topic>.md and prints counts; the lead
+  reads the file by section. Briefs are read through scripts, never as raw HTML.
+- Each chunk of a multi-chat batch ends by writing the next chunk's exact edits into the batch file, so the next chat
+  starts at the edits rather than a survey.
+- RESUME.md's "Open batch" line is rewritten when a batch opens (launch) and when it ships (to "none").
 - The lead reads summaries, receipts, diffs and script output, never whole briefs or pages.
 - Long outputs go to files in the brief folder; the chat gets counts.
 - The handoff State is rewritten after every step, so the restart line is always enough.

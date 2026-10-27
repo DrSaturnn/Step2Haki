@@ -15,9 +15,10 @@ s['hooks'] = {
   'PreToolUse': [
     {'matcher': 'Agent|Task', 'hooks': [{'type': 'command', 'command': 'python3 %s/agentgate.py' % h}]},
     {'matcher': '', 'hooks': [{'type': 'command', 'command': 'python3 %s/callgate.py' % h}]}],
+  'PostToolUse': [{'matcher': '', 'hooks': [{'type': 'command', 'command': 'python3 %s/contextgate.py' % h}]}],
   'UserPromptSubmit': [{'hooks': [{'type': 'command', 'command': 'python3 %s/approval.py hook' % h}]}]}
 json.dump(s, open(p, 'w'), indent=1)
-print('hooks installed: %s (H1 agentgate, H2-H4 callgate, G-APPROVE approval hook)' % p)
+print('hooks installed: %s (H1 agentgate, H2-H4 callgate, G-APPROVE approval hook, H6 contextgate)' % p)
 PY
 mkdir -p /home/claude/.claude/agents
 cp "$H"/agents/*.md /home/claude/.claude/agents/

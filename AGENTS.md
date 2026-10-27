@@ -24,8 +24,8 @@ Before anything else, read in this order:
    section 1).
 
 Restart line (Jonathan pastes it to continue an open batch):
-`Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.`
-For Codex it means: take the lock per CODEX_LEAD.md section 0, then follow the runbook from the State's step.
+`Step2Haki: continue the current batch per claude/RESUME.md.` (earlier: "per claude/BATCH_RUNBOOK.md", the same meaning)
+For Codex it means: take the lock per CODEX_LEAD.md section 0, then follow workspace/repair/efficiency/RESUME.md and the runbook from the State's step.
 A launch prompt (a new batch id) means: CODEX_LEAD.md section 2 item 4 (create wip/sNN in both repos), then section 2a
 (which build to copy) and section 7 (failure modes, read before S1); a launch that names new briefs also follows
 section 9. New board questions with no batch open go through the board-brief skill (intake only; it never edits the

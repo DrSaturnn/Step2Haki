@@ -7,7 +7,7 @@ Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.
 ## Restart prompt (the only current one)
 
 ```
-Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
+Step2Haki: continue the current batch per claude/RESUME.md.
 ```
 
 ## State (rewrite after every step)
@@ -22,8 +22,7 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   notes (chat 3)" (1c, 2a row by row, 2b, the 2g/2h house style and every band as shipped) with helpers
   local/s154f/w5lib.py and w5peek.py. Next: chunk C2 in chat 4 from those notes (survey only 2l, 2n, 2o; write c2() in
   local/s154f/gen.py, run `python3 local/s154f/gen.py all`, then `patch.py s3` on every changed folder), then C4 in
-  chat 5. Spend: reviewers 0; lead chat 1 9.79M, chat 2 13.53M, chat 3 7.59M (30.91M of 120M; ledger_lead.csv). Continuation chats read this State, repair/s154f/S154F.md, DIGEST from 2026-10-26 s154f, and
-  the scratch in the private repo local-only/local/s154f/. Session start for s154f: clone both repos on wip/s154f
+  chat 5. Spend: reviewers 0; lead chat 1 9.79M, chat 2 13.53M, chat 3 14.84M, of which 7.25M the restart-discipline fix (38.16M of 120M; ledger_lead.csv). Continuation chats follow claude/RESUME.md (resume.py prints what to read). Session start for s154f: clone both repos on wip/s154f
   (`git clone --depth 50 -b wip/s154f ...` public; `--depth 1 -b wip/s154f` private), then npm i and the local-only cp.
 - **s154g queued** (the NBME layer, moved out of s154f): its scoping is S154F.md section C3; Jonathan launches it after
   s154f ships (prompt below).
@@ -109,8 +108,8 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 - **Carried:** s150c round 4 deferred LOWs (dementia Korsakoff reason d1; eating-disorders "step 2 criterion"
   wording); defense-mechanisms intro clause unmasked; no reverse pointers to dementia or defense-mechanisms from
   delirium, parkinson or cluster-b; MPTP chemical-name LOW; s150b legibility advisories; the four s150b audit proposals;
-  queue.csv open row 59 (prolactin); row 66 QID to link. Owed by Jonathan: turn off Figma, Vercel and the healthcare
-  plugin for this project.
+  queue.csv open row 59 (prolactin); row 66 QID to link. Figma and Vercel are off (checked 2026-10-26); the healthcare and design plugins still load
+  through the linked Mac (about 3k to 5k of start-up).
 
 ## Next launch prompt (paste into a fresh chat)
 
