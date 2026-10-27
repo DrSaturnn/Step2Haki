@@ -8,6 +8,9 @@ Replaces the per-brief /tmp ovl_*.py scripts. Checks the learner-facing text abo
   - every vendor source file under repair/sources (question files, Aquifer text, and the AnKing card text
     anki/anki_cards.txt), chosen by vendor_scan.is_vendor so the indexes and databases are not read.
 Prints the shared 10-word runs and the longest run; exit 1 when any run is shared (fix by rewording).
+s154g: an NBME behavior description (an element carrying data-nbme-src: span.nbd-w, button.nbd, span.nbd-h) quotes
+NBME's clause as written by design (DIGEST 2026-10-26 "NBME phrasing hovers"), so its text is left out of this check
+when it holds 25 words or fewer (vendor_scan's page limits still judge it); a longer one stays in and is flagged.
 """
 import json
 import os
@@ -42,6 +45,14 @@ def above_bank(h, bank):
     return h[:m.start()]
 
 
+NBD = re.compile(r'<(span|button)\b[^>]*\bdata-nbme-src="[^"]*"[^>]*>((?:(?!<span\b|<button\b).)*?)</\1>', re.S)
+
+
+def drop_descriptions(body):
+    """s154g: blank NBME descriptions of 25 words or fewer (see the module note)"""
+    return NBD.sub(lambda m: ' \u2016 ' if len(v.words(re.sub('<[^>]+>', ' ', m.group(2)))) <= 25 else m.group(0), body)
+
+
 def main(argv):
     if len(argv) < 2:
         sys.exit(__doc__.strip().splitlines()[2].strip())
@@ -49,7 +60,7 @@ def main(argv):
     bank = argv[argv.index('--bank') + 1] if '--bank' in argv else None
     show = int(argv[argv.index('--show') + 1]) if '--show' in argv else 15
     ws = os.path.abspath(os.path.join(HERE, '..', '..'))
-    body = above_bank(open(brief, encoding='utf-8').read(), bank)
+    body = drop_descriptions(above_bank(open(brief, encoding='utf-8').read(), bank))
     src = {}
     for q in quotes(json.load(open(cmap, encoding='utf-8')), []):
         for s in v.shingles(v.words(q)):

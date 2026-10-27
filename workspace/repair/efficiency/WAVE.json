@@ -1,8 +1,8 @@
 {
   "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
-  "id": "s154f",
-  "open": false,
-  "plan_step": "s154f",
+  "id": "s154g",
+  "open": true,
+  "plan_step": "s154g",
   "roles": [
     "patch-review",
     "patch-review-opus"
@@ -10,13 +10,13 @@
   "max_agents": 10,
   "max_calls": 120,
   "max_tokens": 4000000,
-  "set_by": "Jonathan, s154f launch 2026-10-26 (\"Step2Haki: launch batch s154f (psych format patch plus NBME layer) per claude/BATCH_RUNBOOK.md section 8b, claude/pending/PSYCH_FORMAT_AUDIT.md section 4 and claude/pending/NBME_PRESENTATION_SPEC.md \\\"Mockup v1\\\". Budget: 10 agents, 120 calls, 4M reviewer tokens; lead 120M.\")",
+  "set_by": "Jonathan, s154g launch 2026-10-27 (\"Step2Haki: launch batch s154g (NBME presentation layer: X1 tags, X2 valproate row, NBME descriptions in rows, view C) per claude/BATCH_RUNBOOK.md and claude/pending/NBME_PRESENTATION_SPEC.md \\\"Mockup v1\\\", with the scoping in repair/s154f/S154F.md section C3. Budget: 10 agents, 120 calls, 4M reviewer tokens; lead 120M.\")",
   "previous": {
-    "id": "s154d",
-    "note": "s154d shipped 1dd87de 2026-10-26 (Claude lead); reviewers 4 agents, 15 calls, 0.57M of 1M; lead about 18.3M of 30M (s154e site layer shipped 5bfeaa8 after it, no reviewers)"
+    "id": "s154f",
+    "note": "s154f shipped 6c004d5 2026-10-27 (Claude lead); reviewers 10 agents, 44 calls, 1.96M of 4M; lead about 56M of 120M"
   },
-  "opened": "2026-10-26 18:33 EDT",
-  "note": "s154f open (Claude lead): psych format patch (audit section 4) plus the NBME presentation layer (mockup v1); runbook 8b",
+  "opened": "2026-10-27 16:48 EDT",
+  "note": "s154g open (Claude lead): NBME presentation layer (S154F.md C3; spec Mockup v1, calls 1 to 9 approved); patch pipeline plus site layer",
   "batch_budgets": {
     "s138": {
       "agents": 20,
@@ -218,6 +218,12 @@
       "lead_tokens": 30000000
     },
     "s154f": {
+      "agents": 10,
+      "calls": 120,
+      "tokens": 4000000,
+      "lead_tokens": 120000000
+    },
+    "s154g": {
       "agents": 10,
       "calls": 120,
       "tokens": 4000000,

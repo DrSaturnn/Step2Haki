@@ -12,7 +12,13 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **No batch open.** s154f SHIPPED 2026-10-27 (Claude lead; psych format patch, 20 briefs): commit 6c004d5, page
+- **Open batch: s154g** (Claude lead, launched 2026-10-27 16:48 EDT; NBME presentation layer: X1 tags, X2 valproate row,
+  B descriptions in rows, view C). Branch wip/s154g in both repos. Budget 10 agents, 120 calls, 4M reviewer tokens;
+  lead 120M. Batch file repair/s154g/S154G.md (chunk table there). Step: C1 done (gen.py, 40_site.json, s3 on 16
+  folders all mech PASS, gate/render/vendor/squeeze ok, screenshots and legib_audit); next C2 review round 1.
+  Reviewer spend 0. s154f SHIPPED 2026-10-27 (6c004d5, record repair/s154f/S154F.md).
+
+- **Previous: s154f SHIPPED 2026-10-27 (Claude lead; psych format patch, 20 briefs): commit 6c004d5, page
   c01f18a2e48e; reviewers 10 agents, 44 calls, 1.96M of 4M; lead about 56M of 120M. Record in repair/s154f/S154F.md
   (S9 section). Next: s154g, the NBME presentation layer (S154F.md "C3", claude/pending/NBME_PRESENTATION_SPEC.md "Mockup
   v1"), launched by its own prompt per the runbook's full read order (a launch is not a continuation).
