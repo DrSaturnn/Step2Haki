@@ -388,7 +388,7 @@ def pause_format(brief_html):
         out.append('pause-format: more than one pause point')
     if not inner.startswith('<b class="pp-t">Pause point</b>'):
         out.append('pause-format: the pause point does not open with <b class="pp-t">Pause point</b>')
-    blocks = re.findall(r'<div class="pp-b">\n(.*?)\n</div>', inner, re.S)
+    blocks = re.findall(r'<div class="pp-b"(?: data-nbme="[^"]*")?>\n(.*?)\n</div>', inner, re.S)
     if not blocks:
         out.append('pause-format: no pp-b block')
     for i, b in enumerate(blocks, 1):
@@ -403,7 +403,7 @@ def pause_format(brief_html):
                     out.append('pause-format: block %d offered-as line has no underlined bait (<em>)' % i)
             elif not ln.startswith('<span class="si"><span class="mask">'):
                 out.append('pause-format: block %d has a line that is neither offered-as nor a masked deciding line' % i)
-    rest = re.sub(r'<div class="pp-b">\n.*?\n</div>', '', inner, flags=re.S)
+    rest = re.sub(r'<div class="pp-b"(?: data-nbme="[^"]*")?>\n.*?\n</div>', '', inner, flags=re.S)
     if len(re.findall(r'<p class="pp-x">', rest)) > 1:
         out.append('pause-format: more than one extra line (p.pp-x)')
     return out

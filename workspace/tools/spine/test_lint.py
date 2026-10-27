@@ -166,6 +166,8 @@ expect('pause-format: an unmasked answer fails', any('masked answer' in x for x 
 expect('pause-format: offered-as without <em> fails', any('underlined bait' in x for x in L.pause_format(PPOK.replace('<em>bait</em>', 'bait'))))
 expect('pause-format: an unmasked deciding line fails', any('neither' in x for x in L.pause_format(PPOK.replace('<span class="si"><span class="mask">Decider</span></span>', '<span class="si">Decider</span>'))))
 expect('pause-format: two extra lines fail', any('extra line' in x for x in L.pause_format(PPOK.replace('<p class="pp-x">Extra.</p>', '<p class="pp-x">A.</p>\n<p class="pp-x">B.</p>'))))
+expect('pause-format: a pp-b with data-nbme passes (s154f)', L.pause_format(PPOK.replace('<div class="pp-b">', '<div class="pp-b" data-nbme="psych-form-085f91">')) == [])
+expect('pause-format: a pp-b with another attribute still fails (s154f)', L.pause_format(PPOK.replace('<div class="pp-b">', '<div class="pp-b" data-x="1">')) != [])
 expect('pause-format: a non-spine brief is skipped', L.pause_format(PPOK.replace('data-spine="2"', '')) == [])
 print('test_lint: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)

@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-26, by Claude (s154f launched; chat 1 scoped it and stopped at the context limit).
+Last updated: 2026-10-26, by Claude (s154f chat 2: scope cut to the format patch; C1 done).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,15 +12,20 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
 
 ## State (rewrite after every step)
 
-- **s154f OPEN** (Claude lead, launched 2026-10-26 18:33; psych format patch plus the NBME layer; runbook 8b, multi-chat
-  by the context rule). Batch file repair/s154f/S154F.md (project copy claude/pending/S154F.md): scope (20 briefs),
-  findings, the chunk table C1 to C4 and the calls made. Branch wip/s154f in both repos; WAVE.json open (10 agents, 120
-  calls, 4M; lead 120M); hooks set up in chat 1 (a new container re-runs `patch.py setup s154f`). Step: chat 1 done
-  (launch and scoping; stopped at 257k context). Next: chunk C1 (tool change, 1a and 1b on 9 briefs). Spend: reviewers 0;
-  lead 9.79M (chat 1, recorded). Continuation chats read this State, repair/s154f/S154F.md, DIGEST from 2026-10-26 s154f, and
-  the scratch in the private repo local-only/local/s154f/. Session start for s154f: clone both repos, then check out
-  wip/s154f in each (public `git fetch origin wip/s154f && git checkout wip/s154f`; private the same with `--depth 1`)
-  before the npm i and the local-only cp, so the scratch and the batch file come along.
+- **s154f OPEN** (Claude lead, launched 2026-10-26 18:33; psych format patch; runbook 8b, multi-chat by the context
+  rule). Scope cut in chat 2 (DIGEST 2026-10-26 s154f scope split, Jonathan: "s154f ships chunks C1 and C2 only (format
+  patch); the NBME layer (C3) becomes batch s154g with its own launch after s154f ships. Budget unchanged."). Batch file
+  repair/s154f/S154F.md (project copy claude/pending/S154F.md): scope, the chunk table, the C1 record and the calls made.
+  Branch wip/s154f in both repos; WAVE.json open (10 agents, 120 calls, 4M; lead 120M); a new container re-runs
+  `patch.py setup s154f`. Step: C1 DONE in chat 2 (lint pp-b data-nbme change; 1a and 1b on 9 briefs; all 9 mech PASS;
+  batch page gate, render, vendor, squeeze pass). Next: chunk C2 in chat 3 (1c, 2a, 2b, 2g, 2h, 2l, 2n, 2o on 14 briefs;
+  add the edits in local/s154f/gen.py c2() and run `python3 local/s154f/gen.py all`, then `patch.py s3` on every changed
+  folder), then C4 (mentions read, review rounds, report, ship) in chat 4. Spend: reviewers 0; lead chat 1 9.79M, chat 2
+  13.53M (23.32M of 120M; ledger_lead.csv). Continuation chats read this State, repair/s154f/S154F.md, DIGEST from 2026-10-26 s154f, and
+  the scratch in the private repo local-only/local/s154f/. Session start for s154f: clone both repos on wip/s154f
+  (`git clone --depth 50 -b wip/s154f ...` public; `--depth 1 -b wip/s154f` private), then npm i and the local-only cp.
+- **s154g queued** (the NBME layer, moved out of s154f): its scoping is S154F.md section C3; Jonathan launches it after
+  s154f ships (prompt below).
 
 - **NBME intake 2026-10-26 (no batch, log-only):** 16 Psychiatry CMS items (form 6 inferred from AnKing Form_06 tags;
   Jonathan to confirm; no item numbers; NBME platform Q IDs 749759 to 749782) saved to their owners' s-intake files
@@ -107,6 +112,11 @@ Step2Haki: continue the current batch per claude/BATCH_RUNBOOK.md.
   plugin for this project.
 
 ## Next launch prompt (paste into a fresh chat)
+
+After s154f ships, the NBME layer batch (scoping in repair/s154f/S154F.md section C3; Jonathan sets the budget):
+```
+Step2Haki: launch batch s154g (NBME presentation layer: X1 tags, X2 valproate row, NBME descriptions in rows, view C) per claude/BATCH_RUNBOOK.md and claude/pending/NBME_PRESENTATION_SPEC.md "Mockup v1", with the scoping in repair/s154f/S154F.md section C3. Budget: <agents, calls, reviewer tokens; lead>.
+```
 
 NBME presentation layer mockup (no batch; Jonathan 2026-10-26: cross-domain question types first, then how NBME
 describes symptoms):
