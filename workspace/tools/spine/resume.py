@@ -15,7 +15,7 @@ import sys
 WS = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
 EFF = os.path.join(WS, 'repair', 'efficiency')
 
-RULES = '''Reading rules (runbook "Continuation chats"; the context hook H6 warns at 200k and stops at 225k):
+RULES = '''Reading rules (runbook "Continuation chats"; the context hook H6 warns at start + 150k and gives one finish notice at start + 200k):
 - Do not read the runbook, the handoff, STANDING_DIRECTIONS or DECISIONS_DIGEST whole, in the repo or the project.
   Grep them for the topic of the edit in hand (a display or content rule may live in STANDING or an older DIGEST line).
 - Read the batch file by the line ranges above; read briefs only through scripts (pagelib, review_packet, w5 helpers,

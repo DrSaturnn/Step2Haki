@@ -17,8 +17,8 @@ STANDING_DIRECTIONS.md or DECISIONS_DIGEST.md through the project tool: it loads
    cd /home/claude/Step2Haki/workspace && npm i --silent && cp -rn /home/claude/step2haki-private/local-only/. .
    ```
    Do not call register_repo_root.
-2. `python3 tools/spine/patch.py setup <batch>` (hooks, including H6, the context alarm: it warns at 200k and stops
-   the chat at 225k).
+2. `python3 tools/spine/patch.py setup <batch>` (hooks, including H6, the context alarm: it warns at start + 150k and gives
+   one finish notice at start + 200k; "start" is the chat's first reading, about 130k).
 3. `python3 tools/spine/resume.py`: the handoff State, the batch file's sections with line ranges, its chunk table,
    the DIGEST lines naming the batch, and the reading rules.
 4. Read only the batch-file section the State names as next (`sed -n A,Bp`), and start that step.

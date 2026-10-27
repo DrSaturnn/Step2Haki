@@ -67,7 +67,7 @@ def call(aid, tool, ti, cwd=WS):
     return run('callgate.py', d)
 
 
-# H6 contextgate (2026-10-26): silent below the warning, one warning per session, a stop notice past the restart point
+# H6 contextgate (2026-10-26; rebased 2026-10-27): marks relative to the session's first reading
 def _ctx(n, sid, sub=False):
     d = os.path.join(T, 'ctxt', 'subagents' if sub else 'lead')
     os.makedirs(d, exist_ok=True)
@@ -78,11 +78,17 @@ def _ctx(n, sid, sub=False):
     return run('contextgate.py', {'session_id': sid, 'transcript_path': p, 'tool_name': 'Bash'})
 
 
-expect('context 150k silent', _ctx(150000, 'c1'), 0)
-expect('context 205k warns', _ctx(205000, 'c2'), 2)
-expect('context 210k, already warned: silent', _ctx(210000, 'c2'), 0)
-expect('context 230k stops', _ctx(230000, 'c2'), 2)
-expect('context 240k stops again', _ctx(240000, 'c2'), 2)
+# rebased 2026-10-27: the first reading is the base; warn at base + 150k, finish notice at base + 200k, then one
+# reminder per further 50k, never a notice on every call
+expect('context: first reading 130k sets the base, silent', _ctx(130000, 'c2'), 0)
+expect('context 205k (base + 75k): silent', _ctx(205000, 'c2'), 0)
+expect('context 285k (base + 155k): warns', _ctx(285000, 'c2'), 2)
+expect('context 300k, already warned: silent', _ctx(300000, 'c2'), 0)
+expect('context 332k (base + 202k): finish notice', _ctx(332000, 'c2'), 2)
+expect('context 340k, notice shown: silent', _ctx(340000, 'c2'), 0)
+expect('context 381k (finish + 51k): one reminder', _ctx(381000, 'c2'), 2)
+expect('context 390k: silent', _ctx(390000, 'c2'), 0)
+expect('context: a session starting at 150k is silent', _ctx(150000, 'c1'), 0)
 expect('a subagent at 240k: silent', _ctx(240000, 'c3', sub=True), 0)
 expect('no transcript: silent', run('contextgate.py', {'session_id': 'c4', 'tool_name': 'Bash'}), 0)
 

@@ -230,4 +230,4 @@ The next batch's launch prompt comes from those files unless the s141 closing re
 - Mnemonics only if widely accepted. Pastel colors; horizontal timelines.
 - Vendor text never enters the public repo. Commit as DrSaturnn with the noreply email. Never print the token.
 - Hover-card text, the collapsed systems panel and the pause point do not count against the word cap (2026-10-13; pause point 2026-10-26); hovers and the panel are the place for guideline-only detail.
-- Start a fresh chat when the context passes about 225k (Jonathan 2026-10-25, was 350k; a chat starts at about 122k to 130k). Continuation chats use the short read list in the runbook.
+- Start a fresh chat at the H6 finish notice, start + 200k, about 330k (Jonathan 2026-10-27, was 225k, before that 350k; a chat starts at about 122k to 130k), after finishing the step in hand. Continuation chats use the short read list in the runbook.

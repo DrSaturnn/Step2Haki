@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
-"""H6, context alarm (PostToolUse, every tool; Jonathan 2026-10-26 after s154f chat 3 ran to about 240k unnoticed).
+"""H6, context alarm (PostToolUse, every tool; Jonathan 2026-10-26 after s154f chat 3 ran to about 240k unnoticed;
+rebased 2026-10-27, Jonathan: "yes lets make those changes", after the lead reported that a fresh chat already measured
+129k before any batch work, so the fixed 200k/225k marks left about 70k of working room and would force a restart
+in the middle of a review round).
 Reads the lead's own transcript after each tool call and measures its current context (input + cache write + cache
-read of the latest API call). Subagents are skipped.
-  - below AX_CTX_WARN (default 200000): silent;
-  - from AX_CTX_WARN: one warning per session (exit 2, so the lead sees it): finish the step in hand and write State;
-  - from AX_CTX_STOP (default 225000, the runbook restart point): a stop notice after every call until the chat ends:
-    rewrite the handoff State, commit and push both repos, send only the restart message.
-State: <hook state>/ctx_<session>.json (whether the warning was shown).
+read of the latest API call). Subagents are skipped. The first reading in a session is its base (the system prompt and
+tools); the marks are relative to it:
+  - below base + AX_CTX_WARN_ADD (default 150000): silent;
+  - from there: one warning per session: finish the step in hand and keep State current;
+  - from base + AX_CTX_END_ADD (default 200000): one finish notice: finish the step in hand (a review round counts as
+    one step), write State and the batch file, commit and push, then restart; a reminder after each further
+    AX_CTX_REMIND (default 50000). Never a notice on every call.
+AX_CTX_WARN / AX_CTX_STOP, if set, are absolute marks that override the relative ones.
+State: <hook state>/ctx_<session>.json (base, and the marks already shown).
 """
 import json
 import os
@@ -15,8 +21,11 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import common as C  # noqa: E402
 
-WARN = int(os.environ.get('AX_CTX_WARN', '200000'))
-STOP = int(os.environ.get('AX_CTX_STOP', '225000'))
+WARN_ADD = int(os.environ.get('AX_CTX_WARN_ADD', '150000'))
+END_ADD = int(os.environ.get('AX_CTX_END_ADD', '200000'))
+REMIND = int(os.environ.get('AX_CTX_REMIND', '50000'))
+ABS_WARN = os.environ.get('AX_CTX_WARN')
+ABS_STOP = os.environ.get('AX_CTX_STOP')
 
 
 def current(path):
@@ -46,27 +55,37 @@ def main():
     if d.get('agent_id') or '/subagents/' in tp or not tp:
         return 0
     n = current(tp)
-    if n is None or n < WARN:
+    if n is None:
         return 0
     sid = d.get('session_id') or os.path.basename(tp).split('.')[0]
     sp = C.state('ctx_%s.json' % sid)
-    seen = {}
+    st = {}
     try:
-        seen = json.load(open(sp, encoding='utf-8'))
+        st = json.load(open(sp, encoding='utf-8'))
     except (OSError, ValueError):
         pass
-    if n >= STOP:
-        sys.stderr.write('CONTEXT %dk: past the %dk restart point (runbook section 6). Start no new work: rewrite the handoff '
-                         'State and the batch file (what is done, the exact next edit), commit and push both repos, then send '
-                         'only "Context full. Paste into a fresh chat:" with the restart line alone in a code block.\n'
-                         % (n // 1000, STOP // 1000))
-        return 2
-    if not seen.get('warned'):
-        os.makedirs(os.path.dirname(sp), exist_ok=True)
-        json.dump({'warned': n}, open(sp, 'w', encoding='utf-8'))
-        sys.stderr.write('CONTEXT %dk: %dk left before the %dk restart point. Finish the step in hand, write its record to the '
-                         'batch file and State, and plan to restart; no new surveys or whole-file reads.\n'
-                         % (n // 1000, (STOP - n) // 1000, STOP // 1000))
+    if 'base' not in st:
+        st['base'] = n
+    base = st['base']
+    warn = int(ABS_WARN) if ABS_WARN else base + WARN_ADD
+    end = int(ABS_STOP) if ABS_STOP else base + END_ADD
+    msg = None
+    if n >= end:
+        step = (n - end) // REMIND          # 0 at the finish mark, then one more per REMIND tokens
+        if st.get('ended', -1) < step:
+            st['ended'] = step
+            msg = ('CONTEXT %dk (started at %dk): past the %dk finish mark. Finish the step in hand (a review round is one '
+                   'step), then rewrite the handoff State and the batch file (what is done, the exact next edit), commit and '
+                   'push both repos, and send "Context full. Paste into a fresh chat:" with the restart line alone in a '
+                   'code block. Start no new chunk.' % (n // 1000, base // 1000, end // 1000))
+    elif n >= warn and not st.get('warned'):
+        st['warned'] = n
+        msg = ('CONTEXT %dk (started at %dk): %dk left before the %dk finish mark. Finish the step in hand and keep the '
+               'batch file and State current; no new surveys or whole-file reads.' % (n // 1000, base // 1000, (end - n) // 1000, end // 1000))
+    os.makedirs(os.path.dirname(sp), exist_ok=True)
+    json.dump(st, open(sp, 'w', encoding='utf-8'))
+    if msg:
+        sys.stderr.write(msg + '\n')
         return 2
     return 0
 

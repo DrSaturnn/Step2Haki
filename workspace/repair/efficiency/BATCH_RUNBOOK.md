@@ -56,7 +56,7 @@ additions, no need to recheck/reprove the whole brief just the changes"):
   wrappers for these.
 - Lead context and builders (Jonathan 2026-10-25: "lets follow your recommendations", on the s152 cost review; the
   lead was 94% of s152, 211M of 224M, and a call costs about its whole context):
-  - restart at about 225k context (was 350k), and at brief boundaries in long build steps;
+  - restart at the H6 finish notice (start + 200k, about 330k; was 225k, before that 350k), and at brief boundaries in long build steps;
   - S1 to S3 run in builder agents, one per brief (section 2, "S1 to S3 by builder agents"), first as a pilot;
   - S8 and S9 run through `tools/spine/batch.py` (s8, ship, post); the lead writes only the report and the docs;
   - every built or changed brief gets a mentions sheet read (`tools/spine/mentions.py`) before review (S3, section 4).
@@ -272,15 +272,17 @@ If Jonathan names changes:
 - A required hook test fails and agent steps cannot run.
 - The budget runs out before READY. Stop at the cap; report the spend, what remains and the amount needed. Never exceed it.
 - Anything irreversible: deleting Mac files, deleting a branch, force-pushing, rewriting history.
-- The context is full (past about 225k; Jonathan 2026-10-25, was 350k). Rewrite the handoff State and send only: "Context full. Paste into a fresh chat: Step2Haki: continue the current batch per claude/RESUME.md."
+- The context is full (past the H6 finish notice, start + 200k, about 330k; Jonathan 2026-10-27, was 225k, before that 350k). Rewrite the handoff State and send only: "Context full. Paste into a fresh chat: Step2Haki: continue the current batch per claude/RESUME.md."
 
 Each such message asks one question, multiple choice where possible, with a recommendation.
 
 ## 7. Context discipline
 
 - The context alarm (hook H6, tools/hooks/contextgate.py, installed by install.sh and `patch.py setup`; 2026-10-26)
-  measures the lead's context after every tool call: one warning at 200k (finish the step in hand), then a stop notice
-  after every call from 225k (write State, commit, push, send only the restart message). It replaces judging context by
+  measures the lead's context after every tool call, relative to the chat's first reading (the start-up load, about
+  122k to 130k): one warning at start + 150k (finish the step in hand), one finish notice at start + 200k (finish the
+  step in hand, a review round counting as one step, then write State, commit, push, send only the restart message),
+  and a reminder per further 50k; never a notice on every call (rebased 2026-10-27, DIGEST). It replaces judging context by
   eye, which let s154f chat 3 reach about 280k.
 - Surveys never print into the chat: a script writes them to local/<batch>/survey_<topic>.md and prints counts; the lead
   reads the file by section. Briefs are read through scripts, never as raw HTML.
