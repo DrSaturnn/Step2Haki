@@ -13,10 +13,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 ## State (rewrite after every step)
 
 - **Open batch: s154g** (Claude lead, launched 2026-10-27 16:48 EDT; NBME presentation layer: X1 tags, X2 valproate row,
-  B descriptions in rows, view C). Branch wip/s154g in both repos. Budget 10 agents, 120 calls, 4M reviewer tokens;
-  lead 120M. Batch file repair/s154g/S154G.md (chunk table there). Step: C1 done (gen.py, 40_site.json, s3 on 16
-  folders all mech PASS, gate/render/vendor/squeeze ok, screenshots and legib_audit); next C2 review round 1.
-  Reviewer spend 0. s154f SHIPPED 2026-10-27 (6c004d5, record repair/s154f/S154F.md).
+  B descriptions in rows, view C). Branch wip/s154g in both repos. Batch file repair/s154g/S154G.md. Step: S8 report
+  sent (chat 2), waiting for "ship"; approval presented, page a2e95a52dc9e, 16 of 16 READY after two rounds (r1 9
+  READY; S5 fixes on 8 briefs; r2 all PASS, 2 PASS-IF LOW: bipolar applied, toxidrome declined). Changelog 154g written.
+  Reviewers 6 agents, 19 calls, 0.55M of 4M; lead 2 rows, 36.5M of 120M. On "ship": `batch.py ship s154g "<message>"`,
+  then S9 (`batch.py post`), handoff in the project and on the Mac. s154f SHIPPED 2026-10-27 (6c004d5).
 
 - **Previous: s154f SHIPPED 2026-10-27 (Claude lead; psych format patch, 20 briefs): commit 6c004d5, page
   c01f18a2e48e; reviewers 10 agents, 44 calls, 1.96M of 4M; lead about 56M of 120M. Record in repair/s154f/S154F.md
