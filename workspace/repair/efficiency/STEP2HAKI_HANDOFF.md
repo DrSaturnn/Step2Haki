@@ -12,12 +12,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: s154j** (Claude lead, launched 2026-10-28 12:39 EDT; runbook 8b patch, one chat): pause point repair,
-  34 blocks in 22 briefs, plus the pause-content checker rule (lint.py pause_format, gate pause-format). Budget 10
-  agents, 70 calls, 3M reviewer tokens; lead 60M. Branch wip/s154j in both repos (public from fa7cbff, private from
-  7a8b9523). Launched before s154i (not shipped): s154i re-takes its bipolar-mania baseline at its launch. Step: S8
-  report sent, awaiting "ship" (presented page dfe76de97831; all 22 READY; reviewers 5 agents, 20 calls, 0.76M; lead
-  30.0M). On "ship": batch.py ship, then post (runbook 8b item 5). Record repair/s154j/S154J.md.
+- **Open batch: none.** s154j SHIPPED 2026-10-28 (Claude lead; pause point repair, 34 blocks in 22 briefs, plus the
+  pause-content checker rule): commit 5d50b97, page 98584de30e65 (approved candidate dfe76de97831); reviewers 5 agents,
+  20 calls, 0.76M of 3M; lead one chat, about 31M of 60M. Record repair/s154j/S154J.md (S9). The gate carry rule was
+  reverted after the ship (strict rule passes the live page). Next: s154i (prompt below; re-take its bipolar-mania
+  baseline, since s154j changed that brief's pause point). Open: nephrotic-child and airway "Pairs with" pointer problems.
 
 - **NBME intake 2026-10-28 (no batch, log-only):** Psychiatry CMS Form 7, 21 items (16 new, 5 repeats of the s37
   items, whose form is now known to be Form 7); private main 0dbd6528, public 6b08d77. Seven delta-ready proposals,

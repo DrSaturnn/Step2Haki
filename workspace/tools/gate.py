@@ -116,7 +116,6 @@ class Gate:
     def __init__(self, allow):
         self.fails, self.allowed, self.allow = [], [], allow
         self.used = set()
-        self.pause_content, self.pause_carried = [], 0   # s154j: pause-content failures, judged against the base
 
     def fail(self, code, key, msg):
         k = '%s %s' % (code, key)
@@ -212,10 +211,6 @@ def check_page(page, g, page_path):
         # replace one brief on a pre-s154c base page); a malformed block pause point always fails
         for prob in _pause_format(page[b.start:b.end]):
             if 'paragraph (p.sp-pause)' in prob and '<style id="ax-s154c">' not in page:
-                continue
-            if prob.startswith('pause-content:'):
-                # s154j: content failures are judged against the base page in main() (pause_content_vs_base)
-                g.pause_content.append((b.id, page[b.start:b.end], prob))
                 continue
             g.fail('pause-format', b.id, prob)
         if not re.match(r'^[a-z0-9][a-z0-9-]*$', b.id):
@@ -566,20 +561,6 @@ def check_attr_only(page, ref_html, g):
     return n_attr
 
 
-def pause_content_vs_base(ref_html, g):
-    """s154j (Jonathan 2026-10-28: "go with checker rule"; STANDING_DIRECTIONS "Pause point content"): a pause-content
-    failure counts on a brief changed against the base page. A brief byte-identical to its base copy carries a block the
-    base already shipped: a one-brief preview (verify --mech) replaces one brief on a page still holding the batch's
-    other unrepaired blocks, as the s154c rule skipped its paragraph pause points before the site layer. With no base,
-    every failure counts. The lint (verify's lint step) always reports the brief's own blocks."""
-    rb = {b.id: ref_html[b.start:b.end] for b in briefs(ref_html)} if ref_html is not None else {}
-    for bid, html, prob in g.pause_content:
-        if rb.get(bid) == html:
-            g.pause_carried += 1
-            continue
-        g.fail('pause-format', bid, prob)
-
-
 def main(argv):
     args, page_path, base, attr_ref = list(argv), None, 'HEAD', None
     allow_path = os.path.join(REPO, 'tools', 'gate_allowlist.txt')
@@ -612,7 +593,6 @@ def main(argv):
     ref_html = load_ref(base)
     if ref_html is not None:
         check_base(page, ref_html, bl, it, g)
-    pause_content_vs_base(ref_html, g)
     n_attr = None
     if attr_ref:
         n_attr = check_attr_only(page, load_ref(attr_ref), g)
@@ -623,8 +603,6 @@ def main(argv):
         (' | attr-only vs %s: %d tag(s) changed' % (attr_ref, n_attr)) if attr_ref else '',
         len(g.allowed), (' (%d stale allowlist line(s): %s)' % (len(stale), '; '.join(stale)[:200])) if stale else '',
         len(g.fails))
-    if g.pause_carried:
-        summary += ' | %d pause-content block(s) carried unchanged from base' % g.pause_carried
     print(summary)
     for code, key, msg in g.fails[:80]:
         print('  [%s] %s\n      fix: %s' % (code, msg, CATALOG[code][1]))
