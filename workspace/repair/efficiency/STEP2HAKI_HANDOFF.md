@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-27, by Claude (s154f chat 6: shipped 6c004d5).
+Last updated: 2026-10-28, by Claude (s154i launch, S3 done).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -11,6 +11,13 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 ```
 
 ## State (rewrite after every step)
+
+- **Open batch: s154i** (Claude lead, launched 2026-10-28 16:07; patch of the 2026-10-28 NBME intake proposals,
+  Psychiatry CMS Form 7, seven briefs: disruptive-behavior, antipsych-effects, ssri-effects, bipolar-mania, tca-tox,
+  suicide-risk, somatic; runbook 8b, one chat). Branch wip/s154i in both repos. Budget 8 agents, 40 calls, 1.5M
+  reviewer tokens; lead 40M. Step: S3 done (7 of 7 mech PASS, page checks pass, squeeze 0); next S4 round 1 (Opus lane
+  disruptive-behavior, tca-tox, suicide-risk, somatic; Sonnet lane antipsych-effects, ssri-effects, bipolar-mania).
+  Spend: reviewers 0. Record repair/s154i/S154I.md.
 
 - **Open batch: none.** s154j SHIPPED 2026-10-28 (Claude lead; pause point repair, 34 blocks in 22 briefs, plus the
   pause-content checker rule): commit 5d50b97, page 98584de30e65 (approved candidate dfe76de97831); reviewers 5 agents,
