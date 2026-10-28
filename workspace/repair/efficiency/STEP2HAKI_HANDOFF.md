@@ -17,7 +17,9 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   repair/sources/intake/*_2026-10-28.md: disruptive-behavior (normal adolescence row + item), antipsych-effects (item),
   ssri-effects (pointer), bipolar-mania (item), tca-tox (row), suicide-risk (row), somatic (row). Baits on the three
   misses are inferred. Next: patch s154i (prompt below). Pause points: Jonathan flagged some as repeating table info;
-  audit in the private repo, claude/pending/PAUSE_POINT_AUDIT_2026-10-28.md (34 blocks, 24 briefs); fix not decided.
+  Jonathan chose rewrite-or-delete plus a checker rule (STANDING_DIRECTIONS "Pause point content"). s154j is scoped
+  delta-ready in the private repo, claude/pending/s154j/ (34 blocks in 22 briefs, all rewrites; lint patch; candidate
+  page passes the gate). Order: s154i, then s154j (prompt below).
 
 - **Open batch: none.** s154h SHIPPED 2026-10-27 (Claude lead; patch of the 2026-10-26n NBME intake proposals, seven
   briefs: capacity, lithium-effects, panic, psychosis-duration, somatic, substance, toxidrome; bipolar-mania dropped,
@@ -152,6 +154,10 @@ Step2Haki: run the queued intake amendments as a patch batch per claude/BATCH_RU
 The 2026-10-28 intake patch as launched (s154h form):
 ```
 Step2Haki: launch batch s154i (patch of the 2026-10-28 NBME intake proposals, Psychiatry CMS Form 7: disruptive-behavior, antipsych-effects, ssri-effects, bipolar-mania, tca-tox, suicide-risk, somatic; repair/sources/intake/*_2026-10-28.md) per claude/BATCH_RUNBOOK.md section 8b. Baits: as inferred unless I name changes here. Budget: 8 agents, 40 calls, 1.5M reviewer tokens; lead 40M.
+```
+The pause point repair, after s154i ships:
+```
+Step2Haki: launch batch s154j (pause point repair: 34 blocks in 22 briefs plus the pause-content checker rule) per claude/BATCH_RUNBOOK.md section 8b, using the private repo claude/pending/s154j/ (S154J_PAUSE_REPAIR.md, delta_s154j.json, lint_pause_content.patch). Budget: 10 agents, 70 calls, 3M reviewer tokens; lead 60M.
 ```
 
 complete (all 17 spine briefs READY, s140). After the s141 rollout, the next work is Phase 2 (plan section 8:
