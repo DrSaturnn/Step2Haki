@@ -187,6 +187,15 @@
   "blood pressure percentile",
   "secondary hypertension"
  ],
+ "bs-anaphylaxis": [
+  "ACE inhibitor angioedema",
+  "angioedema",
+  "biphasic",
+  "C1 inhibitor",
+  "epinephrine autoinjector",
+  "intramuscular epinephrine",
+  "tryptase"
+ ],
  "bs-brachial-plexus": [
   "brachial plexus",
   "Erb palsy",
@@ -207,6 +216,34 @@
   "normal anion gap",
   "renal tubular acidosis",
   "urine anion gap"
+ ],
+ "bs-foodborne": [
+  "Bacillus cereus",
+  "bloody diarrhea",
+  "Campylobacter",
+  "Clostridioides difficile",
+  "Clostridium difficile",
+  "Cryptosporidium",
+  "Entamoeba",
+  "enterohemorrhagic",
+  "enterotoxigenic",
+  "food poisoning",
+  "gastroenteritis",
+  "Giardia",
+  "hemolytic uremic syndrome",
+  "nontyphoidal Salmonella",
+  "norovirus",
+  "O157:H7",
+  "pseudomembranous colitis",
+  "rotavirus",
+  "Salmonella enteritidis",
+  "Salmonella Typhi",
+  "Shiga toxin",
+  "Shigella",
+  "traveler's diarrhea",
+  "typhoid fever",
+  "Vibrio parahaemolyticus",
+  "Yersinia enterocolitica"
  ],
  "bs-impaction": [
   "disimpaction",
@@ -238,6 +275,23 @@
   "urge incontinence",
   "urinary incontinence",
   "vesicovaginal fistula"
+ ],
+ "bs-isolation": [
+  "airborne precautions",
+  "alcohol-based",
+  "contact precautions",
+  "droplet precautions",
+  "gown and gloves",
+  "hand hygiene",
+  "isolation",
+  "Isolation Precautions",
+  "N95",
+  "negative pressure",
+  "neutropenic precautions",
+  "pertussis isolation",
+  "respiratory isolation",
+  "spores",
+  "surgical mask"
  ],
  "bs-puncture-osteomyelitis": [
   "osteomyelitis",
@@ -308,6 +362,19 @@
   "two-physician consent",
   "substituted judgment",
   "best interest"
+ ],
+ "cervicitis": [
+  "cervical motion tenderness",
+  "chlamydia",
+  "Chlamydia trachomatis",
+  "expedited partner therapy",
+  "Fitz-Hugh-Curtis",
+  "gonorrhea",
+  "mucopurulent",
+  "Neisseria gonorrhoeae",
+  "perihepatitis",
+  "salpingitis",
+  "tubo-ovarian abscess"
  ],
  "chf": [
   "heart failure",
@@ -1046,6 +1113,18 @@
   "pseudoappendicitis",
   "terminal ileitis",
   "Yersinia"
+ ],
+ "rmsf": [
+  "anaplasmosis",
+  "babesiosis",
+  "doxycycline",
+  "ehrlichiosis",
+  "erythema migrans",
+  "Lyme disease",
+  "morulae",
+  "Rickettsia",
+  "Rocky Mountain spotted fever",
+  "tick bite"
  ],
  "scaphoid": [
   "Colles",
