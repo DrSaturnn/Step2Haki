@@ -15,9 +15,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 - **Open batch: s155** (Phase 2, infectious disease A; Claude lead; launched 2026-10-27 22:08 EDT; branch wip/s155 in
   both repos, from public main 9dd776a and private efe0bf62). Briefs: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis,
   bs-isolation, bs-foodborne. Budget: 32 agents, 950 calls, 76M agent tokens (raised from 65M by Jonathan 2026-10-28;
-  reviewers 23, 330, 11M; builders spent 64.16M); lead 100M. Batch file repair/s155/S155.md. Step: S3 done (chat 2, 2026-10-28): page checks clean (vendor 0, gate, render, squeeze 0, pointer 0), mentions read;
-  next: S4 review round 1 in a fresh chat (S155.md "S3 page checks done" has five acc notes). Budget stop cleared
-  2026-10-28 (raise to 76M; 11.84M left for reviewers). Lead chat 1 39.08M, chat 2 6.41M.
+  reviewers 23, 330, 11M; builders spent 64.16M); lead 100M. Batch file repair/s155/S155.md. Step: S4 round 1 done (chat 3, 2026-10-28): 7 lanes, 111 calls, 6.24M; every brief needs S5 (no HIGH, 39 MED).
+  next: S5 adjudicate and fix in a fresh chat (S155.md "S4 round 1", from the results table; order cervicitis, rmsf,
+  bs-anaphylaxis, bs-foodborne, tb, hiv-vax, bs-isolation; adj_s155_r1.md per brief folder). Wave 70.40M of 76M (5.60M
+  for follow-up rounds). Lead chat 1 39.08M, chat 2 6.41M, chat 3 6.43M.
 
 - **Previous: s154h SHIPPED 2026-10-27** (patch, seven psych briefs): commit b760dbd, page 61f7c01a67b0; reviewers 5
   agents, 20 calls, 0.66M of 1.5M; lead about 24M of 40M. Record repair/s154h/S154H.md (S9).
