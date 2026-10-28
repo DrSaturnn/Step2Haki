@@ -2,6 +2,35 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-27 s154g: s154g: NBME presentation layer (descriptions in 16 psych briefs, valproate pancreatitis row, cross-domain tags, NBME presentations view)
+
+```
+Page: 187 briefs, 2233 items -> 187 briefs, 2233 items
+Briefs changed (16):
+  - peds-sleep (Sleep Problems): prose edited (+611 chars)
+  - capacity (Decision-Making Capacity and Informed Consent): prose edited (+501 chars)
+  - psychosis-duration (Psychosis): attrs set (q_4f7e99d406dda2fff18d data-xdom,data-xdom-kind); prose edited (+633 chars)
+  - sz-psychosocial (Schizophrenia: Long-Term Care): prose edited (+39 chars)
+  - bipolar-mania (Bipolar Disorder): attrs set (q_cc8ff30e23e43a1a0d5b data-xdom,data-xdom-kind); prose edited (+1704 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (+418 chars)
+  - ocd (Obsessive-Compulsive and Related Disorders): prose edited (+127 chars)
+  - somatic (Somatic Symptom and Related Disorders): prose edited (+206 chars)
+  - delirium (Delirium): prose edited (+117 chars)
+  - dementia (Cognitive Decline and Dementia in an Adult): prose edited (+45 chars)
+  - toxidrome (Suspected Overdose or Toxidrome): prose edited (+292 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+434 chars)
+  - psych-medical (Medication- and Illness-Induced Psychiatric Disorders): prose edited (+190 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (+619 chars)
+  - lithium-effects (Lithium Therapy): prose edited (+542 chars)
+  - tca-tox (Anticholinergic and Tricyclic Toxicity): prose edited (+170 chars)
+Other page changes (nav, headers, scripts): +16505 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 187 briefs, 2233 items (663 with reasons), 23 scripts, 40 checks, base HEAD | allowlisted 10 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 187 | bankwraps 187 | mcq 2233 (reasons 663) (axCheck 2233, reveal-only 0) | malformed 0 | crit gridded 127/127 | vignette gridded 54/54 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808703 source shingles; page 0.012%)
+```
+
 ## 2026-10-27 s154f: s154f: psych format patch, 20 briefs (NBME framing blocks into pause points, one test per line, next-move columns, relabels)
 
 ```
