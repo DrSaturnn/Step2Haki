@@ -2,6 +2,26 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-27 s154h: s154h: 2026-10-26n NBME intake patch (capacity comfort care row, lithium thiazide item, panic alprazolam row and GAD item, psychosis chronic older adult row, pause block and item, somatic optokinetic row, substance and toxidrome items)
+
+```
+Page: 187 briefs, 2233 items -> 187 briefs, 2238 items
+Briefs changed (7):
+  - capacity (Decision-Making Capacity and Informed Consent): prose edited (+306 chars)
+  - psychosis-duration (Psychosis): 1 item added (q_16d070ae97b024fe6436); prose edited (+804 chars)
+  - panic (Panic Disorder and Other Anxiety): 1 item added (q_ab7ddcb68c2ffd6c17a5); prose edited (+798 chars)
+  - somatic (Somatic Symptom and Related Disorders): prose edited (+677 chars)
+  - toxidrome (Suspected Overdose or Toxidrome): 1 item added (q_18254f53bbff39c92a27)
+  - substance (Substance Intoxication and Withdrawal): 1 item added (q_2d942aed6653fe91eb2d)
+  - lithium-effects (Lithium Therapy): 1 item added (q_08d0b9a466d9ade4f7a3)
+Other page changes (nav, headers, scripts): +1199 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 187 briefs, 2238 items (668 with reasons), 23 scripts, 40 checks, base HEAD | allowlisted 10 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 187 | bankwraps 187 | mcq 2238 (reasons 668) (axCheck 2238, reveal-only 0) | malformed 0 | crit gridded 127/127 | vignette gridded 54/54 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808703 source shingles; page 0.012%)
+```
+
 ## 2026-10-27 s154g: s154g: NBME presentation layer (descriptions in 16 psych briefs, valproate pancreatitis row, cross-domain tags, NBME presentations view)
 
 ```
