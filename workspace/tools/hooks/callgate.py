@@ -8,6 +8,8 @@ UserPromptSubmit hook alone). Subagent calls:
   H3  Bash: no git history changes or pushes, ship.sh, mac_sync, ~/.config, .claude or the token; a command that writes
       may not name a forbidden path except as the script it runs, and its redirect or tee targets must be in the lane
       or /tmp. (A pattern gate: it stops plain writes, not a determined evasion; the lead's diff review backs it.)
+Lead calls also: no forced `git add` in the public clone (s155 PUBLIC-REPO GATE; the git pre-commit hook in
+tools/githooks backs it for every route).
 """
 import fcntl
 import json
@@ -64,7 +66,25 @@ def lead(d):
                 or (re.search(r'hooks/approvals', cmd) and re.search(WRITE_OPS, cmd))):
             C.refuse('APPROVAL GATE: the lead may not run the approval hook, redirect the hook state, or write approval '
                      'records by command.')
+        if forced_public_add(cmd, d.get('cwd') or ''):
+            C.refuse('PUBLIC-REPO GATE: no forced git add in the public clone (s155: 41dcbdf force-added the ignored '
+                     'review lanes, vendor text, to public wip/s155). An ignored path is ignored on purpose: lanes, '
+                     'packets and receipts go to the private repo through patch.py sync.')
     return 0
+
+
+PUBLIC, PRIVATE = '/home/claude/Step2Haki', '/home/claude/step2haki-private'
+FORCED_ADD = re.compile(r'(?:^|[\s;&|(`])git(?:\s+(?:-C\s+\S+|-c\s+\S+|--\S+))*\s+add\b[^;&|]*?'
+                        r'(?:\s--force\b|\s-[a-zA-Z]*f[a-zA-Z]*(?=\s|$))')
+
+
+def forced_public_add(cmd, cwd):
+    """a forced `git add` aimed at the public clone (or at no clearly private one)"""
+    if not FORCED_ADD.search(cmd):
+        return False
+    public = bool(re.search(r'/Step2Haki(?:/|\b)', cmd)) or (cwd + '/').startswith(PUBLIC + '/')
+    private = 'step2haki-private' in cmd or (cwd + '/').startswith(PRIVATE + '/')
+    return public or not private
 
 
 def save(p, rec):

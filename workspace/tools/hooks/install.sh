@@ -20,6 +20,10 @@ s['hooks'] = {
 json.dump(s, open(p, 'w'), indent=1)
 print('hooks installed: %s (H1 agentgate, H2-H4 callgate, G-APPROVE approval hook, H6 contextgate)' % p)
 PY
+# s155 public-repo guard: the repo's own pre-commit hook (tools/githooks) refuses ignored, local-only and review files
+R="$(git -C "$H" rev-parse --show-toplevel)"
+git -C "$R" config core.hooksPath workspace/tools/githooks
+echo "git hooks: $R core.hooksPath=workspace/tools/githooks (pre-commit public-repo guard)"
 mkdir -p /home/claude/.claude/agents
 cp "$H"/agents/*.md /home/claude/.claude/agents/
 echo "agent types installed: $(ls "$H"/agents | tr '\n' ' ')(/home/claude/.claude/agents)"

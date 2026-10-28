@@ -298,6 +298,15 @@ try:
                     ('cat /home/claude/.config/axbx/hooks/events.jsonl', 0),
                     ('grep -n "AX_HOOK_STATE" notes.md', 0)):
         expect('lead %s' % c[:40], run('callgate.py', {'tool_name': 'Bash', 'tool_input': {'command': c}}), want)
+    for c, cwd, want in (('git add -f workspace/repair/efficiency/lanes/s155', '/home/claude/Step2Haki', 2),
+                         ('git -C /home/claude/Step2Haki add --force x', '/home/claude', 2),
+                         ('cd /home/claude/Step2Haki && git add -A -f workspace/x', '/home/claude', 2),
+                         ('git add -f local-only/repair/x', '/home/claude/step2haki-private', 0),
+                         ('git add -A workspace/repair/s155', '/home/claude/Step2Haki', 0),
+                         ('git commit -qm "git add -f is banned"', '/home/claude/Step2Haki', 0),
+                         ('git add workspace/fix.py', '/home/claude/Step2Haki/workspace', 0)):
+        expect('lead public add %s' % c[:40], run('callgate.py', {'tool_name': 'Bash', 'cwd': cwd,
+                                                                    'tool_input': {'command': c}}), want)
     expect('lead writes approval', run('callgate.py', {'tool_name': 'Write', 'tool_input': {
         'file_path': os.path.join(ENV['AX_HOOK_STATE'], 'approvals', 's131.json')}}), 2)
     # ---- G-APPROVE
@@ -355,5 +364,40 @@ expect('log row for s146', ((_AP.match_entry(_rows, 's146') or {}).get('note'), 
 expect('log row for s146b is its own', ((_AP.match_entry(_rows, 's146b') or {}).get('note'), ''), 'b')
 expect('no log row for s148', (_AP.match_entry(_rows, 's148'), ''), None)
 expect('no log row for a malformed id', (_AP.match_entry(_rows, 's146bb'), ''), None)
+# public-repo pre-commit guard (s155): a throwaway repo with the real hook, .gitignore and local_only.txt
+_G = tempfile.mkdtemp(prefix='pcguard-')
+try:
+    def _g(*a):
+        return subprocess.run(['git', '-C', _G] + list(a), capture_output=True, text=True)
+    _g('init', '-q'); _g('config', 'user.email', 't@t'); _g('config', 'user.name', 't')
+    _g('config', 'core.hooksPath', os.path.join(WS, 'tools', 'githooks'))
+    os.makedirs(os.path.join(_G, 'workspace', 'tools'))
+    shutil.copy(os.path.join(WS, '.gitignore'), os.path.join(_G, 'workspace', '.gitignore'))
+    shutil.copy(os.path.join(WS, 'tools', 'local_only.txt'), os.path.join(_G, 'workspace', 'tools', 'local_only.txt'))
+    _g('add', '-A'); _g('commit', '-qm', 'base')
+
+    def _try(rel, force=False):
+        p = os.path.join(_G, rel)
+        os.makedirs(os.path.dirname(p), exist_ok=True)
+        open(p, 'w').write('x')
+        _g('add', '-f', rel) if force else _g('add', rel)
+        r = _g('commit', '-qm', 't')
+        _g('reset', '-q', '--hard', 'HEAD')
+        _g('clean', '-qfdx')
+        return r.returncode
+    expect('guard: ordinary file commits', (_try('workspace/tools/fix.py'), ''), 0)
+    expect('guard: forced ignored lanes refused', (1 if _try('workspace/repair/efficiency/lanes/s9/r1/a/receipt.md', True) else 0, ''), 1)
+    expect('guard: forced local-only sources refused', (1 if _try('workspace/repair/sources/s22_questions.md', True) else 0, ''), 1)
+    expect('guard: cards.md by name refused', (1 if _try('workspace/tools/x/cards.md') else 0, ''), 1)
+    expect('guard: packets folder refused', (1 if _try('workspace/tools/packets/a.txt') else 0, ''), 1)
+    _g('commit', '-q', '--allow-empty', '-m', 'e')
+    os.makedirs(os.path.join(_G, 'workspace', 'tools', 'old'))
+    open(os.path.join(_G, 'workspace', 'tools', 'old', 'facts.json'), 'w').write('{}')
+    _g('-c', 'core.hooksPath=/dev/null', 'add', 'workspace/tools/old/facts.json')
+    _g('-c', 'core.hooksPath=/dev/null', 'commit', '-qm', 'seed a leak')
+    _g('rm', '-q', '--cached', 'workspace/tools/old/facts.json')
+    expect('guard: untracking a leaked file is allowed', (_g('commit', '-qm', 'untrack').returncode, ''), 0)
+finally:
+    shutil.rmtree(_G, ignore_errors=True)
 print('test_hooks: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)

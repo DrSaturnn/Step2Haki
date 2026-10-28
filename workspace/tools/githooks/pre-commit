@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+"""Public-repo pre-commit guard (s155, 2026-10-28; after commit 41dcbdf force-added the gitignored review lanes, with
+AnKing card text and UWorld-derived quotes, to public wip/s155). Refuses a commit that stages, as added or changed:
+  1. any path the repo's ignore rules exclude (catches `git add -f`);
+  2. any path under a tools/local_only.txt pattern (vendor text; never tracked);
+  3. any review or vendor file by name or folder: cards.md, facts.json, boards.md, board_index.txt,
+     cards_disposition.json, line_sources.txt, receipt.md, or a lanes/, packets/ or local-only/ folder.
+Deleting such a path is always allowed (that is how a leak is untracked). Lanes, packets and receipts reach the
+private repo only through `patch.py sync` / `batch.py post`. Installed by tools/hooks/install.sh (core.hooksPath).
+No bypass flag: if a path is wrongly caught, fix the rule here in its own commit.
+"""
+import fnmatch
+import os
+import re
+import subprocess
+import sys
+
+NAMES = {'cards.md', 'facts.json', 'boards.md', 'board_index.txt', 'cards_disposition.json', 'line_sources.txt',
+         'receipt.md'}
+FOLDERS = re.compile(r'(^|/)(lanes|packets|local-only)/')
+
+
+def git(*a, inp=None):
+    return subprocess.run(['git'] + list(a), capture_output=True, text=True, input=inp).stdout
+
+
+def local_only(top):
+    pats = []
+    p = os.path.join(top, 'workspace', 'tools', 'local_only.txt')
+    if os.path.exists(p):
+        for ln in open(p, encoding='utf-8'):
+            ln = ln.split('#', 1)[0].strip()
+            if ln:
+                pats.append(ln)
+    return pats
+
+
+def under(path, pats):
+    rel = path[len('workspace/'):] if path.startswith('workspace/') else path
+    for p in pats:
+        if p.endswith('/'):
+            if rel.startswith(p) or fnmatch.fnmatch(rel.split('/')[0] + '/', p):
+                return p
+        elif fnmatch.fnmatch(rel, p) or fnmatch.fnmatch(rel.split('/')[0], p):
+            return p
+    return None
+
+
+def main():
+    top = git('rev-parse', '--show-toplevel').strip()
+    os.chdir(top)
+    staged = [p for p in git('diff', '--cached', '--name-only', '--diff-filter=ACMRT', '-z').split('\0') if p]
+    if not staged:
+        return 0
+    ignored = set(git('check-ignore', '--no-index', '--stdin', inp='\n'.join(staged) + '\n').split('\n')) - {''}
+    pats = local_only(top)
+    bad = []
+    for p in staged:
+        why = ('ignored by .gitignore' if p in ignored else
+               'local-only pattern %s' % under(p, pats) if under(p, pats) else
+               'review or vendor file' if os.path.basename(p) in NAMES or FOLDERS.search(p) else None)
+        if why:
+            bad.append('  %s  (%s)' % (p, why))
+    if bad:
+        sys.stderr.write('PUBLIC-REPO GUARD: commit refused; %d staged path(s) must never be in the public repo:\n%s\n'
+                         'Unstage them (git rm -r --cached <path>). Lanes, packets and receipts go to the private repo '
+                         'through patch.py sync. Never `git add -f` here.\n' % (len(bad), '\n'.join(bad[:20])))
+        return 1
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())

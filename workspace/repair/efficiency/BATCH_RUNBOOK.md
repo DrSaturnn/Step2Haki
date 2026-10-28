@@ -292,6 +292,12 @@ Each such message asks one question, multiple choice where possible, with a reco
 - The lead reads summaries, receipts, diffs and script output, never whole briefs or pages.
 - Long outputs go to files in the brief folder; the chat gets counts.
 - The handoff State is rewritten after every step, so the restart line is always enough.
+- Public repo (Jonathan 2026-10-28, after s155 commit 41dcbdf force-added the ignored review lanes): never
+  `git add -f` an ignored path in the public clone; if git ignores a path, that is the answer. Lanes, packets and
+  receipts reach the private repo only through `patch.py sync` / `batch.py post`. Backed by the lead hook
+  (PUBLIC-REPO GATE in callgate.py) and the git pre-commit guard (tools/githooks/pre-commit, set by install.sh as
+  core.hooksPath), which refuses ignored, local-only and review files (cards.md, facts.json, boards.md, receipts,
+  lanes/, packets/) by any route; untracking is always allowed.
 
 ## 8. Patch and site-layer batches (Jonathan 2026-10-17)
 
