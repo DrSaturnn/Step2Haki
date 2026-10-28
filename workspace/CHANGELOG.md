@@ -2,6 +2,41 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-28 s154j: s154j: pause point repair, 34 blocks in 22 briefs, plus the pause-content checker rule
+
+```
+Page: 187 briefs, 2238 items -> 187 briefs, 2238 items
+Briefs changed (22):
+  - pmr (Polymyalgia Rheumatica): prose edited (+18 chars)
+  - oa-pharm (Osteoarthritis): prose edited (+128 chars)
+  - bone-tumors (Bone Lesions in a Child): prose edited (+37 chars)
+  - bs-torticollis (Torticollis and Plagiocephaly in an Infant): prose edited (+176 chars)
+  - chf (Heart Failure): prose edited (+30 chars)
+  - cyanotic-chd (Congenital Heart Disease): prose edited (+40 chars)
+  - newborn-cyanosis (Cyanosis in the Newborn): prose edited (+229 chars)
+  - myocarditis (Heart Failure in a Child): prose edited (+63 chars)
+  - bs-adolescent-bp (High Blood Pressure in a Child or Adolescent): prose edited (+109 chars)
+  - cough (Chronic Cough): prose edited (+1 chars)
+  - airway (Noisy Breathing in a Child): prose edited (+1 chars)
+  - cholestasis (Abnormal Liver Tests): prose edited (+350 chars)
+  - occult-gi-bleed (GI Bleeding in a Child): prose edited (+50 chars)
+  - bs-umbilical (Umbilical Findings in a Newborn): prose edited (+894 chars)
+  - nephrotic-child (Proteinuria and Nephrotic Syndrome in a Child): prose edited (+161 chars)
+  - psychosis-duration (Psychosis): prose edited (+24 chars)
+  - bipolar-mania (Bipolar Disorder): prose edited (+5 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (+72 chars)
+  - gppd (Genito-Pelvic Pain/Penetration Disorder): prose edited (+113 chars)
+  - defense-mechanisms (Defense Mechanisms): prose edited (+63 chars)
+  - dementia (Cognitive Decline and Dementia in an Adult): prose edited (+204 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+698 chars)
+Other page changes (nav, headers, scripts): +809 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 187 briefs, 2238 items (668 with reasons), 23 scripts, 40 checks, base HEAD | allowlisted 10 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 187 | bankwraps 187 | mcq 2238 (reasons 668) (axCheck 2238, reveal-only 0) | malformed 0 | crit gridded 127/127 | vignette gridded 54/54 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.012%)
+```
+
 ## 2026-10-27 s154h: s154h: 2026-10-26n NBME intake patch (capacity comfort care row, lithium thiazide item, panic alprazolam row and GAD item, psychosis chronic older adult row, pause block and item, somatic optokinetic row, substance and toxidrome items)
 
 ```
