@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-27, by Claude (s154f chat 6: shipped 6c004d5).
+Last updated: 2026-10-27, by Claude (s155 chat 1: launch).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,11 +12,14 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: none.** s154h SHIPPED 2026-10-27 (Claude lead; patch of the 2026-10-26n NBME intake proposals, seven
-  briefs: capacity, lithium-effects, panic, psychosis-duration, somatic, substance, toxidrome; bipolar-mania dropped,
-  shipped in s154g): commit b760dbd, page 61f7c01a67b0 (approved candidate 5f885ef53c56); reviewers 5 agents, 20 calls,
-  0.66M of 1.5M; lead one chat, about 24M of 40M. Record repair/s154h/S154H.md (S9). queue.csv: the ten 2026-10-26 NBME
-  rows of the 26n proposals closed "picked up s154h". Next: s155 (prompt below), or a patch when intake queues up.
+- **Open batch: s155** (Phase 2, infectious disease A; Claude lead; launched 2026-10-27 22:08 EDT; branch wip/s155 in
+  both repos, from public main 9dd776a and private efe0bf62). Briefs: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis,
+  bs-isolation, bs-foodborne. Budget: 32 agents, 950 calls, 65M agent tokens (reviewers 23, 330, 11M; builders 9, 620,
+  54M); lead 100M. Batch file repair/s155/S155.md. Step: launch done (setup 119 passed, context 129,421; gate live);
+  next B0, then S1 to S3 by builder agents. Spend: 0 agents.
+
+- **Previous: s154h SHIPPED 2026-10-27** (patch, seven psych briefs): commit b760dbd, page 61f7c01a67b0; reviewers 5
+  agents, 20 calls, 0.66M of 1.5M; lead about 24M of 40M. Record repair/s154h/S154H.md (S9).
 
 - **Earlier: s154g SHIPPED 2026-10-27 (Claude lead; NBME presentation layer: descriptions in 16 psych briefs,
   X2 valproate row, X1 tags, view C): commit 829b4df, page 2f991ffe3411 (version.json build s154g); reviewers 6 agents,

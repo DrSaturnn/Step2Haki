@@ -1,22 +1,27 @@
 {
   "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
-  "id": "s154h",
-  "open": false,
-  "plan_step": "s154h",
+  "id": "s155",
+  "open": true,
+  "plan_step": "s155",
   "roles": [
+    "brief-build",
+    "acc-review",
+    "read-review",
+    "flag-review",
+    "wording-fix",
     "patch-review",
     "patch-review-opus"
   ],
-  "max_agents": 8,
-  "max_calls": 40,
-  "max_tokens": 1500000,
-  "set_by": "Jonathan, s154h launch 2026-10-27 (\"Step2Haki: launch batch s154h (patch of the 2026-10-26n NBME intake proposals: panic, psychosis-duration, lithium-effects, toxidrome, substance, capacity, bipolar-mania, somatic; repair/sources/intake/*_2026-10-26n.md) per claude/BATCH_RUNBOOK.md section 8b. Baits: as inferred unless I name changes here. Budget: 8 agents, 40 calls, 1.5M reviewer tokens; lead 40M.\")",
+  "max_agents": 32,
+  "max_calls": 950,
+  "max_tokens": 65000000,
+  "set_by": "Jonathan, s155 launch 2026-10-27 (\"Step2Haki: launch batch s155 (Phase 2, infectious disease A) per claude/BATCH_RUNBOOK.md. Briefs: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis, bs-isolation, bs-foodborne. Goldens: copd (FM lens), nephrotic-child (peds lens); B0 confirms they fit infectious disease, hub golden voices for any hub. S1 to S3 by builder agents. Budget: 32 agents, 950 calls, 65M agent tokens (reviewers 23, 330, 11M; builders 9, 620, 54M); lead 100M.\")",
   "previous": {
-    "id": "s154g",
-    "note": "s154g shipped 829b4df 2026-10-27 (Claude lead); reviewers 6 agents, 19 calls, 0.55M of 4M; lead 2 chats, 36.5M of 120M"
+    "id": "s154h",
+    "note": "s154h shipped b760dbd 2026-10-27 (Claude lead); reviewers 5 agents, 20 calls, 0.66M of 1.5M; lead one chat, about 24M of 40M"
   },
-  "opened": "2026-10-27 20:23 EDT",
-  "note": "s154h open (Claude lead): patch of the 2026-10-26n NBME intake proposals (runbook 8b)",
+  "opened": "2026-10-27 22:08 EDT",
+  "note": "s155 open (Claude lead): Phase 2, infectious disease A; S1 to S3 by builder agents",
   "batch_budgets": {
     "s138": {
       "agents": 20,
@@ -234,9 +239,25 @@
       "calls": 40,
       "tokens": 1500000,
       "lead_tokens": 40000000
+    },
+    "s155": {
+      "agents": 32,
+      "calls": 950,
+      "tokens": 65000000,
+      "lead_tokens": 100000000,
+      "reviewers": {
+        "agents": 23,
+        "calls": 330,
+        "tokens": 11000000
+      },
+      "builders": {
+        "agents": 9,
+        "calls": 620,
+        "tokens": 54000000
+      }
     }
   },
-  "max_lead_tokens": 40000000,
+  "max_lead_tokens": 100000000,
   "spent_agents": 0,
   "spent_calls": 0
 }
