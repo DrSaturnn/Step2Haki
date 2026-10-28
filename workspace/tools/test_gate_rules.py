@@ -152,6 +152,19 @@ print(('ok  ' if hit else 'BAD ') + 'an item with two of its three reasons: expe
 o = gate(PAGE.replace(_tag, _two + ' data-d2-why="c"', 1))[1]
 hit = '[item-why]' not in o and '(%d with reasons)' % (_base + 1) in o
 print(('ok  ' if hit else 'BAD ') + 'an item with all three reasons: no item-why, counted'); bad += not hit
-total = 1 + 9 + 2 + 3 + 3 + 4 + 2
+# s154j pause-content (G-DIFF): a bare-negation answer fails on a brief changed against the base, is carried when the
+# brief is byte-identical to the base, and always fails with no base
+_pa = next(m for m in _re.finditer(r'<span class="pp-a">&rarr; <span class="mask">([^<]+)</span>', PAGE))
+_neg = PAGE[:_pa.start(1)] + 'Not this one' + PAGE[_pa.end(1):]
+o = gate(_neg)[1]
+hit = 'only negates ("Not this one")' in o
+print(('ok  ' if hit else 'BAD ') + 'pause-content: a bare-negation answer with no base: expects gate FAIL'); bad += not hit
+open(ref, 'w', encoding='utf-8').write(PAGE); open(cur, 'w', encoding='utf-8').write(_neg)
+hit = 'only negates ("Not this one")' in gate_base({})
+print(('ok  ' if hit else 'BAD ') + 'pause-content: the negation added to a brief changed against the base: expects gate FAIL'); bad += not hit
+open(ref, 'w', encoding='utf-8').write(_neg)
+hit = 'only negates ("Not this one")' not in gate_base({}) and 'carried unchanged from base' in gate_base({})
+print(('ok  ' if hit else 'BAD ') + 'pause-content: the same block unchanged from the base is carried, not failed'); bad += not hit
+total = 1 + 9 + 2 + 3 + 3 + 4 + 2 + 3
 print('%d/%d passed' % (total - bad, total))
 sys.exit(1 if bad else 0)

@@ -12,6 +12,12 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
+- **Open batch: s154j** (Claude lead, launched 2026-10-28 12:39 EDT; runbook 8b patch, one chat): pause point repair,
+  34 blocks in 22 briefs, plus the pause-content checker rule (lint.py pause_format, gate pause-format). Budget 10
+  agents, 70 calls, 3M reviewer tokens; lead 60M. Branch wip/s154j in both repos (public from fa7cbff, private from
+  7a8b9523). Launched before s154i (not shipped): s154i re-takes its bipolar-mania baseline at its launch. Step: S3
+  (folders laid out by local/s154j/gen.py; s154j_delta.py replaces two claims in one change). Record repair/s154j/S154J.md.
+
 - **NBME intake 2026-10-28 (no batch, log-only):** Psychiatry CMS Form 7, 21 items (16 new, 5 repeats of the s37
   items, whose form is now known to be Form 7); private main 0dbd6528, public 6b08d77. Seven delta-ready proposals,
   repair/sources/intake/*_2026-10-28.md: disruptive-behavior (normal adolescence row + item), antipsych-effects (item),

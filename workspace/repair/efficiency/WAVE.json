@@ -1,22 +1,22 @@
 {
   "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
-  "id": "s154h",
-  "open": false,
-  "plan_step": "s154h",
+  "id": "s154j",
+  "open": true,
+  "plan_step": "s154j",
   "roles": [
     "patch-review",
     "patch-review-opus"
   ],
-  "max_agents": 8,
-  "max_calls": 40,
-  "max_tokens": 1500000,
-  "set_by": "Jonathan, s154h launch 2026-10-27 (\"Step2Haki: launch batch s154h (patch of the 2026-10-26n NBME intake proposals: panic, psychosis-duration, lithium-effects, toxidrome, substance, capacity, bipolar-mania, somatic; repair/sources/intake/*_2026-10-26n.md) per claude/BATCH_RUNBOOK.md section 8b. Baits: as inferred unless I name changes here. Budget: 8 agents, 40 calls, 1.5M reviewer tokens; lead 40M.\")",
+  "max_agents": 10,
+  "max_calls": 70,
+  "max_tokens": 3000000,
+  "set_by": "Jonathan, s154j launch 2026-10-28 (\"Step2Haki: launch batch s154j (pause point repair: 34 blocks in 22 briefs plus the pause-content checker rule) per claude/BATCH_RUNBOOK.md section 8b, using the private repo claude/pending/s154j/ (S154J_PAUSE_REPAIR.md, delta_s154j.json, lint_pause_content.patch). Budget: 10 agents, 70 calls, 3M reviewer tokens; lead 60M.\")",
   "previous": {
-    "id": "s154g",
-    "note": "s154g shipped 829b4df 2026-10-27 (Claude lead); reviewers 6 agents, 19 calls, 0.55M of 4M; lead 2 chats, 36.5M of 120M"
+    "id": "s154h",
+    "note": "s154h shipped b760dbd 2026-10-27 (Claude lead); reviewers 5 agents, 20 calls, 0.66M of 1.5M; lead one chat, about 24M of 40M"
   },
-  "opened": "2026-10-27 20:23 EDT",
-  "note": "s154h open (Claude lead): patch of the 2026-10-26n NBME intake proposals (runbook 8b)",
+  "opened": "2026-10-28 12:39 EDT",
+  "note": "s154j open (Claude lead): pause point repair, 34 blocks in 22 briefs, plus the pause-content checker rule (runbook 8b)",
   "batch_budgets": {
     "s138": {
       "agents": 20,
@@ -234,9 +234,14 @@
       "calls": 40,
       "tokens": 1500000,
       "lead_tokens": 40000000
+    },
+    "s154j": {
+      "agents": 10,
+      "calls": 70,
+      "tokens": 3000000
     }
   },
-  "max_lead_tokens": 40000000,
+  "max_lead_tokens": 60000000,
   "spent_agents": 0,
   "spent_calls": 0
 }

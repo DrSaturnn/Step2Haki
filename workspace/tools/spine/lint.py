@@ -364,6 +364,15 @@ def lint_maskleak(brief_html):
     return out
 
 
+_PP_STOP = {'a', 'an', 'the', 'of', 'or', 'and', 'to', 'for', 'as', 'that', 'this', 'it', 'its', 'in', 'on', 'by', 'with', 'one'}
+
+
+def _pp_words(h):
+    """Lowercase words of a pause line, tags and entities stripped (s154j pause-content)."""
+    t = re.sub(r'&[a-z]+;', ' ', re.sub(r'<[^>]+>', ' ', h)).lower()
+    return [w for w in re.findall(r"[a-z0-9]+(?:-[a-z0-9]+)*", t) if w not in ('offered', 'read', 'typed', 'pulled', 'rarr')]
+
+
 def pause_format(brief_html):
     """s154c (Jonathan 2026-10-26: "let's go with the recommended type for pause points. let's apply to all of them."):
     a spine brief's pause point is div.sp-pause with the label b.pp-t, then one div.pp-b per bait (span.sl setup first,
@@ -376,7 +385,8 @@ def pause_format(brief_html):
         out.append('pause-format: the pause point is a paragraph (p.sp-pause); use the question-style blocks')
     i = brief_html.find('<div class="sp-pause">')
     if i < 0:
-        return out or ['pause-format: no div.sp-pause pause point']
+        # s154j (Jonathan 2026-10-28, "Pause point content"): a brief with no real board bait keeps no pause point
+        return out
     depth, j = 0, len(brief_html)
     for t in re.finditer(r'<(/?)div\b[^>]*>', brief_html[i:]):
         depth += -1 if t.group(1) else 1
@@ -397,12 +407,26 @@ def pause_format(brief_html):
             out.append('pause-format: block %d does not open with its setup line (span.sl)' % i)
         if not lines[-1].startswith('<span class="pp-a">&rarr; <span class="mask">'):
             out.append('pause-format: block %d does not end with a masked answer (span.pp-a)' % i)
+        offs, decs = [], []
         for ln in lines[1:-1]:
             if ln.startswith('<span class="si pp-off">'):
+                offs.append(ln)
                 if '<em>' not in ln:
                     out.append('pause-format: block %d offered-as line has no underlined bait (<em>)' % i)
-            elif not ln.startswith('<span class="si"><span class="mask">'):
+            elif ln.startswith('<span class="si"><span class="mask">'):
+                decs.append(ln)
+            else:
                 out.append('pause-format: block %d has a line that is neither offered-as nor a masked deciding line' % i)
+        # s154j (Jonathan 2026-10-28: "go with checker rule"): a block exists for a real bait, so it names the bait,
+        # shows the clue that defeats it, and its answer says what is right, not only that the bait is wrong
+        if not offs:
+            out.append('pause-content: block %d offers no bait (span.si.pp-off)' % i)
+        if not decs:
+            out.append('pause-content: block %d has no deciding line (masked span.si)' % i)
+        vis = re.sub(r'<button.*', '', lines[-1])   # the visible answer: a hover's button and body are not the answer
+        ans_t = re.sub(r'\s+', ' ', re.sub(r'&[a-z]+;', ' ', re.sub(r'<[^>]+>', ' ', vis))).strip()
+        if re.match(r'(?i)(not|no)\b', ans_t) and not re.search(r'[;:,]| but | instead| then ', ans_t):
+            out.append('pause-content: block %d answer only negates ("%s"); name the right answer' % (i, ans_t))
     rest = re.sub(r'<div class="pp-b"(?: data-nbme="[^"]*")?>\n.*?\n</div>', '', inner, flags=re.S)
     if len(re.findall(r'<p class="pp-x">', rest)) > 1:
         out.append('pause-format: more than one extra line (p.pp-x)')
