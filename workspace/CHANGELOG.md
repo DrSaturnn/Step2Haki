@@ -2,6 +2,26 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-28 s154i: s154i: NBME intake patch, Psychiatry CMS Form 7, seven briefs (normal adolescence row and item, risperidone gynecomastia item, SSRI pointer, bipolar II vs histrionic item, diphenhydramine constipation row, firearm risk-to-others row, functional whole-side deficit row)
+
+```
+Page: 187 briefs, 2238 items -> 187 briefs, 2241 items
+Briefs changed (7):
+  - bipolar-mania (Bipolar Disorder): 1 item added (q_e6be96960d8858a0196e)
+  - somatic (Somatic Symptom and Related Disorders): prose edited (+823 chars)
+  - disruptive-behavior (Disruptive Behavior in a Child): 1 item added (q_1a2da080dffb2a0aefa2); prose edited (+622 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (+175 chars)
+  - antipsych-effects (Antipsychotic Adverse Effects): 1 item added (q_b9edeb2436b4471b6ecb)
+  - tca-tox (Anticholinergic and Tricyclic Toxicity): prose edited (+319 chars)
+  - suicide-risk (Suicide Risk Assessment): prose edited (+879 chars)
+Other page changes (nav, headers, scripts): +1141 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 187 briefs, 2241 items (671 with reasons), 23 scripts, 40 checks, base HEAD | allowlisted 10 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 187 | bankwraps 187 | mcq 2241 (reasons 671) (axCheck 2241, reveal-only 0) | malformed 0 | crit gridded 127/127 | vignette gridded 54/54 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.012%)
+```
+
 ## 2026-10-28 s154j: s154j: pause point repair, 34 blocks in 22 briefs, plus the pause-content checker rule
 
 ```
