@@ -3,7 +3,7 @@
 Jonathan, 2026-10-26: "Add whatever is needed so this issue does not happen again" (s154f chat 3 read whole docs and
 ran to about 280k context before any edit). Project copy claude/RESUME.md; repo copy repair/efficiency/RESUME.md.
 
-**Open batch: s154g** (branch wip/s154g, both repos; batch file repair/s154g/S154G.md). (The lead rewrites this line when a batch opens or ships; "none" means
+**Open batch: none** (s154g shipped 2026-10-27, 829b4df). (The lead rewrites this line when a batch opens or ships; "none" means
 no batch is open and a launch prompt is needed.)
 
 Do these four steps, in order, and read nothing else first. Do not open BATCH_RUNBOOK.md, STEP2HAKI_HANDOFF.md,

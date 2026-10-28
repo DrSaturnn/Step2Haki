@@ -12,12 +12,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: s154g** (Claude lead, launched 2026-10-27 16:48 EDT; NBME presentation layer: X1 tags, X2 valproate row,
-  B descriptions in rows, view C). Branch wip/s154g in both repos. Batch file repair/s154g/S154G.md. Step: S8 report
-  sent (chat 2), waiting for "ship"; approval presented, page a2e95a52dc9e, 16 of 16 READY after two rounds (r1 9
-  READY; S5 fixes on 8 briefs; r2 all PASS, 2 PASS-IF LOW: bipolar applied, toxidrome declined). Changelog 154g written.
-  Reviewers 6 agents, 19 calls, 0.55M of 4M; lead 2 rows, 36.5M of 120M. On "ship": `batch.py ship s154g "<message>"`,
-  then S9 (`batch.py post`), handoff in the project and on the Mac. s154f SHIPPED 2026-10-27 (6c004d5).
+- **Open batch: none.** s154g SHIPPED 2026-10-27 (Claude lead; NBME presentation layer: descriptions in 16 psych briefs,
+  X2 valproate row, X1 tags, view C): commit 829b4df, page 2f991ffe3411 (version.json build s154g); reviewers 6 agents,
+  19 calls, 0.55M of 4M; lead 2 chats, 36.5M of 120M. Record repair/s154g/S154G.md (S9). Next: the 2026-10-26n intake
+  patch (s154h, prompt below; Jonathan confirms or corrects the inferred baits first).
 
 - **Previous: s154f SHIPPED 2026-10-27 (Claude lead; psych format patch, 20 briefs): commit 6c004d5, page
   c01f18a2e48e; reviewers 10 agents, 44 calls, 1.96M of 4M; lead about 56M of 120M. Record in repair/s154f/S154F.md
@@ -110,9 +108,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## Next launch prompt (paste into a fresh chat)
 
-After s154f ships, the NBME layer batch (scoping in repair/s154f/S154F.md section C3; Jonathan sets the budget):
+After s154g (shipped), the patch of the 2026-10-26n NBME proposals (eight briefs; Jonathan first confirms or corrects
+the inferred baits, since his picks were not in the paste; each proposal names the distractor to swap):
 ```
-Step2Haki: launch batch s154g (NBME presentation layer: X1 tags, X2 valproate row, NBME descriptions in rows, view C) per claude/BATCH_RUNBOOK.md and claude/pending/NBME_PRESENTATION_SPEC.md "Mockup v1", with the scoping in repair/s154f/S154F.md section C3. Budget: <agents, calls, reviewer tokens; lead>.
+Step2Haki: launch batch s154h (patch of the 2026-10-26n NBME intake proposals: panic, psychosis-duration, lithium-effects, toxidrome, substance, capacity, bipolar-mania, somatic; repair/sources/intake/*_2026-10-26n.md) per claude/BATCH_RUNBOOK.md section 8b. Baits: as inferred unless I name changes here. Budget: 8 agents, 40 calls, 1.5M reviewer tokens; lead 40M.
 ```
 
 NBME presentation layer mockup (no batch; Jonathan 2026-10-26: cross-domain question types first, then how NBME
