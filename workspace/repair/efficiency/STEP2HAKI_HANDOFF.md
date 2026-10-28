@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-27, by Claude (s155 chat 1: launch).
+Last updated: 2026-10-28, by Claude (s155 chat 4: main merged into wip/s155; next S5).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -21,9 +21,40 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   for follow-up rounds). Lead chat 1 39.08M, chat 2 6.41M, chat 3 6.43M.
   41dcbdf leak closed 2026-10-28: Jonathan force-pushed the rewritten wip/s155 (5584167, lane files dropped, plus
   the public-repo guard); no ignored path in the batch history; ship as usual.
+  Chat 4 (2026-10-28 18:01): Jonathan pasted the s155 launch prompt from main's stale handoff (s154j and s154i
+  shipped from main after s155 opened, so main never had this State); he chose to continue the existing batch. Main
+  (33426b9: s154j, s154i) merged into wip/s155 in both repos. Effects for S5: STANDING_DIRECTIONS gained "Pause point
+  content" (s154j), so verify reports the round 1 acc and read receipts stale on specs (S7 writes current ones); every
+  s155 pause block must pass the new gate and lint pause-content rule (an Offered line, a deciding line, an answer
+  that does more than negate the bait): check in S5 before the S7 packets.
 
-- **Previous: s154h SHIPPED 2026-10-27** (patch, seven psych briefs): commit b760dbd, page 61f7c01a67b0; reviewers 5
-  agents, 20 calls, 0.66M of 1.5M; lead about 24M of 40M. Record repair/s154h/S154H.md (S9).
+- **Previous: s154i SHIPPED 2026-10-28 (Claude lead; patch of the 2026-10-28 NBME intake proposals,
+  Psychiatry CMS Form 7, seven briefs: disruptive-behavior, antipsych-effects, ssri-effects, bipolar-mania, tca-tox,
+  suicide-risk, somatic): commit c58a0e7, page c8ae474533a5 (approved candidate bbde22d77c91); reviewers 6 agents, 24
+  calls, 0.74M of 1.5M; lead one chat, about 13M of 40M. Record repair/s154i/S154I.md (S9). queue.csv: six 2026-10-28
+  NBME rows closed "picked up s154i". Open: nephrotic-child and airway "Pairs with" pointer problems; bipolar-mania
+  claim S924 summary wording (record only); disruptive-behavior header "Disorder" over the normal-development row.
+
+- **Previous: s154j SHIPPED 2026-10-28 (Claude lead; pause point repair, 34 blocks in 22 briefs, plus the
+  pause-content checker rule): commit 5d50b97, page 98584de30e65 (approved candidate dfe76de97831); reviewers 5 agents,
+  20 calls, 0.76M of 3M; lead one chat, about 31M of 60M. Record repair/s154j/S154J.md (S9). The gate carry rule was
+  reverted after the ship (strict rule passes the live page). Next: s154i (prompt below; re-take its bipolar-mania
+  baseline, since s154j changed that brief's pause point). Open: nephrotic-child and airway "Pairs with" pointer problems.
+
+- **NBME intake 2026-10-28 (no batch, log-only):** Psychiatry CMS Form 7, 21 items (16 new, 5 repeats of the s37
+  items, whose form is now known to be Form 7); private main 0dbd6528, public 6b08d77. Seven delta-ready proposals,
+  repair/sources/intake/*_2026-10-28.md: disruptive-behavior (normal adolescence row + item), antipsych-effects (item),
+  ssri-effects (pointer), bipolar-mania (item), tca-tox (row), suicide-risk (row), somatic (row). Baits on the three
+  misses are inferred. Next: patch s154i (prompt below). Pause points: Jonathan flagged some as repeating table info;
+  Jonathan chose rewrite-or-delete plus a checker rule (STANDING_DIRECTIONS "Pause point content"). s154j is scoped
+  delta-ready in the private repo, claude/pending/s154j/ (34 blocks in 22 briefs, all rewrites; lint patch; candidate
+  page passes the gate). Order: s154i, then s154j (prompt below).
+
+- **Previous: s154h SHIPPED 2026-10-27 (Claude lead; patch of the 2026-10-26n NBME intake proposals, seven
+  briefs: capacity, lithium-effects, panic, psychosis-duration, somatic, substance, toxidrome; bipolar-mania dropped,
+  shipped in s154g): commit b760dbd, page 61f7c01a67b0 (approved candidate 5f885ef53c56); reviewers 5 agents, 20 calls,
+  0.66M of 1.5M; lead one chat, about 24M of 40M. Record repair/s154h/S154H.md (S9). queue.csv: the ten 2026-10-26 NBME
+  rows of the 26n proposals closed "picked up s154h".
 
 - **Earlier: s154g SHIPPED 2026-10-27 (Claude lead; NBME presentation layer: descriptions in 16 psych briefs,
   X2 valproate row, X1 tags, view C): commit 829b4df, page 2f991ffe3411 (version.json build s154g); reviewers 6 agents,
@@ -132,12 +163,9 @@ Population entry type mockup (no batch):
 Step2Haki: mock up the population entry type with Perinatal Psychiatry per claude/pending/NEW_BRIEFS_2026-10-26.md section 1 (private artifact for review; no batch, no ship).
 ```
 
-The next numbered batch (claude/pending/BATCHES_S151_S160.md, whose numbering runs one behind; its "s154", infectious
-disease A, is this s155). Budget scaled from s154 (7 briefs: builders 7 agents, 435 calls, 50.3M; reviewers 17, 198,
-8.5M; lead about 90M):
-```
-Step2Haki: launch batch s155 (Phase 2, infectious disease A) per claude/BATCH_RUNBOOK.md. Briefs: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis, bs-isolation, bs-foodborne. Goldens: copd (FM lens), nephrotic-child (peds lens); B0 confirms they fit infectious disease, hub golden voices for any hub. S1 to S3 by builder agents. Budget: 32 agents, 950 calls, 65M agent tokens (reviewers 23, 330, 11M; builders 9, 620, 54M); lead 100M.
-```
+s155 (infectious disease A) is OPEN on wip/s155 (State above): continue it with the restart line, never relaunch it.
+After it ships, the next numbered batch is s156 (claude/pending/BATCHES_S151_S160.md, whose numbering runs one behind;
+its "s155", infectious disease B, pediatric); the s155 close writes its launch prompt here.
 
 New board questions, any time (intake only; the skill never edits the page):
 ```
@@ -148,6 +176,14 @@ The next patch of shipped briefs, when new intake proposals queue up (runbook 8b
 30 calls, 1M reviewer tokens; lead 30M):
 ```
 Step2Haki: run the queued intake amendments as a patch batch per claude/BATCH_RUNBOOK.md section 8b.
+```
+The 2026-10-28 intake patch as launched (s154h form):
+```
+Step2Haki: launch batch s154i (patch of the 2026-10-28 NBME intake proposals, Psychiatry CMS Form 7: disruptive-behavior, antipsych-effects, ssri-effects, bipolar-mania, tca-tox, suicide-risk, somatic; repair/sources/intake/*_2026-10-28.md) per claude/BATCH_RUNBOOK.md section 8b. Baits: as inferred unless I name changes here. Budget: 8 agents, 40 calls, 1.5M reviewer tokens; lead 40M.
+```
+The pause point repair, after s154i ships:
+```
+Step2Haki: launch batch s154j (pause point repair: 34 blocks in 22 briefs plus the pause-content checker rule) per claude/BATCH_RUNBOOK.md section 8b, using the private repo claude/pending/s154j/ (S154J_PAUSE_REPAIR.md, delta_s154j.json, lint_pause_content.patch). Budget: 10 agents, 70 calls, 3M reviewer tokens; lead 60M.
 ```
 
 complete (all 17 spine briefs READY, s140). After the s141 rollout, the next work is Phase 2 (plan section 8:

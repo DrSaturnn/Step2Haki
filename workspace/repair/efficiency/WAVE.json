@@ -257,6 +257,17 @@
         "note": "implied by the 2026-10-28 raise (76M minus reviewers 11M); spent 64.16M at S3"
       },
       "raised": "Jonathan 2026-10-28: \"Budget answer for s155: raise agent tokens to 76M (reviewers 11M as planned).\""
+    },
+    "s154j": {
+      "agents": 10,
+      "calls": 70,
+      "tokens": 3000000
+    },
+    "s154i": {
+      "agents": 8,
+      "calls": 40,
+      "tokens": 1500000,
+      "lead_tokens": 40000000
     }
   },
   "max_lead_tokens": 100000000,
