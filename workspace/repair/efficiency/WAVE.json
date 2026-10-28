@@ -14,8 +14,8 @@
   ],
   "max_agents": 32,
   "max_calls": 950,
-  "max_tokens": 65000000,
-  "set_by": "Jonathan, s155 launch 2026-10-27 (\"Step2Haki: launch batch s155 (Phase 2, infectious disease A) per claude/BATCH_RUNBOOK.md. Briefs: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis, bs-isolation, bs-foodborne. Goldens: copd (FM lens), nephrotic-child (peds lens); B0 confirms they fit infectious disease, hub golden voices for any hub. S1 to S3 by builder agents. Budget: 32 agents, 950 calls, 65M agent tokens (reviewers 23, 330, 11M; builders 9, 620, 54M); lead 100M.\")",
+  "max_tokens": 76000000,
+  "set_by": "Jonathan, s155 launch 2026-10-27 (\"Step2Haki: launch batch s155 (Phase 2, infectious disease A) per claude/BATCH_RUNBOOK.md. Briefs: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis, bs-isolation, bs-foodborne. Goldens: copd (FM lens), nephrotic-child (peds lens); B0 confirms they fit infectious disease, hub golden voices for any hub. S1 to S3 by builder agents. Budget: 32 agents, 950 calls, 65M agent tokens (reviewers 23, 330, 11M; builders 9, 620, 54M); lead 100M.\") Raised 2026-10-28 by Jonathan (\"Budget answer for s155: raise agent tokens to 76M (reviewers 11M as planned).\"): max_tokens 65M to 76M.",
   "previous": {
     "id": "s154h",
     "note": "s154h shipped b760dbd 2026-10-27 (Claude lead); reviewers 5 agents, 20 calls, 0.66M of 1.5M; lead one chat, about 24M of 40M"
@@ -243,7 +243,7 @@
     "s155": {
       "agents": 32,
       "calls": 950,
-      "tokens": 65000000,
+      "tokens": 76000000,
       "lead_tokens": 100000000,
       "reviewers": {
         "agents": 23,
@@ -253,8 +253,10 @@
       "builders": {
         "agents": 9,
         "calls": 620,
-        "tokens": 54000000
-      }
+        "tokens": 65000000,
+        "note": "implied by the 2026-10-28 raise (76M minus reviewers 11M); spent 64.16M at S3"
+      },
+      "raised": "Jonathan 2026-10-28: \"Budget answer for s155: raise agent tokens to 76M (reviewers 11M as planned).\""
     }
   },
   "max_lead_tokens": 100000000,
