@@ -15,8 +15,8 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 - **Open batch: s154j** (Claude lead, launched 2026-10-28 12:39 EDT; runbook 8b patch, one chat): pause point repair,
   34 blocks in 22 briefs, plus the pause-content checker rule (lint.py pause_format, gate pause-format). Budget 10
   agents, 70 calls, 3M reviewer tokens; lead 60M. Branch wip/s154j in both repos (public from fa7cbff, private from
-  7a8b9523). Launched before s154i (not shipped): s154i re-takes its bipolar-mania baseline at its launch. Step: S4
-  round 1 (S3 done: 22 of 22 mech PASS, batch page gate/render/vendor/squeeze pass). Record repair/s154j/S154J.md.
+  7a8b9523). Launched before s154i (not shipped): s154i re-takes its bipolar-mania baseline at its launch. Step: S8
+  (rounds 1 and 2 done: all 22 READY; reviewers 5 agents, 20 calls, 0.76M). Record repair/s154j/S154J.md.
 
 - **NBME intake 2026-10-28 (no batch, log-only):** Psychiatry CMS Form 7, 21 items (16 new, 5 repeats of the s37
   items, whose form is now known to be Form 7); private main 0dbd6528, public 6b08d77. Seven delta-ready proposals,
