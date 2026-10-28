@@ -12,6 +12,13 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
+- **NBME intake 2026-10-28 (no batch, log-only):** Psychiatry CMS Form 7, 21 items (16 new, 5 repeats of the s37
+  items, whose form is now known to be Form 7); private main 0dbd6528, public 6b08d77. Seven delta-ready proposals,
+  repair/sources/intake/*_2026-10-28.md: disruptive-behavior (normal adolescence row + item), antipsych-effects (item),
+  ssri-effects (pointer), bipolar-mania (item), tca-tox (row), suicide-risk (row), somatic (row). Baits on the three
+  misses are inferred. Next: patch s154i (prompt below). Pause points: Jonathan flagged some as repeating table info;
+  audit in the private repo, claude/pending/PAUSE_POINT_AUDIT_2026-10-28.md (34 blocks, 24 briefs); fix not decided.
+
 - **Open batch: none.** s154h SHIPPED 2026-10-27 (Claude lead; patch of the 2026-10-26n NBME intake proposals, seven
   briefs: capacity, lithium-effects, panic, psychosis-duration, somatic, substance, toxidrome; bipolar-mania dropped,
   shipped in s154g): commit b760dbd, page 61f7c01a67b0 (approved candidate 5f885ef53c56); reviewers 5 agents, 20 calls,
@@ -141,6 +148,10 @@ The next patch of shipped briefs, when new intake proposals queue up (runbook 8b
 30 calls, 1M reviewer tokens; lead 30M):
 ```
 Step2Haki: run the queued intake amendments as a patch batch per claude/BATCH_RUNBOOK.md section 8b.
+```
+The 2026-10-28 intake patch as launched (s154h form):
+```
+Step2Haki: launch batch s154i (patch of the 2026-10-28 NBME intake proposals, Psychiatry CMS Form 7: disruptive-behavior, antipsych-effects, ssri-effects, bipolar-mania, tca-tox, suicide-risk, somatic; repair/sources/intake/*_2026-10-28.md) per claude/BATCH_RUNBOOK.md section 8b. Baits: as inferred unless I name changes here. Budget: 8 agents, 40 calls, 1.5M reviewer tokens; lead 40M.
 ```
 
 complete (all 17 spine briefs READY, s140). After the s141 rollout, the next work is Phase 2 (plan section 8:
