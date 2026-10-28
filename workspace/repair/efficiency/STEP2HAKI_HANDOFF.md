@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-28, by Claude (s154i S8: presented bbde22d77c91).
+Last updated: 2026-10-28, by Claude (s154i S9: shipped c58a0e7).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,12 +12,13 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: s154i** (Claude lead, launched 2026-10-28 16:07; patch of the 2026-10-28 NBME intake proposals,
+- **Open batch: none.** s154i SHIPPED 2026-10-28 (Claude lead; patch of the 2026-10-28 NBME intake proposals,
   Psychiatry CMS Form 7, seven briefs: disruptive-behavior, antipsych-effects, ssri-effects, bipolar-mania, tca-tox,
-  suicide-risk, somatic; runbook 8b, one chat). Branch wip/s154i in both repos. Step: S8 done, presented (page
-  bbde22d77c91), 7 of 7 READY after four review rounds; waiting for "ship" in the presenting chat. Spend: reviewers 6
-  agents, 24 calls, 0.74M of 1.5M; lead 12.4M of 40M. Ship blocker: the public repo is not attached in this session
-  (push 403). Record repair/s154i/S154I.md.
+  suicide-risk, somatic): commit c58a0e7, page c8ae474533a5 (approved candidate bbde22d77c91); reviewers 6 agents, 24
+  calls, 0.74M of 1.5M; lead one chat, about 13M of 40M. Record repair/s154i/S154I.md (S9). queue.csv: six 2026-10-28
+  NBME rows closed "picked up s154i". Open: nephrotic-child and airway "Pairs with" pointer problems; bipolar-mania
+  claim S924 summary wording (record only); disruptive-behavior header "Disorder" over the normal-development row.
+  Next: s155 (prompt below), or a patch when intake queues up.
 
 - **Open batch: none.** s154j SHIPPED 2026-10-28 (Claude lead; pause point repair, 34 blocks in 22 briefs, plus the
   pause-content checker rule): commit 5d50b97, page 98584de30e65 (approved candidate dfe76de97831); reviewers 5 agents,
