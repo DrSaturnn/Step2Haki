@@ -19,6 +19,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   next: S5 adjudicate and fix in a fresh chat (S155.md "S4 round 1", from the results table; order cervicitis, rmsf,
   bs-anaphylaxis, bs-foodborne, tb, hiv-vax, bs-isolation; adj_s155_r1.md per brief folder). Wave 70.40M of 76M (5.60M
   for follow-up rounds). Lead chat 1 39.08M, chat 2 6.41M, chat 3 6.43M.
+  OPEN for Jonathan before ship: public commit 41dcbdf holds the review lanes (vendor text); see S155.md "Lead error".
 
 - **Previous: s154h SHIPPED 2026-10-27** (patch, seven psych briefs): commit b760dbd, page 61f7c01a67b0; reviewers 5
   agents, 20 calls, 0.66M of 1.5M; lead about 24M of 40M. Record repair/s154h/S154H.md (S9).
