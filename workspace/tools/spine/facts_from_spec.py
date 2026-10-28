@@ -3,7 +3,9 @@
   python3 tools/spine/facts_from_spec.py <spec.json> [--append]
 spec: {"out": "<facts.json path>", "population": "...", "cards": [[id, nid, quote], ...],
        "web": [[id, sha, section, quote, population?], ...],
-       "local": [[id, file under repair/sources, title, quote], ...]}   (s147: a local UWorld question file)
+       "local": [[id, file under repair/sources, title, quote], ...],   (s147: a local UWorld question file)
+       "relayed": [{id, url, title, quote, section, population?, setting?, kind?, fetched?}, ...]}   (s155: a WebFetch
+       reading of a site that refuses fetch.py; stored via=relayed, so quote_check lists it and the auditor checks it)
 Card quotes must appear in the card's text or extra (whitespace-normalized, as quote_check reads them); the title
 carries "high-yield line" when the quote is (part of) a pink line, and the card's Step 2 UWorld ids. Web quotes must
 appear in repair/sources/web/<sha>.txt; local quotes in their file (kind board). --append keeps the facts already in the file (ids must not repeat)."""
@@ -47,6 +49,13 @@ for fid, f, title, q in spec.get('local', []):      # s147: UWorld question file
     assert fid not in seen, fid; seen.add(fid)
     facts.append(dict(id=fid, local=f, quote=q, kind='board', title=title, population=spec['population'],
                       setting='Step 2 CK board teaching'))
+for f in spec.get('relayed', []):              # s155: relayed readings go into facts.json, not a side file
+    f = dict(f)
+    assert f.get('id') and f.get('url', '').startswith('http') and f.get('quote'), f
+    assert f['id'] not in seen, f['id']; seen.add(f['id'])
+    f['via'] = 'relayed'
+    f.setdefault('population', spec['population']); f.setdefault('setting', 'clinical reference')
+    facts.append(f)
 if bad:
     sys.exit('not found: %s' % bad)
 json.dump({'facts': facts}, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
