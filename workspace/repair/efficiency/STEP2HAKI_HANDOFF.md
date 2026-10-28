@@ -16,7 +16,8 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   34 blocks in 22 briefs, plus the pause-content checker rule (lint.py pause_format, gate pause-format). Budget 10
   agents, 70 calls, 3M reviewer tokens; lead 60M. Branch wip/s154j in both repos (public from fa7cbff, private from
   7a8b9523). Launched before s154i (not shipped): s154i re-takes its bipolar-mania baseline at its launch. Step: S8
-  (rounds 1 and 2 done: all 22 READY; reviewers 5 agents, 20 calls, 0.76M). Record repair/s154j/S154J.md.
+  report sent, awaiting "ship" (presented page dfe76de97831; all 22 READY; reviewers 5 agents, 20 calls, 0.76M; lead
+  30.0M). On "ship": batch.py ship, then post (runbook 8b item 5). Record repair/s154j/S154J.md.
 
 - **NBME intake 2026-10-28 (no batch, log-only):** Psychiatry CMS Form 7, 21 items (16 new, 5 repeats of the s37
   items, whose form is now known to be Form 7); private main 0dbd6528, public 6b08d77. Seven delta-ready proposals,
