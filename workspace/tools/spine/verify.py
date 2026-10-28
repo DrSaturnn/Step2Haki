@@ -219,6 +219,9 @@ class Verify:
             lh = re.search(r'<h5 class="[^"]*authored-hdr', live)
             if not lh:   # s146: a legacy brief whose bank header is a plain h5 (bs-incontinence): the h5 right before the bank
                 lh = re.search(r'<h5>[^<]*</h5>(?=\s*<ol class="bank)', live)
+            if not lh:   # s155: a legacy brief with no Practice header at all (tb: a workup div sits between the last h5
+                # and the bank): the live tail starts at the bank itself; its tail_fix inserts the new header
+                lh = re.search(r'<ol class="bank', live)
             t_old = live[lh.start():] if lh else ''
             fixes = (self.o or {}).get('tail_fix', [])
             if self.o and fixes:
