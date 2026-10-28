@@ -12,7 +12,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: none.** s154g SHIPPED 2026-10-27 (Claude lead; NBME presentation layer: descriptions in 16 psych briefs,
+- **Open batch: s154h** (Claude lead; patch of the 2026-10-26n NBME intake proposals, runbook 8b; launched 2026-10-27
+  20:23 EDT). Budget 8 agents, 40 calls, 1.5M reviewer tokens; lead 40M. Seven briefs (bipolar-mania dropped: shipped
+  in s154g). Step: S3 done, round 1 review launching. Record repair/s154h/S154H.md. Branch wip/s154h in both repos.
+
+- **Previous: s154g SHIPPED 2026-10-27 (Claude lead; NBME presentation layer: descriptions in 16 psych briefs,
   X2 valproate row, X1 tags, view C): commit 829b4df, page 2f991ffe3411 (version.json build s154g); reviewers 6 agents,
   19 calls, 0.55M of 4M; lead 2 chats, 36.5M of 120M. Record repair/s154g/S154G.md (S9). Next: the 2026-10-26n intake
   patch (s154h, prompt below; Jonathan confirms or corrects the inferred baits first).
