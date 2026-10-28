@@ -12,11 +12,13 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: s154h** (Claude lead; patch of the 2026-10-26n NBME intake proposals, runbook 8b; launched 2026-10-27
-  20:23 EDT). Budget 8 agents, 40 calls, 1.5M reviewer tokens; lead 40M. Seven briefs (bipolar-mania dropped: shipped
-  in s154g). Step: S8 presented (page 5f885ef53c56; 7 of 7 READY after 3 rounds; reviewers 5 agents, 20 calls, 0.66M; lead 22.8M); waiting for "ship", then S9 in this chat. Record repair/s154h/S154H.md. Branch wip/s154h in both repos.
+- **Open batch: none.** s154h SHIPPED 2026-10-27 (Claude lead; patch of the 2026-10-26n NBME intake proposals, seven
+  briefs: capacity, lithium-effects, panic, psychosis-duration, somatic, substance, toxidrome; bipolar-mania dropped,
+  shipped in s154g): commit b760dbd, page 61f7c01a67b0 (approved candidate 5f885ef53c56); reviewers 5 agents, 20 calls,
+  0.66M of 1.5M; lead one chat, about 24M of 40M. Record repair/s154h/S154H.md (S9). queue.csv: the ten 2026-10-26 NBME
+  rows of the 26n proposals closed "picked up s154h". Next: s155 (prompt below), or a patch when intake queues up.
 
-- **Previous: s154g SHIPPED 2026-10-27 (Claude lead; NBME presentation layer: descriptions in 16 psych briefs,
+- **Earlier: s154g SHIPPED 2026-10-27 (Claude lead; NBME presentation layer: descriptions in 16 psych briefs,
   X2 valproate row, X1 tags, view C): commit 829b4df, page 2f991ffe3411 (version.json build s154g); reviewers 6 agents,
   19 calls, 0.55M of 4M; lead 2 chats, 36.5M of 120M. Record repair/s154g/S154G.md (S9). Next: the 2026-10-26n intake
   patch (s154h, prompt below; Jonathan confirms or corrects the inferred baits first).
@@ -112,22 +114,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## Next launch prompt (paste into a fresh chat)
 
-After s154g (shipped), the patch of the 2026-10-26n NBME proposals (eight briefs; Jonathan first confirms or corrects
-the inferred baits, since his picks were not in the paste; each proposal names the distractor to swap):
-```
-Step2Haki: launch batch s154h (patch of the 2026-10-26n NBME intake proposals: panic, psychosis-duration, lithium-effects, toxidrome, substance, capacity, bipolar-mania, somatic; repair/sources/intake/*_2026-10-26n.md) per claude/BATCH_RUNBOOK.md section 8b. Baits: as inferred unless I name changes here. Budget: 8 agents, 40 calls, 1.5M reviewer tokens; lead 40M.
-```
-
 NBME presentation layer mockup (no batch; Jonathan 2026-10-26: cross-domain question types first, then how NBME
 describes symptoms):
 ```
 Step2Haki: mock up the NBME presentation layer per claude/pending/NBME_PRESENTATION_SPEC.md and DECISIONS_DIGEST 2026-10-26 (cross-domain, both kinds: X1 tags and filter, X2 urgent-risk rows; then NBME behavior descriptions visible in table rows with extras in hovers, and view C; psychosis-duration and bipolar-mania; private artifact for review; no batch, no ship).
-```
-
-The patch of the 2026-10-26n NBME proposals (runbook 8b; eight files; Jonathan confirms or corrects the inferred
-baits first):
-```
-Step2Haki: run the queued intake amendments (repair/sources/intake/*_2026-10-26n.md) as a patch batch per claude/BATCH_RUNBOOK.md section 8b.
 ```
 
 Population entry type mockup (no batch):
