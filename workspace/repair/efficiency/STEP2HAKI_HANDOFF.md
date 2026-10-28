@@ -15,8 +15,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 - **Open batch: s155** (Phase 2, infectious disease A; Claude lead; launched 2026-10-27 22:08 EDT; branch wip/s155 in
   both repos, from public main 9dd776a and private efe0bf62). Briefs: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis,
   bs-isolation, bs-foodborne. Budget: 32 agents, 950 calls, 65M agent tokens (reviewers 23, 330, 11M; builders 9, 620,
-  54M); lead 100M. Batch file repair/s155/S155.md. Step: launch done (setup 119 passed, context 129,421; gate live);
-  next B0, then S1 to S3 by builder agents. Spend: 0 agents.
+  54M); lead 100M. Batch file repair/s155/S155.md. Step: S1 to S3 by builders: B0 done; pilots tb and hiv-vax
+  MECHANICAL PASS (gate passed 23:05); the other five builders launched (cervicitis, rmsf, bs-anaphylaxis,
+  bs-isolation, bs-foodborne). Next: their receipts, lead verify --mech, copy 10_*_spine.json into repair/s155/, S3
+  page checks, push the builders' web cache to the private repo. Spend: 2 builder agents so far.
 
 - **Previous: s154h SHIPPED 2026-10-27** (patch, seven psych briefs): commit b760dbd, page 61f7c01a67b0; reviewers 5
   agents, 20 calls, 0.66M of 1.5M; lead about 24M of 40M. Record repair/s154h/S154H.md (S9).
