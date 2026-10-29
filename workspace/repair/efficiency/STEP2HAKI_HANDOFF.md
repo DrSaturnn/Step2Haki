@@ -14,11 +14,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **Open batch: s157** (wip/s157 in both repos; batch file repair/s157/S157.md), psych pharm section, five new drug
   briefs (antidep-other, mood-anticonv, sedatives, adhd-meds, sud-meds), launched 2026-10-29 by Jonathan. Budget 24
-  agents, 850 calls, 72M agent tokens (builders 7, 630, 62M; reviewers 17, 220, 10M); lead 90M. Step: S4 round 1 done (chat 3):
-  9 reviewer lanes (6 full on the new five, 2 patch lanes on the eight live briefs, 1 supplementary lane for the 15
-  first-cell drawer conversions the patch packet could not show). 1 HIGH (sud-meds naltrexone liver scope), 38 MED; the
-  8 live briefs PASS except mdd L133 (retarget to ssri-effects). Next: S5, batch file section "S5 (next chat): exact
-  steps". Spend: wave 14 agents, 378 calls, 43.75M of 72M agent tokens (reviewers 4.86M of 10M); lead 47.9M of 90M.
+  agents, 850 calls, 72M agent tokens (builders 7, 630, 62M; reviewers 17, 220, 10M); lead 90M. Step: S5 in progress (chat 3, stopped at the H6 warning):
+  sud-meds and adhd-meds adjudicated and fixed, mood-anticonv partly (shared oxcarbazepine MED fixed; read MED 1 and LOWs
+  open); all three MECHANICAL PASS. Next: batch file section "S5 (next chat): remaining steps" (mood-anticonv rest,
+  antidep-other, sedatives, mdd L133 retarget, two packet-tool fixes, rebuild and checks, S6, S7). Spend: wave 14
+  agents, 378 calls, 43.75M of 72M agent tokens; lead 62.8M of 90M.
   At the ship: delete the three s157 nbme-coverage lines in tools/gate_allowlist.txt; card 1485313602686
   to owner:sud-meds. s156 stays PARKED on wip/s156 (13.2M of 78M agent tokens left); after s157 ships: merge main into
   wip/s156 in both repos, set RESUME.md to s156, continue s156 with the restart line.
