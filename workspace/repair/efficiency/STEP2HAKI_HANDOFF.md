@@ -14,8 +14,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **Open batch: s157** (wip/s157 in both repos; batch file repair/s157/S157.md), psych pharm section, five new drug
   briefs (antidep-other, mood-anticonv, sedatives, adhd-meds, sud-meds), launched 2026-10-29 by Jonathan. Budget 24
-  agents, 850 calls, 72M agent tokens (builders 7, 630, 62M; reviewers 17, 220, 10M); lead 90M. Step: S1 to S3 by
-  builder agents, pilot pair mood-anticonv and sud-meds launched. Spend: 0 agents so far; lead chat 1. s156 stays PARKED
+  agents, 850 calls, 72M agent tokens (builders 7, 630, 62M; reviewers 17, 220, 10M); lead 90M. Step: S1 to S3: all five
+  BUILT by builders (MECHANICAL PASS each); batch page assembled (gate PASS, squeeze 0, pointer_check 0). Next: S3
+  chat 2, batch file section "S3 page checks" items 1 to 5 (drawer deltas on eight live briefs, NBME coverage rows),
+  then the S3 restart. Spend: builders 5 agents, 280 calls, 38.89M of 72M agent tokens; lead chat 1 23.9M of 90M. s156 stays PARKED
   on wip/s156 (13.2M of 78M agent tokens left); after s157 ships: merge main into wip/s156 in both repos, set RESUME.md
   to s156, continue s156 with the restart line.
 
