@@ -16,7 +16,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   dtap, lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever), branch wip/s156 in both repos.
   Step: S3 DONE (seven built, page checks pass); next S4 round 1 in a fresh chat (acc, read, flags; read the three hub
   mentions.md first; S156.md "S3 page checks" and "Remaining five builders" carry the S5 items). Spend: 7 builders, 438
-  calls, 58.10M of 78M (19.9M left; reviewers 12M planned); lead chat 1 about 330k context. Batch file repair/s156/S156.md.
+  calls, 58.10M of 78M (19.9M left; reviewers 12M planned); lead chat 1 36.1M of 90M (ledger_lead). Batch file repair/s156/S156.md.
   Never relaunch s156 from a launch prompt; continue with the restart line.
 
 - **Previous: s155** SHIPPED 2026-10-29 (Claude lead; Phase 2, infectious disease A, seven briefs rebuilt on
