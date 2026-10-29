@@ -18,8 +18,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   reviewers 23, 330, 11M; builders spent 64.16M); lead 100M. Batch file repair/s155/S155.md. Step: S4 round 1 done (chat 3, 2026-10-28): 7 lanes, 111 calls, 6.24M; every brief needs S5 (no HIGH, 39 MED).
   S5 round 1 DONE for all seven (chats 5 to 7; adj_s155_r1.md per brief folder). S6 DONE (chat 7, 2026-10-28):
   seven-brief candidate gate PASS 0 failures, squeeze 0, card checks pass (S155.md "S6 (chat 7)"). S7 round 2 DONE (chat 7: 7
-  agents, 75 calls, 3.67M; one MED, bs-anaphylaxis acc scombroid row; the rest PASS or PASS-IF). next: round 2 S5
-  (S155.md "S7 round 2" last bullet), then a round 3 acc check of bs-anaphylaxis only. Wave 74.07M of 76M. The gate FIX "tb table 3 has both a caption and
+  agents, 75 calls, 3.67M; one MED, bs-anaphylaxis acc scombroid row; the rest PASS or PASS-IF). Round 2 S5 DONE
+  (chat 8; S155.md "S5 round 2"): cervicitis and rmsf READY; round 3 for tb (read, flags), bs-anaphylaxis,
+  bs-foodborne, hiv-vax, bs-isolation (acc, read, flags; 3 lanes, lanes_r3.json). next: round 3 receipts, S5, then
+  "S7 done: all READY". Wave 74.07M of 76M. The gate FIX "tb table 3 has both a caption and
   an h5" in single-brief verifies is the LIVE tb brief's table; it clears when tb ships. Wave 70.40M of 76M (5.60M
   for follow-up rounds). Lead chat 1 39.08M, chat 2 6.41M, chat 3 6.43M.
   41dcbdf leak closed 2026-10-28: Jonathan force-pushed the rewritten wip/s155 (5584167, lane files dropped, plus
