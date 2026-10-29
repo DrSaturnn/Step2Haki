@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-28, by Claude (s155 chat 4: main merged into wip/s155; next S5).
+Last updated: 2026-10-29, by Claude (s155 S9: shipped e1eb23b, main 32bcf37).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,27 +12,18 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: s155** (Phase 2, infectious disease A; Claude lead; launched 2026-10-27 22:08 EDT; branch wip/s155 in
-  both repos, from public main 9dd776a and private efe0bf62). Briefs: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis,
-  bs-isolation, bs-foodborne. Budget: 32 agents, 950 calls, 76M agent tokens (raised from 65M by Jonathan 2026-10-28;
-  reviewers 23, 330, 11M; builders spent 64.16M); lead 100M. Batch file repair/s155/S155.md. Step: S4 round 1 done (chat 3, 2026-10-28): 7 lanes, 111 calls, 6.24M; every brief needs S5 (no HIGH, 39 MED).
-  S5 round 1 DONE for all seven (chats 5 to 7; adj_s155_r1.md per brief folder). S6 DONE (chat 7, 2026-10-28):
-  seven-brief candidate gate PASS 0 failures, squeeze 0, card checks pass (S155.md "S6 (chat 7)"). S7 round 2 DONE (chat 7: 7
-  agents, 75 calls, 3.67M; one MED, bs-anaphylaxis acc scombroid row; the rest PASS or PASS-IF). Round 2 S5 DONE
-  (chat 8; S155.md "S5 round 2"): cervicitis and rmsf READY; round 3 for tb (read, flags), bs-anaphylaxis,
-  bs-foodborne, hiv-vax, bs-isolation. Round 3 DONE (chat 8: 4 agents, 42 calls, 1.32M; all PASS, 0 findings).
-  **S7 done: all READY** (all seven verify --mech --fast READY). Wave 75.39M of 76M; reviewers 11.23M of the 11M plan
-  (report it). S8 DONE (chat 9, 2026-10-28 23:21): 7 of 7 READY, presented, page 5bf0352e0aaf (S155.md "S8 and S9"); the gate allowlist line table-title tb:t3 was restored for one-brief verifies and is deleted at ship. next: Jonathan's reply ("ship" or changes), then S9 per that section. Wave 74.07M of 76M. The gate FIX "tb table 3 has both a caption and
-  an h5" in single-brief verifies is the LIVE tb brief's table; it clears when tb ships. Wave 70.40M of 76M (5.60M
-  for follow-up rounds). Lead chat 1 39.08M, chat 2 6.41M, chat 3 6.43M.
-  41dcbdf leak closed 2026-10-28: Jonathan force-pushed the rewritten wip/s155 (5584167, lane files dropped, plus
-  the public-repo guard); no ignored path in the batch history; ship as usual.
-  Chat 4 (2026-10-28 18:01): Jonathan pasted the s155 launch prompt from main's stale handoff (s154j and s154i
-  shipped from main after s155 opened, so main never had this State); he chose to continue the existing batch. Main
-  (33426b9: s154j, s154i) merged into wip/s155 in both repos. Effects for S5: STANDING_DIRECTIONS gained "Pause point
-  content" (s154j), so verify reports the round 1 acc and read receipts stale on specs (S7 writes current ones); every
-  s155 pause block must pass the new gate and lint pause-content rule (an Offered line, a deciding line, an answer
-  that does more than negate the bait): check in S5 before the S7 packets.
+- **Open batch: none.** s155 SHIPPED 2026-10-29 (Claude lead; Phase 2, infectious disease A, seven briefs rebuilt on
+  the decision spine: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis, bs-isolation, bs-foodborne; hiv-vax and
+  bs-isolation as lookups): commit e1eb23b (main 32bcf37 after merging main's 29b928d, a docs-only older State),
+  page a1878d5c4db1 (approved candidate 5bf0352e0aaf), version.json build s155. Agents 25 of 32, 709 calls, 75.39M of
+  76M (builders 64.16M; reviewers 11.23M of the 11M plan); lead 9 chats, about 81M of 100M. Record repair/s155/S155.md
+  (S8 and S9). Report flags carried for Jonathan: cervicitis 2-week test of cure (card, no QID; CDC 3 to 4 weeks in a
+  hover), bs-foodborne infant drug for high-risk nontyphoidal Salmonella (no board source), bs-isolation mumps endpoint
+  (MSD vs CDC/AAP 5 days, unverified), bs-anaphylaxis scombroid epinephrine (card, no QID), hiv-vax Tdap window owned
+  by preg-vax, bs-isolation scabies 24 hours carried unsourced; word overages tb, cervicitis, rmsf, bs-foodborne.
+  Tool notes: resume.py misreads the "- **Open batch: sNN**" bullet; verify pools replacements only from each part's
+  latest receipt; batch.py ship needs AX_SESSION as the full session URL; one-brief verifies need an allowlist line for
+  a live-only gate finding that the batch removes (restored for S8, deleted at ship). Next: s156 (prompt below).
 
 - **Previous: s154i SHIPPED 2026-10-28 (Claude lead; patch of the 2026-10-28 NBME intake proposals,
   Psychiatry CMS Form 7, seven briefs: disruptive-behavior, antipsych-effects, ssri-effects, bipolar-mania, tca-tox,
@@ -169,9 +160,11 @@ Population entry type mockup (no batch):
 Step2Haki: mock up the population entry type with Perinatal Psychiatry per claude/pending/NEW_BRIEFS_2026-10-26.md section 1 (private artifact for review; no batch, no ship).
 ```
 
-s155 (infectious disease A) is OPEN on wip/s155 (State above): continue it with the restart line, never relaunch it.
-After it ships, the next numbered batch is s156 (claude/pending/BATCHES_S151_S160.md, whose numbering runs one behind;
-its "s155", infectious disease B, pediatric); the s155 close writes its launch prompt here.
+s156 (infectious disease B, pediatric; the plan BATCHES_S151_S160.md calls it "s155", its numbering runs one
+behind). Budget is the lead's proposal from the s155 report; Jonathan sets it at launch:
+```
+Step2Haki: launch batch s156 (Phase 2, infectious disease B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: meningitis, dtap, lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever. Goldens: nephrotic-child, scfe (peds lens); B0 confirms they fit, hub golden voices if aq-infant-fever is a hub. S1 to S3 by builder agents. Budget: 32 agents, 950 calls, 78M agent tokens (reviewers 23, 330, 12M; builders 9, 620, 66M); lead 90M.
+```
 
 New board questions, any time (intake only; the skill never edits the page):
 ```
