@@ -105,6 +105,11 @@ def text_of(brief_html):
     # first 5 years then plateaus" was read without its arrow); write each as the glyph or its label
     x = re.sub(r'<span[^>]*role="img"[^>]*aria-label="([^"]+)"[^>]*>\s*</span>',
                lambda m: {'leads to': ' \u2192 ', 'and': ' + ', 'plus': ' + '}.get(m.group(1), ' [%s] ' % m.group(1)), x)
+    # s157 S4 packet error: a 5a workup finding (div.w5fd) is blurred in study mode until its test is revealed
+    # (index.html `.w5a .w5f.w5-wait{filter:blur(8px)}`), but the text showed it plain, so three reviewers reported
+    # "branch labels name the masked test" (false MED); mark each finding as blurred
+    x = re.sub(r'(<div class="w5fd[^"]*">\s*<span class="t"[^>]*>)(.*?)(</span>)',
+               r'\1[blurred until the test is revealed: \2]\3', x, flags=re.S)
     x = close_masks(x)
     # s151b S5 packet error: a lookup or disease brief's intro line (p.sp-intro) follows the bottom line with no label,
     # so a reviewer counted it as a fourth bottom-line line (false MED); label it
