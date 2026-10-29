@@ -55,4 +55,11 @@ expect('trapline keeps its explanation', 'Class-vs-member: Wilms explains one fi
 _t = RP.text_of('<div class="sp-bl"><p>one</p></div><p class="sp-intro">DSM-5 groups it</p>')
 expect('intro line labelled', '[intro line, not part of the Bottom line] DSM-5 groups it' in _t)
 
+# s156 S5: the bottom-line tile's end is marked (a hub's presentation paragraph was counted as a fourth line), and row
+# drawers show (a reviewer reported drawers missing that exist)
+_t = RP.text_of('<div class="dp"><span class="lbl">Bottom line</span><ul class="bl"><li>one</li><li>two</li></ul></div><p>Most exanthems</p>')
+expect('bottom-line end marked', _t.index('[end of Bottom line]') < _t.index('Most exanthems'))
+_t = RP.text_of('<tr><td><button type="button" class="sp-drw" data-brief="arf">Acute rheumatic fever</button></td><td>rings</td></tr>')
+expect('row drawer shown', 'Acute rheumatic fever [drawer: arf]' in _t)
+
 print('test_review_packet: %d passed, %d failed' % (ok, fail)); sys.exit(1 if fail else 0)

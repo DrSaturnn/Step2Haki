@@ -120,6 +120,11 @@ def text_of(brief_html):
     # s156 S5 packet error: block-display label spans (span.lbl, span.nbh) ran into the next paragraph, so "How NBME
     # framed it: question 1" fused with the stem age ("question 14-month-old" for a 4-month-old) and drew two false MEDs
     x = re.sub(r'(<span class="(?:lbl|nbh)"[^>]*>(?:(?!</?span\b).)*?)</span>', '\\1\n', x, flags=re.S)
+    # s156 S5 packet errors: (1) a hub's presentation paragraph follows the bottom-line tile with no label, so a reviewer
+    # counted it as a fourth bottom-line line (false MED); mark the tile's end. (2) Row drawers are buttons on the
+    # diagnosis name and the text dropped them, so a reviewer reported drawers missing that exist (false MED); show them
+    x = re.sub(r'(<ul class="bl">.*?</ul>)', r'\1[end of Bottom line]', x, flags=re.S)
+    x = re.sub(r'<button[^>]*class="sp-drw"[^>]*data-brief="([^"]+)"[^>]*>(.*?)</button>', r'\2 [drawer: \1]', x, flags=re.S)
     x = re.sub(r'</(p|li|div|tr|h\d|figure|caption)>|<br\s*/?>', '\n', x)
     x = re.sub(r'</t[dh]>', ' | ', x)
     x = re.sub(r'<[^>]+>', '', x)
