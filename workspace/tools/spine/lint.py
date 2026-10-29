@@ -42,7 +42,9 @@ LINT_HEDGES = ('may', 'usually', 'often', 'likely', 'typically', 'suggests', 'su
 # "can" (in the spec's list) is left out: in quotes it is almost always permission ("can be treated with", "MRI can be
 # done"), not a hedge; measured on the nine s148 briefs it was most of the hedge noise. condpass keeps it as meaning.
 NOT_HEDGE = re.compile(r'\b(?:most likely|the likely diagnosis|likely diagnosis)\b', re.I)
+# s156 S5: secure (the airway), intubate and laryngoscopy added (an epiglottitis next step drew a false warn)
 ACTION = set('''check order obtain get start begin give treat image refer consult reduce repair splint immobilize aspirate
+secure intubate intubation laryngoscopy
 tap drain measure test screen admit stop hold switch add observe reassure follow diagnose biopsy culture inject operate
 decompress fix fixate fixation replace remove stabilize transfuse resuscitate monitor repeat recheck confirm exclude rule
 continue taper raise lower lift reconsider avoid loosen rest ice brace sling cast elevate counsel educate discharge

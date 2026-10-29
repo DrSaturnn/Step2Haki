@@ -14,8 +14,8 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **Open batch: s156** (Claude lead, launched 2026-10-29 07:49; Phase 2, infectious disease B, pediatric: meningitis,
   dtap, lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever), branch wip/s156 in both repos.
-  Step: S4 round 1 DONE (chat 2; 21 receipts, no HIGH, 51 MED; every brief needs S5); next S5 round 1 in a fresh chat,
-  brief by brief (adj_s156_r1.md per folder; order and first act in S156.md "S4 round 1", last bullet). Spend: wave 15
+  Step: S5 round 1 in progress (chat 3): dtap and bs-pta DONE (adj_s156_r1.md each; verify MECHANICAL PASS); next
+  bs-fever-rash-arthralgia, herpangina, meningitis, aq-infant-fever, lymphadenitis (S156.md "S5 round 1"). Spend: wave 15
   agents, 545 calls, 64.80M of 78M (13.2M left for follow-up rounds); lead chat 1 36.1M, chat 2 11.7M of 90M
   (ledger_lead). Batch file repair/s156/S156.md.
     Never relaunch s156 from a launch prompt; continue with the restart line.

@@ -117,6 +117,9 @@ def text_of(brief_html):
         re.findall(r'<span class="pill[^"]*">(.*?)</span>', m.group(1))), x, flags=re.S)
     x = re.sub(r'(<div class="trapline">\s*<span class="pill[^"]*">.*?</span>)\s*(<span class="trapwhy">)', r'\1: \2', x,
                flags=re.S)
+    # s156 S5 packet error: block-display label spans (span.lbl, span.nbh) ran into the next paragraph, so "How NBME
+    # framed it: question 1" fused with the stem age ("question 14-month-old" for a 4-month-old) and drew two false MEDs
+    x = re.sub(r'(<span class="(?:lbl|nbh)"[^>]*>(?:(?!</?span\b).)*?)</span>', '\\1\n', x, flags=re.S)
     x = re.sub(r'</(p|li|div|tr|h\d|figure|caption)>|<br\s*/?>', '\n', x)
     x = re.sub(r'</t[dh]>', ' | ', x)
     x = re.sub(r'<[^>]+>', '', x)
