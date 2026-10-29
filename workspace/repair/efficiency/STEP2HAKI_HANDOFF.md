@@ -16,7 +16,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   both repos, from public main 9dd776a and private efe0bf62). Briefs: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis,
   bs-isolation, bs-foodborne. Budget: 32 agents, 950 calls, 76M agent tokens (raised from 65M by Jonathan 2026-10-28;
   reviewers 23, 330, 11M; builders spent 64.16M); lead 100M. Batch file repair/s155/S155.md. Step: S4 round 1 done (chat 3, 2026-10-28): 7 lanes, 111 calls, 6.24M; every brief needs S5 (no HIGH, 39 MED).
-  S5 in progress (chat 5, 2026-10-28): cervicitis and rmsf done (S155.md "S5 round 1"). next: bs-anaphylaxis, then
+  S5 in progress (chat 5, 2026-10-28): cervicitis, rmsf, bs-anaphylaxis (chat 6) done (S155.md "S5 round 1"). next:
   bs-foodborne, tb, hiv-vax, bs-isolation (adj_s155_r1.md per brief folder) in a fresh chat. Wave 70.40M of 76M (5.60M
   for follow-up rounds). Lead chat 1 39.08M, chat 2 6.41M, chat 3 6.43M.
   41dcbdf leak closed 2026-10-28: Jonathan force-pushed the rewritten wip/s155 (5584167, lane files dropped, plus
