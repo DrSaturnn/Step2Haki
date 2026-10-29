@@ -23,6 +23,7 @@ mdd | shingle_check | *          # PHQ-9 item wording: a public instrument, exce
 mdd | claims | *                 # built before spinelib recorded old_claims; no per-section disposition list exists
 nephrotic-child | V1 | DNA          # "anti-double-stranded DNA"; DNA is not on the contract allowlist
 panic | V1 | QT
+tics | V1 | HT2A                # "5-HT2A" in the shipped antipsychotic Mechanism hover; found at s157 S3 (pre-existing)
 panic | shingle_check | *        # the mnemonic's own letters and words from its source (the panic attack mnemonic)
 ssri-effects | V1 | QT
 ssri-effects | V1 | CYP1A2
