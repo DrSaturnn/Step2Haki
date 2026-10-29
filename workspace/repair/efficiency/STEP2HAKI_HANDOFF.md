@@ -22,7 +22,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   (chat 8; S155.md "S5 round 2"): cervicitis and rmsf READY; round 3 for tb (read, flags), bs-anaphylaxis,
   bs-foodborne, hiv-vax, bs-isolation. Round 3 DONE (chat 8: 4 agents, 42 calls, 1.32M; all PASS, 0 findings).
   **S7 done: all READY** (all seven verify --mech --fast READY). Wave 75.39M of 76M; reviewers 11.23M of the 11M plan
-  (report it). next: S8 and S9 in a fresh chat (S155.md "S5 round 2" last bullet). Wave 74.07M of 76M. The gate FIX "tb table 3 has both a caption and
+  (report it). S8 DONE (chat 9, 2026-10-28 23:21): 7 of 7 READY, presented, page 5bf0352e0aaf (S155.md "S8 and S9"); the gate allowlist line table-title tb:t3 was restored for one-brief verifies and is deleted at ship. next: Jonathan's reply ("ship" or changes), then S9 per that section. Wave 74.07M of 76M. The gate FIX "tb table 3 has both a caption and
   an h5" in single-brief verifies is the LIVE tb brief's table; it clears when tb ships. Wave 70.40M of 76M (5.60M
   for follow-up rounds). Lead chat 1 39.08M, chat 2 6.41M, chat 3 6.43M.
   41dcbdf leak closed 2026-10-28: Jonathan force-pushed the rewritten wip/s155 (5584167, lane files dropped, plus
