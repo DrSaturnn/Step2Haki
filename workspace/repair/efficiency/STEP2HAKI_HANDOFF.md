@@ -12,6 +12,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
+- **PARKED 2026-10-29 by Jonathan** (s156 at S5 round 1 complete; the psych pharm section, batch s157, goes first;
+  plan claude/pending/PSYCH_PHARM_SECTION.md). Resume s156 only after s157 ships: merge main into wip/s156 in both
+  repos first (index.html nav, briefs.json and this handoff will conflict; WAVE.json keeps the s156 wave), then the
+  restart line with RESUME.md set back to s156. Everything below stands as written at the park.
 - **Open batch: s156** (Claude lead, launched 2026-10-29 07:49; Phase 2, infectious disease B, pediatric: meningitis,
   dtap, lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever), branch wip/s156 in both repos.
   Step: S5 round 1 COMPLETE (chat 5): all seven briefs adjudicated (adj_s156_r1.md each; verify MECHANICAL PASS);
