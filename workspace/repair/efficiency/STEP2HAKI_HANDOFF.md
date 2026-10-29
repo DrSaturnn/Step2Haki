@@ -12,7 +12,13 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: none.** s155 SHIPPED 2026-10-29 (Claude lead; Phase 2, infectious disease A, seven briefs rebuilt on
+- **Open batch: s156** (Claude lead, launched 2026-10-29 07:49; Phase 2, infectious disease B, pediatric: meningitis,
+  dtap, lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever), branch wip/s156 in both repos.
+  Step: S1 to S3 by builder agents, pilot pair meningitis and aq-infant-fever. Budget 32 agents, 950 calls, 78M agent
+  tokens (reviewers 23, 330, 12M; builders 9, 620, 66M); lead 90M. Spend: agents 0. Batch file repair/s156/S156.md.
+  Never relaunch s156 from a launch prompt; continue with the restart line.
+
+- **Previous: s155** SHIPPED 2026-10-29 (Claude lead; Phase 2, infectious disease A, seven briefs rebuilt on
   the decision spine: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis, bs-isolation, bs-foodborne; hiv-vax and
   bs-isolation as lookups): commit e1eb23b (main 32bcf37 after merging main's 29b928d, a docs-only older State),
   page a1878d5c4db1 (approved candidate 5bf0352e0aaf), version.json build s155. Agents 25 of 32, 709 calls, 75.39M of
