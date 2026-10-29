@@ -14,8 +14,9 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **Open batch: s156** (Claude lead, launched 2026-10-29 07:49; Phase 2, infectious disease B, pediatric: meningitis,
   dtap, lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever), branch wip/s156 in both repos.
-  Step: S1 to S3 by builder agents, pilot pair meningitis and aq-infant-fever. Budget 32 agents, 950 calls, 78M agent
-  tokens (reviewers 23, 330, 12M; builders 9, 620, 66M); lead 90M. Spend: agents 0. Batch file repair/s156/S156.md.
+  Step: S1 to S3 by builder agents; pilot pair (meningitis, aq-infant-fever) BUILT and passed the gate; remaining five
+  builders running (dtap, lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia). Budget 32 agents, 950 calls, 78M agent
+  tokens (reviewers 23, 330, 12M; builders 9, 620, 66M); lead 90M. Spend: 2 builders, 113 calls, 15.9M. Batch file repair/s156/S156.md.
   Never relaunch s156 from a launch prompt; continue with the restart line.
 
 - **Previous: s155** SHIPPED 2026-10-29 (Claude lead; Phase 2, infectious disease A, seven briefs rebuilt on

@@ -240,6 +240,21 @@
   "renal tubular acidosis",
   "urine anion gap"
  ],
+ "bs-fever-rash-arthralgia": [
+  "arthralgia",
+  "erythema infectiosum",
+  "exanthem",
+  "Koplik",
+  "measles",
+  "parvovirus",
+  "roseola",
+  "rubella",
+  "sandpaper",
+  "scarlet fever",
+  "serum sickness",
+  "slapped cheek",
+  "varicella"
+ ],
  "bs-foodborne": [
   "Bacillus cereus",
   "bloody diarrhea",
@@ -315,6 +330,24 @@
   "respiratory isolation",
   "spores",
   "surgical mask"
+ ],
+ "bs-pta": [
+  "deep neck",
+  "Fusobacterium",
+  "hot potato voice",
+  "Lemierre",
+  "Ludwig",
+  "Ludwig angina",
+  "parapharyngeal",
+  "peritonsillar",
+  "peritonsillar abscess",
+  "quinsy",
+  "retropharyngeal",
+  "retropharyngeal abscess",
+  "submandibular space",
+  "trismus",
+  "uvula deviation",
+  "uvular deviation"
  ],
  "bs-puncture-osteomyelitis": [
   "osteomyelitis",
@@ -556,6 +589,27 @@
   "oppositional defiant",
   "parent management training"
  ],
+ "dtap": [
+  "catch-up",
+  "DTaP",
+  "egg allergy",
+  "hepatitis B vaccine",
+  "Hib vaccine",
+  "hypotonic-hyporesponsive",
+  "influenza vaccine",
+  "intussusception",
+  "IPV",
+  "live vaccine",
+  "MMR vaccine",
+  "pertussis vaccine",
+  "pneumococcal conjugate",
+  "rotavirus vaccine",
+  "Tdap",
+  "true contraindications to vaccination",
+  "vaccination",
+  "vaccine schedule",
+  "varicella vaccine"
+ ],
  "dvt": [
   "deep vein thrombosis",
   "pulmonary embolism",
@@ -659,6 +713,19 @@
   "piriformis",
   "stress fracture",
   "trochanteric bursitis"
+ ],
+ "herpangina": [
+  "aphthous",
+  "coxsackievirus",
+  "enterovirus",
+  "gingivostomatitis",
+  "hand, foot, and mouth",
+  "hand-foot-and-mouth",
+  "herpangina",
+  "HFMD",
+  "Koplik",
+  "oral candidiasis",
+  "thrush"
  ],
  "hippos": [
   "acetabular fracture",
@@ -805,6 +872,19 @@
   "intrahepatic cholestasis of pregnancy",
   "pruritus in pregnancy",
   "ursodeoxycholic acid"
+ ],
+ "lymphadenitis": [
+  "Bartonella",
+  "branchial cleft",
+  "cat scratch",
+  "cervical lymph",
+  "cervical node",
+  "lymphadenitis",
+  "Mycobacterium avium",
+  "nontuberculous",
+  "scrofula",
+  "supraclavicular",
+  "thyroglossal"
  ],
  "masld": [
   "elastography",
