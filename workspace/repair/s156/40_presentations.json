@@ -1,0 +1,16 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "    <div class=\"sect\">Presentations <span class=\"count\">36</span></div>\n",
+   "with": "    <div class=\"sect\">Presentations <span class=\"count\">40</span></div>\n",
+   "note": "s156: four peds infectious disease hubs join Presentations; count 36 -> 40"
+  },
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#aq-puffy-eyes\">Child with Puffy Eyes</a>\n    <a href=\"#voices\">",
+   "with": "    <a href=\"#aq-puffy-eyes\">Child with Puffy Eyes</a>\n    <a href=\"#lymphadenitis\">Lymphadenopathy</a>\n    <a href=\"#herpangina\">Oral Lesions in a Child</a>\n    <a href=\"#bs-fever-rash-arthralgia\">Fever and Rash in a Child</a>\n    <a href=\"#aq-infant-fever\">Fever in an Infant</a>\n    <a href=\"#voices\">",
+   "note": "s156: the lymphadenopathy, oral lesions, fever and rash, and infant fever hubs, in page order after aq-puffy-eyes and before voices"
+  }
+ ]
+}
