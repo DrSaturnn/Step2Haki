@@ -12,11 +12,12 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: none. s156 PARKED** 2026-10-29 by Jonathan at S5 round 1 complete (branch wip/s156 in both repos;
-  its State there carries the park note; 13.2M of 78M agent tokens left). **Next: launch s157, the psych pharm
-  section** (five new drug briefs under Psychiatry > Medications; plan claude/pending/PSYCH_PHARM_SECTION.md in the
-  project and the private repo; prompt below). After s157 ships: merge main into wip/s156 in both repos, set RESUME.md
-  to s156, and continue s156 with the restart line. The Phase 2 plan BATCHES_S151_S160.md now runs two behind.
+- **Open batch: s157** (wip/s157 in both repos; batch file repair/s157/S157.md), psych pharm section, five new drug
+  briefs (antidep-other, mood-anticonv, sedatives, adhd-meds, sud-meds), launched 2026-10-29 by Jonathan. Budget 24
+  agents, 850 calls, 72M agent tokens (builders 7, 630, 62M; reviewers 17, 220, 10M); lead 90M. Step: S1 to S3 by
+  builder agents, pilot pair mood-anticonv and sud-meds launched. Spend: 0 agents so far; lead chat 1. s156 stays PARKED
+  on wip/s156 (13.2M of 78M agent tokens left); after s157 ships: merge main into wip/s156 in both repos, set RESUME.md
+  to s156, continue s156 with the restart line.
 
 - **Previous: s155** SHIPPED 2026-10-29 (Claude lead; Phase 2, infectious disease A, seven briefs rebuilt on
   the decision spine: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis, bs-isolation, bs-foodborne; hiv-vax and

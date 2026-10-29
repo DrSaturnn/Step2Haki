@@ -8,6 +8,7 @@ spec.json:
   {"batch": "s153", "plan_step": "s153", "budget": 90,
    "briefs": [{"id": "masld", "folder": "repair/migration/gi/masld/spine", "entry": "disease",
                "golden": "repair/migration/<...>/copd/spine", "model": "repair/migration/peds/kawasaki/spine"}]}
+  A brief new in its batch adds "new": true; its folder must hold the shell 05_<id>_new.json first (s157).
 
 Per brief: makes the folder; dumps the live brief to local/<batch>/live/<id>.json and .txt (dump_lines.py); writes
 board_index.txt (board_index.py show <id> --all), cards.md (card_dispositions.py make), amend_rows.md (the brief's rows
@@ -37,8 +38,10 @@ def sh(cmd, out=None):
 
 def title_of(bid):
     sys.path.insert(0, os.path.join(WS, 'tools'))
+    sys.path.insert(0, HERE)
     import pagelib as P
-    pg = P.read_page(os.path.join(WS, 'index.html'))
+    import basepage as BP
+    pg = BP.base_page(None)   # s157: a new brief's pending shell (05_<id>_new.json) gives its title
     b = P.brief_by_id(pg, bid)
     if not b:
         return None
@@ -68,9 +71,14 @@ def lane(spec, b):
     live_dir = os.path.join(WS, 'local', batch, 'live')
     os.makedirs(live_dir, exist_ok=True)
     live = os.path.join(live_dir, bid + '.json')
-    r = sh([sys.executable, os.path.join(HERE, 'dump_lines.py'), bid, live], out=live[:-5] + '.txt')
-    if r.returncode:
-        return '%s: dump_lines FAIL %s' % (bid, r.stderr.strip()[-200:])
+    if b.get('new'):
+        # s157: a brief new in its batch has no live text; its shell sits in the folder (basepage)
+        json.dump({}, open(live, 'w', encoding='utf-8'))
+        open(live[:-5] + '.txt', 'w', encoding='utf-8').write('(%s is new in %s: no live brief, no L lines)\n' % (bid, batch))
+    else:
+        r = sh([sys.executable, os.path.join(HERE, 'dump_lines.py'), bid, live], out=live[:-5] + '.txt')
+        if r.returncode:
+            return '%s: dump_lines FAIL %s' % (bid, r.stderr.strip()[-200:])
     sh([sys.executable, os.path.join(HERE, 'board_index.py'), 'show', bid, '--all'],
        out=os.path.join(folder, 'board_index.txt'))
     r = sh([sys.executable, os.path.join(HERE, 'card_dispositions.py'), 'make', bid, folder])

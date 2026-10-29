@@ -111,7 +111,10 @@ def _lock():
 def build(argv):
     lk = _lock()  # noqa: F841 (held until the process exits)
     t0 = time.time()
-    html = P.read_page(os.path.join(WS, 'index.html'))
+    # s157: index the working page plus every pending new-brief shell (basepage), so a brief new in its batch is
+    # indexed before it ships (s151b and s148e searched by hand because the index did not reach new briefs)
+    import basepage as BP
+    html = BP.base_page(None)
     extra = json.load(open(TERMS, encoding='utf-8')) if os.path.exists(TERMS) else {}
     bl = [b for b in P.briefs(html) if b.id]
     idx = {b.id: {'title': b.title, 'terms': brief_terms(b.id, b.title, extra), 'questions': [], 'nbme_items': [],
