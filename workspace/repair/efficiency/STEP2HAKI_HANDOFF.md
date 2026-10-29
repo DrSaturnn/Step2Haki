@@ -15,7 +15,8 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 - **Open batch: s156** (Claude lead, launched 2026-10-29 07:49; Phase 2, infectious disease B, pediatric: meningitis,
   dtap, lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever), branch wip/s156 in both repos.
   Step: S5 round 1 COMPLETE (chat 5): all seven briefs adjudicated (adj_s156_r1.md each; verify MECHANICAL PASS);
-  next S6 self-check, then S7 round 2 (S156.md "Next chunk (chat 6)"). Spend: wave 15
+  next S6 self-check, then S7 round 2 (S156.md "Next chunk (chat 6)"). Four lead recommendations are parked for
+  Jonathan to revisit (S156.md "Parked recommendations"): not approved, do not apply. Spend: wave 15
   agents, 545 calls, 64.80M of 78M (13.2M left for follow-up rounds); lead chat 1 36.1M, chat 2 11.7M, chat 3 20.5M of 90M
   (ledger_lead). Batch file repair/s156/S156.md.
     Never relaunch s156 from a launch prompt; continue with the restart line.
