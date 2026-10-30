@@ -14,8 +14,3 @@ K3 anemia-thrombocytopenia:mnemonic  # pre-existing: mnemonic has no recorded so
 K3 bs-torch:mnemonic  # pre-existing: mnemonic has no recorded source; verify it is widely taught (add data-mn-src) or remove it | bs-torch mnemonic "Mnemonic" does not name its source: add data-mn-src naming the widely t
 K3 bs-adolescent-confid:mnemonic  # pre-existing: mnemonic has no recorded source; verify it is widely taught (add data-mn-src) or remove it | bs-adolescent-confid mnemonic "Mnemonic" does not name its source: add data-mn-src naming 
 
-# s157 (2026-10-29): one-brief verify pages hold one new pharm brief, so the coverage rows of the other two new briefs
-# have no data-nbme link there; the batch page links all three (gate PASS). Delete these three lines at the s157 ship.
-nbme-coverage psych-cms-c01111  # s157 one-brief verify only (mood-anticonv pause block 1); delete at the s157 ship
-nbme-coverage psych-cms7-932e72  # s157 one-brief verify only (adhd-meds pause block 2); delete at the s157 ship
-nbme-coverage psych-cms-434831  # s157 one-brief verify only (sedatives pause block 1); delete at the s157 ship

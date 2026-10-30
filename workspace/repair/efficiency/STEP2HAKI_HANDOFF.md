@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-29, by Claude (planning chat: s156 parked, s157 psych pharm section planned).
+Last updated: 2026-10-29, by Claude (s157 shipped; s156 resumes).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,12 +12,19 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: s157** (wip/s157 in both repos; batch file repair/s157/S157.md), psych pharm section, five new drug
-  briefs (antidep-other, mood-anticonv, sedatives, adhd-meds, sud-meds), launched 2026-10-29 by Jonathan. Budget 24
-  agents, 850 calls, 72M agent tokens (builders 7, 630, 62M; reviewers 17, 220, 10M); lead 90M. Step: S7 done: all READY (chat 5). S5 closed, S6 self-check (local/s157/survey_s6.md), S7 round 2 (7 lanes) and round 3 (3 lanes, all PASS, 0 findings); fixes after round 2 recorded in repair/s157/S157.md "S7 rounds 2 and 3 results"; receipts filed repair/migration/spine/reviews/<brief>_<part>_r{1,2,3}.md; mdd READY via `patch.py file s157 2`. verify --mech PASS all 13 (new five READY); batch page 18 ops, gate PASS, render PASS, preflight 7 warnings carried (P3 5, P5 2), squeeze 0, pointer_check 89 pointers, 1 problem (tics Pairs with, pre-existing). Tool change: patch.py review lists drawer changes from delta_<batch>.json. S8 done (chat 6): 13 of 13 READY, presented as approval s157 (page 5e670282e349; tics Pairs with pointer problem pre-existing, presented by the lead with approval.py, see S157.md "S8"); report sent, waiting for "ship". Next: S9 on "ship" (steps in S157.md "S8"). Spend: wave 24 of 24 agents (no reviewer agents left); lead about 80M of 90M.
-  At the ship: delete the three s157 nbme-coverage lines in tools/gate_allowlist.txt; card 1485313602686
-  to owner:sud-meds. s156 stays PARKED on wip/s156 (13.2M of 78M agent tokens left); after s157 ships: merge main into
-  wip/s156 in both repos, set RESUME.md to s156, continue s156 with the restart line.
+- **Open batch: s156** (wip/s156 in both repos, main merged in after the s157 ship; batch file repair/s156/S156.md).
+  Its own State, as parked on 2026-10-29, is in that branch's copy of this file (13.2M of 78M agent tokens left); the
+  restart line continues it per RESUME.md.
+
+- **Previous: s157 SHIPPED 2026-10-29** (Claude lead; psych pharm section, five new drug briefs in the Psychiatry
+  Medications subgroup: antidep-other, mood-anticonv, sedatives, adhd-meds, sud-meds; drawer pointers in substance, mdd,
+  bipolar-mania, ssri-effects, panic, tics, tca-tox, peds-sleep): commit ff25fba, page c2e028891b47 (approved
+  candidate 5e670282e349), version.json build s157. Agents 24 of 24; measured 14 agents, 378 calls, 43.75M of 72M
+  (chats 4 and 5 reviewers unmeasured, transcripts in reclaimed containers); lead 6 chats, about 90M of 90M. Record
+  repair/s157/S157.md (S8, S9). Open: tics Pairs with unlinked row (pre-existing); mood-anticonv no clue table; deferred
+  LOWs adhd-meds, sud-meds (OPEN_WORK). Tool notes: resume.py still misses the "- **Open batch:" bullet; batch.py s8
+  skips present on any pointer_check problem, pre-existing included; ledger loses agents whose chat container was
+  reclaimed before usage_ledger ran (run it at the end of every chat that launches agents).
 
 - **Previous: s155** SHIPPED 2026-10-29 (Claude lead; Phase 2, infectious disease A, seven briefs rebuilt on
   the decision spine: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis, bs-isolation, bs-foodborne; hiv-vax and
