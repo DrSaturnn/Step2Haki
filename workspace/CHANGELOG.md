@@ -2,6 +2,33 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-29 s157: s157: psych pharm section, five new drug briefs (antidep-other, mood-anticonv, sedatives, adhd-meds, sud-meds) and drawer pointers in eight psych briefs
+
+```
+Page: 187 briefs, 2241 items -> 192 briefs, 2280 items
+Briefs added (5):
+  - antidep-other: SNRIs, Atypical Antidepressants and MAOIs (8 items)
+  - mood-anticonv: Anticonvulsant Mood Stabilizers (8 items)
+  - sedatives: Anxiolytics and Sedative-Hypnotics (8 items)
+  - adhd-meds: ADHD Medications (7 items)
+  - sud-meds: Medications for Substance Use Disorders (8 items)
+Briefs changed (8):
+  - tics (Tics and Tic Disorders): prose edited (+172 chars)
+  - peds-sleep (Sleep Problems): prose edited (+104 chars)
+  - bipolar-mania (Bipolar Disorder): prose edited (+251 chars)
+  - mdd (Major Depressive Disorder): prose edited (+270 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (+173 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+544 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (+340 chars)
+  - tca-tox (Anticholinergic and Tricyclic Toxicity): prose edited (+73 chars)
+Other page changes (nav, headers, scripts): +2941 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 192 briefs, 2280 items (777 with reasons), 23 scripts, 40 checks, base HEAD | allowlisted 9 (3 stale allowlist line(s): nbme-coverage psych-cms-434831; nbme-coverage psych-cms-c01111; nbme-coverage psych-cms7-932e72) | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 192 | bankwraps 192 | mcq 2280 (reasons 777) (axCheck 2280, reveal-only 0) | malformed 0 | crit gridded 122/122 | vignette gridded 52/52 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-10-29 s155: s155: seven infectious disease briefs rebuilt on the decision spine (tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis, bs-isolation, bs-foodborne)
 
 ```
