@@ -12,13 +12,16 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: s158** (Claude lead; launched 2026-10-30 00:41 EDT; wip/s158 in both repos; batch file
-  repair/s158/S158.md). Four new psych briefs: trauma-stress (disease), cluster-c (disease), stages-change (lookup),
-  sexual-dysfunction (disease), plus drawer pointers in 11 live briefs; plan claude/pending/NEW_BRIEFS_2026-10-30.md.
-  Step: S9 held (chat 6): the first ship aborted at the ready gate (drawer briefs' receipts unfiled, then stale on
-  specs); rounds 4 and 5 removed two drawers (voices L22, mdd L60); 15 of 15 READY; presented page 07e8fe2497dd;
-  waiting for Jonathan's new "ship" (the 0796debdb876 approval does not cover it); next: S9 (S158.md "S9 attempt 1").
-  Spend: agents 19 of 20, 315 calls, 26.13M of 58M; lead about 80M of 80M.
+- **Open batch: none.** Next: the psych pharm section redo mockup (DIGEST 2026-10-30 "psych pharm section redo": one short
+  card and the standalone header as a private page for Jonathan's review before any batch; plan claude/pending/PSYCH_PHARM_V2.md),
+  or s156 resumed (parked on wip/s156; merge main in first), whichever Jonathan names.
+
+- **Previous: s158 SHIPPED 2026-10-30** (Claude lead; four new psych briefs: trauma-stress, cluster-c, sexual-dysfunction,
+  stages-change (lookup); drawer pointers in 11 live briefs): commit 98b3f1b, page 00395be2f003 (approved candidate
+  07e8fe2497dd), version.json build s158. The first "ship" aborted at the ready gate (drawer briefs' receipts unfiled, then
+  stale on specs); rounds 4 and 5 removed the voices L22 and mdd L60 drawers; Jonathan re-approved. Agents 19 of 20, 315
+  calls, 26.13M of 58M; lead 6 chats, about 80M of 80M. Record repair/s158/S158.md (S8, S9). Open: the source calls and
+  tool notes in OPEN_WORK (s158 line).
 
 - **Parked: s156** (wip/s156 in both repos, main merged in after the s157 ship; batch file repair/s156/S156.md).
   Its own State, as parked on 2026-10-29, is in that branch's copy of this file (13.2M of 78M agent tokens left); the
