@@ -2,6 +2,35 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-30 s158: s158: four new psych briefs (Trauma, Stress and Dissociative Disorders; Cluster C Personality Disorders; Sexual Dysfunction; Stages of Change and Motivational Interviewing) and drawer pointers in 11 briefs
+
+```
+Page: 192 briefs, 2282 items -> 196 briefs, 2311 items
+Briefs added (4):
+  - cluster-c: Cluster C Personality Disorders (6 items)
+  - trauma-stress: Trauma, Stress and Dissociative Disorders (8 items)
+  - sexual-dysfunction: Sexual Dysfunction (8 items)
+  - stages-change: Stages of Change and Motivational Interviewing (7 items)
+Briefs changed (11):
+  - psychosis-duration (Psychosis): prose edited (+87 chars)
+  - voices (Hears Voices or Holds Odd Beliefs): prose edited (+73 chars)
+  - mdd (Major Depressive Disorder): prose edited (+73 chars)
+  - cluster-b (Cluster B Personality Disorders): prose edited (+108 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (+115 chars)
+  - ocd (Obsessive-Compulsive and Related Disorders): prose edited (+298 chars)
+  - gppd (Genito-Pelvic Pain/Penetration Disorder): prose edited (+227 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+235 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (+78 chars)
+  - antidep-other (SNRIs, Atypical Antidepressants and MAOIs): prose edited (+78 chars)
+  - antipsych-effects (Antipsychotic Adverse Effects): prose edited (+97 chars)
+Other page changes (nav, headers, scripts): +2511 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 196 briefs, 2311 items (808 with reasons), 23 scripts, 40 checks, base HEAD | allowlisted 9 (8 stale allowlist line(s): nbme-coverage psych-cms-007180; nbme-coverage psych-cms-ca558f; nbme-coverage psych-cms7-14201a; nbme-coverage psych-cms8-2520bc; nbme-coverage psych-cms8-b5dace; nbme-coverage psych-cms8-b96c7a; nbme) | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 196 | bankwraps 196 | mcq 2311 (reasons 808) (axCheck 2311, reveal-only 0) | malformed 0 | crit gridded 130/130 | vignette gridded 52/52 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-10-30 s157b: s157b shipped: Form 8 NBME intake patch (ssri-effects, mood-anticonv, toxidrome, antipsych-effects)
 
 ```
