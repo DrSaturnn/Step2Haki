@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-29, by Claude (s157 shipped; s156 resumes).
+Last updated: 2026-10-30, by Claude (s157b shipped; s156 still parked).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,15 +12,14 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: s157b** (wip/s157b in both repos; record repair/s157b/S157B.md), patch of the 2026-10-29 NBME intake
-  proposals (Psychiatry CMS Form 8): ssri-effects, mood-anticonv, toxidrome, antipsych-effects. Budget 6 agents, 30 calls,
-  1.2M; lead 30M. Step: S8 presented (page 9175b91425a2), all four READY after round 2; reviewers 4 agents, 18 calls,
-  about 0.12M. Next: on Jonathan's "ship", `batch.py ship s157b` with AX_SESSION, close the four 2026-10-29 queue rows
-  (99c45f, fc1938, 043224, 3b2f19) "picked up s157b", post; then merge main into wip/s156 in both repos.
-
 - **Open batch: s156** (wip/s156 in both repos, main merged in after the s157 ship; batch file repair/s156/S156.md).
   Its own State, as parked on 2026-10-29, is in that branch's copy of this file (13.2M of 78M agent tokens left); the
   restart line continues it per RESUME.md.
+
+- **Previous: s157b SHIPPED 2026-10-30** (Claude lead; patch of the 2026-10-29 NBME intake, Psychiatry CMS Form 8:
+  toxidrome Barbiturate row, antipsych-effects Dementia commit line, ssri-effects and mood-anticonv bait items): commit
+  50bef79, page d3e594f55987 (approved candidate 9175b91425a2). Reviewers 4 agents, 18 calls, about 0.12M of 1.2M; lead
+  one chat. Record repair/s157b/S157B.md. Main merged into wip/s156 in both repos after the ship.
 
 - **Previous: s157 SHIPPED 2026-10-29** (Claude lead; psych pharm section, five new drug briefs in the Psychiatry
   Medications subgroup: antidep-other, mood-anticonv, sedatives, adhd-meds, sud-meds; drawer pointers in substance, mdd,
