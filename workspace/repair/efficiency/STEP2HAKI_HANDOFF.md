@@ -15,9 +15,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 - **Open batch: s158** (Claude lead; launched 2026-10-30 00:41 EDT; wip/s158 in both repos; batch file
   repair/s158/S158.md). Four new psych briefs: trauma-stress (disease), cluster-c (disease), stages-change (lookup),
   sexual-dysfunction (disease); plan claude/pending/NEW_BRIEFS_2026-10-30.md. Budget 20 agents, 700 calls, 58M agent
-  tokens (builders 6, 520, 50M; reviewers 14, 180, 8M); lead 80M. Step: S3 done (chat 2: drawer pointers in 11 live briefs, 21 changes; mech PASS 11 of 11; batch page gate, render,
-  squeeze PASS; pointer_check 108, 0 problems); next: S4 review round 1 (repair/s158/S158.md "Next chat: exact steps").
-  Spend: builders 4 agents, 198 calls, 21.23M of 58M (reviewers 8M untouched); lead chats 1 and 2 about 33.6M of 80M.
+  tokens (builders 6, 520, 50M; reviewers 14, 180, 8M); lead 80M. Step: S4 round 1 done (chat 3: six lost web captures re-fetched, MSD ED page revised so sexual-dysfunction
+  re-quoted and two lines reworded; 8 lanes, 67 calls, 2.86M; MEDs in all four new briefs, 11 live briefs PASS except
+  ocd read L62); next: S5 adjudicate and fix (repair/s158/S158.md "Next chat: exact steps (S5"). Spend: builders 21.23M,
+  reviewers r1 2.86M (left 6 agents, 113 calls, 5.14M); lead about 36.7M of 80M (usage_ledger --lead).
 
 - **Parked: s156** (wip/s156 in both repos, main merged in after the s157 ship; batch file repair/s156/S156.md).
   Its own State, as parked on 2026-10-29, is in that branch's copy of this file (13.2M of 78M agent tokens left); the
