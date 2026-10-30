@@ -12,6 +12,12 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
+- **Open batch: s157b** (wip/s157b in both repos; record repair/s157b/S157B.md), patch of the 2026-10-29 NBME intake
+  proposals (Psychiatry CMS Form 8): ssri-effects, mood-anticonv, toxidrome, antipsych-effects. Budget 6 agents, 30 calls,
+  1.2M; lead 30M. Step: S8 presented (page 9175b91425a2), all four READY after round 2; reviewers 4 agents, 18 calls,
+  about 0.12M. Next: on Jonathan's "ship", `batch.py ship s157b` with AX_SESSION, close the four 2026-10-29 queue rows
+  (99c45f, fc1938, 043224, 3b2f19) "picked up s157b", post; then merge main into wip/s156 in both repos.
+
 - **Open batch: s156** (wip/s156 in both repos, main merged in after the s157 ship; batch file repair/s156/S156.md).
   Its own State, as parked on 2026-10-29, is in that branch's copy of this file (13.2M of 78M agent tokens left); the
   restart line continues it per RESUME.md.
