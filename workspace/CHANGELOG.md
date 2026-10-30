@@ -2,6 +2,23 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-30 s157b: s157b shipped: Form 8 NBME intake patch (ssri-effects, mood-anticonv, toxidrome, antipsych-effects)
+
+```
+Page: 192 briefs, 2280 items -> 192 briefs, 2282 items
+Briefs changed (4):
+  - toxidrome (Suspected Overdose or Toxidrome): prose edited (+683 chars)
+  - ssri-effects (SSRI Adverse Effects): 1 item added (q_94c39b11ccf0e92299ab)
+  - antipsych-effects (Antipsychotic Adverse Effects): prose edited (+171 chars)
+  - mood-anticonv (Anticonvulsant Mood Stabilizers): 1 item added (q_c5768ee5f01f552df13f)
+Other page changes (nav, headers, scripts): +761 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 192 briefs, 2282 items (779 with reasons), 23 scripts, 40 checks, base HEAD | allowlisted 9 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 192 | bankwraps 192 | mcq 2282 (reasons 779) (axCheck 2282, reveal-only 0) | malformed 0 | crit gridded 122/122 | vignette gridded 52/52 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-10-29 s157: s157: psych pharm section, five new drug briefs (antidep-other, mood-anticonv, sedatives, adhd-meds, sud-meds) and drawer pointers in eight psych briefs
 
 ```

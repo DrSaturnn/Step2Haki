@@ -24,6 +24,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   (ledger_lead). Batch file repair/s156/S156.md.
     Never relaunch s156 from a launch prompt; continue with the restart line.
 
+- **Previous: s157b SHIPPED 2026-10-30** (Claude lead; patch of the 2026-10-29 NBME intake, Psychiatry CMS Form 8:
+  toxidrome, antipsych-effects, ssri-effects, mood-anticonv): commit 50bef79, page d3e594f55987; main (8883ae5) merged
+  into wip/s156 in both repos on 2026-10-30, branch State and WAVE kept (s157b budget added to batch_budgets). The s156
+  batch page must be rebuilt on the new live page before its S8 (the four briefs above changed on main).
+
 - **Previous: s157 SHIPPED 2026-10-29** (Claude lead; psych pharm section, five new drug briefs in the Psychiatry
   Medications subgroup: antidep-other, mood-anticonv, sedatives, adhd-meds, sud-meds; drawer pointers in substance, mdd,
   bipolar-mania, ssri-effects, panic, tics, tca-tox, peds-sleep): commit ff25fba, page c2e028891b47 (approved

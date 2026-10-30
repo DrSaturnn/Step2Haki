@@ -290,6 +290,12 @@
         "calls": 220,
         "tokens": 10000000
       }
+    },
+    "s157b": {
+      "agents": 6,
+      "calls": 30,
+      "tokens": 1200000,
+      "lead_tokens": 30000000
     }
   },
   "max_lead_tokens": 100000000,
