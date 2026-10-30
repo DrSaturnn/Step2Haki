@@ -157,6 +157,7 @@ Source keys:
 - **The holistic review:** each brief must read as one whole brief, not just meet its requirements. [DIG 2026-10-10]
 - **Cheaper models:** multi-agent plans assign cheaper models (for example Haiku) to their planned portions; the efficiency pilot methods apply to batch authoring. [MEM]
 - **Assessing past work:** judge prior work against the git push record and the in-page changelog. [DIG 2026-10-10] [MEM]
+- **Quality before savings (2026-10-30):** quality and accuracy first, then savings; no token lever cuts a review role, a review round or a source check. [DIG 2026-10-30]
 - **Who works on it:** Claude leads Step2Haki. Codex led and shipped s150 and s150b in an interim (2026-10-21 to 2026-10-23, CODEX_LEAD.md); Jonathan returned the lead to Claude on 2026-10-23 ("I’m transitioning back to Claude as lead"). Codex works on it only when Jonathan assigns it. [MEM] [DIG 2026-10-21, 2026-10-23]
 - **The handoff:** after each shipped batch, update STEP2HAKI_HANDOFF.md in the project and in Documents/Step2Haki. [Project instructions]
 - **Pacing:** psych briefs are reauthored one at a time, to ensure accuracy. [MEM]
@@ -170,6 +171,7 @@ Source keys:
 - **Commits and the token:** commit as DrSaturnn with the noreply email; never print the token; keep a clean tree at the end of every turn. [HO]
 
 ## On hold or pending
+- **Psych pharm section redo (2026-10-30):** a standalone pharm header (not inside Psychiatry) of short cards in a new, shorter style, one per Psych Pocket class (antidepressants, antipsychotics, mood and cognition, anxiety and benzodiazepines, ADHD and sleep, substance use); content is the pharm documents plus board-tested extras, each fact checked against a board or primary source; the five s157 drug briefs are rewritten in the short style (items move, ids unchanged). Next: a mockup of one card and the header after s158 ships; no batch before Jonathan approves it. Plan claude/pending/PSYCH_PHARM_V2.md. [DIG 2026-10-30]
 - **A Step2Haki companion Chrome extension:** started 2026-10-09. [MEM]
 - **PSGN latency figure:** an open R1 question. [handoff State]
 
