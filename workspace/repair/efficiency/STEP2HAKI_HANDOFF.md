@@ -14,10 +14,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **Open batch: s158** (Claude lead; launched 2026-10-30 00:41 EDT; wip/s158 in both repos; batch file
   repair/s158/S158.md). Four new psych briefs: trauma-stress (disease), cluster-c (disease), stages-change (lookup),
-  sexual-dysfunction (disease), plus the ocd drawer patch; plan claude/pending/NEW_BRIEFS_2026-10-30.md. Step: S8 done:
-  report sent 2026-10-30 (chat 6; changelog entry 158 written; verify 5 of 5 READY; gate, render, squeeze,
-  pointer_check PASS; presented, page 0796debdb876); waiting for "ship"; next: S9 (S158.md "Next chat: exact steps (S9").
-  Spend: agents 17 of 20, 304 calls, 25.76M of 58M; lead about 77M of 80M.
+  sexual-dysfunction (disease), plus drawer pointers in 11 live briefs; plan claude/pending/NEW_BRIEFS_2026-10-30.md.
+  Step: S9 held (chat 6): the first ship aborted at the ready gate (drawer briefs' receipts unfiled, then stale on
+  specs); rounds 4 and 5 removed two drawers (voices L22, mdd L60); 15 of 15 READY; presented page 07e8fe2497dd;
+  waiting for Jonathan's new "ship" (the 0796debdb876 approval does not cover it); next: S9 (S158.md "S9 attempt 1").
+  Spend: agents 19 of 20, 315 calls, 26.13M of 58M; lead about 80M of 80M.
 
 - **Parked: s156** (wip/s156 in both repos, main merged in after the s157 ship; batch file repair/s156/S156.md).
   Its own State, as parked on 2026-10-29, is in that branch's copy of this file (13.2M of 78M agent tokens left); the
