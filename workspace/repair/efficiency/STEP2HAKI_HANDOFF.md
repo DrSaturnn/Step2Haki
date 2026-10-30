@@ -15,7 +15,9 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 - **Open batch: s158** (Claude lead; launched 2026-10-30 00:41 EDT; wip/s158 in both repos; batch file
   repair/s158/S158.md). Four new psych briefs: trauma-stress (disease), cluster-c (disease), stages-change (lookup),
   sexual-dysfunction (disease); plan claude/pending/NEW_BRIEFS_2026-10-30.md. Budget 20 agents, 700 calls, 58M agent
-  tokens (builders 6, 520, 50M; reviewers 14, 180, 8M); lead 80M. Step: pilot pair BUILT and lead verify PASS (trauma-stress, stages-change); cluster-c and sexual-dysfunction builders running. Spend: 4 builders launched.
+  tokens (builders 6, 520, 50M; reviewers 14, 180, 8M); lead 80M. Step: S1 to S3 builders done (4 BUILT, lead verify PASS); S3 chat 1 done (coverage rows,
+  batch page gate PASS); next: S3 chat 2, drawer pointers in live briefs (repair/s158/S158.md "Next chat: exact steps").
+  Spend: builders 4 agents, 198 calls, 21.23M of 58M; lead chat 1 108 calls, 24.96M of 80M.
 
 - **Parked: s156** (wip/s156 in both repos, main merged in after the s157 ship; batch file repair/s156/S156.md).
   Its own State, as parked on 2026-10-29, is in that branch's copy of this file (13.2M of 78M agent tokens left); the
