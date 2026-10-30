@@ -1,22 +1,27 @@
 {
   "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
-  "id": "s157b",
-  "open": false,
-  "plan_step": "s157b",
+  "id": "s158",
+  "open": true,
+  "plan_step": "s158",
   "roles": [
+    "brief-build",
+    "acc-review",
+    "read-review",
+    "flag-review",
+    "wording-fix",
     "patch-review",
     "patch-review-opus"
   ],
-  "max_agents": 6,
-  "max_calls": 30,
-  "max_tokens": 1200000,
-  "set_by": "Claude lead, s157b launch 2026-10-29 (Jonathan: \"go based on your guesses, now can we incorporate these questions\"; no budget named, so set from the s154i patch of seven briefs, scaled to four)",
+  "max_agents": 20,
+  "max_calls": 700,
+  "max_tokens": 58000000,
+  "set_by": "Jonathan, s158 launch 2026-10-30 (\"Budget: 20 agents, 700 calls, 58M agent tokens (builders 6, 520, 50M; reviewers 14, 180, 8M); lead 80M.\")",
   "previous": {
-    "id": "s157",
-    "note": "s157 shipped ff25fba 2026-10-29 (Claude lead); page c2e028891b47. s156 parked on wip/s156 (its wave lives on that branch)"
+    "id": "s157b",
+    "note": "s157b shipped 50bef79 2026-10-30 (Claude lead); page d3e594f55987. s156 parked on wip/s156 (its wave lives on that branch)"
   },
-  "opened": "2026-10-29 23:20 EDT",
-  "note": "s157b open (Claude lead): patch of the 2026-10-29 NBME intake proposals, Psychiatry CMS Form 8, four briefs",
+  "opened": "2026-10-30 00:41 EDT",
+  "note": "s158 open (Claude lead): four new psych briefs, trauma-stress, cluster-c, stages-change (lookup), sexual-dysfunction",
   "batch_budgets": {
     "s138": {
       "agents": 20,
@@ -285,9 +290,25 @@
       "calls": 30,
       "tokens": 1200000,
       "lead_tokens": 30000000
+    },
+    "s158": {
+      "agents": 20,
+      "calls": 700,
+      "tokens": 58000000,
+      "lead_tokens": 80000000,
+      "builders": {
+        "agents": 6,
+        "calls": 520,
+        "tokens": 50000000
+      },
+      "reviewers": {
+        "agents": 14,
+        "calls": 180,
+        "tokens": 8000000
+      }
     }
   },
-  "max_lead_tokens": 30000000,
+  "max_lead_tokens": 80000000,
   "spent_agents": 0,
   "spent_calls": 0
 }
