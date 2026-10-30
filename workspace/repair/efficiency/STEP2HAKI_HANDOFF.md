@@ -14,12 +14,12 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **Open batch: s158** (Claude lead; launched 2026-10-30 00:41 EDT; wip/s158 in both repos; batch file
   repair/s158/S158.md). Four new psych briefs: trauma-stress (disease), cluster-c (disease), stages-change (lookup),
-  sexual-dysfunction (disease); plan claude/pending/NEW_BRIEFS_2026-10-30.md. Budget 20 agents, 700 calls, 58M agent
-  tokens (builders 6, 520, 50M; reviewers 14, 180, 8M); lead 80M. Step: S5 done (chat 4: every round 1
-  finding adjudicated, 55 fixed (ocd L62 included), 15 rejected, in repair/s158/adj/<brief>.md and S158.md "S5 adjudication"; four new
-  briefs rebuilt MECHANICAL PASS, ocd L62 drawer removed; batch page gate, render, squeeze, pointer_check PASS); next:
-  S7 round 2 (S158.md "Next chat: exact steps (S7"; lanes spec repair/s158/lanes/lanes_r2.json ready). Spend: builders
-  21.23M, reviewers r1 2.86M (left 6 agents, 113 calls, 5.14M); lead about 59.9M of 80M (chat 4 23.2M).
+  sexual-dysfunction (disease), plus the ocd drawer patch; plan claude/pending/NEW_BRIEFS_2026-10-30.md. Budget 20
+  agents, 700 calls, 58M agent tokens (builders 6, 520, 50M; reviewers 14, 180, 8M); lead 80M. Step: S7 done: all
+  READY (chat 5: round 2 four lanes, 0 HIGH, 0 MED, five LOW replacements applied; round 3 one Opus patch lane, one
+  LOW applied; verify READY for trauma-stress, cluster-c, sexual-dysfunction, stages-change and ocd; gate, render,
+  squeeze, pointer_check PASS); next: S8 final report (S158.md "Next chat: exact steps (S8"). Spend: builders 21.23M,
+  reviewers r1 2.86M, r2 and r3 1.67M (left 1 agent, 74 calls, 3.47M); lead about 72.8M of 80M (chat 5 12.9M).
 
 - **Parked: s156** (wip/s156 in both repos, main merged in after the s157 ship; batch file repair/s156/S156.md).
   Its own State, as parked on 2026-10-29, is in that branch's copy of this file (13.2M of 78M agent tokens left); the
