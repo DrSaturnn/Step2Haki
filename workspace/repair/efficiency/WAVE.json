@@ -274,9 +274,26 @@
       "calls": 950,
       "tokens": 78000000,
       "lead_tokens": 90000000
+    },
+    "s157": {
+      "agents": 24,
+      "calls": 850,
+      "tokens": 72000000,
+      "lead_tokens": 90000000,
+      "builders": {
+        "agents": 7,
+        "calls": 630,
+        "tokens": 62000000
+      },
+      "reviewers": {
+        "agents": 17,
+        "calls": 220,
+        "tokens": 10000000
+      }
     }
   },
   "max_lead_tokens": 100000000,
   "spent_agents": 0,
-  "spent_calls": 0
+  "spent_calls": 0,
+  "note_s157": "s157 shipped ff25fba 2026-10-29 (Claude lead) while s156 was parked; s156's wave reopens here as it stood"
 }

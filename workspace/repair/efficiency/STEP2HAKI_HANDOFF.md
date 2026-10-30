@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-29, by Claude (s155 S9: shipped e1eb23b, main 32bcf37).
+Last updated: 2026-10-29, by Claude (s157 shipped; main merged into wip/s156; s156 resumes).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,10 +12,9 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **PARKED 2026-10-29 by Jonathan** (s156 at S5 round 1 complete; the psych pharm section, batch s157, goes first;
-  plan claude/pending/PSYCH_PHARM_SECTION.md). Resume s156 only after s157 ships: merge main into wip/s156 in both
-  repos first (index.html nav, briefs.json and this handoff will conflict; WAVE.json keeps the s156 wave), then the
-  restart line with RESUME.md set back to s156. Everything below stands as written at the park.
+- **RESUMED 2026-10-29** after s157 shipped (ff25fba): main merged into wip/s156 in both repos (conflicts were record
+  files only: DIGEST, handoff, RESUME, WAVE.json kept the s156 wave, board_terms.json took both sides). Continue with
+  the restart line. Everything below stands as written at the park.
 - **Open batch: s156** (Claude lead, launched 2026-10-29 07:49; Phase 2, infectious disease B, pediatric: meningitis,
   dtap, lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever), branch wip/s156 in both repos.
   Step: S5 round 1 COMPLETE (chat 5): all seven briefs adjudicated (adj_s156_r1.md each; verify MECHANICAL PASS);
@@ -24,6 +23,16 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   agents, 545 calls, 64.80M of 78M (13.2M left for follow-up rounds); lead chat 1 36.1M, chat 2 11.7M, chat 3 20.5M of 90M
   (ledger_lead). Batch file repair/s156/S156.md.
     Never relaunch s156 from a launch prompt; continue with the restart line.
+
+- **Previous: s157 SHIPPED 2026-10-29** (Claude lead; psych pharm section, five new drug briefs in the Psychiatry
+  Medications subgroup: antidep-other, mood-anticonv, sedatives, adhd-meds, sud-meds; drawer pointers in substance, mdd,
+  bipolar-mania, ssri-effects, panic, tics, tca-tox, peds-sleep): commit ff25fba, page c2e028891b47 (approved
+  candidate 5e670282e349), version.json build s157. Agents 24 of 24; measured 14 agents, 378 calls, 43.75M of 72M
+  (chats 4 and 5 reviewers unmeasured, transcripts in reclaimed containers); lead 6 chats, about 90M of 90M. Record
+  repair/s157/S157.md (S8, S9). Open: tics Pairs with unlinked row (pre-existing); mood-anticonv no clue table; deferred
+  LOWs adhd-meds, sud-meds (OPEN_WORK). Tool notes: resume.py still misses the "- **Open batch:" bullet; batch.py s8
+  skips present on any pointer_check problem, pre-existing included; ledger loses agents whose chat container was
+  reclaimed before usage_ledger ran (run it at the end of every chat that launches agents).
 
 - **Previous: s155** SHIPPED 2026-10-29 (Claude lead; Phase 2, infectious disease A, seven briefs rebuilt on
   the decision spine: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis, bs-isolation, bs-foodborne; hiv-vax and
@@ -173,8 +182,14 @@ Population entry type mockup (no batch):
 Step2Haki: mock up the population entry type with Perinatal Psychiatry per claude/pending/NEW_BRIEFS_2026-10-26.md section 1 (private artifact for review; no batch, no ship).
 ```
 
-s156 (infectious disease B, pediatric; the plan BATCHES_S151_S160.md calls it "s155", its numbering runs one
-behind). Budget is the lead's proposal from the s155 report; Jonathan sets it at launch:
+s157 (psych pharm section; Jonathan 2026-10-29; plan claude/pending/PSYCH_PHARM_SECTION.md). The budget is the
+planning chat's proposal; Jonathan sets it at launch:
+```
+Step2Haki: launch batch s157 (psych pharm section: five new drug briefs) per claude/BATCH_RUNBOOK.md and claude/pending/PSYCH_PHARM_SECTION.md. Briefs: SNRIs, Atypical Antidepressants and MAOIs (antidep-other); Anticonvulsant Mood Stabilizers (mood-anticonv); Anxiolytics and Sedative-Hypnotics (sedatives); ADHD Medications (adhd-meds); Medications for Substance Use Disorders (sud-meds). Goldens: lithium-effects, tca-tox (drug entry, psych lens); B0 confirms they fit. S1 to S3 by builder agents. Substance overlap: option A (sud-meds owns maintenance pharmacotherapy; substance's maintenance rows become drawer pointers). s156 stays parked on wip/s156. Budget: 24 agents, 850 calls, 72M agent tokens (builders 7, 630, 62M; reviewers 17, 220, 10M); lead 90M.
+```
+
+s156 is PARKED (launched 2026-10-29; never relaunch it from this prompt; resume per the State after s157 ships).
+Its original launch prompt, kept for the record (the plan BATCHES_S151_S160.md calls it "s155"):
 ```
 Step2Haki: launch batch s156 (Phase 2, infectious disease B, pediatric) per claude/BATCH_RUNBOOK.md. Briefs: meningitis, dtap, lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever. Goldens: nephrotic-child, scfe (peds lens); B0 confirms they fit, hub golden voices if aq-infant-fever is a hub. S1 to S3 by builder agents. Budget: 32 agents, 950 calls, 78M agent tokens (reviewers 23, 330, 12M; builders 9, 620, 66M); lead 90M.
 ```

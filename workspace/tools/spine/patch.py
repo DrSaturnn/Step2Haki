@@ -174,13 +174,46 @@ check a source file or table it names, then the single Write. Do not use Glob or
 """
 
 
-def text_window(bt, changed, pad=6):
+DRW = re.compile(r'<button[^>]*class="sp-drw"[^>]*data-brief="([^"]+)"[^>]*>(.*?)</button>', re.S)
+
+
+def _vis(h):
+    return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', h)).strip()
+
+
+def drawer_changes(f, batch):
+    """s157: every delta change that adds, removes or retargets a drawer (brief_text renders a drawer as its label
+    only, so a cell turned into a drawer shows no text change). Returns (lines for the packet, labels to window)."""
+    dp = os.path.join(f, 'delta_%s.json' % batch)
+    if not os.path.exists(dp):
+        return [], []
+    out, labels = [], []
+    for c in json.load(open(dp)).get('changes', []):
+        old = {(t, _vis(l)) for t, l in DRW.findall(c.get('old', ''))}
+        new = {(t, _vis(l)) for t, l in DRW.findall(c.get('new', ''))}
+        if old == new:
+            continue
+        same = _vis(c.get('old', '')) == _vis(c.get('new', ''))
+        bits = ['+ "%s" -> %s' % (l, t) for t, l in sorted(new - old)] + \
+               ['- "%s" -> %s' % (l, t) for t, l in sorted(old - new)]
+        out.append('- %s%s: %s' % (c.get('lines', '?'), ' (drawer-only: no visible text change)' if same else '',
+                                   '; '.join(bits)))
+        labels += [l for t, l in new - old if l]
+    return out, labels
+
+
+def text_window(bt, changed, pad=6, labels=()):
     lines = bt.splitlines()
     keep = set()
     for c in changed:
         for i, l in enumerate(lines):
             if l.strip() and l.strip() == c.strip():
                 keep.update(range(max(0, i - pad), min(len(lines), i + pad + 1)))
+    # s157: a drawer label is found inside its row's line (a drawer-only change adds no diff line)
+    for c in labels:
+        for i, l in enumerate(lines):
+            if c and c in l:
+                keep.update(range(max(0, i - 2), min(len(lines), i + 3)))
     out, last = [], -2
     for i in sorted(keep):
         if i != last + 1:
@@ -257,7 +290,11 @@ def review(batch, rnd, opus, sonnet, since_round=None, per_lane=0, note=None):
             for p in PARTS:
                 packet.append('%s receipt lines:\n%s' % (p, open(os.path.join(out, p, 'deps.txt')).read().strip()))
             packet.append('\n### Changes (since the last reviewed text)\n' + ch.split('\n', 3)[-1].strip())
-            packet.append('\n### Brief text around every line this batch changed\n' + text_window(bt, plus))
+            drw, labels = drawer_changes(f, batch)
+            if drw:
+                packet.append('\n### Drawer changes (from delta_%s.json; brief text shows a drawer as its label only, '
+                              'so check each target brief fits the row)\n' % batch + '\n'.join(drw))
+            packet.append('\n### Brief text around every line this batch changed\n' + text_window(bt, plus, labels=labels))
             packet.append('\n### Facts cited by the changed lines (verbatim quotes)\n' + '\n'.join(
                 '- %s (%s, %s): "%s"' % (x['id'], x.get('kind'), x.get('title'), x['quote']) for x in facts))
             packet.append('\n### New claims (each changed line\'s claim and its fact ids)\n' + '\n'.join(

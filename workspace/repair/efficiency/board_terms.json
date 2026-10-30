@@ -1,5 +1,19 @@
 {
  "_doc": "Extra board_index search terms per brief id (tools/spine/board_index.py terms).",
+ "adhd-meds": [
+  "ADHD",
+  "amphetamine",
+  "atomoxetine",
+  "attention-deficit",
+  "clonidine",
+  "dexmethylphenidate",
+  "dextroamphetamine",
+  "guanfacine",
+  "lisdexamfetamine",
+  "methylphenidate",
+  "stimulant",
+  "viloxazine"
+ ],
  "airway": [
   "stridor",
   "croup",
@@ -22,6 +36,29 @@
   "acute coronary syndrome",
   "chest pain",
   "vasospastic angina"
+ ],
+ "antidep-other": [
+  "bupropion",
+  "desvenlafaxine",
+  "duloxetine",
+  "esketamine",
+  "hypertensive crisis",
+  "isocarboxazid",
+  "levomilnacipran",
+  "MAOI",
+  "mirtazapine",
+  "monoamine oxidase",
+  "nefazodone",
+  "phenelzine",
+  "priapism",
+  "selegiline",
+  "SNRI",
+  "tranylcypromine",
+  "trazodone",
+  "tyramine",
+  "venlafaxine",
+  "vilazodone",
+  "vortioxetine"
  ],
  "antipsych-effects": [
   "acute dystonia",
@@ -938,6 +975,21 @@
   "tuberculous meningitis",
   "Waterhouse-Friderichsen"
  ],
+ "mood-anticonv": [
+  "agranulocytosis",
+  "aplastic anemia",
+  "carbamazepine",
+  "divalproex",
+  "HLA-B",
+  "hyperammonemia",
+  "lamotrigine",
+  "neural tube",
+  "oxcarbazepine",
+  "Stevens-Johnson",
+  "topiramate",
+  "valproate",
+  "valproic acid"
+ ],
  "myocarditis": [
   "myocarditis",
   "coxsackievirus",
@@ -1340,6 +1392,29 @@
   "torsion of the appendix testis",
   "varicocele"
  ],
+ "sedatives": [
+  "alprazolam",
+  "benzodiazepine",
+  "buspirone",
+  "chlordiazepoxide",
+  "clonazepam",
+  "diazepam",
+  "doxepin",
+  "eszopiclone",
+  "flumazenil",
+  "hydroxyzine",
+  "lemborexant",
+  "lorazepam",
+  "midazolam",
+  "oxazepam",
+  "ramelteon",
+  "sleep driving",
+  "suvorexant",
+  "temazepam",
+  "triazolam",
+  "zaleplon",
+  "zolpidem"
+ ],
  "septic-bursitis": [
   "allopurinol",
   "arthrocentesis",
@@ -1473,6 +1548,21 @@
   "phencyclidine",
   "synthetic cannabinoid",
   "withdrawal"
+ ],
+ "sud-meds": [
+  "acamprosate",
+  "alcohol use disorder",
+  "buprenorphine",
+  "disulfiram",
+  "methadone",
+  "naltrexone",
+  "nicotine gum",
+  "nicotine patch",
+  "nicotine replacement",
+  "opioid use disorder",
+  "precipitated withdrawal",
+  "smoking cessation",
+  "varenicline"
  ],
  "suicide-risk": [
   "involuntary hospitalization",
