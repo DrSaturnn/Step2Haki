@@ -4,7 +4,7 @@ Jonathan, 2026-10-26: "Add whatever is needed so this issue does not happen agai
 ran to about 280k context before any edit). Project copy claude/RESUME.md; repo copy repair/efficiency/RESUME.md.
 
 **Open batch: s159** (Psych Pharmacology B1 of 4, launched 2026-10-30; branch **wip/s159** in both repos; batch file
-repair/s159/S159.md; next step: S159.md "Next (chat 5)" fix 1; s156 stays parked on wip/s156). (The lead rewrites this
+repair/s159/S159.md; next step: S159.md "Next (chat 6)" step 1, pc-snri round 3; s156 stays parked on wip/s156). (The lead rewrites this
 line, here and in the project copy claude/RESUME.md, when a batch opens or ships; "none" means no batch is open and a
 launch prompt is needed.)
 

@@ -14,11 +14,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **Open batch: s159** (Psych Pharmacology B1 of 4: section layer, card tools, cards pc-maoi, pc-snri, pc-antidep;
   antidep-other retires into them). Launched 2026-10-30 22:01; wip/s159 in both repos; batch file repair/s159/S159.md.
-  Step: chat 5 in progress: S5 fixes 1 to 17 done, cards MECHANICAL PASS, S3 page checks pass (S159.md "Chat 5").
-  Patch lane: the 5 live briefs READY since chat 4. Next: S159.md "Next (chat 5)" "Then:" line from new shots
-  (shots.py phone, phone-study, desk into local/s159/shots_r2; sheets.py), then S6, S7 round 2.
-  Spend: agents 7 of 19, calls 169 of 440, tokens 14.59M of 18M (3.41M left for round 2); lead chats 1 to 4 about
-  91M of 110M (chat 4 15.6M).
+  Step: chat 5 done: S5 fixes, S6, S7 round 2 and its S5. pc-maoi READY, pc-antidep READY; pc-snri MECHANICAL PASS,
+  stale after the round 2 acc MED fix (discontinuation note). Next chat starts at S159.md "Next (chat 6)" step 1
+  (pc-snri round 3: acc, read, flags; then the S7 restart point).
+  Spend: agents 11 of 19, calls 207 of 440, tokens about 16.38M of 18M (about 1.6M left for round 3); lead chats 1 to
+  5 about 101M of 110M (chat 5 about 10M by context).
 
 - **Previous: s158 SHIPPED 2026-10-30** (Claude lead; four new psych briefs: trauma-stress, cluster-c, sexual-dysfunction,
   stages-change (lookup); drawer pointers in 11 live briefs): commit 98b3f1b, page 00395be2f003 (approved candidate
