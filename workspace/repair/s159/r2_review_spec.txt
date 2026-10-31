@@ -1,0 +1,125 @@
+{
+ "batch": "s159",
+ "plan_step": "s159",
+ "round": 2,
+ "context": "batch s159 (Psych Pharmacology B1) builds three new class cards in the Psychiatry Medications section: pc-maoi (MAOIs), pc-snri (SNRIs) and pc-antidep (Other antidepressants: bupropion, mirtazapine, trazodone, vilazodone, vortioxetine); antidep-other retires into them (its 8 bank items move with ids unchanged). A class card has no decision spine: RULES.md in each folder gives the card rules (CARD_SPEC.md). This is follow-up review round 2: judge the changed lines in changes.md (with their context) against your round 1 receipt and the lead adjudication; do not re-review unchanged lines",
+ "out": "repair/efficiency/lanes/s159/r2",
+ "packets": "repair/migration/spine/packets/s159r2",
+ "sheets": "local/s159/shots_r2/review",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "pc-maoi",
+    "pc-snri",
+    "pc-antidep"
+   ]
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "pc-maoi",
+    "pc-snri",
+    "pc-antidep"
+   ]
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "pc-maoi",
+    "pc-snri",
+    "pc-antidep"
+   ]
+  },
+  {
+   "part": "display",
+   "group": "A",
+   "briefs": [
+    "pc-maoi",
+    "pc-snri",
+    "pc-antidep"
+   ]
+  }
+ ],
+ "types": {
+  "pc-maoi": "class card \"MAOIs\" (phenelzine, tranylcypromine, isocarboxazid, selegiline patch), ported by the lead from mockup v3; owns the MAOI washout windows, tyramine hypertensive crisis and MAOI interactions; has a washout timeline chart; review in full",
+  "pc-snri": "class card \"SNRIs\" (venlafaxine, desvenlafaxine, duloxetine, levomilnacipran, milnacipran); owns SNRI uses, dose-dependent hypertension and the venlafaxine false-positive PCP screen; the discontinuation window is owned by ssri-effects and the MAOI washout by pc-maoi (pointers only); review in full",
+  "pc-antidep": "class card \"Other antidepressants\" (bupropion, mirtazapine, trazodone, vilazodone, vortioxetine); owns bupropion seizure risk and contraindications, mirtazapine and trazodone uses, ischemic priapism with trazodone; review in full"
+ },
+ "notes": {
+  "acc": [
+   "Where a board source (AnKing card, UWorld, NBME) and a guideline or label differ, the card teaches the board answer and puts the other in an \"In practice:\" hover: the hover is intended, not a finding.",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length).",
+   "Trade names appear only with a current DailyMed label (CARD_SPEC section 4). Lead calls: Cymbalta is left out (DailyMed by name returns only repackager labels, newest 2016); Desyrel and Zyban are left out (no current label). Their absence is not a finding.",
+   "Lead calls (judge accuracy, not the choice): vilazodone and vortioxetine (pc-antidep) and levomilnacipran and milnacipran (pc-snri) are added to the subtitles from AnKing cards; pc-snri and pc-antidep have no timeline chart (the discontinuation window is owned by ssri-effects; the 4-hour priapism threshold sits in the pc-antidep danger row only).",
+   "pc-maoi lint hedges answered by the lead (not findings unless the line now overstates its quote): S079 and S090 drop \"may\" from the Nardil label's \"occipital headache which may radiate frontally\" (the may qualifies the spread, which the card does not state); S085 and S093 drop \"typically\" from MSD's serotonin syndrome feature list (recognition lists); S077 lists abrupt-stop features framed as possible.",
+   "The 8 bank items moved from antidep-other are verbatim with ids unchanged; judge their accuracy like any line.",
+   "Audit cards_disposition.json against cards.md: every covered entry must name claim ids that teach the card.",
+   "Round 2 lead calls (judge accuracy, not the choice): pc-snri discontinuation note now masks the restart-then-taper clause for a patient who wants to stay on venlafaxine and points a patient who prefers to stay off to SSRI Adverse Effects (new fact sn20, the Warner AFP 2006 quote behind ssri-effects S112). pc-antidep priapism hover: \"An alpha-1 agonist constricts the helicine arterioles.\" (new card fact a14, AnKing 1477011581106). The ssri-effects reassurance-first order against UWorld restart-then-taper and the vilazodone and vortioxetine MAOI/serotonin rows are deferred to OPEN_WORK (not findings this round)."
+  ],
+  "read": [
+   "A class card has no decision spine: judge it by RULES.md (the card layout), not by spine step structure. Pause point labels, \"Where the choice is made\" and \"Practice\" are site conventions.",
+   "Not to report: card length or word count (2026-10-19 layers rule).",
+   "drawer_targets.txt lists in-page anchors as MISSING when they are section anchors, not broken brief links.",
+   "antidep-other is retired in this batch (its title is an alias span on the page); a pointer to it would be a finding, its absence is not.",
+   "Lead calls (do not report the choice; judge wording): Cymbalta, Desyrel and Zyban have no trade name on the cards (no current label); no timeline chart on pc-snri or pc-antidep; serotonin syndrome management stays in ssri-effects (pointer only).",
+   "Round 2: \"MAO‑A\" and \"MAO‑B\" on pc-maoi use a non-breaking hyphen (U+2011) so the term never splits; it is intended. The Key point is blurred whole in study mode (round 1 adjudication), so a Key point that names a masked answer is not a leak."
+  ],
+  "flags": [
+   "line_sources.txt cuts each quote at 600 characters (a known packet limit); facts.json in the same folder holds every quote whole. Before reporting that a quote does not support a line, Grep facts.json for the fact id.",
+   "Word counts are not judged (2026-10-19 layers rule).",
+   "Builder and lead lint answers (not findings unless the line now overstates its quote): pc-maoi S079, S090 (\"may\" on the headache's spread), S085, S093 (\"typically\" on recognition lists), S077 (abrupt-stop features as possible); pc-antidep 4 card_dispositions soft warnings covered in other words and the owners pointer hedge; pc-snri restored its \"may\", \"Typically\" and \"often\" hedges.",
+   "cuts.json, where present, records content removed because no board source supported it; a cut is not a finding.",
+   "Round 2: the pc-maoi \"Why reserved\" hover lost its prescriber clause (your round 1 finding); new facts sn20 (pc-snri) and a14 (pc-antidep) are in facts.json."
+  ],
+  "display": [
+   "Images in your lane root: <brief>_1280_*.png (the batch page at 1280 px). The lead adds legib_*.md (the legibility audit) to the lane root when it is ready; Grep it if present.",
+   "A class card has no decision spine: judge the layout by RULES.md (the card layout from mockup v3), not by spine step structure.",
+   "Round 2 changes to check on the images: desktop Interactions and Monitoring tables now use 33/30/37 percent columns (Result and Rule values on one line); MAO-B no longer breaks on phone; toxicity chart value lines now give the time only; pc-snri discontinuation note mask in study mode. The pc-snri discontinuation row carries two SSRI Adverse Effects chips (row chips and the note pointer): judge whether that reads as a fault. Chart palette (lcw tokens) is deferred, not a finding."
+  ]
+ },
+ "extra_judge": {
+  "acc": [
+   "Check specifically (pc-snri, report item): the moved item q_6c2aed51ed02f9dc133a and the card's discontinuation note teach restart the drug, then a slow taper (analogy to the AnKing paroxetine card), while ssri-effects teaches reassurance first, then consider a restart with a slow taper (NBME psych-cms8-3b2f19 calls most cases self-limited). Judge which order the board sources support for venlafaxine, and give the replacement wording if the card should change.",
+   "Check specifically: doses, washout intervals (2 weeks off most antidepressants before an MAOI, 5 weeks off fluoxetine; 2 weeks off an MAOI before another serotonergic drug), contraindications (bupropion with a seizure disorder, bulimia or anorexia, or an abrupt stop of alcohol or sedatives) and every next step."
+  ],
+  "read": [
+   "Check specifically: ownership seams. pc-maoi against mdd, ssri-effects, toxidrome and parkinson (selegiline); pc-snri against ssri-effects (discontinuation, serotonin syndrome), backpain, panic and substance (urine screen); pc-antidep against ssri-effects (sexual dysfunction switch), sud-meds (bupropion for smoking), peds-sleep and mdd. Report a line that re-teaches an owned decision, or a pointer whose target does not own it."
+  ]
+ },
+ "prior": {
+  "acc": {
+   "pc-maoi": "repair/efficiency/lanes/s159/r1/acc-A/pc-maoi/receipt.md",
+   "pc-snri": "repair/efficiency/lanes/s159/r1/acc-A/pc-snri/receipt.md",
+   "pc-antidep": "repair/efficiency/lanes/s159/r1/acc-A/pc-antidep/receipt.md"
+  },
+  "read": {
+   "pc-maoi": "repair/efficiency/lanes/s159/r1/read-A/pc-maoi/receipt.md",
+   "pc-snri": "repair/efficiency/lanes/s159/r1/read-A/pc-snri/receipt.md",
+   "pc-antidep": "repair/efficiency/lanes/s159/r1/read-A/pc-antidep/receipt.md"
+  },
+  "flags": {
+   "pc-maoi": "repair/efficiency/lanes/s159/r1/flags-A/pc-maoi/receipt.md",
+   "pc-snri": "repair/efficiency/lanes/s159/r1/flags-A/pc-snri/receipt.md",
+   "pc-antidep": "repair/efficiency/lanes/s159/r1/flags-A/pc-antidep/receipt.md"
+  },
+  "display": {
+   "pc-maoi": "repair/efficiency/lanes/s159/r1/display-A/pc-maoi/receipt.md",
+   "pc-snri": "repair/efficiency/lanes/s159/r1/display-A/pc-snri/receipt.md",
+   "pc-antidep": "repair/efficiency/lanes/s159/r1/display-A/pc-antidep/receipt.md"
+  }
+ },
+ "adjudication": {
+  "pc-maoi": "repair/s159/adj_r1.md",
+  "pc-snri": "repair/s159/adj_r1.md",
+  "pc-antidep": "repair/s159/adj_r1.md"
+ },
+ "steps": {
+  "pc-maoi": "the header (a card is one segment: the whole card)",
+  "pc-snri": "the header (a card is one segment: the whole card)",
+  "pc-antidep": "the header (a card is one segment: the whole card)"
+ }
+}

@@ -46,7 +46,7 @@ import pagelib as P  # noqa: E402
 import outline_render as OR  # noqa: E402
 
 LABELS = ['Script', 'Urgent', 'Differential', 'Workup', 'Criteria', 'Severity', 'Treatment', 'Follow-up']
-CAPS = {'disease': 1300, 'drug': 1000, 'presentation': 700, 'screen': 1000}
+CAPS = {'disease': 1300, 'drug': 1000, 'presentation': 700, 'screen': 1000, 'card': 600}   # card: s159, CARD_SPEC.md (MAOI card about 420)
 ACTION = re.compile(r'^(?:(?:give|treat|start|order|obtain|get|admit|prescribe|refer|stop|switch|begin|perform|do|send|'
                     r'draw|add|use|consult|operate)\b|(?:film|image|scan|biopsy|repeat|check|x-ray)\s+(?:the|a|an|both|it|them|for)\b)', re.I)
 ESCALATE = re.compile(r'(2nd|3rd|second|third|add|relapse|refer|top|escalat|last|salvage|rescue)', re.I)
@@ -169,6 +169,8 @@ class Check:
                 'currency', 'pop_ok', 'note', 'label'}
 
         def walk(x, where, key=None):
+            if key == 'ticks':   # s159: lcw tick labels are axis furniture, not learner text
+                return
             if isinstance(x, str):
                 t = rx(x)
                 n = len(re.findall(r'[A-Za-z]{2,}', t))
@@ -208,6 +210,10 @@ class Check:
 
     # ---- rules
     def s1(self):
+        if self.o.get('entry') == 'card':   # s159: a class card has no decision spine (CARD_SPEC.md); no steps, no h blocks
+            if self.o.get('steps') or any(isinstance(b, dict) and b.get('type') in ('h', 'stepper', 'pause', 'bottom', 'workup', 'workup5a', 'ladder') for b in self.o['body']):
+                self.err('S1', 'card', 'a card carries spine furniture (steps, h, stepper, pause, bottom, workup or ladder)', 'use the card blocks: keypoint, script2, rows, lcw, table, owners')
+            return
         o, steps = self.o, self.o['steps']
         if [s[1] for s in steps] != LABELS or [str(s[0]) for s in steps] != [str(i) for i in range(1, 9)]:
             self.err('S1', 'steps', 'labels or numbers are not 1..8 %s' % LABELS, 'use the fixed stepper labels in order')
@@ -265,7 +271,7 @@ class Check:
                 self.err('C2', 'body[%d]:bottom' % k, '%d bottom-line lines' % len(b['lines']), 'keep 1 to 3')
             if isinstance(b, dict) and b.get('type') == 'bottom' and '"b":' not in json.dumps(b['lines']) and '<b>' not in json.dumps(b['lines']):
                 self.flag('C2', 'body[%d]:bottom' % k, 'bottom line has no bold: bold its key words and criteria with {"b": ...} (s148g, Jonathan 2026-10-20)')
-            if isinstance(b, dict) and b.get('type') == 'script2':
+            if isinstance(b, dict) and b.get('type') == 'script2' and self.o.get('entry') != 'card':   # s159: a card's drug rows hold no Insights
                 ins = [lines for key, lines in b['rows'] if key == 'Insights']
                 if len(ins) != 1 or len(ins[0]) != 2:
                     self.err('C2', 'body[%d]:script2' % k, 'Insights must be one row of exactly two lines', 'two Insights lines')
@@ -419,6 +425,16 @@ class Check:
         if self.page and os.path.exists(self.page):
             h = P.read_page(self.page)
             ids_on_page = set(re.findall(r'class="brief[^"]*" id="([^"]+)"', h)) | set(re.findall(r'class="alias" id="([^"]+)"', h))
+            # s159 chat 3: a same-batch brief or card that is still a pending shell (basepage applies it to every build
+            # and verify) is a valid drawer target, as on the base page (pc-snri could not drawer to pc-maoi)
+            try:
+                import basepage
+                for f in basepage.pending(None, h):
+                    nid = basepage._new_id(json.load(open(f, encoding='utf-8')))
+                    if nid:
+                        ids_on_page.add(nid)
+            except (ImportError, OSError, ValueError):
+                pass
         self.html = ''
         self.s1()
         self.s2(ids_on_page)

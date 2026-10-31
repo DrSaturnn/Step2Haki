@@ -435,6 +435,81 @@ def pause_format(brief_html):
     return out
 
 
+def card_check(brief_html):
+    """s159 (CARD_SPEC.md, the psych pharm class card; the MAOI mockup v3 is the model): the card's sections in order,
+    no decision-spine furniture, bar timelines only (figure.lcw.pc-lcw, tick labels on every row, the same ticks down a
+    chart), one owner per timed window, a practice bank. Returns the problems (gate.py fails on them; lint warns)."""
+    if 'data-entry="card"' not in brief_html[:600]:
+        return []
+    out = []
+    h = re.sub(r'<span class="sp-pop-b"[^>]*>.*?</span>(?=\s*</|\s*<)', ' ', brief_html, flags=re.S)
+    def at(pat):
+        m = re.search(pat, h)
+        return m.start() if m else -1
+    hdr = at(r'<h5 class="[^"]*authored-hdr')
+    seq = [('class tag (p.pc-grp)', at(r'<p class="pc-grp">')), ('title (h4)', at(r'<h4>')), ('subtitle (p.sub)', at(r'<p class="sub">')),
+           ('Key point (div.dp)', at(r'<div class="dp"><span class="lbl">Key point</span>')),
+           ('drug rows (div.sp-script pc-script)', at(r'<div class="sp-script sp-s2 pc-script">'))]
+    for name, i in seq:
+        if i < 0:
+            out.append('card-format: no %s' % name)
+    found = [i for _, i in seq if i >= 0]
+    if found != sorted(found):
+        out.append('card-format: the head is out of order (class tag, title, subtitle, Key point, drug rows)')
+    if hdr < 0:
+        out.append('card-format: no Practice header (h5.authored-hdr)')
+    elif not re.search(r'<li\b[^>]*data-item-id=', h[hdr:]):
+        out.append('card-format: the practice bank holds no item')
+    own = at(r'<div class="pc-owners">')
+    if own < 0:
+        out.append('card-format: no "Where the choice is made" box (div.pc-owners)')
+    elif not re.search(r'class="sp-drw"', h[own:hdr if hdr > own else len(h)]):
+        out.append('card-format: the "Where the choice is made" box points to no brief (sp-drw)')
+    last_block = max([m.start() for m in re.finditer(r'<div class="sp-rows pc-blocks">|<figure class="lcw|<div class="sp-dx pc-tbl">', h)] or [-1])
+    if own >= 0 and last_block > own:
+        out.append('card-format: a block, chart or table sits below the "Where the choice is made" box')
+    nbq = at(r'<div class="pc-nbq">')
+    if nbq >= 0 and (own < 0 or nbq < own or (hdr >= 0 and nbq > hdr)):
+        out.append('card-format: the NBME block sits between "Where the choice is made" and Practice')
+    if nbq >= 0 and not re.search(r'data-nbme|class="pc-nbi"', h[nbq:hdr if hdr > nbq else len(h)]):
+        out.append('card-format: an NBME block with no logged NBME item (none is shown empty)')
+    for pat, what in [(r'<nav class="sp-step"', 'a decision-spine stepper'), (r'class="sp-pause"', 'a pause point'),
+                      (r'<span class="lbl">Bottom line</span>', 'a bottom line'), (r'<h5 class="tsec sp-h"', 'numbered step headers'),
+                      (r'class="sp-on|class="sp-tl', 'a dot-on-line timeline (sp-on); bar timelines only'),
+                      (r'class="(?:[^"]* )?pc-(?:review|opt)\b', 'mockup review furniture')]:
+        if re.search(pat, h):
+            out.append('card-format: the card carries %s' % what)
+    names = []
+    for k, fm in enumerate(re.finditer(r'<figure class="lcw[^"]*">(.*?)</figure>', h, re.S), 1):
+        if 'pc-lcw' not in fm.group(0)[:60]:
+            out.append('card-format: chart %d is not figure.lcw.pc-lcw' % k)
+        rows = re.findall(r'<li class="wr">(.*?)</li>', fm.group(1), re.S)
+        if not rows:
+            out.append('card-format: chart %d has no rows' % k)
+        ticks = None
+        for j, r in enumerate(rows, 1):
+            ax = re.search(r'<div class="rax"[^>]*>(.*?)</div>', r, re.S)
+            labs = re.findall(r'<span[^>]*>([^<]*)</span>', ax.group(1)) if ax else []
+            if len([x for x in labs if x.strip()]) < 2:
+                out.append('card-format: chart %d row %d has no tick labels (each row repeats them)' % (k, j))
+            elif ticks is None:
+                ticks = labs
+            elif labs != ticks:
+                out.append('card-format: chart %d row %d ticks differ from row 1 (one axis per chart)' % (k, j))
+            if not re.search(r'<i class="bar\b', r):
+                out.append('card-format: chart %d row %d has no bar' % (k, j))
+            nm = re.search(r'<b class="nm[^"]*">(.*?)</b>', r, re.S)
+            names.append(text(nm.group(1)).lower() if nm else '')
+    dup = sorted({n for n in names if n and names.count(n) > 1})
+    if dup:
+        out.append('card-format: timed window named twice (one owner per window): %s' % ', '.join(dup))
+    return out
+
+
+def lint_card(brief_html):
+    return card_check(brief_html)
+
+
 def lint_pausefmt(brief_html):
     return pause_format(brief_html)
 
@@ -446,7 +521,7 @@ def lint(folder, facts_dir=None):
         brief_html = open(bh, encoding='utf-8').read()
         out += lint_next_step(brief_html) + lint_alias(brief_html) + lint_threshold(brief_html) + lint_prose(brief_html) \
             + lint_bold(brief_html) + lint_reasons(brief_html) + lint_spacing(brief_html) + lint_pairs(brief_html) \
-            + lint_maskleak(brief_html) + lint_pausefmt(brief_html)
+            + lint_maskleak(brief_html) + lint_pausefmt(brief_html) + lint_card(brief_html)
     try:
         cm = json.load(open(os.path.join(folder, 'claim_map.json'), encoding='utf-8'))
     except (OSError, ValueError):

@@ -3,8 +3,10 @@
 Jonathan, 2026-10-26: "Add whatever is needed so this issue does not happen again" (s154f chat 3 read whole docs and
 ran to about 280k context before any edit). Project copy claude/RESUME.md; repo copy repair/efficiency/RESUME.md.
 
-**Open batch: s156** (branch wip/s156 in both repos; main merged in after the s157 ship, 2026-10-29). (The lead rewrites this line when a batch opens or ships; "none" means
-no batch is open and a launch prompt is needed.)
+**Open batch: s156** (resumed after the s159 ship 2026-10-31; branch **wip/s156** in both repos, main merged in; batch
+file repair/s156/S156.md; next step: that branch's handoff State, as parked 2026-10-29). (The lead rewrites this
+line, here and in the project copy claude/RESUME.md, when a batch opens or ships; "none" means no batch is open and a
+launch prompt is needed.)
 
 Do these four steps, in order, and read nothing else first. Do not open BATCH_RUNBOOK.md, STEP2HAKI_HANDOFF.md,
 STANDING_DIRECTIONS.md or DECISIONS_DIGEST.md through the project tool: it loads them whole.

@@ -510,6 +510,21 @@
   "personality disorder",
   "splitting"
  ],
+ "cluster-c": [
+  "avoidant",
+  "avoidant personality",
+  "cluster C",
+  "dependent personality",
+  "fear of rejection",
+  "obsessive-compulsive personality",
+  "OCPD",
+  "perfectionism",
+  "personality disorder",
+  "schizoid personality",
+  "social inhibition",
+  "syntonic",
+  "taken care of"
+ ],
  "copd": [
   "alpha-1 antitrypsin",
   "asthma",
@@ -1114,6 +1129,34 @@
   "supranuclear palsy",
   "multiple system atrophy"
  ],
+ "pc-antidep": [
+  "bupropion",
+  "esketamine",
+  "mirtazapine",
+  "nefazodone",
+  "priapism",
+  "trazodone",
+  "vilazodone",
+  "vortioxetine"
+ ],
+ "pc-maoi": [
+  "hypertensive crisis",
+  "isocarboxazid",
+  "MAOI",
+  "monoamine oxidase",
+  "phenelzine",
+  "selegiline",
+  "tranylcypromine",
+  "tyramine"
+ ],
+ "pc-snri": [
+  "desvenlafaxine",
+  "duloxetine",
+  "levomilnacipran",
+  "milnacipran",
+  "SNRI",
+  "venlafaxine"
+ ],
  "ped-murmur": [
   "innocent murmur",
   "Still murmur",
@@ -1451,6 +1494,27 @@
   "toxic synovitis",
   "transient synovitis"
  ],
+ "sexual-dysfunction": [
+  "anorgasmia",
+  "arousal disorder",
+  "delayed ejaculation",
+  "erectile disorder",
+  "erectile dysfunction",
+  "female sexual interest",
+  "genito-pelvic pain",
+  "hypoactive sexual desire",
+  "impotence",
+  "libido",
+  "nocturnal penile tumescence",
+  "orgasmic disorder",
+  "performance anxiety",
+  "phosphodiesterase",
+  "premature ejaculation",
+  "sexual dysfunction",
+  "sexual side effect",
+  "sildenafil",
+  "vaginismus"
+ ],
  "shoulder-rom": [
   "Hawkins",
   "Neer",
@@ -1528,6 +1592,24 @@
   "SSRI",
   "SSRIs",
   "tamoxifen"
+ ],
+ "stages-change": [
+  "action stage",
+  "ambivalent",
+  "change talk",
+  "contemplation",
+  "maintenance stage",
+  "motivational",
+  "motivational interviewing",
+  "open-ended",
+  "precontemplation",
+  "preparation stage",
+  "readiness",
+  "readiness to change",
+  "relapse prevention",
+  "stage of change",
+  "stages of change",
+  "transtheoretical"
  ],
  "substance": [
   "alcohol withdrawal",
@@ -1637,6 +1719,19 @@
   "salicylate",
   "serotonin syndrome",
   "toxidrome"
+ ],
+ "trauma-stress": [
+  "acute stress disorder",
+  "adjustment disorder",
+  "depersonalization",
+  "derealization",
+  "dissociative amnesia",
+  "dissociative fugue",
+  "dissociative identity disorder",
+  "posttraumatic stress disorder",
+  "prazosin",
+  "PTSD",
+  "trauma-focused"
  ],
  "uri": [
   "upper respiratory infection",

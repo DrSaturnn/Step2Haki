@@ -14,6 +14,7 @@ Prints one summary line, then each failure with its fix. Exit 0 pass, 1 fail.
 Judgment (clinical truth, scope, voice, cue review) is never approved by this script.
 """
 import csv
+import glob
 import html as H
 import json
 import os
@@ -110,6 +111,14 @@ def _pause_format(brief_html):
     m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
     globals()['_pause_format'] = m.pause_format
     return m.pause_format(brief_html)
+
+
+def _card_check(brief_html):
+    import importlib.util
+    sp = importlib.util.spec_from_file_location('spine_lint', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'spine', 'lint.py'))
+    m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
+    globals()['_card_check'] = m.card_check
+    return m.card_check(brief_html)
 
 
 class Gate:
@@ -209,6 +218,9 @@ def check_page(page, g, page_path):
         # ---- s154c: every spine brief's pause point is question-style blocks (tools/spine/lint.py pause_format)
         # a paragraph pause point fails only once the s154c site layer is on the page (per-brief builds of the batch
         # replace one brief on a pre-s154c base page); a malformed block pause point always fails
+        if b.attrs.get('data-entry') == 'card':   # s159: a psych pharm class card keeps the card layout (CARD_SPEC.md)
+            for prob in _card_check(page[b.start:b.end]):
+                g.fail('card-format', b.id, prob)
         for prob in _pause_format(page[b.start:b.end]):
             if 'paragraph (p.sp-pause)' in prob and '<style id="ax-s154c">' not in page:
                 continue
@@ -252,7 +264,7 @@ def check_page(page, g, page_path):
         nav = body[ns:ne if ne > 0 else ns + 200000]
         links, pres = defaultdict(list), defaultdict(list)
         # s146c: the Presentations group (the first .sect) lists every hub a second time, as a plain link
-        sects = [(m.start(), text(m.group(1))) for m in re.finditer(r'<div class="sect">(.*?)<span class="count">', nav, re.S)]
+        sects = [(m.start(), text(m.group(1))) for m in re.finditer(r'<div class="sect(?: [a-z0-9 -]+)?">(.*?)<span class="count">', nav, re.S)]
         for m in re.finditer(r'<a\b([^>]*)>', nav):
             a = attrs(m.group(0))
             if a.get('href', '').startswith('#'):
@@ -277,7 +289,7 @@ def check_page(page, g, page_path):
                 g.fail('nav-link', b.id, '%s has %d nav links' % (b.id, len(got)))
             elif got[0] != want:
                 g.fail('nav-link', b.id, '%s nav link class=%r, expected %r' % (b.id, got[0], want))
-        for sec in re.split(r'<div class="sect">', nav)[1:]:
+        for sec in re.split(r'<div class="sect(?: [a-z0-9 -]+)?">', nav)[1:]:
             m = re.match(r'(.*?)\s*<span class="count">(\d+)</span>', sec, re.S)
             if not m:
                 continue
@@ -480,6 +492,23 @@ def check_page(page, g, page_path):
     return bl, it, stats
 
 
+def retired_briefs(page, cur_b, root=None):
+    """Brief ids retired through a retire_brief spec: a repair/migration/**/spine/06_*_retire.json names the brief,
+    the brief is not on the page, and its alias span is (AXBX_RETIRE_ROOT overrides the workspace, for tests)."""
+    root = root or os.environ.get('AXBX_RETIRE_ROOT') or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    out = set()
+    for f in glob.glob(os.path.join(root, 'repair', 'migration', '**', 'spine', '06_*_retire.json'), recursive=True):
+        try:
+            eds = json.load(open(f, encoding='utf-8')).get('edits', [])
+        except (OSError, ValueError, AttributeError):
+            continue
+        for e in eds:
+            bid = e.get('brief') if isinstance(e, dict) and e.get('op') == 'retire_brief' else None
+            if bid and bid not in cur_b and '<span class="alias" id="%s"></span>' % bid in page:
+                out.add(bid)
+    return out
+
+
 def check_base(page, ref_html, bl, it, g):
     rb, ri = briefs(ref_html), items(ref_html)
     cur_b = {b.id for b in bl}
@@ -490,6 +519,10 @@ def check_base(page, ref_html, bl, it, g):
         for rid in b.attrs.get('data-replaces', '').split():
             if '<span class="alias" id="%s"' % rid in page[b.start:b.end]:
                 replaced.add(rid)
+    # retired briefs (s159, psych pharm cards): a brief removed by a retire_brief spec (a 06_*_retire.json in a
+    # migration folder) leaves an alias span on the page and its items live on in the cards, ids unchanged; its items
+    # may then move, and the version-bump check below still refuses a lowered version
+    replaced |= retired_briefs(page, cur_b)
     for b in rb:
         if b.id and b.id not in cur_b and b.id not in replaced:
             g.fail('never-delete', b.id, 'brief %s existed at base and is missing now' % b.id)

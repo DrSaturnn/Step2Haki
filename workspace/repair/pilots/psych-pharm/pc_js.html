@@ -1,0 +1,33 @@
+<script id="pc-mock-js">
+(function(){
+  var rv=document.getElementById('pc-review'); if(!rv) return;
+  var card=document.getElementById('pc-maoi');
+  function show(k,v){
+    card.querySelectorAll('.pc-opt').forEach(function(el){
+      var o=el.getAttribute('data-opt');
+      if(k==='bank'&&o.indexOf('bank-')===0) el.hidden=(o!=='bank-'+v);
+      if(k==='nbme'&&o==='nbme') el.hidden=(v!=='on');
+      if(k==='src'&&o==='src') el.hidden=(v!=='on');
+    });
+    if(k==='name'){
+      document.querySelectorAll('.pc-sect').forEach(function(el){ el.firstChild.nodeValue=v+' '; });
+      var h=document.getElementById('psych-pharm'); if(h) h.firstChild.nodeValue=v+' ';
+    }
+    if(k==='pos'){
+      var nl=document.getElementById('navlinks'), mine=[].slice.call(nl.querySelectorAll('.pc-n'));
+      var sects=[].slice.call(nl.querySelectorAll(':scope > .sect')).filter(function(x){return !x.classList.contains('pc-sect');});
+      var ref=v==='top'?sects.filter(function(x){return /Musculoskeletal/.test(x.textContent);})[0]:v==='psych'?sects.filter(function(x){return /Psychiatry/.test(x.textContent);})[0]:null;
+      mine.forEach(function(el){ nl.insertBefore(el,ref); });
+    }
+  }
+  rv.querySelectorAll('.pc-seg').forEach(function(seg){
+    seg.addEventListener('click',function(e){
+      var b=e.target.closest('button'); if(!b) return;
+      seg.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+      show(seg.getAttribute('data-k'),b.getAttribute('data-v'));
+    });
+  });
+  setTimeout(function(){ var ps=document.querySelector('#navlinks .pc-sect'); if(ps&&ps.getAttribute('aria-expanded')==='false') ps.click(); },300);
+  if(!location.hash){ try{ history.replaceState(null,'','#psych-pharm'); }catch(e){} setTimeout(function(){ var h=document.getElementById('psych-pharm'); if(h) h.scrollIntoView(); },80); }
+})();
+</script>

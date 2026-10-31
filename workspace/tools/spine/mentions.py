@@ -57,6 +57,13 @@ def sheet(brief_html, minimum=2):
             s = norm(text(c.group(1)))
             if 2 < len(s) <= 60 and len(s.split()) <= 6:
                 subj.add(s)
+    if 'data-entry="card"' in brief_html[:600]:
+        # s159 card mode: danger rows, timed windows and the drugs are subjects too (serotonin syndrome, washouts)
+        for pat in (r'<span class="sp-src">(.*?)</span>', r'<b class="nm[^"]*">(.*?)</b>', r'<p><b>([^<]{3,40})</b>'):
+            for m in re.finditer(pat, body, re.S):
+                s = norm(text(m.group(1)))
+                if 2 < len(s) <= 60 and len(s.split()) <= 6:
+                    subj.add(s)
     its = items(bank)
     for it in its:
         for s in [it['key']] + it['d']:

@@ -310,6 +310,12 @@ def main(argv):
         if diff is not None:
             open(os.path.join(pd, 'changes.md'), 'w', encoding='utf-8').write(diff)
         rules = part_rules(part)
+        if 'data-entry="card"' in v.brief_html[:600] and part in ('acc', 'read', 'display'):
+            # s159: a class card is judged by CARD_SPEC.md (the card layout replaces the decision spine for it)
+            cs = open(os.path.join(WS, 'repair', 'efficiency', 'CARD_SPEC.md'), encoding='utf-8').read()
+            rules = ('# Card rules for this review (CARD_SPEC.md; a class card has no decision spine, so the spine structure '
+                     'rules do not apply to it)\n\n' + cs + ('\n\n' + rules if part != 'read' else
+                     '\n\n## Tables in your folder (s147)\n\nALIASES.json and ABBREV.json are in your folder. Grep them; do not read them whole.\n'))
         if rules:
             open(os.path.join(pd, 'RULES.md'), 'w', encoding='utf-8').write(rules)
     for f in ('facts.json', 'claim_map.json'):

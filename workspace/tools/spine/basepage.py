@@ -15,6 +15,12 @@ and check the new brief exactly as they do a shipped one.
   base_page_path(folder, tmp)  the same page written to <tmp>/base.html (the working page path when there is no shell)
   shells(folder)               the folder's 05_*_new.json files
   check_shell(spec)            errors for a shell spec: one new_brief op, no data-spine="2" in its html
+
+s159 (psych pharm cards) adds two pending kinds around the shells, both skipped once the page has them:
+  site layer   repair/<open wave>/0[0-4]_*.json with a top-level "marker" string (eg 'id="psych-pharm"') not yet on the
+               working page, applied before the shells (a new page section the shells anchor to)
+  retirements  any migration folder's 06_*_retire.json (one retire_brief op) whose brief is still on the page, applied
+               after every shell (the shells carry the retired brief's items, ids unchanged)
 """
 import glob
 import json
@@ -56,6 +62,43 @@ def pending(folder=None, page=None):
     return out
 
 
+def _wave():
+    w = os.environ.get('AX_BATCH')
+    if w:
+        return w
+    try:
+        d = json.load(open(os.path.join(WS, 'repair', 'efficiency', 'WAVE.json'), encoding='utf-8'))
+        return d['id'] if d.get('open') else None
+    except (OSError, ValueError, KeyError):
+        return None
+
+
+def site_pre(page):
+    w = _wave()
+    out = []
+    for f in sorted(glob.glob(os.path.join(WS, 'repair', w, '0[0-4]_*.json'))) if w else []:
+        try:
+            m = json.load(open(f, encoding='utf-8')).get('marker')
+        except (OSError, ValueError):
+            continue
+        if m and m not in page:
+            out.append(f)
+    return out
+
+
+def retirements(page):
+    on = {b.id for b in P.briefs(page)}
+    out = []
+    for f in sorted(glob.glob(os.path.join(WS, 'repair', 'migration', '**', 'spine', '06_*_retire.json'), recursive=True)):
+        try:
+            e = json.load(open(f, encoding='utf-8'))['edits'][0]
+        except (OSError, ValueError, KeyError, IndexError):
+            continue
+        if e.get('op') == 'retire_brief' and e.get('brief') in on and f not in out:
+            out.append(f)
+    return out
+
+
 def check_shell(spec):
     errs = []
     eds = spec.get('edits', [])
@@ -69,21 +112,28 @@ def check_shell(spec):
 
 def base_page(folder=None, page_path=PAGE):
     page = P.read_page(page_path)
+    pre = site_pre(page)
     sh = pending(folder, page)
-    if not sh:
+    ret = retirements(page)
+    if not (pre or sh or ret):
         return page
     import apply_edits
+    for f in pre:
+        page, _ = apply_edits.apply(page, json.load(open(f, encoding='utf-8')))
     for f in sh:
         spec = json.load(open(f, encoding='utf-8'))
         errs = check_shell(spec)
         if errs:
             raise ValueError('%s: %s' % (os.path.basename(f), '; '.join(errs)))
         page, _ = apply_edits.apply(page, spec)
+    for f in ret:
+        page, _ = apply_edits.apply(page, json.load(open(f, encoding='utf-8')))
     return page
 
 
 def base_page_path(folder, tmp):
-    if not pending(folder):
+    page = P.read_page(PAGE)
+    if not (pending(folder, page) or site_pre(page) or retirements(page)):
         return PAGE
     os.makedirs(tmp, exist_ok=True)
     p = os.path.join(tmp, 'base.html')

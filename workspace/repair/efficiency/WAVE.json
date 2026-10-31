@@ -296,6 +296,38 @@
       "calls": 30,
       "tokens": 1200000,
       "lead_tokens": 30000000
+    },
+    "s158": {
+      "agents": 20,
+      "calls": 700,
+      "tokens": 58000000,
+      "lead_tokens": 80000000,
+      "builders": {
+        "agents": 6,
+        "calls": 520,
+        "tokens": 50000000
+      },
+      "reviewers": {
+        "agents": 14,
+        "calls": 180,
+        "tokens": 8000000
+      }
+    },
+    "s159": {
+      "agents": 19,
+      "calls": 440,
+      "tokens": 18000000,
+      "lead_tokens": 110000000,
+      "builders": {
+        "agents": 3,
+        "calls": 180,
+        "tokens": 10000000
+      },
+      "reviewers": {
+        "agents": 16,
+        "calls": 260,
+        "tokens": 8000000
+      }
     }
   },
   "max_lead_tokens": 100000000,

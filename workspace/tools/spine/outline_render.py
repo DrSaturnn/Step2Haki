@@ -124,7 +124,14 @@ class Renderer:
         if t == 'bottom':
             return S.bottom([r(x) for x in b['lines']])
         if t == 'script2':
-            return S.script2([(k, [r(x) for x in lines]) for k, lines in b['rows']])
+            h = S.script2([(k, [r(x) for x in lines]) for k, lines in b['rows']])
+            return h.replace('<div class="sp-script sp-s2">', '<div class="sp-script sp-s2 %s">' % b['cls'], 1) if b.get('cls') else h
+        if t == 'keypoint':   # s159 card: {lines: [rich]} -> the Key point box (CARD_SPEC.md)
+            return '<div class="dp"><span class="lbl">Key point</span><ul class="bl">\n%s\n</ul></div>' % '\n'.join('<li>%s</li>' % r(x) for x in b['lines'])
+        if t == 'owners':     # s159 card: {lines: [rich, each ending in a drawer]} -> "Where the choice is made"
+            return '<div class="pc-owners"><span class="lbl">Where the choice is made</span>\n%s\n</div>' % '\n'.join('<p>%s</p>' % r(x) for x in b['lines'])
+        if t == 'lcw':        # s159 card: a bar timeline in the substance chart style (figure.lcw), ticks on every row
+            return lcw(b, r)
         if t == 'systems':
             return S.systems(r(b['title']), r(b.get('small', '')), [(k, r(f), r(w)) for k, f, w in b['rows']])
         if t == 'rows':
@@ -133,7 +140,7 @@ class Renderer:
                 c = x.get('commit')
                 out.append(S.row(x.get('src', ''), r(x['finding']), chips=r(x.get('chips')),
                                  commit=S.commit(r(c[0]), r(c[1])) if c else '', extra=r(x.get('extra'))))
-            return '<div class="sp-rows">\n' + '\n'.join(out) + '\n</div>'   # as the goldens wrote it
+            return '<div class="sp-rows%s">\n' % (' ' + b['cls'] if b.get('cls') else '') + '\n'.join(out) + '\n</div>'   # as the goldens wrote it
         if t == 'table':
             return S.table(r(b['caption']), [r(h) for h in b['heads']], [tuple(r(c) for c in row) for row in b['rows']],
                            mask_cols=tuple(b.get('mask_cols', ())), cls=b.get('cls', 'sp-dx'))
@@ -157,6 +164,29 @@ class Renderer:
 # zone 2 was "By presentation" (2026-10-11); renamed "Targeted tests" site-wide (digest 2026-10-19, s148f), so outlines
 # written before the rename render the new name
 ZONE_NAMES = {'By presentation': 'Targeted tests'}
+
+
+def lcw(b, r):
+    """{title, small, ticks: [[x%, label], ...], rows: [{name, win, bar: [a%, b%], c: 1|2|3, lab, wl, mask: "name"|"win"}]}
+    (s159, CARD_SPEC.md "Timelines"): the first tick is 0 and the last the axis end; every row repeats the tick labels;
+    mask "name" masks the event name (onset charts), "win" the window text (washout charts)."""
+    ticks = b['ticks']
+    rail = ''.join('<i class="tk" style="--x:%s%%"></i>' % x for x, _ in ticks)
+    rax = ''.join('<span class="%s" style="--x:%s%%">%s</span>' % ('a0' if k == 0 else ('a1' if k == len(ticks) - 1 else ''), x, lab)
+                  for k, (x, lab) in enumerate(ticks))
+    rows = []
+    for w in b['rows']:
+        nm, win = r(w['name']), r(w['win'])
+        mask = w.get('mask', 'name')
+        nm_html = '<b class="nm mask">%s</b>' % nm if mask == 'name' else '<b class="nm">%s</b>' % nm
+        win_html = '<span class="win"><span class="mask">%s</span>%s</span>' % (win, r(w.get('win_extra', ''))) if mask == 'win' \
+            else '<span class="win">%s%s</span>' % (win, r(w.get('win_extra', '')))
+        a, z = w['bar']
+        rows.append('<li class="wr"><div class="wh">%s%s</div><div class="wb"><div class="rail" aria-hidden="true">%s'
+                    '<i class="bar c%s" style="--a:%s%%;--b:%s%%"></i></div><div class="rax" aria-hidden="true">%s<em>&rarr;</em></div>'
+                    '<p class="wl"><b>%s</b>%s</p></div></li>' % (nm_html, win_html, rail, w.get('c', 2), a, z, rax, w.get('lab', 'Shows'), r(w['wl'])))
+    return ('<figure class="lcw pc-lcw"><div class="ttl"><span>%s</span><small>%s</small></div><ol class="wrows">%s</ol></figure>'
+            % (r(b['title']), b.get('small', ''), ''.join(rows)))
 
 
 def split_band(band):

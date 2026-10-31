@@ -411,7 +411,8 @@ class Verify:
         m = re.search(r'<h5 class="[^"]*authored-hdr', html)
         page = BP.base_page(getattr(self, 'd', None), self.PAGE)
         lb = P.brief_by_id(page, getattr(self, 'bid', ''))
-        titles = sorted(re.findall(r'<div class="brief[^"]*" id="[^"]+"[^>]*>\s*<h4[^>]*>(.*?)</h4>', page, re.S))
+        titles = sorted(re.findall(r'<div class="brief[^"]*" id="[^"]+"[^>]*>\s*(?:<p class="pc-grp">.*?</p>\s*)?<h4[^>]*>(.*?)</h4>', page, re.S))
+        specs = self.SPECS + (('repair/efficiency/CARD_SPEC.md',) if 'data-entry="card"' in html[:600] else ())   # s159: card rules, cards only
         chrome = ''.join(re.findall(r'<style[^>]*>.*?</style>|<script[^>]*>.*?</script>', page, re.S))
         return {'brief': h(html), 'bank': h(html[m.start():] if m else ''),
                 'facts': fh(os.path.join(self.d, 'facts.json')),
@@ -420,7 +421,7 @@ class Verify:
                 'siblings': h('\n'.join(titles)),
                 'display': h(chrome + open(os.path.join(HERE, 'shots.py'), encoding='utf-8').read()),
                 'live': h(page[lb.start:lb.end]) if lb else 'none',
-                'specs': h(''.join(open(os.path.join(WS, f), encoding='utf-8').read() for f in self.SPECS))}
+                'specs': h(''.join(open(os.path.join(WS, f), encoding='utf-8').read() for f in specs))}
 
     def deps_line(self, part):
         d = self.deps()

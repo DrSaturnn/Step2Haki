@@ -73,7 +73,8 @@ def steps(prefix, used):
 def live_src(bid, folder, batch=None):
     batch = batch or os.environ['AX_BATCH']
     d = json.load(open(os.path.join(WS, 'local', batch, 'live', bid + '.json'), encoding='utf-8'))
-    cite = 'old brief %s (live page, %s baseline)' % (bid, batch)
+    src = d.pop('_source', None) or bid   # s159 card mode: a card's L lines are its source brief's (antidep-other)
+    cite = 'old brief %s (live page, %s baseline)' % (src, batch)
     json.dump({k: [cite, v] for k, v in d.items()}, open(os.path.join(folder, 'live_src.json'), 'w', encoding='utf-8'),
               indent=1, ensure_ascii=False)
     return d
