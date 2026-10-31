@@ -14,11 +14,12 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **Open batch: s159** (Psych Pharmacology B1 of 4: section layer, card tools, cards pc-maoi, pc-snri, pc-antidep;
   antidep-other retires into them). Launched 2026-10-30 22:01; wip/s159 in both repos; batch file repair/s159/S159.md.
-  Step: chat 3 done (shells, retire spec, gate retired_briefs, both builders BUILT, all 3 cards MECHANICAL PASS, drawer
-  retarget patch in 5 live briefs, S3 page checks PASS: gate, render, preflight, vendor, squeeze, pointer_check);
-  next chat starts at S159.md "Next (chat 4)" step 1 (S4 review round 1: cards full round, live briefs patch review).
-  Spend: agents 2 of 19, calls 107 of 440, tokens 11.86M of 18M (builders over plan by 1.86M); lead chats 1 to 3
-  about 75M of 110M.
+  Step: chat 4 done (S4 round 1 and S5 adjudication): patch review PASS, the 5 live briefs READY (adhd-meds, mdd,
+  ssri-effects, sud-meds, tca-tox); cards: 6 MED accepted (study-mode leaks in rows and hovers, pc-maoi prescriber
+  clause, pc-snri discontinuation note), Key point leak findings rejected (Key point blurred in study mode); 17 exact
+  fixes written. Next chat starts at S159.md "Next (chat 5)" fix 1 (S5 fixes, S3 checks, new shots, S6, S7 round 2).
+  Spend: agents 7 of 19, calls 169 of 440, tokens 14.59M of 18M (3.41M left for round 2); lead chats 1 to 4 about
+  91M of 110M (chat 4 15.6M).
 
 - **Previous: s158 SHIPPED 2026-10-30** (Claude lead; four new psych briefs: trauma-stress, cluster-c, sexual-dysfunction,
   stages-change (lookup); drawer pointers in 11 live briefs): commit 98b3f1b, page 00395be2f003 (approved candidate
