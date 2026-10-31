@@ -190,5 +190,43 @@ expect('retire_brief: a changed stem with a bump passes', 'id="old"' not in AE.a
 raises('retire_brief: alias_before not on the page', lambda: AE.apply(h2, {'edits': [dict(ret, alias_before='pc-none')]}), 'pc-none')
 raises('retire_brief: schema needs ledger', lambda: AE.apply(h2, {'edits': [{'op': 'retire_brief', 'brief': 'old', 'alias_before': 'pc-antidep'}]}), 'ledger')
 
+# ---------------------------------------------------------------- gate: items of a retired brief may move (s159 chat 3)
+import gate as G  # noqa: E402
+
+
+def gate_codes(cur, ref, root):
+    old = os.environ.get('AXBX_RETIRE_ROOT')
+    os.environ['AXBX_RETIRE_ROOT'] = root
+    try:
+        g = G.Gate({})
+        G.check_base(cur, ref, G.briefs(cur), G.items(cur), g)
+        return [(c, k) for c, k, _ in g.fails]
+    finally:
+        if old is None:
+            os.environ.pop('AXBX_RETIRE_ROOT', None)
+        else:
+            os.environ['AXBX_RETIRE_ROOT'] = old
+
+
+groot = tempfile.mkdtemp(prefix='test-cards-gate-')
+try:
+    nospec = gate_codes(r, base, groot)
+    expect('gate without a retire spec: the retired brief and its moves fail',
+           ('never-delete', 'old') in nospec and any(c == 'id-immutable' and k.endswith(':brief') for c, k in nospec), nospec)
+    os.makedirs(os.path.join(groot, 'repair', 'migration', 'x', 'spine'))
+    json.dump({'edits': [ret]}, open(os.path.join(groot, 'repair', 'migration', 'x', 'spine', '06_old_retire.json'), 'w'))
+    withspec = gate_codes(r, base, groot)
+    expect('gate with a retire spec: the retired brief and its moved items pass', withspec == [], withspec)
+    lowered = r.replace('data-item-id="q_bbbbbbbbbbbbbbbbbbb2" data-item-version="2"', 'data-item-id="q_bbbbbbbbbbbbbbbbbbb2" data-item-version="1"')
+    expect('gate with a retire spec: a lowered version still fails',
+           ('version-bump', 'q_bbbbbbbbbbbbbbbbbbb2') in gate_codes(lowered, base, groot))
+    noalias = r.replace('<span class="alias" id="old"></span>\n', '')
+    expect('gate with a retire spec but no alias span: the brief fails never-delete',
+           ('never-delete', 'old') in gate_codes(noalias, base, groot))
+    expect('gate with a retire spec while the brief is still on the page: moves still fail',
+           any(c == 'id-immutable' for c, _ in gate_codes(h2.replace('id="q_bbbbbbbbbbbbbbbbbbb1"', 'id="q_cccccccccccccccccccc1"', 1), base, groot)))
+finally:
+    shutil.rmtree(groot, ignore_errors=True)
+
 print('test_cards: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)

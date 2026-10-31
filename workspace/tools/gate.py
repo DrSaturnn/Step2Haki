@@ -14,6 +14,7 @@ Prints one summary line, then each failure with its fix. Exit 0 pass, 1 fail.
 Judgment (clinical truth, scope, voice, cue review) is never approved by this script.
 """
 import csv
+import glob
 import html as H
 import json
 import os
@@ -491,6 +492,23 @@ def check_page(page, g, page_path):
     return bl, it, stats
 
 
+def retired_briefs(page, cur_b, root=None):
+    """Brief ids retired through a retire_brief spec: a repair/migration/**/spine/06_*_retire.json names the brief,
+    the brief is not on the page, and its alias span is (AXBX_RETIRE_ROOT overrides the workspace, for tests)."""
+    root = root or os.environ.get('AXBX_RETIRE_ROOT') or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    out = set()
+    for f in glob.glob(os.path.join(root, 'repair', 'migration', '**', 'spine', '06_*_retire.json'), recursive=True):
+        try:
+            eds = json.load(open(f, encoding='utf-8')).get('edits', [])
+        except (OSError, ValueError, AttributeError):
+            continue
+        for e in eds:
+            bid = e.get('brief') if isinstance(e, dict) and e.get('op') == 'retire_brief' else None
+            if bid and bid not in cur_b and '<span class="alias" id="%s"></span>' % bid in page:
+                out.add(bid)
+    return out
+
+
 def check_base(page, ref_html, bl, it, g):
     rb, ri = briefs(ref_html), items(ref_html)
     cur_b = {b.id for b in bl}
@@ -501,6 +519,10 @@ def check_base(page, ref_html, bl, it, g):
         for rid in b.attrs.get('data-replaces', '').split():
             if '<span class="alias" id="%s"' % rid in page[b.start:b.end]:
                 replaced.add(rid)
+    # retired briefs (s159, psych pharm cards): a brief removed by a retire_brief spec (a 06_*_retire.json in a
+    # migration folder) leaves an alias span on the page and its items live on in the cards, ids unchanged; its items
+    # may then move, and the version-bump check below still refuses a lowered version
+    replaced |= retired_briefs(page, cur_b)
     for b in rb:
         if b.id and b.id not in cur_b and b.id not in replaced:
             g.fail('never-delete', b.id, 'brief %s existed at base and is missing now' % b.id)
