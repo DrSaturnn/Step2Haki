@@ -17,11 +17,12 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   the restart line. Everything below stands as written at the park.
 - **Open batch: s156** (Claude lead, launched 2026-10-29 07:49; Phase 2, infectious disease B, pediatric: meningitis,
   dtap, lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever), branch wip/s156 in both repos.
-  Step: S7 done: all READY (chat 6, 2026-10-31): S6 restored meningitis "most common sequela" (card question c22q);
-  rounds 2 to 4 left all seven READY (verify). Next: S8 report and S9 in a fresh chat (rebuild the batch page on the
-  current main first). Four lead recommendations stay parked for Jonathan (S156.md "Parked recommendations"): not
-  approved, do not apply. Spend: wave 27 agents, 663 calls, 70.02M of 78M; lead 74.9M measured of 90M (chat 6 about 13.3M)
-  (ledger_lead). Batch file repair/s156/S156.md.
+  Step: S8 presented (chat 7, 2026-10-31): approval s156, page bfcc9ac56427, 7 of 7 READY, gate 0 failures; report
+  sent (local/s156/S8_REPORT.md, from private local-only); waiting for "ship". On "ship", in the same chat: S9 per
+  S156.md "S8 and S9 (chat 7)". A fresh chat cannot ship (the approval record lives in chat 7's container): re-run
+  `batch.py s8` there and present again. Four lead recommendations stay parked for Jonathan (S156.md "Parked recommendations"): not
+  approved, do not apply. Spend: wave 27 agents, 663 calls, 70.02M of 78M; lead about 83.3M measured of 90M (chat 7 about 8.4M
+  to the report) (ledger_lead). Batch file repair/s156/S156.md.
     Never relaunch s156 from a launch prompt; continue with the restart line.
 
 - **Previous: s159 SHIPPED 2026-10-31** (Claude lead; Psych Pharmacology B1 of 4: the section layer, card tools and

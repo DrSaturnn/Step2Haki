@@ -44,7 +44,7 @@ def main(argv):
     dirs = [os.path.abspath(a) for a in argv if not a.startswith('--') and not re.fullmatch(r'\d+', a)]
     if not dirs:
         sys.exit(__doc__.strip().splitlines()[4].strip())
-    jobs = int(argv[argv.index('--jobs') + 1]) if '--jobs' in argv else 3
+    jobs = int(argv[argv.index('--jobs') + 1]) if '--jobs' in argv else max(1, min(3, os.cpu_count() or 1))   # s156: 3 jsdom renders on 2 cores time out at 90 s
     flags = [f for f in ('--fast', '--mech') if f in argv]
     mech = '--mech' in argv
     bad = 0
