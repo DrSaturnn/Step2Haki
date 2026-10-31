@@ -25,6 +25,7 @@ OPS = {
                  {'companion', 'lead_in', 'status', 'src', 'nid', 'after_item', 'attrs', 'bold_answer', 'note'}),
     'set_attr': ({'target', 'attr', 'value'}, {'note'}),
     'new_brief': ({'after', 'html'}, {'nav', 'note'}),
+    'retire_brief': ({'brief', 'alias_before', 'ledger'}, {'note'}),
     'replace_global': ({'find', 'with'}, {'note'}),
     # s146c: move a whole brief, byte for byte, to just after another brief (reordering a section); nothing in it changes
     'move_brief': ({'brief', 'after'}, {'note'}),
@@ -325,7 +326,22 @@ def apply_one(html, e, n, taken, log):
             len(set(new_items) - set(old_items)), len(retired), e['ledger']))
         return html
     if op == 'new_brief':
-        after = _brief(html, e['after'], n, op)
+        # s159: "after" may list fallbacks separated by "|", the first found wins; "#<id>" means after the section heading
+        # h3.system with that id and its system-note (so a section's first card has an anchor before any card exists)
+        at_end = None
+        for a in e['after'].split('|'):
+            a = a.strip()
+            if a.startswith('#'):
+                m = re.search(r'<h3 class="system" id="%s">.*?</h3>(\s*<p class="system-note">.*?</p>)?' % re.escape(a[1:]), html, re.S)
+                if m:
+                    at_end = m.end()
+                    break
+            elif [b for b in briefs(html) if b.id == a]:
+                at_end = _brief(html, a, n, op).end
+                break
+        if at_end is None:
+            raise EditError(n, op, 'no anchor of %r is on the page' % e['after'], 'name a brief id, or #<section heading id>')
+        after = type('A', (), {'end': at_end, 'id': e['after'].split('|')[0]})
         nb = e['html'].strip()
         found = briefs(nb)
         if len(found) != 1 or found[0].start != 0 or found[0].end != len(nb):
@@ -347,10 +363,43 @@ def apply_one(html, e, n, taken, log):
             p = ns + m.end()
             html = splice(html, [(p, p, link)])
             if not cls:
-                sec_start = html.rfind('<div class="sect">', 0, p)
+                sec_start = max(html.rfind('<div class="sect">', 0, p), html.rfind('<div class="sect ', 0, p))
                 cm = re.compile(r'<span class="count">(\d+)</span>').search(html, sec_start)
                 html = splice(html, [(cm.start(1), cm.end(1), str(int(cm.group(1)) + 1))])
         log.append('new_brief %s after %s' % (nid, after.id))
+        return html
+    if op == 'retire_brief':
+        # s159 (psych pharm cards): a brief whose every item now lives in another brief on the page leaves the page;
+        # its id stays as an alias span just before the brief named in alias_before (so #<id> links still land), and
+        # its nav link leaves the sidebar (the section count drops by one). replace_cluster cannot add briefs, so the
+        # new cards arrive as shells (new_brief) carrying the moved items, and this op removes the old brief after them.
+        b = _brief(html, e['brief'], n, op)
+        tgt = _brief(html, e['alias_before'], n, op)
+        mine = items(html[b.start:b.end])
+        rest = html[:b.start] + html[b.end:]
+        elsewhere = {i.id: i for i in items(rest)}
+        for oi in mine:
+            ni = elsewhere.get(oi.id)
+            if not ni:
+                raise EditError(n, op, 'item %s of %s is on no other brief' % (oi.id, b.id),
+                                'carry it, id unchanged, in the brief that now owns it before retiring this one')
+            ov, nv = int(oi.attrs.get('data-item-version', '1')), int(ni.attrs.get('data-item-version', '1'))
+            if nv < ov or (nv == ov and text(oi.stem) != text(ni.stem)):
+                raise EditError(n, op, 'item %s: version %d -> %d' % (oi.id, ov, nv), 'a changed stem bumps data-item-version; a version never goes down')
+        ws = len(html[:b.start]) - len(html[:b.start].rstrip('\n'))
+        alias = '<span class="alias" id="%s"></span>\n' % b.id
+        edits = [(b.start - ws, b.end, ''), (tgt.start, tgt.start, alias)]
+        ns = html.find('<div id="navlinks">')
+        m = re.search(r'\n[ \t]*<a\b[^>]*href="#%s"[^>]*>.*?</a>' % re.escape(b.id), html[ns:]) if ns >= 0 else None
+        if m:
+            p0 = ns + m.start()
+            sec_start = max(html.rfind('<div class="sect">', 0, p0), html.rfind('<div class="sect ', 0, p0))
+            cm = re.compile(r'<span class="count">(\d+)</span>').search(html, sec_start)
+            edits.append((p0, ns + m.end(), ''))
+            if cm and cm.start() < p0 and 'class=' not in m.group(0):
+                edits.append((cm.start(1), cm.end(1), str(int(cm.group(1)) - 1)))
+        html = splice(html, sorted(edits))
+        log.append('retire_brief %s (%d item(s) carried elsewhere; alias before %s; ledger %s)' % (b.id, len(mine), tgt.id, e['ledger']))
         return html
     raise EditError(n, op, 'unknown op', 'see tools/EDITS.md')
 

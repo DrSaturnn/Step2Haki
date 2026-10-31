@@ -71,7 +71,17 @@ def lane(spec, b):
     live_dir = os.path.join(WS, 'local', batch, 'live')
     os.makedirs(live_dir, exist_ok=True)
     live = os.path.join(live_dir, bid + '.json')
-    if b.get('new'):
+    if b.get('source'):
+        # s159 card mode: a class card's L lines are its source brief's (the s157 brief it retires), saved under the card id
+        tmp = live[:-5] + '_src.json'
+        r = sh([sys.executable, os.path.join(HERE, 'dump_lines.py'), b['source'], tmp], out=live[:-5] + '.txt')
+        if r.returncode:
+            return '%s: dump_lines FAIL %s' % (bid, r.stderr.strip()[-200:])
+        d = json.load(open(tmp, encoding='utf-8'))
+        d['_source'] = b['source']
+        json.dump(d, open(live, 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
+        os.remove(tmp)
+    elif b.get('new'):
         # s157: a brief new in its batch has no live text; its shell sits in the folder (basepage)
         json.dump({}, open(live, 'w', encoding='utf-8'))
         open(live[:-5] + '.txt', 'w', encoding='utf-8').write('(%s is new in %s: no live brief, no L lines)\n' % (bid, batch))
@@ -87,7 +97,9 @@ def lane(spec, b):
     fill = {'batch': batch, 'bid': bid, 'title': title, 'entry': b.get('entry', 'disease'), 'folder': folder,
             'budget': spec.get('budget', 90), 'live': live, 'live_txt': live[:-5] + '.txt',
             'model': os.path.join(WS, b['model']), 'golden': os.path.join(WS, b['golden']), 'spine_spec': SPINE_SPEC}
-    t = open(os.path.join(HERE, 'BUILD_CONTRACT.md'), encoding='utf-8').read()
+    fill['source'] = b.get('source', '')
+    fill['card_spec'] = os.path.join(WS, 'repair', 'efficiency', 'CARD_SPEC.md')
+    t = open(os.path.join(HERE, 'BUILD_CONTRACT_CARD.md' if b.get('entry') == 'card' else 'BUILD_CONTRACT.md'), encoding='utf-8').read()
     for k, v in fill.items():
         t = t.replace('{%s}' % k, str(v))
     left = sorted(set(re.findall(r'\{([a-z_]+)\}', t)))

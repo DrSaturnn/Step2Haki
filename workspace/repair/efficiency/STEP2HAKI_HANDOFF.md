@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-30, by Claude (s158 shipped; s156 still parked).
+Last updated: 2026-10-30, by Claude (s159 open, chat 1 done: launch, B0, card tools; s156 still parked).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,9 +12,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: none.** Next: the psych pharm section redo mockup (DIGEST 2026-10-30 "psych pharm section redo": one short
-  card and the standalone header as a private page for Jonathan's review before any batch; plan claude/pending/PSYCH_PHARM_V2.md),
-  or s156 resumed (parked on wip/s156; merge main in first), whichever Jonathan names.
+- **Open batch: s159** (Psych Pharmacology B1 of 4: section layer, card tools, cards pc-maoi, pc-snri, pc-antidep;
+  antidep-other retires into them). Launched 2026-10-30 22:01; wip/s159 in both repos; batch file repair/s159/S159.md.
+  Step: chat 1 done (launch, B0, tools 1 to 13 of the batch file); next chat starts at S159.md "Next (chat 2)" step 1
+  (BUILD_CONTRACT_CARD.md and test_cards.py), then the MAOI port, the retire spec, builder lanes for pc-snri and
+  pc-antidep. Spend: agents 0 of 19 (one refused probe), calls 0 of 440, tokens 0 of 18M; lead chat 1 about 25M of 110M.
 
 - **Previous: s158 SHIPPED 2026-10-30** (Claude lead; four new psych briefs: trauma-stress, cluster-c, sexual-dysfunction,
   stages-change (lookup); drawer pointers in 11 live briefs): commit 98b3f1b, page 00395be2f003 (approved candidate

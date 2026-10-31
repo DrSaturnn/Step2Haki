@@ -1,0 +1,24 @@
+{
+ "marker": "id=\"psych-pharm\"",
+ "note": "s159 site layer: the Psych Pharmacology sidebar section and page section (CARD_SPEC.md section 6)",
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#ipv\">Intimate Partner Violence</a>\n  </div>\n</aside>",
+   "with": "    <a href=\"#ipv\">Intimate Partner Violence</a>\n    <div class=\"sect pc-sect\">Psych Pharmacology <span class=\"count\">3</span></div>\n    <div class=\"navsub\">01 Antidepressants</div>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">SSRIs</a>\n    <a href=\"#pc-snri\">SNRIs</a>\n    <a href=\"#pc-antidep\">Other antidepressants</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">TCAs</a>\n    <a href=\"#pc-maoi\">MAOIs</a>\n    <div class=\"navsub\">02 Antipsychotics</div>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Atypical antipsychotics</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Typical antipsychotics</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Anticholinergic</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Tardive dyskinesia agents</a>\n    <div class=\"navsub\">03 Mood and cognition</div>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Lithium and anticonvulsants</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Cognitive agents</a>\n    <div class=\"navsub\">04 Anxiety and benzodiazepines</div>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Benzodiazepines</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Other anxiety agents</a>\n    <div class=\"navsub\">05 ADHD and sleep</div>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">ADHD</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Sleep agents</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Orexin antagonists</a>\n    <div class=\"navsub\">06 Substance use and other</div>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Substance use and cessation</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Other agents</a>\n  </div>\n</aside>",
+   "note": "s159: Psych Pharmacology sidebar section after Psychiatry; planned cards greyed"
+  },
+  {
+   "op": "replace_global",
+   "find": "\n\n<div style=\"margin:70px 0 0;padding:22px 0 0;border-top:2px solid var(--rule)",
+   "with": "\n\n<!-- =================== PSYCH PHARM =================== -->\n<h3 class=\"system\" id=\"psych-pharm\">Psych Pharmacology <span class=\"n\">3 of 18 class cards</span></h3>\n<p class=\"system-note\">One short card per drug class, grouped as in the pharm documents. Each card holds what the drug does; the disease briefs keep the choice of drug.</p>\n\n<div style=\"margin:70px 0 0;padding:22px 0 0;border-top:2px solid var(--rule)",
+   "note": "s159: Psych Pharmacology page section after the Psychiatry briefs"
+  },
+  {
+   "op": "replace_global",
+   "find": "</body>",
+   "with": "<style id=\"ax-s159\">\n/* ============ s159: Psych Pharmacology class cards (CARD_SPEC.md; mockup v3, page tokens only) ============ */\n#navlinks .pc-sect{color:var(--accent)}\nhtml body #nav #navlinks a.pc-plan{color:var(--faint)!important;-webkit-text-fill-color:var(--faint);opacity:.75;font-weight:400}\n.brief.pc .pc-grp{margin:0 0 6px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}\n.brief.pc .pc-grp span{color:var(--faint);padding:0 4px}\n.brief.pc .pc-tn{color:var(--muted);font-size:.92em;padding-left:4px}\n.brief.pc .pc-uv{display:inline-block;margin-left:6px;font-size:12px;font-weight:500;color:var(--caution);background:var(--caution-bg);border-radius:var(--r-chip);padding:1px 7px}\n.brief.pc .pc-blocks{margin-top:18px}\n.brief.pc .pc-note{margin:6px 0 0;font-size:14px;color:var(--muted)}\n.brief.pc .pc-tbl{margin-top:18px}\n.brief.pc .pc-lcw{margin-top:18px}\n.brief.pc .pc-owners{margin:20px 0 0;padding:12px 18px;border-radius:var(--r-sub);background:var(--recess);box-shadow:var(--inner-2)}\n.brief.pc .pc-owners .lbl{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}\n.brief.pc .pc-owners p{margin:6px 0;color:var(--ink-2)}\n.brief.pc .pc-nbq{margin-top:20px}\n</style>\n</body>",
+   "note": "s159: class card styles on theme tokens"
+  }
+ ]
+}

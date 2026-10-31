@@ -46,7 +46,7 @@ import pagelib as P  # noqa: E402
 import outline_render as OR  # noqa: E402
 
 LABELS = ['Script', 'Urgent', 'Differential', 'Workup', 'Criteria', 'Severity', 'Treatment', 'Follow-up']
-CAPS = {'disease': 1300, 'drug': 1000, 'presentation': 700, 'screen': 1000}
+CAPS = {'disease': 1300, 'drug': 1000, 'presentation': 700, 'screen': 1000, 'card': 600}   # card: s159, CARD_SPEC.md (MAOI card about 420)
 ACTION = re.compile(r'^(?:(?:give|treat|start|order|obtain|get|admit|prescribe|refer|stop|switch|begin|perform|do|send|'
                     r'draw|add|use|consult|operate)\b|(?:film|image|scan|biopsy|repeat|check|x-ray)\s+(?:the|a|an|both|it|them|for)\b)', re.I)
 ESCALATE = re.compile(r'(2nd|3rd|second|third|add|relapse|refer|top|escalat|last|salvage|rescue)', re.I)
@@ -208,6 +208,10 @@ class Check:
 
     # ---- rules
     def s1(self):
+        if self.o.get('entry') == 'card':   # s159: a class card has no decision spine (CARD_SPEC.md); no steps, no h blocks
+            if self.o.get('steps') or any(isinstance(b, dict) and b.get('type') in ('h', 'stepper', 'pause', 'bottom', 'workup', 'workup5a', 'ladder') for b in self.o['body']):
+                self.err('S1', 'card', 'a card carries spine furniture (steps, h, stepper, pause, bottom, workup or ladder)', 'use the card blocks: keypoint, script2, rows, lcw, table, owners')
+            return
         o, steps = self.o, self.o['steps']
         if [s[1] for s in steps] != LABELS or [str(s[0]) for s in steps] != [str(i) for i in range(1, 9)]:
             self.err('S1', 'steps', 'labels or numbers are not 1..8 %s' % LABELS, 'use the fixed stepper labels in order')

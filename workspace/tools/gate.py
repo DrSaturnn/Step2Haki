@@ -112,6 +112,14 @@ def _pause_format(brief_html):
     return m.pause_format(brief_html)
 
 
+def _card_check(brief_html):
+    import importlib.util
+    sp = importlib.util.spec_from_file_location('spine_lint', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'spine', 'lint.py'))
+    m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
+    globals()['_card_check'] = m.card_check
+    return m.card_check(brief_html)
+
+
 class Gate:
     def __init__(self, allow):
         self.fails, self.allowed, self.allow = [], [], allow
@@ -209,6 +217,9 @@ def check_page(page, g, page_path):
         # ---- s154c: every spine brief's pause point is question-style blocks (tools/spine/lint.py pause_format)
         # a paragraph pause point fails only once the s154c site layer is on the page (per-brief builds of the batch
         # replace one brief on a pre-s154c base page); a malformed block pause point always fails
+        if b.attrs.get('data-entry') == 'card':   # s159: a psych pharm class card keeps the card layout (CARD_SPEC.md)
+            for prob in _card_check(page[b.start:b.end]):
+                g.fail('card-format', b.id, prob)
         for prob in _pause_format(page[b.start:b.end]):
             if 'paragraph (p.sp-pause)' in prob and '<style id="ax-s154c">' not in page:
                 continue
@@ -252,7 +263,7 @@ def check_page(page, g, page_path):
         nav = body[ns:ne if ne > 0 else ns + 200000]
         links, pres = defaultdict(list), defaultdict(list)
         # s146c: the Presentations group (the first .sect) lists every hub a second time, as a plain link
-        sects = [(m.start(), text(m.group(1))) for m in re.finditer(r'<div class="sect">(.*?)<span class="count">', nav, re.S)]
+        sects = [(m.start(), text(m.group(1))) for m in re.finditer(r'<div class="sect(?: [a-z0-9 -]+)?">(.*?)<span class="count">', nav, re.S)]
         for m in re.finditer(r'<a\b([^>]*)>', nav):
             a = attrs(m.group(0))
             if a.get('href', '').startswith('#'):
@@ -277,7 +288,7 @@ def check_page(page, g, page_path):
                 g.fail('nav-link', b.id, '%s has %d nav links' % (b.id, len(got)))
             elif got[0] != want:
                 g.fail('nav-link', b.id, '%s nav link class=%r, expected %r' % (b.id, got[0], want))
-        for sec in re.split(r'<div class="sect">', nav)[1:]:
+        for sec in re.split(r'<div class="sect(?: [a-z0-9 -]+)?">', nav)[1:]:
             m = re.match(r'(.*?)\s*<span class="count">(\d+)</span>', sec, re.S)
             if not m:
                 continue

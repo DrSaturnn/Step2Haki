@@ -1002,6 +1002,34 @@
   "supranuclear palsy",
   "multiple system atrophy"
  ],
+ "pc-antidep": [
+  "bupropion",
+  "esketamine",
+  "mirtazapine",
+  "nefazodone",
+  "priapism",
+  "trazodone",
+  "vilazodone",
+  "vortioxetine"
+ ],
+ "pc-maoi": [
+  "hypertensive crisis",
+  "isocarboxazid",
+  "MAOI",
+  "monoamine oxidase",
+  "phenelzine",
+  "selegiline",
+  "tranylcypromine",
+  "tyramine"
+ ],
+ "pc-snri": [
+  "desvenlafaxine",
+  "duloxetine",
+  "levomilnacipran",
+  "milnacipran",
+  "SNRI",
+  "venlafaxine"
+ ],
  "ped-murmur": [
   "innocent murmur",
   "Still murmur",
