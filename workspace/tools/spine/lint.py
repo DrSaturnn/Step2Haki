@@ -474,7 +474,7 @@ def card_check(brief_html):
     for pat, what in [(r'<nav class="sp-step"', 'a decision-spine stepper'), (r'class="sp-pause"', 'a pause point'),
                       (r'<span class="lbl">Bottom line</span>', 'a bottom line'), (r'<h5 class="tsec sp-h"', 'numbered step headers'),
                       (r'class="sp-on|class="sp-tl', 'a dot-on-line timeline (sp-on); bar timelines only'),
-                      (r'class="pc-review|class="pc-opt', 'mockup review furniture')]:
+                      (r'class="(?:[^"]* )?pc-(?:review|opt)\b', 'mockup review furniture')]:
         if re.search(pat, h):
             out.append('card-format: the card carries %s' % what)
     names = []
