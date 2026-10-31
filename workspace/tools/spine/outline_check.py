@@ -169,6 +169,8 @@ class Check:
                 'currency', 'pop_ok', 'note', 'label'}
 
         def walk(x, where, key=None):
+            if key == 'ticks':   # s159: lcw tick labels are axis furniture, not learner text
+                return
             if isinstance(x, str):
                 t = rx(x)
                 n = len(re.findall(r'[A-Za-z]{2,}', t))
@@ -269,7 +271,7 @@ class Check:
                 self.err('C2', 'body[%d]:bottom' % k, '%d bottom-line lines' % len(b['lines']), 'keep 1 to 3')
             if isinstance(b, dict) and b.get('type') == 'bottom' and '"b":' not in json.dumps(b['lines']) and '<b>' not in json.dumps(b['lines']):
                 self.flag('C2', 'body[%d]:bottom' % k, 'bottom line has no bold: bold its key words and criteria with {"b": ...} (s148g, Jonathan 2026-10-20)')
-            if isinstance(b, dict) and b.get('type') == 'script2':
+            if isinstance(b, dict) and b.get('type') == 'script2' and self.o.get('entry') != 'card':   # s159: a card's drug rows hold no Insights
                 ins = [lines for key, lines in b['rows'] if key == 'Insights']
                 if len(ins) != 1 or len(ins[0]) != 2:
                     self.err('C2', 'body[%d]:script2' % k, 'Insights must be one row of exactly two lines', 'two Insights lines')

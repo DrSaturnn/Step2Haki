@@ -14,9 +14,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **Open batch: s159** (Psych Pharmacology B1 of 4: section layer, card tools, cards pc-maoi, pc-snri, pc-antidep;
   antidep-other retires into them). Launched 2026-10-30 22:01; wip/s159 in both repos; batch file repair/s159/S159.md.
-  Step: chat 1 done (launch, B0, tools 1 to 13 of the batch file); next chat starts at S159.md "Next (chat 2)" step 1
-  (BUILD_CONTRACT_CARD.md and test_cards.py), then the MAOI port, the retire spec, builder lanes for pc-snri and
-  pc-antidep. Spend: agents 0 of 19 (one refused probe), calls 0 of 440, tokens 0 of 18M; lead chat 1 about 25M of 110M.
+  Step: chat 2 done (BUILD_CONTRACT_CARD.md, test_cards.py 59 pass, item split, MAOI port to verify FAIL with 2
+  structural FIX); next chat starts at S159.md "Next (chat 3)" step 1 (sibling shells, retire spec, gate allowance,
+  then LEAD_NOTES and builder lanes for pc-snri and pc-antidep). Spend: agents 0 of 19, calls 0 of 440, tokens 0 of
+  18M; lead chats 1 and 2 about 50M of 110M.
 
 - **Previous: s158 SHIPPED 2026-10-30** (Claude lead; four new psych briefs: trauma-stress, cluster-c, sexual-dysfunction,
   stages-change (lookup); drawer pointers in 11 live briefs): commit 98b3f1b, page 00395be2f003 (approved candidate
