@@ -16,7 +16,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   batch file repair/s160/S160.md). Cards pc-benzo, pc-anxiety, adhd-meds (id kept), pc-sleep, pc-orexin, sud-meds (id
   kept); sedatives retires into the four new cards; adhd-meds and sud-meds become cards in place (site layer
   repair/s160/01_pharm_s160.json). Budget 25 agents, 810 calls, 50M (builders 8, 540, 40M; reviewers 17, 270, 10M);
-  lead 90M. Step: launch and lanes done (chat 1); next the pilot builders pc-benzo and sud-meds, then the other four.
+  lead 90M. Step: pilot builders pc-benzo and sud-meds running (chat 1); then the pilot gate and the other four.
   Spend: 0 agents.
 
 - **Previous: s156 SHIPPED 2026-10-31** (Claude lead; Phase 2, infectious disease B, pediatric: meningitis, dtap
