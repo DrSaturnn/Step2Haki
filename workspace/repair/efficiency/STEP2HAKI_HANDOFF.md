@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-30, by Claude (s159 open, chat 3 done: cards built, S3 checks pass; next S4 review round 1).
+Last updated: 2026-10-31, by Claude (s159 open, chat 6 done: S7 done, all READY; next S8 report; s156 still parked).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -14,11 +14,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **Open batch: s159** (Psych Pharmacology B1 of 4: section layer, card tools, cards pc-maoi, pc-snri, pc-antidep;
   antidep-other retires into them). Launched 2026-10-30 22:01; wip/s159 in both repos; batch file repair/s159/S159.md.
-  Step: chat 5 done: S5 fixes, S6, S7 round 2 and its S5. pc-maoi READY, pc-antidep READY; pc-snri MECHANICAL PASS,
-  stale after the round 2 acc MED fix (discontinuation note). Next chat starts at S159.md "Next (chat 6)" step 1
-  (pc-snri round 3: acc, read, flags; then the S7 restart point).
-  Spend: agents 11 of 19, calls 207 of 440, tokens about 16.38M of 18M (about 1.6M left for round 3); lead chats 1 to
-  5 about 101M of 110M (chat 5 about 10M by context).
+  Step: chat 6 done: S7 round 3 on pc-snri (acc PASS, flags PASS, read PASS-IF, LOW applied). S7 done: all READY
+  (pc-maoi, pc-snri, pc-antidep by verify.py; the 5 drawer briefs since chat 4). Next chat starts at S159.md
+  "Next (chat 7)" step 1 (S8 report and present; S9 on Jonathan's "ship").
+  Spend: reviewers 14 of 19 agents, 220 of 440 calls, 16.66M of 18M tokens; lead chats 1 to 6 about 109M of 110M
+  (chat 6 about 7.9M measured).
 
 - **Previous: s158 SHIPPED 2026-10-30** (Claude lead; four new psych briefs: trauma-stress, cluster-c, sexual-dysfunction,
   stages-change (lookup); drawer pointers in 11 live briefs): commit 98b3f1b, page 00395be2f003 (approved candidate
