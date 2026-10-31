@@ -14,9 +14,9 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **Open batch: s159** (Psych Pharmacology B1 of 4: section layer, card tools, cards pc-maoi, pc-snri, pc-antidep;
   antidep-other retires into them). Launched 2026-10-30 22:01; wip/s159 in both repos; batch file repair/s159/S159.md.
-  Step: chat 6 done: S7 round 3 on pc-snri (acc PASS, flags PASS, read PASS-IF, LOW applied). S7 done: all READY
-  (pc-maoi, pc-snri, pc-antidep by verify.py; the 5 drawer briefs since chat 4). Next chat starts at S159.md
-  "Next (chat 7)" step 1 (S8 report and present; S9 on Jonathan's "ship").
+  Step: chat 7: S8 done (changelog entry 159; batch.py s8: verify_all 8 of 8 READY, gate, render, preflight 0,
+  pointer 0; approval present, page e1bc544742ca); report sent, waiting for "ship". On "ship": S159.md "Next (chat 7)"
+  step 5 (a new chat re-presents first: approval binds to the presenting chat's page).
   Spend: reviewers 14 of 19 agents, 220 of 440 calls, 16.66M of 18M tokens; lead chats 1 to 6 about 109M of 110M
   (chat 6 about 7.9M measured).
 
