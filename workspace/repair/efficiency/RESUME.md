@@ -3,8 +3,10 @@
 Jonathan, 2026-10-26: "Add whatever is needed so this issue does not happen again" (s154f chat 3 read whole docs and
 ran to about 280k context before any edit). Project copy claude/RESUME.md; repo copy repair/efficiency/RESUME.md.
 
-**Open batch: s159** (Psych Pharmacology B1, launched 2026-10-30; wip/s159 in both repos; batch file repair/s159/S159.md; s156 stays parked on wip/s156). (The lead rewrites this line when a batch opens or ships; "none" means
-no batch is open and a launch prompt is needed.)
+**Open batch: s159** (Psych Pharmacology B1 of 4, launched 2026-10-30; branch **wip/s159** in both repos; batch file
+repair/s159/S159.md; next step: S159.md "Next (chat 2)" step 1; s156 stays parked on wip/s156). (The lead rewrites this
+line, here and in the project copy claude/RESUME.md, when a batch opens or ships; "none" means no batch is open and a
+launch prompt is needed.)
 
 Do these four steps, in order, and read nothing else first. Do not open BATCH_RUNBOOK.md, STEP2HAKI_HANDOFF.md,
 STANDING_DIRECTIONS.md or DECISIONS_DIGEST.md through the project tool: it loads them whole.
