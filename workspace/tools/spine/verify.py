@@ -278,6 +278,8 @@ class Verify:
         hdr = re.search(r'<h5 class="[^"]*authored-hdr', self.brief_html)
         above = self.brief_html[:hdr.start()] if hdr else self.brief_html
         vis = re.sub(r'<(script|style)\b.*?</\1>', ' ', above, flags=re.S)
+        # s160: a card's class tag (p.pc-grp) repeats its sidebar group label ("05 ADHD and sleep"); not body text for V1
+        vis = re.sub(r'<p class="pc-grp">.*?</p>', ' ', vis, flags=re.S)
         mn = ' '.join(re.findall(r'<ul class="[^"]*mnem[^"]*".*?</ul>', vis, flags=re.S))
         mn_ids = {x for v in re.findall(r'(?:id|data-scale)="([^"]+)"', above) for x in re.split(r'[-_]', v.lower())}
         mn_tokens = set(re.findall(r'\b[A-Z]{2,}\b', H.unescape(re.sub(r'<[^>]+>', ' ', mn))))   # a mnemonic's own name
