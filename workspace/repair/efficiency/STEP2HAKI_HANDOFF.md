@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-31, by Claude (s156 chat 6 done: S7 done, all READY; next S8 report).
+Last updated: 2026-10-31, by Claude (s156 shipped 6a35e83; no open batch; next s160 after the NBME-item decision).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,18 +12,16 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **RESUMED 2026-10-31** after s159 shipped (0debc69; earlier, 2026-10-29, after s157 shipped, ff25fba): main merged into wip/s156 in both repos (conflicts were record
-  files only; 2026-10-31: handoff, WAVE.json kept the s156 wave, ledger_spine.csv took both sides). Continue with
-  the restart line. Everything below stands as written at the park.
-- **Open batch: s156** (Claude lead, launched 2026-10-29 07:49; Phase 2, infectious disease B, pediatric: meningitis,
-  dtap, lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever), branch wip/s156 in both repos.
-  Step: S8 presented (chat 7, 2026-10-31): approval s156, page bfcc9ac56427, 7 of 7 READY, gate 0 failures; report
-  sent (local/s156/S8_REPORT.md, from private local-only); waiting for "ship". On "ship", in the same chat: S9 per
-  S156.md "S8 and S9 (chat 7)". A fresh chat cannot ship (the approval record lives in chat 7's container): re-run
-  `batch.py s8` there and present again. Four lead recommendations stay parked for Jonathan (S156.md "Parked recommendations"): not
-  approved, do not apply. Spend: wave 27 agents, 663 calls, 70.02M of 78M; lead about 83.3M measured of 90M (chat 7 about 8.4M
-  to the report) (ledger_lead). Batch file repair/s156/S156.md.
-    Never relaunch s156 from a launch prompt; continue with the restart line.
+- **No open batch.** s156 SHIPPED 2026-10-31 (below). Next: s160 (Psych Pharmacology B2) once Jonathan gives the
+  NBME-item display decision; prompt under "Next launch prompt".
+
+- **Previous: s156 SHIPPED 2026-10-31** (Claude lead; Phase 2, infectious disease B, pediatric: meningitis, dtap
+  (lookup), lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever rebuilt on the decision spine):
+  commit 6a35e83, page 0c93465cd209 (approved candidate bfcc9ac56427), version.json build s156. Wave 27 agents, 663
+  calls, 70.02M of 78M (builders 58.10M; reviewers 11.92M); lead 7 chats, about 83M measured of 90M. Record
+  repair/s156/S156.md (S8 and S9). Open: OPEN_WORK s156 line (supraclavicular biopsy, overages, the four parked
+  recommendations, not approved). Tool notes: verify_all default jobs follow the core count; batch.py ship outlasts the
+  foreground limit (run it in the background); pushes need the noreply author email.
 
 - **Previous: s159 SHIPPED 2026-10-31** (Claude lead; Psych Pharmacology B1 of 4: the section layer, card tools and
   three class cards, pc-maoi (MAOIs), pc-snri (SNRIs), pc-antidep (Other antidepressants); antidep-other retired into
@@ -74,12 +72,12 @@ the s159 ship (runbook S9: keep the start-up files small).
 
 ## Next launch prompt (paste into a fresh chat)
 
-Psych Pharmacology B2 (s160), after s156 ships or is re-parked, and only after Jonathan decides how a card shows an NBME
+Psych Pharmacology B2 (s160), now that s156 has shipped, and only after Jonathan decides how a card shows an NBME
 item owned by another brief (PSYCH_PHARM_BATCHES.md section 6 "Before B2"; recommendation: NBME framing on the card, a
 link to the item in its owning brief, the item does not move). Budget proposed by the s159 report (measured 5.9M per
 card for builders): builders 8, 540, 40M; reviewers 17, 270, 10M; lead 90M; Jonathan sets it at launch.
 ```
-Step2Haki: launch batch s160 (Psych Pharmacology section, batch 2 of 4: Benzodiazepines, Other anxiety agents, Sleep agents, Orexin antagonists, ADHD, Substance use and cessation) per claude/BATCH_RUNBOOK.md, claude/pending/PSYCH_PHARM_V2.md, claude/pending/PSYCH_PHARM_BATCHES.md and claude/CARD_SPEC.md. sedatives, adhd-meds and sud-meds retire into the cards (items carried with ids; drawers retargeted). NBME items owned by another brief: <Jonathan's decision>. s156 stays on wip/s156. Budget: 25 agents, 810 calls, 50M agent tokens (builders 8, 540, 40M; reviewers 17, 270, 10M); lead 90M.
+Step2Haki: launch batch s160 (Psych Pharmacology section, batch 2 of 4: Benzodiazepines, Other anxiety agents, Sleep agents, Orexin antagonists, ADHD, Substance use and cessation) per claude/BATCH_RUNBOOK.md, claude/pending/PSYCH_PHARM_V2.md, claude/pending/PSYCH_PHARM_BATCHES.md and claude/CARD_SPEC.md. sedatives, adhd-meds and sud-meds retire into the cards (items carried with ids; drawers retargeted). NBME items owned by another brief: <Jonathan's decision>. Budget: 25 agents, 810 calls, 50M agent tokens (builders 8, 540, 40M; reviewers 17, 270, 10M); lead 90M.
 ```
 
 NBME presentation layer mockup (no batch; Jonathan 2026-10-26: cross-domain question types first, then how NBME
