@@ -56,7 +56,8 @@ def pending(folder=None, page=None):
             bid = _new_id(json.load(open(f, encoding='utf-8')))
         except (OSError, ValueError):
             continue
-        if bid and bid not in on and bid not in seen:
+        # an id already on the page in any form (a retired brief's alias span, s159) is not a pending shell
+        if bid and bid not in on and bid not in seen and ('id="%s"' % bid) not in page:
             seen.add(bid)
             out.append(f)
     return out

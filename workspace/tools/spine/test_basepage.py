@@ -49,6 +49,11 @@ def main():
         sk = os.path.join(tmp, 'sk'); os.makedirs(sk)
         spec = shell(on); json.dump(spec, open(os.path.join(sk, '05_on_new.json'), 'w'))
         ok(BP.pending(sk) == pend, 'a shell whose brief is already on the page is skipped (after the ship)')
+        al = os.path.join(tmp, 'al'); os.makedirs(al)
+        alias = '<span class="alias" id="zz-retired-alias">'
+        spec = shell('zz-retired-alias'); json.dump(spec, open(os.path.join(al, '05_al_new.json'), 'w'))
+        ok(BP.pending(al, live.replace('</body>', alias + '</span></body>', 1)) == BP.pending(None, live),
+           'a shell whose id lives on as an alias span (retired brief, s159) is skipped')
         json.dump(shell('zz-shell-test'), open(os.path.join(tmp, '05_zz_shell_test_new.json'), 'w'))
         bp = BP.base_page(tmp)
         ok(has(bp, 'zz-shell-test') and not has(live, 'zz-shell-test'),
