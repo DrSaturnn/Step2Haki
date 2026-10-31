@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-31, by Claude (s159 shipped; main merged into wip/s156; s156 resumes).
+Last updated: 2026-10-31, by Claude (s156 chat 6 done: S7 done, all READY; next S8 report).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -17,10 +17,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   the restart line. Everything below stands as written at the park.
 - **Open batch: s156** (Claude lead, launched 2026-10-29 07:49; Phase 2, infectious disease B, pediatric: meningitis,
   dtap, lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever), branch wip/s156 in both repos.
-  Step: S5 round 1 COMPLETE (chat 5): all seven briefs adjudicated (adj_s156_r1.md each; verify MECHANICAL PASS);
-  next S6 self-check, then S7 round 2 (S156.md "Next chunk (chat 6)"). Four lead recommendations are parked for
-  Jonathan to revisit (S156.md "Parked recommendations"): not approved, do not apply. Spend: wave 15
-  agents, 545 calls, 64.80M of 78M (13.2M left for follow-up rounds); lead chat 1 36.1M, chat 2 11.7M, chat 3 20.5M of 90M
+  Step: S7 done: all READY (chat 6, 2026-10-31): S6 restored meningitis "most common sequela" (card question c22q);
+  rounds 2 to 4 left all seven READY (verify). Next: S8 report and S9 in a fresh chat (rebuild the batch page on the
+  current main first). Four lead recommendations stay parked for Jonathan (S156.md "Parked recommendations"): not
+  approved, do not apply. Spend: wave 27 agents, 663 calls, 70.02M of 78M; lead 74.9M measured of 90M (chat 6 about 13.3M)
   (ledger_lead). Batch file repair/s156/S156.md.
     Never relaunch s156 from a launch prompt; continue with the restart line.
 
