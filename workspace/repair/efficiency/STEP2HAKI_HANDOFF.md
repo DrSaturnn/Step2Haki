@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-30, by Claude (s159 open, chat 1 done: launch, B0, card tools; s156 still parked).
+Last updated: 2026-10-30, by Claude (s159 open, chat 3 done: cards built, S3 checks pass; next S4 review round 1).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -14,10 +14,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **Open batch: s159** (Psych Pharmacology B1 of 4: section layer, card tools, cards pc-maoi, pc-snri, pc-antidep;
   antidep-other retires into them). Launched 2026-10-30 22:01; wip/s159 in both repos; batch file repair/s159/S159.md.
-  Step: chat 2 done (BUILD_CONTRACT_CARD.md, test_cards.py 59 pass, item split, MAOI port to verify FAIL with 2
-  structural FIX); next chat starts at S159.md "Next (chat 3)" step 1 (sibling shells, retire spec, gate allowance,
-  then LEAD_NOTES and builder lanes for pc-snri and pc-antidep). Spend: agents 0 of 19, calls 0 of 440, tokens 0 of
-  18M; lead chats 1 and 2 about 50M of 110M.
+  Step: chat 3 done (shells, retire spec, gate retired_briefs, both builders BUILT, all 3 cards MECHANICAL PASS, drawer
+  retarget patch in 5 live briefs, S3 page checks PASS: gate, render, preflight, vendor, squeeze, pointer_check);
+  next chat starts at S159.md "Next (chat 4)" step 1 (S4 review round 1: cards full round, live briefs patch review).
+  Spend: agents 2 of 19, calls 107 of 440, tokens 11.86M of 18M (builders over plan by 1.86M); lead chats 1 to 3
+  about 75M of 110M.
 
 - **Previous: s158 SHIPPED 2026-10-30** (Claude lead; four new psych briefs: trauma-stress, cluster-c, sexual-dysfunction,
   stages-change (lookup); drawer pointers in 11 live briefs): commit 98b3f1b, page 00395be2f003 (approved candidate
