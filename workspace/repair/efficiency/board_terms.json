@@ -1766,5 +1766,41 @@
   "pharyngoesophageal diverticulum",
   "pulsion diverticulum",
   "Zenker"
+ ],
+ "pc-benzo": [
+  "alprazolam",
+  "benzodiazepine",
+  "chlordiazepoxide",
+  "clonazepam",
+  "diazepam",
+  "flumazenil",
+  "lorazepam",
+  "midazolam",
+  "oxazepam",
+  "temazepam",
+  "triazolam",
+  "rebound anxiety",
+  "paradoxical agitation"
+ ],
+ "pc-anxiety": [
+  "buspirone",
+  "hydroxyzine",
+  "5-HT1A"
+ ],
+ "pc-sleep": [
+  "eszopiclone",
+  "ramelteon",
+  "zaleplon",
+  "zolpidem",
+  "doxepin",
+  "sleep driving",
+  "nonbenzodiazepine hypnotic",
+  "Z-drug"
+ ],
+ "pc-orexin": [
+  "suvorexant",
+  "lemborexant",
+  "daridorexant",
+  "orexin antagonist"
  ]
 }

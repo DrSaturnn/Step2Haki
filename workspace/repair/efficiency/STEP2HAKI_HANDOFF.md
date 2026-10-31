@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-31, by Claude (s156 shipped 6a35e83; no open batch; next s160 after the NBME-item decision).
+Last updated: 2026-10-31, by Claude (s160 open, chat 1).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,8 +12,12 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **No open batch.** s156 SHIPPED 2026-10-31 (below). Next: s160 (Psych Pharmacology B2) once Jonathan gives the
-  NBME-item display decision; prompt under "Next launch prompt".
+- **Open batch: s160** (Psych Pharmacology B2 of 4; launched 2026-10-31 17:38; Claude lead; wip/s160 in both repos;
+  batch file repair/s160/S160.md). Cards pc-benzo, pc-anxiety, adhd-meds (id kept), pc-sleep, pc-orexin, sud-meds (id
+  kept); sedatives retires into the four new cards; adhd-meds and sud-meds become cards in place (site layer
+  repair/s160/01_pharm_s160.json). Budget 25 agents, 810 calls, 50M (builders 8, 540, 40M; reviewers 17, 270, 10M);
+  lead 90M. Step: launch and lanes done (chat 1); next the pilot builders pc-benzo and sud-meds, then the other four.
+  Spend: 0 agents.
 
 - **Previous: s156 SHIPPED 2026-10-31** (Claude lead; Phase 2, infectious disease B, pediatric: meningitis, dtap
   (lookup), lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever rebuilt on the decision spine):
