@@ -2,6 +2,29 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-10-31 s159: s159: Psych Pharmacology B1: section layer and three antidepressant class cards (MAOIs, SNRIs, Other antidepressants); antidep-other retired into them; drawers retargeted in 5 briefs
+
+```
+Page: 196 briefs, 2311 items -> 198 briefs, 2312 items
+Briefs added (3):
+  - pc-snri: SNRIs (3 items)
+  - pc-antidep: Other antidepressants (3 items)
+  - pc-maoi: MAOIs (3 items)
+Briefs REMOVED (1): antidep-other
+Briefs changed (5):
+  - mdd (Major Depressive Disorder): prose edited (-45 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (-38 chars)
+  - adhd-meds (ADHD Medications): prose edited (-42 chars)
+  - sud-meds (Medications for Substance Use Disorders): prose edited (-20 chars)
+  - tca-tox (Anticholinergic and Tricyclic Toxicity): prose edited (-6 chars)
+Other page changes (nav, headers, scripts): +5538 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 198 briefs, 2312 items (809 with reasons), 23 scripts, 40 checks, base HEAD | allowlisted 9 (2 stale allowlist line(s): pairs-with adhd-meds:snris_atypical_antidepressants_and_maois; pairs-with sud-meds:snris_atypical_antidepressants_and_maois) | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 198 | bankwraps 198 | mcq 2312 (reasons 809) (axCheck 2312, reveal-only 0) | malformed 0 | crit gridded 130/130 | vignette gridded 52/52 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-10-30 s158: s158: four new psych briefs (Trauma, Stress and Dissociative Disorders; Cluster C Personality Disorders; Sexual Dysfunction; Stages of Change and Motivational Interviewing) and drawer pointers in 11 briefs
 
 ```
