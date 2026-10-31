@@ -40,6 +40,7 @@ html body #nav #navlinks a.pc-plan{color:var(--faint)!important;-webkit-text-fil
 .brief.pc .pc-blocks{margin-top:18px}
 .brief.pc .pc-note{margin:6px 0 0;font-size:14px;color:var(--muted)}
 .brief.pc .pc-tbl{margin-top:18px}
+@media (min-width:641px){.brief.pc .pc-tbl table{table-layout:fixed}.brief.pc .pc-tbl th:nth-child(1){width:33%}.brief.pc .pc-tbl th:nth-child(2){width:30%}.brief.pc .pc-tbl th:nth-child(3){width:37%}}
 .brief.pc .pc-lcw{margin-top:18px}
 .brief.pc .pc-owners{margin:20px 0 0;padding:12px 18px;border-radius:var(--r-sub);background:var(--recess);box-shadow:var(--inner-2)}
 .brief.pc .pc-owners .lbl{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
