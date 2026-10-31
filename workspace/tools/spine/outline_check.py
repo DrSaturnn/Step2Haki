@@ -425,6 +425,16 @@ class Check:
         if self.page and os.path.exists(self.page):
             h = P.read_page(self.page)
             ids_on_page = set(re.findall(r'class="brief[^"]*" id="([^"]+)"', h)) | set(re.findall(r'class="alias" id="([^"]+)"', h))
+            # s159 chat 3: a same-batch brief or card that is still a pending shell (basepage applies it to every build
+            # and verify) is a valid drawer target, as on the base page (pc-snri could not drawer to pc-maoi)
+            try:
+                import basepage
+                for f in basepage.pending(None, h):
+                    nid = basepage._new_id(json.load(open(f, encoding='utf-8')))
+                    if nid:
+                        ids_on_page.add(nid)
+            except (ImportError, OSError, ValueError):
+                pass
         self.html = ''
         self.s1()
         self.s2(ids_on_page)
