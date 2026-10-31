@@ -23,6 +23,11 @@ from collections import Counter, defaultdict
 K = 10
 
 
+# s160: briefs.json is written from the page by tools/briefs_json.py (page text in another wrapping), so it is judged by
+# the page limit like index.html, not as a file carrying new vendor text
+PAGE_FILES = ('index.html', 'briefs.json')
+
+
 def words(txt):
     t = re.sub(r'<script\b.*?</script>|<style\b.*?</style>', ' ', txt, flags=re.S | re.I)
     # the per-choice reasons (s148g) live in attributes on the bank items: their text is scanned like any visible text
@@ -213,7 +218,7 @@ def main(argv):
             continue
         sh = shingles(words(t))
         hit = sh & src.keys()
-        if os.path.basename(p) != 'index.html':
+        if os.path.basename(p) not in PAGE_FILES:
             hit = file_hits(hit - page_sh, src)
         key = p
         prev = res.get(key)
@@ -237,8 +242,8 @@ def main(argv):
         for a, b in spans[:40]:
             print('  [%d words] %s' % (b - a, ' '.join(t[a:b])[:300]))
         return 0
-    flagged = {p: r for p, r in res.items() if r['shared'] >= mn and os.path.basename(p) != 'index.html'}
-    idx = {p: r for p, r in res.items() if os.path.basename(p) == 'index.html'}
+    flagged = {p: r for p, r in res.items() if r['shared'] >= mn and os.path.basename(p) not in PAGE_FILES}
+    idx = {p: r for p, r in res.items() if os.path.basename(p) in PAGE_FILES}
     # published pages paraphrase the sources, so a few 10-word matches (vitals, lab strings, term
     # lists) are expected; a page fails above --index-max percent of its shingles or with a shared
     # run longer than --run-max words (a copied sentence or more).

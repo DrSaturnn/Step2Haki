@@ -354,9 +354,11 @@ class Verify:
         words it held. A qualified number left bare, or a hedge dropped from a kept line, still fails."""
         if re.search(r'\bP1 0\b', out):
             return True
-        lines = [l for l in out.splitlines() if 'P1 hedge-loss' in l]
+        # s160: a one-brief verify judges only its own brief's P1 lines; another brief's hedge loss on the base page
+        # (a site layer that turns briefs into shells, a sibling retirement) is that brief's own lane's to answer
+        lines = [l for l in out.splitlines() if 'P1 hedge-loss' in l and (l.split()[2:3] == [self.bid])]
         if not lines:
-            return False
+            return 'P1 hedge-loss' in out  # only other briefs' lines (s160); no P1 report at all still fails
         # s148: a qualified number whose only qualified lines left with a cut listed in cuts.json (text gone from the
         # brief, the number in it) is held by that cut; bare uses elsewhere (eg item stems) are not the old claim
         for l in [l for l in lines if 'hedge words fell' not in l]:
