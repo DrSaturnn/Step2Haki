@@ -4,7 +4,7 @@ Jonathan, 2026-10-26: "Add whatever is needed so this issue does not happen agai
 ran to about 280k context before any edit). Project copy claude/RESUME.md; repo copy repair/efficiency/RESUME.md.
 
 **Open batch: s156** (resumed after the s159 ship 2026-10-31; branch **wip/s156** in both repos, main merged in; batch
-file repair/s156/S156.md; next step: that branch's handoff State, as parked 2026-10-29). (The lead rewrites this
+file repair/s156/S156.md; next step: S8 report; S7 done 2026-10-31, all seven READY; that branch's handoff State). (The lead rewrites this
 line, here and in the project copy claude/RESUME.md, when a batch opens or ships; "none" means no batch is open and a
 launch prompt is needed.)
 
