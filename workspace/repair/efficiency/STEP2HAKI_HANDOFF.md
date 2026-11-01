@@ -15,11 +15,12 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 - **Open batch: s160** (Psych Pharmacology B2 of 4; launched 2026-10-31 17:38; Claude lead; wip/s160 in both repos;
   batch file repair/s160/S160.md). Cards pc-benzo, pc-anxiety, adhd-meds (id kept), pc-sleep, pc-orexin, sud-meds (id
   kept); sedatives retires into the four new cards; adhd-meds and sud-meds become cards in place (site layer
-  repair/s160/01_pharm_s160.json). Budget 25 agents, 810 calls, 50M (builders 8, 540, 40M; reviewers 17, 270, 10M);
-  lead 90M. Step: all six cards BUILT (chat 1); builders 8 agents, 485 calls, 47.60M of the 50M agent total.
-  Next: S3 remainder per S160.md "Next (chat 2)"; reviewer budget needs Jonathan (2.4M left). Old note: builders for adhd-meds, pc-sleep, pc-anxiety,
-  pc-orexin running (chat 1); then the drawer patch lane and S3 page checks; then the S3 restart. Was: pilots relaunched; then the
-  pilot gate and the other four (agents so far 4 of 8 builders).
+  repair/s160/01_pharm_s160.json). Budget 25 agents, 810 calls, 57.6M (raised 2026-11-01, Jonathan "10M" for
+  reviewers: builders 8, 540, 47.60M as spent; reviewers 17, 270, 10M); lead 90M. Step: S3 chat 2: steps 1 to 4
+  prepared (all six cards and pc-antidep MECHANICAL PASS; 50 lost web sources re-fetched and confirmed, 47 identical;
+  shells and 10_ files in repair/s160; coverage row to pc-benzo; drawer delta folders written by local/s160/chat2/gen.py).
+  Next: `patch.py s3 s160 tics peds-sleep panic stages-change`, gate PASS with the 3 temporary allowlist lines stale;
+  then S160.md "Next (chat 2)" step 5 and the restart before S4.
   Spend: 0 agents.
 
 - **Previous: s156 SHIPPED 2026-10-31** (Claude lead; Phase 2, infectious disease B, pediatric: meningitis, dtap

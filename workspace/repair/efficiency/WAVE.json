@@ -15,7 +15,7 @@
   ],
   "max_agents": 25,
   "max_calls": 810,
-  "max_tokens": 50000000,
+  "max_tokens": 57600000,
   "set_by": "Jonathan, s160 launch 2026-10-31 (\"Step2Haki: launch batch s160 (Psych Pharmacology section, batch 2 of 4: Benzodiazepines, Other anxiety agents, Sleep agents, Orexin antagonists, ADHD, Substance use and cessation) per claude/BATCH_RUNBOOK.md, claude/pending/PSYCH_PHARM_V2.md, claude/pending/PSYCH_PHARM_BATCHES.md and claude/CARD_SPEC.md. sedatives, adhd-meds and sud-meds retire into the cards (items carried with ids; drawers retargeted). NBME items owned by another brief: the card shows the NBME framing and links to the item in its owning brief; the item does not move. Budget: 25 agents, 810 calls, 50M agent tokens (builders 8, 540, 40M; reviewers 17, 270, 10M); lead 90M.\")",
   "previous": {
     "id": "s156",
@@ -333,18 +333,20 @@
     "s160": {
       "agents": 25,
       "calls": 810,
-      "tokens": 50000000,
+      "tokens": 57600000,
       "lead_tokens": 90000000,
       "builders": {
         "agents": 8,
         "calls": 540,
-        "tokens": 40000000
+        "tokens": 47600000,
+        "note": "spent 47.60M at S3 (plan 40M); set to the spend by the 2026-11-01 raise"
       },
       "reviewers": {
         "agents": 17,
         "calls": 270,
         "tokens": 10000000
-      }
+      },
+      "raised": "Jonathan 2026-11-01 (s160 chat 2, his answer to the lead's question \"What reviewer amount do you approve for s160?\"): \"10M\". Agent total 50M to 57.6M: builders as spent 47.60M, reviewers 10M (17 agents, 270 calls) as planned."
     }
   },
   "max_lead_tokens": 90000000,
