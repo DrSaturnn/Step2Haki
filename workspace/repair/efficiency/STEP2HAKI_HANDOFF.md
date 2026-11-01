@@ -16,11 +16,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   batch file repair/s160/S160.md). Cards pc-benzo, pc-anxiety, adhd-meds (id kept), pc-sleep, pc-orexin, sud-meds (id
   kept); sedatives retires into the four new cards; adhd-meds and sud-meds become cards in place (site layer
   repair/s160/01_pharm_s160.json). Budget 25 agents, 810 calls, 57.6M (raised 2026-11-01, Jonathan "10M" for
-  reviewers: builders 8, 540, 47.60M as spent; reviewers 17, 270, 10M); lead 90M. Step: S3 DONE (chat 2): six
-  cards and pc-antidep MECHANICAL PASS; drawer patch lane (tics, peds-sleep, panic, stages-change) mech PASS; batch page
-  gate PASS with the 3 temporary allowlist lines stale; squeeze 0, pointers 55 with 1 pre-existing (tics). 50 lost web
-  sources re-fetched and confirmed (47 identical). Next: S4 round 1 per S160.md "Next (chat 3)".
-  Spend: 0 agents.
+  reviewers: builders 8, 540, 47.60M as spent; reviewers 17, 270, 10M); lead 90M. Step: S4 round 1 DONE, S5 adjudicated (chat 3): patch lane PASS 15/15 (tics, peds-sleep, panic, stages-change,
+  pc-antidep READY); cards acc pc-anxiety PASS, pc-orexin PASS-IF, 4 FAIL; read 6 FAIL; flags 2 PASS-IF, 4 FAIL;
+  adjudication repair/s160/adj_r1.md (28 fixes). Next: S5 fixes, S6, S7 round 2 per S160.md "Next (chat 4)".
+  Spend: reviewers 7 agents, 89 calls, 4.18M of 10M.
 
 - **Previous: s156 SHIPPED 2026-10-31** (Claude lead; Phase 2, infectious disease B, pediatric: meningitis, dtap
   (lookup), lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever rebuilt on the decision spine):
