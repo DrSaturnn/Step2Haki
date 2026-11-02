@@ -4,6 +4,7 @@ Jonathan, 2026-10-26: "Add whatever is needed so this issue does not happen agai
 ran to about 280k context before any edit). Project copy claude/RESUME.md; repo copy repair/efficiency/RESUME.md.
 
 **Open batch: s161** (branch wip/s161 in both repos; launched 2026-11-02; Psych Pharmacology B3).
+(The lead rewrites this
 line, here and in the project copy claude/RESUME.md, when a batch opens or ships; "none" means no batch is open and a
 launch prompt is needed.)
 
