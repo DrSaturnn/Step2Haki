@@ -1,0 +1,142 @@
+{
+ "batch": "s160",
+ "plan_step": "s160",
+ "round": 2,
+ "context": "batch s160 (Psych Pharmacology B2) builds six class cards in the Psychiatry Medications section: pc-benzo (Benzodiazepines), pc-anxiety (Other anxiety agents), adhd-meds (ADHD; rewritten as a card in place, id kept), pc-sleep (Sleep agents), pc-orexin (Orexin antagonists) and sud-meds (Substance use and cessation; rewritten as a card in place, id kept); sedatives retires into pc-benzo, pc-anxiety, pc-sleep and pc-orexin (its bank items move with ids unchanged). A class card has no decision spine: RULES.md in each folder gives the card rules (CARD_SPEC.md). This is review round 2: changes.md in each card folder diffs the card against the version you (round 1) last judged; judge every changed line and whether each round 1 finding of yours is resolved, not the whole card again",
+ "out": "repair/efficiency/lanes/s160/r2",
+ "packets": "repair/migration/spine/packets/s160r2",
+ "sheets": "local/s160/shots",
+ "lanes": [
+  {
+   "part": "acc",
+   "group": "A",
+   "briefs": [
+    "pc-benzo",
+    "pc-sleep"
+   ],
+   "budget": 16
+  },
+  {
+   "part": "acc",
+   "group": "B",
+   "briefs": [
+    "adhd-meds",
+    "pc-orexin",
+    "sud-meds"
+   ],
+   "budget": 20
+  },
+  {
+   "part": "read",
+   "group": "A",
+   "briefs": [
+    "pc-benzo",
+    "pc-anxiety",
+    "pc-sleep"
+   ],
+   "budget": 16
+  },
+  {
+   "part": "read",
+   "group": "B",
+   "briefs": [
+    "adhd-meds",
+    "pc-orexin",
+    "sud-meds"
+   ],
+   "budget": 16
+  },
+  {
+   "part": "flags",
+   "group": "A",
+   "briefs": [
+    "pc-anxiety",
+    "pc-sleep"
+   ],
+   "budget": 12
+  },
+  {
+   "part": "flags",
+   "group": "B",
+   "briefs": [
+    "adhd-meds",
+    "pc-orexin",
+    "sud-meds"
+   ],
+   "budget": 16
+  }
+ ],
+ "types": {
+  "pc-benzo": "class card \"Benzodiazepines\" (alprazolam, lorazepam, clonazepam, diazepam, chlordiazepoxide, oxazepam, temazepam, midazolam, triazolam); owns benzodiazepine uses, half-life classes, dependence, withdrawal timing, overdose and the older-adult caution; has a withdrawal timeline chart; carries the NBME item psych-cms-434831 (moved from sedatives with its id); review in full",
+  "pc-anxiety": "class card \"Other anxiety agents\" (buspirone, hydroxyzine, gabapentin, pregabalin); owns the non-benzodiazepine anxiolytic choices and their adverse effects; review in full",
+  "pc-sleep": "class card \"Sleep agents\" (nonbenzodiazepine hypnotics zolpidem, zaleplon, eszopiclone; ramelteon); owns hypnotic choice, complex sleep behaviors and ramelteon; review in full",
+  "pc-orexin": "class card \"Orexin antagonists\" (suvorexant, lemborexant, daridorexant); owns the orexin antagonist mechanism, uses and contraindications; review in full",
+  "adhd-meds": "class card \"ADHD\" (stimulants, atomoxetine, alpha-2 agonists); rewritten in place from the s157 brief (id and bank item ids kept); owns ADHD drug choice and adverse effects; carries the NBME framing of psych-cms7-932e72 with a drawer to disruptive-behavior (the item stays in its owning brief); review in full",
+  "sud-meds": "class card \"Substance use and cessation\" (naltrexone, acamprosate, disulfiram, buprenorphine, methadone, varenicline, nicotine replacement); rewritten in place from the s157 brief (id and bank item ids kept); owns the medication choices for alcohol, opioid and tobacco use disorders, opioid use disorder in pregnancy and the tobacco efficacy order; review in full"
+ },
+ "notes": {
+  "acc": [
+   "Where a board source (AnKing card, UWorld, NBME) and a guideline or label differ, the card teaches the board answer and puts the other in an \"In practice:\" hover: the hover is intended, not a finding.",
+   "Word counts are not judged (2026-10-19 layers rule: nothing is cut for length).",
+   "Trade names appear only with a current DailyMed label (CARD_SPEC section 4). Lead calls, not findings: Librium, Halcion, Serax, Dalmane, Tranxene (pc-benzo), BuSpar, Atarax, Vistaril (pc-anxiety) and Sonata (pc-sleep) are left out (no current label).",
+   "A line marked with the unverified mark (span.pc-uv) is a pharm document line with no board source yet: judge whether it is true, not whether a board source exists.",
+   "Bank items moved from sedatives, adhd-meds and sud-meds are verbatim with ids unchanged; judge their accuracy like any line.",
+   "Audit cards_disposition.json against cards.md: every covered entry must name claim ids that teach the card."
+  ],
+  "read": [
+   "A class card has no decision spine: judge it by RULES.md (the card layout), not by spine step structure. Pause point labels, \"Where the choice is made\" and \"Practice\" are site conventions.",
+   "Not to report: card length or word count (2026-10-19 layers rule).",
+   "drawer_targets.txt lists in-page anchors as MISSING when they are section anchors, not broken brief links.",
+   "sedatives is retired in this batch (its title is an alias span on the page); a pointer to it would be a finding, its absence is not.",
+   "Lead calls (do not report the choice; judge wording): ADHD drug-choice lines stay on adhd-meds (there is no ADHD diagnosis brief to own them); opioid use disorder in pregnancy and the tobacco efficacy order stay on sud-meds (no live owner); trade names left out where no current label exists; the complex-sleep-behavior boxed warning sits only in a hover on pc-sleep."
+  ],
+  "flags": [
+   "line_sources.txt cuts each quote at 600 characters (a known packet limit); facts.json in the same folder holds every quote whole. Before reporting that a quote does not support a line, Grep facts.json for the fact id.",
+   "Word counts are not judged (2026-10-19 layers rule).",
+   "Builder and lead lint answers (not findings unless the line now overstates its quote): pc-benzo 1 warn answered in its receipt (two windows, not two thresholds); sud-meds S146 opioid withdrawal \"4 to 12 hours\" and its peak: the lint found 12 and 48 in no cited quote (check the quotes and report if unsupported).",
+   "Preflight P1 hedge losses against the s157 briefs (judge each: a lost hedge is a finding only when the line now overstates its quote): adhd-meds \"about\" -4, \"can\" -3, \"most\" -2, \"often\" -1; sud-meds \"may\" -2, \"most\" -7, \"often\" -1, \"typically\" -1.",
+   "cuts.json, where present, records content removed because no board source supported it; a cut is not a finding."
+  ]
+ },
+ "extra_judge": {
+  "acc": [
+   "Check specifically pc-orexin: the Key point now says \"the board answer for physical dependence is none or low\" and Adverse effects adds \"Suicidal ideation, dose-related (label)\" (fix 19); judge both against facts.json.",
+   "Check specifically pc-sleep: the REM sleep behavior disorder line now gives melatonin first, clonazepam if symptoms persist (UWorld library fact r01); MSD orders clonazepam first. Judge the line against the board sources, not MSD order."
+  ],
+  "read": [
+   "Check specifically: ownership seams. pc-benzo against panic, substance (alcohol withdrawal), toxidrome (overdose, flumazenil) and peds-sleep; pc-anxiety against panic and pc-benzo; pc-sleep against peds-sleep, pc-orexin and pc-antidep (trazodone, mirtazapine); pc-orexin against pc-sleep; adhd-meds against disruptive-behavior and tics (alpha-2 agonists); sud-meds against substance, pc-antidep (bupropion), antipsych-effects (clozapine after quitting smoking) and stages-change. Report a line that re-teaches an owned decision, or a pointer whose target does not own it."
+  ]
+ },
+ "prior": {
+  "acc": {
+   "pc-benzo": "repair/efficiency/lanes/s160/r1/acc-A/pc-benzo/receipt.md",
+   "pc-sleep": "repair/efficiency/lanes/s160/r1/acc-A/pc-sleep/receipt.md",
+   "adhd-meds": "repair/efficiency/lanes/s160/r1/acc-B/adhd-meds/receipt.md",
+   "pc-orexin": "repair/efficiency/lanes/s160/r1/acc-B/pc-orexin/receipt.md",
+   "sud-meds": "repair/efficiency/lanes/s160/r1/acc-B/sud-meds/receipt.md"
+  },
+  "read": {
+   "pc-benzo": "repair/efficiency/lanes/s160/r1/read-A/pc-benzo/receipt.md",
+   "pc-anxiety": "repair/efficiency/lanes/s160/r1/read-A/pc-anxiety/receipt.md",
+   "pc-sleep": "repair/efficiency/lanes/s160/r1/read-A/pc-sleep/receipt.md",
+   "adhd-meds": "repair/efficiency/lanes/s160/r1/read-B/adhd-meds/receipt.md",
+   "pc-orexin": "repair/efficiency/lanes/s160/r1/read-B/pc-orexin/receipt.md",
+   "sud-meds": "repair/efficiency/lanes/s160/r1/read-B/sud-meds/receipt.md"
+  },
+  "flags": {
+   "pc-anxiety": "repair/efficiency/lanes/s160/r1/flags-A/pc-anxiety/receipt.md",
+   "pc-sleep": "repair/efficiency/lanes/s160/r1/flags-A/pc-sleep/receipt.md",
+   "adhd-meds": "repair/efficiency/lanes/s160/r1/flags-B/adhd-meds/receipt.md",
+   "pc-orexin": "repair/efficiency/lanes/s160/r1/flags-B/pc-orexin/receipt.md",
+   "sud-meds": "repair/efficiency/lanes/s160/r1/flags-B/sud-meds/receipt.md"
+  }
+ },
+ "adjudication": {
+  "pc-benzo": "repair/s160/adj_r2_context.md",
+  "pc-anxiety": "repair/s160/adj_r2_context.md",
+  "adhd-meds": "repair/s160/adj_r2_context.md",
+  "pc-sleep": "repair/s160/adj_r2_context.md",
+  "pc-orexin": "repair/s160/adj_r2_context.md",
+  "sud-meds": "repair/s160/adj_r2_context.md"
+ }
+}
