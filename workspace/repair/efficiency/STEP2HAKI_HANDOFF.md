@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-10-31, by Claude (s160 open, chat 1).
+Last updated: 2026-11-02, by Claude (s160 shipped).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,13 +12,20 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open batch: s160** (Psych Pharmacology B2 of 4; launched 2026-10-31 17:38; Claude lead; wip/s160 in both repos;
-  batch file repair/s160/S160.md). Cards pc-benzo, pc-anxiety, adhd-meds (id kept), pc-sleep, pc-orexin, sud-meds (id
-  kept); sedatives retires into the four new cards; adhd-meds and sud-meds become cards in place (site layer
-  repair/s160/01_pharm_s160.json). Budget 25 agents, 810 calls, 57.6M (raised 2026-11-01, Jonathan "10M" for
-  reviewers: builders 8, 540, 47.60M as spent; reviewers 17, 270, 10M); lead 90M. Step: S8 presented 2026-11-02 (chat 7): verify_all 11 of 11 READY; gate, render PASS; approval s160 page
-  31727475b3d6; report repair/s160/S8_REPORT.md sent. Next: S9 on Jonathan's "ship" in this chat (S160.md "Next (S9").
-  Spend: wave 28 agents, 697 calls, 57.48M of 58.1M; lead 121.7M of 90M (6 rows; over).
+- **No open batch.** A launch prompt is needed (Next launch prompt below: Psych Pharmacology B3, s161, after
+  Jonathan's Q4 answer).
+
+- **Previous: s160 SHIPPED 2026-11-02** (Claude lead; Psych Pharmacology B2 of 4: pc-benzo, pc-anxiety, adhd-meds
+  (card in place, id kept), pc-sleep, pc-orexin, sud-meds (card in place, id kept); sedatives retired into the four new
+  cards (alias span before pc-benzo); drawers retargeted in tics, peds-sleep, panic, stages-change, pc-antidep): commit
+  8a42a4b, page 92d62c3d794b (approved candidate 31727475b3d6); version.json not checked
+  here (fetch permission withdrawn), Jonathan checks the live site. Wave 28 agents, 697 calls,
+  57.48M of 58.1M (builders 47.60M; reviewers 9.88M); lead 7 chats, 121.7M measured of 90M (over). The first ship run
+  aborted at the ready gate: two folders claim each kept id (s157 psych/ADHD, psych/SUDM and the card folders
+  pharm/ADHD, pharm/SUD); Jonathan chose the gate fix: ready_gate verifies the folder whose 10_ file matches the
+  batch copy. The 3 s160 temporary allowlist lines deleted after ship.sh; gate on the shipped page 0 failures, 0
+  stale. Record repair/s160/S160.md (S8, S9) and S8_REPORT.md. Open: OPEN_WORK s160 line (pregabalin requote and
+  label, optional LOWs, no ADHD diagnosis brief). Next pharm batch B3 (s161) needs Jonathan's Q4 answer first.
 
 - **Previous: s156 SHIPPED 2026-10-31** (Claude lead; Phase 2, infectious disease B, pediatric: meningitis, dtap
   (lookup), lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever rebuilt on the decision spine):
@@ -44,45 +51,16 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   calls, 26.13M of 58M; lead 6 chats, about 80M of 80M. Record repair/s158/S158.md (S8, S9). Open: the source calls and
   tool notes in OPEN_WORK (s158 line).
 
-- **Previous: s157b SHIPPED 2026-10-30** (Claude lead; patch of the 2026-10-29 NBME intake, Psychiatry CMS Form 8:
-  toxidrome, antipsych-effects, ssri-effects, mood-anticonv): commit 50bef79, page d3e594f55987; main (8883ae5) merged
-  into wip/s156 in both repos on 2026-10-30, branch State and WAVE kept (s157b budget added to batch_budgets). The s156
-  batch page must be rebuilt on the new live page before its S8 (the four briefs above changed on main).
-
-- **Previous: s157 SHIPPED 2026-10-29** (Claude lead; psych pharm section, five new drug briefs in the Psychiatry
-  Medications subgroup: antidep-other, mood-anticonv, sedatives, adhd-meds, sud-meds; drawer pointers in substance, mdd,
-  bipolar-mania, ssri-effects, panic, tics, tca-tox, peds-sleep): commit ff25fba, page c2e028891b47 (approved
-  candidate 5e670282e349), version.json build s157. Agents 24 of 24; measured 14 agents, 378 calls, 43.75M of 72M
-  (chats 4 and 5 reviewers unmeasured, transcripts in reclaimed containers); lead 6 chats, about 90M of 90M. Record
-  repair/s157/S157.md (S8, S9). Open: tics Pairs with unlinked row (pre-existing); mood-anticonv no clue table; deferred
-  LOWs adhd-meds, sud-meds (OPEN_WORK). Tool notes: resume.py still misses the "- **Open batch:" bullet; batch.py s8
-  skips present on any pointer_check problem, pre-existing included; ledger loses agents whose chat container was
-  reclaimed before usage_ledger ran (run it at the end of every chat that launches agents).
-
-- **Previous: s155** SHIPPED 2026-10-29 (Claude lead; Phase 2, infectious disease A, seven briefs rebuilt on
-  the decision spine: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis, bs-isolation, bs-foodborne; hiv-vax and
-  bs-isolation as lookups): commit e1eb23b (main 32bcf37 after merging main's 29b928d, a docs-only older State),
-  page a1878d5c4db1 (approved candidate 5bf0352e0aaf), version.json build s155. Agents 25 of 32, 709 calls, 75.39M of
-  76M (builders 64.16M; reviewers 11.23M of the 11M plan); lead 9 chats, about 81M of 100M. Record repair/s155/S155.md
-  (S8 and S9). Report flags carried for Jonathan: cervicitis 2-week test of cure (card, no QID; CDC 3 to 4 weeks in a
-  hover), bs-foodborne infant drug for high-risk nontyphoidal Salmonella (no board source), bs-isolation mumps endpoint
-  (MSD vs CDC/AAP 5 days, unverified), bs-anaphylaxis scombroid epinephrine (card, no QID), hiv-vax Tdap window owned
-  by preg-vax, bs-isolation scabies 24 hours carried unsourced; word overages tb, cervicitis, rmsf, bs-foodborne.
-  Tool notes: resume.py misreads the "- **Open batch: sNN**" bullet; verify pools replacements only from each part's
-  latest receipt; batch.py ship needs AX_SESSION as the full session URL; one-brief verifies need an allowlist line for
-  a live-only gate finding that the batch removes (restored for S8, deleted at ship). Next: s156 (prompt below).
-
-Older State bullets (s154 to s154j and the 2026-10-26/28 NBME intakes) moved to repair/efficiency/STATE_ARCHIVE.md at
-the s159 ship (runbook S9: keep the start-up files small).
+Older State bullets (s155, s157 and s157b at the s160 ship; s154 to s154j and the 2026-10-26/28 NBME intakes at the
+s159 ship) moved to repair/efficiency/STATE_ARCHIVE.md (runbook S9: keep the start-up files small).
 
 ## Next launch prompt (paste into a fresh chat)
 
-Psych Pharmacology B2 (s160), now that s156 has shipped, and only after Jonathan decides how a card shows an NBME
-item owned by another brief (PSYCH_PHARM_BATCHES.md section 6 "Before B2"; recommendation: NBME framing on the card, a
-link to the item in its owning brief, the item does not move). Budget proposed by the s159 report (measured 5.9M per
-card for builders): builders 8, 540, 40M; reviewers 17, 270, 10M; lead 90M; Jonathan sets it at launch.
+Psych Pharmacology B3 (s161), only after Jonathan answers Q4 (PSYCH_PHARM_BATCHES.md: keep or shrink the deep briefs
+ssri-effects, tca-tox and lithium-effects beside their cards). Budget proposed by the s160 report: builders 6, 450,
+42M (large lanes budgeted at 100 calls up front); reviewers 18, 230, 10M; lead 100M; Jonathan sets it at launch.
 ```
-Step2Haki: launch batch s160 (Psych Pharmacology section, batch 2 of 4: Benzodiazepines, Other anxiety agents, Sleep agents, Orexin antagonists, ADHD, Substance use and cessation) per claude/BATCH_RUNBOOK.md, claude/pending/PSYCH_PHARM_V2.md, claude/pending/PSYCH_PHARM_BATCHES.md and claude/CARD_SPEC.md. sedatives, adhd-meds and sud-meds retire into the cards (items carried with ids; drawers retargeted). NBME items owned by another brief: <Jonathan's decision>. Budget: 25 agents, 810 calls, 50M agent tokens (builders 8, 540, 40M; reviewers 17, 270, 10M); lead 90M.
+Step2Haki: launch batch s161 (Psych Pharmacology section, batch 3 of 4: SSRIs, TCAs, Lithium and anticonvulsants, Cognitive agents, Other agents) per claude/BATCH_RUNBOOK.md, claude/pending/PSYCH_PHARM_V2.md, claude/pending/PSYCH_PHARM_BATCHES.md and claude/CARD_SPEC.md. mood-anticonv retires into Lithium and anticonvulsants (id kept; items carried with ids; drawers retargeted). Q4: <Jonathan's decision>. Budget: 24 agents, 680 calls, 52M agent tokens (builders 6, 450, 42M; reviewers 18, 230, 10M); lead 100M.
 ```
 
 NBME presentation layer mockup (no batch; Jonathan 2026-10-26: cross-domain question types first, then how NBME

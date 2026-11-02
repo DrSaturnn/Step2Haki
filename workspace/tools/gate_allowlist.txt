@@ -14,8 +14,3 @@ K3 anemia-thrombocytopenia:mnemonic  # pre-existing: mnemonic has no recorded so
 K3 bs-torch:mnemonic  # pre-existing: mnemonic has no recorded source; verify it is widely taught (add data-mn-src) or remove it | bs-torch mnemonic "Mnemonic" does not name its source: add data-mn-src naming the widely t
 K3 bs-adolescent-confid:mnemonic  # pre-existing: mnemonic has no recorded source; verify it is widely taught (add data-mn-src) or remove it | bs-adolescent-confid mnemonic "Mnemonic" does not name its source: add data-mn-src naming 
 
-# s160 (2026-10-31): one-card verify pages hold one built card; the other cards are shells and the patch lane has not
-# run, so these rows fail there; the batch page links them. Delete these three lines at the s160 ship (after ship.sh passes).
-nbme-coverage psych-cms7-932e72  # s160 temporary: one-card verify only (adhd-meds card NBME block); delete at the s160 ship
-nbme-coverage psych-cms-434831  # s160 temporary: one-card verify only (pc-benzo card NBME block); delete at the s160 ship
-pairs-with stages-change:medications_for_substance_use_disorders  # s160 temporary: patch lane retitles it; delete at the s160 ship

@@ -3,8 +3,8 @@
 Jonathan, 2026-10-26: "Add whatever is needed so this issue does not happen again" (s154f chat 3 read whole docs and
 ran to about 280k context before any edit). Project copy claude/RESUME.md; repo copy repair/efficiency/RESUME.md.
 
-**Open batch: s160** (Psych Pharmacology B2, launched 2026-10-31; branch wip/s160 in both repos; batch file
-repair/s160/S160.md). (The lead rewrites this
+**Open batch: none** (s160 shipped 2026-11-02; the next batch, Psych Pharmacology B3 s161, needs a launch prompt).
+(The lead rewrites this
 line, here and in the project copy claude/RESUME.md, when a batch opens or ships; "none" means no batch is open and a
 launch prompt is needed.)
 

@@ -2,6 +2,36 @@
 
 State bullets moved out of STEP2HAKI_HANDOFF.md to keep the start-up files small (runbook S9). Newest first.
 
+## Moved at the s160 ship (2026-11-02)
+
+- **Previous: s157b SHIPPED 2026-10-30** (Claude lead; patch of the 2026-10-29 NBME intake, Psychiatry CMS Form 8:
+  toxidrome, antipsych-effects, ssri-effects, mood-anticonv): commit 50bef79, page d3e594f55987; main (8883ae5) merged
+  into wip/s156 in both repos on 2026-10-30, branch State and WAVE kept (s157b budget added to batch_budgets). The s156
+  batch page must be rebuilt on the new live page before its S8 (the four briefs above changed on main).
+
+- **Previous: s157 SHIPPED 2026-10-29** (Claude lead; psych pharm section, five new drug briefs in the Psychiatry
+  Medications subgroup: antidep-other, mood-anticonv, sedatives, adhd-meds, sud-meds; drawer pointers in substance, mdd,
+  bipolar-mania, ssri-effects, panic, tics, tca-tox, peds-sleep): commit ff25fba, page c2e028891b47 (approved
+  candidate 5e670282e349), version.json build s157. Agents 24 of 24; measured 14 agents, 378 calls, 43.75M of 72M
+  (chats 4 and 5 reviewers unmeasured, transcripts in reclaimed containers); lead 6 chats, about 90M of 90M. Record
+  repair/s157/S157.md (S8, S9). Open: tics Pairs with unlinked row (pre-existing); mood-anticonv no clue table; deferred
+  LOWs adhd-meds, sud-meds (OPEN_WORK). Tool notes: resume.py still misses the "- **Open batch:" bullet; batch.py s8
+  skips present on any pointer_check problem, pre-existing included; ledger loses agents whose chat container was
+  reclaimed before usage_ledger ran (run it at the end of every chat that launches agents).
+
+- **Previous: s155** SHIPPED 2026-10-29 (Claude lead; Phase 2, infectious disease A, seven briefs rebuilt on
+  the decision spine: tb, hiv-vax, cervicitis, rmsf, bs-anaphylaxis, bs-isolation, bs-foodborne; hiv-vax and
+  bs-isolation as lookups): commit e1eb23b (main 32bcf37 after merging main's 29b928d, a docs-only older State),
+  page a1878d5c4db1 (approved candidate 5bf0352e0aaf), version.json build s155. Agents 25 of 32, 709 calls, 75.39M of
+  76M (builders 64.16M; reviewers 11.23M of the 11M plan); lead 9 chats, about 81M of 100M. Record repair/s155/S155.md
+  (S8 and S9). Report flags carried for Jonathan: cervicitis 2-week test of cure (card, no QID; CDC 3 to 4 weeks in a
+  hover), bs-foodborne infant drug for high-risk nontyphoidal Salmonella (no board source), bs-isolation mumps endpoint
+  (MSD vs CDC/AAP 5 days, unverified), bs-anaphylaxis scombroid epinephrine (card, no QID), hiv-vax Tdap window owned
+  by preg-vax, bs-isolation scabies 24 hours carried unsourced; word overages tb, cervicitis, rmsf, bs-foodborne.
+  Tool notes: resume.py misreads the "- **Open batch: sNN**" bullet; verify pools replacements only from each part's
+  latest receipt; batch.py ship needs AX_SESSION as the full session URL; one-brief verifies need an allowlist line for
+  a live-only gate finding that the batch removes (restored for S8, deleted at ship). Next: s156 (prompt below).
+
 ## Moved at the s159 ship (2026-10-31)
 
 - **Previous: s154i SHIPPED 2026-10-28 (Claude lead; patch of the 2026-10-28 NBME intake proposals,
