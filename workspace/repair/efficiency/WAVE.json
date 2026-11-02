@@ -13,16 +13,16 @@
   "patch-review",
   "patch-review-opus"
  ],
- "max_agents": 26,
+ "max_agents": 28,
  "max_calls": 810,
- "max_tokens": 57600000,
+ "max_tokens": 58100000,
  "set_by": "Jonathan, s160 launch 2026-10-31 (\"Step2Haki: launch batch s160 (Psych Pharmacology section, batch 2 of 4: Benzodiazepines, Other anxiety agents, Sleep agents, Orexin antagonists, ADHD, Substance use and cessation) per claude/BATCH_RUNBOOK.md, claude/pending/PSYCH_PHARM_V2.md, claude/pending/PSYCH_PHARM_BATCHES.md and claude/CARD_SPEC.md. sedatives, adhd-meds and sud-meds retire into the cards (items carried with ids; drawers retargeted). NBME items owned by another brief: the card shows the NBME framing and links to the item in its owning brief; the item does not move. Budget: 25 agents, 810 calls, 50M agent tokens (builders 8, 540, 40M; reviewers 17, 270, 10M); lead 90M.\")",
  "previous": {
   "id": "s156",
   "note": "s156 shipped 6a35e83 2026-10-31 (Claude lead); wave 27 agents, 663 calls, 70.02M of 78M; lead 7 chats, about 83M of 90M"
  },
  "opened": "2026-10-31 17:38 EDT",
- "note": "s160 open (Claude lead): Psych Pharmacology B2 of 4, six class cards; S1 to S3 by builder agents; 2026-11-02 Jonathan approved 1 more reviewer agent for the S7 round 4 confirmation round (agents 25 -> 26; calls and tokens unchanged)",
+ "note": "s160 open (Claude lead): Psych Pharmacology B2 of 4, six class cards; S1 to S3 by builder agents; 2026-11-02 Jonathan approved 1 more reviewer agent for the S7 round 4 confirmation round (agents 25 -> 26; calls and tokens unchanged); 2026-11-02 Jonathan approved 2 more Sonnet reviewers and about 0.5M tokens for the pc-sleep read and flags re-check (agents 26 -> 28, tokens 57.6M -> 58.1M)",
  "batch_budgets": {
   "s138": {
    "agents": 20,

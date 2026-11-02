@@ -16,10 +16,9 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   batch file repair/s160/S160.md). Cards pc-benzo, pc-anxiety, adhd-meds (id kept), pc-sleep, pc-orexin, sud-meds (id
   kept); sedatives retires into the four new cards; adhd-meds and sud-meds become cards in place (site layer
   repair/s160/01_pharm_s160.json). Budget 25 agents, 810 calls, 57.6M (raised 2026-11-01, Jonathan "10M" for
-  reviewers: builders 8, 540, 47.60M as spent; reviewers 17, 270, 10M); lead 90M. Step: S7 round 4 DONE (2026-11-02; agents 25 -> 26 approved): pc-benzo, pc-anxiety, adhd-meds, pc-orexin,
-  sud-meds READY; pc-sleep NOT READY (read and flags stale after the acc accuracy fix to two hovers). Next: Jonathan's
-  choice per S160.md "Next (chat 7)" (2 more Sonnet agents for pc-sleep, or revert the two hovers), then S3 and the S8
-  restart. Spend: wave 26 agents, 690 calls, 57.34M of 57.6M; lead 105.91M of 90M (over).
+  reviewers: builders 8, 540, 47.60M as spent; reviewers 17, 270, 10M); lead 90M. Step: S7 done: all READY (2026-11-02; rounds 4 and 5 confirmation; WAVE 28 agents, 58.1M approved). Batch page
+  rebuilt (patch.py s3 s160: gate, render PASS). Next: S8 in a fresh chat (S160.md "Next (S8 chat)"; report items in
+  the chat 6 sections). Spend: wave 28 agents, 697 calls, 57.48M of 58.1M; lead 107.35M of 90M (over).
 
 - **Previous: s156 SHIPPED 2026-10-31** (Claude lead; Phase 2, infectious disease B, pediatric: meningitis, dtap
   (lookup), lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever rebuilt on the decision spine):
