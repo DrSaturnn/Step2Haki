@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-11-02, by Claude (s160 shipped).
+Last updated: 2026-11-02, by Claude (s161 launched).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,8 +12,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **No open batch.** A launch prompt is needed (Next launch prompt below: Psych Pharmacology B3, s161, after
-  Jonathan's Q4 answer).
+- **Open: s161** (Claude lead; Psych Pharmacology B3 of 4: pc-ssri, pc-tca, mood-anticonv (Lithium and
+  anticonvulsants; id kept, card in place), pc-cog, pc-other; Q4 keep). Branch wip/s161 in both repos. Budget 24
+  agents, 680 calls, 52M (builders 6, 450, 42M; reviewers 18, 230, 10M); lead 100M. Step: S1 to S3, builder pilot
+  (MOOD, COG) launched in chat 1. Batch file repair/s161/S161.md. Spend so far: 0 agents.
 
 - **Previous: s160 SHIPPED 2026-11-02** (Claude lead; Psych Pharmacology B2 of 4: pc-benzo, pc-anxiety, adhd-meds
   (card in place, id kept), pc-sleep, pc-orexin, sud-meds (card in place, id kept); sedatives retired into the four new

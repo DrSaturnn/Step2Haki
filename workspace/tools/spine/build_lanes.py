@@ -58,7 +58,7 @@ def amend_rows(bid):
 
 def prompt(spec, b, folder):
     return ('Role: brief-build\nPlan step: %s\nLane: %s\nBudget: %d\n\nRead INSTRUCTIONS.md in your lane first.\n'
-            % (spec['plan_step'], folder, spec.get('budget', 90)))
+            % (spec['plan_step'], folder, b.get('budget', spec.get('budget', 90))))
 
 
 def lane(spec, b):
@@ -95,7 +95,7 @@ def lane(spec, b):
     cards = (r.stdout.strip().splitlines() or ['?'])[-1]
     open(os.path.join(folder, 'amend_rows.md'), 'w', encoding='utf-8').write(amend_rows(bid))
     fill = {'batch': batch, 'bid': bid, 'title': title, 'entry': b.get('entry', 'disease'), 'folder': folder,
-            'budget': spec.get('budget', 90), 'live': live, 'live_txt': live[:-5] + '.txt',
+            'budget': b.get('budget', spec.get('budget', 90)), 'live': live, 'live_txt': live[:-5] + '.txt',
             'model': os.path.join(WS, b['model']), 'golden': os.path.join(WS, b['golden']), 'spine_spec': SPINE_SPEC}
     fill['source'] = b.get('source', '')
     fill['card_spec'] = os.path.join(WS, 'repair', 'efficiency', 'CARD_SPEC.md')

@@ -991,16 +991,22 @@
   "Waterhouse-Friderichsen"
  ],
  "mood-anticonv": [
+  "Ebstein",
+  "HLA-B",
+  "Stevens-Johnson",
   "agranulocytosis",
   "aplastic anemia",
   "carbamazepine",
   "divalproex",
-  "HLA-B",
   "hyperammonemia",
+  "hypothyroidism",
   "lamotrigine",
+  "lithium",
+  "lithium toxicity",
+  "nephrogenic diabetes insipidus",
   "neural tube",
   "oxcarbazepine",
-  "Stevens-Johnson",
+  "thiazide",
   "topiramate",
   "valproate",
   "valproic acid"
@@ -1802,5 +1808,57 @@
   "lemborexant",
   "daridorexant",
   "orexin antagonist"
+ ],
+ "pc-ssri": [
+  "QT prolongation",
+  "SIADH",
+  "SSRI",
+  "SSRIs",
+  "activation",
+  "akathisia",
+  "bleeding risk",
+  "citalopram",
+  "discontinuation syndrome",
+  "escitalopram",
+  "fluoxetine",
+  "fluvoxamine",
+  "paroxetine",
+  "serotonin syndrome",
+  "sertraline",
+  "sexual dysfunction",
+  "tamoxifen"
+ ],
+ "pc-tca": [
+  "amitriptyline",
+  "anticholinergic",
+  "clomipramine",
+  "desipramine",
+  "doxepin",
+  "imipramine",
+  "nortriptyline",
+  "orthostatic hypotension",
+  "protriptyline",
+  "QRS",
+  "sodium bicarbonate",
+  "TCA",
+  "tricyclic"
+ ],
+ "pc-cog": [
+  "acetylcholinesterase inhibitor",
+  "cholinesterase inhibitor",
+  "donepezil",
+  "galantamine",
+  "memantine",
+  "NMDA",
+  "rivastigmine",
+  "bradycardia"
+ ],
+ "pc-other": [
+  "armodafinil",
+  "modafinil",
+  "phentermine",
+  "narcolepsy",
+  "shift work",
+  "anorectic"
  ]
 }
