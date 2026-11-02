@@ -60,3 +60,14 @@ The three MEDs are text-level and their fixes restore reviewed text, so round 3 
 adhd-meds and pc-orexin (one Sonnet lane), each --since its r2 packet (packets/s160r2/<id>/acc/brief_text.txt). The
 LOW-only parts close on the lead's S6 check of each replacement. Budget left for reviewers: 4 agents, 175 calls,
 2.95M tokens (wave 21 agents, 635 calls, 54.65M of 57.6M).
+
+## Chat 6 lead calls (fixes applied 2026-11-01)
+- Fixes 1 to 25 applied (pair files local/s160/chat6/<card>_p.py); fixes 3 and 6 rejected as above; fix 5: pagelib scan
+  confirms peds-sleep teaches REM sleep behavior disorder (Stage row, Defining criteria, Treatment), chip kept.
+- fix 4: no pregabalin label in the web cache; the cached AAFP 2022 GAD/panic review gives pa1 "which appears effective
+  but may cause weight gain and sedation." -> Adverse effects "Pregabalin: sedation, weight gain" (no fetch spent).
+- fix 14: read-B rep 1 text "cognitive behavioral therapy first" (the line already opens "Insomnia treatment").
+- fix 17: dq1 now "QUVIVIQ is contraindicated: in patients with narcolepsy." (the label's heading line and its item;
+  quote_check joins them).
+- fix 21: the flags-B wording copied AnKing k13 for 10 words (shingle_check FIX); the row reads "An episodic course
+  fits bipolar disorder better than chronic ADHD" (disp anchor updated).
