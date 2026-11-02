@@ -13,9 +13,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 ## State (rewrite after every step)
 
 - **Open: s161** (Claude lead; Psych Pharmacology B3 of 4: pc-ssri, pc-tca, mood-anticonv (Lithium and
-  anticonvulsants; id kept, card in place), pc-cog, pc-other; Q4 keep). Branch wip/s161 in both repos. Budget 24
-  agents, 680 calls, 52M (builders 6, 450, 42M; reviewers 18, 230, 10M); lead 100M. Step: S1 to S3, builder pilot
-  (MOOD, COG) launched in chat 1. Batch file repair/s161/S161.md. Spend so far: 0 agents.
+  anticonvulsants; id kept, card in place), pc-cog, pc-other; Q4 keep; bipolar-mania drawer label patch). Branch
+  wip/s161 in both repos. Budget 24 agents, 680 calls, 52M (builders 6, 450, 42M; reviewers 18, 230, 10M); lead
+  100M. **Step: S3 DONE (chat 1); next S4 round 1** per repair/s161/S161.md "Next (chat 2)". Spend: builders 5
+  agents, 332 calls, 40.32M; reviewers 0; lead chat 1 19.66M. One temporary allowlist line (psych-cms-c01111) to
+  delete after ship.sh passes.
 
 - **Previous: s160 SHIPPED 2026-11-02** (Claude lead; Psych Pharmacology B2 of 4: pc-benzo, pc-anxiety, adhd-meds
   (card in place, id kept), pc-sleep, pc-orexin, sud-meds (card in place, id kept); sedatives retired into the four new
