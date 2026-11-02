@@ -16,9 +16,9 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   batch file repair/s160/S160.md). Cards pc-benzo, pc-anxiety, adhd-meds (id kept), pc-sleep, pc-orexin, sud-meds (id
   kept); sedatives retires into the four new cards; adhd-meds and sud-meds become cards in place (site layer
   repair/s160/01_pharm_s160.json). Budget 25 agents, 810 calls, 57.6M (raised 2026-11-01, Jonathan "10M" for
-  reviewers: builders 8, 540, 47.60M as spent; reviewers 17, 270, 10M); lead 90M. Step: S7 done: all READY (2026-11-02; rounds 4 and 5 confirmation; WAVE 28 agents, 58.1M approved). Batch page
-  rebuilt (patch.py s3 s160: gate, render PASS). Next: S8 in a fresh chat (S160.md "Next (S8 chat)"; report items in
-  the chat 6 sections). Spend: wave 28 agents, 697 calls, 57.48M of 58.1M; lead 107.35M of 90M (over).
+  reviewers: builders 8, 540, 47.60M as spent; reviewers 17, 270, 10M); lead 90M. Step: S8 presented 2026-11-02 (chat 7): verify_all 11 of 11 READY; gate, render PASS; approval s160 page
+  31727475b3d6; report repair/s160/S8_REPORT.md sent. Next: S9 on Jonathan's "ship" in this chat (S160.md "Next (S9").
+  Spend: wave 28 agents, 697 calls, 57.48M of 58.1M; lead 121.7M of 90M (6 rows; over).
 
 - **Previous: s156 SHIPPED 2026-10-31** (Claude lead; Phase 2, infectious disease B, pediatric: meningitis, dtap
   (lookup), lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever rebuilt on the decision spine):
