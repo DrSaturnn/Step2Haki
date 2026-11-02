@@ -44,9 +44,25 @@ def main(b):
         print('ready: no spine builds in %s' % b)
         return 0
     have, bad = folders(), []
+    # s160: a card that keeps a retired brief's id (adhd-meds, sud-meds) is claimed by two folders, and folders() keeps
+    # whichever its unsorted glob finds last. The folder that built this batch is the one whose 10_*_spine.json is
+    # byte-identical to the batch's own copy in repair/<batch>/; verify that one. The check itself is unchanged.
+    def own(bid):
+        mine = [open(f, 'rb').read() for f in glob.glob(os.path.join(WS, 'repair', b, '10_*_spine.json'))]
+        pats = (os.path.join(WS, 'repair', 'migration', '*', '*', 'spine', '10_*_spine.json'),
+                os.path.join(WS, 'repair', 'migration', '*', '*', '*', 'spine', '10_*_spine.json'))
+        for e in sorted(p for pat in pats for p in glob.glob(pat)):
+            data = open(e, 'rb').read()
+            if data in mine:
+                try:
+                    if json.loads(data)['edits'][0]['brief'] == bid:
+                        return os.path.dirname(e)
+                except (ValueError, KeyError, IndexError):
+                    pass
+        return None
     todo = []
     for bid in builds:
-        d = have.get(bid)
+        d = own(bid) or have.get(bid)
         if not d:
             bad.append('%s: no local spine folder' % bid)
             continue
