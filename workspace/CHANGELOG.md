@@ -2,6 +2,32 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-02 s160: Psych Pharmacology B2: Benzodiazepines, Other anxiety agents, ADHD, Sleep agents, Orexin antagonists, Substance use and cessation; sedatives retired
+
+```
+Page: 198 briefs, 2312 items -> 201 briefs, 2318 items
+Briefs added (4):
+  - pc-benzo: Benzodiazepines (5 items)
+  - pc-anxiety: Other anxiety agents (3 items)
+  - pc-sleep: Sleep agents (3 items)
+  - pc-orexin: Orexin antagonists (3 items)
+Briefs REMOVED (1): sedatives
+Briefs changed (7):
+  - tics (Tics and Tic Disorders): prose edited (-24 chars)
+  - peds-sleep (Sleep Problems): prose edited (-23 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (-21 chars)
+  - stages-change (Stages of Change and Motivational Interviewing): prose edited (-12 chars)
+  - pc-antidep (Other antidepressants): prose edited (-12 chars)
+  - adhd-meds (ADHD): items edited (q_ba15dad5e9ff27f32d26); versions bumped (q_ba15dad5e9ff27f32d26 v1->v2); attrs set (brief class,data-entry); prose edited (-2740 chars)
+  - sud-meds (Substance use and cessation): attrs set (brief class,data-entry); prose edited (-1448 chars)
+Other page changes (nav, headers, scripts): +1745 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 201 briefs, 2318 items (919 with reasons), 23 scripts, 40 checks, base HEAD | allowlisted 9 (3 stale allowlist line(s): nbme-coverage psych-cms-434831; nbme-coverage psych-cms7-932e72; pairs-with stages-change:medications_for_substance_use_disorders) | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 201 | bankwraps 201 | mcq 2318 (reasons 919) (axCheck 2318, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-10-31 s156: s156: Phase 2 infectious disease B, pediatric: seven briefs rebuilt on the decision spine (meningitis, dtap as a lookup, lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever)
 
 ```
