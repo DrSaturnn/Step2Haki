@@ -13,7 +13,7 @@
   "patch-review",
   "patch-review-opus"
  ],
- "max_agents": 24,
+ "max_agents": 26,
  "max_calls": 680,
  "max_tokens": 52000000,
  "set_by": "Jonathan, s161 launch 2026-11-02 (\"Step2Haki: launch batch s161 (Psych Pharmacology section, batch 3 of 4: SSRIs, TCAs, Lithium and anticonvulsants, Cognitive agents, Other agents) per claude/BATCH_RUNBOOK.md, claude/pending/PSYCH_PHARM_V2.md, claude/pending/PSYCH_PHARM_BATCHES.md and claude/CARD_SPEC.md. mood-anticonv retires into Lithium and anticonvulsants (id kept; items carried with ids; drawers retargeted). Q4: <keep or shrink>. Budget: 24 agents, 680 calls, 52M agent tokens (builders 6, 450, 42M; reviewers 18, 230, 10M); lead 100M.\"; Q4 answered at launch: \"Keep (Recommended)\")",
@@ -22,7 +22,7 @@
   "note": "s160 shipped 8a42a4b 2026-11-02 (Claude lead); wave 28 agents, 697 calls, 57.48M of 58.1M; lead 7 chats, 121.7M measured of 90M"
  },
  "opened": "2026-11-02 17:48 EST",
- "note": "s161 open (Claude lead): Psych Pharmacology B3 of 4, five class cards; Q4 keep; S1 to S3 by builder agents",
+ "note": "s161 open (Claude lead): Psych Pharmacology B3 of 4, five class cards; Q4 keep; S1 to S3 by builder agents; 2026-11-02 21:35 Jonathan (\"lleettss. ggoo. with your recommendations\", to the chat 4 adj_r3 Open list): round 4 approved, max_agents 24 -> 26 (3 reviewers on pc-ssri and pc-other; calls and tokens unchanged)",
  "batch_budgets": {
   "s138": {
    "agents": 20,

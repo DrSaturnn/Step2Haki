@@ -482,23 +482,37 @@ class Verify:
 
     def replay(self, part, keys, got, reps):
         """conditional PASS: undo the approved replacements on the brief, claim map and outline; the receipt is current
-        if the result hashes to what it judged. Returns the applied replacement ids, or None (stale)."""
+        if the result hashes to what it judged. Returns the applied replacement ids, or None (stale).
+        s161 chat 4: undone one replacement at a time, in repeated passes, testing the hash after each step, so a span
+        replaced twice (one part's replacement then another's) is undone in the right order and a part whose judged state
+        lies part-way back (it judged after the first replacement) is found there."""
         if not reps:
             return None
-        html, ah, ph = CP.undo(getattr(self, 'brief_html', ''), reps, 'html')
+        html = getattr(self, 'brief_html', '')
         cl = open(os.path.join(self.d, 'claim_map.json'), encoding='utf-8').read()
         olp = os.path.join(self.d, 'outline.json')       # a legacy build.py folder has none (s134)
         ol = open(olp, encoding='utf-8').read() if os.path.exists(olp) else None
-        cl, ac, pc = CP.undo(cl, reps, 'json')
-        ao, po = [], []
-        if ol is not None:
-            ol, ao, po = CP.undo(ol, reps, 'json')
-        if ph or pc or po:
-            return None
-        then = self.deps(html=html, claims=cl, outline=ol)
-        if any(got.get(k) != then[k] for k in keys):
-            return None
-        return sorted({str(x) for x in ah + ac + ao})
+        left, done = list(reps), []
+        while left:
+            moved = False
+            for rep in list(left):
+                h2, ah, ph = CP.undo(html, [rep], 'html')
+                c2, ac, pc = CP.undo(cl, [rep], 'json')
+                o2, ao, po = (CP.undo(ol, [rep], 'json') if ol is not None else (None, [], None))
+                if ph or pc or po:
+                    return None
+                if not (ah or ac or ao):
+                    continue
+                html, cl, ol = h2, c2, o2
+                left.remove(rep)
+                done += [str(x) for x in ah + ac + ao]
+                moved = True
+                then = self.deps(html=html, claims=cl, outline=ol)
+                if all(got.get(k) == then[k] for k in keys):
+                    return sorted(set(done))
+            if not moved:
+                return None
+        return None
 
 
 def apply_tail_fix(t, fixes):

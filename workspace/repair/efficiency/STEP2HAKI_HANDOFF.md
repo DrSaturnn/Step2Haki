@@ -15,12 +15,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 - **Open: s161** (Claude lead; Psych Pharmacology B3 of 4: pc-ssri, pc-tca, mood-anticonv (Lithium and
   anticonvulsants; id kept, card in place), pc-cog, pc-other; Q4 keep; bipolar-mania drawer label patch). Branch
   wip/s161 in both repos. Budget 24 agents, 680 calls, 52M (builders 6, 450, 42M; reviewers 18, 230, 10M); lead
-  100M. **Step: S7 rounds 2 and 3 DONE (chat 4; repair/s161/adj_r2.md, adj_r3.md); READY pc-ssri, mood-anticonv,
-  pc-cog, bipolar-mania; NOT READY pc-tca (verify replay cannot chain two replacements on one span) and pc-other (flags
-  MED, Qsymia in the heart-disease commit). Waiting on Jonathan** (adj_r3.md "Open": pc-other commit, round 4 budget,
-  pc-tca replay fix, pc-ssri sx35 cite); then repair/s161/S161.md "Next (chat 5)". Chat 4 also applied his pc-ssri
-  adequate-trial ruling (adj_r1.md). Spend: builders 5 agents, 332 calls, 40.32M; reviewers 18 of 18 agents, 174 calls,
-  7.47M; lead chats 1 to 4 71.37M. One temporary allowlist line (psych-cms-c01111) to delete after ship.sh passes.
+  100M. **Step: S7 done: all READY** (chat 4; rounds 2 to 4, repair/s161/adj_r1.md to adj_r3.md and
+  local/s161/chat4/adj_all.md; Jonathan approved round 4 and max_agents 26); **next S8** per repair/s161/S161.md "Next
+  (chat 5): S8". Spend: builders and reviewers 26 agents, 529 calls, 48.62M of 52M; lead chats 1 to 4 74.89M of 100M.
+  verify.py replay now undoes replacements one at a time (tool note for the S8 report). One temporary allowlist line
+  (psych-cms-c01111) to delete after ship.sh passes.
 
 - **Previous: s160 SHIPPED 2026-11-02** (Claude lead; Psych Pharmacology B2 of 4: pc-benzo, pc-anxiety, adhd-meds
   (card in place, id kept), pc-sleep, pc-orexin, sud-meds (card in place, id kept); sedatives retired into the four new
