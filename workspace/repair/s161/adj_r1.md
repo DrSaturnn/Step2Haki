@@ -69,7 +69,25 @@ pc-other: flags F1 HIGH: masked commit "an option that is not a norepinephrine-r
 ## Report items
 - ssri-effects onset line ("up to 6 weeks" read as the outer limit; pc-ssri acc F2): fix belongs to the deep brief (OPEN_WORK).
 - pc-ssri "Adequate trial: 6 weeks at full dose" (AnKing k04) against mdd "at least 4 to 6 weeks at a therapeutic dose":
-  no exam answer differs on the logged items; flag for Jonathan, not changed.
+  no exam answer differs on the logged items; flag for Jonathan, not changed. RULED in chat 4 (below).
+
+## Jonathan's ruling, chat 4 (2026-11-02, before round 2)
+In his words: "align pc-ssri's adequate-trial row to mdd's "4 to 6 weeks at a therapeutic dose" (cite the UWorld quote
+from mdd's facts), keep AnKing's 6 weeks as a hover, and record it in adj_r1.md."
+Applied (pairs local/s161/chat4/ssri_p3.py, ssri_p4.py; shell pairs by local/s161/chat4/shell_ed.py):
+- New fact uTrial (same id as mdd's claim_map source): local repair/sources/auth_2026-10-04_mdd.md, UWorld explanation,
+  "An adequate antidepressant trial is generally considered to be at least 4-6 weeks at a therapeutic dosage."
+- Onset chart row "Adequate trial": window "At least 4 to 6 weeks at a therapeutic dose" (uTrial k04; k04 carries the 6,
+  since lint reads "4-6" as 4 and -6); L88 dropped from the cite (it is the onset line "Up to 6 weeks in", not the trial);
+  bar 45 to 67 (the 4 to 6 week window, as mdd's timeline strip); hover "AnKing" (title "AnKing card"): "The AnKing card
+  gives 6 weeks at full dose before considering a change." (k04); Why line cites uTrial k04.
+- Authored item q_b204614ba3b2369df895 (new this batch, unshipped, version 1 kept) follows the row so the card does not
+  teach two numbers: key why "An adequate trial is at least 4 to 6 weeks at a therapeutic dose; 2 weeks is too early to
+  judge"; d1 why "... after an adequate trial at a therapeutic dose"; explanation "an adequate trial is at least 4 to 6
+  weeks at a therapeutic dose". Answer unchanged (2 weeks is inside both numbers). Shell 05 json, both copies.
+- Rebuilt `AX_BATCH=s161 build_brief.py` pc-ssri --verify: MECHANICAL PASS, 0 FIX, 0 warn; disp unresolved none. 10_ copied
+  to repair/s161; `patch.py s3 s161`: build ok, gate PASS (the 1 stale temporary allowlist line), render PASS, preflight 6
+  warnings (carried), vendor 0; squeeze by hand on the six ids 0 squeezed. Round 2 acc, read and flags on pc-ssri see it.
 - pc-other preflight P3: item q_c0af502ae0b80dd8c4ed distractor "Space the two doses 12 hours apart" named nowhere else.
 - Tool notes: patch.py s3 needs build.py in a folder (card folders have author.py; run s3 with no folders, copy 10_ files
   by hand, squeeze by hand); git exclude lines need the workspace/ prefix (repo root is Step2Haki).

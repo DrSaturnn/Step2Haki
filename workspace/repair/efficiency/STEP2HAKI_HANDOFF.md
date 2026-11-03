@@ -16,7 +16,8 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   anticonvulsants; id kept, card in place), pc-cog, pc-other; Q4 keep; bipolar-mania drawer label patch). Branch
   wip/s161 in both repos. Budget 24 agents, 680 calls, 52M (builders 6, 450, 42M; reviewers 18, 230, 10M); lead
   100M. **Step: S5 and S6 DONE (chat 3; repair/s161/adj_r1.md, all five cards rebuilt MECHANICAL PASS, batch page gate
-  PASS); next S7 round 2** per repair/s161/S161.md "Next (chat 4)" (bipolar-mania READY). Spend: builders 5 agents, 332
+  PASS); chat 4: Jonathan's pc-ssri adequate-trial ruling applied (adj_r1.md, rebuilt MECHANICAL PASS, gate PASS);
+  next S7 round 2** per repair/s161/S161.md "Next (chat 4)" (bipolar-mania READY). Spend: builders 5 agents, 332
   calls, 40.32M; reviewers 9 agents, 94 calls, 4.07M; lead chats 1 to 3 48.86M. One temporary allowlist line (psych-cms-c01111) to
   delete after ship.sh passes.
 
