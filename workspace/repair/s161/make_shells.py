@@ -36,7 +36,7 @@ NEW = {
  'COG': dict(cid='pc-cog', after='mood-anticonv|pc-maoi', bank='pccog-bank', grp=G3, title='Cognitive agents',
    sub=D.join(['cholinesterase inhibitors', 'donepezil', 'rivastigmine', 'galantamine', 'memantine'])),
  'OTHER': dict(cid='pc-other', after='sud-meds|pc-orexin', bank='pcoth-bank', grp=G6, title='Other agents',
-   sub=D.join(['modafinil', 'armodafinil', 'phentermine'])),
+   sub=D.join(['wake-promoting and weight-loss agents', 'modafinil', 'armodafinil', 'phentermine', 'phentermine-topiramate'])),
 }
 for k, s in NEW.items():
     d = 'repair/migration/pharm/%s/spine' % k
