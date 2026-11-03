@@ -13,9 +13,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 ## State (rewrite after every step)
 
 - **Open: s162** (Claude lead; Psych Pharmacology B4 of 4: pc-atypical, pc-typical, pc-antichol, pc-td; Q4 keep;
-  launched 2026-11-03 11:42; wip/s162 in both repos). Step: S1 to S3, builder pilot (pc-atypical, pc-td). Budget
-  23 agents, 580 calls, 42M (builders 5, 380, 34M; reviewers 18, 200, 8M); lead 80M. Spend: 0 agents. Record
-  repair/s162/S162.md.
+  launched 2026-11-03 11:42; wip/s162 in both repos). Step: **S3 done** (four cards BUILT, MECHANICAL PASS; gate,
+  render, vendor PASS; squeeze 0; pointers 0 problems). Next: S4 round 1 in a fresh chat (batch file "Next (chat 2)").
+  Budget 23 agents, 580 calls, 42M (builders 5, 380, 34M; reviewers 18, 200, 8M); lead 80M. Spend: builders 4
+  agents, 227 calls, 28.07M; lead chat 1 21.20M. Record repair/s162/S162.md.
 
 - **Previous: s161 SHIPPED 2026-11-02** (Claude lead; Psych Pharmacology B3 of 4: pc-ssri, pc-tca, mood-anticonv
   (Lithium and anticonvulsants; id kept, card in place), pc-cog, pc-other; Q4 keep; bipolar-mania drawer label):
