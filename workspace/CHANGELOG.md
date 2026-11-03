@@ -2,6 +2,26 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-02 s161: s161: Psych Pharmacology B3: SSRIs, TCAs, Lithium and anticonvulsants, Cognitive agents, Other agents
+
+```
+Page: 201 briefs, 2318 items -> 205 briefs, 2330 items
+Briefs added (4):
+  - pc-ssri: SSRIs (3 items)
+  - pc-tca: TCAs (3 items)
+  - pc-cog: Cognitive agents (3 items)
+  - pc-other: Other agents (3 items)
+Briefs changed (2):
+  - bipolar-mania (Bipolar Disorder): prose edited (-4 chars)
+  - mood-anticonv (Lithium and anticonvulsants): attrs set (brief class,data-entry); prose edited (+3907 chars)
+Other page changes (nav, headers, scripts): +1815 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 205 briefs, 2330 items (931 with reasons), 23 scripts, 40 checks, base HEAD | allowlisted 9 (1 stale allowlist line(s): nbme-coverage psych-cms-c01111) | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 205 | bankwraps 205 | mcq 2330 (reasons 931) (axCheck 2330, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-11-02 s160: Psych Pharmacology B2: Benzodiazepines, Other anxiety agents, ADHD, Sleep agents, Orexin antagonists, Substance use and cessation; sedatives retired
 
 ```
