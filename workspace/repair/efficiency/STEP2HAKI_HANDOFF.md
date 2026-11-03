@@ -15,8 +15,9 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 - **Open: s161** (Claude lead; Psych Pharmacology B3 of 4: pc-ssri, pc-tca, mood-anticonv (Lithium and
   anticonvulsants; id kept, card in place), pc-cog, pc-other; Q4 keep; bipolar-mania drawer label patch). Branch
   wip/s161 in both repos. Budget 24 agents, 680 calls, 52M (builders 6, 450, 42M; reviewers 18, 230, 10M); lead
-  100M. **Step: S3 DONE (chat 1); next S4 round 1** per repair/s161/S161.md "Next (chat 2)". Spend: builders 5
-  agents, 332 calls, 40.32M; reviewers 0; lead chat 1 19.66M. One temporary allowlist line (psych-cms-c01111) to
+  100M. **Step: S4 round 1 DONE (chat 2); next S5** per repair/s161/S161.md "Next (chat 3)" (1 HIGH pc-other, MEDs
+  on every card; bipolar-mania READY). Spend: builders 5 agents, 332 calls, 40.32M; reviewers 9 agents, 94 calls,
+  4.07M; lead chats 1 and 2 27.57M. One temporary allowlist line (psych-cms-c01111) to
   delete after ship.sh passes.
 
 - **Previous: s160 SHIPPED 2026-11-02** (Claude lead; Psych Pharmacology B2 of 4: pc-benzo, pc-anxiety, adhd-meds
