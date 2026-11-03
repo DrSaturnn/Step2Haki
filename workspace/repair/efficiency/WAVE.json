@@ -1,8 +1,8 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s161",
- "open": false,
- "plan_step": "s161",
+ "id": "s162",
+ "open": true,
+ "plan_step": "s162",
  "roles": [
   "brief-build",
   "acc-review",
@@ -13,16 +13,16 @@
   "patch-review",
   "patch-review-opus"
  ],
- "max_agents": 26,
- "max_calls": 680,
- "max_tokens": 52000000,
- "set_by": "Jonathan, s161 launch 2026-11-02 (\"Step2Haki: launch batch s161 (Psych Pharmacology section, batch 3 of 4: SSRIs, TCAs, Lithium and anticonvulsants, Cognitive agents, Other agents) per claude/BATCH_RUNBOOK.md, claude/pending/PSYCH_PHARM_V2.md, claude/pending/PSYCH_PHARM_BATCHES.md and claude/CARD_SPEC.md. mood-anticonv retires into Lithium and anticonvulsants (id kept; items carried with ids; drawers retargeted). Q4: <keep or shrink>. Budget: 24 agents, 680 calls, 52M agent tokens (builders 6, 450, 42M; reviewers 18, 230, 10M); lead 100M.\"; Q4 answered at launch: \"Keep (Recommended)\")",
+ "max_agents": 23,
+ "max_calls": 580,
+ "max_tokens": 42000000,
+ "set_by": "Jonathan, s162 launch 2026-11-03 (\"Step2Haki: launch batch s162 (Psych Pharmacology section, batch 4 of 4: Atypical antipsychotics, Typical antipsychotics, Anticholinergic, Tardive dyskinesia agents) per claude/BATCH_RUNBOOK.md, claude/pending/PSYCH_PHARM_V2.md, claude/pending/PSYCH_PHARM_BATCHES.md and claude/CARD_SPEC.md. Q4: keep (antipsych-effects and tca-tox stay as the deep briefs the cards link to). Budget: 23 agents, 580 calls, 42M agent tokens (builders 5, 380, 34M; reviewers 18, 200, 8M); lead 80M.\")",
  "previous": {
-  "id": "s160",
-  "note": "s160 shipped 8a42a4b 2026-11-02 (Claude lead); wave 28 agents, 697 calls, 57.48M of 58.1M; lead 7 chats, 121.7M measured of 90M"
+  "id": "s161",
+  "note": "s161 shipped f1922cf 2026-11-02 (Claude lead); wave 26 agents, 529 calls, 48.62M of 52M; lead 5 chats, 87.61M of 100M"
  },
- "opened": "2026-11-02 17:48 EST",
- "note": "s161 open (Claude lead): Psych Pharmacology B3 of 4, five class cards; Q4 keep; S1 to S3 by builder agents; 2026-11-02 21:35 Jonathan (\"lleettss. ggoo. with your recommendations\", to the chat 4 adj_r3 Open list): round 4 approved, max_agents 24 -> 26 (3 reviewers on pc-ssri and pc-other; calls and tokens unchanged)",
+ "opened": "2026-11-03 11:42 EST",
+ "note": "s162 open (Claude lead): Psych Pharmacology B4 of 4, four class cards (antipsychotic group); Q4 keep; S1 to S3 by builder agents",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -363,9 +363,25 @@
     "calls": 230,
     "tokens": 10000000
    }
+  },
+  "s162": {
+   "agents": 23,
+   "calls": 580,
+   "tokens": 42000000,
+   "lead_tokens": 80000000,
+   "builders": {
+    "agents": 5,
+    "calls": 380,
+    "tokens": 34000000
+   },
+   "reviewers": {
+    "agents": 18,
+    "calls": 200,
+    "tokens": 8000000
+   }
   }
  },
- "max_lead_tokens": 100000000,
+ "max_lead_tokens": 80000000,
  "spent_agents": 0,
  "spent_calls": 0
 }

@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "new_brief",
+   "after": "pc-typical|pc-atypical|pc-maoi",
+   "html": "<div class=\"brief sp pc\" id=\"pc-antichol\" data-shelf=\"psych\" data-bp=\"behav\">\n<p class=\"pc-grp\">02 Antipsychotics <span>&middot;</span> class card</p>\n<h4>Anticholinergic</h4>\n<p class=\"sub\">anticholinergics for antipsychotic movement effects &middot; benztropine &middot; diphenhydramine &middot; trihexyphenidyl</p>\n<h5 class=\"authored-hdr\" id=\"pcachol-bank\">Practice</h5>\n<ol class=\"bank authored\">\n\n</ol>\n</div>",
+   "note": "s162 card shell: pc-antichol (Anticholinergic); Q4 keep, no item moved"
+  }
+ ]
+}

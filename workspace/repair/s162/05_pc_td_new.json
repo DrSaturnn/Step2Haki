@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "new_brief",
+   "after": "pc-antichol|pc-typical|pc-atypical|pc-maoi",
+   "html": "<div class=\"brief sp pc\" id=\"pc-td\" data-shelf=\"psych\" data-bp=\"behav\">\n<p class=\"pc-grp\">02 Antipsychotics <span>&middot;</span> class card</p>\n<h4>Tardive dyskinesia agents</h4>\n<p class=\"sub\">VMAT2 inhibitors &middot; valbenazine &middot; deutetrabenazine</p>\n<h5 class=\"authored-hdr\" id=\"pctd-bank\">Practice</h5>\n<ol class=\"bank authored\">\n\n</ol>\n</div>",
+   "note": "s162 card shell: pc-td (Tardive dyskinesia agents); Q4 keep, no item moved"
+  }
+ ]
+}

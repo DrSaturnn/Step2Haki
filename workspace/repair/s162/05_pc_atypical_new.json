@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "new_brief",
+   "after": "pc-maoi",
+   "html": "<div class=\"brief sp pc\" id=\"pc-atypical\" data-shelf=\"psych\" data-bp=\"behav\">\n<p class=\"pc-grp\">02 Antipsychotics <span>&middot;</span> class card</p>\n<h4>Atypical antipsychotics</h4>\n<p class=\"sub\">second-generation antipsychotics &middot; aripiprazole &middot; asenapine &middot; brexpiprazole &middot; cariprazine &middot; clozapine &middot; iloperidone &middot; lumateperone &middot; lurasidone &middot; olanzapine &middot; paliperidone &middot; quetiapine &middot; risperidone &middot; ziprasidone</p>\n<h5 class=\"authored-hdr\" id=\"pcatyp-bank\">Practice</h5>\n<ol class=\"bank authored\">\n\n</ol>\n</div>",
+   "note": "s162 card shell: pc-atypical (Atypical antipsychotics); Q4 keep, no item moved"
+  }
+ ]
+}

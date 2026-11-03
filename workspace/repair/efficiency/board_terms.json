@@ -1860,5 +1860,60 @@
   "narcolepsy",
   "shift work",
   "anorectic"
+ ],
+ "pc-atypical": [
+  "agranulocytosis",
+  "antipsychotic",
+  "antipsychotics",
+  "aripiprazole",
+  "atypical antipsychotic",
+  "clozapine",
+  "gynecomastia",
+  "hyperprolactinemia",
+  "lurasidone",
+  "metabolic syndrome",
+  "neuroleptic malignant syndrome",
+  "olanzapine",
+  "paliperidone",
+  "QT",
+  "quetiapine",
+  "risperidone",
+  "second-generation",
+  "ziprasidone"
+ ],
+ "pc-typical": [
+  "acute dystonia",
+  "akathisia",
+  "chlorpromazine",
+  "drug-induced parkinsonism",
+  "extrapyramidal",
+  "first-generation",
+  "fluphenazine",
+  "haloperidol",
+  "hyperprolactinemia",
+  "neuroleptic malignant syndrome",
+  "perphenazine",
+  "pimozide",
+  "tardive dyskinesia",
+  "thioridazine",
+  "typical antipsychotic"
+ ],
+ "pc-antichol": [
+  "acute dystonia",
+  "anticholinergic",
+  "anticholinergic toxicity",
+  "antimuscarinic",
+  "benztropine",
+  "diphenhydramine",
+  "drug-induced parkinsonism",
+  "extrapyramidal",
+  "trihexyphenidyl"
+ ],
+ "pc-td": [
+  "deutetrabenazine",
+  "tardive dyskinesia",
+  "tetrabenazine",
+  "valbenazine",
+  "VMAT2"
  ]
 }

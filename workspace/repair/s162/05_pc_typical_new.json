@@ -1,0 +1,10 @@
+{
+ "edits": [
+  {
+   "op": "new_brief",
+   "after": "pc-atypical|pc-maoi",
+   "html": "<div class=\"brief sp pc\" id=\"pc-typical\" data-shelf=\"psych\" data-bp=\"behav\">\n<p class=\"pc-grp\">02 Antipsychotics <span>&middot;</span> class card</p>\n<h4>Typical antipsychotics</h4>\n<p class=\"sub\">first-generation antipsychotics &middot; chlorpromazine &middot; fluphenazine &middot; haloperidol &middot; loxapine &middot; molindone &middot; perphenazine &middot; pimozide &middot; thioridazine &middot; thiothixene &middot; trifluoperazine</p>\n<h5 class=\"authored-hdr\" id=\"pctyp-bank\">Practice</h5>\n<ol class=\"bank authored\">\n\n</ol>\n</div>",
+   "note": "s162 card shell: pc-typical (Typical antipsychotics); Q4 keep, no item moved"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "marker": "<a href=\"#pc-atypical\">Atypical antipsychotics</a>",
+ "note": "s162 site layer: nav links and counts for the four B4 cards (02 Antipsychotics); no planned card left",
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Atypical antipsychotics</a>\n",
+   "with": "    <a href=\"#pc-atypical\">Atypical antipsychotics</a>\n"
+  },
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Typical antipsychotics</a>\n",
+   "with": "    <a href=\"#pc-typical\">Typical antipsychotics</a>\n"
+  },
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Anticholinergic</a>\n",
+   "with": "    <a href=\"#pc-antichol\">Anticholinergic</a>\n"
+  },
+  {
+   "op": "replace_global",
+   "find": "    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Tardive dyskinesia agents</a>\n",
+   "with": "    <a href=\"#pc-td\">Tardive dyskinesia agents</a>\n"
+  },
+  {
+   "op": "replace_global",
+   "find": "Psych Pharmacology <span class=\"count\">14</span>",
+   "with": "Psych Pharmacology <span class=\"count\">18</span>"
+  },
+  {
+   "op": "replace_global",
+   "find": "Psych Pharmacology <span class=\"n\">14 of 18 class cards</span>",
+   "with": "Psych Pharmacology <span class=\"n\">18 of 18 class cards</span>"
+  }
+ ]
+}
