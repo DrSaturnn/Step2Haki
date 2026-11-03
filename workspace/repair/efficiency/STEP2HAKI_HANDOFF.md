@@ -18,7 +18,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   (Lithium and anticonvulsants; id kept, card in place), pc-cog, pc-other; Q4 keep; bipolar-mania drawer label):
   commit f1922cf, page 9acef4067ecf (approved candidate e98d1dd38c65); version.json not checked here, Jonathan checks the live
   site. Wave 26 agents, 529 calls, 48.62M of 52M (builders 40.32M, no relaunch; reviewers 8.30M); lead 5 chats,
-  about 82M of 100M. The first ship run aborted at the trailer (AX_SESSION unset). The temporary allowlist line
+  87.61M of 100M (measured). The first ship run aborted at the trailer (AX_SESSION unset). The temporary allowlist line
   psych-cms-c01111 deleted after ship.sh. Record repair/s161/S161.md (S8, S9) and S8_REPORT.md. Open: OPEN_WORK
   s161 line.
 
