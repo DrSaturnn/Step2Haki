@@ -15,10 +15,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 - **Open: s161** (Claude lead; Psych Pharmacology B3 of 4: pc-ssri, pc-tca, mood-anticonv (Lithium and
   anticonvulsants; id kept, card in place), pc-cog, pc-other; Q4 keep; bipolar-mania drawer label patch). Branch
   wip/s161 in both repos. Budget 24 agents, 680 calls, 52M (builders 6, 450, 42M; reviewers 18, 230, 10M); lead
-  100M. **Step: S7 done: all READY** (chat 4; rounds 2 to 4, repair/s161/adj_r1.md to adj_r3.md and
-  local/s161/chat4/adj_all.md; Jonathan approved round 4 and max_agents 26); **next S8** per repair/s161/S161.md "Next
-  (chat 5): S8". Spend: builders and reviewers 26 agents, 529 calls, 48.62M of 52M; lead chats 1 to 4 74.89M of 100M.
-  verify.py replay now undoes replacements one at a time (tool note for the S8 report). One temporary allowlist line
+  100M. **Step: S8 presented** (chat 5; changelog 161 written; `batch.py s8`: 6 of 6 READY, gate PASS, page e98d1dd38c65;
+  report repair/s161/S8_REPORT.md sent); **next: S9 on Jonathan's "ship"** in the chat that presented (approval record
+  in its container; a fresh chat re-runs `batch.py s8` first). Spend: builders and reviewers 26 agents, 529 calls,
+  48.62M of 52M; lead chats 1 to 4 74.89M of 100M (chat 5 not yet recorded). One temporary allowlist line
   (psych-cms-c01111) to delete after ship.sh passes.
 
 - **Previous: s160 SHIPPED 2026-11-02** (Claude lead; Psych Pharmacology B2 of 4: pc-benzo, pc-anxiety, adhd-meds
