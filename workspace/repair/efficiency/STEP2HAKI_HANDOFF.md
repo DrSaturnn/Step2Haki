@@ -12,14 +12,15 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open: s161** (Claude lead; Psych Pharmacology B3 of 4: pc-ssri, pc-tca, mood-anticonv (Lithium and
-  anticonvulsants; id kept, card in place), pc-cog, pc-other; Q4 keep; bipolar-mania drawer label patch). Branch
-  wip/s161 in both repos. Budget 24 agents, 680 calls, 52M (builders 6, 450, 42M; reviewers 18, 230, 10M); lead
-  100M. **Step: S8 presented** (chat 5; changelog 161 written; `batch.py s8`: 6 of 6 READY, gate PASS, page e98d1dd38c65;
-  report repair/s161/S8_REPORT.md sent); **next: S9 on Jonathan's "ship"** in the chat that presented (approval record
-  in its container; a fresh chat re-runs `batch.py s8` first). Spend: builders and reviewers 26 agents, 529 calls,
-  48.62M of 52M; lead chats 1 to 4 74.89M of 100M (chat 5 not yet recorded). One temporary allowlist line
-  (psych-cms-c01111) to delete after ship.sh passes.
+- **Open: none.** Next: Psych Pharmacology B4 (s162) launch prompt below.
+
+- **Previous: s161 SHIPPED 2026-11-02** (Claude lead; Psych Pharmacology B3 of 4: pc-ssri, pc-tca, mood-anticonv
+  (Lithium and anticonvulsants; id kept, card in place), pc-cog, pc-other; Q4 keep; bipolar-mania drawer label):
+  commit f1922cf, page 9acef4067ecf (approved candidate e98d1dd38c65); version.json not checked here, Jonathan checks the live
+  site. Wave 26 agents, 529 calls, 48.62M of 52M (builders 40.32M, no relaunch; reviewers 8.30M); lead 5 chats,
+  about 82M of 100M. The first ship run aborted at the trailer (AX_SESSION unset). The temporary allowlist line
+  psych-cms-c01111 deleted after ship.sh. Record repair/s161/S161.md (S8, S9) and S8_REPORT.md. Open: OPEN_WORK
+  s161 line.
 
 - **Previous: s160 SHIPPED 2026-11-02** (Claude lead; Psych Pharmacology B2 of 4: pc-benzo, pc-anxiety, adhd-meds
   (card in place, id kept), pc-sleep, pc-orexin, sud-meds (card in place, id kept); sedatives retired into the four new
@@ -62,11 +63,10 @@ s159 ship) moved to repair/efficiency/STATE_ARCHIVE.md (runbook S9: keep the sta
 
 ## Next launch prompt (paste into a fresh chat)
 
-Psych Pharmacology B3 (s161), only after Jonathan answers Q4 (PSYCH_PHARM_BATCHES.md: keep or shrink the deep briefs
-ssri-effects, tca-tox and lithium-effects beside their cards). Budget proposed by the s160 report: builders 6, 450,
-42M (large lanes budgeted at 100 calls up front); reviewers 18, 230, 10M; lead 100M; Jonathan sets it at launch.
+Psych Pharmacology B4 (s162), the last pharm batch: the four antipsychotic-group cards; Q4 "keep" carries
+(antipsych-effects stays as the deep brief). Budget proposed by the s161 report; Jonathan sets it at launch.
 ```
-Step2Haki: launch batch s161 (Psych Pharmacology section, batch 3 of 4: SSRIs, TCAs, Lithium and anticonvulsants, Cognitive agents, Other agents) per claude/BATCH_RUNBOOK.md, claude/pending/PSYCH_PHARM_V2.md, claude/pending/PSYCH_PHARM_BATCHES.md and claude/CARD_SPEC.md. mood-anticonv retires into Lithium and anticonvulsants (id kept; items carried with ids; drawers retargeted). Q4: <Jonathan's decision>. Budget: 24 agents, 680 calls, 52M agent tokens (builders 6, 450, 42M; reviewers 18, 230, 10M); lead 100M.
+Step2Haki: launch batch s162 (Psych Pharmacology section, batch 4 of 4: Atypical antipsychotics, Typical antipsychotics, Anticholinergic, Tardive dyskinesia agents) per claude/BATCH_RUNBOOK.md, claude/pending/PSYCH_PHARM_V2.md, claude/pending/PSYCH_PHARM_BATCHES.md and claude/CARD_SPEC.md. Q4: keep (antipsych-effects and tca-tox stay as the deep briefs the cards link to). Budget: 23 agents, 580 calls, 42M agent tokens (builders 5, 380, 34M; reviewers 18, 200, 8M); lead 80M.
 ```
 
 NBME presentation layer mockup (no batch; Jonathan 2026-10-26: cross-domain question types first, then how NBME

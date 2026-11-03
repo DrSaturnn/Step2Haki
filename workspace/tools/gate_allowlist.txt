@@ -16,4 +16,3 @@ K3 bs-adolescent-confid:mnemonic  # pre-existing: mnemonic has no recorded sourc
 
 # s161 (2026-11-02): one-card verify pages hold one built card; the mood-anticonv card (its pc-nbq block) is a shell there.
 # Delete this line at the s161 ship (after ship.sh passes).
-nbme-coverage psych-cms-c01111  # s161 temporary: one-card verify only (mood-anticonv card NBME block); delete at the s161 ship
