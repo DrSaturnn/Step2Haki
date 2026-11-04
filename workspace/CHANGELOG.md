@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-03 s161b: site layer: one home per brief in the sidebar, Presentations browsing, Shelf card, flat default
+
+```
+Page: 205 briefs, 2330 items -> 205 briefs, 2330 items
+Other page changes (nav, headers, scripts): +4747 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 205 briefs, 2330 items (931 with reasons), 23 scripts, 40 checks, base HEAD | allowlisted 9 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 205 | bankwraps 205 | mcq 2330 (reasons 931) (axCheck 2330, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: NOT CHECKED (repair/sources missing: restore axbx-local-only.tar.gz)
+```
+
 ## 2026-11-02 s161: s161: Psych Pharmacology B3: SSRIs, TCAs, Lithium and anticonvulsants, Cognitive agents, Other agents
 
 ```
