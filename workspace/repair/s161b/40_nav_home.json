@@ -1,0 +1,64 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "  function setBrief(id){   // s146c: a hub has two tiles; the rail follows the tile clicked, else the row scrolled from, else the system tile\n    var prev = cur.brief, all = tiles[id] || [], it = null;\n    if(prev) (tiles[prev] || []).forEach(function(t){ t.el.removeAttribute('aria-current'); });\n    if(pref && pref.id === id){ it = pref; pref = null; }\n    else if(curIt){ all.forEach(function(t){ if(t.g === curIt.g) it = t; }); }\n    if(!it) it = byId[id];\n    cur.brief = id; cur.step = -1; curIt = it || null;\n    if(!it){ drawRail(null); return; }\n    all.forEach(function(t){ t.el.setAttribute('aria-current', 'page'); });\n    if(it.g.btn.getAttribute('aria-expanded') !== 'true') fold(it.g, true, false);\n    drawRail(it);\n    keep(it.el, !!prev, true);\n  }",
+   "with": "  function setBrief(id){   // s161b (Jonathan 2026-11-03, \"one home per brief\"): the rail always sits under the home tile (the system tile; a\n                           // Presentations-only brief's home is its Presentations tile); the other tile is marked, never current (was s146c: the\n                           // rail followed the tile clicked or the row scrolled from, so it hopped between groups and depended on scroll direction)\n    var prev = cur.brief, all = tiles[id] || [], it = byId[id] || null, s = scroller();\n    if(prev) (tiles[prev] || []).forEach(function(t){ t.el.removeAttribute('aria-current'); t.el.removeAttribute('data-also'); });\n    cur.brief = id; cur.step = -1; curIt = it;\n    if(!it){ drawRail(null); return; }\n    all.forEach(function(t){ if(t === it) t.el.setAttribute('aria-current', 'page'); else { t.el.setAttribute('data-also', ''); if(stay) stay = t.el; } });\n    if(it.g.btn.getAttribute('aria-expanded') !== 'true'){ fold(it.g, true, false); it.g.auto = true; }\n    drawRail(it);\n    // a group the sidebar opened itself closes once the current brief lives elsewhere; the list is held still while it closes\n    groups.forEach(function(g){\n      if(!g.auto || g === it.g) return;\n      var at = stay || it.el, y0 = at.getBoundingClientRect().top;\n      fold(g, false, false); g.auto = false;\n      if(s) s.scrollTop += at.getBoundingClientRect().top - y0;\n    });\n    keep(it.el, !!prev, true);\n  }"
+  },
+  {
+   "op": "replace_global",
+   "find": "b.addEventListener('click', function(gg){ return function(){ fold(gg, gg.btn.getAttribute('aria-expanded') !== 'true', true); }; }(g));",
+   "with": "b.addEventListener('click', function(gg){ return function(){ gg.auto = false; fold(gg, gg.btn.getAttribute('aria-expanded') !== 'true', true); }; }(g));"
+  },
+  {
+   "op": "replace_global",
+   "find": "    else { var id = a.dataset.id; (tiles[id] || []).forEach(function(t){ if(t.el === a) pref = t; });\n      if(cur.brief === id && pref && pref !== curIt){ cur.brief = null; setBrief(id); }\n      go(id); }",
+   "with": "    else { var id = a.dataset.id;\n      stay = byId[id] && byId[id].el !== a ? a : null;   // s161b r2: a click in Presentations keeps the sidebar there\n      if(cur.brief === id && byId[id]) keep(byId[id].el, true, true);   // s161b: already current, so bring its home tile (or, browsing, this tile) into view\n      go(id); }"
+  },
+  {
+   "op": "replace_global",
+   "find": "#axn a.axn-b[aria-current=\"page\"]{",
+   "with": "#axn a.axn-b[data-also]{position:relative;font-weight:600}\n#axn a.axn-b[data-also]::before{content:\"\";position:absolute;left:17px;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--accent)}\n#axn a.axn-b[aria-current=\"page\"]{"
+  },
+  {
+   "op": "replace_global",
+   "find": "    document.body.classList.toggle('ax-nest', WIDE.matches);\n    if(!WIDE.matches){ putBack(); return; }",
+   "with": "    document.body.classList.toggle('ax-nest', WIDE.matches);\n    if(!WIDE.matches || window.AXN){ putBack(); return; }   // s161b: the s143 sidebar draws its own rail"
+  },
+  {
+   "op": "replace_global",
+   "find": "var tiles = {}, pref = null, curIt = null,",
+   "with": "var tiles = {}, pref = null, curIt = null, stay = null,"
+  },
+  {
+   "op": "replace_global",
+   "find": "  function keep(n, smooth, top){\n    var s = scroller(); if(!s || !n || nav.classList.contains('sxon')) return;",
+   "with": "  function keep(n, smooth, top){\n    if(stay){ if(!top) return; n = stay; }   // s161b r2: browsing Presentations, follow its tile, not the rail\n    var s = scroller(); if(!s || !n || nav.classList.contains('sxon')) return;"
+  },
+  {
+   "op": "replace_global",
+   "find": "    if(a.classList.contains('axn-s')) go(a.getAttribute('href').slice(1), +a.dataset.i);",
+   "with": "    if(a.classList.contains('axn-s')){ stay = null; go(a.getAttribute('href').slice(1), +a.dataset.i); }"
+  },
+  {
+   "op": "replace_global",
+   "find": "  /* ---------- the display sheet ---------- */",
+   "with": "  /* s161b r5: the shelf card; the shelf <select> lies invisibly over it */\n  var SVG_SHELF = '<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 2.5v9.5M6 2.5v9.5M9.2 3.2l2.6 8.8M1.5 14h13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\"></path></svg>';\n  var SVG_DOWN = '<svg width=\"12\" height=\"8\" viewBox=\"0 0 12 8\" aria-hidden=\"true\"><path d=\"M1 1.5 6 6.5 11 1.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>';\n  function shelfCard(before, sel){   // before: the search pill, which stays on top\n    var row = el('div', 'axn-shelfrow');\n    row.appendChild(el('span', 'ic', SVG_SHELF));\n    var t = el('span', 'tx'); t.appendChild(el('span', 'k')).textContent = 'Shelf'; var v = t.appendChild(el('span', 'v')); row.appendChild(t);\n    row.appendChild(el('span', 'ch', SVG_DOWN)); row.appendChild(sel);\n    before.parentNode.insertBefore(row, before.nextSibling);   // r6: under the search\n    function show(){ var o = sel.options[sel.selectedIndex]; v.textContent = o ? txt(o).replace(/\\s+\\u2013\\s+soon$/, '') : 'Step 2'; }\n    sel.addEventListener('change', function(){ setTimeout(show, 0); });\n    document.addEventListener('ax-shelf', show); show();\n  }\n\n  /* ---------- the display sheet ---------- */"
+  },
+  {
+   "op": "replace_global",
+   "find": "      if(sp && sp.parentNode !== s) s.appendChild(sp);",
+   "with": "      var pl = nav.querySelector('.axn-srch'), ss = sp && sp.querySelector('select');   // s161b r5: the shelf picker is a card under the search, not a sheet row\n      if(ss && pl && !nav.querySelector('.axn-shelfrow')) shelfCard(pl, ss);"
+  },
+  {
+   "op": "replace_global",
+   "find": "#nav.axn .axn-sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}",
+   "with": "#nav.axn .axn-sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}\n#nav.axn{--axn-shelf-line:rgba(24,28,30,.09)}\n[data-theme=\"dark\"] #nav.axn{--axn-shelf-line:rgba(255,255,255,.09)}\n#nav.axn .axn-shelfrow{position:relative;display:grid;grid-template-columns:32px minmax(0,1fr) auto;align-items:center;gap:10px;margin:0 14px 10px;padding:7px 14px 7px 7px;border-radius:14px;background:var(--axn-tile);box-shadow:0 1px 3px rgba(0,0,0,.08),inset 0 0 0 1px var(--axn-shelf-line);cursor:pointer;transition:box-shadow .2s ease}\n#nav.axn .axn-shelfrow:hover{box-shadow:0 2px 8px rgba(0,0,0,.10),inset 0 0 0 1px rgba(var(--acc-rgb),.35)}\n#nav.axn .axn-shelfrow:focus-within{box-shadow:0 1px 3px rgba(0,0,0,.08),inset 0 0 0 1.5px rgba(var(--acc-rgb),.6)}\n#nav.axn .axn-shelfrow .ic{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:10px;background:rgba(var(--acc-rgb),.14);color:var(--accent)}\n#nav.axn .axn-shelfrow .tx{display:flex;flex-direction:column;gap:1px;min-width:0}\n#nav.axn .axn-shelfrow .k{font:600 10.5px/1.2 var(--sans);letter-spacing:.7px;text-transform:uppercase;color:var(--axn-mute)}\n#nav.axn .axn-shelfrow .v{font:700 15px/1.25 var(--sans);color:var(--axn-ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}\n#nav.axn .axn-shelfrow .ch{display:flex;color:var(--axn-mute)}\n#nav.axn .axn-shelfrow select{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;border:0;border-radius:14px;opacity:0;cursor:pointer;font-size:16px;-webkit-appearance:none;appearance:none;background:none;box-shadow:none}"
+  },
+  {
+   "op": "replace_global",
+   "find": "  if(localStorage.getItem('ax-flat')==='1') b.classList.add('flat');",
+   "with": "  if(localStorage.getItem('ax-flat')!=='0') b.classList.add('flat');   // s161b r3: flat is the default"
+  }
+ ]
+}
