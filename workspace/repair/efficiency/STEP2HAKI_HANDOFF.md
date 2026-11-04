@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-11-03, by Claude (s162 launched).
+Last updated: 2026-11-03, by Claude (s162 chat 2, S4 round 1).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -13,10 +13,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 ## State (rewrite after every step)
 
 - **Open: s162** (Claude lead; Psych Pharmacology B4 of 4: pc-atypical, pc-typical, pc-antichol, pc-td; Q4 keep;
-  launched 2026-11-03 11:42; wip/s162 in both repos). Step: **S3 done** (four cards BUILT, MECHANICAL PASS; gate,
-  render, vendor PASS; squeeze 0; pointers 0 problems). Next: S4 round 1 in a fresh chat (batch file "Next (chat 2)").
-  Budget 23 agents, 580 calls, 42M (builders 5, 380, 34M; reviewers 18, 200, 8M); lead 80M. Spend: builders 4
-  agents, 227 calls, 28.07M; lead chat 1 21.20M. Record repair/s162/S162.md.
+  launched 2026-11-03 11:42; wip/s162 in both repos). Step: **S4 round 1 done** (12 receipts filed: acc PASS-IF x4;
+  flags PASS-IF x3, FAIL pc-typical; read FAIL x4; 0 HIGH, 6 MED, 36 LOW); S5 adjudication written
+  (repair/s162/adj_r1.md, 29 exact edits). Next: S5 edits, S6, S7 round 2 in a fresh chat (batch file "Next
+  (chat 3)"). Budget 23 agents, 580 calls, 42M (builders 5, 380, 34M; reviewers 18, 200, 8M); lead 80M. Spend: 11
+  agents, 289 calls, 30.31M (builders 28.07M; reviewers 7, 62, 2.24M); lead 2 chats 31.93M. Record repair/s162/S162.md.
 
 - **Previous: s161 SHIPPED 2026-11-02** (Claude lead; Psych Pharmacology B3 of 4: pc-ssri, pc-tca, mood-anticonv
   (Lithium and anticonvulsants; id kept, card in place), pc-cog, pc-other; Q4 keep; bipolar-mania drawer label):
