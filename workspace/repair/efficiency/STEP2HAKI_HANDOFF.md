@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-11-03, by Claude (s161b S8).
+Last updated: 2026-11-03, by Claude (s161b shipped).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,10 +12,13 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open: s161b** (site layer, Jonathan 2026-11-03; branch wip/s161b; record repair/s161b/S161B.md): one home per brief
-  in the sidebar, Presentations browsing stays on Presentations, Shelf card under the search, flat theme by default.
-  Pilot r6 approved in chat; batch built from it (identical page); S8 checks run; presented with approval.py; awaiting
-  "ship" in the presenting chat. Then Psych Pharmacology B4 (s162) launch prompt below.
+- **Open: none.** Next: Psych Pharmacology B4 (s162) launch prompt below.
+
+- **Previous: s161b SHIPPED 2026-11-03** (Claude lead; site layer, Jonathan's words in DIGEST 2026-11-03: one home per
+  brief in the sidebar, Presentations browsing stays on Presentations, Shelf card under the search, flat theme default):
+  commit 1885982, page fd0959548d47 (approved candidate 9b47429e1708), version.json build s161b (checked). No agents; no brief
+  changed. Pilot repair/pilots/nav-home/make_pilot.py (artifact r1 to r6); record repair/s161b/S161B.md. Open: OPEN_WORK
+  s161b line (dark legib run stopped; batch.py post not run, so no lead ledger row or private sync).
 
 - **Previous: s161 SHIPPED 2026-11-02** (Claude lead; Psych Pharmacology B3 of 4: pc-ssri, pc-tca, mood-anticonv
   (Lithium and anticonvulsants; id kept, card in place), pc-cog, pc-other; Q4 keep; bipolar-mania drawer label):
