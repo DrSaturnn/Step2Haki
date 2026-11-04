@@ -27,8 +27,10 @@ OPS = {
     'new_brief': ({'after', 'html'}, {'nav', 'note'}),
     'retire_brief': ({'brief', 'alias_before', 'ledger'}, {'note'}),
     'replace_global': ({'find', 'with'}, {'note'}),
-    # s146c: move a whole brief, byte for byte, to just after another brief (reordering a section); nothing in it changes
-    'move_brief': ({'brief', 'after'}, {'note'}),
+    # s146c: move a whole brief, byte for byte, to just after another brief (reordering a section); nothing in it changes.
+    # s161c: or to just after a unique snippet of page chrome (after_anchor: a section header or sub-header); exactly one
+    # of after and after_anchor
+    'move_brief': ({'brief'}, {'after', 'after_anchor', 'note'}),
     # migration only (brief-migration step 6): the whole brief is replaced by its Type C version; every old item id
     # must be carried (same id, version not lower, bumped when the stem changed) unless listed in `retired_items`
     # with the ledger that accounts for it; the id and data-shelf never change
@@ -62,6 +64,8 @@ def validate(spec):
         extra = sorted(set(e) - req - opt - {'op'})
         if miss:
             errs.append((n, op, 'missing field(s) ' + ', '.join(miss), 'see tools/EDITS.md for the %s example' % op))
+        if op == 'move_brief' and ('after' in e) == ('after_anchor' in e):
+            errs.append((n, op, 'give exactly one of after and after_anchor', 'after: a brief id; after_anchor: a unique snippet of page chrome'))
         if extra:
             errs.append((n, op, 'unknown field(s) ' + ', '.join(extra), 'remove them; allowed: ' + ', '.join(sorted(req | opt))))
         for k in req | opt:
@@ -237,6 +241,24 @@ def apply_one(html, e, n, taken, log):
                                 'edit brief content with replace/insert_* (brief-scoped); replace_global is for CSS, scripts and nav')
         html = splice(html, [(at, at + len(needle), e['with'])])
         log.append('replace_global at offset %d' % at)
+        return html
+    if op == 'move_brief' and 'after_anchor' in e:   # s161c
+        b = _brief(html, e['brief'], n, op)
+        chunk = html[b.start:b.end]
+        cut_end = b.end
+        while cut_end < len(html) and html[cut_end] in ' \t\r\n':
+            cut_end += 1
+        rest = html[:b.start] + html[cut_end:]
+        needle = e['after_anchor']
+        if not needle or count(rest, needle) != 1:
+            raise EditError(n, op, 'after_anchor occurs %d times in the page (must be exactly 1): %r' % (count(rest, needle) if needle else 0, needle[:90]),
+                            'lengthen the anchor with neighbouring chrome until it is unique')
+        at = rest.find(needle) + len(needle)
+        for x in briefs(rest):
+            if at - len(needle) < x.end and at > x.start:
+                raise EditError(n, op, 'after_anchor falls inside brief %s' % x.id, 'anchor on page chrome (a section header or sub-header)')
+        html = rest[:at] + '\n' + chunk + '\n' + rest[at:]
+        log.append('move_brief %s after anchor' % b.id)
         return html
     if op == 'move_brief':
         b, t = _brief(html, e['brief'], n, op), _brief(html, e['after'], n, op)

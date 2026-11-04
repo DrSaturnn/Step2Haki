@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-11-03, by Claude (s161b shipped).
+Last updated: 2026-11-04, by Claude (s161c S8).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,7 +12,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open: none.** Next: Psych Pharmacology B4 (s162) launch prompt below.
+- **Open: s161c** (site layer, Jonathan 2026-11-03/04; branch wip/s161c; record repair/s161c/S161C.md): Presentations
+  as its own section (page and sidebar), each brief listed once under a system sub-header; gate nav-link one link per
+  brief; apply_edits move_brief after_anchor. Presented with approval.py; awaiting "ship" in the presenting chat. Then
+  Psych Pharmacology B4 (s162) launch prompt below.
 
 - **Previous: s161b SHIPPED 2026-11-03** (Claude lead; site layer, Jonathan's words in DIGEST 2026-11-03: one home per
   brief in the sidebar, Presentations browsing stays on Presentations, Shelf card under the search, flat theme default):

@@ -282,12 +282,15 @@ def check_page(page, g, page_path):
                 g.fail('nav-link', bid, '%s is in Presentations but is not a hub (data-entry="hub")' % bid)
             elif cls != ['']:
                 g.fail('nav-link', bid, '%s needs exactly one plain link in Presentations, has %r' % (bid, cls))
+        # s161c (Jonathan 2026-11-03, "remove all duplicated briefs"): every brief has exactly one link in the sidebar,
+        # a hub in Presentations (plain), any other brief in its system (classed by kind); was s146c (a hub in both)
         for b in bl:
             want = 'aq' if (b.kind == 'aq' or b.attrs.get('data-src') == 'aquifer') else ('bs' if b.kind == 'bs' else '')
             got = links.get(b.id, [])
-            if len(got) != 1:
-                g.fail('nav-link', b.id, '%s has %d nav links' % (b.id, len(got)))
-            elif got[0] != want:
+            n_all = len(got) + len(pres.get(b.id, []))
+            if n_all != 1:
+                g.fail('nav-link', b.id, '%s has %d nav links' % (b.id, n_all))
+            elif got and got[0] != want:
                 g.fail('nav-link', b.id, '%s nav link class=%r, expected %r' % (b.id, got[0], want))
         for sec in re.split(r'<div class="sect(?: [a-z0-9 -]+)?">', nav)[1:]:
             m = re.match(r'(.*?)\s*<span class="count">(\d+)</span>', sec, re.S)
