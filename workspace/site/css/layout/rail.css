@@ -1,0 +1,6 @@
+.brief .bb-end{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;margin:26px 0 0;padding:16px 0 0;border-top:1px solid var(--hair);font:650 13px/1.35 var(--sans);color:var(--muted)}
+.brief .bb-end .bb-el b{color:var(--ink-2)}
+.brief .bb-end .bb-go{display:flex;flex-wrap:wrap;gap:8px}
+.brief .bb-end a,.brief .bb-end button{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 13px;border-radius:11px;background:var(--raised);box-shadow:var(--e2);font:700 13px/1.2 var(--sans);color:var(--principle)}
+.brief .bb-end a[hidden]{display:none}
+.brief .bb-end a:focus-visible,.brief .bb-end button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}

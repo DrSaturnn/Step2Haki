@@ -1,0 +1,30 @@
+.brief.sp .sp-scale{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:10px;padding-top:9px;border-top:1px dashed var(--hair);font-size:13px;color:var(--ink-2)}
+.brief.sp .sp-scale b{display:inline-grid;place-items:center;width:20px;height:20px;margin-right:5px;border-radius:6px;background:var(--criteria-bg);color:var(--criteria);font:800 12px/1 var(--sans)}
+.brief.sp .sp-scale em{margin-left:auto;font-style:normal;font-weight:700;color:var(--ink)}
+@media (--phone){
+.brief.sp .sp-scale{display:grid;grid-template-columns:1fr 1fr;gap:8px 10px}
+.brief.sp .sp-scale em{grid-column:1 / -1;margin-left:0}
+}
+.brief.sp .sp-thr{grid-column:11 / 29;grid-row:1;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;padding:0 0 7px 10px;border-left:3px solid var(--caution);border-top:3px solid var(--caution);border-radius:6px 6px 0 0}
+.brief.sp .sp-thr b{font:800 15px/1.2 var(--sans);color:var(--caution);padding-top:6px}
+.brief.sp .sp-thr span{font-size:13.5px;color:var(--ink-2)}
+@media (--phone){
+.brief.sp .sp-thr{margin:0 0 8px;padding:8px 10px;border:0;border-radius:10px;background:var(--caution-bg)}
+.brief.sp .sp-thr b{padding-top:0}
+}
+.brief.sp .sp-ladder{margin:10px 0 0;padding:4px 18px;border-radius:var(--r-sub);background:var(--recess);box-shadow:var(--inner)}
+.brief.sp .sp-rung{position:relative;display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;padding:16px 0}
+.brief.sp .sp-rung + .sp-rung{border-top:1px solid var(--hair)}
+.brief.sp .sp-rung::before{content:"";position:absolute;left:14px;top:46px;bottom:-16px;width:2px;background:var(--recess-2)}
+.brief.sp .sp-rung:last-child::before{display:none}
+.brief.sp .sp-node{position:relative;z-index:1;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--confirm);color:var(--raised);font:800 13px/1 var(--sans)}
+.brief.sp .sp-rung:last-child .sp-node{background:var(--caution)}
+.brief.sp .sp-rung:first-child .sp-when span::before{content:""}
+@media (--phone){
+.brief.sp .sp-ladder{padding:2px 14px}
+.brief.sp .sp-rung{grid-template-columns:26px minmax(0,1fr);gap:11px}
+.brief.sp .sp-node{width:26px;height:26px}
+.brief.sp .sp-rung::before{left:12px;top:42px}
+}
+.brief.sp .sp-ladder + .sp-dx{margin-top:16px}
+html:is([data-theme],:not([data-theme])) body .brief.sp .sp-ladder b.sp-f{font-size:17px;line-height:24px}

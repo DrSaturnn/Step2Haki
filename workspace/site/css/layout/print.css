@@ -1,0 +1,35 @@
+@media (--print){
+.bkfilter{display:none}
+.bktools{display:none}
+.bankwrap.review .mcqwrap{display:block}
+}
+@page{margin:1in}
+@media (--print){
+body{background:#fff}
+#nav{display:none}
+main{margin-left:0;padding:0}
+.wrap{max-width:100%;padding:0}
+.brief,.tw,.mcq,.sectcard,.strat{box-shadow:none;background:#fff;border:1px solid #ccc;page-break-inside:avoid}
+.dp,.pearls,.danger,.rule,.crit,.vignette,.bsband{box-shadow:none;background:#F5F5F5;page-break-inside:avoid}
+.tab{box-shadow:none}
+body .axm-study .mask,body .mask.axm-study,body .axm-study .mask-region,body .mask-region.axm-study{filter:none!important;opacity:1!important}
+.mask-toggle{display:none!important}
+.mcq .why{display:block!important}
+table,ol.bank,ul.plain{page-break-inside:avoid}
+#mbar{display:none!important}
+.shelfpick button.soon{display:none}
+.shelfpick{display:none}
+.rvmast{display:none!important}
+html.cv .brief{content-visibility:visible}
+#rvlaunch,#rvpanel,#rvsession{display:none!important}
+#rvbar,.rvmark{display:none!important}
+#navscrim{display:none!important}
+#navtab{display:none!important}
+.brief.sp .sp-pop-b[hidden]{display:block}
+.brief.sp details.sp-sys > div{display:grid}
+.bankwrap.stack .mcqwrap > .mcq{display:block;margin:0 0 13px}
+.bankwrap.stack .mcqwrap::before,.bankwrap.stack .mcqwrap::after,.bknav{display:none}
+.brief .bb-bar,.brief .bb-rail,.brief .bb-end{display:none!important}
+#axrv{display:none!important}
+.psub{display:none}
+}

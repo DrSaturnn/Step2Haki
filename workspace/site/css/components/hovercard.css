@@ -1,0 +1,36 @@
+.flowpop{border:0;border-radius:12px;padding:12px;background:#fff;max-width:96vw;max-height:92vh;overflow:auto;box-shadow:0 12px 48px rgba(0,0,0,.35)}
+.flowpop::backdrop{background:rgba(20,18,40,.8)}
+.flowpop svg{display:block;width:min(92vw,1120px);min-width:760px;height:auto}
+.flowpop .hint{display:none;font:12px system-ui,sans-serif;color:#555;text-align:center;margin:6px 0 0}
+@media (max-width:800px){
+.flowpop .hint{display:block}
+}
+.flowpop .x{display:block;margin:8px auto 0;padding:6px 14px;border:1px solid var(--axh-DDDBEF);border-radius:8px;background:var(--axh-F2F1FA);font:13px system-ui,sans-serif;color:#1A1A2E;cursor:pointer}
+.brief.sp .sp-chip.pop{background:var(--principle-bg);color:var(--principle)}
+.brief.sp .sp-pop{all:unset;cursor:pointer;color:var(--accent);font-weight:800;border-bottom:1.5px dotted currentColor}
+.brief.sp .sp-pop:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.brief.sp .sp-pop-b{display:block;margin:8px 0 2px;padding:11px 14px;border-radius:var(--r-sub);background:var(--recess);box-shadow:var(--inner);font-size:14px;font-weight:400;line-height:1.5;color:var(--ink-2)}
+.brief.sp .sp-pop-b[hidden]{display:none}
+.sp-pop-b .sp-ct{display:block;margin:0 0 5px;font:800 10.5px/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--principle)}
+.sp-pop-b .sp-why-l,.sp-card .sp-why-l{display:block;margin-top:7px;padding-top:7px;border-top:1px dashed var(--hair)}
+.sp-pop-b .sp-why-l b,.sp-card .sp-why-l b{color:var(--accent)}
+.sp-pop-b ol{margin:2px 0 0;padding-left:20px}
+body .axm-study .mask:not(.shown) .sp-pop,body .mask.axm-study:not(.shown) .sp-pop{color:var(--ink-2)}
+.brief.sp .sp-chips:has(> .sp-pop){column-gap:22px;row-gap:8px}
+.brief.sp .sp-pop-b + .sp-pop{margin-left:14px}
+html:is([data-theme],:not([data-theme])) body .brief.sp .sp-pop-b{font-size:15px;line-height:21px;font-weight:500}
+html:is([data-theme],:not([data-theme])) body .brief.sp .sp-pop-b{padding:14px 16px;border-radius:20px;background:var(--g-card);box-shadow:var(--e2),0 0 0 1px var(--hair)}
+html:is([data-theme],:not([data-theme])) body :is(.sp-pop-b,.sp-card) .sp-ct{font:650 13px/18px var(--sans);letter-spacing:0;text-transform:none;color:var(--muted);margin:0 0 4px}
+@media (--phone){
+html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) :is(.dp,.pearls,.danger,.rule,.crit,.vignette,.mcq,.scriptcard,.sp-script,.sp-row,.sp-ladder,.sp-inst,.sp-pause,details.sp-sys,figure.lcp,figure.lcw,figure.sw,figure.sp-on,ol.sp-trk,.sp-pop-b){border-radius:18px}
+}
+html:is([data-theme],:not([data-theme])) body .brief.sp .sp-pop{transition:color .25s ease,background-color .25s ease}
+html:is([data-theme],:not([data-theme])) body .brief.sp .sp-tray > .sp-pop-b:not([hidden]),html:is([data-theme],:not([data-theme])) body .brief.sp td .sp-pop-b:not([hidden]){animation:qxin .55s var(--spr,ease-out) both}
+@media (--reduced-motion){
+html:is([data-theme],:not([data-theme])) body .brief.sp .sp-pop-b:not([hidden]){animation:none!important}
+}
+@media (--phone){
+html:is([data-theme],:not([data-theme])) body .brief.sp td .sp-pop{display:inline}
+}
+html:is([data-theme],:not([data-theme])) body .brief.sp td .sp-drw:not(.qx-pair) + .sp-pop{display:inline;margin-left:2px}
+html:is([data-theme],:not([data-theme])) body .brief.sp .sp-pop.qx-on{color:var(--accent)}

@@ -30,14 +30,18 @@ for (const a of ACCENTS) {
 const FULL = Object.keys(CONFIGS).filter(k => !k.startsWith('acc-'));
 const ACC_SAMPLE = ['hippos', 'mdd', 'kawasaki', 'asthma', 'neonatal-jaundice', 'pc-ssri', 'meningitis', 'bs-shock',
   'cluster-b', 'thyroid', 'dementia', 'ectopic'];
-const FREEZE = '*,*::before,*::after{transition:none!important;animation:none!important;caret-color:transparent!important;scroll-behavior:auto!important}';
+const FREEZE = '*,*::before,*::after{content-visibility:visible!important;contain-intrinsic-size:none!important;transition:none!important;animation:none!important;caret-color:transparent!important;scroll-behavior:auto!important}';
 
+// fixed choice order and clock, so two runs of one page match
+const DETERMINISM = '(function(){var s=20261105;Math.random=function(){s=(Math.imul(s,1103515245)+12345)>>>0;return (s>>>8)/16777216;};})();';
 function arg(a, k, d) { const i = a.indexOf(k); return i >= 0 ? a[i + 1] : d; }
 
 async function open(browser, page, view, cfg) {
   const ctx = await browser.newContext({ viewport: { width: VIEWS[view].width, height: VIEWS[view].height },
     isMobile: !!VIEWS[view].isMobile, hasTouch: !!VIEWS[view].hasTouch, deviceScaleFactor: 1, reducedMotion: 'no-preference' });
   await ctx.addInitScript(s => { try { localStorage.clear(); for (const k in s) localStorage.setItem(k, s[k]); } catch (e) {} }, cfg);
+  await ctx.addInitScript(DETERMINISM);
+  await ctx.clock.setFixedTime(new Date('2026-11-05T12:00:00Z'));
   const p = await ctx.newPage();
   p.setDefaultTimeout(240000);
   await p.goto('file://' + path.resolve(page), { waitUntil: 'load', timeout: 240000 });
@@ -49,8 +53,11 @@ async function open(browser, page, view, cfg) {
 async function freeze(p) { await p.addStyleTag({ content: FREEZE }); await p.waitForTimeout(300); }
 
 async function shotBriefs(p, dir, ids) {
+  // fixed and sticky elements follow the scroll; they are shot in place on their own (_top, _mid, _nav)
+  await p.evaluate(() => { for (const e of document.body.querySelectorAll('*')) { const ps = getComputedStyle(e).position; if (ps === 'fixed' || ps === 'sticky') e.style.setProperty('visibility', 'hidden', 'important'); } });
   for (const id of ids) {
     await p.evaluate(id => { document.querySelectorAll('.brief[id]').forEach(e => { e.style.display = e.id === id ? '' : 'none'; }); window.scrollTo(0, 0); }, id);
+    await p.waitForTimeout(450);
     const el = await p.$('#' + CSS_escape(id));
     if (!el) continue;
     try { await el.screenshot({ path: path.join(dir, id + '.png'), timeout: 240000 }); }
@@ -73,7 +80,9 @@ async function chrome(p, dir, view) {
   } else {
     const t = await p.$('#navtab'); if (t) await t.click().catch(() => {});
   }
-  await p.waitForTimeout(800);
+  await p.waitForTimeout(2500);
+  await p.evaluate(() => { const n = document.getElementById('nav'); if (n) for (const e of [n, ...n.querySelectorAll('*')]) if (e.scrollTop) e.scrollTop = Math.round(e.scrollTop / 40) * 40; });
+  await p.waitForTimeout(300);
   await p.screenshot({ path: path.join(dir, '_nav.png') });
 }
 
@@ -123,8 +132,10 @@ async function shoot(a) {
       if (arg(a, '--briefs')) ids = arg(a, '--briefs').split(',');
       else if (c.startsWith('acc-')) ids = ACC_SAMPLE;
       if (arg(a, '--sample')) { const n = +arg(a, '--sample'); ids = ids.filter((_, i) => i % Math.ceil(ids.length / n) === 0); }
-      await shotBriefs(p, dir, ids);
+      await p.waitForTimeout(2500);
       await chrome(p, dir, view);
+      await p.reload({ waitUntil: 'load' }); await p.waitForTimeout(1500); await freeze(p);
+      await shotBriefs(p, dir, ids);
       await ctx.close();
       console.log(view, c, ids.length, Math.round((Date.now() - t0) / 1000) + 's');
     }

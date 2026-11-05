@@ -1,0 +1,163 @@
+/* Brief boundaries (s120). Builds, for every brief: a sticky bar (<=1100px), a sticky section rail (>1100px) and an end cap.
+   Sections: spine briefs follow their stepper (absent steps greyed); other briefs use their section headings, after an Overview
+   entry for the top of the brief. Built at load from the page itself; nothing is stored. Drawer clones strip all three (spine.js). */
+(function(){
+  'use strict';
+  var WIDE = window.matchMedia('(min-width:1101px)');
+  var briefs = [], byId = {}, live = new Set(), active = null, raf = 0;
+
+  function txt(n){ return (n ? n.textContent : '').replace(/\s+/g, ' ').trim(); }
+  function sectionsOf(b){
+    var out = [], step = b.querySelector('.sp-step');
+    if(step){
+      step.querySelectorAll('a').forEach(function(a){
+        var n = txt(a.querySelector('b')), l = txt(a.querySelector('span')) || txt(a);
+        if(a.classList.contains('off')){ out.push({n:n, l:l, el:null}); return; }
+        var id = (a.getAttribute('href') || '').slice(1), el = id && document.getElementById(id);
+        if(el && b.contains(el)) out.push({n:n, l:l, el:el});
+      });
+      return out;
+    }
+    out.push({n:'', l:'Overview', el:b});
+    b.querySelectorAll('h5.tsec, h5.authored-hdr').forEach(function(h, i){
+      if(h.closest('.sp-drawer')) return;
+      if(!h.id) h.id = b.id + '-bb' + i;
+      out.push({n:'', l:txt(h), el:h});
+    });
+    return out;
+  }
+  function go(el){
+    if(!el) return;
+    el.scrollIntoView({behavior: 'smooth', block: 'start'});
+    if(el.id) history.replaceState(null, '', '#' + el.id);
+  }
+  function nextVisible(b){
+    var i = briefs.indexOf(b);
+    for(var j = i + 1; j < briefs.length; j++){ if(briefs[j].el.offsetParent !== null) return briefs[j]; }
+    return null;
+  }
+
+  function build(b){
+    var h4 = b.querySelector('h4'); if(!h4) return null;
+    var title = txt(h4), secs = sectionsOf(b), rec = {el:b, h4:h4, title:title, secs:secs, cur:-1};
+    // bar
+    var bar = document.createElement('div'); bar.className = 'bb-bar'; bar.setAttribute('aria-hidden', 'true');
+    bar.innerHTML = '<button type="button" class="bb-idx" aria-label="Index"></button><button type="button" class="bb-t"></button>' +
+      '<button type="button" class="bb-sec" aria-haspopup="menu" aria-expanded="false"><span class="bb-l"></span><span class="bb-c"></span></button>' +
+      '<span class="bb-prog"><i></i></span><div class="bb-menu" role="menu" hidden></div>';
+    bar.querySelector('.bb-t').textContent = title;
+    var menu = bar.querySelector('.bb-menu');
+    secs.forEach(function(s, i){
+      var it = document.createElement('button'); it.type = 'button'; it.setAttribute('role', 'menuitem');
+      it.innerHTML = '<b></b><span></span>'; it.querySelector('b').textContent = s.n || '•'; it.querySelector('span').textContent = s.l;
+      if(!s.el){ it.classList.add('off'); it.disabled = true; }
+      it.addEventListener('click', function(){ closeMenus(); go(s.el); });
+      menu.appendChild(it);
+    });
+    bar.querySelector('.bb-idx').addEventListener('click', function(){ var t = document.getElementById('navtab'); if(t) t.click(); });
+    bar.querySelector('.bb-t').addEventListener('click', function(){ go(b); });
+    bar.querySelector('.bb-sec').addEventListener('click', function(e){
+      e.stopPropagation(); var open = menu.hidden; closeMenus(); menu.hidden = !open; this.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    b.insertBefore(bar, b.firstChild);
+    // rail
+    var rail = document.createElement('nav'); rail.className = 'bb-rail'; rail.setAttribute('aria-label', 'Sections of ' + title);
+    rail.innerHTML = '<p class="bb-rt"></p><div class="bb-rl"><span class="bb-fill"></span></div>';
+    rail.querySelector('.bb-rt').textContent = title;
+    var rl = rail.querySelector('.bb-rl');
+    secs.forEach(function(s){
+      var a = document.createElement('a');
+      if(s.el){ a.href = '#' + s.el.id; a.addEventListener('click', function(e){ e.preventDefault(); go(s.el); }); }
+      else { a.className = 'off'; a.setAttribute('aria-disabled', 'true'); }
+      if(s.n){ var nb = document.createElement('b'); nb.textContent = s.n; a.appendChild(nb); }
+      a.appendChild(document.createTextNode(s.l)); rl.appendChild(a);
+    });
+    b.insertBefore(rail, bar.nextSibling);
+    b.classList.add('bb-r');
+    // end cap
+    var end = document.createElement('div'); end.className = 'bb-end';
+    end.innerHTML = '<span class="bb-el">End of <b></b></span><span class="bb-go"><button type="button" class="bb-top">Back to top ↑</button><a class="bb-next" href="#">Next: <b></b> →</a></span>';
+    end.querySelector('.bb-el b').textContent = title;
+    end.querySelector('.bb-top').addEventListener('click', function(){ go(b); });
+    var nx = end.querySelector('.bb-next');
+    nx.addEventListener('click', function(e){ e.preventDefault(); var n = nextVisible(rec); if(n) go(n.el); });
+    b.appendChild(end);
+    rec.bar = bar; rec.rail = rail; rec.fill = rail.querySelector('.bb-fill'); rec.links = [].slice.call(rl.querySelectorAll('a'));
+    rec.items = [].slice.call(menu.children); rec.prog = bar.querySelector('.bb-prog i'); rec.next = nx;
+    rec.secL = bar.querySelector('.bb-l'); rec.secC = bar.querySelector('.bb-c');
+    return rec;
+  }
+  function closeMenus(){
+    document.querySelectorAll('.bb-menu').forEach(function(m){ m.hidden = true; });
+    document.querySelectorAll('.bb-sec[aria-expanded="true"]').forEach(function(x){ x.setAttribute('aria-expanded', 'false'); });
+  }
+  function railFit(rec){ rec.rail.style.marginBottom = (-rec.rail.offsetHeight) + 'px'; }
+  /* the rail fill ends at the highlighted section's link (Jonathan 2026-10-13, tics rail as the model), not at the
+     brief's scroll height: sections differ in length while the links are evenly spaced, so a height-based fill
+     disagreed with the highlight */
+  function fillTo(rec, cur){
+    var rl = rec.fill.parentNode, r0 = rl.getBoundingClientRect(), a = rec.links[cur];
+    if(!a) return;
+    var off = rec.fill.getBoundingClientRect().top - r0.top;   // the fill starts a few px down its track
+    rec.fill.style.height = Math.max(0, a.getBoundingClientRect().bottom - r0.top - off).toFixed(1) + 'px';
+  }
+
+  function update(){
+    raf = 0;
+    var vh = window.innerHeight, wide = WIDE.matches, th = wide ? 120 : 64, pick = null;
+    live.forEach(function(rec){
+      var r = rec.el.getBoundingClientRect();
+      if(r.top <= th && r.bottom > th) pick = rec;
+    });
+    if(active && active !== pick){ active.bar.classList.remove('on'); active.bar.setAttribute('aria-hidden', 'true'); }
+    active = pick;
+    document.body.classList.toggle('bb-barred', !!(pick && !wide && pick.h4.getBoundingClientRect().bottom < 0));
+    if(!pick) return;
+    var r = pick.el.getBoundingClientRect();
+    var p = Math.max(0, Math.min(1, (vh - r.top) / r.height));
+    // current section: the last one whose heading has reached the threshold
+    var cur = 0;
+    var sth = Math.max(th + 8, vh * 0.32);   // s141: a step is current once its heading passes 32% of the window (the Lithium Glance mockup), not 120 px; s164: on phone too (was th + 8, under the bar, so a heading in view still showed the step before it), the same line as the sidebar index
+    pick.secs.forEach(function(s, i){ if(s.el && s.el !== pick.el && s.el.getBoundingClientRect().top <= sth) cur = i; });
+    if(pick.secs[0] && !pick.secs[0].el){ /* spine brief whose first step is absent: never */ }
+    if(!wide){
+      var show = pick.h4.getBoundingClientRect().bottom < 0;
+      pick.bar.classList.toggle('on', show); pick.bar.setAttribute('aria-hidden', show ? 'false' : 'true');
+      if(!show) closeMenus();
+      pick.prog.style.width = (p * 100).toFixed(1) + '%';
+    } else {
+      fillTo(pick, cur);
+    }
+    if(cur !== pick.cur){
+      pick.cur = cur;
+      var s = pick.secs[cur], real = pick.secs.filter(function(x){ return x.el; }), k = real.indexOf(s) + 1;
+      pick.secL.textContent = (s.n ? s.n + ' · ' : '') + s.l;
+      pick.secC.textContent = pick.secs.some(function(x){ return x.n; }) ? '' : k + '/' + real.length;  // numbered steps already say where you are
+      pick.links.forEach(function(a, i){ a.classList.toggle('cur', i === cur); });
+      pick.items.forEach(function(a, i){ a.classList.toggle('cur', i === cur); });
+    }
+    var n = nextVisible(pick);
+    if(n){ pick.next.hidden = false; pick.next.querySelector('b').textContent = n.title; } else pick.next.hidden = true;
+  }
+  function kick(){ if(!raf) raf = requestAnimationFrame(update); }
+
+  function init(){
+    document.querySelectorAll('main .brief[id]').forEach(function(b){
+      if(b.querySelector(':scope > .bb-bar')) return;
+      var rec = build(b); if(!rec) return;
+      briefs.push(rec); byId[b.id] = rec;
+    });
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ var rec = byId[e.target.id]; if(!rec) return; if(e.isIntersecting) live.add(rec); else live.delete(rec); });
+      kick();
+    }, {rootMargin: '0px'});
+    briefs.forEach(function(rec){ io.observe(rec.el); if(WIDE.matches) railFit(rec); });
+    window.addEventListener('scroll', kick, {passive: true});
+    window.addEventListener('resize', function(){ briefs.forEach(function(rec){ rec.rail.style.marginBottom = ''; if(WIDE.matches) railFit(rec); }); kick(); });
+    document.addEventListener('click', function(e){ if(!(e.target.closest && e.target.closest('.bb-menu, .bb-sec'))) closeMenus(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeMenus(); });
+    kick();
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ setTimeout(init, 0); });
+  else setTimeout(init, 0);
+})();

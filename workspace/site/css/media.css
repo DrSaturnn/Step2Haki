@@ -1,0 +1,13 @@
+@custom-media --phone (max-width:640px);
+@custom-media --not-phone (min-width:641px);
+@custom-media --narrow (max-width:1100px);
+@custom-media --desktop (min-width:1101px);
+@custom-media --w980 (max-width:980px);
+@custom-media --w900 (max-width:900px);
+@custom-media --min900 (min-width:900px);
+@custom-media --w560 (max-width:560px);
+@custom-media --min700 (min-width:700px);
+@custom-media --w420 (max-width:420px);
+@custom-media --w1240 (max-width:1240px);
+@custom-media --reduced-motion (prefers-reduced-motion:reduce);
+@custom-media --print print;

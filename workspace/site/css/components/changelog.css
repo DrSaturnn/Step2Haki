@@ -1,0 +1,22 @@
+.axbuild .axlogbtn{border:0;background:none;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px}
+.axbuild .axlogbtn:hover,.axbuild .axlogbtn:focus-visible{color:var(--accent,var(--accent))}
+.axlog-scrim{position:fixed;inset:0;z-index:10000;background:rgba(43,47,54,.35);display:flex;align-items:flex-start;justify-content:center;padding:calc(24px + env(safe-area-inset-top,0px)) 16px 24px;box-sizing:border-box}
+.axlog{background:#FFFDF8;color:#2B2F36;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.22);width:100%;max-width:640px;max-height:calc(100vh - 48px);display:flex;flex-direction:column;font:14px/1.45 var(--sans,system-ui)}
+.axlog header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px 10px;border-bottom:1px solid #ECE6DA}
+.axlog header h2{margin:0;font-size:16px}
+.axlog header button{border:0;border-radius:9px;background:var(--axh-EFEAF8);color:#2B2F36;font:600 13px/1 var(--sans,system-ui);padding:8px 12px;min-height:36px;cursor:pointer}
+.axlog .axlog-body{overflow:auto;padding:4px 16px 16px}
+.axlog .axlog-filter{display:flex;gap:8px;padding:10px 16px 0}
+.axlog .axlog-filter button{border:1px solid var(--axh-DDD5EE);border-radius:999px;background:#fff;padding:6px 12px;font:600 12.5px/1 var(--sans,system-ui);cursor:pointer;color:#2B2F36}
+.axlog .axlog-filter button[aria-pressed="true"]{background:var(--axh-EFEAF8);border-color:var(--axh-B9AEE0)}
+.axlog .axlog-v{padding:12px 0;border-bottom:1px solid #F1ECE2}
+.axlog .axlog-v:last-child{border-bottom:0}
+.axlog .axlog-h{display:flex;gap:8px;align-items:baseline;font-weight:700}
+.axlog .axlog-h span{font-weight:500;font-size:12.5px;opacity:.65}
+.axlog .axlog-v.cur .axlog-h b{background:var(--axh-EFEAF8);border-radius:6px;padding:1px 6px}
+.axlog p{margin:4px 0 0}
+.axlog ul{margin:6px 0 0;padding:0;list-style:none}
+.axlog li{margin:6px 0 0;padding:8px 10px;background:#F3F7F1;border-radius:10px}
+.axlog li .new{font-weight:700}
+.axlog li .old{display:block;font-size:13px;opacity:.8;margin-top:2px}
+.axlog li .old a{color:inherit}

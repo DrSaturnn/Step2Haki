@@ -1,0 +1,14 @@
+#navlinks .pc-sect{color:var(--accent)}
+html body #nav #navlinks a.pc-plan{color:var(--faint)!important;-webkit-text-fill-color:var(--faint);opacity:.75;font-weight:400}
+.brief.pc .pc-grp{margin:0 0 6px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.brief.pc .pc-grp span{color:var(--faint);padding:0 4px}
+.brief.pc .pc-tn{color:var(--muted);font-size:.92em;padding-left:4px}
+.brief.pc .pc-uv{display:inline-block;margin-left:6px;font-size:12px;font-weight:500;color:var(--caution);background:var(--caution-bg);border-radius:var(--r-chip);padding:1px 7px}
+.brief.pc .pc-blocks{margin-top:18px}
+.brief.pc .pc-note{margin:6px 0 0;font-size:14px;color:var(--muted)}
+.brief.pc .pc-tbl{margin-top:18px}
+.brief.pc .pc-lcw{margin-top:18px}
+.brief.pc .pc-owners{margin:20px 0 0;padding:12px 18px;border-radius:var(--r-sub);background:var(--recess);box-shadow:var(--inner-2)}
+.brief.pc .pc-owners .lbl{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.brief.pc .pc-owners p{margin:6px 0;color:var(--ink-2)}
+.brief.pc .pc-nbq{margin-top:20px}

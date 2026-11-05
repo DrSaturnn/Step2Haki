@@ -29,7 +29,7 @@ def walk(nodes, ctx, blk, rules, src):
             decls = [d for d in tinycss2.parse_declaration_list(n.content, skip_comments=True, skip_whitespace=True)
                      if d.type == 'declaration']
             rules.append({'i': len(rules), 'block': blk, 'ctx': ctx, 'sel': sel,
-                          'decl': [[d.lower_name, tinycss2.serialize(d.value).strip(), bool(d.important)] for d in decls],
+                          'decl': [[d.name if d.name.startswith('--') else d.lower_name, tinycss2.serialize(d.value).strip(), bool(d.important)] for d in decls],
                           'off': n.source_line})
         elif n.type == 'at-rule':
             pre = tinycss2.serialize(n.prelude).strip()
