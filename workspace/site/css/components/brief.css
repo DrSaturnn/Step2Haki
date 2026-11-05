@@ -1,4 +1,3 @@
-body.flat{background:var(--canvas-a)}
 .axm-flat{--e1:0 0 0 1px rgba(24,28,30,.17);--e2:0 0 0 1px rgba(24,28,30,.15);--e3:0 0 0 1px rgba(0,0,0,.55);--ec:0 0 0 1px rgba(24,28,30,.17);--inner:0 0 0 1px rgba(24,28,30,.13);--inner-2:0 0 0 1px rgba(24,28,30,.12);--lip:none}
 body .axm-flat .brief,body .brief.axm-flat,body .axm-flat .sectcard,body .sectcard.axm-flat,body .axm-flat .strat,body .strat.axm-flat{background:#FBFBFB}
 body .axm-flat .dp,body .dp.axm-flat,body .axm-flat .pearls,body .pearls.axm-flat,body .axm-flat .danger,body .danger.axm-flat,body .axm-flat .rule,body .rule.axm-flat,body .axm-flat .vignette,body .vignette.axm-flat{background-image:none}
@@ -174,9 +173,6 @@ html.cv .brief{content-visibility:auto;contain-intrinsic-size:auto 7000px}
 .aqband{background:linear-gradient(145deg,#DCE8EB 0%,var(--aquifer-bg) 48%,#EEF5F6 100%)}
 .aqband .lbl,.aqband .n{color:var(--aquifer)}
 body .axm-flat .aqband,body .aqband.axm-flat{background:var(--aquifer-bg);background-image:none}
-@media (--narrow){
-body.navopen{overflow:hidden}
-}
 nav.jump{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 16px}
 nav.jump a{font:600 12px/1 var(--sans,system-ui);padding:7px 10px;border-radius:999px;background:#E3EEE5;color:#1E4A28;text-decoration:none}
 h5.tsec{font-family:var(--serif);font-size:20px;font-weight:600;text-transform:none;letter-spacing:-.15px;color:var(--ink);line-height:1.2;margin:32px 0 10px;padding:1px 0 1px 11px;border:none;border-left:3px solid var(--accent);scroll-margin-top:12px}
@@ -438,6 +434,7 @@ body .axm-study .sp-chip .mask:not(.shown),body .sp-chip .mask.axm-study:not(.sh
 @media (--desktop){
 .brief,.brief h5[id]{scroll-margin-top:80px}
 }
+html:not([data-theme="dark"]) .dp > span.lbl{color:color-mix(in srgb,var(--accent) 78%,#000)}
 .brief h5.ax-mnh{margin:18px 0 0;padding:10px 16px;border-radius:16px 16px 0 0;background:var(--row-tint);box-shadow:0 0 0 1px var(--hair);font:800 15px/20px var(--sans);letter-spacing:1px;color:var(--ink)}
 @media (--desktop){
 body.ax-nest .brief.bb-r{padding-left:0}

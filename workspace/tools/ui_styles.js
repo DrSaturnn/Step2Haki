@@ -11,7 +11,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const VIEWS = { desk: { width: 1512, height: 945 }, phone: { width: 390, height: 844, isMobile: true, hasTouch: true } };
+const VIEWS = { desk: { width: 1512, height: 945 }, tablet: { width: 1024, height: 768 }, phone: { width: 390, height: 844, isMobile: true, hasTouch: true } };
 const CONFIGS = {
   'flat-light-read': {}, 'sculpted-light-read': { 'ax-flat': '0' }, 'flat-dark-read': { 'ax-theme': 'dark' },
   'sculpted-dark-read': { 'ax-flat': '0', 'ax-theme': 'dark' }, 'flat-tinted-read': { 'ax-theme': 'tinted' },

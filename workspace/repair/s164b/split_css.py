@@ -24,6 +24,8 @@ MEDIA = OrderedDict([
 
 THEME = re.compile(r'\[data-(?:theme|axa|glass)[^\]]*\]')
 HACK = 'html:is([data-theme],:not([data-theme]))'
+# a theme attribute that is only negated (light-only rules) does not make a rule a theme rule
+NEG_THEME = re.compile(r':not\(\[data-theme[^\]]*\]\)')
 
 # (file, layer, pattern on the selector with the specificity hack removed); first match wins
 FILES = [
@@ -31,16 +33,17 @@ FILES = [
     ('themes/accents', 'themes', r'\[data-axa'),
     ('themes/dark', 'themes', r'\[data-theme'),
     ('layout/print', 'layout', r'^@print'),
-    ('layout/sidebar', 'layout', r'#nav\b|#navlinks|#navtop|#navscroll|#navscrim|\.axn\b|#axn\b|\.axn-|\.bb-rl\b|\.bb-rail|\.navsub|\.navclose|\.shelfsel|\.shelfpick|\.bb-menu|\.fmdrop'),
+    ('layout/sidebar', 'layout', r'body\.navopen|#nav\b|#navlinks|#navtop|#navscroll|#navscrim|\.axn\b|#axn\b|\.axn-|\.bb-rl\b|\.bb-rail|\.navsub|\.navclose|\.shelfsel|\.shelfpick|\.bb-menu|\.fmdrop'),
     ('layout/phone', 'layout', r'#mbar|#navtab|\.bb-bar\b|\.bb-idx|\.bb-t\b|\.bb-sec|\.bb-prog|\.bb-l\b|\.bb-c\b'),
     ('layout/rail', 'layout', r'\.bb-rail|\.bb-end|\.bb-cap|\.bb-nx|\.bb-top'),
     ('layout/toolbar', 'layout', r'#axbar|#modes|#axdisp|\.axsw|#axtopfade|#axedge|\.axrvb|\.axacc|\.flatt'),
-    ('layout/drawer', 'layout', r'\.sp-drawer|\.sp-drw|\.lbp|\.axdrw|#spd|\.drw'),
+    ('layout/drawer', 'layout', r'\.sp-drawer|\.lbp|\.axdrw|#spd|\.drw'),
     ('components/review', 'components', r'#rvpanel|#axrv|#rvsession|#rvlaunch|#rvbar|\.rv[a-z]*\b|\.due\b'),
     ('components/search', 'components', r'#search|#sxres|\.sx[a-z]+|\.noresults'),
     ('components/changelog', 'components', r'\.axlog|#axlog'),
     ('components/nbme', 'components', r'nbme|\.nbd\b|\.nbv'),
     ('components/cards', 'components', r'\.pc-|\[data-entry="card"\]'),
+    ('components/links', 'components', r'\.sp-drw'),
     ('components/hovercard', 'components', r'\.sp-pop|\.sp-why|\[popover\]|\.flowpop|\.pop\b'),
     ('components/bank', 'components', r'\.mcq|\.bank\b|\.bankwrap|\.bk[a-z]*\b|\.qx-|\.opts\b|\.stack\b|\.sp-prac|\.qp\b|ol\.bank'),
     ('components/workup', 'components', r'\.w5|\.wk\b|\.cluet|\.sp-wk|\.figcap|\.figbody|figure'),
@@ -82,7 +85,7 @@ def subject(part):
 
 
 def classify_one(part, r):
-    plain = part.replace(HACK, '')
+    plain = NEG_THEME.sub('', part.replace(HACK, ''))
     if THEME.search(plain):
         for f, _, pat in FILES[:3]:
             if re.search(pat, plain):
@@ -100,7 +103,7 @@ def classify_one(part, r):
             continue
         if re.search(pat, plain):
             return f
-    if re.fullmatch(FILES[-2][2], plain):
+    if re.fullmatch(FILES[-2][2], plain) or re.fullmatch(r'body(?:\.[\w-]+)+', subj.strip()):
         return 'base'
     return 'components/brief'
 
