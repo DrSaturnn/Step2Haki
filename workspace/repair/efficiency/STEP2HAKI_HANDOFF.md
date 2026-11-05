@@ -12,18 +12,14 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **s163 OPEN, PRESENTED** on wip/s163 (both repos) (Claude lead; launched 2026-11-04 22:33; criteria as step 2,
-  structural wording, NBME label; site layer plus patch; lead 100M, no agents, no reviews (D7), no screenshots
-  presented (D9)). Batch file repair/s163/S163.md: chunks 1 to 8 in chats 1 to 4, chunk 9 in chat 5 (checks all pass;
-  scrollspy 45/45 desktop; preview tile fix: wide criteria tables restack in the 340px tile on desktop, 9 of 91 blocks
-  were hiding columns, 0 after; 24 own shots clean; legib sample identical before and after). Presented 2026-11-05
-  02:27, page 35d5ddd3708f (6 files, 998 ops), approval pending in the chat 5 container (session 2547b772).
-  Jonathan wrote at 01:07 "You may continue until completion and ship when done" and "ship" at 01:08, before the
-  present: the hook saw it with nothing pending, and the callgate forbids the lead feeding the hook, so no approval
-  exists. **Next: ship** on Jonathan's plain "ship" in chat 5 (the hook records it), then batch.py ship s163 with
-  AX_SESSION, OPEN_WORK, DIGEST, S9 and post. In a fresh chat: rebuild (repair/build.py s163), approval.py present
-  s163, report, wait for "ship". Spend: chat 1 14.45M, chat 2 16.61M, chat 3 21.84M, chat 4 20.62M, chat 5 25.14M
-  (measured); 98.66M of 100M.
+- **No batch open.** Next: a launch prompt from Jonathan.
+
+- **Previous: s163 SHIPPED 2026-11-05** (Claude lead; site layer plus patch: diagnostic criteria as step 2 in every
+  brief, no step numbers or ownership words in brief text, NBME labels, Recall masks on repeated criteria cutoffs,
+  criteria tile in Differential drawer previews): commit 6a4eb72, page d3c5799f2422 (approved candidate 35d5ddd3708f);
+  version.json not checked here, Jonathan checks the live site. No agents; lead 5 chats, 98.66M of 100M before the
+  ship (measured). First ship run refused by the commit hook on the s155 to s158 lanes copies restored from local-only
+  (moved out; they live in the private repo). Record repair/s163/S163.md (chunk table, S9). Open: OPEN_WORK s163 line.
 
 - **Previous: s162 SHIPPED 2026-11-04** (Claude lead; Psych Pharmacology B4 of 4: pc-atypical, pc-typical, pc-antichol,
   pc-td in 02 Antipsychotics; Q4 keep; section complete, 18 of 18 class cards): commit c50fd62 (main d920cfe after
