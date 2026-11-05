@@ -1,5 +1,14 @@
 # Step2Haki standing directions (every direction Jonathan has given, compiled with its source)
 
+## Core rules (read these even if you read nothing else; added 2026-11-05)
+1. Later dated decisions win. Before acting on any direction, list the live decisions on its topic (`python3 tools/spine/doc_lint.py DECISIONS_DIGEST.md STANDING_DIRECTIONS.md --topic <topic>`); a superseded line is history, not an instruction. [D-20261105-2]
+2. Replace, never append: a UI change edits or deletes what it replaces in the same commit; no new override block. [D-20261105-1]
+3. Themes change token values only; layout never lives in a theme. [D-20261105-1]
+4. All motion is spring timing from the motion tokens (SwiftUI style). [D-20261105-3]
+5. Nothing ships without Jonathan's "ship" to the screenshots; gate, ui_lint and doc_lint must pass. [MEM] [D-20261105-1]
+6. Accuracy is non-negotiable; board sources first; no drift from source content. [DIG 2026-10-10] [MEM]
+7. Phones are untouched by desktop-only work, and the reverse. [D-20261105-1]
+
 Compiled 2026-10-10 because the plan v4 restart prompt pointed new chats only to the handoff, the plan and the
 decisions digest. Most of Jonathan's directions on brief format live elsewhere, so the second chat re-proposed a
 workup that opens with a question, which he had already dropped on 2026-10-07.
@@ -165,6 +174,16 @@ Source keys:
 - **Pacing:** psych briefs are reauthored one at a time, to ensure accuracy. [MEM]
 - **Cross-shelf content:** no separate psych-perspective briefs. A psych-tagged brief filed under another shelf's section stays one brief with several shelf tags; a line stays when any tagged shelf's board source tests it, and moves only to a live brief that already carries it, with a drawer back; nothing is deleted. [DIG 2026-10-17, settles MEM 2026-10-05]
 - **Two navigation axes:** a Presentations group lists every hub at the top of the sidebar; each hub keeps its home tile in its system section (one brief, two tiles). Psychiatry is subgrouped by disorder family in six groups. psych-medical stays a disease brief. [DIG 2026-10-17]
+
+## UI architecture (2026-11-05)
+- **Replace, never append.** A UI change edits or deletes the code it replaces in the same commit; retired code is deleted (git keeps it). No new per-batch override block. [D-20261105-1]
+- **Layers:** tokens (colors, fonts, radii, shadows, motion), base, layout (page frame, sidebar, columns, Fit to screen, phone layout), components (table, workup, ladder, pause point, timeline, question card), themes (token values only). Declared with CSS `@layer` in that order. [D-20261105-1]
+- **Script modules:** one per feature with an on/off entry point; features talk through a small shared event list, never through each other's elements. [D-20261105-1]
+- **UI_MAP.md:** every module, what it owns, the decision that created it and what it replaced; a Retired table of selectors and ids, checked absent by the gate. [D-20261105-1]
+- **Breakpoints:** desktop-only and phone-only code each sit under one named breakpoint. [D-20261105-1]
+- **Motion:** SwiftUI style: spring timing from var(--spr) (smooth), var(--bnc) (bouncy) and var(--snp) (snappy); interruptible transitions for anything a reader toggles; reduced motion falls back to a short opacity change. [D-20261105-3]
+- **Checks:** ui_lint.py (ratchet on style blocks, script blocks, !important, specificity workarounds, theme rules that set layout, selectors defined 4+ times, non-spring motion; hard fails for layout in themes and retired selectors once layers exist); doc_lint.py (ids, supersession, stale citations). [D-20261105-1] [D-20261105-2]
+- **Docs:** every new digest line carries an id and a topic tag; a change names what it supersedes and the old line is marked in the same commit; this file cites ids and never a superseded one. [D-20261105-2]
 
 ## Repo and files
 - **The repo:** public, DrSaturnn/Step2Haki; the site deploys from discriminator-briefs-site. Each ship commits a description of what changed. [MEM]

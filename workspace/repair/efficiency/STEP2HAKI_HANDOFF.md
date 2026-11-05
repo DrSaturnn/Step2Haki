@@ -12,6 +12,12 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
+- **UI rules landed 2026-11-05** (doc commit, no site change; Jonathan "ship"): DECISIONS_DIGEST D-20261105-1 to -5 (UI
+  architecture, no stale decisions, SwiftUI-style spring motion, order of work, Fit to screen next round); STANDING_DIRECTIONS
+  opens with a core rules block and gains a "UI architecture" section; tools/spine/ui_lint.py (ratchet, baseline
+  tools/spine/ui_baseline.json) and doc_lint.py added, not yet wired into gate.py or ship.sh. Next: the UI refactor batch
+  in a fresh chat, launch prompt in repair/ui/UI_REFACTOR_PLAN.md; then Fit to screen resumes (repair/ui/FIT_TO_SCREEN.md).
+
 - **s164 SHIPPED 2026-11-05** (Claude lead; site layer plus patch, s163 carry-overs: phone in-brief rail marks the step
   being read (baseline before the mobile redesign); window figures and word forms in Differential criteria previews,
   102 tiles; 20 section-name pointers state the action; B4 masks in outlines; 4 stale private folders archived;
