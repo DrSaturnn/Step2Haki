@@ -12,7 +12,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **No batch open.** Next: a launch prompt from Jonathan.
+- **s163b OPEN** (launched 2026-11-05 08:26; Claude lead; site layer plus tools, OPEN_WORK cleanup, 10 items I1 to I10;
+  no agents, lead 60M, no screenshots presented (D9)); branch wip/s163b in both repos. Chunks 1 to 4 done (chat 1):
+  tools I9, I10; 10_site.json (I1, I2, I3, I4, I5, I6, I7), candidate gate PASS, render 0 errors, pointer_check 0.
+  **Next: chunk 5** (I8 private folders), then chunk 6 (changelog 163b, batch.py s8, legib sample, report). Record
+  repair/s163b/S163B.md (chunk table). Lead: chat 1 started at 229k context.
 
 - **Previous: s163 SHIPPED 2026-11-05** (Claude lead; site layer plus patch: diagnostic criteria as step 2 in every
   brief, no step numbers or ownership words in brief text, NBME labels, Recall masks on repeated criteria cutoffs,

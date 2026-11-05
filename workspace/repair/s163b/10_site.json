@@ -1,0 +1,64 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "var sth = wide ? Math.max(th + 8, vh * 0.32) : th + 8;",
+   "with": "var sth = Math.max(th + 8, vh * 0.32);   // s163b: the phone too, so the in-brief rail agrees with the sidebar (was th + 8 on a phone: one step behind)",
+   "note": "s163b I1 phone in-brief rail reading line"
+  },
+  {
+   "op": "replace_global",
+   "find": "function applyShelf(s){",
+   "with": "/* s163b (Jonathan 2026-11-05, \"system heading counts made live\"): one counter for the system headings. It counts the\n   briefs each section shows, under the shelf, Board-style only, review and search filters, as the sidebar counts do\n   (headerCounts counted every brief once at load, and wrote \"topics\" over Presentations' \"complaints\" and Psych\n   Pharmacology's \"18 of 18 class cards\"). The form is read once from the heading as written: \"N complaints\" counts\n   every brief; \"N topics\" splits topics, board-style and Aquifer; any other wording is left as written. On window,\n   since this script is wrapped and headerCounts lives in another. */\nwindow.axSysHeads=function(){\n  document.querySelectorAll('h3.system').forEach(function(h){\n    var n=h.querySelector('.n'); if(!n) return;\n    if(!n.dataset.axForm){ var t=n.firstChild, m=t&&t.nodeType===3&&/^\\s*\\d+ (topic|complaint)s?\\b/.exec(t.nodeValue); n.dataset.axForm=m?m[1]:'fixed'; }\n    if(n.dataset.axForm==='fixed') return;\n    var c={topic:0,bs:0,aq:0}, sw=h.closest('.sectwrap')||h, el=sw.nextElementSibling;\n    function add(b){ if(b.style.display==='none') return; c[(b.dataset.src==='aquifer'||b.classList.contains('aq'))?'aq':(b.classList.contains('bs')?'bs':'topic')]++; }\n    while(el&&!el.classList.contains('sectwrap')&&!(el.tagName==='H3'&&el.classList.contains('system'))){\n      if(el.classList.contains('brief')) add(el); else el.querySelectorAll('.brief').forEach(add);\n      el=el.nextElementSibling;\n    }\n    var all=c.topic+c.bs+c.aq, out;\n    if(n.dataset.axForm==='complaint') out=all+' complaint'+(all===1?'':'s');\n    else out=c.topic+' topic'+(c.topic===1?'':'s')+(c.bs?' <span style=\"color:#9A5B0E\">+ '+c.bs+' board-style</span>':'')+(c.aq?' <span style=\"color:#1F6A7E\">+ '+c.aq+' Aquifer</span>':'');\n    if(n.innerHTML!==out) n.innerHTML=out;\n  });\n};\nfunction applyShelf(s){",
+   "note": "s163b I4 live system heading counts (counter)"
+  },
+  {
+   "op": "replace_global",
+   "find": "  document.querySelectorAll('.bsband').forEach(function(bb){",
+   "with": "  window.axSysHeads();   // s163b: system headings follow the filters, as the sidebar does\n  document.querySelectorAll('.bsband').forEach(function(bb){",
+   "note": "s163b I4 live system heading counts (on every filter change)"
+  },
+  {
+   "op": "replace_global",
+   "find": "function headerCounts(){",
+   "with": "function headerCounts(){\n  if(window.axSysHeads) return window.axSysHeads();   // s163b: one counter (axSysHeads, beside applyShelf)",
+   "note": "s163b I4 live system heading counts (load)"
+  },
+  {
+   "op": "replace_global",
+   "find": "</head>",
+   "with": "<style id=\"ax-s163b\">\n/* s163b I5: the change log and the review panel fit the window under the 110% zoom of windows 1500 px and wider\n   (s146c zoom; the s161d sidebar fix by insets); their max-height was 100vh based and grew with the zoom */\n@media (min-width:1500px){.axlog{max-height:calc((100vh - 48px) / 1.1)}#axrv{max-height:calc((100vh - 96px) / 1.1)}}\n/* s163b I6: window chart bars one step lighter, so every tier reads pastel (STANDING: softer, pastel-leaning chart\n   colors; s159 display review of pc-maoi); text and legend tokens unchanged */\n.lcw .bar.c2,[data-theme=\"dark\"] .lcw .bar.c2{background:color-mix(in srgb,var(--psy2) 45%,var(--psy-e))}\n.lcw .bar.c3,[data-theme=\"dark\"] .lcw .bar.c3{background:var(--psy-e)}\n/* s163b I2: a window row in the drawer preview's criteria tile stacks (name and window above the bar) at every width,\n   as on a phone; the desktop two-column row does not fit the 340 px tile */\n.qx-pv .qx-pc figure.lcw .wax{grid-template-columns:1fr}.qx-pv .qx-pc figure.lcw .wsp{display:none}\n.qx-pv .qx-pc figure.lcw .wr{display:block}\n</style>\n</head>",
+   "note": "s163b I5 zoom-safe panels, I6 window chart palette"
+  },
+  {
+   "op": "replace_global",
+   "find": "  function pvToks(s){\n    var o = [];\n    norm(s).toLowerCase()",
+   "with": "  /* s163b I3: word forms the matcher should treat as one (a row says \"UTI\", the brief \"Urinary Tract Infection\") */\n  var PV_SYN = [[/\\burinary tract infections?\\b/g, 'uti'], [/\\bpost-?traumatic stress disorder\\b/g, 'ptsd'],\n    [/\\bmajor depressive disorder\\b/g, 'depression'], [/\\bdepressive\\b/g, 'depression'], [/\\btuberculous\\b/g, 'tuberculosis']];\n  function pvSyn(s){ PV_SYN.forEach(function(p){ s = s.replace(p[0], p[1]); }); return s; }\n  function pvToks(s){\n    var o = [];\n    pvSyn(norm(s).toLowerCase())",
+   "note": "s163b I3 matcher word forms"
+  },
+  {
+   "op": "replace_global",
+   "find": "  function pvCrit(link, t){\n    if(!pvInDx(link)) return null;\n    var h = t.querySelector('h5.sp-h[id$=\"-s2\"]'); if(!h || !/criteria/i.test(h.textContent)) return null;\n    var on = false, bl = [];\n    Array.prototype.forEach.call(t.querySelectorAll('h5.tsec, div.crit, div.sp-dx'), function(n){\n      if(n.tagName === 'H5') on = n === h; else if(on && !n.parentElement.closest('div.crit, div.sp-dx')) bl.push(n);\n    });\n    if(!bl.length) return null;\n    var c = link.closest('tr'), all = '';\n    c = c && c.cells[0];\n    if(c){ c = c.cloneNode(true); c.querySelectorAll('.sp-drw').forEach(function(d){ d.remove(); }); all = norm(c.textContent); }\n    if(!all) all = norm(link.textContent);\n    var core = pvToks(all.replace(/\\([^)]*\\)/g, ' '));\n    all = pvToks(all);\n    for(var i = 0; i < bl.length; i++){\n      var lab = pvLabel(bl[i]), k = lab.indexOf(':');\n      var lc = k < 0 ? [] : pvToks(/^defining/i.test(lab) ? lab.slice(k + 1) : lab.slice(0, k));\n      if(pvIn(core, pvToks(lab)) || pvIn(lc, all) || pvIn(pvToks(lab), all)) return bl[i];\n    }\n    var tt = pvToks((t.querySelector('h4') || {}).textContent || '');\n    return pvIn(tt, all) || pvIn(core, tt) ? bl[0] : null;\n  }\n",
+   "with": "  function pvCrit(link, t){\n    if(!pvInDx(link)) return null;\n    var h = t.querySelector('h5.sp-h[id$=\"-s2\"]'); if(!h || !/criteria/i.test(h.textContent)) return null;\n    var on = false, bl = [], wins = [];\n    Array.prototype.forEach.call(t.querySelectorAll('h5.tsec, div.crit, div.sp-dx, figure.lcw'), function(n){\n      if(n.tagName === 'H5') on = n === h;\n      else if(on && !n.parentElement.closest('div.crit, div.sp-dx, figure.lcw')) (n.tagName === 'FIGURE' ? wins : bl).push(n);\n    });\n    if(!bl.length && !wins.length) return null;\n    var c = link.closest('tr'), all = '';\n    c = c && c.cells[0];\n    if(c){ c = c.cloneNode(true); c.querySelectorAll('.sp-drw').forEach(function(d){ d.remove(); }); all = norm(c.textContent); }\n    if(!all) all = norm(link.textContent);\n    var core = pvToks(all.replace(/\\([^)]*\\)/g, ' '));\n    all = pvToks(all);\n    for(var i = 0; i < bl.length; i++){\n      var lab = pvLabel(bl[i]), k = lab.indexOf(':');\n      var lc = k < 0 ? [] : pvToks(/^defining/i.test(lab) ? lab.slice(k + 1) : lab.slice(0, k));\n      if(pvIn(core, pvToks(lab)) || pvIn(lc, all) || pvIn(pvToks(lab), all)) return bl[i];\n    }\n    /* s163b I2: a window figure's row that names the row's diagnosis in full (a broader row such as \"Psychotic\n       disorder\" names none, so it gets no tile) */\n    for(var f = 0; f < wins.length; f++){\n      var wr = wins[f].querySelectorAll('li.wr');\n      for(var r = 0; r < wr.length; r++){ var nm = wr[r].querySelector('.nm'); if(nm && pvIn(pvToks(pvTxt(nm).replace(/\\([^)]*\\)/g, ' ')), all)) return {fig: wins[f], row: wr[r]}; }\n    }\n    var tt = pvToks((t.querySelector('h4') || {}).textContent || '');\n    return bl.length && (pvIn(tt, all) || pvIn(core, tt)) ? bl[0] : null;\n  }\n",
+   "note": "s163b I2 window figure rows in the preview (match)"
+  },
+  {
+   "op": "replace_global",
+   "find": "    var c = n.cloneNode(true);",
+   "with": "    var c = n.fig ? pvWin(n) : n.cloneNode(true);",
+   "note": "s163b I2 window figure rows in the preview (tile)"
+  },
+  {
+   "op": "replace_global",
+   "find": "  function pvTile(n){",
+   "with": "  // s163b I2: a name's text without the Recall reveal button's label\n  function pvTxt(n){ var c = n.cloneNode(true); c.querySelectorAll('.mask-toggle').forEach(function(x){ x.remove(); }); return norm(c.textContent); }\n  // s163b I2: the window figure cut to its title and the one row the Differential row names\n  function pvWin(m){\n    var c = m.fig.cloneNode(true), k = Array.prototype.indexOf.call(m.fig.querySelectorAll('li.wr'), m.row);\n    Array.prototype.forEach.call(c.querySelectorAll('li.wr'), function(r, j){ if(j !== k) r.remove(); });\n    Array.prototype.forEach.call(c.querySelectorAll('li.wg, figcaption, .lc-key'), function(x){ x.remove(); });\n    return c;\n  }\n  function pvTile(n){",
+   "note": "s163b I2 window figure rows in the preview (cut)"
+  },
+  {
+   "op": "replace_global",
+   "find": "  function pairs(pb){\n    if(pb._qx) return; pb._qx = 1;\n    var lbl = pb.querySelector(':scope > .lbl'); if(!lbl || !/^pairs with$/i.test(norm(lbl.textContent))) return;\n    var items = [], cur = null;\n    Array.prototype.forEach.call(pb.childNodes, function(n){\n      if(n === lbl) return;\n      if(n.nodeType === 1 && /^(I|B|EM|A)$/.test(n.tagName)){ cur = { name: norm(n.textContent), why: '', a: n.tagName === 'A' ? n.getAttribute('href') : '' }; items.push(cur); return; }\n      if(cur) cur.why += n.textContent; else if(norm(n.textContent)) items.bad = 1;\n    });\n",
+   "with": "  function pairs(pb){\n    if(pb._qx) return; pb._qx = 1;\n    var lbl = pb.querySelector(':scope > .lbl'); if(!lbl || !/^pairs with$/i.test(norm(lbl.textContent))) return;\n    var items = [], cur = null, lead = '', T0 = titles();\n    /* s163b I7: a shelf label before a title (Part I, Part II, Aquifer) is not part of a row, and an emphasized\n       word that names no brief (an \"Ask:\" question, a bolded term) stays in the row's reason */\n    var SHELF = /(^|[\\s.;,])(?:Part I{1,2}|Aquifer)\\s*$/, CONJ = /(,\\s*|\\s+)(?:and|or)\\s*$/;\n    Array.prototype.forEach.call(pb.childNodes, function(n){\n      if(n === lbl) return;\n      if(n.nodeType === 1 && /^(I|B|EM|A)$/.test(n.tagName)){\n        if(cur && n.tagName !== 'A' && !T0[key(n.textContent)]){ cur.why += n.textContent; return; }\n        if(cur) cur.why = cur.why.replace(SHELF, '$1').replace(CONJ, '');\n        else if(lead && !norm(lead.replace(SHELF, ''))) lead = '';\n        cur = { name: norm(n.textContent), why: '', a: n.tagName === 'A' ? n.getAttribute('href') : '' }; items.push(cur); return; }\n      if(cur) cur.why += n.textContent; else lead += n.textContent;\n    });\n    if(norm(lead)) items.bad = 1;\n",
+   "note": "s163b I7 Pairs with rows"
+  }
+ ]
+}
