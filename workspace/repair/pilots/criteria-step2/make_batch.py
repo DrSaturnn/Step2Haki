@@ -146,6 +146,89 @@ CHROME = [
 ]
 
 
+# 60_site.json (chunk 8, E6 / plan C4): a Differential row's linked-brief preview (hover on desktop, first tap on a
+# phone) adds that brief's diagnostic criteria (its step 2), cloned from the brief when the preview opens, so no copy
+# exists to drift. Shown only when the row names the linked brief's diagnosis (title words) or one of its criteria
+# blocks (block label words); a row whose drawer opens a broader brief (a VSD row to Congenital Heart Disease) gets
+# none. The clone sits in an id-less .brief.sp wrapper, as the drawer's clone does, so the criteria keep their own
+# styling and Recall masks; controls inside it become plain text.
+PV_CSS = r'''
+/* s163 C4: the linked brief's diagnostic criteria in a Differential row's preview */
+html body .qx-pv > .brief.sp.qx-pc{display:block;box-sizing:border-box;margin:12px 0 0;padding:10px 0 2px;border:0!important;border-top:1px solid var(--hair)!important;border-radius:0;background:none!important;box-shadow:none!important;zoom:1;isolation:auto;content-visibility:visible;contain-intrinsic-size:none;max-height:min(300px,45vh);overflow:auto;overscroll-behavior:contain;scroll-margin-top:0}
+html body .qx-pv > .brief.sp.qx-pc > .qx-pk{margin:0 0 6px}
+html body .qx-pv > .brief.sp.qx-pc > :is(.crit,.sp-dx){margin:0;max-width:none}'''
+PV_JS = r'''  /* s163 C4: in a Differential row, the preview adds the linked brief's diagnostic criteria (its step 2), cloned from
+     that brief when the preview opens, so no copy exists to drift. Only when the row names that brief's diagnosis or
+     one of its criteria blocks; a row whose drawer opens a broader brief gets none. */
+  var PV_STOP = /^(a|an|the|of|in|and|or|with|for|to|on|at|by|vs|child|children|adult|adults|disease|disorder|syndrome|criteria|criterion|defining|diagnostic|diagnosis|classic|test)$/;
+  function pvToks(s){
+    var o = [];
+    norm(s).toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(' ').forEach(function(w){
+      if(w.length > 4 && /[^s]s$/.test(w)) w = w.slice(0, -1);
+      if(w && !PV_STOP.test(w) && o.indexOf(w) < 0) o.push(w);
+    });
+    return o;
+  }
+  function pvIn(a, b){ return a.length > 0 && a.every(function(w){ return b.indexOf(w) >= 0; }); }
+  function pvInDx(link){
+    var b = link.closest('.brief'), h = null; if(!b) return false;
+    Array.prototype.forEach.call(b.querySelectorAll('h5.sp-h'), function(x){ if(x.compareDocumentPosition(link) & 4) h = x; });
+    return !!h && /differential/i.test(h.textContent);
+  }
+  function pvLabel(n){ var l = n.querySelector(':scope > .lbl, caption'); return l ? norm(l.textContent) : ''; }
+  function pvCrit(link, t){
+    if(!pvInDx(link)) return null;
+    var h = t.querySelector('h5.sp-h[id$="-s2"]'); if(!h || !/criteria/i.test(h.textContent)) return null;
+    var on = false, bl = [];
+    Array.prototype.forEach.call(t.querySelectorAll('h5.tsec, div.crit, div.sp-dx'), function(n){
+      if(n.tagName === 'H5') on = n === h; else if(on && !n.parentElement.closest('div.crit, div.sp-dx')) bl.push(n);
+    });
+    if(!bl.length) return null;
+    var c = link.closest('tr'), all = '';
+    c = c && c.cells[0];
+    if(c){ c = c.cloneNode(true); c.querySelectorAll('.sp-drw').forEach(function(d){ d.remove(); }); all = norm(c.textContent); }
+    if(!all) all = norm(link.textContent);
+    var core = pvToks(all.replace(/\([^)]*\)/g, ' '));
+    all = pvToks(all);
+    for(var i = 0; i < bl.length; i++){
+      var lab = pvLabel(bl[i]), k = lab.indexOf(':');
+      var lc = k < 0 ? [] : pvToks(/^defining/i.test(lab) ? lab.slice(k + 1) : lab.slice(0, k));
+      if(pvIn(core, pvToks(lab)) || pvIn(lc, all) || pvIn(pvToks(lab), all)) return bl[i];
+    }
+    var tt = pvToks((t.querySelector('h4') || {}).textContent || '');
+    return pvIn(tt, all) || pvIn(core, tt) ? bl[0] : null;
+  }
+  function pvTile(n){
+    var w = document.createElement('div'); w.className = 'brief sp qx-pc';
+    ['study', 'flat'].forEach(function(m){ if(document.body.classList.contains(m)) w.classList.add('axm-' + m); });
+    var k = document.createElement('span'); k.className = 'qx-pk'; k.textContent = 'Diagnostic criteria'; w.appendChild(k);
+    var c = n.cloneNode(true);
+    c.querySelectorAll('.mask-toggle').forEach(function(x){ x.remove(); });
+    c.querySelectorAll('button, a').forEach(function(x){ var s = document.createElement('span'); while(x.firstChild) s.appendChild(x.firstChild); x.replaceWith(s); });
+    c.querySelectorAll('[id]').forEach(function(x){ x.removeAttribute('id'); }); c.removeAttribute('id');
+    w.appendChild(c); return w;
+  }
+'''
+PV_CALL = "    if(q) pv.querySelector('.qx-pq').textContent = norm(q.textContent);\n"
+SITE = [
+    ('.qx-pv .qx-po:focus-visible{outline:2px solid var(--accent);outline-offset:2px}',
+     '.qx-pv .qx-po:focus-visible{outline:2px solid var(--accent);outline-offset:2px}' + PV_CSS),
+    ('  function openPv(link){\n', PV_JS + '  function openPv(link){\n'),
+    (PV_CALL, PV_CALL + '    var cr = pvCrit(link, t); if(cr) pv.appendChild(pvTile(cr));\n'),
+]
+
+
+def site_ops(h, log):
+    ops = []
+    for find, w in SITE:
+        if h.count(find) != 1:
+            log['skipped'].append('site %r found %d times' % (find[:40], h.count(find)))
+            continue
+        ops.append({'op': 'replace_global', 'find': find, 'with': w, 'note': 's163 E6: drawer-preview criteria (C4)'})
+        h = h.replace(find, w)
+    return ops
+
+
 # 40_labels.json (chunk 5, D8): NBME block labels. A trimmed board question (div.pearls.nbq, div.pc-nbq) reads
 # "NBME question N"; commentary (div.pearls without nbq) and inline mentions read "NBME framing". Matched by markup.
 OLD_LBL = 'How NBME framed it'
@@ -351,6 +434,11 @@ def main(argv):
     json.dump({'edits': mk}, open(os.path.join(out, '50_masks.json'), 'w', encoding='utf-8'), indent=1,
               ensure_ascii=False)
     print('make_batch: wrote 50_masks.json (%d ops of %d rows; %d failed)' % (len(mk), len(mrows), len(log['rw_fail']) - n1))
+    after5, _ = apply_edits.apply(after4, {'edits': mk})
+    st = site_ops(after5, log)
+    json.dump({'edits': st}, open(os.path.join(out, '60_site.json'), 'w', encoding='utf-8'), indent=1,
+              ensure_ascii=False)
+    print('make_batch: wrote 60_site.json (%d of %d ops)' % (len(st), len(SITE)))
     for x in log['rw_fail'] + log['skipped']:
         print('  FAIL', x)
     return 0 if not log['skipped'] and not log['rw_fail'] else 1

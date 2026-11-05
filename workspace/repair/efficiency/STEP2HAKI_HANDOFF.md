@@ -14,12 +14,13 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **s163 OPEN** on wip/s163 (both repos) (Claude lead; launched 2026-11-04 22:33; criteria as step 2, structural
   wording, NBME label; site layer plus patch; lead 100M, no agents, no reviews (D7), no screenshots presented (D9)).
-  Batch file repair/s163/S163.md: chunks 1 to 3 done in chat 1, 4 and 5 in chat 2, 6 and 7 in chat 3 (50_masks.json:
-  19 B4 Recall masks in 9 briefs, 7 first-use abbreviations; Part D docs and tools, gate rules rail-order and
-  structural, lint structural and criteria-recall, tests pass; build 5 files, 995 ops, gate and render PASS).
-  **Next: chunk 8** (E6 drawer-preview criteria tile as 60_site.json; E7 private folder migration script; changelog
-  163; method in the chunk table row), then 9 (checks, report). Spend: chat 1 14.45M, chat 2 16.61M, chat 3 21.84M
-  (measured, ledger_lead.csv); 52.90M of 100M in all.
+  Batch file repair/s163/S163.md: chunks 1 to 3 done in chat 1, 4 and 5 in chat 2, 6 and 7 in chat 3, 8 in chat 4
+  (60_site.json: drawer-preview criteria tile, 83 of 170 Differential drawers to a criteria brief, 0 errors; private
+  folders migrated by repair/pilots/criteria-step2/migrate_folders.py, 46 outline orders equal the page, 125 spine
+  files set to the s163 html; axlog 163; build 6 files, 998 ops, gate and render PASS).
+  **Next: chunk 9** (checks, scrollspy desktop and phone, own screenshots of the preview tile, s8 present, report;
+  exact edits in the chunk table row). Spend: chat 1 14.45M, chat 2 16.61M, chat 3 21.84M, chat 4 20.62M
+  (measured, ledger_lead.csv); 73.52M of 100M in all.
 
 - **Previous: s162 SHIPPED 2026-11-04** (Claude lead; Psych Pharmacology B4 of 4: pc-atypical, pc-typical, pc-antichol,
   pc-td in 02 Antipsychotics; Q4 keep; section complete, 18 of 18 class cards): commit c50fd62 (main d920cfe after
