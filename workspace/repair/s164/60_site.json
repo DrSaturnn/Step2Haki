@@ -1,0 +1,40 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "var sth = wide ? Math.max(th + 8, vh * 0.32) : th + 8;   // s141: a step is current once its heading passes 32% of the window on desktop (the Lithium Glance mockup), not 120 px",
+   "with": "var sth = Math.max(th + 8, vh * 0.32);   // s141: a step is current once its heading passes 32% of the window (the Lithium Glance mockup), not 120 px; s164: on phone too (was th + 8, under the bar, so a heading in view still showed the step before it), the same line as the sidebar index",
+   "note": "s164 item 1: phone in-brief rail reading line"
+  },
+  {
+   "op": "replace_global",
+   "find": "  var PV_STOP = /^(a|an|the|of|in|and|or|with|for|to|on|at|by|vs|child|children|adult|adults|disease|disorder|syndrome|criteria|criterion|defining|diagnostic|diagnosis|classic|test)$/;\n",
+   "with": "  var PV_STOP = /^(a|an|the|of|in|and|or|with|for|to|on|at|by|vs|child|children|adult|adults|disease|disorder|syndrome|criteria|criterion|defining|diagnostic|diagnosis|classic|test)$/;\n  /* s164: word forms read as one word: an abbreviation as its words, an adjective as its noun (after the plural trim) */\n  var PV_FORMS = {uti: ['urinary', 'tract', 'infection'], ptsd: ['posttraumatic', 'stress'], mdd: ['major', 'depression'], depressive: ['depression'], tuberculou: ['tuberculosi']};\n",
+   "note": "s164 item 3: preview matcher word forms"
+  },
+  {
+   "op": "replace_global",
+   "find": "      if(w && !PV_STOP.test(w) && o.indexOf(w) < 0) o.push(w);\n",
+   "with": "      (Object.prototype.hasOwnProperty.call(PV_FORMS, w) ? PV_FORMS[w] : [w]).forEach(function(w){ if(w && !PV_STOP.test(w) && o.indexOf(w) < 0) o.push(w); });\n",
+   "note": "s164 item 3: preview matcher word forms"
+  },
+  {
+   "op": "replace_global",
+   "find": "    var on = false, bl = [];\n    Array.prototype.forEach.call(t.querySelectorAll('h5.tsec, div.crit, div.sp-dx'), function(n){\n      if(n.tagName === 'H5') on = n === h; else if(on && !n.parentElement.closest('div.crit, div.sp-dx')) bl.push(n);\n    });\n    if(!bl.length) return null;\n",
+   "with": "    var on = false, bl = [], fg = [];   // s164: fg, the step's window figures (figure.lcw)\n    Array.prototype.forEach.call(t.querySelectorAll('h5.tsec, div.crit, div.sp-dx, figure.lcw'), function(n){\n      if(n.tagName === 'H5') on = n === h; else if(on && !n.parentElement.closest('div.crit, div.sp-dx, figure.lcw')) (n.tagName === 'FIGURE' ? fg : bl).push(n);\n    });\n    if(!bl.length && !fg.length) return null;\n",
+   "note": "s164 item 2: window figures in the preview"
+  },
+  {
+   "op": "replace_global",
+   "find": "    var tt = pvToks((t.querySelector('h4') || {}).textContent || '');\n    return pvIn(tt, all) || pvIn(core, tt) ? bl[0] : null;\n",
+   "with": "    /* s164: a window figure one of whose rows names the row's diagnosis (Brief psychotic disorder, Delirium tremens) */\n    for(var f = 0; f < fg.length; f++){\n      var nm = fg[f].querySelectorAll('.wr .nm, .tr .nm');\n      for(var j = 0; j < nm.length; j++){\n        var x = nm[j].cloneNode(true); x.querySelectorAll('.mask-toggle, button').forEach(function(y){ y.remove(); });   // the Recall toggle's own words\n        var nt = pvToks(x.textContent); if(pvIn(core, nt) || pvIn(nt, all)) return fg[f];\n      }\n    }\n    var tt = pvToks((t.querySelector('h4') || {}).textContent || '');\n    return pvIn(tt, all) || pvIn(core, tt) ? (bl[0] || fg[0]) : null;\n",
+   "note": "s164 item 2: window figures in the preview"
+  },
+  {
+   "op": "replace_global",
+   "find": "/* s163 C4: the linked brief's diagnostic criteria in a Differential row's preview */\n",
+   "with": "/* s163 C4: the linked brief's diagnostic criteria in a Differential row's preview */\n/* s164: a window figure (figure.lcw) in the tile reads as on the phone page: name and window over the bar, one row per block */\nhtml body .qx-pv > .brief.sp.qx-pc > figure.lcw{margin:0;max-width:none}\nhtml body .qx-pv > .brief.sp.qx-pc .lcw :is(.wr,.tr){display:block}\nhtml body .qx-pv > .brief.sp.qx-pc .lcw .wax{grid-template-columns:1fr}\nhtml body .qx-pv > .brief.sp.qx-pc .lcw .wsp{display:none}\n",
+   "note": "s164 item 2: window figures in the preview"
+  }
+ ]
+}

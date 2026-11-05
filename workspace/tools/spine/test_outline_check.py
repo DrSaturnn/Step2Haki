@@ -15,8 +15,10 @@ WS = os.path.abspath(os.path.join(HERE, '..', '..'))
 sys.path.insert(0, HERE)
 import outline_check as OC  # noqa: E402
 
-GOLD = {'nephrotic-child': 'repair/migration/peds/NEPH/spine', 'scfe': 'repair/migration/peds/SCFE/spine',
-        'copd': 'repair/migration/fm/COPD/spine'}
+# s164: frozen goldens (local-only, private repo local-only/repair/migration/spine/goldens/, made by
+# repair/s164/make_goldens.py): the brief folders moved to delta builds (nephrotic-child has had no outline.json since s154c)
+GOLD = {'nephrotic-child': 'repair/migration/spine/goldens/nephrotic-child', 'scfe': 'repair/migration/spine/goldens/scfe',
+        'copd': 'repair/migration/spine/goldens/copd'}
 BASE = GOLD['nephrotic-child']
 
 

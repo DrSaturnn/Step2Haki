@@ -1,0 +1,144 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "backpain",
+   "find": "Emergent MRI (Urgent risks)</span>",
+   "with": "Emergent MRI</span>",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "Guillain-Barr&eacute; syndrome: see Next step</span>",
+   "with": "Guillain-Barr&eacute; syndrome: admit; CSF analysis, nerve conduction studies; serial spirometry</span>",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bone-tumors",
+   "find": "Aggressive: see Next step</span>",
+   "with": "Aggressive: MRI of the whole involved extremity, then biopsy</span>",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "Omphalocele or gastroschisis: the Act now row in Urgent risks, then surgery</span>",
+   "with": "Omphalocele or gastroschisis: cover it with a sterile, moist dressing, place a nasogastric tube, start IV fluids and antibiotics and keep the infant warm; then surgery</span>",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "fluids and antibiotics in Urgent risks come before surgery",
+   "with": "fluids and antibiotics come before surgery",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "dementia",
+   "find": "Thiamine, as for any undernourished patient (Urgent risks);",
+   "with": "Thiamine, as for any undernourished patient;",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "pmr",
+   "find": "monitor glucose and blood pressure (Follow-up)<div",
+   "with": "monitor glucose and blood pressure<div",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "septic-hip",
+   "find": "Tap an effusion even when the blood tests are normal (Urgent risks)</span>",
+   "with": "Tap an effusion even when the blood tests are normal</span>",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "septic-hip",
+   "find": "MRI, as in Targeted tests</span>",
+   "with": "MRI</span>",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "septic-hip",
+   "find": "Radiographs of both hips (Workup, Targeted tests)<div",
+   "with": "Radiographs of both hips<div",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-brachial-plexus",
+   "find": "Apply the specialist referral criteria in Treatment;",
+   "with": "Refer if no improvement over 1 to 2 months;",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "This study is the diagnostic test (Diagnostic test)</span>",
+   "with": "This study is the diagnostic test</span>",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "Achalasia pathway (Next step)</span>",
+   "with": "Esophageal manometry, then upper endoscopy</span>",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-uti-recurrent",
+   "find": "IV (intravenous) antibiotics; the drug, by age, is in Treatment</span>",
+   "with": "IV (intravenous) antibiotics, the drug chosen by age</span>",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cluster-b",
+   "find": "Diagnose it; screen for comorbid disorders as in Next step",
+   "with": "Diagnose it; screen for depression and substance use",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cluster-b",
+   "find": "Diagnose it; screen for substance use as in Next step",
+   "with": "Diagnose it; screen for substance use",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "trauma-stress",
+   "find": "Order toxicology and a neurologic check first, as in First step",
+   "with": "Order toxicology and a neurologic check first",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "lithium-effects",
+   "find": "a level past the cutoffs in Urgent risks</li>",
+   "with": "a level past the dialysis cutoffs</li>",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "lithium-effects",
+   "find": "a level past the cutoffs in Urgent risks</span></p>",
+   "with": "a level past the dialysis cutoffs</span></p>",
+   "note": "s164 item 6: section-name pointer (C6)"
+  },
+  {
+   "op": "replace",
+   "brief": "lithium-effects",
+   "find": "Toxicity; dialysis if an Urgent risks criterion is met",
+   "with": "Toxicity; hemodialysis when a dialysis criterion is met",
+   "note": "s164 item 6: section-name pointer (C6)"
+  }
+ ]
+}
