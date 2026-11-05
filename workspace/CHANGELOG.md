@@ -2,6 +2,32 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-05 s164: s164: phone in-brief rail marks the step being read; window figures and word forms in criteria previews; section-name pointers state the action
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (13):
+  - backpain (Low Back Pain in an Adult): prose edited (-15 chars)
+  - growing-pains (Leg Pain in a Child): prose edited (+51 chars)
+  - bone-tumors (Bone Lesions in a Child): prose edited (+35 chars)
+  - bs-umbilical (Umbilical Findings in a Newborn): prose edited (+76 chars)
+  - dementia (Cognitive Decline and Dementia in an Adult): prose edited (-15 chars)
+  - pmr (Polymyalgia Rheumatica): prose edited (-12 chars)
+  - septic-hip (Septic Arthritis and Transient Synovitis in a Child): prose edited (-62 chars)
+  - bs-brachial-plexus (Brachial Plexus Injury at Birth): prose edited (-9 chars)
+  - zenker (Zenker Diverticulum): prose edited (-5 chars)
+  - peds-uti-recurrent (Urinary Tract Infection in a Child): prose edited (-11 chars)
+  - cluster-b (Cluster B Personality Disorders): prose edited (-22 chars)
+  - trauma-stress (Trauma, Stress and Dissociative Disorders): prose edited (-18 chars)
+  - lithium-effects (Lithium Therapy): prose edited (-13 chars)
+Other page changes (nav, headers, scripts): +2128 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 24 scripts, 42 checks, base HEAD | allowlisted 10 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-11-05 s163: s163: diagnostic criteria as step 2 in every brief, no step numbers in brief text, NBME labels, Recall masks on repeated criteria cutoffs, criteria tile in Differential drawer previews
 
 ```
