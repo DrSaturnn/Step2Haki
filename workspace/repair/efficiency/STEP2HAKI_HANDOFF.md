@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-11-03, by Claude (s162 chat 2, S4 round 1).
+Last updated: 2026-11-04, by Claude (main merged into wip/s162 after the s161b to s161d ships; s162 State unchanged).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -18,6 +18,22 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   (repair/s162/adj_r1.md, 29 exact edits). Next: S5 edits, S6, S7 round 2 in a fresh chat (batch file "Next
   (chat 3)"). Budget 23 agents, 580 calls, 42M (builders 5, 380, 34M; reviewers 18, 200, 8M); lead 80M. Spend: 11
   agents, 289 calls, 30.31M (builders 28.07M; reviewers 7, 62, 2.24M); lead 2 chats 31.93M. Record repair/s162/S162.md.
+
+- **Previous: s161d SHIPPED 2026-11-04** (Claude lead; site layer: the desktop sidebar fits wide windows under the 110%
+  zoom): commit f817f18, page 59ff29b3cace (approved candidate 634020d29e52). Record repair/s161d/S161D.md. Open: OPEN_WORK
+  s161d line (other 100vh panels unchecked).
+
+- **Previous: s161c SHIPPED 2026-11-04** (Claude lead; site layer, Jonathan's words in DIGEST 2026-11-03/04: Presentations
+  as its own section, page and sidebar, each brief listed once under a system sub-header): commit cab27f6, page f1e305b19c2d
+  (approved candidate 9e5d6e2c28e4). Tools: gate nav-link one sidebar link per brief (s146c hub-in-both retired);
+  apply_edits move_brief after_anchor. No agents; no brief changed. Record repair/s161c/S161C.md. Open: OPEN_WORK s161c
+  line (stale system heading counts; batch.py post not run).
+
+- **Previous: s161b SHIPPED 2026-11-03** (Claude lead; site layer, Jonathan's words in DIGEST 2026-11-03: one home per
+  brief in the sidebar, Presentations browsing stays on Presentations, Shelf card under the search, flat theme default):
+  commit 1885982, page fd0959548d47 (approved candidate 9b47429e1708), version.json build s161b (checked). No agents; no brief
+  changed. Pilot repair/pilots/nav-home/make_pilot.py (artifact r1 to r6); record repair/s161b/S161B.md. Open: OPEN_WORK
+  s161b line (dark legib run stopped; batch.py post not run, so no lead ledger row or private sync).
 
 - **Previous: s161 SHIPPED 2026-11-02** (Claude lead; Psych Pharmacology B3 of 4: pc-ssri, pc-tca, mood-anticonv
   (Lithium and anticonvulsants; id kept, card in place), pc-cog, pc-other; Q4 keep; bipolar-mania drawer label):
@@ -68,10 +84,14 @@ s159 ship) moved to repair/efficiency/STATE_ARCHIVE.md (runbook S9: keep the sta
 
 ## Next launch prompt (paste into a fresh chat)
 
-Psych Pharmacology B4 (s162), the last pharm batch: the four antipsychotic-group cards; Q4 "keep" carries
-(antipsych-effects stays as the deep brief). Budget proposed by the s161 report; Jonathan sets it at launch.
+s162 is OPEN on wip/s162 (launched 2026-11-03; never relaunch it from a launch prompt). Continue it with the restart
+line above; main was merged into wip/s162 in both repos on 2026-11-04 (s155 precedent).
+
+s163 (criteria as step 2, structural-wording sweep, NBME label rename) is held until s162 ships (Jonathan 2026-11-04:
+"Finish s162 first"; DIGEST). Part A is already in DIGEST and the plan is in the private repo's
+claude/pending/CRITERIA_STEP2.md. Paste after the s162 ship:
 ```
-Step2Haki: launch batch s162 (Psych Pharmacology section, batch 4 of 4: Atypical antipsychotics, Typical antipsychotics, Anticholinergic, Tardive dyskinesia agents) per claude/BATCH_RUNBOOK.md, claude/pending/PSYCH_PHARM_V2.md, claude/pending/PSYCH_PHARM_BATCHES.md and claude/CARD_SPEC.md. Q4: keep (antipsych-effects and tca-tox stay as the deep briefs the cards link to). Budget: 23 agents, 580 calls, 42M agent tokens (builders 5, 380, 34M; reviewers 18, 200, 8M); lead 80M.
+Step2Haki: launch batch s163 (criteria as step 2, plus the structural-wording sweep and the NBME label rename; site layer plus patch) per claude/BATCH_RUNBOOK.md sections 8 and 8b and the private repo's claude/pending/CRITERIA_STEP2.md (Part A is already in DECISIONS_DIGEST; the plan is already copied). Part B defaults stand. Parts D and E ship together. No agents, no four-part reviews (D7), no screenshots presented (D9). Budget: lead 100M.
 ```
 
 NBME presentation layer mockup (no batch; Jonathan 2026-10-26: cross-domain question types first, then how NBME

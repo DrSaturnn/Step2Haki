@@ -40,8 +40,9 @@ the edit in hand. The list below is what resume.py prints. Earlier rule (Jonatha
 **Token rules** (Jonathan 2026-10-24: "no screenshots remove the bind needing screenshots"; "for briefs with small
 additions, no need to recheck/reprove the whole brief just the changes"):
 - No screenshots in a content batch: no display reviewer, no legib_audit, no approval sheets. Jonathan checks the live
-  site after the ship. Screenshots, the display part and legib_audit run only in a batch that changes styles, scripts
-  or layout or adds a new display pattern (section 8). Study-mode leaks are judged from text (the read part, area F, and
+  site after the ship. Screenshots and the display part run only in a batch that changes styles, scripts or layout or
+  adds a new display pattern (section 8); legib_audit runs only when that change reaches brief styling (section 8,
+  step 3). Study-mode leaks are judged from text (the read part, area F, and
   lint mask-leak); squeezed phone text from the DOM (`tools/spine/squeeze_check.py`).
 - Small additions to a live brief (a row, a line, a table, a rename): board evidence, build and review cover the changed
   lines only, with the targeted replay on the live brief (the latest repair/migration/spine/sNNN_delta.py) and packets
@@ -308,8 +309,13 @@ Each such message asks one question, multiple choice where possible, with a reco
   1. build a pilot from the live page with a script (repair/pilots/<name>/), publish it as a private artifact, and let
      Jonathan try it; revise until he approves it;
   2. generate the batch from the live page with the same changes (repair/sNNNx/gen_*.py writing the *.json);
-  3. run the build, gate, render, preflight and vendor checks, legib_audit on the briefs the change touches, and
-     screenshots at the widths it affects; confirm every brief is byte-identical unless the batch moves it;
+  3. run the build, gate, render, preflight and vendor checks, and screenshots at the widths it affects; confirm every
+     brief is byte-identical unless the batch moves it. legib_audit runs only when the batch changes brief styling: CSS
+     or script that reaches what is drawn inside a brief (.brief and its tables, bank, hover cards and drawers, or the
+     theme, accent and mode tokens briefs read). Skip it when the change stays in the page chrome (sidebar, toolbar,
+     display sheet, phone bar) or only picks which existing mode is the default; the screenshots cover that (Jonathan
+     2026-11-03, s161b: the audit only measures text inside briefs, and in the container each of its six loads per
+     theme takes about 2 minutes);
   4. a tool or check change it needs follows section 3 (offline tests; the diff in the report);
   5. present with approval.py, then ship on "ship".
   No reviewer agents run when no brief content changes; any brief content change makes it a normal batch.

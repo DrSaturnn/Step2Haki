@@ -1,0 +1,271 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "<!-- =================== MSK =================== -->\n\n<!-- =================== MSK =================== -->",
+   "with": "<!-- =================== PRESENTATIONS =================== -->\n<h3 class=\"system\" id=\"presentations\">Presentations <span class=\"n\">40 complaints</span></h3>\n<p class=\"system-note\">Workups that start from the patient's complaint, grouped by system.</p>\n\n<div class=\"psub\" id=\"pres-msk\"><span class=\"t\">Musculoskeletal</span><span class=\"n\">10</span></div>\n\n<div class=\"psub\" id=\"pres-cv\"><span class=\"t\">Cardiovascular</span><span class=\"n\">4</span></div>\n\n<div class=\"psub\" id=\"pres-pulm\"><span class=\"t\">Pulmonary</span><span class=\"n\">5</span></div>\n\n<div class=\"psub\" id=\"pres-gi\"><span class=\"t\">GI &amp; Hepatology</span><span class=\"n\">8</span></div>\n\n<div class=\"psub\" id=\"pres-renal\"><span class=\"t\">Renal &amp; GU</span><span class=\"n\">6</span></div>\n\n<div class=\"psub\" id=\"pres-id\"><span class=\"t\">Infectious Disease</span><span class=\"n\">4</span></div>\n\n<div class=\"psub\" id=\"pres-psych\"><span class=\"t\">Psychiatry &amp; Behavioral Health</span><span class=\"n\">3</span></div>\n\n<!-- =================== MSK =================== -->\n\n<!-- =================== MSK =================== -->",
+   "note": "Presentations section and its system sub-headers"
+  },
+  {
+   "op": "move_brief",
+   "brief": "shoulder-rom",
+   "after_anchor": "<div class=\"psub\" id=\"pres-msk\"><span class=\"t\">Musculoskeletal</span><span class=\"n\">10</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "bone-tumors",
+   "after_anchor": "<div class=\"psub\" id=\"pres-msk\"><span class=\"t\">Musculoskeletal</span><span class=\"n\">10</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "growing-pains",
+   "after_anchor": "<div class=\"psub\" id=\"pres-msk\"><span class=\"t\">Musculoskeletal</span><span class=\"n\">10</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "nursemaid",
+   "after_anchor": "<div class=\"psub\" id=\"pres-msk\"><span class=\"t\">Musculoskeletal</span><span class=\"n\">10</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "limp",
+   "after_anchor": "<div class=\"psub\" id=\"pres-msk\"><span class=\"t\">Musculoskeletal</span><span class=\"n\">10</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "septic-bursitis",
+   "after_anchor": "<div class=\"psub\" id=\"pres-msk\"><span class=\"t\">Musculoskeletal</span><span class=\"n\">10</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "gtps",
+   "after_anchor": "<div class=\"psub\" id=\"pres-msk\"><span class=\"t\">Musculoskeletal</span><span class=\"n\">10</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "hippos",
+   "after_anchor": "<div class=\"psub\" id=\"pres-msk\"><span class=\"t\">Musculoskeletal</span><span class=\"n\">10</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "backpain",
+   "after_anchor": "<div class=\"psub\" id=\"pres-msk\"><span class=\"t\">Musculoskeletal</span><span class=\"n\">10</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "scaphoid",
+   "after_anchor": "<div class=\"psub\" id=\"pres-msk\"><span class=\"t\">Musculoskeletal</span><span class=\"n\">10</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "myocarditis",
+   "after_anchor": "<div class=\"psub\" id=\"pres-cv\"><span class=\"t\">Cardiovascular</span><span class=\"n\">4</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "newborn-cyanosis",
+   "after_anchor": "<div class=\"psub\" id=\"pres-cv\"><span class=\"t\">Cardiovascular</span><span class=\"n\">4</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "right-murmurs",
+   "after_anchor": "<div class=\"psub\" id=\"pres-cv\"><span class=\"t\">Cardiovascular</span><span class=\"n\">4</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "ped-murmur",
+   "after_anchor": "<div class=\"psub\" id=\"pres-cv\"><span class=\"t\">Cardiovascular</span><span class=\"n\">4</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "bpd",
+   "after_anchor": "<div class=\"psub\" id=\"pres-pulm\"><span class=\"t\">Pulmonary</span><span class=\"n\">5</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "uri",
+   "after_anchor": "<div class=\"psub\" id=\"pres-pulm\"><span class=\"t\">Pulmonary</span><span class=\"n\">5</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "airway",
+   "after_anchor": "<div class=\"psub\" id=\"pres-pulm\"><span class=\"t\">Pulmonary</span><span class=\"n\">5</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "hypoxemia-mech",
+   "after_anchor": "<div class=\"psub\" id=\"pres-pulm\"><span class=\"t\">Pulmonary</span><span class=\"n\">5</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "cough",
+   "after_anchor": "<div class=\"psub\" id=\"pres-pulm\"><span class=\"t\">Pulmonary</span><span class=\"n\">5</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "bs-umbilical",
+   "after_anchor": "<div class=\"psub\" id=\"pres-gi\"><span class=\"t\">GI &amp; Hepatology</span><span class=\"n\">8</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "occult-gi-bleed",
+   "after_anchor": "<div class=\"psub\" id=\"pres-gi\"><span class=\"t\">GI &amp; Hepatology</span><span class=\"n\">8</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "cyclic-vomiting",
+   "after_anchor": "<div class=\"psub\" id=\"pres-gi\"><span class=\"t\">GI &amp; Hepatology</span><span class=\"n\">8</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "peds-constipation",
+   "after_anchor": "<div class=\"psub\" id=\"pres-gi\"><span class=\"t\">GI &amp; Hepatology</span><span class=\"n\">8</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "rlq-pain",
+   "after_anchor": "<div class=\"psub\" id=\"pres-gi\"><span class=\"t\">GI &amp; Hepatology</span><span class=\"n\">8</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "feeding-refusal",
+   "after_anchor": "<div class=\"psub\" id=\"pres-gi\"><span class=\"t\">GI &amp; Hepatology</span><span class=\"n\">8</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "infant-stool",
+   "after_anchor": "<div class=\"psub\" id=\"pres-gi\"><span class=\"t\">GI &amp; Hepatology</span><span class=\"n\">8</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "cholestasis",
+   "after_anchor": "<div class=\"psub\" id=\"pres-gi\"><span class=\"t\">GI &amp; Hepatology</span><span class=\"n\">8</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "aq-puffy-eyes",
+   "after_anchor": "<div class=\"psub\" id=\"pres-renal\"><span class=\"t\">Renal &amp; GU</span><span class=\"n\">6</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "bs-distal-rta",
+   "after_anchor": "<div class=\"psub\" id=\"pres-renal\"><span class=\"t\">Renal &amp; GU</span><span class=\"n\">6</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "bs-abdominal-mass",
+   "after_anchor": "<div class=\"psub\" id=\"pres-renal\"><span class=\"t\">Renal &amp; GU</span><span class=\"n\">6</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "bs-incontinence",
+   "after_anchor": "<div class=\"psub\" id=\"pres-renal\"><span class=\"t\">Renal &amp; GU</span><span class=\"n\">6</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "polyuria",
+   "after_anchor": "<div class=\"psub\" id=\"pres-renal\"><span class=\"t\">Renal &amp; GU</span><span class=\"n\">6</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "scrotum",
+   "after_anchor": "<div class=\"psub\" id=\"pres-renal\"><span class=\"t\">Renal &amp; GU</span><span class=\"n\">6</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "aq-infant-fever",
+   "after_anchor": "<div class=\"psub\" id=\"pres-id\"><span class=\"t\">Infectious Disease</span><span class=\"n\">4</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "bs-fever-rash-arthralgia",
+   "after_anchor": "<div class=\"psub\" id=\"pres-id\"><span class=\"t\">Infectious Disease</span><span class=\"n\">4</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "herpangina",
+   "after_anchor": "<div class=\"psub\" id=\"pres-id\"><span class=\"t\">Infectious Disease</span><span class=\"n\">4</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "lymphadenitis",
+   "after_anchor": "<div class=\"psub\" id=\"pres-id\"><span class=\"t\">Infectious Disease</span><span class=\"n\">4</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "toxidrome",
+   "after_anchor": "<div class=\"psub\" id=\"pres-psych\"><span class=\"t\">Psychiatry &amp; Behavioral Health</span><span class=\"n\">3</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "dementia",
+   "after_anchor": "<div class=\"psub\" id=\"pres-psych\"><span class=\"t\">Psychiatry &amp; Behavioral Health</span><span class=\"n\">3</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "move_brief",
+   "brief": "voices",
+   "after_anchor": "<div class=\"psub\" id=\"pres-psych\"><span class=\"t\">Psychiatry &amp; Behavioral Health</span><span class=\"n\">3</span></div>",
+   "note": "to Presentations"
+  },
+  {
+   "op": "replace_global",
+   "find": "<div id=\"navlinks\">\n\n    <div class=\"sect\">Presentations <span class=\"count\">40</span></div>\n    <a href=\"#right-murmurs\">Heart Murmurs in an Adult</a>\n    <a href=\"#ped-murmur\">Heart Murmurs in a Child</a>\n    <a href=\"#myocarditis\">Heart Failure in a Child</a>\n    <a href=\"#scaphoid\">Wrist and Hand Pain and Numbness</a>\n    <a href=\"#backpain\">Low Back Pain in an Adult</a>\n    <a href=\"#hippos\">Hip Injury in an Adult</a>\n    <a href=\"#gtps\">Hip and Thigh Pain and Numbness</a>\n    <a href=\"#septic-bursitis\">Hot Joint or Bursa in an Adult</a>\n    <a href=\"#limp\">The Limping Child</a>\n    <a href=\"#nursemaid\">Arm Injury in a Young Child</a>\n    <a href=\"#growing-pains\">Leg Pain in a Child</a>\n    <a href=\"#bone-tumors\">Bone Lesions in a Child</a>\n    <a href=\"#shoulder-rom\">Shoulder Pain</a>\n    <a href=\"#cough\">Chronic Cough</a>\n    <a href=\"#hypoxemia-mech\">Hypoxemia</a>\n    <a href=\"#airway\">Noisy Breathing in a Child</a>\n    <a href=\"#uri\">Respiratory Infection in a Child</a>\n    <a href=\"#bpd\">Lung Disease in the Newborn and Preterm Infant</a>\n    <a href=\"#newborn-cyanosis\">Cyanosis in the Newborn</a>\n    <a href=\"#cholestasis\">Abnormal Liver Tests</a>\n    <a href=\"#infant-stool\">Stool Changes in a Well Infant</a>\n    <a href=\"#feeding-refusal\">Feeding an Infant or Toddler</a>\n    <a href=\"#rlq-pain\">Right Lower Quadrant Pain</a>\n    <a href=\"#peds-constipation\">Constipation in a Child</a>\n    <a href=\"#cyclic-vomiting\">Recurrent Vomiting in a Child</a>\n    <a href=\"#occult-gi-bleed\">GI Bleeding in a Child</a>\n    <a href=\"#bs-umbilical\">Newborn Umbilical Findings</a>\n    <a href=\"#scrotum\">Scrotal Pain and Masses</a>\n    <a href=\"#polyuria\">Polyuria</a>\n    <a href=\"#bs-incontinence\">Urinary Incontinence</a>\n    <a href=\"#bs-abdominal-mass\">Abdominal Mass in a Young Child</a>\n    <a href=\"#bs-distal-rta\">Hypokalemia and Acid-Base Disorders in a Child</a>\n    <a href=\"#aq-puffy-eyes\">Child with Puffy Eyes</a>\n    <a href=\"#lymphadenitis\">Lymphadenopathy</a>\n    <a href=\"#herpangina\">Oral Lesions in a Child</a>\n    <a href=\"#bs-fever-rash-arthralgia\">Fever and Rash in a Child</a>\n    <a href=\"#aq-infant-fever\">Fever in an Infant</a>\n    <a href=\"#voices\">Hears Voices or Holds Odd Beliefs</a>\n    <a href=\"#toxidrome\">Suspected Overdose or Toxidrome</a>\n    <a href=\"#dementia\">Cognitive Decline and Dementia in an Adult</a>\n\n    <div class=\"sect\">Musculoskeletal <span class=\"count\">19</span></div>\n    <a href=\"#pmr\">Polymyalgia Rheumatica</a>\n    <a href=\"#scaphoid\">Wrist and Hand Pain and Numbness</a>\n    <a href=\"#backpain\">Low Back Pain in an Adult</a>\n    <a href=\"#hippos\">Hip Injury in an Adult</a>\n    <a href=\"#gtps\">Hip and Thigh Pain and Numbness</a>\n    <a href=\"#oa-pharm\">Osteoarthritis</a>\n    <a href=\"#septic-bursitis\">Hot Joint or Bursa in an Adult</a>\n    <a href=\"#septic-hip\">Septic Arthritis and Transient Synovitis in a Child</a>\n    <a href=\"#limp\">The Limping Child</a>\n    <a href=\"#sjia\">Juvenile Idiopathic Arthritis</a>\n    <a href=\"#nursemaid\">Arm Injury in a Young Child</a>\n    <a href=\"#scfe\">Slipped Capital Femoral Epiphysis</a>\n    <a href=\"#myositis-ossificans\">Muscle Contusion and Myositis Ossificans</a>\n    <a href=\"#growing-pains\">Leg Pain in a Child</a>\n    <a href=\"#scheuermann\">Adolescent Kyphosis</a>\n    <a href=\"#bone-tumors\">Bone Lesions in a Child</a>\n    <a href=\"#bs-puncture-osteomyelitis\">Foot Puncture Wounds and Osteomyelitis</a>\n    <a href=\"#bs-torticollis\">Torticollis and Plagiocephaly in an Infant</a>\n    <a href=\"#bs-brachial-plexus\">Brachial Plexus Injury at Birth</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    <a class=\"aq\" href=\"#shoulder-rom\">Shoulder Pain: the ROM Rule</a>\n    \n    <div class=\"sect\">Pediatrics <span class=\"count\">3</span></div>\n    <a href=\"#growth\">Developmental Milestones and Normal Growth</a>\n    <a href=\"#neonatal-maternal-labs\">Maternal Effects in the Newborn</a>\n    <a href=\"#aneuploidy\">Genetic Syndromes Recognized at Birth</a>\n<div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-learning\">School Difficulty in a Child</a>\n    <a class=\"bs\" href=\"#bs-nat-fracture\">Suspected Child Abuse</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    <a class=\"aq\" href=\"#bs-shock\">Shock in Children</a>\n    <a class=\"aq\" href=\"#bs-preterm-followup\">Prematurity Follow-Up</a>\n    <a class=\"aq\" href=\"#aq-infant-hypotonia\">Infant with Hypotonia</a>\n    \n    <div class=\"sect\">Cardiovascular <span class=\"count\">14</span></div>\n    <a href=\"#chf\">Heart Failure</a>\n    <a href=\"#ascvd\">Lipid Screening and Statin Therapy</a>\n    <a href=\"#angina\">Stable Ischemic Heart Disease</a>\n    <a href=\"#ie-ppx\">Endocarditis Prophylaxis</a>\n    <a href=\"#dvt\">Venous Thromboembolism</a>\n    <a href=\"#ped-murmur\">Heart Murmurs in a Child</a>\n    <a href=\"#cyanotic-chd\">Congenital Heart Disease</a>\n    <a href=\"#right-murmurs\">Heart Murmurs in an Adult</a>\n    <a href=\"#htn-drugs\">Hypertension in an Adult</a>\n    <a href=\"#newborn-cyanosis\">Cyanosis in the Newborn</a>\n    <a href=\"#kawasaki\">Kawasaki Disease</a>\n    <a href=\"#arf\">Acute Rheumatic Fever</a>\n        <a href=\"#myocarditis\">Heart Failure in a Child</a>\n    <a href=\"#del22q11\">22q11.2 Deletion (DiGeorge)</a>\n<div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-adolescent-bp\">High Blood Pressure in a Child or Adolescent</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    \n    <div class=\"sect\">Pulmonary <span class=\"count\">11</span></div>\n    <a href=\"#copd\">Obstructive Lung Disease</a>\n    <a href=\"#cough\">Chronic Cough</a>\n    <a href=\"#pneumoconiosis\">Occupational Lung Disease</a>\n    <a href=\"#rhinitis\">Rhinitis</a>\n    <a href=\"#sinopulm-structural\">Recurrent Respiratory Infection and Structural Lung Disease</a>\n    <a href=\"#hypoxemia-mech\">Hypoxemia</a>\n    <a href=\"#scd-dyspnea\">Sickle Cell Disease and Trait</a>\n    <a href=\"#airway\">Noisy Breathing in a Child</a>\n    <a href=\"#uri\">Respiratory Infection in a Child</a>\n    <a href=\"#asthma\">Asthma</a>\n    <a href=\"#bpd\">Lung Disease in the Newborn and Preterm Infant</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    \n    <div class=\"sect\">GI &amp; Hepatology <span class=\"count\">14</span></div>\n    <a href=\"#liver-preg\">Liver Disease in Pregnancy</a>\n    <a href=\"#masld\">Fatty Liver Disease</a>\n    <a href=\"#cholestasis\">Abnormal Liver Tests</a>\n    <a href=\"#zenker\">Zenker Diverticulum</a>\n    <a href=\"#infant-stool\">Stool Changes in a Well Infant</a>\n    <a href=\"#fap\">Hereditary Polyposis Syndromes</a>\n    <a href=\"#feeding-refusal\">Feeding an Infant or Toddler</a>\n    <a href=\"#rlq-pain\">Right Lower Quadrant Pain</a>\n    <a href=\"#peds-constipation\">Constipation in a Child</a>\n    <a href=\"#neonatal-jaundice\">Jaundice in a Newborn</a>\n<a href=\"#neonatal-bowel\">The Distended Abdomen in a Newborn or Infant</a>\n<a href=\"#cyclic-vomiting\">Recurrent Vomiting in a Child</a>\n<a href=\"#occult-gi-bleed\">GI Bleeding in a Child</a>\n<div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-impaction\">Constipation and Fecal Impaction in an Adult</a>\n    <a class=\"bs\" href=\"#bs-tef\">Tracheoesophageal Fistula and Esophageal Atresia</a>\n    <a class=\"bs\" href=\"#bs-umbilical\">Newborn Umbilical Findings</a>\n    <a class=\"bs\" href=\"#bs-wilson\">Wilson Disease</a>\n    <a href=\"#parkinson\">Parkinson Disease and Parkinsonism</a>\n    \n    <div class=\"sect\">Renal &amp; GU <span class=\"count\">11</span></div>\n    <a href=\"#pyelo\">Pyelonephritis</a>\n    <a href=\"#bph\">Benign Prostatic Hyperplasia and Urinary Retention</a>\n    <a href=\"#nephropathy\">Diabetes Complications and Annual Care</a>\n    <a href=\"#hematuria\">Hematuria and Nephritic Syndrome</a>\n    <a href=\"#scrotum\">Scrotal Pain and Masses</a>\n    <a href=\"#hypercalcemia\">Hypercalcemia</a>\n    <a href=\"#peds-uti-recurrent\">Urinary Tract Infection in a Child</a>\n    <a href=\"#enuresis\">Enuresis</a>\n    <a href=\"#polyuria\">Polyuria</a>\n    <a href=\"#peds-aki\">Acute Kidney Injury in a Child</a>\n    <a href=\"#nephrotic-child\">Proteinuria and Nephrotic Syndrome in a Child</a>\n    <div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-puv\">Posterior Urethral Valves</a>\n    <a class=\"bs\" href=\"#bs-incontinence\">Urinary Incontinence</a>\n    <a class=\"bs\" href=\"#bs-abdominal-mass\">Abdominal mass (Wilms)</a>\n    <a class=\"bs\" href=\"#bs-distal-rta\">Hypokalemia and Acid-Base Disorders in a Child</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    <a class=\"aq\" href=\"#aq-puffy-eyes\">Child with Puffy Eyes</a>\n    \n    <div class=\"sect\">Endocrine &amp; Bone <span class=\"count\">9</span></div>\n    <a href=\"#thyroid\">Thyroid Disease in an Adult</a>\n    <a href=\"#gynecomastia\">Male Breast Enlargement</a>\n    <a href=\"#prolactin\">Hyperprolactinemia</a>\n    <a href=\"#osteoporosis\">Osteoporosis Screening and Treatment</a>\n    <a href=\"#congenital-hypothyroid\">Congenital Hypothyroidism</a>\n    <a href=\"#tumor-syndromes\">Inherited Tumor Syndromes</a>\n    <a href=\"#precocious-puberty\">Precocious Puberty</a>\n    <a href=\"#homocystinuria\">Tall Stature and Marfanoid Habitus</a>\n    <a href=\"#bs-short-stature\">Abnormal Growth in a Child</a>\n    <div class=\"navsub\">Board-style</div>\n    \n    <div class=\"sect\">Hematology <span class=\"count\">6</span></div>\n    <a href=\"#anemia-thrombocytopenia\">Anemia with Thrombocytopenia</a>\n    <a href=\"#drug-hemolysis\">Hemolytic Anemia</a>\n    <a href=\"#dipstick-mismatch\">Dark Urine: Hemoglobin, Myoglobin or Blood</a>\n    <a href=\"#microcytic-anemia\">Microcytic Anemia</a>\n    <a href=\"#factor-inhibitor\">Hemophilia</a>\n    <a href=\"#transfusion\">Transfusion Reactions</a>\n    <div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-leukemia\">Acute Leukemia in a Child</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    <a class=\"aq\" href=\"#aq-bruising\">Bruising and Purpura</a>\n    \n    <div class=\"sect\">Infectious Disease <span class=\"count\">12</span></div>\n    <a href=\"#tb\">Tuberculosis</a>\n    <a href=\"#meningitis\">Bacterial Meningitis</a>\n    <a href=\"#hiv-vax\">Vaccines in Special Populations</a>\n    <a href=\"#dtap\">Childhood Vaccine Schedule and Contraindications</a>\n    <a href=\"#cervicitis\">Cervicitis and Pelvic Inflammatory Disease</a>\n    <a href=\"#ig-panel\">Antibody Deficiencies</a>\n        <a href=\"#rmsf\">Tick-Borne Illness</a>\n    <a href=\"#lymphadenitis\">Lymphadenopathy</a>\n    <a href=\"#herpangina\">Oral Lesions in a Child</a>\n    <a href=\"#cgd\">Neutrophil Disorders: Number and Function</a>\n    <a href=\"#bs-fever-rash-arthralgia\">Fever and Rash in a Child</a>\n    <a href=\"#bs-neonatal-sepsis\">Fever and Sepsis in the Newborn</a>\n<div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-pta\">Deep Neck Infections</a>\n    <a class=\"bs\" href=\"#bs-torch\">Congenital Infections (TORCH)</a>\n    <a class=\"bs\" href=\"#bs-anaphylaxis\">Anaphylaxis</a>\n    <a class=\"bs\" href=\"#bs-isolation\">Isolation Precautions</a>\n    <a class=\"bs\" href=\"#bs-foodborne\">Infectious Diarrhea</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    <a class=\"aq\" href=\"#aq-infant-fever\">Infant with Fever</a>\n\n    <div class=\"sect\">Neuro &amp; HEENT <span class=\"count\">12</span></div>\n    <a href=\"#hearing\">Hearing Loss and Chronic Ear Disease</a>\n    <a href=\"#redeye\">The Red Eye</a>\n    <a href=\"#cluster\">Primary Headache in an Adult</a>\n    <a href=\"#sellar-mass\">Brain Tumors in a Child</a>\n    <a href=\"#peds-headache-imaging\">Headache in a Child: Imaging and Treatment</a>\n    <a href=\"#febrile-seizure\">Seizure with Fever</a>\n    <a href=\"#cerebral-palsy\">Cerebral Palsy</a>\n    <a href=\"#abrs-complications\">Sinusitis and Its Complications</a>\n    <a href=\"#vpshunt\">Hydrocephalus and Shunt Complications</a>\n        <a href=\"#retinitis-pigmentosa\">Night Blindness</a>\n    <a href=\"#tics\">Tics and Tic Disorders</a>\n    <a href=\"#peds-sleep\">Sleep Problems in a Child</a>\n<div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-tethered\">Spinal Dysraphism</a>\n    <a class=\"bs\" href=\"#bs-reye\">Encephalopathy and Cerebral Edema in a Child</a>\n    <a class=\"bs\" href=\"#bs-peds-stroke\">Stroke in a Child: the Arteriopathy</a>\n    <a class=\"bs\" href=\"#bs-imprinting\">Imprinting Disorders: Angelman and Prader-Willi</a>\n    <a class=\"bs\" href=\"#bs-eyelid-lump\">Eyelid Lumps and Swelling</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    <a class=\"aq\" href=\"#aq-child-headache\">Child with Headache</a>\n    \n    <div class=\"sect\">Dermatology &amp; Wounds <span class=\"count\">5</span></div>\n    <a href=\"#psoriasis\">Scaly Rashes</a>\n    <a href=\"#cellulitis\">Skin and Soft Tissue Infection</a>\n    <a href=\"#eczemaherp\">Atopic Dermatitis</a>\n    <a href=\"#peds-alopecia\">Hair Loss in a Child</a>\n    <a href=\"#neonatal-rash\">Rashes in the Newborn and Infant</a>\n<div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-scabies\">Scabies</a>\n    \n    <div class=\"sect\">OB / GYN <span class=\"count\">8</span></div>\n    <a href=\"#preg-vax\">Vaccines in Pregnancy</a>\n    <a href=\"#cervical\">Cervical Cancer Screening</a>\n    <a href=\"#ectopic\">Ectopic Pregnancy</a>\n    <a href=\"#hpv\">Adolescent Vaccines</a>\n    <a href=\"#adolescent-aub\">Abnormal Uterine Bleeding</a>\n    <a href=\"#contraception\">Contraception</a>\n    <a href=\"#teratogens\">Teratogenic Exposures</a>\n    <a href=\"#primary-amenorrhea\">Primary Amenorrhea</a>\n    <div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-genital-ulcer\">Genital Ulcers</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    \n    <div class=\"sect\">Preventive &amp; Ethics <span class=\"count\">5</span></div>\n    <a href=\"#smoking\">Preventive Care: Ranking Interventions</a>\n    <a href=\"#preop\">Preoperative Evaluation</a>\n    <a href=\"#elder\">Elder Abuse</a>\n    <a href=\"#vegan\">Vitamins and Nutritional Deficiencies</a>\n    <div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-adolescent-confid\">Adolescent Confidentiality</a>\n    <a href=\"#capacity\">Decision-Making Capacity and Informed Consent</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    \n    <div class=\"sect\">Psychiatry &amp; Behavioral Health <span class=\"count\">29</span></div>\n    <div class=\"navsub\">Psychosis and mood</div>\n    <a href=\"#psychosis-duration\">Psychosis</a>\n    <a href=\"#voices\">Hears Voices or Holds Odd Beliefs</a>\n    <a href=\"#sz-psychosocial\">Schizophrenia: Long-Term Care</a>\n    <a href=\"#bipolar-mania\">Bipolar Disorder</a>\n    <a href=\"#mdd\">Major Depressive Disorder</a>\n    <a href=\"#pms-pmdd\">Premenstrual Syndrome and Premenstrual Dysphoric Disorder</a>\n    <a href=\"#cluster-b\">Cluster B Personality Disorders</a>\n    <a href=\"#cluster-c\">Cluster C Personality Disorders</a>\n    <div class=\"navsub\">Anxiety, somatic and sexual</div>\n    <a href=\"#panic\">Panic Disorder and Other Anxiety</a>\n    <a href=\"#ocd\">Obsessive-Compulsive and Related Disorders</a>\n    <a href=\"#somatic\">Somatic Symptom and Related Disorders</a>\n    <a href=\"#trauma-stress\">Trauma, Stress and Dissociative Disorders</a>\n    <a href=\"#eating-disorders\">Eating Disorders</a>\n    <a href=\"#gppd\">Genito-Pelvic Pain/Penetration Disorder</a>\n    <a href=\"#sexual-dysfunction\">Sexual Dysfunction</a>\n    <a href=\"#defense-mechanisms\">Defense Mechanisms</a>\n    <div class=\"navsub\">Cognition, substances and medical causes</div>\n    <a href=\"#delirium\">Delirium</a>\n    <a href=\"#dementia\">Cognitive Decline and Dementia in an Adult</a>\n    <a href=\"#toxidrome\">Suspected Overdose or Toxidrome</a>\n    <a href=\"#substance\">Substance Intoxication and Withdrawal</a>\n    <a href=\"#stages-change\">Stages of Change and Motivational Interviewing</a>\n    <a href=\"#psych-medical\">Medication- and Illness-Induced Psychiatric Disorders</a>\n    <div class=\"navsub\">Child and adolescent</div>\n    <a href=\"#disruptive-behavior\">Disruptive Behavior in a Child</a>\n    <div class=\"navsub\">Medications</div>\n    <a href=\"#ssri-effects\">SSRI Adverse Effects</a>\n    <a href=\"#antipsych-effects\">Antipsychotic Adverse Effects</a>\n    <a href=\"#lithium-effects\">Lithium Therapy</a>\n    <a href=\"#tca-tox\">Anticholinergic and Tricyclic Toxicity</a>\n    <div class=\"navsub\">Safety and violence</div>\n    <a href=\"#suicide-risk\">Suicide Risk Assessment</a>\n    <a href=\"#ipv\">Intimate Partner Violence</a>\n    <div class=\"sect pc-sect\">Psych Pharmacology <span class=\"count\">14</span></div>\n    <div class=\"navsub\">01 Antidepressants</div>\n    <a href=\"#pc-ssri\">SSRIs</a>\n    <a href=\"#pc-snri\">SNRIs</a>\n    <a href=\"#pc-antidep\">Other antidepressants</a>\n    <a href=\"#pc-tca\">TCAs</a>\n    <a href=\"#pc-maoi\">MAOIs</a>\n    <div class=\"navsub\">02 Antipsychotics</div>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Atypical antipsychotics</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Typical antipsychotics</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Anticholinergic</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Tardive dyskinesia agents</a>\n    <div class=\"navsub\">03 Mood and cognition</div>\n    <a href=\"#mood-anticonv\">Lithium and anticonvulsants</a>\n    <a href=\"#pc-cog\">Cognitive agents</a>\n    <div class=\"navsub\">04 Anxiety and benzodiazepines</div>\n    <a href=\"#pc-benzo\">Benzodiazepines</a>\n    <a href=\"#pc-anxiety\">Other anxiety agents</a>\n    <div class=\"navsub\">05 ADHD and sleep</div>\n    <a href=\"#adhd-meds\">ADHD</a>\n    <a href=\"#pc-sleep\">Sleep agents</a>\n    <a href=\"#pc-orexin\">Orexin antagonists</a>\n    <div class=\"navsub\">06 Substance use and other</div>\n    <a href=\"#sud-meds\">Substance use and cessation</a>\n    <a href=\"#pc-other\">Other agents</a>\n  </div>",
+   "with": "<div id=\"navlinks\">\n\n    <div class=\"sect\">Presentations <span class=\"count\">40</span></div>\n    <div class=\"navsub\">Musculoskeletal</div>\n    <a href=\"#scaphoid\">Wrist and Hand Pain and Numbness</a>\n    <a href=\"#backpain\">Low Back Pain in an Adult</a>\n    <a href=\"#hippos\">Hip Injury in an Adult</a>\n    <a href=\"#gtps\">Hip and Thigh Pain and Numbness</a>\n    <a href=\"#septic-bursitis\">Hot Joint or Bursa in an Adult</a>\n    <a href=\"#limp\">The Limping Child</a>\n    <a href=\"#nursemaid\">Arm Injury in a Young Child</a>\n    <a href=\"#growing-pains\">Leg Pain in a Child</a>\n    <a href=\"#bone-tumors\">Bone Lesions in a Child</a>\n    <a href=\"#shoulder-rom\">Shoulder Pain: the ROM Rule</a>\n    <div class=\"navsub\">Cardiovascular</div>\n    <a href=\"#ped-murmur\">Heart Murmurs in a Child</a>\n    <a href=\"#right-murmurs\">Heart Murmurs in an Adult</a>\n    <a href=\"#newborn-cyanosis\">Cyanosis in the Newborn</a>\n    <a href=\"#myocarditis\">Heart Failure in a Child</a>\n    <div class=\"navsub\">Pulmonary</div>\n    <a href=\"#cough\">Chronic Cough</a>\n    <a href=\"#hypoxemia-mech\">Hypoxemia</a>\n    <a href=\"#airway\">Noisy Breathing in a Child</a>\n    <a href=\"#uri\">Respiratory Infection in a Child</a>\n    <a href=\"#bpd\">Lung Disease in the Newborn and Preterm Infant</a>\n    <div class=\"navsub\">GI &amp; Hepatology</div>\n    <a href=\"#cholestasis\">Abnormal Liver Tests</a>\n    <a href=\"#infant-stool\">Stool Changes in a Well Infant</a>\n    <a href=\"#feeding-refusal\">Feeding an Infant or Toddler</a>\n    <a href=\"#rlq-pain\">Right Lower Quadrant Pain</a>\n    <a href=\"#peds-constipation\">Constipation in a Child</a>\n    <a href=\"#cyclic-vomiting\">Recurrent Vomiting in a Child</a>\n    <a href=\"#occult-gi-bleed\">GI Bleeding in a Child</a>\n    <a href=\"#bs-umbilical\">Newborn Umbilical Findings</a>\n    <div class=\"navsub\">Renal &amp; GU</div>\n    <a href=\"#scrotum\">Scrotal Pain and Masses</a>\n    <a href=\"#polyuria\">Polyuria</a>\n    <a href=\"#bs-incontinence\">Urinary Incontinence</a>\n    <a href=\"#bs-abdominal-mass\">Abdominal mass (Wilms)</a>\n    <a href=\"#bs-distal-rta\">Hypokalemia and Acid-Base Disorders in a Child</a>\n    <a href=\"#aq-puffy-eyes\">Child with Puffy Eyes</a>\n    <div class=\"navsub\">Infectious Disease</div>\n    <a href=\"#lymphadenitis\">Lymphadenopathy</a>\n    <a href=\"#herpangina\">Oral Lesions in a Child</a>\n    <a href=\"#bs-fever-rash-arthralgia\">Fever and Rash in a Child</a>\n    <a href=\"#aq-infant-fever\">Infant with Fever</a>\n    <div class=\"navsub\">Psychiatry &amp; Behavioral Health</div>\n    <a href=\"#voices\">Hears Voices or Holds Odd Beliefs</a>\n    <a href=\"#dementia\">Cognitive Decline and Dementia in an Adult</a>\n    <a href=\"#toxidrome\">Suspected Overdose or Toxidrome</a>\n\n    <div class=\"sect\">Musculoskeletal <span class=\"count\">10</span></div>\n    <a href=\"#pmr\">Polymyalgia Rheumatica</a>\n    <a href=\"#oa-pharm\">Osteoarthritis</a>\n    <a href=\"#septic-hip\">Septic Arthritis and Transient Synovitis in a Child</a>\n    <a href=\"#sjia\">Juvenile Idiopathic Arthritis</a>\n    <a href=\"#scfe\">Slipped Capital Femoral Epiphysis</a>\n    <a href=\"#myositis-ossificans\">Muscle Contusion and Myositis Ossificans</a>\n    <a href=\"#scheuermann\">Adolescent Kyphosis</a>\n    <a href=\"#bs-puncture-osteomyelitis\">Foot Puncture Wounds and Osteomyelitis</a>\n    <a href=\"#bs-torticollis\">Torticollis and Plagiocephaly in an Infant</a>\n    <a href=\"#bs-brachial-plexus\">Brachial Plexus Injury at Birth</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    \n    <div class=\"sect\">Pediatrics <span class=\"count\">3</span></div>\n    <a href=\"#growth\">Developmental Milestones and Normal Growth</a>\n    <a href=\"#neonatal-maternal-labs\">Maternal Effects in the Newborn</a>\n    <a href=\"#aneuploidy\">Genetic Syndromes Recognized at Birth</a>\n<div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-learning\">School Difficulty in a Child</a>\n    <a class=\"bs\" href=\"#bs-nat-fracture\">Suspected Child Abuse</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    <a class=\"aq\" href=\"#bs-shock\">Shock in Children</a>\n    <a class=\"aq\" href=\"#bs-preterm-followup\">Prematurity Follow-Up</a>\n    <a class=\"aq\" href=\"#aq-infant-hypotonia\">Infant with Hypotonia</a>\n    \n    <div class=\"sect\">Cardiovascular <span class=\"count\">10</span></div>\n    <a href=\"#chf\">Heart Failure</a>\n    <a href=\"#ascvd\">Lipid Screening and Statin Therapy</a>\n    <a href=\"#angina\">Stable Ischemic Heart Disease</a>\n    <a href=\"#ie-ppx\">Endocarditis Prophylaxis</a>\n    <a href=\"#dvt\">Venous Thromboembolism</a>\n    <a href=\"#cyanotic-chd\">Congenital Heart Disease</a>\n    <a href=\"#htn-drugs\">Hypertension in an Adult</a>\n    <a href=\"#kawasaki\">Kawasaki Disease</a>\n    <a href=\"#arf\">Acute Rheumatic Fever</a>\n    <a href=\"#del22q11\">22q11.2 Deletion (DiGeorge)</a>\n<div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-adolescent-bp\">High Blood Pressure in a Child or Adolescent</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    \n    <div class=\"sect\">Pulmonary <span class=\"count\">6</span></div>\n    <a href=\"#copd\">Obstructive Lung Disease</a>\n    <a href=\"#pneumoconiosis\">Occupational Lung Disease</a>\n    <a href=\"#rhinitis\">Rhinitis</a>\n    <a href=\"#sinopulm-structural\">Recurrent Respiratory Infection and Structural Lung Disease</a>\n    <a href=\"#scd-dyspnea\">Sickle Cell Disease and Trait</a>\n    <a href=\"#asthma\">Asthma</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    \n    <div class=\"sect\">GI &amp; Hepatology <span class=\"count\">7</span></div>\n    <a href=\"#liver-preg\">Liver Disease in Pregnancy</a>\n    <a href=\"#masld\">Fatty Liver Disease</a>\n    <a href=\"#zenker\">Zenker Diverticulum</a>\n    <a href=\"#fap\">Hereditary Polyposis Syndromes</a>\n    <a href=\"#neonatal-jaundice\">Jaundice in a Newborn</a>\n<a href=\"#neonatal-bowel\">The Distended Abdomen in a Newborn or Infant</a>\n<div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-impaction\">Constipation and Fecal Impaction in an Adult</a>\n    <a class=\"bs\" href=\"#bs-tef\">Tracheoesophageal Fistula and Esophageal Atresia</a>\n    <a class=\"bs\" href=\"#bs-wilson\">Wilson Disease</a>\n    <a href=\"#parkinson\">Parkinson Disease and Parkinsonism</a>\n    \n    <div class=\"sect\">Renal &amp; GU <span class=\"count\">9</span></div>\n    <a href=\"#pyelo\">Pyelonephritis</a>\n    <a href=\"#bph\">Benign Prostatic Hyperplasia and Urinary Retention</a>\n    <a href=\"#nephropathy\">Diabetes Complications and Annual Care</a>\n    <a href=\"#hematuria\">Hematuria and Nephritic Syndrome</a>\n    <a href=\"#hypercalcemia\">Hypercalcemia</a>\n    <a href=\"#peds-uti-recurrent\">Urinary Tract Infection in a Child</a>\n    <a href=\"#enuresis\">Enuresis</a>\n    <a href=\"#peds-aki\">Acute Kidney Injury in a Child</a>\n    <a href=\"#nephrotic-child\">Proteinuria and Nephrotic Syndrome in a Child</a>\n    <div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-puv\">Posterior Urethral Valves</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    \n    <div class=\"sect\">Endocrine &amp; Bone <span class=\"count\">9</span></div>\n    <a href=\"#thyroid\">Thyroid Disease in an Adult</a>\n    <a href=\"#gynecomastia\">Male Breast Enlargement</a>\n    <a href=\"#prolactin\">Hyperprolactinemia</a>\n    <a href=\"#osteoporosis\">Osteoporosis Screening and Treatment</a>\n    <a href=\"#congenital-hypothyroid\">Congenital Hypothyroidism</a>\n    <a href=\"#tumor-syndromes\">Inherited Tumor Syndromes</a>\n    <a href=\"#precocious-puberty\">Precocious Puberty</a>\n    <a href=\"#homocystinuria\">Tall Stature and Marfanoid Habitus</a>\n    <a href=\"#bs-short-stature\">Abnormal Growth in a Child</a>\n    <div class=\"navsub\">Board-style</div>\n    \n    <div class=\"sect\">Hematology <span class=\"count\">6</span></div>\n    <a href=\"#anemia-thrombocytopenia\">Anemia with Thrombocytopenia</a>\n    <a href=\"#drug-hemolysis\">Hemolytic Anemia</a>\n    <a href=\"#dipstick-mismatch\">Dark Urine: Hemoglobin, Myoglobin or Blood</a>\n    <a href=\"#microcytic-anemia\">Microcytic Anemia</a>\n    <a href=\"#factor-inhibitor\">Hemophilia</a>\n    <a href=\"#transfusion\">Transfusion Reactions</a>\n    <div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-leukemia\">Acute Leukemia in a Child</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    <a class=\"aq\" href=\"#aq-bruising\">Bruising and Purpura</a>\n    \n    <div class=\"sect\">Infectious Disease <span class=\"count\">9</span></div>\n    <a href=\"#tb\">Tuberculosis</a>\n    <a href=\"#meningitis\">Bacterial Meningitis</a>\n    <a href=\"#hiv-vax\">Vaccines in Special Populations</a>\n    <a href=\"#dtap\">Childhood Vaccine Schedule and Contraindications</a>\n    <a href=\"#cervicitis\">Cervicitis and Pelvic Inflammatory Disease</a>\n    <a href=\"#ig-panel\">Antibody Deficiencies</a>\n        <a href=\"#rmsf\">Tick-Borne Illness</a>\n    <a href=\"#cgd\">Neutrophil Disorders: Number and Function</a>\n    <a href=\"#bs-neonatal-sepsis\">Fever and Sepsis in the Newborn</a>\n<div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-pta\">Deep Neck Infections</a>\n    <a class=\"bs\" href=\"#bs-torch\">Congenital Infections (TORCH)</a>\n    <a class=\"bs\" href=\"#bs-anaphylaxis\">Anaphylaxis</a>\n    <a class=\"bs\" href=\"#bs-isolation\">Isolation Precautions</a>\n    <a class=\"bs\" href=\"#bs-foodborne\">Infectious Diarrhea</a>\n    <div class=\"navsub aq\">Aquifer</div>\n\n    <div class=\"sect\">Neuro &amp; HEENT <span class=\"count\">12</span></div>\n    <a href=\"#hearing\">Hearing Loss and Chronic Ear Disease</a>\n    <a href=\"#redeye\">The Red Eye</a>\n    <a href=\"#cluster\">Primary Headache in an Adult</a>\n    <a href=\"#sellar-mass\">Brain Tumors in a Child</a>\n    <a href=\"#peds-headache-imaging\">Headache in a Child: Imaging and Treatment</a>\n    <a href=\"#febrile-seizure\">Seizure with Fever</a>\n    <a href=\"#cerebral-palsy\">Cerebral Palsy</a>\n    <a href=\"#abrs-complications\">Sinusitis and Its Complications</a>\n    <a href=\"#vpshunt\">Hydrocephalus and Shunt Complications</a>\n        <a href=\"#retinitis-pigmentosa\">Night Blindness</a>\n    <a href=\"#tics\">Tics and Tic Disorders</a>\n    <a href=\"#peds-sleep\">Sleep Problems in a Child</a>\n<div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-tethered\">Spinal Dysraphism</a>\n    <a class=\"bs\" href=\"#bs-reye\">Encephalopathy and Cerebral Edema in a Child</a>\n    <a class=\"bs\" href=\"#bs-peds-stroke\">Stroke in a Child: the Arteriopathy</a>\n    <a class=\"bs\" href=\"#bs-imprinting\">Imprinting Disorders: Angelman and Prader-Willi</a>\n    <a class=\"bs\" href=\"#bs-eyelid-lump\">Eyelid Lumps and Swelling</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    <a class=\"aq\" href=\"#aq-child-headache\">Child with Headache</a>\n    \n    <div class=\"sect\">Dermatology &amp; Wounds <span class=\"count\">5</span></div>\n    <a href=\"#psoriasis\">Scaly Rashes</a>\n    <a href=\"#cellulitis\">Skin and Soft Tissue Infection</a>\n    <a href=\"#eczemaherp\">Atopic Dermatitis</a>\n    <a href=\"#peds-alopecia\">Hair Loss in a Child</a>\n    <a href=\"#neonatal-rash\">Rashes in the Newborn and Infant</a>\n<div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-scabies\">Scabies</a>\n    \n    <div class=\"sect\">OB / GYN <span class=\"count\">8</span></div>\n    <a href=\"#preg-vax\">Vaccines in Pregnancy</a>\n    <a href=\"#cervical\">Cervical Cancer Screening</a>\n    <a href=\"#ectopic\">Ectopic Pregnancy</a>\n    <a href=\"#hpv\">Adolescent Vaccines</a>\n    <a href=\"#adolescent-aub\">Abnormal Uterine Bleeding</a>\n    <a href=\"#contraception\">Contraception</a>\n    <a href=\"#teratogens\">Teratogenic Exposures</a>\n    <a href=\"#primary-amenorrhea\">Primary Amenorrhea</a>\n    <div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-genital-ulcer\">Genital Ulcers</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    \n    <div class=\"sect\">Preventive &amp; Ethics <span class=\"count\">5</span></div>\n    <a href=\"#smoking\">Preventive Care: Ranking Interventions</a>\n    <a href=\"#preop\">Preoperative Evaluation</a>\n    <a href=\"#elder\">Elder Abuse</a>\n    <a href=\"#vegan\">Vitamins and Nutritional Deficiencies</a>\n    <div class=\"navsub\">Board-style</div>\n    <a class=\"bs\" href=\"#bs-adolescent-confid\">Adolescent Confidentiality</a>\n    <a href=\"#capacity\">Decision-Making Capacity and Informed Consent</a>\n    <div class=\"navsub aq\">Aquifer</div>\n    \n    <div class=\"sect\">Psychiatry &amp; Behavioral Health <span class=\"count\">26</span></div>\n    <div class=\"navsub\">Psychosis and mood</div>\n    <a href=\"#psychosis-duration\">Psychosis</a>\n    <a href=\"#sz-psychosocial\">Schizophrenia: Long-Term Care</a>\n    <a href=\"#bipolar-mania\">Bipolar Disorder</a>\n    <a href=\"#mdd\">Major Depressive Disorder</a>\n    <a href=\"#pms-pmdd\">Premenstrual Syndrome and Premenstrual Dysphoric Disorder</a>\n    <a href=\"#cluster-b\">Cluster B Personality Disorders</a>\n    <a href=\"#cluster-c\">Cluster C Personality Disorders</a>\n    <div class=\"navsub\">Anxiety, somatic and sexual</div>\n    <a href=\"#panic\">Panic Disorder and Other Anxiety</a>\n    <a href=\"#ocd\">Obsessive-Compulsive and Related Disorders</a>\n    <a href=\"#somatic\">Somatic Symptom and Related Disorders</a>\n    <a href=\"#trauma-stress\">Trauma, Stress and Dissociative Disorders</a>\n    <a href=\"#eating-disorders\">Eating Disorders</a>\n    <a href=\"#gppd\">Genito-Pelvic Pain/Penetration Disorder</a>\n    <a href=\"#sexual-dysfunction\">Sexual Dysfunction</a>\n    <a href=\"#defense-mechanisms\">Defense Mechanisms</a>\n    <div class=\"navsub\">Cognition, substances and medical causes</div>\n    <a href=\"#delirium\">Delirium</a>\n    <a href=\"#substance\">Substance Intoxication and Withdrawal</a>\n    <a href=\"#stages-change\">Stages of Change and Motivational Interviewing</a>\n    <a href=\"#psych-medical\">Medication- and Illness-Induced Psychiatric Disorders</a>\n    <div class=\"navsub\">Child and adolescent</div>\n    <a href=\"#disruptive-behavior\">Disruptive Behavior in a Child</a>\n    <div class=\"navsub\">Medications</div>\n    <a href=\"#ssri-effects\">SSRI Adverse Effects</a>\n    <a href=\"#antipsych-effects\">Antipsychotic Adverse Effects</a>\n    <a href=\"#lithium-effects\">Lithium Therapy</a>\n    <a href=\"#tca-tox\">Anticholinergic and Tricyclic Toxicity</a>\n    <div class=\"navsub\">Safety and violence</div>\n    <a href=\"#suicide-risk\">Suicide Risk Assessment</a>\n    <a href=\"#ipv\">Intimate Partner Violence</a>\n    <div class=\"sect pc-sect\">Psych Pharmacology <span class=\"count\">14</span></div>\n    <div class=\"navsub\">01 Antidepressants</div>\n    <a href=\"#pc-ssri\">SSRIs</a>\n    <a href=\"#pc-snri\">SNRIs</a>\n    <a href=\"#pc-antidep\">Other antidepressants</a>\n    <a href=\"#pc-tca\">TCAs</a>\n    <a href=\"#pc-maoi\">MAOIs</a>\n    <div class=\"navsub\">02 Antipsychotics</div>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Atypical antipsychotics</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Typical antipsychotics</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Anticholinergic</a>\n    <a href=\"#psych-pharm\" class=\"pc-plan\" title=\"Planned card\">Tardive dyskinesia agents</a>\n    <div class=\"navsub\">03 Mood and cognition</div>\n    <a href=\"#mood-anticonv\">Lithium and anticonvulsants</a>\n    <a href=\"#pc-cog\">Cognitive agents</a>\n    <div class=\"navsub\">04 Anxiety and benzodiazepines</div>\n    <a href=\"#pc-benzo\">Benzodiazepines</a>\n    <a href=\"#pc-anxiety\">Other anxiety agents</a>\n    <div class=\"navsub\">05 ADHD and sleep</div>\n    <a href=\"#adhd-meds\">ADHD</a>\n    <a href=\"#pc-sleep\">Sleep agents</a>\n    <a href=\"#pc-orexin\">Orexin antagonists</a>\n    <div class=\"navsub\">06 Substance use and other</div>\n    <a href=\"#sud-meds\">Substance use and cessation</a>\n    <a href=\"#pc-other\">Other agents</a>\n  </div>",
+   "note": "sidebar: Presentations once, under system sub-labels; counts"
+  },
+  {
+   "op": "replace_global",
+   "find": "var SHORT={msk:'MSK',",
+   "with": "var SHORT={presentations:'CC',msk:'MSK',"
+  },
+  {
+   "op": "replace_global",
+   "find": "</head>",
+   "with": "<style id=\"ax-pres\">\n/* s161c Presentations section (Jonathan 2026-11-03): a sub-header per system above its complaint briefs */\n.psub{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:34px 0 14px;padding:0 4px 8px;border-bottom:1px solid var(--hair)}\n.psub .t{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--ink)}\n.psub .n{font:700 11.5px/1 var(--sans);color:var(--muted);letter-spacing:.4px}\n@media print{.psub{display:none}}\n</style>\n\n</head>"
+  },
+  {
+   "op": "replace_global",
+   "find": "</body>",
+   "with": "<script>\n/* s161c Presentations sub-headers: shown only while a brief under them is shown; the count is the briefs shown */\n(function(){\n  function fit(){\n    document.querySelectorAll('.psub').forEach(function(h){\n      var n = 0, el = h.nextElementSibling;\n      while(el && el.classList.contains('brief')){ if(el.style.display !== 'none') n++; el = el.nextElementSibling; }\n      h.style.display = n ? '' : 'none'; var c = h.querySelector('.n'); if(c) c.textContent = n;\n    });\n  }\n  document.addEventListener('ax-shelf', fit);\n  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fit); else fit();\n  window.addEventListener('load', fit);\n})();\n</script>\n</body>"
+  }
+ ]
+}
