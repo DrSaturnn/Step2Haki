@@ -36,3 +36,6 @@ Reading rules for the rest of the chat:
 
 A launch (a new batch id in Jonathan's prompt) is not a continuation: it follows the runbook's full read order, read
 from the repo copies by section after the clone.
+
+Note (2026-11-04): main was merged into wip/s162 in both repos (public dd4f564, private 6b67874; s155 precedent), and
+main's RESUME and handoff now name s162 (bde0f1c). Clone on wip/s162 and go straight to step 2.
