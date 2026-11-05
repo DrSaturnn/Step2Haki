@@ -34,6 +34,11 @@ def measure(html):
     motion = re.findall(r'(?:transition|animation)(?:-timing-function)?\s*:([^;}]*)', css_nc)
     non_spring = [m.strip()[:80] for m in motion if m.strip() not in ('none', 'unset', 'initial', 'inherit')
                   and 'var(--spr' not in m and 'var(--bnc' not in m and 'var(--snp' not in m]
+    # comments in the shipped page (D-20261105-6): the build should strip them all
+    js = '\n'.join(re.findall(r'<script(?![^>]*application/(?:ld\+)?json)[^>]*>(.*?)</script>', html, re.S))
+    comments = (re.findall(r'/\*.*?\*/', css, re.S) + re.findall(r'/\*.*?\*/', js, re.S)
+                + re.findall(r'(?<![:\'"\\/])//[^\n]*', js) + re.findall(r'<!--.*?-->', html, re.S))
+    narration = [c for c in comments if re.search(r'Jonathan|\bs1\d\d[a-z]?\b|DIGEST|STANDING|handoff|Decided', c)]
     return {
         'style_blocks': len(styles),
         'script_blocks': len(re.findall(r'<script\b', html)),
@@ -42,7 +47,9 @@ def measure(html):
         'theme_rules_setting_layout': len(theme_layout),
         'selectors_defined_4plus': len(dup),
         'motion_not_spring': len(non_spring),
-        '_examples': {'theme_rules_setting_layout': theme_layout[:15], 'selectors_defined_4plus': [s for _, s in dup[:15]], 'motion_not_spring': non_spring[:15]},
+        'comments_shipped': len(comments),
+        'comments_with_decision_narration': len(narration),
+        '_examples': {'theme_rules_setting_layout': theme_layout[:15], 'selectors_defined_4plus': [s for _, s in dup[:15]], 'motion_not_spring': non_spring[:15], 'comments_with_decision_narration': [c[:100] for c in narration[:10]]},
     }
 
 def main(a):
@@ -57,7 +64,8 @@ def main(a):
         if worse:
             print('UI-LINT FAIL: counts rose above the baseline (was, now):', worse)
             print('Fix: replace the old rule instead of adding an override; put colors in theme tokens, not layout in themes;')
-            print('     time every transition and animation with a spring token (var(--spr), var(--bnc), var(--snp)).')
+            print('     time every transition and animation with a spring token (var(--spr), var(--bnc), var(--snp));')
+            print('     no decision history in code comments (it belongs in git, the digest and UI_MAP.md).')
             return 1
         print('UI-LINT PASS', nums); return 0
     print(json.dumps(m, indent=2)); return 0

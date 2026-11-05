@@ -21,6 +21,8 @@ hardened to ensure they are always followed ... due to agents or new chats skipp
    elements (the sidebar, Recall, Fit, hover cards and the bank talk through a small shared event list).
 4. **A module map**, `UI_MAP.md`: every layout, component and script module, what it owns, which decision created it, and
    what it replaced. A retired item moves to a Retired table with the selectors and ids it used.
+6. **Code holds code** (D-20261105-6): comments in source only explain what non-obvious code does; no decision quotes,
+   names, dates, batch ids or workflow terms; the build strips every comment from the shipped page.
 5. **Desktop-only and phone-only code** sit under one named breakpoint each, so a desktop feature cannot change phones.
 
 ## 2. Hardening the docs

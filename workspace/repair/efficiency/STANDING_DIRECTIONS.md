@@ -8,6 +8,7 @@
 5. Nothing ships without Jonathan's "ship" to the screenshots; gate, ui_lint and doc_lint must pass. [MEM] [D-20261105-1]
 6. Accuracy is non-negotiable; board sources first; no drift from source content. [DIG 2026-10-10] [MEM]
 7. Phones are untouched by desktop-only work, and the reverse. [D-20261105-1]
+8. Code holds code: no decision quotes, names, dates or batch ids in comments; the shipped page has no comments at all. [D-20261105-6]
 
 Compiled 2026-10-10 because the plan v4 restart prompt pointed new chats only to the handoff, the plan and the
 decisions digest. Most of Jonathan's directions on brief format live elsewhere, so the second chat re-proposed a
@@ -183,6 +184,7 @@ Source keys:
 - **Breakpoints:** desktop-only and phone-only code each sit under one named breakpoint. [D-20261105-1]
 - **Motion:** SwiftUI style: spring timing from var(--spr) (smooth), var(--bnc) (bouncy) and var(--snp) (snappy); interruptible transitions for anything a reader toggles; reduced motion falls back to a short opacity change. [D-20261105-3]
 - **Checks:** ui_lint.py (ratchet on style blocks, script blocks, !important, specificity workarounds, theme rules that set layout, selectors defined 4+ times, non-spring motion; hard fails for layout in themes and retired selectors once layers exist); doc_lint.py (ids, supersession, stale citations). [D-20261105-1] [D-20261105-2]
+- **Comments:** source comments only explain what non-obvious code does, briefly; decision history, quotes, names, dates and batch ids go in git commits, the digest and UI_MAP.md, never in code; the build strips all comments from the shipped page. [D-20261105-6]
 - **Docs:** every new digest line carries an id and a topic tag; a change names what it supersedes and the old line is marked in the same commit; this file cites ids and never a superseded one. [D-20261105-2]
 
 ## Repo and files
