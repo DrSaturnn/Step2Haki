@@ -52,6 +52,8 @@ def positions(page_html, bid):
                 t = re.sub(r'<[^>]+>', '', m.group(1)).strip()
                 n = re.match(r'(\d)', t)
                 out[n.group(1) if n else 'practice' if t.startswith('Practice') else t] = k
+                if re.sub(r'^\d', '', t).strip().startswith('Workup'):
+                    out['workup'] = k   # s163: the Workup sheet is found by its label, not its number
             return out
     raise SystemExit('sheets: no brief %s in the page' % bid)
 
@@ -127,7 +129,7 @@ def main(argv):
     for b in ids:
         pos = positions(page, b) if page else None
         bsteps = map_steps(steps, pos) if (pos and steps) else steps
-        wk = pos.get('4') if pos else 4
+        wk = pos.get('workup', pos.get('5')) if pos else 5   # s163: Workup is step 5
         def shots(tag):
             return sorted(glob.glob(os.path.join(src, '%s_%s_step*.png' % (b, tag))), key=stepkey)
         if '--approval' in argv:

@@ -134,7 +134,7 @@ What it teaches:
   - screenshots and Jonathan's approval before any ship;
   - no vendor or card text in the repo or on the page;
   - mnemonics identified, never invented;
-  - one owner per decision;
+  - one place decides each action; other mentions state it in plain clinical words (s163 C6);
   - no emojis or em dashes;
   - the handoff updated in the project and in Documents/Step2Haki after each ship;
   - the token never printed;

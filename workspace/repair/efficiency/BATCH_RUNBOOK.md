@@ -107,7 +107,7 @@ Then run section 2 to the end without asking.
 - **S1. Board evidence first.** For each brief, before any build or fix:
   - Look the brief up in the board-evidence index first: `python3 tools/spine/board_index.py show <brief>` (question items, page NBME items, coverage rows, AnKing cards, Step 2 first). Add terms with `board_index.py terms <brief> ...` and rebuild (`build`, seconds) when the topic needs them; search the sources by hand only for what the index does not reach (s135 item 5).
   - Search the board sources for the topic:
-    - NBME items: the bank's "How NBME framed it" blocks and the nbme-intake log;
+    - NBME items: the bank's NBME blocks ("NBME question N", "NBME framing"; "How NBME framed it" before s163) and the nbme-intake log;
     - the local UWorld question files (repair/sources/s*_questions.md);
     - AnKing (tools cards_search.py).
   - Card checklist (Jonathan 2026-10-17, after s146 dropped a carded fact): `python3 tools/spine/card_dispositions.py make <brief> <folder>` writes cards.md, every AnKing card the brief's board terms reach (cards linked by note id plus up to 90 Step 2 candidates, ranked by how many board terms they name). Before the build is final, give every card a disposition in cards_disposition.json: covered:S### (the claim ids that teach it), owner:<brief>, scope:<reason>, not-topic, or conflict:<fact>. A carded fact the bank tests, or one the old brief carried, is covered unless another live brief owns it. Write the dispositions after the last build change: covered entries name claim ids, and a row added or removed above them shifts the ids, so re-derive them after any later edit. `card_dispositions.py check <folder>` must pass; verify runs it whenever cards.md exists, and the acc reviewer audits the dispositions.
@@ -194,7 +194,7 @@ Then run section 2 to the end without asking.
 | A board answer differs from a guideline | Teach the board answer; the guideline goes in "In practice:". Every age, cutoff, duration, dose and interval is checked against board sources. |
 | A claim with no source opened that day | Before any cut or ⚠︎ (Jonathan 2026-10-17): search the card index for the claim's two or three key terms (`cards_search.py`, plus `board_index.py show <brief>`), and for each card found read its high-yield (pink) lines, the `hy` field in repair/sources/anki/anki_index.jsonl. A card that states the claim is cited as kind "board" and the line stays. Only with no card: board-tested, label it unverified (⚠︎) and list it; not board-tested, cut it. Each cuts.json entry records the terms searched. |
 | A number in a new or changed line with no quote | Find the quote or cut the number. |
-| Two places decide the same action | One owner; the other points to it. |
+| Two places decide the same action | One place decides; the other states the action in plain clinical words, the same wording, with no step numbers or ownership words (s163 C6). |
 | A study-mode leak from a repeated table or line | Mask the repeat; never delete it. |
 | A parked change or a reviewer suggestion that reverses a digest decision | Reject it. |
 | Reversing the lead's own earlier verdict | Allowed with a recorded reason; listed in the report. |
@@ -216,7 +216,7 @@ Then run section 2 to the end without asking.
 3. Every number in a changed line has a quote.
    - R3 example: "median 3".
 4. Analogies are labeled at the step.
-5. One owner per decision.
+5. One place decides each action; any other mention states it in plain clinical words (no step numbers, no ownership words).
 6. Masks:
    - every answer is masked where it repeats;
    - no label or first cell gives away a masked answer (lint mask-leak answered); contrast only in a layout batch.

@@ -45,7 +45,7 @@ sys.path.insert(0, os.path.dirname(HERE))
 import pagelib as P  # noqa: E402
 import outline_render as OR  # noqa: E402
 
-LABELS = ['Script', 'Urgent', 'Differential', 'Workup', 'Criteria', 'Severity', 'Treatment', 'Follow-up']
+LABELS = ['Script', 'Criteria', 'Urgent', 'Differential', 'Workup', 'Severity', 'Treatment', 'Follow-up']   # s163 order (C1)
 CAPS = {'disease': 1300, 'drug': 1000, 'presentation': 700, 'screen': 1000, 'card': 600}   # card: s159, CARD_SPEC.md (MAOI card about 420)
 ACTION = re.compile(r'^(?:(?:give|treat|start|order|obtain|get|admit|prescribe|refer|stop|switch|begin|perform|do|send|'
                     r'draw|add|use|consult|operate)\b|(?:film|image|scan|biopsy|repeat|check|x-ray)\s+(?:the|a|an|both|it|them|for)\b)', re.I)
@@ -218,8 +218,8 @@ class Check:
         if [s[1] for s in steps] != LABELS or [str(s[0]) for s in steps] != [str(i) for i in range(1, 9)]:
             self.err('S1', 'steps', 'labels or numbers are not 1..8 %s' % LABELS, 'use the fixed stepper labels in order')
         present = {int(s[0]) for s in steps if s[2]}
-        need = {'disease': set(range(1, 9)) - {2, 6}, 'drug': {1, 3, 7, 8}}.get(o['entry'])
-        never = {'drug': {5, 6}}.get(o['entry'], set())
+        need = {'disease': set(range(1, 9)) - {3, 6}, 'drug': {1, 4, 7, 8}}.get(o['entry'])   # s163: Urgent 3, Differential 4
+        never = {'drug': {2, 6}}.get(o['entry'], set())   # s163: Criteria 2
         if need and not need <= present:
             self.err('S1', 'steps', '%s entry lacks step(s) %s' % (o['entry'], sorted(need - present)), 'add the step or justify it in the spec')
         if present & never:

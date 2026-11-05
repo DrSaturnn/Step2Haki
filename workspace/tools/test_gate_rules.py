@@ -152,6 +152,20 @@ print(('ok  ' if hit else 'BAD ') + 'an item with two of its three reasons: expe
 o = gate(PAGE.replace(_tag, _two + ' data-d2-why="c"', 1))[1]
 hit = '[item-why]' not in o and '(%d with reasons)' % (_base + 1) in o
 print(('ok  ' if hit else 'BAD ') + 'an item with all three reasons: no item-why, counted'); bad += not hit
-total = 1 + 9 + 2 + 3 + 3 + 4 + 2
+# s163: structural wording and rail order (C6, C1)
+_sb = next(x for x in bl if '<nav class="sp-step"' in PAGE[x.start:x.end])
+o = gate(PAGE[:_sb.inner_end] + '<p>Give it now (step 3); this brief owns it.</p>' + PAGE[_sb.inner_end:])[1]
+hit = '[structural] %s' % _sb.id in o and 'ownership' in o
+print(('ok  ' if hit else 'BAD ') + 'a step number and "owns" in brief text: expects gate FAIL structural'); bad += not hit
+o = gate(PAGE[:_sb.inner_end] + '<p>What Step 2 CK rewards.</p>' + PAGE[_sb.inner_end:])[1]
+hit = '[structural]' not in o
+print(('ok  ' if hit else 'BAD ') + 'the exam name Step 2 CK: no structural failure'); bad += not hit
+_seg = PAGE[_sb.start:_sb.end]
+_rail = re.search(r'<nav class="sp-step"[^>]*>.*?</nav>', _seg, re.S).group(0)
+_old = re.sub(r'<span>Criteria</span>', '<span>X</span>', _rail).replace('<span>Urgent</span>', '<span>Criteria</span>').replace('<span>X</span>', '<span>Urgent</span>')
+o = gate(PAGE[:_sb.start] + _seg.replace(_rail, _old, 1) + PAGE[_sb.end:])[1]
+hit = '[rail-order] %s' % _sb.id in o
+print(('ok  ' if hit else 'BAD ') + 'a rail in the old order: expects gate FAIL rail-order'); bad += not hit
+total = 1 + 9 + 2 + 3 + 3 + 4 + 2 + 3
 print('%d/%d passed' % (total - bad, total))
 sys.exit(1 if bad else 0)

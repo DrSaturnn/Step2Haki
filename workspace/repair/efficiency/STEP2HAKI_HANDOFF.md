@@ -14,11 +14,12 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **s163 OPEN** on wip/s163 (both repos) (Claude lead; launched 2026-11-04 22:33; criteria as step 2, structural
   wording, NBME label; site layer plus patch; lead 100M, no agents, no reviews (D7), no screenshots presented (D9)).
-  Batch file repair/s163/S163.md: chunks 1 to 3 done in chat 1, 4 and 5 in chat 2, 6 in chat 3 (50_masks.json: 19 B4
-  Recall masks in 9 briefs, lcw window rows kept as the clue; 7 first-use abbreviations spelled out; build 5 files,
-  995 ops, gate and render PASS). **Next: chunk 7** (Part D docs and tools; exact file:line edits in the chunk table
-  row), then 8 and 9. Spend: chat 1 14.45M, chat 2 16.61M, chat 3 10.05M (measured, ledger_lead.csv); 41.11M of 100M
-  in all.
+  Batch file repair/s163/S163.md: chunks 1 to 3 done in chat 1, 4 and 5 in chat 2, 6 and 7 in chat 3 (50_masks.json:
+  19 B4 Recall masks in 9 briefs, 7 first-use abbreviations; Part D docs and tools, gate rules rail-order and
+  structural, lint structural and criteria-recall, tests pass; build 5 files, 995 ops, gate and render PASS).
+  **Next: chunk 8** (E6 drawer-preview criteria tile as 60_site.json; E7 private folder migration script; changelog
+  163; method in the chunk table row), then 9 (checks, report). Spend: chat 1 14.45M, chat 2 16.61M, chat 3 21.84M
+  (measured, ledger_lead.csv); 52.90M of 100M in all.
 
 - **Previous: s162 SHIPPED 2026-11-04** (Claude lead; Psych Pharmacology B4 of 4: pc-atypical, pc-typical, pc-antichol,
   pc-td in 02 Antipsychotics; Q4 keep; section complete, 18 of 18 class cards): commit c50fd62 (main d920cfe after

@@ -11,7 +11,7 @@ Spec (paths relative to workspace/ or absolute):
    "packets": "<dir>",          review_packet.py output per brief: <packets>/<brief>/<part>/ (with deps.txt)
    "sheets": "<dir>",           display images <brief>_*.png (sheets.py)
    "lanes": [{"part": "acc", "group": "A", "briefs": ["x", "y"], "budget": 18}, ...],   budget optional
-   "types": {"x": "presentation hub, FM lens (steps 5 to 8 greyed)", ...},
+   "types": {"x": "presentation hub, FM lens (steps 2 and 6 to 8 greyed)", ...},
    "steps": {"x": "1, 3 and 4"},                       follow-up display: the steps shown
    "prior": {"acc": {"x": "<last receipt path>"}, ...},  follow-up: each part's last receipt per brief
    "adjudication": {"x": "<lead adjudication path>"},   follow-up: the lead's S5 notes per brief
@@ -59,7 +59,7 @@ def budget(part, rnd, n):
 
 COMMON = """Do not use Glob or list folders: every path you need is named here. Every file in a parallel read counts as one call. Write-first: finish one brief and write its receipt before you open the next brief's files. Budget %(budget)d is a hard cap (the hook stops you there); if you near it, write the receipt with what you have rather than read more. Grep large files rather than reading them whole.
 
-Context: %(context)s (steps 1 Illness script or Presentation, 2 Urgent risks, 3 Differential, 4 Workup, 5 Diagnostic criteria, 6 Severity, 7 Treatment, 8 Follow-up; a hub stops after Workup and hands off by drawer; then Practice, the bank). In brief_text.txt hovers appear as [hover: label] with their text, masked study-mode answers as [masked in study mode: ...], and bank items as [item id, type] with lead-in and distractors; older items are compact one-line chains (stem -> answer -> next step) with no lead-in, as on the page: not a finding by itself.
+Context: %(context)s (steps 1 Illness script or Presentation, 2 Diagnostic criteria, 3 Urgent risks, 4 Differential, 5 Workup, 6 Severity, 7 Treatment, 8 Follow-up, in that order on the page; a hub stops after Workup and hands off by drawer; then Practice, the bank). In brief_text.txt hovers appear as [hover: label] with their text, masked study-mode answers as [masked in study mode: ...], and bank items as [item id, type] with lead-in and distractors; older items are compact one-line chains (stem -> answer -> next step) with no lead-in, as on the page: not a finding by itself.
 """
 
 FOLLOW = """
@@ -96,7 +96,7 @@ Judge:
 Call plan per brief: 1 Read of brief_text.txt, 1 Read of drawer_targets.txt, at most 2 Greps, 1 Write: 5 per brief, %(plan)s.
 
 Judge:
-- A. Coherence: each step answers its heading and the subtitle question; the bottom line predicts what the steps teach; one owner per decision (the same decision made twice with different wording is MED); the steps hand off (a workup result branches to where the differential or treatment picks it up).
+- A. Coherence: each step answers its heading and the subtitle question; the bottom line predicts what the steps teach; one place decides each action (the same decision made twice with different wording is MED; a step number or ownership word such as "owns" or "takes over" in page text is LOW, s163 C6); the steps hand off (a workup result branches to where the differential or treatment picks it up).
 - C. Lines that stand alone: each line interpretable without its source; no fragment, undefined label or abbreviation, "this" or "it" without a referent, or author shorthand; a masked study-mode cell still leaves a question the learner can answer.
 - D. Syntax and voice: grammar, parallel lists, punctuation, consistent tense and names for the same thing, plain labels (no catchy headers), no em dashes, arrows only for "leads to".
 - E. Cross-references: every drawer and pointer names a live brief once, by its current title, with a description that matches what that brief teaches.
@@ -134,7 +134,7 @@ Judge:
 Call plan per brief: 1 Read of review.md, at most 2 Greps (brief_text.txt for context, or ALIASES.json, ABBREV.json, sibling_titles.txt or drawer_targets.txt for a name a changed line uses), 1 Write: 4 per brief, %(plan)s. Never re-read a file; if a Grep finds nothing, decide from what you have.
 
 Judge each changed line:
-- A. Coherence: it answers its step; one owner per decision (the same decision made twice with different wording is MED); the steps still hand off.
+- A. Coherence: it answers its step; one place decides each action (the same decision made twice with different wording is MED; a step number or ownership word in page text is LOW, s163 C6); the steps still hand off.
 - C. Stands alone: interpretable without its source; no fragment, undefined label or abbreviation, "this" or "it" without a referent, or author shorthand; a masked cell still leaves an answerable question.
 - D. Syntax and voice: grammar, parallel lists, punctuation, consistent names, plain labels, no em dashes, arrows only for "leads to".
 - E. Cross-references: a changed drawer or pointer names a live brief by its current title.

@@ -176,6 +176,19 @@ expect('pause-content: a negation that names the answer passes', L.pause_format(
 expect('pause-content: a hover after a bare negation still fails', any('only negates' in x for x in L.pause_format(PPOK.replace('<span class="mask">Answer</span>', '<span class="mask">Not schizophrenia</span> <span class="mask"><button type="button" class="sp-pop">In practice</button><span class="sp-pop-b" hidden>Note; more.</span></span>'))))
 expect('pause-content: a spine brief with no pause point passes', L.pause_format('<div class="brief sp" id="x" data-spine="2"><p>Body.</p></div>') == [])
 expect('pause-format: a non-spine brief is skipped', L.pause_format(PPOK.replace('data-spine="2"', '')) == [])
+# ---- structural and criteria-recall (s163 C6, B4)
+expect('structural: "(step 2)" flagged', any('step number' in x for x in L.structural('<p>Give it now (step 3).</p>')))
+expect('structural: the exam name Step 2 passes', L.structural('<p>What Step 2 CK rewards; Step 2 tests it.</p>') == [])
+expect('structural: the rail is not text', L.structural('<nav class="sp-step"><a><b>2</b><span>step 2</span></a></nav>') == [])
+expect('structural: tags do not join nodes', L.structural('<b>Next step</b><span>3 or 4 criteria</span>') == [])
+expect('structural: "owns" flagged hard', any('ownership' in x for x in L.structural('<p>Cholangitis owns it.</p>', hard=True)))
+expect('structural: a data-why reason is scanned', any('step number' in x for x in L.structural('<li data-d1-why="see step 4">x</li>')))
+expect('structural: placement verb advisory only', L.structural('<p>It sits in the epiphysis.</p>', hard=True) == [] and
+       any('placement' in x for x in L.structural('<p>It sits in the epiphysis.</p>')))
+CR = ('<h5 class="tsec sp-h" id="k-s2">2</h5><table><tr><td>Fever 5 days or more</td></tr></table>'
+      '<h5 class="tsec sp-h" id="k-s3">3</h5><p><span class="mask">Fever 5 days or more</span></p>')
+expect('criteria-recall: a repeated cutoff is flagged', any('5 days' in x for x in L.lint_critrecall(CR)))
+expect('criteria-recall: a masked criteria cutoff passes', L.lint_critrecall(CR.replace('Fever 5 days or more</td>', 'Fever <span class="mask">5 days</span> or more</td>')) == [])
 print('test_lint: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)
 

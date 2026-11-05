@@ -71,7 +71,7 @@ the card (default off, 2026-10-30).
 - Tick labels repeat on every row, the same ticks down one chart (one axis per chart); the first tick is 0.
 - Times come from a board source; else a primary source (label, StatPearls) named in the batch report. A board answer
   that differs from a label is taught, with the label in an "In practice:" hover.
-- One owner per timed window: a window is drawn once on the card; a table that needs it points to the timeline
+- One owner per timed window: a window is drawn once on the card; a table that needs it states the window in plain words, with no pointer to a step or block (s163 C6)
   ("washout as in the timeline") rather than repeating the number.
 - Recall mode: the onset chart masks the event names, the washout chart masks the window text; bars stay unblurred
   (2026-10-30 default), as in the live substance chart.

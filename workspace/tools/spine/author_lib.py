@@ -66,7 +66,7 @@ def table(caption, heads, rows, mask_cols=None, cls=None):
 
 
 def steps(prefix, used):
-    lab = ['Script', 'Urgent', 'Differential', 'Workup', 'Criteria', 'Severity', 'Treatment', 'Follow-up']
+    lab = ['Script', 'Criteria', 'Urgent', 'Differential', 'Workup', 'Severity', 'Treatment', 'Follow-up']   # s163 order (C1)
     return [[n, lab[n - 1], ('%s-s%d' % (prefix, n)) if n in used else None] for n in range(1, 9)]
 
 

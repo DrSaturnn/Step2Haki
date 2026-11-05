@@ -514,6 +514,71 @@ def lint_pausefmt(brief_html):
     return pause_format(brief_html)
 
 
+# ---- s163 C6: structural wording. Nothing on the page names the page's structure (no step numbers, no ownership
+# words); figurative placement ("belongs to", "lives in", "sits in") is advisory, since literal location uses exist.
+# Scanned per text node (tags never join two nodes into one phrase) plus every data-*-why reason; the step rail and
+# the exam name "Step 2" (capital S, "Step 2 CK") are not structural. gate.py imports structural(hard=True).
+STEPREF = re.compile(r'\bsteps?\s+[1-8](?![\d-])', re.I)
+OWN_HARD = re.compile(r'\b(?:owns|owned by)\b', re.I)
+OWN_SOFT = re.compile(r'\b(?:is the owner|takes over|handles)\b', re.I)
+PLACEMENT = re.compile(r'\b(?:belongs? to|lives? in|sits? in)\b', re.I)
+
+
+def _nodes(brief_html):
+    h = re.sub(r'<(script|style)\b.*?</\1>', ' ', brief_html, flags=re.S)
+    h = re.sub(r'<nav class="sp-step"[^>]*>.*?</nav>', ' ', h, flags=re.S)
+    out = [H.unescape(v) for v in re.findall(r'data-[\w-]*why="([^"]*)"', h)]
+    out += [H.unescape(t) for t in re.split(r'<[^>]+>', h) if t.strip()]
+    return [re.sub(r'\s+', ' ', t) for t in out]
+
+
+def structural(brief_html, hard=False):
+    out = []
+    for t in _nodes(brief_html):
+        for m in STEPREF.finditer(t):
+            if t[m.start()] == 'S' and t[m.start():m.end()].lower() == 'step 2':
+                continue          # the exam name
+            out.append('structural: step number in text "%s"' % t[max(0, m.start() - 40):m.end() + 20].strip())
+        for m in OWN_HARD.finditer(t):
+            out.append('structural: ownership word in text "%s"' % t[max(0, m.start() - 40):m.end() + 20].strip())
+        if hard:
+            continue
+        for R, what in ((OWN_SOFT, 'ownership word (check: literal use is fine)'),
+                        (PLACEMENT, 'placement verb (check: literal location is fine)')):
+            for m in R.finditer(t):
+                out.append('structural: %s "%s"' % (what, t[max(0, m.start() - 40):m.end() + 20].strip()))
+    return out
+
+
+def lint_structural(brief_html):
+    return structural(brief_html)
+
+
+def lint_critrecall(brief_html):
+    """s163 B4: a number shown unmasked in the Criteria step (-s2) that a masked answer elsewhere in the brief (bank
+    excluded) also states, as the same number with the same unit after it; advisory, judged by hand. Static: masks the
+    page adds at run time (the criteria grid, bottom lines) are not seen, so the rendered survey is the final word."""
+    m = re.search(r'<h5 class="tsec sp-h" id="[^"]*-s2">', brief_html)
+    if not m:
+        return []
+    n = re.search(r'<h5 class="tsec sp-h"', brief_html[m.end():])
+    a, z = m.end(), m.end() + (n.start() if n else len(brief_html) - m.end())
+    crit = brief_html[a:z]
+    unit = (r'(\d+(?:\.\d+)?(?:\s*(?:to|-)\s*\d+(?:\.\d+)?)?\s*(?:%|mm Hg|mg/dL|g/dL|mg/L|mL|mm|cm|kg|g|'
+            r'(?:minute|hour|day|week|month|year|degree)s?)(?![\w/]))')
+    shown = set(re.findall(unit, text(re.sub(r'<span class="mask[^"]*">.*?</span>', ' ', crit, flags=re.S))))
+    bank = brief_html.find('<ol class="bank')
+    out, seen = [], set()
+    for mm in re.finditer(r'<span class="mask[^"]*">(.*?)</span>', brief_html, re.S):
+        if a <= mm.start() < z or (bank >= 0 and mm.start() > bank):
+            continue
+        for v in set(re.findall(unit, text(mm.group(1)))) & shown:
+            if v not in seen:
+                seen.add(v)
+                out.append('criteria-recall: "%s" shows unmasked in Criteria and is a masked answer elsewhere; mask the cutoff in Criteria if it is the same measure' % v)
+    return out
+
+
 def lint(folder, facts_dir=None):
     out = []
     bh = os.path.join(folder, 'brief.html')
@@ -521,7 +586,8 @@ def lint(folder, facts_dir=None):
         brief_html = open(bh, encoding='utf-8').read()
         out += lint_next_step(brief_html) + lint_alias(brief_html) + lint_threshold(brief_html) + lint_prose(brief_html) \
             + lint_bold(brief_html) + lint_reasons(brief_html) + lint_spacing(brief_html) + lint_pairs(brief_html) \
-            + lint_maskleak(brief_html) + lint_pausefmt(brief_html) + lint_card(brief_html)
+            + lint_maskleak(brief_html) + lint_pausefmt(brief_html) + lint_card(brief_html) \
+            + lint_structural(brief_html) + lint_critrecall(brief_html)
     try:
         cm = json.load(open(os.path.join(folder, 'claim_map.json'), encoding='utf-8'))
     except (OSError, ValueError):
@@ -541,7 +607,7 @@ def page_sweep(argv):
     check = argv[argv.index('--check') + 1] if '--check' in argv else 'prose'
     fn = {'prose': lint_prose, 'next-step': lint_next_step, 'threshold': lint_threshold, 'alias': lint_alias,
           'bold': lint_bold, 'reasons': lint_reasons, 'mask-leak': lint_maskleak,
-          'pause-format': lint_pausefmt}[check]
+          'pause-format': lint_pausefmt, 'structural': lint_structural, 'criteria-recall': lint_critrecall}[check]
     html = read_page(page)
     rows = []
     for b in briefs(html):

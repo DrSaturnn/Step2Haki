@@ -19,7 +19,7 @@ When Jonathan or a reviewer finds a defect the checker passed, in the same batch
 | I6 | A carried item whose stem changed gets a version bump; option ids kept unless the label's meaning changed | study-page metadata contract | brief-migration step 4 | stem changed, no version bump |
 | I7 | Temperature carries units (WARN) | NBME style | board-brief 4.1 | (warn only) |
 | I8 | Every dx, next, test, avoid, screen or stage stem gives objective data: a vital sign, a lab or imaging value with units, "afebrile" or "well appearing"; findings, not labels ("shock", "multiorgan involvement") | NBME style; R5 reviewer (MIS-C stem had labels, no vitals; checker then found 10 such stems in R5) | stem without objective data |
-| I9 | NBME items first in the bank, followed by a "How NBME framed it" note and a Distractors block | board-brief Part 2 | board-brief Part 2 | NBME item after authored |
+| I9 | NBME items first in the bank, followed by an NBME note ("NBME question N" or "NBME framing"; "How NBME framed it" before s163) and a Distractors block | board-brief Part 2 | board-brief Part 2 | NBME item after authored |
 | (gate) | No `data-src="uworld"` item, no `.vignette`, no stem opening "Same patient" | board-brief Rule 11, 13b | board-brief | UWorld item on page; Same patient stem |
 | carried | Every old item restyled to I1 to I4 when carried; none carried as shorthand | Jonathan 2026-09-28 ("implement the questions the same way") | brief-migration step 4 | covered by I1 to I4 on every item |
 

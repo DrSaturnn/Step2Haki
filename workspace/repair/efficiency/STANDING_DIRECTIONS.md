@@ -41,7 +41,8 @@ Source keys:
 - Peds shelf (2026-09-25) felt more nuanced than covered content, with few derm and many outpatient questions; use this as the guide for upcoming peds briefs. [MEM]
 
 ## Brief structure (decision spine)
-- **Step names**, in every brief: 1 Illness script (disease) or Presentation (hub), 2 Urgent risks, 3 Differential, 4 Workup, 5 Diagnostic criteria, 6 Severity (or the field's native term), 7 Treatment, 8 Follow-up. Absent steps stay numbered and greyed. [SPEC r3, r4]
+- **Step names**, in every brief: 1 Illness script (disease) or Presentation (hub), 2 Diagnostic criteria, 3 Urgent risks, 4 Differential, 5 Workup, 6 Severity (or the field's native term), 7 Treatment, 8 Follow-up. Absent steps stay numbered and greyed (B1: an empty step 2 is greyed everywhere). [SPEC r3, r4; order s163, DIG 2026-11-04]
+- **Step 2 Diagnostic criteria (s163, 2026-11-04):** the brief's own criteria, unchanged in content. A criteria map only where the competitors are separated mainly by criteria (plan C3: both axes carry meaning, cells about five words or fewer, three columns at most; the map holds the cutoff and the Differential spends its words on how the diagnoses differ in a vignette; never forced where they differ by exam, setting or mechanism). Recall: a criteria cutoff that a masked answer elsewhere in the brief repeats is masked (number and unit only); a window row whose name is the masked test keeps its window visible as the clue. [DIG 2026-11-04 s163 B4]
 - **Hubs and disease briefs:** presentation hubs open with the presentation, have no illness script, stop after Workup and hand off by drawer. Disease briefs open with the illness script. [SPEC r3]
 - **Bottom line:** above the script, 3 lines at most, holding the decisions most likely to be tested. [SPEC r3]
 - **Illness script:** in Jonathan's template order (What it is; Driver or Bug; Triggers or Spread, strongest first, non-modifiable marked; Chain in tiers of one kind of event; exactly two Insights). It holds only what no other step covers. [SPEC r3] [PREF]
@@ -51,7 +52,7 @@ Source keys:
   - every Decides-it cell leads with its timeline in bold when the diagnosis has one;
   - discriminator tables give each diagnosis's timeline, and are repeated in every topic brief they pertain to, because readers review one brief at a time and these are the most heavily tested contrasts. [SPEC r4] [MEM]
 - **Psych tables:** they keep the duration column, because NBME tests long duration windows (for example 2 years); the long timelines are clarified. [MEM]
-- **Step 4 Workup:** the diagnostic workup tree, then the clue table, then the pause point. [SPEC r2]
+- **Step 5 Workup:** the diagnostic workup tree, then the clue table, then the pause point. [SPEC r2]
 - **Pause point format (2026-10-26, s154c):** question-style blocks, one per bait: a bold setup line in vignette words (not the answer); an "Offered as" line in caution with the tempting wrong answers underlined; the deciding line on the accent rule; an arrow to the answer in accent; at most one muted extra line for a contrast that is not a bait. The deciding line and the answer are masked in study mode. Wording comes from the brief's own claims; a hover sits on the line it explains. Lint and gate "pause-format". [Jonathan 2026-10-26: "let's go with the recommended type for pause points. let's apply to all of them."]
 - **Pause point content (2026-10-28):** a block exists only for a real board bait from the brief's own evidence (NBME, UWorld, AnKing), with the clue that defeats it; a block with no bait, no deciding line, an answer that only negates the bait, or a restatement of a table row is rewritten around a real bait or deleted. A brief with no real bait keeps no pause point. [Jonathan 2026-10-28: "want to note some of the past pause points were not appropriate, repeating table info"; "lets do per your recommendation" (option 1, claude/pending/PAUSE_POINT_AUDIT_2026-10-28.md)]
 - **The Narrow or clue table:** Clue | Points to | Next move, with NO questions and no in or out chips. [SPEC, MDD pilot review 2026-10-07]
@@ -117,13 +118,14 @@ Source keys:
 ## Practice questions
 - **Original stems:** authored items are original. UWorld shows only the concept tested and which two answers it leans between. Stems are unique and concise, with pertinent positives and mimic traps, never a retold UWorld vignette. [MEM] [HO]
 - **Length and layout:** authored stems are 30 to 40 words, in scannable lines. [MEM] [HO]
-- **NBME questions:** they are not in the scenario bank. They live in the "How NBME framed it" block, as a de-fluffed stem plus the competing answers and the final two choices. [MEM]
+- **NBME questions:** they are not in the scenario bank. They live in the NBME block (labelled "NBME question N" for a trimmed question, "NBME framing" for a note; s163 D8), as a de-fluffed stem plus the competing answers and the final two choices. [MEM]
 - **Practice view:** stack by default (Stack | List | Review); Reveal all only in List. [SPEC r2]
 - **Questions are never deleted;** item ids are immutable. [CS]
 
 ## Prose and voice
 - **Plain prose:** clear and concise, with no cliché or slogan-style language; internal workflow terms (for example "handoff") never show on the page. [MEM] [CS]
 - **No emojis, no em dashes.** [PREF] [HO]
+- **No structural wording (C6, s163):** nothing on the page names the page's structure: no step numbers in text ("(step 2)", "see step 4"), no ownership words ("owns", "owned by", "is the owner", "takes over", "handles"). One place still decides each action; the other states the action in plain clinical words, the same wording. Brief titles as drawers stay. Figurative placement goes too: a finding, clue, test or drug does not "belong to", "live in", "sit in" or "take over"; say the clinical relation ("treats", "points to", "is seen in"). Literal location stays ("sits in the epiphysis", "lives in a rural area"); the exam name "Step 2" stays. Gate: numeric step references and "owns"/"owned by"; lint (advisory): placement verbs. [DIG 2026-11-04 s163 D4, D6]
 
 ## Process and approvals
 - **Approval before shipping:** nothing ships to the live site without Jonathan's approval. A blanket "publish and continue" covers only the queue he named. Screenshots come before approval. [MEM] [SPEC Boundaries]
@@ -142,7 +144,7 @@ Source keys:
   - a board answer that differs from a guideline: teach the board answer, the guideline goes in "In practice:"; every age, cutoff, duration, dose and interval checked against board sources;
   - a claim with no source opened that day: board-tested, label it unverified (⚠︎) and list it; not board-tested, cut it;
   - a number in a new or changed line with no quote: find the quote or cut the number;
-  - two places deciding the same action: one owner, the other points to it;
+  - two places deciding the same action: one place decides; the other states the action in plain clinical words, the same wording, with no step numbers or ownership words (s163 C6);
   - a study-mode leak from a repeated table or line: mask the repeat, never delete it;
   - a parked change or reviewer suggestion that reverses a digest decision: reject it;
   - reversing the lead's own earlier verdict: allowed with a recorded reason, listed in the report;

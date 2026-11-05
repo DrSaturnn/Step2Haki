@@ -242,7 +242,7 @@ mechanical checks passed):
     septic-hip taught "3 or 4 aspirate, 0 or 1 observe" and left 2 undefined, so a bank explanation contradicted the
     workup. Walk every value of each score from lowest to highest and name the action for each.
 21. **One threshold per decision.** The same decision must not carry two cutoffs in two places (limp had 2 weeks and
-    6 weeks for imaging). Pick the board's, state it once in the owning step, point to it elsewhere.
+    6 weeks for imaging). Pick the board's, decide it in one place, and state the same action and cutoff in plain clinical words elsewhere (no step numbers or ownership words, s163 C6).
 22. **Absolutes need an absolute quote.** "Only", "always", "never", "first" in a bottom line or ladder need a quote
     that says so (sjia "steroids only for refractory" read as absolute; MAS takes high-dose steroids).
 23. **Pairs with and drawers use exact live titles** (grep the page's h4); one plain clause per pointer, no figurative

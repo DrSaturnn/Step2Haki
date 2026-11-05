@@ -55,7 +55,7 @@ practice, a label or a guideline differs from the board answer, teach the board 
    reactions and interactions); then `python3 tools/spine/board_index.py show {bid} --all > {folder}/board_index.txt`
    and `python3 tools/spine/card_dispositions.py make {bid} {folder}` to regenerate cards.md. A cards.md with few or no
    cards means the terms are too narrow.
-2. Search by hand only what the index does not reach: the NBME "How NBME framed it" blocks and the local question files
+2. Search by hand only what the index does not reach: the NBME blocks ("NBME question N", "NBME framing") and the local question files
    (`repair/sources/s*_questions.md`, Grep), the UWorld library pages named in LEAD_NOTES.md, AnKing
    (`python3 tools/spine/cards_search.py <terms>`; read each card's high-yield `hy` line in
    repair/sources/anki/anki_index.jsonl). Pink AnKing text is priority content.

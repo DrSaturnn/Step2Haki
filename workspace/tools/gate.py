@@ -100,6 +100,10 @@ CATALOG = {
                   'never hand-edit a mimic row: edit tools/typec/mimics.py, rebuild every brief that uses the row (lifechart.course_table) and ship them together'),
     'pause-format': ('every spine brief\'s pause point is question-style blocks (s154c; tools/spine/lint.py pause_format)',
                      'div.sp-pause > b.pp-t, then one div.pp-b per bait (span.sl, optional span.si.pp-off with <em> baits, optional masked span.si, span.pp-a with a masked answer), at most one p.pp-x'),
+    'rail-order': ('every spine rail lists the steps in the s163 order: 1 Script or Presentation, 2 Criteria, 3 Urgent, 4 Differential, 5 Workup, 6 Severity (or the field term), 7 Treatment, 8 Follow-up',
+                   'rebuild the rail from tools/spine/author_lib.py steps(); never hand-order a rail'),
+    'structural': ('no step number ("(step 2)", "see step 4") or ownership word ("owns", "owned by") in brief text or data-*-why reasons; the exam name "Step 2" is not structural (s163 C6)',
+                   'state the action in plain clinical words, the same wording as the place that decides it; a literal use goes in tools/gate_allowlist.txt with a reason'),
     'K3': ('every mnemonic names the widely taught source it comes from (data-mn-src)',
            'add data-mn-src="First Aid" / "AnKing" / "AMBOSS" / "source explanation" / a URL; a mnemonic with no such source is removed, never invented'),
 }
@@ -111,6 +115,17 @@ def _pause_format(brief_html):
     m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
     globals()['_pause_format'] = m.pause_format
     return m.pause_format(brief_html)
+
+
+def _structural(brief_html):
+    import importlib.util
+    sp = importlib.util.spec_from_file_location('spine_lint', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'spine', 'lint.py'))
+    m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
+    globals()['_structural'] = lambda h: m.structural(h, hard=True)
+    return m.structural(brief_html, hard=True)
+
+
+RAIL_ORDER = ['Criteria', 'Urgent', 'Differential', 'Workup']
 
 
 def _card_check(brief_html):
@@ -225,6 +240,16 @@ def check_page(page, g, page_path):
             if 'paragraph (p.sp-pause)' in prob and '<style id="ax-s154c">' not in page:
                 continue
             g.fail('pause-format', b.id, prob)
+        # ---- s163: rails in the new step order; no structural wording in brief text (C6)
+        bh = page[b.start:b.end]
+        for rm in re.finditer(r'<nav class="sp-step"[^>]*>(.*?)</nav>', bh, re.S):
+            rail = re.findall(r'<b>(\d)</b><span>([^<]*)</span>', rm.group(1))
+            if [n for n, _ in rail] != [str(i) for i in range(1, 9)] or [l for _, l in rail][1:5] != RAIL_ORDER \
+                    or rail[0][1] not in ('Script', 'Presentation') or [l for _, l in rail][6:] != ['Treatment', 'Follow-up']:
+                g.fail('rail-order', b.id, '%s rail is %s' % (b.id, ' '.join('%s %s' % x for x in rail)))
+        for k, prob in enumerate(_structural(bh)):
+            key = re.sub(r'[^a-z0-9]+', '_', prob.split('"', 1)[-1].lower()).strip('_')[:40]
+            g.fail('structural', '%s:%s' % (b.id, key), '%s %s' % (b.id, prob))
         if not re.match(r'^[a-z0-9][a-z0-9-]*$', b.id):
             g.fail('brief-id', b.id, 'brief id %r is not lowercase [a-z0-9-]' % b.id)
         if b.kind == 'bs' and not b.id.startswith('bs-'):
