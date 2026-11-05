@@ -3,7 +3,7 @@
 Jonathan, 2026-10-26: "Add whatever is needed so this issue does not happen again" (s154f chat 3 read whole docs and
 ran to about 280k context before any edit). Project copy claude/RESUME.md; repo copy repair/efficiency/RESUME.md.
 
-**Open batch: s164** on branch wip/s164 in both repos (launched 2026-11-05); next is chunk 7 (checks, changelog, present).
+**Open batch: s164** on branch wip/s164 in both repos (launched 2026-11-05); chunks 1 to 7 done (presented, page 5f346af7bde7); next is chunk 8 (ship on Jonathan's "ship").
 line, here and in the project copy claude/RESUME.md, when a batch opens or ships; "none" means no batch is open and a
 launch prompt is needed.)
 
