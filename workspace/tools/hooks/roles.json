@@ -63,6 +63,11 @@
    "model": "opus",
    "budget": 100,
    "agent": "lean-builder"
+  },
+  "ui-parity-review": {
+   "model": "opus",
+   "budget": 25,
+   "agent": "lean-reviewer"
   }
  },
  "lane_roots": [

@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-11-04, by Claude (s162 shipped; no batch open; s163 launches next).
+Last updated: 2026-11-05, by Claude (s164b open: the UI refactor).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -11,6 +11,11 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 ```
 
 ## State (rewrite after every step)
+
+- **s164b OPEN 2026-11-05** (Claude lead; the UI refactor per claude/pending/layout_mock/UI_REFACTOR_PLAN.md, site layer
+  only, content frozen; DIGEST D-20261105-8). Branch wip/s164b in both repos. Budget lead 100M, one Opus review agent
+  (role ui-parity-review). Step: chunk 2 (baseline screenshots and coverage, local/s164b/). Record repair/s164b/S164B.md
+  (chunk table). Spend: chat 1 in progress.
 
 - **UI rules landed 2026-11-05** (doc commit, no site change; Jonathan "ship"): DECISIONS_DIGEST D-20261105-1 to -7 (UI
   architecture, no stale decisions, SwiftUI-style spring motion, order of work, Fit to screen next round, no decision
