@@ -13,10 +13,8 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 ## State (rewrite after every step)
 
 - **Open: s162** (Claude lead; Psych Pharmacology B4 of 4: pc-atypical, pc-typical, pc-antichol, pc-td; Q4 keep;
-  launched 2026-11-03 11:42; wip/s162 in both repos). Step: **S4 round 1 done** (12 receipts filed: acc PASS-IF x4;
-  flags PASS-IF x3, FAIL pc-typical; read FAIL x4; 0 HIGH, 6 MED, 36 LOW); S5 adjudication written
-  (repair/s162/adj_r1.md, 29 exact edits). Next: S5 edits, S6, S7 round 2 in a fresh chat (batch file "Next
-  (chat 3)"). Budget 23 agents, 580 calls, 42M (builders 5, 380, 34M; reviewers 18, 200, 8M); lead 80M. Spend: 11
+  launched 2026-11-03 11:42; wip/s162 in both repos). Step: **S6 done** (chat 3: 29 edits applied, MECHANICAL PASS x4, gate 0 failures; r2 packets in
+  packets/s162r2). Next: S7 round 2 (read x4, flags pc-typical, acc pc-typical). Budget 23 agents, 580 calls, 42M (builders 5, 380, 34M; reviewers 18, 200, 8M); lead 80M. Spend: 11
   agents, 289 calls, 30.31M (builders 28.07M; reviewers 7, 62, 2.24M); lead 2 chats 31.93M. Record repair/s162/S162.md.
 
 - **Previous: s161d SHIPPED 2026-11-04** (Claude lead; site layer: the desktop sidebar fits wide windows under the 110%
