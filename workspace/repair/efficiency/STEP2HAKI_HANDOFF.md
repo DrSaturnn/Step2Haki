@@ -19,7 +19,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   pc-td in 02 Antipsychotics; Q4 keep; section complete, 18 of 18 class cards): commit c50fd62 (main d920cfe after
   merging main's RESUME and handoff notes, ours kept), page a2d98e32f61f (approved candidate faaf259bc1be); version.json
   not checked here, Jonathan checks the live site. Wave 21 agents, 364 calls, 32.51M of 42M (builders 28.07M, no
-  relaunch; reviewers 4.44M); lead 4 chats, about 71M of 80M. ship.sh had no token and main had moved (two doc
+  relaunch; reviewers 4.44M); lead 4 chats, 77.83M of 80M (measured). ship.sh had no token and main had moved (two doc
   commits): merged by hand, pushed. No temporary allowlist lines. Record repair/s162/S162.md (S8, S9). Open: OPEN_WORK
   s162 line.
 
