@@ -2,7 +2,9 @@
 """split_css: writes the page's site CSS (local/s164b/css_rules.json, from css_inventory.py) into site/css/ as layer
 files, rules in their original order within each file, comments dropped, breakpoints named.
 
-  python3 repair/s164b/split_css.py [--report]
+  python3 repair/s164b/split_css.py [--report] [--dehack]
+
+--dehack drops the html:is([data-theme],:not([data-theme])) specificity workaround from every selector.
 
 The file a rule goes to is decided by FILES below, first match on the rule's selector. Writes site/css/<file>.css and
 local/s164b/split_map.json (rule index -> file), and prints rules per file.
@@ -150,6 +152,8 @@ def main(argv):
         for f, parts in groups.items():
             rr = dict(r)
             if parts is not None:
+                if '--dehack' in argv:
+                    parts = [q.replace(HACK, '').strip() for q in parts]
                 rr['sel'] = ','.join(parts)
             per[f].append(rr)
     for f, rules in per.items():
