@@ -1,0 +1,64 @@
+{
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "the deciding fact lives in the <b>background</b>",
+   "with": "the deciding fact is in the <b>background</b>",
+   "note": "s163 E3: chrome wording and NBME panel"
+  },
+  {
+   "op": "replace_global",
+   "find": "and mosquito bites sit in a spotted fever stem",
+   "with": "and mosquito bites appear in a spotted fever stem",
+   "note": "s163 E3: chrome wording and NBME panel"
+  },
+  {
+   "op": "replace_global",
+   "find": "<b>The clue sits in a relative.</b>",
+   "with": "<b>The clue is in a relative.</b>",
+   "note": "s163 E3: chrome wording and NBME panel"
+  },
+  {
+   "op": "replace_global",
+   "find": "Each option sits in one cell of potassium",
+   "with": "Each option fills one cell of potassium",
+   "note": "s163 E3: chrome wording and NBME panel"
+  },
+  {
+   "op": "replace_global",
+   "find": "Each entry links to the brief that owns it.",
+   "with": "Each entry links to the brief that teaches it.",
+   "note": "s163 E3: chrome wording and NBME panel"
+  },
+  {
+   "op": "replace_global",
+   "find": "board questions that belong to no single organ",
+   "with": "board questions that fit no single organ",
+   "note": "s163 E3: chrome wording and NBME panel"
+  },
+  {
+   "op": "replace_global",
+   "find": "var STEPS={1:'Illness script',2:'Urgent risks',3:'Differential',4:'Workup',5:'Diagnostic criteria',",
+   "with": "var STEPS={1:'Illness script',2:'Diagnostic criteria',3:'Urgent risks',4:'Differential',5:'Workup',",
+   "note": "s163 E3: chrome wording and NBME panel"
+  },
+  {
+   "op": "replace_global",
+   "find": "m[2]||(m[1]==='dx'?'3':'7')",
+   "with": "m[2]||(m[1]==='dx'?'4':'7')",
+   "note": "s163 E3: chrome wording and NBME panel"
+  },
+  {
+   "op": "replace_global",
+   "find": "['frame','Framings']",
+   "with": "['frame','NBME framing']",
+   "note": "s163 E3: chrome wording and NBME panel"
+  },
+  {
+   "op": "replace_global",
+   "find": "frame:'How NBME framed it',linked:",
+   "with": "frame:'NBME framing',linked:",
+   "note": "s163 E3: chrome wording and NBME panel"
+  }
+ ]
+}

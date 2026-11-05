@@ -128,6 +128,35 @@ def glow_new(s):
     return re.sub(r'id\$="-s([2-5])"', lambda mm: 'id$="-s%d"' % NEW[int(mm.group(1))], s)
 
 
+# 30_chrome.json (chunk 4): page text outside the briefs (NBME page, Shelf intros, sidebar notes) and the NBME
+# presentations panel script. Changelog entries are history and stay. The panel's step() fallback maps a named -dx id
+# to Differential, which is now step 4 (was 3); -mx stays 7.
+CHROME = [
+    ('the deciding fact lives in the <b>background</b>', 'the deciding fact is in the <b>background</b>'),
+    ('and mosquito bites sit in a spotted fever stem', 'and mosquito bites appear in a spotted fever stem'),
+    ('<b>The clue sits in a relative.</b>', '<b>The clue is in a relative.</b>'),
+    ('Each option sits in one cell of potassium', 'Each option fills one cell of potassium'),
+    ('Each entry links to the brief that owns it.', 'Each entry links to the brief that teaches it.'),
+    ('board questions that belong to no single organ', 'board questions that fit no single organ'),
+    ("var STEPS={1:'Illness script',2:'Urgent risks',3:'Differential',4:'Workup',5:'Diagnostic criteria',",
+     "var STEPS={1:'Illness script',2:'Diagnostic criteria',3:'Urgent risks',4:'Differential',5:'Workup',"),
+    ("m[2]||(m[1]==='dx'?'3':'7')", "m[2]||(m[1]==='dx'?'4':'7')"),
+    ("['frame','Framings']", "['frame','NBME framing']"),
+    ("frame:'How NBME framed it',linked:", "frame:'NBME framing',linked:"),
+]
+
+
+def chrome_ops(h, log):
+    ops = []
+    for find, w in CHROME:
+        if h.count(find) != 1:
+            log['skipped'].append('chrome %r found %d times' % (find[:40], h.count(find)))
+            continue
+        ops.append({'op': 'replace_global', 'find': find, 'with': w, 'note': 's163 E3: chrome wording and NBME panel'})
+        h = h.replace(find, w)
+    return ops
+
+
 def in_body_links(h, ids, log):
     """hrefs to a renamed id outside the rails (survey 2026-11-04: one, angina's Diagnostic workup link)."""
     ops = []
@@ -244,6 +273,11 @@ def main(argv):
         json.dump({'edits': rw}, open(os.path.join(out, '20_wording.json'), 'w', encoding='utf-8'), indent=1,
                   ensure_ascii=False)
     print('make_batch: wrote 10_steps.json (%d ops)%s' % (len(ops), ', 20_wording.json (%d ops)' % len(rw) if rw else ''))
+    after2, _ = apply_edits.apply(after, {'edits': rw}) if rw else (after, None)
+    ch = chrome_ops(after2, log)
+    json.dump({'edits': ch}, open(os.path.join(out, '30_chrome.json'), 'w', encoding='utf-8'), indent=1,
+              ensure_ascii=False)
+    print('make_batch: wrote 30_chrome.json (%d of %d ops)' % (len(ch), len(CHROME)))
     return 0 if not log['skipped'] and not log['rw_fail'] else 1
 
 
