@@ -18,7 +18,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   panel STEPS map, -dx fallback 3 > 4; 40_labels.json: 46 NBME labels; label-aware tools; build 969 ops, gate and render
   PASS). **Next: chunk 6** (B4 Recall masks by hand from local/s163/survey_recall.md, and 7 first-use abbreviations, as
   masks.txt > 50_masks.json; exact method in the chunk table row), then 7 to 9. Spend: chat 1 14.45M of 100M (measured,
-  ledger_lead.csv); chat 2 not yet recorded.
+  ledger_lead.csv); chat 2 16.61M (measured); 31.06M of 100M in all.
 
 - **Previous: s162 SHIPPED 2026-11-04** (Claude lead; Psych Pharmacology B4 of 4: pc-atypical, pc-typical, pc-antichol,
   pc-td in 02 Antipsychotics; Q4 keep; section complete, 18 of 18 class cards): commit c50fd62 (main d920cfe after
