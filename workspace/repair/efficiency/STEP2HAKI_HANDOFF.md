@@ -14,9 +14,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **s163 OPEN** on wip/s163 (both repos) (Claude lead; launched 2026-11-04 22:33; criteria as step 2, structural
   wording, NBME label; site layer plus patch; lead 100M, no agents, no reviews (D7), no screenshots presented (D9)).
-  Batch file repair/s163/S163.md: chunks 1 to 3 done in chat 1, chunk 4 in chat 2 (30_chrome.json: 6 chrome rewrites, NBME
-  panel STEPS map, -dx fallback 3 > 4, 'NBME framing' labels; build 923 ops, gate and render PASS). **Next: chunk 5** (D8
-  label rename, 40_labels.json; exact edits in the chunk table row), then 6 to 9. Spend: chat 1 14.45M of 100M (measured,
+  Batch file repair/s163/S163.md: chunks 1 to 3 done in chat 1, 4 and 5 in chat 2 (30_chrome.json: chrome wording, NBME
+  panel STEPS map, -dx fallback 3 > 4; 40_labels.json: 46 NBME labels; label-aware tools; build 969 ops, gate and render
+  PASS). **Next: chunk 6** (B4 Recall masks by hand from local/s163/survey_recall.md, and 7 first-use abbreviations, as
+  masks.txt > 50_masks.json; exact method in the chunk table row), then 7 to 9. Spend: chat 1 14.45M of 100M (measured,
   ledger_lead.csv); chat 2 not yet recorded.
 
 - **Previous: s162 SHIPPED 2026-11-04** (Claude lead; Psych Pharmacology B4 of 4: pc-atypical, pc-typical, pc-antichol,
