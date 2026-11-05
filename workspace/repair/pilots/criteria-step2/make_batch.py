@@ -156,7 +156,16 @@ PV_CSS = r'''
 /* s163 C4: the linked brief's diagnostic criteria in a Differential row's preview */
 html body .qx-pv > .brief.sp.qx-pc{display:block;box-sizing:border-box;margin:12px 0 0;padding:10px 0 2px;border:0!important;border-top:1px solid var(--hair)!important;border-radius:0;background:none!important;box-shadow:none!important;zoom:1;isolation:auto;content-visibility:visible;contain-intrinsic-size:none;max-height:min(300px,45vh);overflow:auto;overscroll-behavior:contain;scroll-margin-top:0}
 html body .qx-pv > .brief.sp.qx-pc > .qx-pk{margin:0 0 6px}
-html body .qx-pv > .brief.sp.qx-pc > :is(.crit,.sp-dx){margin:0;max-width:none}'''
+html body .qx-pv > .brief.sp.qx-pc > :is(.crit,.sp-dx){margin:0;max-width:none}
+/* a wide criteria table restacks one row per card in the 340px preview, as the phone page does, so no column hides to the right */
+@media (min-width:641px){html body .qx-pv > .brief.sp.qx-pc .tw{overflow:visible;background:none;box-shadow:none;padding:0;margin:0}
+html body .qx-pv > .brief.sp.qx-pc .tw :is(table,tbody,tr,td){display:block;width:100%;max-width:100%;box-sizing:border-box}
+html body .qx-pv > .brief.sp.qx-pc .tw thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+html body .qx-pv > .brief.sp.qx-pc .tw caption{display:block;padding:0 0 6px;text-align:left}
+html body .qx-pv > .brief.sp.qx-pc .tw tbody tr{padding:8px 0;border-top:1px solid var(--hair);background:none;box-shadow:none}
+html body .qx-pv > .brief.sp.qx-pc .tw tbody td{border:0;padding:2px 0}
+html body .qx-pv > .brief.sp.qx-pc .tw tbody td:first-child{font-weight:650;color:var(--ink);padding-bottom:4px}
+html body .qx-pv > .brief.sp.qx-pc .tw tbody td:not(:first-child)[data-label]::before{content:attr(data-label);display:block;font:650 11px/15px var(--sans);letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}}'''
 PV_JS = r'''  /* s163 C4: in a Differential row, the preview adds the linked brief's diagnostic criteria (its step 2), cloned from
      that brief when the preview opens, so no copy exists to drift. Only when the row names that brief's diagnosis or
      one of its criteria blocks; a row whose drawer opens a broader brief gets none. */
