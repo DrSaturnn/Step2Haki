@@ -12,10 +12,13 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **s164 OPEN, presented** (launched 2026-11-05 09:47; Claude lead; s163 carry-overs, site layer plus patch; no agents;
-  lead 60M) on wip/s164 in both repos. Batch file repair/s164/S164.md (chunk table). Items 1 to 7 built and checked
-  (chunk 7: build 26 ops, gate and render PASS, spy_test 45 of 45 at 390 and 1440); approval.py present s164, page
-  5f346af7bde7. Next: chunk 8, ship on Jonathan's "ship". Spend: lead 37.42M of 60M (2 chats).
+- **s164 SHIPPED 2026-11-05** (Claude lead; site layer plus patch, s163 carry-overs: phone in-brief rail marks the step
+  being read (baseline before the mobile redesign); window figures and word forms in Differential criteria previews,
+  102 tiles; 20 section-name pointers state the action; B4 masks in outlines; 4 stale private folders archived;
+  test_outline_check goldens): commit 60d14ae, page 10098af401b5 (approved candidate 5f346af7bde7); version.json not
+  checked here, Jonathan checks the live site. No agents; lead 2 chats, about 37M of 60M. Record repair/s164/S164.md.
+  Open: OPEN_WORK s164 line (step-2 workup ladders in ascvd and bs-adolescent-bp may belong in Workup; local-only
+  restores s155 to s158 lanes copies into the public tree). No batch open; next needs a launch prompt.
 
 - **Previous: s163 SHIPPED 2026-11-05** (Claude lead; site layer plus patch: diagnostic criteria as step 2 in every
   brief, no step numbers or ownership words in brief text, NBME labels, Recall masks on repeated criteria cutoffs,
