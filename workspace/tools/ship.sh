@@ -134,7 +134,13 @@ python3 tools/changelog.py "$TMP/prev.html" index.html --site "$SITELINE" --chec
   --entry "$B: $MSG" --changelog CHANGELOG.md > "$TMP/body.txt" || { restore; fail changelog; }
 
 # ---- 4. commit
+# s163b: untracked copies restored from the private local-only tree (cp -rn at session start) are never staged.
+python3 tools/restored_paths.py --root "$ROOT" -0 > "$TMP/restored.lst" 2>/dev/null || : > "$TMP/restored.lst"
 git -C "$ROOT" add -A -- workspace "discriminator-briefs-site/index.html" >/dev/null 2>&1
+if [[ -s "$TMP/restored.lst" ]]; then
+  xargs -0 git -C "$ROOT" reset -q -- < "$TMP/restored.lst" >/dev/null 2>&1
+  echo "commit: left out $(tr -cd '\0' < "$TMP/restored.lst" | wc -c) untracked file(s) restored from local-only"
+fi
 [[ -f "$ROOT/discriminator-briefs-site/version.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/version.json" >/dev/null 2>&1
 [[ -f "$ROOT/discriminator-briefs-site/briefs.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/briefs.json" >/dev/null 2>&1
 if git -C "$ROOT" diff --cached --quiet; then

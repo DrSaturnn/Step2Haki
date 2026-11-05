@@ -358,8 +358,15 @@ def sync(batch, msg, folders):
                 sh(['cp', '-a', s + '/.', d + '/'], check=True)
             else:
                 shutil.copy(s, d)
+    sys.path.insert(0, os.path.join(WS, 'tools'))
+    import restored_paths  # s163b: never stage untracked copies restored from local-only in the public repo
+    skip = restored_paths.restored(REPO, PRIV)
     for repo in (REPO, PRIV):
         sh(['git', 'add', '-A'], cwd=repo)
+        if repo == REPO and skip:
+            for i in range(0, len(skip), 200):
+                sh(['git', 'reset', '-q', '--'] + skip[i:i + 200], cwd=repo)
+            print('sync: left out %d untracked file(s) restored from local-only' % len(skip))
         if sh(['git', 'diff', '--cached', '--quiet'], cwd=repo).returncode:
             sh(['git'] + GIT_ID + ['commit', '-q', '-m', msg + tail], cwd=repo, check=True)
         br = sh(['git', 'branch', '--show-current'], cwd=repo).stdout.strip()

@@ -53,5 +53,11 @@ expect('build prompt: gate lines first', p.splitlines()[:4] == ['Role: brief-bui
 roles = json.load(open(os.path.join(WS, 'tools', 'hooks', 'roles.json')))['roles']
 expect('roles: brief-build is opus, 90 calls, lean-builder', roles.get('brief-build') == {
     'model': 'opus', 'budget': 90, 'agent': 'lean-builder'})
+pg = '<div class="brief" id="a"><h4>A</h4><p>x</p></div><div class="brief" id="b"><h4>B</h4><p>y</p></div>'
+ch, add, rem = B.site_layer_diff(pg, pg.replace('<p>y</p>', '<p>z</p>'))
+expect('site layer diff: one changed brief named', ch == ['b'] and not add and not rem)
+expect('site layer diff: identical pages give nothing', B.site_layer_diff(pg, pg) == ([], [], []))
+ch, add, rem = B.site_layer_diff(pg, pg + '<div class="brief" id="c"><h4>C</h4></div>')
+expect('site layer diff: an added brief is listed', add == ['c'] and not ch)
 print('test_batch_tools: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)

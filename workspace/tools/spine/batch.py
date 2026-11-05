@@ -7,6 +7,9 @@ section 2 S8 and S9). The lead reads the one-line outputs and the facts file; lo
       preflight, vendor scan, squeeze_check and pointer_check on the batch page; word counts; spend by role and lead
       total; then approval.py present (only when every brief is READY and every check passes). Writes
       local/<batch>/s8_facts.md, the facts the section 5 report needs.
+      With no brief ids (a site-layer batch, runbook section 8; s163b): verify_all, squeeze_check and pointer_check
+      are skipped, and the facts list every brief whose markup differs from the HEAD page (site_layer_diff), since
+      section 8 step 3 expects every brief byte-identical unless the batch moves it.
   python3 tools/spine/batch.py ship <batch> "<message>"
       after Jonathan's "ship": ship.sh with AX_SESSION, then pushes HEAD to main by hand when ship.sh had no token
       (fast-forward only). Prints the commit and page sha.
@@ -89,6 +92,16 @@ def words(page, ids):
     return out
 
 
+def site_layer_diff(base_html, page_html):
+    """Brief ids whose markup differs between two pages, plus ids added or removed (s163b: a site-layer batch has no
+    brief ids, so S8 reports which briefs it touched instead of verifying named ones)."""
+    import pagelib as P
+    a = {b.id: b.inner for b in P.briefs(base_html)}
+    b = {x.id: x.inner for x in P.briefs(page_html)}
+    changed = sorted(i for i in a if i in b and a[i] != b[i])
+    return changed, sorted(set(b) - set(a)), sorted(set(a) - set(b))
+
+
 def s8(argv):
     present = '--no-present' not in argv
     a = [x for x in argv if not x.startswith('--')]
@@ -108,6 +121,16 @@ def s8(argv):
     r = py('repair/build.py', batch, '--out', page)
     facts.append('build: ' + last(r))
     ok &= r.returncode == 0
+    site = not ids
+    if site:
+        base = sh(['git', 'show', 'HEAD:workspace/index.html'], cwd=REPO).stdout
+        try:
+            ch, add, rem = site_layer_diff(base, open(page, encoding='utf-8').read())
+            facts.append('site layer (no brief ids): briefs changed against HEAD: %d%s; added %d; removed %d' % (
+                len(ch), ' (' + ', '.join(ch) + ')' if ch else '', len(add), len(rem)))
+        except Exception as e:  # a page that does not parse is a build failure, reported by the build line
+            facts.append('site layer (no brief ids): brief diff not run (%s)' % e)
+            ok = False
     ready, notready = [], []
     for i in range(0, len(ids), 3):
         grp = ids[i:i + 3]
@@ -120,15 +143,19 @@ def s8(argv):
                 notready.append(l)
         if r.returncode:
             ok = False
-    facts.append('verify_all: %d of %d READY%s' % (len(ready), len(ids), '; ' + ' | '.join(notready) if notready else ''))
+    if not site:
+        facts.append('verify_all: %d of %d READY%s' % (len(ready), len(ids), '; ' + ' | '.join(notready) if notready else ''))
     ok &= len(ready) == len(ids)
     comma = ','.join(ids)
     checks = [('gate', py('tools/gate.py', page, '--base', 'HEAD'), 'gate:'),
               ('render', sh(['node', 'tools/render.js', page]), 'render:'),
               ('preflight', py('tools/preflight.py', page, '--base', 'HEAD'), '^preflight'),
-              ('vendor', py('tools/vendor_scan.py', '--page', page), 'shared'),
-              ('squeeze', py(os.path.join(HERE, 'squeeze_check.py'), page, comma, timeout=600), 'squeeze_check'),
-              ('pointer', py(os.path.join(HERE, 'pointer_check.py'), page, comma, timeout=600), 'pointer_check')]
+              ('vendor', py('tools/vendor_scan.py', '--page', page), 'shared')]
+    if site:
+        facts.append('squeeze, pointer: skipped (site layer, no brief ids; run them by hand on any brief the batch moves)')
+    else:
+        checks += [('squeeze', py(os.path.join(HERE, 'squeeze_check.py'), page, comma, timeout=600), 'squeeze_check'),
+                   ('pointer', py(os.path.join(HERE, 'pointer_check.py'), page, comma, timeout=600), 'pointer_check')]
     with open(os.path.join(L, 's8_page_checks.log'), 'w', encoding='utf-8') as fh:
         for name, r, pat in checks:
             fh.write('== %s\n%s\n' % (name, r.stdout + r.stderr))
