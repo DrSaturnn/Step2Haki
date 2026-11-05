@@ -16,7 +16,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   wording, NBME label; site layer plus patch; lead 100M, no agents, no reviews (D7), no screenshots presented (D9)).
   Batch file repair/s163/S163.md: chunks 1 to 3 done in chat 1 (generator repair/pilots/criteria-step2/make_batch.py,
   rewrites.txt; repair/s163/10_steps.json and 20_wording.json build, gate and render PASS). **Next: chunk 4** (chrome
-  text and NBME panel script), then 5 to 9 per the chunk table. Spend: chat 1 about 25M (estimate; record at close).
+  text and NBME panel script), then 5 to 9 per the chunk table. Spend: chat 1 14.45M of 100M (measured, ledger_lead.csv).
 
 - **Previous: s162 SHIPPED 2026-11-04** (Claude lead; Psych Pharmacology B4 of 4: pc-atypical, pc-typical, pc-antichol,
   pc-td in 02 Antipsychotics; Q4 keep; section complete, 18 of 18 class cards): commit c50fd62 (main d920cfe after
