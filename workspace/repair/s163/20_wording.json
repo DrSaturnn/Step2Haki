@@ -1,0 +1,1885 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "span></td><td><span><span class=\"mask\">Act now (step 2) owns it.</span></span></td></tr><tr",
+   "with": "span></td><td><span><span class=\"mask\">Blood cultures and antibiotics, then ERCP to remove the stone.</span></span></td></tr><tr",
+   "note": "s163 E3 own (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "<span class=\"mask\">Act now (step 2) owns it.</span>",
+   "with": "<span class=\"mask\">Blood cultures and antibiotics, then ERCP to remove the stone.</span>",
+   "note": "s163 E3 own (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "serologies and the first tests in the step 3 hepatocellular table",
+   "with": "serologies and the first hepatocellular tests",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": " (the step 4 Skip line).",
+   "with": ".",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "Liver Disease in Pregnancy owns the workup and delivery timing.",
+   "with": "Fasting bile acids; ursodeoxycholic acid and timed delivery.",
+   "note": "s163 E3 own (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "infant goes to step 2.",
+   "with": "infant is treated as an emergency first.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": " (plan in step 4).",
+   "with": ".",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "Remove cow's milk and soy protein (step 4); no scope.",
+   "with": "Remove cow's milk and soy protein; no scope.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "when dairy is the clear trigger (step 4);",
+   "with": "when dairy is the clear trigger;",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "Ill-appearing mimic: step 2",
+   "with": "Ill-appearing mimic: treat it urgently",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "Act now (step 2) owns them.",
+   "with": "IV fluids for FPIES; epinephrine for IgE allergy; bowel rest and IV antibiotics for necrotizing enterocolitis.",
+   "note": "s163 E3 own (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "Constipation in a Child owns the diet and laxative plan.",
+   "with": "Diet change and a laxative.",
+   "note": "s163 E3 own (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "Examine the anus; GI Bleeding in a Child owns bleeding past infancy.",
+   "with": "Examine the anus; past infancy, see GI Bleeding in a Child.",
+   "note": "s163 E3 own (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "feeding-refusal",
+   "find": "Urgent endoscopy, as in Act now (step 2).",
+   "with": "Urgent endoscopy.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "before anything else (step 2).",
+   "with": "before anything else.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<b>Campylobacter and Yersinia</b>: see Treatment by cause in step 4",
+   "with": "<b>Campylobacter and Yersinia</b>: treated by cause",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "the test follows the sign (step 4).",
+   "with": "the test follows the sign.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": " (ladder in step 4).",
+   "with": ".",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "gets a radiograph (step 2),",
+   "with": "gets a radiograph,",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "means act first (step 2);",
+   "with": "means act first;",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "then treat by cause (step 4).",
+   "with": "then treat by cause.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "Notify child protective services (step 4).",
+   "with": "Notify child protective services.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "(bilious vomiting goes to step 2)",
+   "with": "(bilious vomiting is a surgical emergency)",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "Treat as cyclic vomiting syndrome (step 4).",
+   "with": "Treat as cyclic vomiting syndrome.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": ": act first (step 2), not cyclic vomiting",
+   "with": ": act first, not cyclic vomiting",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "herpangina",
+   "find": "heart rate); step 4 sets the fluid route.",
+   "with": "heart rate); oral rehydration in small, frequent amounts, IV fluids if severe.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "scfe",
+   "find": "After films confirm a slip (step 5), only if atypical",
+   "with": "After films confirm a slip, only if atypical",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "scfe",
+   "find": "Films of both hips (confirm: step 5)",
+   "with": "Films of both hips to confirm",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "scfe",
+   "find": "<p class=\"sp-note\">Stability and slip grade: step 6. Treatment: step 7. <button",
+   "with": "<p class=\"sp-note\"><button",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "Use the urgent infection branch in step 2",
+   "with": "Immediate surgical assessment and antibiotics",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "scheuermann",
+   "find": "Use the treatment ladder in step 7",
+   "with": "Conservative care; a brace if the curve progresses with growth remaining",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puncture-osteomyelitis",
+   "find": "Tailor antibiotics as in step 7",
+   "with": "Tailor antibiotics when susceptibilities return",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torticollis",
+   "find": "Begin the muscle treatment in step 7",
+   "with": "Begin gentle stretching and physical therapy",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torticollis",
+   "find": "Resistance to first-line care; use the escalation rung in step 7",
+   "with": "Resistance to first-line care; pediatric orthopedic reassessment",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torticollis",
+   "find": "use the escalation rung in step 7 if restriction persists",
+   "with": "pediatric orthopedic reassessment if restriction persists",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-brachial-plexus",
+   "find": "Reassess motor recovery and apply the referral criteria in step 7",
+   "with": "Reassess motor recovery; refer if no improvement over 1 to 2 months",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-brachial-plexus",
+   "find": "hand movement; apply the referral criteria in step 7",
+   "with": "hand movement; refer if no improvement over 1 to 2 months",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": " (step 5 gives the age and fever rule)",
+   "with": "",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": " (step 7 gives the timing)",
+   "with": "",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "a second dose (step 7);",
+   "with": "a second dose;",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "arf",
+   "find": "The longest prophylaxis (step 8)",
+   "with": "The longest prophylaxis",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "arf",
+   "find": "continued for years (step 8).",
+   "with": "continued for years.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "stage 1 at 3 visits (step 6)",
+   "with": "stage 1 at 3 visits",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "Baseline tests (step 8); a secondary cause",
+   "with": "Baseline tests; a secondary cause",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "call for drug therapy (step 8)",
+   "with": "call for drug therapy",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "Confirmed hypertension: baseline tests (step 8);",
+   "with": "Confirmed hypertension: baseline tests;",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "copd",
+   "find": "hematocrit &gt;55% (step 7).</span>",
+   "with": "hematocrit &gt;55%.</span>",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "copd",
+   "find": "assign a treatment group (step 6).",
+   "with": "assign a treatment group.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "oxygen and transfusion (step 7)</span>",
+   "with": "oxygen and transfusion</span>",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "liver-preg",
+   "find": "Deliver at 36 weeks (step 7)",
+   "with": "Deliver at 36 weeks",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "masld",
+   "find": "so stage every patient (step 4).",
+   "with": "so stage every patient.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "masld",
+   "find": "part of the first panel (step 4).",
+   "with": "part of the first panel.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "masld",
+   "find": "cardiometabolic risk factor (step 5)",
+   "with": "cardiometabolic risk factor",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "masld",
+   "find": "recheck periodically (step 8)",
+   "with": "recheck periodically",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "masld",
+   "find": "hepatology referral (step 8)",
+   "with": "hepatology referral",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "masld",
+   "find": "Start a statin (step 7).",
+   "with": "Start a statin.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "masld",
+   "find": "Resmetirom candidate (step 7)",
+   "with": "Resmetirom candidate",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "masld",
+   "find": "HCC and varices (step 8 gives the follow-up)",
+   "with": "HCC and varices",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "the main complication (step 8).",
+   "with": "the main complication.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "endoscopy with biopsy (step 3).",
+   "with": "endoscopy with biopsy.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "perforate it ⚠︎ (step 2).",
+   "with": "perforate it ⚠︎.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "plus a pouch procedure (step 7)",
+   "with": "plus a pouch procedure",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "A symptomatic Zenker pouch is treated as in step 7.",
+   "with": "A symptomatic Zenker pouch needs cricopharyngeal myotomy plus a pouch procedure.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "Image before any tube or scope (step 2).",
+   "with": "Image before any tube or scope.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": " (step 6 lists the triggers).",
+   "with": ".",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "upper and lower endoscopy (step 4).",
+   "with": "upper and lower endoscopy.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "screen yearly by scope (step 4)",
+   "with": "screen yearly by scope",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "Any step 6 trigger:",
+   "with": "Any surgical trigger:",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "Operate now, whatever the age (step 6)",
+   "with": "Operate now, whatever the age",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "Any age, with a step 6 trigger",
+   "with": "Any age, with a surgical trigger",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "surveillance is lifelong (step 8).",
+   "with": "surveillance is lifelong.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "Impaction pattern (Diagnostic test); clear it (step 7)",
+   "with": "Impaction pattern; clear it",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "Fecal impaction (step 5 gives the rule)",
+   "with": "Fecal impaction",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "Anorectal manometry (step 4 targeted tests)",
+   "with": "Anorectal manometry",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "the tube test (step 4) comes before",
+   "with": "the tube test comes before",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "acid suppression (step 7); aspiration pneumonia makes repair more hazardous and can defer it (step 6).",
+   "with": "acid suppression; aspiration pneumonia makes repair more hazardous and can defer it.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "if repair is deferred (step 6);",
+   "with": "if repair is deferred;",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "the gas pattern sorts the type (step 5)",
+   "with": "the gas pattern sorts the type",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "Repair now (step 7)",
+   "with": "Repair now",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "a replacement operation (step 7)",
+   "with": "a replacement operation",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "Extremely long gap (step 6)",
+   "with": "Extremely long gap",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "Repair deferred (step 6)",
+   "with": "Repair deferred",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "More than 40%; acid suppression (step 7)",
+   "with": "More than 40%; acid suppression",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "so refer now (step 7).",
+   "with": "so refer now.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "acute liver failure (step 8).",
+   "with": "acute liver failure.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "severe liver failure despite drugs (step 7);",
+   "with": "severe liver failure despite drugs;",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "Fulminant disease: liver transplant (step 7)",
+   "with": "Fulminant disease: liver transplant",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "pyelo",
+   "find": "Image, as in step 7",
+   "with": "CT for an abscess or obstruction; in pregnancy, ultrasound",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "nephropathy",
+   "find": "Persistent albuminuria: treat (step 7)",
+   "with": "Persistent albuminuria: treat",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "hypercalcemia",
+   "find": "Saline, calcitonin, bisphosphonate (step 2)",
+   "with": "Saline, calcitonin, bisphosphonate",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "<span class=\"mask\"><b>Nephritic</b>: step 2</span>",
+   "with": "<span class=\"mask\"><b>Nephritic</b>: pediatric nephrology referral</span>",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "Reassure (follow-up in step 8)",
+   "with": "Reassure",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "are normal (follow-up in step 8)",
+   "with": "are normal",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "Basic renal blood tests (step 4)",
+   "with": "Basic renal blood tests",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "Add a steroid-sparing agent (step 7)",
+   "with": "Add a steroid-sparing agent",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "deferred on high-dose steroids (step 7)",
+   "with": "deferred on high-dose steroids",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "tb",
+   "find": "at the risk-group cutoff (step 5)",
+   "with": "at the risk-group cutoff",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "tb",
+   "find": "Latent TB infection: treat it (step 7)",
+   "with": "Latent TB infection: treat it",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "tb",
+   "find": "the antiretroviral timing (step 6); it also lowers the skin test cutoff (step 5)",
+   "with": "the antiretroviral timing; it also lowers the skin test cutoff",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "tb",
+   "find": "a rifamycin regimen (step 7)",
+   "with": "a rifamycin regimen",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "raised pressure</b> (step 4) or",
+   "with": "raised pressure</b> or",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "CT before any tap (step 4).",
+   "with": "CT before any tap.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "Empiric antibiotics by age (step 7).",
+   "with": "Empiric antibiotics by age.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "droplet precautions (step 8).",
+   "with": "droplet precautions.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "Send a CSF antigen test (step 4).",
+   "with": "Send a CSF antigen test.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "Read by the CSF table (step 5);",
+   "with": "Read by the CSF pattern;",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "(step 8 after recovery)",
+   "with": "(after recovery)",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": " Step 4 gives the CT rule and step 7 the regimen by age.</div>",
+   "with": "</div>",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "blood cultures and the tap (step 4),",
+   "with": "blood cultures and the tap,",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "adrenal hemorrhage (step 6)",
+   "with": "adrenal hemorrhage",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "droplet precautions and prophylaxis (step 8)",
+   "with": "droplet precautions and prophylaxis",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "Surgical evaluation now; admit (step 6).",
+   "with": "Surgical evaluation now; admit.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "Admit for intravenous antibiotics (step 6).",
+   "with": "Admit for intravenous antibiotics.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "Surgical evaluation (step 2).",
+   "with": "Surgical evaluation.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "pregnancy changes the PID plan (step 6)",
+   "with": "pregnancy changes the PID plan",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "Tubo-ovarian abscess: admit (step 6)",
+   "with": "Tubo-ovarian abscess: admit",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "NAAT for chlamydia and gonorrhea (step 8).",
+   "with": "NAAT for chlamydia and gonorrhea.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "No admission finding (step 6)",
+   "with": "No admission finding",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "Any admission finding (step 6)",
+   "with": "Any admission finding",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "no improvement means admission (step 6).",
+   "with": "no improvement means admission.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "the picture starts treatment (step 7); serology confirms it later (step 4)",
+   "with": "the picture starts treatment; serology confirms it later",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "then the lumbar puncture of step 4.",
+   "with": "then a lumbar puncture.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "Find and remove the tick (step 2).",
+   "with": "Find and remove the tick.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-pta",
+   "find": "ultrasound or the needle decides (step 4).",
+   "with": "ultrasound or the needle decides.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-pta",
+   "find": "antibiotics or drainage (route in step 7).",
+   "with": "antibiotics or drainage.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-pta",
+   "find": "no imaging in a classic case (exceptions in step 5).",
+   "with": "no imaging in a classic case.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-pta",
+   "find": "Airway threat: a reason to admit (step 8)",
+   "with": "Airway threat: a reason to admit",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-pta",
+   "find": "contrast CT now (step 2), treatment in step 7",
+   "with": "contrast CT now",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "add IV glucagon (step 7, rung 4).",
+   "with": "add IV glucagon.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "Any 1 of the 3 criteria (step 5)",
+   "with": "Any 1 of the 3 criteria",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "C1 inhibitor concentrate (step 7);",
+   "with": "C1 inhibitor concentrate;",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "its severity (step 6), for example",
+   "with": "its severity, for example",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "meningitis; antibiotics (step 6).",
+   "with": "meningitis; antibiotics.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "><span class=\"mask\">Stool culture; supportive care unless high risk (step 6)</span></span></td><",
+   "with": "><span class=\"mask\">Stool culture; supportive care unless high risk</span></span></td><",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "Stool culture; supportive care unless high risk (step 6)",
+   "with": "Stool culture; supportive care unless high risk",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "azithromycin if severe or high risk (step 6)",
+   "with": "azithromycin if severe or high risk",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "an antibiotic only if moderate to severe (step 6)",
+   "with": "an antibiotic only if moderate to severe",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "Names the organism; treat by step 7",
+   "with": "Names the organism; treat by organism",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "creatinine in a week (step 8)",
+   "with": "creatinine in a week",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "Bacteremia: antibiotics (step 6)",
+   "with": "Bacteremia: antibiotics",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "<i>C. difficile</i> infection (step 7)",
+   "with": "<i>C. difficile</i> infection",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "Giardiasis (step 7)",
+   "with": "Giardiasis",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "Amebiasis (step 7)",
+   "with": "Amebiasis",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "HUS (step 5): supportive care",
+   "with": "HUS: supportive care",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "adds IV metronidazole (step 7)",
+   "with": "adds IV metronidazole",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "tics",
+   "find": "then gauge impairment (step 6).",
+   "with": "then gauge impairment.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-sleep",
+   "find": "(the hypnogram, step 1)",
+   "with": "(the hypnogram)",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-sleep",
+   "find": "eased by moving (step 3),",
+   "with": "eased by moving,",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-sleep",
+   "find": "sleep diary.</span> (step 5).</span>",
+   "with": "sleep diary.</span></span>",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-sleep",
+   "find": "ferritin &lt;75 ng/mL (taught above).",
+   "with": "ferritin &lt;75 ng/mL.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-sleep",
+   "find": "Iron if stores are &darr; (step 4);",
+   "with": "Iron if stores are &darr;;",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "psychosis-duration",
+   "find": "check it against mood episodes (step 5).",
+   "with": "check it against mood episodes.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "sz-psychosocial",
+   "find": "<span class=\"mask\">clozapine</span> (step 8)",
+   "with": "<span class=\"mask\">clozapine</span>",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "sz-psychosocial",
+   "find": "Adjust the treatment: step 7",
+   "with": "Adjust the treatment",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bipolar-mania",
+   "find": "medical or neurologic cause (step 4)",
+   "with": "medical or neurologic cause",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bipolar-mania",
+   "find": "DIGFAST</span> symptoms (step 5)",
+   "with": "DIGFAST</span> symptoms",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bipolar-mania",
+   "find": "time the episode (step 5), then name the disorder from its episodes (step 6).",
+   "with": "time the episode, then name the disorder from its episodes.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bipolar-mania",
+   "find": "Diagnose bipolar I; treat it as in step 7",
+   "with": "Diagnose bipolar I; treat the mania",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bipolar-mania",
+   "find": "Severe agitation or manic psychosis: see step 2.",
+   "with": "Severe agitation or manic psychosis: an antipsychotic, since lithium takes 4 to 10 days.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bipolar-mania",
+   "find": "<a href=\"#bm-x2-vpa\">step 2</a>",
+   "with": "<a href=\"#bm-x2-vpa\">stop valproate</a>",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "mdd",
+   "find": "Atypical features: see step 6, Specifiers",
+   "with": "Atypical features: mood brightens with good news, more appetite, hypersomnia",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "mdd",
+   "find": "suicide risk assessment, step 2",
+   "with": "suicide risk assessment",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "mdd",
+   "find": "Psychotic features alone: the row above. Failed drug trials: step 7, rung 5.",
+   "with": "Failed drug trials: a TCA.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "mdd",
+   "find": " (step 6, Escalate).",
+   "with": ".",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cluster-b",
+   "find": "Treat it as well, as in step 7",
+   "with": "Treat it as well",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cluster-b",
+   "find": "<span class=\"mask\">Diagnose it; treat as in step 7</span></span></td></tr><tr><td>Paranoia",
+   "with": "<span class=\"mask\">Diagnose it; dialectical behavior therapy</span></span></td></tr><tr><td>Paranoia",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cluster-b",
+   "find": "Diagnose borderline personality disorder; treat as in step 7",
+   "with": "Diagnose borderline personality disorder; dialectical behavior therapy",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cluster-b",
+   "find": "<span class=\"mask\">Diagnose it; treat as in step 7</span>",
+   "with": "<span class=\"mask\">Diagnose it; psychotherapy</span>",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cluster-c",
+   "find": "Confirm with a second avoidant criterion, as in First step; CBT, as in step 7",
+   "with": "Confirm with a second avoidant criterion; CBT",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cluster-c",
+   "find": "d><span><span class=\"mask\">Start CBT or psychodynamic psychotherapy, as in step 7</span></span></td></tr><tr><td>Asks oth",
+   "with": "d><span><span class=\"mask\">Start CBT or psychodynamic psychotherapy</span></span></td></tr><tr><td>Asks oth",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cluster-c",
+   "find": "psychodynamic psychotherapy, as in step 7",
+   "with": "psychodynamic psychotherapy",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "ocd",
+   "find": "Specify tic-related OCD (step 6)",
+   "with": "Specify tic-related OCD",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "ocd",
+   "find": "CBT first (Related disorders, step 3)",
+   "with": "CBT first",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "ocd",
+   "find": "Repeat the suicide and depression screen in step 2 (Urgent risks)",
+   "with": "Repeat the suicide and depression screen",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "trauma-stress",
+   "find": "Start trauma-focused CBT, as in step 7",
+   "with": "Start trauma-focused CBT",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "trauma-stress",
+   "find": "Treat as PTSD, as in step 7",
+   "with": "Treat as PTSD",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "trauma-stress",
+   "find": "Start brief supportive psychotherapy, as in step 7",
+   "with": "Start brief supportive psychotherapy",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "trauma-stress",
+   "find": "Add prazosin, as in step 7",
+   "with": "Add prazosin",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "trauma-stress",
+   "find": "as memory returns, as in step 2",
+   "with": "as memory returns",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "trauma-stress",
+   "find": "Most attempt suicide, as in step 2",
+   "with": "Most attempt suicide",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "eating-disorders",
+   "find": "unstable vital signs or another step 2 criterion",
+   "with": "unstable vital signs or another admission criterion",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "eating-disorders",
+   "find": "hospitalize for any step 2 criterion",
+   "with": "hospitalize for any admission criterion",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "eating-disorders",
+   "find": "Follow the refeeding plan in step 2 (Urgent risks)",
+   "with": "Increase calories gradually; watch phosphate, potassium and magnesium",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "gppd",
+   "find": "pelvic floor tightening for about 6 months with distress: GPPPD (step 5).",
+   "with": "pelvic floor tightening for about 6 months with distress: GPPPD.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "sexual-dysfunction",
+   "find": "Sex therapy, as in step 7",
+   "with": "Sex therapy",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "sexual-dysfunction",
+   "find": "Counsel abstinence or cutting down, as in step 7",
+   "with": "Counsel abstinence or cutting down",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "sexual-dysfunction",
+   "find": "Order a cardiovascular evaluation, as in step 2",
+   "with": "Order a cardiovascular evaluation",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "sexual-dysfunction",
+   "find": "Start an SSRI, as in step 7",
+   "with": "Start an SSRI",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "substance",
+   "find": "timed from the last drink (step 5)",
+   "with": "timed from the last drink",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "substance",
+   "find": "electrocardiogram (ECG) early (step 4);",
+   "with": "electrocardiogram (ECG) early;",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "substance",
+   "find": "then treat by drug (step 7).",
+   "with": "then treat by drug.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "substance",
+   "find": "Treat the withdrawal (step 7);",
+   "with": "Treat the withdrawal;",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "substance",
+   "find": "watch for delirium tremens (step 5)",
+   "with": "watch for delirium tremens",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "angina",
+   "find": "Stress-test selection is taught in <a href=\"#ai-s5\">Diagnostic workup</a> above.",
+   "with": "The stress test follows whether the patient can exercise and whether the resting ECG can be read.",
+   "note": "s163 E3 num (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "dvt",
+   "find": "Contraceptive eligibility is owned by <a href=\"#contraception\">Contraception</a>.",
+   "with": "Contraceptive eligibility: see <a href=\"#contraception\">Contraception</a>.",
+   "note": "s163 E3 own (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "scd-dyspnea",
+   "find": "sequestration stops and infection risk takes over.",
+   "with": "sequestration stops and infection becomes the main risk.",
+   "note": "s163 E3 own (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "bone-tumors",
+   "item": "q_4f042bb76dcdd1b23ac6",
+   "find": "Spontaneous resolution belongs to osteoid osteoma",
+   "with": "Spontaneous resolution points to osteoid osteoma",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "bone-tumors",
+   "item": "q_4f042bb76dcdd1b23ac6",
+   "find": "involution belongs to osteoid osteoma",
+   "with": "involution points to osteoid osteoma",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "ped-murmur",
+   "item": "q_94094f32cc56517f9a1e",
+   "find": "A Still murmur is vibratory and belongs to older children",
+   "with": "A Still murmur is vibratory and occurs in older children",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "ped-murmur",
+   "item": "q_f159d63dc88654de85b9",
+   "find": "Peripheral pulmonary stenosis belongs to the first year;",
+   "with": "Peripheral pulmonary stenosis is a first-year murmur;",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "ped-murmur",
+   "item": "q_f159d63dc88654de85b9",
+   "find": "peripheral pulmonary stenosis belongs to the first year",
+   "with": "peripheral pulmonary stenosis is a first-year murmur",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "Choanal atresia may belong to <b>CHARGE</b>",
+   "with": "Choanal atresia may be part of <b>CHARGE</b>",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "uri",
+   "item": "q_6f72d4037f4c55c39e99",
+   "find": "Mycoplasma belongs to age 5 and older",
+   "with": "Mycoplasma is typical at age 5 and older",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "bpd",
+   "item": "q_7612679f02ebe1094d50",
+   "find": "air leak belongs to the first days on high pressures",
+   "with": "air leak occurs in the first days on high pressures",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bpd",
+   "find": "but it belongs to the first days.",
+   "with": "but it occurs in the first days.",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "Immediate surgery belongs to gastroschisis and omphalocele",
+   "with": "Immediate surgery is for gastroschisis and omphalocele",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-puffy-eyes",
+   "find": "Does the swelling belong to the eye or to the whole child,",
+   "with": "Is the swelling confined to the eye or spread over the whole child,",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-puffy-eyes",
+   "find": "whether the swelling belongs to the eye or to the whole child.",
+   "with": "whether the swelling is confined to the eye or spread over the whole child.",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "<b>Two-word phrases belong to 24 months</b>",
+   "with": "<b>Two-word phrases come at 24 months</b>",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "aneuploidy",
+   "find": "Which finding belongs to only one syndrome:",
+   "with": "Which finding is unique to one syndrome:",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "aneuploidy",
+   "find": "cryptorchidism sit on several lists.",
+   "with": "cryptorchidism appear on several lists.",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "aneuploidy",
+   "item": "q_5dd29b5c534d0c97114d",
+   "find": "single S2 and belongs to 22q11 deletion",
+   "with": "single S2 and points to 22q11 deletion",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "aneuploidy",
+   "item": "q_c9f5f2fc364833d19f30",
+   "find": "coloboma together belong to CHARGE alone",
+   "with": "coloboma together point to CHARGE alone",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "aneuploidy",
+   "find": "the one finding that sits on the fewest syndrome lists and that you are certain belongs to this infant;",
+   "with": "the one finding that appears on the fewest syndrome lists and that you are certain this infant has;",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "The untreated Kawasaki illness sits in the past history",
+   "with": "The untreated Kawasaki illness is in the past history",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "arf",
+   "item": "q_a0a18460905c5eb98320",
+   "find": "the latency belongs to the pharyngitis",
+   "with": "the latency fits the pharyngitis",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "del22q11",
+   "item": "q_e4749fcbbe1954398fc9",
+   "find": "A horseshoe kidney belongs to Turner syndrome.",
+   "with": "A horseshoe kidney points to Turner syndrome.",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "del22q11",
+   "find": "but it belongs to Turner, and nothing else",
+   "with": "but it is a Turner finding, and nothing else",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "scd-dyspnea",
+   "item": "q_691a0538bf4b5fd5a535",
+   "find": "Acute chest syndrome belongs to disease, not to a carrier,",
+   "with": "Acute chest syndrome is a complication of disease, not of a carrier,",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "scd-dyspnea",
+   "item": "q_fb2467d814de5f82ac1d",
+   "find": "Acute chest syndrome belongs to disease, not to a carrier,",
+   "with": "Acute chest syndrome is a complication of disease, not of a carrier,",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "scd-dyspnea",
+   "item": "q_21956ab164f355959d58",
+   "find": "A restrictive pattern belongs to fibrosis,",
+   "with": "A restrictive pattern points to fibrosis,",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "fap",
+   "item": "q_bc5c6fedeba886107fad",
+   "find": "The age-40 schedule belongs to sporadic family history",
+   "with": "The age-40 schedule is for sporadic family history",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "fap",
+   "item": "q_bc5c6fedeba886107fad",
+   "find": "the age-40 schedule belongs to sporadic family history",
+   "with": "the age-40 schedule is for sporadic family history",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "early-onset Alzheimer disease belong to Down syndrome,",
+   "with": "early-onset Alzheimer disease point to Down syndrome,",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "but it belongs to preterm infants in their first weeks on feeds;",
+   "with": "but it affects preterm infants in their first weeks on feeds;",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "hematuria",
+   "item": "q_3b7389e870885b086d99",
+   "find": "calcium/creatinine ratio belong to the nonglomerular branch",
+   "with": "calcium/creatinine ratio are for the nonglomerular branch",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "peds-uti-recurrent",
+   "item": "q_3e48e4abd8ec546aa249",
+   "find": "acquired renal cysts belong to children on dialysis;",
+   "with": "acquired renal cysts occur in children on dialysis;",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "peds-uti-recurrent",
+   "item": "q_3ffef5b8271b5b71a315",
+   "find": "Prophylaxis belongs to reflux,",
+   "with": "Prophylaxis is for reflux,",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "</b> sits at the other end of the same imaging pathway.",
+   "with": "</b> is the other end of the same imaging pathway.",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "is pigmented and belongs to a different family",
+   "with": "is pigmented and points to a different family",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "No hemangioblastoma belongs to it",
+   "with": "Hemangioblastoma is not part of it",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "arteriovenous malformation, which belongs to Wyburn-Mason syndrome",
+   "with": "arteriovenous malformation, which points to Wyburn-Mason syndrome",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "and they belong to different syndromes.",
+   "with": "and they point to different syndromes.",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "calcified subependymal nodules belong to tuberous sclerosis",
+   "with": "calcified subependymal nodules point to tuberous sclerosis",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "arteriovenous malformations belong to Wyburn-Mason syndrome,",
+   "with": "arteriovenous malformations point to Wyburn-Mason syndrome,",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "drug-hemolysis",
+   "item": "q_c92880e099c27d0fdea7",
+   "find": "CD55 and CD59 belong to paroxysmal nocturnal hemoglobinuria,",
+   "with": "CD55 and CD59 point to paroxysmal nocturnal hemoglobinuria,",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "and does not belong to XLA or CVID.",
+   "with": "and is not part of XLA or CVID.",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<b>Burkholderia cepacia belongs to two diseases</b>",
+   "with": "<b>Burkholderia cepacia is seen in two diseases</b>",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "It sits in the past medical history, where it is easy to skim.",
+   "with": "It is in the past medical history, where it is easy to skim.",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "valacyclovir, which belongs to T-cell defects",
+   "with": "valacyclovir, which is for T-cell defects",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "When an organism belongs to two diseases, it cannot separate them; find the finding that belongs to only one.",
+   "with": "When an organism is seen in two diseases, it cannot separate them; find the finding unique to one.",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "the findings that belong to only one disease are",
+   "with": "the findings unique to one disease are",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "bs-torch",
+   "item": "q_56030e33fc21550a8c0b",
+   "find": "because the PCR window belongs to cytomegalovirus",
+   "with": "because the PCR window applies to cytomegalovirus",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "bs-isolation",
+   "item": "q_3bf278dd331b6026a6e6",
+   "find": "The 24-hour rule belongs to meningococcus and Hib, not TB.",
+   "with": "The 24-hour rule is for meningococcus and Hib, not TB.",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "sellar-mass",
+   "item": "q_18fa06e851297f8ed32a",
+   "find": "subependymal nodules belong to tuberous sclerosis,",
+   "with": "subependymal nodules point to tuberous sclerosis,",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-rash",
+   "find": "while the diagnosis sits in the white discharge",
+   "with": "while the diagnosis is in the white discharge",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "cervical",
+   "item": "q_cff4ff6eccf35620aa6c",
+   "find": "and co-testing belongs to the 30 to 65 options",
+   "with": "and co-testing is one of the 30 to 65 options",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "Which single malformation belongs to only one agent,",
+   "with": "Which single malformation is unique to one agent,",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "the malformation that belongs to only one agent",
+   "with": "the malformation unique to one agent",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "It is nonspecific and belongs to every option",
+   "with": "It is nonspecific and fits every option",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "find the one malformation that belongs to only one agent.",
+   "with": "find the one malformation unique to one agent.",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "psychosis-duration",
+   "find": "and how they sit with mood episodes",
+   "with": "and how they relate to mood episodes",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "trauma-stress",
+   "find": "in response to a trauma belong to the trauma disorder;",
+   "with": "in response to a trauma fit the trauma disorder;",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "antipsych-effects",
+   "item": "q_7ecf9270b9fbc20072e9",
+   "find": "Dantrolene belongs to neuroleptic malignant syndrome",
+   "with": "Dantrolene treats neuroleptic malignant syndrome",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "antipsych-effects",
+   "item": "q_7ecf9270b9fbc20072e9",
+   "find": "Propranolol belongs to akathisia",
+   "with": "Propranolol treats akathisia",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "antipsych-effects",
+   "item": "q_32d77d62cc7b4a97b814",
+   "find": "Propranolol belongs to akathisia",
+   "with": "Propranolol treats akathisia",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "antipsych-effects",
+   "item": "q_7ecf9270b9fbc20072e9",
+   "find": "dantrolene belongs to neuroleptic malignant syndrome and propranolol to akathisia",
+   "with": "dantrolene treats neuroleptic malignant syndrome and propranolol akathisia",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "lithium-effects",
+   "find": "a high sodium with dilute urine belongs to the kidney,",
+   "with": "a high sodium with dilute urine points to the kidney,",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "pc-antidep",
+   "item": "q_766ab28e050dbbdd4ad9",
+   "find": "Insomnia belongs to bupropion; mirtazapine sedates",
+   "with": "Insomnia is a bupropion effect; mirtazapine sedates",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "pc-antidep",
+   "item": "q_766ab28e050dbbdd4ad9",
+   "find": "insomnia belongs to bupropion,",
+   "with": "insomnia is a bupropion effect,",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace",
+   "brief": "mood-anticonv",
+   "find": "its levels, toxicity and interactions sit on its own brief <button",
+   "with": "for its levels, toxicity and interactions, see <button",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "mood-anticonv",
+   "item": "q_cb56446f0dc0956920d9",
+   "find": "and ammonia belongs to valproate",
+   "with": "and ammonia is checked with valproate",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "mood-anticonv",
+   "item": "q_a49c18ec7406361c9b96",
+   "find": "hyperammonemic encephalopathy belongs to valproate,",
+   "with": "hyperammonemic encephalopathy is a valproate effect,",
+   "note": "s163 E3 place (D4/D6)"
+  },
+  {
+   "op": "replace_item_text",
+   "brief": "pc-benzo",
+   "item": "q_6d24488ee771f06c57d8",
+   "find": "agranulocytosis belongs to clozapine and urinary retention to anticholinergic drugs",
+   "with": "agranulocytosis is a clozapine effect and urinary retention an anticholinergic one",
+   "note": "s163 E3 place (D4/D6)"
+  }
+ ]
+}

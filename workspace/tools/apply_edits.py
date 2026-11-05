@@ -24,6 +24,11 @@ OPS = {
     'add_item': ({'brief', 'type', 'stem', 'answer', 'd1', 'd2'},
                  {'companion', 'lead_in', 'status', 'src', 'nid', 'after_item', 'attrs', 'bold_answer', 'note'}),
     'set_attr': ({'target', 'attr', 'value'}, {'note'}),
+    # s163 (CRITERIA_STEP2 Part D; D7 "no need for full reviews since these are smaller cosmetic changes"): a wording
+    # change inside one bank item (its text or its data-*-why reasons), scoped to that item's <li>; every identity
+    # attribute and the item's keyed answer and option labels must come out unchanged; bump "+1" raises
+    # data-item-version (a meaning change); without it the change is wording only
+    'replace_item_text': ({'brief', 'item', 'find', 'with'}, {'bump', 'note'}),
     'new_brief': ({'after', 'html'}, {'nav', 'note'}),
     'retire_brief': ({'brief', 'alias_before', 'ledger'}, {'note'}),
     'replace_global': ({'find', 'with'}, {'note'}),
@@ -209,6 +214,29 @@ def apply_one(html, e, n, taken, log):
             ins = li + '\n' if pre.endswith('\n') else '\n' + li + '\n'
             html = splice(html, [(ol_end, ol_end, ins)])
         log.append('add_item %s to %s' % (ids['data-item-id'], b.id))
+        return html
+    if op == 'replace_item_text':
+        b = _brief(html, e['brief'], n, op)
+        it = _item(html, e['item'], n, op)
+        if not (b.start <= it.start < b.end):
+            raise EditError(n, op, 'item %s is not in brief %s' % (it.id, b.id), 'name the brief that holds the item')
+        at = _unique(html, it.start, it.end, e['find'], n, op, 'item %s' % it.id)
+        before = attrs(html[it.start:it.open_end])
+        new_html = splice(html, [(at, at + len(e['find']), e['with'])])
+        it2 = _item(new_html, e['item'], n, op)
+        after = attrs(new_html[it2.start:it2.open_end])
+        fixed = IDENTITY | {'data-answer', 'data-d1', 'data-d2', 'data-type', 'data-src', 'data-nid', 'data-recon',
+                            'data-item-version'}
+        changed = sorted(k for k in fixed if before.get(k) != after.get(k))
+        if changed:
+            raise EditError(n, op, 'the edit changes %s of item %s' % (', '.join(changed), it.id),
+                            'replace_item_text changes wording only; ids, keys and labels stay (set_attr for others)')
+        html = new_html
+        if e.get('bump') == '+1':
+            tag = html[it2.start:it2.open_end]
+            v = str(int(after.get('data-item-version', '1')) + 1)
+            html = splice(html, [(it2.start, it2.open_end, set_attr_in_tag(tag, 'data-item-version', v))])
+        log.append('replace_item_text %s in %s' % (it.id, b.id))
         return html
     if op == 'set_attr':
         tgt, name, val = e['target'], e['attr'], e['value']

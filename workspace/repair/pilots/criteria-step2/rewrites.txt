@@ -1,0 +1,274 @@
+# s163 E3 hand rewrites (D4 no structural or ownership wording; D6 no figurative placement; B3 plain clinical words).
+# brief ||| exact old HTML ||| new HTML ||| occurrences (default 1) ||| class
+# Applied after the step move, scoped to the brief; an occurrence inside a bank item becomes replace_item_text.
+# Kept, by hand check: literal location (chondroblastoma sits in the epiphysis, aortic stenosis sits at the upper right
+# sternal border, an omphalocele sits at the umbilicus, sits on the kidney, HSV and herpangina sit at the front or back
+# of the mouth, a venous ulcer sits at the medial malleolus, a cecal volvulus gas bubble, sits on the lid margin, sits on
+# the convex skin, pustules sit on a red base, yeast sits in the diaper area, a mass sits on a midline structure, Rickettsia
+# lives in vascular endothelium), residence (lives in a city, a rural area, a northern state, a high-prevalence community,
+# a nonendemic area), milestones (sits with support), biology (the infant's own synthesis takes over; the kidney handles
+# sodium; handles food), the exam name (Step 2, Step 2 CK, the Step 2 answer), and an algorithm's own steps
+# (primary amenorrhea's table "Before step 1").
+
+# ---- numeric step references and ownership (D4)
+cholestasis ||| <span class="mask">Act now (step 2) owns it.</span> ||| <span class="mask">Blood cultures and antibiotics, then ERCP to remove the stone.</span> ||| 2 ||| own
+cholestasis ||| serologies and the first tests in the step 3 hepatocellular table ||| serologies and the first hepatocellular tests ||| 1 ||| num
+cholestasis |||  (the step 4 Skip line). ||| . ||| 1 ||| num
+cholestasis ||| Liver Disease in Pregnancy owns the workup and delivery timing. ||| Fasting bile acids; ursodeoxycholic acid and timed delivery. ||| 1 ||| own
+infant-stool ||| infant goes to step 2. ||| infant is treated as an emergency first. ||| 1 ||| num
+infant-stool |||  (plan in step 4). ||| . ||| 1 ||| num
+infant-stool ||| Remove cow's milk and soy protein (step 4); no scope. ||| Remove cow's milk and soy protein; no scope. ||| 1 ||| num
+infant-stool ||| when dairy is the clear trigger (step 4); ||| when dairy is the clear trigger; ||| 1 ||| num
+infant-stool ||| Ill-appearing mimic: step 2 ||| Ill-appearing mimic: treat it urgently ||| 1 ||| num
+infant-stool ||| Act now (step 2) owns them. ||| IV fluids for FPIES; epinephrine for IgE allergy; bowel rest and IV antibiotics for necrotizing enterocolitis. ||| 1 ||| own
+infant-stool ||| Constipation in a Child owns the diet and laxative plan. ||| Diet change and a laxative. ||| 1 ||| own
+infant-stool ||| Examine the anus; GI Bleeding in a Child owns bleeding past infancy. ||| Examine the anus; past infancy, see GI Bleeding in a Child. ||| 1 ||| own
+feeding-refusal ||| Urgent endoscopy, as in Act now (step 2). ||| Urgent endoscopy. ||| 1 ||| num
+rlq-pain ||| before anything else (step 2). ||| before anything else. ||| 1 ||| num
+rlq-pain ||| <b>Campylobacter and Yersinia</b>: see Treatment by cause in step 4 ||| <b>Campylobacter and Yersinia</b>: treated by cause ||| 1 ||| num
+peds-constipation ||| the test follows the sign (step 4). ||| the test follows the sign. ||| 1 ||| num
+peds-constipation |||  (ladder in step 4). ||| . ||| 1 ||| num
+peds-constipation ||| gets a radiograph (step 2), ||| gets a radiograph, ||| 1 ||| num
+cyclic-vomiting ||| means act first (step 2); ||| means act first; ||| 1 ||| num
+cyclic-vomiting ||| then treat by cause (step 4). ||| then treat by cause. ||| 1 ||| num
+cyclic-vomiting ||| Notify child protective services (step 4). ||| Notify child protective services. ||| 1 ||| num
+cyclic-vomiting ||| (bilious vomiting goes to step 2) ||| (bilious vomiting is a surgical emergency) ||| 1 ||| num
+cyclic-vomiting ||| Treat as cyclic vomiting syndrome (step 4). ||| Treat as cyclic vomiting syndrome. ||| 1 ||| num
+cyclic-vomiting ||| : act first (step 2), not cyclic vomiting ||| : act first, not cyclic vomiting ||| 1 ||| num
+herpangina ||| heart rate); step 4 sets the fluid route. ||| heart rate); oral rehydration in small, frequent amounts, IV fluids if severe. ||| 1 ||| num
+scfe ||| After films confirm a slip (step 5), only if atypical ||| After films confirm a slip, only if atypical ||| 1 ||| num
+scfe ||| Films of both hips (confirm: step 5) ||| Films of both hips to confirm ||| 1 ||| num
+scfe ||| <p class="sp-note">Stability and slip grade: step 6. Treatment: step 7. <button ||| <p class="sp-note"><button ||| 1 ||| num
+myositis-ossificans ||| Use the urgent infection branch in step 2 ||| Immediate surgical assessment and antibiotics ||| 1 ||| num
+scheuermann ||| Use the treatment ladder in step 7 ||| Conservative care; a brace if the curve progresses with growth remaining ||| 1 ||| num
+bs-puncture-osteomyelitis ||| Tailor antibiotics as in step 7 ||| Tailor antibiotics when susceptibilities return ||| 1 ||| num
+bs-torticollis ||| Begin the muscle treatment in step 7 ||| Begin gentle stretching and physical therapy ||| 1 ||| num
+bs-torticollis ||| Resistance to first-line care; use the escalation rung in step 7 ||| Resistance to first-line care; pediatric orthopedic reassessment ||| 1 ||| num
+bs-torticollis ||| use the escalation rung in step 7 if restriction persists ||| pediatric orthopedic reassessment if restriction persists ||| 1 ||| num
+bs-brachial-plexus ||| Reassess motor recovery and apply the referral criteria in step 7 ||| Reassess motor recovery; refer if no improvement over 1 to 2 months ||| 1 ||| num
+bs-brachial-plexus ||| hand movement; apply the referral criteria in step 7 ||| hand movement; refer if no improvement over 1 to 2 months ||| 1 ||| num
+kawasaki |||  (step 5 gives the age and fever rule) ||| ||| 1 ||| num
+kawasaki |||  (step 7 gives the timing) ||| ||| 1 ||| num
+kawasaki ||| a second dose (step 7); ||| a second dose; ||| 1 ||| num
+arf ||| The longest prophylaxis (step 8) ||| The longest prophylaxis ||| 1 ||| num
+arf ||| continued for years (step 8). ||| continued for years. ||| 1 ||| num
+bs-adolescent-bp ||| stage 1 at 3 visits (step 6) ||| stage 1 at 3 visits ||| 1 ||| num
+bs-adolescent-bp ||| Baseline tests (step 8); a secondary cause ||| Baseline tests; a secondary cause ||| 1 ||| num
+bs-adolescent-bp ||| call for drug therapy (step 8) ||| call for drug therapy ||| 1 ||| num
+bs-adolescent-bp ||| Confirmed hypertension: baseline tests (step 8); ||| Confirmed hypertension: baseline tests; ||| 1 ||| num
+copd ||| hematocrit &gt;55% (step 7).</span> ||| hematocrit &gt;55%.</span> ||| 1 ||| num
+copd ||| assign a treatment group (step 6). ||| assign a treatment group. ||| 1 ||| num
+scd-dyspnea ||| oxygen and transfusion (step 7)</span> ||| oxygen and transfusion</span> ||| 1 ||| num
+liver-preg ||| Deliver at 36 weeks (step 7) ||| Deliver at 36 weeks ||| 1 ||| num
+masld ||| so stage every patient (step 4). ||| so stage every patient. ||| 1 ||| num
+masld ||| part of the first panel (step 4). ||| part of the first panel. ||| 1 ||| num
+masld ||| cardiometabolic risk factor (step 5) ||| cardiometabolic risk factor ||| 1 ||| num
+masld ||| recheck periodically (step 8) ||| recheck periodically ||| 1 ||| num
+masld ||| hepatology referral (step 8) ||| hepatology referral ||| 1 ||| num
+masld ||| Start a statin (step 7). ||| Start a statin. ||| 1 ||| num
+masld ||| Resmetirom candidate (step 7) ||| Resmetirom candidate ||| 1 ||| num
+masld ||| HCC and varices (step 8 gives the follow-up) ||| HCC and varices ||| 1 ||| num
+zenker ||| the main complication (step 8). ||| the main complication. ||| 1 ||| num
+zenker ||| endoscopy with biopsy (step 3). ||| endoscopy with biopsy. ||| 1 ||| num
+zenker ||| perforate it ⚠︎ (step 2). ||| perforate it ⚠︎. ||| 1 ||| num
+zenker ||| plus a pouch procedure (step 7) ||| plus a pouch procedure ||| 1 ||| num
+zenker ||| A symptomatic Zenker pouch is treated as in step 7. ||| A symptomatic Zenker pouch needs cricopharyngeal myotomy plus a pouch procedure. ||| 1 ||| num
+zenker ||| Image before any tube or scope (step 2). ||| Image before any tube or scope. ||| 1 ||| num
+fap |||  (step 6 lists the triggers). ||| . ||| 1 ||| num
+fap ||| upper and lower endoscopy (step 4). ||| upper and lower endoscopy. ||| 1 ||| num
+fap ||| screen yearly by scope (step 4) ||| screen yearly by scope ||| 1 ||| num
+fap ||| Any step 6 trigger: ||| Any surgical trigger: ||| 1 ||| num
+fap ||| Operate now, whatever the age (step 6) ||| Operate now, whatever the age ||| 1 ||| num
+fap ||| Any age, with a step 6 trigger ||| Any age, with a surgical trigger ||| 1 ||| num
+fap ||| surveillance is lifelong (step 8). ||| surveillance is lifelong. ||| 1 ||| num
+bs-impaction ||| Impaction pattern (Diagnostic test); clear it (step 7) ||| Impaction pattern; clear it ||| 1 ||| num
+bs-impaction ||| Fecal impaction (step 5 gives the rule) ||| Fecal impaction ||| 1 ||| num
+bs-impaction ||| Anorectal manometry (step 4 targeted tests) ||| Anorectal manometry ||| 1 ||| num
+bs-tef ||| the tube test (step 4) comes before ||| the tube test comes before ||| 1 ||| num
+bs-tef ||| acid suppression (step 7); aspiration pneumonia makes repair more hazardous and can defer it (step 6). ||| acid suppression; aspiration pneumonia makes repair more hazardous and can defer it. ||| 1 ||| num
+bs-tef ||| if repair is deferred (step 6); ||| if repair is deferred; ||| 1 ||| num
+bs-tef ||| the gas pattern sorts the type (step 5) ||| the gas pattern sorts the type ||| 1 ||| num
+bs-tef ||| Repair now (step 7) ||| Repair now ||| 1 ||| num
+bs-tef ||| a replacement operation (step 7) ||| a replacement operation ||| 1 ||| num
+bs-tef ||| Extremely long gap (step 6) ||| Extremely long gap ||| 1 ||| num
+bs-tef ||| Repair deferred (step 6) ||| Repair deferred ||| 1 ||| num
+bs-tef ||| More than 40%; acid suppression (step 7) ||| More than 40%; acid suppression ||| 1 ||| num
+bs-wilson ||| so refer now (step 7). ||| so refer now. ||| 1 ||| num
+bs-wilson ||| acute liver failure (step 8). ||| acute liver failure. ||| 1 ||| num
+bs-wilson ||| severe liver failure despite drugs (step 7); ||| severe liver failure despite drugs; ||| 1 ||| num
+bs-wilson ||| Fulminant disease: liver transplant (step 7) ||| Fulminant disease: liver transplant ||| 1 ||| num
+pyelo ||| Image, as in step 7 ||| CT for an abscess or obstruction; in pregnancy, ultrasound ||| 1 ||| num
+nephropathy ||| Persistent albuminuria: treat (step 7) ||| Persistent albuminuria: treat ||| 1 ||| num
+hypercalcemia ||| Saline, calcitonin, bisphosphonate (step 2) ||| Saline, calcitonin, bisphosphonate ||| 1 ||| num
+nephrotic-child ||| <span class="mask"><b>Nephritic</b>: step 2</span> ||| <span class="mask"><b>Nephritic</b>: pediatric nephrology referral</span> ||| 1 ||| num
+nephrotic-child ||| Reassure (follow-up in step 8) ||| Reassure ||| 1 ||| num
+nephrotic-child ||| are normal (follow-up in step 8) ||| are normal ||| 1 ||| num
+nephrotic-child ||| Basic renal blood tests (step 4) ||| Basic renal blood tests ||| 1 ||| num
+nephrotic-child ||| Add a steroid-sparing agent (step 7) ||| Add a steroid-sparing agent ||| 1 ||| num
+nephrotic-child ||| deferred on high-dose steroids (step 7) ||| deferred on high-dose steroids ||| 1 ||| num
+tb ||| at the risk-group cutoff (step 5) ||| at the risk-group cutoff ||| 1 ||| num
+tb ||| Latent TB infection: treat it (step 7) ||| Latent TB infection: treat it ||| 1 ||| num
+tb ||| the antiretroviral timing (step 6); it also lowers the skin test cutoff (step 5) ||| the antiretroviral timing; it also lowers the skin test cutoff ||| 1 ||| num
+tb ||| a rifamycin regimen (step 7) ||| a rifamycin regimen ||| 1 ||| num
+meningitis ||| raised pressure</b> (step 4) or ||| raised pressure</b> or ||| 1 ||| num
+meningitis ||| CT before any tap (step 4). ||| CT before any tap. ||| 1 ||| num
+meningitis ||| Empiric antibiotics by age (step 7). ||| Empiric antibiotics by age. ||| 1 ||| num
+meningitis ||| droplet precautions (step 8). ||| droplet precautions. ||| 1 ||| num
+meningitis ||| Send a CSF antigen test (step 4). ||| Send a CSF antigen test. ||| 1 ||| num
+meningitis ||| Read by the CSF table (step 5); ||| Read by the CSF pattern; ||| 1 ||| num
+meningitis ||| (step 8 after recovery) ||| (after recovery) ||| 1 ||| num
+meningitis |||  Step 4 gives the CT rule and step 7 the regimen by age.</div> ||| </div> ||| 1 ||| num
+meningitis ||| blood cultures and the tap (step 4), ||| blood cultures and the tap, ||| 1 ||| num
+meningitis ||| adrenal hemorrhage (step 6) ||| adrenal hemorrhage ||| 1 ||| num
+meningitis ||| droplet precautions and prophylaxis (step 8) ||| droplet precautions and prophylaxis ||| 1 ||| num
+cervicitis ||| Surgical evaluation now; admit (step 6). ||| Surgical evaluation now; admit. ||| 1 ||| num
+cervicitis ||| Admit for intravenous antibiotics (step 6). ||| Admit for intravenous antibiotics. ||| 1 ||| num
+cervicitis ||| Surgical evaluation (step 2). ||| Surgical evaluation. ||| 1 ||| num
+cervicitis ||| pregnancy changes the PID plan (step 6) ||| pregnancy changes the PID plan ||| 1 ||| num
+cervicitis ||| Tubo-ovarian abscess: admit (step 6) ||| Tubo-ovarian abscess: admit ||| 1 ||| num
+cervicitis ||| NAAT for chlamydia and gonorrhea (step 8). ||| NAAT for chlamydia and gonorrhea. ||| 1 ||| num
+cervicitis ||| No admission finding (step 6) ||| No admission finding ||| 1 ||| num
+cervicitis ||| Any admission finding (step 6) ||| Any admission finding ||| 1 ||| num
+cervicitis ||| no improvement means admission (step 6). ||| no improvement means admission. ||| 1 ||| num
+rmsf ||| the picture starts treatment (step 7); serology confirms it later (step 4) ||| the picture starts treatment; serology confirms it later ||| 1 ||| num
+rmsf ||| then the lumbar puncture of step 4. ||| then a lumbar puncture. ||| 1 ||| num
+rmsf ||| Find and remove the tick (step 2). ||| Find and remove the tick. ||| 1 ||| num
+bs-pta ||| ultrasound or the needle decides (step 4). ||| ultrasound or the needle decides. ||| 1 ||| num
+bs-pta ||| antibiotics or drainage (route in step 7). ||| antibiotics or drainage. ||| 1 ||| num
+bs-pta ||| no imaging in a classic case (exceptions in step 5). ||| no imaging in a classic case. ||| 1 ||| num
+bs-pta ||| Airway threat: a reason to admit (step 8) ||| Airway threat: a reason to admit ||| 1 ||| num
+bs-pta ||| contrast CT now (step 2), treatment in step 7 ||| contrast CT now ||| 1 ||| num
+bs-anaphylaxis ||| add IV glucagon (step 7, rung 4). ||| add IV glucagon. ||| 1 ||| num
+bs-anaphylaxis ||| Any 1 of the 3 criteria (step 5) ||| Any 1 of the 3 criteria ||| 1 ||| num
+bs-anaphylaxis ||| C1 inhibitor concentrate (step 7); ||| C1 inhibitor concentrate; ||| 1 ||| num
+bs-foodborne ||| its severity (step 6), for example ||| its severity, for example ||| 1 ||| num
+bs-foodborne ||| meningitis; antibiotics (step 6). ||| meningitis; antibiotics. ||| 1 ||| num
+bs-foodborne ||| Stool culture; supportive care unless high risk (step 6) ||| Stool culture; supportive care unless high risk ||| 2 ||| num
+bs-foodborne ||| azithromycin if severe or high risk (step 6) ||| azithromycin if severe or high risk ||| 1 ||| num
+bs-foodborne ||| an antibiotic only if moderate to severe (step 6) ||| an antibiotic only if moderate to severe ||| 1 ||| num
+bs-foodborne ||| Names the organism; treat by step 7 ||| Names the organism; treat by organism ||| 1 ||| num
+bs-foodborne ||| creatinine in a week (step 8) ||| creatinine in a week ||| 1 ||| num
+bs-foodborne ||| Bacteremia: antibiotics (step 6) ||| Bacteremia: antibiotics ||| 1 ||| num
+bs-foodborne ||| <i>C. difficile</i> infection (step 7) ||| <i>C. difficile</i> infection ||| 1 ||| num
+bs-foodborne ||| Giardiasis (step 7) ||| Giardiasis ||| 1 ||| num
+bs-foodborne ||| Amebiasis (step 7) ||| Amebiasis ||| 1 ||| num
+bs-foodborne ||| HUS (step 5): supportive care ||| HUS: supportive care ||| 1 ||| num
+bs-foodborne ||| adds IV metronidazole (step 7) ||| adds IV metronidazole ||| 1 ||| num
+tics ||| then gauge impairment (step 6). ||| then gauge impairment. ||| 1 ||| num
+peds-sleep ||| (the hypnogram, step 1) ||| (the hypnogram) ||| 1 ||| num
+peds-sleep ||| eased by moving (step 3), ||| eased by moving, ||| 1 ||| num
+peds-sleep ||| sleep diary.</span> (step 5).</span> ||| sleep diary.</span></span> ||| 1 ||| num
+peds-sleep ||| ferritin &lt;75 ng/mL (taught above). ||| ferritin &lt;75 ng/mL. ||| 1 ||| num
+peds-sleep ||| Iron if stores are &darr; (step 4); ||| Iron if stores are &darr;; ||| 1 ||| num
+psychosis-duration ||| check it against mood episodes (step 5). ||| check it against mood episodes. ||| 1 ||| num
+sz-psychosocial ||| <span class="mask">clozapine</span> (step 8) ||| <span class="mask">clozapine</span> ||| 1 ||| num
+sz-psychosocial ||| Adjust the treatment: step 7 ||| Adjust the treatment ||| 1 ||| num
+bipolar-mania ||| medical or neurologic cause (step 4) ||| medical or neurologic cause ||| 1 ||| num
+bipolar-mania ||| DIGFAST</span> symptoms (step 5) ||| DIGFAST</span> symptoms ||| 1 ||| num
+bipolar-mania ||| time the episode (step 5), then name the disorder from its episodes (step 6). ||| time the episode, then name the disorder from its episodes. ||| 1 ||| num
+bipolar-mania ||| Diagnose bipolar I; treat it as in step 7 ||| Diagnose bipolar I; treat the mania ||| 1 ||| num
+bipolar-mania ||| Severe agitation or manic psychosis: see step 2. ||| Severe agitation or manic psychosis: an antipsychotic, since lithium takes 4 to 10 days. ||| 1 ||| num
+bipolar-mania ||| <a href="#bm-x2-vpa">step 2</a> ||| <a href="#bm-x2-vpa">stop valproate</a> ||| 1 ||| num
+mdd ||| Atypical features: see step 6, Specifiers ||| Atypical features: mood brightens with good news, more appetite, hypersomnia ||| 1 ||| num
+mdd ||| suicide risk assessment, step 2 ||| suicide risk assessment ||| 1 ||| num
+mdd ||| Psychotic features alone: the row above. Failed drug trials: step 7, rung 5. ||| Failed drug trials: a TCA. ||| 1 ||| num
+mdd |||  (step 6, Escalate). ||| . ||| 1 ||| num
+cluster-b ||| Treat it as well, as in step 7 ||| Treat it as well ||| 1 ||| num
+cluster-b ||| <span class="mask">Diagnose it; treat as in step 7</span></span></td></tr><tr><td>Paranoia ||| <span class="mask">Diagnose it; dialectical behavior therapy</span></span></td></tr><tr><td>Paranoia ||| 1 ||| num
+cluster-b ||| Diagnose borderline personality disorder; treat as in step 7 ||| Diagnose borderline personality disorder; dialectical behavior therapy ||| 1 ||| num
+cluster-b ||| <span class="mask">Diagnose it; treat as in step 7</span> ||| <span class="mask">Diagnose it; psychotherapy</span> ||| 1 ||| num
+cluster-c ||| Confirm with a second avoidant criterion, as in First step; CBT, as in step 7 ||| Confirm with a second avoidant criterion; CBT ||| 1 ||| num
+cluster-c ||| psychodynamic psychotherapy, as in step 7 ||| psychodynamic psychotherapy ||| 2 ||| num
+ocd ||| Specify tic-related OCD (step 6) ||| Specify tic-related OCD ||| 1 ||| num
+ocd ||| CBT first (Related disorders, step 3) ||| CBT first ||| 1 ||| num
+ocd ||| Repeat the suicide and depression screen in step 2 (Urgent risks) ||| Repeat the suicide and depression screen ||| 1 ||| num
+trauma-stress ||| Start trauma-focused CBT, as in step 7 ||| Start trauma-focused CBT ||| 1 ||| num
+trauma-stress ||| Treat as PTSD, as in step 7 ||| Treat as PTSD ||| 1 ||| num
+trauma-stress ||| Start brief supportive psychotherapy, as in step 7 ||| Start brief supportive psychotherapy ||| 1 ||| num
+trauma-stress ||| Add prazosin, as in step 7 ||| Add prazosin ||| 1 ||| num
+trauma-stress ||| as memory returns, as in step 2 ||| as memory returns ||| 1 ||| num
+trauma-stress ||| Most attempt suicide, as in step 2 ||| Most attempt suicide ||| 1 ||| num
+eating-disorders ||| unstable vital signs or another step 2 criterion ||| unstable vital signs or another admission criterion ||| 1 ||| num
+eating-disorders ||| hospitalize for any step 2 criterion ||| hospitalize for any admission criterion ||| 1 ||| num
+eating-disorders ||| Follow the refeeding plan in step 2 (Urgent risks) ||| Increase calories gradually; watch phosphate, potassium and magnesium ||| 1 ||| num
+gppd ||| pelvic floor tightening for about 6 months with distress: GPPPD (step 5). ||| pelvic floor tightening for about 6 months with distress: GPPPD. ||| 1 ||| num
+sexual-dysfunction ||| Sex therapy, as in step 7 ||| Sex therapy ||| 1 ||| num
+sexual-dysfunction ||| Counsel abstinence or cutting down, as in step 7 ||| Counsel abstinence or cutting down ||| 1 ||| num
+sexual-dysfunction ||| Order a cardiovascular evaluation, as in step 2 ||| Order a cardiovascular evaluation ||| 1 ||| num
+sexual-dysfunction ||| Start an SSRI, as in step 7 ||| Start an SSRI ||| 1 ||| num
+substance ||| timed from the last drink (step 5) ||| timed from the last drink ||| 1 ||| num
+substance ||| electrocardiogram (ECG) early (step 4); ||| electrocardiogram (ECG) early; ||| 1 ||| num
+substance ||| then treat by drug (step 7). ||| then treat by drug. ||| 1 ||| num
+substance ||| Treat the withdrawal (step 7); ||| Treat the withdrawal; ||| 1 ||| num
+substance ||| watch for delirium tremens (step 5) ||| watch for delirium tremens ||| 1 ||| num
+angina ||| Stress-test selection is taught in <a href="#ai-s5">Diagnostic workup</a> above. ||| The stress test follows whether the patient can exercise and whether the resting ECG can be read. ||| 1 ||| num
+dvt ||| Contraceptive eligibility is owned by <a href="#contraception">Contraception</a>. ||| Contraceptive eligibility: see <a href="#contraception">Contraception</a>. ||| 1 ||| own
+scd-dyspnea ||| sequestration stops and infection risk takes over. ||| sequestration stops and infection becomes the main risk. ||| 1 ||| own
+
+# ---- figurative placement (D6)
+bone-tumors ||| Spontaneous resolution belongs to osteoid osteoma ||| Spontaneous resolution points to osteoid osteoma ||| 1 ||| place
+bone-tumors ||| involution belongs to osteoid osteoma ||| involution points to osteoid osteoma ||| 1 ||| place
+ped-murmur ||| A Still murmur is vibratory and belongs to older children ||| A Still murmur is vibratory and occurs in older children ||| 1 ||| place
+ped-murmur ||| Peripheral pulmonary stenosis belongs to the first year; ||| Peripheral pulmonary stenosis is a first-year murmur; ||| 1 ||| place
+ped-murmur ||| peripheral pulmonary stenosis belongs to the first year ||| peripheral pulmonary stenosis is a first-year murmur ||| 1 ||| place
+newborn-cyanosis ||| Choanal atresia may belong to <b>CHARGE</b> ||| Choanal atresia may be part of <b>CHARGE</b> ||| 1 ||| place
+uri ||| Mycoplasma belongs to age 5 and older ||| Mycoplasma is typical at age 5 and older ||| 1 ||| place
+bpd ||| air leak belongs to the first days on high pressures ||| air leak occurs in the first days on high pressures ||| 1 ||| place
+bpd ||| but it belongs to the first days. ||| but it occurs in the first days. ||| 1 ||| place
+bs-umbilical ||| Immediate surgery belongs to gastroschisis and omphalocele ||| Immediate surgery is for gastroschisis and omphalocele ||| 1 ||| place
+aq-puffy-eyes ||| Does the swelling belong to the eye or to the whole child, ||| Is the swelling confined to the eye or spread over the whole child, ||| 1 ||| place
+aq-puffy-eyes ||| whether the swelling belongs to the eye or to the whole child. ||| whether the swelling is confined to the eye or spread over the whole child. ||| 1 ||| place
+growth ||| <b>Two-word phrases belong to 24 months</b> ||| <b>Two-word phrases come at 24 months</b> ||| 1 ||| place
+aneuploidy ||| Which finding belongs to only one syndrome: ||| Which finding is unique to one syndrome: ||| 1 ||| place
+aneuploidy ||| cryptorchidism sit on several lists. ||| cryptorchidism appear on several lists. ||| 1 ||| place
+aneuploidy ||| single S2 and belongs to 22q11 deletion ||| single S2 and points to 22q11 deletion ||| 1 ||| place
+aneuploidy ||| coloboma together belong to CHARGE alone ||| coloboma together point to CHARGE alone ||| 1 ||| place
+aneuploidy ||| the one finding that sits on the fewest syndrome lists and that you are certain belongs to this infant; ||| the one finding that appears on the fewest syndrome lists and that you are certain this infant has; ||| 1 ||| place
+kawasaki ||| The untreated Kawasaki illness sits in the past history ||| The untreated Kawasaki illness is in the past history ||| 1 ||| place
+arf ||| the latency belongs to the pharyngitis ||| the latency fits the pharyngitis ||| 1 ||| place
+del22q11 ||| A horseshoe kidney belongs to Turner syndrome. ||| A horseshoe kidney points to Turner syndrome. ||| 1 ||| place
+del22q11 ||| but it belongs to Turner, and nothing else ||| but it is a Turner finding, and nothing else ||| 1 ||| place
+scd-dyspnea ||| Acute chest syndrome belongs to disease, not to a carrier, ||| Acute chest syndrome is a complication of disease, not of a carrier, ||| 2 ||| place
+scd-dyspnea ||| A restrictive pattern belongs to fibrosis, ||| A restrictive pattern points to fibrosis, ||| 1 ||| place
+fap ||| The age-40 schedule belongs to sporadic family history ||| The age-40 schedule is for sporadic family history ||| 1 ||| place
+fap ||| the age-40 schedule belongs to sporadic family history ||| the age-40 schedule is for sporadic family history ||| 1 ||| place
+neonatal-bowel ||| early-onset Alzheimer disease belong to Down syndrome, ||| early-onset Alzheimer disease point to Down syndrome, ||| 1 ||| place
+neonatal-bowel ||| but it belongs to preterm infants in their first weeks on feeds; ||| but it affects preterm infants in their first weeks on feeds; ||| 1 ||| place
+hematuria ||| calcium/creatinine ratio belong to the nonglomerular branch ||| calcium/creatinine ratio are for the nonglomerular branch ||| 1 ||| place
+peds-uti-recurrent ||| acquired renal cysts belong to children on dialysis; ||| acquired renal cysts occur in children on dialysis; ||| 1 ||| place
+peds-uti-recurrent ||| Prophylaxis belongs to reflux, ||| Prophylaxis is for reflux, ||| 1 ||| place
+bs-puv ||| </b> sits at the other end of the same imaging pathway. ||| </b> is the other end of the same imaging pathway. ||| 1 ||| place
+tumor-syndromes ||| is pigmented and belongs to a different family ||| is pigmented and points to a different family ||| 1 ||| place
+tumor-syndromes ||| No hemangioblastoma belongs to it ||| Hemangioblastoma is not part of it ||| 1 ||| place
+tumor-syndromes ||| arteriovenous malformation, which belongs to Wyburn-Mason syndrome ||| arteriovenous malformation, which points to Wyburn-Mason syndrome ||| 1 ||| place
+tumor-syndromes ||| and they belong to different syndromes. ||| and they point to different syndromes. ||| 1 ||| place
+tumor-syndromes ||| calcified subependymal nodules belong to tuberous sclerosis ||| calcified subependymal nodules point to tuberous sclerosis ||| 1 ||| place
+tumor-syndromes ||| arteriovenous malformations belong to Wyburn-Mason syndrome, ||| arteriovenous malformations point to Wyburn-Mason syndrome, ||| 1 ||| place
+drug-hemolysis ||| CD55 and CD59 belong to paroxysmal nocturnal hemoglobinuria, ||| CD55 and CD59 point to paroxysmal nocturnal hemoglobinuria, ||| 1 ||| place
+ig-panel ||| and does not belong to XLA or CVID. ||| and is not part of XLA or CVID. ||| 1 ||| place
+cgd ||| <b>Burkholderia cepacia belongs to two diseases</b> ||| <b>Burkholderia cepacia is seen in two diseases</b> ||| 1 ||| place
+cgd ||| It sits in the past medical history, where it is easy to skim. ||| It is in the past medical history, where it is easy to skim. ||| 1 ||| place
+cgd ||| valacyclovir, which belongs to T-cell defects ||| valacyclovir, which is for T-cell defects ||| 1 ||| place
+cgd ||| When an organism belongs to two diseases, it cannot separate them; find the finding that belongs to only one. ||| When an organism is seen in two diseases, it cannot separate them; find the finding unique to one. ||| 1 ||| place
+cgd ||| the findings that belong to only one disease are ||| the findings unique to one disease are ||| 1 ||| place
+bs-torch ||| because the PCR window belongs to cytomegalovirus ||| because the PCR window applies to cytomegalovirus ||| 1 ||| place
+bs-isolation ||| The 24-hour rule belongs to meningococcus and Hib, not TB. ||| The 24-hour rule is for meningococcus and Hib, not TB. ||| 1 ||| place
+sellar-mass ||| subependymal nodules belong to tuberous sclerosis, ||| subependymal nodules point to tuberous sclerosis, ||| 1 ||| place
+neonatal-rash ||| while the diagnosis sits in the white discharge ||| while the diagnosis is in the white discharge ||| 1 ||| place
+cervical ||| and co-testing belongs to the 30 to 65 options ||| and co-testing is one of the 30 to 65 options ||| 1 ||| place
+teratogens ||| Which single malformation belongs to only one agent, ||| Which single malformation is unique to one agent, ||| 1 ||| place
+teratogens ||| the malformation that belongs to only one agent ||| the malformation unique to one agent ||| 1 ||| place
+teratogens ||| It is nonspecific and belongs to every option ||| It is nonspecific and fits every option ||| 1 ||| place
+teratogens ||| find the one malformation that belongs to only one agent. ||| find the one malformation unique to one agent. ||| 1 ||| place
+psychosis-duration ||| and how they sit with mood episodes ||| and how they relate to mood episodes ||| 1 ||| place
+trauma-stress ||| in response to a trauma belong to the trauma disorder; ||| in response to a trauma fit the trauma disorder; ||| 1 ||| place
+antipsych-effects ||| Dantrolene belongs to neuroleptic malignant syndrome ||| Dantrolene treats neuroleptic malignant syndrome ||| 1 ||| place
+antipsych-effects ||| Propranolol belongs to akathisia ||| Propranolol treats akathisia ||| 2 ||| place
+antipsych-effects ||| dantrolene belongs to neuroleptic malignant syndrome and propranolol to akathisia ||| dantrolene treats neuroleptic malignant syndrome and propranolol akathisia ||| 1 ||| place
+lithium-effects ||| a high sodium with dilute urine belongs to the kidney, ||| a high sodium with dilute urine points to the kidney, ||| 1 ||| place
+pc-antidep ||| Insomnia belongs to bupropion; mirtazapine sedates ||| Insomnia is a bupropion effect; mirtazapine sedates ||| 1 ||| place
+pc-antidep ||| insomnia belongs to bupropion, ||| insomnia is a bupropion effect, ||| 1 ||| place
+mood-anticonv ||| its levels, toxicity and interactions sit on its own brief <button ||| for its levels, toxicity and interactions, see <button ||| 1 ||| place
+mood-anticonv ||| and ammonia belongs to valproate ||| and ammonia is checked with valproate ||| 1 ||| place
+mood-anticonv ||| hyperammonemic encephalopathy belongs to valproate, ||| hyperammonemic encephalopathy is a valproate effect, ||| 1 ||| place
+pc-benzo ||| agranulocytosis belongs to clozapine and urinary retention to anticholinergic drugs ||| agranulocytosis is a clozapine effect and urinary retention an anticholinergic one ||| 1 ||| place
