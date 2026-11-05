@@ -1,19 +1,19 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s163",
- "open": false,
- "plan_step": "s163",
+ "id": "s164",
+ "open": true,
+ "plan_step": "s164",
  "roles": [],
  "max_agents": 0,
  "max_calls": 0,
  "max_tokens": 0,
- "set_by": "Jonathan, s163 launch 2026-11-04 (\"Step2Haki: launch batch s163 (criteria as step 2, plus the step order, wording and NBME label changes) per claude/BATCH_RUNBOOK.md sections 8 and 8b and claude/pending/CRITERIA_STEP2.md (Parts A to F, with the files in claude/pending/criteria_step2/). Lead 100M, no agents.\")",
+ "set_by": "Jonathan, s164 launch 2026-11-05 (\"... No agents, no four-part reviews (as s163). Budget: lead 60M.\")",
  "previous": {
-  "id": "s162",
-  "note": "s162 shipped c50fd62 2026-11-04 (Claude lead); wave 21 agents, 364 calls, 32.51M of 42M; lead 4 chats, 77.83M of 80M"
+  "id": "s163",
+  "note": "s163 shipped 6a4eb72 2026-11-05 (Claude lead); no agents; lead 5 chats, about 99M of 100M"
  },
- "opened": "2026-11-04 22:40 EST",
- "note": "s163 open (Claude lead): criteria as step 2, structural-wording sweep, NBME label rename; site layer plus patch; no agents, no four-part reviews (D7), no screenshots presented (D9)",
+ "opened": "2026-11-05 09:50 EST",
+ "note": "s164 open (Claude lead): s163 carry-overs; site layer plus patch; no agents, no four-part reviews",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -376,9 +376,15 @@
    "calls": 0,
    "tokens": 0,
    "lead_tokens": 100000000
+  },
+  "s164": {
+   "agents": 0,
+   "calls": 0,
+   "tokens": 0,
+   "lead_tokens": 60000000
   }
  },
- "max_lead_tokens": 100000000,
+ "max_lead_tokens": 60000000,
  "spent_agents": 0,
  "spent_calls": 0
 }

@@ -12,7 +12,9 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **No batch open.** Next: a launch prompt from Jonathan.
+- **s164 OPEN** (launched 2026-11-05 09:47; Claude lead; s163 carry-overs, site layer plus patch; no agents; lead 60M) on
+  wip/s164 in both repos. Batch file repair/s164/S164.md (chunk table). Step: chunk 2 pilot r1 sent (phone rail),
+  waiting for Jonathan; chunks 3 to 6 in progress. Spend: chat 1.
 
 - **Previous: s163 SHIPPED 2026-11-05** (Claude lead; site layer plus patch: diagnostic criteria as step 2 in every
   brief, no step numbers or ownership words in brief text, NBME labels, Recall masks on repeated criteria cutoffs,
