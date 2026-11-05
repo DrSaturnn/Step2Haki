@@ -12,9 +12,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **s164 OPEN** (launched 2026-11-05 09:47; Claude lead; s163 carry-overs, site layer plus patch; no agents; lead 60M) on
-  wip/s164 in both repos. Batch file repair/s164/S164.md (chunk table). Items 2 to 7 built (chunks 3 to 6); item 1
-  pilot r1 approved (baseline before the mobile redesign). Next: chunk 7 (checks, changelog, present). Spend: chat 1 32.77M of 60M.
+- **s164 OPEN, presented** (launched 2026-11-05 09:47; Claude lead; s163 carry-overs, site layer plus patch; no agents;
+  lead 60M) on wip/s164 in both repos. Batch file repair/s164/S164.md (chunk table). Items 1 to 7 built and checked
+  (chunk 7: build 26 ops, gate and render PASS, spy_test 45 of 45 at 390 and 1440); approval.py present s164, page
+  5f346af7bde7. Next: chunk 8, ship on Jonathan's "ship". Spend: lead 37.42M of 60M (2 chats).
 
 - **Previous: s163 SHIPPED 2026-11-05** (Claude lead; site layer plus patch: diagnostic criteria as step 2 in every
   brief, no step numbers or ownership words in brief text, NBME labels, Recall masks on repeated criteria cutoffs,
