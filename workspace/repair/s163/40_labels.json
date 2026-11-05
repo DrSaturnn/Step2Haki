@@ -1,0 +1,326 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "limp",
+   "find": "How NBME framed it: question 1</span>",
+   "with": "NBME question 1</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "growing-pains",
+   "find": "How NBME framed it: question 1</span>",
+   "with": "NBME question 1</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "uri",
+   "find": "How NBME framed it: question 1</span>",
+   "with": "NBME question 1</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "How NBME framed it:",
+   "with": "NBME framing:",
+   "note": "s163 D8 e: inline"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-abdominal-mass",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-distal-rta",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "lymphadenitis",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-fever-rash-arthralgia",
+   "find": "How NBME framed it: question 1</span>",
+   "with": "NBME question 1</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "scfe",
+   "find": "How NBME framed it: question 1</span>",
+   "with": "NBME question 1</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puncture-osteomyelitis",
+   "find": "<div class=\"pearls nbq\" data-nbme=\"peds-cms-f52102\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls nbq\" data-nbme=\"peds-cms-f52102\"><span class=\"lbl\">NBME question 1</span>",
+   "note": "s163 D8 b: plain nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "How NBME framed it:",
+   "with": "NBME framing:",
+   "note": "s163 D8 e: inline"
+  },
+  {
+   "op": "replace",
+   "brief": "cyanotic-chd",
+   "find": "How NBME framed it: question 1</span>",
+   "with": "NBME question 1</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "arf",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "How NBME framed it:",
+   "with": "NBME framing:",
+   "note": "s163 D8 e: inline"
+  },
+  {
+   "op": "replace",
+   "brief": "copd",
+   "find": "How NBME framed it: question 1</span>",
+   "with": "NBME question 1</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-jaundice",
+   "find": "How NBME framed it: question 1</span>",
+   "with": "NBME question 1</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "hematuria",
+   "find": "How NBME framed it: question 1</span>",
+   "with": "NBME question 1</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "How NBME framed it: question 1</span>",
+   "with": "NBME question 1</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "How NBME framed it:",
+   "with": "NBME framing:",
+   "note": "s163 D8 e: inline"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-bruising",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "dtap",
+   "find": "How NBME framed it: question 1</span>",
+   "with": "NBME question 1</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "cervicitis",
+   "find": "How NBME framed it: question 1</span>",
+   "with": "NBME question 1</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "How NBME framed it:",
+   "with": "NBME framing:",
+   "note": "s163 D8 e: inline"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "How NBME framed it:",
+   "with": "NBME framing:",
+   "note": "s163 D8 e: inline"
+  },
+  {
+   "op": "replace",
+   "brief": "redeye",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-eyelid-lump",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-rash",
+   "find": "How NBME framed it: question 1</span>",
+   "with": "NBME question 1</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-rash",
+   "find": "How NBME framed it: question 2</span>",
+   "with": "NBME question 2</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<div class=\"pearls\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pearls\"><span class=\"lbl\">NBME framing</span>",
+   "note": "s163 D8 d: commentary"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-genital-ulcer",
+   "find": "How NBME framed it:",
+   "with": "NBME framing:",
+   "note": "s163 D8 e: inline"
+  },
+  {
+   "op": "replace",
+   "brief": "vegan",
+   "find": "How NBME framed it: question 1</span>",
+   "with": "NBME question 1</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "vegan",
+   "find": "How NBME framed it: question 2</span>",
+   "with": "NBME question 2</span>",
+   "note": "s163 D8 a: nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "pc-ssri",
+   "find": "<div class=\"pc-nbq\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pc-nbq\"><span class=\"lbl\">NBME question</span>",
+   "note": "s163 D8 c: pc-nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "pc-atypical",
+   "find": "<div class=\"pc-nbq\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pc-nbq\"><span class=\"lbl\">NBME question</span>",
+   "note": "s163 D8 c: pc-nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "pc-antichol",
+   "find": "<div class=\"pc-nbq\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pc-nbq\"><span class=\"lbl\">NBME question</span>",
+   "note": "s163 D8 c: pc-nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "mood-anticonv",
+   "find": "<div class=\"pc-nbq\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pc-nbq\"><span class=\"lbl\">NBME question</span>",
+   "note": "s163 D8 c: pc-nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "pc-benzo",
+   "find": "<div class=\"pc-nbq\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pc-nbq\"><span class=\"lbl\">NBME question</span>",
+   "note": "s163 D8 c: pc-nbq"
+  },
+  {
+   "op": "replace",
+   "brief": "adhd-meds",
+   "find": "<div class=\"pc-nbq\"><span class=\"lbl\">How NBME framed it</span>",
+   "with": "<div class=\"pc-nbq\"><span class=\"lbl\">NBME question</span>",
+   "note": "s163 D8 c: pc-nbq"
+  }
+ ]
+}

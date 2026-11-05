@@ -10,7 +10,7 @@ pg=P.read_page(WS+'/index.html')
 b=P.brief_by_id(pg,sys.argv[1]); t=pg[b.start:b.end]
 pl=lambda x: re.sub(r'\s+',' ',html.unescape(re.sub('<[^>]+>',' ',x))).strip()
 i=t.find('<ol class="bank')
-print('NBME blocks:',t.count('How NBME framed it'),'| tail starts at', 'authored-hdr' in t)
+print('NBME blocks:',len(re.findall(r'class="lbl">(?:How NBME framed it|NBME question|NBME framing)',t)),'| tail starts at', 'authored-hdr' in t)
 for m in re.finditer(r'<li([^>]*data-item-id[^>]*)>(.*?)</li>', t[i:], re.S):
     a=m.group(1); g=lambda k: (re.search(k+r'="([^"]*)"',a) or [None,''])[1]
     body=pl(m.group(2)); km=re.search(r'&rarr;\s*<b>(.*?)</b>',m.group(2)); key=pl(km.group(1)) if km else '?'

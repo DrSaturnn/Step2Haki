@@ -127,7 +127,7 @@ def build(argv):
                 idx[bid]['questions'].append({'file': q['file'], 'header': q['header'], 'ids': q['ids'],
                                               'key': q['key'], 'terms': hit})
     for it in P.items(html):
-        if it.brief_id in idx and 'How NBME framed it' in it.inner:
+        if it.brief_id in idx and re.search(r'How NBME framed it|NBME question|NBME framing', it.inner):  # s163 D8 labels
             idx[it.brief_id]['nbme_items'].append(it.id)
     if os.path.exists(COVERAGE):
         for r in csv.DictReader(open(COVERAGE, encoding='utf-8')):

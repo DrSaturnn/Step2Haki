@@ -146,6 +146,37 @@ CHROME = [
 ]
 
 
+# 40_labels.json (chunk 5, D8): NBME block labels. A trimmed board question (div.pearls.nbq, div.pc-nbq) reads
+# "NBME question N"; commentary (div.pearls without nbq) and inline mentions read "NBME framing". Matched by markup.
+OLD_LBL = 'How NBME framed it'
+
+
+def label_rows(h, log):
+    rows = []
+    for b in briefs(h):
+        seg = h[b.start:b.end]
+        for mm in re.finditer(re.escape(OLD_LBL), seg):
+            i = mm.start()
+            pre, post = seg[max(0, i - 200):i], seg[mm.end():mm.end() + 40]
+            q = re.match(r': question (\d+)</span>', post)
+            if q and re.search(r'<div class="pearls nbq"[^>]*><span class="lbl">$', pre):
+                rows.append((b.id, OLD_LBL + q.group(0), 'NBME question %s</span>' % q.group(1), 1, 's163 D8 a: nbq'))
+            elif post.startswith('</span>') and re.search(r'<div class="pearls nbq"[^>]*><span class="lbl">$', pre):
+                rows.append((b.id, pre[pre.rfind('<div'):] + OLD_LBL + '</span>',
+                             pre[pre.rfind('<div'):] + 'NBME question 1</span>', 1, 's163 D8 b: plain nbq'))
+            elif post.startswith('</span>') and pre.endswith('<div class="pc-nbq"><span class="lbl">'):
+                rows.append((b.id, '<div class="pc-nbq"><span class="lbl">' + OLD_LBL + '</span>',
+                             '<div class="pc-nbq"><span class="lbl">NBME question</span>', 1, 's163 D8 c: pc-nbq'))
+            elif post.startswith('</span>') and pre.endswith('<div class="pearls"><span class="lbl">'):
+                rows.append((b.id, '<div class="pearls"><span class="lbl">' + OLD_LBL + '</span>',
+                             '<div class="pearls"><span class="lbl">NBME framing</span>', 1, 's163 D8 d: commentary'))
+            elif post.startswith(':'):
+                rows.append((b.id, OLD_LBL + ':', 'NBME framing:', 1, 's163 D8 e: inline'))
+            else:
+                log['skipped'].append('label %s unclassified %r' % (b.id, post[:30]))
+    return rows
+
+
 def chrome_ops(h, log):
     ops = []
     for find, w in CHROME:
@@ -176,20 +207,26 @@ def rewrite_ops(h, path, log):
     """rewrites.txt rows (brief ||| old ||| new ||| count ||| class), applied in order to h (the page after
     10_steps.json). Each occurrence becomes one op whose anchor is widened, away from any bank boundary, until it is
     unique in its scope: the brief (replace) or the bank item that holds it (replace_item_text). Returns (ops, h)."""
-    import apply_edits
-    from pagelib import items
-    ops = []
+    rows = []
     if not os.path.exists(path):
-        return ops, h
+        return [], h
     for ln in open(path, encoding='utf-8'):
         if not ln.strip() or ln.startswith('#'):
             continue
         f = ln.rstrip('\n').split('|||')
         f = [x[1:] if x.startswith(' ') else x for x in f]
         f = [x[:-1] if x.endswith(' ') else x for x in f]
-        bid, old, new = f[0].strip(), f[1], f[2]
-        want = int(f[3]) if len(f) > 3 and f[3].strip() else 1
-        cls = f[4].strip() if len(f) > 4 else ''
+        rows.append((f[0].strip(), f[1], f[2], int(f[3]) if len(f) > 3 and f[3].strip() else 1,
+                     's163 E3 %s (D4/D6)' % (f[4].strip() if len(f) > 4 else '')))
+    return apply_rows(h, rows, log)
+
+
+def apply_rows(h, rows, log):
+    """(brief, old, new, count, note) rows as widened brief- or item-scoped ops, applied in order. Returns (ops, h)."""
+    import apply_edits
+    from pagelib import items
+    ops = []
+    for bid, old, new, want, note in rows:
         b = [x for x in briefs(h) if x.id == bid]
         if len(b) != 1:
             log['rw_fail'].append('%s: brief not found' % bid)
@@ -225,7 +262,7 @@ def rewrite_ops(h, path, log):
                     break
             find = h[a:z]
             repl = h[a:at] + new + h[at + len(old):z]
-            op.update({'find': find, 'with': repl, 'note': 's163 E3 %s (D4/D6)' % cls})
+            op.update({'find': find, 'with': repl, 'note': note})
             h, _ = apply_edits.apply(h, {'edits': [op]})
             ops.append(op)
             b = [x for x in briefs(h) if x.id == bid][0]
@@ -278,6 +315,19 @@ def main(argv):
     json.dump({'edits': ch}, open(os.path.join(out, '30_chrome.json'), 'w', encoding='utf-8'), indent=1,
               ensure_ascii=False)
     print('make_batch: wrote 30_chrome.json (%d of %d ops)' % (len(ch), len(CHROME)))
+    after3, _ = apply_edits.apply(after2, {'edits': ch})
+    rows = label_rows(after3, log)
+    n0 = log['rw']
+    lb, _ = apply_rows(after3, rows, log)
+    kinds = {}
+    for r in rows:
+        kinds[r[4][8]] = kinds.get(r[4][8], 0) + 1
+    json.dump({'edits': lb}, open(os.path.join(out, '40_labels.json'), 'w', encoding='utf-8'), indent=1,
+              ensure_ascii=False)
+    print('make_batch: wrote 40_labels.json (%d ops of %d rows; by kind %s; %d failed)' % (
+        len(lb), len(rows), sorted(kinds.items()), len(log['rw_fail'])))
+    for x in log['rw_fail'] + log['skipped']:
+        print('  FAIL', x)
     return 0 if not log['skipped'] and not log['rw_fail'] else 1
 
 

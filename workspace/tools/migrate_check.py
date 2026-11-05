@@ -138,8 +138,8 @@ def item_contract(new, new_items, old_items, cmap, F, W):
     order = [m for m in re.findall(r'data-src="(\w+)"', bank)]
     if 'nbme' in order and 'authored' in order and order.index('authored') < max(i for i, x in enumerate(order) if x == 'nbme'):
         F('I9 NBME items must come first in the bank')
-    if 'nbme' in order and 'How NBME framed it' not in new:
-        F('I9 NBME item without a "How NBME framed it" note')
+    if 'nbme' in order and not re.search(r'How NBME framed it|NBME question|NBME framing|class="pearls nbq"', new):  # s163 D8 labels
+        F('I9 NBME item without an NBME question or NBME framing note')
     for blk in re.findall(r'<div class="pearls nbq"[^>]*>(.*?)</div>', new, re.S):
         if 'class="nbstem"' not in blk or 'class="two"' not in blk:
             F('I10 an NBME question block needs its stem (p.nbstem) and the final two answers (p.two)')

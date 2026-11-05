@@ -131,7 +131,9 @@ ACR_SKIP = {'IgA', 'IgE', 'IgG', 'IgM', 'US', 'UK', 'MD', 'IV', 'IM', 'PO', 'NBM
 ROMAN_RE = re.compile(r'(?=[IVXL])X{0,3}(IX|IV|V?I{0,3})')
 SENT_RE = re.compile(r'(?<=[.?!])\s+(?=[A-Z<(])|\s*·\s*')
 ARROW_RE = re.compile(r'→|&rarr;')
-NBME_RE = re.compile(r'How NBME framed it')  # s31-reviewed text; a voice pass leaves it verbatim
+NBME_RE = re.compile(r'How NBME framed it|NBME question|NBME framing')  # s31-reviewed text; a voice pass leaves it verbatim
+NBME_LBL_RE = re.compile(r'<span class="lbl">(?:How NBME framed it|NBME framing|NBME question(?: \d+)?)</span>')  # s163 D8 labels
+D8_NOTE = 's163 D8'  # s163 label rename ops (D7: cosmetic) may change the label itself
 BATCH_NOTE_RE = re.compile(r'-{2,}\s*<i>\s*Batch \d[^<]*</i>')  # workflow note, removed in the voice pass
 
 
@@ -213,11 +215,12 @@ def voice_check(before, spec, report=None):
         end = at + len(e['find'])
         where = [lab for s, t, lab in voice_ranges(html, b) if s <= at and end <= t]
         blk = [s for s, t, lab in voice_ranges(html, b) if s <= at and end <= t]
-        if blk and html.startswith('<span class="lbl">How NBME framed it</span>', blk[0]):
-            fails.append('edit %d (%s): a "How NBME framed it" block is out of scope (reviewed in s31)\n      fix: leave the block '
+        d8 = str(e.get('note', '')).startswith(D8_NOTE)
+        if blk and NBME_LBL_RE.match(html, blk[0]) and not d8:
+            fails.append('edit %d (%s): an NBME block is out of scope (reviewed in s31)\n      fix: leave the block '
                          'exactly as it is' % (n, b.id))
         nbme_txt = [html[k.start():html.find('</div>', k.start())] for k in NBME_RE.finditer(html, b.start, b.end)]
-        if not where:
+        if not where and not d8:
             fails.append('edit %d (%s): anchor is outside the voice scope\n      fix: edit only inside .dp, .rule, .pearls, '
                          '.danger, .traps or the first segment of p.sub; never .vignette, tables, .crit or the bank' % (n, b.id))
         old_b = [text(x) for x in re.findall(r'<b>(.*?)</b>', e['find'], re.S)]
@@ -241,7 +244,7 @@ def voice_check(before, spec, report=None):
         new_labs = re.findall(r'<span class="lbl">(.*?)</span>', e['with'])
         relab = {text(x) for x in e.get('reworded_label', [])}
         bad = [l for l in labs if l not in new_labs and text(l) not in relab]
-        if bad or len(new_labs) != len(labs):
+        if (bad or len(new_labs) != len(labs)) and not d8:
             fails.append('edit %d (%s): label markup changed (%s)\n      fix: keep <span class="lbl">...</span> exactly, or declare a '
                          'slogan label rewrite with "reworded_label": ["<old label text>"]' % (n, b.id, '; '.join(text(l) for l in bad) or 'count'))
         ctx0 = html[max(0, at - 200):at]
@@ -321,9 +324,9 @@ def voice_check(before, spec, report=None):
             fails.append(str(ex))
             continue
         nb0 = [x for x in briefs(html) if x.id == b.id]
-        if nb0 and any(t not in html[nb0[0].start:nb0[0].end] for t in nbme_txt):
-            fails.append('edit %d (%s): the "How NBME framed it" text changed (reviewed in s31)\n      fix: end find before '
-                         '"How NBME framed it", or copy that text into with unchanged' % (n, b.id))
+        if nb0 and not d8 and any(t not in html[nb0[0].start:nb0[0].end] for t in nbme_txt):
+            fails.append('edit %d (%s): the NBME block text changed (reviewed in s31)\n      fix: end find before '
+                         'the NBME label, or copy that text into with unchanged' % (n, b.id))
         # acronyms: first use in the changed block (on the new page) is followed by its expansion
         try:
             nb = [x for x in briefs(html) if x.id == b.id][0]

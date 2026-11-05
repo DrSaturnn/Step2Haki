@@ -47,7 +47,7 @@ def nbq(nid, n, stem, ask, competing, two, decider):
     """An NBME question in its framing block: compact stem with every clue, the competing answers (pull, then the
     masked reason it fails) and the final two (the masked decider). Not in the bank (Jonathan 2026-10-01)."""
     lis = ''.join(f'<li><b>{o}</b>: {pull} <span class="mask">{why}</span></li>' for o, pull, why in competing)
-    return (f'<div class="pearls nbq" data-nbme="{nid}"><span class="lbl">How NBME framed it: question {n}</span>'
+    return (f'<div class="pearls nbq" data-nbme="{nid}"><span class="lbl">NBME question {n}</span>'
             f'<p class="nbstem">{stem}</p><p class="nbask">{ask}</p><span class="nbh">Competing answers</span><ul>{lis}</ul>'
             f'<p class="two"><b>Down to two:</b> {two} <span class="mask">{decider}</span></p></div>')
 
