@@ -203,6 +203,22 @@ def in_body_links(h, ids, log):
     return ops
 
 
+def read_rows(path, note):
+    """brief ||| old ||| new ||| count ||| class rows (rewrites.txt format) as apply_rows tuples."""
+    rows = []
+    if not os.path.exists(path):
+        return rows
+    for ln in open(path, encoding='utf-8'):
+        if not ln.strip() or ln.startswith('#'):
+            continue
+        f = ln.rstrip('\n').split('|||')
+        f = [x[1:] if x.startswith(' ') else x for x in f]
+        f = [x[:-1] if x.endswith(' ') else x for x in f]
+        rows.append((f[0].strip(), f[1], f[2], int(f[3]) if len(f) > 3 and f[3].strip() else 1,
+                     note % (f[4].strip() if len(f) > 4 else '')))
+    return rows
+
+
 def rewrite_ops(h, path, log):
     """rewrites.txt rows (brief ||| old ||| new ||| count ||| class), applied in order to h (the page after
     10_steps.json). Each occurrence becomes one op whose anchor is widened, away from any bank boundary, until it is
@@ -326,6 +342,15 @@ def main(argv):
               ensure_ascii=False)
     print('make_batch: wrote 40_labels.json (%d ops of %d rows; by kind %s; %d failed)' % (
         len(lb), len(rows), sorted(kinds.items()), len(log['rw_fail'])))
+    # 50_masks.json (chunk 6, E4): B4 Recall masks on a criteria cutoff that a masked answer elsewhere repeats, and
+    # the first-use abbreviation spell-outs now that Criteria is step 2 (masks.txt, by hand).
+    after4, _ = apply_edits.apply(after3, {'edits': lb})
+    mrows = read_rows(os.path.join(HERE, 'masks.txt'), 's163 E4 %s (B4)')
+    n1 = len(log['rw_fail'])
+    mk, _ = apply_rows(after4, mrows, log)
+    json.dump({'edits': mk}, open(os.path.join(out, '50_masks.json'), 'w', encoding='utf-8'), indent=1,
+              ensure_ascii=False)
+    print('make_batch: wrote 50_masks.json (%d ops of %d rows; %d failed)' % (len(mk), len(mrows), len(log['rw_fail']) - n1))
     for x in log['rw_fail'] + log['skipped']:
         print('  FAIL', x)
     return 0 if not log['skipped'] and not log['rw_fail'] else 1

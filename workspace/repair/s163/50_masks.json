@@ -1,0 +1,186 @@
+{
+ "edits": [
+  {
+   "op": "replace",
+   "brief": "substance",
+   "find": "hours; mortality 1% to 5%</span>",
+   "with": "hours; mortality <span class=\"mask\">1% to 5%</span></span>",
+   "note": "s163 E4 recall (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "myositis-ossificans",
+   "find": "<td>Pain and motion may worsen after about 2 to 4 weeks</td>",
+   "with": "<td>Pain and motion may worsen after about <span class=\"mask\">2 to 4 weeks</span></td>",
+   "note": "s163 E4 recall (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "scheuermann",
+   "find": "<td>Anterior wedging of at least 5 degrees in 3 or more consecutive vertebral bodies</td>",
+   "with": "<td>Anterior wedging of at least <span class=\"mask\">5 degrees</span> in <span class=\"mask\">3</span> or more consecutive vertebral bodies</td>",
+   "note": "s163 E4 recall (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<td><b>Burn</b></td><td><span>Fever <b>5 days</b> or more</span>",
+   "with": "<td><b>Burn</b></td><td><span>Fever <span class=\"mask\"><b>5 days</b></span> or more</span>",
+   "note": "s163 E4 recall (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<td>Kawasaki disease</td><td><span>Fever <b>5 days</b> or more plus <b>at least 4</b> criteria",
+   "with": "<td>Kawasaki disease</td><td><span>Fever <span class=\"mask\"><b>5 days</b></span> or more plus <b>at least <span class=\"mask\">4</span></b> criteria",
+   "note": "s163 E4 recall (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<td>Incomplete disease</td><td><span>Fever <b>5 days</b> or more with <b>2 or 3</b> criteria",
+   "with": "<td>Incomplete disease</td><td><span>Fever <span class=\"mask\"><b>5 days</b></span> or more with <span class=\"mask\"><b>2 or 3</b></span> criteria",
+   "note": "s163 E4 recall (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "Systolic <b>120 to 129</b> mm Hg with diastolic <b>below 80</b>",
+   "with": "Systolic <span class=\"mask\"><b>120 to 129</b> mm Hg</span> with diastolic <b>below <span class=\"mask\">80</span></b>",
+   "note": "s163 E4 recall (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "<td>Stage 1 hypertension</td><td><span><b>130/80 to 139/89</b> mm Hg",
+   "with": "<td>Stage 1 hypertension</td><td><span><b><span class=\"mask\">130/80</span> to 139/89</b> mm Hg",
+   "note": "s163 E4 recall (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "<td>FAP</td><td><span><b>100 or more</b> adenomas",
+   "with": "<td>FAP</td><td><span><b><span class=\"mask\">100</span> or more</b> adenomas",
+   "note": "s163 E4 recall (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "fap",
+   "find": "<td>Attenuated FAP</td><td><span><b>10 to 99</b> adenomas",
+   "with": "<td>Attenuated FAP</td><td><span><span class=\"mask\"><b>10 to 99</b></span> adenomas",
+   "note": "s163 E4 recall (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "<td>Ceruloplasmin under 5 mg/dL</td>",
+   "with": "<td>Ceruloplasmin under <span class=\"mask\">5 mg/dL</span></td>",
+   "note": "s163 E4 recall (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "nephrotic-child",
+   "find": "presumed clinically from age 1 to under 12:",
+   "with": "presumed clinically from age <span class=\"mask\">1 to under 12</span>:",
+   "note": "s163 E4 recall (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "panic",
+   "find": "<b>Fear of</b>2 or more of 5:",
+   "with": "<b>Fear of</b><span class=\"mask\">2</span> or more of 5:",
+   "note": "s163 E4 recall (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "panic",
+   "find": "hard to control; 3 or more of 6 (1 in children):",
+   "with": "hard to control; <span class=\"mask\">3</span> or more of 6 (<span class=\"mask\">1</span> in children):",
+   "note": "s163 E4 recall (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "arf",
+   "find": "polyarthralgia; ESR <b>&gt;60 mm/hour</b> or CRP <b>&gt;30 mg/L</b>;",
+   "with": "polyarthralgia; erythrocyte sedimentation rate (ESR) <b>&gt;60 mm/hour</b> or C-reactive protein (CRP) <b>&gt;30 mg/L</b>;",
+   "note": "s163 E4 abbr (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "arf",
+   "find": "<span class=\"w5ol\">Erythrocyte sedimentation rate (ESR) and C-reactive protein (CRP)</span>",
+   "with": "<span class=\"w5ol\">ESR and CRP</span>",
+   "note": "s163 E4 abbr (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "septic-hip",
+   "find": "<b>CRP</b> &ndash; over <b>2 mg/dL</b>",
+   "with": "<b>C-reactive protein (CRP)</b> &ndash; over <b>2 mg/dL</b>",
+   "note": "s163 E4 abbr (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "septic-hip",
+   "find": "ESR and CRP (C-reactive protein) may be barely raised",
+   "with": "ESR and CRP may be barely raised",
+   "note": "s163 E4 abbr (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "chf",
+   "find": "<span class=\"mask\">LVEF <b>40% or less</b>.</span>",
+   "with": "<span class=\"mask\">Left ventricular ejection fraction (LVEF) <b>40% or less</b>.</span>",
+   "note": "s163 E4 abbr (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "chf",
+   "find": "Poor contraction; reduced left ventricular ejection fraction (LVEF).",
+   "with": "Poor contraction; reduced LVEF.",
+   "note": "s163 E4 abbr (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "copd",
+   "find": "In practice: the MSD asthma page",
+   "with": "In practice: the Merck Manual (MSD) asthma page",
+   "note": "s163 E4 abbr (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "copd",
+   "find": "the Merck Manual (MSD) gives antibiotics",
+   "with": "MSD gives antibiotics",
+   "note": "s163 E4 abbr (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "liver-preg",
+   "find": "<span>LDH <b>600</b> units/L",
+   "with": "<span>Lactate dehydrogenase (LDH) <b>600</b> units/L",
+   "note": "s163 E4 abbr (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "liver-preg",
+   "find": "CBC with smear and lactate dehydrogenase (LDH); delivery.",
+   "with": "CBC with smear and LDH; delivery.",
+   "note": "s163 E4 abbr (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "<td>HSV encephalitis</td>",
+   "with": "<td>Herpes simplex virus (HSV) encephalitis</td>",
+   "note": "s163 E4 abbr (B4)"
+  },
+  {
+   "op": "replace",
+   "brief": "eating-disorders",
+   "find": "<div class=\"crit\"><span class=\"lbl\">ARFID</span>",
+   "with": "<div class=\"crit\"><span class=\"lbl\">Avoidant/restrictive food intake disorder (ARFID)</span>",
+   "note": "s163 E4 abbr (B4)"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+# s163 chunk 6 (E4): brief ||| old ||| new ||| count ||| class. B4: wrap the criteria cutoff (number and unit only)
+# that a masked answer elsewhere in the brief states for the same measure. Kept by hand check: local/s163/survey_recall.md.
+# lcw test row first (gate and render have no lcw mask rule; the row name is the masked test, the window the clue).
+substance ||| hours; mortality 1% to 5%</span> ||| hours; mortality <span class="mask">1% to 5%</span></span> ||| 1 ||| recall
+myositis-ossificans ||| <td>Pain and motion may worsen after about 2 to 4 weeks</td> ||| <td>Pain and motion may worsen after about <span class="mask">2 to 4 weeks</span></td> ||| 1 ||| recall
+scheuermann ||| <td>Anterior wedging of at least 5 degrees in 3 or more consecutive vertebral bodies</td> ||| <td>Anterior wedging of at least <span class="mask">5 degrees</span> in <span class="mask">3</span> or more consecutive vertebral bodies</td> ||| 1 ||| recall
+kawasaki ||| <td><b>Burn</b></td><td><span>Fever <b>5 days</b> or more</span> ||| <td><b>Burn</b></td><td><span>Fever <span class="mask"><b>5 days</b></span> or more</span> ||| 1 ||| recall
+kawasaki ||| <td>Kawasaki disease</td><td><span>Fever <b>5 days</b> or more plus <b>at least 4</b> criteria ||| <td>Kawasaki disease</td><td><span>Fever <span class="mask"><b>5 days</b></span> or more plus <b>at least <span class="mask">4</span></b> criteria ||| 1 ||| recall
+kawasaki ||| <td>Incomplete disease</td><td><span>Fever <b>5 days</b> or more with <b>2 or 3</b> criteria ||| <td>Incomplete disease</td><td><span>Fever <span class="mask"><b>5 days</b></span> or more with <span class="mask"><b>2 or 3</b></span> criteria ||| 1 ||| recall
+bs-adolescent-bp ||| Systolic <b>120 to 129</b> mm Hg with diastolic <b>below 80</b> ||| Systolic <span class="mask"><b>120 to 129</b> mm Hg</span> with diastolic <b>below <span class="mask">80</span></b> ||| 1 ||| recall
+bs-adolescent-bp ||| <td>Stage 1 hypertension</td><td><span><b>130/80 to 139/89</b> mm Hg ||| <td>Stage 1 hypertension</td><td><span><b><span class="mask">130/80</span> to 139/89</b> mm Hg ||| 1 ||| recall
+fap ||| <td>FAP</td><td><span><b>100 or more</b> adenomas ||| <td>FAP</td><td><span><b><span class="mask">100</span> or more</b> adenomas ||| 1 ||| recall
+fap ||| <td>Attenuated FAP</td><td><span><b>10 to 99</b> adenomas ||| <td>Attenuated FAP</td><td><span><span class="mask"><b>10 to 99</b></span> adenomas ||| 1 ||| recall
+bs-wilson ||| <td>Ceruloplasmin under 5 mg/dL</td> ||| <td>Ceruloplasmin under <span class="mask">5 mg/dL</span></td> ||| 1 ||| recall
+nephrotic-child ||| presumed clinically from age 1 to under 12: ||| presumed clinically from age <span class="mask">1 to under 12</span>: ||| 1 ||| recall
+panic ||| <b>Fear of</b>2 or more of 5: ||| <b>Fear of</b><span class="mask">2</span> or more of 5: ||| 1 ||| recall
+panic ||| hard to control; 3 or more of 6 (1 in children): ||| hard to control; <span class="mask">3</span> or more of 6 (<span class="mask">1</span> in children): ||| 1 ||| recall
+# Part 2: first-use abbreviations now in Criteria (spelled out at first use; a later prose expansion dropped; a later
+# table row name kept, since a row subject is matched by name).
+arf ||| polyarthralgia; ESR <b>&gt;60 mm/hour</b> or CRP <b>&gt;30 mg/L</b>; ||| polyarthralgia; erythrocyte sedimentation rate (ESR) <b>&gt;60 mm/hour</b> or C-reactive protein (CRP) <b>&gt;30 mg/L</b>; ||| 1 ||| abbr
+arf ||| <span class="w5ol">Erythrocyte sedimentation rate (ESR) and C-reactive protein (CRP)</span> ||| <span class="w5ol">ESR and CRP</span> ||| 1 ||| abbr
+septic-hip ||| <b>CRP</b> &ndash; over <b>2 mg/dL</b> ||| <b>C-reactive protein (CRP)</b> &ndash; over <b>2 mg/dL</b> ||| 1 ||| abbr
+septic-hip ||| ESR and CRP (C-reactive protein) may be barely raised ||| ESR and CRP may be barely raised ||| 1 ||| abbr
+chf ||| <span class="mask">LVEF <b>40% or less</b>.</span> ||| <span class="mask">Left ventricular ejection fraction (LVEF) <b>40% or less</b>.</span> ||| 1 ||| abbr
+chf ||| Poor contraction; reduced left ventricular ejection fraction (LVEF). ||| Poor contraction; reduced LVEF. ||| 1 ||| abbr
+copd ||| In practice: the MSD asthma page ||| In practice: the Merck Manual (MSD) asthma page ||| 1 ||| abbr
+copd ||| the Merck Manual (MSD) gives antibiotics ||| MSD gives antibiotics ||| 1 ||| abbr
+liver-preg ||| <span>LDH <b>600</b> units/L ||| <span>Lactate dehydrogenase (LDH) <b>600</b> units/L ||| 1 ||| abbr
+liver-preg ||| CBC with smear and lactate dehydrogenase (LDH); delivery. ||| CBC with smear and LDH; delivery. ||| 1 ||| abbr
+meningitis ||| <td>HSV encephalitis</td> ||| <td>Herpes simplex virus (HSV) encephalitis</td> ||| 1 ||| abbr
+eating-disorders ||| <div class="crit"><span class="lbl">ARFID</span> ||| <div class="crit"><span class="lbl">Avoidant/restrictive food intake disorder (ARFID)</span> ||| 1 ||| abbr
