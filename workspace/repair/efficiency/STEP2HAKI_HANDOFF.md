@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-11-04, by Claude (main merged into wip/s162 after the s161b to s161d ships; s162 State unchanged).
+Last updated: 2026-11-04, by Claude (s162 shipped; no batch open; s163 launches next).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,9 +12,16 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **Open: s162** (Claude lead; Psych Pharmacology B4 of 4: pc-atypical, pc-typical, pc-antichol, pc-td; Q4 keep;
-  launched 2026-11-03 11:42; wip/s162 in both repos). Step: **S8 presented (chat 4, 2026-11-04)**: changelog 162 written, `batch.py s8` 4 of 4 READY, gate PASS 0
-  failures, approval presented (page faaf259bc1be); report sent. Next: on "ship", S9 in the same chat (batch file "Chat 4"). Budget 23 agents, 580 calls, 42M (builders 5, 380, 34M; reviewers 18, 200, 8M); lead 80M. Spend: 21 agents, 364 calls, 32.51M (builders 28.07M; reviewers 4.44M); lead 3 chats 66.22M of 80M. Record repair/s162/S162.md.
+- **Open: none.** Next: the s163 launch (held for s162, DIGEST 2026-11-04: lead 100M, no agents; criteria as step 2,
+  per claude/pending/CRITERIA_STEP2.md); a launch reads the runbook's full read order.
+
+- **Previous: s162 SHIPPED 2026-11-04** (Claude lead; Psych Pharmacology B4 of 4: pc-atypical, pc-typical, pc-antichol,
+  pc-td in 02 Antipsychotics; Q4 keep; section complete, 18 of 18 class cards): commit c50fd62 (main d920cfe after
+  merging main's RESUME and handoff notes, ours kept), page a2d98e32f61f (approved candidate faaf259bc1be); version.json
+  not checked here, Jonathan checks the live site. Wave 21 agents, 364 calls, 32.51M of 42M (builders 28.07M, no
+  relaunch; reviewers 4.44M); lead 4 chats, about 71M of 80M. ship.sh had no token and main had moved (two doc
+  commits): merged by hand, pushed. No temporary allowlist lines. Record repair/s162/S162.md (S8, S9). Open: OPEN_WORK
+  s162 line.
 
 - **Previous: s161d SHIPPED 2026-11-04** (Claude lead; site layer: the desktop sidebar fits wide windows under the 110%
   zoom): commit f817f18, page 59ff29b3cace (approved candidate 634020d29e52). Record repair/s161d/S161D.md. Open: OPEN_WORK
@@ -52,31 +59,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   stale. Record repair/s160/S160.md (S8, S9) and S8_REPORT.md. Open: OPEN_WORK s160 line (pregabalin requote and
   label, optional LOWs, no ADHD diagnosis brief). Next pharm batch B3 (s161) needs Jonathan's Q4 answer first.
 
-- **Previous: s156 SHIPPED 2026-10-31** (Claude lead; Phase 2, infectious disease B, pediatric: meningitis, dtap
-  (lookup), lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever rebuilt on the decision spine):
-  commit 6a35e83, page 0c93465cd209 (approved candidate bfcc9ac56427), version.json build s156. Wave 27 agents, 663
-  calls, 70.02M of 78M (builders 58.10M; reviewers 11.92M); lead 7 chats, about 83M measured of 90M. Record
-  repair/s156/S156.md (S8 and S9). Open: OPEN_WORK s156 line (supraclavicular biopsy, overages, the four parked
-  recommendations, not approved). Tool notes: verify_all default jobs follow the core count; batch.py ship outlasts the
-  foreground limit (run it in the background); pushes need the noreply author email.
-
-- **Previous: s159 SHIPPED 2026-10-31** (Claude lead; Psych Pharmacology B1 of 4: the section layer, card tools and
-  three class cards, pc-maoi (MAOIs), pc-snri (SNRIs), pc-antidep (Other antidepressants); antidep-other retired into
-  them as an alias span; drawers retargeted in mdd, ssri-effects, tca-tox, adhd-meds, sud-meds): commit 0debc69, page
-  7b4d7cb3b5c3 (approved candidate e1bc544742ca), version.json build s159 (live checked). Reviewers 14 of 19 agents, 220
-  calls, 16.66M of 18M (builders 11.86M of 10M); lead 7 chats, about 115M of 110M (chats 5 to 7 measured, 29.8M). The
-  first ship run aborted at the ready gate: the 2 s159 temporary allowlist lines must stay until ship.sh passes and come
-  out after (s155 precedent); gate on the shipped page 0 failures, 0 stale. Record repair/s159/S159.md (S8, S9). Open:
-  OPEN_WORK s159 line. Next pharm batch B2 (s160) needs Jonathan's NBME-item display decision first (prompt below).
-
-- **Previous: s158 SHIPPED 2026-10-30** (Claude lead; four new psych briefs: trauma-stress, cluster-c, sexual-dysfunction,
-  stages-change (lookup); drawer pointers in 11 live briefs): commit 98b3f1b, page 00395be2f003 (approved candidate
-  07e8fe2497dd), version.json build s158. The first "ship" aborted at the ready gate (drawer briefs' receipts unfiled, then
-  stale on specs); rounds 4 and 5 removed the voices L22 and mdd L60 drawers; Jonathan re-approved. Agents 19 of 20, 315
-  calls, 26.13M of 58M; lead 6 chats, about 80M of 80M. Record repair/s158/S158.md (S8, S9). Open: the source calls and
-  tool notes in OPEN_WORK (s158 line).
-
-Older State bullets (s155, s157 and s157b at the s160 ship; s154 to s154j and the 2026-10-26/28 NBME intakes at the
+Older State bullets (s156, s158 and s159 at the s162 ship; s155, s157 and s157b at the s160 ship; s154 to s154j and the 2026-10-26/28 NBME intakes at the
 s159 ship) moved to repair/efficiency/STATE_ARCHIVE.md (runbook S9: keep the start-up files small).
 
 ## Next launch prompt (paste into a fresh chat)

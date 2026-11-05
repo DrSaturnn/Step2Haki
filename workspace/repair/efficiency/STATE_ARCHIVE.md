@@ -155,3 +155,30 @@ State bullets moved out of STEP2HAKI_HANDOFF.md to keep the start-up files small
   delirium, parkinson or cluster-b; MPTP chemical-name LOW; s150b legibility advisories; the four s150b audit proposals;
   queue.csv open row 59 (prolactin); row 66 QID to link. Figma and Vercel are off (checked 2026-10-26); the healthcare and design plugins still load
   through the linked Mac (about 3k to 5k of start-up).
+
+## Moved at the s162 ship (2026-11-04)
+
+- **Previous: s158 SHIPPED 2026-10-30** (Claude lead; four new psych briefs: trauma-stress, cluster-c, sexual-dysfunction,
+  stages-change (lookup); drawer pointers in 11 live briefs): commit 98b3f1b, page 00395be2f003 (approved candidate
+  07e8fe2497dd), version.json build s158. The first "ship" aborted at the ready gate (drawer briefs' receipts unfiled, then
+  stale on specs); rounds 4 and 5 removed the voices L22 and mdd L60 drawers; Jonathan re-approved. Agents 19 of 20, 315
+  calls, 26.13M of 58M; lead 6 chats, about 80M of 80M. Record repair/s158/S158.md (S8, S9). Open: the source calls and
+  tool notes in OPEN_WORK (s158 line).
+
+- **Previous: s159 SHIPPED 2026-10-31** (Claude lead; Psych Pharmacology B1 of 4: the section layer, card tools and
+  three class cards, pc-maoi (MAOIs), pc-snri (SNRIs), pc-antidep (Other antidepressants); antidep-other retired into
+  them as an alias span; drawers retargeted in mdd, ssri-effects, tca-tox, adhd-meds, sud-meds): commit 0debc69, page
+  7b4d7cb3b5c3 (approved candidate e1bc544742ca), version.json build s159 (live checked). Reviewers 14 of 19 agents, 220
+  calls, 16.66M of 18M (builders 11.86M of 10M); lead 7 chats, about 115M of 110M (chats 5 to 7 measured, 29.8M). The
+  first ship run aborted at the ready gate: the 2 s159 temporary allowlist lines must stay until ship.sh passes and come
+  out after (s155 precedent); gate on the shipped page 0 failures, 0 stale. Record repair/s159/S159.md (S8, S9). Open:
+  OPEN_WORK s159 line. Next pharm batch B2 (s160) needs Jonathan's NBME-item display decision first (prompt below).
+
+- **Previous: s156 SHIPPED 2026-10-31** (Claude lead; Phase 2, infectious disease B, pediatric: meningitis, dtap
+  (lookup), lymphadenitis, herpangina, bs-pta, bs-fever-rash-arthralgia, aq-infant-fever rebuilt on the decision spine):
+  commit 6a35e83, page 0c93465cd209 (approved candidate bfcc9ac56427), version.json build s156. Wave 27 agents, 663
+  calls, 70.02M of 78M (builders 58.10M; reviewers 11.92M); lead 7 chats, about 83M measured of 90M. Record
+  repair/s156/S156.md (S8 and S9). Open: OPEN_WORK s156 line (supraclavicular biopsy, overages, the four parked
+  recommendations, not approved). Tool notes: verify_all default jobs follow the core count; batch.py ship outlasts the
+  foreground limit (run it in the background); pushes need the noreply author email.
+
