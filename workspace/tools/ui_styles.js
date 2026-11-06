@@ -16,7 +16,7 @@ const VIEWS = { desk: { width: 1512, height: 945 }, tablet: { width: 1024, heigh
 const CONFIGS = {
   'flat-light-read': {}, 'sculpted-light-read': { 'ax-flat': '0' }, 'flat-dark-read': { 'ax-theme': 'dark' },
   'sculpted-dark-read': { 'ax-flat': '0', 'ax-theme': 'dark' }, 'flat-tinted-read': { 'ax-theme': 'tinted' },
-  'flat-light-recall': { 'ax-study': '1' }, 'acc-rose-dark': { 'ax-accent': 'rose', 'ax-theme': 'dark' },
+  'flat-light-recall': { 'ax-study': '1' }, 'flat-dark-recall': { 'ax-theme': 'dark', 'ax-study': '1' }, 'acc-rose-dark': { 'ax-accent': 'rose', 'ax-theme': 'dark' },
   'acc-ocean-light': { 'ax-accent': 'ocean' },
 };
 const FREEZE = '*,*::before,*::after{content-visibility:visible!important;contain-intrinsic-size:none!important;transition:none!important;animation:none!important;caret-color:transparent!important}';
