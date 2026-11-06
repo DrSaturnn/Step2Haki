@@ -29,7 +29,7 @@ window.__axh = function(s){ var x = 2166136261 >>> 0; for (var i = 0; i < s.leng
 // --norm (s164b, minified build): a gradient's default first and last stop positions (0%, 100%) are written the same way
 // on both pages, since the minifier drops them and the computed value keeps the authored form; rendering is the same
 window.__axn = function(k, v){ if (!window.__axnorm || v.indexOf('gradient(') < 0) return v;
-  return v.replace(/ 0%(?=, )/g, '').replace(/ 100%(?=\))/g, ''); };
+  return v.replace(/ 0%(?=, )/g, '').replace(/ 100%(?=[)])/g, ''); };
 window.__axone = function(el, base){ base = base || {left:0, top:0}; var cs = getComputedStyle(el), m = {};
   for (var i = 0; i < cs.length; i++) { var k = cs[i]; if (!__axskip.has(k) && !(window.__axskipre && __axskipre.test(k))) m[k] = __axn(k, cs.getPropertyValue(k)); }
   ['::before','::after','::marker','::placeholder'].forEach(function(ps){ var c = getComputedStyle(el, ps);
