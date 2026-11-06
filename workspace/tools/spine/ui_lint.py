@@ -54,6 +54,9 @@ def measure(html):
     }
 
 THEME_SEL = re.compile(r'^(?:(?:html|:root)?(?:\[data-(?:theme|axa|glass)[^\]]*\])+\s*)+$')
+# a scoped token (Jonathan 2026-11-05, s164b): '<theme prefix> <scope>' holding only --t- custom properties, where the
+# theme value uses a variable that the scope element sets below the root (.axm-flat, figure.sw, .lcc)
+THEME_SCOPED = re.compile(r'^(?:(?:html|:root)?(?:\[data-(?:theme|axa|glass)[^\]]*\])+\s+)+\S.*$')
 RAW_COLOR = re.compile(r'#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?|hwb|lab|lch|oklab|oklch|color)\(|'
                        r'\b(?:white|black|red|green|blue|gray|grey|silver|orange|yellow|purple|pink|navy|teal|maroon)\b', re.I)
 
@@ -80,7 +83,9 @@ def site_checks(site):
         for ctx, sel, content in rules(sheet, []):
             decls = [d for d in tinycss2.parse_declaration_list(content, skip_comments=True, skip_whitespace=True) if d.type == 'declaration']
             if kind == 'themes':
-                bad_sel = [s.strip() for s in sel.split(',') if not THEME_SEL.match(s.strip())]
+                scoped_ok = bool(decls) and all(d.name.startswith('--t-') for d in decls)
+                bad_sel = [s.strip() for s in sel.split(',') if not (THEME_SEL.match(s.strip()) or
+                           (scoped_ok and THEME_SCOPED.match(s.strip())))]
                 if bad_sel:
                     out['theme_component_selector'].append(rel + ': ' + sel[:120])
                 for d in decls:

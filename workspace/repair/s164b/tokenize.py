@@ -2,6 +2,7 @@
 """tokenize: D-20261105-10, themes are color tokens only. Used by split_css.py --tokens; standalone it prints counts.
 
   python3 repair/s164b/tokenize.py [--report]
+  python3 repair/s164b/tokenize.py --candidates   (local/s164b/extra_candidates.json for subset_check.js)
 
 For every declaration of a theme rule (a selector naming [data-theme], [data-glass] or [data-axa]; light-only rules that
 only negate the theme are not theme rules):
@@ -19,7 +20,11 @@ only negate the theme are not theme rules):
 - a theme value using a custom property that is redefined below the root (the Flat look's --e2, --inner on .axm-flat):
   the token is also defined on `<theme prefix> <that selector>`, so var() is resolved where the variable is set
   (`scoped_tokens`; a call for Jonathan's approval, the alternative being the Flat-look variables moved to the root);
-- a theme declaration with no light rule to carry it: listed (`no_light_rule`), kept in the theme file for now.
+- a theme declaration with no light rule to carry it: listed (`no_light_rule`), kept in the theme file for now;
+- an important theme declaration: kept on its rule (`important_kept`); the rule routes to its component's file;
+- an in-between light rule B (same subject compound and property as the theme key K, a different selector the theme rule
+  outranked; scaphoid `figure.w5a .w5skip` under `[dark] .w5a .w5skip`): gets its own token that the theme rule also
+  sets, when repair/s164b/token_extra.json lists it (subset_check.js: every element B matches also matches K).
 Returns the new rule list plus the token rules for tokens.css, and a report (local/s164b/tokens_report.json).
 """
 import json, os, re, sys
@@ -158,6 +163,79 @@ def slug(key, prop):
     return '--t-%s-%s' % (k, p)
 
 
+def theme_wants(rules, dead):
+    """live theme declarations by (key, prop): [(rule index, part, prefix, value, important, ctx)]"""
+    want = defaultdict(list)
+    for r in rules:
+        if not is_theme_rule(r):
+            continue
+        for prop, val, imp in r['decl']:
+            if (r['i'], prop) in dead or SHAPE.match(prop) or imp:
+                continue                       # important: kept on its rule (step 3), routed to its component file
+            for part in top_split(r['sel'], ','):
+                prefix, key = split_theme(part)
+                if prefix is None:
+                    continue
+                if prop.startswith('--') and not key:
+                    continue
+                want[(key, prop)].append((r['i'], part, prefix, val, imp, tuple(r['ctx'])))
+    return want
+
+
+def theme_group(prefix):
+    return tuple(sorted(re.sub(r'["\'\s]', '', m) for m in THEME.findall(prefix)))
+
+
+def subj(part):
+    comps = [c for c in top_split(norm(part), ' >+~') if c.strip()]
+    return comps[-1].strip() if comps else ''
+
+
+def outranks(t, part, imp, pos, i):
+    """theme declaration t outranks the light declaration on selector part (rule i)"""
+    if bool(t[4]) != bool(imp):
+        return bool(t[4])
+    ts_, ls = specificity(norm(t[1])), specificity(norm(part))
+    return ts_ > ls or (ts_ == ls and pos[t[0]] > pos[i])
+
+
+def candidates(rules, dead):
+    """in-between light rules: a light selector B setting a property P that a theme declaration on key K (a different
+    selector) outranked. B gets a token only when every element B matches also matches K (repair/s164b/subset_check.js),
+    because the theme value showed on those elements before (scaphoid `figure.w5a .w5skip` under `[dark] .w5a .w5skip`;
+    `#navlinks .pc-sect` under `[dark] #nav .sect`). Returns {B: {K: [P, ...]}}."""
+    want = theme_wants(rules, dead)
+    pos = {r['i']: n for n, r in enumerate(rules)}
+    by_prop = defaultdict(list)
+    for (k, prop), ts in want.items():
+        if k:
+            by_prop[prop].append((k, ts))
+    out = OrderedDict()
+    for r in rules:
+        if 'sel' not in r or is_theme_rule(r):
+            continue
+        for part in top_split(r['sel'], ','):
+            b = light_key(part)
+            for prop, val, imp in r['decl']:
+                for k, ts in by_prop.get(prop, []):
+                    if k != b and any(outranks(t, part, imp, pos, r['i']) for t in ts):
+                        ps = out.setdefault(b, OrderedDict()).setdefault(k, [])
+                        if prop not in ps:
+                            ps.append(prop)
+    return out
+
+
+def load_extra():
+    p = os.path.join(WS, 'repair', 's164b', 'token_extra.json')
+    ex = defaultdict(list)
+    if os.path.exists(p):
+        for kp, bs in json.load(open(p))['extra'].items():
+            k, prop = kp.rsplit('|', 1)
+            for b in bs:
+                ex[(b, prop)].append(k)
+    return ex
+
+
 def run(rules, dead):
     """rules: css_rules.json rules (in order); dead: {(i, prop)}. Returns (new_rules, token_decls, report)."""
     rep = defaultdict(list)
@@ -181,21 +259,8 @@ def run(rules, dead):
         return out
     def uses_below(v):
         return bool(scopes(v))
-    # 1. live theme declarations by (key, prop): [(rule index, part, prefix, value, important, ctx)]
-    want = defaultdict(list)
-    for r in rules:
-        if not is_theme_rule(r):
-            continue
-        for prop, val, imp in r['decl']:
-            if (r['i'], prop) in dead or SHAPE.match(prop):
-                continue
-            for part in top_split(r['sel'], ','):
-                prefix, key = split_theme(part)
-                if prefix is None:
-                    continue
-                if prop.startswith('--') and not key:
-                    continue
-                want[(key, prop)].append((r['i'], part, prefix, val, imp, tuple(r['ctx'])))
+    want = theme_wants(rules, dead)
+    extra = load_extra()             # (light key B, prop) -> [theme key K]: B's elements are a subset of K's
     # 2. light rules the theme declarations outranked get a token per rule
     tokens = OrderedDict()             # token -> literal light value (tokens.css)
     fallback = {}                      # token -> light value holding var(), kept in the rule as the fallback
@@ -204,6 +269,8 @@ def run(rules, dead):
     used = set()
     pos = {r['i']: n for n, r in enumerate(rules)}
     add_of = defaultdict(list)         # (light rule i, part) -> [(longhand, token)] appended after a shorthand
+    tok_ctx = {}                       # token -> media context of the light rule holding it
+    skip = defaultdict(set)            # (theme rule i, part, prop) -> tokens it does not set (another theme rule won)
     for r in rules:
         if 'sel' not in r or is_theme_rule(r):
             continue
@@ -221,18 +288,11 @@ def run(rules, dead):
                             else:
                                 todo.append((lh, comp, imp, 'background'))
             for prop, val, imp, src in todo:
-                ts = want.get((key, prop))
-                if not ts:
-                    continue
-                ls = specificity(norm(part))
-                def outranks(t):
-                    if bool(t[4]) != bool(imp):
-                        return bool(t[4])
-                    ts_ = specificity(norm(t[1]))
-                    return ts_ > ls or (ts_ == ls and pos[t[0]] > pos[r['i']])
-                beaten = [t for t in ts if outranks(t)]
-                if not beaten:
-                    rep['light_kept_literal'].append('%s { %s } outranks the theme rule' % (part.strip()[:90], prop))
+                keys = [key] + [k for k in extra.get((key, prop), []) if k != key]
+                entries = [(kk, t) for kk in keys for t in want.get((kk, prop), []) if outranks(t, part, imp, pos, r['i'])]
+                if not entries:
+                    if want.get((key, prop)):
+                        rep['light_kept_literal'].append('%s { %s } outranks the theme rule' % (part.strip()[:90], prop))
                     continue
                 name = base = slug(key, prop); n = 2
                 while name in used:
@@ -242,11 +302,30 @@ def run(rules, dead):
                     fallback[name] = val
                 else:
                     tokens[name] = val
+                tok_ctx[name] = tuple(r['ctx'])
                 if src == prop:
                     tok_of[(r['i'], part.strip(), prop)] = name
                 else:
                     add_of[(r['i'], part.strip())].append((prop, name, imp))
-                toks_for[(key, prop)].append(name)
+                for kk in OrderedDict.fromkeys(kk for kk, _ in entries):
+                    toks_for[(kk, prop)].append(name)
+                    if kk != key:
+                        rep['extra_tokens'].append('%s { %s } carries %s' % (part.strip()[:80], prop, kk[:60]))
+                # per theme, only the theme declaration that won on this rule's elements sets its token: the most
+                # specific (then latest); a lower one is kept only where every higher one sits in another media
+                groups = defaultdict(list)
+                for kk, t in entries:
+                    groups[theme_group(t[2])].append(t)
+                for g, ts in groups.items():
+                    ts.sort(key=lambda t: (specificity(norm(t[1])), pos[t[0]]), reverse=True)
+                    emitted = []
+                    for j, t in enumerate(ts):
+                        if any(not f[5] or f[5] == t[5] for f in ts[:j]):
+                            skip[(t[0], t[1].strip(), prop)].add(name)
+                        else:
+                            emitted.append(t)
+                    if len(emitted) > 1 and sorted(emitted, key=lambda t: pos[t[0]]) != emitted[::-1]:
+                        rep['order_risk'].append('%s { %s } %s' % (part.strip()[:80], prop, ' / '.join(norm(t[1])[:50] for t in emitted)))
     def ref(nm):
         return 'var(%s,%s)' % (nm, fallback[nm]) if nm in fallback else 'var(%s)' % nm
     # 3. rewrite
@@ -266,6 +345,11 @@ def run(rules, dead):
                 pure = all(split_theme(p)[0] is not None and split_theme(p)[1] == '' for p in parts)
                 if pure:
                     keep.append([prop, val, imp]); continue
+                if imp:
+                    # an important theme value beats every normal rule (the tinted .tw tbody tr background over the
+                    # zebra rule): it stays a declaration and competes in its component's layer
+                    rep['important_kept'].append('%s { %s:%s !important }' % (norm(r['sel'])[:100], prop, val[:60]))
+                    keep.append([prop, val, imp]); continue
                 carried = True
                 by_prefix = OrderedDict()
                 for part in parts:
@@ -273,11 +357,18 @@ def run(rules, dead):
                     names = toks_for.get((key, prop)) if prefix is not None else None
                     if not names:
                         carried = False; continue
-                    by_prefix.setdefault(prefix, []).extend(names)
+                    if not any(tok_ctx[nm] in ((), tuple(r['ctx'])) for nm in names):
+                        # every light rule holding the token sits in a narrower media (#axtopfade{display:none} on the
+                        # phone only): outside it the theme value has no rule to land on, so the declaration stays too
+                        rep['ctx_uncovered'].append('%s { %s:%s } light only in %s' % (norm(part)[:90], prop, val[:40], sorted({tok_ctx[nm] for nm in names})))
+                        carried = False
+                    by_prefix.setdefault(prefix, []).extend(nm for nm in names if nm not in skip.get((r['i'], part.strip(), prop), ()))
                 sc = scopes(val)
                 if sc:
                     rep['scoped_tokens'].append('%s { %s:%s } also on %s' % (norm(r['sel'])[:90], prop, val[:60], ', '.join(sc)[:80]))
                 for prefix, names in by_prefix.items():
+                    if not names:
+                        continue
                     decl = [[nm, val, False] for nm in OrderedDict.fromkeys(names)]
                     theme_rules.append(dict(r, sel=prefix, decl=decl, i=r['i'], tok=True))
                     # the value uses a variable redefined below the root: define the token there too, so var() is
@@ -309,7 +400,7 @@ def run(rules, dead):
     rep['shapes_dropped'] = shapes
     rep['dead_dropped'] = ['%d %s' % k for k in dropped_dead]
     rep['counts'] = {'tokens': len(tokens) + len(fallback), 'fallback_in_rule': len(fallback), 'scoped_tokens': len(rep['scoped_tokens']), 'keys': len(toks_for), 'shapes_dropped': len(shapes), 'dead_dropped': len(dropped_dead),
-                     'no_light_rule': len(rep['no_light_rule']), 'light_kept_literal': len(rep['light_kept_literal']),
+                     'no_light_rule': len(rep['no_light_rule']), 'important_kept': len(rep['important_kept']), 'extra_tokens': len(rep['extra_tokens']), 'skipped': sum(len(v) for v in skip.values()), 'order_risk': len(rep['order_risk']), 'ctx_uncovered': len(rep['ctx_uncovered']), 'light_kept_literal': len(rep['light_kept_literal']),
                      'shorthand_unparsed': len(rep['shorthand_unparsed']), 'longhands_added': sum(len(v) for v in add_of.values())}
     return out, tokens, rep
 
@@ -325,6 +416,11 @@ def load_dead():
 
 if __name__ == '__main__':
     css = json.load(open(os.path.join(WS, 'local', 's164b', 'css_rules.json')))
+    if '--candidates' in sys.argv:
+        c = candidates(css['rules'], load_dead())
+        json.dump(c, open(os.path.join(WS, 'local', 's164b', 'extra_candidates.json'), 'w'), indent=1)
+        print('candidates: %d light selectors, %d (B, K) pairs' % (len(c), sum(len(v) for v in c.values())))
+        sys.exit(0)
     out, tokens, rep = run(css['rules'], load_dead())
     json.dump(rep, open(os.path.join(WS, 'local', 's164b', 'tokens_report.json'), 'w'), indent=1)
     print(rep['counts'])
