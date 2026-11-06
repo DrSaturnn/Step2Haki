@@ -14,7 +14,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **s164b OPEN 2026-11-05** (Claude lead; the UI refactor per claude/pending/layout_mock/UI_REFACTOR_PLAN.md, site layer
   only, content frozen; DIGEST D-20261105-8). Branch wip/s164b in both repos. Budget lead 100M, one Opus review agent
-  (role ui-parity-review). Step: chunk 6b1 (S164B.md row 6b1 has the exact next steps; chat 4: in-between and important theme rules converted, scoped tokens approved by Jonathan, cand12 STYLES SAME on desk, tablet and phone in flat-dark, tinted, flat-light and sculpted-light (19-brief sample); recall and sculpted-dark next, then all briefs; accent matrix cut to one rose-dark screenshot, D-20261106-1). Tooling built: tools/ui_parity.js,
+  (role ui-parity-review). Step: chunk 6b1 (S164B.md row 6b1 has the exact next steps; chat 4: in-between and important theme rules converted, scoped tokens approved by Jonathan, cand14 is current: sample STYLES SAME everywhere checked; next chat reruns all 7 configs x 3 views on cand14, then the rose-dark screenshot and all briefs; accent matrix cut to one rose-dark screenshot, D-20261106-1; one residue listed for Jonathan: phone sculpted-dark chrome zebra tint). Spend: chat 4 stopped at the H6 warning. Tooling built: tools/ui_parity.js,
   tools/ui_styles.js, tools/site_build.py, site/ first cut (cand1: chrome identical, 1 to 5 elements differ per sampled
   brief). Spend: chat 1 27.06M of 100M.
 
