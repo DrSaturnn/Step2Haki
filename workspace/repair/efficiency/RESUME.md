@@ -3,7 +3,7 @@
 Jonathan, 2026-10-26: "Add whatever is needed so this issue does not happen again" (s154f chat 3 read whole docs and
 ran to about 280k context before any edit). Project copy claude/RESUME.md; repo copy repair/efficiency/RESUME.md.
 
-**Open batch: s164b** (branch wip/s164b; the UI refactor; batch file repair/s164b/S164B.md).
+**Open batch: s164b** (branch wip/s164b; the UI refactor; batch file repair/s164b/S164B.md, row 6b0 is next).
 line, here and in the project copy claude/RESUME.md, when a batch opens or ships; "none" means no batch is open and a
 launch prompt is needed.)
 
@@ -16,6 +16,7 @@ STANDING_DIRECTIONS.md or DECISIONS_DIGEST.md through the project tool: it loads
    git clone -q --depth 50 -b <branch> https://github.com/DrSaturnn/Step2Haki /home/claude/Step2Haki
    git clone -q --depth 1 -b <branch> https://github.com/DrSaturnn/Step2Haki-private /home/claude/step2haki-private
    cd /home/claude/Step2Haki/workspace && npm i --silent && cp -rn /home/claude/step2haki-private/local-only/. .
+   npx playwright install chromium   # UI parity tools (ui_styles, sty_loop, theme_gate) need it in a fresh container
    ```
    Do not call register_repo_root.
 2. `python3 tools/spine/patch.py setup <batch>` (hooks, including H6, the context alarm: it warns at start + 150k and gives
