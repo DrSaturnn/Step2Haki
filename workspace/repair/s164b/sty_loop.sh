@@ -24,7 +24,8 @@ for v in $VIEWS; do for c in $CFGS; do
   K=(--skip '^--t-'); case "$c" in *dark*|*tinted*) K=(--skip "${SHAPE%\$}\$|^--t-");; esac
   B="$D/before_${v}_${c}_${S}.json"; C="$D/${TAG}_${v}_${c}_${S}.json"
   [ -s "$B" ] || node tools/ui_styles.js dump local/s164b/before.html "$B" --view "$v" --config "$c" "${OPT[@]}" "${K[@]}" > /dev/null 2>&1
-  node tools/ui_styles.js dump "$CAND" "$C" --view "$v" --config "$c" "${OPT[@]}" "${K[@]}" > /dev/null 2>&1
+  # the candidate dump log is kept: a dump that dies leaves no json and the diff line reads empty (c15a desk flat-dark-read)
+  node tools/ui_styles.js dump "$CAND" "$C" --view "$v" --config "$c" "${OPT[@]}" "${K[@]}" > "$D/${TAG}_${v}_${c}.log" 2>&1
   node tools/ui_styles.js diff "$B" "$C" > "$D/${TAG}_${v}_${c}.diff" 2>&1
   echo "$v $c: $(grep -E '^STYLES' "$D/${TAG}_${v}_${c}.diff")"
 done; done
