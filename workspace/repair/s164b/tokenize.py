@@ -270,6 +270,7 @@ def run(rules, dead):
     pos = {r['i']: n for n, r in enumerate(rules)}
     add_of = defaultdict(list)         # (light rule i, part) -> [(longhand, token)] appended after a shorthand
     tok_ctx = {}                       # token -> media context of the light rule holding it
+    sib_emit = defaultdict(list)       # (theme rule i, part) -> [(longhand token, longhand)] its `background` sets
     skip = defaultdict(set)            # (theme rule i, part, prop) -> tokens it does not set (another theme rule won)
     for r in rules:
         if 'sel' not in r or is_theme_rule(r):
@@ -313,6 +314,15 @@ def run(rules, dead):
                         rep['extra_tokens'].append('%s { %s } carries %s' % (part.strip()[:80], prop, kk[:60]))
                 # per theme, only the theme declaration that won on this rule's elements sets its token: the most
                 # specific (then latest); a lower one is kept only where every higher one sits in another media
+                # a longhand token appended after the light `background`: a theme `background` shorthand that outranks
+                # the light rule resets that longhand too, so it competes for the token (phone sculpted dark
+                # `[dark] .tw{background:none}` under 640px over the global `[dark] .tw{background-image:...}`)
+                sh = set()
+                if src != prop:
+                    for kk in keys:
+                        for t in want.get((kk, 'background'), []):
+                            if outranks(t, part, imp, pos, r['i']):
+                                entries.append((kk, t)); sh.add(id(t))
                 groups = defaultdict(list)
                 for kk, t in entries:
                     groups[theme_group(t[2])].append(t)
@@ -321,24 +331,20 @@ def run(rules, dead):
                     emitted = []
                     for j, t in enumerate(ts):
                         if any(not f[5] or f[5] == t[5] for f in ts[:j]):
-                            skip[(t[0], t[1].strip(), prop)].add(name)
+                            if id(t) not in sh:
+                                skip[(t[0], t[1].strip(), prop)].add(name)
+                        elif id(t) in sh:
+                            sib_emit[(t[0], t[1].strip())].append((name, prop))
+                            emitted.append(t)
                         else:
                             emitted.append(t)
                     if len(emitted) > 1 and sorted(emitted, key=lambda t: pos[t[0]]) != emitted[::-1]:
                         rep['order_risk'].append('%s { %s } %s' % (part.strip()[:80], prop, ' / '.join(norm(t[1])[:50] for t in emitted)))
-    # a light rule's `background` token and the longhand tokens appended after it: a theme `background` shorthand resets
-    # both longhands, so the theme rule sets the longhand tokens too (phone sculpted dark: `[dark] .tw{background:none}`
-    # under 640px over the global `[dark] .tw{background-image:...}`)
     root_val = {}
     for r in rules:
         if r.get('sel', '').strip() == ':root' and not r['ctx']:
             for d in r['decl']:
                 root_val[d[0]] = d[1].strip()
-    bg_sib = {}
-    for (li, lp), lhs in add_of.items():
-        bn = tok_of.get((li, lp, 'background'))
-        if bn:
-            bg_sib[bn] = [(lh, nm) for lh, nm, _ in lhs]
     def ref(nm):
         return 'var(%s,%s)' % (nm, fallback[nm]) if nm in fallback else 'var(%s)' % nm
     # a token defined below the root on a scope (scoped_tokens) shadows the root for everything inside that scope, so
@@ -380,7 +386,7 @@ def run(rules, dead):
                     rep['important_kept'].append('%s { %s:%s !important }' % (norm(r['sel'])[:100], prop, val[:60]))
                     keep.append([prop, val, imp]); continue
                 carried = True
-                by_prefix = OrderedDict()
+                by_prefix, sib_by_prefix = OrderedDict(), {}
                 for part in parts:
                     prefix, key = split_theme(part)
                     names = toks_for.get((key, prop)) if prefix is not None else None
@@ -392,26 +398,26 @@ def run(rules, dead):
                         rep['ctx_uncovered'].append('%s { %s:%s } light only in %s' % (norm(part)[:90], prop, val[:40], sorted({tok_ctx[nm] for nm in names})))
                         carried = False
                     by_prefix.setdefault(prefix, []).extend(nm for nm in names if nm not in skip.get((r['i'], part.strip(), prop), ()))
+                    if prop == 'background':
+                        sib_by_prefix.setdefault(prefix, []).extend(sib_emit.get((r['i'], part.strip()), []))
                 sc = scopes(val)
                 if sc:
                     rep['scoped_tokens'].append('%s { %s:%s } also on %s' % (norm(r['sel'])[:90], prop, val[:60], ', '.join(sc)[:80]))
                 for prefix, names in by_prefix.items():
-                    if not names:
+                    if not names and not sib_by_prefix.get(prefix):
                         continue
                     decl = [[nm, val, False] for nm in OrderedDict.fromkeys(names)]
-                    if prop == 'background':
-                        for nm in OrderedDict.fromkeys(names):
-                            for lh, ln in bg_sib.get(nm, []):
-                                comp = bg_component(val, lh)
-                                mv = re.fullmatch(r'\s*var\((--[\w-]+)\)\s*', val)
-                                if comp is None and mv and COLORW.match(root_val.get(mv.group(1), '')):
-                                    # a bare var() holding a color on the root (--dk, --glass, --ink): a color layer
-                                    comp = val.strip() if lh == 'background-color' else 'none'
-                                if comp is None:
-                                    rep['bg_sibling_unparsed'].append('%s { background:%s } -> %s' % (norm(r['sel'])[:80], val[:50], ln))
-                                else:
-                                    decl.append([ln, comp, False])
-                                    rep['bg_sibling_set'].append('%s { background } sets %s' % (norm(r['sel'])[:80], ln))
+                    for ln, lh in OrderedDict.fromkeys(sib_by_prefix.get(prefix, [])):
+                        comp = bg_component(val, lh)
+                        mv = re.fullmatch(r'\s*var\((--[\w-]+)\)\s*', val)
+                        if comp is None and mv and COLORW.match(root_val.get(mv.group(1), '')):
+                            # a bare var() holding a color on the root (--dk, --glass, --ink): a color layer
+                            comp = val.strip() if lh == 'background-color' else 'none'
+                        if comp is None:
+                            rep['bg_sibling_unparsed'].append('%s { background:%s } -> %s' % (norm(r['sel'])[:80], val[:50], ln))
+                        else:
+                            decl.append([ln, comp, False])
+                            rep['bg_sibling_set'].append('%s { background } sets %s' % (norm(r['sel'])[:80], ln))
                     theme_rules.append(dict(r, sel=prefix, decl=decl, i=r['i'], tok=True))
                     # the value uses a variable redefined below the root: define the token there too, so var() is
                     # resolved where that variable is set
