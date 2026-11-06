@@ -58,8 +58,49 @@ var AX = (function () {
   function content(b) { var t = tpl(b); return t ? t.content : b; }
   function pending() { return Array.prototype.map.call(document.querySelectorAll('.brief > template.axl'), function (t) { return t.parentNode; }); }
   function buildAll() { pending().forEach(build); }
+  /* question types of bank items and the lead-in each type shows when an item has none of its own */
+  var PROMPT = {next:'Which of the following is the most appropriate next step in management?',
+                dx:'Which of the following is the most likely diagnosis?',
+                test:'Which of the following is the most appropriate test?',
+                mech:'Which of the following is the most likely cause, organism, or complication?',
+                avoid:'Which of the following is contraindicated or should be avoided?',
+                screen:'Which of the following is the most appropriate screening or preventive measure?',
+                stage:'Which of the following best describes the stage or classification?',
+                claim:'Which of the following statements is correct?',
+                untyped:'Which of the following is correct for this patient?'};
+  function qtype(t) { t = (t || '').toLowerCase(); return PROMPT[t] ? t : 'untyped'; }
+  function prompt(t) { return PROMPT[qtype(t)]; }
+  /* a brief's bank items: the .mcq cards of a built brief; for an unbuilt brief, the template items the build turns
+     into cards (stem and answer split by an arrow, both distractors present). */
+  function items(b) {
+    if (isBuilt(b)) return Array.prototype.map.call(b.querySelectorAll('.mcq'), function (m) {
+      var qp = m.querySelector('.qp');
+      return { type: (qp && qp.dataset.type) || 'untyped', status: m.dataset.itemStatus || '' };
+    });
+    var out = [];
+    content(b).querySelectorAll('ol.bank > li').forEach(function (li) {
+      var segs = 0, cur = 0;
+      li.childNodes.forEach(function (n) {
+        if (n.nodeType === 3 && n.nodeValue.indexOf('\u2192') > -1) {
+          n.nodeValue.split('\u2192').forEach(function (t, i) { if (i > 0) { if (cur) segs++; cur = 0; } if (t.trim()) cur = 1; });
+        } else if ((n.textContent || '').trim()) cur = 1;
+      });
+      if (cur) segs++;
+      var d1 = (li.getAttribute('data-label-d1') || li.getAttribute('data-d1') || '').trim(), d2 = (li.getAttribute('data-label-d2') || li.getAttribute('data-d2') || '').trim();
+      if (segs >= 2 && d1 && d2) out.push({ type: qtype(li.getAttribute('data-type')), status: li.getAttribute('data-item-status') || '' });
+    });
+    return out;
+  }
+  /* every per-brief pass on a detached copy of a brief (search reads unbuilt briefs this way); no event, no build */
+  function copy(b) {
+    var root = document.createElement('div');
+    for (var i = 0; i < b.attributes.length; i++) root.setAttribute(b.attributes[i].name, b.attributes[i].value);
+    root.appendChild(content(b).cloneNode(true));
+    runPasses(root, 0);
+    return root;
+  }
 
   var AX = { module: module, on: on, off: off, emit: emit, teardown: teardown, modules: mods,
-    brief: { each: each, build: build, ensure: ensure, isBuilt: isBuilt, content: content, fresh: fresh, holder: holder, all: briefs, pending: pending, buildAll: buildAll } };
+    brief: { each: each, build: build, ensure: ensure, isBuilt: isBuilt, content: content, fresh: fresh, holder: holder, all: briefs, pending: pending, buildAll: buildAll, copy: copy, items: items, qtype: qtype, prompt: prompt } };
   return AX;
 })();

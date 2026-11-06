@@ -22,19 +22,22 @@ function step(n,b){
   var s=n.closest('[id]'); while(s && s!==b){ var m=/-(s(\d)|dx|mx)$/.exec(s.id); if(m) return {id:s.id,n:m[2]||(m[1]==='dx'?'4':'7')}; s=s.parentElement&&s.parentElement.closest('[id]'); }
   return null;
 }
-function base(n,t){
-  var b=n.closest('.brief'); if(!b) return null;
+function base(n,t,b,R){
   var x=n.closest('[data-xdom]'), sp=step(n,b);
-  return {t:t,b:b.id,bt:txt(b.querySelector('h4')),sh:(b.getAttribute('data-shelf')||'').split(/\s+/).filter(Boolean),
+  return {t:t,b:b.id,bt:txt(R.querySelector('h4')),sh:(b.getAttribute('data-shelf')||'').split(/\s+/).filter(Boolean),
     sy:(b.getAttribute('data-bp')||'').split(/\s+/).filter(Boolean).slice(0,1),f:'o',
     x:x?x.getAttribute('data-xdom-kind'):null,xc:x?x.getAttribute('data-xdom').split(/\s+/):[],
     href:'#'+(sp?sp.id:b.id),w:sp?('step '+sp.n+' · '+STEPS[sp.n]):'',q:'',m:'',id:''};
 }
+/* a practice item's lead-in: the card's prompt line, or for a template item its own lead-in or its type's prompt */
+function leadIn(n){ return n.getAttribute('data-lead-in')||txt(n.querySelector('.qp'))||(n.tagName==='LI'?AX.brief.prompt(n.getAttribute('data-type')):'')||'Practice item'; }
+/* reads each brief's content: the page for a built brief, its template for an unbuilt one */
 function collect(){
-  var out=[], seen={};
+  var out=[], seen={}, all=AX.brief.all();
   function add(e){ if(e && e.q){ var k=e.t+'|'+e.b+'|'+e.id+'|'+e.q; if(!seen[k]){ seen[k]=1; out.push(e); } } }
-  document.querySelectorAll('.brief [data-nbme-src]').forEach(function(n){
-    var e=base(n,'desc'); if(!e) return; e.id=n.getAttribute('data-nbme-src'); e.f=form(e.id);
+  function each(sel,fn){ all.forEach(function(b){ var R=AX.brief.content(b); R.querySelectorAll(sel).forEach(function(n){ fn(n,b,R); }); }); }
+  each('[data-nbme-src]',function(n,b,R){
+    var e=base(n,'desc',b,R); e.id=n.getAttribute('data-nbme-src'); e.f=form(e.id);
     if(n.classList.contains('nbd-h')){ var lb=n.querySelector('b'); e.m=txt(lb).replace(/:$/,''); e.q=clean(n,'b'); }
     else { e.q=txt(n.classList.contains('nbd-w')?(n.querySelector('.nbd')||n):n).replace(/^\(|\)$/g,'');
       var k=n.closest('.nbd-w'); k=k&&k.querySelector('.nbd-k'); if(k) e.m=txt(k);
@@ -42,29 +45,28 @@ function collect(){
         if(cell) e.m=clean(cell,'.nbd-w,.sp-pop-b,.sp-pop,.sp-src'); } }
     add(e);
   });
-  document.querySelectorAll('.brief div.nbq[data-nbme], .brief .pp-b[data-nbme]').forEach(function(n){
-    var e=base(n,'frame'); if(!e) return; e.id=n.getAttribute('data-nbme'); e.f=form(e.id);
+  each('div.nbq[data-nbme], .pp-b[data-nbme]',function(n,b,R){
+    var e=base(n,'frame',b,R); e.id=n.getAttribute('data-nbme'); e.f=form(e.id);
     e.q=txt(n.querySelector('.sl')); e.m=n.classList.contains('pp-b')?clean(n.querySelector('.pp-off'),'.sp-pop,.sp-pop-b'):txt(n.querySelector('.nbask'));
     add(e);
   });
-  document.querySelectorAll('.brief li[data-nbme], .brief .mcq[data-nbme]').forEach(function(n){
+  each('li[data-nbme], .mcq[data-nbme]',function(n,b,R){
     if(n.closest('.nbq')) return;
-    var e=base(n,'linked'); if(!e) return; e.id=n.getAttribute('data-nbme'); e.f=form(e.id);
-    e.q=n.getAttribute('data-lead-in')||txt(n.querySelector('.qp'))||'Practice item';
-    var k=/(?:&rarr;|→)\s*<b>([\s\S]*?)<\/b>/.exec(n.innerHTML); if(k){ var d=document.createElement('div'); d.innerHTML=k[1]; e.m='Key: '+txt(d); }
+    var e=base(n,'linked',b,R); e.id=n.getAttribute('data-nbme'); e.f=form(e.id);
+    e.q=leadIn(n);
     add(e);
   });
-  document.querySelectorAll('.brief tr[data-xdom], .brief .sp-row[data-xdom], .brief li[data-xdom], .brief .mcq[data-xdom]').forEach(function(n){
+  each('tr[data-xdom], .sp-row[data-xdom], li[data-xdom], .mcq[data-xdom]',function(n,b,R){
     if(n.querySelector('[data-nbme-src]')) return;
-    var e=base(n,'xrow'); if(!e) return;
-    if(n.matches('li,.mcq')){ e.q=n.getAttribute('data-lead-in')||txt(n.querySelector('.qp'))||'Practice item'; e.m='Practice item'; }
+    var e=base(n,'xrow',b,R);
+    if(n.matches('li,.mcq')){ e.q=leadIn(n); e.m='Practice item'; }
     else e.q=clean(n.querySelector('.sp-f')||n.querySelector('td'),'.sp-pop-b,.sp-pop,.nbd-w');
     add(e);
   });
-  var bt={}; document.querySelectorAll('.brief[id]').forEach(function(b){ bt[b.id]=b; });
+  var bt={}; all.forEach(function(b){ if(b.id) bt[b.id]=b; });
   ITEMS.forEach(function(it){
     var b=it.b&&bt[it.b];
-    out.push({t:'item',b:b?it.b:'',bt:b?txt(b.querySelector('h4')):'',sh:['psych'],sy:b?(b.getAttribute('data-bp')||'').split(/\s+/).slice(0,1):['behav'],
+    out.push({t:'item',b:b?it.b:'',bt:b?txt(AX.brief.content(b).querySelector('h4')):'',sh:['psych'],sy:b?(b.getAttribute('data-bp')||'').split(/\s+/).slice(0,1):['behav'],
       f:form(it.id),x:it.x,xc:it.xc,href:'#'+it.b,w:'',q:it.q,m:it.n,id:it.id});
   });
   return out.sort(function(a,b){

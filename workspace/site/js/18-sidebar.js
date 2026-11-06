@@ -144,10 +144,16 @@
       return {n: n ? txt(n) : '', label: label, id: href.charAt(0) === '#' ? href.slice(1) : '', off: a.classList.contains('off') || !href};
     });
   }
+  /* an unbuilt brief has no rail yet: draw it when the loader builds that brief, if it is still the current one */
+  var railWait = null;
+  AX.on('brief:built', function(b){ if(railWait && b.id === railWait.id){ var w = railWait; railWait = null; drawRail(w); } });
   function drawRail(it){
     if(rail){ rail.root.remove(); rail = null; }
+    railWait = null;
     if(!it) return;
-    var b = AX.brief.ensure(it.id), steps = b ? stepsOf(b) : [];
+    var b = document.getElementById(it.id);
+    if(b && !AX.brief.isBuilt(b)){ railWait = it; return; }
+    var steps = b ? stepsOf(b) : [];
     if(!steps.length) return;
     var root = el('div', 'axn-rail'), trk = el('div', 'axn-trk'), fill = el('div', 'axn-fill'), rows = el('div', 'axn-rows'), lens = el('div', 'axn-lens'), rl = el('div', 'axn-rl');
     lens.setAttribute('aria-hidden', 'true'); trk.appendChild(fill); rows.appendChild(lens); rows.appendChild(rl); root.appendChild(trk); root.appendChild(rows);

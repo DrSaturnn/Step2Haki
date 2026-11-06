@@ -124,8 +124,8 @@ function blueprint(){
     var bp=(b.getAttribute('data-bp')||'').split(/\s+/); if(!bp[0]||!CODES[bp[0]]) return;
     var row=rowFor(bp[0]); row.p++;
     if(bp[1]&&CODES[bp[1]]){ var r2=rowFor(bp[1]); if(r2!==row) r2.s++; }
-    var qs=b.querySelectorAll('.mcq'); row.q+=qs.length; row.n+=nbmeIds(b).length;
-    qs.forEach(function(m){ var qp=m.querySelector('.qp'); var ty=(qp&&qp.dataset.type)||'claim'; total++;
+    var qs=AX.brief.items(b); row.q+=qs.length; row.n+=nbmeIds(AX.brief.content(b)).length;
+    qs.forEach(function(m){ var ty=m.type; total++;
       for(var i=0;i<tasks.length;i++) if(tasks[i].t.types && tasks[i].t.types.split(' ').indexOf(ty)>-1){ tasks[i].q++; return; }
       var k=ty==='mech'?'Foundational science (not a listed task on this exam)':ty==='claim'?'Unassigned (claim)':'Other ('+ty+')';
       tother[k]=(tother[k]||0)+1; });

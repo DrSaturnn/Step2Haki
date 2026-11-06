@@ -587,6 +587,8 @@ function sxEsc(s){ return s.replace(/[&<>"]/g,function(c){ return {'&':'&amp;','
 
 var SX_SKIP=/(^|\s)(lbl|mask-toggle|k|rv|qp|bktools|bkfilter|scalepeek|availability|reviewwrap|rvmark|cue|arw)(\s|$)/;
 var SX_MASK=/(^|\s)(mask|why)(\s|$)/;
+/* brief navigation added at build (bounds bar, rail, end line): not brief text, and absent from a template copy */
+var SX_CHROME=/(^|\s)(bb-bar|bb-rail|bb-end)(\s|$)/;
 var SX_BRKT={DIV:1,P:1,LI:1,DT:1,DD:1,TD:1,TH:1,TR:1,BR:1,H4:1,H5:1,H6:1,UL:1,OL:1,DL:1,TABLE:1,CAPTION:1,THEAD:1,TBODY:1,BUTTON:1,text:1};
 function sxBlk(el,label,rank){ return {el:el,label:label,rank:rank,raw:'',n:'',bank:-1}; }
 /* One traversal, used twice: at build (to collect text) and at lookup (to find
@@ -709,24 +711,41 @@ function sxPairs(raw){
     }
   }
 }
-function sxBuildOne(b,di){
-  if(!b.id) return;
-  var h=b.querySelector(':scope > h4');
-  var rec={b:b,id:b.id,di:di,title:h ? norm(h.textContent) : b.id,sub:'',blocks:[],all:''};
+/* One brief's record. A built brief is read from the page. An unbuilt brief is read from a detached copy of its
+   template run through every per-brief pass (AX.brief.copy), as a build runs them, so the text, block labels and
+   masks match the built brief; the copy is dropped and each block keeps its masked ranges (k.mr) for snippets. On brief:built the
+   record is read again from the page. */
+function sxRecord(b,di){
+  var root=b, lazy=!AX.brief.isBuilt(b);
+  if(lazy){
+    var keep=window.__ax; root=AX.brief.copy(b); window.__ax=keep;
+  }
+  var h=null; for(var e=root.firstElementChild;e;e=e.nextElementSibling) if(e.tagName==='H4'){ h=e; break; }
+  var rec={b:b,id:b.id,di:di,lazy:lazy,title:h ? norm(h.textContent) : b.id,sub:'',blocks:[],all:''};
   var add=function(k){
-    var parts=[], vis=[]; sxWalk(k,function(t,n,m){ parts.push(t); if(!m) vis.push(t); });
+    var parts=[], vis=[], mr=[], pos=0, sp=true, WS=/\s/;
+    sxWalk(k,function(t,n,m){
+      parts.push(t); if(!m) vis.push(t);
+      if(!lazy) return;
+      for(var i=0;i<t.length;i++){
+        if(WS.test(t.charAt(i))){ if(!sp){ sp=true; pos++; } continue; }
+        if(m){ var last=mr[mr.length-1]; if(last && last[1]===pos) last[1]++; else mr.push([pos,pos+1]); }
+        sp=false; pos++;
+      }
+    });
     k.raw=parts.join('').replace(/\s+/g,' ').trim();
     if(k.bank>-1) k.stemEnd=vis.join('').replace(/\s+/g,' ').trim().length;   /* the answer chain comes last */
+    if(lazy){ k.mr=mr; k.el=null; }
     if(k.raw) rec.blocks.push(k);
   };
-  for(var c=b.firstElementChild;c;c=c.nextElementSibling){
+  for(var c=root.firstElementChild;c;c=c.nextElementSibling){
     if(c.classList.contains('bankwrap')){
       Array.prototype.forEach.call(c.querySelectorAll('.mcqwrap > .mcq'),function(m,i){
         var k=sxBlk(m,'Question',3); k.bank=i; add(k);
       });
       continue;
     }
-    if(c.classList.contains('rvmark')) continue;
+    if(c.classList.contains('rvmark') || SX_CHROME.test(c.className)) continue;
     var L=sxLabel(c); if(!L) continue;
     var k=sxBlk(c,L[0],L[1]); add(k);
     if(L[1]===1 && !rec.sub) rec.sub=k.raw;
@@ -734,8 +753,18 @@ function sxBuildOne(b,di){
   var parts=[];
   rec.blocks.forEach(function(k){ k.n=sxNorm(k.raw); parts.push(k.n); sxPairs(k.raw); });
   rec.all=parts.join('\n');
-  SX.briefs.push(rec);
+  return rec;
 }
+function sxBuildOne(b,di){ if(b.id) SX.briefs.push(sxRecord(b,di)); }
+/* masked state at a raw offset for a record read from a template copy: the first character at or after it */
+function sxMaskedAt(k,off){
+  var p=off; while(p<k.raw.length && k.raw.charAt(p)===' ') p++;
+  for(var i=0;i<k.mr.length;i++){ if(p<k.mr[i][0]) break; if(p<k.mr[i][1]) return true; }
+  return false;
+}
+AX.on('brief:built',function(b){
+  for(var i=0;i<SX.briefs.length;i++) if(SX.briefs[i].b===b){ if(SX.briefs[i].lazy) SX.briefs[i]=sxRecord(b,SX.briefs[i].di); return; }
+});
 /* Built in idle slices after load so it never blocks a tap; a query that
    arrives first finishes the build on the spot. */
 function sxBuild(deadline){
@@ -883,7 +912,7 @@ function sxHl(raw,n,a,b,terms){
   return out+sxEsc(raw.slice(at,b));
 }
 function sxSnippet(k,first,terms){
-  var loc=sxLocate(k,first), masked=!!(loc && loc.masked), inAnswer=false;
+  var masked=k.el ? !!((sxLocate(k,first)||{}).masked) : sxMaskedAt(k,first), inAnswer=false;
   /* A bank item's answer stays hidden until the reader answers it, in any
      mode, so a hit there shows the stem instead of spoiling the key. */
   if(masked && k.bank>-1){ first=0; masked=false; inAnswer=true; }
@@ -937,6 +966,14 @@ function sxSchedule(){
 /* Open the brief, scroll to the block that matched and flash it. Study-mode
    masks are left exactly as they were. */
 function sxLand(x){
+  if(x.r.lazy){
+    /* build the brief, then search again so the hit points at the page */
+    var id=x.r.id; AX.brief.ensure(x.r.b);
+    var again=sxSearch(sxQuery()).hits.filter(function(h){ return h.r.id===id; })[0];
+    var rb=SX.briefs.filter(function(r){ return r.id===id; })[0];
+    x=again || {r:rb,best:{bi:0,first:-1}};
+    if(!x.r || x.r.lazy || !x.r.blocks.length) return;
+  }
   var r=x.r, k=r.blocks[x.best.bi], el=k.el;
   if(navOpen) closeNav(false);
   try{ if(history.replaceState) history.replaceState(null,'','#'+r.id); }catch(e){}
@@ -956,10 +993,12 @@ function sxLand(x){
     }
   }
   var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  requestAnimationFrame(function(){
+  var y=function(){
     var rc=tgt.getBoundingClientRect(), vh=window.innerHeight||document.documentElement.clientHeight;
-    var y=(window.pageYOffset||0)+rc.top-(rc.height<vh*0.6 ? (vh-rc.height)/2 : 76);
-    try{ window.scrollTo({top:Math.max(0,y),behavior:reduce?'auto':'smooth'}); }catch(e){ window.scrollTo(0,Math.max(0,y)); }
+    return Math.max(0,(window.pageYOffset||0)+rc.top-(rc.height<vh*0.6 ? (vh-rc.height)/2 : 76));
+  };
+  requestAnimationFrame(function(){
+    AX.emit('brief:reveal',{y:y,smooth:!reduce});
     el.classList.remove('sxflash'); void el.offsetWidth; el.classList.add('sxflash');
     clearTimeout(el._sxT); el._sxT=setTimeout(function(){ el.classList.remove('sxflash'); },2100);
   });
@@ -1273,15 +1312,6 @@ function shortLabel(s){ return norm(s); }
    carried on the <li> as data-type. Untyped legacy items get a NEUTRAL
    prompt: many of them are keyed on an action, so a diagnosis default
    would mislabel the question. Type them as they are touched. */
-var PROMPT={next:'Which of the following is the most appropriate next step in management?',
-            dx:'Which of the following is the most likely diagnosis?',
-            test:'Which of the following is the most appropriate test?',
-            mech:'Which of the following is the most likely cause, organism, or complication?',
-            avoid:'Which of the following is contraindicated or should be avoided?',
-            screen:'Which of the following is the most appropriate screening or preventive measure?',
-            stage:'Which of the following best describes the stage or classification?',
-            claim:'Which of the following statements is correct?',
-            untyped:'Which of the following is correct for this patient?'};
 function mcq(R){
   var made=0, kept=0;
   (R||document).querySelectorAll('ol.bank').forEach(function(ol){
@@ -1336,8 +1366,8 @@ function mcq(R){
       var rv=document.createElement('span'); rv.className='rv'; rv.textContent='REVEAL';
       top.appendChild(p); top.appendChild(rv); box.appendChild(top);
       var qt=(li.getAttribute('data-type')||'').toLowerCase();
-      var qp=document.createElement('p'); qp.className='qp'; qp.dataset.type=PROMPT[qt]?qt:'untyped';
-      qp.textContent=li.getAttribute('data-lead-in')||PROMPT[qt]||PROMPT.untyped; box.appendChild(qp);
+      var qp=document.createElement('p'); qp.className='qp'; qp.dataset.type=AX.brief.qtype(qt);
+      qp.textContent=li.getAttribute('data-lead-in')||AX.brief.prompt(qt); box.appendChild(qp);
       if(li.hasAttribute('data-objective')) box.dataset.objective=li.getAttribute('data-objective');
       var o=document.createElement('div'); o.className='opts';
       /* Option labels render as PLAIN TEXT. The keyed answer carries <b>
@@ -1400,7 +1430,7 @@ function mcq(R){
     bw.querySelector('.bkmode[data-v="'+pref+'"]').classList.add('on');
     ol.parentNode.replaceChild(bw,ol);
   });
-  window.__ax={made:made,kept:kept};
+  var T=window.__ax||{made:0,kept:0}; window.__ax={made:T.made+made,kept:T.kept+kept};   /* totals over every build */
 }
 /* reveal-only fallback, markup preserved */
 function revealFrag(segs){
@@ -1449,12 +1479,12 @@ function addFilter(bw){
 function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } }
 
 /* ---------- 7. interaction ---------- */
+var whySeq=0;   /* ids stay unique across briefs built at different times */
 function accessibilityEnhance(R){
-  var seq=0;
   (R||document).querySelectorAll('.mcq').forEach(function(q){
     var rv=q.querySelector('.rv'), why=q.querySelector('.why');
     if(!why) return;
-    if(!why.id) why.id='ax-mcq-why-'+(++seq);
+    if(!why.id) why.id='ax-mcq-why-'+(++whySeq);
     why.hidden=!q.classList.contains('done');
     if(rv){
       if(rv.tagName!=='BUTTON'){ var b=document.createElement('button'); b.type='button'; b.className=rv.className; b.textContent=rv.textContent; rv.parentNode.replaceChild(b,rv); rv=b; }
@@ -1579,15 +1609,16 @@ function figures(R){
     });
   });
 }
+function transformBrief(b){ columnize(b); mnemonics(b); tables(b); masks(b); mcq(b); accessibilityEnhance(b); unavailableInline(b); xrefs(b); scalepeeks(b); figures(b); }
   function run(){
   switches(); mobileNav(); sections(); columnize(); mnemonics(); tables(); masks(); mcq(); accessibilityEnhance(); unavailableInline(); xrefs(); scalepeeks(); figures(); wire(); shelfInit();
-  AX.brief.each('transform',function(b){ columnize(b); mnemonics(b); tables(b); masks(b); mcq(b); accessibilityEnhance(b); unavailableInline(b); xrefs(b); scalepeeks(b); figures(b); });
+  AX.brief.each('transform',transformBrief);
   var AFTER=VERIFY?norm(document.body.innerText):"";
   var addedUI=/STUDY MODE|RECALL MODE|FLAT THEME|REVEAL|From this brief|Distractors are entities/;
   var a=BEFORE.split(' ').filter(Boolean).length;
   var b=AFTER.split(' ').filter(Boolean).length;
   console.log('[ax] words before',a,'after',b,'| mcq',window.__ax.made,'reveal-only',window.__ax.kept);
-  window.__axCheck={before:a,after:b,mcq:window.__ax.made,reveal:window.__ax.kept};
+  window.__axCheck={before:a,after:b,get mcq(){ return (window.__ax||{}).made||0; },get reveal(){ return (window.__ax||{}).kept||0; }};
 }
 window.__axShelf={
   /* Review narrows the page to its fixed set. The sidebar search keeps its

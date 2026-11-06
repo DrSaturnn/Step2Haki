@@ -25,9 +25,10 @@ function build(b){
   if(above){ var d = b.getBoundingClientRect().height - r.height; if(d) window.scrollBy(0, d); }
 }
 
-var io = null;
+var io = null, paused = false;
 function observe(){
   io = new IntersectionObserver(function(es){
+    if(paused) return;
     es.forEach(function(e){ if(e.isIntersecting){ io.unobserve(e.target); build(e.target); } });
   }, { rootMargin: '150% 0px 150% 0px' });
   B.pending().forEach(function(b){ io.observe(b); });
@@ -62,6 +63,35 @@ function goHash(){
   if(el && !had) el.scrollIntoView({ block: 'start' });
   settle();
 }
+
+/* brief:reveal {y, smooth}: scroll to y() (a page offset the caller measures). Briefs passed on the way are not built
+   until the scroll stops, so their estimated heights hold and y() stays valid; then the briefs near the destination
+   build and the page is placed at y() again until it holds. Input from the reader ends the correction. */
+var revealN = 0;
+function stopReveal(){ revealN++; }
+['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function(t){ window.addEventListener(t, stopReveal, { passive: true, capture: true }); });
+function reveal(o){
+  var my = ++revealN, last = -1, still = 0, ticks = 0;
+  function place(){ window.scrollTo({ top: o.y(), behavior: 'instant' }); }
+  function resume(){
+    paused = false;
+    if(io){ io.disconnect(); observe(); }
+    var n = 0;
+    var t = setInterval(function(){
+      if(my !== revealN || ++n > 12){ clearInterval(t); return; }
+      if(Math.abs(o.y() - (window.pageYOffset || 0)) > 4) place();
+    }, 100);
+  }
+  if(!io){ o.smooth ? window.scrollTo({ top: o.y(), behavior: 'smooth' }) : place(); return; }
+  paused = true;
+  window.scrollTo({ top: o.y(), behavior: o.smooth ? 'smooth' : 'instant' });
+  var w = setInterval(function(){
+    var y = window.pageYOffset || 0;
+    still = y === last ? still + 1 : 0; last = y;
+    if(my !== revealN || still >= 2 || ++ticks > 40){ clearInterval(w); resume(); }
+  }, 80);
+}
+AX.on('brief:reveal', reveal);
 
 document.addEventListener('click', function(e){
   var a = e.target.closest && e.target.closest('a[href^="#"]'); if(!a) return;

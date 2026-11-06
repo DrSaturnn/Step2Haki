@@ -3,7 +3,7 @@
 Jonathan, 2026-10-26: "Add whatever is needed so this issue does not happen again" (s154f chat 3 read whole docs and
 ran to about 280k context before any edit). Project copy claude/RESUME.md; repo copy repair/efficiency/RESUME.md.
 
-**Open batch: s164c** on branch wip/s164c (launched 2026-11-06: load briefs on demand; batch file repair/s164c/S164C.md, next chunk 2b). Chat 1 could not push the public repo (the session's add_repo for DrSaturnn/Step2Haki was refused): if origin/wip/s164c is missing, restore it from the private repo's wip/s164c branch, file xfer/s164c.bundle (`git fetch <bundle> wip/s164c:wip/s164c`).
+**Open batch: s164c** on branch wip/s164c (launched 2026-11-06: load briefs on demand; batch file repair/s164c/S164C.md, next chunk 3; its first step is a question for Jonathan).
 line, here and in the project copy claude/RESUME.md, when a batch opens or ships; "none" means no batch is open and a
 launch prompt is needed.)
 

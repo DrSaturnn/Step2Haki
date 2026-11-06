@@ -96,28 +96,11 @@ function putData(id,d){ return set(NS+'-d-'+id,d); }
 /* ---------- what is due ----------
    Enumerated from the DOM every time, so briefs added later are picked up
    with no migration, and the active shelf decides the pool. */
-/* A brief not built yet is read from its template: an item of the bank is a scored question when it has a stem and an
-   answer around a top-level arrow and two authored distractors, as the transform builds it. */
-function bankItems(b){
-  var out=[];
-  AX.brief.content(b).querySelectorAll('ol.bank > li').forEach(function(li){
-    var segs=0, cur=0;
-    li.childNodes.forEach(function(n){
-      if(n.nodeType===3 && n.nodeValue.indexOf('\u2192')>-1){
-        n.nodeValue.split('\u2192').forEach(function(t,i){ if(i>0){ if(cur) segs++; cur=0; } if(t.trim()) cur=1; });
-      } else if((n.textContent||'').trim()) cur=1;
-    });
-    if(cur) segs++;
-    var d1=(li.getAttribute('data-label-d1')||li.getAttribute('data-d1')||'').trim(), d2=(li.getAttribute('data-label-d2')||li.getAttribute('data-d2')||'').trim();
-    if(segs>=2 && d1 && d2) out.push(li.getAttribute('data-item-status')||'');
-  });
-  return out;
-}
 function unavailableCount(){
   var n=0;
   document.querySelectorAll('.brief').forEach(function(b){
     if(!window.__axShelf.eligible(b.id)) return;
-    if(!AX.brief.isBuilt(b)){ bankItems(b).forEach(function(st){ if(st && st!=='ready') n++; }); return; }
+    if(!AX.brief.isBuilt(b)){ AX.brief.items(b).forEach(function(x){ if(x.status && x.status!=='ready') n++; }); return; }
     b.querySelectorAll('.mcq').forEach(function(m){
       if(m.dataset.itemStatus && m.dataset.itemStatus!=='ready') n++;
     });
@@ -143,7 +126,7 @@ function pool(){
     if(!b.id || !window.__axShelf || !window.__axShelf.eligible(b.id)) return;
     var h=AX.brief.content(b).querySelector('h4'), title=h?h.textContent.trim():b.id;
     if(!AX.brief.isBuilt(b)){
-      var st=bankItems(b), ready=st.filter(function(x){ return !x || x==='ready'; }).length;
+      var st=AX.brief.items(b), ready=st.filter(function(x){ return !x.status || x.status==='ready'; }).length;
       if(!ready) return;
       out.push({id:b.id,title:title,totalItems:st.length,get items(){ AX.brief.ensure(b); return builtItems(b).items; }});
       return;
