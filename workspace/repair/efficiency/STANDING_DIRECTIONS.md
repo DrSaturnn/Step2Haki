@@ -3,7 +3,7 @@
 ## Core rules (read these even if you read nothing else; added 2026-11-05)
 1. Later dated decisions win. Before acting on any direction, list the live decisions on its topic (`python3 tools/spine/doc_lint.py DECISIONS_DIGEST.md STANDING_DIRECTIONS.md --topic <topic>`); a superseded line is history, not an instruction. [D-20261105-2]
 2. Replace, never append: a UI change edits or deletes what it replaces in the same commit; no new override block. [D-20261105-1]
-3. Themes change token values only; layout never lives in a theme. [D-20261105-1]
+3. Themes change color token values only: a theme file never names a component and never changes shape, size, position, spacing, display or zoom; components take every color from a token. [D-20261105-1] [D-20261105-10]
 4. All motion is spring timing from the motion tokens (SwiftUI style). [D-20261105-3]
 5. Nothing ships without Jonathan's "ship" to the screenshots; gate, ui_lint and doc_lint must pass. [MEM] [D-20261105-1]
 6. Accuracy is non-negotiable; board sources first; no drift from source content. [DIG 2026-10-10] [MEM]
