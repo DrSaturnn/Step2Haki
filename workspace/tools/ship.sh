@@ -42,6 +42,9 @@ else
 
 # ---- 1. checks on a scratch copy
 o=$(python3 repair/build.py "$B" --out "$TMP/index.html" 2>&1) || fail build "$o"; echo "$o"
+# site layer (s164b, D-20261105-6): the page's styles and scripts come from workspace/site/ (tools/site_build.py:
+# one style and one script bundle, comments stripped, minified); brief markup is left byte-identical
+o=$(python3 tools/site_build.py "$TMP/index.html" 2>&1) || fail site-build "$o"; echo "$o"
 # G-APPROVE (Jonathan 2026-10-12): an approval record must exist for exactly this build, written by the
 # UserPromptSubmit hook when Jonathan says "ship" in reply to the presented report (tools/hooks/approval.py)
 o=$(python3 tools/hooks/approval.py check "$B" "$TMP/index.html" 2>&1) || fail approval "$o"; echo "$o"

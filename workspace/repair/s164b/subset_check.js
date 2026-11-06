@@ -4,7 +4,7 @@
    on B's rule), whether every element B matches on the before page also matches K. Then the theme
    value showed on all of B's elements before, and B's token carries it after the conversion.
    node repair/s164b/subset_check.js local/s164b/before.html [--views desk,phone] [--configs flat-dark-read,...]
-   Writes repair/s164b/token_extra.json {extra: {"K|P": [B, ...]}, fail, empty, invalid}. Pseudo-elements and user-action
+   Writes repair/s164b/data/token_extra.json {extra: {"K|P": [B, ...]}, fail, empty, invalid}. Pseudo-elements and user-action
    pseudo-classes (:hover, :focus, :focus-visible, :focus-within, :active) are removed from both selectors before matching;
    a pair is kept only when K's state pseudo-classes and pseudo-element are all on B too (else listed under state);
    a B matching no element in every run is listed under empty and gets no token. */
@@ -67,7 +67,7 @@ const EVAL = ({ sels, pairs }) => {
   }
   const keep = o => Object.fromEntries(Object.entries(o).map(([kp, v]) => [kp, v.length]));
   out.fail = keep(out.fail); out.empty = keep(out.empty); out.state = keep(out.state);   // counts only: the lists are long
-  fs.writeFileSync(path.join(__dirname, 'token_extra.json'), JSON.stringify(out, null, 1));
+  fs.writeFileSync(path.join(__dirname, 'data', 'token_extra.json'), JSON.stringify(out, null, 1));
   const n = o => Object.values(o).reduce((s, v) => s + (typeof v === 'number' ? v : v.length), 0);
   console.log('pairs', meta.length, 'extra', n(out.extra), 'state', n(out.state), 'fail', n(out.fail), 'empty', n(out.empty), 'invalid', n(out.invalid));
 })().catch(e => { console.error(e); process.exit(1); });

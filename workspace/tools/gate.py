@@ -181,13 +181,40 @@ def nkey(s):
 
 
 def bp_codes(page):
+    """The NBME code keys of the page's OUT.codes map: `var OUT={"codes": {...` in the source page, `codes:{gen:"...",...}`
+    in the minified build (s164b: esbuild renames OUT and drops key quotes). A small string-aware scan of the object."""
     m = re.search(r'var OUT=(\{.*?\});\n', page)
+    if m:
+        try:
+            return set(json.loads(m.group(1))['codes'])
+        except Exception:
+            return None
+    m = re.search(r'codes:\{(?=gen:)', page)
     if not m:
         return None
-    try:
-        return set(json.loads(m.group(1))['codes'])
-    except Exception:
-        return None
+    i, depth, keys, tok, q = m.end(), 1, set(), '', None
+    expect_key = True
+    while i < len(page) and depth:
+        c = page[i]
+        if q:
+            if c == '\\':
+                i += 1
+            elif c == q:
+                q = None
+        elif c in '"\'':
+            q = c
+        elif c == '{':
+            depth += 1
+        elif c == '}':
+            depth -= 1
+        elif depth == 1 and c == ':' and expect_key:
+            keys.add(tok.strip().strip('"\'')); tok = ''; expect_key = False
+        elif depth == 1 and c == ',':
+            expect_key = True; tok = ''
+        elif depth == 1 and expect_key:
+            tok += c
+        i += 1
+    return keys or None
 
 
 def labels(it):
@@ -205,8 +232,10 @@ def check_page(page, g, page_path):
     stats = {'briefs': len(bl), 'items': len(it), 'items_with_reasons': 0}
 
     # ---- mode CSS (s92): flat/study rules hang on per-region carriers, never on a body class over descendants
-    mcss = page[page.find('<style>'):page.find('</style>')] if '<style>' in page else ''
-    for msel in sorted(set(re.findall(r'body\.(?:flat|study)\b[^{},]*\s[^{},]*(?=[,{])', re.sub(r'/\*.*?\*/', '', mcss, flags=re.S)))):
+    # every page style block (s164b: the build writes one <style id="ax-css">; a bare <style> can be SVG-internal)
+    mcss = '\n'.join(re.findall(r'<style\b[^>]*>(.*?)</style>', page, flags=re.S))
+    # combinator spacing and ::before/::after normalized, so the minified build and the source give the same keys
+    for msel in sorted(set(re.sub(r'::?(before|after)\b', r'::\1', re.sub(r'\s+', ' ', re.sub(r'\s*([>+~])\s*', r' \1 ', x))).strip() for x in re.findall(r'body\.(?:flat|study)\b[^{},]*\s[^{},]*(?=[,{])', re.sub(r'/\*.*?\*/', '', mcss, flags=re.S)))):
         g.fail('mode-css', msel.strip()[:60], 'selector %r styles content through a body mode class' % msel.strip()[:80])
 
     # ---- no em dashes in visible HTML (scripts, styles and comments excluded)

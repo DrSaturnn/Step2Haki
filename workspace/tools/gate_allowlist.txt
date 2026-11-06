@@ -17,3 +17,17 @@ K3 bs-adolescent-confid:mnemonic  # pre-existing: mnemonic has no recorded sourc
 # s161 (2026-11-02): one-card verify pages hold one built card; the mood-anticonv card (its pc-nbq block) is a shell there.
 # Delete this line at the s161 ship (after ship.sh passes).
 structural primary-amenorrhea:before_step_1_urine_hcg  # s163: literal, the amenorrhea algorithm's own first step (urine hCG before step 1), kept by hand in chunk 3 | primary-amenorrhea step number
+
+# 2026-11-06 s164b: mode-css read only the first bare <style> block until the site build (one <style id="ax-css">); reading every
+# style block found these pre-existing study-mode rules on the live page. Backlog for a site pass: rewrite as body .axm-study X, then delete.
+mode-css body.study .brief td .ex  # pre-existing: study-mode rule styles content through body.study (found when mode-css began reading every style block, s164b)
+mode-css body.study .brief.sp .sp-on-ax  # pre-existing: study-mode rule styles content through body.study (found when mode-css began reading every style block, s164b)
+mode-css body.study .brief.sp .sp-on-ev > li  # pre-existing: study-mode rule styles content through body.study (found when mode-css began reading every style block, s164b)
+mode-css body.study .brief.sp .sp-on-ev > li > div  # pre-existing: study-mode rule styles content through body.study (found when mode-css began reading every style block, s164b)
+mode-css body.study .brief.sp .sp-on-ev > li > div > *  # pre-existing: study-mode rule styles content through body.study (found when mode-css began reading every style block, s164b)
+mode-css body.study .brief.sp .sp-on-ev > li::after  # pre-existing: study-mode rule styles content through body.study (found when mode-css began reading every style block, s164b)
+mode-css body.study .brief.sp .sp-on-ev > li::before  # pre-existing: study-mode rule styles content through body.study (found when mode-css began reading every style block, s164b)
+mode-css body.study .brief.sp .sp-on-ev > li:first-child  # pre-existing: study-mode rule styles content through body.study (found when mode-css began reading every style block, s164b)
+mode-css body.study .brief.sp .sp-on-f  # pre-existing: study-mode rule styles content through body.study (found when mode-css began reading every style block, s164b)
+mode-css body.study .w5a .w5f.w5-wait  # pre-existing: study-mode rule styles content through body.study (found when mode-css began reading every style block, s164b)
+mode-css body.study figure.w5a.ax-w5tab .w5f.w5-wait > *  # pre-existing: study-mode rule styles content through body.study (found when mode-css began reading every style block, s164b)

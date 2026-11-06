@@ -6,7 +6,7 @@
 
 For every declaration of a theme rule (a selector naming [data-theme], [data-glass] or [data-axa]; light-only rules that
 only negate the theme are not theme rules):
-- dead (split_css DEAD, or repair/s164b/dead_theme.json from dead_decls.js): deleted;
+- dead (split_css DEAD, or repair/s164b/data/dead_theme.json from dead_decls.js): deleted;
 - shape (radius, border width or style, outline width, style or offset): deleted, light's shape applies in every theme;
 - custom property on a pure theme selector: kept as is;
 - anything else (color, background, shadow, a custom property on a component selector): a token. The light rules with the
@@ -24,7 +24,7 @@ only negate the theme are not theme rules):
 - an important theme declaration: kept on its rule (`important_kept`); the rule routes to its component's file;
 - an in-between light rule B (same subject compound and property as the theme key K, a different selector the theme rule
   outranked; scaphoid `figure.w5a .w5skip` under `[dark] .w5a .w5skip`): gets its own token that the theme rule also
-  sets, when repair/s164b/token_extra.json lists it (subset_check.js: every element B matches also matches K).
+  sets, when repair/s164b/data/token_extra.json lists it (subset_check.js: every element B matches also matches K).
 Returns the new rule list plus the token rules for tokens.css, and a report (local/s164b/tokens_report.json).
 """
 import json, os, re, sys
@@ -226,7 +226,7 @@ def candidates(rules, dead):
 
 
 def load_extra():
-    p = os.path.join(WS, 'repair', 's164b', 'token_extra.json')
+    p = os.path.join(WS, 'repair', 's164b', 'data', 'token_extra.json')
     ex = defaultdict(list)
     if os.path.exists(p):
         for kp, bs in json.load(open(p))['extra'].items():
@@ -455,7 +455,7 @@ def run(rules, dead):
 
 def load_dead():
     dead = set()
-    p = os.path.join(WS, 'repair', 's164b', 'dead_theme.json')
+    p = os.path.join(WS, 'repair', 's164b', 'data', 'dead_theme.json')
     if os.path.exists(p):
         for e in json.load(open(p))['dead']:
             dead.add((e['i'], e['prop']))
