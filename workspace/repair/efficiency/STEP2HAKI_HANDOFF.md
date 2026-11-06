@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-11-05, by Claude (s164b open: the UI refactor).
+Last updated: 2026-11-06, by Claude (s164c open: load briefs on demand).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,6 +12,12 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
+- **s164c OPEN 2026-11-06** (Claude lead; load briefs on demand, site layer only, content frozen; D-20261106-3; no agents;
+  lead budget 60M): branch wip/s164c, batch file repair/s164c/S164C.md. Chat 1 done: baseline (desk DOMContentLoaded 6.0 s,
+  settled 7.4 s; phone at 4x CPU 29.7 s and 41.2 s; 223,878 elements after load), the on-demand runtime and the per-brief
+  passes (chunk 2); cand1 has 3,324 elements at load. Next: chunk 2b (search, blueprint, NBME view, Review checks, gate,
+  render, perf after). The public push was refused in chat 1 (add_repo denied): the branch is in the private repo as
+  xfer/s164c.bundle on its wip/s164c branch.
 - **s164b SHIPPED 2026-11-06** (Claude lead; the UI refactor, site layer only, content frozen; D-20261105-8, cut short
   by D-20261106-2, Jonathan 14:22: "we can ship what we have, perform the on demand loading ship then consider this at
   another time later down the ledger"): commit e5d78c1 (pushed to main), page cbd0eeddd9c7 (approved candidate
