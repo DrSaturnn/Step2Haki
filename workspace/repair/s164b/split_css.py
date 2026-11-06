@@ -35,8 +35,8 @@ FILES = [
     ('themes/accents', 'themes', r'\[data-axa'),
     ('themes/dark', 'themes', r'\[data-theme'),
     ('layout/print', 'layout', r'^@print'),
-    ('layout/sidebar', 'layout', r'body\.navopen|#nav\b|#navlinks|#navtop|#navscroll|#navscrim|\.axn\b|#axn\b|\.axn-|\.bb-rl\b|\.bb-rail|\.navsub|\.navclose|\.shelfsel|\.shelfpick|\.bb-menu|\.fmdrop'),
-    ('layout/phone', 'layout', r'#mbar|#navtab|\.bb-bar\b|\.bb-idx|\.bb-t\b|\.bb-sec|\.bb-prog|\.bb-l\b|\.bb-c\b'),
+    ('layout/sidebar', 'layout', r'body\.navopen|#nav\b|#navlinks|#navtop|#navscroll|#navscrim|\.axn\b|#axn\b|\.axn-|\.bb-rl\b|\.bb-rail|\.navsub|\.navclose|\.shelfsel|\.shelfpick|\.fmdrop'),
+    ('layout/phone', 'layout', r'\.bb-menu|#mbar|#navtab|\.bb-bar\b|\.bb-idx|\.bb-t\b|\.bb-sec|\.bb-prog|\.bb-l\b|\.bb-c\b'),
     ('layout/rail', 'layout', r'\.bb-rail|\.bb-end|\.bb-cap|\.bb-nx|\.bb-top'),
     ('layout/toolbar', 'layout', r'#axbar|#modes|#axdisp|\.axsw|#axtopfade|#axedge|\.axrvb|\.axacc|\.flatt'),
     ('layout/drawer', 'layout', r'\.sp-drawer|\.lbp|\.axdrw|#spd|\.drw'),
@@ -57,6 +57,12 @@ FILES = [
     ('base', 'base', r'^[\s,]*(?:[a-z0-9*]+|html|body|:root)(?::{1,2}[\w-]+(?:\([^)]*\))?)*(?:\s*[>+~ ]\s*(?:[a-z0-9*]+)(?::{1,2}[\w-]+(?:\([^)]*\))?)*)*(?:\s*,\s*(?:[a-z0-9*]+|html|body|:root)(?::{1,2}[\w-]+(?:\([^)]*\))?)*(?:\s*[>+~ ]\s*[a-z0-9*]+(?::{1,2}[\w-]+(?:\([^)]*\))?)*)*)*[\s,]*$'),
     ('components/brief', 'components', r'.'),
 ]
+# dead declarations: (rule index, property) -> why it never applied. Each lost before the layers and would win after
+# them; every entry goes to the batch report's Retired table with its owner decision.
+DEAD = {
+    (1653, '--sidebar'): 's136 dark theme copied the 286px default; s141 set the desktop sidebar to 344px (won on '
+                         'specificity), and below 1101px the copy equals the default',
+}
 FILE_ORDER = ['tokens'] + [f for f, _, _ in FILES]
 LAYER_OF = dict([('tokens', 'tokens'), ('base', 'base')] + [(f, l) for f, l, _ in FILES])
 
@@ -147,6 +153,10 @@ def main(argv):
     per = OrderedDict((f, []) for f in FILE_ORDER)
     where = {}
     for r in css['rules']:
+        if any((r['i'], d[0]) in DEAD for d in r.get('decl', [])):
+            r = dict(r, decl=[d for d in r['decl'] if (r['i'], d[0]) not in DEAD])
+            if not r['decl']:
+                continue
         groups = classify(r)
         where[r['i']] = list(groups)
         for f, parts in groups.items():

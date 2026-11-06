@@ -36,6 +36,13 @@ body .axm-study #mbar button[data-act="study"],body #mbar.axm-study button[data-
 .brief .bb-bar .bb-sec::after{content:"";flex:none;width:6px;height:6px;margin-left:2px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg)}
 .brief .bb-prog{position:absolute;left:14px;right:14px;bottom:4px;height:3px;border-radius:2px;background:var(--hair);overflow:hidden}
 .brief .bb-prog i{display:block;height:100%;width:0;border-radius:2px;background:var(--accent)}
+.brief .bb-menu{position:absolute;right:8px;top:46px;min-width:200px;max-width:min(300px,86vw);max-height:60vh;overflow:auto;padding:6px;border-radius:14px;background:var(--raised);box-shadow:var(--e2),0 12px 28px -12px var(--dk)}
+.brief .bb-menu[hidden]{display:none}
+.brief .bb-menu button{display:flex;gap:10px;align-items:baseline;width:100%;padding:10px 10px;border-radius:9px;font:650 14px/1.25 var(--sans);color:var(--ink)}
+.brief .bb-menu button b{min-width:16px;font-weight:800;color:var(--muted)}
+.brief .bb-menu button.cur{background:var(--principle-bg);color:var(--principle)}
+.brief .bb-menu button.cur b{color:var(--principle)}
+.brief .bb-menu button.off{color:var(--muted);cursor:default}
 body.bb-barred #navtab{opacity:0;transform:translateY(-14px);pointer-events:none}
 }
 @media (--phone){

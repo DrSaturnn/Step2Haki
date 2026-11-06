@@ -14,7 +14,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **s164b OPEN 2026-11-05** (Claude lead; the UI refactor per claude/pending/layout_mock/UI_REFACTOR_PLAN.md, site layer
   only, content frozen; DIGEST D-20261105-8). Branch wip/s164b in both repos. Budget lead 100M, one Opus review agent
-  (role ui-parity-review). Step: chunk 5 (S164B.md row 5 has the exact next commands). Tooling built: tools/ui_parity.js,
+  (role ui-parity-review). Step: chunk 6 (S164B.md row 6 has the exact next commands; chat 2 finished chunk 5). Tooling built: tools/ui_parity.js,
   tools/ui_styles.js, tools/site_build.py, site/ first cut (cand1: chrome identical, 1 to 5 elements differ per sampled
   brief). Spend: chat 1 27.06M of 100M.
 

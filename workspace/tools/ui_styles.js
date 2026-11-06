@@ -190,7 +190,7 @@ async function explain(a) {
   function winner(r, prop) {
     // matched rules come in ascending cascade order; the last one declaring the property wins (important ones after normal)
     let w = null, wi = null;
-    const scan = (list, inh) => { for (const mm of list || []) { const st = mm.rule.style; for (const cp of st.cssProperties) { if (cp.name !== prop || !cp.text || cp.disabled) continue;
+    const scan = (list, inh) => { for (const mm of list || []) { const st = mm.rule.style; for (const cp of st.cssProperties) { if (cp.name !== prop || cp.disabled || cp.parsedOk === false) continue;  // longhands set by a shorthand have no text
       const rec = (inh ? 'inh ' : '') + '[' + ((mm.rule.layers || []).map(l => l.text).join('.') || '-') + '] ' + ((mm.rule.media || []).map(x => '@' + x.text).join(' ')) + ' ' + mm.rule.selectorList.text.slice(0, 150) + ' {' + cp.name + ':' + cp.value + (cp.important ? '!' : '') + '}';
       if (cp.important) wi = rec; else w = rec; } } };
     const ins = (r.inlineStyle && r.inlineStyle.cssProperties || []).find(cp => cp.name === prop && cp.text);

@@ -77,15 +77,6 @@ body.navopen{overflow:hidden}
 }
 #nav .brand p.axbuild{margin-top:2px;font-size:10.5px;opacity:.7;letter-spacing:.02em}
 .brief .bb-rail{display:none}
-@media (--narrow){
-.brief .bb-menu{position:absolute;right:8px;top:46px;min-width:200px;max-width:min(300px,86vw);max-height:60vh;overflow:auto;padding:6px;border-radius:14px;background:var(--raised);box-shadow:var(--e2),0 12px 28px -12px var(--dk)}
-.brief .bb-menu[hidden]{display:none}
-.brief .bb-menu button{display:flex;gap:10px;align-items:baseline;width:100%;padding:10px 10px;border-radius:9px;font:650 14px/1.25 var(--sans);color:var(--ink)}
-.brief .bb-menu button b{min-width:16px;font-weight:800;color:var(--muted)}
-.brief .bb-menu button.cur{background:var(--principle-bg);color:var(--principle)}
-.brief .bb-menu button.cur b{color:var(--principle)}
-.brief .bb-menu button.off{color:var(--muted);cursor:default}
-}
 @media (--desktop){
 .brief .bb-rail{display:block;position:sticky;top:22px;z-index:5;width:122px;margin-left:-150px}
 .brief .bb-rl{position:relative;display:grid;gap:2px;padding-left:12px}
