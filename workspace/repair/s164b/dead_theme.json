@@ -1,0 +1,1060 @@
+{
+"note": "Theme declarations in effect on no element in 15 runs (desk, tablet, phone x flat-dark-read, sculpted-dark-read, flat-tinted-read, flat-dark-recall, acc-rose-dark; dead_decls.js on page 10098af401b5). Owner: the s136 dark theme copy, superseded by the s148b/s148f rules that outranked it. Custom properties are left out (theme token definitions).",
+"dead": [
+{
+"i": 1570,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] #modes .axacc .axsw:not([aria-checked=\"true\"])"
+},
+{
+"i": 1666,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] body .axm-flat .dp,[data-theme=\"dark\"] body .dp.axm-flat"
+},
+{
+"i": 1667,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] body .axm-flat .pearls,[data-theme=\"dark\"] body .pearls.axm-flat"
+},
+{
+"i": 1668,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] body .axm-flat .danger,[data-theme=\"dark\"] body .danger.axm-flat"
+},
+{
+"i": 1670,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] body .axm-flat .crit,[data-theme=\"dark\"] body .crit.axm-flat"
+},
+{
+"i": 1671,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] body .axm-flat .mcq button,[data-theme=\"dark\"] body .mcq.axm-flat butt"
+},
+{
+"i": 1675,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] body .axm-flat #nav,[data-theme=\"dark\"] body #nav.axm-flat"
+},
+{
+"i": 1678,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] body .axm-flat .mcq .why,[data-theme=\"dark\"] body .mcq.axm-flat .why"
+},
+{
+"i": 1679,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] body .axm-flat .mcq .rv,[data-theme=\"dark\"] body .mcq.axm-flat .rv"
+},
+{
+"i": 1689,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] #nav"
+},
+{
+"i": 1689,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #nav"
+},
+{
+"i": 1690,
+"prop": "border-bottom",
+"sel": "[data-theme=\"dark\"] #nav .brand"
+},
+{
+"i": 1691,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] #nav .brand .mark"
+},
+{
+"i": 1691,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] #nav .brand .mark"
+},
+{
+"i": 1692,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #nav .brand p"
+},
+{
+"i": 1693,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] #search"
+},
+{
+"i": 1693,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] #search"
+},
+{
+"i": 1693,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] #search"
+},
+{
+"i": 1693,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #search"
+},
+{
+"i": 1696,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #nav .sect"
+},
+{
+"i": 1697,
+"prop": "border-left",
+"sel": "[data-theme=\"dark\"] #nav a"
+},
+{
+"i": 1697,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #nav a"
+},
+{
+"i": 1700,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #nav .count"
+},
+{
+"i": 1701,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #nav .navsub"
+},
+{
+"i": 1702,
+"prop": "border-bottom",
+"sel": "[data-theme=\"dark\"] #modes"
+},
+{
+"i": 1703,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] #modes button"
+},
+{
+"i": 1703,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] #modes button"
+},
+{
+"i": 1703,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] #modes button"
+},
+{
+"i": 1704,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] #modes .track"
+},
+{
+"i": 1704,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] #modes .track"
+},
+{
+"i": 1705,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] #modes .knob"
+},
+{
+"i": 1705,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] #modes .knob"
+},
+{
+"i": 1706,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #modes .nm"
+},
+{
+"i": 1719,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .brief"
+},
+{
+"i": 1719,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .brief"
+},
+{
+"i": 1719,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .brief"
+},
+{
+"i": 1727,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .dp"
+},
+{
+"i": 1728,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .pearls"
+},
+{
+"i": 1729,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .danger"
+},
+{
+"i": 1731,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .crit"
+},
+{
+"i": 1732,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .vignette"
+},
+{
+"i": 1733,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] body .axm-flat .vignette,[data-theme=\"dark\"] body .vignette.axm-flat"
+},
+{
+"i": 1737,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .dp .lbl"
+},
+{
+"i": 1739,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .danger .lbl"
+},
+{
+"i": 1756,
+"prop": "text-decoration",
+"sel": "[data-theme=\"dark\"] .scaleref"
+},
+{
+"i": 1790,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .tierT td:first-child"
+},
+{
+"i": 1820,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .mcq"
+},
+{
+"i": 1820,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .mcq"
+},
+{
+"i": 1820,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .mcq"
+},
+{
+"i": 1821,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .mcq .qp"
+},
+{
+"i": 1822,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .mcq .qp[data-type=\"next\"]"
+},
+{
+"i": 1823,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .mcq .rv"
+},
+{
+"i": 1823,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .mcq .rv"
+},
+{
+"i": 1823,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .mcq .rv"
+},
+{
+"i": 1826,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .mcq button"
+},
+{
+"i": 1826,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .mcq button"
+},
+{
+"i": 1826,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .mcq button"
+},
+{
+"i": 1834,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .mcq .why"
+},
+{
+"i": 1834,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .mcq .why"
+},
+{
+"i": 1843,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .bktools .bkmode,[data-theme=\"dark\"] .bktools .bkall"
+},
+{
+"i": 1843,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .bktools .bkmode,[data-theme=\"dark\"] .bktools .bkall"
+},
+{
+"i": 1843,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .bktools .bkmode,[data-theme=\"dark\"] .bktools .bkall"
+},
+{
+"i": 1844,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .bktools .bkmode.on"
+},
+{
+"i": 1848,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .bkfilter button"
+},
+{
+"i": 1848,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .bkfilter button"
+},
+{
+"i": 1848,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .bkfilter button"
+},
+{
+"i": 1849,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .bkfilter button[aria-pressed=\"true\"]"
+},
+{
+"i": 1849,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .bkfilter button[aria-pressed=\"true\"]"
+},
+{
+"i": 1849,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .bkfilter button[aria-pressed=\"true\"]"
+},
+{
+"i": 1855,
+"prop": "text-decoration",
+"sel": "[data-theme=\"dark\"] .xref"
+},
+{
+"i": 1857,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] tbody tr.em td"
+},
+{
+"i": 1860,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .tw tbody tr.em"
+},
+{
+"i": 1873,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .brief"
+},
+{
+"i": 1879,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .tierT td:first-child"
+},
+{
+"i": 1881,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .shelfpick .seg"
+},
+{
+"i": 1885,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #nav .shelfpick .lbl"
+},
+{
+"i": 1886,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] #nav .shelfsel"
+},
+{
+"i": 1886,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] #nav .shelfsel"
+},
+{
+"i": 1886,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] #nav .shelfsel"
+},
+{
+"i": 1886,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] #nav .shelfsel"
+},
+{
+"i": 1886,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #nav .shelfsel"
+},
+{
+"i": 1888,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] #nav .shelfsel option"
+},
+{
+"i": 1888,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #nav .shelfsel option"
+},
+{
+"i": 1889,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #nav .shelfsel option:disabled"
+},
+{
+"i": 1891,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #rvlaunch .lbl"
+},
+{
+"i": 1892,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .rvbtn"
+},
+{
+"i": 1892,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .rvbtn"
+},
+{
+"i": 1896,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .rvbtn .av"
+},
+{
+"i": 1897,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .rvbtn .nm"
+},
+{
+"i": 1898,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .rvbtn .due"
+},
+{
+"i": 1899,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .rvbtn .cap"
+},
+{
+"i": 1900,
+"prop": "border-top",
+"sel": "[data-theme=\"dark\"] .rvbtn .cta"
+},
+{
+"i": 1900,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .rvbtn .cta"
+},
+{
+"i": 2032,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #nav .navsub.aq"
+},
+{
+"i": 2036,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .tw table.cluet tbody"
+},
+{
+"i": 2036,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .tw table.cluet tbody"
+},
+{
+"i": 2036,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .tw table.cluet tbody"
+},
+{
+"i": 2043,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .tw tbody.grp"
+},
+{
+"i": 2043,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .tw tbody.grp"
+},
+{
+"i": 2043,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .tw tbody.grp"
+},
+{
+"i": 2051,
+"prop": "border-bottom",
+"sel": "[data-theme=\"dark\"] #navtop"
+},
+{
+"i": 2052,
+"prop": "border-bottom",
+"sel": "[data-theme=\"dark\"] #navtop .brand"
+},
+{
+"i": 2055,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #sxres .sxstat"
+},
+{
+"i": 2069,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] #nav"
+},
+{
+"i": 2071,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] #navtop .brand .mark"
+},
+{
+"i": 2072,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] .navclose"
+},
+{
+"i": 2072,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .navclose"
+},
+{
+"i": 2072,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .navclose"
+},
+{
+"i": 2072,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .navclose"
+},
+{
+"i": 2076,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] dl.rows.mnem dt b.mn"
+},
+{
+"i": 2180,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .k-mild"
+},
+{
+"i": 2185,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] figure.lcw"
+},
+{
+"i": 2188,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .lcw .wg"
+},
+{
+"i": 2191,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .lcw .wh .win"
+},
+{
+"i": 2207,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .lcw .sg.soft"
+},
+{
+"i": 2223,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] figure.lcp"
+},
+{
+"i": 2227,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .lcp .pt:first-child .when"
+},
+{
+"i": 2228,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .lcp .tile"
+},
+{
+"i": 2228,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .lcp .tile"
+},
+{
+"i": 2229,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .lcp .tile.first"
+},
+{
+"i": 2229,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .lcp .tile.first"
+},
+{
+"i": 2239,
+"prop": "border-top",
+"sel": "[data-theme=\"dark\"] .lcp .wr2 + .wr2"
+},
+{
+"i": 2240,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .lcp .wr2 b"
+},
+{
+"i": 2256,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] dl.rows.mnem"
+},
+{
+"i": 2256,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] dl.rows.mnem"
+},
+{
+"i": 2257,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] dl.rows.mnem > dt b.mn"
+},
+{
+"i": 2259,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .stem .sd,[data-theme=\"dark\"] .nbstem .sd"
+},
+{
+"i": 2306,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] figure.lcw.lcc[data-mimic-full]"
+},
+{
+"i": 2306,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] figure.lcw.lcc[data-mimic-full]"
+},
+{
+"i": 2320,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-row"
+},
+{
+"i": 2320,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-row"
+},
+{
+"i": 2320,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-row"
+},
+{
+"i": 2331,
+"prop": "border-left",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-pause"
+},
+{
+"i": 2331,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-pause"
+},
+{
+"i": 2337,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-pop-b"
+},
+{
+"i": 2337,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-pop-b"
+},
+{
+"i": 2337,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-pop-b"
+},
+{
+"i": 2338,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .sp-pop-b .sp-ct,[data-theme=\"dark\"] .sp-card .sp-ct"
+},
+{
+"i": 2342,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-drw,[data-theme=\"dark\"] .sp-drawer .sp-drw"
+},
+{
+"i": 2342,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-drw,[data-theme=\"dark\"] .sp-drawer .sp-drw"
+},
+{
+"i": 2342,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-drw,[data-theme=\"dark\"] .sp-drawer .sp-drw"
+},
+{
+"i": 2360,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .brief.sp details.sp-sys"
+},
+{
+"i": 2360,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .brief.sp details.sp-sys"
+},
+{
+"i": 2364,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-sysr > div"
+},
+{
+"i": 2364,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-sysr > div"
+},
+{
+"i": 2364,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-sysr > div"
+},
+{
+"i": 2369,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-inst"
+},
+{
+"i": 2369,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-inst"
+},
+{
+"i": 2369,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-inst"
+},
+{
+"i": 2410,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-ladder"
+},
+{
+"i": 2410,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-ladder"
+},
+{
+"i": 2410,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-ladder"
+},
+{
+"i": 2420,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-script"
+},
+{
+"i": 2420,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-script"
+},
+{
+"i": 2420,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-script"
+},
+{
+"i": 2422,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .brief.sp .sp-script .sk"
+},
+{
+"i": 2436,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .lcc .wl.dec"
+},
+{
+"i": 2479,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .lcn .mb.lt"
+},
+{
+"i": 2479,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .lcn .mb.lt"
+},
+{
+"i": 2483,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .lc-key .k-lt"
+},
+{
+"i": 2483,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .lc-key .k-lt"
+},
+{
+"i": 2484,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] figure.lcw:not(.lcc)"
+},
+{
+"i": 2484,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] figure.lcw:not(.lcc)"
+},
+{
+"i": 2485,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] figure.lcw:not(.lcc) > .wrows"
+},
+{
+"i": 2485,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] figure.lcw:not(.lcc) > .wrows"
+},
+{
+"i": 2486,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] figure.lcw:not(.lcc) > .wrows > .wr,[data-theme=\"dark\"] figure.lcw:not"
+},
+{
+"i": 2486,
+"prop": "border",
+"sel": "[data-theme=\"dark\"] figure.lcw:not(.lcc) > .wrows > .wr,[data-theme=\"dark\"] figure.lcw:not"
+},
+{
+"i": 2486,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] figure.lcw:not(.lcc) > .wrows > .wr,[data-theme=\"dark\"] figure.lcw:not"
+},
+{
+"i": 2486,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] figure.lcw:not(.lcc) > .wrows > .wr,[data-theme=\"dark\"] figure.lcw:not"
+},
+{
+"i": 2487,
+"prop": "border",
+"sel": "[data-theme=\"dark\"] figure.lcw:not(.lcc) > .wrows > .wg"
+},
+{
+"i": 2490,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] figure.lcw:not(.lcc) > .wrows"
+},
+{
+"i": 2491,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] figure.sw"
+},
+{
+"i": 2511,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .lcp .tile > .when"
+},
+{
+"i": 2512,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .lcp .tile.first > .when"
+},
+{
+"i": 2518,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .w5a .w5z"
+},
+{
+"i": 2519,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .w5a .w5t"
+},
+{
+"i": 2519,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] .w5a .w5t"
+},
+{
+"i": 2519,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .w5a .w5t"
+},
+{
+"i": 2520,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .w5a .w5t.first"
+},
+{
+"i": 2520,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .w5a .w5t.first"
+},
+{
+"i": 2521,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .w5a .w5b"
+},
+{
+"i": 2521,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .w5a .w5b"
+},
+{
+"i": 2522,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .w5a .w5t.first .w5b"
+},
+{
+"i": 2522,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .w5a .w5t.first .w5b"
+},
+{
+"i": 2523,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .w5a .w5c"
+},
+{
+"i": 2526,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .w5a .w5fd"
+},
+{
+"i": 2532,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] .w5a .w5m"
+},
+{
+"i": 2535,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .axm-flat .w5a .w5t,[data-theme=\"dark\"] .axm-flat .w5a .w5t.first"
+},
+{
+"i": 2536,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .axm-flat .w5a .w5t.first"
+},
+{
+"i": 2552,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] .w5a .w5t:nth-of-type(odd)"
+},
+{
+"i": 2553,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] .w5a .w5t.first,[data-theme=\"dark\"] .axm-flat .w5a .w5t.first"
+},
+{
+"i": 2553,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] .w5a .w5t.first,[data-theme=\"dark\"] .axm-flat .w5a .w5t.first"
+},
+{
+"i": 2575,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] .navclose"
+},
+{
+"i": 2581,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] #search"
+},
+{
+"i": 2581,
+"prop": "border-radius",
+"sel": "[data-theme=\"dark\"] #search"
+},
+{
+"i": 2586,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] #nav .shelfsel"
+},
+{
+"i": 2586,
+"prop": "background-image",
+"sel": "[data-theme=\"dark\"] #nav .shelfsel"
+},
+{
+"i": 2590,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] #modes button"
+},
+{
+"i": 2591,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] #modes .track"
+},
+{
+"i": 2592,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] #modes .knob"
+},
+{
+"i": 2592,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] #modes .knob"
+},
+{
+"i": 2593,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #modes .nm"
+},
+{
+"i": 2594,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] .rvbtn"
+},
+{
+"i": 2626,
+"prop": "background-color",
+"sel": "[data-theme=\"dark\"] #modes .axacc"
+},
+{
+"i": 2627,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] #modes .axacc .axsw"
+},
+{
+"i": 2628,
+"prop": "box-shadow",
+"sel": "[data-theme=\"dark\"] #modes .axacc .axsw[aria-checked=\"true\"]"
+},
+{
+"i": 2630,
+"prop": "color",
+"sel": "[data-theme=\"dark\"] #modes .axacc .axan"
+},
+{
+"i": 2638,
+"prop": "background",
+"sel": "[data-theme=\"dark\"] #axbar .axrvb .av"
+},
+{
+"i": 3127,
+"prop": "text-decoration",
+"sel": "html:is([data-theme],:not([data-theme])) body .brief.sp .sp-drw:not(.qx-pair),html:is([dat"
+},
+{
+"i": 3127,
+"prop": "transition",
+"sel": "html:is([data-theme],:not([data-theme])) body .brief.sp .sp-drw:not(.qx-pair),html:is([dat"
+},
+{
+"i": 3161,
+"prop": "transition",
+"sel": "html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) .qx-pairs .sp-drw.qx-p"
+}
+]
+}
