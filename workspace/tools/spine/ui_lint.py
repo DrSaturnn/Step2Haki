@@ -9,6 +9,7 @@ Usage:
   python3 ui_lint.py PAGE.html                      # report
   python3 ui_lint.py PAGE.html --baseline B.json    # fail (exit 1) if any count rose above the baseline
   python3 ui_lint.py PAGE.html --write-baseline B.json
+  python3 ui_lint.py --site [site] [--examples] [--hard]   # D-20261105-10 checks over site/css; --hard exits 1 on any
 """
 import json, re, sys
 
@@ -52,8 +53,62 @@ def measure(html):
         '_examples': {'theme_rules_setting_layout': theme_layout[:15], 'selectors_defined_4plus': [s for _, s in dup[:15]], 'motion_not_spring': non_spring[:15], 'comments_with_decision_narration': [c[:100] for c in narration[:10]]},
     }
 
+THEME_SEL = re.compile(r'^(?:(?:html|:root)?(?:\[data-(?:theme|axa|glass)[^\]]*\])+\s*)+$')
+RAW_COLOR = re.compile(r'#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?|hwb|lab|lch|oklab|oklch|color)\(|'
+                       r'\b(?:white|black|red|green|blue|gray|grey|silver|orange|yellow|purple|pink|navy|teal|maroon)\b', re.I)
+
+
+def site_checks(site):
+    """D-20261105-10 hard fails over the site/ sources: (1) a themes/ file holds only custom properties on a theme
+    selector; (2) a components/ file names no raw color (colors come from var() tokens). Returns (counts, examples)."""
+    import glob, os, tinycss2
+    out = {'theme_noncustom_decl': [], 'theme_component_selector': [], 'component_raw_color': []}
+
+    def rules(nodes, ctx):
+        for n in nodes:
+            if n.type == 'qualified-rule':
+                yield ctx, tinycss2.serialize(n.prelude).strip(), n.content
+            elif n.type == 'at-rule' and n.content is not None and n.lower_at_keyword in ('media', 'supports', 'layer', 'container'):
+                yield from rules(tinycss2.parse_rule_list(n.content, skip_comments=True, skip_whitespace=True), ctx + [n.lower_at_keyword])
+
+    for f in sorted(glob.glob(os.path.join(site, 'css', '**', '*.css'), recursive=True)):
+        rel = os.path.relpath(f, os.path.join(site, 'css'))
+        kind = rel.split(os.sep)[0]
+        if kind not in ('themes', 'components'):
+            continue
+        sheet = tinycss2.parse_stylesheet(open(f, encoding='utf-8').read(), skip_comments=True, skip_whitespace=True)
+        for ctx, sel, content in rules(sheet, []):
+            decls = [d for d in tinycss2.parse_declaration_list(content, skip_comments=True, skip_whitespace=True) if d.type == 'declaration']
+            if kind == 'themes':
+                bad_sel = [s.strip() for s in sel.split(',') if not THEME_SEL.match(s.strip())]
+                if bad_sel:
+                    out['theme_component_selector'].append(rel + ': ' + sel[:120])
+                for d in decls:
+                    if not d.name.startswith('--'):
+                        out['theme_noncustom_decl'].append(rel + ': ' + sel[:80] + ' { ' + d.name + ' }')
+            else:
+                for d in decls:
+                    if d.name.startswith('--') or d.lower_name in ('content', 'font-family', 'quotes'):
+                        continue
+                    val = tinycss2.serialize(d.value)
+                    val = re.sub(r'var\(--[\w-]+\)', '', val)          # bare token references
+                    val = re.sub(r'url\([^)]*\)', '', val)
+                    if RAW_COLOR.search(val):
+                        out['component_raw_color'].append(rel + ': ' + sel[:80] + ' { ' + d.name + ': ' + val.strip()[:60] + ' }')
+    return {k: len(v) for k, v in out.items()}, {k: v[:15] for k, v in out.items()}
+
+
 def main(a):
     if not a: print(__doc__); return 2
+    if a[0] == '--site':
+        counts, ex = site_checks(a[1] if len(a) > 1 and not a[1].startswith('--') else 'site')
+        if '--examples' in a:
+            print(json.dumps(ex, indent=2))
+        bad = {k: v for k, v in counts.items() if v}
+        if bad and '--hard' in a:
+            print('UI-LINT FAIL (D-20261105-10): themes hold only custom properties on theme selectors; components take colors from var() tokens:', bad)
+            return 1
+        print('UI-LINT SITE', 'PASS' if not bad else 'REPORT', counts); return 0
     m = measure(open(a[0], encoding='utf-8').read())
     nums = {k: v for k, v in m.items() if not k.startswith('_')}
     if '--write-baseline' in a:
