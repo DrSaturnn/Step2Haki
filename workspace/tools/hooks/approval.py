@@ -73,6 +73,10 @@ def build(b):
                        text=True)
     if r.returncode:
         sys.exit('approval: build failed: ' + (r.stdout + r.stderr).strip())
+    # the same site layer step as ship.sh (s164b): styles and scripts from workspace/site/, minified
+    r = subprocess.run([sys.executable, os.path.join(C.WS, 'tools', 'site_build.py'), out], capture_output=True, text=True)
+    if r.returncode:
+        sys.exit('approval: site build failed: ' + (r.stdout + r.stderr).strip())
     return out
 
 
