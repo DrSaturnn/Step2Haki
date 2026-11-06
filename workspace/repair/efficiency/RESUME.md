@@ -4,7 +4,7 @@ Jonathan, 2026-10-26: "Add whatever is needed so this issue does not happen agai
 ran to about 280k context before any edit). Project copy claude/RESUME.md; repo copy repair/efficiency/RESUME.md.
 
 **Open batch: s164c** on branch wip/s164c (launched 2026-11-06: load briefs on demand; batch file repair/s164c/S164C.md, next chunk 3; its first step is a question for Jonathan).
-line, here and in the project copy claude/RESUME.md, when a batch opens or ships; "none" means no batch is open and a
+(Rewrite this line, here and in the project copy claude/RESUME.md, when a batch opens or ships; "none" means no batch is open and a
 launch prompt is needed.)
 
 Do these four steps, in order, and read nothing else first. Do not open BATCH_RUNBOOK.md, STEP2HAKI_HANDOFF.md,
