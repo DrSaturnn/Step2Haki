@@ -2,7 +2,9 @@
 """split_css: writes the page's site CSS (local/s164b/css_rules.json, from css_inventory.py) into site/css/ as layer
 files, rules in their original order within each file, comments dropped, breakpoints named.
 
-  python3 repair/s164b/split_css.py [--report] [--dehack]
+  python3 repair/s164b/split_css.py [--report] [--dehack] [--tokens]
+
+--tokens converts theme rules to color tokens (D-20261105-10; repair/s164b/tokenize.py).
 
 --dehack drops the html:is([data-theme],:not([data-theme])) specificity workaround from every selector.
 
@@ -152,7 +154,16 @@ def main(argv):
     css = json.load(open(os.path.join(WS, 'local', 's164b', 'css_rules.json')))
     per = OrderedDict((f, []) for f in FILE_ORDER)
     where = {}
-    for r in css['rules']:
+    rules = css['rules']
+    if '--tokens' in argv:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location('tokenize_s164b', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tokenize.py'))
+        tk = importlib.util.module_from_spec(spec); spec.loader.exec_module(tk)
+        rules, toks, rep = tk.run(rules, set(DEAD) | tk.load_dead())
+        rules = rules + [{'i': 10 ** 6, 'block': 'tokens', 'ctx': [], 'sel': ':root', 'decl': [[k, v, False] for k, v in toks.items()]}]
+        json.dump(rep, open(os.path.join(WS, 'local', 's164b', 'tokens_report.json'), 'w'), indent=1)
+        print('tokens', rep['counts'])
+    for r in rules:
         if any((r['i'], d[0]) in DEAD for d in r.get('decl', [])):
             r = dict(r, decl=[d for d in r['decl'] if (r['i'], d[0]) not in DEAD])
             if not r['decl']:

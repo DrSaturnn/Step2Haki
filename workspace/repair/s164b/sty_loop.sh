@@ -13,10 +13,14 @@ cd "$(dirname "$0")/../.."
 CAND="$1"; TAG="$2"; CFGS="$3"; VIEWS="$4"; S="${5:-20}"
 D=local/s164b/sty; mkdir -p "$D"
 if [ "$S" = all ]; then OPT=(--chrome); else OPT=(--sample "$S" --chrome); fi
+# D-20261105-10: in dark and tinted the shapes follow light, so they are left out of the dark comparison (theme_gate.js
+# checks that no box moves); light configs compare everything
+SHAPE='^(border(-(top|right|bottom|left|block|inline)(-(start|end))?)?-(width|style)|border(-[a-z-]*)?-radius|outline-(width|style|offset))$'
 for v in $VIEWS; do for c in $CFGS; do
+  K=(); case "$c" in *dark*|*tinted*) K=(--skip "$SHAPE");; esac
   B="$D/before_${v}_${c}_${S}.json"; C="$D/${TAG}_${v}_${c}_${S}.json"
-  [ -s "$B" ] || node tools/ui_styles.js dump local/s164b/before.html "$B" --view "$v" --config "$c" "${OPT[@]}" > /dev/null 2>&1
-  node tools/ui_styles.js dump "$CAND" "$C" --view "$v" --config "$c" "${OPT[@]}" > /dev/null 2>&1
+  [ -s "$B" ] || node tools/ui_styles.js dump local/s164b/before.html "$B" --view "$v" --config "$c" "${OPT[@]}" "${K[@]}" > /dev/null 2>&1
+  node tools/ui_styles.js dump "$CAND" "$C" --view "$v" --config "$c" "${OPT[@]}" "${K[@]}" > /dev/null 2>&1
   node tools/ui_styles.js diff "$B" "$C" > "$D/${TAG}_${v}_${c}.diff" 2>&1
   echo "$v $c: $(grep -E '^STYLES' "$D/${TAG}_${v}_${c}.diff")"
 done; done
