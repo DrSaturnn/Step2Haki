@@ -261,6 +261,19 @@
       if(cur.brief === id && byId[id]) keep(byId[id].el, true, true);   // s161b: already current, so bring its home tile (or, browsing, this tile) into view
       go(id); }
   }
+  /* brief:go id (s164c): a jump to a brief from elsewhere on the page (07 drawer links) takes the same path as a sidebar
+     click: the hash, then the target seated until it holds while the briefs above it build */
+  AX.on('brief:go', function(id){ if(AX.brief.ensure(id)) go(id); });
+  // an in-page link to another brief ("Pairs with" cross-references, links in brief text) takes the same path; links
+  // whose own handler already acted (search hits, the brief rail, drawers) arrive with the default prevented
+  document.addEventListener('click', function(e){
+    if(e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return;
+    var a = e.target.closest && e.target.closest('a[href^="#"]'); if(!a || nav.contains(a)) return;
+    var id = a.getAttribute('href').slice(1); try{ id = decodeURIComponent(id); }catch(x){}
+    var t = id && AX.brief.ensure(id), from = a.closest('.brief');
+    if(!t || t === from) return;
+    e.preventDefault(); go(id);
+  });
 
   /* ---------- wiring ---------- */
   var q = 0;

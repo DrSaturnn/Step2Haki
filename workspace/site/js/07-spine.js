@@ -60,7 +60,8 @@
     } else done();
     if(btn) btn.focus();
   }
-  function jump(id){ closeDrawer(); var t = AX.brief.ensure(id); if(t){ location.hash = id; } }
+  // s164c: through the sidebar's seating (brief:go); a smooth hash scroll across unbuilt briefs overshoots as they build
+  function jump(id){ closeDrawer(); var t = AX.brief.ensure(id); if(!t) return; if(window.AXN) AX.emit('brief:go', id); else location.hash = id; }
   function openDrawer(btn){
     var target = AX.brief.ensure(btn.getAttribute('data-brief')); if(!target) return;
     closeCard(); closeDrawer();

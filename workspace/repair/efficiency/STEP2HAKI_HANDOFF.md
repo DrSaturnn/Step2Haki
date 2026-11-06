@@ -14,12 +14,14 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 - **s164c OPEN 2026-11-06** (Claude lead; load briefs on demand, site layer only, content frozen; D-20261106-3; no agents;
   lead budget 60M): branch wip/s164c (public repo), batch file repair/s164c/S164C.md. Chat 1: runtime, loader, per-brief
-  passes. Chat 2 (chunk 2b): search over unbuilt briefs (AX.brief.copy), search landing (brief:reveal), sidebar rail
-  waits for builds, NBME view, blueprint and Review read templates (AX.brief.items); fixed 3 chat 1 regressions; all
-  parity checks equal before.html except search no longer indexes the bounds chrome. cand2: desk settled 7.4 s to
-  2.2 s, phone 41.2 s to 10.5 s; elements 223,878 to 3,405. Next: chunk 3, starting with the prebuilt search index
-  shipped as a separate file (D-20261106-4; exact steps in S164C.md chunk 3 (a)). The private repo was not
-  reachable in chat 2 (add_repo refused; local/s164c was rebuilt from git: before.html = e5d78c1's page).
+  passes. Chat 2 (chunk 2b): search, landing, NBME view, blueprint and Review over unbuilt briefs. Chat 3 (chunk 3):
+  prebuilt search index (tools/search_index.js, search.json beside the page, gate check `search-index`, fetched after
+  load, fallback to the in-page build; D-20261106-4); long jumps through the sidebar's seating (`brief:go`: drawer
+  links, cross-references); checks all equal before.html (search parity 0 differences over HTTP and file://, landing,
+  jump_land desk and phone, previews and drawers on unbuilt targets, Review end to end); test_hooks 132/132 (stale
+  approval test fixed). Chunk 3 cand: desk settled 7.4 s to 0.42 s, phone 41.2 s to 2.19 s; elements 223,878 to 3,405;
+  JS heap 17 MB. Next: chunk 4 (tool sweep, ui_styles parity, screenshots, perf, changelog, present as a private
+  artifact, ship on "ship"); exact steps in S164C.md chunk 4.
 
 - **s164b SHIPPED 2026-11-06** (Claude lead; the UI refactor, site layer only, content frozen; D-20261105-8, cut short
   by D-20261106-2, Jonathan 14:22: "we can ship what we have, perform the on demand loading ship then consider this at
