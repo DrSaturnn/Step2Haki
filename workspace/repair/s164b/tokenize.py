@@ -17,7 +17,8 @@ only negate the theme are not theme rules):
 - a theme background-color or background-image whose light rule sets the `background` shorthand: the light rule gains
   that longhand right after the shorthand, as a token holding the shorthand's own component (light unchanged);
 - a theme value using a custom property that is redefined below the root (the Flat look's --e2, --inner on .axm-flat):
-  kept in the theme file and listed (`below_root_var`); a root token cannot carry it (decision pending);
+  the token is also defined on `<theme prefix> <that selector>`, so var() is resolved where the variable is set
+  (`scoped_tokens`; a call for Jonathan's approval, the alternative being the Flat-look variables moved to the root);
 - a theme declaration with no light rule to carry it: listed (`no_light_rule`), kept in the theme file for now.
 Returns the new rule list plus the token rules for tokens.css, and a report (local/s164b/tokens_report.json).
 """
@@ -162,24 +163,31 @@ def run(rules, dead):
     rep = defaultdict(list)
     # custom properties set below the root (on body, .axm-flat, a brief...): a token holding var() of one of them would be
     # resolved at the root and miss the redefinition
-    below = set()
+    below = defaultdict(list)          # variable -> selectors (theme prefix removed) that set it below the root
     for r in rules:
         if 'sel' not in r:
             continue
         for part in top_split(r['sel'], ','):
             p = norm(NEG_THEME.sub('', part.replace(HACK, '')))
             key = split_theme(part)[1] if THEME.search(p) else p
-            if (key or '') not in ('', ':root', 'html'):
-                below.update(d[0] for d in r['decl'] if d[0].startswith('--'))
+            if key and key not in (':root', 'html'):
+                for d in r['decl']:
+                    if d[0].startswith('--') and key not in below[d[0]]:
+                        below[d[0]].append(key)
+    def scopes(v):
+        out = []
+        for m in re.findall(r'var\((--[\w-]+)', v):
+            out.extend(k for k in below.get(m, []) if k not in out)
+        return out
     def uses_below(v):
-        return any(m in below for m in re.findall(r'var\((--[\w-]+)', v))
+        return bool(scopes(v))
     # 1. live theme declarations by (key, prop): [(rule index, part, prefix, value, important, ctx)]
     want = defaultdict(list)
     for r in rules:
         if not is_theme_rule(r):
             continue
         for prop, val, imp in r['decl']:
-            if (r['i'], prop) in dead or SHAPE.match(prop) or uses_below(val):
+            if (r['i'], prop) in dead or SHAPE.match(prop):
                 continue
             for part in top_split(r['sel'], ','):
                 prefix, key = split_theme(part)
@@ -255,9 +263,6 @@ def run(rules, dead):
                 if SHAPE.match(prop):
                     shapes.append('%s { %s:%s }' % (norm(r['sel'])[:100], prop, val)); continue
                 parts = top_split(r['sel'], ',')
-                if uses_below(val) and not prop.startswith('--'):
-                    rep['below_root_var'].append('%s { %s:%s }' % (norm(r['sel'])[:110], prop, val[:80]))
-                    keep.append([prop, val, imp]); continue
                 pure = all(split_theme(p)[0] is not None and split_theme(p)[1] == '' for p in parts)
                 if pure:
                     keep.append([prop, val, imp]); continue
@@ -269,8 +274,16 @@ def run(rules, dead):
                     if not names:
                         carried = False; continue
                     by_prefix.setdefault(prefix, []).extend(names)
+                sc = scopes(val)
+                if sc:
+                    rep['scoped_tokens'].append('%s { %s:%s } also on %s' % (norm(r['sel'])[:90], prop, val[:60], ', '.join(sc)[:80]))
                 for prefix, names in by_prefix.items():
-                    theme_rules.append(dict(r, sel=prefix, decl=[[nm, val, False] for nm in OrderedDict.fromkeys(names)], i=r['i'], tok=True))
+                    decl = [[nm, val, False] for nm in OrderedDict.fromkeys(names)]
+                    theme_rules.append(dict(r, sel=prefix, decl=decl, i=r['i'], tok=True))
+                    # the value uses a variable redefined below the root: define the token there too, so var() is
+                    # resolved where that variable is set
+                    for k in sc:
+                        theme_rules.append(dict(r, sel=prefix + ' ' + k, decl=decl, i=r['i'], tok=True))
                 if not carried:
                     rep['no_light_rule'].append('%s { %s:%s }' % (norm(r['sel'])[:110], prop, val))
                     keep.append([prop, val, imp])
@@ -295,7 +308,7 @@ def run(rules, dead):
             out.append(dict(r, sel=p.strip(), decl=decl))
     rep['shapes_dropped'] = shapes
     rep['dead_dropped'] = ['%d %s' % k for k in dropped_dead]
-    rep['counts'] = {'tokens': len(tokens) + len(fallback), 'fallback_in_rule': len(fallback), 'below_root_var': len(rep['below_root_var']), 'keys': len(toks_for), 'shapes_dropped': len(shapes), 'dead_dropped': len(dropped_dead),
+    rep['counts'] = {'tokens': len(tokens) + len(fallback), 'fallback_in_rule': len(fallback), 'scoped_tokens': len(rep['scoped_tokens']), 'keys': len(toks_for), 'shapes_dropped': len(shapes), 'dead_dropped': len(dropped_dead),
                      'no_light_rule': len(rep['no_light_rule']), 'light_kept_literal': len(rep['light_kept_literal']),
                      'shorthand_unparsed': len(rep['shorthand_unparsed']), 'longhands_added': sum(len(v) for v in add_of.values())}
     return out, tokens, rep

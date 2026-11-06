@@ -94,9 +94,15 @@ def subject(part):
     return comps[-1] if comps else part
 
 
+PURE_THEME = re.compile(r'^\s*(?:(?:html|:root)?(?:\[data-(?:theme|axa|glass)[^\]]*\])+\s*)+$')
+
+
 def classify_one(part, r):
     plain = NEG_THEME.sub('', part.replace(HACK, ''))
-    if THEME.search(plain):
+    if THEME.search(plain) and r.get('route_by_subject') and not PURE_THEME.match(plain) and not r.get('tok'):
+        # --tokens: a theme rule the converter could not carry competes in its component's layer, as on the before page
+        plain = THEME.sub('', plain)
+    elif THEME.search(plain):
         for f, _, pat in FILES[:3]:
             if re.search(pat, plain):
                 return f
@@ -160,6 +166,7 @@ def main(argv):
         spec = importlib.util.spec_from_file_location('tokenize_s164b', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tokenize.py'))
         tk = importlib.util.module_from_spec(spec); spec.loader.exec_module(tk)
         rules, toks, rep = tk.run(rules, set(DEAD) | tk.load_dead())
+        rules = [dict(r, route_by_subject=True) if 'sel' in r else r for r in rules]
         rules = rules + [{'i': 10 ** 6, 'block': 'tokens', 'ctx': [], 'sel': ':root', 'decl': [[k, v, False] for k, v in toks.items()]}]
         json.dump(rep, open(os.path.join(WS, 'local', 's164b', 'tokens_report.json'), 'w'), indent=1)
         print('tokens', rep['counts'])
