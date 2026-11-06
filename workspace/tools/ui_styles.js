@@ -2,7 +2,7 @@
 /* ui_styles.js: computed-style fingerprints of every element (and its ::before and ::after), brief by brief and for the
    page chrome, in one view and theme; a fast, exact companion to the screenshot comparison while CSS is reorganized.
 
-   node tools/ui_styles.js dump PAGE OUT.json [--view desk|phone] [--config NAME] [--briefs a,b] [--detail] [--skip REGEX]
+   node tools/ui_styles.js dump PAGE OUT.json [--view desk|phone] [--config NAME] [--briefs a,b] [--detail] [--skip REGEX] [--norm]
    (--skip leaves the properties it matches out of the fingerprints, e.g. the shapes that follow light in dark)
    node tools/ui_styles.js diff A.json B.json [--max 40]
 
@@ -26,12 +26,16 @@ const SIGFN = `window.__axskip = new Set(['transition','transition-duration','tr
  'transition-behavior','animation','animation-name','animation-duration','animation-timing-function','animation-delay','animation-iteration-count',
  'animation-direction','animation-fill-mode','animation-play-state','caret-color','animation-composition','animation-range-start','animation-range-end','animation-timeline']);
 window.__axh = function(s){ var x = 2166136261 >>> 0; for (var i = 0; i < s.length; i++) { x ^= s.charCodeAt(i); x = Math.imul(x, 16777619) >>> 0; } return x.toString(36); };
+// --norm (s164b, minified build): a gradient's default first and last stop positions (0%, 100%) are written the same way
+// on both pages, since the minifier drops them and the computed value keeps the authored form; rendering is the same
+window.__axn = function(k, v){ if (!window.__axnorm || v.indexOf('gradient(') < 0) return v;
+  return v.replace(/ 0%(?=, )/g, '').replace(/ 100%(?=\))/g, ''); };
 window.__axone = function(el, base){ base = base || {left:0, top:0}; var cs = getComputedStyle(el), m = {};
-  for (var i = 0; i < cs.length; i++) { var k = cs[i]; if (!__axskip.has(k) && !(window.__axskipre && __axskipre.test(k))) m[k] = cs.getPropertyValue(k); }
+  for (var i = 0; i < cs.length; i++) { var k = cs[i]; if (!__axskip.has(k) && !(window.__axskipre && __axskipre.test(k))) m[k] = __axn(k, cs.getPropertyValue(k)); }
   ['::before','::after','::marker','::placeholder'].forEach(function(ps){ var c = getComputedStyle(el, ps);
     if (ps === '::marker' && cs.display !== 'list-item') return;
     if ((ps === '::before' || ps === '::after') && (c.content === 'none' || c.content === 'normal')) return;
-    for (var i = 0; i < c.length; i++) { var k = c[i]; if (!__axskip.has(k) && !(window.__axskipre && __axskipre.test(k))) m[ps + k] = c.getPropertyValue(k); } });
+    for (var i = 0; i < c.length; i++) { var k = c[i]; if (!__axskip.has(k) && !(window.__axskipre && __axskipre.test(k))) m[ps + k] = __axn(k, c.getPropertyValue(k)); } });
   var r = el.getBoundingClientRect(); m['@box'] = (!r.width && !r.height) ? 'empty' : [r.left - base.left, r.top - base.top, r.width, r.height].map(function(v){ return Math.round(v * 2) / 2; }).join(',');
   return m; };
 window.__axsig = function(root, id, detail, only, chrome){
@@ -67,6 +71,7 @@ async function dump(a) {
     await p.waitForTimeout(500);
     await p.evaluate(SIGFN);
     if (arg(a, '--skip')) await p.evaluate(re => { window.__axskipre = new RegExp(re); }, arg(a, '--skip'));
+    if (a.includes('--norm')) await p.evaluate(() => { window.__axnorm = true; });
     return p;
   }
   let p = await open(), restarts = 0;
