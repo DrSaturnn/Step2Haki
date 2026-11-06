@@ -17,8 +17,8 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   passes. Chat 2 (chunk 2b): search over unbuilt briefs (AX.brief.copy), search landing (brief:reveal), sidebar rail
   waits for builds, NBME view, blueprint and Review read templates (AX.brief.items); fixed 3 chat 1 regressions; all
   parity checks equal before.html except search no longer indexes the bounds chrome. cand2: desk settled 7.4 s to
-  2.2 s, phone 41.2 s to 10.5 s; elements 223,878 to 3,405. Next: chunk 3; its first step asks Jonathan to choose how
-  the search index is built on phones (three options with numbers in S164C.md "After"). The private repo was not
+  2.2 s, phone 41.2 s to 10.5 s; elements 223,878 to 3,405. Next: chunk 3, starting with the prebuilt search index
+  shipped as a separate file (D-20261106-4; exact steps in S164C.md chunk 3 (a)). The private repo was not
   reachable in chat 2 (add_repo refused; local/s164c was rebuilt from git: before.html = e5d78c1's page).
 
 - **s164b SHIPPED 2026-11-06** (Claude lead; the UI refactor, site layer only, content frozen; D-20261105-8, cut short
