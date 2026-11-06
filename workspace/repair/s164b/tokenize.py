@@ -10,11 +10,14 @@ only negate the theme are not theme rules):
 - custom property on a pure theme selector: kept as is;
 - anything else (color, background, shadow, a custom property on a component selector): a token. The light rules with the
   same selector (theme prefix removed) and property that the theme rule outranked before get `prop:var(--t-...)`, one
-  token per light rule holding that rule's own value (tokens.css), so light is unchanged; the theme rule becomes
+  token per light rule holding that rule's own value (tokens.css; a value holding var() stays in the rule as the
+  fallback, `prop:var(--t-...,var(--x))`, because a token on the root would resolve var(--x) there), so light is unchanged; the theme rule becomes
   `<theme prefix>{--t-...:<theme value>}` for each of those tokens, in its own place and media. A light rule that
   outranked the theme rule keeps its literal value (the theme value never showed there).
 - a theme background-color or background-image whose light rule sets the `background` shorthand: the light rule gains
   that longhand right after the shorthand, as a token holding the shorthand's own component (light unchanged);
+- a theme value using a custom property that is redefined below the root (the Flat look's --e2, --inner on .axm-flat):
+  kept in the theme file and listed (`below_root_var`); a root token cannot carry it (decision pending);
 - a theme declaration with no light rule to carry it: listed (`no_light_rule`), kept in the theme file for now.
 Returns the new rule list plus the token rules for tokens.css, and a report (local/s164b/tokens_report.json).
 """
@@ -157,13 +160,26 @@ def slug(key, prop):
 def run(rules, dead):
     """rules: css_rules.json rules (in order); dead: {(i, prop)}. Returns (new_rules, token_decls, report)."""
     rep = defaultdict(list)
+    # custom properties set below the root (on body, .axm-flat, a brief...): a token holding var() of one of them would be
+    # resolved at the root and miss the redefinition
+    below = set()
+    for r in rules:
+        if 'sel' not in r:
+            continue
+        for part in top_split(r['sel'], ','):
+            p = norm(NEG_THEME.sub('', part.replace(HACK, '')))
+            key = split_theme(part)[1] if THEME.search(p) else p
+            if (key or '') not in ('', ':root', 'html'):
+                below.update(d[0] for d in r['decl'] if d[0].startswith('--'))
+    def uses_below(v):
+        return any(m in below for m in re.findall(r'var\((--[\w-]+)', v))
     # 1. live theme declarations by (key, prop): [(rule index, part, prefix, value, important, ctx)]
     want = defaultdict(list)
     for r in rules:
         if not is_theme_rule(r):
             continue
         for prop, val, imp in r['decl']:
-            if (r['i'], prop) in dead or SHAPE.match(prop):
+            if (r['i'], prop) in dead or SHAPE.match(prop) or uses_below(val):
                 continue
             for part in top_split(r['sel'], ','):
                 prefix, key = split_theme(part)
@@ -173,7 +189,8 @@ def run(rules, dead):
                     continue
                 want[(key, prop)].append((r['i'], part, prefix, val, imp, tuple(r['ctx'])))
     # 2. light rules the theme declarations outranked get a token per rule
-    tokens = OrderedDict()             # token -> light value
+    tokens = OrderedDict()             # token -> literal light value (tokens.css)
+    fallback = {}                      # token -> light value holding var(), kept in the rule as the fallback
     tok_of = {}                        # (light rule i, part, prop) -> token
     toks_for = defaultdict(list)       # (key, prop) -> tokens the theme sets
     used = set()
@@ -213,12 +230,17 @@ def run(rules, dead):
                 while name in used:
                     name = '%s-%d' % (base, n); n += 1
                 used.add(name)
-                tokens[name] = val
+                if 'var(' in val:
+                    fallback[name] = val
+                else:
+                    tokens[name] = val
                 if src == prop:
                     tok_of[(r['i'], part.strip(), prop)] = name
                 else:
                     add_of[(r['i'], part.strip())].append((prop, name, imp))
                 toks_for[(key, prop)].append(name)
+    def ref(nm):
+        return 'var(%s,%s)' % (nm, fallback[nm]) if nm in fallback else 'var(%s)' % nm
     # 3. rewrite
     out = []
     shapes, dropped_dead = [], []
@@ -233,6 +255,9 @@ def run(rules, dead):
                 if SHAPE.match(prop):
                     shapes.append('%s { %s:%s }' % (norm(r['sel'])[:100], prop, val)); continue
                 parts = top_split(r['sel'], ',')
+                if uses_below(val) and not prop.startswith('--'):
+                    rep['below_root_var'].append('%s { %s:%s }' % (norm(r['sel'])[:110], prop, val[:80]))
+                    keep.append([prop, val, imp]); continue
                 pure = all(split_theme(p)[0] is not None and split_theme(p)[1] == '' for p in parts)
                 if pure:
                     keep.append([prop, val, imp]); continue
@@ -264,13 +289,13 @@ def run(rules, dead):
             decl = []
             for d in r['decl']:
                 k = (r['i'], p.strip(), d[0])
-                decl.append([d[0], 'var(%s)' % tok_of[k], d[2]] if k in tok_of else d)
+                decl.append([d[0], ref(tok_of[k]), d[2]] if k in tok_of else d)
                 if d[0] == 'background':
-                    decl.extend([lh, 'var(%s)' % nm, im] for lh, nm, im in add_of.get((r['i'], p.strip()), []))
+                    decl.extend([lh, ref(nm), im] for lh, nm, im in add_of.get((r['i'], p.strip()), []))
             out.append(dict(r, sel=p.strip(), decl=decl))
     rep['shapes_dropped'] = shapes
     rep['dead_dropped'] = ['%d %s' % k for k in dropped_dead]
-    rep['counts'] = {'tokens': len(tokens), 'keys': len(toks_for), 'shapes_dropped': len(shapes), 'dead_dropped': len(dropped_dead),
+    rep['counts'] = {'tokens': len(tokens) + len(fallback), 'fallback_in_rule': len(fallback), 'below_root_var': len(rep['below_root_var']), 'keys': len(toks_for), 'shapes_dropped': len(shapes), 'dead_dropped': len(dropped_dead),
                      'no_light_rule': len(rep['no_light_rule']), 'light_kept_literal': len(rep['light_kept_literal']),
                      'shorthand_unparsed': len(rep['shorthand_unparsed']), 'longhands_added': sum(len(v) for v in add_of.values())}
     return out, tokens, rep

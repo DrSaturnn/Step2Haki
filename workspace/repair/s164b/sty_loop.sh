@@ -17,7 +17,8 @@ if [ "$S" = all ]; then OPT=(--chrome); else OPT=(--sample "$S" --chrome); fi
 # checks that no box moves); light configs compare everything
 SHAPE='^(border(-(top|right|bottom|left|block|inline)(-(start|end))?)?-(width|style)|border(-[a-z-]*)?-radius|outline-(width|style|offset))$'
 for v in $VIEWS; do for c in $CFGS; do
-  K=(); case "$c" in *dark*|*tinted*) K=(--skip "$SHAPE");; esac
+  # the --t-* color tokens (D-20261105-10) inherit to every element; their effect shows in the real properties
+  K=(--skip '^--t-'); case "$c" in *dark*|*tinted*) K=(--skip "${SHAPE%\$}\$|^--t-");; esac
   B="$D/before_${v}_${c}_${S}.json"; C="$D/${TAG}_${v}_${c}_${S}.json"
   [ -s "$B" ] || node tools/ui_styles.js dump local/s164b/before.html "$B" --view "$v" --config "$c" "${OPT[@]}" "${K[@]}" > /dev/null 2>&1
   node tools/ui_styles.js dump "$CAND" "$C" --view "$v" --config "$c" "${OPT[@]}" "${K[@]}" > /dev/null 2>&1
