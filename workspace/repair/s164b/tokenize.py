@@ -326,6 +326,19 @@ def run(rules, dead):
                             emitted.append(t)
                     if len(emitted) > 1 and sorted(emitted, key=lambda t: pos[t[0]]) != emitted[::-1]:
                         rep['order_risk'].append('%s { %s } %s' % (part.strip()[:80], prop, ' / '.join(norm(t[1])[:50] for t in emitted)))
+    # a light rule's `background` token and the longhand tokens appended after it: a theme `background` shorthand resets
+    # both longhands, so the theme rule sets the longhand tokens too (phone sculpted dark: `[dark] .tw{background:none}`
+    # under 640px over the global `[dark] .tw{background-image:...}`)
+    root_val = {}
+    for r in rules:
+        if r.get('sel', '').strip() == ':root' and not r['ctx']:
+            for d in r['decl']:
+                root_val[d[0]] = d[1].strip()
+    bg_sib = {}
+    for (li, lp), lhs in add_of.items():
+        bn = tok_of.get((li, lp, 'background'))
+        if bn:
+            bg_sib[bn] = [(lh, nm) for lh, nm, _ in lhs]
     def ref(nm):
         return 'var(%s,%s)' % (nm, fallback[nm]) if nm in fallback else 'var(%s)' % nm
     # a token defined below the root on a scope (scoped_tokens) shadows the root for everything inside that scope, so
@@ -386,6 +399,19 @@ def run(rules, dead):
                     if not names:
                         continue
                     decl = [[nm, val, False] for nm in OrderedDict.fromkeys(names)]
+                    if prop == 'background':
+                        for nm in OrderedDict.fromkeys(names):
+                            for lh, ln in bg_sib.get(nm, []):
+                                comp = bg_component(val, lh)
+                                mv = re.fullmatch(r'\s*var\((--[\w-]+)\)\s*', val)
+                                if comp is None and mv and COLORW.match(root_val.get(mv.group(1), '')):
+                                    # a bare var() holding a color on the root (--dk, --glass, --ink): a color layer
+                                    comp = val.strip() if lh == 'background-color' else 'none'
+                                if comp is None:
+                                    rep['bg_sibling_unparsed'].append('%s { background:%s } -> %s' % (norm(r['sel'])[:80], val[:50], ln))
+                                else:
+                                    decl.append([ln, comp, False])
+                                    rep['bg_sibling_set'].append('%s { background } sets %s' % (norm(r['sel'])[:80], ln))
                     theme_rules.append(dict(r, sel=prefix, decl=decl, i=r['i'], tok=True))
                     # the value uses a variable redefined below the root: define the token there too, so var() is
                     # resolved where that variable is set
@@ -416,7 +442,7 @@ def run(rules, dead):
     rep['shapes_dropped'] = shapes
     rep['dead_dropped'] = ['%d %s' % k for k in dropped_dead]
     rep['counts'] = {'tokens': len(tokens) + len(fallback), 'fallback_in_rule': len(fallback), 'scoped_tokens': len(rep['scoped_tokens']), 'keys': len(toks_for), 'shapes_dropped': len(shapes), 'dead_dropped': len(dropped_dead),
-                     'no_light_rule': len(rep['no_light_rule']), 'important_kept': len(rep['important_kept']), 'extra_tokens': len(rep['extra_tokens']), 'skipped': sum(len(v) for v in skip.values()), 'order_risk': len(rep['order_risk']), 'ctx_uncovered': len(rep['ctx_uncovered']), 'light_kept_literal': len(rep['light_kept_literal']),
+                     'no_light_rule': len(rep['no_light_rule']), 'important_kept': len(rep['important_kept']), 'extra_tokens': len(rep['extra_tokens']), 'skipped': sum(len(v) for v in skip.values()), 'order_risk': len(rep['order_risk']), 'ctx_uncovered': len(rep['ctx_uncovered']), 'bg_sibling_set': len(rep['bg_sibling_set']), 'bg_sibling_unparsed': len(rep['bg_sibling_unparsed']), 'light_kept_literal': len(rep['light_kept_literal']),
                      'shorthand_unparsed': len(rep['shorthand_unparsed']), 'longhands_added': sum(len(v) for v in add_of.values())}
     return out, tokens, rep
 
