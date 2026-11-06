@@ -12,12 +12,19 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **s164b OPEN 2026-11-05** (Claude lead; the UI refactor per claude/pending/layout_mock/UI_REFACTOR_PLAN.md, site layer
-  only, content frozen; DIGEST D-20261105-8). Branch wip/s164b in both repos. Budget lead 100M, one Opus review agent
-  (role ui-parity-review). Step: chunk 6b1 (S164B.md row 6b1 has the exact next steps; chat 4: in-between and important theme rules converted, scoped tokens approved by Jonathan, cand14 is current: sample STYLES SAME everywhere checked; next chat reruns all 7 configs x 3 views on cand14, then the rose-dark screenshot and all briefs; accent matrix cut to one rose-dark screenshot, D-20261106-1; one residue listed for Jonathan: phone sculpted-dark chrome zebra tint). Spend: chat 4 stopped at the H6 warning. Tooling built: tools/ui_parity.js,
-  tools/ui_styles.js, tools/site_build.py, site/ first cut (cand1: chrome identical, 1 to 5 elements differ per sampled
-  brief). Spend: chat 1 27.06M of 100M.
-
+- **s164b SHIPPED 2026-11-06** (Claude lead; the UI refactor, site layer only, content frozen; D-20261105-8, cut short
+  by D-20261106-2, Jonathan 14:22: "we can ship what we have, perform the on demand loading ship then consider this at
+  another time later down the ledger"): commit e5d78c1 (pushed to main), page cbd0eeddd9c7 (approved candidate
+  6076716debe6); version.json reads s164b; Jonathan checks the live site. The page's styles and scripts come from
+  workspace/site/ (css in 5 layers, themes as color tokens per D-20261105-10; js modules) through tools/site_build.py,
+  one minified style and one script bundle; ship.sh and approval.py run it. Briefs byte-identical. Known residues
+  shipped: phone sculpted dark, a chrome table's 5 even rows lose the zebra tint; desk dark, the mdd popover title is
+  muted (was ink-2). Tool changes: gate reads the minified page (OUT code map, mode-css reads every style block; 11
+  pre-existing body.study rules allowlisted as backlog), rrweb-cssom 0.8.0 override so render.js parses @layer, ui_styles
+  dump restarts after a renderer crash and has --norm. Deferred list (review redesign first, then raw colors, dehack,
+  5b to 5f, step 6 parity and review agent, 6b gate tests, 7 baseline): repair/s164b/S164B.md "Deferred". Lead: 6 chats.
+  No batch open. Next: load briefs on demand (UI_REFACTOR_PLAN follow-on 1), launch prompt needed; Jonathan to confirm it
+  goes before the D-20261105-9 quiz and Review panel batch.
 - **UI rules landed 2026-11-05** (doc commit, no site change; Jonathan "ship"): DECISIONS_DIGEST D-20261105-1 to -7 (UI
   architecture, no stale decisions, SwiftUI-style spring motion, order of work, Fit to screen next round, no decision
   narration in code, refactor scope and follow-on batches); STANDING_DIRECTIONS
@@ -26,7 +33,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   in a fresh chat, launch prompt in repair/ui/UI_REFACTOR_PLAN.md; then on-demand brief loading, offline use, the phone redesign and Fit to screen
   (repair/ui/FIT_TO_SCREEN.md), each its own batch.
 
-- **s164 SHIPPED 2026-11-05** (Claude lead; site layer plus patch, s163 carry-overs: phone in-brief rail marks the step
+- **Previous: s164 SHIPPED 2026-11-05** (Claude lead; site layer plus patch, s163 carry-overs: phone in-brief rail marks the step
   being read (baseline before the mobile redesign); window figures and word forms in Differential criteria previews,
   102 tiles; 20 section-name pointers state the action; B4 masks in outlines; 4 stale private folders archived;
   test_outline_check goldens): commit 60d14ae, page 10098af401b5 (approved candidate 5f346af7bde7); version.json not
