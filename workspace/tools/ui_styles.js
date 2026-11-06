@@ -53,29 +53,46 @@ async function dump(a) {
   await ctx.addInitScript(s => { try { localStorage.clear(); for (const k in s) localStorage.setItem(k, s[k]); } catch (e) {} }, CONFIGS[cfg]);
   await ctx.addInitScript(DETERMINISM);
   await ctx.clock.setFixedTime(new Date('2026-11-05T12:00:00Z'));
-  const p = await ctx.newPage(); p.setDefaultTimeout(600000);
-  const errs = []; p.on('pageerror', e => errs.push(e.message)); p.on('console', m => { if (m.type() === 'error' || m.type() === 'warning') errs.push(m.type() + ': ' + m.text()); });
-  await p.goto('file://' + path.resolve(page), { waitUntil: 'load', timeout: 600000 });
-  await p.evaluate(() => document.fonts && document.fonts.ready);
-  await p.waitForTimeout(2500);
-  await p.addStyleTag({ content: FREEZE });
-  await p.evaluate(() => window.scrollTo(0, 0));
-  await p.waitForTimeout(500);
+  const errs = [];
+  // a renderer crash on the full page (about 222k elements; c15a desk flat-dark-read died twice near 25 min) reopens the
+  // page and continues from the brief that failed, up to 3 times; a fresh load gives the same state (sample runs agree)
+  async function open() {
+    const p = await ctx.newPage(); p.setDefaultTimeout(600000);
+    p.on('pageerror', e => errs.push(e.message)); p.on('console', m => { if (m.type() === 'error' || m.type() === 'warning') errs.push(m.type() + ': ' + m.text()); });
+    await p.goto('file://' + path.resolve(page), { waitUntil: 'load', timeout: 600000 });
+    await p.evaluate(() => document.fonts && document.fonts.ready);
+    await p.waitForTimeout(2500);
+    await p.addStyleTag({ content: FREEZE });
+    await p.evaluate(() => window.scrollTo(0, 0));
+    await p.waitForTimeout(500);
+    await p.evaluate(SIGFN);
+    if (arg(a, '--skip')) await p.evaluate(re => { window.__axskipre = new RegExp(re); }, arg(a, '--skip'));
+    return p;
+  }
+  let p = await open(), restarts = 0;
+  async function ev(fn, x) {
+    for (;;) {
+      try { return await p.evaluate(fn, x); } catch (e) {
+        if (!/crash|closed/i.test(String(e && e.message)) || restarts >= 3) throw e;
+        restarts++; console.error('ui_styles: renderer crashed, reopening (' + restarts + ')');
+        try { await p.close(); } catch (_) {}
+        p = await open();
+      }
+    }
+  }
   let want = arg(a, '--briefs') ? arg(a, '--briefs').split(',') : null;
   if (arg(a, '--sample')) { const ids = await p.evaluate(() => [...document.querySelectorAll('.brief[id]')].map(e => e.id)); const k = Math.ceil(ids.length / +arg(a, '--sample')); want = ids.filter((_, i) => i % k === 0); }
   const withChrome = !want || a.includes('--chrome');
   const detail = a.includes('--detail');
   const ids = want || await p.evaluate(() => [...document.querySelectorAll('.brief[id]')].map(e => e.id));
   const only = arg(a, '--idx') ? arg(a, '--idx').split(',').map(Number) : null;   // detail for these element indexes
-  await p.evaluate(SIGFN);
-  if (arg(a, '--skip')) await p.evaluate(re => { window.__axskipre = new RegExp(re); }, arg(a, '--skip'));
   const res = { briefs: {}, chrome: {} };
-  for (const id of ids) res.briefs[id] = await p.evaluate(({ id, detail, only }) => window.__axsig(document.getElementById(id), id, detail, only, false), { id, detail, only });
+  for (const id of ids) res.briefs[id] = await ev(({ id, detail, only }) => window.__axsig(document.getElementById(id), id, detail, only, false), { id, detail, only });
   if (withChrome) {
-    res.chrome = await p.evaluate(({ detail, only }) => window.__axsig(document.body, '(chrome)', detail, only, true), { detail, only });
-    res.root = await p.evaluate(() => ({ html: window.__axone(document.documentElement), body: window.__axone(document.body) }));
+    res.chrome = await ev(({ detail, only }) => window.__axsig(document.body, '(chrome)', detail, only, true), { detail, only });
+    res.root = await ev(() => ({ html: window.__axone(document.documentElement), body: window.__axone(document.body) }));
   }
-  res.errors = errs; res.view = view; res.config = cfg;
+  res.errors = errs; res.restarts = restarts; res.view = view; res.config = cfg;
   fs.writeFileSync(out, JSON.stringify(res));
   await browser.close();
   console.log('dump', view, cfg, Object.keys(res.briefs).length, 'briefs', res.chrome.n || 0, 'chrome elements', errs.length, 'console');
