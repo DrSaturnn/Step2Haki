@@ -27,13 +27,19 @@
     return out;
   }
   function go(el){
+    if(el) AX.brief.ensure(el);
     if(!el) return;
     el.scrollIntoView({behavior: 'smooth', block: 'start'});
     if(el.id) history.replaceState(null, '', '#' + el.id);
   }
   function nextVisible(b){
-    var i = briefs.indexOf(b);
-    for(var j = i + 1; j < briefs.length; j++){ if(briefs[j].el.offsetParent !== null) return briefs[j]; }
+    var all = document.querySelectorAll('main .brief[id]'), i = Array.prototype.indexOf.call(all, b.el);
+    for(var j = i + 1; j < all.length; j++){
+      if(all[j].offsetParent === null) continue;
+      if(byId[all[j].id]) return byId[all[j].id];
+      var h = AX.brief.content(all[j]).querySelector('h4');
+      return {el: all[j], title: h ? txt(h) : all[j].id};
+    }
     return null;
   }
 
@@ -142,16 +148,17 @@
   function kick(){ if(!raf) raf = requestAnimationFrame(update); }
 
   function init(){
-    document.querySelectorAll('main .brief[id]').forEach(function(b){
-      if(b.querySelector(':scope > .bb-bar')) return;
-      var rec = build(b); if(!rec) return;
-      briefs.push(rec); byId[b.id] = rec;
-    });
     var io = new IntersectionObserver(function(es){
       es.forEach(function(e){ var rec = byId[e.target.id]; if(!rec) return; if(e.isIntersecting) live.add(rec); else live.delete(rec); });
       kick();
     }, {rootMargin: '0px'});
-    briefs.forEach(function(rec){ io.observe(rec.el); if(WIDE.matches) railFit(rec); });
+    AX.brief.each('brief-bounds', function(b){
+      if(!b.id || !b.closest('main') || b.querySelector(':scope > .bb-bar')) return;
+      var rec = build(b); if(!rec) return;
+      briefs.push(rec); byId[b.id] = rec;
+      io.observe(rec.el); if(WIDE.matches) railFit(rec);
+      kick();
+    });
     window.addEventListener('scroll', kick, {passive: true});
     window.addEventListener('resize', function(){ briefs.forEach(function(rec){ rec.rail.style.marginBottom = ''; if(WIDE.matches) railFit(rec); }); kick(); });
     document.addEventListener('click', function(e){ if(!(e.target.closest && e.target.closest('.bb-menu, .bb-sec'))) closeMenus(); });

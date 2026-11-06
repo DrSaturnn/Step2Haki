@@ -31,9 +31,7 @@
     if(f){ f.classList.add('bkseg'); tools.insertBefore(f, tools.querySelector('.bkall')); }
   }
   function init(){
-    var bws = document.querySelectorAll('.bankwrap');
-    if(!bws.length){ setTimeout(init, 300); return; }
-    Array.prototype.forEach.call(bws, function(bw){ toolbar(bw); show(bw, 0); });
+    AX.brief.each('bank-stack', function(b){ Array.prototype.forEach.call(b.querySelectorAll('.bankwrap'), function(bw){ toolbar(bw); show(bw, 0); }); });
   }
   document.addEventListener('click', function(e){
     var t = e.target; if(!t || !t.closest) return;

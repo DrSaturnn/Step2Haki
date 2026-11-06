@@ -98,6 +98,7 @@
   function watch(root){ (root || document).querySelectorAll('.sp-on-f').forEach(function(f){ if(ro && !f._ro){ f._ro = 1; ro.observe(f); } }); }
   function start(){
     all(); watch();
+    AX.brief.each('onset-timeline', function(b){ all(b); watch(b); });
     if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ all(); });
     var study = document.body.classList.contains('study');
     new MutationObserver(function(){     // study mode on or off (a class on body only)
@@ -107,7 +108,7 @@
     new MutationObserver(function(ms){   // a drawer that brings a brief in
       ms.forEach(function(m){
         m.addedNodes.forEach(function(n){
-          if(n.nodeType === 1 && (n.matches('.sp-on-f') || n.querySelector('.sp-on-f'))){ var r = n.parentNode || n; watch(r); all(r); }
+          if(n.nodeType === 1 && !AX.brief.fresh(n) && (n.matches('.sp-on-f') || n.querySelector('.sp-on-f'))){ var r = n.parentNode || n; watch(r); all(r); }
         });
       });
     }).observe(document.body, {childList: true, subtree: true});

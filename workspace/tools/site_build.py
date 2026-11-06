@@ -9,9 +9,16 @@ one <style id="ax-css"> in the head and one <script id="ax-js"> before </body>; 
 inline SVG stay. Comments are stripped and both bundles are minified (esbuild). HTML comments outside scripts and
 styles are removed.
 
+Each brief's inner HTML is wrapped in <template class="axl"> so the browser parses it without building it; the page
+script builds a brief when it is opened or scrolled near (site/js/core.js AX.brief, site/js/06-load-near.js). The brief's
+own tag and inner bytes do not change; an already wrapped page is unwrapped first. --eager writes the page unwrapped.
+
 --check: exit 1 if PAGE's bundles differ from a fresh build (the gate runs this so the page never drifts from site/).
 """
 import json, os, re, subprocess, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import pagelib  # noqa: E402
 
 WS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(WS, 'site')
@@ -128,6 +135,29 @@ def assemble(html, css, js):
     return ''.join(out)
 
 
+LAZY_OPEN, LAZY_CLOSE = '<template class="axl">', '</template>'
+
+
+def unwrap(html):
+    out, last = [], 0
+    for b in pagelib.briefs(html):
+        if b.lazy:
+            out += [html[last:b.inner_start - len(LAZY_OPEN)], html[b.inner_start:b.inner_end]]
+            last = b.inner_end + len(LAZY_CLOSE)
+    out.append(html[last:])
+    return ''.join(out)
+
+
+def wrap(html):
+    html = unwrap(html)
+    out, last = [], 0
+    for b in pagelib.briefs(html):
+        out += [html[last:b.inner_start], LAZY_OPEN, html[b.inner_start:b.inner_end], LAZY_CLOSE]
+        last = b.inner_end
+    out.append(html[last:])
+    return ''.join(out)
+
+
 def bundles(html):
     c = re.search(r'<style id="ax-css">(.*?)</style>', html, re.S)
     j = re.search(r'<script id="ax-js">(.*?)</script>', html, re.S)
@@ -148,7 +178,7 @@ def main(a):
         print('site_build check: %s (css %s, js %s)' % ('PASS' if ok else 'FAIL', 'same' if c == css else 'differs',
                                                           'same' if j == js else 'differs'))
         return 0 if ok else 1
-    new = assemble(html, css, js)
+    new = assemble(unwrap(html) if '--eager' in a else wrap(html), css, js)
     out = a[a.index('--out') + 1] if '--out' in a else page
     open(out, 'w', encoding='utf-8').write(new)
     print('site_build: css %d, js %d chars; page %d > %d' % (len(css), len(js), len(html), len(new)))

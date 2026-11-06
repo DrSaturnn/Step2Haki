@@ -99,13 +99,14 @@
 
   function init(){
     all(document);
+    AX.brief.each('display-layer', all);
     var host = document.getElementById('navlinks');
     if(host) new MutationObserver(function(){ requestAnimationFrame(nest); }).observe(host, { subtree: true, attributes: true, attributeFilter: ['class'] });
     if(WIDE.addEventListener) WIDE.addEventListener('change', nest);
     nest();
     // drawers and hover cards add brief copies to the page: lay them out the same way
     new MutationObserver(function(ms){
-      ms.forEach(function(m){ m.addedNodes.forEach(function(n){ if(n.nodeType === 1 && n.querySelector) all(n); }); });
+      ms.forEach(function(m){ m.addedNodes.forEach(function(n){ if(n.nodeType === 1 && n.querySelector && !AX.brief.fresh(n)) all(n); }); });
     }).observe(document.body, { childList: true, subtree: true });
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();

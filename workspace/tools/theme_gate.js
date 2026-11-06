@@ -50,7 +50,7 @@ const PROBE = () => {
     const V = VIEWS[v]; const ctx = await browser.newContext({ viewport: { width: V.width, height: V.height }, isMobile: !!V.isMobile, hasTouch: !!V.hasTouch });
     await ctx.addInitScript(() => { try { localStorage.clear(); } catch (e) {} });
     const p = await ctx.newPage(); p.setDefaultTimeout(900000);
-    await p.goto('file://' + path.resolve(page), { waitUntil: 'load', timeout: 600000 }); await p.waitForTimeout(2500);
+    await p.goto('file://' + path.resolve(page) + '?axall', { waitUntil: 'load', timeout: 600000 }); await p.waitForTimeout(2500);
     await p.addStyleTag({ content: '*,*::before,*::after{transition:none!important;animation:none!important;content-visibility:visible!important}' });
     res[v] = await p.evaluate(PROBE); await ctx.close();
     for (const t of ['look', 'dark', 'tinted']) { const r = res[v][t]; const bad = r.moved + (r.light_in_dark || 0); if (bad) fail++;

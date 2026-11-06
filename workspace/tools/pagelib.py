@@ -21,6 +21,7 @@ from dataclasses import dataclass, field
 ATTR_RE = re.compile(r'([A-Za-z_:][-A-Za-z0-9_:.]*)(?:\s*=\s*(?:"([^"]*)"|\'([^\']*)\'|([^\s>]+)))?')
 DIV_TOKEN = re.compile(r'<!--.*?-->|<div\b[^>]*>|</div\s*>', re.S | re.I)
 LI_TOKEN = re.compile(r'<!--.*?-->|<li\b[^>]*>|</li\s*>', re.S | re.I)
+LAZY_OPEN, LAZY_CLOSE = '<template class="axl">', '</template>'
 OPEN_BRIEF = re.compile(r'<div\b[^>]*\bclass="([^"]*)"[^>]*>', re.I)
 ITEM_OPEN = re.compile(r'<li\b[^>]*\bdata-item-id="[^"]*"[^>]*>', re.I)
 ARROW_RE = re.compile(r'→|&rarr;|&#8594;|&#x2192;', re.I)
@@ -90,6 +91,7 @@ class Brief:
     inner_end: int       # offset of the matching '</div>'
     inner: str
     title: str = ''      # decoded <h4> text
+    lazy: bool = False   # inner is wrapped in <template class="axl"> (tools/site_build.py); inner_* exclude the wrapper
 
 
 def _script_zone(html):
@@ -108,12 +110,17 @@ def briefs(html):
         a = attrs(m.group(0))
         end = _match_close(html, m.start(), DIV_TOKEN, '<div')
         inner_end = html.rfind('</div', m.start(), end)
-        inner = html[m.end():inner_end]
+        inner_start, lazy = m.end(), False
+        if html.startswith(LAZY_OPEN, inner_start):
+            close = html.rfind(LAZY_CLOSE, inner_start, inner_end)
+            if close > 0 and not html[close + len(LAZY_CLOSE):inner_end].strip():
+                inner_start, inner_end, lazy = inner_start + len(LAZY_OPEN), close, True
+        inner = html[inner_start:inner_end]
         kind = 'aq' if 'aq' in classes else ('bs' if 'bs' in classes else 'brief')
         h = re.search(r'<h4\b[^>]*>(.*?)</h4>', inner, re.S)
         title = text(re.sub(r'<span class="nbmechip".*?</span>', '', h.group(1))) if h else ''
         out.append(Brief(a.get('id', ''), kind, classes, a, m.start(), end, m.end(),
-                         m.end(), inner_end, inner, title))
+                         inner_start, inner_end, inner, title, lazy))
     return out
 
 

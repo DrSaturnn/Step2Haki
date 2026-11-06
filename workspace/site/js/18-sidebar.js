@@ -147,7 +147,7 @@
   function drawRail(it){
     if(rail){ rail.root.remove(); rail = null; }
     if(!it) return;
-    var b = document.getElementById(it.id), steps = b ? stepsOf(b) : [];
+    var b = AX.brief.ensure(it.id), steps = b ? stepsOf(b) : [];
     if(!steps.length) return;
     var root = el('div', 'axn-rail'), trk = el('div', 'axn-trk'), fill = el('div', 'axn-fill'), rows = el('div', 'axn-rows'), lens = el('div', 'axn-lens'), rl = el('div', 'axn-rl');
     lens.setAttribute('aria-hidden', 'true'); trk.appendChild(fill); rows.appendChild(lens); rows.appendChild(rl); root.appendChild(trk); root.appendChild(rows);
@@ -271,7 +271,7 @@
     new MutationObserver(function(){ if(document.body.classList.contains('navopen') && cur.brief && byId[cur.brief]) keep(byId[cur.brief].el, false, true); })
       .observe(document.body, {attributes: true, attributeFilter: ['class']});
     var h = decodeURIComponent(location.hash.slice(1));
-    if(h && document.getElementById(h)){ seat(h, Date.now() + 3500); window.addEventListener('load', function(){ if(!moved && seated !== h) seat(h, Date.now() + 1500); }); }
+    if(h && AX.brief.ensure(h)){ seat(h, Date.now() + 3500); window.addEventListener('load', function(){ if(!moved && seated !== h) seat(h, Date.now() + 1500); }); }
     window.addEventListener('resize', function(){ moved = true; });   // a new window size is the reader's (or a capture's) layout, not a landing
     kick(); window.addEventListener('load', kick);
   }

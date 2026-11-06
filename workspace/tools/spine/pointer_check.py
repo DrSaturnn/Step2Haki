@@ -50,7 +50,7 @@ def main(argv):
         b = p.chromium.launch()
         pg = b.new_page(viewport={'width': 1280, 'height': 900})
         pg.set_default_timeout(tmo * 1000)
-        pg.goto('file://' + page)
+        pg.goto('file://' + page + '?axall')
         pg.wait_for_timeout(2500)
         rows = pg.evaluate(CLICK, ids)
         b.close()

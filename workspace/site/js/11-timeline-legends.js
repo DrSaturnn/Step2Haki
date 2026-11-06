@@ -33,6 +33,6 @@
     });
     if(all) fig.classList.add('rk-on');
   }
-  function init(){ document.querySelectorAll('figure.lcw').forEach(run); }
+  function init(){ AX.brief.each('timeline-legends', function(b){ b.querySelectorAll('figure.lcw').forEach(run); }); }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

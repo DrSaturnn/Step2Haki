@@ -96,10 +96,28 @@ function putData(id,d){ return set(NS+'-d-'+id,d); }
 /* ---------- what is due ----------
    Enumerated from the DOM every time, so briefs added later are picked up
    with no migration, and the active shelf decides the pool. */
+/* A brief not built yet is read from its template: an item of the bank is a scored question when it has a stem and an
+   answer around a top-level arrow and two authored distractors, as the transform builds it. */
+function bankItems(b){
+  var out=[];
+  AX.brief.content(b).querySelectorAll('ol.bank > li').forEach(function(li){
+    var segs=0, cur=0;
+    li.childNodes.forEach(function(n){
+      if(n.nodeType===3 && n.nodeValue.indexOf('\u2192')>-1){
+        n.nodeValue.split('\u2192').forEach(function(t,i){ if(i>0){ if(cur) segs++; cur=0; } if(t.trim()) cur=1; });
+      } else if((n.textContent||'').trim()) cur=1;
+    });
+    if(cur) segs++;
+    var d1=(li.getAttribute('data-label-d1')||li.getAttribute('data-d1')||'').trim(), d2=(li.getAttribute('data-label-d2')||li.getAttribute('data-d2')||'').trim();
+    if(segs>=2 && d1 && d2) out.push(li.getAttribute('data-item-status')||'');
+  });
+  return out;
+}
 function unavailableCount(){
   var n=0;
   document.querySelectorAll('.brief').forEach(function(b){
     if(!window.__axShelf.eligible(b.id)) return;
+    if(!AX.brief.isBuilt(b)){ bankItems(b).forEach(function(st){ if(st && st!=='ready') n++; }); return; }
     b.querySelectorAll('.mcq').forEach(function(m){
       if(m.dataset.itemStatus && m.dataset.itemStatus!=='ready') n++;
     });
@@ -110,19 +128,29 @@ function availabilityText(){
   var n=unavailableCount();
   return n ? n+' question'+(n===1?'':'s')+' on this shelf need source details and are unavailable for scored practice.' : '';
 }
+function builtItems(b){
+  var items=[],totalItems=0;
+  Array.prototype.forEach.call(b.querySelectorAll('.mcq'),function(m){
+    if(m.dataset.a==='-1') return;
+    totalItems++;
+    if(!m.dataset.itemStatus || m.dataset.itemStatus==='ready') items.push(m);
+  });
+  return {items:items,totalItems:totalItems};
+}
 function pool(){
   var out=[];
   Array.prototype.forEach.call(document.querySelectorAll('.brief'),function(b){
     if(!b.id || !window.__axShelf || !window.__axShelf.eligible(b.id)) return;
-    var items=[],totalItems=0;
-    Array.prototype.forEach.call(b.querySelectorAll('.mcq'),function(m){
-      if(m.dataset.a==='-1') return;
-      totalItems++;
-      if(!m.dataset.itemStatus || m.dataset.itemStatus==='ready') items.push(m);
-    });
-    if(!items.length) return;
-    var h=b.querySelector('h4');
-    out.push({id:b.id,title:h?h.textContent.trim():b.id,items:items,totalItems:totalItems});
+    var h=AX.brief.content(b).querySelector('h4'), title=h?h.textContent.trim():b.id;
+    if(!AX.brief.isBuilt(b)){
+      var st=bankItems(b), ready=st.filter(function(x){ return !x || x==='ready'; }).length;
+      if(!ready) return;
+      out.push({id:b.id,title:title,totalItems:st.length,get items(){ AX.brief.ensure(b); return builtItems(b).items; }});
+      return;
+    }
+    var r=builtItems(b);
+    if(!r.items.length) return;
+    out.push({id:b.id,title:title,items:r.items,totalItems:r.totalItems});
   });
   return out;
 }
@@ -919,7 +947,7 @@ function paintBar(){
 /* The mark strip sits at the end of the brief it scores, so you rate it where
    you finished reading rather than hunting for a control at the top. */
 function addMark(b){
-  var node=document.getElementById(b.id); if(!node) return;
+  var node=AX.brief.ensure(b.id); if(!node) return;
   var old=node.querySelector('.rvmark'); if(old) old.parentNode.removeChild(old);
   var m=el('div','rvmark',
     '<span class="q">Did you have this one?</span>'+
@@ -940,7 +968,7 @@ function addMark(b){
       '<button type="button" data-v="undo">Change</button>';
     paintBar();
     var idx=rev.briefs.indexOf(b), nx=rev.briefs[idx+1];
-    if(nx){ var el2=document.getElementById(nx.id);
+    if(nx){ var el2=AX.brief.ensure(nx.id);
             if(el2) el2.scrollIntoView({behavior:(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)?'auto':'smooth',block:'start'}); }
     else if(bar) bar.querySelector('.fin').focus({preventScroll:true});
   });
@@ -1183,7 +1211,7 @@ function finish(){
 
 /* ---------- mount ---------- */
 function boot(){
-  if(!document.querySelector('.mcq')) return;      /* transform has not run */
+  if(!document.querySelector('.brief')) return;
   buildPanel();
   var nav=document.getElementById('nav');
   var search=document.getElementById('search');

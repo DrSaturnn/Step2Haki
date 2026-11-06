@@ -243,7 +243,7 @@
     w.appendChild(c); return w;
   }
   function openPv(link){
-    var id = link.getAttribute('data-brief'), t = document.getElementById(id); if(!t) return;
+    var id = link.getAttribute('data-brief'), t = AX.brief.ensure(id); if(!t) return;
     if(pvFor === link) return; closePv(true);
     var h = t.querySelector('h4'), q = t.querySelector('.sub .subq');
     pv = document.createElement('div'); pv.className = 'qx-pv'; pv.id = 'qx-pv'; pv.setAttribute('role', 'dialog'); pv.setAttribute('aria-label', 'Linked brief preview');
@@ -287,7 +287,7 @@
   var TITLES = null;
   function titles(){
     if(TITLES) return TITLES; TITLES = {};
-    Array.prototype.forEach.call(document.querySelectorAll('main .brief[id]'), function(b){ var h = b.querySelector('h4'); if(h) TITLES[key(h.textContent)] = b.id; });
+    Array.prototype.forEach.call(document.querySelectorAll('main .brief[id]'), function(b){ var h = AX.brief.content(b).querySelector('h4'); if(h) TITLES[key(h.textContent)] = b.id; });
     return TITLES;
   }
   function pairs(pb){
@@ -361,11 +361,11 @@
     var bw = e.target.closest && e.target.closest('.bankwrap'); if(!bw) return;
     setTimeout(function(){ if(bm) measure(bw); if(bw.classList.contains('review')) renderReview(bw); }, 0);
   });
-  function boot(){ scan(document); }
+  function boot(){ scan(document); AX.brief.each('site-148f', scan); }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
   // banks and briefs that render later (lazy sections, the drawer) are decorated when they appear
   new MutationObserver(function(ms){
     for(var i = 0; i < ms.length; i++){ var a = ms[i].addedNodes;
-      for(var j = 0; j < a.length; j++){ var n = a[j]; if(n.nodeType === 1 && (n.matches('.bankwrap, .sp-drawer, .brief') || n.querySelector && n.querySelector('.bankwrap, .pearls'))) { scan(n.parentNode || document); } } }
+      for(var j = 0; j < a.length; j++){ var n = a[j]; if(n.nodeType === 1 && !AX.brief.fresh(n) && (n.matches('.bankwrap, .sp-drawer, .brief') || n.querySelector && n.querySelector('.bankwrap, .pearls'))) { scan(n.parentNode || document); } } }
   }).observe(document.body, { childList: true, subtree: true });
 })();

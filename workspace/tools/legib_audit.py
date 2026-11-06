@@ -143,7 +143,7 @@ def main():
                                                                  "localStorage.setItem('ax-accent','%s');" % a.accent if a.accent else ''))
                 pg = ctx.new_page()
                 pg.set_default_timeout(240000)   # s150c: 30 s screenshot timeouts on tall pages (Jonathan 2026-10-24: no wrappers)
-                pg.goto('file://' + os.path.abspath(a.page) + '#' + bids[0]); pg.wait_for_timeout(2500)
+                pg.goto('file://' + os.path.abspath(a.page) + '?axall#' + bids[0]); pg.wait_for_timeout(2500)
                 if a.css:
                     pg.add_style_tag(content=open(a.css, encoding='utf-8').read()); pg.wait_for_timeout(300)
                 # s148b: render every lazy section up front (as shots.py does since s125); with content-visibility:auto, a

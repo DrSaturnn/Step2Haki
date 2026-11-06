@@ -14,9 +14,9 @@
     });
   }
   /* Study mode: findings under a band wait until that band's test is revealed. */
-  function gate(){
+  function gate(root){
     var study = document.body.classList.contains('study');
-    document.querySelectorAll('.w5a .w5b').forEach(function(b){
+    (root || document).querySelectorAll('.w5a .w5b').forEach(function(b){
       var f = b.nextElementSibling; if(!f || !f.classList.contains('w5f')) return;
       var m = b.querySelector('.w5om'), wait = study && !(m && m.dataset.revealed === '1');
       if(f.classList.contains('w5-wait') !== wait) f.classList.toggle('w5-wait', wait);
@@ -27,13 +27,17 @@
   var queued = false;
   function soon(){ if(queued) return; queued = true; requestAnimationFrame(function(){ queued = false; place(); gate(); }); }
   function init(){
-    place();
     if(document.fonts && document.fonts.ready) document.fonts.ready.then(soon);
     window.addEventListener('resize', soon);
-    if(window.ResizeObserver){ var ro = new ResizeObserver(soon); document.querySelectorAll('.w5a').forEach(function(f){ ro.observe(f); }); }
-    gate();
+    var ro = window.ResizeObserver ? new ResizeObserver(soon) : null;
     new MutationObserver(soon).observe(document.body, { attributes: true, attributeFilter: ['class'] });
-    document.querySelectorAll('.w5a').forEach(function(f){ new MutationObserver(soon).observe(f, { subtree: true, attributes: true, attributeFilter: ['data-revealed'] }); });
+    AX.brief.each('workup-connectors', function(b){
+      place(b); gate(b);
+      b.querySelectorAll('.w5a').forEach(function(f){
+        if(ro) ro.observe(f);
+        new MutationObserver(soon).observe(f, { subtree: true, attributes: true, attributeFilter: ['data-revealed'] });
+      });
+    });
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

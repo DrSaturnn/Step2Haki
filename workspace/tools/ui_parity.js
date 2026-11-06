@@ -44,7 +44,7 @@ async function open(browser, page, view, cfg) {
   await ctx.clock.setFixedTime(new Date('2026-11-05T12:00:00Z'));
   const p = await ctx.newPage();
   p.setDefaultTimeout(240000);
-  await p.goto('file://' + path.resolve(page), { waitUntil: 'load', timeout: 240000 });
+  await p.goto('file://' + path.resolve(page) + '?axall', { waitUntil: 'load', timeout: 240000 });
   await p.evaluate(() => document.fonts && document.fonts.ready);
   await p.waitForTimeout(1500);
   return { ctx, p };
@@ -154,7 +154,7 @@ async function coverage(a) {
     await p.coverage.startJSCoverage({ resetOnNavigation: false, reportAnonymousScripts: true });
     for (const c of FULL.concat(Object.keys(CONFIGS).filter(k => k.startsWith('acc-')))) {
       await p.evaluate(s => { try { localStorage.clear(); for (const k in s) localStorage.setItem(k, s[k]); } catch (e) {} }, CONFIGS[c]).catch(() => {});
-      await p.goto('file://' + path.resolve(page), { waitUntil: 'load', timeout: 240000 });
+      await p.goto('file://' + path.resolve(page) + '?axall', { waitUntil: 'load', timeout: 240000 });
       await p.evaluate(() => document.fonts && document.fonts.ready);
       await p.waitForTimeout(1000);
       if (c.startsWith('acc-')) continue;

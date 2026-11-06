@@ -30,7 +30,8 @@
   }
   function init(){
     watch(document);
-    new MutationObserver(function(ms){ ms.forEach(function(m){ m.addedNodes.forEach(function(n){ if(n.nodeType === 1) watch(n.matches && n.matches('.rax') ? n.parentNode : n); }); }); })
+    AX.brief.each('timeline-axis', watch);
+    new MutationObserver(function(ms){ ms.forEach(function(m){ m.addedNodes.forEach(function(n){ if(n.nodeType === 1 && !AX.brief.fresh(n)) watch(n.matches && n.matches('.rax') ? n.parentNode : n); }); }); })
       .observe(document.body, {childList: true, subtree: true});
     if(!ro) window.addEventListener('resize', function(){ document.querySelectorAll('.rax').forEach(fit); });
   }

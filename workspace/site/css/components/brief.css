@@ -179,6 +179,7 @@ body .rrow.axm-flat{background:#FBFBFB;background-color:var(--t-body-rrow-bgc-2)
 .sectcard{padding:20px 17px}
 }
 html.cv .brief{content-visibility:auto;contain-intrinsic-size:auto 7000px}
+.brief:has(> template.axl){min-height:var(--axh,1600px)}
 .brief[data-src="aquifer"] > h4::after{content:"Aquifer";display:inline-block;vertical-align:5px;margin-left:10px;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:1px;color:var(--t-brief-data-src-aquifer-h4-after-fg,var(--aquifer));background:linear-gradient(145deg,#E7F0F2 0%,#DDE9EC 52%,#D3E2E6 100%);background-image:var(--t-brief-data-src-aquifer-h4-after-bgi);padding:5px 9px;border-radius:var(--r-chip);box-shadow:var(--t-brief-data-src-aquifer-h4-after-sh,var(--ec))}
 .brief[data-src="aquifer"] h5{color:var(--t-brief-data-src-aquifer-h5-fg,var(--aquifer))}
 .brief.bs[data-nid]:not([data-src="aquifer"]) > h4::after{content:"UWorld"}

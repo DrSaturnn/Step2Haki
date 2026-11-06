@@ -60,9 +60,9 @@
     } else done();
     if(btn) btn.focus();
   }
-  function jump(id){ closeDrawer(); var t = document.getElementById(id); if(t){ location.hash = id; } }
+  function jump(id){ closeDrawer(); var t = AX.brief.ensure(id); if(t){ location.hash = id; } }
   function openDrawer(btn){
-    var target = document.getElementById(btn.getAttribute('data-brief')); if(!target) return;
+    var target = AX.brief.ensure(btn.getAttribute('data-brief')); if(!target) return;
     closeCard(); closeDrawer();
     var c = target.cloneNode(true);
     // practice questions stay on the page: cut from the bank (and its "Practice" heading) to the end

@@ -84,16 +84,21 @@ function headerCounts(){
 function nbmeIds(root){ var ids={};
   root.querySelectorAll('[data-nbme]').forEach(function(q){ q.getAttribute('data-nbme').split(/\s+/).forEach(function(i){ if(i) ids[i]=1; }); });
   return Object.keys(ids); }
+function kidH4(src){ for(var c=src.firstElementChild;c;c=c.nextElementSibling) if(c.tagName==='H4') return c; return null; }
 function chips(){
-  document.querySelectorAll('.brief').forEach(function(b){
-    var h=b.querySelector(':scope > h4'); if(!h) return;
+  AX.brief.all().forEach(function(b){
+    var src=AX.brief.content(b), h=kidH4(src); if(!h) return;
     var old=h.querySelector('.nbmechip'); if(old) old.remove();
     /* one NBME badge on the title (CSS h4::after); the count shows only when above 1 */
-    var n=nbmeIds(b).length;
+    var n=nbmeIds(src).length;
     b.classList.toggle('nbme-linked',n>0);
     if(n>1) h.setAttribute('data-nbme-n',String(n)); else h.removeAttribute('data-nbme-n');
   });
-  document.querySelectorAll('.mcq[data-src="nbme"], .mcq[data-nbme]').forEach(function(m){
+  labels(document);
+  AX.brief.each('nbme-labels',labels);
+}
+function labels(root){
+  root.querySelectorAll('.mcq[data-src="nbme"], .mcq[data-nbme]').forEach(function(m){
     var w=m.querySelector('.why'); if(!w) return;
     var f=m.getAttribute('data-form'); w.setAttribute('data-nbme-label',(f&&FORMS[f])||'NBME form question');
   });

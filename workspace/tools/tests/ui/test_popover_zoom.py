@@ -12,7 +12,7 @@ page, bad = sys.argv[1], []
 with sync_playwright() as p:
     b = p.chromium.launch()
     for w in (1280, 1600, 1920):
-        pg = b.new_page(viewport={'width': w, 'height': 1000}); pg.goto('file://' + page); pg.wait_for_timeout(1200)
+        pg = b.new_page(viewport={'width': w, 'height': 1000}); pg.goto('file://' + page + '?axall'); pg.wait_for_timeout(1200)
         for bid in ('pyelo', 'copd', 'hypercalcemia'):
             btn = pg.locator('#%s button.sp-pop' % bid).first
             btn.scroll_into_view_if_needed(); pg.wait_for_timeout(200); btn.hover(); pg.wait_for_timeout(300)

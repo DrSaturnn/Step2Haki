@@ -1011,8 +1011,8 @@ function sections(){
 }
 
 /* ---------- 2. tables become raised cards; tier tables tagged ---------- */
-function tables(){
-  document.querySelectorAll('table').forEach(function(t){
+function tables(R){
+  (R||document).querySelectorAll('table').forEach(function(t){
     /* labelling must happen even for tables authored pre-wrapped in .tw —
        otherwise their cells lose their column headers on phones */
     var wrapped = t.parentNode.classList && t.parentNode.classList.contains('tw');
@@ -1068,8 +1068,8 @@ function fragHasLeadingBoldDash(f){
   if(!first || first.nodeType!==1 || !/^(B|STRONG)$/.test(first.tagName)) return false;
   return /\s[—–]\s/.test(f.textContent);
 }
-function columnize(){
-  document.querySelectorAll('.pearls,.danger,.dp,.rule,.crit,.vignette').forEach(function(blk){
+function columnize(R){
+  (R||document).querySelectorAll('.pearls,.danger,.dp,.rule,.crit,.vignette').forEach(function(blk){
     var lbl=blk.querySelector(':scope > .lbl');
     // only operate on the block's own inline content, not nested tables/lists
     if(blk.querySelector('table,ol,ul,dl')) return;
@@ -1134,8 +1134,8 @@ function splitAtOffset(f, idx, sepLen){
 }
 
 /* ---------- 4. mnemonic lines: "Term – definition" -> aligned rows ---- */
-function mnemonics(){
-  document.querySelectorAll('ul.plain').forEach(function(ul){
+function mnemonics(R){
+  (R||document).querySelectorAll('ul.plain').forEach(function(ul){
     var lis=Array.prototype.slice.call(ul.children);
     var hits=lis.filter(function(li){ return /\s[—–]\s/.test(li.textContent); });
     if(hits.length < Math.ceil(lis.length*0.7) || lis.length<2) return;
@@ -1192,8 +1192,8 @@ function makeMaskDisclosure(mask){
   mask.dataset.disclosure='1'; mask.appendChild(btn); mask.appendChild(region);
   btn.setAttribute('aria-controls',region.id);
 }
-function masks(){
-  document.querySelectorAll('table').forEach(function(t){
+function masks(R){ var D=R||document;
+  D.querySelectorAll('table').forEach(function(t){
     var hs=Array.prototype.slice.call(t.querySelectorAll('thead th'));
     if(!hs.length) return;
     var col=null, explicit=t.getAttribute('data-mask');
@@ -1210,21 +1210,21 @@ function masks(){
       td.appendChild(sp);
     });
   });
-  document.querySelectorAll('.rule').forEach(function(r){
+  D.querySelectorAll('.rule').forEach(function(r){
     var lbl=r.querySelector(':scope > .lbl');
     if(r.querySelector('.mask')) return;
     var sp=document.createElement('span'); sp.className='mask';
     Array.prototype.slice.call(r.childNodes).forEach(function(n){ if(n!==lbl) sp.appendChild(n); });
     r.appendChild(sp);
   });
-  document.querySelectorAll('.brief.sp .dp .bl > li, .brief.sp .sp-pause').forEach(function(el){ /* s135: study mode masks the bottom line and the pause point in every spine brief (Jonathan 2026-10-13: "Mask both") */
+  D.querySelectorAll('.brief.sp .dp .bl > li, .brief.sp .sp-pause').forEach(function(el){ /* s135: study mode masks the bottom line and the pause point in every spine brief (Jonathan 2026-10-13: "Mask both") */
     if(el.querySelector('.mask')) return;
     var lead=el.classList.contains('sp-pause')?el.querySelector(':scope > b'):null;
     var sp=document.createElement('span'); sp.className='mask';
     Array.prototype.slice.call(el.childNodes).forEach(function(n){ if(n!==lead) sp.appendChild(n); });
     el.appendChild(sp);
   });
-  document.querySelectorAll('.mask').forEach(makeMaskDisclosure);
+  D.querySelectorAll('.mask').forEach(makeMaskDisclosure);
   if(!window.__axMaskClick){
     document.addEventListener('click',function(e){
       if(!document.body.classList.contains('study')) return;
@@ -1245,7 +1245,7 @@ function masks(){
     window.__axLastStudy=document.body.classList.contains('study');
     window.__axMaskObserver.observe(document.body,{attributes:true,attributeFilter:['class']});
   }
-  syncMaskRegions();
+  syncMaskRegions(R);
 }
 
 /* ---------- 6. scenario bank -> MCQ ---------------------------------
@@ -1282,9 +1282,9 @@ var PROMPT={next:'Which of the following is the most appropriate next step in ma
             stage:'Which of the following best describes the stage or classification?',
             claim:'Which of the following statements is correct?',
             untyped:'Which of the following is correct for this patient?'};
-function mcq(){
+function mcq(R){
   var made=0, kept=0;
-  document.querySelectorAll('ol.bank').forEach(function(ol){
+  (R||document).querySelectorAll('ol.bank').forEach(function(ol){
     var brief=ol.closest('.brief'); if(!brief) return;
     var pool=briefEntities(brief);
     var wrapAll=document.createElement('div');
@@ -1449,9 +1449,9 @@ function addFilter(bw){
 function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } }
 
 /* ---------- 7. interaction ---------- */
-function accessibilityEnhance(){
+function accessibilityEnhance(R){
   var seq=0;
-  document.querySelectorAll('.mcq').forEach(function(q){
+  (R||document).querySelectorAll('.mcq').forEach(function(q){
     var rv=q.querySelector('.rv'), why=q.querySelector('.why');
     if(!why) return;
     if(!why.id) why.id='ax-mcq-why-'+(++seq);
@@ -1495,8 +1495,8 @@ function wire(){
 
 /* ---------- run ---------- */
 var scalePeekSeq=0, activeScaleButton=null;
-function scalepeeks(){
-  document.querySelectorAll('.scaleref').forEach(function(old){
+function scalepeeks(R){
+  (R||document).querySelectorAll('.scaleref').forEach(function(old){
     if(old.tagName==='BUTTON') return;
     var b=document.createElement('button'); b.type='button'; b.className='scaleref';
     b.setAttribute('data-scale',old.getAttribute('data-scale')||''); b.innerHTML=old.innerHTML;
@@ -1504,6 +1504,7 @@ function scalepeeks(){
     var sourceId=old.getAttribute('data-scale'); if(sourceId) b.setAttribute('aria-controls',sourceId);
     old.parentNode.replaceChild(b,old);
   });
+  if(R) return;
   document.addEventListener('click',function(e){
     var r=e.target.closest? e.target.closest('.scaleref') : null; if(!r) return;
     var pk=r._peek;
@@ -1529,8 +1530,8 @@ function scalepeeks(){
     }
   });
 }
-function unavailableInline(){
-  document.querySelectorAll('.mcq').forEach(function(q){
+function unavailableInline(R){
+  (R||document).querySelectorAll('.mcq').forEach(function(q){
     if(!q.dataset.itemStatus || q.dataset.itemStatus==='ready') return;
     var note=document.createElement('p'); note.className='availability';
     note.textContent='Reference only: source details are missing. This item is excluded from scored practice.';
@@ -1538,13 +1539,17 @@ function unavailableInline(){
     q.querySelectorAll('.opts button').forEach(function(b){ b.disabled=true; });
   });
 }
-function xrefs(){
+var xrefMap=null;
+function xrefs(R){
   var map={};
-  document.querySelectorAll('.brief').forEach(function(b){
-    var h=b.querySelector('h4'); if(!h||!b.id) return;
-    map[norm(h.textContent).toLowerCase().replace(/[^a-z0-9 ]/g,'')]=b.id;
-  });
-  document.querySelectorAll('.pearls').forEach(function(pb){
+  if(!xrefMap){ xrefMap={};
+    AX.brief.all().forEach(function(b){
+      var h=AX.brief.content(b).querySelector('h4'); if(!h||!b.id) return;
+      xrefMap[norm(h.textContent).toLowerCase().replace(/[^a-z0-9 ]/g,'')]=b.id;
+    });
+  }
+  map=xrefMap;
+  (R||document).querySelectorAll('.pearls').forEach(function(pb){
     if(!/pairs with/i.test(pb.textContent)) return;
     pb.querySelectorAll('b').forEach(function(b){
       if(b.closest('a')) return;
@@ -1556,8 +1561,8 @@ function xrefs(){
   });
 }
 var figureSeq=0;
-function figures(){
-  document.querySelectorAll('.figure').forEach(function(fig){
+function figures(R){
+  (R||document).querySelectorAll('.figure').forEach(function(fig){
     var cap=fig.querySelector(':scope > .figcap'), body=fig.querySelector(':scope > .figbody');
     if(!cap||!body) return;
     if(cap.tagName!=='BUTTON'){
@@ -1576,6 +1581,7 @@ function figures(){
 }
   function run(){
   switches(); mobileNav(); sections(); columnize(); mnemonics(); tables(); masks(); mcq(); accessibilityEnhance(); unavailableInline(); xrefs(); scalepeeks(); figures(); wire(); shelfInit();
+  AX.brief.each('transform',function(b){ columnize(b); mnemonics(b); tables(b); masks(b); mcq(b); accessibilityEnhance(b); unavailableInline(b); xrefs(b); scalepeeks(b); figures(b); });
   var AFTER=VERIFY?norm(document.body.innerText):"";
   var addedUI=/STUDY MODE|RECALL MODE|FLAT THEME|REVEAL|From this brief|Distractors are entities/;
   var a=BEFORE.split(' ').filter(Boolean).length;

@@ -14,6 +14,6 @@
       if(v !== n.nodeValue) n.nodeValue = v;
     });
   }
-  function all(){ document.querySelectorAll('.brief').forEach(bind); }
+  function all(){ AX.brief.each('arrow-nbsp', bind); }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', all); else all();
 })();

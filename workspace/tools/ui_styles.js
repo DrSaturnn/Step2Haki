@@ -63,7 +63,7 @@ async function dump(a) {
   async function open() {
     const p = await ctx.newPage(); p.setDefaultTimeout(600000);
     p.on('pageerror', e => errs.push(e.message)); p.on('console', m => { if (m.type() === 'error' || m.type() === 'warning') errs.push(m.type() + ': ' + m.text()); });
-    await p.goto('file://' + path.resolve(page), { waitUntil: 'load', timeout: 600000 });
+    await p.goto('file://' + path.resolve(page) + '?axall', { waitUntil: 'load', timeout: 600000 });
     await p.evaluate(() => document.fonts && document.fonts.ready);
     await p.waitForTimeout(2500);
     await p.addStyleTag({ content: FREEZE });
@@ -155,7 +155,7 @@ async function why(a) {
   await ctx.addInitScript(s => { try { localStorage.clear(); for (const k in s) localStorage.setItem(k, s[k]); } catch (e) {} }, CONFIGS[cfg]);
   await ctx.addInitScript(DETERMINISM);
   const p = await ctx.newPage(); p.setDefaultTimeout(600000);
-  await p.goto('file://' + path.resolve(page), { waitUntil: 'load', timeout: 600000 }); await p.waitForTimeout(2500);
+  await p.goto('file://' + path.resolve(page) + '?axall', { waitUntil: 'load', timeout: 600000 }); await p.waitForTimeout(2500);
   await p.evaluate(({ id, idx }) => { const b = id === '(chrome)' ? null : document.getElementById(id);
     const els = b ? [b, ...b.querySelectorAll('*')] : [...document.body.querySelectorAll('*')].filter(e => !e.closest('.brief[id]') && e.tagName !== 'SCRIPT' && e.tagName !== 'STYLE');
     els[idx].setAttribute('data-axwhy', '1'); }, { id, idx });
@@ -193,7 +193,7 @@ async function explain(a) {
     await ctx.addInitScript(s => { try { localStorage.clear(); for (const k in s) localStorage.setItem(k, s[k]); } catch (e) {} }, CONFIGS[cfg]);
     await ctx.addInitScript(DETERMINISM);
     const p = await ctx.newPage(); p.setDefaultTimeout(600000);
-    await p.goto('file://' + path.resolve(page), { waitUntil: 'load', timeout: 600000 }); await p.waitForTimeout(2500);
+    await p.goto('file://' + path.resolve(page) + '?axall', { waitUntil: 'load', timeout: 600000 }); await p.waitForTimeout(2500);
     await p.addStyleTag({ content: FREEZE }); await p.evaluate(SIGFN);
     const c = await ctx.newCDPSession(p); await c.send('DOM.enable'); await c.send('CSS.enable');
     return { p, c };
