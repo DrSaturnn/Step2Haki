@@ -328,6 +328,22 @@ def run(rules, dead):
                         rep['order_risk'].append('%s { %s } %s' % (part.strip()[:80], prop, ' / '.join(norm(t[1])[:50] for t in emitted)))
     def ref(nm):
         return 'var(%s,%s)' % (nm, fallback[nm]) if nm in fallback else 'var(%s)' % nm
+    # a token defined below the root on a scope (scoped_tokens) shadows the root for everything inside that scope, so
+    # every theme rule that sets the token sets it on the same scopes too, in its own place and media (phone .tw
+    # box-shadow none lost to the scoped global var(--e2) on .axm-flat)
+    name_scopes = defaultdict(list)
+    for r in rules:
+        if not is_theme_rule(r):
+            continue
+        for prop, val, imp in r['decl']:
+            sc = scopes(val)
+            if not sc or imp or (r['i'], prop) in dead or SHAPE.match(prop):
+                continue
+            for part in top_split(r['sel'], ','):
+                prefix, key = split_theme(part)
+                for nm in (toks_for.get((key, prop)) or []) if prefix is not None else []:
+                    if nm not in skip.get((r['i'], part.strip(), prop), ()):
+                        name_scopes[nm].extend(k for k in sc if k not in name_scopes[nm])
     # 3. rewrite
     out = []
     shapes, dropped_dead = [], []
@@ -373,7 +389,7 @@ def run(rules, dead):
                     theme_rules.append(dict(r, sel=prefix, decl=decl, i=r['i'], tok=True))
                     # the value uses a variable redefined below the root: define the token there too, so var() is
                     # resolved where that variable is set
-                    for k in sc:
+                    for k in OrderedDict.fromkeys(k for nm in names for k in name_scopes.get(nm, [])):
                         theme_rules.append(dict(r, sel=prefix + ' ' + k, decl=decl, i=r['i'], tok=True))
                 if not carried:
                     rep['no_light_rule'].append('%s { %s:%s }' % (norm(r['sel'])[:110], prop, val))

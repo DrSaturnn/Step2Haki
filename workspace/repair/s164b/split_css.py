@@ -110,7 +110,7 @@ def classify_one(part, r):
         return 'layout/print'
     subj = subject(plain)
     m = re.search(r':is\(', subj)
-    if m:
+    if m and not THEME.search(part.replace(HACK, '')):
         # a subject listing three or more components (`:is(.dp,.pearls,...,.mcq,...,.sp-pop-b)`): one file can not own it, and
         # filing it with one member (hovercard) put it before the brief-wide rule it ties with (phone radius 18px vs
         # 24px), so it stays in components/brief, after every other component file

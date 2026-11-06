@@ -15,9 +15,10 @@ D=local/s164b/sty; mkdir -p "$D"
 if [ "$S" = all ]; then OPT=(--chrome); else OPT=(--sample "$S" --chrome); fi
 # D-20261105-10: in dark and tinted the shapes follow light, so they are left out of the dark comparison (theme_gate.js
 # checks that no box moves; the underline style is a shape too: dark .xref underlines go dotted as in light; the
-# text-decoration shorthand is left out, its color and line longhands are compared); light
+# text-decoration shorthand is left out, its color and line longhands are compared; background-size follows light too:
+# the phone dark .w5an rule reset the .fl annotation line to 100% and is now 12px as in light); light
 # configs compare everything
-SHAPE='^(border(-(top|right|bottom|left|block|inline)(-(start|end))?)?-(width|style)|border(-[a-z-]*)?-radius|outline-(width|style|offset)|text-decoration-style|text-decoration)$'
+SHAPE='^(border(-(top|right|bottom|left|block|inline)(-(start|end))?)?-(width|style)|border(-[a-z-]*)?-radius|outline-(width|style|offset)|text-decoration-style|text-decoration|background-size)$'
 for v in $VIEWS; do for c in $CFGS; do
   # the --t-* color tokens (D-20261105-10) inherit to every element; their effect shows in the real properties
   K=(--skip '^--t-'); case "$c" in *dark*|*tinted*) K=(--skip "${SHAPE%\$}\$|^--t-");; esac
