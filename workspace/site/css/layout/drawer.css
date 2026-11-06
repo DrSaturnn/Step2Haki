@@ -1,20 +1,20 @@
-.sp-drawer{position:fixed;z-index:71;top:24px;right:24px;bottom:24px;width:min(520px,90vw);overflow:auto;overscroll-behavior:contain;background:var(--canvas-a);box-shadow:var(--e1);border-radius:var(--r-card);padding:16px 16px 20px}
+.sp-drawer{position:fixed;z-index:71;top:24px;right:24px;bottom:24px;width:min(520px,90vw);overflow:auto;overscroll-behavior:contain;background:var(--t-sp-drawer-bg,var(--canvas-a));box-shadow:var(--t-sp-drawer-sh,var(--e1));border-radius:var(--r-card);padding:16px 16px 20px}
 .sp-drawer .brief{zoom:.9}
 @media (--phone){
 .sp-drawer{top:auto;left:0;right:0;bottom:0;width:auto;max-height:86vh;border-radius:var(--r-card) var(--r-card) 0 0;padding:12px 8px calc(20px + env(safe-area-inset-bottom,0px))}
 .sp-drawer .brief{zoom:1}
 }
-.sp-drawer .sp-dbar{position:sticky;top:-16px;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;margin:-16px -16px 10px;padding:12px 16px;background:var(--canvas-a)}
-.sp-drawer .sp-dmeta{font:750 12px/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--principle)}
-.sp-drawer .sp-dclose{all:unset;cursor:pointer;min-width:44px;min-height:44px;display:grid;place-items:center;border-radius:10px;background:var(--raised);box-shadow:var(--e2);font:750 14px/1 var(--sans);color:var(--ink);padding:0 12px}
+.sp-drawer .sp-dbar{position:sticky;top:-16px;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;margin:-16px -16px 10px;padding:12px 16px;background:var(--t-sp-drawer-sp-dbar-bg,var(--canvas-a))}
+.sp-drawer .sp-dmeta{font:750 12px/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--t-sp-drawer-sp-dmeta-fg,var(--principle))}
+.sp-drawer .sp-dclose{all:unset;cursor:pointer;min-width:44px;min-height:44px;display:grid;place-items:center;border-radius:10px;background:var(--t-sp-drawer-sp-dclose-bg,var(--raised));box-shadow:var(--t-sp-drawer-sp-dclose-sh,var(--e2));font:750 14px/1 var(--sans);color:var(--t-sp-drawer-sp-dclose-fg,var(--ink));padding:0 12px}
 .sp-drawer .brief{margin:0}
-.sp-drawer .sp-dpractice{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 0;padding:14px 16px;border-radius:var(--r-sub);background:var(--recess);box-shadow:var(--inner);font-size:14.5px;color:var(--ink-2)}
-.sp-drawer .sp-dopen{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:10px;background:var(--accent);color:var(--raised);font:750 14px/1 var(--sans);text-decoration:none;white-space:nowrap}
+.sp-drawer .sp-dpractice{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 0;padding:14px 16px;border-radius:var(--r-sub);background:var(--t-sp-drawer-sp-dpractice-bg,var(--recess));box-shadow:var(--t-sp-drawer-sp-dpractice-sh,var(--inner));font-size:14.5px;color:var(--t-sp-drawer-sp-dpractice-fg,var(--ink-2))}
+.sp-drawer .sp-dopen{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:10px;background:var(--t-sp-drawer-sp-dopen-bg,var(--accent));color:var(--t-sp-drawer-sp-dopen-fg,var(--raised));font:750 14px/1 var(--sans);text-decoration:var(--t-sp-drawer-sp-dopen-td);white-space:nowrap}
 .sp-drawer.sp-g{transition:transform .46s cubic-bezier(.2,.9,.24,1.06),border-radius .46s ease,opacity .2s ease}
 .sp-drawer.sp-g > *{transition:opacity .22s ease .14s}
 .sp-drawer.sp-g0 > *{opacity:0}
-.sp-drawer{background:var(--glass-2);-webkit-backdrop-filter:blur(40px) saturate(190%);backdrop-filter:blur(40px) saturate(190%);box-shadow:var(--glass-edge-2);border-radius:28px}
-.sp-drawer .sp-dbar{background:rgba(250,250,252,.82);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.sp-drawer{background:var(--t-sp-drawer-bg-2,var(--glass-2));-webkit-backdrop-filter:blur(40px) saturate(190%);backdrop-filter:blur(40px) saturate(190%);box-shadow:var(--t-sp-drawer-sh-2,var(--glass-edge-2));border-radius:28px}
+.sp-drawer .sp-dbar{background:var(--t-sp-drawer-sp-dbar-bg-2);background-color:var(--t-sp-drawer-sp-dbar-bgc);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
 html:is([data-theme],:not([data-theme])) body .sp-drawer .brief > h4{font-size:32px;line-height:38px;letter-spacing:-.5px}
 html:is([data-theme],:not([data-theme])) body .sp-drawer .brief > h4::after{vertical-align:7px}
 html:is([data-theme],:not([data-theme])) body .sp-drawer .brief .sub{font-size:16px;line-height:22px;margin-bottom:24px}

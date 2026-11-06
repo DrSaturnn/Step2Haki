@@ -5,13 +5,23 @@
 }
 @page{margin:1in}
 @media (--print){
-body{background:#fff}
+body{background:#fff;background-color:var(--t-body-bgc-4);background-image:var(--t-body-bgi-2)}
 #nav{display:none}
 main{margin-left:0;padding:0}
 .wrap{max-width:100%;padding:0}
-.brief,.tw,.mcq,.sectcard,.strat{box-shadow:none;background:#fff;border:1px solid #ccc;page-break-inside:avoid}
-.dp,.pearls,.danger,.rule,.crit,.vignette,.bsband{box-shadow:none;background:#F5F5F5;page-break-inside:avoid}
-.tab{box-shadow:none}
+.brief{box-shadow:var(--t-brief-sh-2);background:#fff;background-color:var(--t-brief-bgc-2);border:var(--t-brief-border);page-break-inside:avoid}
+.tw{box-shadow:var(--t-tw-sh-2);background:var(--t-tw-bg-2);background-color:var(--t-tw-bgc-2);background-image:var(--t-tw-bgi-2);border:var(--t-tw-border);page-break-inside:avoid}
+.mcq{box-shadow:var(--t-mcq-sh-2);background:#fff;background-color:var(--t-mcq-bgc-2);border:var(--t-mcq-border);page-break-inside:avoid}
+.sectcard{box-shadow:var(--t-sectcard-sh-2);background:#fff;background-color:var(--t-sectcard-bgc-2);background-image:var(--t-sectcard-bgi-2);border:var(--t-sectcard-border);page-break-inside:avoid}
+.strat{box-shadow:var(--t-strat-sh-2);background:#fff;background-color:var(--t-strat-bgc-2);background-image:var(--t-strat-bgi-2);border:var(--t-strat-border);page-break-inside:avoid}
+.dp{box-shadow:var(--t-dp-sh-2);background:#F5F5F5;background-color:var(--t-dp-bgc-2);page-break-inside:avoid}
+.pearls{box-shadow:var(--t-pearls-sh-2);background:#F5F5F5;background-color:var(--t-pearls-bgc-2);page-break-inside:avoid}
+.danger{box-shadow:var(--t-danger-sh-2);background:#F5F5F5;background-color:var(--t-danger-bgc-2);page-break-inside:avoid}
+.rule{box-shadow:var(--t-rule-sh-2);background:#F5F5F5;background-color:var(--t-rule-bgc-2);background-image:var(--t-rule-bgi-2);page-break-inside:avoid}
+.crit{box-shadow:var(--t-crit-sh-2);background:#F5F5F5;background-color:var(--t-crit-bgc-2);page-break-inside:avoid}
+.vignette{box-shadow:var(--t-vignette-sh-2);background:#F5F5F5;background-color:var(--t-vignette-bgc-2);page-break-inside:avoid}
+.bsband{box-shadow:var(--t-bsband-sh-2);background:#F5F5F5;background-color:var(--t-bsband-bgc-2);background-image:var(--t-bsband-bgi-2);page-break-inside:avoid}
+.tab{box-shadow:var(--t-tab-sh-2)}
 body .axm-study .mask,body .mask.axm-study,body .axm-study .mask-region,body .mask-region.axm-study{filter:none!important;opacity:1!important}
 .mask-toggle{display:none!important}
 .mcq .why{display:block!important}
