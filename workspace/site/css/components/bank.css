@@ -91,7 +91,6 @@ body .axm-flat .bktools .bkmode.on,body .bktools.axm-flat .bkmode.on{background:
 .bktools .bkseg.bkfilter{flex-wrap:wrap;row-gap:2px}
 .bktools .bkseg.bkfilter button{flex:1 1 auto;white-space:nowrap}
 }
-html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) :is(.dp,.pearls,.danger,.rule,.crit,.vignette,.mcq,.scriptcard,.sp-script,.sp-row,.sp-ladder,.sp-inst,.sp-pause,details.sp-sys,figure.lcp,figure.lcw,figure.sw,figure.sp-on,ol.sp-trk){background:var(--g-card);background-image:none;box-shadow:var(--e2),0 0 0 1px var(--hair);border-radius:24px}
 html:is([data-theme],:not([data-theme])) body .bankwrap .mcq{display:flex;flex-direction:column;box-sizing:border-box;padding:18px 20px 20px;border-radius:24px;background:var(--raised);background-image:none;box-shadow:var(--e2),0 0 0 1px rgba(24,28,30,.07)}
 html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .qx-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 10px}
 html:is([data-theme],:not([data-theme])) body .bankwrap .mcq .qx-chip{padding:3px 10px;border-radius:999px;background:var(--vign-bg);color:var(--vign);font:700 12px/18px var(--sans)}

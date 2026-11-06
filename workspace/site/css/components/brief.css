@@ -465,6 +465,7 @@ html:is([data-theme],:not([data-theme])) body .brief h5.tsec{font:700 30px/36px 
 html:is([data-theme],:not([data-theme])) body .brief.sp h5.sp-h{gap:14px;margin:64px 0 18px}
 html:is([data-theme],:not([data-theme])) body .brief.sp .sp-n{min-width:36px;height:36px;border-radius:11px;font:700 17px/1 var(--sans);letter-spacing:0}
 html:is([data-theme],:not([data-theme])) body .brief.sp h5.sp-h::before{content:none}
+html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) :is(.dp,.pearls,.danger,.rule,.crit,.vignette,.mcq,.scriptcard,.sp-script,.sp-row,.sp-ladder,.sp-inst,.sp-pause,details.sp-sys,figure.lcp,figure.lcw,figure.sw,figure.sp-on,ol.sp-trk){background:var(--g-card);background-image:none;box-shadow:var(--e2),0 0 0 1px var(--hair);border-radius:24px}
 html:is([data-theme],:not([data-theme])) body .brief .dp .lbl{color:var(--confirm)}
 html:is([data-theme],:not([data-theme])) body .brief.sp .sp-script .sk{font-size:15px;line-height:24px;font-weight:650;letter-spacing:0;text-transform:none;color:var(--muted)}
 html:is([data-theme],:not([data-theme])) body .brief.sp .sp-script .sv p{font-size:16px;line-height:23px}
@@ -486,6 +487,7 @@ html:is([data-theme],:not([data-theme])) body .brief h5.tsec{font-size:24px;line
 html:is([data-theme],:not([data-theme])) body .brief.sp h5.sp-h{gap:12px;margin:44px 0 14px}
 html:is([data-theme],:not([data-theme])) body .brief.sp .sp-n{min-width:30px;height:30px;border-radius:9px;font-size:15px}
 html:is([data-theme],:not([data-theme])) body .brief h5.authored-hdr{font-size:24px;line-height:30px;letter-spacing:-.3px}
+html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) :is(.dp,.pearls,.danger,.rule,.crit,.vignette,.mcq,.scriptcard,.sp-script,.sp-row,.sp-ladder,.sp-inst,.sp-pause,details.sp-sys,figure.lcp,figure.lcw,figure.sw,figure.sp-on,ol.sp-trk,.sp-pop-b){border-radius:18px}
 }
 html:is([data-theme],:not([data-theme])) body .sp-card{transform-origin:16px 0;animation:qxpopT .7s var(--bnc,ease-out) both,qxpopO .22s ease both,qxpopF .35s ease both}
 @media (--reduced-motion){

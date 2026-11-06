@@ -109,6 +109,23 @@ def classify_one(part, r):
     if '@media print' in r['ctx']:
         return 'layout/print'
     subj = subject(plain)
+    m = re.search(r':is\(', subj)
+    if m:
+        # a subject listing three or more components (`:is(.dp,.pearls,...,.mcq,...,.sp-pop-b)`): one file can not own it, and
+        # filing it with one member (hovercard) put it before the brief-wide rule it ties with (phone radius 18px vs
+        # 24px), so it stays in components/brief, after every other component file
+        inner, depth, k = '', 1, m.end()
+        while k < len(subj) and depth:
+            depth += {'(': 1, ')': -1}.get(subj[k], 0)
+            if depth:
+                inner += subj[k]
+            k += 1
+        owners = set()
+        for item in top_split(inner, ','):
+            hit = next((f for f, _, pat in FILES[3:] if f not in ('base', 'components/brief') and re.search(pat, item)), 'components/brief')
+            owners.add(hit)
+        if len(owners) > 2:
+            return 'components/brief'
     for f, _, pat in FILES[3:]:
         if f in ('base', 'components/brief'):
             continue
