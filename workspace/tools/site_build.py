@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """site_build: builds the page's styles and scripts from workspace/site/ and writes them into the page.
 
-  python3 tools/site_build.py PAGE [--out FILE] [--check] [--no-minify]
+  python3 tools/site_build.py PAGE [--out FILE] [--check] [--no-minify] [--no-index]
 
 site/css/ORDER lists the style files, one per line as "<layer> <file>", in cascade order; site/js/ORDER lists the
 script modules in run order. The page keeps its markup; every site style block and script block in it is replaced by
@@ -12,6 +12,10 @@ styles are removed.
 Each brief's inner HTML is wrapped in <template class="axl"> so the browser parses it without building it; the page
 script builds a brief when it is opened or scrolled near (site/js/core.js AX.brief, site/js/06-load-near.js). The brief's
 own tag and inner bytes do not change; an already wrapped page is unwrapped first. --eager writes the page unwrapped.
+
+The search index (s164c, D-20261106-4): after writing a wrapped page, search.json is written beside it by
+tools/search_index.js (the search record of every brief, read from the fully built page); the page fetches it after
+load. --no-index skips it (a scratch candidate whose search is not under test); an --eager page needs none.
 
 --check: exit 1 if PAGE's bundles differ from a fresh build (the gate runs this so the page never drifts from site/).
 """
@@ -182,6 +186,13 @@ def main(a):
     out = a[a.index('--out') + 1] if '--out' in a else page
     open(out, 'w', encoding='utf-8').write(new)
     print('site_build: css %d, js %d chars; page %d > %d' % (len(css), len(js), len(html), len(new)))
+    if '--eager' not in a and '--no-index' not in a:
+        idx = os.path.join(os.path.dirname(os.path.abspath(out)), 'search.json')
+        r = subprocess.run(['node', os.path.join(WS, 'tools', 'search_index.js'), out, idx], capture_output=True, text=True)
+        if r.returncode:
+            print('site_build: search index FAILED: ' + (r.stdout + r.stderr).strip()[:600])
+            return 1
+        print(r.stdout.strip())
     return 0
 
 

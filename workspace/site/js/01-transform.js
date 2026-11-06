@@ -539,7 +539,7 @@ function mobileNav(){
    most query words, then title > subtitle > decision point > the rest, then
    hit count. Results list in the sidebar in place of the systems list and
    respect the shelf, Board-style only and an active review. */
-var SX={built:false, briefs:[], groups:[], gmap:{}, oneway:{}, buildMs:0, queryMs:0, hits:[], timer:null, cap:60};
+var SX={built:false, briefs:[], groups:[], gmap:{}, oneway:{}, buildMs:0, queryMs:0, hits:[], timer:null, cap:60, mode:'', note:''};
 /* Small hand map; "ACRONYM (expansion)" pairs on the page are added at build.
    A leading ~ marks a one-way alias: typing it finds the group, but the group
    does not widen to it (HPS is also the Heart Protection Study). */
@@ -711,10 +711,11 @@ function sxPairs(raw){
     }
   }
 }
-/* One brief's record. A built brief is read from the page. An unbuilt brief is read from a detached copy of its
-   template run through every per-brief pass (AX.brief.copy), as a build runs them, so the text, block labels and
-   masks match the built brief; the copy is dropped and each block keeps its masked ranges (k.mr) for snippets. On brief:built the
-   record is read again from the page. */
+/* One brief's record. A built brief is read from the page. An unbuilt brief (fallback path only) is read from a
+   detached copy of its template run through every per-brief pass (AX.brief.copy), as a build runs them, so the text,
+   block labels and masks match the built brief; the copy is dropped. Every block keeps its masked ranges (k.mr): the
+   prebuilt index carries them, and a record without its element uses them for snippets. On brief:built the record is
+   read again from the page. */
 function sxRecord(b,di){
   var root=b, lazy=!AX.brief.isBuilt(b);
   if(lazy){
@@ -726,16 +727,15 @@ function sxRecord(b,di){
     var parts=[], vis=[], mr=[], pos=0, sp=true, WS=/\s/;
     sxWalk(k,function(t,n,m){
       parts.push(t); if(!m) vis.push(t);
-      if(!lazy) return;
       for(var i=0;i<t.length;i++){
         if(WS.test(t.charAt(i))){ if(!sp){ sp=true; pos++; } continue; }
-        if(m){ var last=mr[mr.length-1]; if(last && last[1]===pos) last[1]++; else mr.push([pos,pos+1]); }
+        if(m){ var last=mr[mr.length-1]; if(last && last[1]>=pos-1) last[1]=pos+1; else mr.push([pos,pos+1]); }   /* a range runs across one collapsed space */
         sp=false; pos++;
       }
     });
     k.raw=parts.join('').replace(/\s+/g,' ').trim();
     if(k.bank>-1) k.stemEnd=vis.join('').replace(/\s+/g,' ').trim().length;   /* the answer chain comes last */
-    if(lazy){ k.mr=mr; k.el=null; }
+    k.mr=mr; if(lazy) k.el=null;
     if(k.raw) rec.blocks.push(k);
   };
   for(var c=root.firstElementChild;c;c=c.nextElementSibling){
@@ -765,11 +765,15 @@ function sxMaskedAt(k,off){
 AX.on('brief:built',function(b){
   for(var i=0;i<SX.briefs.length;i++) if(SX.briefs[i].b===b){ if(SX.briefs[i].lazy) SX.briefs[i]=sxRecord(b,SX.briefs[i].di); return; }
 });
-/* Built in idle slices after load so it never blocks a tap; a query that
-   arrives first finishes the build on the spot. */
+function sxAliases(){
+  if(SX.aliased) return; SX.aliased=true;
+  SX_ALIASES.forEach(function(g){ sxGroup(g.map(function(p){ return (p.charAt(0)==='~'?'~':'')+sxQNorm(p); })); });
+}
+/* In-page build (SX.mode 'page': every brief already built, or the index file failed to load): idle slices after
+   load so it never blocks a tap; a query that arrives first finishes the build on the spot. */
 function sxBuild(deadline){
-  if(SX.built) return;
-  if(!SX.list){ SX.list=document.querySelectorAll('.brief'); SX.next=0; SX.work=0; SX.t0=sxNow(); SX_ALIASES.forEach(function(g){ sxGroup(g.map(function(p){ return (p.charAt(0)==='~'?'~':'')+sxQNorm(p); })); }); }
+  if(SX.built || SX.mode!=='page') return;
+  if(!SX.list){ SX.list=document.querySelectorAll('.brief'); SX.next=0; SX.work=0; SX.t0=sxNow(); sxAliases(); }
   var t0=sxNow();
   while(SX.next<SX.list.length){
     sxBuildOne(SX.list[SX.next],SX.next); SX.next++;
@@ -782,6 +786,63 @@ function sxBuild(deadline){
 function sxIdle(){
   if(window.requestIdleCallback) requestIdleCallback(sxBuild,{timeout:1500});
   else setTimeout(function(){ var t=sxNow(); sxBuild({didTimeout:false,timeRemaining:function(){ return 12-(sxNow()-t); }}); },40);
+}
+/* Prebuilt index (D-20261106-4): the build writes search.json beside the page from the fully built page
+   (tools/search_index.js; format in its header) and the gate fails when the file does not match the page. The page
+   fetches it once the loader settles, versioned by the build stamp. A brief built before the file lands, or after,
+   is read from the page. A failed fetch, a file that does not list this page's briefs, or a page opened from disk
+   builds the index in the page (sxBuild over template copies); the result list says so. */
+function sxVersion(){ var m=document.querySelector('meta[name="ax-build"]'); return m ? ((m.getAttribute('content')||'').split('|')[0]||'') : ''; }
+function sxLoad(){
+  if(SX.mode) return;
+  if(!AX.brief.pending().length){ sxPage(''); return; }
+  if(!window.fetch || !window.Promise){ sxPage('Search index: built in this page (index file unavailable).'); return; }
+  SX.mode='fetch'; SX.t0=sxNow();
+  var v=sxVersion();
+  fetch('search.json'+(v ? '?v='+encodeURIComponent(v) : ''),v ? {} : {cache:'no-cache'})
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(sxFromFile)
+    .catch(function(){ sxPage('Search index: built in this page (index file unavailable).'); });
+}
+function sxPage(note){
+  SX.mode='page'; SX.note=note; SX.briefs=[]; SX.list=null; SX.built=false;
+  SX.groups=[]; SX.gmap={}; SX.oneway={}; SX.aliased=false;
+  sxIdle();
+  if(sxQuery()) sxRender();
+}
+function sxFromFile(d){
+  var list=document.querySelectorAll('.brief'), at={}, n=0;
+  Array.prototype.forEach.call(list,function(b,i){ if(b.id){ at[b.id]=i; n++; } });
+  if(!d || !d.briefs || d.briefs.length!==n || !d.briefs.every(function(x){ return at[x.id]!==undefined; })) throw new Error('index does not match the page');
+  var t0=sxNow();
+  SX.groups=[]; SX.gmap={}; SX.oneway={};
+  (d.oneway||[]).forEach(function(p){ SX.oneway[p]=1; });
+  d.groups.forEach(function(g,i){ SX.groups.push(g.slice()); g.forEach(function(p){ SX.gmap[p]=i; }); });
+  SX.aliased=true;
+  SX.briefs=d.briefs.map(function(x){
+    var b=list[at[x.id]], di=at[x.id];
+    if(AX.brief.isBuilt(b)) return sxRecord(b,di);
+    var rec={b:b,id:x.id,di:di,lazy:true,title:x.title,sub:x.sub,blocks:[],all:''}, parts=[];
+    x.blocks.forEach(function(q){
+      var k={el:null,label:q[0],rank:q[1],bank:q[2],raw:q[3],mr:q[4],n:''};
+      if(k.bank>-1) k.stemEnd=q[5];
+      k.n=sxNorm(k.raw); parts.push(k.n); rec.blocks.push(k);
+    });
+    rec.all=parts.join('\n');
+    return rec;
+  });
+  SX.mode='file'; SX.built=true; SX.buildMs=Math.round(sxNow()-t0); SX.wallMs=Math.round(sxNow()-SX.t0); SX.slices=0;
+  if(sxQuery()) sxRender();
+}
+/* every record, read from the built page: what tools/search_index.js writes to search.json */
+function sxDump(){
+  if(AX.brief.pending().length) throw new Error('sxDump: build every brief first (?axall)');
+  if(SX.mode!=='page'){ SX.mode='page'; SX.briefs=[]; SX.list=null; SX.built=false; }
+  sxBuild();
+  return {v:1, briefs:SX.briefs.map(function(r){
+      return {id:r.id, title:r.title, sub:r.sub, blocks:r.blocks.map(function(k){
+        var q=[k.label,k.rank,k.bank,k.raw,k.mr]; if(k.bank>-1) q.push(k.stemEnd); return q; })};
+    }), groups:SX.groups, oneway:Object.keys(SX.oneway).sort()};
 }
 /* query -> terms; each term is a set of alternatives, and a brief must match
    every term. Typed words match at a word start (words of one or two letters
@@ -857,6 +918,8 @@ function sxTermHits(s,alts,cap,out){
 }
 function sxInShelf(b){ return shelfEligible(b,shelf); }
 function sxSearch(q){
+  if(!SX.mode) sxLoad();
+  if(SX.mode==='fetch') return {hits:[],other:0,ms:0,loading:true};
   sxBuild();
   var t0=sxNow(), terms=sxTerms(q), hits=[], other=0;
   if(!terms.length) return {hits:hits,other:0,ms:0};
@@ -934,6 +997,10 @@ function sxRender(){
   if(!q){ res.hidden=true; nav.classList.remove('sxon'); SX.hits=[]; return; }
   var out=sxSearch(q), hits=out.hits, list=res.querySelector('.sxlist'), stat=res.querySelector('.sxstat'), foot=res.querySelector('.sxfoot');
   SX.hits=hits;
+  if(out.loading){
+    stat.textContent='Loading search\u2026'; list.innerHTML=''; foot.innerHTML='';
+    res.hidden=false; nav.classList.add('sxon'); return;
+  }
   var scope=sxShelfName()+(boardOnly && !reviewSet ? ', board-style only' : '');
   stat.innerHTML=hits.length ? ('<b>'+hits.length+'</b> '+(hits.length===1?'brief':'briefs')+' in '+sxEsc(scope))
                              : ('No matches in '+sxEsc(scope)+'.');
@@ -956,6 +1023,7 @@ function sxRender(){
   var f='';
   if(hits.length>SX.cap) f+='<p class="sxcap">Showing the first '+SX.cap+' of '+hits.length+'. Add a word to narrow.</p>';
   if(out.other) f+='<button type="button" class="sxmore">'+out.other+' more in other shelves</button>';
+  if(SX.note) f+='<p class="sxcap">'+sxEsc(SX.note)+'</p>';
   foot.innerHTML=f;
   res.hidden=false; nav.classList.add('sxon');
 }
@@ -1025,10 +1093,11 @@ function sxWire(){
     var x=SX.hits[parseInt(a.getAttribute('data-i'),10)]; if(x) sxLand(x);
   });
   document.addEventListener('ax-shelf',function(){ if(sxQuery()) sxRender(); });
-  /* build while the reader is still looking at the masthead */
-  sxIdle();
-  window.__axSearch={build:sxBuild,search:function(q){ return sxSearch(q); },render:sxRender,
-    stats:function(){ return {built:SX.built,buildMs:SX.buildMs,wallMs:SX.wallMs,slices:SX.slices,queryMs:SX.queryMs,briefs:SX.briefs.length,groups:SX.groups.length}; }};
+  /* fetch the index (or build it) once the loader has settled, while the reader is still on the masthead */
+  var go=function(){ if(window.requestIdleCallback) requestIdleCallback(sxLoad,{timeout:3000}); else setTimeout(sxLoad,1500); };
+  if(document.readyState==='complete') go(); else window.addEventListener('load',go);
+  window.__axSearch={build:function(){ if(!SX.mode) sxLoad(); sxBuild(); },search:function(q){ return sxSearch(q); },render:sxRender,dump:sxDump,
+    stats:function(){ return {built:SX.built,mode:SX.mode,note:SX.note,buildMs:SX.buildMs,wallMs:SX.wallMs,slices:SX.slices,queryMs:SX.queryMs,briefs:SX.briefs.length,groups:SX.groups.length}; }};
 }
 
 /* ---------- 1. section headers get a protruding numbered tab ---------- */

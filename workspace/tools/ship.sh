@@ -7,7 +7,8 @@
 #     refuse if any local-only path is tracked; vendor scan against the NEW page (orphaned source runs);
 #     preflight.py content warnings (advisory, never abort).   -> any failure aborts before writing anything
 #  2. write workspace/index.html and ../discriminator-briefs-site/index.html (the deployed copy),
-#     version.json, and briefs.json (tools/briefs_json.py: the brief index the companion extension reads)
+#     version.json, briefs.json (tools/briefs_json.py: the brief index the companion extension reads), and search.json
+#     (the prebuilt search index, s164c D-20261106-4: written by site_build beside the scratch page, gate-checked)
 #  3. commit body from the page diff (tools/changelog.py), prepended to workspace/CHANGELOG.md
 #  4. commit "<sNN>: <message>" + body + trailers
 #  G-APPROVE and G-READY run right after the build (tools/hooks/approval.py, tools/hooks/ready_gate.py).
@@ -118,11 +119,17 @@ restore(){ cp "$TMP/index.keep.html" index.html; [[ -f "$TMP/site.keep.html" ]] 
   [[ -f "$TMP/version.keep.json" ]] && cp "$TMP/version.keep.json" "$(dirname "$SITE")/version.json"
   if [[ -f "$TMP/briefs.keep.json" ]]; then cp "$TMP/briefs.keep.json" "$(dirname "$SITE")/briefs.json"
   elif [[ -n "${BJ_WRITTEN:-}" ]]; then rm -f "$(dirname "$SITE")/briefs.json"; fi
+  if [[ -f "$TMP/search.keep.json" ]]; then cp "$TMP/search.keep.json" "$(dirname "$SITE")/search.json"
+  elif [[ -n "${SX_WRITTEN:-}" ]]; then rm -f "$(dirname "$SITE")/search.json"; fi
   git -C "$ROOT" reset -q; }
 if cmp -s "$TMP/index.html" "$SITE"; then SITELINE="Site: discriminator-briefs-site/index.html unchanged (no deploy)"
 else SITELINE="Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)"; fi
 cp "$TMP/index.html" index.html
 mkdir -p "$(dirname "$SITE")" && cp "$TMP/index.html" "$SITE"
+# search.json: the page fetches it beside itself; workspace/search.json is untracked (local serving only)
+SXF="$(dirname "$SITE")/search.json"; [[ -f "$SXF" ]] && cp "$SXF" "$TMP/search.keep.json"
+[[ -f "$TMP/search.json" ]] || { restore; fail search-index "no search.json beside the built page (tools/site_build.py writes it)"; }
+SX_WRITTEN=1; cp "$TMP/search.json" "$SXF"; cp "$TMP/search.json" search.json
 VERF="$(dirname "$SITE")/version.json"; [[ -f "$VERF" ]] && cp "$VERF" "$TMP/version.keep.json"
 grep -q 'name="ax-build"' "$SITE" && printf '{"build":"%s","date":"%s"}\n' "$B" "$STAMP_DAY" > "$VERF"
 # briefs.json: brief index for the companion extension, regenerated from the page being deployed
@@ -140,6 +147,7 @@ python3 tools/changelog.py "$TMP/prev.html" index.html --site "$SITELINE" --chec
 git -C "$ROOT" add -A -- workspace "discriminator-briefs-site/index.html" >/dev/null 2>&1
 [[ -f "$ROOT/discriminator-briefs-site/version.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/version.json" >/dev/null 2>&1
 [[ -f "$ROOT/discriminator-briefs-site/briefs.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/briefs.json" >/dev/null 2>&1
+[[ -f "$ROOT/discriminator-briefs-site/search.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/search.json" >/dev/null 2>&1
 if git -C "$ROOT" diff --cached --quiet; then
   echo "commit: nothing to commit"
 else

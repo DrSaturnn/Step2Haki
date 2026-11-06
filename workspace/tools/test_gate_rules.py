@@ -10,6 +10,7 @@ in tools/gate_allowlist.txt).
 """
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -19,22 +20,36 @@ sys.path.insert(0, HERE)
 from pagelib import items, briefs, read_page  # noqa: E402
 
 # ship.sh sets AXBX_PAGE to the page it is about to ship (its coverage rows and allowlist match that page, not the old one)
-PAGE = read_page(os.environ.get('AXBX_PAGE') or os.path.join(os.path.dirname(HERE), 'index.html'))
+PAGE_PATH = os.environ.get('AXBX_PAGE') or os.path.join(os.path.dirname(HERE), 'index.html')
+PAGE = read_page(PAGE_PATH)
+# s164c: a wrapped page's prebuilt search index (search.json beside it) is gate-checked; content-rule cases below run on
+# mutated copies with no index of their own, so they skip that check (AXBX_GATE_SKIP_INDEX=1)
+INDEX = os.path.join(os.path.dirname(os.path.abspath(PAGE_PATH)), 'search.json')
+WRAPPED = '<template class="axl">' in PAGE
 
 
-def gate(html):
+def gate(html, index=None):
+    """index None: skip the search index check; a path: copy it beside the page; '' : no index file"""
     d = tempfile.mkdtemp()
     p = os.path.join(d, 'index.html')
     open(p, 'w', encoding='utf-8').write(html)
-    r = subprocess.run([sys.executable, os.path.join(HERE, 'gate.py'), p, '--base', 'none'], capture_output=True, text=True)
+    if index:
+        shutil.copyfile(index, os.path.join(d, 'search.json'))
+    env = dict(os.environ, AXBX_GATE_SKIP_INDEX='1' if index is None else '0')
+    r = subprocess.run([sys.executable, os.path.join(HERE, 'gate.py'), p, '--base', 'none'], capture_output=True, text=True, env=env)
     return r.returncode, r.stdout
 
 
 bad = 0
-rc, out = gate(PAGE)
+rc, out = gate(PAGE, INDEX if (WRAPPED and os.path.exists(INDEX)) else None)
 ok = rc == 0
 print(('ok  ' if ok else 'BAD ') + ('page to ship' if os.environ.get('AXBX_PAGE') else 'live page') + ' passes the gate (pre-existing findings baselined)' + ('' if ok else '\n' + out[:600]))
 bad += not ok
+if WRAPPED:
+    rc, out = gate(PAGE, '')
+    hit = rc == 1 and '[search-index]' in out
+    print(('ok  ' if hit else 'BAD ') + 'wrapped page with no search.json beside it: expects gate FAIL search-index')
+    bad += not hit
 
 bl = briefs(PAGE)
 for kind in ('brief', 'bs', 'aq'):
@@ -166,6 +181,6 @@ _old = re.sub(r'<span>Criteria</span>', '<span>X</span>', _rail).replace('<span>
 o = gate(PAGE[:_sb.start] + _seg.replace(_rail, _old, 1) + PAGE[_sb.end:])[1]
 hit = '[rail-order] %s' % _sb.id in o
 print(('ok  ' if hit else 'BAD ') + 'a rail in the old order: expects gate FAIL rail-order'); bad += not hit
-total = 1 + 9 + 2 + 3 + 3 + 4 + 2 + 3
+total = 1 + WRAPPED + 9 + 2 + 3 + 3 + 4 + 2 + 3
 print('%d/%d passed' % (total - bad, total))
 sys.exit(1 if bad else 0)

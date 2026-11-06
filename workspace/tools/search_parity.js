@@ -1,19 +1,23 @@
 #!/usr/bin/env node
 // search_parity: compare in-page search between two built pages (s164c, briefs load on demand).
 //
-//   node tools/search_parity.js BEFORE AFTER --queries FILE [--out OUT.json]
+//   node tools/search_parity.js BEFORE AFTER --queries FILE [--out OUT.json] [--http]
 //
 // Loads each page in Chromium (desk view), builds the search index, then for every query (one per line in FILE):
 //   hits      brief ids in result order, with the best block's label, rank, words matched and total hits
 //   list      the rendered result rows: brief id, block label, whether the snippet is masked (sxm)
 //   records   for every brief seen in any hit: the record's text as a sorted word list
 // A page argument may carry a query string (cand.html?axall builds every brief at load).
+// --http serves each page's folder over local HTTP (tools/serve_page.js), so a page fetches search.json beside it;
+// from file:// the fetch fails and the page builds its index in the page (the fallback path). Queries run once the
+// index is ready (__axSearch.stats().built).
 // Option order in bank items is shuffled at every build, so records compare as word multisets.
 // Prints the differences by kind and writes the details to OUT.json. Exit 1 when any query differs.
 'use strict';
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
+const { serve } = require('./serve_page');
 
 function args() {
   const a = process.argv.slice(2), o = { out: null, queries: null };
@@ -21,21 +25,25 @@ function args() {
   for (let i = 2; i < a.length; i++) {
     if (a[i] === '--queries') o.queries = a[++i];
     else if (a[i] === '--out') o.out = a[++i];
+    else if (a[i] === '--http') o.http = true;
   }
   if (!o.before || !o.after || !o.queries) { console.error('usage: search_parity.js BEFORE AFTER --queries FILE [--out OUT.json]'); process.exit(2); }
   return o;
 }
 
-async function run(browser, page, queries) {
+async function run(browser, page, queries, http) {
   const ctx = await browser.newContext({ viewport: { width: 1512, height: 945 } });
   const p = await ctx.newPage();
   const errors = [];
   p.on('pageerror', e => errors.push(String(e)));
   const [file, qs] = page.split('?');
-  await p.goto('file://' + path.resolve(file) + (qs ? '?' + qs : ''), { waitUntil: 'load', timeout: 180000 });
+  const srv = http ? await serve(file) : null;
+  await p.goto((srv ? srv.url : 'file://' + path.resolve(file)) + (qs ? '?' + qs : ''), { waitUntil: 'load', timeout: 180000 });
   await p.waitForTimeout(1500);
+  await p.evaluate(() => window.__axSearch.build());
+  await p.waitForFunction(() => window.__axSearch.stats().built, null, { timeout: 180000 });
   const res = await p.evaluate((qs) => {
-    const S = window.__axSearch; S.build();
+    const S = window.__axSearch;
     const builtAt0 = document.querySelectorAll('.brief > template.axl').length;
     const input = document.getElementById('search');
     const out = { queries: {}, records: {} };
@@ -60,6 +68,7 @@ async function run(browser, page, queries) {
   }, queries);
   res.errors = errors;
   await ctx.close();
+  if (srv) srv.close();
   return res;
 }
 
@@ -67,8 +76,8 @@ async function run(browser, page, queries) {
   const o = args();
   const queries = fs.readFileSync(o.queries, 'utf8').split('\n').map(s => s.trim()).filter(Boolean);
   const browser = await chromium.launch();
-  const A = await run(browser, o.before, queries);
-  const B = await run(browser, o.after, queries);
+  const A = await run(browser, o.before, queries, o.http);
+  const B = await run(browser, o.after, queries, o.http);
   await browser.close();
   const diff = { hits: [], other: [], list: [], records: [], blocks: [] };
   queries.forEach(q => {

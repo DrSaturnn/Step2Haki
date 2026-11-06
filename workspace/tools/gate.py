@@ -80,6 +80,9 @@ CATALOG = {
     'trap-count': ('"<b>N</b> named trap species" appears at least twice (static + transform) with one N',
                    'update both copies together'),
     'scripts': ('every executable inline <script> passes node --check; JSON blocks skipped', 'fix the syntax error'),
+    'search-index': ('a page whose briefs load on demand has search.json beside it, listing every brief and equal to a '
+                     'fresh dump of the page (tools/search_index.js --check; s164c, D-20261106-4)',
+                     'rebuild the page with tools/site_build.py (it writes search.json beside the page)'),
     'div-balance': ('static body has equal <div> opens and closes', 'close the div the edit opened (or remove the extra </div>)'),
     'nbme-coverage': ('every data-nbme id has a row in repair/nbme/coverage.csv and every coverage row id is on the page',
                       'add the coverage row (nbme-intake step 5), or the data-nbme link'),
@@ -499,6 +502,14 @@ def check_page(page, g, page_path):
             err = [l for l in r.stderr.splitlines() if l.strip()]
             g.fail('scripts', 's%d' % ns, 'script %d fails node --check: %s' % (ns, ' | '.join(err[1:4])[:200]))
     stats['scripts'] = ns
+
+    # ---- prebuilt search index (s164c): the page fetches search.json beside it; it must match the page
+    # AXBX_GATE_SKIP_INDEX=1: tools/test_gate_rules.py's content-rule cases (mutated copies with no index of their own)
+    if '<template class="axl">' in page and os.environ.get('AXBX_GATE_SKIP_INDEX') != '1':
+        r = subprocess.run(['node', os.path.join(REPO, 'tools', 'search_index.js'), '--check', page_path],
+                           capture_output=True, text=True)
+        if r.returncode != 0:
+            g.fail('search-index', 'search.json', ((r.stdout + r.stderr).strip().splitlines() or ['no output'])[-1][:300])
 
     # ---- nbme coverage
     cov = os.path.join(os.path.dirname(os.path.abspath(page_path)), 'repair', 'nbme', 'coverage.csv')

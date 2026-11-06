@@ -320,6 +320,8 @@ try:
     expect('present test batch', (r.returncode, r.stdout + r.stderr), 0)
     page = os.path.join(T, 'page.html')
     subprocess.run([sys.executable, os.path.join(WS, 'repair', 'build.py'), TB, '--out', page], capture_output=True)
+    # the same site layer step as approval.py build() and ship.sh (s164b); the index file is not part of the page hash
+    subprocess.run([sys.executable, os.path.join(WS, 'tools', 'site_build.py'), page, '--no-index'], capture_output=True)
     chk = lambda: subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'check', TB, page], env=ENV,
                                  capture_output=True, text=True)
     expect('check before approval', (chk().returncode, ''), 1)
