@@ -54,16 +54,12 @@ html.ph-open #phead .ph-back{display:flex}
 #phead .ph-steps button[aria-current="step"]+button{box-shadow:none}
 
 /* one brief per screen: the open brief alone; Home lists the sections */
-html.ph-solo:not(.ph-open) main .wrap>:is(.brief,.alias,#noresults){display:none!important}
 html.ph-solo main .wrap>:is(.sectwrap,.psub,.bsband){cursor:pointer}
-html.ph-open main>.masthead,html.ph-open main .wrap>:not(.ph-cur){display:none!important}
 html.ph-open main{padding-top:calc(var(--ph-h) + 12px)}
-html.ph-open main .brief.ph-cur{scroll-margin-top:calc(var(--ph-h) + 12px)!important}
-html.ph-open main .brief.ph-cur .sp-step{display:none!important}
 html.ph-open .brief .bb-end .bb-next{font-weight:700}
 }
 @media (--reduced-motion){
-#mbar,#phead{transition:opacity .15s linear}
+#mbar,#phead{transition:opacity .15s var(--snp)}
 }
 html[data-theme="dark"][data-glass="tinted"] #phead{background:color-mix(in srgb,var(--accent) 12%,#15171E);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
 html[data-theme="dark"][data-glass="tinted"] #mbar{background:color-mix(in srgb,var(--accent) 12%,#15171E)}

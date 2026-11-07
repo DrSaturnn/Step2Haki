@@ -449,6 +449,11 @@ body .sp-chip .mask.axm-study:not(.shown){color:var(--t-body-sp-chip-mask-axm-st
 .brief{margin-bottom:56px}
 @media (--narrow){
 .brief h5[id],.brief [id].sp-dx{scroll-margin-top:calc(var(--ph-h) + 8px)}
+/* one brief per screen: list items hidden on Home, everything but the open brief hidden while one is open */
+html.ph-solo:not(.ph-open) main .wrap>:is(.brief,.alias,#noresults){display:none}
+html.ph-open main>.masthead,html.ph-open main .wrap>:not(.ph-cur){display:none}
+html.ph-open main .brief.ph-cur{scroll-margin-top:calc(var(--ph-h) + 12px)}
+html.ph-open main .brief.ph-cur .sp-step{display:none}
 }
 @media (--desktop){
 .brief.bb-r{padding-left:178px}
