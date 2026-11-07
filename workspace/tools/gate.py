@@ -119,6 +119,10 @@ CATALOG = {
                    'rewrite the flagged lines per repair/efficiency/TEXTBOOK_STYLE.md; a permitted near miss goes in the lint\'s ALLOW list with a test'),
     'prose-touched': ('a brief whose text (hover text included) changed against the base has zero prose lint hits; markup-only changes and --attr-only ships are exempt (D-20261106-11)',
                       'rewrite every flagged line in the brief you changed per repair/efficiency/TEXTBOOK_STYLE.md, or show the hit is a permitted near miss and add it to the lint\'s ALLOW list with a test'),
+    'card-format': ('a psych pharm class card keeps the card layout (CARD_SPEC.md): pc-lcw charts with one axis per chart',
+                    'rebuild the card from its spec; a chart carries one div.wax axis (s167c) or the same axis on every row'),
+    'nav-sys': ('each brief\'s data-sys names the h3.system section it sits in (s167c N20: the sidebar is built from the body)',
+                'move the brief into the section its data-sys names, or change data-sys in a batch that records the move'),
     'K3': ('every mnemonic names the widely taught source it comes from (data-mn-src)',
            'add data-mn-src="First Aid" / "AnKing" / "AMBOSS" / "source explanation" / a URL; a mnemonic with no such source is removed, never invented'),
 }
@@ -346,26 +350,34 @@ def check_page(page, g, page_path):
         if '<div class="sect">Presentations' in nav:
             for bid in sorted(hubs - set(pres)):
                 g.fail('nav-link', bid, '%s is a hub but has no link in Presentations' % bid)
+        placed = {b.id for b in bl if b.attrs.get('data-sys') == 'presentations'}   # s167c N11, N13: placed by tag
         for bid, cls in pres.items():
-            if bid not in hubs:
-                g.fail('nav-link', bid, '%s is in Presentations but is not a hub (data-entry="hub")' % bid)
+            if bid not in hubs and bid not in placed:
+                g.fail('nav-link', bid, '%s is in Presentations but is not a hub (data-entry="hub") or data-sys="presentations"' % bid)
             elif cls != ['']:
                 g.fail('nav-link', bid, '%s needs exactly one plain link in Presentations, has %r' % (bid, cls))
         # s161c (Jonathan 2026-11-03, "remove all duplicated briefs"): every brief has exactly one link in the sidebar,
         # a hub in Presentations (plain), any other brief in its system (classed by kind); was s146c (a hub in both)
         for b in bl:
-            want = 'aq' if (b.kind == 'aq' or b.attrs.get('data-src') == 'aquifer') else ('bs' if b.kind == 'bs' else '')
+            want = ''   # s167c N13: the board-style and Aquifer link classes are retired
             got = links.get(b.id, [])
             n_all = len(got) + len(pres.get(b.id, []))
             if n_all != 1:
                 g.fail('nav-link', b.id, '%s has %d nav links' % (b.id, n_all))
             elif got and got[0] != want:
                 g.fail('nav-link', b.id, '%s nav link class=%r, expected %r' % (b.id, got[0], want))
+        h3at = [(m.start(), m.group(1)) for m in re.finditer(r'<h3 class="system" id="([^"]+)"', page)]
+        for b in bl:
+            if 'data-sys' not in b.attrs:
+                continue
+            sect = [i for at, i in h3at if at < b.start]
+            if not sect or sect[-1] != b.attrs['data-sys']:
+                g.fail('nav-sys', b.id, '%s has data-sys="%s" but sits in section %s' % (b.id, b.attrs['data-sys'], sect[-1] if sect else 'none'))
         for sec in re.split(r'<div class="sect(?: [a-z0-9 -]+)?">', nav)[1:]:
             m = re.match(r'(.*?)\s*<span class="count">(\d+)</span>', sec, re.S)
             if not m:
                 continue
-            plain = len([1 for t in re.findall(r'<a\b[^>]*>', sec) if 'class=' not in t])
+            plain = len(re.findall(r'<a\b[^>]*>', sec))
             if int(m.group(2)) != plain:
                 g.fail('nav-count', text(m.group(1)), '.sect "%s" count %s but %d topic links' % (text(m.group(1)), m.group(2), plain))
 

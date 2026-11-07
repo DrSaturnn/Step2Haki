@@ -67,7 +67,8 @@ def vis(el):
                 out.append(str(c))
             elif isinstance(c, Tag):
                 cl = _cls(c)
-                if c.name in SKIP_TAGS or 'sp-pop-b' in cl or c.get('aria-hidden') == 'true' \
+                if (c.name in SKIP_TAGS and 'sp-a' not in cl) or 'sp-pop-b' in cl or 'sp-vl' in cl or 'sp-k' in cl \
+                        or c.get('aria-hidden') == 'true' \
                         or 'sp-n' in cl or 'subq' in cl or 'alias' in cl or 'cap-sub' in cl:
                     continue
                 if 'op' in cl:               # cause-and-effect arrow glyph
@@ -487,16 +488,20 @@ def lint_brief(inner_html, report_only=False):
 
     # hover cards: title is a header, body is prose
     pops = {e.get('id'): e for e in soup.select('span.sp-pop-b')}
-    for btn in soup.select('button.sp-pop'):
-        body = pops.get(btn.get('aria-controls'))
+    # s167c: a short hover shown as a visible line (span.sp-vl) is linted as the hover it was
+    pairs = [(b, pops.get(b.get('aria-controls'))) for b in soup.select('button.sp-pop')] + \
+            [(v, v) for v in soup.select('span.sp-vl')]
+    for btn, body in pairs:
         if body is None or _anc(btn, is_practice_container) or 'nbd' in _cls(btn):
             continue
         ct = body.find('span', class_='sp-ct')
         htitle = vis(ct) if ct is not None else ''
-        copy = BeautifulSoup(str(body), 'lxml').find('span', class_='sp-pop-b')
+        copy = BeautifulSoup(str(body), 'lxml').find('span', class_=body.get('class'))
         first = copy.find('span', class_='sp-ct')
         if first is not None:
             first.decompose()
+        for k in copy.find_all('span', class_='sp-k'):   # s167c: the old trigger label, kept as the card's kicker
+            k.decompose()
         parts = []
 
         def walkb(n):
@@ -532,7 +537,11 @@ def text_key(inner_html):
     soup = BeautifulSoup(inner_html, 'lxml')
     for t in soup(['style', 'script']):
         t.decompose()
-    return re.sub(r'\s+', ' ', soup.get_text(' ')).strip()
+    for t in soup.find_all(attrs={'aria-hidden': 'true'}):   # chart furniture (axis labels, arrows) is not text (s167c)
+        t.decompose()
+    t = re.sub(r'\s+', ' ', soup.get_text(' ')).strip()
+    # tag boundaries add a space before closing punctuation and after an opening parenthesis (s167c anchors); not text
+    return re.sub(r'\( ', '(', re.sub(r' ([;:,.!?)])', r'\1', t))
 
 
 def changed_briefs(ref_html, page_html):

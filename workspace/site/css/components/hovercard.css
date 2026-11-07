@@ -34,3 +34,20 @@ body .brief.sp td .sp-pop{display:inline}
 }
 body .brief.sp td .sp-drw:not(.qx-pair) + .sp-pop{display:inline;margin-left:2px}
 body .brief.sp .sp-pop.qx-on{color:var(--accent)}
+/* s167c N7 (D-20261107-9): the hover sits on the term it explains (A); the old trigger label is the card's kicker */
+.brief.sp .sp-pop.sp-a{color:inherit;font-weight:inherit;border-bottom:1.5px dotted color-mix(in srgb,currentColor 55%,transparent)}
+.brief.sp .sp-pop.sp-a:hover,.brief.sp .sp-pop.sp-a[aria-expanded="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+:is(.sp-pop-b,.sp-card) .sp-k{display:block;margin:0 0 2px;font:700 11px/14px var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+:is(.sp-pop-b,.sp-card) .sp-k.dup{display:none}
+/* F: a hover under 8 words is a visible line under its own line */
+.brief.sp .sp-vl{display:block;margin:4px 0 0;font-size:14px;line-height:1.45;font-weight:450;color:var(--ink-2)}
+.brief.sp .sp-vl .sp-ct{display:inline;margin:0;font:inherit;font-weight:700;letter-spacing:0;text-transform:none;color:var(--ink)}
+.brief.sp .sp-vl .sp-ct::after{content:": "}
+.brief.sp .sp-k:has(+ .sp-vl:has(.sp-ct)){display:none}
+.brief.sp .sp-k:has(+ .sp-vl:not(:has(.sp-ct))){font-weight:700;color:var(--ink)}
+.brief.sp .sp-k:has(+ .sp-vl:not(:has(.sp-ct)))::before{content:"\A";white-space:pre}
+.brief.sp .sp-k:has(+ .sp-vl:not(:has(.sp-ct)))::after{content:": "}
+.brief.sp .sp-k + .sp-vl:not(:has(.sp-ct)){display:inline}
+.brief.sp .sp-vl.sp-in{display:inline;margin:0;font-size:inherit;color:var(--muted)}
+.brief.sp .sp-vl.sp-in::before{content:" ("}
+.brief.sp .sp-vl.sp-in::after{content:")"}

@@ -3,7 +3,6 @@
 #modes .knob{position:absolute;top:2px;left:2px;width:15px;height:15px;border-radius:50%;background:#E9E9EE;box-shadow:0 1px 3px rgba(0,0,0,.5);transition:transform .2s var(--snp)}
 #modes .nm{font-size:10px;font-weight:800;letter-spacing:1.1px;color:rgba(255,255,255,.78)}
 body .axm-study #modes .study .knob,body #modes.axm-study .study .knob,body .axm-flat #modes .flatt .knob,body #modes.axm-flat .flatt .knob{transform:translateX(15px)}
-#modes .bsonly[aria-pressed="true"] .knob{transform:translateX(15px)}
 #modes button:focus-visible{outline:var(--t-modes-button-focus-visible-outline,2px solid var(--axh-9A93E8));outline-offset:2px}
 @media (--narrow){
 #nav.sxon #modes{display:none}

@@ -5,7 +5,6 @@ body .axm-flat #modes .flatt .track{background:var(--t-body-modes-flatt-track-bg
 body #modes.axm-flat .flatt .track{background:var(--t-body-modes-flatt-track-bg-2,var(--accent))}
 #rvbar .sm .track{width:30px;height:17px;border-radius:99px;background:var(--t-rvbar-sm-track-bg,var(--recess-2));box-shadow:var(--t-rvbar-sm-track-sh,var(--inner-2));position:relative;flex:none}
 #rvbar .sm.on .track{background:var(--t-rvbar-sm-on-track-bg,var(--accent))}
-#modes .bsonly[aria-pressed="true"] .track{background:var(--t-modes-bsonly-aria-pressed-true-tra-bg,var(--accent))}
 .lc-key{display:flex;flex-wrap:wrap;gap:7px 14px;margin:12px 0 0;font-size:12px;line-height:1.3;color:var(--t-lc-key-fg,var(--muted))}
 .lc-key span{display:inline-flex;align-items:center;gap:6px}
 .lc-key i{display:inline-block;flex:none;width:15px;height:10px;border-radius:3px}
@@ -374,3 +373,7 @@ body :is(.brief.sp,.brief) figure.lcw .wrows > :is(li.wr,li.tr){margin:0;padding
 body :is(.brief.sp,.brief) figure.lcw .wrows > :is(li.wr,li.tr):first-child{border-top:0;padding-top:8px}
 body :is(.brief.sp,.brief) figure.lcw .wrows > li.wg + :is(li.wr,li.tr){border-top:0;padding-top:6px}
 body :is(.brief.sp,.brief) figure.lcw > :is(.note,.lc-key){margin:4px 0 0;padding:12px 0 0;border-top:1px solid var(--hair)}
+/* s167c N16 (D-20261107-9): one axis per window chart, above the rows; the rails keep their ticks as gridlines */
+.lcw .wax{margin:0 0 4px}
+.lcw .wax .rax{margin:0}
+@media (--min700){.lcw .wax .rax{grid-column:2}}

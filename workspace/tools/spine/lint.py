@@ -487,10 +487,17 @@ def card_check(brief_html):
         if not rows:
             out.append('card-format: chart %d has no rows' % k)
         ticks = None
+        wax = re.search(r'<div class="wax"[^>]*><div class="rax"[^>]*>(.*?)</div>', fm.group(1), re.S)   # s167c N16
+        if wax:
+            if len([x for x in re.findall(r'<span[^>]*>([^<]*)</span>', wax.group(1)) if x.strip()]) < 2:
+                out.append('card-format: chart %d shared axis has no tick labels' % k)
         for j, r in enumerate(rows, 1):
             ax = re.search(r'<div class="rax"[^>]*>(.*?)</div>', r, re.S)
             labs = re.findall(r'<span[^>]*>([^<]*)</span>', ax.group(1)) if ax else []
-            if len([x for x in labs if x.strip()]) < 2:
+            if wax:
+                if ax:
+                    out.append('card-format: chart %d row %d repeats the axis (one shared axis per chart)' % (k, j))
+            elif len([x for x in labs if x.strip()]) < 2:
                 out.append('card-format: chart %d row %d has no tick labels (each row repeats them)' % (k, j))
             elif ticks is None:
                 ticks = labs
