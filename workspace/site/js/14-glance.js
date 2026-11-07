@@ -22,9 +22,13 @@
   var cur = valid(load()) ? load() : 'slate';
   var THEME = 'ax-theme', dark = false, tint = false;
   var tv = AX.settings.get('theme'); dark = tv === 'dark' || tv === 'tinted'; tint = tv === 'tinted';
-  if(cur !== 'slate') root.setAttribute('data-axa', cur);
-  if(dark) root.setAttribute('data-theme', 'dark');
-  if(tint) root.setAttribute('data-glass', 'tinted');   // tinted glass: dark plus accent-tinted translucent surfaces
+  /* The root's theme always follows the reader's Color choice: written at load, and written again when anything else
+     changes it (a page that embeds the site can set its own data-theme on the root, which left the root and the marked
+     regions on different themes). Tinted is the dark theme plus accent-tinted translucent surfaces. */
+  markRoot();
+  new MutationObserver(function(){
+    if(root.getAttribute('data-theme') !== (dark ? 'dark' : null) || root.getAttribute('data-glass') !== (tint ? 'tinted' : null)) markRoot();
+  }).observe(root, {attributes: true, attributeFilter: ['data-theme', 'data-glass']});
   /* Each region carries both attributes while a switch walks the page, so the dark accent rule (which needs both on
      one element or the theme on an ancestor) always matches. */
   function mark(c){

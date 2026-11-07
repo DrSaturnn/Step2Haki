@@ -1,12 +1,11 @@
 #ax2rail,#ax2fly,#ax2tip{display:none}
 @media (--desktop){
-html[data-layout="two"]{scroll-snap-type:y proximity}
 html[data-layout="two"] main{zoom:.8;margin-left:var(--ax2-left,111px);padding-bottom:48px}
 html[data-layout="two"] :is(#axbar,#nav,#ax2rail,#ax2fly,#ax2tip){zoom:.9}
 html[data-layout="two"] #axbar :is(.axcur,.axcur + .axsep){display:none}
 html[data-layout="two"] :is(#axedge,#axtopfade){display:none}
 
-html[data-layout="two"] .ax2-page{position:relative;scroll-snap-align:start}
+html[data-layout="two"] .ax2-page{position:relative}
 html[data-layout="two"] .ax2-page + .ax2-page{margin-top:16px;padding-top:16px;border-top:1px solid var(--hair)}
 html[data-layout="two"] .ax2-cols{column-count:2;column-gap:40px;column-fill:auto;column-rule:1px solid var(--hair)}
 html[data-layout="two"] .ax2-page.ax2-last .ax2-cols{height:auto;column-fill:balance}

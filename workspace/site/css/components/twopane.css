@@ -1,7 +1,7 @@
 @media (--desktop){
 html[data-layout="two"] body main .masthead,html[data-layout="two"] body main .wrap > :not(.ax2-cur){display:none}
 html[data-layout="two"] main .wrap{max-width:none;margin:0;padding:0 36px 0 0}
-html[data-layout="two"] main .wrap > .brief.ax2-cur{padding:20px 0 0;margin:0;scroll-snap-align:start}
+html[data-layout="two"] main .wrap > .brief.ax2-cur{padding:20px 0 0;margin:0}
 html[data-layout="two"] body .brief.ax2-cur > h4{font-size:30px;line-height:38px;letter-spacing:-.4px;margin:0;max-width:var(--ax2-tw,60%);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 html[data-layout="two"] body .brief.ax2-cur > .sub{font-size:15px;line-height:21px;margin:2px 0 22px;max-width:var(--ax2-tw,60%)}
 html[data-layout="two"] body .brief.ax2-cur > .sub .subq{display:inline;margin:0;font-size:15px;line-height:21px}
