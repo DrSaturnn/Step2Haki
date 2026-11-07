@@ -316,7 +316,7 @@ def workup_path(title, steps, step=None):
             for name, res in st['tests']:
                 rs = ''.join(f'<p class="wr2"><b>{r}</b><span class="mask">{m}</span></p>' for r, m in res)
                 ts.append(f'<div class="wt2"><p class="tn">{name}</p>{rs}</div>')
-            body = f'<div class="tile{" first" if st.get("kind") == "first" else ""}">' + '<i class="plus" aria-label="and"></i>'.join(ts) + '</div>'
+            body = f'<div class="tile{" first" if st.get("kind") == "first" else ""}">' + '<i class="plus" role="img" aria-label="and"></i>'.join(ts) + '</div>'
         if st.get('text'):
             body += f'<p class="pt-tx">{st["text"]}</p>'
         out.append(f'<li class="pt{" end" if st.get("kind") == "end" else ""}"><span class="when">{st["when"]}</span>{body}</li>')

@@ -10,6 +10,7 @@
    psych sections, from each brief's data-navgrp (added here from the live sidebar); link labels from data-navlabel
    where a brief's sidebar label differs from its title (added here), else the title.
 5. N14 sidebar subtitle "By RapidRounds".
+6. (chat 3) life-chart "and" connectors get role="img" (39; axe aria-prohibited-attr).
 Writes repair/s167c/stats/gen_stats.json (outside build.py's *.json glob). Brief text order is unchanged (prose_lint.text_key equal) apart from the moves.
 """
 import json, os, re, sys
@@ -92,6 +93,10 @@ def main(src, dst):
         inner, st = b.inner, {}
         inner, s1, _ = hovers.transform(inner)
         inner, s2 = timelines.transform(inner)
+        # chat 3: life-chart "and" connector gets role="img" (axe aria-prohibited-attr; lifechart.py emits the same)
+        PLUS = '<i class="plus" aria-label="and"></i>'
+        stats['plus_role'] = stats.get('plus_role', 0) + inner.count(PLUS)
+        inner = inner.replace(PLUS, '<i class="plus" role="img" aria-label="and"></i>')
         for k, v in s1.items(): stats['hovers'][k] = stats['hovers'].get(k, 0) + v
         for k, v in s2.items(): stats['timelines'][k] = stats['timelines'].get(k, 0) + v
         if inner != b.inner:
