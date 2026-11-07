@@ -11,7 +11,7 @@ run migrate_check python3 tools/test_migrate_check.py
 run gate_rules env AXBX_PAGE="$P" python3 tools/test_gate_rules.py
 run gate python3 tools/gate.py "$P" --base HEAD
 run render node tools/render.js "$P"
-run ui_lint python3 tools/spine/ui_lint.py
+run ui_lint bash -c "python3 tools/spine/ui_lint.py --site && python3 tools/spine/ui_lint.py $P --baseline tools/spine/ui_baseline.json"
 run vendor python3 tools/vendor_scan.py
 run vendor_page python3 tools/vendor_scan.py --page "$P"
 run preflight python3 tools/preflight.py "$P" --base HEAD
