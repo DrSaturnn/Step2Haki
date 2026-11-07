@@ -20,8 +20,9 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   links, cross-references); checks all equal before.html (search parity 0 differences over HTTP and file://, landing,
   jump_land desk and phone, previews and drawers on unbuilt targets, Review end to end); test_hooks 132/132 (stale
   approval test fixed). Chunk 3 cand: desk settled 7.4 s to 0.42 s, phone 41.2 s to 2.19 s; elements 223,878 to 3,405;
-  JS heap 17 MB. Next: chunk 4 (tool sweep, ui_styles parity, screenshots, perf, changelog, present as a private
-  artifact, ship on "ship"); exact steps in S164C.md chunk 4.
+  JS heap 17 MB. Chat 4 (chunk 4): tool sweep, ui_styles parity (12 briefs, desk and phone: only 1 px inline-span
+  heights), screenshots, perf (cand desk settled 0.45 s vs 6.3 s, phone 2.4 s vs 33.8 s, same run), changelog 164c,
+  presented (private artifact, approval page 1e65dba35063). Next: chunk 4g, ship on "ship" (S164C.md).
 
 - **s164b SHIPPED 2026-11-06** (Claude lead; the UI refactor, site layer only, content frozen; D-20261105-8, cut short
   by D-20261106-2, Jonathan 14:22: "we can ship what we have, perform the on demand loading ship then consider this at
