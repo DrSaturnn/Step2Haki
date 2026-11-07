@@ -143,15 +143,13 @@ s159 ship) moved to repair/efficiency/STATE_ARCHIVE.md (runbook S9: keep the sta
 
 ## Next launch prompt (paste into a fresh chat)
 
-s162 is OPEN on wip/s162 (launched 2026-11-03; never relaunch it from a launch prompt). Continue it with the restart
-line above; main was merged into wip/s162 in both repos on 2026-11-04 (s155 precedent).
+s167 (UI refactor part 2) is next per D-20261106-8. The budget is Claude's proposal; Jonathan sets it at launch:
+```
+Step2Haki: launch batch s167 (UI refactor part 2; site layer only, content frozen) per claude/BATCH_RUNBOOK.md section 8, DECISIONS_DIGEST D-20261106-8 item 2 and repair/s164b/S164B.md "Deferred" items 1 to 5: the review redesign first, then the raw-color pass, the dehack of specificity workarounds and !important, all transitions and animations to spring timing (ui_lint motion_not_spring 60 to 0), steps 5b to 5f, and the 6b permanent gate tests. The ui_lint and prose ratchets are already in the gate (s165b, D-20261106-11); ship.sh lowers the baselines as each step lands. Item 6 (the two s164b residues) stays deferred. Same ship, docs: per Jonathan 2026-11-07, (a) no header word cap: header_long and title_long stay report-only (TEXTBOOK_STYLE rule 6, D-20261106-11 amended); (b) BATCH_RUNBOOK's hashed-specs paragraph lets a rules-only batch edit those files when its digest line records that receipts went stale, with that line for s165b; (c) motion baseline 60 confirmed until this batch converts them. Screenshots at the end for my ship. Budget: lead 100M.
+```
 
-s163 (criteria as step 2, structural-wording sweep, NBME label rename) is held until s162 ships (Jonathan 2026-11-04:
-"Finish s162 first"; DIGEST). Part A is already in DIGEST and the plan is in the private repo's
-claude/pending/CRITERIA_STEP2.md. Paste after the s162 ship:
-```
-Step2Haki: launch batch s163 (criteria as step 2, plus the structural-wording sweep and the NBME label rename; site layer plus patch) per claude/BATCH_RUNBOOK.md sections 8 and 8b and the private repo's claude/pending/CRITERIA_STEP2.md (Part A is already in DECISIONS_DIGEST; the plan is already copied). Part B defaults stand. Parts D and E ship together. No agents, no four-part reviews (D7), no screenshots presented (D9). Budget: lead 100M.
-```
+s166 (phone navigation) is paused on wip/s166 (private bundle claude/pending/s166/wip_s166.bundle); it resumes after
+s167 on the cleaned CSS, and wip/s166 merges main first (digest ids D-20261106-8 to -11 follow its -6 and -7).
 
 NBME presentation layer mockup (no batch; Jonathan 2026-10-26: cross-domain question types first, then how NBME
 describes symptoms):
