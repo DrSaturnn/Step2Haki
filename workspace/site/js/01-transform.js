@@ -30,7 +30,7 @@ function switches(){
     box.querySelector('.flatt').setAttribute('aria-pressed',b.classList.contains('flat')?'true':'false');
   }
   if(AX.settings.get('study')==='1') b.classList.add('study');
-  if(AX.settings.get('flat')!=='0') b.classList.add('flat');   // flat is the default
+  if(AX.settings.get('flat')==='1') b.classList.add('flat');   // sculpted is the default; flat only when the reader turned it on
   /* Board-style only joins the shelf rule in shelfEligible(); it lasts for this visit only (not saved). */
   box.querySelector('.bsonly').addEventListener('click',function(){
     boardOnly=!boardOnly;

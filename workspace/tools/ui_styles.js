@@ -14,10 +14,10 @@ const path = require('path');
 
 const VIEWS = { desk: { width: 1512, height: 945 }, tablet: { width: 1024, height: 768 }, phone: { width: 390, height: 844, isMobile: true, hasTouch: true } };
 const CONFIGS = {
-  'flat-light-read': {}, 'sculpted-light-read': { 'ax-flat': '0' }, 'flat-dark-read': { 'ax-theme': 'dark' },
-  'sculpted-dark-read': { 'ax-flat': '0', 'ax-theme': 'dark' }, 'flat-tinted-read': { 'ax-theme': 'tinted' },
-  'flat-light-recall': { 'ax-study': '1' }, 'flat-dark-recall': { 'ax-theme': 'dark', 'ax-study': '1' }, 'acc-rose-dark': { 'ax-accent': 'rose', 'ax-theme': 'dark' },
-  'acc-ocean-light': { 'ax-accent': 'ocean' },
+  'flat-light-read': { 'ax-flat': '1' }, 'sculpted-light-read': { 'ax-flat': '0' }, 'flat-dark-read': { 'ax-flat': '1', 'ax-theme': 'dark' },
+  'sculpted-dark-read': { 'ax-flat': '0', 'ax-theme': 'dark' }, 'flat-tinted-read': { 'ax-flat': '1', 'ax-theme': 'tinted' },
+  'flat-light-recall': { 'ax-flat': '1', 'ax-study': '1' }, 'flat-dark-recall': { 'ax-flat': '1', 'ax-theme': 'dark', 'ax-study': '1' }, 'acc-rose-dark': { 'ax-flat': '1', 'ax-accent': 'rose', 'ax-theme': 'dark' },
+  'acc-ocean-light': { 'ax-flat': '1', 'ax-accent': 'ocean' },
 };
 const FREEZE = '*,*::before,*::after{content-visibility:visible!important;contain-intrinsic-size:none!important;transition:none!important;animation:none!important;caret-color:transparent!important}';
 // fixed choice order and clock, so two runs of one page match

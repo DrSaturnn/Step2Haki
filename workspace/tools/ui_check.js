@@ -21,9 +21,9 @@
 const fs = require('fs'), path = require('path');
 const VIEWS = { desk: { width: 1512, height: 945 }, tablet: { width: 1024, height: 768 }, phone: { width: 390, height: 844, isMobile: true, hasTouch: true } };
 const CONFIGS = {
-  'flat-light-read': {}, 'sculpted-light-read': { 'ax-flat': '0' }, 'flat-dark-read': { 'ax-theme': 'dark' },
-  'sculpted-dark-read': { 'ax-flat': '0', 'ax-theme': 'dark' }, 'flat-tinted-read': { 'ax-theme': 'tinted' },
-  'flat-light-recall': { 'ax-study': '1' }, 'flat-dark-recall': { 'ax-theme': 'dark', 'ax-study': '1' },
+  'flat-light-read': { 'ax-flat': '1' }, 'sculpted-light-read': { 'ax-flat': '0' }, 'flat-dark-read': { 'ax-flat': '1', 'ax-theme': 'dark' },
+  'sculpted-dark-read': { 'ax-flat': '0', 'ax-theme': 'dark' }, 'flat-tinted-read': { 'ax-flat': '1', 'ax-theme': 'tinted' },
+  'flat-light-recall': { 'ax-flat': '1', 'ax-study': '1' }, 'flat-dark-recall': { 'ax-flat': '1', 'ax-theme': 'dark', 'ax-study': '1' },
 };
 const DEFAULT_CONFIGS = Object.keys(CONFIGS);
 const FREEZE = '*,*::before,*::after{content-visibility:visible!important;contain-intrinsic-size:none!important;transition:none!important;animation:none!important;caret-color:transparent!important}';

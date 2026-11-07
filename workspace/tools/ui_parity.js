@@ -16,16 +16,16 @@ const { chromium } = require('playwright');
 const VIEWS = { desk: { width: 1512, height: 945 }, phone: { width: 390, height: 844, isMobile: true, hasTouch: true } };
 const ACCENTS = ['indigo', 'purple', 'navy', 'ocean', 'plum', 'rose', 'graphite'];
 const CONFIGS = {
-  'flat-light-read': {},
+  'flat-light-read': { 'ax-flat': '1' },
   'sculpted-light-read': { 'ax-flat': '0' },
-  'flat-dark-read': { 'ax-theme': 'dark' },
+  'flat-dark-read': { 'ax-flat': '1', 'ax-theme': 'dark' },
   'sculpted-dark-read': { 'ax-flat': '0', 'ax-theme': 'dark' },
-  'flat-tinted-read': { 'ax-theme': 'tinted' },
-  'flat-light-recall': { 'ax-study': '1' },
+  'flat-tinted-read': { 'ax-flat': '1', 'ax-theme': 'tinted' },
+  'flat-light-recall': { 'ax-flat': '1', 'ax-study': '1' },
 };
 for (const a of ACCENTS) {
-  CONFIGS['acc-' + a + '-light'] = { 'ax-accent': a };
-  CONFIGS['acc-' + a + '-dark'] = { 'ax-accent': a, 'ax-theme': 'dark' };
+  CONFIGS['acc-' + a + '-light'] = { 'ax-flat': '1', 'ax-accent': a };
+  CONFIGS['acc-' + a + '-dark'] = { 'ax-flat': '1', 'ax-accent': a, 'ax-theme': 'dark' };
 }
 const FULL = Object.keys(CONFIGS).filter(k => !k.startsWith('acc-'));
 const ACC_SAMPLE = ['hippos', 'mdd', 'kawasaki', 'asthma', 'neonatal-jaundice', 'pc-ssri', 'meningitis', 'bs-shock',

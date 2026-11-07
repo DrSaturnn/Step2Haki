@@ -14,8 +14,8 @@ const fs = require('fs'), path = require('path');
 const { chromium } = require('playwright');
 const VIEWS = { desk: { width: 1512, height: 945 }, tablet: { width: 1024, height: 768 }, phone: { width: 390, height: 844, isMobile: true, hasTouch: true } };
 const CONFIGS = {
-  'flat-light-read': {}, 'sculpted-light-read': { 'ax-flat': '0' }, 'flat-dark-read': { 'ax-theme': 'dark' },
-  'flat-tinted-read': { 'ax-theme': 'tinted' }, 'flat-light-recall': { 'ax-study': '1' },
+  'flat-light-read': { 'ax-flat': '1' }, 'sculpted-light-read': { 'ax-flat': '0' }, 'flat-dark-read': { 'ax-flat': '1', 'ax-theme': 'dark' },
+  'flat-tinted-read': { 'ax-flat': '1', 'ax-theme': 'tinted' }, 'flat-light-recall': { 'ax-flat': '1', 'ax-study': '1' },
 };
 function arg(a, k, d) { const i = a.indexOf(k); return i >= 0 ? a[i + 1] : d; }
 const AXE = fs.readFileSync(require.resolve('axe-core/axe.min.js'), 'utf8');

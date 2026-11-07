@@ -17,7 +17,8 @@
   /* ---------- 1. accent ----------
      Slate needs nothing (the tokens' default). Another choice is set on the page's regions nearest first, a few per
      frame, then on the root, the same way the flat and study switches restyle (s92): one root-wide change restyled
-     every brief at once. */
+     every brief at once. The theme switches every region and the root in the same frame, so the page background and the
+     briefs change together (briefs are built on demand, so a whole-page restyle is short). */
   var cur = valid(load()) ? load() : 'slate';
   var THEME = 'ax-theme', dark = false, tint = false;
   var tv = AX.settings.get('theme'); dark = tv === 'dark' || tv === 'tinted'; tint = tv === 'tinted';
@@ -70,7 +71,7 @@
     t = d && t;
     if(d === dark && t === tint) return;
     dark = d; tint = t; AX.settings.set('theme', t ? 'tinted' : (d ? 'dark' : 'light'));
-    paintSetting(); walkAll();
+    paintSetting(); queue = []; regions().forEach(mark); markRoot();
   }
   function setDark(on){ setTheme(on, on && tint); }
   var box = null, darkBtn = null, tintBtn = null;
