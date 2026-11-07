@@ -30,6 +30,8 @@ def folders():
 def main(b):
     builds = []
     for f in sorted(glob.glob(os.path.join(WS, 'repair', b, '*.json'))):
+        if os.path.basename(f) == 'ui_allow.json':   # ui_gate's allow list (ship.sh), not an edit file
+            continue
         for e in json.load(open(f, encoding='utf-8')).get('edits', []):
             # the raw strings, not json.dumps(e), whose escaped quotes never matched (found at the s132 ship)
             if e.get('op') == 'new_brief' and 'data-spine="2"' in (e.get('html') or ''):
