@@ -8,6 +8,7 @@ layout layout/phone.css
 layout layout/rail.css
 layout layout/toolbar.css
 layout layout/drawer.css
+layout layout/offline.css
 components components/review.css
 components components/search.css
 components components/changelog.css
@@ -22,5 +23,6 @@ components components/pause.css
 components components/timeline.css
 components components/mnemonic.css
 components components/table.css
+components components/offline.css
 base base.css
 components components/brief.css

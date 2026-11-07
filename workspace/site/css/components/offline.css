@@ -1,0 +1,3 @@
+.axoffline{display:flex;align-items:center;gap:8px;box-sizing:border-box;height:34px;max-width:calc(100vw - 24px);padding:0 14px 0 12px;border-radius:999px;color:var(--t-axoffline-fg);background-color:var(--t-axoffline-bgc);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:var(--t-axoffline-sh);font:600 12.5px/1.2 var(--sans,system-ui);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;pointer-events:none;opacity:0;transform:translateY(8px);transition:opacity .35s var(--spr),transform .45s var(--spr)}
+.axoffline::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--t-axoffline-dot)}
+.axoffline.on{opacity:1;transform:none}

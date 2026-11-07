@@ -1,5 +1,7 @@
-/* Version label and update check (s43). ship.sh stamps <meta name="ax-build"> and writes version.json beside the page;
-   when a newer build is live, a bar offers a refresh, so a phone or a home-screen copy never sits on an old version. */
+/* Version label and update check. ship.sh stamps <meta name="ax-build"> and writes version.json beside the page;
+   when a newer build is live, a bar offers a refresh, so a phone or a home-screen copy never sits on an old version.
+   A page served by the offline worker (24-offline) waits for site:ready, the newer build saved by the worker, before
+   offering, and Refresh emits site:apply; each check emits net:status (false when the server could not be reached). */
 (function(){
 "use strict";
 var meta=document.querySelector('meta[name="ax-build"]'); if(!meta) return;
@@ -56,20 +58,27 @@ var last=0, bar=null;
 function reloadTo(b){
   var u=new URL(location.href); u.searchParams.set('v',b); location.replace(u.toString());
 }
-function offer(b){
+function controlled(){ return !!(navigator.serviceWorker && navigator.serviceWorker.controller); }
+function offer(apply){
   if(bar) return;
   bar=document.createElement('div'); bar.className='axupdate'; bar.setAttribute('role','status');
   bar.innerHTML='<span>A newer version is available.</span><button type="button">Refresh</button>';
-  bar.querySelector('button').addEventListener('click',function(){ reloadTo(b); });
+  bar.querySelector('button').addEventListener('click',apply);
   document.body.appendChild(bar);
 }
+AX.on('site:ready',function(){ offer(function(){ AX.emit('site:apply'); }); });
 function check(){
   if(document.visibilityState==='hidden' || Date.now()-last<120000) return;
   last=Date.now();
-  fetch('version.json?t='+last,{cache:'no-store'}).then(function(r){ return r.ok?r.json():null; })
-    .then(function(v){ if(v && v.build && v.build!==BUILD) offer(v.build); }).catch(function(){});
+  fetch('version.json?t='+last,{cache:'no-store'}).then(function(r){ AX.emit('net:status',true); return r.ok?r.json():null; },
+      function(){ AX.emit('net:status',false); return null; })
+    .then(function(v){
+      if(!v || !v.build || v.build===BUILD) return;
+      if(controlled()) AX.emit('site:newer',v.build); else offer(function(){ reloadTo(v.build); });
+    }).catch(function(){});
 }
 setTimeout(check,4000);
 document.addEventListener('visibilitychange',function(){ if(document.visibilityState==='visible') check(); });
 window.addEventListener('pageshow',function(e){ if(e.persisted){ last=0; check(); } });
+window.addEventListener('online',function(){ last=0; check(); });
 })();

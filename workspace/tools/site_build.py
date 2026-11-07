@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """site_build: builds the page's styles and scripts from workspace/site/ and writes them into the page.
 
-  python3 tools/site_build.py PAGE [--out FILE] [--check] [--no-minify] [--no-index]
+  python3 tools/site_build.py PAGE [--out FILE] [--check] [--no-minify] [--no-index] [--pwa-only]
 
 site/css/ORDER lists the style files, one per line as "<layer> <file>", in cascade order; site/js/ORDER lists the
 script modules in run order. The page keeps its markup; every site style block and script block in it is replaced by
@@ -17,9 +17,15 @@ The search index (s164c, D-20261106-4): after writing a wrapped page, search.jso
 tools/search_index.js (the search record of every brief, read from the fully built page); the page fetches it after
 load. --no-index skips it (a scratch candidate whose search is not under test); an --eager page needs none.
 
---check: exit 1 if PAGE's bundles differ from a fresh build (the gate runs this so the page never drifts from site/).
+Offline use (s165, D-20261106-5): the head tags in site/pwa/head.html (manifest, icons, theme color) replace any
+earlier copy in the page head, and sw.js, manifest.webmanifest and icons/ are written beside the page from site/pwa/;
+sw.js starts with the page's ax-build stamp, so each build is a new worker with its own cache. --pwa-only rewrites
+only those files beside PAGE (ship.sh runs it after stamping the build).
+
+--check: exit 1 if PAGE's bundles or head tags differ from a fresh build (the gate runs this so the page never drifts
+from site/).
 """
-import json, os, re, subprocess, sys
+import json, os, re, shutil, subprocess, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import pagelib  # noqa: E402
@@ -139,6 +145,54 @@ def assemble(html, css, js):
     return ''.join(out)
 
 
+PWA = os.path.join(SITE, 'pwa')
+
+
+def head_tags():
+    return [t.strip() for t in read(os.path.join(PWA, 'head.html')).splitlines() if t.strip()]
+
+
+def tag_key(t):
+    m = re.match(r'<(meta|link)\b[^>]*?\b(name|rel)="([^"]+)"', t)
+    if not m:
+        raise SystemExit('site_build: site/pwa/head.html line without name or rel: %s' % t)
+    return m.group(1), m.group(2), m.group(3)
+
+
+def with_head(html):
+    tags = head_tags()
+    head_end = html.find('</head>')
+    head, rest = html[:head_end], html[head_end:]
+    for tag, attr, val in {tag_key(t) for t in tags}:
+        head = re.sub(r'<%s\b[^>]*\b%s="%s"[^>]*>\s*' % (tag, attr, re.escape(val)), '', head)
+    t = head.find('</title>')
+    at = t + len('</title>') if t >= 0 else len(head)
+    return head[:at] + '\n' + '\n'.join(tags) + head[at:] + rest
+
+
+def head_ok(html):
+    head = html[:html.find('</head>')]
+    return all(t in head for t in head_tags())
+
+
+def build_of(html):
+    m = re.search(r'<meta name="ax-build" content="([^"|]*)', html)
+    return m.group(1) if m else 'dev'
+
+
+def write_pwa(page_html, out, minify=True):
+    d = os.path.dirname(os.path.abspath(out))
+    sw = 'var BUILD=%s;\n%s' % (json.dumps(build_of(page_html)), read(os.path.join(PWA, 'sw.js')))
+    sw = esbuild(sw, 'js', minify) if minify else sw
+    open(os.path.join(d, 'sw.js'), 'w', encoding='utf-8').write(sw + '\n')
+    shutil.copyfile(os.path.join(PWA, 'manifest.webmanifest'), os.path.join(d, 'manifest.webmanifest'))
+    os.makedirs(os.path.join(d, 'icons'), exist_ok=True)
+    icons = sorted(f for f in os.listdir(os.path.join(PWA, 'icons')) if f.endswith('.png'))
+    for f in icons:
+        shutil.copyfile(os.path.join(PWA, 'icons', f), os.path.join(d, 'icons', f))
+    return 'site_build: offline files beside the page: sw.js (build %s), manifest.webmanifest, %d icons' % (build_of(page_html), len(icons))
+
+
 LAZY_OPEN, LAZY_CLOSE = '<template class="axl">', '</template>'
 
 
@@ -175,17 +229,22 @@ def main(a):
     page = a[0]
     minify = '--no-minify' not in a
     html = read(page)
+    if '--pwa-only' in a:
+        print(write_pwa(html, page, minify))
+        return 0
     css, js = build_css(minify), build_js(minify)
     if '--check' in a:
         c, j = bundles(html)
-        ok = (c == css and j == js)
-        print('site_build check: %s (css %s, js %s)' % ('PASS' if ok else 'FAIL', 'same' if c == css else 'differs',
-                                                          'same' if j == js else 'differs'))
+        hd = head_ok(html)
+        ok = (c == css and j == js and hd)
+        print('site_build check: %s (css %s, js %s, head %s)' % ('PASS' if ok else 'FAIL', 'same' if c == css else 'differs',
+                                                                  'same' if j == js else 'differs', 'same' if hd else 'differs'))
         return 0 if ok else 1
-    new = assemble(unwrap(html) if '--eager' in a else wrap(html), css, js)
+    new = with_head(assemble(unwrap(html) if '--eager' in a else wrap(html), css, js))
     out = a[a.index('--out') + 1] if '--out' in a else page
     open(out, 'w', encoding='utf-8').write(new)
     print('site_build: css %d, js %d chars; page %d > %d' % (len(css), len(js), len(html), len(new)))
+    print(write_pwa(new, out, minify))
     if '--eager' not in a and '--no-index' not in a:
         idx = os.path.join(os.path.dirname(os.path.abspath(out)), 'search.json')
         r = subprocess.run(['node', os.path.join(WS, 'tools', 'search_index.js'), out, idx], capture_output=True, text=True)

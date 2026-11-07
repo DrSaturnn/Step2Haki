@@ -1397,3 +1397,4 @@
 html[data-theme="dark"]{--t-body-g-card:#161616;--t-body-g-card-2:#161616}
 [data-theme="dark"]{--qx-opt:color-mix(in srgb,var(--raised) 86%,#fff);--qx-ring:rgba(255,255,255,.10);--qx-glass-ink:var(--ink)}
 [data-theme="dark"]{--t-body-not-qx-notint-is-sp-pearls-nb-bg:rgba(255,255,255,.05)}
+[data-theme="dark"]{--t-axoffline-fg:#131313;--t-axoffline-bgc:rgba(215,218,223,.82);--t-axoffline-sh:0 6px 18px rgba(0,0,0,.3)}

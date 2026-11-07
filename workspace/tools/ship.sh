@@ -9,6 +9,8 @@
 #  2. write workspace/index.html and ../discriminator-briefs-site/index.html (the deployed copy),
 #     version.json, briefs.json (tools/briefs_json.py: the brief index the companion extension reads), and search.json
 #     (the prebuilt search index, s164c D-20261106-4: written by site_build beside the scratch page, gate-checked)
+#     and the offline files (s165 D-20261106-5: sw.js stamped with the build, manifest.webmanifest, icons/; written by
+#     site_build --pwa-only beside the stamped scratch page)
 #  3. commit body from the page diff (tools/changelog.py), prepended to workspace/CHANGELOG.md
 #  4. commit "<sNN>: <message>" + body + trailers
 #  G-APPROVE and G-READY run right after the build (tools/hooks/approval.py, tools/hooks/ready_gate.py).
@@ -60,6 +62,8 @@ s = open(p, encoding='utf-8').read()
 s = re.sub(r'<meta name="ax-build" content="[^"]*">', '<meta name="ax-build" content="%s|%s">' % (b, d), s, count=1)
 open(p, 'w', encoding='utf-8').write(s)
 PY
+# offline files beside the stamped page: sw.js carries the build stamp, so each ship is a new worker and cache
+o=$(python3 tools/site_build.py "$TMP/index.html" --pwa-only 2>&1) || fail offline-files "$o"; echo "$o"
 # change log (s74): fill <script id="axlog"> from repair/changelog/axlog.py; every shipped build needs an entry there
 LOGJSON=$(python3 repair/changelog/axlog.py 2>&1) || fail changelog "$LOGJSON"
 AXLOG="$LOGJSON" python3 - "$TMP/index.html" "$B" <<'PY' || fail changelog "add an entry for $B to repair/changelog/axlog.py (reader-facing note; merges as [new title, [old titles]])"
@@ -121,6 +125,9 @@ restore(){ cp "$TMP/index.keep.html" index.html; [[ -f "$TMP/site.keep.html" ]] 
   elif [[ -n "${BJ_WRITTEN:-}" ]]; then rm -f "$(dirname "$SITE")/briefs.json"; fi
   if [[ -f "$TMP/search.keep.json" ]]; then cp "$TMP/search.keep.json" "$(dirname "$SITE")/search.json"
   elif [[ -n "${SX_WRITTEN:-}" ]]; then rm -f "$(dirname "$SITE")/search.json"; fi
+  for f in sw.js manifest.webmanifest icons; do
+    if [[ -e "$TMP/keep/$f" ]]; then rm -rf "$(dirname "$SITE")/$f"; cp -r "$TMP/keep/$f" "$(dirname "$SITE")/$f"
+    elif [[ -n "${PW_WRITTEN:-}" ]]; then rm -rf "$(dirname "$SITE")/$f"; fi; done
   git -C "$ROOT" reset -q; }
 if cmp -s "$TMP/index.html" "$SITE"; then SITELINE="Site: discriminator-briefs-site/index.html unchanged (no deploy)"
 else SITELINE="Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)"; fi
@@ -130,6 +137,10 @@ mkdir -p "$(dirname "$SITE")" && cp "$TMP/index.html" "$SITE"
 SXF="$(dirname "$SITE")/search.json"; [[ -f "$SXF" ]] && cp "$SXF" "$TMP/search.keep.json"
 [[ -f "$TMP/search.json" ]] || { restore; fail search-index "no search.json beside the built page (tools/site_build.py writes it)"; }
 SX_WRITTEN=1; cp "$TMP/search.json" "$SXF"; cp "$TMP/search.json" search.json
+# offline files: the worker, the manifest and the icons go beside the deployed page
+mkdir -p "$TMP/keep"; for f in sw.js manifest.webmanifest icons; do [[ -e "$(dirname "$SITE")/$f" ]] && cp -r "$(dirname "$SITE")/$f" "$TMP/keep/$f"; done
+PW_WRITTEN=1; rm -rf "$(dirname "$SITE")/icons"
+cp "$TMP/sw.js" "$TMP/manifest.webmanifest" "$(dirname "$SITE")/" && cp -r "$TMP/icons" "$(dirname "$SITE")/icons" || { restore; fail offline-files "could not copy sw.js, manifest.webmanifest or icons/"; }
 VERF="$(dirname "$SITE")/version.json"; [[ -f "$VERF" ]] && cp "$VERF" "$TMP/version.keep.json"
 grep -q 'name="ax-build"' "$SITE" && printf '{"build":"%s","date":"%s"}\n' "$B" "$STAMP_DAY" > "$VERF"
 # briefs.json: brief index for the companion extension, regenerated from the page being deployed
@@ -148,6 +159,7 @@ git -C "$ROOT" add -A -- workspace "discriminator-briefs-site/index.html" >/dev/
 [[ -f "$ROOT/discriminator-briefs-site/version.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/version.json" >/dev/null 2>&1
 [[ -f "$ROOT/discriminator-briefs-site/briefs.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/briefs.json" >/dev/null 2>&1
 [[ -f "$ROOT/discriminator-briefs-site/search.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/search.json" >/dev/null 2>&1
+git -C "$ROOT" add -A -- "discriminator-briefs-site/sw.js" "discriminator-briefs-site/manifest.webmanifest" "discriminator-briefs-site/icons" >/dev/null 2>&1
 if git -C "$ROOT" diff --cached --quiet; then
   echo "commit: nothing to commit"
 else
