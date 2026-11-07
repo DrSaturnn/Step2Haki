@@ -74,9 +74,8 @@
     return rec;
   }
   function railFit(rec){ rec.rail.style.marginBottom = (-rec.rail.offsetHeight) + 'px'; }
-  /* the rail fill ends at the highlighted section's link (Jonathan 2026-10-13, tics rail as the model), not at the
-     brief's scroll height: sections differ in length while the links are evenly spaced, so a height-based fill
-     disagreed with the highlight */
+  /* the rail fill ends at the highlighted section's link, not at the brief's scroll height: sections differ in length
+     while the links are evenly spaced, so a height-based fill disagreed with the highlight */
   function fillTo(rec, cur){
     var rl = rec.fill.parentNode, r0 = rl.getBoundingClientRect(), a = rec.links[cur];
     if(!a) return;
@@ -97,7 +96,7 @@
     var p = Math.max(0, Math.min(1, (vh - r.top) / r.height));
     // current section: the last one whose heading has reached the threshold
     var cur = 0;
-    var sth = Math.max(th + 8, vh * 0.32);   // s141: a step is current once its heading passes 32% of the window (the Lithium Glance mockup), not 120 px; s164: on phone too (was th + 8, under the bar, so a heading in view still showed the step before it), the same line as the sidebar index
+    var sth = Math.max(th + 8, vh * 0.32);   // a step is current once its heading passes 32% of the window, on desktop and phone: the same line as the sidebar index
     pick.secs.forEach(function(s, i){ if(s.el && s.el !== pick.el && s.el.getBoundingClientRect().top <= sth) cur = i; });
     if(pick.secs[0] && !pick.secs[0].el){ /* spine brief whose first step is absent: never */ }
     if(wide) fillTo(pick, cur);

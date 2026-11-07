@@ -1,8 +1,8 @@
-/* Decision spine v2 (claude/SPINE_SPEC.md).
+/* Decision spine.
    Popovers: mechanisms and "why order it" notes. Desktop (fine pointer): hover or click opens a card. Touch: tap opens the
    same text inline under the whole line.
    Drawers: the reasoning moves into another brief. The drawer shows that whole brief, cloned, minus its practice questions.
-   Any link inside a drawer closes it and jumps to the real brief, so a drawer never opens another drawer (Jonathan 2026-10-07). */
+   Any link inside a drawer closes it and jumps to the real brief, so a drawer never opens another drawer. */
 (function(){
   var fine = window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches;
   var card = null, owner = null, hideT = null;
@@ -25,7 +25,7 @@
       var show = body.hidden; body.hidden = !show; btn.setAttribute('aria-expanded', show ? 'true' : 'false'); return;
     }
     closeCard();
-    var z = parseFloat(getComputedStyle(document.documentElement).zoom) || 1;   // s147: html zoom 1.1 at 1500 px and wider; rects and scroll are zoomed px, CSS lengths are not
+    var z = parseFloat(getComputedStyle(document.documentElement).zoom) || 1;   // html zoom 1.1 at 1500 px and wider; rects and scroll are zoomed px, CSS lengths are not
     card = document.createElement('div'); card.className = 'sp-card'; card.setAttribute('role','tooltip'); card.innerHTML = body.innerHTML;
     document.body.appendChild(card);
     var r = btn.getBoundingClientRect(), w = Math.min(380, window.innerWidth - 24);
@@ -60,7 +60,7 @@
     } else done();
     if(btn) btn.focus();
   }
-  // s164c: through the sidebar's seating (brief:go); a smooth hash scroll across unbuilt briefs overshoots as they build
+  // through the sidebar's seating (brief:go); a smooth hash scroll across unbuilt briefs overshoots as they build
   function jump(id){ closeDrawer(); var t = AX.brief.ensure(id); if(!t) return; if(window.AXN) AX.emit('brief:go', id); else location.hash = id; }
   function openDrawer(btn){
     var target = AX.brief.ensure(btn.getAttribute('data-brief')); if(!target) return;

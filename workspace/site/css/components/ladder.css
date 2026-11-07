@@ -27,4 +27,4 @@
 .brief.sp .sp-rung::before{left:12px;top:42px}
 }
 .brief.sp .sp-ladder + .sp-dx{margin-top:16px}
-html:is([data-theme],:not([data-theme])) body .brief.sp .sp-ladder b.sp-f{font-size:17px;line-height:24px}
+body .brief.sp .sp-ladder b.sp-f{font-size:17px;line-height:24px}

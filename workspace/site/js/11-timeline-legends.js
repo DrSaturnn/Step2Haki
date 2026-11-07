@@ -1,4 +1,4 @@
-/* Timeline charts as cards (s126): give every row of a keyed timeline chart its own legend, listing only the marks that
+/* Timeline charts as cards: give every row of a keyed timeline chart its own legend, listing only the marks that
    row draws, then hide the shared legend when every row has one. Charts without a legend are left as they are. */
 (function(){
   'use strict';

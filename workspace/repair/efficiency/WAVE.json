@@ -1,19 +1,19 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
  "id": "s166",
- "open": false,
+ "open": true,
  "plan_step": "s166",
  "roles": [],
  "max_agents": 0,
  "max_calls": 0,
  "max_tokens": 0,
- "set_by": "Jonathan, s166 launch 2026-11-06 (\"No agents for the build. Budget: lead 60M.\")",
+ "set_by": "Jonathan, s166 resume 2026-11-07 13:19 (\"Budget: lead 80M, no agents.\")",
  "previous": {
-  "id": "s165",
-  "note": "s165 shipped 061b33f 2026-11-06 (Claude lead): offline use; no agents; lead 1 chat"
+  "id": "s167b",
+  "note": "s167b shipped 5a13fec 2026-11-07 (Claude lead): sculpted light default; dark theme switch in one frame; no agents"
  },
- "opened": "2026-11-06 21:34 EST",
- "note": "s166 open (Claude lead): phone redesign, pilot first; no agents",
+ "opened": "2026-11-07 13:19 EST",
+ "note": "s166 resumed (Claude lead): wip/s166 merged main, pilot rebuilt on the s167 CSS; no agents",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -393,9 +393,26 @@
    "calls": 0,
    "tokens": 0,
    "lead": 60000000
+  },
+  "s167": {
+   "agents": 0,
+   "calls": 0,
+   "tokens": 0,
+   "lead": 100000000
+  },
+  "s167b": {
+   "agents": 0,
+   "calls": 0,
+   "tokens": 0
+  },
+  "s166": {
+   "agents": 0,
+   "calls": 0,
+   "tokens": 0,
+   "lead": 80000000
   }
  },
- "max_lead_tokens": 60000000,
+ "max_lead_tokens": 80000000,
  "spent_agents": 0,
  "spent_calls": 0
 }

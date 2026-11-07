@@ -271,3 +271,19 @@ def wave_spend(wave_id):
             tot['calls'] += u['calls']
             tot['tokens'] += u['tokens']
     return tot
+
+
+def doc_lint_errors():
+    """doc_lint on the private docs (tools/docs_path.py; S2H_PRIVATE overrides) plus the rule documents: a list of
+    errors, empty when it passes; a missing digest or standing file is an error (the launch gate fails closed)."""
+    for d in (os.path.join(WS, 'tools'), os.path.join(WS, 'tools', 'spine')):
+        if d not in sys.path:
+            sys.path.insert(0, d)
+    import docs_path, doc_lint  # noqa: E401
+    try:
+        dg, st = docs_path.doc('DECISIONS_DIGEST.md'), docs_path.doc('STANDING_DIRECTIONS.md')
+    except FileNotFoundError as ex:
+        return [str(ex)]
+    if not (os.path.exists(dg) and os.path.exists(st)):
+        return ['DECISIONS_DIGEST.md or STANDING_DIRECTIONS.md is missing from ' + os.path.dirname(dg)]
+    return doc_lint.errors(dg, st) + doc_lint.rule_doc_errors(dg, WS)

@@ -1,7 +1,7 @@
-/* s148g site layer (Jonathan 2026-10-20; claude/pending/SITE_S148G.md): hover cards float on touch as on desktop, and a
-   linked brief opens as a panel grown from its link (desktop) or a near-full-screen sheet grown from the tapped link (phone),
-   replacing the right-hand 520 px panel. The per-choice reasons, the card sizing, the First step split and the timeline
-   tile are in the page script (mcq), the s148f script and the styles. Presentation only: no brief text changes. */
+/* Hover cards float on touch as on desktop, and a linked brief opens as a panel grown from its link (desktop) or a
+   near-full-screen sheet grown from the tapped link (phone). The per-choice reasons, the card sizing, the First step
+   split and the timeline tile are in the page script (mcq), the 20-site-148f script and the styles. Presentation only:
+   no brief text changes. */
 (function(){
   'use strict';
   var fine = window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches;
@@ -128,7 +128,7 @@
     if(!still && !fine && el.classList && el.parentNode === document.body && !el._qxGone &&
        (el.classList.contains('qx-anc') || (el.classList.contains('sp-scrim') && document.querySelector('body > .sp-drawer.qx-anc')))){
       el._qxGone = 1; el.style.pointerEvents = 'none';
-      if(el.classList.contains('sp-scrim')){ el.style.transition = 'opacity .3s ease'; el.style.opacity = '0'; setTimeout(function(){ nativeRemove.call(el); }, 320); return; }
+      if(el.classList.contains('sp-scrim')){ el.style.transition = 'opacity .3s var(--spr)'; el.style.opacity = '0'; setTimeout(function(){ nativeRemove.call(el); }, 320); return; }
       var lk = el._qxLink, r = lk && document.body.contains(lk) ? lk.getBoundingClientRect() : null;
       el.classList.add('qx-g', 'qx-g0');
       if(r && r.width) flip(el, r); else el.style.transform = 'translateY(40px) scale(.96)';

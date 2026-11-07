@@ -1,7 +1,6 @@
-/* s137: site layout Phase 2, display layer (claude/pending/S137.md; Jonathan 2026-10-14 "Display layer").
-   Presentation only: never adds, removes or rewords brief content; the brief HTML in the page is unchanged.
+/* Display layer. Presentation only: never adds, removes or rewords brief content; the brief HTML in the page is unchanged.
    1. Diagnostic workup as Test | Result | Means tables per numbered zone (header cells, row spans, group tints).
-   2. Clue table column "Next best step" (Jonathan 2026-10-13; was "Next move").
+   2. Clue table column "Next best step".
    3. Mnemonic rows: the key text sits in its own cell beside the tinted capital.
    4. Desktop: the current brief's section steps nest under it in the sidebar (fill-to-current-link rule kept). */
 (function(){
@@ -68,11 +67,11 @@
     var host = document.getElementById('navlinks');
     if(!host) return;
     document.body.classList.toggle('ax-nest', WIDE.matches);
-    if(!WIDE.matches || window.AXN){ putBack(); return; }   // s161b: the s143 sidebar draws its own rail
+    if(!WIDE.matches || window.AXN){ putBack(); return; }   // the sidebar draws its own rail
     var a = host.querySelector('a.active');
     if(!a){ putBack(); return; }
     var id = (a.getAttribute('href') || '').slice(1), b = id ? document.getElementById(id) : null;
-    var rail = b ? ((home && home.parent === b) ? home.rail : b.querySelector(':scope > .bb-rail')) : null;   // s141: a rail already nested stays nested (it used to be looked for only in its brief, so every class change in the sidebar moved it out and back, and an odd number of changes left the sidebar without its steps)
+    var rail = b ? ((home && home.parent === b) ? home.rail : b.querySelector(':scope > .bb-rail')) : null;   // a rail already nested stays nested, so a class change in the sidebar does not move it out and back
     if(home && home.rail === rail && rail.previousElementSibling === a) return;
     putBack();
     if(!rail) return;
@@ -85,7 +84,7 @@
     a.parentNode.insertBefore(rail, a.nextSibling);
     // keep the current link and its steps in view inside the sidebar's own scroll box only
     var box = host.closest('.navscroll') || (function(el){ while(el && el !== document.body){ var o = getComputedStyle(el).overflowY; if(o === 'auto' || o === 'scroll') return el; el = el.parentElement; } return null; })(host);
-    if(box && !window.AXN){   // s143: the axnav component keeps its own list in view
+    if(box && !window.AXN){   // the axnav component keeps its own list in view
       var br = box.getBoundingClientRect(), ar = a.getBoundingClientRect(), rr = rail.getBoundingClientRect();
       if(ar.top < br.top + 8) box.scrollTop += ar.top - br.top - 8;
       else if(rr.bottom > br.bottom - 8) box.scrollTop += Math.min(rr.bottom - br.bottom + 8, ar.top - br.top - 8);

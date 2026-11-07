@@ -14,6 +14,8 @@ import sys
 
 WS = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
 EFF = os.path.join(WS, 'repair', 'efficiency')
+import importlib.util as _ilu, os as _os
+_dp = _ilu.spec_from_file_location('docs_path', _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'docs_path.py')); docs_path = _ilu.module_from_spec(_dp); _dp.loader.exec_module(docs_path)
 
 RULES = '''Reading rules (runbook "Continuation chats"; the context hook H6 warns at start + 150k and gives one finish notice at start + 200k):
 - Do not read the runbook, the handoff, STANDING_DIRECTIONS or DECISIONS_DIGEST whole, in the repo or the project.
@@ -31,7 +33,7 @@ def section(text, head):
 
 
 def main(argv):
-    hand = open(os.path.join(EFF, 'STEP2HAKI_HANDOFF.md'), encoding='utf-8').read()
+    hand = open(docs_path.doc('STEP2HAKI_HANDOFF.md'), encoding='utf-8').read()
     st = section(hand, 'State')
     st = st.split('\n- **s', 1)[0] + ''.join('\n- **s' + p for p in st.split('\n- **s')[1:2])  # the open batch and the next item
     print(st, '\n')
@@ -54,7 +56,7 @@ def main(argv):
             print('\n' + '\n'.join(tab))
     else:
         print('No batch file at %s: the State is the batch record.' % os.path.relpath(bf, WS))
-    dg = [l for l in open(os.path.join(EFF, 'DECISIONS_DIGEST.md'), encoding='utf-8').read().split('\n')
+    dg = [l for l in open(docs_path.doc('DECISIONS_DIGEST.md'), encoding='utf-8').read().split('\n')
           if re.search(r'\b%s\b' % re.escape(batch), l)]
     print('\nDIGEST lines naming %s (%d):' % (batch, len(dg)))
     for l in dg:

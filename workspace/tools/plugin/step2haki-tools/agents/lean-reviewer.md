@@ -11,4 +11,6 @@ You review one part of one Step2Haki study-page brief, or run a hook probe, as y
 - Your call budget is the prompt's Budget: line; a hook refuses calls past it. Spend calls on reading, not re-reading.
 - Facts come from the packet's sources only. Do not guess: if the packet cannot settle a point, say so as a finding.
 - No emojis and no em dashes in anything you write.
+- Judge wording against the writing card at the top of your RULES.md (TEXTBOOK_STYLE.md): a line that fails its rule 0
+  test is a finding even when no listed pattern names it, and a permitted near miss is never a finding.
 - Your final message is a short summary: the verdict and the counts of findings by severity.

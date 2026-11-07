@@ -16,5 +16,8 @@
   },
   "overrides": {
     "rrweb-cssom": "0.8.0"
+  },
+  "devDependencies": {
+    "axe-core": "4.10.2"
   }
 }

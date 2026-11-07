@@ -13,14 +13,14 @@ codex to ensure for the remaining batches. additionally ensure codex is able to 
 with new psych questions to cover as well." From s150 on, Codex ships (section 5), runs the S8 audit itself in a fresh
 task (section 5 and CODEX_AUDIT.md), and authors new briefs (section 9). Claude audits only when Jonathan asks.
 
-This file lists only what differs when Codex leads. Everything else is the runbook (repair/efficiency/BATCH_RUNBOOK.md),
+This file lists only what differs when Codex leads. Everything else is the runbook (/home/claude/step2haki-private/docs/BATCH_RUNBOOK.md),
 unchanged: the steps S1 to S9, the standing calls (section 3), the self-check (section 4), the report (section 5), the
 reasons to stop and ask (section 6). Precedence is the runbook's: a dated DECISIONS_DIGEST line, then
 STANDING_DIRECTIONS, then the plan, then the runbook, then this file.
 
 ## 0. The lead lock (prevents two leads on one branch)
 
-The handoff State (repair/efficiency/STEP2HAKI_HANDOFF.md) carries a line `- **Lead:** <Claude | Codex>, since <date
+The handoff State (/home/claude/step2haki-private/docs/STEP2HAKI_HANDOFF.md) carries a line `- **Lead:** <Claude | Codex>, since <date
 time>, chat <n>`. Before any work:
 1. fetch the batch branch (wip/sNN in both repos) and read the State;
 2. if the Lead line names the other agent and Jonathan has not told you to take over, stop and ask him;
@@ -34,10 +34,10 @@ The runbook's read list names project paths (claude/...). Their copies:
 
 | Runbook path | Copy Codex reads |
 |---|---|
-| STEP2HAKI_HANDOFF.md | public repo workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (the live one) |
-| claude/BATCH_RUNBOOK.md | public workspace/repair/efficiency/BATCH_RUNBOOK.md |
-| claude/STANDING_DIRECTIONS.md | public workspace/repair/efficiency/STANDING_DIRECTIONS.md |
-| claude/DECISIONS_DIGEST.md | public workspace/repair/efficiency/DECISIONS_DIGEST.md |
+| STEP2HAKI_HANDOFF.md | public repo /home/claude/step2haki-private/docs/STEP2HAKI_HANDOFF.md (the live one) |
+| claude/BATCH_RUNBOOK.md | public /home/claude/step2haki-private/docs/BATCH_RUNBOOK.md |
+| claude/STANDING_DIRECTIONS.md | public /home/claude/step2haki-private/docs/STANDING_DIRECTIONS.md |
+| claude/DECISIONS_DIGEST.md | public /home/claude/step2haki-private/docs/DECISIONS_DIGEST.md |
 | claude/SPINE_SCALE_PLAN.md | public workspace/repair/efficiency/SPINE_SCALE_PLAN.md |
 | claude/design/WORKUP_5A_SPEC.md | public workspace/repair/efficiency/WORKUP_5A_SPEC.md |
 | claude/SPINE_SPEC.md | private claude/SPINE_SPEC.md (mirror) |

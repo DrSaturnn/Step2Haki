@@ -100,7 +100,41 @@ var AX = (function () {
     return root;
   }
 
-  var AX = { module: module, on: on, off: off, emit: emit, teardown: teardown, modules: mods,
+  /* Reader settings: one versioned record in localStorage ('ax-settings', {v, s}). VERSION goes up with a MIGRATE step
+     whenever a setting is renamed or its values change, so a reader's choices carry over. Version 1 reads the earlier
+     one-key-per-setting storage once; set() also writes that key, so a page cached before version 1 still reads it. */
+  var settings = (function () {
+    var KEY = 'ax-settings', VERSION = 1;
+    var LEGACY = { study: 'ax-study', flat: 'ax-flat', shelf: 'ax-shelf', bankview: 'ax-bankview', theme: 'ax-theme', accent: 'ax-accent' };
+    var MIGRATE = {
+      1: function (ls) { var s = {}; for (var k in LEGACY) { var v = ls.getItem(LEGACY[k]); if (v !== null) s[k] = v; } return s; }
+    };
+    var rec = null;
+    function ls() { try { return window.localStorage; } catch (e) { return null; } }
+    function load() {
+      if (rec) return rec;
+      var st = ls(), r = null;
+      try { r = st && JSON.parse(st.getItem(KEY) || 'null'); } catch (e) { r = null; }
+      if (!r || typeof r !== 'object' || typeof r.s !== 'object') r = { v: 0, s: {} };
+      for (var v = (r.v || 0) + 1; v <= VERSION; v++) {
+        var add = st && MIGRATE[v] ? MIGRATE[v](st, r.s) : {};
+        for (var k in add) if (!(k in r.s)) r.s[k] = add[k];
+        r.v = v;
+      }
+      rec = r;
+      try { if (st) st.setItem(KEY, JSON.stringify(r)); } catch (e) {}
+      return rec;
+    }
+    function get(name, dflt) { var r = load(); return name in r.s ? r.s[name] : (dflt === undefined ? null : dflt); }
+    function set(name, val) {
+      var r = load(), st = ls(); r.s[name] = String(val);
+      try { if (st) { st.setItem(KEY, JSON.stringify(r)); if (LEGACY[name]) st.setItem(LEGACY[name], String(val)); } } catch (e) {}
+    }
+    function remove(name) { var r = load(), st = ls(); delete r.s[name]; try { if (st) { st.setItem(KEY, JSON.stringify(r)); if (LEGACY[name]) st.removeItem(LEGACY[name]); } } catch (e) {} }
+    return { get: get, set: set, remove: remove, version: VERSION };
+  })();
+
+  var AX = { module: module, on: on, off: off, emit: emit, teardown: teardown, modules: mods, settings: settings,
     brief: { each: each, build: build, ensure: ensure, isBuilt: isBuilt, content: content, fresh: fresh, holder: holder, all: briefs, pending: pending, buildAll: buildAll, copy: copy, items: items, qtype: qtype, prompt: prompt } };
   return AX;
 })();

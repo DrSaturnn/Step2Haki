@@ -14,6 +14,8 @@ Prints one summary line, then each failure with its fix. Exit 0 pass, 1 fail.
 Judgment (clinical truth, scope, voice, cue review) is never approved by this script.
 """
 import csv
+import importlib.util as _ilu, os as _os
+_dp = _ilu.spec_from_file_location('docs_path', _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '.', 'docs_path.py')); docs_path = _ilu.module_from_spec(_dp); _dp.loader.exec_module(docs_path)
 import glob
 import html as H
 import json
@@ -107,6 +109,16 @@ CATALOG = {
                    'rebuild the rail from tools/spine/author_lib.py steps(); never hand-order a rail'),
     'structural': ('no step number ("(step 2)", "see step 4") or ownership word ("owns", "owned by") in brief text or data-*-why reasons; the exam name "Step 2" is not structural (s163 C6)',
                    'state the action in plain clinical words, the same wording as the place that decides it; a literal use goes in tools/gate_allowlist.txt with a reason'),
+    'ui-lint': ('the page\'s UI debt counts (tools/spine/ui_lint.py measure: style and script blocks, !important, specificity workarounds, theme rules setting layout, selectors defined 4+ times, non-spring motion, shipped comments) do not rise above tools/spine/ui_baseline.json (D-20261105-1, D-20261105-3, D-20261106-11)',
+                'replace the old rule instead of adding an override; time motion with var(--spr), var(--bnc) or var(--snp); a batch that lowers a count tightens the baseline (ship.sh does it)'),
+    'ui-site': ('site/css: themes hold only custom properties on theme selectors (hard), and components\' raw colors do not rise above the baseline (tools/spine/ui_lint.py --site; D-20261105-10)',
+                'put the color in a theme token and reference it with var(); a theme file never names a component'),
+    'doc-lint': ('DECISIONS_DIGEST and STANDING_DIRECTIONS hold one live answer per question: supersession marked both ways, no citation of a superseded or missing id (tools/spine/doc_lint.py; D-20261105-2)',
+                 'mark the old line "(superseded by D-...)" in the same commit, or cite the live id in STANDING_DIRECTIONS'),
+    'prose-lint': ('no brief\'s prose lint count (tools/spine/prose_lint.py, review-book register) rises above tools/spine/prose_baseline.json, and a brief new to the baseline has none (D-20261106-9, D-20261106-11)',
+                   'rewrite the flagged lines per repair/efficiency/TEXTBOOK_STYLE.md; a permitted near miss goes in the lint\'s ALLOW list with a test'),
+    'prose-touched': ('a brief whose text (hover text included) changed against the base has zero prose lint hits; markup-only changes and --attr-only ships are exempt (D-20261106-11)',
+                      'rewrite every flagged line in the brief you changed per repair/efficiency/TEXTBOOK_STYLE.md, or show the hit is a permitted near miss and add it to the lint\'s ALLOW list with a test'),
     'K3': ('every mnemonic names the widely taught source it comes from (data-mn-src)',
            'add data-mn-src="First Aid" / "AnKing" / "AMBOSS" / "source explanation" / a URL; a mnemonic with no such source is removed, never invented'),
 }
@@ -662,6 +674,57 @@ def check_attr_only(page, ref_html, g):
     return n_attr
 
 
+
+def check_lints(page, page_path, ref_html, g, attr_only=False):
+    """UI, doc and prose ratchets (D-20261106-11): counts may fall, never rise; a brief whose text changed carries no
+    prose hits (skipped under --attr-only, which already forbids text changes). A missing baseline or rule file fails."""
+    spine = os.path.join(REPO, 'tools', 'spine')
+    if spine not in sys.path:
+        sys.path.insert(0, spine)
+    import ui_lint, doc_lint, prose_lint  # noqa: E401
+    base_path = os.path.join(spine, 'ui_baseline.json')
+    if not os.path.exists(base_path):
+        g.fail('ui-lint', 'baseline', 'tools/spine/ui_baseline.json is missing; restore it from git')
+    base = json.load(open(base_path, encoding='utf-8')) if os.path.exists(base_path) else {}
+    m = ui_lint.measure(page)
+    for k, v in m.items():
+        if not k.startswith('_') and base.get(k) is not None and v > base[k]:
+            g.fail('ui-lint', k, '%s rose from %d to %d' % (k, base[k], v))
+    site = os.path.join(REPO, 'site')
+    if os.path.isdir(os.path.join(site, 'css')):
+        counts, ex = ui_lint.site_checks(site)
+        for k in ('theme_noncustom_decl', 'theme_component_selector'):
+            for e in ex.get(k, [])[:5] if counts.get(k) else []:
+                g.fail('ui-site', k + ' ' + e[:60], e)
+        rc_base = base.get('component_raw_color')
+        if rc_base is not None and counts.get('component_raw_color', 0) > rc_base:
+            g.fail('ui-site', 'component_raw_color', 'raw colors in site/css/components rose from %d to %d' % (rc_base, counts['component_raw_color']))
+    try:
+        dg, st = docs_path.doc('DECISIONS_DIGEST.md'), docs_path.doc('STANDING_DIRECTIONS.md')
+    except FileNotFoundError:
+        dg = st = ''
+    if os.path.exists(dg) and os.path.exists(st):
+        for e in doc_lint.errors(dg, st) + doc_lint.rule_doc_errors(dg, REPO):
+            g.fail('doc-lint', e[:80], e)
+    else:
+        g.fail('doc-lint', 'missing', 'DECISIONS_DIGEST.md or STANDING_DIRECTIONS.md is missing from the private docs/ (tools/docs_path.py)')
+    pbase_path = os.path.join(spine, 'prose_baseline.json')
+    if not os.path.exists(pbase_path):
+        g.fail('prose-lint', 'baseline', 'tools/spine/prose_baseline.json is missing; restore it from git')
+    pbase = json.load(open(pbase_path, encoding='utf-8')) if os.path.exists(pbase_path) else None
+    cur = prose_lint.page_counts(page)
+    if pbase is not None:
+        for bid, n in sorted(cur.items()):
+            was = pbase.get(bid)
+            if (was is None and n > 0) or (was is not None and n > was):
+                g.fail('prose-lint', bid, '%s: %d prose hits (baseline %s); run tools/spine/prose_lint.py PAGE --brief %s' % (bid, n, 'none' if was is None else was, bid))
+    if ref_html is not None and not attr_only:
+        for b in prose_lint.changed_briefs(ref_html, page):
+            hits = prose_lint.lint_brief(b.inner)
+            if hits:
+                eg = '; '.join('%s: %s' % (h['pattern'], h['text'][:60]) for h in hits[:3])
+                g.fail('prose-touched', b.id, '%s changed and has %d prose hits (%s)' % (b.id, len(hits), eg))
+
 def main(argv):
     args, page_path, base, attr_ref = list(argv), None, 'HEAD', None
     allow_path = os.path.join(REPO, 'tools', 'gate_allowlist.txt')
@@ -694,6 +757,7 @@ def main(argv):
     ref_html = load_ref(base)
     if ref_html is not None:
         check_base(page, ref_html, bl, it, g)
+    check_lints(page, page_path, ref_html, g, attr_only=bool(attr_ref))
     n_attr = None
     if attr_ref:
         n_attr = check_attr_only(page, load_ref(attr_ref), g)

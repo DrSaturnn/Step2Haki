@@ -66,4 +66,4 @@ html.ph-open .brief .bb-end .bb-next{font-weight:700}
 #mbar,#phead{transition:opacity .15s linear}
 }
 html[data-theme="dark"][data-glass="tinted"] #phead{background:color-mix(in srgb,var(--accent) 12%,#15171E);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
-html[data-theme="dark"][data-glass="tinted"] #mbar{background:color-mix(in srgb,var(--accent) 12%,#15171E)!important}
+html[data-theme="dark"][data-glass="tinted"] #mbar{background:color-mix(in srgb,var(--accent) 12%,#15171E)}

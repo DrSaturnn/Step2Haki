@@ -208,7 +208,10 @@ def lane_text(spec, ln, b):
     notes = ''.join('Not a finding (decided): %s\n' % x for x in (spec.get('notes') or {}).get(part, []))
     tmpl = cu.get('text') or (PART1 if rnd == 1 else PART2)[part]
     body = tmpl % {'plan': cu.get('plan') or plan_text(part, rnd, len(briefs), b), 'extra': extra, 'budget': b}
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import style_card  # the writing card follows the launch header, before any task text (D-20261106-11)
     head = ['Role: %s' % ROLE[part], 'Plan step: %s' % spec['plan_step'], 'Lane: %s' % lane, 'Budget: %d' % b, '',
+            style_card.card() + '\n---', '',
             'Step2Haki %s, review round %d%s, part %s, for %d brief(s): %s. %s' % (
                 spec['batch'], rnd, '' if rnd == 1 else ' (follow-up)', part, len(briefs), ', '.join(briefs),
                 'One receipt covers the whole lane (%sreceipt.md).' % lane if cu.get('receipt') == 'lane' else

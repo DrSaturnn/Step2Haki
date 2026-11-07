@@ -1,6 +1,6 @@
-/* s136: site layout Phase 1 (claude/pending/S136.md). Presentation only; never adds or removes brief text.
-   1. Accent setting (Jonathan 2026-10-14): a reader choice under the theme switches, stored per viewer; Slate default.
-      Dark theme (Jonathan 2026-10-14): a switch beside Flat theme, stored per viewer (ax-theme), light by default.
+/* Site layout. Presentation only; never adds or removes brief text.
+   1. Accent setting: a reader choice under the theme switches, stored per viewer; Slate default.
+      Dark theme: a switch beside Flat theme, stored per viewer, light by default.
    2. Desktop hovers: open on pointer enter, close on leave, stay open once clicked (a second click closes).
    3. Desktop glass toolbar: the current section's number and name, Read and Recall, open or close every panel.
    4. Sidebar systems fold and unfold; the system holding the current brief opens itself. */
@@ -9,21 +9,22 @@
   var ACC = [['slate','Slate','#3B5B8C'],['indigo','Indigo','#4A48C6'],['purple','Purple','#544AC4'],['navy','Navy','#1E3A8A'],
              ['ocean','Ocean','#1D6A8C'],['plum','Plum','#7A3B8F'],['rose','Rose','#AA2E66'],['graphite','Graphite','#4A5060']];
   var KEY = 'ax-accent';
-  function load(){ try { return localStorage.getItem(KEY) || 'slate'; } catch(e){ return 'slate'; } }
-  function save(k){ try { localStorage.setItem(KEY, k); } catch(e){} }
+  function load(){ return AX.settings.get('accent') || 'slate'; }
+  function save(k){ AX.settings.set('accent', k); }
   function valid(k){ for(var i = 0; i < ACC.length; i++) if(ACC[i][0] === k) return ACC[i]; return null; }
   var root = document.documentElement;
 
   /* ---------- 1. accent ----------
      Slate needs nothing (the tokens' default). Another choice is set on the page's regions nearest first, a few per
      frame, then on the root, the same way the flat and study switches restyle (s92): one root-wide change restyled
-     every brief at once. */
+     every brief at once. The theme switches every region and the root in the same frame, so the page background and the
+     briefs change together (briefs are built on demand, so a whole-page restyle is short). */
   var cur = valid(load()) ? load() : 'slate';
   var THEME = 'ax-theme', dark = false, tint = false;
-  try { var tv = localStorage.getItem(THEME); dark = tv === 'dark' || tv === 'tinted'; tint = tv === 'tinted'; } catch(e){}
+  var tv = AX.settings.get('theme'); dark = tv === 'dark' || tv === 'tinted'; tint = tv === 'tinted';
   if(cur !== 'slate') root.setAttribute('data-axa', cur);
   if(dark) root.setAttribute('data-theme', 'dark');
-  if(tint) root.setAttribute('data-glass', 'tinted');   // tinted glass (Jonathan 2026-10-14): dark plus accent-tinted translucent surfaces
+  if(tint) root.setAttribute('data-glass', 'tinted');   // tinted glass: dark plus accent-tinted translucent surfaces
   /* Each region carries both attributes while a switch walks the page, so the dark accent rule (which needs both on
      one element or the theme on an ancestor) always matches. */
   function mark(c){
@@ -69,8 +70,8 @@
   function setTheme(d, t){
     t = d && t;
     if(d === dark && t === tint) return;
-    dark = d; tint = t; try { localStorage.setItem(THEME, t ? 'tinted' : (d ? 'dark' : 'light')); } catch(e){}
-    paintSetting(); walkAll();
+    dark = d; tint = t; AX.settings.set('theme', t ? 'tinted' : (d ? 'dark' : 'light'));
+    paintSetting(); queue = []; regions().forEach(mark); markRoot();
   }
   function setDark(on){ setTheme(on, on && tint); }
   var box = null, darkBtn = null, tintBtn = null;
@@ -146,7 +147,7 @@
     raf = 0; if(!bar || !WIDE.matches) return;
     var b = currentBrief(), n = '', label = '', practice = false;
     if(b){
-      var a = b.querySelector('.bb-rl a.cur') || (window.axRailOf && window.axRailOf(b) ? window.axRailOf(b).querySelector('.bb-rl a.cur') : null);   /* s137: the rail may sit in the sidebar */
+      var a = b.querySelector('.bb-rl a.cur') || (window.axRailOf && window.axRailOf(b) ? window.axRailOf(b).querySelector('.bb-rl a.cur') : null);   /* the rail may sit in the sidebar */
       if(a){
         var nb = a.querySelector('b'); n = nb ? nb.textContent.trim() : '';
         label = (a.textContent || '').replace(n, '').trim(); practice = !n;
@@ -157,7 +158,7 @@
     cn.textContent = n; cn.hidden = !n && !practice; cn.classList.toggle('p', practice);
     if(practice) cn.textContent = 'P';
     cl.textContent = label || 'Step2Haki';
-    var bn = bar.querySelector('.axbn'), hh = b ? b.querySelector('h4') : null, nm = hh ? hh.textContent.trim() : '';   // s146c
+    var bn = bar.querySelector('.axbn'), hh = b ? b.querySelector('h4') : null, nm = hh ? hh.textContent.trim() : '';   
     bn.textContent = nm; bn.title = nm; bn.hidden = !nm || nm === label;
     var ps = panels(b), all = bar.querySelector('.axall');
     all.hidden = !ps.length;
@@ -189,7 +190,7 @@
         if(document.body.classList.contains('study') !== want){
           // one code path for the study switch: press the sidebar's own control
           var s = document.querySelector('#modes .study');
-          if(s) s.click(); else { document.body.classList.toggle('study', want); try { localStorage.setItem('ax-study', want ? '1' : '0'); } catch(err){} }
+          if(s) s.click(); else { document.body.classList.toggle('study', want); AX.settings.set('study', want ? '1' : '0'); }
         }
       } else if(t.classList.contains('axall')){
         var ps = panels(currentBrief()), open = !ps.every(function(d){ return d.open; });
@@ -238,8 +239,8 @@
     }).observe(document.getElementById('navlinks'), { subtree: true, attributes: true, attributeFilter: ['class'] });
   }
 
-  /* 5. Mnemonic key column fits its widest key (s135 panic display r1 MED: "FEAR" overran the 28 px column on desktop
-     and pushed phone text into a narrow column). Only a list with a key wider than one letter changes. */
+  /* 5. Mnemonic key column fits its widest key, so a long key does not overrun the 28 px column on desktop or push
+     phone text into a narrow column. Only a list with a key wider than one letter changes. */
   function fitMnem(root){
     (root && root.querySelectorAll ? root : document).querySelectorAll('dl.rows.mnem').forEach(function(dl){
       if(dl.classList.contains('mn-wide')) return;
@@ -259,11 +260,9 @@
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 
-/* s136: Review in the status bar (Jonathan 2026-10-14: "reinvent the brief review and login with pin using the same apple
-   ios 27 stylized look and put it on the top status bar"; "very quick to jump into the 3 most recommended reviews rather
-   than 5"; "Do not include the total briefs count"). A Review pill in the glass toolbar (desktop) and the phone bar's
-   Review button open one glass sheet: who is studying (with a passcode pad when the name has a PIN), the 3 briefs the
-   scheduler recommends next, Start review and Quiz me instead. The scheduler, sync and PIN check are the page's own
+/* Review in the status bar. A Review pill in the glass toolbar (desktop) and the phone bar's Review button open one
+   glass sheet: who is studying (with a passcode pad when the name has a PIN), the 3 briefs the scheduler recommends
+   next, Start review and Quiz me instead; no total briefs count. The scheduler, sync and PIN check are the page's own
    (window.axRv, exposed by the review script); this file is presentation only. */
 (function(){
   "use strict";
@@ -342,7 +341,7 @@
   }
   function place(){
     if(!sheet || phone()){ if(sheet){ sheet.style.top = ''; sheet.style.left = ''; } return; }
-    var z = parseFloat(getComputedStyle(document.documentElement).zoom) || 1;   // s147: zoomed px in, CSS px out
+    var z = parseFloat(getComputedStyle(document.documentElement).zoom) || 1;   // zoomed px in, CSS px out
     var a = pill && pill.offsetParent ? pill.getBoundingClientRect() : null, w = (sheet.offsetWidth || 360) * z;
     var vw = document.documentElement.clientWidth || window.innerWidth;
     var left = a ? Math.min(a.right - w, vw - w - 12) : vw - w - 16, top = a ? a.bottom + 10 : 72;

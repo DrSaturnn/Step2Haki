@@ -40,9 +40,9 @@ practice, a label or a guideline differs from the board answer, teach the board 
 - Helpers: `tools/spine/author_lib.py` (Grep `^def ` for the list: t, M, p, pop, dr, h, table, live_src, write,
   build, claim_of, dispositions). Block types: `tools/spine/outline_render.py` docstring and Grep "s159 card".
 - Rules, read by Grep with a line range, only for the choice in front of you: `{card_spec}` (the card rules; Grep its
-  "## " sections), `repair/efficiency/STANDING_DIRECTIONS.md` (every rule that is not about the decision spine still
+  "## " sections), `/home/claude/step2haki-private/docs/STANDING_DIRECTIONS.md` (every rule that is not about the decision spine still
   applies: accuracy, sources, board answer first, hovers, bold key words, masks, other names, abbreviations),
-  `repair/efficiency/BATCH_RUNBOOK.md` section 3 (the standing calls; Grep "## 3." -A 26), `repair/efficiency/ABBREV.json`,
+  `/home/claude/step2haki-private/docs/BATCH_RUNBOOK.md` section 3 (the standing calls; Grep "## 3." -A 26), `repair/efficiency/ABBREV.json`,
   `repair/efficiency/ALIASES.json`.
 - Seed only, never cited or quoted, layout not carried: Psych Pocket 1.7.2
   (`repair/sources/refs/2026-10-29/psych-pocket-1.7.2-contents.md`, Grep your drugs) and the Medication List

@@ -10,31 +10,31 @@
 .sp-drawer .brief{margin:0}
 .sp-drawer .sp-dpractice{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 0;padding:14px 16px;border-radius:var(--r-sub);background:var(--t-sp-drawer-sp-dpractice-bg,var(--recess));box-shadow:var(--t-sp-drawer-sp-dpractice-sh,var(--inner));font-size:14.5px;color:var(--t-sp-drawer-sp-dpractice-fg,var(--ink-2))}
 .sp-drawer .sp-dopen{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:10px;background:var(--t-sp-drawer-sp-dopen-bg,var(--accent));color:var(--t-sp-drawer-sp-dopen-fg,var(--raised));font:750 14px/1 var(--sans);text-decoration:var(--t-sp-drawer-sp-dopen-td);white-space:nowrap}
-.sp-drawer.sp-g{transition:transform .46s cubic-bezier(.2,.9,.24,1.06),border-radius .46s ease,opacity .2s ease}
-.sp-drawer.sp-g > *{transition:opacity .22s ease .14s}
+.sp-drawer.sp-g{transition:transform .46s var(--bnc),border-radius .46s var(--spr),opacity .2s var(--snp)}
+.sp-drawer.sp-g > *{transition:opacity .22s var(--spr) .14s}
 .sp-drawer.sp-g0 > *{opacity:0}
 .sp-drawer{background:var(--t-sp-drawer-bg-2,var(--glass-2));-webkit-backdrop-filter:blur(40px) saturate(190%);backdrop-filter:blur(40px) saturate(190%);box-shadow:var(--t-sp-drawer-sh-2,var(--glass-edge-2));border-radius:28px}
 .sp-drawer .sp-dbar{background:var(--t-sp-drawer-sp-dbar-bg-2);background-color:var(--t-sp-drawer-sp-dbar-bgc);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
-html:is([data-theme],:not([data-theme])) body .sp-drawer .brief > h4{font-size:32px;line-height:38px;letter-spacing:-.5px}
-html:is([data-theme],:not([data-theme])) body .sp-drawer .brief > h4::after{vertical-align:7px}
-html:is([data-theme],:not([data-theme])) body .sp-drawer .brief .sub{font-size:16px;line-height:22px;margin-bottom:24px}
-html:is([data-theme],:not([data-theme])) body .sp-drawer .brief .sub .subq{font-size:19px;line-height:25px;margin-top:12px}
-html:is([data-theme],:not([data-theme])) body .sp-drawer .brief :is(h5.tsec,h5.authored-hdr){font-size:24px;line-height:30px;letter-spacing:-.3px}
-html:is([data-theme],:not([data-theme])) body .sp-drawer .brief :is(h5.tsec,h5.sp-h){margin:44px 0 14px}
-html:is([data-theme],:not([data-theme])) body .sp-drawer .brief.sp .sp-n{min-width:30px;height:30px;border-radius:9px;font-size:15px}
+body .sp-drawer .brief > h4{font-size:32px;line-height:38px;letter-spacing:-.5px}
+body .sp-drawer .brief > h4::after{vertical-align:7px}
+body .sp-drawer .brief .sub{font-size:16px;line-height:22px;margin-bottom:24px}
+body .sp-drawer .brief .sub .subq{font-size:19px;line-height:25px;margin-top:12px}
+body .sp-drawer .brief :is(h5.tsec,h5.authored-hdr){font-size:24px;line-height:30px;letter-spacing:-.3px}
+body .sp-drawer .brief :is(h5.tsec,h5.sp-h){margin:44px 0 14px}
+body .sp-drawer .brief.sp .sp-n{min-width:30px;height:30px;border-radius:9px;font-size:15px}
 body:has(> .sp-drawer) .sp-card{z-index:80}
 @media (--not-phone){
-html:is([data-theme],:not([data-theme])) body:not(.qx-rhp) > aside.sp-drawer{top:var(--qx-dt,24px);left:var(--qx-dl,auto);right:auto;bottom:auto;width:var(--qx-dw,min(720px,90vw));height:var(--qx-dh,calc(100vh - 48px));max-height:none;border-radius:24px}
+body:not(.qx-rhp) > aside.sp-drawer{top:var(--qx-dt,24px);left:var(--qx-dl,auto);right:auto;bottom:auto;width:var(--qx-dw,min(720px,90vw));height:var(--qx-dh,calc(100vh - 48px));max-height:none;border-radius:24px}
 }
 @media (--phone){
-html:is([data-theme],:not([data-theme])) body:not(.qx-rhp) > aside.sp-drawer{top:calc(env(safe-area-inset-top,0px) + 10px);left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px));width:auto;height:auto;max-height:none;border-radius:24px;padding:12px 10px 20px}
+body:not(.qx-rhp) > aside.sp-drawer{top:calc(env(safe-area-inset-top,0px) + 10px);left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px));width:auto;height:auto;max-height:none;border-radius:24px;padding:12px 10px 20px}
 }
-html:is([data-theme],:not([data-theme])) body:not(.qx-rhp) > aside.sp-drawer{z-index:160}
-html:is([data-theme],:not([data-theme])) body:not(.qx-rhp):has(> .sp-drawer) > .sp-scrim{z-index:159}
-html:is([data-theme],:not([data-theme])) body:not(.qx-rhp):has(> .sp-drawer) .sp-card{z-index:161}
-html:is([data-theme],:not([data-theme])) body > aside.sp-drawer.qx-g{transition:transform .46s cubic-bezier(.2,.9,.24,1.06),border-radius .46s ease,opacity .3s ease}
-html:is([data-theme],:not([data-theme])) body > aside.sp-drawer.qx-g > *{transition:opacity .22s ease .14s}
-html:is([data-theme],:not([data-theme])) body > aside.sp-drawer.qx-g0 > *{opacity:0}
+body:not(.qx-rhp) > aside.sp-drawer{z-index:160}
+body:not(.qx-rhp):has(> .sp-drawer) > .sp-scrim{z-index:159}
+body:not(.qx-rhp):has(> .sp-drawer) .sp-card{z-index:161}
+body > aside.sp-drawer.qx-g{transition:transform .46s var(--bnc),border-radius .46s var(--spr),opacity .3s var(--spr)}
+body > aside.sp-drawer.qx-g > *{transition:opacity .22s var(--spr) .14s}
+body > aside.sp-drawer.qx-g0 > *{opacity:0}
 @media (--reduced-motion){
-html:is([data-theme],:not([data-theme])) body > aside.sp-drawer.qx-g{transition:none}
+body > aside.sp-drawer.qx-g{transition:none}
 }

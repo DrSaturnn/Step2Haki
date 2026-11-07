@@ -302,7 +302,9 @@ def review(batch, rnd, opus, sonnet, since_round=None, per_lane=0, note=None):
         open(os.path.join(lane, 'LANE_PACKET.md'), 'w').write('\n'.join(packet) + '\n')
         n = len(group)
         budget = min(25, 3 + n + 2)
-        open(os.path.join(lane, 'INSTRUCTIONS.md'), 'w').write((RULES % {
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import style_card  # the writing card goes first in every lane's instructions (D-20261106-11)
+        open(os.path.join(lane, 'INSTRUCTIONS.md'), 'w').write(style_card.card() + '\n---\n\n' + (RULES % {
             'aliases': os.path.join(WS, 'repair', 'efficiency', 'ALIASES.json'), 'abbrev': allow,
             'receipt': os.path.join(lane, 'receipt.md'), 'budget': budget}) + (open(note).read() if note else ''))
         role = 'patch-review-opus' if model == 'opus' else 'patch-review'

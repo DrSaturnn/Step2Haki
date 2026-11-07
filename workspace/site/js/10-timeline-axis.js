@@ -1,4 +1,4 @@
-/* Timeline axis labels (s124). Greedy two-line layout for every .rax: each label stays on line 1 if it clears the label
+/* Timeline axis labels. Greedy two-line layout for every .rax: each label stays on line 1 if it clears the label
    before it (and the end arrow), else drops to line 2, else hides. Re-runs whenever an axis changes width (panels opening,
    drawers, resizes). Nothing is stored. */
 (function(){

@@ -1,4 +1,4 @@
-/* Workup stages as headed cards (s127): move each stage label into its card as the card's header. Stages without a card
+/* Workup stages as headed cards: move each stage label into its card as the card's header. Stages without a card
    keep their label where it is. Runs once at load; nothing is stored. */
 (function(){
   'use strict';

@@ -23,12 +23,15 @@ and flags, the newest of each saying "Verdict: PASS" on a "deps:" line that matc
 (brief = the brief HTML the folder builds; live = the brief as it stands on the page, so any edit to the live
 brief, even a small approval-gated fix, makes all four receipts stale; bank = its practice section; facts, claims, outline = the folder's facts.json,
 claim_map.json, outline.json; siblings = every brief title on the page; display = the page's style and script blocks
-plus shots.py; specs = STANDING_DIRECTIONS.md, WORKUP_5A_SPEC.md, MIGRATION_CONTRACT.md). A change re-opens only the
+plus shots.py; specs = STANDING_DIRECTIONS.md, WORKUP_5A_SPEC.md, MIGRATION_CONTRACT.md,
+TEXTBOOK_STYLE.md, and CARD_SPEC.md for cards). A change re-opens only the
 parts that depend on it. A legacy merged review (<id>_holistic_rN.md) no longer makes a brief READY.
 Exit 0 READY (with --mech: mechanical pass); 2 mechanical pass, not ready; 1 with one "FIX <check>: ..." line per
 mechanical problem.
 """
 import glob
+import importlib.util as _ilu, os as _os
+_dp = _ilu.spec_from_file_location('docs_path', _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'docs_path.py')); docs_path = _ilu.module_from_spec(_dp); _dp.loader.exec_module(docs_path)
 import hashlib
 import html as H
 import json
@@ -322,6 +325,16 @@ class Verify:
         self.warn += ['warn lint %s' % f for f in found]
         self.G('lint', '%d advisory warning(s) (tools/spine/lint.py; runbook S6 item 15)' % len(found))
 
+    # ---- 8c. prose (D-20261106-9, D-20261106-11): a brief with prose lint hits is not READY
+    def prose(self):
+        import prose_lint
+        hits = prose_lint.lint_brief(self.brief_html)
+        if hits:
+            eg = '; '.join('%s: %s' % (h['pattern'], h['text'][:50]) for h in hits[:4])
+            self.F('prose', '%d prose lint hit(s) (tools/spine/prose_lint.py PAGE --brief %s): %s' % (len(hits), self.bid, eg))
+        else:
+            self.G('prose', 'no prose lint hits (TEXTBOOK_STYLE.md)')
+
     # ---- 9. preview build and page checks
     def preview(self):
         sys.path.insert(0, os.path.join(WS, 'tools'))
@@ -382,6 +395,7 @@ class Verify:
                 self.live()
                 self.v1()
                 self.lint()
+                self.prose()
                 if not self.fast:
                     self.preview()
         finally:
@@ -400,7 +414,8 @@ class Verify:
     # current (a layout or new display-pattern batch still runs the display part, and its FAIL still blocks)
     OPTIONAL = ('display',)
     PAGE = os.path.join(WS, 'index.html')
-    SPECS = ('repair/efficiency/STANDING_DIRECTIONS.md', 'repair/efficiency/WORKUP_5A_SPEC.md', 'tools/MIGRATION_CONTRACT.md')
+    SPECS = (docs_path.doc('STANDING_DIRECTIONS.md'), 'repair/efficiency/WORKUP_5A_SPEC.md', 'tools/MIGRATION_CONTRACT.md',
+             'repair/efficiency/TEXTBOOK_STYLE.md')
 
     def deps(self, html=None, claims=None, outline=None):
         """the dependency hashes each review part is bound to (10 hex characters each). 'live' is the brief as it

@@ -6,11 +6,9 @@
    Source of weights: repair/nbme/outlines.json (NBME content outlines).        */
 (function(){
 'use strict';
-/* s85: one outline per exam (Jonathan 2026-10-04: "specific for every clerkship"). Rows list the exam's own
-   categories; a brief counts in the row of its first data-bp code, or in that exam's "Other systems" row.
-   Sources, opened 2026-10-04: nbme.org subject exam content outlines (Pediatrics, Psychiatry, Medicine, Surgery,
-   Obstetrics & Gynecology, Clinical Neurology; Family Medicine as fetched 2026-09-24) and usmle.org Step 2 CK
-   content specifications. */
+/* one outline per exam. Rows list the exam's own categories; a brief counts in the row of its first data-bp code, or
+   in that exam's "Other systems" row. Sources: nbme.org subject exam content outlines (Pediatrics, Psychiatry, Medicine,
+   Surgery, Obstetrics & Gynecology, Clinical Neurology, Family Medicine) and usmle.org Step 2 CK content specifications. */
 var OUT={"codes": {"gen": "General Principles, Normal Age-Related Findings, Care of the Well Patient", "immune": "Immune System", "heme": "Blood & Lymphoreticular System", "behav": "Behavioral Health", "neuro": "Nervous System & Special Senses", "skin": "Skin & Subcutaneous Tissue", "msk": "Musculoskeletal System", "cv": "Cardiovascular System", "resp": "Respiratory System", "gi": "Gastrointestinal System", "renal": "Renal & Urinary System", "newborn": "Disorders of the Newborn & Congenital Disorders", "preg": "Pregnancy, Childbirth & the Puerperium", "repro_f": "Female Reproductive System & Breast", "repro_m": "Male Reproductive System", "endo": "Endocrine System", "multi": "Multisystem Processes & Disorders", "biostat": "Biostatistics, Epidemiology/Population Health & Medical Literature", "social": "Social Sciences (ethics, consent, physician-patient relationship)"}};
 var CODES=OUT.codes;
 function R(codes,lo,hi,label){ return {codes:codes.split(' '),r:[lo,hi],label:label||CODES[codes.split(' ')[0]]}; }

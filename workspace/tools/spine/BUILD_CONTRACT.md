@@ -32,8 +32,8 @@ practice or a guideline differs from the board answer, teach the board answer an
 - Helpers: `tools/spine/author_lib.py` (Grep `^def ` for the list: t, M, p, pop, dr, h, table, steps, live_src, bank,
   tail_fix, pairs_fix, write, build, dispositions).
 - Rules, read by Grep with a line range, only for the choice in front of you:
-  `repair/efficiency/STANDING_DIRECTIONS.md`, `{spine_spec}`, `repair/efficiency/WORKUP_5A_SPEC.md`,
-  `repair/efficiency/BATCH_RUNBOOK.md` section 3 (the standing calls; Grep "## 3." -A 26), `repair/efficiency/ABBREV.json`,
+  `/home/claude/step2haki-private/docs/STANDING_DIRECTIONS.md`, `{spine_spec}`, `repair/efficiency/WORKUP_5A_SPEC.md`,
+  `/home/claude/step2haki-private/docs/BATCH_RUNBOOK.md` section 3 (the standing calls; Grep "## 3." -A 26), `repair/efficiency/ABBREV.json`,
   `repair/efficiency/ALIASES.json`.
 
 ## S1. Board evidence first

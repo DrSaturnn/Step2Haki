@@ -1,11 +1,10 @@
-/* s143: the Lithium Glance mockup's sidebar as one component (Jonathan 2026-10-15). Presentation only: no text is
-   invented. The old #navlinks list stays in the page, hidden, because the shelf, Board-style only and search scripts
-   write their filters onto it; this list mirrors its visibility and counts and draws the mockup's parts:
-   systems that fold (chevron, name, count), brief tiles, and under the current brief its step rail with the fill and
-   one lens that glides between steps. A step is current once its heading passes 32% of the window (the mockup's
-   rule); a click on a step takes effect at once and the spy waits 0.9 s. The list keeps the current step in view.
-   The switches the mockup's sidebar does not carry (shelf, Board-style only, Recall, themes, accent, the change log)
-   move into a display sheet behind the round button in the brand row. */
+/* The sidebar as one component. Presentation only: no text is invented. The old #navlinks list stays in the page,
+   hidden, because the shelf, Board-style only and search scripts write their filters onto it; this list mirrors its
+   visibility and counts and draws: systems that fold (chevron, name, count), brief tiles, and under the current brief
+   its step rail with the fill and one lens that glides between steps. A step is current once its heading passes 32% of
+   the window; a click on a step takes effect at once and the spy waits 0.9 s. The list keeps the current step in view.
+   The switches the sidebar does not carry (shelf, Board-style only, Recall, themes, accent, the change log) move into
+   a display sheet behind the round button in the brand row. */
 (function(){
   "use strict";
   var nav = document.getElementById('nav'), old = document.getElementById('navlinks');
@@ -46,7 +45,7 @@
     sheet(cfg, brand);
   }
 
-  /* s161b r5: the shelf card; the shelf <select> lies invisibly over it */
+  /* the shelf card; the shelf <select> lies invisibly over it */
   var SVG_SHELF = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2.5v9.5M6 2.5v9.5M9.2 3.2l2.6 8.8M1.5 14h13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path></svg>';
   var SVG_DOWN = '<svg width="12" height="8" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
   function shelfCard(before, sel){   // before: the search pill, which stays on top
@@ -54,7 +53,7 @@
     row.appendChild(el('span', 'ic', SVG_SHELF));
     var t = el('span', 'tx'); t.appendChild(el('span', 'k')).textContent = 'Shelf'; var v = t.appendChild(el('span', 'v')); row.appendChild(t);
     row.appendChild(el('span', 'ch', SVG_DOWN)); row.appendChild(sel);
-    before.parentNode.insertBefore(row, before.nextSibling);   // r6: under the search
+    before.parentNode.insertBefore(row, before.nextSibling);   // under the search
     function show(){ var o = sel.options[sel.selectedIndex]; v.textContent = o ? txt(o).replace(/\s+\u2013\s+soon$/, '') : 'Step 2'; }
     sel.addEventListener('change', function(){ setTimeout(show, 0); });
     document.addEventListener('ax-shelf', show); show();
@@ -67,7 +66,7 @@
     nav.appendChild(s);
     function fill(){
       var sp = nav.querySelector('#navscroll > .shelfpick'), md = document.getElementById('modes');
-      var pl = nav.querySelector('.axn-srch'), ss = sp && sp.querySelector('select');   // s161b r5: the shelf picker is a card under the search, not a sheet row
+      var pl = nav.querySelector('.axn-srch'), ss = sp && sp.querySelector('select');   // the shelf picker is a card under the search
       if(ss && pl && !nav.querySelector('.axn-shelfrow')) shelfCard(pl, ss);
       if(md && md.parentNode !== s) s.appendChild(md);
       var b = brand && brand.querySelector('.axbuild'); if(b && b.parentNode !== s) s.appendChild(b);
@@ -198,8 +197,8 @@
     }
     if(step !== cur.step){ cur.step = step; paint(); keep(rail && rail.links[step], true); }
   }
-  function setBrief(id){   // s161b (Jonathan 2026-11-03, "one home per brief"): the rail always sits under the home tile (the system tile; a
-                           // Presentations-only brief's home is its Presentations tile); the other tile is marked, never current (was s146c: the
+  function setBrief(id){   // one home per brief: the rail always sits under the home tile (the system tile; a
+                           // Presentations-only brief's home is its Presentations tile); the other tile is marked, never current (earlier: the
                            // rail followed the tile clicked or the row scrolled from, so it hopped between groups and depended on scroll direction)
     var prev = cur.brief, all = tiles[id] || [], it = byId[id] || null, s = scroller();
     if(prev) (tiles[prev] || []).forEach(function(t){ t.el.removeAttribute('aria-current'); t.el.removeAttribute('data-also'); });
@@ -220,7 +219,7 @@
   function scroller(){ var s = document.getElementById('navscroll'); return s && s.scrollHeight > s.clientHeight + 4 ? s : null; }
   // the mockup's rule: a new brief lands 70 px below the list's top; a step outside the band is brought to the middle
   function keep(n, smooth, top){
-    if(stay){ if(!top) return; n = stay; }   // s161b r2: browsing Presentations, follow its tile, not the rail
+    if(stay){ if(!top) return; n = stay; }   // browsing Presentations, follow its tile
     var s = scroller(); if(!s || !n || nav.classList.contains('sxon')) return;
     var lr = s.getBoundingClientRect(), r = n.getBoundingClientRect();
     if(!lr.height) return;
@@ -262,11 +261,11 @@
     if(a.getAttribute('aria-disabled') === 'true') return;
     if(a.classList.contains('axn-s')){ stay = null; go(a.getAttribute('href').slice(1), +a.dataset.i); }
     else { var id = a.dataset.id;
-      stay = byId[id] && byId[id].el !== a ? a : null;   // s161b r2: a click in Presentations keeps the sidebar there
-      if(cur.brief === id && byId[id]) keep(byId[id].el, true, true);   // s161b: already current, so bring its home tile (or, browsing, this tile) into view
+      stay = byId[id] && byId[id].el !== a ? a : null;   // a click in Presentations keeps the sidebar there
+      if(cur.brief === id && byId[id]) keep(byId[id].el, true, true);   // already current, so bring its home tile (or, browsing, this tile) into view
       go(id); }
   }
-  /* brief:go id (s164c): a jump to a brief from elsewhere on the page (07 drawer links) takes the same path as a sidebar
+  /* brief:go id: a jump to a brief from elsewhere on the page (07 drawer links) takes the same path as a sidebar
      click: the hash, then the target seated until it holds while the briefs above it build */
   AX.on('brief:go', function(id){ if(AX.brief.ensure(id)) go(id); });
   // nav:reveal {id, pres}: open the group holding a brief's tile (its Presentations tile when pres) at the top of the list

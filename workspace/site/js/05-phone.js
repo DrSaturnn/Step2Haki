@@ -31,7 +31,7 @@ function makeHead(){
   ti = head.querySelector('.ph-ti b'); sub = head.querySelector('.ph-ti span'); rec = head.querySelector('.ph-rec');
   rec.addEventListener('click', function(){
     B.classList.toggle('study');
-    try{ localStorage.setItem('ax-study', B.classList.contains('study') ? '1' : '0'); }catch(e){}
+    AX.settings.set('study', B.classList.contains('study') ? '1' : '0');
     paintRec();
   });
   head.querySelector('.ph-ti').addEventListener('click', function(){ if(shown) shown.go(shown.el); });

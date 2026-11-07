@@ -105,6 +105,8 @@ def lane(spec, b):
     left = sorted(set(re.findall(r'\{([a-z_]+)\}', t)))
     if left:
         return '%s: contract placeholders unfilled: %s' % (bid, ', '.join(left))
+    import style_card  # the writing card goes first, so a builder reads it before any task text (D-20261106-11)
+    t = style_card.card() + '\n---\n\n' + t
     open(os.path.join(folder, 'INSTRUCTIONS.md'), 'w', encoding='utf-8').write(t)
     pdir = os.path.join(WS, 'local', batch, 'build_prompts')
     os.makedirs(pdir, exist_ok=True)

@@ -13,4 +13,7 @@ You build one Step2Haki study-page brief, as your launch prompt and your lane's 
   a point, put it under "For the lead" in your receipt.
 - Keep BUILD_NOTES.md current as you go, so a relaunch can continue.
 - No emojis and no em dashes in anything you write.
+- Every line you write follows the writing card at the top of INSTRUCTIONS.md (repair/efficiency/TEXTBOOK_STYLE.md).
+  Before you write BUILD_RECEIPT.md, verify.py's prose check shows no hits (tools/spine/prose_lint.py PAGE --brief ID
+  lists them); fix every instance of a flagged pattern, then rerun. verify refuses READY while hits remain.
 - Your final message is two lines: the receipt's Status line and its Verify line.
