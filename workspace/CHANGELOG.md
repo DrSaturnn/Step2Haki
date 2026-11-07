@@ -2,6 +2,228 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-06 s164c: load briefs on demand; prebuilt search index
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (209):
+  - scaphoid (Wrist and Hand Pain and Numbness): markup changed
+  - backpain (Low Back Pain in an Adult): markup changed
+  - hippos (Hip Injury in an Adult): markup changed
+  - gtps (Hip and Thigh Pain and Numbness): markup changed
+  - septic-bursitis (Hot Joint or Bursa in an Adult): markup changed
+  - limp (The Limping Child): markup changed
+  - nursemaid (Arm Injury in a Young Child): markup changed
+  - growing-pains (Leg Pain in a Child): markup changed
+  - bone-tumors (Bone Lesions in a Child): markup changed
+  - shoulder-rom (Shoulder Pain): markup changed
+  - ped-murmur (Heart Murmurs in a Child): markup changed
+  - right-murmurs (Heart Murmurs in an Adult): markup changed
+  - newborn-cyanosis (Cyanosis in the Newborn): markup changed
+  - myocarditis (Heart Failure in a Child): markup changed
+  - cough (Chronic Cough): markup changed
+  - hypoxemia-mech (Hypoxemia): markup changed
+  - airway (Noisy Breathing in a Child): markup changed
+  - uri (Respiratory Infection in a Child): markup changed
+  - bpd (Lung Disease in the Newborn and Preterm Infant): markup changed
+  - cholestasis (Abnormal Liver Tests): markup changed
+  - infant-stool (Stool Changes in a Well Infant): markup changed
+  - feeding-refusal (Feeding an Infant or Toddler): markup changed
+  - rlq-pain (Right Lower Quadrant Pain): markup changed
+  - peds-constipation (Constipation in a Child): markup changed
+  - cyclic-vomiting (Recurrent Vomiting in a Child): markup changed
+  - occult-gi-bleed (GI Bleeding in a Child): markup changed
+  - bs-umbilical (Umbilical Findings in a Newborn): markup changed
+  - scrotum (Scrotal Pain and Masses): markup changed
+  - polyuria (Polyuria): markup changed
+  - bs-incontinence (Urinary Incontinence): markup changed
+  - bs-abdominal-mass (Abdominal Mass in a Young Child): markup changed
+  - bs-distal-rta (Hypokalemia and Acid-Base Disorders in a Child): markup changed
+  - aq-puffy-eyes (Child with Puffy Eyes): markup changed
+  - lymphadenitis (Lymphadenopathy): markup changed
+  - herpangina (Oral Lesions in a Child): markup changed
+  - bs-fever-rash-arthralgia (Fever and Rash in a Child): markup changed
+  - aq-infant-fever (Fever in an Infant): markup changed
+  - voices (Hears Voices or Holds Odd Beliefs): markup changed
+  - dementia (Cognitive Decline and Dementia in an Adult): markup changed
+  - toxidrome (Suspected Overdose or Toxidrome): markup changed
+  - pmr (Polymyalgia Rheumatica): markup changed
+  - oa-pharm (Osteoarthritis): markup changed
+  - septic-hip (Septic Arthritis and Transient Synovitis in a Child): markup changed
+  - sjia (Juvenile Idiopathic Arthritis): markup changed
+  - scfe (Slipped Capital Femoral Epiphysis): markup changed
+  - myositis-ossificans (Muscle Contusion and Myositis Ossificans): markup changed
+  - scheuermann (Adolescent Kyphosis): markup changed
+  - bs-puncture-osteomyelitis (Foot Puncture Wounds and Osteomyelitis): markup changed
+  - bs-torticollis (Torticollis and Plagiocephaly in an Infant): markup changed
+  - bs-brachial-plexus (Brachial Plexus Injury at Birth): markup changed
+  - growth (Developmental Milestones and Normal Growth): markup changed
+  - neonatal-maternal-labs (Maternal Effects in the Newborn): markup changed
+  - aneuploidy (Genetic Syndromes Recognized at Birth): markup changed
+  - bs-learning (School Difficulty in a Child): markup changed
+  - bs-nat-fracture (Suspected Child Abuse): markup changed
+  - bs-shock (Shock in Children): markup changed
+  - bs-preterm-followup (Follow-Up of the Preterm Infant): markup changed
+  - aq-infant-hypotonia (Hypotonia in an Infant): markup changed
+  - chf (Heart Failure): markup changed
+  - ascvd (Lipid Screening and Statin Therapy): markup changed
+  - angina (Stable Ischemic Heart Disease): markup changed
+  - ie-ppx (Infective Endocarditis Prophylaxis): markup changed
+  - dvt (Venous Thromboembolism): markup changed
+  - cyanotic-chd (Congenital Heart Disease): markup changed
+  - htn-drugs (Hypertension in an Adult): markup changed
+  - kawasaki (Kawasaki Disease): markup changed
+  - arf (Acute Rheumatic Fever): markup changed
+  - del22q11 (22q11.2 Deletion Syndrome): markup changed
+  - bs-adolescent-bp (High Blood Pressure in a Child or Adolescent): markup changed
+  - copd (Obstructive Lung Disease): markup changed
+  - pneumoconiosis (Occupational Lung Disease): markup changed
+  - rhinitis (Rhinitis): markup changed
+  - sinopulm-structural (Recurrent Respiratory Infection and Structural Lung Disease): markup changed
+  - scd-dyspnea (Sickle Cell Disease and Trait): markup changed
+  - asthma (Asthma): markup changed
+  - liver-preg (Liver Disease in Pregnancy): markup changed
+  - masld (Fatty Liver Disease): markup changed
+  - zenker (Zenker Diverticulum): markup changed
+  - fap (Hereditary Polyposis Syndromes): markup changed
+  - neonatal-jaundice (Jaundice in a Newborn): markup changed
+  - neonatal-bowel (The Distended Abdomen in a Newborn or Infant): markup changed
+  - bs-impaction (Constipation and Fecal Impaction in an Adult): markup changed
+  - bs-tef (Tracheoesophageal Fistula and Esophageal Atresia): markup changed
+  - bs-wilson (Wilson Disease): markup changed
+  - parkinson (Parkinson Disease and Parkinsonism): markup changed
+  - pyelo (Pyelonephritis): markup changed
+  - bph (Benign Prostatic Hyperplasia and Urinary Retention): markup changed
+  - nephropathy (Diabetes Complications and Annual Care): markup changed
+  - hematuria (Hematuria and Nephritic Syndrome): markup changed
+  - hypercalcemia (Hypercalcemia): markup changed
+  - peds-uti-recurrent (Urinary Tract Infection in a Child): markup changed
+  - enuresis (Enuresis): markup changed
+  - peds-aki (Acute Kidney Injury in a Child): markup changed
+  - nephrotic-child (Proteinuria and Nephrotic Syndrome in a Child): markup changed
+  - bs-puv (Posterior Urethral Valves): markup changed
+  - thyroid (Thyroid Disease in an Adult): markup changed
+  - gynecomastia (Male Breast Enlargement): markup changed
+  - prolactin (Hyperprolactinemia): markup changed
+  - osteoporosis (Osteoporosis Screening and Treatment): markup changed
+  - congenital-hypothyroid (Congenital Hypothyroidism): markup changed
+  - tumor-syndromes (Inherited Tumor Syndromes): markup changed
+  - precocious-puberty (Puberty): markup changed
+  - homocystinuria (Tall Stature and Marfanoid Habitus): markup changed
+  - bs-short-stature (Abnormal Growth in a Child): markup changed
+  - anemia-thrombocytopenia (Anemia with Thrombocytopenia): markup changed
+  - drug-hemolysis (Hemolytic Anemia): markup changed
+  - dipstick-mismatch (Dark Urine: Hemoglobin, Myoglobin or Blood): markup changed
+  - microcytic-anemia (Microcytic Anemia): markup changed
+  - factor-inhibitor (Hemophilia): markup changed
+  - transfusion (Transfusion Reactions): markup changed
+  - bs-leukemia (Acute Leukemia in a Child): markup changed
+  - aq-bruising (Bruising and Purpura in a Child): markup changed
+  - tb (Tuberculosis): markup changed
+  - meningitis (Bacterial Meningitis): markup changed
+  - hiv-vax (Vaccines in Special Populations): markup changed
+  - dtap (Childhood Vaccine Schedule and Contraindications): markup changed
+  - cervicitis (Cervicitis and Pelvic Inflammatory Disease): markup changed
+  - ig-panel (Antibody Deficiencies): markup changed
+  - rmsf (Tick-Borne Illness): markup changed
+  - cgd (Neutrophil Disorders: Number and Function): markup changed
+  - bs-pta (Deep Neck Infections): markup changed
+  - bs-torch (Congenital Infections (TORCH)): markup changed
+  - bs-neonatal-sepsis (Fever and Sepsis in the Newborn): markup changed
+  - bs-anaphylaxis (Anaphylaxis): markup changed
+  - bs-isolation (Isolation Precautions): markup changed
+  - bs-foodborne (Infectious Diarrhea): markup changed
+  - hearing (Hearing Loss and Chronic Ear Disease): markup changed
+  - redeye (The Red Eye): markup changed
+  - cluster (Primary Headache in an Adult): markup changed
+  - sellar-mass (Brain Tumors in a Child): markup changed
+  - peds-headache-imaging (Headache in a Child: Imaging and Treatment): markup changed
+  - febrile-seizure (Seizure with Fever in a Child): markup changed
+  - cerebral-palsy (Cerebral Palsy): markup changed
+  - abrs-complications (Sinusitis and Its Complications): markup changed
+  - vpshunt (Hydrocephalus and Shunt Complications): markup changed
+  - retinitis-pigmentosa (Night Blindness): markup changed
+  - tics (Tics and Tic Disorders): markup changed
+  - peds-sleep (Sleep Problems): markup changed
+  - bs-tethered (Spinal Dysraphism): markup changed
+  - bs-reye (Encephalopathy and Cerebral Edema in a Child): markup changed
+  - bs-peds-stroke (Stroke in a Child or Adolescent): markup changed
+  - bs-imprinting (Imprinting Disorders: Angelman and Prader-Willi): markup changed
+  - bs-eyelid-lump (Eyelid Lumps and Swelling in a Child): markup changed
+  - aq-child-headache (Headache in a School-Age Child): markup changed
+  - psoriasis (Scaly Rashes): markup changed
+  - cellulitis (Skin and Soft Tissue Infection): markup changed
+  - eczemaherp (Atopic Dermatitis): markup changed
+  - peds-alopecia (Hair Loss in a Child): markup changed
+  - neonatal-rash (Rashes in the Newborn and Infant): markup changed
+  - bs-scabies (Scabies): markup changed
+  - preg-vax (Vaccines in Pregnancy): markup changed
+  - cervical (Cervical Cancer Screening): markup changed
+  - ectopic (Ectopic Pregnancy): markup changed
+  - hpv (Adolescent Vaccines): markup changed
+  - adolescent-aub (Abnormal Uterine Bleeding): markup changed
+  - contraception (Contraception): markup changed
+  - teratogens (Teratogenic Exposures): markup changed
+  - primary-amenorrhea (Primary Amenorrhea): markup changed
+  - bs-genital-ulcer (Genital Ulcers): markup changed
+  - smoking (Preventive Care: Ranking Interventions): markup changed
+  - preop (Preoperative Evaluation): markup changed
+  - elder (Elder Abuse): markup changed
+  - vegan (Vitamins and Nutritional Deficiencies): markup changed
+  - bs-adolescent-confid (Adolescent Confidentiality): markup changed
+  - capacity (Decision-Making Capacity and Informed Consent): markup changed
+  - psychosis-duration (Psychosis): markup changed
+  - sz-psychosocial (Schizophrenia: Long-Term Care): markup changed
+  - bipolar-mania (Bipolar Disorder): markup changed
+  - mdd (Major Depressive Disorder): markup changed
+  - pms-pmdd (Premenstrual Syndrome and Premenstrual Dysphoric Disorder): markup changed
+  - cluster-b (Cluster B Personality Disorders): markup changed
+  - cluster-c (Cluster C Personality Disorders): markup changed
+  - panic (Panic Disorder and Other Anxiety): markup changed
+  - ocd (Obsessive-Compulsive and Related Disorders): markup changed
+  - somatic (Somatic Symptom and Related Disorders): markup changed
+  - trauma-stress (Trauma, Stress and Dissociative Disorders): markup changed
+  - eating-disorders (Eating Disorders): markup changed
+  - gppd (Genito-Pelvic Pain/Penetration Disorder): markup changed
+  - sexual-dysfunction (Sexual Dysfunction): markup changed
+  - defense-mechanisms (Defense Mechanisms): markup changed
+  - delirium (Delirium): markup changed
+  - substance (Substance Intoxication and Withdrawal): markup changed
+  - stages-change (Stages of Change and Motivational Interviewing): markup changed
+  - psych-medical (Medication- and Illness-Induced Psychiatric Disorders): markup changed
+  - disruptive-behavior (Disruptive Behavior in a Child): markup changed
+  - ssri-effects (SSRI Adverse Effects): markup changed
+  - antipsych-effects (Antipsychotic Adverse Effects): markup changed
+  - lithium-effects (Lithium Therapy): markup changed
+  - tca-tox (Anticholinergic and Tricyclic Toxicity): markup changed
+  - suicide-risk (Suicide Risk Assessment): markup changed
+  - ipv (Intimate Partner Violence): markup changed
+  - pc-ssri (SSRIs): markup changed
+  - pc-snri (SNRIs): markup changed
+  - pc-antidep (Other antidepressants): markup changed
+  - pc-tca (TCAs): markup changed
+  - pc-maoi (MAOIs): markup changed
+  - pc-atypical (Atypical antipsychotics): markup changed
+  - pc-typical (Typical antipsychotics): markup changed
+  - pc-antichol (Anticholinergic): markup changed
+  - pc-td (Tardive dyskinesia agents): markup changed
+  - mood-anticonv (Lithium and anticonvulsants): markup changed
+  - pc-cog (Cognitive agents): markup changed
+  - pc-benzo (Benzodiazepines): markup changed
+  - pc-anxiety (Other anxiety agents): markup changed
+  - adhd-meds (ADHD): markup changed
+  - pc-sleep (Sleep agents): markup changed
+  - pc-orexin (Orexin antagonists): markup changed
+  - sud-meds (Substance use and cessation): markup changed
+  - pc-other (Other agents): markup changed
+Other page changes (nav, headers, scripts): +10549 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 43 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: NOT CHECKED (repair/sources missing: restore axbx-local-only.tar.gz)
+```
+
 ## 2026-11-06 s164b: UI refactor: styles and scripts from site/ as one minified bundle each, themes as color tokens
 
 ```
