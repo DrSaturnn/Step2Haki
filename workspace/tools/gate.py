@@ -706,7 +706,7 @@ def check_lints(page, page_path, ref_html, g):
         for bid, n in sorted(cur.items()):
             was = pbase.get(bid)
             if (was is None and n > 0) or (was is not None and n > was):
-                g.fail('prose-lint', bid, 'brief %s: %d prose hits (baseline %s); run tools/spine/prose_lint.py PAGE --brief %s' % (bid, n, 'none' if was is None else was, bid))
+                g.fail('prose-lint', bid, '%s: %d prose hits (baseline %s); run tools/spine/prose_lint.py PAGE --brief %s' % (bid, n, 'none' if was is None else was, bid))
     if ref_html is not None:
         ref_inner = {b.id: b.inner for b in briefs(ref_html)}
         for b in briefs(page):
@@ -715,7 +715,7 @@ def check_lints(page, page_path, ref_html, g):
             hits = prose_lint.lint_brief(b.inner)
             if hits:
                 eg = '; '.join('%s: %s' % (h['pattern'], h['text'][:60]) for h in hits[:3])
-                g.fail('prose-touched', b.id, 'brief %s changed and has %d prose hits (%s)' % (b.id, len(hits), eg))
+                g.fail('prose-touched', b.id, '%s changed and has %d prose hits (%s)' % (b.id, len(hits), eg))
 
 def main(argv):
     args, page_path, base, attr_ref = list(argv), None, 'HEAD', None

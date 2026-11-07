@@ -251,6 +251,9 @@ _ITEM = r"(?:(?:an?) )?[A-Za-z0-9][\w'’-]*(?: [A-Za-z0-9][\w'’-]*){0,2}"
 # prose, not a bare list.
 ARTICLE_MIXED = re.compile(r"(?:^|(?<=[:;(\u00b7–—] )|(?<=[:;(])|(?<=-> ))" + _ITEM + r"(?:, " + _ITEM + r"){2,}"
                            r"(?:,? (?:or|and) " + _ITEM + r")?(?=\s*(?:[.;:)\u00b7–—]|->|$))")
+# a run whose first item follows one of these words is an introductory phrase plus a clause, not a list
+INTRO_PREP = {'as', 'with', 'without', 'in', 'for', 'on', 'after', 'before', 'from', 'by', 'at', 'to', 'of', 'into',
+              'under', 'over', 'like', 'during', 'once'}
 LIST_STOP = re.compile(r"\b(?:with|to|then|often|usually|on|in|for|from|at|by|as|such|than|the)\b", re.I)
 # a verb within three words after the run means the last item opened a clause ("..., and an intervention is ranked")
 ARTICLE_ITEM = re.compile(r"(?:^|, |(?:or|and) )(?:an?) ", re.I)
@@ -284,7 +287,7 @@ ALLOW = [
     (r"\bwhether or not\b", 'fixed phrase, not a contrast'),
     (r"^(?:[\w'’ -]{1,30}, ){2,}not [\w'’-]+(?: [\w'’-]+)?(?:, [\w'’ -]{1,30})*$", 'negative finding as one item of a '
                                                                                 'findings list ("weak, areflexic, alert, not dysmorphic")'),
-    (r"\botherwise (?:normal|healthy|well|intact|unremarkable|functioning|classic|ordinary|asymptomatic|uncomplicated)\b",
+    (r"\botherwise (?:an? )?(?:normal|healthy|well|intact|unremarkable|functioning|classic|ordinary|asymptomatic|uncomplicated)\b",
      'adverbial "otherwise" (in other respects), not a branch'),
     (r",\s+not (?:required|needed|necessary|both|pregnant|on purpose)\b", 'negated criterion stated as a fact '
                                                                          '("depression common, not required")'),
@@ -327,10 +330,17 @@ def header_checks(text, tag):
 def _article_lists(text):
     out, spans = [], []
     for m in ARTICLE_LIST.finditer(text):
+        g = m.group(0)
         after = ' '.join(text[m.end():].split()[:3])
-        if not CLAUSE_WORD_IN_LIST.search(m.group(0)) and not CLAUSE_WORD_IN_LIST.search(after):
-            out.append(m.group(0))
-            spans.append(m.span())
+        before = text[:m.start()].split()[-1:]
+        if CLAUSE_WORD_IN_LIST.search(g) or CLAUSE_VERBS.search(after):
+            continue
+        if before and before[0].lower() in INTRO_PREP:
+            continue                  # "As a rule, a pregnancy test", "without an emergency, a capable refusal"
+        if g.count(',') == 1 and ', or ' in g:
+            continue                  # two mutually exclusive alternatives keep "or" ("a LABA, or a medium-dose ICS")
+        out.append(g)
+        spans.append(m.span())
     for m in ARTICLE_MIXED.finditer(text):
         g = m.group(0)
         if CLAUSE_WORD_IN_LIST.search(g) or LIST_STOP.search(g) or not ARTICLE_ITEM.search(g):
@@ -372,10 +382,11 @@ def text_checks(text, region, tag='', mnemonic=False, mn_frags=()):
             wc = nwords(s)
             if wc > 30 and not any(s in f for f in mn_frags):
                 hits.append(('length_over_30', '%d words: %s...' % (wc, s[:50])))
-    # ' · ' is the page's row separator, so each fragment is its own line; the fragment lists of div.pearls and
-    # div.crit use semicolons between fragments of one item and are not counted at all
+    # counted per sentence and per ' · ' fragment (the page's row separator), so semicolons of separate entries in
+    # one tile ("Pairs with" lists) are not summed; the fragment lists of div.pearls and div.crit use semicolons
+    # between fragments of one item and are not counted at all
     if not (tag in ('div.pearls', 'div.crit') and '·' in text):
-        for line in DOT_SPLIT.split(text):
+        for line in [x for s0 in sentences(text) for x in DOT_SPLIT.split(s0)]:
             if line.count(';') > 1:
                 segs = line.split(';')
                 if max(nwords(x) for x in segs) >= 9 and any(CLAUSE_VERBS.search(x) for x in segs):
@@ -527,14 +538,12 @@ def _arg(a, flag):
 
 def _load_baseline(path):
     with open(path, encoding='utf-8') as f:
-        d = json.load(f)
-    return d.get('counts', d)
+        return json.load(f)
 
 
 def _save_baseline(path, counts):
     with open(path, 'w', encoding='utf-8') as f:
-        json.dump({'_about': 'prose_lint.py per-brief hit counts; may only go down (--tighten)',
-                   'counts': dict(sorted(counts.items()))}, f, indent=1)
+        json.dump(dict(sorted(counts.items())), f, indent=1)   # flat {brief_id: n}, the shape tools/gate.py reads
         f.write('\n')
 
 
