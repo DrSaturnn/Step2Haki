@@ -1211,13 +1211,13 @@ function boot(){
   var msp=document.querySelector('.masthead .shelfpick');
   if(msp && msp.parentNode) msp.parentNode.insertBefore(buildLauncher('mast'), msp.nextSibling);
 
-  /* phone: a fourth bar button opens the same panel */
+  /* phone: the Review tab, between Browse and Settings, opens the same panel */
   var bar=document.getElementById('mbar');
   if(bar){
     var b=el('button'); b.type='button'; b.dataset.act='review';
-    b.innerHTML='<span>Review<i class="bdg" data-n="0">0</i></span>';
-    var top=bar.querySelector('[data-act="top"]');
-    bar.insertBefore(b, top||null);
+    b.innerHTML='<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="6.5" width="14" height="13.5" rx="2.4"/><path d="M8.5 3.8h7"/><path d="M9.2 13.2l2 2 3.8-4"/></svg><span>Review<i class="bdg" data-n="0">0</i></span>';
+    var set=bar.querySelector('[data-act="settings"]');
+    bar.insertBefore(b, set||null);
     b.addEventListener('click',function(){ panelOpen()?closePanel():openPanel(b); });
   }
   paintChip();

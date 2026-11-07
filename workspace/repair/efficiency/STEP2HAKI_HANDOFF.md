@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-11-06, by Claude (s165 shipped; no batch open).
+Last updated: 2026-11-06, by Claude (s166 open: phone redesign, pilot r1 out for review).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,7 +12,17 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **s165 SHIPPED 2026-11-06** (Claude lead; offline use, site layer only, content frozen; D-20261106-5; no agents):
+- **s166 OPEN 2026-11-06** (Claude lead; phone redesign, site layer only, content frozen; D-20261106-6; no agents; lead
+  budget 60M): branch wip/s166 (public repo; not pushed from this container: the public repo attach was refused, as at
+  the s165 launch). Step: runbook 8 step 1, pilot r1 published 2026-11-06 as the private artifact "Step2Haki Phone
+  Pilot" (claude.ai/artifact/MZ4xfWgXNwGE2tgjyFPYxu), built by repair/pilots/phone/make_pilot.py from the live page and
+  this branch's site/ sources (the site/ changes are the batch itself; pilot.css, pilot.js and pilot_head.js add the
+  option picker under Settings and are not shipped). Waiting on Jonathan's pilot verdict and the four option choices
+  (Layout, Bars, Side rail, Differential) and the two STANDING phone lines. Record repair/s166/S166.md (design, checks,
+  tools still to update). Next after approval: runbook 8 steps 2 to 5 (gate, render, preflight, ui_lint, theme_gate,
+  tool updates, approval.py present, ship on "ship").
+
+- **Previous: s165 SHIPPED 2026-11-06** (Claude lead; offline use, site layer only, content frozen; D-20261106-5; no agents):
   commit 061b33f (pushed to main), page a1dfb28b4e5d (approved candidate 422cf14303b4); version.json reads s165 (checked from the
   Mac VM, with sw.js, manifest.webmanifest and icons served). Worker site/pwa/sw.js, built beside the page and stamped
   per build by tools/site_build.py (ship.sh reruns it with --pwa-only after the stamp), saves the page, search.json,

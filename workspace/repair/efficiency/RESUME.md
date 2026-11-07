@@ -3,7 +3,7 @@
 Jonathan, 2026-10-26: "Add whatever is needed so this issue does not happen again" (s154f chat 3 read whole docs and
 ran to about 280k context before any edit). Project copy claude/RESUME.md; repo copy repair/efficiency/RESUME.md.
 
-**Open batch: none** (s165 shipped 2026-11-06, commit 061b33f; a launch prompt is needed).
+**Open batch: s166** (phone redesign, branch wip/s166; pilot r1 out for Jonathan's review; see repair/s166/S166.md).
 (Rewrite this line, here and in the project copy claude/RESUME.md, when a batch opens or ships; "none" means no batch is open and a
 launch prompt is needed.)
 

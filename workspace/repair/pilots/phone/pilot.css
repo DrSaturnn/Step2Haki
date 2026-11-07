@@ -1,0 +1,43 @@
+@media (max-width:1100px){
+#axdisp .php{margin:6px 0 0;padding:4px 0 2px;border-top:1px solid var(--hair)}
+#axdisp .php-g{padding:6px 12px 4px}
+#axdisp .php-l{font:600 13px/1.3 var(--sans);color:var(--axn-mute,var(--muted));margin:0 0 6px}
+#axdisp .php-o{display:flex;flex-wrap:wrap;gap:6px}
+#axdisp .php-o button{all:unset;cursor:pointer;height:32px;padding:0 12px;border-radius:99px;background:var(--recess);font:600 13px/32px var(--sans);color:var(--ink)}
+#axdisp .php-o button[aria-pressed="true"]{background:var(--accent);color:#FFFFFF}
+#axdisp .php-n{margin:6px 12px 6px;font:500 12px/1.35 var(--sans);color:var(--muted)}
+
+#phrail{display:none;opacity:0}
+html[data-ph-rail="on"] #phrail.in{display:block;position:fixed;right:2px;top:calc(var(--ph-top,96px) + 14px);bottom:calc(var(--tab-h) + 16px);width:26px;z-index:118;transition:opacity .35s var(--snp);touch-action:none;cursor:pointer}
+body.navopen #phrail{display:none!important}
+#phrail.on,#phrail.drag{opacity:1}
+#phrail::before{content:"";position:absolute;right:9px;top:0;bottom:0;width:3px;border-radius:2px;background:var(--hair)}
+#phrail .fl{position:absolute;right:9px;top:0;width:3px;border-radius:2px;background:var(--accent)}
+#phrail .tk{position:absolute;inset:0}
+#phrail .tk i{position:absolute;right:1px;width:19px;height:19px;margin-top:-9.5px;border-radius:50%;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font:800 10.5px/1 var(--sans);font-style:normal;color:var(--confirm);background:var(--raised);box-shadow:var(--e2);z-index:2}
+#phrail .tk i.pr::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor}
+#phrail .tk i.done{box-shadow:inset 0 0 0 1.5px var(--confirm)}
+#phrail .tk i.cur{color:var(--raised);background:var(--confirm)}
+#phrail .th{position:absolute;right:6.5px;width:9px;height:9px;margin-top:-4.5px;border-radius:50%;background:var(--accent);z-index:1}
+#phrail .bub{position:absolute;right:30px;z-index:3;transform:translateY(-50%);white-space:nowrap;padding:7px 12px;border-radius:99px;background:var(--ink);color:var(--raised);font:700 13px/1 var(--sans);opacity:0;transition:opacity .2s var(--snp);pointer-events:none}
+#phrail.drag .bub{opacity:1}
+/* differential density (11-04 pilot dx.css, A and B) */
+html[data-ph-dx="a"] .brief.sp .sp-dx table.dense tbody tr{padding:9px 13px 8px!important;margin:0 0 6px!important;border-radius:16px!important;row-gap:0!important}
+html[data-ph-dx="a"] .brief.sp .sp-dx table.dense tbody td:first-child{padding:0 0 3px!important;line-height:21px!important}
+html[data-ph-dx="a"] .brief.sp .sp-dx table.dense tbody td:not(:first-child){padding:2px 0!important;line-height:21px!important}
+html[data-ph-dx="a"] .brief.sp .sp-dx table.dense tbody td:not(:first-child)::before{display:inline!important;margin:0 6px 0 0!important;font-size:12.5px!important}
+html[data-ph-dx="b"] .brief.sp .sp-dx table.dense tbody{background:var(--raised);border-radius:20px;overflow:hidden;box-shadow:var(--e2)}
+html[data-ph-dx="b"] .brief.sp .sp-dx table.dense tbody tr{margin:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;padding:10px 14px 9px!important;row-gap:0!important;border-top:1px solid var(--hair)}
+html[data-ph-dx="b"] .brief.sp .sp-dx table.dense tbody tr:first-child{border-top:0}
+html[data-ph-dx="b"] .brief.sp .sp-dx table.dense tbody td::before{display:none!important}
+html[data-ph-dx="b"] .brief.sp .sp-dx table.dense tbody td{line-height:21px!important}
+html[data-ph-dx="b"] .brief.sp .sp-dx table.dense tbody td:first-child{padding:0 0 2px!important}
+html[data-ph-dx="b"] .brief.sp .sp-dx table.dense tbody td:nth-child(2){padding:1px 0!important;color:var(--ink-2)!important}
+html[data-ph-dx="b"] .brief.sp .sp-dx table.dense tbody td:nth-child(3){padding:2px 0 1px 20px!important;position:relative}
+html[data-ph-dx="b"] .brief.sp .sp-dx table.dense tbody td:nth-child(3)::after{content:"\2192";position:absolute;left:0;top:2px;font:700 15px/21px var(--sans);color:var(--accent)}
+html[data-ph-dx="b"] .brief.sp .sp-dx table.dense thead{position:static!important;clip:auto!important;height:auto!important;width:auto!important;overflow:visible!important;margin:0 2px 8px!important}
+html[data-ph-dx="b"] .brief.sp .sp-dx table.dense thead tr{display:flex;gap:14px;align-items:baseline}
+html[data-ph-dx="b"] .brief.sp .sp-dx table.dense thead th{display:block;padding:0;font:600 12.5px/1.3 var(--sans);color:var(--muted);text-transform:none;letter-spacing:0;background:none;border:0}
+html[data-ph-dx="b"] .brief.sp .sp-dx table.dense thead th:first-child{display:none}
+html[data-ph-dx="b"] .brief.sp .sp-dx table.dense thead th:nth-child(3)::before{content:"\2192\00a0";color:var(--accent);font-weight:700}
+}

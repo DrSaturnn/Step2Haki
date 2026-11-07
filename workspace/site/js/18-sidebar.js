@@ -34,7 +34,6 @@
     var cfg = el('button', 'axn-cfg', SVG_CFG); cfg.type = 'button'; cfg.id = 'axcfg';
     cfg.setAttribute('aria-label', 'Display settings'); cfg.setAttribute('aria-expanded', 'false'); cfg.setAttribute('aria-controls', 'axdisp');
     tools.appendChild(cfg);
-    var x = top.querySelector('.navclose'); if(x) tools.appendChild(x);
     h.appendChild(tools);
     top.insertBefore(h, top.firstChild);
     if(search){
@@ -81,8 +80,15 @@
       if(on){ fill(); try{ s.focus({preventScroll: true}); }catch(e){} }
     }
     btn.addEventListener('click', function(e){ e.stopPropagation(); set(!s.classList.contains('on')); });
-    document.addEventListener('click', function(e){ if(s.classList.contains('on') && !s.contains(e.target) && e.target !== btn) set(false); });
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && s.classList.contains('on')){ e.stopPropagation(); set(false); try{ btn.focus(); }catch(x){} } }, true);
+    AX.on('settings:set', function(on){ set(!!on); });
+    // a popover beside the desktop sidebar; on phones it is the Settings tab, closed by the tabs
+    document.addEventListener('click', function(e){ if(s.classList.contains('on') && !document.body.classList.contains('navset') && !s.contains(e.target) && e.target !== btn) set(false); });
+    document.addEventListener('keydown', function(e){
+      if(e.key !== 'Escape' || !s.classList.contains('on')) return;
+      e.stopPropagation();
+      if(document.body.classList.contains('navset')){ AX.emit('nav:close'); return; }
+      set(false); try{ btn.focus(); }catch(x){}
+    }, true);
     // the change log button lives in the sheet now; opening the log closes the sheet
     s.addEventListener('click', function(e){ if(e.target.closest && e.target.closest('.axlogbtn')) set(false); });
   }
@@ -239,8 +245,7 @@
     if(held < 20 && Date.now() < until && !moved) requestAnimationFrame(function(){ seat(id, until, held); });
   }
   function go(id, stepIndex){
-    var x = nav.querySelector('.navclose');
-    if(document.body.classList.contains('navopen') && x) x.click();
+    if(document.body.classList.contains('navopen')) AX.emit('nav:close');
     // the page's own hash handling pins an off-shelf brief, scrolls to it and settles it once lazy briefs above render
     requestAnimationFrame(function(){
       if(location.hash !== '#' + id) location.hash = id;
@@ -264,6 +269,12 @@
   /* brief:go id (s164c): a jump to a brief from elsewhere on the page (07 drawer links) takes the same path as a sidebar
      click: the hash, then the target seated until it holds while the briefs above it build */
   AX.on('brief:go', function(id){ if(AX.brief.ensure(id)) go(id); });
+  // nav:reveal {id, pres}: open the group holding a brief's tile (its Presentations tile when pres) at the top of the list
+  AX.on('nav:reveal', function(o){
+    var all = tiles[o.id] || [], it = o.pres ? all[0] : all[all.length - 1]; if(!it) return;
+    if(it.g.btn.getAttribute('aria-expanded') !== 'true') fold(it.g, true, false);
+    var s = scroller(); if(s) s.scrollTop += it.g.btn.getBoundingClientRect().top - s.getBoundingClientRect().top - 8;
+  });
   // an in-page link to another brief ("Pairs with" cross-references, links in brief text) takes the same path; links
   // whose own handler already acted (search hits, the brief rail, drawers) arrive with the default prevented
   document.addEventListener('click', function(e){

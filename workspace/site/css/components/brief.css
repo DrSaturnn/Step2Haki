@@ -448,7 +448,7 @@ body .sp-chip .mask.axm-study:not(.shown){color:var(--t-body-sp-chip-mask-axm-st
 }
 .brief{margin-bottom:56px}
 @media (--narrow){
-.brief h5[id],.brief [id].sp-dx{scroll-margin-top:60px}
+.brief h5[id],.brief [id].sp-dx{scroll-margin-top:calc(var(--ph-h) + 8px)}
 }
 @media (--desktop){
 .brief.bb-r{padding-left:178px}

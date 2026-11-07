@@ -33,13 +33,11 @@ table,ol.bank,ul.plain{page-break-inside:avoid}
 html.cv .brief{content-visibility:visible}
 #rvlaunch,#rvpanel,#rvsession{display:none!important}
 #rvbar,.rvmark{display:none!important}
-#navscrim{display:none!important}
-#navtab{display:none!important}
 .brief.sp .sp-pop-b[hidden]{display:block}
 .brief.sp details.sp-sys > div{display:grid}
 .bankwrap.stack .mcqwrap > .mcq{display:block;margin:0 0 13px}
 .bankwrap.stack .mcqwrap::before,.bankwrap.stack .mcqwrap::after,.bknav{display:none}
-.brief .bb-bar,.brief .bb-rail,.brief .bb-end{display:none!important}
+.brief .bb-rail,.brief .bb-end{display:none!important}
 #axrv{display:none!important}
 .psub{display:none}
 }

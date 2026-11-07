@@ -46,8 +46,6 @@ function switches(){
   if(!window.__axModeObserver){
     window.__axModeObserver=new MutationObserver(function(){
       sync();
-      var mb=document.querySelector('#mbar [data-act="study"]');
-      if(mb) mb.setAttribute('aria-pressed',b.classList.contains('study')?'true':'false');
       axmSync(false);
     });
     window.__axModeObserver.observe(b,{attributes:true,attributeFilter:['class']});
@@ -382,15 +380,21 @@ function shelfInit(){
   });
 }
 
-/* ---------- 0b. one sidebar: fixed on desktop, off-canvas on phones ----------
-   Desktop keeps the fixed sidebar. Below 1100px the same sidebar slides in from
-   the left over a dimmed page, opened by the bar's Index button and closed by
-   its X, a tap on the backdrop, Escape or choosing a link. Search is pinned at
-   the top and the list scrolls beneath it. While open, the panel's height
+/* ---------- 0b. one sidebar: fixed on desktop, a tab screen on phones ----------
+   Desktop keeps the fixed sidebar. Below 1100px the same sidebar is the Browse
+   screen of the bottom tabs (Home, Browse, Review, Settings): Browse shows the
+   search, shelf and list; Settings shows the display sheet in the same screen.
+   Home, Escape or choosing a link closes it. While open, the screen's height
    follows window.visualViewport, so the search field and its results stay
-   above the iOS keyboard. No edge swipe: Safari owns that gesture for Back. */
+   above the iOS keyboard. */
 var NAV_NARROW='(max-width:1100px)';
-var navEl=null, navBar=null, navScrim=null, navOpen=false, navInvoker=null, navScrollY=0;
+var navEl=null, navBar=null, navOpen=false, navInvoker=null, navScrollY=0;
+function tabIcon(d){ return '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+d+'</svg>'; }
+var TAB_ICON={
+  home:tabIcon('<path d="M4 10.6 12 4l8 6.6V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z"/>'),
+  index:tabIcon('<rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/>'),
+  settings:tabIcon('<path d="M4 7.5h9M17 7.5h3M4 16.5h3M11 16.5h9"/><circle cx="15" cy="7.5" r="2"/><circle cx="9" cy="16.5" r="2"/>')
+};
 function navNarrow(){ return !!(window.matchMedia && window.matchMedia(NAV_NARROW).matches); }
 function navFit(){
   var vv=window.visualViewport;
@@ -404,7 +408,7 @@ function navFit(){
 }
 function navInert(on){
   var main=document.querySelector('main');
-  [main, navBar].forEach(function(x){ if(!x) return; try{ x.inert=on; }catch(e){} if(on) x.setAttribute('aria-hidden','true'); else x.removeAttribute('aria-hidden'); });
+  [main].forEach(function(x){ if(!x) return; try{ x.inert=on; }catch(e){} if(on) x.setAttribute('aria-hidden','true'); else x.removeAttribute('aria-hidden'); });
 }
 function openNav(){
   if(navOpen || !navEl || !navNarrow()) return;
@@ -416,7 +420,6 @@ function openNav(){
   var bs=document.body.style;
   bs.position='fixed'; bs.top=(-navScrollY)+'px'; bs.left='0'; bs.right='0'; bs.width='100%';
   document.body.classList.add('navopen');
-  navEl.setAttribute('role','dialog'); navEl.setAttribute('aria-modal','true');
   var ib=navBar && navBar.querySelector('[data-act="index"]'); if(ib) ib.setAttribute('aria-expanded','true');
   navInert(true);
   if(window.visualViewport){
@@ -431,14 +434,31 @@ function openNav(){
     sc.scrollTop=Math.max(0, off-sc.clientHeight/3);
   }
   /* On touch, focusing the field would raise the keyboard over the list, so
-     focus goes to the close button; with a pointer it goes to the search. */
+     focus goes to the screen itself; with a pointer it goes to the search. */
   var coarse=window.matchMedia && window.matchMedia('(pointer:coarse)').matches;
-  var f=coarse ? navEl.querySelector('.navclose') : document.getElementById('search');
+  var f=coarse ? navEl : document.getElementById('search');
+  if(coarse && !navEl.hasAttribute('tabindex')) navEl.tabIndex=-1;
   if(f) try{ f.focus({preventScroll:true}); }catch(e){ f.focus(); }
+  paintTabs();
+}
+/* the Settings tab shows the display sheet inside the Browse screen */
+function navSettings(on){
+  document.body.classList.toggle('navset', on);
+  AX.emit('settings:set', on);
+  paintTabs();
+}
+function paintTabs(){
+  if(!navBar) return;
+  var at=navOpen ? (document.body.classList.contains('navset') ? 'settings' : 'index') : 'home';
+  Array.prototype.forEach.call(navBar.querySelectorAll('button[data-act]'),function(b){
+    if(b.dataset.act==='review') return;
+    if(b.dataset.act===at) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current');
+  });
 }
 function closeNav(restoreFocus){
   if(!navOpen) return;
   navOpen=false;
+  if(document.body.classList.contains('navset')) navSettings(false);
   if(window.visualViewport){
     window.visualViewport.removeEventListener('resize',navFit);
     window.visualViewport.removeEventListener('scroll',navFit);
@@ -448,9 +468,9 @@ function closeNav(restoreFocus){
   var bs=document.body.style; bs.position=''; bs.top=''; bs.left=''; bs.right=''; bs.width='';
   var de=document.documentElement, sb=de.style.scrollBehavior;
   de.style.scrollBehavior='auto'; window.scrollTo(0,navScrollY); de.style.scrollBehavior=sb;
-  navEl.removeAttribute('role'); navEl.removeAttribute('aria-modal');
   var ib=navBar && navBar.querySelector('[data-act="index"]'); if(ib) ib.setAttribute('aria-expanded','false');
   navInert(false);
+  paintTabs();
   if(restoreFocus!==false){
     var back=(navInvoker && navInvoker.isConnected && !navEl.contains(navInvoker)) ? navInvoker : ib;
     if(back) try{ back.focus({preventScroll:true}); }catch(e){}
@@ -464,16 +484,13 @@ function mobileNav(){
   navEl=nav;
   nav.setAttribute('aria-label','Index and search');
 
-  /* Pinned head (brand, close, search) above one scrolling body (shelf,
+  /* Pinned head (brand, search) above one scrolling body (shelf,
      switches, review, then the systems list or the search results). */
   var top=document.createElement('div'); top.id='navtop';
   var body=document.createElement('div'); body.id='navscroll';
   var brand=nav.querySelector('.brand'), search=document.getElementById('search');
-  var x=document.createElement('button'); x.type='button'; x.className='navclose';
-  x.setAttribute('aria-label','Close index'); x.innerHTML='<span aria-hidden="true">\u2715</span>';
   Array.prototype.slice.call(nav.childNodes).forEach(function(n){ if(n!==brand && n!==search) body.appendChild(n); });
   if(brand) top.appendChild(brand);
-  top.appendChild(x);
   if(search) top.appendChild(search);
   nav.appendChild(top); nav.appendChild(body);
   var res=document.createElement('div'); res.id='sxres'; res.hidden=true;
@@ -481,31 +498,31 @@ function mobileNav(){
   var links=document.getElementById('navlinks');
   if(links && links.parentNode===body) body.insertBefore(res,links); else body.appendChild(res);
 
-  var bar=document.createElement('nav'); bar.id='mbar'; bar.setAttribute('aria-label','Page tools');
+  var bar=document.createElement('nav'); bar.id='mbar'; bar.setAttribute('aria-label','Tabs');
   bar.innerHTML =
-    '<button type="button" data-act="index" aria-expanded="false" aria-controls="nav"><span>Index</span></button>'+
-    '<button type="button" data-act="study" aria-pressed="false"><span>Recall</span></button>'+
-    '<button type="button" data-act="top"><span>Top</span></button>';
-  var scrim=document.createElement('div'); scrim.id='navscrim';
-  document.body.appendChild(scrim);
+    '<button type="button" data-act="home">'+TAB_ICON.home+'<span>Home</span></button>'+
+    '<button type="button" data-act="index" aria-expanded="false" aria-controls="nav">'+TAB_ICON.index+'<span>Browse</span></button>'+
+    '<button type="button" data-act="settings">'+TAB_ICON.settings+'<span>Settings</span></button>';
   document.body.appendChild(bar);
-  navBar=bar; navScrim=scrim;
-  var mobileStudy=bar.querySelector('[data-act="study"]');
-  if(mobileStudy) mobileStudy.setAttribute('aria-pressed',document.body.classList.contains('study')?'true':'false');
+  navBar=bar;
+  paintTabs();
 
   bar.addEventListener('click',function(e){
     var b=e.target.closest('button'); if(!b) return;
     var a=b.dataset.act;
-    if(a==='index'){ navOpen?closeNav():openNav(); }
-    if(a==='study'){
-      document.body.classList.toggle('study');
-      try{ localStorage.setItem('ax-study',document.body.classList.contains('study')?'1':'0'); }catch(err){}
-      b.setAttribute('aria-pressed',document.body.classList.contains('study')?'true':'false');
+    if(a==='home'){ if(navOpen) closeNav(); else AX.emit('phone:home'); }
+    if(a==='index'){
+      if(!navOpen) openNav();
+      else if(document.body.classList.contains('navset')) navSettings(false);
+      else closeNav();
     }
-    if(a==='top'){ closeNav(); window.scrollTo({top:0,behavior:(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)?'auto':'smooth'}); }
+    if(a==='settings'){
+      if(!navOpen){ openNav(); navSettings(true); }
+      else navSettings(!document.body.classList.contains('navset'));
+    }
   });
-  scrim.addEventListener('click',function(){ closeNav(); });
-  x.addEventListener('click',function(){ closeNav(); });
+  AX.on('nav:open',function(){ if(document.body.classList.contains('navset')) navSettings(false); openNav(); });
+  AX.on('nav:close',function(){ closeNav(false); });
   /* choosing an index link closes the panel; the browser then follows the hash */
   nav.addEventListener('click',function(e){
     var a=e.target.closest && e.target.closest('#navlinks a[href^="#"]');
@@ -514,15 +531,7 @@ function mobileNav(){
   document.addEventListener('keydown',function(e){
     if(!navOpen) return;
     var rp=document.getElementById('rvpanel'); if(rp && !rp.hidden) return;   /* the review popover handles its own keys */
-    if(e.key==='Escape'){ e.preventDefault(); closeNav(); return; }
-    if(e.key!=='Tab') return;
-    var f=Array.prototype.filter.call(nav.querySelectorAll('a[href],button,input,select,textarea,[tabindex]:not([tabindex="-1"])'),function(el){
-      return !el.disabled && el.getClientRects().length;
-    });
-    if(!f.length) return;
-    var first=f[0], last=f[f.length-1];
-    if(e.shiftKey && (document.activeElement===first || !nav.contains(document.activeElement))){ e.preventDefault(); last.focus(); }
-    else if(!e.shiftKey && (document.activeElement===last || !nav.contains(document.activeElement))){ e.preventDefault(); first.focus(); }
+    if(e.key==='Escape'){ e.preventDefault(); closeNav(); }
   });
   if(window.matchMedia){
     var mq=window.matchMedia(NAV_NARROW), onMq=function(){ if(!mq.matches) closeNav(false); };
