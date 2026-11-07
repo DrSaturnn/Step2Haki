@@ -3,7 +3,8 @@
 Jonathan, 2026-10-26: "Add whatever is needed so this issue does not happen again" (s154f chat 3 read whole docs and
 ran to about 280k context before any edit). Project copy claude/RESUME.md; repo copy repair/efficiency/RESUME.md.
 
-**Open batch: s167** (branch wip/s167; launched 2026-11-07; batch file repair/s167/S167.md).
+**Open batch: s167** (branch wip/s167; launched 2026-11-07; batch file repair/s167/S167.md). wip/s167 is not on the
+public repo: clone main, then `git fetch /home/claude/step2haki-private/claude/pending/s167/wip_s167.bundle wip/s167:wip/s167 && git checkout wip/s167` (the private clone is main).
 (Rewrite this line, here and in the project copy claude/RESUME.md, when a batch opens or ships; "none" means no batch is open and a
 launch prompt is needed.)
 
