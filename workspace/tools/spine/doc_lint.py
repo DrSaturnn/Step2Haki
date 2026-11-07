@@ -38,7 +38,7 @@ def errors(digest, standing_path):
         if cited not in d: errs.append(f'STANDING_DIRECTIONS cites {cited}, which is not in the digest')
     return errs
 
-RULE_DOCS = ['repair/efficiency/BATCH_RUNBOOK.md', 'repair/efficiency/CARD_SPEC.md', 'repair/efficiency/TEXTBOOK_STYLE.md',
+RULE_DOCS = ['@BATCH_RUNBOOK.md', 'repair/efficiency/CARD_SPEC.md', 'repair/efficiency/TEXTBOOK_STYLE.md',
              'repair/efficiency/RULES_voice.md', 'repair/efficiency/RULES_worker.md', 'repair/efficiency/RULES_coverage.md',
              'repair/efficiency/RUBRIC.md', 'repair/efficiency/RUBRIC_migration.md', 'repair/efficiency/WORKUP_5A_SPEC.md',
              'repair/efficiency/SPINE_SCALE_PLAN.md', 'repair/efficiency/CODEX_LEAD.md', 'tools/MIGRATION_CONTRACT.md',
@@ -53,7 +53,7 @@ def rule_doc_errors(digest, ws):
     import os
     d = parse(digest); errs = []
     for rel in RULE_DOCS:
-        path = os.path.join(ws, rel)
+        path = os.path.join(os.path.dirname(digest), rel[1:]) if rel.startswith('@') else os.path.join(ws, rel)
         if not os.path.exists(path):
             continue
         for cited in sorted(set(re.findall(r'\[(D-\d{8}-\d+)\]', open(path, encoding='utf-8').read()))):

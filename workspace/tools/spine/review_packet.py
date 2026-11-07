@@ -19,6 +19,8 @@ changes.md diffs against the version the reviewer last judged (a follow-up round
 printed for the display sheets (sheets.py --steps). Screenshots for display come from shots.py separately.
 """
 import difflib
+import importlib.util as _ilu, os as _os
+_dp = _ilu.spec_from_file_location('docs_path', _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'docs_path.py')); docs_path = _ilu.module_from_spec(_dp); _dp.loader.exec_module(docs_path)
 import hashlib
 import html as H
 import os
@@ -195,10 +197,10 @@ def part_rules(part):
     """the standing rules a part judges by (s139 S5 packet errors: display reviewers flagged progressive recall and the
     5a desktop arrows, and a read reviewer the absent step 6, because the packet lacked these rules)"""
     eff = os.path.join(WS, 'repair', 'efficiency')
-    sd = open(os.path.join(eff, 'STANDING_DIRECTIONS.md'), encoding='utf-8').read()
+    sd = open(docs_path.doc('STANDING_DIRECTIONS.md'), encoding='utf-8').read()
     if part == 'display':
         spec = open(os.path.join(eff, 'WORKUP_5A_SPEC.md'), encoding='utf-8').read()
-        dg = open(os.path.join(eff, 'DECISIONS_DIGEST.md'), encoding='utf-8').read()
+        dg = open(docs_path.doc('DECISIONS_DIGEST.md'), encoding='utf-8').read()
         glance = '\n'.join(m.group(0) for m in re.finditer(r'^- 2026-10-1[34] (Glance layout direction|s137 route).*?(?=^- |\Z)', dg, re.S | re.M))
         return ('# Display rules for this review (from STANDING_DIRECTIONS.md, DECISIONS_DIGEST.md and WORKUP_5A_SPEC.md)\n\n'
                 + section(sd, 'Display') + '\n## Later display decisions (digest; these win over the spec)\n\n' + glance + '\n\n' + spec)

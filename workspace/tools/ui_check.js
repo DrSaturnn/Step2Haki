@@ -221,9 +221,12 @@ async function run(a) {
     B.classList.toggle('flat', want.flat); B.classList.toggle('study', want.study);
     if (want.dark) H.setAttribute('data-theme', 'dark'); else H.removeAttribute('data-theme');
     if (want.tinted) H.setAttribute('data-glass', 'tinted'); else H.removeAttribute('data-glass');
-    return new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))); };
+    // the page restyles regions a few per frame after a mode switch (axm-flat, axm-study): wait until the counts hold for 10 frames
+    return new Promise(r => { let last = '', same = 0, n = 0; const tick = () => { const k = document.querySelectorAll('.axm-flat').length + ':' + document.querySelectorAll('.axm-study').length;
+      same = k === last ? same + 1 : 0; last = k; if (same >= 10 || ++n > 3000) r(); else requestAnimationFrame(tick); }; requestAnimationFrame(tick); }); };
   const got = { base: {}, cand: {} };
-  for (const [k, f] of [['base', a[1]], ['cand', a[2]]]) for (const view of views) {
+  // view by view: both pages are measured, compared and dropped before the next view (all views at once ran out of heap)
+  for (const view of views) { for (const [k, f] of [['base', a[1]], ['cand', a[2]]]) {
     const browser = await chromium.launch();
     const t1 = Date.now();
     const o = await openPage(browser, f, view, 'flat-light-read', true);
@@ -240,7 +243,7 @@ async function run(a) {
     errs[view + ' ' + k] = o.errs.slice(0, 5);
     await browser.close();
   }
-  for (const view of views) for (const cfg of configs) {
+  for (const cfg of configs) {
     const setting = view + ':' + cfg;
     const cmp = (A, B, label) => {
       const bi = new Map(B.map(r => [r.ci, r]));
@@ -255,7 +258,8 @@ async function run(a) {
       } };
     cmp(got.base[setting].m, got.cand[setting].m, 'plain');
     cmp(got.base[setting].s, got.cand[setting].s, 'state');
-  }
+    delete got.base[setting]; delete got.cand[setting];
+  } }
   // summary: one line per (selector, property, before, after), with the settings and the element count
   const groups = new Map();
   for (const d of diffs) { const k = [d.sel, d.prop, d.before, d.after].join('\u0001'); const g = groups.get(k) || { sel: d.sel, prop: d.prop, before: d.before, after: d.after, settings: new Set(), paths: new Set(), state: d.state }; g.settings.add(d.setting); g.paths.add(d.path); groups.set(k, g); }

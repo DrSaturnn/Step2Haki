@@ -17,15 +17,15 @@ Jonathan decides content and display; the lead decides only what the runbook's s
 every call for his approval report.
 
 Before anything else, read in this order:
-1. workspace/repair/efficiency/STEP2HAKI_HANDOFF.md, the State section (current batch, step, spend, Lead line);
+1. /home/claude/step2haki-private/docs/STEP2HAKI_HANDOFF.md, the State section (current batch, step, spend, Lead line);
 2. workspace/repair/efficiency/CODEX_LEAD.md (what differs when Codex leads: the lock, doc locations, hooks, reviews,
    cost, shipping, and the authoring failure modes to avoid);
-3. workspace/repair/efficiency/BATCH_RUNBOOK.md (the process; its read list, with the paths mapped by CODEX_LEAD.md
+3. /home/claude/step2haki-private/docs/BATCH_RUNBOOK.md (the process; its read list, with the paths mapped by CODEX_LEAD.md
    section 1).
 
 Restart line (Jonathan pastes it to continue an open batch):
 `Step2Haki: continue the current batch per claude/RESUME.md.` (earlier: "per claude/BATCH_RUNBOOK.md", the same meaning)
-For Codex it means: take the lock per CODEX_LEAD.md section 0, then follow workspace/repair/efficiency/RESUME.md and the runbook from the State's step.
+For Codex it means: take the lock per CODEX_LEAD.md section 0, then follow /home/claude/step2haki-private/docs/RESUME.md and the runbook from the State's step.
 A launch prompt (a new batch id) means: CODEX_LEAD.md section 2 item 4 (create wip/sNN in both repos), then section 2a
 (which build to copy) and section 7 (failure modes, read before S1); a launch that names new briefs also follows
 section 9. New board questions with no batch open go through the board-brief skill (intake only; it never edits the
@@ -65,7 +65,7 @@ Public repo (DrSaturnn/Step2Haki):
   `40_presentations.json`) files that `repair/build.py sNNN` applies to the page. Read the newest (s149) as the model.
 - `workspace/repair/changelog/axlog.py`: the reader-facing changelog (one entry per ship).
 - `workspace/repair/migration/spine/reviews/`: review receipts (`<brief>_<part>_r<round>.md`); `.../spine/packets/`.
-- `workspace/OPEN_WORK.md`: one history line per ship (current). `workspace/CHANGELOG.md`: commit log (generated).
+- `/home/claude/step2haki-private/docs/OPEN_WORK.md`: one history line per ship (current). `workspace/CHANGELOG.md`: commit log (generated).
 - Stale, do not follow: `workspace/CURRENT_STATE.md`, `workspace/PENDING_DECISIONS.md`, `workspace/repair/merge_plan.md`,
   anything under `workspace/repair/archive/` and the batch folders before s141 (history only).
 

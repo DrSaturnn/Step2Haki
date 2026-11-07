@@ -204,7 +204,7 @@ finally:
     os.rename(_pb + '.away', _pb)
 hit = '[prose-lint] tools/spine/prose_baseline.json is missing' in o
 print(('ok  ' if hit else 'BAD ') + 'a missing prose baseline: expects gate FAIL prose-lint'); bad += not hit
-_st = os.path.join(os.path.dirname(HERE), 'repair', 'efficiency', 'STANDING_DIRECTIONS.md'); _keep = open(_st, encoding='utf-8').read()
+import docs_path; _st = docs_path.doc('STANDING_DIRECTIONS.md'); _keep = open(_st, encoding='utf-8').read()
 try:
     open(_st, 'w', encoding='utf-8').write(_keep + '\n- test line [D-19990101-1]\n')
     o = gate(PAGE)[1]

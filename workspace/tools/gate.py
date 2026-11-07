@@ -14,6 +14,8 @@ Prints one summary line, then each failure with its fix. Exit 0 pass, 1 fail.
 Judgment (clinical truth, scope, voice, cue review) is never approved by this script.
 """
 import csv
+import importlib.util as _ilu, os as _os
+_dp = _ilu.spec_from_file_location('docs_path', _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '.', 'docs_path.py')); docs_path = _ilu.module_from_spec(_dp); _dp.loader.exec_module(docs_path)
 import glob
 import html as H
 import json
@@ -697,13 +699,15 @@ def check_lints(page, page_path, ref_html, g, attr_only=False):
         rc_base = base.get('component_raw_color')
         if rc_base is not None and counts.get('component_raw_color', 0) > rc_base:
             g.fail('ui-site', 'component_raw_color', 'raw colors in site/css/components rose from %d to %d' % (rc_base, counts['component_raw_color']))
-    eff = os.path.join(REPO, 'repair', 'efficiency')
-    dg, st = os.path.join(eff, 'DECISIONS_DIGEST.md'), os.path.join(eff, 'STANDING_DIRECTIONS.md')
+    try:
+        dg, st = docs_path.doc('DECISIONS_DIGEST.md'), docs_path.doc('STANDING_DIRECTIONS.md')
+    except FileNotFoundError:
+        dg = st = ''
     if os.path.exists(dg) and os.path.exists(st):
         for e in doc_lint.errors(dg, st) + doc_lint.rule_doc_errors(dg, REPO):
             g.fail('doc-lint', e[:80], e)
     else:
-        g.fail('doc-lint', 'missing', 'DECISIONS_DIGEST.md or STANDING_DIRECTIONS.md is missing from repair/efficiency')
+        g.fail('doc-lint', 'missing', 'DECISIONS_DIGEST.md or STANDING_DIRECTIONS.md is missing from the private docs/ (tools/docs_path.py)')
     pbase_path = os.path.join(spine, 'prose_baseline.json')
     if not os.path.exists(pbase_path):
         g.fail('prose-lint', 'baseline', 'tools/spine/prose_baseline.json is missing; restore it from git')

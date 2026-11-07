@@ -357,7 +357,7 @@ body .brief.sp figure.sp-on ol.sp-trk{background:none;box-shadow:none}
 body .brief.sp .sp-when > b{font:650 14px/20px var(--sans);letter-spacing:0;text-transform:none}
 body .brief.sp .sp-when span{font-size:15px;line-height:21px}
 @media (--not-phone){
-body .brief.sp .sp-on-ev > li > div{width:max-content;max-width:var(--cmw,280px);white-space:normal}
+body .brief.sp .sp-on-ev > li > div,body.study .brief.sp .sp-on-ev > li > div{width:max-content;max-width:var(--cmw,280px);white-space:normal}
 body .brief.sp .sp-on-ev > li > div > *{white-space:normal}
 body .brief.sp .sp-on-f.sp-on-js .sp-on-ev > li > div{left:var(--cx);bottom:var(--cb);transform:none}
 body .brief.sp .sp-on-f.sp-on-js .sp-on-ev > li::before{height:var(--lh)}

@@ -30,6 +30,8 @@ Exit 0 READY (with --mech: mechanical pass); 2 mechanical pass, not ready; 1 wit
 mechanical problem.
 """
 import glob
+import importlib.util as _ilu, os as _os
+_dp = _ilu.spec_from_file_location('docs_path', _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'docs_path.py')); docs_path = _ilu.module_from_spec(_dp); _dp.loader.exec_module(docs_path)
 import hashlib
 import html as H
 import json
@@ -412,7 +414,7 @@ class Verify:
     # current (a layout or new display-pattern batch still runs the display part, and its FAIL still blocks)
     OPTIONAL = ('display',)
     PAGE = os.path.join(WS, 'index.html')
-    SPECS = ('repair/efficiency/STANDING_DIRECTIONS.md', 'repair/efficiency/WORKUP_5A_SPEC.md', 'tools/MIGRATION_CONTRACT.md',
+    SPECS = (docs_path.doc('STANDING_DIRECTIONS.md'), 'repair/efficiency/WORKUP_5A_SPEC.md', 'tools/MIGRATION_CONTRACT.md',
              'repair/efficiency/TEXTBOOK_STYLE.md')
 
     def deps(self, html=None, claims=None, outline=None):
