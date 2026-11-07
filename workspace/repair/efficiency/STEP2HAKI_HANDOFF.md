@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-11-06, by Claude (s164c open, chunk 3 next).
+Last updated: 2026-11-06, by Claude (s165 presented, waits for "ship").
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,7 +12,18 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **s164c SHIPPED 2026-11-06** (Claude lead; load briefs on demand, site layer only, content frozen; D-20261106-3 and
+- **s165 PRESENTED 2026-11-06** (Claude lead; offline use, site layer only, content frozen; D-20261106-5; no agents):
+  branch wip/s165 (commit 9f7822e plus the docs commit), candidate page 422cf14303b4 (approval.py present, screenshot
+  local/s165/shots/s165_sheet.png). Worker site/pwa/sw.js (built beside the page, stamped per build, cache
+  step2haki-<build>), manifest and icons (brand mark "S2"), head tags from site/pwa/head.html, offline note and update
+  hand-off in site/js/24-offline.js, 04-version emits net:status and site:newer. ship.sh writes and commits sw.js,
+  manifest.webmanifest and icons/ (dry run passed in a scratch clone). Checks: repair/s165/S165.md "Checks" (offline_test
+  desk and phone all pass, liefi_test, Chrome installability clean, gate and render PASS). Lead 1 chat, 21.8M of 60M.
+  Blocker for the ship: this container could not attach the repos (add_repo refused by the session's permission check),
+  so it cannot push and the private repo (vendor scan sources) is not here. Next: Jonathan's "ship" in this chat, then
+  S165.md chunk 2.
+
+- **Previous: s164c SHIPPED 2026-11-06** (Claude lead; load briefs on demand, site layer only, content frozen; D-20261106-3 and
   D-20261106-4; no agents): commit 27b1a73 (pushed to main), page 1fad3ed04e2b (approved candidate 1e65dba35063; the
   build stamp and the embedded changelog are the only differences); version.json reads s164c; search.json ships beside
   the page in discriminator-briefs-site/. Briefs are wrapped in templates by tools/site_build.py and built when opened
