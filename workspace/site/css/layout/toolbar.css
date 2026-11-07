@@ -1,6 +1,6 @@
 #modes{padding:14px 18px 16px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:10px;display:flex;flex-direction:column;gap:9px}
 #modes button{all:unset;display:flex;align-items:center;gap:10px;width:100%;box-sizing:border-box;cursor:pointer;user-select:none;background:#101015;padding:9px 13px;border-radius:99px;box-shadow:var(--t-modes-button-sh)}
-#modes .knob{position:absolute;top:2px;left:2px;width:15px;height:15px;border-radius:50%;background:#E9E9EE;box-shadow:0 1px 3px rgba(0,0,0,.5);transition:transform .2s}
+#modes .knob{position:absolute;top:2px;left:2px;width:15px;height:15px;border-radius:50%;background:#E9E9EE;box-shadow:0 1px 3px rgba(0,0,0,.5);transition:transform .2s var(--snp)}
 #modes .nm{font-size:10px;font-weight:800;letter-spacing:1.1px;color:rgba(255,255,255,.78)}
 body .axm-study #modes .study .knob,body #modes.axm-study .study .knob,body .axm-flat #modes .flatt .knob,body #modes.axm-flat .flatt .knob{transform:translateX(15px)}
 #modes .bsonly[aria-pressed="true"] .knob{transform:translateX(15px)}
@@ -13,10 +13,10 @@ body .axm-study #modes .study .knob,body #modes.axm-study .study .knob,body .axm
 #axedge{display:block;position:fixed;top:0;left:var(--sidebar);right:0;height:84px;z-index:55;pointer-events:none;background:linear-gradient(rgba(239,240,240,.9),rgba(239,240,240,0));background-image:var(--t-axedge-bgi);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);-webkit-mask-image:linear-gradient(#000 45%,transparent);mask-image:linear-gradient(#000 45%,transparent)}
 #axbar{display:flex;align-items:center;gap:4px;position:fixed;top:16px;right:20px;z-index:60;height:50px;padding:0 6px 0 8px;box-sizing:border-box;border-radius:999px;background:var(--t-axbar-bg,var(--glass));-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);box-shadow:var(--t-axbar-sh,var(--glass-edge));font-family:var(--sans);color:var(--t-axbar-fg,var(--ink))}
 #axbar .axcur{display:inline-flex;align-items:center;gap:8px;min-width:150px;max-width:260px;padding:0 12px 0 4px}
-#axbar .axcn{display:flex;align-items:center;justify-content:center;flex:none;width:24px;height:24px;border-radius:7px;background:var(--t-axbar-axcn-bg,var(--confirm));color:var(--t-axbar-axcn-fg);font:800 12px/1 var(--sans);transition:background .4s ease}
+#axbar .axcn{display:flex;align-items:center;justify-content:center;flex:none;width:24px;height:24px;border-radius:7px;background:var(--t-axbar-axcn-bg,var(--confirm));color:var(--t-axbar-axcn-fg);font:800 12px/1 var(--sans);transition:background .4s var(--spr)}
 #axbar .axcn.p{background:var(--t-axbar-axcn-p-bg,var(--vign))}
 #axbar .axcn[hidden],#axbar .axall[hidden],#axbar .axsep[hidden]{display:none}
-#axbar,#axedge{transition:opacity .25s ease}
+#axbar,#axedge{transition:opacity .25s var(--spr)}
 body:has(> .sp-drawer) #axbar,body:has(> .sp-drawer) #axedge{opacity:0;pointer-events:none}
 #axbar .axcl{font:700 15px/1.2 var(--sans);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #axbar .axsep{width:1px;height:22px;background:rgba(24,28,30,.14);background-color:var(--t-axbar-axsep-bgc);margin:0 4px;flex:none}
@@ -37,11 +37,11 @@ body:has(> .sp-drawer) #axbar,body:has(> .sp-drawer) #axedge{opacity:0;pointer-e
 #modes .dark[aria-pressed="true"] .knob{transform:translateX(15px)}
 #modes .axacc{display:grid;grid-template-columns:repeat(8,18px);justify-content:space-between;align-items:center;row-gap:10px;padding:10px 14px 12px;border-radius:18px;background:rgba(118,118,128,.10)}
 #modes .axacc .nm{grid-row:1;grid-column:1/6}
-#modes .axacc .axsw{all:unset;grid-row:2;box-sizing:border-box;cursor:pointer;width:18px;height:18px;border-radius:999px;background:var(--t-modes-axacc-axsw-bg,var(--sw));box-shadow:0 0 0 1px rgba(24,28,30,.15);transition:box-shadow .2s}
+#modes .axacc .axsw{all:unset;grid-row:2;box-sizing:border-box;cursor:pointer;width:18px;height:18px;border-radius:999px;background:var(--t-modes-axacc-axsw-bg,var(--sw));box-shadow:0 0 0 1px rgba(24,28,30,.15);transition:box-shadow .2s var(--snp)}
 #modes .axacc .axsw[aria-checked="true"]{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--sw)}
 #modes .axacc .axsw:focus-visible{outline:var(--t-modes-axacc-axsw-focus-visible-outline,2px solid var(--ink));outline-offset:3px}
 #modes .axacc .axan{grid-row:1;grid-column:6/9;justify-self:end;font:700 12px/1 var(--sans);color:var(--ink-2)}
-#axbar .axrvb{display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 12px 0 4px;border:var(--t-axbar-axrvb-border);border-radius:999px;cursor:pointer;background:var(--t-axbar-axrvb-bg,color-mix(in srgb,var(--accent) 12%,transparent));color:var(--t-axbar-axrvb-fg,var(--ink));font:650 13.5px/1 var(--sans);box-shadow:var(--t-axbar-axrvb-sh,inset 0 1px 0 rgba(255,255,255,.35),inset 0 0 0 1px color-mix(in srgb,var(--accent) 22%,transparent));transition:background .2s,transform .25s var(--bnc,ease)}
+#axbar .axrvb{display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 12px 0 4px;border:var(--t-axbar-axrvb-border);border-radius:999px;cursor:pointer;background:var(--t-axbar-axrvb-bg,color-mix(in srgb,var(--accent) 12%,transparent));color:var(--t-axbar-axrvb-fg,var(--ink));font:650 13.5px/1 var(--sans);box-shadow:var(--t-axbar-axrvb-sh,inset 0 1px 0 rgba(255,255,255,.35),inset 0 0 0 1px color-mix(in srgb,var(--accent) 22%,transparent));transition:background .2s var(--snp),transform .25s var(--bnc,ease)}
 #axbar .axrvb:hover{background:var(--t-axbar-axrvb-hover-bg,color-mix(in srgb,var(--accent) 20%,transparent))}
 #axbar .axrvb:active{transform:scale(.96)}
 #axbar .axrvb:focus-visible{outline:var(--t-axbar-axrvb-focus-visible-outline,2px solid var(--accent));outline-offset:2px}
@@ -57,16 +57,16 @@ body:has(> .sp-drawer) #axbar,body:has(> .sp-drawer) #axedge{opacity:0;pointer-e
 #axbar .axbn{font:600 14px/1.2 var(--sans);color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:240px;padding-right:12px;margin-right:2px;border-right:1px solid var(--hair)}
 #axbar .axbn[hidden]{display:none}
 #nav.axn #navscroll > #modes{display:none!important}
-#axdisp{position:absolute;top:70px;left:10px;right:10px;z-index:6;max-height:calc(100% - 78px);overflow-y:auto;box-sizing:border-box;padding:8px;border-radius:22px;background:var(--t-axdisp-bg);-webkit-backdrop-filter:blur(40px) saturate(190%);backdrop-filter:blur(40px) saturate(190%);box-shadow:var(--t-axdisp-sh);opacity:0;transform:translateY(-6px) scale(.98);transform-origin:top right;pointer-events:none;visibility:hidden;transition:opacity .25s ease,transform .45s var(--axn-spr),visibility 0s .45s}
+#axdisp{position:absolute;top:70px;left:10px;right:10px;z-index:6;max-height:calc(100% - 78px);overflow-y:auto;box-sizing:border-box;padding:8px;border-radius:22px;background:var(--t-axdisp-bg);-webkit-backdrop-filter:blur(40px) saturate(190%);backdrop-filter:blur(40px) saturate(190%);box-shadow:var(--t-axdisp-sh);opacity:0;transform:translateY(-6px) scale(.98);transform-origin:top right;pointer-events:none;visibility:hidden;transition:opacity .25s var(--spr),transform .45s var(--spr),visibility 0s .45s}
 #axdisp:focus{outline:none}
-#axdisp.on{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition:opacity .25s ease,transform .45s var(--axn-spr)}
+#axdisp.on{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition:opacity .25s var(--spr),transform .45s var(--spr)}
 #axdisp .axd-h{font:650 13px/1.2 var(--sans);color:var(--axn-mute);padding:10px 12px 6px}
 #axdisp #modes{display:flex;flex-direction:column;gap:2px;margin:0;padding:0;border:0;background:none}
 #axdisp #modes button{all:unset;display:flex;flex-direction:row-reverse;align-items:center;justify-content:space-between;gap:10px;box-sizing:border-box;width:100%;min-height:42px;padding:0 12px;border-radius:12px;cursor:pointer;background:transparent;box-shadow:none}
 #axdisp #modes button:hover{background:var(--axn-hov)}
 #axdisp #modes button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 #axdisp #modes .nm{font:600 14px/1.2 var(--sans);letter-spacing:0;text-transform:none;color:var(--axn-ink)}
-#axdisp #modes .knob{position:absolute;top:2px;left:2px;width:22px;height:22px;border-radius:50%;background:#FFFFFF;box-shadow:0 2px 6px rgba(0,0,0,.18);transition:transform .45s var(--axn-bnc)}
+#axdisp #modes .knob{position:absolute;top:2px;left:2px;width:22px;height:22px;border-radius:50%;background:#FFFFFF;box-shadow:0 2px 6px rgba(0,0,0,.18);transition:transform .45s var(--bnc)}
 #axdisp #modes button[aria-pressed="true"] .knob{transform:translateX(16px)}
 #axdisp #modes .axacc{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 12px 8px;margin:0;border:0;background:none}
 #axdisp #modes .axacc .nm{width:100%}

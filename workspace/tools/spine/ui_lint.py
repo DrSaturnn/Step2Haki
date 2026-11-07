@@ -35,7 +35,7 @@ def measure(html):
     # motion: every transition or animation timing should be a spring token (var(--spr) smooth, var(--bnc) bouncy, var(--snp)
     # snappy), SwiftUI style; plain ease/linear/cubic-bezier timings are counted
     motion = re.findall(r'(?:transition|animation)(?:-timing-function)?\s*:([^;}]*)', css_nc)
-    non_spring = [m.strip()[:80] for m in motion if m.strip() not in ('none', 'unset', 'initial', 'inherit')
+    non_spring = [m.strip()[:80] for m in motion if re.sub(r'\s*!important$', '', m.strip()) not in ('none', 'unset', 'initial', 'inherit')
                   and 'var(--spr' not in m and 'var(--bnc' not in m and 'var(--snp' not in m]
     # comments in the shipped page (D-20261105-6): the build should strip them all
     js = '\n'.join(re.findall(r'<script(?![^>]*application/(?:ld\+)?json)[^>]*>(.*?)</script>', html, re.S))
@@ -98,6 +98,8 @@ def site_checks(site):
                     if d.name.startswith('--') or d.lower_name in ('content', 'font-family', 'quotes'):
                         continue
                     val = tinycss2.serialize(d.value)
+                    # a token color with an alpha, rgba(var(--acc-rgb),.12), takes its color from a token (s167)
+                    val = re.sub(r'\b(?:rgba?|hsla?)\(\s*var\(--[\w-]+\)\s*,\s*[\d.]+%?\s*\)', '', val)
                     val = re.sub(r'var\(--[\w-]+\)', '', val)          # bare token references
                     val = re.sub(r'url\([^)]*\)', '', val)
                     if RAW_COLOR.search(val):

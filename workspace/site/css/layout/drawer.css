@@ -10,8 +10,8 @@
 .sp-drawer .brief{margin:0}
 .sp-drawer .sp-dpractice{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 0;padding:14px 16px;border-radius:var(--r-sub);background:var(--t-sp-drawer-sp-dpractice-bg,var(--recess));box-shadow:var(--t-sp-drawer-sp-dpractice-sh,var(--inner));font-size:14.5px;color:var(--t-sp-drawer-sp-dpractice-fg,var(--ink-2))}
 .sp-drawer .sp-dopen{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:10px;background:var(--t-sp-drawer-sp-dopen-bg,var(--accent));color:var(--t-sp-drawer-sp-dopen-fg,var(--raised));font:750 14px/1 var(--sans);text-decoration:var(--t-sp-drawer-sp-dopen-td);white-space:nowrap}
-.sp-drawer.sp-g{transition:transform .46s cubic-bezier(.2,.9,.24,1.06),border-radius .46s ease,opacity .2s ease}
-.sp-drawer.sp-g > *{transition:opacity .22s ease .14s}
+.sp-drawer.sp-g{transition:transform .46s var(--bnc),border-radius .46s var(--spr),opacity .2s var(--snp)}
+.sp-drawer.sp-g > *{transition:opacity .22s var(--spr) .14s}
 .sp-drawer.sp-g0 > *{opacity:0}
 .sp-drawer{background:var(--t-sp-drawer-bg-2,var(--glass-2));-webkit-backdrop-filter:blur(40px) saturate(190%);backdrop-filter:blur(40px) saturate(190%);box-shadow:var(--t-sp-drawer-sh-2,var(--glass-edge-2));border-radius:28px}
 .sp-drawer .sp-dbar{background:var(--t-sp-drawer-sp-dbar-bg-2);background-color:var(--t-sp-drawer-sp-dbar-bgc);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
@@ -32,8 +32,8 @@ html:is([data-theme],:not([data-theme])) body:not(.qx-rhp) > aside.sp-drawer{top
 html:is([data-theme],:not([data-theme])) body:not(.qx-rhp) > aside.sp-drawer{z-index:160}
 html:is([data-theme],:not([data-theme])) body:not(.qx-rhp):has(> .sp-drawer) > .sp-scrim{z-index:159}
 html:is([data-theme],:not([data-theme])) body:not(.qx-rhp):has(> .sp-drawer) .sp-card{z-index:161}
-html:is([data-theme],:not([data-theme])) body > aside.sp-drawer.qx-g{transition:transform .46s cubic-bezier(.2,.9,.24,1.06),border-radius .46s ease,opacity .3s ease}
-html:is([data-theme],:not([data-theme])) body > aside.sp-drawer.qx-g > *{transition:opacity .22s ease .14s}
+html:is([data-theme],:not([data-theme])) body > aside.sp-drawer.qx-g{transition:transform .46s var(--bnc),border-radius .46s var(--spr),opacity .3s var(--spr)}
+html:is([data-theme],:not([data-theme])) body > aside.sp-drawer.qx-g > *{transition:opacity .22s var(--spr) .14s}
 html:is([data-theme],:not([data-theme])) body > aside.sp-drawer.qx-g0 > *{opacity:0}
 @media (--reduced-motion){
 html:is([data-theme],:not([data-theme])) body > aside.sp-drawer.qx-g{transition:none}

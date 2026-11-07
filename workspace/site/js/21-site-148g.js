@@ -128,7 +128,7 @@
     if(!still && !fine && el.classList && el.parentNode === document.body && !el._qxGone &&
        (el.classList.contains('qx-anc') || (el.classList.contains('sp-scrim') && document.querySelector('body > .sp-drawer.qx-anc')))){
       el._qxGone = 1; el.style.pointerEvents = 'none';
-      if(el.classList.contains('sp-scrim')){ el.style.transition = 'opacity .3s ease'; el.style.opacity = '0'; setTimeout(function(){ nativeRemove.call(el); }, 320); return; }
+      if(el.classList.contains('sp-scrim')){ el.style.transition = 'opacity .3s var(--spr)'; el.style.opacity = '0'; setTimeout(function(){ nativeRemove.call(el); }, 320); return; }
       var lk = el._qxLink, r = lk && document.body.contains(lk) ? lk.getBoundingClientRect() : null;
       el.classList.add('qx-g', 'qx-g0');
       if(r && r.width) flip(el, r); else el.style.transform = 'translateY(40px) scale(.96)';
