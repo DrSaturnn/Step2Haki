@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""build.py: apply every repair/sNN/*.json (sorted by name) to index.html.
+"""build.py: apply every repair/sNN/*.json (sorted by name) to index.html; ui_allow.json (the ui_gate allow list) is skipped.
 
   python3 repair/build.py sNN [--page index.html] [--out FILE]
 All files are applied in memory first; nothing is written unless every op applies.
@@ -28,7 +28,8 @@ def main(argv):
         page = argv[argv.index('--page') + 1]
     if '--out' in argv:
         out = argv[argv.index('--out') + 1]
-    files = sorted(glob.glob(os.path.join(REPO, 'repair', batch, '*.json')))
+    files = sorted(f for f in glob.glob(os.path.join(REPO, 'repair', batch, '*.json'))
+                   if os.path.basename(f) != 'ui_allow.json')   # ui_gate's allow list (ship.sh), not an edit file
     html = read_page(page)
     new, ops = html, 0
     for f in files:
