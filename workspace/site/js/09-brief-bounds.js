@@ -29,13 +29,17 @@
   function go(el){
     if(el) AX.brief.ensure(el);
     if(!el) return;
+    // a brief that a layout keeps out of view (Two-pane shows one brief) is opened the way a sidebar link opens it
+    if(el.classList.contains('brief') && el.offsetParent === null && !shelfHidden(el)){ AX.emit('brief:go', el.id); return; }
     el.scrollIntoView({behavior: 'smooth', block: 'start'});
     if(el.id) history.replaceState(null, '', '#' + el.id);
   }
+  // hidden by the shelf or Review filter (an inline display:none on the brief or its system section)
+  function shelfHidden(x){ var w = x.closest('.sectwrap'); return x.style.display === 'none' || !!(w && w.style.display === 'none'); }
   function nextVisible(b){
     var all = document.querySelectorAll('main .brief[id]'), i = Array.prototype.indexOf.call(all, b.el);
     for(var j = i + 1; j < all.length; j++){
-      if(all[j].offsetParent === null) continue;
+      if(shelfHidden(all[j])) continue;
       if(byId[all[j].id]) return byId[all[j].id];
       var h = AX.brief.content(all[j]).querySelector('h4');
       return {el: all[j], title: h ? txt(h) : all[j].id};

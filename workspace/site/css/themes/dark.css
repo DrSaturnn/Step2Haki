@@ -39,7 +39,7 @@
 [data-theme="dark"]{--t-nav-a-td:none}
 [data-theme="dark"]{--t-nav-a-active-border-left-color:var(--accent)}
 [data-theme="dark"]{--t-nav-a-active-bg:rgba(var(--acc-rgb),.22);--t-nav-a-active-bg-2:rgba(var(--acc-rgb),.22)}
-[data-theme="dark"]{--t-body-axm-study-modes-study-track-bg:var(--accent);--t-body-modes-axm-study-study-track-bg:var(--accent);--t-body-modes-flatt-track-bg:var(--accent);--t-body-modes-flatt-track-bg-2:var(--accent)}
+[data-theme="dark"]{--t-body-axm-study-modes-study-track-bg:var(--accent);--t-body-modes-axm-study-study-track-bg:var(--accent);}
 [data-theme="dark"]{--t-masthead-bg:none}
 [data-theme="dark"]{--t-masthead-fg:var(--ink)}
 [data-theme="dark"]{--t-masthead-kicker-fg:var(--accent)}
@@ -1275,7 +1275,6 @@
 [data-theme="dark"]{--t-nav-axsx-sect-before-border-bottom:2px solid var(--muted)}
 [data-theme="dark"]{--t-nav-axsx-sect-hover-bgc:rgba(215,221,223,0.04)}
 [data-theme="dark"]{--t-nav-axsx-sect-focus-visible-outline:2px solid var(--accent)}
-[data-theme="dark"]{--t-modes-dark-aria-pressed-true-track-bg:var(--accent)}
 [data-theme="dark"]{--t-modes-axacc-axsw-bg:var(--sw)}
 [data-theme="dark"]{--t-modes-axacc-axsw-focus-visible-outline:2px solid var(--ink)}
 @media (--desktop){

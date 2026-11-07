@@ -3,8 +3,11 @@
    visibility and counts and draws: systems that fold (chevron, name, count), brief tiles, and under the current brief
    its step rail with the fill and one lens that glides between steps. A step is current once its heading passes 32% of
    the window; a click on a step takes effect at once and the spy waits 0.9 s. The list keeps the current step in view.
-   The switches the sidebar does not carry (shelf, Board-style only, Recall, themes, accent, the change log) move into
-   a display sheet behind the round button in the brand row. */
+   The reader's display controls move into a display sheet behind the round button in the brand row, in three groups:
+   Layout (desktop only), Appearance and Study; the build line and change log sit under them.
+   Events: emits nav:sections (the shelf sections and their briefs, for the collapsed rail) on build, on filter changes
+   and on nav:ask; emits nav:collapse from the collapse button (shown only in Two-pane); listens to nav:search (focus the
+   search field) and layout:step (the step at the top of the screen in Two-pane, which the step rail marks). */
 (function(){
   "use strict";
   var nav = document.getElementById('nav'), old = document.getElementById('navlinks');
@@ -14,6 +17,7 @@
   var SVG_CHEV = '<svg width="8" height="12" viewBox="0 0 9 14" aria-hidden="true"><path d="M2 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
   var SVG_SRCH = '<svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.8"></circle><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>';
   var SVG_CFG = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4.5h7M12 4.5h2M2 11.5h2M7 11.5h7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="10.5" cy="4.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="5.5" cy="11.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
+  var SVG_COL = '<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M7 4h9M10 9h6M7 14h9M6 6.5 3 9l3 2.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
   function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
   function txt(n){ return (n.textContent || '').replace(/\s+/g, ' ').trim(); }
   function shown(n){ return n && n.style.display !== 'none' && !n.hidden; }
@@ -30,6 +34,9 @@
     t.appendChild(el('div', 'axn-sub')).textContent = sub ? txt(sub) : '';
     h.appendChild(t);
     var tools = el('div', 'axn-tools');
+    var col = el('button', 'axn-col', SVG_COL); col.type = 'button'; col.setAttribute('aria-label', 'Collapse sidebar'); col.title = 'Collapse sidebar';
+    col.addEventListener('click', function(e){ e.stopPropagation(); AX.emit('nav:collapse'); });
+    tools.appendChild(col);
     var cfg = el('button', 'axn-cfg', SVG_CFG); cfg.type = 'button'; cfg.id = 'axcfg';
     cfg.setAttribute('aria-label', 'Display settings'); cfg.setAttribute('aria-expanded', 'false'); cfg.setAttribute('aria-controls', 'axdisp');
     tools.appendChild(cfg);
@@ -44,6 +51,7 @@
       new MutationObserver(function(){ if(search.getAttribute('placeholder') !== 'Search topics, findings, drugs') ph(); }).observe(search, {attributes: true, attributeFilter: ['placeholder']});
     }
     sheet(cfg, brand);
+    AX.on('nav:search', function(){ if(search) setTimeout(function(){ try{ search.focus({preventScroll: true}); }catch(e){ search.focus(); } }, 60); });
   }
 
   /* the shelf card; the shelf <select> lies invisibly over it */
@@ -61,18 +69,27 @@
   }
 
   /* ---------- the display sheet ---------- */
+  var GROUPS = [['layout', 'Layout'], ['appearance', 'Appearance'], ['study', 'Study']];
   function sheet(btn, brand){
     var s = el('div'); s.id = 'axdisp'; s.setAttribute('role', 'dialog'); s.setAttribute('aria-label', 'Display settings'); s.tabIndex = -1;
     s.appendChild(el('div', 'axd-h')).textContent = 'Display';
     nav.appendChild(s);
+    var box = {};
     function fill(){
       var sp = nav.querySelector('#navscroll > .shelfpick'), md = document.getElementById('modes');
       var pl = nav.querySelector('.axn-srch'), ss = sp && sp.querySelector('select');   // the shelf picker is a card under the search
       if(ss && pl && !nav.querySelector('.axn-shelfrow')) shelfCard(pl, ss);
       if(md && md.parentNode !== s) s.appendChild(md);
+      if(md && !box.study) GROUPS.forEach(function(g){
+        var w = el('section', 'axd-grp'); w.dataset.grp = g[0]; w.setAttribute('aria-label', g[1]);
+        w.appendChild(el('div', 'axd-gh')).textContent = g[1];
+        box[g[0]] = w.appendChild(el('div', 'axd-gb')); md.appendChild(w);
+      });
+      // each control goes to its group, in its data-o order
+      if(md) Array.prototype.slice.call(md.querySelectorAll(':scope > [data-g]')).sort(function(a, b){ return (+a.dataset.o || 0) - (+b.dataset.o || 0); })
+        .forEach(function(c){ var g = box[c.dataset.g]; if(g) g.appendChild(c); });
+      GROUPS.forEach(function(g){ if(box[g[0]]) box[g[0]].parentNode.hidden = !box[g[0]].children.length; });
       var b = brand && brand.querySelector('.axbuild'); if(b && b.parentNode !== s) s.appendChild(b);
-      // the switches' labels read as sentences here, like the rest of the sheet (presentation only)
-      s.querySelectorAll('#modes .nm').forEach(function(n){ var t = n.textContent; if(t && t === t.toUpperCase()) n.textContent = t.charAt(0) + t.slice(1).toLowerCase(); });
     }
     fill(); window.addEventListener('load', fill);
     function set(on){
@@ -114,6 +131,7 @@
     });
     list.addEventListener('click', click);
     mirror();
+    AX.on('nav:ask', sections);
     new MutationObserver(function(){ requestAnimationFrame(mirror); }).observe(old, {subtree: true, attributes: true, attributeFilter: ['style', 'hidden'], childList: true, characterData: true});
   }
   function fold(g, on, anim){
@@ -122,7 +140,16 @@
     if(!anim){ void list.offsetHeight; requestAnimationFrame(function(){ list.classList.remove('axn-still'); }); }
   }
   // mirror the filters the old list carries (shelf, Board-style only, search) and its live counts
+  function sections(){
+    AX.emit('nav:sections', groups.filter(function(g){ return !g.btn.hidden; }).map(function(g){
+      return {name: g.name, count: g.btn.querySelector('.ct').textContent, items: g.items.filter(function(it){ return !it.el.hidden; }).map(function(it){
+        return it.id ? {id: it.id, label: it.el.textContent} : {sub: it.el.textContent};
+      })};
+    }));
+  }
+  var secQ = 0;
   function mirror(){
+    if(!secQ) secQ = setTimeout(function(){ secQ = 0; sections(); }, 60);
     groups.forEach(function(g){
       g.btn.hidden = !shown(g.src); g.dz.hidden = !shown(g.src);
       if(g.cnt) g.btn.querySelector('.ct').textContent = txt(g.cnt);
@@ -183,7 +210,10 @@
     if(!b && bs.length) b = bs[0];
     var id = b ? b.id : null, step = -1;
     if(id && (!rail || rail.id !== id)) setBrief(id);
-    if(rail){
+    if(rail && twoStep && document.documentElement.getAttribute('data-layout') === 'two'){
+      rail.steps.forEach(function(s, j){ if(s.id === twoStep) step = j; });
+      if(step < 0) step = 0;
+    } else if(rail){
       rail.steps.forEach(function(s, j){ if(s.off || !s.id) return; var t = document.getElementById(s.id); if(t && t.offsetParent !== null && t.getBoundingClientRect().top < y) step = j; });
       var d = document.scrollingElement || document.documentElement;
       if(d.scrollTop + window.innerHeight >= d.scrollHeight - 4) step = rail.steps.length - 1;
@@ -191,6 +221,8 @@
     }
     if(step !== cur.step){ cur.step = step; paint(); keep(rail && rail.links[step], true); }
   }
+  var twoStep = null;
+  AX.on('layout:step', function(id){ twoStep = id; kick(); });
   function setBrief(id){   // one home per brief: the rail always sits under the home tile (the system tile; a
                            // Presentations-only brief's home is its Presentations tile); the other tile is marked, never current (earlier: the
                            // rail followed the tile clicked or the row scrolled from, so it hopped between groups and depended on scroll direction)
@@ -230,7 +262,9 @@
   // held until the target has stayed put for 20 frames, the time runs out, the reader moves or a newer link is followed
   function seat(id, until, held){
     var t = document.getElementById(id); if(!t || decodeURIComponent(location.hash.slice(1)) !== id) return;
-    var want = WIDE.matches ? (t.classList.contains('brief') ? 0 : 24) : (parseFloat(getComputedStyle(t).scrollMarginTop) || 0);
+    var land = AX.landing(t), want = land.top;
+    t = land.el;
+    if(want == null) want = WIDE.matches ? (t.classList.contains('brief') ? 0 : 24) : (parseFloat(getComputedStyle(t).scrollMarginTop) || 0);
     var top = t.getBoundingClientRect().top;
     if(Math.abs(top - want) > 2){ held = 0; window.scrollTo({top: window.scrollY + top - want, behavior: 'instant'}); }   // instant: a smooth scroll restarted every frame never arrives
     else held = (held || 0) + 1;

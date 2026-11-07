@@ -2,10 +2,11 @@
 #modes button{all:unset;display:flex;align-items:center;gap:10px;width:100%;box-sizing:border-box;cursor:pointer;user-select:none;background:#101015;padding:9px 13px;border-radius:99px;box-shadow:var(--t-modes-button-sh)}
 #modes .knob{position:absolute;top:2px;left:2px;width:15px;height:15px;border-radius:50%;background:#E9E9EE;box-shadow:0 1px 3px rgba(0,0,0,.5);transition:transform .2s var(--snp)}
 #modes .nm{font-size:10px;font-weight:800;letter-spacing:1.1px;color:rgba(255,255,255,.78)}
-body .axm-study #modes .study .knob,body #modes.axm-study .study .knob,body .axm-flat #modes .flatt .knob,body #modes.axm-flat .flatt .knob{transform:translateX(15px)}
+body .axm-study #modes .study .knob,body #modes.axm-study .study .knob{transform:translateX(15px)}
 #modes button:focus-visible{outline:var(--t-modes-button-focus-visible-outline,2px solid var(--axh-9A93E8));outline-offset:2px}
 @media (--narrow){
 #nav.sxon #modes{display:none}
+#axdisp .axd-grp[data-grp="layout"]{display:none}
 }
 #axbar,#axedge{display:none}
 @media (--desktop){
@@ -33,7 +34,6 @@ body:has(> .sp-drawer) #axbar,body:has(> .sp-drawer) #axedge{opacity:0;pointer-e
 #modes button{background:rgba(118,118,128,.10);box-shadow:var(--t-modes-button-sh-2)}
 #modes .knob{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25)}
 #modes .nm{color:var(--ink-2)}
-#modes .dark[aria-pressed="true"] .knob{transform:translateX(15px)}
 #modes .axacc{display:grid;grid-template-columns:repeat(8,18px);justify-content:space-between;align-items:center;row-gap:10px;padding:10px 14px 12px;border-radius:18px;background:rgba(118,118,128,.10)}
 #modes .axacc .nm{grid-row:1;grid-column:1/6}
 #modes .axacc .axsw{all:unset;grid-row:2;box-sizing:border-box;cursor:pointer;width:18px;height:18px;border-radius:999px;background:var(--t-modes-axacc-axsw-bg,var(--sw));box-shadow:0 0 0 1px rgba(24,28,30,.15);transition:box-shadow .2s var(--snp)}
@@ -60,6 +60,17 @@ body:has(> .sp-drawer) #axbar,body:has(> .sp-drawer) #axedge{opacity:0;pointer-e
 #axdisp:focus{outline:none}
 #axdisp.on{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition:opacity .25s var(--spr),transform .45s var(--spr)}
 #axdisp .axd-h{font:650 13px/1.2 var(--sans);color:var(--axn-mute);padding:10px 12px 6px}
+#axdisp .axd-grp{display:flex;flex-direction:column;gap:2px;padding:2px 0 6px}
+#axdisp .axd-grp + .axd-grp{border-top:1px solid var(--hair);padding-top:6px}
+#axdisp .axd-grp[hidden]{display:none}
+#axdisp .axd-gh{font:650 11.5px/1.2 var(--sans);letter-spacing:.4px;text-transform:uppercase;color:var(--axn-mute);padding:8px 12px 4px}
+#axdisp .axd-gb{display:flex;flex-direction:column;gap:2px}
+#axdisp #modes .axd-seg{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:42px;padding:0 6px 0 12px}
+#axdisp #modes .axd-opts{display:flex;gap:2px;padding:2px;border-radius:11px;background:var(--axn-fld)}
+#axdisp #modes .axd-opts button{all:unset;box-sizing:border-box;display:block;min-height:30px;padding:0 11px;border-radius:9px;font:600 13px/30px var(--sans);color:var(--axn-mute);cursor:pointer;white-space:nowrap;transition:background .3s var(--spr),color .3s var(--spr),box-shadow .3s var(--spr)}
+#axdisp #modes .axd-opts button:hover{color:var(--axn-ink)}
+#axdisp #modes .axd-opts button[aria-checked="true"]{background:var(--axn-tile);color:var(--axn-ink);box-shadow:var(--e1)}
+#axdisp #modes .axd-opts button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 #axdisp #modes{display:flex;flex-direction:column;gap:2px;margin:0;padding:0;border:0;background:none}
 #axdisp #modes button{all:unset;display:flex;flex-direction:row-reverse;align-items:center;justify-content:space-between;gap:10px;box-sizing:border-box;width:100%;min-height:42px;padding:0 12px;border-radius:12px;cursor:pointer;background:transparent;box-shadow:none}
 #axdisp #modes button:hover{background:var(--axn-hov)}

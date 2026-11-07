@@ -13,27 +13,30 @@ var VERIFY = /jsdom/i.test(navigator.userAgent) || /[?&]axcheck\b/.test(location
 var BEFORE = (VERIFY && document.body) ? norm(document.body.innerText) : "";
 function norm(s){ return (s||"").replace(/\s+/g," ").trim(); }
 
-/* ---------- 0. sidebar mode switches ---------- */
+/* ---------- 0. sidebar mode switches ----------
+   #modes holds the reader's display controls; each carries data-g (its group in the display sheet: layout, appearance,
+   study) and data-o (its order in the group). Recall mode is a switch; Surface (Sculpted, Flat) is a choice row. */
 function switches(){
   var nav=document.getElementById('nav'); if(!nav) return;
   var brand=nav.querySelector('.brand');
   var box=document.createElement('div'); box.id='modes';
   box.innerHTML =
-    '<button class="study" type="button" aria-pressed="false"><span class="track"><span class="knob"></span></span><span class="nm">RECALL MODE</span></button>'+
-    '<button class="flatt" type="button" aria-pressed="false"><span class="track"><span class="knob"></span></span><span class="nm">FLAT THEME</span></button>';
-  brand ? brand.after(box) : nav.prepend(box);
+    '<button class="study" type="button" aria-pressed="false" data-g="study" data-o="1"><span class="track"><span class="knob"></span></span><span class="nm">Recall mode</span></button>';
   var b=document.body;
+  var surf=AX.ui.seg('Surface',[['0','Sculpted'],['1','Flat']],'0',function(v){
+    b.classList.toggle('flat',v==='1'); AX.settings.set('flat',v==='1'?'1':'0'); sync();
+  });
+  surf.classList.add('surf'); surf.dataset.g='appearance'; surf.dataset.o='2';
+  box.appendChild(surf);
+  brand ? brand.after(box) : nav.prepend(box);
   function sync(){
     box.querySelector('.study').setAttribute('aria-pressed',b.classList.contains('study')?'true':'false');
-    box.querySelector('.flatt').setAttribute('aria-pressed',b.classList.contains('flat')?'true':'false');
+    surf.set(b.classList.contains('flat')?'1':'0');
   }
   if(AX.settings.get('study')==='1') b.classList.add('study');
-  if(AX.settings.get('flat')==='1') b.classList.add('flat');   // sculpted is the default; flat only when the reader turned it on
+  if(AX.settings.get('flat')==='1') b.classList.add('flat');   // sculpted is the default; flat only when the reader chose it
   box.querySelector('.study').addEventListener('click',function(){
     b.classList.toggle('study'); AX.settings.set('study',b.classList.contains('study')?'1':'0'); sync();
-  });
-  box.querySelector('.flatt').addEventListener('click',function(){
-    b.classList.toggle('flat'); AX.settings.set('flat',b.classList.contains('flat')?'1':'0'); sync();
   });
   sync();
   if(!window.__axModeObserver){
@@ -1626,7 +1629,7 @@ function transformBrief(b){ columnize(b); mnemonics(b); tables(b); masks(b); mcq
   switches(); mobileNav(); sections(); columnize(); mnemonics(); tables(); masks(); mcq(); accessibilityEnhance(); unavailableInline(); xrefs(); scalepeeks(); figures(); wire(); shelfInit();
   AX.brief.each('transform',transformBrief);
   var AFTER=VERIFY?norm(document.body.innerText):"";
-  var addedUI=/STUDY MODE|RECALL MODE|FLAT THEME|REVEAL|From this brief|Distractors are entities/;
+  var addedUI=/STUDY MODE|Recall mode|Surface|Sculpted|REVEAL|From this brief|Distractors are entities/;
   var a=BEFORE.split(' ').filter(Boolean).length;
   var b=AFTER.split(' ').filter(Boolean).length;
   console.log('[ax] words before',a,'after',b,'| mcq',window.__ax.made,'reveal-only',window.__ax.kept);

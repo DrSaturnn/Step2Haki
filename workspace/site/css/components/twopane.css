@@ -1,0 +1,17 @@
+@media (--desktop){
+html[data-layout="two"] body main .masthead,html[data-layout="two"] body main .wrap > :not(.ax2-cur){display:none}
+html[data-layout="two"] main .wrap{max-width:none;margin:0;padding:0 36px 0 0}
+html[data-layout="two"] main .wrap > .brief.ax2-cur{padding:20px 0 0;margin:0;scroll-snap-align:start}
+html[data-layout="two"] body .brief.ax2-cur > h4{font-size:30px;line-height:38px;letter-spacing:-.4px;margin:0;max-width:var(--ax2-tw,60%);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html[data-layout="two"] body .brief.ax2-cur > .sub{font-size:15px;line-height:21px;margin:2px 0 22px;max-width:var(--ax2-tw,60%)}
+html[data-layout="two"] body .brief.ax2-cur > .sub .subq{display:inline;margin:0;font-size:15px;line-height:21px}
+html[data-layout="two"] body .brief.ax2-cur > .sub .subq::before{content:" \00b7  ";font-weight:400;color:var(--muted)}
+html[data-layout="two"] body .brief.ax2-cur .ax2-u > h5.tsec,html[data-layout="two"] body .brief.ax2-cur .ax2-u > h5.authored-hdr{font-size:22px;line-height:28px;margin:0 0 10px}
+html[data-layout="two"] body .brief.sp.ax2-cur .ax2-u > h5.sp-h{gap:10px;margin:0 0 10px}
+html[data-layout="two"] body .brief.sp.ax2-cur .ax2-u > h5.sp-h .sp-n{min-width:28px;height:28px;border-radius:9px;font-size:14px}
+html[data-layout="two"] body .brief.ax2-cur .ax2-u > * + *{margin-top:12px}
+html[data-layout="two"] body .brief.ax2-cur .ax2-u > *{margin-bottom:0}
+html[data-layout="two"] body .brief.ax2-cur .ax2-u > .ax2-cont + *{margin-top:0}
+html[data-layout="two"] body .ax2-cols .ax2-brk{overflow:visible;contain:none;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+html[data-layout="two"] body .brief.ax2-cur > .ax2-flow + .bb-end{margin-top:20px}
+}

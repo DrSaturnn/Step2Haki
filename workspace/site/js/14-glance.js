@@ -1,6 +1,6 @@
 /* Site layout. Presentation only; never adds or removes brief text.
    1. Accent setting: a reader choice under the theme switches, stored per viewer; Slate default.
-      Dark theme: a switch beside Flat theme, stored per viewer, light by default.
+      Color: Light, Dark or Tinted, stored per viewer, light by default.
    2. Desktop hovers: open on pointer enter, close on leave, stay open once clicked (a second click closes).
    3. Desktop glass toolbar: the current section's number and name, Read and Recall, open or close every panel.
    4. Sidebar systems fold and unfold; the system holding the current brief opens itself. */
@@ -73,27 +73,24 @@
     dark = d; tint = t; AX.settings.set('theme', t ? 'tinted' : (d ? 'dark' : 'light'));
     paintSetting(); queue = []; regions().forEach(mark); markRoot();
   }
-  function setDark(on){ setTheme(on, on && tint); }
-  var box = null, darkBtn = null, tintBtn = null;
+  var box = null, color = null;
+  function themeName(){ return tint ? 'tinted' : (dark ? 'dark' : 'light'); }
   function paintSetting(){
     if(!box) return;
     box.querySelectorAll('.axsw').forEach(function(b){ var on = b.getAttribute('data-k') === cur; b.setAttribute('aria-checked', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; });
     var a = valid(cur); box.querySelector('.axan').textContent = a ? a[1] : '';
-    if(darkBtn) darkBtn.setAttribute('aria-pressed', dark ? 'true' : 'false');
-    if(tintBtn) tintBtn.setAttribute('aria-pressed', tint ? 'true' : 'false');
+    if(color) color.set(themeName());
   }
+  /* Appearance controls in #modes: Color (Light, Dark, Tinted; Tinted is the dark theme with accent-tinted glass), then
+     the accent swatches; the display sheet groups them by data-g and data-o. */
   function setting(){
     var modes = document.getElementById('modes'); if(!modes || modes.querySelector('.axacc')) return;
-    darkBtn = document.createElement('button'); darkBtn.type = 'button'; darkBtn.className = 'dark';
-    darkBtn.innerHTML = '<span class="track"><span class="knob"></span></span><span class="nm">DARK THEME</span>';
-    var flat = modes.querySelector('.flatt'); if(flat) flat.after(darkBtn); else modes.appendChild(darkBtn);
-    darkBtn.addEventListener('click', function(){ setDark(!dark); });
-    tintBtn = document.createElement('button'); tintBtn.type = 'button'; tintBtn.className = 'dark tint';
-    tintBtn.innerHTML = '<span class="track"><span class="knob"></span></span><span class="nm">TINTED GLASS</span>';
-    darkBtn.after(tintBtn);
-    tintBtn.addEventListener('click', function(){ setTheme(true, !tint); });
+    color = AX.ui.seg('Color', [['light', 'Light'], ['dark', 'Dark'], ['tinted', 'Tinted']], themeName(), function(v){ setTheme(v !== 'light', v === 'tinted'); });
+    color.classList.add('color'); color.dataset.g = 'appearance'; color.dataset.o = '1';
+    modes.appendChild(color);
     box = document.createElement('div'); box.className = 'axacc'; box.setAttribute('role', 'radiogroup'); box.setAttribute('aria-label', 'Accent color');
-    var h = '<span class="nm">ACCENT</span>';
+    box.dataset.g = 'appearance'; box.dataset.o = '3';
+    var h = '<span class="nm">Accent</span>';
     ACC.forEach(function(a){ h += '<button type="button" class="axsw" role="radio" data-k="' + a[0] + '" title="' + a[1] + '" aria-label="' + a[1] + '" style="--sw:' + a[2] + '"></button>'; });
     box.innerHTML = h + '<span class="axan"></span>';
     modes.appendChild(box);
