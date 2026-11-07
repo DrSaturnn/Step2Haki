@@ -148,7 +148,7 @@ def transform(inner):
     """-> (new_inner, stats, notes)."""
     root = tree(inner)
     edits, st, notes = [], {'A_label': 0, 'A_lead': 0, 'A_none': 0, 'F_block': 0, 'F_inline': 0, 'kept': 0, 'nbd': 0}, []
-    byid = {}
+    byid, taken = {}, []
     for n in walk(root):
         m = re.search(r'\bid="([^"]+)"', n.attrs or '')
         if m and n.tag != '#text':
@@ -195,6 +195,12 @@ def transform(inner):
             notes.append(('A-none', label, title, ''))
             continue
         s, e, how = a
+        if any(s < e2 and s2 < e for s2, e2 in taken):
+            # the term already carries another hover's anchor: keep this label as its trigger
+            st['A_none'] += 1
+            notes.append(('A-none', label, re.sub(r'<[^>]+>', '', inner[s:e]), title))
+            continue
+        taken.append((s, e))
         st['A_' + how] += 1
         term = re.sub(r'<[^>]+>', '', inner[s:e])
         dup = label.lower() in (term.lower(), title.lower())
