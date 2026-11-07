@@ -131,7 +131,10 @@ print(('ok  ' if hit else 'BAD ') + 'a spoke row missing from its hub: expects g
 # there. The page under test is given a Presentations group first if it has none.
 nav0 = PAGE.find('<div id="navlinks">\n')
 hub_ids = [b.id for b in bl if b.attrs.get('data-entry') == 'hub']
-plain_brief = next(b.id for b in bl if b.kind == 'brief' and b.attrs.get('data-entry') != 'hub')
+# s167c N11, N13 (D-20261107-9): a non-hub brief tagged data-sys="presentations" also has its one link there
+placed = [b.id for b in bl if b.attrs.get('data-sys') == 'presentations' and b.attrs.get('data-entry') != 'hub']
+pres_ids = hub_ids + placed
+plain_brief = next(b.id for b in bl if b.kind == 'brief' and b.attrs.get('data-entry') != 'hub' and b.id not in placed)
 def with_pres(ids, page=PAGE):
     p = page
     if '<div class="sect">Presentations' in p:
@@ -139,19 +142,19 @@ def with_pres(ids, page=PAGE):
         p = p[:a] + p[z:]
     blk = '<div id="navlinks">\n    <div class="sect">Presentations <span class="count">%d</span></div>\n' % len(ids) + ''.join('    <a href="#%s">x</a>\n' % i for i in ids)
     return p.replace('<div id="navlinks">\n', blk, 1)
-o = gate(with_pres(hub_ids))[1]
+o = gate(with_pres(pres_ids))[1]
 hit = '[nav-link]' not in o and '[nav-count]' not in o
-print(('ok  ' if hit else 'BAD ') + 'every hub listed once, in Presentations, passes'); bad += not hit
-o = gate(with_pres(hub_ids + [plain_brief]))[1]
+print(('ok  ' if hit else 'BAD ') + 'every hub and placed brief listed once, in Presentations, passes'); bad += not hit
+o = gate(with_pres(pres_ids + [plain_brief]))[1]
 hit = '[nav-link] %s is in Presentations but is not a hub' % plain_brief in o
 print(('ok  ' if hit else 'BAD ') + 'a non-hub in Presentations: expects gate FAIL nav-link'); bad += not hit
 h = hub_ids[0]
-_p = with_pres(hub_ids); _m = _p.find('<div class="sect">Musculoskeletal'); _e = _p.find('</div>', _m) + 6
+_p = with_pres(pres_ids); _m = _p.find('<div class="sect">Musculoskeletal'); _e = _p.find('</div>', _m) + 6
 p2 = _p[:_e] + '\n    <a href="#%s">x</a>' % h + _p[_e:]
 o = gate(p2)[1]
 hit = '[nav-link] %s has 2 nav links' % h in o
 print(('ok  ' if hit else 'BAD ') + 'a hub also listed in its system: expects gate FAIL nav-link'); bad += not hit
-o = gate(with_pres(hub_ids[1:]))[1]
+o = gate(with_pres(pres_ids[1:]))[1]
 hit = '[nav-link] %s is a hub but has no link in Presentations' % hub_ids[0] in o
 print(('ok  ' if hit else 'BAD ') + 'a hub missing from Presentations: expects gate FAIL nav-link'); bad += not hit
 # s148g per-choice reasons: all three or none
