@@ -8,7 +8,7 @@ stems also follow "Original stems" in STANDING_DIRECTIONS. Conversation replies 
 Enforcement:
 - tools/spine/prose_lint.py: the gate's prose-lint check (no brief's count rises above tools/spine/prose_baseline.json)
   and prose-touched check (a brief whose text, hover text included, changed against the base has zero hits; a
-  markup-only change is exempt); ship.sh tightens the baseline. The header word caps and meta words are report-only.
+  markup-only change is exempt); ship.sh tightens the baseline. The header word caps and meta words are report-only (no header word cap: D-20261107-2).
 - tools/spine/verify.py: a brief with prose hits is not READY, so ship.sh refuses it.
 - The card below is copied into every builder's INSTRUCTIONS.md (tools/spine/build_lanes.py), every review-round and
   patch lane's INSTRUCTIONS.md (lanes.py, patch.py) and every reviewer's RULES.md (tools/spine/review_packet.py). This
@@ -77,6 +77,8 @@ Classes 1 to 7 are examples of the test; a line that fails the test is out, list
   words or fewer per line, arrow lines indented, no paragraph blocks.
 - Line targets: key point about 15 words, finding about 20, hover line about 12. A line over its target is split into
   two lines that keep every fact.
+- Headers and titles have no word cap (D-20261107-2); prose_lint reports header_long and title_long without counting
+  them.
 
 **7. Process.** Purpose: a correction changes the system that produced the error.
 - Fix every instance of a pattern in the brief, and report the count.

@@ -6,7 +6,7 @@ rhetorical patterns of the writing rules (contrast, branch, intensifier, reveal 
 Each brief is parsed from pagelib's Brief.inner, so lazy briefs wrapped in <template class="axl"> are linted too.
 Practice items (ol.bank, div.nbq, div.vignette) are excluded. REPORT_ONLY patterns are printed in the totals but never
 counted toward a brief's number, the baseline or --touched: header_wh_template, and the word caps header_long,
-title_long and meta_words, which TEXTBOOK_STYLE does not state as rules (report-only until Jonathan sets them).
+title_long and meta_words (headers and titles have no word cap, TEXTBOOK_STYLE rule 6, D-20261107-2).
 
 Ratchet design: the current page has prose debt. The baseline file records each brief's hit count; a build fails
 when any brief rises above its number or a brief missing from the baseline has hits. --tighten lowers numbers to the

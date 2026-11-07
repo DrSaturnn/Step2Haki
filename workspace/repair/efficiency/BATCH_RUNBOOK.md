@@ -365,6 +365,8 @@ Where these rules live: here and in DECISIONS_DIGEST only. STANDING_DIRECTIONS.m
 MIGRATION_CONTRACT.md and TEXTBOOK_STYLE.md (since s165b) are hashed into every acc and read receipt ("specs", tools/spine/verify.py), so any edit to them
 makes every shipped brief's receipts stale (found at the s150e ship). Process-only rules never go into those files;
 brief-content rules do, and are edited only in a batch that re-reviews.
+A rules-only batch may edit them when its digest line records that the receipts went stale (D-20261107-3; recorded for
+s165b and for s167's TEXTBOOK_STYLE rule 6 line); a stale receipt is renewed when its brief is next rebuilt or patched.
 
 ## 9. Closing a batch (Jonathan 2026-10-12)
 

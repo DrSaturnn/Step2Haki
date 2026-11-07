@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-11-06, by Claude (s165b shipped; no batch open).
+Last updated: 2026-11-07, by Claude (s167 open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -11,6 +11,12 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 ```
 
 ## State (rewrite after every step)
+
+- **s167 OPEN 2026-11-07** (Claude lead; UI refactor part 2, site layer only, content frozen; D-20261107-1 to -4; lead
+  100M, no agents; batch file repair/s167/S167.md, chunk table there). Branch wip/s167 lives only in this container and as
+  the bundle claude/pending/s167/wip_s167.bundle in the private repo (the public repo attach was refused at launch): a
+  continuation chat clones main, then `git fetch <bundle> wip/s167:wip/s167 && git checkout wip/s167`. Step: chunk 2
+  (review redesign).
 
 - **s165b SHIPPED 2026-11-06** (Claude lead, from the ledger chat; rules and gate patch, tools and docs only, no page
   change; D-20261106-8 to -11; Jonathan "ship" 23:58): commits 0267947, 43e206e, 2ff77a6 and the handoff commit,
