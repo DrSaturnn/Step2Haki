@@ -3,13 +3,13 @@
 
   python3 repair/s167c/make_spec.py LIVE_PAGE GEN_PAGE
 
-Ops, in order: set_attr on each brief tag (data-navgrp, data-navlabel, data-sys); replace ops per changed token run
-inside each brief (context widened until unique in the brief; none falls in an ol.bank); the two new Presentations
+Ops, in order: set_attr on each brief tag (data-navgrp, data-navlabel, data-sys); one replace per changed region
+between ol.bank blocks of each brief (widened until unique in the brief); the two new Presentations
 sub headers (replace_global); the 13 moves (move_brief, MOVES order); replace_global for every remaining chrome change
-(bands, counts, sidebar, subtitle, masthead). The result is checked with apply_edits against GEN_PAGE; exit 1 on any
-byte difference.
+(bands, counts, sidebar, subtitle, masthead). The result is checked with apply_edits against GEN_PAGE: every brief and
+every chrome segment byte-equal, blank-line runs between briefs aside (the moves space them differently); exit 1 otherwise.
 """
-import difflib, json, os, re, sys
+import json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 WS = os.path.dirname(os.path.dirname(HERE))
 sys.path[:0] = [os.path.join(WS, 'tools'), HERE]
@@ -25,27 +25,44 @@ def run(html, edits):
     return out
 
 
+BANK = re.compile(r'<ol\b[^>]*class="bank\b.*?</ol>', re.S)
+
+
 def brief_hunks(bid, old_in, new_in):
-    """replace ops for one brief, last hunk first, each find unique in the brief as it stands when applied."""
-    ot, nt = TOK.findall(old_in), TOK.findall(new_in)
-    ops = [o for o in difflib.SequenceMatcher(None, ot, nt, autojunk=False).get_opcodes() if o[0] != 'equal']
-    cur, out = ot[:], []
-    for _, a1, a2, b1, b2 in reversed(ops):
-        lo, hi = a1, a2
+    """replace ops for one brief: the brief is split at its ol.bank blocks (no change falls in one, so they are equal in
+    both); each region that differs gets one replace from its first to its last changed byte, widened to tag
+    boundaries and until unique in the brief. Last region first."""
+    ob, nb = [m.group(0) for m in BANK.finditer(old_in)], [m.group(0) for m in BANK.finditer(new_in)]
+    if ob != nb:
+        raise SystemExit('%s: a bank changed' % bid)
+    oparts, nparts = BANK.split(old_in), BANK.split(new_in)
+    out, cur, off = [], old_in, [0]
+    for k, part in enumerate(oparts[:-1]):
+        off.append(off[-1] + len(part) + len(ob[k]))
+    for k in reversed(range(len(oparts))):
+        a, b = oparts[k], nparts[k]
+        if a == b:
+            continue
+        p = 0
+        while p < min(len(a), len(b)) and a[p] == b[p]:
+            p += 1
+        s = 0
+        while s < min(len(a), len(b)) - p and a[len(a) - 1 - s] == b[len(b) - 1 - s]:
+            s += 1
+        lo = a.rfind('>', 0, p) + 1 if p else 0
+        nx = a.find('<', len(a) - s)
+        hi = nx if nx != -1 else len(a)
         while True:
-            find = ''.join(cur[lo:hi])
-            whole = ''.join(cur)
-            if find and whole.count(find) == 1:
+            find = a[lo:hi]
+            if find and cur.count(find) == 1:
                 break
-            if lo > 0:
-                lo -= 1
-            if hi < len(cur):
-                hi += 1
-            if lo == 0 and hi == len(cur):
-                break
-        rep = ''.join(cur[lo:a1]) + ''.join(nt[b1:b2]) + ''.join(cur[a2:hi])
+            if lo == 0 and hi == len(a):
+                raise SystemExit('%s: region %d is not unique in the brief' % (bid, k))
+            lo, hi = max(0, lo - 40), min(len(a), hi + 40)
+        rep = a[lo:p] + b[p:len(b) - s] + a[len(a) - s:hi]
         out.append({'op': 'replace', 'brief': bid, 'find': find, 'with': rep})
-        cur = cur[:lo] + TOK.findall(rep) + cur[hi:]
+        at = off[k] + lo
+        cur = cur[:at] + rep + cur[at + len(find):]
     return out
 
 
@@ -67,7 +84,7 @@ def chrome_ops(cur, gen):
     out, page = [], cur
     for (c0, c1), (g0, g1) in reversed(list(zip(cs, gs))):
         a, b = cur[c0:c1], gen[g0:g1]
-        if a == b:
+        if a == b or (not a.strip() and not b.strip()):   # blank lines between briefs (moves space them differently)
             continue
         p = 0
         while p < min(len(a), len(b)) and a[p] == b[p]:
@@ -132,16 +149,25 @@ def main(live, genp):
         cur = run(cur, [e])
     E += chrome_ops(cur, gen)
     out = run(old, E)
-    ok = out == gen
+    os_, oids = segments(out)
+    gs_, gids = segments(gen)
+    ob2 = {b.id: out[b.start:b.end] for b in pagelib.briefs(out)}
+    gb2 = {b.id: gen[b.start:b.end] for b in pagelib.briefs(gen)}
+    ws = sum(1 for (a0, a1), (b0, b1) in zip(os_, gs_) if out[a0:a1] != gen[b0:b1])
+    bad = [i for i, ((a0, a1), (b0, b1)) in enumerate(zip(os_, gs_))
+           if out[a0:a1] != gen[b0:b1] and (out[a0:a1].strip() or gen[b0:b1].strip())]
+    ok = oids == gids and ob2 == gb2 and not bad
+    print('briefs byte-equal: %s; chrome segments differing only in blank lines: %d; other differences: %d'
+          % (ob2 == gb2, ws - len(bad), len(bad)))
     dst = os.path.join(HERE, '40_s167c.json')
     json.dump({'edits': E}, open(dst, 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
     kinds = {}
     for e in E:
         kinds[e['op']] = kinds.get(e['op'], 0) + 1
-    print('%d edits %s; build equals gen page: %s' % (len(E), kinds, ok))
+    print('%d edits %s; build equals gen page (blank lines between briefs aside): %s' % (len(E), kinds, ok))
     if not ok:
-        i = next(k for k in range(min(len(out), len(gen))) if out[k] != gen[k])
-        print('first diff at %d:\n built %r\n gen   %r' % (i, out[i - 80:i + 120], gen[i - 80:i + 120]))
+        for i in bad[:3]:
+            print('segment %d after %s:\n built %r\n gen   %r' % (i, oids[i - 1] if i else None, out[slice(*os_[i])][:300], gen[slice(*gs_[i])][:300]))
         return 1
     return 0
 
