@@ -1,7 +1,7 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
  "id": "s166",
- "open": true,
+ "open": false,
  "plan_step": "s166",
  "roles": [],
  "max_agents": 0,
@@ -13,7 +13,7 @@
   "note": "s167b shipped 5a13fec 2026-11-07 (Claude lead): sculpted light default; dark theme switch in one frame; no agents"
  },
  "opened": "2026-11-07 13:19 EST",
- "note": "s166 resumed (Claude lead): wip/s166 merged main, pilot rebuilt on the s167 CSS; no agents",
+ "note": "s166 paused 2026-11-07 13:37 at pilot r3 (D-20261107-8: moved to the end of the order)",
  "batch_budgets": {
   "s138": {
    "agents": 20,
