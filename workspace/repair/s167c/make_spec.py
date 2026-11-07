@@ -49,22 +49,47 @@ def brief_hunks(bid, old_in, new_in):
     return out
 
 
+def segments(h):
+    """[(start, end)] of the chrome between briefs (before the first, between each pair, after the last)."""
+    bl = pagelib.briefs(h)
+    cuts = [0] + [x for b in bl for x in (b.start, b.end)] + [len(h)]
+    return [(cuts[i], cuts[i + 1]) for i in range(0, len(cuts), 2)], [b.id for b in bl]
+
+
 def chrome_ops(cur, gen):
-    """replace_global ops turning cur into gen outside briefs, last hunk first."""
-    ct, gt = TOK.findall(cur), TOK.findall(gen)
-    ops = [o for o in difflib.SequenceMatcher(None, ct, gt, autojunk=False).get_opcodes() if o[0] != 'equal']
-    out = []
-    for _, a1, a2, b1, b2 in reversed(ops):
-        lo, hi = a1, a2
-        whole = ''.join(ct)
+    """replace_global ops turning cur into gen outside briefs. Briefs must already match one for one, in order; each
+    chrome segment is diffed on its own after trimming the common prefix and suffix. Last segment first, so earlier
+    offsets hold; each find is widened (inside its segment) until unique in the page as it then stands."""
+    cs, cids = segments(cur)
+    gs, gids = segments(gen)
+    if cids != gids:
+        raise SystemExit('brief order differs after the moves')
+    out, page = [], cur
+    for (c0, c1), (g0, g1) in reversed(list(zip(cs, gs))):
+        a, b = cur[c0:c1], gen[g0:g1]
+        if a == b:
+            continue
+        p = 0
+        while p < min(len(a), len(b)) and a[p] == b[p]:
+            p += 1
+        s = 0
+        while s < min(len(a), len(b)) - p and a[len(a) - 1 - s] == b[len(b) - 1 - s]:
+            s += 1
+        lo, hi = p, len(a) - s          # differing span in a; widen to tag boundaries, then until unique
+        lo = a.rfind('>', 0, lo) + 1 if lo else 0
+        nx = a.find('<', hi)
+        hi = nx if nx != -1 else len(a)
         while True:
-            find = ''.join(ct[lo:hi])
-            if find and whole.count(find) == 1:
+            find = a[lo:hi]
+            if find and page.count(find) == 1:
                 break
-            lo, hi = max(0, lo - 1), min(len(ct), hi + 1)
-        rep = ''.join(ct[lo:a1]) + ''.join(gt[b1:b2]) + ''.join(ct[a2:hi])
+            lo, hi = max(0, lo - 40), min(len(a), hi + 40)
+        rep = a[lo:p] + b[p:len(b) - s] + a[len(a) - s:hi] if lo <= p and hi >= len(a) - s else None
+        if rep is None:
+            raise SystemExit('widening error')
         out.append({'op': 'replace_global', 'find': find, 'with': rep})
-        ct = ct[:lo] + TOK.findall(rep) + ct[hi:]
+        at = page.find(find)
+        page = page[:at] + rep + page[at + len(find):]
     return out
 
 
