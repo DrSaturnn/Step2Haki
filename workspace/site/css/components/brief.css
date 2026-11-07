@@ -236,7 +236,7 @@ h5.tsec{font-family:var(--serif);font-size:20px;font-weight:600;text-transform:n
 .k-sub{width:8px;background:var(--t-k-sub-bg,var(--mhi));box-shadow:var(--t-k-sub-sh,inset 0 0 0 1.5px var(--mhi-e))}
 .cases .pin{display:inline-grid;place-items:center;min-width:24px;height:18px;padding:0 5px;border-radius:9px;background:var(--t-cases-pin-bg,var(--chart-ink));color:var(--t-cases-pin-fg);font-size:10px;font-weight:700;box-shadow:var(--t-cases-pin-sh,0 0 0 2.5px var(--raised));position:relative;z-index:2}
 .k-opt{background:var(--t-k-opt-bg);border:var(--t-k-opt-border,1.5px dashed var(--mlo-e));box-sizing:border-box}
-.k-mild{width:9px;background:var(--mhi);box-shadow:var(--t-k-mild-sh,inset 0 0 0 1.5px var(--mhi-e))}
+.k-mild{width:9px!important;background:var(--mhi);box-shadow:var(--t-k-mild-sh,inset 0 0 0 1.5px var(--mhi-e))}
 .thumb{display:inline-flex;flex-direction:column;align-items:flex-start;gap:4px;margin:10px 0 2px;padding:0;border:var(--t-thumb-border);background:var(--t-thumb-bg);font:inherit;color:var(--t-thumb-fg);cursor:zoom-in;text-align:left}
 .thumb svg{width:220px;height:auto;border-radius:8px;border:var(--t-thumb-svg-border,1px solid var(--axh-DDDBEF));background:var(--p-FFFFFF);background-color:var(--t-thumb-svg-bgc)}
 .thumb .cap{font-size:12px;opacity:.75}
@@ -505,7 +505,7 @@ body .brief{--g-card:var(--raised)}
 body .axm-flat .brief{--g-card:var(--t-body-g-card)}
 body .brief.axm-flat{--g-card:var(--t-body-g-card-2)}
 body .brief > h4{font:800 48px/54px var(--sans);letter-spacing:-.9px;margin:0 0 8px;color:var(--ink)}
-body .brief > h4::after{line-height:1.2;vertical-align:14px}
+html:is([data-theme],:not([data-theme])) body .brief > h4::after{line-height:1.2;vertical-align:14px}
 body .brief .sub{font-size:19px;line-height:26px;font-weight:500;letter-spacing:0;color:var(--muted);margin:0 0 30px}
 body .brief .sub .subq{display:block;max-width:720px;margin-top:18px;font:700 23px/30px var(--sans);letter-spacing:-.2px;font-style:normal;color:var(--ink)}
 body .brief h5.tsec{font:700 30px/36px var(--sans);letter-spacing:-.5px;margin:64px 0 18px}
@@ -513,13 +513,13 @@ body .brief.sp h5.sp-h{gap:14px;margin:64px 0 18px}
 body .brief.sp .sp-n{min-width:36px;height:36px;border-radius:11px;font:700 17px/1 var(--sans);letter-spacing:0}
 body .brief.sp h5.sp-h::before{content:none}
 body :is(.brief.sp,.brief) :is(.dp,.pearls,.danger,.rule,.crit,.vignette,.mcq,.scriptcard,.sp-script,.sp-row,.sp-ladder,.sp-inst,.sp-pause,details.sp-sys,figure.lcp,figure.lcw,figure.sw,figure.sp-on,ol.sp-trk){background:var(--g-card);background-image:none;box-shadow:var(--e2),0 0 0 1px var(--hair);border-radius:24px}
-body .brief .dp .lbl{color:var(--confirm)}
+html:is([data-theme],:not([data-theme])) body .brief .dp .lbl{color:var(--confirm)}
 body .brief.sp .sp-script .sk{font-size:15px;line-height:24px;font-weight:650;letter-spacing:0;text-transform:none;color:var(--muted)}
 body .brief.sp .sp-script .sv p{font-size:16px;line-height:23px}
 body .brief.sp .sp-src{font-size:14px;line-height:20px;font-weight:650;letter-spacing:0;text-transform:none}
 body .brief.sp .sp-row > b.sp-f,body .brief.sp .sp-commit{font-size:16px;line-height:23px}
 body .brief .kick{font-size:15px;line-height:20px;font-weight:650;letter-spacing:0;text-transform:none}
-body .brief .nbh{font-size:13px;line-height:18px;font-weight:700;letter-spacing:0;text-transform:none}
+html:is([data-theme],:not([data-theme])) body .brief .nbh{font-size:13px;line-height:18px;font-weight:700;letter-spacing:0;text-transform:none}
 body .brief caption .cap-sub{font-size:13px;font-weight:600;letter-spacing:0;text-transform:none}
 body .brief > h5:not([class]){font-size:14px;line-height:20px;font-weight:650;letter-spacing:0;text-transform:none}
 body .brief h5.authored-hdr{font:700 30px/36px var(--sans);letter-spacing:-.5px;text-transform:none;color:var(--ink)}
@@ -527,7 +527,7 @@ body .sp-card{font-size:15px;line-height:21px;font-weight:500}
 body .sp-card{max-width:360px;padding:14px 16px;border-radius:20px}
 @media (--phone){
 body .brief > h4{font-size:32px;line-height:38px;letter-spacing:-.5px}
-body .brief > h4::after{vertical-align:7px}
+html:is([data-theme],:not([data-theme])) body .brief > h4::after{vertical-align:7px}
 body .brief .sub{font-size:16px;line-height:22px;margin-bottom:24px}
 body .brief .sub .subq{font-size:19px;line-height:25px;margin-top:12px}
 body .brief h5.tsec{font-size:24px;line-height:30px;letter-spacing:-.3px;margin:44px 0 14px}

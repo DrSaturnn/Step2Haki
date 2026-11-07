@@ -105,7 +105,7 @@ body .bktools.axm-flat .bkmode.on{background:var(--p-26262F);background-color:va
 .bktools .bkseg .bkmode,.bktools .bkseg.bkfilter button{flex:1;justify-content:center;padding:0 6px}
 }
 html[data-theme="dark"][data-glass="tinted"] .brief :is(.tw,.mcq,.rrow,.rule,.w5t.first){background-image:linear-gradient(145deg,color-mix(in srgb,var(--accent) 11%,var(--p-181A22-a74)) 0%,color-mix(in srgb,var(--accent) 6%,var(--p-12141B-a8)) 100%)}
-html[data-theme="dark"][data-glass="tinted"] .brief .mcq button{background-image:linear-gradient(145deg,color-mix(in srgb,var(--accent) 12%,var(--p-1C1E26-a86)) 0%,color-mix(in srgb,var(--accent) 7%,var(--p-16181F-a9)) 100%)}
+html[data-theme="dark"][data-glass="tinted"] .brief .mcq button{background-image:linear-gradient(145deg,color-mix(in srgb,var(--accent) 12%,var(--p-1C1E26-a86)) 0%,color-mix(in srgb,var(--accent) 7%,var(--p-16181F-a9)) 100%)!important}
 @media (--phone){
 .bktools .bkseg.bkfilter{flex-wrap:wrap;row-gap:2px}
 .bktools .bkseg.bkfilter button{flex:1 1 auto;white-space:nowrap}

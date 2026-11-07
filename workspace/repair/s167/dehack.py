@@ -26,6 +26,22 @@ KEEP = [
      'still state: #axn .axn-dz:not(.on) .axn-dzc (1,3,0) outranks it; inactive zones animate on a still jump'),
     ('layout/sidebar.css', '#axn [hidden]', 'display',
      '#axn a.axn-b{display:flex} (1,1,1) outranks it; links the shelf filter hides would show'),
+    # chunk 13: parity c4 vs base_fix (ui_check), each the winning rule on the base page that lost after the dehack
+    ('components/brief.css', 'body .brief > h4::after', '(hack)', '.brief.nbme-linked > h4::after (0,2,2) set vertical-align 5px on linked headers (base 14px, phone 7px)', 13),
+    ('components/brief.css', 'body .brief .dp .lbl', '(hack)', 'html:not([data-theme=dark]) .dp > span.lbl (0,3,2) set the accent color on the first-step labels (base var(--confirm))', 13),
+    ('components/brief.css', 'body .brief .nbh', '(hack)', '.pearls.nbq .nbh (0,3,0) set 10px uppercase 800 on NBME pearl heads (base 13px, 700, no transform)', 13),
+    ('components/hovercard.css', 'body .brief.sp .sp-pop-b', '(hack:font-size)', '.brief.sp .sp-thr span (0,3,1) set 13.5px on thread popover bodies (base 15px)', 13),
+    ('components/table.css', 'body .brief .tw td:first-child', '(hack)', '.brief.sp .sp-dx td:first-child 650 and the phone .cluet 400 and .tierT 800 rules outranked the 700 first column', 13),
+    ('components/brief.css', '.k-mild', 'width', 'figure.lcw:not(.lcc) .rk i and .lc-key i (14px, 15px) widened the mild key swatch (base 9px)', 13),
+    ('components/mnemonic.css', '.brief dl.rows.mnem.ax-mn.ax-mn-bare', 'grid-template-columns', 'phone: .ax-mn.mn-key:not(.mn-wide) 56px column outranked the bare mnemonic 44px', 13),
+    ('components/nbme.css', '.brief:has(li[data-nbme],.mcq[data-nbme]) > h4::after', 'content', '.brief.bs[data-nid]:not([data-src=aquifer]) > h4::after wrote UWorld on NBME-linked bs headers', 13),
+    ('components/nbme.css', '.brief.nbme-linked > h4[data-nbme-n]::after', 'content', 'same: UWorld replaced NBME x n', 13),
+    ('components/table.css', '.tw tbody.grp tr', 'background', 'phone: body .axm-flat .tw tbody tr background-color painted group rows (base none)', 13),
+    ('components/table.css', '.tw tbody td:has(> span:only-child:empty)', 'display', 'phone: .tw table.dense ... td display flow-root showed empty cells (base none)', 13),
+    ('components/table.css', 'html[data-theme="dark"][data-glass="tinted"] .tw tbody tr', 'background', 'tinted: the zebra and phone card rules outranked the tinted row tint', 13),
+    ('components/table.css', '[data-theme="dark"] .tw table.cluet tbody tr', 'background', 'phone tinted: with the tinted row tint important again, the dark clue-table rows need theirs to stay clear', 13),
+    ('components/table.css', '[data-theme="dark"] .tw tbody.grp tr', 'background', 'same, group rows', 13),
+    ('components/bank.css', 'html[data-theme="dark"][data-glass="tinted"] .brief .mcq button', 'background-image', 'tinted: the answer-option hover rule replaced the tinted gradient with none', 13),
 ]
 
 

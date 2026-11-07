@@ -6,7 +6,8 @@
 #     attribute-only); render; vendor scan (no source text in tracked files, page under limit);
 #     refuse if any local-only path is tracked; vendor scan against the NEW page (orphaned source runs);
 #     preflight.py content warnings (advisory, never abort); the gate also runs the UI, doc and prose ratchets
-#     (ui-lint, ui-site, doc-lint, prose-lint, prose-touched; D-20261106-11).   -> any failure aborts before writing anything
+#     (ui-lint, ui-site, doc-lint, prose-lint, prose-touched; D-20261106-11); tools/ui_gate.py (parity with the live page,
+#     theme gate, axe scan, performance budget; about 25 min).   -> any failure aborts before writing anything
 #  2. write workspace/index.html and ../discriminator-briefs-site/index.html (the deployed copy),
 #     version.json, briefs.json (tools/briefs_json.py: the brief index the companion extension reads), and search.json
 #     (the prebuilt search index, s164c D-20261106-4: written by site_build beside the scratch page, gate-checked)
@@ -89,6 +90,10 @@ echo "rules: self-test $(echo "$o" | tail -1), all brief types $(echo "$o2" | ta
 GA=(--base HEAD); [[ "$MODE" == "--attr-only" ]] && GA=(--attr-only HEAD)
 GATE=$(python3 tools/gate.py "$TMP/index.html" "${GA[@]}" 2>&1) || fail gate "$GATE"; GATE=$(echo "$GATE" | head -1); echo "$GATE"
 RENDER=$(node tools/render.js "$TMP/index.html" 2>&1) || fail render "$RENDER"; RENDER=$(echo "$RENDER" | head -1); echo "$RENDER"
+# standing UI tests (UI_REFACTOR_PLAN 6b): parity with the live page, theme gate, axe scan, performance budget.
+# repair/<batch>/ui_allow.json lists the batch's intended style changes; UI_GATE_SKIP=parity (a content batch) is disclosed.
+UA=(); [ -f "repair/$B/ui_allow.json" ] && UA=(--allow "repair/$B/ui_allow.json"); [ -n "$UI_GATE_SKIP" ] && UA+=(--skip "$UI_GATE_SKIP")
+UIG=$(python3 tools/ui_gate.py "$TMP/index.html" "$SITE" "${UA[@]}" 2>&1) || fail ui-gate "$UIG"; echo "$UIG" | grep -E '^(parity|theme|a11y|perf|UI-GATE)'
 TRACKED_LO=$(python3 - "$WS" <<'PY'
 import os, subprocess, sys
 sys.path.insert(0, os.path.join(sys.argv[1], 'tools'))

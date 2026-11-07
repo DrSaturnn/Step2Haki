@@ -32,7 +32,7 @@ dl.rows.mnem.mn-key{grid-template-columns:calc(var(--mnw,28px) + 12px) minmax(0,
 .brief dl.rows.mnem.ax-mn > dt,.brief dl.rows.mnem.ax-mn:not(.mn-wide) > dt{grid-column:1;padding-left:calc(var(--mnw,44px) + 5px);text-indent:calc(-5px - var(--mnw,44px))}
 .brief dl.rows.mnem.ax-mn > dt b.mn{width:var(--mnw,44px);min-width:var(--mnw,44px);text-indent:0}
 .brief dl.rows.mnem.ax-mn > dd{grid-column:1;padding-top:2px;padding-left:calc(var(--mnw,44px) + 5px)}
-.brief dl.rows.mnem.ax-mn.ax-mn-bare{grid-template-columns:var(--mnw,44px) minmax(0,1fr)}
+.brief dl.rows.mnem.ax-mn.ax-mn-bare{grid-template-columns:var(--mnw,44px) minmax(0,1fr)!important}
 .brief dl.rows.mnem.ax-mn.ax-mn-bare > dt{grid-column:1;padding-left:0;text-indent:0}
 .brief dl.rows.mnem.ax-mn.ax-mn-bare > dd{grid-column:2;padding-top:10px;padding-left:12px}
 .brief dl.rows:not(.mnem){grid-template-columns:minmax(0,1fr)}

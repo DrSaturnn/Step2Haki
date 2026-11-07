@@ -81,7 +81,7 @@ table.cluet tbody td:first-child{font-weight:400;color:var(--t-table-cluet-tbody
 .tw tbody.grp tr:last-child td{border-bottom:var(--t-tw-tbody-grp-tr-last-child-td-border-bottom,1px solid rgba(var(--acc-rgb),.22))}
 @media (--phone){
 .tw tbody.grp{background:linear-gradient(145deg,var(--axh-F2F1FA) 0%,var(--axh-EDECF7) 60%,var(--axh-E9E8F4) 100%);border-radius:14px;box-shadow:var(--e2),inset 0 0 0 1.5px rgba(var(--acc-rgb),.22);overflow:hidden;margin:0 0 11px}
-.tw tbody.grp tr{background:none;box-shadow:var(--t-tw-tbody-grp-tr-sh);border-radius:0;margin:0;padding:10px 15px}
+.tw tbody.grp tr{background:none!important;box-shadow:var(--t-tw-tbody-grp-tr-sh);border-radius:0;margin:0;padding:10px 15px}
 .tw tbody.grp tr+tr{border-top:var(--t-tw-tbody-grp-tr-tr-border-top,1px solid rgba(var(--acc-rgb),.14))}
 .tw tbody.grp td{background:var(--t-tw-tbody-grp-td-bg-2);border:var(--t-tw-tbody-grp-td-border)}
 .tw tbody.grp tr td:first-child{box-shadow:var(--t-tw-tbody-grp-tr-td-first-child-sh-2)}
@@ -192,12 +192,12 @@ figure.lcw:not(.lcc) > .wrows > .tr,figure.lcw:not(.lcc) > .wrows > .wg + .tr{pa
 .tw table:not(.script) > tbody > tr > td:only-child{border-radius:12px}
 }
 @media (--phone){
-.tw tbody td:has(> span:only-child:empty){display:none}
+.tw tbody td:has(> span:only-child:empty){display:none!important}
 }
-html[data-theme="dark"][data-glass="tinted"] .tw tbody tr{background:color-mix(in srgb,var(--accent) 10%,var(--p-16181F-a72))}
+html[data-theme="dark"][data-glass="tinted"] .tw tbody tr{background:color-mix(in srgb,var(--accent) 10%,var(--p-16181F-a72))!important}
 @media (--phone){
-[data-theme="dark"] .tw table.cluet tbody tr{background:none}
-[data-theme="dark"] .tw tbody.grp tr{background:none}
+[data-theme="dark"] .tw table.cluet tbody tr{background:none!important}
+[data-theme="dark"] .tw tbody.grp tr{background:none!important}
 }
 [data-theme="dark"] table.script tbody tr{background:none}
 @media (--phone){
@@ -215,7 +215,7 @@ body :is(.brief.sp,.brief) :is(.dp,.pearls,.danger,.rule,.crit,.vignette) :is(p,
 body :is(.brief.sp,.brief) :is(.dp,.pearls,.danger,.rule,.crit,.vignette) .lbl{font-size:14px;line-height:20px;font-weight:650;letter-spacing:0;text-transform:none;margin-bottom:8px}
 body .brief table th{font-size:13px;line-height:18px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--muted)}
 body .brief .tw td{font-size:16px;line-height:23px;font-weight:450}
-body .brief .tw td:first-child{font-weight:700}
+html:is([data-theme],:not([data-theme])) body .brief .tw td:first-child{font-weight:700}
 body.study .brief td .ex{color:var(--ink-2)}
 @media (--phone){
 body :is(.brief.sp,.brief) :is(.dp,.pearls,.danger,.rule,.crit,.vignette){padding:16px 18px}
