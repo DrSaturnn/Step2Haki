@@ -93,7 +93,7 @@ RENDER=$(node tools/render.js "$TMP/index.html" 2>&1) || fail render "$RENDER"; 
 # standing UI tests (UI_REFACTOR_PLAN 6b): parity with the live page, theme gate, axe scan, performance budget.
 # repair/<batch>/ui_allow.json lists the batch's intended style changes; UI_GATE_BASE=<live commit + intended change page>
 # replaces the live page as the parity reference; UI_GATE_SKIP=parity (a content batch); each is disclosed in the report.
-UA=(); [ -f "repair/$B/ui_allow.json" ] && UA=(--allow "repair/$B/ui_allow.json"); [ -n "$UI_GATE_SKIP" ] && UA+=(--skip "$UI_GATE_SKIP")
+UA=(); [ -f "repair/$B/ui_allow.json" ] && UA=(--allow "repair/$B/ui_allow.json"); [ -n "${UI_GATE_SKIP:-}" ] && UA+=(--skip "$UI_GATE_SKIP")
 UIG=$(python3 tools/ui_gate.py "$TMP/index.html" "${UI_GATE_BASE:-$SITE}" "${UA[@]}" 2>&1) || fail ui-gate "$UIG"; echo "$UIG" | grep -E '^(parity|theme|a11y|perf|UI-GATE)'
 TRACKED_LO=$(python3 - "$WS" <<'PY'
 import os, subprocess, sys
