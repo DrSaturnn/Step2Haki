@@ -6,7 +6,7 @@
 Runs tools/perf_load.js (local HTTP server, Chromium, desk and phone with the phone CPU slowed 4x; median of the runs)
 and compares with the baseline:
   size (bytes of the shipped page) and el_load (elements at the load event): any rise fails;
-  load and ready (ms): a rise of more than TIME_TOL fails (headless timing varies by about 10% between runs).
+  load and ready (ms): a rise of more than TIME_TOL, and of more than TIME_FLOOR ms, fails (headless timing varies).
 --write records the measured figures as the new baseline (a batch that adds content raises size and elements on
 purpose: it writes the baseline and lists the change in its report). Exit 1 when a figure is worse.
 """
@@ -15,6 +15,7 @@ import json, os, subprocess, sys, tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_BL = os.path.join(HERE, 'spine', 'perf_baseline.json')
 TIME_TOL = 0.15
+TIME_FLOOR = 150  # ms: a desk load near 400 ms varies by more than 15% between headless runs
 COUNT_KEYS = ('el_load',)
 TIME_KEYS = ('load', 'ready')
 
@@ -53,13 +54,13 @@ def main(argv):
         b = base.get(k)
         if v is None or b is None:
             continue
-        lim = b * (1 + TIME_TOL) if k.split('.')[-1] in TIME_KEYS else b
+        lim = max(b * (1 + TIME_TOL), b + TIME_FLOOR) if k.split('.')[-1] in TIME_KEYS else b
         if v > lim:
             worse.append('%s %s > %s (limit %d)' % (k, b, v, lim))
     if worse:
         print('PERF WORSE: ' + '; '.join(worse))
         return 1
-    print('PERF PASS (size and elements at or below the baseline, times within %d%%)' % (TIME_TOL * 100))
+    print('PERF PASS (size and elements at or below the baseline, times within %d%% or %d ms)' % (TIME_TOL * 100, TIME_FLOOR))
     return 0
 
 

@@ -91,9 +91,10 @@ GA=(--base HEAD); [[ "$MODE" == "--attr-only" ]] && GA=(--attr-only HEAD)
 GATE=$(python3 tools/gate.py "$TMP/index.html" "${GA[@]}" 2>&1) || fail gate "$GATE"; GATE=$(echo "$GATE" | head -1); echo "$GATE"
 RENDER=$(node tools/render.js "$TMP/index.html" 2>&1) || fail render "$RENDER"; RENDER=$(echo "$RENDER" | head -1); echo "$RENDER"
 # standing UI tests (UI_REFACTOR_PLAN 6b): parity with the live page, theme gate, axe scan, performance budget.
-# repair/<batch>/ui_allow.json lists the batch's intended style changes; UI_GATE_SKIP=parity (a content batch) is disclosed.
+# repair/<batch>/ui_allow.json lists the batch's intended style changes; UI_GATE_BASE=<live commit + intended change page>
+# replaces the live page as the parity reference; UI_GATE_SKIP=parity (a content batch); each is disclosed in the report.
 UA=(); [ -f "repair/$B/ui_allow.json" ] && UA=(--allow "repair/$B/ui_allow.json"); [ -n "$UI_GATE_SKIP" ] && UA+=(--skip "$UI_GATE_SKIP")
-UIG=$(python3 tools/ui_gate.py "$TMP/index.html" "$SITE" "${UA[@]}" 2>&1) || fail ui-gate "$UIG"; echo "$UIG" | grep -E '^(parity|theme|a11y|perf|UI-GATE)'
+UIG=$(python3 tools/ui_gate.py "$TMP/index.html" "${UI_GATE_BASE:-$SITE}" "${UA[@]}" 2>&1) || fail ui-gate "$UIG"; echo "$UIG" | grep -E '^(parity|theme|a11y|perf|UI-GATE)'
 TRACKED_LO=$(python3 - "$WS" <<'PY'
 import os, subprocess, sys
 sys.path.insert(0, os.path.join(sys.argv[1], 'tools'))

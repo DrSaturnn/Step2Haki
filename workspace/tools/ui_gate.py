@@ -8,6 +8,8 @@ browser job at a time:
   parity  tools/ui_check.js css BASE PAGE, then run on desk and phone in every setting (300 elements a check): every
           computed-style difference between the live page and the candidate fails unless ALLOW.json lists it (the batch's
           intended changes: {sel, prop, setting}; each one is named in the batch report). Verdict line UI-CHECK SAME.
+          The result is kept in local/ui_gate/parity.json. An intended change that moves boxes below it is better carried
+          by BASE: a page built from the live commit plus that change only (ship.sh: UI_GATE_BASE), named in the report.
   theme   tools/theme_gate.js PAGE: themes move no box and leave no light color in dark or tinted.
   a11y    tools/a11y_scan.js PAGE --baseline tools/spine/a11y_baseline.json: no serious or critical axe count above the
           baseline in any view and setting.
@@ -50,8 +52,9 @@ def main(argv):
                 print('parity FAIL ui_check css: ' + (r.stderr or r.stdout)[-400:])
                 ok = False
             else:
+                os.makedirs(os.path.join(WS, 'local', 'ui_gate'), exist_ok=True)
                 cmd = ['node', 'tools/ui_check.js', 'run', base, page, checks, '--views', views, '--max-els', '300',
-                       '--out', os.path.join(d, 'par.json')] + (['--allow', allow] if allow else [])
+                       '--out', os.path.join(WS, 'local', 'ui_gate', 'parity.json')] + (['--allow', allow] if allow else [])
                 ok &= run('parity', cmd, 'UI-CHECK SAME')
         if 'theme' not in skip:
             ok &= run('theme', ['node', 'tools/theme_gate.js', page, '--views', views], 'PASS')

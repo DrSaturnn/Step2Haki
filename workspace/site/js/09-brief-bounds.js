@@ -47,9 +47,9 @@
     var h4 = b.querySelector('h4'); if(!h4) return null;
     var title = txt(h4), secs = sectionsOf(b), rec = {el:b, h4:h4, title:title, secs:secs, cur:-1};
     // bar
-    var bar = document.createElement('div'); bar.className = 'bb-bar'; bar.setAttribute('aria-hidden', 'true');
+    var bar = document.createElement('div'); bar.className = 'bb-bar'; bar.setAttribute('aria-hidden', 'true'); bar.inert = true;
     bar.innerHTML = '<button type="button" class="bb-idx" aria-label="Index"></button><button type="button" class="bb-t"></button>' +
-      '<button type="button" class="bb-sec" aria-haspopup="menu" aria-expanded="false"><span class="bb-l"></span><span class="bb-c"></span></button>' +
+      '<button type="button" class="bb-sec" aria-haspopup="menu" aria-expanded="false" aria-label="Sections"><span class="bb-l"></span><span class="bb-c"></span></button>' +
       '<span class="bb-prog"><i></i></span><div class="bb-menu" role="menu" hidden></div>';
     bar.querySelector('.bb-t').textContent = title;
     var menu = bar.querySelector('.bb-menu');
@@ -114,7 +114,7 @@
       var r = rec.el.getBoundingClientRect();
       if(r.top <= th && r.bottom > th) pick = rec;
     });
-    if(active && active !== pick){ active.bar.classList.remove('on'); active.bar.setAttribute('aria-hidden', 'true'); }
+    if(active && active !== pick){ active.bar.classList.remove('on'); active.bar.setAttribute('aria-hidden', 'true'); active.bar.inert = true; }
     active = pick;
     document.body.classList.toggle('bb-barred', !!(pick && !wide && pick.h4.getBoundingClientRect().bottom < 0));
     if(!pick) return;
@@ -127,7 +127,7 @@
     if(pick.secs[0] && !pick.secs[0].el){ /* spine brief whose first step is absent: never */ }
     if(!wide){
       var show = pick.h4.getBoundingClientRect().bottom < 0;
-      pick.bar.classList.toggle('on', show); pick.bar.setAttribute('aria-hidden', show ? 'false' : 'true');
+      pick.bar.classList.toggle('on', show); pick.bar.setAttribute('aria-hidden', show ? 'false' : 'true'); pick.bar.inert = !show;
       if(!show) closeMenus();
       pick.prog.style.width = (p * 100).toFixed(1) + '%';
     } else {
@@ -137,6 +137,7 @@
       pick.cur = cur;
       var s = pick.secs[cur], real = pick.secs.filter(function(x){ return x.el; }), k = real.indexOf(s) + 1;
       pick.secL.textContent = (s.n ? s.n + ' · ' : '') + s.l;
+      pick.secL.parentNode.setAttribute('aria-label', 'Sections: ' + pick.secL.textContent);
       pick.secC.textContent = pick.secs.some(function(x){ return x.n; }) ? '' : k + '/' + real.length;  // numbered steps already say where you are
       pick.links.forEach(function(a, i){ a.classList.toggle('cur', i === cur); });
       pick.items.forEach(function(a, i){ a.classList.toggle('cur', i === cur); });
