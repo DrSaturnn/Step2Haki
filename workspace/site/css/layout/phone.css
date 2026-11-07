@@ -3,7 +3,7 @@ body #mbar.axm-flat{background:#FBFBFB;background-color:var(--t-body-mbar-bgc-2)
 #mbar button:focus-visible{outline:var(--t-mbar-button-focus-visible-outline,2px solid var(--accent));outline-offset:-3px}
 #mbar,#phead{display:none}
 @media (--narrow){
-:root{--tab-h:calc(56px + env(safe-area-inset-bottom,0px));--ph-row:46px;--ph-h:calc(92px + env(safe-area-inset-top,0px))}
+:root{--tab-h:calc(56px + env(safe-area-inset-bottom,0px));--ph-row:46px;--ph-h:calc(86px + env(safe-area-inset-top,0px))}
 
 /* bottom tabs: Home, Browse, Review, Settings */
 #mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:160;gap:0;height:var(--tab-h);box-sizing:border-box;padding:0 6px env(safe-area-inset-bottom,0px);background:linear-gradient(180deg,#F2F3F3,#E7E9E9);background-image:var(--t-mbar-bgi);border-top:var(--t-mbar-border-top);box-shadow:var(--t-mbar-sh);transition:transform .42s var(--spr)}
@@ -40,18 +40,18 @@ html.ph-open #phead .ph-back{display:flex}
 #phead .ph-rec svg{width:16px;height:16px}
 #phead .ph-rec[aria-pressed="true"]{background:linear-gradient(160deg,#26262F 0%,#141419 60%,#0D0D12 100%);color:#FFFFFF}
 [data-theme="dark"] #phead .ph-rec[aria-pressed="true"]{background:var(--ink);color:var(--raised)}
-#phead .ph-steps{display:grid;grid-template-columns:repeat(8,minmax(0,1fr)) auto;gap:4px;padding:0 12px 10px}
-#phead .ph-steps.ph-lab{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:0 12px 10px;scroll-padding:0 12px}
+#phead .ph-steps{display:flex;height:30px;margin:0 12px 10px;border-radius:10px;background:var(--recess);box-shadow:inset 0 0 0 1px var(--hair);overflow:hidden}
+#phead .ph-steps.ph-lab{overflow-x:auto;scrollbar-width:none}
 #phead .ph-steps.ph-lab::-webkit-scrollbar{display:none}
-#phead .ph-steps button{position:relative;display:flex;align-items:center;justify-content:center;min-width:0;height:36px;padding:0 8px;border-radius:11px;background:var(--raised);box-shadow:var(--e2);color:var(--confirm);font:800 13px/1 var(--sans);overflow:hidden;transition:background .25s var(--snp),color .25s var(--snp),box-shadow .25s var(--snp)}
-#phead .ph-steps button.ph-pr{font-size:10.5px;color:var(--accent)}
-#phead .ph-steps.ph-lab button{flex:none;font:700 12.5px/1 var(--sans);color:var(--ink-2)}
-#phead .ph-steps button.off{background:transparent;box-shadow:inset 0 0 0 1px var(--hair);color:var(--muted);cursor:default}
-#phead .ph-steps button.done{box-shadow:inset 0 0 0 1.5px var(--confirm)}
-#phead .ph-steps button[aria-current="step"]{background:var(--confirm);color:var(--raised);box-shadow:var(--e2)}
-#phead .ph-steps button i{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--raised);opacity:.55}
-#phead .ph-prog{display:block;position:absolute;left:16px;right:16px;bottom:3px;height:2px;border-radius:2px;background:var(--hair);overflow:hidden}
-#phead .ph-prog b{display:block;height:100%;width:0;background:var(--accent)}
+#phead .ph-steps button{flex:1 1 0;display:flex;align-items:center;justify-content:center;min-width:0;padding:0 2px;color:var(--confirm);font:800 12.5px/1 var(--sans);font-variant-numeric:tabular-nums;transition:background .25s var(--snp),color .25s var(--snp)}
+#phead .ph-steps button+button{box-shadow:inset 1px 0 0 var(--hair)}
+#phead .ph-steps button.ph-pr{flex:0 0 auto;padding:0 11px;font-size:10.5px;letter-spacing:.02em;color:var(--accent)}
+#phead .ph-steps.ph-lab button{flex:0 0 auto;padding:0 12px;font:700 12.5px/1 var(--sans);color:var(--ink-2);white-space:nowrap}
+#phead .ph-steps button.off{color:var(--muted);cursor:default}
+#phead .ph-steps button.done{background:color-mix(in srgb,var(--confirm) 16%,transparent)}
+#phead .ph-steps button.off.done{background:color-mix(in srgb,var(--confirm) 8%,transparent)}
+#phead .ph-steps button[aria-current="step"]{background:var(--confirm);color:var(--raised);box-shadow:none}
+#phead .ph-steps button[aria-current="step"]+button{box-shadow:none}
 
 /* one brief per screen: the open brief alone; Home lists the sections */
 html.ph-solo:not(.ph-open) main .wrap>:is(.brief,.alias,#noresults){display:none!important}

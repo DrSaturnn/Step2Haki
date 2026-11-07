@@ -12,7 +12,7 @@ var NARROW = window.matchMedia('(max-width:1100px)');
 var H = document.documentElement, B = document.body;
 var SOLO = H.getAttribute('data-ph-layout') !== 'long';
 var HIDE = H.getAttribute('data-ph-bars') === 'hide';
-var head = null, steps = null, prog = null, ti = null, sub = null, rec = null;
+var head = null, steps = null, ti = null, sub = null, rec = null;
 var shown = null, solo = null, fromHome = false, homeY = 0, lastY = 0, offs = [];
 
 function svg(d, w){ return '<svg viewBox="0 0 24 24" width="' + w + '" height="' + w + '" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">' + d + '</svg>'; }
@@ -25,9 +25,9 @@ function makeHead(){
   head.innerHTML = '<div class="ph-t"><button type="button" class="ph-back" aria-label="Back">' + svg('<path d="M15 5l-7 7 7 7"/>', 24) + '</button>' +
     '<button type="button" class="ph-ti"><b></b><span></span></button>' +
     '<button type="button" class="ph-rec" aria-pressed="false">' + svg('<path d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12s-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/>', 16) + '<span>Recall</span></button></div>' +
-    '<nav class="ph-steps" aria-label="Steps"></nav><i class="ph-prog"><b></b></i>';
+    '<nav class="ph-steps" aria-label="Steps"></nav>';
   B.appendChild(head);
-  steps = head.querySelector('.ph-steps'); prog = head.querySelector('.ph-prog b');
+  steps = head.querySelector('.ph-steps');
   ti = head.querySelector('.ph-ti b'); sub = head.querySelector('.ph-ti span'); rec = head.querySelector('.ph-rec');
   rec.addEventListener('click', function(){
     B.classList.toggle('study');
@@ -56,7 +56,6 @@ function drawSteps(s){
     if(numbered && !x.n) b.classList.add('ph-pr');
     if(!x.el){ b.classList.add('off'); b.setAttribute('aria-disabled', 'true'); }
     else b.addEventListener('click', function(){ s.go(x.el); });
-    b.appendChild(document.createElement('i'));
     steps.appendChild(b);
   });
 }
@@ -70,14 +69,13 @@ function paint(s){
   var btns = steps.children, x = s.secs[s.cur];
   for(var i = 0; i < btns.length; i++){
     if(i === s.cur) btns[i].setAttribute('aria-current', 'step'); else btns[i].removeAttribute('aria-current');
-    btns[i].classList.toggle('done', i < s.cur && !btns[i].classList.contains('off'));
+    btns[i].classList.toggle('done', i < s.cur);
   }
   sub.textContent = x && (s.cur > 0 || s.past) ? (x.n ? x.n + ' · ' : '') + x.l : '';
   if(steps.classList.contains('ph-lab') && btns[s.cur]){
     var c = btns[s.cur], left = c.offsetLeft - (steps.clientWidth - c.offsetWidth) / 2;
     if(Math.abs(steps.scrollLeft - left) > 4) steps.scrollTo({left: Math.max(0, left), behavior: reduced() ? 'auto' : 'smooth'});
   }
-  prog.style.width = (Math.max(0, Math.min(1, s.p)) * 100).toFixed(1) + '%';
   measure();
 }
 
