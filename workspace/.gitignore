@@ -10,3 +10,6 @@ local/
 repair/migration/
 repair/efficiency/lanes/
 /search.json
+# review lanes copied back from the private local-only (s155 to s158; s167 follow-on, folded into s166): lanes reach
+# the private repo through patch.py sync; tracked lanes from before s155 stay tracked
+repair/s[0-9]*/lanes/
