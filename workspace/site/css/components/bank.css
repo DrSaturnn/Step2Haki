@@ -239,7 +239,7 @@ body .bankwrap .mcq.qx-hr.done .opts button .qx-rsn{display:block;grid-column:1;
 body .bankwrap .mcq.qx-hr.done .opts button{opacity:1;padding-top:10px;padding-bottom:10px}
 body .bankwrap .mcq.qx-hr.done .opts button:not(.right):not(.wrong){background:transparent;box-shadow:0 0 0 1px var(--qx-ring);color:var(--ink-2);font-weight:550}
 body .bankwrap .mcq.qx-hr.done .opts button.right .qx-rsn,body .bankwrap .mcq.qx-hr.done .opts button.wrong .qx-rsn{font-weight:500;color:var(--ink)}
-.bankwrap .mcqwrap.qx-measure > .mcq .qx-rsn{display:none}
+.bankwrap .mcqwrap.qx-measure > .mcq .qx-rsn{display:none!important}
 .qx-review .qx-rch{display:grid;gap:6px;margin-top:10px;padding:10px 12px;border-radius:14px;box-shadow:var(--inner-2)}
 .qx-review .qx-rco{display:grid;grid-template-columns:16px minmax(0,1fr);column-gap:8px;font:500 14px/20px var(--sans);color:var(--ink-2)}
 .qx-review .qx-rco > i{font-style:normal;font-weight:800;font-size:12px;line-height:20px;text-align:center;color:var(--muted)}

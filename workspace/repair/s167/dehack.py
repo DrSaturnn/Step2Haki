@@ -20,6 +20,12 @@ SKIP_FILES = {'layout/print.css'}
 
 # (file, selector after step 1, property or '(hack)', reason)
 KEEP = [
+    ('components/bank.css', '.bankwrap .mcqwrap.qx-measure > .mcq .qx-rsn', 'display',
+     'measure state: body .bankwrap .mcq.qx-hr.done .opts button .qx-rsn (0,6,2) outranks it; answered cards measured taller'),
+    ('layout/sidebar.css', '#axn.axn-still .axn-dz,#axn.axn-still .axn-dzc,#axn.axn-still .axn-sys svg,#axn.axn-still .axn-fill,#axn.axn-still .axn-lens', 'transition',
+     'still state: #axn .axn-dz:not(.on) .axn-dzc (1,3,0) outranks it; inactive zones animate on a still jump'),
+    ('layout/sidebar.css', '#axn [hidden]', 'display',
+     '#axn a.axn-b{display:flex} (1,1,1) outranks it; links the shelf filter hides would show'),
 ]
 
 
