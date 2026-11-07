@@ -5,12 +5,13 @@
 
 Runs tools/perf_load.js (local HTTP server, Chromium, desk and phone with the phone CPU slowed 4x; median of the runs)
 and compares with the baseline:
-  size (bytes of the shipped page) and el_load (elements at the load event): any rise fails;
+  size (bytes of the shipped page without the changelog block and the build stamp, which every ship rewrites) and
+  el_load (elements at the load event): any rise fails;
   load and ready (ms): a rise of more than TIME_TOL, and of more than TIME_FLOOR ms, fails (headless timing varies).
 --write records the measured figures as the new baseline (a batch that adds content raises size and elements on
 purpose: it writes the baseline and lists the change in its report). Exit 1 when a figure is worse.
 """
-import json, os, subprocess, sys, tempfile
+import json, os, re, subprocess, sys, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_BL = os.path.join(HERE, 'spine', 'perf_baseline.json')
@@ -18,6 +19,19 @@ TIME_TOL = 0.15
 TIME_FLOOR = 150  # ms: a desk load near 400 ms varies by more than 15% between headless runs
 COUNT_KEYS = ('el_load',)
 TIME_KEYS = ('load', 'ready')
+
+
+AXLOG = re.compile(rb'(<script type="application/json" id="axlog">).*?(</script>)', re.S)
+STAMP = re.compile(rb'(<meta name="ax-build" content=")[^"]*(">)')
+
+
+def page_size(page):
+    """Bytes of the page with the axlog body and the ax-build stamp emptied: ship.sh fills both after the build, so the
+    figure is the same for a candidate and its shipped page (s167 follow-on, folded into s166)."""
+    b = open(page, 'rb').read()
+    b = AXLOG.sub(rb'\1\2', b, count=1)
+    b = STAMP.sub(rb'\1\2', b, count=1)
+    return len(b)
 
 
 def measure(page, runs):
@@ -28,7 +42,7 @@ def measure(page, runs):
         if r.returncode:
             sys.exit('perf_load failed: ' + (r.stderr or r.stdout)[-800:])
         j = json.load(open(out))
-    fig = {'size': j['size']}
+    fig = {'size': page_size(page)}
     for view, v in j['views'].items():
         for k in COUNT_KEYS + TIME_KEYS:
             fig[view + '.' + k] = v['median'].get(k)
