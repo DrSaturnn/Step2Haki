@@ -276,6 +276,18 @@ try:
     expect('H1 build role as general-purpose refused', blaunch('general-purpose', 'opus', ' 1'), 2)
     expect('H1 build role on sonnet refused', blaunch('lean-builder', 'sonnet', ' 2'), 2)
     expect('H1 build role as lean-builder on opus', blaunch('lean-builder', 'opus', ' 3'), 0)
+    # ---- s167 step 7: the launch gate runs doc_lint on the private docs (S2H_PRIVATE points at a scratch copy)
+    PD = os.path.join(T, 'priv', 'docs')
+    os.makedirs(PD, exist_ok=True)
+    open(os.path.join(PD, 'STANDING_DIRECTIONS.md'), 'w').write('- rule [D-20260101-1]\n')
+    open(os.path.join(PD, 'DECISIONS_DIGEST.md'), 'w').write('- 2026-01-01 [D-20260101-1] {t} a\n')
+    ENV['S2H_PRIVATE'] = os.path.dirname(PD)
+    expect('H1 launch allowed when doc_lint passes', blaunch('lean-builder', 'opus', ' 4'), 0)
+    open(os.path.join(PD, 'DECISIONS_DIGEST.md'), 'a').write('- 2026-01-02 [D-20260102-1] {t} b, supersedes D-20260101-1\n')
+    expect('H1 launch refused when doc_lint fails (supersession not marked)', blaunch('lean-builder', 'opus', ' 5'), 2)
+    os.remove(os.path.join(PD, 'DECISIONS_DIGEST.md'))
+    expect('H1 launch refused when the digest is missing', blaunch('lean-builder', 'opus', ' 6'), 2)
+    del ENV['S2H_PRIVATE']
     rj = json.load(open(os.path.join(H, 'roles.json')))['roles']
     nofile = [r for r, v in rj.items() if v.get('agent') and not os.path.exists(os.path.join(H, 'agents', v['agent'] + '.md'))]
     expect('roles: every agent type has its file in tools/hooks/agents', (1 if nofile else 0, str(nofile)), 0)

@@ -241,6 +241,7 @@ LOG = [
     ('164b', '2026-11-06', 'The page\'s styles and scripts were reorganized into one compact, compressed bundle; briefs, reading and study modes, and the light, dark and tinted themes look and work as before.', []),
     ('164c', '2026-11-06', 'The page opens several times faster on desktops and phones because each brief is now built when you open it or scroll near it. Search covers every brief within the first seconds after the page opens, and the sidebar, links between briefs, previews, drawers, Recall and Review reach every brief as before.', []),
     ('165', '2026-11-06', 'The site works without signal: after one visit, the page, search, the sidebar, Recall and Review open with no connection, and a note at the bottom of the screen shows when the device is offline. The site can be added to a phone home screen or installed from the browser as an app; each new version is saved in the background and offered with Refresh.', []),
+    ('167', '2026-11-07', 'Timeline legends in differentials now sit directly under their timelines, and the onset markers on each timeline strip show in every row. On a phone, screen readers name the section bar and skip it while it is hidden. The page styles were reorganized; reading and study modes and the light, dark and tinted themes look as before.', []),
 ]
 if __name__ == '__main__':
     import json, sys

@@ -6,7 +6,9 @@
   - lacks the Role:, Plan step: or Lane: line at the top of the prompt, or names an unknown role;
   - has a lane outside the lane roots or overlapping a forbidden path;
   - does not match the open wave (repair/efficiency/WAVE.json: plan step, roles), or would pass the wave's agent, call
-    or token cap (spend measured from the agent transcripts, T6).
+    or token cap (spend measured from the agent transcripts, T6);
+  - comes while DECISIONS_DIGEST and STANDING_DIRECTIONS fail doc_lint (two live answers to one question, a stale
+    citation) or cannot be found (UI_REFACTOR_PLAN step 7): an agent never starts from a contradicted rule set.
 An allowed launch is recorded in launches.jsonl (role, model, lane, wave, prompt sha) so H2 to H5 can find it.
 """
 import json
@@ -62,6 +64,10 @@ def main():
     if spent['calls'] >= int(w['max_calls']) or spent['tokens'] >= int(w['max_tokens']):
         C.refuse('LAUNCH GATE: refused: wave %s is at its cap (measured %d calls, %d tokens; caps %s, %s). Stop and report.'
                  % (w['id'], spent['calls'], spent['tokens'], w['max_calls'], w['max_tokens']))
+    bad = C.doc_lint_errors()
+    if bad:
+        C.refuse('LAUNCH GATE: refused: doc_lint fails (%d): %s. Fix DECISIONS_DIGEST or STANDING_DIRECTIONS first '
+                 '(python3 tools/spine/doc_lint.py DIGEST STANDING --docs workspace).' % (len(bad), bad[0][:160]))
     rec = {'t': time.strftime('%Y-%m-%dT%H:%M:%S'), 'wave': w['id'], 'role': role, 'model': model, 'lane': h['lane'],
            'agent_type': ti.get('subagent_type') or '', 'plan_step': h['plan_step'], 'prompt_sha': C.sha(ti.get('prompt', '')), 'tool_use_id': d.get('tool_use_id')}
     with open(C.state('launches.jsonl'), 'a', encoding='utf-8') as f:
