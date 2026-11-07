@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-11-06, by Claude (s165 shipped; no batch open).
+Last updated: 2026-11-06, by Claude (s165b shipped; no batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,7 +12,23 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **s165 SHIPPED 2026-11-06** (Claude lead; offline use, site layer only, content frozen; D-20261106-5; no agents):
+- **s165b SHIPPED 2026-11-06** (Claude lead, from the ledger chat; rules and gate patch, tools and docs only, no page
+  change; D-20261106-8 to -11; Jonathan "ship" 23:58): commits 0267947, 43e206e, 2ff77a6 and the handoff commit,
+  fast-forwarded to main. gate.py runs ui-lint, ui-site, doc-lint, prose-lint and prose-touched (48 checks; PASS on the
+  live page); ship.sh lowers tools/spine/ui_baseline.json and prose_baseline.json in the ship commit and restores them
+  on a failed ship. New tools/spine/prose_lint.py (tests 88), style_card.py; verify.py refuses READY on prose hits; the
+  writing card from repair/efficiency/TEXTBOOK_STYLE.md heads every builder, review-round, patch and reviewer packet;
+  bootstrap.sh checks bs4, lxml, tinycss2. Prose baseline 1,983 counted hits in 209 briefs (header word caps and meta
+  words report-only). Doc sweep N15: STANDING core rule 9, digest D-8 to -11, CARD_SPEC, runbook, WORKUP_5A_SPEC,
+  MIGRATION_CONTRACT, RULES_voice. Independent review: 2 blocking and 8 should-fix findings, all fixed. Tests: gate
+  rules 34/34, hooks 132, lint 92, review_packet 20, lead_tools 40, verify suites pass; test_batch_tools 1 failure
+  predates (also fails on 5c3af88). The edit to hashed specs stales every receipt; only rebuilt briefs are affected.
+  Open for Jonathan: non-spring motion baseline kept at 60 (Claude's recommendation in the ship report; s167 converts
+  them); whether headers get a word cap and the header list an exemption. Ledger: claude/pending/POST_REFACTOR_LEDGER.md
+  (private repo, N1 to N20). wip/s166 must merge main before it resumes (digest ids -8 to -11 follow its -6 and -7).
+  No batch open. Next per D-20261106-8: s167, refactor part 2 (repair/s164b/S164B.md "Deferred").
+
+- **Previous: s165 SHIPPED 2026-11-06** (Claude lead; offline use, site layer only, content frozen; D-20261106-5; no agents):
   commit 061b33f (pushed to main), page a1dfb28b4e5d (approved candidate 422cf14303b4); version.json reads s165 (checked from the
   Mac VM, with sw.js, manifest.webmanifest and icons served). Worker site/pwa/sw.js, built beside the page and stamped
   per build by tools/site_build.py (ship.sh reruns it with --pwa-only after the stamp), saves the page, search.json,
@@ -59,7 +75,7 @@ Step2Haki: continue the current batch per claude/RESUME.md.
   architecture, no stale decisions, SwiftUI-style spring motion, order of work, Fit to screen next round, no decision
   narration in code, refactor scope and follow-on batches); STANDING_DIRECTIONS
   opens with a core rules block and gains a "UI architecture" section; tools/spine/ui_lint.py (ratchet, baseline
-  tools/spine/ui_baseline.json) and doc_lint.py added, not yet wired into gate.py or ship.sh. Next: the UI refactor batch
+  tools/spine/ui_baseline.json) and doc_lint.py added (wired into gate.py and ship.sh in s165b). Next: the UI refactor batch
   in a fresh chat, launch prompt in repair/ui/UI_REFACTOR_PLAN.md; then on-demand brief loading, offline use, the phone redesign and Fit to screen
   (repair/ui/FIT_TO_SCREEN.md), each its own batch.
 
