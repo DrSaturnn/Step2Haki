@@ -93,7 +93,18 @@ catches('two semicolons', '<table><tr><td>Painful shallow ulcers with a gray bas
 catches('hover paragraph', '<p>Term <button type="button" class="sp-pop" aria-controls="h1">More</button>'
         '<span class="sp-pop-b" id="h1" hidden><span class="sp-ct">More</span>%s.</span></p>' % words(32),
         'hover_no_break_over_30')
-catches('branch otherwise', '<table><tr><td>Refer for airway surgery; otherwise reassure</td></tr></table>', 'branch')
+# s167c N7: a hover anchored on a term (button.sp-a) is line text; a short hover shown as a line (span.sp-vl) is linted
+# as the hover it was; the old label kept as a kicker (span.sp-k) is neither
+catches('anchor button text is line text', '<p>Toxicity <button type="button" class="sp-pop sp-a" aria-controls="h2">'
+        'even</button> at usual doses<span class="sp-pop-b" id="h2" hidden>Card text here.</span></p>', 'intensifier')
+catches('visible line linted as a hover', '<p>Term <span class="sp-vl"><span class="sp-k">More</span>%s.</span></p>'
+        % words(32), 'hover_no_break_over_30')
+clean('kicker and visible line stay out of the line', '<p>Lithium level <span class="sp-vl"><span class="sp-k">Why</span>'
+      'Narrow window.</span></p>')
+expect('text_key: aria-hidden chart furniture and tag-boundary spaces are not text',
+       P.text_key('<p><b>Lithium</b>, renal (<i>x</i>)<span aria-hidden="true">0 1 wk</span></p>')
+       == P.text_key('<p>Lithium, renal (x)</p>'))
+catches('branch otherwise','<table><tr><td>Refer for airway surgery; otherwise reassure</td></tr></table>', 'branch')
 catches('branch if not', '<p>Is it glomerular, and if not, does a symptom name the cause?</p>', 'branch')
 catches('intensifier even', '<table><tr><td>Toxicity even at usual doses</td></tr></table>', 'intensifier')
 for w in ('really', 'truly', 'actually', 'most of all', 'above all', 'crucially', 'importantly'):

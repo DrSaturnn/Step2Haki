@@ -216,6 +216,19 @@ _i = PAGE.find('</style>')
 o = gate(PAGE[:_i] + 'a.zz{transition:opacity .3s ease}' + PAGE[_i:])[1]
 hit = '[ui-lint] motion_not_spring' in o
 print(('ok  ' if hit else 'BAD ') + 'a new non-spring transition: expects gate FAIL ui-lint'); bad += not hit
-total = 1 + WRAPPED + 9 + 2 + 3 + 3 + 4 + 2 + 3 + 6
+# s167c N20: data-sys names the h3.system section the brief sits in
+_b = next(b for b in bl if b.kind == 'brief')
+_h3 = [m.group(1) for m in re.finditer(r'<h3 class="system" id="([^"]+)"', PAGE[:_b.start])][-1]
+_other = next(m.group(1) for m in re.finditer(r'<h3 class="system" id="([^"]+)"', PAGE) if m.group(1) != _h3)
+_tag = re.sub(r'\s+data-sys="[^"]*"', '', PAGE[_b.start:_b.open_end])
+def _sys(v):
+    return PAGE[:_b.start] + _tag[:-1] + ' data-sys="%s">' % v + PAGE[_b.open_end:]
+o = gate(_sys(_h3))[1]
+hit = '[nav-sys]' not in o
+print(('ok  ' if hit else 'BAD ') + 'data-sys naming the section the brief sits in passes'); bad += not hit
+o = gate(_sys(_other))[1]
+hit = '[nav-sys] %s has data-sys="%s" but sits in section %s' % (_b.id, _other, _h3) in o
+print(('ok  ' if hit else 'BAD ') + 'data-sys naming another section: expects gate FAIL nav-sys'); bad += not hit
+total = 1 + WRAPPED + 9 + 2 + 3 + 3 + 4 + 2 + 3 + 6 + 2
 print('%d/%d passed' % (total - bad, total))
 sys.exit(1 if bad else 0)

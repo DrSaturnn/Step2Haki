@@ -113,6 +113,17 @@ try:
     expect('NBME block above owners', has(card(kp, sc, nbq_ok, own), 'NBME block sits'))
     expect('empty NBME block', has(card(kp, sc, own, '<div class="pc-nbq">nothing</div>'), 'no logged NBME item'))
     expect('lint_card is card_check', L.lint_card(good) == [])
+    # s167c N16: one shared axis per chart (div.wax before the rows; rows carry no axis)
+    sys.path.insert(0, os.path.join(HERE, '..', '..', 'repair', 'pilots', 's167c'))
+    import timelines
+    lcs, st = timelines.transform(lc)
+    expect('shared axis: transform keeps one axis', st['shared'] == 1 and lcs.count('<div class="wax"') == 1
+           and lcs.count('<div class="rax"') == 1, st)
+    expect('shared axis: card passes', L.card_check(card(kp, sc, lcs, own)) == [], L.card_check(card(kp, sc, lcs, own)))
+    noax = re.sub(r'(<div class="wax"[^>]*><div class="rax"[^>]*>).*?(</div>)', r'\1\2', lcs, count=1, flags=re.S)
+    expect('shared axis with no tick labels', has(card(kp, sc, noax, own), 'shared axis has no tick labels'))
+    rep = lcs.replace('<li class="wr">', '<li class="wr"><div class="rax"><span>0</span><span>1 wk</span></div>', 1)
+    expect('shared axis repeated on a row', has(card(kp, sc, rep, own), 'repeats the axis'))
 
     # ------------------------------------------------------------ outline_check card entry
     def oc_errors(body, steps=None):

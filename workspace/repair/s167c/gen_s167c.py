@@ -10,7 +10,7 @@
    psych sections, from each brief's data-navgrp (added here from the live sidebar); link labels from data-navlabel
    where a brief's sidebar label differs from its title (added here), else the title.
 5. N14 sidebar subtitle "By RapidRounds".
-Writes repair/s167c/gen_stats.json. Brief text order is unchanged (prose_lint.text_key equal) apart from the moves.
+Writes repair/s167c/stats/gen_stats.json (outside build.py's *.json glob). Brief text order is unchanged (prose_lint.text_key equal) apart from the moves.
 """
 import json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -150,7 +150,7 @@ def main(src, dst):
     h = h.replace('<p>Step 2 &middot; Family Med &middot; Peds</p>', '<p>%s</p>' % SUBTITLE, 1)
     h = re.sub(r'\n\s*<span><b>\d+</b> board-style</span>', '', h, count=1)
     pagelib.write_page(dst, h)
-    json.dump(stats, open(os.path.join(HERE, 'gen_stats.json'), 'w'), indent=1)
+    json.dump(stats, open(os.path.join(HERE, 'stats', 'gen_stats.json'), 'w'), indent=1)
     print(json.dumps(stats))
 
 
