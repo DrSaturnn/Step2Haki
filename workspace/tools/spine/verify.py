@@ -23,7 +23,8 @@ and flags, the newest of each saying "Verdict: PASS" on a "deps:" line that matc
 (brief = the brief HTML the folder builds; live = the brief as it stands on the page, so any edit to the live
 brief, even a small approval-gated fix, makes all four receipts stale; bank = its practice section; facts, claims, outline = the folder's facts.json,
 claim_map.json, outline.json; siblings = every brief title on the page; display = the page's style and script blocks
-plus shots.py; specs = STANDING_DIRECTIONS.md, WORKUP_5A_SPEC.md, MIGRATION_CONTRACT.md). A change re-opens only the
+plus shots.py; specs = STANDING_DIRECTIONS.md, WORKUP_5A_SPEC.md, MIGRATION_CONTRACT.md,
+TEXTBOOK_STYLE.md, and CARD_SPEC.md for cards). A change re-opens only the
 parts that depend on it. A legacy merged review (<id>_holistic_rN.md) no longer makes a brief READY.
 Exit 0 READY (with --mech: mechanical pass); 2 mechanical pass, not ready; 1 with one "FIX <check>: ..." line per
 mechanical problem.

@@ -9,7 +9,7 @@
 6. Accuracy is non-negotiable; board sources first; no drift from source content. [DIG 2026-10-10] [MEM]
 7. Phones are untouched by desktop-only work, and the reverse. [D-20261105-1]
 8. Code holds code: no decision quotes, names, dates or batch ids in comments; the shipped page has no comments at all. [D-20261105-6]
-9. Every visible line follows repair/efficiency/TEXTBOOK_STYLE.md (review-book register; rule 0: every line carries a fact, a finding or an action). A brief a batch changes ships with zero prose lint hits. [D-20261106-9] [D-20261106-11]
+9. Every visible line follows repair/efficiency/TEXTBOOK_STYLE.md (review-book register; rule 0: every line carries a fact, a finding or an action). A brief whose text a batch changes (hover text included) ships with zero prose lint hits. [D-20261106-9] [D-20261106-11]
 
 Compiled 2026-10-10 because the plan v4 restart prompt pointed new chats only to the handoff, the plan and the
 decisions digest. Most of Jonathan's directions on brief format live elsewhere, so the second chat re-proposed a

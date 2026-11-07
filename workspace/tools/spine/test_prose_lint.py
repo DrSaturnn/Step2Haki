@@ -68,8 +68,21 @@ catches('N3 comma-by header', '<table><caption>Interactions, by result</caption>
         'header_comma_by')
 catches('N3 from-the header', '<figure class="lcw"><div class="ttl"><span>From the first dose</span></div></figure>',
         'header_from_the')
-catches('long header', '<h5>Clues that change the answer</h5>', 'header_long')
-catches('long title', '<h4>Panic Disorder and Other Anxiety</h4>', 'title_long')
+for nm, html, pt in (('long header', '<h5>Clues that change the answer</h5>', 'header_long'),
+                     ('long title', '<h4>Panic Disorder and Other Anxiety</h4>', 'title_long'),
+                     ('meta words', '<p>The stem mentions sleep.</p>', 'meta_words')):
+    expect('%s is report-only: listed with report_only, never counted' % nm,
+           pt in pats(html, report_only=True) and pt not in pats(html))
+# headers TEXTBOOK_STYLE approves count no hit (T3, T12, H2-style lengths)
+clean('approved header T3', '<h5>Other common adverse effects (sertraline)</h5>')
+clean('approved header T12', '<h5>Line of therapy for pain and headache</h5>')
+clean('even as concession', '<p>Mood improves even as sleep worsens.</p>')
+clean('even with concession', '<p>Mortality is 20% even with treatment.</p>')
+clean('above all three as quantity', '<p>Ferritin is above all three cutoffs.</p>')
+expect('caption header text leaves out a nested timeline',
+       [h['text'] for h in P.lint_brief('<table><caption>Follow-up decisions<ol class="sp-trk"><li><b>under 4 wk</b>'
+                                        '<span>too early to judge</span></li></ol></caption></table>', report_only=True)
+        if h['region'] == 'header'] == [])
 catches('wh header', '<h5>What raises the stakes</h5>', 'header_wh_word')
 catches('P14 hedge', '<table><tr><td>A monoamine oxidase inhibitor (MAOI), or one stopped inside its washout</td>'
         '</tr></table>', 'hedged_narration')
@@ -80,7 +93,6 @@ catches('two semicolons', '<table><tr><td>Painful shallow ulcers with a gray bas
 catches('hover paragraph', '<p>Term <button type="button" class="sp-pop" aria-controls="h1">More</button>'
         '<span class="sp-pop-b" id="h1" hidden><span class="sp-ct">More</span>%s.</span></p>' % words(32),
         'hover_no_break_over_30')
-catches('meta words', '<p>The stem mentions sleep.</p>', 'meta_words')
 catches('branch otherwise', '<table><tr><td>Refer for airway surgery; otherwise reassure</td></tr></table>', 'branch')
 catches('branch if not', '<p>Is it glomerular, and if not, does a symptom name the cause?</p>', 'branch')
 catches('intensifier even', '<table><tr><td>Toxicity even at usual doses</td></tr></table>', 'intensifier')
@@ -212,6 +224,12 @@ try:
     expect('touched: an unchanged brief with hits passes', rc == 0)
     rc, _ = run([write('touch_ok.html', page(brief('a', BAD1), brief('b', OK))), '--touched', base2])
     expect('touched: a changed clean brief passes', rc == 0)
+    attr = write('attr.html', page(brief('a', BAD1), brief('b', BAD1.replace('<p>', '<p class="x" data-k="1">'))))
+    rc, _ = run([attr, '--touched', base2])
+    expect('touched: a markup or attribute change with equal text is not a touch', rc == 0)
+    rc, out = run([write('hov.html', page(brief('a', BAD1), brief('b', BAD1.replace('</p>', '<span class="sp-pop-b">new</span></p>')))),
+                   '--touched', base2])
+    expect('touched: a hover text change is a touch', rc == 1 and 'touched brief b' in out)
     rc, out = run([base, '--brief', 'a'])
     expect('--brief lists the hit text', rc == 0 and 'Fix the class, not the instance.' in out)
 finally:

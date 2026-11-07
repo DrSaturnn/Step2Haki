@@ -70,11 +70,11 @@ The values are for the 900 px brief width; phone values are in parentheses. The 
 3. **The last zone's label** is "Diagnostic test" ("both wrong, Diagnostic test is what step 2 usually uses"). This replaces both "Most accurate" and "Confirms".
    - "Both wrong" referred only to the two labels (Jonathan: "it was a joke"). The tests in this zone stay as designed.
 4. **"By clue" is renamed.** Jonathan delegated the new name.
-   - Claude's pick: "By presentation". It is plain, matches the clue column and pairs with "First step" and "Next step". Jonathan can swap it.
+   - Claude's pick was "By presentation"; renamed "Targeted tests" on 2026-10-19 (STANDING_DIRECTIONS, Workup zones).
 5. **"CT" may stay shortened** ("shortened to CT is fine"). "Contrast CT abdomen" is accepted as the design wrote it. Widened 2026-10-12 to the shared abbreviation allowlist, repair/efficiency/ABBREV.json (CBC, BUN, US, CT, CT angiography, MRI).
 6. **Widen, don't shorten (2026-10-12):** "text that wraps into a narrow column should be widened. On phone, a 5a clue takes the band's full width." Built in s132 (repair/s132/30_workup5a_phone.json): on a phone the clue and each finding take the full width, with the arrow and order, or the arrow and meaning, on the next line. Desktop is unchanged.
 
-Zones are now: First step, By presentation, Next step, Diagnostic test, then Skip.
+Zones are now: First step, Targeted tests, Next step, Diagnostic test, then Skip (2026-10-19).
 
 ## Still open (build, not design)
 

@@ -129,6 +129,7 @@ restore(){ cp "$TMP/index.keep.html" index.html; [[ -f "$TMP/site.keep.html" ]] 
   for f in sw.js manifest.webmanifest icons; do
     if [[ -e "$TMP/keep/$f" ]]; then rm -rf "$(dirname "$SITE")/$f"; cp -r "$TMP/keep/$f" "$(dirname "$SITE")/$f"
     elif [[ -n "${PW_WRITTEN:-}" ]]; then rm -rf "$(dirname "$SITE")/$f"; fi; done
+  for f in ui_baseline prose_baseline; do [[ -f "$TMP/$f.keep.json" ]] && cp "$TMP/$f.keep.json" "tools/spine/$f.json"; done
   git -C "$ROOT" reset -q; }
 if cmp -s "$TMP/index.html" "$SITE"; then SITELINE="Site: discriminator-briefs-site/index.html unchanged (no deploy)"
 else SITELINE="Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)"; fi
@@ -156,7 +157,9 @@ python3 tools/changelog.py "$TMP/prev.html" index.html --site "$SITELINE" --chec
   --entry "$B: $MSG" --changelog CHANGELOG.md > "$TMP/body.txt" || { restore; fail changelog; }
 
 # ---- 4. commit
-# ratchets (D-20261106-11): a ship that lowered a UI or prose count locks the lower count in, in the same commit
+# ratchets (D-20261106-11): a ship that lowered a UI or prose count locks the lower count in, in the same commit;
+# both baselines are kept first so restore() puts them back if the tighten or the commit fails
+for f in ui_baseline prose_baseline; do cp "tools/spine/$f.json" "$TMP/$f.keep.json"; done
 o=$(python3 tools/spine/ui_lint.py index.html --tighten tools/spine/ui_baseline.json 2>&1) || { restore; fail ui-baseline "$o"; }; echo "$o"
 o=$(python3 tools/spine/prose_lint.py index.html --tighten tools/spine/prose_baseline.json 2>&1) || { restore; fail prose-baseline "$o"; }; echo "$o"
 git -C "$ROOT" add -A -- workspace "discriminator-briefs-site/index.html" >/dev/null 2>&1

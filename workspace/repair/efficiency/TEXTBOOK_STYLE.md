@@ -7,10 +7,12 @@ stems also follow "Original stems" in STANDING_DIRECTIONS. Conversation replies 
 
 Enforcement:
 - tools/spine/prose_lint.py: the gate's prose-lint check (no brief's count rises above tools/spine/prose_baseline.json)
-  and prose-touched check (a brief whose text changed against the base has zero hits); ship.sh tightens the baseline.
+  and prose-touched check (a brief whose text, hover text included, changed against the base has zero hits; a
+  markup-only change is exempt); ship.sh tightens the baseline. The header word caps and meta words are report-only.
 - tools/spine/verify.py: a brief with prose hits is not READY, so ship.sh refuses it.
-- The card below is copied into every builder's INSTRUCTIONS.md (tools/spine/build_lanes.py) and every reviewer's
-  RULES.md (tools/spine/review_packet.py). This file is the only copy; edit it here.
+- The card below is copied into every builder's INSTRUCTIONS.md (tools/spine/build_lanes.py), every review-round and
+  patch lane's INSTRUCTIONS.md (lanes.py, patch.py) and every reviewer's RULES.md (tools/spine/review_packet.py). This
+  file is the only copy; edit it here.
 
 <!-- card:start -->
 ## Writing card (read before writing or reviewing any line)
@@ -43,11 +45,13 @@ Classes 1 to 7 are examples of the test; a line that fails the test is out, list
   pair on separate lines (tertiary and secondary amines).
 
 **3. Lines that lean on context.** Purpose: each line makes sense and is usable on its own.
-- No fragments ("Worst: X", "Also: Y", "Some: X", "Maximum: X"); no vague back-references ("this", "less of both");
-  an instruction names a concrete action, and a condition a concrete threshold.
+- No fragments whose category exists only in context ("Worst: X", "Also: Y", "Some: X", "Maximum: X"); no vague
+  back-references ("this", "less of both"); an instruction names a concrete action, and a condition a concrete threshold.
+- A label that names its category in full is a complete line under its block heading: "Highest risk: venlafaxine"
+  under "SNRI discontinuation syndrome" (P2) states what the risk is of; "Worst: amitriptyline" does not say worst at what.
 - Violation: "Worst: amitriptyline". Fix: "Most anticholinergic TCA: amitriptyline".
 
-**4. Sources and provenance.** Purpose: things do not speak, and sourcing lives in the claim map.
+**4. Sources and provenance.** Purpose: visible text states the fact; the claim map holds the source.
 - No source narration: "on the Zoloft label", "the AnKing card gives", "as the board teaches", "higher in the Merck
   Manual", "analogy from the source". Sources, analogy labels and verification notes go in data attributes, the claim
   map and the batch report. The ⚠︎ mark stays.
@@ -66,11 +70,13 @@ Classes 1 to 7 are examples of the test; a line that fails the test is out, list
 - Mnemonic letters in bold inside hovers; mnemonics in a brief keep their mnemonic tile.
 
 **6. Headers and hovers.** Purpose: a header names a clinical category; a hover adds one clear detail.
-- Headers come from the header list in this file: clinical nouns, no verbs, questions, ordering notes ("most tempting
-  first") or tails (", by result", ", from the last dose"). A header not on the list needs Jonathan's approval.
+- A header is a clinical noun phrase: no verbs, questions, ordering notes ("most tempting first") or tails
+  (", by result", ", from the last dose"). A header the header list in this file covers takes the list's name once
+  that row is approved. A new header, one the list does not cover, needs Jonathan's approval before it ships.
 - Hover title: the full clinical term or category ("Other common adverse effects"). Body: one idea per line, about 12
   words or fewer per line, arrow lines indented, no paragraph blocks.
-- Line targets: key point about 15 words, finding about 20, hover line about 12. Over target means split; never cut a fact.
+- Line targets: key point about 15 words, finding about 20, hover line about 12. A line over its target is split into
+  two lines that keep every fact.
 
 **7. Process.** Purpose: a correction changes the system that produced the error.
 - Fix every instance of a pattern in the brief, and report the count.
@@ -81,7 +87,11 @@ Classes 1 to 7 are examples of the test; a line that fails the test is out, list
 - A false positive goes in prose_lint.py's ALLOW list with a test, and becomes a permitted near miss here.
 <!-- card:end -->
 
-## Approved examples, key points and findings (Jonathan 2026-11-05: "these are all good changes and more so what i imagined"; revised after two independent audits the same day)
+## Approved examples, key points and findings
+
+Jonathan approved the first draft on 2026-11-05 ("these are all good changes and more so what i imagined"). The rows
+below are that draft after his later corrections the same day (mnemonic bold in hovers only, the SNRI note, "Avoid in:",
+"< 2-fold") and two independent audits. He has not reviewed the audit revisions; the pilot report shows them to him.
 
 | # | Where | Live | Textbook | Note |
 |---|---|---|---|---|
@@ -134,14 +144,15 @@ Classes 1 to 7 are examples of the test; a line that fails the test is out, list
 ## Header list (the closed list for rule 6)
 
 Status 2026-11-06: proposed by Claude 2026-11-05 from a scan of the live page (1,109 distinct headers and labels, 265
-matching a non-textbook pattern). Jonathan: rows he did not change go into the pilot as written. Rows H13 to H16
+matching a non-textbook pattern). None is approved yet: the pilot applies the rows Jonathan has not changed and lists
+each one in its report for his review. Rows H13 to H16
 (they rename the standing clue-table columns), H24 (card spec timeline tags) and H45 (new block headings) wait for his
 call. CARD_SPEC's prescribed labels ("Combined with | Result | Rule", "Where the choice is made") change in the content
 batch that renames them on the page, so the spec and the page change in one commit.
 
 | # | Kind | Live | Uses | Proposed | Why |
 |---|---|---|---|---|---|
-| H1 | Caption | Clues that change the answer | 103 | Key findings | names the question, not the content |
+| H1 | Caption | Clues that change the answer | 103 | Key findings | the live header names a question; the proposed one names the content |
 | H2 | Caption | Look-alikes, most tempting first; and 57 other "…, most tempting first" | 78 | Differential diagnosis (or "Differential diagnosis of low back pain") | ordering note is a build rule; the order stays |
 | H3 | Caption | Follow-up decisions | 43 | Follow-up |  |
 | H4 | Caption | Act now | 24 | Emergencies | imperative |

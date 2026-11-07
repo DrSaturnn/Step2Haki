@@ -12,7 +12,7 @@
 # Staged files land in /mnt/user-data/uploads/Step2Haki/, which is where --tarball and --token
 # default to. Either can be missing: the script reports what that costs and carries on.
 #
-# Steps: git identity; npm i (jsdom 24) when missing or wrong; extract the local-only tarball into
+# Steps: git identity; npm i (jsdom 24) when missing or wrong; python modules bs4, lxml, tinycss2; extract the local-only tarball into
 # workspace/; install the token at /home/claude/.config/axbx/gh_token (mode 600, never printed);
 # write the restore marker (/home/claude/restore_marker, outside the repo) that tools/mac_sync.sh
 # diffs against; then a status report and a gate run on the current page.
@@ -45,6 +45,12 @@ if [[ "$JV" != 24.* ]]; then
   JV=$(node -p "require('jsdom/package.json').version" 2>/dev/null || echo none)
 fi
 echo "jsdom: $JV"; [[ "$JV" == 24.* ]] || warn "jsdom is not 24.x: render.js will fail"
+
+# ---- python modules (the gate, ship and verify import bs4 and lxml for the prose lint, tinycss2 for the site check)
+for m in bs4 lxml tinycss2; do
+  python3 -c "import $m" 2>/dev/null || pip install -q --break-system-packages "$([[ $m == bs4 ]] && echo beautifulsoup4 || echo $m)" >/dev/null 2>&1 \
+    || warn "python module $m missing and pip could not install it: the gate will fail"
+done
 
 # ---- local-only restore
 if [[ -s "$TAR" ]]; then

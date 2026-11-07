@@ -4,12 +4,14 @@ AnKing, Pocket Medicine). Ported from the s164 audit prototype (v2 tuned pattern
 rhetorical patterns of the writing rules (contrast, branch, intensifier, reveal colon, trailing explainer).
 
 Each brief is parsed from pagelib's Brief.inner, so lazy briefs wrapped in <template class="axl"> are linted too.
-Practice items (ol.bank, div.nbq, div.vignette) are excluded. header_wh_template is report-only: it is printed in
-the totals but never counted toward a brief's number, the baseline or --touched.
+Practice items (ol.bank, div.nbq, div.vignette) are excluded. REPORT_ONLY patterns are printed in the totals but never
+counted toward a brief's number, the baseline or --touched: header_wh_template, and the word caps header_long,
+title_long and meta_words, which TEXTBOOK_STYLE does not state as rules (report-only until Jonathan sets them).
 
 Ratchet design: the current page has prose debt. The baseline file records each brief's hit count; a build fails
 when any brief rises above its number or a brief missing from the baseline has hits. --tighten lowers numbers to the
-current counts and never raises one. --touched holds every brief changed since BASE_PAGE to zero hits.
+current counts and never raises one. --touched holds every brief whose text changed since BASE_PAGE to zero hits;
+a markup or attribute change leaves the text equal and is not a touch.
 
 Usage:
   python3 prose_lint.py PAGE.html                        # per-pattern totals and the top 10 briefs
@@ -17,10 +19,11 @@ Usage:
   python3 prose_lint.py PAGE.html --baseline B.json      # exit 1 if any brief rose above its baseline count
   python3 prose_lint.py PAGE.html --write-baseline B.json
   python3 prose_lint.py PAGE.html --tighten B.json       # rewrite B with min(baseline, current); drop gone briefs
-  python3 prose_lint.py PAGE.html --touched BASE.html    # exit 1 if a brief whose inner HTML changed has any hit
+  python3 prose_lint.py PAGE.html --touched BASE.html    # exit 1 if a brief whose text changed has any hit
 
 Public API: lint_brief(inner_html) -> [{'pattern', 'region', 'text', 'match', 'tag'}]; page_counts(page_html) ->
-{brief_id: hit_count}.
+{brief_id: hit_count}; text_key(inner_html) -> the brief's whole text, hover bodies included; changed_briefs(ref_html,
+page_html) -> the briefs whose text_key differs from REF (new briefs included).
 """
 import collections
 import json
@@ -34,7 +37,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from pagelib import briefs, read_page  # noqa: E402
 
 FIX_LINE = 'rewrite per repair/efficiency/TEXTBOOK_STYLE.md'
-REPORT_ONLY = {'header_wh_template'}
+REPORT_ONLY = {'header_wh_template', 'header_long', 'title_long', 'meta_words'}
 
 # --------------------------------------------------------------------------------------------------------------------
 # 1. Text extraction
@@ -292,8 +295,9 @@ ALLOW = [
     (r",\s+not (?:required|needed|necessary|both|pregnant|on purpose)\b", 'negated criterion stated as a fact '
                                                                          '("depression common, not required")'),
     (r"\bnot otherwise specified\b", 'fixed diagnostic phrase (NOS), not a contrast or branch'),
-    (r"\beven(?=-)|\beven (?:if|though|when)\b", 'even-numbered, even if, even though: arithmetic or a concession, '
-                                                'not an intensifier'),
+    (r"\beven(?=-)|\beven (?:if|though|when|as|with)\b", 'even-numbered, even if, even though, even as, even with: '
+                                                          'arithmetic or a concession'),
+    (r"\babove all (?:two|three|four|five|\d+|of)\b", 'quantity ("above all three"), not an intensifier'),
 ]
 ALLOW_RX = [re.compile(p, re.I if not p.startswith('^In') else 0) for p, _ in ALLOW]
 PROSE_REGIONS = {'keypoint', 'finding', 'note', 'commit', 'cell', 'timeline', 'pause', 'hover', 'other'}
@@ -441,6 +445,11 @@ def lint_brief(inner_html, report_only=False):
         txt = vis(el)
         if tag == 'summary':
             txt = re.sub(r'\s+', ' ', ''.join(x for x in el.find_all(string=True) if x.parent.name != 'small')).strip()
+        if tag in ('caption', 'figcaption') and el.find(['ol', 'ul', 'div', 'table', 'figure']):
+            cp = BeautifulSoup(str(el), 'lxml').find(tag)
+            for blk in cp.find_all(['ol', 'ul', 'div', 'table', 'figure']):
+                blk.decompose()
+            txt = vis(cp)             # the caption's own words; a timeline or chart nested in it is not the header
         if tag == 'figure.lcw p.wl':
             lb = el.find('b')
             if lb is not None and lb.parent is el:
@@ -518,6 +527,25 @@ def lint_brief(inner_html, report_only=False):
     return hits
 
 
+def text_key(inner_html):
+    """The brief's whole text (hover bodies and labels included, markup and attributes ignored), whitespace collapsed."""
+    soup = BeautifulSoup(inner_html, 'lxml')
+    for t in soup(['style', 'script']):
+        t.decompose()
+    return re.sub(r'\s+', ' ', soup.get_text(' ')).strip()
+
+
+def changed_briefs(ref_html, page_html):
+    """Briefs on page_html whose text differs from ref_html, plus briefs new since ref_html."""
+    ref = {}
+    for b in briefs(ref_html):
+        ref[b.id] = ref.get(b.id, '') + text_key(b.inner)
+    cur = collections.OrderedDict()
+    for b in briefs(page_html):
+        cur.setdefault(b.id, []).append(b)
+    return [b for bid, bs in cur.items() if ref.get(bid) != ''.join(text_key(x.inner) for x in bs) for b in bs]
+
+
 def page_counts(page_html):
     """{brief_id: counted hit total} for every brief on the page (zero included)."""
     out = {}
@@ -572,11 +600,8 @@ def main(a):
         return 0
 
     if '--touched' in a:
-        base = {b.id: b.inner for b in briefs(read_page(_arg(a, '--touched')))}
         bad = 0
-        for b in bl:
-            if base.get(b.id) == b.inner:
-                continue
+        for b in changed_briefs(read_page(_arg(a, '--touched')), page):
             hs = lint_brief(b.inner)
             if hs:
                 bad += 1

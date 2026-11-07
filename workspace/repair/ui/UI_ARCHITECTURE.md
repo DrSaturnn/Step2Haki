@@ -37,7 +37,7 @@ Docs alone cannot guarantee compliance: a chat that skips a section still ships.
 5. **Launch proof of reading** (option, needs Jonathan's call): the batch file records the commit hash of STANDING_DIRECTIONS
    and the digest the lead read; the launch gate refuses a batch whose recorded hash is older than the current files.
 
-## 3. ui_lint.py (draft in this folder; proposed tools/spine/ui_lint.py, run by gate.py and ship.sh)
+## 3. ui_lint.py (tools/spine/ui_lint.py; run by gate.py as ui-lint and ui-site, baseline lowered by ship.sh since s165b)
 Ratchet: records today's counts and fails any build that makes one worse; a refactor lowers the baseline.
 Live page today (commit 1cc935c), measured:
 | Count | Now | Rule it guards |

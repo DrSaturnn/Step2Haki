@@ -191,10 +191,31 @@ _r = subprocess.run([sys.executable, os.path.join(HERE, 'gate.py'), _mp, '--base
                     env=dict(os.environ, AXBX_GATE_SKIP_INDEX='1'))
 hit = '[prose-touched] %s' % _sb.id in _r.stdout
 print(('ok  ' if hit else 'BAD ') + 'a changed brief that still has prose hits: expects gate FAIL prose-touched'); bad += not hit
+_seg2 = PAGE[_sb.start:_sb.end]; _j = _seg2.find('<p', _seg2.find('<h5'))
+open(_mp, 'w', encoding='utf-8').write(PAGE[:_sb.start] + _seg2[:_j] + '<p data-zz="1"' + _seg2[_j + 2:] + PAGE[_sb.end:])
+_r = subprocess.run([sys.executable, os.path.join(HERE, 'gate.py'), _mp, '--base', _bp], capture_output=True, text=True,
+                    env=dict(os.environ, AXBX_GATE_SKIP_INDEX='1'))
+hit = '[prose-touched]' not in _r.stdout
+print(('ok  ' if hit else 'BAD ') + 'an attribute-only change to a brief with prose hits: expects no prose-touched'); bad += not hit
+_pb = os.path.join(HERE, 'spine', 'prose_baseline.json'); os.rename(_pb, _pb + '.away')
+try:
+    o = gate(PAGE)[1]
+finally:
+    os.rename(_pb + '.away', _pb)
+hit = '[prose-lint] tools/spine/prose_baseline.json is missing' in o
+print(('ok  ' if hit else 'BAD ') + 'a missing prose baseline: expects gate FAIL prose-lint'); bad += not hit
+_st = os.path.join(os.path.dirname(HERE), 'repair', 'efficiency', 'STANDING_DIRECTIONS.md'); _keep = open(_st, encoding='utf-8').read()
+try:
+    open(_st, 'w', encoding='utf-8').write(_keep + '\n- test line [D-19990101-1]\n')
+    o = gate(PAGE)[1]
+finally:
+    open(_st, 'w', encoding='utf-8').write(_keep)
+hit = '[doc-lint] STANDING_DIRECTIONS cites D-19990101-1, which is not in the digest' in o
+print(('ok  ' if hit else 'BAD ') + 'STANDING citing a digest id that does not exist: expects gate FAIL doc-lint'); bad += not hit
 _i = PAGE.find('</style>')
 o = gate(PAGE[:_i] + 'a.zz{transition:opacity .3s ease}' + PAGE[_i:])[1]
 hit = '[ui-lint] motion_not_spring' in o
 print(('ok  ' if hit else 'BAD ') + 'a new non-spring transition: expects gate FAIL ui-lint'); bad += not hit
-total = 1 + WRAPPED + 9 + 2 + 3 + 3 + 4 + 2 + 3 + 3
+total = 1 + WRAPPED + 9 + 2 + 3 + 3 + 4 + 2 + 3 + 6
 print('%d/%d passed' % (total - bad, total))
 sys.exit(1 if bad else 0)

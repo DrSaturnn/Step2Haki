@@ -115,7 +115,7 @@ CATALOG = {
                  'mark the old line "(superseded by D-...)" in the same commit, or cite the live id in STANDING_DIRECTIONS'),
     'prose-lint': ('no brief\'s prose lint count (tools/spine/prose_lint.py, review-book register) rises above tools/spine/prose_baseline.json, and a brief new to the baseline has none (D-20261106-9, D-20261106-11)',
                    'rewrite the flagged lines per repair/efficiency/TEXTBOOK_STYLE.md; a permitted near miss goes in the lint\'s ALLOW list with a test'),
-    'prose-touched': ('a brief whose text changed against the base has zero prose lint hits (D-20261106-11)',
+    'prose-touched': ('a brief whose text (hover text included) changed against the base has zero prose lint hits; markup-only changes and --attr-only ships are exempt (D-20261106-11)',
                       'rewrite every flagged line in the brief you changed per repair/efficiency/TEXTBOOK_STYLE.md, or show the hit is a permitted near miss and add it to the lint\'s ALLOW list with a test'),
     'K3': ('every mnemonic names the widely taught source it comes from (data-mn-src)',
            'add data-mn-src="First Aid" / "AnKing" / "AMBOSS" / "source explanation" / a URL; a mnemonic with no such source is removed, never invented'),
@@ -673,13 +673,16 @@ def check_attr_only(page, ref_html, g):
 
 
 
-def check_lints(page, page_path, ref_html, g):
-    """UI, doc and prose ratchets (D-20261106-11): counts may fall, never rise; a changed brief carries no prose hits."""
+def check_lints(page, page_path, ref_html, g, attr_only=False):
+    """UI, doc and prose ratchets (D-20261106-11): counts may fall, never rise; a brief whose text changed carries no
+    prose hits (skipped under --attr-only, which already forbids text changes). A missing baseline or rule file fails."""
     spine = os.path.join(REPO, 'tools', 'spine')
     if spine not in sys.path:
         sys.path.insert(0, spine)
     import ui_lint, doc_lint, prose_lint  # noqa: E401
     base_path = os.path.join(spine, 'ui_baseline.json')
+    if not os.path.exists(base_path):
+        g.fail('ui-lint', 'baseline', 'tools/spine/ui_baseline.json is missing; restore it from git')
     base = json.load(open(base_path, encoding='utf-8')) if os.path.exists(base_path) else {}
     m = ui_lint.measure(page)
     for k, v in m.items():
@@ -699,7 +702,11 @@ def check_lints(page, page_path, ref_html, g):
     if os.path.exists(dg) and os.path.exists(st):
         for e in doc_lint.errors(dg, st) + doc_lint.rule_doc_errors(dg, REPO):
             g.fail('doc-lint', e[:80], e)
+    else:
+        g.fail('doc-lint', 'missing', 'DECISIONS_DIGEST.md or STANDING_DIRECTIONS.md is missing from repair/efficiency')
     pbase_path = os.path.join(spine, 'prose_baseline.json')
+    if not os.path.exists(pbase_path):
+        g.fail('prose-lint', 'baseline', 'tools/spine/prose_baseline.json is missing; restore it from git')
     pbase = json.load(open(pbase_path, encoding='utf-8')) if os.path.exists(pbase_path) else None
     cur = prose_lint.page_counts(page)
     if pbase is not None:
@@ -707,11 +714,8 @@ def check_lints(page, page_path, ref_html, g):
             was = pbase.get(bid)
             if (was is None and n > 0) or (was is not None and n > was):
                 g.fail('prose-lint', bid, '%s: %d prose hits (baseline %s); run tools/spine/prose_lint.py PAGE --brief %s' % (bid, n, 'none' if was is None else was, bid))
-    if ref_html is not None:
-        ref_inner = {b.id: b.inner for b in briefs(ref_html)}
-        for b in briefs(page):
-            if b.id in ref_inner and ref_inner[b.id] == b.inner:
-                continue
+    if ref_html is not None and not attr_only:
+        for b in prose_lint.changed_briefs(ref_html, page):
             hits = prose_lint.lint_brief(b.inner)
             if hits:
                 eg = '; '.join('%s: %s' % (h['pattern'], h['text'][:60]) for h in hits[:3])
@@ -749,7 +753,7 @@ def main(argv):
     ref_html = load_ref(base)
     if ref_html is not None:
         check_base(page, ref_html, bl, it, g)
-    check_lints(page, page_path, ref_html, g)
+    check_lints(page, page_path, ref_html, g, attr_only=bool(attr_ref))
     n_attr = None
     if attr_ref:
         n_attr = check_attr_only(page, load_ref(attr_ref), g)

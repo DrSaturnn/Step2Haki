@@ -1,5 +1,5 @@
 """doc_lint.py (2026-11-05; wired into tools/gate.py as check doc-lint, D-20261106-11): keeps DECISIONS_DIGEST and STANDING_DIRECTIONS from holding two live answers to one question.
-Proposed home: tools/spine/doc_lint.py, run at batch launch (the launch gate) and before any doc commit.
+Runs in tools/gate.py on every gate run (ship, launch gate) and from the command line before any doc commit.
 
 Conventions it enforces, for every digest line written from 2026-11-05 on (older lines get ids in the refactor's audit):
 - the line starts "- YYYY-MM-DD [D-YYYYMMDD-n] {topic}" ; topic is a short tag (workup, sidebar, fit, motion, theme ...);
