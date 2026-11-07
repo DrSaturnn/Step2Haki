@@ -153,9 +153,9 @@ def head_tags():
 
 
 def tag_key(t):
-    m = re.match(r'<(meta|link)\b[^>]*?\b(name|rel)="([^"]+)"', t)
+    m = re.match(r'<(meta|link)\b[^>]*?\b(name|rel|property)="([^"]+)"', t)
     if not m:
-        raise SystemExit('site_build: site/pwa/head.html line without name or rel: %s' % t)
+        raise SystemExit('site_build: site/pwa/head.html line without name, rel or property: %s' % t)
     return m.group(1), m.group(2), m.group(3)
 
 

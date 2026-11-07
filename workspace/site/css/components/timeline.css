@@ -189,7 +189,7 @@ body #modes.axm-flat .flatt .track{background:var(--t-body-modes-flatt-track-bg-
 .lcw .bar.mix{background:repeating-linear-gradient(90deg,var(--mhi) 0 10px,var(--mlo) 10px 20px);background-image:var(--t-lcw-bar-mix-bgi,repeating-linear-gradient(90deg,var(--mhi) 0 10px,var(--mlo) 10px 20px));box-shadow:var(--t-lcw-bar-mix-sh,inset 0 0 0 1.5px var(--mlo-e))}
 .lcw .sg.opt{z-index:2;background:var(--t-lcw-sg-opt-bg,var(--raised));color:var(--t-lcw-sg-opt-fg,var(--chart-ink));border:var(--t-lcw-sg-opt-border,1.5px dashed var(--mhi-e));box-sizing:border-box;font-weight:600}
 .lcm .mb.mild{background:var(--t-lcm-mb-mild-bg,color-mix(in srgb,var(--mhi) 55%,var(--p-FFFFFF)))}
-.lcm .mb.opt{background:transparent!important;box-shadow:var(--t-lcm-mb-opt-sh);border:var(--t-lcm-mb-opt-border,1.5px dashed var(--mlo-e));box-sizing:border-box}
+.lcm .mb.opt{background:transparent;box-shadow:var(--t-lcm-mb-opt-sh);border:var(--t-lcm-mb-opt-border,1.5px dashed var(--mlo-e));box-sizing:border-box}
 .lc-key .k-opt{background:var(--t-lc-key-k-opt-bg);border:var(--t-lc-key-k-opt-border,1.5px dashed var(--mlo-e));box-sizing:border-box}
 .lc-key .k-mild{background:var(--t-lc-key-k-mild-bg,color-mix(in srgb,var(--mhi) 55%,var(--p-FFFFFF)));box-shadow:var(--t-lc-key-k-mild-sh,inset 0 0 0 1.5px var(--mhi-e))}
 .lcw .wt.low{height:30px}
@@ -288,9 +288,9 @@ body .lcp.axm-study .wr2 > .mask:not(.shown){color:var(--t-body-lcp-axm-study-wr
 .lcp .pt:first-child .when{color:var(--t-lcp-pt-first-child-when-fg-2,var(--muted))}
 #modes .track{background:var(--p-181C1E-a18)}
 #modes .dark[aria-pressed="true"] .track{background:var(--t-modes-dark-aria-pressed-true-track-bg,var(--accent))}
-html[data-theme="dark"][data-glass="tinted"] .sw-pie::after{background:color-mix(in srgb,var(--accent) 9%,var(--p-171920))!important}
+html[data-theme="dark"][data-glass="tinted"] .sw-pie::after{background:color-mix(in srgb,var(--accent) 9%,var(--p-171920))}
 [data-theme="dark"] .lcb .spine.brk::after{background-image:linear-gradient(160deg,transparent 42%,var(--muted) 42% 58%,transparent 58%) 0 0/10px 4px,var(--raised)}
-[data-theme="dark"] .lcm .mb.opt{background:transparent!important}
+[data-theme="dark"] .lcm .mb.opt{background:transparent}
 .brief.sp .sp-on figcaption{margin:0;padding:0;font:700 16px/22px var(--sans);letter-spacing:0;text-transform:none;color:var(--ink)}
 .brief.sp .sp-on-f{position:relative;height:196px;margin-top:8px}
 .brief.sp .sp-on-ax{position:absolute;inset:0;pointer-events:none}
@@ -353,24 +353,24 @@ body.study .brief.sp .sp-on-ev > li > div > *{white-space:normal}
 }
 #axdisp #modes .track{width:42px;height:26px;border-radius:999px;background:var(--p-787880-a24);position:relative;flex:none;box-shadow:none;transition:background .25s var(--spr)}
 #axdisp #modes button[aria-pressed="true"] .track{background:var(--accent)}
-html:is([data-theme],:not([data-theme])) body .brief.sp figure.sp-on ol.sp-trk{background:none;box-shadow:none}
-html:is([data-theme],:not([data-theme])) body .brief.sp .sp-when > b{font:650 14px/20px var(--sans);letter-spacing:0;text-transform:none}
-html:is([data-theme],:not([data-theme])) body .brief.sp .sp-when span{font-size:15px;line-height:21px}
+body .brief.sp figure.sp-on ol.sp-trk{background:none;box-shadow:none}
+body .brief.sp .sp-when > b{font:650 14px/20px var(--sans);letter-spacing:0;text-transform:none}
+body .brief.sp .sp-when span{font-size:15px;line-height:21px}
 @media (--not-phone){
-html:is([data-theme],:not([data-theme])) body .brief.sp .sp-on-ev > li > div{width:max-content;max-width:var(--cmw,280px);white-space:normal}
-html:is([data-theme],:not([data-theme])) body .brief.sp .sp-on-ev > li > div > *{white-space:normal}
-html:is([data-theme],:not([data-theme])) body .brief.sp .sp-on-f.sp-on-js .sp-on-ev > li > div{left:var(--cx);bottom:var(--cb);transform:none}
-html:is([data-theme],:not([data-theme])) body .brief.sp .sp-on-f.sp-on-js .sp-on-ev > li::before{height:var(--lh)}
+body .brief.sp .sp-on-ev > li > div{width:max-content;max-width:var(--cmw,280px);white-space:normal}
+body .brief.sp .sp-on-ev > li > div > *{white-space:normal}
+body .brief.sp .sp-on-f.sp-on-js .sp-on-ev > li > div{left:var(--cx);bottom:var(--cb);transform:none}
+body .brief.sp .sp-on-f.sp-on-js .sp-on-ev > li::before{height:var(--lh)}
 }
-html:is([data-theme],:not([data-theme])) body .brief.sp figure.sp-on.sp-on-list .sp-on-f{height:auto}
-html:is([data-theme],:not([data-theme])) body .brief.sp figure.sp-on.sp-on-list .sp-on-ax{position:relative;height:20px;margin:0 0 2px}
-html:is([data-theme],:not([data-theme])) body .brief.sp figure.sp-on.sp-on-list :is(.sp-on-ax,.sp-on-tk)::before{display:none}
-html:is([data-theme],:not([data-theme])) body .brief.sp figure.sp-on.sp-on-list .sp-on-tk{top:0;bottom:auto;font-size:12px}
+body .brief.sp figure.sp-on.sp-on-list .sp-on-f{height:auto}
+body .brief.sp figure.sp-on.sp-on-list .sp-on-ax{position:relative;height:20px;margin:0 0 2px}
+body .brief.sp figure.sp-on.sp-on-list :is(.sp-on-ax,.sp-on-tk)::before{display:none}
+body .brief.sp figure.sp-on.sp-on-list .sp-on-tk{top:0;bottom:auto;font-size:12px}
 html body .qx-pv > .brief.sp.qx-pc .lcw :is(.wr,.tr){display:block}
-html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) caption ol.sp-trk{background:transparent;background-image:none;box-shadow:var(--inner-2);border-radius:18px}
-html:is([data-theme],:not([data-theme])) body .lcp .tile,html:is([data-theme],:not([data-theme])) body .lcp .tile.first{background:transparent;background-image:none;box-shadow:inset 0 0 0 1px var(--hair)}
-html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw .wrows{display:block;margin:0;padding:0;background:none;background-image:none;box-shadow:none;border-radius:0}
-html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw .wrows > :is(li.wr,li.tr){margin:0;padding:14px 0 13px;background:none;background-image:none;box-shadow:none;border-radius:0;border:0;border-top:1px solid var(--hair)}
-html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw .wrows > :is(li.wr,li.tr):first-child{border-top:0;padding-top:8px}
-html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw .wrows > li.wg + :is(li.wr,li.tr){border-top:0;padding-top:6px}
-html:is([data-theme],:not([data-theme])) body :is(.brief.sp,.brief) figure.lcw > :is(.note,.lc-key){margin:4px 0 0;padding:12px 0 0;border-top:1px solid var(--hair)}
+body :is(.brief.sp,.brief) caption ol.sp-trk{background:transparent;background-image:none;box-shadow:var(--inner-2);border-radius:18px}
+body .lcp .tile,body .lcp .tile.first{background:transparent;background-image:none;box-shadow:inset 0 0 0 1px var(--hair)}
+body :is(.brief.sp,.brief) figure.lcw .wrows{display:block;margin:0;padding:0;background:none;background-image:none;box-shadow:none;border-radius:0}
+body :is(.brief.sp,.brief) figure.lcw .wrows > :is(li.wr,li.tr){margin:0;padding:14px 0 13px;background:none;background-image:none;box-shadow:none;border-radius:0;border:0;border-top:1px solid var(--hair)}
+body :is(.brief.sp,.brief) figure.lcw .wrows > :is(li.wr,li.tr):first-child{border-top:0;padding-top:8px}
+body :is(.brief.sp,.brief) figure.lcw .wrows > li.wg + :is(li.wr,li.tr){border-top:0;padding-top:6px}
+body :is(.brief.sp,.brief) figure.lcw > :is(.note,.lc-key){margin:4px 0 0;padding:12px 0 0;border-top:1px solid var(--hair)}

@@ -1,5 +1,5 @@
-/* s116: practice questions as an overlapped stack with back and next (Jonathan 2026-10-07). The question cards are not
-   moved or rebuilt: the stack only marks one card current, so answers, filters, study mode and progress keep working. */
+/* practice questions as an overlapped stack with back and next. The question cards are not moved or rebuilt: the
+   stack only marks one card current, so answers, filters, study mode and progress keep working. */
 (function(){
   function cards(bw){ return Array.prototype.slice.call(bw.querySelectorAll('.mcqwrap > .mcq')).filter(function(q){ return !q.hidden; }); }
   function nav(bw){

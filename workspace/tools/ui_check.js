@@ -136,47 +136,54 @@ const MEASURE = ({ checks, maxEls, allProps }) => {
   return res;
 };
 
-// forced state: CDP node ids for the same elements, in the same order as querySelectorAll
+// forced states, batched: every sampled element of every state check (and the ancestors a state names) is forced at
+// once, the elements are marked with data-axst, read in one pass, then released. The same set is forced on both pages,
+// so a cross-effect between two forced elements shows on both.
 async function measureStates(page, checks, maxState) {
   const cdp = await page.context().newCDPSession(page);
   await cdp.send('DOM.enable'); await cdp.send('CSS.enable');
   const { root } = await cdp.send('DOM.getDocument', { depth: 0 });
-  const res = [];
+  const force = new Map(), marks = [];   // nodeId -> Set(states); [ci, nodeId, pe]
+  const counts = {};
   for (let ci = 0; ci < checks.length; ci++) {
     const c = checks[ci]; const st = [...new Set((c.sel.match(STATE_RE) || []).map(x => x.slice(1)))];
     if (!st.length) continue;
-    const pe = ((c.sel.match(/::?(before|after|placeholder|marker)\b/) || [])[1]);
+    const pe = ((c.sel.match(/::?(before|after|placeholder|marker)\b/) || [])[1]) || '';
     const stripped = c.sel.replace(PSEUDO_RE, '').replace(STATE_RE, '').replace(/\s+/g, ' ').trim() || '*';
     let ids; try { ids = (await cdp.send('DOM.querySelectorAll', { nodeId: root.nodeId, selector: stripped })).nodeIds; } catch (e) { continue; }
+    counts[ci] = ids.length;
     const pick = ids.length > maxState ? Array.from({ length: maxState }, (_, i) => ids[Math.floor(i * ids.length / maxState)]) : ids;
-    const out = {};
+    const compounds = c.sel.split(/\s*[>+~\s]\s*(?![^(\[]*[)\]])/);
+    const last = compounds[compounds.length - 1];
+    const lastSt = [...new Set((last.match(STATE_RE) || []).map(x => x.slice(1)))];
+    const anc = compounds.slice(0, -1).filter(x => HAS_STATE.test(x)).map(x => [x.replace(PSEUDO_RE, '').replace(STATE_RE, '') || '*', [...new Set((x.match(STATE_RE) || []).map(y => y.slice(1)))]]);
     for (const nodeId of pick) {
-      // the state goes on the element the pseudo-class names; for a descendant selector with the state on an ancestor
-      // compound, force it on the matched element's ancestors that match that compound
-      const targets = [nodeId];
-      const compounds = c.sel.split(/\s*[>+~\s]\s*(?![^(\[]*[)\]])/);
-      const last = compounds[compounds.length - 1];
-      if (!HAS_STATE.test(last)) {
-        const anc = compounds.slice(0, -1).filter(x => HAS_STATE.test(x)).map(x => x.replace(PSEUDO_RE, '').replace(STATE_RE, '') || '*');
+      const add = (id, sts) => { const z = force.get(id) || new Set(); sts.forEach(x => z.add(x)); force.set(id, z); };
+      if (lastSt.length) add(nodeId, lastSt);
+      if (anc.length) {
         const { object } = await cdp.send('DOM.resolveNode', { nodeId });
-        for (const sel of anc) { try { const r = await cdp.send('Runtime.callFunctionOn', { objectId: object.objectId, functionDeclaration: 'function(s){return this.parentElement && this.parentElement.closest(s)}', arguments: [{ value: sel }] });
-          if (r.result && r.result.objectId) { const nn = await cdp.send('DOM.requestNode', { objectId: r.result.objectId }); if (nn.nodeId) targets.push(nn.nodeId); } } catch (e) {} }
+        for (const [sel, sts] of anc) { try { const r = await cdp.send('Runtime.callFunctionOn', { objectId: object.objectId, functionDeclaration: 'function(s){return this.parentElement && this.parentElement.closest(s)}', arguments: [{ value: sel }] });
+          if (r.result && r.result.objectId) { const nn = await cdp.send('DOM.requestNode', { objectId: r.result.objectId }); if (nn.nodeId) add(nn.nodeId, sts); } } catch (e) {} }
       }
-      for (const t of targets) await cdp.send('CSS.forcePseudoState', { nodeId: t, forcedPseudoClasses: st });
-      const { object } = await cdp.send('DOM.resolveNode', { nodeId });
-      const r = await cdp.send('Runtime.callFunctionOn', { objectId: object.objectId, returnByValue: true, arguments: [{ value: c.props }, { value: pe ? '::' + pe : null }],
-        functionDeclaration: `function(props, pe){ const SKIP=/^(--|transition|animation|caret-color)/; const cs=getComputedStyle(this, pe), m={};
-          const pr=document.createElement('div'); const ex=p=>{ if(p==='*'){const a=[];for(let i=0;i<cs.length;i++)a.push(cs[i]);return a;} pr.removeAttribute('style'); try{pr.style.setProperty(p,'inherit');}catch(e){} return pr.style.length?Array.from({length:pr.style.length},(_,i)=>pr.style[i]):[p]; };
-          props.forEach(p=>ex(p).forEach(l=>{ if(!SKIP.test(l)) m[l]=cs.getPropertyValue(l); }));
-          let n=this, parts=[]; while(n&&n.nodeType===1){ if(n.id){parts.unshift('#'+n.id);break;} const par=n.parentElement; if(!par){parts.unshift(n.tagName.toLowerCase());break;} parts.unshift(n.tagName.toLowerCase()+':'+Array.prototype.indexOf.call(par.children,n)); n=par; }
-          return [parts.join('>'), m]; }` });
-      for (const t of targets) await cdp.send('CSS.forcePseudoState', { nodeId: t, forcedPseudoClasses: [] });
-      if (r.result && r.result.value) out[r.result.value[0]] = r.result.value[1];
+      marks.push([ci, nodeId, pe]);
     }
-    res.push({ ci, n: ids.length, out, state: st.join(',') });
   }
+  const byNode = new Map();
+  marks.forEach(([ci, nodeId, pe], k) => { const l = byNode.get(nodeId) || []; l.push(k); byNode.set(nodeId, l); });
+  for (const [nodeId, l] of byNode) await cdp.send('DOM.setAttributeValue', { nodeId, name: 'data-axst', value: l.join(' ') });
+  for (const [nodeId, sts] of force) await cdp.send('CSS.forcePseudoState', { nodeId, forcedPseudoClasses: [...sts] });
+  const read = await page.evaluate(({ marks, props }) => {
+    const SKIP = /^(--|transition|animation|caret-color)/, pr = document.createElement('div'), out = {};
+    const ex = (cs, p) => { if (p === '*') { const a = []; for (let i = 0; i < cs.length; i++) a.push(cs[i]); return a; } pr.removeAttribute('style'); try { pr.style.setProperty(p, 'inherit'); } catch (e) {} return pr.style.length ? Array.from({ length: pr.style.length }, (_, i) => pr.style[i]) : [p]; };
+    const pathOf = e => { const parts = []; let n = e; while (n && n.nodeType === 1) { if (n.id) { parts.unshift('#' + n.id); break; } const par = n.parentElement; if (!par) { parts.unshift(n.tagName.toLowerCase()); break; } parts.unshift(n.tagName.toLowerCase() + ':' + Array.prototype.indexOf.call(par.children, n)); n = par; } return parts.join('>'); };
+    document.querySelectorAll('[data-axst]').forEach(e => { e.getAttribute('data-axst').split(' ').forEach(k => { const [ci, , pe] = marks[+k];
+      const cs = getComputedStyle(e, pe ? '::' + pe : null), m = {}; props[ci].forEach(p => ex(cs, p).forEach(l => { if (!SKIP.test(l)) m[l] = cs.getPropertyValue(l); }));
+      (out[ci] = out[ci] || {})[pathOf(e)] = m; }); });
+    return out; }, { marks, props: checks.map(c => c.props) });
+  for (const [nodeId] of force) await cdp.send('CSS.forcePseudoState', { nodeId, forcedPseudoClasses: [] });
+  for (const [nodeId] of byNode) await cdp.send('DOM.removeAttribute', { nodeId, name: 'data-axst' });
   await cdp.detach();
-  return res;
+  return Object.keys(counts).map(ci => ({ ci: +ci, n: counts[ci], out: read[ci] || {}, state: [...new Set((checks[ci].sel.match(STATE_RE) || []).map(x => x.slice(1)))].join(',') }));
 }
 
 async function run(a) {

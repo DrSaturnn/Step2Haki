@@ -1,6 +1,6 @@
-/* s148f site layer (Jonathan 2026-10-19/20): question tiles one size with the mockup's chip row, a Review grouped by
-   result, hover cards that animate out as well as in, linked-brief previews with an open icon, and Pairs with as a list.
-   Presentation only: no brief text or markup in the page source changes. */
+/* Question tiles one size with a chip row, a Review grouped by result, hover cards that animate out as well as in,
+   linked-brief previews with an open icon, and Pairs with as a list. Presentation only: no brief text or markup in the
+   page source changes. */
 (function(){
   'use strict';
   var fine = window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches;
@@ -118,7 +118,7 @@
         r.querySelector('.qx-ra b').textContent = ans;
         if(why){ r.querySelector('.qx-ra').appendChild(document.createTextNode(': ' + txt(why))); }
         if(picked) r.querySelector('.qx-rc').textContent = 'You chose: ' + lab(picked);
-        if(q.classList.contains('qx-hr')){                         // s148g: the three choices, each with its reason
+        if(q.classList.contains('qx-hr')){                         // the three choices, each with its reason
           var ch = document.createElement('span'); ch.className = 'qx-rch';
           Array.prototype.forEach.call(q.querySelectorAll('.opts button'), function(b){
             var rs = b.querySelector('.qx-rsn'), key = b.dataset.correct === '1', mine = b === picked, row = document.createElement('span');
@@ -181,11 +181,11 @@
     if(still || now){ el.remove(); return; }
     el.classList.add('qx-out'); setTimeout(function(){ nativeRemove.call(el); }, 380);
   }
-  /* s163 C4: in a Differential row, the preview adds the linked brief's diagnostic criteria (its step 2), cloned from
+  /* in a Differential row, the preview adds the linked brief's diagnostic criteria (its step 2), cloned from
      that brief when the preview opens, so no copy exists to drift. Only when the row names that brief's diagnosis or
      one of its criteria blocks; a row whose drawer opens a broader brief gets none. */
   var PV_STOP = /^(a|an|the|of|in|and|or|with|for|to|on|at|by|vs|child|children|adult|adults|disease|disorder|syndrome|criteria|criterion|defining|diagnostic|diagnosis|classic|test)$/;
-  /* s164: word forms read as one word: an abbreviation as its words, an adjective as its noun (after the plural trim) */
+  /* word forms read as one word: an abbreviation as its words, an adjective as its noun (after the plural trim) */
   var PV_FORMS = {uti: ['urinary', 'tract', 'infection'], ptsd: ['posttraumatic', 'stress'], mdd: ['major', 'depression'], depressive: ['depression'], tuberculou: ['tuberculosi']};
   function pvToks(s){
     var o = [];
@@ -205,7 +205,7 @@
   function pvCrit(link, t){
     if(!pvInDx(link)) return null;
     var h = t.querySelector('h5.sp-h[id$="-s2"]'); if(!h || !/criteria/i.test(h.textContent)) return null;
-    var on = false, bl = [], fg = [];   // s164: fg, the step's window figures (figure.lcw)
+    var on = false, bl = [], fg = [];   // fg, the step's window figures (figure.lcw)
     Array.prototype.forEach.call(t.querySelectorAll('h5.tsec, div.crit, div.sp-dx, figure.lcw'), function(n){
       if(n.tagName === 'H5') on = n === h; else if(on && !n.parentElement.closest('div.crit, div.sp-dx, figure.lcw')) (n.tagName === 'FIGURE' ? fg : bl).push(n);
     });
@@ -221,7 +221,7 @@
       var lc = k < 0 ? [] : pvToks(/^defining/i.test(lab) ? lab.slice(k + 1) : lab.slice(0, k));
       if(pvIn(core, pvToks(lab)) || pvIn(lc, all) || pvIn(pvToks(lab), all)) return bl[i];
     }
-    /* s164: a window figure one of whose rows names the row's diagnosis (Brief psychotic disorder, Delirium tremens) */
+    /* a window figure one of whose rows names the row's diagnosis (Brief psychotic disorder, Delirium tremens) */
     for(var f = 0; f < fg.length; f++){
       var nm = fg[f].querySelectorAll('.wr .nm, .tr .nm');
       for(var j = 0; j < nm.length; j++){

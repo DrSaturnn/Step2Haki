@@ -29,18 +29,18 @@ function switches(){
     box.querySelector('.study').setAttribute('aria-pressed',b.classList.contains('study')?'true':'false');
     box.querySelector('.flatt').setAttribute('aria-pressed',b.classList.contains('flat')?'true':'false');
   }
-  if(localStorage.getItem('ax-study')==='1') b.classList.add('study');
-  if(localStorage.getItem('ax-flat')!=='0') b.classList.add('flat');   // s161b r3: flat is the default
+  if(AX.settings.get('study')==='1') b.classList.add('study');
+  if(AX.settings.get('flat')!=='0') b.classList.add('flat');   // flat is the default
   /* Board-style only joins the shelf rule in shelfEligible(); it lasts for this visit only (not saved). */
   box.querySelector('.bsonly').addEventListener('click',function(){
     boardOnly=!boardOnly;
     sync(); keepPlace(function(){ applyShelf(shelf); });
   });
   box.querySelector('.study').addEventListener('click',function(){
-    b.classList.toggle('study'); localStorage.setItem('ax-study',b.classList.contains('study')?'1':'0'); sync();
+    b.classList.toggle('study'); AX.settings.set('study',b.classList.contains('study')?'1':'0'); sync();
   });
   box.querySelector('.flatt').addEventListener('click',function(){
-    b.classList.toggle('flat'); localStorage.setItem('ax-flat',b.classList.contains('flat')?'1':'0'); sync();
+    b.classList.toggle('flat'); AX.settings.set('flat',b.classList.contains('flat')?'1':'0'); sync();
   });
   sync();
   if(!window.__axModeObserver){
@@ -135,7 +135,7 @@ var reviewSet=null;   /* fixed brief IDs while an active review is running */
    searchTerm stays empty so applyShelf's composition is unchanged. */
 var searchTerm='';
 var boardOnly=false;
-/* BOARD-STYLE ONLY starts off on every visit (Jonathan 2026-10-01: a remembered switch hid whole shelves on one device). */
+/* BOARD-STYLE ONLY starts off on every visit: a remembered switch could hide whole shelves on one device. */
 try{ localStorage.removeItem('ax-bsonly'); }catch(e){}
 
 /* Board-style = the set the title badge calls Board (or UWorld): .brief.bs
@@ -233,7 +233,7 @@ function keepPlace(fn){
 }
 function applyShelf(s){
   shelf=s;
-  try{ localStorage.setItem('ax-shelf',s); }catch(e){}
+  AX.settings.set('shelf',s);
   var pin=pinnedId(), visible=0;
   document.querySelectorAll('.brief').forEach(function(b){
     var eligible=shelfEligible(b,s), on=eligible;
@@ -313,8 +313,8 @@ window.axShelf=function(){ return shelf; };
 
 /* The address bar should always describe what is on screen, so a copied
    URL reproduces it for someone else. */
-/* s113: switching shelf releases a pin the new shelf does not include. Without this a stale #brief in the
-   address bar kept that brief, its system section and its sidebar link on every shelf you switched to. */
+/* switching shelf releases a pin the new shelf does not include; otherwise a stale #brief in the address bar keeps
+   that brief, its system section and its sidebar link on every shelf. */
 function unpinOffShelf(s){
   var id=pinnedId(); if(!id||reviewSet) return;
   if(shelfEligible(document.getElementById(id),s)) return;
@@ -357,7 +357,7 @@ function shelfInit(){
      whoever opens it, whatever shelf they normally study on. */
   var q=(location.search.match(/[?&]shelf=(\w+)/)||[])[1];
   var saved=null;
-  try{ saved=localStorage.getItem('ax-shelf'); }catch(e){}
+  saved=AX.settings.get('shelf');
   var start = valid(q) ? q : (valid(saved) ? saved : 'step2');
   applyShelf(start);
   if(!valid(q)) syncShelfUrl(start);
@@ -378,7 +378,7 @@ function shelfInit(){
   if(pinnedId()) setTimeout(function(){ gotoHash(false); }, 60);
   window.addEventListener('hashchange', function(){
     applyShelf(shelf);   /* re-pins for the new hash, un-pins the old one */
-    gotoHash(!window.AXN);   // s143: an instant jump; axnav then seats the target while lazy briefs above it render
+    gotoHash(!window.AXN);   // an instant jump; axnav then seats the target while lazy briefs above it render
   });
 }
 
@@ -499,7 +499,7 @@ function mobileNav(){
     if(a==='index'){ navOpen?closeNav():openNav(); }
     if(a==='study'){
       document.body.classList.toggle('study');
-      try{ localStorage.setItem('ax-study',document.body.classList.contains('study')?'1':'0'); }catch(err){}
+      AX.settings.set('study',document.body.classList.contains('study')?'1':'0');
       b.setAttribute('aria-pressed',document.body.classList.contains('study')?'true':'false');
     }
     if(a==='top'){ closeNav(); window.scrollTo({top:0,behavior:(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)?'auto':'smooth'}); }
@@ -787,11 +787,11 @@ function sxIdle(){
   if(window.requestIdleCallback) requestIdleCallback(sxBuild,{timeout:1500});
   else setTimeout(function(){ var t=sxNow(); sxBuild({didTimeout:false,timeRemaining:function(){ return 12-(sxNow()-t); }}); },40);
 }
-/* Prebuilt index (D-20261106-4): the build writes search.json beside the page from the fully built page
-   (tools/search_index.js; format in its header) and the gate fails when the file does not match the page. The page
-   fetches it once the loader settles, versioned by the build stamp. A brief built before the file lands, or after,
-   is read from the page. A failed fetch, a file that does not list this page's briefs, or a page opened from disk
-   builds the index in the page (sxBuild over template copies); the result list says so. */
+/* Prebuilt index: the build writes search.json beside the page (tools/search_index.js; format in its header) and the
+   gate fails when the file does not match the page. The page fetches it once the loader settles, versioned by the
+   build stamp. A brief built before the file lands, or after, is read from the page. A failed fetch, a file that does
+   not list this page's briefs, or a page opened from disk builds the index in the page (sxBuild over template copies);
+   the result list says so. */
 function sxVersion(){ var m=document.querySelector('meta[name="ax-build"]'); return m ? ((m.getAttribute('content')||'').split('|')[0]||'') : ''; }
 function sxLoad(){
   if(SX.mode) return;
@@ -1325,7 +1325,7 @@ function masks(R){ var D=R||document;
     Array.prototype.slice.call(r.childNodes).forEach(function(n){ if(n!==lbl) sp.appendChild(n); });
     r.appendChild(sp);
   });
-  D.querySelectorAll('.brief.sp .dp .bl > li, .brief.sp .sp-pause').forEach(function(el){ /* s135: study mode masks the bottom line and the pause point in every spine brief (Jonathan 2026-10-13: "Mask both") */
+  D.querySelectorAll('.brief.sp .dp .bl > li, .brief.sp .sp-pause').forEach(function(el){ /* study mode masks the bottom line and the pause point in every spine brief */
     if(el.querySelector('.mask')) return;
     var lead=el.classList.contains('sp-pause')?el.querySelector(':scope > b'):null;
     var sp=document.createElement('span'); sp.className='mask';
@@ -1450,7 +1450,7 @@ function mcq(R){
         b.dataset.optionId=optionDefs[oi].id;
         b.dataset.correct=oi===0?'1':'0';
         b.appendChild(document.createTextNode(optionDefs[oi].label));
-        /* s148g: the choice's one-line reason, shown under it once the answer is revealed (Jonathan 2026-10-20) */
+        /* the choice's one-line reason, shown under it once the answer is revealed */
         var rsn=norm(li.getAttribute(['data-key-why','data-d1-why','data-d2-why'][oi])||'');
         if(rsn){ var rs=document.createElement('span'); rs.className='qx-rsn'; rs.textContent=rsn; b.appendChild(rs); box.classList.add('qx-hr'); }
         o.appendChild(b);
@@ -1493,7 +1493,7 @@ function mcq(R){
     });
     bw.appendChild(tools); bw.appendChild(h); bw.appendChild(rw); addFilter(bw);
     var pref='stack';
-    try{ var sv=localStorage.getItem('ax-bankview'); if(sv==='review') pref='review'; else if(sv==='list') pref='quiz'; }catch(err){}
+    var sv=AX.settings.get('bankview'); if(sv==='review') pref='review'; else if(sv==='list') pref='quiz';
     if(pref==='review') bw.classList.add('review');
     if(pref==='stack') bw.classList.add('stack');
     bw.querySelector('.bkmode[data-v="'+pref+'"]').classList.add('on');
@@ -1576,7 +1576,7 @@ function wire(){
     if(bm){ var bwEl=bm.closest('.bankwrap'), v=bm.dataset.v;
       bwEl.classList.toggle('review',v==='review'); bwEl.classList.toggle('stack',v==='stack');
       Array.prototype.slice.call(bwEl.querySelectorAll('.bkmode')).forEach(function(x){x.classList.toggle('on',x===bm);});
-      try{ localStorage.setItem('ax-bankview',v==='quiz'?'list':v); }catch(err){} return;
+      AX.settings.set('bankview',v==='quiz'?'list':v); return;
     }
     var ba=e.target.closest? e.target.closest('.bkall') : null;
     if(ba){ var bw2=ba.closest('.bankwrap'), qs=Array.prototype.slice.call(bw2.querySelectorAll('.mcq')).filter(function(x){ return !x.hidden; });

@@ -50,5 +50,5 @@ body.bb-barred #navtab{opacity:0;transform:translateY(-14px);pointer-events:none
 @media (--phone){
 .brief .bb-bar{margin:-20px -15px -48px}
 }
-html[data-theme="dark"][data-glass="tinted"] .brief .bb-bar{background:color-mix(in srgb,var(--accent) 12%,#15171E)!important;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
-html[data-theme="dark"][data-glass="tinted"] #mbar{background:color-mix(in srgb,var(--accent) 12%,#15171E)!important}
+html[data-theme="dark"][data-glass="tinted"] .brief .bb-bar{background:color-mix(in srgb,var(--accent) 12%,#15171E);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+html[data-theme="dark"][data-glass="tinted"] #mbar{background:color-mix(in srgb,var(--accent) 12%,#15171E)}

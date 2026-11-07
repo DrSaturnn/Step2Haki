@@ -1,8 +1,8 @@
-/* s148b: onset timeline placement (Jonathan 2026-10-18, "the timeline boxes should adapt to fit all text within it";
-   claude/pending/SITE_BODY_GLANCE.md, Decided D). After layout and on every resize: walk the events left to right and put
-   each card on the lowest tier where it overlaps no card (8 px gap), its leader line crosses no card below it, and it
-   covers no leader line from above; each tier sits on the tallest card below it and the chart height follows. If the
-   cards cannot fit at a width, the figure takes the phone list layout. Phone and study mode keep their list layouts. */
+/* Onset timeline placement: the timeline boxes fit all their text. After layout and on every resize: walk the events
+   left to right and put each card on the lowest tier where it overlaps no card (8 px gap), its leader line crosses no
+   card below it, and it covers no leader line from above; each tier sits on the tallest card below it and the chart
+   height follows. If the cards cannot fit at a width, the figure takes the phone list layout. Phone and study mode keep
+   their list layouts. */
 (function(){
   var GAP = 8, BASE = 48, AXIS = 31, MAXT = 5, PAD = 4, LEAD = 4, WIDTHS = [280, 240, 210, 180];
   var phone = window.matchMedia('(max-width:640px)');

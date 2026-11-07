@@ -1,5 +1,5 @@
-/* s141 S5 (round 1 display MED, lithium-effects; nephrotic-child LOW): an arrow for a high or low value stays on the line
-   of the word it qualifies. Presentation only: the space beside the arrow becomes a no-break space; no text changes. */
+/* an arrow for a high or low value stays on the line of the word it qualifies. Presentation only: the space beside the
+   arrow becomes a no-break space; no text changes. */
 (function(){
   "use strict";
   var A = /[↑↓]/;

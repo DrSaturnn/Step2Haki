@@ -1,4 +1,4 @@
-/* s161c Presentations sub-headers: shown only while a brief under them is shown; the count is the briefs shown */
+/* Presentations sub-headers: shown only while a brief under them is shown; the count is the briefs shown */
 (function(){
   function fit(){
     document.querySelectorAll('.psub').forEach(function(h){

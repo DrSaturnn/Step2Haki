@@ -15,8 +15,10 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 - **s167 OPEN 2026-11-07** (Claude lead; UI refactor part 2, site layer only, content frozen; D-20261107-1 to -4; lead
   100M, no agents; batch file repair/s167/S167.md, chunk table there). Branch wip/s167 lives only in this container and as
   the bundle claude/pending/s167/wip_s167.bundle in the private repo (the public repo attach was refused at launch): a
-  continuation chat clones main, then `git fetch <bundle> wip/s167:wip/s167 && git checkout wip/s167`. Step: chunk 2
-  (review redesign).
+  continuation chat clones main, then `git fetch <bundle> wip/s167:wip/s167 && git checkout wip/s167`. Done in chat 1:
+  chunks 1 to 8 (launch; ui_check tool; raw colors, motion and dehack applied to site/; settings module; head tags and
+  vercel.json; source comments). Next: the batch file's "Next chat" list, (a) first. Lead chat 1 ended at the H6
+  finish notice.
 
 - **s165b SHIPPED 2026-11-06** (Claude lead, from the ledger chat; rules and gate patch, tools and docs only, no page
   change; D-20261106-8 to -11; Jonathan "ship" 23:58): commits 0267947, 43e206e, 2ff77a6 and the handoff commit,

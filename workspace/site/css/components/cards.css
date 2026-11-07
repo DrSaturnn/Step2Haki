@@ -1,5 +1,5 @@
 #navlinks .pc-sect{color:var(--t-navlinks-pc-sect-fg,var(--accent))}
-html body #nav #navlinks a.pc-plan{color:var(--faint)!important;-webkit-text-fill-color:var(--faint);opacity:.75;font-weight:400}
+html body #nav #navlinks a.pc-plan{color:var(--faint);-webkit-text-fill-color:var(--faint);opacity:.75;font-weight:400}
 .brief.pc .pc-grp{margin:0 0 6px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 .brief.pc .pc-grp span{color:var(--faint);padding:0 4px}
 .brief.pc .pc-tn{color:var(--muted);font-size:.92em;padding-left:4px}

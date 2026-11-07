@@ -1,5 +1,5 @@
-/* s141: sidebar movement per the Lithium Glance mockup (Jonathan 2026-10-15). Presentation only.
-   1. The current step is marked by one lens that glides between steps (the mockup's spring), not a box that jumps.
+/* Sidebar movement. Presentation only.
+   1. The current step is marked by one lens that glides between steps on a spring.
    2. Steps a brief does not use say so ("Not used"); "Urgent" reads "Urgent risks", as the step heading does.
    3. The sidebar list keeps the current step in view, and on a new brief brings that brief near the top.
    4. The list fades at its top and bottom edges.
@@ -38,7 +38,7 @@
   }
   var lastRl = null, lastCur = null;
   function place(){
-    if(!WIDE.matches || window.AXN) return;   // s143: the axnav component draws the rail
+    if(!WIDE.matches || window.AXN) return;   // the axnav component draws the rail
     var rl = list.querySelector('.bb-rail.ax-nr .bb-rl'); if(!rl) return;
     dress(rl);
     var lens = rl.querySelector(':scope > .ax-lens'), a = rl.querySelector('a.cur');
@@ -65,7 +65,7 @@
   var moved = false;
   ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function(ev){ window.addEventListener(ev, function(){ moved = true; }, {passive: true, once: true}); });
   function seat(){
-    if(moved || window.AXN) return;   // s143: axnav seats the landing
+    if(moved || window.AXN) return;   // axnav seats the landing
     var id = decodeURIComponent(location.hash.slice(1)); if(!id) return;
     var el = document.getElementById(id); if(!el) return;
     var want = Math.max(parseFloat(getComputedStyle(el).scrollMarginTop) || 0, WIDE.matches ? 88 : 0);   // clear the floating toolbar

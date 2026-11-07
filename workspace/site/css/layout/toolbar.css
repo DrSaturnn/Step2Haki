@@ -56,7 +56,7 @@ body:has(> .sp-drawer) #axbar,body:has(> .sp-drawer) #axedge{opacity:0;pointer-e
 #axbar .axcur{max-width:520px}
 #axbar .axbn{font:600 14px/1.2 var(--sans);color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:240px;padding-right:12px;margin-right:2px;border-right:1px solid var(--hair)}
 #axbar .axbn[hidden]{display:none}
-#nav.axn #navscroll > #modes{display:none!important}
+#nav.axn #navscroll > #modes{display:none}
 #axdisp{position:absolute;top:70px;left:10px;right:10px;z-index:6;max-height:calc(100% - 78px);overflow-y:auto;box-sizing:border-box;padding:8px;border-radius:22px;background:var(--t-axdisp-bg);-webkit-backdrop-filter:blur(40px) saturate(190%);backdrop-filter:blur(40px) saturate(190%);box-shadow:var(--t-axdisp-sh);opacity:0;transform:translateY(-6px) scale(.98);transform-origin:top right;pointer-events:none;visibility:hidden;transition:opacity .25s var(--spr),transform .45s var(--spr),visibility 0s .45s}
 #axdisp:focus{outline:none}
 #axdisp.on{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition:opacity .25s var(--spr),transform .45s var(--spr)}

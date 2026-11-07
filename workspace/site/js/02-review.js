@@ -18,7 +18,7 @@
 
 var NS='ax-rev', DAY=864e5;
 var BOXES=[0,1,3,7,16,35];      /* index = box number */
-var PER_SESSION=3, PER_BRIEF=3;   /* 3 briefs a session (Jonathan 2026-10-14) */
+var PER_SESSION=3, PER_BRIEF=3;   /* 3 briefs a session */
 
 function today(){ return Math.floor(Date.now()/DAY); }
 function store(){ try{ return window.localStorage; }catch(e){ return null; } }
@@ -149,7 +149,7 @@ function split(id){
   later.sort(function(x,y){ return x.wait-y.wait; });
   return {fresh:fresh,due:due,later:later,data:d};
 }
-/* s136: the sheet shows the briefs a session will review before it starts; buildSession then reviews exactly those */
+/* the sheet shows the briefs a session will review before it starts; buildSession then reviews exactly those */
 var PREPICK=null;
 function previewPick(id){
   var s=split(id), pick=[], kind=[];
@@ -417,7 +417,7 @@ function paintChip(){
                                     : 'Review – pick your name');
   });
   var bdg=document.querySelector('#mbar [data-act="review"] .bdg');
-  if(bdg){ var rd=id?split(id).due.length:0; bdg.textContent=rd; bdg.setAttribute('data-n', rd?'1':'0'); }   /* scheduled reviews only, never the shelf total (Jonathan 2026-10-14) */
+  if(bdg){ var rd=id?split(id).due.length:0; bdg.textContent=rd; bdg.setAttribute('data-n', rd?'1':'0'); }   /* scheduled reviews only, never the shelf total */
 }
 function buildLauncher(kind){
   var launch=el('div');
@@ -471,7 +471,7 @@ function place(anchor){
   anchor = anchor || anchorEl || chips[0];
   if(!anchor || !panel) return;
   if(window.matchMedia('(max-width:900px)').matches){ panel.style.top=''; panel.style.left=''; return; }
-  var r=anchor.getBoundingClientRect(), z=parseFloat(getComputedStyle(document.documentElement).zoom)||1;   /* s147: zoomed px in, CSS px out */
+  var r=anchor.getBoundingClientRect(), z=parseFloat(getComputedStyle(document.documentElement).zoom)||1;   /* zoomed px in, CSS px out */
   var pw=(panel.offsetWidth||330)*z, ph=(panel.offsetHeight||420)*z;
   var vw=document.documentElement.clientWidth||window.innerWidth;
   var vh=window.innerHeight, M=12, left, top;
@@ -894,7 +894,7 @@ function startReview(who){
        priorStudy:document.body.classList.contains('study')};
   window.__axShelf.set(set);
   document.body.classList.add('reviewing','study');
-  try{ localStorage.setItem('ax-study','1'); }catch(e){}
+  AX.settings.set('study','1');
   buildBar(); paintBar();
   built.briefs.forEach(function(b){ addMark(b); });
   window.scrollTo({top:0});
@@ -912,7 +912,7 @@ function buildBar(){
   document.body.appendChild(bar);
   bar.querySelector('.sm').addEventListener('click',function(){
     var on=document.body.classList.toggle('study');
-    try{ localStorage.setItem('ax-study',on?'1':'0'); }catch(e){}
+    AX.settings.set('study',on?'1':'0');
     paintBar();
   });
   bar.querySelector('.fin').addEventListener('click',function(){ endReview(true); });
@@ -976,7 +976,7 @@ function endReview(save){
   document.querySelectorAll('.rvmark').forEach(function(x){ x.parentNode.removeChild(x); });
   if(!rev.priorStudy){
     document.body.classList.remove('study');
-    try{ localStorage.setItem('ax-study','0'); }catch(e){}
+    AX.settings.set('study','0');
   }
   document.body.classList.remove('reviewing');
   if(bar) bar.hidden=true;
@@ -1222,10 +1222,10 @@ function boot(){
   }
   paintChip();
   try{ syncRoster(function(){ paintChip(); }); }catch(e){ mark('off'); }
-  /* s136: the status-bar Review sheet (repair/s136/src/review.js) drives this scheduler through window.axRv */
+  /* the status-bar Review sheet drives this scheduler through window.axRv */
   window.axRv={
     current:current, nameOf:nameOf, initials:initials,
-    due:function(){ var id=current(); return id?split(id).due.length:0; },   /* scheduled reviews only, never the shelf total (Jonathan 2026-10-14) */
+    due:function(){ var id=current(); return id?split(id).due.length:0; },   /* scheduled reviews only, never the shelf total */
     pick:function(){ var id=current(); return id?previewPick(id):[]; },
     people:function(){
       var mine=mineOnly(), out=[];
