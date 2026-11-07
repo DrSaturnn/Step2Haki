@@ -1,32 +1,12 @@
 {
- "desk:flat-light-read": {
-  "aria-prohibited-attr": 5
- },
- "desk:sculpted-light-read": {
-  "aria-prohibited-attr": 5
- },
- "desk:flat-dark-read": {
-  "aria-prohibited-attr": 5
- },
- "desk:flat-tinted-read": {
-  "aria-prohibited-attr": 5
- },
- "desk:flat-light-recall": {
-  "aria-prohibited-attr": 5
- },
- "phone:flat-light-read": {
-  "aria-prohibited-attr": 5
- },
- "phone:sculpted-light-read": {
-  "aria-prohibited-attr": 5
- },
- "phone:flat-dark-read": {
-  "aria-prohibited-attr": 5
- },
- "phone:flat-tinted-read": {
-  "aria-prohibited-attr": 5
- },
- "phone:flat-light-recall": {
-  "aria-prohibited-attr": 5
- }
+ "desk:flat-light-read": {},
+ "desk:sculpted-light-read": {},
+ "desk:flat-dark-read": {},
+ "desk:flat-tinted-read": {},
+ "desk:flat-light-recall": {},
+ "phone:flat-light-read": {},
+ "phone:sculpted-light-read": {},
+ "phone:flat-dark-read": {},
+ "phone:flat-tinted-read": {},
+ "phone:flat-light-recall": {}
 }
