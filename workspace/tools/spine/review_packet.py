@@ -316,6 +316,9 @@ def main(argv):
             rules = ('# Card rules for this review (CARD_SPEC.md; a class card has no decision spine, so the spine structure '
                      'rules do not apply to it)\n\n' + cs + ('\n\n' + rules if part != 'read' else
                      '\n\n## Tables in your folder (s147)\n\nALIASES.json and ABBREV.json are in your folder. Grep them; do not read them whole.\n'))
+        if part in ('acc', 'read', 'display'):
+            import style_card  # every wording judgment uses the writing card (D-20261106-11)
+            rules = style_card.card() + ('\n---\n\n' + rules if rules else '')
         if rules:
             open(os.path.join(pd, 'RULES.md'), 'w', encoding='utf-8').write(rules)
     for f in ('facts.json', 'claim_map.json'):

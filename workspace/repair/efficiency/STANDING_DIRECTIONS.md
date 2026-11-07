@@ -5,10 +5,11 @@
 2. Replace, never append: a UI change edits or deletes what it replaces in the same commit; no new override block. [D-20261105-1]
 3. Themes change color token values only: a theme file never names a component and never changes shape, size, position, spacing, display or zoom; components take every color from a token. [D-20261105-1] [D-20261105-10]
 4. All motion is spring timing from the motion tokens (SwiftUI style). [D-20261105-3]
-5. Nothing ships without Jonathan's "ship" to the screenshots; gate, ui_lint and doc_lint must pass. [MEM] [D-20261105-1]
+5. Nothing ships without Jonathan's "ship" to the screenshots; the gate (with its ui-lint, doc-lint and prose checks) must pass. [MEM] [D-20261105-1] [D-20261106-11]
 6. Accuracy is non-negotiable; board sources first; no drift from source content. [DIG 2026-10-10] [MEM]
 7. Phones are untouched by desktop-only work, and the reverse. [D-20261105-1]
 8. Code holds code: no decision quotes, names, dates or batch ids in comments; the shipped page has no comments at all. [D-20261105-6]
+9. Every visible line follows repair/efficiency/TEXTBOOK_STYLE.md (review-book register; rule 0: every line carries a fact, a finding or an action). A brief a batch changes ships with zero prose lint hits. [D-20261106-9] [D-20261106-11]
 
 Compiled 2026-10-10 because the plan v4 restart prompt pointed new chats only to the handoff, the plan and the
 decisions digest. Most of Jonathan's directions on brief format live elsewhere, so the second chat re-proposed a
@@ -67,8 +68,7 @@ Source keys:
 - **Pause point content (2026-10-28):** a block exists only for a real board bait from the brief's own evidence (NBME, UWorld, AnKing), with the clue that defeats it; a block with no bait, no deciding line, an answer that only negates the bait, or a restatement of a table row is rewritten around a real bait or deleted. A brief with no real bait keeps no pause point. [Jonathan 2026-10-28: "want to note some of the past pause points were not appropriate, repeating table info"; "lets do per your recommendation" (option 1, claude/pending/PAUSE_POINT_AUDIT_2026-10-28.md)]
 - **The Narrow or clue table:** Clue | Points to | Next move, with NO questions and no in or out chips. [SPEC, MDD pilot review 2026-10-07]
 - **Workups are not question-led.** s115 (question-led workups) was dropped on 2026-10-07, and Jonathan re-stated the rule on 2026-10-10: a workup must not open with a question. [SPEC status] [Jonathan 2026-10-10]
-- **Captions and headers** are plain labels, never catchy phrases. [SPEC r2] [OW s17]
-- **Clinical terms, no AI prose (2026-10-19):** captions, labels and cells use the term clinicians use ("Sleep stages", not "A night by stage"); next-move and meaning cells name the concrete action or test ("Order X", "Treat the hyperthyroidism"), never a figure of speech ("Chase the medical cause"). Long test lists in a workup band are broken into short lines. [DIG 2026-10-19]
+- **Captions, headers, labels and cells:** clinical nouns from the header list in TEXTBOOK_STYLE.md; next-move and meaning cells name the concrete action or test. Long test lists in a workup band are broken into short lines. [D-20261106-9]
 - **The workup caption** is "Diagnostic workup". [OW s18]
 - **Treatment:**
   - one ladder panel; numbered rungs joined by a rail; each rung reads tag, when (the trigger), then the move; the last rung is caution-colored;
@@ -133,7 +133,7 @@ Source keys:
 - **Questions are never deleted;** item ids are immutable. [CS]
 
 ## Prose and voice
-- **Plain prose:** clear and concise, with no cliché or slogan-style language; internal workflow terms (for example "handoff") never show on the page. [MEM] [CS]
+- **Register:** every visible line follows TEXTBOOK_STYLE.md (its writing card is copied into every builder and reviewer packet); internal workflow terms (for example "handoff") never show on the page. [D-20261106-9]
 - **No emojis, no em dashes.** [PREF] [HO]
 - **No structural wording (C6, s163):** nothing on the page names the page's structure: no step numbers in text ("(step 2)", "see step 4"), no ownership words ("owns", "owned by", "is the owner", "takes over", "handles"). One place still decides each action; the other states the action in plain clinical words, the same wording. Brief titles as drawers stay. Figurative placement goes too: a finding, clue, test or drug does not "belong to", "live in", "sit in" or "take over"; say the clinical relation ("treats", "points to", "is seen in"). Literal location stays ("sits in the epiphysis", "lives in a rural area"); the exam name "Step 2" stays. Gate: numeric step references and "owns"/"owned by"; lint (advisory): placement verbs. [DIG 2026-11-04 s163 D4, D6]
 
@@ -142,14 +142,13 @@ Source keys:
 - **Mechanical approval gate:** ship.sh refuses a batch unless an approval record for that exact build exists, written only by the hook when Jonathan says "ship" in reply to the screenshots (tools/hooks/approval.py). [DIG 2026-10-12]
 - **Board sources first (2026-10-12):** before building or fixing any brief, search the local UWorld questions, the AnKing deck and NBME items for the topic and record the Step 2 answer for each testable claim; MSD and guidelines then add support or "In practice" notes; where they differ, the brief teaches the board answer and labels the difference; no vendor wording; report how much of UWorld the local question files cover. [DIG 2026-10-12]
 - **Analogy label:** a step supported only by a source about another population (for example cirrhosis) is labeled as an analogy at the step itself. [DIG 2026-10-12]
-- **Word-cap overage:** up to 5% made of board-tested content or fixes for reviewer findings is approved without asking and listed in the report; ask above 5%. [DIG 2026-10-12]
 - **LOW findings:** the lead sorts them into fixed, deferred (with where each goes) or rejected, without asking. [DIG 2026-10-12]
 - **Follow-up reviews:** always the same four roles, changed lines only, within the batch budget; about 4 calls per brief covered plus 2 (one brief: 10). [DIG 2026-10-12, 2026-10-14 s139]
 - **When to ask:** only for a HIGH finding no source settles, a decision not covered by the digest or these directions, a budget overrun, or anything irreversible. [DIG 2026-10-12]
 - **One report per batch:** edit list with screenshots, decisions needed (ideally none), cost; Jonathan replies "ship". [DIG 2026-10-12]
 - **Budgets** are Jonathan's to set; standing allowance for safeguard and hook tests only, up to 2M tokens per round, reported after. [DIG 2026-10-12]
 - **Batch runbook (2026-10-12):** every batch runs under repair/efficiency/BATCH_RUNBOOK.md (project copy claude/BATCH_RUNBOOK.md). Jonathan is asked at launch and at "ship"; everything between is decided under its rules, recorded, and disclosed in the final report. Its standing calls (section 3), decided, recorded and disclosed without asking: [DIG 2026-10-12]
-  - word count over the soft cap: up to 5% of board-tested content or fixes, keep and list; above 5%, cut lines no board source tests (adult-only lines in a peds brief, mechanism hovers) until within 5%, list each cut with its words; recount after the last fix;
+  - word count over the soft cap: decided by "Layers, not totals" (Scope of a brief); nothing is cut for length;
   - a step supported only by a source about another population: keep it only if a board source teaches the step, and label the analogy at the step ("as for ... in ...");
   - a board answer that differs from a guideline: teach the board answer, the guideline goes in "In practice:"; every age, cutoff, duration, dose and interval checked against board sources;
   - a claim with no source opened that day: board-tested, label it unverified (⚠︎) and list it; not board-tested, cut it;
@@ -174,7 +173,7 @@ Source keys:
 - **The handoff:** after each shipped batch, update STEP2HAKI_HANDOFF.md in the project and in Documents/Step2Haki. [Project instructions]
 - **Pacing:** psych briefs are reauthored one at a time, to ensure accuracy. [MEM]
 - **Cross-shelf content:** no separate psych-perspective briefs. A psych-tagged brief filed under another shelf's section stays one brief with several shelf tags; a line stays when any tagged shelf's board source tests it, and moves only to a live brief that already carries it, with a drawer back; nothing is deleted. [DIG 2026-10-17, settles MEM 2026-10-05]
-- **Two navigation axes:** a Presentations group lists every hub at the top of the sidebar; each hub keeps its home tile in its system section (one brief, two tiles). Psychiatry is subgrouped by disorder family in six groups. psych-medical stays a disease brief. [DIG 2026-10-17]
+- **Navigation:** one home per brief: every brief has exactly one sidebar link (gate nav-link); Presentations holds every presentation hub under system sub headers, and the other sections list the rest. [DIG 2026-11-04 s161c, replaces the 2026-10-17 two-tile rule] Psychiatry is subgrouped by disorder family in six groups. psych-medical stays a disease brief. [DIG 2026-10-17]
 
 ## UI architecture (2026-11-05)
 - **Replace, never append.** A UI change edits or deletes the code it replaces in the same commit; retired code is deleted (git keeps it). No new per-batch override block. [D-20261105-1]

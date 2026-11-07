@@ -5,7 +5,8 @@
 #     gate (every brief type, incl. source-and-scope G1-G3, K3; base HEAD; --attr-only also asserts
 #     attribute-only); render; vendor scan (no source text in tracked files, page under limit);
 #     refuse if any local-only path is tracked; vendor scan against the NEW page (orphaned source runs);
-#     preflight.py content warnings (advisory, never abort).   -> any failure aborts before writing anything
+#     preflight.py content warnings (advisory, never abort); the gate also runs the UI, doc and prose ratchets
+#     (ui-lint, ui-site, doc-lint, prose-lint, prose-touched; D-20261106-11).   -> any failure aborts before writing anything
 #  2. write workspace/index.html and ../discriminator-briefs-site/index.html (the deployed copy),
 #     version.json, briefs.json (tools/briefs_json.py: the brief index the companion extension reads), and search.json
 #     (the prebuilt search index, s164c D-20261106-4: written by site_build beside the scratch page, gate-checked)
@@ -155,6 +156,9 @@ python3 tools/changelog.py "$TMP/prev.html" index.html --site "$SITELINE" --chec
   --entry "$B: $MSG" --changelog CHANGELOG.md > "$TMP/body.txt" || { restore; fail changelog; }
 
 # ---- 4. commit
+# ratchets (D-20261106-11): a ship that lowered a UI or prose count locks the lower count in, in the same commit
+o=$(python3 tools/spine/ui_lint.py index.html --tighten tools/spine/ui_baseline.json 2>&1) || { restore; fail ui-baseline "$o"; }; echo "$o"
+o=$(python3 tools/spine/prose_lint.py index.html --tighten tools/spine/prose_baseline.json 2>&1) || { restore; fail prose-baseline "$o"; }; echo "$o"
 git -C "$ROOT" add -A -- workspace "discriminator-briefs-site/index.html" >/dev/null 2>&1
 [[ -f "$ROOT/discriminator-briefs-site/version.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/version.json" >/dev/null 2>&1
 [[ -f "$ROOT/discriminator-briefs-site/briefs.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/briefs.json" >/dev/null 2>&1

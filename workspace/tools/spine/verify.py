@@ -322,6 +322,16 @@ class Verify:
         self.warn += ['warn lint %s' % f for f in found]
         self.G('lint', '%d advisory warning(s) (tools/spine/lint.py; runbook S6 item 15)' % len(found))
 
+    # ---- 8c. prose (D-20261106-9, D-20261106-11): a brief with prose lint hits is not READY
+    def prose(self):
+        import prose_lint
+        hits = prose_lint.lint_brief(self.brief_html)
+        if hits:
+            eg = '; '.join('%s: %s' % (h['pattern'], h['text'][:50]) for h in hits[:4])
+            self.F('prose', '%d prose lint hit(s) (tools/spine/prose_lint.py PAGE --brief %s): %s' % (len(hits), self.bid, eg))
+        else:
+            self.G('prose', 'no prose lint hits (TEXTBOOK_STYLE.md)')
+
     # ---- 9. preview build and page checks
     def preview(self):
         sys.path.insert(0, os.path.join(WS, 'tools'))
@@ -382,6 +392,7 @@ class Verify:
                 self.live()
                 self.v1()
                 self.lint()
+                self.prose()
                 if not self.fast:
                     self.preview()
         finally:
@@ -400,7 +411,8 @@ class Verify:
     # current (a layout or new display-pattern batch still runs the display part, and its FAIL still blocks)
     OPTIONAL = ('display',)
     PAGE = os.path.join(WS, 'index.html')
-    SPECS = ('repair/efficiency/STANDING_DIRECTIONS.md', 'repair/efficiency/WORKUP_5A_SPEC.md', 'tools/MIGRATION_CONTRACT.md')
+    SPECS = ('repair/efficiency/STANDING_DIRECTIONS.md', 'repair/efficiency/WORKUP_5A_SPEC.md', 'tools/MIGRATION_CONTRACT.md',
+             'repair/efficiency/TEXTBOOK_STYLE.md')
 
     def deps(self, html=None, claims=None, outline=None):
         """the dependency hashes each review part is bound to (10 hex characters each). 'live' is the brief as it

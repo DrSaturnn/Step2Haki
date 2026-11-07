@@ -16,6 +16,7 @@ This runbook sits under DECISIONS_DIGEST, STANDING_DIRECTIONS and the plan (clau
 1. STEP2HAKI_HANDOFF.md (its State names the current batch, its step and its spend);
 2. this file;
 3. claude/STANDING_DIRECTIONS.md;
+3a. repair/efficiency/TEXTBOOK_STYLE.md (how every visible line is written; its writing card goes into every builder and reviewer packet; D-20261106-9);
 4. claude/DECISIONS_DIGEST.md;
 5. claude/SPINE_SCALE_PLAN.md, sections 0, 2, 4, 5 and 8;
 6. the batch file, claude/pending/<batch>.md, if one exists (otherwise the handoff State is the batch record);
@@ -360,8 +361,8 @@ A patch is any batch of small additions to shipped briefs (rows, lines, hovers, 
 
 Measured, s150e (six briefs): reviewers 6 agents, 20 calls, 0.46M tokens across four rounds.
 
-Where these rules live: here and in DECISIONS_DIGEST only. STANDING_DIRECTIONS.md, WORKUP_5A_SPEC.md and
-MIGRATION_CONTRACT.md are hashed into every acc and read receipt ("specs", tools/spine/verify.py), so any edit to them
+Where these rules live: here and in DECISIONS_DIGEST only. STANDING_DIRECTIONS.md, WORKUP_5A_SPEC.md,
+MIGRATION_CONTRACT.md and TEXTBOOK_STYLE.md (since s165b) are hashed into every acc and read receipt ("specs", tools/spine/verify.py), so any edit to them
 makes every shipped brief's receipts stale (found at the s150e ship). Process-only rules never go into those files;
 brief-content rules do, and are edited only in a batch that re-reviews.
 

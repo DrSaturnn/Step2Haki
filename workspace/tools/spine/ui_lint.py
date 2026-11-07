@@ -1,5 +1,5 @@
-"""ui_lint.py (draft, 2026-11-05): structure checks for the Step2Haki page, so UI rules hold even when a chat or agent skips
-a section of the docs. Proposed home: tools/spine/ui_lint.py, run by gate.py and ship.sh.
+"""ui_lint.py (2026-11-05; wired into tools/gate.py as checks ui-lint and ui-site, D-20261106-11): structure checks for the
+Step2Haki page, so UI rules hold even when a chat or agent skips a section of the docs.
 
 Ratchet design: the current page has debt (layered override blocks, theme rules that move layout). The check records today's
 counts in a baseline file and fails any build that makes a count WORSE; a refactor batch lowers the baseline. So nothing new
@@ -9,6 +9,8 @@ Usage:
   python3 ui_lint.py PAGE.html                      # report
   python3 ui_lint.py PAGE.html --baseline B.json    # fail (exit 1) if any count rose above the baseline
   python3 ui_lint.py PAGE.html --write-baseline B.json
+  python3 ui_lint.py PAGE.html --tighten B.json     # lower each baseline count to the page's count (never raises); ship.sh
+                                                    # runs it before the commit, with the site/ raw-color count
   python3 ui_lint.py --site [site] [--examples] [--hard]   # D-20261105-10 checks over site/css; --hard exits 1 on any
 """
 import json, re, sys
@@ -116,6 +118,17 @@ def main(a):
         print('UI-LINT SITE', 'PASS' if not bad else 'REPORT', counts); return 0
     m = measure(open(a[0], encoding='utf-8').read())
     nums = {k: v for k, v in m.items() if not k.startswith('_')}
+    if '--tighten' in a:
+        path = a[a.index('--tighten') + 1]
+        base = json.load(open(path))
+        try:
+            nums['component_raw_color'] = site_checks('site')[0]['component_raw_color']
+        except Exception:
+            pass
+        tight = {k: (min(v, nums[k]) if k in nums else v) for k, v in base.items()}
+        lowered = {k: (base[k], tight[k]) for k in base if tight[k] != base[k]}
+        json.dump(tight, open(path, 'w'), indent=2); open(path, 'a').write('\n')
+        print('UI-LINT baseline tightened', lowered if lowered else '(no change)'); return 0
     if '--write-baseline' in a:
         json.dump(nums, open(a[a.index('--write-baseline') + 1], 'w'), indent=2); print('baseline written', nums); return 0
     if '--baseline' in a:

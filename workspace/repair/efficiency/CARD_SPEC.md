@@ -9,6 +9,10 @@ Every rule in STANDING_DIRECTIONS that is not about the decision spine still app
 board answer first, "In practice:" hovers, bold key words, hovers on touch, layers not totals, masks, theme tokens,
 other names, abbreviations, no emojis, no em dashes).
 
+Wording: every label and line on a card follows TEXTBOOK_STYLE.md (D-20261106-9). The section labels this spec
+prescribes ("Combined with | Result | Rule", "Where the choice is made") are on TEXTBOOK_STYLE's header list for renaming;
+they change here and on the page in the same content batch.
+
 ## 1. What a card is
 - One short card per drug class, grouped under the Psych Pocket headers in the standalone sidebar and page section
   "Psych Pharmacology" (after Psychiatry & Behavioral Health): 01 Antidepressants (SSRIs, SNRIs, Other
@@ -52,7 +56,7 @@ other names, abbreviations, no emojis, no em dashes).
 8. **Monitoring table** (`div.sp-dx.pc-tbl`), heads When | Check | Why, Check masked; when the class has monitoring.
 9. **Where the choice is made** (`div.pc-owners`, block `owners`): one line per decision owned elsewhere, each ending
    in a drawer to the owning brief (or card). At least one.
-10. **How NBME framed it** (`div.pc-nbq`): only when a logged NBME item belongs to the class (repair/nbme/misses.csv,
+10. **NBME question block** (`div.pc-nbq`, labelled "NBME question N" since s163 D8): only when a logged NBME item belongs to the class (repair/nbme/misses.csv,
     source nbme, subject the class's drug effect); never an empty block. How a card shows an NBME item owned by
     another brief is decided before B2 (PSYCH_PHARM_BATCHES.md section 6).
 11. **Practice**: the card's own bank (`h5.authored-hdr` "Practice", `ol.bank.authored`), at the end of the card.
