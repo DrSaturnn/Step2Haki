@@ -142,36 +142,50 @@ const MEASURE = ({ checks, maxEls, allProps }) => {
 async function measureStates(page, checks, maxState) {
   const cdp = await page.context().newCDPSession(page);
   await cdp.send('DOM.enable'); await cdp.send('CSS.enable');
-  const { root } = await cdp.send('DOM.getDocument', { depth: 0 });
-  const force = new Map(), marks = [];   // nodeId -> Set(states); [ci, nodeId, pe]
-  const counts = {};
+  const STQ = () => document.querySelectorAll(':hover,:focus-visible,:active').length;
+  const before = await page.evaluate(STQ);
+  // one in-page pass picks the elements and their state-bearing ancestors and tags them (data-axq); CDP is then used
+  // only to turn the tags into node ids and force the states (a CDP querySelectorAll per check took about 4 min a setting)
+  const plan = [];
   for (let ci = 0; ci < checks.length; ci++) {
     const c = checks[ci]; const st = [...new Set((c.sel.match(STATE_RE) || []).map(x => x.slice(1)))];
     if (!st.length) continue;
     const pe = ((c.sel.match(/::?(before|after|placeholder|marker)\b/) || [])[1]) || '';
     const stripped = c.sel.replace(PSEUDO_RE, '').replace(STATE_RE, '').replace(/\s+/g, ' ').trim() || '*';
-    let ids; try { ids = (await cdp.send('DOM.querySelectorAll', { nodeId: root.nodeId, selector: stripped })).nodeIds; } catch (e) { continue; }
-    counts[ci] = ids.length;
-    const pick = ids.length > maxState ? Array.from({ length: maxState }, (_, i) => ids[Math.floor(i * ids.length / maxState)]) : ids;
     const compounds = c.sel.split(/\s*[>+~\s]\s*(?![^(\[]*[)\]])/);
     const last = compounds[compounds.length - 1];
     const lastSt = [...new Set((last.match(STATE_RE) || []).map(x => x.slice(1)))];
     const anc = compounds.slice(0, -1).filter(x => HAS_STATE.test(x)).map(x => [x.replace(PSEUDO_RE, '').replace(STATE_RE, '') || '*', [...new Set((x.match(STATE_RE) || []).map(y => y.slice(1)))]]);
-    for (const nodeId of pick) {
-      const add = (id, sts) => { const z = force.get(id) || new Set(); sts.forEach(x => z.add(x)); force.set(id, z); };
-      if (lastSt.length) add(nodeId, lastSt);
-      if (anc.length) {
-        const { object } = await cdp.send('DOM.resolveNode', { nodeId });
-        for (const [sel, sts] of anc) { try { const r = await cdp.send('Runtime.callFunctionOn', { objectId: object.objectId, functionDeclaration: 'function(s){return this.parentElement && this.parentElement.closest(s)}', arguments: [{ value: sel }] });
-          if (r.result && r.result.objectId) { const nn = await cdp.send('DOM.requestNode', { objectId: r.result.objectId }); if (nn.nodeId) add(nn.nodeId, sts); } } catch (e) {} }
-      }
-      marks.push([ci, nodeId, pe]);
-    }
+    plan.push({ ci, pe, stripped, lastSt, anc });
   }
+  const tagged = await page.evaluate(({ plan, maxState }) => {
+    const tagOf = new Map(), force = {}, marks = [], counts = {}; let n = 0;
+    const tag = e => { if (!tagOf.has(e)) { tagOf.set(e, n); e.setAttribute('data-axq', n); n++; } return tagOf.get(e); };
+    const add = (e, sts) => { const k = tag(e); const z = force[k] || (force[k] = []); sts.forEach(x => { if (!z.includes(x)) z.push(x); }); };
+    for (const q of plan) {
+      let ids; try { ids = document.querySelectorAll(q.stripped); } catch (e) { continue; }
+      counts[q.ci] = ids.length;
+      const pick = ids.length > maxState ? Array.from({ length: maxState }, (_, i) => ids[Math.floor(i * ids.length / maxState)]) : Array.from(ids);
+      for (const e of pick) {
+        if (q.lastSt.length) add(e, q.lastSt);
+        for (const [sel, sts] of q.anc) { try { const a = e.parentElement && e.parentElement.closest(sel); if (a) add(a, sts); } catch (x) {} }
+        marks.push([q.ci, tag(e), q.pe]);
+      }
+    }
+    return { force, marks, counts, n };
+  }, { plan, maxState });
+  const { root } = await cdp.send('DOM.getDocument', { depth: 0 });
+  const { nodeIds } = await cdp.send('DOM.querySelectorAll', { nodeId: root.nodeId, selector: '[data-axq]' });
+  const nodeOf = {};
+  for (const id of nodeIds) { const { attributes } = await cdp.send('DOM.getAttributes', { nodeId: id }); const i = attributes.indexOf('data-axq'); if (i >= 0) nodeOf[attributes[i + 1]] = id; }
+  const counts = tagged.counts, marks = tagged.marks.map(([ci, k, pe]) => [ci, nodeOf[k], pe]).filter(m => m[1]);
+  const force = new Map(Object.entries(tagged.force).filter(([k]) => nodeOf[k]).map(([k, sts]) => [nodeOf[k], new Set(sts)]));
+  await page.evaluate(() => document.querySelectorAll('[data-axq]').forEach(e => e.removeAttribute('data-axq')));
   const byNode = new Map();
   marks.forEach(([ci, nodeId, pe], k) => { const l = byNode.get(nodeId) || []; l.push(k); byNode.set(nodeId, l); });
-  for (const [nodeId, l] of byNode) await cdp.send('DOM.setAttributeValue', { nodeId, name: 'data-axst', value: l.join(' ') });
-  for (const [nodeId, sts] of force) await cdp.send('CSS.forcePseudoState', { nodeId, forcedPseudoClasses: [...sts] });
+  await Promise.all([...byNode].map(([nodeId, l]) => cdp.send('DOM.setAttributeValue', { nodeId, name: 'data-axst', value: l.join(' ') })));
+  // sent together: one call at a time cost a style recalc per round trip
+  await Promise.all([...force].map(([nodeId, sts]) => cdp.send('CSS.forcePseudoState', { nodeId, forcedPseudoClasses: [...sts] })));
   const read = await page.evaluate(({ marks, props }) => {
     const SKIP = /^(--|transition|animation|caret-color)/, pr = document.createElement('div'), out = {};
     const ex = (cs, p) => { if (p === '*') { const a = []; for (let i = 0; i < cs.length; i++) a.push(cs[i]); return a; } pr.removeAttribute('style'); try { pr.style.setProperty(p, 'inherit'); } catch (e) {} return pr.style.length ? Array.from({ length: pr.style.length }, (_, i) => pr.style[i]) : [p]; };
@@ -180,8 +194,11 @@ async function measureStates(page, checks, maxState) {
       const cs = getComputedStyle(e, pe ? '::' + pe : null), m = {}; props[ci].forEach(p => ex(cs, p).forEach(l => { if (!SKIP.test(l)) m[l] = cs.getPropertyValue(l); }));
       (out[ci] = out[ci] || {})[pathOf(e)] = m; }); });
     return out; }, { marks, props: checks.map(c => c.props) });
-  for (const [nodeId] of force) await cdp.send('CSS.forcePseudoState', { nodeId, forcedPseudoClasses: [] });
-  for (const [nodeId] of byNode) await cdp.send('DOM.removeAttribute', { nodeId, name: 'data-axst' });
+  // CSS.disable drops every forced state in one call (clearing node by node took over 2 min a setting)
+  await cdp.send('CSS.disable');
+  const left = await page.evaluate(STQ);
+  if (left !== before) console.error('ui_check: ' + left + ' elements match a state after CSS.disable, ' + before + ' before forcing');
+  await page.evaluate(() => document.querySelectorAll('[data-axst]').forEach(e => e.removeAttribute('data-axst')));
   await cdp.detach();
   return Object.keys(counts).map(ci => ({ ci: +ci, n: counts[ci], out: read[ci] || {}, state: [...new Set((checks[ci].sel.match(STATE_RE) || []).map(x => x.slice(1)))].join(',') }));
 }
