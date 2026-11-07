@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-07 s167b: s167b: sculpted light default; dark theme switch in one frame
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Other page changes (nav, headers, scripts): +277 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 48 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-11-07 s167: s167: UI refactor part 2 (raw colors to tokens, dehack, spring motion, settings record, head tags and vercel.json, comments, permanent UI gate; swatch margin fix)
 
 ```
