@@ -3,7 +3,7 @@
 Jonathan, 2026-10-26: "Add whatever is needed so this issue does not happen again" (s154f chat 3 read whole docs and
 ran to about 280k context before any edit). Project copy claude/RESUME.md; repo copy repair/efficiency/RESUME.md.
 
-**Open batch: s164c** on branch wip/s164c (launched 2026-11-06: load briefs on demand; batch file repair/s164c/S164C.md, presented 2026-11-06; next chunk 4g: ship on "ship").
+**Open batch: none** (s164c shipped 2026-11-06, commit 27b1a73; a launch prompt is needed).
 (Rewrite this line, here and in the project copy claude/RESUME.md, when a batch opens or ships; "none" means no batch is open and a
 launch prompt is needed.)
 

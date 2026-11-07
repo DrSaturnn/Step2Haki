@@ -12,19 +12,25 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **s164c OPEN 2026-11-06** (Claude lead; load briefs on demand, site layer only, content frozen; D-20261106-3; no agents;
-  lead budget 60M): branch wip/s164c (public repo), batch file repair/s164c/S164C.md. Chat 1: runtime, loader, per-brief
-  passes. Chat 2 (chunk 2b): search, landing, NBME view, blueprint and Review over unbuilt briefs. Chat 3 (chunk 3):
-  prebuilt search index (tools/search_index.js, search.json beside the page, gate check `search-index`, fetched after
-  load, fallback to the in-page build; D-20261106-4); long jumps through the sidebar's seating (`brief:go`: drawer
-  links, cross-references); checks all equal before.html (search parity 0 differences over HTTP and file://, landing,
-  jump_land desk and phone, previews and drawers on unbuilt targets, Review end to end); test_hooks 132/132 (stale
-  approval test fixed). Chunk 3 cand: desk settled 7.4 s to 0.42 s, phone 41.2 s to 2.19 s; elements 223,878 to 3,405;
-  JS heap 17 MB. Chat 4 (chunk 4): tool sweep, ui_styles parity (12 briefs, desk and phone: only 1 px inline-span
-  heights), screenshots, perf (cand desk settled 0.45 s vs 6.3 s, phone 2.4 s vs 33.8 s, same run), changelog 164c,
-  presented (private artifact, approval page 1e65dba35063). Next: chunk 4g, ship on "ship" (S164C.md).
+- **s164c SHIPPED 2026-11-06** (Claude lead; load briefs on demand, site layer only, content frozen; D-20261106-3 and
+  D-20261106-4; no agents): commit 27b1a73 (pushed to main), page 1fad3ed04e2b (approved candidate 1e65dba35063; the
+  build stamp and the embedded changelog are the only differences); version.json reads s164c; search.json ships beside
+  the page in discriminator-briefs-site/. Briefs are wrapped in templates by tools/site_build.py and built when opened
+  or scrolled near (core.js AX.brief, 06-load-near.js); search reads the prebuilt index (tools/search_index.js, gate
+  check search-index; in-page build only as the file:// fallback); long jumps seat through the sidebar (brief:go).
+  Measured in the same run (median of 3, local HTTP): desk settled 6.3 s to 0.45 s, phone CPU 4x 33.8 s to 2.4 s;
+  elements 223,878 to 3,405. Parity: ui_styles 12-brief sample desk and phone, only 1 px inline-span heights; search,
+  landing, jumps, previews, drawers, NBME view, blueprint and Review equal to before.html (S164C.md "After").
+  Behavior noted: the desk sidebar draws the first brief's step list at load (the live page drew it on first scroll);
+  question snippets in search keep the index's choice order (choices reshuffle on each load). Vendor scan: ship.sh
+  printed NOT CHECKED (the private repo could not be attached in the container); run by hand on the Mac's VM against
+  wip/s164c with Documents/Step2Haki/local-only sources (2026-10-26): 0 flagged, page 0.009% shared, longest run 15
+  words. Lead: 4 chats; chat 4 32.1M (ledger_lead.csv; chats 1 to 3 not recorded in this container's transcripts).
+  No batch open. Next (UI_REFACTOR_PLAN follow-ons, D-20261105-7): offline use (item 2), then the phone redesign and
+  Fit to screen (3 and 4, Jonathan may reorder), and the quiz and Review panel batch (D-20261105-9); Jonathan picks
+  which launches next.
 
-- **s164b SHIPPED 2026-11-06** (Claude lead; the UI refactor, site layer only, content frozen; D-20261105-8, cut short
+- **Previous: s164b SHIPPED 2026-11-06** (Claude lead; the UI refactor, site layer only, content frozen; D-20261105-8, cut short
   by D-20261106-2, Jonathan 14:22: "we can ship what we have, perform the on demand loading ship then consider this at
   another time later down the ledger"): commit e5d78c1 (pushed to main), page cbd0eeddd9c7 (approved candidate
   6076716debe6); version.json reads s164b; Jonathan checks the live site. The page's styles and scripts come from
