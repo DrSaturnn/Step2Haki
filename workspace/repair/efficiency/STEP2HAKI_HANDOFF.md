@@ -1,6 +1,6 @@
 # Step2Haki running handoff (the single running state file)
 
-Last updated: 2026-11-06, by Claude (s165 presented, waits for "ship").
+Last updated: 2026-11-06, by Claude (s165 shipped; no batch open).
 It lives in the repo at workspace/repair/efficiency/STEP2HAKI_HANDOFF.md (added 2026-10-14 so Claude Code sessions outside the project can read it; a session rewrites State here after every step and pushes), with copies in the project (STEP2HAKI_HANDOFF.md) and on the Mac (~/Documents/Step2Haki/), refreshed at ships when those are reachable.
 Batch history lives in each batch's file (claude/pending/S134.md, S136.md, S137.md and so on), not here (s135 efficiency item 4).
 
@@ -12,16 +12,17 @@ Step2Haki: continue the current batch per claude/RESUME.md.
 
 ## State (rewrite after every step)
 
-- **s165 PRESENTED 2026-11-06** (Claude lead; offline use, site layer only, content frozen; D-20261106-5; no agents):
-  branch wip/s165 (commit 9f7822e plus the docs commit), candidate page 422cf14303b4 (approval.py present, screenshot
-  local/s165/shots/s165_sheet.png). Worker site/pwa/sw.js (built beside the page, stamped per build, cache
-  step2haki-<build>), manifest and icons (brand mark "S2"), head tags from site/pwa/head.html, offline note and update
-  hand-off in site/js/24-offline.js, 04-version emits net:status and site:newer. ship.sh writes and commits sw.js,
-  manifest.webmanifest and icons/ (dry run passed in a scratch clone). Checks: repair/s165/S165.md "Checks" (offline_test
-  desk and phone all pass, liefi_test, Chrome installability clean, gate and render PASS). Lead 1 chat, 21.8M of 60M.
-  Blocker for the ship: this container could not attach the repos (add_repo refused by the session's permission check),
-  so it cannot push and the private repo (vendor scan sources) is not here. Next: Jonathan's "ship" in this chat, then
-  S165.md chunk 2.
+- **s165 SHIPPED 2026-11-06** (Claude lead; offline use, site layer only, content frozen; D-20261106-5; no agents):
+  commit 061b33f (pushed to main), page a1dfb28b4e5d (approved candidate 422cf14303b4); version.json reads s165 (checked from the
+  Mac VM, with sw.js, manifest.webmanifest and icons served). Worker site/pwa/sw.js, built beside the page and stamped
+  per build by tools/site_build.py (ship.sh reruns it with --pwa-only after the stamp), saves the page, search.json,
+  the manifest and 4 icons in cache step2haki-<build>; version.json, sw.js and api/ go to the network. Offline note,
+  install tags and update hand-off: site/js/24-offline.js, site/pwa/head.html, 04-version (net:status, site:newer,
+  site:ready, site:apply). Tests repair/s165/offline_test.js (desk and --phone) and liefi_test.js; record
+  repair/s165/S165.md. Vendor scan on the Mac VM: 0 flagged (ship.sh printed NOT CHECKED: no private repo in this
+  container). The repo attach was refused at launch and allowed at ship. Lead 1 chat, 27.2M of 60M.
+  No batch open. Next (UI_REFACTOR_PLAN follow-ons, D-20261105-7): the phone redesign and Fit to screen (3 and 4,
+  Jonathan may reorder), and the quiz and Review panel batch (D-20261105-9); Jonathan picks which launches next.
 
 - **Previous: s164c SHIPPED 2026-11-06** (Claude lead; load briefs on demand, site layer only, content frozen; D-20261106-3 and
   D-20261106-4; no agents): commit 27b1a73 (pushed to main), page 1fad3ed04e2b (approved candidate 1e65dba35063; the
