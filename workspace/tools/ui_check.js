@@ -226,8 +226,9 @@ async function run(a) {
     return new Promise(r => { let last = '', same = 0, n = 0; const tick = () => { const k = document.querySelectorAll('.axm-flat').length + ':' + document.querySelectorAll('.axm-study').length;
       same = k === last ? same + 1 : 0; last = k; if (same >= 10 || ++n > 3000) r(); else requestAnimationFrame(tick); }; requestAnimationFrame(tick); }); };
   const got = { base: {}, cand: {} };
-  // view by view: both pages are measured, compared and dropped before the next view (all views at once ran out of heap)
-  for (const view of views) { for (const [k, f] of [['base', a[1]], ['cand', a[2]]]) {
+  // view by view: both pages are measured, compared and dropped before the next view (all views at once ran out of heap);
+  // within a view the two pages load and measure at the same time (s169, D-20261107-14)
+  for (const view of views) { await Promise.all([['base', a[1]], ['cand', a[2]]].map(async ([k, f]) => {
     const browser = await chromium.launch();
     const t1 = Date.now();
     const o = await openPage(browser, f, view, 'flat-light-read', true);
@@ -243,7 +244,7 @@ async function run(a) {
     }
     errs[view + ' ' + k] = o.errs.slice(0, 5);
     await browser.close();
-  }
+  }));
   for (const cfg of configs) {
     const setting = view + ':' + cfg;
     const cmp = (A, B, label) => {

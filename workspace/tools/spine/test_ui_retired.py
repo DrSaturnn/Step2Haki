@@ -12,7 +12,7 @@ MD = """# UI map
 | Selector or id | Retired in | Replaced by |
 |---|---|---|
 | #modes .flatt (Flat theme switch), body .axm-flat #modes .flatt .knob | s168 | Surface |
-| --t-old-token | s168 | none |
+| --t-old-token, --t-gone-* | s168 | none |
 | #mkrail, .mk-* (mockups) | never shipped | #ax2rail |
 | a.aq | s167c | none |
 | "BOARD-STYLE ONLY" switch | s167c | none |
@@ -33,6 +33,7 @@ CASES = [
     ('selector in a layer', page('@layer layout{@media (min-width:1px){#modes .flatt{color:red}}}'), '#modes .flatt'),
     ('selector as a compound tail', page('body .axm-flat #modes .flatt .knob,.x{a:b}'), 'body .axm-flat #modes .flatt .knob'),
     ('custom property', page(':root{--t-old-token:1px}'), '--t-old-token'),
+    ('custom property prefix', page(':root{--t-gone-bg:1px}'), '--t-gone-*'),
     ('custom property in a script', page('', 'el.style.setProperty("--t-old-token","1")'), '--t-old-token'),
     ('id in markup', page('', '', '<div id="mkrail"></div>'), '#mkrail'),
     ('id in a script', page('', 'd.id="mkrail";'), '#mkrail'),
@@ -48,7 +49,7 @@ def main():
     got = U.check(CLEAN, MD)
     if got:
         fails += 1; print('FAIL clean page reported', got)
-    if len(U.table_items(MD)) != 7:
+    if len(U.table_items(MD)) != 8:
         fails += 1; print('FAIL table items', U.table_items(MD))
     for name, html, item in CASES:
         hits = [h for h in U.check(html, MD) if h[1] == item]

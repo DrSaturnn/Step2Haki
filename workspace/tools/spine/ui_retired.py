@@ -6,6 +6,7 @@
 The table's first column is read entry by entry: a cell holds one or more items separated by commas; a note in
 parentheses is dropped. An item is one of:
   --name          a custom property: no declaration or var() of it in the page's styles or scripts
+  --prefix-*      custom properties starting with the prefix: none in the page's styles or scripts
   #id             an id: no element with that id in the markup, no "#id" in a style selector, no 'id' string in a script
   .prefix-*       a class prefix: no class starting with it in a style selector, the markup or a script string
   "Label"         visible text (in quotes, then any words describing it): not in the page text or a script string,
@@ -126,6 +127,10 @@ def check(html, md):
                 hits.append((cell, it, 'page text'))
             elif any(label in s.lower() for s in strings):
                 hits.append((cell, it, 'script string'))
+            continue
+        if re.fullmatch(r'--[\w-]+\*', it):
+            if re.search(re.escape(it[:-1]) + r'[\w-]*', css + '\n' + js):
+                hits.append((cell, it, 'custom property prefix in styles or scripts'))
             continue
         if it.startswith('--'):
             name = re.match(r'--[\w-]+', it).group(0)
