@@ -54,6 +54,9 @@ Do not read the page, the runbook, STANDING_DIRECTIONS or the digest whole. Grep
   `<span class="sp-l sp-la"><span class="op op-a" role="img" aria-label="leads to"></span> ...</span>`; a block
   heading is `<span class="sp-l sp-bh">...</span>`. Keep span.sp-ct (the card title) first. No kicker naming a source.
   A line runs to about 12 words, 16 at most (prose_lint hover_line_long).
+- Pilot-gate findings (s170 voices lane): a contrast moved behind a semicolon is still a contrast ("Hallucination; an
+  imaginary friend does not fit"): state the finding alone, and give the competitor its own line or table row. Each hover
+  line is a whole statement: no line opens with "And", "Or" or "But" to continue the line above.
 - Hover anchors (D-20261108-5, A1): the trigger button (button.sp-pop, aria-controls the card's id) sits on the term
   its card explains, inside the line's own text. Where the line has no such term, the button holds a short label of its
   own (1 to 3 words, a clinical noun such as "Causes"), placed after the line's text. A trigger that shares no content
