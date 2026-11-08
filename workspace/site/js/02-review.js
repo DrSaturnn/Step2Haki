@@ -1064,19 +1064,23 @@ function briefFor(id){
   if(t.classList.contains('brief')) return {brief:t, at:null};
   var b=t.closest && t.closest('.brief'); return b ? {brief:b, at:t} : null;
 }
-function openSource(id){
+/* the page's mode carriers (01-transform axm-flat, axm-study) sit on the outermost element without a brief: when a brief
+   moves into the column the quiz frame stops being one, and becomes one again when it leaves */
+function carry(n, on){ ['flat','study'].forEach(function(m){ n.classList.toggle('axm-'+m, !!on && document.body.classList.contains(m)); }); }
+function autoBrief(){ return AX.settings.get('quizbrief')!=='0'; }
+function openSource(id, quiet){
   if(AX.brief.ensure(id)===null && !document.getElementById(id)) return false;
   var f=briefFor(id); if(!f) return false;
   if(paneBrief!==f.brief){
     closeSource();
     paneHold=document.createComment('rv-pane'); f.brief.parentNode.insertBefore(paneHold,f.brief);
     paneBrief=f.brief; paneBrief.dataset.rvDisplay=paneBrief.style.display; paneBrief.style.display='';
-    paneBody.appendChild(paneBrief);
+    carry(box,false); paneBody.appendChild(paneBrief); carry(paneBrief,true);
     var h=paneBrief.querySelector(':scope > h4'); paneTitle.textContent=h?h.textContent.replace(/\s+/g,' ').trim():'';
   }
   box.classList.add('has-brief');
   if(f.at) f.at.scrollIntoView({block:'start'}); else paneBody.scrollTop=0;
-  var px=pane.querySelector('.px'); if(px) try{ px.focus({preventScroll:true}); }catch(e){}
+  if(!quiet){ var px=pane.querySelector('.px'); if(px) try{ px.focus({preventScroll:true}); }catch(e){} }
   return true;
 }
 function closeSource(){
@@ -1085,13 +1089,19 @@ function closeSource(){
     paneHold.parentNode.replaceChild(paneBrief,paneHold);
   }
   paneBrief=null; paneHold=null;
+  if(box) carry(box,true);
   if(paneTitle) paneTitle.textContent='';
   if(box) box.classList.remove('has-brief');
 }
+function wide(){ return window.matchMedia('(min-width:1101px)').matches; }
+function paintAuto(){ var ab=box && box.querySelector('.sh .ab'); if(ab) ab.setAttribute('aria-pressed', autoBrief()?'true':'false'); }
 function buildSessionShell(){
   box=el('div'); box.id='rvsession'; box.hidden=true;
   box.innerHTML=
-    '<div class="rvq"><section class="rvq-main"><div class="sh"><span class="who"></span>'+
+    '<div class="rvq"><section class="rvq-main"><div class="sh">'+
+    '<button class="ob" type="button" disabled><svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.2c1.9-.8 4-.8 6 .6 2-1.4 4.1-1.4 6-.6v9.4c-1.9-.8-4-.8-6 .6-2-1.4-4.1-1.4-6-.6z M8 3.8v9.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Open brief</button>'+
+    '<button class="ab" type="button" aria-pressed="true" title="Open the brief beside the question once it is answered"><span class="track"><span class="knob"></span></span>With each answer</button>'+
+    '<span class="who"></span>'+
     '<span class="prog"><b style="width:0%"></b></span>'+
     '<span class="ct"></span>'+
     '<button class="x" type="button" aria-label="End review">✕</button></div>'+
@@ -1106,6 +1116,11 @@ function buildSessionShell(){
   pane.querySelector('.px').addEventListener('click',closeSource);
   pane.querySelector('.bk').addEventListener('click',closeSource);
   pane.querySelector('.rc').addEventListener('click',function(){ setStudy(!document.body.classList.contains('study')); });
+  box.querySelector('.sh .ob').addEventListener('click',function(){ if(sess && sess.answered) openSource(sess.queue[sess.i].brief.id); });
+  box.querySelector('.sh .ab').addEventListener('click',function(){
+    var on=!autoBrief(); AX.settings.set('quizbrief', on?'1':'0'); paintAuto();
+    if(on && sess && sess.answered && wide()) openSource(sess.queue[sess.i].brief.id, true);
+  });
   /* while the quiz is open, a link to a brief anywhere on the page opens that brief in the right column */
   document.addEventListener('click',function(e){
     if(!sess||!box||box.hidden||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button) return;
@@ -1186,6 +1201,8 @@ function renderCard(){
   var seen=sess.seen[sess.i]||(sess.seen[sess.i]={c:card(e),pick:null});
   var c=seen.c;
   sess.answered=seen.pick!==null;
+  closeSource(); paintAuto();
+  var ob=box.querySelector('.sh .ob'); ob.disabled=!sess.answered;
   box.querySelector('.who').textContent=nameOf(sess.who);
   box.querySelector('.ct').textContent=(sess.i+1)+' / '+sess.queue.length;
   box.querySelector('.prog b').style.width=Math.round(100*sess.i/sess.queue.length)+'%';
@@ -1214,8 +1231,9 @@ function renderCard(){
     var last=sess.i>=sess.queue.length-1;
     sw.querySelector('.slot').innerHTML=
       '<p class="src">'+esc(e.brief.title)+'</p>'+
-      '<div class="why">'+c.why+'</div>'+
-      '<p><a class="source-link" href="#'+esc(e.brief.id)+'">Open source brief</a></p>';
+      '<div class="why">'+c.why+'</div>';
+    ob.disabled=false;
+    if(autoBrief() && wide()) openSource(e.brief.id, true);
     var nx=el('button','nx',last?'Finish':'Next'); nx.type='button';
     sw.querySelector('.qnav').appendChild(nx);
     nx.onclick=function(){

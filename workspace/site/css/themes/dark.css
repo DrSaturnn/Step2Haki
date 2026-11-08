@@ -320,8 +320,6 @@
 [data-theme="dark"]{--t-rvsession-sh-border-bottom:1px solid var(--hair)}
 [data-theme="dark"]{--t-rvsession-sh-who-fg:var(--muted)}
 [data-theme="dark"]{--t-rvsession-sh-prog-bg:var(--recess-2)}
-[data-theme="dark"]{--t-rvsession-sh-prog-sh:var(--inner-2)}
-[data-theme="dark"] .axm-flat{--t-rvsession-sh-prog-sh:var(--inner-2)}
 [data-theme="dark"]{--t-rvsession-sh-prog-b-bg:var(--accent)}
 [data-theme="dark"]{--t-rvsession-sh-ct-fg:var(--muted)}
 [data-theme="dark"]{--t-rvsession-sh-x-fg:var(--muted)}

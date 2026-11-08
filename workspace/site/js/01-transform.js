@@ -63,7 +63,8 @@ function axmCarriers(){
   (function walk(el){
     for(var c=el.firstElementChild;c;c=c.nextElementSibling){
       if(c.tagName==='SCRIPT'||c.tagName==='STYLE') continue;
-      if(c.classList.contains('brief')||!c.querySelector('.brief')) out.push(c); else walk(c);
+      if(c.classList.contains('brief')||!c.querySelector('.brief')) out.push(c);
+      else { c.classList.remove('axm-flat','axm-study'); walk(c); }   /* an element that now holds a brief is no longer a carrier */
     }
   })(document.body);
   return out;
