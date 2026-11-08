@@ -790,5 +790,17 @@
   "trigger": "Dilated pupils",
   "title": "Cocaethylene",
   "note": "lane said move to \"cocaine\"; the word sits inside another trigger"
+ },
+ "slp-pop-24": {
+  "verdict": "own",
+  "label": null,
+  "brief": "peds-sleep",
+  "note": "cold read C19: \"Other options\" names no drug class; label to be chosen with the brief"
+ },
+ "sm-pop-13": {
+  "verdict": "own",
+  "label": null,
+  "brief": "somatic",
+  "note": "cold read C19: trigger \"Hypoglycemic drug screen\" opens a card on alcohol and dieting"
  }
 }
