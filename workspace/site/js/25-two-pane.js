@@ -110,6 +110,7 @@ function cut(box, R){
     for(var q = 0; q < from && !keep; q++) if(!kids[q].matches(LABEL)) keep = true;
     if(!keep && !(sub && sub !== ALL)) return ALL;
     var clone = shallow(box), moved = [];
+    box.classList.add('ax2-open-b'); clone.classList.add('ax2-open-t');   // the cut edges read as open
     if(sub && sub !== ALL) clone.appendChild(sub);
     var nodes = Array.prototype.slice.call(box.childNodes), at = from < kids.length ? nodes.indexOf(kids[from]) : nodes.length;
     for(var j = at; j < nodes.length; j++){ clone.appendChild(nodes[j]); moved.push(nodes[j]); }
@@ -120,7 +121,7 @@ function cut(box, R){
 }
 function restore(){
   if(!S) return;
-  for(var k = S.undo.length - 1; k >= 0; k--){ var u = S.undo[k]; u.moved.forEach(function(n){ u.from.appendChild(n); }); if(u.clone.parentNode) u.clone.parentNode.removeChild(u.clone); }
+  for(var k = S.undo.length - 1; k >= 0; k--){ var u = S.undo[k]; u.from.classList.remove('ax2-open-b'); u.moved.forEach(function(n){ u.from.appendChild(n); }); if(u.clone.parentNode) u.clone.parentNode.removeChild(u.clone); }
   S.undo = [];
   each(S.flow.querySelectorAll('.ax2-brk'), function(x){ x.classList.remove('ax2-brk'); });
   S.units.forEach(function(u){ S.flow.appendChild(u); });
@@ -132,48 +133,55 @@ function breakable(b, k, lim){
   b.classList.add('ax2-brk');
   each(b.children, function(c){ breakable(c, k, lim); });
 }
-// how far down the page its content reaches, in window px
-function used(cc){
-  var top = cc.getBoundingClientRect().top, bottom = top;
-  each(cc.querySelectorAll(':scope > .ax2-u > :not(.ax2-cont)'), function(u){ each(u.getClientRects(), function(r){ if(r.height && r.bottom > bottom) bottom = r.bottom; }); });
+// how far down a column its content reaches, in window px
+function used(col){
+  var top = col.getBoundingClientRect().top, bottom = top;
+  each(col.querySelectorAll(':scope > .ax2-u > :not(.ax2-cont)'), function(u){ each(u.getClientRects(), function(r){ if(r.height && r.bottom > bottom) bottom = r.bottom; }); });
   return bottom - top;
 }
 // the page ends right under its longer column
-function fitHeight(cc, k){
-  var top = cc.getBoundingClientRect().top, bottom = top, R = cc.getBoundingClientRect().right, old = cc.style.height;
-  each(cc.children, function(u){ each(u.getClientRects(), function(r){ if(r.height && r.bottom > bottom) bottom = r.bottom; }); });
-  cc.style.height = ((bottom - top) / k + 4) + 'px';
-  var bad = false; each(cc.children, function(u){ if(where(u, R) !== 'in') bad = true; });
-  if(bad) cc.style.height = old;
+function fitHeight(L, Rc, k){
+  if(L.classList.contains('ax2-hold') || Rc.classList.contains('ax2-hold')){ L.style.height = Rc.style.height = ''; return; }
+  var old = L.style.height, h = (Math.max(used(L), used(Rc)) / k + 4) + 'px';
+  L.style.height = Rc.style.height = h;
+  var bad = false;
+  [L, Rc].forEach(function(c){ var R = c.getBoundingClientRect().right; each(c.children, function(u){ if(where(u, R) !== 'in') bad = true; }); });
+  if(bad) L.style.height = Rc.style.height = old;
 }
+// one column: the units go in; what runs past its right edge is cut off and returned for the next column
+function fill(col, rest, k, H){
+  rest.forEach(function(u){ col.appendChild(u); });
+  each(col.querySelectorAll(':scope > .ax2-u:not(.ax2-prac) > *'), function(b){ breakable(b, k, H * BREAK); });
+  var R = col.getBoundingClientRect().right, nxt = [], carry = null;
+  for(var i = 0; i < rest.length; i++){
+    var w = where(rest[i], R); if(w === 'in') continue;
+    if(w === 'straddle'){ carry = cut(rest[i], R); if(carry === ALL){ carry = null; nxt = rest.slice(i); } else nxt = rest.slice(i + 1); }
+    else nxt = rest.slice(i);
+    break;
+  }
+  nxt.forEach(function(u){ if(u.parentNode === col) col.removeChild(u); });
+  return carry ? [carry].concat(nxt) : nxt;
+}
+// a column where nothing fit (one block taller than a page that cannot be cut) holds the rest at its full length
+function hold(col, rest){ rest.forEach(function(u){ col.appendChild(u); }); col.style.height = ''; col.classList.add('ax2-hold'); }
 function paginate(){
   restore();
   S.units.forEach(function(u){ u.remove(); });   // out of the flow while the first page is measured
   var f = S.flow, vh = window.innerHeight, barB = barBottom(), rest = S.units.slice(), n = 0, pages = [];
   while(rest.length && n < 60){
-    var pg = el('div', 'ax2-page'), cc = el('div', 'ax2-cols'); pg.appendChild(cc); f.appendChild(pg); pages.push(pg);
-    var k = zoomOf(cc);
-    var top = n ? barB + GAP + 2 * 16 * k : cc.getBoundingClientRect().top;   // a later page starts under the toolbar, after the rule above it
+    var pg = el('div', 'ax2-page'), cc = el('div', 'ax2-cols'), L = el('div', 'ax2-col'), Rc = el('div', 'ax2-col');
+    cc.appendChild(L); cc.appendChild(Rc); pg.appendChild(cc); f.appendChild(pg); pages.push(pg);
+    var k = zoomOf(L);
+    var top = n ? barB + GAP + 2 * 16 * k : L.getBoundingClientRect().top;   // a later page starts under the toolbar, after the rule above it
     var H = Math.max(320, (vh - top - 20) / k);
-    cc.style.height = H + 'px';
-    rest.forEach(function(u){ cc.appendChild(u); });
-    each(cc.querySelectorAll(':scope > .ax2-u:not(.ax2-prac) > *'), function(b){ breakable(b, k, H * BREAK); });
-    var R = cc.getBoundingClientRect().right, nxt = [], carry = null;
-    for(var i = 0; i < rest.length; i++){
-      var w = where(rest[i], R); if(w === 'in') continue;
-      if(w === 'straddle'){ carry = cut(rest[i], R); if(carry === ALL){ carry = null; nxt = rest.slice(i); } else nxt = rest.slice(i + 1); }
-      else nxt = rest.slice(i);
-      break;
-    }
-    nxt.forEach(function(u){ if(u.parentNode === cc) cc.removeChild(u); });
-    rest = carry ? [carry].concat(nxt) : nxt;
-    // nothing stayed on this page (a block taller than a page that cannot be cut), or the page cap is reached:
-    // this page holds the rest at its full length
-    if(rest.length && (used(cc) < 60 || n >= 59)){ rest.forEach(function(u){ cc.appendChild(u); }); cc.style.height = ''; rest = []; break; }
-    if(rest.length) fitHeight(cc, k);
+    L.style.height = Rc.style.height = H + 'px';
+    var left = fill(L, rest, k, H);
+    if(left.length && (used(L) < 60 || n >= 59)){ hold(L, left); left = []; }
+    rest = left.length ? fill(Rc, left, k, H) : [];
+    if(rest.length && (used(Rc) < 60 || n >= 59)){ hold(Rc, rest); rest = []; }
+    fitHeight(L, Rc, k);
     n++;
   }
-  if(pages.length) pages[pages.length - 1].classList.add('ax2-last');
   S.pages = pages;
 }
 
