@@ -29,7 +29,8 @@ def main(argv):
     if '--out' in argv:
         out = argv[argv.index('--out') + 1]
     files = sorted(f for f in glob.glob(os.path.join(REPO, 'repair', batch, '*.json'))
-                   if os.path.basename(f) != 'ui_allow.json')   # ui_gate's allow list (ship.sh), not an edit file
+                   if os.path.basename(f) not in ('ui_allow.json', 'step_moves.json', 'nbme_keep.json'))
+    # not edit files: ui_gate's allow list (ship.sh); content_gate's step_moves and nbme_keep rows
     html = read_page(page)
     new, ops = html, 0
     for f in files:

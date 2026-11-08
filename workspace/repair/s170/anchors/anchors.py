@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """s170 anchor pass (D-20261108-5, A1): every hover sits on the term its card explains.
 
-  python3 repair/s170/anchors.py survey PAGE OUT.md OUT.json   # every hover trigger with its line, kicker, title, body
-  python3 repair/s170/anchors.py apply PAGE DECISIONS.json OUT  # applies the sorted decisions by offset splicing
+  python3 repair/s170/anchors/anchors.py survey PAGE OUT.md OUT.json   # every hover trigger with its line, kicker, title, body
+  python3 repair/s170/anchors/anchors.py apply PAGE DECISIONS.json OUT  # applies the sorted decisions by offset splicing
 
 Survey rows: brief, pop id, trigger class, trigger text, the line the trigger sits in (its nearest block: li, td, th,
 p, dd, dt, div), kicker (.sp-k), title (.sp-ct) and the body text (title and kicker removed), plus `overlap`: the
@@ -22,7 +22,7 @@ import sys
 import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-WS = os.path.abspath(os.path.join(HERE, '..', '..'))
+WS = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 sys.path.insert(0, os.path.join(WS, 'tools'))
 import pagelib as P  # noqa: E402
 import site_build  # noqa: E402

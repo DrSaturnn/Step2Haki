@@ -298,7 +298,7 @@ class Verify:
                     or text[max(0, m.start() - 1):m.start()] == '*':          # a genotype (PI*ZZ)
                 continue
             seen.add(a)
-            if re.search(r'\(%s\b|\b%s\)|, %s[;),]|\b%s\s*\(' % (a, a, a, a), everything):   # (ACR), ACR (...), (long name, ACR)
+            if re.search(r'\(%ss?\b|\b%ss?\)|, %ss?[;),]|\b%ss?\s*\(' % (a, a, a, a), everything):   # (ACR), ACR (...), (long name, ACR); plural (ACRs) too
                 continue
             words = [w for w in re.findall(r'[A-Za-z]+', everything)]
             initials = ''.join(w[0] for w in words).upper()

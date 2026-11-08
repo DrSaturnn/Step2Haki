@@ -117,7 +117,7 @@ ROWS = {
         name='Schizotypal personality disorder', window='Lifelong, from adolescence or early adulthood',
         lines=['Odd beliefs, magical thinking, eccentric dress and speech',
                'Few close relationships; paranoid ideas common',
-               'Odd perceptions short of frank psychosis, not persistent'],
+               'Odd perceptions short of frank psychosis that do not persist'],
         course='lifelong', segs=[('odd', 24, 100)],
         src=['sp-pd', 'uw-spd', 'merck-spd'], status='ready'),
     'borderline-pd': dict(
@@ -174,7 +174,7 @@ ROWS = {
         src=['page:delirium', 'page:psychosis-duration', 'page:psych-medical'], status='ready'),
     'medication-psychosis': dict(
         name='Medication-induced psychotic disorder', window='Begins with a new medication',
-        lines=['A new medication, eg, high-dose glucocorticoids',
+        lines=['New medication (eg, high-dose glucocorticoids)',
                'Acute delusions or hallucinations',
                'Alert and oriented; timing ties it to the drug'],
         course='single', segs=[('sub', 84, 86)],
