@@ -351,8 +351,6 @@
 [data-theme="dark"]{--t-rvsession-opts-button-no-k-bg:var(--caution)}
 [data-theme="dark"]{--t-rvsession-opts-button-no-k-fg:#131313}
 [data-theme="dark"]{--t-rvsession-why-bg:var(--accent-bg)}
-[data-theme="dark"]{--t-rvsession-why-sh:var(--inner-2)}
-[data-theme="dark"] .axm-flat{--t-rvsession-why-sh:var(--inner-2)}
 [data-theme="dark"]{--t-rvsession-why-arw-fg:var(--muted)}
 [data-theme="dark"]{--t-rvsession-nx-bgi:linear-gradient(160deg,#D8D8DF 0%,#E5E5EA 60%,#E8E8EF 100%)}
 [data-theme="dark"]{--t-rvsession-nx-fg:#131313}

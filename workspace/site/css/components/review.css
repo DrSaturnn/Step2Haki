@@ -95,14 +95,28 @@ body.rvopen{overflow:hidden}
 #rvsession .opts button.no{background:var(--t-rvsession-opts-button-no-bg,var(--caution-bg));box-shadow:var(--t-rvsession-opts-button-no-sh,var(--inner-2))}
 #rvsession .opts button.no .k{background:var(--t-rvsession-opts-button-no-k-bg,var(--caution));color:var(--t-rvsession-opts-button-no-k-fg)}
 #rvsession .opts button[disabled]{cursor:default}
-#rvsession .why{margin:16px 0 0;padding:14px 16px;border-radius:13px;background:var(--t-rvsession-why-bg,var(--accent-bg));box-shadow:var(--t-rvsession-why-sh,var(--inner-2));font-size:13.5px;line-height:1.55}
+#rvsession .why{margin:16px 0 0;padding:14px 16px;border-radius:13px;background:var(--t-rvsession-why-bg,var(--accent-bg));font-size:13.5px;line-height:1.55}
 #rvsession .why .chain{flex-direction:column;flex-wrap:nowrap;align-items:stretch;justify-content:flex-start;gap:4px;margin:0}
-#rvsession .why .chain .node{display:block;max-width:none;padding:10px 14px;text-align:left;font-weight:500;line-height:1.5}
+#rvsession .why .chain .node{display:block;max-width:none;padding:0;background:none;box-shadow:none;text-align:left;font-weight:500;line-height:1.5}
 #rvsession .why .chain .node.dx{font-weight:800}
 #rvsession .why .chain .node > :is(.sl,.si,.ss,.sd){display:block}
 #rvsession .why .chain .node > .si{margin:2px 0;padding-left:10px;box-shadow:inset 2px 0 0 var(--hair)}
 #rvsession .why .chain .node > .sd{color:var(--muted)}
 #rvsession .why .chain .arw{align-self:flex-start;margin:0 0 0 22px;transform:rotate(90deg);color:var(--t-rvsession-why-arw-fg,var(--muted))}
+#rvsession .slot .src{margin-top:24px}
+#rvsession .why .chain:has(> .node.act) > :is(.node:not(.act),.arw),#rvsession .why .chain:not(:has(> .node.act)) > :is(.node:first-child,.node:first-child + .arw){display:none}
+#rvsession .qnav{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px 0 0}
+#rvsession .qnav .nx{margin:0}
+#rvsession .pv{all:unset;cursor:pointer;padding:12px 22px;border-radius:12px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+#rvsession .pv:hover{color:var(--ink)}
+#rvsession .pv:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#rvsession .rvq-pane .rc{all:unset;cursor:pointer;flex:none;display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 8px;border-radius:999px;font:650 13px/1 var(--sans);color:var(--muted);background:var(--rv-key)}
+#rvsession .rvq-pane .rc .track{position:relative;width:28px;height:16px;border-radius:99px;background:var(--rv-sep);transition:background .2s var(--spr)}
+#rvsession .rvq-pane .rc .knob{position:absolute;top:2px;left:2px;width:12px;height:12px;border-radius:50%;background:var(--card);box-shadow:var(--ec);transition:left .2s var(--spr)}
+#rvsession .rvq-pane .rc[aria-pressed="true"]{color:var(--accent)}
+#rvsession .rvq-pane .rc[aria-pressed="true"] .track{background:var(--accent)}
+#rvsession .rvq-pane .rc[aria-pressed="true"] .knob{left:14px}
+#rvsession .rvq-pane .rc:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 #rvsession .source-link{font:650 13.5px/1.3 var(--sans);color:var(--accent);text-decoration:none}
 #rvsession .source-link:hover{text-decoration:underline}
 #rvsession .source-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}

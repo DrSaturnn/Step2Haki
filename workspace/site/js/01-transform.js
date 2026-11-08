@@ -1282,7 +1282,15 @@ function masks(R){ var D=R||document;
   if(!window.__axMaskClick){
     document.addEventListener('click',function(e){
       if(!document.body.classList.contains('study')) return;
-      var mask=e.target.closest?e.target.closest('.mask'):null; if(!mask) return;
+      var mask=e.target.closest?e.target.closest('.mask'):null;
+      if(!mask && e.target.querySelectorAll){
+        /* a hidden answer's region is inert, so a click on it lands on the element around the mask (a workup test cell) */
+        Array.prototype.some.call(e.target.querySelectorAll(':scope > .mask'),function(m){
+          return Array.prototype.some.call(m.getClientRects(),function(r){
+            if(e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom){ mask=m; return true; } return false; });
+        });
+      }
+      if(!mask) return;
       var btn=e.target.closest('.mask-toggle');
       if(!btn && e.target.closest('a,button,input,select,textarea,summary')) return;
       mask.dataset.revealed=mask.dataset.revealed==='1'?'0':'1'; syncMaskRegions(mask.parentNode);

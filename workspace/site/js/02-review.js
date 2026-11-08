@@ -1006,16 +1006,23 @@ function startQuiz(who){
       'Switch to Step 2 for the pooled view. '+esc(availabilityText())+'</p>';
     return;
   }
-  sess={who:who,queue:built.queue,briefs:built.briefs,i:0,result:{},answered:false};
+  sess={who:who,queue:built.queue,briefs:built.briefs,i:0,result:{},answered:false,seen:[],priorStudy:document.body.classList.contains('study')};
   built.briefs.forEach(function(b){ sess.result[b.id]={ok:0,n:0}; });
   if(!box) buildSessionShell();
   AX.emit('layout:hold', true);
+  setStudy(true);   /* briefs opened beside the quiz start in Recall; the switch over the brief turns it off */
   box.hidden=false;
   document.body.classList.add('rvopen');
   renderCard();
 }
+function setStudy(on){
+  document.body.classList.toggle('study',on);
+  AX.settings.set('study',on?'1':'0');
+  var rc=box && box.querySelector('.rvq-pane .rc'); if(rc) rc.setAttribute('aria-pressed',on?'true':'false');
+}
 function endSession(save){
   if(save && sess) grade(sess.who,sess.briefs,sess.result);
+  if(sess) setStudy(sess.priorStudy);
   sess=null;
   closeSource();
   if(box){
@@ -1091,12 +1098,14 @@ function buildSessionShell(){
     '<div class="sb"><div class="sw"></div></div></section>'+
     '<section class="rvq-pane" aria-label="Brief"><div class="ph">'+
     '<button class="bk" type="button">Back to question</button><b class="t"></b>'+
+    '<button class="rc" type="button" aria-pressed="true"><span class="track"><span class="knob"></span></span>Recall</button>'+
     '<button class="px" type="button" aria-label="Close brief"></button></div>'+
     '<div class="pb"></div></section></div>';
   document.body.appendChild(box);
   pane=box.querySelector('.rvq-pane'); paneBody=pane.querySelector('.pb'); paneTitle=pane.querySelector('.t');
   pane.querySelector('.px').addEventListener('click',closeSource);
   pane.querySelector('.bk').addEventListener('click',closeSource);
+  pane.querySelector('.rc').addEventListener('click',function(){ setStudy(!document.body.classList.contains('study')); });
   /* while the quiz is open, a link to a brief anywhere on the page opens that brief in the right column */
   document.addEventListener('click',function(e){
     if(!sess||!box||box.hidden||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button) return;
@@ -1112,6 +1121,7 @@ function buildSessionShell(){
     if(!sess||!box||box.hidden) return;
     if(e.key==='Escape'){ e.preventDefault(); if(paneBrief) closeSource(); else askEnd(); return; }
     if(pane && pane.contains(document.activeElement)) return;   /* keys typed while reading the brief stay with the brief */
+    if(e.key==='ArrowLeft'){ var pv=box.querySelector('.pv'); if(pv){ e.preventDefault(); pv.click(); } return; }
     if(!sess.answered){
       var k=({'1':0,'2':1,'3':2,'a':0,'b':1,'c':2})[e.key.toLowerCase()];
       if(k!=null){ var bs=box.querySelectorAll('.opts button'); if(bs[k]){ e.preventDefault(); bs[k].click(); } }
@@ -1169,9 +1179,13 @@ function card(entry){
 }
 
 
+/* A question seen earlier in the session comes back as it was: the same choice order and, once answered, its marks and
+   explanation; an answer is scored once and cannot be changed. */
 function renderCard(){
-  var e=sess.queue[sess.i], c=card(e), sw=box.querySelector('.sw');
-  sess.answered=false;
+  var e=sess.queue[sess.i], sw=box.querySelector('.sw');
+  var seen=sess.seen[sess.i]||(sess.seen[sess.i]={c:card(e),pick:null});
+  var c=seen.c;
+  sess.answered=seen.pick!==null;
   box.querySelector('.who').textContent=nameOf(sess.who);
   box.querySelector('.ct').textContent=(sess.i+1)+' / '+sess.queue.length;
   box.querySelector('.prog b').style.width=Math.round(100*sess.i/sess.queue.length)+'%';
@@ -1181,19 +1195,17 @@ function renderCard(){
   c.opts.forEach(function(o,i){
     h+='<button type="button" data-option-id="'+esc(o.optionId)+'" data-r="'+(o.right?1:0)+'"><span class="k">'+'ABC'[i]+'</span>'+(o.rw?'<span class="qx-ol">'+esc(o.text)+'<span class="qx-rsn">'+esc(o.rw)+'</span></span>':esc(o.text))+'</button>';
   });
-  h+='</div><div class="slot"></div>';
+  h+='</div><div class="slot"></div><div class="qnav">'+
+     (sess.i?'<button class="pv" type="button">Previous</button>':'')+'</div>';
   sw.dataset.itemId=c.itemId;
   sw.dataset.itemVersion=c.itemVersion;
   sw.dataset.itemStatus=c.itemStatus;
   sw.dataset.correctOptionId=c.correctOptionId;
   sw.innerHTML=h;
   box.querySelector('.sb').scrollTop=0;
+  var pv=sw.querySelector('.pv'); if(pv) pv.onclick=function(){ sess.i--; renderCard(); };
 
-  sw.querySelector('.opts').onclick=function(ev){
-    var b=ev.target.closest('button'); if(!b||sess.answered) return;
-    sess.answered=true;
-    var right=b.dataset.r==='1';
-    var r=sess.result[e.brief.id]; r.n++; if(right) r.ok++;
+  function show(b){
     Array.prototype.forEach.call(sw.querySelectorAll('.opts button'),function(x){
       x.disabled=true;
       if(x.dataset.r==='1') x.classList.add('ok');
@@ -1203,14 +1215,27 @@ function renderCard(){
     sw.querySelector('.slot').innerHTML=
       '<p class="src">'+esc(e.brief.title)+'</p>'+
       '<div class="why">'+c.why+'</div>'+
-      '<p><a class="source-link" href="#'+esc(e.brief.id)+'">Open source brief</a></p>'+
-      '<button class="nx" type="button">'+(last?'Finish':'Next')+'</button>';
-    var nx=sw.querySelector('.nx');
-    nx.focus({preventScroll:true});
+      '<p><a class="source-link" href="#'+esc(e.brief.id)+'">Open source brief</a></p>';
+    var nx=el('button','nx',last?'Finish':'Next'); nx.type='button';
+    sw.querySelector('.qnav').appendChild(nx);
     nx.onclick=function(){
       if(last){ finish(); }
       else { sess.i++; renderCard(); }
     };
+    return nx;
+  }
+  if(sess.answered){
+    var was=Array.prototype.filter.call(sw.querySelectorAll('.opts button'),function(x){ return x.dataset.optionId===seen.pick.id && Array.prototype.indexOf.call(x.parentNode.children,x)===seen.pick.i; })[0];
+    show(was).focus({preventScroll:true});
+    return;
+  }
+  sw.querySelector('.opts').onclick=function(ev){
+    var b=ev.target.closest('button'); if(!b||sess.answered) return;
+    sess.answered=true;
+    seen.pick={id:b.dataset.optionId, i:Array.prototype.indexOf.call(b.parentNode.children,b)};
+    var right=b.dataset.r==='1';
+    var r=sess.result[e.brief.id]; r.n++; if(right) r.ok++;
+    show(b).focus({preventScroll:true});
   };
   var first=sw.querySelector('.opts button'); if(first) first.focus({preventScroll:true});
 }
