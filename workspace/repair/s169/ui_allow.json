@@ -1,0 +1,112 @@
+[
+ {
+  "sel": "#rvpanel"
+ },
+ {
+  "sel": "body #rvpanel.axm-flat"
+ },
+ {
+  "sel": "#rvlaunch",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#rvlaunch .lbl",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvbtn",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvbtn .av",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvbtn .bd",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvbtn .cap",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvbtn .cta",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvbtn .due",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvbtn .hd",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvbtn .nm",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvbtn:active",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvbtn:focus-visible",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvbtn:hover",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvbtn:hover .cta",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvmast",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvmast .lbl",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvmast .rvbtn",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvmast .rvbtn .bd",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvmast .rvbtn .cap",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvmast .rvbtn .cta",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvmast .rvbtn .due",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvmast .rvbtn .hd",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvmast .rvbtn .nm",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvmast .rvbtn:hover",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".rvmast .rvbtn:hover .cta",
+  "prop": "(count)"
+ },
+ {
+  "sel": "body .axm-flat .rvmast .rvbtn",
+  "prop": "(count)"
+ }
+]

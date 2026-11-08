@@ -1316,11 +1316,11 @@ function boot(){
      never a timer: a poll that outlives the page it serves is a leak, and the
      shelf only ever changes through a click or the hash. */
   document.addEventListener('click',function(e){
-    if(e.target.closest && e.target.closest('.shelfpick')) setTimeout(paintChip,0);
+    if(e.target.closest && e.target.closest('.shelfpick')) setTimeout(paintBadge,0);
   });
-  window.addEventListener('hashchange',function(){ setTimeout(paintChip,0); });
+  window.addEventListener('hashchange',function(){ setTimeout(paintBadge,0); });
   /* shelf, Board-style only and review all re-run applyShelf, which announces itself */
-  document.addEventListener('ax-shelf',function(){ setTimeout(paintChip,0); });
+  document.addEventListener('ax-shelf',function(){ setTimeout(paintBadge,0); });
   window.addEventListener('storage',function(e){
     if(e.key && e.key.indexOf('ax-')===0) paintBadge();     /* another tab */
   });
