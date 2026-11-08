@@ -1057,7 +1057,7 @@ function grade(who,briefs,result){
 /* The quiz sits beside the sidebar on the page's own background, in two columns on a wide screen: the question on
    the left, the right column empty until a brief opens there (its source link, a sidebar tile or a link inside the
    brief). The brief's own node moves into the right column and back to its place when the column closes or the quiz
-   ends. Narrower screens show one column at a time, with Back to question. */
+   ends. Narrower screens show one column at a time; the Brief tab switches between them. */
 var pane=null, paneBody=null, paneTitle=null, paneHold=null, paneBrief=null;
 function briefFor(id){
   var t=id && document.getElementById(id); if(!t) return null;
@@ -1080,7 +1080,6 @@ function openSource(id, quiet){
   }
   box.classList.add('has-brief');
   if(f.at) f.at.scrollIntoView({block:'start'}); else paneBody.scrollTop=0;
-  if(!quiet){ var px=pane.querySelector('.px'); if(px) try{ px.focus({preventScroll:true}); }catch(e){} }
   return true;
 }
 function closeSource(){
@@ -1094,33 +1093,51 @@ function closeSource(){
   if(box) box.classList.remove('has-brief');
 }
 function wide(){ return window.matchMedia('(min-width:1101px)').matches; }
-function paintAuto(){ var ab=box && box.querySelector('.sh .ab'); if(ab) ab.setAttribute('aria-pressed', autoBrief()?'true':'false'); }
+/* The Brief tab, top right of the quiz, is the one control for the brief. On a wide screen it shows or hides the right
+   column (setting quizbrief, on by default): while it is on, a question's brief opens there once the question is
+   answered, and a new question starts with the column empty. On a narrower screen it switches between the answered
+   question and its brief. */
+function paintTab(){
+  if(!box) return;
+  var on=wide() ? autoBrief() : !!paneBrief;
+  box.classList.toggle('pane-on', wide() && autoBrief());
+  bt.setAttribute('aria-pressed', on?'true':'false');
+  bt.disabled = !wide() && !(sess && sess.answered) && !paneBrief;
+}
+var bt=null;
+function tabClick(){
+  if(!sess) return;
+  var cur=sess.queue[sess.i].brief.id;
+  if(wide()){
+    var on=!autoBrief(); AX.settings.set('quizbrief', on?'1':'0');
+    if(!on) closeSource(); else if(sess.answered) openSource(cur, true);
+  } else if(paneBrief){ closeSource(); }
+  else if(sess.answered){ openSource(cur, true); }
+  paintTab();
+}
 function buildSessionShell(){
   box=el('div'); box.id='rvsession'; box.hidden=true;
   box.innerHTML=
+    '<button class="bt" type="button" aria-pressed="true" aria-controls="rvq-pane">'+
+    '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.2c1.9-.8 4-.8 6 .6 2-1.4 4.1-1.4 6-.6v9.4c-1.9-.8-4-.8-6 .6-2-1.4-4.1-1.4-6-.6zM8 3.8v9.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>'+
+    '<span>Brief</span></button>'+
     '<div class="rvq"><section class="rvq-main"><div class="sh">'+
-    '<button class="ob" type="button" disabled><svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.2c1.9-.8 4-.8 6 .6 2-1.4 4.1-1.4 6-.6v9.4c-1.9-.8-4-.8-6 .6-2-1.4-4.1-1.4-6-.6z M8 3.8v9.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Open brief</button>'+
-    '<button class="ab" type="button" aria-pressed="true" title="Open the brief beside the question once it is answered"><span class="track"><span class="knob"></span></span>With each answer</button>'+
     '<span class="who"></span>'+
     '<span class="prog"><b style="width:0%"></b></span>'+
     '<span class="ct"></span>'+
     '<button class="x" type="button" aria-label="End review">✕</button></div>'+
     '<div class="sb"><div class="sw"></div></div></section>'+
-    '<section class="rvq-pane" aria-label="Brief"><div class="ph">'+
-    '<button class="bk" type="button">Back to question</button><b class="t"></b>'+
+    '<section class="rvq-pane" id="rvq-pane" aria-label="Brief"><div class="ph">'+
+    '<b class="t"></b>'+
     '<button class="rc" type="button" aria-pressed="true"><span class="track"><span class="knob"></span></span>Recall</button>'+
-    '<button class="px" type="button" aria-label="Close brief"></button></div>'+
+    '</div>'+
     '<div class="pb"></div></section></div>';
   document.body.appendChild(box);
   pane=box.querySelector('.rvq-pane'); paneBody=pane.querySelector('.pb'); paneTitle=pane.querySelector('.t');
-  pane.querySelector('.px').addEventListener('click',closeSource);
-  pane.querySelector('.bk').addEventListener('click',closeSource);
+  bt=box.querySelector('.bt');
+  bt.addEventListener('click',tabClick);
   pane.querySelector('.rc').addEventListener('click',function(){ setStudy(!document.body.classList.contains('study')); });
-  box.querySelector('.sh .ob').addEventListener('click',function(){ if(sess && sess.answered) openSource(sess.queue[sess.i].brief.id); });
-  box.querySelector('.sh .ab').addEventListener('click',function(){
-    var on=!autoBrief(); AX.settings.set('quizbrief', on?'1':'0'); paintAuto();
-    if(on && sess && sess.answered && wide()) openSource(sess.queue[sess.i].brief.id, true);
-  });
+  window.matchMedia('(min-width:1101px)').addEventListener('change',function(){ if(sess) paintTab(); });
   /* while the quiz is open, a link to a brief anywhere on the page opens that brief in the right column */
   document.addEventListener('click',function(e){
     if(!sess||!box||box.hidden||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button) return;
@@ -1129,12 +1146,13 @@ function buildSessionShell(){
     if(!id || !(AX.brief.ensure(id)||briefFor(id))) return;
     e.preventDefault(); e.stopPropagation();
     var x=document.body.classList.contains('navopen') && document.querySelector('#nav .navclose'); if(x) x.click();   /* the phone index closes as it does for a page jump */
-    openSource(id);
+    if(wide() && !autoBrief()) AX.settings.set('quizbrief','1');   /* a brief asked for by name shows the column */
+    openSource(id, true); paintTab();
   },true);
   box.querySelector('.x').addEventListener('click',askEnd);
   document.addEventListener('keydown',function(e){
     if(!sess||!box||box.hidden) return;
-    if(e.key==='Escape'){ e.preventDefault(); if(paneBrief) closeSource(); else askEnd(); return; }
+    if(e.key==='Escape'){ e.preventDefault(); if(paneBrief && !wide()){ closeSource(); paintTab(); } else askEnd(); return; }
     if(pane && pane.contains(document.activeElement)) return;   /* keys typed while reading the brief stay with the brief */
     if(e.key==='ArrowLeft'){ var pv=box.querySelector('.pv'); if(pv){ e.preventDefault(); pv.click(); } return; }
     if(!sess.answered){
@@ -1201,8 +1219,7 @@ function renderCard(){
   var seen=sess.seen[sess.i]||(sess.seen[sess.i]={c:card(e),pick:null});
   var c=seen.c;
   sess.answered=seen.pick!==null;
-  closeSource(); paintAuto();
-  var ob=box.querySelector('.sh .ob'); ob.disabled=!sess.answered;
+  closeSource(); paintTab();
   box.querySelector('.who').textContent=nameOf(sess.who);
   box.querySelector('.ct').textContent=(sess.i+1)+' / '+sess.queue.length;
   box.querySelector('.prog b').style.width=Math.round(100*sess.i/sess.queue.length)+'%';
@@ -1232,8 +1249,8 @@ function renderCard(){
     sw.querySelector('.slot').innerHTML=
       '<p class="src">'+esc(e.brief.title)+'</p>'+
       '<div class="why">'+c.why+'</div>';
-    ob.disabled=false;
     if(autoBrief() && wide()) openSource(e.brief.id, true);
+    paintTab();
     var nx=el('button','nx',last?'Finish':'Next'); nx.type='button';
     sw.querySelector('.qnav').appendChild(nx);
     nx.onclick=function(){
