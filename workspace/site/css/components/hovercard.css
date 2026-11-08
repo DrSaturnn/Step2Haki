@@ -34,9 +34,9 @@ body .brief.sp td .sp-pop{display:inline}
 }
 body .brief.sp td .sp-drw:not(.qx-pair) + .sp-pop{display:inline;margin-left:2px}
 body .brief.sp .sp-pop.qx-on{color:var(--accent)}
-/* s167c N7 (D-20261107-9): the hover sits on the term it explains (A); the old trigger label is the card's kicker */
-.brief.sp .sp-pop.sp-a{color:inherit;font-weight:inherit;border-bottom:1.5px dotted color-mix(in srgb,currentColor 55%,transparent)}
-.brief.sp .sp-pop.sp-a:hover,.brief.sp .sp-pop.sp-a[aria-expanded="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+/* term trigger: the hover sits on the term it explains; accent text, tinted solid underline, no icon */
+.brief.sp .sp-pop.sp-a{color:var(--t-brief-sp-sp-pop-fg,var(--accent));font-weight:650;border-bottom:1.5px solid color-mix(in srgb,var(--accent) 40%,transparent)}
+.brief.sp .sp-pop.sp-a:hover,.brief.sp .sp-pop.sp-a[aria-expanded="true"]{border-bottom-color:var(--accent)}
 :is(.sp-pop-b,.sp-card) .sp-k{display:block;margin:0 0 2px;font:700 11px/14px var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 :is(.sp-pop-b,.sp-card) .sp-k.dup{display:none}
 /* F: a hover under 8 words is a visible line under its own line */

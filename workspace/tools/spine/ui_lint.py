@@ -27,7 +27,7 @@ def measure(html):
     theme_layout = sorted({sel[:140] for sel, body in theme if LAYOUT.search(body)})
     counts = {}
     for sel, _ in rules:
-        for part in sel.split(','):
+        for part in re.split(r',(?![^()]*\))', sel):
             p = part.strip()
             if p and not p.startswith('@') and p not in ('from', 'to') and not re.match(r'^\d+%$', p):
                 counts[p] = counts.get(p, 0) + 1
