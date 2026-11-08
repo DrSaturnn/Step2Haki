@@ -14,8 +14,11 @@ html[data-layout="two"] body .brief.ax2-cur .ax2-u > *{margin-bottom:0}
 html[data-layout="two"] body .brief.ax2-cur .ax2-u > .ax2-cont + *{margin-top:0}
 html[data-layout="two"] body .ax2-cols .ax2-brk{overflow:visible;contain:none;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 html[data-layout="two"] body .ax2-cols figure.w5a > .kick + .w5z{margin-top:10px}
-html[data-layout="two"] body .ax2-cols figure.w5a > .w5z,html[data-layout="two"] body .ax2-cols figure.w5a .w5skip .w5z{margin:22px 0 0 36px;min-height:26px;padding-top:0;font-size:18px;line-height:26px}
-html[data-layout="two"] body .ax2-cols figure.w5a > .w5z::before,html[data-layout="two"] body .ax2-cols figure.w5a .w5skip .w5z::before{left:-36px;width:26px;height:26px;font-size:13px;line-height:26px}
+html[data-layout="two"] body .ax2-cols figure.w5a > .w5z{margin:22px 0 0 36px;min-height:26px;padding-top:0;font-size:18px;line-height:26px}
+html[data-layout="two"] body .ax2-cols figure.w5a > .w5z::before{left:-36px;width:26px;height:26px;font-size:13px;line-height:26px}
+html[data-layout="two"] body .ax2-cols figure.w5a .w5skip{margin-top:22px;padding-left:36px}
+html[data-layout="two"] body .ax2-cols figure.w5a .w5skip .w5z{min-height:26px;padding-top:0;font-size:18px;line-height:26px}
+html[data-layout="two"] body .ax2-cols figure.w5a .w5skip .w5z::before{left:-36px;width:26px;height:26px;font-size:13px;line-height:26px}
 html[data-layout="two"] body .ax2-cols figure.w5a.ax-w5tab > .w5t{margin:8px 0 0}
 html[data-layout="two"] body .ax2-cols figure.w5a .ax-w5h > span{padding-bottom:6px}
 html[data-layout="two"] body .ax2-cols .ax2-open-b{border-bottom-left-radius:0;border-bottom-right-radius:0}
