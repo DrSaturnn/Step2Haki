@@ -1,6 +1,6 @@
 #ax2rail,#ax2fly,#ax2tip{display:none}
 @media (--desktop){
-html[data-layout="two"] main{zoom:1.12;margin-left:var(--ax2-left,111px);padding-bottom:48px}
+html[data-layout="two"] main{zoom:.9;margin-left:var(--ax2-left,111px);padding-bottom:48px}
 html[data-layout="two"] :is(#axbar,#nav,#ax2rail,#ax2fly,#ax2tip){zoom:.99}
 html[data-layout="two"] #axbar :is(.axcur,.axcur + .axsep){display:none}
 html[data-layout="two"] :is(#axedge,#axtopfade){display:none}
