@@ -145,12 +145,12 @@ below are that draft after his later corrections the same day (mnemonic bold in 
 
 ## Header list (the closed list for rule 6)
 
-Status 2026-11-06: proposed by Claude 2026-11-05 from a scan of the live page (1,109 distinct headers and labels, 265
-matching a non-textbook pattern). None is approved yet: the pilot applies the rows Jonathan has not changed and lists
-each one in its report for his review. Rows H13 to H16
-(they rename the standing clue-table columns), H24 (card spec timeline tags) and H45 (new block headings) wait for his
-call. CARD_SPEC's prescribed labels ("Combined with | Result | Rule", "Where the choice is made") change in the content
-batch that renames them on the page, so the spec and the page change in one commit.
+Status 2026-11-08 (s170): proposed by Claude 2026-11-05 from a scan of the live page (1,109 distinct headers and
+labels, 265 matching a non-textbook pattern). Approved: C1 to C6 rows, H24 included (D-20261108-2). Applied in the s170
+pilot and approved with its ship: H20, H27, H29 and the other rows the seven pilot briefs use (repair/efficiency/
+HEADERS.json "status"); CARD_SPEC carries the renamed card labels from s170. Rows H13 to H16 (the standing clue-table
+columns) and H45 (new block headings) wait for Jonathan's call. Open at the s170 present: "Treatment response timeline"
+(H29), "Drug interactions", "Drug choice by condition" (H27; the reviewer proposed "Related decisions").
 
 | # | Kind | Live | Uses | Proposed | Why |
 |---|---|---|---|---|---|

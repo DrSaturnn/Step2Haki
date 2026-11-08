@@ -349,8 +349,11 @@ def sync(batch, msg, folders):
         dst = os.path.join(PRIV, 'local-only', rel)
         os.makedirs(dst, exist_ok=True)
         sh(['cp', '-a', f + '/.', dst + '/'], check=True)
+    # s170 chat 4: the lane receipts (repair/efficiency/lanes/<batch>) and label caches fetched in the batch
+    # (repair/sources/web) are gitignored in the public repo; chat 3 lost both with its container.
     for extra in ('repair/migration/spine/%s_delta.py' % batch, 'local/%s' % batch,
-                  'repair/migration/spine/packets', 'repair/migration/spine/reviews'):
+                  'repair/migration/spine/packets', 'repair/migration/spine/reviews',
+                  'repair/efficiency/lanes/%s' % batch, 'repair/sources/web'):
         s = os.path.join(WS, extra)
         if os.path.exists(s):
             d = os.path.join(PRIV, 'local-only', extra)

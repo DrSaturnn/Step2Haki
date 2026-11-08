@@ -616,7 +616,33 @@ def p1_residual(d, bid, old_page, new_page):
             t = txt(c.get('text', ''))
             if t and t not in nt:
                 held.update(h.lower() for h in PF.HEDGES.findall(t) if h.lower() in MODAL)
+    held.update(lock_held(d, PF))
     return sum((lost - held).values())
+
+
+def lock_held(d, PF):
+    """s170 chat 4: hedge words a content-rewrite line dropped with the meaning lock's approval. The folder's build.py
+    replays repair/migration/spine/<batch>_delta.py; in that batch's delta_<batch>.json (meaning_lock true) a change whose
+    lock_ok names the hedge word, with its lock_reason, holds the words that change lost (the per-line judgement the
+    meaning lock records, which the acc reviewer checks). Returns a Counter of held words."""
+    from collections import Counter
+    held = Counter()
+    bp = os.path.join(d, 'build.py')
+    m = re.search(r'from (s\w+)_delta import', open(bp, encoding='utf-8').read()) if os.path.exists(bp) else None
+    dp = os.path.join(d, 'delta_%s.json' % m.group(1)) if m else ''
+    if not (dp and os.path.exists(dp)):
+        return held
+    dl = json.load(open(dp, encoding='utf-8'))
+    if not dl.get('meaning_lock'):
+        return held
+    for c in dl.get('changes', []):
+        ok = {w.lower() for x in c.get('lock_ok', []) for w in re.split(r'[\s/]+', x)}
+        if not (ok and c.get('lock_reason')):
+            continue
+        lost = Counter(h.lower() for h in PF.HEDGES.findall(c.get('old', ''))) - \
+            Counter(h.lower() for h in PF.HEDGES.findall(c.get('new', '')))
+        held.update({w: n for w, n in lost.items() if w in MODAL and w in ok})
+    return held
 
 
 def spine_dirs():
