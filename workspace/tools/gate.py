@@ -747,7 +747,7 @@ def check_lints(page, page_path, ref_html, g, attr_only=False):
                 g.fail('prose-lint', bid, '%s: %d prose hits (baseline %s); run tools/spine/prose_lint.py PAGE --brief %s' % (bid, n, 'none' if was is None else was, bid))
     if ref_html is not None and not attr_only:
         for b in prose_lint.changed_briefs(ref_html, page):
-            hits = prose_lint.lint_brief(b.inner)
+            hits = prose_lint.lint_brief(b.inner, touched=True)
             if hits:
                 eg = '; '.join('%s: %s' % (h['pattern'], h['text'][:60]) for h in hits[:3])
                 g.fail('prose-touched', b.id, '%s changed and has %d prose hits (%s)' % (b.id, len(hits), eg))

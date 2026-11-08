@@ -328,12 +328,29 @@ class Verify:
     # ---- 8c. prose (D-20261106-9, D-20261106-11): a brief with prose lint hits is not READY
     def prose(self):
         import prose_lint
-        hits = prose_lint.lint_brief(self.brief_html)
+        hits = prose_lint.lint_brief(self.brief_html, touched=True)
         if hits:
             eg = '; '.join('%s: %s' % (h['pattern'], h['text'][:50]) for h in hits[:4])
             self.F('prose', '%d prose lint hit(s) (tools/spine/prose_lint.py PAGE --brief %s): %s' % (len(hits), self.bid, eg))
         else:
             self.G('prose', 'no prose lint hits (TEXTBOOK_STYLE.md)')
+
+    # ---- 8d. meaning lock (s170 T2, TEXTBOOK_STYLE rule 7): a delta marked "meaning_lock" keeps every token of each
+    # changed line (numbers, hedges, negations, sides, names), or names where it went (carried_by, lock_ok, cut)
+    def lock(self):
+        import meaning_lock as ML
+        for p in sorted(glob.glob(os.path.join(self.d, 'delta_*.json'))):
+            d = json.load(open(p, encoding='utf-8'))
+            if not d.get('meaning_lock'):
+                continue
+            fails = ML.check_delta(d)
+            if fails:
+                eg = '; '.join('change %d %s drops %s' % (i, d['changes'][i].get('uid', ''), ', '.join('%s %s' % x for x in m))
+                               for i, m in fails[:4])
+                self.F('meaning_lock', '%d of %d change(s) in %s (tools/spine/meaning_lock.py %s): %s' % (
+                    len(fails), len(d['changes']), os.path.basename(p), os.path.relpath(p, WS), eg))
+            else:
+                self.G('meaning_lock', '%s: %d change(s) keep every token' % (os.path.basename(p), len(d['changes'])))
 
     # ---- 9. preview build and page checks
     def preview(self):
@@ -396,6 +413,7 @@ class Verify:
                 self.v1()
                 self.lint()
                 self.prose()
+                self.lock()
                 if not self.fast:
                     self.preview()
         finally:
