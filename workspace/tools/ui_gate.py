@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ui_gate.py: the standing UI tests run before a ship (UI_REFACTOR_PLAN 6b).
 
-  python3 tools/ui_gate.py PAGE BASE [--allow ALLOW.json] [--views desk,phone] [--skip parity,theme,a11y,perf]
+  python3 tools/ui_gate.py PAGE BASE [--allow ALLOW.json] [--views desk,phone] [--skip parity,theme,a11y,perf,twopane]
 
 PAGE is the candidate build, BASE the live page (../discriminator-briefs-site/index.html). Four tests, in order, one
 browser job at a time:
@@ -14,7 +14,9 @@ browser job at a time:
   a11y    tools/a11y_scan.js PAGE --baseline tools/spine/a11y_baseline.json: no serious or critical axe count above the
           baseline in any view and setting.
   perf    tools/perf_budget.py PAGE: size and elements at load not above the baseline, load times within 15%.
-Exit 1 when any test fails; every test runs and prints its verdict line. About 25 minutes in a two-core container.
+  twopane tools/two_pane_check.js PAGE: every brief keeps its text in the Two-pane layout and after returning to
+          Scrolling (about 4 minutes).
+Exit 1 when any test fails; every test runs and prints its verdict line. About 30 minutes in a two-core container.
 """
 import os, subprocess, sys, tempfile, time
 
@@ -63,6 +65,8 @@ def main(argv):
                                '--baseline', 'tools/spine/a11y_baseline.json'], 'A11Y PASS')
         if 'perf' not in skip:
             ok &= run('perf', [sys.executable, 'tools/perf_budget.py', page], 'PERF PASS')
+        if 'twopane' not in skip:
+            ok &= run('twopane', ['node', 'tools/two_pane_check.js', page], 'TWO-PANE PASS')
     print('UI-GATE ' + ('PASS' if ok else 'FAIL'))
     return 0 if ok else 1
 

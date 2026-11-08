@@ -128,6 +128,7 @@ def main():
     ap.add_argument('--css', default='', help='a CSS file injected after load, to measure a candidate restyle before it ships')
     ap.add_argument('--theme', default='', help='s137: light (default), dark or tinted (the ax-theme setting)')
     ap.add_argument('--accent', default='', help='s137: an ax-accent key (slate, indigo, purple, navy, ocean, plum, rose, graphite)')
+    ap.add_argument('--layout', default='', help='two: measure in the Two-pane layout (desktop views only; the reader settings record)')
     a = ap.parse_args()
     bids = a.briefs.split(','); os.makedirs(a.out, exist_ok=True)
     rows = []
@@ -141,6 +142,11 @@ def main():
                 if a.theme or a.accent:
                     ctx.add_init_script("try{%s%s}catch(e){}" % ("localStorage.setItem('ax-theme','%s');" % a.theme if a.theme else '',
                                                                  "localStorage.setItem('ax-accent','%s');" % a.accent if a.accent else ''))
+                if a.layout:
+                    rec = {'flat': '1' if mode == 'flat' else '0', 'study': '1' if mode == 'study' else '0', 'layout': a.layout}
+                    if a.theme: rec['theme'] = a.theme
+                    if a.accent: rec['accent'] = a.accent
+                    ctx.add_init_script("try{localStorage.setItem('ax-settings',%s)}catch(e){}" % json.dumps(json.dumps({'v': 1, 's': rec})))
                 pg = ctx.new_page()
                 pg.set_default_timeout(240000)   # s150c: 30 s screenshot timeouts on tall pages (Jonathan 2026-10-24: no wrappers)
                 pg.goto('file://' + os.path.abspath(a.page) + '?axall#' + bids[0]); pg.wait_for_timeout(2500)
