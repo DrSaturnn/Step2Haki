@@ -11,7 +11,8 @@ browser job at a time:
           intended changes: {sel, prop, setting}; each one is named in the batch report). Verdict line UI-CHECK SAME.
           The result is kept in local/ui_gate/parity.json. An intended change that moves boxes below it is better carried
           by BASE: a page built from the live commit plus that change only (ship.sh: UI_GATE_BASE), named in the report.
-  theme   tools/theme_gate.js PAGE: themes move no box and leave no light color in dark or tinted.
+  theme   tools/theme_gate.js PAGE: themes move no box and leave no light color in dark or tinted; runs only when
+          tools/style_surface.py finds a change a theme can show since repair/efficiency/style_audits.json (s170).
   a11y    tools/a11y_scan.js PAGE --baseline tools/spine/a11y_baseline.json: no serious or critical axe count above the
           baseline in any view and setting.
   perf    tools/perf_budget.py PAGE: size and elements at load not above the baseline, load times within 15%.
@@ -122,7 +123,23 @@ def main(argv):
                        '--out', os.path.join(WS, 'local', 'ui_gate', 'parity.json')] + (['--allow', allow] if allow else [])
                 ok &= run_t('parity', cmd, 'UI-CHECK SAME')
         if 'theme' not in skip:
-            ok &= run_t('theme', ['node', 'tools/theme_gate.js', page, '--views', views], 'PASS')
+            # s170 (Jonathan 2026-11-08 "ensure theme audits are optimized"): theme_gate runs only when a change a theme can
+            # show reached the page since the tracked record (tools/style_surface.py); a pass is recorded there
+            sys.path.insert(0, os.path.join(WS, 'tools'))
+            import style_surface as SS
+            sf, _ = SS.surface(page)
+            why = [] if fresh else SS.theme_reasons(sf, SS.load_record().get('theme'), views)
+            if not fresh and not why:
+                e = SS.load_record()['theme']
+                print('theme  PASS (style surface record %s %s: no change a theme can show)' % (e['label'], e['date']))
+                passed.append('theme')
+            else:
+                print('theme  runs: ' + ('; '.join(why) if why else '--fresh'))
+                if run_t('theme', ['node', 'tools/theme_gate.js', page, '--views', views], 'PASS'):
+                    SS.write_record('theme', sf, os.path.basename(os.path.dirname(os.path.abspath(page))) or 'page',
+                                    'theme_gate PASS', {'views': views, 'tools': {t: SS.fdigest(t) for t in SS.THEME_TOOLS}})
+                else:
+                    ok = False
         if 'a11y' not in skip:
             ok &= run_t('a11y', ['node', 'tools/a11y_scan.js', page, '--views', views,
                                '--baseline', 'tools/spine/a11y_baseline.json'], 'A11Y PASS')

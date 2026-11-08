@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 """legib_audit.py: legibility measurements for the AxBx study page (s112 plan, claude/S112_LEGIBILITY_PLAN.md).
 
-  python3 tools/legib_audit.py PAGE --briefs a,b,c [--label before] [--out local/legib] [--views phone,desk] [--modes sculpted,flat,study]
+  python3 tools/legib_audit.py PAGE [--label s170]                    plan from tools/style_surface.py (default): audit only
+                                     the briefs, views, themes and modes a style change since the last audit can reach;
+                                     exits 0 with "nothing to audit" when no rule or element signature changed
+  python3 tools/legib_audit.py PAGE --briefs a,b,c --force "REASON" [--views phone,desk] [--modes sculpted,flat,study]
+                                     a fixed run (a measurement change, a check Jonathan asks for); refused without --force
+                                     (Jonathan 2026-11-08: "yes lets enforce it. Absolutely, ensure theme audits are optimized")
+  A run records the audited surface in repair/efficiency/style_audits.json (not with --css: a candidate is not shipped).
 
 For every text node in each sampled brief, in every view and mode:
   contrast  pixel-true: the brief is screenshotted with its text made transparent (fixed chrome hidden), and the text
@@ -121,7 +127,7 @@ def measure(img, it):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('page'); ap.add_argument('--briefs', required=True); ap.add_argument('--label', default='run')
+    ap.add_argument('page'); ap.add_argument('--briefs', default=''); ap.add_argument('--label', default='run')
     ap.add_argument('--out', default=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'local', 'legib'))
     ap.add_argument('--views', default='phone,desk'); ap.add_argument('--modes', default='sculpted,flat,study')
     ap.add_argument('--shots', action='store_true', help='also save a normal screenshot of each brief')
@@ -129,13 +135,34 @@ def main():
     ap.add_argument('--theme', default='', help='s137: light (default), dark or tinted (the ax-theme setting)')
     ap.add_argument('--accent', default='', help='s137: an ax-accent key (slate, indigo, purple, navy, ocean, plum, rose, graphite)')
     ap.add_argument('--layout', default='', help='two: measure in the Two-pane layout (desktop views only; the reader settings record)')
+    ap.add_argument('--force', default='', help='REASON: run --briefs/--views/--modes as given, past the style-surface guard')
     a = ap.parse_args()
-    bids = a.briefs.split(','); os.makedirs(a.out, exist_ok=True)
+    import style_surface as SS
+    sf, soup = SS.surface(a.page, open(a.css, encoding='utf-8').read() if a.css else '')
+    if a.briefs and not a.force:
+        sys.exit('legib_audit: a fixed --briefs run needs --force "REASON"; without --briefs the audit plans itself '
+                 '(python3 tools/style_surface.py plan %s --tool legib shows the plan)' % a.page)
+    if a.force:
+        if not a.briefs:
+            sys.exit('legib_audit: --force needs --briefs')
+        runs = [{'view': v, 'theme': a.theme or 'light', 'mode': m, 'accent': a.accent, 'layout': a.layout,
+                 'briefs': a.briefs.split(',')} for v in a.views.split(',') for m in a.modes.split(',')]
+    else:
+        plan = SS.plan_legib(sf, soup, SS.load_record().get('legib'))
+        print('legib plan: ' + '; '.join(plan['why']))
+        runs = plan['runs']
+        if not runs:
+            print('legib_audit: nothing to audit (no style rule or element signature a brief shows changed)')
+            return
+        a.briefs = ','.join(sorted({b for r in runs for b in r['briefs']}))
+    os.makedirs(a.out, exist_ok=True)
     rows = []
     with sync_playwright() as p:
         b = p.chromium.launch(executable_path='/opt/pw-browsers/chromium')
-        for view in a.views.split(','):
-            for mode in a.modes.split(','):
+        for run in runs:
+            view, mode, bids = run['view'], run['mode'], run['briefs']
+            a.theme = '' if run['theme'] == 'light' else run['theme']; a.accent = run['accent']; a.layout = run['layout']
+            if True:
                 ctx = b.new_context(viewport={'width': VIEWS[view], 'height': 900}, device_scale_factor=1)
                 ctx.add_init_script("try{localStorage.setItem('ax-flat','%s');localStorage.setItem('ax-study','%s')}catch(e){}"
                                     % ('1' if mode == 'flat' else '0', '1' if mode == 'study' else '0'))
@@ -191,12 +218,16 @@ def main():
                             continue
                         c, c5 = m
                         large = it['fs'] >= 24 or (it['fw'] >= 700 and it['fs'] >= 18.66)
-                        rows.append(dict(view=view, mode=mode, brief=bid, key=it['key'], comp=it['comp'], fs=it['fs'], fw=it['fw'],
+                        rows.append(dict(view=view, mode=mode if not a.theme else mode + '-' + a.theme, brief=bid, key=it['key'], comp=it['comp'], fs=it['fs'], fw=it['fw'],
                                          upper=it['upper'], depth=it['depth'], frames=it['frames'], cr=round(c, 2), cr5=round(c5, 2), need=3.0 if large else 4.5, text=it['text']))
                 ctx.close()
         b.close()
     json.dump(rows, open(os.path.join(a.out, a.label + '.json'), 'w'), ensure_ascii=False)
     report(rows, a)
+    if not a.css:
+        below = sum(r['cr'] < r['need'] for r in rows); small = sum(r['fs'] < 10.5 for r in rows)
+        SS.write_record('legib', sf, a.label, (a.force and 'forced: ' + a.force or 'planned') + '; %d run(s); below contrast %d, '
+                        'under 10.5 px %d' % (len(runs), below, small), {'runs': len(runs), 'below': below, 'small': small})
 
 
 def report(rows, a):
