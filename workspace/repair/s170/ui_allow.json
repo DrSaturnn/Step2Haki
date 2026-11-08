@@ -1,0 +1,62 @@
+[
+ {
+  "sel": ".brief.sp .sp-pop.sp-a",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief.sp .sp-pop.sp-a",
+  "prop": "@box"
+ },
+ {
+  "sel": ".brief.sp .sp-pop.sp-a",
+  "prop": "border-bottom-color"
+ },
+ {
+  "sel": ".brief.sp .sp-pop.sp-a",
+  "prop": "border-bottom-style"
+ },
+ {
+  "sel": ".brief.sp .sp-pop.sp-a",
+  "prop": "color"
+ },
+ {
+  "sel": ".brief.sp .sp-pop.sp-a",
+  "prop": "font-weight"
+ },
+ {
+  "sel": ".brief.sp .sp-pop.sp-a:hover",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief.sp .sp-pop.sp-a:hover",
+  "prop": "@box"
+ },
+ {
+  "sel": ".brief.sp .sp-pop.sp-a:hover",
+  "prop": "border-bottom-color"
+ },
+ {
+  "sel": ".brief.sp .sp-pop.sp-a:hover",
+  "prop": "color"
+ },
+ {
+  "sel": ".dp ul.bl li.sp-bh",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".dp ul.bl li.sp-bl",
+  "prop": "(count)"
+ },
+ {
+  "sel": ":is(.sp-pop-b, .sp-card) .sp-l",
+  "prop": "(count)"
+ },
+ {
+  "sel": ":is(.sp-pop-b, .sp-card) .sp-l + .sp-l",
+  "prop": "(count)"
+ },
+ {
+  "sel": ":is(.sp-pop-b, .sp-card) .sp-l.sp-la",
+  "prop": "(count)"
+ }
+]
