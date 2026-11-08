@@ -7,7 +7,8 @@ html[data-layout="two"] :is(#axedge,#axtopfade){display:none}
 
 html[data-layout="two"] .ax2-page{position:relative}
 html[data-layout="two"] .ax2-page + .ax2-page{margin-top:16px;padding-top:16px;border-top:1px solid var(--hair)}
-html[data-layout="two"] .ax2-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:44px;background:linear-gradient(var(--hair),var(--hair)) 50% 0/1px 100% no-repeat}
+html[data-layout="two"] .ax2-cols{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:44px}
+html[data-layout="two"] .ax2-cols::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--hair)}
 html[data-layout="two"] .ax2-col{min-width:0;column-count:1;column-gap:44px;column-fill:auto}
 html[data-layout="two"] .ax2-cols .ax2-u + .ax2-u{margin-top:22px}
 html[data-layout="two"] .ax2-cols :is(.ax2-u,.ax2-brk) > *{break-inside:avoid}
