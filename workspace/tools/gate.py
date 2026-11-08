@@ -121,6 +121,12 @@ CATALOG = {
                    'rewrite the flagged lines per repair/efficiency/TEXTBOOK_STYLE.md; a permitted near miss goes in the lint\'s ALLOW list with a test'),
     'prose-touched': ('a brief whose text (hover text included) changed against the base has zero prose lint hits; markup-only changes and --attr-only ships are exempt (D-20261106-11)',
                       'rewrite every flagged line in the brief you changed per repair/efficiency/TEXTBOOK_STYLE.md, or show the hit is a permitted near miss and add it to the lint\'s ALLOW list with a test'),
+    'nbme-block': ('a brief\'s NBME blocks outside the bank and outside pause points do not rise in count against the base, and a brief whose text changed has none unless its hash is in repair/*/nbme_keep.json (tools/spine/content_gate.py; s170 T6, N5)',
+                   'carry the block\'s separating stem details into the brief\'s lines (symptom, mimic, next-step) and remove the block, or move it into a pause point; a block kept on purpose gets a nbme_keep.json row {brief, hash, reason}'),
+    'step2-workup': ('a brief whose text changed has no workup ladder (figure.w5a or div.w5t) inside step 2, Diagnostic criteria (tools/spine/content_gate.py; s170 T6, N10)',
+                     'move the ladder to the Workup step and record the move in repair/<batch>/step_moves.json'),
+    'step-moves': ('a top-level block that sits in a different step than on the base has a row in repair/*/step_moves.json {brief, hash, from, to, class, reason} (tools/spine/content_gate.py; s170 T6, N10, N20)',
+                   'add the row (hash from tools/spine/content_gate.py PAGE --base BASE), with the class the block was sorted as (criteria, workup, severity, script, differential) and the reason'),
     'card-format': ('a psych pharm class card keeps the card layout (CARD_SPEC.md): pc-lcw charts with one axis per chart',
                     'rebuild the card from its spec; a chart carries one div.wax axis (s167c) or the same axis on every row'),
     'nav-sys': ('each brief\'s data-sys names the h3.system section it sits in (s167c N20: the sidebar is built from the body)',
@@ -751,6 +757,13 @@ def check_lints(page, page_path, ref_html, g, attr_only=False):
             if hits:
                 eg = '; '.join('%s: %s' % (h['pattern'], h['text'][:60]) for h in hits[:3])
                 g.fail('prose-touched', b.id, '%s changed and has %d prose hits (%s)' % (b.id, len(hits), eg))
+    import content_gate
+    changed = {b.id for b in prose_lint.changed_briefs(ref_html, page)} if (ref_html is not None and not attr_only) else set()
+    try:
+        for code, key, msg in content_gate.check(ref_html, page, changed, root=REPO):
+            g.fail(code, key, msg)
+    except ValueError as e:
+        g.fail('step-moves', 'json', 'a repair/*/nbme_keep.json or step_moves.json file does not parse: %s' % e)
 
 def main(argv):
     args, page_path, base, attr_ref = list(argv), None, 'HEAD', None

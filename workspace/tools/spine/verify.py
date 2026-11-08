@@ -73,8 +73,8 @@ def load_baseline():
     return out
 
 
-def sh(args, cwd=WS):
-    r = subprocess.run(args, cwd=cwd, capture_output=True, text=True)
+def sh(args, cwd=WS, env=None):
+    r = subprocess.run(args, cwd=cwd, capture_output=True, text=True, env=env)
     return r.returncode, (r.stdout + r.stderr).strip()
 
 
@@ -374,7 +374,8 @@ class Verify:
                 ('preflight', [PY, 'tools/preflight.py', pv, '--base', 'HEAD'], lambda rc, o: self.p1_ok(o, new)),
                 ('vendor_scan', [PY, 'tools/vendor_scan.py', '--page', pv], lambda rc, o: rc == 0 and ' 0 flagged' in o),
                 ('numbers', [PY, os.path.join(HERE, 'numbers.py'), pv, '--brief', self.bid], lambda rc, o: rc == 0)]:
-            rc, out = sh(args)
+            # s170: a one-brief preview has no search.json beside it; the ship and patch.py s3 gate the built page's index
+            rc, out = sh(args, env=dict(os.environ, AXBX_GATE_SKIP_INDEX='1') if name == 'gate' else None)
             if okf(rc, out):
                 self.G(name, last(out.splitlines()[0] if name in ('vendor_scan', 'numbers') else out))
             else:
@@ -570,7 +571,11 @@ def presentations_link(page, bid):
     if not m or 'data-entry="hub"' not in m.group(0):
         return page
     g = re.search(r'(    <div class="sect">Presentations <span class="count">)(\d+)(</span></div>\n)((?:    <a [^\n]*\n)*)', page)
-    if not g or ('href="#%s"' % bid) in g.group(4):
+    if not g:
+        return page
+    # s170: since s161c the group holds div.navsub sub-headers, so group(4) stops at the first one; look in the whole group
+    nxt = page.find('<div class="sect', g.end())
+    if ('href="#%s"' % bid) in page[g.start():nxt if nxt > 0 else len(page)]:
         return page
     h4 = re.search(r'<h4[^>]*>(.*?)</h4>', page[m.end():m.end() + 20000], re.S)
     title = re.sub(r'<[^>]+>', '', h4.group(1)).strip() if h4 else bid
