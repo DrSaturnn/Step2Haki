@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-08 s169: s169: quiz beside the sidebar with the Brief tab, Recall in the brief column, Previous, Profile and backup in the Review sheet's look; Recall reveal in workup tables; UI_MAP Retired gate check; faster ui_gate
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Other page changes (nav, headers, scripts): -10551 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 51 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: NOT CHECKED (repair/sources missing: restore axbx-local-only.tar.gz)
+```
+
 ## 2026-11-07 s168: Two-pane desktop layout and grouped Display settings
 
 ```
