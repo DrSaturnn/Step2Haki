@@ -112,7 +112,7 @@ def rows(page):
             if enc:
                 seg = inner[enc[0]:bs[0]] + inner[bs[3]:enc[1]] if enc[0] <= bs[0] and bs[3] <= enc[1] else inner[enc[0]:enc[1]]
                 seg = re.sub(r'<span class="sp-pop-b".*?</span>\s*(?=</(?:li|td|th|p|dd|dt|div)>)', '', seg, flags=re.S)
-                line = txt(seg)[:220]
+                line = txt(seg)[:1200]
             tw = stem(words(ttext))
             cw = stem(words(title + ' ' + kick + ' ' + (lines[0] if lines else '')))
             kind = trigger_kind(inner, m, bs, enc, cls, ttext)
@@ -171,6 +171,8 @@ def apply(page_path, dec_path, out_path):
                 miss.append(pid + ': no body or line')
                 continue
             kind = trigger_kind(whole, m, bs, enc, m.group(1), txt(btext))
+            if d.get('label') is True and kind == 'term':
+                kind = 'label'
             if kind == 'nbd':
                 miss.append(pid + ': NBME phrasing hover, left as is')
                 continue

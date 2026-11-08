@@ -1,0 +1,794 @@
+{
+ "wh-pop-5": {
+  "verdict": "own",
+  "label": "Causes",
+  "brief": "scaphoid",
+  "trigger": "Night splint",
+  "title": "Carpal tunnel causes"
+ },
+ "lbp-pop-5": {
+  "verdict": "own",
+  "label": "Second line",
+  "brief": "backpain",
+  "trigger": "NSAID",
+  "title": "Second line"
+ },
+ "hip-pop-2": {
+  "verdict": "own",
+  "label": "Blood supply",
+  "brief": "hippos",
+  "trigger": "hip",
+  "title": "Blood supply"
+ },
+ "hj-pop-1": {
+  "verdict": "own",
+  "label": "Between flares",
+  "brief": "septic-bursitis",
+  "trigger": "NSAID first",
+  "title": "Between flares"
+ },
+ "na-pop-2": {
+  "verdict": "own",
+  "label": "Radial nerve",
+  "brief": "nursemaid",
+  "trigger": "Minutes",
+  "title": "Radial head subluxation and the radial nerve"
+ },
+ "lg-pop-3": {
+  "verdict": "own",
+  "label": "Night pain",
+  "brief": "growing-pains",
+  "trigger": "exam first",
+  "title": "Shared by benign and serious causes"
+ },
+ "lg-pop-1": {
+  "verdict": "own",
+  "label": "Myositis",
+  "brief": "growing-pains",
+  "trigger": "Days",
+  "title": "Myositis and Guillain-Barr&eacute; syndrome"
+ },
+ "bo-pop-4": {
+  "verdict": "own",
+  "label": "Fever",
+  "brief": "bone-tumors",
+  "trigger": "site",
+  "title": "Ewing sarcoma or osteosarcoma"
+ },
+ "bo-pop-3": {
+  "verdict": "own",
+  "label": "Osteochondroma",
+  "brief": "bone-tumors",
+  "trigger": "Observe",
+  "title": "Osteochondroma"
+ },
+ "bo-pop-1": {
+  "verdict": "own",
+  "label": "Osteoid osteoma",
+  "brief": "bone-tumors",
+  "trigger": "NSAIDs",
+  "title": "Osteoid osteoma"
+ },
+ "bo-pop-2": {
+  "verdict": "own",
+  "label": "Bone cyst",
+  "brief": "bone-tumors",
+  "trigger": "Observe",
+  "title": "Unicameral bone cyst"
+ },
+ "pmur-pop-1": {
+  "verdict": "own",
+  "label": "Newborn murmur",
+  "brief": "ped-murmur",
+  "trigger": "Reassure",
+  "title": ""
+ },
+ "pmur-pop-2": {
+  "verdict": "own",
+  "label": "Diabetic mother",
+  "brief": "ped-murmur",
+  "trigger": "Hold sports",
+  "title": ""
+ },
+ "nbcy-pop-1": {
+  "verdict": "own",
+  "label": "Tachypnea causes",
+  "brief": "newborn-cyanosis",
+  "trigger": "Central cyanosis shows",
+  "title": ""
+ },
+ "nbcy-pop-2": {
+  "verdict": "own",
+  "label": "CHARGE syndrome",
+  "brief": "newborn-cyanosis",
+  "trigger": "Choanal atresia",
+  "title": ""
+ },
+ "ri-pop-5": {
+  "verdict": "own",
+  "label": "Removal",
+  "brief": "uri",
+  "trigger": "Other side normal",
+  "title": "Nasal foreign body"
+ },
+ "ri-pop-3": {
+  "verdict": "own",
+  "label": "Organisms",
+  "brief": "uri",
+  "trigger": "One lobe consolidated",
+  "title": "Pneumonia"
+ },
+ "nl-pop-2": {
+  "verdict": "own",
+  "label": "Care",
+  "brief": "bpd",
+  "trigger": "Arrested alveolar development",
+  "title": "Bronchopulmonary dysplasia"
+ },
+ "rlq-pop-2": {
+  "verdict": "own",
+  "label": "Diarrhea",
+  "brief": "rlq-pain",
+  "trigger": "Campylobacter",
+  "title": ""
+ },
+ "pcon-pop-1": {
+  "verdict": "own",
+  "label": "Juice",
+  "brief": "peds-constipation",
+  "trigger": "Oral osmotic laxative",
+  "title": ""
+ },
+ "pcon-pop-2": {
+  "verdict": "own",
+  "label": "Infants",
+  "brief": "peds-constipation",
+  "trigger": "Disimpact first",
+  "title": ""
+ },
+ "pcon-pop-3": {
+  "verdict": "own",
+  "label": "Abdominal radiograph",
+  "brief": "peds-constipation",
+  "trigger": "Anorectal manometry",
+  "title": ""
+ },
+ "cvs-pop-1": {
+  "verdict": "own",
+  "label": "Natural history",
+  "brief": "cyclic-vomiting",
+  "trigger": "Worn enamel",
+  "title": ""
+ },
+ "cvs-pop-3": {
+  "verdict": "own",
+  "label": "Between bouts",
+  "brief": "cyclic-vomiting",
+  "trigger": "During",
+  "title": ""
+ },
+ "ogib-pop-2": {
+  "verdict": "own",
+  "label": "Rule of 2s",
+  "brief": "occult-gi-bleed",
+  "trigger": "Toddler",
+  "title": ""
+ },
+ "ogib-pop-3": {
+  "verdict": "own",
+  "label": "Juvenile polyps",
+  "brief": "occult-gi-bleed",
+  "trigger": "Colonoscopy",
+  "title": ""
+ },
+ "umb-pop-1": {
+  "verdict": "own",
+  "label": "Repair timing",
+  "brief": "bs-umbilical",
+  "trigger": "umbilical ring normally closes",
+  "title": ""
+ },
+ "umb-pop-2": {
+  "verdict": "own",
+  "label": "Silo repair",
+  "brief": "bs-umbilical",
+  "trigger": "Cover it",
+  "title": ""
+ },
+ "umb-pop-3": {
+  "verdict": "own",
+  "label": "Associated defects",
+  "brief": "bs-umbilical",
+  "trigger": "Immediate surgery",
+  "title": ""
+ },
+ "scr-pop-3": {
+  "verdict": "own",
+  "label": "Epididymitis",
+  "brief": "scrotum",
+  "trigger": "Posterior tenderness",
+  "title": "Epididymitis by age"
+ },
+ "plu-pop-1": {
+  "verdict": "own",
+  "label": "Water deprivation",
+  "brief": "polyuria",
+  "trigger": "Sodium normal",
+  "title": "The test"
+ },
+ "abm-pop-1": {
+  "verdict": "own",
+  "label": "Denys-Drash",
+  "brief": "bs-abdominal-mass",
+  "trigger": "Well child",
+  "title": "Denys-Drash syndrome"
+ },
+ "rta-pop-2": {
+  "verdict": "own",
+  "label": "Urine anion gap",
+  "brief": "bs-distal-rta",
+  "trigger": "Urine pH above 5.5",
+  "title": "Gut or kidney"
+ },
+ "pfe-pop-1": {
+  "verdict": "own",
+  "label": "Minimal change",
+  "brief": "aq-puffy-eyes",
+  "trigger": "Nephrotic syndrome",
+  "title": "Minimal change disease"
+ },
+ "lad-pop-1": {
+  "verdict": "own",
+  "label": "Follow-up",
+  "brief": "lymphadenitis",
+  "trigger": "Nodes swell",
+  "title": ""
+ },
+ "herp-pop-2": {
+  "verdict": "own",
+  "label": "Herpangina",
+  "brief": "herpangina",
+  "trigger": "Young child",
+  "title": ""
+ },
+ "frc-pop-2": {
+  "verdict": "own",
+  "label": "Postexposure",
+  "brief": "bs-fever-rash-arthralgia",
+  "trigger": "Immune",
+  "title": ""
+ },
+ "aif-pop-2": {
+  "verdict": "own",
+  "label": "61 to 90 days",
+  "brief": "aq-infant-fever",
+  "trigger": "1",
+  "title": ""
+ },
+ "aif-pop-3": {
+  "verdict": "own",
+  "label": "Underimmunized",
+  "brief": "aq-infant-fever",
+  "trigger": "3",
+  "title": ""
+ },
+ "aif-pop-4": {
+  "verdict": "own",
+  "label": "Dosing",
+  "brief": "aq-infant-fever",
+  "trigger": "oral cephalosporin",
+  "title": ""
+ },
+ "dmn-pop-2": {
+  "verdict": "own",
+  "label": "Sporadic or acquired",
+  "brief": "dementia",
+  "trigger": "Mood",
+  "title": "Sporadic or acquired"
+ },
+ "ox-pop-1": {
+  "verdict": "own",
+  "label": "Anticholinergic",
+  "brief": "toxidrome",
+  "trigger": "Big pupils",
+  "title": "Anticholinergic toxidrome"
+ },
+ "ox-pop-barb-20261029": {
+  "verdict": "own",
+  "label": "Barbiturates",
+  "brief": "toxidrome",
+  "trigger": "Somnolence",
+  "title": "Barbiturate overdose"
+ },
+ "slp-pop-14": {
+  "verdict": "own",
+  "label": "Sleep study",
+  "brief": "peds-sleep",
+  "trigger": "2 weeks",
+  "title": "Sleep study in depression"
+ },
+ "pmr-pop-1": {
+  "verdict": "own",
+  "label": "Steroid-sparing",
+  "brief": "pmr",
+  "trigger": "lowest dose",
+  "title": "Steroid-sparing"
+ },
+ "oap-pop-2": {
+  "verdict": "own",
+  "label": "Ketorolac",
+  "brief": "oa-pharm",
+  "trigger": "there",
+  "title": "Why not ketorolac"
+ },
+ "oap-pop-3": {
+  "verdict": "own",
+  "label": "Hip",
+  "brief": "oa-pharm",
+  "trigger": "First drug",
+  "title": "Hip osteoarthritis"
+ },
+ "tix-pop-1": {
+  "verdict": "own",
+  "label": "Skull imaging",
+  "brief": "bs-torticollis",
+  "trigger": "Torticollis",
+  "title": "Imaging pathway"
+ },
+ "ob-pop-4": {
+  "verdict": "own",
+  "label": "Methacholine",
+  "brief": "copd",
+  "trigger": "Grade airflow",
+  "title": "Watch for"
+ },
+ "ms-pop-4": {
+  "verdict": "own",
+  "label": "Other drugs",
+  "brief": "masld",
+  "trigger": "Add resmetirom",
+  "title": ""
+ },
+ "hp-pop-3": {
+  "verdict": "own",
+  "label": "Children",
+  "brief": "fap",
+  "trigger": "Yearly thyroid ultrasound",
+  "title": ""
+ },
+ "hp-pop-4": {
+  "verdict": "own",
+  "label": "Screening ages",
+  "brief": "fap",
+  "trigger": "Upper endoscopy",
+  "title": ""
+ },
+ "tef-pop-1": {
+  "verdict": "own",
+  "label": "Positioning",
+  "brief": "bs-tef",
+  "trigger": "Nothing",
+  "title": ""
+ },
+ "py-pop-3": {
+  "verdict": "own",
+  "label": "Papillary necrosis",
+  "brief": "pyelo",
+  "trigger": "Obstruction",
+  "title": "Complication"
+ },
+ "dmc-pop-6": {
+  "verdict": "own",
+  "label": "Screening interval",
+  "brief": "nephropathy",
+  "trigger": "Dilated eye exam",
+  "title": "In practice"
+ },
+ "ut-pop-2": {
+  "verdict": "own",
+  "label": "Renal scintigraphy",
+  "brief": "peds-uti-recurrent",
+  "trigger": "No imaging",
+  "title": "Renal scintigraphy"
+ },
+ "pv-pop-1": {
+  "verdict": "own",
+  "label": "Keyhole sign",
+  "brief": "bs-puv",
+  "trigger": "Outlet obstruction",
+  "title": "Keyhole"
+ },
+ "hbs-pop-1": {
+  "verdict": "own",
+  "label": "HbF",
+  "brief": "scd-dyspnea",
+  "trigger": "No HbA",
+  "title": "Reading it"
+ },
+ "tb-pop-2": {
+  "verdict": "own",
+  "label": "BCG effect",
+  "brief": "tb",
+  "trigger": "Count it",
+  "title": ""
+ },
+ "bmn-pop-1": {
+  "verdict": "own",
+  "label": "CSF values",
+  "brief": "meningitis",
+  "trigger": "High",
+  "title": ""
+ },
+ "rm-pop-1": {
+  "verdict": "own",
+  "label": "Incubation",
+  "brief": "rmsf",
+  "trigger": "2",
+  "title": ""
+ },
+ "pt-pop-1": {
+  "verdict": "own",
+  "label": "Bug and spread",
+  "brief": "bs-pta",
+  "trigger": "May follow",
+  "title": ""
+ },
+ "iso-pop-4": {
+  "verdict": "own",
+  "label": "Staphylococcal food poisoning",
+  "brief": "bs-isolation",
+  "trigger": "RSV",
+  "title": ""
+ },
+ "ti-pop-5": {
+  "verdict": "own",
+  "label": "Prognosis",
+  "brief": "tics",
+  "trigger": "About",
+  "title": "In practice"
+ },
+ "ti-pop-6": {
+  "verdict": "own",
+  "label": "Myoclonus",
+  "brief": "tics",
+  "trigger": "Rhythmic",
+  "title": "Also not a tic"
+ },
+ "ti-pop-11": {
+  "verdict": "own",
+  "label": "Second line",
+  "brief": "tics",
+  "trigger": "Milder tics",
+  "title": "In practice"
+ },
+ "ti-pop-13": {
+  "verdict": "own",
+  "label": "Drug choice",
+  "brief": "tics",
+  "trigger": "CBIT",
+  "title": "Why these drugs"
+ },
+ "pkd-pop-4": {
+  "verdict": "own",
+  "label": "Supportive care",
+  "brief": "parkinson",
+  "trigger": "First",
+  "title": "In practice"
+ },
+ "pkd-pop-6": {
+  "verdict": "own",
+  "label": "Amantadine",
+  "brief": "parkinson",
+  "trigger": "Complication",
+  "title": "Amantadine"
+ },
+ "pkd-pop-7": {
+  "verdict": "own",
+  "label": "Later effects",
+  "brief": "parkinson",
+  "trigger": "Dizziness",
+  "title": "Timing and risk"
+ },
+ "pd-pop-16": {
+  "verdict": "own",
+  "label": "First line",
+  "brief": "psychosis-duration",
+  "trigger": "Full effect",
+  "title": "First line"
+ },
+ "pd-pop-17": {
+  "verdict": "own",
+  "label": "Early response",
+  "brief": "psychosis-duration",
+  "trigger": "long-acting injectable",
+  "title": "In practice:"
+ },
+ "pd-pop-20": {
+  "verdict": "own",
+  "label": "Therapeutic alliance",
+  "brief": "psychosis-duration",
+  "trigger": "Do",
+  "title": "Aim and obstacle"
+ },
+ "szp-pop-6": {
+  "verdict": "own",
+  "label": "Evidence",
+  "brief": "sz-psychosocial",
+  "trigger": "Not while nonadherence keeps",
+  "title": "Cochrane review"
+ },
+ "szp-pop-1": {
+  "verdict": "own",
+  "label": "CBT for psychosis",
+  "brief": "sz-psychosocial",
+  "trigger": "Add",
+  "title": "What it is"
+ },
+ "bm-pop-vpa": {
+  "verdict": "own",
+  "label": "Valproate pancreatitis",
+  "brief": "bipolar-mania",
+  "trigger": "Why",
+  "title": "Valproate pancreatitis"
+ },
+ "pmd-pop-4": {
+  "verdict": "own",
+  "label": "Physical symptoms",
+  "brief": "pms-pmdd",
+  "trigger": "First",
+  "title": "Symptom relief"
+ },
+ "pan-pop-s150e": {
+  "verdict": "own",
+  "label": "Past trauma",
+  "brief": "panic",
+  "trigger": "One object",
+  "title": "Past trauma"
+ },
+ "pan-pop-1": {
+  "verdict": "own",
+  "label": "First labs",
+  "brief": "panic",
+  "trigger": "Recurrent panic attacks",
+  "title": "First labs"
+ },
+ "sm-pop-4": {
+  "verdict": "own",
+  "label": "La belle indifference",
+  "brief": "somatic",
+  "trigger": "Change",
+  "title": "Not a reliable sign"
+ },
+ "sm-pop-split-20261028": {
+  "verdict": "own",
+  "label": "Vibration splitting",
+  "brief": "somatic",
+  "trigger": "After trauma it",
+  "title": "Why"
+ },
+ "sm-pop-16": {
+  "verdict": "own",
+  "label": "Comorbid conditions",
+  "brief": "somatic",
+  "trigger": "Education first",
+  "title": "Also treat"
+ },
+ "eatd-pop-2": {
+  "verdict": "own",
+  "label": "Refeeding",
+  "brief": "eating-disorders",
+  "trigger": "Severe malnutrition",
+  "title": "Mnemonic"
+ },
+ "eatd-pop-4": {
+  "verdict": "own",
+  "label": "Other findings",
+  "brief": "eating-disorders",
+  "trigger": "Restriction",
+  "title": "Associated"
+ },
+ "eatd-pop-5": {
+  "verdict": "own",
+  "label": "Causes",
+  "brief": "eating-disorders",
+  "trigger": "Long-standing type 1 diabetes",
+  "title": "Causes"
+ },
+ "eatd-pop-6": {
+  "verdict": "own",
+  "label": "Add-on evidence",
+  "brief": "eating-disorders",
+  "trigger": "Add",
+  "title": "Limits"
+ },
+ "tox-pop-9": {
+  "verdict": "own",
+  "label": "Causes",
+  "brief": "substance",
+  "trigger": "Dry",
+  "title": "Causes and cautions"
+ },
+ "tox-pop-3": {
+  "verdict": "own",
+  "label": "False positives",
+  "brief": "substance",
+  "trigger": "Exposure only",
+  "title": "Lab caveat"
+ },
+ "tox-pop-13": {
+  "verdict": "own",
+  "label": "Dosing",
+  "brief": "substance",
+  "trigger": "Lowers central sympathetic outflow",
+  "title": "Guideline detail"
+ },
+ "pm-pop-1": {
+  "verdict": "own",
+  "label": "Other diagnoses",
+  "brief": "psych-medical",
+  "trigger": "Depression, its most common psychiatric complication",
+  "title": "Not conversion or dementia"
+ },
+ "ssr-pop-5": {
+  "verdict": "own",
+  "label": "QT interval",
+  "brief": "ssri-effects",
+  "trigger": "Citalopram",
+  "title": "Term"
+ },
+ "ssr-pop-11": {
+  "verdict": "own",
+  "label": "Mimics",
+  "brief": "ssri-effects",
+  "trigger": "consider",
+  "title": "Guideline detail"
+ },
+ "ssr-pop-12": {
+  "verdict": "own",
+  "label": "Maintenance",
+  "brief": "ssri-effects",
+  "trigger": "Lowering",
+  "title": "Guideline detail"
+ },
+ "ssr-pop-13": {
+  "verdict": "own",
+  "label": "Interacting drugs",
+  "brief": "ssri-effects",
+  "trigger": "Check",
+  "title": "Drug detail"
+ },
+ "ap-pop-13": {
+  "verdict": "own",
+  "label": "Refractory",
+  "brief": "antipsych-effects",
+  "trigger": "Admit",
+  "title": "Case reports"
+ },
+ "ap-pop-17": {
+  "verdict": "own",
+  "label": "Aripiprazole",
+  "brief": "antipsych-effects",
+  "trigger": "Missed periods or nipple discharge",
+  "title": "Aripiprazole"
+ },
+ "ap-pop-18": {
+  "verdict": "own",
+  "label": "Smoking",
+  "brief": "antipsych-effects",
+  "trigger": "Adjust the dose",
+  "title": "Smoking"
+ },
+ "li-pop-2": {
+  "verdict": "own",
+  "label": "ECG",
+  "brief": "lithium-effects",
+  "trigger": "Creatinine",
+  "title": "Guideline detail"
+ },
+ "sr-pop-2": {
+  "verdict": "own",
+  "label": "Safety contract",
+  "brief": "suicide-risk",
+  "trigger": "Treat",
+  "title": "Why not"
+ },
+ "pcatyp-pop-6": {
+  "verdict": "own",
+  "label": "Other uses",
+  "brief": "pc-atypical",
+  "trigger": "Parkinson disease psychosis",
+  "title": "Other uses"
+ },
+ "pcatyp-pop-11": {
+  "verdict": "own",
+  "label": "Pneumonia",
+  "brief": "pc-atypical",
+  "trigger": "Boxed warning",
+  "title": "Pneumonia risk"
+ },
+ "pctyp-pop-4": {
+  "verdict": "own",
+  "label": "Antiemetics",
+  "brief": "pc-typical",
+  "trigger": "Nigrostriatal D2 block",
+  "title": "D2-blocking antiemetics"
+ },
+ "pcachol-pop-3": {
+  "verdict": "own",
+  "label": "Diphenhydramine",
+  "brief": "pc-antichol",
+  "trigger": "Not",
+  "title": "Other uses"
+ },
+ "pctd-pop-5": {
+  "verdict": "own",
+  "label": "Dose caps",
+  "brief": "pc-td",
+  "trigger": "Strong cytochrome P450 2D6",
+  "title": "Label doses"
+ },
+ "mac-pop-11": {
+  "verdict": "own",
+  "label": "Skin reactions",
+  "brief": "mood-anticonv",
+  "trigger": "Eosinophilia",
+  "title": "Lamotrigine skin"
+ },
+ "mac-pop-12": {
+  "verdict": "own",
+  "label": "Other signs",
+  "brief": "mood-anticonv",
+  "trigger": "Sodium channel block",
+  "title": "Carbamazepine overdose"
+ },
+ "mac-pop-13": {
+  "verdict": "own",
+  "label": "Further tests",
+  "brief": "mood-anticonv",
+  "trigger": "Lethargy",
+  "title": "Valproate overdose"
+ },
+ "pccog-pop-3": {
+  "verdict": "own",
+  "label": "Other effects",
+  "brief": "pc-cog",
+  "trigger": "More gastric acid",
+  "title": "Label"
+ },
+ "adm-pop-5": {
+  "verdict": "own",
+  "label": "Other warnings",
+  "brief": "adhd-meds",
+  "trigger": "New",
+  "title": "Stimulant labels"
+ },
+ "adm-pop-6": {
+  "verdict": "own",
+  "label": "Use disorder",
+  "brief": "adhd-meds",
+  "trigger": "Misuse",
+  "title": "Prescribed use"
+ },
+ "pcz-pop-4": {
+  "verdict": "own",
+  "label": "Next-day impairment",
+  "brief": "pc-sleep",
+  "trigger": "board",
+  "title": "Next-day impairment"
+ },
+ "pcz-pop-5": {
+  "verdict": "own",
+  "label": "Sleep behaviors",
+  "brief": "pc-sleep",
+  "trigger": "Label warning",
+  "title": "Complex sleep behaviors"
+ },
+ "tox-pop-8": {
+  "verdict": "own",
+  "label": "Cocaethylene",
+  "brief": "substance",
+  "trigger": "Dilated pupils",
+  "title": "Cocaethylene",
+  "note": "lane said move to \"cocaine\"; the word sits inside another trigger"
+ }
+}
