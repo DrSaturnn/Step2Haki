@@ -462,6 +462,11 @@
       else { paintPill(); setInterval(paintPill, 30000); }
     })();
     document.addEventListener('visibilitychange', function(){ if(!document.hidden) paintPill(); });
+    // the expanded Review panel (Profile and backup) hands back to this sheet: 'auto' (Fewer options) or 'who' (Switch person)
+    AX.on('review:sheet', function(v){
+      var from = pill && pill.offsetParent ? pill : document.querySelector('#mbar [data-act="review"]');
+      open(from); if(v === 'who'){ view = 'who'; render(); }
+    });
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

@@ -475,7 +475,10 @@ function place(anchor){
   var pw=(panel.offsetWidth||330)*z, ph=(panel.offsetHeight||420)*z;
   var vw=document.documentElement.clientWidth||window.innerWidth;
   var vh=window.innerHeight, M=12, left, top;
-  if(r.width>420){
+  if(anchor.closest && anchor.closest('#axbar')){
+    /* the toolbar's Review pill: the panel takes the Review sheet's place, its right edge under the pill's */
+    left=r.right-pw; top=r.bottom+10;
+  } else if(r.width>420){
     /* a wide anchor — the masthead bar — reads as a header: the panel belongs
        under its left edge, not off the end of it. */
     left=r.left; top=r.bottom+10;
@@ -543,21 +546,20 @@ function signedOutHTML(){
     if(q.length<4 && !q.some(function(x){ return x.id===p.id; })) q.push(p);
   });
   if(!q.length){
-    return '<p class="note">Progress is saved under the name you pick, so your schedule '+
-           'stays separate from anyone else studying here.</p>'+newNameHTML()+
-           '<div class="foot"><button class="mini" data-act="showimp" type="button">Import a code</button></div>';
+    return newNameHTML()+
+           '<div class="rvl rows"><button class="row-b" data-act="showimp" type="button">Import a code</button></div>';
   }
-  var h='<p class="note">Pick up where you left off.</p><div class="who">';
+  var h='<p class="rvk">Pick up where you left off</p><div class="rvl rows">';
   q.forEach(function(p){
     var d=dueFor(p.id);
-    h+='<button class="whob" type="button" data-act="use" data-id="'+esc(p.id)+'">'+
+    h+='<button class="row-b whob" type="button" data-act="use" data-id="'+esc(p.id)+'">'+
        '<span class="av">'+esc(initials(p.name))+'</span>'+
        '<span class="nm">'+esc(p.name)+'</span>'+
        '<span class="due" data-n="'+(d?'1':'0')+'">'+d+'</span></button>';
   });
-  h+='</div><div class="foot quiet">'+
-     '<button class="mini" data-act="other" type="button">Someone else</button>'+
-     '<button class="mini" data-act="showimp" type="button">Import a code</button>'+
+  h+='</div><div class="rvl rows">'+
+     '<button class="row-b" data-act="other" type="button">Someone else</button>'+
+     '<button class="row-b" data-act="showimp" type="button">Import a code</button>'+
      '</div>';
   return h;
 }
@@ -578,55 +580,56 @@ function askPinIfNeeded(id){
 
 function renderPanel(){
   var id=current(), list=profiles();
-  var h='<div class="ph"><b>Review</b><button class="x" type="button" aria-label="Close">✕</button></div>';
+  var h;
 
   if(!id){
-    h+=signedOutHTML()+
-       syncLine();   /* a first-time user must be told if sync is not working */
+    h='<header class="rvh"><div class="who"><b>Who is studying?</b><small>Progress is saved under your name.</small></div>'+
+      '<button class="rvx x" type="button" aria-label="Close"></button></header>'+
+      signedOutHTML()+
+      syncLine();   /* a first-time user must be told if sync is not working */
   } else {
     var s=split(id), t=today();
-    var d=s.data, n=s.due.length+s.fresh.length;
+    var d=s.data, n=s.due.length+s.fresh.length, due=s.due.length;
     var learned=Object.keys(d.box).length;
     var mature=Object.keys(d.box).filter(function(k){ return d.box[k].b>=4; }).length;
-    h+='<div class="row"><select id="rvsel" aria-label="Profile">';
-    list.forEach(function(p){
-      h+='<option value="'+esc(p.id)+'"'+(p.id===id?' selected':'')+'>'+esc(p.name)+'</option>';
-    });
-    h+='</select><button class="mini" data-act="new" type="button">New</button></div>';
-    h+='<div class="stats">'+
+    h='<header class="rvh"><span class="av">'+esc(initials(nameOf(id)))+'</span><div class="who"><b>'+esc(nameOf(id))+'</b>'+
+      '<small>'+(due ? (due===1 ? '1 review due today' : due+' reviews due today') : 'Nothing due today')+'</small></div>'+
+      '<button class="rvx x" type="button" aria-label="Close"></button></header>';
+    h+='<p class="rvk">Progress</p><div class="rvl stats">'+
        '<div><b>'+n+'</b><span>Due</span></div>'+
        '<div><b>'+learned+'</b><span>Seen</span></div>'+
        '<div><b>'+mature+'</b><span>Solid</span></div>'+
-       '<div><b>'+pool().length+'</b><span>On shelf</span></div>'+
-       '</div>';
+       '<div><b>'+pool().length+'</b><span>On shelf</span></div>';
     var counts=[0,0,0,0,0];
     Object.keys(d.box).forEach(function(k){ var b=d.box[k].b; if(b>=1&&b<=5) counts[b-1]++; });
     var tot=pool().length||1;
     h+='<div class="boxes" aria-hidden="true">';
     counts.forEach(function(c){ h+='<i><b style="width:'+Math.round(100*c/tot)+'%"></b></i>'; });
-    h+='</div>';
+    h+='</div></div>';
     h+=syncLine();      /* sync state leads: it is what you need to know first */
-    h+='<button class="go" data-act="start" type="button"'+(n||s.later.length?'':' disabled')+'>'+
-       (n? 'Review '+Math.min(PER_SESSION,n)+' briefs' : 'Nothing due – read ahead')+'</button>';
-    h+='<button class="go alt" data-act="quiz" type="button"'+(n||s.later.length?'':' disabled')+'>'+
-       'Quiz me instead – up to '+(PER_SESSION*PER_BRIEF)+' questions</button>';
+    h+='<button class="rvgo go" data-act="start" type="button"'+(n||s.later.length?'':' disabled')+'>'+
+       (n? 'Review '+Math.min(PER_SESSION,n)+' briefs' : 'Nothing due, read ahead')+'</button>';
+    h+='<button class="rvalt go alt" data-act="quiz" type="button"'+(n||s.later.length?'':' disabled')+'>'+
+       'Quiz me, up to '+(PER_SESSION*PER_BRIEF)+' questions</button>';
     if(availabilityText()) h+='<p class="msg availability">'+esc(availabilityText())+'</p>';
-    h+='<div class="foot">'+
-       '<button class="mini" data-act="rename" type="button">Rename</button>'+
-       '<button class="mini" data-act="pin" type="button">'+(pinOf(id)?'PIN set':'Set PIN')+'</button>'+
-       '<button class="mini" data-act="reset" type="button">Start over</button>'+
-       '<button class="mini" data-act="remove" type="button">Remove</button>'+
+    h+='<p class="rvk">Profile</p><div class="rvl rows">'+
+       '<button class="row-b" data-act="rename" type="button">Rename</button>'+
+       '<button class="row-b" data-act="pin" type="button">'+(pinOf(id)?'Change PIN':'Set PIN')+'</button>'+
+       '<button class="row-b" data-act="new" type="button">Add a person</button>'+
+       '<button class="row-b warn" data-act="reset" type="button">Start over</button>'+
+       '<button class="row-b warn" data-act="remove" type="button">Remove</button>'+
        '</div>';
     /* Backup is no longer how progress travels between devices — sync is. It
        stays because it is the only copy that exists outside the store, so it
        reads as insurance now rather than as transport. */
-    h+='<div class="foot quiet">'+
-       '<button class="mini" data-act="signout" type="button">Not you?</button>'+
-       '<button class="mini" data-act="showexp" type="button">Backup code</button>'+
-       '<button class="mini" data-act="showimp" type="button">Restore from a code</button>'+
+    h+='<p class="rvk">Backup</p><div class="rvl rows">'+
+       '<button class="row-b" data-act="showexp" type="button">Backup code</button>'+
+       '<button class="row-b" data-act="showimp" type="button">Restore from a code</button>'+
        '</div>';
   }
   h+='<div id="rvio"></div>';
+  h+='<footer class="rvf"><button type="button" data-act="'+(id?'signout':'less')+'">'+(id?'Switch person':'Back')+'</button>'+
+     (id?'<button type="button" data-act="less">Fewer options</button>':'')+'</footer>';
   panel.innerHTML=h;
   paintChip();
 
@@ -652,7 +655,7 @@ function renderPanel(){
       var f0=panel.querySelector('#rvnew'); if(f0) f0.focus();
       place(); return;
     }
-    if(a==='signout'){ signOut(); renderPanel(); place(); return; }
+    if(a==='signout'||a==='less'){ closePanel(); AX.emit('review:sheet', a==='signout'?'who':'auto'); return; }
     if(a==='add'){
       var v=panel.querySelector('#rvnew'), vp=panel.querySelector('#rvnewpin');
       var nid2=addProfile(v?v.value:'');
@@ -1006,6 +1009,7 @@ function startQuiz(who){
   sess={who:who,queue:built.queue,briefs:built.briefs,i:0,result:{},answered:false};
   built.briefs.forEach(function(b){ sess.result[b.id]={ok:0,n:0}; });
   if(!box) buildSessionShell();
+  AX.emit('layout:hold', true);
   box.hidden=false;
   document.body.classList.add('rvopen');
   renderCard();
@@ -1013,11 +1017,13 @@ function startQuiz(who){
 function endSession(save){
   if(save && sess) grade(sess.who,sess.briefs,sess.result);
   sess=null;
+  closeSource();
   if(box){
     var c=box.querySelector('.sh .confirm'); if(c) c.parentNode.removeChild(c);
     box.hidden=true;
   }
   document.body.classList.remove('rvopen');
+  AX.emit('layout:hold', false);
   paintChip();
   if(sessionFocus && sessionFocus.isConnected) try{ sessionFocus.focus({preventScroll:true}); }catch(e){}
   sessionFocus=null;
@@ -1041,19 +1047,71 @@ function grade(who,briefs,result){
   return moves;
 }
 
+/* The quiz sits beside the sidebar on the page's own background, in two columns on a wide screen: the question on
+   the left, the right column empty until a brief opens there (its source link, a sidebar tile or a link inside the
+   brief). The brief's own node moves into the right column and back to its place when the column closes or the quiz
+   ends. Narrower screens show one column at a time, with Back to question. */
+var pane=null, paneBody=null, paneTitle=null, paneHold=null, paneBrief=null;
+function briefFor(id){
+  var t=id && document.getElementById(id); if(!t) return null;
+  if(t.classList.contains('brief')) return {brief:t, at:null};
+  var b=t.closest && t.closest('.brief'); return b ? {brief:b, at:t} : null;
+}
+function openSource(id){
+  if(AX.brief.ensure(id)===null && !document.getElementById(id)) return false;
+  var f=briefFor(id); if(!f) return false;
+  if(paneBrief!==f.brief){
+    closeSource();
+    paneHold=document.createComment('rv-pane'); f.brief.parentNode.insertBefore(paneHold,f.brief);
+    paneBrief=f.brief; paneBrief.dataset.rvDisplay=paneBrief.style.display; paneBrief.style.display='';
+    paneBody.appendChild(paneBrief);
+    var h=paneBrief.querySelector(':scope > h4'); paneTitle.textContent=h?h.textContent.replace(/\s+/g,' ').trim():'';
+  }
+  box.classList.add('has-brief');
+  if(f.at) f.at.scrollIntoView({block:'start'}); else paneBody.scrollTop=0;
+  var px=pane.querySelector('.px'); if(px) try{ px.focus({preventScroll:true}); }catch(e){}
+  return true;
+}
+function closeSource(){
+  if(paneBrief && paneHold && paneHold.parentNode){
+    paneBrief.style.display=paneBrief.dataset.rvDisplay||''; delete paneBrief.dataset.rvDisplay;
+    paneHold.parentNode.replaceChild(paneBrief,paneHold);
+  }
+  paneBrief=null; paneHold=null;
+  if(paneTitle) paneTitle.textContent='';
+  if(box) box.classList.remove('has-brief');
+}
 function buildSessionShell(){
   box=el('div'); box.id='rvsession'; box.hidden=true;
   box.innerHTML=
-    '<div class="sh"><span class="who"></span>'+
+    '<div class="rvq"><section class="rvq-main"><div class="sh"><span class="who"></span>'+
     '<span class="prog"><b style="width:0%"></b></span>'+
     '<span class="ct"></span>'+
     '<button class="x" type="button" aria-label="End review">✕</button></div>'+
-    '<div class="sb"><div class="sw"></div></div>';
+    '<div class="sb"><div class="sw"></div></div></section>'+
+    '<section class="rvq-pane" aria-label="Brief"><div class="ph">'+
+    '<button class="bk" type="button">Back to question</button><b class="t"></b>'+
+    '<button class="px" type="button" aria-label="Close brief"></button></div>'+
+    '<div class="pb"></div></section></div>';
   document.body.appendChild(box);
+  pane=box.querySelector('.rvq-pane'); paneBody=pane.querySelector('.pb'); paneTitle=pane.querySelector('.t');
+  pane.querySelector('.px').addEventListener('click',closeSource);
+  pane.querySelector('.bk').addEventListener('click',closeSource);
+  /* while the quiz is open, a link to a brief anywhere on the page opens that brief in the right column */
+  document.addEventListener('click',function(e){
+    if(!sess||!box||box.hidden||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button) return;
+    var a=e.target.closest && e.target.closest('a[href^="#"]'); if(!a) return;
+    var id=a.getAttribute('href').slice(1); try{ id=decodeURIComponent(id); }catch(x){}
+    if(!id || !(AX.brief.ensure(id)||briefFor(id))) return;
+    e.preventDefault(); e.stopPropagation();
+    var x=document.body.classList.contains('navopen') && document.querySelector('#nav .navclose'); if(x) x.click();   /* the phone index closes as it does for a page jump */
+    openSource(id);
+  },true);
   box.querySelector('.x').addEventListener('click',askEnd);
   document.addEventListener('keydown',function(e){
     if(!sess||!box||box.hidden) return;
-    if(e.key==='Escape'){ e.preventDefault(); askEnd(); return; }
+    if(e.key==='Escape'){ e.preventDefault(); if(paneBrief) closeSource(); else askEnd(); return; }
+    if(pane && pane.contains(document.activeElement)) return;   /* keys typed while reading the brief stay with the brief */
     if(!sess.answered){
       var k=({'1':0,'2':1,'3':2,'a':0,'b':1,'c':2})[e.key.toLowerCase()];
       if(k!=null){ var bs=box.querySelectorAll('.opts button'); if(bs[k]){ e.preventDefault(); bs[k].click(); } }
@@ -1147,7 +1205,6 @@ function renderCard(){
       '<div class="why">'+c.why+'</div>'+
       '<p><a class="source-link" href="#'+esc(e.brief.id)+'">Open source brief</a></p>'+
       '<button class="nx" type="button">'+(last?'Finish':'Next')+'</button>';
-    sw.querySelector('.source-link').onclick=function(){ endSession(true); };
     var nx=sw.querySelector('.nx');
     nx.focus({preventScroll:true});
     nx.onclick=function(){
@@ -1184,10 +1241,6 @@ function finish(){
   box.querySelector('.sb').scrollTop=0;
   sw.querySelector('.nx').focus({preventScroll:true});
   sw.querySelector('.nx').onclick=function(){ endSession(false); };
-  sw.onclick=function(ev){
-    var a=ev.target.closest('a.jump'); if(!a) return;
-    endSession(false);
-  };
   sess.briefs=[];                 /* already graded; closing must not double-score */
   sess.result={};
 }

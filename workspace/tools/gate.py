@@ -113,6 +113,8 @@ CATALOG = {
                 'replace the old rule instead of adding an override; time motion with var(--spr), var(--bnc) or var(--snp); a batch that lowers a count tightens the baseline (ship.sh does it)'),
     'ui-site': ('site/css: themes hold only custom properties on theme selectors (hard), and components\' raw colors do not rise above the baseline (tools/spine/ui_lint.py --site; D-20261105-10)',
                 'put the color in a theme token and reference it with var(); a theme file never names a component'),
+    'ui-retired': ('nothing in the Retired table of docs/ui/UI_MAP.md is back in the page: no retired selector, id, class prefix, custom property or label (tools/spine/ui_retired.py; D-20261105-1, s169)',
+                   'remove what came back, or, when the item is live again on purpose, take its row out of the Retired table in the same commit with the decision that brought it back'),
     'doc-lint': ('DECISIONS_DIGEST and STANDING_DIRECTIONS hold one live answer per question: supersession marked both ways, no citation of a superseded or missing id (tools/spine/doc_lint.py; D-20261105-2)',
                  'mark the old line "(superseded by D-...)" in the same commit, or cite the live id in STANDING_DIRECTIONS'),
     'prose-lint': ('no brief\'s prose lint count (tools/spine/prose_lint.py, review-book register) rises above tools/spine/prose_baseline.json, and a brief new to the baseline has none (D-20261106-9, D-20261106-11)',
@@ -711,6 +713,19 @@ def check_lints(page, page_path, ref_html, g, attr_only=False):
         rc_base = base.get('component_raw_color')
         if rc_base is not None and counts.get('component_raw_color', 0) > rc_base:
             g.fail('ui-site', 'component_raw_color', 'raw colors in site/css/components rose from %d to %d' % (rc_base, counts['component_raw_color']))
+    import ui_retired
+    try:
+        um = docs_path.doc(os.path.join('ui', 'UI_MAP.md'))
+    except FileNotFoundError:
+        um = ''
+    if os.path.exists(um):
+        try:
+            for cell, it, where in ui_retired.check(open(page_path, encoding='utf-8').read(), open(um, encoding='utf-8').read()):
+                g.fail('ui-retired', it[:60], '%s: %s (Retired table row "%s")' % (it, where, cell))
+        except ValueError as e:
+            g.fail('ui-retired', 'table', str(e))
+    else:
+        g.fail('ui-retired', 'missing', 'docs/ui/UI_MAP.md is missing from the private docs/ (tools/docs_path.py)')
     try:
         dg, st = docs_path.doc('DECISIONS_DIGEST.md'), docs_path.doc('STANDING_DIRECTIONS.md')
     except FileNotFoundError:

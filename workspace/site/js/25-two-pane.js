@@ -6,13 +6,14 @@
    The sidebar collapses to a rail of shelf sections: Expand pushes the brief over (kept until collapsed), a section
    opens its briefs in a panel over the page, Search opens the sidebar over the page.
    Settings: layout ('scroll' or 'two'), twonav ('1' while the sidebar is kept expanded).
-   Events: emits nav:ask, nav:search, layout:step; listens to nav:sections, nav:collapse. */
+   Events: emits nav:ask, nav:search, layout:step; listens to nav:sections, nav:collapse, layout:hold (true while the quiz
+   is open: the page returns to Scrolling underneath it and the sidebar stays in view; false lays the brief out again). */
 return (function(){
 'use strict';
 var WIDE = window.matchMedia('(min-width:1101px)');
 var root = document.documentElement;
 var want = AX.settings.get('layout') === 'two';
-var B = null, S = null, rail = null, fly = null, flyFor = null, tip = null, secs = [], ctl = null, offs = [], lastStep = null;
+var held = false, B = null, S = null, rail = null, fly = null, flyFor = null, tip = null, secs = [], ctl = null, offs = [], lastStep = null;
 var HEAD = '.bb-bar,.bb-rail,.alias,h4,.sub,nav';
 var WHOLE = 'tr,p,dd,dt,h1,h2,h3,h4,h5,h6,caption,thead,.mcq,.mcqwrap,svg,img,canvas,a,b,i,em,strong,span,button,label';   // never cut inside
 var GAP = 12, BREAK = 0.3;
@@ -27,7 +28,7 @@ var SHORT = {'Presentations': 'Pres', 'Musculoskeletal': 'MSK', 'Pediatrics': 'P
 function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
 function txt(n){ return (n && n.textContent || '').replace(/\s+/g, ' ').trim(); }
 function each(list, fn){ Array.prototype.forEach.call(list, fn); }
-function on(){ return want && WIDE.matches; }
+function on(){ return want && !held && WIDE.matches; }
 function zoomOf(n){ return (n.getBoundingClientRect().width / n.offsetWidth) || 1; }
 function jump(y){ window.scrollTo({top: y, behavior: 'instant'}); }
 function barBottom(){ var b = document.getElementById('axbar'); return b && b.offsetParent !== null ? b.getBoundingClientRect().bottom : 16; }
@@ -74,6 +75,7 @@ function unbuild(){
   if(!S) return;
   restore();
   S.nodes.forEach(function(c){ B.appendChild(c); });
+  var endCap = B.querySelector(':scope > .bb-end'); if(endCap) B.appendChild(endCap);   // an end cap drawn after the layout began stays last
   S.flow.remove(); S = null;
   B.classList.remove('ax2-cur');
   root.removeAttribute('data-layout'); root.classList.remove('ax2-nav', 'ax2-over');
@@ -338,6 +340,7 @@ function show(b){
 /* ---------- wiring ---------- */
 offs.push(AX.on('nav:sections', function(list){ secs = list || []; drawRail(); }));
 offs.push(AX.on('nav:collapse', function(){ expand(false); }));
+offs.push(AX.on('layout:hold', function(v){ held = !!v; if(held){ if(S) unbuild(); } else if(on()) apply(); }));
 function onHash(){
   if(!on()) return;
   var b = fromHash();
