@@ -1,0 +1,18 @@
+/* One-idea lines and block headings (s170 T4; TEXTBOOK_STYLE rules 1 and 6).
+   Hover card body (the inline body and the floating card built from it): each line is span.sp-l; an arrow line (cause and effect under the line above) adds .sp-la and is
+   indented; a block heading (a bold line with nothing after it) adds .sp-bh, and the lines after it take their
+   subject from it. In the brief body the same block heading is li.sp-bh in a key point list or p.sp-bh in a script
+   row, with its lines as li.sp-bl or p.sp-bl. */
+:is(.sp-pop-b,.sp-card) .sp-l{display:block}
+:is(.sp-pop-b,.sp-card) .sp-l + .sp-l{margin-top:4px}
+:is(.sp-pop-b,.sp-card) .sp-l.sp-la{padding-left:34px;text-indent:-16px}
+:is(.sp-pop-b,.sp-card) .sp-l.sp-bh{font-weight:750;color:var(--ink)}
+:is(.sp-pop-b,.sp-card) .sp-l + .sp-l.sp-bh{margin-top:10px}
+.sp-card .op-a::before{content:"→"}
+.sp-card .op{margin:0 2px}
+.dp ul.bl li.sp-bh{font-weight:750;color:var(--ink);margin-top:7px}
+.dp ul.bl li.sp-bh:first-child{margin-top:0}
+.dp ul.bl li.sp-bl{padding-left:14px}
+.brief.sp .sp-s2 .sv p.sp-bh{font-weight:750;color:var(--ink)}
+.brief.sp .sp-s2 .sv p.sp-bl{padding-left:14px}
+.brief.sp .sp-s2 .sv p.sp-bh + p.sp-bl{margin-top:2px}
