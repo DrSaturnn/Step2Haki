@@ -334,7 +334,7 @@ function syncPull(id, then){
     var res=mergeBox(id, r.body.data && r.body.data.box);
     if(r.body.hasPin) setPinKnown(id,true);
     mark('on');
-    paintChip();
+    paintBadge();
     if(then) then(res);
   }).catch(function(){ mark('off'); if(then) then(null); });
 }
@@ -349,7 +349,7 @@ function syncPush(id, then){
       /* The server merges on write and returns the result; adopting it is what
          stops this device pushing a stale view again next time. */
       if(r.body && r.body.data) mergeBox(id, r.body.data.box);
-      mark('on'); paintChip(); if(then) then({ok:true});
+      mark('on'); paintBadge(); if(then) then({ok:true});
     }).catch(function(){ mark('off'); if(then) then(null); });
 }
 function pinOf(id){
@@ -395,59 +395,24 @@ function syncLine(){
 }
 
 /* ---------- the launcher + panel ---------- */
-var chip, chips=[], anchorEl=null, panel, lastFocus=null, sessionFocus=null;
+var anchorEl=null, panel, lastFocus=null, sessionFocus=null;
 
 function dueFor(id){ var s=split(id); return s.due.length+s.fresh.length; }
-function dueCount(){
-  var id=current(); if(!id) return pool().length;
-  return dueFor(id);
-}
-function paintChip(){
-  var id=current(), d=dueCount(), nm=id?nameOf(id):'Not signed in';
-  chips.forEach(function(c){
-    c.querySelector('.av').textContent = id?initials(nm):'+';
-    c.querySelector('.nm').textContent = nm;
-    c.querySelector('.due').textContent = d;
-    c.querySelector('.cap').textContent = !id ? 'briefs waiting'
-      : d===0 ? 'nothing due today' : (d===1?'brief due today':'briefs due today');
-    c.querySelector('.cta').textContent = !id ? 'Pick your name'
-      : d===0 ? 'Read ahead' : 'Start review';
-    c.setAttribute('data-due', (id&&d===0)?'0':'1');
-    c.setAttribute('aria-label', id ? ('Review – '+nm+', '+d+' due')
-                                    : 'Review – pick your name');
-  });
+function paintBadge(){
   var bdg=document.querySelector('#mbar [data-act="review"] .bdg');
-  if(bdg){ var rd=id?split(id).due.length:0; bdg.textContent=rd; bdg.setAttribute('data-n', rd?'1':'0'); }   /* scheduled reviews only, never the shelf total */
+  if(bdg){ var id=current(), rd=id?split(id).due.length:0; bdg.textContent=rd; bdg.setAttribute('data-n', rd?'1':'0'); }   /* scheduled reviews only, never the shelf total */
 }
-function buildLauncher(kind){
-  var launch=el('div');
-  launch.className = kind==='mast' ? 'rvmast' : 'rvside';
-  if(kind!=='mast') launch.id='rvlaunch';
-  launch.appendChild(el('span','lbl','Review'));
-  var chip=el('button');
-  chip.className='rvbtn';
-  if(kind!=='mast') chip.id='rvbtn';      /* the sidebar tile keeps the id */
-  chip.type='button';
-  chip.setAttribute('aria-haspopup','dialog');
-  chip.setAttribute('aria-expanded','false');
-  chip.setAttribute('aria-controls','rvpanel');
-  chip.innerHTML='<span class="hd"><span class="av"></span><span class="nm"></span></span>'+
-                 '<span class="bd"><b class="due">0</b><span class="cap"></span></span>'+
-                 '<span class="cta"></span>';
-  chip.addEventListener('click',function(){
-    if(panelOpen() && anchorEl===chip) return closePanel();
-    openPanel(chip);                      /* re-anchor if the other tile opened it */
-  });
-  launch.appendChild(chip);
-  chips.push(chip);
-  return launch;
+/* The panel opens from the Review sheet's "Profile and backup" (14-glance.js), anchored on the toolbar's Review pill, or
+   the phone bar's Review button. */
+function trigger(){
+  var a=document.querySelector('#axbar .axrvb'); if(a && a.offsetParent) return a;
+  return document.querySelector('#mbar [data-act="review"]');
 }
-
 function panelOpen(){ return panel && !panel.hidden; }
 function openPanel(anchor){
   if(!panel) buildPanel();
   lastFocus=anchor||document.activeElement;
-  anchorEl=anchor||chips[0]||null;
+  anchorEl=anchor||trigger()||null;
   renderPanel();
   /* Refresh in the background — the panel is usable immediately and
      re-renders only if the server actually had something newer. */
@@ -455,7 +420,6 @@ function openPanel(anchor){
     syncPull(current(), function(){ if(panelOpen()) renderPanel(); });
   });
   panel.hidden=false;
-  chips.forEach(function(c){ c.setAttribute('aria-expanded', c===anchorEl?'true':'false'); });
   place(anchor);
   var f=panel.querySelector('select,input,button.go,button.mini');
   if(f) try{ f.focus({preventScroll:true}); }catch(e){ f.focus(); }
@@ -463,12 +427,11 @@ function openPanel(anchor){
 function closePanel(){
   if(!panel||panel.hidden) return;
   panel.hidden=true;
-  chips.forEach(function(c){ c.setAttribute('aria-expanded','false'); });
   if(lastFocus) try{ lastFocus.focus({preventScroll:true}); }catch(e){}
   lastFocus=null;
 }
 function place(anchor){
-  anchor = anchor || anchorEl || chips[0];
+  anchor = anchor || anchorEl || trigger();
   if(!anchor || !panel) return;
   if(window.matchMedia('(max-width:900px)').matches){ panel.style.top=''; panel.style.left=''; return; }
   var r=anchor.getBoundingClientRect(), z=parseFloat(getComputedStyle(document.documentElement).zoom)||1;   /* zoomed px in, CSS px out */
@@ -505,11 +468,10 @@ function buildPanel(){
   panel.setAttribute('aria-label','Review and profiles');
   document.body.appendChild(panel);
 
-  /* dismissals: click away, Escape, the chip again, the × */
+  /* dismissals: click away (the Review pill included: it opens the sheet instead), Escape, the × */
   document.addEventListener('mousedown',function(e){
     if(!panelOpen()) return;
     if(panel.contains(e.target)) return;
-    for(var ci=0; ci<chips.length; ci++) if(chips[ci].contains(e.target)) return;
     if(e.target.closest && e.target.closest('#mbar')) return;
     closePanel();
   });
@@ -631,7 +593,7 @@ function renderPanel(){
   h+='<footer class="rvf"><button type="button" data-act="'+(id?'signout':'less')+'">'+(id?'Switch person':'Back')+'</button>'+
      (id?'<button type="button" data-act="less">Fewer options</button>':'')+'</footer>';
   panel.innerHTML=h;
-  paintChip();
+  paintBadge();
 
   panel.onclick=function(e){
     var b=e.target.closest('button'); if(!b) return;
@@ -731,7 +693,7 @@ function renderPanel(){
     if(a==='doreset'){
       var zid=current(); if(!zid) return;
       putData(zid,{v:1,box:{},runs:0,last:null});
-      paintChip();
+      paintBadge();
       /* The store merges on write and never truncates, so an empty push would
          leave the old schedule sitting there. Drop the record, then re-create
          it empty — which also keeps the name on the roster. */
@@ -887,7 +849,7 @@ function startReview(who){
   if(!window.__axShelf){ return startQuiz(who); }      /* transform too old */
   var built=buildSession(who);
   if(!built.briefs.length){
-    openPanel(chip);
+    openPanel(trigger());
     var s0=panel.querySelector('#rvio');
     if(s0) s0.innerHTML='<p class="msg bad">This shelf has no briefs to review.</p>';
     return;
@@ -984,9 +946,9 @@ function endReview(save){
   document.body.classList.remove('reviewing');
   if(bar) bar.hidden=true;
   window.__axShelf.clear();
-  rev=null; paintChip();
+  rev=null; paintBadge();
   window.scrollTo({top:0});
-  if(save && moves.length){ openPanel(chip);
+  if(save && moves.length){ openPanel(trigger());
     var slot=panel.querySelector('#rvio');
     if(slot) slot.innerHTML='<p class="msg">'+moves.length+' brief'+(moves.length===1?'':'s')+
       ' scored \u2013 '+moves.filter(function(m){return m.up;}).length+' moved up.</p>';
@@ -1000,7 +962,7 @@ function startQuiz(who){
   sessionFocus=document.activeElement;
   var built=buildSession(who);
   if(!built.queue.length){
-    openPanel(chip);
+    openPanel(trigger());
     var slot=panel.querySelector('#rvio');
     if(slot) slot.innerHTML='<p class="msg bad">This shelf has no quiz items yet. '+
       'Switch to Step 2 for the pooled view. '+esc(availabilityText())+'</p>';
@@ -1031,7 +993,7 @@ function endSession(save){
   }
   document.body.classList.remove('rvopen');
   AX.emit('layout:hold', false);
-  paintChip();
+  paintBadge();
   if(sessionFocus && sessionFocus.isConnected) try{ sessionFocus.focus({preventScroll:true}); }catch(e){}
   sessionFocus=null;
 }
@@ -1309,21 +1271,6 @@ function finish(){
 function boot(){
   if(!document.querySelector('.brief')) return;
   buildPanel();
-  var nav=document.getElementById('nav');
-  var search=document.getElementById('search');
-  /* Beneath the shelf selector and the three switches: what you choose
-     before you read sits together, and Review is the larger control. */
-  var sp=document.querySelector('#nav #modes')||document.querySelector('#nav .shelfpick');
-  var lau=buildLauncher('side');
-  if(sp && sp.parentNode) sp.parentNode.insertBefore(lau, sp.nextSibling);
-  else if(nav && search) nav.insertBefore(lau, search.nextSibling);
-  chip=chips[0];
-
-  /* And again in the masthead, under its shelf row — the sidebar does not
-     exist on a phone, and even on a desktop this is what gets read first. */
-  var msp=document.querySelector('.masthead .shelfpick');
-  if(msp && msp.parentNode) msp.parentNode.insertBefore(buildLauncher('mast'), msp.nextSibling);
-
   /* phone: a fourth bar button opens the same panel */
   var bar=document.getElementById('mbar');
   if(bar){
@@ -1333,8 +1280,8 @@ function boot(){
     bar.insertBefore(b, top||null);
     b.addEventListener('click',function(){ panelOpen()?closePanel():openPanel(b); });
   }
-  paintChip();
-  try{ syncRoster(function(){ paintChip(); }); }catch(e){ mark('off'); }
+  paintBadge();
+  try{ syncRoster(function(){ paintBadge(); }); }catch(e){ mark('off'); }
   /* the status-bar Review sheet drives this scheduler through window.axRv */
   window.axRv={
     current:current, nameOf:nameOf, initials:initials,
@@ -1347,8 +1294,8 @@ function boot(){
         if(out.length<6 && !out.some(function(x){ return x.id===p.id; })) out.push(p); });
       return out.slice(0,6);
     },
-    refresh:function(then){ syncRoster(function(){ syncPull(current(), function(){ paintChip(); if(then) then(); }); }); },
-    use:function(pid,then){ setActive(pid); paintChip(); syncPull(pid,function(){ paintChip(); if(then) then(); }); },
+    refresh:function(then){ syncRoster(function(){ syncPull(current(), function(){ paintBadge(); if(then) then(); }); }); },
+    use:function(pid,then){ setActive(pid); paintBadge(); syncPull(pid,function(){ paintBadge(); if(then) then(); }); },
     needsPin:function(pid){ var p=profiles().filter(function(x){ return x.id===pid; })[0]; return !!(p && p.hasPin && !p.pin); },
     tryPin:function(pid,pin,then){
       setPin(pid,pin);
@@ -1360,8 +1307,8 @@ function boot(){
     },
     start:function(){ var w=current(); if(w) startReview(w); },
     quiz:function(){ var w=current(); if(w) startQuiz(w); },
-    signOut:function(){ signOut(); paintChip(); },
-    add:function(name){ var id=addProfile(name); paintChip(); return id; },
+    signOut:function(){ signOut(); paintBadge(); },
+    add:function(name){ var id=addProfile(name); paintBadge(); return id; },
     open:function(anchor){ openPanel(anchor); }
   };
 
@@ -1375,7 +1322,7 @@ function boot(){
   /* shelf, Board-style only and review all re-run applyShelf, which announces itself */
   document.addEventListener('ax-shelf',function(){ setTimeout(paintChip,0); });
   window.addEventListener('storage',function(e){
-    if(e.key && e.key.indexOf('ax-')===0) paintChip();     /* another tab */
+    if(e.key && e.key.indexOf('ax-')===0) paintBadge();     /* another tab */
   });
 
   window.__axRev={profiles:profiles,current:current,split:split,pool:pool,
@@ -1384,7 +1331,7 @@ function boot(){
                  mergeBox:mergeBox,syncRoster:syncRoster,syncPull:syncPull,syncPush:syncPush,
                  SYNC:SYNC,setPin:setPin,pinOf:pinOf,
                  decodeCode:decodeCode,dataOf:dataOf,putData:putData,
-                 openPanel:function(){ openPanel(chip); },closePanel:closePanel,
+                 openPanel:function(){ openPanel(trigger()); },closePanel:closePanel,
                  recents:recents,signOut:signOut,mineOnly:mineOnly,setActive:setActive,
                  BOXES:BOXES};
 }

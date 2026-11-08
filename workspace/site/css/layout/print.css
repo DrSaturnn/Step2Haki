@@ -28,9 +28,8 @@ table,ol.bank,ul.plain{page-break-inside:avoid}
 #mbar{display:none!important}
 .shelfpick button.soon{display:none}
 .shelfpick{display:none}
-.rvmast{display:none!important}
 html.cv .brief{content-visibility:visible}
-#rvlaunch,#rvpanel,#rvsession{display:none!important}
+#rvpanel,#rvsession{display:none!important}
 #rvbar,.rvmark{display:none!important}
 #navscrim{display:none!important}
 #navtab{display:none!important}
