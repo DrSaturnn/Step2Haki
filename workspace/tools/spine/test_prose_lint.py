@@ -93,13 +93,20 @@ expect('new header counted only on a touched brief',
        and 'header_new' not in [h['pattern'] for h in P.lint_brief('<table><tr><th>Zxq header</th></tr></table>')])
 expect('known header passes on a touched brief',
        'header_new' not in [h['pattern'] for h in P.lint_brief('<table><tr><th>Diagnosis</th></tr></table>', touched=True)])
-POPB = ('<p><button class="sp-pop" aria-controls="x1">Term</button><span class="sp-pop-b" id="x1" hidden>%s'
+POPB = ('<p><button class="sp-pop" aria-controls="x1">Title</button><span class="sp-pop-b" id="x1" hidden>%s'
         '<span class="sp-ct">Title</span>%s</span></p>')
 catches('hover line over 16 words', POPB % ('', '<span class="sp-l">%s</span>' % words(17)), 'hover_line_long')
 clean('hover lines of 12 words', POPB % ('', '<span class="sp-l">%s</span><span class="sp-l">%s</span>' % (words(12), words(12))))
 catches('hover sentence over 16 words, no lines', POPB % ('', words(18) + '.'), 'hover_line_long')
 catches('source kicker', POPB % ('<span class="sp-k">Label</span>', '<span class="sp-l">Diarrhea, tremor</span>'), 'source_kicker')
 clean('kicker naming no source', POPB % ('<span class="sp-k">Mnemonic</span>', '<span class="sp-l">Diarrhea, tremor</span>'))
+ANC = ('<p>Nocturnal, eased by shaking; <button class="sp-pop sp-a" aria-controls="a1">%s</button><span class="sp-pop-b" '
+       'id="a1" hidden><span class="sp-ct">Phalen and Tinel</span><span class="sp-l">Phalen: wrist flexion</span></span></p>')
+catches('hover anchor: trigger shares no word with its card', ANC % 'Nocturnal', 'hover_anchor')
+clean('hover anchor: trigger on the card term', ANC % 'Tinel and Phalen signs')
+P._ANCHOR = {'Nocturnal|Phalen and Tinel'}
+clean('hover anchor: allow-listed fit', ANC % 'Nocturnal')
+P._ANCHOR = None
 catches('wh header', '<h5>What raises the stakes</h5>', 'header_wh_word')
 catches('P14 hedge', '<table><tr><td>A monoamine oxidase inhibitor (MAOI), or one stopped inside its washout</td>'
         '</tr></table>', 'hedged_narration')

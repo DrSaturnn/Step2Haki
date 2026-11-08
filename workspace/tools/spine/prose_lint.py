@@ -472,6 +472,28 @@ def structural_headers(inner_html):
 
 SRC_KICK = re.compile(r"^(?:Label|.*\blabel\b|AnKing|UWorld|NBME|Merck|MSD|StatPearls|First Aid|Pocket Medicine|"
                       r"UpToDate|Step 2 answer)", re.I)
+ANCHOR_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+                           'repair', 'efficiency', 'ANCHOR_ALLOW.json')
+ANCHOR_STOP = set('a an the of and or to in on for with by at as is are be from that this its it into than then when if '
+                  'not no after before over under per vs versus also only more most less first second why what which how'.split())
+_ANCHOR = None
+
+
+def anchor_allow():
+    """keys 'trigger|title' judged to fit in the s170 anchor pass although they share no content word"""
+    global _ANCHOR
+    if _ANCHOR is None:
+        try:
+            _ANCHOR = set(json.load(open(ANCHOR_PATH, encoding='utf-8')).get('fits', []))
+        except (OSError, ValueError):
+            _ANCHOR = set()
+    return _ANCHOR
+
+
+def anchor_stems(t):
+    return {w[:5] for w in re.findall(r'[a-z0-9][a-z0-9-]+', t.lower()) if w not in ANCHOR_STOP and len(w) > 2}
+
+
 HOVER_LINE_MAX = 16          # TEXTBOOK_STYLE rule 6: hover line about 12 words; counted over 16
 
 
@@ -582,6 +604,15 @@ def lint_brief(inner_html, report_only=False, touched=False):
                 emit('hover_title', 'span.sp-k', kt, [('source_kicker', kt)])    # s170 T5 (N4, C7)
             k.decompose()
         hl = hover_lines(copy)
+        # s170 A1 (D-20261108-5): the trigger names what its card explains; a trigger sharing no content word with the
+        # card's title, kicker or first line is counted unless the anchor pass judged it a fit (ANCHOR_ALLOW.json)
+        if btn.name == 'button':
+            trig = vis(btn)
+            kick = ' '.join(vis(k) for k in body.find_all('span', class_='sp-k'))
+            first_l = vis(hl[0]) if hl and not isinstance(hl[0], str) else (hl[0] if hl else vis(copy)[:160])
+            if trig and not (anchor_stems(trig) & anchor_stems(htitle + ' ' + kick + ' ' + first_l)) and \
+                    (trig + '|' + htitle) not in anchor_allow():
+                emit('hover_title', 'button.sp-pop', trig, [('hover_anchor', '%s -> %s' % (trig[:40], htitle[:40]))])
         parts = []
 
         def walkb(n):
