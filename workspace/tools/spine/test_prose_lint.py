@@ -97,6 +97,8 @@ POPB = ('<p><button class="sp-pop" aria-controls="x1">Title</button><span class=
         '<span class="sp-ct">Title</span>%s</span></p>')
 catches('hover line over 16 words', POPB % ('', '<span class="sp-l">%s</span>' % words(17)), 'hover_line_long')
 clean('hover lines of 12 words', POPB % ('', '<span class="sp-l">%s</span><span class="sp-l">%s</span>' % (words(12), words(12))))
+clean('hover lines without periods are separate sentences (length_over_30)',
+      POPB % ('', ''.join('<span class="sp-l">%s</span>' % words(12) for _ in range(3))))
 catches('hover sentence over 16 words, no lines', POPB % ('', words(18) + '.'), 'hover_line_long')
 catches('source kicker', POPB % ('<span class="sp-k">Label</span>', '<span class="sp-l">Diarrhea, tremor</span>'), 'source_kicker')
 clean('kicker naming no source', POPB % ('<span class="sp-k">Mnemonic</span>', '<span class="sp-l">Diarrhea, tremor</span>'))

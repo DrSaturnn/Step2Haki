@@ -626,11 +626,14 @@ def lint_brief(inner_html, report_only=False, touched=False):
                         parts.append(' -> ')
                         continue
                     blk = c.name in BLOCK_TAGS or 'sp-why-l' in _cls(c) or 'sp-l' in _cls(c)
+                    # a hover line (span.sp-l) ends its sentence: ' · ' is the line boundary DOT_SPLIT splits on, so
+                    # the length check counts each line, not lines joined without a period (s170 pc-snri lane)
+                    end = ' · ' if 'sp-l' in _cls(c) else ' '
                     if blk:
                         parts.append(' ')
                     walkb(c)
                     if blk:
-                        parts.append(' ')
+                        parts.append(end)
         walkb(copy)
         btxt = re.sub(r'\s+', ' ', ''.join(parts)).strip()
         has_break = bool(copy.find(['br', 'div', 'p', 'ol', 'ul', 'li']) or copy.find(class_=['sp-why-l', 'sp-l']))
