@@ -34,14 +34,19 @@ for fid, nid, q in spec.get('cards', []):
     facts.append(dict(id=fid, local='repair/sources/anki/anki_cards.txt', quote=q, kind='board', nid=nid,
                       title='AnKing card %s' % nid + (' (%s)' % '; '.join(parts) if parts else ''),
                       population=spec['population'], setting='Step 2 CK board teaching'))
+try:
+    WEBIX = json.load(open(os.path.join(WS, 'repair', 'sources', 'web', 'index.json'), encoding='utf-8'))
+except (OSError, ValueError):
+    WEBIX = {}
 for w in spec.get('web', []):
     fid, sha, sec, q = w[:4]
     t = open(os.path.join(WS, 'repair', 'sources', 'web', sha + '.txt'), encoding='utf-8').read()
     if norm(q) not in norm(t):
         bad.append((fid, q[:60])); continue
     assert fid not in seen, fid; seen.add(fid)
+    ix = WEBIX.get(sha, {})  # s171: title and url from the web cache index (review packets showed "None, None")
     facts.append(dict(id=fid, sha=sha, quote=q, section=sec, population=w[4] if len(w) > 4 else spec['population'],
-                      setting='clinical reference', via='fetch'))
+                      setting='clinical reference', via='fetch', title=ix.get('title'), url=ix.get('url')))
 for fid, f, title, q in spec.get('local', []):      # s147: UWorld question files, as the AIR and COPD facts cite them
     assert f.startswith('repair/sources/'), f
     if norm(q) not in norm(open(os.path.join(WS, f), encoding='utf-8').read()):
