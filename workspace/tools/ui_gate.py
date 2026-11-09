@@ -21,10 +21,12 @@ browser job at a time:
 Exit 1 when any test fails; every test runs and prints its verdict line.
 
 Faster runs (s169, D-20261107-14; measured on the live page in a two-core container, 18.6 min before):
-- a passed test is recorded in local/ui_gate/passed.json under a key made from the page (its change log block and build
-  stamp emptied, as perf_budget measures size), BASE, ALLOW, the views and the test's own tool and baseline files; the
-  same test on the same key is not run again and prints "PASS (recorded ...)". So ship.sh's run on the approved
-  candidate takes seconds when the candidate already passed. --fresh runs every test.
+- a passed test writes a stamp (tools/stamps.py, local/stamps/ui_gate/<test>.json; s171b moved it there from
+  local/ui_gate/passed.json) keyed on the page (its change log block and build stamp emptied, as perf_budget measures
+  size), BASE, ALLOW, the views, the test's own tool and baseline files, package-lock.json and the node version; the
+  same test on the same key is not run again and prints "PASS (stamp ...)", and a test that runs names the inputs that
+  changed. So ship.sh's run on the approved candidate takes seconds when the candidate already passed, and a rerun after
+  a perf fail runs perf alone. --fresh (or AX_STAMPS=off) runs every test.
 - parity loads no page when no style rule differs between BASE and PAGE (zero checks measure nothing; was 296 s);
   otherwise both pages of a view load at the same time (ui_check.js).
 - a11y: two pages per view, each loading once and taking every other setting (543 s to about 320 s).
@@ -34,6 +36,8 @@ import hashlib, json, os, re, subprocess, sys, tempfile, time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WS = os.path.dirname(HERE)
+sys.path.insert(0, HERE)
+import stamps as ST  # noqa: E402
 
 
 def run(name, cmd, ok_word):
@@ -54,7 +58,6 @@ TOOLS = {'parity': ['tools/ui_check.js'], 'theme': ['tools/theme_gate.js'],
          'a11y': ['tools/a11y_scan.js', 'tools/spine/a11y_baseline.json'],
          'perf': ['tools/perf_budget.py', 'tools/perf_load.js', 'tools/spine/perf_baseline.json'],
          'twopane': ['tools/two_pane_check.js', 'tools/serve_page.js']}
-RECORD = os.path.join(WS, 'local', 'ui_gate', 'passed.json')
 
 
 def digest(path, page=False):
@@ -68,21 +71,10 @@ def digest(path, page=False):
 
 
 def key(test, page, base, allow, views):
-    parts = [test, digest(page, True), digest(base, True), digest(allow), views] + [digest(os.path.join(WS, t)) for t in TOOLS[test]]
-    return '|'.join(parts)
-
-
-def recorded():
-    try:
-        return json.load(open(RECORD))
-    except (OSError, ValueError):
-        return {}
-
-
-def remember(k):
-    r = recorded(); r[k] = time.strftime('%Y-%m-%d %H:%M')
-    os.makedirs(os.path.dirname(RECORD), exist_ok=True)
-    json.dump(r, open(RECORD, 'w'), indent=1)
+    """the stamp groups of one test"""
+    return {'page': digest(page, True), 'base': digest(base, True), 'allow': digest(allow), 'views': views,
+            'tools': '|'.join(digest(os.path.join(WS, t)) for t in TOOLS[test]),
+            'node': ST.ghash(WS, ['package-lock.json'], ST._run(['node', '--version']))}
 
 
 def main(argv):
@@ -95,11 +87,15 @@ def main(argv):
     fresh = '--fresh' in argv
     ok = True
     keys = {t: key(t, page, base, allow, views) for t in TOOLS}
-    rec = {} if fresh else recorded()
     for t in list(TOOLS):
-        if t not in skip and keys[t] in rec:
-            print('%-6s PASS (recorded %s: same page, base, allow list, views and tools)' % (t, rec[keys[t]]))
+        if t in skip or t == 'theme':   # theme keeps tools/style_surface.py's record
+            continue
+        hit, changed = (None, ['--fresh']) if fresh else ST.lookup('ui_gate', t, keys[t])
+        if hit:
+            print('%-6s PASS (stamp %s: same page, base, allow list, views and tools)' % (t, hit['date']))
             skip.add(t)
+        else:
+            print('%-6s runs (stamp miss: %s)' % (t, ', '.join(changed)))
     passed = []
 
     def run_t(t, cmd, word):
@@ -148,7 +144,8 @@ def main(argv):
         if 'twopane' not in skip:
             ok &= run_t('twopane', ['node', 'tools/two_pane_check.js', page], 'TWO-PANE PASS')
     for t in passed:
-        remember(keys[t])
+        if t != 'theme':
+            ST.write('ui_gate', t, keys[t], summary='%s PASS' % t)
     print('UI-GATE ' + ('PASS' if ok else 'FAIL'))
     return 0 if ok else 1
 

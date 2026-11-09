@@ -58,6 +58,9 @@ def lead(d):
         if C.inside(p, appr):
             C.refuse('APPROVAL GATE: approval records are written only by the hook, when Jonathan says "ship" in reply '
                      'to the screenshots.')
+        if C.inside(p, os.path.join(C.WS, 'local', 'stamps')):
+            C.refuse('STAMP GATE (s171b): stamps are written only by a check that passed (verify.py READY, ship.sh, '
+                     'ui_gate.py); never by hand.')
     if d.get('tool_name') == 'Bash':
         cmd = ti.get('command', '')
         # the lead may read or mention the state, but may not feed the approval hook a message, point the hooks at
@@ -66,6 +69,10 @@ def lead(d):
                 or (re.search(r'hooks/approvals', cmd) and re.search(WRITE_OPS, cmd))):
             C.refuse('APPROVAL GATE: the lead may not run the approval hook, redirect the hook state, or write approval '
                      'records by command.')
+        if (re.search(r'\bAX_(VERIFY|STAMPS_DIR)\s*=', cmd) or re.search(r'stamps\.py["\']?\s+commit\b', cmd)
+                or (re.search(r'local/stamps', cmd) and re.search(WRITE_OPS, cmd))):
+            C.refuse('STAMP GATE (s171b): the lead may not commit a stamp by hand, point the stamps at another store, '
+                     'swap verify.py for a stub, or write into local/stamps by command.')
         if forced_public_add(cmd, d.get('cwd') or ''):
             C.refuse('PUBLIC-REPO GATE: no forced git add in the public clone (s155: 41dcbdf force-added the ignored '
                      'review lanes, vendor text, to public wip/s155). An ignored path is ignored on purpose: lanes, '

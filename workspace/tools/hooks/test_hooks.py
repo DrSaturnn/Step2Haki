@@ -17,7 +17,8 @@ WS = os.path.abspath(os.path.join(H, '..', '..'))
 T = tempfile.mkdtemp(prefix='hooktest-')
 ENV = dict(os.environ, AX_HOOK_STATE=os.path.join(T, 'state'), AX_TRANSCRIPTS=os.path.join(T, 'projects'),
            AX_WAVE=os.path.join(T, 'WAVE.json'), AX_LEDGER=os.path.join(T, 'ledger.csv'),
-           AX_LEDGER_LEAD=os.path.join(T, 'ledger_lead.csv'), AX_TEST_LOG='{"v": 0, "note": "test"}')
+           AX_LEDGER_LEAD=os.path.join(T, 'ledger_lead.csv'), AX_TEST_LOG='{"v": 0, "note": "test"}',
+           AX_STAMPS_DIR=os.path.join(T, 'stamps'))
 TB = 's0hooktest'                                  # a throwaway batch folder, removed at the end
 TBD = os.path.join(WS, 'repair', TB)
 LANE = os.path.join(WS, 'repair', 'migration', 'peds', 'nephrotic-child', 'spine')
@@ -232,6 +233,87 @@ try:
     rg = subprocess.run([sys.executable, os.path.join(H, 'ready_gate.py'), 's0readytest'], capture_output=True, text=True, env=ENV)
     expect('G-READY ignores a small edit', (rg.returncode, rg.stdout + rg.stderr), 0)
     shutil.rmtree(RB, ignore_errors=True)
+    # ---- s171b stamps (D-20261109-4): ready_gate accepts verify's READY stamp, runs verify on a miss or a changed input
+    SF = os.path.join(WS, 'repair', 'migration', '_s0stamptest', 'stamp', 'spine')   # ignored path: no git change
+    os.makedirs(SF, exist_ok=True)
+    spec = json.dumps({'edits': [{'op': 'replace_brief', 'brief': 's0-stamp-test',
+                                  'html': '<div class="brief" id="s0-stamp-test" data-spine="2"></div>'}]})
+    open(os.path.join(SF, '10_s0_stamp_test_spine.json'), 'w').write(spec)
+    os.makedirs(RB, exist_ok=True)
+    open(os.path.join(RB, '10_s0_stamp_test_spine.json'), 'w').write(spec)
+    STUB, SLOG = os.path.join(T, 'stub_verify.py'), os.path.join(T, 'stub_verify.log')
+    open(STUB, 'w').write('import sys\nopen(%r, "a").write(sys.argv[1] + "\\n")\nprint("verify stub: FAIL")\nsys.exit(1)\n' % SLOG)
+    SENV = dict(ENV, AX_VERIFY=STUB)
+    TOOLS_DIR = os.path.join(WS, 'tools')
+
+    def stamp_now():
+        return subprocess.run([sys.executable, '-c', 'import sys; sys.path.insert(0, %r); import stamps as S; '
+                               'S.write("verify", S.folder_name(%r), S.verify_groups(%r), summary="verify s0-stamp-test: READY")'
+                               % (TOOLS_DIR, SF, SF)], env=ENV, capture_output=True, text=True).returncode
+
+    def gate_run(env=None):
+        if os.path.exists(SLOG):
+            os.remove(SLOG)
+        r = subprocess.run([sys.executable, os.path.join(H, 'ready_gate.py'), 's0readytest'], capture_output=True,
+                           text=True, env=env or SENV)
+        return r.returncode, r.stdout + r.stderr, os.path.exists(SLOG)
+    rc, out, ran = gate_run()
+    expect('stamp miss (no stamp): ready_gate runs verify', (0 if rc == 1 and ran and 'stamp miss: no stamp' in out else 1, out), 0)
+    expect('stamp written', (stamp_now(), ''), 0)
+    rc, out, ran = gate_run()
+    expect('stamp hit: READY without running verify', (0 if rc == 0 and not ran and 'by stamp' in out else 1, out), 0)
+    open(os.path.join(SF, 'verify_all.log'), 'w').write('a log written after the run')
+    rc, out, ran = gate_run()
+    expect('stamp hit: a log in the folder is not an input', (0 if rc == 0 and not ran else 1, out), 0)
+    open(os.path.join(SF, 'outline.json'), 'w').write('{"changed": 1}')
+    rc, out, ran = gate_run()
+    expect('changed input: stamp miss names the folder, verify runs',
+           (0 if rc == 1 and ran and 'stamp miss: folder' in out else 1, out), 0)
+    stamp_now()
+    rc, out, ran = gate_run()
+    expect('restamped after the change: hit again', (0 if rc == 0 and not ran else 1, out), 0)
+    rc, out, ran = gate_run(dict(SENV, AX_STAMPS='off'))
+    expect('AX_STAMPS=off: verify runs despite a matching stamp', (0 if rc == 1 and ran and 'AX_STAMPS=off' in out else 1, out), 0)
+    sp = os.path.join(ENV['AX_STAMPS_DIR'], 'verify', 'repair__migration___s0stamptest__stamp__spine.json')
+    before = json.load(open(sp))['entries'][0]['key']
+    vf = subprocess.run([sys.executable, os.path.join(WS, 'tools', 'spine', 'verify.py'), SF], capture_output=True,
+                        text=True, env=ENV)
+    expect('verify FAIL writes no stamp', (0 if vf.returncode == 1 and json.load(open(sp))['entries'][0]['key'] == before
+                                           and len(json.load(open(sp))['entries']) == 1 else 1, vf.stdout[-200:]), 0)
+    shutil.rmtree(os.path.dirname(os.path.dirname(SF)), ignore_errors=True)
+    shutil.rmtree(RB, ignore_errors=True)
+    # ship.sh checks: stamps.py check misses, commit, then hits; a changed page misses and names it
+    pg, pend = os.path.join(T, 'page.html'), os.path.join(T, 'pend.json')
+    open(pg, 'w').write('<html>a</html>')
+
+    def stp(*a):
+        return subprocess.run([sys.executable, os.path.join(TOOLS_DIR, 'stamps.py')] + list(a), capture_output=True,
+                              text=True, env=ENV)
+    r = stp('check', 'render', pend, '--page', pg)
+    expect('ship stamp miss before any pass', (r.returncode, r.stdout), 1)
+    stp('commit', pend, 'render: PASS 209 briefs')
+    r = stp('check', 'render', pend, '--page', pg)
+    expect('ship stamp hit prints the stored line',
+           (0 if r.returncode == 0 and 'render: PASS 209 briefs (stamp' in r.stdout else 1, r.stdout), 0)
+    open(pg, 'w').write('<html>b</html>')
+    r = stp('check', 'render', pend, '--page', pg)
+    expect('ship stamp: changed page misses and names it',
+           (0 if r.returncode == 1 and 'stamp miss: page' in r.stdout else 1, r.stdout), 0)
+    sys.path.insert(0, TOOLS_DIR)
+    import stamps as _S
+    import ui_gate as _U
+    expect('perf and a11y baselines are ui_gate inputs only (a perf fix reruns perf alone)',
+           (0 if not set(_S.files(WS, ['tools/**/*.json'], exclude=_S.UI_ONLY)) & _S.UI_ONLY and
+            'tools/spine/perf_baseline.json' in _U.TOOLS['perf'] and
+            'tools/spine/perf_baseline.json' not in _U.TOOLS['parity'] + _U.TOOLS['a11y'] + _U.TOOLS['twopane'] else 1, ''), 0)
+    # G-STAMP: the lead cannot forge a stamp or swap verify for a stub
+    expect('lead writes a stamp', run('callgate.py', {'tool_name': 'Write', 'tool_input': {
+        'file_path': os.path.join(WS, 'local', 'stamps', 'verify', 'x.json')}}), 2)
+    for c, want in (('AX_VERIFY=/bin/true tools/ship.sh s1 "m"', 2), ('python3 tools/stamps.py commit /tmp/p.json', 2),
+                    ('AX_STAMPS_DIR=/tmp/x python3 tools/hooks/ready_gate.py s1', 2),
+                    ('echo {} > workspace/local/stamps/gate/gate.json', 2),
+                    ('python3 tools/stamps.py show', 0), ('AX_STAMPS=off tools/ship.sh s1 "m" --checks-only', 0)):
+        expect('lead %s' % c[:44], run('callgate.py', {'tool_name': 'Bash', 'tool_input': {'command': c}}), want)
     # ---- H4 per-launch limit (Jonathan 2026-10-12): a Budget: line lowers the role budget, never raises it
     for aid, line in (('b1', 'Budget: 1'), ('b2', 'Budget: 99 calls'), ('b3', 'Budget: none')):
         PB = 'Role: probe\nPlan step: R2\nLane: %s\n%s\n\nprobe %s' % (LANE, line, aid)

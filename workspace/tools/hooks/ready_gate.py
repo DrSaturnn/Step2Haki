@@ -5,6 +5,11 @@ checks plus the four current review receipts). Small replace or set_attr edits t
 they are covered by the approval gate (approval.py), not by READY.
 
   python3 tools/hooks/ready_gate.py sNN      exit 0 if every spine build in the batch is READY
+
+s171b (D-20261109-4): verify.py writes a stamp when a full run ends READY (tools/stamps.py: the folder, its receipts, the
+page, rules, docs, site, tools and sources). A folder whose stamp matches its inputs now is READY without a rerun (the
+S8 verdict on the same inputs); a miss names the changed inputs and runs verify, as before. AX_STAMPS=off reruns all.
+AX_VERIFY (test_hooks only) replaces verify.py with a stub.
 """
 import glob
 import json
@@ -14,6 +19,10 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WS = os.path.abspath(os.path.join(HERE, '..', '..'))
+sys.path.insert(0, os.path.join(WS, 'tools'))
+import stamps as ST  # noqa: E402
+# a stub verify for test_hooks.py only: honored beside AX_HOOK_STATE, which callgate refuses in the lead's commands
+VERIFY = (os.environ.get('AX_VERIFY') if os.environ.get('AX_HOOK_STATE') else None) or os.path.join(WS, 'tools', 'spine', 'verify.py')
 
 
 def folders():
@@ -62,17 +71,23 @@ def main(b):
                 except (ValueError, KeyError, IndexError):
                     pass
         return None
-    todo = []
+    todo, hits = [], []
     for bid in builds:
         d = own(bid) or have.get(bid)
         if not d:
             bad.append('%s: no local spine folder' % bid)
             continue
+        hit, changed = ST.lookup('verify', ST.folder_name(d), ST.verify_groups(d))
+        if hit:
+            hits.append('%s (stamp %s)' % (bid, hit['date']))
+            continue
+        print('ready: verify %s runs (stamp miss: %s)' % (bid, ', '.join(changed)))
         todo.append(d)
+    if hits:
+        print('ready: %d READY by stamp, verify not rerun: %s' % (len(hits), ', '.join(hits)))
 
     def one(d):
-        r = subprocess.run([sys.executable, os.path.join(WS, 'tools', 'spine', 'verify.py'), d], capture_output=True,
-                           text=True, cwd=WS)
+        r = subprocess.run([sys.executable, VERIFY, d], capture_output=True, text=True, cwd=WS)
         return r.returncode, (r.stdout.strip().splitlines() or ['?'])[-1]
     # s154c (105 briefs, about 95 s each): AX_READY_JOBS runs the same full verify on several folders at once; the
     # check per brief is unchanged and the default stays one at a time
@@ -89,7 +104,7 @@ def main(b):
     if bad:
         print('ready: NOT READY: ' + ' | '.join(bad))
         return 1
-    print('ready: %d spine build(s) READY: %s' % (len(builds), ', '.join(builds)))
+    print('ready: %d spine build(s) READY (%d by stamp, %d verified now): %s' % (len(builds), len(hits), len(todo), ', '.join(builds)))
     return 0
 
 

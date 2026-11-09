@@ -690,6 +690,13 @@ def main(argv):
             shutil.rmtree(v.tmp, ignore_errors=True)
         print(v.deps_line(part))
         return 0
+    # s171b (D-20261109-4): a full run that ends READY writes a stamp of its inputs (tools/stamps.py), so ready_gate.py
+    # accepts the S8 verdict at the ship and runs verify again only when an input changed. The key is taken before and
+    # after the run; a run whose inputs moved under it writes no stamp.
+    stamp = not fast and '--mech' not in argv
+    if stamp:
+        import stamps as ST
+        g0 = ST.verify_groups(argv[0])
     v = Verify(argv[0], fast, keep).run()
     for line in v.ok + v.base + v.warn + v.fix:
         print(line)
@@ -703,8 +710,15 @@ def main(argv):
         print('verify %s: MECHANICAL PASS, NOT READY: %s' % (v.bid, v.ready))
         return 2
     note = getattr(v, 'ready_note', '')
-    print('verify %s: READY (mechanical checks pass and the acc, read and flags receipts are current and PASS)%s'
-          % (v.bid, ' [conditional PASS replayed: %s]' % note if note else ''))
+    line = 'verify %s: READY (mechanical checks pass and the acc, read and flags receipts are current and PASS)%s' % (
+        v.bid, ' [conditional PASS replayed: %s]' % note if note else '')
+    if stamp:
+        g1 = ST.verify_groups(argv[0])
+        if g1 == g0:
+            ST.write('verify', ST.folder_name(argv[0]), g0, summary=line, bid=v.bid)
+        else:
+            print('stamp: not written (inputs changed during the run: %s)' % ', '.join(sorted(k for k in g0 if g0[k] != g1.get(k))))
+    print(line)
     return 0
 
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# ship.sh sNN "<message>" [--attr-only]
+# ship.sh sNN "<message>" [--attr-only] [--checks-only]
 # One call per batch, from anywhere. Workspace = this script's parent; repo root = Step2Haki.
 #  1. build repair/sNN/*.json onto a scratch copy; rules self-tests (test_migrate_check, test_gate_rules);
 #     gate (every brief type, incl. source-and-scope G1-G3, K3; base HEAD; --attr-only also asserts
@@ -19,6 +19,12 @@
 #  5. push origin main only if /home/claude/.config/axbx/gh_token exists (one-shot extraheader via
 #     GIT_CONFIG_* env: never in .git/config, argv or output); else "push skipped: no token"
 #  6. /mnt/user-data/outputs: index.html, axbx-repo.bundle, axbx-local-only.tar.gz
+# Stamps (s171b, D-20261109-4): each check that passes writes an input-hash stamp (tools/stamps.py, local/stamps/); a
+# check whose stamp matches its inputs is skipped and prints its stored line with the stamp date, so a rerun after a late
+# fail repeats only the failed check and the checks whose inputs changed. ready_gate accepts verify's READY stamp;
+# ui_gate keeps a stamp per test. The approval, build, site and changelog steps run every time. AX_STAMPS=off runs all.
+# --checks-only (s171b): every check in step 1, then stop; nothing is written; an unapproved batch is reported, not
+# refused, so the checks can run (and stamp) before the batch is presented.
 # Summary lines only.
 set -uo pipefail
 WS="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -27,11 +33,18 @@ git -C "$ROOT" config user.email 297481111+DrSaturnn@users.noreply.github.com; g
 SITE="$ROOT/discriminator-briefs-site/index.html"
 OUT="${AX_OUT:-/mnt/user-data/outputs}"   # Codex on the Mac: AX_OUT=<a scratch folder outside Documents>
 TOKF=/home/claude/.config/axbx/gh_token
-B="${1:-}"; MSG="${2:-}"; MODE="${3:-}"
-if [[ ! "$B" =~ ^s[0-9A-Za-z_-]+$ || -z "$MSG" ]]; then echo 'usage: tools/ship.sh sNN "<message>" [--attr-only]'; exit 2; fi
+B="${1:-}"; MSG="${2:-}"; MODE=""; CHECKS_ONLY=""
+for a in "${@:3}"; do case "$a" in --attr-only) MODE=--attr-only;; --checks-only) CHECKS_ONLY=1;;
+  *) echo "ship.sh: unknown option $a"; exit 2;; esac; done
+if [[ ! "$B" =~ ^s[0-9A-Za-z_-]+$ || -z "$MSG" ]]; then echo 'usage: tools/ship.sh sNN "<message>" [--attr-only] [--checks-only]'; exit 2; fi
 cd "$WS" || exit 2
 TMP="$(mktemp -d /tmp/axbx-ship-XXXXXX)"; trap 'rm -rf "$TMP"' EXIT
 fail(){ echo "ship $B: ABORT at $1 (nothing written)"; [[ -n "${2:-}" ]] && echo "$2"; exit 1; }
+# stamps: st CHECK [ARGS] exits 0 and prints the stored line when the check's stamp matches its inputs; stc CHECK LINE
+# writes the stamp after the check passed (the key taken by st, before the check ran)
+mkdir -p "$TMP/stamps"
+st(){ local c=$1; shift; python3 tools/stamps.py check "$c" "$TMP/stamps/$c.json" "$@"; }
+stc(){ python3 tools/stamps.py commit "$TMP/stamps/$1.json" "${2:-}" >/dev/null 2>&1 || echo "stamp: $1 not written"; }
 # Commit trailers come from the shipping session, never hardcoded (s131: the old trailer named another chat).
 #   AX_SESSION=https://claude.ai/code/session_<id> tools/ship.sh sNN "..."   (AX_COAUTHOR optional)
 #   Codex lead (Jonathan 2026-10-23, CODEX_LEAD.md section 5): AX_LEAD=codex tools/ship.sh sNN "..."; the trailer is
@@ -52,7 +65,8 @@ o=$(python3 repair/build.py "$B" --out "$TMP/index.html" 2>&1) || fail build "$o
 o=$(python3 tools/site_build.py "$TMP/index.html" 2>&1) || fail site-build "$o"; echo "$o"
 # G-APPROVE (Jonathan 2026-10-12): an approval record must exist for exactly this build, written by the
 # UserPromptSubmit hook when Jonathan says "ship" in reply to the presented report (tools/hooks/approval.py)
-o=$(python3 tools/hooks/approval.py check "$B" "$TMP/index.html" 2>&1) || fail approval "$o"; echo "$o"
+if [[ -n "$CHECKS_ONLY" ]]; then o=$(python3 tools/hooks/approval.py check "$B" "$TMP/index.html" 2>&1) || o="approval: not approved (checks only; a ship needs it): $(echo "$o" | head -1)"
+else o=$(python3 tools/hooks/approval.py check "$B" "$TMP/index.html" 2>&1) || fail approval "$o"; fi; echo "$o"
 # G-READY: a spine build ships only when verify says READY (mechanical checks plus four current receipts)
 o=$(python3 tools/hooks/ready_gate.py "$B" 2>&1) || fail ready "$o"; echo "$o"
 # stamp the build for the page's version label and update check (s43): <meta name="ax-build"> now, version.json in step 2
@@ -84,17 +98,24 @@ open(p, 'w', encoding='utf-8').write(s)
 PY
 echo "changelog: $(echo "$LOGJSON" | python3 -c 'import json,sys; print(len(json.load(sys.stdin)))') entries"
 # rules self-tests: the checks themselves must still catch every known defect, on every brief type
-o=$(python3 tools/test_migrate_check.py 2>&1) || fail rules-selftest "$(echo "$o" | grep -E '^BAD|passed')"
-o2=$(AXBX_PAGE="$TMP/index.html" python3 tools/test_gate_rules.py 2>&1) || fail rules-selftest "$(echo "$o2" | grep -E '^BAD|passed')"
-echo "rules: self-test $(echo "$o" | tail -1), all brief types $(echo "$o2" | tail -1)"
-GA=(--base HEAD); [[ "$MODE" == "--attr-only" ]] && GA=(--attr-only HEAD)
-GATE=$(python3 tools/gate.py "$TMP/index.html" "${GA[@]}" 2>&1) || fail gate "$GATE"; GATE=$(echo "$GATE" | head -1); echo "$GATE"
-RENDER=$(node tools/render.js "$TMP/index.html" 2>&1) || fail render "$RENDER"; RENDER=$(echo "$RENDER" | head -1); echo "$RENDER"
+# stamps: rules-migrate and rules-gate rerun when a tool, tool data file, rule doc or the site changed (OPEN_WORK "Ship
+# time": the gate code and its rule files); the page to ship is judged by the gate check below
+if ! st rules-migrate; then
+  o=$(python3 tools/test_migrate_check.py 2>&1) || fail rules-selftest "$(echo "$o" | grep -E '^BAD|passed')"
+  echo "rules: self-test $(echo "$o" | tail -1)"; stc rules-migrate "rules: self-test $(echo "$o" | tail -1)"; fi
+if ! st rules-gate; then
+  o2=$(AXBX_PAGE="$TMP/index.html" python3 tools/test_gate_rules.py 2>&1) || fail rules-selftest "$(echo "$o2" | grep -E '^BAD|passed')"
+  echo "rules: all brief types $(echo "$o2" | tail -1)"; stc rules-gate "rules: all brief types $(echo "$o2" | tail -1)"; fi
+GA=(--base HEAD); SA=(); [[ "$MODE" == "--attr-only" ]] && GA=(--attr-only HEAD) && SA=(--attr-only HEAD)
+if GATE=$(st gate --page "$TMP/index.html" "${SA[@]}"); then GATE=$(echo "$GATE" | tail -1); else echo "$GATE"
+  GATE=$(python3 tools/gate.py "$TMP/index.html" "${GA[@]}" 2>&1) || fail gate "$GATE"; GATE=$(echo "$GATE" | head -1); stc gate "$GATE"; fi; echo "$GATE"
+if RENDER=$(st render --page "$TMP/index.html"); then RENDER=$(echo "$RENDER" | tail -1); else echo "$RENDER"
+  RENDER=$(node tools/render.js "$TMP/index.html" 2>&1) || fail render "$RENDER"; RENDER=$(echo "$RENDER" | head -1); stc render "$RENDER"; fi; echo "$RENDER"
 # standing UI tests (UI_REFACTOR_PLAN 6b): parity with the live page, theme gate, axe scan, performance budget.
 # repair/<batch>/ui_allow.json lists the batch's intended style changes; UI_GATE_BASE=<live commit + intended change page>
 # replaces the live page as the parity reference; UI_GATE_SKIP=parity (a content batch); each is disclosed in the report.
 UA=(); [ -f "repair/$B/ui_allow.json" ] && UA=(--allow "repair/$B/ui_allow.json"); [ -n "${UI_GATE_SKIP:-}" ] && UA+=(--skip "$UI_GATE_SKIP")
-UIG=$(python3 tools/ui_gate.py "$TMP/index.html" "${UI_GATE_BASE:-$SITE}" "${UA[@]}" 2>&1) || fail ui-gate "$UIG"; echo "$UIG" | grep -E '^(parity|theme|a11y|perf|UI-GATE)'
+UIG=$(python3 tools/ui_gate.py "$TMP/index.html" "${UI_GATE_BASE:-$SITE}" "${UA[@]}" 2>&1) || fail ui-gate "$UIG"; echo "$UIG" | grep -E '^(parity|theme|a11y|perf|twopane|UI-GATE)'
 TRACKED_LO=$(python3 - "$WS" <<'PY'
 import os, subprocess, sys
 sys.path.insert(0, os.path.join(sys.argv[1], 'tools'))
@@ -108,18 +129,26 @@ print('\n'.join(f for f in files if f and v.is_local(f, lo)))
 PY
 )
 [[ -z "$TRACKED_LO" ]] || fail local-only "tracked local-only paths (git rm --cached them): $TRACKED_LO"
-o=$(python3 tools/vendor_scan.py 2>&1) || fail vendor-scan "$o"
-VEND="vendor: clean ($(echo "$o" | head -1 | grep -o '[0-9]* source shingles'); page $(echo "$o" | grep '(workspace/index.html)' | grep -o '[0-9.]*%'))"
-if [[ ! -d repair/sources ]]; then VEND="vendor: NOT CHECKED (repair/sources missing: restore axbx-local-only.tar.gz)"; fi
+if [[ ! -d repair/sources ]]; then o=$(python3 tools/vendor_scan.py 2>&1) || fail vendor-scan "$o"
+  VEND="vendor: NOT CHECKED (repair/sources missing: restore axbx-local-only.tar.gz)"
+elif VEND=$(st vendor-scan); then VEND=$(echo "$VEND" | tail -1)
+else echo "$VEND"
+  o=$(python3 tools/vendor_scan.py 2>&1) || fail vendor-scan "$o"
+  VEND="vendor: clean ($(echo "$o" | head -1 | grep -o '[0-9]* source shingles'); page $(echo "$o" | grep '(workspace/index.html)' | grep -o '[0-9.]*%'))"
+  stc vendor-scan "$VEND"
+fi
 echo "$VEND"
 # P7 (s105): judge tracked edit files against the page about to ship, so a wording change that
 # orphans a source run in an old sNN json fails this ship instead of the next one (s103)
 if [[ -d repair/sources ]]; then
-  o=$(python3 tools/vendor_scan.py --page "$TMP/index.html" 2>&1) || fail vendor-orphan "$o
+  if o=$(st vendor-orphan --page "$TMP/index.html"); then echo "$o" | tail -1; else echo "$o"
+    o=$(python3 tools/vendor_scan.py --page "$TMP/index.html" 2>&1) || fail vendor-orphan "$o
 fix: reword or reorder the flagged file's run (git add it), as in s103"
+    stc vendor-orphan "vendor-orphan: clean against the page to ship"; fi
 fi
 # advisory content checks (P1-P6): never abort; settle each line or pass it to the auditor
 python3 tools/preflight.py "$TMP/index.html" --base HEAD 2>&1 | head -40
+if [[ -n "$CHECKS_ONLY" ]]; then echo "ship $B: checks only: every check passed (nothing written)"; exit 0; fi
 
 # ---- 2. write the page and the deployed copy
 git -C "$ROOT" show HEAD:./workspace/index.html > "$TMP/prev.html" 2>/dev/null || cp index.html "$TMP/prev.html"
