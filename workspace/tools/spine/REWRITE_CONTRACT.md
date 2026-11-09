@@ -100,3 +100,5 @@ positive goes in NOTES.md with the line and the reason; the lead decides.
 Then write {rd}/NOTES.md: what you changed by item and call, every step move (block, from, to, class, reason), every
 lock_ok and its reason, any fact you could not source, and any line you left with a hit and why. Finish with one line:
 `DONE {bid}: <changes> changes, check <PASS|FAIL n>`.
+
+- Pause points (N5), STANDING "Pause point content", quoted: **Pause point content (2026-10-28):** a block exists only for a real board bait from the brief's own evidence (NBME, UWorld, AnKing), with the clue that defeats it; a block with no bait, no deciding line, an answer that only negates the bait, or a restatement of a table row is rewritten around a real bait or deleted. A brief with no real bait keeps no pause point. NBME blocks (fence test, N5, D-20261108-2): an NBME block stays only as a pause point for a fence case, where one stem detail flips the answer between two otherwise matching options; any other NBME block is removed once every fact it carries is stated in the brief (content_gate nbme-block; a kept block is listed in repair/<batch>/nbme_keep.json).
