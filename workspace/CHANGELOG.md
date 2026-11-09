@@ -2,6 +2,30 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-09 s171: s171: eleven psychiatry briefs in review-book style (pms-pmdd held)
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (11):
+  - psychosis-duration (Psychosis): prose edited (+3057 chars)
+  - sz-psychosocial (Schizophrenia: Long-Term Care): prose edited (+1895 chars)
+  - bipolar-mania (Bipolar Disorder): prose edited (+1055 chars)
+  - cluster-b (Cluster B Personality Disorders): prose edited (+172 chars)
+  - cluster-c (Cluster C Personality Disorders): prose edited (+535 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (+150 chars)
+  - ocd (Obsessive-Compulsive and Related Disorders): prose edited (+437 chars)
+  - somatic (Somatic Symptom and Related Disorders): prose edited (+2104 chars)
+  - trauma-stress (Trauma, Stress and Dissociative Disorders): prose edited (+31 chars)
+  - gppd (Genito-Pelvic Pain/Penetration Disorder): prose edited (+1658 chars)
+  - sexual-dysfunction (Sexual Dysfunction): prose edited (-905 chars)
+Other page changes (nav, headers, scripts): +730 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-11-08 s170: s170: content pilot under TEXTBOOK_STYLE on 7 briefs (pc-ssri, pc-snri, pc-antidep, pc-tca, pc-maoi, mdd, voices); hover-line display, V1 term triggers, A1 anchor pass; audit planning tools
 
 ```
