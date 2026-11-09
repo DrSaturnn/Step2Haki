@@ -1,26 +1,25 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s170",
- "open": false,
- "plan_step": "s170",
+ "id": "s171",
+ "open": true,
+ "plan_step": "s171",
  "roles": [
   "brief-build",
   "brief-rewrite",
   "patch-review",
   "patch-review-opus",
-  "cold-read",
   "probe"
  ],
- "max_agents": 15,
- "max_calls": 410,
- "max_tokens": 17000000,
- "set_by": "Jonathan, 2026-11-08 09:08 (\"Budget: 14 agents, 410 calls, 17M agent tokens (rewrite Opus 2, Sonnet 5; review Opus 1 lane, Sonnet 2; Haiku cold read 1); lead 100M\") ; raised to 15 agents by Jonathan 2026-11-08 chat 5 (\"Add 1 Opus agent (Recommended)\": round 3 on lines changed since round 2, one Opus lane, about 8 calls and 0.6M tokens)",
+ "max_agents": 20,
+ "max_calls": 620,
+ "max_tokens": 25000000,
+ "set_by": "Jonathan, 2026-11-08 19:44 (\"Budget: 20 agents, 620 calls, 25M agent tokens (rewrite Opus 1, Sonnet 11; review Opus 3 lanes, Sonnet 1); lead 50M\")",
  "previous": {
-  "id": "s168",
-  "note": "s168 shipped cd341a9 2026-11-07 (Claude lead): Two-pane desktop layout and Display settings groups; no agents"
+  "id": "s170",
+  "note": "s170 shipped 5d380d3 2026-11-08 (Claude lead): content pilot under TEXTBOOK_STYLE on 7 briefs; 15 agents"
  },
- "opened": "2026-11-08 09:08 EST",
- "note": "s170 content pilot under TEXTBOOK_STYLE: pc-ssri, pc-snri, pc-antidep, pc-tca, pc-maoi, mdd, voices; tools T1 to T8; hover-line display",
+ "opened": "2026-11-08 19:44 EST",
+ "note": "s171 content psych A under TEXTBOOK_STYLE: psychosis-duration, sz-psychosocial, bipolar-mania, pms-pmdd, panic, ocd, somatic, trauma-stress, gppd, sexual-dysfunction, cluster-b, cluster-c",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -439,9 +438,15 @@
     "calls": "Opus 1 lane, Sonnet 2 lanes, Haiku 1 cold read, round 2 lanes",
     "tokens": 3500000
    }
+  },
+  "s171": {
+   "agents": 20,
+   "calls": 620,
+   "tokens": 25000000,
+   "lead_tokens": 50000000
   }
  },
- "max_lead_tokens": 100000000,
+ "max_lead_tokens": 50000000,
  "spent_agents": 0,
  "spent_calls": 0
 }

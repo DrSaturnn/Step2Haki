@@ -63,6 +63,17 @@ Do not read the page, the runbook, STANDING_DIRECTIONS or the digest whole. Grep
   word with its card title, kicker or first line is counted (prose_lint hover_anchor) unless repair/efficiency/
   ANCHOR_ALLOW.json lists it as a fit.
 - "In practice" lines (C7): keep the line and its fact, with no reference name: "In practice: <fact>" (the Merck Manual, a label or any other source is not named).
+  Scope (D-20261108-9, TEXTBOOK_STYLE rule 4 read this way): a board answer that differs from a guideline, an FDA label
+  or a practice reference. The visible line gives the board answer; the hover's first line under a clinical title gives
+  the practice fact.
+- Abbreviations (D-20261108-9): ECG is on repair/efficiency/ABBREV.json; MAOI, MAO, H1, GABA, SSRI, SNRI and TCA are
+  spelled out at first use in each block (TEXTBOOK_STYLE rule 5).
+- Own labels deferred from s170 (repair/s170/anchors/anchor_own_pending.json, verdict "own"): the lane for a brief
+  applies its brief's rows (a 1 to 3 word clinical noun after the line's text, the "label" field as the starting
+  wording) and lists each in NOTES.md.
+- Screening instruments (STANDING "Step 2 Diagnostic criteria"; settled for PHQ-9 in D-20261108-9): the cutoff line
+  that estimates likelihood sits in step 2 as p.sp-note; score bands that grade severity sit in Severity. A cutoff with
+  no board source keeps a primary source quote (the instrument's validation paper) and is listed in NOTES.md.
 - Key point lists: a block heading is `<li class="sp-bh">`, its lines `<li class="sp-bl">`. Script rows: `p.sp-bh` and
   `p.sp-bl`.
 - Header renames from header_map.md: list the dropped words in "lock_ok" with "lock_reason": "header rename Hn"

@@ -7,7 +7,8 @@
   "CT": "computed tomography",
   "MRI": "magnetic resonance imaging",
   "AST": "aspartate aminotransferase",
-  "ALT": "alanine aminotransferase"
+  "ALT": "alanine aminotransferase",
+  "ECG": "electrocardiogram"
  },
  "_labs_imaging_note": "CT angio and CT angiography are covered by CT (Jonathan's list: CBC, BUN, US for ultrasound, CT, CT angio or CT angiography, MRI). Replaces the 2026-10-11 CT-only exception.",
  "site_conventions": {
@@ -83,6 +84,11 @@
    "entry": "QRS",
    "date": "2026-10-19",
    "by": "lead s148d (runbook section 3: new entry disclosed in the report)"
+  },
+  {
+   "entry": "ECG",
+   "date": "2026-11-08",
+   "by": "lead s171 (runbook section 3: very common test; s170 open list, D-20261108-9)"
   }
  ]
 }
