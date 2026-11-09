@@ -275,11 +275,11 @@ try:
     rc, out, ran = gate_run(dict(SENV, AX_STAMPS='off'))
     expect('AX_STAMPS=off: verify runs despite a matching stamp', (0 if rc == 1 and ran and 'AX_STAMPS=off' in out else 1, out), 0)
     sp = os.path.join(ENV['AX_STAMPS_DIR'], 'verify', 'repair__migration___s0stamptest__stamp__spine.json')
-    before = json.load(open(sp))['entries'][0]['key']
+    before = json.load(open(sp))['entries']
     vf = subprocess.run([sys.executable, os.path.join(WS, 'tools', 'spine', 'verify.py'), SF], capture_output=True,
                         text=True, env=ENV)
-    expect('verify FAIL writes no stamp', (0 if vf.returncode == 1 and json.load(open(sp))['entries'][0]['key'] == before
-                                           and len(json.load(open(sp))['entries']) == 1 else 1, vf.stdout[-200:]), 0)
+    expect('verify FAIL writes no stamp', (0 if vf.returncode == 1 and json.load(open(sp))['entries'] == before else 1,
+                                           vf.stdout[-200:]), 0)
     shutil.rmtree(os.path.dirname(os.path.dirname(SF)), ignore_errors=True)
     shutil.rmtree(RB, ignore_errors=True)
     # ship.sh checks: stamps.py check misses, commit, then hits; a changed page misses and names it
