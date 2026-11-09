@@ -239,6 +239,23 @@ def write_units_md(path, bid, units, left):
     open(path, 'w', encoding='utf-8').write('\n'.join(out) + '\n')
 
 
+def delta_tool(batch):
+    """s171: build.py imports repair/migration/spine/<batch>_delta.py; copy the newest content-batch delta tool
+    (s170 on) and rename it when the batch has none, since the lanes cannot write outside their folders."""
+    sd = os.path.join(WS, 'repair', 'migration', 'spine')
+    dst = os.path.join(sd, '%s_delta.py' % batch)
+    if os.path.exists(dst):
+        return 'delta tool: %s_delta.py present' % batch
+    num = lambda n: int(re.match(r's(\d+)', n).group(1))
+    cands = sorted((n for n in os.listdir(sd) if re.fullmatch(r's\d+_delta\.py', n) and num(n) >= 170
+                    and num(n) < num(batch)), key=num)
+    if not cands:
+        return 'delta tool: none to copy (write %s_delta.py by hand)' % batch
+    src = cands[-1][:-len('_delta.py')]
+    open(dst, 'w', encoding='utf-8').write(open(os.path.join(sd, cands[-1]), encoding='utf-8').read().replace(src, batch))
+    return 'delta tool: %s_delta.py written from %s' % (batch, cands[-1])
+
+
 def lane(spec, b, page):
     batch, bid = spec['batch'], b['id']
     f = folder_of(bid)
@@ -455,6 +472,7 @@ def main(argv):
         spec = json.load(open(argv[1], encoding='utf-8'))
         only = set(argv[argv.index('--only') + 1].split(',')) if '--only' in argv else None
         page = P.read_page(os.path.join(WS, 'index.html'))
+        print(delta_tool(spec['batch']))
         for b in spec['briefs']:
             if not only or b['id'] in only:
                 print(lane(spec, b, page))
