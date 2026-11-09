@@ -346,6 +346,15 @@ def collect(batch, bid):
     base = open(os.path.join(f, 'baseline_%s.html' % batch), encoding='utf-8').read()
     cm = json.load(open(os.path.join(f, 'claims_before_%s.json' % batch), encoding='utf-8'))
     claim_text = {c['id']: norm(c.get('new_text', '')) for c in cm.get('claims', [])}
+    # s171 fix (round 1 systemic finding 1): a claim whose text sits in more than one unit (one-word labels such as
+    # "Borderline") is owned by none of them; the last rewritten unit used to take it over. Such a claim moves only
+    # when a unit or raw names it in "claims"; check() fails when its text leaves the rebuilt brief.
+    owners = {}
+    for u in U.values():
+        for cid in u.get('claims_in', []):
+            owners[cid] = owners.get(cid, 0) + 1
+    shared = {cid for cid, n in owners.items() if n > 1}
+    ck = [(c['id'], key(c.get('new_text', ''))) for c in cm.get('claims', []) if c.get('new_text')]
     probs, changes = [], []
     seen = set()
     for x in rw.get('units', []):
@@ -369,13 +378,26 @@ def collect(batch, bid):
             probs.append('raw %d: "old" must occur once in baseline_%s.html (found %d): %s' % (i, batch, n, old[:60]))
             continue
         s = base.index(old)
+        ok_ = key(plain(old))
+        auto = [cid for cid, k in ck if k and k in ok_ and cid not in shared and base.count(old) == 1]
         changes.append({'uid': x.get('uid') or 'R%02d' % (i + 1), 'old': old, 'new': x.get('new', ''), 'start': s, 'end': s + len(old),
-                        'x': x, 'u': {'claims_in': x.get('claims', []), 'claims_part': []}})
+                        'x': x, 'u': {'claims_in': x.get('claims') or auto, 'text': plain(old),
+                              'claims_part': [cid for cid, k in ck if len(plain(old).split()) >= 4 and ok_ in k and k not in ok_]}})
     changes.sort(key=lambda c: c['start'])
     for a, b in zip(changes, changes[1:]):
         if b['start'] < a['end']:
             probs.append('%s overlaps %s' % (a['uid'], b['uid']))
     idx = {c['uid']: i for i, c in enumerate(changes)}
+    # a shared claim whose text survives in the spliced brief stays as it is; one whose text is gone follows the first
+    # changed unit that held it (s171 fix)
+    parts, pos = [], 0
+    for c in changes:
+        if c['start'] >= pos:
+            parts.append(base[pos:c['start']]); parts.append(c['new']); pos = c['end']
+    parts.append(base[pos:])
+    spliced = key(plain(''.join(parts)))
+    keep = {cid for cid, k in ck if cid in shared and k and k in spliced}
+    taken = set()
     out = []
     for c in changes:
         x, u = c['x'], c['u']
@@ -395,7 +417,9 @@ def collect(batch, bid):
                 d[k] = x[k]
         new_plain = norm(plain(c['new']))
         old_plain = norm(u.get('text') or plain(c['old']))
-        cin = x.get('claims', u.get('claims_in', []))
+        # an empty "claims" list counts as unset: dropping a claim takes "cut" (s171: lanes wrote "claims": [] on raws)
+        cin = x.get('claims') or [cid for cid in u.get('claims_in', []) if cid not in keep and cid not in taken]
+        taken.update(cid for cid in cin if cid in shared)
         ups, cuts = [], []
         for cid in cin:
             if cid not in claim_text:
@@ -410,11 +434,17 @@ def collect(batch, bid):
             else:
                 claim_text[cid] = new_plain
                 ups.append({'id': cid, 'new_text': new_plain})
-        for cid in ([] if 'claims' in x else u.get('claims_part', [])):
+        for cid in ([] if x.get('claims') else u.get('claims_part', [])):
             t = claim_text.get(cid, '')
+            rx = re.compile(r'\s*'.join(re.escape(ch) for ch in old_plain.replace(' ', ''))) if old_plain else None
             if old_plain and old_plain in t:
                 claim_text[cid] = t.replace(old_plain, new_plain, 1)
                 ups.append({'id': cid, 'new_text': claim_text[cid]})
+            elif rx and rx.search(t):
+                claim_text[cid] = norm(rx.sub(lambda m: ' ' + new_plain + ' ', t, count=1))
+                ups.append({'id': cid, 'new_text': claim_text[cid]})
+            elif c['uid'].startswith('R') and 'uid' not in x:
+                pass  # a raw inside a longer claim whose spacing differs: the rebuilt-brief claim check decides
             else:
                 probs.append('%s: part of claim %s, but its old text no longer sits in the claim text; name the claim in "claims"' % (c['uid'], cid))
         if ups:
@@ -462,6 +492,16 @@ def check(batch, bid):
         base = open(os.path.join(f, 'baseline_%s.html' % batch), encoding='utf-8').read()
         for code, k, msg in CG.check(base, new_outer, {bid}):
             probs.append('%s: %s' % (code, msg))
+        # every claim's text must sit in the rebuilt brief (catches a shared claim whose only wording was rewritten)
+        bk = key(plain(inner))
+        b0 = key(plain(base))
+        cmp_ = os.path.join(f, 'claim_map.json')
+        if os.path.exists(cmp_):
+            cut = {c['id'] for ch in d['changes'] for c in ch.get('claim_cuts', [])}
+            for c in json.load(open(cmp_, encoding='utf-8')).get('claims', []):
+                t = key(c.get('new_text', ''))
+                if t and c['id'] not in cut and c.get('disposition') != 'cut' and t in b0 and t not in bk:
+                    probs.append('claim %s text is not in the rebuilt brief: %s' % (c['id'], c.get('new_text', '')[:80]))
     return probs, n
 
 
