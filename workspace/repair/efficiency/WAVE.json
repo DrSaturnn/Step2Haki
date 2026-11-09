@@ -10,10 +10,10 @@
   "patch-review-opus",
   "probe"
  ],
- "max_agents": 25,
+ "max_agents": 26,
  "max_calls": 620,
- "max_tokens": 42500000,
- "set_by": "Jonathan, 2026-11-08 19:44 (\"Budget: 20 agents, 620 calls, 25M agent tokens (rewrite Opus 1, Sonnet 11; review Opus 3 lanes, Sonnet 1); lead 50M\") ; raised to 32M tokens by Jonathan 2026-11-08 (AskUserQuestion: \"Raise to 32M (Recommended)\": review round 1 and a round 2 on briefs not READY, after the rewrite lanes used 23.55M) ; raised to 41M tokens and 24 agents by Jonathan 2026-11-08 chat 2 (\"4 more fix lanes (Rec.)\", D-20261108-11) ; raised to 25 agents and 42.5M tokens by Jonathan 2026-11-09 chat 3 (\"One more Opus lane (Rec.)\", D-20261109-1)",
+ "max_tokens": 43000000,
+ "set_by": "Jonathan, 2026-11-08 19:44 (\"Budget: 20 agents, 620 calls, 25M agent tokens (rewrite Opus 1, Sonnet 11; review Opus 3 lanes, Sonnet 1); lead 50M\") ; raised to 32M tokens by Jonathan 2026-11-08 (AskUserQuestion: \"Raise to 32M (Recommended)\": review round 1 and a round 2 on briefs not READY, after the rewrite lanes used 23.55M) ; raised to 41M tokens and 24 agents by Jonathan 2026-11-08 chat 2 (\"4 more fix lanes (Rec.)\", D-20261108-11) ; raised to 25 agents and 42.5M tokens by Jonathan 2026-11-09 chat 3 (\"One more Opus lane (Rec.)\", D-20261109-1) ; raised to 26 agents and 43M by Jonathan 2026-11-09 (\"Reword + 1 small lane (Rec.)\", D-20261109-3)",
  "previous": {
   "id": "s170",
   "note": "s170 shipped 5d380d3 2026-11-08 (Claude lead): content pilot under TEXTBOOK_STYLE on 7 briefs; 15 agents"
