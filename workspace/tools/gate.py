@@ -738,7 +738,7 @@ def check_lints(page, page_path, ref_html, g, attr_only=False):
         dg = st = ''
     if os.path.exists(dg) and os.path.exists(st):
         dd = os.path.dirname(dg)   # stale paths in the rule documents; RESUME against the State; the State cap
-        for e in doc_lint.errors(dg, st) + doc_lint.rule_doc_errors(dg, REPO) + doc_lint.path_errors(dd, REPO) + doc_lint.state_errors(dd, REPO):
+        for e in doc_lint.stable_errors(dg, st, REPO) + doc_lint.state_errors(dd, REPO):
             g.fail('doc-lint', e[:80], e)
     else:
         g.fail('doc-lint', 'missing', 'DECISIONS_DIGEST.md or STANDING_DIRECTIONS.md is missing from the private docs/ (tools/docs_path.py)')

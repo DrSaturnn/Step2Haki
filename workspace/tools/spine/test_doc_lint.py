@@ -86,5 +86,20 @@ e = doc_lint.plan_errors(p)
 ok(len(e) == 2 and any('open call 2' in x for x in e) and any('The saving is large' in x for x in e),
    '(d) an open call with no recommendation and an unmarked Evidence line fail; marked lines and headings pass (%d)' % len(e))
 
+# unfiled decisions
+DG = ('- 2026-01-01 [D-20260101-1] {display} a rule that is cited\n- 2026-01-02 [D-20260101-2] {display} a rule that is filed nowhere\n'
+      '- 2026-01-03 [D-20260101-3] {content} a single approval (one-time)\n- 2026-01-04 [D-20260101-4] {process} a launch\n')
+u = tree({'docs/DECISIONS_DIGEST.md': DG, 'docs/STANDING_DIRECTIONS.md': '## Core rules (x)\n1. First rule. [D-20260101-1]\n2. Second rule.\n\nCompiled later.\n- a bullet\n'})
+e = doc_lint.unfiled_errors(os.path.join(u, 'docs', 'DECISIONS_DIGEST.md'), ws)
+ok(len(e) == 1 and 'D-20260101-2' in e[0], 'a rule-topic decision cited by no rule document fails; cited, one-time and process lines pass (%d)' % len(e))
+ok(doc_lint.core_rules(open(os.path.join(u, 'docs', 'STANDING_DIRECTIONS.md')).read()) == ['1. First rule. [D-20260101-1]', '2. Second rule.'], 'core rules are the numbered lines under the heading')
+
+# allow lists
+w2 = tree({'tools/spine/allow_baseline.json': '{"a.json": {"count": 2, "id": "D-20260101-1"}, "b.txt": {"count": 1, "id": "D-19990101-9"}}',
+           'a.json': '{"_doc": "x", "fits": ["p", "q", "r"]}', 'b.txt': '# note\none\n'})
+e = doc_lint.allow_errors(os.path.join(u, 'docs', 'DECISIONS_DIGEST.md'), w2)
+ok(len(e) == 2 and any('a.json holds 3 entries, baseline 2' in x for x in e) and any('D-19990101-9' in x for x in e),
+   'an allow list above its baseline fails; a baseline row naming an unknown id fails (%d)' % len(e))
+
 print('%d failures' % bad)
 sys.exit(1 if bad else 0)

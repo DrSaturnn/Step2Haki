@@ -69,6 +69,9 @@ def main(a):
     if not a or a[0] not in ORDER:
         print(__doc__); return 2
     kind = a[0]; total = 0; missing = 0
+    print('Core rules (STANDING_DIRECTIONS):')
+    for l in doc_lint.core_rules(open(path(S), encoding='utf-8').read()):
+        print('  ' + l)
     print('Read order for a %s launch (sed -n A,Bp FILE for a range):' % kind)
     for ref, want in ORDER[kind]:
         p = path(ref)
@@ -96,7 +99,7 @@ def main(a):
     print('Record in the batch file: this total, and the context at the first edit (python3 tools/hooks/usage_ledger.py --context).')
     docs = docs_path.docs_dir()
     dg, st = os.path.join(docs, 'DECISIONS_DIGEST.md'), os.path.join(docs, 'STANDING_DIRECTIONS.md')
-    errs = doc_lint.errors(dg, st) + doc_lint.rule_doc_errors(dg, WS) + doc_lint.path_errors(docs, WS) + doc_lint.state_errors(docs, WS)
+    errs = doc_lint.stable_errors(dg, st, WS) + doc_lint.state_errors(docs, WS)
     rc = 1 if (errs or missing) else 0
     if '--plan' in a:
         plan = a[a.index('--plan') + 1]

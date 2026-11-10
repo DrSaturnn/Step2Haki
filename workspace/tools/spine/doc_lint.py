@@ -23,6 +23,12 @@ Path, state and plan checks:
   RESUME's "**Batch state: ...**" line equals the head of the first handoff State entry; the State holds at most
   STATE_CAP entries (the open batch, the last ship, one in transit). tools/spine/docstate.py sync writes the line and
   moves older entries to docs/SHIPLOG.md.
+- unfiled_errors (gate, launch gate): a live digest line whose topic is not "process" is cited by a rule document
+  (STANDING_DIRECTIONS, the runbook, RULE_DOCS, docs/ui/) or ends "(one-time)"; a decision that sets a standing rule
+  and reaches no rule document fails.
+- allow_errors (gate, launch gate): an allow list holds no more entries than tools/spine/allow_baseline.json records,
+  and the baseline row names a digest id; a list may shrink freely.
+- core_rules: the numbered core rules of STANDING_DIRECTIONS, printed by resume.py and launch.py at chat start.
 - plan_errors: in a plan file (PLAN_TEMPLATE.md), every Evidence list line is marked TESTED or ASSUMED (on the line or
   on its heading) and every open call carries "Recommendation:".
 """
@@ -118,6 +124,64 @@ def path_errors(docs_dir, ws, names=None):
     return errs
 
 
+ONE_TIME = '(one-time)'
+
+
+def unfiled_errors(digest, ws):
+    """Live rule-topic digest ids cited by no rule document and not marked one-time."""
+    import glob
+    d = parse(digest); docs = os.path.dirname(os.path.abspath(digest))
+    paths = [os.path.join(docs, 'STANDING_DIRECTIONS.md'), os.path.join(docs, 'BATCH_RUNBOOK.md'), os.path.join(docs, 'PLAN_TEMPLATE.md')]
+    paths += sorted(glob.glob(os.path.join(docs, 'ui', '*.md'))) + [os.path.join(ws, r) for r in RULE_DOCS if not r.startswith('@')]
+    cited = set()
+    for p in paths:
+        if os.path.exists(p):
+            cited |= set(re.findall(r'D-\d{8}-\d+', open(p, encoding='utf-8').read()))
+    return ['%s {%s} sets a rule cited by no rule document: write the rule into one with its id, or end the digest line "%s"'
+            % (k, e['topic'], ONE_TIME) for k, e in d.items()
+            if e['topic'] != 'process' and not e['superseded_by'] and k not in cited and not e['text'].rstrip().endswith(ONE_TIME)]
+
+
+def allow_count(path):
+    """Entries in an allow list: the longest list in a JSON file, or the non-comment lines of a text file."""
+    if path.endswith('.json'):
+        import json
+        j = json.load(open(path, encoding='utf-8'))
+        return max([len(v) for v in (j.values() if isinstance(j, dict) else [j]) if isinstance(v, list)] or [0])
+    return sum(1 for l in open(path, encoding='utf-8') if l.strip() and not l.lstrip().startswith('#'))
+
+
+def allow_errors(digest, ws):
+    """Each allow list in tools/spine/allow_baseline.json holds at most its recorded count, under a known digest id."""
+    import json
+    bp = os.path.join(ws, 'tools', 'spine', 'allow_baseline.json')
+    if not os.path.exists(bp):
+        return ['tools/spine/allow_baseline.json is missing; restore it from git']
+    d = parse(digest); errs = []
+    for rel, row in json.load(open(bp, encoding='utf-8')).items():
+        p = os.path.join(ws, rel)
+        if not os.path.exists(p):
+            continue
+        n = allow_count(p)
+        if n > row['count']:
+            errs.append('%s holds %d entries, baseline %d: a new entry needs a digest id (raise the count and name the id in allow_baseline.json)' % (rel, n, row['count']))
+        if row.get('id') not in d:
+            errs.append('allow_baseline.json: %s names %s, which is not in the digest' % (rel, row.get('id')))
+    return errs
+
+
+def core_rules(standing_text):
+    """The numbered lines under the "Core rules" heading of STANDING_DIRECTIONS."""
+    m = re.search(r'^## Core rules[^\n]*\n(.*?)(?=^\S(?!\d*\.)|\Z)', standing_text, re.S | re.M)
+    return [l for l in (m.group(1) if m else '').split('\n') if re.match(r'\d+\. ', l)]
+
+
+def stable_errors(digest, standing, ws):
+    """Every check on the documents that change only by decision: the gate and the launch gate run this."""
+    return (errors(digest, standing) + rule_doc_errors(digest, ws) + path_errors(os.path.dirname(os.path.abspath(digest)), ws)
+            + unfiled_errors(digest, ws) + allow_errors(digest, ws))
+
+
 def state_entries(handoff_text):
     """[(head, body)] for each "- **head** ..." entry of the handoff's State section, in file order; "Previous: " is
     dropped from the head. An entry runs to the next entry or the first line that is neither indented nor blank."""
@@ -192,7 +256,7 @@ def main(a):
     d = parse(a[0]); standing = open(a[1], encoding='utf-8').read(); errs = errors(a[0], a[1])
     if '--docs' in a:
         ws = a[a.index('--docs') + 1]
-        errs += rule_doc_errors(a[0], ws) + path_errors(os.path.dirname(os.path.abspath(a[0])), ws)
+        errs = stable_errors(a[0], a[1], ws)
         if '--state' in a:
             errs += state_errors(os.path.dirname(os.path.abspath(a[0])), ws)
     if '--topic' in a:

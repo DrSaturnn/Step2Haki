@@ -364,7 +364,10 @@ try:
     PD = os.path.join(T, 'priv', 'docs')
     os.makedirs(PD, exist_ok=True)
     open(os.path.join(PD, 'STANDING_DIRECTIONS.md'), 'w').write('- rule [D-20260101-1]\n')
-    open(os.path.join(PD, 'DECISIONS_DIGEST.md'), 'w').write('- 2026-01-01 [D-20260101-1] {t} a\n')
+    import json as _json   # the scratch digest also holds the ids tools/spine/allow_baseline.json names
+    _ab = sorted({r['id'] for r in _json.load(open(os.path.join(WS, 'tools', 'spine', 'allow_baseline.json'))).values()})
+    open(os.path.join(PD, 'DECISIONS_DIGEST.md'), 'w').write('- 2026-01-01 [D-20260101-1] {t} a\n' + ''.join(
+        '- %s-%s-%s [%s] {process} allow list baseline\n' % (i[2:6], i[6:8], i[8:10], i) for i in _ab))
     ENV['S2H_PRIVATE'] = os.path.dirname(PD)
     expect('H1 launch allowed when doc_lint passes', blaunch('lean-builder', 'opus', ' 4'), 0)
     open(os.path.join(PD, 'DECISIONS_DIGEST.md'), 'a').write('- 2026-01-02 [D-20260102-1] {t} b, supersedes D-20260101-1\n')

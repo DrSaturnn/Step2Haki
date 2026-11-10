@@ -41,6 +41,10 @@ def main(argv):
     print(st, '\n')
     for e in doc_lint.state_errors(docs_path.docs_dir(), WS):
         print('STATE-LINT', e)
+    print('Core rules (STANDING_DIRECTIONS):')
+    for l in doc_lint.core_rules(open(docs_path.doc('STANDING_DIRECTIONS.md'), encoding='utf-8').read()):
+        print('  ' + l)
+    print()
     m = re.search(r'^(s\d+[a-z]?) OPEN\b', ents[0][0]) if ents else None
     batch = argv[0] if argv else (m.group(1) if m else None)
     if not batch:
